@@ -9,22 +9,142 @@
           "name": "Тоглоомын лаборатори",
           "categories": {
             "game_lab": {
-              "name": "Тоглоомын лаборатори"
+              "name": "Тоглоомын лаборатори",
+              "expressions": {
+                "mouseWentDown": {
+                  "examples": {
+                    "Black and White": {
+                      "name": "Хар ба цагаан"
+                    }
+                  }
+                },
+                "playSound": {
+                  "examples": {
+                    "Making Music": {
+                      "name": "Хөгжим зохиох"
+                    }
+                  },
+                  "short_description": "MP3 дууны файлыг заасан URL-аас тоглуулна."
+                },
+                "showMobileControls": {
+                  "content": "Тоглоомын зай доор харагдах хөдөлгөөнт хяналтыг өөрчилдөг.",
+                  "short_description": "Тоглоомын зай доор харагдах хөдөлгөөнт хяналтыг өөрчилдөг."
+                }
+              }
             },
             "sprites": {
-              "name": "Шидтэнгүүд"
+              "name": "Шидтэнгүүд",
+              "expressions": {
+                "getSpeed": {
+                  "examples": {
+                    "Spiral": {
+                      "name": "Спираль"
+                    }
+                  }
+                },
+                "sprite.height": {
+                  "return_value": "Спрайтын өндөр."
+                },
+                "sprite.width": {
+                  "return_value": "Спрайтын өргөн."
+                }
+              }
             },
             "groups": {
-              "name": "Бүлгүүд"
+              "name": "Бүлгүүд",
+              "expressions": {
+                "setColorEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Өнгө"
+                    }
+                  }
+                },
+                "setTintEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Өнгө"
+                    }
+                  }
+                }
+              }
             },
             "drawing": {
-              "name": "Зураг"
+              "name": "Зураг",
+              "expressions": {
+                "shape": {
+                  "examples": {
+                    "Star": {
+                      "name": "Од"
+                    }
+                  }
+                }
+              }
+            },
+            "control": {
+              "expressions": {
+                "setInterval": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "Функцийн гүйцэтгэл бүрийн хоорондох миллисекундын тоо."
+                    }
+                  }
+                },
+                "setTimeout": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "Функцийг ажиллуулахаас өмнө хүлээх миллисекундын тоо."
+                    }
+                  }
+                }
+              }
             },
             "math": {
-              "name": "Математик"
+              "name": "Математик",
+              "expressions": {
+                "randomNumber": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Хамгийн бага тоог буцаав"
+                    },
+                    "max": {
+                      "description": "Хамгийн их тоог буцаав"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Хамгийн бага тоог буцаав"
+                    },
+                    "max": {
+                      "description": "Хамгийн их тоог буцаав"
+                    }
+                  }
+                }
+              }
             },
             "variables": {
-              "name": "Хувьсагчууд"
+              "name": "Хувьсагчууд",
+              "expressions": {
+                "includes": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "хайх мөр."
+                    }
+                  }
+                },
+                "indexOf": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "хайх мөр."
+                    }
+                  }
+                },
+                "length": {
+                  "return_value": "мөр урт"
+                }
+              }
             },
             "functions": {
               "name": "Функцүүд"
@@ -35,11 +155,501 @@
           "name": "Апп-ын лаб",
           "description": "Программын лаборатори нь энгийн программ зохиох боломжтой программчлалын орчин юм. Үүнийг ажиллуулахын тулд блокууд ба JavaScript-н хамтаар программ, кодыг бүтээгээрэй. Дараа нь, программаа хэдэн секундын дотор хуваалцаарай.",
           "categories": {
+            "ui_controls": {
+              "expressions": {
+                "button": {
+                  "short_description": "анхдагч байршил (0,0) үед өгөгдсөн ID заасан болон иш татсан текстийг харуулах дэлгэц дээр товч бий болгож байна."
+                },
+                "onEvent": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Функц"
+                    }
+                  }
+                },
+                "playSound": {
+                  "examples": {
+                    "Making Music": {
+                      "name": "Хөгжим зохиох"
+                    }
+                  },
+                  "short_description": "MP3 дууны файлыг заасан URL-аас тоглуулна."
+                },
+                "setProperty": {
+                  "palette_params": {
+                    "property": {
+                      "description": "үл хөдлөх хөрөнгийн өөрчлөх."
+                    }
+                  },
+                  "short_description": "заасан элементийн хувьд шинэ утга нь эд хөрөнгийг Sets."
+                },
+                "setScreen": {
+                  "short_description": "Өгөгдсөн ScreenID-д дэлгэцийг тохируулна."
+                },
+                "showElement": {
+                  "short_description": "Өгөгдсөн ID бүхий элементийг харуулна."
+                },
+                "textLabel": {
+                  "short_description": "анхдагч байршил (0,0) үед өгөгдсөн ID заасан болон иш татсан текстийг харуулах дэлгэц дээр текст шошго бий болгож байна."
+                }
+              }
+            },
+            "canvas": {
+              "expressions": {
+                "circle": {
+                  "palette_params": {
+                    "radius": {
+                      "description": "Тойргийн радиус, пиксел."
+                    }
+                  }
+                },
+                "drawImage": {
+                  "palette_params": {
+                    "id": {
+                      "description": "Зурах зургийн зүүн дээд булангийн пиксел дэх x байрлал."
+                    },
+                    "x": {
+                      "description": "Зурах зургийн зүүн дээд булангийн пиксел дэх x байрлал."
+                    },
+                    "y": {
+                      "description": "Зургийн зүүн дээд булангийн пиксел дэх y байрлал зурах."
+                    }
+                  }
+                },
+                "getAlpha": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "объект"
+                    },
+                    "x": {
+                      "description": "Зургийн зүүн дээд булангаас эхлэн пиксел дэх х байрлал."
+                    },
+                    "y": {
+                      "description": "Зургийн зүүн дээд булангаас эхлэн пиксел дэх y байрлал."
+                    }
+                  },
+                  "short_description": "Өгөгдсөн зургийн өгөгдөлд өгөгдсөн x ба y байрлалд байрлах пикселийн өнгөт альфа (opacity) (0-ээс 255 хүртэл) хэмжээг буцаана."
+                },
+                "getBlue": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "объект"
+                    },
+                    "x": {
+                      "description": "Зургийн зүүн дээд булангаас эхлэн пиксел дэх х байрлал."
+                    },
+                    "y": {
+                      "description": "Зургийн зүүн дээд булангаас эхлэн пиксел дэх y байрлал."
+                    }
+                  }
+                },
+                "getGreen": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "объект"
+                    },
+                    "x": {
+                      "description": "Зургийн зүүн дээд булангаас эхлэн пиксел дэх х байрлал."
+                    },
+                    "y": {
+                      "description": "Зургийн зүүн дээд булангаас эхлэн пиксел дэх y байрлал."
+                    }
+                  }
+                },
+                "getImageData": {
+                  "palette_params": {
+                    "x": {
+                      "description": "пиксел х байр суурь барих эхлэх."
+                    },
+                    "y": {
+                      "description": "пиксел нь у байр суурь барих эхлэх."
+                    },
+                    "width": {
+                      "description": "Зургийн өгөгдлийг авахын тулд тэгш өнцөгтийн өргөн."
+                    },
+                    "height": {
+                      "description": "Зургийн өгөгдлийг авахын тулд тэгш өнцөгтийн өндөр."
+                    }
+                  }
+                },
+                "getRed": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "объект"
+                    },
+                    "x": {
+                      "description": "Зургийн зүүн дээд булангаас эхлэн пиксел дэх х байрлал."
+                    },
+                    "y": {
+                      "description": "Зургийн зүүн дээд булангаас эхлэн пиксел дэх y байрлал."
+                    }
+                  }
+                },
+                "putImageData": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "объект"
+                    },
+                    "x": {
+                      "description": "зураг дээр өгөгдлийг байрлуулах Зургийн зүүн дээд буланд эхлэн пиксел дэх х байр суурь."
+                    },
+                    "y": {
+                      "description": "Зураг дээрх өгөгдлийг байрлуулахын тулд зургийн зүүн дээд булангаас эхлэн пиксел дэх y байрлал."
+                    }
+                  }
+                },
+                "rect": {
+                  "palette_params": {
+                    "x": {
+                      "description": "Тэгш өнцөгтийн зүүн дээд булангийн пиксел дэх x байрлал."
+                    },
+                    "y": {
+                      "description": "Тэгш өнцөгтийн зүүн дээд булангийн пиксел дэх y байрлал."
+                    },
+                    "width": {
+                      "description": "Тэгш өнцөгтийн пиксел дэх хэвтээ өргөн."
+                    },
+                    "height": {
+                      "description": "Тэгш өнцөгтийн пиксел дэх босоо өндөр."
+                    }
+                  }
+                },
+                "setAlpha": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "объект"
+                    },
+                    "x": {
+                      "description": "Зургийн зүүн дээд булангаас эхлэн пиксел дэх х байрлал."
+                    },
+                    "y": {
+                      "description": "Зургийн зүүн дээд булангаас эхлэн пиксел дэх y байрлал."
+                    },
+                    "alphaValue": {
+                      "description": "пиксел тохируулах альфа (тунгалаг бус) (0-255 хүртэл) хэмжээ."
+                    }
+                  },
+                  "short_description": "Өгөгдсөн зургийн өгөгдөлд өгөгдсөн x ба y байрлалд байрлах пикселийн өнгөөр альфа (opacity) (0-ээс 255 хүртэл) хэмжээг тохируулна."
+                },
+                "setBlue": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "объект"
+                    },
+                    "x": {
+                      "description": "Зургийн зүүн дээд булангаас эхлэн пиксел дэх х байрлал."
+                    },
+                    "y": {
+                      "description": "Зургийн зүүн дээд булангаас эхлэн пиксел дэх y байрлал."
+                    },
+                    "blueValue": {
+                      "description": "цэнхэр хэмжээ (0-255 хүртэл) пиксел тохируулах хэрэгтэй."
+                    }
+                  },
+                  "short_description": "Өгөгдсөн зургийн өгөгдөлд өгөгдсөн x ба y байрлалд байрлах пикселийн өнгөт цэнхэр (0-ээс 255 хүртэл) хэмжээг BlueVALUE оролтын хэмжээгээр тохируулна."
+                },
+                "setGreen": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "объект"
+                    },
+                    "x": {
+                      "description": "Зургийн зүүн дээд булангаас эхлэн пиксел дэх х байрлал."
+                    },
+                    "y": {
+                      "description": "Зургийн зүүн дээд булангаас эхлэн пиксел дэх y байрлал."
+                    },
+                    "greenValue": {
+                      "description": "ногоон хэмжээ (0-255 хүртэл) пиксел тохируулах хэрэгтэй."
+                    }
+                  },
+                  "short_description": "Өгөгдсөн зургийн өгөгдөлд өгөгдсөн x ба y байрлалд байрлах пикселийн өнгөт ногоон (0-ээс 255 хүртэл) хэмжээг greenValue оролтын хэмжээгээр тохируулна."
+                },
+                "setRGB": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "объект"
+                    },
+                    "x": {
+                      "description": "Зургийн зүүн дээд булангаас эхлэн пиксел дэх х байрлал."
+                    },
+                    "y": {
+                      "description": "Зургийн зүүн дээд булангаас эхлэн пиксел дэх y байрлал."
+                    },
+                    "red": {
+                      "description": "Улаан хэмжээ (0-255 хүртэл) пиксел тохируулах."
+                    },
+                    "green": {
+                      "description": "ногоон хэмжээ (0-255 хүртэл) пиксел тохируулах хэрэгтэй."
+                    },
+                    "blue": {
+                      "description": "цэнхэр хэмжээ (0-255 хүртэл) пиксел тохируулах хэрэгтэй."
+                    },
+                    "alpha": {
+                      "description": "Нэмэлт. тунгалаг хэмжээ (0-255 хүртэл) пиксел тохируулах. Анхдагчууд нь 255 (бүрэн тунгалаг)."
+                    }
+                  }
+                },
+                "setRed": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "объект"
+                    },
+                    "x": {
+                      "description": "Зургийн зүүн дээд булангаас эхлэн пиксел дэх х байрлал."
+                    },
+                    "y": {
+                      "description": "Зургийн зүүн дээд булангаас эхлэн пиксел дэх y байрлал."
+                    },
+                    "redValue": {
+                      "description": "Улаан хэмжээ (0-255 хүртэл) пиксел тохируулах."
+                    }
+                  },
+                  "short_description": "Өгөгдсөн зургийн өгөгдөлд өгөгдсөн x ба y байрлалд байрлах пикселийн өнгөт улаан (0-ээс 255 хүртэл) хэмжээг RedValue оролтын хэмжээгээр тохируулна."
+                }
+              }
+            },
+            "data": {
+              "name": "Өгөгдөл",
+              "expressions": {
+                "createRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "объект"
+                    }
+                  }
+                },
+                "deleteRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "объект"
+                    }
+                  }
+                },
+                "drawChart": {
+                  "palette_params": {
+                    "options": {
+                      "type": "объект"
+                    }
+                  }
+                },
+                "drawChartFromRecords": {
+                  "palette_params": {
+                    "tableName": {
+                      "description": "хүснэгтийн нэр нь бүртгэлийг авахын тулд."
+                    },
+                    "options": {
+                      "type": "объект"
+                    }
+                  }
+                },
+                "getKeyValue": {
+                  "palette_params": {
+                    "key": {
+                      "description": "Түлхүүр нэр татаж авах болно."
+                    }
+                  }
+                },
+                "getPrediction": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Функц"
+                    }
+                  }
+                },
+                "getUserId": {
+                  "short_description": "Энэ апп-ийн одоогийн хэрэглэгчийн хувьд өвөрмөц танигчийг авдаг."
+                },
+                "onRecordEvent": {
+                  "palette_params": {
+                    "table": {
+                      "description": "хүснэгтийн нэр нь энэ үйл явдал хариуцагчийн хэрэглэнэ нь."
+                    }
+                  }
+                },
+                "readRecords": {
+                  "palette_params": {
+                    "terms": {
+                      "type": "объект"
+                    }
+                  }
+                },
+                "setKeyValue": {
+                  "palette_params": {
+                    "key": {
+                      "description": "Түлхүүрийн нэр хадгалагдах болно."
+                    },
+                    "value": {
+                      "description": "Өгөгдөл хадгалагдах болно."
+                    }
+                  },
+                  "short_description": "App Lab-ийн түлхүүр/утга өгөгдлийн хадгалалтад түлхүүр/утга хосыг хадгалдаг бөгөөд үйлдэл дуусахад callback функцийг дууддаг."
+                },
+                "startWebRequest": {
+                  "palette_params": {
+                    "url": {
+                      "description": "Өгөгдлийг буцаадаг үйлчилгээний вэб хаяг."
+                    }
+                  }
+                },
+                "updateRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "объект"
+                    }
+                  }
+                }
+              }
+            },
+            "turtle": {
+              "expressions": {
+                "arcLeft": {
+                  "short_description": "Яст мэлхийг урагш, зүүн тийш гөлгөр, дугуй нумаар хөдөлгөдөг."
+                },
+                "getX": {
+                  "short_description": "Одоогийн x координатыг яст мэлхийн пиксел дээр авна."
+                },
+                "getY": {
+                  "short_description": "Одоогийн байдлаар авна y яст мэлхийн пиксел дэх координат."
+                },
+                "hide": {
+                  "short_description": "Одоогийн байршилд яст мэлхий үл үзэгдэх болгодог."
+                },
+                "move": {
+                  "palette_params": {
+                    "x": {
+                      "description": "пиксел тоо яст мэлхий баруун шилжих."
+                    },
+                    "y": {
+                      "description": "пикселийн тоо доош яст мэлхий шилжих."
+                    }
+                  }
+                },
+                "moveBackward": {
+                  "short_description": "Яст мэлхий одоогийн чиглэлээс өгөгдсөн тооны пикселийг арагш нь хөдөлгөдөг."
+                },
+                "moveForward": {
+                  "short_description": "Одоогийн чиглэлд өгөгдсөн тооны пикселийг яст мэлхийг урагшлуулна."
+                },
+                "moveTo": {
+                  "short_description": "Яст мэлхийг дэлгэцэн дээрх тодорхой (x, y) байрлалд шилжүүлнэ."
+                },
+                "penColor": {
+                  "short_description": "Шугам, цэгүүдийг зурахын тулд яст мэлхийн ашигладаг үзэгний өнгийг тохируулна."
+                },
+                "penDown": {
+                  "short_description": "Үзэгээ доош нь тавьдаг тул яст мэлхий хөдөлж байхдаа араас нь шугам татна."
+                },
+                "penRGB": {
+                  "short_description": "RGBA утгыг ашиглан, шугам, цэг зурах нь яст мэлхий ашиглаж үзэг өнгө тогтоодог."
+                },
+                "penUp": {
+                  "short_description": "Яст мэлхий хөдөлж байхдаа шугам зурахгүй тул үзэгнээ сонгоно."
+                },
+                "penWidth": {
+                  "short_description": "Мэлхий хөдөлж байхдаа араас нь татаж байгаа пикселийн өргөнийг тохируулна."
+                },
+                "show": {
+                  "short_description": "Одоогийн байршилд яст мэлхий харагдаж байна."
+                },
+                "speed": {
+                  "short_description": "Апп-ийн гүйцэтгэлийн хурдыг тохируулдаг бөгөөд үүнд яст мэлхийн хурдыг багтаасан болно."
+                },
+                "turnLeft": {
+                  "short_description": "заасан өнцгөөр үлдсэн яст мэлхий эргэдэг. Яст мэлхийн байрлал хэвээр байна."
+                },
+                "turnRight": {
+                  "short_description": "Тодорхой өнцгөөр яст мэлхийг эргүүлнэ. Яст мэлхийн байрлал хэвээр байна."
+                },
+                "turnTo": {
+                  "short_description": "Яст мэлхийн чиглэлийг тодорхой өнцгөөр өөрчилдөг. 0 нь дээш, 90 нь зөв, 180 нь доошоо, 270 нь үлдсэн байна."
+                }
+              }
+            },
+            "control": {
+              "expressions": {
+                "clearTimeout": {
+                  "palette_params": {
+                    "timeout": {
+                      "description": "Цуцлах setTimeout функцээр буцаж ирсэн утга."
+                    }
+                  }
+                },
+                "setInterval": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "Функцийн гүйцэтгэл бүрийн хоорондох миллисекундын тоо."
+                    }
+                  }
+                },
+                "setTimeout": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "Функцийг ажиллуулахаас өмнө хүлээх миллисекундын тоо."
+                    }
+                  }
+                },
+                "timedLoop": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Функц"
+                    }
+                  }
+                }
+              }
+            },
             "math": {
-              "name": "Математик"
+              "name": "Математик",
+              "expressions": {
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Хамгийн бага тоог буцаав"
+                    },
+                    "max": {
+                      "description": "Хамгийн их тоог буцаав"
+                    }
+                  }
+                },
+                "randomNumber": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Хамгийн бага тоог буцаав"
+                    },
+                    "max": {
+                      "description": "Хамгийн их тоог буцаав"
+                    }
+                  }
+                }
+              }
             },
             "variables": {
-              "name": "Хувьсагчууд"
+              "name": "Хувьсагчууд",
+              "expressions": {
+                "declareAssign_list_123": {
+                  "short_description": "Тунхаглах болон хувьсагч нь массивыг оноож"
+                },
+                "includes": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "хайх мөр."
+                    }
+                  }
+                },
+                "indexOf": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "хайх мөр."
+                    }
+                  }
+                },
+                "addPair": {
+                  "return_value": "Байхгүй"
+                },
+                "length": {
+                  "return_value": "мөр урт"
+                }
+              }
             },
             "functions": {
               "name": "Функцүүд"

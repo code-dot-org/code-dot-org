@@ -436,6 +436,11 @@ sr:
             '"space"': Простор
             '"x"': x
             '"y"': у
+      DansBlocks_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"hearts"': срца
+            '"rain"': киша
       gamelab_addTarget:
         options:
           OPT:
@@ -490,10 +495,18 @@ sr:
             '"space"': Простор
             '"x"': x
             '"y"': у
+      gamelab_layoutSprites:
+        options:
+          FORMAT:
+            '"row"': ред
       gamelab_makeBurst:
         options:
           EFFECT:
             '"rain"': киша
+      gamelab_makeNewSpriteGroup:
+        options:
+          FORMAT:
+            '"row"': ред
       gamelab_makeProjectile:
         options:
           DIRECTION:
@@ -810,3 +823,8 @@ sr:
         text: помери се напред
       craft_placeTorch:
         text: постави бакљу
+      storylab_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"hearts"': срца
+            '"rain"': киша

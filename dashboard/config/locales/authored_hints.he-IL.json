@@ -2101,7 +2101,7 @@
           "courseD_artist_functions2_a": "התוכנית שלך זקוקה:\n\n-   להשתמש בפונקציה\n-   לזוז קידמה 100 + 75 פיקסלים\n-   להשתמש בפונקציה"
         },
         "courseE_artist_functions2_copy": {
-          "courseD_artist_functions2_a": "התוכנית שלך זקוקה:\n\n-   להשתמש בפונקציה\n-   לזוז קידמה 100 + 75 פיקסלים\n-   להשתמש בפונקציה"
+          "courseD_artist_functions2_a": "התוכנית שלך זקוקה:\n- להשתמש בפונקציה\n- לזוז קידמה 100 + 75 פיקסלים\n- להשתמש בפונקציה"
         },
         "courseE_artist_functions6": {
           "grade4_artist_functions_windows0_c": "אל תפחדו לטעות! הוסיפו בלוקים, הריצו את הקוד וראו מה יקרה, גם אם עדיין לא סיימתם לפתור את החידה."
@@ -2780,7 +2780,7 @@
           "hello_world_click": "חברו בלוק `אמור` אל מתחת לבלוק `כאשר לוחצים על`.\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"cuteanimals_seahorse\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_spriteSay\">\n        <title name=\"SPEECH\">Hello, ocean!</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"cuteanimals_seahorse\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
         },
         "helloworld_animals_location": {
-          "location_pin_hint": "כדי לשנות את מיקום הדמות, הקישו על הסיכה בבלוק המיקום, ואז הקישו על המקום שתרצו שהדמות תלך אליו."
+          "location_pin_hint": "כדי לשנות את מיקום הדמות, הקישו על הסיכה בבלוק המיקום, ואז הקישו על המקום שתרצו שהדמות תלך אליו.\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
         },
         "helloworld_animals_multi": {
           "cat_xml": "ודאו כי התחפושות מתאימות בכל בלוק.\n\n<xml>\n  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"cuteanimals_cat_hello\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>\n  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Meow!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"cuteanimals_cat_hello\"</title>\n      </block>\n    </value>\n    </block></next></block>\n</xml>"
@@ -2809,7 +2809,7 @@
           "hello_world_click": "חברו בלוק `אמור` אל מתחת לבלוק `כאשר לוחצים על`.\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"emoji_06_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_spriteSay\">\n        <title name=\"SPEECH\">Look at that!</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"emoji_06_1\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
         },
         "helloworld_emoji_location": {
-          "location_pin_hint": "כדי לשנות את מיקום הדמות, הקישו על הסיכה בבלוק המיקום, ואז הקישו על המקום שתרצו שהדמות תלך אליו."
+          "location_pin_hint": "כדי לשנות את מיקום הדמות, הקישו על הסיכה בבלוק המיקום, ואז הקישו על המקום שתרצו שהדמות תלך אליו.\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
         },
         "helloworld_emoji_multi": {
           "storyboard_costume": "ודאו כי התחפושות מתאימות לכל דמות.\n<xml><block type=\"gamelab_spriteSay\">\n      <title name=\"SPEECH\">Look at me!</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"emoji_14_1\"</title>\n        </block>\n      </value>\n    </block></xml>"
@@ -2838,7 +2838,7 @@
           "hello_world_click": "חברו בלוק `אמור` אל מתחת לבלוק `כאשר לוחצים על`.\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_burger_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_spriteSay\">\n        <title name=\"SPEECH\">Hello, world!</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"face_burger_1\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
         },
         "helloworld_food_location": {
-          "location_pin_hint": "כדי לשנות את מיקום הדמות, הקישו על הסיכה בבלוק המיקום, ואז הקישו על המקום שתרצו שהדמות תלך אליו."
+          "location_pin_hint": "כדי לשנות את מיקום הדמות, הקישו על הסיכה בבלוק המיקום, ואז הקישו על המקום שתרצו שהדמות תלך אליו.\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
         },
         "helloworld_food_multi": {
           "storyboard_costume": "ודאו כי התחפושות מתאימות לכל דמות.\n<xml><block type=\"gamelab_spriteSay\">\n      <title name=\"SPEECH\">Hello, broccoli!</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"face_carrot_1\"</title>\n        </block>\n      </value>\n    </block></xml>"
@@ -2867,7 +2867,7 @@
           "hello_world_click": "חברו בלוק `אמור` אל מתחת לבלוק `כאשר לוחצים על`.\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"retro_powerup_heart\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_spriteSay\">\n        <title name=\"SPEECH\">POWERUP!</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"retro_powerup_heart\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
         },
         "helloworld_retro_location": {
-          "location_pin_hint": "כדי לשנות את מיקום הדמות, הקישו על הסיכה בבלוק המיקום, ואז הקישו על המקום שתרצו שהדמות תלך אליו."
+          "location_pin_hint": "כדי לשנות את מיקום הדמות, הקישו על הסיכה בבלוק המיקום, ואז הקישו על המקום שתרצו שהדמות תלך אליו.\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
         },
         "helloworld_retro_multi": {
           "storyboard_costume": "ודאו כי התחפושות מתאימות לכל דמות.\n<xml><block type=\"gamelab_spriteSay\">\n      <title name=\"SPEECH\">Hello!</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"retrocreature_16\"</title>\n        </block>\n      </value>\n    </block></xml>"
@@ -2930,7 +2930,7 @@
           "iceage_warn_ice_age_b": "הוסיפו את שני הבלוקים החדשים מתחת לאירוע \"התחל ריצה\" כדי שיתרחשו מייד לאחר תחילת התוכנית."
         },
         "poetry_hoc_addSprites": {
-          "location_hint": "לכל דמות יש \"מיקום\". תוכלו לקבוע את המיקום בלחיצה על הסיכה שעל הבלוק הזה:\n\n<xml><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"twinkling_star\"</title><title name=\"LOCATION\">{\"x\":200,\"y\":225}</title></block></xml>\n\nלחצו על הסיכה ![](<https://images.code.org/e9531e292b034feef0f176d4f97ac47f-image-1634932451913.54.05 PM.png>) בבלוק המיקום ואז בחרו מקום חדש לדמות שלכם על המסך.\nלחצו על \"הרץ\" כשהקוד שלכם מוכן.",
+          "location_hint": "לכל דמות יש \"מיקום\". תוכלו לקבוע את המיקום בלחיצה על הסיכה שעל הבלוק הזה:\n\n<xml><block xmlns=\"https://developers.google.com/blockly/xml\" type=\"Poetry_makeNewSpriteAnon\" id=\"1XbbmW9TqiPQBwSeRYvO\">\n  <field name=\"ANIMATION_NAME\">\"twinkling star\"</field>\n  <field name=\"LOCATION\">{\"x\":200,\"y\":200}</field>\n</block></xml>\n\nלחצו על הסיכה ![](<https://images.code.org/e9531e292b034feef0f176d4f97ac47f-image-1634932451913.54.05 PM.png>) בבלוק המיקום ואז בחרו מקום חדש לדמות שלכם על המסך.\nלחצו על \"הרץ\" כשהקוד שלכם מוכן.",
           "remove_hint": "אתם יכולים להסיר דמות במספר שורה מסוים. תוכלו להוסיף דמות חדשה שתתפוס את מקומה:\n\n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">3</title><next><block type=\"Poetry_destroy\"><title name=\"ANIMATION_NAME\">\"twinkling_star\"</title><next><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"night_moon\"</title><title name=\"LOCATION\">{\"x\":200,\"y\":225}</title></block></next></block></next></block></xml>"
         },
         "poetry_hoc_backgroundEffects": {
@@ -3460,6 +3460,64 @@
         },
         "coursee_helloworld_say": {
           "hello-world-first-solution-pizza": "כדי לגרום לפיצה לומר משהו, חברו את הבלוקים של הקוד באופן כזה:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"face_pizza_1\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_pizza_1\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
+        },
+        "helloworld_food_backgrounds_soccer-2022": {
+          "hello_world_background": "אתם יכולים לשנות את הרקע באמצעות חיבור הבלוק `קבע רקע` אל מתחת לבלוק האירוע `כאשר לוחצים על`:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_avocado_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"gradient_25_1\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "helloworld_food_backgrounds_space-2022": {
+          "hello_world_background": "אתם יכולים לשנות את הרקע באמצעות חיבור הבלוק `קבע רקע` אל מתחת לבלוק האירוע `כאשר לוחצים על`:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_avocado_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"gradient_25_1\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "helloworld_food_behaviors_soccer-2022": {
+          "storyboard_behavior_example": "שימו לב: כדי להוסיף לדמות התנהגות, עליכם להשתמש בבלוק `דמות מתחילה` ובבלוק התנהגות ירוק, כגון `להסתובב ימינה`.\n\n<xml><block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"face_burger_1\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n              </value></block></xml>"
+        },
+        "helloworld_food_behaviors_space-2022": {
+          "storyboard_behavior_example": "שימו לב: כדי להוסיף לדמות התנהגות, עליכם להשתמש בבלוק `דמות מתחילה` ובבלוק התנהגות ירוק, כגון `להסתובב ימינה`.\n\n<xml><block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"space_astronaut_cat\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n              </value></block></xml>"
+        },
+        "helloworld_food_click_soccer-2022": {
+          "hw_click_sprites": "הקישו על הדמויות בעוד האירוע רץ.",
+          "hw_no_changes": "אינכם צריכים לשנות שום דבר בקוד בשלב זה."
+        },
+        "helloworld_food_click_space-2022": {
+          "hw_click_sprites": "הקישו על הדמויות בעוד האירוע רץ.",
+          "hw_no_changes": "אינכם צריכים לשנות שום דבר בקוד בשלב זה."
+        },
+        "helloworld_food_costumes_soccer-2022": {
+          "hello_world_costumes": "נסו לחבר את הבלוק `שנה תחפושת` מתחת לבלוק האירוע `כאשר לוחצים על`.\n\n<xml><block type=\"gamelab_spriteClicked\" deletable=\"false\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <title name=\"ANIMATION\">\"soccer_player_2\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setAnimation\">\n        <title name=\"ANIMATION\">\"soccer_player_3\"</title>\n        <value name=\"THIS\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"soccer_player_2\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "helloworld_food_costumes_space-2022": {
+          "hello_world_costumes": "נסו לחבר את הבלוק `שנה תחפושת` מתחת לבלוק האירוע `כאשר לוחצים על`.\n\n<xml><block type=\"gamelab_spriteClicked\" deletable=\"false\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <title name=\"ANIMATION\">\"space_astronaut_3\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setAnimation\">\n        <title name=\"ANIMATION\">\"space_astronaut_2\"</title>\n        <value name=\"THIS\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"space_astronaut_3\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "helloworld_food_events_soccer-2022": {
+          "hello_world_click": "חברו בלוק `אמור` אל מתחת לבלוק `כאשר לוחצים על`.\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_burger_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_spriteSay\">\n        <title name=\"SPEECH\">Hello, world!</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"face_burger_1\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
+        },
+        "helloworld_food_events_space-2022": {
+          "hello_world_click": "חברו בלוק `אמור` אל מתחת לבלוק `כאשר לוחצים על`.\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"space_alien_ship\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_spriteSay\">\n        <title name=\"SPEECH\">Hello, world!</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"space_alien_ship\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
+        },
+        "helloworld_food_location_soccer-2022": {
+          "location_pin_hint": "כדי לשנות את מיקום הדמות, הקישו על הסיכה בבלוק המיקום, ואז הקישו על המקום שתרצו שהדמות תלך אליו.\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
+        },
+        "helloworld_food_location_space-2022": {
+          "location_pin_hint": "כדי לשנות את מיקום הדמות, הקישו על הסיכה בבלוק המיקום, ואז הקישו על המקום שתרצו שהדמות תלך אליו.\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
+        },
+        "helloworld_food_multi_soccer-2022": {
+          "storyboard_costume": "ודאו כי התחפושות מתאימות לכל דמות.\n<xml><block type=\"gamelab_spriteSay\">\n      <title name=\"SPEECH\">Goal!</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"soccer_ball\"</title>\n        </block>\n      </value>\n    </block></xml>"
+        },
+        "helloworld_food_multi_space-2022": {
+          "storyboard_costume": "ודאו כי התחפושות מתאימות לכל דמות.\n<xml><block type=\"gamelab_spriteSay\">\n      <title name=\"SPEECH\">Hello, alien!</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"face_carrot_1\"</title>\n        </block>\n      </value>\n    </block></xml>"
+        },
+        "helloworld_food_sizes_soccer-2022": {
+          "storyboard_setProp": "כדי להגדיר את הגודל של דמות פעם אחת בלבד, אפשר להשתמש בבלוק הזה:\n\n<xml><block type=\"gamelab_setProp\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"face_strawberry_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">50</title>\n        </block>\n      </value>\n    </block></xml>",
+          "storyboard_changePropBy": "אם תרצו לשנות את גודל הדמות שוב ושוב (דרך אירועים), השתמשו בבלוק הזה:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"face_strawberry_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>"
+        },
+        "helloworld_food_sizes_space-2022": {
+          "storyboard_setProp": "כדי להגדיר את הגודל של דמות פעם אחת בלבד, אפשר להשתמש בבלוק הזה:\n\n<xml><block type=\"gamelab_spriteClicked\">\n  <field name=\"CONDITION\">\"when\"</field>\n  <value name=\"SPRITE\">\n    <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n      <field name=\"ANIMATION\">\"space_astronaut_1\"</field>\n    </block>\n  </value>\n  <next>\n    <block type=\"gamelab_setProp\">\n      <field name=\"PROPERTY\">\"scale\"</field>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n          <field name=\"ANIMATION\">\"space_astronaut_1\"</field>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\" can_disconnect_from_parent=\"false\">\n          <field name=\"NUM\">50</field>\n        </block>\n      </value>\n    </block>\n  </next>\n</block></xml>",
+          "storyboard_changePropBy": "אם תרצו לשנות את גודל הדמות שוב ושוב (דרך אירועים), השתמשו בבלוק הזה:\n\n<xml><block type=\"gamelab_spriteClicked\">\n  <field name=\"CONDITION\">\"when\"</field>\n  <value name=\"SPRITE\">\n    <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n      <field name=\"ANIMATION\">\"space_satellite\"</field>\n    </block>\n  </value>\n  <next>\n    <block type=\"gamelab_changePropBy\">\n      <field name=\"PROPERTY\">\"scale\"</field>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n          <field name=\"ANIMATION\">\"space_satellite\"</field>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\" can_disconnect_from_parent=\"false\">\n          <field name=\"NUM\">10</field>\n        </block>\n      </value>\n    </block>\n  </next>\n</block></xml>"
+        },
+        "helloworld_food_say_soccer-2022": {
+          "hello-world-first-solution-pizza": "כדי לגרום לדמות לומר משהו, חבר את הבלוקים של הקוד כך:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"soccer_player_1\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"soccer_player_1\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
+        },
+        "helloworld_food_say_space-2022": {
+          "hello-world-first-solution-pizza": "כדי לגרום לדמות לומר משהו, חבר את הבלוקים של הקוד כך:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"face_pizza_1\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_pizza_1\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
         }
       }
     }

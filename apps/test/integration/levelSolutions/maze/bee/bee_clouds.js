@@ -12,7 +12,7 @@ var levelDef = {
     [2, 1, 'FC', 1, 1, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 1, 1, 0, 0, 0, 0],
-    [0, 0, 1, 1, 0, 0, 0, 0]
+    [0, 0, 1, 1, 0, 0, 0, 0],
   ],
   startDirection: 1, // Direction.EAST,
   initialDirt: [
@@ -23,9 +23,9 @@ var levelDef = {
     [0, 0, 1, -1, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0]
+    [0, 0, 0, 0, 0, 0, 0, 0],
   ],
-  flowerType: 'redWithNectar'
+  flowerType: 'redWithNectar',
 };
 
 module.exports = {
@@ -37,9 +37,9 @@ module.exports = {
       description: 'Get honey without checking clouds',
       expected: {
         result: false,
-        testResult: TestResults.APP_SPECIFIC_FAIL
+        testResult: TestResults.APP_SPECIFIC_FAIL,
       },
-      customValidator: function() {
+      customValidator: function () {
         return Maze.executionInfo.terminationValue() === 5; //TerminationValue.UNCHECKED_CLOUD;
       },
       xml:
@@ -48,15 +48,15 @@ module.exports = {
           'maze_moveForward',
           'maze_moveForward',
           'maze_moveForward',
-          'maze_honey'
+          'maze_honey',
         ]) +
-        '</xml>'
+        '</xml>',
     },
     {
       description: 'Get honey with checking clouds',
       expected: {
         result: true,
-        testResult: TestResults.ALL_PASS
+        testResult: TestResults.ALL_PASS,
       },
       xml:
         '<xml>' +
@@ -69,7 +69,7 @@ module.exports = {
         '</statement>' +
         '<next><block type="maze_moveForward">' +
         '<next><block type="maze_honey"></block>' +
-        '</next></block></next></block></next></block></next></block></xml>'
-    }
-  ]
+        '</next></block></next></block></next></block></next></block></xml>',
+    },
+  ],
 };

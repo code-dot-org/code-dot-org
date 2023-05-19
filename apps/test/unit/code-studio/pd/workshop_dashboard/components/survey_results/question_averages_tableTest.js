@@ -6,7 +6,7 @@ import {shallow} from 'enzyme';
 describe('Question Averages Table', () => {
   const questions = [
     {text: 'Question 1', key: 'question_1', score_base: '5'},
-    {text: 'Question 2', key: 'question_2', score_base: '5'}
+    {text: 'Question 2', key: 'question_2', score_base: '5'},
   ];
   const allMyWorkshopsData = {question_1: 5, question_2: 4};
   const allWorkshopsData = {question_1: 4.1, question_2: 3.1};
@@ -40,22 +40,20 @@ describe('Question Averages Table', () => {
       '',
       'This workshop',
       'All my Workshop type',
-      'All workshops'
+      'All workshops',
     ]);
-    assertRowEquals(
-      questionAveragesTable
-        .find('tbody tr')
-        .at(0)
-        .find('td'),
-      ['Question 1', '4.5 / 5', '5 / 5', '4.1 / 5']
-    );
-    assertRowEquals(
-      questionAveragesTable
-        .find('tbody tr')
-        .at(1)
-        .find('td'),
-      ['Question 2', '3.2 / 5', '4 / 5', '3.1 / 5']
-    );
+    assertRowEquals(questionAveragesTable.find('tbody tr').at(0).find('td'), [
+      'Question 1',
+      '4.5 / 5',
+      '5 / 5',
+      '4.1 / 5',
+    ]);
+    assertRowEquals(questionAveragesTable.find('tbody tr').at(1).find('td'), [
+      'Question 2',
+      '3.2 / 5',
+      '4 / 5',
+      '3.1 / 5',
+    ]);
     expect(questionAveragesTable.find('tbody tr').length).to.equal(2);
   });
 
@@ -63,9 +61,9 @@ describe('Question Averages Table', () => {
     const thisWorkshopData = {
       question_1: {
         'Facilitator 1': 2,
-        'Facilitator 2': 2.5
+        'Facilitator 2': 2.5,
       },
-      question_2: 4.9
+      question_2: 4.9,
     };
 
     const questionAveragesTable = shallow(
@@ -86,22 +84,24 @@ describe('Question Averages Table', () => {
       'Facilitator 1',
       'Facilitator 2',
       'All my Workshop type',
-      'All workshops'
+      'All workshops',
     ]);
-    assertRowEquals(
-      questionAveragesTable
-        .find('tbody tr')
-        .at(0)
-        .find('td'),
-      ['Question 1', '', '2 / 5', '2.5 / 5', '5 / 5', '4.1 / 5']
-    );
-    assertRowEquals(
-      questionAveragesTable
-        .find('tbody tr')
-        .at(1)
-        .find('td'),
-      ['Question 2', '4.9 / 5', '', '', '4 / 5', '3.1 / 5']
-    );
+    assertRowEquals(questionAveragesTable.find('tbody tr').at(0).find('td'), [
+      'Question 1',
+      '',
+      '2 / 5',
+      '2.5 / 5',
+      '5 / 5',
+      '4.1 / 5',
+    ]);
+    assertRowEquals(questionAveragesTable.find('tbody tr').at(1).find('td'), [
+      'Question 2',
+      '4.9 / 5',
+      '',
+      '',
+      '4 / 5',
+      '3.1 / 5',
+    ]);
     expect(questionAveragesTable.find('tbody tr').length).to.equal(2);
   });
 });

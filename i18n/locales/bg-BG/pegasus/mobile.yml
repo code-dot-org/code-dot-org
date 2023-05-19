@@ -536,6 +536,7 @@
   volunteer_engineer_submission_distance_16: "10 мили"
   volunteer_engineer_submission_distance_24: "15 мили"
   volunteer_engineer_submission_distance_32: "20 мили"
+  volunteer_engineer_submission_distance_80: "50 мили"
   volunteer_engineer_submission_num_volunteers_5: "5 доброволци"
   volunteer_engineer_submission_num_volunteers_10: "10 доброволци"
   volunteer_engineer_submission_num_volunteers_25: "25 доброволци"
@@ -701,6 +702,7 @@
   dashboard_course2: 'Курс 2:'
   dashboard_course3: 'Курс 3:'
   dashboard_course4: 'Курс 4: '
+  dashboard_coursea: 'Курс A: '
   dashboard_coursec: 'Курс C: '
   dashboard_coursed: 'Курс D: '
   dashboard_coursee: 'Курс E:  '
@@ -911,6 +913,8 @@
   courseb-2021_name: Курс B (2021)
   coursec-2021_name: Курс C (2021)
   coursef-2021_name: Курс F (2021)
+  csd2_name: 'Урок 2: Уеб Разработка'
+  csd3_name: 'Урок 3: Анимация и Игри'
   accelerated_name: "Ускорен курс"
   20-hour_name: Ускорен курс
   algebra_name: "CS в алгебрата"
@@ -1400,9 +1404,12 @@
   header_legal_privacy: "Защита на личните данни"
   header_legal_tos: "Термини"
   header_tutorials: "Уроци"
+  header_screen_reader_hamburger: "Меню"
+  header_screen_reader_help: "Помощно Меню"
   header_documentation: "Документация"
   user_header_label: "Здравейте %{username}"
   user_header_team: "Екип"
+  user_header_my_projects: "Моите проекти"
   user_header_settings: "Моят акаунт"
   user_header_logout: "Изход"
   user_header_signin: "Вход"
@@ -1417,6 +1424,11 @@
   user_header_view_project_gallery: "Покажи Галерия с проекти"
   user_header_view_my_projects: "Покажи моите проекти"
   view_all_sections: "Покажи всички раздели"
+  signing_in: "Влизане"
+  sign_in_instruct_website: "Отидете на %{code_org_url}."
+  sign_in_instruct_code: 'Въведете кода за секцията им: %{section_code}.'
+  sign_in_instruct_secret: "Изберете тяхната тайна %{secret}."
+  sign_in_instruct_button: "Натиснете бутона \"Вход\"."
   hero_name: 'Minecraft: Пътуването на героя'
   applab_tile_start_tutorial: "Старт"
   aquatic_name: 'Minecraft: Подводното пътешествие'
@@ -1425,8 +1437,10 @@
   hoc_overview_dance_title: "Танцово Парти"
   hoc_overview_start_tutorial: "Старт"
   hoc_overview_more_resources: "За повече ресурси за взаимодействие с вашата отдалечена класна стая, вижте нашето ръководство за хостване на [виртуален Hour of Code](https://hourofcode.com/us/how-to/virtual). За ученици с ограничена или никаква техника или свързаност, споделете този пакет от [достъпни Hour of Code дейности](https://code.org/files/Hour-of-Code-Unplugged-Activities.pdf)."
+  hoc2018_creativity: "креативност"
   hoc2018_creativity_create: "Създай"
   hoc2018_creativity_hoc_coming: "Hour of Code идва…"
+  hoc2018_creativity_what_will_you_create: "Какво ще създадеш?"
   hoc2018_mc_page_title: "Minecraft Hour of Code уроци"
   hoc2018_mc_details: "Много езици | Съвременни браузъри и таблети | Клас 2 +"
   hoc2018_mc_aquatic_title: "Minecraft: Подводното пътешествие"
@@ -1462,6 +1476,7 @@
   hoc2018_mc_video_title_anybody_can_learn: "Всеки може да се научи"
   hoc2018_mc_video_title_my_name_is_aracely: "Моето Име е Аракели"
   hoc2018_mc_homepage_hoc_coming: "Hour of Code идва..."
+  hoc2018_mc_homepage_what_create: "Какво ще създадеш?"
   hoc2018_mc_homepage_give_flight: "Дай полет на въображението и раждането на иновациите. Започни с един час на код и своя собствена марка на творчеството, каквото и да е."
   hoc2018_mc_homepage_watch_video: "Гледай нашето видео"
   hoc2018_mc_homepage_join_us: "Присъединете се към нас"
@@ -1480,20 +1495,50 @@
   hoc2018_dance_party_specs: "Език | Формат 1 | Възраст 6-106"
   hoc2018_dance_party_button: "Старт"
   hoc2018_dance_keep_on_dancing_box_title: "Продължавай Да Танцуваш"
+  hoc2018_dance_keep_on_dancing_specs: "Език | Формат | Възраст 13+"
   hoc2018_dance_teacher_resources_tile1_button: "План на урок"
   hoc2018_dance_teacher_resources_tile2_button: "Ънплъгд дейност"
+  hoc2018_dance_videos_section_heading: "Вдъхнови се"
+  hoc2018_dance_amazon_sponsor_section_with_logo_title: "В партньорство с"
   hoc2018_dance_amazon_about_future_engineer_button: "Научете повече"
   hoc2018_dance_amazon_scholarship_programs_button: "Регистрирай се сега"
+  hoc2018_dance_video1: "Танцово Парти - Въведение"
+  hoc2018_dance_video2: "Танцово Парти - Събития"
+  hoc2018_dance_video3: "Танцово Парти - Характеристики"
+  hoc2018_dance_video4: "Танцово Парти - Позрадвления"
   page_not_found_title: "Страницата не е намерена"
+  page_not_found_header: '404: Страницата Не е Намерена'
+  page_not_found_description: "Страницата, която търсите, не съществува на този адрес. Проверете уеб адреса и изпратете отново. Или се върнете на началната ни страница."
+  page_not_found_button: "Началната страница"
+  hoc2018_mc_with_microsoft: "В партньорство с"
+  page_not_available_button: "Началната страница"
+  hoc2020_mc_available_code_org: "Досстъпно на Code.org"
+  hoc2020_mc_mee_title: "Minecraft Историята на Две Села"
+  hoc2021_mc_mee_villages_title: "Историята на Две Села"
   footer_powered_by_aws: "Създадено с Amazon Web Services"
   codebytes_skinny_banner_english_only: "Само на английски"
   footer_privacy_policy: "Защита на личните данни"
   footer_about: "Относно"
   footer_partners: "Партньори"
+  footer_blog: "Блог"
   footer_donate: "Дарения"
+  footer_store: "Магазин"
   footer_support: "Помощ"
   footer_terms: "Условия"
   ai_for_oceans_lesson_plan: "план на урок"
+  ai_in_partnership_with: "В партньорство с"
   ai_activity: "Упражнение"
   ai_description: "Описание"
+  ai_quick_draw: "Бързо, Нарисувай!"
+  ai_quick_draw_description: "Може ли невронна мрежа да се научи да разпознава драскулки?"
+  ai_audience: "Публика"
   outbreak_tile_title: "Епидемия"
+  outbreak_tile_subtitle: "Вирус е заразил Града на Чудовищата! Кодирайте симулатор на епидемията и направете прогнози какво ще се случи със съседите на Града на Чудовищата."
+  outbreak_tile_alt: "Симулация, как вирусът се разпространява, чрез група лилави чудовища."
+  footer_cookie_notice: "Известие за Бисквитки"
+  top_hoc_tutorial_applab_alt_text: "Кафява ръка с показалец, докосващ таблет със сензорен екран, излъчващ звезди и лъчи светлина на син фон"
+  hoc2022_banner_title: "Изследвай, Играй, Създавай!"
+  hoc2022_cta_primary: "Виж какво е ново"
+  hoc2022_landing_page_play_title: "Играй"
+  hoc2022_landing_page_create_title: "Създай"
+  microsoft_logo_alt: "Лого на Microsoft"

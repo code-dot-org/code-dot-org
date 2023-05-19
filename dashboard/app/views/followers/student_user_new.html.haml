@@ -4,7 +4,7 @@
 - if current_user || !@section
   %h2= t('join_section.code.title')
   %p= t('join_section.code.instructions')
-  - display_captcha = current_user && current_user.display_captcha?
+  - display_captcha = current_user && current_user.display_join_section_captcha?
   = form_tag(student_user_new_path) do
     = text_field_tag(:section_code, params[:section_code], placeholder: I18n.t('join_section.code.placeholder'))
     - if display_captcha
@@ -81,10 +81,17 @@
                 .labelblock
                   = t('signup_form.age')
                 = f.select :age, User::AGE_DROPDOWN_OPTIONS, include_blank: true, class: 'fieldblock'
-              .itemblock
-                .labelblock
-                  = t('signup_form.gender')
-                = f.select :gender, gender_options
+              - if ask_gender_experiment?(request, session.id.to_s)
+                - gender_input_type = gender_input_type?(request, session)
+                - SignUpTracking.log_gender_input_type_started(session, gender_input_type, request.locale, 'section_signup')
+                - if gender_input_type != User::GenderExperimentHelper::GENDER_INPUT_TYPE_NONE
+                  .itemblock
+                    .labelblock
+                      = t('signup_form.gender')
+                    - if gender_input_type == User::GenderExperimentHelper::GENDER_INPUT_TYPE_DROPDOWN
+                      = f.select :gender, gender_options
+                    - else
+                      = f.text_field :gender
             %br/
             = submit_tag 'Register', class: 'btn btn-primary'
 

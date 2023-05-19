@@ -99,7 +99,7 @@
         },
         "5f00e31d-70fa-4bb2-9bef-223793082f5c": {
           "name": "Rayakan",
-          "description": "Jelaskan bahwa Anda menghabiskan satu jam coding hari ini, karena pekan ini adalah Pekan Pendidikan Ilmu Komputer, dan jutaan siswa lain di seluruh dunia juga telah mempelajari satu Hour of Code pekan ini. Ucapkan selamat kepada siswa karena telah menjadi bagian dari gerakan ini.\n\nBerikan [sertifikat](https://code.org/certificates?script=mc) yang berisi nama mereka kepada tiap siswa."
+          "description": "Jelaskan bahwa Anda menghabiskan satu jam coding hari ini, karena pekan ini adalah Pekan Pendidikan Ilmu Komputer, dan jutaan siswa lain di seluruh dunia juga telah mempelajari satu Hour of Code pekan ini. Ucapkan selamat kepada siswa karena telah menjadi bagian dari gerakan ini.\n\nBerikan [sertifikat](https://studio.code.org/certificates/batch?course=bWM=) yang berisi nama mereka kepada tiap siswa."
         },
         "20b7009c-3a45-4211-a9ad-c65f56099200": {
           "name": "Langkah berikutnya",
@@ -149,7 +149,7 @@
         },
         "145782a9-a436-4615-9827-0f75d7e4b3a0": {
           "name": "Rayakan",
-          "description": "Jelaskan bahwa Anda menghabiskan satu jam coding hari ini, karena pekan ini adalah Pekan Pendidikan Ilmu Komputer, dan jutaan siswa lain di seluruh dunia juga telah mempelajari satu Hour of Code pekan ini. Ucapkan selamat kepada siswa karena telah menjadi bagian dari gerakan ini.\n\nBerikan [sertifikat](https://code.org/certificates?script=mc) yang berisi nama mereka kepada tiap siswa."
+          "description": "Jelaskan bahwa Anda menghabiskan satu jam coding hari ini, karena pekan ini adalah Pekan Pendidikan Ilmu Komputer, dan jutaan siswa lain di seluruh dunia juga telah mempelajari satu Hour of Code pekan ini. Ucapkan selamat kepada siswa karena telah menjadi bagian dari gerakan ini.\n\nBerikan [sertifikat](https://studio.code.org/certificates/batch?course=bWM=) yang berisi nama mereka kepada tiap siswa."
         },
         "cc38f575-4db4-4ca6-ab2f-a9d8557f16cf": {
           "name": "Langkah berikutnya",
@@ -264,6 +264,25 @@
         "f7c11887-da26-4c7b-be7a-1b84d330ed30": {
           "name": "Setelah Satu Jam Kode",
           "description": "Setelah Hour of Code Anda berakhir, ada banyak cara untuk tetap mengajarkan ilmu komputer di kelas K-5 Anda. Berikut beberapa diantaranya:\n\n-   **Mengajarkan kursus [Dasar-dasar Ilmu Komputer Code Studio](http://code.org/educate/k5)**. Keenam kursus ini dirancang untuk pelajar muda. Siswa mengerjakan sejumlah puzzle yang mengajari mereka cara membuat code, dan pendidik dapat mengakses rencana pembelajaran menarik yang membantu menghidupkan proses pembelajaran. Code.org menawarkan pengembangan profesi gratis untuk kursus-kursus di atas, baik secara online atau langsung.\n-   **Mengundang pakar ilmu komputer untuk berbicara perihal pekerjaannya kepada siswa-siswa Anda di dalam kelas.** Tidak mengenal adanya sukarelawan? Hubungi relawan di [peta relawan][2]."
+        },
+        "6c387b78-14b7-4209-919a-97dbf64b9bc2": {
+          "name": "Melakukan Persiapan",
+          "description": "Sambut siswa di kelas dan perkenalkan secara singkat kegiatan di hari itu."
+        },
+        "bdde2027-d08e-4f64-b95d-ab104da3edd9": {
+          "tips": [
+            null
+          ]
+        },
+        "cc4e7bc2-813a-4d4a-be58-83d08ca5d970": {
+          "name": "Dukungan Umum"
+        },
+        "062143a1-3063-4af1-864a-2ad1f9c88dd5": {
+          "name": "Halo Dunia",
+          "progression_name": "Halo Dunia"
+        },
+        "f5756484-7296-4391-99e2-7b2678653934": {
+          "name": "Bayangan"
         },
         "68ce52c3-89f5-48a9-965f-f4dea8d5f530": {
           "description": "#### Melakukan Persiapan\n\nSambut siswa di kelas dan perkenalkan secara singkat kegiatan di hari itu.\n\n_Katakan: “Hari ini kita akan belajar coding selama satu jam. Adakah di sini yang pernah mendengar istilah \"code\" sebelumnya? Apa artinya?\"_\n\nSiswa mungkin menjawab bahwa \"code\" adalah semacam pesan rahasia, atau ada kaitannya dengan komputer."
@@ -448,7 +467,7 @@
         },
         "75db60fb-671b-4740-80ae-0b13f4c09897": {
           "name": "Artis",
-          "description": "Dalam kumpulan puzzle ini, artis tidak akan terkungkung dalam sudut 90 derajat. Busur derajat dapat membantu siswa memvisualisasikan sudut yang diperlukan dengan lebih baik. Bahkan, tahap ini memberikan gambar-gambar sudut saat siswa memilih sudut mana yang akan digunakan. (Harap dicatat: Pilihan sudut dibatasi dua sudut saja pada menu dropdown sehingga mengurangi jumlah opsi yang harus digarap oleh siswa.)\n\nSebelum meminta siswa ke depan komputernya untuk mengerjakan puzzle, alangkah baiknya memberikan presentasi singkat tentang cara menggunakan alat-alat tersebut pada level ini. Kami sarankan puzzle 5 sebagai puzzle yang bagus untuk menunjukkan cara menggunakan busur derajat secara online."
+          "description": "Dalam kumpulan puzzle ini, artis tidak akan dibatasi dalam sudut 90 derajat. Busur derajat dapat membantu siswa memvisualisasikan sudut yang diperlukan dengan lebih baik. Bahkan, tahap ini memberikan gambar-gambar sudut saat siswa memilih sudut mana yang akan digunakan. (Harap dicatat: Pilihan sudut dibatasi dua sudut saja pada menu dropdown sehingga mengurangi jumlah opsi yang harus digarap oleh siswa.)\n\nSebelum meminta siswa ke depan komputernya untuk mengerjakan puzzle, alangkah baiknya memberikan presentasi singkat tentang cara menggunakan alat-alat tersebut pada level ini. Kami sarankan puzzle 5 sebagai puzzle yang bagus untuk menunjukkan cara menggunakan busur derajat secara online."
         },
         "8aeabd7e-dab0-4f23-827b-58d98a04085f": {
           "description": "Tantang siswa Anda untuk menyelesaikan kegiatan [Artist](https://studio.code.org/s/artist/lessons/1/levels/1) ini.\n\nTergantung pada usia dan kemampuan siswa, Anda dapat mempertimbangkan:\n\n-   Untuk siswa yang lebih muda, kami sarankan Anda membagi kelas menjadi beberapa pasangan dan meminta tiap kelompok untuk bekerja sama menyelesaikan tutorial menggunakan [pemrograman berpasangan](https://youtu.be/vgkahOzFH2Q).\n-   Untuk siswa SMP, mengerjakan tutorial secara mandiri sangat cocok bagi mereka. Terkadang, ada baiknya membiarkan siswa untuk memilih tutorialnya sendiri. Jika siswa tidak tertarik dengan Minecraft, mereka bisa mendapatkan pengalaman serupa dengan tutorial [Coding bersama Anna dan Elsa](https://studio.code.org/s/frozen/stage/1/puzzle/1) atau [Star Wars](https://code.org/starwars).\n-   Untuk pelajar yang lebih tua atau dewasa, tutorial [Artist](https://studio.code.org/s/artist/lessons/1/levels/1) sangat cocok bagi mereka, baik sebagai tantangan mandiri atau sebagai kegiatan pemrograman berpasangan."
@@ -457,7 +476,7 @@
           "description": "Jika satu kelompok atau siswa selesai lebih awal, mereka dapat mencoba tutorial lain dengan membuka [code.org/learn](<>)."
         },
         "461e1eda-c85f-4f41-aa4d-719d6a88d8d2": {
-          "description": "### Pengarahan Singkat\n\nMinta siswa untuk merenungkan kegiatan di hari itu. Apa yang sudah mereka pelajari tentang coding? Pemrograman? Debugging? \n\n-   Berapa sudut dalam yang membentuk persegi. Bagaimana dengan segitiga?\n-   Buat sketsa bentuk sederhana di kertas kalian dan bayangkan kode yang digunakan untuk menggambarnya. Bisakah kalian menulis kode tersebut di sebelah bentuknya?\n\nBagaimana perasaan mereka terhadap ilmu komputer dan coding setelah belajar selama satu jam?\n\n### Rayakan\n\nJelaskan bahwa kalian belajar coding selama satu jam hari ini, karena pekan ini adalah CS Education Week (Pekan Pendidikan Ilmu Komputer), dan jutaan siswa lain di seluruh dunia juga telah mengikuti satu Hour of Code pekan ini. Ucapkan selamat kepada siswa karena telah mengambil bagian dalam gerakan yang mendunia ini.\n\nBerikan [certificate](https://code.org/certificates) kepada tiap siswa yang sudah tercetak dengan namanya. \n\n### Langkah Berikutnya\n\nBeri tahu siswa bahwa jika mereka menyukai kegiatan hari ini, mereka punya banyak opsi untuk tetap melanjutkan coding. Anjurkan siswa untuk membuka code.org/learn untuk melihat daftar opsi, atau jika Anda merencanakan kegiatan tambahan setelahnya, beri tahu mereka tentang topik selanjutnya di kelas Anda."
+          "description": "### Pengarahan Singkat\n\nMinta siswa untuk merenungkan kegiatan di hari itu. Apa yang sudah mereka pelajari tentang coding? Pemrograman? Debugging? \n\n-   Berapa sudut dalam yang membentuk persegi. Bagaimana dengan segitiga?\n-   Buat sketsa bentuk sederhana di kertas kalian dan bayangkan kode yang digunakan untuk menggambarnya. Bisakah kalian menulis kode tersebut di sebelah bentuknya?\n\nBagaimana perasaan mereka terhadap ilmu komputer dan coding setelah belajar selama satu jam?\n\n### Rayakan\n\nJelaskan bahwa kalian belajar coding selama satu jam hari ini, karena pekan ini adalah CS Education Week (Pekan Pendidikan Ilmu Komputer), dan jutaan siswa lain di seluruh dunia juga telah mengikuti satu Hour of Code pekan ini. Ucapkan selamat kepada siswa karena telah mengambil bagian dalam gerakan yang mendunia ini.\n\nBerikan [certificate](https://studio.code.org/certificates/batch) kepada tiap siswa yang sudah tercetak dengan namanya. \n\n### Langkah Berikutnya\n\nBeri tahu siswa bahwa jika mereka menyukai kegiatan hari ini, mereka punya banyak opsi untuk tetap melanjutkan coding. Anjurkan siswa untuk membuka code.org/learn untuk melihat daftar opsi, atau jika Anda merencanakan kegiatan tambahan setelahnya, beri tahu mereka tentang topik selanjutnya di kelas Anda."
         },
         "532c3e19-487f-44e0-97ff-a71886e169f2": {
           "description": "#### Di Luar Hour of Code\n\nSetelah Hour of Code Anda berakhir, ada banyak cara untuk tetap mengajarkan ilmu komputer di kelas K-5 Anda. Berikut beberapa diantaranya:\n\n-   **Mengajarkan kursus [Dasar-Dasar Ilmu Komputer Code Studio](http://code.org/educate/k5)**. Keenam kursus ini dirancang untuk pelajar muda. Siswa mengerjakan kumpulan puzzle yang mengajari mereka cara membuat kode, dan pendidik dapat mengakses rencana pembelajaran menarik yang membantu menghidupkan proses pembelajaran. Code.org menawarkan pengembangan profesional gratis untuk kursus ini, baik secara online atau tatap muka.\n\n-   **Mengunjungi [Anda dapat Mengajarkan Ilmu Komputer](https://studio.code.org/courses?view=teacher)** untuk saran kursus lainnya.\n\n-   **Mengundang pakar ilmu komputer untuk bercerita tentang pekerjaannya di kelas Anda**. Tidak mengenal ilmuwan komputer lokal? Hubungi sukarelawan di [peta sukarelawan](https://code.org/volunteer/local) kami\n\nGunakan kegiatan berikut untuk meningkatkan pembelajaran siswa. Dapat digunakan sebagai kegiatan di luar kelas atau pengayaan lainnya.\n\n**Mesin Fotokopi**\n\n-   Berikan dua lembar kertas kepada siswa\n-   Pada lembar pertama, buatlah gambar sederhana dengan menggunakan garis lurus saja.\n-   Pada lembar kedua, buatlah instruksi untuk membuat ulang perintah gambar tersebut untuk bergerak lurus dan berbelok di berbagai sudut.\n-   Tukar lembar instruksi dan coba buat ulang gambar hanya dengan menggunakan instruksi yang disediakan."
@@ -476,7 +495,7 @@
         },
         "0e395269-9740-4229-a7ac-b18b9f4eced9": {
           "name": "Laboratorium Bermain Gumball",
-          "description": "Tantang siswa Anda untuk menyelesaikan tutorial [Gumball Play Lab](https://studio.code.org/s/gumball/lessons/1/levels/1).\n\nTergantung pada usia dan kemampuan siswa, Anda dapat mempertimbangkan:\n\n-   Untuk siswa SMP dan SMA, kami sarankan untuk memilih tutorial yang memungkinkan bermain bebas dan pembuatan aplikasi atau game. Anda dapat meminta siswa belajar mandiri atau berpasangan atau dalam kelompok kecil. Ada banyak tutorial lain di [code.org/learn](http://code.org/learn) yang memungkinkan kreasi gratis, misalnya [Membuat Game Flappy](https://studio.code.org/s/flappy) dan alat beta kami yang baru [AppLab](https://code.org/educate/applab).\n-   Untuk siswa yang lebih muda, kami sarankan untuk membagi kelas menjadi beberapa pasangan atau kelompok yang sangat kecil (masing-masing tiga hingga empat siswa) dan minta tiap kelompok untuk bekerja sama dalam menyelesaikan tutorial menggunakan [pemrograman berpasangan](https://youtu.be/vgkahOzFH2Q).\n-   Untuk pelajar dewasa, tutorial [Tulis program komputer pertamamu](https://studio.code.org/hoc/1) sangat cocok bagi mereka, baik sebagai tantangan mandiri atau sebagai kegiatan pemrograman berpasangan."
+          "description": "Tantang siswa Anda untuk menyelesaikan tutorial [Gumball Play Lab](https://studio.code.org/s/gumball/lessons/1/levels/1).\n\nTergantung pada usia dan kemampuan siswa, Anda dapat mempertimbangkan:\n\n-   Untuk siswa SMP dan SMA, kami sarankan untuk memilih tutorial yang memungkinkan bermain bebas dan pembuatan aplikasi atau game. Anda dapat meminta siswa belajar mandiri atau berpasangan atau dalam kelompok kecil. Ada banyak tutorial lain di [code.org/learn](http://code.org/learn) yang memungkinkan kreasi gratis, misalnya [Membuat Game Flappy](https://studio.code.org/s/flappy) dan alat beta kami yang baru [AppLab](https://code.org/educate/applab).\n-   Untuk siswa yang lebih muda, kami sarankan untuk membagi kelas menjadi beberapa pasangan atau kelompok yang sangat kecil (masing-masing tiga hingga empat siswa) dan minta tiap kelompok untuk bekerja sama dalam menyelesaikan tutorial menggunakan [pair programming](https://youtu.be/vgkahOzFH2Q).\n-   Untuk pelajar dewasa, tutorial [Tulis program komputer pertamamu](https://studio.code.org/hoc/1) sangat cocok bagi mereka, baik sebagai tantangan mandiri atau sebagai kegiatan pemrograman berpasangan."
         },
         "eea63453-59c2-4c48-8d04-d6612d379584": {
           "tips": [
@@ -503,7 +522,7 @@
           "description": "Tantang siswa untuk membagikan aspek tertentu dari pengalaman Hour of Code mereka di media sosial dengan tanda pagar #hourofcode sebagai sarana untuk menyuarakan opini mereka bagi gerakan ini. Mereka dapat membagikan game, gambar, video, atau sekadar pikiran mereka."
         },
         "2836d5f0-0808-4868-bc34-bbd3cf8b631f": {
-          "name": "Setelah Satu Jam Kode",
+          "name": "Di luar  Hour of Code",
           "description": "Setelah Hour of Code Anda berakhir, ada banyak cara untuk tetap mengajarkan ilmu komputer di kelas K-5 Anda. Berikut beberapa diantaranya:\n\n-   **Mengajarkan kursus [Dasar-dasar Ilmu Komputer Code Studio](http://code.org/educate/k5)**. Keempat kursus ini dirancang untuk pelajar muda. Siswa mengerjakan sejumlah puzzle yang mengajari mereka cara membuat kode, dan pendidik dapat mengakses rencana pembelajaran menarik yang membantu menghidupkan proses pembelajaran. Code.org menawarkan pengembangan profesi gratis untuk kursus-kursus di atas, baik secara online atau langsung.\n-   **Mengundang pakar ilmu komputer untuk berbicara perihal pekerjaannya kepada siswa-siswa Anda di dalam kelas.** Tidak mengenal sukarelawan? Hubungi relawan di [peta relawan](https://code.org/volunteer/local)."
         },
         "0335c0d1-6eb5-4671-a1e2-1e3f559b3103": {
@@ -648,7 +667,7 @@
         },
         "7e26ffea-ccaa-4969-9b40-01573fbe4303": {
           "name": "Rayakan",
-          "description": "Jelaskan bahwa Anda menghabiskan satu jam coding hari ini, karena pekan ini adalah Pekan Pendidikan Ilmu Komputer, dan jutaan siswa lain di seluruh dunia juga telah mempelajari satu Hour of Code pekan ini. Ucapkan selamat kepada siswa karena telah menjadi bagian dari gerakan ini.\n\nBerikan [sertifikat](https://code.org/certificates?script=mc) yang berisi nama mereka kepada tiap siswa."
+          "description": "Jelaskan bahwa Anda menghabiskan satu jam coding hari ini, karena pekan ini adalah Pekan Pendidikan Ilmu Komputer, dan jutaan siswa lain di seluruh dunia juga telah mempelajari satu Hour of Code pekan ini. Ucapkan selamat kepada siswa karena telah menjadi bagian dari gerakan ini.\n\nBerikan [sertifikat](https://studio.code.org/certificates/batch?course=bWM=) yang berisi nama mereka kepada tiap siswa."
         },
         "de9c3d28-c38a-4d2e-af91-a72a92d31f52": {
           "name": "Langkah berikutnya",
@@ -753,6 +772,25 @@
         "cec5b790-610d-4bb9-8868-a71c39f63329": {
           "description": "**Membaca Blown to Bits**\n\n-   Baca hal. 165-169 dari [Blown to Bits, Bab 5](http://www.bitsbook.com/wp-content/uploads/2008/12/chapter5.pdf).\n-   Jawab pertanyaan yang tersedia dalam panduan membaca dan lembar kerja Lembar Kerja [Panduan Membaca untuk Enkripsi]12]\t\t\n\n**Selengkapnya tentang Blown to Bits**\n\n-   Bagian awal Bab 5 dari Blown to Bits menyinggung signifikansi dan kontroversi seputar enkripsi setelah peristiwa 11 September. Bacaan ini bisa menjadi alat yang bermanfaat untuk lebih memperkenalkan dampak kriptografi terhadap berbagai aspek kehidupan modern.\n\n-   Minta siswa untuk melihat kembali riwayat penelusuran Internetnya dan menghitung secara kasar persentase tindakan mereka berdasarkan asumsi bahwa internet itu bersifat “pribadi.” Apakah mereka yakin bahwa memang seperti itu? Adakah situs web yang mereka kunjungi yang mereka percayai kerahasiaan lalu lintasnya dibanding situs web lain? Apakah kesimpulan mereka ini kuat?"
         },
+        "bcc9e44c-ad4e-4efc-a12e-e9c74a5c1960": {
+          "name": "Melakukan Persiapan",
+          "description": "Sambut siswa di kelas dan perkenalkan secara singkat kegiatan di hari itu."
+        },
+        "3711e1c5-c206-4510-b260-99ee8f061a4c": {
+          "tips": [
+            null
+          ]
+        },
+        "0d1c3be1-c6e4-437f-85b9-4912d1cd725b": {
+          "name": "Dukungan Umum"
+        },
+        "fcf13574-b04a-42a7-9e17-ef0dba0bfe33": {
+          "name": "Halo Dunia",
+          "progression_name": "Halo Dunia"
+        },
+        "574954ea-9128-428b-9965-b0d34518c11d": {
+          "name": "Bayangan"
+        },
         "c4d6d315-bb5c-47d7-bc5e-f5fce2e4ae67": {
           "name": "Melakukan Persiapan",
           "description": "Sambut siswa di kelas dan perkenalkan secara singkat kegiatan di hari itu."
@@ -851,7 +889,7 @@
         },
         "6b574c8b-2319-4244-acc8-fb8405fa5737": {
           "name": "Rayakan",
-          "description": "Jelaskan bahwa Anda menghabiskan satu jam coding hari ini, karena pekan ini adalah Pekan Pendidikan Ilmu Komputer, dan jutaan siswa lain di seluruh dunia juga telah mempelajari satu Hour of Code pekan ini. Ucapkan selamat kepada siswa karena telah menjadi bagian dari gerakan ini.\n\nBerikan [sertifikat](https://code.org/certificates?script=mc) yang berisi nama mereka kepada tiap siswa."
+          "description": "Jelaskan bahwa Anda menghabiskan satu jam coding hari ini, karena pekan ini adalah Pekan Pendidikan Ilmu Komputer, dan jutaan siswa lain di seluruh dunia juga telah mempelajari satu Hour of Code pekan ini. Ucapkan selamat kepada siswa karena telah menjadi bagian dari gerakan ini.\n\nBerikan [sertifikat](https://studio.code.org/certificates/batch?course=bWM=) yang berisi nama mereka kepada tiap siswa."
         },
         "02dfa607-4f9e-404c-bdae-f9f423fa526c": {
           "name": "Langkah berikutnya",
@@ -1051,10 +1089,12 @@
         },
         "8581ae5d-4d2a-4221-b820-5920dd449b6c": {
           "name": "Pendahuluan",
-          "description": "**Diskusikan:**\n\n-   _Apa yang kita tahu tentang cara penyebaran virus?_\n-   _Apa yang dapat membuat virus menyebar lebih cepat ke seluruh kota?_\n-   _Apa yang dapat membantu memperlambat penyebaran virus?_\n\nTujuan dari diskusi ini adalah agar siswa memiliki kesempatan untuk mengingat kembali pengetahuan sebelumnya dan melihat ide-idenya di papan tulis. Ini juga merupakan kesempatan untuk membahas sejumlah kesalahpahaman tentang bagaimana virus menyebar."
+          "description": "**Diskusikan:**\n\n- _Apa yang kita tahu tentang cara penyebaran virus?_\n- _Apa yang dapat membuat virus menyebar lebih cepat ke seluruh kota?_\n- _Apa yang dapat membantu memperlambat penyebaran virus?_\n\nTujuan dari diskusi ini adalah agar siswa memiliki kesempatan untuk mengingat kembali pengetahuan sebelumnya dan melihat ide-idenya di papan tulis. Ini juga merupakan kesempatan untuk membahas sejumlah kesalahpahaman tentang bagaimana virus menyebar."
         },
         "d63c77c1-4167-4360-ab98-25610934beda": {
-          "description": "_Dalam pelajaran kali ini, kalian akan ke \"Monster Town\" di mana wabah virus akan segera terjadi. Dr. Monster membutuhkan bantuan kalian untuk memperlambat penyebaran virus._\n\n_Kalian akan membuat simulator wabah di Sprite Lab, lalu menggunakannya untuk memahami bagaimana proses penyebaran virus. Kalian juga akan membantu semua monster agar sehat kembali!_"
+          "name": "",
+          "description": "_Dalam pelajaran kali ini, kalian akan ke \"Monster Town\" di mana wabah virus akan segera terjadi. Dr. Monster membutuhkan bantuan kalian untuk memperlambat penyebaran virus._\n\n_Kalian akan membuat simulator wabah di Sprite Lab, lalu menggunakannya untuk memahami bagaimana proses penyebaran virus. Kalian juga akan membantu semua monster agar sehat kembali!_",
+          "progression_name": ""
         },
         "385c2c6a-f7e4-4c90-b081-7030d22193ed": {
           "description": "**Lakukan Hal Ini:** Baca _Selamat Datang di Monster Town_ di kelas.",
@@ -1081,11 +1121,11 @@
           "description": "_Simulasi merupakan cara yang bagus untuk mempelajari hal-hal yang sulit diamati di dunia nyata. Simulasi membantu para ilmuwan menyelesaikan masalah, memprediksi cara menyelesaikan masalah, dan menguji ide-ide baru dengan aman dan efisien. Simulasi kalian adalah cara untuk menunjukkan bagaimana terjadinya wabah virus di Monster Town._"
         },
         "b3189fd8-5272-4de4-953a-f4848b2ddb5c": {
-          "description": "**Diskusikan:**\n\n-   Bagaimana cara simulasi dalam membantu di dunia nyata?\n-   Bagaimana cara simulasi dalam membantu kita memahami dunia di sekitar kita?\n-   Bagaimana cara simulasi dalam meningkatkan cara kita menguji ide-ide?\n\nTujuan dari diskusi adalah agar siswa memahami bahwa simulasi merupakan cara untuk memodelkan sistem yang kompleks secara interaktif. Mereka juga akan melihat bagaimana bahwa simulasi memudahkan orang dalam menguji ide dengan cepat, murah, dan aman."
+          "description": "**Diskusikan:**\n\n- Bagaimana cara simulasi dalam membantu di dunia nyata?\n- Bagaimana cara simulasi dalam membantu kita memahami dunia di sekitar kita?\n- Bagaimana cara simulasi dalam meningkatkan cara kita menguji ide-ide?\n\nTujuan dari diskusi adalah agar siswa memahami bahwa simulasi merupakan cara untuk memodelkan sistem yang kompleks secara interaktif. Mereka juga akan melihat bagaimana bahwa simulasi memudahkan orang dalam menguji ide dengan cepat, murah, dan aman."
         },
         "b8e884f1-eae0-4138-8778-0972f90e34d9": {
           "name": "Bayangan",
-          "description": "**Prompt:**\n\n-   Seperti apa simulasi ini di dunia nyata? Bagaimana perbedaannya?\n-   Apa yang ingin kalian ubah/tambahkan ke simulasi kalian?"
+          "description": "**Prompt:**\n\n- Seperti apa simulasi ini di dunia nyata? Bagaimana perbedaannya?\n- Apa yang ingin kalian ubah/tambahkan ke simulasi kalian?"
         },
         "21f43e64-dea3-4abc-8284-e055480370ce": {
           "name": "Pendahuluan",
@@ -1124,7 +1164,7 @@
           "description": "**Urutan yang Benar: D, B, A, C**"
         },
         "11b82689-57e5-404f-8846-51e10f2642d0": {
-          "description": "### Pengarahan Singkat\n\nMinta siswa untuk merenungkan kegiatan di hari itu. Apa yang sudah mereka pelajari tentang coding? Pemrograman? Debugging? Event? Bagaimana perasaan mereka tentang ilmu komputer dan coding setelah belajar selama satu jam?\n\n### Rayakan\n\nJelaskan bahwa kalian belajar coding selama satu jam hari ini, karena pekan ini adalah CS Education Week (Pekan Pendidikan Ilmu Komputer), dan jutaan siswa lain di seluruh dunia juga telah mengikuti satu Hour of Code pekan ini. Ucapkan selamat kepada siswa karena telah mengambil bagian dalam gerakan yang mendunia ini.\n\nBerikan [certificate](https://code.org/certificates) kepada tiap siswa yang sudah dicetak dengan namanya. \n\n### Langkah Berikutnya\n\nBeri tahu siswa bahwa jika mereka menyukai kegiatan hari ini, mereka punya banyak opsi untuk tetap melanjutkan coding. Anjurkan siswa untuk membuka code.org/learn untuk melihat daftar opsi, atau jika Anda merencanakan kegiatan tambahan setelahnya, beri tahu mereka tentang topik selanjutnya di kelas Anda."
+          "description": "### Pengarahan Singkat\n\nMinta siswa untuk merenungkan kegiatan di hari itu. Apa yang sudah mereka pelajari tentang coding? Pemrograman? Debugging? Event? Bagaimana perasaan mereka tentang ilmu komputer dan coding setelah belajar selama satu jam?\n\n### Rayakan\n\nJelaskan bahwa kalian belajar coding selama satu jam hari ini, karena pekan ini adalah CS Education Week (Pekan Pendidikan Ilmu Komputer), dan jutaan siswa lain di seluruh dunia juga telah mengikuti satu Hour of Code pekan ini. Ucapkan selamat kepada siswa karena telah mengambil bagian dalam gerakan yang mendunia ini.\n\nBerikan [certificate](https://studio.code.org/certificates/batch) kepada tiap siswa yang sudah dicetak dengan namanya. \n\n### Langkah Berikutnya\n\nBeri tahu siswa bahwa jika mereka menyukai kegiatan hari ini, mereka punya banyak opsi untuk tetap melanjutkan coding. Anjurkan siswa untuk membuka code.org/learn untuk melihat daftar opsi, atau jika Anda merencanakan kegiatan tambahan setelahnya, beri tahu mereka tentang topik selanjutnya di kelas Anda."
         },
         "e9c48a39-952e-44be-8955-9d012bfa89c1": {
           "description": "#### Di Luar Hour of Code\n\nSetelah Hour of Code Anda berakhir, ada banyak cara untuk tetap mengajarkan ilmu komputer di kelas K-5 Anda. Berikut beberapa diantaranya:\n\n-   \\*\\*Mengajarkan kursus [Dasar-dasar Ilmu Komputer Code Studio](http://code.org/educate/k5). Keenam kursus ini dirancang untuk pelajar muda. Murid mengerjakan sendiri serangkaian puzzle yang mengajari mereka cara membuat kode, dan pendidik dapat mengakses rencana pembelajaran menarik yang membantu menghidupkan proses pembelajaran. Code.org menawarkan pengembangan profesional gratis untuk kursus-kursus di atas, baik secara online atau langsung.\n-   **Buka [Anda bisa Mengajarkan Ilmu Komputer](https://studio.code.org/courses?view=teacher)** untuk saran kursus lainnya.\n-   \\*\\*Mengundang pakar ilmu komputer untuk berbicara perihal pekerjaannya kepada siswa-siwa Anda di dalam kelas. Tidak mengenal ilmuwan komputer setempat? Hubungi relawan di [peta relawan](https://code.org/volunteer/local) kami."
@@ -1213,7 +1253,7 @@
           "description": "**Urutan yang Benar: D, B, A, C**"
         },
         "efd26bf1-c977-4fc3-883d-a37bb3e68a75": {
-          "description": "### Pengarahan Singkat\n\nMinta siswa untuk merenungkan kegiatan di hari itu. Apa yang sudah mereka pelajari tentang coding? Pemrograman? Debugging? Event? Bagaimana perasaan mereka tentang ilmu komputer dan coding setelah belajar selama satu jam?\n\n### Rayakan\n\nJelaskan bahwa kalian belajar coding selama satu jam hari ini, karena pekan ini adalah CS Education Week (Pekan Pendidikan Ilmu Komputer), dan jutaan siswa lain di seluruh dunia juga telah mengikuti satu Hour of Code pekan ini. Ucapkan selamat kepada siswa karena telah mengambil bagian dalam gerakan yang mendunia ini.\n\nBerikan [certificate](https://code.org/certificates) kepada tiap siswa yang sudah dicetak dengan namanya. \n\n### Langkah Berikutnya\n\nBeri tahu siswa bahwa jika mereka menyukai kegiatan hari ini, mereka punya banyak opsi untuk tetap melanjutkan coding. Anjurkan siswa untuk membuka code.org/learn untuk melihat daftar opsi, atau jika Anda merencanakan kegiatan tambahan setelahnya, beri tahu mereka tentang topik selanjutnya di kelas Anda."
+          "description": "### Pengarahan Singkat\n\nMinta siswa untuk merenungkan kegiatan di hari itu. Apa yang sudah mereka pelajari tentang coding? Pemrograman? Debugging? Event? Bagaimana perasaan mereka tentang ilmu komputer dan coding setelah belajar selama satu jam?\n\n### Rayakan\n\nJelaskan bahwa kalian belajar coding selama satu jam hari ini, karena pekan ini adalah CS Education Week (Pekan Pendidikan Ilmu Komputer), dan jutaan siswa lain di seluruh dunia juga telah mengikuti satu Hour of Code pekan ini. Ucapkan selamat kepada siswa karena telah mengambil bagian dalam gerakan yang mendunia ini.\n\nBerikan [certificate](https://studio.code.org/certificates/batch) kepada tiap siswa yang sudah dicetak dengan namanya. \n\n### Langkah Berikutnya\n\nBeri tahu siswa bahwa jika mereka menyukai kegiatan hari ini, mereka punya banyak opsi untuk tetap melanjutkan coding. Anjurkan siswa untuk membuka code.org/learn untuk melihat daftar opsi, atau jika Anda merencanakan kegiatan tambahan setelahnya, beri tahu mereka tentang topik selanjutnya di kelas Anda."
         },
         "0eade685-f4a5-4d81-bc38-4371a06fbb06": {
           "description": "#### Di Luar Hour of Code\n\nSetelah Hour of Code Anda berakhir, ada banyak cara untuk tetap mengajarkan ilmu komputer di kelas K-5 Anda. Berikut beberapa diantaranya:\n\n-   \\*\\*Mengajarkan kursus [Dasar-dasar Ilmu Komputer Code Studio](http://code.org/educate/k5). Keenam kursus ini dirancang untuk pelajar muda. Murid mengerjakan sendiri serangkaian puzzle yang mengajari mereka cara membuat kode, dan pendidik dapat mengakses rencana pembelajaran menarik yang membantu menghidupkan proses pembelajaran. Code.org menawarkan pengembangan profesional gratis untuk kursus-kursus di atas, baik secara online atau langsung.\n-   **Buka [Anda bisa Mengajarkan Ilmu Komputer](https://studio.code.org/courses?view=teacher)** untuk saran kursus lainnya.\n-   \\*\\*Mengundang pakar ilmu komputer untuk berbicara perihal pekerjaannya kepada siswa-siwa Anda di dalam kelas. Tidak mengenal ilmuwan komputer setempat? Hubungi relawan di [peta relawan](https://code.org/volunteer/local) kami.\n\n#### Ajak Aku Bermain Bola\n\nAjak siswa ke luar untuk bermain permainan bola. Lacak peristiwa dan tindakan yang terjadi. Misalnya, tidak menggiring bola basket menghasilkan traveling foul dan tim lain mendapatkan bolanya. Dalam soccer, menendang bola di luar batas mengakibatkan tim lain menendang bola ke dalam. Membawa bola ke gawang menghasilkan poin! Buat lebih banyak event jika siswa Anda menyukainya. Mintalah semua siswa berteriak \"Yippee\" ketika kapten salah satu tim mencetak poin. Mintalah semua siswa berguling ke tanah jika seorang siswa mencetak dua gol berturut-turut!"
@@ -1433,7 +1473,7 @@
           "progression_name": "Ajari AI sebuah Kata Baru"
         },
         "0cc68ced-0af8-4fbf-a8df-4df044149a60": {
-          "description": "[Cetak sertifikat](https://code.org/certificates?script=oceans) untuk siswa guna merayakan prestasi mereka.\n\nSaat pelajaran berakhir, minta siswa Anda untuk membuka [Code.org/learn](http://Code.org/learn) di mana mereka bisa menggali ide-ide lain untuk melanjutkan petualangan mereka dengan ilmu komputer."
+          "description": "[Cetak sertifikat](https://studio.code.org/certificates/batch?course=b2NlYW5z) untuk siswa guna merayakan prestasi mereka.\n\nSaat pelajaran berakhir, minta siswa Anda untuk membuka [Code.org/learn](http://Code.org/learn) di mana mereka bisa menggali ide-ide lain untuk melanjutkan petualangan mereka dengan ilmu komputer."
         },
         "be0db11e-cb8e-4658-844c-73a9faafa36d": {
           "description": "#### Bantu Kelompokkan Hewan di Taman Nasional Mountain Zebra\n\nSnapshot Safari telah memasang ratusan kamera tersembunyi di seluruh Afrika selatan untuk memotret jutaan foto hewan cantik dan langka. Para siswa dapat membantu melindungi Cape Mountain Zebra yang terancam punah dengan mengelompokkan berbagai hewan dalam foto tersebut.  Kamu bisa membaca tentang proyek tersebut [here](https://www.zooniverse.org/projects/meredithspalmer/snapshot-mountain-zebra/about/research) atau klik berikut ini untuk mencobanya!\n\n[Snapshot Mountain Zebra - Zooniverse](https://www.zooniverse.org/projects/meredithspalmer/snapshot-mountain-zebra/classify?reload=0&workflow=11445)"
@@ -1460,18 +1500,24 @@
           "description": "Sambut siswa di kelas dan perkenalkan secara singkat kegiatan di hari itu."
         },
         "de7dca58-f7d8-448f-84cf-41d215d2bf11": {
+          "description": "",
           "tips": [
-            null
+            ""
           ]
         },
         "7acfc985-03d8-4d14-b244-203f8cbf4843": {
-          "name": "Dukungan Umum"
+          "name": "Dukungan Umum",
+          "description": ""
         },
         "1634ab74-919f-40fb-b2dc-8cd5701655a2": {
           "name": "Halo Dunia"
         },
+        "2edc03d3-b9a7-4c1b-a046-16fa43b3a7a3": {
+          "description": ""
+        },
         "b68a11cc-930a-4803-beca-1d4f49ede378": {
-          "name": "Bayangan"
+          "name": "Bayangan",
+          "description": ""
         },
         "d6c0f379-8c4b-44a4-a027-b1b0d67a9605": {
           "progression_name": "Membuat UI dengan Mode Desain"
@@ -2572,6 +2618,9 @@
             "Pertanyaan Obrolan Kilat bertujuan memantik pikiran holistik tentang pola hubungan pelajaran ini dengan dunia yang lebih besar dan masa depan murid yang lebih cerah. Gunakan pengetahuan Anda tentang murid di kelas untuk memutuskan apakah Anda ingin mendiskusikan materi ini bersama murid satu kelas, secara berkelompok, atau dengan rekan sebangku."
           ]
         },
+        "f26ccabe-2b34-481f-b142-b6227421df3e": {
+          "name": "Jelajahi"
+        },
         "f8419af8-d199-4cb6-b4dc-ea619a1ea802": {
           "progression_name": "Contoh proyek"
         },
@@ -3057,6 +3106,9 @@
         "6ef6c719-244f-449d-9d81-75283f9d48e4": {
           "description": "Pastikan mengunjungi [Hak Cipta & Kreativitas ](https://copyrightandcreativity.org) untuk mendapatkan pelajaran lebih lanjut tentang hak berbagi dan kreatif digital."
         },
+        "b032e6b2-4dfd-431c-a938-06a8bd4a8056": {
+          "name": "Jelajahi"
+        },
         "8c2b4d58-a189-4531-bc7c-bfcb4bce7ca8": {
           "progression_name": "Proyek-Proyek Contoh"
         },
@@ -3435,9 +3487,6 @@
           "tips": [
             "Ingatkan murid agar hanya membagikan karya mereka kepada teman dekat atau keluarga. Untuk informasi selengkapnya, tonton atau tunjukkan **\\*Jeda dan Berpikir Secara Online - Video** di hadapan kelas."
           ]
-        },
-        "f413261b-0a85-4534-bbfd-cc3928eac9ad": {
-          "description": "Kami sudah menyertakan level prediksi pilihan ganda yang mungkin saja sulit bagi murid prabaca. Level-level ini bersifat opsional sebagai bahan tinjauan Anda dan murid di kelas untuk membantu mempersiapkan puzzle yang akan datang. Alternatif lain, level-level ini dapat digunakan setelah menyelesaikan tahap ini sebagai tinjauan kembali bagi murid di kelas.**Level Prediksi:** - [Kursus B, Loop dalam Artis](https://studio.code.org/levels/8745)"
         },
         "3ca1573a-dd46-4103-98ec-b71d8b50033b": {
           "progression_name": "Video: Artis di Code Studio"
@@ -13783,7 +13832,7 @@
           "progression_name": "Bayangan"
         },
         "b16d189d-d990-44c4-be49-8f81ac81a96e": {
-          "description": "#### Mempersiapkan Diri\n\nSambut murid di kelas dan perkenalkan aktivitas kelas hari itu.",
+          "description": "#### Mempersiapkan Diri \n\nSambut murid di kelas dan perkenalkan aktivitas kelas hari itu.",
           "tips": [
             "Satu cara untuk memperkenalkan Hour of Code jika Anda sendiri belum begitu kenal dengan coding adalah menunjukkan salah satu [video inspiratif kami][0]. Pilih video yang menurut Anda akan menjadi sumber inspirasi bagi murid dan bagikan sekarang juga. Untuk pembelajar di kelas menengah, kami sarankan [The Hour of Code ada Di Sini][1]."
           ]

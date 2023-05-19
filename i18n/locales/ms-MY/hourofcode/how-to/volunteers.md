@@ -48,9 +48,9 @@ Sains komputer ialah bidang penentu dalam abad ke-21, walau bagaimanapun sebilan
 
 Cuba lihat beberapa testimoni daripada mereka yang pernah menjadi sukarelawan:
 
-- "Antara cerita terbaik pengalaman saya ialah keseluruhan peserta kelas saya adalah wanita dan terdiri daripada berbilang bangsa. Ini menunjukkan petanda baik bagi masa depan industri kita kerana memiliki peluang membantu dan menggembirakan kanak-kanak ini." 
-- “Terutamanya seronok kerana dapat menggalakkan remaja perempuan di dalam bidang teknologi. Terasa seperti saya membantu generasi seterusnya di kawasan setempat saya.” 
-- “Saya AMAT SUKA melihat betapa terujanya kanak-kanak itu. Satu perkara yang mengagumkan ialah guru menyedari bahawa sebilangan pelajar yang kurang berjaya di dalam akademik, menjadi begitu cemerlang semasa mereka berfikir seperti pembangun dan membantu yang lain - memberikan mereka ruang membina keyakinan.” 
+- "Antara cerita terbaik pengalaman saya ialah keseluruhan peserta kelas saya adalah wanita dan terdiri daripada berbilang bangsa. Ini menunjukkan petanda baik bagi masa depan industri kita kerana memiliki peluang membantu dan menggembirakan kanak-kanak ini."
+- “Terutamanya seronok kerana dapat menggalakkan remaja perempuan di dalam bidang teknologi. Terasa seperti saya membantu generasi seterusnya di kawasan setempat saya.”
+- “Saya AMAT SUKA melihat betapa terujanya kanak-kanak itu. Satu perkara yang mengagumkan ialah guru menyedari bahawa sebilangan pelajar yang kurang berjaya di dalam akademik, menjadi begitu cemerlang semasa mereka berfikir seperti pembangun dan membantu yang lain - memberikan mereka ruang membina keyakinan.”
 
 [<button>Daftarkan diri untuk menjadi sukarelawan</button>]({{ urls/volunteer }})
 
@@ -76,7 +76,7 @@ Jika anda menerima terlalu banyak permintaan daripada guru, anda sentiasa boleh 
 
 Anda tidak perlu menggunakan peta sukarelawan kami untuk menjadi sukarelawan! Sebenarnya, kami menyarankan anda menghubungi guru dan pentadbir secara langsung sekiranya terdapat kelas yang anda boleh menjadi sukarelawan.
 
-Untuk memulakan: - Jika anda ibu bapa atau penjaga, sila hantarkan [e-mel ini](https://hourofcode.com/us/promote/resources#help-schools) kepada guru anak anda, menawarkan diri anda untuk membantu mereka menjalankan Hour of Code. - Jika anda terfikir mengenai sekolah lain, sila kunjungi laman web mereka untuk mencari individu yang wajar untuk dihubungi seperti pengetua atau naib pengetua, pengajar teknologi atau sains komputer, atau malah PTSA sekolah. Anda juga boleh bekerjasama dengan organisasi seperti Boys & Girls Clubs of America, Junior Acievement, cawangan YMCA dan banyak lagi untuk menganjur bersama sesuatu acara. - Jika anda tidak dapat menemui sekolah yang menganjurkan Hour of Code, anda boleh membantu menjalankan acara anda sendiri secara sukarela dengan syarikat anda. Lihat [Panduan Cara untuk Syarikat](https://hourofcode.com/us/how-to/companies) kami bertujuan mempelajari lebih banyak dan mendapatkan inspirasi.
+Untuk memulakan: - Jika anda seorang ibu bapa atau penjaga, hantar [e-mel ini](https://hourofcode.com/us/promote/resources#help-schools) kepada guru anak anda yang menawarkan untuk membantu mereka menjalankan Hour of Code. - Jika anda terfikir mengenai sekolah lain, sila kunjungi laman web mereka untuk mencari individu yang wajar untuk dihubungi seperti pengetua atau naib pengetua, pengajar teknologi atau sains komputer, atau malah PTSA sekolah. Anda juga boleh bekerjasama dengan organisasi seperti Boys & Girls Clubs of America, Junior Acievement, cawangan YMCA dan banyak lagi untuk menganjur bersama sesuatu acara. - Jika anda tidak dapat menemui sekolah yang menganjurkan Hour of Code, anda boleh membantu menjalankan acara anda sendiri secara sukarela dengan syarikat anda. Lihat [Panduan Cara untuk Syarikat](https://hourofcode.com/us/how-to/companies) kami bertujuan mempelajari lebih banyak dan mendapatkan inspirasi.
 
 * * *
 
@@ -92,16 +92,16 @@ Sama ada anda menghadiri acara Hour of Code dari jauh atau secara bersemuka, and
 
 Jika anda menjadi sukarelawan di dalam kelas, bincangkan logistik ini lebih awal dengan guru:
 
-- Peranan anda dalam acara itu. Jika anda bekerja dalam bidang teknologi, anda mungkin diminta berkongsi pengalaman atau kisah peribadi anda: Bagaimanakah anda boleh terlibat dalam kerjaya bidang teknologi? Mengapakah sains komputer penting kepada anda? Apakah perkara laian yang anda lakukan sebagai sebahagian daripada pekerjaan anda dan bagaimanakah kaitannya dengan teknologi? 
-- Jika anda akan menjadi sukarelawan secara bersemuka, pastikan anda memahami garis panduan kesihatan dan keselamatan setempat dan sekolah. Bergantung pada prosedurnya, anda mungkin perlu tiba lebih awal. 
-- Bergantung pada jenis sukarelawan sama ada secara maya atau bersemuka kerana ini boleh menentukan bilangan kehadiran dan tahap kapasiti anda. 
-- Jika anda menjadi sukarelawan secara maya, sila bekerja dengan guru bagi menentukan platform persidangan video terbaik untuk digunakan dan cuba mengendalikan ujian ke atas acara tersebut bersama-sama. 
-- Jika guru mempunyai aktiviti Jam Kod yang telah ditentukan untuk acara tersebut, pastikan anda tahu supaya boleh [menerokanya](https://hourofcode.com/us/learn) dengan lebih awal. 
+- Peranan anda dalam acara itu. Jika anda bekerja dalam bidang teknologi, anda mungkin diminta berkongsi pengalaman atau kisah peribadi anda: Bagaimanakah anda boleh terlibat dalam kerjaya bidang teknologi? Mengapakah sains komputer penting kepada anda? Apakah perkara laian yang anda lakukan sebagai sebahagian daripada pekerjaan anda dan bagaimanakah kaitannya dengan teknologi?
+- Jika anda akan menjadi sukarelawan secara bersemuka, pastikan anda memahami garis panduan kesihatan dan keselamatan setempat dan sekolah. Bergantung pada prosedurnya, anda mungkin perlu tiba lebih awal.
+- Bergantung pada jenis sukarelawan sama ada secara maya atau bersemuka kerana ini boleh menentukan bilangan kehadiran dan tahap kapasiti anda.
+- Jika anda menjadi sukarelawan secara maya, sila bekerja dengan guru bagi menentukan platform persidangan video terbaik untuk digunakan dan cuba mengendalikan ujian ke atas acara tersebut bersama-sama.
+- Jika guru mempunyai aktiviti Jam Kod yang telah ditentukan untuk acara tersebut, pastikan anda tahu supaya boleh [menerokanya](https://hourofcode.com/us/learn) dengan lebih awal.
 
 ### Fikirkan tentang peserta anda
 
-- Sila ambil tahu mengenai pelajar yang akan sertai anda dan perkara yang mungkin mempengaruhi mereka. Sebagai sukarelawan, anda boleh membantu mereka menyedari bahawa pengkomputeran ada di mana-mana sahaja dan mereka juga boleh menjadi saintis komputer. Ambil tahu mengenai umur, latar belakang dan identiti jantina mereka dan persiapkan diri anda dengan topik yang mungkin menarik minat mereka. Berikut ialah panduan tambahan mengenai cara memberikan inspirasi kepada [wanita muda](http://code.org/girls) menyertainya. 
-- Buatkan pelajar anda teruja! Bekerja dengan guru untuk memilih [video inspirasi](https://hourofcode.com/us/promote/resources#videos) yang boleh membantu menumpukan kelas dan membuatkan mereka teruja untuk melakukan Hour of Code. 
+- Sila ambil tahu mengenai pelajar yang akan sertai anda dan perkara yang mungkin mempengaruhi mereka. Sebagai sukarelawan, anda boleh membantu mereka menyedari bahawa pengkomputeran ada di mana-mana sahaja dan mereka juga boleh menjadi saintis komputer. Ambil tahu mengenai umur, latar belakang dan identiti jantina mereka dan persiapkan diri anda dengan topik yang mungkin menarik minat mereka. Berikut ialah panduan tambahan mengenai cara memberikan inspirasi kepada [wanita muda](http://code.org/girls) menyertainya.
+- Buatkan pelajar anda teruja! Bekerja dengan guru untuk memilih [video inspirasi](https://hourofcode.com/us/promote/resources#videos) yang boleh membantu menumpukan kelas dan membuatkan mereka teruja untuk melakukan Hour of Code.
 - Jika anda ialah sukarelawan maya, sila pertimbangkan untuk membuat beberapa slaid sebagai sebahagian daripada pembentangan anda bagi membantu menarik minat pelajar.
 
 Perlukan lebih banyak sumber? [Lihat petua yang lain](https://code.org/files/CSTT_Volunteers.pdf).
@@ -126,13 +126,11 @@ Bekerja dengan sekolah atau guru untuk membincangkan perkara yang paling rasiona
 
 #### Contoh Agenda:
 
-|Masa | Item Agenda | |\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---- | \---\---\---\---\----- | |1-5 minit | Menunjukkan [video inspirasi](https://hourofcode.com/us/promote/resources#videos)|  
-|5-10 minit | Perkenalkan diri anda dan ketahui lebih lanjut tentang pelajar: Di manakah anda bekerja, apakah yang anda lakukan dan apakah yang paling anda suka tentang pekerjaan anda? Apakah atau siapakah yang memberikan inspirasi kepada anda? Bagaimanakah anda mula berminat dalam bidang sains komputer? Adakah anda mempunyai mentor? Sila tanya pelajar soalan dan tinggalkan masa untuk sesi Soalan & Lazim. |  
-|30-60 minit | Kod! Jika acara anda dilakukan secara bersemuka, ini ialah masa untuk menjawab soalan dan membimbing pelajar menyelesaikan teka-teki yang sukar. Cuba jangan terus memberikan penyelesaian kepada pelajar, sebaliknya, cuba menanyakan mereka soalan supaya mereka boleh menjawab sendiri perkara yang menyebabkan kesilapan dan menggalakkan mereka bertanya antara satu sama lain jika mereka mempunyai soalan. Jika anda menjadi sukarelawan secara maya, bekerja dengan pihak guru untuk mendapatkan pendekatan terbaik. Mungkin lebih rasional untuk kembali pada akhir sesi bertujuan melihat tahap kemajuan yang telah dicapai oleh pelajar. | | |1-3 minit | Terima kasih kepada semua individu dan kongsikan kata perpisahan yang memberikan inspirasi. Berikan mana-mana item promosi syarikat anda ([pelekatnya](#celebrate) hebat)! | | <br />
+|Masa | Perkara Agenda | |\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---\--- | \---\---\---\---\----- | |1-5 minit | Tunjukkan [video inspirasi](https://hourofcode.com/us/promote/resources#videos)| |5-10 minit | Perkenalkan diri anda dan ketahui lebih lanjut tentang pelajar: Di mana anda bekerja, apa yang anda lakukan dan apa yang paling anda sukai tentang pekerjaan anda? Apakah atau siapakah yang memberikan inspirasi kepada anda? Bagaimanakah anda mula berminat dalam bidang sains komputer? Adakah anda mempunyai mentor? Sila tanya pelajar soalan dan tinggalkan masa untuk sesi Soalan & Lazim. | |30-60 minit | Kod! Jika acara anda dilakukan secara bersemuka, ini ialah masa untuk menjawab soalan dan membimbing pelajar menyelesaikan teka-teki yang sukar. Cuba jangan terus memberikan penyelesaian kepada pelajar, sebaliknya, cuba menanyakan mereka soalan supaya mereka boleh menjawab sendiri perkara yang menyebabkan kesilapan dan menggalakkan mereka bertanya antara satu sama lain jika mereka mempunyai soalan. Jika anda menjadi sukarelawan secara maya, bekerja dengan pihak guru untuk mendapatkan pendekatan terbaik. Mungkin lebih rasional untuk kembali pada akhir sesi bertujuan melihat tahap kemajuan yang telah dicapai oleh pelajar. | | |1-3 minit | Terima kasih kepada semua individu dan kongsikan kata perpisahan yang memberikan inspirasi. Berikan mana-mana item promosi syarikat anda ([pelekatnya](#celebrate) hebat)! | | <br />
 
 #### Idea lain untuk ditambahkan kepada acara anda
 
-- Terangkan cara teknologi memberikan kesan kepada kehidupan kita, bersama contoh yang akan diberikan perhatian oleh pelajar daripada pelbagai latar belakang - bercakap tentang teknologi yang menyelamatkan nyawa, membantu dan menghubungkan ramai individu. 
+- Terangkan cara teknologi memberikan kesan kepada kehidupan kita, bersama contoh yang akan diberikan perhatian oleh pelajar daripada pelbagai latar belakang - bercakap tentang teknologi yang menyelamatkan nyawa, membantu dan menghubungkan ramai individu.
 - Jika anda ialah syarikat teknologi, demo yang menyeronokkan dan produk berinovatif menjadi matlamat syarikat anda untuk diiusahakan. Jika anda bukan syarikat teknologi, bincangkan cara syarikat anda menggunakan teknologi untuk menyelesaikan masalah dan mencapai matlamat.
 - Sila jemput jurutera perisian dari syarikat anda untuk bercakap tentang sebab mereka memutuskan untuk mengambil pengajian sains komputer dan projek yang sedang diusahakan oleh mereka.
 - Jika anda mempunyai sekumpulan kakitangan yang akan memudahkan acara anda atau menjadi sukarelawan dengan sekolah setempat, pertimbangkan untuk membuat tempahan [kemeja-t tersuai](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) untuk kumpulan anda.
@@ -160,7 +158,7 @@ Kami menyediakan pelbagai tutorial berpandukan pelajar yang menyeronokkan untuk 
 
 <a href="https://hourofcode.com/us/learn">Terokai aktiviti</a> dan buat keputusan lebih awal sekiranya anda mahu memilih tutorial tunggal untuk semua tetamu anda, atau biarkan setiap kanak-kanak memilihnya sendiri. **Semua aktiviti Hour of Code** memerlukan masa persiapan minimum dan pandu diri - membolehkan peserta melakukan kerja mengikut kadar dan tahap kemahiran mereka sendiri.
 
-[![](/images/fit-700/tutorials.png)]({{ urls/learn }})
+[![](/images/tutorials.png)]({{ urls/learn }})
 
 Sebaik sahaja anda mempunyai rancangan hala tuju yang kukuh untuk acara yang akan diadakan, anda boleh mula menjemput pelajar, sekolah, sekolah, atau komuniti yang lebih besar. Kami menyarankan supaya memulakan dengan sekolah setempat yang mempunyai hubungan dengan anda atau [melayari peta ](https://hourofcode.com/us/map) acara Hour of Code kami.
 
@@ -173,7 +171,7 @@ Sebaik sahaja anda mempunyai rancangan hala tuju yang kukuh untuk acara yang aka
 Selepas pelajar atau tetamu telah melengkapkan acara Hour of Code mereka, sudah tiba masanya untuk meraikan kejayaan mereka. Berikut ialah beberapa idea untuk membuatkan acara anda lebih menyeronokkan:
 
 - [Kongsikan sijil]({{ urls/certificates }}) untuk peserta dan pelajar.
-- [Cetakkan pelekat "Saya telah melaksanakan Hour of Code!"]({{ promote/resources_stickers }}) atau dapatkan hadiah lain dan item promosi syarikat di dalam [Amazon Store Code.org](https://code.org/shop). 
+- [Cetakkan pelekat "Saya telah melaksanakan Hour of Code!"]({{ promote/resources_stickers }}) atau dapatkan hadiah lain dan item promosi syarikat di dalam [Amazon Store Code.org](https://code.org/shop).
 - Kongsikan foto dan video acara Jam Kod anda di dalam media sosial. Gunakan #HourOfCode dan @codeorg supaya kami boleh menonjolkan kejayaan anda juga!
 
 * * *
@@ -188,7 +186,7 @@ Satu cara paling baik untuk membantu ialah menyebarkan berita dan mempromosikan 
 
 ### 1. Daftarkan Acara Anda
 
-Apabila anda mendaftar acara Hour Of Code anda, anda akan menerima komunikasi e-mel yang berguna bersama berita dan petua untuk menganjurkan acara Hour of Code yang berjaya. Ini juga merupakan cara anda boleh memberitahu sekolah tempatan atau ibu bapa bahawa anda menganjurkan acara berdekatan mereka.
+Apabila anda [mendaftar acara Hour of Code anda](/#join), anda akan menerima komunikasi e-mel yang berguna dengan berita dan petua untuk menganjurkan Hour of Code yang berjaya. Ini juga merupakan cara anda boleh memberitahu sekolah tempatan atau ibu bapa bahawa anda menganjurkan acara berdekatan mereka.
 
 ### 2. Siarkan di dalam Media Sosial
 
@@ -196,23 +194,23 @@ Bantu meningkatkan kesedaran mengenai pergerakan sains komputer dengan kandungan
 
 #### Pengumuman am Hour of Code
 
-- Sains komputer mengubah dunia kita. Bantu pelajar untuk menjadi sebahagian daripada perubahan ini bermula dengan #HourOfCode. https://hourofcode.com/ 
-- Jangan hanya gunakan teknologi—ketahui cara membinanya. Bantu seseorang individu memulakan dengan #HourOfCode. https://hourofcode.com/ 
+- Sains komputer mengubah dunia kita. Bantu pelajar untuk menjadi sebahagian daripada perubahan ini bermula dengan #HourOfCode. https://hourofcode.com/
+- Jangan hanya gunakan teknologi—ketahui cara membinanya. Bantu seseorang individu memulakan dengan #HourOfCode. https://hourofcode.com/
 
 #### Statistik
 
-- Adakah anda tahu hanya 45% daripada sekolah di Amerika Syarikat yang mengajar sains komputer? Berikan peluang kepada setiap pelajar untuk mempelajari #HourOfCode https://hourofcode.com/ 
-- Di Amerika Syarikat, hanya 26% daripada profesional perisian ialah wanita. Perkenalkan lebih ramai wanita muda kepada sains komputer dengan #HourOfCode https://hourofcode.com/ 
-- 67% daripada pekerjaan pengkomputeran di Amerika Syarikat bukan di dalam sektor teknologi. Bantu memasukkan sains komputer di dalam kurikulum standard dengan #HourOfCode https://hourofcode.com/ 
+- Adakah anda tahu hanya 53% daripada sekolah A.S. mengajar sains komputer? Beri setiap pelajar peluang untuk belajar satu #HourOfCode https://hourofcode.com/
+- Di Amerika Syarikat, hanya 26% daripada profesional perisian ialah wanita. Perkenalkan lebih ramai wanita muda kepada sains komputer dengan #HourOfCode https://hourofcode.com/
+- 67% daripada pekerjaan pengkomputeran di Amerika Syarikat bukan di dalam sektor teknologi. Bantu memasukkan sains komputer di dalam kurikulum standard dengan #HourOfCode https://hourofcode.com/
 
 #### Cipta acara anda sendiri
 
-- #HourOfCode boleh membawa kepada [fill in your story]. https://hourofcode.com/ 
-- Saya menyokong #HourOfCode kerana [fill in your thoughts]. Sertai kami https://hourofcode.com 
+- #HourOfCode boleh membawa kepada [fill in your story]. https://hourofcode.com/
+- Saya menyokong #HourOfCode kerana [fill in your thoughts]. Sertai kami https://hourofcode.com
 
 #### Jurutera secara khusus
 
-- Jika barisan kod pertama anda mengubah hidup anda, bantu pelajar yang berdekatan dengan anda untuk menulis barisan pertama mereka #HourOfCode https://code.org/volunteer 
+- Jika barisan kod pertama anda mengubah hidup anda, bantu pelajar yang berdekatan dengan anda untuk menulis barisan pertama mereka #HourOfCode https://code.org/volunteer
 - Jika anda belajar mengekod—apakah cerita anda? Berikan inspirasi kepada pelajar berdekatan anda melalui pengalaman pertama #HourOfCode https://code.org/volunteer
 
 <a href="https://hourofcode.com/promote/resources#posters">Ketahui lebih lanjut</a> tentang poster, video, pelekat dan cara lain untuk mempromosikan acara anda kepada komuniti anda.
@@ -226,11 +224,11 @@ Bantu meningkatkan kesedaran mengenai pergerakan sains komputer dengan kandungan
 [![](/images/fit-600/Marketing/girl-strong-coding.png)]({{ urls/learn }})
 
 - Sebarkan kesedaran dengan memakai [item promosi Code.org](https://store.code.org/) (semua hasilnya digunakan untuk menyokong lebih ramai pelajar mendapatkan akses kepada pendidikan sains komputer).
-- Pilih untuk memanfaatkan Code.org semasa anda membeli-belah di [AmazonSmile](https://code.org/donate/amazonsmile). 
+- Pilih untuk memanfaatkan Code.org semasa anda membeli-belah di [AmazonSmile](https://code.org/donate/amazonsmile).
 - Minta CEO anda menghantar e-mel kepada seluruh syarikat yang menekankan kepentingan sains komputer dan menggalakkan pekerja menyebarkan maklumat tersebut.
 - Alami keseronokan bersama rakan sekerja di dalam [kempen memberi](https://medium.com/@codeorg/how-a-haircut-happy-hour-turned-into-a-fundraiser-for-code-org-1952b197faa2).
-- [Tandatangan petisyen ini](https://code.org/promote) untuk memastikan bahawa setiap pelajar mempunyai peluang mempelajari sains komputer. 
-- [Derma](https://code.org/donate) kepada Code.org supaya kita boleh mengekalkan sumber pendidikan kita secara percuma dan mudah diakses oleh semua individu. 
+- [Tandatangan petisyen ini](https://code.org/promote) untuk memastikan bahawa setiap pelajar mempunyai peluang mempelajari sains komputer.
+- [Derma](https://code.org/donate) kepada Code.org supaya kita boleh mengekalkan sumber pendidikan kita secara percuma dan mudah diakses oleh semua individu.
 
 Untuk lebih banyak cadangan mengenai cara menyokong Code.org dan Jam Kod, sila lawati [Code.org/Bantuan](https://code.org/help)
 
@@ -250,7 +248,7 @@ Cuba mencari sekolah tempatan dan menghubungi pengetua/guru/pejabat depan dan be
 Kunjungan ke kelas secara bersemuka kebiasaannya mengambil masa selama 60-90 minit manakala kunjungan ke kelas maya pula kebiasaannya berlangsung selama 20-30 minit.  
 
 
-### Apakah kumpulan peringkat umur yang sesuai untuk melakukan aktiviti Jam Kod?
+### Apakah kumpulan peringkat umur yang sesuai untuk melakukan aktiviti Hour of Code?
 
 Code.org dan rakan kongsi kami mereka bentuk semua aktiviti Hour of Code untuk menarik minat pelajar semua peringkat gred (K-12) daripada pelbagai latar belakang. Semua orang - malah orang dewasa - boleh merasakan keseronokan semasa bermain!  
 

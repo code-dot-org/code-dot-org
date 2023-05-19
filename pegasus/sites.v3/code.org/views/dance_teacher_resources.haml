@@ -1,4 +1,4 @@
-%link{:rel=>'stylesheet', :type=>'text/css', :href=>'/css/dance-landing/dance-teacher-resources.css'}
+%link{:rel=>'stylesheet', :type=>'text/css', :href=>'/css/generated/dance-landing/dance-teacher-resources.css'}
 
 :ruby
   resources = [
@@ -7,7 +7,7 @@
       description: I18n.t(:hoc2018_dance_teacher_resources_tile1_description),
       image: "/images/dance-hoc/dance_party_dance.gif",
       button_text: I18n.t(:hoc2018_dance_teacher_resources_tile1_button),
-      link: CDO.curriculum_url(I18n.locale, "/hoc/plugged/8")
+      link: CDO.studio_url("/s/dance-2019/lessons/1")
     },
     {
       title: I18n.t(:hoc2018_dance_teacher_resources_tile2_title),
@@ -30,5 +30,5 @@
           .resource-description
             = resource[:description]
           %a{href: resource[:link]}
-            %button.gray-button
+            %button.purple-button
               = resource[:button_text]

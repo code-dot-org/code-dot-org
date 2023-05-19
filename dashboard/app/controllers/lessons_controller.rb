@@ -3,10 +3,12 @@ class LessonsController < ApplicationController
 
   before_action :require_levelbuilder_mode_or_test_env, except: [:show, :student_lesson_plan]
   before_action :disallow_legacy_script_levels, only: [:edit, :update]
+  before_action :disable_session_for_cached_pages, only: [:show]
 
   include LevelsHelper
+  include CachedUnitHelper
 
-  # Script levels which are not in activity sections will not show up on the
+  # Unit levels which are not in activity sections will not show up on the
   # lesson edit page, in which case saving the edit page would cause those
   # script levels to be lost. Prevent this by disallowing editing in this case.
   # This helps avoid losing data from existing scripts by accidentally editing
@@ -18,7 +20,7 @@ class LessonsController < ApplicationController
 
   # GET /s/script-name/lessons/1
   def show
-    script = Script.get_from_cache(params[:script_id])
+    script = Unit.get_from_cache(params[:script_id])
     return render :forbidden unless script.is_migrated
 
     @lesson = script.lessons.find do |l|
@@ -38,7 +40,7 @@ class LessonsController < ApplicationController
 
   # GET /s/script-name/lessons/1/student
   def student_lesson_plan
-    script = Script.get_from_cache(params[:script_id])
+    script = Unit.get_from_cache(params[:script_id])
     return render :forbidden unless script.is_migrated && script.include_student_lesson_plans
 
     @lesson = script.lessons.find do |l|
@@ -53,7 +55,7 @@ class LessonsController < ApplicationController
 
   # GET /s/csd1-2021/lessons/1/edit where 1 is the relative position of the lesson in the script
   def edit_with_lesson_position
-    script = Script.get_from_cache(params[:script_id])
+    script = Unit.get_from_cache(params[:script_id])
     @lesson = script.lessons.find do |l|
       l.has_lesson_plan && l.relative_position == params[:lesson_position].to_i
     end
@@ -138,12 +140,12 @@ class LessonsController < ApplicationController
     end
 
     render json: @lesson.summarize_for_lesson_edit
-  rescue ActiveRecord::RecordNotFound, ActiveRecord::RecordInvalid => e
-    render(status: :not_acceptable, plain: e.message)
+  rescue ActiveRecord::RecordNotFound, ActiveRecord::RecordInvalid => exception
+    render(status: :not_acceptable, plain: exception.message)
   end
 
   def clone
-    destination_script = Script.find_by_name(params[:destinationUnitName])
+    destination_script = Unit.find_by_name(params[:destinationUnitName])
     raise "Cannot find script #{params[:destinationUnitName]}" unless destination_script
     raise 'Destination script and lesson script must be in a course version' unless destination_script.get_course_version && @lesson.script.get_course_version
     raise 'Lessons current unit and destination unit must both use code studio lesson plans' unless !destination_script.use_legacy_lesson_plans && !@lesson.script.use_legacy_lesson_plans
@@ -152,15 +154,20 @@ class LessonsController < ApplicationController
       copied_lesson = @lesson.copy_to_unit(destination_script, new_level_suffix)
       render(status: :ok, json: {editLessonUrl: edit_lesson_path(id: copied_lesson.id), editScriptUrl: edit_script_path(copied_lesson.script)})
     end
-  rescue => err
-    render(json: {error: err.message}.to_json, status: :not_acceptable)
+  rescue => exception
+    render(json: {error: exception.message}.to_json, status: :not_acceptable)
   end
 
-  private
+  # Return true if request is one that can be publicly cached.
+  def cachable_request?(request)
+    script = Unit.get_from_cache(request.params[:script_id])
+    script && ScriptConfig.allows_public_caching_for_script(script.name) &&
+      !ScriptConfig.uncached_script_level_path?(request.path)
+  end
 
   # We have two urls you can use to edit a lesson with a lesson plan. This does the
   # work for both of them to prepare the data for editing
-  def setup_edit
+  private def setup_edit
     @lesson_data = @lesson.summarize_for_lesson_edit
     # Return an empty list, because computing the list of related lessons here
     # sometimes hits a bug and causes the lesson edit page to fail to load.
@@ -169,7 +176,7 @@ class LessonsController < ApplicationController
     view_options(full_width: true)
   end
 
-  def lesson_params
+  private def lesson_params
     # Convert camelCase params to snake_case. Right now this only works on
     # top-level key names. This lets us do the transformation before calling
     # .permit, so that we can use snake_case key names in our parameter list,
@@ -208,14 +215,14 @@ class LessonsController < ApplicationController
     lp
   end
 
-  def fetch_standards(standards_data)
+  private def fetch_standards(standards_data)
     standards_data.map do |s|
       framework = Framework.find_by!(shortcode: s['frameworkShortcode'])
       Standard.find_by!(framework: framework, shortcode: s['shortcode'])
     end
   end
 
-  def fetch_programming_expressions(expressions_data)
+  private def fetch_programming_expressions(expressions_data)
     expressions_data.map do |e|
       environment = ProgrammingEnvironment.find_by!(name: e['programmingEnvironmentName'])
       ProgrammingExpression.find_by!(programming_environment: environment, key: e['key'])

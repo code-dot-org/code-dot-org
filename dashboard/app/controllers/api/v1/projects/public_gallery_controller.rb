@@ -10,7 +10,7 @@ class Api::V1::Projects::PublicGalleryController < ApplicationController
       limit: params[:limit],
       published_before: params[:published_before],
     )
-  rescue ArgumentError => e
-    render json: {error: e.message}, status: :bad_request
+  rescue ArgumentError => exception
+    render json: {error: exception.message}, status: :bad_request
   end
 end

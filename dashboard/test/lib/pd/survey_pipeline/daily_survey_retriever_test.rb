@@ -1,5 +1,5 @@
 require 'test_helper'
-require 'pd/survey_pipeline/daily_survey_retriever.rb'
+require 'pd/survey_pipeline/daily_survey_retriever'
 
 module Pd::SurveyPipeline
   class DailySurveyRetrieverTest < ActiveSupport::TestCase

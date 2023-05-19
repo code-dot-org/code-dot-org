@@ -232,20 +232,12 @@ nl:
             MOVES.XArmsUp: Rek
             MOVES.ThisOrThat: Dit of dat.
             MOVES.Rest: Geen
-      Dancelab_everyMeasuresRange:
-        text: 'herhaal om om de {N} maten na {START} '
       Dancelab_everySeconds:
         text: 'elke {N} {UNIT} '
         options:
           UNIT:
             '"measures"': maten
             '"seconds"': seconden
-      Dancelab_everySecondsRange:
-        text: 'elke {N} {UNIT} van {START} tot {STOP} '
-        options:
-          UNIT:
-            measures: Maten
-            seconds: Seconden
       Dancelab_everyVerseChorus:
         text: 'elke {UNIT} '
         options:
@@ -981,6 +973,18 @@ nl:
         text: setup
       Dancelab_whenSetup2:
         text: setup
+      DansBlocks_setForegroundEffect2:
+        text: Effect {EFFECT} uitvoeren
+        options:
+          EFFECT:
+            '"bubbles"': Bubbels
+            '"confetti"': Confetti
+            '"hearts"': hartjes
+            '"emojis"': Vrolijke emojis
+            '"rain"': regen
+            '"starburst"': Sterrenvorming
+            '"glass"': Brekend glas
+            '"twinkling"': Fonkeling
       gamelab_addBehaviorSimple:
         text: sprite {SPRITE} begint {BEHAVIOR}
       gamelab_addTarget:
@@ -1182,6 +1186,19 @@ nl:
             '"x"': x
             '"y"': y
             '"z"': z
+      gamelab_layoutSprites:
+        text: "{GROUP} indelen als een {FORMAT}"
+        options:
+          FORMAT:
+            '"border"': grens
+            '"circle"': cirkel
+            '"grid"': raster
+            '"top"': bovenste rij
+            '"row"': rij
+            '"bottom"': onderste rij
+            '"left"': linkerkolom
+            '"column"': kolom
+            '"right"': rechterkolom
       gamelab_locationAt:
         text: 'locatie x: {X} y: {Y}'
       gamelab_locationModifier:
@@ -1206,6 +1223,18 @@ nl:
             '"rain"': regen
       gamelab_makeNewSpriteAnon:
         text: nieuwe {ANIMATION_NAME} sprite maken op {LOCATION}
+      gamelab_makeNewSpriteGroup:
+        options:
+          FORMAT:
+            '"border"': grens
+            '"circle"': cirkel
+            '"grid"': raster
+            '"top"': bovenste rij
+            '"row"': rij
+            '"bottom"': onderste rij
+            '"left"': linkerkolom
+            '"column"': kolom
+            '"right"': rechterkolom
       gamelab_makeNumSprites:
         text: maak {NUM} nieuwe {ANIMATION_NAME} sprites
       gamelab_makeProjectile:
@@ -1290,6 +1319,10 @@ nl:
             "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": Eigenzinnige
               bass
             "'sound://category_digital/jump_7.mp3'": spring
+      gamelab_playSoundOptionsSoccer:
+        text: PlaySound {SOUND}
+      gamelab_playSoundOptionsSpace:
+        text: PlaySound {SOUND}
       gamelab_playSpeech:
         text: Spraak afspelen {SOUND}
       gamelab_playerBehaviors:
@@ -1534,6 +1567,10 @@ nl:
         text: x coördinaat van {SPRITE}
       gamelab_yLocationOf:
         text: y coordinaat van {SPRITE}
+      KatiesBlocks_glideTo:
+        text: "{SPRITE} glijdt naar {LOCATION}"
+      KatiesBlocks_tumbling:
+        text: tuimelen
       Mikelab_addBehaviorSimple:
         text: sprite {SPRITE} begint {BEHAVIOR}
       Mikelab_addTrainingData:
@@ -1910,6 +1947,8 @@ nl:
             '"sound://category_achievements/peaceful_win_1.mp3"': Win
             '"sound://category_explosion/vibrant_game_arcade_game_negative_hit.mp3"': Kolk
             '"sound://category_achievements/peaceful_win_6.mp3"': Windklokken
+      Poetry_playSoundOptionsSpace:
+        text: PlaySound {SOUND}
       Poetry_setAuthor:
         text: Auteur {AUTHOR} instellen
       Poetry_setBackground:
@@ -2020,6 +2059,11 @@ nl:
             '8': '8'
             '9': '9'
             '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
       Poetry_whenPromptAnswered:
         text: als {VAR} is beantwoord
       RyanLab_moveForward:
@@ -2028,8 +2072,6 @@ nl:
         text: Draai linksom
       RyanLab_turnRight:
         text: Draai rechtsom
-      SpriteLab2Beta_spriteSay:
-        text: sprite {SPRITE} zeggen {TEXT} voor {SECONDS} seconden
       Vector_createSpriteWith:
         text: |-
           maak sprite
@@ -2078,6 +2120,8 @@ nl:
             '0.25': few
       aalab_spriteSayChoices:
         text: "{SPRITE} zegt {SPEECH}"
+      adaptations_startFollowing:
+        text: "{SPRITE} begint {TARGET} te volgen"
       binary_drawBin:
         text: draw binary {BIN}
       binary_drawBinScreen:
@@ -2219,5 +2263,27 @@ nl:
           DIR:
             right: rechtsom ↻
             left: linksom ↺
-      validation_validatedBackground:
-        text: set achtergrond naar {IMG}
+      ecosystems_int10:
+        options:
+          VALUE:
+            '0': '0'
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+      storylab_setForegroundEffect2:
+        text: Effect {EFFECT} uitvoeren
+        options:
+          EFFECT:
+            '"bubbles"': Bubbels
+            '"confetti"': Confetti
+            '"hearts"': hartjes
+            '"rain"': regen
+            '"starburst"': Sterrenvorming
+            '"twinkling"': Fonkeling

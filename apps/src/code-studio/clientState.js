@@ -20,19 +20,12 @@ clientState.queryParams = require('./utils').queryParams;
 clientState.EXPIRY_DAYS = 365;
 
 /**
- * Maximum number of lines of code that can be stored in the cookie
- * @type {number}
- * @private
- */
-var MAX_LINES_TO_SAVE = 1000;
-
-/**
  * Values larger than this result are server-dependent and shouldn't be cached
  * in client storage.
  */
 clientState.MAXIMUM_CACHABLE_RESULT = 999;
 
-clientState.reset = function() {
+clientState.reset = function () {
   try {
     sessionStorage.clear();
   } catch (e) {}
@@ -41,7 +34,7 @@ clientState.reset = function() {
 /**
  * Clear progress-related values from session storage.
  */
-clientState.clearProgress = function() {
+clientState.clearProgress = function () {
   sessionStorage.removeItem('progress');
   sessionStorage.removeItem('lines');
   removeItemsWithPrefix(sessionStorage, 'source_');
@@ -56,7 +49,7 @@ clientState.clearProgress = function() {
  * @returns {string|undefined} Cached copy of the level source, or undefined if
  *   the cached copy is missing/stale.
  */
-clientState.sourceForLevel = function(scriptName, levelId, timestamp) {
+clientState.sourceForLevel = function (scriptName, levelId, timestamp) {
   var data = sessionStorage.getItem(createKey(scriptName, levelId, 'source'));
   if (data) {
     var parsed;
@@ -78,7 +71,7 @@ clientState.sourceForLevel = function(scriptName, levelId, timestamp) {
  * @param {number} timestamp
  * @param {string} source
  */
-clientState.writeSourceForLevel = function(
+clientState.writeSourceForLevel = function (
   scriptName,
   levelId,
   timestamp,
@@ -91,21 +84,9 @@ clientState.writeSourceForLevel = function(
     createKey(scriptName, levelId, 'source'),
     JSON.stringify({
       source: source,
-      timestamp: timestamp
+      timestamp: timestamp,
     })
   );
-};
-
-/**
- * Tracks the lines of code written after the user clicks run if their
- * solution is successful.
- * @param {boolean} result - Whether the user's solution is successful
- * @param {number} lines - Number of lines of code user wrote in this solution
- */
-clientState.trackLines = function(result, lines) {
-  if (result && isFinite(lines)) {
-    addLines(lines);
-  }
 };
 
 /**
@@ -115,7 +96,7 @@ clientState.trackLines = function(result, lines) {
  * @param {number} levelId
  * @param {TestResults} testResult
  */
-clientState.trackProgress = function(scriptName, levelId, testResult) {
+clientState.trackProgress = function (scriptName, levelId, testResult) {
   // testResult values > 1000 are for server use only and should not be stored
   // locally
   if (!testResult || testResult > clientState.MAXIMUM_CACHABLE_RESULT) {
@@ -140,7 +121,7 @@ clientState.trackProgress = function(scriptName, levelId, testResult) {
  * @param {string} scriptName The script name
  * @returns {Object<number, number>} map from levelId -> testResult
  */
-clientState.levelProgress = function(scriptName) {
+clientState.levelProgress = function (scriptName) {
   var progressMap = levelProgressByScript();
   return progressMap[scriptName] || {};
 };
@@ -160,38 +141,11 @@ function levelProgressByScript() {
 }
 
 /**
- * Returns the number of lines completed from the cookie.
- *
- * TODO: The user's total line count is no longer shown anywhere in the UI.
- * Remove this as part of LP-2291 to clean up the code that stores and
- * maintains the total line count.
- *
- * @returns {number}
- */
-clientState.lines = function() {
-  var linesStr = sessionStorage.getItem('lines');
-  return isFinite(linesStr) ? Number(linesStr) : 0;
-};
-
-/**
- * Adds the given number of completed lines.
- * @param {number} addedLines
- */
-function addLines(addedLines) {
-  var newLines = Math.min(
-    clientState.lines() + Math.max(addedLines, 0),
-    MAX_LINES_TO_SAVE
-  );
-
-  trySetSessionStorage('lines', String(newLines));
-}
-
-/**
  * Returns whether or not the user has seen a given video based on contents of the local storage
  * @param videoId
  * @returns {*}
  */
-clientState.hasSeenVideo = function(videoId) {
+clientState.hasSeenVideo = function (videoId) {
   return hasSeenVisualElement('video', videoId);
 };
 
@@ -199,7 +153,7 @@ clientState.hasSeenVideo = function(videoId) {
  * Records that a user has seen a given video in local storage
  * @param videoId
  */
-clientState.recordVideoSeen = function(videoId) {
+clientState.recordVideoSeen = function (videoId) {
   recordVisualElementSeen('video', videoId);
 };
 
@@ -208,7 +162,7 @@ clientState.recordVideoSeen = function(videoId) {
  * @param calloutId
  * @returns {boolean}
  */
-clientState.hasSeenCallout = function(calloutId) {
+clientState.hasSeenCallout = function (calloutId) {
   return hasSeenVisualElement('callout', calloutId);
 };
 
@@ -216,7 +170,7 @@ clientState.hasSeenCallout = function(calloutId) {
  * Records that a user has seen a given callout in local storage
  * @param calloutId
  */
-clientState.recordCalloutSeen = function(calloutId) {
+clientState.recordCalloutSeen = function (calloutId) {
   recordVisualElementSeen('callout', calloutId);
 };
 

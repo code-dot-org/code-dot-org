@@ -1,11 +1,11 @@
 import msg from '@cdo/poetry/locale';
 import {getStore} from '@cdo/apps/redux';
 import trackEvent from '@cdo/apps/util/trackEvent';
-import {setPoem, hasSelectedPoemChanged} from '../redux/poetry';
+import {setPoem, hasSelectedPoemChanged, setPoemList} from '../redux/poetry';
 import {P5LabType} from '../constants';
 import SpriteLab from '../spritelab/SpriteLab';
 import PoetryLibrary from './PoetryLibrary';
-import {getPoem} from './poem';
+import {getPoem, getPoemsFromListOrDefault} from './poem';
 
 export default class Poetry extends SpriteLab {
   init(config) {
@@ -14,6 +14,9 @@ export default class Poetry extends SpriteLab {
     if (poem) {
       getStore().dispatch(setPoem(poem));
     }
+
+    const poemList = getPoemsFromListOrDefault(config.level.availablePoems);
+    getStore().dispatch(setPoemList(poemList));
     return loader;
   }
 
@@ -90,7 +93,7 @@ export default class Poetry extends SpriteLab {
       swirls: 'swirlyline',
       waves: 'water',
       wood: 'wood',
-      zigzag: 'lightning'
+      zigzag: 'lightning',
     };
     if (!this.preloadFrames_) {
       this.preloadFrames_ = Promise.all(
@@ -122,7 +125,7 @@ export default class Poetry extends SpriteLab {
     return Promise.all([
       super.preloadLabAssets(),
       this.preloadInstructorImage(),
-      this.preloadFrames()
+      this.preloadFrames(),
     ]);
   }
 

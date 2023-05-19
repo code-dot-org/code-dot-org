@@ -1,0 +1,17 @@
+{
+  "sl-SI": {
+    "data": {
+      "standard_categories": {
+        "CT": {
+          "description": "Računalniško razmišljanje"
+        },
+        "L": {
+          "description": "Jezik"
+        },
+        "F": {
+          "description": "Funkcije"
+        }
+      }
+    }
+  }
+}

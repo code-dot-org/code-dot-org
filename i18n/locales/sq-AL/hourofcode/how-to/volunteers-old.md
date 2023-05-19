@@ -4,87 +4,87 @@ title: Udhëzues për vullnetarët e Orës së Kodimit
 
 {{ signup_button }}
 
-# How-to Guide for Volunteers
-### Make a difference in a classroom today!
+# Udhëzues për Vullnetarët
+### Beni nje ndryshim ne klase sot!
 
 ***
 
-## Why volunteer?
-Check out some testimony from past volunteers:
+## Pse te jeni vullnetar?
+Shiko disa dëshmi të vullnetarëve të fundit:
 
-- “The best part of my experience was that the entire class were women and people of color. It bodes well for the future of our industry to have a chance to reach and excite these kids.”
-- “Especially enjoyed getting to encourage young girls in technology. Felt like I was helping the next generation in my local area.”
-- "Kënaqesha kur shikoja sa të emocionuar ishin fëmijët. One amazing thing was that the teachers noticed that some of the students who didn’t do as well academically were excelling at thinking like a developer and helping others learn - giving them a place to feel confident.”
+- Pjesa me e mire e eksperienes time ishte se e gjithe klasa perbehej nga gra dhe persona me ngjyre. Eshte ne benefit te se ardhmes se industrise qe te kete mundesi t'i mberrij dhe gezoj keta femije!
+- Me se shumti me pelqeu inkurajimi qe i'u be vajzave ne teknologji. U ndjeva sikur po ndihmoja gjeneraten e re ne qytetin tim."
+- "Kënaqesha kur shikoja sa të emocionuar ishin fëmijët. Një gjë e mahnitshme ishte se mësuesit vunë re që nxënvsit të cilët nuk ishin shumë të mirë në shkollë, dalloheshin për të menduarit si programues dhe ndihmonin edhe të tjerët- duke i bërë të ndihen më të sigurt në vetvete."
 
-## Anyone can volunteer
-### Volunteers and speakers in tech:
-Do you have a connection to CS or tech? If you work in software engineering, at a tech company in any role (non-engineer or engineering), or you’ve taken computer science courses, you can help inspire students! Many students have never met anyone who works in the tech industry and our teachers love being able to connect their classrooms to professionals and university students.
+## Cdo kush mund te jete vullnetar
+### Vullnetaret dhe folesit ne teknologji:
+A keni ndonje lidhje me shkencat kompjuterike ose teknologjine? Nese punoni ne inxhinierim softuerik, ne nje kompani teknologjike ne cfardo  rroli, ose nese keni ndjekur kurse te shkencave kompjuterike, ti mund te ndihmosh t'i inspirosh keta nxenes! Shume nxenes nuk kane takuar asnjehere dike qe punon ne industrine e teknologjise dhe mesuesit tane kane shume deshire te jene ne gjendje te lidhin klasat e tyre.
 
-You can be a guest speaker in a classroom, or help a teacher run the activity. Visit a local classroom to inspire students to keep learning computer science.
+Mund te jesh musafir foles ne nje klase, ose te ndihmosh nje mesues te udheheq aktivitetin. Vizito nje klase lokale te inspirosh nxenesit te vazhdojne mesimin e shkencave kompjuterike.
 <br>
 <br>
 
-<a href="https://code.org/volunteer"><button>Sign up today to be a tech volunteer!</button>
+<a href="https://code.org/volunteer"><button>Regjistrohu sot qe te jesh nje vullnetar teknologjik!</button>
 
 <br>
 <br>
 
-### Anyone passionate about expanding opportunity:
-Do you believe that learning computer science can open doors of opportunity for students? Help out in a local classroom or organize an after school event! You don’t need any background in computer science to host an Hour of Code. And, just offering to help out is often enough to convince your child’s teacher, a friend, or a club to try an hour.
+### Ndokush i pasionuar per te zgjeruar mundesite:
+A besoni se mesimi i shkencave kompjuterike mund te hap dyer te mundesive tjera per nxenesit? Ndihmoni ne nje klase lokale ose organizo nje event pas shkolles! Nuk duhet te kesh eksperience ne shkenca kompjuterike qe te mbash oren tende te kodit. Vetem ofrimi i ndihmes eshte mjaftueshem t'i bindesh mesuesit e femijut tend, shoket ose ndonje klub qe te filloj te mbaje nje ore.
 
-### How do you get started?
+### Si duhet te fillosh?
 
-1. [Send this email]({{ promote/help_schools }}) to your child’s teacher offering to help them run an Hour of Code.
-2. Offer to host an Hour of Code event after school at a local school. [Use this How-To Guide]({{ urls/how_to_guide }}) to help you plan.
+1. Dergo kete email tek mesuesi i femiut tend duke ofruar ti ndihmoni ata ne zbatimin e nje ore te kodit.
+2. Ofroni te mbani nje event te ores se kodit pas shkolles ne nje shkolle lokale. Perdorni kete guide qe te ju ndihmoj me planifikimin e eventit.
 
-## Recruit your co-workers to volunteer
-Tell your friends and co-workers about the Hour of Code. Thousands of teachers are  looking for volunteers, so ask them to [sign up as a volunteer](https://code.org/volunteer). Ask your employer to get involved. [Send this email]({{ promote/sample_emails }}) to your manager or the CEO to get everyone on board.
+## 4. Rekruto kolegët tuaj për vullnetarë
+Tregoju shokëve dhe kolegëve për Orën e Kodimit. Ne kemi mijëra mësues që po regjistrohen dhe kërkojnë për vullnetarë, kështu që pyet ata për tu[ rregjistruar si vullnetarë](https://code.org/volunteer). 3. Kërkoji punëdhënësin tuaj që të përfshihet. [ Dërgojeni këtë email ]({{ promot/sample_emails }}) menaxherit tuaj ose CEO të kompanisë.
 
-## How to prepare
-- [Pick out a video]({{ promote/videos }}) to show to help focus the class and get them excited to do an Hour of Code.
-- Check out the [Hour of Code Volunteer Toolkit](/files/hoc-volunteer-toolkit.pdf) which includes an overview, timeline, preparation material, and marketing material. Everything you need to be ready for your volunteer experience!
-- If you're going to be doing a tutorial during your session, spend 30 minutes trying at least one [Hour of Code tutorial]({{ urls/learn }}).
-- If you're visiting a school, complete any background checks or required paperwork.
-- [Review these tips](https://code.org/files/CSTT_Volunteers.pdf) about how to interact with students.
-- Join the conversation on Facebook, Twitter, Instagram, and Tumblr with #HourOfCode.
-- Connect with the teacher to discuss what you plan to speak about during your session.
-- If you are a virtual volunteer, test A/V and screen sharing capabilities beforehand.
+## Si te pergatiteni
+- Nxiti studentët! Përzgjidh një video për të ndihmuar që klasa të fokusohet dhe nxiti ata të zhvillojnë Orën e Kodimit.
+- Shikoni permbledhjen e vullnetareve te ores se kodit, e cila perfshine nje hyrje, vije kohore, materiale pergaditore dhe materiale marketingu Cdo gje qe ju duhet per te qene gati per eksperiencen tuaj te vullnetarizmit!
+- Në qoftë se do të realizoni një tutorial gjatë orës tuaj, shpenzoni 30 minuta duke provuar të paktën një nga [tutorialet e Orës së Kodimit](/learn)
+- Në qoftë se po vizitoni një shkollë, përfundoni rregullime të sfondit ose dokumente që të nevojiten
+- [Shiko këto këshilla](https://code.org/files/CSTT_Volunteers.pdf) se si mund të bashkëveprosh me studentët
+- Bashkohu me bisedat në FB, Twitter, Instagram, Tumblr me #Hourofcode
+- Lidhu me mësuesit për të diskutuar në lidhje me atë çfarë mendon të flasësh gjatë orës tënde
+- Në qoftë se jeni një vullnetar virtual, testoni më përpara A/V dhe aftësitë e ndarjes së ekranit
 
-## Day-of Hour of Code Event
-When you're hosting an Hour of Code event, follow the sample agenda below to help guide your day. Before then, make sure you sign into the school and greet the teacher the day of the event. Confirm the agreed schedule for the day and discuss any talking points.
+## Dita e eventit të Orës së Kodimit:
+Kur te filloni mbajtjen e nje eventi te ores se kodit, ndiqni agjenden e thjeshte me poshte qe te ju ndihmoj me diten tuaj. Perpara asaj, sigurohuni qe te hyni ne shkolle dhe te pershendetni mesuesin ne diten e eventit. Konfirmoni orarin e sakte per ate dite dhde diskutoni cdo pike diskutimi me mesuesin perpara kohe.
 
-### Sample agenda:
+### Shembulli i rendit të ditës:
 
-| Koha          | Agenda item                                                                                                                                                                                                                                                                                                                                                    |
-| ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1-5 minutes   | [Show an inspirational video]({{ promote/videos }}).                                                                                                                                                                                                                                                                                                           |
-| 5-10 minutes  | Introduce yourself and learn more about the students: </ul><li>What do you work, what do you do, and what do you love most about your job?</li><li>Çfarë apo kush ju frymëzoi?</li><li>Si u interesuat për shkencat kompjuterike?</li><li>A keni pasur një mentor?</li><li>Share a story about how tech affects everyone.</li><br>Bëni studentëve pyetje dhe lini kohë për P & amp; A.</br> <li> What jobs are they interested in, what are their favorite tech gadgets or apps, and how do they think they are built? </li><li> Do the students have any questions for you?</ul> |
-| 30-60 minutes | **Code!** Walk around, answer questions, and guide them through tough puzzles. Try not to give students the solution outright, instead, try asking them questions so they can answer themselves what went wrong, and encourage students to ask each other if they have questions. Learning from each other is a great learning opportunity.                    |
-| 1-3 minutes   | Thank everyone and share inspirational parting words. Hand out any of your company swag (stickers are awesome)!                                                                                                                                                                                                                                                |
-| After         | **Make a lasting change:** Talk to the teacher about turning the Hour of Code into a full computer science course! Go to [code.org/yourschool](https://code.org/yourschool) with your teacher to fill in what this school teaches today and encourage them to pledge to bring ccomputer science to their classroom.                                            |
+| Koha        | Pikë të axhendës                                                                                                                                                                                                                                                                                                                                                                                  |
+| ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1-5 minuta  | Tregoni nje video inspiruese                                                                                                                                                                                                                                                                                                                                                                      |
+| 5-10 minuta | Prezentoni veten, dhe mesoni me shume per nxenesit tuaj.</ul><li>Cfar punoni, cfar beni, dhe se cka ju pelqen me se shumti per punen tuaj?</li><li>Çfarë apo kush ju frymëzoi?</li><li>Si u interesuat për shkencat kompjuterike?</li><li>A keni pasur një mentor?</li><li>Trego historinë tënde se si teknologjia i prek të gjithë</li><br>Bëni studentëve pyetje dhe lini kohë për P & amp; A.</br> <li> Për çfarë punësh janë të interesuar, kush janë aplikacionet dhe mjetet teknologjike të preferuara, si mendojnë si janë ndërtuar ato? </li><li> A kanë studentët pyetje për ty?</ul>                                              |
+| 60 minuta   | Kodo! Ec neper klase, pergjigju pyetjeve dhe udheheqni ata neper problemet e veshtira. Mundohuni te mos u'a jepni atyre pergjigjen menjehere, ne vend te saj, mundohu t'i pyetesh pyetje ne menyre qe ata t;i pergjigjen vetes se cka shkoi keq, dhe te enkurajojne studentet e tjer te pyesin njeri tjetrin nese kane pyetje.  Mesimi nga njeri tjetri eshte nje mundesi shume e mire per mesim. |
+| 1-3 minuta  | Falenderoji të gjithë dhe ndaj fjalë përshëndetëse frymëzuese Shperndani stikerat dhe maicat e printuara!                                                                                                                                                                                                                                                                                         |
+| Pas         | Beni nje ndryshim qe zgjat. Bisedoni me mesuesin rreth kthimit te ores se kodit ne nje kurs te plote te shkencave kompjuterike! Shkoni ne code.org/shkollajuaj me mesuesin tuaj qe te plotesoni ato qe kjo shkolle i ligjeron sot dhe inkurajoj ata te sjellin shkencat kompjuterike ne klasat e tyre.                                                                                            |
 
-### After the Event:
-- Share your photos and stories with Code.org at giving@code.org.
-- Remember to enter in your volunteer hours in your company’s volunteer tracking portal.
-- Share about your experience on social media #HourOfCode!
-- If you do take pictures/videos during the event, **especially with students**, make sure you get teacher/parent permission if you would like to post your stories on social media.
-- And, check back in a month: Is the teacher interested in offering a computer science course? Share [resources and professional learning opportunities to help them do this](https://code.org/yourschool).
+### Pas eventit:
+- Ndaj fotot dhe ngjarjet me Code.org në giving@code.org
+- Mos harroni të futeni në orët tuaja vullnetare në portalin e orëve vullnetare të kompanisë tuaj
+- Ndani eksperiencën tuaj në rrjetet sociale #Hourofcode! Shiko më poshtë për këshilla.
+- Nese beni foto dhe video gjate eventit, sidomos me nxenesit, sigurohuni qe e keni pelqeimin e mesuesit dhe prindit perpara se t'i postoni ato ne rrjete sociale.
+- Shihni perseri pas nje muaji: A eshte mesuesi i interesuar ne ofrimin e nje kursi te shkencave kompjuterike? Shperndani burimet dhe mesimin profesional se bashku me mundesite per mesim qe t'i ndihmoni ata te bejne kete.
 
-## How you get selected as a technical volunteer of guest speaker
-- Teachers will be searching for volunteers on our [volunteer map](https://code.org/volunteer/local).
-- Try to make your profile as complete as possible to increase the chance that a teacher will select you.
-- A teacher will contact you through this form (your email address will never be shared with the teacher). *If you are receiving too many requests from teachers, you can always update your preferences by clicking the link to edit your information or unsubscribe, provided at the bottom of any email from a teacher.*
+## Si do te zgjedhem si nje vullnetar teknik ose musafir?
+- Mësuesit do të kërkojnë për vullnetarë në [hartën tonë të vullnetarëve](/volunteer/local)
+- Mundohuni ta kompletoni profilin tuaj sa me shume qe eshte e mundur ne menyre qe t'i rrisni shancat qe nje mesues te ju kontaktoje.
+- Një mësues do t'ju kontaktojë përmes kësaj forme(adresa juaj e email-it nuk do të ndahet me mësuesin). Në qoftë se po merrni shumë kërkesa nga mësuesit, ju mund të rinovoni preferencat tuaja duke klikuar linkun për të redaktuar informacionin tuaj ose çrregjistohu në butonin që ndodhet në fund të çdo email-i.
 
-## Volunteering during the Hour of Code FAQ
+## Vullnetarizmi gjatë Orës së Kodimit PESH
 
-### I haven't been contacted by a teacher yet. How can I still volunteer?
-Try searching for local schools and call the principal/teacher/front office and ask how you can help.
+### Nuk me ka kontaktuar nje mesues ende. Si mund te bashkangjitem si vullnetar?
+Provo të kërkosh për shkollat lokale dhe telefono drejtorin/mësuesit/zyrën e informacionit dhe pyet se si mund të ndihmosh.
 
-### How long do classroom visits last for?
-An in-person classroom visit usually lasts 60-90 minutes while a virtual classroom visit usually lasts 20-30 minutes.
+### Sa kohë mund të zgjasë vizita në një klasë?
+Një vizitë personale në klasë zakonisht zgjat 60-90 minuta, ndërsa një vizitë virtuale në klasë zgjat zakonisht 20-30 minuta
 
-### What age group is the Hour of Code activity appropriate for?
-Code.org and our partners design all the Hour of Code activities to engage students of all grade levels (K-12), boys and girls, from all backgrounds. Everyone, even adults can have fun playing!
+### Për çfarë grup-moshe është i përshtatshëm tutoriali i Orës së Kodimit?
+Code.org dhe partneret tane dizajnojne te gjitha aktivitetet e ores se kodit qe t'i perfshijne nxenesit e te gjitha klasave, djem dhe vajza. Të gjithë, madje edhe të rriturit mund të argëtohen me tutorialet tona!
 
 
 

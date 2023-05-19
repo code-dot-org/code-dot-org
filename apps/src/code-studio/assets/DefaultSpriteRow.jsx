@@ -4,7 +4,7 @@ import Button from '@cdo/apps/templates/Button';
 import color from '@cdo/apps/util/color';
 
 export default function DefaultSpriteRow(props) {
-  let {name, keyValue, onDelete, onMove} = props;
+  let {name, onDelete, onMove} = props;
   return (
     <div style={styles.assetRow}>
       <Button
@@ -28,18 +28,15 @@ export default function DefaultSpriteRow(props) {
         icon="arrow-down"
         iconClassName="fa-arrow-down"
       />
-      <h3>
-        {name}: {keyValue}
-      </h3>
+      <h3>{name}</h3>
     </div>
   );
 }
 
 DefaultSpriteRow.propTypes = {
   name: PropTypes.string.isRequired,
-  keyValue: PropTypes.string.isRequired,
   onDelete: PropTypes.func.isRequired,
-  onMove: PropTypes.func.isRequired
+  onMove: PropTypes.func.isRequired,
 };
 
 const styles = {
@@ -48,6 +45,6 @@ const styles = {
     borderColor: color.dark_slate_gray,
     display: 'flex',
     justifyContent: 'flex-start',
-    alignItems: 'center'
-  }
+    alignItems: 'center',
+  },
 };

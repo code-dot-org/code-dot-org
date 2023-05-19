@@ -56,9 +56,7 @@ Feature: Dance Party
     And I select age 10 in the age dialog
     And I close the instructions overlay if it exists
     # drag the "set tint" block from the toolbox to below "after 4 measures"
-    And I drag block "5" to block "14"
-    # set the sprite on the new "set tint" block in the workspace
-    And I set block "19" to have a value of "top_dancer1" for title "SPRITE"
+    And I drag block "setTint" to block "bottomChangeMove"
     And I press "runButton"
     And I wait until element ".congrats" is visible
 

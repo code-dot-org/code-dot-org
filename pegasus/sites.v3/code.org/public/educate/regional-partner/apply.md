@@ -1,6 +1,7 @@
 ---
 title: Code.org Regional Partner Program
 nav: plc_regional_partner_nav
+theme: responsive
 ---
 
 # Regional Partner Application #

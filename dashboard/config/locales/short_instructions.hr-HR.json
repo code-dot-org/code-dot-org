@@ -209,7 +209,13 @@
         "courseC_artist_prog52022": "Ova kuća treba krov! Nacrtaj trokut.  Savjet: sve tri strane su iste dužine.",
         "courseD_maze_nestedLoops42022": "Odvedi me do suncokreta!",
         "courseD_maze_nestedLoops62022": "Odvedi me do suncokreta!",
-        "coursee_helloworld_say": "Upotrijebite blok `say` da kažem što god želiš!"
+        "coursee_helloworld_say": "Upotrijebite blok `say` da kažem što god želiš!",
+        "helloworld_food_location_soccer-2022": "Dajte svakom sprite-u drugačije mjesto.",
+        "helloworld_food_location_space-2022": "Dajte svakom sprite-u drugačije mjesto.",
+        "helloworld_food_multi_soccer-2022": "Neka svaki od tvoja dva sprite-a nešto kaže.",
+        "helloworld_food_multi_space-2022": "Neka svaki od tvoja dva sprite-a nešto kaže.",
+        "helloworld_food_say_soccer-2022": "Upotrijebite blok `say` da kažem što god želiš!",
+        "helloworld_food_say_space-2022": "Upotrijebite blok `say` da kažem što god želiš!"
       }
     }
   }

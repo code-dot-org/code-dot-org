@@ -5,11 +5,13 @@ import color from '../../../util/color';
 import LessonExtrasProgressBubble from '@cdo/apps/templates/progress/LessonExtrasProgressBubble';
 import {
   levelsForLessonId,
-  lessonExtrasUrl
+  lessonExtrasUrl,
+  navigateToLevelId,
 } from '@cdo/apps/code-studio/progressRedux';
 import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
 import {levelWithProgressType} from '@cdo/apps/templates/progress/progressTypes';
 import {LevelKind, LevelStatus} from '@cdo/apps/util/sharedConstants';
+import {canChangeLevelInPage} from '../../browserNavigation';
 import $ from 'jquery';
 
 /**
@@ -24,7 +26,9 @@ class LessonProgress extends Component {
     width: PropTypes.number,
     setDesiredWidth: PropTypes.func,
     currentPageNumber: PropTypes.number,
-    currentLevelId: PropTypes.string
+    currentLevelId: PropTypes.string,
+    isLabLoading: PropTypes.bool,
+    navigateToLevelId: PropTypes.func,
   };
 
   getFullWidth() {
@@ -52,6 +56,9 @@ class LessonProgress extends Component {
       levelIndex < this.props.levels.length;
       levelIndex++
     ) {
+      const currentLevelChanged =
+        this.props.currentLevelId !== nextProps.currentLevelId;
+
       const statusChanged =
         this.props.levels[levelIndex].status !==
         nextProps.levels[levelIndex].status;
@@ -60,9 +67,13 @@ class LessonProgress extends Component {
         this.props.levels[levelIndex].teacherFeedbackReviewState !==
         nextProps.levels[levelIndex].teacherFeedbackReviewState;
 
-      if (statusChanged || badgeChanged) {
+      if (currentLevelChanged || statusChanged || badgeChanged) {
         return true;
       }
+    }
+
+    if (this.props.isLabLoading !== nextProps.isLabLoading) {
+      return true;
     }
 
     return this.props.width !== nextProps.width;
@@ -99,7 +110,7 @@ class LessonProgress extends Component {
 
         return {
           headerFullProgressOffset: desiredOffset,
-          vignetteStyle: {...styles.headerVignette, ...vignetteStyle}
+          vignetteStyle: {...styles.headerVignette, ...vignetteStyle},
         };
       }
     }
@@ -129,18 +140,19 @@ class LessonProgress extends Component {
   }
 
   render() {
-    const {currentPageNumber, lessonExtrasUrl, lessonName} = this.props;
+    const {currentPageNumber, lessonExtrasUrl, lessonName, navigateToLevelId} =
+      this.props;
     let levels = this.props.levels;
 
     // Bonus levels should not count towards mastery.
     levels = levels.filter(level => !level.bonus);
 
-    const {
-      headerFullProgressOffset,
-      vignetteStyle
-    } = this.getFullProgressOffset();
+    const {headerFullProgressOffset, vignetteStyle} =
+      this.getFullProgressOffset();
 
     const onBonusLevel = this.isOnBonusLevel();
+
+    const currentLevelApp = levels.find(level => level.isCurrentLevel)?.app;
 
     return (
       <div className="react_stage" style={styles.container}>
@@ -158,20 +170,45 @@ class LessonProgress extends Component {
               if (isCurrent && level.kind === LevelKind.assessment) {
                 isCurrent = currentPageNumber === level.pageNumber;
               }
+
+              // When the user clicks on a level bubble for which we support changing to
+              // that level without reloading the page, we use a click handler which
+              // calls through to the progress redux store to change to that level
+              // immediately.
+              const onBubbleClick = canChangeLevelInPage(
+                currentLevelApp,
+                level.app
+              )
+                ? () => navigateToLevelId(level.id)
+                : undefined;
+
+              // If we have a clickable bubble, which means we could switch to that level
+              // without a page reload, then there are two cases in which we will disable it:
+              // Firstly, if it's for the current level.  This means it's already the big
+              // bubble, and clicking it will have no effect.  (Unlike in a normal level
+              // which doesn't support in-page reloads, in which case clicking this bubble
+              // would reload the page.)
+              // Secondly, if the active lab is currently loading.  To keep things simple
+              // for the lab, we don't allow switching to another level while one is loading.
+              const bubbleDisabled =
+                !!onBubbleClick &&
+                (level.isCurrentLevel || this.props.isLabLoading);
+
               return (
                 <div
                   key={index}
                   ref={isCurrent ? 'currentLevel' : null}
                   style={{
                     ...styles.inner,
-                    ...(level.isUnplugged && isCurrent && styles.pillContainer)
+                    ...(level.isUnplugged && isCurrent && styles.pillContainer),
                   }}
                 >
                   <ProgressBubble
                     level={level}
-                    disabled={false}
+                    disabled={bubbleDisabled}
                     smallBubble={!isCurrent}
                     lessonName={lessonName}
+                    onClick={onBubbleClick}
                   />
                 </div>
               );
@@ -200,41 +237,41 @@ const styles = {
     borderRadius: 5,
     height: 40,
     position: 'relative',
-    overflow: 'hidden'
+    overflow: 'hidden',
   },
   outer: {
     position: 'absolute',
     paddingLeft: 4,
     paddingRight: 4,
     height: '100%',
-    whiteSpace: 'nowrap'
+    whiteSpace: 'nowrap',
   },
   inner: {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    height: '100%'
+    height: '100%',
   },
   headerVignette: {
     width: '100%',
     height: '100%',
     position: 'absolute',
-    pointerEvents: 'none'
+    pointerEvents: 'none',
   },
   headerVignetteLeftRight: {
     background:
-      'linear-gradient(to right, rgba(231, 232, 234, 1) 0%, rgba(231, 232, 234, 0) 20px, rgba(231, 232, 234, 0) calc(100% - 20px), rgba(231, 232, 234, 1) 100%)'
+      'linear-gradient(to right, rgba(231, 232, 234, 1) 0%, rgba(231, 232, 234, 0) 20px, rgba(231, 232, 234, 0) calc(100% - 20px), rgba(231, 232, 234, 1) 100%)',
   },
   headerVignetteLeft: {
     background:
-      'linear-gradient(to right, rgba(231, 232, 234, 1) 0%, rgba(231, 232, 234, 0) 20px'
+      'linear-gradient(to right, rgba(231, 232, 234, 1) 0%, rgba(231, 232, 234, 0) 20px',
   },
   headerVignetteRight: {
     background:
-      'linear-gradient(to right, rgba(231, 232, 234, 0) calc(100% - 20px), rgba(231, 232, 234, 1) 100%)'
+      'linear-gradient(to right, rgba(231, 232, 234, 0) calc(100% - 20px), rgba(231, 232, 234, 1) 100%)',
   },
   spacer: {
-    marginRight: 'auto'
+    marginRight: 'auto',
   },
   lessonTrophyContainer: {
     border: 0,
@@ -242,24 +279,32 @@ const styles = {
     paddingLeft: 8,
     paddingRight: 0,
     minWidth: 350,
-    marginLeft: 48
+    marginLeft: 48,
   },
   pillContainer: {
     // Vertical padding is so that this lines up with other bubbles
     paddingTop: 4,
-    paddingBottom: 4
-  }
+    paddingBottom: 4,
+  },
 };
 
 export const UnconnectedLessonProgress = LessonProgress;
 
-export default connect(state => ({
-  levels: levelsForLessonId(state.progress, state.progress.currentLessonId),
-  lessonExtrasUrl: lessonExtrasUrl(
-    state.progress,
-    state.progress.currentLessonId
-  ),
-  isLessonExtras: state.progress.isLessonExtras,
-  currentPageNumber: state.progress.currentPageNumber,
-  currentLevelId: state.progress.currentLevelId
-}))(LessonProgress);
+export default connect(
+  state => ({
+    levels: levelsForLessonId(state.progress, state.progress.currentLessonId),
+    lessonExtrasUrl: lessonExtrasUrl(
+      state.progress,
+      state.progress.currentLessonId
+    ),
+    isLessonExtras: state.progress.isLessonExtras,
+    currentPageNumber: state.progress.currentPageNumber,
+    currentLevelId: state.progress.currentLevelId,
+    isLabLoading: state.lab?.isLoading,
+  }),
+  dispatch => ({
+    navigateToLevelId(levelId) {
+      dispatch(navigateToLevelId(levelId));
+    },
+  })
+)(LessonProgress);

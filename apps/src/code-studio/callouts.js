@@ -33,17 +33,17 @@ export default function createCallouts(callouts) {
 
   // Hide callouts when the function editor is closed (otherwise they jump to
   // the top left corner)
-  $(window).on('function_editor_closed', function() {
+  $(window).on('function_editor_closed', function () {
     $('.cdo-qtips').qtip('hide');
   });
 
   // Update callout positions when a blockly editor is scrolled.
-  $(window).on('block_space_metrics_set', function() {
+  $(window).on('block_space_metrics_set', function () {
     snapCalloutsToTargets();
     showHideWorkspaceCallouts();
   });
 
-  $(window).on('droplet_change', function(e, dropletEvent) {
+  $(window).on('droplet_change', function (e, dropletEvent) {
     switch (dropletEvent) {
       case 'scrollace':
         // Destroy all ace gutter tooltips on scroll. Ace dynamically reuses
@@ -51,7 +51,7 @@ export default function createCallouts(callouts) {
         // number to a different DOM element, so the only ways to track with the
         // gutter movement would be to manually adjust position or to destroy
         // the qtips and manually recreate new ones with each scroll.
-        $('.cdo-qtips').each(function() {
+        $('.cdo-qtips').each(function () {
           var api = $(this).qtip('api');
           var target = $(api.elements.target);
           if ($('.ace_gutter').has(target)) {
@@ -98,7 +98,7 @@ export function addCallouts(callouts) {
   $.fn.qtip.zindex = 500;
 
   var showCalloutsMode = document.URL.indexOf('show_callouts=1') !== -1;
-  callouts.forEach(function(callout) {
+  callouts.forEach(function (callout) {
     var selector = callout.element_id; // jquery selector.
     if ($(selector).length === 0 && !callout.on) {
       return;
@@ -109,24 +109,24 @@ export function addCallouts(callouts) {
       content: {
         text: callout.localized_text,
         title: {
-          button: $('<div class="tooltip-x-close"/>')
-        }
+          button: $('<div class="tooltip-x-close"/>'),
+        },
       },
       style: {
         classes: '',
         tip: {
           width: 20,
-          height: 20
-        }
+          height: 20,
+        },
       },
       position: {
         my: 'bottom left',
-        at: 'top right'
+        at: 'top right',
       },
       hide: {
-        event: 'click mousedown touchstart'
+        event: 'click mousedown touchstart',
       },
-      show: false // don't show on mouseover
+      show: false, // don't show on mouseover
     };
 
     var customConfig =
@@ -170,7 +170,7 @@ export function addCallouts(callouts) {
     }
 
     if (callout.on) {
-      $(window).on(callout.on, function(e, action) {
+      $(window).on(callout.on, function (e, action) {
         if (!config.codeStudio.selector) {
           config.codeStudio.selector = selector;
         }
@@ -180,13 +180,11 @@ export function addCallouts(callouts) {
           lastSelector !== config.codeStudio.selector &&
           $(lastSelector).length > 0
         ) {
-          $(lastSelector)
-            .qtip(config)
-            .qtip('destroy');
+          $(lastSelector).qtip(config).qtip('destroy');
         }
         // 'show' after async delay so that DOM changes that may have taken
         // place inside the 'prepareforcallout' event can complete first
-        setTimeout(function() {
+        setTimeout(function () {
           if ($(config.codeStudio.selector).length > 0) {
             if (
               action === 'hashchange' ||
@@ -194,18 +192,14 @@ export function addCallouts(callouts) {
               !callout.seen ||
               config.codeStudio.canReappear
             ) {
-              $(config.codeStudio.selector)
-                .qtip(config)
-                .qtip('show');
+              $(config.codeStudio.selector).qtip(config).qtip('show');
             }
             callout.seen = true;
           }
         }, 0);
       });
     } else if (!callout.seen) {
-      $(selector)
-        .qtip(config)
-        .qtip('show');
+      $(selector).qtip(config).qtip('show');
     }
   });
 }
@@ -220,15 +214,13 @@ function snapCalloutsToTargets() {
   $('.cdo-qtips').qtip('reposition', triggerEvent, animate);
 }
 
-export var showHideWorkspaceCallouts = showOrHideCalloutsByTargetVisibility(
-  '#codeWorkspace'
-);
+export var showHideWorkspaceCallouts =
+  showOrHideCalloutsByTargetVisibility('#codeWorkspace');
 var showHidePaletteCallouts = showOrHideCalloutsByTargetVisibility(
   '.droplet-palette-scroller'
 );
-var showHideDropletGutterCallouts = showOrHideCalloutsByTargetVisibility(
-  '.droplet-gutter'
-);
+var showHideDropletGutterCallouts =
+  showOrHideCalloutsByTargetVisibility('.droplet-gutter');
 
 /**
  * For callouts with targets in the containerSelector (blockly, flyout elements,
@@ -247,9 +239,9 @@ function showOrHideCalloutsByTargetVisibility(containerSelector) {
    */
   var calloutsHiddenByScrolling = {};
   var calloutsHiddenByContainerVisibility = {};
-  return function() {
+  return function () {
     var container = $(containerSelector);
-    $('.cdo-qtips').each(function() {
+    $('.cdo-qtips').each(function () {
       var api = $(this).qtip('api');
       var target = $(api.elements.target);
 

@@ -1,4 +1,4 @@
-include FactoryGirl::Syntax::Methods
+include FactoryBot::Syntax::Methods
 
 class MegaSection
   SAMPLE_TEACHER_EMAIL = 'mega_section_teacher@code.org'.freeze
@@ -99,8 +99,8 @@ class MegaSection
   #  :script_name_2 - name of additional script to generate progress for
   #  :num_students - number of students to generate for section
   def self.create_section(options)
-    script_1 = Script.get_from_cache(options[:script_name_1])
-    script_2 = Script.get_from_cache(options[:script_name_2])
+    script_1 = Unit.get_from_cache(options[:script_name_1])
+    script_2 = Unit.get_from_cache(options[:script_name_2])
     script_levels_1 = script_1.script_levels.includes(:levels)
     script_levels_2 = script_2.script_levels.includes(:levels)
 

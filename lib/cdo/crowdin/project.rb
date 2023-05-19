@@ -1,5 +1,5 @@
 require 'httparty'
-require_relative 'client_extentions.rb'
+require_relative 'client_extentions'
 
 module Crowdin
   # This class represents a single project hosted on Crowdin, and provides
@@ -52,17 +52,26 @@ module Crowdin
         }
       end
 
-      self.class.post("/projects/#{@crowdin_client.config.project_id}/translations/builds/files/#{file_id}", options)
-    rescue Net::ReadTimeout, Net::OpenTimeout => error
+      response = self.class.post(
+        "/projects/#{@crowdin_client.config.project_id}/translations/builds/files/#{file_id}",
+        options
+      )
+      raise CrowdinRateLimitError if response.code == 429
+      raise CrowdinInternalServerError if response.code == 500
+      raise CrowdinServiceUnavailableError if response.code == 503
+
+      response
+    rescue Net::ReadTimeout, Net::OpenTimeout, CrowdinRateLimitError, CrowdinInternalServerError, CrowdinServiceUnavailableError => exception
       # Handle a timeout by simply retrying. We default to three attempts before
       # giving up; if this doesn't work out, other things we could consider:
       #
       #   - increasing the default number of attempts
       #   - increasing the number of attempts for certain high-failure-rate calls
       #   - increasing the timeout, either globally or for this specific call
-      STDERR.puts "Crowdin.export_file(#{file}) timed out: #{error}"
+      warn "Crowdin.export_file(#{file_id}) error: #{exception}"
+      sleep(3) if response&.code == 429
       raise if attempts <= 1
-      export_file(file, language, etag: etag, attempts: attempts - 1)
+      export_file(file_id, language, etag: etag, attempts: attempts - 1)
     end
 
     # Retrieve all languages currently enabled in the crowdin project. Each
@@ -79,15 +88,8 @@ module Crowdin
     end
 
     def list_languages
-      query = {
-        limit: Crowdin::Client::MAX_ITEMS_COUNT,
-        offset: 0
-      }
-
-      result = @crowdin_client.request_loop(query) do
-        @crowdin_client.list_languages(query)
-      end
-      result.map {|lang| lang["data"]}
+      result = @crowdin_client.get_project(Crowdin::Client::CDO_PROJECT_IDS[@id])
+      result['data']['targetLanguages']
     end
 
     # Retrieve all files currently uploaded to the crowdin project.

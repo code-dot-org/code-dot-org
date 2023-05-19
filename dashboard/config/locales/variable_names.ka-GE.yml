@@ -9,6 +9,7 @@ ka:
       age: ასაკი
       answer: პასუხი
       binary: ორობითი
+      birds: ჩიტები
       color: ფერი
       counter: მრიცხველი
       height: სიმაღლე
@@ -17,11 +18,13 @@ ka:
       length: ხანგრძლივობა
       name: სახელი
       nectar: ნექტარი
+      planet: პლანეტა
       points: ქულები
       random: შემთხვევითი
       repeat: გაიმეორეთ
       right: მარჯვნივ
       score: ქულა
+      shout: ყვირილი
       size: ზომა
       speed: სიჩქარე
       type: ტიპი

@@ -9,6 +9,7 @@
         "name": "N",
         "type": "Number"
       }
-    ]
+    ],
+    "style": "math_blocks"
   }
 }

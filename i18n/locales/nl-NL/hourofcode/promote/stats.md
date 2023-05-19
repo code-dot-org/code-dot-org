@@ -16,7 +16,7 @@ title: Flapteksten en nuttige statistieken
 
 #### Laat uw school kennis maken met informatica. Begin met een 'Hour of Code'!
 
-Doordat technologie elke sector ter wereld aan het veranderen is, is kennis over computers onderdeel geworden van een veelzijdige set aan vaardigheden. But just half of all schools offer computer science! Het goede nieuws is dat we zijn op weg om dit te veranderen. Als u vorig jaar over 'Hour of Code' hebt gehoord, dan weet u misschien dat het geschiedenis heeft geschreven. 100 miljoen studenten hebben nu ontdekt hoe toegankelijk en leuk informatica kan zijn door slechts één 'Hour of Code'.
+Doordat technologie elke sector ter wereld aan het veranderen is, is kennis over computers onderdeel geworden van een veelzijdige set aan vaardigheden. But just half of all schools offer computer science! Het goede nieuws is dat we zijn op weg om dit te veranderen. If you've heard about the Hour of Code, you might know that it has made history. More than 100 million students have now discovered how accessible and fun computer science can be by doing just one Hour of Code.
 
 De 'Hour of Code' is een één uur durende introductie tot informatica, ontworpen om aan te tonen dat programmeren niet zo moeilijk is en iedereen de basis kan aanleren. Ga voor meer informatie naar [http://HourOfCode.com](http://HourofCode.com), en probeer het een uur lang voor uzelf, of host een 'Hour of Code'-evenment om anderen kennis te laten maken met de wereld van informatica.
 
@@ -30,7 +30,7 @@ We hopen dat leerlingen de smaak te pakken krijgen en blijven leren. Onderzoek t
 
 #### Waarom is dit belangrijk?
 
-Technologie verandert elke industrie op de planeet. In 2015, 7 miljoen open banen in de VS — inclusief kunst en design— die programmeervaardigheden nodig hadden. But 49 percent of schools in the U.S. don't offer computer science. Het wordt tijd dat we aansluiten bij de 21e eeuw. We weten dat wat onze leerlingen ook gaan doen wanneer ze groot worden, of ze nu medicijnen, het bedrijfsleven, de politiek of de kunst in gaan, als ze weten hoe ze op technologie kunnen bouwen geeft ze dat de zelfverzekerdheid en know-how om te slagen. <br /> <br />
+There are nearly 700,000 open computing jobs in the US, but only 80,000 computer science students graduated into the workforce last year. And, 47 percent of schools in the U.S. don't offer computer science. It’s time for us to catch up to the 21st century. We weten dat wat onze leerlingen ook gaan doen wanneer ze groot worden, of ze nu medicijnen, het bedrijfsleven, de politiek of de kunst in gaan, als ze weten hoe ze op technologie kunnen bouwen geeft ze dat de zelfverzekerdheid en know-how om te slagen. <br /> <br />
 
 #### Een citaat dat u in materiaal kunt gebruiken.
 

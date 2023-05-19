@@ -99,7 +99,7 @@
         },
         "5f00e31d-70fa-4bb2-9bef-223793082f5c": {
           "name": "Ăn mừng",
-          "description": "Giải thích rằng hôm nay bạn đang dành một giờ để lập trình, bởi vì tuần này là Tuần lễ Giáo dục KHMT và hàng triệu học sinh khác trên toàn cầu cũng đã học Giờ lập trình trong tuần này. Hãy chúc mừng các em học sinh đã hòa mình vào phong trào toàn cầu này.\n\nHãy phát cho mỗi học sinh một [chứng chỉ](https://code.org/certificates?script=mc) có tên của học sinh trên đó."
+          "description": "Giải thích rằng hôm nay bạn đang dành một giờ để lập trình, bởi vì tuần này là Tuần lễ Giáo dục KHMT và hàng triệu học sinh khác trên toàn cầu cũng đã học Giờ lập trình trong tuần này. Hãy chúc mừng các em học sinh đã hòa mình vào phong trào toàn cầu này.\n\nHãy phát cho mỗi học sinh một [chứng chỉ](https://studio.code.org/certificates/batch?course=bWM=) có tên của học sinh trên đó."
         },
         "20b7009c-3a45-4211-a9ad-c65f56099200": {
           "name": "Bước tiếp theo",
@@ -149,7 +149,7 @@
         },
         "145782a9-a436-4615-9827-0f75d7e4b3a0": {
           "name": "Ăn mừng",
-          "description": "Giải thích rằng hôm nay bạn đang dành một giờ để lập trình, bởi vì tuần này là Tuần lễ Giáo dục KHMT và hàng triệu học sinh khác trên toàn cầu cũng đã học Giờ lập trình trong tuần này. Hãy chúc mừng các em học sinh đã hòa mình vào phong trào toàn cầu này.\n\nHãy phát cho mỗi học sinh một [chứng chỉ](https://code.org/certificates?script=mc) có tên của học sinh trên đó."
+          "description": "Giải thích rằng hôm nay bạn đang dành một giờ để lập trình, bởi vì tuần này là Tuần lễ Giáo dục KHMT và hàng triệu học sinh khác trên toàn cầu cũng đã học Giờ lập trình trong tuần này. Hãy chúc mừng các em học sinh đã hòa mình vào phong trào toàn cầu này.\n\nHãy phát cho mỗi học sinh một [chứng chỉ](https://studio.code.org/certificates/batch?course=bWM=) có tên của học sinh trên đó."
         },
         "cc38f575-4db4-4ca6-ab2f-a9d8557f16cf": {
           "name": "Bước tiếp theo",
@@ -264,6 +264,31 @@
         "f7c11887-da26-4c7b-be7a-1b84d330ed30": {
           "name": "Mở rộng Giờ lập trình",
           "description": "Sau khi Giờ lập trình kết thúc, có nhiều cách để tiếp tục giảng dạy môn khoa học máy tính trong lớp học K-5. Sau đây là một số ý tưởng:\n\n-   **Dạy các khóa học [Nguyên tắc cơ bản về khoa học máy tính của Code Studio](http://code.org/educate/k5)**. Sáu khóa học này được thiết kế cho những học sinh nhỏ tuổi. Học sinh sẽ làm việc theo cách của họ thông qua một loạt bài tập bài hướng dẫn lập trình và giáo viên có quyền truy cập vào các giáo án hấp dẫn giúp làm cho việc học trở nên sôi động. Code.org cung cấp chương trình phát triển chuyên môn miễn phí cho các khóa học này theo hình thức trực tuyến hoặc trực tiếp.\n-   **Mời chuyên gia khoa học máy tính nói chuyện với lớp về công việc của họ**. Nếu bạn không biết bất kỳ tình nguyện viên nào, hãy liên hệ với một vài tình nguyện viên trên [bản đồ tình nguyện viên](https://code.org/volunteer/local) của chúng tôi."
+        },
+        "6c387b78-14b7-4209-919a-97dbf64b9bc2": {
+          "name": "Bố trí sân khấu",
+          "description": "Chào mừng học sinh đến lớp và giới thiệu thật ngắn gọn về hoạt động trong ngày."
+        },
+        "bdde2027-d08e-4f64-b95d-ab104da3edd9": {
+          "description": "_Trong hoạt động này, bạn sẽ vừa giải trí vừa tạo ra một thế giới tương tác với các nhân vật vui nhộn được gọi là nhân vật. Bạn sẽ có thể khiến nhân vật nói chuyện bằng bong bóng thoại như trong truyện tranh hoặc sách ảnh và bạn sẽ học cách làm cho họ tự động phản hồi khi bạn hoặc ai đó nhấp chuột vào._\n\n_Hôm nay bạn sẽ viết “mã lệnh”, nghĩa là một tập hợp các chỉ dẫn mà máy tính có thể hiểu được. Khi bạn viết một câu chuyện, bạn cần phải suy nghĩ cẩn thận về từ ngữ bạn sẽ sử dụng. Khi bạn viết mã lệnh, bạn cần phải suy nghĩ cẩn thận về các chỉ dẫn bạn đang cung cấp cho máy tính của mình._",
+          "tips": [
+            "Bạn sẽ muốn dành một chút thời gian để tải trước hoặc giới thiệu Giờ lập trình của mình. Đặc biệt là với những học viên nhỏ tuổi, tốt nhất bạn nên vào bài học càng nhanh càng tốt."
+          ]
+        },
+        "cc4e7bc2-813a-4d4a-be58-83d08ca5d970": {
+          "name": "Hỗ trợ chung",
+          "description": "Dưới đây là một số mẹo có thể giúp ích cho học sinh bất kể họ đang học ở cấp độ nào\n\n-   **Hợp tác với bạn kế bên:** Khuyến khích học sinh thảo luận với bạn kế bên khi gặp khó khăn. Tùy thuộc vào độ tuổi và khả năng của học sinh, bạn có thể cân nhắc chính thức chia lớp học của mình thành từng cặp để hoàn thành bài hướng dẫn bằng phương pháp [lập trình theo cặp](https://youtu.be/vgkahOzFH2Q).\n\n-   **Đọc hướng dẫn:** Hướng dẫn thường cung cấp các mẹo hữu ích về cách hoàn thành cấp độ. Trước khi cho học sinh câu trả lời, hãy đảm bảo họ đã xem kỹ hướng dẫn, gợi ý, video và bất kỳ mã lệnh ban đầu nào.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Bạn bị bí à? Hãy xem gợi ý:** Mỗi cấp độ có một gợi ý khuyên bạn cách vượt qua một cấp độ, bao gồm cả khối mã lệnh cần thử.\n\n-   **Hãy dành thời gian thử nghiệm.** Nhìn chung, hướng dẫn cho học sinh biết phải làm gì, nhưng họ cũng nên thoải mái thử nghiệm các ý tưởng của riêng mình."
+        },
+        "062143a1-3063-4af1-864a-2ad1f9c88dd5": {
+          "name": "Xin chào cả thế giới",
+          "progression_name": "Xin chào cả thế giới"
+        },
+        "da91f0fe-e142-453f-a093-8e367d0a1454": {
+          "description": "Nếu một nhóm hoặc cá nhân hoàn thành sớm, hãy khuyến khích họ tiếp tục xây dựng một dự án ở cấp độ cuối cùng. Nếu học sinh không chắc chắn phải làm gì thêm, bạn có thể nhắc họ bằng các câu hỏi:\n\n-   Bạn có thể thêm nhân vật nào khác vào dự án của mình?\n-   Bạn đã xem qua thư viện trang phục hoặc thử vẽ trang phục nhân vật của riêng mình chưa?\n-   Bạn có thể cho nhân vật của mình nói gì khác không?\n-   Nhân vật của bạn nên làm gì khi nhấp chuột?\n-   Mời học sinh chia sẻ ý kiến và học hỏi lẫn nhau. Họ cũng có thể thử hướng dẫn khác bằng cách truy cập [code.org/learn](https://code.org/learn)."
+        },
+        "f5756484-7296-4391-99e2-7b2678653934": {
+          "name": "Suy nghĩ",
+          "description": "#### Thảo luận\n\nYêu cầu học sinh suy nghĩ về các hoạt động trong ngày. Họ đã học gì về lập trình? Nhân vật? Sự kiện?\n\nHọ cảm thấy thế nào về khoa học máy tính và lập trình sau khi dành một giờ khám phá?\n\n#### Các bước tiếp theo\n\nCho học sinh biết rằng nếu họ thích hoạt động hôm nay, họ có nhiều lựa chọn để tiếp tục lập trình. Hãy truy cập [Kết nối KHMT](https://code.org/educate/csc) để xem ý tưởng tích hợp khoa học máy tính vào các môn học khác hoặc đọc thêm về [các khóa học có sẵn dành cho trường tiểu học](https://code.org/educate/curriculum/elementary-school) của chúng tôi."
         },
         "68ce52c3-89f5-48a9-965f-f4dea8d5f530": {
           "description": "#### Bố trí sân khấu\n\nHãy chào mừng học sinh đến lớp và giới thiệu ngắn gọn về hoạt động trong ngày.\n\n_Nói: “Hôm nay chúng ta sẽ dành một giờ để học lập trình. Có ai ở đây đã nghe thuật ngữ “mã lệnh” trước đây chưa? Thuật ngữ đó có nghĩa là gì?”_\n\nHọc sinh có thể đề cập rằng “mã lệnh” giống như một thông điệp bí mật, hoặc liên quan đến máy tính theo một cách nào đó."
@@ -463,7 +488,7 @@
           "description": "Nếu một nhóm hoặc cá nhân hoàn thành sớm, họ có thể thử bài hướng dẫn khác bằng cách truy cập [code.org/learn](<>)."
         },
         "461e1eda-c85f-4f41-aa4d-719d6a88d8d2": {
-          "description": "#### Hỏi đáp\n\nHãy yêu cầu học sinh suy ngẫm về các hoạt động trong ngày. Họ đã học được gì về viết mã lệnh? Lập trình? Sửa lỗi?\n\n-   Các góc trong nào tạo nên hình vuông? Còn hình tam giác thì sao?\n-   Hãy phác thảo một hình khối đơn giản trên giấy của bạn và tưởng tượng mã lệnh dùng để vẽ hình đó. Bạn có thể viết mã lệnh ra bên cạnh hình khối đó không?\n\nHọ cảm thấy thế nào về khoa học máy tính và mã lệnh sau khi dành một giờ khám phá?\n\n#### Ăn mừng\n\nGiải thích rằng hôm nay bạn đang dành một giờ để lập trình, bởi vì tuần này là Tuần lễ Giáo dục KHMT và hàng triệu học sinh khác trên toàn cầu cũng đã học Giờ lập trình trong tuần này. Hãy chúc mừng các em học sinh đã hòa mình vào phong trào toàn cầu này.\n\nHãy phát cho mỗi học sinh một [chứng chỉ](https://code.org/certificates) có tên của học sinh trên đó.\n\n#### Bước tiếp theo\n\nHãy cho học sinh biết rằng nếu họ thích hoạt động hôm nay, họ có nhiều lựa chọn để tiếp tục lập trình. Hãy khuyến khích học sinh truy cập code.org/learn để xem danh sách các lựa chọn hoặc nếu bạn đang lên kế hoạch cho hoạt động mở rộng nào tiếp theo, hãy cho học sinh biết kế hoạch sắp tới trong lớp học."
+          "description": "#### Hỏi đáp\n\nHãy yêu cầu học sinh suy ngẫm về các hoạt động trong ngày. Họ đã học được gì về viết mã lệnh? Lập trình? Sửa lỗi?\n\n-   Các góc trong nào tạo nên hình vuông? Còn hình tam giác thì sao?\n-   Hãy phác thảo một hình khối đơn giản trên giấy của bạn và tưởng tượng mã lệnh dùng để vẽ hình đó. Bạn có thể viết mã lệnh ra bên cạnh hình khối đó không?\n\nHọ cảm thấy thế nào về khoa học máy tính và mã lệnh sau khi dành một giờ khám phá?\n\n#### Ăn mừng\n\nGiải thích rằng hôm nay bạn đang dành một giờ để lập trình, bởi vì tuần này là Tuần lễ Giáo dục KHMT và hàng triệu học sinh khác trên toàn cầu cũng đã học Giờ lập trình trong tuần này. Hãy chúc mừng các em học sinh đã hòa mình vào phong trào toàn cầu này.\n\nHãy phát cho mỗi học sinh một [chứng chỉ](https://studio.code.org/certificates/batch) có tên của học sinh trên đó.\n\n#### Bước tiếp theo\n\nHãy cho học sinh biết rằng nếu họ thích hoạt động hôm nay, họ có nhiều lựa chọn để tiếp tục lập trình. Hãy khuyến khích học sinh truy cập code.org/learn để xem danh sách các lựa chọn hoặc nếu bạn đang lên kế hoạch cho hoạt động mở rộng nào tiếp theo, hãy cho học sinh biết kế hoạch sắp tới trong lớp học."
         },
         "532c3e19-487f-44e0-97ff-a71886e169f2": {
           "description": "#### Sau Giờ lập trình\n\nSau khi Giờ lập trình kết thúc, có nhiều cách để tiếp tục giảng dạy môn khoa học máy tính trong lớp học K-5. Sau đây là một số ý tưởng:\n\n-   **Dạy các khóa học [Nguyên tắc cơ bản về khoa học máy tính của Code Studio](http://code.org/educate/k5)**. Sáu khóa học này được thiết kế cho những học sinh nhỏ tuổi. Học sinh sẽ làm việc theo cách của họ thông qua một loạt bài tập bài hướng dẫn lập trình và giáo viên có quyền truy cập vào các giáo án hấp dẫn giúp làm cho việc học trở nên sôi động. Code.org cung cấp chương trình phát triển chuyên môn miễn phí cho các khóa học này theo hình thức trực tuyến hoặc trực tiếp.\n-   **Hãy truy cập [Bạn có thể dạy Khoa học máy tính](https://studio.code.org/courses?view=teacher)** để nhận thêm đề xuất khóa học.\n-   **Mời chuyên gia khoa học máy tính nói chuyện với lớp về công việc của họ**. Bạn không biết bất kỳ chuyên gia khoa học máy tính nào tại địa phương? Hãy liên hệ với một tình nguyện viên trên [bản đồ tình nguyện viên](https://code.org/volunteer/local) của chúng tôi.\n\nHãy tận dụng hoạt động này để nâng cao khả năng học tập của học sinh. Bạn có thể triển khai ngoài hoạt động trong lớp hoặc hoạt động bổ sung khác.\n\n**Máy sao chép**\n\n-   Cho học sinh hai tờ giấy\n-   Trên một tờ giấy, vẽ một hình đơn giản, chỉ sử dụng các đường thẳng.\n-   Trên tờ thứ hai, vẽ hướng dẫn tái tạo lại lệnh đi thẳng và xoay các góc khác nhau trong hình đó.\n-   Trao đổi các tờ hướng dẫn và cố gắng tái tạo lại hình ảnh chỉ bằng các hướng dẫn đã cho."
@@ -660,7 +685,7 @@
         },
         "7e26ffea-ccaa-4969-9b40-01573fbe4303": {
           "name": "Ăn mừng",
-          "description": "Giải thích rằng hôm nay bạn đang dành một giờ để lập trình, bởi vì tuần này là Tuần lễ Giáo dục KHMT và hàng triệu học sinh khác trên toàn cầu cũng đã học Giờ lập trình trong tuần này. Hãy chúc mừng các em học sinh đã hòa mình vào phong trào toàn cầu này.\n\nHãy phát cho mỗi học sinh một [chứng chỉ](https://code.org/certificates?script=mc) có tên của học sinh trên đó."
+          "description": "Giải thích rằng hôm nay bạn đang dành một giờ để lập trình, bởi vì tuần này là Tuần lễ Giáo dục KHMT và hàng triệu học sinh khác trên toàn cầu cũng đã học Giờ lập trình trong tuần này. Hãy chúc mừng các em học sinh đã hòa mình vào phong trào toàn cầu này.\n\nHãy phát cho mỗi học sinh một [chứng chỉ](https://studio.code.org/certificates/batch?course=bWM=) có tên của học sinh trên đó."
         },
         "de9c3d28-c38a-4d2e-af91-a72a92d31f52": {
           "name": "Bước tiếp theo",
@@ -764,6 +789,31 @@
         },
         "cec5b790-610d-4bb9-8868-a71c39f63329": {
           "description": "**Đọc Blown to Bits**\n\n-   Đọc trang 165-169 của cuốn [Blown to Bits, Chương 5](http://www.bitsbook.com/wp-content/uploads/2008/12/chapter5.pdf)\n-   Trả lời các câu hỏi nêu trong bài hướng dẫn đọc và bảng học tập [Bài hướng dẫn đọc về mã hóa](https://docs.google.com/document/d/1Adxoscvs8sf6ieEvoe8-5RfH542CvoCupb5t9ZiB1No/).\t\t\n\n**Tìm hiểu thêm về Blown to Bits**\n\n-   Các phần trước Chương 5 của cuốn Blown to Bits đề cập đến tầm quan trọng và những tranh cãi xung quanh mã hóa trong bối cảnh hậu 11/9. Bài đọc này có thể là công cụ hữu ích để giới thiệu thêm về tác động của mật mã đối trong nhiều khía cạnh của cuộc sống hiện đại.\n\n-   Yêu cầu học sinh xem lại lịch sử duyệt Internet của mình và ước lượng tỷ lệ phần trăm họ truy cập với giả định rằng phiên truy cập đó là “riêng tư”. Họ có cách nào để chắc chắn về sự riêng tư đó không? Có trang web nào họ truy cập mà họ cảm thấy tin tưởng vào tính bảo mật của phiên truy cập hơn những trang web khác không? Họ có lý lẽ để biện minh cho kết luận này không?"
+        },
+        "bcc9e44c-ad4e-4efc-a12e-e9c74a5c1960": {
+          "name": "Bố trí sân khấu",
+          "description": "Chào mừng học sinh đến lớp và giới thiệu thật ngắn gọn về hoạt động trong ngày."
+        },
+        "3711e1c5-c206-4510-b260-99ee8f061a4c": {
+          "description": "_Trong hoạt động này, bạn sẽ vừa giải trí vừa tạo ra một thế giới tương tác với các nhân vật vui nhộn được gọi là nhân vật. Bạn sẽ có thể khiến nhân vật nói chuyện bằng bong bóng thoại như trong truyện tranh hoặc sách ảnh và bạn sẽ học cách làm cho họ tự động phản hồi khi bạn hoặc ai đó nhấp chuột vào._\n\n_Hôm nay bạn sẽ viết “mã lệnh”, nghĩa là một tập hợp các chỉ dẫn mà máy tính có thể hiểu được. Khi bạn viết một câu chuyện, bạn cần phải suy nghĩ cẩn thận về từ ngữ bạn sẽ sử dụng. Khi bạn viết mã lệnh, bạn cần phải suy nghĩ cẩn thận về các chỉ dẫn bạn đang cung cấp cho máy tính của mình._",
+          "tips": [
+            "Bạn sẽ muốn dành một chút thời gian để tải trước hoặc giới thiệu Giờ lập trình của mình. Đặc biệt là với những học viên nhỏ tuổi, tốt nhất bạn nên vào bài học càng nhanh càng tốt."
+          ]
+        },
+        "0d1c3be1-c6e4-437f-85b9-4912d1cd725b": {
+          "name": "Hỗ trợ chung",
+          "description": "Dưới đây là một số mẹo có thể giúp ích cho học sinh bất kể họ đang học ở cấp độ nào\n\n-   **Hợp tác với bạn kế bên:** Khuyến khích học sinh thảo luận với bạn kế bên khi gặp khó khăn. Tùy thuộc vào độ tuổi và khả năng của học sinh, bạn có thể cân nhắc chính thức chia lớp học của mình thành từng cặp để hoàn thành bài hướng dẫn bằng phương pháp [lập trình theo cặp](https://youtu.be/vgkahOzFH2Q).\n\n-   **Đọc hướng dẫn:** Hướng dẫn thường cung cấp các mẹo hữu ích về cách hoàn thành cấp độ. Trước khi cho học sinh câu trả lời, hãy đảm bảo họ đã xem kỹ hướng dẫn, gợi ý, video và bất kỳ mã lệnh ban đầu nào.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Bạn bị bí à? Hãy xem gợi ý:** Mỗi cấp độ có một gợi ý khuyên bạn cách vượt qua một cấp độ, bao gồm cả khối mã lệnh cần thử.\n\n-   **Hãy dành thời gian thử nghiệm.** Nhìn chung, hướng dẫn cho học sinh biết phải làm gì, nhưng họ cũng nên thoải mái thử nghiệm các ý tưởng của riêng mình."
+        },
+        "fcf13574-b04a-42a7-9e17-ef0dba0bfe33": {
+          "name": "Xin chào cả thế giới",
+          "progression_name": "Xin chào cả thế giới"
+        },
+        "7cccfa6d-83c2-4d74-a71f-c9134fb1d0c2": {
+          "description": "Nếu một nhóm hoặc cá nhân hoàn thành sớm, hãy khuyến khích họ tiếp tục xây dựng một dự án ở cấp độ cuối cùng. Nếu học sinh không chắc chắn phải làm gì thêm, bạn có thể nhắc họ bằng các câu hỏi:\n\n-   Bạn có thể thêm nhân vật nào khác vào dự án của mình?\n-   Bạn đã xem qua thư viện trang phục hoặc thử vẽ trang phục nhân vật của riêng mình chưa?\n-   Bạn có thể cho nhân vật của mình nói gì khác không?\n-   Nhân vật của bạn nên làm gì khi nhấp chuột?\n-   Mời học sinh chia sẻ ý kiến và học hỏi lẫn nhau. Họ cũng có thể thử hướng dẫn khác bằng cách truy cập [code.org/learn](https://code.org/learn)."
+        },
+        "574954ea-9128-428b-9965-b0d34518c11d": {
+          "name": "Suy nghĩ",
+          "description": "#### Thảo luận\n\nYêu cầu học sinh suy nghĩ về các hoạt động trong ngày. Họ đã học gì về lập trình? Nhân vật? Sự kiện?\n\nHọ cảm thấy thế nào về khoa học máy tính và lập trình sau khi dành một giờ khám phá?\n\n#### Các bước tiếp theo\n\nCho học sinh biết rằng nếu họ thích hoạt động hôm nay, họ có nhiều lựa chọn để tiếp tục lập trình. Hãy truy cập [Kết nối KHMT](https://code.org/educate/csc) để xem ý tưởng tích hợp khoa học máy tính vào các môn học khác hoặc đọc thêm về [các khóa học có sẵn dành cho trường tiểu học](https://code.org/educate/curriculum/elementary-school) của chúng tôi."
         },
         "c4d6d315-bb5c-47d7-bc5e-f5fce2e4ae67": {
           "name": "Bố trí sân khấu",
@@ -869,7 +919,7 @@
         },
         "6b574c8b-2319-4244-acc8-fb8405fa5737": {
           "name": "Ăn mừng",
-          "description": "Giải thích rằng hôm nay bạn đang dành một giờ để lập trình, bởi vì tuần này là Tuần lễ Giáo dục KHMT và hàng triệu học sinh khác trên toàn cầu cũng đã học Giờ lập trình trong tuần này. Hãy chúc mừng các em học sinh đã hòa mình vào phong trào toàn cầu này.\n\nHãy phát cho mỗi học sinh một [chứng chỉ](https://code.org/certificates?script=mc) có tên của học sinh trên đó."
+          "description": "Giải thích rằng hôm nay bạn đang dành một giờ để lập trình, bởi vì tuần này là Tuần lễ Giáo dục KHMT và hàng triệu học sinh khác trên toàn cầu cũng đã học Giờ lập trình trong tuần này. Hãy chúc mừng các em học sinh đã hòa mình vào phong trào toàn cầu này.\n\nHãy phát cho mỗi học sinh một [chứng chỉ](https://studio.code.org/certificates/batch?course=bWM=) có tên của học sinh trên đó."
         },
         "02dfa607-4f9e-404c-bdae-f9f423fa526c": {
           "name": "Bước tiếp theo",
@@ -1075,7 +1125,7 @@
         },
         "8581ae5d-4d2a-4221-b820-5920dd449b6c": {
           "name": "Giới thiệu",
-          "description": "**Thảo luận:**\n\n-   _Chúng ta biết điều gì về cách thức lây lan của vi rút?_\n-   _Điều gì có thể khiến vi rút lây lan trong thị trấn nhanh hơn?_\n-   \\_Điều gì có thể giúp làm chậm quá trình lây lan của vi rút?\n\n\\_Mục tiêu của hoạt động thảo luận này là để học sinh có cơ hội ôn lại kiến thức cũ và quan sát ý tưởng của mình trên bảng. Đây cũng là cơ hội để tìm hiểu một số quan niệm sai lầm về cách thức lây lan của vi rút."
+          "description": "**Thảo luận:**\n\n-   _Chúng ta biết điều gì về cách thức lây lan của vi rút?_\n-   _Điều gì có thể khiến vi rút lây lan trong thị trấn nhanh hơn?_\n-   _Điều gì có thể giúp làm chậm quá trình lây lan của vi rút?\n\n_Mục tiêu của hoạt động thảo luận này là để học sinh có cơ hội ôn lại kiến thức cũ và quan sát ý tưởng của mình trên bảng. Đây cũng là cơ hội để tìm hiểu một số quan niệm sai lầm về cách thức lây lan của vi rút.\n"
         },
         "d63c77c1-4167-4360-ab98-25610934beda": {
           "name": "Dịch bệnh bùng phát",
@@ -1107,7 +1157,7 @@
           "description": "_Bản mô phỏng là phương pháp tuyệt vời để học những điều khó có thể quan sát được trong thế giới thực. Chúng giúp các nhà khoa học giải quyết vấn đề, dự đoán cách giải quyết vấn đề và thử nghiệm các ý tưởng mới một cách an toàn và hiệu quả. Bản mô phỏng của bạn là cách thể hiện diễn biến của một đợt lây lan vi rút ở Thị Trấn Quái Vật._"
         },
         "b3189fd8-5272-4de4-953a-f4848b2ddb5c": {
-          "description": "**Thảo luận:**\n\n-   Bản mô phỏng có ích như thế nào trong thế giới thực?\n-   Bản mô phỏng có thể giúp chúng ta hiểu thế giới xung quanh mình như thế nào?\n-   Bản mô phỏng có thể cải thiện cách chúng ta thử nghiệm các ý tưởng như thế nào? Mục tiêu của cuộc thảo luận là để học sinh hiểu rằng mô phỏng là một cách mô hình hóa các hệ thống phức tạp bằng phương pháp tương tác. Họ cũng cần hiểu được cách các bản mô phỏng giúp mọi người thử nghiệm các ý tưởng một cách nhanh chóng, an toàn và chi phí thấp."
+          "description": "**Thảo luận:**\n\n-   Bản mô phỏng có ích như thế nào trong thế giới thực?\n-   Bản mô phỏng có thể giúp chúng ta hiểu thế giới xung quanh mình như thế nào?\n-   Bản mô phỏng có thể cải thiện cách chúng ta thử nghiệm các ý tưởng như thế nào? Mục tiêu của cuộc thảo luận là để học sinh hiểu rằng mô phỏng là một cách mô hình hóa các hệ thống phức tạp bằng phương pháp tương tác. Họ cũng cần hiểu được cách các bản mô phỏng giúp mọi người thử nghiệm các ý tưởng một cách nhanh chóng, an toàn và chi phí thấp.\n"
         },
         "b8e884f1-eae0-4138-8778-0972f90e34d9": {
           "name": "Suy nghĩ",
@@ -1150,7 +1200,7 @@
           "description": "**Thứ tự đúng: D, B, A, C**"
         },
         "11b82689-57e5-404f-8846-51e10f2642d0": {
-          "description": "#### Hỏi đáp\n\nHãy yêu cầu học sinh suy ngẫm về các hoạt động trong ngày. Họ đã học được gì về viết mã lệnh? Lập trình? Sửa lỗi? Sự kiện? Họ cảm thấy thế nào về khoa học máy tính và mã lệnh sau khi dành một giờ khám phá?\n\n#### Ăn mừng\n\nGiải thích rằng hôm nay bạn đang dành một giờ để lập trình, bởi vì tuần này là Tuần lễ Giáo dục KHMT và hàng triệu học sinh khác trên toàn cầu cũng đã học Giờ lập trình trong tuần này. Hãy chúc mừng các em học sinh đã hòa mình vào phong trào toàn cầu này.\n\nHãy phát cho mỗi học sinh một [chứng chỉ](https://code.org/certificates) có tên của học sinh trên đó.\n\n#### Bước tiếp theo\n\nHãy cho học sinh biết rằng nếu họ thích hoạt động hôm nay, họ có nhiều lựa chọn để tiếp tục lập trình. Hãy khuyến khích học sinh truy cập code.org/learn để xem danh sách các lựa chọn hoặc nếu bạn đang lên kế hoạch cho hoạt động mở rộng nào tiếp theo, hãy cho học sinh biết kế hoạch sắp tới trong lớp học."
+          "description": "#### Hỏi đáp\n\nHãy yêu cầu học sinh suy ngẫm về các hoạt động trong ngày. Họ đã học được gì về viết mã lệnh? Lập trình? Sửa lỗi? Sự kiện? Họ cảm thấy thế nào về khoa học máy tính và mã lệnh sau khi dành một giờ khám phá?\n\n#### Ăn mừng\n\nGiải thích rằng hôm nay bạn đang dành một giờ để lập trình, bởi vì tuần này là Tuần lễ Giáo dục KHMT và hàng triệu học sinh khác trên toàn cầu cũng đã học Giờ lập trình trong tuần này. Hãy chúc mừng các em học sinh đã hòa mình vào phong trào toàn cầu này.\n\nHãy phát cho mỗi học sinh một [chứng chỉ](https://studio.code.org/certificates/batch) có tên của học sinh trên đó.\n\n#### Bước tiếp theo\n\nHãy cho học sinh biết rằng nếu họ thích hoạt động hôm nay, họ có nhiều lựa chọn để tiếp tục lập trình. Hãy khuyến khích học sinh truy cập code.org/learn để xem danh sách các lựa chọn hoặc nếu bạn đang lên kế hoạch cho hoạt động mở rộng nào tiếp theo, hãy cho học sinh biết kế hoạch sắp tới trong lớp học."
         },
         "e9c48a39-952e-44be-8955-9d012bfa89c1": {
           "description": "#### Sau Giờ lập trình\n\nSau khi Giờ lập trình kết thúc, có nhiều cách để tiếp tục giảng dạy môn khoa học máy tính trong lớp học K-5. Sau đây là một số ý tưởng:\n\n-   **Dạy các khóa học [Nguyên tắc cơ bản về khoa học máy tính của Code Studio](http://code.org/educate/k5)**. Sáu khóa học này được thiết kế cho những học sinh nhỏ tuổi. Học sinh sẽ làm việc theo cách của họ thông qua một loạt bài tập bài hướng dẫn lập trình và giáo viên có quyền truy cập vào các giáo án hấp dẫn giúp làm cho việc học trở nên sôi động. Code.org cung cấp chương trình phát triển chuyên môn miễn phí cho các khóa học này theo hình thức trực tuyến hoặc trực tiếp.\n-   **Hãy truy cập [Bạn có thể dạy Khoa học máy tính](https://studio.code.org/courses?view=teacher)** để nhận thêm đề xuất khóa học.\n-   **Mời chuyên gia khoa học máy tính nói chuyện với lớp về công việc của họ**. Bạn không biết bất kỳ chuyên gia khoa học máy tính nào tại địa phương? Hãy liên hệ với một tình nguyện viên trên [bản đồ tình nguyện viên](https://code.org/volunteer/local) của chúng tôi."
@@ -1239,7 +1289,7 @@
           "description": "**Thứ tự đúng: D, B, A, C**"
         },
         "efd26bf1-c977-4fc3-883d-a37bb3e68a75": {
-          "description": "#### Hỏi đáp\n\nHãy yêu cầu học sinh suy ngẫm về các hoạt động trong ngày. Họ đã học được gì về viết mã lệnh? Lập trình? Sửa lỗi? Sự kiện? Họ cảm thấy thế nào về khoa học máy tính và mã lệnh sau khi dành một giờ khám phá?\n\n#### Ăn mừng\n\nGiải thích rằng hôm nay bạn đang dành một giờ để lập trình, bởi vì tuần này là Tuần lễ Giáo dục KHMT và hàng triệu học sinh khác trên toàn cầu cũng đã học Giờ lập trình trong tuần này. Hãy chúc mừng các em học sinh đã hòa mình vào phong trào toàn cầu này.\n\nHãy phát cho mỗi học sinh một [chứng chỉ](https://code.org/certificates) có tên của học sinh trên đó.\n\n#### Bước tiếp theo\n\nHãy cho học sinh biết rằng nếu họ thích hoạt động hôm nay, họ có nhiều lựa chọn để tiếp tục lập trình. Hãy khuyến khích học sinh truy cập code.org/learn để xem danh sách các lựa chọn hoặc nếu bạn đang lên kế hoạch cho hoạt động mở rộng nào tiếp theo, hãy cho học sinh biết kế hoạch sắp tới trong lớp học."
+          "description": "#### Hỏi đáp\n\nHãy yêu cầu học sinh suy ngẫm về các hoạt động trong ngày. Họ đã học được gì về viết mã lệnh? Lập trình? Sửa lỗi? Sự kiện? Họ cảm thấy thế nào về khoa học máy tính và mã lệnh sau khi dành một giờ khám phá?\n\n#### Ăn mừng\n\nGiải thích rằng hôm nay bạn đang dành một giờ để lập trình, bởi vì tuần này là Tuần lễ Giáo dục KHMT và hàng triệu học sinh khác trên toàn cầu cũng đã học Giờ lập trình trong tuần này. Hãy chúc mừng các em học sinh đã hòa mình vào phong trào toàn cầu này.\n\nHãy phát cho mỗi học sinh một [chứng chỉ](https://studio.code.org/certificates/batch) có tên của học sinh trên đó.\n\n#### Bước tiếp theo\n\nHãy cho học sinh biết rằng nếu họ thích hoạt động hôm nay, họ có nhiều lựa chọn để tiếp tục lập trình. Hãy khuyến khích học sinh truy cập code.org/learn để xem danh sách các lựa chọn hoặc nếu bạn đang lên kế hoạch cho hoạt động mở rộng nào tiếp theo, hãy cho học sinh biết kế hoạch sắp tới trong lớp học."
         },
         "0eade685-f4a5-4d81-bc38-4371a06fbb06": {
           "description": "#### Sau Giờ lập trình\n\nSau khi Giờ lập trình kết thúc, có nhiều cách để tiếp tục giảng dạy môn khoa học máy tính trong lớp học K-5. Sau đây là một số ý tưởng:\n\n-   **Dạy các khóa học [Nguyên tắc cơ bản về khoa học máy tính của Code Studio](http://code.org/educate/k5)**. Sáu khóa học này được thiết kế cho những học sinh nhỏ tuổi. Học sinh sẽ làm việc theo cách của họ thông qua một loạt bài tập bài hướng dẫn lập trình và giáo viên có quyền truy cập vào các giáo án hấp dẫn giúp làm cho việc học trở nên sôi động. Code.org cung cấp chương trình phát triển chuyên môn miễn phí cho các khóa học này theo hình thức trực tuyến hoặc trực tiếp.\n-   **Hãy truy cập [Bạn có thể dạy Khoa học máy tính](https://studio.code.org/courses?view=teacher)** để nhận thêm đề xuất khóa học.\n-   **Mời chuyên gia khoa học máy tính nói chuyện với lớp về công việc của họ**. Bạn không biết bất kỳ chuyên gia khoa học máy tính nào tại địa phương? Hãy liên hệ với một tình nguyện viên trên [bản đồ tình nguyện viên](https://code.org/volunteer/local) của chúng tôi. #### Hãy đưa tôi tới một trận bóng\n\nĐưa học sinh ra ngoài chơi một trò chơi với bóng bất kỳ. Hãy theo dõi các sự kiện và hành động. Ví dụ, không đập bóng trong môn bóng rổ sẽ mắc lỗi đi bóng và đội còn lại được nhận bóng. Trong bóng đá, sút bóng ra ngoài biên sẽ cho đội còn lại đá bóng vào sân. Đưa bóng vào gôn sẽ được một điểm! Hãy tạo ra nhiều sự kiện hơn nếu học sinh của bạn hứng thú. Hãy yêu cầu tất cả học sinh hét lên “Tuyệt vời” khi đội trưởng của một đội ghi được điểm. Cho mọi người ngã ra đất và lăn lộn nếu một học sinh ghi được hai bàn thắng liên tiếp!"
@@ -1459,7 +1509,7 @@
           "progression_name": "Dạy cho AI một từ mới"
         },
         "0cc68ced-0af8-4fbf-a8df-4df044149a60": {
-          "description": "[In chứng chỉ](https://code.org/certificates?script=oceans) để học sinh ăn mừng thành tích của mình.\n\nVào cuối bài học, hãy khuyến khích học sinh truy cập [Code.org/learn](http://Code.org/learn) và lấy ý tưởng về các cách thức khác để tiếp tục cuộc phiêu lưu với khoa học máy tính."
+          "description": "[In chứng chỉ](https://studio.code.org/certificates/batch?course=b2NlYW5z) để học sinh ăn mừng thành tích của mình.\n\nVào cuối bài học, hãy khuyến khích học sinh truy cập [Code.org/learn](http://Code.org/learn) và lấy ý tưởng về các cách thức khác để tiếp tục cuộc phiêu lưu với khoa học máy tính."
         },
         "be0db11e-cb8e-4658-844c-73a9faafa36d": {
           "description": "#### Giúp phân loại động vật tại Vườn Quốc gia Mountain Zebra\n\nSnapshot Safari đã đặt hàng trăm camera ẩn trên khắp miền nam châu Phi và ghi lại hàng triệu hình ảnh đẹp và quý hiếm của các loài động vật. Học sinh có thể giúp bảo vệ loài Ngựa vằn núi Cape có nguy cơ tuyệt chủng bằng cách phân loại các loài động vật khác nhau trong những hình ảnh này. Bạn có thể đọc về dự án tại [here](https://www.zooniverse.org/projects/meredithspalmer/snapshot-mountain-zebra/about/research) hoặc nhấp chuột vào liên kết bên dưới để thử!\n\n[Ảnh chụp tại Mountain Zebra – Zooniverse](https://www.zooniverse.org/projects/meredithspalmer/snapshot-mountain-zebra/classify?reload=0&workflow=11445)"
@@ -1499,7 +1549,7 @@
         },
         "7acfc985-03d8-4d14-b244-203f8cbf4843": {
           "name": "Hỗ trợ chung",
-          "description": "Dưới đây là một số mẹo có thể giúp ích cho học sinh bất kể họ đang học ở cấp độ nào\n\n-   **Hợp tác với bạn kế bên:** Khuyến khích học sinh thảo luận với bạn kế bên khi gặp khó khăn. Tùy thuộc vào độ tuổi và khả năng của học sinh, bạn có thể cân nhắc chính thức chia lớp học của mình thành từng cặp để hoàn thành bài hướng dẫn bằng phương pháp [lập trình theo cặp][0].\n\n-   **Đọc hướng dẫn:** Hướng dẫn thường cung cấp các mẹo hữu ích về cách hoàn thành cấp độ. Trước khi cho học sinh câu trả lời, hãy đảm bảo họ đã xem kỹ hướng dẫn, gợi ý, video và bất kỳ mã lệnh ban đầu nào.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Bạn bị bí à? Hãy xem gợi ý:** Mỗi cấp độ có một gợi ý khuyên bạn cách vượt qua một cấp độ, bao gồm cả khối mã lệnh cần thử.\n\n-   **Hãy dành thời gian thử nghiệm.** Nhìn chung, hướng dẫn cho học sinh biết phải làm gì, nhưng họ cũng nên thoải mái thử nghiệm các ý tưởng của riêng mình."
+          "description": "Dưới đây là một số mẹo có thể giúp ích cho học sinh bất kể họ đang học ở cấp độ nào\n\n-   **Hợp tác với bạn kế bên:** Khuyến khích học sinh thảo luận với bạn kế bên khi gặp khó khăn. Tùy thuộc vào độ tuổi và khả năng của học sinh, bạn có thể cân nhắc chính thức chia lớp học của mình thành từng cặp để hoàn thành bài hướng dẫn bằng phương pháp [lập trình theo cặp][0].\n\n-   **Đọc hướng dẫn:** Hướng dẫn thường cung cấp các mẹo hữu ích về cách hoàn thành cấp độ. Trước khi cho học sinh câu trả lời, hãy đảm bảo họ đã xem kỹ hướng dẫn, gợi ý, video và bất kỳ mã lệnh ban đầu nào.\n\n-  <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Bạn bị bí à? Hãy xem gợi ý:** Mỗi cấp độ có một gợi ý khuyên bạn cách vượt qua một cấp độ, bao gồm cả khối mã lệnh cần thử.\n\n-   **Hãy dành thời gian thử nghiệm.** Nhìn chung, hướng dẫn cho học sinh biết phải làm gì, nhưng họ cũng nên thoải mái thử nghiệm các ý tưởng của riêng mình."
         },
         "1634ab74-919f-40fb-b2dc-8cd5701655a2": {
           "name": "Xin chào cả thế giới"
@@ -2172,6 +2222,7 @@
           "description": "Chúng ta có thể thấy rằng trong tất cả các ứng dụng này, người dùng có thể lựa chọn cách sử dụng. Những lựa chọn này có thể là động lực để nhiều người muốn sử dụng ứng dụng hơn."
         },
         "a4614b34-d679-47a0-b4b3-36a360f0336d": {
+          "name": "Giới thiệu Sprite Lab",
           "progression_name": "Video: Giới thiệu Sprite Lab"
         },
         "6e47923a-1f07-4c2d-a55a-c45a35a823e9": {
@@ -2246,6 +2297,7 @@
           ]
         },
         "3aa37d43-0bc2-433c-9fdd-59a704d6d5f8": {
+          "name": "Sprites trong hành động",
           "progression_name": "Dự đoán"
         },
         "fa8242f4-3cba-4a2c-bd5b-069a58450349": {
@@ -2611,6 +2663,9 @@
           "tips": [
             "Các câu hỏi Thảo luận nhanh nhằm khơi dậy tư duy toàn cảnh về cách liên hệ bài học với thế giới bên ngoài và tương lai rộng mở của học sinh. Hãy sử dụng hiểu biết về lớp học của mình để quyết định xem bạn muốn thảo luận trước lớp, trong nhóm hay với bạn ngồi kế bên."
           ]
+        },
+        "f26ccabe-2b34-481f-b142-b6227421df3e": {
+          "name": "Khám phá"
         },
         "f8419af8-d199-4cb6-b4dc-ea619a1ea802": {
           "progression_name": "Các dự án mẫu"
@@ -3104,6 +3159,9 @@
         "6ef6c719-244f-449d-9d81-75283f9d48e4": {
           "description": "Hãy nhớ truy cập [Bản quyền & Sáng tạo](https://copyrightandcreativity.org) để tìm thêm các bài học về chia sẻ nội dung số và quyền sáng tạo."
         },
+        "b032e6b2-4dfd-431c-a938-06a8bd4a8056": {
+          "name": "Khám phá"
+        },
         "8c2b4d58-a189-4531-bc7c-bfcb4bce7ca8": {
           "progression_name": "Dự án mẫu"
         },
@@ -3482,9 +3540,6 @@
           "tips": [
             "Hãy nhắc học sinh chỉ chia sẻ tác phẩm của mình với bạn thân hoặc gia đình. Để biết thêm thông tin, hãy xem hoặc chiếu **\\*Tạm dừng và suy nghĩ về môi trường trực tuyến – Video** cho cả lớp"
           ]
-        },
-        "f413261b-0a85-4534-bbfd-cc3928eac9ad": {
-          "description": "Chúng tôi đã đưa vào một số cấp độ dự đoán trắc nghiệm có thể hơi khó đối với trẻ chưa biết đọc. Các cấp độ này là tùy chọn để bạn ôn lại với cả lớp và giúp chuẩn bị cho các bài tập sắp tới. Ngoài ra, bạn có thể dùng cấp độ này sau khi kết thúc giai đoạn để làm bài ôn tập cho cả lớp.\n\n**Cấp độ dự đoán:** – [Khóa học B, Vòng lặp trong Họa sĩ](https://studio.code.org/levels/8745)"
         },
         "3ca1573a-dd46-4103-98ec-b71d8b50033b": {
           "progression_name": "Video: Họa sĩ trong Code Studio"
@@ -3880,6 +3935,7 @@
           "description": "#### Vòng 1 (Sơ cấp):\n\n-   Bắt đầu giậm chân tại chỗ.\n-   Dừng giậm chân tại chỗ.\n-   Bắt đầu vỗ tay.\n-   Dừng vỗ tay.\n-   Bắt đầu giậm chân tại chỗ.\n-   Bắt đầu vỗ tay.\n-   Dừng mọi hành động.\n\n**Thảo luận:** _Điều gì xảy ra khi bạn được yêu cầu vỗ tay trong lúc đang giậm chân tại chỗ? Điều gì xảy ra nếu bạn được yêu cầu bắt đầu hai hành vi khác nhau cùng một lúc?_\n\nHọc sinh nên hiểu rằng nhiều hành vi có thể xảy ra đồng thời.\n\\|\n\n#### Vòng 2 (Trung cấp):\n\n-   Bắt đầu vẫy tay trên không.\n-   Bắt đầu lắc lư đầu.\n-   Dừng vẫy tay trên không.\n-   Dừng lắc lư đầu.\n-   Bắt đầu lắc đầu gối.\n-   Bắt đầu đập cánh tay như chim.\n-   Dừng lắc đầu gối.\n-   Bắt đầu lắc lư đầu.\n-   Bắt đầu giậm chân tại chỗ.\n-   Dừng đập cánh tay như chim.\n-   Dừng mọi hành động.\n\n**Thảo luận:**\n\n_Những loại chỉ dẫn nào khiến mọi người mắc lỗi? Bạn nghĩ chiến lược nào là hữu ích để đảm bảo bạn làm theo đúng chỉ dẫn? Tại sao phải theo dõi từng hành vi riêng biệt?_\n\nHọc sinh nên hiểu rằng mỗi hành vi cần dừng lại riêng lẻ. Họ cần theo dõi riêng từng hành vi.\n\n#### Thử thách\n\n-   Bắt đầu ngồi xổm.\n-   Bắt đầu gõ vào đầu.\n-   Dừng ngồi xổm.\n-   Dừng gõ vào đầu.\n-   Bắt đầu nhảy lên xuống.\n-   Bắt đầu gõ vào đầu.\n-   Dừng mọi hành động.\n-   Bắt đầu vỗ tay.\n-   Bắt đầu vỗ cánh tay như chim.\n-   Dừng mọi hành động.\n-   Bắt đầu ngồi xổm.\n-   Bắt đầu nhảy lên xuống.\n-   Dừng mọi hành động.\n-   Bắt đầu gõ vào đầu gối.\n-   Bắt đầu gõ vào đầu.\n-   Dừng mọi hành động.\n-   Bắt đầu xoay trái.\n-   Bắt đầu xoay phải.\n-   Dừng xoay trái.\n-   Dừng xoay phải.\n\n**Thảo luận:** _Điều gì sẽ xảy ra nếu hai hành vi có vẻ xung đột với nhau?_\n\n_Bạn nên làm gì khi được yêu cầu vỗ tay và đập cánh tay cùng lúc?_\n\n_Làm cách nào để nhảy lên và xuống trong khi đang ngồi xổm?_\n\n_Điều gì sẽ xảy ra nếu bạn cần gõ đầu gối và đầu cùng một lúc?_\n\n_Khi bạn được yêu cầu xoay theo hai hướng ngược nhau, bạn thấy mọi người làm gì?_\n\n_Điều gì sẽ xảy ra nếu bạn được yêu cầu xoay trái và phải cùng một lúc_\n\nHọc sinh nên hiểu rằng một số hành vi xung đột với nhau có thể dẫn đến kết quả không mong muốn. Hai hành vi trái ngược nhau có thể triệt tiêu lẫn nhau."
         },
         "fcfb7745-6451-4f94-a9c1-23d681360aac": {
+          "name": "Sprites trong hành động",
           "description": "#### Dự đoán (2 phút)\n\n**Làm như sau:** Yêu cầu học sinh đọc mã lệnh đã cho và dự đoán điều gì sẽ xảy ra. Sau khi nhấn “Run” (chạy), hãy cho học sinh thời gian suy nghĩ về bất cứ điều gì họ thấy thú vị hoặc khiến họ ngạc nhiên.",
           "progression_name": "Dự đoán"
         },
@@ -4373,7 +4429,8 @@
         },
         "e0582255-a83c-4278-8b18-9ce09ac1118d": {
           "name": "Hàm với game Người thu hoạch",
-          "description": "#### Bài tập trực tuyến\n\nMột số bài tập sẽ có hàm được khai báo trước để học sinh điền. Trước tiên, học sinh có thể viết toàn bộ chương trình mà không có hàm, sau đó xác định vị trí mà hàm sẽ phát huy tác dụng trong chương trình.\n\nBạn cần đảm bảo mỗi học sinh hoàn thành bài tập có chấm màu xanh lá cây đậm. Nếu một số học sinh gặp khó khăn trong việc đơn giản hóa mã lệnh và sử dụng hàm, hãy lập các nhóm học sinh giỏi trong lớp để đi vòng quanh và trả lời các câu hỏi.\n\nĐừng quên đưa bút chì và giấy để giúp học sinh phác thảo các giải pháp khả thi."
+          "description": "#### Bài tập trực tuyến\n\nMột số bài tập sẽ có hàm được khai báo trước để học sinh điền. Trước tiên, học sinh có thể viết toàn bộ chương trình mà không có hàm, sau đó xác định vị trí mà hàm sẽ phát huy tác dụng trong chương trình.\n\nBạn cần đảm bảo mỗi học sinh hoàn thành bài tập có chấm màu xanh lá cây đậm. Nếu một số học sinh gặp khó khăn trong việc đơn giản hóa mã lệnh và sử dụng hàm, hãy lập các nhóm học sinh giỏi trong lớp để đi vòng quanh và trả lời các câu hỏi.\n\nĐừng quên đưa bút chì và giấy để giúp học sinh phác thảo các giải pháp khả thi.",
+          "progression_name": "The Harvester"
         },
         "3fe01e47-b3a6-4c39-be65-7bc8a1ca840f": {
           "progression_name": "Thực tiễn"
@@ -5030,6 +5087,9 @@
         },
         "2c09883a-7c60-446a-ace5-d896370d3d71": {
           "description": "Hãy dùng các hoạt động này để nâng cao khả năng học tập của học sinh. Bạn có thể dùng bên ngoài các hoạt động trên lớp hoặc các hoạt động bổ sung khác.\n\n**Nhìn vào bản chất**\n\nKhi chia sẻ liên kết đến câu chuyện của mình, bạn cũng chia sẻ toàn bộ mã lệnh đằng sau. Đây là cách tuyệt vời để học sinh học hỏi lẫn nhau.\n\n-   Đăng liên kết đến các câu chuyện đã hoàn thành lên mạng\n    -   Tạo câu chuyện của riêng bạn để chia sẻ!\n-   Khi học sinh tải lên liên kết, hãy yêu cầu học sinh nhấp vào nút “Cách hoạt động” để xem mã lệnh đằng sau câu chuyện.\n-   Thảo luận theo nhóm về các cách khác nhau mà bạn cùng lớp đã lập trình câu chuyện của mình.\n    -   Điều gì khiến bạn ngạc nhiên?\n    -   Bạn muốn thử điều gì?\n-   Chọn câu chuyện của người khác và nhấp vào `Remix` (chỉnh sửa) để phát triển trên nền tảng câu chuyện đó. (Đừng lo, câu chuyện gốc sẽ không bị ảnh hưởng.)"
+        },
+        "7a945439-a8e0-438c-a2a3-7e81b6832618": {
+          "progression_name": "Khu phố trực tuyến của tôi"
         },
         "05ed12f0-289f-4706-976f-cd05c6780b2e": {
           "description": "### Từ vựng chính\n\n-   **trực tuyến**: sử dụng máy tính, điện thoại hoặc máy tính bảng để truy cập trang web hoặc ứng dụng\n-   **trang web hoặc ứng dụng**: nơi bạn có thể truy cập trên internet\n\n**Hỏi**: _Bạn cần làm gì để giữ an toàn khi đến những địa điểm mới?_ ([Slide 3](https://docs.google.com/presentation/d/1VFaxU6S0hsDgyCtaPhVFf9xpign__BXdvT0ypQq1gBs/edit#slide=id.g56efa39244_0_54))\n\nMời học sinh trả lời. Các câu trả lời sẽ khác nhau, nhưng hãy nhấn mạnh các quy tắc an toàn sau:\n\n-   Luôn đi cùng người lớn.\n-   Đừng đi lang thang một mình.\n-   Chỉ nói chuyện với những người bạn biết.\n\n**Nói**: _Hôm nay chúng ta sẽ nói về việc truy cập các địa điểm trên internet giống như tới thăm các địa điểm trong cuộc sống. Cũng giống như các quy tắc giữ an toàn khi bạn đến thăm các địa điểm mới trên thế giới, có nhiều cách để giữ an toàn cho bản thân khi lên mạng._\n\n**Chiếu** [Slide 4](https://docs.google.com/presentation/d/1VFaxU6S0hsDgyCtaPhVFf9xpign__BXdvT0ypQq1gBs/edit#slide=id.g5c15fa078c_0_0) và định nghĩa **trực tuyến** là _sử dụng máy tính , điện thoại hoặc máy tính bảng để truy cập trang web hoặc ứng dụng_.\n\n**Chiếu** video [Môi trường trực tuyến của tôi](https://www.commonsense.org/education/videos/my-online-neighborhood) trên [Slide 5](https://docs.google.com/presentation/d/1VFaxU6S0hsDgyCtaPhVFf9xpign__BXdvT0ypQq1gBs/edit#slide=id.g56efa39244_0_93) rồi hỏi: _Arms thích điều gì trên internet? Cậu có thể làm những việc gì trên internet?_\n\nMời học sinh trả lời. Các câu trả lời mẫu:\n\n-   Cậu ấy thích đến thăm những nơi thật ngầu.\n-   Cậu ấy có thể nói chuyện với gia đình và bạn bè của mình.\n-   Cậu ấy có thể học hỏi rất nhiều điều mới.\n-   Cậu ấy có thể tạo ra mọi thứ trên internet.\n\n**Hỏi**: _Arms tuân theo ba quy tắc nào khi cậu ấy truy cập các địa điểm trực tuyến?_\n\nMời học sinh trả lời. Chiếu [Slide 6](https://docs.google.com/presentation/d/1VFaxU6S0hsDgyCtaPhVFf9xpign__BXdvT0ypQq1gBs/edit#slide=id.g56efa39244_0_141) và nhấn mạnh ba quy tắc chính:\n\n1.  Luôn hỏi cha mẹ (hoặc người lớn mà bạn tin tưởng) trước.\n2.  Chỉ nói chuyện với những người bạn biết.\n3.  Chỉ truy cập những trang phù hợp với bạn.\n\nGiải thích rằng truy cập những trang “phù hợp” nghĩa là đảm bảo trang web hoặc ứng dụng đó phù hợp với trẻ em và bạn được phép truy cập."
@@ -10338,6 +10398,7 @@
           ]
         },
         "73c2cb42-e6a3-4317-8aab-7196411578ab": {
+          "name": "Thẻ mẫu trong AI Lab",
           "tips": [
             null
           ]
@@ -10735,6 +10796,9 @@
         "ac9962af-c594-428a-8aca-016b794e0c00": {
           "progression_name": "Giới thiệu về nhân vật"
         },
+        "9950874e-2903-4dd5-993b-756daf5d7e7d": {
+          "progression_name": "Tab hoạt hình"
+        },
         "b3155f3f-f1d8-49d2-8fb9-32f7caf2de13": {
           "progression_name": "Thêm hình ảnh"
         },
@@ -10798,6 +10862,9 @@
         "a781606d-23c1-42ae-a33d-ce9cfffe22b1": {
           "name": "Suy nghĩ",
           "progression_name": "Suy nghĩ"
+        },
+        "128361aa-1832-4581-a686-26ec8d72bc30": {
+          "progression_name": "Vận tốc"
         },
         "c67c09eb-f947-4b9e-93df-740612cef3dc": {
           "progression_name": "Game đi cảnh"
@@ -11306,6 +11373,9 @@
         "af8ecf2c-ca6a-4d48-a1be-783adf975f27": {
           "progression_name": "Thực tiễn"
         },
+        "42a28a6d-b136-4659-bdbd-5caed86947d3": {
+          "progression_name": "Sử dụng khối lặp lại"
+        },
         "93ea2ce1-2886-47f0-a9cc-702b4c5969ce": {
           "progression_name": "Thực tiễn"
         },
@@ -11367,6 +11437,9 @@
         "938a26ab-bd9c-44b8-8cb9-63da1bcf591b": {
           "progression_name": "Thực tiễn"
         },
+        "4ab2263d-bf26-4d37-bc0e-88278310cfa7": {
+          "progression_name": "The Harvester"
+        },
         "027a43ed-b9d6-48af-acb0-40514f563a5a": {
           "progression_name": "Thực tiễn"
         },
@@ -11404,6 +11477,9 @@
         },
         "3d19ddeb-ca0c-4e1e-9af0-cd5cc2a5eabe": {
           "progression_name": "Thực tiễn"
+        },
+        "1509114f-e57a-4100-b4ec-665739adf403": {
+          "progression_name": "Sử dụng khối lặp lại"
         },
         "f86d1539-d7e0-4872-997d-5064553f90ca": {
           "progression_name": "Thực tiễn"
@@ -11489,6 +11565,9 @@
         },
         "e2314a32-dd2f-4699-9f77-a5398fd0a9f2": {
           "progression_name": "Thực tiễn"
+        },
+        "f0c21fc1-b243-411a-b177-99f07b95acf3": {
+          "progression_name": "Sử dụng khối lặp lại"
         },
         "e49641c5-0812-46d3-9bae-93e4c933e04e": {
           "progression_name": "Thực tiễn"
@@ -11607,6 +11686,9 @@
           "name": "Dự đoán",
           "progression_name": "Dự đoán"
         },
+        "502e09e6-3af3-43cb-ae96-e44507f1250c": {
+          "progression_name": "The Harvester"
+        },
         "95928265-96cb-467e-9d34-0e1bbe203c3c": {
           "progression_name": "Thực tiễn"
         },
@@ -11642,11 +11724,17 @@
           "name": "Chơi tự do",
           "progression_name": "Chơi tự do"
         },
+        "d72f7249-432e-4ae6-b265-c1fe66a6150d": {
+          "progression_name": "Giới thiệu Sprite Lab"
+        },
         "d3c1d307-bc5d-4e96-b82e-d5ec9d39748c": {
           "progression_name": "Dự đoán"
         },
         "659719ac-9bcf-4ed4-891b-1a4a37a3ac22": {
           "progression_name": "Dự án nhỏ: Cá bơi"
+        },
+        "ee39051b-426b-40d9-b61f-1f180cae8717": {
+          "progression_name": "Làm thế nào để làm cho một Sprite"
         },
         "9c484311-a0f9-4660-9bc7-a13b03e87d58": {
           "progression_name": "Dự án nhỏ: Cá bơi (tiếp theo)"
@@ -11878,11 +11966,17 @@
           "name": "Thực tiễn",
           "progression_name": "Thực tiễn"
         },
+        "e554878a-7385-4425-9fc6-e0a5f1bb2966": {
+          "progression_name": "Giới thiệu Sprite Lab"
+        },
         "d4e37aa1-3f91-4ec0-bc8f-bf64b461ad99": {
           "progression_name": "Dự đoán"
         },
         "61942940-a071-4c23-9fbc-6632ec70ed93": {
           "progression_name": "Dự án nhỏ: Cá bơi"
+        },
+        "4fc6e6fd-3688-4fb0-8985-3aa4cbdf8d18": {
+          "progression_name": "Làm thế nào để làm cho một Sprite"
         },
         "0ab3565a-6d5b-4555-adf0-2133008ae1fa": {
           "progression_name": "Dự án nhỏ: Cá bơi (tiếp theo)"
@@ -11966,6 +12060,9 @@
         "55bf14c5-94b0-4b92-91b6-f49a15ed6342": {
           "name": "Chơi tự do",
           "progression_name": "Chơi tự do"
+        },
+        "0b309aa0-00ca-47e2-9f46-288d25694b0d": {
+          "progression_name": "The Harvester"
         },
         "52c49228-8221-4b46-9f42-81a5f1abf27f": {
           "progression_name": "Thực tiễn"
@@ -12121,6 +12218,9 @@
         "0e8985cd-34d0-4ffe-b0f0-53fb0e9bd874": {
           "progression_name": "Thực tiễn"
         },
+        "b4cf29ee-8a4e-48ff-b637-302f650a2ede": {
+          "progression_name": "The Harvester"
+        },
         "4bde879a-5158-461f-9d04-3000cc8992a2": {
           "progression_name": "Thực tiễn"
         },
@@ -12213,6 +12313,9 @@
         "5136ca8d-00e2-4fa2-8563-f2edd7bc46d6": {
           "progression_name": "Giới thiệu về nhân vật"
         },
+        "fe842642-97e4-423d-af5a-a5ffc35984b4": {
+          "progression_name": "Tab hoạt hình"
+        },
         "aae905a1-38d5-48ad-aed9-4de0921bd1ec": {
           "progression_name": "Thêm hình ảnh"
         },
@@ -12279,6 +12382,9 @@
         "b1d59b54-0412-42c6-8aaa-38c2894d6cdd": {
           "name": "Suy nghĩ",
           "progression_name": "Suy nghĩ"
+        },
+        "1c09bf04-72d5-4d17-8e27-cbc096099cb0": {
+          "progression_name": "Vận tốc"
         },
         "d763a5fd-9781-4a36-89f5-6afd6bd25929": {
           "progression_name": "Game đi cảnh"
@@ -12838,6 +12944,9 @@
         "e9c923af-0bf2-42f6-8330-02d063158fa5": {
           "progression_name": "Giới thiệu về nhân vật"
         },
+        "aef969c1-d9bd-43d4-aa4a-2c88df5c1908": {
+          "progression_name": "Tab hoạt hình"
+        },
         "1893f672-0984-4956-a657-90f4a8a4ecb2": {
           "progression_name": "Thêm hình ảnh"
         },
@@ -12925,6 +13034,9 @@
         "f72b823d-ca51-4ed1-8d06-1ccf7f0960d6": {
           "name": "Suy nghĩ",
           "progression_name": "Suy nghĩ"
+        },
+        "4b4b246a-5a4e-40b0-9a98-f5bcd0b96d0c": {
+          "progression_name": "Vận tốc"
         },
         "1cbdcce5-22a2-48dd-a2cd-28086ca9579b": {
           "progression_name": "Game đi cảnh"
@@ -14753,6 +14865,9 @@
         "dd4a292b-f2c8-4918-8ad1-73c94b06c1d9": {
           "name": "Biểu diễn",
           "description": "Để ăn mừng tác phẩm của học sinh, hãy dành khoảng 10 phút cuối cùng để cho họ giới thiệu dự án của mình. Bạn có thể thực hiện hoạt động này theo nhiều cách, nhưng sau đây là một số cách:\n\n-   **Demo công khai:** Chọn một vài tình nguyện viên làm mẫu biểu diễn nhanh dự án của họ trước lớp. Trong lúc đó, hãy yêu cầu họ nêu ý kiến về trải nghiệm của bản thân từ khâu lập kế hoạch đến khâu lập trình, bao gồm cả những ý tưởng mà họ vẫn muốn thực hiện.\n-   **Chơi thử theo cặp:** Cho học sinh hoặc các nhóm bắt cặp và chơi thử các dự án của nhau. Trong lúc đó, hãy yêu cầu họ đưa ra phản hồi tích cực và mang tính xây dựng cho nhau. Lợi ích của việc này là học sinh sẽ có cơ hội đưa ra và trả lời phản hồi trong một môi trường nhỏ hơn. \n-   **Đi vòng quanh chơi thử:** Hãy đảm bảo tất cả học sinh đã chuẩn bị dự án để thử nghiệm. Yêu cầu học sinh di chuyển theo kiểu trò chơi “giành ghế theo nhạc” sang một máy tính khác và chơi thử dự án ở máy tính đó trong một phút, cho đến khi họ nhận được tín hiệu từ bạn để chuyển sang máy tính khác. Hãy lặp lại hoạt động này vài phút một lần. Mặc dù học sinh có ít cơ hội để giao tiếp có cấu trúc, nhưng hoạt động này đảm bảo học sinh có thể demo càng nhiều dự án của bạn cùng lớp càng tốt."
+        },
+        "ef4f13d4-c5b0-4778-8ca1-359132023d82": {
+          "progression_name": "Khu phố trực tuyến của tôi"
         },
         "66dc5fd4-eacf-41f8-9d21-196b81d35d7a": {
           "description": "### Từ vựng chính\n\n-   **trực tuyến**: sử dụng máy tính, điện thoại hoặc máy tính bảng để truy cập trang web hoặc ứng dụng\n-   **trang web hoặc ứng dụng**: nơi bạn có thể truy cập trên internet\n\n**Hỏi**: _Bạn cần làm gì để giữ an toàn khi đến những địa điểm mới?_ ([Slide 3](https://docs.google.com/presentation/d/1VFaxU6S0hsDgyCtaPhVFf9xpign__BXdvT0ypQq1gBs/edit#slide=id.g56efa39244_0_54))\n\nMời học sinh trả lời. Các câu trả lời sẽ khác nhau, nhưng hãy nhấn mạnh các quy tắc an toàn sau:\n\n-   Luôn đi cùng người lớn.\n-   Đừng đi lang thang một mình.\n-   Chỉ nói chuyện với những người bạn biết.\n\n**Nói**: _Hôm nay chúng ta sẽ nói về việc truy cập các địa điểm trên internet giống như tới thăm các địa điểm trong cuộc sống. Cũng giống như các quy tắc giữ an toàn khi bạn đến thăm các địa điểm mới trên thế giới, có nhiều cách để giữ an toàn cho bản thân khi lên mạng._\n\n**Chiếu** [Slide 4](https://docs.google.com/presentation/d/1VFaxU6S0hsDgyCtaPhVFf9xpign__BXdvT0ypQq1gBs/edit#slide=id.g5c15fa078c_0_0) và định nghĩa **trực tuyến** là _sử dụng máy tính , điện thoại hoặc máy tính bảng để truy cập trang web hoặc ứng dụng_.\n\n**Chiếu** video [Môi trường trực tuyến của tôi](https://www.commonsense.org/education/videos/my-online-neighborhood) trên [Slide 5](https://docs.google.com/presentation/d/1VFaxU6S0hsDgyCtaPhVFf9xpign__BXdvT0ypQq1gBs/edit#slide=id.g56efa39244_0_93) rồi hỏi: _Arms thích điều gì trên internet? Cậu có thể làm những việc gì trên internet?_\n\nMời học sinh trả lời. Các câu trả lời mẫu:\n\n-   Cậu ấy thích đến thăm những nơi thật ngầu.\n-   Cậu ấy có thể nói chuyện với gia đình và bạn bè của mình.\n-   Cậu ấy có thể học hỏi rất nhiều điều mới.\n-   Cậu ấy có thể tạo ra mọi thứ trên internet.\n\n**Hỏi**: _Arms tuân theo ba quy tắc nào khi cậu ấy truy cập các địa điểm trực tuyến?_\n\nMời học sinh trả lời. Chiếu [Slide 6](https://docs.google.com/presentation/d/1VFaxU6S0hsDgyCtaPhVFf9xpign__BXdvT0ypQq1gBs/edit#slide=id.g56efa39244_0_141) và nhấn mạnh ba quy tắc chính:\n\n1.  Luôn hỏi cha mẹ (hoặc người lớn mà bạn tin tưởng) trước.\n2.  Chỉ nói chuyện với những người bạn biết.\n3.  Chỉ truy cập những trang phù hợp với bạn.\n\nGiải thích rằng truy cập những trang “phù hợp” nghĩa là đảm bảo trang web hoặc ứng dụng đó phù hợp với trẻ em và bạn được phép truy cập."
@@ -17265,7 +17380,8 @@
         },
         "cbe7cad1-610d-4da8-9af6-fceb37bdeeed": {
           "name": "Hàm với game Người thu hoạch",
-          "description": "#### Bài tập trực tuyến\n\nMột số bài tập sẽ có hàm được khai báo trước để học sinh điền. Trước tiên, học sinh có thể viết toàn bộ chương trình mà không có hàm, sau đó xác định vị trí mà hàm sẽ phát huy tác dụng trong chương trình.\n\nBạn cần đảm bảo mỗi học sinh hoàn thành bài tập có chấm màu xanh lá cây đậm. Nếu một số học sinh gặp khó khăn trong việc đơn giản hóa mã lệnh và sử dụng hàm, hãy lập các nhóm học sinh giỏi trong lớp để đi vòng quanh và trả lời các câu hỏi.\n\nĐừng quên đưa bút chì và giấy để giúp học sinh phác thảo các giải pháp khả thi."
+          "description": "#### Bài tập trực tuyến\n\nMột số bài tập sẽ có hàm được khai báo trước để học sinh điền. Trước tiên, học sinh có thể viết toàn bộ chương trình mà không có hàm, sau đó xác định vị trí mà hàm sẽ phát huy tác dụng trong chương trình.\n\nBạn cần đảm bảo mỗi học sinh hoàn thành bài tập có chấm màu xanh lá cây đậm. Nếu một số học sinh gặp khó khăn trong việc đơn giản hóa mã lệnh và sử dụng hàm, hãy lập các nhóm học sinh giỏi trong lớp để đi vòng quanh và trả lời các câu hỏi.\n\nĐừng quên đưa bút chì và giấy để giúp học sinh phác thảo các giải pháp khả thi.",
+          "progression_name": "The Harvester"
         },
         "d505ce63-802f-4f28-bc12-8274cd540d14": {
           "progression_name": "Thực tiễn"
@@ -18766,6 +18882,7 @@
           ]
         },
         "30e5080a-05d0-4193-82e4-f7c81f1adb5c": {
+          "name": "Thẻ mẫu trong AI Lab",
           "tips": [
             null
           ]
@@ -22659,6 +22776,9 @@
         "b2137d87-9fc7-451a-aa66-5e88991ec216": {
           "progression_name": "Thực tiễn"
         },
+        "259004b6-d013-48a6-8adb-4da6e8a13e6d": {
+          "progression_name": "The Harvester"
+        },
         "e0c060eb-1f06-4f1d-a91e-edd961631883": {
           "progression_name": "Thực tiễn"
         },
@@ -22696,6 +22816,9 @@
         },
         "4a6e59ba-cdbe-4532-9b2e-d878f550ad8e": {
           "progression_name": "Thực tiễn"
+        },
+        "d40ac398-4f8b-4652-8ec0-503d206ccd17": {
+          "progression_name": "Sử dụng khối lặp lại"
         },
         "b2a36927-a878-4885-b769-ee48fec75770": {
           "progression_name": "Thực tiễn"
@@ -22802,6 +22925,9 @@
         },
         "dbe9dad9-78fd-4f1c-8778-79bec55d6fc1": {
           "progression_name": "Thực tiễn"
+        },
+        "e2a14e5d-ab2d-41ae-ab3f-133d89bc51f1": {
+          "progression_name": "Sử dụng khối lặp lại"
         },
         "94134ae8-5a03-4079-a051-0538b5db4a77": {
           "progression_name": "Thực tiễn"
@@ -22919,6 +23045,9 @@
         "26f9de85-21ff-409d-893a-7ffc454e167a": {
           "name": "Dự đoán",
           "progression_name": "Dự đoán"
+        },
+        "68c477cb-6e9a-41d1-9f7e-2b3b84a95f52": {
+          "progression_name": "The Harvester"
         },
         "86188817-4050-4ffc-8321-67eb22cc7438": {
           "progression_name": "Thực tiễn"
@@ -23045,6 +23174,9 @@
         "02a6c863-7f2e-4e81-97fb-247b72930518": {
           "progression_name": "Thực tiễn"
         },
+        "e12c3ee1-8c2e-4727-8133-d6dbf630f64d": {
+          "progression_name": "The Harvester"
+        },
         "fe170410-de6e-4d52-8cd2-62ceb9a8b808": {
           "progression_name": "Thực tiễn"
         },
@@ -23169,11 +23301,17 @@
           "name": "Thực tiễn",
           "progression_name": "Thực tiễn"
         },
+        "ec15e557-0de8-49af-ab15-783c0c14e8b3": {
+          "progression_name": "Giới thiệu Sprite Lab"
+        },
         "a580d0a5-1b2f-49ae-9722-5b9471367307": {
           "progression_name": "Dự đoán"
         },
         "bcccd594-04be-4289-bd38-c3e08ca13d89": {
           "progression_name": "Dự án nhỏ: Cá bơi"
+        },
+        "31d7ef1b-967a-40cc-a027-7b4e0e09dc4e": {
+          "progression_name": "Làm thế nào để làm cho một Sprite"
         },
         "bde1e72a-f2b7-494c-99be-1736a8653391": {
           "progression_name": "Dự án nhỏ: Cá bơi (tiếp theo)"
@@ -23256,6 +23394,9 @@
         "f578d2c6-5557-4872-8505-2ee73c254d6e": {
           "name": "Chơi tự do",
           "progression_name": "Chơi tự do"
+        },
+        "f62b5dfa-a6d0-4152-9486-204c989f79d6": {
+          "progression_name": "The Harvester"
         },
         "8c92f401-dd45-4021-a38f-b410d49f7195": {
           "progression_name": "Thực tiễn"
@@ -23365,6 +23506,9 @@
         "a42584dc-7fb5-4988-97da-96177da8a05b": {
           "progression_name": "Thực tiễn"
         },
+        "d3456f8d-c77d-4ac0-bc57-d6b0f7adee00": {
+          "progression_name": "Sử dụng khối lặp lại"
+        },
         "f7863404-2557-401b-9c80-dd660b885dad": {
           "progression_name": "Thực tiễn"
         },
@@ -23414,11 +23558,17 @@
           "name": "Chơi tự do",
           "progression_name": "Chơi tự do"
         },
+        "72c41db7-4475-47f2-8d3b-62a5bc7e082e": {
+          "progression_name": "Giới thiệu Sprite Lab"
+        },
         "edf7ac2a-9715-494a-99b2-8ee7e088394e": {
           "progression_name": "Dự đoán"
         },
         "38099bbe-ac85-43ba-9087-19fdf9e613b5": {
           "progression_name": "Dự án nhỏ: Cá bơi"
+        },
+        "51a140d6-441e-487b-9e1f-313e842b78c3": {
+          "progression_name": "Làm thế nào để làm cho một Sprite"
         },
         "6187ab8b-2e80-4e5c-bd96-16747d3deea8": {
           "progression_name": "Dự án nhỏ: Cá bơi (tiếp theo)"

@@ -1008,7 +1008,29 @@
         "coursee_helloworld_events": "השתמשו בבלוק האירוע `כאשר לוחצים על` כדי לגרום לדמות לומר משהו.",
         "coursee_helloworld_freeplay": "זה הזמן ליצור מה שמתחשק לכם!",
         "coursee_helloworld_say": "השתמשו בבלוק `אמור` כדי לגרום לי לומר מה שתרצו!",
-        "grade2_collector_A2022": "עזור ללורל לאסוף את כל האוצר."
+        "grade2_collector_A2022": "עזור ללורל לאסוף את כל האוצר.",
+        "helloworld_food_backgrounds_soccer-2022": "בואו נלמד איך משנים את הרקע.",
+        "helloworld_food_backgrounds_space-2022": "בואו נלמד איך משנים את הרקע.",
+        "helloworld_food_behaviors_soccer-2022": "בואו נלמד להנפיש דמויות באמצעות התנהגויות.",
+        "helloworld_food_behaviors_space-2022": "בואו נלמד להנפיש דמויות באמצעות התנהגויות.",
+        "helloworld_food_click_soccer-2022": "מה גורם לדמויות האלו לדבר?",
+        "helloworld_food_click_space-2022": "מה גורם לדמויות האלו לדבר?",
+        "helloworld_food_costumes_soccer-2022": "בואו נלמד כיצד לשנות מראה של דמויות.",
+        "helloworld_food_costumes_space-2022": "בואו נלמד כיצד לשנות מראה של דמויות.",
+        "helloworld_food_events_soccer-2022": "השתמשו בבלוק האירוע `כאשר לוחצים על` כדי לגרום לדמות לומר משהו.",
+        "helloworld_food_events_space-2022": "השתמשו בבלוק האירוע `כאשר לוחצים על` כדי לגרום לדמות לומר משהו.",
+        "helloworld_food_freeplay_soccer-2022": "זה הזמן ליצור מה שמתחשק לכם!",
+        "helloworld_food_freeplay_space-2022": "זה הזמן ליצור מה שמתחשק לכם!",
+        "helloworld_food_location_soccer-2022": "מקמו כל דמות באזור אחר.",
+        "helloworld_food_location_space-2022": "מקמו כל דמות באזור אחר.",
+        "helloworld_food_multi_soccer-2022": "גרמו לכל אחד משתי הדמויות שלכם לומר משהו.",
+        "helloworld_food_multi_space-2022": "גרמו לכל אחד משתי הדמויות שלכם לומר משהו.",
+        "helloworld_food_say_soccer-2022": "השתמשו בבלוק `אמור` כדי לגרום לי לומר מה שתרצו!",
+        "helloworld_food_say_space-2022": "השתמשו בבלוק `אמור` כדי לגרום לי לומר מה שתרצו!",
+        "helloworld_food_sizes_soccer-2022": "בואו נלמד לשנות גודל של דמויות.",
+        "helloworld_food_sizes_space-2022": "בואו נלמד לשנות גודל של דמויות.",
+        "helloworld_food_sounds_soccer-2022": "בואו נלמד איך להשמיע צלילים.",
+        "helloworld_food_sounds_space-2022": "בואו נלמד איך להשמיע צלילים."
       }
     }
   }

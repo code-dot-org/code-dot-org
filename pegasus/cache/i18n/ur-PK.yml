@@ -67,11 +67,13 @@ ur-PK:
   csedweek_map_legend_title: علامت
   csedweek_map_legend_event: آور اف کوڈ ایونٹ
   csedweek_map_legend_cs_tech_jam: خاص موقع
+  cded_sign_up: سائن اپ کریں
   cded_try_it: یہ آزمائیے
   try_now: مزید سیکھے
   california_heading: اپنے اسکول سے کمپیوٹر پڑھانے کے سلسلے میں بات کیجئے۔
   california_button: مزید سیکھے
   view_english_site: انگریزی ویب سائٹ دیکھئں
+  non_english_tutorials: 'ایک سے زیادہ زبانوں میں ترجمہ سبق:'
   write_your_first_program: Apna pehla Computer ka Program likhiye
   all_ages: Her umer k log
   beginner: ibtydai
@@ -159,6 +161,7 @@ ur-PK:
   studiobar_dance_body: اپنی خود کی ڈانس پارٹی بنائیں اور اشتراک کریں
   studiobar_hoc_title: گھنٹے کا کوڈ
   studiobar_hoc_body: کوڈ کرنا سیکھیں Angry Birds کے ساتھ
+  studiobar_flappy_title: فلاپی کوڈ
   studiobar_flappy_body: خود کی Flappy گیم بنائیں اور دوسروں کو دکھائیں
   studiobar_teacher_title: اساتذہ کے لئے
   studiobar_teacher_body: Code Studio کو اپنی کلاس میں متعارف کروائیں
@@ -216,9 +219,11 @@ ur-PK:
   homepage_slot_text_teacher: ٹیچر کا ڈیش بورڈ
   homepage_slot_text_studio: ہمارے تمام تر اسباق
   homepage_slot_text_shop: دکان
+  homepage_slot_text_flappy: فلاپی کوڈ
   homepage_action_text_hoc: ہر اسٹوڈینٹ کے لیے ایک کوڈ کی گھڑی.
   homepage_action_text_num_served: "# خدمات سر انجام دیں"
   homepage_action_text_join_us: ہمارے ساتھ شامل ہوں
+  homepage_action_text_sign_up: سائن اپ کریں
   homepage_action_text_try_it: یہ آزمائیے
   homepage_action_text_volunteers: تکنیکی رضاکاروں چاہئیں
   homepage_action_text_codevideo: ویڈیو دیکھے
@@ -248,6 +253,7 @@ ur-PK:
   homepage_banner_40k_teachers_link: مزید سیکھے
   homepage_slot_text_title_hoc: آور-آف-کوڈ
   homepage_slot_text_blurb_hoc: کوئی بھی سیکھ سکتا ہے، آج شروع کریں۔
+  homepage_slot_text_blurb_hoc_2022: کھوجیں، کھیلیں، بنائیں!
   homepage_slot_text_link_hoc: آور-آف-کوڈ پر کوشش کریں۔
   homepage_slot_text_link_host: Hour of Code منعقد کریں
   homepage_slot_text_link_hocserved: "# خدمات سر انجام دیں"
@@ -271,6 +277,9 @@ ur-PK:
   homepage_slot_text_link_buy: شامل ہو جایئے
   homepage_slot_text_link_donate: عطیہ کریں
   homepage_slot_text_link_shop: ٹی شرٹس، ٹوپیاں اور بہت کچھ
+  homepage_slot_text_link_thebadguys: برے لوگوں کے ساتھ کوڈ کریں
+  homepage_gallery_header: "%{project_count} ملین سے زیادہ Code.org پراجیکٹ بنائے
+    جا چکے ہیں"
   homepage_header_donors: Code.org کے حمایتیوں کا شکریہ
   homepage_donors_seall: سبھی دیکھیں
   homepage_donors_donate: عطیہ کریں
@@ -328,10 +337,13 @@ ur-PK:
 
 '
   minecraft_agent_button: شروع کریں
+  minecraft_designer_description: پروگرام جانوروں اور دیگر Minecraft مخلوق Minecraft
+    کے اپنے ورژن میں.
   minecraft_designer_button: شروع کریں
   minecraft_adventurer_button: شروع کریں
   minecraft_subtitle: Minecraft کوڈ کی گھڑی
   sports_watch_video: ویڈیو دیکھے
+  video_title_cs_is_everything: کمپیوٹر سائنس ہر چیز کو تبدیل کر رہا ہے
   video_title_inspire_girl: ایک لڑکی کی حوصلہ افزائی
   video_1min: 1 منٹ
   video_2min: 2 منٹ
@@ -393,6 +405,12 @@ ur-PK:
   dashboard_landing_useful_links: دیگر کارآمد ویب سائٹس
   dashboard_landing_office_hours: سوال کے جواب شخصی حیصیت میں پوچھیں! ہمارے ماہانہ
     ویڈیو دفتر کے اوقات کا دورہ کریں.
+  dashboard_landing_print_certificates: اس کورس کو ختم کرنے والے طالب علموں کے لئے
+    سرٹیفکیٹ پرنٹ کریں
+  dashboard_landing_educator_blog: ہمارے معلم بلاگ میں ہمارے مواد کے بارے میں خبریں
+    اور اپ ڈیٹس کے بارے میں پڑھیں
+  dashboard_landing_video_player: اپنے اسکول میں ہمارے نئے ویڈیو پلیئر کی جانچ پڑتال
+    کریں
   dashboard_landing_progress_title: اہم کلاس پیش رفت
   dashboard_landing_progress_biggest: یہ آپ کے سب سے بڑا حصہ کی پیش رفت ہے.
   dashboard_landing_view_progress: دیکھیں %{biggest_section} کی پیش رفت
@@ -409,27 +427,45 @@ ur-PK:
   dashboard_action_delete_yes: جی
   dashboard_action_delete_no: نہيں
   dashboard_navigation_home_page: ٹیچر ہوم پیج
+  dashboard_navigation_section_community: سپورٹ
   dashboard_navigation_add_students: طلباء کا ا ضافہ کریں
   dashboard_progress_not_started: شروع نہیں کیا
+  dashboard_progress_in_progress: پیش رفت میں
+  dashboard_progress_completed_too_many_blocks: مکمل، بہت سے بلاکس
+  dashboard_progress_completed_perfect: مکمل، کامل
+  dashboard_progress_furthest_level_attempted: دور کی سطح کی کوشش
+  dashboard_progress_submitted: جمع کرایا
+  dashboard_sections_table_pairing_allowed: جوڑی پروگرامنگ
   dashboard_sections_close: بند
   dashboard_sections_move_to_section: 'کو سیکشن میں منتقل:'
   dashboard_students_name: نام
+  dashboard_students_male: مرد
+  dashboard_students_female: خواتین
   dashboard_students_join_link: اپنے اکاؤنٹ بنانے اور آپ کے سیکشن میں شامل ہونے کے
     لیے اپنے طلبہ کو بتائیں
   dashboard_pre-express: 'پری ریڈر ایکسپریس کورس:'
+  dashboard_sequence: تسلسل
   dashboard_curriculum_ecs: 'کمپیوٹر سائنس کی تلاش:'
   dashboard_grade_other: دیگر
   dashboard_login_none: Email
   dashboard_stage: اسٹیج
   dashboard_puzzle: پزل(Puzzle)
+  dashboard_correctness_correct: درست
   stats_hoc_2013_image_alt: کوڈ کی گھڑی کے شماریات 2013
   dashboard_student: Talib-e-ilm
   learn_more: مزید سیکھے
+  learn_sign_up_button: سائن اپ کریں
+  hoc2014_try_new_tutorial: بیٹا میں ہمارے نئے گھنٹہ کوڈ ٹیوٹوریل کی کوشش کریں
   hoc2014_try_frozen: آرٹسٹ اینا اور ایلسا کے ساتھ، فروزن سے ماخوذ
   frozen_name: اینا اور ایلسا کے ساتھ کوڈ
   starwars_name: 'سٹار وارز: ایک کہکشاں کے کوڈ کے ساتھ عمارت'
+  codeorg_name: کلاسک بھولبلییا
+  codeintl_name: کلاسک بھولبلییا
   flappy_name: ایک فلاپپی کر کھیل
   blockly_name: Blockly
+  hourofcode_name: کلاسک بھولبلییا
+  playlab_name: لیب کھیلیں
+  infinity_name: انفینٹی پلے لیب
   coursea-draft_name: کورس A
   coursea_name: کورس A
   courseb-draft_name: کورس B
@@ -455,8 +491,13 @@ ur-PK:
   accelerated_name: تیز کردہ کورس
   pre-express_name: پری ریڈر ایکسپریس کورس
   20-hour_name: تیز کردہ کورس
+  classicmaze_name: کلاسک بھولبلییا
   iceage_name: برفانی عہد
+  minecraft_name: مائن کرافٹ۔
   starwarsblocks_name: اسٹار وارز (بلاکس)
+  applab_name: ایپ لیب
+  gamelab_name: کھیل لیب
+  applab_gradelevel: عمر 13+
   codeorg_gradelevel: عمر 4-104
   codeintl_gradelevel: عمر 4-104
   tynker_gradelevel: 'Ages 5-13
@@ -655,6 +696,8 @@ ur-PK:
     کہ میجک اینڈ بیوٹی آف آئس کو وہ کیسے ایکسپلور کر رہی ہیں۔
   starwars_shortdescription: ڈروئیڈز کو پروگرام کرنا سیکھیں، اور بہت دور، دور کہکشاں
     میں اپنی اسٹار وارز گیم بنائیں۔
+  infinity_shortdescription: ڈزنی انفینٹی حروف ابنیت ایک کہانی یا کھیل پیدا کرنے کے
+    لئے کھیلیں لیب کا استعمال کریں.
   coursea_shortdescription_congrats: پری ریڈرز کے لیے کمپیوٹر سائنس کا تعارف۔
   courseb_shortdescription_congrats: پری ریڈرز کے لیے کمپیوٹر سائنس کا تعارف۔ (کورس
     A سے مشابہ، لیکن بڑی عمر کے طلباء کے لیے مزید ورائٹی کے ساتھ۔)
@@ -729,26 +772,67 @@ ur-PK:
   kidsruby_beyond_longdescription: 'گیمز بنانے اور Ruby سے اپنا ہوم ورک ہیک کرنے کا
     مزہ لیں! اپنے والدین اور ٹیچرس کو بتایں کے آپ Ruby پروگرامنگ سیکھ رہے ہیں... بالکل
     مفت اور کسی بھی کمپیوٹر پر!! [نوٹ: ڈیسک ٹاپ انسٹالیشن کی ضرورت ہوتی ہے]'
+  compatibility_unsupported_browser_markdown: آپ کے براؤزر کی حمایت نہیں کی جاتی ہے.
+    براہ مہربانی اپنے براؤزر کو [ہمارے معاون براؤزر میں سے ایک] (%{supported_browsers_url})
+    میں اپ گریڈ کریں۔ آپ صفحے کو دیکھنے کی کوشش کر سکتے ہیں، لیکن فعالیت کو توڑنے
+    کی توقع ہے.
   flappy_shortcode: پھڑپھڑایں
   header_my_dashboard: ڈیش بورڈ
   header_courses: کورسز
   header_course_catalog: کورس کیٹلاگ
   header_project_gallery: پروجیکٹس
+  header_sections: سیکشنز
   header_professional_learning: پیشہ ورانہ تعلیم
+  header_educate_overview: ماہرِ تعلیم کا جائزہ
+  header_educate_elementary: ایلیمنٹری اسکول
+  header_educate_middle: مڈل اسکول
+  header_educate_high: ہائی اسکول
   header_educate_hoc: آور-آف-کوڈ
+  header_educate_partner: ہمارے ساتھ شراکت دار
+  header_educate_beyond: Cod.org سے پرے
+  header_educate_inspire: ایک طالب علم کی حوصلہ افزائی
+  header_educate_community: آن لائن کمیونٹی
+  header_educate_tools: ٹولز اور ویڈیوز
+  header_about_us: ہمارے بارے میں
+  header_about_leadership: قیادت
+  header_about_donors: ڈونرز
+  header_about_partners: شراکت دار
+  header_about_team: مکمل ٹیم
+  header_about_news: نیوز روم
+  header_about_evaluation: تشخیص
+  header_about_jobs: کیریئر
+  header_about_contact: ہم سے رابطہ
+  header_about_faqs: اکثر پوچھے جانے والے سوالات
+  header_learn: سیکھیں
+  header_teach: سکھائیں
+  header_help_us: ہماری مدد کریں
   header_about: متعلق
   header_help_support: 'مدد اور معاونت '
   header_report_bug: ایک مسئلہ کی اطلاع دیں
   header_legal_privacy: رازداری کی پالیسی
   header_legal_tos: سروس کی شرائط
+  header_tutorials: سبق
+  header_documentation: دستاویزات
+  user_header_label: ہیلو %{username}
+  user_header_team: ٹیم
+  user_header_settings: اکاؤنٹ کی ترتیبات
+  user_header_logout: سائن آؤٹ کریں
   user_header_signin: سائن ان کریں
   user_header_create: 'تخلیق کریں '
+  user_header_gamelab: کھیل لیب
+  user_header_playlab: لیب کھیلیں
   user_header_dance: ڈانس پارٹی
+  user_header_minecraft: مائن کرافٹ۔
   user_header_flappy: فلاپی
   user_header_view_project_gallery: تمام منصوبوں کو دیکھیں
   user_header_view_my_projects: تمام منصوبوں کو دیکھیں
   view_all_sections: تمام سیکشن دیکھیں
   applab_tile_start_tutorial: شروع کریں
+  account_sign_up_email_opt_in: کیا ہم آپ کو اپنے کورسز، مقامی مواقع، یا کمپیوٹر سائنس
+    کی دیگر خبروں کے بارے میں اپ ڈیٹس کے بارے میں ای میل کر سکتے ہیں؟ (تقریبا مہینے
+    میں ایک بار)
+  account_sign_up_child_accept_terms: میں تصدیق کرتا ہوں کہ مجھے Code.org سروسز استعمال
+    کرنے کے لئے اپنے والدین یا قانونی سرپرست کی اجازت ہے.
   hoc_overview_dance_title: ڈانس پارٹی
   hoc_overview_dance_subtitle: اپنے دوستوں کے ساتھ اشتراک کرنے کیلئے ڈانس پارٹی کوڈ
     کریں۔ کیٹی پیری، میڈونا، جے بالون، سیا، کیتھ اربن، سیارا، اور مزید 25 کی خاصیت
@@ -756,6 +840,11 @@ ur-PK:
   hoc_overview_dance_2019_subtitle: اپنے دوستوں کے ساتھ اشتراک کرنے کیلئے ڈانس پارٹی
     کوڈ کریں۔ کیٹی پیری، شان مینڈس، پینک کی خاصیت بنانا ڈسکو میں، لِل ناس ایکس، جوناس
     برادرز، نکی میناج، اور 34 مزید!
+  hoc_overview_dance_2022_subtitle: اپنے دوستوں کے ساتھ شیئر کرنے کے لیے ایک ڈانس
+    پارٹی کو کوڈ کریں۔ جس میں Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez،
+    Disney کے "Encanto" کی موسیقی اور مزید شامل ہیں!
+  hoc_overview_hello_world_2022_alt_text: اینیمیٹ کیا ہوا خلاباز اور جانوروں کے کردار
+    زمین کی ایک تصویر کے ارد گرد تیر رہے ہیں
   hoc_overview_start_tutorial: شروع کریں
   hoc_overview_more_resources: اپنے آنلائن کلاس روم میں دلچسپی بڑھانے کے لئے مزید
     وسائل [مجازی یعنی آنلائن آور آف کوڈ](https://hourofcode.com/us/how-to/virtual)
@@ -766,11 +855,23 @@ ur-PK:
   hoc2018_creativity_what_will_you_create: آپ کیا بنائیں گے؟
   hoc2018_creativity_courses_link: <a href="https://studio.code.org/courses">Code.org
     کورسز</a> کے ساتھ مزید آگے بڑھیں
+  hoc2018_mc_designer_description: پروگرام جانوروں اور دیگر Minecraft مخلوق Minecraft
+    کے اپنے ورژن میں.
   hoc2018_mc_start: شروع کریں
   hoc2018_mc_educators_box2_button: ڈاؤن لوڈ، اتارنا
+  hoc2022_mc_educators_box3_desc_markdown: اس آن ڈیمانڈ [free course](%{free_course_link})
+    کا استعمال کریں یا ایک مہمان استاد کے ساتھ لائیو آور آف کوڈ ورکشاپ میں شرکت کے
+    لیے اپنی پوری کلاس کو رجسٹر کرائیں۔ یہ ورکشاپ CSEW، دسمبر 6 – 11 کے دوران متعدد
+    بار منعقد کیا جائے گا۔
+  hoc2022_mc_educators_box3_button: ابھی رجسٹر کروائیں
+  hoc2022_mc_educators_box4_desc: بلاک سے پائیتھن تک پروفیشنل ڈویلپمنٹ کی جانب سے
+    تائید یافتہ کمپیوٹر سائنس کے 200 گھنٹے کے نصاب کے ساتھ K-12 کے طلباء میں STEM
+    کے جذبے کو ابھاریں۔
+  hoc2022_mc_educators_box4_button: تعلیم جاری رکھیں
   hoc2018_mc_video_1min: 1 منٹ
   hoc2018_mc_video_2min: 2 منٹ
   hoc2018_mc_video_5min: 5 منٹ
+  hoc2018_mc_video_title_cs_is_everything: کمپیوٹر سائنس ہر چیز کو تبدیل کر رہا ہے
   hoc2018_mc_video_title_inspire_girl: ایک لڑکی کی حوصلہ افزائی
   hoc2018_mc_homepage_what_create: آپ کیا بنائیں گے؟
   hoc2018_mc_homepage_join_us: ہمارے ساتھ شامل ہوں
@@ -783,6 +884,8 @@ ur-PK:
   hoc2018_dance_party_box_description: گرووانگ اور پروگرامنگ ایک پیروی ڈانس پارٹی
     کے سبق کے ساتھ رکھیں ۔
   hoc2018_dance_party_button: شروع کریں
+  hoc2018_dance_teacher_resources_tile1_button: سبق کی منصوبہ بندی
+  hoc2018_dance_teacher_resources_tile2_button: غیر پلگ سرگرمی
   hoc2018_dance_amazon_about_future_engineer_button: مزید سیکھے
   hoc2018_dance_measure: پیمائش
   hoc2018_dance_measure_colon: 'پیمائش:'
@@ -799,10 +902,24 @@ ur-PK:
   hoc2021_mc_mee_ai_title: AI ہمیشہ کے لیے
   hoc2021_mc_mee_ai_description: 'اپنے طلباء کے ساتھ AI کو دریافت کریں اور Minecraft
     میں کوڈ سیکھیں: تعلیمی ایڈیشن۔'
+  hoc2022_mc_mee_title: Minecraft Escape Estate
+  hoc2022_mc_mee_description: 'صبح تک پراسرار حویلی سے بچ کر نکلیں اور ایک ملین ایمرلڈ
+    کمائیں! نیا Minecraft Hour of Code ٹیوٹوریل اب مائن کرافٹ: ایجوکیشن ایڈیشن برائے
+    ونڈوز، میک، کروم بک، آئی پیڈ اور موبائل میں دستیاب ہے۔ مفت معلم وسائل، تربیت،
+    اور ویڈیوز کے ساتھ شروع کریں۔'
+  hoc2022_mc_mee_timecraft_description: 'مائن کرافٹ: تعلیمی ایڈیشن (Minecraft: Education
+    Edition) میں کوڈنگ کے اس مفت سبق میں اپنے مستقبل کو بچانے کے لیے وقت میں واپس
+    سفر کریں۔'
+  footer_powered_by_aws: ایمیزون ویب سروسز اور “اے ڈبلیو ایس کی طرف سے طاقت” علامت
+    (لوگو) Amazon.com، انکارپوریٹڈ یا ریاستہائے متحدہ امریکہ اور/یا دیگر ممالک میں
+    اس کے ملحقہ ٹریڈ مارک ہیں.
   codebytes_skinny_banner_english_only: صرف انگریزی
   footer_privacy_policy: رازداری کی پالیسی
   footer_about: متعلق
+  footer_partners: شراکت دار
   footer_donate: عطیہ کریں
+  footer_support: سپورٹ
+  footer_terms: شرائط
   ai_for_oceans_lesson_plan: سبق کا منصوبہ
   ai_microsoft_thanks: ہم Microsoft کا شکریہ ادا کرتے ہیں کہ انہوں نے ہماری بصیرت
     اور مشن کہ ہر بچے کو کمپیوٹر سائنس اور 21ویں صدی میں کامیابی کی مہارتیں سیکھنے
@@ -813,3 +930,21 @@ ur-PK:
   outbreak_tile_subtitle: ایک وائرس نے مونسٹر ٹاؤن کو متاثر کیا ہے! ایک وبا پھیلنے
     کا سمیولیٹر کوڈ کریں اور اس بارے میں پیشین گوئیاں کریں کہ مونسٹر ٹاؤن کے پڑوسیوں
     کے ساتھ کیا ہوگا۔
+  hoc2022_banner_title: تحقیق کریں، کھیلیں، تخلیق کریں!
+  hoc2022_banner_description: کائنات کی تحقیق کریں، گول اسکور کریں، خود کو کسی پریشان
+    کن صورتحال سے بچائیں - کمپوٹر سائنس آزمانے کے ایسے کئی طریقے ہیں!
+  hoc2022_cta_primary: دیکھیں کیا نیا ہے
+  hoc2022_cta_secondary: مزید سرگرمیاں آزمائیں
+  hoc2022_landing_page_explore_title: دریافت کریں
+  hoc2022_landing_page_explore_description: کمپیوٹر سائنس کے ساتھ نئی دنیاؤں کے دروازے
+    کھولیں!
+  hoc2022_landing_page_play_title: چلائیں
+  hoc2022_landing_page_play_description: میدان ماریں اور اسکور کریں!
+  hoc2022_landing_page_create_title: بنائیں
+  hoc2022_landing_page_create_description: کچھ عجیب اور حیرت انگیز بنائیں!
+  hoc2022_landing_page_banner_alt_left: خلا میں زحل سیارے کے ساتھ ایک خلائی مخلوق
+    رقص کرتی ہوئی
+  hoc2022_landing_page_banner_alt_right: خلا میں ایک روبوٹ ایک اڑتے ہوئے راکٹ کے سامنے
+    فٹ بال کی گیند کو (اچھالتے) ڈرِبّل کرتے ہوئے
+  try_an_activity: ایک سرگرمی آزمائیں
+  see_more_activities: مزید سرگرمیاں آزمائیں

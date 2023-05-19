@@ -1,6 +1,5 @@
 #!/usr/bin/env ruby
 require_relative('../config/environment')
-require 'cdo/properties'
 
 def clean(value)
   if value.nil?
@@ -8,7 +7,7 @@ def clean(value)
   elsif value.instance_of? String
     return value.gsub(/\s+/, '')
   elsif value.instance_of? Array
-    return clean(value.join(''))
+    return clean(value.join)
   elsif value.instance_of? Hash
     return clean(value.values)
   end
@@ -57,7 +56,7 @@ def update_level_tts_i18n(level, script=nil)
 end
 
 def main
-  k1_scripts = Script.all.select(&:text_to_speech_enabled?)
+  k1_scripts = Unit.all.select(&:text_to_speech_enabled?)
   TextToSpeech::VOICES.keys.each do |lang|
     next if lang == :'en-US'
 

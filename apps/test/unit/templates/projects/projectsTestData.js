@@ -11,9 +11,9 @@ export const projects = {
         studentAgeRange: '13+',
         studentName: 'Z',
         thumbnailUrl: '/v3/files-public/fake_thumbnail.png',
-        type: 'applab'
-      }
-    }
+        type: 'applab',
+      },
+    },
   ],
   artist: [],
   events: [],
@@ -31,9 +31,9 @@ export const projects = {
         studentAgeRange: '13+',
         studentName: 'Y',
         thumbnailUrl: '/v3/files-public/fake_thumbnail.png',
-        type: 'minecraft'
-      }
-    }
+        type: 'minecraft',
+      },
+    },
   ],
-  playlab: []
+  playlab: [],
 };

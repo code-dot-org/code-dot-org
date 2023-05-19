@@ -3,7 +3,7 @@ import AssetThumbnail from './AssetThumbnail';
 
 export default {
   title: 'AssetThumbnail',
-  component: AssetThumbnail
+  component: AssetThumbnail,
 };
 
 // Template
@@ -21,25 +21,25 @@ const Template = args => (
 // Stories
 export const ImageThumbnail = Template.bind({});
 ImageThumbnail.args = {
-  type: 'image'
+  type: 'image',
 };
 
 export const AudioThumbnail = Template.bind({});
 AudioThumbnail.args = {
-  type: 'audio'
+  type: 'audio',
 };
 
 export const VideoThumbnail = Template.bind({});
 VideoThumbnail.args = {
-  type: 'video'
+  type: 'video',
 };
 
 export const DocThumbnail = Template.bind({});
 DocThumbnail.args = {
-  type: 'doc'
+  type: 'doc',
 };
 
 export const PDFThumbnail = Template.bind({});
 PDFThumbnail.args = {
-  type: 'pdf'
+  type: 'pdf',
 };

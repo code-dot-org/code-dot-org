@@ -43,10 +43,8 @@ class EnvironmentAwareDynamicConfigHelperTest < Minitest::Test
     assert_equal EnvironmentAwareDynamicConfigHelper.rack_or_rails_env, "development"
   end
 
-  private
-
   # Simple helper method to DRY up the code
-  def created_datastore_for_current_environment
+  private def created_datastore_for_current_environment
     return EnvironmentAwareDynamicConfigHelper.
       create_datastore_cache('test_create_datastore_cache').
       instance_variable_get(:@datastore)

@@ -16,7 +16,7 @@ describe('ParticipantSections', () => {
       isTeacher: false,
       isPlSections: false,
       updateSectionsResult,
-      updateSections
+      updateSections,
     };
   });
 

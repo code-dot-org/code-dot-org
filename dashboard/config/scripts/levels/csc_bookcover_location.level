@@ -35,17 +35,14 @@
     "authored_hints": "[{\"hint_class\":null,\"hint_markdown\":\"To change a sprite's location, click the pin on the location block, then click where you want it to go.\\n\\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)\",\"hint_id\":\"hint1\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/1ed0088f4d385255f8d59e42ae9133ed/csc_bookcover_location.mp3\"}]",
     "long_instructions": "**Give your sprite a new location.**\r\n- Click the pin on the location block to move your sprite to a different location.\r\n- Press \"Run\" when you are finished.\r\n\r\n",
     "instructions_icon": "bear",
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ]
+    "preload_asset_list": null
   },
-  "game_id": 64,
-  "published": true,
-  "created_at": "2022-09-27T23:04:39.000Z",
   "level_num": "custom",
+  "game_id": 64,
+  "created_at": "2022-09-27T23:04:39.000Z",
   "user_id": 1196,
-  "audit_log": "[{\"changed_at\":\"2022-09-27T23:04:39.812+00:00\",\"changed\":[\"cloned from \\\"csc_bookcover_say\\\"\"],\"cloned_from\":\"csc_bookcover_say\"},{\"changed_at\":\"2022-09-27 23:06:01 +0000\",\"changed\":[\"toolbox_blocks\",\"authored_hints\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2022-09-27T23:04:39.812+00:00\",\"changed\":[\"cloned from \\\"csc_bookcover_say\\\"\"],\"cloned_from\":\"csc_bookcover_say\"},{\"changed_at\":\"2022-09-27 23:06:01 +0000\",\"changed\":[\"toolbox_blocks\",\"authored_hints\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-09-29 23:30:31 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -65,10 +62,10 @@
           </value>
         </block>
         <block type="gamelab_setBackgroundImageAs">
-          <field name="IMG">"sci_fi"</field>
+          <field name="IMG">"front_of_house"</field>
         </block>
         <block type="gamelab_makeNewSpriteAnon">
-          <field name="ANIMATION_NAME">"video_game_controller"</field>
+          <field name="ANIMATION_NAME">"green_shirt_wave2"</field>
           <value name="LOCATION">
             <block type="gamelab_location_picker" can_disconnect_from_parent="false">
               <field name="LOCATION">{"x":200,"y":200}</field>
@@ -79,7 +76,7 @@
           <field name="SPEECH">Hello, world!</field>
           <value name="SPRITE">
             <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-              <field name="ANIMATION">"video_game_controller"</field>
+              <field name="ANIMATION">"green_shirt_wave2"</field>
             </block>
           </value>
         </block>

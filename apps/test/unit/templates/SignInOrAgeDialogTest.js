@@ -13,12 +13,12 @@ describe('SignInOrAgeDialog', () => {
   const defaultProps = {
     age13Required: true,
     signedIn: false,
-    storage: new FakeStorage()
+    storage: new FakeStorage(),
   };
 
   before(() => {
     replaceOnWindow('dashboard', {
-      rack_env: 'unit_test'
+      rack_env: 'unit_test',
     });
   });
 
@@ -57,16 +57,13 @@ describe('SignInOrAgeDialog', () => {
     const wrapper = shallow(<SignInOrAgeDialog {...defaultProps} />);
     const instance = wrapper.instance();
     instance.ageDropdown = {
-      getValue: () => '12'
+      getValue: () => '12',
     };
     assert.equal(wrapper.state().tooYoung, false);
     instance.onClickAgeOk();
     assert.equal(wrapper.state().tooYoung, true);
     assert.equal(
-      wrapper
-        .find('BaseDialog div > div')
-        .first()
-        .text(),
+      wrapper.find('BaseDialog div > div').first().text(),
       'Tutorial unavailable for younger students'
     );
     assert.equal(
@@ -99,19 +96,16 @@ describe('SignInOrAgeDialog', () => {
       const wrapper = shallow(<SignInOrAgeDialog {...defaultProps} />);
       const instance = wrapper.instance();
       instance.ageDropdown = {
-        getValue: () => '13'
+        getValue: () => '13',
       };
-      wrapper
-        .find('Button')
-        .at(1)
-        .simulate('click');
+      wrapper.find('Button').at(1).simulate('click');
       assert(setItemSpy.calledOnce);
       assert(setItemSpy.calledWith('anon_over13', true));
       assert(utils.reload.called);
       assert(
         cookies.remove.calledWith(environmentSpecificCookieName('storage_id'), {
           path: '/',
-          domain: '.code.org'
+          domain: '.code.org',
         })
       );
       setItemSpy.restore();
@@ -121,7 +115,7 @@ describe('SignInOrAgeDialog', () => {
       const wrapper = shallow(<SignInOrAgeDialog {...defaultProps} />);
       const instance = wrapper.instance();
       instance.ageDropdown = {
-        getValue: () => '13'
+        getValue: () => '13',
       };
       instance.onClickAgeOk();
       assert.equal(utils.reload.called, false);

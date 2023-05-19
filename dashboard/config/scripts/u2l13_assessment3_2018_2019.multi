@@ -10,3 +10,5 @@ Answer:
 
 - The number of characters to shift each letter in the alphabet.
 MARKDOWN
+
+allow_multiple_attempts true

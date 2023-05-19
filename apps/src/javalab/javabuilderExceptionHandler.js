@@ -5,7 +5,7 @@ import {
   SoundExceptionType,
   MediaExceptionType,
   TheaterExceptionType,
-  CsaViewMode
+  CsaViewMode,
 } from './constants';
 import {getUnsupportedMiniAppMessage} from './utils';
 
@@ -15,7 +15,7 @@ export function handleException(exceptionDetails, callback, miniAppType) {
       exceptionDetails,
       exceptionDetails.value,
       miniAppType
-    )
+    ),
   });
   callback(error);
 }

@@ -50,9 +50,6 @@ ms:
       expired: "telah tamat tempoh, sila buat permintaan baru"
       not_found: "tidak dijumpai"
       not_locked: "tidak dikunci"
-      not_saved:
-        one: "1 kesilapan menghalang %{resource} daripada disimpan:"
-        other: "%{count} kesalahan menghalang %{resource} daripada disimpan:"
     invitations:
       send_instructions: 'E-mel jemputan telah dihantar ke %{email}.'
       invitation_token_invalid: 'Token jemputan yang diberikan tidak sah!'

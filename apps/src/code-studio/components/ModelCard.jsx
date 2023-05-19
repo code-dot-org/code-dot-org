@@ -4,7 +4,7 @@ import color from '@cdo/apps/util/color';
 
 class FeatureDetails extends React.Component {
   static propTypes = {
-    feature: PropTypes.object
+    feature: PropTypes.object,
   };
 
   render() {
@@ -31,7 +31,7 @@ class FeatureDetails extends React.Component {
 
 export default class ModelCard extends React.Component {
   static propTypes = {
-    model: PropTypes.object
+    model: PropTypes.object,
   };
 
   render() {
@@ -109,7 +109,7 @@ const styles = {
     whiteSpace: 'normal',
     lineHeight: 1.5,
     maxHeight: 'calc(80vh - 150px)',
-    overflow: 'scroll'
+    overflow: 'scroll',
   },
   subPanel: {
     backgroundColor: color.lightest_gray,
@@ -117,23 +117,23 @@ const styles = {
     borderColor: color.gray,
     marginBottom: 10,
     padding: 10,
-    overflowWrap: 'break-word'
+    overflowWrap: 'break-word',
   },
   bold: {
-    fontFamily: "'Gotham 7r', sans-serif"
+    fontFamily: "'Gotham 7r', sans-serif",
   },
   header: {
     fontFamily: "'Gotham 7r', sans-serif",
     marginTop: 0,
-    lineHeight: '20px'
+    lineHeight: '20px',
   },
   heading: {
     fontFamily: "'Gotham 7r', sans-serif",
     fontSize: 14,
     marginBottom: 5,
-    textAlign: 'center'
+    textAlign: 'center',
   },
   details: {
-    marginBottom: 0
-  }
+    marginBottom: 0,
+  },
 };

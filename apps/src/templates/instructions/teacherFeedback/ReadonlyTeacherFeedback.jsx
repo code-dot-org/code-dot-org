@@ -6,7 +6,7 @@ import Comment from '@cdo/apps/templates/instructions/teacherFeedback/Comment';
 import Rubric from '@cdo/apps/templates/instructions/teacherFeedback/Rubric';
 import {
   teacherFeedbackShape,
-  rubricShape
+  rubricShape,
 } from '@cdo/apps/templates/instructions/teacherFeedback/types';
 import {ReviewStates} from '@cdo/apps/templates/feedback/types';
 import ReadOnlyReviewState from '@cdo/apps/templates/instructions/teacherFeedback/ReadOnlyReviewState';
@@ -17,7 +17,7 @@ export class ReadonlyTeacherFeedback extends Component {
   static propTypes = {
     rubric: rubricShape,
     visible: PropTypes.bool.isRequired,
-    latestFeedback: teacherFeedbackShape
+    latestFeedback: teacherFeedbackShape,
   };
 
   getLatestReviewState() {
@@ -87,8 +87,8 @@ const styles = {
   timeStudent: {
     fontStyle: 'italic',
     fontSize: 12,
-    color: color.cyan
-  }
+    color: color.cyan,
+  },
 };
 
 export default ReadonlyTeacherFeedback;

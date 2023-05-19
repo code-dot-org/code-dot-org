@@ -4,3 +4,5 @@ wrong 'Laurel will turn the wrong way when making a square.', feedback: 'Incorre
 wrong 'The loop does not run long enough for Laurel to get to all of the treasure. ', feedback: 'Incorrect. This was partially correct, but the bee also turns the wrong way when trying to make a square.'
 right 'Laurel turns the wrong way *and* the loop doesn\'t run long enough for Laurel to get all of the treasure.', feedback: 'Correct!'
 wrong 'I don\'t know.', feedback: 'Laurel turns the wrong way *and* the loop doesn\'t run long enough for Laurel to get all of the treasure.'
+
+allow_multiple_attempts false

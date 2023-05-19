@@ -12,14 +12,14 @@
         "minecraft/Minecraft Hour of Code Designer": {
           "name": "Hodina kódu Minecraft Designer",
           "overview": "V této lekci získají studenti všech věkových kategorií úvodní zkušenost s programováním a informatikou v bezpečném a podpůrném prostředí. Tato lekce je vhodná pro všechny žáky, kteří už umějí číst (od 6 let). Mladší děti tento výukový kurz pravděpodobně nedokončí, ale hodina věnované těmto úlohám pro ně bude ohromně zábavná. Studenti středních škol nejspíš nebudou mít s dokončením kurzu problém a ke konci jim zbyde čas na volné hraní.",
-          "preparation": "### Jeden týden před Hodinou kódu\n\n-   Než začnete plánovat událost Hodina kódu, podívejte se na [Průvodce Hodinou kódu pro vyučující](http://hourofcode.com/resources/how-to/) a [Doporučené postupy od úspěšných pedagogů](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466). \n-   Pokud máte zájem o propagační předměty nebo podporu pro třídu, [zaregistrujte svoji událost Hodina kódu](http://hourofcode.com).\n-   Nejdřív si projděte a sami absolvujte online kurz: [Minecraft: Designer](https://studio.code.org/s/minecraft/lessons/1/levels/1) \n-   Než studentům kurz zadáte, sami si ho vyzkoušejte. Ověřte si, že máte vyhovující technologie, a ujistěte se, že před zahájením Hodiny kódu není potřeba vyřešit nějaké problémy.\n\n### Jeden den před Hodinou kódu\n\n-   Vytiskněte jeden nebo víc [příkladů výstupních lístků](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) na konci tohoto výukového plánu nebo si vytvořte vlastní. \n-   Každý student, který aktivitu dokončí, by měl obdržet certifikát. [Vytiskněte](https://code.org/certificates?script=mc) certifikáty pro všechny studenty dopředu, ať se tím na konci Hodiny kódu nemusíte zdržovat.",
+          "preparation": "### Jeden týden před Hodinou kódu\n\n-   Než začnete plánovat událost Hodina kódu, podívejte se na [Průvodce Hodinou kódu pro vyučující](http://hourofcode.com/resources/how-to/) a [Doporučené postupy od úspěšných pedagogů](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466). \n-   Pokud máte zájem o propagační předměty nebo podporu pro třídu, [zaregistrujte svoji událost Hodina kódu](http://hourofcode.com).\n-   Nejdřív si projděte a sami absolvujte online kurz: [Minecraft: Designer](https://studio.code.org/s/minecraft/lessons/1/levels/1) \n-   Než studentům kurz zadáte, sami si ho vyzkoušejte. Ověřte si, že máte vyhovující technologie, a ujistěte se, že před zahájením Hodiny kódu není potřeba vyřešit nějaké problémy.\n\n### Jeden den před Hodinou kódu\n\n-   Vytiskněte jeden nebo víc [příkladů výstupních lístků](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) na konci tohoto výukového plánu nebo si vytvořte vlastní. \n-   Každý student, který aktivitu dokončí, by měl obdržet certifikát. [Vytiskněte](https://studio.code.org/certificates/batch?course=bWM=) certifikáty pro všechny studenty dopředu, ať se tím na konci Hodiny kódu nemusíte zdržovat.",
           "purpose": "Tato lekce představuje základní koncepty informatiky a programování (pomocí bloků), stejně jako jednoduché metody ladění.",
           "student_overview": "V této lekci získají studenti všech věkových kategorií úvodní zkušenost s programováním a informatikou v bezpečném a podpůrném prostředí. Tato lekce je vhodná pro všechny žáky, kteří už umějí číst (od 6 let). Mladší děti tento výukový kurz pravděpodobně nedokončí, ale hodina věnované těmto úlohám pro ně bude ohromně zábavná. Studenti středních škol nejspíš nebudou mít s dokončením kurzu problém a ke konci jim zbyde čas na volné hraní."
         },
         "hero/Minecraft Hour of Code": {
           "name": "Minecraft: Cesta hrdiny",
           "overview": "V této lekci získají studenti všech věkových kategorií úvodní zkušenost s programováním a informatikou v bezpečném a podpůrném prostředí. Tato lekce je vhodná pro všechny žáky, kteří už umějí číst (od 6 let). Mladší děti tento výukový kurz pravděpodobně nedokončí, ale hodina věnované těmto úlohám pro ně bude ohromně zábavná. Studenti středních škol nejspíš nebudou mít s dokončením kurzu problém a ke konci jim zbyde čas na volné hraní.",
-          "preparation": "### Jeden týden před Hodinou kódu\n\n-   Než začnete plánovat událost Hodina kódu, podívejte se na [Průvodce Hodinou kódu pro vyučující](http://hourofcode.com/resources/how-to/) a [Doporučené postupy od úspěšných pedagogů](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466). \n-   Pokud máte zájem o propagační předměty nebo podporu pro třídu, [zaregistrujte svoji událost Hodina kódu](http://hourofcode.com).\n-   Nejdřív si projděte a sami absolvujte online kurz: [Minecraft: Hero's Journey](studio.code.org/s/hero/lessons/1/levels/1) \n-   Než studentům kurz zadáte, sami si ho vyzkoušejte. Ověřte si, že máte vyhovující technologie, a ujistěte se, že před zahájením Hodiny kódu není potřeba vyřešit nějaké problémy.\n\n### Jeden den před Hodinou kódu\n\n-   Vytiskněte jeden nebo víc [příkladů výstupních lístků](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) na konci tohoto výukového plánu nebo si vytvořte vlastní. \n-   Každý student, který aktivitu dokončí, by měl obdržet [certifikát](https://code.org/certificates?script=mc). Vytiskněte certifikáty pro všechny studenty dopředu, ať se tím na konci Hodiny kódu nemusíte zdržovat.",
+          "preparation": "### Jeden týden před Hodinou kódu\n\n-   Než začnete plánovat událost Hodina kódu, podívejte se na [Průvodce Hodinou kódu pro vyučující](http://hourofcode.com/resources/how-to/) a [Doporučené postupy od úspěšných pedagogů](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466). \n-   Pokud máte zájem o propagační předměty nebo podporu pro třídu, [zaregistrujte svoji událost Hodina kódu](http://hourofcode.com).\n-   Nejdřív si projděte a sami absolvujte online kurz: [Minecraft: Hero's Journey](studio.code.org/s/hero/lessons/1/levels/1) \n-   Než studentům kurz zadáte, sami si ho vyzkoušejte. Ověřte si, že máte vyhovující technologie, a ujistěte se, že před zahájením Hodiny kódu není potřeba vyřešit nějaké problémy.\n\n### Jeden den před Hodinou kódu\n\n-   Vytiskněte jeden nebo víc [příkladů výstupních lístků](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) na konci tohoto výukového plánu nebo si vytvořte vlastní. \n-   Každý student, který aktivitu dokončí, by měl obdržet [certifikát](https://studio.code.org/certificates/batch?course=bWM=). Vytiskněte certifikáty pro všechny studenty dopředu, ať se tím na konci Hodiny kódu nemusíte zdržovat.",
           "purpose": "Tato lekce představuje základní koncepty informatiky a programování (pomocí bloků), stejně jako jednoduché metody ladění. Také ukazuje, v čem může být přínosné použít funkce.",
           "student_overview": "V téhle lekci získají studenti všech věkových kategorií úvodní zkušenost s programováním a informatikou v bezpečném a podpůrném prostředí. "
         },
@@ -34,6 +34,12 @@
           "preparation": "### Jeden týden před Vaší „Hodinou programování“\n\n-   Podívejte se na [Průvodce hodinou programování](http://hourofcode.com/resources/how-to/) a Nejlepší praktiky úspěšných vzdělavatelů][1] abyste mohli začít plánovat svou akci Hodina programování. \n-   [Zaregistrujte se na svou akci „Hodina programování“](http://hourofcode.com) jestliže chcete dostat uznání nebo podporu třídy.\n-   Podívejte se na online výukový kurz a absolvujte ho sami: [Udělejte si plácací hru](https://studio.code.org/flappy/1) \n-   Než požádáte své studenty o jeho absolvování, nezapomeňte ho nejprve vyzkoušet. Zkontrolujte si techniku a rozhodněte se, zda před zahájením „Hodiny programování“ nepotřebujete něco vyřešit.\n\n### Jeden den před Vaší „Hodinou programování“\n\n-   Napište na tabuli slova „programování“, „tvorba programů“ and „ladění“ nebo je přidejte na stěnu slov, jestliže ji v učebně máte.\n-   Každý student, který absolvuje tuto aktivitu, musí obdržet certifikát. Předem [vytiskněte po jednom](http://code.org/certificates) certifikátu pro každého, abyste to na konci „Hodiny programování“ měli snazší.",
           "purpose": "Tato lekce představuje základní koncepty informatiky a programování (pomocí bloků), stejně jako jednoduché metody ladění.",
           "student_overview": "V této lekci získají žáci úvodní prožitek s počítačovou vědou a vytvoří si hru pomocí základního blokového programování. Tato lekce byla navržena pro žáky středních tříd od 10 do 16 let, ale pomocí dodaných odlišovacích návrhů ji lze adaptovat i pro mladší nebo starší žáky."
+        },
+        "hello-world-soccer-2022/Hello World: Food": {
+          "name": "Hello World: Fotbal",
+          "overview": "V této lekci se studenti budou učit základy počítačových věd programováním v Laboratoři sprajtů. Laboratoř sprajtů je nástroj, který můžete používat k budování představivostí nabitých a zábavných projektů. Studenti se naučí vytvářet a animovat sprajty a dělat je interaktivní pomocí událostí. \n\nExistuje více verzí této lekce. Každá verze vyučuje stejné koncepce, ale jsou v ní obsaženy různé obrázky, aby se líbila různým typům studentů. Další informace najdete na stránce [Úvodní stránka o programu Ahoj, světe.](https://code.org/helloworld)",
+          "preparation": "-   Hrajte si s hlavolamy, abyste našli všechny případné problémové oblasti, které bude Vaše třída mít.\n-   Použijte prostředky dostupné na [CS Connections](https://code.org/educate/csc) abyste vyrobili plán na další výuku počítačových věd po skončení prvotního výukového kurzu.",
+          "purpose": "Tato lekce je určena k přípravě studentů na vytváření jednoduchých programátorských projektů v Laboratoři sprajtů. S touto dovedností budou pak studenti vytvářet projekty na jakékoli téma, jako například na jiné školní téma nebo na něco, co má význam pro ně osobně. Navštivte [CS Connections](https://code.org/educate/csc), kde najdete nápady o tom, jak začlenit počítačovou vědu do jiných předmětů."
         },
         "hourofcode/Maze": {
           "name": "Bludiště",
@@ -57,6 +63,7 @@
           "student_overview": "V téhle lekci žáci získají úvodní zkušenost s informatikou a pomocí základních programových bloků vytvoří hru."
         },
         "hello-world-emoji-2021/Hello World": {
+          "name": "Hello World: Emoji",
           "overview": "V této lekci se studenti budou učit základy počítačových věd programováním v Laboratoři sprajtů. Laboratoř sprajtů je nástroj, který můžete používat k budování představivostí nabitých a zábavných projektů. Studenti se naučí vytvářet a animovat sprajty a dělat je interaktivní pomocí událostí. \n\nExistuje více verzí této lekce. Každá verze vyučuje stejné koncepce, ale jsou v ní obsaženy různé obrázky, aby se líbila různým typům studentů. Další informace najdete na stránce [Úvodní stránka o programu Ahoj, světe.](https://code.org/helloworld)",
           "preparation": "-   Hrajte si s hlavolamy, abyste našli všechny případné problémové oblasti, které bude Vaše třída mít.\n-   Použijte prostředky dostupné na [CS Connections](https://code.org/educate/csc) abyste vyrobili plán na další výuku počítačových věd po skončení prvotního výukového kurzu.",
           "purpose": "Tato lekce je určena k přípravě studentů na vytváření jednoduchých programátorských projektů v Laboratoři sprajtů. S touto dovedností budou pak studenti vytvářet projekty na jakékoli téma, jako například na jiné školní téma nebo na něco, co má význam pro ně osobně. Navštivte [CS Connections](https://code.org/educate/csc), kde najdete nápady o tom, jak začlenit počítačovou vědu do jiných předmětů."
@@ -64,7 +71,7 @@
         "artist/Artist": {
           "name": "Umělec",
           "overview": "V této lekci studenti převezmou nadvládu nad Umělcem a budou dokončovat výkresy na obrazovce. Tato fáze Umělce umožní studentům vytvářet pomocí nových bloků jako například `posuv dopředu o 100 pixelů` a `zabočení doprava o 90 stupňů` čím dál tím složitější obrázky.",
-          "preparation": "### Jeden týden před Hodinou kódu\n\n-   Než začnete plánovat událost Hodina kódu, podívejte se na [Průvodce Hodinou kódu pro vyučující](http://hourofcode.com/resources/how-to/) a [Doporučené postupy od úspěšných pedagogů](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466). \n-   Pokud máte zájem o propagační předměty nebo podporu pro třídu, [zaregistrujte svoji událost Hodina kódu](http://hourofcode.com).\n-   Nejdřív si projděte a sami absolvujte online kurz: [Umělec](https://studio.code.org/s/artist/lessons/1/levels/1) \n-   Než studentům kurz zadáte, sami si ho vyzkoušejte. Ověřte si, že máte vyhovující technologie, a ujistěte se, že před zahájením Hodiny kódu není potřeba vyřešit nějaké problémy.\n\n### Jeden den před Hodinou kódu\n\n-   Vytiskněte jeden nebo víc [příkladů výstupních lístků](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) na konci tohoto výukového plánu nebo si vytvořte vlastní. \n\n-   Každý student, který aktivitu dokončí, by měl obdržet [certifikát](https://code.org/certificates). Vytiskněte certifikáty pro všechny studenty dopředu, ať se tím na konci Hodiny kódu nemusíte zdržovat.\n\n-   Zkuste si se zadáními pohrát, abyste odhalili případné problematické oblasti pro vaši třídu.\n\n-   (Nepovinné) Pořiďte pro třídu úhloměry, aby si žáci dokázali představit úhly, které budou v zadání řešit.\n\n-   Vytiskněte pro každého žáka jednu kopii aktivity **Zatáčky a úhly**.",
+          "preparation": "### Jeden týden před Hodinou kódu\n\n-   Než začnete plánovat událost Hodina kódu, podívejte se na [Průvodce Hodinou kódu pro vyučující](http://hourofcode.com/resources/how-to/) a [Doporučené postupy od úspěšných pedagogů](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466). \n-   Pokud máte zájem o propagační předměty nebo podporu pro třídu, [zaregistrujte svoji událost Hodina kódu](http://hourofcode.com).\n-   Nejdřív si projděte a sami absolvujte online kurz: [Umělec](https://studio.code.org/s/artist/lessons/1/levels/1) \n-   Než studentům kurz zadáte, sami si ho vyzkoušejte. Ověřte si, že máte vyhovující technologie, a ujistěte se, že před zahájením Hodiny kódu není potřeba vyřešit nějaké problémy.\n\n### Jeden den před Hodinou kódu\n\n-   Vytiskněte jeden nebo víc [příkladů výstupních lístků](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) na konci tohoto výukového plánu nebo si vytvořte vlastní. \n\n-   Každý student, který aktivitu dokončí, by měl obdržet [certifikát](https://studio.code.org/certificates/batch). Vytiskněte certifikáty pro všechny studenty dopředu, ať se tím na konci Hodiny kódu nemusíte zdržovat.\n\n-   Zkuste si se zadáními pohrát, abyste odhalili případné problematické oblasti pro vaši třídu.\n\n-   (Nepovinné) Pořiďte pro třídu úhloměry, aby si žáci dokázali představit úhly, které budou v zadání řešit.\n\n-   Vytiskněte pro každého žáka jednu kopii aktivity **Zatáčky a úhly**.",
           "purpose": "Tato lekce má za cíl podnítit větší tvořivost při kódování. Jejím účelem je rozšířit znalosti o sekvencování představením programových bloků a cílů. V tomto případě se studenti pomocí programových bloků dozvědí o pixelech a úhlech a zároveň uplatní dovednosti v sekvencování. Také se naučí vizualizovat nové cíle, například jak pomocí kódu nakreslit čtverec v nástroji Umělec.",
           "student_overview": "Vytvářejte krásné obrazy programováním Umělce."
         },
@@ -76,13 +83,14 @@
           "student_overview": "V této lekci získají žáci úvodní prožitek s počítačovou vědou a vytvoří si hru pomocí základního blokového programování. Tato lekce byla navržena pro žáky středních tříd od 10 do 16 let, ale pomocí dodaných odlišovacích návrhů ji lze adaptovat i pro mladší nebo starší žáky."
         },
         "dance/Dance Party": {
-          "name": "Taneční večírek",
+          "name": "Taneční večírek (2018)",
           "overview": "V téhle lekci získají žáci všech věkových kategorií úvodní zkušenost s programováním a informatikou v bezpečném a podpůrném prostředí. Tahle lekce byla navržena pro žáky všech věkových kategorií, kteří už umí číst. Vyžaduje možnost přehrávat zvuk, protože jde o nástroj vytvořený tak, aby reagoval na hudbu.",
           "preparation": "### Jeden týden před Hodinou kódu\n\n-   Než začnete plánovat událost Hodina kódu, podívejte se na [Průvodce Hodinou kódu pro vyučující](http://hourofcode.com/resources/how-to/) a [Doporučené postupy od úspěšných pedagogů](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466). \n-   Pokud máte zájem o podporu pro třídu, plakáty se slevou, nebo se chcete zúčastnit akce o robotice (jen USA), [zaregistrujte svoji událost Hodina kódu](http://hourofcode.com).\n-   Nejdřív si projděte a sami absolvujte online kurz: [Taneční večírek](https://studio.code.org/s/dance/lessons/1/levels/1) \n-   Než studentům kurz zadáte, sami si ho vyzkoušejte. Ověřte si, že máte vyhovující technologie, a ujistěte se, že před zahájením Hodiny kódu není potřeba vyřešit nějaké problémy.\n-   Podívejte se na doplňující učební plán [„Velká taneční párty“](studio.code.org/s/dance-unplugged/lessons/1) a rozhodněte se, jestli chcete před Hodinou kódu odučit i tuto lekci.\n\n### Jeden den před Hodinou kódu\n\n-   Každý student, který aktivitu dokončí, by měl obdržet [certifikát](http://code.org/certificates). Vytiskněte certifikáty pro všechny studenty dopředu, ať se tím na konci Hodiny kódu nemusíte zdržovat.\n-   (nepovinné) Doporučte studentům, aby si na tuto aktivitu přinesli vlastní sluchátka.",
           "purpose": "Tato lekce představuje základní koncepty informatiky, a to kódování a událostmi řízení programování (pomocí bloků).",
           "student_overview": "V téhle lekci získají žáci všech věkových kategorií úvodní zkušenost s programováním a informatikou v bezpečném a podpůrném prostředí. Tahle lekce byla navržena pro žáky všech věkových kategorií, kteří už umí číst. Vyžaduje možnost přehrávat zvuk, protože jde o nástroj vytvořený tak, aby reagoval na hudbu."
         },
         "hello-world-food-2021/Hello World": {
+          "name": "Hello World: Jídlo",
           "overview": "V této lekci se studenti budou učit základy počítačových věd programováním v Laboratoři sprajtů. Laboratoř sprajtů je nástroj, který můžete používat k budování představivostí nabitých a zábavných projektů. Studenti se naučí vytvářet a animovat sprajty a dělat je interaktivní pomocí událostí. \n\nExistuje více verzí této lekce. Každá verze vyučuje stejné koncepce, ale jsou v ní obsaženy různé obrázky, aby se líbila různým typům studentů. Další informace najdete na stránce [Úvodní stránka o programu Ahoj, světe.](https://code.org/helloworld)",
           "preparation": "-   Hrajte si s hlavolamy, abyste našli všechny případné problémové oblasti, které bude Vaše třída mít.\n-   Použijte prostředky dostupné na [CS Connections](https://code.org/educate/csc) abyste vyrobili plán na další výuku počítačových věd po skončení prvotního výukového kurzu.",
           "purpose": "Tato lekce je určena k přípravě studentů na vytváření jednoduchých programátorských projektů v Laboratoři sprajtů. S touto dovedností budou pak studenti vytvářet projekty na jakékoli téma, jako například na jiné školní téma nebo na něco, co má význam pro ně osobně. Navštivte [CS Connections](https://code.org/educate/csc), kde najdete nápady o tom, jak začlenit počítačovou vědu do jiných předmětů."
@@ -90,7 +98,7 @@
         "aquatic/Aquatic": {
           "name": "Minecraft: Vodní plavba",
           "overview": "V této lekci získají studenti všech věkových kategorií úvodní zkušenost s programováním a informatikou v bezpečném a podpůrném prostředí. Tato lekce je vhodná pro všechny žáky, kteří už umějí číst (od 6 let). Mladší děti tento výukový kurz pravděpodobně nedokončí, ale hodina věnované těmto úlohám pro ně bude ohromně zábavná. Studenti středních škol nejspíš nebudou mít s dokončením kurzu problém a ke konci jim zbyde čas na volné hraní.",
-          "preparation": "### Jeden týden před Hodinou kódu\n\n-   Než začnete plánovat událost Hodina kódu, podívejte se na [Průvodce Hodinou kódu pro vyučující](http://hourofcode.com/resources/how-to/) a [Doporučené postupy od úspěšných pedagogů](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466). \n-   Pokud máte zájem o propagační předměty nebo podporu pro třídu, [zaregistrujte svoji událost Hodina kódu](http://hourofcode.com).\n-   Nejdřív si projděte a sami absolvujte online kurz: [Minecraft: Vodní cesta](http://studio.code.org/s/aquatic/lessons/1/levels/1) \n-   Než studentům kurz zadáte, sami si ho vyzkoušejte. Ověřte si, že máte vyhovující technologie, a ujistěte se, že před zahájením Hodiny kódu není potřeba vyřešit nějaké problémy.\n\n### Jeden den před Hodinou kódu\n\n-   Vytiskněte jeden nebo víc [příkladů výstupních lístků](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) na konci tohoto výukového plánu nebo si vytvořte vlastní. \n-   Každý student, který aktivitu dokončí, by měl obdržet certifikát. [Vytiskněte](https://code.org/certificates?script=mc) certifikáty pro všechny studenty dopředu, ať se tím na konci Hodiny kódu nemusíte zdržovat.",
+          "preparation": "### Jeden týden před Hodinou kódu\n\n-   Než začnete plánovat událost Hodina kódu, podívejte se na [Průvodce Hodinou kódu pro vyučující](http://hourofcode.com/resources/how-to/) a [Doporučené postupy od úspěšných pedagogů](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466). \n-   Pokud máte zájem o propagační předměty nebo podporu pro třídu, [zaregistrujte svoji událost Hodina kódu](http://hourofcode.com).\n-   Nejdřív si projděte a sami absolvujte online kurz: [Minecraft: Vodní cesta](http://studio.code.org/s/aquatic/lessons/1/levels/1) \n-   Než studentům kurz zadáte, sami si ho vyzkoušejte. Ověřte si, že máte vyhovující technologie, a ujistěte se, že před zahájením Hodiny kódu není potřeba vyřešit nějaké problémy.\n\n### Jeden den před Hodinou kódu\n\n-   Vytiskněte jeden nebo víc [příkladů výstupních lístků](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) na konci tohoto výukového plánu nebo si vytvořte vlastní. \n-   Každý student, který aktivitu dokončí, by měl obdržet certifikát. [Vytiskněte](https://studio.code.org/certificates/batch?course=bWM=) certifikáty pro všechny studenty dopředu, ať se tím na konci Hodiny kódu nemusíte zdržovat.",
           "purpose": "Tato lekce představuje základní koncepty kódování a programování (pomocí bloků) a jednoduché techniky ladění a používání podmínek. V této sadě zadání si studenti upevní a rozvinou znalosti cyklů a seznámí se s podmínkami. Díky propojení těchto dvou konceptů budou moct experimentovat s vytvářením zábavných, inovativních programů v novém, poutavém prostředí.",
           "student_overview": "V téhle lekci získají studenti všech věkových kategorií úvodní zkušenost s programováním a informatikou v bezpečném a podpůrném prostředí. "
         },
@@ -101,7 +109,14 @@
           "purpose": "„Šifrování“ je proces, který upraví zprávu tak, aby zůstala „skrytá“ komukoli, kdo není její zamýšlený příjemce. Šifrování už dnes není jen výsadou armády a špionů. Na internetu používáme šifrování každý den, především k provádění komerčních transakcí. Bez něho by se naše ekonomika mohla „zaseknout“. \n\nTato lekce je jakousi první ochutnávkou toho, jak bychom měli vnímat šifrování zpráv ve světle výpočetních nástrojů. Výpočetní nástroje dramaticky zvyšují sílu a složitost algoritmů, které k šifrování informací používáme, ovšem ty samé nástroje také zvyšují naši schopnost šifru prolomit. K vytvoření odolné šifry je potřeba vědět, jaké problémy počítač nedokáže snadno vyřešit, a tuto znalost pak k zašifrování zprávy využít. Doporučujeme přečíst si celou kapitolu 5 _Bitva o bity_.  Přibližuje sociální kontext, který je dobré třídě přiblížit.",
           "student_overview": "V téhle lekci se studenti dozví o nutnosti šifrování a jednoduchých technikách prolomení (nebo crackingu) tajných zpráv. Sami si zkusí prolomit zprávu zašifrovanou klasickou Caesarovou šifrou i náhodnou substituční šifrou. Studenti by měli jednoznačně pochopit, že v době výkonných výpočetních nástrojů je potřeba používat složitější techniky šifrování. Nejdůležitější poselství téhle lekce je v tom, aby si žáci uvědomili, jak a proč hraje šifrování roli v našem každodenním používání internetu a že vytvořit kvalitní šifrování není snadné. Studenti budou zasvěceni do úvah, na co všechno je potřeba myslet při vytváření silného šifrování, které nedokážou prolomit ani výkonné výpočetní nástroje. Potřeba spolehnout se na soukromí při posílání dat po internetu je důležitá pro každého uživatele internetu."
         },
+        "hello-world-space-2022/Hello World: Food": {
+          "name": "Hello World: Prostora",
+          "overview": "V této lekci se studenti budou učit základy počítačových věd programováním v Laboratoři sprajtů. Laboratoř sprajtů je nástroj, který můžete používat k budování představivostí nabitých a zábavných projektů. Studenti se naučí vytvářet a animovat sprajty a dělat je interaktivní pomocí událostí. \n\nExistuje více verzí této lekce. Každá verze vyučuje stejné koncepce, ale jsou v ní obsaženy různé obrázky, aby se líbila různým typům studentů. Další informace najdete na stránce [Úvodní stránka o programu Ahoj, světe.](https://code.org/helloworld)",
+          "preparation": "-   Hrajte si s hlavolamy, abyste našli všechny případné problémové oblasti, které bude Vaše třída mít.\n-   Použijte prostředky dostupné na [CS Connections](https://code.org/educate/csc) abyste vyrobili plán na další výuku počítačových věd po skončení prvotního výukového kurzu.",
+          "purpose": "Tato lekce je určena k přípravě studentů na vytváření jednoduchých programátorských projektů v Laboratoři sprajtů. S touto dovedností budou pak studenti vytvářet projekty na jakékoli téma, jako například na jiné školní téma nebo na něco, co má význam pro ně osobně. Navštivte [CS Connections](https://code.org/educate/csc), kde najdete nápady o tom, jak začlenit počítačovou vědu do jiných předmětů."
+        },
         "hello-world-animals-2021/Hello World": {
+          "name": "Hello World: Zvířata",
           "overview": "V této lekci se studenti budou učit základy počítačových věd programováním v Laboratoři sprajtů. Laboratoř sprajtů je nástroj, který můžete používat k budování představivostí nabitých a zábavných projektů. Studenti se naučí vytvářet a animovat sprajty a dělat je interaktivní pomocí událostí. \n\nExistuje více verzí této lekce. Každá verze vyučuje stejné koncepce, ale jsou v ní obsaženy různé obrázky, aby se líbila různým typům studentů. Další informace najdete na stránce [Úvodní stránka o programu Ahoj, světe.](https://code.org/helloworld)",
           "preparation": "-   Hrajte si s hlavolamy, abyste našli všechny případné problémové oblasti, které bude Vaše třída mít.\n-   Použijte prostředky dostupné na [CS Connections](https://code.org/educate/csc) abyste vyrobili plán na další výuku počítačových věd po skončení prvotního výukového kurzu.",
           "purpose": "Tato lekce je určena k přípravě studentů na vytváření jednoduchých programátorských projektů v Laboratoři sprajtů. S touto dovedností budou pak studenti vytvářet projekty na jakékoli téma, jako například na jiné školní téma nebo na něco, co má význam pro ně osobně. Navštivte [CS Connections](https://code.org/educate/csc), kde najdete nápady o tom, jak začlenit počítačovou vědu do jiných předmětů."
@@ -116,7 +131,7 @@
         "mc/Hour of Code 2015": {
           "name": "Hodina kódu s Minecraftem",
           "overview": "V této lekci získají studenti všech věkových kategorií úvodní zkušenost s programováním a informatikou v bezpečném a podpůrném prostředí. Tato lekce je vhodná pro všechny žáky, kteří už umějí číst (od 6 let). Mladší děti tento výukový kurz pravděpodobně nedokončí, ale hodina věnované těmto úlohám pro ně bude ohromně zábavná. Studenti středních škol nejspíš nebudou mít s dokončením kurzu problém a ke konci jim zbyde čas na volné hraní.",
-          "preparation": "### Jeden týden před Hodinou kódu\n\n-   Než začnete plánovat událost Hodina kódu, podívejte se na [Průvodce Hodinou kódu pro vyučující](http://hourofcode.com/resources/how-to/) a [Doporučené postupy od úspěšných pedagogů](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466). \n-   Pokud máte zájem o propagační předměty nebo podporu pro třídu, [zaregistrujte svoji událost Hodina kódu](http://hourofcode.com).\n-   Nejdřív si projděte a sami absolvujte online kurz: [Minecraft: Adventurer](studio.code.org/s/mc/lessons/1/levels/1) \n-   Než studentům kurz zadáte, sami si ho vyzkoušejte. Ověřte si, že máte vyhovující technologie, a ujistěte se, že před zahájením Hodiny kódu není potřeba vyřešit nějaké problémy.\n\n### Jeden den před Hodinou kódu\n\n-   Vytiskněte jeden nebo víc [příkladů výstupních lístků](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) na konci tohoto výukového plánu nebo si vytvořte vlastní. \n-   Každý student, který aktivitu dokončí, by měl obdržet [certifikát](https://code.org/certificates?script=mc). Vytiskněte certifikáty pro všechny studenty dopředu, ať se tím na konci Hodiny kódu nemusíte zdržovat.",
+          "preparation": "### Jeden týden před Hodinou kódu\n\n-   Než začnete plánovat událost Hodina kódu, podívejte se na [Průvodce Hodinou kódu pro vyučující](http://hourofcode.com/resources/how-to/) a [Doporučené postupy od úspěšných pedagogů](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466). \n-   Pokud máte zájem o propagační předměty nebo podporu pro třídu, [zaregistrujte svoji událost Hodina kódu](http://hourofcode.com).\n-   Nejdřív si projděte a sami absolvujte online kurz: [Minecraft: Adventurer](studio.code.org/s/mc/lessons/1/levels/1) \n-   Než studentům kurz zadáte, sami si ho vyzkoušejte. Ověřte si, že máte vyhovující technologie, a ujistěte se, že před zahájením Hodiny kódu není potřeba vyřešit nějaké problémy.\n\n### Jeden den před Hodinou kódu\n\n-   Vytiskněte jeden nebo víc [příkladů výstupních lístků](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) na konci tohoto výukového plánu nebo si vytvořte vlastní. \n-   Každý student, který aktivitu dokončí, by měl obdržet [certifikát](https://studio.code.org/certificates/batch?course=bWM=). Vytiskněte certifikáty pro všechny studenty dopředu, ať se tím na konci Hodiny kódu nemusíte zdržovat.",
           "purpose": "Tato lekce představuje základní koncepty informatiky a programování (pomocí bloků), stejně jako jednoduché metody ladění.",
           "student_overview": "V této lekci získají studenti všech věkových kategorií úvodní zkušenost s programováním a informatikou v bezpečném a podpůrném prostředí. Tato lekce je vhodná pro všechny žáky, kteří už umějí číst (od 6 let). Mladší děti tento výukový kurz pravděpodobně nedokončí, ale hodina věnované těmto úlohám pro ně bude ohromně zábavná. Studenti středních škol nejspíš nebudou mít s dokončením kurzu problém a ke konci jim zbyde čas na volné hraní."
         },
@@ -135,11 +150,13 @@
           "student_overview": "Na konci kurzu budeš moct svůj rozpracovaný projekt rozšířit na některou z těchto aplikací: „Vyberte si své dobrodružství“, „Pohlednice“, nebo „Osobnostní kvíz“. Také můžeš pokračovat ve vytváření dalších projektů dostupných na stránce code.org/applab. "
         },
         "hello-world-retro-2021/Hello World": {
+          "name": "Hello World: Retro",
           "overview": "V této lekci se studenti budou učit základy počítačových věd programováním v Laboratoři sprajtů. Laboratoř sprajtů je nástroj, který můžete používat k budování představivostí nabitých a zábavných projektů. Studenti se naučí vytvářet a animovat sprajty a dělat je interaktivní pomocí událostí. \n\nExistuje více verzí této lekce. Každá verze vyučuje stejné koncepce, ale jsou v ní obsaženy různé obrázky, aby se líbila různým typům studentů. Další informace najdete na stránce [Úvodní stránka o programu Ahoj, světe.](https://code.org/helloworld)",
           "preparation": "-   Hrajte si s hlavolamy, abyste našli všechny případné problémové oblasti, které bude Vaše třída mít.\n-   Použijte prostředky dostupné na [CS Connections](https://code.org/educate/csc) abyste vyrobili plán na další výuku počítačových věd po skončení prvotního výukového kurzu.",
           "purpose": "Tato lekce je určena k přípravě studentů na vytváření jednoduchých programátorských projektů v Laboratoři sprajtů. S touto dovedností budou pak studenti vytvářet projekty na jakékoli téma, jako například na jiné školní téma nebo na něco, co má význam pro ně osobně. Navštivte [CS Connections](https://code.org/educate/csc), kde najdete nápady o tom, jak začlenit počítačovou vědu do jiných předmětů."
         },
         "starwarsblocks/Hour of Code 2015": {
+          "name": "Hvězdné války: Budování galaxie s kódem (blokádně)",
           "overview": "V téhle lekci získají studenti všech věkových kategorií úvodní zkušenost s programováním a informatikou v bezpečném a podpůrném prostředí. Tato lekce má dvě verze. V této verzi se pracuje s přetahováním bloků a funguje nejlíp u studentů vybavených mobilními zařízeními bez klávesnice, u mladších žáků a zahraničních studentů. Doporučuje se pro žáky ve věku od 6 let.\n\nJe dostupná i verze v programovacím jazyce [JavaScript](s/starwars). Pro starší studenty, kteří pracují na počítači, může být JavaScript zábava s vítanou vyšší úrovní náročnosti. Syntax JavaScriptu není přeložený a pro snazší začátek v rámci první Hodiny kódu jsou tady uvedené přeložené bloky. Tato verze kurzu je výborná i v případě, že máte ve třídě studenty, kteří už mají určité znalosti kódování. Doporučuje se pro studenty ve věku nad 11 let.",
           "preparation": "### Jeden týden před Hodinou kódu\n\n-   Než začnete plánovat událost Hodina kódu, podívejte se na [Průvodce Hodinou kódu pro vyučující](http://hourofcode.com/resources/how-to/) a [Doporučené postupy od úspěšných pedagogů](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466).  \n-   Projděte si a sami absolvujte online kurz: [Star Wars: Budování galaxie pomocí kódu](https://studio.code.org/s/starwarsblocks/lessons/1/levels/1) \n-   Než studentům kurz zadáte, sami si ho vyzkoušejte. Ověřte si, že máte vyhovující technologie, a ujistěte se, že před zahájením Hodiny kódu není potřeba vyřešit nějaké problémy.\n\n### Jeden den před Hodinou kódu\n\n-   Napište slova „kódování“, „programování“ a „ladění“ na tabuli nebo je přidejte na stěnu slov, pokud ji máte.\n-   Doprostřed tabule nebo na papír doprostřed nástěnky napište slovo „Informatika“. Bude sloužit jako [„myšlenková mapa“](https://en.wikipedia.org/wiki/Mind_map) pro aktivity typu Příprava a hodnocení.\n-   Každý student, který aktivitu dokončí, by měl obdržet [certifikát](http://code.org/certificates). Vytiskněte certifikáty pro všechny studenty dopředu, ať se tím na konci Hodiny kódu nemusíte zdržovat.",
           "purpose": "Tato lekce uvádí základní koncepce počítačové vědy, psaní kódu a programování, včetně posloupností a událostí. Verze výukového kurzu v jazyce JavaScript také studentům umožní zažít psaní kódu.",
@@ -154,14 +171,14 @@
         },
         "outbreak/Outbreak": {
           "overview": "Tato lekce kombinuje **rozvíjení dovedností** u událostí s **miniprojektem**, kde si studenti vyzkoušejí vytváření vlastní počítačové simulace v Laboratoři sprajtů. Bližší prozkoumání simulace má studentům ukázat, jak rychle se může šířit virus a jakými prostředky je možné toto šíření zpomalit. ",
-          "preparation": "-   Přehrávejte třídě úlohy a najděte potenciální problémové oblasti.\n-   Ujistěte se, že každý student má deník reflexí.",
+          "preparation": "- Přehrávejte třídě úlohy a najděte potenciální problémové oblasti.\n- Ujistěte se, že každý student má deník reflexí.",
           "purpose": "V předchozí lekci studenti shromažďovali a interpretovali data z jedné jednoduché simulace. V této lekci budou studenti postupovat podle návodu k naprogramování svého vlastního simulačního modelu. Předchozí znalosti studentů o virových epidemiích v reálném světě budou aplikovány na fiktivní scénář. ",
           "student_overview": "Do Města příšerek přišel virus! Naučte se vytvořit simulátor viru a pomozte příšerkám znovu se uzdravit."
         },
         "sports/Sports": {
           "name": "Naprogramuj svoji vlastní sportovní hru",
           "overview": "V této online aktivitě se studenti naučí, co jsou události a jak je počítače využívají v programech jako jsou video hry. Studenti budou pracovat na úlohách, které přimějí program reagovat na události (jako například zmáčknutí tlačítek šipek). Na konci úlohy dostanou studenti příležitost přizpůsobit si svou hru různými stupni rychlosti a zvuky. ",
-          "preparation": "### Jeden týden před Hodinou kódu\n\n-   Než začnete plánovat událost Hodina kódu, podívejte se na [Průvodce Hodinou kódu pro vyučující](http://hourofcode.com/resources/how-to/) a [Doporučené postupy od úspěšných pedagogů](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466). \n-   Pokud máte zájem o propagační předměty nebo podporu pro třídu, [zaregistrujte svoji událost Hodina kódu](http://hourofcode.com).\n-   Nejdřív si projděte a sami absolvujte online kurz: [Naprogramuj si vlastní sportovní hru](https://studio.code.org/s/sports/lessons/1/levels/1) \n-   Než studentům kurz zadáte, sami si ho vyzkoušejte. Ověřte si, že máte vyhovující technologie, a ujistěte se, že před zahájením Hodiny kódu není potřeba vyřešit nějaké problémy.\n\n### Jeden den před Hodinou kódu\n\n-   Vytiskněte jeden nebo víc [příkladů výstupních lístků](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) na konci tohoto výukového plánu nebo si vytvořte vlastní. \n\n-   Každý student, který aktivitu dokončí, by měl obdržet [certifikát](https://code.org/certificates). Vytiskněte certifikáty pro všechny studenty dopředu, ať se tím na konci Hodiny kódu nemusíte zdržovat.\n\n-   Přečtěte si prezentaci „Události s odrážením – jak to funguje?“ (představte je žákům na konci hodiny).",
+          "preparation": "### Jeden týden před Hodinou kódu\n\n-   Než začnete plánovat událost Hodina kódu, podívejte se na [Průvodce Hodinou kódu pro vyučující](http://hourofcode.com/resources/how-to/) a [Doporučené postupy od úspěšných pedagogů](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466). \n-   Pokud máte zájem o propagační předměty nebo podporu pro třídu, [zaregistrujte svoji událost Hodina kódu](http://hourofcode.com).\n-   Nejdřív si projděte a sami absolvujte online kurz: [Naprogramuj si vlastní sportovní hru](https://studio.code.org/s/sports/lessons/1/levels/1) \n-   Než studentům kurz zadáte, sami si ho vyzkoušejte. Ověřte si, že máte vyhovující technologie, a ujistěte se, že před zahájením Hodiny kódu není potřeba vyřešit nějaké problémy.\n\n### Jeden den před Hodinou kódu\n\n-   Vytiskněte jeden nebo víc [příkladů výstupních lístků](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) na konci tohoto výukového plánu nebo si vytvořte vlastní. \n\n-   Každý student, který aktivitu dokončí, by měl obdržet [certifikát](https://studio.code.org/certificates/batch). Vytiskněte certifikáty pro všechny studenty dopředu, ať se tím na konci Hodiny kódu nemusíte zdržovat.\n\n-   Přečtěte si prezentaci „Události s odrážením – jak to funguje?“ (představte je žákům na konci hodiny).",
           "purpose": "Tato lekce představuje základní koncepty informatiky a programování (pomocí bloků), stejně jako jednoduché metody ladění. Studenti se dozvědí, že události jsou v počítačových programech velmi běžné, zvlášť ve videohrách.\n\nUdálosti jsou v počítačových programech velmi běžné, zvlášť ve videohrách.  \n\nV téhle lekci se studenti pustí do vytváření sportovní hry a dozvědí se, jak fungují události. Naučí se naprogramovat, aby se objekt sportovního náčiní posouval podle toho, kterou klávesu se šipkou uživatel stiskne, a aby se přehrál zvuk, když do sebe dva objekty narazí. Nakonec svoji hru přizpůsobí, aby byla víc jedinečná.",
           "student_overview": "Přáli jste si někdy hrát ve škole videohry? V této lekci se dostanete k tomu, že si vytvoříte vlastní videohru!"
         },
@@ -175,14 +192,14 @@
         "basketball/Bounce": {
           "name": "Naprogramuj si vlastní basketbalovou hru",
           "overview": "V této online aktivitě se studenti naučí, co jsou události a jak je počítače využívají v programech jako jsou video hry. Studenti budou pracovat na úlohách, které přimějí program reagovat na události (jako například zmáčknutí tlačítek šipek). Na konci úlohy dostanou studenti příležitost přizpůsobit si svou hru různými stupni rychlosti a zvuky. ",
-          "preparation": "### Jeden týden před Hodinou kódu\n\n-   Než začnete plánovat událost Hodina kódu, podívejte se na [Průvodce Hodinou kódu pro vyučující](http://hourofcode.com/resources/how-to/) a [Doporučené postupy od úspěšných pedagogů](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466). \n-   Pokud máte zájem o propagační předměty nebo podporu pro třídu, [zaregistrujte svoji událost Hodina kódu](http://hourofcode.com).\n-   Nejdřív si projděte a sami absolvujte online kurz: [Naprogramuj si vlastní basketbalovou hru](https://studio.code.org/s/basketball/lessons/1/levels/1) \n-   Než studentům kurz zadáte, sami si ho vyzkoušejte. Ověřte si, že máte vyhovující technologie, a ujistěte se, že před zahájením Hodiny kódu není potřeba vyřešit nějaké problémy.\n\n### Jeden den před Hodinou kódu\n\n-   Vytiskněte jeden nebo víc [příkladů výstupních lístků](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) na konci tohoto výukového plánu nebo si vytvořte vlastní. \n\n-   Každý student, který aktivitu dokončí, by měl obdržet [certifikát](https://code.org/certificates). Vytiskněte certifikáty pro všechny studenty dopředu, ať se tím na konci Hodiny kódu nemusíte zdržovat.\n\n-   Přečtěte si prezentaci „Události s odrážením – jak to funguje?“ (představte je žákům na konci hodiny).",
+          "preparation": "### Jeden týden před Hodinou kódu\n\n-   Než začnete plánovat událost Hodina kódu, podívejte se na [Průvodce Hodinou kódu pro vyučující](http://hourofcode.com/resources/how-to/) a [Doporučené postupy od úspěšných pedagogů](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466). \n-   Pokud máte zájem o propagační předměty nebo podporu pro třídu, [zaregistrujte svoji událost Hodina kódu](http://hourofcode.com).\n-   Nejdřív si projděte a sami absolvujte online kurz: [Naprogramuj si vlastní basketbalovou hru](https://studio.code.org/s/basketball/lessons/1/levels/1) \n-   Než studentům kurz zadáte, sami si ho vyzkoušejte. Ověřte si, že máte vyhovující technologie, a ujistěte se, že před zahájením Hodiny kódu není potřeba vyřešit nějaké problémy.\n\n### Jeden den před Hodinou kódu\n\n-   Vytiskněte jeden nebo víc [příkladů výstupních lístků](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) na konci tohoto výukového plánu nebo si vytvořte vlastní. \n\n-   Každý student, který aktivitu dokončí, by měl obdržet [certifikát](https://studio.code.org/certificates/batch). Vytiskněte certifikáty pro všechny studenty dopředu, ať se tím na konci Hodiny kódu nemusíte zdržovat.\n\n-   Přečtěte si prezentaci „Události s odrážením – jak to funguje?“ (představte je žákům na konci hodiny).",
           "purpose": "Tato lekce představuje základní koncepty informatiky a programování (pomocí bloků), stejně jako jednoduché metody ladění. Studenti se dozvědí, že události jsou v počítačových programech velmi běžné, zvlášť ve videohrách.\n\nV téhle lekci se studenti pustí do vytváření basketbalové hry a dozvědí se, jak fungují události. Naučí se naprogramovat, aby se ruka basketbalového hráče posouvala podle toho, kterou klávesu se šipkou uživatel stiskne, a aby se přehrál zvuk, když do sebe narazí dva objekty. Nakonec svoji hru přizpůsobí, aby byla víc jedinečná.",
           "student_overview": "Přáli jste si někdy hrát ve škole videohry? V této lekci se dostanete k tomu, že si vytvoříte vlastní videohru!"
         },
         "dance-extras-2019/Dance Party - Go Further": {
           "name": "Tančete dále (2019)",
           "overview": "V téhle lekci pokračují studenti všech věkových kategorií v získávání zkušeností s programováním a informatikou v bezpečném a podpůrném prostředí. Tahle lekce byla navržena pro žáky všech věkových kategorií, kteří už umí číst. Vyžaduje možnost přehrávat zvuk, protože jde o nástroj vytvořený tak, aby reagoval na hudbu.",
-          "preparation": "#### Jeden týden před Hodinou kódu\n\n-   Než začnete plánovat událost Hodina kódu, podívejte se na [Průvodce Hodinou kódu pro vyučující](https://hourofcode.com/us/how-to) a [Doporučené postupy od úspěšných pedagogů](https://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466). \n\n-   Pokud máte zájem o podporu pro třídu, plakáty se slevou, nebo se chcete zúčastnit akce o robotice (jen USA), [zaregistrujte svoji událost Hodina kódu](https://hourofcode.com/us).\n\n-   Nejdřív si projděte a sami absolvujte online kurz: [Taneční večírek](https://studio.code.org/s/dance-2019)\n\n-   Než studentům kurz zadáte, sami si ho vyzkoušejte. \n\n-   Ověřte si, že máte vyhovující technologie, a ujistěte se, že před zahájením Hodiny kódu není potřeba vyřešit nějaké problémy.\n\n#### Jeden den před Hodinou kódu\n\n-   Každý student, který aktivitu dokončí, by měl obdržet [certifikát](https://code.org/certificates). Vytiskněte certifikáty pro všechny studenty dopředu, ať se tím na konci Hodiny kódu nemusíte zdržovat.\n\n-   (nepovinné) Doporučte studentům, aby si na tuto aktivitu přinesli vlastní sluchátka.",
+          "preparation": "#### Jeden týden před Hodinou kódu\n\n-   Než začnete plánovat událost Hodina kódu, podívejte se na [Průvodce Hodinou kódu pro vyučující](https://hourofcode.com/us/how-to) a [Doporučené postupy od úspěšných pedagogů](https://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466). \n\n-   Pokud máte zájem o podporu pro třídu, plakáty se slevou, nebo se chcete zúčastnit akce o robotice (jen USA), [zaregistrujte svoji událost Hodina kódu](https://hourofcode.com/us).\n\n-   Nejdřív si projděte a sami absolvujte online kurz: [Taneční večírek](https://studio.code.org/s/dance-2019)\n\n-   Než studentům kurz zadáte, sami si ho vyzkoušejte. \n\n-   Ověřte si, že máte vyhovující technologie, a ujistěte se, že před zahájením Hodiny kódu není potřeba vyřešit nějaké problémy.\n\n#### Jeden den před Hodinou kódu\n\n-   Každý student, který aktivitu dokončí, by měl obdržet [certifikát](https://studio.code.org/certificates/batch). Vytiskněte certifikáty pro všechny studenty dopředu, ať se tím na konci Hodiny kódu nemusíte zdržovat.\n\n-   (nepovinné) Doporučte studentům, aby si na tuto aktivitu přinesli vlastní sluchátka.",
           "purpose": "Tato lekce představuje základní koncepty informatiky, a to kódování a událostmi řízení programování (pomocí bloků).",
           "student_overview": "Studenti všech věkových kategorií pokračují v získávání úvodní zkušenosti s programováním a informatikou v bezpečném a podpůrném prostředí. "
         },
@@ -190,7 +207,7 @@
           "name": "Hodina kódu 2013"
         },
         "dance-2019/Dance Party": {
-          "name": "Taneční večírek (2019)",
+          "name": "Taneční večírek",
           "overview": "V téhle lekci získají žáci všech věkových kategorií úvodní zkušenost s programováním a informatikou v bezpečném a podpůrném prostředí. Tahle lekce byla navržena pro žáky všech věkových kategorií, kteří už umí číst. Vyžaduje možnost přehrávat zvuk, protože jde o nástroj vytvořený tak, aby reagoval na hudbu.",
           "preparation": "### Jeden týden před Hodinou kódu\n\n-   Než začnete plánovat událost Hodina kódu, podívejte se na [Průvodce Hodinou kódu pro vyučující](http://hourofcode.com/resources/how-to/) a [Doporučené postupy od úspěšných pedagogů](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466). \n-   Pokud máte zájem o podporu pro třídu, plakáty se slevou, nebo se chcete zúčastnit akce o robotice (jen USA), [zaregistrujte svoji událost Hodina kódu](http://hourofcode.com).\n-   Nejdřív si projděte a sami absolvujte online kurz: [Taneční večírek](https://studio.code.org/s/dance-2019) \n-   Než studentům kurz zadáte, sami si ho vyzkoušejte. Ověřte si, že máte vyhovující technologie, a ujistěte se, že před zahájením Hodiny kódu není potřeba vyřešit nějaké problémy.\n-   Podívejte se na doplňující učební plán [„Taneční večírek bez připojení“](https://studio.code.org/s/dance-unplugged/lessons/1) a rozhodněte se, jestli chcete před Hodinou kódu odučit i tuto lekci.\n\n### Jeden den před Hodinou kódu\n\n-   Každý student, který aktivitu dokončí, by měl obdržet certifikát. [Vytiskněte certifikáty](http://code.org/certificates) pro všechny studenty dopředu, ať se tím na konci Hodiny kódu nemusíte zdržovat.\n-   (nepovinné) Doporučte studentům, aby si na tuto aktivitu přinesli vlastní sluchátka.",
           "purpose": "Tato lekce představuje základní koncepty informatiky, a to kódování a událostmi řízení programování (pomocí bloků).",
@@ -199,7 +216,7 @@
         "oceans/Oceans": {
           "name": "AI pomáhá oceánům",
           "overview": "V této lekci získají studenti všech věkových kategorií úvodní zkušenost s programováním a informatikou v bezpečném a podpůrném prostředí. Nejprve roztřídí objekty na ryby a ostatní a pokusí se vyčistit oceán od nepořádku. Pak bude jejich úkolem rozšířit cvičný datový soubor o další mořské tvory. Ve druhé části aktivity budou vybírat vlastní značky, které přidají k obrázkům náhodně vytvořených ryb. Tato cvičná data poslouží pro trénink modelu strojového učení, který by pak měl nové obrázky označovat automaticky.",
-          "preparation": "### Jeden týden před Hodinou kódu\n\n-   Než začnete plánovat událost Hodina kódu, podívejte se na [Průvodce Hodinou kódu pro vyučující](http://hourofcode.com/resources/how-to/). \n-   [Zaregistrujte svoji událost Hodina kódu](http://hourofcode.com).\n-   Nejdřív si online kurz projděte a sami ho absolvujte.\n-   Než studentům kurz zadáte, sami si ho vyzkoušejte. Ověřte si, že máte vyhovující technologie, a ujistěte se, že před zahájením Hodiny kódu není potřeba vyřešit nějaké problémy.\n\n### Jeden den před Hodinou kódu\n\n-   Každý student, který aktivitu dokončí, by měl obdržet certifikát. Vytiskněte [certifikáty](https://code.org/certificates?script=oceans) pro všechny studenty dopředu, ať se tím na konci Hodiny kódu nemusíte zdržovat.",
+          "preparation": "### Jeden týden před Hodinou kódu\n\n-   Než začnete plánovat událost Hodina kódu, podívejte se na [Průvodce Hodinou kódu pro vyučující](http://hourofcode.com/resources/how-to/). \n-   [Zaregistrujte svoji událost Hodina kódu](http://hourofcode.com).\n-   Nejdřív si online kurz projděte a sami ho absolvujte.\n-   Než studentům kurz zadáte, sami si ho vyzkoušejte. Ověřte si, že máte vyhovující technologie, a ujistěte se, že před zahájením Hodiny kódu není potřeba vyřešit nějaké problémy.\n\n### Jeden den před Hodinou kódu\n\n-   Každý student, který aktivitu dokončí, by měl obdržet certifikát. Vytiskněte [certifikáty](https://studio.code.org/certificates/batch?course=b2NlYW5z) pro všechny studenty dopředu, ať se tím na konci Hodiny kódu nemusíte zdržovat.",
           "purpose": "Tento výukový kurz je navržen tak, aby studentům poskytl stručný úvod do **strojového učení**, což je typ **umělé inteligence**. Studenti budou zkoumat, jak se používají **školící data** k tomu, aby bylo modelu strojového učení umožněno klasifikovat nová data. Studenti by měli během absolvování výukového kurzu prožívat příjemný prožitek, a co je ještě důležitější, mělo by je to motivovat k výuce počítačových věd. ",
           "student_overview": "Shrnutí výukového kurzu: Nejprve studenti zařadí předměty jako buďto „ryba“ nebo „neryba“, aby se pokusili odstranit odpad z oceánu. Pak budou studenti muset rozšířit svůj cvičný datový soubor tak, aby zahrnoval i jiné mořské tvory patřící do vody. V druhé části aktivity budou studenti vybírat své vlastní značky, které aplikují na obrázky náhodně vytvořených ryb. Tato cvičná data se používají pro model strojového učení, který by měl být schopen označovat nové obrázky sám od sebe."
         },
@@ -242,11 +259,17 @@
         "K5-OnlinePD/Planning": {
           "name": "Plánování"
         },
+        "K5-OnlinePD/Next Steps": {
+          "name": "Další kroky"
+        },
         "netsim/Routers and addresses": {
           "name": "Routery a adresy"
         },
         "netsim/Packets and Reliability": {
           "name": "Pakety a spolehlivost"
+        },
+        "odometer/Odometer Widget": {
+          "name": "Widget počítadla kilometrů"
         },
         "kodea-pd-2021/Getting Started": {
           "name": "Začínáme"
@@ -256,6 +279,9 @@
         },
         "kodea-pd-2021/Planning": {
           "name": "Plánování"
+        },
+        "kodea-pd-2021/Next Steps": {
+          "name": "Další kroky"
         },
         "coursed-2022/Password Power-Up": {
           "name": "Posílení hesla",
@@ -363,6 +389,7 @@
           "student_overview": "Šikana není nikdy v pořádku. Tato lekce Vás poučí o tom, co je a co není správné říkat online."
         },
         "coursef-2022/Introducing Sprite Lab": {
+          "name": "Představujeme Sprite Lab",
           "overview": "V této lekci pro navození **kontextu** budou studenti diskutovat o roli počítačů a technologií v jejich životě a zaměří se na to, jak aplikace a nástroje dávají uživatelům možnost volby, jak je používat. Studenti také prozkoumají aplikace podobné těm, které si později sami vytvoří.",
           "preparation": "-   Určete, jak se budou studenti přihlašovat do Code.org.\n-   V případě potřeby vytvořte studentům účty na Code.org.\n-   Přiřaďte studentům představení laboratoře sprajtů.\n-   Vytiskněte kopie pracovního listu **\\*Zkoumání aplikací** (nebo umístěte digitální verzi do systému LMS).",
           "purpose": "První lekce je zaměřena na to, aby se studenti pro předmět nadchli a propojili své osobní zájmy s informatikou. ",
@@ -374,6 +401,7 @@
           "purpose": "Tato lekce je určena k seznámení studentů s programováním v aplikaci Sprite Lab. Studenti si začnou vytvářet představu o programovacím modelu tohoto nástroje a prozkoumají způsoby, jak jej mohou využít k sebevyjádření."
         },
         "coursef-2022/Sprites in Action": {
+          "name": "skřítci, do, akce",
           "preparation": "Přehrajte si jednotlivé úrovně a prohlédněte si snímky lekcí.",
           "purpose": "Tato lekce je určena k posílení dovedností z předchozí lekce a seznámení studentů s programováním pomocí událostí. V průběhu celého kurzu budou události hlavním způsobem, jakým studenti mění chod svých programů v čase nebo v reakci na uživatele."
         },
@@ -630,6 +658,7 @@
           "purpose": "Tato lekce je určena k seznámení studentů s programováním v aplikaci Sprite Lab. Studenti si začnou vytvářet představu o programovacím modelu tohoto nástroje a prozkoumají způsoby, jak jej mohou využít k sebevyjádření."
         },
         "express-2022/Sprites in Action": {
+          "name": "skřítci, do, akce",
           "preparation": "Přehrajte si jednotlivé úrovně a prohlédněte si snímky lekcí.",
           "purpose": "Tato lekce je určena k seznámení studentů s programováním pomocí událostí. V průběhu celého kurzu budou události hlavním způsobem, jakým studenti mění chod svých programů v čase nebo v reakci na uživatele."
         },
@@ -993,6 +1022,12 @@
         "csd5-2022/CS Discoveries Post-Course Survey": {
           "name": "Objevujeme informatiku – Průzkum po kurzu"
         },
+        "csd1-2022/The Problem Solving Process": {
+          "name": "Proces řešení problémů"
+        },
+        "csd1-2022/What is a Computer?": {
+          "name": "Co je to počítač?"
+        },
         "csd3-2022/Variables": {
           "name": "Proměnné"
         },
@@ -1050,8 +1085,14 @@
         "csd6-2022/CS Discoveries Post-Course Survey": {
           "name": "Objevujeme informatiku – Průzkum po kurzu"
         },
+        "csd7-2022/Introduction to AI Lab": {
+          "name": "Úvod do laboratoře umělé inteligence"
+        },
         "csd7-2022/Numerical Models": {
           "overview": "V této lekci se studenti zapojí do offline aktivity spočívající v simulaci epidemie zombies. Studenti musí pomocí údajů ze sousedního města předpovědět, které části města budou mít nejméně zombies. Studenti budou používat stupňů shody a průměrů k vytváření předpovědí počtu zombies na určitém konkrétním místě. Pak budou studenti zachráněni a bude jim dána příležitost porovnat své předpovědi se skutečnými počty, aby mohli diskutovat o tom, jak pro číselné údaje a kategorické údaje bývá přesnost odlišná.\n\n**Otázka dne:** Jak se počítače naučí dělat předpovědi na základě číselných údajů?"
+        },
+        "csd7-2022/Numerical Data in AI Lab": {
+          "name": "Numerická data v laboratoři AI"
         },
         "csd7-2022/CS Discoveries Post-Course Survey": {
           "name": "Objevujeme informatiku – Průzkum po kurzu"
@@ -1599,6 +1640,9 @@
         "csd5-2018/CS Discoveries Post-Course Survey": {
           "name": "Objevujeme informatiku – Průzkum po kurzu"
         },
+        "csd-post-survey-2018/CSD post-course survey": {
+          "name": "Studentský průzkum CSD po kurzu (18 - 19)"
+        },
         "csd4-2018/Linking Screens": {
           "name": "Propojení obrazovek"
         },
@@ -1613,6 +1657,12 @@
         },
         "csd2-2018/CS Discoveries Post-Course Survey": {
           "name": "Objevujeme informatiku – Průzkum po kurzu"
+        },
+        "csd1-2018/The Problem Solving Process": {
+          "name": "Proces řešení problémů"
+        },
+        "csd1-2018/What is a Computer?": {
+          "name": "Co je to počítač?"
         },
         "coursea-2019/Going Places Safely": {
           "name": "Cestování bezpečně"
@@ -2052,6 +2102,12 @@
         "csd5-2019/Combining Representations": {
           "name": "Kombinování reprezentací"
         },
+        "csd1-2019/The Problem Solving Process": {
+          "name": "Proces řešení problémů"
+        },
+        "csd1-2019/What is a Computer?": {
+          "name": "Co je to počítač?"
+        },
         "csd2-2019/Headings": {
           "name": "Záhlaví"
         },
@@ -2325,6 +2381,9 @@
         "coursec-2017/Loops in Artist": {
           "name": "Smyčky v Umělci"
         },
+        "coursec-2017/Loops in Harvester": {
+          "name": "smyčky, do, kombajn"
+        },
         "coursec-2017/Events: The Big Event": {
           "name": "Události: velká událost"
         },
@@ -2564,6 +2623,12 @@
         },
         "csd2-2017/Lists": {
           "name": "Seznamy"
+        },
+        "csd1-2017/The Problem Solving Process": {
+          "name": "Proces řešení problémů"
+        },
+        "csd1-2017/What is a Computer?": {
+          "name": "Co je to počítač?"
         },
         "csd5-2017/Representing Images": {
           "name": "Reprezentace obrázků"
@@ -2884,6 +2949,9 @@
           "purpose": "Hlavním cílem této lekce je prohloubit zkušenosti studentů s počítači. Tím, že si studenti osvojí nejzákladnější funkce ovládání počítače, jako je klikání a přetahování, vytvoří se ve třídě rovnější podmínky pro práci na budoucích zadáních. Tato lekce je také skvělou příležitostí k představení základní terminologie počítačového hardwaru – a k seznámení žáků s myší, trackpadem nebo dotykovou obrazovkou – podle toho, jaké zařízení používáte.",
           "student_overview": " Hlavolamy dokončete kliknutím a potažením."
         },
+        "csd-post-survey/CSD post-course survey": {
+          "name": "Studentský průzkum CSD po kurzu (18 - 19)"
+        },
         "allthethings/Jigsaw": {
           "name": "Skládačka"
         },
@@ -2914,6 +2982,9 @@
         "allthethings/Text Compression": {
           "name": "Komprese textu"
         },
+        "allthethings/Pixelation": {
+          "name": "Pixelace"
+        },
         "allthethings/Studio": {
           "name": "Studio"
         },
@@ -2926,10 +2997,20 @@
         "allthethings/Sprite Lab": {
           "name": "Laboratoř Sprite"
         },
+        "allthethings/AI Lab": {
+          "name": "Laboratoř AI"
+        },
         "allthethings/Java Lab": {
           "name": "Java Lab"
         },
+        "allthethings/lesson-48": {
+          "name": "Poezie"
+        },
+        "allthethings/lesson-49": {
+          "name": "Hudba"
+        },
         "coursef-2021/lesson-6": {
+          "name": "Představujeme Sprite Lab",
           "overview": "V této lekci pro navození **kontextu** budou studenti diskutovat o roli počítačů a technologií v jejich životě a zaměří se na to, jak aplikace a nástroje dávají uživatelům možnost volby, jak je používat. Studenti také prozkoumají aplikace podobné těm, které si později sami vytvoří.",
           "preparation": "-   Určete, jak se budou studenti přihlašovat do Code.org.\n-   V případě potřeby vytvořte studentům účty na Code.org.\n-   Přiřaďte studentům představení laboratoře sprajtů.\n-   Vytiskněte kopie pracovního listu **\\*Zkoumání aplikací** (nebo umístěte digitální verzi do systému LMS).",
           "purpose": "První lekce je zaměřena na to, aby se studenti pro předmět nadchli a propojili své osobní zájmy s informatikou. ",
@@ -2941,6 +3022,7 @@
           "purpose": "Tato lekce je určena k seznámení studentů s programováním v aplikaci Sprite Lab. Studenti si začnou vytvářet představu o programovacím modelu tohoto nástroje a prozkoumají způsoby, jak jej mohou využít k sebevyjádření."
         },
         "coursef-2021/lesson-8": {
+          "name": "skřítci, do, akce",
           "preparation": "Přehrajte si jednotlivé úrovně a prohlédněte si snímky lekcí.",
           "purpose": "Tato lekce je určena k posílení dovedností z předchozí lekce a seznámení studentů s programováním pomocí událostí. V průběhu celého kurzu budou události hlavním způsobem, jakým studenti mění chod svých programů v čase nebo v reakci na uživatele."
         },
@@ -3435,6 +3517,7 @@
           "purpose": "Tato lekce je určena k seznámení studentů s programováním v aplikaci Sprite Lab. Studenti si začnou vytvářet představu o programovacím modelu tohoto nástroje a prozkoumají způsoby, jak jej mohou využít k sebevyjádření."
         },
         "express-2021/lesson-3": {
+          "name": "skřítci, do, akce",
           "preparation": "Přehrajte si jednotlivé úrovně a prohlédněte si snímky lekcí.",
           "purpose": "Tato lekce je určena k seznámení studentů s programováním pomocí událostí. V průběhu celého kurzu budou události hlavním způsobem, jakým studenti mění chod svých programů v čase nebo v reakci na uživatele."
         },
@@ -3732,8 +3815,14 @@
           "purpose": "Studenti mohou být připraveni vrhnout se rovnou na sestavování svých projektů, ale tato lekce jim pomůže zformulovat jejich nápady do plánů. Tato struktura udrží snílky při zemi a osvětlí cestu těm, kteří se cítí být ponecháni ve tmě. Poskytněte studentům dostatek času na sestavení a revizi jejich projektů. Pokusy a omyly, které jsou nevyhnutelně součástí této lekce, je naučí řešení problémů a vytrvalosti.",
           "student_overview": "Takto velké projekty potřebují čas a spoustu plánování. Najděte inspiraci, vyviňte plán a rozpoutejte svou tvořivost!"
         },
+        "csd7-2021/Introduction to AI Lab": {
+          "name": "Úvod do laboratoře umělé inteligence"
+        },
         "csd7-2021/Similarity Models": {
           "overview": "V této lekci se studenti zapojí do offline aktivity spočívající v simulaci epidemie zombies. Studenti musí pomocí údajů ze sousedního města předpovědět, které části města budou mít nejméně zombies. Studenti budou používat stupňů shody a průměrů k vytváření předpovědí počtu zombies na určitém konkrétním místě. Pak budou studenti zachráněni a bude jim dána příležitost porovnat své předpovědi se skutečnými počty, aby mohli diskutovat o tom, jak pro číselné údaje a kategorické údaje bývá přesnost odlišná.\n\n**Otázka dne:** Jak se počítače naučí dělat předpovědi na základě číselných údajů?"
+        },
+        "csd7-2021/Numerical Data in AI Lab": {
+          "name": "Numerická data v laboratoři AI"
         },
         "csd7-2021/CS Discoveries Post-Course Survey": {
           "name": "Objevujeme informatiku – Průzkum po kurzu"
@@ -3800,6 +3889,12 @@
         },
         "csd3-2021/lesson-1": {
           "name": "Objevujeme informatiku – Průzkum po kurzu"
+        },
+        "csd1-2021/The Problem Solving Process": {
+          "name": "Proces řešení problémů"
+        },
+        "csd1-2021/What is a Computer?": {
+          "name": "Co je to počítač?"
         },
         "csd2-2021/Headings": {
           "name": "Záhlaví"

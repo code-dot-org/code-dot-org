@@ -2,6 +2,9 @@
   "sl-SI": {
     "data": {
       "resources": {
+        "implementation_guide/coursed/2022": {
+          "name": "Vodnik za implementacijo"
+        },
         "graph_paper_programming/coursed/2022": {
           "name": "Obarvajmo kvadratke"
         },
@@ -56,7 +59,7 @@
         "conditionals_with_cards_4/coursed/2022": {
           "name": "Pogojniki s kartami"
         },
-        "implementation_guide/coursed/2022": {
+        "implementation_guide/coursef/2022": {
           "name": "Vodnik za implementacijo"
         },
         "internet/coursef/2022": {
@@ -68,10 +71,10 @@
         "the_internet/coursef/2022": {
           "name": "Internet"
         },
-        "implementation_guide/coursef/2022": {
+        "implementation_guide/coursee/2022": {
           "name": "Vodnik za implementacijo"
         },
-        "implementation_guide/coursee/2022": {
+        "implementation_guide/courseb/2022": {
           "name": "Vodnik za implementacijo"
         },
         "move_it_move_it/courseb/2022": {
@@ -98,8 +101,14 @@
         "the_big_event_2/courseb/2022": {
           "name": "Veliki dogodek"
         },
-        "implementation_guide/courseb/2022": {
-          "name": "Vodnik za implementacijo"
+        "all_resources/express/2022": {
+          "url": "/s/express-2022/viri"
+        },
+        "all_standards/express/2022": {
+          "url": "/s/express-2022/standardi"
+        },
+        "all_vocabulary/express/2022": {
+          "url": "/s/express-2022/besedisce"
         },
         "pair_programming/express/2022": {
           "name": "Programiranje parov"
@@ -109,6 +118,9 @@
         },
         "pair_programming/pre-express/2022": {
           "name": "Programiranje parov"
+        },
+        "implementation_guide/coursea/2022": {
+          "name": "Vodnik za implementacijo"
         },
         "pair_programming/coursea/2022": {
           "name": "Programiranje parov"
@@ -125,7 +137,16 @@
         "the_big_event_2/coursea/2022": {
           "name": "Veliki dogodek"
         },
-        "implementation_guide/coursea/2022": {
+        "all_resources/coursec/2022": {
+          "url": "/s/tecajc-2022/viri"
+        },
+        "all_standards/coursec/2022": {
+          "url": "/s/tecajc-2022/standardi"
+        },
+        "all_vocabulary/coursec/2022": {
+          "url": "/s/tecajc-2022/besedisce"
+        },
+        "implementation_guide/coursec/2022": {
           "name": "Vodnik za implementacijo"
         },
         "my_robotic_friends/coursec/2022": {
@@ -155,14 +176,17 @@
         "the_big_event_2/coursec/2022": {
           "name": "Veliki dogodek"
         },
-        "implementation_guide/coursec/2022": {
-          "name": "Vodnik za implementacijo"
-        },
         "variables/csd/2022": {
           "name": "Spremenljivke"
         },
         "variables_3/csd/2022": {
           "name": "Spremenljivke"
+        },
+        "sprites/csd/2022": {
+          "name": "liki"
+        },
+        "sprites_1/csd/2022": {
+          "name": "liki"
         },
         "text/csd/2022": {
           "name": "Besedilo"
@@ -392,14 +416,13 @@
         "vocabulary_3/csd/2017": {
           "name": "Slovar"
         },
-        "unplugged-video-for-loop-fun/coursef/2021": {
-          "name": "Zabava s \"for\" zankami"
+        "list_of_poems_1/poem-art/unversioned": {
+          "name": "",
+          "url": "",
+          "type": ""
         },
-        "lesson-in-action-for-loop-fun/coursef/2021": {
-          "name": "Zabava s \"for\" zankami"
-        },
-        "csf-for-loop-fun-worksheet/coursef/2021": {
-          "name": "Zabava s \"for\" zankami"
+        "implementation_guide/coursef/2021": {
+          "name": "Vodnik za implementacijo"
         },
         "activity-answer-for-loop-fun/coursef/2021": {
           "name": "Zabava s \"for\" zankami"
@@ -407,16 +430,25 @@
         "csf-for-loop-fun-assessment/coursef/2021": {
           "name": "Zabava s \"for\" zankami"
         },
-        "unplugged-video-internet/coursef/2021": {
+        "csf-for-loop-fun-worksheet/coursef/2021": {
+          "name": "Zabava s \"for\" zankami"
+        },
+        "lesson-in-action-for-loop-fun/coursef/2021": {
+          "name": "Zabava s \"for\" zankami"
+        },
+        "unplugged-video-for-loop-fun/coursef/2021": {
+          "name": "Zabava s \"for\" zankami"
+        },
+        "assessment-answer-internet/coursef/2021": {
           "name": "Internet"
         },
         "csf-internet-assessment/coursef/2021": {
           "name": "Internet"
         },
-        "assessment-answer-internet/coursef/2021": {
+        "unplugged-video-internet/coursef/2021": {
           "name": "Internet"
         },
-        "implementation_guide/coursef/2021": {
+        "implementation_guide/courseb/2021": {
           "name": "Vodnik za implementacijo"
         },
         "mimi-activity/courseb/2021": {
@@ -434,16 +466,16 @@
         "pair-programming-vid/courseb/2021": {
           "name": "Programiranje parov"
         },
-        "unplugged-video-big-event/courseb/2021": {
+        "assessment-answer-big-event/courseb/2021": {
           "name": "Veliki dogodek"
         },
         "csf-the-big-event-assessment/courseb/2021": {
           "name": "Veliki dogodek"
         },
-        "assessment-answer-big-event/courseb/2021": {
+        "unplugged-video-big-event/courseb/2021": {
           "name": "Veliki dogodek"
         },
-        "implementation_guide/courseb/2021": {
+        "implementation_guide/coursea/2021": {
           "name": "Vodnik za implementacijo"
         },
         "pair-programming-vid/coursea/2021": {
@@ -452,25 +484,19 @@
         "unplugged-video-happy-maps/coursea/2021": {
           "name": "Veseli zemljevidi"
         },
-        "unplugged-video-big-event/coursea/2021": {
+        "assessment-answer-big-event/coursea/2021": {
           "name": "Veliki dogodek"
         },
         "csf-the-big-event-assessment/coursea/2021": {
           "name": "Veliki dogodek"
         },
-        "assessment-answer-big-event/coursea/2021": {
+        "unplugged-video-big-event/coursea/2021": {
           "name": "Veliki dogodek"
         },
-        "implementation_guide/coursea/2021": {
+        "implementation_guide/coursec/2021": {
           "name": "Vodnik za implementacijo"
         },
         "csf-mrf-cup-spacing/coursec/2021": {
-          "name": "Moji robotski prijatelji"
-        },
-        "csf-mrf-symbol-key/coursec/2021": {
-          "name": "Moji robotski prijatelji"
-        },
-        "unplugged-video-robotic-friends/coursec/2021": {
           "name": "Moji robotski prijatelji"
         },
         "csf-mrf-cup-stacking-ideas/coursec/2021": {
@@ -479,77 +505,80 @@
         "csf-mrf-paper-trapezoid-template/coursec/2021": {
           "name": "Moji robotski prijatelji"
         },
+        "csf-mrf-symbol-key/coursec/2021": {
+          "name": "Moji robotski prijatelji"
+        },
+        "unplugged-video-robotic-friends/coursec/2021": {
+          "name": "Moji robotski prijatelji"
+        },
         "pair-programming-vid/coursec/2021": {
           "name": "Programiranje parov"
         },
-        "unplugged-video-big-event/coursec/2021": {
+        "assessment-answer-big-event/coursec/2021": {
           "name": "Veliki dogodek"
         },
         "csf-the-big-event-assessment/coursec/2021": {
           "name": "Veliki dogodek"
         },
-        "assessment-answer-big-event/coursec/2021": {
+        "unplugged-video-big-event/coursec/2021": {
           "name": "Veliki dogodek"
         },
-        "implementation_guide/coursec/2021": {
+        "implementation_guide/coursed/2021": {
           "name": "Vodnik za implementacijo"
         },
-        "graph-paper-programming/coursed/2021": {
-          "name": "Obarvajmo kvadratke"
-        },
-        "unplugged-video-graph-paper/coursed/2021": {
-          "name": "Obarvajmo kvadratke"
-        },
-        "lesson-in-action-graph-paper/coursed/2021": {
-          "name": "Obarvajmo kvadratke"
-        },
         "activity-answer-graph-paper/coursed/2021": {
-          "name": "Obarvajmo kvadratke"
-        },
-        "csf-graph-paper-programming-assessment/coursed/2021": {
           "name": "Obarvajmo kvadratke"
         },
         "assessment-answer-graph-paper/coursed/2021": {
           "name": "Obarvajmo kvadratke"
         },
+        "csf-graph-paper-programming-assessment/coursed/2021": {
+          "name": "Obarvajmo kvadratke"
+        },
+        "graph-paper-programming/coursed/2021": {
+          "name": "Obarvajmo kvadratke"
+        },
+        "lesson-in-action-graph-paper/coursed/2021": {
+          "name": "Obarvajmo kvadratke"
+        },
+        "unplugged-video-graph-paper/coursed/2021": {
+          "name": "Obarvajmo kvadratke"
+        },
         "pair-programming-vid/coursed/2021": {
           "name": "Programiranje parov"
         },
-        "relay-programming-assessment-answer-key/coursed/2021": {
+        "csf-relay-programming-activity-packet/coursed/2021": {
           "name": "Relejsko programiranje"
         },
         "relay-assessment/coursed/2021": {
           "name": "Relejsko programiranje"
         },
-        "relay-programming-teacher-debugging/coursed/2021": {
+        "relay-programming-assessment-answer-key/coursed/2021": {
           "name": "Relejsko programiranje"
         },
-        "unplugged-video-relay-programming/coursed/2021": {
+        "relay-programming-teacher-debugging/coursed/2021": {
           "name": "Relejsko programiranje"
         },
         "teacher-video-relay-programming-2/coursed/2021": {
           "name": "Relejsko programiranje"
         },
-        "csf-relay-programming-activity-packet/coursed/2021": {
+        "unplugged-video-relay-programming/coursed/2021": {
           "name": "Relejsko programiranje"
         },
-        "unplugged-video-conditionals-cards/coursed/2021": {
-          "name": "Pogojniki s kartami"
-        },
-        "lesson-in-action-conditional-cards/coursed/2021": {
-          "name": "Pogojniki s kartami"
-        },
-        "csf-conditionals-with-cards-assessment/coursed/2021": {
+        "assessment-answer-conditionals-cards/coursed/2021": {
           "name": "Pogojniki s kartami"
         },
         "conditionals-with-cards-assessment-video/coursed/2021": {
           "name": "Pogojniki s kartami"
         },
-        "assessment-answer-conditionals-cards/coursed/2021": {
+        "csf-conditionals-with-cards-assessment/coursed/2021": {
           "name": "Pogojniki s kartami"
         },
-        "implementation_guide/coursed/2021": {
-          "name": "Vodnik za implementacijo"
+        "lesson-in-action-conditional-cards/coursed/2021": {
+          "name": "Pogojniki s kartami"
+        },
+        "unplugged-video-conditionals-cards/coursed/2021": {
+          "name": "Pogojniki s kartami"
         },
         "pair_programming/express/2021": {
           "name": "Programiranje parov"
@@ -568,6 +597,9 @@
         },
         "variables_1/csd/2021": {
           "name": "Spremenljivke"
+        },
+        "sprites_1/csd/2021": {
+          "name": "liki"
         },
         "calling_and_defining_functions/csd/2021": {
           "name": "Funkcije"

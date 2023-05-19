@@ -9,22 +9,98 @@
           "name": "Game Lab",
           "categories": {
             "game_lab": {
-              "name": "Game Lab"
+              "name": "Game Lab",
+              "expressions": {
+                "mouseWentDown": {
+                  "examples": {
+                    "Black and White": {
+                      "name": "Zwart-wit"
+                    }
+                  }
+                },
+                "playSound": {
+                  "short_description": "Speelt het MP3-geluidsbestand via de opgegeven URL."
+                }
+              }
             },
             "sprites": {
-              "name": "Sprites"
+              "name": "Sprites",
+              "expressions": {
+                "getSpeed": {
+                  "examples": {
+                    "Spiral": {
+                      "name": "Spiraal"
+                    }
+                  }
+                }
+              }
             },
             "groups": {
-              "name": "Groepen"
+              "name": "Groepen",
+              "expressions": {
+                "setColorEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Kleur"
+                    }
+                  }
+                },
+                "setTintEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Kleur"
+                    }
+                  }
+                }
+              }
             },
             "drawing": {
-              "name": "Tekenen"
+              "name": "Tekenen",
+              "expressions": {
+                "shape": {
+                  "examples": {
+                    "Star": {
+                      "name": "Ster"
+                    }
+                  }
+                }
+              }
             },
             "math": {
-              "name": "wiskundige"
+              "name": "wiskundige",
+              "expressions": {
+                "randomNumber": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Het minimum getal geretourneerd"
+                    },
+                    "max": {
+                      "description": "Het maximum getal geretourneerd"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Het minimum getal geretourneerd"
+                    },
+                    "max": {
+                      "description": "Het maximum getal geretourneerd"
+                    }
+                  }
+                }
+              }
             },
             "variables": {
-              "name": "Variabelen"
+              "name": "Variabelen",
+              "expressions": {
+                "assign_x": {
+                  "short_description": "Geeft een waarde aan een bestaande variabele. Bijvoorbeeld: x = 0;"
+                },
+                "declareAssign_x": {
+                  "short_description": "Declareert een variabele met de naam die na het woordje 'var' komt en wijst er de waarde aan rechterzijde van de expressie aan toe"
+                }
+              }
             },
             "functions": {
               "name": "Functies"
@@ -35,14 +111,194 @@
           "name": "App Lab",
           "description": "App Lab is een programmeeromgeving waarmee je simpele apps kan maken. Ontwerp een app, programmeer met blokken of JavaScript om het te laten werken, en deel je app dan in een paar seconden.",
           "categories": {
+            "ui_controls": {
+              "expressions": {
+                "onEvent": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Functie"
+                    }
+                  }
+                },
+                "playSound": {
+                  "short_description": "Speelt het MP3-geluidsbestand via de opgegeven URL."
+                }
+              }
+            },
+            "canvas": {
+              "expressions": {
+                "getAlpha": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "object"
+                    }
+                  }
+                },
+                "getBlue": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "object"
+                    }
+                  }
+                },
+                "getGreen": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "object"
+                    }
+                  }
+                },
+                "getRed": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "object"
+                    }
+                  }
+                },
+                "putImageData": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "object"
+                    }
+                  }
+                },
+                "setAlpha": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "object"
+                    }
+                  }
+                },
+                "setBlue": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "object"
+                    }
+                  }
+                },
+                "setGreen": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "object"
+                    }
+                  }
+                },
+                "setRGB": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "object"
+                    }
+                  }
+                },
+                "setRed": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "object"
+                    }
+                  }
+                }
+              }
+            },
             "data": {
-              "name": "Data"
+              "name": "Data",
+              "expressions": {
+                "createRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "object"
+                    }
+                  }
+                },
+                "deleteRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "object"
+                    }
+                  }
+                },
+                "drawChart": {
+                  "palette_params": {
+                    "options": {
+                      "type": "object"
+                    }
+                  }
+                },
+                "drawChartFromRecords": {
+                  "palette_params": {
+                    "options": {
+                      "type": "object"
+                    }
+                  }
+                },
+                "getPrediction": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Functie"
+                    }
+                  }
+                },
+                "readRecords": {
+                  "palette_params": {
+                    "terms": {
+                      "type": "object"
+                    }
+                  }
+                },
+                "updateRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "object"
+                    }
+                  }
+                }
+              }
+            },
+            "control": {
+              "expressions": {
+                "timedLoop": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Functie"
+                    }
+                  }
+                }
+              }
             },
             "math": {
-              "name": "wiskundige"
+              "name": "wiskundige",
+              "expressions": {
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Het minimum getal geretourneerd"
+                    },
+                    "max": {
+                      "description": "Het maximum getal geretourneerd"
+                    }
+                  }
+                },
+                "randomNumber": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Het minimum getal geretourneerd"
+                    },
+                    "max": {
+                      "description": "Het maximum getal geretourneerd"
+                    }
+                  }
+                }
+              }
             },
             "variables": {
-              "name": "Variabelen"
+              "name": "Variabelen",
+              "expressions": {
+                "declareAssign_x": {
+                  "short_description": "Declareert een variabele met de naam die na het woordje 'var' komt en wijst er de waarde aan rechterzijde van de expressie aan toe"
+                },
+                "addPair": {
+                  "return_value": "Geen"
+                }
+              }
             },
             "functions": {
               "name": "Functies"

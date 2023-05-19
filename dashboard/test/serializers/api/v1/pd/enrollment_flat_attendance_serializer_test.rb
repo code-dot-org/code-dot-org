@@ -165,7 +165,7 @@ class Api::V1::Pd::EnrollmentFlatAttendanceSerializerTest < ::ActionController::
   end
 
   test 'extract school and teacher info when they present' do
-    enrollment = build :pd_enrollment, role: 'Classroom Teacher', grades_teaching: ['Grade 6-8']
+    enrollment = create :pd_enrollment, role: 'Classroom Teacher', grades_teaching: ['Grade 6-8']
     expected = {
       district_name: enrollment.school_info.school_district.name,
       school: enrollment.school_info.school.name,
@@ -178,7 +178,13 @@ class Api::V1::Pd::EnrollmentFlatAttendanceSerializerTest < ::ActionController::
   end
 
   test 'extract school and teacher info when they are empty' do
-    enrollment = build :pd_enrollment, school_info: (build :school_info_us)
+    enrollment = build(
+      :pd_enrollment,
+      # Don't persist school info; it's too empty to pass validation.
+      school_info: build(:school_info_us),
+      # Do persist workshop; the serializer needs valid sessions.
+      workshop: create(:workshop)
+    )
     expected = {
       district_name: nil,
       school: nil,

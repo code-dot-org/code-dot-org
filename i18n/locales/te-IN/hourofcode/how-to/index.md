@@ -1,51 +1,49 @@
 ---
-title: Hour of Code How-to Guide
+title: అవర్ ఆఫ్ కోడ్ మార్గదర్శనం చేయడమెలా
 ---
 
 {{ signup_button }}
 
 # How to plan your Hour of Code
 
-### Join the movement and introduce your students to computer science with these steps.
+### ఉద్యమంలో చేరండి మరియు ఈ దశలతో మీ విద్యార్థుల్ని కంప్యూటర్ సైన్స్ కి పరిచయం చేయండి.
 
-Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it. By starting early, they’ll have a foundation for success in any 21st-century career path.
+ఈరోజు విద్యార్థులు టెక్నాలజీని ఎలా క్రియేట్ చేయాలో నేర్చుకోవాలి, కేవలం దాన్ని ఉపయోగించుకోవడం మాత్రమే కాదు.
 
-Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time, and it fits perfectly for both in-class and after-school settings. Take a look at our [participation guide if you still have questions]({{ localized_files/participation_guide }}).
+విద్యార్థుల్ని కంప్యూటర్ సైన్సుకు పరిచయం చేయడానికి ఒక అవర్ ఆఫ్ కోడ్ ప్రయత్నించడం సులువు మరియు సరదా మార్గము, బహుశా మొట్టమొదటి సారిగా! మీ అమరికకు కుదురుబాటయ్యే ఒక కార్యక్రమాన్ని కనుగొనండి, తరగతిలో ఐనా, బడి-తర్వాత ఐనా, మౌఖికంగా లేదా వర్చువల్ గా. మా [పాల్గొనుటకు మార్గదర్శిని ఒకసారి చూడండి, ఈ దిగువ దశల్ని చూసుకున్న తర్వాత మీకు ఇంకా ప్రశ్నలు ఉంటే]({{ localized_files/participation_guide }}):
 
-- [Watch the Hour of Code how-to video](#how-to-video)
-- [Explore activities and tutorials](#explore-activities)
-- [Create your plan for the day](#create-your-plan)
+- [అవర్ ఆఫ్ కోడ్ చేయడమెలా-వీడియోను చూడండి ](#how-to-video)
+- [కార్యక్రమాలు మరియు బోధనలను అన్వేషించండి ](#explore-activities)
+- [రోజుకు మీ ప్రణాళికను సృష్టించుకోండి](#create-your-plan)
 - [Promote your Hour of Code](#promote-your-hour)
-- [How to start your Hour of Code strong](#how-to-start)
-- [Get coding](#code)
-- [Celebrate your students' success](#celebrate)
+- [మీ అవర్ ఆఫ్ కోడ్ బలంగా మొదలుపెట్టడమెలా](#how-to-start)
+- [కోడింగ్ పొందండి](#code)
+- [మీ విద్యార్థుల విజయ సంబరాలను జరుపుకోండి](#celebrate)
 - [Other Hour of Code resources for educators](#other-resources)
-
-### An Hour of Code can also be hosted remotely! To get started, check out our [tips for hosting a virtual Hour of Code event](https://hourofcode.com/us/how-to/virtual).
 
 * * *
 
 <a id="how-to-video"></a>
 
-## 1. Watch the Hour of Code how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
+## 1. అవర్ ఆఫ్ కోడ్ చేయడమెలా-వీడియోను చూడండి  <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 * * *
 
 <a id="explore-activities"></a>
 
-## 2. Explore activities and tutorials
+## 2. కార్యక్రమాలు మరియు బోధనలను అన్వేషించండి 
 
 We provide a variety of fun, [student-guided tutorials]({{ urls/learn }}) for all age groups and experience levels. It’s popular for students to try self-led tutorials, though many activities include lesson plans for teachers to guide discussion or extend the activity as well.
 
 Explore the activities and decide ahead of time if you want to choose a single tutorial for all of your students, or let each child pick their own.
 
-[![](/images/fit-600/tutorials.png)]({{ urls/learn }})
+[![](/images/tutorials.png)]({{ urls/learn }})
 
 * * *
 
 <a id="create-your-plan"></a>
 
-## 3. Create your plan for the day
+## 3. రోజుకు మీ ప్రణాళికను సృష్టించుకోండి
 
 ### Think about your technology needs - computers are optional!
 
@@ -58,13 +56,13 @@ Explore the activities and decide ahead of time if you want to choose a single t
 
 ### Pick a day and time
 
-People around the world join in the Hour of Code celebration during CS Education Week (December 9-13) when the latest tutorials and activities are released. But you can do an Hour of Code any day of the year!
+ప్రపంచవ్యాప్తంగా ప్రజలు CS విద్యా వారోత్సవాల (డిసెంబర్ 5-11) సందర్భంగా అవర్ ఆఫ్ కోడ్ సంబరాలలో పాల్గొంటారు, అప్పుడు అత్యంత తాజా ట్యుటోరియల్స్ మరియు కార్యక్రమాలు విడుదల చేయబడతాయి. But you can do an Hour of Code any day of the year!
 
 * * *
 
 <a id="promote-your-hour"></a>
 
-## 4. Promote your Hour of Code
+## 4. మీ అవర్ ఆఫ్ కోడ్ ని ప్రోత్సహించండి
 
 Now that you've planned your event, it's time to start promoting it!
 
@@ -74,11 +72,11 @@ Promote the Hour of Code to other teachers who may want to join in on the fun! T
 
 ### Let Volunteers Know by Registering Your Event
 
-When you [sign-up your Hour of Code event](/), you’ll receive helpful email communications with news and tips for hosting a successful Hour of Code. It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
+మీరు [మీ అవర్ ఆఫ్ కోడ్ ఈవెంటుకు సైనప్ చేసినప్పుడు](/#join), విజయవంతమయ్యే అవర్ ఆఫ్ కోడ్ కు ఆతిథ్యమివ్వడానికి వార్తలు మరియు చిట్కాలతో మీరు సహాయకరమైన ఇమెయిల్ కమ్యూనికేషన్లు అందుకుంటారు. It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
 
 ### Get your Students Excited
 
-Lead up to the event by sharing [inspirational videos](/promote/resources) highlighting diverse people and creative ways that computer science can be used. Or order inspirational posters for your classroom! Students are more excited to participate in a subject when they see people who look like them encouraging it.
+Lead up to the event by sharing [inspirational videos](/promote/resources) highlighting diverse people and creative ways that computer science can be used. లేదా మీ తరగతిగది కోసం స్ఫూర్తిదాయకమైన పోస్టర్లు ముద్రించండి! Students are more excited to participate in a subject when they see people who look like them encouraging it.
 
 {{ promote_new_posters }}
 
@@ -88,7 +86,7 @@ Learn more about posters, videos, stickers and other ways to [promote your event
 
 <a id="how-to-start"></a>
 
-## 5. How to start your Hour of Code strong
+## 5. మీ అవర్ ఆఫ్ కోడ్ బలంగా మొదలుపెట్టడమెలా
 
 Once your Hour of Code celebration has arrived, make sure you start your event strong with some of these tools and tips.
 
@@ -99,25 +97,25 @@ Show an inspirational video:
 - The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh. (There are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions available)
 - Find more inspirational [resources]({{ urls/inspire }}) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-It’s okay if both you and your students are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:
+మీరు మరియు మీ విద్యార్థులు ఉభయులూ కంప్యూటర్ సైన్సుకు సరికొత్తవారు అయినా పరవాలేదు. మీ అవర్ ఆఫ్ కోడ్ కార్యక్రమాన్ని పరిచయం చేయడానికి ఇక్కడ కొన్ని ఉపాయాలు ఉన్నాయి:
 
 - Explain ways that technology impacts our lives, with examples both boys and girls will care about (talk about saving lives, helping people, connecting people, etc.).
 - As a class, list things that use code in everyday life.
-- See tips for getting young women interested in computer science [here]({{ urls/girls }}).
+- కంప్యూటర్ సైన్స్ లో ఆసక్తి ఉన్న యువతులను తీసుకురావడానికి చిట్కాలను చూడండి [ఇక్కడ]({{ urls/girls }}).
 
 * * *
 
 <a id="code"></a>
 
-## 6. Get coding!
+## 6. కోడింగ్ పొందండి!
 
 Direct students to the activity
 
-- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
+- ఒక వైట్ బోర్డుపై ట్యుటోరియల్ లింక్ వ్రాయండి. మీరు ఎంపిక చేసుకున్న ట్యుటోరియల్ కొరకు [ సమాచారముపై వ్రాయబడిన లింక్ కనుగొనండి]({{ urls/learn }}).
 
 When your students come across difficulties it's okay to respond:
 
-- “I don’t know. Let’s figure this out together.”
+- “నాకు తెలియదు. మనం కలిసి దీన్ని కనుగొందాం.”
 - “Technology doesn’t always work out the way we want.”
 - “Learning to program is like learning a new language; you won’t be fluent right away.”
 
@@ -130,7 +128,7 @@ What if a student finishes early?
 
 <a id="celebrate"></a>
 
-## 7. Celebrate your students' success
+## 7. మీ విద్యార్థుల విజయ సంబరాలను జరుపుకోండి
 
 [col-33]
 
@@ -140,20 +138,19 @@ What if a student finishes early?
 
 - [Print certificates]({{ urls/certificates }}) for your students.
 - [Print "I did an Hour of Code!"]({{ urls/promote_stickers }}) stickers for your students.
-- [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for your school.
 - Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
 
 * * *
 
 <a id="other-resources"></a>
 
-## Other Hour of Code resources for educators:
+## విద్యాబోధకుల కొరకు ఇతర అవర్ ఆఫ్ కోడ్ వనరులు:
 
 - Visit the [Hour of Code Teacher Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other educators.
 - Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
 
 ### What comes after the Hour of Code?
 
-Computer science doesn’t have to end with the Hour of Code! Our curriculum is web-based and free to use, forever. [Learn how](/beyond) to bring CS to your school and students.
+అవర్ ఆఫ్ కోడ్ తో కంప్యూటర్ సైన్స్ ముగిసిపోవాల్సిన అవసరం లేదు! [మీ స్కూల్ మరియు విద్యార్థులకు](/beyond) CS ఎలా తీసుకురావాలో తెలుసుకోండి.
 
 {{ signup_button }}

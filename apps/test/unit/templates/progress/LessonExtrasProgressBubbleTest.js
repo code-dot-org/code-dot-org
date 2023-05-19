@@ -9,7 +9,7 @@ import * as utils from '@cdo/apps/utils';
 const defaultProps = {
   lessonExtrasUrl: '/extras',
   isPerfect: false,
-  isSelected: false
+  isSelected: false,
 };
 
 describe('LessonExtrasProgressBubble', () => {

@@ -27,6 +27,7 @@ module ViewOptionsHelper
     :game_display_name,
     :app_name,
     :script_name,
+    :unit_year,
     :lesson_position,
     :level_position,
     :public_caching,

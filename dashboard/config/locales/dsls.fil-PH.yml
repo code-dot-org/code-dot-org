@@ -2040,12 +2040,12 @@ fil-PH:
           pinapagana ang iyong simulasyon. Maaari mong bilangin ang mga halimaw na
           nagkakasakit o gumamit ng isang timer upang makita kung gaano kabilis mangyari
           ang mga bagay. Halimbawa, gaano katagal upang magkasakit ang lahat ng mga
-          halimaw kung wala silang mga mask? \n\n## Paggawa ng Mga Prediksiyon\nKung
-          naiintindihan mo ang iyong modelo, maaari mo itong gamitin upang makagawa
-          ng mga prediksiyon. Maaari mo ring baguhin kung paano gumana ang simulasyon
-          mo at hulaan kung ano ang ibang mangyayari. Halimbawa:\n* Ano ang mangyayari
-          kung merong mas maraming mga halimaw?\n* Ano ang mangyayari kung ang mga
-          halimaw ay gumalaw sa kalahating bilis?\n\n<img src=\"https://images.code.org/2e83373ffd346ce3f42917a0624d441c-image-1603749526420.png\"
+          halimaw kung wala silang mga mask? \n\n## Paggawa ng Mga Hula\nKung naiintindihan
+          mo ang iyong modelo, maaari mo itong gamitin upang makagawa ng mga hula.
+          Maaari mo ring baguhin kung paano gumana ang simulasyon mo at hulaan kung
+          ano ang ibang mangyayari. Halimbawa:\n* Ano ang mangyayari kung merong mas
+          maraming mga halimaw?\n* Ano ang mangyayari kung ang mga halimaw ay gumalaw
+          sa kalahating bilis?\n\n<img src=\"https://images.code.org/2e83373ffd346ce3f42917a0624d441c-image-1603749526420.png\"
           style=\"float:right\">\n\n## Ang Monster Town ba ay tulad ng totoong mundo?\nMerong
           limitasyon sa anumang modelo sa kung gaano ito maaring maging makatotohanan.
           \n* Ano ang pagkakatulad ng iyong simulasyon ng pagsiklab sa mga totoong
@@ -2064,70 +2064,150 @@ fil-PH:
         content1: paglalarawan dito
       courseC_multi_artist_prog6_predict1_2021:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: Guguhit ang artist ng tatsulok na may tatlong pantay na gilid.
+          feedback: Mali. Ang artist ay gumuguhit ng parisukat.
+        - text: Ang artist ay guguhit ng isang linya.
+          feedback: Mali. Ang artist ay gumuguhit ng parisukat.
+        - text: Ang artist ay guguhit ng isang parisukat.
+          correct: true
+          feedback: Tama!
+        - text: Ang artist ay guguhit ng pentagon
+          feedback: Mali. Ang artist ay guguhit ng parisukat.
         questions:
-        - {}
+        - text: Tingnang mabuti ang code sa ibaba. Ano ang mangyayari kapag na-click
+            mo ang "Run"?
       courseC_multi_harvester_loops11_predict1_2021:
         answers:
         - text: '4'
+          feedback: Mali. Ang magsasaka ay mangolekta ng 4 na kalabasa sa bawat isa
+            sa 3 mga loop. 4 beses ang 3 ay 12!
         - text: '12'
           correct: true
+          feedback: Tama!
         - text: '15'
+          feedback: Mali. Ang magsasaka ay mangolekta ng 4 na kalabasa sa bawat isa
+            sa 3 mga loop. 4 beses ang 3 ay 12!
         - text: '20'
+          feedback: Mali. Ang magsasaka ay mangolekta ng 4 na kalabasa sa bawat isa
+            sa 3 mga loop. 4 beses ang 3 ay 12!
         questions:
-        - {}
+        - text: Tingnang mabuti ang code sa ibaba. Ilang kalabasa ang makokolekta
+            ng magsasaka pagkatapos mong i-click ang "Run"?
       courseC_multi_maze_debugging8_predict1_2021:
         answers:
-        - {}
-        - correct: true
-        - correct: true
-        - {}
+        - text: Maaabot ni Scrat ang acorn. Walang mga bug sa code.
+          feedback: Mali. Una, lumiliko si Scrat sa maling direksiyon, pagkatapos
+            ay hindi umuusad si Scrat ng sapat na beses upang maabot ang acorn.
+        - text: Hindi maaabot ni Scrat ang acorn dahil siya ay lumiko sa maling daan.
+          correct: true
+          feedback: Tama! Una, lumiliko si Scrat sa maling direksiyon, pagkatapos
+            ay hindi umuusad si Scrat ng sapat na beses upang maabot ang acorn.
+        - text: Hindi maaabot ni Scrat ang acorn dahil walang sapat na `sumulong`
+            na mga block.
+          correct: true
+          feedback: Tama! Una, lumiliko si Scrat sa maling direksiyon, pagkatapos
+            ay hindi umuusad si Scrat ng sapat na beses upang maabot ang acorn.
+        - text: Si Scrat ay hindi lilipat sa unang block.
+          feedback: Mayroong dalawang mga bug sa code na ito. Una, lumiliko si Scrat
+            sa maling direksiyon, pagkatapos ay hindi umuusad si Scrat ng sapat na
+            beses upang maabot ang acorn.
         questions:
-        - {}
+        - text: Maghanap ng mga bug sa code na ito. Maaabot ba ni Scrat ang acorn
+            o may problema?
       courseC_multi_maze_programming8_predict1_2021:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Ang ibon ay matatapos ng isang hakbang na kulang sa baboy.
+          feedback: Mali. Ang code na ito ay ganap na napapunta ang ibon sa baboy.
+        - text: Makakapunta ang ibon sa baboy.
+          correct: true
+          feedback: Tama!
+        - text: Tatama ang ibon sa TNT.
+          feedback: Mali. Ang code na ito ay ganap na napapunta ang ibon sa baboy.
+        - text: Tatama ang ibon sa pader.
+          feedback: Mali. Ang code na ito ay ganap na napapunta ang ibon sa baboy.
         questions:
-        - {}
+        - text: Basahin nang mabuti ang code sa ibaba. Ano ang mangyayari kapag na-click
+            mo ang "Run"?
       courseC_multi_starWars_predict1_2021:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: Hindi gagalaw si BB-8.
+          feedback: Mali. Ang paulit-ulit na block ay gagawing pasulong si BB-8 ng
+            5 beses.
+        - text: Si BB-8 ay gagalaw lamang ng isang agwat
+          feedback: Mali. Ang paulit-ulit na block ay gagawing pasulong si BB-8 ng
+            5 beses.
+        - text: Si BB-8 ay lilipat ng 5 beses at makukuha ang lahat ng scrap metal
+          correct: true
+          feedback: Tama!
+        - text: Si BB-8 ay tatakbo lamang ng tatlong agwat.
+          feedback: Mali. Ang paulit-ulit na block ay gagawing pasulong si BB-8 ng
+            5 beses.
         questions:
-        - {}
+        - text: Ano sa tingin mo ang mangyayari kapag na-click mo ang "Run"?
       courseC_multi_starWars_predict2_2021:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Si BB-8 ay maglalakbay nang napakalayo sa unang loop.
+          feedback: Mali. Hinahayaan lang ng unang loop si BB-8 na sumulong ng 2 puwang,
+            kapag kailangan nitong sumulong ng 3 puwang.
+        - text: Hindi sapat ang lalakbayin ni BB-8 sa unang loop upang makuha ang
+            lahat ng scrap metal.
+          correct: true
+          feedback: Tama!
+        - text: Kokolektahin ni BB-8 ang lahat ng scrap metal nang walang mga problema.
+          feedback: Mali. Hinahayaan lang ng unang loop si BB-8 na sumulong ng 2 puwang,
+            kapag kailangan nitong sumulong ng 3 puwang.
+        - text: Si BB-8 ay liliko sa maling direksiyon pagkatapos ng unang loop.
+          feedback: Mali. Hinahayaan lang ng unang loop si BB-8 na sumulong ng 2 puwang,
+            kapag kailangan nitong sumulong ng 3 puwang.
         questions:
-        - {}
+        - text: Tingnang mabuti ang code sa ibaba. Ano ang mangyayari kapag na-click
+            mo ang "Run"?
       courseD_multi_artist_nestedLoops9_predict1_2021:
         answers:
         - text: A
           correct: true
+          feedback: Tama!
         - text: B
+          feedback: Mali. Ang panloob na loop ay gumagawa ng pentagon, at ang panlabas
+            na loop ay inuulit ito ng 4 na beses sa bilog.
         - text: C
-        - {}
+          feedback: Mali. Ang panloob na loop ay gumagawa ng pentagon, at ang panlabas
+            na loop ay inuulit ito ng 4 na beses sa bilog.
+        - text: Wala sa anumang nabanggit
+          feedback: Mali. Ang panloob na loop ay gumagawa ng pentagon, at ang panlabas
+            na loop ay inuulit ito ng 4 na beses sa bilog.
         questions:
-        - {}
+        - text: Tingnang mabuti ang code sa ibaba. Aling pagguhit ang gagawin ng program
+            na ito kapag na-click mo ang "Run"?
+        markdown: |-
+          <table>
+          <tr><td>A</td><td><img src="https://images.code.org/cfc3f8206438a60afe3be9afe7fc0a22-image-1489118742610.10.15.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>B</td><td><img src="https://images.code.org/975b027684d2f5411b960bf82987663e-image-1489119999013.11.13.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>C</td><td><img src="https://images.code.org/635ac54ed7cb2e2d24eb341b3ec4eecb-image-1489120024059.12.00.png" width="80px" style="mix-blend-mode: multiply; clip: rect(0px,0px,0px,40px);"/></td></tr>
+          </table>
+
+          <br/><br/>
       courseD_multi_bee_conditionals1_predict1_2021:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Ang bubuyog ay lilipat sa ulap at susubukan na makakuha ng nektar,
+            anuman ang mangyari.
+          feedback: Mali. Tinitiyak ng `kung sa bulaklak` na block na susubukan lamang
+            ng bubuyog na makakuha ng nektar kung may bulaklak sa ilalim ng ulap.
+        - text: Ang bubuyog ay lilipat sa ulap at susubukan lamang na makakuha ng
+            nektar kung may bulaklak sa ilalim.
+          correct: true
+          feedback: Tama!
+        - text: Ang bubuyog ay lilipat sa ulap at pagkatapos ay walang gagawin, anuman
+            ang mangyari.
+          feedback: Mali. Tinitiyak ng `kung sa bulaklak` na block na susubukan ng
+            bubuyog na makakuha ng nektar kung may bulaklak sa ilalim ng ulap.
+        - text: Ang bubuyog ay hindi makakarating sa ulap.
+          feedback: Mali. Tinitiyak ng `kung sa bulaklak` na block na susubukan lamang
+            ng bubuyog na makakuha ng nektar kung may bulaklak sa ilalim ng ulap.
         questions:
-        - {}
+        - text: Hinaharang ng ulap ang tanawin. Maaaring may bulaklak sa ilalim ng
+            ulap na ito. Kung mayroong bulaklak, ang bubuyog ay kailangang mangolekta
+            ng nektar nang isang beses. Kung walang bulaklak ang bubuyog ay walang
+            gagawin. Tingnang mabuti ang code sa ibaba. Ano sa tingin mo ang mangyayari
+            pagkatapos mong i-click ang "Run"?
       courseD_multi_bee_conditionals1_predict1_dani:
         answers:
         - {}
@@ -2138,93 +2218,211 @@ fil-PH:
         - {}
       courseD_multi_bee_conditionals7_predict2_2021:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: Ang bubuyog ay makakakuha ng nektar sa bawat bulaklak at gagawa ng
+            pulot sa bawat pulot-pukyutan.
+          correct: true
+          feedback: Tama!
+        - text: Susubukan ng bubuyog na makakuha ng nektar sa parehong mga bulaklak
+            at pulot-pukyutan.
+          feedback: Mali. Ang `kung sa bulaklak` na block ay nagbibigay-daan sa bubuyog
+            na makakuha ng nektar sa bawat bulaklak at gumawa ng pulot sa bawat pulot-pukyutan.
+        - text: Susubukan ng bubuyog na makakuha ng pulot sa parehong mga bulaklak
+            at pulot-pukyutan.
+          feedback: Mali. Mali. Ang `kung sa bulaklak` na block ay nagbibigay-daan
+            sa bubuyog na makakuha ng nektar sa bawat bulaklak at gumawa ng pulot
+            sa bawat pulot-pukyutan..
+        - text: Susubukan ng bubuyog na makakuha ng pulot at nektar sa parehong mga
+            bulaklak at pulot-pukyutan.
+          feedback: Mali. Mali. Ang `kung sa bulaklak` na block ay nagbibigay-daan
+            sa bubuyog na makakuha ng nektar sa bawat bulaklak at gumawa ng pulot
+            sa bawat pulot-pukyutan..
         questions:
-        - {}
+        - text: 'Tingnang mabuti ang code sa ibaba. Ano sa tingin mo ang mangyayari
+            pagkatapos mong i-click ang "Run"? Tandaan: magkakaroon lamang ng *isang*
+            pulot-pukyutan o *isang* bulaklak sa likod ng bawat ulap.'
       courseD_multi_bee_nestedLoops2_predict1_2021:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: Ang bubuyog ay susulong at makakakuha ng nektar ng isang beses lamang.
+          feedback: Mali. Ang bubuyog ay nag-loop sa naka-loop na aksiyon ng paglipat
+            ng pasulong at pagkolekta ng nektar, na nagbibigay-daan dito upang malutas
+            ang palaisipan.
+        - text: Ang bubuyog ay makakakuha lamang ng 2 yunit ng nektar.
+          feedback: Mali. Ang bubuyog ay nag-loop sa naka-loop na aksiyon ng paglipat
+            ng pasulong at pagkolekta ng nektar, na nagbibigay-daan dito upang malutas
+            ang palaisipan.
+        - text: Makukuha ng bubuyog ang lahat ng nektar.
+          correct: true
+          feedback: Tama!
+        - text: Ang bubuyog ay liliko sa maling direksiyon.
+          feedback: Mali. Ang bubuyog ay nag-loop sa naka-loop na aksiyon ng paglipat
+            ng pasulong at pagkolekta ng nektar, na nagbibigay-daan dito upang malutas
+            ang palaisipan.
         questions:
-        - {}
+        - text: Tingnang mabuti ang mga nested na loop sa ibaba. Ano ang mangyayari
+            kapag na-click mo ang "Run"?
       courseD_multi_bee_nestedLoops9_predict2_2021:
         answers:
         - text: '4'
+          feedback: mali. Kinokolekta ng bubuyog ang 2 nektar sa loop na pasulong,
+            pagkatapos ay 2 nektar sa loop pababa. Lahat ito ay nasa loob ng isa pang
+            loop na nangyayari nang dalawang beses. 4 beses sa 2 ay 8!
         - text: '8'
           correct: true
+          feedback: Tama!
         - text: '10'
+          feedback: Mali. Kinokolekta ng bubuyog ang 2 nektar sa loop na pasulong,
+            pagkatapos ay 2 nektar sa loop pababa. Lahat ito ay nasa loob ng isa pang
+            loop na nangyayari nang dalawang beses. 4 beses sa 2 ay 8!
         - text: '12'
+          feedback: Mali. Kinokolekta ng bubuyog ang 2 nektar sa loop na pasulong,
+            pagkatapos ay 2 nektar sa loop pababa. Lahat ito ay nasa loob ng isa pang
+            loop na nangyayari nang dalawang beses. 4 beses sa 2 ay 8!
         questions:
-        - {}
+        - text: Tingnang mabuti ang code sa ibaba. Gaano karaming pulot ang makukuha
+            ng bubuyog kapag na-click mo ang "Run"?
       courseD_multi_farmer_condLoops9_predict1_2021:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: Kokolektahin ng mang-aani ang lahat ng mga pananim.
+          feedback: Mali. Walang code dito para sa pagpili ng kalabasa.
+        - text: Ang mang-aani ay hindi pipitas ng alinman sa mga pananim sa landas
+            na kanyang tinatahak.
+          feedback: Mali. Ang code ay paulit-ulit na gagawa ng pattern ng hagdanan
+            sa mang-aani at pipitas ng kasing dami ng mais o litsugas habang nakakakita
+            niya. Hindi siya pipitas ng kalabasa.
+        - text: Pipiliin ng mang-aani ang lahat ng mga pananim, maliban sa kalabasa.
+          correct: true
+          feedback: Tama!
+        - text: Ang kalabasa lang ang pipitasin ng mang-aani.
+          feedback: Mali. Ang code ay paulit-ulit na gagawa ng pattern ng hagdanan
+            sa mang-aani at pipitas ng kasing dami ng mais o litsugas habang nakakakita
+            niya. Hindi siya pipitas ng kalabasa.
         questions:
-        - {}
+        - text: Tingnang mabuti ang code sa ibaba. Ano ang mangyayari pagkatapos mong
+            i-click ang "Run"?
+        markdown: |-
+          Ang mga buto sa palaisipan ay maaaring mais o litsugas.
+          <br/>
       courseD_multi_farmer_while10_predict2_2021:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Wala. Ang code na ito ay mag-iiwan lamang ng patag na lupa.
+          feedback: Mali. Walang code para alisin ang dumi sa tumpok.
+        - text: Iiwan ng code na ito ang tumpok na ganap na hindi nagalaw.
+          correct: true
+          feedback: Tama!
+        - text: Iiwan ng code na ito ang mga butas na ganap na hindi nagalaw.
+          feedback: Mali. Ang loop na `habang` ay makakatanggap ng anumang laki ng
+            loop, ngunit walang code upang alisin ang dumi mula sa tumpok.
+        - text: Iiwang hindi nagalaw ng code na ito ang huling butas.
+          feedback: Mali. Walang code para alisin ang dumi sa tumpok.
         questions:
-        - {}
+        - text: Tingnang mabuti ang code sa ibaba. Ano ang maiiwan sa dulo ng palaisipang
+            ito?
       courseD_multi_farmer_while4_predict1_2021:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: Walang mangyayari.
+          feedback: Mali. Tatanggalin ng magsasaka ang dumi hangga't may tambak, saka
+            titigil kapag nawala na ang tambak
+        - text: Ang magsasaka ay hindi titigil sa pag-alis ng dumi.
+          feedback: Mali. Tatanggalin ng magsasaka ang dumi hangga't may tambak, saka
+            titigil kapag nawala na ang tambak
+        - text: Tatanggalin ng magsasaka ang dumi hangga't may tambak, saka titigil
+            kapag nawala na ang tambak.
+          correct: true
+          feedback: Tama!
+        - text: Isang beses lang aalisin ng magsasaka ang dumi.
+          feedback: Mali. Tatanggalin ng magsasaka ang dumi hangga't may tambak, saka
+            titigil kapag nawala na ang tambak
         questions:
-        - {}
+        - text: Tingnang mabuti ang code sa ibaba. Ano ang mangyayari pagkatapos mong
+            i-click ang "Run"?
       courseD_multi_maze_until10_predict2_2021:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: Dadaan ang zombie sa tamang landas at magtatapos nang pabalik-balik
+            magpakailanman.
+          correct: true
+          feedback: Tama!
+        - text: Ang zombie ay makakarating sa sunflower.
+          feedback: Mali. Dadaan ang zombie sa tamang landas at magtatapos nang pabalik-balik
+            magpakailanman.
+        - text: Ang zombie ay liliko pakanan sa unang landas at magpapaikot-ikot magpakailanman.
+          feedback: Mali. Dadaan ang zombie sa tamang landas at magtatapos nang pabalik-balik
+            magpakailanman.
+        - text: Ang zombie ay maiipit sa dulo ng landas patungo sa harap.
+          feedback: Sa code na ito, dadaan ang zombie sa tamang landas at magtatapos
+            nang pabalik-balik magpakailanman.
         questions:
-        - {}
+        - text: Tingnang mabuti ang code sa ibaba. Ano ang mangyayari pagkatapos mong
+            na-click ang "Run"?
       courseD_multi_maze_until2_predict1_2021:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Hindi gagalaw ang ibon.
+          feedback: Mali. Ang code ay nagpapasulong sa ibon habang may landas, pagkatapos
+            ay lumiko sa kaliwa. Ginagawa ito hanggang sa umabot sa baboy!
+        - text: Makakapunta ang ibon sa baboy.
+          correct: true
+          feedback: Tama!
+        - text: Ang ibon ay susulong at tatakbo sa TNT.
+          feedback: Mali. Ang code ay nagpapasulong sa ibon habang may ligtas na landas,
+            pagkatapos ay lumiko sa kaliwa. Ginagawa ito hanggang sa umabot sa baboy!
+        - text: Ang ibon ay lumiliko sa maling direksiyon.
+          feedback: Ang code ay nagpapasulong sa ibon habang may landas, pagkatapos
+            ay lumiko sa kaliwa. Ginagawa ito hanggang sa umabot sa baboy!.
         questions:
-        - {}
+        - text: Tingnang mabuti ang code sa ibaba. Ano sa tingin mo ang mangyayari
+            kapag na-click mo ang "Run"?
       courseE_multi_dance_events_predict1_2021:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: Walang mangyayari.
+          feedback: Mali. Ang alien ay magsisimulang gumalaw pataas at pababa sa screen.
+        - text: Ang alien ay magsisimulang magpatrolya mula kanan hanggang kaliwa.
+          feedback: Mali. Ang alien ay magsisimulang gumalaw pataas at pababa sa screen.
+        - text: Ang alien ay magsisimulang gumalaw pataas at pababa sa screen.
+          correct: true
+          feedback: Tama!
+        - text: Mawawala ang alien sa tuktok ng screen.
+          feedback: Mali. Ang asul na alien ay magsisimulang gumalaw pataas at pababa
+            sa screen.
         questions:
-        - {}
+        - text: Tingnang mabuti ang code sa ibaba. Ano ang mangyayari pagkatapos mong
+            mag-click sa alien?
       courseE_multi_farmer_functions11_predict_2021:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: Pipitas ng dalawang kalabasa ang mang-aani.
+          feedback: Mali. Ang mang-aani ay nagpapatuloy hanggang sa dulo ng landas,
+            pagkatapos ay tumalikod at gumagalaw pabalik hanggang sa siya ay pumitas
+            ng litsugas.
+        - text: Pipitasin ng mang-aani ang lahat ng kalabasa.
+          feedback: Mali. Ang mang-aani ay nagpapatuloy hanggang sa dulo ng landas,
+            pagkatapos ay tumalikod at gumagalaw pabalik hanggang sa siya ay pumitas
+            ng litsugas.
+        - text: Ang mang-aani ay pipitas ng litsugas.
+          correct: true
+          feedback: Tama!
+        - text: Ang mang-aani ay pipitas ng mais.
+          feedback: Mali. Ang mang-aani ay nagpapatuloy hanggang sa dulo ng landas,
+            pagkatapos ay tumalikod at gumagalaw pabalik hanggang sa siya ay pumitas
+            ng litsugas.
         questions:
-        - {}
+        - text: Tingnan ang mga function na tinukoy sa ibaba. Ano ang pipitasin ng
+            mang-aani?
       courseE_prediction_artistFunction1_2021:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: Wala. Ang function ay hindi tinatawag sa program.
+          feedback: Mali. Ang function ay aktwal na tinatawag ng dalawang beses sa
+            program.
+        - text: Ang artist ay guguhit ng isang parisukat.
+          feedback: Mali. Ang function ay aktwal na tinatawag ng dalawang beses sa
+            program.
+        - text: Guguhit ang artist ng dalawang parisukat na magkakapatong.
+          feedback: Mali. Ang haba ng bawat panig ng parisukat ay 100 pixels lang,
+            ngunit ang artist ay tumalon ng 175 pixels sa pagitan ng mga function.
+        - text: Gumuhit ang artist ng dalawang parisukat na may maliit na puwang sa
+            pagitan.
+          correct: true
+          feedback: Tama! Ang function ay tinawag ng dalawang beses sa program, na
+            may tumalon sa pagitan.
         questions:
-        - {}
+        - text: Ano ang mangyayari kapag pinindot mo ang "Run"?
       courseE_prediction_artistFunction1_dani:
         answers:
         - {}
@@ -2235,77 +2433,165 @@ fil-PH:
         - {}
       courseE_swim_fish_behavior_predict1_2021:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: Walang mangyayari.
+          feedback: Mali. Magsisimulang bumagsak ang tumbleweed.
+        - text: Lulutang ang tumbleweed sa tuktok ng screen.
+          feedback: Mali. Magsisimulang bumagsak ang tumbleweed.
+        - text: Magsisimulang bumagsak ang tumbleweed.
+          correct: true
+          feedback: Tama!
+        - text: Ang tumbleweed ay kumukurap-kurap.
+          feedback: Mali. Magsisimulang bumagsak ang tumbleweed.
         questions:
-        - {}
+        - text: Tingnang mabuti ang code sa ibaba. Ano ang mangyayari pagkatapos mong
+            i-click ang "Run"?
       courseF_events_predict_multi:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: Ang sprite ay iikot lamang sa kanan.
+          feedback: Mali. Ang sprite ay lilipat din sa silangan.
+        - text: Ang sprite ay lilipat lamang sa silangan.
+          feedback: Mali. Ang sprite ay hindi tumigil sa pag-ikot, kaya gagawin nito
+            ang pareho ng sabay-sabay.
+        - text: Ang sprite ay iikot at gagalaw sa parehong oras.
+          correct: true
+          feedback: Tama! Ang parehong pag-uugali ay mangyayari nang sabay-sabay.
+        - text: Ang sprite ay iikot muna at pagkatapos ay lilipat sa ibang pagkakataon.
+          feedback: Mali. Sa Sprite Lab, ang mga konektadong block ay nangyayari kaagad
+            pagkatapos ng bawat huli, kaya ang parehong mga pag-uugali ay mangyayari
+            nang sabay-sabay.
         questions:
-        - {}
+        - text: Basahin ang code, pagkatapos ay gumawa ng hula.
       courseF_labels_predict_multi:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: '"Isang pizza paparating na!"'
+          feedback: Mali. Ang mga variable na label ay hindi tugma.
+        - text: '"Isang pagkain paparating na!"'
+          feedback: Mali. Ang label ng variable ay hindi kailanman naka-print.
+        - text: '"Isang pagkain paparating na!"'
+          feedback: Mali. Ang label ng variable ay hindi kailanman naka-print.
+        - text: '"May isang paparating na!"'
+          correct: true
+          feedback: Tama! Ang mga variable na label ay hindi tugma.
+        - text: Walang mapi-print.
+          feedback: Mali. Gagana pa rin ang kaganapan at ang print na block.
         questions:
-        - {}
+        - text: Maaaring mukhang pamilyar ang code na ito ngunit basahin itong mabuti.
+            Ano ang ipi-print kung magta-type ang user sa "pizza"?
       courseF_multi_artist_variables3a_predict1_2021:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: Guguhit ang artist ng tatsulok na may 50 pixel na gilid.
+          correct: true
+          feedback: Tama!
+        - text: Guguhit ang artist ng 50-sided polygon na may 3 pixel na gilid.
+          feedback: Mali. Ang variable na `haba` ay kailangang nasa `ulitin` na loop
+            para mangyari iyon.
+        - text: Guguhit ang artist ng tatlong bukas na gilid na may 50 degree na pagliko.
+          feedback: Mali. Ang variable na `haba` ay kailangang gamitin sa block na
+            `lumiko` para mangyari iyon.
+        - text: Hihingi ang computer sa user ng isang numero.
+          feedback: Ang variable na `haba` ay nakatakda sa 50 at ginagamit sa block
+            na `sumulong nang`, kaya ang artist ay gagawa ng tatsulok na may 50 pixel
+            na gilid.
         questions:
-        - {}
+        - text: Itinakda namin ang variable na "haba" sa 50. Ano ang mangyayari kapag
+            na-click mo ang "Run"?
       courseF_multi_bee_for3_predict1_2021:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Ang bubuyog ay susulong at kukunin ang lahat ng nektar sa bawat bulaklak.
+          feedback: Mali. Ang `para sa` na loop ay hahayaan ang bubuyog na mangolekta
+            ng tamang dami ng nektar, ngunit ito ay nakatakda lamang na umabot sa
+            4 na bulaklak.
+        - text: Ang bubuyog ay susulong at kukunin ang lahat ng nektar sa bawat bulaklak,
+            maliban sa isa.
+          correct: true
+          feedback: Tama!
+        - text: 'Ang bubuyog ay susulong at mangongolekta ng isang nektar sa bawat
+            bulaklak. '
+          feedback: Mali. Ang `para sa` na loop ay hahayaan ang bubuyog na mangolekta
+            ng tamang dami ng nektar, ngunit ito ay nakatakda lamang na umabot sa
+            4 na bulaklak.
+        - text: 'Ang bubuyog ay susulong at mangongolekta ng isang nektar sa mga bulaklak
+            bilang 1 at 4. '
+          feedback: Mali. Ang `para sa` na loop ay hahayaan ang bubuyog na mangolekta
+            ng tamang dami ng nektar, ngunit ito ay nakatakda lamang na umabot sa
+            4 na bulaklak.
         questions:
-        - {}
+        - text: Basahin ang code sa ibaba. Ano ang mangyayari kapag na-click mo ang
+            "Run"?
+        markdown: Ah! Ang paggamit ng `para sa` na mga loop ay ginagawang mas madali
+          ang palaisipang ito!
       courseF_sprites_predict_multi:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Ang parehong eroplano ay lilipat ng isang espasyo sa loob ng grid,
+            pagkatapos ay hihinto.
+          feedback: Mali. Ang mga sprite na ito ay may "mga pag-uugali" na patuloy
+            na tumatakbo hanggang sa sabihin sa kanila na huminto.
+        - text: Magsisimulang gumalaw ang dalawang eroplano at hindi titigil.
+          correct: true
+          feedback: Tama! Ang mga pag-uugaling ito ay nagsasabi sa mga eroplano na
+            magsimulang gumalaw at magpatuloy.
+        - text: Ang isang eroplano ay unang lilipat, at ang isa pang eroplano ay lilipat
+            sa ibang pagkakataon.
+          feedback: Mali. Ang bawat block ng code sa Sprite Lab ay tumatakbo kaagad
+            pagkatapos ng susunod.
+        - text: Babagsak ang mga eroplano.
+          feedback: Mali. Ang mga eroplano ay hindi nakaposisyon sa paraang tatama
+            sila.
         questions:
-        - {}
+        - text: Basahin ang code, pagkatapos ay gumawa ng hula.
       courseF_variables_predict_multi:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Ang program ay magpi-print ng "Hello pangalan!"
+          feedback: Mali. Ang block ng pangalan ay papalitan ng anumang ita-type mo.
+        - text: Babatiin ka ng program gamit ang pangalan na tina-type mo.
+          correct: true
+          feedback: Tama! Ang tina-type mo ay ginagamit bilang kapalit ng name block.
+        - text: Magbabago ng laki ang sprite.
+          feedback: Mali. Ang text ay naka-print sa screen.
+        - text: Magtatanong pa ang computer.
+          feedback: Mali. Isang tanong lamang ang itinatanong, sa sandaling magsimula
+            ang program.
         questions:
-        - {}
+        - text: 'Hinahayaan ka ng program na ito na sagutin ang tanong sa pamamagitan
+            ng pag-type gamit ang keyboard mo. Ang `print` na block ay nagpapakita
+            ng text sa screen. Gumawa ng hula: Ano ang mangyayari pagkatapos sagutin
+            ang tanong?'
       coursee_prediction_artistfunction2_2021:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Sasagutin ng artist ang palaisipan nang tama.
+          feedback: Mali. Gumagamit ang loop ng "gumuhit ng polygon" sa halip na "gumuhit
+            ng linya ng mga polygon".
+        - text: Gumuhit ang artist ng apat na parisukat sa pattern ng bintana.
+          correct: true
+          feedback: Tama!
+        - text: Ang artist ay gumuhit lamang ng isang linya ng mga parisukat.
+          feedback: Mali. Ang program ay hindi tinatawag na "gumuhit ng linya ng mga
+            polygon".
+        - text: Guguhit ang artist ng apat na parisukat sa ibabaw ng isa't isa.
+          feedback: Mali. Ang loop ay lumiliko ng 90 degrees sa pagitan ng mga tawag
+            upang "gumuhit ng polygon".
         questions:
-        - {}
+        - text: Ano ang mangyayari kapag pinindot mo ang "Run" button?
       grade2_multi_collector_A_predict1_2021:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Mangongolekta si Laurel ng 4 mga piraso ng kayamanan gamit ang code
+            na ito.
+          feedback: Mali. Sinusubukan ni Laurel na mangolekta ng kayamanan kung saan
+            wala ito at nagiging sanhi ito ng isang error.
+        - text: Susubukan ni Laurel na mangolekta ng kayamanan kung saan wala ito
+            at nagdudulot ito ng error.
+          correct: true
+          feedback: Tama!
+        - text: Kokolektahin ni Laurel ang lahat ng kayamanan.
+          feedback: Mali. Sinusubukan ni Laurel na mangolekta ng kayamanan kung saan
+            wala ito at nagiging sanhi ito ng isang error.
+        - text: Mangongolekta si Laurel ng 1 piraso ng kayamanan gamit ang code na
+            ito.
+          feedback: Mali. Sinusubukan ni Laurel na mangolekta ng kayamanan kung saan
+            wala ito at nagiging sanhi ito ng isang error.
         questions:
-        - {}
+        - text: Tingnang mabuti ang code na ito. Ano sa palagay mo ang mangyayari
+            kapag tumakbo ang program?
       CourseF_outbreak_story:
         markdown: |-
           # Paglaganap: I-code ang Iyong Sariling Simulasyon
@@ -2769,18 +3055,63 @@ fil-PH:
           I-click ang Magpatuloy upang makita ang **Susunod na Hamon**...
       courseF_variables_stop:
         content1: paglalarawan dito
+        markdown: |-
+          # Tigil!
+
+          ## Sigurado ka bang handa ka nang magpatuloy?
+
+
+          Sa susunod na antas, sisimulan mong isulat ang code para sa proyekto mo. Pinakamahusay itong gagana kung mayroon ka nang plano.
+
+          Dapat kasama sa nakumpleto mong plano ang:
+
+          <img src="https://images.code.org/b476ac330f2b66e44e02208fee386a56-image-1614802439867.png" style="float:left; height:70px; padding:10px"/>
+
+          * Ang uri ng proyekto na ginagawa mo. Halimbawa, isang kard ng pagbati, chatbot, o kwentong blank space.
+          * Isang listahan ng mga tanong na itatanong mo sa user.
+          * Ang iba pang text na ipapakita mo sa screen.
+          * Isang paglalarawan o pagguhit ng mga sprite na kakailanganin mo (at ang kanilang mga pag-uugali).
+
+          Kung hindi ka sigurado kung handa ka nang magpatuloy, magtanong sa iyong guro!
       csf_be_a_super_digital_citizen:
         content1: paglalarawan dito
       csf_be_a_super_digital_citizen_2021:
         content1: paglalarawan dito
+        markdown: |-
+          # Super Digital na Mamamayan
+
+          ## Paano tayo magiging matatag kapag nakikita natin ang cyberbullying?
       csf_password_power-up:
         content1: paglalarawan dito
       csf_password_power-up_2021:
         content1: paglalarawan dito
+        markdown: |-
+          #  Palakasin ang Password Mo
+
+          ## Mga Tip sa Password na Dapat Tandaan
+
+          * Magsimula sa di-malilimutang **parirala**.
+          * Tanging ang **mga magulang** mo ang dapat na nakakaalam ng iyong password.
+          * Huwag gumamit ng anumang **pribadong** impormasyon ng pagkakakilanlan sa password mo.
+          * Lumikha ng mga password na may hindi bababa sa **walong** karakter.
+          * Gumamit ng mga titik, numero, at **mga simbolo** sa password mo.
+
+          ![](https://images.code.org/bfa69295fbf33c77ecdeb79b5498d8f7-image-1584751340896.png)
       csf_putting_a_stop_to_online_meanness:
         content1: paglalarawan dito
       csf_putting_a_stop_to_online_meanness_2021:
         content1: paglalarawan dito
+        markdown: |-
+          # STOP Kasamaan
+
+          ## Ano ang dapat mong gawin kung may masama sa iyo online?
+
+          * **S**tep away. (Umalis)
+          * **T**ell a trusted adult. (sabihin sa isang pinagkakatiwalaang matanda)
+          * **O**K sites first. (Unahin ang magandang mga site)
+          * **P**ause and think online. (Huminto at mag-isip online)
+
+          ![](https://images.code.org/f3e4987a130b27f7b589d7829b753aac-image-1584750971069.png)
       CSD Games Properties multi predict_2021:
         answers:
         - {}
@@ -2963,7 +3294,7 @@ fil-PH:
         - {}
         - {}
         - {}
-        - {}
+        - text: Wala sa anumang nabanggit
       CSD U2 Image challenge_pilot_2021:
         display_name: Magdagdag ng Mga Imahe
       CSD U2 Image practice_pilot_2021:
@@ -3856,22 +4187,34 @@ fil-PH:
         title: Gumawa ng Prediksiyon
       CSD U6 test algorithms multi2:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - correct: true
-        - {}
+        - text: mga tagapangasiwa ng kaganapan
+        - text: ara sa mga loop at hilera
+          correct: true
+        - text: mga function na may mga parameter
+        - text: getters/getProperty
+          correct: true
+        - text: analog sa digital na conversion
         questions:
-        - {}
+        - text: Gusto ng klase na lumikha ng program na magpapakita ng magandang umaga
+            sa lahat. Halimbawa, ang program ay magpapakita ng "Magandang umaga, Dwayne!",
+            "Magandang umaga, Mari!" sa bawat mag-aaral. Anong DALAWANG mga tool sa
+            programming ang magiging pinakakapaki-pakinabang kapag isinusulat ang
+            program na ito?
       CSD U6 test algorithms multi2_2021:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - correct: true
-        - {}
+        - text: mga tagapangasiwa ng kaganapan
+        - text: ara sa mga loop at hilera
+          correct: true
+        - text: mga function na may mga parameter
+        - text: getters/getProperty
+          correct: true
+        - text: analog sa digital na conversion
         questions:
-        - {}
+        - text: Gusto ng klase na lumikha ng program na magpapakita ng magandang umaga
+            sa lahat. Halimbawa, ang program ay magpapakita ng "Magandang umaga, Dwayne!",
+            "Magandang umaga, Mari!" sa bawat mag-aaral. Anong DALAWANG mga tool sa
+            programming ang magiging pinakakapaki-pakinabang kapag isinusulat ang
+            program na ito?
       CSD U6 test debugging multi:
         answers:
         - correct: true
@@ -9814,12 +10157,12 @@ fil-PH:
           pinapagana ang iyong simulasyon. Maaari mong bilangin ang mga halimaw na
           nagkakasakit o gumamit ng isang timer upang makita kung gaano kabilis mangyari
           ang mga bagay. Halimbawa, gaano katagal upang magkasakit ang lahat ng mga
-          halimaw kung wala silang mga mask? \n\n## Paggawa ng Mga Prediksiyon\nKung
-          naiintindihan mo ang iyong modelo, maaari mo itong gamitin upang makagawa
-          ng mga prediksiyon. Maaari mo ring baguhin kung paano gumana ang simulasyon
-          mo at hulaan kung ano ang ibang mangyayari. Halimbawa:\n* Ano ang mangyayari
-          kung merong mas maraming mga halimaw?\n* Ano ang mangyayari kung ang mga
-          halimaw ay gumalaw sa kalahating bilis?\n\n<img src=\"https://images.code.org/2e83373ffd346ce3f42917a0624d441c-image-1603749526420.png\"
+          halimaw kung wala silang mga mask? \n\n## Paggawa ng Mga Hula\nKung naiintindihan
+          mo ang iyong modelo, maaari mo itong gamitin upang makagawa ng mga hula.
+          Maaari mo ring baguhin kung paano gumana ang simulasyon mo at hulaan kung
+          ano ang ibang mangyayari. Halimbawa:\n* Ano ang mangyayari kung merong mas
+          maraming mga halimaw?\n* Ano ang mangyayari kung ang mga halimaw ay gumalaw
+          sa kalahating bilis?\n\n<img src=\"https://images.code.org/2e83373ffd346ce3f42917a0624d441c-image-1603749526420.png\"
           style=\"float:right\">\n\n## Ang Monster Town ba ay tulad ng totoong mundo?\nMerong
           limitasyon sa anumang modelo sa kung gaano ito maaring maging makatotohanan.
           \n* Ano ang pagkakatulad ng iyong simulasyon ng pagsiklab sa mga totoong
@@ -9840,7 +10183,8 @@ fil-PH:
         - {}
         - {}
         - correct: true
-        - {}
+        - text: Ang artist ay guguhit ng pentagon
+          feedback: Mali. Ang artist ay guguhit ng parisukat.
         questions:
         - {}
       courseC_multi_harvester_loops11_predict12022:
@@ -9854,10 +10198,14 @@ fil-PH:
         - {}
       courseC_multi_maze_debugging8_predict12022:
         answers:
-        - {}
+        - feedback: Mali. Hindi maaabot ni Scrat ang acorn dahil siya ay  lumiko sa
+            maling daan.
         - correct: true
-        - correct: true
-        - {}
+          feedback: Tama! Lumiko si Scrat sa maling direksyon at hindi maaabot ang
+            acorn.
+        - feedback: Mali. Hindi maaabot ni Scrat ang acorn dahil siya ay  lumiko sa
+            maling daan.
+        - text: Si Scrat ay hindi lilipat sa unang block.
         questions:
         - {}
       courseC_multi_maze_programming8_predict12022:
@@ -9865,7 +10213,7 @@ fil-PH:
         - {}
         - correct: true
         - {}
-        - {}
+        - text: Tatama ang ibon sa pader.
         questions:
         - {}
       courseC_multi_starWars_predict12022:
@@ -9873,7 +10221,7 @@ fil-PH:
         - {}
         - {}
         - correct: true
-        - {}
+        - text: Si BB-8 ay tatakbo lamang ng tatlong agwat.
         questions:
         - {}
       courseC_multi_starWars_predict22022:
@@ -9881,7 +10229,7 @@ fil-PH:
         - {}
         - correct: true
         - {}
-        - {}
+        - text: Si BB-8 ay liliko sa maling direksiyon pagkatapos ng unang loop.
         questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict12022:
@@ -9890,7 +10238,7 @@ fil-PH:
           correct: true
         - text: B
         - text: C
-        - {}
+        - text: Wala sa anumang nabanggit
         questions:
         - {}
       courseD_multi_bee_conditionals1_predict12022:
@@ -9898,7 +10246,7 @@ fil-PH:
         - {}
         - correct: true
         - {}
-        - {}
+        - text: Ang bubuyog ay hindi makakarating sa ulap.
         questions:
         - {}
       courseD_multi_bee_conditionals7_predict22022:
@@ -9906,7 +10254,8 @@ fil-PH:
         - correct: true
         - {}
         - {}
-        - {}
+        - text: Susubukan ng bubuyog na makakuha ng pulot at nektar sa parehong mga
+            bulaklak at pulot-pukyutan.
         questions:
         - {}
       courseD_multi_bee_nestedLoops2_predict12022:
@@ -9914,7 +10263,7 @@ fil-PH:
         - {}
         - {}
         - correct: true
-        - {}
+        - text: Ang bubuyog ay liliko sa maling direksiyon.
         questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict22022:
@@ -9931,7 +10280,7 @@ fil-PH:
         - {}
         - {}
         - correct: true
-        - {}
+        - text: Ang kalabasa lang ang pipitasin ng mang-aani.
         questions:
         - {}
       courseD_multi_farmer_while10_predict22022:
@@ -9939,7 +10288,7 @@ fil-PH:
         - {}
         - correct: true
         - {}
-        - {}
+        - text: Iiwang hindi nagalaw ng code na ito ang huling butas.
         questions:
         - {}
       courseD_multi_farmer_while4_predict12022:
@@ -9947,15 +10296,21 @@ fil-PH:
         - {}
         - {}
         - correct: true
-        - {}
+        - text: Isang beses lang aalisin ng magsasaka ang dumi.
         questions:
         - {}
       courseD_multi_maze_until10_predict22022:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: Ang zombie ay dadaan sa tamang landas at magtatapos nang pabalik-balik
+            magpakailanman.
+          correct: true
+        - feedback: Mali. Ang zombie ay dadaan sa tamang landas at magtatapos nang
+            pabalik-balik magpakailanman.
+        - feedback: Mali. Ang zombie ay dadaan sa tamang landas at magtatapos nang
+            pabalik-balik magpakailanman.
+        - text: Ang zombie ay maiipit sa dulo ng landas patungo sa harap.
+          feedback: Sa code na ito, dadaan ang zombie sa tamang landas at magtatapos
+            nang pabalik-balik magpakailanman.
         questions:
         - {}
       courseD_multi_maze_until2_predict12022:
@@ -9963,7 +10318,7 @@ fil-PH:
         - {}
         - correct: true
         - {}
-        - {}
+        - text: Ang ibon ay lumiliko sa maling direksiyon.
         questions:
         - {}
       courseE_multi_farmer_functions11_predict2022:
@@ -9984,43 +10339,67 @@ fil-PH:
         - {}
       courseE_swim_fish_behavior_predict12022:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - feedback: Mali. Magsisimulang bumagsak ang tumbleweed.
+        - text: Lulutang ang tumbleweed sa tuktok ng screen.
+          feedback: Mali. Magsisimulang bumagsak ang tumbleweed.
+        - text: Magsisimulang bumagsak ang tumbleweed.
+          correct: true
+        - text: Ang tumbleweed ay kumukurap-kurap.
+          feedback: Mali. Magsisimulang bumagsak ang tumbleweed.
         questions:
         - {}
       courseF_events_predict_multi2022_2022_pilot_-2022-2:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: Ang sprite ay iikot lamang sa kanan.
+          feedback: Mali. Ang sprite ay lilipat din sa silangan.
+        - text: Ang sprite ay lilipat lamang sa silangan.
+          feedback: Mali. Ang sprite ay hindi tumigil sa pag-ikot, kaya gagawin nito
+            ang pareho ng sabay-sabay.
+        - text: Ang sprite ay iikot at gagalaw sa parehong oras.
+          correct: true
+          feedback: Tama! Ang parehong pag-uugali ay mangyayari nang sabay-sabay.
+        - text: Ang sprite ay iikot muna at pagkatapos ay lilipat sa ibang pagkakataon.
+          feedback: Mali. Sa Sprite Lab, ang mga konektadong block ay nangyayari kaagad
+            pagkatapos ng bawat huli, kaya ang parehong mga pag-uugali ay mangyayari
+            nang sabay-sabay.
         questions:
-        - {}
+        - text: Basahin ang code, pagkatapos ay gumawa ng hula.
       courseF_groups_predict_multi_2022_pilot_-2022-2:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: Ang sprite na iyong na-click ay magiging mas malaki.
+          correct: true
+          feedback: Tama! Ang sprite na na-click mo ay magiging mas malaki.
+        - text: Ang sprite na na-click mo ay magiging mas maliit.
+          feedback: Mali. Ang sprite na na-click mo ay magiging mas malaki.
+        - text: Ang lahat ng mga sprite ay magiging mas malaki.
+          feedback: Mali. Ang sprite na na-click mo ay magiging mas malaki.
+        - text: Ang lahat ng mga sprite ay magiging mas maliit.
+          feedback: Mali. Ang sprite na na-click mo ay magiging mas malaki.
         questions:
-        - {}
+        - text: 'Gumawa ng hula: Pagkatapos pindutin ang Run, ano ang mangyayari kapag
+            na-click mo ang isa sa mga sprite?'
       courseF_labels_predict_multi2022_2022_pilot_-2022-2:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: '"Isang pizza paparating na!"'
+          feedback: Mali. Ang mga variable na label ay hindi tugma.
+        - text: '"Isang pagkain paparating na!"'
+          feedback: Mali. Ang label ng variable ay hindi kailanman naka-print.
+        - text: '"Isang pagkain paparating na!"'
+          feedback: Mali. Ang label ng variable ay hindi kailanman naka-print.
+        - text: '"May isang paparating na!"'
+          correct: true
+          feedback: Tama! Ang mga variable na label ay hindi tugma.
+        - text: Walang mapi-print.
+          feedback: Mali. Gagana pa rin ang kaganapan at ang print na block.
         questions:
-        - {}
+        - text: Maaaring mukhang pamilyar ang code na ito ngunit basahin itong mabuti.
+            Ano ang ipi-print kung magta-type ang user sa "pizza"?
       courseF_multi_artist_variables3a_predict12022:
         answers:
         - correct: true
         - {}
         - {}
-        - {}
+        - text: Hihingi ang computer sa user ng isang numero.
         questions:
         - {}
       courseF_multi_bee_for3_predict12022:
@@ -10028,43 +10407,102 @@ fil-PH:
         - {}
         - correct: true
         - {}
-        - {}
+        - text: 'Ang bubuyog ay susulong at mangongolekta ng isang nektar sa mga bulaklak
+            bilang 1 at 4. '
         questions:
         - {}
       courseF_sprites_predict_multi2022_2022_pilot_-2022-2:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Ang parehong eroplano ay lilipat ng isang espasyo sa loob ng grid,
+            pagkatapos ay hihinto.
+          feedback: Mali. Ang mga sprite na ito ay may "mga pag-uugali" na patuloy
+            na tumatakbo hanggang sa sabihin sa kanila na huminto.
+        - text: Magsisimulang gumalaw ang dalawang eroplano at hindi titigil.
+          correct: true
+          feedback: Tama! Ang mga pag-uugaling ito ay nagsasabi sa mga eroplano na
+            magsimulang gumalaw at magpatuloy.
+        - text: Ang isang eroplano ay unang lilipat, at ang isa pang eroplano ay lilipat
+            sa ibang pagkakataon.
+          feedback: Mali. Ang bawat block ng code sa Sprite Lab ay tumatakbo kaagad
+            pagkatapos ng susunod.
+        - text: Babagsak ang mga eroplano.
+          feedback: Mali. Ang mga eroplano ay hindi nakaposisyon sa paraang tatama
+            sila.
         questions:
-        - {}
+        - text: Basahin ang code, pagkatapos ay gumawa ng hula.
       courseF_variables2_predict2_multi2022_-2022-2:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: Ang kuneho ay magsasabi ng "5".
+          correct: true
+          feedback: Tama! Ang numero 5 ay naka-imbak sa variable at pagkatapos ay
+            ginamit muli kapag nagsasalita ang sprite.
+        - text: Ang kunehong sprite ay magsasabi ng anumang numero na naisulat.
+          feedback: Mali. Walang prompt sa programang ito. Ang numero ay direktang
+            nakatakda sa code.
+        - text: Ang kuneho ay magsasabi ng "bilang".
+          feedback: Mali. Ang `bilang` ay isang variable. Kapag tumakbo ang block
+            na ito, nakukuha nito ang anumang numerong nakaimbak. Ang kuneho ay magsasabi
+            ng "5".
+        - text: Walang mangyayari dahil ang `bilang` ay hindi isang numero.
+          feedback: Mali. Ang numero 5 ay naka-imbak sa variable at ginagamit kapag
+            nagsasalita ang sprite.
         questions:
-        - {}
+        - text: 'Gumawa ng hula: Ano ang sasabihin ng kuneho?'
       courseF_variables2_predict_multi2022_2022_pilot_-2022-2:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: Ang programa ay magpi-print ng anumang numero na naisulat.
+          feedback: Mali. Ang numero ay naka-imbak sa variable at ginagamit upang
+            lumikha ng mga karot na sprite.
+        - text: Ang kunehong sprite ay magsasabi ng anumang numero na naisulat.
+          feedback: Mali. Ang numero ay naka-imbak sa variable at ginagamit upang
+            lumikha ng mga karot na sprite.
+        - text: Ang program ay gagawa ng maraming bagong karot na sprite.
+          correct: true
+          feedback: Tama! Ang bilang ng mga sprite na ginawa ay ang numerong nakaimbak
+            sa variable.
+        - text: Walang mangyayari dahil ang `bilang` ay hindi isang numero.
+          feedback: Mali. Ang isang numero ay naka-imbak sa variable at ginagamit
+            upang lumikha ng mga karot na sprite.
         questions:
-        - {}
+        - text: 'Gumawa ng hula: Ano ang mangyayari pagkatapos mag-type ng numero
+            sa prompt?'
       courseF_variables_predict_multi2022_2022_pilot_-2022-2:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Ang program ay magpi-print ng "Hello pangalan!"
+          feedback: Mali. Ang block ng pangalan ay papalitan ng anumang ita-type mo.
+        - text: Babatiin ka ng program gamit ang pangalan na tina-type mo.
+          correct: true
+          feedback: Tama! Ang tina-type mo ay ginagamit bilang kapalit ng name block.
+        - text: Magbabago ng laki ang sprite.
+          feedback: Mali. Ang text ay naka-print sa screen.
+        - text: Magtatanong pa ang computer.
+          feedback: Mali. Isang tanong lamang ang itinatanong, sa sandaling magsimula
+            ang program.
         questions:
-        - {}
+        - text: 'Hinahayaan ka ng program na ito na sagutin ang tanong sa pamamagitan
+            ng pag-type gamit ang keyboard mo. Ang `print` na block ay nagpapakita
+            ng text sa screen. Gumawa ng hula: Ano ang mangyayari pagkatapos sagutin
+            ang tanong?'
       courseF_variables_stop2022_2022_pilot_-2022-2:
         content1: paglalarawan dito
+        markdown: |-
+          # Tigil!
+
+          ## Sigurado ka bang handa ka nang magpatuloy?
+
+
+          Sa susunod na antas, sisimulan mong isulat ang code para sa proyekto mo. Pinakamahusay itong gagana kung mayroon ka nang plano.
+
+          Dapat kasama sa nakumpleto mong plano ang:
+
+          <img src="https://images.code.org/b476ac330f2b66e44e02208fee386a56-image-1614802439867.png" style="float:left; height:70px; padding:10px"/>
+
+          * Ang uri ng proyekto na ginagawa mo. Halimbawa, isang kard ng pagbati, chatbot, o kwentong blank space.
+          * Isang listahan ng mga tanong na itatanong mo sa user.
+          * Ang iba pang text na ipapakita mo sa screen.
+          * Isang paglalarawan o pagguhit ng mga sprite na kakailanganin mo (at ang kanilang mga pag-uugali).
+
+          Kung hindi ka sigurado kung handa ka nang magpatuloy, magtanong sa iyong guro!
       coursee_prediction_artistfunction22022:
         answers:
         - {}
@@ -10084,6 +10522,424 @@ fil-PH:
         - {}
         - correct: true
         - {}
-        - {}
+        - text: Mangongolekta si Laurel ng 1 piraso ng kayamanan gamit ang code na
+            ito.
         questions:
         - {}
+      CourseE_Lesson_11_Artist_Practice_2022:
+        description: Mahusay na trabaho! Piliin ang susunod mong aktibidad. Kumpletuhin
+          ang lahat ng kaya mo. Patuloy na magsanay sa mga function at sa Artist!
+        display_name: Pagsasanay sa Artist
+      CourseE_Lesson_7_Artist_Practice_2022:
+        description: Mahusay na trabaho! Piliin ang susunod mong aktibidad. Kumpletuhin
+          ang lahat ng kaya mo. Patuloy na magsanay sa mga nested loop at sa Artist!
+        display_name: Pagsasanay sa Artist
+      courseF_EOC_examples2022_2022_pilot_-2022-2:
+        description: Naabot mo na ang dulo ng Course F! Pumili ng proyektong tutuklasin.
+      courseF_collector_samples_2022_pilot_-2022-2:
+        description: Gagawa ka ng collector game. Bago ka magsimula, suriin ang mga
+          halimbawa ng mga proyekto sa ibaba. Pindutin ang \"Tapos na\" kapag handa
+          ka nang magsimulang magplano ng sarili mong program.
+        display_name: Pagtuklas - Halimbawa ng Mga Program
+      courseF_groups_freeplay_2022_pilot_-2022-2:
+        description: Ngayon ay maaari mong gamitin ang natutunan mo upang gawin ang
+          anumang gusto mo! Lumikha ng interactive na program na may maraming mga
+          sprite!
+        display_name: Maraming Sprite - Libreng Paglalaro
+      courseF_groups_practice_2022_pilot_-2022-2:
+        description: Mahusay na trabaho sa ngayon! Piliin ang susunod na aktibidad
+          mo. Kumpletuhin ang lahat na kaya mo. Panatilihin ang pagsasanay sa mga
+          kaganapan at grupo ng mga sprite! Patuloy na magsanay sa mga event at grupo
+          ng sprite!
+        display_name: Maraming Mga Pagsasanay sa Sprite
+      courseF_intro_apps2022_2022_pilot_-2022-2:
+        description: Ang mga proyektong ito ay nilikha lahat gamit ang Sprite Lab.
+          Subukan ang mga ito ngayon upang makita kung ano ang posible. Sa pagtatapos
+          ng kursong ito, makakagawa ka na ng sarili mong mga proyekto tulad nito...
+          at higit pa!
+        display_name: Mga App sa Sprite Lab
+      courseF_intro_apps:
+        description: Maligayang pagdating sa CS Fundamentals! Ang mga proyektong ito
+          ay nilikha lahat gamit ang Sprite Lab. Subukan ang mga ito ngayon upang
+          makita kung ano ang posible. Sa pagtatapos ng kursong ito, makakagawa ka
+          na ng sarili mong mga proyekto tulad nito... at higit pa!
+        display_name: Mga App sa Sprite Lab
+        teacher_markdown: "# Pangkalahatang-ideya ng Antas ng Pagpipilian \nAng mga
+          antas ng pagpili ay nagbibigay ng menu ng mga karagdagang antas upang kumpletuhin
+          ng mga mag-aaral. Dapat kumpletuhin ng mga mag-aaral ang hindi bababa sa
+          isa sa mga sub-level dito, ngunit maaaring gawin ang lahat ng gusto nila
+          (o mo).\n\nAng mga pagpipilian dito ay nagdadala sa mga mag-aaral na magsampol
+          ng mga app na maaari nilang tuklasin. Nilalayon ng aktibidad na ito na makipag-ugnayan
+          sa worksheet ng Pag-explore ng Apps, na makikita sa [plano ng aralin](.././)."
+      CourseE_Artist_Practice_2022:
+        description: Mahusay na trabaho! Piliin ang susunod mong aktibidad. Kumpletuhin
+          ang lahat ng kaya mo. Patuloy na magsanay sa mga loop at sa Artist!
+        display_name: Pagsasanay sa Artist
+      EnvelopeVariables-Unplugged_2021_2:
+        markdown: |-
+          # Mga Kwentong Blank Space
+
+          Sa araling ito, matututo kang gumamit at magsulat ng mga kwentong blank space. Panoorin ang video na ito para matutunan kung paano ito kumokonekta sa computer science.
+      EnvelopeVariables-Unplugged_2021_22022_2022_pilot_-2022-2:
+        markdown: |-
+          # Mga Kwentong Blank Space
+
+          Sa araling ito, matututo kang gumamit at magsulat ng mga kwentong blank space. Panoorin ang video na ito para matutunan kung paano ito kumokonekta sa computer science.
+      ForLoopFun-Unplugged_2021:
+        markdown: |-
+          # Para sa Loop Fun
+
+          Alam natin na ang loop ay nagbibigay sa atin ng daan na magawa ang mga bagay nang paulit-ulit, ngunit ngayon ay pag-aaralan natin ang tungkol sa paggamit ng mga loop na may karagdagang istraktura na binuo sa loob nito.
+      GettingLoopy-Unplugged_2021:
+        markdown: |-
+          # Nagiging Loopy
+
+          Ipinakilala ng araling ito ang konsepto ng programming ng mga loop sa pamamagitan ng aktibidad sa sayaw.
+      Internet-Unplugged_2021:
+        markdown: |-
+          # Ang Internet
+
+          Gumawa ng sarili mong Internet sa silid-aralan gamit lamang ang mga piraso ng papel.
+      PowerOfWords-Unplugged_2021:
+        markdown: |-
+          # Ang Kapangyarihan ng mga Salita
+
+          ## Ano ang dapat mong gawin kapag may gumagamit ng masama o masakit na pananalita sa internet?
+      courseAB_EOC2022:
+        description: Naabot mo na ang huling aralin! Pumili ng proyektong gagawin.
+      courseAB_EOC_2021:
+        description: Naabot mo na ang huling aralin! Pumili ng proyektong gagawin.
+        display_name: Proyekto sa Katapusan ng Kurso
+      courseB_EOC2022:
+        description: Naabot mo na ang huling aralin! Pumili ng proyektong gagawin.
+      courseB_EOC_2021:
+        description: Naabot mo na ang huling aralin! Pumili ng proyektong gagawin.
+        display_name: Proyekto sa Katapusan ng Kurso
+      courseD_EOC_examples2022:
+        description: Sisimulan mo na ang huli mong proyekto. Bago ka magsimula, gumugol
+          ng ilang oras sa pagtingin sa mga halimbawang proyekto.
+        display_name: Mga Halimbawa ng Proyekto
+      courseD_EOC_examples_2021:
+        description: Sisimulan mo na ang huli mong proyekto. Bago ka magsimula, gumugol
+          ng ilang oras sa pagtingin sa mga halimbawang proyekto.
+        display_name: Mga Halimbawa ng Proyekto
+      courseF_EOC_examples_2021:
+        description: Naabot mo na ang dulo ng Course F! Pumili ng proyektong gagawin.
+        display_name: Proyekto sa Katapusan ng Kurso
+      courseF_EOC_samples2022:
+        description: Sisimulan mo na ang huli mong proyekto. Bago ka magsimula, gumugol
+          ng ilang oras sa pagtingin sa mga halimbawang proyekto.
+      courseF_EOC_samples_2021:
+        description: Sisimulan mo na ang huli mong proyekto. Bago ka magsimula, gumugol
+          ng ilang oras sa pagtingin sa mga halimbawang proyekto.
+        display_name: Proyekto sa Katapusan ng Kurso
+      courseF_artist_practice:
+        description: Mahusay na trabaho! Piliin ang susunod mong aktibidad. Kumpletuhin
+          ang lahat ng kaya mo. Patuloy na magsanay sa mga loop at sa Artist!
+        display_name: Pagsasanay sa Artist
+      courseF_beeFor_practice:
+        description: Mahusay na trabaho! Piliin ang susunod mong aktibidad. Kumpletuhin
+          ang lahat ng kaya mo. Patuloy na magsanay para sa mga loop at sa bubuyog!
+        display_name: Pagsasanay ng Bubuyog
+      courseF_beeVar_practice:
+        description: Mahusay na trabaho! Piliin ang susunod mong aktibidad. Kumpletuhin
+          ang lahat ng kaya mo. Patuloy na magsanay sa mga variable at sa bubuyog!
+        display_name: Pagsasanay ng Bubuyog
+      courseF_bee_practice:
+        description: Mahusay na trabaho! Piliin ang susunod mong aktibidad. Kumpletuhin
+          ang lahat ng kaya mo. Patuloy na magsanay sa mga loop at sa bubuyog!
+        display_name: Pagsasanay ng Bubuyog
+      courseF_events_freeplay:
+        description: Magagamit mo na ngayon ang natutunan mo para mapaganda pa ang
+          iyong proyekto! Patuloy na magdagdag sa iyong program o magsimula ng bago!
+        display_name: Mga Kaganapan - Libreng Laro
+      courseF_events_freeplay2022_2022_pilot_-2022-2:
+        description: Magagamit mo na ngayon ang natutunan mo para mapaganda pa ang
+          iyong proyekto! Patuloy na magdagdag sa iyong program o magsimula ng bago!
+        display_name: Mga Kaganapan - Libreng Laro
+      courseF_events_practice:
+        description: Mahusay na trabaho sa ngayon! Piliin angsusunod mong aktibidad.
+          Kumpletuhin ang lahat ng kaya mo. Patuloy na magsanay sa mga kaganapan!
+        display_name: Pagsasanay sa mga Kaganapan
+        teacher_markdown: |-
+          # Pangkalahatang-ideya ng Antas ng Pagpipilian
+          Ang mga antas ng pagpipilian ay nagbibigay ng menu ng mga karagdagang antas upang makumpleto ng mga mag-aaral. Dapat kumpletuhin ng mga mag-aaral ang hindi bababa sa isa sa mga sub-level dito, ngunit maaaring gawin ang lahat ng gusto nila (o mo).
+
+          Maaari mong gamitin ang mga paglalarawan sa ibaba upang matulungan ang mga mag-aaral na pumili ng sarili nilang mga pagpipilian, o upang magtakda ng mga inaasahan tungkol sa kung gaano karaming mga sub-level ang dapat nilang kumpletuhin.
+
+          |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |Blast Off!|Natututong lumipad|Gumawa ng barrel roll|Lumiit at Lumaki|Palakihin ang isda!|Ang penguin ay gumagalaw|
+          |-|-|-|-|-|-|-|
+          | ***I-type*** |**Repasuhin**|**Debug**|**Debug**|**Debug**|**Opsyonal na Nilalaman**|**Opsyonal na Nilalaman**
+          | ***Konsepto***|*events, behaviors*|*mga kaganapan, mga pag-uugali*|*events, behaviors*|*mga kaganapan, mga pag-uugali*|*when/while events*|*kailan/habang na mga kaganapan*|
+      courseF_events_practice2022_2022_pilot_-2022-2:
+        description: Mahusay na trabaho sa ngayon! Piliin angsusunod mong aktibidad.
+          Kumpletuhin ang lahat ng kaya mo. Patuloy na magsanay sa mga kaganapan!
+        display_name: Pagsasanay sa mga Kaganapan
+      courseF_sprites_freeplay:
+        description: Ikaw naman ang gumawa ng kahit anong gusto mo! Anong uri ng proyekto
+          ang gagawin mo?
+        display_name: Mga Sprite - Libreng Laro
+      courseF_sprites_freeplay2022_2022_pilot_-2022-2:
+        description: Ikaw naman ang gumawa ng kahit anong gusto mo! Anong uri ng proyekto
+          ang gagawin mo?
+        display_name: Mga Sprite - Libreng Laro
+      courseF_sprites_practice:
+        description: Mahusay na trabaho! Piliin ang susunod mong aktibidad. Kumpletuhin
+          ang lahat ng kaya mo. Patuloy na magsanay sa mga sprite at pag-uugali!
+        display_name: Pagsasanay sa mga Sprite
+        teacher_markdown: |-
+          # Pangkalahatang-ideya ng Antas ng Pagpipilian
+          Ang mga antas ng pagpipilian ay nagbibigay ng menu ng mga karagdagang antas upang makumpleto ng mga mag-aaral. Dapat kumpletuhin ng mga mag-aaral ang hindi bababa sa isa sa mga sub-level dito, ngunit maaaring gawin ang lahat ng gusto nila (o mo).
+
+          Maaari mong gamitin ang mga paglalarawan sa ibaba upang matulungan ang mga mag-aaral na pumili ng sarili nilang mga pagpipilian, o upang magtakda ng mga inaasahan tungkol sa kung gaano karaming mga sub-level ang dapat nilang kumpletuhin.
+
+          |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |Eksena sa Disyerto|Baguhin ang laki ng prutas.|Pagalawin ang Naglalayag na Barko|Isang Mahangin na Araw|
+          |-|-|-|-|-|
+          | ***I-type*** |**Repaso**|**Review**|**Repaso**|**Repaso**|
+          | ***Konsepto***|*sprites, locations*|*mga sprite, mga katangian*|*sprites, locations, behaviors*|*mga pag-uugali*|
+      courseF_sprites_practice2022_2022_pilot_-2022-2:
+        description: Mahusay na trabaho! Piliin ang susunod mong aktibidad. Kumpletuhin
+          ang lahat ng kaya mo. Patuloy na magsanay sa mga sprite at pag-uugali!
+        display_name: Pagsasanay sa mga Sprite
+      courseF_text_practice:
+        description: Mahusay na trabaho sa ngayon! Piliin angsusunod mong aktibidad.
+          Kumpletuhin ang lahat ng kaya mo. Patuloy na magsanay sa mga text at prompt!
+        display_name: Pagsasanay sa Text at Mga Prompt
+        teacher_markdown: |
+          # Pangkalahatang-ideya ng Antas ng Pagpipilian
+          Ang mga antas ng pagpipilian ay nagbibigay ng menu ng mga karagdagang antas upang makumpleto ng mga mag-aaral. Dapat kumpletuhin ng mga mag-aaral ang hindi bababa sa isa sa mga sub-level dito, ngunit maaaring gawin ang lahat ng gusto nila (o mo).
+
+          Maaari mong gamitin ang mga paglalarawan sa ibaba upang matulungan ang mga mag-aaral na pumili ng sarili nilang mga pagpipilian, o upang magtakda ng mga inaasahan tungkol sa kung gaano karaming mga sub-level ang dapat nilang kumpletuhin.
+
+          |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |Paggamit ng Speech for Text|Text mula sa Mga Prompt|Pangalanan ang robot!|Mga Label ng Variable|Malaking Text|Pag-prompt sa mga kulay|Nagsisimula sa wala|
+          |-|-|-|-|-|-|-|-|
+          | ***I-type*** |**Repasuhin**|**Debug**|**Debug**|**Debug**|**Opsyonal na Nilalaman**|**Optional Content**|**Libreng Laro**
+          | ***Konsepto***|*print block, events*|*mga prompt, mga kaganapan*|*adding spaces*|*tumutugma sa mga variable na label*|*title screen blocks*|*pag-iimbak ng mga kulay*|*walang bagong nilalaman*
+      courseF_text_practice2022_2022_pilot_-2022-2:
+        description: Mahusay na trabaho sa ngayon! Piliin angsusunod mong aktibidad.
+          Kumpletuhin ang lahat ng kaya mo. Patuloy na magsanay sa mga text at prompt!
+        display_name: Pagsasanay sa Text at Mga Prompt
+      courseF_variables_projects:
+        description: Gagawa ka ng isang kard ng pagbati, isang chatbot, o isang kwentong
+          blank space. Kung natapos mo na ang \"Bahagi 1\" ng proyekto mo, pumunta
+          sa \"Bahagi 2\".
+        display_name: Pumili ng Proyekto
+        teacher_markdown: |-
+          # Pangkalahatang-ideya ng Antas ng Pagpipilian
+          Ang mga antas ng pagpipilian ay nagbibigay ng menu ng mga karagdagang antas upang makumpleto ng mga mag-aaral. Dapat kumpletuhin ng mga mag-aaral ang hindi bababa sa isa sa mga sub-level dito, ngunit dapat hikayatin na kumpletuhin ang **dalawang** antas sa parehong proyekto.
+
+          Talagang maaaring kailanganin ng mga mag-aaral ang malinaw na mga tagubilin upang maunawaan kung paano i-navigate ang mga pagpipilian dito. Sa bawat isa sa mga pagpipilian sa proyekto, mayroong dalawang sub-level dito. Upang magsimula, dapat pumili ang mga mag-aaral ng isa sa mga antas na may markang "Bahagi 1". Kapag natapos na nila ang antas na iyon, dapat silang bumalik dito at piliin ang "Bahagi 2" ng *parehong* proyekto. Ang unang antas sa bawat pagpipilian ay magbibigay sa mga mag-aaral ng feedback habang pinagsasama nila ang mga pangunahing bahagi ng kanilang proyekto. Ang pangalawang antas ay "libreng paglalaro" na nilalayon upang payagan ang mga mag-aaral na gumawa ng anumang mga pagbabago sa kanilang code na gusto nila.
+      courseF_variables_projects2022_2022_pilot_-2022-2:
+        description: Gagawa ka ng isang kard ng pagbati, isang chatbot, o isang kwentong
+          blank space. Kung natapos mo na ang \"Bahagi 1\" ng proyekto mo, pumunta
+          sa \"Bahagi 2\".
+        display_name: Pumili ng Proyekto
+      courseF_variables_samples:
+        description: Gagawa ka ng kard ng pagbati, chatbot, o kuwentong blank space.
+          Bago ka magsimula, suriin ang mga halimbawa ng mga proyekto sa ibaba upang
+          makita kung saan ka interesado. Pindutin ang \"Tapos na\" kapag handa ka
+          nang simulan ang pagpaplano ng sarili mong program.
+        display_name: Pagtuklas - Halimbawa ng Mga Program
+        teacher_markdown: "# Pangkalahatang-ideya ng Antas ng Pagpipilian \nAng mga
+          antas ng pagpili ay nagbibigay ng menu ng mga karagdagang antas upang kumpletuhin
+          ng mga mag-aaral. Dapat kumpletuhin ng mga mag-aaral ang hindi bababa sa
+          isa sa mga sub-level dito, ngunit maaaring gawin ang lahat ng gusto nila
+          (o mo). \n\nDapat tingnang mabuti ng mga mag-aaral ang mga proyektong ito
+          bago magpasya kung ano ang gusto nilang gawin. Maaari mong tingnan ang mga
+          ito nang magkasama bilang isang klase o hayaan ang mga mag-aaral na tumuklas
+          nang mag-isa."
+      courseF_variables_samples2022_2022_pilot_-2022-2:
+        description: Gagawa ka ng kard ng pagbati, chatbot, o kuwentong blank space.
+          Bago ka magsimula, suriin ang mga halimbawa ng mga proyekto sa ibaba upang
+          makita kung saan ka interesado. Pindutin ang \"Tapos na\" kapag handa ka
+          nang simulan ang pagpaplano ng sarili mong program.
+        display_name: Pagtuklas - Halimbawa ng Mga Program
+      express_EOC_examples2022:
+        description: Sisimulan mo na ang huli mong proyekto. Bago ka magsimula, gumugol
+          ng ilang oras sa pagtingin sa mga halimbawang proyekto.
+        display_name: Mga Halimbawa ng Proyekto
+      express_EOC_examples_2021:
+        description: Sisimulan mo na ang huli mong proyekto. Bago ka magsimula, gumugol
+          ng ilang oras sa pagtingin sa mga halimbawang proyekto.
+        display_name: Mga Halimbawa ng Proyekto
+      BigEvent-Unplugged_2021:
+        markdown: |-
+          # Ang Malaking Kaganapan
+
+          Sa computer science, ang mga kaganapan ay mga aksiyon na sinusubaybayan ng computer. Sa araling ito, iba ang magiging reaksiyon mo depende sa kung aling button ang pinindot.
+      BinaryBracelets-Unplugged_2021:
+        markdown: |-
+          # Mga Binary Bracelet
+
+          Gumawa ng bracelet na kumakatawan sa pangalan mo sa isang system na naiintindihan ng mga computer!
+
+          ![](https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)
+      CSDU6 Innovation_2021:
+        markdown: |-
+          # Pananaliksik sa Pagbabago
+
+          Pumili ng isa sa mga sumusunod na paksang titingnan. Gusto mong maghanap ng impormasyon tungkol sa ilan sa mga pinakabagong makabagong computing device na nauugnay sa iyong kategorya.
+
+          ## Nasusuot na Teknolohiya
+          Kasama sa naisusuot na teknolohiya ang anumang anyo ng pag-compute na idinisenyo upang isuot ng user, ito man ay naka-embed sa damit o isinusuot bilang accessory. Maraming naisusuot, gaya ng mga smart pedometer, medyo magpapang-abot sa kalusugan at kaligtasan dahil ang device ay parehong naisusuot _at_ nilayon upang makatulong na mapabuti ang iyong personal na kalusuganh.
+
+          ## Kalusugan at Kaligtasan
+          Kasama sa malawak na paksa ang parehong teknolohiya ng consumer (mga bagay na maaari mong gamitin upang mapabuti ang iyong kalusugan o kaligtasan) at propesyonal na teknolohiya (kagamitan na maaaring gamitin ng doktor o iba pang propesyonal).
+
+          ## Agrikultura
+          Maaaring hindi malinaw na paksa ang agrikultura, ngunit ang mga makabagong teknolohiya ay nagkaroon ng malaking epekto sa kung paano tayo humarap sa pagsasaka. Kabilang dito ang pagsasama ng mga computer sa mga kasalukuyang kagamitan sa pagsasaka, paggamit ng mga sensor at robotic upang subaybayan ang mga pananim, at pagsusuri ng data upang mapabuti ang kahusayan at pagpapanatili.
+
+          ## Mga Pagawaan
+          Ang mga pagsulong sa mabilis na prototyping, mga industrial robotic, at automation ay nagkaroon ng malaking epekto sa kung paano ginagawa ang mga produkto. Kung ito man ay teknolohiya upang paganahin ang abot-kayang small-scale na pagawaan (tulad ng mga 3D printer at laser cutter) o ang pagsasama ng mga computer sa trabaho sa pabrika, maraming mga kawili-wiling aspektong sasaliksikin dito.
+
+          ## Sining at Disenyo
+          Ang pagsasanib ng pang-artistikong pagpapahayag at computing ay maaaring magbunga ng kahanga-hangang at hindi inaasahang mga resulta. Bagaman malamang na hindi mo masusumpungan ang mga produkto na may kaugnayan sa sining at disenyo, makikita mo ang iba't ibang mga gawaing bahay na gumagamit ng lahat ng uri ng mga device sa computer sa malikhaing paraan.
+
+          ## Smart Home
+          Ang pangarap ng isang bahay na nakakaunawa at inaasahan pa nga ang mga pangangailangan mo ay mas malapit na kaysa dati. Kung ito man ay malinaw na kinokontrol sa pamamagitan ng mga utos sa boses, o sa pamamagitan ng paggamit ng mga sensor upang subaybayan at tumugon sa nagbabagong mga kondisyon, ang mga smart home device ay nangangalaga sa anumang bilang ng mga karaniwan o paulit-ulit na gawain sa bahay.
+
+
+          # Mga Pagsasaalang-alang sa Pananaliksik
+
+          Habang nagsasaliksik ka ng mga device sa paksa mo, isaisip ang mga sumusunod na pagsasaalang-alang:
+
+          * Magpokus sa mga solusyong batay sa hardware kaysa sa mga software na program
+          * Magpokus sa mga kamakailang pagbabago sa halip na lumang balita
+          * Sundin kung ano ang interes mo
+
+          # Pagsisimula ng Iyong Pananaliksik
+
+          Sumangguni sa guro mo sa mga inirerekomendang website upang simulan ang iyong pananaliksik. Maaari mo ring gamitin ang ilan sa mga keyword sa itaas upang simulan ang paghahanap sa internet sa mga partikular na ideya. Halimbawa, isaalang-alang ang pagtingin sa iba't ibang mga website ng crowd funding (gaya ng Kickstarter at Indiegogo) upang makita ang mga produkto na hindi pa nakakalabas.
+        teacher_markdown: |
+          Nasa ibaba ang ilang website na magagamit ng mga mag-aaral upang simulan ang kanilang pananaliksik. Hindi namin ito naibigay nang direkta sa mga mag-aaral dahil minsan ang mga site na ito ay hinarangan ng mga program sa pag-filter ng distrito, o ang pinakabagong pagbabago na karapat-dapat sa balita ay maaaring hindi naaangkop sa middle-school. **Lubos naming iminumungkahi na suriin mo ang bawat site para sa hindi naaangkop na nilalaman at upang matiyak na maglo-load ito sa mga computer sa silid-aralan bago ito ibahagi sa mga mag-aaral**.
+
+          Gamit ang listahan sa ibaba bilang panimulang punto, inirerekomenda namin ang pagbibigay ng digital na listahan ng mga website ng pananaliksik sa mga mag-aaral. Maaari nitong isama ang mga website sa ibaba, at anumang karagdagang mapagkukunan na maaari mong makita sa sarili mong pananaliksik.
+
+          ### Nasusuot na Teknolohiya
+
+          * [Wareable.com](https://www.wareable.com/)
+
+          ### Kalusugan at Kaligtasan
+
+          * [Modern Healthcare](http://www.modernhealthcare.com/section/medical-devices)
+          * [Medstartr](http://www.medstartr.com/)
+
+          ### Agrikultura
+
+          * [National Institute of Food and Agriculture](https://nifa.usda.gov/topic/agriculture-technology)
+          * [Farm Industry News](http://www.farmindustrynews.com/technology)
+
+          ### Mga Pagawaan
+
+          * [Industry Week](https://www.industryweek.com/technology-and-iiot)
+          * [3D Printing](https://3dprinting.com/)
+
+          ### Sining at Disenyo
+
+          * [ArtFab](http://artfab.art.cmu.edu/)
+          * [Instructables](http://www.instructables.com/tag/type-id/category-technology/)
+
+          ### Smart Home
+
+          * [CNet](https://www.cnet.com/smart-home/)
+          * [IoT Evolution](http://www.iotevolutionworld.com/smart-home/)
+      ConditionalsWithCards-Unplugged_2021:
+        markdown: |-
+          # Mga Conditional na May Mga Card
+
+          Maglaro ng card game at gumawa ng mga panuntunan tulad ng "Kung gumuhit ako ng pulang card, makakakuha ako ng puntos" at "Kung gumuhit ako ng itim na card, makakakuha ka ng puntos."
+      DesigningForAccessibilityMarkdownLevel_2021:
+        markdown: |-
+          # Pagdidisenyo sa Accessibility
+
+          * Sa mundo ng computer science, ang **accessibility** ay tungkol sa paglikha ng teknolohiya sa mga taong may mga kapansanan.
+          * Kabilang sa mga kapansanan ang pisikal, auditory, visual, at marami pang iba.
+          * Ang mga kapansanan ay magkakaiba at nakakaapekto sa mga tao sa iba't ibang paraan, kabilang ang kung paano nila ginagamit ang teknolohiya gaya ng **mga app para sa smartphone**.
+          * Ang pagdidisenyo ng mga app na naa-access sa mga taong may mga kapansanan ay ginagawang mas mahusay ang mga app na iyon sa lahat din!
+
+          ![](https://images.code.org/0c670d0d9078657a870df0ca799492cb-image-1557166420066.png)
+      DigitalSharing-Unplugged_2021:
+        markdown: |-
+          # Digital na Pagbabahagi
+
+          Sa araling ito, isasaalang-alang mo ang mga hamon at benepisyo ng paggalang sa pagmamay-ari at copyright, lalo na sa mga digital na kapaligiran.
+      GraphPaperProgramming-Unplugged_2021:
+        markdown: |-
+          # Graph Paper na Programming
+
+          Sumulat ng mga algorithm na magagamit ng mga kaklase mo sa pagguhit ng mga larawan.
+      HappyMaps-Unplugged_2021:
+        markdown: |-
+          # Maligayang Mga Mapa
+
+          Gumawa ng algorithm upang ilipat ang karakter sa isang maze.
+      MoveItMoveIt-Unplugged_2021:
+        markdown: |-
+          # Ilipat Ito, Ilipat Ito
+
+          Gumamit ng mapa at magbigay ng mga command upang maabot ang layunin.
+      MyLoopyRoboticFriends-Unplugged_2021:
+        markdown: |-
+          # Aking Loopy Robotic na Mga Kaibigan
+
+          Gawing mas maikli ang mga program mo gamit ang mga loop!
+      MyRoboticFriends-Unplugged_2021:
+        markdown: |-
+          # Aking Mga Robotic na Kaibigan
+
+          Matutong magprogram sa pamamagitan ng pagsulat ng code sa mga kaibigan mo!
+      PrivatePersonalInformation-Unplugged_2021:
+        markdown: |-
+          # Pribado at Personal na Impormasyon
+
+          ## Anong impormasyon tungkol sa iyo ang OK na ibahagi online?
+      RelayProgramming-Unplugged_2021:
+        markdown: |-
+          # Relay na Programming
+
+          Hatiin sa mga koponan at magtulungan upang magsulat ng mga program na gumuhit ng mga larawan.
+      SimonSays-Unplugged_2021:
+        markdown: |-
+          # Sundin ang Algorithm
+
+          Maglaro ng laro at isipin kung anong mga command ang kailangan para makuha ang tamang resulta.
+      Songwriting-Unplugged_2021:
+        markdown: |-
+          # Pagsusulat ng kanta
+
+          Gamitin ang konsepto ng koro sa kanta upang matutunan ang tungkol sa pagtukoy at pagtawag ng mga function.
+      TheRightAppMarkdownLevel_2021:
+        markdown: |-
+          # Ang Tamang App
+
+          * Ang bawat tao'y gumagamit ng mga computer sa mga araw na ito, lalo na ang mga smartphone.
+          * Tinutulungan ng mga smartphone app ang mga tao na gawin ang mga bagay tulad ng pakikipag-usap sa mga kaibigan, pakikinig sa musika, pamimili, o pag-browse lang sa web.
+          * Mahalaga sa mga programmer na maunawaan ang mga pangangailangan ng iba at magdisenyo ng mga app na nasa isip nila!
+
+          ![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)
+      courseD_EOC_2021:
+        description: Naabot mo na ang huling aralin ng Kurso D! Pumili ng proyektong
+          gagawin.
+        display_name: Proyekto sa Katapusan ng Kurso
+      courseE_EOC_2021:
+        description: Naabot mo na ang dulo ng Course E! Pumili ng proyektong gagawin.
+        display_name: Proyekto sa Katapusan ng Kurso
+      courseE_EOC_examples_2021:
+        description: Naabot mo na ang dulo ng Course E! Pumili ng proyektong gagawin.
+        display_name: Proyekto sa Katapusan ng Kurso
+      courseF_EOC_2021:
+        description: Naabot mo na ang dulo ng Course F! Pumili ng proyektong gagawin.
+        display_name: Proyekto sa Katapusan ng Kurso
+      csf_digital_trails_2021:
+        markdown: |-
+          # Sundin ang Digital Trail
+
+          ## Anong impormasyon ang OK na mayroon sa digital footprint mo?
+      csf_safety_in_my_online_neighborhood_2021:
+        markdown: |-
+          # Aking Online na Kapitbahayan
+
+          ## Paano ka nakakapunta sa mga lugar nang ligtas sa online?
+      express_EOC_2021:
+        description: Naabot mo na ang dulo ng Course E! Pumili ng proyektong gagawin.
+        display_name: Proyekto sa Katapusan ng Kurso

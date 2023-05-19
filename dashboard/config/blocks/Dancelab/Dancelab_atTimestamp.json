@@ -1,11 +1,7 @@
 {
   "category": "Events",
   "config": {
-    "color": [
-      140,
-      1,
-      0.74
-    ],
+    "style": "event_blocks",
     "func": "atTimestamp",
     "blockText": "after {TIMESTAMP} {UNIT}",
     "args": [

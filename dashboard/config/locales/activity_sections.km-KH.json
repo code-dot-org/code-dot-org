@@ -100,6 +100,11 @@
         "f7c11887-da26-4c7b-be7a-1b84d330ed30": {
           "name": "លើសពី Hour of Code"
         },
+        "bdde2027-d08e-4f64-b95d-ab104da3edd9": {
+          "tips": [
+            null
+          ]
+        },
         "6b55015f-aebc-401b-b0c9-c40a5fd0056e": {
           "tips": [
             null
@@ -250,6 +255,11 @@
             null
           ]
         },
+        "3711e1c5-c206-4510-b260-99ee8f061a4c": {
+          "tips": [
+            null
+          ]
+        },
         "fbf618cf-ac1f-4cf9-b1e4-884ab667042f": {
           "tips": [
             null
@@ -336,8 +346,45 @@
             null
           ]
         },
+        "8581ae5d-4d2a-4221-b820-5920dd449b6c": {
+          "name": "",
+          "description": ""
+        },
+        "d63c77c1-4167-4360-ab98-25610934beda": {
+          "name": "",
+          "description": "",
+          "progression_name": ""
+        },
+        "385c2c6a-f7e4-4c90-b081-7030d22193ed": {
+          "description": "",
+          "progression_name": ""
+        },
+        "60837b14-7f66-4848-9c51-1c6aa9a21ad9": {
+          "description": ""
+        },
+        "13a06294-2f2a-4661-9947-46ed5843913f": {
+          "description": ""
+        },
+        "df13fa93-37df-4188-837d-462c48179625": {
+          "description": "",
+          "progression_name": ""
+        },
+        "ae9fb00b-5b7e-4ecb-94c9-c778a2eba24e": {
+          "description": "",
+          "progression_name": ""
+        },
         "0620e645-f84e-47ca-809b-3dcbe803d83e": {
           "progression_name": "លេងដោយសេរី"
+        },
+        "3a53855f-2fc4-48f1-a05e-1bd8e2c265e0": {
+          "description": ""
+        },
+        "b3189fd8-5272-4de4-953a-f4848b2ddb5c": {
+          "description": ""
+        },
+        "b8e884f1-eae0-4138-8778-0972f90e34d9": {
+          "name": "",
+          "description": ""
         },
         "21f43e64-dea3-4abc-8284-e055480370ce": {
           "tips": [
@@ -451,10 +498,29 @@
             null
           ]
         },
+        "197fed33-dc42-4fc0-8d20-e84b09292caa": {
+          "name": "",
+          "description": ""
+        },
         "de7dca58-f7d8-448f-84cf-41d215d2bf11": {
+          "description": "",
           "tips": [
-            null
+            ""
           ]
+        },
+        "7acfc985-03d8-4d14-b244-203f8cbf4843": {
+          "name": "",
+          "description": ""
+        },
+        "1634ab74-919f-40fb-b2dc-8cd5701655a2": {
+          "name": ""
+        },
+        "2edc03d3-b9a7-4c1b-a046-16fa43b3a7a3": {
+          "description": ""
+        },
+        "b68a11cc-930a-4803-beca-1d4f49ede378": {
+          "name": "",
+          "description": ""
         },
         "835c16c0-8a24-43c1-889b-493814eb50d1": {
           "name": "ពាក្យពិបាក"
@@ -934,6 +1000,9 @@
             null
           ]
         },
+        "75c9132a-969b-4198-8b79-cee2349158bf": {
+          "name": "ល្បែងស្វែងរកផ្លូវជាមួយតួអង្គបក្សី"
+        },
         "80691b85-b3f7-42c5-b28d-075f30bcfa91": {
           "progression_name": "មេរៀនបន្ថែម"
         },
@@ -1004,6 +1073,7 @@
           ]
         },
         "4124a6f9-58cd-4211-be8a-9930d9884d43": {
+          "name": "ល្បែងស្វែងរកផ្លូវជាមួយតួអង្គបក្សី",
           "tips": [
             null
           ]
@@ -1117,6 +1187,9 @@
         "0cb275f3-0f5c-4b45-a456-c3acd5a7b82d": {
           "progression_name": "លេងដោយសេរី"
         },
+        "e0582255-a83c-4278-8b18-9ce09ac1118d": {
+          "progression_name": "អ្នកច្រូតកាត់"
+        },
         "556d480c-8833-4dc1-b5ea-fcbd1ed85890": {
           "progression_name": "លេងដោយសេរី"
         },
@@ -1210,6 +1283,9 @@
             null
           ]
         },
+        "4b2ae2f9-5106-4ab2-91b3-fa6b5077a205": {
+          "name": "ល្បែងស្វែងរកផ្លូវជាមួយតួអង្គបក្សី"
+        },
         "45d87d50-30ef-4aa3-bc3f-e06911ea7ecd": {
           "progression_name": "មេរៀនបន្ថែម"
         },
@@ -1235,6 +1311,9 @@
           "tips": [
             null
           ]
+        },
+        "7976932c-a4b6-489f-baf4-bfe75e9f6e73": {
+          "name": "ធ្វើដដែលៗជាមួយនិងឡូរ៉ល។"
         },
         "371fe3c3-843c-447c-b5c2-337d8584e873": {
           "progression_name": "មេរៀនបន្ថែម"
@@ -1418,6 +1497,7 @@
           ]
         },
         "bb92650a-2be6-4f30-b851-611c2401aa32": {
+          "name": "ល្បែងស្វែងរកផ្លូវជាមួយតួអង្គបក្សី",
           "tips": [
             null
           ]
@@ -5594,6 +5674,9 @@
         "372e55a3-82dc-4e92-b50d-242dc2f7328d": {
           "progression_name": "លេងដោយសេរី"
         },
+        "4ab2263d-bf26-4d37-bc0e-88278310cfa7": {
+          "progression_name": "អ្នកច្រូតកាត់"
+        },
         "ff0bdda6-cf62-4449-a308-76b365386a4c": {
           "progression_name": "លេងដោយសេរី"
         },
@@ -5610,6 +5693,9 @@
         "cdd48ff9-10dc-4f20-be98-28178ec9d7f6": {
           "name": "លេងដោយសេរី",
           "progression_name": "លេងដោយសេរី"
+        },
+        "502e09e6-3af3-43cb-ae96-e44507f1250c": {
+          "progression_name": "អ្នកច្រូតកាត់"
         },
         "0914c4d0-b269-4072-a1b7-ed41eb2b7224": {
           "progression_name": "លេងដោយសេរី"
@@ -5671,6 +5757,9 @@
           "name": "លេងដោយសេរី",
           "progression_name": "លេងដោយសេរី"
         },
+        "0b309aa0-00ca-47e2-9f46-288d25694b0d": {
+          "progression_name": "អ្នកច្រូតកាត់"
+        },
         "22ed3900-dd2a-4eec-99c1-69f131286de6": {
           "name": "គំរោងអ្នកសិល្បៈ",
           "progression_name": "គំរោងអ្នកសិល្បៈ"
@@ -5685,6 +5774,9 @@
         },
         "e0d3988c-bdb0-45b1-9512-354e87118d64": {
           "progression_name": "ការសរសេរកូដកម្មវិធិជាមួយ រៃសនិង ប៊ីប៊ី-8។"
+        },
+        "b4cf29ee-8a4e-48ff-b637-302f650a2ede": {
+          "progression_name": "អ្នកច្រូតកាត់"
         },
         "84b14f6c-d011-4e52-8664-233fda16599e": {
           "name": "លេងដោយសេរី",
@@ -6609,9 +6701,38 @@
           "progression_name": "ទិដ្ឋភាព​ទូទៅ​របស់​មេរៀន"
         },
         "b16d189d-d990-44c4-be49-8f81ac81a96e": {
+          "description": "",
           "tips": [
-            null
+            ""
           ]
+        },
+        "d99fc09e-a586-41df-84b2-e552cc4735e3": {
+          "description": ""
+        },
+        "b6c8c6a3-fe85-4d42-999e-a2ba13f6739a": {
+          "description": ""
+        },
+        "6fba9dd0-6069-402c-a641-53899ae667e2": {
+          "description": ""
+        },
+        "21c585fc-7b80-4ab9-ba4c-8f4caa8ec102": {
+          "description": ""
+        },
+        "a49bc6c2-1b76-476d-98cd-7f040e8853a7": {
+          "name": "",
+          "description": ""
+        },
+        "065eda67-268c-4f91-9caf-efb2c34493fe": {
+          "description": ""
+        },
+        "51a89a3e-a8c7-41d6-bbbf-2ce16fc7e033": {
+          "description": ""
+        },
+        "8630a813-1b6c-49c5-a58b-d2dc5dcccd0a": {
+          "description": ""
+        },
+        "901dbdcd-5c65-4f3d-8cb2-9c9e36a48c2f": {
+          "description": ""
         },
         "bacf1db7-dc91-41b8-ad71-9fb655e18dfa": {
           "tips": [
@@ -6846,6 +6967,9 @@
             null
           ]
         },
+        "8d4c8d73-6930-4a7f-a73d-3c3312a2705b": {
+          "name": "ល្បែងស្វែងរកផ្លូវជាមួយតួអង្គបក្សី"
+        },
         "59a20536-707e-4328-88ab-71b1c533cd37": {
           "progression_name": "មេរៀនបន្ថែម"
         },
@@ -7044,6 +7168,7 @@
           ]
         },
         "c0ffac59-84f7-4177-b960-d808e21facb3": {
+          "name": "ល្បែងស្វែងរកផ្លូវជាមួយតួអង្គបក្សី",
           "tips": [
             null
           ]
@@ -7261,6 +7386,7 @@
           ]
         },
         "7b5f9e78-8c46-4ffa-ab19-355d6d63624b": {
+          "name": "ល្បែងស្វែងរកផ្លូវជាមួយតួអង្គបក្សី",
           "tips": [
             null
           ]
@@ -7385,6 +7511,9 @@
         "8a16a242-40d2-407c-b2c2-92012cc69e3d": {
           "progression_name": "មេរៀនបន្ថែម"
         },
+        "cbe7cad1-610d-4da8-9af6-fceb37bdeeed": {
+          "progression_name": "អ្នកច្រូតកាត់"
+        },
         "79cc55bf-53a8-463c-b4dc-86cc8651587a": {
           "tips": [
             null
@@ -7457,6 +7586,9 @@
             null
           ]
         },
+        "c07f590c-4333-4b74-a479-fa00fb43acd4": {
+          "name": "ល្បែងស្វែងរកផ្លូវជាមួយតួអង្គបក្សី"
+        },
         "adf3c7a1-6041-4dfb-bd2a-9645a4751aa3": {
           "progression_name": "មេរៀនបន្ថែម"
         },
@@ -7482,6 +7614,9 @@
           "tips": [
             null
           ]
+        },
+        "96d62dea-f1ff-46d9-a889-5ef9848c0acf": {
+          "name": "ធ្វើដដែលៗជាមួយនិងឡូរ៉ល។"
         },
         "62dfefbf-589b-46c7-a6ae-2b80bb18b021": {
           "progression_name": "មេរៀនបន្ថែម"
@@ -10769,6 +10904,9 @@
             null
           ]
         },
+        "259004b6-d013-48a6-8adb-4da6e8a13e6d": {
+          "progression_name": "អ្នកច្រូតកាត់"
+        },
         "eed9001e-67f2-44d8-8704-1f8fd9cf4897": {
           "progression_name": "លេងដោយសេរី"
         },
@@ -10795,6 +10933,9 @@
         "29a36d4b-797c-4517-970d-7ba25fe9f9a4": {
           "progression_name": "លេងដោយសេរី"
         },
+        "68c477cb-6e9a-41d1-9f7e-2b3b84a95f52": {
+          "progression_name": "អ្នកច្រូតកាត់"
+        },
         "d82614b6-8420-4d3f-83c7-b7fb9d353453": {
           "progression_name": "លេងដោយសេរី"
         },
@@ -10804,6 +10945,9 @@
         },
         "61e56a64-227e-422a-9c65-62c927caed06": {
           "progression_name": "ការសរសេរកូដកម្មវិធិជាមួយ រៃសនិង ប៊ីប៊ី-8។"
+        },
+        "e12c3ee1-8c2e-4727-8133-d6dbf630f64d": {
+          "progression_name": "អ្នកច្រូតកាត់"
         },
         "8131dce7-4fb6-4612-aef7-24ffa0c07804": {
           "name": "លេងដោយសេរី",
@@ -10834,6 +10978,9 @@
         "f578d2c6-5557-4872-8505-2ee73c254d6e": {
           "name": "លេងដោយសេរី",
           "progression_name": "លេងដោយសេរី"
+        },
+        "f62b5dfa-a6d0-4152-9486-204c989f79d6": {
+          "progression_name": "អ្នកច្រូតកាត់"
         },
         "598993a6-e64b-48e3-8002-c617aae9cdab": {
           "progression_name": "ការសរសេរកូដកម្មវិធិជាមួយ រៃសនិង ប៊ីប៊ី-8។"

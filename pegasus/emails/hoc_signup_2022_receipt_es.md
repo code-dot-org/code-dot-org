@@ -1,5 +1,6 @@
 ---
 from: "Hadi Partovi (Code.org) <hadi_partovi@code.org>"
+reply-to: "Code.org <support@code.org>"
 subject: "¡Gracias por inscribirte para ser anfitrión de una Hora de Código!"
 ---
   <% hostname = CDO.canonical_hostname('hourofcode.com') %>

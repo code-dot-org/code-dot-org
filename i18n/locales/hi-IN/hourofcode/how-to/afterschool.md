@@ -65,7 +65,7 @@ Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage o
 
 **Direct participants to the activity** - Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
 
-**When someone comes across difficulties it's okay to respond:** - “I don’t know. Let’s figure this out together.” - “Technology doesn’t always work out the way we want.” - “Learning to program is like learning a new language; you won’t be fluent right away.”
+**When someone comes across difficulties it's okay to respond:** - “I don’t know. आइए इसे एक साथ समझें।" - “प्रौद्योगिकी हमेशा हमारे इच्छित तरीके से काम नहीं करती है।” - “प्रोग्राम सीखना एक नई भाषा सीखने जैसा है; आप तुरंत धाराप्रवाह नहीं होंगे।”
 
 **What to do if someone finishes early?** - Encourage participants to try another Hour of Code activity at [hourofcode.com/learn]({{ urls/learn }}) - Or, ask those who finish early to help others who are having trouble.
 

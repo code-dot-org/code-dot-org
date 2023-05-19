@@ -51,13 +51,19 @@
         "poetry-hoc3": "poetry-hoc3",
         "csa-u8-dev": "csa-u8-dev",
         "outbreakmodule": "môđundịchbệnhbùngphát",
+        "valentine": "valentine",
         "netsim": "netsim",
         "outbreak-module": "mô-đun-dịch-bệnh-bùng-phát",
         "allthethingscourse": "allthethingscourse",
+        "halloween": "halloween",
         "step": "bước/ từng bước",
         "coursee-ramp": "coursee-ramp",
         "csa5-exemplars": "csa5-exemplars",
-        "soccer": "bóng đá"
+        "katie-practice": "katie-practice",
+        "soccer": "bóng đá",
+        "hello-world-space": "Xin chào Thế giới: vũ trụ",
+        "hello-world-soccer": "Hello World: Bóng đá",
+        "playground": "sân chơi"
       }
     }
   }

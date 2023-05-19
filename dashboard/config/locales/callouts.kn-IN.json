@@ -192,13 +192,16 @@
           "craft_callout_preplaced_house": "ಈ ಕೋಡ್ ನಿಮ್ಮ ಮನೆಯನ್ನು ನಿರ್ಮಿಸಲು ಪ್ರಾರಂಭಿಸುತ್ತದೆ. ನೀವು ಅದನ್ನು ಮುಗಿಸಬಹುದೇ?"
         },
         "Overworld Move to Sheep": {
-          "craft_drag_block_callout": "\"ಮುಂದಕ್ಕೆ ಸಾಗಿ\" ಬ್ಲಾಕ್ ಎಳೆಯಿರಿ ಮತ್ತು ಇನ್ನೊಂದು ಬ್ಲಾಕ್ ಕೆಳಗೆ ಸ್ನ್ಯಾಪ್ ಮಾಡಿ"
+          "craft_drag_block_callout": "\"ಮುಂದಕ್ಕೆ ಸಾಗಿ\" ಬ್ಲಾಕ್ ಎಳೆಯಿರಿ ಮತ್ತು ಇನ್ನೊಂದು ಬ್ಲಾಕ್ ಕೆಳಗೆ ಸ್ನ್ಯಾಪ್ ಮಾಡಿ",
+          "craft_run_button_callout": "ನಿಮ್ಮ ಪ್ರೋಗ್ರಾಂ ಅನ್ನು ಪ್ರಯತ್ನಿಸಲು “ರನ್” ಒತ್ತಿರಿ"
         },
         "Overworld Move to Sheep_2019": {
-          "craft_drag_block_callout": "\"ಮುಂದಕ್ಕೆ ಸಾಗಿ\" ಬ್ಲಾಕ್ ಎಳೆಯಿರಿ ಮತ್ತು ಇನ್ನೊಂದು ಬ್ಲಾಕ್ ಕೆಳಗೆ ಸ್ನ್ಯಾಪ್ ಮಾಡಿ"
+          "craft_drag_block_callout": "\"ಮುಂದಕ್ಕೆ ಸಾಗಿ\" ಬ್ಲಾಕ್ ಎಳೆಯಿರಿ ಮತ್ತು ಇನ್ನೊಂದು ಬ್ಲಾಕ್ ಕೆಳಗೆ ಸ್ನ್ಯಾಪ್ ಮಾಡಿ",
+          "craft_run_button_callout": "ನಿಮ್ಮ ಪ್ರೋಗ್ರಾಂ ಅನ್ನು ಪ್ರಯತ್ನಿಸಲು “ರನ್” ಒತ್ತಿರಿ"
         },
         "Overworld Move to Sheep_2020": {
-          "craft_drag_block_callout": "\"ಮುಂದಕ್ಕೆ ಸಾಗಿ\" ಬ್ಲಾಕ್ ಎಳೆಯಿರಿ ಮತ್ತು ಇನ್ನೊಂದು ಬ್ಲಾಕ್ ಕೆಳಗೆ ಸ್ನ್ಯಾಪ್ ಮಾಡಿ"
+          "craft_drag_block_callout": "\"ಮುಂದಕ್ಕೆ ಸಾಗಿ\" ಬ್ಲಾಕ್ ಎಳೆಯಿರಿ ಮತ್ತು ಇನ್ನೊಂದು ಬ್ಲಾಕ್ ಕೆಳಗೆ ಸ್ನ್ಯಾಪ್ ಮಾಡಿ",
+          "craft_run_button_callout": "ನಿಮ್ಮ ಪ್ರೋಗ್ರಾಂ ಅನ್ನು ಪ್ರಯತ್ನಿಸಲು “ರನ್” ಒತ್ತಿರಿ"
         },
         "Overworld Move to Sheep_2021": {
           "craft_run_button_callout": "ನಿಮ್ಮ ಪ್ರೋಗ್ರಾಂ ಅನ್ನು ಪ್ರಯತ್ನಿಸಲು \"ರನ್\" ಒತ್ತಿರಿ",
@@ -695,7 +698,8 @@
           "AppLabHoCFinal11": "ನೀವು ಈಗ ವಿನ್ಯಾಸ ಮೋಡ್‌ನಲ್ಲಿರುವಿರಿ."
         },
         "frozen line": {
-          "run": "ನಿಮ್ಮ ಪ್ರೋಗ್ರಾಂ ಅನ್ನು ಪ್ರಯತ್ನಿಸಲು \"ರನ್\" ಒತ್ತಿರಿ"
+          "run": "ನಿಮ್ಮ ಪ್ರೋಗ್ರಾಂ ಅನ್ನು ಪ್ರಯತ್ನಿಸಲು \"ರನ್\" ಒತ್ತಿರಿ",
+          "move_elsa_forward": "“ಮೂವ್ ಫಾರ್ವರ್ಡ್” ಬ್ಲಾಕ್ ಅನ್ನು ಎಳೆಯಿರಿ ಮತ್ತು ಎಲ್ಸಾ ಮುಂದುವರಿಯಲು “ರನ್ ಮಾಡಿದಾಗ” ಬ್ಲಾಕ್ನ ಕೆಳಗೆ ಅದನ್ನು ಸ್ನ್ಯಾಪ್ ಮಾಡಿ"
         },
         "4-5 Bee Conditionals 2": {
           "4_5_Bee_Conditionals_2_1": "ನೆನಪಿಡಿ, ಪ್ರತಿ ಮೋಡವು ಹೂವನ್ನು ಹೊಂದಿದೆಯೇ ಎಂದು ಪರೀಕ್ಷಿಸಿ. ನೀವು ಜೇನುಗೂಡುಗಳನ್ನು ಪರೀಕ್ಷಿಸಬೇಕಾಗಿಲ್ಲ."
@@ -1479,7 +1483,8 @@
           "MC_HOC_2017_08_RY_1": "ಏಜೆಂಟ್ ಲಾವಾ ಮೇಲಿನಿಂದ ಹೋಗಬಹುದು. ಆದರೆ, ಸ್ಟೀವ್ ಮತ್ತು ಅಲೆಕ್ಸಾರಿಂದ ಸಾಧ್ಯವಿಲ್ಲ!"
         },
         "Overworld Move to Sheep2022": {
-          "craft_drag_block_callout": "\"ಮುಂದಕ್ಕೆ ಸಾಗಿ\" ಬ್ಲಾಕ್ ಎಳೆಯಿರಿ ಮತ್ತು ಇನ್ನೊಂದು ಬ್ಲಾಕ್ ಕೆಳಗೆ ಸ್ನ್ಯಾಪ್ ಮಾಡಿ"
+          "craft_drag_block_callout": "\"ಮುಂದಕ್ಕೆ ಸಾಗಿ\" ಬ್ಲಾಕ್ ಎಳೆಯಿರಿ ಮತ್ತು ಇನ್ನೊಂದು ಬ್ಲಾಕ್ ಕೆಳಗೆ ಸ್ನ್ಯಾಪ್ ಮಾಡಿ",
+          "craft_run_button_callout": "ನಿಮ್ಮ ಪ್ರೋಗ್ರಾಂ ಅನ್ನು ಪ್ರಯತ್ನಿಸಲು “ರನ್” ಒತ್ತಿರಿ"
         },
         "Virtual Pet 2_-2022-2": {
           "vp_costumes": "ನಿಮ್ಮ ಯೋಜನೆಗೆ ಹೊಸ ವೇಷಭೂಷಣಗಳನ್ನು ಸೇರಿಸಲು ಇಲ್ಲಿ ಕ್ಲಿಕ್ ಮಾಡಿ!"
@@ -1823,6 +1828,247 @@
         },
         "express_maze_debugging92022": {
           "express_maze_debugging9_2019_1": "ಟೂಲ್‌ಬಾಕ್ಸ್‌ನಿಂದ ಬ್ಲಾಕ್‌ಗಳನ್ನು ನಿಮ್ಮ ಕಾರ್ಯಸ್ಥಳಕ್ಕೆ ಎಳೆಯಿರಿ."
+        },
+        "helloworld_food_backgrounds_soccer-2022": {
+          "hw_background_location": "ಹೊಸ ಹಿನ್ನೆಲೆ ನಿಗದಿಸಲು ಈ ಬ್ಲಾಕ್ ಬಳಸಿ."
+        },
+        "helloworld_food_backgrounds_space-2022": {
+          "hw_background_location": "ಹೊಸ ಹಿನ್ನೆಲೆ ನಿಗದಿಸಲು ಈ ಬ್ಲಾಕ್ ಬಳಸಿ."
+        },
+        "helloworld_food_behaviors_soccer-2022": {
+          "hello_world_behavior_blocks": "ಈ ಕೆಳಗಿನ ಒಂದು ವರ್ತನೆಗಳೊಂದಿಗೆ ಈ ಬ್ಲಾಕ್ ಬಳಸಿ."
+        },
+        "helloworld_food_behaviors_space-2022": {
+          "hello_world_behavior_blocks": "ಈ ಕೆಳಗಿನ ಒಂದು ವರ್ತನೆಗಳೊಂದಿಗೆ ಈ ಬ್ಲಾಕ್ ಬಳಸಿ."
+        },
+        "helloworld_food_click_soccer-2022": {
+          "hw_Run": "ಕೋಡ್ ರನ್ ಮಾಡಲು ಇಲ್ಲಿ ಕ್ಲಿಕ್ ಮಾಡಿ."
+        },
+        "helloworld_food_costumes_soccer-2022": {
+          "hello_world_new": "ಹೊಸ ಬ್ಲಾಕ್!"
+        },
+        "helloworld_food_costumes_space-2022": {
+          "hello_world_new": "ಹೊಸ ಬ್ಲಾಕ್!"
+        },
+        "helloworld_food_events_soccer-2022": {
+          "hello_world_click_hint": "ನಿಮ್ಮ ವರ್ಕ್‌ಸ್ಪೇಸ್‌ಗೆ ಈ ಈವೆಂಟ್ ಬ್ಲಾಕ್ ಸೇರಿಸಿ."
+        },
+        "helloworld_food_events_space-2022": {
+          "hello_world_click_hint": "ನಿಮ್ಮ ವರ್ಕ್‌ಸ್ಪೇಸ್‌ಗೆ ಈ ಈವೆಂಟ್ ಬ್ಲಾಕ್ ಸೇರಿಸಿ."
+        },
+        "helloworld_food_freeplay_soccer-2022": {
+          "costumes_tab": "ನಿಮ್ಮ ಪ್ರಾಜೆಕ್ಟ್‌ಗೆ ಕಾಸ್ಟ್ಯೂಮ್‌ಗಳನ್ನು ಸೇರಿಸಲು ಇಲ್ಲಿ ಕ್ಲಿಕ್ ಮಾಡಿ."
+        },
+        "helloworld_food_freeplay_space-2022": {
+          "costumes_tab": "ನಿಮ್ಮ ಪ್ರಾಜೆಕ್ಟ್‌ಗೆ ಕಾಸ್ಟ್ಯೂಮ್‌ಗಳನ್ನು ಸೇರಿಸಲು ಇಲ್ಲಿ ಕ್ಲಿಕ್ ಮಾಡಿ."
+        },
+        "helloworld_food_location_soccer-2022": {
+          "pin": "ಪಿನ್"
+        },
+        "helloworld_food_location_space-2022": {
+          "pin": "ಪಿನ್"
+        },
+        "helloworld_food_multi_soccer-2022": {
+          "pin": "ಪಿನ್"
+        },
+        "helloworld_food_multi_space-2022": {
+          "pin": "ಪಿನ್"
+        },
+        "helloworld_food_say_soccer-2022": {
+          "hello_world_say": "ಸ್ಪ್ರೈಟ್‌ಗಳು ಮಾತನಾಡುವಂತೆ ಮಾಡಲು ಈ ಬ್ಲಾಕ್ ಬಳಸಿ.",
+          "hello_world_make_sprite": "ಸ್ಪ್ರೈಟ್ ರಚಿಸಲು ಈ ಬ್ಲಾಕ್ ಬಳಸಿ."
+        },
+        "helloworld_food_say_space-2022": {
+          "hello_world_say": "ಸ್ಪ್ರೈಟ್‌ಗಳು ಮಾತನಾಡುವಂತೆ ಮಾಡಲು ಈ ಬ್ಲಾಕ್ ಬಳಸಿ.",
+          "hello_world_make_sprite": "ಸ್ಪ್ರೈಟ್ ರಚಿಸಲು ಈ ಬ್ಲಾಕ್ ಬಳಸಿ."
+        },
+        "helloworld_food_sizes_soccer-2022": {
+          "hello_world_new": "ಹೊಸ ಬ್ಲಾಕ್!",
+          "hello_world_new_block": "ಹೊಸ ಬ್ಲಾಕ್!"
+        },
+        "helloworld_food_sizes_space-2022": {
+          "hello_world_new": "ಹೊಸ ಬ್ಲಾಕ್!",
+          "hello_world_new_block": "ಹೊಸ ಬ್ಲಾಕ್!"
+        },
+        "helloworld_food_sounds_soccer-2022": {
+          "hello_world_new": "ಹೊಸ ಬ್ಲಾಕ್!"
+        },
+        "helloworld_food_sounds_space-2022": {
+          "hello_world_new": "ಹೊಸ ಬ್ಲಾಕ್!"
+        },
+        "Course 4 Artist 7": {
+          "repeat_blocks": "“ರಿಪೀಟ್” ಬ್ಲಾಕ್ ಅನ್ನು ಬಳಸಿ ಮತ್ತು ವರ್ಕ್‌ಸ್ಪೇಸ್‌ನಲ್ಲಿ ಬ್ಲಾಕ್‌ಗಳ ಸುತ್ತಲೂ ಅದನ್ನು ಸುತ್ತಿ"
+        },
+        "Course 4 Artist Vars 1": {
+          "repeat_blocks": "“ರಿಪೀಟ್” ಬ್ಲಾಕ್ ಅನ್ನು ಬಳಸಿ ಮತ್ತು ವರ್ಕ್‌ಸ್ಪೇಸ್‌ನಲ್ಲಿ ಬ್ಲಾಕ್‌ಗಳ ಸುತ್ತಲೂ ಅದನ್ನು ಸುತ್ತಿ"
+        },
+        "frozen cross": {
+          "repeat_blocks_2": "(2) ಇಲ್ಲಿ “ರಿಪೀಟ್” ಬ್ಲಾಕ್ ಅನ್ನು ಮೂವ್ ಮಾಡಿ ಮತ್ತು ಒಳಗೆ ಗ್ರೇ ಬ್ಲಾಕ್‌ಗಳನ್ನು ಇರಿಸಿ",
+          "repeat_blocks_1": "(1) ಈ ಬ್ಲಾಕ್ ಅನ್ನು ಬಳಸಿ ಮತ್ತು ಕಾರ್ಯಕ್ಷೇತ್ರದಲ್ಲಿ ಬೂದು ಬ್ಲಾಕ್ಗಳ ಸುತ್ತಲೂ ಇರಿಸಿ"
+        },
+        "frozen diamond": {
+          "frozen_diamond_repeat": "ಈ ಆಕಾರವನ್ನು ರಚಿಸಲು ರಿಪೀಟ್ ಬ್ಲಾಕ್ ಬಳಸಿ."
+        },
+        "frozen diamond snowflake": {
+          "frozen_diamond_repeat": "ಈ ಆಕಾರವನ್ನು ರಚಿಸಲು ರಿಪೀಟ್ ಬ್ಲಾಕ್ ಬಳಸಿ."
+        },
+        "helloworld_food_click_space-2022": {
+          "hw_Run": "ಮೊದಲು ಇಲ್ಲಿ ಕ್ಲಿಕ್ ಮಾಡಿ!"
+        },
+        "Course 4 Artist 4": {
+          "repeat_full_circle": "ಪೂರ್ಣ ವೃತ್ತವನ್ನು ಮಾಡಲು ಜೊಂಬಿ ಎಷ್ಟು ಬಾರಿ ಚಲಿಸಬೇಕಾಗುತ್ತದೆ ಎಂಬುದನ್ನು ನಮೂದಿಸಿ"
+        },
+        "Course 4 Artist For Loops 4": {
+          "place_counter_variable": "ಈ ಬ್ಲಾಕ್ನಲ್ಲಿ ನಿಮ್ಮ ಕೌಂಟರ್ ವೇರಿಯಬಲ್ ಅನ್ನು ಎಳೆಯಿರಿ"
+        },
+        "Course 4 Artist Vars 12": {
+          "set_length": "ಸರಿಯಾದ ಮೌಲ್ಯಕ್ಕೆ “ಉದ್ದ” ಹೊಂದಿಸಲು ಈ ಬ್ಲಾಕ್ ಬಳಸಿ."
+        },
+        "Course 4 Artist Vars 2": {
+          "set_length": "ಸರಿಯಾದ ಮೌಲ್ಯಕ್ಕೆ “ಉದ್ದ” ಹೊಂದಿಸಲು ಈ ಬ್ಲಾಕ್ ಬಳಸಿ."
+        },
+        "Course 4 Artist Vars 6": {
+          "degrees_per_side": "ಪ್ರತಿ ಕೋನದ ಗಾತ್ರವನ್ನು ಡಿಗ್ರಿಗಳಲ್ಲಿ ಪಡೆಯಲು 360 ಅನ್ನು ಬದಿಗಳ ಸಂಖ್ಯೆಯಿಂದ ಭಾಗಿಸಿ."
+        },
+        "Course 4 Bee Params 2": {
+          "edit_get_nectar": "ಕಾರ್ಯವನ್ನು ಸಂಪಾದಿಸಲು ಈ ಗುಂಡಿಯನ್ನು ಬಳಸಿ ಮತ್ತು ಮಕರಂದವನ್ನು ಪಡೆಯಲು ಬೀ ತಿರುಗುವ ದಿಕ್ಕನ್ನು ಬದಲಾಯಿಸಿ."
+        },
+        "Course 4 Maze 4": {
+          "repeat": "ಆಜ್ಞೆಗಳನ್ನು ಪುನರಾವರ್ತಿಸಲು ಲೂಪ್ ಒಳಗೆ ಬ್ಲಾಕ್ಗಳನ್ನು ಹಾಕಿ"
+        },
+        "Course 4 Play Lab Params 3": {
+          "edit_function": "ನಿಮ್ಮ ಕಾರ್ಯವನ್ನು ಸಂಪಾದಿಸಲು ಇಲ್ಲಿ ಕ್ಲಿಕ್ ಮಾಡಿ."
+        },
+        "Course 4 Play Lab Params 6": {
+          "edit_add_parameter": "ನಿಮ್ಮ ಕಾರ್ಯದಲ್ಲಿ ನಿಯತಾಂಕವನ್ನು ಸೇರಿಸಲು ಸಂಪಾದಿಸು ಕ್ಲಿಕ್ ಮಾಡಿ"
+        },
+        "Course 4 Play Lab Vars 1": {
+          "arrows_move_actor": "ನಟನನ್ನು ಸರಿಸಲು ಬಾಣಗಳನ್ನು ಬಳಸಿ"
+        },
+        "Infinity_move_collide": {
+          "Infinity_move_collide_callout": "ಈ ಘಟನೆ ಸಂಭವಿಸಿದಾಗ ಧ್ವನಿಯನ್ನು ಪ್ಲೇ ಮಾಡಿ."
+        },
+        "Infinity_move_directions": {
+          "Infinity_move_directions_callout": "ಮೇಲಿನ ಬಾಣವನ್ನು ಒತ್ತಿದಾಗ ಯಾವ ಬ್ಲಾಕ್ ಬೇಮ್ಯಾಕ್ಸ್ ಅನ್ನು ಚಲಿಸುವಂತೆ ಮಾಡುತ್ತದೆ?",
+          "Infinity_move_directions_callout_arrow": "ಸ್ಟಿಯರ್ ಮಾಡಲು ಈ ಬಾಣಗಳನ್ನು ಬಳಸಿ"
+        },
+        "Infinity_move_right": {
+          "Infinity_move_right_runbutton": "ಮೂವ್ ಬ್ಲಾಕ್ ಅನ್ನು ಇಲ್ಲಿ ಸೇರಿಸಿ"
+        },
+        "Infinity_repeat": {
+          "Infinity_repeat_callout": "ಇಲ್ಲಿ ಒಳಗೆ ಬ್ಲಾಕ್ಗಳನ್ನು ಸರಿಸಿ"
+        },
+        "NEW Course 4 Artist Functions 7": {
+          "edit_function": "ನಿಮ್ಮ ಕಾರ್ಯವನ್ನು ಸಂಪಾದಿಸಲು ಇಲ್ಲಿ ಕ್ಲಿಕ್ ಮಾಡಿ."
+        },
+        "NEW Course 4 Artist Functions 8": {
+          "edit_function": "ನಿಮ್ಮ ಕಾರ್ಯವನ್ನು ಸಂಪಾದಿಸಲು ಇಲ್ಲಿ ಕ್ಲಿಕ್ ಮಾಡಿ."
+        },
+        "NEW Course 4 Artist Params 10": {
+          "create_function": "“ಕಾರ್ಯಗಳು” ಫ್ಲೈಔಟ್ ತೆರೆಯಲು ಇಲ್ಲಿ ಕ್ಲಿಕ್ ಮಾಡಿ, ನಂತರ “ಕಾರ್ಯವನ್ನು ರಚಿಸಿ” ಬಟನ್ ಕ್ಲಿಕ್ ಮಾಡಿ."
+        },
+        "NEW Course 4 Artist Params 9": {
+          "edit_add_parameter": "ನಿಮ್ಮ ಕಾರ್ಯದಲ್ಲಿ ನಿಯತಾಂಕವನ್ನು ಸೇರಿಸಲು ಸಂಪಾದಿಸು ಕ್ಲಿಕ್ ಮಾಡಿ",
+          "add_and_drag_parameter": "ನಿಮ್ಮ ನಿಯತಾಂಕದ ಹೆಸರಿನಲ್ಲಿ ಬರೆಯಿರಿ ಇಲ್ಲಿ, ಸೇರಿಸು ಕ್ಲಿಕ್ ಮಾಡಿ, ತದನಂತರ ಅದನ್ನು ನಿಮ್ಮ ಕಾರ್ಯ ವ್ಯಾಖ್ಯಾನಕ್ಕೆ ಎಳೆಯಿರಿ"
+        },
+        "NEW Course 4 Artist Vars 6": {
+          "place_length_variable": "ಪ್ರಶ್ನೆ ಗುರುತುಗಳನ್ನು ಬದಲಿಸಲು ಉದ್ದದ ವೇರಿಯೇಬಲ್ ಅನ್ನು ಇಲ್ಲಿ ಎಳೆಯಿರಿ"
+        },
+        "NEW Course 4 Bee For Loops 5": {
+          "actions_category": "ಟೂಲ್ ಬಾಕ್ಸ್ ಹೊಸ ನೋಟವನ್ನು ಪಡೆದುಕೊಂಡಿದೆ! “ಕ್ರಿಯೆಗಳು” ಬ್ಲಾಕ್ಗಳು ಈಗ ಇಲ್ಲಿವೆ."
+        },
+        "New Frozen Project": {
+          "snowflake_dropdown": "ವಿಭಿನ್ನ ಸ್ನೋಫ್ಲೇಕ್ಗಳನ್ನು ರಚಿಸಲು ಈ ಡ್ರಾಪ್-ಡೌನ್ ಬಳಸಿ!"
+        },
+        "Overworld Chop Trees": {
+          "craft_callout_preplaced": "ನೀವು ಪ್ರಾರಂಭಿಸಲು ನಾವು ಇಲ್ಲಿ ಕೆಲವು ಬ್ಲಾಕ್ಗಳನ್ನು ಹಾಕಿದ್ದೇವೆ"
+        },
+        "Overworld Chop Trees2022": {
+          "craft_callout_preplaced": "ನೀವು ಪ್ರಾರಂಭಿಸಲು ನಾವು ಇಲ್ಲಿ ಕೆಲವು ಬ್ಲಾಕ್ಗಳನ್ನು ಹಾಕಿದ್ದೇವೆ"
+        },
+        "Overworld Chop Trees_2019": {
+          "craft_callout_preplaced": "ನೀವು ಪ್ರಾರಂಭಿಸಲು ನಾವು ಇಲ್ಲಿ ಕೆಲವು ಬ್ಲಾಕ್ಗಳನ್ನು ಹಾಕಿದ್ದೇವೆ"
+        },
+        "Overworld Chop Trees_2020": {
+          "craft_callout_preplaced": "ನೀವು ಪ್ರಾರಂಭಿಸಲು ನಾವು ಇಲ್ಲಿ ಕೆಲವು ಬ್ಲಾಕ್ಗಳನ್ನು ಹಾಕಿದ್ದೇವೆ"
+        },
+        "Overworld House Frame Chosen": {
+          "craft_callout_preplaced_house": "ಈ ಕೋಡ್ ನಿಮ್ಮ ಮನೆಯನ್ನು ನಿರ್ಮಿಸಲು ಪ್ರಾರಂಭಿಸುತ್ತದೆ. ನೀವು ಅದನ್ನು ಮುಗಿಸಬಹುದೇ?"
+        },
+        "Overworld House Frame Chosen2022": {
+          "craft_callout_preplaced_house": "ಈ ಕೋಡ್ ನಿಮ್ಮ ಮನೆಯನ್ನು ನಿರ್ಮಿಸಲು ಪ್ರಾರಂಭಿಸುತ್ತದೆ. ನೀವು ಅದನ್ನು ಮುಗಿಸಬಹುದೇ?"
+        },
+        "Overworld House Frame Chosen_2019": {
+          "craft_callout_preplaced_house": "ಈ ಕೋಡ್ ನಿಮ್ಮ ಮನೆಯನ್ನು ನಿರ್ಮಿಸಲು ಪ್ರಾರಂಭಿಸುತ್ತದೆ. ನೀವು ಅದನ್ನು ಮುಗಿಸಬಹುದೇ?"
+        },
+        "Overworld House Frame Chosen_2020": {
+          "craft_callout_preplaced_house": "ಈ ಕೋಡ್ ನಿಮ್ಮ ಮನೆಯನ್ನು ನಿರ್ಮಿಸಲು ಪ್ರಾರಂಭಿಸುತ್ತದೆ. ನೀವು ಅದನ್ನು ಮುಗಿಸಬಹುದೇ?"
+        },
+        "Overworld Place Wall": {
+          "craft_inside_repeat": "ಇಲ್ಲಿ ಬ್ಲಾಕ್ಗಳನ್ನು ಇರಿಸುವ ಮೂಲಕ ಕ್ರಿಯೆಗಳನ್ನು ಪುನರಾವರ್ತಿಸಿ"
+        },
+        "Overworld Place Wall2022": {
+          "craft_inside_repeat": "ಇಲ್ಲಿ ಬ್ಲಾಕ್ಗಳನ್ನು ಇರಿಸುವ ಮೂಲಕ ಕ್ರಿಯೆಗಳನ್ನು ಪುನರಾವರ್ತಿಸಿ"
+        },
+        "Overworld Place Wall_2019": {
+          "craft_inside_repeat": "ಇಲ್ಲಿ ಬ್ಲಾಕ್ಗಳನ್ನು ಇರಿಸುವ ಮೂಲಕ ಕ್ರಿಯೆಗಳನ್ನು ಪುನರಾವರ್ತಿಸಿ"
+        },
+        "Overworld Place Wall_2020": {
+          "craft_inside_repeat": "ಇಲ್ಲಿ ಬ್ಲಾಕ್ಗಳನ್ನು ಇರಿಸುವ ಮೂಲಕ ಕ್ರಿಯೆಗಳನ್ನು ಪುನರಾವರ್ತಿಸಿ"
+        },
+        "Underground Avoiding Lava": {
+          "craft_callout_moveforward": "ಈ ಕೋಡ್ ಲಾವಾವನ್ನು ಪರಿಶೀಲಿಸುತ್ತದೆ, ಮುಂದುವರಿಯಲು ನೀವು ಆಜ್ಞೆಯನ್ನು ಸೇರಿಸಬಹುದೇ?"
+        },
+        "Underground Avoiding Lava2022": {
+          "craft_callout_moveforward": "ಈ ಕೋಡ್ ಲಾವಾವನ್ನು ಪರಿಶೀಲಿಸುತ್ತದೆ, ಮುಂದುವರಿಯಲು ನೀವು ಆಜ್ಞೆಯನ್ನು ಸೇರಿಸಬಹುದೇ?"
+        },
+        "Underground Avoiding Lava_2019": {
+          "craft_callout_moveforward": "ಈ ಕೋಡ್ ಲಾವಾವನ್ನು ಪರಿಶೀಲಿಸುತ್ತದೆ, ಮುಂದುವರಿಯಲು ನೀವು ಆಜ್ಞೆಯನ್ನು ಸೇರಿಸಬಹುದೇ?"
+        },
+        "Underground Avoiding Lava_2020": {
+          "craft_callout_moveforward": "ಈ ಕೋಡ್ ಲಾವಾವನ್ನು ಪರಿಶೀಲಿಸುತ್ತದೆ, ಮುಂದುವರಿಯಲು ನೀವು ಆಜ್ಞೆಯನ್ನು ಸೇರಿಸಬಹುದೇ?"
+        },
+        "Underground Iron": {
+          "craft_what_is_iron": "ಈ ಕಬ್ಬಿಣವನ್ನು ಗಣಿ ಮಾಡಿ!"
+        },
+        "Underground Iron2022": {
+          "craft_what_is_iron": "ಈ ಕಬ್ಬಿಣವನ್ನು ಗಣಿ ಮಾಡಿ!"
+        },
+        "Underground Iron_2019": {
+          "craft_what_is_iron": "ಈ ಕಬ್ಬಿಣವನ್ನು ಗಣಿ ಮಾಡಿ!"
+        },
+        "Underground Iron_2020": {
+          "craft_what_is_iron": "ಈ ಕಬ್ಬಿಣವನ್ನು ಗಣಿ ಮಾಡಿ!"
+        },
+        "Underground Iron_2021": {
+          "craft_what_is_iron": "ಈ ಕಬ್ಬಿಣವನ್ನು ಗಣಿ ಮಾಡಿ!"
+        },
+        "frozen circle function with parameter": {
+          "frozen_circle_function_with_parameter_circle": "“ವೃತ್ತವನ್ನು ರಚಿಸಿ” ಬ್ಲಾಕ್ ಅನ್ನು ಬಳಸಿ ಮತ್ತು ಗಾತ್ರವನ್ನು ಬದಲಾಯಿಸಿ."
+        },
+        "frozen cross rotate": {
+          "replace_questions_degree": "ಬದಲಿಗೆ ಡ್ರಾಪ್-ಡೌನ್ ಬಳಸಿ “???” ಒಂದು ಸಂಖ್ಯೆಯೊಂದಿಗೆ"
+        },
+        "frozen freeplay": {
+          "snowflake_dropdown": "ವಿಭಿನ್ನ ಸ್ನೋಫ್ಲೇಕ್ಗಳನ್ನು ರಚಿಸಲು ಈ ಡ್ರಾಪ್-ಡೌನ್ ಬಳಸಿ!"
+        },
+        "frozen perpendicular": {
+          "turn_elsa": "ಎಲ್ಸಾ ಟರ್ನ್ ಮಾಡಲು “ಟರ್ನ್” ಬ್ಲಾಕ್ ಬಳಸಿ. ಡ್ರಾಪ್-ಡೌನ್ನಲ್ಲಿರುವ ಸಂಖ್ಯೆಯು ಎಲ್ಸಾ ಎಷ್ಟು ತಿರುಗುತ್ತದೆ ಎಂಬುದನ್ನು ನಿರ್ಧರಿಸುತ್ತದೆ"
+        },
+        "frozen snowflake branch": {
+          "frozen_snowflake_branch": "“ಸ್ನೋಫ್ಲೇಕ್ ಶಾಖೆಯನ್ನು ರಚಿಸಿ” ಬ್ಲಾಕ್ ಬಳಸಿ"
+        },
+        "frozen square iterative": {
+          "frozen_create_square": "ಚೌಕವನ್ನು ರಚಿಸಲು ಇಲ್ಲಿ ಹೆಚ್ಚಿನ ಬ್ಲಾಕ್ಗಳನ್ನು ಲಗತ್ತಿಸಿ"
+        },
+        "frozen square loop": {
+          "replace_questions": "ಬದಲಿಗೆ ಡ್ರಾಪ್-ಡೌನ್ ಬಳಸಿ “???” ಒಂದು ಸಂಖ್ಯೆಯೊಂದಿಗೆ"
+        },
+        "frozen square loop 3x": {
+          "replace_questions": "ಬದಲಿಗೆ ಡ್ರಾಪ್-ಡೌನ್ ಬಳಸಿ “???” ಒಂದು ಸಂಖ್ಯೆಯೊಂದಿಗೆ"
+        },
+        "frozen square snowflake": {
+          "replace_questions": "ಬದಲಿಗೆ ಡ್ರಾಪ್-ಡೌನ್ ಬಳಸಿ “???” ಒಂದು ಸಂಖ್ಯೆಯೊಂದಿಗೆ"
         }
       }
     }

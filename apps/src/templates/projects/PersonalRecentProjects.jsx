@@ -10,7 +10,7 @@ import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 class PersonalRecentProjects extends Component {
   static propTypes = {
     projectList: PropTypes.arrayOf(personalProjectDataPropType).isRequired,
-    isRtl: PropTypes.bool.isRequired
+    isRtl: PropTypes.bool.isRequired,
   };
 
   render() {
@@ -41,20 +41,20 @@ class PersonalRecentProjects extends Component {
 
 const styles = {
   grid: {
-    width: '100%'
+    width: '100%',
   },
   card: {
     display: 'inline-block',
     paddingTop: 10,
     paddingBottom: 20,
     paddingRight: 0,
-    paddingLeft: 0
+    paddingLeft: 0,
   },
   cardPadding: {
-    paddingRight: 35
+    paddingRight: 35,
   },
   cardPaddingRtl: {
-    paddingLeft: 35
+    paddingLeft: 35,
   },
   description: {
     paddingRight: 10,
@@ -62,12 +62,12 @@ const styles = {
     fontSize: 16,
     fontFamily: 'Gotham 4r',
     zIndex: 2,
-    color: color.charcoal,
+    color: color.neutral_dark,
     width: 940,
-    marginBottom: -10
-  }
+    marginBottom: 0,
+  },
 };
 
 export default connect(state => ({
-  isRtl: state.isRtl
+  isRtl: state.isRtl,
 }))(Radium(PersonalRecentProjects));

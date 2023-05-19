@@ -17,7 +17,7 @@ class Ability
       CourseOffering,
       DataDoc,
       UnitGroup, # see override below
-      Script, # see override below
+      Unit, # see override below
       Lesson, # see override below
       ScriptLevel, # see override below
       ProgrammingClass, # see override below
@@ -51,8 +51,6 @@ class Ability
       :regional_partner_workshops,
       Pd::RegionalPartnerMapping,
       Pd::Application::ApplicationBase,
-      Pd::Application::Facilitator1819Application,
-      Pd::Application::Facilitator1920Application,
       Pd::Application::TeacherApplication,
       Pd::InternationalOptIn,
       :maker_discount,
@@ -106,7 +104,7 @@ class Ability
       can :read, UserPermission, user_id: user.id
       can [:show, :pull_review, :update], PeerReview, reviewer_id: user.id
       can :view_project_commits, User do |project_owner|
-        project_owner.id === user.id || can?(:code_review, project_owner)
+        project_owner.id == user.id || can?(:code_review, project_owner)
       end
 
       can :create, CodeReview do |code_review, project|
@@ -147,7 +145,6 @@ class Ability
           (user.teacher? && user.id == code_review_comment.code_review.user_id)
       end
 
-      can :create, Pd::RegionalPartnerProgramRegistration, user_id: user.id
       can :read, Pd::Session
       can :manage, Pd::Enrollment, user_id: user.id
       can :workshops_user_enrolled_in, Pd::Workshop
@@ -173,7 +170,7 @@ class Ability
         # Only allow a student to view another student's project
         # only on levels where we have our peer review feature.
         # For now, that's only Javalab.
-        if level_to_view&.is_a?(Javalab)
+        if level_to_view.is_a?(Javalab)
           project_level_id = level_to_view.project_template_level.try(:id) ||
             level_to_view.id
 
@@ -204,12 +201,11 @@ class Ability
           !user.students.where(id: user_level.user_id).empty?
         end
         can :read, Plc::UserCourseEnrollment, user_id: user.id
-        can :view_level_solutions, Script do |script|
+        can :view_level_solutions, Unit do |script|
           !script.old_professional_learning_course?
         end
         can [:read, :find], :regional_partner_workshops
-        can [:new, :create, :read], FACILITATOR_APPLICATION_CLASS, user_id: user.id
-        can [:new, :create, :read, :update], TEACHER_APPLICATION_CLASS, user_id: user.id
+        can [:new, :create, :show, :update], TEACHER_APPLICATION_CLASS, user_id: user.id
         can :create, Pd::InternationalOptIn, user_id: user.id
         can :manage, :maker_discount
         can :update_last_confirmation_date, UserSchoolInfo, user_id: user.id
@@ -220,7 +216,6 @@ class Ability
         can [:read, :start, :end, :workshop_survey_report, :summary, :filter], Pd::Workshop, facilitators: {id: user.id}
         can [:read, :update], Pd::Workshop, organizer_id: user.id
         can :manage_attendance, Pd::Workshop, facilitators: {id: user.id}, ended_at: nil
-        can :create, Pd::FacilitatorProgramRegistration, user_id: user.id
         can :read, Pd::CourseFacilitator, facilitator_id: user.id
 
         if Pd::CourseFacilitator.exists?(facilitator: user, course: Pd::Workshop::COURSE_CSF)
@@ -271,7 +266,6 @@ class Ability
         can :report_csv, :peer_review_submissions
         can :manage, Pd::RegionalPartnerMapping
         can :manage, Pd::Application::ApplicationBase
-        can :manage, FACILITATOR_APPLICATION_CLASS
         can :manage, TEACHER_APPLICATION_CLASS
         can :move, :workshop_enrollments
         can :update_scholarship_info, Pd::Enrollment
@@ -295,7 +289,7 @@ class Ability
       unit_group.default_units[0].is_migrated && !unit_group.plc_course && can?(:read, unit_group)
     end
 
-    can [:vocab, :resources, :code, :standards, :get_rollup_resources], Script do |script|
+    can [:vocab, :resources, :code, :standards, :get_rollup_resources], Unit do |script|
       script.is_migrated && can?(:read, script)
     end
 
@@ -313,7 +307,7 @@ class Ability
       end
     end
 
-    can :read, Script do |script|
+    can :read, Unit do |script|
       if script.can_be_participant?(user) || script.can_be_instructor?(user)
         if script.in_development?
           user.permission?(UserPermission::LEVELBUILDER)
@@ -394,7 +388,7 @@ class Ability
         CourseOffering,
         UnitGroup,
         Resource,
-        Script,
+        Unit,
         ScriptLevel,
         Video,
         Vocabulary,
@@ -425,36 +419,41 @@ class Ability
         can :index, Level
         can :clone, Level, &:custom?
         can :manage, Level, editor_experiment: editor_experiment
-        can [:edit, :update], Script, editor_experiment: editor_experiment
+        can [:edit, :update], Unit, editor_experiment: editor_experiment
         can [:edit, :update], Lesson, editor_experiment: editor_experiment
       end
     end
 
     if user.persisted?
       # These checks control access to Javabuilder.
-      # All verified instructors and can generate a Javabuilder session token to run Java code.
-      # Students who are also assigned to a CSA section with a verified instructor can run Java code.
+      # All teachers can generate a Javabuilder session token to run Java code,
+      # although only verified teachers can generate tokens will be valid for "main" javabuilder.
+      # Unverified teachers are given limited access to a separate "demo" javabuilder stack.
+      # Students who are also assigned to a CSA section with a verified instructor can run Java code in "main" javabuilder.
       # The get_access_token endpoint is used for normal execution, and the access_token_with_override_sources
       # is used when viewing another version of a student's project (in preview or Code Review mode).
       # It is also used for running exemplars, but only teachers can access exemplars.
       # Levelbuilders can access and update Java Lab validation code (using the
       # access_token_with_override_validation endpoint).
       can [:get_access_token, :access_token_with_override_sources], :javabuilder_session do
-        user.verified_instructor? || user.sections_as_student.any? {|s| s.assigned_csa? && s.teacher&.verified_instructor?}
+        user.teacher? || user.sections_as_student.any? {|s| s.assigned_csa? && s.teacher&.verified_instructor?}
       end
 
       can :access_token_with_override_validation, :javabuilder_session do
         user.permission?(UserPermission::LEVELBUILDER)
+      end
+
+      can :use_unrestricted_javabuilder, :javabuilder_session do
+        user.verified_instructor? || user.sections_as_student.any? {|s| s.assigned_csa? && s.teacher&.verified_instructor?}
       end
     end
 
     if user.persisted? && user.permission?(UserPermission::PROJECT_VALIDATOR)
       # let them change the hidden state
       can :manage, LevelSource
-    end
-
-    if user.permission?(UserPermission::CENSUS_REVIEWER)
-      can :manage, Census::CensusInaccuracyInvestigation
+      # let them change abuse scores
+      can :destroy_abuse, :all
+      can :update_file_abuse, :all
     end
 
     if user.admin?
@@ -466,12 +465,13 @@ class Ability
         Level,
         UnitGroup,
         CourseOffering,
-        Script,
+        Unit,
         Lesson,
         ReferenceGuide,
         ScriptLevel,
         UserLevel,
         UserScript,
+        DataDoc,
         :pd_foorm,
         Foorm::Form,
         Foorm::Library,

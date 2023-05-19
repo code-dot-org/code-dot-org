@@ -3,7 +3,7 @@ import {shallow} from 'enzyme';
 import {expect} from '../../../util/reconfiguredChai';
 import {
   UnconnectedTopInstructions as TopInstructions,
-  TabType
+  TabType,
 } from '@cdo/apps/templates/instructions/TopInstructions';
 import TopInstructionsHeader from '@cdo/apps/templates/instructions/TopInstructionsHeader';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
@@ -35,7 +35,7 @@ const DEFAULT_PROPS = {
   hasBackgroundMusic: false,
   displayReviewTab: false,
   exampleSolutions: [],
-  isViewingAsInstructorInTraining: false
+  isViewingAsInstructorInTraining: false,
 };
 
 describe('TopInstructions', () => {
@@ -49,6 +49,34 @@ describe('TopInstructions', () => {
       />
     );
     expect(wrapper.find('ContainedLevelAnswer')).to.have.lengthOf(1);
+  });
+
+  it('shows ContainedLevelResetButton on instructions tab', () => {
+    const wrapper = shallow(
+      <TopInstructions
+        {...DEFAULT_PROPS}
+        hasContainedLevels={true}
+        isViewingAsInstructorInTraining={true}
+        initialSelectedTab={TabType.INSTRUCTIONS}
+      />
+    );
+    expect(
+      wrapper.find('Connect(UnconnectedContainedLevelResetButton)')
+    ).to.have.lengthOf(1);
+  });
+
+  it('does not shows ContainedLevelResetButton on teacher only tab', () => {
+    const wrapper = shallow(
+      <TopInstructions
+        {...DEFAULT_PROPS}
+        hasContainedLevels={true}
+        isViewingAsInstructorInTraining={true}
+        initialSelectedTab={TabType.TEACHER_ONLY}
+      />
+    );
+    expect(
+      wrapper.find('Connect(UnconnectedContainedLevelResetButton)')
+    ).to.have.lengthOf(0);
   });
 
   it('shows teacher only markdown in teacher only tab if instructor in training level', () => {
@@ -125,12 +153,9 @@ describe('TopInstructions', () => {
 
     expect(wrapper.state().tabSelected).to.equal(TabType.TEACHER_ONLY);
     expect(wrapper.find('Button')).to.have.lengthOf(2);
-    expect(
-      wrapper
-        .find('Button')
-        .at(0)
-        .props().text
-    ).to.equal('Example Solution 1');
+    expect(wrapper.find('Button').at(0).props().text).to.equal(
+      'Example Solution 1'
+    );
   });
 
   it('does not display example solutions buttons in other tabs when available', () => {
@@ -158,7 +183,7 @@ describe('TopInstructions', () => {
           teacherViewingStudentWork: false,
           studentId: null,
           fetchingData: false,
-          token: null
+          token: null,
         });
 
         expect(wrapper.find(TopInstructionsHeader).props().displayFeedback).to
@@ -176,12 +201,12 @@ describe('TopInstructions', () => {
             performanceLevel1: 'Includes more than needed',
             performanceLevel2: 'Includes exactly all needed elements',
             performanceLevel3: 'Has some of the needed elements',
-            performanceLevel4: 'No work done'
+            performanceLevel4: 'No work done',
           },
           teacherViewingStudentWork: false,
           studentId: null,
           fetchingData: false,
-          token: null
+          token: null,
         });
 
         expect(wrapper.find(TopInstructionsHeader).props().displayFeedback).to
@@ -193,7 +218,7 @@ describe('TopInstructions', () => {
         const wrapper = shallow(<TopInstructions {...props} />);
 
         wrapper.setState({
-          teacherViewingStudentWork: true
+          teacherViewingStudentWork: true,
         });
 
         expect(wrapper.find(TopInstructionsHeader).props().displayFeedback).to
@@ -216,20 +241,20 @@ describe('TopInstructions', () => {
               id: 5,
               level_id: 123,
               performance: 'performanceLevel2',
-              student_id: 1
-            }
+              student_id: 1,
+            },
           ],
           rubric: {
             keyConcept: 'This is the key concept',
             performanceLevel1: 'Includes more than needed',
             performanceLevel2: 'Includes exactly all needed elements',
             performanceLevel3: 'Has some of the needed elements',
-            performanceLevel4: 'No work done'
+            performanceLevel4: 'No work done',
           },
           teacherViewingStudentWork: false,
           studentId: 1,
           fetchingData: false,
-          token: null
+          token: null,
         });
 
         expect(wrapper.find(TopInstructionsHeader).props().displayFeedback).to
@@ -248,7 +273,7 @@ describe('TopInstructions', () => {
           teacherViewingStudentWork: false,
           studentId: 1,
           fetchingData: false,
-          token: null
+          token: null,
         });
 
         expect(wrapper.find(TopInstructionsHeader).props().displayFeedback).to

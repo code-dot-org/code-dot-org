@@ -499,6 +499,7 @@ te-IN:
         - {}
         questions:
         - {}
+        title: టైటిల్
       CSD U3 Boolean MC_2018:
         answers:
         - correct: true
@@ -507,6 +508,7 @@ te-IN:
         - {}
         questions:
         - {}
+        title: టైటిల్
       CSD U3 Boolean MC_2018_2019:
         answers:
         - correct: true
@@ -515,6 +517,7 @@ te-IN:
         - {}
         questions:
         - {}
+        title: టైటిల్
       CSD U3 Functions Prediction define first:
         answers:
         - {}
@@ -1047,7 +1050,7 @@ te-IN:
         - {}
         - {}
         - correct: true
-        - {}
+        - text: నాకు తెలియదు
         questions:
         - {}
       courseC_multi_starWars_predict1_2018:
@@ -1055,7 +1058,7 @@ te-IN:
         - {}
         - {}
         - correct: true
-        - {}
+        - text: నాకు తెలియదు
         questions:
         - {}
       courseC_multi_starWars_predict1_2018_2019:
@@ -1063,7 +1066,7 @@ te-IN:
         - {}
         - {}
         - correct: true
-        - {}
+        - text: నాకు తెలియదు
         questions:
         - {}
       courseC_multi_starWars_predict1_2018_2019_2020:
@@ -1071,7 +1074,7 @@ te-IN:
         - {}
         - {}
         - correct: true
-        - {}
+        - text: నాకు తెలియదు
         questions:
         - {}
       courseC_multi_starWars_predict2:
@@ -1108,65 +1111,73 @@ te-IN:
         - {}
       courseD_multi_artist_binary8_predict1:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: ఒక
+        - text: B
+        - text: సి
+        - text: D
+          correct: true
         questions:
         - {}
       courseD_multi_artist_binary8_predict1_2018:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: ఒక
+        - text: B
+        - text: సి
+        - text: D
+          correct: true
         questions:
         - {}
       courseD_multi_artist_binary8_predict1_2018_2019:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: ఒక
+        - text: B
+        - text: సి
+        - text: D
+          correct: true
         questions:
         - {}
       courseD_multi_artist_binary8_predict1_2018_2019_2020:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: ఒక
+        - text: B
+        - text: సి
+        - text: D
+          correct: true
         questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1:
         answers:
-        - correct: true
-        - {}
-        - {}
+        - text: ఒక
+          correct: true
+        - text: B
+        - text: సి
         - {}
         questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1_2018:
         answers:
-        - correct: true
-        - {}
-        - {}
+        - text: ఒక
+          correct: true
+        - text: B
+        - text: సి
         - {}
         questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1_2018_2019:
         answers:
-        - correct: true
-        - {}
-        - {}
+        - text: ఒక
+          correct: true
+        - text: B
+        - text: సి
         - {}
         questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1_2018_2019_2020:
         answers:
-        - correct: true
-        - {}
-        - {}
+        - text: ఒక
+          correct: true
+        - text: B
+        - text: సి
         - {}
         questions:
         - {}
@@ -1859,9 +1870,10 @@ te-IN:
         - {}
       courseD_multi_artist_nestedLoops9_predict1_2021:
         answers:
-        - correct: true
-        - {}
-        - {}
+        - text: ఒక
+          correct: true
+        - text: B
+        - text: సి
         - {}
         questions:
         - {}
@@ -2100,6 +2112,7 @@ te-IN:
         - {}
         questions:
         - {}
+        title: టైటిల్
       CSD U3 Functions Prediction define first_2018_2019_pilot_2021:
         answers:
         - {}
@@ -2167,7 +2180,7 @@ te-IN:
         - {}
         - {}
         - {}
-        - {}
+        - text: పసుపు
         - correct: true
         - {}
         questions:
@@ -2556,6 +2569,7 @@ te-IN:
         - {}
         questions:
         - {}
+        title: టైటిల్
       CSD U3 Functions Prediction define first_2018_2019_pilot_2022:
         answers:
         - {}
@@ -2925,58 +2939,61 @@ te-IN:
         - {}
       CSD U5 test crosstab multi:
         answers:
-        - {}
-        - {}
+        - text: కుక్క
+        - text: పెంగ్విన్
         - text: ఫ్రాగ్
           correct: true
-        - {}
+        - text: జిరాఫీ
         - {}
         questions:
         - {}
       CSD U5 test crosstab multi_2021:
         answers:
-        - {}
-        - {}
+        - text: కుక్క
+        - text: పెంగ్విన్
         - text: ఫ్రాగ్
           correct: true
-        - {}
+        - text: జిరాఫీ
         - {}
         questions:
         - {}
       CSD U5 test crosstab multi_2022:
         answers:
-        - {}
-        - {}
+        - text: కుక్క
+        - text: పెంగ్విన్
         - text: ఫ్రాగ్
           correct: true
-        - {}
+        - text: జిరాఫీ
         - {}
         questions:
         - {}
       CSD U5 test datacount multi:
         answers:
-        - correct: true
-        - {}
+        - text: కుక్క
+          correct: true
+        - text: పెంగ్విన్
         - text: ఫ్రాగ్
-        - {}
+        - text: జిరాఫీ
         - {}
         questions:
         - {}
       CSD U5 test datacount multi_2021:
         answers:
-        - correct: true
-        - {}
+        - text: కుక్క
+          correct: true
+        - text: పెంగ్విన్
         - text: ఫ్రాగ్
-        - {}
+        - text: జిరాఫీ
         - {}
         questions:
         - {}
       CSD U5 test datacount multi_2022:
         answers:
-        - correct: true
-        - {}
+        - text: కుక్క
+          correct: true
+        - text: పెంగ్విన్
         - text: ఫ్రాగ్
-        - {}
+        - text: జిరాఫీ
         - {}
         questions:
         - {}
@@ -3952,7 +3969,7 @@ te-IN:
           correct: true
         - correct: true
         questions:
-        - {}
+        - text: సైబర్ సెక్యూరిటీ
       csd-post-survey-2018-topic-databases:
         answers:
         - text: అవును
@@ -8595,7 +8612,8 @@ te-IN:
         - correct: true
         - correct: true
         - correct: true
-        - correct: true
+        - text: N/A
+          correct: true
         questions:
         - {}
       pre-assessment survey q28:
@@ -8615,10 +8633,13 @@ te-IN:
         - {}
       pre-assessment survey q29:
         answers:
+        - text: మగ
+          correct: true
+        - text: అవివాహిత
+          correct: true
         - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
+        - text: సమాధానం చెప్పకూడదని ఇష్టపడండి
+          correct: true
         questions:
         - {}
       pre-assessment survey q3:
@@ -8634,14 +8655,18 @@ te-IN:
       pre-assessment survey q30:
         answers:
         - correct: true
+        - text: ఆసియా
+          correct: true
+        - text: నలుపు లేదా ఆఫ్రికన్ అమెరికన్
+          correct: true
         - correct: true
         - correct: true
+        - text: తెలుపు
+          correct: true
         - correct: true
         - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
+        - text: సమాధానం చెప్పకూడదని ఇష్టపడండి
+          correct: true
         questions:
         - {}
       pre-assessment survey q4:
@@ -8776,7 +8801,8 @@ te-IN:
           correct: true
         - text: లేదు
           correct: true
-        - correct: true
+        - text: నాకు తెలియదు
+          correct: true
         questions:
         - {}
       taken-other-cs:
@@ -8919,7 +8945,7 @@ te-IN:
         answers:
         - {}
         - correct: true
-        - correct: true
+        - {}
         - {}
         questions:
         - {}
@@ -8949,9 +8975,10 @@ te-IN:
         - {}
       courseD_multi_artist_nestedLoops9_predict12022:
         answers:
-        - correct: true
-        - {}
-        - {}
+        - text: ఒక
+          correct: true
+        - text: B
+        - text: సి
         - {}
         questions:
         - {}

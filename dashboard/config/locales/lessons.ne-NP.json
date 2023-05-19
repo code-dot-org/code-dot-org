@@ -32,14 +32,17 @@
         "playlab/Play Lab": {
           "name": "Play Lab"
         },
+        "outbreak/Outbreak": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
         "infinity/Infinity": {
           "name": "Disney Infinity Play Lab"
         },
         "Hour of Code/Hour of Code 2013": {
           "name": "Hour of Code 2013"
-        },
-        "dance-2019/Dance Party": {
-          "name": "डान्स पार्टी (२०१९)"
         },
         "oceans/Oceans": {
           "name": "महासागरका लागि A.I"

@@ -37,6 +37,6 @@ Consulta la nostra [guida]({{ urls/how_to_events }}) per l'organizzazione degli 
 L'Ora del Codice è solo il primo passo in un viaggio per imparare di più su come funziona la tecnologia e come creare applicazioni software. Per continuare questo viaggio:
 
 - Incoraggia gli studenti a continuare ad [imparare online]({{ urls/learn_beyond }}).
-- [Frequentate]({{ urls/professional_development_workshops }}) un seminario di un giorno, per ricevere istruzioni da un esperto di informatica. (solo per gli USA)
+- [Maggiori informazioni](https://code.org/administrators) su come implementare un percorso di informatica nelle vostre scuole.
 
 {{ signup_button }}

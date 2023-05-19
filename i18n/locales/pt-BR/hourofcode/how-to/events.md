@@ -35,23 +35,17 @@ Compartilhe fotos do seu evento no Facebook e no Twitter e use a hashtag **#Hour
 
 * * *
 
-## Sedie uma Noite do Código da Família com a Hora do Código e convide os pais para participarem
+## Example plan for a school assembly or event
 
-Considere a possibilidade de promover um evento K-5 à noite e convide os pais para se juntarem aos seus filhos estudantes por uma hora sobre ciência da computação. Essa é uma ótima forma de envolver a comunidade e incentivar o apoio dos pais para a ciência da computação na sua escola. Nossos parceiros na Family Code Night desenvolveram um kit tudo-em-um par eventos, com um roteiro de planejamento, discursos para apresentadores, e-mails de convite, apresentações no PowerPoint, e muito mais, para você realizar seu evento. [Clique aqui para baixar o Kit do Evento](http://www.familycodenight.org/DownloadCodeDotOrg.html).
+**Event:** School-wide Computer Science Education Week kick-off assembly
 
-* * *
+**Date:** {{ campaign_date/start_short }} (start of Computer Science Education Week)
 
-## Um exemplo de plano para uma montagem ou evento em uma escola
+**Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
 
-**Evento:** abertura da Semana da Educação em Ciência da Computação para toda a escola
+**Location:** School assembly hall (e.g. theater, gym, cafeteria)
 
-**Data:** {{ campaign/start_short }} (inícion da Semana de Educação em Ciência da Computação)
-
-**Hora:** durante o horário escolar. Preferência para o meio da manhã. Aproximadamente 1 hora de duração.
-
-**Local:** espaço de eventos da escola (por ex., teatro, ginásio, lanchonete)
-
-## Programação do evento
+## Run of Show
 
 | Hora          | Ação                                                                                                                                                           |
 | ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |

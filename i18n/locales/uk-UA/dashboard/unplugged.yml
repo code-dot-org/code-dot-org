@@ -275,6 +275,8 @@ uk:
         desc: Учні створюють браслети як двійкове представлення перших літер свого імені. Учні дізнаються, що дані можна представляти та зберігати більш, ніж одним способом.
       MoveItMoveIt_2018:
         title: Рухайся, рухайся
+      courseE_unplugged_CnC_2018:
+        title: Обмін та поширення онлайн
       RelayProgramming_2018:
         title: Естафетне програмування
       courseB_unplugged_MRF_2019:
@@ -313,6 +315,8 @@ uk:
       SongwritingParameters_2019:
         title: 'переклад відсутній: en-US.data.unplugged.SongwritingParameters_2018.title'
         desc: 'переклад відсутній: en-US.data.unplugged.SongwritingParameters_2018.desc'
+      courseE_unplugged_CnC_2019:
+        title: Обмін та поширення онлайн
       Internet_2019:
         title: 'переклад відсутній: en-US.data.unplugged.Internet_2018.title'
         desc: 'переклад відсутній: en-US.data.unplugged.Internet_2018.desc'

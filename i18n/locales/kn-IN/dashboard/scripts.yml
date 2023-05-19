@@ -8,6 +8,7 @@ kn:
         course3:
           description_audience: ವಯಸ್ಸು 8-18
         playlab:
+          title: ಲ್ಯಾಬ್ ಪ್ಲೇ ಮಾಡಿ
           name: ಪ್ಲೇಲ್ಯಾಬ್‌
         artist:
           name: ಆರ್ಟಿಸ್ಟ್
@@ -23,6 +24,8 @@ kn:
           description_short: ಡಿಸ್ನೆ ಇನ್‌ಫಿನಿಟಿ ಪಾತ್ರಗಳನ್ನು ಬಳಸಿ ಸ್ಟೋರಿ ಅಥವಾ ಗೇಮ್ ರಚಿಸಲು ಪ್ಲೇ ಲ್ಯಾಬ್ ಬಳಸಿ.
           student_description: ಡಿಸ್ನೆ ಇನ್‌ಫಿನಿಟಿ ಪಾತ್ರಗಳನ್ನು ಬಳಸಿ ಸ್ಟೋರಿ ಅಥವಾ ಗೇಮ್ ರಚಿಸಲು ಪ್ಲೇ ಲ್ಯಾಬ್ ಬಳಸಿ.
           name: ಇನ್‌ಫಿನಿಟಿ
+        netsim:
+          title: ಇಂಟರ್ನೆಟ್ ಸಿಮ್ಯುಲೇಟರ್
         20-hour:
           title: CS ಕೋರ್ಸ್‌ಗೆ ವರ್ಧಿಸಿಕೊಳ್ಳಿ
           description: ಈ 20-ಗಂಟೆಗಳ ಕೋರ್ಸ್ 2-4 ಕೋರ್ಸ್‌ಗಳಲ್ಲಿ ಕೋರ್ ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್ ಮತ್ತು ಪ್ರೋಗ್ರಾಮಿಂಗ್ ಪರಿಕಲ್ಪನೆಗಳನ್ನು ಒಳಗೊಂಡಿದೆ. ಕೋರ್ಸ್ ಅನ್ನು 10-18 ವಯಸ್ಸಿನವರಿಗೆ ಬಳಸಲು ವಿನ್ಯಾಸಗೊಳಿಸಲಾಗಿದೆ. ಹೆಚ್ಚು ಸಂಪೂರ್ಣ ಅನುಭವಕ್ಕಾಗಿ 2-4 ಕೋರ್ಸ್‌ಗಳನ್ನು ಪರಿಶೀಲಿಸಿ!
@@ -38,11 +41,16 @@ kn:
           description: ಕೇವಲ 10 ನಿಮಿಷಗಳಲ್ಲಿ ನಿಮ್ಮದೇ ಗೇಮ್‌ ಬರೆಯಬೇಕೆ? ನಮ್ಮ ಫ್ಲಾಪ್ಪಿ ಕೋಡ್ ಟ್ಯುಟೋರಿಯಲ್‌ ಟ್ರೈ ಮಾಡಿ!
           student_description: ಕೇವಲ 10 ನಿಮಿಷಗಳಲ್ಲಿ ನಿಮ್ಮದೇ ಗೇಮ್‌ ಬರೆಯಬೇಕೆ? ನಮ್ಮ ಫ್ಲಾಪ್ಪಿ ಕೋಡ್ ಟ್ಯುಟೋರಿಯಲ್‌ ಟ್ರೈ ಮಾಡಿ!
         jigsaw:
+          title: ಜಿಗ್ಸಾ
           name: ಜಿಗ್‌ಸಾ
         step:
           title: ಹಂತ
         Hour of Code:
           title: ಅವರ್ ಆಫ್‌ ಕೋಡ್ 2013
+        allthethings:
+          lessons:
+            lesson-49:
+              name: ಸಂಗಿತ
         asUnplugged:
           description_audience: ವಯಸ್ಸು 6-13
         afterschool1:
@@ -390,6 +398,8 @@ kn:
               display_name: ವೇರಿಯಬಲ್‌ಗಳು
             csp_conditionals:
               display_name: ಕಂಡೀಷನಲ್ಸ್‌
+            csp_functions:
+              display_name: ಕಾರ್ಯಗಳು
         dance-extras:
           description: ವಿಸ್ತರಿಸಿದ ಪ್ರಾಜೆಕ್ಟ್ ಐಡಿಯಾಗಳ ಜೊತೆಗೆ ಮೊದಲ ಗಂಟೆಯಾಚೆಗೂ ಹೋಗಿ.
           student_description: ವಿಸ್ತರಿಸಿದ ಪ್ರಾಜೆಕ್ಟ್ ಐಡಿಯಾಗಳ ಜೊತೆಗೆ ಮೊದಲ ಗಂಟೆಯಾಚೆಗೂ ಹೋಗಿ.
@@ -400,6 +410,8 @@ kn:
               display_name: ವೇರಿಯಬಲ್‌ಗಳು
             csf_data:
               display_name: ಡೇಟಾ
+            csf_for_loops:
+              display_name: ಲೂಪ್ಸಗಾಗಿ
             csf_internet:
               display_name: ಇಂಟರ್ನೆಟ್
             csf_digcit:
@@ -414,6 +426,8 @@ kn:
               display_name: ಲೂಪ್‌ಗಳು
             csf_conditionals:
               display_name: ಕಂಡೀಷನಲ್ಸ್‌
+            csf_binary:
+              display_name: ಬೈನರಿ
             csf_digcit:
               display_name: ಡಿಜಿಟಲ್ ಪೌರತ್ವ
             end_of_course_project:
@@ -424,6 +438,8 @@ kn:
               display_name: ಡಿಜಿಟಲ್ ಪೌರತ್ವ
             csf_nested_loops:
               display_name: ನೆಸ್ಟೆಡ್ ಲೂಪ್‌ಗಳು
+            csf_functions:
+              display_name: ಕಾರ್ಯಗಳು
             end_of_course_project:
               display_name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
         express-2019:
@@ -432,8 +448,12 @@ kn:
               display_name: ಲೂಪ್‌ಗಳು
             csf_conditionals:
               display_name: ಕಂಡೀಷನಲ್ಸ್‌
+            csf_functions:
+              display_name: ಕಾರ್ಯಗಳು
             csf_variables:
               display_name: ವೇರಿಯಬಲ್‌ಗಳು
+            csf_for_loops:
+              display_name: ಲೂಪ್ಸಗಾಗಿ
         andrea-test:
           lesson_groups:
             required:
@@ -447,6 +467,8 @@ kn:
           lesson_groups:
             csf_digcit:
               display_name: ಡಿಜಿಟಲ್ ಪೌರತ್ವ
+            csf_binary:
+              display_name: ಬೈನರಿ
             csf_loops:
               display_name: ಲೂಪ್‌ಗಳು
             csf_events:
@@ -455,6 +477,8 @@ kn:
               display_name: ಡೇಟಾ
             end_of_course_project:
               display_name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
+        gamelab:
+          title: ಗೇಮ್ ಲ್ಯಾಬ್
         coursea-2019:
           description_short: ಪ್ರೀ ರೀಡರ್‌ಗಳಿಗಾಗಿ ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್‌ಗೆ ಒಂದು ಪರಿಚಯ.
           lesson_groups:
@@ -484,6 +508,8 @@ kn:
               display_name: ವೇರಿಯಬಲ್‌ಗಳು
             csp_conditionals:
               display_name: ಕಂಡೀಷನಲ್ಸ್‌
+            csp_functions:
+              display_name: ಕಾರ್ಯಗಳು
             required:
               display_name: ಮುನ್ನೋಟ
         csp1-pilot:
@@ -496,18 +522,24 @@ kn:
               display_name: ವೇರಿಯಬಲ್‌ಗಳು
             csp_conditionals:
               display_name: ಕಂಡೀಷನಲ್ಸ್‌
+            csp_functions:
+              display_name: ಕಾರ್ಯಗಳು
         csp2-pilot-staging:
           lesson_groups:
             csp_variables:
               display_name: ವೇರಿಯಬಲ್‌ಗಳು
             csp_conditionals:
               display_name: ಕಂಡೀಷನಲ್ಸ್‌
+            csp_functions:
+              display_name: ಕಾರ್ಯಗಳು
         csp4-pilot-staging:
           lesson_groups:
             csp_variables:
               display_name: ವೇರಿಯಬಲ್‌ಗಳು
             csp_conditionals:
               display_name: ಕಂಡೀಷನಲ್ಸ್‌
+            csp_functions:
+              display_name: ಕಾರ್ಯಗಳು
         csp5-pilot-staging:
           lesson_groups:
             csp_lists:
@@ -520,24 +552,32 @@ kn:
               display_name: ವೇರಿಯಬಲ್‌ಗಳು
             csp_conditionals:
               display_name: ಕಂಡೀಷನಲ್ಸ್‌
+            csp_functions:
+              display_name: ಕಾರ್ಯಗಳು
         csp8-pilot-staging:
           lesson_groups:
             csp_variables:
               display_name: ವೇರಿಯಬಲ್‌ಗಳು
             csp_conditionals:
               display_name: ಕಂಡೀಷನಲ್ಸ್‌
+            csp_functions:
+              display_name: ಕಾರ್ಯಗಳು
         csp9-pilot-staging:
           lesson_groups:
             csp_variables:
               display_name: ವೇರಿಯಬಲ್‌ಗಳು
             csp_conditionals:
               display_name: ಕಂಡೀಷನಲ್ಸ್‌
+            csp_functions:
+              display_name: ಕಾರ್ಯಗಳು
         csp10-pilot-staging:
           lesson_groups:
             csp_variables:
               display_name: ವೇರಿಯಬಲ್‌ಗಳು
             csp_conditionals:
               display_name: ಕಂಡೀಷನಲ್ಸ್‌
+            csp_functions:
+              display_name: ಕಾರ್ಯಗಳು
         csp5-pilot:
           lesson_groups:
             csp_lists:
@@ -612,7 +652,11 @@ kn:
           lesson_groups:
             required:
               display_name: ಮುನ್ನೋಟ
+        dance-2019:
+          title: ಡ್ಯಾನ್ಸ್ ಪಾರ್ಟಿ
+          description_short: ನಿಮ್ಮ ಸ್ನೇಹಿತರೊಂದಿಗೆ ಹಂಚಿಕೊಳ್ಳಲು ಡ್ಯಾನ್ಸ್ ಪಾರ್ಟಿಯನ್ನು ಕೋಡ್ ಮಾಡಿ. ಬಿಯಾನ್ಸೆ, ಹ್ಯಾರಿ ಸ್ಟೈಲ್ಸ್, ಲಿಝೋ, ಲಿಲ್ ನಾಸ್ ಎಕ್ಸ್, ಸೆಲೆನಾ ಗೊಮೆಜ್, ಡಿಸ್ನಿಯ “ಎನ್ಕಾಂಟೊ” ನ ಸಂಗೀತ ಮತ್ತು ಹೆಚ್ಚಿನದನ್ನು ಒಳಗೊಂಡಿದೆ!
         dance-extras-2019:
+          title: ಡ್ಯಾನ್ಸ್‌ ಮಾಡುತ್ತಿರಿ
           description: ವಿಸ್ತರಿಸಿದ ಪ್ರಾಜೆಕ್ಟ್ ಐಡಿಯಾಗಳ ಜೊತೆಗೆ ಮೊದಲ ಗಂಟೆಯಾಚೆಗೂ ಹೋಗಿ.
           student_description: ವಿಸ್ತರಿಸಿದ ಪ್ರಾಜೆಕ್ಟ್ ಐಡಿಯಾಗಳ ಜೊತೆಗೆ ಮೊದಲ ಗಂಟೆಯಾಚೆಗೂ ಹೋಗಿ.
         csp4-preview:
@@ -621,6 +665,8 @@ kn:
               display_name: ವೇರಿಯಬಲ್‌ಗಳು
             csp_conditionals:
               display_name: ಕಂಡೀಷನಲ್ಸ್‌
+            csp_functions:
+              display_name: ಕಾರ್ಯಗಳು
         time4cs-control-unit-2:
           lesson_groups:
             csf_digcit:
@@ -629,6 +675,8 @@ kn:
               display_name: ಕಂಡೀಷನಲ್ಸ್‌
             csf_nested_loops:
               display_name: ನೆಸ್ಟೆಡ್ ಲೂಪ್‌ಗಳು
+            csf_functions:
+              display_name: ಕಾರ್ಯಗಳು
             end_of_course_project:
               display_name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
         time4cs-control-unit-1:
@@ -661,6 +709,8 @@ kn:
               display_name: ವೇರಿಯಬಲ್‌ಗಳು
             csp_conditionals:
               display_name: ಕಂಡೀಷನಲ್ಸ್‌
+            csp_functions:
+              display_name: ಕಾರ್ಯಗಳು
         csp5-2020:
           lesson_groups:
             csp_lists:
@@ -689,6 +739,8 @@ kn:
           lesson_groups:
             csf_digcit:
               display_name: ಡಿಜಿಟಲ್ ಪೌರತ್ವ
+            csf_binary:
+              display_name: ಬೈನರಿ
             csf_loops:
               display_name: ಲೂಪ್‌ಗಳು
             csf_events:
@@ -705,6 +757,8 @@ kn:
               display_name: ಲೂಪ್‌ಗಳು
             csf_conditionals:
               display_name: ಕಂಡೀಷನಲ್ಸ್‌
+            csf_binary:
+              display_name: ಬೈನರಿ
             csf_digcit:
               display_name: ಡಿಜಿಟಲ್ ಪೌರತ್ವ
             end_of_course_project:
@@ -715,6 +769,8 @@ kn:
               display_name: ಡಿಜಿಟಲ್ ಪೌರತ್ವ
             csf_nested_loops:
               display_name: ನೆಸ್ಟೆಡ್ ಲೂಪ್‌ಗಳು
+            csf_functions:
+              display_name: ಕಾರ್ಯಗಳು
             end_of_course_project:
               display_name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
         coursef-2020:
@@ -726,6 +782,8 @@ kn:
               display_name: ವೇರಿಯಬಲ್‌ಗಳು
             csf_data:
               display_name: ಡೇಟಾ
+            csf_for_loops:
+              display_name: ಲೂಪ್ಸಗಾಗಿ
             end_of_course_project:
               display_name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
         express-2020:
@@ -734,8 +792,12 @@ kn:
               display_name: ಲೂಪ್‌ಗಳು
             csf_conditionals:
               display_name: ಕಂಡೀಷನಲ್ಸ್‌
+            csf_functions:
+              display_name: ಕಾರ್ಯಗಳು
             csf_variables:
               display_name: ವೇರಿಯಬಲ್‌ಗಳು
+            csf_for_loops:
+              display_name: ಲೂಪ್ಸಗಾಗಿ
             end_of_course_project:
               display_name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
         pre-express-2020:
@@ -758,6 +820,8 @@ kn:
           student_description: ವೈರಸ್ ಔಟ್‌ಬ್ರೇಕ್‌ನಿಂದ ಸಿಮ್ಯುಲೇಶನ್ ಪ್ರೋಗ್ರಾಮ್ ಮಾಡಲು ಸ್ಪ್ರೈಟ್ ಲ್ಯಾಬ್ ಬಳಸಿ.
         2021drafting:
           lesson_groups:
+            introduction:
+              display_name: ಪರಿಚಯ
             lessonGroup-3:
               display_name: ವೇರಿಯಬಲ್‌ಗಳು
             outbreak:
@@ -770,12 +834,18 @@ kn:
               display_name: ವೇರಿಯಬಲ್‌ಗಳು
             csp_conditionals:
               display_name: ಕಂಡೀಷನಲ್ಸ್‌
+            csp_functions:
+              display_name: ಕಾರ್ಯಗಳು
         csp5-2021:
           lesson_groups:
             csp_lists:
               display_name: ಪಟ್ಟಿಗಳು
             csp_loops:
               display_name: ಲೂಪ್‌ಗಳು
+        csp6-2021:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: ಕ್ರಮಾವಳಿಗಳು
         coursea-2021:
           description_short: ಪ್ರೀ ರೀಡರ್‌ಗಳಿಗಾಗಿ ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್‌ಗೆ ಒಂದು ಪರಿಚಯ.
           lesson_groups:
@@ -802,6 +872,8 @@ kn:
           lesson_groups:
             csf_digcit:
               display_name: ಡಿಜಿಟಲ್ ಪೌರತ್ವ
+            csf_binary:
+              display_name: ಬೈನರಿ
             csf_loops:
               display_name: ಲೂಪ್‌ಗಳು
             csf_events:
@@ -819,6 +891,8 @@ kn:
               display_name: ಲೂಪ್‌ಗಳು
             csf_conditionals:
               display_name: ಕಂಡೀಷನಲ್ಸ್‌
+            csf_binary:
+              display_name: ಬೈನರಿ
             csf_digcit:
               display_name: ಡಿಜಿಟಲ್ ಪೌರತ್ವ
             end_of_course_project:
@@ -833,6 +907,8 @@ kn:
               display_name: ಡಿಜಿಟಲ್ ಪೌರತ್ವ
             csf_nested_loops:
               display_name: ಕಂಡೀಷನಲ್ಸ್‌
+            csf_functions:
+              display_name: ಕಾರ್ಯಗಳು
             end_of_course_project:
               display_name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
         coursef-2021:
@@ -840,6 +916,10 @@ kn:
           lesson_groups:
             csf_digcit:
               display_name: ಡಿಜಿಟಲ್ ಪೌರತ್ವ
+            csf_variables:
+              display_name: ಲೂಪ್ಸಗಾಗಿ
+            csf_for_loops:
+              display_name: ಲೂಪ್ಸಗಾಗಿ
             end_of_course_project:
               display_name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
             lessonGroup-8:
@@ -852,13 +932,18 @@ kn:
               display_name: ಲೂಪ್‌ಗಳು
             csf_conditionals:
               display_name: ಕಂಡೀಷನಲ್ಸ್‌
+            csf_functions:
+              display_name: ಕಾರ್ಯಗಳು
             csf_variables:
               display_name: ವೇರಿಯಬಲ್‌ಗಳು
+            csf_for_loops:
+              display_name: ಲೂಪ್ಸಗಾಗಿ
             end_of_course_project:
               display_name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
             lessonGroup-9:
               display_name: ಈವೆಂಟ್‌ಗಳು
         pre-express-2021:
+          title: ಪ್ರೀ-ರೀಡರ್ ಎಕ್ಸ್‌ಪ್ರೆಸ್ ಕೋರ್ಸ್ (2021)
           lesson_groups:
             csf_loops:
               display_name: ಲೂಪ್‌ಗಳು
@@ -866,6 +951,8 @@ kn:
               display_name: ಈವೆಂಟ್‌ಗಳು
         csf-2021-pilot:
           lesson_groups:
+            ramp_up:
+              display_name: ಪರಿಚಯ
             outbreak:
               display_name: ಔಟ್‌ಬ್ರೇಕ್ ಸಿಮ್ಯುಲೇಶನ್
             lessonGroup-3:
@@ -908,6 +995,12 @@ kn:
           lesson_groups:
             lessonGroup-5:
               display_name: ಸ್ಯಾಂಡ್‌ಬಾಕ್ಸ್
+        k5-onlinepd-2021:
+          lesson_groups:
+            k5_getting_started_1:
+              display_name: ಪರಿಚಯ
+            Introduction:
+              display_name: ಪರಿಚಯ
         outbreakmodule:
           lesson_groups:
             Outbreak Module:
@@ -1104,8 +1197,12 @@ kn:
               display_name: ಲೂಪ್‌ಗಳು
             csf_conditionals:
               display_name: ಕಂಡೀಷನಲ್ಸ್‌
+            csf_functions:
+              display_name: ಕಾರ್ಯಗಳು
             csf_variables:
               display_name: ವೇರಿಯಬಲ್‌ಗಳು
+            csf_for_loops:
+              display_name: ಲೂಪ್ಸಗಾಗಿ
             end_of_course_project:
               display_name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
         csp4-2022:
@@ -1114,6 +1211,8 @@ kn:
               display_name: ವೇರಿಯಬಲ್‌ಗಳು
             csp_conditionals:
               display_name: ಕಂಡೀಷನಲ್ಸ್‌
+            csp_functions:
+              display_name: ಕಾರ್ಯಗಳು
         csp5-2022:
           lesson_groups:
             csp_lists:
@@ -1162,6 +1261,8 @@ kn:
               display_name: ಡಿಜಿಟಲ್ ಪೌರತ್ವ
             ramp_up:
               display_name: ನೆಸ್ಟೆಡ್ ಲೂಪ್‌ಗಳು
+            csf_functions:
+              display_name: ಕಾರ್ಯಗಳು
             csf_nested_loops:
               display_name: ಕಂಡೀಷನಲ್ಸ್‌
             end_of_course_project:
@@ -1260,5 +1361,263 @@ kn:
         aiml-2022:
           name: aiml-2022
           description_short: ಕೃತಕ ಬುದ್ಧಿಮತ್ತೆ ಮತ್ತು ಯಂತ್ರ ಕಲಿಕೆಯ ಬಗ್ಗೆ ತಿಳಿಯಿರಿ
+        vpl-csd1-ayw-pilot-2022:
+          lessons:
+            lesson-6:
+              name: ಅಸಿಂಕ್ರೊನಸ್‌ ಡಿಬಗ್ಗಿಂಗ್‌ ವಿಸ್ತರಣೆ
+        vpl-csd2-ayw-pilot-2022:
+          lessons:
+            lesson-6:
+              name: ಮಾಡ್ಯೂಲ್‌ 2 ಅಸಿಂಕ್ರನಸ್ ವರ್ಕ್
         soccer:
           name: ಸಾಕರ್
+          title: ನಿಮ್ಮದೇ ಸಾಕರ್ ಗೇಮ್ ಅನ್ನು ಕೋಡ್ ಮಾಡಿ
+          description_short: ಒಂದು ಸಾಕರ್ ಗೇಮ್ ಮಾಡಿ
+          description: ಒಂದು ಸಾಕರ್ ಗೇಮ್ ಮಾಡಿ
+        csa1-2023:
+          lessons:
+            lesson-2:
+              name: ಜಾವಾ ಲ್ಯಾಬ್
+            lesson-6:
+              name: ಲೂಪ್‌ಗಳು
+        csa2-2023:
+          lessons:
+            lesson-4:
+              name: ವೇರಿಯಬಲ್‌ಗಳು
+        csa3-2023:
+          lessons:
+            lesson-1:
+              name: ಒಂದು ಆಯಾಮದ (1D) ಅರೇಗಳು
+            lesson-3:
+              name: ಲೂಪ್ಸಗಾಗಿ
+        hello-world-space-2022:
+          title: 'ಹಲೋ ವರ್ಲ್ಡ್: ಬಾಹ್ಯಾಕಾಶ'
+        hello-world-soccer-2022:
+          title: 'ಹಲೋ ವರ್ಲ್ಡ್: ಸಾಕರ್'
+        csd7-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: ಅಧ್ಯಾಯ 1
+            lessonGroup-3:
+              display_name: ಅಧ್ಯಾಯ 2
+            lessonGroup-4:
+              display_name: ಆಪ್‌ ಲ್ಯಾಬ್‌ಗೆ ಪರಿಚಯ
+        csc-function-machines-pilot:
+          lessons:
+            lesson-1:
+              name: ಧ್ವನಿ ಯಾವುದು?
+        csp4-2023:
+          lesson_groups:
+            csp_variables:
+              display_name: ವೇರಿಯಬಲ್‌ಗಳು
+            csp_conditionals:
+              display_name: ಕಂಡೀಷನಲ್ಸ್‌
+            csp_functions:
+              display_name: ಕಾರ್ಯಗಳು
+        csp5-2023:
+          lesson_groups:
+            csp_lists:
+              display_name: ಡೇಟಾ
+            csp_loops:
+              display_name: ಲೂಪ್‌ಗಳು
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: ಪಟ್ಟಿಗಳು
+            lessonGroup-3:
+              display_name: ಲೂಪ್‌ಗಳು
+        csp-playground:
+          description_audience: ಪಠ್ಯಕ್ರಮ ಬರಹಗಾರರು
+          description_short: ಪಠ್ಯಕ್ರಮ ಆವೃತ್ತಿಗಳ ಮಧ್ಯೆ ಅಧ್ಯಾಯಗಳು ಅಥವಾ ಹಂತಗಳಿಗೆ ಸ್ಟೇಜಿಂಗ್‌ ಅಪ್‌ಡೇಟ್‌ಗಳಿಗಾಗಿ
+        microbit-temp:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: ಆಪ್‌ ಲ್ಯಾಬ್‌ಗೆ ಪರಿಚಯ
+        tess-testing-problem-solving-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: ಅಧ್ಯಾಯ 1
+            lessonGroup-3:
+              display_name: ಅಧ್ಯಾಯ 2
+        testing-focus-on-creativity1:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: ಅಧ್ಯಾಯ 1
+        pre-express-2023:
+          lesson_groups:
+            csf_loops:
+              display_name: ಲೂಪ್‌ಗಳು
+            csf_events:
+              display_name: ಈವೆಂಟ್‌ಗಳು
+        express-2023:
+          lesson_groups:
+            lessonGroup-9:
+              display_name: ಈವೆಂಟ್‌ಗಳು
+            csf_loops:
+              display_name: ಲೂಪ್‌ಗಳು
+            csf_conditionals:
+              display_name: ಕಂಡೀಷನಲ್ಸ್‌
+            csf_functions:
+              display_name: ಕಾರ್ಯಗಳು
+            csf_variables:
+              display_name: ವೇರಿಯಬಲ್‌ಗಳು
+            csf_for_loops:
+              display_name: ಲೂಪ್ಸಗಾಗಿ
+            end_of_course_project:
+              display_name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
+        coursea-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: ಡಿಜಿಟಲ್ ಪೌರತ್ವ
+            csf_loops:
+              display_name: ಲೂಪ್‌ಗಳು
+            csf_events:
+              display_name: ಈವೆಂಟ್‌ಗಳು
+            lessonGroup-5:
+              display_name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
+          description_short: ಪ್ರೀ ರೀಡರ್‌ಗಳಿಗಾಗಿ ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್‌ಗೆ ಒಂದು ಪರಿಚಯ.
+        courseb-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: ಡಿಜಿಟಲ್ ಪೌರತ್ವ
+            csf_loops:
+              display_name: ಲೂಪ್‌ಗಳು
+            csf_events:
+              display_name: ಈವೆಂಟ್‌ಗಳು
+            lessonGroup-6:
+              display_name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
+        coursec-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: ಡಿಜಿಟಲ್ ಪೌರತ್ವ
+            csf_loops:
+              display_name: ಲೂಪ್‌ಗಳು
+            csf_events:
+              display_name: ಈವೆಂಟ್‌ಗಳು
+            csf_data:
+              display_name: ಡೇಟಾ
+            end_of_course_project:
+              display_name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
+          description_short: ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್‌ನ ಮೂಲಾಂಶಗಳನ್ನು ತಿಳಿದುಕೊಳ್ಳಿ ಮತ್ತು ನಿಮ್ಮದೇ ಕಲೆ, ಕಥೆಗಳು ಮತ್ತು ಗೇಮ್ಸ್‌ ಅನ್ನು ರಚಿಸಿ.
+        coursed-2023:
+          lesson_groups:
+            lessonGroup-6:
+              display_name: ಡಿಜಿಟಲ್ ಪೌರತ್ವ
+            csf_events:
+              display_name: ಈವೆಂಟ್‌ಗಳು
+            csf_loops:
+              display_name: ಲೂಪ್‌ಗಳು
+            csf_conditionals:
+              display_name: ಕಂಡೀಷನಲ್ಸ್‌
+            end_of_course_project:
+              display_name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
+          title: ಕೋರ್ಸ್‌ ಡಿ (2021)
+        coursee-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: ಡಿಜಿಟಲ್ ಪೌರತ್ವ
+            ramp_up:
+              display_name: ನೆಸ್ಟೆಡ್ ಲೂಪ್‌ಗಳು
+            csf_functions:
+              display_name: ಕಾರ್ಯಗಳು
+            csf_nested_loops:
+              display_name: ಕಂಡೀಷನಲ್ಸ್‌
+            end_of_course_project:
+              display_name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
+        aiml-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: ಆಪ್‌ ಲ್ಯಾಬ್‌ಗೆ ಪರಿಚಯ
+            lessonGroup-3:
+              display_name: ಅಧ್ಯಾಯ 1
+            lessonGroup-4:
+              display_name: ಅಧ್ಯಾಯ 2
+        focus-on-data3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: ಆಪ್‌ ಲ್ಯಾಬ್‌ಗೆ ಪರಿಚಯ
+            lessonGroup-3:
+              display_name: ಅಧ್ಯಾಯ 1
+            lessonGroup-4:
+              display_name: ಅಧ್ಯಾಯ 2
+        focus-on-impact-in-society4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: ಅಧ್ಯಾಯ 1
+            lessonGroup-3:
+              display_name: ಆಪ್‌ ಲ್ಯಾಬ್‌ಗೆ ಪರಿಚಯ
+            lessonGroup-4:
+              display_name: ಅಧ್ಯಾಯ 2
+        vpl-csd-ci-1:
+          title: 'ಮಾಡ್ಯೂಲ್‌ 1: ಸಮಸ್ಯೆ ಪರಿಹಾರ ಮತ್ತು ಕಂಪ್ಯೂಟಿಂಗ್‌ ಬೋಧಿಸಲು ಸಿದ್ಧವಾಗುವುದು'
+          description: "Code.org ಸಮಸ್ಯೆ ಪರಿಹಾರ ಮತ್ತು ಕಂಪ್ಯೂಟಿಂಗ್‌ ಯುನಿಟ್ ಅನ್ನು ಬೋಧಿಸಲು ಸಿದ್ಧವಾಗುವುದಕ್ಕಾಗಿ ಸಹಾಯ ಮಾಡುವ ಉದ್ದೇಶದಿಂದ ಈ ಪ್ರೊಫೆಷನಲ್‌ ಕಲಿಕೆ ಮಾಡ್ಯೂಲ್ ಅನ್ನು ವಿನ್ಯಾಸ ಮಾಡಲಾಗಿದೆ. \n\n**ಈ ಪ್ರೊಫೆಷನಲ್ ಕಲಿಕೆ ಮಾಡ್ಯೂಲ್‌ನಲ್ಲಿ ನೀವು:**\n\n-   ಸಮಸ್ಯೆ ಪರಿಹಾರ ಮತ್ತು ಕಂಪ್ಯೂಟಿಂಗ್‌ಗೆ ಪರಿಚಯವನ್ನು ಪಡೆಯುತ್ತೀರಿ.\n-   ಯುನಿಟ್‌ನಲ್ಲಿಯೂ ಸೇರಿದಂತೆ ಪ್ರಮುಖ ಕಾನ್ಸೆಪ್ಟ್‌ಗಳನ್ನು ಅಭ್ಯಾಸ ಮಾಡುತ್ತೀರಿ.\n-   ಅಧ್ಯಾಯದ ಕೊನೆಯ ಪ್ರಾಜೆಕ್ಟ್‌ಗಳನ್ನು ಎಕ್ಸ್‌ಪ್ಲೋರ್ ಮಾಡುತ್ತೀರಿ.\n\n**ಶಿಫಾರಸು ಮಾಡಿದ ಸಮಯ:** 30 ನಿಮಿಷಗಳು"
+          student_description: "Code.org ಸಮಸ್ಯೆ ಪರಿಹಾರ ಮತ್ತು ಕಂಪ್ಯೂಟಿಂಗ್‌ ಯುನಿಟ್ ಅನ್ನು ಬೋಧಿಸಲು ಸಿದ್ಧವಾಗುವುದಕ್ಕಾಗಿ ಸಹಾಯ ಮಾಡುವ ಉದ್ದೇಶದಿಂದ ಈ ಪ್ರೊಫೆಷನಲ್‌ ಕಲಿಕೆ ಮಾಡ್ಯೂಲ್ ಅನ್ನು ವಿನ್ಯಾಸ ಮಾಡಲಾಗಿದೆ. \n\n**ಈ ಪ್ರೊಫೆಷನಲ್ ಕಲಿಕೆ ಮಾಡ್ಯೂಲ್‌ನಲ್ಲಿ ನೀವು:**\n\n-   ಸಮಸ್ಯೆ ಪರಿಹಾರ ಮತ್ತು ಕಂಪ್ಯೂಟಿಂಗ್‌ಗೆ ಪರಿಚಯವನ್ನು ಪಡೆಯುತ್ತೀರಿ.\n-   ಯುನಿಟ್‌ನಲ್ಲಿಯೂ ಸೇರಿದಂತೆ ಪ್ರಮುಖ ಕಾನ್ಸೆಪ್ಟ್‌ಗಳನ್ನು ಅಭ್ಯಾಸ ಮಾಡುತ್ತೀರಿ.\n-   ಅಧ್ಯಾಯದ ಕೊನೆಯ ಪ್ರಾಜೆಕ್ಟ್‌ಗಳನ್ನು ಎಕ್ಸ್‌ಪ್ಲೋರ್ ಮಾಡುತ್ತೀರಿ.\n\n**ಶಿಫಾರಸು ಮಾಡಿದ ಸಮಯ:** 30 ನಿಮಿಷಗಳು"
+        vpl-csd-ci-2:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: ವೆಬ್‌ ಡೆವಲಪ್‌ಮೆಂಟ್ ಬೋಧಿಸುವುದು
+          title: 'ಮಾಡ್ಯೂಲ್‌ 2: ವೆಬ್‌ ಡೆವಲಪ್‌ಮೆಂಟ್‌ ಬೋಧಿಸಲು ಸಿದ್ಧವಾಗುವುದು'
+          description: "Code.org ವೆಬ್‌ ಡೆವಲಪ್‌ಮೆಂಟ್‌ ಯುನಿಟ್ ಅನ್ನು ಬೋಧಿಸಲು ಸಿದ್ಧವಾಗುವುದಕ್ಕಾಗಿ ಸಹಾಯ ಮಾಡುವ ಉದ್ದೇಶದಿಂದ ಈ ಪ್ರೊಫೆಷನಲ್‌ ಕಲಿಕೆ ಮಾಡ್ಯೂಲ್ ಅನ್ನು ವಿನ್ಯಾಸ ಮಾಡಲಾಗಿದೆ. \n\n**ಈ ಪ್ರೊಫೆಷನಲ್ ಕಲಿಕೆ ಮಾಡ್ಯೂಲ್‌ನಲ್ಲಿ ನೀವು:**\n\n-   ವೆಬ್‌ ಡೆವಲಪ್‌ಮೆಂಟ್‌ಗೆ ಪರಿಚಯವನ್ನು ಪಡೆಯುತ್ತೀರಿ.\n-   ಯುನಿಟ್‌ನಲ್ಲಿ ಸೇರಿಸಿದ ಪ್ರಮುಖ ಕಾನ್ಸೆಪ್ಟ್‌ಗಳನ್ನು ಅಭ್ಯಾಸ ಮಾಡುತ್ತೀರಿ.\n-   ವೆಬ್‌ ಲ್ಯಾಬ್‌ನೊಂದಿಗೆ ತೊಡಗಿಸಿಕೊಳ್ಳುತ್ತೀರಿ.\n-   ಅಧ್ಯಾಯದ ಕೊನೆಯ ಪ್ರಾಜೆಕ್ಟ್‌ಗಳನ್ನು ಎಕ್ಸ್‌ಪ್ಲೋರ್ ಮಾಡುತ್ತೀರಿ.\n\n**ಶಿಫಾರಸು ಮಾಡಿದ ಸಮಯ:** 90 ನಿಮಿಷಗಳು"
+          student_description: "Code.org ವೆಬ್‌ ಡೆವಲಪ್‌ಮೆಂಟ್‌ ಯುನಿಟ್ ಅನ್ನು ಬೋಧಿಸಲು ಸಿದ್ಧವಾಗುವುದಕ್ಕಾಗಿ ಸಹಾಯ ಮಾಡುವ ಉದ್ದೇಶದಿಂದ ಈ ಪ್ರೊಫೆಷನಲ್‌ ಕಲಿಕೆ ಮಾಡ್ಯೂಲ್ ಅನ್ನು ವಿನ್ಯಾಸ ಮಾಡಲಾಗಿದೆ. \n\n**ಈ ಪ್ರೊಫೆಷನಲ್ ಕಲಿಕೆ ಮಾಡ್ಯೂಲ್‌ನಲ್ಲಿ ನೀವು:**\n\n-   ವೆಬ್‌ ಡೆವಲಪ್‌ಮೆಂಟ್‌ಗೆ ಪರಿಚಯವನ್ನು ಪಡೆಯುತ್ತೀರಿ.\n-   ಯುನಿಟ್‌ನಲ್ಲಿ ಸೇರಿಸಿದ ಪ್ರಮುಖ ಕಾನ್ಸೆಪ್ಟ್‌ಗಳನ್ನು ಅಭ್ಯಾಸ ಮಾಡುತ್ತೀರಿ.\n-   ವೆಬ್‌ ಲ್ಯಾಬ್‌ನೊಂದಿಗೆ ತೊಡಗಿಸಿಕೊಳ್ಳುತ್ತೀರಿ.\n-   ಅಧ್ಯಾಯದ ಕೊನೆಯ ಪ್ರಾಜೆಕ್ಟ್‌ಗಳನ್ನು ಎಕ್ಸ್‌ಪ್ಲೋರ್ ಮಾಡುತ್ತೀರಿ.\n\n**ಶಿಫಾರಸು ಮಾಡಿದ ಸಮಯ:** 90 ನಿಮಿಷಗಳು"
+        vpl-csd-ci-3:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: ಇಂಟರ್‍ಯಾಕ್ಟಿವ್ ಆನಿಮೇಶನ್‌ಗಳು ಮತ್ತು ಗೇಮ್‌ಗಳನ್ನು ಬೋಧಿಸಲು ಸಿದ್ಧವಾಗುವುದು
+          title: 'ಮಾಡ್ಯೂಲ್‌ 3: ಇಂಟರ್‍ಯಾಕ್ಟಿವ್ ಆನಿಮೇಶನ್‌ಗಳು ಮತ್ತು ಗೇಮ್‌ಗಳನ್ನು ಬೋಧಿಸಲು ಸಿದ್ಧವಾಗುವುದು'
+          description: "Code.org ಇಂಟರ್‍ಯಾಕ್ಟಿವ್ ಆನಿಮೇಶನ್‌ಗಳು ಮತ್ತು ಗೇಮ್ಸ್‌ ಯುನಿಟ್‌ ಅನ್ನು ಬೋಧಿಸಲು ಸಿದ್ಧವಾಗುವುದಕ್ಕಾಗಿ ಸಹಾಯ ಮಾಡುವ ಉದ್ದೇಶದಿಂದ ಈ ಪ್ರೊಫೆಷನಲ್‌ ಕಲಿಕೆ ಮಾಡ್ಯೂಲ್ ಅನ್ನು ವಿನ್ಯಾಸ ಮಾಡಲಾಗಿದೆ. \n\n**ಈ ಪ್ರೊಫೆಷನಲ್ ಕಲಿಕೆ ಮಾಡ್ಯೂಲ್‌ನಲ್ಲಿ ನೀವು:**\n\n-   ಇಂಟರ್‍ಯಾಕ್ಟಿವ್ ಆನಿಮೇಶನ್ಸ ಮತ್ತು ಗೇಮ್ಸ್‌ಗೆ ಪರಿಚಯವನ್ನು ಪಡೆಯುತ್ತೀರಿ.\n-   ಯುನಿಟ್‌ನಲ್ಲಿ ಸೇರಿಸಿದ ಪ್ರಮುಖ ಕಾನ್ಸೆಪ್ಟ್‌ಗಳನ್ನು ಅಭ್ಯಾಸ ಮಾಡುತ್ತೀರಿ.\n-   ವೆಬ್‌ ಲ್ಯಾಬ್‌ನೊಂದಿಗೆ ತೊಡಗಿಸಿಕೊಳ್ಳುತ್ತೀರಿ.\n-   ಅಧ್ಯಾಯದ ಕೊನೆಯ ಪ್ರಾಜೆಕ್ಟ್‌ಗಳನ್ನು ಎಕ್ಸ್‌ಪ್ಲೋರ್ ಮಾಡುತ್ತೀರಿ.\n\n**ಶಿಫಾರಸು ಮಾಡಿದ ಸಮಯ:** 120 ನಿಮಿಷಗಳು"
+          student_description: "Code.org ಇಂಟರ್‍ಯಾಕ್ಟಿವ್ ಆನಿಮೇಶನ್‌ಗಳು ಮತ್ತು ಗೇಮ್ಸ್‌ ಯುನಿಟ್‌ ಅನ್ನು ಬೋಧಿಸಲು ಸಿದ್ಧವಾಗುವುದಕ್ಕಾಗಿ ಸಹಾಯ ಮಾಡುವ ಉದ್ದೇಶದಿಂದ ಈ ಪ್ರೊಫೆಷನಲ್‌ ಕಲಿಕೆ ಮಾಡ್ಯೂಲ್ ಅನ್ನು ವಿನ್ಯಾಸ ಮಾಡಲಾಗಿದೆ. \n\n**ಈ ಪ್ರೊಫೆಷನಲ್ ಕಲಿಕೆ ಮಾಡ್ಯೂಲ್‌ನಲ್ಲಿ ನೀವು:**\n\n-   ಇಂಟರ್‍ಯಾಕ್ಟಿವ್ ಆನಿಮೇಶನ್ಸ ಮತ್ತು ಗೇಮ್ಸ್‌ಗೆ ಪರಿಚಯವನ್ನು ಪಡೆಯುತ್ತೀರಿ.\n-   ಯುನಿಟ್‌ನಲ್ಲಿ ಸೇರಿಸಿದ ಪ್ರಮುಖ ಕಾನ್ಸೆಪ್ಟ್‌ಗಳನ್ನು ಅಭ್ಯಾಸ ಮಾಡುತ್ತೀರಿ.\n-   ವೆಬ್‌ ಲ್ಯಾಬ್‌ನೊಂದಿಗೆ ತೊಡಗಿಸಿಕೊಳ್ಳುತ್ತೀರಿ.\n-   ಅಧ್ಯಾಯದ ಕೊನೆಯ ಪ್ರಾಜೆಕ್ಟ್‌ಗಳನ್ನು ಎಕ್ಸ್‌ಪ್ಲೋರ್ ಮಾಡುತ್ತೀರಿ.\n\n**ಶಿಫಾರಸು ಮಾಡಿದ ಸಮಯ:** 120 ನಿಮಿಷಗಳು"
+        vpl-csd-ci-4:
+          title: 'ಮಾಡ್ಯೂಲ್‌ 4: ಡಿಸೈನ್ ಪ್ರೋಸೆಸ್‌ ಅನ್ನು ಬೋಧಿಸಲು ಸಿದ್ಧವಾಗುವುದು'
+          description: "Code.org ಡಿಸೈನ್‌ ಪ್ರೋಸೆಸ್‌ ಯುನಿಟ್ ಅನ್ನು ಬೋಧಿಸಲು ಸಿದ್ಧವಾಗುವುದಕ್ಕಾಗಿ ಸಹಾಯ ಮಾಡುವ ಉದ್ದೇಶದಿಂದ ಈ ಪ್ರೊಫೆಷನಲ್‌ ಕಲಿಕೆ ಮಾಡ್ಯೂಲ್ ಅನ್ನು ವಿನ್ಯಾಸ ಮಾಡಲಾಗಿದೆ. \n\n**ಈ ಪ್ರೊಫೆಷನಲ್ ಕಲಿಕೆ ಮಾಡ್ಯೂಲ್‌ನಲ್ಲಿ ನೀವು:**\n\n-   ಡಿಸೈನ್ ಪ್ರೋಸೆಸ್‌ಗೆ ಪರಿಚಯವನ್ನು ಪಡೆಯುತ್ತೀರಿ.\n-   ಯುನಿಟ್‌ನಲ್ಲಿ ಸೇರಿಸಿದ ಪ್ರಮುಖ ಕಾನ್ಸೆಪ್ಟ್‌ಗಳನ್ನು ಅಭ್ಯಾಸ ಮಾಡುತ್ತೀರಿ.\n-   ವೆಬ್‌ ಲ್ಯಾಬ್‌ನೊಂದಿಗೆ ತೊಡಗಿಸಿಕೊಳ್ಳುತ್ತೀರಿ.\n-   ಅಧ್ಯಾಯದ ಕೊನೆಯ ಪ್ರಾಜೆಕ್ಟ್‌ಗಳನ್ನು ಎಕ್ಸ್‌ಪ್ಲೋರ್ ಮಾಡುತ್ತೀರಿ.\n\n**ಶಿಫಾರಸು ಮಾಡಿದ ಸಮಯ:** 90 ನಿಮಿಷಗಳು"
+          student_description: "Code.org ಡಿಸೈನ್‌ ಪ್ರೋಸೆಸ್‌ ಯುನಿಟ್ ಅನ್ನು ಬೋಧಿಸಲು ಸಿದ್ಧವಾಗುವುದಕ್ಕಾಗಿ ಸಹಾಯ ಮಾಡುವ ಉದ್ದೇಶದಿಂದ ಈ ಪ್ರೊಫೆಷನಲ್‌ ಕಲಿಕೆ ಮಾಡ್ಯೂಲ್ ಅನ್ನು ವಿನ್ಯಾಸ ಮಾಡಲಾಗಿದೆ. \n\n**ಈ ಪ್ರೊಫೆಷನಲ್ ಕಲಿಕೆ ಮಾಡ್ಯೂಲ್‌ನಲ್ಲಿ ನೀವು:**\n\n-   ಡಿಸೈನ್ ಪ್ರೋಸೆಸ್‌ಗೆ ಪರಿಚಯವನ್ನು ಪಡೆಯುತ್ತೀರಿ.\n-   ಯುನಿಟ್‌ನಲ್ಲಿ ಸೇರಿಸಿದ ಪ್ರಮುಖ ಕಾನ್ಸೆಪ್ಟ್‌ಗಳನ್ನು ಅಭ್ಯಾಸ ಮಾಡುತ್ತೀರಿ.\n-   ವೆಬ್‌ ಲ್ಯಾಬ್‌ನೊಂದಿಗೆ ತೊಡಗಿಸಿಕೊಳ್ಳುತ್ತೀರಿ.\n-   ಅಧ್ಯಾಯದ ಕೊನೆಯ ಪ್ರಾಜೆಕ್ಟ್‌ಗಳನ್ನು ಎಕ್ಸ್‌ಪ್ಲೋರ್ ಮಾಡುತ್ತೀರಿ.\n\n**ಶಿಫಾರಸು ಮಾಡಿದ ಸಮಯ:** 90 ನಿಮಿಷಗಳು"
+        vpl-csd-ci-5:
+          title: 'ಮಾಡ್ಯೂಲ್‌ 5: ಡೇಟಾ ಮತ್ತು ಸೊಸೈಟಿಯನ್ನು ಬೋಧಿಸಲು ಸಿದ್ಧವಾಗುವುದು'
+          description: "Code.org ಡೇಟಾ ಮತ್ತು ಸೊಸೈಟಿ ಯುನಿಟ್ ಅನ್ನು ಬೋಧಿಸಲು ಸಿದ್ಧವಾಗುವುದಕ್ಕಾಗಿ ಸಹಾಯ ಮಾಡುವ ಉದ್ದೇಶದಿಂದ ಈ ಪ್ರೊಫೆಷನಲ್‌ ಕಲಿಕೆ ಮಾಡ್ಯೂಲ್ ಅನ್ನು ವಿನ್ಯಾಸ ಮಾಡಲಾಗಿದೆ. \n\n**ಈ ಪ್ರೊಫೆಷನಲ್ ಕಲಿಕೆ ಮಾಡ್ಯೂಲ್‌ನಲ್ಲಿ ನೀವು:**\n\n-   ಡೇಟಾ ಮತ್ತು ಸೊಸೈಟಿಗೆ ಪರಿಚಯವನ್ನು ಪಡೆಯುತ್ತೀರಿ.\n-   ಯುನಿಟ್‌ನಲ್ಲಿಯೂ ಸೇರಿದಂತೆ ಪ್ರಮುಖ ಕಾನ್ಸೆಪ್ಟ್‌ಗಳನ್ನು ಅಭ್ಯಾಸ ಮಾಡುತ್ತೀರಿ.\n-   ಅಧ್ಯಾಯದ ಕೊನೆಯ ಪ್ರಾಜೆಕ್ಟ್‌ಗಳನ್ನು ಎಕ್ಸ್‌ಪ್ಲೋರ್ ಮಾಡುತ್ತೀರಿ.\n\n**ಶಿಫಾರಸು ಮಾಡಿದ ಸಮಯ:** 90 ನಿಮಿಷಗಳು"
+          student_description: "Code.org ಡೇಟಾ ಮತ್ತು ಸೊಸೈಟಿ ಯುನಿಟ್ ಅನ್ನು ಬೋಧಿಸಲು ಸಿದ್ಧವಾಗುವುದಕ್ಕಾಗಿ ಸಹಾಯ ಮಾಡುವ ಉದ್ದೇಶದಿಂದ ಈ ಪ್ರೊಫೆಷನಲ್‌ ಕಲಿಕೆ ಮಾಡ್ಯೂಲ್ ಅನ್ನು ವಿನ್ಯಾಸ ಮಾಡಲಾಗಿದೆ. \n\n**ಈ ಪ್ರೊಫೆಷನಲ್ ಕಲಿಕೆ ಮಾಡ್ಯೂಲ್‌ನಲ್ಲಿ ನೀವು:**\n\n-   ಡೇಟಾ ಮತ್ತು ಸೊಸೈಟಿಗೆ ಪರಿಚಯವನ್ನು ಪಡೆಯುತ್ತೀರಿ.\n-   ಯುನಿಟ್‌ನಲ್ಲಿಯೂ ಸೇರಿದಂತೆ ಪ್ರಮುಖ ಕಾನ್ಸೆಪ್ಟ್‌ಗಳನ್ನು ಅಭ್ಯಾಸ ಮಾಡುತ್ತೀರಿ.\n-   ಅಧ್ಯಾಯದ ಕೊನೆಯ ಪ್ರಾಜೆಕ್ಟ್‌ಗಳನ್ನು ಎಕ್ಸ್‌ಪ್ಲೋರ್ ಮಾಡುತ್ತೀರಿ.\n\n**ಶಿಫಾರಸು ಮಾಡಿದ ಸಮಯ:** 90 ನಿಮಿಷಗಳು"
+        vpl-csd-ci-7:
+          title: 'ಮಾಡ್ಯೂಲ್‌ 7: AI ಮತ್ತು ಮಶಿನ್ ಲರ್ನಿಂಗ್‌ ಬೋಧಿಸಲು ಸಿದ್ಧವಾಗುವುದು'
+          description: "Code.org AI ಮತ್ತು ಮಶಿನ್ ಲರ್ನಿಂಗ್‌ ಯುನಿಟ್ ಅನ್ನು ಬೋಧಿಸಲು ಸಿದ್ಧವಾಗುವುದಕ್ಕಾಗಿ ಸಹಾಯ ಮಾಡುವ ಉದ್ದೇಶದಿಂದ ಈ ಪ್ರೊಫೆಷನಲ್‌ ಕಲಿಕೆ ಮಾಡ್ಯೂಲ್ ಅನ್ನು ವಿನ್ಯಾಸ ಮಾಡಲಾಗಿದೆ. \n\n**ಈ ಪ್ರೊಫೆಷನಲ್ ಕಲಿಕೆ ಮಾಡ್ಯೂಲ್‌ನಲ್ಲಿ ನೀವು:**\n\n-   AI ಮತ್ತು ಮಶಿನ್ ಲರ್ನಿಂಗ್‌ಗೆ ಪರಿಚಯವನ್ನು ಪಡೆಯುತ್ತೀರಿ.\n-   ಯುನಿಟ್‌ನಲ್ಲಿ ಸೇರಿಸಿದ ಪ್ರಮುಖ ಕಾನ್ಸೆಪ್ಟ್‌ಗಳನ್ನು ಅಭ್ಯಾಸ ಮಾಡುತ್ತೀರಿ.\n-   AI ಮತ್ತು ಆ್ಯಪ್ ಲ್ಯಾಬ್‌ ಜೊತೆಗೆ ತೊಡಗಿಸಿಕೊಳ್ಳುತ್ತೀರಿ.\n-   ಅಧ್ಯಾಯದ ಕೊನೆಯ ಪ್ರಾಜೆಕ್ಟ್‌ಗಳನ್ನು ಎಕ್ಸ್‌ಪ್ಲೋರ್ ಮಾಡುತ್ತೀರಿ.\n-   ನಿಮ್ಮ ವಿದ್ಯಾರ್ಥಿಗಳೊಂದಿಗೆ ಯುನಿಟ್ ಅನುಷ್ಠಾನಗೊಳಿಸಲು ಪ್ಲಾನ್ ಮಾಡಿ\n\n**ಶಿಫಾರಸು ಮಾಡಿದ ಸಮಯ:** 120 ನಿಮಿಷಗಳು"
+          student_description: "Code.org AI ಮತ್ತು ಮಶಿನ್ ಲರ್ನಿಂಗ್‌ ಯುನಿಟ್ ಅನ್ನು ಬೋಧಿಸಲು ಸಿದ್ಧವಾಗುವುದಕ್ಕಾಗಿ ಸಹಾಯ ಮಾಡುವ ಉದ್ದೇಶದಿಂದ ಈ ಪ್ರೊಫೆಷನಲ್‌ ಕಲಿಕೆ ಮಾಡ್ಯೂಲ್ ಅನ್ನು ವಿನ್ಯಾಸ ಮಾಡಲಾಗಿದೆ. \n\n**ಈ ಪ್ರೊಫೆಷನಲ್ ಕಲಿಕೆ ಮಾಡ್ಯೂಲ್‌ನಲ್ಲಿ ನೀವು:**\n\n-   AI ಮತ್ತು ಮಶಿನ್ ಲರ್ನಿಂಗ್‌ಗೆ ಪರಿಚಯವನ್ನು ಪಡೆಯುತ್ತೀರಿ.\n-   ಯುನಿಟ್‌ನಲ್ಲಿ ಸೇರಿಸಿದ ಪ್ರಮುಖ ಕಾನ್ಸೆಪ್ಟ್‌ಗಳನ್ನು ಅಭ್ಯಾಸ ಮಾಡುತ್ತೀರಿ.\n-   AI ಮತ್ತು ಆ್ಯಪ್ ಲ್ಯಾಬ್‌ ಜೊತೆಗೆ ತೊಡಗಿಸಿಕೊಳ್ಳುತ್ತೀರಿ.\n-   ಅಧ್ಯಾಯದ ಕೊನೆಯ ಪ್ರಾಜೆಕ್ಟ್‌ಗಳನ್ನು ಎಕ್ಸ್‌ಪ್ಲೋರ್ ಮಾಡುತ್ತೀರಿ.\n-   ನಿಮ್ಮ ವಿದ್ಯಾರ್ಥಿಗಳೊಂದಿಗೆ ಯುನಿಟ್ ಅನುಷ್ಠಾನಗೊಳಿಸಲು ಪ್ಲಾನ್ ಮಾಡಿ\n\n**ಶಿಫಾರಸು ಮಾಡಿದ ಸಮಯ:** 120 ನಿಮಿಷಗಳು"
+        pl-csd-summer-day1:
+          lessons:
+            lesson-3:
+              name: ಪರಿಚಯ
+        pl-csd-summer-day2:
+          lessons:
+            lesson-10:
+              name: ಮುಕ್ತಾಯ
+        pl-csd-summer-day4:
+          lessons:
+            lesson-12:
+              name: ಮುಕ್ತಾಯ
+        virtual-pl-csd-summer-day1:
+          lessons:
+            lesson-1:
+              name: ಪರಿಚಯ
+            lesson-12:
+              name: ಮುಕ್ತಾಯ
+        virtual-pl-csd-summer-day2:
+          lessons:
+            lesson-10:
+              name: ಮುಕ್ತಾಯ
+        virtual-pl-csd-summer-day3:
+          lessons:
+            lesson-12:
+              name: ಮುಕ್ತಾಯ
+        virtual-pl-csd-summer-day4:
+          lessons:
+            lesson-13:
+              name: ಮುಕ್ತಾಯ
+        virtual-pl-csd-summer-day5:
+          lessons:
+            lesson-3:
+              name: ಮೌಲ್ಯಮಾಪನ
+        coursef-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: ಡಿಜಿಟಲ್ ಪೌರತ್ವ
+            lessonGroup-4:
+              display_name: ವೇರಿಯಬಲ್‌ಗಳು
+            lessonGroup-6:
+              display_name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
+          description_short: ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್ ಫಂಡಮೆಂಟಲ್ಸ್‌ನಲ್ಲಿ ಎಲ್ಲ ಕಾನ್ಸೆಪ್ಟ್‌ಗಳನ್ನು ಕಲಿಯಿರಿ ಮತ್ತು ನಿಮ್ಮದೇ ಆರ್ಟ್‌, ಸ್ಟೋರಿ ಅಥವಾ ಗೇಮ್ ರಚಿಸಿ.

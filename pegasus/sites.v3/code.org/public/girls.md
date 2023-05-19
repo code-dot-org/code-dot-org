@@ -5,14 +5,14 @@ theme: responsive
 ---
 <h1>Inspiring Girls to Learn Computer Science</h1>
 <div style="text-align: center;">
-<img src="/images/code_like_a_girl.jpg" width="1000">
+<img src="/images/code_like_a_girl.jpg" width="100%">
 </div>
 <p><br>
-In U.S. high schools, the Advanced Placement exam in Computer Science has historically (since the beginning of the century) had only <strong>22 percent participation by young women</strong>. This gender gap problem extends to university programs and to the software workplace, which suffer a similar lack of diversity. 
+In U.S. high schools, the Advanced Placement exam in Computer Science has historically (since the beginning of the century) had only <strong>22 percent participation by young women</strong>. This gender gap problem extends to university programs and to the software workplace, which suffer a similar lack of diversity.
 <p>
 While things are starting to move in the right direction, we have a long way to go to reach a balanced population in computer science. Code.org focuses on K-12 learning because data shows that experiences in K-12 directly impact students’ future in computer science. <strong>Among young women, those who try AP Computer Science in high school are 10 times more likely to major in computer science.</strong>
 <p><br>
-<center><iframe width="560" height="315" src="https://www.youtube.com/embed/mFPg96gdPkc" frameborder="0" allowfullscreen></iframe><br></center><Br>
+<center><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/mFPg96gdPkc" frameborder="0" allowfullscreen></iframe><br></center><Br>
 
 <h1>How You Can Help</h1>
 
@@ -22,7 +22,7 @@ Computer science is foundational to many fields and students of all genders repo
 
 <div class="col-50" style="padding-right: 30px;">
 
-<img src="/images/fit-450/marketing/excel-charter-schoolhoc-2015-stills-14.jpg">
+<img src="/images/fit-450/marketing/excel-charter-schoolhoc-2015-stills-14.jpg" style="width:100%">
 <br><br>
 
 </div>
@@ -31,7 +31,7 @@ Computer science is foundational to many fields and students of all genders repo
 
 Research shows that around age 12, both boys and girls have a similar level of interest in computer science. This difference is that <b>women are half as likely to be encouraged to explore it</b>. That’s especially important considering that students who are told by a parent or a teacher that they’d be good at the subject are up to three times more likely to be interested in learning CS in the future.
 
-Perhaps the single most effective way to get women into CS classes is also one of the simplest: <strong>Take a moment out of each day to tell a female student that you think she’d be great at CS.</strong> 
+Perhaps the single most effective way to get women into CS classes is also one of the simplest: <strong>Take a moment out of each day to tell a female student that you think she’d be great at CS.</strong>
 
 </div>
 
@@ -46,10 +46,10 @@ Perhaps the single most effective way to get women into CS classes is also one o
   </table>
 
 </div>
-  
+
 <h2>Challenge stereotypes and present positive role models</h2>
 
-Research has found that simply seeing someone “like me” can be a powerful influencer for girls, and that spans more than gender. Displaying <a href="https://hourofcode.com/us/promote/resources#posters">images of role models</a> in your classroom can be a powerful tool for motivating girls. Defy stereotypes and show a diversity of race, cultural backgrounds, and even passions or interests so that students don’t feel like they have to fit into a particular mold in order to belong. 
+Research has found that simply seeing someone “like me” can be a powerful influencer for girls, and that spans more than gender. Displaying <a href="https://hourofcode.com/us/promote/resources#posters">images of role models</a> in your classroom can be a powerful tool for motivating girls. Defy stereotypes and show a diversity of race, cultural backgrounds, and even passions or interests so that students don’t feel like they have to fit into a particular mold in order to belong.
 
 <div style="clear: both;">
 
@@ -139,29 +139,42 @@ Producer/Choreographer and Coder
 
 <h2>Explain that computer science can impact the world in every field</h2>
 
-Both boys and girls care about making the world a better place and may not be aware of how computer science can contribute to this. <strong>In fact, only 22% of girls say they’re very likely to one day have a job where they need to know CS.</strong> 
+Both boys and girls care about making the world a better place and may not be aware of how computer science can contribute to this. <strong>In fact, only 22% of girls say they’re very likely to one day have a job where they need to know CS.</strong>
 
-You can help by showing examples of CS careers that blend academic skills such as problem solving with intrinsic social causes like conservation or medical care. When students see that a career in CS can be rewarding in a variety of ways, they’re more likely to continue pursuing their interest. 
+You can help by showing examples of CS careers that blend academic skills such as problem solving with intrinsic social causes like conservation or medical care. When students see that a career in CS can be rewarding in a variety of ways, they’re more likely to continue pursuing their interest.
 
-Take a look at some <a href="https://code.org/careers-in-tech">great examples</a> of how everyday people use CS in their careers. 
+Take a look at some <a href="https://code.org/careers-in-tech">great examples</a> of how everyday people use CS in their careers.
+
 
 [col-50]
 
-<center><iframe width="375" height="246" src="https://www.youtube.com/embed/t0-Z_LfGwUM" frameborder="0" allowfullscreen></iframe><br><br>
+<center><iframe width="368" height="207" src="https://www.youtube-nocookie.com/embed/FBTWICxTG08" title="YouTube video player" frameborder="0" allowfullscreen></iframe><br><br>
 
 [/col-50]
 
 [col-50]
 
-<center><iframe width="375" height="246" src="https://www.youtube.com/embed/RfbbDgx6l1g" frameborder="0" allowfullscreen></iframe><br><Br>
+<center><iframe width="368" height="207" src="https://www.youtube-nocookie.com/embed/2uXTNK9W-gQ" title="YouTube video player" frameborder="0" allowfullscreen></iframe><br><br>
+
+[/col-50]
+
+[col-50]
+
+<center><iframe width="368" height="207" src="https://www.youtube-nocookie.com/embed/t0-Z_LfGwUM" frameborder="0" allowfullscreen></iframe><br><br>
+
+[/col-50]
+
+[col-50]
+
+<center><iframe width="368" height="207" src="https://www.youtube-nocookie.com/embed/RfbbDgx6l1g" frameborder="0" allowfullscreen></iframe><br><br>
 
 [/col-50]
 
 <h2>Show them a day in the life of a CS professional</h2>
 
-Dispel misconceptions about what a future in computer science looks like by using our [inspirational videos](https://code.org/educate/resources/inspire), many of which feature women in a variety of creative and impactful industries! 
+Dispel misconceptions about what a future in computer science looks like by using our [inspirational videos](https://code.org/educate/resources/inspire), many of which feature women in a variety of creative and impactful industries!
 
-Students have positive attitudes about science careers when they’re able to see what a day in the life really looks like, especially if it’s highly collaborative. In addition to [videos that dive deep into potential careers](https://code.org/careers-in-tech), it’s a great idea to connect with a local university or college’s CS department to coordinate a school visit or guest speaker. 
+Students have positive attitudes about science careers when they’re able to see what a day in the life really looks like, especially if it’s highly collaborative. In addition to [videos that dive deep into potential careers](https://code.org/careers-in-tech), it’s a great idea to connect with a local university or college’s CS department to coordinate a school visit or guest speaker.
 
 [breakoutquote]
 
@@ -183,7 +196,7 @@ Students have positive attitudes about science careers when they’re able to se
 [clearboth]
 
 [/clearboth]
-   
+
 [/breakoutquote]
 
 <h3>For more ideas, check out these helpful links:</h3>
@@ -193,4 +206,4 @@ Students have positive attitudes about science careers when they’re able to se
 - [7 ways to eliminate the barriers to young women's participation in CS](https://ncwit.org/blog/seven-ways-you-can-help-eliminate-the-barriers-to-young-womens-participation-in-computing/)
 
 <a id="notes"></a>
-*Our recommendations summarize learnings from interviews with and written materials from CS educators, psychology researchers, as well as material from [NCWIT](http://www.ncwit.org/), Google, and other organizations dedicated to growing participation of women in technology. 
+*Our recommendations summarize learnings from interviews with and written materials from CS educators, psychology researchers, as well as material from [NCWIT](http://www.ncwit.org/), Google, and other organizations dedicated to growing participation of women in technology.

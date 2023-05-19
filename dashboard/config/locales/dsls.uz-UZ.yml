@@ -8558,7 +8558,7 @@ uz-UZ:
         - text: pingvin
         - text: qurbaqa
           correct: true
-        - {}
+        - text: jirafa
         - {}
         questions:
         - {}
@@ -8568,7 +8568,7 @@ uz-UZ:
         - text: pingvin
         - text: qurbaqa
           correct: true
-        - {}
+        - text: jirafa
         - {}
         questions:
         - {}
@@ -8578,7 +8578,7 @@ uz-UZ:
         - text: pingvin
         - text: qurbaqa
           correct: true
-        - {}
+        - text: jirafa
         - {}
         questions:
         - {}
@@ -8588,7 +8588,7 @@ uz-UZ:
           correct: true
         - text: pingvin
         - text: qurbaqa
-        - {}
+        - text: jirafa
         - {}
         questions:
         - {}
@@ -8598,7 +8598,7 @@ uz-UZ:
           correct: true
         - text: pingvin
         - text: qurbaqa
-        - {}
+        - text: jirafa
         - {}
         questions:
         - {}
@@ -8608,7 +8608,7 @@ uz-UZ:
           correct: true
         - text: pingvin
         - text: qurbaqa
-        - {}
+        - text: jirafa
         - {}
         questions:
         - {}
@@ -14805,22 +14805,12 @@ uz-UZ:
       courseC_multi_maze_debugging8_predict12022:
         answers:
         - text: Skrat daraxtga yetib boradi. Kodda hech qanday xatolik yo'q.
-          feedback: Noto'g'ri. Birinchidan, Skrat noto'g'ri yo'nalishga buriladi,
-            keyin Skrat eman yong'og'iga yetib borish uchun yetarlicha vaqt oldinga
-            siljimaydi.
         - text: Skrat yong'oqqa yetib bormaydi, chunki u noto'g'ri tomonga buriladi.
           correct: true
-          feedback: To'g'ri. Birinchidan, Skrat noto'g'ri yo'nalishga buriladi, keyin
-            Skrat eman yong'og'iga yetib borish uchun yetarlicha vaqt oldinga siljimaydi.
         - text: Skrat yong'oqqa yetib bormaydi, chunki "oldinga siljish" bloklari
             yetarli emas.
-          correct: true
-          feedback: To'g'ri. Birinchidan, Skrat noto'g'ri yo'nalishga buriladi, keyin
-            Skrat eman yong'og'iga yetib borish uchun yetarlicha vaqt oldinga siljimaydi.
         - text: Scrat birinchi blokdan qimirlamaydi.
-          feedback: Ushbu kodda ikkita xato mavjud. Birinchidan, Skrat noto'g'ri yo'nalishga
-            buriladi, keyin Skrat shoxga yetib borish uchun yetarlicha vaqt oldinga
-            siljimaydi.
+          feedback: Skrat yong'oqqa yetib bormaydi, chunki u noto'g'ri tomonga buriladi.
         questions:
         - text: Ushbu koddagi xatolarni qidirib toping. Skrat eman yong'og'iga yetib
             boradimi yoki biror nosozlik bormi?
@@ -15041,19 +15031,12 @@ uz-UZ:
             bosgandan so'ng nima bo'ladi?
       courseD_multi_maze_until10_predict22022:
         answers:
-        - text: Zombi to'g'ri yo'ldan o'tadi va abadiy oldinga va orqaga yurib qoladi.
-          correct: true
+        - correct: true
           feedback: To‘g’ri!
         - text: Zombi kungaboqarga yetib boradi.
-          feedback: Noto'g'ri. Zombi to'g'ri yo'ldan o'tadi va abadiy oldinga va orqaga
-            yurib qoladi.
         - text: Zombi birinchi yo‘lda o‘ng tomonga buriladi va abadiy aylana bo‘ylab
             yuradi.
-          feedback: Noto'g'ri. Zombi to'g'ri yo'ldan o'tadi va abadiy oldinga va orqaga
-            yurib qoladi.
         - text: Zombi oldinga boradigan yo'lning oxirida qolib ketadi.
-          feedback: Bu kodda Zombi to'g'ri yo'ldan o'tadi va abadiy oldinga va orqaga
-            yurib qoladi.
         questions:
         - text: Quyidagi kodga diqqat bilan qarang. "Ishga tushirish " tugmachasini
             bosgandan so'ng nima bo'ladi?

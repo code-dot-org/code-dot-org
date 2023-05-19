@@ -10,7 +10,9 @@
           "details": "In addition to our curriculum, Code.org offers self-paced and facilitator-led professional learning courses for teachers who wish to implement CS Discoveries in their classrooms.",
           "link": "https://code.org/educate/professional-development-online",
           "type": "information",
-          "visibility": "Teacher-only"
+          "visibility": "Teacher-only",
+          "key": "2e1b13ae-2ab8-4996-bf23-ca3e0fa1f8be",
+          "buttonText": "Learn More"
         },
         {
           "notice": "More Opportunities for Feedback",
@@ -19,7 +21,8 @@
           "type": "feedback",
           "visibility": "Teacher-only",
           "dismissible": true,
-          "buttonText": "Teacher Survey"
+          "buttonText": "Teacher Survey",
+          "key": "0d48422e-8580-494d-bca8-1cc758561e48"
         }
       ],
       "curriculum_umbrella": "CSD",
@@ -37,7 +40,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-08-31 19:47:58 UTC",
+    "serialized_at": "2023-02-08 16:51:43 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,

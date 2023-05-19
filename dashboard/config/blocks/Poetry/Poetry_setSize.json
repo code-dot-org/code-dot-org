@@ -3,11 +3,7 @@
   "config": {
     "func": "setSize",
     "docFunc": "gamelab_setProp_dropdown",
-    "color": [
-      355,
-      ".7",
-      ".7"
-    ],
+    "style": "sprite_blocks",
     "blockText": "set {SPRITE} size to {VAL}",
     "args": [
       {

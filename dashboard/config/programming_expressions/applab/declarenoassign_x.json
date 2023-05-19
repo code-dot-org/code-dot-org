@@ -13,7 +13,7 @@
     {
       "name": "Count Sixes",
       "description": "Count the number of sixes rolled in 5 random die rolls.",
-      "code": "\n```\n// Count the number of sixes rolled in 5 random die rolls.\nvar counter;\ncounter=0;\nif (randomNumber(1,6)==6) counter = counter + 1;\nif (randomNumber(1,6)==6) counter = counter + 1;\nif (randomNumber(1,6)==6) counter = counter + 1;\nif (randomNumber(1,6)==6) counter = counter + 1;\nif (randomNumber(1,6)==6) counter = counter + 1;\nconsole.log(\"You threw \" + counter + \" sixes out of 5 throws of a die.\");\n```\n"
+      "code": "```\n// Count the number of sixes rolled in 5 random die rolls.\nvar counter;\ncounter=0;\nif (randomNumber(1,6)==6) counter = counter + 1;\nif (randomNumber(1,6)==6) counter = counter + 1;\nif (randomNumber(1,6)==6) counter = counter + 1;\nif (randomNumber(1,6)==6) counter = counter + 1;\nif (randomNumber(1,6)==6) counter = counter + 1;\nconsole.log(\"You threw \" + counter + \" sixes out of 5 throws of a die.\");\n```"
     },
     {
       "name": "Simple Average",
