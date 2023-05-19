@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-05-17 21:50:20 UTC",
+    "serialized_at": "2023-05-18 21:20:52 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1655,6 +1655,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day3-Context1"
+        ],
         "progression": "Asynchronous Overview"
       },
       "bonus": false,
@@ -1677,6 +1680,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day3-UnderstandingContext2"
+        ],
         "progression": "Understanding Context"
       },
       "bonus": false,
@@ -1699,6 +1705,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day3-Context3"
+        ],
         "progression": "Understanding Context"
       },
       "bonus": false,
@@ -1721,6 +1730,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day3-Context4"
+        ],
         "progression": "Understanding Context"
       },
       "bonus": false,
@@ -1743,6 +1755,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day3-Context5"
+        ],
         "progression": "Understanding Context"
       },
       "bonus": false,
@@ -1765,6 +1780,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day3-Context6"
+        ],
         "progression": "Understanding Context"
       },
       "bonus": false,
@@ -1787,6 +1805,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day3-Levels1"
+        ],
         "progression": "Completing TLO Lesson Levels"
       },
       "bonus": false,
@@ -2188,6 +2209,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day3-Pt2"
+        ],
         "progression": "Asynchronous Work Overview"
       },
       "bonus": false,
@@ -2210,6 +2234,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day3-ClassroomCulture2"
+        ],
         "progression": "Classroom Culture"
       },
       "bonus": false,
@@ -2232,6 +2259,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day3-ClassroomCulture3"
+        ],
         "progression": "Classroom Culture"
       },
       "bonus": false,
@@ -2254,6 +2284,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day3-ClassroomCulture4"
+        ],
         "progression": "Classroom Culture"
       },
       "bonus": false,
@@ -2276,6 +2309,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day3-ClassroomCulture5"
+        ],
         "progression": "Classroom Culture"
       },
       "bonus": false,
@@ -2298,6 +2334,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day3-ClassroomCulture1"
+        ],
         "progression": "Classroom Culture"
       },
       "bonus": false,
@@ -2320,6 +2359,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day3-Pt2end"
+        ],
         "progression": "Completing TLO Levels"
       },
       "bonus": false,
@@ -2784,266 +2826,22 @@
     }
   ],
   "resources": [
-    {
-      "name": "2023 Virtual CSD Summer Workshop - Day 3 Agenda",
-      "url": "https://docs.google.com/document/d/17qrQzmNP9AbN1zg5yBrBPf2Z1nctaG0V33n17m-55G8/edit?usp=sharing",
-      "key": "2023_virtual_csd_summer_workshop_-_day_3_agenda",
-      "properties": {
-      },
-      "seeding_key": {
-        "resource.key": "2023_virtual_csd_summer_workshop_-_day_3_agenda"
-      }
-    },
-    {
-      "name": "2023 Virtual CSD Summer Workshop - Day 3 Slides",
-      "url": "https://docs.google.com/presentation/d/1WMKc9_wt3GONzbOnkviQhUP4xE1USoib5_u_4klNHFQ/edit?usp=sharing",
-      "key": "2023_virtual_csd_summer_workshop_-_day_3_slides",
-      "properties": {
-      },
-      "seeding_key": {
-        "resource.key": "2023_virtual_csd_summer_workshop_-_day_3_slides"
-      }
-    },
-    {
-      "name": "Animation Tab",
-      "url": "https://drive.google.com/file/d/1ytsY-Hv17uCKmwY4Af7OpljWdsLtGfTn/view",
-      "key": "animation_tab",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "animation_tab"
-      }
-    },
-    {
-      "name": "Introduction to Sprites",
-      "url": "https://www.youtube.com/watch?v=96iGNtAp9J4",
-      "key": "introduction_to_sprites",
-      "properties": {
-        "audience": "Student",
-        "download_url": "https://videos.code.org/levelbuilder/introduction-to-sprites-mp4.mp4",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "introduction_to_sprites"
-      }
-    },
-    {
-      "name": "Random Numbers",
-      "url": "https://drive.google.com/file/d/1Ix9XXFWgnPi7xoGUZ9ljdD8gZPrhFLUn/view?usp=sharing",
-      "key": "random_numbers",
-      "properties": {
-        "audience": "Student",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "random_numbers"
-      }
-    },
-    {
-      "name": "Random Numbers",
-      "url": "https://docs.google.com/presentation/d/1gYcOnHhQRTTNDFj1s1Anfu5XkrkeCPk_9N7GmLCLzFo/template/preview",
-      "key": "random_numbers_1",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "random_numbers_1"
-      }
-    },
-    {
-      "name": "Sprites",
-      "url": "https://drive.google.com/file/d/1WS_5m8Ffy0u4OKILPEVSjs2KamZr2a41/view",
-      "key": "sprites",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "sprites"
-      }
-    },
-    {
-      "name": "Sprites",
-      "url": "https://docs.google.com/presentation/d/1XcR7-9AOjlV-ksjFts4MturQ7qISXUFMXWSWwrecjvU/template/preview",
-      "key": "sprites_1",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "sprites_1"
-      }
-    },
-    {
-      "name": "The Animation Tab",
-      "url": "https://youtu.be/BrkREtPb0J4",
-      "key": "the_animation_tab",
-      "properties": {
-        "audience": "Student",
-        "download_url": "https://videos.code.org/levelbuilder/sprite-animations-mp4.mp4",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "the_animation_tab"
-      }
-    },
-    {
-      "name": "The Design Thinking Process",
-      "url": "https://www.youtube.com/watch?v=_r0VX-aU_T8",
-      "key": "the_design_thinking_process",
-      "properties": {
-        "audience": "Student",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "the_design_thinking_process"
-      }
-    },
-    {
-      "name": "User Centered Design - Define and Prepare",
-      "url": "https://docs.google.com/presentation/d/1g2tfwNongYEZQI_0SCMW1fCuzGxtUAxWj6RDNA75PE4/template/preview",
-      "key": "user_centered_design_-_define_and_prepare",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "user_centered_design_-_define_and_prepare"
-      }
-    },
-    {
-      "name": "User Centered Design (Define & Prepare)",
-      "url": "https://docs.google.com/document/d/1_SDc4Rqsmyi9gfU2cfjxb2cMd3-e7S-E8JpfYHGIgFA/edit",
-      "key": "user_centered_design_define_prepare_",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "user_centered_design_define_prepare_"
-      }
-    },
-    {
-      "name": "User Centered Design (Define & Prepare) 2021",
-      "url": "https://docs.google.com/document/d/1XkDwOnyf6zxvBOb6MVYk00X9YuMnQdd-0xT11-idHRg/view",
-      "key": "user_centered_design_define_prepare_2021",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "user_centered_design_define_prepare_2021"
-      }
-    }
+
   ],
   "lessons_resources": [
-    {
-      "seeding_key": {
-        "lesson.key": "Random Numbers",
-        "resource.key": "random_numbers"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Random Numbers",
-        "resource.key": "random_numbers_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sprites",
-        "resource.key": "animation_tab"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sprites",
-        "resource.key": "introduction_to_sprites"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sprites",
-        "resource.key": "sprites"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sprites",
-        "resource.key": "sprites_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sprites",
-        "resource.key": "the_animation_tab"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "User Centered Design - Define and Prepare",
-        "resource.key": "the_design_thinking_process"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "User Centered Design - Define and Prepare",
-        "resource.key": "user_centered_design_-_define_and_prepare"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "User Centered Design - Define and Prepare",
-        "resource.key": "user_centered_design_define_prepare_"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "User Centered Design - Define and Prepare",
-        "resource.key": "user_centered_design_define_prepare_2021"
-      }
-    }
+
   ],
   "scripts_resources": [
-    {
-      "seeding_key": {
-        "resource.key": "2023_virtual_csd_summer_workshop_-_day_3_agenda",
-        "script.name": "virtual-pl-csd-summer-day3"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "2023_virtual_csd_summer_workshop_-_day_3_slides",
-        "script.name": "virtual-pl-csd-summer-day3"
-      }
-    }
+
   ],
   "scripts_student_resources": [
 
   ],
   "vocabularies": [
-    {
-      "key": "sprite",
-      "word": "Sprite",
-      "definition": "A character on the screen with properties that describe its location, movement, and look.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "sprite"
-      }
-    }
+
   ],
   "lessons_vocabularies": [
-    {
-      "seeding_key": {
-        "lesson.key": "Sprites",
-        "vocabulary.key": "sprite"
-      }
-    }
+
   ],
   "lessons_programming_expressions": [
     {

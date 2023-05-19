@@ -13,7 +13,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-05-12 17:37:40 UTC",
+    "serialized_at": "2023-05-18 21:20:50 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -361,136 +361,13 @@
 
   ],
   "resources": [
-    {
-      "name": "Activity Packet",
-      "url": "https://docs.google.com/document/d/15gERZooKYoMlBjeHTEb63zlkG9oaCayUUblHzaSW9VE/view",
-      "key": "activity_packet",
-      "properties": {
-        "audience": "Teacher",
-        "download_url": "https://docs.google.com/document/d/15gERZooKYoMlBjeHTEb63zlkG9oaCayUUblHzaSW9VE/view",
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "activity_packet"
-      }
-    },
-    {
-      "name": "Day 5 Agenda",
-      "url": "https://docs.google.com/document/d/14T8nyJAB0UPu7elW0cmhIUFAjU6b0sJnwyvLZJVjhSE/edit#",
-      "key": "day_5_agenda",
-      "properties": {
-        "audience": "Teacher",
-        "download_url": "https://docs.google.com/document/d/14T8nyJAB0UPu7elW0cmhIUFAjU6b0sJnwyvLZJVjhSE/edit#",
-        "include_in_pdf": true,
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "day_5_agenda"
-      }
-    },
-    {
-      "name": "Day 5 Slides Template",
-      "url": "https://docs.google.com/presentation/d/1TiHYT50LWV8G6ldyoZds6ZeXRpHu8gldMF_YjZ8d8uM/edit?usp=share_link",
-      "key": "day_5_slides_template",
-      "properties": {
-        "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1TiHYT50LWV8G6ldyoZds6ZeXRpHu8gldMF_YjZ8d8uM/edit?usp=share_link",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "day_5_slides_template"
-      }
-    },
-    {
-      "name": "Resource Packet",
-      "url": "https://docs.google.com/document/d/15ho43-c0njEcIEIr-RmHcUjZfIJPFdVZvQdpH6GC4B4/edit?usp=sharing",
-      "key": "resource_packet",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "resource_packet"
-      }
-    },
-    {
-      "name": "Resource Packet",
-      "url": "https://docs.google.com/document/d/15ho43-c0njEcIEIr-RmHcUjZfIJPFdVZvQdpH6GC4B4/edit?usp=sharing",
-      "key": "resource_packet_1",
-      "properties": {
-        "audience": "Teacher",
-        "include_in_pdf": true,
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "resource_packet_1"
-      }
-    }
+
   ],
   "lessons_resources": [
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-2",
-        "resource.key": "resource_packet"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-2",
-        "resource.key": "resource_packet_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-3",
-        "resource.key": "resource_packet"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-3",
-        "resource.key": "resource_packet_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-7",
-        "resource.key": "resource_packet"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-7",
-        "resource.key": "resource_packet_1"
-      }
-    }
+
   ],
   "scripts_resources": [
-    {
-      "seeding_key": {
-        "resource.key": "activity_packet",
-        "script.name": "pl-csd-summer-day5"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "day_5_agenda",
-        "script.name": "pl-csd-summer-day5"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "day_5_slides_template",
-        "script.name": "pl-csd-summer-day5"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "resource_packet_1",
-        "script.name": "pl-csd-summer-day5"
-      }
-    }
+
   ],
   "scripts_student_resources": [
 

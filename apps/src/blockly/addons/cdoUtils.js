@@ -5,9 +5,65 @@ import firehoseClient from '@cdo/apps/lib/util/firehose';
 import DCDO from '@cdo/apps/dcdo';
 import {APP_HEIGHT} from '@cdo/apps/p5lab/constants';
 import {SOUND_PREFIX} from '@cdo/apps/assetManagement/assetPrefix';
+import BlockSvgUnused from './blockSvgUnused';
+
+const SORT_BY_POSITION = true;
 
 export function loadBlocksToWorkspace(workspace, xml, stateToLoad) {
-  return Blockly.Xml.domToBlockSpace(workspace, xml);
+  // xml = Blockly.Xml.textToDom(
+  //   '\n\n    <xml><block type="flappy_whenClick" deletable="false" id="whenClick"><next><block type="flappy_flap_height"><title name="VALUE">Flappy.FlapHeight.NORMAL</title><next><block type="flappy_playSound"><title name="VALUE">"sfx_wing"</title></block></next></block></next></block><block type="procedures_defnoreturn" id="rF4:N;vAIPek3_V4B(VU"> <title name="NAME">do something</title> </block><block type="flappy_whenCollideGround" deletable="false" id="whenCollideGround"><next><block type="flappy_endGame"></block></next></block><block type="when_run" deletable="false"><next><block type="flappy_setSpeed"><title name="VALUE">Flappy.LevelSpeed.NORMAL</title></block></next></block><block type="flappy_whenCollideObstacle" deletable="false"><next><block type="flappy_endGame"></block></next></block><block type="flappy_whenEnterObstacle" deletable="false"><next><block type="flappy_incrementPlayerScore"></block></next></block></xml>'
+  // );
+
+  if (experiments.isEnabled(experiments.BLOCKLY_JSON)) {
+    if (!stateToLoad) {
+      // Convert the XML source to JSON using a temp workspace.
+      const tempWorkspace = new Blockly.Workspace();
+      Blockly.Xml.domToWorkspace(xml, tempWorkspace);
+      stateToLoad = Blockly.serialization.workspaces.save(tempWorkspace);
+      tempWorkspace.dispose();
+    }
+    jsonManipulations(stateToLoad);
+    Blockly.serialization.workspaces.load(stateToLoad, workspace);
+    cleanupBlocks(workspace);
+  } else {
+    return Blockly.Xml.domToBlockSpace(workspace, xml);
+  }
+}
+
+function jsonManipulations(state) {
+  state.blocks.blocks.forEach(block => {
+    console.log(block);
+  });
+}
+
+function cleanupBlocks(workspace) {
+  const metrics = workspace.getMetrics();
+  const viewWidth = metrics ? metrics.viewWidth : 0;
+  const padding = viewWidth ? 16 : 0;
+  const verticalSpaceBetweenBlocks = 10;
+  let cursor = {
+    x: padding,
+    y: padding,
+  };
+  const blocks = workspace.getTopBlocks(SORT_BY_POSITION);
+  blocks.forEach(block => {
+    addUnusedFrame(block);
+    const hasSvgFrame = !!block.functionalSvg_ || !!block.unusedSvg_;
+    const frameSvgTop = hasSvgFrame ? 35 : 0;
+    const frameSvgHeight = hasSvgFrame ? 40 : 0;
+    const frameSvgMargin = hasSvgFrame ? 16 : 0;
+    const height = block.getHeightWidth().height + frameSvgHeight;
+    block.moveTo({x: cursor.x + frameSvgMargin, y: cursor.y + frameSvgTop});
+    cursor.y += height + verticalSpaceBetweenBlocks;
+  });
+  return blocks;
+}
+
+function addUnusedFrame(block) {
+  if (block.isUnused() && !block.unusedSvg_) {
+    block.unusedSvg_ = new BlockSvgUnused(block);
+    block.unusedSvg_.render(block.svgGroup_, block.RTL);
+  }
 }
 
 export function setHSV(block, h, s, v) {
@@ -134,7 +190,6 @@ function testJsonSerialization(workspace) {
   const experimentEnabled = experiments.isEnabled(experiments.BLOCKLY_JSON);
   const FIREHOSE_STUDY = 'blockly-json';
   const FIREHOSE_EVENT = 'block-differences';
-  const SORT_BY_POSITION = true;
   Blockly.Events.disable();
 
   // Create an array of blocks based on JSON serialization of the current workspace.

@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-04-19 20:06:53 UTC",
+    "serialized_at": "2023-05-18 21:20:50 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -327,6 +327,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod4-Overview-TeachingLearning_2022"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -349,6 +352,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod4-LeadLearner_2022"
+        ],
         "progression": "Lead Learner"
       },
       "bonus": false,
@@ -371,6 +377,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod4-LeadLearner-vid_2022"
+        ],
         "progression": "Lead Learner"
       },
       "bonus": false,
@@ -393,6 +402,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod4-Overview-Learning_2022"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -415,6 +427,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod4-PairProgramming_2022"
+        ],
         "progression": "Pair programming"
       },
       "bonus": false,
@@ -437,6 +452,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod4-PairProgramming-vid_2022"
+        ],
         "progression": "Pair programming"
       },
       "bonus": false,
@@ -459,6 +477,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod4-PairProgrammingPart2_2022"
+        ],
         "progression": "Pair programming"
       },
       "bonus": false,
@@ -481,6 +502,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod4-PairProgramming-TipVid_2022"
+        ],
         "progression": "Pair programming"
       },
       "bonus": false,
@@ -503,6 +527,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod4-Resources_2022"
+        ],
         "progression": "Using resources"
       },
       "bonus": false,
@@ -525,6 +552,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod3-Resources-practice-lc_2022"
+        ],
         "progression": "Using resources"
       },
       "bonus": false,
@@ -547,6 +577,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod4-Debugging_2022"
+        ],
         "progression": "Debugging"
       },
       "bonus": false,
@@ -569,6 +602,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod4-Debugging-vid_2022"
+        ],
         "progression": "Debugging"
       },
       "bonus": false,
@@ -591,6 +627,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod4-Debugging-task_2022"
+        ],
         "progression": "Debugging"
       },
       "bonus": false,
@@ -613,6 +652,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod4-Debugging-TipVid_2022"
+        ],
         "progression": "Debugging"
       },
       "bonus": false,
@@ -635,6 +677,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL_21-mod4-MakeAPlan-SupportingStudentPractices_2022"
+        ],
         "progression": "Wrap Up"
       },
       "bonus": false,
@@ -657,6 +702,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod4-Overview-teacher_2022"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -679,6 +727,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod4-Inclusion_2022"
+        ],
         "progression": "Inclusion"
       },
       "bonus": false,
@@ -701,6 +752,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod4-inclusion-c4u_2022"
+        ],
         "progression": "Inclusion"
       },
       "bonus": false,
@@ -723,6 +777,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL_21-mod4-MakeAPlan-Inclusion_2022"
+        ],
         "progression": "Inclusion"
       },
       "bonus": false,
@@ -745,6 +802,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod4-Differentiation_2022"
+        ],
         "progression": "Differentiation"
       },
       "bonus": false,
@@ -767,6 +827,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod4-DifferentiationContinued_2022"
+        ],
         "progression": "Differentiation"
       },
       "bonus": false,
@@ -789,6 +852,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL_21-mod4-MakeAPlan-Differentiation_2022"
+        ],
         "progression": "Differentiation"
       },
       "bonus": false,
@@ -811,6 +877,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod4-Assessment_2022"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -833,6 +902,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod4-AssessmentPlan_2022"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -855,6 +927,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod4-Task-Assessment_2022"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -877,6 +952,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL_21-mod4-CSD-MakeAPlan-Assessment_2022"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -899,6 +977,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-22-mod4-Connect_CSD22"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -921,6 +1002,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-22-mod4-CSJourneys_CSD22"
+        ],
         "progression": "Connect with the CS community"
       },
       "bonus": false,
@@ -943,6 +1027,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod3-CSJourneys-Vid_CSD22"
+        ],
         "progression": "Connect with the CS community"
       },
       "bonus": false,
@@ -965,6 +1052,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-22-mod4-CSJourneys2_CSD22"
+        ],
         "progression": "Connect with the CS community"
       },
       "bonus": false,
@@ -987,6 +1077,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-22-mod4-CSJourneysResources_CSD22"
+        ],
         "progression": "Connect with the CS community"
       },
       "bonus": false,
@@ -1009,6 +1102,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-22-mod4-LocalCommunity_CSD22"
+        ],
         "progression": "Connect with the CS community"
       },
       "bonus": false,
@@ -1031,6 +1127,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSP-22-mod4-WrapUp_CSD22"
+        ],
         "progression": "Wrap up"
       },
       "bonus": false,
