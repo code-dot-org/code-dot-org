@@ -10,8 +10,6 @@ describe('InternationalOptInTest', () => {
       schoolCountry: ['schoolCountry', 'Colombia'],
       ages: ['age'],
       subjects: ['subject'],
-      resources: ['resource'],
-      robotics: ['robotics'],
       workshopCourse: ['workshopCourse'],
       emailOptIn: ['emailOptIn'],
       legalOptIn: ['legalOptIn'],
@@ -32,7 +30,6 @@ describe('InternationalOptInTest', () => {
       firstNamePreferred: 'Preferred First Name',
       lastName: 'Last Name',
       email: 'Email',
-      emailAlternate: 'Alternate Email',
       gender: 'Gender Identity',
       school: 'School',
       schoolCity: 'School City',
@@ -42,8 +39,6 @@ describe('InternationalOptInTest', () => {
       schoolName: 'School Name',
       ages: 'Which age(s) do you teach this year?',
       subjects: 'Which subject(s) do you teach this year?',
-      resources: 'Which of the following CS education resources do you use?',
-      robotics: 'Which of the following robotics resources do you use?',
       workshopOrganizer: 'Workshop Organizer',
       workshopFacilitator: 'Workshop Facilitator',
       workshopCourse: 'Workshop Course',
@@ -66,14 +61,14 @@ describe('InternationalOptInTest', () => {
       const inputIds = ['schoolName', 'schoolCity'];
 
       inputIds.forEach(id => {
-        const node = wrapper.find('input#' + id);
+        const node = wrapper.find(`input#${id}`);
         expect(node.prop('disabled')).to.be.true;
       });
 
       wrapper.setState({data: {schoolCountry: 'selected country'}});
 
       inputIds.forEach(id => {
-        const node = wrapper.find('input#' + id);
+        const node = wrapper.find(`input#${id}`);
         expect(node.prop('disabled')).to.be.false;
       });
     });

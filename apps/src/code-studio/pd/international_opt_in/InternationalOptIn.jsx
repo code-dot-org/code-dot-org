@@ -499,16 +499,6 @@ class InternationalOptInComponent extends FormComponent {
     ).answerValue;
     const textFieldMapSubjects = {[lastSubjectsKey]: 'other'};
 
-    const lastResourcesKey = formComponentUtils.normalizeAnswer(
-      this.props.options.resources[this.props.options.resources.length - 1]
-    ).answerValue;
-    const textFieldMapResources = {[lastResourcesKey]: 'other'};
-
-    const lastRoboticsKey = formComponentUtils.normalizeAnswer(
-      this.props.options.robotics[this.props.options.robotics.length - 1]
-    ).answerValue;
-    const textFieldMapRobotics = {[lastRoboticsKey]: 'other'};
-
     return (
       <FormGroup>
         <br />
@@ -539,11 +529,6 @@ class InternationalOptInComponent extends FormComponent {
           value: this.props.accountEmail,
           readOnly: true,
         })}
-        {this.buildFieldGroup({
-          name: 'emailAlternate',
-          label: labels.emailAlternate,
-          type: 'text',
-        })}
         {this.buildButtonsFromOptions({
           name: 'gender',
           label: labels.gender,
@@ -567,20 +552,6 @@ class InternationalOptInComponent extends FormComponent {
           type: 'check',
           required: true,
           textFieldMap: textFieldMapSubjects,
-        })}
-        {this.buildButtonsWithAdditionalTextFieldsFromOptions({
-          name: 'resources',
-          label: labels.resources,
-          type: 'check',
-          required: false,
-          textFieldMap: textFieldMapResources,
-        })}
-        {this.buildButtonsWithAdditionalTextFieldsFromOptions({
-          name: 'robotics',
-          label: labels.robotics,
-          type: 'check',
-          required: false,
-          textFieldMap: textFieldMapRobotics,
         })}
 
         <br />
@@ -657,15 +628,12 @@ InternationalOptInComponent.associatedFields = [
   'firstNamePreferred',
   'lastName',
   'email',
-  'emailAlternate',
   'gender',
   'schoolName',
   'schoolCity',
   'schoolCountry',
   'ages',
   'subjects',
-  'resources',
-  'robotics',
   'date',
   'workshopOrganizer',
   'workshopFacilitator',
