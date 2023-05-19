@@ -217,3 +217,5 @@ theme: responsive_full_width
         .content-footer
           %a.link-button{href: "/afe", aria:{label: hoc_s(:aria_label_call_to_action_afe)}}
             =hoc_s(:call_to_action_learn_more)
+
+= view :analytics_event_log_helper, event_name: AnalyticsConstants::SELF_PACED_PL_PAGE_VISITED_EVENT

@@ -2862,6 +2862,42 @@ columns:
     default_function: 
     collation: utf8_unicode_ci
     comment: 
+  parental_permission_requests:
+  - *27
+  - *13
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: parent_email
+    sql_type_metadata: *3
+    'null': false
+    default: 
+    default_function: 
+    collation: utf8_unicode_ci
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: uuid
+    sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
+      delegate_dc_obj: !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+        sql_type: varchar(36)
+        type: :string
+        limit: 36
+        precision: 
+        scale: 
+      extra: ''
+    'null': false
+    default: 
+    default_function: 
+    collation: utf8_unicode_ci
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: reminders_sent
+    sql_type_metadata: *2
+    'null': false
+    default: '0'
+    default_function: 
+    collation: 
+    comment: 
+  - *32
+  - *33
   pd_accepted_programs:
   - *5
   - *6
@@ -7058,6 +7094,7 @@ primary_keys:
   objectives: id
   paired_user_levels: id
   parent_levels_child_levels: id
+  parental_permission_requests: id
   pd_accepted_programs: id
   pd_application_emails: id
   pd_application_tags: id
@@ -7237,6 +7274,7 @@ data_sources:
   objectives: true
   paired_user_levels: true
   parent_levels_child_levels: true
+  parental_permission_requests: true
   pd_accepted_programs: true
   pd_application_emails: true
   pd_application_tags: true
@@ -8958,6 +8996,33 @@ indexes:
     unique: false
     columns:
     - parent_level_id
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where: 
+    type: 
+    using: :btree
+    comment: 
+  parental_permission_requests:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: parental_permission_requests
+    name: index_parental_permission_requests_on_user_id
+    unique: false
+    columns:
+    - user_id
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where: 
+    type: 
+    using: :btree
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: parental_permission_requests
+    name: index_parental_permission_requests_on_uuid
+    unique: false
+    columns:
+    - uuid
     lengths: {}
     orders: {}
     opclasses: {}
@@ -12127,7 +12192,7 @@ indexes:
     type: :fulltext
     using: 
     comment: 
-version: 20230503220558
+version: 20230518155319
 database_version: !ruby/object:ActiveRecord::ConnectionAdapters::AbstractAdapter::Version
   version:
   - 5
