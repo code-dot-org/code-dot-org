@@ -415,9 +415,9 @@ class FilesApi < Sinatra::Base
     if endpoint == 'libraries' && file_type != '.java'
       begin
         share_failure = ShareFiltering.find_failure(body, request.locale)
-      rescue StandardError => err
-        return file_too_large(endpoint) if err.message == "Profanity check failed: text is too long"
-        details = !err.message.empty? ? err.message : nil
+      rescue StandardError => exception
+        return file_too_large(endpoint) if exception.message == "Profanity check failed: text is too long"
+        details = exception.message.empty? ? nil : exception.message
         return json_bad_request(details)
       end
       # TODO(JillianK): we are temporarily ignoring address share failures because our address detection is very broken.
