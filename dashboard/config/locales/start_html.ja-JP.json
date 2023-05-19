@@ -563,7 +563,8 @@
           "low": "低い"
         },
         "CSD U6 - Sensors - SB2_2222": {
-          "Update": "更新"
+          "Update": "更新",
+          "value": "値"
         },
         "CSD U6 Driver pt 2": {
           "You did it!": "やりましたね！"
@@ -638,16 +639,20 @@
           "Success!": "成功！"
         },
         "CSD U6 analog light": {
-          "Update": "更新"
+          "Update": "更新",
+          "value": "値"
         },
         "CSD U6 analog light_2018": {
-          "Update": "更新"
+          "Update": "更新",
+          "value": "値"
         },
         "CSD U6 analog light_2019": {
-          "Update": "更新"
+          "Update": "更新",
+          "value": "値"
         },
         "CSD U6 analog light_2021": {
-          "Update": "更新"
+          "Update": "更新",
+          "value": "値"
         },
         "CSD U6 array piano": {
           "C": "C",
@@ -1533,6 +1538,54 @@
           "night": "よる",
           "dusk": "夕焼け",
           "Predict": "予測"
+        },
+        "CSD U6 - Sensors - SB1_2222": {
+          "value": "値"
+        },
+        "CSD U6 - Sensors - SB3_2222": {
+          "value": "値"
+        },
+        "CSD U6 - Sensors - SB4.1_2222": {
+          "value": "値"
+        },
+        "CSD U6 - Sensors - SB4_2222": {
+          "value": "値"
+        },
+        "CSD U6 analog change": {
+          "value": "値"
+        },
+        "CSD U6 analog change_2018": {
+          "value": "値"
+        },
+        "CSD U6 analog change_2019": {
+          "value": "値"
+        },
+        "CSD U6 analog change_2021": {
+          "value": "値"
+        },
+        "CSD U6 analog data": {
+          "value": "値"
+        },
+        "CSD U6 analog data_2018": {
+          "value": "値"
+        },
+        "CSD U6 analog data_2019": {
+          "value": "値"
+        },
+        "CSD U6 analog data_2021": {
+          "value": "値"
+        },
+        "CSD U6 analog sound": {
+          "value": "値"
+        },
+        "CSD U6 analog sound_2018": {
+          "value": "値"
+        },
+        "CSD U6 analog sound_2019": {
+          "value": "値"
+        },
+        "CSD U6 analog sound_2021": {
+          "value": "値"
         }
       }
     }

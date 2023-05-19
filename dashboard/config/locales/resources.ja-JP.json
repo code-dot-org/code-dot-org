@@ -1338,6 +1338,9 @@
         "what_is_a_computer/csd/2022": {
           "type": "ビデオ"
         },
+        "what_is_a_computer_/csd/2022": {
+          "name": "コンピューターとは"
+        },
         "input_and_output/csd/2022": {
           "name": "入出力"
         },
@@ -1863,10 +1866,15 @@
         "finding_patterns_in_data/csd/2022": {
           "type": "ビデオ"
         },
+        "introduction_to_ai_lab/csd/2022": {
+          "name": "AI ラボの紹介"
+        },
         "introduction_to_ai_lab_1/csd/2022": {
+          "name": "AI ラボの紹介",
           "type": "ビデオ"
         },
         "training_and_testing_in_ai_lab/csd/2022": {
+          "name": "AI ラボでのトレーニングとテスト",
           "type": "ビデオ"
         },
         "ai_training_data_bias/csd/2022": {
@@ -1875,12 +1883,20 @@
           "type": "ビデオ"
         },
         "model_cards_in_ai_lab/csd/2022": {
+          "name": "AI ラボのモデルカード",
           "type": "ビデオ"
         },
         "if-statements_in_app_lab/csd/2022": {
           "type": "ビデオ"
         },
+        "numerical_data_in_ai_lab/csd/2022": {
+          "name": "AI ラボの数値データ"
+        },
+        "numerical_data_in_ai_lab_1/csd/2022": {
+          "name": "AI ラボの数値データ"
+        },
         "numerical_data_in_ai_lab_2/csd/2022": {
+          "name": "AI ラボの数値データ",
           "type": "ビデオ"
         },
         "ai_ethics_research_reflection/csd/2022": {
@@ -3674,10 +3690,15 @@
         "finding_patterns_in_data/csd/2021": {
           "type": "ビデオ"
         },
+        "introduction_to_ai_lab/csd/2021": {
+          "name": "AI ラボの紹介"
+        },
         "introduction_to_ai_lab_1/csd/2021": {
+          "name": "AI ラボの紹介",
           "type": "ビデオ"
         },
         "training_and_testing_in_ai_lab/csd/2021": {
+          "name": "AI ラボでのトレーニングとテスト",
           "type": "ビデオ"
         },
         "ai_training_data_bias/csd/2021": {
@@ -3686,12 +3707,20 @@
           "type": "ビデオ"
         },
         "model_cards_in_ai_lab/csd/2021": {
+          "name": "AI ラボのモデルカード",
           "type": "ビデオ"
         },
         "if-statements_in_app_lab/csd/2021": {
           "type": "ビデオ"
         },
+        "numerical_data_in_ai_lab/csd/2021": {
+          "name": "AI ラボの数値データ"
+        },
+        "numerical_data_in_ai_lab_1/csd/2021": {
+          "name": "AI ラボの数値データ"
+        },
         "numerical_data_in_ai_lab_2/csd/2021": {
+          "name": "AI ラボの数値データ",
           "type": "ビデオ"
         },
         "ai_ethics_research_reflection/csd/2021": {
@@ -4022,6 +4051,9 @@
         },
         "problem-solving-process/csd/2021": {
           "name": "問題解決プロセス"
+        },
+        "what-is-a-computer-2020/csd/2021": {
+          "name": "コンピューターとは"
         },
         "what-is-a-computer-1-2-3/csd/2021": {
           "type": "ビデオ"

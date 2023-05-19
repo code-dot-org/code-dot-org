@@ -374,6 +374,7 @@ id:
             '"right"': kolom kanan
             '"x"': berselang-seling
             '"plus"': plus
+            '"spiral"': spiral
             '"infinity"': infinite line
             '"random"': acak
       Dancelab_makeAnonymousDanceSprite:
@@ -504,6 +505,7 @@ id:
             '"right"': kolom kanan
             '"x"': berselang-seling
             '"plus"': plus
+            '"spiral"': spiral
             '"infinity"': infinite line
             '"random"': acak
       Dancelab_mixColors:
@@ -1286,6 +1288,7 @@ id:
             '"burst"': letupan
             '"pop"': meletup
             '"rain"': hujan
+            '"spiral"': spiral
       gamelab_makeNewSpriteAnon:
         text: buat sprite {ANIMATION_NAME} baru di {LOCATION}
       gamelab_makeNewSpriteGroup:
@@ -2096,6 +2099,7 @@ id:
             '"burst"': letupan
             '"pop"': meletup
             '"rain"': hujan
+            '"spiral"': spiral
       Poetry_makeNewSpriteAnon:
         text: buat sprite {ANIMATION_NAME} baru di {LOCATION}
       Poetry_makeNumSprites:
@@ -2475,6 +2479,21 @@ id:
           DIR:
             right: kanan
             left: kiri -
+      ecosystems_int10:
+        text: "{VALUE}"
+        options:
+          VALUE:
+            '0': '0'
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       storylab_setForegroundEffect2:
         text: lakukan efek {EFFECT}
         options:

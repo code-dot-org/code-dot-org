@@ -19,6 +19,8 @@ const CheckboxDropdown = ({
       type="button"
       className="selectbox"
       data-toggle="dropdown"
+      aria-haspopup={true}
+      aria-label={`${name} filter dropdown`}
     >
       {checkedOptions.length > 0 && (
         <FontAwesome
@@ -30,8 +32,8 @@ const CheckboxDropdown = ({
       {label}
       <FontAwesome id={'chevron-down-icon'} icon={'chevron-down'} />
     </button>
-    <ul className="dropdown-menu">
-      <form>
+    <form className="dropdown-menu">
+      <ul className={style.dropdownCheckboxUL}>
         {Object.keys(allOptions).map(optionKey => (
           <li key={optionKey} className="checkbox form-group">
             <input
@@ -63,8 +65,8 @@ const CheckboxDropdown = ({
         >
           {i18n.clearAll()}
         </button>
-      </form>
-    </ul>
+      </ul>
+    </form>
   </div>
 );
 CheckboxDropdown.propTypes = {

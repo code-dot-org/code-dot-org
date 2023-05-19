@@ -773,10 +773,12 @@
           "type": "Materials manipulatius"
         },
         "stevie_and_the_big_project/courseb/2022": {
+          "name": "Stevie i el gran projecte",
           "url": "https://drive.google.com/file/d/0B-uvt08wYSQqTUFzaGxKSk45QkU/view",
           "type": "Recurs"
         },
         "unspotted_bugs/courseb/2022": {
+          "name": "Bugs sense taques",
           "url": "https://youtu.be/rah3DYlp5nQ",
           "type": "Vídeo"
         },
@@ -1499,7 +1501,11 @@
         "problem_solving_process_1/csd/2022": {
           "type": "Vídeo"
         },
+        "the_problem_solving_process/csd/2022": {
+          "name": "El procés de resolució de problemes"
+        },
         "the_problem_solving_process_1/csd/2022": {
+          "name": "El procés de resolució de problemes",
           "type": "Diapositives"
         },
         "solving_problems/csd/2022": {
@@ -1510,6 +1516,9 @@
         },
         "what_is_a_computer/csd/2022": {
           "type": "Vídeo"
+        },
+        "what_is_a_computer_/csd/2022": {
+          "name": "Què és un ordinador?"
         },
         "what_is_a_computer_1/csd/2022": {
           "type": "Diapositives"
@@ -1611,6 +1620,7 @@
           "type": "Recurs"
         },
         "the_animation_tab/csd/2022": {
+          "name": "La pestanya Animació",
           "type": "Vídeo"
         },
         "sprites_1/csd/2022": {
@@ -1665,12 +1675,14 @@
           "type": "Diapositives"
         },
         "boolean_expressions/csd/2022": {
+          "name": "Expressions booleanes",
           "type": "Vídeo"
         },
         "booleans_and_comparison_operators/csd/2022": {
           "type": "Recurs"
         },
         "conditional_statements/csd/2022": {
+          "name": "Declaracions Condicionals",
           "type": "Vídeo"
         },
         "if_statements/csd/2022": {
@@ -1688,6 +1700,7 @@
           "type": "Recurs"
         },
         "if_else_statements/csd/2022": {
+          "name": "Declaracions si/Else",
           "type": "Vídeo"
         },
         "mouse_input/csd/2022": {
@@ -1709,12 +1722,15 @@
           "type": "Diapositives"
         },
         "velocity/csd/2022": {
+          "name": "Velocitat",
           "type": "Vídeo"
         },
         "velocity_1/csd/2022": {
+          "name": "Velocitat",
           "type": "Recurs"
         },
         "velocity_2/csd/2022": {
+          "name": "Velocitat",
           "type": "Diapositives"
         },
         "collision_detection_1/csd/2022": {
@@ -1845,9 +1861,11 @@
           "name": "Investigador social"
         },
         "intro_to_css_-_part_1/csd/2022": {
+          "name": "Introducció al CSS - Part 1",
           "type": "Vídeo"
         },
         "intro_to_css_-_part_2/csd/2022": {
+          "name": "Introducció al CSS - Part 2",
           "type": "Vídeo"
         },
         "style_sheets/csd/2022": {
@@ -2219,6 +2237,7 @@
           "type": "Recurs"
         },
         "introduction_to_arrays/csd/2022": {
+          "name": "Introducció a les matrius",
           "type": "Vídeo"
         },
         "making_music/csd/2022": {
@@ -2327,15 +2346,18 @@
           "type": "Recurs"
         },
         "introduction_to_ai_lab/csd/2022": {
+          "name": "Introducció a AI Lab",
           "type": "Diapositives"
         },
         "introduction_to_ai_lab_1/csd/2022": {
+          "name": "Introducció a AI Lab",
           "type": "Vídeo"
         },
         "selecting_features/csd/2022": {
           "type": "Recurs"
         },
         "training_and_testing_in_ai_lab/csd/2022": {
+          "name": "Formació i proves en AI Lab",
           "type": "Vídeo"
         },
         "using_data_with_categorical_features/csd/2022": {
@@ -2359,6 +2381,7 @@
           "type": "Respostes"
         },
         "model_cards_in_ai_lab/csd/2022": {
+          "name": "Targetes de model en AI Lab",
           "type": "Vídeo"
         },
         "saving_models_in_ai_lab/csd/2022": {
@@ -2389,9 +2412,14 @@
           "type": "Respostes"
         },
         "numerical_data_in_ai_lab/csd/2022": {
+          "name": "Dades numèriques en AI Lab",
           "type": "Diapositives"
         },
+        "numerical_data_in_ai_lab_1/csd/2022": {
+          "name": "Dades numèriques en AI Lab"
+        },
         "numerical_data_in_ai_lab_2/csd/2022": {
+          "name": "Dades numèriques en AI Lab",
           "type": "Vídeo"
         },
         "using_data_with_numerical_features/csd/2022": {
@@ -3295,10 +3323,12 @@
           "type": "Materials manipulatius"
         },
         "stevie_and_the_big_project/courseb/2021": {
+          "name": "Stevie i el gran projecte",
           "url": "https://drive.google.com/file/d/0B-uvt08wYSQqTUFzaGxKSk45QkU/view",
           "type": "Recurs"
         },
         "unspotted_bugs/courseb/2021": {
+          "name": "Bugs sense taques",
           "url": "https://youtu.be/rah3DYlp5nQ",
           "type": "Vídeo"
         },
@@ -4507,12 +4537,15 @@
           "type": "Recurs"
         },
         "introduction_to_ai_lab/csd/2021": {
+          "name": "Introducció a AI Lab",
           "type": "Diapositives"
         },
         "introduction_to_ai_lab_1/csd/2021": {
+          "name": "Introducció a AI Lab",
           "type": "Vídeo"
         },
         "training_and_testing_in_ai_lab/csd/2021": {
+          "name": "Formació i proves en AI Lab",
           "type": "Vídeo"
         },
         "_key_training_a_model_in_ai_lab/csd/2021": {
@@ -4542,6 +4575,7 @@
           "type": "Diapositives"
         },
         "model_cards_in_ai_lab/csd/2021": {
+          "name": "Targetes de model en AI Lab",
           "type": "Vídeo"
         },
         "saving_models_in_ai_lab/csd/2021": {
@@ -4569,9 +4603,14 @@
           "type": "Respostes"
         },
         "numerical_data_in_ai_lab/csd/2021": {
+          "name": "Dades numèriques en AI Lab",
           "type": "Diapositives"
         },
+        "numerical_data_in_ai_lab_1/csd/2021": {
+          "name": "Dades numèriques en AI Lab"
+        },
         "numerical_data_in_ai_lab_2/csd/2021": {
+          "name": "Dades numèriques en AI Lab",
           "type": "Vídeo"
         },
         "_key_-_numerical_data_in_ai_lab/csd/2021": {
@@ -4731,6 +4770,7 @@
           "type": "Recurs"
         },
         "how_computers_word_hardware_software/csd/2021": {
+          "name": "Com funcionen els ordinadors: maquinari i programari",
           "type": "Vídeo"
         },
         "circuit_playground/csd/2021": {
@@ -4778,6 +4818,7 @@
           "type": "Rúbrica"
         },
         "introduction_to_arrays/csd/2021": {
+          "name": "Introducció a les matrius",
           "type": "Vídeo"
         },
         "arrays/csd/2021": {
@@ -4815,6 +4856,7 @@
           "type": "Recurs"
         },
         "circuits-logic-video/csd/2021": {
+          "name": "Com funcionen els ordinadors: circuits i lògica",
           "type": "Vídeo"
         },
         "physical-prototyping-project/csd/2021": {
@@ -4937,6 +4979,7 @@
           "type": "Vídeo"
         },
         "the_animation_tab/csd/2021": {
+          "name": "La pestanya Animació",
           "type": "Vídeo"
         },
         "animation_tab/csd/2021": {
@@ -4973,9 +5016,11 @@
           "type": "Rúbrica"
         },
         "boolean_expressions/csd/2021": {
+          "name": "Expressions booleanes",
           "type": "Vídeo"
         },
         "conditional_statements/csd/2021": {
+          "name": "Declaracions Condicionals",
           "type": "Vídeo"
         },
         "booleans_and_comparison_operators/csd/2021": {
@@ -4988,6 +5033,7 @@
           "type": "Recurs"
         },
         "if_else_statements/csd/2021": {
+          "name": "Declaracions si/Else",
           "type": "Vídeo"
         },
         "interactive-card-project-guide-2019/csd/2021": {
@@ -5003,9 +5049,11 @@
           "type": "Recurs"
         },
         "velocity_1/csd/2021": {
+          "name": "Velocitat",
           "type": "Vídeo"
         },
         "velocity_2/csd/2021": {
+          "name": "Velocitat",
           "type": "Recurs"
         },
         "collision_detection/csd/2021": {
@@ -5054,8 +5102,14 @@
         "problem-solving-process-1/csd/2021": {
           "type": "Vídeo"
         },
+        "the-problem-solving-process/csd/2021": {
+          "name": "El procés de resolució de problemes"
+        },
         "solving-problems-exemplar-2020/csd/2021": {
           "type": "Respostes"
+        },
+        "what-is-a-computer-2020/csd/2021": {
+          "name": "Què és un ordinador?"
         },
         "what-is-a-computer-1-2-3/csd/2021": {
           "type": "Vídeo"
@@ -5127,9 +5181,11 @@
           "name": "Investigador social"
         },
         "intro_to_css_-_part_1/csd/2021": {
+          "name": "Introducció al CSS - Part 1",
           "type": "Vídeo"
         },
         "intro_to_css_-_part_2/csd/2021": {
+          "name": "Introducció al CSS - Part 2",
           "type": "Vídeo"
         },
         "style_sheets/csd/2021": {

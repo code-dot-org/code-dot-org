@@ -85,6 +85,9 @@
         "debugging/basketball/unversioned": {
           "word": "გამართვა"
         },
+        "machine_learning/oceans/unversioned": {
+          "word": "მანქანათმცოდნეობა"
+        },
         "debugging/coursed/2022": {
           "word": "გამართვა"
         },
@@ -103,11 +106,17 @@
         "sprite/coursef/2022": {
           "word": "სპრაიტი"
         },
+        "behavior/coursef/2022": {
+          "word": "ქცევა"
+        },
         "variable/coursef/2022": {
           "word": "ცვლადი"
         },
         "input/coursef/2022": {
           "word": "შემომავალი ინფორმაცია"
+        },
+        "machine_learning/coursef/2022": {
+          "word": "მანქანათმცოდნეობა"
         },
         "internet/coursef/2022": {
           "word": "ინტერნეტი"
@@ -117,6 +126,9 @@
         },
         "define/coursef/2022": {
           "word": "განსაზღვრეთ"
+        },
+        "behavior/coursee/2022": {
+          "word": "ქცევა"
         },
         "sprite/coursee/2022": {
           "word": "სპრაიტი"
@@ -151,8 +163,14 @@
         "debugging/express/2022": {
           "word": "გამართვა"
         },
+        "sequencing/express/2022": {
+          "word": "თანმიმდევრობა"
+        },
         "programming/express/2022": {
           "word": "პროგრამირება"
+        },
+        "behavior/express/2022": {
+          "word": "ქცევა"
         },
         "sprite/express/2022": {
           "word": "სპრაიტი"
@@ -195,6 +213,9 @@
         },
         "debugging/coursec/2022": {
           "word": "გამართვა"
+        },
+        "sequencing/coursec/2022": {
+          "word": "თანმიმდევრობა"
         },
         "programming/coursec/2022": {
           "word": "პროგრამირება"
@@ -241,6 +262,9 @@
         "copyright/csd/2022": {
           "word": "საავტორო უფლება"
         },
+        "machine_learning/csd/2022": {
+          "word": "მანქანათმცოდნეობა"
+        },
         "code/poem-art/unversioned": {
           "word": "კოდი",
           "definition": ""
@@ -264,6 +288,9 @@
         "sprite/coursef/2021": {
           "word": "სპრაიტი"
         },
+        "behavior/coursef/2021": {
+          "word": "ქცევა"
+        },
         "variable/coursef/2021": {
           "word": "ცვლადი"
         },
@@ -272,6 +299,9 @@
         },
         "loop/coursef/2021": {
           "word": "ციკლი"
+        },
+        "machine_learning/coursef/2021": {
+          "word": "მანქანათმცოდნეობა"
         },
         "internet/coursef/2021": {
           "word": "ინტერნეტი"
@@ -303,6 +333,9 @@
         "debugging/coursec/2021": {
           "word": "გამართვა"
         },
+        "sequencing/coursec/2021": {
+          "word": "თანმიმდევრობა"
+        },
         "programming/coursec/2021": {
           "word": "პროგრამირება"
         },
@@ -330,8 +363,14 @@
         "debugging/express/2021": {
           "word": "გამართვა"
         },
+        "sequencing/express/2021": {
+          "word": "თანმიმდევრობა"
+        },
         "programming/express/2021": {
           "word": "პროგრამირება"
+        },
+        "behavior/express/2021": {
+          "word": "ქცევა"
         },
         "sprite/express/2021": {
           "word": "სპრაიტი"
@@ -363,6 +402,9 @@
         "loop/pre-express/2021": {
           "word": "ციკლი"
         },
+        "behavior/coursee/2021": {
+          "word": "ქცევა"
+        },
         "sprite/coursee/2021": {
           "word": "სპრაიტი"
         },
@@ -383,6 +425,9 @@
         },
         "define/coursee/2021": {
           "word": "განსაზღვრეთ"
+        },
+        "machine_learning/csd/2021": {
+          "word": "მანქანათმცოდნეობა"
         },
         "debugging/csd/2021": {
           "word": "გამართვა"
