@@ -670,6 +670,18 @@ form {
       margin-top: 3em;
     }
 
+    &.left-align {
+      text-align: left;
+
+      @media screen and (max-width: $width-md) {
+        text-align: center;
+      }
+
+      a:first-child {
+        margin-left: 0;
+      }
+    }
+
     a{
       background: $brand_primary_light;
 

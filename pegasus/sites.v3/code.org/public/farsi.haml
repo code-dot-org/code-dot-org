@@ -7,11 +7,12 @@ theme: responsive_full_width
 
 %section
   .wrapper
-    %h1 Code.org in Farsi
-    %h2.heading-lg Talent is everywhere, but opportunity is not. Code.org in Farsi opens a door to an opportunity that would otherwise be closed.
-    %p When you think of an algorithm, you may assume it's something new, but the concept of an algorithm was discovered in Iran over 1300 years ago. “Algorithm” is named after its inventor, the mathematician Al Khwarizmi, who lived in the land formerly known as Persia and now known as Iran. Once the epicenter of mathematics, science, philosophy, and medicine, Iran has made profound advances and impacts in technology.
-    %p Today, there are over 110 million Farsi speakers worldwide. While the majority of native speakers live in Iran, Afghanistan, and Tajikistan, there are millions living as immigrants, migrants, and refugees around the world. With the Code.org in Farsi initiative, Farsi-speaking students will have the same access to our curricula that is already available to students in all other major languages of the world.
-    %a{href: 'https://donate.code.org/campaign/support-computer-science-education/c172233', class: "link-button"} Support Code.org in Farsi
+    %h1=hoc_s(:farsi_page_top_heading)
+    %h2.heading-lg=hoc_s(:farsi_page_top_heading_02)
+    %p=hoc_s(:farsi_page_top_desc_01)
+    %p=hoc_s(:farsi_page_top_desc_02)
+    %a{href: 'https://donate.code.org/campaign/support-computer-science-education/c172233', class: "link-button"}
+      =hoc_s(:call_to_action_support_farsi)
 
 %section.bg-neutral-light
   .wrapper
@@ -21,8 +22,9 @@ theme: responsive_full_width
 
 %section
   .wrapper
-    %h2 Iranian Americans for CS Education
-    %p.heading-sm Thank you to the following prominent Iranian American leaders who have come together to support computer science education, with a lead gift to Code.org in Farsi:
+    %h2=hoc_s(:farsi_page_supporters_heading)
+    %p.heading-sm
+      =hoc_s(:farsi_page_supporters_desc)
     %ul.supporters-list
       %li
         Bita Daryabari
@@ -41,29 +43,34 @@ theme: responsive_full_width
       %li
         Anonymous (2)
     %hr
-    %p We invite you to celebrate Iranian contributions in technology by supporting Code.org and computer science education so that every kid in every school has the opportunity to learn how to code.
-    %a{href: 'https://donate.code.org/campaign/support-computer-science-education/c172233', class: "link-button"} Support Code.org in Farsi
+    %p=hoc_s(:farsi_page_supporters_des_02)
+    %a{href: 'https://donate.code.org/campaign/support-computer-science-education/c172233', class: "link-button"}
+      =hoc_s(:call_to_action_support_farsi)
 
 %section.bg-neutral-light
   .wrapper
-    %h2 Our Founders' Story
+    %h2=hoc_s(:farsi_page_founders_heading)
     .photo-carousel-wrapper
       = view :farsi_carousel
 
-
 %section
   .wrapper
-    %h2 Your Support and Your Voice
-    %h3.heading-sm{style: "margin-bottom: 1em"} Thank you for your interest in Code.org in Farsi.
-    %p <a href="">Sign up here to learn more</a> about this project and get updated on its staged release dates.
-    %p If you'd like to support this initiative or learn more, please contact <a href="">Sasha Nouri, Director of Development</a>.
+    %h2=hoc_s(:farsi_page_support_heading)
+    %h3.heading-sm{style: "margin-bottom: 1em"}
+      =hoc_s(:farsi_page_support_heading_02)
+    %p=hoc_s(:farsi_page_support_get_updates, markdown: :inline, locals: {updates_url: "#"})
+    %p=hoc_s(:farsi_page_support_contact_us, markdown: :inline, locals: {mailto_link: "mailto:sasha@code.org"})
     .btn-wrapper.flex-container.flex-wrap{style: "gap: 1em"}
-      %a{href: 'https://donate.code.org/campaign/support-computer-science-education/c172233', class: "link-button"} Donate online
-      %a{href: '#', class: "link-button secondary"} Get updates
+      %a{href: 'https://donate.code.org/campaign/support-computer-science-education/c172233', class: "link-button"}
+        =hoc_s(:call_to_action_donate_online)
+      %a{href: '#', class: "link-button secondary"}
+        =hoc_s(:call_to_action_get_updates)
 
 = view :section_divider_line
 
 %section
   .wrapper
-    %h2.heading-sm Compliance In Support Of Farsi Translations
-    %p.body-two As a U.S. nonprofit, Code.org is subject to laws regarding sanctions with Iran. After consulting with U.S. legal counsel experienced in the Iranian Sanctions and Translations Regulations (ITSR), Code.org believes that it may fund, prepare, and distribute the Farsi Translations of CS Curriculum in the United States and elsewhere around the world, including within Iran. The ITSR provides an exemption for “information and informational materials” (the IIM Exemption) and Code.org believes that this exemption will fully shield its funding, preparation, and distribution of the Farsi Translations and thus enable its Farsi Translations effort to proceed in full compliance with U.S. economic sanctions requirements.
+    %h2.heading-sm
+      =hoc_s(:farsi_page_compliance_heading)
+    %p.body-two
+      =hoc_s(:farsi_page_compliance_desc)
