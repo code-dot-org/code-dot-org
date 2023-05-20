@@ -3,7 +3,10 @@ import {render, screen, fireEvent} from '@testing-library/react';
 import {Provider} from 'react-redux';
 import {configureStore} from '@reduxjs/toolkit';
 import {assert, expect} from '../../../util/reconfiguredChai';
-import {setWindowLocation} from '../../../../src/code-studio/utils';
+import {
+  setWindowLocation,
+  resetWindowLocation,
+} from '../../../../src/code-studio/utils';
 import responsive, {
   setResponsiveSize,
   ResponsiveSize,
@@ -266,6 +269,7 @@ describe('CurriculumCatalog with url params', () => {
     store = configureStore({reducer: {responsive}});
     store.dispatch(setResponsiveSize(ResponsiveSize.lg));
   });
+  afterEach(resetWindowLocation);
 
   function renderWithUrlParams(urlParams) {
     setWindowLocation({search: urlParams});
