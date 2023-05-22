@@ -7,11 +7,11 @@
 .saveMessage {
   position: absolute;
   top: 0;
-  left: -75px;
+  right: 0;
   width: 150px;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   padding: 5px;
 

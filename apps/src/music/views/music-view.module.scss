@@ -59,13 +59,6 @@ $default-spacing: 5px;
   flex-direction: row;
   max-height: calc(100% - $timeline-area-height);
 
-  .saveStatusContainer {
-    position: absolute;
-    top: 10px;
-    right: 50%;
-    z-index: 10;
-  }
-
   .topButtonsContainer {
     position: absolute;
     top: 5px;

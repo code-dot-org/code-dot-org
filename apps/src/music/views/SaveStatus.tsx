@@ -10,10 +10,10 @@ const projectUpdatedStatuses =
 
 /**
  * Displays the project save status: a "Saving..." message with a spinner if saving,
- * an error message if there was a save error, or nothing if saving was sucessful.
+ * an error message if there was a save error, or nothing if saving was successful.
  * Used on pages where the standard project header is not available.
  */
-const SaveStatus: React.FunctionComponent<Record<string, never>> = () => {
+const SaveStatus: React.FunctionComponent = () => {
   const updatedStatus = useSelector(
     (state: {project: {projectUpdatedStatus: string}}) =>
       state.project.projectUpdatedStatus
