@@ -83,6 +83,7 @@
     .text {
       flex: 1;
       overflow-y: auto;
+      white-space: pre-wrap;
 
       &.textVertical {
         padding: 0 10px;

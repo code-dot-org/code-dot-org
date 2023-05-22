@@ -2,7 +2,7 @@
   "path": "initial-progression",
   "steps": [
     {
-      "text": "First, please play a sound.",
+      "text": "**First**, please play a sound.",
       "toolbox": {
         "Play": ["play_sound_at_current_location_simple2"]
       },
@@ -26,7 +26,7 @@
       }
     },
     {
-      "text": "Second, please play three sounds at the same time.",
+      "text": "**Second**, please play three sounds at the same time.<p>Try now!<p/>",
       "toolbox": {
         "Play": ["play_sound_at_current_location_simple2"],
         "Control": ["play_sounds_together"]
@@ -43,13 +43,13 @@
         },
         {
           "conditions": ["played_two_sounds_together"],
-          "message": "It's good that you played two sounds, but you need to play another one."
+          "message": "It's good that you played two sounds, but you need to **play another one**."
         },
         {
           "conditions": ["played_one_sound"],
-          "message": "It's good that you played one sound, but you need to play two more."
+          "message": "It's good that you played one sound, but you need to **play two more**."
         },
-        {"message": "Please play three sounds together."}
+        {"message": "Please **play three sounds together**."}
       ],
       "defaultCode": {
         "blocks": {

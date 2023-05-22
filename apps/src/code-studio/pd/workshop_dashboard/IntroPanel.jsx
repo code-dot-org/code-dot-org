@@ -2,7 +2,7 @@ import $ from 'jquery';
 import React from 'react';
 import PropTypes from 'prop-types';
 import moment from 'moment';
-import {Button} from 'react-bootstrap';
+import {Button} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import ConfirmationDialog from '../components/confirmation_dialog';
 import WorkshopPanel from './WorkshopPanel';
 

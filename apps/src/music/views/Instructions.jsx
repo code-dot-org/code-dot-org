@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React, {useContext, useEffect, useState} from 'react';
 import classNames from 'classnames';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import moduleStyles from './instructions.module.scss';
 import {AnalyticsContext} from '../context';
 import {useSelector} from 'react-redux';
@@ -157,8 +158,8 @@ const InstructionsPanel = ({
           vertical && moduleStyles.textVertical
         )}
       >
-        {panel.text}
-        <div className={moduleStyles.message}>{message}</div>
+        <SafeMarkdown markdown={panel.text} />
+        <SafeMarkdown markdown={message} className={moduleStyles.message} />
       </div>
     </div>
   );
