@@ -290,12 +290,13 @@ export default function SectionsSetUpContainer({
       </div>
       <div
         className={classnames(
-          moduleStyles.buttonsContainer,
+          moduleStyles.splitButtonsContainer,
           moduleStyles.containerWithMarginTop
         )}
       >
         {isNewSection && ( // For edit section redirects, adding another section doesn't apply.
           <Button
+            className={moduleStyles.buttonLeft}
             icon="plus"
             text={i18n.addAnotherClassSection()}
             color={Button.ButtonColor.neutralDark}
@@ -306,6 +307,7 @@ export default function SectionsSetUpContainer({
           />
         )}
         <Button
+          className={moduleStyles.buttonRight}
           text={
             isSaveInProgress
               ? i18n.saving()
