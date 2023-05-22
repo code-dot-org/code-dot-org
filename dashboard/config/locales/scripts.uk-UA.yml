@@ -2598,6 +2598,7 @@ uk:
             lessonGroup-6:
               display_name: Цифрове громадянство
         coursee-2021:
+          title: Курс Е (2021)
           description_audience: 'Вік: 8-12'
           lesson_groups:
             ramp_up:

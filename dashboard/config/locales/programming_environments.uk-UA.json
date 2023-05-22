@@ -158,6 +158,11 @@
             "ui_controls": {
               "expressions": {
                 "onEvent": {
+                  "examples": {
+                    "Shrink and Grow": {
+                      "name": "Зменшуйся та збільшуйся"
+                    }
+                  },
                   "palette_params": {
                     "callback": {
                       "type": "Функція"

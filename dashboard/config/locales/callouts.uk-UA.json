@@ -1207,6 +1207,185 @@
         },
         "courseE_farmer_functions2b_2021": {
           "courseE_farmer_functions1a_1": "Цей овоч невідомий.  Він змінюється кожного разу, коли ти запускаєш програму."
+        },
+        "courseF_apps_aquarium": {
+          "run_button": "Спочатку натисніть кнопку \"Запустити\"!",
+          "visualizationResizeBar": "Перетягни 3 точки, щоб змінити розмір ігрової зони."
+        },
+        "courseF_apps_aquarium2022": {
+          "run_button": "Спочатку натисніть кнопку \"Запустити\"!",
+          "visualizationResizeBar": "Перетягни 3 точки, щоб змінити розмір ігрової зони."
+        },
+        "courseF_apps_aquarium_-2022-2": {
+          "run_button": "Спочатку натисніть кнопку \"Запустити\"!",
+          "visualizationResizeBar": "Перетягни 3 точки, щоб змінити розмір ігрової зони."
+        },
+        "courseF_apps_card": {
+          "visualizationResizeBar": "Перетягни 3 точки, щоб змінити розмір ігрової зони."
+        },
+        "courseF_apps_card2022": {
+          "visualizationResizeBar": "Перетягни 3 точки, щоб змінити розмір ігрової зони."
+        },
+        "courseF_apps_card_-2022-2": {
+          "visualizationResizeBar": "Перетягни 3 точки, щоб змінити розмір ігрової зони."
+        },
+        "courseF_apps_chatbot": {
+          "run_button": "Спочатку натисніть кнопку \"Запустити\"!",
+          "visualizationResizeBar": "Перетягни 3 точки, щоб змінити розмір ігрової зони."
+        },
+        "courseF_apps_chatbot2022": {
+          "run_button": "Спочатку натисніть кнопку \"Запустити\"!",
+          "visualizationResizeBar": "Перетягни 3 точки, щоб змінити розмір ігрової зони."
+        },
+        "courseF_apps_chatbot_-2022-2": {
+          "run_button": "Спочатку натисніть кнопку \"Запустити\"!",
+          "visualizationResizeBar": "Перетягни 3 точки, щоб змінити розмір ігрової зони."
+        },
+        "courseF_apps_collector": {
+          "run_button": "Спочатку натисніть кнопку \"Запустити\"!",
+          "visualizationResizeBar": "Перетягни 3 точки, щоб змінити розмір ігрової зони."
+        },
+        "courseF_apps_collector2022": {
+          "run_button": "Спочатку натисніть кнопку \"Запустити\"!",
+          "visualizationResizeBar": "Перетягни 3 точки, щоб змінити розмір ігрової зони."
+        },
+        "courseF_apps_collector_-2022-2": {
+          "run_button": "Спочатку натисніть кнопку \"Запустити\"!",
+          "visualizationResizeBar": "Перетягни 3 точки, щоб змінити розмір ігрової зони."
+        },
+        "courseF_apps_collector_drag_-2022-2": {
+          "visualizationResizeBar": "Перетягни 3 точки, щоб змінити розмір ігрової зони."
+        },
+        "courseF_apps_collector_drive_-2022-2": {
+          "visualizationResizeBar": "Перетягни 3 точки, щоб змінити розмір ігрової зони."
+        },
+        "courseF_apps_collector_move2_-2022-2": {
+          "visualizationResizeBar": "Перетягни 3 точки, щоб змінити розмір ігрової зони."
+        },
+        "courseF_apps_collector_move_-2022-2": {
+          "visualizationResizeBar": "Перетягни 3 точки, щоб змінити розмір ігрової зони."
+        },
+        "courseF_apps_madlib": {
+          "visualizationResizeBar": "Перетягни 3 точки, щоб змінити розмір ігрової зони."
+        },
+        "courseF_apps_madlib2022": {
+          "visualizationResizeBar": "Перетягни 3 точки, щоб змінити розмір ігрової зони."
+        },
+        "courseF_apps_madlib_-2022-2": {
+          "visualizationResizeBar": "Перетягни 3 точки, щоб змінити розмір ігрової зони."
+        },
+        "courseF_apps_pet": {
+          "run_button": "Спочатку натисніть кнопку \"Запустити\"!",
+          "visualizationResizeBar": "Перетягни 3 точки, щоб змінити розмір ігрової зони."
+        },
+        "courseF_apps_pet2022": {
+          "run_button": "Спочатку натисніть кнопку \"Запустити\"!",
+          "visualizationResizeBar": "Перетягни 3 точки, щоб змінити розмір ігрової зони."
+        },
+        "courseF_apps_pet_-2022-2": {
+          "run_button": "Спочатку натисніть кнопку \"Запустити\"!",
+          "visualizationResizeBar": "Перетягни 3 точки, щоб змінити розмір ігрової зони."
+        },
+        "courseF_editable_card": {
+          "visualizationResizeBar": "Перетягни 3 точки, щоб змінити розмір ігрової зони."
+        },
+        "courseF_editable_card_-2022-2": {
+          "visualizationResizeBar": "Перетягни 3 точки, щоб змінити розмір ігрової зони."
+        },
+        "courseF_editable_chatbot": {
+          "visualizationResizeBar": "Перетягни 3 точки, щоб змінити розмір ігрової зони."
+        },
+        "courseF_editable_chatbot_-2022-2": {
+          "visualizationResizeBar": "Перетягни 3 точки, щоб змінити розмір ігрової зони."
+        },
+        "courseF_editable_madlib": {
+          "visualizationResizeBar": "Перетягни 3 точки, щоб змінити розмір ігрової зони."
+        },
+        "courseF_editable_madlib_-2022-2": {
+          "visualizationResizeBar": "Перетягни 3 точки, щоб змінити розмір ігрової зони."
+        },
+        "courseF_events_conflict": {
+          "stops_block": "Нові блоки тут!"
+        },
+        "courseF_events_conflict_-2022-2": {
+          "stops_block": "Нові блоки тут!"
+        },
+        "courseF_events_key": {
+          "whenKey": "Використовуй новий блок подій, який можна знайти тут."
+        },
+        "courseF_events_key_-2022-2": {
+          "whenKey": "Використовуй новий блок подій, який можна знайти тут."
+        },
+        "courseF_events_practice_reorder": {
+          "stopAllBug": "Цей блок знаходиться в неправильному порядку."
+        },
+        "courseF_events_practice_reorder_-2022-2": {
+          "stopAllBug": "Цей блок знаходиться в неправильному порядку."
+        },
+        "courseF_events_time": {
+          "events_category": "Натисніть, щоб відкрити категорію Події."
+        },
+        "courseF_events_time_-2022-2": {
+          "events_category": "Натисніть, щоб відкрити категорію Події."
+        },
+        "courseF_label_predict": {
+          "variablesPredict": "Подивись уважно на код нижче цього пункту."
+        },
+        "courseF_label_predict_-2022-2": {
+          "variablesPredict": "Подивись уважно на код нижче цього пункту."
+        },
+        "courseF_sprites_behaviors": {
+          "behaviors_category": "Натисніть, щоб відкрити категорію Моделей поведінки."
+        },
+        "courseF_sprites_behaviors_-2022-2": {
+          "behaviors_category": "Натисніть, щоб відкрити категорію Моделей поведінки."
+        },
+        "courseF_sprites_make": {
+          "sprites_category": "Натисніть, щоб відкрити категорію Спрайтів."
+        },
+        "courseF_sprites_make_-2022-2": {
+          "sprites_category": "Натисніть, щоб відкрити категорію Спрайтів."
+        },
+        "courseF_sprites_positioning": {
+          "locations_category": "Натисніть, щоб відкрити категорію Місць розташування."
+        },
+        "courseF_sprites_positioning_-2022-2": {
+          "locations_category": "Натисніть, щоб відкрити категорію Місць розташування."
+        },
+        "courseF_sprites_properties": {
+          "sprites_category2": "Шукай новий блок тут."
+        },
+        "courseF_sprites_properties_-2022-2": {
+          "sprites_category2": "Шукай новий блок тут."
+        },
+        "courseF_text_choice_title": {
+          "title_block": "Шукай два нові блоки тут!",
+          "text_answer_finish": "Титульний екран відображається протягом 3 секунд? Якщо так, натисни \"Кінець\". Якщо ні, натисни \"Скидання\", зміни свій код та знову натисни \"Запустити\". "
+        },
+        "courseF_text_choice_title_-2022-2": {
+          "title_block": "Шукай два нові блоки тут!",
+          "text_answer_finish": "Титульний екран відображається протягом 3 секунд? Якщо так, натисни \"Кінець\". Якщо ні, натисни \"Скидання\", зміни свій код та знову натисни \"Запустити\". "
+        },
+        "courseF_text_concat": {
+          "join_blocks": "Шукай нові блоки тут!"
+        },
+        "courseF_text_concat_-2022-2": {
+          "join_blocks": "Шукай нові блоки тут!"
+        },
+        "courseF_text_events": {
+          "events_category": "Натисніть, щоб відкрити категорію Події."
+        },
+        "courseF_text_events_-2022-2": {
+          "events_category": "Натисніть, щоб відкрити категорію Події."
+        },
+        "courseF_variables2_predict_-2022-2": {
+          "variablesPredict": "Подивись уважно на код нижче цього пункту."
+        },
+        "courseF_variables_predict": {
+          "variablesPredict": "Подивись уважно на код нижче цього пункту."
+        },
+        "courseF_variables_predict_-2022-2": {
+          "variablesPredict": "Подивись уважно на код нижче цього пункту."
         }
       }
     }

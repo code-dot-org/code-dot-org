@@ -1124,7 +1124,8 @@
           "moving south": "рух на південь",
           "moving north": "рух на північ",
           "jittering": "тремтіння",
-          "moving west": "рух на захід"
+          "moving west": "рух на захід",
+          "swimming left and right": "пливи вліво та вправо"
         },
         "CourseF_outbreak1": {
           "recovering": "видужання",
@@ -1151,7 +1152,8 @@
           "moving south": "рух на південь",
           "moving north": "рух на північ",
           "jittering": "тремтіння",
-          "moving west": "рух на захід"
+          "moving west": "рух на захід",
+          "swimming left and right": "пливи вліво та вправо"
         },
         "CourseF_outbreak5": {
           "recovering": "видужання",
@@ -1471,7 +1473,22 @@
           "spinning right": "обертання праворуч",
           "moving south": "рух на південь",
           "moving north": "рух на північ",
-          "jittering": "тремтіння"
+          "jittering": "тремтіння",
+          "wandering2": "блукання2",
+          "moving east2": "рух на схід2",
+          "moving west2": "рух на захід2",
+          "swimming left and right": "пливи вліво та вправо",
+          "spinning left2": "оберт вліво2",
+          "spinning right2": "оберт вправо2",
+          "shrinking2": "стиснення2",
+          "growing2": "вирощування2",
+          "moving south2": "рух на південь2",
+          "swimming left and right2": "пливи вліво та вправо2",
+          "moving north2": "рух на північ2",
+          "jittering2": "тремтіння2",
+          "patrolling2": "патрулювання2",
+          "moving with arrow keys2": "рух за стрілками2",
+          "driving with arrow keys2": "рух за стрілками2"
         },
         "courseF_apps_card": {
           "driving with arrow keys": "рух за стрілками",
@@ -1486,7 +1503,9 @@
           "moving south": "рух на південь",
           "moving west": "рух на захід",
           "spinning right": "обертання праворуч",
-          "spinning left": "обертання ліворуч"
+          "spinning left": "обертання ліворуч",
+          "blocking movement": "блокування руху",
+          "swimming left and right": "пливи вліво та вправо"
         },
         "courseF_apps_chatbot": {
           "driving with arrow keys": "рух за стрілками",
@@ -1501,7 +1520,23 @@
           "moving south": "рух на південь",
           "moving west": "рух на захід",
           "spinning right": "обертання праворуч",
-          "spinning left": "обертання ліворуч"
+          "spinning left": "обертання ліворуч",
+          "blocking movement": "блокування руху",
+          "swimming left and right": "пливи вліво та вправо",
+          "wandering2": "блукання2",
+          "moving east2": "рух на схід2",
+          "spinning left2": "оберт вліво2",
+          "spinning right2": "оберт вправо2",
+          "shrinking2": "стиснення2",
+          "growing2": "вирощування2",
+          "moving south2": "рух на південь2",
+          "swimming left and right2": "пливи вліво та вправо2",
+          "moving north2": "рух на північ2",
+          "jittering2": "тремтіння2",
+          "moving west2": "рух на захід2",
+          "patrolling2": "патрулювання2",
+          "moving with arrow keys2": "рух за стрілками2",
+          "driving with arrow keys2": "рух за стрілками2"
         },
         "courseF_apps_collector": {
           "wandering": "бродіння",
@@ -1516,7 +1551,23 @@
           "spinning right": "обертання праворуч",
           "moving south": "рух на південь",
           "moving north": "рух на північ",
-          "jittering": "тремтіння"
+          "jittering": "тремтіння",
+          "moving west2": "рух на захід2",
+          "flying west and looping": "політ на захід та створення циклу",
+          "moving east2": "рух на схід2",
+          "swimming left and right": "пливи вліво та вправо",
+          "wandering2": "блукання2",
+          "spinning left2": "оберт вліво2",
+          "spinning right2": "оберт вправо2",
+          "shrinking2": "стиснення2",
+          "growing2": "вирощування2",
+          "moving south2": "рух на південь2",
+          "swimming left and right2": "пливи вліво та вправо2",
+          "moving north2": "рух на північ2",
+          "jittering2": "тремтіння2",
+          "patrolling2": "патрулювання2",
+          "moving with arrow keys2": "рух за стрілками2",
+          "driving with arrow keys2": "рух за стрілками2"
         },
         "courseF_apps_madlib": {
           "wandering": "бродіння",
@@ -1534,7 +1585,8 @@
           "moving south": "рух на південь",
           "moving north": "рух на північ",
           "jittering": "тремтіння",
-          "moving west": "рух на захід"
+          "moving west": "рух на захід",
+          "swimming left and right": "пливи вліво та вправо"
         },
         "courseF_apps_pet": {
           "patrolling": "патрулювання",
@@ -1553,7 +1605,8 @@
           "moving south": "рух на південь",
           "moving north": "рух на північ",
           "jittering": "тремтіння",
-          "moving west": "рух на захід"
+          "moving west": "рух на захід",
+          "swimming left and right": "пливи вліво та вправо"
         },
         "courseF_editable_card": {
           "driving with arrow keys": "рух за стрілками",
@@ -1568,7 +1621,9 @@
           "moving south": "рух на південь",
           "moving west": "рух на захід",
           "spinning right": "обертання праворуч",
-          "spinning left": "обертання ліворуч"
+          "spinning left": "обертання ліворуч",
+          "blocking movement": "блокування руху",
+          "swimming left and right": "пливи вліво та вправо"
         },
         "courseF_editable_chatbot": {
           "driving with arrow keys": "рух за стрілками",
@@ -1583,7 +1638,9 @@
           "moving south": "рух на південь",
           "moving west": "рух на захід",
           "spinning right": "обертання праворуч",
-          "spinning left": "обертання ліворуч"
+          "spinning left": "обертання ліворуч",
+          "blocking movement": "блокування руху",
+          "swimming left and right": "пливи вліво та вправо"
         },
         "courseF_editable_madlib": {
           "wandering": "бродіння",
@@ -1601,7 +1658,8 @@
           "moving south": "рух на південь",
           "moving north": "рух на північ",
           "jittering": "тремтіння",
-          "moving west": "рух на захід"
+          "moving west": "рух на захід",
+          "swimming left and right": "пливи вліво та вправо"
         },
         "courseF_events_choice_conflict": {
           "patrolling": "патрулювання",
@@ -1617,7 +1675,8 @@
           "moving north": "рух на північ",
           "moving south": "рух на південь",
           "jittering": "тремтіння",
-          "spinning left": "обертання ліворуч"
+          "spinning left": "обертання ліворуч",
+          "moving forward": "рух вперед"
         },
         "courseF_events_choice_conflict2": {
           "patrolling": "патрулювання",
@@ -1632,7 +1691,8 @@
           "moving east": "рух на схід",
           "moving north": "рух на північ",
           "moving south": "рух на південь",
-          "spinning left": "обертання ліворуч"
+          "spinning left": "обертання ліворуч",
+          "moving forward": "рух вперед"
         },
         "courseF_events_choice_penguin": {
           "patrolling": "патрулювання",
@@ -1649,7 +1709,8 @@
           "moving north": "рух на північ",
           "moving south": "рух на південь",
           "jittering": "тремтіння",
-          "spinning left": "обертання ліворуч"
+          "spinning left": "обертання ліворуч",
+          "moving forward": "рух вперед"
         },
         "courseF_events_choice_pufferfish": {
           "patrolling": "патрулювання",
@@ -1666,7 +1727,8 @@
           "moving north": "рух на північ",
           "moving south": "рух на південь",
           "jittering": "тремтіння",
-          "spinning left": "обертання ліворуч"
+          "spinning left": "обертання ліворуч",
+          "moving forward": "рух вперед"
         },
         "courseF_events_conflict": {
           "patrolling": "патрулювання",
@@ -1682,7 +1744,8 @@
           "moving north": "рух на північ",
           "moving south": "рух на південь",
           "jittering": "тремтіння",
-          "spinning left": "обертання ліворуч"
+          "spinning left": "обертання ліворуч",
+          "moving forward": "рух вперед"
         },
         "courseF_events_freeplay_air": {
           "moving west and looping": "рух на захід у циклі",
@@ -1795,7 +1858,8 @@
           "moving north": "рух на північ",
           "moving south": "рух на південь",
           "jittering": "тремтіння",
-          "spinning left": "обертання ліворуч"
+          "spinning left": "обертання ліворуч",
+          "moving forward": "рух вперед"
         },
         "courseF_events_practice_reorder": {
           "patrolling": "патрулювання",
@@ -1814,7 +1878,8 @@
           "spinning right": "обертання праворуч",
           "moving south": "рух на південь",
           "jittering": "тремтіння",
-          "spinning left": "обертання ліворуч"
+          "spinning left": "обертання ліворуч",
+          "moving forward": "рух вперед"
         },
         "courseF_events_predict": {
           "wandering": "бродіння",
@@ -1844,7 +1909,8 @@
           "moving north": "рух на північ",
           "moving south": "рух на південь",
           "jittering": "тремтіння",
-          "spinning left": "обертання ліворуч"
+          "spinning left": "обертання ліворуч",
+          "moving forward": "рух вперед"
         },
         "courseF_events_ship": {
           "patrolling": "патрулювання",
@@ -1861,7 +1927,8 @@
           "moving north": "рух на північ",
           "moving south": "рух на південь",
           "jittering": "тремтіння",
-          "spinning left": "обертання ліворуч"
+          "spinning left": "обертання ліворуч",
+          "moving forward": "рух вперед"
         },
         "courseF_events_stops": {
           "patrolling": "патрулювання",
@@ -1877,7 +1944,8 @@
           "moving north": "рух на північ",
           "moving south": "рух на південь",
           "jittering": "тремтіння",
-          "spinning left": "обертання ліворуч"
+          "spinning left": "обертання ліворуч",
+          "moving forward": "рух вперед"
         },
         "courseF_events_time": {
           "patrolling": "патрулювання",
@@ -1894,7 +1962,8 @@
           "moving north": "рух на північ",
           "moving south": "рух на південь",
           "jittering": "тремтіння",
-          "spinning left": "обертання ліворуч"
+          "spinning left": "обертання ліворуч",
+          "moving forward": "рух вперед"
         },
         "courseF_label_predict": {
           "wandering": "бродіння",
@@ -1907,7 +1976,10 @@
           "spinning right": "обертання праворуч",
           "moving south": "рух на південь",
           "moving north": "рух на північ",
-          "jittering": "тремтіння"
+          "jittering": "тремтіння",
+          "mystery behavior": "таємнича поведінка",
+          "running east": "біжи на схід",
+          "swimming left and right": "пливи вліво та вправо"
         },
         "courseF_place_fruit": {
           "shrinking": "стиснення",
@@ -2163,7 +2235,8 @@
           "moving north": "рух на північ",
           "moving south": "рух на південь",
           "jittering": "тремтіння",
-          "spinning left": "обертання ліворуч"
+          "spinning left": "обертання ліворуч",
+          "moving forward": "рух вперед"
         },
         "courseF_text_choice_color": {
           "patrolling": "патрулювання",
@@ -2179,7 +2252,8 @@
           "moving north": "рух на північ",
           "moving south": "рух на південь",
           "jittering": "тремтіння",
-          "spinning left": "обертання ліворуч"
+          "spinning left": "обертання ліворуч",
+          "moving forward": "рух вперед"
         },
         "courseF_text_choice_conversation": {
           "wandering": "бродіння",
@@ -2290,7 +2364,8 @@
           "moving north": "рух на північ",
           "moving south": "рух на південь",
           "jittering": "тремтіння",
-          "spinning left": "обертання ліворуч"
+          "spinning left": "обертання ліворуч",
+          "moving forward": "рух вперед"
         },
         "courseF_text_concat": {
           "patrolling": "патрулювання",
@@ -2306,7 +2381,8 @@
           "moving north": "рух на північ",
           "moving south": "рух на південь",
           "jittering": "тремтіння",
-          "spinning left": "обертання ліворуч"
+          "spinning left": "обертання ліворуч",
+          "moving forward": "рух вперед"
         },
         "courseF_text_events": {
           "patrolling": "патрулювання",
@@ -2322,7 +2398,8 @@
           "moving north": "рух на північ",
           "moving south": "рух на південь",
           "jittering": "тремтіння",
-          "spinning left": "обертання ліворуч"
+          "spinning left": "обертання ліворуч",
+          "moving forward": "рух вперед"
         },
         "courseF_text_print": {
           "patrolling": "патрулювання",
@@ -2338,7 +2415,8 @@
           "moving north": "рух на північ",
           "moving south": "рух на південь",
           "jittering": "тремтіння",
-          "spinning left": "обертання ліворуч"
+          "spinning left": "обертання ліворуч",
+          "moving forward": "рух вперед"
         },
         "courseF_text_prompts": {
           "patrolling": "патрулювання",
@@ -2354,7 +2432,8 @@
           "moving north": "рух на північ",
           "moving south": "рух на південь",
           "jittering": "тремтіння",
-          "spinning left": "обертання ліворуч"
+          "spinning left": "обертання ліворуч",
+          "moving forward": "рух вперед"
         },
         "courseF_text_review": {
           "patrolling": "патрулювання",
@@ -2370,7 +2449,8 @@
           "moving north": "рух на північ",
           "moving south": "рух на південь",
           "jittering": "тремтіння",
-          "spinning left": "обертання ліворуч"
+          "spinning left": "обертання ліворуч",
+          "moving forward": "рух вперед"
         },
         "courseF_variables_card": {
           "wandering": "бродіння",
@@ -2388,7 +2468,8 @@
           "moving south": "рух на південь",
           "moving north": "рух на північ",
           "jittering": "тремтіння",
-          "moving west": "рух на захід"
+          "moving west": "рух на захід",
+          "swimming left and right": "пливи вліво та вправо"
         },
         "courseF_variables_card_finish": {
           "wandering": "бродіння",
@@ -2406,7 +2487,8 @@
           "moving south": "рух на південь",
           "moving north": "рух на північ",
           "jittering": "тремтіння",
-          "moving west": "рух на захід"
+          "moving west": "рух на захід",
+          "swimming left and right": "пливи вліво та вправо"
         },
         "courseF_variables_chatbot": {
           "wandering": "бродіння",
@@ -2424,7 +2506,8 @@
           "moving south": "рух на південь",
           "moving north": "рух на північ",
           "jittering": "тремтіння",
-          "moving west": "рух на захід"
+          "moving west": "рух на захід",
+          "swimming left and right": "пливи вліво та вправо"
         },
         "courseF_variables_chatbot_finish": {
           "wandering": "бродіння",
@@ -2442,7 +2525,8 @@
           "moving south": "рух на південь",
           "moving north": "рух на північ",
           "jittering": "тремтіння",
-          "moving west": "рух на захід"
+          "moving west": "рух на захід",
+          "swimming left and right": "пливи вліво та вправо"
         },
         "courseF_variables_madlib": {
           "wandering": "бродіння",
@@ -2460,7 +2544,8 @@
           "moving south": "рух на південь",
           "moving north": "рух на північ",
           "jittering": "тремтіння",
-          "moving west": "рух на захід"
+          "moving west": "рух на захід",
+          "swimming left and right": "пливи вліво та вправо"
         },
         "courseF_variables_madlib_finish": {
           "wandering": "бродіння",
@@ -2478,7 +2563,8 @@
           "moving south": "рух на південь",
           "moving north": "рух на північ",
           "jittering": "тремтіння",
-          "moving west": "рух на захід"
+          "moving west": "рух на захід",
+          "swimming left and right": "пливи вліво та вправо"
         },
         "courseF_variables_predict": {
           "wandering": "бродіння",
@@ -2510,7 +2596,8 @@
           "moving south": "рух на південь",
           "moving north": "рух на північ",
           "jittering": "тремтіння",
-          "moving west": "рух на захід"
+          "moving west": "рух на захід",
+          "swimming left and right": "пливи вліво та вправо"
         },
         "international_outbreak_freeplay": {
           "recovering": "видужання",
@@ -2599,7 +2686,8 @@
           "moving north": "рух на північ",
           "moving south": "рух на південь",
           "jittering": "тремтіння",
-          "spinning left": "обертання ліворуч"
+          "spinning left": "обертання ліворуч",
+          "moving forward": "рух вперед"
         },
         "helloworld_animals_sounds": {
           "shrinking": "стиснення",
@@ -2693,7 +2781,8 @@
           "moving north": "рух на північ",
           "moving south": "рух на південь",
           "jittering": "тремтіння",
-          "spinning left": "обертання ліворуч"
+          "spinning left": "обертання ліворуч",
+          "moving forward": "рух вперед"
         },
         "helloworld_emoji_sounds": {
           "shrinking": "стиснення",
@@ -2766,7 +2855,8 @@
           "moving north": "рух на північ",
           "moving south": "рух на південь",
           "jittering": "тремтіння",
-          "spinning left": "обертання ліворуч"
+          "spinning left": "обертання ліворуч",
+          "moving forward": "рух вперед"
         },
         "helloworld_food_sounds": {
           "shrinking": "стиснення",
@@ -2860,7 +2950,8 @@
           "moving north": "рух на північ",
           "moving south": "рух на південь",
           "jittering": "тремтіння",
-          "spinning left": "обертання ліворуч"
+          "spinning left": "обертання ліворуч",
+          "moving forward": "рух вперед"
         },
         "helloworld_retro_sounds": {
           "shrinking": "стиснення",
@@ -3289,7 +3380,9 @@
           "spinning right": "обертання праворуч",
           "moving south": "рух на південь",
           "moving north": "рух на північ",
-          "jittering": "тремтіння"
+          "jittering": "тремтіння",
+          "moving with arrow keys2": "рух за стрілками2",
+          "driving with arrow keys2": "рух за стрілками2"
         },
         "courseF_apps_aquarium_-2022-2": {
           "wandering": "бродіння",
@@ -3305,7 +3398,9 @@
           "spinning right": "обертання праворуч",
           "moving south": "рух на південь",
           "moving north": "рух на північ",
-          "jittering": "тремтіння"
+          "jittering": "тремтіння",
+          "moving with arrow keys2": "рух за стрілками2",
+          "driving with arrow keys2": "рух за стрілками2"
         },
         "courseF_apps_card2022": {
           "driving with arrow keys": "рух за стрілками",
@@ -3320,7 +3415,8 @@
           "moving south": "рух на південь",
           "moving west": "рух на захід",
           "spinning right": "обертання праворуч",
-          "spinning left": "обертання ліворуч"
+          "spinning left": "обертання ліворуч",
+          "blocking movement": "блокування руху"
         },
         "courseF_apps_card_-2022-2": {
           "driving with arrow keys": "рух за стрілками",
@@ -3335,7 +3431,8 @@
           "moving south": "рух на південь",
           "moving west": "рух на захід",
           "spinning right": "обертання праворуч",
-          "spinning left": "обертання ліворуч"
+          "spinning left": "обертання ліворуч",
+          "blocking movement": "блокування руху"
         },
         "courseF_apps_chatbot2022": {
           "driving with arrow keys": "рух за стрілками",
@@ -3350,7 +3447,10 @@
           "moving south": "рух на південь",
           "moving west": "рух на захід",
           "spinning right": "обертання праворуч",
-          "spinning left": "обертання ліворуч"
+          "spinning left": "обертання ліворуч",
+          "blocking movement": "блокування руху",
+          "moving with arrow keys2": "рух за стрілками2",
+          "driving with arrow keys2": "рух за стрілками2"
         },
         "courseF_apps_chatbot_-2022-2": {
           "driving with arrow keys": "рух за стрілками",
@@ -3365,7 +3465,10 @@
           "moving south": "рух на південь",
           "moving west": "рух на захід",
           "spinning right": "обертання праворуч",
-          "spinning left": "обертання ліворуч"
+          "spinning left": "обертання ліворуч",
+          "blocking movement": "блокування руху",
+          "moving with arrow keys2": "рух за стрілками2",
+          "driving with arrow keys2": "рух за стрілками2"
         },
         "courseF_apps_collector2022": {
           "wandering": "бродіння",
@@ -3380,7 +3483,10 @@
           "spinning right": "обертання праворуч",
           "moving south": "рух на південь",
           "moving north": "рух на північ",
-          "jittering": "тремтіння"
+          "jittering": "тремтіння",
+          "flying west and looping": "політ на захід та створення циклу",
+          "moving with arrow keys2": "рух за стрілками2",
+          "driving with arrow keys2": "рух за стрілками2"
         },
         "courseF_apps_collector_-2022-2": {
           "wandering": "бродіння",
@@ -3395,7 +3501,10 @@
           "spinning right": "обертання праворуч",
           "moving south": "рух на південь",
           "moving north": "рух на північ",
-          "jittering": "тремтіння"
+          "jittering": "тремтіння",
+          "flying west and looping": "політ на захід та створення циклу",
+          "moving with arrow keys2": "рух за стрілками2",
+          "driving with arrow keys2": "рух за стрілками2"
         },
         "courseF_apps_madlib2022": {
           "wandering": "бродіння",
@@ -3484,7 +3593,8 @@
           "moving south": "рух на південь",
           "moving west": "рух на захід",
           "spinning right": "обертання праворуч",
-          "spinning left": "обертання ліворуч"
+          "spinning left": "обертання ліворуч",
+          "blocking movement": "блокування руху"
         },
         "courseF_editable_chatbot_-2022-2": {
           "driving with arrow keys": "рух за стрілками",
@@ -3499,7 +3609,8 @@
           "moving south": "рух на південь",
           "moving west": "рух на захід",
           "spinning right": "обертання праворуч",
-          "spinning left": "обертання ліворуч"
+          "spinning left": "обертання ліворуч",
+          "blocking movement": "блокування руху"
         },
         "courseF_editable_madlib_-2022-2": {
           "wandering": "бродіння",
@@ -3532,7 +3643,8 @@
           "moving east": "рух на схід",
           "moving north": "рух на північ",
           "moving south": "рух на південь",
-          "spinning left": "обертання ліворуч"
+          "spinning left": "обертання ліворуч",
+          "moving forward": "рух вперед"
         },
         "courseF_events_choice_conflict_-2022-2": {
           "patrolling": "патрулювання",
@@ -3548,7 +3660,8 @@
           "moving north": "рух на північ",
           "moving south": "рух на південь",
           "jittering": "тремтіння",
-          "spinning left": "обертання ліворуч"
+          "spinning left": "обертання ліворуч",
+          "moving forward": "рух вперед"
         },
         "courseF_events_choice_penguin_-2022-2": {
           "patrolling": "патрулювання",
@@ -3565,7 +3678,8 @@
           "moving north": "рух на північ",
           "moving south": "рух на південь",
           "jittering": "тремтіння",
-          "spinning left": "обертання ліворуч"
+          "spinning left": "обертання ліворуч",
+          "moving forward": "рух вперед"
         },
         "courseF_events_choice_pufferfish_-2022-2": {
           "patrolling": "патрулювання",
@@ -3582,7 +3696,8 @@
           "moving north": "рух на північ",
           "moving south": "рух на південь",
           "jittering": "тремтіння",
-          "spinning left": "обертання ліворуч"
+          "spinning left": "обертання ліворуч",
+          "moving forward": "рух вперед"
         },
         "courseF_events_conflict_-2022-2": {
           "patrolling": "патрулювання",
@@ -3598,7 +3713,8 @@
           "moving north": "рух на північ",
           "moving south": "рух на південь",
           "jittering": "тремтіння",
-          "spinning left": "обертання ліворуч"
+          "spinning left": "обертання ліворуч",
+          "moving forward": "рух вперед"
         },
         "courseF_events_freeplay_air_-2022-2": {
           "moving west and looping": "рух на захід у циклі",
@@ -3711,7 +3827,8 @@
           "moving north": "рух на північ",
           "moving south": "рух на південь",
           "jittering": "тремтіння",
-          "spinning left": "обертання ліворуч"
+          "spinning left": "обертання ліворуч",
+          "moving forward": "рух вперед"
         },
         "courseF_events_practice_reorder_-2022-2": {
           "patrolling": "патрулювання",
@@ -3730,7 +3847,8 @@
           "spinning right": "обертання праворуч",
           "moving south": "рух на південь",
           "jittering": "тремтіння",
-          "spinning left": "обертання ліворуч"
+          "spinning left": "обертання ліворуч",
+          "moving forward": "рух вперед"
         },
         "courseF_events_predict_-2022-2": {
           "wandering": "бродіння",
@@ -3760,7 +3878,8 @@
           "moving north": "рух на північ",
           "moving south": "рух на південь",
           "jittering": "тремтіння",
-          "spinning left": "обертання ліворуч"
+          "spinning left": "обертання ліворуч",
+          "moving forward": "рух вперед"
         },
         "courseF_events_ship_-2022-2": {
           "patrolling": "патрулювання",
@@ -3777,7 +3896,8 @@
           "moving north": "рух на північ",
           "moving south": "рух на південь",
           "jittering": "тремтіння",
-          "spinning left": "обертання ліворуч"
+          "spinning left": "обертання ліворуч",
+          "moving forward": "рух вперед"
         },
         "courseF_events_stops_-2022-2": {
           "patrolling": "патрулювання",
@@ -3803,7 +3923,8 @@
           "moving north": "рух на північ",
           "moving south": "рух на південь",
           "jittering": "тремтіння",
-          "spinning left": "обертання ліворуч"
+          "spinning left": "обертання ліворуч",
+          "moving forward": "рух вперед"
         },
         "courseF_label_predict_-2022-2": {
           "wandering": "бродіння",
@@ -4072,7 +4193,8 @@
           "moving north": "рух на північ",
           "moving south": "рух на південь",
           "jittering": "тремтіння",
-          "spinning left": "обертання ліворуч"
+          "spinning left": "обертання ліворуч",
+          "moving forward": "рух вперед"
         },
         "courseF_text_choice_color_-2022-2": {
           "patrolling": "патрулювання",
@@ -4088,7 +4210,8 @@
           "moving north": "рух на північ",
           "moving south": "рух на південь",
           "jittering": "тремтіння",
-          "spinning left": "обертання ліворуч"
+          "spinning left": "обертання ліворуч",
+          "moving forward": "рух вперед"
         },
         "courseF_text_choice_conversation_-2022-2": {
           "wandering": "бродіння",
@@ -4199,7 +4322,8 @@
           "moving north": "рух на північ",
           "moving south": "рух на південь",
           "jittering": "тремтіння",
-          "spinning left": "обертання ліворуч"
+          "spinning left": "обертання ліворуч",
+          "moving forward": "рух вперед"
         },
         "courseF_text_concat_-2022-2": {
           "patrolling": "патрулювання",
@@ -4215,7 +4339,8 @@
           "moving north": "рух на північ",
           "moving south": "рух на південь",
           "jittering": "тремтіння",
-          "spinning left": "обертання ліворуч"
+          "spinning left": "обертання ліворуч",
+          "moving forward": "рух вперед"
         },
         "courseF_text_events_-2022-2": {
           "patrolling": "патрулювання",
@@ -4231,7 +4356,8 @@
           "moving north": "рух на північ",
           "moving south": "рух на південь",
           "jittering": "тремтіння",
-          "spinning left": "обертання ліворуч"
+          "spinning left": "обертання ліворуч",
+          "moving forward": "рух вперед"
         },
         "courseF_text_print_-2022-2": {
           "patrolling": "патрулювання",
@@ -4247,7 +4373,8 @@
           "moving north": "рух на північ",
           "moving south": "рух на південь",
           "jittering": "тремтіння",
-          "spinning left": "обертання ліворуч"
+          "spinning left": "обертання ліворуч",
+          "moving forward": "рух вперед"
         },
         "courseF_text_prompts_-2022-2": {
           "patrolling": "патрулювання",
@@ -4263,7 +4390,8 @@
           "moving north": "рух на північ",
           "moving south": "рух на південь",
           "jittering": "тремтіння",
-          "spinning left": "обертання ліворуч"
+          "spinning left": "обертання ліворуч",
+          "moving forward": "рух вперед"
         },
         "courseF_text_review_-2022-2": {
           "patrolling": "патрулювання",
@@ -4279,7 +4407,8 @@
           "moving north": "рух на північ",
           "moving south": "рух на південь",
           "jittering": "тремтіння",
-          "spinning left": "обертання ліворуч"
+          "spinning left": "обертання ліворуч",
+          "moving forward": "рух вперед"
         },
         "courseF_variables_card_-2022-2": {
           "wandering": "бродіння",
@@ -4416,7 +4545,8 @@
           "moving north": "рух на північ",
           "moving south": "рух на південь",
           "jittering": "тремтіння",
-          "spinning left": "обертання ліворуч"
+          "spinning left": "обертання ліворуч",
+          "moving forward": "рух вперед"
         },
         "simcustom_-2022-2": {
           "wandering": "бродіння",
