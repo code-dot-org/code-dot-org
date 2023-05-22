@@ -28,3 +28,48 @@ rubric and ignore your own interpretation of the phrases "Extensive Evidence",
 please provide your evaluation formatted as a TSV table including a header row
 with column names "Key Concept", "Grade", and "Reason". There should be one
 non-header row for each Key Concept.
+
+The student's work should be evaluated based on what they have added beyond the
+starter code that was provided to them. Here is the starter code:
+```
+// GAME SETUP
+// create player, target, and obstacles
+var player = createSprite(200, 100);
+player.setAnimation("fly_bot");
+player.scale = 0.8;
+
+
+function draw() {
+  background("lightblue");
+
+  // FALLING
+
+  // LOOPING
+
+
+  // PLAYER CONTROLS
+  // change the y velocity when the user clicks "up"
+
+  // decrease the x velocity when user clicks "left"
+
+  // increase the x velocity when the user clicks "right"
+
+  // SPRITE INTERACTIONS
+  // reset the coin when the player touches it
+
+  // make the obstacles push the player
+
+
+  // DRAW SPRITES
+  drawSprites();
+
+  // GAME OVER
+  if (player.x < -50 || player.x > 450 || player.y < -50 || player.y > 450) {
+    background("black");
+    textSize(50);
+    fill("green");
+    text("Game Over!", 50, 200);
+  }
+
+}
+```
