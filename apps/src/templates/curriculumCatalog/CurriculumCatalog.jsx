@@ -7,7 +7,12 @@ import {queryParams} from '../../code-studio/utils';
 import HeaderBanner from '../HeaderBanner';
 import CourseCatalogBannerBackground from '../../../static/curriculum_catalog/course-catalog-banner-illustration-01.png';
 import CourseCatalogIllustration01 from '../../../static/curriculum_catalog/course-catalog-illustration-01.png';
-import {Heading6} from '@cdo/apps/componentLibrary/typography';
+import CourseCatalogNoSearchResultPenguin from '../../../static/curriculum_catalog/course-catalog-no-search-result-penguin.png';
+import {
+  Heading5,
+  Heading6,
+  BodyOneText,
+} from '@cdo/apps/componentLibrary/typography';
 import CheckboxDropdown from '../CheckboxDropdown';
 import CurriculumCatalogCard from '@cdo/apps/templates/curriculumCatalog/CurriculumCatalogCard';
 import {
@@ -203,6 +208,51 @@ const CurriculumCatalog = ({curriculaData, isEnglish}) => {
     setAppliedFilters(newFilters);
   };
 
+  // Renders search results based on the applied filters (or shows the No matching curriculums
+  // message if no results).
+  const renderSearchResults = () => {
+    if (filteredCurricula.length > 0) {
+      return filteredCurricula
+        .filter(
+          curriculum =>
+            !!curriculum.grade_levels && !!curriculum.course_version_path
+        )
+        .map(
+          ({
+            key,
+            image,
+            display_name,
+            grade_levels,
+            duration,
+            school_subject,
+            cs_topic,
+            course_version_path,
+          }) => (
+            <CurriculumCatalogCard
+              key={key}
+              courseDisplayName={display_name}
+              imageSrc={image || undefined}
+              duration={duration}
+              gradesArray={grade_levels.split(',')}
+              subjects={school_subject?.split(',')}
+              topics={cs_topic?.split(',')}
+              isTranslated={false} // TODO [MEG]: actually pass in this data
+              isEnglish={isEnglish}
+              pathToCourse={course_version_path}
+            />
+          )
+        );
+    } else {
+      return (
+        <>
+          <img src={CourseCatalogNoSearchResultPenguin} alt="" />
+          <Heading5>{i18n.noCurriculumSearchResultsHeader()}</Heading5>
+          <BodyOneText>{i18n.noCurriculumSearchResultsBody()}</BodyOneText>
+        </>
+      );
+    }
+  };
+
   return (
     <>
       <HeaderBanner
@@ -238,39 +288,7 @@ const CurriculumCatalog = ({curriculaData, isEnglish}) => {
         </button>
       </div>
       <div className={style.catalogContentContainer}>
-        <div className={style.catalogContent}>
-          {/*TODO [MEG]: calculate and pass in duration and translated from backend */}
-          {filteredCurricula
-            .filter(
-              curriculum =>
-                !!curriculum.grade_levels && !!curriculum.course_version_path
-            )
-            .map(
-              ({
-                key,
-                image,
-                display_name,
-                grade_levels,
-                duration,
-                school_subject,
-                cs_topic,
-                course_version_path,
-              }) => (
-                <CurriculumCatalogCard
-                  key={key}
-                  courseDisplayName={display_name}
-                  imageSrc={image || undefined}
-                  duration={duration}
-                  gradesArray={grade_levels.split(',')}
-                  subjects={school_subject?.split(',')}
-                  topics={cs_topic?.split(',')}
-                  isTranslated={false} // TODO [MEG]: actually pass in this data
-                  isEnglish={isEnglish}
-                  pathToCourse={course_version_path}
-                />
-              )
-            )}
-        </div>
+        <div className={style.catalogContent}>{renderSearchResults()}</div>
       </div>
     </>
   );
