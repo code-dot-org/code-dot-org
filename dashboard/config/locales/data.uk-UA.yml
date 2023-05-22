@@ -762,6 +762,7 @@ uk:
         hoc_dance_events: Танцювальна вечірка - Події
         hoc_dance_properties: Танцювальна вечірка - Властивості
         hoc_dance_congrats: Танцювальна вечірка - Вечірка Почалась!
+        c_and_c_digital_sharing: Обмін та поширення онлайн
         what_is_cs: Що таке інформатика?
         repeat_block: Використання блоку повторів
         lesson_planning: Планування уроку
@@ -800,6 +801,7 @@ uk:
         csd_what_computers_are: Що таке комп’ютер?
         playlab_2021: Вступ до Ігрової лабораторії
         playlab_2021_reader: Вступ до Ігрової лабораторії
+        PL_CS_Journeys_Overview: Подорожі CS
         csp_applab_parameters: Функції з параметрами
         CS_Changing_Everything: Інформатика змінює все
     callout:

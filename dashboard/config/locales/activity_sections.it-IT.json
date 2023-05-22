@@ -10858,7 +10858,7 @@
         "b7ad2587-c022-4e9e-8bcd-2e0d1b15e41f": {
           "tips": [
             null,
-            null
+            "Facendo clic sul pulsante sullo schermo, il codice accenderà un piccolo LED rosso vicino alla porta USB di Circuit Playground. È probabile che gli studenti si aspettino che sia una delle luci LED più grandi ad accendersi, per cui potrebbero non notare subito il LED rosso più piccolo."
           ],
           "progression_name": "Predict"
         },
@@ -10870,7 +10870,7 @@
         },
         "a184074d-7a79-46a5-892f-8aeff5829c19": {
           "tips": [
-            null
+            "Questo codice usa il cicalino di Circuit Playground per produrre un suono. Il primo numero nel blocco di frequenze controlla la nota del cicalino: numeri bassi producono note più basse e numeri alti producono suoni a frequenza più alta. Gli studenti esploreranno tali frequenze nei prossimi livelli"
           ],
           "progression_name": "Predict"
         },
@@ -11800,6 +11800,7 @@
           "name": "Diario "
         },
         "73c2cb42-e6a3-4317-8aab-7196411578ab": {
+          "name": "Schede modello in AI Lab",
           "tips": [
             null
           ]
@@ -21561,6 +21562,7 @@
           "name": "Diario "
         },
         "30e5080a-05d0-4193-82e4-f7c81f1adb5c": {
+          "name": "Schede modello in AI Lab",
           "tips": [
             null
           ]

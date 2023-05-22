@@ -12,11 +12,12 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-05-10 21:08:41 UTC",
+    "serialized_at": "2023-05-19 19:54:00 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1844,7 +1845,7 @@
       "key": "945cb879-4ce8-49c5-a3d8-d2c6673be5ae",
       "position": 6,
       "properties": {
-        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 5.7\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 1.2\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
         "name": "AP Classroom Topic Questions"
       },
       "seeding_key": {
@@ -2159,7 +2160,7 @@
       "key": "316e821a-6634-4506-be69-08d3c7068f27",
       "position": 8,
       "properties": {
-        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).",
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 1.5\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
         "name": "AP Classroom Topic Questions"
       },
       "seeding_key": {
@@ -9722,6 +9723,27 @@
   "lessons_standards": [
     {
       "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-18"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-10",
         "framework.shortcode": "csa",
         "standard.shortcode": "CON-1.H.1"
@@ -9764,9 +9786,30 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-10",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-22"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-11",
         "framework.shortcode": "csa",
         "standard.shortcode": "CON-2.B.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-22"
       }
     },
     {
@@ -9788,6 +9831,13 @@
         "lesson.key": "lesson-12",
         "framework.shortcode": "csa",
         "standard.shortcode": "CON-1.G.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-22"
       }
     },
     {
@@ -9816,6 +9866,55 @@
         "lesson.key": "lesson-14",
         "framework.shortcode": "csa",
         "standard.shortcode": "CON-2.D.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-22"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-18"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-23"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-22"
       }
     },
     {
@@ -9883,6 +9982,13 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-6",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-22"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-7",
         "framework.shortcode": "csa",
         "standard.shortcode": "CON-1.D.1"
@@ -9907,6 +10013,20 @@
         "lesson.key": "lesson-7",
         "framework.shortcode": "csa",
         "standard.shortcode": "VAR-1.C.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-22"
       }
     },
     {
@@ -9939,6 +10059,13 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-8",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-22"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-9",
         "framework.shortcode": "csa",
         "standard.shortcode": "CON-1.D.3"
@@ -9949,6 +10076,20 @@
         "lesson.key": "lesson-9",
         "framework.shortcode": "csa",
         "standard.shortcode": "CON-1.D.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-22"
       }
     }
   ],

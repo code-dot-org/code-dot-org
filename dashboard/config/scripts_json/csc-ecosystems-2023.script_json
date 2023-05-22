@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": "csc-ecosystems",
-    "serialized_at": "2023-05-11 15:10:46 UTC",
+    "serialized_at": "2023-05-19 20:38:19 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -79,7 +79,7 @@
       "relative_position": 3,
       "properties": {
         "overview": "In this **skill-building** lesson, students will explore several different ecosystem simulations. Students can choose to explore a rainforest, desert, arctic, or wetlands ecosystem. They will take on the role of an ecologist and investigate the interactions between the plants and animals in each ecosystem’s food chain. Students will read the instructions to understand the challenge each ecosystem is facing. Then they will modify the corresponding code in order to rebalance the ecosystem. ",
-        "preparation": "- Play through the levels and review the lesson slides.\n- Decide on pacing between student work time and whole group instruction."
+        "preparation": "- Play through the levels and review the lesson slides.\n- Decide on pacing between student work time and whole group instruction.\n- Print an Ecologist's Notebook for each student\n- Consider the extension option at the end of the lesson plan"
       },
       "seeding_key": {
         "lesson.key": "lesson-3",
@@ -210,6 +210,19 @@
       },
       "seeding_key": {
         "lesson_activity.key": "cca52abd-7e79-46d4-a573-ca815122dee3",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csc-ecosystems-2023"
+      }
+    },
+    {
+      "key": "1684b440-4813-446c-a62d-201cf832b0fd",
+      "position": 4,
+      "properties": {
+        "name": "Extension Option"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1684b440-4813-446c-a62d-201cf832b0fd",
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "csc-ecosystems-2023"
@@ -687,7 +700,7 @@
       "key": "f7b0e9e5-649b-41d6-832a-7ce3bec1f5a0",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n- **Ecosystem** - A biological community of interacting organisms and their environment\n- **Producer** - definition\n- **Primary Consumer** - definition\n- **Secondary Consumer** - definition\n\n**Do This**: Review the vocabulary definitions and the pictures.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n- **Food Chain** - A group of organisms linked in order of the food they eat, from producers to consumers, and from prey to predators.\n- **Energy** - Transferred between organisms in food webs from producers to consumers. The energy is used by organisms to carry out complex tasks.\n\n**Do this**: Review definitions of Food Chain and Energy using the slide provided or pervious references used in your classroom. ",
         "duration": "10",
         "name": "Vocabulary"
       },
@@ -700,7 +713,7 @@
       "key": "022d1902-1a3b-4488-8332-b9333aa09bc8",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Food Chain” slide"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Food Chain - Marine” slide\n\n**Do This**: Review the Marine Ecosystem food chain example \n"
       },
       "seeding_key": {
         "activity_section.key": "022d1902-1a3b-4488-8332-b9333aa09bc8",
@@ -711,7 +724,7 @@
       "key": "72679211-0df2-4e09-b342-84b8cbb63bca",
       "position": 3,
       "properties": {
-        "description": "Energy flows from one organism to another through the food chain. The sun provides energy for the plants to grow. Primary consumers get the energy to live by eating plants. Secondary consumers eat the primary consumers for energy. Let’s look at this example of the Marine Ecosystem we have been working with and then complete the example for a rainforest ecosystem.",
+        "description": "Energy flows from one organism to another through the food chain. The sun provides energy for the plants to grow. Primary consumers, usually plants, get the energy to live by eating plants. Secondary consumers, in this case fish, eat the primary consumers for energy. By looking at this example of the Marine Ecosystem we have been working with, we can also complete the example for a rainforest ecosystem.",
         "remarks": true
       },
       "seeding_key": {
@@ -723,7 +736,7 @@
       "key": "30157cac-7e00-44d9-b3e0-c3b27591d7c1",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Marine Ecosystem example” slide\n\n**Do This**: Review the Marine Ecosystem food chain example "
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Food Chain - Rainforest” slide\n\n\n**Discuss**: What are the organisms in the food chain in a rainforest ecosystem? \n\n**Discussion Goal**: Students will identify organisms’ placement in the food chain within a rainforest ecosystem. "
       },
       "seeding_key": {
         "activity_section.key": "30157cac-7e00-44d9-b3e0-c3b27591d7c1",
@@ -745,8 +758,10 @@
       "key": "81bd8cd7-0a8a-41d4-9ea9-34e285777719",
       "position": 1,
       "properties": {
-        "name": "Complete the Food Chain",
-        "progression_name": "Code Your Own Ecosystem Simulation"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 1 - The Food Chain” slide\n\n**Do This**: Review the delicate balance of a food chain using examples of cause and effect from lesson 1.\n",
+        "duration": "5",
+        "name": "Food Chain Review",
+        "progression_name": "The Food Chain"
       },
       "seeding_key": {
         "activity_section.key": "81bd8cd7-0a8a-41d4-9ea9-34e285777719",
@@ -757,7 +772,9 @@
       "key": "277c72a1-2eb0-4508-88ab-ea1467d9dc3d",
       "position": 2,
       "properties": {
-        "progression_name": "The Food Chain"
+        "description": "The food chain is a delicate balance. If there is too much of one organism then there can be effects on the other plants or animals. In the Marine Simulation we have been working with, the human impact caused an imbalance in the ecosystem. The boat took too many fish out of the ocean. Since fish eat the algae, removing fish meant that the algae was overgrown. Too much algae in the ecosystem caused the coral to die.",
+        "progression_name": "The Food Chain",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "277c72a1-2eb0-4508-88ab-ea1467d9dc3d",
@@ -768,7 +785,10 @@
       "key": "09231b15-08f9-4770-8abd-22c1b8c4729e",
       "position": 3,
       "properties": {
-        "progression_name": "Choice Level: Ecosystems"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2 - Choice Level” slide\n\n**Do This**: Give each student a copy of the Activity Guide. Review the Observe, Modify and Record sections before students beginning their choice level on the computer. ",
+        "duration": "15",
+        "name": "Observe, Modify, Record",
+        "progression_name": "Balance an Ecosystem"
       },
       "seeding_key": {
         "activity_section.key": "09231b15-08f9-4770-8abd-22c1b8c4729e",
@@ -776,9 +796,24 @@
       }
     },
     {
-      "key": "9216fede-49ad-4b19-a1d3-aea5e42900a9",
+      "key": "0a65cbdc-a7b3-4262-975b-c5963bc30c29",
       "position": 4,
       "properties": {
+        "description": "In this level, there are four examples of ecosystems that are facing challenges from human interference. You get to choose what ecosystem to balance. Will you be a Rainforest ecologist, Desert ecologist, Wetlands ecologist, or Arctic ecologist? \n\nStart by observing the ecosystem simulation in action. Write down your observations in your Ecologist’s Notebook. \n\nThen follow the instructions to modify the code to help balance the ecosystem. \n\nRun the simulation again and watch for how the change in the code changed the simulation. Finally, record your observations of the changes on your Ecologist’s Notebook. \n\nYou can explore another ecosystem if you have time!\n",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "0a65cbdc-a7b3-4262-975b-c5963bc30c29",
+        "lesson_activity.key": "55193ffa-151e-4247-b12f-fd7251cf4a99"
+      }
+    },
+    {
+      "key": "9216fede-49ad-4b19-a1d3-aea5e42900a9",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 3 - Share Out” slide\n\n**Do This**: Group students in a random fashion of your choice, ideally with peers who choose a different ecosystem to balance. ",
+        "duration": "10",
+        "name": "Share Out",
         "progression_name": "Share Your Simulation"
       },
       "seeding_key": {
@@ -787,16 +822,80 @@
       }
     },
     {
+      "key": "7ad0e8a1-2be5-47d2-a203-a6c9c3bb5bd8",
+      "position": 6,
+      "properties": {
+        "description": "One of the great things about computer science is that there is often more than one correct solution to a problem. When you get with your group/partner start by explaining the ecosystem you chose, and the challenge it had.\n\n1. Explain the food chain in your ecosystem and how you coded it.\n2. Was there too much or too little of an organism?\n\nThen, show the modifications you made to the code and explain how it changed the simulation.\n\n3. Explain the modifications you made to the simulation.\n4. What did you notice after you changed the values?\n",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "7ad0e8a1-2be5-47d2-a203-a6c9c3bb5bd8",
+        "lesson_activity.key": "55193ffa-151e-4247-b12f-fd7251cf4a99"
+      }
+    },
+    {
+      "key": "cb2a879c-6ef3-4f45-a5ce-de3b695cad85",
+      "position": 7,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Encourage students to use their Engineer’s Notebook to support their conversation and share out with their group. You can group the questions into two parts: A) Explain the ecosystem, food chain, and human impact. B) Show the code, point out the modifications and then run the final simulation. Give students a cue to switch so that all members of the group have time to share their work. "
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "cb2a879c-6ef3-4f45-a5ce-de3b695cad85",
+        "lesson_activity.key": "55193ffa-151e-4247-b12f-fd7251cf4a99"
+      }
+    },
+    {
       "key": "ea776062-2f16-4d74-95c5-015ddf9a1e90",
       "position": 1,
       "properties": {
-        "description": "**Discuss**: \n- _Is your ecosystem balanced or are there too much or too little of any of the organisms?_ \n- _What regulations could help keep your ecosystem sustainable, balanced, and healthy?_\n\n**Discussion Goal:** Students will make a connection to the real world. They will be able to explain the need to  keep different ecosystems balanced and healthy, and potential solutions for doing so.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Keeping it sustainable” slide\n\n**Discuss**: \nWhy types of regulations might help keep your ecosystem sustainable, balanced and healthy?\n\n\n**Discussion Goal:** Students will make a connection to Lesson 2 and apply ideas from the three potential sustainable fishing practices introduced throughout the levels. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n\n**Discuss**:  Why is it important to keep all of the ecosystems balanced and healthy? What can YOU do to help the ecosystem you live in? \n\n**Discussion Goal:** Students will make a connection to the real world. They will be able to explain the need to keep different ecosystems balanced and healthy, and potential solutions for doing so.\n",
         "duration": "5",
-        "name": "Discussion"
+        "name": "Turn & Talk"
       },
       "seeding_key": {
         "activity_section.key": "ea776062-2f16-4d74-95c5-015ddf9a1e90",
         "lesson_activity.key": "cca52abd-7e79-46d4-a573-ca815122dee3"
+      }
+    },
+    {
+      "key": "9682670e-68d2-453d-9f22-b93126eb808f",
+      "position": 2,
+      "properties": {
+        "description": "Great work, ecologists! Together we have used computer science to help learn about and understand the delicate  balance of a food chain in an ecosystem. Scientists use simulations like these to test out new ideas and solutions for protecting the ecosystems all around the world! Maybe you will be an ecologist using computer science in the future! ",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "9682670e-68d2-453d-9f22-b93126eb808f",
+        "lesson_activity.key": "cca52abd-7e79-46d4-a573-ca815122dee3"
+      }
+    },
+    {
+      "key": "2ac3ae1c-b9e7-455a-91a3-b30db502e3b2",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 10 - Free Play” slide\n\n\n**Do This**: Students can use the animals and backgrounds to create their own ecosystem. \n\n\n**(Optional) Do This**: It is possible for you to make a remix of the Free Play level in Lesson 1 and then upload your own images to use for sprites. You could use this technique to put a local lens on the last level. [This](https://youtu.be/8KCAvNt4jRg) is a video that explains how to upload your own images for your students to use as sprites.\n",
+        "name": "Create a Local Ecosystem"
+      },
+      "seeding_key": {
+        "activity_section.key": "2ac3ae1c-b9e7-455a-91a3-b30db502e3b2",
+        "lesson_activity.key": "1684b440-4813-446c-a62d-201cf832b0fd"
+      }
+    },
+    {
+      "key": "9fda5c5f-e72e-4695-accb-10fe0ecad953",
+      "position": 2,
+      "properties": {
+        "description": "Try adding a background and sprites that represent an ecosystem in our area! There are new sprite and background options available to you in this level. \n\n- How do the organisms in this ecosystem move? Try adding behaviors!\n- How do the organisms in this ecosystem interact? Try adding events!\n- How does the energy flow (food web) in this ecosystem?  \n- Is your simulation a balanced ecosystem or is one organism causing an imbalance?  \n",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "9fda5c5f-e72e-4695-accb-10fe0ecad953",
+        "lesson_activity.key": "1684b440-4813-446c-a62d-201cf832b0fd"
       }
     }
   ],
@@ -807,6 +906,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_intro video_2023"
+        ],
         "progression": "Ecosystems Video"
       },
       "bonus": false,
@@ -829,6 +931,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_ocean_fish_2023"
+        ],
         "progression": "Ecosystems Simulation"
       },
       "bonus": false,
@@ -1276,6 +1381,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_matching_cfu"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -1298,9 +1406,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csc_ecosystemes_foodchain_info"
-        ],
         "progression": "The Food Chain"
       },
       "bonus": false,
@@ -1311,7 +1416,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "csc-ecosystems-2023",
-        "activity_section.key": "277c72a1-2eb0-4508-88ab-ea1467d9dc3d"
+        "activity_section.key": "81bd8cd7-0a8a-41d4-9ea9-34e285777719"
       },
       "level_keys": [
         "csc_ecosystemes_foodchain_info"
@@ -1323,7 +1428,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Choice Level: Ecosystems"
+        "level_keys": [
+          "csc_ecosystems_choice_freeplay_2023"
+        ],
+        "progression": "Balance an Ecosystem"
       },
       "bonus": false,
       "seeding_key": {
@@ -1345,6 +1453,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_planning"
+        ],
         "progression": "Share Your Simulation"
       },
       "bonus": false,
@@ -1612,7 +1723,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "csc-ecosystems-2023",
-        "activity_section.key": "277c72a1-2eb0-4508-88ab-ea1467d9dc3d"
+        "activity_section.key": "81bd8cd7-0a8a-41d4-9ea9-34e285777719"
       }
     },
     {
@@ -1641,6 +1752,19 @@
     }
   ],
   "resources": [
+    {
+      "name": "Ecologist's Notebook",
+      "url": "https://docs.google.com/document/d/1_xi5PFs5TJyO3-8Hz7ftZxCNRPpd5yQBCwhm8IuysY8/preview",
+      "key": "ecologist_s_notebook",
+      "properties": {
+        "audience": "Student",
+        "download_url": "https://docs.google.com/document/d/1_xi5PFs5TJyO3-8Hz7ftZxCNRPpd5yQBCwhm8IuysY8/",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "ecologist_s_notebook"
+      }
+    },
     {
       "name": "Simulating a Marine Ecosystem",
       "url": "https://docs.google.com/presentation/d/1LtXP3ssc5-kOV1DgccN3957oAyF1cf-VaghZJsL7Vtk/template/preview",
@@ -1684,6 +1808,12 @@
       "seeding_key": {
         "lesson.key": "Overfishing Simulation (pilot)",
         "resource.key": "ecosystems"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "ecologist_s_notebook"
       }
     },
     {
@@ -1741,6 +1871,16 @@
       }
     },
     {
+      "key": "ecologist",
+      "word": "Ecologist",
+      "definition": "A scientist who studies how animals and plants interact with their environment.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "ecologist"
+      }
+    },
+    {
       "key": "ecosystem",
       "word": "Ecosystem",
       "definition": "A biological community of interacting organisms and their environment",
@@ -1751,6 +1891,16 @@
       }
     },
     {
+      "key": "energy",
+      "word": "Energy",
+      "definition": "Transferred between organisms in food webs from producers to consumers. The energy is used by organisms to carry out complex tasks.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "energy"
+      }
+    },
+    {
       "key": "event",
       "word": "Event",
       "definition": "An action that causes something to happen",
@@ -1758,6 +1908,16 @@
       },
       "seeding_key": {
         "vocabulary.key": "event"
+      }
+    },
+    {
+      "key": "food_chain",
+      "word": "Food Chain ",
+      "definition": "A group of organisms linked in order of the food they eat, from producers to consumers, and from prey to predators.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "food_chain"
       }
     },
     {
@@ -1861,7 +2021,25 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-3",
+        "vocabulary.key": "ecologist"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
         "vocabulary.key": "ecosystem"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "vocabulary.key": "energy"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "vocabulary.key": "food_chain"
       }
     }
   ],
@@ -1869,16 +2047,6 @@
 
   ],
   "objectives": [
-    {
-      "key": "00230e09-5cf5-43c2-a283-dd0fce700e5e",
-      "properties": {
-        "description": "Explain how their modifications to the simulation impacted the ecosystem."
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-3",
-        "objective.key": "00230e09-5cf5-43c2-a283-dd0fce700e5e"
-      }
-    },
     {
       "key": "2523ed88-7219-4356-a342-5077931e97df",
       "properties": {
@@ -1890,16 +2058,6 @@
       }
     },
     {
-      "key": "2846e3d6-79b9-4238-a8de-75112b54b75b",
-      "properties": {
-        "description": "Identify patterns between the new ecosystem examples and the previous marine ecosystem simulation."
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-3",
-        "objective.key": "2846e3d6-79b9-4238-a8de-75112b54b75b"
-      }
-    },
-    {
       "key": "4094e6da-1294-4686-aefc-b5363d35070a",
       "properties": {
         "description": "Develop a simulation of the effects of overfishing on an aquatic ecosystem"
@@ -1907,6 +2065,26 @@
       "seeding_key": {
         "lesson.key": "Overfishing Simulation (pilot)",
         "objective.key": "4094e6da-1294-4686-aefc-b5363d35070a"
+      }
+    },
+    {
+      "key": "621bdd35-b3ad-4df7-af0f-e8ba6e591131",
+      "properties": {
+        "description": "Experiment with how changes to one part of the food chain can affect the entire ecosystem."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "objective.key": "621bdd35-b3ad-4df7-af0f-e8ba6e591131"
+      }
+    },
+    {
+      "key": "664b9350-b3cd-4628-8e4d-47c4104c4d4c",
+      "properties": {
+        "description": "Explain how their modifications to the simulation impacted the ecosystem."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "objective.key": "664b9350-b3cd-4628-8e4d-47c4104c4d4c"
       }
     },
     {
@@ -1930,53 +2108,33 @@
       }
     },
     {
-      "key": "861e0a5a-3831-41a8-9368-de1b3dbfe939",
+      "key": "977ebecc-d561-43b6-a4ad-33ff9807142a",
       "properties": {
-        "description": "Explain how changes to one part of the food chain can affect the entire ecosystem."
+        "description": "Analyze the interdependent relationships between plants and animals in a food chain and the effects of human impact."
       },
       "seeding_key": {
         "lesson.key": "lesson-3",
-        "objective.key": "861e0a5a-3831-41a8-9368-de1b3dbfe939"
+        "objective.key": "977ebecc-d561-43b6-a4ad-33ff9807142a"
       }
     },
     {
-      "key": "a5733040-7796-4039-8cc1-59a35e42e8f3",
+      "key": "ba2554e5-0ad2-4d70-ab12-eab4d31d57e1",
+      "properties": {
+        "description": "Identify the food chain in different types of ecosystems, such as rainforests, deserts, arctic, and wetlands."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "objective.key": "ba2554e5-0ad2-4d70-ab12-eab4d31d57e1"
+      }
+    },
+    {
+      "key": "f3e0667d-0843-4d41-ae79-7ec7911d5ea4",
       "properties": {
         "description": "Modify code in a simulation to restore balance to an ecosystem that is facing a challenge, such as a decrease in a certain species or an overgrowth of another species."
       },
       "seeding_key": {
         "lesson.key": "lesson-3",
-        "objective.key": "a5733040-7796-4039-8cc1-59a35e42e8f3"
-      }
-    },
-    {
-      "key": "b3d32931-fad4-40b8-82f1-f464ee57bd0f",
-      "properties": {
-        "description": "Identify different types of ecosystems, such as rainforest, desert, arctic, and wetlands."
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-3",
-        "objective.key": "b3d32931-fad4-40b8-82f1-f464ee57bd0f"
-      }
-    },
-    {
-      "key": "ec915959-024e-4314-9c18-4855af414be3",
-      "properties": {
-        "description": "Analyze the interactions between plants and animals in a food chain."
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-3",
-        "objective.key": "ec915959-024e-4314-9c18-4855af414be3"
-      }
-    },
-    {
-      "key": "f3cba8b3-4ccf-413d-9284-944b252b499f",
-      "properties": {
-        "description": "Describe the unique characteristics and adaptations of plants and animals that inhabit each ecosystem."
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-3",
-        "objective.key": "f3cba8b3-4ccf-413d-9284-944b252b499f"
+        "objective.key": "f3e0667d-0843-4d41-ae79-7ec7911d5ea4"
       }
     },
     {
@@ -2088,6 +2246,76 @@
     {
       "seeding_key": {
         "lesson.key": "Overfishing Simulation (pilot)",
+        "framework.shortcode": "ngss",
+        "standard.shortcode": "5-PS3-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-15"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-DA-07"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "framework.shortcode": "ngss",
+        "standard.shortcode": "3-LS4-3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "framework.shortcode": "ngss",
+        "standard.shortcode": "4-ESS3-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "framework.shortcode": "ngss",
+        "standard.shortcode": "5-LS1-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "framework.shortcode": "ngss",
+        "standard.shortcode": "5-LS2-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
         "framework.shortcode": "ngss",
         "standard.shortcode": "5-PS3-1"
       }

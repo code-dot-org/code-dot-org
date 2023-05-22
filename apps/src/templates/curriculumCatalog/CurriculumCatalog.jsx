@@ -1,8 +1,9 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import PropTypes from 'prop-types';
 import {curriculumDataShape} from './curriculumCatalogShapes';
 import i18n from '@cdo/locale';
 import style from '../../../style/code-studio/curriculum_catalog_container.module.scss';
+import {queryParams} from '../../code-studio/utils';
 import HeaderBanner from '../HeaderBanner';
 import CourseCatalogBannerBackground from '../../../static/curriculum_catalog/course-catalog-banner-illustration-01.png';
 import CourseCatalogIllustration01 from '../../../static/curriculum_catalog/course-catalog-illustration-01.png';
@@ -15,6 +16,7 @@ import {
   translatedCourseOfferingDeviceTypes,
   translatedCourseOfferingDurations,
   translatedGradeLevels,
+  gradeLevelsMap,
 } from '../teacherDashboard/CourseOfferingHelpers';
 
 const filterTypes = {
@@ -28,7 +30,7 @@ const filterTypes = {
     label: i18n.duration(),
     options: translatedCourseOfferingDurations,
   },
-  name: {
+  topic: {
     name: 'topic',
     label: i18n.topic(),
     options: {
@@ -51,8 +53,118 @@ const getEmptyFilters = () => {
   return filters;
 };
 
+// Filters out invalid values for the given filter key.
+const getValidParamValues = (filterKey, paramValues) => {
+  if (!Array.isArray(paramValues)) {
+    paramValues = [paramValues];
+  }
+  return paramValues.filter(paramValue => {
+    return Object.keys(filterTypes[filterKey].options).includes(paramValue);
+  });
+};
+
+// Returns initial filter states based on URL parameters (returns empty filters if
+// no relevant parameters in the URL). The filter params are of the form:
+// "filter_name:checked_value_1,checked_value_2,etc."
+const getInitialFilterStates = () => {
+  const filterTypeKeys = Object.keys(filterTypes);
+  const urlParams = queryParams();
+
+  let filters = getEmptyFilters();
+  Object.keys(urlParams).forEach(paramKey => {
+    if (filterTypeKeys.includes(paramKey)) {
+      filters[paramKey] = getValidParamValues(paramKey, urlParams[paramKey]);
+    }
+  });
+  return filters;
+};
+
+// Returns whether the given curriculum matches the checked grade level filters.
+const filterByGradeLevel = (curriculum, gradeFilters) => {
+  if (gradeFilters.length > 0) {
+    if (!curriculum.grade_levels) {
+      return false;
+    } else {
+      const curriculumGradeLevels = curriculum.grade_levels.split(',');
+      const supportsFilteredGradeLevel = gradeFilters.some(grade =>
+        curriculumGradeLevels.includes(gradeLevelsMap[grade])
+      );
+      if (!supportsFilteredGradeLevel) {
+        return false;
+      }
+    }
+  }
+  return true;
+};
+
+// Returns whether the given curriculum matches the checked duration filters.
+const filterByDuration = (curriculum, durationFilters) => {
+  return (
+    durationFilters.length === 0 ||
+    durationFilters.includes(curriculum.duration)
+  );
+};
+
+// Returns whether the given curriculum matches the checked topic filters.
+// (Note: the Interdisciplinary topic will show any course that has been tagged
+// with a school subject (e.g. Math, Science, etc.))
+const filterByTopic = (curriculum, topicFilters) => {
+  if (topicFilters.length > 0) {
+    if (!curriculum.cs_topic) {
+      return false;
+    } else {
+      // Handle main CS topics
+      const curriculumTopics = curriculum.cs_topic.split(',');
+      const supportsFilteredTopics = topicFilters.some(topic =>
+        curriculumTopics.includes(topic)
+      );
+      // Handle case of Interdisciplinary topic
+      const hasAndSupportsInterdisciplinary =
+        topicFilters.includes('interdisciplinary') && curriculum.school_subject;
+      if (!supportsFilteredTopics && !hasAndSupportsInterdisciplinary) {
+        return false;
+      }
+    }
+  }
+  return true;
+};
+
+// Returns whether the given curriculum matches the checked device filters.
+const filterByDevice = (curriculum, deviceFilters) => {
+  if (deviceFilters.length > 0) {
+    if (!curriculum.device_compatibility) {
+      return false;
+    } else {
+      const curriculumDevComp = JSON.parse(curriculum.device_compatibility);
+      const supportsFilteredDevice = deviceFilters.some(
+        device => curriculumDevComp[device] === 'ideal'
+      );
+      if (!supportsFilteredDevice) {
+        return false;
+      }
+    }
+  }
+  return true;
+};
+
 const CurriculumCatalog = ({curriculaData, isEnglish}) => {
-  const [appliedFilters, setAppliedFilters] = useState(getEmptyFilters());
+  const [filteredCurricula, setFilteredCurricula] = useState(curriculaData);
+  const [appliedFilters, setAppliedFilters] = useState(
+    getInitialFilterStates()
+  );
+
+  // Filters out any Curriculum Catalog Cards of courses that do not match the filter criteria.
+  useEffect(() => {
+    const newFilteredCurricula = curriculaData.filter(
+      curriculum =>
+        filterByGradeLevel(curriculum, appliedFilters['grade']) &&
+        filterByDuration(curriculum, appliedFilters['duration']) &&
+        filterByTopic(curriculum, appliedFilters['topic']) &&
+        filterByDevice(curriculum, appliedFilters['device'])
+    );
+
+    setFilteredCurricula(newFilteredCurricula);
+  }, [curriculaData, appliedFilters]);
 
   // Selects the given value in the given filter.
   const handleSelect = (event, filterKey) => {
@@ -63,14 +175,13 @@ const CurriculumCatalog = ({curriculaData, isEnglish}) => {
     if (isChecked) {
       //Add checked item into applied filters
       newFilters[filterKey] = [...appliedFilters[filterKey], value];
-      setAppliedFilters(newFilters);
     } else {
       //Remove unchecked item from applied filters
       newFilters[filterKey] = appliedFilters[filterKey].filter(
         item => item !== value
       );
-      setAppliedFilters(newFilters);
     }
+    setAppliedFilters(newFilters);
   };
 
   // Selects all options within the given filter.
@@ -129,7 +240,7 @@ const CurriculumCatalog = ({curriculaData, isEnglish}) => {
       <div className={style.catalogContentContainer}>
         <div className={style.catalogContent}>
           {/*TODO [MEG]: calculate and pass in duration and translated from backend */}
-          {curriculaData
+          {filteredCurricula
             .filter(
               curriculum =>
                 !!curriculum.grade_levels && !!curriculum.course_version_path

@@ -3,6 +3,7 @@
     "data": {
       "programming_environments": {
         "weblab": {
+          "name": "Веб-лабораторія",
           "categories": {
             "html_tags": {
               "name": "HTML Теги"
@@ -15,6 +16,20 @@
             "game_lab": {
               "name": "Ігрова лабораторія",
               "expressions": {
+                "mouseIsOver": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Спрайт"
+                    }
+                  }
+                },
+                "mousePressedOver": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Спрайт"
+                    }
+                  }
+                },
                 "mouseWentDown": {
                   "examples": {
                     "Black and White": {
@@ -42,6 +57,27 @@
             "groups": {
               "name": "Групи",
               "expressions": {
+                "add": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Спрайт"
+                    }
+                  }
+                },
+                "contains": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Спрайт"
+                    }
+                  }
+                },
+                "remove": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Спрайт"
+                    }
+                  }
+                },
                 "setColorEach": {
                   "palette_params": {
                     "color": {
@@ -59,6 +95,7 @@
               }
             },
             "drawing": {
+              "name": "Малювання",
               "expressions": {
                 "background": {
                   "examples": {

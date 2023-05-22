@@ -492,6 +492,7 @@ es-MX:
           title: vpl-csd-verano-piloto-ci
           version_title: 23-24
         self-paced-pl-physical-computing-2023:
+          title: Enseñando a crear aplicaciones con dispositivos (Circuit Playground)
           description_student: |-
             ## Bienvenido
 
@@ -512,6 +513,7 @@ es-MX:
             -   **Vaya a su propio ritmo:** este curso autodidáctico está diseñado para ponerte en el asiento de conductor y tomar control de su aprendizaje. Ofrecemos cronogramas de cada módulo y lección. Sin embargo, lo alentamos a **aprender el contenido a su propio ritmo.**
 
             -   **Elija su contenido:** El contenido de este curso de aprendizaje profesional está organizado en base a la progresión sugerida para profesores nuevos en Code.org y Descubrimientos CS. Sin embargo, puede **interactuar con el contenido en el orden que mejor se adapte a su horario.** Recomendamos a todos los profesores **comenzar con la breve unidad de bienvenida** para obtener más información sobre el curso antes de comenzar.
+          version_title: 23 - 24
         self-paced-pl-csd-2023:
           title: autodidáctico-pl-csd-2021
           description_student: |-
@@ -535,7 +537,28 @@ es-MX:
 
             -   **Elige tu contenido:** El contenido de este curso de aprendizaje profesional está organizado en la progresión sugerida para educadores nuevos tanto en Code.org como en Descubrimientos de Informática. Sin embargo, puedes **comprometerte con el contenido en el orden que mejor se adapte a tus necesidades.** Recomendamos a todos los profesores **empezar con la breve unidad de bienvenida** para aprender más sobre este curso de aprendizaje profesional antes de empezar.
           version_title: 23-24
+        self-paced-pl-microbit-2023:
+          title: Enseñando a crear aplicaciones con dispositivos (micro:bit)
         pl-csd-summer-2023:
+          title: Taller de verano - Descubrimientos de Informática
+          description_student: "\\*\\*Podrás: \\*\\*\n\n-   Prepararte para enseñar
+            CS Descubrimientos.\n-   Practicar conceptos clave en el plan de estudios
+            de CS Discoveries.\n-   Crecer en su comprensión de la educación equitativa
+            CS. \n-   Desarrollar empatía por la experiencia del alumno. \n-   Formar
+            parte de una red de profesores que están realizando trabajos similares."
+          description_teacher: "\\*\\*Los participantes podrán: \\*\\*\n\n-   Prepararse
+            para enseñar CS Descubrimientos.\n-   Practicar conceptos clave en el
+            plan de estudios de CS Discoveries.\n-   Crecer en su comprensión de la
+            educación equitativa CS. \n-   Desarrollar empatía por la experiencia
+            del alumno. \n-   Formar parte de una red de profesores que están realizando
+            trabajos similares."
+        virtual-pl-csd-summer-2023:
+          title: virtual-pl-csd-verano-2023
+          description_student: "\\*\\*Podrás: \\*\\*\n\n-   Prepararte para enseñar
+            CS Descubrimientos.\n-   Practicar conceptos clave en el plan de estudios
+            de CS Discoveries.\n-   Crecer en su comprensión de la educación equitativa
+            CS. \n-   Desarrollar empatía por la experiencia del alumno. \n-   Formar
+            parte de una red de profesores que están realizando trabajos similares."
           description_teacher: "\\*\\*Los participantes podrán: \\*\\*\n\n-   Prepararse
             para enseñar CS Descubrimientos.\n-   Practicar conceptos clave en el
             plan de estudios de CS Discoveries.\n-   Crecer en su comprensión de la
@@ -603,6 +626,8 @@ es-MX:
       all_vocabulary_2/csd/2023:
         name: Todo el Vocabulario
         url: "/cursos/csd-2023/vocabulario"
+      csd_changelog_23-_24/csd/2023:
+        name: CSD Registro de Cambios '23-'24
       csd_guide_to_assessment/csd/2023:
         name: CSD Guía de Evaluacíon
       csd_guide_to_differentiation_1/csd/2023:

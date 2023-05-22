@@ -8558,7 +8558,7 @@ uz-UZ:
         - text: pingvin
         - text: qurbaqa
           correct: true
-        - {}
+        - text: jirafa
         - {}
         questions:
         - {}
@@ -8568,7 +8568,7 @@ uz-UZ:
         - text: pingvin
         - text: qurbaqa
           correct: true
-        - {}
+        - text: jirafa
         - {}
         questions:
         - {}
@@ -8578,7 +8578,7 @@ uz-UZ:
         - text: pingvin
         - text: qurbaqa
           correct: true
-        - {}
+        - text: jirafa
         - {}
         questions:
         - {}
@@ -8588,7 +8588,7 @@ uz-UZ:
           correct: true
         - text: pingvin
         - text: qurbaqa
-        - {}
+        - text: jirafa
         - {}
         questions:
         - {}
@@ -8598,7 +8598,7 @@ uz-UZ:
           correct: true
         - text: pingvin
         - text: qurbaqa
-        - {}
+        - text: jirafa
         - {}
         questions:
         - {}
@@ -8608,7 +8608,7 @@ uz-UZ:
           correct: true
         - text: pingvin
         - text: qurbaqa
-        - {}
+        - text: jirafa
         - {}
         questions:
         - {}

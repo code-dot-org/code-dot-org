@@ -1,6 +1,6 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import {Row} from 'react-bootstrap';
+import {Row} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import {
   Summary,
   removeIncompleteApplications,

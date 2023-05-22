@@ -412,7 +412,8 @@
           "F": "ایف",
           "G": "جی",
           "A": "ایے",
-          "B": "بی"
+          "B": "بی",
+          "Note:": "نوٹ:"
         },
         "CSD U6 - Music - SB1_2222": {
           "C": "سی",
@@ -533,7 +534,8 @@
         "CSD U6 - Screen Outputs - PracA_2222": {
           "Red": "سرخ",
           "Green": "سبز",
-          "Blue": "نیلا"
+          "Blue": "نیلا",
+          "White": "وائٹ"
         },
         "CSD U6 - Screen Outputs - PracB_2222": {
           "up": "اوپر",
@@ -992,7 +994,8 @@
           "Blue": "نیلا",
           "Yes": "جی",
           "No": "نہيں",
-          "Save": "محفوظ کریں"
+          "Save": "محفوظ کریں",
+          "About Us": "ہمارے بارے میں"
         },
         "CSDU4 Crowdsource App Demo_2018": {
           "About": "متعلق",
@@ -1004,7 +1007,8 @@
           "Blue": "نیلا",
           "Yes": "جی",
           "No": "نہيں",
-          "Save": "محفوظ کریں"
+          "Save": "محفوظ کریں",
+          "About Us": "ہمارے بارے میں"
         },
         "CSDU4 Crowdsource App Demo_2019": {
           "About": "متعلق",
@@ -1016,61 +1020,72 @@
           "Blue": "نیلا",
           "Yes": "جی",
           "No": "نہيں",
-          "Save": "محفوظ کریں"
+          "Save": "محفوظ کریں",
+          "About Us": "ہمارے بارے میں"
         },
         "CSDU4 Decision App Demo": {
           "About": "متعلق",
           "Why?": "کیوں؟",
           "I don't know": "مے نی جانتا",
-          "When?": "کب؟"
+          "When?": "کب؟",
+          "About Us": "ہمارے بارے میں"
         },
         "CSDU4 Decision App Demo_2018": {
           "About": "متعلق",
           "Why?": "کیوں؟",
           "I don't know": "مے نی جانتا",
-          "When?": "کب؟"
+          "When?": "کب؟",
+          "About Us": "ہمارے بارے میں"
         },
         "CSDU4 Decision App Demo_2019": {
           "About": "متعلق",
           "Why?": "کیوں؟",
           "I don't know": "مے نی جانتا",
-          "When?": "کب؟"
+          "When?": "کب؟",
+          "About Us": "ہمارے بارے میں"
         },
         "CSDU4 Functionality visible": {
-          "Hide": "پوشیدہ"
+          "Hide": "پوشیدہ",
+          "Show": "دکھائیں"
         },
         "CSDU4 List App Demo": {
           "About": "متعلق",
-          "Cancel": "منسوخ کریں"
+          "Cancel": "منسوخ کریں",
+          "About Us": "ہمارے بارے میں"
         },
         "CSDU4 List App Demo_2018": {
           "About": "متعلق",
-          "Cancel": "منسوخ کریں"
+          "Cancel": "منسوخ کریں",
+          "About Us": "ہمارے بارے میں"
         },
         "CSDU4 List App Demo_2019": {
           "About": "متعلق",
-          "Cancel": "منسوخ کریں"
+          "Cancel": "منسوخ کریں",
+          "About Us": "ہمارے بارے میں"
         },
         "CSDU4 Quiz App Demo": {
           "About": "متعلق",
           "Submit": "جمع کرائیں",
           "Why?": "کیوں؟",
           "When?": "کب؟",
-          "Correct!": "درست!"
+          "Correct!": "درست!",
+          "About Us": "ہمارے بارے میں"
         },
         "CSDU4 Quiz App Demo_2018": {
           "About": "متعلق",
           "Submit": "جمع کرائیں",
           "Why?": "کیوں؟",
           "When?": "کب؟",
-          "Correct!": "درست!"
+          "Correct!": "درست!",
+          "About Us": "ہمارے بارے میں"
         },
         "CSDU4 Quiz App Demo_2019": {
           "About": "متعلق",
           "Submit": "جمع کرائیں",
           "Why?": "کیوں؟",
           "When?": "کب؟",
-          "Correct!": "درست!"
+          "Correct!": "درست!",
+          "About Us": "ہمارے بارے میں"
         },
         "CSDU6 - UI and Inputs - getNumber": {
           "+": "+",
@@ -1577,7 +1592,8 @@
           "Pet Recommendation: Parakeet": "پالتو جانوروں کی سفارش: پالتو جانور",
           "Pet Recommendation: Dog!": "پالتو جانوروں کی سفارش: کتا!",
           "Intended Uses": "مقصود استعمال",
-          "Limitations and Warnings": "حدود اور انتباہ"
+          "Limitations and Warnings": "حدود اور انتباہ",
+          "Back": "واپس"
         },
         "ml-models in applab-choice intended warnings_2022": {
           "3": "3",
@@ -1597,7 +1613,8 @@
           "Pet Recommendation: Parakeet": "پالتو جانوروں کی سفارش: پالتو جانور",
           "Pet Recommendation: Dog!": "پالتو جانوروں کی سفارش: کتا!",
           "Intended Uses": "مقصود استعمال",
-          "Limitations and Warnings": "حدود اور انتباہ"
+          "Limitations and Warnings": "حدود اور انتباہ",
+          "Back": "واپس"
         },
         "ml-models in applab-choice predict typos": {
           "3": "3",
@@ -1807,7 +1824,9 @@
           "I'm Ready To Try Myself!": "میں خود کی کوشش کرنے کے لئے تیار ہوں!",
           "See All Results": "تمام نتائج دیکھیں",
           "On this screen, the wizard can show you example words. See if you notice any patterns": "اس اسکرین پر، مددگار آپ کو مثال کے الفاظ دکھا سکتا ہے. اگر آپ کسی بھی پیٹرن کو نوٹس دیکھتے ہیں تو دیکھیں",
-          "Check Your Word": "اپنے کلام کی جانچ پڑتال کریں"
+          "Check Your Word": "اپنے کلام کی جانچ پڑتال کریں",
+          "Accepted": "منظور شدہ",
+          "Rejected": "مسترد"
         },
         "ml-L2 supervised - green glass door_2022": {
           "In this game, we're trying to learn what words are allowed through the Green Glass Door.": "اس کھیل میں، ہم یہ جاننے کی کوشش کر رہے ہیں کہ گرین شیشے کے دروازے کے ذریعے کون سے الفاظ کی اجازت ہے.",
@@ -1821,7 +1840,9 @@
           "I'm Ready To Try Myself!": "میں خود کی کوشش کرنے کے لئے تیار ہوں!",
           "See All Results": "تمام نتائج دیکھیں",
           "On this screen, the wizard can show you example words. See if you notice any patterns": "اس اسکرین پر، مددگار آپ کو مثال کے الفاظ دکھا سکتا ہے. اگر آپ کسی بھی پیٹرن کو نوٹس دیکھتے ہیں تو دیکھیں",
-          "Check Your Word": "اپنے کلام کی جانچ پڑتال کریں"
+          "Check Your Word": "اپنے کلام کی جانچ پڑتال کریں",
+          "Accepted": "منظور شدہ",
+          "Rejected": "مسترد"
         },
         "ml-models-shoes points-2021": {
           "Recommend Shoes!": "جوتے کی سفارش کرتے ہیں!",
@@ -1884,6 +1905,83 @@
           "Recommend Shoes!": "جوتے کی سفارش کرتے ہیں!",
           "Another Recommendation!": "ایک اور سفارش!",
           "We Recommend...": "ہم سفارش کرتے ہیں..."
+        },
+        "CSD U1 storage friends_2021": {
+          "Back": "واپس"
+        },
+        "CSD U1 storage friends_2022": {
+          "Back": "واپس"
+        },
+        "CSD U6 - Sensors - SB1_2222": {
+          "value": "اہمیت"
+        },
+        "CSD U6 - Sensors - SB2_2222": {
+          "value": "اہمیت",
+          "Update": "اپ ڈیٹ کریں"
+        },
+        "CSD U6 - Sensors - SB3_2222": {
+          "value": "اہمیت"
+        },
+        "CSD U6 - Sensors - SB4.1_2222": {
+          "value": "اہمیت"
+        },
+        "CSD U6 - Sensors - SB4_2222": {
+          "value": "اہمیت"
+        },
+        "CSD U6 analog change": {
+          "value": "اہمیت"
+        },
+        "CSD U6 analog change_2018": {
+          "value": "اہمیت"
+        },
+        "CSD U6 analog change_2019": {
+          "value": "اہمیت"
+        },
+        "CSD U6 analog change_2021": {
+          "value": "اہمیت"
+        },
+        "CSD U6 analog data": {
+          "value": "اہمیت"
+        },
+        "CSD U6 analog data_2018": {
+          "value": "اہمیت"
+        },
+        "CSD U6 analog data_2019": {
+          "value": "اہمیت"
+        },
+        "CSD U6 analog data_2021": {
+          "value": "اہمیت"
+        },
+        "CSD U6 analog light": {
+          "value": "اہمیت",
+          "Update": "اپ ڈیٹ کریں"
+        },
+        "CSD U6 analog light_2018": {
+          "value": "اہمیت",
+          "Update": "اپ ڈیٹ کریں"
+        },
+        "CSD U6 analog light_2019": {
+          "value": "اہمیت",
+          "Update": "اپ ڈیٹ کریں"
+        },
+        "CSD U6 analog light_2021": {
+          "value": "اہمیت",
+          "Update": "اپ ڈیٹ کریں"
+        },
+        "CSD U6 analog sound": {
+          "value": "اہمیت"
+        },
+        "CSD U6 analog sound_2018": {
+          "value": "اہمیت"
+        },
+        "CSD U6 analog sound_2019": {
+          "value": "اہمیت"
+        },
+        "CSD U6 analog sound_2021": {
+          "value": "اہمیت"
+        },
+        "CSDU6 - UI and Inputs - setScreen": {
+          "Back": "واپس"
         }
       }
     }
