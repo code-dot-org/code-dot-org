@@ -111,12 +111,10 @@ theme: responsive_full_width
     %h3.heading-sm{style: "margin-bottom: 1em"}
       =hoc_s(:farsi_page_support_heading_02)
     %p=hoc_s(:farsi_page_support_get_updates, markdown: :inline, locals: {updates_url: "#"})
+    %iframe.col-50{allowtransparency: "true", frameborder: "0", height: "350", scrolling: "yes", src: "http://go.pardot.com/l/153401/2022-05-31/pq1716", style: "overflow:hidden; float: none; margin-top: -3em;", type: "text/html", width: "100%"}
     %p=hoc_s(:farsi_page_support_contact_us, markdown: :inline, locals: {mailto_link: "mailto:sasha@code.org"})
-    .btn-wrapper.flex-container.flex-wrap{style: "gap: 1em"}
-      %a{href: 'https://donate.code.org/CodeDotOrgInFarsi', class: "link-button", target: "_blank", rel: "noopener noreferrer"}
-        =hoc_s(:call_to_action_donate_online)
-      %a{href: '#', class: "link-button secondary"}
-        =hoc_s(:call_to_action_get_updates)
+    %a{href: 'http://go.pardot.com/l/153401/2022-05-31/pq1716', class: "link-button", target: "_blank", rel: "noopener noreferrer"}
+      =hoc_s(:call_to_action_donate_online)
 
 = view :section_divider_line
 
