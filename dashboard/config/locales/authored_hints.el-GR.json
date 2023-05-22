@@ -607,7 +607,8 @@
           "courseB_maze_seq_challenge2_a": "Δεν χρειάζεται να προσθέσεις ή να αφαιρέσεις μπλοκ για να λύσεις αυτό το παζλ."
         },
         "course1_maze_seq_challenge2": {
-          "courseB_maze_seq_challenge1_b": "Προσπάθησε να μετακινηθείς προς τα Δυτικά για αρχή."
+          "courseB_maze_seq_challenge1_b": "Προσπάθησε να μετακινηθείς προς τα Δυτικά για αρχή.",
+          "courseB_maze_seq_challenge1_a": "Ο συντομότερος δρόμος μπορεί να μην δουλέψει αυτή τη φορά."
         },
         "course2_maze_programming_challenge2": {
           "courseC_maze_programming_challenge2_a": "_Αν με στείλεις προς τα πίσω, να είσαι προσεκτικός! Πρέπει να γυρίσω σωστά!_",
@@ -1080,7 +1081,7 @@
           "hello_world_click": "Συνδέστε ένα μπλοκ «λένε» κάτω από ένα «όταν κάνετε κλικ» μπλοκ συμβάντων:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"cuteanimals_seahorse\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_spriteSay\">\n        <title name=\"SPEECH\">Hello, ocean!</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"cuteanimals_seahorse\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
         },
         "helloworld_animals_location": {
-          "location_pin_hint": "Για να αλλάξετε τη θέση ενός sprite, κάντε κλικ στην καρφίτσα στο μπλοκ τοποθεσίας και, στη συνέχεια, κάντε κλικ στο σημείο όπου θέλετε να πάει.\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
+          "location_pin_hint": "Για να αλλάξετε τη θέση ενός χαρακτήρα ήρωα, κάντε κλικ στην καρφίτσα στο μπλοκ τοποθεσίας και, στη συνέχεια, κάντε κλικ στο σημείο όπου θέλετε να πάει.\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
         },
         "helloworld_animals_multi": {
           "cat_xml": "Βεβαιωθείτε ότι τα κοστούμια ταιριάζουν σε κάθε τετράγωνο.\n\n<xml>\n  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"cuteanimals_cat_hello\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>\n  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Meow!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"cuteanimals_cat_hello\"</title>\n      </block>\n    </value>\n    </block></next></block>\n</xml>"
@@ -1112,7 +1113,7 @@
           "location_pin_hint": "Για να αλλάξετε τη θέση ενός sprite, κάντε κλικ στην καρφίτσα στο μπλοκ τοποθεσίας και, στη συνέχεια, κάντε κλικ στο σημείο όπου θέλετε να πάει.\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
         },
         "helloworld_emoji_multi": {
-          "storyboard_costume": "Σιγουρέψου ότι τα κοστούμια ταιριάζουν με κάθε ξωτικό.\n<xml><block type=\"gamelab_spriteSay\">\n      <title name=\"SPEECH\">Look at me!</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"emoji_14_1\"</title>\n        </block>\n      </value>\n    </block></xml>"
+          "storyboard_costume": "Σιγουρέψου ότι τα κοστούμια ταιριάζουν με κάθε χαρακτήρα.\n<xml><block type=\"gamelab_spriteSay\">\n      <title name=\"SPEECH\">Look at me!</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"emoji_14_1\"</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "helloworld_emoji_say": {
           "hello-world-first-solution-emoji": "Για να κάνετε το emoji να πει κάτι, συνδέστε τα μπλοκ κώδικα ως εξής:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"emoji_19\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"emoji_19\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
@@ -1179,13 +1180,13 @@
           "location_pin_hint": "Για να αλλάξετε τη θέση ενός sprite, κάντε κλικ στην καρφίτσα στο μπλοκ τοποθεσίας και, στη συνέχεια, κάντε κλικ στο σημείο όπου θέλετε να πάει.\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
         },
         "helloworld_food_multi": {
-          "storyboard_costume": "Σιγουρέψου ότι τα κοστούμια ταιριάζουν με κάθε ξωτικό.\n<xml><block type=\"gamelab_spriteSay\">\n      <title name=\"SPEECH\">Hello, broccoli!</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"face_carrot_1\"</title>\n        </block>\n      </value>\n    </block></xml>"
+          "storyboard_costume": "Σιγουρέψου ότι τα κοστούμια ταιριάζουν με κάθε χαρακτήρα.\n<xml><block type=\"gamelab_spriteSay\">\n      <title name=\"SPEECH\">Hello, broccoli!</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"face_carrot_1\"</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "helloworld_food_multi_soccer-2022": {
-          "storyboard_costume": "Σιγουρέψου ότι τα κοστούμια ταιριάζουν με κάθε ξωτικό.\n<xml><block type=\"gamelab_spriteSay\">\n      <title name=\"SPEECH\">Goal!</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"soccer_ball\"</title>\n        </block>\n      </value>\n    </block></xml>"
+          "storyboard_costume": "Σιγουρέψου ότι τα κοστούμια ταιριάζουν με κάθε χαρακτήρα.\n<xml><block type=\"gamelab_spriteSay\">\n      <title name=\"SPEECH\">Goal!</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"soccer_ball\"</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "helloworld_food_multi_space-2022": {
-          "storyboard_costume": "Σιγουρέψου ότι τα κοστούμια ταιριάζουν με κάθε ξωτικό.\n<xml><block type=\"gamelab_spriteSay\">\n      <title name=\"SPEECH\">Hello, alien!</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"face_carrot_1\"</title>\n        </block>\n      </value>\n    </block></xml>"
+          "storyboard_costume": "Σιγουρέψου ότι τα κοστούμια ταιριάζουν με κάθε χαρακτήρα.\n<xml><block type=\"gamelab_spriteSay\">\n      <title name=\"SPEECH\">Hello, alien!</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"face_carrot_1\"</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "helloworld_food_say": {
           "hello-world-first-solution-pizza": "Για να κάνετε την πίτσα να πει κάτι, συνδέστε τα μπλοκ κώδικα ως εξής:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"face_pizza_1\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_pizza_1\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
@@ -1228,7 +1229,7 @@
           "location_pin_hint": "Για να αλλάξετε τη θέση ενός sprite, κάντε κλικ στην καρφίτσα στο μπλοκ τοποθεσίας και, στη συνέχεια, κάντε κλικ στο σημείο όπου θέλετε να πάει.\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
         },
         "helloworld_retro_multi": {
-          "storyboard_costume": "Σιγουρέψου ότι τα κοστούμια ταιριάζουν με κάθε ξωτικό.\n<xml><block type=\"gamelab_spriteSay\">\n      <title name=\"SPEECH\">Hello!</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"retrocreature_16\"</title>\n        </block>\n      </value>\n    </block></xml>"
+          "storyboard_costume": "Σιγουρέψου ότι τα κοστούμια ταιριάζουν με κάθε χαρακτήρα.\n<xml><block type=\"gamelab_spriteSay\">\n      <title name=\"SPEECH\">Hello!</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"retrocreature_16\"</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "helloworld_retro_say": {
           "hello-world-first-solution-retrocreature": "Για να κάνετε το πλάσμα να πει κάτι, συνδέστε τα μπλοκ κώδικα ως εξής:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"retrocreature_18_1\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"retrocreature_18_1\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
@@ -1305,6 +1306,27 @@
         },
         "courseD_farmer_while3_2021": {
           "courseD_farmer_while3_b": "Δεν θα πρέπει να χρειάζεσαι τουβλάκια στροφής για να φτάσεις στο σωρό."
+        },
+        "courseB_maze_seq52022": {
+          "courseB_maze_seq5_a": "Αν κολλήσετε, δοκιμάστε να σχεδιάσετε το μονοπάτι σε χαρτί."
+        },
+        "courseB_maze_seq_challenge1": {
+          "courseB_maze_seq_challenge1_a": "Ο συντομότερος δρόμος μπορεί να μην δουλέψει αυτή τη φορά."
+        },
+        "courseB_maze_seq_challenge12022": {
+          "courseB_maze_seq_challenge1_a": "Ο συντομότερος δρόμος μπορεί να μην δουλέψει αυτή τη φορά."
+        },
+        "courseB_maze_seq_challenge1_2018": {
+          "courseB_maze_seq_challenge1_a": "Ο συντομότερος δρόμος μπορεί να μην δουλέψει αυτή τη φορά."
+        },
+        "courseB_maze_seq_challenge1_2019": {
+          "courseB_maze_seq_challenge1_a": "Ο συντομότερος δρόμος μπορεί να μην δουλέψει αυτή τη φορά."
+        },
+        "courseB_maze_seq_challenge1_2020": {
+          "courseB_maze_seq_challenge1_a": "Ο συντομότερος δρόμος μπορεί να μην δουλέψει αυτή τη φορά."
+        },
+        "courseB_maze_seq_challenge1_2021": {
+          "courseB_maze_seq_challenge1_a": "Ο συντομότερος δρόμος μπορεί να μην δουλέψει αυτή τη φορά."
         }
       }
     }

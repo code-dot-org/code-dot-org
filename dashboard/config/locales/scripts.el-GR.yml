@@ -305,10 +305,14 @@ el:
           lesson_groups:
             required:
               display_name: Επισκόπηση
+            content:
+              display_name: Περιεχόμενο
         test-teaching-ap-cs-unit-1:
           lesson_groups:
             required:
               display_name: Επισκόπηση
+            content:
+              display_name: Περιεχόμενο
         CSDU1-Draft:
           description_short: Επίλυση Προβλημάτων
         CSDU5-Draft:
@@ -323,6 +327,8 @@ el:
           lesson_groups:
             required:
               display_name: Επισκόπηση
+            content:
+              display_name: Περιεχόμενο
         gradeKinder:
           description_audience: Ηλικίες 5-18
         grade4:
@@ -341,6 +347,8 @@ el:
           lesson_groups:
             required:
               display_name: Επισκόπηση
+            content:
+              display_name: Περιεχόμενο
         csd3-2017:
           lesson_groups:
             cspSurvey:
@@ -355,10 +363,14 @@ el:
           lesson_groups:
             required:
               display_name: Επισκόπηση
+            content:
+              display_name: Περιεχόμενο
         csp1-support:
           lesson_groups:
             required:
               display_name: Επισκόπηση
+            content:
+              display_name: Περιεχόμενο
         basketball:
           title: Φτιάξτε ένα παιχνίδι μπάσκετ
           description_short: Φτιάξτε ένα παιχνίδι μπάσκετ
@@ -369,6 +381,8 @@ el:
           lesson_groups:
             required:
               display_name: Επισκόπηση
+            content:
+              display_name: Περιεχόμενο
         minecraft:
           description_short: Προγραμμάτισε ζώα και άλλα πλάσματα του Minecraft στην
             δικιά σου έκδοση του Minecraft.
@@ -387,9 +401,19 @@ el:
         coursee-draft:
           description_short: Μάθετε τα βασικά της επιστήμης της πληροφορικής και δημιουργήστε
             τη δική σας τέχνη, ιστορίες και παιχνίδια.
+          lesson_groups:
+            content:
+              display_name: Περιεχόμενο
+            end_of_course_project:
+              display_name: Έργο Λήξη Μαθήματος
         coursef-draft:
           description_short: Μάθετε τα βασικά της επιστήμης της πληροφορικής και δημιουργήστε
             τη δική σας τέχνη, ιστορίες και παιχνίδια.
+          lesson_groups:
+            content:
+              display_name: Περιεχόμενο
+            end_of_course_project:
+              display_name: Έργο Λήξη Μαθήματος
         classic-hoc-impact-study:
           description_short: Δοκιμάστε τα βασικά της επιστήμης της πληροφορικής με
             πολλούς διασκεδαστικούς χαρακτήρες!
@@ -407,16 +431,30 @@ el:
           lesson_groups:
             required:
               display_name: Επισκόπηση
+            content:
+              display_name: Περιεχόμενο
         csp4-support:
           lesson_groups:
             required:
               display_name: Επισκόπηση
+            content:
+              display_name: Περιεχόμενο
+        csf2harvey:
+          lesson_groups:
+            end_of_course_project:
+              display_name: Έργο Λήξη Μαθήματος
+            content:
+              display_name: Περιεχόμενο
         csp5-support:
           lesson_groups:
             required:
               display_name: Επισκόπηση
+            content:
+              display_name: Περιεχόμενο
         csppostap-2017:
           lesson_groups:
+            content:
+              display_name: Περιεχόμενο
             cspSurvey:
               display_name: Έρευνα
         csp-post-survey:
@@ -475,6 +513,9 @@ el:
             και γεγονότα και έπειτα θα προχωρήσετε σε λειτουργίες. Στο δεύτερο μέρος
             αυτού του μαθήματος, σχεδιάστε και δημιουργήστε ένα ατομικό έργο που μπορείτε
             να μοιραστείτε με τους φίλους και την οικογένειά σας.
+          lesson_groups:
+            end_of_course_project:
+              display_name: Έργο Λήξη Μαθήματος
           student_description: Ξεκινήστε να κωδικοποιείτε με αλγόριθμους, κύβους βρόχων,
             συνθήκες και γεγονότα και έπειτα θα προχωρήσετε σε λειτουργίες. Στο δεύτερο
             μέρος αυτού του μαθήματος, σχεδιάστε και δημιουργήστε ένα ατομικό έργο
@@ -490,6 +531,9 @@ el:
             διαδικτύου. Στο δεύτερο μέρος αυτού του μαθήματος, σχεδιάστε και δημιουργήστε
             ένα ατομικό έργο που μπορείτε να μοιραστείτε με τους φίλους και την οικογενειά
             σας.
+          lesson_groups:
+            end_of_course_project:
+              display_name: Έργο Λήξη Μαθήματος
           student_description: Μάθετε να χρησιμοποιείτε διαφορετικά είδη βρόχων, γεγονότων,
             λειτουργιών και συνθηκών. Ερευνήστε διαφορετικές τεχνικές επίλυσης προβλημάτων
             και συζητήστε τον κοινωνικό αντίκτυπο της υπολογιστικής σκέψης και του
@@ -500,56 +544,85 @@ el:
           lesson_groups:
             required:
               display_name: Επισκόπηση
+            content:
+              display_name: Περιεχόμενο
         csp1-dlp:
           lesson_groups:
             required:
               display_name: Επισκόπηση
+            content:
+              display_name: Περιεχόμενο
         csp2-dlp:
           lesson_groups:
             required:
               display_name: Επισκόπηση
+            content:
+              display_name: Περιεχόμενο
         csp3-dlp:
           lesson_groups:
             required:
               display_name: Επισκόπηση
+            content:
+              display_name: Περιεχόμενο
         csp4-dlp:
           lesson_groups:
             required:
               display_name: Επισκόπηση
+            content:
+              display_name: Περιεχόμενο
         csp5-dlp:
           lesson_groups:
             required:
               display_name: Επισκόπηση
+            content:
+              display_name: Περιεχόμενο
         csd1-dlp:
           lesson_groups:
             required:
               display_name: Επισκόπηση
+            content:
+              display_name: Περιεχόμενο
         csd6-dlp:
           lesson_groups:
             required:
               display_name: Επισκόπηση
+            content:
+              display_name: Περιεχόμενο
         csd5-dlp:
           lesson_groups:
             required:
               display_name: Επισκόπηση
+            content:
+              display_name: Περιεχόμενο
         csd4-dlp:
           lesson_groups:
             required:
               display_name: Επισκόπηση
+            content:
+              display_name: Περιεχόμενο
         csd3-dlp:
           lesson_groups:
             required:
               display_name: Επισκόπηση
+            content:
+              display_name: Περιεχόμενο
         csd2-dlp:
           lesson_groups:
             required:
               display_name: Επισκόπηση
+            content:
+              display_name: Περιεχόμενο
         express-2017:
           title: Εντατικό Μάθημα
           assignment_family_title: Εντατικό Μάθημα
           description: Μάθετε τα βασικά της επιστήμης της πληροφορικής και της διαδικτυακής
             ασφάλειας. Στο τέλος του μαθήματος, δημιουργήστε το εξολοκλήρου δικό σας
             παιχνίδι ή ιστορία που μπορείτε να μοιραστείτε.
+          lesson_groups:
+            content:
+              display_name: Περιεχόμενο
+            end_of_course_project:
+              display_name: Έργο Λήξη Μαθήματος
           student_description: Μάθετε τα βασικά της επιστήμης της πληροφορικής και
             της διαδικτυακής ασφάλειας. Στο τέλος του μαθήματος, δημιουργήστε το εξολοκλήρου
             δικό σας παιχνίδι ή ιστορία που μπορείτε να μοιραστείτε.
@@ -564,6 +637,24 @@ el:
           lesson_groups:
             cspSurvey:
               display_name: Έρευνα
+        e-f-ramp:
+          lesson_groups:
+            end_of_course_project:
+              display_name: Έργο Λήξη Μαθήματος
+        new-express:
+          lesson_groups:
+            content:
+              display_name: Περιεχόμενο
+            end_of_course_project:
+              display_name: Έργο Λήξη Μαθήματος
+        new-e:
+          lesson_groups:
+            end_of_course_project:
+              display_name: Έργο Λήξη Μαθήματος
+        new-f:
+          lesson_groups:
+            end_of_course_project:
+              display_name: Έργο Λήξη Μαθήματος
         hero:
           title: 'Ναρκαλιευτής: Το Ταξίδι του Ήρωα'
           description_short: Ο Ναρκαλιευτής επέστρεψε με μια ολοκαίνουρια δραστηριότητα
@@ -581,6 +672,14 @@ el:
           lesson_groups:
             cspSurvey:
               display_name: Έρευνα
+        course-e-2018:
+          lesson_groups:
+            end_of_course_project:
+              display_name: Έργο Λήξη Μαθήματος
+        course-f-2018:
+          lesson_groups:
+            end_of_course_project:
+              display_name: Έργο Λήξη Μαθήματος
         csd3-1819draft:
           lesson_groups:
             cspSurvey:
@@ -651,6 +750,9 @@ el:
             και γεγονότα και έπειτα θα προχωρήσετε σε λειτουργίες. Στο δεύτερο μέρος
             αυτού του μαθήματος, σχεδιάστε και δημιουργήστε ένα ατομικό έργο που μπορείτε
             να μοιραστείτε με τους φίλους και την οικογένειά σας.
+          lesson_groups:
+            end_of_course_project:
+              display_name: Έργο Λήξη Μαθήματος
           student_description: Ξεκινήστε να κωδικοποιείτε με αλγόριθμους, κύβους βρόχων,
             συνθήκες και γεγονότα και έπειτα θα προχωρήσετε σε λειτουργίες. Στο δεύτερο
             μέρος αυτού του μαθήματος, σχεδιάστε και δημιουργήστε ένα ατομικό έργο
@@ -666,6 +768,9 @@ el:
             σας.
           description_short: Μάθετε όλες τις έννοιες των Θεμελιωδών της Επιστήμης
             της Πληροφορικής και δημιουργήστε τη δική σας τέχνη, ιστορία ή παιχνίδι.
+          lesson_groups:
+            end_of_course_project:
+              display_name: Έργο Λήξη Μαθήματος
           student_description: Μάθετε να χρησιμοποιείτε διαφορετικά είδη βρόχων, γεγονότων,
             λειτουργιών και συνθηκών. Ερευνήστε διαφορετικές τεχνικές επίλυσης προβλημάτων
             και συζητήστε τον κοινωνικό αντίκτυπο της υπολογιστικής σκέψης και του
@@ -716,70 +821,104 @@ el:
           lesson_groups:
             required:
               display_name: Επισκόπηση
+            content:
+              display_name: Περιεχόμενο
         csd2-dlp-18:
           lesson_groups:
             required:
               display_name: Επισκόπηση
+            content:
+              display_name: Περιεχόμενο
         csd3-dlp-18:
           lesson_groups:
             required:
               display_name: Επισκόπηση
+            content:
+              display_name: Περιεχόμενο
         csd4-dlp-18:
           lesson_groups:
             required:
               display_name: Επισκόπηση
+            content:
+              display_name: Περιεχόμενο
         csd5-dlp-18:
           lesson_groups:
             required:
               display_name: Επισκόπηση
+            content:
+              display_name: Περιεχόμενο
         csd6-dlp-18:
           lesson_groups:
             required:
               display_name: Επισκόπηση
+            content:
+              display_name: Περιεχόμενο
         csp1-dlp-18:
           lesson_groups:
             required:
               display_name: Επισκόπηση
+            content:
+              display_name: Περιεχόμενο
         csp2-dlp-18:
           lesson_groups:
             required:
               display_name: Επισκόπηση
+            content:
+              display_name: Περιεχόμενο
         csp3-dlp-18:
           lesson_groups:
             required:
               display_name: Επισκόπηση
+            content:
+              display_name: Περιεχόμενο
         csp4-dlp-18:
           lesson_groups:
             required:
               display_name: Επισκόπηση
+            content:
+              display_name: Περιεχόμενο
         csp5-dlp-18:
           lesson_groups:
             required:
               display_name: Επισκόπηση
+            content:
+              display_name: Περιεχόμενο
         csp-explore-dlp-18:
           lesson_groups:
             required:
               display_name: Επισκόπηση
+            content:
+              display_name: Περιεχόμενο
         csp-create-dlp-18:
           lesson_groups:
             required:
               display_name: Επισκόπηση
+            content:
+              display_name: Περιεχόμενο
         csd-novice-18:
           lesson_groups:
             required:
               display_name: Επισκόπηση
+            content:
+              display_name: Περιεχόμενο
         csd-apprentice-18:
           lesson_groups:
             required:
               display_name: Επισκόπηση
+            content:
+              display_name: Περιεχόμενο
         csp-novice-18:
           lesson_groups:
             required:
               display_name: Επισκόπηση
+            content:
+              display_name: Περιεχόμενο
         csp-apprentice-18:
           lesson_groups:
             required:
               display_name: Επισκόπηση
+            content:
+              display_name: Περιεχόμενο
         pre-express-2018:
           description: Μάθετε τα βασικά της επιστήμης της πληροφορικής και της διαδικτυακής
             ασφάλειας. Στο τέλος του μαθήματος, δημιουργήστε το εξολοκλήρου δικό σας
@@ -791,6 +930,8 @@ el:
           lesson_groups:
             required:
               display_name: Επισκόπηση
+            content:
+              display_name: Περιεχόμενο
         dance:
           description_short: Παίζουν οι Κέιτι Πέρι, Μαντόνα, Τζέι Μπάλβιν, Σία, Κίθ
             Ούρμπαν, Κιάρα, και 25 ακόμα!
@@ -841,6 +982,8 @@ el:
               display_name: Χαρακτήρας
             csf_digcit:
               display_name: Ψηφιακή υπηκοότητα
+            end_of_course_project:
+              display_name: Έργο Λήξη Μαθήματος
           student_description: Μάθετε να χρησιμοποιείτε διαφορετικά είδη βρόχων, γεγονότων,
             λειτουργιών και συνθηκών. Ερευνήστε διαφορετικές τεχνικές επίλυσης προβλημάτων
             και συζητήστε τον κοινωνικό αντίκτυπο της υπολογιστικής σκέψης και του
@@ -863,6 +1006,8 @@ el:
               display_name: Δυαδικό
             csf_digcit:
               display_name: Ψηφιακή υπηκοότητα
+            end_of_course_project:
+              display_name: Έργο Λήξη Μαθήματος
           student_description: Οι μαθητές καλλιεργούν την κατανόησή τους αναφορικά
             σε κύβους βρόχων, συνθήκες, και γεγονότα. Πέρα από την κωδικοποίηση, οι
             μαθητές μαθαίνουν για την ψηφιακή υπηκοότητα.
@@ -881,6 +1026,8 @@ el:
               display_name: Φωλιασμένες Επαναλήψεις
             csf_functions:
               display_name: Συναρτήσεις
+            end_of_course_project:
+              display_name: Έργο Λήξη Μαθήματος
           student_description: Ξεκινήστε να κωδικοποιείτε με αλγόριθμους, κύβους βρόχων,
             συνθήκες και γεγονότα και έπειτα θα προχωρήσετε σε λειτουργίες. Στο δεύτερο
             μέρος αυτού του μαθήματος, σχεδιάστε και δημιουργήστε ένα ατομικό έργο
@@ -910,6 +1057,8 @@ el:
           lesson_groups:
             required:
               display_name: Επισκόπηση
+            content:
+              display_name: Περιεχόμενο
         dance-extras-gallery:
           title: Συνεχίστε να Χορεύετε
           description: Πηγαίνετε πέρα από την πρώτη ώρα με πολλές ιδέες για πρότζεκτ.
@@ -935,6 +1084,8 @@ el:
               display_name: Συμβάντα
             csf_data:
               display_name: Δεδομένα
+            end_of_course_project:
+              display_name: Έργο Λήξη Μαθήματος
           student_description: Δημιουργήστε προγράμματα με αλληλουχίες, κύβους βρόχων,
             και γεγονότα. Μετατρέψτε τα αρχικά σας σε δυαδικούς αριθμούς, ερευνήστε
             διαφορετικές τεχνικές επίλυσης προβλημάτων, και μάθετε πώς να απαντάτε
@@ -1164,10 +1315,14 @@ el:
           lesson_groups:
             required:
               display_name: Επισκόπηση
+            content:
+              display_name: Περιεχόμενο
         fit2019-apprentice:
           lesson_groups:
             required:
               display_name: Επισκόπηση
+            content:
+              display_name: Περιεχόμενο
         csd1-pilot:
           lesson_groups:
             cspSurvey:
@@ -1182,6 +1337,8 @@ el:
               display_name: Έρευνα
         csp3-pilot:
           lesson_groups:
+            content:
+              display_name: Περιεχόμενο
             required:
               display_name: Επισκόπηση
         csl-vn:
@@ -1194,48 +1351,72 @@ el:
           lesson_groups:
             required:
               display_name: Επισκόπηση
+            content:
+              display_name: Περιεχόμενο
         dlp19-csp-mod-fit:
           lesson_groups:
             required:
               display_name: Επισκόπηση
+            content:
+              display_name: Περιεχόμενο
         dlp19-csd-mod-w1:
           lesson_groups:
             required:
               display_name: Επισκόπηση
+            content:
+              display_name: Περιεχόμενο
         dlp19-csd-mod-w2:
           lesson_groups:
             required:
               display_name: Επισκόπηση
+            content:
+              display_name: Περιεχόμενο
         dlp19-csd-mod-w3:
           lesson_groups:
             required:
               display_name: Επισκόπηση
+            content:
+              display_name: Περιεχόμενο
         dlp19-csd-mod-w4:
           lesson_groups:
             required:
               display_name: Επισκόπηση
+            content:
+              display_name: Περιεχόμενο
         dlp19-csp-mod-w1:
           lesson_groups:
             required:
               display_name: Επισκόπηση
+            content:
+              display_name: Περιεχόμενο
         dlp19-csp-mod-w2:
           lesson_groups:
             required:
               display_name: Επισκόπηση
+            content:
+              display_name: Περιεχόμενο
         dlp19-csp-mod-w3:
           lesson_groups:
             required:
               display_name: Επισκόπηση
+            content:
+              display_name: Περιεχόμενο
         dlp19-csp-mod-w4:
           lesson_groups:
             required:
               display_name: Επισκόπηση
+            content:
+              display_name: Περιεχόμενο
         csp2-pilot:
           lesson_groups:
+            content:
+              display_name: Περιεχόμενο
             required:
               display_name: Επισκόπηση
         csp6-pilot:
           lesson_groups:
+            content:
+              display_name: Περιεχόμενο
             required:
               display_name: Επισκόπηση
         dance-2019:
@@ -1272,6 +1453,8 @@ el:
               display_name: Φωλιασμένες Επαναλήψεις
             csf_functions:
               display_name: Συναρτήσεις
+            end_of_course_project:
+              display_name: Έργο Λήξη Μαθήματος
         time4cs-control-unit-1:
           lesson_groups:
             csf_loops:
@@ -1400,6 +1583,8 @@ el:
               display_name: Συμβάντα
             csf_data:
               display_name: Δεδομένα
+            end_of_course_project:
+              display_name: Έργο Λήξη Μαθήματος
           student_description: Δημιουργήστε προγράμματα με αλληλουχίες, κύβους βρόχων,
             και γεγονότα. Μετατρέψτε τα αρχικά σας σε δυαδικούς αριθμούς, ερευνήστε
             διαφορετικές τεχνικές επίλυσης προβλημάτων, και μάθετε πώς να απαντάτε
@@ -1421,6 +1606,8 @@ el:
               display_name: Δυαδικό
             csf_digcit:
               display_name: Ψηφιακή υπηκοότητα
+            end_of_course_project:
+              display_name: Έργο Λήξη Μαθήματος
           student_description: Οι μαθητές καλλιεργούν την κατανόησή τους αναφορικά
             σε κύβους βρόχων, συνθήκες, και γεγονότα. Πέρα από την κωδικοποίηση, οι
             μαθητές μαθαίνουν για την ψηφιακή υπηκοότητα.
@@ -1439,6 +1626,8 @@ el:
               display_name: Φωλιασμένες Επαναλήψεις
             csf_functions:
               display_name: Συναρτήσεις
+            end_of_course_project:
+              display_name: Έργο Λήξη Μαθήματος
           student_description: Ξεκινήστε να κωδικοποιείτε με αλγόριθμους, κύβους βρόχων,
             συνθήκες και γεγονότα και έπειτα θα προχωρήσετε σε λειτουργίες. Στο δεύτερο
             μέρος αυτού του μαθήματος, σχεδιάστε και δημιουργήστε ένα ατομικό έργο
@@ -1464,6 +1653,8 @@ el:
               display_name: Βρόχοι Για
             csf_sprites:
               display_name: Χαρακτήρας
+            end_of_course_project:
+              display_name: Έργο Λήξη Μαθήματος
           student_description: Μάθετε να χρησιμοποιείτε διαφορετικά είδη βρόχων, γεγονότων,
             λειτουργιών και συνθηκών. Ερευνήστε διαφορετικές τεχνικές επίλυσης προβλημάτων
             και συζητήστε τον κοινωνικό αντίκτυπο της υπολογιστικής σκέψης και του
@@ -1487,6 +1678,8 @@ el:
               display_name: Βρόχοι Για
             csf_sprites:
               display_name: Χαρακτήρας
+            end_of_course_project:
+              display_name: Έργο Λήξη Μαθήματος
         pre-express-2020:
           lesson_groups:
             csf_loops:
@@ -1497,10 +1690,38 @@ el:
           lesson_groups:
             cspSurvey:
               display_name: Έρευνα
+        virtual-holding-place:
+          lesson_groups:
+            content:
+              display_name: Περιεχόμενο
         dani-june-2020-test:
           lesson_groups:
             cspSurvey:
               display_name: Έρευνα
+        csd3-virtual:
+          lesson_groups:
+            csd3_1:
+              display_name: Περιεχόμενο
+            csd3_2:
+              display_name: Περιεχόμενο
+            cspSurvey:
+              display_name: Περιεχόμενο
+        ui-test-script-in-course-2017:
+          lesson_groups:
+            lg_1:
+              display_name: Περιεχόμενο
+        ui-test-script-in-course-2019:
+          lesson_groups:
+            lg_1:
+              display_name: Περιεχόμενο
+        ui-test-versioned-script-2017:
+          lesson_groups:
+            lg_1:
+              display_name: Περιεχόμενο
+        ui-test-versioned-script-2019:
+          lesson_groups:
+            lg_1:
+              display_name: Περιεχόμενο
         virustest:
           title: Εξομοιώνοντας μία Έξαρση
           description_short: Χρησιμοποιήστε το Εργαστήρι Χαρακτήρων για να δημιουργήσετε
@@ -1609,6 +1830,8 @@ el:
               display_name: Βρόχοι
             csf_events:
               display_name: Συμβάντα
+            lessonGroup-5:
+              display_name: Έργο Λήξη Μαθήματος
           student_description: Μάθετε τα βασικά της επιστήμης της πληροφορικής και
             της διαδικτυακής ασφάλειας. Στο τέλος του μαθήματος, δημιουργήστε το εξολοκλήρου
             δικό σας παιχνίδι ή ιστορία που μπορείτε να μοιραστείτε.
@@ -1620,6 +1843,8 @@ el:
               display_name: Βρόχοι
             csf_events:
               display_name: Συμβάντα
+            lessonGroup-6:
+              display_name: Έργο Λήξη Μαθήματος
           student_description: Μάθετε τα βασικά της επιστήμης της πληροφορικής και
             της διαδικτυακής ασφάλειας. Στο τέλος του μαθήματος, δημιουργήστε το εξολοκλήρου
             δικό σας παιχνίδι ή ιστορία που μπορείτε να μοιραστείτε.
@@ -1637,6 +1862,8 @@ el:
               display_name: Συμβάντα
             csf_data:
               display_name: Δεδομένα
+            end_of_course_project:
+              display_name: Έργο Λήξη Μαθήματος
           student_description: Δημιουργήστε προγράμματα με αλληλουχίες, κύβους βρόχων,
             και γεγονότα. Μετατρέψτε τα αρχικά σας σε δυαδικούς αριθμούς, ερευνήστε
             διαφορετικές τεχνικές επίλυσης προβλημάτων, και μάθετε πώς να απαντάτε
@@ -1655,6 +1882,8 @@ el:
               display_name: Δυαδικό
             csf_digcit:
               display_name: Ψηφιακή υπηκοότητα
+            end_of_course_project:
+              display_name: Έργο Λήξη Μαθήματος
             lessonGroup-6:
               display_name: Ψηφιακή υπηκοότητα
         coursee-2021:
@@ -1669,6 +1898,8 @@ el:
               display_name: Συνθήκες
             csf_functions:
               display_name: Συναρτήσεις
+            end_of_course_project:
+              display_name: Έργο Λήξη Μαθήματος
         coursef-2021:
           description_short: Μάθετε όλες τις έννοιες των Θεμελιωδών της Επιστήμης
             της Πληροφορικής και δημιουργήστε τη δική σας τέχνη, ιστορία ή παιχνίδι.
@@ -1681,6 +1912,8 @@ el:
               display_name: Βρόχοι Για
             csf_for_loops:
               display_name: Βρόχοι Για
+            end_of_course_project:
+              display_name: Έργο Λήξη Μαθήματος
             lessonGroup-8:
               display_name: Μεταβλητές
             lessonGroup-9:
@@ -1703,6 +1936,8 @@ el:
               display_name: Βρόχοι Για
             csf_sprites:
               display_name: Χαρακτήρας
+            end_of_course_project:
+              display_name: Έργο Λήξη Μαθήματος
             lessonGroup-9:
               display_name: Συμβάντα
         pre-express-2021:
@@ -1740,6 +1975,38 @@ el:
             μια προσομοίωση από μία έξαρση ιού.
           student_description: Χρησιμοποιήστε το Εργαστήρι Χαρακτήρων για να προγραμματίσετε
             μια προσομοίωση από μία έξαρση ιού.
+        csa1-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Περιεχόμενο
+        csa2-pilot:
+          lesson_groups:
+            lesson group:
+              display_name: Περιεχόμενο
+        csa3-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Περιεχόμενο
+        csa4-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Περιεχόμενο
+        csa5-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Περιεχόμενο
+        csa6-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Περιεχόμενο
+        csa7-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Περιεχόμενο
+        csa8-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Περιεχόμενο
         k5-onlinepd-2021:
           lesson_groups:
             k5_getting_started_1:
@@ -1760,6 +2027,14 @@ el:
               display_name: Έρευνα
         outbreak-module:
           title: Έξαρση
+        csa1-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Περιεχόμενο
+        csa2-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Περιεχόμενο
         csa-videos:
           lesson_groups:
             lessonGroup-3:
@@ -1774,6 +2049,10 @@ el:
               display_name: Μονάδα 4
             lessonGroup-7:
               display_name: Μονάδα 5
+        csa3-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Περιεχόμενο
         dlp21-csp-mod4:
           lesson_groups:
             lessonGroup-2:
@@ -1790,32 +2069,92 @@ el:
               display_name: Μαθήματα
             lessonGroup-3:
               display_name: Έργο
+        csa1-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Περιεχόμενο
+        csa2-pilot-facilitator:
+          lesson_groups:
+            lesson group:
+              display_name: Περιεχόμενο
+        csa3-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Περιεχόμενο
+        csa4-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Περιεχόμενο
+        csa5-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Περιεχόμενο
         csa-u7-dev:
           lesson_groups:
             lessonGroup-2:
               display_name: Μαθήματα
             lessonGroup-3:
               display_name: Έργο
+        csa4-exemplars:
+          lesson_groups:
+            lesson group:
+              display_name: Περιεχόμενο
+            content:
+              display_name: Περιεχόμενο
+            lesson_group:
+              display_name: Περιεχόμενο
+            lessonGroup-2:
+              display_name: Περιεχόμενο
         spelling-bee:
           title: Η μέλισσα της ορθογραφίας
         outbreak-csc:
           title: Έξαρση
+        csa5-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Περιεχόμενο
         csd-post-survey-2021:
           title: Μελέτη μετά το μάθημα για τις Ανακαλύψεις της Επιστήμης της Πληροφορικής
+        csa6-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Περιεχόμενο
         ai-ethics-2021:
           description_audience: Τάξεις Έκτης Δημοτικού ως Γ Λυκείου
         explore-data-1-2021:
           title: Οπτικοποίηση Δεδομένων
+        csa6-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Περιεχόμενο
         2022drafting:
           lesson_groups:
             lessonGroup-8:
               display_name: Ώρα του Κώδικα
+        csa7-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Περιεχόμενο
         csf-2022-pilot:
           lesson_groups:
             lessonGroup-2:
               display_name: Χαρακτήρας
             lessonGroup-3:
               display_name: Μεταβλητές
+            lessonGroup-4:
+              display_name: Έργο Λήξη Μαθήματος
+        csa8-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Περιεχόμενο
+        csa7-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Περιεχόμενο
+        csa8-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Περιεχόμενο
         coursea-2022:
           lesson_groups:
             csf_digcit:
@@ -1824,6 +2163,9 @@ el:
               display_name: Βρόχοι
             csf_events:
               display_name: Συμβάντα
+            lessonGroup-5:
+              display_name: Έργο Λήξη Μαθήματος
+          title: Μάθημα A (2022)
           student_description: Μάθετε τα βασικά της επιστήμης της πληροφορικής και
             της διαδικτυακής ασφάλειας. Στο τέλος του μαθήματος, δημιουργήστε το εξολοκλήρου
             δικό σας παιχνίδι ή ιστορία που μπορείτε να μοιραστείτε.
@@ -1831,6 +2173,8 @@ el:
             αναγνώστες.
         express-2022:
           lesson_groups:
+            csf_sequencing:
+              display_name: Ακολουθία
             csf_sprites:
               display_name: Χαρακτήρας
             lessonGroup-9:
@@ -1845,6 +2189,8 @@ el:
               display_name: Μεταβλητές
             csf_for_loops:
               display_name: Βρόχοι Για
+            end_of_course_project:
+              display_name: Έργο Λήξη Μαθήματος
           title: Γρήγορο Μάθημα (2022)
         csp1-2022:
           lesson_groups:
@@ -1876,6 +2222,8 @@ el:
               display_name: Βρόχοι
             csf_events:
               display_name: Συμβάντα
+            lessonGroup-6:
+              display_name: Έργο Λήξη Μαθήματος
           student_description: Μάθετε τα βασικά της επιστήμης της πληροφορικής και
             της διαδικτυακής ασφάλειας. Στο τέλος του μαθήματος, δημιουργήστε το εξολοκλήρου
             δικό σας παιχνίδι ή ιστορία που μπορείτε να μοιραστείτε.
@@ -1889,6 +2237,9 @@ el:
               display_name: Συμβάντα
             csf_data:
               display_name: Δεδομένα
+            end_of_course_project:
+              display_name: Έργο Λήξη Μαθήματος
+          title: Μάθημα C (2022)
           student_description: Δημιουργήστε προγράμματα με αλληλουχίες, κύβους βρόχων,
             και γεγονότα. Μετατρέψτε τα αρχικά σας σε δυαδικούς αριθμούς, ερευνήστε
             διαφορετικές τεχνικές επίλυσης προβλημάτων, και μάθετε πώς να απαντάτε
@@ -1910,7 +2261,9 @@ el:
               display_name: Βρόχοι
             csf_conditionals:
               display_name: Συνθήκες
-          title: Μάθημα D (2021)
+            end_of_course_project:
+              display_name: Έργο Λήξη Μαθήματος
+          title: Μάθημα D (2022)
         coursee-2022:
           lesson_groups:
             csf_sprites:
@@ -1923,6 +2276,8 @@ el:
               display_name: Συναρτήσεις
             csf_nested_loops:
               display_name: Συνθήκες
+            end_of_course_project:
+              display_name: Έργο Λήξη Μαθήματος
         coursef-2022:
           lesson_groups:
             ramp_up:
@@ -1931,10 +2286,14 @@ el:
               display_name: Ψηφιακή υπηκοότητα
             lessonGroup-8:
               display_name: Μεταβλητές
+            end_of_course_project:
+              display_name: Έργο Λήξη Μαθήματος
           description_short: Μάθετε όλες τις έννοιες των Θεμελιωδών της Επιστήμης
             της Πληροφορικής και δημιουργήστε τη δική σας τέχνη, ιστορία ή παιχνίδι.
         csa1-2022:
           lesson_groups:
+            lessonGroup-2:
+              display_name: Περιεχόμενο
             lessonGroup-5:
               display_name: Έρευνα
         pre-express-2022:
@@ -1943,6 +2302,34 @@ el:
               display_name: Βρόχοι
             csf_events:
               display_name: Συμβάντα
+        csa2-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Περιεχόμενο
+        csa3-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Περιεχόμενο
+        csa4-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Περιεχόμενο
+        csa5-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Περιεχόμενο
+        csa1-2022-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Περιεχόμενο
+        csa7-pilot-extra:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Περιεχόμενο
+        csa8-pilot-extra:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Περιεχόμενο
         coursef-2022-pilot:
           lesson_groups:
             lessonGroup-7:
@@ -1951,12 +2338,28 @@ el:
               display_name: Χαρακτήρας
             lessonGroup-8:
               display_name: Μεταβλητές
+            end_of_course_project:
+              display_name: Έργο Λήξη Μαθήματος
           description_short: Μάθετε όλες τις έννοιες των Θεμελιωδών της Επιστήμης
             της Πληροφορικής και δημιουργήστε τη δική σας τέχνη, ιστορία ή παιχνίδι.
+        csa6-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Περιεχόμενο
+        csa7-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Περιεχόμενο
         csa8-2022:
           lesson_groups:
+            lessonGroup-2:
+              display_name: Περιεχόμενο
             lessonGroup-5:
               display_name: Έρευνα
+        csa2-2022-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Περιεχόμενο
         csd-playground:
           lessons:
             lesson-7:
@@ -2013,8 +2416,36 @@ el:
           lesson_groups:
             lessonGroup-5:
               display_name: Έρευνα
+            lessonGroup-2:
+              display_name: Περιεχόμενο
+        csa2-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Περιεχόμενο
+        csa3-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Περιεχόμενο
+        csa4-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Περιεχόμενο
+        csa5-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Περιεχόμενο
+        csa6-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Περιεχόμενο
+        csa7-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Περιεχόμενο
         csa8-validation-pilot-2022:
           lesson_groups:
+            lessonGroup-2:
+              display_name: Περιεχόμενο
             lessonGroup-5:
               display_name: Έρευνα
         csa1-2023:
@@ -2026,18 +2457,44 @@ el:
           lesson_groups:
             lessonGroup-2:
               display_name: Έρευνα
+            lessonGroup-3:
+              display_name: Περιεχόμενο
         csa2-2023:
           lessons:
             lesson-4:
               name: Μεταβλητές
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Περιεχόμενο
         csa3-2023:
           lessons:
             lesson-1:
               name: Μονοδιάστατες (1D) συστοιχίες
             lesson-3:
               name: Βρόχοι Για
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Περιεχόμενο
+        csa4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Περιεχόμενο
+        csa5-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Περιεχόμενο
+        csa6-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Περιεχόμενο
+        csa7-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Περιεχόμενο
         csa8-2023:
           lesson_groups:
+            lessonGroup-2:
+              display_name: Περιεχόμενο
             lessonGroup-4:
               display_name: Έρευνα
         hello-world-space-2022:
@@ -2112,6 +2569,8 @@ el:
               display_name: Μεταβλητές
             csf_for_loops:
               display_name: Βρόχοι Για
+            end_of_course_project:
+              display_name: Έργο Λήξη Μαθήματος
           title: Γρήγορο Μάθημα (2022)
         coursea-2023:
           lesson_groups:
@@ -2121,6 +2580,9 @@ el:
               display_name: Βρόχοι
             csf_events:
               display_name: Συμβάντα
+            lessonGroup-5:
+              display_name: Έργο Λήξη Μαθήματος
+          title: Μάθημα A (2022)
           student_description: Μάθετε τα βασικά της επιστήμης της πληροφορικής και
             της διαδικτυακής ασφάλειας. Στο τέλος του μαθήματος, δημιουργήστε το εξολοκλήρου
             δικό σας παιχνίδι ή ιστορία που μπορείτε να μοιραστείτε.
@@ -2134,6 +2596,8 @@ el:
               display_name: Βρόχοι
             csf_events:
               display_name: Συμβάντα
+            lessonGroup-6:
+              display_name: Έργο Λήξη Μαθήματος
           student_description: Μάθετε τα βασικά της επιστήμης της πληροφορικής και
             της διαδικτυακής ασφάλειας. Στο τέλος του μαθήματος, δημιουργήστε το εξολοκλήρου
             δικό σας παιχνίδι ή ιστορία που μπορείτε να μοιραστείτε.
@@ -2147,6 +2611,9 @@ el:
               display_name: Συμβάντα
             csf_data:
               display_name: Δεδομένα
+            end_of_course_project:
+              display_name: Έργο Λήξη Μαθήματος
+          title: Μάθημα C (2022)
           student_description: Δημιουργήστε προγράμματα με αλληλουχίες, κύβους βρόχων,
             και γεγονότα. Μετατρέψτε τα αρχικά σας σε δυαδικούς αριθμούς, ερευνήστε
             διαφορετικές τεχνικές επίλυσης προβλημάτων, και μάθετε πώς να απαντάτε
@@ -2164,7 +2631,9 @@ el:
               display_name: Βρόχοι
             csf_conditionals:
               display_name: Συνθήκες
-          title: Μάθημα D (2021)
+            end_of_course_project:
+              display_name: Έργο Λήξη Μαθήματος
+          title: Μάθημα D (2022)
         coursee-2023:
           lesson_groups:
             csf_digcit:
@@ -2177,6 +2646,8 @@ el:
               display_name: Συναρτήσεις
             csf_nested_loops:
               display_name: Συνθήκες
+            end_of_course_project:
+              display_name: Έργο Λήξη Μαθήματος
         web-development-2023:
           lesson_groups:
             lessonGroup-4:
@@ -2225,5 +2696,7 @@ el:
               display_name: Χαρακτήρας
             lessonGroup-4:
               display_name: Μεταβλητές
+            lessonGroup-6:
+              display_name: Έργο Λήξη Μαθήματος
           description_short: Μάθετε όλες τις έννοιες των Θεμελιωδών της Επιστήμης
             της Πληροφορικής και δημιουργήστε τη δική σας τέχνη, ιστορία ή παιχνίδι.

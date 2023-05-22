@@ -292,6 +292,9 @@
         "pause_and_think_online/pre-express/2022": {
           "type": "Βίντεο"
         },
+        "all_resources/coursea/2022": {
+          "name": "Προβολή Πόρων"
+        },
         "curriculum_guide/coursea/2022": {
           "name": "Οδηγός Προγράμματος"
         },
@@ -300,6 +303,9 @@
         },
         "teacher_forum/coursea/2022": {
           "name": "Φόρουμ Καθηγητών"
+        },
+        "virtual_lesson_modifications/coursea/2022": {
+          "url": "https://docs.google.com/document/d/1yaXgv2_aX3vMhK1HAZbaSu1Cg3yKD4HgfqRu4_pGtYY/view"
         },
         "getting_started_-_creating_a_class_section/coursea/2022": {
           "type": "Βίντεο"
@@ -886,7 +892,8 @@
           "name": "Τυπική Αποτύπωση"
         },
         "teacher_forum/coursea/2018": {
-          "name": "Φόρουμ Καθηγητών"
+          "name": "Φόρουμ Καθηγητών",
+          "url": "http://forum.code.org/c/csf/"
         },
         "vocabulary/coursea/2018": {
           "name": "Λεξιλόγιο"
@@ -1045,7 +1052,8 @@
           "name": "Τυπική Αποτύπωση"
         },
         "teacher_forum/coursea/2019": {
-          "name": "Φόρουμ Καθηγητών"
+          "name": "Φόρουμ Καθηγητών",
+          "url": "http://forum.code.org/c/csf/"
         },
         "vocabulary/coursea/2019": {
           "name": "Λεξιλόγιο"
@@ -2187,16 +2195,20 @@
           "name": "Οδηγός Προγράμματος"
         },
         "lesson_plans/coursea/2020": {
-          "name": "Σχέδια μαθήματος"
+          "name": "Σχέδια μαθήματος",
+          "url": "https://curriculum.code.org/csf-20/coursea/"
         },
         "standard_mappings/coursea/2020": {
-          "name": "Τυπική Αποτύπωση"
+          "name": "Τυπική Αποτύπωση",
+          "url": "https://curriculum.code.org/csf-20/coursea/standards/"
         },
         "teacher_forum/coursea/2020": {
-          "name": "Φόρουμ Καθηγητών"
+          "name": "Φόρουμ Καθηγητών",
+          "url": "http://forum.code.org/c/csf/"
         },
         "vocabulary/coursea/2020": {
-          "name": "Λεξιλόγιο"
+          "name": "Λεξιλόγιο",
+          "url": "https://curriculum.code.org/csf-20/coursea/vocab/"
         },
         "curriculum_guide/coursef/2020": {
           "name": "Οδηγός Προγράμματος"
