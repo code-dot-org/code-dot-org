@@ -41,11 +41,7 @@ const AboutYou = props => {
               <LabeledInput name="lastName" controlWidth={{md: 12}} />
             </Col>
           </Row>
-          <LabeledInput
-            name="accountEmail"
-            value={accountEmail}
-            readOnly={true}
-          />
+          <LabeledInput name="accountEmail" value={accountEmail} readOnly />
           <LabeledInput name="alternateEmail" required={false} />
           <LabeledUsPhoneNumberInput name="phone" />
 

@@ -6,7 +6,7 @@
 .controlsContainer {
   display: flex;
   justify-content: center;
-  background-color: $neutral_dark80;
+  background-color: $neutral_dark90;
   z-index: 70;
   border-radius: $default-border-radius;
   margin: $default-spacing 0;
@@ -30,7 +30,7 @@
 
 .controlButton {
   text-align: center;
-  color: $white;
+  color: $neutral_light;
 
   &Run {
     display: flex;
@@ -60,12 +60,12 @@
 }
 
 .feedbackIcon {
-  color: $white;
+  color: $neutral_light;
 }
 
 .startOverButton {
   background-color: rgba(0 0 0 / 0);
-  color: $white;
+  color: $neutral_light;
   font-size: 14px;
   padding: 0 8px;
 }
