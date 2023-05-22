@@ -2330,7 +2330,8 @@
           "progression_name": "Ang Kapangyarihan ng Salita - Hindi Naka-plug na Aktibidad"
         },
         "4ec90698-6e58-4695-8fec-298eea182910": {
-          "name": "Panimula"
+          "name": "Panimula",
+          "description": "Sa kursong ito matututunan natin kung paano mag-code. Ginagamit ang code upang lumikha ng mga app, laro, web page, simulation, at lahat ng uri ng bagay na ginagamit natin sa computer."
         },
         "e49cc3d9-d33e-4a2c-a549-9ba972b2bffa": {
           "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita:** Ipakita ang “Pag-isipan” na slide\n\n**Pag-isipan**: \n\n-   _Ano ang paborito mong laro o app?_\n-   _Anong mga pagpipilian ang maaari mong gawin habang ginagamit ito?_",
@@ -13503,7 +13504,11 @@
           "progression_name": "Survey ng CS Discoveries Post-course"
         },
         "1c9607e7-ed92-4303-bfef-550b7c561cce": {
-          "name": "Panimula"
+          "name": "Panimula",
+          "description": "Sa kursong ito matututunan natin kung paano mag-code. Ginagamit ang code upang lumikha ng mga app, laro, web page, simulation, at lahat ng uri ng bagay na ginagamit natin sa computer."
+        },
+        "ae9c68f5-dc04-4e99-917b-e2ba8424692f": {
+          "description": "**Gawin Ito:** Gamit ang mga slide ng aralin o whiteboard, ipakita sa mga mag-aaral ang T-chart na may label na \"Mga paboritong app at laro\" sa kaliwa at \"Bakit namin sila gusto\" sa kanan. Pagkatapos magmodelo gamit ang isang halimbawa, sabihin sa mga mag-aaral na magmungkahi ng sarili nilang mga karagdagan sa listahan. Habang ipinapaliwanag ng mga mag-aaral kung bakit nila gusto ang partikular na app, muling ipahayag ang kanilang mga ideya at tumuon sa _mga pagpipilian_, at mga oras kung saan ang user ay _pipili_ kung paano nila ito laruin o gamitin. Magpatuloy kapag nakikita ng mga mag-aaral ang koneksiyon na mas gusto ng mga tao na makapili."
         },
         "bb2b2c3c-57d7-4ad1-aa3c-4f5f3fd37205": {
           "tips": [
