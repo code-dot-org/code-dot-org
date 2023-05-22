@@ -1514,7 +1514,7 @@
           "student_overview": "Naučte sa, ako používať AI Lab na trénovanie modelov strojového učenia, napríklad ako rozpoznávať tvary alebo ako odporúčať jedlo v reštaurácii."
         },
         "csd7-2022/Importing Models in App Lab": {
-          "name": "Importovanie modelov v App Labe",
+          "name": "Importovanie modelov do App Labu",
           "overview": "V tejto lekcii sa žiaci oboznámia s importovaním svojich modelov do App Labu a prepojením modelu s obrazovkami. Pomôžu vytvoriť aplikáciu na odporúčanie kníh a naučia sa, ako do svojho kódu pridať uvítaciu obrazovku a udalosti. Táto lekcia predpokladá, že žiaci už poznajú App Lab – v prípade tried, ktoré sa s App Labom ešte nestretli, zvážte rozšírenie tejto lekcie a zaradenie ďalších videí alebo aktivít, ktoré sú odporúčané v učebnom pláne.\n\n**Otázka dňa:** Ako môžeme vytvoriť aplikáciu využívajúcu strojové učenie?",
           "student_overview": "Naučte sa importovať model do App Labu, čo vám pomôže vytvoriť aplikáciu Odporúčanie kníh pre strednú školu."
         },
@@ -1540,7 +1540,7 @@
         },
         "csd7-2022/Numerical Data in AI Lab": {
           "name": "Číselné údaje v AI Labe",
-          "overview": "V tejto lekcii sa žiaci oboznámia s číselnými údajmi, ktoré predstavujú rozsah hodnôt. Žiakom predstavíme scenár, v ktorom je každá funkcia a označenie vyjadrené číselnými údajmi, a naučia sa používať nové nástroje na vizualizáciu údajov v rámci AI Labu, ktoré im pomôžu nájsť vzory.\n\n**Otázka dňa:** Ako môžeme použiť AI Lab na predpovedanie číselných údajov?",
+          "overview": "V tejto lekcii sa žiaci oboznámia s číselnými údajmi, ktoré predstavujú rozsah hodnôt. Žiakom predstavíme scenár, v ktorom je každá funkcia a označenie vyjadrené číselnými údajmi, a naučia sa používať nové nástroje na vizualizáciu údajov v rámci AI Labu, ktoré im pomôžu nájsť vzory.\n\n**Otázka dňa:** Ako môžeme pomocou AI Labu predpovedať číselné údaje?",
           "student_overview": "Používanie AI Labu a číselných údajov na vytváranie predpovedí o situáciách v reálnom svete"
         },
         "csd7-2022/Customizing Apps": {
@@ -4663,7 +4663,7 @@
           "student_overview": "Naučte sa, ako používať AI Lab na trénovanie modelov strojového učenia, napríklad ako rozpoznávať tvary alebo ako odporúčať jedlo v reštaurácii."
         },
         "csd7-2021/Importing Models in App Lab": {
-          "name": "Importovanie modelov v App Labe",
+          "name": "Importovanie modelov do App Labu",
           "overview": "V tejto lekcii sa žiaci oboznámia s importovaním svojich modelov do App Labu a prepojením modelu s obrazovkami. Pomôžu vytvoriť aplikáciu na odporúčanie kníh a naučia sa, ako do svojho kódu pridať uvítaciu obrazovku a udalosti. Táto lekcia predpokladá, že žiaci už poznajú App Lab – v prípade tried, ktoré sa s App Labom ešte nestretli, zvážte rozšírenie tejto lekcie a zaradenie ďalších videí alebo aktivít, ktoré sú odporúčané v učebnom pláne.\n\n**Otázka dňa:** Ako môžeme vytvoriť aplikáciu využívajúcu strojové učenie?",
           "preparation": "-   Pred lekciou si prezrite úrovne v Code Studiu, aby ste sa oboznámili s importovaním modelu do App Labu.\n-   Rozhodnite sa, či chcete žiakom poskytnúť ďalšie zdroje na oboznámenie sa s App Labom, ako je uvedené v učebnom pláne.",
           "student_overview": "Naučte sa importovať model do App Labu, čo vám pomôže vytvoriť aplikáciu Odporúčanie kníh pre strednú školu."
@@ -4694,7 +4694,7 @@
         },
         "csd7-2021/Numerical Data in AI Lab": {
           "name": "Číselné údaje v AI Labe",
-          "overview": "V tejto lekcii sa žiaci oboznámia s číselnými údajmi, ktoré predstavujú rozsah hodnôt. Žiakom predstavíme scenár, v ktorom je každá funkcia a označenie vyjadrené číselnými údajmi, a naučia sa používať nové nástroje na vizualizáciu údajov v rámci AI Labu, ktoré im pomôžu nájsť vzory.\n\n**Otázka dňa:** Ako môžeme použiť AI Lab na predpovedanie číselných údajov?",
+          "overview": "V tejto lekcii sa žiaci oboznámia s číselnými údajmi, ktoré predstavujú rozsah hodnôt. Žiakom predstavíme scenár, v ktorom je každá funkcia a označenie vyjadrené číselnými údajmi, a naučia sa používať nové nástroje na vizualizáciu údajov v rámci AI Labu, ktoré im pomôžu nájsť vzory.\n\n**Otázka dňa:** Ako môžeme pomocou AI Labu predpovedať číselné údaje?",
           "student_overview": "Používanie AI Labu a číselných údajov na vytváranie predpovedí o situáciách v reálnom svete"
         },
         "csd7-2021/Customizing Apps": {
