@@ -21,7 +21,7 @@ export CIRCLE_NODE_INDEX=1
 export CIRCLE_TEST_REPORTS=/home/circleci/test_reports
 export CIRCLE_ARTIFACTS=/home/circleci/artifacts
 
-mkdir $CIRCLE_ARTIFACTS
+mkdir -p $CIRCLE_ARTIFACTS
 
 # rbenv-doctor https://github.com/rbenv/rbenv-installer#readme
 curl -fsSL https://github.com/rbenv/rbenv-installer/raw/main/bin/rbenv-doctor | bash
