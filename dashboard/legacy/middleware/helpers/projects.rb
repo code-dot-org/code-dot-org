@@ -471,12 +471,7 @@ class Projects
   def validate_thumbnail_url(channel_id, thumbnail_url)
     return true unless thumbnail_url
 
-    # valid thumbnail URLs should be of the format:
-    # /v3/files/<channel_id>/.metadata/thumbnail.png
-    # I observed thumbnail URLs of remixed projects having having the channel ID of the parent project,
-    # so we assert on the start/end of the URL
-    valid_thumbnail_url = thumbnail_url.start_with?('/v3/files/') && thumbnail_url.end_with?('.metadata/thumbnail.png')
-    if !valid_thumbnail_url && DCDO.get('log_thumbnail_url_validation', false)
+    if !valid_thumbnail_url?(thumbnail_url) && DCDO.get('log_thumbnail_url_validation', false)
       # raise ValidationError
       Honeybadger.notify(
         error_class: 'Project::ValidationError',
@@ -486,5 +481,13 @@ class Projects
     end
 
     true
+  end
+
+  # valid thumbnail URLs should be of the format:
+  # /v3/files/<channel_id>/.metadata/thumbnail.png
+  # I observed thumbnail URLs of remixed projects having having the channel ID of the parent project,
+  # so we assert on the start/end of the URL
+  def valid_thumbnail_url?(thumbnail_url)
+    thumbnail_url.start_with?('/v3/files/') && thumbnail_url.end_with?('.metadata/thumbnail.png')
   end
 end
