@@ -1085,7 +1085,7 @@ it-IT:
         - {}
         - {}
         questions:
-        - {}
+        - text: Quale risultato verrà mostrato nella console da questo programma?
         title: titolo
       CSD U3 Boolean MC_2018:
         answers:
@@ -1094,7 +1094,7 @@ it-IT:
         - {}
         - {}
         questions:
-        - {}
+        - text: Quale risultato verrà mostrato nella console da questo programma?
         title: titolo
       CSD U3 Boolean MC_2018_2019:
         answers:
@@ -1103,30 +1103,56 @@ it-IT:
         - {}
         - {}
         questions:
-        - {}
+        - text: Quale risultato verrà mostrato nella console da questo programma?
         title: titolo
       CSD U3 Card Examples_2018:
         content1: descrizione qui
+        markdown: "# La tua cartolina interattiva\n\nNei prossimi esercizi, completerai
+          la tua cartolina interattiva. Ecco alcuni esempi per darti qualche idea.
+          Non dimenticare di dare un'occhiata al codice di questi esempi per vedere
+          come funzionano.\n\n## Esempi\n\n[![](https://images.code.org/7bbdbbb01c354a7c09bb4b9b5182a951-image-1522780803299.png)](https://studio.code.org/projects/gamelab/OzdFqrZ4oHPYsTddaRWaZxtTvdj9NzZVwCq6NkyONXM/edit)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[![](https://images.code.org/ed307e22854e4958a006d8023636cfd5-image-1522780803295.png)](https://studio.code.org/projects/gamelab/fmFrWsocELzP19CfbGI5P_hsgxN5ewVaB5f0Bw5S1_E/edit)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[![](https://images.code.org/ae0eca1dab46f13fcb21d4d0e264d637-image-1522780803298.png)](https://studio.code.org/projects/gamelab/z4XDrC0lsqoRY0xzYaXdJfChmyCl5O6YM-EOByecscc/edit) "
       CSD U3 Card Examples_2018_2019:
         content1: descrizione qui
+        markdown: "# La tua cartolina interattiva\n\nNei prossimi esercizi, completerai
+          la tua cartolina interattiva. Ecco alcuni esempi per darti qualche idea.
+          Non dimenticare di dare un'occhiata al codice di questi esempi per vedere
+          come funzionano.\n\n## Esempi\n\n[![](https://images.code.org/7bbdbbb01c354a7c09bb4b9b5182a951-image-1522780803299.png)](https://studio.code.org/projects/gamelab/OzdFqrZ4oHPYsTddaRWaZxtTvdj9NzZVwCq6NkyONXM/edit)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[![](https://images.code.org/ed307e22854e4958a006d8023636cfd5-image-1522780803295.png)](https://studio.code.org/projects/gamelab/fmFrWsocELzP19CfbGI5P_hsgxN5ewVaB5f0Bw5S1_E/edit)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[![](https://images.code.org/ae0eca1dab46f13fcb21d4d0e264d637-image-1522780803298.png)](https://studio.code.org/projects/gamelab/z4XDrC0lsqoRY0xzYaXdJfChmyCl5O6YM-EOByecscc/edit) "
       CSD U3 Functions Prediction define first:
         answers:
         - {}
         - {}
         - correct: true
         - {}
+        markdown: |
+          # Ha importanza dove si creano le funzioni?
+
+          Finora tutte le funzioni sono state create in fondo al programma. Cosa pensi che succeda se richiami una funzione prima che sia definita?
+
+          Nota che il quadrato rosso `drawRed()` è disegnato **prima** che la sua funzione venga definita, mentre il quadrato verde `drawGreen()` è disegnato **dopo** che la sua funzione è stata definita. Quale pensi che verrà disegnato?
       CSD U3 Functions Prediction define first_2018:
         answers:
         - {}
         - {}
         - correct: true
         - {}
+        markdown: |
+          # Ha importanza dove si creano le funzioni?
+
+          Finora tutte le funzioni sono state create in fondo al programma. Cosa pensi che succeda se richiami una funzione prima che sia definita?
+
+          Nota che il quadrato rosso `drawRed()` è disegnato **prima** che la sua funzione venga definita, mentre il quadrato verde `drawGreen()` è disegnato **dopo** che la sua funzione è stata definita. Quale pensi che verrà disegnato?
       CSD U3 Functions Prediction define first_2018_2019:
         answers:
         - {}
         - {}
         - correct: true
         - {}
+        markdown: |
+          # Ha importanza dove si creano le funzioni?
+
+          Finora tutte le funzioni sono state create in fondo al programma. Cosa pensi che succeda se richiami una funzione prima che sia definita?
+
+          Nota che il quadrato rosso `drawRed()` è disegnato **prima** che la sua funzione venga definita, mentre il quadrato verde `drawGreen()` è disegnato **dopo** che la sua funzione è stata definita. Quale pensi che verrà disegnato?
       CSD U3 Keypress Matching:
         answers:
         - {}
@@ -1161,7 +1187,8 @@ it-IT:
         - correct: true
         - {}
         questions:
-        - {}
+        - text: Leggi questo programma e prevedi quale delle seguenti animazioni verrà
+            generata.
       CSD U3 Sprite Movement Predict Multi_2018:
         answers:
         - {}
@@ -1169,7 +1196,8 @@ it-IT:
         - correct: true
         - {}
         questions:
-        - {}
+        - text: Leggi questo programma e prevedi quale delle seguenti animazioni verrà
+            generata.
       CSD U3 Sprite Movement Predict Multi_2018_2019:
         answers:
         - {}
@@ -1177,7 +1205,8 @@ it-IT:
         - correct: true
         - {}
         questions:
-        - {}
+        - text: Leggi questo programma e prevedi quale delle seguenti animazioni verrà
+            generata.
       CSD U3 Sprites intro predict multi:
         answers:
         - {}
@@ -1253,10 +1282,58 @@ it-IT:
         title: drawSprites
       CSD U3 game intro:
         content1: descrizione qui
+        markdown: |
+          # Crea il tuo gioco
+
+          Ora che hai tutte le competenze necessarie, è il momento di creare il tuo gioco!
+
+          Rifletti insieme ad un compagno su diverse possibili idee per il vostro gioco. Per avere delle idee, puoi pensare a giochi che conosci o guardare qui qualche esempio.
+
+          [<img src="https://images.code.org/fc2d4cdba80a476b1ff476081991031e-image-1498594631779.png" style="width: 200px; float: left; margin: 10px;">](https://studio.code.org/projects/gamelab/AwDcX5nehOApfzyywI6BOLT1xbf0MIV1dUj8KjQaNtA)
+
+          [<img src="https://images.code.org/b89895bdd43be4b729ca9165fc2923cf-image-1498595512898.28.24 PM.png" style="width: 200px; float: left; margin: 10px;">](https://studio.code.org/projects/gamelab/r9OYVTSj2od8vaCA-nKikTVpx-2Co8qHhuZiBIu30JA)
+
+          [<img src="https://images.code.org/d430061caab264330da0227b53e2db90-image-1498595505047.27.59 PM.png" style="width: 200px; margin: 10px;">](https://studio.code.org/projects/gamelab/hAz7RSdqc0c_MSQVUpvz1XrLDr8QLsansWDVI0ZberQ)
+
+          [<img src="https://images.code.org/c9fb241c5684e10d9ba2b85d4d4a906b-image-1498764384615.25.58 PM.png" style="width: 200px; margin: 10px;">](https://studio.code.org/projects/gamelab/DmRPNYR3n7bMO--_KkP7r6mOoGynBVyi3BMVPWDiVeI)
+
+          Una volta che avrai identificato una tipologia di gioco, compila la Guida di progetto con gli sfondi, le variabili, i personaggi e le funzioni di cui avrai bisogno per realizzare il gioco. Nei prossimi esercizi creerai il tuo gioco.
       CSD U3 game intro_2018:
         content1: descrizione qui
+        markdown: |
+          # Crea il tuo gioco
+
+          Ora che hai tutte le competenze necessarie, è il momento di creare il tuo gioco!
+
+          Rifletti insieme ad un compagno su diverse possibili idee per il vostro gioco. Per avere delle idee, puoi pensare a giochi che conosci o guardare qui qualche esempio.
+
+          [<img src="https://images.code.org/fc2d4cdba80a476b1ff476081991031e-image-1498594631779.png" style="width: 200px; float: left; margin: 10px;">](https://studio.code.org/projects/gamelab/AwDcX5nehOApfzyywI6BOLT1xbf0MIV1dUj8KjQaNtA)
+
+          [<img src="https://images.code.org/b89895bdd43be4b729ca9165fc2923cf-image-1498595512898.28.24 PM.png" style="width: 200px; float: left; margin: 10px;">](https://studio.code.org/projects/gamelab/r9OYVTSj2od8vaCA-nKikTVpx-2Co8qHhuZiBIu30JA)
+
+          [<img src="https://images.code.org/d430061caab264330da0227b53e2db90-image-1498595505047.27.59 PM.png" style="width: 200px; margin: 10px;">](https://studio.code.org/projects/gamelab/hAz7RSdqc0c_MSQVUpvz1XrLDr8QLsansWDVI0ZberQ)
+
+          [<img src="https://images.code.org/c9fb241c5684e10d9ba2b85d4d4a906b-image-1498764384615.25.58 PM.png" style="width: 200px; margin: 10px;">](https://studio.code.org/projects/gamelab/DmRPNYR3n7bMO--_KkP7r6mOoGynBVyi3BMVPWDiVeI)
+
+          Una volta che avrai identificato una tipologia di gioco, compila la Guida di progetto con gli sfondi, le variabili, i personaggi e le funzioni di cui avrai bisogno per realizzare il gioco. Nei prossimi esercizi creerai il tuo gioco.
       CSD U3 game intro_2018_2019:
         content1: descrizione qui
+        markdown: |
+          # Crea il tuo gioco
+
+          Ora che hai tutte le competenze necessarie, è il momento di creare il tuo gioco!
+
+          Rifletti insieme ad un compagno su diverse possibili idee per il vostro gioco. Per avere delle idee, puoi pensare a giochi che conosci o guardare qui qualche esempio.
+
+          [<img src="https://images.code.org/fc2d4cdba80a476b1ff476081991031e-image-1498594631779.png" style="width: 200px; float: left; margin: 10px;">](https://studio.code.org/projects/gamelab/AwDcX5nehOApfzyywI6BOLT1xbf0MIV1dUj8KjQaNtA)
+
+          [<img src="https://images.code.org/b89895bdd43be4b729ca9165fc2923cf-image-1498595512898.28.24 PM.png" style="width: 200px; float: left; margin: 10px;">](https://studio.code.org/projects/gamelab/r9OYVTSj2od8vaCA-nKikTVpx-2Co8qHhuZiBIu30JA)
+
+          [<img src="https://images.code.org/d430061caab264330da0227b53e2db90-image-1498595505047.27.59 PM.png" style="width: 200px; margin: 10px;">](https://studio.code.org/projects/gamelab/hAz7RSdqc0c_MSQVUpvz1XrLDr8QLsansWDVI0ZberQ)
+
+          [<img src="https://images.code.org/c9fb241c5684e10d9ba2b85d4d4a906b-image-1498764384615.25.58 PM.png" style="width: 200px; margin: 10px;">](https://studio.code.org/projects/gamelab/DmRPNYR3n7bMO--_KkP7r6mOoGynBVyi3BMVPWDiVeI)
+
+          Una volta che avrai identificato una tipologia di gioco, compila la Guida di progetto con gli sfondi, le variabili, i personaggi e le funzioni di cui avrai bisogno per realizzare il gioco. Nei prossimi esercizi creerai il tuo gioco.
       CSD U3 platform intro:
         content1: descrizione qui
       CSD U3 platform intro_2018:
@@ -10111,7 +10188,7 @@ it-IT:
         - {}
         - {}
         questions:
-        - {}
+        - text: Quale risultato verrà mostrato nella console da questo programma?
         title: titolo
         markdown: |
           # Espressioni booleane
@@ -10123,12 +10200,22 @@ it-IT:
           Leggi il programma qui sotto. Ci sono alcuni nuovi simboli che non ti sono stati presentati. Prova a indovinare cosa significano e prova a rispondere alla seguente domanda
       CSD U3 Card Examples_2018_2019_pilot_2021:
         content1: descrizione qui
+        markdown: "# La tua cartolina interattiva\n\nNei prossimi esercizi, completerai
+          la tua cartolina interattiva. Ecco alcuni esempi per darti qualche idea.
+          Non dimenticare di dare un'occhiata al codice di questi esempi per vedere
+          come funzionano.\n\n## Esempi\n\n[![](https://images.code.org/7bbdbbb01c354a7c09bb4b9b5182a951-image-1522780803299.png)](https://studio.code.org/projects/gamelab/OzdFqrZ4oHPYsTddaRWaZxtTvdj9NzZVwCq6NkyONXM/edit)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[![](https://images.code.org/ed307e22854e4958a006d8023636cfd5-image-1522780803295.png)](https://studio.code.org/projects/gamelab/fmFrWsocELzP19CfbGI5P_hsgxN5ewVaB5f0Bw5S1_E/edit)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[![](https://images.code.org/ae0eca1dab46f13fcb21d4d0e264d637-image-1522780803298.png)](https://studio.code.org/projects/gamelab/z4XDrC0lsqoRY0xzYaXdJfChmyCl5O6YM-EOByecscc/edit) "
       CSD U3 Functions Prediction define first_2018_2019_pilot_2021:
         answers:
         - {}
         - {}
         - correct: true
         - {}
+        markdown: |
+          # Ha importanza dove si creano le funzioni?
+
+          Finora tutte le funzioni sono state create in fondo al programma. Cosa pensi che succeda se richiami una funzione prima che sia definita?
+
+          Nota che il quadrato rosso `drawRed()` è disegnato **prima** che la sua funzione venga definita, mentre il quadrato verde `drawGreen()` è disegnato **dopo** che la sua funzione è stata definita. Quale pensi che verrà disegnato?
       CSD U3 Sprite Movement Predict Multi_2018_2019_pilot_2021:
         answers:
         - {}
@@ -10136,7 +10223,8 @@ it-IT:
         - correct: true
         - {}
         questions:
-        - {}
+        - text: Leggi questo programma e prevedi quale delle seguenti animazioni verrà
+            generata.
       CSD U3 drawSprites placement match_2019_pilot_2021:
         answers:
         - text: https://images.code.org/131282b44fe34cd619a9a21bc68888da-image-1523902103487.58.48
@@ -10163,6 +10251,22 @@ it-IT:
         description: Fai molta pratica!
       CSD U3 game intro_2018_2019_pilot_2021:
         content1: descrizione qui
+        markdown: |
+          # Crea il tuo gioco
+
+          Ora che hai tutte le competenze necessarie, è il momento di creare il tuo gioco!
+
+          Rifletti insieme ad un compagno su diverse possibili idee per il vostro gioco. Per avere delle idee, puoi pensare a giochi che conosci o guardare qui qualche esempio.
+
+          [<img src="https://images.code.org/fc2d4cdba80a476b1ff476081991031e-image-1498594631779.png" style="width: 200px; float: left; margin: 10px;">](https://studio.code.org/projects/gamelab/AwDcX5nehOApfzyywI6BOLT1xbf0MIV1dUj8KjQaNtA)
+
+          [<img src="https://images.code.org/b89895bdd43be4b729ca9165fc2923cf-image-1498595512898.28.24 PM.png" style="width: 200px; float: left; margin: 10px;">](https://studio.code.org/projects/gamelab/r9OYVTSj2od8vaCA-nKikTVpx-2Co8qHhuZiBIu30JA)
+
+          [<img src="https://images.code.org/d430061caab264330da0227b53e2db90-image-1498595505047.27.59 PM.png" style="width: 200px; margin: 10px;">](https://studio.code.org/projects/gamelab/hAz7RSdqc0c_MSQVUpvz1XrLDr8QLsansWDVI0ZberQ)
+
+          [<img src="https://images.code.org/c9fb241c5684e10d9ba2b85d4d4a906b-image-1498764384615.25.58 PM.png" style="width: 200px; margin: 10px;">](https://studio.code.org/projects/gamelab/DmRPNYR3n7bMO--_KkP7r6mOoGynBVyi3BMVPWDiVeI)
+
+          Una volta che avrai identificato una tipologia di gioco, compila la Guida di progetto con gli sfondi, le variabili, i personaggi e le funzioni di cui avrai bisogno per realizzare il gioco. Nei prossimi esercizi creerai il tuo gioco.
       CSD U3 platform intro_2018_2019_pilot_2021:
         content1: descrizione qui
         markdown: |
@@ -10825,7 +10929,7 @@ it-IT:
         - {}
         - {}
         questions:
-        - {}
+        - text: Quale risultato verrà mostrato nella console da questo programma?
         title: titolo
         markdown: |
           # Espressioni booleane
@@ -10841,6 +10945,12 @@ it-IT:
         - {}
         - correct: true
         - {}
+        markdown: |
+          # Ha importanza dove si creano le funzioni?
+
+          Finora tutte le funzioni sono state create in fondo al programma. Cosa pensi che succeda se richiami una funzione prima che sia definita?
+
+          Nota che il quadrato rosso `drawRed()` è disegnato **prima** che la sua funzione venga definita, mentre il quadrato verde `drawGreen()` è disegnato **dopo** che la sua funzione è stata definita. Quale pensi che verrà disegnato?
       CSD U3 Sprite Movement Predict Multi_2018_2019_pilot_2022:
         answers:
         - {}
@@ -10848,7 +10958,8 @@ it-IT:
         - correct: true
         - {}
         questions:
-        - {}
+        - text: Leggi questo programma e prevedi quale delle seguenti animazioni verrà
+            generata.
       CSD U3 Test clean code:
         answers:
         - {}
@@ -12599,7 +12710,8 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: È stato difficile per persone come me essere accettate in questo corso
+            di informatica.
       csd-post-survey-2017-q28_2018:
         answers:
         - text: Sono del tutto d'accordo
@@ -13237,10 +13349,22 @@ it-IT:
         - {}
       csd-post-survey-unit1-preamble:
         content1: descrizione qui
+        markdown: |
+          # Unità 1 - Risoluzione dei problemi
+
+          ![](https://images.code.org/9b94f18a91fcc4a432514195c76e09ed-image-1526917360888.png)
       csd-post-survey-unit2-preamble:
         content1: descrizione qui
+        markdown: |
+          # Unità 2 - Sviluppo web
+
+          ![](https://images.code.org/7ac27720f905737e91d700609099984a-image-1526917558081.57.43 PM.png)
       csd-post-survey-unit3-preamble:
         content1: descrizione qui
+        markdown: |
+          # Unità 3 - Animazioni e giochi interattivi
+
+          ![](https://images.code.org/8bd6359a99d85595cd13a36c4496f8f9-image-1526917686038.59.04 PM.png)
       csd-post-survey-unit4-preamble:
         content1: descrizione qui
       csd-post-survey-unit5-preamble:
@@ -17748,7 +17872,8 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: È stato difficile per persone come me essere accettate in questo corso
+            di informatica.
       csp-post-survey-2017-q28:
         answers:
         - text: Sono del tutto d'accordo
@@ -17976,6 +18101,9 @@ it-IT:
         content1: descrizione qui
       csp-post-survey-2018-unit-feedback-preamble:
         content1: descrizione qui
+        markdown: "### Questa sezione pone le stesse due domande su ciascuna unità
+          del corso. Siamo interessati al tuo riscontro perché può aiutarci a migliorare
+          i nostri corsi.\n"
       csp-post-survey-who-encouraged-csp:
         answers:
         - correct: true
@@ -22213,7 +22341,7 @@ it-IT:
 
       Design a Screen for your App_2018:
         markdown: |
-          # Simulazione della tua app
+          # Simula la tua app
 
           Ora che hai fatto un po' di pratica nel disporre gli elementi in Sviluppo App, puoi iniziare a lavorare sulla simulazione della tua app. Con il tuo gruppo, distribuitevi su più schermi in modo che tutti possano lavorare su uno schermo diverso.
 
@@ -22240,7 +22368,7 @@ it-IT:
           Ancor più dell'attività di prototipazione su carta, è facile per gli studenti di questa lezione dimenticare che devono considerare come le loro scelte influiranno su tutta la loro squadra. Incoraggia una discussione attiva tra le squadre durante la progettazione delle schermate per assicurarti che lavorino tutti verso un obiettivo comune.
       Design a Screen for your App_2018_2019:
         markdown: |
-          # Simulazione della tua app
+          # Simula la tua app
 
           Ora che hai fatto un po' di pratica nel disporre gli elementi in Sviluppo App, puoi iniziare a lavorare sulla simulazione della tua app. Con il tuo gruppo, distribuitevi su più schermi in modo che tutti possano lavorare su uno schermo diverso.
 
@@ -22267,7 +22395,7 @@ it-IT:
           Ancor più dell'attività di prototipazione su carta, è facile per gli studenti di questa lezione dimenticare che devono considerare come le loro scelte influiranno su tutta la loro squadra. Incoraggia una discussione attiva tra le squadre durante la progettazione delle schermate per assicurarti che lavorino tutti verso un obiettivo comune.
       Design a Screen for your App_2021:
         markdown: |
-          # Simulazione della tua app
+          # Simula la tua app
 
           Ora che hai fatto un po' di pratica nel disporre gli elementi in Sviluppo App, puoi iniziare a lavorare sulla simulazione della tua app. Con il tuo gruppo, distribuitevi su più schermi in modo che tutti possano lavorare su uno schermo diverso.
 
@@ -22294,7 +22422,7 @@ it-IT:
           Ancor più dell'attività di prototipazione su carta, è facile per gli studenti di questa lezione dimenticare che devono considerare come le loro scelte influiranno su tutta la loro squadra. Incoraggia una discussione attiva tra le squadre durante la progettazione delle schermate per assicurarti che lavorino tutti verso un obiettivo comune.
       Design a Screen for your App_2022:
         markdown: |
-          # Simulazione della tua app
+          # Simula la tua app
 
           Ora che hai fatto un po' di pratica nel disporre gli elementi in Sviluppo App, puoi iniziare a lavorare sulla simulazione della tua app. Con il tuo gruppo, distribuitevi su più schermi in modo che tutti possano lavorare su uno schermo diverso.
 
@@ -22569,3 +22697,14 @@ it-IT:
         display_name: Esercizi di pratica
       CSD U6 - Sensors - Prac_2222:
         display_name: Esercizi di pratica
+      csp-post-survey-2017 preamble 1:
+        markdown: "### **Questo sondaggio è anonimo**\n\n* Questo sondaggio ha 5 parti
+          brevi.  \n* Il completamento dell'operazione dovrebbe richiedere **15 minuti**
+          del tuo tempo o anche meno.\n\n*Code.org prende molto sul serio la tua privacy.*
+          Le tue risposte qui rimarranno **anonime**. Nessuno, nemmeno il tuo insegnante,
+          può collegare le tue risposte a te come individuo.\n\nLo facciamo perché
+          vogliamo che tu **sia il più possibile aperto e sincero**. Abbiamo a cuore
+          la tua esperienza nel corso e apportiamo miglioramenti in base a ciò che
+          dici.\n\n***\n\n### Parte 1: La scuola in generale\n\n#### *Per prima cosa,
+          vogliamo chiederti quali sono i tuoi pensieri e le tue sensazioni sulla
+          scuola, in generale.*"

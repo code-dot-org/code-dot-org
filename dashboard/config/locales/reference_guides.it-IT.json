@@ -57,7 +57,10 @@
           "display_name": "Panoramica"
         },
         "csd-2022/design-mode": {
-          "display_name": "Design Mode"
+          "display_name": "Modalità interfaccia"
+        },
+        "csd-2022/design-mode-elements": {
+          "display_name": "Elementi della \"Modalità Interfaccia\""
         },
         "csd-2022/designing-screens-with-code": {
           "display_name": "Progettare schermate in modalità codice"
@@ -91,6 +94,9 @@
         },
         "csd-2022/html-tags": {
           "display_name": "Tag HTML"
+        },
+        "csd-2022/if-else-statements": {
+          "display_name": "Dichiarazioni se/altrimenti"
         },
         "csd-2022/if-statements": {
           "display_name": "Istruzioni condizionali"
@@ -130,6 +136,9 @@
         },
         "csd-2022/modifying-arrays": {
           "display_name": "Modifica delle matrici (array)"
+        },
+        "csd-2022/multi-screen-apps": {
+          "display_name": "App multischermo"
         },
         "csd-2022/naming-variables": {
           "display_name": "Denominazione delle variabili"
@@ -178,6 +187,12 @@
         },
         "csd-2022/the-accelerometer": {
           "display_name": "L'accelerometro"
+        },
+        "csd-2022/the-counter-pattern": {
+          "display_name": "Lo schema a contatore"
+        },
+        "csd-2022/the-counter-pattern-2": {
+          "display_name": "Lo schema a contatore"
         },
         "csd-2022/the-draw-loop": {
           "display_name": "La funzione ciclica `draw()`"

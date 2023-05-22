@@ -2555,11 +2555,17 @@
         "04c570b6-1657-47dd-a90f-26f7ce510830": {
           "name": "Attività"
         },
+        "95143d23-7e19-48a8-8b21-6c4df0c6c901": {
+          "name": "Conclusione"
+        },
         "88d2e8d2-0264-49f8-8cf6-60f7580d4055": {
           "name": "Preparazione"
         },
         "ac23bd8d-6baf-42d4-8aef-d322a53d99d7": {
           "name": "Attività"
+        },
+        "32bebf15-32d1-4b13-b256-79bff01e2e9c": {
+          "name": "Conclusione"
         },
         "44a7328d-f579-4a62-b88f-c577b965ce02": {
           "name": "Preparazione"
@@ -2584,6 +2590,9 @@
         },
         "5c4c0ced-8cfb-42e6-af12-a96934458594": {
           "name": "Attività"
+        },
+        "3e41533e-7cd0-402a-acee-8d32a288c904": {
+          "name": "Conclusione"
         },
         "43cd18fc-8b9d-4601-a153-e8d2244ef3ef": {
           "name": "Preparazione"
@@ -2645,6 +2654,9 @@
         "feb7e645-107d-4334-af6c-de26fedf3e43": {
           "name": "Attività"
         },
+        "48055820-8bfe-43a2-b39b-b23d461f313b": {
+          "name": "Conclusione"
+        },
         "ddfbcbdd-45a0-4976-a52f-aa64c5e61a77": {
           "name": "Preparazione"
         },
@@ -2668,6 +2680,9 @@
         },
         "7eb392a8-4fee-468e-8069-090228cfcac9": {
           "name": "Attività"
+        },
+        "f141f932-8f4a-49ad-a55b-7c631cd8099c": {
+          "name": "Conclusione"
         },
         "2e55afbe-ae39-45bb-988a-8cac756ca299": {
           "name": "Preparazione"
@@ -2963,8 +2978,17 @@
         "bdc1832c-271c-4c74-827f-fe2056cb1698": {
           "name": "Preparazione"
         },
+        "e0f92ee9-e09e-4464-9832-d80d7089a276": {
+          "name": "1° giorno"
+        },
+        "53fce3e8-9a82-4562-9691-1f7177b41469": {
+          "name": "2° giorno"
+        },
         "dcda19af-6de2-4b69-a6f8-0f5d0e4871cf": {
           "name": "Conclusione"
+        },
+        "e9ddb1e4-3fb9-4b16-bbec-0519c37f899a": {
+          "name": "Preparazione del progetto"
         },
         "11ff35c2-043f-464c-80fa-7b72f4506105": {
           "name": "Preparazione"
@@ -3166,6 +3190,12 @@
         },
         "3bed049b-6e73-4364-b9da-6e739f72c82e": {
           "name": "Conclusione"
+        },
+        "cb925fb4-9d28-435c-91ef-007d123fea09": {
+          "name": "1° giorno"
+        },
+        "b9d79ca5-7d04-4bc1-853b-76465110748e": {
+          "name": "2° giorno"
         },
         "e442e49a-0f47-4f9d-a2f1-2bb40bf49f09": {
           "name": "Preparazione"
@@ -3424,6 +3454,12 @@
         },
         "056792cd-6ea4-4da4-aded-c92a4bb8389f": {
           "name": "Conclusione"
+        },
+        "1dac4668-880c-4880-b361-9c3478ccdd32": {
+          "name": "1° giorno"
+        },
+        "a161278e-9b95-4ee1-958a-3d5d34f62443": {
+          "name": "2° giorno"
         },
         "dde1ab27-53a2-4c39-a80e-317f9df72651": {
           "name": "Esercizi"
@@ -7991,6 +8027,12 @@
         "b03f2c86-6df7-483a-838c-6a729b695cfe": {
           "name": "Conclusione"
         },
+        "b36818af-e833-4d6e-8656-485a0cc3b660": {
+          "name": "1° giorno"
+        },
+        "a2dd3937-a0d5-4f80-b800-99cc0b9ceb72": {
+          "name": "2° giorno"
+        },
         "12bc2f76-7b4a-4453-a526-fc5a0bbb15ca": {
           "name": "Preparazione"
         },
@@ -8057,8 +8099,17 @@
         "6be6c7d6-44c4-4fc2-96a0-a45805228aa8": {
           "name": "Preparazione"
         },
+        "32a5b027-028e-4d12-84eb-7b36009cc36e": {
+          "name": "1° giorno"
+        },
+        "0b3be74b-ef7b-4557-9b30-bb7f8727e6f1": {
+          "name": "2° giorno"
+        },
         "0de0afb2-3b1f-420a-aaf6-557b0726539b": {
           "name": "Conclusione"
+        },
+        "13d72af9-3b54-4ff3-b3f5-bcbb29212d1b": {
+          "name": "Preparazione del progetto"
         },
         "5aa1b4d5-0d87-4e15-87db-51011f0a8751": {
           "name": "Preparazione"
@@ -8585,6 +8636,9 @@
         "2e5b6973-dcd9-405c-958d-2366095f4375": {
           "name": "Attività"
         },
+        "3e93f640-d708-4ed5-a00a-4205f6dcd4fb": {
+          "name": "Conclusione"
+        },
         "9368b7ab-08ee-4900-b007-3a008552079f": {
           "name": "Modifiche alla lezione"
         },
@@ -8593,6 +8647,9 @@
         },
         "2edac65a-ce15-4b8c-afc8-a2faebdeb5f4": {
           "name": "Attività"
+        },
+        "e7216a36-908d-4036-8dc3-e7b6a49c1b78": {
+          "name": "Conclusione"
         },
         "5346ecf1-b80b-44cb-ad37-ea10eb8561c2": {
           "name": "Modifiche alla lezione"
@@ -8626,6 +8683,9 @@
         },
         "e22dd0d5-97b3-4829-9d90-3a213360c254": {
           "name": "Attività"
+        },
+        "7867053c-45a1-4d10-a159-8dc70ab53a0b": {
+          "name": "Conclusione"
         },
         "42b55089-127b-435f-be68-691d07bd60f2": {
           "name": "Modifiche alla lezione"
@@ -8708,6 +8768,9 @@
         "d469a158-6f03-4bb2-a6bb-2fb04adc68bd": {
           "name": "Attività"
         },
+        "20be7e0b-da27-4cf7-b721-de78b253d8ab": {
+          "name": "Conclusione"
+        },
         "055947d6-e6ec-4356-9343-4a1b2a5fe229": {
           "name": "Modifiche alla lezione"
         },
@@ -8740,6 +8803,9 @@
         },
         "2f663cbe-39d3-44bc-b3d0-3847de8616ed": {
           "name": "Attività"
+        },
+        "c611b357-4152-4524-ba71-e3531cc97d9d": {
+          "name": "Conclusione"
         },
         "d5f8482f-a875-457a-83a0-8fe8c8697621": {
           "name": "Modifiche alla lezione"

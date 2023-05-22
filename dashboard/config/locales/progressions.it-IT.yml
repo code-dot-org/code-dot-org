@@ -91,7 +91,7 @@ it:
       Code Your Page: Programma la tua pagina
       Collector Game: Gioco di Raccolta
       Collision Detection: Rilevamento delle collisioni
-      Collisions: collisioni
+      Collisions: Collisioni
       Collisions in Games: Collisioni nei Giochi
       Color LEDs: LED a colori
       Combining Projects: Riunificare i progetti
@@ -118,9 +118,10 @@ it:
       Debugging: Correzione errori (debugging)
       Debugging with the Step Button: Debugging con il Pulsante di Fase
       Demo - Bug Grab: Demo - Afferra l'insetto
-      'Demo App: Interactive Card': 'App demo: scheda interattiva'
+      'Demo App: Interactive Card': 'App demo: cartolina interattiva'
       Demo Apps: App Demo
-      Design Mode: Design Mode
+      Design Mode: Modalità interfaccia
+      Design Mode Elements: Elementi della "Modalità Interfaccia"
       Design Your Prototype: Progetta il tuo prototipo
       Design a Screen for your App: Progettare una schermata per la tua app
       Designing Screens with Code: Progettare schermate in modalità codice
@@ -189,6 +190,7 @@ it:
       How to Make a Sprite: Come creare un personaggio
       Ice Age Loops: Cicli dell'Era Glaciale
       If Statements: Istruzioni condizionali
+      If-Else Statements: Dichiarazioni se/altrimenti
       Images and Sounds: Immagini e Suoni
       Images in HTML: Immagini in HTML
       Importing Screens: Importare le schermate
@@ -197,8 +199,8 @@ it:
       Input Examples: Esempi di input
       Input with If-Else: Input con If-Else
       Inspiration!: Ispirazione!
-      Interactive Card: Scheda interattiva
-      Intro to Design Mode: Introduzione alla modalità Design
+      Interactive Card: Cartolina interattiva
+      Intro to Design Mode: Introduzione alla "Modalità interfaccia"
       Intro to Flyer Game: Introduzione a un gioco di personaggi volanti
       Intro to For Loops: Introduzione ai Cicli Per
       Intro to Side Scrollers: Introduzione allo scorrimento laterale
@@ -226,7 +228,7 @@ it:
       Loops with the Artist: Cicli con l'Artista
       Make Your Sprites: Crea i tuoi personaggi
       Make a Prediction: Fai una previsione
-      Make an Interactive Card: Crea un biglietto d'auguri interattivo
+      Make an Interactive Card: Crea una cartolina interattiva
       Make it Interactive: Rendilo Interattivo
       Make it Your Own: Personalizzalo
       Making Music: Fare musica
@@ -266,6 +268,7 @@ it:
       Move It Move it Video  - Unplugged Activity: Video - Muovilo Muovilo - Attività
         tradizionale
       Movement with the Counter Pattern: Movimento con lo Schema Contatore
+      Multi-Screen Apps: App multischermo
       Multiframe Animations: Animazioni Multi-Fotogramma
       Musical Arrays: Matrici musicali
       My Loopy Robotic Friends - Unplugged Activity: I miei ciclici amici robotici
@@ -387,6 +390,7 @@ it:
       The Big Event - Unplugged Activity: Il grande evento - Attività tradizionale
       The Buzzer: Il cicalino
       The Collector: Il Collezionista
+      The Counter Pattern: Lo schema a contatore
       The Draw Loop: La funzione ciclica `draw()`
       The Harvester: La contadina
       The Internet - Unplugged Activity: Internet - Attività tradizionale

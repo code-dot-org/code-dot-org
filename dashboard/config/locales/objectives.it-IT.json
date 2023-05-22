@@ -1436,8 +1436,104 @@
         "f94d8eca-cf05-40a8-acf0-8c5b1ed3868f": {
           "description": "creare e utilizzare un personaggio"
         },
+        "9d865e75-6b5a-43d4-a145-17de9aee4ad3": {
+          "description": "utilizzare la notazione con il punto per aggiornare le proprietà di un personaggio"
+        },
+        "411f894a-c802-41df-822e-41c4b8dd9a9d": {
+          "description": "posizionare il testo sullo schermo usando un piano di coordinate."
+        },
+        "72496109-18f7-4a09-84eb-3aabcc22ae92": {
+          "description": "utilizzare gli argomenti per controllare la modalità di visualizzazione del testo a schermo."
+        },
+        "36566c25-03d9-4b33-9269-bf4155649445": {
+          "description": "utilizzare un processo strutturato per pianificare e sviluppare un programma."
+        },
+        "b18a4c06-e791-4aed-8ce9-8373bdfb8352": {
+          "description": "spiegare come la funzione ciclica `draw()` consente la creazione di animazioni in Sviluppo Giochi"
+        },
+        "f792a4b7-46e7-4887-871b-bf2f921bc44d": {
+          "description": "usare la funzione ciclica `draw()` in combinazione con l'istruzione randomNumber(), le forme e i personaggi per creare animazioni semplici"
+        },
+        "12844473-89b5-4157-82c2-801b4aca52fb": {
+          "description": "riconoscere quali proprietà dei personaggi devono essere modificate e in che modo, al fine di ottenere un movimento specifico"
+        },
+        "2ad3c9f2-28d0-461b-8a75-15b8a69d2f53": {
+          "description": "usare lo \"schema a contatore\" per incrementare o diminuire le proprietà dei personaggi"
+        },
+        "522df320-9b1b-42e5-b997-09f45759d2d3": {
+          "description": "usare le istruzioni condizionali per impostare reazioni ai cambiamenti che avvengono nelle variabili e nelle proprietà dei personaggi"
+        },
+        "b96eecbc-f152-4b13-87bb-5c2bd71bafcf": {
+          "description": "far muovere i personaggi in base all'input della tastiera"
+        },
+        "e1012bc2-2e9b-4066-9ec8-b1c2a10c72e0": {
+          "description": "utilizzar le istruzioni condizionali per reagire all'input della tastiera"
+        },
+        "154510cf-774c-49e2-ac44-97f8b358f987": {
+          "description": "impostare reazioni a diversi tipi di input dell'utente."
+        },
+        "d104dffd-48d0-491e-813e-6d2867de294f": {
+          "description": "utilizzare un'istruzione condizionale \"se/altrimenti\" per controllare il flusso di un programma."
+        },
+        "98ef15a4-cec5-4410-941f-e493978cbdb2": {
+          "description": "utilizzare le istruzioni condizionali per reagire agli input da tastiera o alle modifiche nelle variabili/proprietà"
+        },
+        "a92a3ce6-e432-4a5e-a484-5f4ca110b2b5": {
+          "description": "applicare uo schema ripetitivo a ll variabili o alle proprietà in un ciclo"
+        },
+        "ecd2dd66-5ac2-4cba-a3db-e86eeb93644f": {
+          "description": "mettere le istruzioni nella giusta sequenza così da disegnare nell'ordine corretto"
+        },
+        "0a362b6b-eb99-4648-abaf-609f15ac0948": {
+          "description": "usare i blocchi `velocity` e `rotationSpeed` per creare e modificare i movimenti dei personaggi"
+        },
+        "561329f0-2d51-44e0-a761-89467f39b783": {
+          "description": "descrivere i vantaggi della semplificazione del codice utilizzando blocchi di livello superiore"
+        },
+        "111ced6d-7a03-4f25-bc84-e9ea52a15f4f": {
+          "description": "rilevare quando i personaggi si toccano o si sovrappongono e modificare il programma in risposta a tali eventi. "
+        },
+        "7b9ca082-7b03-4e09-b0bf-d33a70502d6a": {
+          "description": "descrivere come le astrazioni aiutano a gestire la complessità del codice"
+        },
+        "4ab9fb5b-e4f9-402c-87fd-f8c67e95f854": {
+          "description": "spiegare come i singoli costrutti di programmazione possono essere combinati per creare comportamenti più complessi"
+        },
+        "8291b013-88a0-4bcf-8815-dcd127b899f8": {
+          "description": "usare la velocità del personaggio con lo schema a contatore per creare diversi tipi di movimento del personaggio"
+        },
+        "3655a84f-baf8-4feb-8296-a45434158ef4": {
+          "description": "modellare diversi tipi di interazioni tra i personaggi."
+        },
+        "8a256d5f-e9c0-4f08-96be-6ce4acffadfc": {
+          "description": "descrivere come è possibile utilizzare le astrazioni per sviluppare ulteriori astrazioni"
+        },
+        "6937cac3-eee0-4c3c-9fdc-49a7378013c2": {
+          "description": "creare e utilizzare funzioni per blocchi di codice che eseguono una singola attività di alto livello all'interno di un programma"
+        },
+        "c5133459-f185-40c2-ab71-fae84e1044ad": {
+          "description": "spiegare i vantaggi dell'utilizzo delle funzioni in un programma"
+        },
+        "ce0887ae-3904-4475-9d03-923199a851b1": {
+          "description": "spiegare come le funzioni consentono ai programmatori di ragionare su un programma a un livello superiore"
+        },
         "13503201-2764-45e3-b644-2f5fd993f710": {
           "description": "implementare le diverse funzionalità di un programma seguendo una guida strutturata al progetto"
+        },
+        "149a90c7-273f-4c73-8273-2799340bf90d": {
+          "description": " implementare le diverse funzionalità di un programma seguendo una guida strutturata al progetto"
+        },
+        "be3ca496-7d99-4db9-8ca3-2844688ce210": {
+          "description": "identificare i costrutti di programmazione di base necessari per creare le diverse componenti di un gioco"
+        },
+        "15bd7a23-5d71-46fc-9534-112241fcb7c4": {
+          "description": "implementare un piano per la creazione di un software"
+        },
+        "1a615e1a-3506-461f-ae16-433abddd2fa4": {
+          "description": "ampliare in modo autonomo le funzionalità di un software"
+        },
+        "24b3d2c9-3a7b-4232-80fa-8272f0bfd7fb": {
+          "description": "creare un piano per la creazione di un software descrivendone i componenti principali"
         },
         "14cb0543-587a-4d56-9495-f11715494118": {
           "description": "individuare i motivi per cui qualcuno potrebbe creare un determinato sito web"
@@ -1592,6 +1688,9 @@
         "95694b30-9acd-47d3-9dd8-6f000dad8fba": {
           "description": "progettare un prototipo su carta di un'app per soddisfare le esigenze specifiche di un utente"
         },
+        "a8b7e858-2aa8-42de-8bf1-f627babf4b96": {
+          "description": "riconoscere i miglioramenti apportati a un'app in base ai test effettuati dagli utenti"
+        },
         "b5f3f0ec-c563-45e9-bd12-6d2a9a01b7e6": {
           "description": "descrivere gli utenti tipo per un artefatto di natura computazionale"
         },
@@ -1672,6 +1771,9 @@
         },
         "063186ca-fd1a-4987-8e3a-1591d644f5f1": {
           "description": "utilizzare l'evento data per aggiornare continuamente le proprietà di un elemento."
+        },
+        "6efb1275-2649-4451-9c98-408abe6dcba5": {
+          "description": "ampliare in modo autonomo le funzionalità di un software"
         },
         "bb2ce050-aadf-4e28-a0f3-ffc7f2bd5a9f": {
           "description": "prototipare un dispositivo informatico fisico"
@@ -2921,6 +3023,9 @@
         "c6441f90-9643-4b1d-9ac8-90e4ee024f61": {
           "description": "progettare un prototipo su carta di un'app per soddisfare le esigenze specifiche di un utente"
         },
+        "6d0afa47-7d02-480b-9369-b4aabf3b6841": {
+          "description": "riconoscere i miglioramenti apportati a un'app in base ai test effettuati dagli utenti"
+        },
         "91be4c6c-f556-4fc4-85b4-8cb5bbdf8e29": {
           "description": "progettare l'interfaccia utente di un'app"
         },
@@ -3227,8 +3332,104 @@
         "40bde7b5-fc47-455e-9d21-5dc53330e8e8": {
           "description": "creare e utilizzare un personaggio"
         },
+        "99befbcc-2654-44cc-a2f9-fe0cde1ab146": {
+          "description": "utilizzare la notazione con il punto per aggiornare le proprietà di un personaggio"
+        },
+        "c61f1e5d-d728-499d-9729-a1ff2db8de64": {
+          "description": "posizionare il testo sullo schermo usando un piano di coordinate."
+        },
+        "b40e994c-3d1e-4ba8-9cf1-8674567bb26c": {
+          "description": "utilizzare gli argomenti per controllare la modalità di visualizzazione del testo a schermo."
+        },
+        "d6709c2c-76b3-495d-bb07-af8a4c772363": {
+          "description": "utilizzare un processo strutturato per pianificare e sviluppare un programma."
+        },
+        "6828e8c6-bde7-4e8f-842d-04bd41a46eb4": {
+          "description": "spiegare come la funzione ciclica `draw()` consente la creazione di animazioni in Sviluppo Giochi"
+        },
+        "9ed14237-271b-4890-b05c-04bde1c706fc": {
+          "description": "usare la funzione ciclica `draw()` in combinazione con l'istruzione randomNumber(), le forme e i personaggi per creare animazioni semplici"
+        },
+        "ef9e41ae-04ee-4b48-a59e-06f87ff5c9d9": {
+          "description": "usare lo \"schema a contatore\" per incrementare o diminuire le proprietà dei personaggi"
+        },
+        "32725306-4405-48d1-871c-ce44cd180b0c": {
+          "description": "riconoscere quali proprietà dei personaggi devono essere modificate e in che modo, al fine di ottenere un movimento specifico"
+        },
+        "ac9b5e0b-ce84-48f1-8d9e-3957b6d3ac16": {
+          "description": "usare le istruzioni condizionali per impostare reazioni ai cambiamenti che avvengono nelle variabili e nelle proprietà dei personaggi"
+        },
+        "1bd55841-3a6b-45b8-9a2c-7ad9b9df5102": {
+          "description": "utilizzar le istruzioni condizionali per reagire all'input della tastiera"
+        },
+        "aee02da5-9e5d-4c9b-b43d-7576a405fd5d": {
+          "description": "far muovere i personaggi in base all'input della tastiera"
+        },
+        "6c2364e6-a17c-4b0c-856e-71ba8ec2b4c7": {
+          "description": "utilizzare un'istruzione condizionale \"se/altrimenti\" per controllare il flusso di un programma."
+        },
+        "317b8134-0316-46e4-b56c-4adba284eab6": {
+          "description": "impostare reazioni a diversi tipi di input dell'utente."
+        },
+        "58e13b51-2fb9-4de3-a547-dfe7bb9e71b0": {
+          "description": "utilizzare le istruzioni condizionali per reagire agli input da tastiera o alle modifiche nelle variabili/proprietà"
+        },
+        "286ec7b0-0776-4049-9174-3deeb1d80c14": {
+          "description": "mettere le istruzioni nella giusta sequenza così da disegnare nell'ordine corretto"
+        },
+        "899e51b2-2cb8-4948-9987-aaada64c6a85": {
+          "description": "applicare uo schema ripetitivo a ll variabili o alle proprietà in un ciclo"
+        },
+        "ebf0954f-2190-4e20-8420-f0275aceee0a": {
+          "description": "usare i blocchi `velocity` e `rotationSpeed` per creare e modificare i movimenti dei personaggi"
+        },
+        "01426fc9-55b3-41ec-92ec-fb871a4739b1": {
+          "description": "descrivere i vantaggi della semplificazione del codice utilizzando blocchi di livello superiore"
+        },
+        "bb7bce08-c20e-4a8b-8b3e-def24447e33f": {
+          "description": "rilevare quando i personaggi si toccano o si sovrappongono e modificare il programma in risposta a tali eventi. "
+        },
+        "d3aa02b0-9340-47ab-b258-5446686c77b4": {
+          "description": "descrivere come le astrazioni aiutano a gestire la complessità del codice"
+        },
+        "63135326-7d2f-4974-af73-f8d7a801cd04": {
+          "description": "usare la velocità del personaggio con lo schema a contatore per creare diversi tipi di movimento del personaggio"
+        },
+        "6ed44bf4-19c7-4fd2-b72d-527e7c1ed3f3": {
+          "description": "spiegare come i singoli costrutti di programmazione possono essere combinati per creare comportamenti più complessi"
+        },
+        "2a7e04b6-f408-4915-a8df-10a590d5b45a": {
+          "description": "modellare diversi tipi di interazioni tra i personaggi."
+        },
+        "ba90afe9-19b4-4a19-b7e7-9cc6dcc94b86": {
+          "description": "descrivere come è possibile utilizzare le astrazioni per sviluppare ulteriori astrazioni"
+        },
+        "3572828f-fdf1-4708-bfd1-1a021799e8fd": {
+          "description": "creare e utilizzare funzioni per blocchi di codice che eseguono una singola attività di alto livello all'interno di un programma"
+        },
+        "9d1d61de-4fa4-458f-b11f-aee208854019": {
+          "description": "spiegare i vantaggi dell'utilizzo delle funzioni in un programma"
+        },
+        "dd877754-8fc0-4026-9205-385c6a3a2e4e": {
+          "description": "spiegare come le funzioni consentono ai programmatori di ragionare su un programma a un livello superiore"
+        },
         "1cfd94eb-3bdf-4628-b8c5-2caeaa3dc189": {
           "description": "implementare le diverse funzionalità di un programma seguendo una guida strutturata al progetto"
+        },
+        "87b37b88-d7c7-4ad7-a5bc-f4be00ef3016": {
+          "description": "identificare i costrutti di programmazione di base necessari per creare le diverse componenti di un gioco"
+        },
+        "cb1a4260-ee88-49c1-abf7-92dfc8d1dc16": {
+          "description": " implementare le diverse funzionalità di un programma seguendo una guida strutturata al progetto"
+        },
+        "0b62d335-144f-495a-971c-fb1ee82f154a": {
+          "description": "ampliare in modo autonomo le funzionalità di un software"
+        },
+        "ea476a5f-3a8d-4c7a-bb2c-c6e58d216ef3": {
+          "description": "creare un piano per la creazione di un software descrivendone i componenti principali"
+        },
+        "7f488fda-a480-4f40-814d-6a2810780b38": {
+          "description": "implementare un piano per la creazione di un software"
         },
         "74126a3c-61fa-40ac-aef5-ffe0bf68a549": {
           "description": "  comunicare e collaborare con i compagni di classe per risolvere un problema "

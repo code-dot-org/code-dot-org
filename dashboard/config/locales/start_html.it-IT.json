@@ -331,7 +331,8 @@
           "I'm thinking of a number from 1 to 100.": "Sto pensando a un numero da 1 a 100.",
           "You haven't guessed yet.": "Ancora non hai indovinato.",
           "Your guess:": "La tua ipotesi:",
-          "90": "90"
+          "90": "90",
+          "100": "100"
         },
         "CSD U1 processing guess_2022": {
           "?": "?",
@@ -422,7 +423,8 @@
           "I'm thinking of a number from 1 to 100.": "Sto pensando a un numero da 1 a 100.",
           "You haven't guessed yet.": "Ancora non hai indovinato.",
           "Your guess:": "La tua ipotesi:",
-          "90": "90"
+          "90": "90",
+          "100": "100"
         },
         "CSD U1 processing live_2021": {
           "walking": "camminare",
@@ -846,7 +848,11 @@
           "Visit studio.code.org/maker/setup": "Visita studio.code.org/maker/setup"
         },
         "CSD U6 - Board Outputs - A_2222": {
-          "Happy": "Felice"
+          "Happy": "Felice",
+          "My Personal Monster": "Il mio mostro personale",
+          "Nervous": "Nervoso",
+          "Sleepy": "Sonnolento",
+          "Decorate your Circuit Playground to look like your own personal monster, then use the buttons below to give it different emotions!": "Decora il tuo Circuit Playground in modo che assomigli al tuo mostro personale, quindi usa i pulsanti qui sotto affinché provi emozioni diverse!"
         },
         "CSD U6 - Board Outputs - P_2222": {
           "Success!": "Fatto!",
@@ -2904,6 +2910,25 @@
         },
         "CSDU6 - UI and Inputs - setText": {
           "OFF": "OFF"
+        },
+        "CSD U6 - Board Outputs - PracD_2222": {
+          "100": "100",
+          "200": "200",
+          "300": "300",
+          "400": "400",
+          "900": "900",
+          "800": "800",
+          "700": "700",
+          "500": "500",
+          "600": "600"
+        },
+        "CSD U6 - Board Outputs - PracE_2222": {
+          "4 Seconds": "4 secondi",
+          "2 Seconds": "2 secondi",
+          "1 Second": "1 secondo",
+          "Half a Second": "Mezzo secondo",
+          "Quarter of a Second": "Un quarto di secondo",
+          "100 Milliseconds": "100 millisecondi"
         }
       }
     }

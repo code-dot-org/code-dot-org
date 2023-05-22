@@ -529,7 +529,7 @@ it:
         teaching_problem_solving: 'Insegnare i Fondamenti di CS: Insegnare la Risoluzione dei Problemi'
         csd_applab_designmode: 'Alla scoperta dell''informatica: Sviluppo App - Modalità Interfaccia'
         csd_pair_programming: Programmazione in coppia
-        csd_gamelab_functions: Chiamare e Definire Funzioni
+        csd_gamelab_functions: Richiamare e definire funzioni
         csd_applab_parameters: Funzioni con parametri
         csd_applab_loops: Loop in Sviluppo App
         csd_problem_solving_process: Il processo di risoluzione dei problemi

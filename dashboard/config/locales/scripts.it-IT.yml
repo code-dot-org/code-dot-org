@@ -5415,10 +5415,18 @@ it:
           lessons:
             lesson-3:
               name: Introduzione
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 1° giorno
+          title: 1° giorno
         pl-csd-summer-day2:
           lessons:
             lesson-10:
               name: Conclusione
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 2° giorno
+          title: 2° giorno
         pl-csd-summer-day3:
           lessons:
             lesson-10:
@@ -5433,10 +5441,12 @@ it:
               name: Introduzione
             lesson-12:
               name: Conclusione
+          title: 1° giorno
         virtual-pl-csd-summer-day2:
           lessons:
             lesson-10:
               name: Conclusione
+          title: 2° giorno
         virtual-pl-csd-summer-day3:
           lessons:
             lesson-12:

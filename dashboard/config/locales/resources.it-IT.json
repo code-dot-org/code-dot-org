@@ -2239,6 +2239,7 @@
           "type": "Criteri di valutazione"
         },
         "mini_project_-_captioned_scenes/csd/2022": {
+          "name": "Mini-progetto - Scene con didascalie",
           "url": "https://docs.google.com/document/d/1zC5eycqT-4oHrNjzyPncscHfwh-T6TZEQEtQ2lOpp6o/edit",
           "type": "Modello"
         },
@@ -2252,6 +2253,7 @@
           "type": "Diapositive"
         },
         "flipbook_example_-_by_marnic_bos/csd/2022": {
+          "name": "Esempio di libro sfogliabile - di Marnic Bos",
           "url": "https://youtu.be/hol0p29cd8o",
           "type": "Video"
         },
@@ -2261,9 +2263,11 @@
           "type": "Video"
         },
         "random_dot_flipbook/csd/2022": {
+          "name": "Punto casuale - Libro sfogliabile",
           "url": "https://docs.google.com/drawings/d/1dOy6qZ1-2VlxRKz63m6bO2G9lgJnDtnLKYxvLH_W16w/edit"
         },
         "random_sprite_flipbook/csd/2022": {
+          "name": "Personaggio casuale - Libro sfogliabile",
           "url": "https://docs.google.com/drawings/d/1u6hSZ108BcnasuoKM1etB4sEzShGIrmk8GgQyJZ0P8Y/edit"
         },
         "the_draw_loop/csd/2022": {
@@ -2281,6 +2285,7 @@
           "type": "Video"
         },
         "the_counter_pattern/csd/2022": {
+          "name": "Lo schema a contatore",
           "url": "https://drive.google.com/file/d/1Cuie3SFpeDBzXdSzEtZnGdL7H-NpG5dg/view?usp=sharing",
           "type": "Risorse"
         },
@@ -2299,6 +2304,7 @@
           "type": "Guida alle attività"
         },
         "animated_scene_planning/csd/2022": {
+          "name": "Pianificare una scena animata",
           "url": "https://docs.google.com/document/d/109GkaCj5HIBSELJ9SN2aLKSmnA3M2uo-yBiuua9DGkc/edit?usp=sharing",
           "type": "Modello"
         },
@@ -2335,6 +2341,7 @@
           "type": "Diapositive"
         },
         "if-else_statements/csd/2022": {
+          "name": "Dichiarazioni se/altrimenti",
           "url": "https://drive.google.com/file/d/1_RzGKuxpESYxpD__X3RdeTm89pTYcfB4/view?usp=sharing",
           "type": "Risorse"
         },
@@ -2353,35 +2360,36 @@
           "type": "Risorse"
         },
         "interactive_card/csd/2022": {
-          "name": "Scheda interattiva",
+          "name": "Cartolina interattiva",
           "url": "https://docs.google.com/document/d/1hc_awMc06EmiYJqBQgmKlNNfnC-1iMesNdo-atsjOEU/",
           "type": "Modello"
         },
         "interactive_card_-_marked_rubrics/csd/2022": {
+          "name": "Cartolina interattiva - Applicazione dei criteri di valutazione ",
           "url": "https://docs.google.com/document/d/17bNU6zmZMpl39I4eaKymt5uYgIVpSEfuxilmcZJzpR4/view",
           "type": "Modello"
         },
         "interactive_card_-_student_checklist/csd/2022": {
-          "name": "Scheda interattiva - Lista di controllo per studenti",
+          "name": "Cartolina interattiva - Lista di controllo per studenti",
           "url": "https://docs.google.com/document/d/1v25XqBmYj3KmniWzQE4PTNrXcfPCsnSQGey0wTN2WHY/view"
         },
         "interactive_card_1/csd/2022": {
-          "name": "Scheda interattiva",
+          "name": "Cartolina interattiva",
           "url": "https://docs.google.com/document/d/1MNe3-GpESINByCaRnDTA_EmyIjENEP2R4_0sKBY9E7M/",
           "type": "Guida al progetto"
         },
         "interactive_card_2/csd/2022": {
-          "name": "Scheda interattiva",
+          "name": "Cartolina interattiva",
           "url": "https://docs.google.com/document/d/1ZbLM2oRl3eWGBY47oAtmcODga_sGi_DSq8WLVew9F5c/",
           "type": "Valutazioni dei parigrado"
         },
         "interactive_card_3/csd/2022": {
-          "name": "Scheda interattiva",
+          "name": "Cartolina interattiva",
           "url": "https://docs.google.com/document/d/1sAILZnk26g21FluRhU0pWqVDOMBZVrNAko1mSVeuKHM/view",
           "type": "Criteri di valutazione"
         },
         "project_-_interactive_card/csd/2022": {
-          "name": "Progetto - Biglietti d’auguri interattivi",
+          "name": "Progetto - Cartolina interattiva",
           "type": "Diapositive"
         },
         "velocity/csd/2022": {
@@ -2423,6 +2431,7 @@
           "type": "Diapositive"
         },
         "mini-project_guide_-_side_scroller/csd/2022": {
+          "name": "Guida al Mini-Progetto - Gioco a scorrimento laterale",
           "url": "https://docs.google.com/document/d/12l12aUIFwlB4yXtZOlfCsi8XU3sDbzruAE-FAA14-20/edit?usp=sharing",
           "type": "Modello"
         },
@@ -2449,7 +2458,7 @@
           "type": "Diapositive"
         },
         "collisions/csd/2022": {
-          "name": "collisioni",
+          "name": "Collisioni",
           "type": "Diapositive"
         },
         "flyer_game/csd/2022": {
@@ -2468,7 +2477,7 @@
           "type": "Guida al progetto"
         },
         "mini-project_-_flyer_game/csd/2022": {
-          "name": "Mini-Project - Gioco con personaggio volante",
+          "name": "Mini progetto - Gioco con personaggio volante",
           "type": "Diapositive"
         },
         "functions/csd/2022": {
@@ -2508,10 +2517,12 @@
           "type": "Diapositive"
         },
         "make_your_own_game/csd/2022": {
+          "name": "Crea il tuo gioco ",
           "url": "https://docs.google.com/document/d/1T4Br-iQAhFnuoey6QvhdYRQ7X0uPKwjAhlalAQf8Bxc/edit?usp=sharing",
           "type": "Modello"
         },
         "make_your_own_game_-_sample_marked_rubrics/csd/2022": {
+          "name": "Crea il tuo gioco - Esempi di applicazione dei criteri di valutazione ",
           "url": "https://docs.google.com/document/d/1G3GfGkUQtzeYbawGwK5JAfj5WQD1SoqJYM5igMYmvm8/edit",
           "type": "Modello"
         },
@@ -3135,9 +3146,11 @@
           "type": "Diapositive"
         },
         "paper_prototype_-_student_checklist/csd/2022": {
+          "name": "Prototipo su carta - Lista di controllo per studenti",
           "url": "https://docs.google.com/document/d/1tysTwNU1ZCRVEROiOZ2gKYUYP8QRYn2D92IdDjvBSpk/edit"
         },
         "paper_prototype_project_guide/csd/2022": {
+          "name": "Guida alla progettazione di un prototipo su carta",
           "url": "https://docs.google.com/document/d/1o5-nB-iYLFCdquqAMdeBm57WkqWnmVlSHVrQcBRjVDE/view"
         },
         "paper_prototypes/csd/2022": {
@@ -3155,10 +3168,12 @@
           "type": "Diapositive"
         },
         "app_design_kickoff/csd/2022": {
+          "name": "Progettazione dell'app - Avvio",
           "url": "https://docs.google.com/document/d/163Ene8sb4nK0kfoDHsIBzUCMJWiFtaYZ8YYVIytGH4A/",
           "type": "Guida alle attività"
         },
         "app_design_kickoff_1/csd/2022": {
+          "name": "Progettazione dell'app - Avvio",
           "url": "https://docs.google.com/document/d/1vDZOUyigfP7tG0WxMQDnfbn9lc_8Isbp9Y43I8zOnvI/edit",
           "type": "Modello"
         },
@@ -3185,10 +3200,12 @@
           "type": "Diapositive"
         },
         "explore_ui_elements/csd/2022": {
+          "name": "Esplorazione degli elementi dell'interfaccia utente",
           "url": "https://docs.google.com/document/d/1OyTMxdwh3yLv7EnE-FOtxb9mDScbkMgjZn_ypxF7q5U/edit",
           "type": "Guida alle attività"
         },
         "explore_ui_elements_1/csd/2022": {
+          "name": "Esplorazione degli elementi dell'interfaccia utente",
           "url": "https://docs.google.com/document/d/1L01gXcQN0ObiRNDZLy-QjKWJbXEMPlYLRdiXgdhUvgA/edit",
           "type": "Modello"
         },
@@ -3197,11 +3214,12 @@
           "type": "Diapositive"
         },
         "design_mode/csd/2022": {
-          "name": "Design Mode",
+          "name": "Modalità interfaccia",
           "url": "https://drive.google.com/file/d/1WvW6pkUseGiXOg3TgeNAFPg-VwK65gjN/view?usp=sharing",
           "type": "Risorse"
         },
         "design_mode_elements/csd/2022": {
+          "name": "Elementi della \"Modalità Interfaccia\"",
           "url": "https://drive.google.com/file/d/1_freDr5sGWMgTKwDH0kFJwkKXjzVCoE_/view?usp=sharing",
           "type": "Risorse"
         },
@@ -3224,22 +3242,28 @@
           "type": "Diapositive"
         },
         "paper_prototype_user_testing/csd/2022": {
+          "name": "\"Collaudo del prototipo su carta da parte dell'utente\"",
           "url": "https://docs.google.com/document/d/1uEBql95st5PNTCzJUbytcSwUe4nu7JD-AxpjxlAVx3k/view",
           "type": "Guida alle attività"
         },
         "paper_prototype_user_testing_1/csd/2022": {
+          "name": "\"Collaudo del prototipo su carta da parte dell'utente\"",
           "url": "https://docs.google.com/document/d/1GC8GXJuYyy2MCzQrOBov-AZU-twa1jSnuzh823w7Xnc/edit",
           "type": "Modello"
         },
         "user_test_cases/csd/2022": {
+          "name": "Casistiche di collaudo da parte degli utenti",
           "url": "https://docs.google.com/document/d/1i1_B7ZK8ljkijlKLIKndNtpbNYiY34Xe5W1vsigjw7I/view",
           "type": "Guida alle attività"
         },
         "user_test_cases_1/csd/2022": {
+          "name": "Casistiche di collaudo da parte degli utenti",
           "url": "https://docs.google.com/document/d/1sY0WomOU0tFfIeBRCPzJCKs6LLI7kpmPNfYccwtcvi0/edit",
           "type": "Modello"
         },
         "what_s_for_lunch_testing/csd/2022": {
+          "name": "Cosa c'è per pranzo - Collaudo",
+          "url": "https://www.youtube.com/watch?v=ny5UbRpG6PE",
           "type": "Video"
         },
         "prototype_testing/csd/2022": {
@@ -3247,7 +3271,7 @@
           "type": "Diapositive"
         },
         "intro_to_design_mode/csd/2022": {
-          "name": "Introduzione alla modalità Design",
+          "name": "Introduzione alla \"Modalità interfaccia\"",
           "type": "Video"
         },
         "model_screen_design/csd/2022": {
@@ -3261,6 +3285,7 @@
           "type": "Guida alle attività"
         },
         "screen_ownership_2021_/csd/2022": {
+          "name": "Proprietà dello schermo (2021)",
           "url": "https://docs.google.com/document/d/1iCbvI452ztUOn1jPqcVBQUg9EiuzCIwhV7rWPuFCAQ8/view",
           "type": "Guida alle attività"
         },
@@ -3273,9 +3298,11 @@
           "type": "Diapositive"
         },
         "events_in_app_lab/csd/2022": {
+          "name": "Eventi in Sviluppo App",
           "type": "Diapositive"
         },
         "events_in_app_lab_1/csd/2022": {
+          "name": "Eventi in Sviluppo App",
           "type": "Video"
         },
         "changing_screens/csd/2022": {
@@ -3289,6 +3316,7 @@
           "type": "Risorse"
         },
         "multi-screen_apps/csd/2022": {
+          "name": "App multischermo",
           "url": "https://drive.google.com/file/d/1CZ0No5Wxy7QyRddR-3eddfKasGsh6xFg/view?usp=sharing",
           "type": "Risorse"
         },
@@ -3461,10 +3489,12 @@
           "type": "Video"
         },
         "the_counter_pattern_1/csd/2022": {
+          "name": "Lo schema a contatore",
           "url": "https://www.youtube.com/watch?v=GiHbeLq1ZkM",
           "type": "Video"
         },
         "the_counter_pattern_2/csd/2022": {
+          "name": "Lo schema a contatore",
           "url": "https://drive.google.com/file/d/1xh7EKGrGSdAAk-wP39LVxydu3-haj5k_/view?usp=sharing",
           "type": "Risorse"
         },
@@ -6572,6 +6602,7 @@
           "type": "Riflessione"
         },
         "paper-prototype-2021/csd/2021": {
+          "name": "Guida alla progettazione di un prototipo su carta",
           "url": "https://docs.google.com/document/d/1o5-nB-iYLFCdquqAMdeBm57WkqWnmVlSHVrQcBRjVDE/view"
         },
         "paper-prototypes/csd/2021": {
@@ -6580,6 +6611,7 @@
           "type": "Criteri di valutazione"
         },
         "paper_prototype_-_student_checklist/csd/2021": {
+          "name": "Prototipo su carta - Lista di controllo per studenti",
           "url": "https://docs.google.com/document/d/1tysTwNU1ZCRVEROiOZ2gKYUYP8QRYn2D92IdDjvBSpk/edit"
         },
         "sample_marked_rubrics/csd/2021": {
@@ -6588,6 +6620,7 @@
           "type": "Modello"
         },
         "app-design-kickoff-2019/csd/2021": {
+          "name": "Progettazione dell'app - Avvio",
           "url": "https://docs.google.com/document/d/163Ene8sb4nK0kfoDHsIBzUCMJWiFtaYZ8YYVIytGH4A/",
           "type": "Guida alle attività"
         },
@@ -6596,6 +6629,7 @@
           "url": "https://docs.google.com/document/d/1kCuDUhTJb7Vcrv_pzvA4yL79WyZn_7PorV-F-gTxBuk/edit"
         },
         "app_design_kickoff/csd/2021": {
+          "name": "Progettazione dell'app - Avvio",
           "url": "https://docs.google.com/document/d/1vDZOUyigfP7tG0WxMQDnfbn9lc_8Isbp9Y43I8zOnvI/edit",
           "type": "Modello"
         },
@@ -6610,10 +6644,12 @@
           "type": "Modello"
         },
         "explore-ui-elements/csd/2021": {
+          "name": "Esplorazione degli elementi dell'interfaccia utente",
           "url": "https://docs.google.com/document/d/1OyTMxdwh3yLv7EnE-FOtxb9mDScbkMgjZn_ypxF7q5U/edit",
           "type": "Guida alle attività"
         },
         "explore_ui_elements/csd/2021": {
+          "name": "Esplorazione degli elementi dell'interfaccia utente",
           "url": "https://docs.google.com/document/d/1L01gXcQN0ObiRNDZLy-QjKWJbXEMPlYLRdiXgdhUvgA/edit",
           "type": "Modello"
         },
@@ -6627,11 +6663,12 @@
           "url": "https://drive.google.com/file/d/1O_TFldMiOe6QWCnunqgaZFFT9qnansLo/view"
         },
         "design_mode/csd/2021": {
-          "name": "Design Mode",
+          "name": "Modalità interfaccia",
           "url": "https://drive.google.com/file/d/1WvW6pkUseGiXOg3TgeNAFPg-VwK65gjN/view?usp=sharing",
           "type": "Risorse"
         },
         "design_mode_elements/csd/2021": {
+          "name": "Elementi della \"Modalità Interfaccia\"",
           "url": "https://drive.google.com/file/d/1_freDr5sGWMgTKwDH0kFJwkKXjzVCoE_/view?usp=sharing",
           "type": "Risorse"
         },
@@ -6641,25 +6678,32 @@
           "type": "Modello"
         },
         "user-test-cases/csd/2021": {
+          "name": "Casistiche di collaudo da parte degli utenti",
           "url": "https://docs.google.com/document/d/1i1_B7ZK8ljkijlKLIKndNtpbNYiY34Xe5W1vsigjw7I/view",
           "type": "Guida alle attività"
         },
         "paper-prototype-user-testing-1-2/csd/2021": {
+          "name": "\"Collaudo del prototipo su carta da parte dell'utente\"",
           "url": "https://docs.google.com/document/d/1uEBql95st5PNTCzJUbytcSwUe4nu7JD-AxpjxlAVx3k/view",
           "type": "Guida alle attività"
         },
         "whats-for-lunch-testing/csd/2021": {
+          "name": "Cosa c'è per pranzo - Collaudo",
+          "url": "https://www.youtube.com/watch?v=ny5UbRpG6PE",
           "type": "Video"
         },
         "paper_prototype_user_testing/csd/2021": {
+          "name": "\"Collaudo del prototipo su carta da parte dell'utente\"",
           "url": "https://docs.google.com/document/d/1GC8GXJuYyy2MCzQrOBov-AZU-twa1jSnuzh823w7Xnc/edit",
           "type": "Modello"
         },
         "user_test_cases/csd/2021": {
+          "name": "Casistiche di collaudo da parte degli utenti",
           "url": "https://docs.google.com/document/d/1sY0WomOU0tFfIeBRCPzJCKs6LLI7kpmPNfYccwtcvi0/edit",
           "type": "Modello"
         },
         "screen-ownership-2021/csd/2021": {
+          "name": "Proprietà dello schermo (2021)",
           "url": "https://docs.google.com/document/d/1iCbvI452ztUOn1jPqcVBQUg9EiuzCIwhV7rWPuFCAQ8/view",
           "type": "Guida alle attività"
         },
@@ -6674,16 +6718,17 @@
           "type": "Risorse"
         },
         "intro_to_design_mode/csd/2021": {
-          "name": "Introduzione alla modalità Design",
+          "name": "Introduzione alla \"Modalità interfaccia\"",
           "url": "https://youtu.be/tAtvWkYBUoU",
           "type": "Video"
         },
         "design_mode_1/csd/2021": {
-          "name": "Design Mode",
+          "name": "Modalità interfaccia",
           "url": "https://drive.google.com/file/d/1WvW6pkUseGiXOg3TgeNAFPg-VwK65gjN/view?usp=sharing",
           "type": "Risorse"
         },
         "design_mode_elements_1/csd/2021": {
+          "name": "Elementi della \"Modalità Interfaccia\"",
           "url": "https://drive.google.com/file/d/1_freDr5sGWMgTKwDH0kFJwkKXjzVCoE_/view?usp=sharing",
           "type": "Risorse"
         },
@@ -6698,6 +6743,7 @@
           "type": "Risorse"
         },
         "multi-screen_apps/csd/2021": {
+          "name": "App multischermo",
           "url": "https://drive.google.com/file/d/1CZ0No5Wxy7QyRddR-3eddfKasGsh6xFg/view?usp=sharing",
           "type": "Risorse"
         },
@@ -6899,7 +6945,7 @@
           "type": "Criteri di valutazione"
         },
         "make_a_game_sample_marked_rubrics/csd/2021": {
-          "name": "Crea un gioco di esempio - Tabelle compilate",
+          "name": "Crea un gioco - Esempi di applicazione dei criteri di valutazione ",
           "url": "https://docs.google.com/document/d/1i9wFd-4ulv72MqJleZaOsr-JJrMFL0sdozjvwGOvXoU/view",
           "type": "Modello"
         },
@@ -7414,6 +7460,7 @@
           "type": "Risorse"
         },
         "mini-project-captioned-scenes-2020/csd/2021": {
+          "name": "Mini-progetto - Scene con didascalie",
           "url": "https://docs.google.com/document/d/1zC5eycqT-4oHrNjzyPncscHfwh-T6TZEQEtQ2lOpp6o/edit",
           "type": "Modello"
         },
@@ -7428,12 +7475,15 @@
           "type": "Guida alle attività"
         },
         "random-dot-flipbook/csd/2021": {
+          "name": "Punto casuale - Libro sfogliabile",
           "url": "https://docs.google.com/drawings/d/1dOy6qZ1-2VlxRKz63m6bO2G9lgJnDtnLKYxvLH_W16w/edit"
         },
         "random-sprite-flipbook/csd/2021": {
+          "name": "Personaggio casuale - Libro sfogliabile",
           "url": "https://docs.google.com/drawings/d/1u6hSZ108BcnasuoKM1etB4sEzShGIrmk8GgQyJZ0P8Y/edit"
         },
         "youtube-flipbook/csd/2021": {
+          "name": "Esempio di libro sfogliabile - di Marnic Bos",
           "url": "https://youtu.be/hol0p29cd8o",
           "type": "Video"
         },
@@ -7453,10 +7503,12 @@
           "type": "Video"
         },
         "the_counter_pattern/csd/2021": {
+          "name": "Lo schema a contatore",
           "url": "https://drive.google.com/file/d/1Cuie3SFpeDBzXdSzEtZnGdL7H-NpG5dg/view?usp=sharing",
           "type": "Risorse"
         },
         "animated-scene-planning-exemplar-2020/csd/2021": {
+          "name": "Pianificare una scena animata",
           "url": "https://docs.google.com/document/d/109GkaCj5HIBSELJ9SN2aLKSmnA3M2uo-yBiuua9DGkc/edit?usp=sharing",
           "type": "Modello"
         },
@@ -7491,6 +7543,7 @@
           "type": "Risorse"
         },
         "if-else_statements_-_map_level_pdf_/csd/2021": {
+          "name": "Dichiarazioni se/altrimenti",
           "url": "https://drive.google.com/file/d/1_RzGKuxpESYxpD__X3RdeTm89pTYcfB4/view?usp=sharing",
           "type": "Risorse"
         },
@@ -7500,31 +7553,32 @@
           "type": "Video"
         },
         "interactive-card-exemplar-2020/csd/2021": {
-          "name": "Scheda interattiva",
+          "name": "Cartolina interattiva",
           "url": "https://docs.google.com/document/d/1hc_awMc06EmiYJqBQgmKlNNfnC-1iMesNdo-atsjOEU/",
           "type": "Modello"
         },
         "interactive-card-marked-rubrics/csd/2021": {
+          "name": "Cartolina interattiva - Applicazione dei criteri di valutazione ",
           "url": "https://docs.google.com/document/d/17bNU6zmZMpl39I4eaKymt5uYgIVpSEfuxilmcZJzpR4/view",
           "type": "Modello"
         },
         "interactive-card-project-guide-2019/csd/2021": {
-          "name": "Scheda interattiva",
+          "name": "Cartolina interattiva",
           "url": "https://docs.google.com/document/d/1MNe3-GpESINByCaRnDTA_EmyIjENEP2R4_0sKBY9E7M/",
           "type": "Guida al progetto"
         },
         "interactive-card-1-2-3-4/csd/2021": {
-          "name": "Scheda interattiva",
+          "name": "Cartolina interattiva",
           "url": "https://docs.google.com/document/d/1ZbLM2oRl3eWGBY47oAtmcODga_sGi_DSq8WLVew9F5c/",
           "type": "Valutazioni dei parigrado"
         },
         "interactive_card/csd/2021": {
-          "name": "Scheda interattiva",
+          "name": "Cartolina interattiva",
           "url": "https://docs.google.com/document/d/1sAILZnk26g21FluRhU0pWqVDOMBZVrNAko1mSVeuKHM/view",
           "type": "Criteri di valutazione"
         },
         "interactive_card_-_student_checklist/csd/2021": {
-          "name": "Scheda interattiva - Lista di controllo per studenti",
+          "name": "Cartolina interattiva - Lista di controllo per studenti",
           "url": "https://docs.google.com/document/d/1v25XqBmYj3KmniWzQE4PTNrXcfPCsnSQGey0wTN2WHY/view"
         },
         "extra_code_in_challenge_levels_1/csd/2021": {
@@ -7563,6 +7617,7 @@
           "type": "Risorse"
         },
         "mini-project-guide-side-scroller-exemplar-2020/csd/2021": {
+          "name": "Guida al Mini-Progetto - Gioco a scorrimento laterale",
           "url": "https://docs.google.com/document/d/12l12aUIFwlB4yXtZOlfCsi8XU3sDbzruAE-FAA14-20/edit?usp=sharing",
           "type": "Modello"
         },
@@ -7619,10 +7674,12 @@
           "url": "https://docs.google.com/document/d/1JcjgqryqRKeyxieHrJlNlFQnSBybBjPIp3zolO3iJAE/edit"
         },
         "make-your-own-game-exemplar-2020/csd/2021": {
+          "name": "Crea il tuo gioco ",
           "url": "https://docs.google.com/document/d/1T4Br-iQAhFnuoey6QvhdYRQ7X0uPKwjAhlalAQf8Bxc/edit?usp=sharing",
           "type": "Modello"
         },
         "make-your-own-game-sample-marked-rubrics/csd/2021": {
+          "name": "Crea il tuo gioco - Esempi di applicazione dei criteri di valutazione ",
           "url": "https://docs.google.com/document/d/1G3GfGkUQtzeYbawGwK5JAfj5WQD1SoqJYM5igMYmvm8/edit",
           "type": "Modello"
         },
