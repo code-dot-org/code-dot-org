@@ -12,11 +12,12 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-05-15 14:50:54 UTC",
+    "serialized_at": "2023-05-19 20:03:28 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -158,7 +159,7 @@
       "relative_position": 5,
       "properties": {
         "overview": "**How can I perform calculations on the values stored in a 1D array?**\n\nStudents have learned how to create one-dimensional (1D) arrays using the `new` keyword and initializer lists and access and modify one or multiple elements. In this lesson, students explore how values from a text file can be read and stored in a 1D array and consider the preconditions and postconditions an algorithm should satisfy. Students then apply their knowledge of 1D arrays, loops, and returning values from methods to plan and implement algorithms to calculate the sum and average of the values in a 1D array. ",
-        "preparation": "* **(Optional)** Print copies of the U3L5 Guided Notes (one for each student)\n* Print copies of the CS Bingo Cards (one card for each student)\n* Print the CS Bingo Definitions resource and mix them up\n* Print copies of the Writing Algorithms with Arrays (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-3-5-preconditions-and-postconditions/37889) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* **(Optional)** Print copies of the U3L5 Guided Notes (one for each student)\n* Print copies of the CS Bingo Cards (one card for each student)\n* Print the CS Bingo Definitions resource and mix them up OR use [**this web-based version**](https://csabingo.up.railway.app/) to show the terms and definitions\n* Print copies of the Writing Algorithms with Arrays (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-3-5-preconditions-and-postconditions/37889) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I perform calculations on the values stored in a 1D array?**\n\nYou have learned how to create one-dimensional (1D) arrays using the `new` keyword and initializer lists and access and modify one or multiple elements. In this lesson, you explore how values from a text file can be read and stored in a 1D array and consider the preconditions and postconditions an algorithm should satisfy. You then apply your knowledge of 1D arrays, loops, and returning values from methods to plan and implement algorithms to calculate the sum and average of the values in a 1D array."
       },
       "seeding_key": {
