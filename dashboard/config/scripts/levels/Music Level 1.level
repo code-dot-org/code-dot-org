@@ -23,7 +23,7 @@
       "defaultCode": {
         "blocks": {
           "languageVersion": 0,
-          "blocks": [{"type": "when_run_simple2", "x": 34, "y": 34}]
+          "blocks": [{"id": "when-run-block", "type": "when_run_simple2", "x": 34, "y": 34}]
         },
         "variables": [{"name": "currentTime"}, {"name": "i"}]
       }

@@ -18,7 +18,7 @@ export default class LevelChangeManager {
    * Change levels and handle level reset.
    * @param existingProject The current project to save before changing levels (if it has changed).
    * @param existingProjectManager The current project manager to clean up before changing levels.
-   * @param defaultCode Default code for new level.
+   * @param defaultCode Default code for the new level.
    * @param levelId The level id of the new level.
    * @param scriptId The script id of the new level (optional).
    */

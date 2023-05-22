@@ -54,7 +54,7 @@
       "defaultCode": {
         "blocks": {
           "languageVersion": 0,
-          "blocks": [{"id": "when-run-block", "type": "when_run_simple2", "x": 32, "y": 32}]
+          "blocks": [{"type": "when_run_simple2", "x": 32, "y": 32}]
         },
         "variables": [{"name": "currentTime"}, {"name": "i"}]
       }
@@ -64,7 +64,7 @@
       "defaultCode": {
         "blocks": {
           "languageVersion": 0,
-          "blocks": [{"id": "when-run-block", "type": "when_run_simple2", "x": 33, "y": 33}]
+          "blocks": [{"type": "when_run_simple2", "x": 33, "y": 33}]
         },
         "variables": [{"name": "currentTime"}, {"name": "i"}]
       }
