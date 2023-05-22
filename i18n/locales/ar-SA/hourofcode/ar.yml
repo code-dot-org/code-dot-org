@@ -44,8 +44,9 @@ ar:
     معنا.
   social_hoc2022_dance: تضم الحفلة بيونسيه وهاري ستايلز وليزو وليل ناس إكس وسيلينا
     غوميز وموسيقى من ديزني "إنكانتو" والمزيد!
-  social_hoc2023_dance: Featuring Beyoncé, BTS, Harry Styles, Lizzo, Lil Nas X, Selena
-    Gomez, music from Disney's "Encanto," and more!
+  social_hoc2023_dance: |-
+    تضم الحفلة بيونسيه وهاري ستايلز وليزو وليل ناس إكس وسيلينا غوميز وموسيقى من ديزني "إنكانتو"بي تي اس
+     والمزيد!
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: نتعلم اليوم، لنبني غداً مشرقاً
@@ -142,18 +143,18 @@ ar:
     ونستخدم هذه المتجهات لتدريب آلة المتجهات الداعمة. وبناءً على بيانات التدريب، تقوم
     آلة المتجهات الداعمة بتقسيم "مساحة" جميع الأسماك الممكنة إلى قسمين، وهو ما يتوافق
     مع الفئات التي نحاول تعلمها (مثل "أزرق" أو "ليس أزرق").
-  heading_additional_resources: Additional resources
+  heading_additional_resources: مصادر إضافية
   call_to_action_learn_more: اعرف المزيد
-  call_to_action_watch_now: Watch now
-  call_to_action_try_activity: Try activity
-  call_to_action_explore_unit: Explore unit
-  call_to_action_view_lesson_plan: View lesson plan
-  call_to_action_self_paced_pl: Start self-paced professional learning
+  call_to_action_watch_now: شاهد الآن
+  call_to_action_try_activity: جرب النشاط
+  call_to_action_explore_unit: وحدة المستكشف
+  call_to_action_view_lesson_plan: عرض خطة الدرس
+  call_to_action_self_paced_pl: التعلم المهني الذاتي
   call_to_action_watch_panel: Watch panel
   call_to_action_learn_about_challenge: Learn about challenge
-  call_to_action_explore_website: Explore website
+  call_to_action_explore_website: تصفّح مواقع الويب
   call_to_action_read_more: اقرأ المزيد
-  call_to_action_special_announcement: See special announcement
+  call_to_action_special_announcement: إعلانات خاصة
   social_hoc2019_oceans_title: 'استخدام الذكاء الاصنطاعي في المحيطات #CSforGood'
   social_hoc2019_oceans_desc: تعرف على الذكاء الاصطناعي، وتعلم الآلة، وبيانات التدريب،
     والانحياز، أثناء استكشاف المسائل الأخلاقية وكيف يمكن استخدام الذكاء الاصطناعي
@@ -168,14 +169,15 @@ ar:
   social_blockchain_title: How Blockchain Works
   social_blockchain_desc: Videos and lessons that explore what blockchain is and why
     it's important.
-  social_ai_title: Learn about artificial intelligence (AI) | Code.org
-  social_ai_desc: Tools to help students and teachers bring AI into the classroom.
-  pl_superhero_title: Help students become superheroes!
+  social_ai_title: تعرف على الذكاء الاصطناعي
+  social_ai_desc: أدوات لمساعدة الطلاب والمعلمين على إدخال الذكاء الاصطناعي إلى الفصل
+    الدراسي.
+  pl_superhero_title: ساعد الطلاب على أن يصبحوا أبطالا خارقين!
   pl_superhero_desc: Join our highly supportive Professional Learning Program for
     middle and high school educators.
-  teach_ai_homepage_banner_title: AI education for the world
-  teach_ai_homepage_banner_desc: Code.org is part of TeachAI, dedicated to empowering
-    educators everywhere to teach with AI and about AI.
+  teach_ai_homepage_banner_title: منظمة العفو الدولية التعليم من أجل العالم
+  teach_ai_homepage_banner_desc: Code.org هو جزء من المعلم ، مكرسة لتمكين المعلمين
+    في كل مكان للتدريس مع منظمة العفو الدولية وحول منظمة العفو الدولية.
   blockchain_hero_heading: How Blockchain Works
   blockchain_hero_desc: Dive into the world of blockchain with "How Blockchain Works,"
     our new video series and accompanying lessons!
@@ -211,15 +213,16 @@ ar:
   blockchain_resources_03_heading: Hour of Code Activity
   blockchain_resources_03_desc: Try a crypto memory game created by Coinbase.
   blockchain_resources_03_button_label: Try the Crypto Memory Game activity
-  ai_2023_banner_title: AI education for the world
-  ai_2023_banner_skinny_desc: See how we're planning to bring AI education to classrooms
-    everywhere.
-  teachai_launch_blog_title: Introducing TeachAI!
-  teachai_launch_blog_desc_01: Education, nonprofit, and tech leaders come together
-    to offer guidance on integrating AI safely into classrooms worldwide
-  teachai_launch_blog_desc_02: TeachAI aims to integrate AI education into primary
-    and secondary curricula around the world through new reports, policy recommendations,
-    and public engagement opportunities.
+  ai_2023_banner_title: منظمة العفو الدولية التعليم من أجل العالم
+  ai_2023_banner_skinny_desc: انظر كيف نخطط لجلب تعليم الذكاء الاصطناعي إلى الفصول
+    الدراسية في كل مكان.
+  teachai_launch_blog_title: تقديم TeachAI!
+  teachai_launch_blog_desc_01: يجتمع قادة التعليم والمنظمات غير الربحية والتكنولوجيا
+    لتقديم إرشادات حول دمج الذكاء الاصطناعي بأمان في الفصول الدراسية في جميع أنحاء
+    العالم
+  teachai_launch_blog_desc_02: يهدف التعليم إلى دمج تعليم الذكاء الاصطناعي في المناهج
+    الدراسية الابتدائية والثانوية في جميع أنحاء العالم من خلال التقارير الإخبارية
+    والتوصيات السياسية وفرص المشاركة العامة.
   ai_hero_heading: Artificial intelligence isn't magic… It's just code!
   ai_hero_desc: Demystify artificial intelligence (AI) by learning how it's changing
     the ways we live, work, and learn.
@@ -284,7 +287,7 @@ ar:
     series of short videos will introduce you to how artificial intelligence works
     and why it matters. Then delve into issues like algorithmic bias and the ethics
     of AI decision-making.
-  ai_resources_heading: Additional resources
+  ai_resources_heading: مصادر إضافية
   ai_resources_desc: Interested in learning more about AI? Here are some additional
     resources that can help extend your students' learning.
   ai_resources_title_01: Ethics of AI Panel

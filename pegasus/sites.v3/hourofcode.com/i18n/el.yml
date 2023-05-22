@@ -1,7 +1,7 @@
 ---
 el:
-  site_name: ΩΡΑ ΚΩΔΙΚΑ
-  hour_of_code: Ώρα κώδικα
+  site_name: Ώρα του Κώδικα
+  hour_of_code: Ώρα του κώδικα
   language: ελληνικά
   front_title: Λάβετε μέρος στην μεγαλύτερη στην ιστορία εκδήλωση για την μάθηση,
     %{campaign_date}
@@ -194,9 +194,9 @@ el:
   pl_superhero_title: Help students become superheroes!
   pl_superhero_desc: Join our highly supportive Professional Learning Program for
     middle and high school educators.
-  teach_ai_homepage_banner_title: AI education for the world
-  teach_ai_homepage_banner_desc: Code.org is part of TeachAI, dedicated to empowering
-    educators everywhere to teach with AI and about AI.
+  teach_ai_homepage_banner_title: Εκπαίδευση για τον κόσμο
+  teach_ai_homepage_banner_desc: Code.org είναι μέρος του TeachAI, αφιερωμένο στην
+    ενδυνάμωση των εκπαιδευτικών παντού για να διδάξουν με AI και για AI.
   blockchain_hero_heading: How Blockchain Works
   blockchain_hero_desc: Dive into the world of blockchain with "How Blockchain Works,"
     our new video series and accompanying lessons!
@@ -232,7 +232,7 @@ el:
   blockchain_resources_03_heading: Hour of Code Activity
   blockchain_resources_03_desc: Try a crypto memory game created by Coinbase.
   blockchain_resources_03_button_label: Try the Crypto Memory Game activity
-  ai_2023_banner_title: AI education for the world
+  ai_2023_banner_title: Εκπαίδευση για τον κόσμο
   ai_2023_banner_skinny_desc: See how we're planning to bring AI education to classrooms
     everywhere.
   teachai_launch_blog_title: Introducing TeachAI!
