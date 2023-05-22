@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-05-17 03:47:05 UTC",
+    "serialized_at": "2023-05-19 21:56:32 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -159,12 +159,14 @@
     },
     {
       "key": "lesson-6",
-      "name": "Asynchronous Work",
+      "name": "Asynchronous Part 1",
       "absolute_position": 6,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
+        "overview": "**Purpose:**\nThe asynchronous activities will provide participants with a high-level overview of the CS Discoveries curriculum including a high-level overview of the course content and tools, an outline of how the course is structured, and a preview of how the problem solving process is used throughout the course. Participants will go on to learn about the support available to them while teaching the course and reflect on the role of the teacher in a CS Discoveries classroom.  \n\n**Objectives:**\n\n* Participants learn more about the different units of the CS Discoveries curriculum.\n* Participants review a Problem Solving Process lesson in one of units 2-7.\n\n**Suggested time:** 60 minutes",
+        "student_overview": "**You will:**\n\n* Learn more about the different units of the CS Discoveries curriculum.\n* Review a Problem Solving Process lesson in one of units 2-7.\n"
       },
       "seeding_key": {
         "lesson.key": "lesson-6",
@@ -280,12 +282,14 @@
     },
     {
       "key": "lesson-13",
-      "name": "Asynchronous Work",
+      "name": "Asynchronous Part 2",
       "absolute_position": 13,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 13,
       "properties": {
+        "overview": "**Purpose:**\nThe asynchronous session gives participants an opportunity to explore the key instructional strategies in the CS Discoveries curriculum: Pair Programming, Debugging, Journaling, and Discussion. Participants will also have the chance to finish levels they did not complete in the earlier Model Lessons.\n\n**Objectives:**\n\n* Participants learn more about the key instructional strategies in the CS Discoveries curriculum.\n* Participants contribute to their cohort's shared slide deck and learn from other's responses.\n* Participants complete any remaining challenges from the Model Lessons.\n\n**Suggested time:** 60 minutes",
+        "student_overview": "**You will:**\n\n* Learn more about the key instructional strategies in the CS Discoveries curriculum.\n* Contribute to your cohort's shared slide deck and learn from others' responses.\n* Complete any remaining challenges from the Model Lessons."
       },
       "seeding_key": {
         "lesson.key": "lesson-13",
@@ -1380,6 +1384,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day1-async1"
+        ],
         "progression": "Asynchronous Overview"
       },
       "bonus": false,
@@ -1402,6 +1409,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day1-async2"
+        ],
         "progression": "CS Discoveries Units 1 - 7"
       },
       "bonus": false,
@@ -1424,6 +1434,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day1-async3"
+        ],
         "progression": "CS Discoveries Units 1 - 7"
       },
       "bonus": false,
@@ -1446,6 +1459,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day1-async4"
+        ],
         "progression": "CS Discoveries Units 1 - 7"
       },
       "bonus": false,
@@ -1468,6 +1484,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day1-async5"
+        ],
         "progression": "The Problem Solving Process Across CSD"
       },
       "bonus": false,
@@ -1490,6 +1509,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day1-async6"
+        ],
         "progression": "The Problem Solving Process Across CSD"
       },
       "bonus": false,
@@ -1512,6 +1534,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day1-async7"
+        ],
         "progression": "The Problem Solving Process Across CSD"
       },
       "bonus": false,
@@ -2009,6 +2034,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day1-async8"
+        ],
         "progression": "Asynchronous Overview"
       },
       "bonus": false,
@@ -2031,6 +2059,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day1-async9"
+        ],
         "progression": "Pair Programming"
       },
       "bonus": false,
@@ -2053,6 +2084,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day1-async10"
+        ],
         "progression": "Pair Programming"
       },
       "bonus": false,
@@ -2075,6 +2109,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day1-async11"
+        ],
         "progression": "Pair Programming"
       },
       "bonus": false,
@@ -2097,6 +2134,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day1-async20"
+        ],
         "progression": "Pair Programming"
       },
       "bonus": false,
@@ -2119,6 +2159,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day1-async15"
+        ],
         "progression": "Debugging"
       },
       "bonus": false,
@@ -2141,6 +2184,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day1-async16"
+        ],
         "progression": "Debugging"
       },
       "bonus": false,
@@ -2163,6 +2209,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day1-async17"
+        ],
         "progression": "Debugging"
       },
       "bonus": false,
@@ -2185,6 +2234,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day1-async21"
+        ],
         "progression": "Debugging"
       },
       "bonus": false,
@@ -2207,6 +2259,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day1-async19"
+        ],
         "progression": "Journaling"
       },
       "bonus": false,
@@ -2229,6 +2284,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day1-async22"
+        ],
         "progression": "Journaling"
       },
       "bonus": false,
@@ -2251,6 +2309,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day1-async23"
+        ],
         "progression": "Discussion"
       },
       "bonus": false,
@@ -2273,6 +2334,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day1-async24"
+        ],
         "progression": "Discussion"
       },
       "bonus": false,
@@ -2295,6 +2359,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day1-async25"
+        ],
         "progression": "Completing Model Lesson Levels"
       },
       "bonus": false,

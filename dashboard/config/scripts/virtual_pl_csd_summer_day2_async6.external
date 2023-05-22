@@ -3,7 +3,7 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Day 2, Asynchronous Part II
+# Day 2, Asynchronous Part 2
 
 ##### Welcome! This asynchronous module is designed to give you time an overview of some additional instructional strategies in the CS Discoveries curriculum: Using Resources and Assessment.
 
@@ -12,15 +12,11 @@ markdown <<MARKDOWN
 ## In this module, you will:
 
 * ##### Learn more about the key instructional strategies in the CS Discoveries curriculum.
-* ##### Contribute to your cohort's shared slide deck and learn from other's responses.
-* ##### Complete any remaining challenges you'd like to finish from today's Model Lessons.
+* ##### Contribute to your cohort's shared slide deck and learn from others' responses.
+* ##### Complete any remaining challenges from the Model Lessons.
 
 
 ### **Suggested time:** 60 minutes
 
 ## Let's get started!
-
-<div style="clear:both"/>
-
-![]()
 MARKDOWN
