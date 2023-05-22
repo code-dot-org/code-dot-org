@@ -216,7 +216,7 @@ module UsersHelper
         memo[student_id] = teacher_feedbacks.index_by(&:level_id)
         memo
       end
-  end
+  end 
 
   # Merge the progress for the specified unit and user into the user_data result hash.
   private def merge_unit_progress(user_data, user, unit, exclude_level_progress = false)
