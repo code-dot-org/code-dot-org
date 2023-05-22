@@ -659,9 +659,9 @@ form {
     }
   }
 
-  // The plugin we're using sometime breaks when dir="rtl"
-  // - updating the inset fixes it; it does remove the
-  // swiping motion, but doesn't take away from the content
+  // The plugin we're using disappears when <html dir="rtl">
+  // - updating the inset value fixes it; it does remove the swiping
+  // animation between slides on desktop, but keeps the content
   .slides.rtl {
     inset: 0 !important;
   }
