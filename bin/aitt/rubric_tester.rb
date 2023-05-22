@@ -59,6 +59,12 @@ def command_line_options
       options[:max_num_students] = max_num_students
     end
 
+    opts.on(
+      '--student-ids STUDENT_1,STUDENT_2', Array, 'Comma-separated list of student ids to grade. Defaults to all students.'
+    ) do |student_ids|
+      options[:student_ids] = student_ids
+    end
+
     opts.on("-h", "--help", "Prints this help message") do
       puts opts
       exit
@@ -76,8 +82,12 @@ def read_inputs(prompt_file, standard_rubric_file, split_rubric_file, merge_map_
   [prompt, standard_rubric, split_rubric, merge_map]
 end
 
-def get_student_files(max_num_students)
-  Dir.glob('sample_code/*.js').sort.take(max_num_students)
+def get_student_files(max_num_students:, student_ids: nil)
+  if student_ids
+    student_ids.map {|student_id| "sample_code/#{student_id}.js"}
+  else
+    Dir.glob('sample_code/*.js').sort.take(max_num_students)
+  end
 end
 
 def get_expected_grades(expected_grades_file)
@@ -193,6 +203,7 @@ end
 def main
   $command_line = "#{$0} #{ARGV.join(' ')}"
   options = command_line_options
+
   main_start_time = Time.now
   prompt_file = 'system_prompt.txt'
   standard_rubric_file = 'standard_rubric.csv'
@@ -205,7 +216,7 @@ def main
   system("rm -f cached_responses/*") unless options[:use_cached]
 
   prompt, standard_rubric, split_rubric, merge_map = read_inputs(prompt_file, standard_rubric_file, split_rubric_file, merge_map_file)
-  student_files = get_student_files(options[:max_num_students].to_i)
+  student_files = get_student_files(max_num_students: options[:max_num_students].to_i, student_ids: options[:student_ids])
   expected_grades = get_expected_grades(expected_grades_file)
 
   validate_rubrics(expected_grades, standard_rubric, split_rubric, merge_map, options)
