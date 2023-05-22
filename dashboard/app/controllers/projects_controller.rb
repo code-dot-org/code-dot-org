@@ -167,6 +167,9 @@ class ProjectsController < ApplicationController
     },
     time_capsule: {
       name: 'New Time Capsule Project'
+    },
+    ecosystems: {
+      name: 'New Ecosystems Project'
     }
   }.with_indifferent_access.freeze
 

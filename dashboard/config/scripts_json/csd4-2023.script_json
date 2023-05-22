@@ -12,12 +12,13 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "version_year": "2023",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-04-24 16:47:25 UTC",
+    "serialized_at": "2023-05-17 16:42:55 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1911,7 +1912,7 @@
       "key": "d29b9554-5efb-4071-b8c4-bab2a3decabe",
       "position": 1,
       "properties": {
-        "description": "**Video:** Show students the [r the_design_thinking_process/csd4/2023] video in the slides. Stop the video after Step 5 (around 3:10).\n\n",
+        "description": "**Video:** Show students the [r the_design_thinking_process/csd/2023] video in the slides. Stop the video after Step 5 (around 3:10).\n\n",
         "name": "Introduce Design Thinking\r",
         "tips": [
           {
@@ -4103,7 +4104,7 @@
       "key": "90c03622-4771-4660-8c57-c38aa3e03cdd",
       "position": 1,
       "properties": {
-        "description": "**Distribute:** Give each team one copy of the Paper Prototype User Testing Activity Guide. Also give each team a copy of the User Test Cases Activity Guide - one copy for each user the team plans to test with.\n\n\n\n#### Paper Prototype User Testing\n\n**Overview:** Read through the (1) Overview section of the activity guide together. This gives an overview of today’s activity.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r what_s_for_lunch_testing/csd4/2023] video in the slides. This gives a model for what the testing process should look like.",
+        "description": "**Distribute:** Give each team one copy of the Paper Prototype User Testing Activity Guide. Also give each team a copy of the User Test Cases Activity Guide - one copy for each user the team plans to test with.\n\n\n\n#### Paper Prototype User Testing\n\n**Overview:** Read through the (1) Overview section of the activity guide together. This gives an overview of today’s activity.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r what_s_for_lunch_testing/csd/2023] video in the slides. This gives a model for what the testing process should look like.",
         "name": "Preparing for Testing\r",
         "tips": [
           {
@@ -4286,7 +4287,7 @@
       "key": "072b8b4e-3063-4d54-aeab-bd0d22f0b11b",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r intro_to_design_mode/csd4/2023] video in the slides. This video introduces the design mode interface that students will use for the rest of the unit. Today’s lesson focuses just on the drag-and-drop design elements; the Events in AppLab lesson focuses on the coding elements\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r intro_to_design_mode/csd/2023] video in the slides. This video introduces the design mode interface that students will use for the rest of the unit. Today’s lesson focuses just on the drag-and-drop design elements; the Events in AppLab lesson focuses on the coding elements\n",
         "progression_name": "Video: Intro to Design Mode",
         "tips": [
           {
@@ -4679,7 +4680,7 @@
       "key": "a825d3ec-41aa-46d7-a8b1-ae7cf48017db",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r events_in_app_lab_1/csd4/2023] video in the slides.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r events_in_app_lab_1/csd/2023] video in the slides.\n",
         "progression_name": "Video: Events in App Lab",
         "tips": [
           {
