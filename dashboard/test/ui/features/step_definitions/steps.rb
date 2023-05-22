@@ -120,8 +120,13 @@ When /^I switch tabs$/ do
   @browser.switch_to.window(@browser.window_handles.detect {|handle| handle != tab})
 end
 
-When /^I switch to the first iframe$/ do
+When /^I switch to the first iframe( once it exists)?$/ do |wait|
   $default_window = @browser.window_handle
+  if wait
+    wait_short_until do
+      @browser.find_elements(tag_name: 'iframe').any?
+    end
+  end
   @browser.switch_to.frame @browser.find_element(tag_name: 'iframe')
 end
 

@@ -37,7 +37,7 @@ class Poetry < GamelabJr
   # Set the default poem to nil if the standalone_app does not have poems, or if the default poem is
   # not in the list of poems for the standalone_app.
   def sanitize_default_poem
-    self.default_poem = nil if Poetry.standalone_app_with_poems.exclude?(standalone_app_name) ||
+    self.default_poem = nil if Poetry.standalone_apps_with_poems.exclude?(standalone_app_name) ||
       Poetry.poem_keys_for_standalone_app(standalone_app_name).exclude?(default_poem)
   end
 
