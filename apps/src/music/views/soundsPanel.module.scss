@@ -5,7 +5,7 @@
 }
 
 .folder {
-  background-color: $neutral_dark90;
+  background-color: $neutral_dark;
   overflow: hidden;
   border-radius: 4px;
   padding: 6px;
@@ -21,7 +21,7 @@
   font-size: 18px;
   padding: 6px 0;
   margin-bottom: 6px;
-  border-bottom: solid 1px $neutral_dark80;
+  border-bottom: solid 1px $neutral_dark90;
   margin-right: 12px;
 }
 
@@ -29,10 +29,10 @@
   overflow: hidden;
   padding: 4px 0;
   &:hover {
-    background-color: $neutral_dark80;
+    background-color: $neutral_dark90;
   }
   &Selected {
-    background-color: $neutral_dark70;
+    background-color: $neutral_dark80;
   }
 }
 
@@ -61,7 +61,7 @@
     font-size: 13px;
     width: 15px;
     margin-right: 10px;
-    color: $neutral_dark40;
+    color: $neutral_dark50;
     text-align: right;
   }
 
@@ -72,10 +72,10 @@
 }
 
 .preview {
-  color: $neutral_dark30;
+  color: $neutral_dark40;
 
   &Playing {
-    color: $neutral_dark60;
+    color: $neutral_dark70;
     cursor: default;
   }
 }
