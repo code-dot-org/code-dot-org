@@ -2035,6 +2035,7 @@
   "sharingDisabled": "Przepraszamy, ten projekt nie może być udostępniony. Jeżeli to jest Twój projekt lub projekt jednego z Twoich uczniów, prosimy o [zalogowanie się]({sign_in_url}) do swojego konta, by uzyskać dostęp do projektu.",
   "show": "Pokaż",
   "showAllLessons": "Pokaż wszystkie lekcje",
+  "showAnswer": "Pokaż odpowiedź",
   "showAnswers": "Pokaż odpowiedzi",
   "showAnswersInstructions": "\"Pokaż odpowiedzi\", aby ustawić oceny w trybie tylko do odczytu.",
   "showBlock": "Weź blok",

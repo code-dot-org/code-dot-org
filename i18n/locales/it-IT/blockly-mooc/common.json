@@ -715,7 +715,7 @@
   "deleteAccountDialog_verification": "Per verificare, digita {verificationString} sotto:",
   "deleteAccountDialog_verificationString": "ELIMINA IL MIO ACCOUNT",
   "deleteAnswer": "Eliminare la risposta",
-  "deleteAnswerHelpTip": "Cancella la risposta e reimposta la lezione. Questa è una funzionalità riservata agli istruttori.",
+  "deleteAnswerHelpTip": "Cancella la risposta e reimposta la lezione. Questa è una funzionalità riservata agli insegnanti.",
   "deleteAsset": "Cancella {assetType}",
   "deleteAssetConfirm": "Sei sicuro di voler cancellare questa {assetType}? Non è possibile annullare questa azione.",
   "deleteConfirm": "Elimina?",
