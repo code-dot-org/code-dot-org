@@ -8,7 +8,8 @@ theme: responsive_full_width
 %section
   .wrapper
     %h1=hoc_s(:farsi_page_top_heading)
-    %h2.heading-lg=hoc_s(:farsi_page_top_heading_02)
+    %h2.heading-lg
+      =hoc_s(:farsi_page_top_heading_02)
     %p=hoc_s(:farsi_page_top_desc_01)
     %p=hoc_s(:farsi_page_top_desc_02)
     %a{href: 'https://donate.code.org/campaign/support-computer-science-education/c172233', class: "link-button"}
@@ -17,8 +18,6 @@ theme: responsive_full_width
 %section.bg-neutral-light
   .wrapper
     %p TIMELINE HERE
-
-
 
 %section
   .wrapper
@@ -43,7 +42,7 @@ theme: responsive_full_width
       %li
         Anonymous (2)
     %hr
-    %p=hoc_s(:farsi_page_supporters_des_02)
+    %p=hoc_s(:farsi_page_supporters_desc_02)
     %a{href: 'https://donate.code.org/campaign/support-computer-science-education/c172233', class: "link-button"}
       =hoc_s(:call_to_action_support_farsi)
 
