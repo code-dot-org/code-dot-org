@@ -2058,19 +2058,19 @@
           "description": "Oceń źródło, odróżniając fakt od opinii."
         },
         "D4.1.K-2": {
-          "description": "Skonstruuj argument z powodów."
+          "description": "Skonstruuj argument z uzasadnieniem."
         },
         "D4.6.K-2": {
-          "description": "Zidentyfikuj i wyjaśnij szereg lokalnych, regionalnych i globalnych problemów oraz sposoby, w jakie ludzie próbują rozwiązać te problemy."
+          "description": "Zidentyfikuj i wyjaśnij lokalne, regionalne i globalne problemy oraz sposoby, w jakie ludzie próbują rozwiązać te problemy."
         },
         "D4.2.K-2": {
-          "description": "Konstruuj wyjaśnienia, używając prawidłowej sekwencji i odpowiednich informacji."
+          "description": "Formułuj wyjaśnienia, używając prawidłowej sekwencji i odpowiednich informacji."
         },
         "D4.7.K-2": {
           "description": "Określ sposoby podejmowania działań, które pomogą rozwiązać problemy lokalne, regionalne i globalne."
         },
         "D4.3.K-2": {
-          "description": "Przedstaw podsumowanie argumentu za pomocą technologii drukowanych, ustnych i cyfrowych."
+          "description": "Przedstaw podsumowanie argumentów za pomocą technologii drukowanych, ustnych i cyfrowych."
         },
         "D4.8.K-2": {
           "description": "Używaj procedur słuchania, budowania konsensusu i głosowania, aby podejmować decyzje i podejmować działania w swoich klasach."
@@ -2325,7 +2325,7 @@
           "description": "Oceniać konkretne przepisy i przepisy (zarówno rzeczywiste, jak i proponowane) jako środki rozwiązywania problemów publicznych."
         },
         "D2.Civ.13.6-8": {
-          "description": "Analizuj cele, wdrażanie i konsekwencje polityk publicznych w wielu ustawieniach"
+          "description": "Analizuj cele, wdrażanie i konsekwencje polityk publicznych w wielu sytuacjach."
         },
         "D2.Civ.14.6-8": {
           "description": "Porównaj historyczne i współczesne sposoby zmiany społeczeństw i promowania dobra wspólnego."
@@ -2361,7 +2361,7 @@
           "description": " Wyjaśnij wpływ zmian stóp procentowych na pożyczanie i inwestowanie."
         },
         "D2.Eco.11.6-8": {
-          "description": "Wykorzystaj odpowiednie dane do oceny stanu zatrudnienia, bezrobocia, inflacji, całkowitej produkcji, dochodów i wzrostu gospodarczego w gospodarce."
+          "description": "Wykorzystaj odpowiednie dane do oceny stanu zatrudnienia, bezrobocia, inflacji, całkowitej produkcji, dochodów i ekonomicznego wzrostu w gospodarce."
         },
         "D2.Eco.12.6-8": {
           "description": "Wyjaśnij, w jaki sposób inflacja, deflacja i bezrobocie wpływają na różne grupy."

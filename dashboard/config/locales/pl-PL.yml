@@ -1072,6 +1072,8 @@ pl:
     submit-complete-title: Prześlij swój sprawdzian
     submit-complete-body: Nie masz możliwości poprawy sprawdzianu po jego przesłaniu.
       Czy chcesz kontynuować?
+  level_summary:
+    correct_answer: Prawidłowa odpowiedź
   match:
     wrong_title: Niepoprawne rozwiązanie
     wrong_body: Wprowadzone przez Ciebie rozwiązanie nie jest poprawne. Spróbuj ponownie!
