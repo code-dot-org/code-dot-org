@@ -20,7 +20,7 @@ class InitialSectionCreationInterstitial extends Component {
     super(props);
 
     this.state = {
-      isOpen: true,
+      isOpen: true
     };
   }
 
