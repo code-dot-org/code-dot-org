@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-05-17 20:16:37 UTC",
+    "serialized_at": "2023-05-19 22:30:25 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -161,12 +161,14 @@
     },
     {
       "key": "lesson-6",
-      "name": "Asynchronous Work",
+      "name": "Asynchronous Part 1",
       "absolute_position": 6,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
+        "overview": "**Purpose:**\nThe asynchronous session is an opportunity for participants to both explore a lesson plan for a CS Discoveries lesson and begin to familiarize themselves with the content of their TLO lesson.\n\n**Objectives:**\n* Participants explore the lesson plan and additional resources for their assigned TLO lesson.\n* Participants complete the activities from their assigned TLO lesson. \n\n**Suggested Time:** 60 minutes",
+        "student_overview": "**You will:**\n\n* Explore the lesson plan and additional resources for your assigned TLO lesson.\n* Complete the activities from your assigned TLO lesson. \n"
       },
       "seeding_key": {
         "lesson.key": "lesson-6",
@@ -246,12 +248,14 @@
     },
     {
       "key": "lesson-11",
-      "name": "Asynchronous Work",
+      "name": "Asynchronous Part 2",
       "absolute_position": 11,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 11,
       "properties": {
+        "overview": "**Purpose:**\nThis activity gives participants an opportunity to explore two more instructional strategies in the CS Discoveries curriculum: Using Resources and Assessment. Participants will also have the chance to finish levels they did not complete in the earlier Model Lessons.\n\n**Objectives:**\n* Participants learn more about the key instructional strategies in the CS Discoveries curriculum.\n* Participants contribute to their cohort's shared slide deck and learn from others' responses.\n* Participants complete any remaining challenges from the Model Lessons.\n\n**Suggested time:** 60 minutes",
+        "student_overview": "**You will:**\n\n* Learn more about the key instructional strategies in the CS Discoveries curriculum.\n* Contribute to your cohort's shared slide deck and learn from others' responses.\n* Complete any remaining challenges from the Model Lessons.\n"
       },
       "seeding_key": {
         "lesson.key": "lesson-11",
@@ -1291,6 +1295,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day2-async1"
+        ],
         "progression": "Asynchronous Overview"
       },
       "bonus": false,
@@ -1313,6 +1320,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day2-async1.5"
+        ],
         "progression": "Get to Know Your Lesson"
       },
       "bonus": false,
@@ -1335,6 +1345,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day2-async2"
+        ],
         "progression": "Get to Know Your Lesson"
       },
       "bonus": false,
@@ -1357,6 +1370,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day2-async3"
+        ],
         "progression": "Get to Know Your Lesson"
       },
       "bonus": false,
@@ -1379,6 +1395,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day2-async4"
+        ],
         "progression": "Get to Know Your Lesson"
       },
       "bonus": false,
@@ -1401,6 +1420,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day2-async5"
+        ],
         "progression": "Get to Know Your Lesson"
       },
       "bonus": false,
@@ -1623,6 +1645,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day2-async6"
+        ],
         "progression": "Asynchronous Overview"
       },
       "bonus": false,
@@ -1645,6 +1670,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day2-UsingResources1"
+        ],
         "progression": "Using Resources"
       },
       "bonus": false,
@@ -1667,6 +1695,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day2-UsingResources2"
+        ],
         "progression": "Using Resources"
       },
       "bonus": false,
@@ -1689,6 +1720,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day2-UsingResources3"
+        ],
         "progression": "Using Resources"
       },
       "bonus": false,
@@ -1711,6 +1745,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day2-Assessment1"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -1733,6 +1770,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day2-Assessment3"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -1755,6 +1795,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day2-Assessment2"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -1777,6 +1820,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day2-Assessment4"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -1799,6 +1845,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day2-Levels"
+        ],
         "progression": "Completing Model Lesson Levels"
       },
       "bonus": false,
