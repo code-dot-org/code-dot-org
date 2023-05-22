@@ -18,14 +18,14 @@ export default class LevelChangeManager {
    * Change levels and handle level reset.
    * @param existingProject The current project to save before changing levels (if it has changed).
    * @param existingProjectManager The current project manager to clean up before changing levels.
-   * @param defaultCode Default code for the new level.
+   * @param startSources Start sources for the new level.
    * @param levelId The level id of the new level.
    * @param scriptId The script id of the new level (optional).
    */
   async changeLevel(
     existingProject: Project,
     existingProjectManager: ProjectManager,
-    defaultCode: object,
+    startSources: object,
     levelId: number,
     scriptId?: number
   ) {
@@ -36,12 +36,12 @@ export default class LevelChangeManager {
     // Clear out any remaining enqueued saves from the existing project manager.
     existingProjectManager.destroy();
     // Reset the level.
-    await this.handleLevelReset(defaultCode, levelId, scriptId);
+    await this.handleLevelReset(startSources, levelId, scriptId);
   }
 }
 
 type LevelResetHandler = (
-  defaultCode: object,
+  startSources: object,
   levelId: number,
   scriptId?: number
 ) => Promise<void>;

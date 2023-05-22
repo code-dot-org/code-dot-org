@@ -30,7 +30,7 @@
         },
         {"message": "Please play three sounds together."}
       ],
-      "defaultCode": {
+      "startSources": {
         "blocks": {
           "languageVersion": 0,
           "blocks": [{"type": "when_run_simple2", "x": 35, "y": 35}]

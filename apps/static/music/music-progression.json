@@ -17,7 +17,7 @@
         },
         {"message": "Please play a sound."}
       ],
-      "defaultCode": {
+      "startSources": {
         "blocks": {
           "languageVersion": 0,
           "blocks": [{"id": "when-run-block", "type": "when_run_simple2", "x": 31, "y": 31}]
@@ -51,7 +51,7 @@
         },
         {"message": "Please **play three sounds together**."}
       ],
-      "defaultCode": {
+      "startSources": {
         "blocks": {
           "languageVersion": 0,
           "blocks": [{"type": "when_run_simple2", "x": 32, "y": 32}]
@@ -61,7 +61,7 @@
     },
     {
       "text": "Try everything!",
-      "defaultCode": {
+      "startSources": {
         "blocks": {
           "languageVersion": 0,
           "blocks": [{"type": "when_run_simple2", "x": 33, "y": 33}]

@@ -20,7 +20,7 @@
         },
         {"message": "Please play one sound."}
       ],
-      "defaultCode": {
+      "startSources": {
         "blocks": {
           "languageVersion": 0,
           "blocks": [{"id": "when-run-block", "type": "when_run_simple2", "x": 34, "y": 34}]

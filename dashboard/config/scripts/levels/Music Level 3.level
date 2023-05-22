@@ -6,7 +6,7 @@
     "background": "music-black",
     "level_data": {
       "text": "Try everything!",
-      "defaultCode": {
+      "startSources": {
         "blocks": {
           "languageVersion": 0,
           "blocks": [{"type": "when_run_simple2", "x": 36, "y": 36}]

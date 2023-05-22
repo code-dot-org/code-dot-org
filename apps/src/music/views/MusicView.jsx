@@ -221,7 +221,7 @@ class UnconnectedMusicView extends React.Component {
           this.props.currentLevelId,
           this.props.currentScriptId,
           this.props.channelId,
-          this.getDefaultCode()
+          this.getStartSources()
         )
         .then(() => {
           this.musicBlocklyWorkspace.addSaveEventListener(
@@ -398,7 +398,7 @@ class UnconnectedMusicView extends React.Component {
       if (this.props.currentLevelId) {
         // Change levels for the projects system. Only do this if we have a level.
         await this.musicBlocklyWorkspace.changeLevels(
-          this.getDefaultCode(),
+          this.getStartSources(),
           this.props.currentLevelId,
           this.props.currentScriptId
         );
@@ -468,17 +468,17 @@ class UnconnectedMusicView extends React.Component {
   };
 
   clearCode = () => {
-    this.musicBlocklyWorkspace.setDefaultCode(this.getDefaultCode());
+    this.musicBlocklyWorkspace.setStartSources(this.getStartSources());
 
     this.setPlaying(false);
   };
 
-  getDefaultCode = () => {
+  getStartSources = () => {
     if (this.hasProgression()) {
-      return this.progressManager.getProgressionStep().defaultCode;
+      return this.progressManager.getProgressionStep().startSources;
     } else {
-      const defaultCodeFilename = 'defaultCode' + getBlockMode();
-      return require(`@cdo/static/music/${defaultCodeFilename}.json`);
+      const startSourcesFilename = 'startSources' + getBlockMode();
+      return require(`@cdo/static/music/${startSourcesFilename}.json`);
     }
   };
 
