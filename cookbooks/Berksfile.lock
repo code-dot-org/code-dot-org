@@ -66,7 +66,7 @@ GRAPH
   cdo-analytics (0.1.13)
     apt (>= 0.0.0)
     ark (>= 0.0.0)
-  cdo-apps (0.2.550)
+  cdo-apps (0.2.551)
     apt (>= 0.0.0)
     build-essential (>= 0.0.0)
     cdo-analytics (>= 0.0.0)
