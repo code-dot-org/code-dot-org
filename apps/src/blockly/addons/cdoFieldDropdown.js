@@ -7,14 +7,36 @@ import {
 
 export default class CdoFieldDropdown extends GoogleBlockly.FieldDropdown {
   /**
-   * Add special case for '???'.
-   * @override
+   * Ensure that the input value is a valid language-neutral option.
+   * @param newValue The input value.
+   * @returns A valid language-neutral option, or null if invalid.
+   * @override Add special case for '???' and accommodate valid initial values that are not surrounded
+   * by quotes in xml.
    */
   doClassValidation_(newValue) {
     if (newValue === EMPTY_OPTION) {
       return newValue;
     } else {
-      return super.doClassValidation_(newValue);
+      for (const option of this.getOptions(true)) {
+        if (option[1] === newValue) {
+          return newValue;
+        } else if (option[1] === `"${newValue}"`) {
+          return `"${newValue}"`;
+        }
+      }
+
+      if (this.sourceBlock_) {
+        console.warn(
+          "Cannot set the dropdown's value to an unavailable option." +
+            ' Block type: ' +
+            this.sourceBlock_.type +
+            ', Field name: ' +
+            this.name +
+            ', Value: ' +
+            newValue
+        );
+      }
+      return null;
     }
   }
 
@@ -33,6 +55,29 @@ export default class CdoFieldDropdown extends GoogleBlockly.FieldDropdown {
   }
 
   /**
+   * Sets the field's state based on the given state value. Should only be
+   * called by the serialization system.
+   *
+   * @param state The state we want to apply to the field.
+   * @override because `state` is stored as either json or xml in our code base.
+   */
+  loadState(state) {
+    // Check if state is not stringified xml, i.e., value from json.
+    const fieldTagRegEx = /<field/;
+    if (!fieldTagRegEx.test(state)) {
+      if (this.isOptionListDynamic()) {
+        this.getOptions(false);
+      }
+      this.setValue(state);
+      return;
+    }
+    const field = GoogleBlockly.utils.xml.textToDom(state);
+    // Currently, we support the `config` attribute if `config` is stored in xml, but not in json.
+    // The config is handled by `fromXml`.
+    this.fromXml(field);
+  }
+
+  /**
    * Converts xml element into dropdown field
    * @param element xml
    * @override
@@ -45,44 +90,7 @@ export default class CdoFieldDropdown extends GoogleBlockly.FieldDropdown {
     // See CDO implementation at https://github.com/code-dot-org/blockly/blob/main/core/ui/fields/field_dropdown.js#L305
     this.config = element.getAttribute('config');
     if (this.config) {
-      // If `menuGenerator_` is an array, it is an array of options with
-      // each option represented by an array containing 2 elements -
-      // a human-readable string and a language-neutral string. For example,
-      // [['first item', 'ITEM1'], ['second item', 'ITEM2'], ['third item', 'ITEM3']].
-      // Options are included in the block definition.
-      const originalOptionsMap = Array.isArray(this.menuGenerator_)
-        ? this.menuGenerator_.reduce((optionsMap, curr) => {
-            optionsMap[curr[1]] = curr[0];
-            return optionsMap;
-          }, {})
-        : {};
-
-      const numberList = printerStyleNumberRangeToList(this.config);
-      // If numberList is assigned a non-empty array, it contains a list of numbers.
-      // Convert this list to a string of dropdown options separated by commas and assign to options.
-      // Otherwise, assign options to config string.
-      // Note that `config` is either a printer-style number range or a string of options separated
-      // by commas, but not both. For example, a `config` like "1,6-9, &quot;SLOTH&quot;"
-      // would NOT be supported.
-      let options =
-        numberList.length > 0 ? numberListToString(numberList) : this.config;
-
-      options = options.split(',').map(val => {
-        val = val.trim();
-        // If val is one of the options in this.menuGenerator_,
-        // human-readable string is displayed.
-        if (originalOptionsMap[val]) {
-          return [originalOptionsMap[val], val];
-        } else {
-          // Remove quotes and display option with lowercase characters.
-          // For example, "GIRAFFE" would be transformed to giraffe.
-          const humanReadableVal = this.toHumanReadableString(val);
-          return [humanReadableVal, val];
-        }
-      });
-
-      // set the menuGenerator_ to those config options.
-      this.menuGenerator_ = options;
+      this.menuGenerator_ = this.getUpdatedOptionsFromConfig(this.config);
     }
     // Call super so value is set.
     super.fromXml(element);
@@ -95,10 +103,10 @@ export default class CdoFieldDropdown extends GoogleBlockly.FieldDropdown {
    * @override
    */
   toXml(element) {
-    super.toXml(element);
     if (this.config) {
       element.setAttribute('config', this.config);
     }
+    super.toXml(element);
     return element;
   }
 
@@ -107,5 +115,48 @@ export default class CdoFieldDropdown extends GoogleBlockly.FieldDropdown {
    */
   toHumanReadableString(text) {
     return text.replace(/['"]+/g, '').toLowerCase();
+  }
+
+  /**
+   * Updates field options based on `config` attribute of field
+   * @param config attribute of field
+   * @return Array of option arrays
+   */
+  getUpdatedOptionsFromConfig(config) {
+    // If `menuGenerator_` is an array, it is an array of options with
+    // each option represented by an array containing 2 elements -
+    // a human-readable string and a language-neutral string. For example,
+    // [['first item', 'ITEM1'], ['second item', 'ITEM2'], ['third item', 'ITEM3']].
+    // Options are included in the block definition.
+    const originalOptionsMap = Array.isArray(this.menuGenerator_)
+      ? this.menuGenerator_.reduce((optionsMap, curr) => {
+          optionsMap[curr[1]] = curr[0];
+          return optionsMap;
+        }, {})
+      : {};
+
+    const numberList = printerStyleNumberRangeToList(config);
+    // If numberList is assigned a non-empty array, it contains a list of numbers.
+    // Convert this list to a string of dropdown options separated by commas and assign to options.
+    // Otherwise, assign options to config string.
+    // Note that `config` is either a printer-style number range or a string of options separated
+    // by commas, but not both. For example, a `config` like "1,6-9, &quot;SLOTH&quot;"
+    // would NOT be supported.
+    let options =
+      numberList.length > 0 ? numberListToString(numberList) : config;
+    options = options.split(',').map(val => {
+      val = val.trim();
+      // If val is one of the options in this.menuGenerator_,
+      // human-readable string is displayed.
+      if (originalOptionsMap[val]) {
+        return [originalOptionsMap[val], val];
+      } else {
+        // Remove quotes and display option with lowercase characters.
+        // For example, "GIRAFFE" would be transformed to giraffe.
+        const humanReadableVal = this.toHumanReadableString(val);
+        return [humanReadableVal, val];
+      }
+    });
+    return options;
   }
 }

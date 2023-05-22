@@ -4,31 +4,37 @@
       "start_html": {
         "CSD U1 IO Pet Chooser 2_2021": {
           "Yes": "Тийм",
-          "No": "Үгүй"
+          "No": "Үгүй",
+          "cute": "өхөөрдөм"
         },
         "CSD U1 IO Pet Chooser 2_2022": {
           "Yes": "Тийм",
-          "No": "Үгүй"
+          "No": "Үгүй",
+          "cute": "өхөөрдөм"
         },
         "CSD U1 IO Pet Chooser_2021": {
           "Yes": "Тийм",
-          "No": "Үгүй"
+          "No": "Үгүй",
+          "cute": "өхөөрдөм"
         },
         "CSD U1 IO Pet Chooser_2022": {
           "Yes": "Тийм",
-          "No": "Үгүй"
+          "No": "Үгүй",
+          "cute": "өхөөрдөм"
         },
         "CSD U1 IO Story_2021": {
           "Name": "Нэр",
           "Color": "Өнгө",
           "City": "Хот",
-          "text": "текст"
+          "text": "текст",
+          "Food": "Хоол хүнс"
         },
         "CSD U1 IO Story_2022": {
           "Name": "Нэр",
           "Color": "Өнгө",
           "City": "Хот",
-          "text": "текст"
+          "text": "текст",
+          "Food": "Хоол хүнс"
         },
         "CSD U1 processing bday_2021": {
           "1": "1",
@@ -131,10 +137,14 @@
           "text": "текст"
         },
         "CSD U1 processing live_2021": {
-          "bear": "баавгай"
+          "bear": "баавгай",
+          "walking": "алхаж",
+          "rat": "харх"
         },
         "CSD U1 processing live_2022": {
-          "bear": "баавгай"
+          "bear": "баавгай",
+          "walking": "алхаж",
+          "rat": "харх"
         },
         "CSD U1 processing npark_2021": {
           "Correct!": "Зөв!",
@@ -208,11 +218,19 @@
         },
         "CSD U1 storage outfit_2021": {
           "green": "ногоон",
-          "black": "хар"
+          "black": "хар",
+          "Clear": "Тодорхой",
+          "white": "цагаан",
+          "pink": "ягаан",
+          "purple": "Нил ягаан"
         },
         "CSD U1 storage outfit_2022": {
           "green": "ногоон",
-          "black": "хар"
+          "black": "хар",
+          "Clear": "Тодорхой",
+          "white": "цагаан",
+          "pink": "ягаан",
+          "purple": "Нил ягаан"
         },
         "CSD U2 RGB intro": {
           "1": "1",
@@ -301,7 +319,9 @@
           "left": "зүүн",
           "right": "баруун",
           "red": "улаан",
-          "green": "ногоон"
+          "green": "ногоон",
+          "yellow": "шар",
+          "purple": "Нил ягаан"
         },
         "CSD U6 - Combine Inputs - CA_2022": {
           "on": "асах",
@@ -316,10 +336,13 @@
         },
         "CSD U6 - Combine Inputs - PracC_2222": {
           "green": "ногоон",
-          "blue": "цэнхэр"
+          "blue": "цэнхэр",
+          "yellow": "шар",
+          "orange": "улбар шар"
         },
         "CSD U6 - Combine Inputs - PracD_2222": {
-          "Test": "Test"
+          "Test": "Test",
+          "quiet": "нам гүм"
         },
         "CSD U6 - Combine Inputs - SB2_2222": {
           "short": "богино",
@@ -366,7 +389,8 @@
           "F": "F",
           "G": "G",
           "A": "A",
-          "B": "B"
+          "B": "B",
+          "Note:": "Тэмдэглэл:"
         },
         "CSD U6 - Music - SB1_2222": {
           "C": "C",
@@ -465,10 +489,12 @@
           "Welcome": "Мэндчилгээ"
         },
         "CSD U6 - Screen Inputs - SB2.1_2022": {
-          "black": "хар"
+          "black": "хар",
+          "white": "цагаан"
         },
         "CSD U6 - Screen Inputs - SB2.2_2022": {
-          "black": "хар"
+          "black": "хар",
+          "white": "цагаан"
         },
         "CSD U6 - Screen Outputs - P_2222": {
           "title": "гарчиг"
@@ -496,7 +522,8 @@
           "text": "текст"
         },
         "CSD U6 - Sensors - SB2_2222": {
-          "Update": "Шинэчлэх"
+          "Update": "Шинэчлэх",
+          "value": "үнэ цэнэ"
         },
         "CSD U6 Driver pt 2": {
           "You did it!": "Та үүнийг хийлээ!"
@@ -571,16 +598,20 @@
           "Success!": "Амжилт!"
         },
         "CSD U6 analog light": {
-          "Update": "Шинэчлэх"
+          "Update": "Шинэчлэх",
+          "value": "үнэ цэнэ"
         },
         "CSD U6 analog light_2018": {
-          "Update": "Шинэчлэх"
+          "Update": "Шинэчлэх",
+          "value": "үнэ цэнэ"
         },
         "CSD U6 analog light_2019": {
-          "Update": "Шинэчлэх"
+          "Update": "Шинэчлэх",
+          "value": "үнэ цэнэ"
         },
         "CSD U6 analog light_2021": {
-          "Update": "Шинэчлэх"
+          "Update": "Шинэчлэх",
+          "value": "үнэ цэнэ"
         },
         "CSD U6 array piano": {
           "C": "C",
@@ -869,19 +900,22 @@
           "About": "Тухай",
           "I don't know": "Би мэдэхгүй",
           "When?": "Хэзээ?",
-          "About Us": "Бидний тухай"
+          "About Us": "Бидний тухай",
+          "Why?": "Яагаад?"
         },
         "CSDU4 Decision App Demo_2018": {
           "About": "Тухай",
           "I don't know": "Би мэдэхгүй",
           "When?": "Хэзээ?",
-          "About Us": "Бидний тухай"
+          "About Us": "Бидний тухай",
+          "Why?": "Яагаад?"
         },
         "CSDU4 Decision App Demo_2019": {
           "About": "Тухай",
           "I don't know": "Би мэдэхгүй",
           "When?": "Хэзээ?",
-          "About Us": "Бидний тухай"
+          "About Us": "Бидний тухай",
+          "Why?": "Яагаад?"
         },
         "CSDU4 Functionality visible": {
           "Hide": "Нуух",
@@ -910,21 +944,24 @@
           "Submit": "Илгээх",
           "When?": "Хэзээ?",
           "About Us": "Бидний тухай",
-          "Correct!": "Зөв!"
+          "Correct!": "Зөв!",
+          "Why?": "Яагаад?"
         },
         "CSDU4 Quiz App Demo_2018": {
           "About": "Тухай",
           "Submit": "Илгээх",
           "When?": "Хэзээ?",
           "About Us": "Бидний тухай",
-          "Correct!": "Зөв!"
+          "Correct!": "Зөв!",
+          "Why?": "Яагаад?"
         },
         "CSDU4 Quiz App Demo_2019": {
           "About": "Тухай",
           "Submit": "Илгээх",
           "When?": "Хэзээ?",
           "About Us": "Бидний тухай",
-          "Correct!": "Зөв!"
+          "Correct!": "Зөв!",
+          "Why?": "Яагаад?"
         },
         "CSDU6 - UI and Inputs - getNumber": {
           "+": "+",
@@ -1202,13 +1239,15 @@
           "W": "Б",
           "A": "A",
           "yes": "тийм",
-          "no": "үгүй"
+          "no": "үгүй",
+          "head": "толгой"
         },
         "ml-model card-medical app v2 2021-2_2022": {
           "W": "Б",
           "A": "A",
           "yes": "тийм",
-          "no": "үгүй"
+          "no": "үгүй",
+          "head": "толгой"
         },
         "ml-models in applab-choice if quotes": {
           "3": "3",
@@ -1287,6 +1326,54 @@
           "snow": "цас",
           "cloudy": "үүлэрхэг",
           "night": "шөнө"
+        },
+        "CSD U6 - Sensors - SB1_2222": {
+          "value": "үнэ цэнэ"
+        },
+        "CSD U6 - Sensors - SB3_2222": {
+          "value": "үнэ цэнэ"
+        },
+        "CSD U6 - Sensors - SB4.1_2222": {
+          "value": "үнэ цэнэ"
+        },
+        "CSD U6 - Sensors - SB4_2222": {
+          "value": "үнэ цэнэ"
+        },
+        "CSD U6 analog change": {
+          "value": "үнэ цэнэ"
+        },
+        "CSD U6 analog change_2018": {
+          "value": "үнэ цэнэ"
+        },
+        "CSD U6 analog change_2019": {
+          "value": "үнэ цэнэ"
+        },
+        "CSD U6 analog change_2021": {
+          "value": "үнэ цэнэ"
+        },
+        "CSD U6 analog data": {
+          "value": "үнэ цэнэ"
+        },
+        "CSD U6 analog data_2018": {
+          "value": "үнэ цэнэ"
+        },
+        "CSD U6 analog data_2019": {
+          "value": "үнэ цэнэ"
+        },
+        "CSD U6 analog data_2021": {
+          "value": "үнэ цэнэ"
+        },
+        "CSD U6 analog sound": {
+          "value": "үнэ цэнэ"
+        },
+        "CSD U6 analog sound_2018": {
+          "value": "үнэ цэнэ"
+        },
+        "CSD U6 analog sound_2019": {
+          "value": "үнэ цэнэ"
+        },
+        "CSD U6 analog sound_2021": {
+          "value": "үнэ цэнэ"
         }
       }
     }

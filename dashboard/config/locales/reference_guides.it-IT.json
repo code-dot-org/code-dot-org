@@ -35,6 +35,9 @@
         "csd-2022/changing-sensor-scale": {
           "display_name": "Modificare la scala del sensore"
         },
+        "csd-2022/circuit-playground": {
+          "display_name": "Panoramica del Circuit Playground"
+        },
         "csd-2022/classes": {
           "display_name": "Classi"
         },
@@ -121,6 +124,9 @@
         },
         "csd-2022/maker-toolkit-overview": {
           "display_name": "Panoramica"
+        },
+        "csd-2022/model-cards-in-ai-lab": {
+          "display_name": "Schede modello in AI Lab"
         },
         "csd-2022/modifying-arrays": {
           "display_name": "Modifica delle matrici (array)"
