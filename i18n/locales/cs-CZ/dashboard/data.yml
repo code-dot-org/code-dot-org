@@ -361,6 +361,7 @@ cs:
         CSF_create_functions: Vytváření funkcí
         CSF_debugging_k1_blocks: Ladění
         CSF_debugging_text_blocks: Ladění
+        CSF_EF_cs_matters: Počítačová věda Záležitosti
         CSF_maze_intro_k1_blocks: Úvod do Code studia
         CSF_maze_intro_text_blocks: Úvod do Code studia
         CSF_my_robotic_friends: Moji robotičtí přátelé
@@ -381,14 +382,21 @@ cs:
         infinity_playlab_repeat_forever: Play Lab trvalé opakování
         csd_concept_how_computers_work: Úvod do fungování počítačů
         csd_concept_computer: 'Jak fungují počítače: Co dělá počítač, počítačem?'
+        csd_concept_binary_data: 'Jak fungují počítače: Binární & Data'
         csd_concept_circuits_logic: 'Jak fungují počítače: Obvody a logika'
         csd_concept_memory_cpu_input_output: 'Jak fungují počítače: Paměť, procesor, vstup a výstup'
         csd_concept_hardware_software: 'Jak fungují počítače: Hardware a software'
         csd_concept_search: Jak funguje vyhledávání
+        csd_external_amazon_data: Jak se velká data používají v systémech doporučení Amazon ke změně našich životů
+        csd_external_netflix_data: Jak Netflix vytváří návrhy televizních pořadů a filmů?
         csd_external_waze_data: Proč je tolik uživatelů posedlých bludištěm?
+        csd_gamelab_animation_tab: Karta Animace
         csd_gamelab_velocity: Rychlost
+        csd_weblab_intro_1: Úvod do webové laboratoře - část 1
+        csd_weblab_intro_2: Úvod do webové laboratoře - část 2
         csd_weblab_css_1: Úvod do CSS - část 1
         csd_weblab_css_2: Úvod do CSS - část 2
+        csd_weblab_intro_3: Úvod do webové laboratoře - část 3
         csp_applab_functions: Úvod do funkcí
         csp_applab_functions_parameters: Funkce s Parametry
         csp_applab_loops: Cykly
@@ -416,7 +424,11 @@ cs:
         mc_2016_events: Hodina kódu s Minecraftem - Události
         mc_2016_spawn: Hodina kódu s Minecraftem - Tvoření
         mc_2016_congrats: Hodina kódu s Minecraftem - Gratulujeme
+        applab_hoc_welcome: Hodina kódu aplikace Lab - Vítejte
+        applab_hoc_setproperty: Hodina kódu aplikace Lab - SetProperty
+        applab_hoc_onevent: Hodina kódu aplikace Lab - OnEvent
         applab_hoc_designmode: Hodina kódu s App Labem - Dizajnový mód
+        applab_hoc_share: AppLab Hodina kódu - Share
         mc_2017_agent_intro: Hodina kódu s Minecraftem - Agent
         mc_2017_repeat: Hodina kódu s Minecraftem - Cykly
         mc_2017_functions: Hodina kódu s Minecraftem - Funkce
@@ -425,36 +437,91 @@ cs:
         mc_2017_puzzle_3: Hodina kódu s Minecraftem - Cykly
         mc_2017_puzzle_8: Hodina kódu s Minecraftem - Funkce
         mc_2017_puzzle_12: Hodina kódu s Minecraftem - Volná hra
+        hint_videos_d_11_3_first: 'Tip Videa: D.11.3 První'
+        hint_videos_d_11_3_last: 'Tip Videa: D.11.3 Poslední'
+        hint_videos_d_11_4_first: 'Tip Videa: D.11.4 První'
+        hint_videos_d_11_4_last: 'Tip Videa: D.11.4 Poslední'
+        hint_videos_d_11_5_first: 'Tip Videa: D.11.5 První'
+        hint_videos_d_11_5_last: 'Tip Videa: D.11.5 Poslední'
+        hint_videos_d_11_6_first: 'Tip Videa: D.11.6 První'
+        hint_videos_d_11_6_last: 'Tip Videa: D.11.6 Poslední'
+        hint_videos_d_11_7_first: 'Tip Videa: D.11.7 První'
+        hint_videos_d_11_7_last: 'Tip Videa: D.11.7 Poslední'
+        hint_videos_d_11_9_first: 'Tip Videa: D.11.9 První'
+        hint_videos_d_11_9_last: 'Tip Videa: D.11.9 Poslední'
+        hint_videos_d_11_11_first: 'Tip Videa: D.11.11 První'
+        hint_videos_d_11_11_last: 'Tip Videa: D.11.11 Poslední'
         applab_intro_welcome: App Lab - začínáme
+        applab_intro_events: App Lab - Make It Interactive
         applab_intro_sounds: App Lab - Obrázky a zvuky
         applab_intro_designmode: App Lab - Dizajnový mód
         applab_intro_share: App Lab - Sdílej svou appku
+        csd_applab_arrays: Úvod do polí
         CSF_skinOverview_Harvester: Zahradnice
         CSF_bb8_skinOverview_C-F: BB-8
         CSF_bb8_skinOverview_K-1: BB-8
         CSF_bb8_loops_C-F: Cykly s BB-8
         CSF_harvester_skinOverview_K-1: Zahradnice
+        CSF_harvester_loops_K1: smyčky, do, kombajn
         CSF_scrat_loops_K1: Cykly v Době ledové
         CSF_scrat_loops_CF: Cykly v Době ledové
+        CSF_if_allskins: Blok If
+        CSF_ifelse_allskins: Použití bloků If/Else
+        CSF_ifelseifelse_allskins: Použití bloků IF/Elseif/Else
         CSF_loops_AB: Cykly
+        csd_gamelab_booleans: Booleovské výrazy
+        csd_gamelab_conditional_statements: Podmíněné příkazy
+        csd_gamelab_if_else: If/Else prohlášení
+        CSF_SpriteLabIntro_CDEF: Tohle je Sprite Lab
+        CSF_Spritelab_MakeSprite_CDEF: Jak si vyrobit Sprite ve Sprite Lab
+        CDEF_Video_SpritesInAction: skřítci, do, akce
+        CSF_SpriteLab_SpritesInAction_CDEF: skřítci, do, akce
         CSF_StarWars_ProjectIntro: Úvod do projektu Star Wars
+        mc_2018_intro: 'Minecraft: Vodní plavba Úvod'
+        MC_2018_loops: 'Minecraft: Voyage Vodní Opakujte Dokud'
+        mc_2018_conditionals: 'Minecraft: Vodní plavba Podmínky'
+        mc_2018_closing: 'Minecraft: Vodní plavba Gratulujeme'
         hoc_dance_warmup: Dance Party - Na rozehřátí
         hoc_dance_events: Taneční večírek  - Události
         hoc_dance_properties: Taneční večírek  - vlastnosti
         hoc_dance_congrats: Dance Party - Jedeme dál!
         c_and_c_great_to_create: Tvoření a férová hra jsou super
         c_and_c_digital_sharing: Digitální sdílení
+        teaching_csf_how_it_works: 'Výuka základů CS: Jak kurz funguje'
+        elem_pd_2: Základní škola Informatika - PD video 2/2
         what_is_cs: Co je informatika?
+        repeat_block: Použití bloku opakování
         lesson_planning: Plánování hodiny
+        opd_closing: 'Výuka CS Základy: Zavírání & Další kroky'
+        why_unplugged_lessons: Získání „odpojeno“
         writing_first_program: Psaní svého prvního počítačového programu
+        conditionals_with_cards: Odpojená lekce v akci - Podmínky s kartami
+        songwriting_with_functions: Odpojená lekce v akci - psaní písní s funkcemi
+        what_is_an_event: Co je to událost?
+        teaching_cs_pair_programming: 'Výuka CS Základy: Párové programování'
+        teaching_problem_solving: 'Výuka CS Základy: Výuka řešení problémů'
         csd_applab_designmode: 'Objevujeme informatiku: App Lab - Dizajnový mód'
         csd_pair_programming: Párové programování
+        csd_gamelab_functions: Volání a definování funkcí
         csd_applab_parameters: Funkce s Parametry
+        csd_applab_loops: smyčky, do, app, laboratoř
+        csd_problem_solving_process: Proces řešení problémů
         CSF_Going_Places_Safely: Mé online sousedství
+        CSF_SpriteLab_Intro_v2: Představujeme Sprite Lab
+        CSF_Spritelab_MakeSprite_v2: Jak si vyrobit Sprite
+        CSF_SpriteLab_SpritesInAction_v2: skřítci, do, akce
         csd_debugging: Ladění
         csd_applab_designmode_short: App Lab  - Dizajnový mód
         csp-pd-welcome: Vítej v rodině!
+        CSF-Teaching-Problem-Solving: Řešení problémů s výukou CSF
+        u5-traversals-get-list-explanation: Code.org [levelbuilder] - Pilotní video - Datový blok
+        u7-libraries-explanation: 'App Lab: Vytvořte si vlastní bloky - Jak používat knihovny'
+        how-to-k5-workshops: 'Code.org CS Základy: Kid testován, učitel schválen'
+        why-should-teach-unplugged-activities: 'FAQ: Proč bych měl učit „odpojené“ aktivity?'
+        cs-principles-intro-to-objects: 'Principy CS: Úvod do objektů'
         oceans_machine_learning: Strojové učení
+        oceans_training_data: Údaje o školení
+        oceans_societal_implications: Společenské důsledky
         hoc_dance_congrats_2019: Dance Party 2019 - Jedeme dál!
         hoc_dance_warmup_2019: Dance Party 2019 - Na rozehřátí
         hoc_dance_events_2019: Dance Party 2019 - Události
@@ -462,11 +529,34 @@ cs:
         hoc_dance_properties_2019: Dance Party 2019 - Vlastnosti
         csd_what_computers_do: Co dělají počítače?
         csf_my_online_neighborhood_2020: Mé online sousedství
+        csf_follow_the_digital_trail: Sledujte digitální stezku
         csf_private_and_personal_information: Soukromé a osobní informace
+        csd_what_computers_are: Co je to počítač?
+        csd_how_teamwork_works: Jak funguje týmová práce
+        csd_teamwork_and_disagreement: Týmová práce - Řešení nesouhlasu
+        csf21pilot_events: 'Sprite Lab: Skřítci v akci'
+        csf21pilot_prompts: 'Sprite Lab: Text a výzvy'
         outbreak_mike: CodeBytes Díl 3 s Mikem - Simulátor epidemií
+        csd_ml_intro_to_ai_lab: Úvod do laboratoře umělé inteligence
+        csd_ml_import_model: Import modelu umělé inteligence
         csf_lots_of_sprites: 'Laboratoř sprajtů: spousta sprajtů'
         playlab_2021: Úvod do Play Labu
         playlab_2021_reader: Úvod do Play Labu
+        csp_defining_calling_functions: Definování a volání funkcí
+        csp_tutorial_datatab: Karta Data v App Lab
+        csp_tutorial_libraries: Knihovny v App Lab
+        PL-Video-21: Vítejte na Code.org Professional Learning!
+        csp_tutorial_datavis1: Vizualizér dat v App Lab - část 1
+        csp_tutorial_datavis2: Vizualizér dat v App Lab - část 2
+        csd_ml_intro_ai_lab_july2021: Úvod do laboratoře umělé inteligence
+        csd_ml_training_testing_ai_lan: Školení a testování v laboratoři umělé inteligence
+        csd_ml_model_cards_july2021: Modelové karty v laboratoři AI
+        csd_ml_numerical_ai_lab: Numerická data v laboratoři AI
+        Gettting_Started_Progress: Pokrok, zpětná vazba a hodnocení
+        Gettting_Started_ClassSection: Vytvoření řezu třídy
+        Gettting_Started_StudentExperience: Zkušenosti studentů
+        Getting_Started_BasicFeatures: Základní vlastnosti Code.org
+        PL_overview_CSD: Co je to Computer Science Discoveries?
         PL_CSD_TeacherTips_Advise: Tipy pro učitele - Rady pro nové učitele
         PL_CSD_TeacherTips_IntroToCSD: Tipy pro učitele - Úvod ke kurzu Objevujeme informatiku
         PL_CSD_TeacherTips_ProblemSolvingProcess: Tipy pro učitele - Proces řešení problémů
@@ -479,6 +569,7 @@ cs:
         hello_world_intro: Hello World - Vítej v Laboratoři sprajtů
         hello_world_events: Hello World - Programování pomocí událostí
         hello_world_congrats: Hello World - Dělej, co chceš
+        csp_global_vs_local: Ladění globálních a lokálních proměnných
         rough_poemart_intro: v1 Básnické umění - Úvod
         rough_poemart_events: v1 Básnické umění - Události
         rough_poemart_imagery: v1 Básnické umění - Obrazotvornost
@@ -492,7 +583,19 @@ cs:
         poemart_events: Básnické umění Události
         poemart_imagery: Básnické umění Obrazotvornost
         poemart_celebration: Básnické umění Gratulace
+        csd_u6_variables_part2: Proměnné - Vzor čítače
+        csd_ml_ethics_ai: 'Etika a umělá inteligence '
+        outbreak_intro: 'Simulace ohniska: Úvod'
+        outbreak_events: 'Outbreak Simulator: Události'
+        outbreak_scientist: 'Outbreak Simulator: Myšlení jako vědec'
+        outbreak_outro: 'Outbreak Simulator: Hra zdarma'
+        PL_overview_CSP: Co je to Computer Science Principles?
+        PL_CSP_EIPMOverview: Průvodce po lekcích EIPM
         CSA-PL-debugging-temp: Příprava na ladění v prostředí Java Lab – dočasné
+        csd_app_lab_design_mode: Režim návrhu laboratoře aplikace CSD
+        csd_app_lab_events: Události laboratoře aplikace CSD
+        PL_CSD_Unit4_AppTesting: Testování prototypů papíru
+        csd_u6_circuit_playground: Fyzikální výpočetní
         CSA-PL-for-loops: Cykly for v jazyce Java
         CSA-PL-variables: Vytrváření proměnných v jazyce Java
         PL_CS_Journeys_Overview: Cesty informatiky
@@ -511,8 +614,99 @@ cs:
         CSA-PL-two-way-selection: Volba dvou možností
         CSA-PL-Printing-in-Java: Tisk v Java
         CSA-PL-multi-selection-statements: Příkazy s více volbami
+        PL_CSP_TeacherTips_Advice: 'Tipy pro učitele: Poradenství novým učitelům CS'
+        PL_CSP_TeacherTips_IntroToCSP: 'Tipy pro učitele: Úvod do principů CS'
+        PL_CSP_TeacherTips_Debugging: 'Tipy pro učitele: Pomoc s laděním'
+        PL_CSP_TeacherTips_LeadLearner: 'Tipy pro učitele: Jak se stát vedoucím žákem'
+        PL_CSP_TeacherTips_APExam: 'Tipy pro učitele: Příprava na zkoušku AP'
+        PL_CSP_TeacherTips_EIPM: 'Tipy pro učitele: Proces EIPM'
+        PL_CSD_CircuitPlayground_Overview: Přehled obvodových hřišť
+        CSA-PL-debugging-22: Ladění v Java Lab
+        CSD_Unit6_InteractiveArtExemplar: Interaktivní Art Exemplar
         CS_Changing_Everything: Informatika mění vše
+        csa-alias-video: Rovná se a Aliasy
+        csa-equals-video: Metoda rovná se ()
+        csa-user-stories: Příběhy uživatelů v softwarovém inženýrství
+        csa-pl-vpl-m1-unit-3: Softwarové inženýrství v jednotce 3
+        csa-pl-intro-to-equality: Úvod do rovnosti
+        csa-pl-intro-to-equals-method: Úvod do metody .equals ()
+        csa-pl-equals-book: Zápis metody rovná se () pro třídu Book
+        csa-multi-select-pl: Příkazy pro více výběrů v jazyce Java
+        csc_timecapsule_intro: Time Capsule Úvod
+        PL_Equity_in_CS_Education: Vlastní kapitál v CS Education
+        csc_fm_pilot: Funkční stroje (Pilot)
+        csc_fm_pilot_v2: 'Funkční stroje Intro '
+        csc-sprite-lab-pixel-editor: Nakreslete si vlastní Sprite
+        csa-pl-intro-to-strings: Úvod do řetězců v jazyce Java
+        csa-pl-compareTo: Metoda compareto ()
+        csc-event-short-intro: Události Short Intro
+        PL_CSD_CircuitPlayground_Overview_AppsWithDevices: Přehled jednotky obvodového hřiště
+        csa-day-in-pm-pl: Co dělá projektový manažer?
+        csa-pl-intro-to-pm: Úvod do projektového managmentu
+        PL_CSD_CircuitPlayground_Setup: Nastavení hřiště Circuit
+        csa_object_oriented_programming: 'ČSA: Objektově orientované programování'
+        csa_creating_objects: 'ČSA: Vytváření objektů'
+        csa_calling_methods: 'ČSA: Volací metody'
+        csa_while_loops: 'ČSA: Zatímco smyčky'
+        csa_inheritance: 'ČSA: Dědictví'
+        csa_writing_a_method: 'ČSA: Psaní metody'
+        csa_software_engineering_code_reviews: 'CSA: Softwarové inženýrství - Recenze kódu'
+        csa_conditional_statements: 'ČSA: Podmíněné prohlášení'
+        csa_printing_in_java: 'ČSA: Tisk v Javě'
+        csa_two_way_selection_and_not: 'ČSA: Obousměrný výběr a NE'
+        csa-pl-intro-to-oop: Úvod do objektově orientovaného programování
+        csa-pl-welcome-to-Neighborhood: Vítejte v sousedství
+        csa-pl-calling-methods: Metody volání v Javě
+        csa-pl-creating-objects: Vytváření objektů
+        csa_accessor_methods: 'ČSA: Metody přístupu'
+        csa_constructors: 'ČSA: Konstruktory'
+        csa_creating_a_scanner_object: 'ČSA: Vytvoření objektu skeneru'
+        csa_creating_variables: 'ČSA: Vytváření proměnných'
+        csa_instance_variables_and_attributes: 'CSA: Proměnné instance a atributy'
+        csa_mutator_methods: 'ČSA: Mutátorové metody'
+        csa_overloaded_constructors: 'ČSA: Přetížené konstruktéři'
+        csa_the_tostring_method: 'CSA: Metoda toString ()'
+        csa_scanner_class_methods: 'CSA: Metody třídy skeneru'
+        csa_for_loops: 'CSA: Pro smyčky'
+        csa_enhanced_for_loops: 'CSA: Vylepšené pro smyčky'
+        csa_modifying_values_in_a_1d_array: 'CSA: Úprava hodnot v 1D poli'
+        csa_nested_loops: 'CSA: Vnořené smyčky'
+        csa_one_dimensional_arrays: 'CSA: Jednorozměrná (1D) pole'
+        csa_polymorphism: 'ČSA: Polymorfismus'
+        csa_casting: 'CSA: Casting'
+        csa_equals_and_aliases: 'ČSA: Rovné a Aliasy'
+        csa_multi-selection_statements: 'ČSA: Prohlášení o vícenásobných výběrových'
+        csa_random_numbers: 'ČSA: Náhodná čísla'
+        csa_static_methods: 'ČSA: Statické metody'
+        csa_static_variables: 'ČSA: Statické proměnné'
+        csa_the_equals_method: 'ČSA: Metoda rovná se ()'
+        csa_welcome_to_the_theater: 'ČSA: Vítejte v divadle'
+        enter_your_own_poem: Zadejte svou vlastní báseň
+        csa-example-solution-1: 'Živé kódování příkladu řešení '
         csd_sprite_properties: Vlastnosti sprajtu
+        csa-pl-documentation: Dokumentace v Java Lab
+        csc-starquilts-intro: 'CSC: Hvězdné deky'
+        csa-pl-vocab-pm: Slovní zásoba projektového řízení
+        csc-ecosystems-intro: Úvod do ekosystémů
+        PL_CSD_MicroBit_Intro: Úvod do mikro:BIT
+        csc_animal_adaptations_intro: Úvod do adaptací zvířat
+        csa_two_dimensional_arrays: 'ČSA: Dvourozměrná (2D) pole'
+        csa_working_with_2d_array_elements: 'CSA: Práce s prvky 2D pole'
+        csa_row_major_traversal: 'ČSA: Hlavní traversal'
+        csa_column_major_traversal: 'ČSA: Sloupec hlavní traversal'
+        csa_enhanced_for_loops_and_2d_arrays: 'CSA: Vylepšeno pro smyčky a 2D pole'
+        csa_images_and_pixels: 'ČSA: Obrázky a pixely'
+        csa_wrapper_classes_part_1: 'ČSA: Třídy obalů Část 1'
+        csa_wrapper_classes_part_2: 'ČSA: Třídy obalů Část 2'
+        csa_the_arraylist_class: 'ČSA: Třída ArrayList'
+        csa_working_with_arraylist_data: 'ČSA: Práce s daty ArrayList'
+        csa_remving_data_from_an_arraylist: 'ČSA: Odstranění dat ze seznamu ArrayList'
+        csa_private_methods: 'ČSA: Soukromé metody'
+        csa_recursion: 'ČSA: Rekurze'
+        csa_searching_algorithms: 'CSA: Vyhledávací algoritmy'
+        csa_sorting_algorithms: 'CSA: Třídění algoritmů'
+        star_quilts_intro_to_artist: 'Hvězdné deky: Úvod do umělce'
+        upload_sprites_backgrounds: Nahrávání vlastních skřítků a pozadí
     callout:
       text:
         drag_blocks: Přetáhni blok "posunout vpřed" pod ten druhý blok

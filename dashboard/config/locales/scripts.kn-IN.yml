@@ -8,6 +8,7 @@ kn:
         course3:
           description_audience: ವಯಸ್ಸು 8-18
         playlab:
+          title: ಲ್ಯಾಬ್ ಪ್ಲೇ ಮಾಡಿ
           name: ಪ್ಲೇಲ್ಯಾಬ್‌
         artist:
           name: ಆರ್ಟಿಸ್ಟ್
@@ -27,6 +28,8 @@ kn:
           student_description: ಡಿಸ್ನೆ ಇನ್‌ಫಿನಿಟಿ ಪಾತ್ರಗಳನ್ನು ಬಳಸಿ ಸ್ಟೋರಿ ಅಥವಾ ಗೇಮ್
             ರಚಿಸಲು ಪ್ಲೇ ಲ್ಯಾಬ್ ಬಳಸಿ.
           name: ಇನ್‌ಫಿನಿಟಿ
+        netsim:
+          title: ಇಂಟರ್ನೆಟ್ ಸಿಮ್ಯುಲೇಟರ್
         20-hour:
           title: CS ಕೋರ್ಸ್‌ಗೆ ವರ್ಧಿಸಿಕೊಳ್ಳಿ
           description: ಈ 20-ಗಂಟೆಗಳ ಕೋರ್ಸ್ 2-4 ಕೋರ್ಸ್‌ಗಳಲ್ಲಿ ಕೋರ್ ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್
@@ -50,6 +53,7 @@ kn:
           student_description: ಕೇವಲ 10 ನಿಮಿಷಗಳಲ್ಲಿ ನಿಮ್ಮದೇ ಗೇಮ್‌ ಬರೆಯಬೇಕೆ? ನಮ್ಮ ಫ್ಲಾಪ್ಪಿ
             ಕೋಡ್ ಟ್ಯುಟೋರಿಯಲ್‌ ಟ್ರೈ ಮಾಡಿ!
         jigsaw:
+          title: ಜಿಗ್ಸಾ
           name: ಜಿಗ್‌ಸಾ
         step:
           title: ಹಂತ
@@ -436,6 +440,8 @@ kn:
               display_name: ವೇರಿಯಬಲ್‌ಗಳು
             csp_conditionals:
               display_name: ಕಂಡೀಷನಲ್ಸ್‌
+            csp_functions:
+              display_name: ಕಾರ್ಯಗಳು
         dance-extras:
           description: ವಿಸ್ತರಿಸಿದ ಪ್ರಾಜೆಕ್ಟ್ ಐಡಿಯಾಗಳ ಜೊತೆಗೆ ಮೊದಲ ಗಂಟೆಯಾಚೆಗೂ ಹೋಗಿ.
           student_description: ವಿಸ್ತರಿಸಿದ ಪ್ರಾಜೆಕ್ಟ್ ಐಡಿಯಾಗಳ ಜೊತೆಗೆ ಮೊದಲ ಗಂಟೆಯಾಚೆಗೂ
@@ -464,6 +470,8 @@ kn:
               display_name: ಲೂಪ್‌ಗಳು
             csf_conditionals:
               display_name: ಕಂಡೀಷನಲ್ಸ್‌
+            csf_binary:
+              display_name: ಬೈನರಿ
             csf_digcit:
               display_name: ಡಿಜಿಟಲ್ ಪೌರತ್ವ
             end_of_course_project:
@@ -474,6 +482,8 @@ kn:
               display_name: ಡಿಜಿಟಲ್ ಪೌರತ್ವ
             csf_nested_loops:
               display_name: ನೆಸ್ಟೆಡ್ ಲೂಪ್‌ಗಳು
+            csf_functions:
+              display_name: ಕಾರ್ಯಗಳು
             end_of_course_project:
               display_name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
         express-2019:
@@ -482,6 +492,8 @@ kn:
               display_name: ಲೂಪ್‌ಗಳು
             csf_conditionals:
               display_name: ಕಂಡೀಷನಲ್ಸ್‌
+            csf_functions:
+              display_name: ಕಾರ್ಯಗಳು
             csf_variables:
               display_name: ವೇರಿಯಬಲ್‌ಗಳು
             csf_for_loops:
@@ -501,6 +513,8 @@ kn:
           lesson_groups:
             csf_digcit:
               display_name: ಡಿಜಿಟಲ್ ಪೌರತ್ವ
+            csf_binary:
+              display_name: ಬೈನರಿ
             csf_loops:
               display_name: ಲೂಪ್‌ಗಳು
             csf_events:
@@ -509,6 +523,8 @@ kn:
               display_name: ಡೇಟಾ
             end_of_course_project:
               display_name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
+        gamelab:
+          title: ಗೇಮ್ ಲ್ಯಾಬ್
         coursea-2019:
           description_short: ಪ್ರೀ ರೀಡರ್‌ಗಳಿಗಾಗಿ ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್‌ಗೆ ಒಂದು ಪರಿಚಯ.
           lesson_groups:
@@ -538,6 +554,8 @@ kn:
               display_name: ವೇರಿಯಬಲ್‌ಗಳು
             csp_conditionals:
               display_name: ಕಂಡೀಷನಲ್ಸ್‌
+            csp_functions:
+              display_name: ಕಾರ್ಯಗಳು
             required:
               display_name: ಮುನ್ನೋಟ
         csp1-pilot:
@@ -550,18 +568,24 @@ kn:
               display_name: ವೇರಿಯಬಲ್‌ಗಳು
             csp_conditionals:
               display_name: ಕಂಡೀಷನಲ್ಸ್‌
+            csp_functions:
+              display_name: ಕಾರ್ಯಗಳು
         csp2-pilot-staging:
           lesson_groups:
             csp_variables:
               display_name: ವೇರಿಯಬಲ್‌ಗಳು
             csp_conditionals:
               display_name: ಕಂಡೀಷನಲ್ಸ್‌
+            csp_functions:
+              display_name: ಕಾರ್ಯಗಳು
         csp4-pilot-staging:
           lesson_groups:
             csp_variables:
               display_name: ವೇರಿಯಬಲ್‌ಗಳು
             csp_conditionals:
               display_name: ಕಂಡೀಷನಲ್ಸ್‌
+            csp_functions:
+              display_name: ಕಾರ್ಯಗಳು
         csp5-pilot-staging:
           lesson_groups:
             csp_lists:
@@ -574,24 +598,32 @@ kn:
               display_name: ವೇರಿಯಬಲ್‌ಗಳು
             csp_conditionals:
               display_name: ಕಂಡೀಷನಲ್ಸ್‌
+            csp_functions:
+              display_name: ಕಾರ್ಯಗಳು
         csp8-pilot-staging:
           lesson_groups:
             csp_variables:
               display_name: ವೇರಿಯಬಲ್‌ಗಳು
             csp_conditionals:
               display_name: ಕಂಡೀಷನಲ್ಸ್‌
+            csp_functions:
+              display_name: ಕಾರ್ಯಗಳು
         csp9-pilot-staging:
           lesson_groups:
             csp_variables:
               display_name: ವೇರಿಯಬಲ್‌ಗಳು
             csp_conditionals:
               display_name: ಕಂಡೀಷನಲ್ಸ್‌
+            csp_functions:
+              display_name: ಕಾರ್ಯಗಳು
         csp10-pilot-staging:
           lesson_groups:
             csp_variables:
               display_name: ವೇರಿಯಬಲ್‌ಗಳು
             csp_conditionals:
               display_name: ಕಂಡೀಷನಲ್ಸ್‌
+            csp_functions:
+              display_name: ಕಾರ್ಯಗಳು
         csp5-pilot:
           lesson_groups:
             csp_lists:
@@ -682,6 +714,8 @@ kn:
               display_name: ವೇರಿಯಬಲ್‌ಗಳು
             csp_conditionals:
               display_name: ಕಂಡೀಷನಲ್ಸ್‌
+            csp_functions:
+              display_name: ಕಾರ್ಯಗಳು
         time4cs-control-unit-2:
           lesson_groups:
             csf_digcit:
@@ -690,6 +724,8 @@ kn:
               display_name: ಕಂಡೀಷನಲ್ಸ್‌
             csf_nested_loops:
               display_name: ನೆಸ್ಟೆಡ್ ಲೂಪ್‌ಗಳು
+            csf_functions:
+              display_name: ಕಾರ್ಯಗಳು
             end_of_course_project:
               display_name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
         time4cs-control-unit-1:
@@ -722,6 +758,8 @@ kn:
               display_name: ವೇರಿಯಬಲ್‌ಗಳು
             csp_conditionals:
               display_name: ಕಂಡೀಷನಲ್ಸ್‌
+            csp_functions:
+              display_name: ಕಾರ್ಯಗಳು
         csp5-2020:
           lesson_groups:
             csp_lists:
@@ -751,6 +789,8 @@ kn:
           lesson_groups:
             csf_digcit:
               display_name: ಡಿಜಿಟಲ್ ಪೌರತ್ವ
+            csf_binary:
+              display_name: ಬೈನರಿ
             csf_loops:
               display_name: ಲೂಪ್‌ಗಳು
             csf_events:
@@ -767,6 +807,8 @@ kn:
               display_name: ಲೂಪ್‌ಗಳು
             csf_conditionals:
               display_name: ಕಂಡೀಷನಲ್ಸ್‌
+            csf_binary:
+              display_name: ಬೈನರಿ
             csf_digcit:
               display_name: ಡಿಜಿಟಲ್ ಪೌರತ್ವ
             end_of_course_project:
@@ -777,6 +819,8 @@ kn:
               display_name: ಡಿಜಿಟಲ್ ಪೌರತ್ವ
             csf_nested_loops:
               display_name: ನೆಸ್ಟೆಡ್ ಲೂಪ್‌ಗಳು
+            csf_functions:
+              display_name: ಕಾರ್ಯಗಳು
             end_of_course_project:
               display_name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
         coursef-2020:
@@ -799,6 +843,8 @@ kn:
               display_name: ಲೂಪ್‌ಗಳು
             csf_conditionals:
               display_name: ಕಂಡೀಷನಲ್ಸ್‌
+            csf_functions:
+              display_name: ಕಾರ್ಯಗಳು
             csf_variables:
               display_name: ವೇರಿಯಬಲ್‌ಗಳು
             csf_for_loops:
@@ -829,6 +875,8 @@ kn:
             ಸ್ಪ್ರೈಟ್ ಲ್ಯಾಬ್ ಬಳಸಿ.
         2021drafting:
           lesson_groups:
+            introduction:
+              display_name: ಪರಿಚಯ
             lessonGroup-3:
               display_name: ವೇರಿಯಬಲ್‌ಗಳು
             outbreak:
@@ -841,12 +889,18 @@ kn:
               display_name: ವೇರಿಯಬಲ್‌ಗಳು
             csp_conditionals:
               display_name: ಕಂಡೀಷನಲ್ಸ್‌
+            csp_functions:
+              display_name: ಕಾರ್ಯಗಳು
         csp5-2021:
           lesson_groups:
             csp_lists:
               display_name: ಪಟ್ಟಿಗಳು
             csp_loops:
               display_name: ಲೂಪ್‌ಗಳು
+        csp6-2021:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: ಕ್ರಮಾವಳಿಗಳು
         coursea-2021:
           description_short: ಪ್ರೀ ರೀಡರ್‌ಗಳಿಗಾಗಿ ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್‌ಗೆ ಒಂದು ಪರಿಚಯ.
           lesson_groups:
@@ -874,6 +928,8 @@ kn:
           lesson_groups:
             csf_digcit:
               display_name: ಡಿಜಿಟಲ್ ಪೌರತ್ವ
+            csf_binary:
+              display_name: ಬೈನರಿ
             csf_loops:
               display_name: ಲೂಪ್‌ಗಳು
             csf_events:
@@ -891,6 +947,8 @@ kn:
               display_name: ಲೂಪ್‌ಗಳು
             csf_conditionals:
               display_name: ಕಂಡೀಷನಲ್ಸ್‌
+            csf_binary:
+              display_name: ಬೈನರಿ
             csf_digcit:
               display_name: ಡಿಜಿಟಲ್ ಪೌರತ್ವ
             end_of_course_project:
@@ -905,6 +963,8 @@ kn:
               display_name: ಡಿಜಿಟಲ್ ಪೌರತ್ವ
             csf_nested_loops:
               display_name: ಕಂಡೀಷನಲ್ಸ್‌
+            csf_functions:
+              display_name: ಕಾರ್ಯಗಳು
             end_of_course_project:
               display_name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
         coursef-2021:
@@ -929,6 +989,8 @@ kn:
               display_name: ಲೂಪ್‌ಗಳು
             csf_conditionals:
               display_name: ಕಂಡೀಷನಲ್ಸ್‌
+            csf_functions:
+              display_name: ಕಾರ್ಯಗಳು
             csf_variables:
               display_name: ವೇರಿಯಬಲ್‌ಗಳು
             csf_for_loops:
@@ -946,6 +1008,8 @@ kn:
               display_name: ಈವೆಂಟ್‌ಗಳು
         csf-2021-pilot:
           lesson_groups:
+            ramp_up:
+              display_name: ಪರಿಚಯ
             outbreak:
               display_name: ಔಟ್‌ಬ್ರೇಕ್ ಸಿಮ್ಯುಲೇಶನ್
             lessonGroup-3:
@@ -991,6 +1055,12 @@ kn:
           lesson_groups:
             lessonGroup-5:
               display_name: ಸ್ಯಾಂಡ್‌ಬಾಕ್ಸ್
+        k5-onlinepd-2021:
+          lesson_groups:
+            k5_getting_started_1:
+              display_name: ಪರಿಚಯ
+            Introduction:
+              display_name: ಪರಿಚಯ
         outbreakmodule:
           lesson_groups:
             Outbreak Module:
@@ -1194,6 +1264,8 @@ kn:
               display_name: ಲೂಪ್‌ಗಳು
             csf_conditionals:
               display_name: ಕಂಡೀಷನಲ್ಸ್‌
+            csf_functions:
+              display_name: ಕಾರ್ಯಗಳು
             csf_variables:
               display_name: ವೇರಿಯಬಲ್‌ಗಳು
             csf_for_loops:
@@ -1206,6 +1278,8 @@ kn:
               display_name: ವೇರಿಯಬಲ್‌ಗಳು
             csp_conditionals:
               display_name: ಕಂಡೀಷನಲ್ಸ್‌
+            csp_functions:
+              display_name: ಕಾರ್ಯಗಳು
         csp5-2022:
           lesson_groups:
             csp_lists:
@@ -1255,6 +1329,8 @@ kn:
               display_name: ಡಿಜಿಟಲ್ ಪೌರತ್ವ
             ramp_up:
               display_name: ನೆಸ್ಟೆಡ್ ಲೂಪ್‌ಗಳು
+            csf_functions:
+              display_name: ಕಾರ್ಯಗಳು
             csf_nested_loops:
               display_name: ಕಂಡೀಷನಲ್ಸ್‌
             end_of_course_project:
@@ -1498,6 +1574,8 @@ kn:
               display_name: ವೇರಿಯಬಲ್‌ಗಳು
             csp_conditionals:
               display_name: ಕಂಡೀಷನಲ್ಸ್‌
+            csp_functions:
+              display_name: ಕಾರ್ಯಗಳು
         csp5-2023:
           lesson_groups:
             csp_lists:
@@ -1542,6 +1620,8 @@ kn:
               display_name: ಲೂಪ್‌ಗಳು
             csf_conditionals:
               display_name: ಕಂಡೀಷನಲ್ಸ್‌
+            csf_functions:
+              display_name: ಕಾರ್ಯಗಳು
             csf_variables:
               display_name: ವೇರಿಯಬಲ್‌ಗಳು
             csf_for_loops:
@@ -1602,6 +1682,8 @@ kn:
               display_name: ಡಿಜಿಟಲ್ ಪೌರತ್ವ
             ramp_up:
               display_name: ನೆಸ್ಟೆಡ್ ಲೂಪ್‌ಗಳು
+            csf_functions:
+              display_name: ಕಾರ್ಯಗಳು
             csf_nested_loops:
               display_name: ಕಂಡೀಷನಲ್ಸ್‌
             end_of_course_project:
@@ -1734,6 +1816,10 @@ kn:
             ಲ್ಯಾಬ್‌ ಜೊತೆಗೆ ತೊಡಗಿಸಿಕೊಳ್ಳುತ್ತೀರಿ.\n-   ಅಧ್ಯಾಯದ ಕೊನೆಯ ಪ್ರಾಜೆಕ್ಟ್‌ಗಳನ್ನು
             ಎಕ್ಸ್‌ಪ್ಲೋರ್ ಮಾಡುತ್ತೀರಿ.\n-   ನಿಮ್ಮ ವಿದ್ಯಾರ್ಥಿಗಳೊಂದಿಗೆ ಯುನಿಟ್ ಅನುಷ್ಠಾನಗೊಳಿಸಲು
             ಪ್ಲಾನ್ ಮಾಡಿ\n\n**ಶಿಫಾರಸು ಮಾಡಿದ ಸಮಯ:** 120 ನಿಮಿಷಗಳು"
+        pl-csd-summer-day1:
+          lessons:
+            lesson-3:
+              name: ಪರಿಚಯ
         pl-csd-summer-day2:
           lessons:
             lesson-10:
@@ -1742,3 +1828,35 @@ kn:
           lessons:
             lesson-12:
               name: ಮುಕ್ತಾಯ
+        virtual-pl-csd-summer-day1:
+          lessons:
+            lesson-1:
+              name: ಪರಿಚಯ
+            lesson-12:
+              name: ಮುಕ್ತಾಯ
+        virtual-pl-csd-summer-day2:
+          lessons:
+            lesson-10:
+              name: ಮುಕ್ತಾಯ
+        virtual-pl-csd-summer-day3:
+          lessons:
+            lesson-12:
+              name: ಮುಕ್ತಾಯ
+        virtual-pl-csd-summer-day4:
+          lessons:
+            lesson-13:
+              name: ಮುಕ್ತಾಯ
+        virtual-pl-csd-summer-day5:
+          lessons:
+            lesson-3:
+              name: ಮೌಲ್ಯಮಾಪನ
+        coursef-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: ಡಿಜಿಟಲ್ ಪೌರತ್ವ
+            lessonGroup-4:
+              display_name: ವೇರಿಯಬಲ್‌ಗಳು
+            lessonGroup-6:
+              display_name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
+          description_short: ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್ ಫಂಡಮೆಂಟಲ್ಸ್‌ನಲ್ಲಿ ಎಲ್ಲ ಕಾನ್ಸೆಪ್ಟ್‌ಗಳನ್ನು
+            ಕಲಿಯಿರಿ ಮತ್ತು ನಿಮ್ಮದೇ ಆರ್ಟ್‌, ಸ್ಟೋರಿ ಅಥವಾ ಗೇಮ್ ರಚಿಸಿ.

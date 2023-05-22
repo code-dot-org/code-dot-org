@@ -70,32 +70,3 @@
     }
   }
 }
-
-.video-series,
-.video {
-
-  & > div.col-50 {
-    padding: 0 !important;
-    margin: 1em 0 0 !important;
-    width: 49%;
-
-    .video_caption_link {
-      @include figcaption;
-    }
-
-    .modal-body {
-
-      figure {
-        width: 100%;
-      }
-    }
-
-    @media screen and (max-width: $width-sm) {
-      width: 100%;
-    }
-  }
-
-  .play {
-    top: 30% !important;
-  }
-}

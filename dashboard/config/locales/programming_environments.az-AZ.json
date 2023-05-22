@@ -284,6 +284,7 @@
                   }
                 },
                 "showMobileControls": {
+                  "content": "Oyun sahəsinin altında görünən mobil idarəetmələri dəyişdirir.",
                   "palette_params": {
                     "spaceButtonVisible": {
                       "type": "Boolean"
@@ -297,7 +298,8 @@
                     "mobileOnly": {
                       "type": "Boolean"
                     }
-                  }
+                  },
+                  "short_description": "Oyun sahəsinin altında görünən mobil idarəetmələri dəyişdirir."
                 },
                 "stopSound": {
                   "palette_params": {
@@ -317,6 +319,9 @@
                       "name": "Spiral"
                     }
                   }
+                },
+                "sprite.height": {
+                  "return_value": "Sprite hündürlüyü."
                 },
                 "mirrorX": {
                   "palette_params": {
@@ -397,6 +402,9 @@
                       "type": "Nömrə"
                     }
                   }
+                },
+                "sprite.width": {
+                  "return_value": "Sprite eni."
                 },
                 "createSprite": {
                   "palette_params": {
@@ -832,14 +840,16 @@
                 "setInterval": {
                   "palette_params": {
                     "ms": {
-                      "type": "nömrə"
+                      "type": "nömrə",
+                      "description": "Funksiyanın hər icrası arasındakı milisaniyələrin sayı."
                     }
                   }
                 },
                 "setTimeout": {
                   "palette_params": {
                     "ms": {
-                      "type": "nömrə"
+                      "type": "nömrə",
+                      "description": "Funksiyanı yerinə yetirmədən əvvəl gözləmək üçün milisaniyələrin sayı."
                     }
                   }
                 }
@@ -922,6 +932,23 @@
             "variables": {
               "name": "dəyişənlər",
               "expressions": {
+                "includes": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "Axtarmaq üçün simli."
+                    }
+                  }
+                },
+                "indexOf": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "Axtarmaq üçün simli."
+                    }
+                  }
+                },
+                "length": {
+                  "return_value": "simli uzunluğu"
+                },
                 "substring": {
                   "palette_params": {
                     "start": {
@@ -946,6 +973,9 @@
             "ui_controls": {
               "name": "UI nəzarətləri",
               "expressions": {
+                "button": {
+                  "short_description": "Ekranda verilmiş id tərəfindən verilən və standart yerdə istinad edilən mətni göstərən bir düyməni yaradır (0,0)."
+                },
                 "getProperty": {
                   "palette_params": {
                     "id": {
@@ -1045,9 +1075,14 @@
                       "type": "Simli"
                     },
                     "property": {
-                      "type": "Simli"
+                      "type": "Simli",
+                      "description": "Dəyişdirmək üçün əmlak."
                     }
-                  }
+                  },
+                  "short_description": "Göstərilən element üçün əmlakı yeni bir dəyərə təyin edir."
+                },
+                "setScreen": {
+                  "short_description": "Ekranı verilmiş ScreenID -ə təyin edir."
                 },
                 "setSize": {
                   "palette_params": {
@@ -1058,6 +1093,12 @@
                       "type": "nömrə"
                     }
                   }
+                },
+                "showElement": {
+                  "short_description": "Təqdim olunan id ilə elementi göstərir."
+                },
+                "textLabel": {
+                  "short_description": "Ekranda verilmiş id tərəfindən verilən və istinad edilən mətni göstərən mətn etiketi yaradır default yerdə (0,0)."
                 }
               }
             },
@@ -1090,11 +1131,16 @@
                 },
                 "drawImage": {
                   "palette_params": {
+                    "id": {
+                      "description": "Şəklin yuxarı sol küncünün piksellərindəki x mövqeyi çəkmək üçün."
+                    },
                     "x": {
-                      "type": "nömrə"
+                      "type": "nömrə",
+                      "description": "Şəklin yuxarı sol küncünün piksellərindəki x mövqeyi çəkmək üçün."
                     },
                     "y": {
-                      "type": "nömrə"
+                      "type": "nömrə",
+                      "description": "Şəkil çəkmək üçün görüntünün yuxarı sol küncünün piksellərindəki y mövqeyi."
                     },
                     "[width]": {
                       "type": "nömrə"
@@ -1110,12 +1156,15 @@
                       "type": "əşya"
                     },
                     "x": {
-                      "type": "nömrə"
+                      "type": "nömrə",
+                      "description": "Şəklin yuxarı sol küncündən başlayaraq piksellərdə x mövqeyi."
                     },
                     "y": {
-                      "type": "nömrə"
+                      "type": "nömrə",
+                      "description": "Şəklin yuxarı sol küncündən başlayaraq piksellərdə y mövqeyi."
                     }
-                  }
+                  },
+                  "short_description": "Verilmiş görüntü məlumatlarında verilmiş x və y mövqeyində yerləşən pikselin rəngində alfa (qeyri-şəffaflıq) miqdarını (0-dan 255-ə qədər) qaytarır."
                 },
                 "getBlue": {
                   "palette_params": {
@@ -1123,10 +1172,12 @@
                       "type": "əşya"
                     },
                     "x": {
-                      "type": "nömrə"
+                      "type": "nömrə",
+                      "description": "Şəklin yuxarı sol küncündən başlayaraq piksellərdə x mövqeyi."
                     },
                     "y": {
-                      "type": "nömrə"
+                      "type": "nömrə",
+                      "description": "Şəklin yuxarı sol küncündən başlayaraq piksellərdə y mövqeyi."
                     }
                   }
                 },
@@ -1141,26 +1192,32 @@
                       "type": "əşya"
                     },
                     "x": {
-                      "type": "nömrə"
+                      "type": "nömrə",
+                      "description": "Şəklin yuxarı sol küncündən başlayaraq piksellərdə x mövqeyi."
                     },
                     "y": {
-                      "type": "nömrə"
+                      "type": "nömrə",
+                      "description": "Şəklin yuxarı sol küncündən başlayaraq piksellərdə y mövqeyi."
                     }
                   }
                 },
                 "getImageData": {
                   "palette_params": {
                     "x": {
-                      "type": "nömrə"
+                      "type": "nömrə",
+                      "description": "Ələ keçirməyə başlamaq üçün pikseldəki x mövqeyi."
                     },
                     "y": {
-                      "type": "nömrə"
+                      "type": "nömrə",
+                      "description": "Ələ keçirməyə başlamaq üçün pikseldəki y mövqeyi."
                     },
                     "width": {
-                      "type": "nömrə"
+                      "type": "nömrə",
+                      "description": "Şəkil məlumatlarını çəkmək üçün məhdudlaşdırıcı düzbucağın eni."
                     },
                     "height": {
-                      "type": "nömrə"
+                      "type": "nömrə",
+                      "description": "Şəkil məlumatlarını çəkmək üçün məhdudlaşdırıcı düzbucağın hündürlüyü."
                     }
                   }
                 },
@@ -1170,10 +1227,12 @@
                       "type": "əşya"
                     },
                     "x": {
-                      "type": "nömrə"
+                      "type": "nömrə",
+                      "description": "Şəklin yuxarı sol küncündən başlayaraq piksellərdə x mövqeyi."
                     },
                     "y": {
-                      "type": "nömrə"
+                      "type": "nömrə",
+                      "description": "Şəklin yuxarı sol küncündən başlayaraq piksellərdə y mövqeyi."
                     }
                   }
                 },
@@ -1199,26 +1258,32 @@
                       "type": "əşya"
                     },
                     "x": {
-                      "type": "nömrə"
+                      "type": "nömrə",
+                      "description": "Məlumatları kətana yerləşdirmək üçün görüntünün yuxarı sol küncündən başlayaraq piksellərdə x mövqeyi."
                     },
                     "y": {
-                      "type": "nömrə"
+                      "type": "nömrə",
+                      "description": "Məlumatları kətana yerləşdirmək üçün görüntünün yuxarı sol küncündən başlayaraq piksellərdə y mövqeyi."
                     }
                   }
                 },
                 "rect": {
                   "palette_params": {
                     "x": {
-                      "type": "nömrə"
+                      "type": "nömrə",
+                      "description": "Düzbucağın yuxarı sol küncünün piksellərindəki x mövqeyi."
                     },
                     "y": {
-                      "type": "nömrə"
+                      "type": "nömrə",
+                      "description": "Düzbucağın yuxarı sol küncünün piksellərindəki y mövqeyi."
                     },
                     "width": {
-                      "type": "nömrə"
+                      "type": "nömrə",
+                      "description": "Düzbucağın piksellərində üfüqi genişlik."
                     },
                     "height": {
-                      "type": "nömrə"
+                      "type": "nömrə",
+                      "description": "Düzbucağın piksellərində şaquli hündürlük."
                     }
                   }
                 },
@@ -1233,15 +1298,19 @@
                       "type": "əşya"
                     },
                     "x": {
-                      "type": "nömrə"
+                      "type": "nömrə",
+                      "description": "Şəklin yuxarı sol küncündən başlayaraq piksellərdə x mövqeyi."
                     },
                     "y": {
-                      "type": "nömrə"
+                      "type": "nömrə",
+                      "description": "Şəklin yuxarı sol küncündən başlayaraq piksellərdə y mövqeyi."
                     },
                     "alphaValue": {
-                      "type": "nömrə"
+                      "type": "nömrə",
+                      "description": "Alfa miqdarı (qeyri-şəffaflıq) pikseldə qurulacaq (0-dan 255-ə qədər)."
                     }
-                  }
+                  },
+                  "short_description": "Verilmiş görüntü məlumatlarında verilmiş x və y mövqeyində yerləşən pikselin rəngində alfa (qeyri-şəffaflıq) miqdarını (0 ilə 255 arasında dəyişir) təyin edir."
                 },
                 "setBlue": {
                   "palette_params": {
@@ -1249,15 +1318,19 @@
                       "type": "əşya"
                     },
                     "x": {
-                      "type": "nömrə"
+                      "type": "nömrə",
+                      "description": "Şəklin yuxarı sol küncündən başlayaraq piksellərdə x mövqeyi."
                     },
                     "y": {
-                      "type": "nömrə"
+                      "type": "nömrə",
+                      "description": "Şəklin yuxarı sol küncündən başlayaraq piksellərdə y mövqeyi."
                     },
                     "blueValue": {
-                      "type": "nömrə"
+                      "type": "nömrə",
+                      "description": "Pixeldə qurulacaq mavi miqdarı (0-dan 255-ə qədər)."
                     }
-                  }
+                  },
+                  "short_description": "Verilmiş görüntü məlumatlarında verilmiş x və y mövqeyində yerləşən pikselin rəngində mavi miqdarını (0-dan 255-ə qədər) BlueValue giriş miqdarına təyin edir."
                 },
                 "setFillColor": {
                   "palette_params": {
@@ -1272,15 +1345,19 @@
                       "type": "əşya"
                     },
                     "x": {
-                      "type": "nömrə"
+                      "type": "nömrə",
+                      "description": "Şəklin yuxarı sol küncündən başlayaraq piksellərdə x mövqeyi."
                     },
                     "y": {
-                      "type": "nömrə"
+                      "type": "nömrə",
+                      "description": "Şəklin yuxarı sol küncündən başlayaraq piksellərdə y mövqeyi."
                     },
                     "greenValue": {
-                      "type": "nömrə"
+                      "type": "nömrə",
+                      "description": "Pixeldə qurulacaq yaşıl miqdarı (0-dan 255-ə qədər)."
                     }
-                  }
+                  },
+                  "short_description": "Verilmiş şəkil məlumatlarında verilmiş x və y mövqeyində yerləşən pikselin rəngində yaşıl miqdarını (0-dan 255-ə qədər) GreenValue giriş miqdarına təyin edir."
                 },
                 "setRGB": {
                   "palette_params": {
@@ -1288,22 +1365,28 @@
                       "type": "əşya"
                     },
                     "x": {
-                      "type": "nömrə"
+                      "type": "nömrə",
+                      "description": "Şəklin yuxarı sol küncündən başlayaraq piksellərdə x mövqeyi."
                     },
                     "y": {
-                      "type": "nömrə"
+                      "type": "nömrə",
+                      "description": "Şəklin yuxarı sol küncündən başlayaraq piksellərdə y mövqeyi."
                     },
                     "red": {
-                      "type": "nömrə"
+                      "type": "nömrə",
+                      "description": "Pixeldə qurulacaq qırmızı miqdarı (0-dan 255-ə qədər)."
                     },
                     "green": {
-                      "type": "nömrə"
+                      "type": "nömrə",
+                      "description": "Pixeldə qurulacaq yaşıl miqdarı (0-dan 255-ə qədər)."
                     },
                     "blue": {
-                      "type": "nömrə"
+                      "type": "nömrə",
+                      "description": "Pixeldə qurulacaq mavi miqdarı (0-dan 255-ə qədər)."
                     },
                     "alpha": {
-                      "type": "nömrə"
+                      "type": "nömrə",
+                      "description": "Könüllü. Pixeldə qurulacaq qeyri-şəffaflıq miqdarı (0-dan 255-ə qədər). Varsayılan 255 (tam qeyri-şəffaflıq)."
                     }
                   }
                 },
@@ -1313,15 +1396,19 @@
                       "type": "əşya"
                     },
                     "x": {
-                      "type": "nömrə"
+                      "type": "nömrə",
+                      "description": "Şəklin yuxarı sol küncündən başlayaraq piksellərdə x mövqeyi."
                     },
                     "y": {
-                      "type": "nömrə"
+                      "type": "nömrə",
+                      "description": "Şəklin yuxarı sol küncündən başlayaraq piksellərdə y mövqeyi."
                     },
                     "redValue": {
-                      "type": "nömrə"
+                      "type": "nömrə",
+                      "description": "Pixeldə qurulacaq qırmızı miqdarı (0-dan 255-ə qədər)."
                     }
-                  }
+                  },
+                  "short_description": "Verilmiş şəkil məlumatlarında verilmiş x və y mövqeyində yerləşən pikselin rəngində qırmızı miqdarını (0-dan 255-ə qədər) RedValue giriş miqdarına təyin edir."
                 },
                 "setStrokeColor": {
                   "palette_params": {
@@ -1372,6 +1459,9 @@
                 },
                 "drawChartFromRecords": {
                   "palette_params": {
+                    "tableName": {
+                      "description": "Qeydləri almaq üçün cədvəlin adı."
+                    },
                     "options": {
                       "type": "əşya"
                     }
@@ -1392,6 +1482,13 @@
                     }
                   }
                 },
+                "getKeyValue": {
+                  "palette_params": {
+                    "key": {
+                      "description": "Alınacaq açarın adı."
+                    }
+                  }
+                },
                 "getPrediction": {
                   "palette_params": {
                     "name": {
@@ -1402,6 +1499,16 @@
                     },
                     "callback": {
                       "type": "Funksiya"
+                    }
+                  }
+                },
+                "getUserId": {
+                  "short_description": "Bu tətbiqin cari istifadəçisi üçün unikal identifikator alır."
+                },
+                "onRecordEvent": {
+                  "palette_params": {
+                    "table": {
+                      "description": "Bu hadisə işləyicisi tətbiq olunan cədvəlin adı."
                     }
                   }
                 },
@@ -1416,6 +1523,24 @@
                   "palette_params": {
                     "table": {
                       "type": "Simli"
+                    }
+                  }
+                },
+                "setKeyValue": {
+                  "palette_params": {
+                    "key": {
+                      "description": "Saxlanılacaq açarın adı."
+                    },
+                    "value": {
+                      "description": "Saxlanacaq məlumatlar."
+                    }
+                  },
+                  "short_description": "App Lab-ın açar/dəyər məlumatlarının saxlanmasında açar/dəyər cütlüyünü saxlayır və hərəkət başa çatdıqda geri çağırış funksiyasını çağırır."
+                },
+                "startWebRequest": {
+                  "palette_params": {
+                    "url": {
+                      "description": "Məlumatları qaytaran bir xidmətin veb ünvanı."
                     }
                   }
                 },
@@ -1459,13 +1584,24 @@
                     }
                   }
                 },
+                "getX": {
+                  "short_description": "Tısbağanın piksellərində cari x koordinatını alır."
+                },
+                "getY": {
+                  "short_description": "Tısbağanın piksellərində cari y koordinatını alır."
+                },
+                "hide": {
+                  "short_description": "Tısbağanı indiki yerində görünməz edir."
+                },
                 "move": {
                   "palette_params": {
                     "x": {
-                      "type": "nömrə"
+                      "type": "nömrə",
+                      "description": "Tısbağanı sağa hərəkət etdirmək üçün piksellərin sayı."
                     },
                     "y": {
-                      "type": "nömrə"
+                      "type": "nömrə",
+                      "description": "Tısbağanı aşağıya doğru hərəkət etdirmək üçün piksellərin sayı."
                     }
                   }
                 },
@@ -1474,14 +1610,16 @@
                     "pixels": {
                       "type": "nömrə"
                     }
-                  }
+                  },
+                  "short_description": "Tısbağanı cari istiqamətdən müəyyən sayda piksel geriyə doğru hərəkət etdirir."
                 },
                 "moveForward": {
                   "palette_params": {
                     "pixels": {
                       "type": "nömrə"
                     }
-                  }
+                  },
+                  "short_description": "Tısbağanı cari istiqamətdə müəyyən sayda piksel irəli aparır."
                 },
                 "moveTo": {
                   "palette_params": {
@@ -1491,14 +1629,19 @@
                     "y": {
                       "type": "nömrə"
                     }
-                  }
+                  },
+                  "short_description": "Tısbağanı ekranda müəyyən (x, y) mövqeyə keçirir."
                 },
                 "penColor": {
                   "palette_params": {
                     "color": {
                       "type": "Simli"
                     }
-                  }
+                  },
+                  "short_description": "Tısbağanın xətlər və nöqtələr çəkmək üçün istifadə etdiyi qələmin rəngini təyin edir."
+                },
+                "penDown": {
+                  "short_description": "Qələmi yerə qoyur ki, tısbağa hərəkət edərkən arxasında bir xətt çəksin."
                 },
                 "penRGB": {
                   "palette_params": {
@@ -1514,21 +1657,30 @@
                     "a": {
                       "type": "nömrə"
                     }
-                  }
+                  },
+                  "short_description": "RGBA dəyərlərindən istifadə edərək, tısbağanın xətlər və nöqtələr çəkmək üçün istifadə etdiyi qələmin rəngini təyin edir."
+                },
+                "penUp": {
+                  "short_description": "Qələmi yuxarı qaldırır ki, tısbağa hərəkət edərkən xətt çəkməsin."
                 },
                 "penWidth": {
                   "palette_params": {
                     "width": {
                       "type": "nömrə"
                     }
-                  }
+                  },
+                  "short_description": "Xəttin genişliyini tısbağanın hərəkət edərkən arxasına çəkdiyi piksellərlə təyin edir."
+                },
+                "show": {
+                  "short_description": "Tısbağanı indiki yerində görünən edir."
                 },
                 "speed": {
                   "palette_params": {
                     "value": {
                       "type": "nömrə"
                     }
-                  }
+                  },
+                  "short_description": "Tısbağanın sürətini ehtiva edən tətbiqin icrası üçün sürəti təyin edir."
                 },
                 "turnLeft": {
                   "examples": {
@@ -1540,7 +1692,8 @@
                     "angle": {
                       "type": "nömrə"
                     }
-                  }
+                  },
+                  "short_description": "Tısbağanı göstərilən bucaq ilə sola döndürür. Tısbağanın mövqeyi eyni qalır."
                 },
                 "turnRight": {
                   "examples": {
@@ -1561,14 +1714,16 @@
                     "angle": {
                       "type": "nömrə"
                     }
-                  }
+                  },
+                  "short_description": "Tısbağanı göstərilən bucaq ilə sağa döndürür. Tısbağanın mövqeyi eyni qalır."
                 },
                 "turnTo": {
                   "palette_params": {
                     "angle": {
                       "type": "nömrə"
                     }
-                  }
+                  },
+                  "short_description": "Tısbağanın istiqamətini müəyyən bir açıya dəyişir. 0 yuxarı, 90 sağ, 180 aşağı və 270 qaldı."
                 }
               }
             },
@@ -1610,7 +1765,8 @@
                 "setInterval": {
                   "palette_params": {
                     "ms": {
-                      "type": "nömrə"
+                      "type": "nömrə",
+                      "description": "Funksiyanın hər icrası arasındakı milisaniyələrin sayı."
                     }
                   }
                 },
@@ -1622,7 +1778,8 @@
                   },
                   "palette_params": {
                     "ms": {
-                      "type": "nömrə"
+                      "type": "nömrə",
+                      "description": "Funksiyanı yerinə yetirmədən əvvəl gözləmək üçün milisaniyələrin sayı."
                     }
                   }
                 },
@@ -1904,7 +2061,8 @@
                     "[1,2,3]": {
                       "type": "tam ədədlər massivi"
                     }
-                  }
+                  },
+                  "short_description": "Dəyişənə bir sıra elan edin və təyin edin"
                 },
                 "declareAssign_x_promptNum": {
                   "examples": {
@@ -1945,6 +2103,11 @@
                     "Example: See if a Sentence is a Question": {
                       "name": "Nümunə: Cümlənin bir sual olub-olmağına baxın"
                     }
+                  },
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "Axtarmaq üçün simli."
+                    }
                   }
                 },
                 "indexOf": {
@@ -1954,6 +2117,11 @@
                     },
                     "Example: Parse Comma-Delimited Data": {
                       "name": "Nümunə: vergüllə ayrılmış məlumatları təhlil edin"
+                    }
+                  },
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "Axtarmaq üçün simli."
                     }
                   }
                 },
@@ -2077,7 +2245,8 @@
                     "Example: Palindrome": {
                       "name": "Misal: Palindrom"
                     }
-                  }
+                  },
+                  "return_value": "simli uzunluğu"
                 },
                 "removeItem": {
                   "examples": {

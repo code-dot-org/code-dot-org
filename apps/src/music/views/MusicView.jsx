@@ -73,8 +73,8 @@ import {ProjectManagerEvent} from '../../labs/projects/ProjectManager';
 class UnconnectedMusicView extends React.Component {
   static propTypes = {
     progressLevelType: PropTypes.string,
-    appOptions: PropTypes.object,
     appConfig: PropTypes.object,
+    channelId: PropTypes.string,
 
     /**
      * True if Music Lab is being presented from the Incubator page (i.e. under /projectbeats),
@@ -108,6 +108,7 @@ class UnconnectedMusicView extends React.Component {
     addPlaybackEvents: PropTypes.func,
     currentlyPlayingBlockIds: PropTypes.array,
     sendSuccessReport: PropTypes.func,
+    currentScriptId: PropTypes.number,
     setProjectUpdatedSaving: PropTypes.func,
     setProjectUpdatedAt: PropTypes.func,
     setProjectUpdatedError: PropTypes.func,
@@ -119,17 +120,17 @@ class UnconnectedMusicView extends React.Component {
   constructor(props) {
     super(props);
 
+    if (this.props.appConfig) {
+      setAppConfig(this.props.appConfig);
+    }
+
     this.player = new MusicPlayer();
     this.programSequencer = new ProgramSequencer();
     this.randomSkipManager = new RandomSkipManager();
     this.analyticsReporter = new AnalyticsReporter();
-    this.musicBlocklyWorkspace = new MusicBlocklyWorkspace(props.appOptions);
+    this.musicBlocklyWorkspace = new MusicBlocklyWorkspace();
     this.soundUploader = new SoundUploader(this.player);
     this.playingTriggers = [];
-
-    if (this.props.appConfig) {
-      setAppConfig(this.props.appConfig);
-    }
 
     // Set default for instructions position.
     const defaultInstructionsPos = AppConfig.getValue(
@@ -208,40 +209,45 @@ class UnconnectedMusicView extends React.Component {
 
       this.setAllowedSoundsForProgress();
 
-      this.musicBlocklyWorkspace.init(
-        document.getElementById('blockly-div'),
-        this.onBlockSpaceChange,
-        this.player,
-        this.progressManager?.getCurrentStepDetails().toolbox
-      );
-      this.musicBlocklyWorkspace.addSaveEventListener(
-        ProjectManagerEvent.SaveStart,
-        () => {
-          this.props.setProjectUpdatedSaving();
-        }
-      );
-      this.musicBlocklyWorkspace.addSaveEventListener(
-        ProjectManagerEvent.SaveSuccess,
-        status => {
-          this.props.setProjectUpdatedAt(status.updatedAt);
-        }
-      );
-      this.musicBlocklyWorkspace.addSaveEventListener(
-        ProjectManagerEvent.SaveNoop,
-        status => {
-          this.props.setProjectUpdatedAt(status.updatedAt);
-        }
-      );
-      this.musicBlocklyWorkspace.addSaveEventListener(
-        ProjectManagerEvent.SaveFail,
-        () => {
-          this.props.setProjectUpdatedError();
-        }
-      );
-      this.player.initialize(this.library);
-      setInterval(this.updateTimer, 1000 / 30);
-
-      this.props.setIsLoading(false);
+      this.musicBlocklyWorkspace
+        .init(
+          document.getElementById('blockly-div'),
+          this.onBlockSpaceChange,
+          this.player,
+          this.progressManager?.getCurrentStepDetails().toolbox,
+          this.props.currentLevelId,
+          this.props.currentScriptId,
+          this.props.channelId
+        )
+        .then(() => {
+          this.musicBlocklyWorkspace.addSaveEventListener(
+            ProjectManagerEvent.SaveStart,
+            () => {
+              this.props.setProjectUpdatedSaving();
+            }
+          );
+          this.musicBlocklyWorkspace.addSaveEventListener(
+            ProjectManagerEvent.SaveSuccess,
+            status => {
+              this.props.setProjectUpdatedAt(status.updatedAt);
+            }
+          );
+          this.musicBlocklyWorkspace.addSaveEventListener(
+            ProjectManagerEvent.SaveNoop,
+            status => {
+              this.props.setProjectUpdatedAt(status.updatedAt);
+            }
+          );
+          this.musicBlocklyWorkspace.addSaveEventListener(
+            ProjectManagerEvent.SaveFail,
+            () => {
+              this.props.setProjectUpdatedError();
+            }
+          );
+          this.player.initialize(this.library);
+          setInterval(this.updateTimer, 1000 / 30);
+          this.props.setIsLoading(false);
+        });
     });
   }
 
@@ -341,7 +347,6 @@ class UnconnectedMusicView extends React.Component {
   // When the user initiates going to the next panel in the app.
   onNextPanel = () => {
     this.progressManager?.next();
-    this.handlePanelChange();
 
     // Tell the external system (if there is one) about the new level.
     if (this.hasLevels() && this.props.navigateToLevelId) {
@@ -365,14 +370,20 @@ class UnconnectedMusicView extends React.Component {
   // Handle a change in panel.
   handlePanelChange = async () => {
     this.stopSong();
-    this.clearCode();
-
     this.props.setIsLoading(true);
 
     await this.loadProgressionStep();
 
     this.setToolboxForProgress();
     this.setAllowedSoundsForProgress();
+
+    if (this.props.currentLevelId) {
+      // Change levels for the projects system. Only do this is we have a level.
+      await this.musicBlocklyWorkspace.changeLevels(
+        this.props.currentLevelId,
+        this.props.currentScriptId
+      );
+    }
 
     this.props.setIsLoading(false);
   };
@@ -743,6 +754,7 @@ const MusicView = connect(
     timelineAtTop: state.music.timelineAtTop,
     showInstructions: state.music.showInstructions,
     instructionsPosition: state.music.instructionsPosition,
+    currentScriptId: state.progress.scriptId,
     currentlyPlayingBlockIds: getCurrentlyPlayingBlockIds(state),
   }),
   dispatch => ({

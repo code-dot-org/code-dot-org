@@ -4,19 +4,23 @@
       "start_html": {
         "CSD U1 IO Pet Chooser 2_2021": {
           "Yes": "Ναι",
-          "No": "Όχι"
+          "No": "Όχι",
+          "cute": "χαριτωμένος"
         },
         "CSD U1 IO Pet Chooser 2_2022": {
           "Yes": "Ναι",
-          "No": "Όχι"
+          "No": "Όχι",
+          "cute": "χαριτωμένος"
         },
         "CSD U1 IO Pet Chooser_2021": {
           "Yes": "Ναι",
-          "No": "Όχι"
+          "No": "Όχι",
+          "cute": "χαριτωμένος"
         },
         "CSD U1 IO Pet Chooser_2022": {
           "Yes": "Ναι",
-          "No": "Όχι"
+          "No": "Όχι",
+          "cute": "χαριτωμένος"
         },
         "CSD U1 IO Story_2021": {
           "Name": "Όνομα",
@@ -133,10 +137,14 @@
           "text": "κείμενο"
         },
         "CSD U1 processing live_2021": {
-          "bear": "Αρκούδα"
+          "bear": "Αρκούδα",
+          "walking": "περπατώντας",
+          "rat": "αρουραίος"
         },
         "CSD U1 processing live_2022": {
-          "bear": "Αρκούδα"
+          "bear": "Αρκούδα",
+          "walking": "περπατώντας",
+          "rat": "αρουραίος"
         },
         "CSD U1 processing npark_2021": {
           "Sorry!": "Συγνώμη!"
@@ -211,14 +219,16 @@
           "pink": "ροζ",
           "green": "πράσινο",
           "black": "μαύρο",
-          "purple": "μωβ"
+          "purple": "μωβ",
+          "white": "λευκό"
         },
         "CSD U1 storage outfit_2022": {
           "Clear": "Εκκαθάριση",
           "pink": "ροζ",
           "green": "πράσινο",
           "black": "μαύρο",
-          "purple": "μωβ"
+          "purple": "μωβ",
+          "white": "λευκό"
         },
         "CSD U2 RGB intro": {
           "1": "1",
@@ -334,7 +344,8 @@
           "orange": "πορτοκάλι"
         },
         "CSD U6 - Combine Inputs - PracD_2222": {
-          "Test": "Δοκιμή"
+          "Test": "Δοκιμή",
+          "quiet": "ήσυχο"
         },
         "CSD U6 - Combine Inputs - SB2_2222": {
           "short": "σύντομη",
@@ -490,10 +501,12 @@
           "0": "0"
         },
         "CSD U6 - Screen Inputs - SB2.1_2022": {
-          "black": "μαύρο"
+          "black": "μαύρο",
+          "white": "λευκό"
         },
         "CSD U6 - Screen Inputs - SB2.2_2022": {
-          "black": "μαύρο"
+          "black": "μαύρο",
+          "white": "λευκό"
         },
         "CSD U6 - Screen Outputs - P_2222": {
           "title": "τίτλος"
@@ -524,7 +537,8 @@
           "text": "κείμενο"
         },
         "CSD U6 - Sensors - SB2_2222": {
-          "Update": "Ενημέρωση"
+          "Update": "Ενημέρωση",
+          "value": "εκτιμώ"
         },
         "CSD U6 Driver pt 2": {
           "You did it!": "Τα κατάφερες!"
@@ -599,16 +613,20 @@
           "Success!": "Επιτυχία!"
         },
         "CSD U6 analog light": {
-          "Update": "Ενημέρωση"
+          "Update": "Ενημέρωση",
+          "value": "εκτιμώ"
         },
         "CSD U6 analog light_2018": {
-          "Update": "Ενημέρωση"
+          "Update": "Ενημέρωση",
+          "value": "εκτιμώ"
         },
         "CSD U6 analog light_2019": {
-          "Update": "Ενημέρωση"
+          "Update": "Ενημέρωση",
+          "value": "εκτιμώ"
         },
         "CSD U6 analog light_2021": {
-          "Update": "Ενημέρωση"
+          "Update": "Ενημέρωση",
+          "value": "εκτιμώ"
         },
         "CSD U6 array piano": {
           "C": "Γ",
@@ -1301,13 +1319,15 @@
           "W": "Δ",
           "A": "Α",
           "yes": "ναι",
-          "no": "όχι"
+          "no": "όχι",
+          "head": "κεφάλι"
         },
         "ml-model card-medical app v2 2021-2_2022": {
           "W": "Δ",
           "A": "Α",
           "yes": "ναι",
-          "no": "όχι"
+          "no": "όχι",
+          "head": "κεφάλι"
         },
         "ml-model cards-book recommender model card": {
           "Predict": "Προβλέψτε"
@@ -1422,6 +1442,54 @@
           "cloudy": "συννεφιασμένος",
           "night": "νύχτα",
           "Predict": "Προβλέψτε"
+        },
+        "CSD U6 - Sensors - SB1_2222": {
+          "value": "εκτιμώ"
+        },
+        "CSD U6 - Sensors - SB3_2222": {
+          "value": "εκτιμώ"
+        },
+        "CSD U6 - Sensors - SB4.1_2222": {
+          "value": "εκτιμώ"
+        },
+        "CSD U6 - Sensors - SB4_2222": {
+          "value": "εκτιμώ"
+        },
+        "CSD U6 analog change": {
+          "value": "εκτιμώ"
+        },
+        "CSD U6 analog change_2018": {
+          "value": "εκτιμώ"
+        },
+        "CSD U6 analog change_2019": {
+          "value": "εκτιμώ"
+        },
+        "CSD U6 analog change_2021": {
+          "value": "εκτιμώ"
+        },
+        "CSD U6 analog data": {
+          "value": "εκτιμώ"
+        },
+        "CSD U6 analog data_2018": {
+          "value": "εκτιμώ"
+        },
+        "CSD U6 analog data_2019": {
+          "value": "εκτιμώ"
+        },
+        "CSD U6 analog data_2021": {
+          "value": "εκτιμώ"
+        },
+        "CSD U6 analog sound": {
+          "value": "εκτιμώ"
+        },
+        "CSD U6 analog sound_2018": {
+          "value": "εκτιμώ"
+        },
+        "CSD U6 analog sound_2019": {
+          "value": "εκτιμώ"
+        },
+        "CSD U6 analog sound_2021": {
+          "value": "εκτιμώ"
         }
       }
     }

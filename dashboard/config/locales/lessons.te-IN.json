@@ -5,11 +5,20 @@
         "poem-art-2021/Poem Art": {
           "preparation": "-   సొంతంగా ఆన్‌‌లైన్ ట్యుటోరియల్‌ను సమీక్షించండి మరియు పూర్తి చేయండి: [Poem Art](http://studio.code.org/s/poem-art).\n\n-   యాక్టివిటీలను పూర్తి చేయమని మీ విద్యార్థులను అడగడానికి ముందు మొదట వాటిని మీరు ప్రయత్నించినట్లు సునిశ్చితం చేసుకోండి.\n\n-   మీ టెక్నాలజీని తనిఖీ చేయండి మరియు ముందుగానే ఏదైనా ట్రబుల్‌షూట్ చేయాల్సిన అవసరం మీకు ఉందా అని నిర్ణయించండి.\n\n-   కొన్ని లెవల్స్ ప్లే చేయడానికి సౌండ్ అవసరం. ముందుగానే హెడ్‌ఫోన్లను అందజేయండి.\n\n-   [ఐచ్ఛికం] మదింపు కోసం ఒక్కో విద్యార్థికి 2 స్టికీ నోట్స్."
         },
+        "flappy/Flappy Code": {
+          "name": "ఫ్లాపీ కోడ్"
+        },
         "hello-world-soccer-2022/Hello World: Food": {
           "name": "హలో వరల్డ్: సాకర్"
         },
         "hello-world-space-2022/Hello World: Food": {
           "name": "హలో వరల్డ్: స్పేస్"
+        },
+        "starwars/Hour of Code 2015": {
+          "name": "స్టార్ వార్స్: కోడ్తో గెలాక్సీని నిర్మించడం (జావాస్క్రిప్ట్)"
+        },
+        "playlab/Play Lab": {
+          "name": "ల్యాబ్ ప్లే"
         },
         "outbreak/Outbreak": {
           "overview": "",
@@ -20,32 +29,746 @@
         "dance-2019/Dance Party": {
           "name": "డాన్స్ పార్టీ"
         },
+        "k5-onlinepd-2019/Loops": {
+          "name": "ఉచ్చులు"
+        },
         "k5-onlinepd-2019/Events": {
           "name": "ఈవెంట్లు"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "షరతులు"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "విధులు"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "వేరియబుల్స్"
+        },
+        "k5-onlinepd-2019/For Loops": {
+          "name": "ఉచ్చులు కోసం"
+        },
+        "K5-OnlinePD/Computer Science Fundamentals": {
+          "name": "కంప్యూటర్ సైన్స్ ఫండమెంటల్స్"
+        },
+        "kodea-pd-2021/Computer Science Fundamentals": {
+          "name": "కంప్యూటర్ సైన్స్ ఫండమెంటల్స్"
+        },
+        "coursed-2022/Graph Paper Programming": {
+          "name": "గ్రాఫ్ పేపర్ ప్రోగ్రామింగ్"
+        },
+        "coursed-2022/Relay Programming": {
+          "name": "రిలే ప్రోగ్రామింగ్"
         },
         "coursed-2022/Dance Party": {
           "name": "డాన్స్ పార్టీ"
         },
+        "coursed-2022/Loops in Ice Age": {
+          "name": "మంచు యుగంలో ఉచ్చులు"
+        },
+        "coursef-2022/Introducing Sprite Lab": {
+          "name": "స్ప్రైట్ ల్యాబ్ను పరిచయం చేస్తోంది"
+        },
+        "coursef-2022/Sprites in Action": {
+          "name": "చర్యలో స్ప్రిట్స్"
+        },
+        "coursef-2022/The Internet": {
+          "name": "ఇంటర్నెట్"
+        },
+        "coursee-2022/Private and Personal Information": {
+          "name": "ప్రైవేట్ మరియు వ్యక్తిగత సమాచారం"
+        },
+        "coursee-2022/Songwriting": {
+          "name": "పాటల రచన"
+        },
+        "coursee-2022/Digital Sharing": {
+          "name": "డిజిటల్ షేరింగ్"
+        },
+        "courseb-2022/Move It, Move It": {
+          "name": "దీన్ని తరలించండి, తరలించండి"
+        },
+        "courseb-2022/Getting Loopy": {
+          "name": "లూపీ పొందడం"
+        },
+        "express-2022/Sprites in Action": {
+          "name": "చర్యలో స్ప్రిట్స్"
+        },
         "express-2022/Dance Party": {
           "name": "డాన్స్ పార్టీ"
+        },
+        "coursea-2022/Happy Maps": {
+          "name": "హ్యాపీ మ్యాప్స్"
+        },
+        "coursec-2022/The Big Event": {
+          "name": "బిగ్ ఈవెంట్"
+        },
+        "coursec-2022/Picturing Data": {
+          "name": "డేటా చిత్రలేఖనమవుతున్న"
+        },
+        "coursec-2022/Binary Bracelets": {
+          "name": "బైనరీ కంకణాలు"
+        },
+        "csd1-2022/The Problem Solving Process": {
+          "name": "సమస్య పరిష్కార ప్రక్రియ"
+        },
+        "csd1-2022/What is a Computer?": {
+          "name": "కంప్యూటర్ అంటే ఏమిటి?"
+        },
+        "csd3-2022/Variables": {
+          "name": "వేరియబుల్స్"
+        },
+        "csd3-2022/Text": {
+          "name": "టెక్స్ట్"
+        },
+        "csd3-2022/Conditionals": {
+          "name": "షరతులు"
+        },
+        "csd3-2022/Velocity": {
+          "name": "వెలాసిటీ"
+        },
+        "csd3-2022/Functions": {
+          "name": "విధులు"
+        },
+        "csd6-2022/Functions": {
+          "name": "విధులు"
+        },
+        "csd7-2022/Introduction to AI Lab": {
+          "name": "AI ల్యాబ్ పరిచయం"
+        },
+        "csd7-2022/Numerical Data in AI Lab": {
+          "name": "AI ల్యాబ్లో సంఖ్యా డేటా"
+        },
+        "courseb-2018/Move It, Move It": {
+          "name": "దీన్ని తరలించండి, తరలించండి"
+        },
+        "courseb-2018/Your Digital Footprint": {
+          "name": "మీ డిజిటల్ పాదముద్ర"
+        },
+        "courseb-2018/Copyright and Creativity": {
+          "name": "ఫెయిర్ను సృష్టించడం మరియు ప్లే చేయడం చాలా బాగుంది"
+        },
+        "coursea-2018/Debugging: Unspotted Bugs": {
+          "name": "మచ్చలేని బగ్స్"
+        },
+        "coursea-2018/Persistence & Frustration: Stevie and the Big Project": {
+          "name": "స్టీవ్ మరియు బిగ్ ప్రాజెక్ట్"
+        },
+        "coursea-2018/Programming: Happy Maps": {
+          "name": "హ్యాపీ మ్యాప్స్"
+        },
+        "coursea-2018/Going Places Safely": {
+          "name": "ప్రదేశాలకు సురక్షితంగా వెళ్లడం"
+        },
+        "coursed-2018/Algorithms: Graph Paper Programming": {
+          "name": "గ్రాఫ్ పేపర్ ప్రోగ్రామింగ్"
+        },
+        "coursed-2018/Relay Programming": {
+          "name": "రిలే ప్రోగ్రామింగ్"
+        },
+        "coursed-2018/Loops in Ice Age": {
+          "name": "మంచు యుగంలో ఉచ్చులు"
+        },
+        "coursed-2018/Digital Citizenship": {
+          "name": "డిజిటల్ పౌరసత్వం"
+        },
+        "coursed-2018/Unplugged: Binary": {
+          "name": "బైనరీ చిత్రాలు"
+        },
+        "coursef-2018/Building a Foundation": {
+          "name": "ఫౌండేషన్ను నిర్మించడం"
+        },
+        "coursef-2018/Loops: My Loopy Robotic Friends": {
+          "name": "నా లూపీ రోబోటిక్ ఫ్రెండ్స్"
+        },
+        "coursef-2018/Envelope Variables": {
+          "name": "ఎన్వలప్ వేరియబుల్స్"
+        },
+        "coursef-2018/For Loop Fun": {
+          "name": "లూప్ ఫన్ కోసం"
+        },
+        "express-2018/Graph Paper Programming": {
+          "name": "గ్రాఫ్ పేపర్ ప్రోగ్రామింగ్"
+        },
+        "express-2018/Relay Programming": {
+          "name": "రిలే ప్రోగ్రామింగ్"
+        },
+        "express-2018/Loops: Getting Loopy": {
+          "name": "లూపీ పొందడం"
+        },
+        "express-2018/Functions: Songwriting": {
+          "name": "పాటల రచన"
+        },
+        "express-2018/Events: The Big Event": {
+          "name": "బిగ్ ఈవెంట్"
+        },
+        "express-2018/Envelope Variables": {
+          "name": "ఎన్వలప్ వేరియబుల్స్"
+        },
+        "express-2018/For Loop Fun": {
+          "name": "లూప్ ఫన్ కోసం"
+        },
+        "express-2018/Binary Bracelets": {
+          "name": "బైనరీ కంకణాలు"
+        },
+        "express-2018/Unplugged: Binary": {
+          "name": "బైనరీ చిత్రాలు"
+        },
+        "express-2018/Internet": {
+          "name": "ఇంటర్నెట్"
+        },
+        "express-2018/Crowdsourcing": {
+          "name": "క్రౌడ్ సోర్సింగ్"
+        },
+        "coursee-2018/Building a Foundation": {
+          "name": "ఫౌండేషన్ను నిర్మించడం"
+        },
+        "coursee-2018/Loops: My Loopy Robotic Friends": {
+          "name": "నా లూపీ రోబోటిక్ ఫ్రెండ్స్"
+        },
+        "coursee-2018/Private and Personal Information": {
+          "name": "ప్రైవేట్ మరియు వ్యక్తిగత సమాచారం"
+        },
+        "coursee-2018/Functions: Songwriting": {
+          "name": "పాటల రచన"
+        },
+        "coursee-2018/Copyright and Creativity": {
+          "name": "డిజిటల్ షేరింగ్"
+        },
+        "coursee-2018/Internet": {
+          "name": "ఇంటర్నెట్"
+        },
+        "coursee-2018/Crowdsourcing": {
+          "name": "క్రౌడ్ సోర్సింగ్"
+        },
+        "coursec-2018/Building a Foundation": {
+          "name": "ఫౌండేషన్ను నిర్మించడం"
+        },
+        "coursec-2018/Loops: Getting Loopy": {
+          "name": "లూపీ పొందడం"
+        },
+        "coursec-2018/Events: The Big Event": {
+          "name": "బిగ్ ఈవెంట్"
+        },
+        "coursec-2018/Binary Bracelets": {
+          "name": "బైనరీ కంకణాలు"
+        },
+        "pre-express-2018/Debugging: Unspotted Bugs": {
+          "name": "మచ్చలేని బగ్స్"
+        },
+        "pre-express-2018/Persistence & Frustration: Stevie and the Big Project": {
+          "name": "స్టీవ్ మరియు బిగ్ ప్రాజెక్ట్"
+        },
+        "pre-express-2018/Move It, Move It": {
+          "name": "దీన్ని తరలించండి, తరలించండి"
+        },
+        "pre-express-2018/Your Digital Footprint": {
+          "name": "మీ డిజిటల్ పాదముద్ర"
+        },
+        "pre-express-2018/Copyright and Creativity": {
+          "name": "ఫెయిర్ను సృష్టించడం మరియు ప్లే చేయడం చాలా బాగుంది"
+        },
+        "csd3-2018/Variables": {
+          "name": "వేరియబుల్స్"
+        },
+        "csd3-2018/Conditionals": {
+          "name": "షరతులు"
+        },
+        "csd3-2018/Velocity": {
+          "name": "వెలాసిటీ"
+        },
+        "csd3-2018/Functions": {
+          "name": "విధులు"
+        },
+        "csd6-2018/Functions with Parameters": {
+          "name": "పారామితులతో విధులు"
+        },
+        "csd2-2018/Lists": {
+          "name": "జాబితాలు"
+        },
+        "csd1-2018/The Problem Solving Process": {
+          "name": "సమస్య పరిష్కార ప్రక్రియ"
+        },
+        "csd1-2018/What is a Computer?": {
+          "name": "కంప్యూటర్ అంటే ఏమిటి?"
+        },
+        "coursea-2019/Going Places Safely": {
+          "name": "ప్రదేశాలకు సురక్షితంగా వెళ్లడం"
+        },
+        "coursea-2019/Programming: Happy Maps": {
+          "name": "హ్యాపీ మ్యాప్స్"
+        },
+        "courseb-2019/Your Digital Footprint": {
+          "name": "మీ డిజిటల్ పాదముద్ర"
+        },
+        "courseb-2019/Move It, Move It": {
+          "name": "దీన్ని తరలించండి, తరలించండి"
+        },
+        "courseb-2019/Loops: Getting Loopy": {
+          "name": "లూపీ పొందడం"
+        },
+        "coursed-2019/Algorithms: Graph Paper Programming": {
+          "name": "గ్రాఫ్ పేపర్ ప్రోగ్రామింగ్"
+        },
+        "coursed-2019/Relay Programming": {
+          "name": "రిలే ప్రోగ్రామింగ్"
+        },
+        "coursed-2019/Loops in Ice Age": {
+          "name": "మంచు యుగంలో ఉచ్చులు"
+        },
+        "coursed-2019/Unplugged: Binary": {
+          "name": "బైనరీ చిత్రాలు"
+        },
+        "coursed-2019/Digital Citizenship": {
+          "name": "డిజిటల్ పౌరసత్వం"
         },
         "coursed-2019/Dance Party": {
           "name": "డాన్స్ పార్టీ"
         },
+        "coursef-2019/Envelope Variables": {
+          "name": "ఎన్వలప్ వేరియబుల్స్"
+        },
+        "coursef-2019/For Loop Fun": {
+          "name": "లూప్ ఫన్ కోసం"
+        },
+        "coursef-2019/Internet": {
+          "name": "ఇంటర్నెట్"
+        },
+        "coursef-2019/Crowdsourcing": {
+          "name": "క్రౌడ్ సోర్సింగ్"
+        },
+        "coursef-2019/Digital Sharing": {
+          "name": "డిజిటల్ షేరింగ్"
+        },
+        "coursee-2019/Simon Says": {
+          "name": "సైమన్ సేస్"
+        },
+        "coursee-2019/Private and Personal Information": {
+          "name": "ప్రైవేట్ మరియు వ్యక్తిగత సమాచారం"
+        },
+        "coursee-2019/Functions: Songwriting": {
+          "name": "పాటల రచన"
+        },
         "express-2019/Dance Party": {
           "name": "డాన్స్ పార్టీ"
+        },
+        "coursec-2019/Powerful Passwords": {
+          "name": "శక్తివంతమైన పాస్వర్డ్లు"
+        },
+        "coursec-2019/Binary Bracelets": {
+          "name": "బైనరీ కంకణాలు"
+        },
+        "coursec-2019/Events: The Big Event": {
+          "name": "బిగ్ ఈవెంట్"
+        },
+        "coursec-2019/Picturing Data": {
+          "name": "డేటా చిత్రలేఖనమవుతున్న"
+        },
+        "csd3-2019/Variables": {
+          "name": "వేరియబుల్స్"
+        },
+        "csd3-2019/Conditionals": {
+          "name": "షరతులు"
+        },
+        "csd3-2019/Velocity": {
+          "name": "వెలాసిటీ"
+        },
+        "csd3-2019/Functions": {
+          "name": "విధులు"
+        },
+        "csd6-2019/Functions with Parameters": {
+          "name": "పారామితులతో విధులు"
+        },
+        "csd1-2019/The Problem Solving Process": {
+          "name": "సమస్య పరిష్కార ప్రక్రియ"
+        },
+        "csd1-2019/What is a Computer?": {
+          "name": "కంప్యూటర్ అంటే ఏమిటి?"
+        },
+        "csd2-2019/Lists": {
+          "name": "జాబితాలు"
+        },
+        "coursef-2017/Building a Foundation": {
+          "name": "ఫౌండేషన్ను నిర్మించడం"
+        },
+        "coursef-2017/Loops in Artist": {
+          "name": "ఆర్టిస్ట్లో ఉచ్చులు"
+        },
+        "coursea-2017/Real-life Algorithms: Plant a Seed": {
+          "name": "నిజ జీవిత అల్గోరిథంలు: విత్తనాన్ని నాటండి"
+        },
+        "coursea-2017/Loops in Artist": {
+          "name": "ఆర్టిస్ట్లో ఉచ్చులు"
+        },
+        "pre-express-2017/Real-life Algorithms: Plant a Seed": {
+          "name": "నిజ జీవిత అల్గోరిథంలు: విత్తనాన్ని నాటండి"
+        },
+        "pre-express-2017/Loops in Artist": {
+          "name": "ఆర్టిస్ట్లో ఉచ్చులు"
+        },
+        "coursee-2017/Building a Foundation": {
+          "name": "ఫౌండేషన్ను నిర్మించడం"
+        },
+        "coursee-2017/Loops in Artist": {
+          "name": "ఆర్టిస్ట్లో ఉచ్చులు"
+        },
+        "coursee-2017/Nested Loops": {
+          "name": "సమూహ ఉచ్చులు"
+        },
+        "coursec-2017/Real-life Algorithms: Paper Planes": {
+          "name": "నిజ జీవిత అల్గోరిథంలు: పేపర్ విమానాలు"
+        },
+        "coursec-2017/Loops in Artist": {
+          "name": "ఆర్టిస్ట్లో ఉచ్చులు"
+        },
+        "coursec-2017/Loops in Harvester": {
+          "name": "హార్వెస్టర్ లో ఉచ్చులు"
+        },
+        "courseb-2017/Real-life Algorithms: Plant a Seed": {
+          "name": "నిజ జీవిత అల్గోరిథంలు: విత్తనాన్ని నాటండి"
+        },
+        "courseb-2017/Loops in Artist": {
+          "name": "ఆర్టిస్ట్లో ఉచ్చులు"
+        },
+        "coursed-2017/Nested Loops": {
+          "name": "సమూహ ఉచ్చులు"
+        },
+        "express-2017/Introduction": {
+          "name": "పరిచయం"
+        },
+        "express-2017/Building a Foundation": {
+          "name": "ఫౌండేషన్ను నిర్మించడం"
+        },
+        "express-2017/Loops in Artist": {
+          "name": "ఆర్టిస్ట్లో ఉచ్చులు"
+        },
+        "express-2017/Nested Loops": {
+          "name": "సమూహ ఉచ్చులు"
+        },
+        "csd3-2017/Variables": {
+          "name": "వేరియబుల్స్"
+        },
+        "csd3-2017/Conditionals": {
+          "name": "షరతులు"
+        },
+        "csd3-2017/Velocity": {
+          "name": "వెలాసిటీ"
+        },
+        "csd3-2017/Functions": {
+          "name": "విధులు"
+        },
+        "csd6-2017/Functions with Parameters_": {
+          "name": "పారామితులతో విధులు"
+        },
+        "csd2-2017/Lists": {
+          "name": "జాబితాలు"
+        },
+        "csd1-2017/The Problem Solving Process": {
+          "name": "సమస్య పరిష్కార ప్రక్రియ"
+        },
+        "csd1-2017/What is a Computer?": {
+          "name": "కంప్యూటర్ అంటే ఏమిటి?"
+        },
+        "20-hour/Introduction to Computer Science": {
+          "name": "కంప్యూటర్ సైన్స్ పరిచయం"
+        },
+        "20-hour/The Maze": {
+          "name": "మేజ్"
+        },
+        "20-hour/Computational Thinking": {
+          "name": "కంప్యుటేషనల్ థింకింగ్"
+        },
+        "20-hour/Graph Paper Programming": {
+          "name": "గ్రాఫ్ పేపర్ ప్రోగ్రామింగ్"
+        },
+        "20-hour/The Artist": {
+          "name": "కళాకారుడు"
+        },
+        "20-hour/Algorithms": {
+          "name": "అల్గోరిథంలు"
+        },
+        "20-hour/The Artist 2": {
+          "name": "ఆర్టిస్ట్ 2"
+        },
+        "20-hour/Functions": {
+          "name": "విధులు"
+        },
+        "20-hour/The Farmer": {
+          "name": "రైతు"
+        },
+        "20-hour/Conditionals": {
+          "name": "షరతులు"
+        },
+        "20-hour/The Artist 3": {
+          "name": "ఆర్టిస్ట్ 3"
+        },
+        "20-hour/Song Writing": {
+          "name": "పాటల రచన"
+        },
+        "20-hour/The Farmer 2": {
+          "name": "రైతు 2"
+        },
+        "20-hour/Abstraction": {
+          "name": "సంగ్రహణ"
+        },
+        "20-hour/The Artist 4": {
+          "name": "ఆర్టిస్ట్ 4"
+        },
+        "20-hour/Relay Programming": {
+          "name": "రిలే ప్రోగ్రామింగ్"
+        },
+        "20-hour/The Farmer 3": {
+          "name": "రైతు 3"
+        },
+        "20-hour/The Internet": {
+          "name": "ఇంటర్నెట్"
+        },
+        "20-hour/The Artist 5": {
+          "name": "ఆర్టిస్ట్ 5"
+        },
+        "20-hour/Wrap-up": {
+          "name": "ర్యాప్-అప్"
+        },
+        "course2/Graph Paper Programming": {
+          "name": "గ్రాఫ్ పేపర్ ప్రోగ్రామింగ్"
+        },
+        "course2/Real-life Algorithms: Paper Planes": {
+          "name": "నిజ జీవిత అల్గోరిథంలు: పేపర్ విమానాలు"
+        },
+        "course2/Getting Loopy": {
+          "name": "లూపీ పొందడం"
+        },
+        "course2/Relay programming": {
+          "name": "రిలే ప్రోగ్రామింగ్"
+        },
+        "course2/Conditionals": {
+          "name": "షరతులు"
+        },
+        "course2/Binary Bracelets": {
+          "name": "బైనరీ కంకణాలు"
+        },
+        "course2/The Big Event": {
+          "name": "బిగ్ ఈవెంట్"
+        },
+        "course2/Flappy": {
+          "name": "ఫ్లాపీ"
+        },
+        "course2/Your Digital Footprint": {
+          "name": "మీ డిజిటల్ పాదముద్ర"
+        },
+        "course3/Computational Thinking": {
+          "name": "కంప్యుటేషనల్ థింకింగ్"
+        },
+        "course3/Functional Suncatchers": {
+          "name": "ఫంక్షనల్ సన్కాచర్స్"
+        },
+        "course3/Songwriting": {
+          "name": "పాటల రచన"
+        },
+        "course3/Dice Race": {
+          "name": "పాచికల రేస్"
+        },
+        "course3/Bounce": {
+          "name": "బౌన్స్"
+        },
+        "course3/Internet": {
+          "name": "అంతర్జాలం"
+        },
+        "course3/Crowdsourcing": {
+          "name": "క్రౌడ్ సోర్సింగ్"
+        },
+        "course3/Digital Citizenship": {
+          "name": "డిజిటల్ పౌరసత్వం"
+        },
+        "course1/Happy Maps": {
+          "name": "హ్యాపీ మ్యాప్స్"
+        },
+        "course1/Move it, Move it": {
+          "name": "దాన్ని తరలించండి, తరలించండి"
+        },
+        "course1/Real-life Algorithms: Plant a Seed": {
+          "name": "నిజ జీవిత అల్గోరిథంలు: విత్తనాన్ని నాటండి"
+        },
+        "course1/Building a Foundation": {
+          "name": "ఫౌండేషన్ను నిర్మించడం"
+        },
+        "course1/Getting Loopy": {
+          "name": "లూపీ పొందడం"
+        },
+        "course1/The Big Event": {
+          "name": "బిగ్ ఈవెంట్"
+        },
+        "course1/Going Places Safely": {
+          "name": "ప్రదేశాలకు సురక్షితంగా వెళ్లడం"
+        },
+        "jigsaw/Jigsaw": {
+          "name": "అడ్డదిడ్డంగా"
+        },
+        "allthethings/Jigsaw": {
+          "name": "అడ్డదిడ్డంగా"
+        },
+        "allthethings/Flappy": {
+          "name": "ఫ్లాపీ"
+        },
+        "allthethings/Bounce": {
+          "name": "బౌన్స్"
+        },
+        "allthethings/Minecraft": {
+          "name": "మైన్ క్రాఫ్ట్"
+        },
+        "allthethings/Web Lab": {
+          "name": "వెబ్ ల్యాబ్"
+        },
+        "allthethings/Java Lab": {
+          "name": "జావా ల్యాబ్"
+        },
+        "allthethings/lesson-48": {
+          "name": "కవిత్వం"
+        },
+        "allthethings/lesson-49": {
+          "name": "సంగీతం"
+        },
+        "coursef-2021/lesson-6": {
+          "name": "స్ప్రైట్ ల్యాబ్ను పరిచయం చేస్తోంది"
+        },
+        "coursef-2021/lesson-8": {
+          "name": "చర్యలో స్ప్రిట్స్"
+        },
+        "coursef-2021/For Loop Fun": {
+          "name": "లూప్ ఫన్ కోసం"
+        },
+        "coursef-2021/Internet": {
+          "name": "ఇంటర్నెట్"
+        },
+        "courseb-2021/Move It, Move It": {
+          "name": "దీన్ని తరలించండి, తరలించండి"
+        },
+        "courseb-2021/Loops: Getting Loopy": {
+          "name": "లూపీ పొందడం"
+        },
+        "coursea-2021/Programming: Happy Maps": {
+          "name": "హ్యాపీ మ్యాప్స్"
+        },
+        "coursec-2021/Events: The Big Event": {
+          "name": "బిగ్ ఈవెంట్"
+        },
+        "coursec-2021/Picturing Data": {
+          "name": "డేటా చిత్రలేఖనమవుతున్న"
+        },
+        "coursec-2021/Binary Bracelets": {
+          "name": "బైనరీ కంకణాలు"
+        },
+        "coursed-2021/Algorithms: Graph Paper Programming": {
+          "name": "గ్రాఫ్ పేపర్ ప్రోగ్రామింగ్"
+        },
+        "coursed-2021/Relay Programming": {
+          "name": "రిలే ప్రోగ్రామింగ్"
         },
         "coursed-2021/Dance Party": {
           "name": "డాన్స్ పార్టీ"
         },
+        "coursed-2021/Loops in Ice Age": {
+          "name": "మంచు యుగంలో ఉచ్చులు"
+        },
+        "express-2021/lesson-3": {
+          "name": "చర్యలో స్ప్రిట్స్"
+        },
         "express-2021/lesson-1": {
           "name": "డాన్స్ పార్టీ"
+        },
+        "coursee-2021/Private and Personal Information": {
+          "name": "ప్రైవేట్ మరియు వ్యక్తిగత సమాచారం"
+        },
+        "coursee-2021/Digital Sharing": {
+          "name": "డిజిటల్ షేరింగ్"
+        },
+        "coursee-2021/Functions: Songwriting": {
+          "name": "పాటల రచన"
+        },
+        "csd7-2021/Introduction to AI Lab": {
+          "name": "AI ల్యాబ్ పరిచయం"
+        },
+        "csd7-2021/Numerical Data in AI Lab": {
+          "name": "AI ల్యాబ్లో సంఖ్యా డేటా"
+        },
+        "csd6-2021/Functions with Parameters": {
+          "name": "పారామితులతో విధులు"
+        },
+        "csd3-2021/Variables": {
+          "name": "వేరియబుల్స్"
+        },
+        "csd3-2021/Text": {
+          "name": "టెక్స్ట్"
+        },
+        "csd3-2021/Conditionals": {
+          "name": "షరతులు"
+        },
+        "csd3-2021/Velocity": {
+          "name": "వెలాసిటీ"
+        },
+        "csd3-2021/Functions": {
+          "name": "విధులు"
+        },
+        "csd1-2021/The Problem Solving Process": {
+          "name": "సమస్య పరిష్కార ప్రక్రియ"
+        },
+        "csd1-2021/What is a Computer?": {
+          "name": "కంప్యూటర్ అంటే ఏమిటి?"
         },
         "express-2020/Dance Party": {
           "name": "డాన్స్ పార్టీ"
         },
+        "courseb-2020/Move It, Move It": {
+          "name": "దీన్ని తరలించండి, తరలించండి"
+        },
+        "courseb-2020/Loops: Getting Loopy": {
+          "name": "లూపీ పొందడం"
+        },
+        "coursed-2020/Algorithms: Graph Paper Programming": {
+          "name": "గ్రాఫ్ పేపర్ ప్రోగ్రామింగ్"
+        },
+        "coursed-2020/Relay Programming": {
+          "name": "రిలే ప్రోగ్రామింగ్"
+        },
         "coursed-2020/Dance Party": {
           "name": "డాన్స్ పార్టీ"
+        },
+        "coursed-2020/Loops in Ice Age": {
+          "name": "మంచు యుగంలో ఉచ్చులు"
+        },
+        "coursed-2020/Unplugged: Binary": {
+          "name": "బైనరీ చిత్రాలు"
+        },
+        "coursec-2020/Binary Bracelets": {
+          "name": "బైనరీ కంకణాలు"
+        },
+        "coursec-2020/Events: The Big Event": {
+          "name": "బిగ్ ఈవెంట్"
+        },
+        "coursec-2020/Picturing Data": {
+          "name": "డేటా చిత్రలేఖనమవుతున్న"
+        },
+        "coursee-2020/Simon Says": {
+          "name": "సైమన్ సేస్"
+        },
+        "coursee-2020/Private and Personal Information": {
+          "name": "ప్రైవేట్ మరియు వ్యక్తిగత సమాచారం"
+        },
+        "coursee-2020/Digital Sharing": {
+          "name": "డిజిటల్ షేరింగ్"
+        },
+        "coursee-2020/Functions: Songwriting": {
+          "name": "పాటల రచన"
+        },
+        "coursea-2020/Programming: Happy Maps": {
+          "name": "హ్యాపీ మ్యాప్స్"
+        },
+        "coursef-2020/Envelope Variables": {
+          "name": "ఎన్వలప్ వేరియబుల్స్"
+        },
+        "coursef-2020/Internet": {
+          "name": "ఇంటర్నెట్"
+        },
+        "coursef-2020/For Loop Fun": {
+          "name": "లూప్ ఫన్ కోసం"
         }
       }
     }

@@ -120,6 +120,7 @@
   "onlyVisibleToYou": "uwagi nauczyciela są widoczne tylko dla Ciebie",
   "openedDate": "otwarte {date}",
   "programCompleted": "Program zakończony.",
+  "programEndedUnexpectedly": "Twój program nieoczekiwanie się zatrzymał. Możemy nie być w stanie uruchomić Twój program lub możesz mieć problemy z siecią. Sprawdź połączenie sieciowe i spróbuj ponownie.",
   "refresh": "Odśwież",
   "rename": "Zmień nazwę",
   "renameFile": "Zmień nazwę pliku",
@@ -152,6 +153,7 @@
   "unknownError": "Ups. Natrafiliśmy na błąd po naszej stronie. Spróbuj ponownie uruchomić program. Jeśli ten błąd będzie się powtarzał, skontaktuj się z nami pod adresem support@code.org. Pamiętaj o podaniu w wiadomości identyfikatora połączenia {connectionId}.\n{type}",
   "unsupportedMiniAppMessage": "Niezgodność typu poziomów: {miniAppType} projekty nie są obsługiwane na poziomie nie-{miniAppType} .",
   "userBlocked": "Uruchomiłeś kod zbyt wiele razy i Twoje konto zostało zablokowane. Skontaktuj się z support@code.org, aby odblokować swoje konto.",
+  "waitingForServer": "Oczekanie na odpowiedź...",
   "youHaveProjectsToReview": "Masz projekty do sprawdzenia...",
   "yourPeer": "twój rówieśnik"
 }

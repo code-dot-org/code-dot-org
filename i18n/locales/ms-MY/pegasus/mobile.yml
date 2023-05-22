@@ -717,6 +717,7 @@
   dashboard_sections_table_secret: "Jenis log masuk"
   dashboard_sections_table_grade: "Gred"
   dashboard_sections_table_course: "Kursus"
+  dashboard_sections_table_pairing_allowed: "Pengaturcaraan Pasangan"
   dashboard_sections_table_stage_extras: "Tambahan Peringkat"
   dashboard_sections_table_students: "Pelajar"
   dashboard_sections_table_code: "Kod Bahagian"
@@ -939,6 +940,7 @@
   blockly_name: "Blockly"
   projguts_name: "Batu, Kertas, Gunting"
   hourofcode_name: "Pagar Sesat Klasik"
+  playlab_name: "Main Makmal"
   infinity_name: "Makmal Mainan Infiniti"
   artist_name: "Artis"
   monstercoding_name: "Pencarian Koding Pulau Misteri"
@@ -1023,6 +1025,8 @@
   flappy-impact-study_name: Flappy Code with Survey
   hoc-encryption_name: Penyulitan Mudah
   text-compression_name: Pemampatan Teks
+  applab_name: "Makmal Aplikasi"
+  gamelab_name: "Makmal Permainan"
   basketball_name: "Membuat permainan bola keranjang"
   sports_name: "Mengekod permainan sukan anda sendiri"
   applab_gradelevel: "Umur 13+"
@@ -1538,6 +1542,8 @@
   user_header_create: 'Cipta '
   user_header_applab: 'App Lab '
   user_header_artist: 'Artis '
+  user_header_gamelab: "Makmal Permainan"
+  user_header_playlab: "Main Makmal"
   user_header_dance: "Majlis Tari-Menari"
   user_header_spritelab: "Sprite Lab"
   user_header_minecraft: "Minecraft"

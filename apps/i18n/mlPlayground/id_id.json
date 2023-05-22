@@ -13,6 +13,7 @@
   "columnDetailsMaximumValue": "max",
   "dataCardLastUpdated": "Terakhir pembaruan",
   "predictButton": "Prediksikan",
+  "uniqueOptionsWarningNotice": "Catatan",
   "datasets": {
     "medical_priority": {
       "fields": {

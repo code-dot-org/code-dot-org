@@ -63,6 +63,7 @@
           "student_overview": "V téhle lekci žáci získají úvodní zkušenost s informatikou a pomocí základních programových bloků vytvoří hru."
         },
         "hello-world-emoji-2021/Hello World": {
+          "name": "Hello World: Emoji",
           "overview": "V této lekci se studenti budou učit základy počítačových věd programováním v Laboratoři sprajtů. Laboratoř sprajtů je nástroj, který můžete používat k budování představivostí nabitých a zábavných projektů. Studenti se naučí vytvářet a animovat sprajty a dělat je interaktivní pomocí událostí. \n\nExistuje více verzí této lekce. Každá verze vyučuje stejné koncepce, ale jsou v ní obsaženy různé obrázky, aby se líbila různým typům studentů. Další informace najdete na stránce [Úvodní stránka o programu Ahoj, světe.](https://code.org/helloworld)",
           "preparation": "-   Hrajte si s hlavolamy, abyste našli všechny případné problémové oblasti, které bude Vaše třída mít.\n-   Použijte prostředky dostupné na [CS Connections](https://code.org/educate/csc) abyste vyrobili plán na další výuku počítačových věd po skončení prvotního výukového kurzu.",
           "purpose": "Tato lekce je určena k přípravě studentů na vytváření jednoduchých programátorských projektů v Laboratoři sprajtů. S touto dovedností budou pak studenti vytvářet projekty na jakékoli téma, jako například na jiné školní téma nebo na něco, co má význam pro ně osobně. Navštivte [CS Connections](https://code.org/educate/csc), kde najdete nápady o tom, jak začlenit počítačovou vědu do jiných předmětů."
@@ -89,6 +90,7 @@
           "student_overview": "V téhle lekci získají žáci všech věkových kategorií úvodní zkušenost s programováním a informatikou v bezpečném a podpůrném prostředí. Tahle lekce byla navržena pro žáky všech věkových kategorií, kteří už umí číst. Vyžaduje možnost přehrávat zvuk, protože jde o nástroj vytvořený tak, aby reagoval na hudbu."
         },
         "hello-world-food-2021/Hello World": {
+          "name": "Hello World: Jídlo",
           "overview": "V této lekci se studenti budou učit základy počítačových věd programováním v Laboratoři sprajtů. Laboratoř sprajtů je nástroj, který můžete používat k budování představivostí nabitých a zábavných projektů. Studenti se naučí vytvářet a animovat sprajty a dělat je interaktivní pomocí událostí. \n\nExistuje více verzí této lekce. Každá verze vyučuje stejné koncepce, ale jsou v ní obsaženy různé obrázky, aby se líbila různým typům studentů. Další informace najdete na stránce [Úvodní stránka o programu Ahoj, světe.](https://code.org/helloworld)",
           "preparation": "-   Hrajte si s hlavolamy, abyste našli všechny případné problémové oblasti, které bude Vaše třída mít.\n-   Použijte prostředky dostupné na [CS Connections](https://code.org/educate/csc) abyste vyrobili plán na další výuku počítačových věd po skončení prvotního výukového kurzu.",
           "purpose": "Tato lekce je určena k přípravě studentů na vytváření jednoduchých programátorských projektů v Laboratoři sprajtů. S touto dovedností budou pak studenti vytvářet projekty na jakékoli téma, jako například na jiné školní téma nebo na něco, co má význam pro ně osobně. Navštivte [CS Connections](https://code.org/educate/csc), kde najdete nápady o tom, jak začlenit počítačovou vědu do jiných předmětů."
@@ -114,6 +116,7 @@
           "purpose": "Tato lekce je určena k přípravě studentů na vytváření jednoduchých programátorských projektů v Laboratoři sprajtů. S touto dovedností budou pak studenti vytvářet projekty na jakékoli téma, jako například na jiné školní téma nebo na něco, co má význam pro ně osobně. Navštivte [CS Connections](https://code.org/educate/csc), kde najdete nápady o tom, jak začlenit počítačovou vědu do jiných předmětů."
         },
         "hello-world-animals-2021/Hello World": {
+          "name": "Hello World: Zvířata",
           "overview": "V této lekci se studenti budou učit základy počítačových věd programováním v Laboratoři sprajtů. Laboratoř sprajtů je nástroj, který můžete používat k budování představivostí nabitých a zábavných projektů. Studenti se naučí vytvářet a animovat sprajty a dělat je interaktivní pomocí událostí. \n\nExistuje více verzí této lekce. Každá verze vyučuje stejné koncepce, ale jsou v ní obsaženy různé obrázky, aby se líbila různým typům studentů. Další informace najdete na stránce [Úvodní stránka o programu Ahoj, světe.](https://code.org/helloworld)",
           "preparation": "-   Hrajte si s hlavolamy, abyste našli všechny případné problémové oblasti, které bude Vaše třída mít.\n-   Použijte prostředky dostupné na [CS Connections](https://code.org/educate/csc) abyste vyrobili plán na další výuku počítačových věd po skončení prvotního výukového kurzu.",
           "purpose": "Tato lekce je určena k přípravě studentů na vytváření jednoduchých programátorských projektů v Laboratoři sprajtů. S touto dovedností budou pak studenti vytvářet projekty na jakékoli téma, jako například na jiné školní téma nebo na něco, co má význam pro ně osobně. Navštivte [CS Connections](https://code.org/educate/csc), kde najdete nápady o tom, jak začlenit počítačovou vědu do jiných předmětů."
@@ -147,11 +150,13 @@
           "student_overview": "Na konci kurzu budeš moct svůj rozpracovaný projekt rozšířit na některou z těchto aplikací: „Vyberte si své dobrodružství“, „Pohlednice“, nebo „Osobnostní kvíz“. Také můžeš pokračovat ve vytváření dalších projektů dostupných na stránce code.org/applab. "
         },
         "hello-world-retro-2021/Hello World": {
+          "name": "Hello World: Retro",
           "overview": "V této lekci se studenti budou učit základy počítačových věd programováním v Laboratoři sprajtů. Laboratoř sprajtů je nástroj, který můžete používat k budování představivostí nabitých a zábavných projektů. Studenti se naučí vytvářet a animovat sprajty a dělat je interaktivní pomocí událostí. \n\nExistuje více verzí této lekce. Každá verze vyučuje stejné koncepce, ale jsou v ní obsaženy různé obrázky, aby se líbila různým typům studentů. Další informace najdete na stránce [Úvodní stránka o programu Ahoj, světe.](https://code.org/helloworld)",
           "preparation": "-   Hrajte si s hlavolamy, abyste našli všechny případné problémové oblasti, které bude Vaše třída mít.\n-   Použijte prostředky dostupné na [CS Connections](https://code.org/educate/csc) abyste vyrobili plán na další výuku počítačových věd po skončení prvotního výukového kurzu.",
           "purpose": "Tato lekce je určena k přípravě studentů na vytváření jednoduchých programátorských projektů v Laboratoři sprajtů. S touto dovedností budou pak studenti vytvářet projekty na jakékoli téma, jako například na jiné školní téma nebo na něco, co má význam pro ně osobně. Navštivte [CS Connections](https://code.org/educate/csc), kde najdete nápady o tom, jak začlenit počítačovou vědu do jiných předmětů."
         },
         "starwarsblocks/Hour of Code 2015": {
+          "name": "Hvězdné války: Budování galaxie s kódem (blokádně)",
           "overview": "V téhle lekci získají studenti všech věkových kategorií úvodní zkušenost s programováním a informatikou v bezpečném a podpůrném prostředí. Tato lekce má dvě verze. V této verzi se pracuje s přetahováním bloků a funguje nejlíp u studentů vybavených mobilními zařízeními bez klávesnice, u mladších žáků a zahraničních studentů. Doporučuje se pro žáky ve věku od 6 let.\n\nJe dostupná i verze v programovacím jazyce [JavaScript](s/starwars). Pro starší studenty, kteří pracují na počítači, může být JavaScript zábava s vítanou vyšší úrovní náročnosti. Syntax JavaScriptu není přeložený a pro snazší začátek v rámci první Hodiny kódu jsou tady uvedené přeložené bloky. Tato verze kurzu je výborná i v případě, že máte ve třídě studenty, kteří už mají určité znalosti kódování. Doporučuje se pro studenty ve věku nad 11 let.",
           "preparation": "### Jeden týden před Hodinou kódu\n\n-   Než začnete plánovat událost Hodina kódu, podívejte se na [Průvodce Hodinou kódu pro vyučující](http://hourofcode.com/resources/how-to/) a [Doporučené postupy od úspěšných pedagogů](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466).  \n-   Projděte si a sami absolvujte online kurz: [Star Wars: Budování galaxie pomocí kódu](https://studio.code.org/s/starwarsblocks/lessons/1/levels/1) \n-   Než studentům kurz zadáte, sami si ho vyzkoušejte. Ověřte si, že máte vyhovující technologie, a ujistěte se, že před zahájením Hodiny kódu není potřeba vyřešit nějaké problémy.\n\n### Jeden den před Hodinou kódu\n\n-   Napište slova „kódování“, „programování“ a „ladění“ na tabuli nebo je přidejte na stěnu slov, pokud ji máte.\n-   Doprostřed tabule nebo na papír doprostřed nástěnky napište slovo „Informatika“. Bude sloužit jako [„myšlenková mapa“](https://en.wikipedia.org/wiki/Mind_map) pro aktivity typu Příprava a hodnocení.\n-   Každý student, který aktivitu dokončí, by měl obdržet [certifikát](http://code.org/certificates). Vytiskněte certifikáty pro všechny studenty dopředu, ať se tím na konci Hodiny kódu nemusíte zdržovat.",
           "purpose": "Tato lekce uvádí základní koncepce počítačové vědy, psaní kódu a programování, včetně posloupností a událostí. Verze výukového kurzu v jazyce JavaScript také studentům umožní zažít psaní kódu.",
@@ -254,11 +259,17 @@
         "K5-OnlinePD/Planning": {
           "name": "Plánování"
         },
+        "K5-OnlinePD/Next Steps": {
+          "name": "Další kroky"
+        },
         "netsim/Routers and addresses": {
           "name": "Routery a adresy"
         },
         "netsim/Packets and Reliability": {
           "name": "Pakety a spolehlivost"
+        },
+        "odometer/Odometer Widget": {
+          "name": "Widget počítadla kilometrů"
         },
         "kodea-pd-2021/Getting Started": {
           "name": "Začínáme"
@@ -268,6 +279,9 @@
         },
         "kodea-pd-2021/Planning": {
           "name": "Plánování"
+        },
+        "kodea-pd-2021/Next Steps": {
+          "name": "Další kroky"
         },
         "coursed-2022/Password Power-Up": {
           "name": "Posílení hesla",
@@ -375,6 +389,7 @@
           "student_overview": "Šikana není nikdy v pořádku. Tato lekce Vás poučí o tom, co je a co není správné říkat online."
         },
         "coursef-2022/Introducing Sprite Lab": {
+          "name": "Představujeme Sprite Lab",
           "overview": "V této lekci pro navození **kontextu** budou studenti diskutovat o roli počítačů a technologií v jejich životě a zaměří se na to, jak aplikace a nástroje dávají uživatelům možnost volby, jak je používat. Studenti také prozkoumají aplikace podobné těm, které si později sami vytvoří.",
           "preparation": "-   Určete, jak se budou studenti přihlašovat do Code.org.\n-   V případě potřeby vytvořte studentům účty na Code.org.\n-   Přiřaďte studentům představení laboratoře sprajtů.\n-   Vytiskněte kopie pracovního listu **\\*Zkoumání aplikací** (nebo umístěte digitální verzi do systému LMS).",
           "purpose": "První lekce je zaměřena na to, aby se studenti pro předmět nadchli a propojili své osobní zájmy s informatikou. ",
@@ -386,6 +401,7 @@
           "purpose": "Tato lekce je určena k seznámení studentů s programováním v aplikaci Sprite Lab. Studenti si začnou vytvářet představu o programovacím modelu tohoto nástroje a prozkoumají způsoby, jak jej mohou využít k sebevyjádření."
         },
         "coursef-2022/Sprites in Action": {
+          "name": "skřítci, do, akce",
           "preparation": "Přehrajte si jednotlivé úrovně a prohlédněte si snímky lekcí.",
           "purpose": "Tato lekce je určena k posílení dovedností z předchozí lekce a seznámení studentů s programováním pomocí událostí. V průběhu celého kurzu budou události hlavním způsobem, jakým studenti mění chod svých programů v čase nebo v reakci na uživatele."
         },
@@ -642,6 +658,7 @@
           "purpose": "Tato lekce je určena k seznámení studentů s programováním v aplikaci Sprite Lab. Studenti si začnou vytvářet představu o programovacím modelu tohoto nástroje a prozkoumají způsoby, jak jej mohou využít k sebevyjádření."
         },
         "express-2022/Sprites in Action": {
+          "name": "skřítci, do, akce",
           "preparation": "Přehrajte si jednotlivé úrovně a prohlédněte si snímky lekcí.",
           "purpose": "Tato lekce je určena k seznámení studentů s programováním pomocí událostí. V průběhu celého kurzu budou události hlavním způsobem, jakým studenti mění chod svých programů v čase nebo v reakci na uživatele."
         },
@@ -1005,6 +1022,12 @@
         "csd5-2022/CS Discoveries Post-Course Survey": {
           "name": "Objevujeme informatiku – Průzkum po kurzu"
         },
+        "csd1-2022/The Problem Solving Process": {
+          "name": "Proces řešení problémů"
+        },
+        "csd1-2022/What is a Computer?": {
+          "name": "Co je to počítač?"
+        },
         "csd3-2022/Variables": {
           "name": "Proměnné"
         },
@@ -1062,8 +1085,14 @@
         "csd6-2022/CS Discoveries Post-Course Survey": {
           "name": "Objevujeme informatiku – Průzkum po kurzu"
         },
+        "csd7-2022/Introduction to AI Lab": {
+          "name": "Úvod do laboratoře umělé inteligence"
+        },
         "csd7-2022/Numerical Models": {
           "overview": "V této lekci se studenti zapojí do offline aktivity spočívající v simulaci epidemie zombies. Studenti musí pomocí údajů ze sousedního města předpovědět, které části města budou mít nejméně zombies. Studenti budou používat stupňů shody a průměrů k vytváření předpovědí počtu zombies na určitém konkrétním místě. Pak budou studenti zachráněni a bude jim dána příležitost porovnat své předpovědi se skutečnými počty, aby mohli diskutovat o tom, jak pro číselné údaje a kategorické údaje bývá přesnost odlišná.\n\n**Otázka dne:** Jak se počítače naučí dělat předpovědi na základě číselných údajů?"
+        },
+        "csd7-2022/Numerical Data in AI Lab": {
+          "name": "Numerická data v laboratoři AI"
         },
         "csd7-2022/CS Discoveries Post-Course Survey": {
           "name": "Objevujeme informatiku – Průzkum po kurzu"
@@ -1611,6 +1640,9 @@
         "csd5-2018/CS Discoveries Post-Course Survey": {
           "name": "Objevujeme informatiku – Průzkum po kurzu"
         },
+        "csd-post-survey-2018/CSD post-course survey": {
+          "name": "Studentský průzkum CSD po kurzu (18 - 19)"
+        },
         "csd4-2018/Linking Screens": {
           "name": "Propojení obrazovek"
         },
@@ -1625,6 +1657,12 @@
         },
         "csd2-2018/CS Discoveries Post-Course Survey": {
           "name": "Objevujeme informatiku – Průzkum po kurzu"
+        },
+        "csd1-2018/The Problem Solving Process": {
+          "name": "Proces řešení problémů"
+        },
+        "csd1-2018/What is a Computer?": {
+          "name": "Co je to počítač?"
         },
         "coursea-2019/Going Places Safely": {
           "name": "Cestování bezpečně"
@@ -2064,6 +2102,12 @@
         "csd5-2019/Combining Representations": {
           "name": "Kombinování reprezentací"
         },
+        "csd1-2019/The Problem Solving Process": {
+          "name": "Proces řešení problémů"
+        },
+        "csd1-2019/What is a Computer?": {
+          "name": "Co je to počítač?"
+        },
         "csd2-2019/Headings": {
           "name": "Záhlaví"
         },
@@ -2337,6 +2381,9 @@
         "coursec-2017/Loops in Artist": {
           "name": "Smyčky v Umělci"
         },
+        "coursec-2017/Loops in Harvester": {
+          "name": "smyčky, do, kombajn"
+        },
         "coursec-2017/Events: The Big Event": {
           "name": "Události: velká událost"
         },
@@ -2576,6 +2623,12 @@
         },
         "csd2-2017/Lists": {
           "name": "Seznamy"
+        },
+        "csd1-2017/The Problem Solving Process": {
+          "name": "Proces řešení problémů"
+        },
+        "csd1-2017/What is a Computer?": {
+          "name": "Co je to počítač?"
         },
         "csd5-2017/Representing Images": {
           "name": "Reprezentace obrázků"
@@ -2896,6 +2949,9 @@
           "purpose": "Hlavním cílem této lekce je prohloubit zkušenosti studentů s počítači. Tím, že si studenti osvojí nejzákladnější funkce ovládání počítače, jako je klikání a přetahování, vytvoří se ve třídě rovnější podmínky pro práci na budoucích zadáních. Tato lekce je také skvělou příležitostí k představení základní terminologie počítačového hardwaru – a k seznámení žáků s myší, trackpadem nebo dotykovou obrazovkou – podle toho, jaké zařízení používáte.",
           "student_overview": " Hlavolamy dokončete kliknutím a potažením."
         },
+        "csd-post-survey/CSD post-course survey": {
+          "name": "Studentský průzkum CSD po kurzu (18 - 19)"
+        },
         "allthethings/Jigsaw": {
           "name": "Skládačka"
         },
@@ -2926,6 +2982,9 @@
         "allthethings/Text Compression": {
           "name": "Komprese textu"
         },
+        "allthethings/Pixelation": {
+          "name": "Pixelace"
+        },
         "allthethings/Studio": {
           "name": "Studio"
         },
@@ -2938,6 +2997,9 @@
         "allthethings/Sprite Lab": {
           "name": "Laboratoř Sprite"
         },
+        "allthethings/AI Lab": {
+          "name": "Laboratoř AI"
+        },
         "allthethings/Java Lab": {
           "name": "Java Lab"
         },
@@ -2948,6 +3010,7 @@
           "name": "Hudba"
         },
         "coursef-2021/lesson-6": {
+          "name": "Představujeme Sprite Lab",
           "overview": "V této lekci pro navození **kontextu** budou studenti diskutovat o roli počítačů a technologií v jejich životě a zaměří se na to, jak aplikace a nástroje dávají uživatelům možnost volby, jak je používat. Studenti také prozkoumají aplikace podobné těm, které si později sami vytvoří.",
           "preparation": "-   Určete, jak se budou studenti přihlašovat do Code.org.\n-   V případě potřeby vytvořte studentům účty na Code.org.\n-   Přiřaďte studentům představení laboratoře sprajtů.\n-   Vytiskněte kopie pracovního listu **\\*Zkoumání aplikací** (nebo umístěte digitální verzi do systému LMS).",
           "purpose": "První lekce je zaměřena na to, aby se studenti pro předmět nadchli a propojili své osobní zájmy s informatikou. ",
@@ -2959,6 +3022,7 @@
           "purpose": "Tato lekce je určena k seznámení studentů s programováním v aplikaci Sprite Lab. Studenti si začnou vytvářet představu o programovacím modelu tohoto nástroje a prozkoumají způsoby, jak jej mohou využít k sebevyjádření."
         },
         "coursef-2021/lesson-8": {
+          "name": "skřítci, do, akce",
           "preparation": "Přehrajte si jednotlivé úrovně a prohlédněte si snímky lekcí.",
           "purpose": "Tato lekce je určena k posílení dovedností z předchozí lekce a seznámení studentů s programováním pomocí událostí. V průběhu celého kurzu budou události hlavním způsobem, jakým studenti mění chod svých programů v čase nebo v reakci na uživatele."
         },
@@ -3453,6 +3517,7 @@
           "purpose": "Tato lekce je určena k seznámení studentů s programováním v aplikaci Sprite Lab. Studenti si začnou vytvářet představu o programovacím modelu tohoto nástroje a prozkoumají způsoby, jak jej mohou využít k sebevyjádření."
         },
         "express-2021/lesson-3": {
+          "name": "skřítci, do, akce",
           "preparation": "Přehrajte si jednotlivé úrovně a prohlédněte si snímky lekcí.",
           "purpose": "Tato lekce je určena k seznámení studentů s programováním pomocí událostí. V průběhu celého kurzu budou události hlavním způsobem, jakým studenti mění chod svých programů v čase nebo v reakci na uživatele."
         },
@@ -3750,8 +3815,14 @@
           "purpose": "Studenti mohou být připraveni vrhnout se rovnou na sestavování svých projektů, ale tato lekce jim pomůže zformulovat jejich nápady do plánů. Tato struktura udrží snílky při zemi a osvětlí cestu těm, kteří se cítí být ponecháni ve tmě. Poskytněte studentům dostatek času na sestavení a revizi jejich projektů. Pokusy a omyly, které jsou nevyhnutelně součástí této lekce, je naučí řešení problémů a vytrvalosti.",
           "student_overview": "Takto velké projekty potřebují čas a spoustu plánování. Najděte inspiraci, vyviňte plán a rozpoutejte svou tvořivost!"
         },
+        "csd7-2021/Introduction to AI Lab": {
+          "name": "Úvod do laboratoře umělé inteligence"
+        },
         "csd7-2021/Similarity Models": {
           "overview": "V této lekci se studenti zapojí do offline aktivity spočívající v simulaci epidemie zombies. Studenti musí pomocí údajů ze sousedního města předpovědět, které části města budou mít nejméně zombies. Studenti budou používat stupňů shody a průměrů k vytváření předpovědí počtu zombies na určitém konkrétním místě. Pak budou studenti zachráněni a bude jim dána příležitost porovnat své předpovědi se skutečnými počty, aby mohli diskutovat o tom, jak pro číselné údaje a kategorické údaje bývá přesnost odlišná.\n\n**Otázka dne:** Jak se počítače naučí dělat předpovědi na základě číselných údajů?"
+        },
+        "csd7-2021/Numerical Data in AI Lab": {
+          "name": "Numerická data v laboratoři AI"
         },
         "csd7-2021/CS Discoveries Post-Course Survey": {
           "name": "Objevujeme informatiku – Průzkum po kurzu"
@@ -3818,6 +3889,12 @@
         },
         "csd3-2021/lesson-1": {
           "name": "Objevujeme informatiku – Průzkum po kurzu"
+        },
+        "csd1-2021/The Problem Solving Process": {
+          "name": "Proces řešení problémů"
+        },
+        "csd1-2021/What is a Computer?": {
+          "name": "Co je to počítač?"
         },
         "csd2-2021/Headings": {
           "name": "Záhlaví"

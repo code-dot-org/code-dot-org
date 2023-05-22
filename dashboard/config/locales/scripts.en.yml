@@ -131,6 +131,8 @@ en:
           description_audience: Ages 10-18
           lesson_groups: {}
           student_description: This 20-hour course covers the core computer science and programming concepts in courses 2-4. The course is designed for use with ages 10-18. Check out courses 2-4 for a more complete experience!
+          lessons: {}
+          name: 20-hour
         edit-code:
           title: Edit Code
           description: Edit Code
@@ -10411,7 +10413,7 @@ en:
           title: Simulating a Marine Ecosystem (2023)
           description_audience: ''
           description_short: ''
-          description: ''
+          description: "\n"
           student_description: ''
         csc-adaptations-2023:
           lessons:

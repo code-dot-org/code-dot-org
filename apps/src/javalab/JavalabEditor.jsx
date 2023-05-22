@@ -28,7 +28,7 @@ import {editorSetup} from './editorSetup';
 import {EditorState, Compartment} from '@codemirror/state';
 import {projectChanged} from '@cdo/apps/code-studio/initApp/project';
 import classNames from 'classnames';
-import {Tab, Nav, NavItem} from 'react-bootstrap';
+import {Tab, Nav, NavItem} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import style from './javalab-editor.module.scss';
 import JavalabEditorTabMenu from './JavalabEditorTabMenu';
 import JavalabFileExplorer from './JavalabFileExplorer';
