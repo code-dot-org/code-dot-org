@@ -98,6 +98,11 @@ Given /^I am on "([^"]*)"$/ do |url|
   navigate_to replace_hostname(url)
 end
 
+When /^I enable break on exceptions in chrome$/ do
+  @browser.execute_cdp("Debugger.enable", {})
+  @browser.execute_cdp("Debugger.setPauseOnExceptions", {state: "all"})
+end
+
 When /^I wait to see (?:an? )?"([.#])([^"]*)"$/ do |selector_symbol, name|
   selection_criteria = selector_symbol == '#' ? {id: name} : {class: name}
   wait_until {!@browser.find_elements(selection_criteria).empty?}
