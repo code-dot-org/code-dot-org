@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-05-18 02:40:21 UTC",
+    "serialized_at": "2023-05-19 22:26:58 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -180,12 +180,14 @@
     },
     {
       "key": "lesson-7",
-      "name": "Asynchronous Work",
+      "name": "Asynchronous Part 1",
       "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
+        "overview": "**Purpose:**\nThese asynchronous activities provide an opportunity for participants to reflect on their identity, how their identity is brought into the classroom, and their responsibility in making sure all students feel like they belong in CS.\n\n\n**Objectives:**\n* Participants use a shared definition of unconscious bias.\n* Participants articulate who they believe should have access to CS and what has shaped those beliefs.\n* Participants recognize that all students can and should learn CS.\n* Participants complete any remaining challenges from the TLOs.\n\n**Suggested Time:** 60 minutes",
+        "student_overview": "**You will:**\n\n* Use a shared definition of unconscious bias.\n* Articulate who you believe should have access to CS and what has shaped those beliefs.\n* Recognize that all students can and should learn CS.\n* Complete any remaining challenges from the TLOs."
       },
       "seeding_key": {
         "lesson.key": "lesson-7",
@@ -280,8 +282,8 @@
       "has_lesson_plan": true,
       "relative_position": 12,
       "properties": {
-        "overview": "**Purpose:**\nIn this session, participants are given time to share ideas and learn about opportunities for differentiation within the CS Discoveries curriculum. The goal of the session is for participants to commit to one thing they will do in their classrooms to meet the unique learning needs of their students.\n\n\n**Objectives:**\n* Participants collaborate and share differentiation strategies and ideas\n* Participants commit to trying one strategy for differentiation with their students\n\n**Suggested Time:** 15 minutes",
-        "student_overview": "**You will:**\n* Collaborate and share differentiation strategies and ideas\n* Commit to trying one strategy for differentiation with your students"
+        "overview": "**Purpose:**\nThis session serves as a bridge to the differentiation activities that participants will complete in the second part of today’s asynchronous work. Participants will consider some of the students they’ve worked with as an anchor for how they might effectively differentiate in a CS classroom.\n\n\n**Objectives:**\n* Participants consider the various needs of the students in their classroom.\n\n**Suggested Time:** 15 minutes",
+        "student_overview": "**You will:**\n* Consider the various needs of the students in your classroom."
       },
       "seeding_key": {
         "lesson.key": "lesson-12",
@@ -308,12 +310,14 @@
     },
     {
       "key": "lesson-14",
-      "name": "Asynchronous Work",
+      "name": "Asynchronous Part 2",
       "absolute_position": 14,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 14,
       "properties": {
+        "overview": "**Purpose:**\nThis asynchronous session is an opportunity for participants to learn more about differentiation in the CS Discoveries curriculum. They will also have the opportunity to pause and process all the CS content learning they have done so far.\n\n\n**Objectives:**\n* Participants learn more about differentiation in the CS Discoveries platform\n* Participants commit to trying one strategy for differentiation with their students\n* Participants process the computer science learning they’ve done to celebrate and consider their next steps.\n* Participants complete any remaining challenges from the TLO.\n\n**Suggested Time:** 60 minutes",
+        "student_overview": "**You will:**\n\n* Learn more about differentiation in the CS Discoveries platform\n* Commit to trying one strategy for differentiation with your students\n* Process the computer science learning you have done to celebrate and consider next steps.\n* Complete any remaining challenges from the TLO.\n"
       },
       "seeding_key": {
         "lesson.key": "lesson-14",
@@ -1911,6 +1915,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day4-Async1"
+        ],
         "progression": "Asynchronous Overview"
       },
       "bonus": false,
@@ -1933,6 +1940,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day4-BiasResponsibility2"
+        ],
         "progression": "Bias and Responsibility"
       },
       "bonus": false,
@@ -1955,6 +1965,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day4-BiasResponsibility1"
+        ],
         "progression": "Bias and Responsibility"
       },
       "bonus": false,
@@ -1977,6 +1990,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day4-BiasResponsibility3"
+        ],
         "progression": "Bias and Responsibility"
       },
       "bonus": false,
@@ -1999,6 +2015,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day4-BiasResponsibility4"
+        ],
         "progression": "Bias and Responsibility"
       },
       "bonus": false,
@@ -2021,6 +2040,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day4-Async1Close"
+        ],
         "progression": "Completing TLO Activities"
       },
       "bonus": false,
@@ -2143,6 +2165,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day4-AsyncIntro"
+        ],
         "progression": "Asynchronous Overview"
       },
       "bonus": false,
@@ -2165,6 +2190,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day4-differentiation1"
+        ],
         "progression": "Differentiation"
       },
       "bonus": false,
@@ -2187,6 +2215,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day4-differentiation2"
+        ],
         "progression": "Differentiation"
       },
       "bonus": false,
@@ -2209,6 +2240,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day4-differentiation3"
+        ],
         "progression": "Differentiation"
       },
       "bonus": false,
@@ -2231,6 +2265,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day4-ContentWrapUp1"
+        ],
         "progression": "Content Wrap Up"
       },
       "bonus": false,
@@ -2253,6 +2290,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day4-ContentWrapUp2"
+        ],
         "progression": "Content Wrap Up"
       },
       "bonus": false,
@@ -2275,6 +2315,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day4-ContentWrapUp3"
+        ],
         "progression": "Content Wrap Up"
       },
       "bonus": false,
@@ -2297,6 +2340,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day4-Async2Close"
+        ],
         "progression": "Completing TLO Levels"
       },
       "bonus": false,
