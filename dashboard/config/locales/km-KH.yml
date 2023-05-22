@@ -81,7 +81,7 @@ km:
     submit: ដាក់តម្រុយសម្រាបសម្កាល់
   appname: Code.org
   stage: ដំណាក់​កាល
-  stage_number: ដំណាក់កាល %{number}
+  stage_number: មេរៀន %{number}
   puzzle: បញ្ហា
   trophies: ពាន​រង្វាន់
   courses: វគ្គ​សិក្សា
@@ -338,6 +338,7 @@ km:
       about: អំពី
       legal: ភាពឯកជននិងច្បាប់
       legal_privacy: គោលការណ៍ឯកជនភាព
+      legal_cookie_notice: សេចក្តីជូនដំណឹងអំពីខូគី
       legal_tos: លក្ខខណ្ឌ
     user:
       classroom: ទំព័រដើមរបស់់គ្រូបង្រៀន
@@ -468,10 +469,15 @@ km:
     student: សិស្ស
     teacher: គ្រូបង្រៀន
   footer:
+    thank_you: កំប្រុក​ចង់​បាន​គ្រាប់ផ្លេសេន​នោះណាស់!
+    help_from_html: យើងចង់ទទួលស្គាល់ជាពិសេសវិស្វករ មកពី Amazon, Google និង Microsoft
+      ដែលបានជួយបង្កើតអ្វីទាំងនេះ។
     help_from_html_old: វិស្វករមកពីក្រុមហ៊ុន Amazon, Google, and Microsoft បានជួយបង្កើតឯកសារនេះឡើង។
+    powered_by_aws: Amazon Web Services ដែល “Powered by AWS” គឺជាពាណិជ្ជសញ្ញារបស់
+      Amazon.com, Inc. ឬសាខារបស់ខ្លួន នៅសហរដ្ឋអាមេរិក និង ប្រទេសផ្សេងទៀត។
     built_on_github: បង្កើតឡើងលើ GitHub ដោយ Microsoft
-    copyright: រក្សាសិទ្ធដោយ
-    more: ផ្សេង​ទៀត
+    copyright: រក្សាសិទ្ធ
+    more: ច្រើនទៀត
     feedback: ផ្ដល់​មតិ​កែ​លម្អ
     translate: ជួយ​ពួក​យើង​ក្នុង​ការ​បកប្រែ​ទៅ​ភាសា​របស់​អ្នក
     support: ការ​គាំទ្រ
@@ -483,6 +489,7 @@ km:
     report_abuse: រាយការណ៏ចំពោះសកម្មភាពមិនសមរម្យ
     try_hour_of_code: សាកល្បងរៀនជាមួយHour of Code!
     store: ហាង
+    cookie_notice: សេចក្តីជូនដំណឹងអំពីខូគី
   reference_area:
     title: ត្រូវការ​ជំនួយ?
     subtitle: មើល​វីដេអូ​និង​គន្លឹះ​ទាំង​នេះ
@@ -496,11 +503,18 @@ km:
   compatibility:
     upgrade:
       link: ស្វែងយល់បន្ថែម
+      applab_unsupported_tablet: App Lab ដំណើរការបានល្អបំផុតនៅលើកុំព្យូទ័រលើតុ ឬ កុំព្យូទ័រយួរដៃ
+        ដោយប្រើ mouse និងក្តារចុច។ អ្នកអាចនឹងជួបប្រទះបញ្ហាដោយប្រើឧបករណ៍នេះ នៅលើឧបករណ៍បច្ចុប្បន្នរបស់អ្នក។
+      gamelab_unsupported_tablet: App Lab ដំណើរការបានល្អបំផុតនៅលើកុំព្យូទ័រលើតុ ឬ
+        កុំព្យូទ័រយួរដៃ ដោយប្រើ mouse និងក្តារចុច។ អ្នកអាចនឹងជួបប្រទះបញ្ហាដោយប្រើឧបករណ៍នេះ
+        នៅលើឧបករណ៍បច្ចុប្បន្នរបស់អ្នក។
+  slow_loading: វាចំណាយពេលយូរជាងធម្មតា...
   try_reloading: សូម​សាកល្បង​ផ្ទុក​ទំព័រ​ឡើង​វិញ
   next_stage: បាន​បញ្ចប់! បន្ត​ទៅ​ដំណាក់កាល​បន្ទាប់
   download_pdf: បើក​ប្លង់​មេរៀន
   share_code:
     title: ចុច 'រត់' ដើម្បី​មើល​ដំណើរការ​កម្មវិធី​របស់​ខ្ញុំ
+    check_out_what_i_made: ពិនិត្យមើលអ្វីដែលខ្ញុំបានធ្វើ
     og_description: ខ្ញុំ​បាន​សរសេរ​កូដ​ដោយ​ខ្លួន​ឯង​ជាមួយ Code.org
   builder:
     created: ខ្ញុំ​បាន​បង្កើត​ស្គ្រីប​ថ្មី​មួយ។
@@ -558,7 +572,7 @@ km:
     correct_title: ត្រឹម​ត្រូវ
     correct_body: នោះ​គឺ​ជា​ចម្លើយ​ត្រឹមត្រូវ។
   lesson_extras:
-    bonus_level: កម្រិតប្រាក់រង្វាន់
+    bonus_level: កម្រិតបន្ថែមពីលើ
   dialog:
     ok: យល់ព្រម
     startover_title: តើ​អ្នក​ពិត​ជា​ចង់​ចាប់ផ្ដើម​ឡើង​វិញ​មែនទេ?
@@ -589,6 +603,8 @@ km:
           other: ផ្សេងៗ
   hoc_download:
     minecraft_name: Minecraft Hour of Code
+  hidden_stage: គ្រូរបស់អ្នកមិនរំពឹងថាអ្នកនៅទីនេះទេ។ សូមសួរគ្រូរបស់អ្នក ថាតើមេរៀនណាដែលអ្នកគួររៀន។
+  return_unit_overview: ចូលទៅកាន់ការពណ៍នាមេរៀន
   view_teacher_guide: បង្ហាញការណែនាំសម្រាប់គ្រូ
   pd:
     form_labels:
@@ -627,3 +643,4 @@ km:
     ហើយដាក់ស្នើម្ដងទៀត ឬត្រឡប់ទៅទំព័រដើមរបស់យើងវិញ។
   page_not_found_button: ត្រឡប់ទៅទំព័រដើម
   copy: ចម្លង
+  code_org_logo_alt: ទំព័រដើម Code.org
