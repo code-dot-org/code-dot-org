@@ -9,7 +9,7 @@ import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
-import {Grid, Row, Col} from 'react-bootstrap';
+import {Grid, Row, Col} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import Spinner from '../components/spinner';
 import {PermissionPropType, WorkshopAdmin} from './permission';
 import SignUpPanel from './SignUpPanel';
