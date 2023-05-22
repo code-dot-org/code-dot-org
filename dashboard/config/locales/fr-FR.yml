@@ -1112,6 +1112,8 @@ fr:
     submit-complete-title: Envoyer une évaluation
     submit-complete-body: Tu ne pourras plus modifier ton évaluation après l'avoir
       envoyée. Es-tu sûr ?
+  level_summary:
+    correct_answer: Bonne réponse
   match:
     wrong_title: Solution incorrecte
     wrong_body: La solution que tu as saisie est incorrecte.  Merci de réessayer !
