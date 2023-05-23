@@ -111,7 +111,6 @@ describe('SectionsSetUpContainer', () => {
     expect(navigateToHrefSpy.getCall(0).args[0]).to.include('/home');
 
     sinon.restore();
-    fetchSpy.restore();
   });
 
   it('appends showSectionCreationDialog to url if isUsersFirstSection is true', async () => {
@@ -145,7 +144,6 @@ describe('SectionsSetUpContainer', () => {
     );
 
     sinon.restore();
-    fetchSpy.restore();
   });
 
   it('passes participantType and loginType to ajax request when save is clicked', () => {
@@ -180,7 +178,6 @@ describe('SectionsSetUpContainer', () => {
     expect(fetchBody.participant_type).to.equal('student');
 
     sinon.restore();
-    fetchSpy.restore();
   });
 
   it('passes url attribute to make a new section if save and create new is clicked', () => {
@@ -210,6 +207,5 @@ describe('SectionsSetUpContainer', () => {
     expect(fetchSpy).to.have.been.called.once;
 
     sinon.restore();
-    fetchSpy.restore();
   });
 });
