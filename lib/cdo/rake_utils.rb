@@ -169,14 +169,6 @@ module RakeUtils
     system 'git', 'add', *args
   end
 
-  def self.git_user_name
-    `git config --get user.name`
-  end
-
-  def self.git_user_email
-    `git config --get user.email`
-  end
-
   def self.git_branch
     `git branch | grep \\* | cut -f 2 -d \\ `.strip
   end
