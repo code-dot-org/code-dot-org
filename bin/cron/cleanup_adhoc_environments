@@ -10,19 +10,30 @@ require 'aws-sdk-cloudformation'
 require 'cdo/chat_client'
 
 $dry_run = !rack_env?(:production)
+$dry_run = true
 
-SECONDS_IN_A_DAY = 24 * 60 * 60
+# Tag used to track when an adhoc instance was stopped
+ADHOC_STOPPED_AT = 'adhoc_stopped_at'.freeze
 
 def stop_running_adhoc_instances
-  adhocs = get_adhoc_instances('running')
+  adhocs = get_adhoc_instances
   return unless adhocs.any?
+  
+  adhocs_to_stop = []
+  get_adhoc_instances.each do |instance|
+    # Instance must be in a running state
+    next unless instance.state.name == 'running'
 
-  msg = "Stopping #{adhocs.length} adhoc instances:\n" +
-    adhocs.map {|a| a.tags.detect {|t| t.key == 'Name'}&.value}.join("\n")
+    # Instance must not have termination production enabled
+    next if instance.describe_attribute(attribute: 'disableApiTermination').disable_api_termination.value
 
-  ChatClient.message 'adhoc', msg
+    adhocs_to_stop << instance
+  end
 
-  Aws::EC2::Instance::Collection.new([adhocs]).batch_stop(dry_run: $dry_run)
+  log "Stopping #{adhocs_to_stop.length} adhoc instances:\n" +
+    adhocs_to_stop.map {|a| a.tags.detect {|t| t.key == 'Name'}&.value}.join("\n")
+
+  Aws::EC2::Instance::Collection.new([adhocs_to_stop]).batch_stop(dry_run: $dry_run)
 
   tag_stopped_instances(adhocs) unless $dry_run
 end
@@ -30,55 +41,55 @@ end
 # Tag instances with the current time
 def tag_stopped_instances(instances)
   instances.each do |instance|
-    instance.create_tags({tags: [{key: 'adhoc_stopped_at', value: Time.now.to_s}]})
+    instance.create_tags({tags: [{key: ADHOC_STOPPED_AT, value: Time.now.to_s}]})
   end
 end
 
 def delete_stale_adhoc_stacks
   cloudformation = Aws::CloudFormation::Client.new
-  adhocs = get_adhoc_instances('stopped')
+  
   stacks_to_delete = []
-
-  adhocs.each do |instance|
-    # Check if instance was stopped more than 6 days ago
-    stopped_at_tag = instance.tags.find {|tag| tag.key == 'adhoc_stopped_at'}
+  get_adhoc_instances.each do |instance|
+    # Instance must be in a stopped state
+    next unless instance.state.name == 'stopped'
+    
+    # Instance must have been stopped by this script at least 6 days ago
+    stopped_at_tag = instance.tags.find {|tag| tag.key == ADHOC_STOPPED_AT}
     next if stopped_at_tag.nil?
     stopped_at = DateTime.parse(stopped_at_tag.value)
-
     next unless more_than_six_days_ago?(stopped_at)
 
+    # Instance must not have termination production enabled
+    next if instance.describe_attribute(attribute: 'disableApiTermination').disable_api_termination.value
+
+    # Instance must have an identifiable stack name
     stack_name = instance.tags.find {|tag| tag.key == 'aws:cloudformation:stack-name'}&.value
     next if stack_name.nil?
 
     stacks_to_delete << stack_name
   end
 
+  log "Deleting #{stacks_to_delete.length} adhoc CloudFormation Stacks:\n" + stacks_to_delete.join("\n")
+
   if stacks_to_delete.any? && !$dry_run
-    ChatClient.message 'adhoc', "Deleting CloudFormation Stacks:\n" + stacks_to_delete.join("\n")
     stacks_to_delete.each {|stack_name| cloudformation.delete_stack(stack_name: stack_name)}
   end
 end
 
 # Returns true if the given time is more than six days ago
 def more_than_six_days_ago?(time)
-  (Time.now - time) > 6 * SECONDS_IN_A_DAY
+  seconds_in_a_day = 24 * 60 * 60
+  (Time.now - time) > 6 * seconds_in_a_day
 end
 
 # Returns a collection of adhoc instances
-def get_adhoc_instances(state = nil)
+def get_adhoc_instances
   filters = {
     'tag:environment' => 'adhoc',
     'tag:aws:cloudformation:logical-id' => 'WebServer'
   }.map {|k, v| {name: k, values: [v]}}
 
-  # Add state filter if provided
-  filters << {name: 'instance-state-name', values: [state]} unless state.nil?
-
-  return Aws::EC2::Resource.new.instances(filters: filters).reject do |adhoc|
-    # Exclude instances with disableApiTermination == true.
-    adhoc.describe_attribute(attribute: 'disableApiTermination').
-      disable_api_termination.value
-  end
+  return Aws::EC2::Resource.new.instances(filters: filters)
 end
 
 # Log any adhoc stacks in an error state
@@ -87,14 +98,19 @@ def log_error_stacks
   error_states = ['CREATE_FAILED', 'ROLLBACK_FAILED', 'DELETE_FAILED', 'UPDATE_ROLLBACK_FAILED']
 
   stacks_in_error = cloudformation.describe_stacks.stacks.select do |stack|
-    stack.stack_status.in?(error_states) && stack.stack_name.include?('adhoc')
+    error_states.include?(stack.stack_status) && stack.stack_name.include?('adhoc')
   end
 
   if stacks_in_error.any?
-    msg = "@infra-team, the following adhoc CloudFormation stacks are in an error state:\n" +
+    log "@infra-team, the following adhoc CloudFormation stacks are in an error state:\n" +
       stacks_in_error.map {|stack| "#{stack.stack_name} (#{stack.stack_status})"}.join("\n")
-    ChatClient.message 'adhoc', msg
   end
+end
+
+# Log a message to the console and chat
+def log(msg)
+  puts msg
+  ChatClient.message('adhoc', msg) unless $dry_run
 end
 
 # Call the functions
