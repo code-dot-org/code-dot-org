@@ -1,9 +1,14 @@
 - content_for(:head) do
   - if @level.is_a?(Blockly) && !@level.uses_droplet?
-    %script{src: webpack_asset_path('js/blockly.js')}
-    %script{src: webpack_asset_path('js/en_us/blockly_locale.js')}
-    %script{src: webpack_asset_path('js/en_us/common_locale.js')}
-    %script{src: webpack_asset_path("js/en_us/#{@level.game.app}_locale.js")}
+    - if @level.is_a?(Dancelab) || @level.is_a?(Poetry)
+      %script{src: webpack_asset_path('js/googleblockly.js')}
+      - @blockly_version = 'google'
+    - else
+      %script{src: webpack_asset_path('js/blockly.js')}
+      %script{src: webpack_asset_path('js/en_us/blockly_locale.js')}
+      %script{src: webpack_asset_path('js/en_us/common_locale.js')}
+      %script{src: webpack_asset_path("js/en_us/#{@level.game.app}_locale.js")}
+      - @blockly_version = 'cdo'
 
 %h1.control-legend{data: {toggle: "collapse", target: "#blockly_options"}}
   Blockly Options

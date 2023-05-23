@@ -6,9 +6,14 @@ import {installCustomBlocks} from '@cdo/apps/block_utils';
 
 const data = getScriptData('pageOptions');
 // TODO: stop pulling Blockly off of the window object.
-if (window.Blockly && !data.uses_droplet) {
-  window.Blockly.assetUrl = path => `/assets/${path}`;
-  Blockly.Css.inject(document);
+if (Blockly && !data.uses_droplet) {
+  Blockly.assetUrl = path => `/assets/${path}`;
+  if (Blockly.version === 'Google') {
+    Blockly.Css.inject(true, 'media');
+  } else {
+    Blockly.Css.inject(document);
+  }
+  console.log('document', document);
   let blocksLocation = data.app;
   if (data.app === 'spritelab' || data.app === 'poetry') {
     blocksLocation = 'p5lab/spritelab';
