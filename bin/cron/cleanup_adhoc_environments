@@ -85,6 +85,10 @@ def delete_stale_adhoc_stacks
     stack_name = instance.tags.find {|tag| tag.key == 'aws:cloudformation:stack-name'}&.value
     next if stack_name.nil?
 
+    # Don't delete one of the critical stacks
+    critical_stacks = %w[autoscale-prod test staging levelbuilder adhoc-bugcrowd]
+    raise "Critical stack #{stack_name} incorrectly identified for deletion!" if critical_stacks.include?(stack_name)
+
     stacks_to_delete << stack_name
   end
 
