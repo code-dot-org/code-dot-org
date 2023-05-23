@@ -342,6 +342,10 @@ class UnconnectedMusicView extends React.Component {
     );
   };
 
+  hasNoProgressHeader = () => {
+    return this.isStandaloneLevel() || this.props.inIncubator;
+  };
+
   getIsPlaying = () => {
     return this.props.isPlaying;
   };
@@ -707,7 +711,7 @@ class UnconnectedMusicView extends React.Component {
                 <TopButtons
                   clearCode={this.clearCode}
                   uploadSound={file => this.soundUploader.uploadSound(file)}
-                  canShowSaveStatus={this.props.inIncubator}
+                  canShowSaveStatus={this.hasNoProgressHeader()}
                 />
               </div>
               <div id="blockly-div" />
