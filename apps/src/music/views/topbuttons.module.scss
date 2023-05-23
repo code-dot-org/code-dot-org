@@ -1,5 +1,5 @@
-@import "color.scss";
-@import "./music-view.module.scss";
+@import 'color.scss';
+@import './music-view.module.scss';
 
 .buttonRow {
   display: flex;
@@ -21,42 +21,6 @@
     &:hover {
       background-color: $neutral_dark90;
     }
-  }
-}
-
-.saveMessageContainer {
-  position: relative;
-}
-
-.saveMessage {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 150px;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: center;
-  padding: 5px;
-
-  &Saving {
-    color: $neutral_light;
-  }
-
-  &Error {
-    color: $lightest_red;
-  }
-
-  &Text {
-    padding-left: 5px;
-    text-align: right;
-  }
-
-  opacity: 0;
-  transition: opacity 0.1s ease;
-
-  &Show {
-    opacity: 1;
   }
 }
 

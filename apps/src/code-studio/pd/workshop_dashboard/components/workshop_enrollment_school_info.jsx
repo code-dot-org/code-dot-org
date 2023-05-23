@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
-import {Button, Table} from 'react-bootstrap';
+import {Button, Table} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import ConfirmationDialog from '../../components/confirmation_dialog';
 import {enrollmentShape} from '../types';
 import {workshopEnrollmentStyles as styles} from '../workshop_enrollment_styles';
