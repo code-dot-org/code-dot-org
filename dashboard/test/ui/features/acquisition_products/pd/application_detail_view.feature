@@ -8,7 +8,7 @@ Feature: Teacher Application Detail View
     Then I wait until element "table#summary-csp-teachers" is visible
 
     Then I click selector "table#summary-csp-teachers ~ .btn:contains(View all applications)"
-    Then I wait until element "#status-filter" is visible
+    Then I wait until element "button:contains('Make not required')" is visible
     Then I click selector "button:contains('Make not required')"
     And I wait until element "button:contains('Make required')" is visible
 
