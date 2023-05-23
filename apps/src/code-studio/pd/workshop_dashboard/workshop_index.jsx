@@ -5,7 +5,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
-import {Button, ButtonToolbar} from 'react-bootstrap';
+import {Button, ButtonToolbar} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import ServerSortWorkshopTable from './components/server_sort_workshop_table';
 import {
   PermissionPropType,

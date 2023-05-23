@@ -2664,6 +2664,75 @@ columns:
   - *61
   - *6
   - *7
+  lti_integrations:
+  - *27
+  - *40
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: platform_id
+    sql_type_metadata: *3
+    'null': false
+    default: 
+    default_function: 
+    collation: utf8_unicode_ci
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: issuer
+    sql_type_metadata: *3
+    'null': false
+    default: 
+    default_function: 
+    collation: utf8_unicode_ci
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: client_id
+    sql_type_metadata: *3
+    'null': false
+    default: 
+    default_function: 
+    collation: utf8_unicode_ci
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: platform_name
+    sql_type_metadata: *3
+    'null': false
+    default: 
+    default_function: 
+    collation: utf8_unicode_ci
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: auth_redirect_url
+    sql_type_metadata: *3
+    'null': false
+    default: 
+    default_function: 
+    collation: utf8_unicode_ci
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: jwks_url
+    sql_type_metadata: *3
+    'null': false
+    default: 
+    default_function: 
+    collation: utf8_unicode_ci
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: access_token_url
+    sql_type_metadata: *3
+    'null': false
+    default: 
+    default_function: 
+    collation: utf8_unicode_ci
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: admin_email
+    sql_type_metadata: *3
+    'null': true
+    default: 
+    default_function: 
+    collation: utf8_unicode_ci
+    comment: 
+  - *32
+  - *33
   metrics:
   - *5
   - *6
@@ -2793,6 +2862,42 @@ columns:
     default_function: 
     collation: utf8_unicode_ci
     comment: 
+  parental_permission_requests:
+  - *27
+  - *13
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: parent_email
+    sql_type_metadata: *3
+    'null': false
+    default: 
+    default_function: 
+    collation: utf8_unicode_ci
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: uuid
+    sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
+      delegate_dc_obj: !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+        sql_type: varchar(36)
+        type: :string
+        limit: 36
+        precision: 
+        scale: 
+      extra: ''
+    'null': false
+    default: 
+    default_function: 
+    collation: utf8_unicode_ci
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: reminders_sent
+    sql_type_metadata: *2
+    'null': false
+    default: '0'
+    default_function: 
+    collation: 
+    comment: 
+  - *32
+  - *33
   pd_accepted_programs:
   - *5
   - *6
@@ -6984,10 +7089,12 @@ primary_keys:
   levels: id
   levels_script_levels: 
   libraries: id
+  lti_integrations: id
   metrics: id
   objectives: id
   paired_user_levels: id
   parent_levels_child_levels: id
+  parental_permission_requests: id
   pd_accepted_programs: id
   pd_application_emails: id
   pd_application_tags: id
@@ -7162,10 +7269,12 @@ data_sources:
   levels: true
   levels_script_levels: true
   libraries: true
+  lti_integrations: true
   metrics: true
   objectives: true
   paired_user_levels: true
   parent_levels_child_levels: true
+  parental_permission_requests: true
   pd_accepted_programs: true
   pd_application_emails: true
   pd_application_tags: true
@@ -8772,6 +8881,46 @@ indexes:
     using: :btree
     comment: 
   libraries: []
+  lti_integrations:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: lti_integrations
+    name: index_lti_integrations_on_platform_id
+    unique: false
+    columns:
+    - platform_id
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where: 
+    type: 
+    using: :btree
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: lti_integrations
+    name: index_lti_integrations_on_issuer
+    unique: false
+    columns:
+    - issuer
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where: 
+    type: 
+    using: :btree
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: lti_integrations
+    name: index_lti_integrations_on_client_id
+    unique: false
+    columns:
+    - client_id
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where: 
+    type: 
+    using: :btree
+    comment: 
   metrics: []
   objectives:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
@@ -8847,6 +8996,33 @@ indexes:
     unique: false
     columns:
     - parent_level_id
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where: 
+    type: 
+    using: :btree
+    comment: 
+  parental_permission_requests:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: parental_permission_requests
+    name: index_parental_permission_requests_on_user_id
+    unique: false
+    columns:
+    - user_id
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where: 
+    type: 
+    using: :btree
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: parental_permission_requests
+    name: index_parental_permission_requests_on_uuid
+    unique: false
+    columns:
+    - uuid
     lengths: {}
     orders: {}
     opclasses: {}
@@ -12016,7 +12192,7 @@ indexes:
     type: :fulltext
     using: 
     comment: 
-version: 20230323175726
+version: 20230518155319
 database_version: !ruby/object:ActiveRecord::ConnectionAdapters::AbstractAdapter::Version
   version:
   - 5

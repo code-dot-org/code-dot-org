@@ -18,8 +18,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-05-10 23:31:59 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2023-05-17 22:45:46 UTC",
+    "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
     "participant_audience": null,
@@ -290,8 +290,21 @@
   ],
   "lesson_activities": [
     {
-      "key": "43d389f7-0327-42f0-85bc-f61e00f2b289",
+      "key": "a617b803-0f3d-4236-ac9c-cadd592968d8",
       "position": 1,
+      "properties": {
+        "name": "The Pre-Unit Pulse"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a617b803-0f3d-4236-ac9c-cadd592968d8",
+        "lesson.key": "Project   Innovation Simulation Part 1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csp8-2023"
+      }
+    },
+    {
+      "key": "43d389f7-0327-42f0-85bc-f61e00f2b289",
+      "position": 2,
       "properties": {
         "duration": 45,
         "name": "Day 1"
@@ -305,7 +318,7 @@
     },
     {
       "key": "7c4d651e-afa0-46a4-b249-f586f15c246c",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 45,
         "name": "Day 2"
@@ -785,6 +798,24 @@
   ],
   "activity_sections": [
     {
+      "key": "61c67f53-6108-4812-9e88-8d1e019aa7fc",
+      "position": 1,
+      "properties": {
+        "description": "Have your students complete these questions independently some time before starting this unit. \n",
+        "progression_name": "The Pre-Unit Pulse",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Pre-Unit Pulse Questions:** The answers to these questions can provide insights into the preferences, strengths, and motivations of your students. If you'd like to adapt the questions or add in your own, you may want to make a copy of [this Google Form](https://docs.google.com/forms/d/1d1_bKG8nDD6PhXcrGF63i7AhxFwgW5-Q2heKXB4pgOs/copy) which already has the existing questions populated.\n\nFor more tips and ideas of how to use these questions, check out the [CSP Guide to Pre-Unit Pulse Questions](https://docs.google.com/document/d/1jx43dakN6og2n7iey_uQrNwcpMHQRbv1RCPZFHpQdYw/edit?usp=sharing)"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "61c67f53-6108-4812-9e88-8d1e019aa7fc",
+        "lesson_activity.key": "a617b803-0f3d-4236-ac9c-cadd592968d8"
+      }
+    },
+    {
       "key": "3a7d61d5-f9d3-4847-8a8d-6023fc025082",
       "position": 1,
       "properties": {
@@ -1066,7 +1097,8 @@
       "key": "86c2e955-bc3d-4546-9dec-4b63459712c7",
       "position": 6,
       "properties": {
-        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\n\n**Question:** Considering your character's perspective, which computing ideas of your team members seem the best? Which ones are you concerned about?"
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\n\n**Question:** Considering your character's perspective, which computing ideas of your team members seem the best? Which ones are you concerned about?",
+        "progression_name": "Check For Understanding - Day 2"
       },
       "seeding_key": {
         "activity_section.key": "86c2e955-bc3d-4546-9dec-4b63459712c7",
@@ -2525,6 +2557,72 @@
       "chapter": 1,
       "position": 1,
       "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "The Pre-Unit Pulse"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP Pre-Unit Pulse - Cybersecurity and Global Impact Q1"
+        ],
+        "lesson.key": "Project   Innovation Simulation Part 1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csp8-2023",
+        "activity_section.key": "61c67f53-6108-4812-9e88-8d1e019aa7fc"
+      },
+      "level_keys": [
+        "CSP Pre-Unit Pulse - Cybersecurity and Global Impact Q1"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "The Pre-Unit Pulse"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP Pre-Unit Pulse - Cybersecurity and Global Impact Q2"
+        ],
+        "lesson.key": "Project   Innovation Simulation Part 1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csp8-2023",
+        "activity_section.key": "61c67f53-6108-4812-9e88-8d1e019aa7fc"
+      },
+      "level_keys": [
+        "CSP Pre-Unit Pulse - Cybersecurity and Global Impact Q2"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "The Pre-Unit Pulse"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP Pre-Unit Pulse - Cybersecurity and Global Impact Q3"
+        ],
+        "lesson.key": "Project   Innovation Simulation Part 1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csp8-2023",
+        "activity_section.key": "61c67f53-6108-4812-9e88-8d1e019aa7fc"
+      },
+      "level_keys": [
+        "CSP Pre-Unit Pulse - Cybersecurity and Global Impact Q3"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
         "level_keys": [
@@ -2547,14 +2645,15 @@
       ]
     },
     {
-      "chapter": 2,
-      "position": 2,
+      "chapter": 5,
+      "position": 5,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": true,
       "properties": {
         "level_keys": [
           "U10 L02 CFU innovations part 2_2023"
-        ]
+        ],
+        "progression": "Check For Understanding - Day 2"
       },
       "bonus": false,
       "seeding_key": {
@@ -2571,7 +2670,7 @@
       ]
     },
     {
-      "chapter": 3,
+      "chapter": 6,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -2596,7 +2695,7 @@
       ]
     },
     {
-      "chapter": 4,
+      "chapter": 7,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2621,7 +2720,7 @@
       ]
     },
     {
-      "chapter": 5,
+      "chapter": 8,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -2646,7 +2745,7 @@
       ]
     },
     {
-      "chapter": 6,
+      "chapter": 9,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -2671,7 +2770,7 @@
       ]
     },
     {
-      "chapter": 7,
+      "chapter": 10,
       "position": 4,
       "activity_section_position": 1,
       "assessment": true,
@@ -2696,7 +2795,7 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 11,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -2721,7 +2820,7 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 12,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2746,7 +2845,7 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 13,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -2771,7 +2870,7 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 14,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
@@ -2796,7 +2895,7 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 15,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -2821,7 +2920,7 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 16,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -2845,7 +2944,7 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 17,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -2870,7 +2969,7 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 18,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2896,6 +2995,42 @@
     }
   ],
   "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "CSP Pre-Unit Pulse - Cybersecurity and Global Impact Q1",
+        "script_level.level_keys": [
+          "CSP Pre-Unit Pulse - Cybersecurity and Global Impact Q1"
+        ],
+        "lesson.key": "Project   Innovation Simulation Part 1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csp8-2023",
+        "activity_section.key": "61c67f53-6108-4812-9e88-8d1e019aa7fc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP Pre-Unit Pulse - Cybersecurity and Global Impact Q2",
+        "script_level.level_keys": [
+          "CSP Pre-Unit Pulse - Cybersecurity and Global Impact Q2"
+        ],
+        "lesson.key": "Project   Innovation Simulation Part 1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csp8-2023",
+        "activity_section.key": "61c67f53-6108-4812-9e88-8d1e019aa7fc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP Pre-Unit Pulse - Cybersecurity and Global Impact Q3",
+        "script_level.level_keys": [
+          "CSP Pre-Unit Pulse - Cybersecurity and Global Impact Q3"
+        ],
+        "lesson.key": "Project   Innovation Simulation Part 1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csp8-2023",
+        "activity_section.key": "61c67f53-6108-4812-9e88-8d1e019aa7fc"
+      }
+    },
     {
       "seeding_key": {
         "level.key": "U10 L01 CFU innovations_2023",
@@ -3160,16 +3295,6 @@
       },
       "seeding_key": {
         "resource.key": "course_vocabulary"
-      }
-    },
-    {
-      "name": "CSP Curriculum Guide",
-      "url": "https://docs.google.com/document/d/1s5w7_UnVIGHOdkqCtK2O78rQ7JJFAWlOeZkZNsCovOY/preview",
-      "key": "csp_curriculum_guide",
-      "properties": {
-      },
-      "seeding_key": {
-        "resource.key": "csp_curriculum_guide"
       }
     },
     {
@@ -3454,6 +3579,18 @@
       }
     },
     {
+      "name": "Syllabus",
+      "url": "https://docs.google.com/document/d/1yg2L8OAKSqjtxzETYRw7G5XCinTR1wKNscyyBx3dJGk/edit?usp=sharing",
+      "key": "syllabus",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "syllabus"
+      }
+    },
+    {
       "name": "Teacher Forum",
       "url": "https://forum.code.org/c/csp/curriculum/392",
       "key": "teacher_forum",
@@ -3706,7 +3843,7 @@
     },
     {
       "seeding_key": {
-        "resource.key": "csp_curriculum_guide",
+        "resource.key": "syllabus",
         "script.name": "csp8-2023"
       }
     },
