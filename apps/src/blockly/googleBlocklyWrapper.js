@@ -12,6 +12,7 @@ import initializeCdoConstants from './addons/cdoConstants';
 import CdoFieldAngle from './addons/cdoFieldAngle';
 import CdoFieldButton from './addons/cdoFieldButton';
 import CdoFieldDropdown from './addons/cdoFieldDropdown';
+import CdoFieldFlyout from './addons/cdoFieldFlyout';
 import {CdoFieldImageDropdown} from './addons/cdoFieldImageDropdown';
 import CdoFieldMultilineInput from './addons/cdoFieldMultilineInput';
 import CdoFieldNumber from './addons/cdoFieldNumber';
@@ -237,6 +238,11 @@ function initializeBlocklyWrapper(blocklyInstance) {
     ['field_multilinetext', 'FieldMultilineInput', CdoFieldMultilineInput],
   ];
   blocklyWrapper.overrideFields(fieldOverrides);
+
+  blocklyWrapper.blockly_.fieldRegistry.register(
+    'field_flyout',
+    CdoFieldFlyout
+  );
 
   // Overrides applied directly to core blockly
   blocklyWrapper.blockly_.FunctionEditor = FunctionEditor;
