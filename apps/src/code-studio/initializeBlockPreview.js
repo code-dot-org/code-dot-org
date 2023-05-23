@@ -7,8 +7,6 @@ function update(blockSpace, container, editor) {
     // this is simply an informative but not functional view, we simply
     // catch and ignore all errors.
     var xml = Blockly.Xml.textToDom(editor.getValue());
-    // console.log('editor', editor);
-    // console.log('editor.getValue', editor.getValue());
     blockSpace.clear();
     Blockly.cdoUtils.loadBlocksToWorkspace(blockSpace, xml);
   } catch (e) {
@@ -17,14 +15,9 @@ function update(blockSpace, container, editor) {
 
   // resize
   var metrics = blockSpace.getMetrics();
-  // console.log('metrics', metrics);
   var height = metrics.contentHeight + metrics.contentTop;
   container.style.height = height + 'px';
-  // console.log('blockSpace', blockSpace);
-  // console.log('blockSpace.blockSpaceEditor', blockSpace.BlockSpaceEditor);
-  if (Blockly.version === 'Google') {
-    Blockly.svgResize(blockSpace);
-  } else {
+  if (Blockly.version === 'CDO') {
     blockSpace.blockSpaceEditor.svgResize();
   }
 }
@@ -39,8 +32,5 @@ module.exports = function (editor, container) {
     update(blockSpace, container, editor);
   });
 
-  // need to update twice initially to counter Blockly's weird sizing
-  // requirements
-  update(blockSpace, container, editor); // Error - Cannot read properties of undefined (reading 'svgResize')
   update(blockSpace, container, editor);
 };
