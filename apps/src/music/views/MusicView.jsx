@@ -88,6 +88,7 @@ class UnconnectedMusicView extends React.Component {
     currentLevelId: PropTypes.string,
     levelCount: PropTypes.number,
     levelDataPath: PropTypes.string,
+    isLabLoading: PropTypes.bool,
     userId: PropTypes.number,
     userType: PropTypes.string,
     signInState: PropTypes.oneOf(Object.values(SignInState)),
@@ -149,6 +150,8 @@ class UnconnectedMusicView extends React.Component {
   }
 
   componentDidMount() {
+    const initialLevelIndex = this.props.currentLevelIndex;
+
     this.props.setIsLoading(true);
 
     this.analyticsReporter.startSession().then(() => {
@@ -246,7 +249,14 @@ class UnconnectedMusicView extends React.Component {
           );
           this.player.initialize(this.library);
           setInterval(this.updateTimer, 1000 / 30);
-          this.props.setIsLoading(false);
+
+          // If the level changed while we were loading, then hand off
+          // to handlePanelChange to load that new level.
+          if (this.props.currentLevelIndex !== initialLevelIndex) {
+            this.handlePanelChange();
+          } else {
+            this.props.setIsLoading(false);
+          }
         });
     });
   }
@@ -266,7 +276,7 @@ class UnconnectedMusicView extends React.Component {
     }
 
     if (prevProps.currentLevelIndex !== this.props.currentLevelIndex) {
-      this.goToPanel(this.props.currentLevelIndex);
+      this.goToPanel();
     }
 
     if (
@@ -332,6 +342,10 @@ class UnconnectedMusicView extends React.Component {
     );
   };
 
+  hasNoProgressHeader = () => {
+    return this.isStandaloneLevel() || this.props.inIncubator;
+  };
+
   getIsPlaying = () => {
     return this.props.isPlaying;
   };
@@ -358,29 +372,40 @@ class UnconnectedMusicView extends React.Component {
   };
 
   // When the external system lets us know that the user changed level.
-  goToPanel = specificStep => {
-    this.progressManager?.goToStep(specificStep);
-    this.handlePanelChange();
+  goToPanel = () => {
+    this.progressManager?.goToStep(this.props.currentLevelIndex);
+
+    // If we are already loading, then the existing execution of handlePanelChange
+    // will detect the change in active level and start loading again.
+    if (!this.props.isLabLoading) {
+      this.handlePanelChange();
+    }
   };
 
-  // Handle a change in panel.
+  // Handle a change in panel, including loading necessary data.
+  // Also handles a change in the active level index during this load.
   handlePanelChange = async () => {
+    let currentLevelIndexLoading;
+
     this.stopSong();
     this.props.setIsLoading(true);
 
-    await this.loadProgressionStep();
+    do {
+      currentLevelIndexLoading = this.props.currentLevelIndex;
 
-    this.setToolboxForProgress();
-    this.setAllowedSoundsForProgress();
+      await this.loadProgressionStep();
 
-    if (this.props.currentLevelId) {
-      // Change levels for the projects system. Only do this is we have a level.
-      await this.musicBlocklyWorkspace.changeLevels(
-        this.props.currentLevelId,
-        this.props.currentScriptId
-      );
-    }
+      this.setToolboxForProgress();
+      this.setAllowedSoundsForProgress();
 
+      if (this.props.currentLevelId) {
+        // Change levels for the projects system. Only do this if we have a level.
+        await this.musicBlocklyWorkspace.changeLevels(
+          this.props.currentLevelId,
+          this.props.currentScriptId
+        );
+      }
+    } while (currentLevelIndexLoading !== this.props.currentLevelIndex);
     this.props.setIsLoading(false);
   };
 
@@ -686,7 +711,7 @@ class UnconnectedMusicView extends React.Component {
                 <TopButtons
                   clearCode={this.clearCode}
                   uploadSound={file => this.soundUploader.uploadSound(file)}
-                  canShowSaveStatus={this.props.inIncubator}
+                  canShowSaveStatus={this.hasNoProgressHeader()}
                 />
               </div>
               <div id="blockly-div" />
@@ -740,6 +765,8 @@ const MusicView = connect(
 
     // The URL path for retrieving level_data from the server.
     levelDataPath: getLevelDataPath(state),
+
+    isLabLoading: state.lab?.isLoading,
 
     userId: state.currentUser.userId,
     userType: state.currentUser.userType,
