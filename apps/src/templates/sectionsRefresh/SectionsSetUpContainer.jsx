@@ -294,7 +294,7 @@ export default function SectionsSetUpContainer({
           moduleStyles.containerWithMarginTop
         )}
       >
-        {isNewSection && ( // For edit section redirects, adding another section doesn't apply.
+        {isNewSection && ( // Only show 'save and add another' button when creating a new section
           <Button
             className={moduleStyles.buttonLeft}
             icon="plus"

@@ -62,6 +62,7 @@ function showHomepage() {
     updateQueryParam('unitId', undefined, true);
   }
   if ((courseOfferingId && courseVersionId) || query.openAddSectionDialog) {
+    updateQueryParam('openAddSectionDialog', undefined, true);
     store.dispatch(
       beginCreatingSection(courseOfferingId, courseVersionId, unitId)
     );
