@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import {curriculumDataShape} from './curriculumCatalogShapes';
 import i18n from '@cdo/locale';
 import style from '../../../style/code-studio/curriculum_catalog_container.module.scss';
+import {queryParams} from '../../code-studio/utils';
 import HeaderBanner from '../HeaderBanner';
 import CourseCatalogBannerBackground from '../../../static/curriculum_catalog/course-catalog-banner-illustration-01.png';
 import CourseCatalogIllustration01 from '../../../static/curriculum_catalog/course-catalog-illustration-01.png';
@@ -48,6 +49,32 @@ const getEmptyFilters = () => {
   let filters = {};
   Object.keys(filterTypes).forEach(filterKey => {
     filters[filterKey] = [];
+  });
+  return filters;
+};
+
+// Filters out invalid values for the given filter key.
+const getValidParamValues = (filterKey, paramValues) => {
+  if (!Array.isArray(paramValues)) {
+    paramValues = [paramValues];
+  }
+  return paramValues.filter(paramValue => {
+    return Object.keys(filterTypes[filterKey].options).includes(paramValue);
+  });
+};
+
+// Returns initial filter states based on URL parameters (returns empty filters if
+// no relevant parameters in the URL). The filter params are of the form:
+// "filter_name:checked_value_1,checked_value_2,etc."
+const getInitialFilterStates = () => {
+  const filterTypeKeys = Object.keys(filterTypes);
+  const urlParams = queryParams();
+
+  let filters = getEmptyFilters();
+  Object.keys(urlParams).forEach(paramKey => {
+    if (filterTypeKeys.includes(paramKey)) {
+      filters[paramKey] = getValidParamValues(paramKey, urlParams[paramKey]);
+    }
   });
   return filters;
 };
@@ -122,7 +149,9 @@ const filterByDevice = (curriculum, deviceFilters) => {
 
 const CurriculumCatalog = ({curriculaData, isEnglish}) => {
   const [filteredCurricula, setFilteredCurricula] = useState(curriculaData);
-  const [appliedFilters, setAppliedFilters] = useState(getEmptyFilters());
+  const [appliedFilters, setAppliedFilters] = useState(
+    getInitialFilterStates()
+  );
 
   // Filters out any Curriculum Catalog Cards of courses that do not match the filter criteria.
   useEffect(() => {

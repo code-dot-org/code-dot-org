@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 
 import React from 'react';
 import $ from 'jquery';
-import {OverlayTrigger, Tooltip} from 'react-bootstrap';
+import {OverlayTrigger, Tooltip} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 
 export default class SessionAttendanceRow extends React.Component {
   static propTypes = {
