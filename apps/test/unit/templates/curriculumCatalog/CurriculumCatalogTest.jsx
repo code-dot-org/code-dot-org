@@ -261,6 +261,13 @@ describe('CurriculumCatalog', () => {
   });
 
   it('applying filters that yield no results shows no results message', () => {
+    // Does not show the no results message before filtering
+    expect(
+      screen.queryAllByText('No matching curriculums', {
+        exact: false,
+      }).length
+    ).to.equal(0);
+
     // Select "Kindergarten" and "No Device" in device filter (which should yield no results)
     const kindergartenFilterCheckbox = screen.getByDisplayValue('kindergarten');
     fireEvent.click(kindergartenFilterCheckbox);
@@ -276,7 +283,7 @@ describe('CurriculumCatalog', () => {
 
     // Does show the no results message
     expect(
-      screen.getAllByText('No matching curriculums', {
+      screen.queryAllByText('No matching curriculums', {
         exact: false,
       }).length
     ).to.equal(1);
