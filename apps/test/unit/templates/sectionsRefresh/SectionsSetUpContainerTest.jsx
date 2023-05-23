@@ -79,7 +79,6 @@ describe('SectionsSetUpContainer', () => {
     expect(reportSpy).to.have.been.called.once;
 
     sinon.restore();
-    reportSpy.restore();
   });
 
   it('makes an ajax request when save is clicked', async () => {
