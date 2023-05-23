@@ -79,6 +79,7 @@ describe('SectionsSetUpContainer', () => {
     expect(reportSpy).to.have.been.called.once;
 
     sinon.restore();
+    reportSpy.restore();
   });
 
   it('makes an ajax request when save is clicked', async () => {
@@ -110,6 +111,7 @@ describe('SectionsSetUpContainer', () => {
     expect(navigateToHrefSpy.getCall(0).args[0]).to.include('/home');
 
     sinon.restore();
+    fetchSpy.restore();
   });
 
   it('appends showSectionCreationDialog to url if isUsersFirstSection is true', async () => {
@@ -143,6 +145,7 @@ describe('SectionsSetUpContainer', () => {
     );
 
     sinon.restore();
+    fetchSpy.restore();
   });
 
   it('passes participantType and loginType to ajax request when save is clicked', () => {
