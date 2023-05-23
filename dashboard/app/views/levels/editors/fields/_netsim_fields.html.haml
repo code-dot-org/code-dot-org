@@ -7,7 +7,7 @@
 %h1.control-legend{data: {toggle: "collapse", target: "#lobby"}}
   Lobby configuration
 
-#lobby.in.collapse
+#lobby.collapse
   %table.checkboxes
     %tr
       %td= boolean_check_box f, :show_clients_in_lobby
@@ -47,7 +47,7 @@
 %h1.control-legend{data: {toggle: "collapse", target: "#simulation"}}
   Simulation Configuration
 
-#simulation.in.collapse
+#simulation.collapse
   .field
     = f.label :message_granularity, 'Message Granularity'
     %p
@@ -106,7 +106,7 @@
 %h1.control-legend{data: {toggle: "collapse", target: "#packet"}}
   Packet Headers
 
-#packet.in.collapse
+#packet.collapse
   .field
     = f.label :address_format, 'Address format'
     %p
@@ -171,7 +171,7 @@
 %h1.control-legend{data: {toggle: "collapse", target: "#network"}}
   Network Visualization
 
-#network.in.collapse
+#network.collapse
   .field
     %table.checkboxes
       %tr
@@ -184,7 +184,7 @@
 %h1.control-legend{data: {toggle: "collapse", target: "#send-message"}}
   Send a Message Panel
 
-#send-message.in.collapse
+#send-message.collapse
   .field
     %table.checkboxes
       %tr
@@ -205,7 +205,7 @@
 %h1.control-legend{data: {toggle: "collapse", target: "#tabs"}}
   Tabs
 
-#tabs.in.collapse
+#tabs.collapse
   .field
     = f.label :show_tabs, 'Visible tabs'
     %p
@@ -226,7 +226,7 @@
 %h1.control-legend{data: {toggle: "collapse", target: "#my-device"}}
   My Device Tab
 
-#my-device.in.collapse
+#my-device.collapse
   .field
     = f.label :show_encoding_controls, 'Show which encoding controls?'
     %p
@@ -291,7 +291,7 @@
 %h1.control-legend{data: {toggle: "collapse", target: "#router"}}
   Router Tab
 
-#router.in.collapse
+#router.collapse
   .field
     %table.checkboxes
       %tr
@@ -331,7 +331,7 @@
 %h1.control-legend{data: {toggle: "collapse", target: "#dns"}}
   DNS Tab
 
-#dns.in.collapse
+#dns.collapse
   .field
     %table.checkboxes
       %tr
