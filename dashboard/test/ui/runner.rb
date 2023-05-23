@@ -693,9 +693,10 @@ end
 def cucumber_arguments_for_feature(options, test_run_string)
   arguments = ''
   arguments += " --format html --out #{html_output_filename(test_run_string, options)}" if options.html
-  arguments += ' -f pretty' if options.html # include the default (-f pretty) formatter so it does both
   arguments += " --fail-fast" if options.fail_fast
   arguments += " --dry-run" if options.dry_run
+  arguments += ' -c' # colorize output
+  arguments += ' -f pretty' # include the default (-f pretty) formatter
 
   # output a .rerun file: on auto-retry or --retry-failed we only run failed scenarios
   arguments += " --format rerun --out #{rerun_filename test_run_string}"
