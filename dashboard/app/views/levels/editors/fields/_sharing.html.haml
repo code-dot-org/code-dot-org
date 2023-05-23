@@ -1,7 +1,7 @@
 %h1.control-legend{data: {toggle: "collapse", target: "#sharing_area"}}
   Sharing
 
-#sharing_area.in.collapse
+#sharing_area.collapse
   - if @level.respond_to? :disable_sharing
     = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :disable_sharing, description: "Disable sharing"}
     %p If set, this level cannot be shared or saved to galleries even if it's free play.
