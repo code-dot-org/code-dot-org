@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import PropTypes from 'prop-types';
+
 import {curriculumDataShape} from './curriculumCatalogShapes';
 import i18n from '@cdo/locale';
 import style from '../../../style/code-studio/curriculum_catalog_container.module.scss';
@@ -7,6 +8,7 @@ import {queryParams} from '../../code-studio/utils';
 import HeaderBanner from '../HeaderBanner';
 import CourseCatalogBannerBackground from '../../../static/curriculum_catalog/course-catalog-banner-illustration-01.png';
 import CourseCatalogIllustration01 from '../../../static/curriculum_catalog/course-catalog-illustration-01.png';
+import Button from '@cdo/apps/templates/Button';
 import {Heading6} from '@cdo/apps/componentLibrary/typography';
 import CheckboxDropdown from '../CheckboxDropdown';
 import CurriculumCatalogCard from '@cdo/apps/templates/curriculumCatalog/CurriculumCatalogCard';
@@ -192,7 +194,7 @@ const CurriculumCatalog = ({curriculaData, isEnglish}) => {
   };
 
   // Clears all filter selections.
-  const handleClear = () => {
+  const handleClear = e => {
     setAppliedFilters(getEmptyFilters());
   };
 
@@ -228,6 +230,13 @@ const CurriculumCatalog = ({curriculaData, isEnglish}) => {
             handleClearAll={() => handleClearAllOfFilter(filterKey)}
           />
         ))}
+        <Button
+          id="clear-filters"
+          className={style.catalogClearFiltersButton}
+          onClick={handleClear}
+          text={i18n.clearFilters()}
+          styleAsText
+        />
         <button
           id="clear-filters"
           type="button"

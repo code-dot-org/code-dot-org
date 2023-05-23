@@ -2,8 +2,14 @@
 
 .catalogFiltersContainer {
   display: flex;
+  align-items: center;
+  gap: 16px;
   max-width: 60em;
   margin: 1em auto;
+
+  button {
+    margin: 0;
+  }
 }
 
 .catalogClearFiltersButton {

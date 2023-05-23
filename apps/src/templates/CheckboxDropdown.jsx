@@ -1,7 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+
+import Typography from '@cdo/apps/componentLibrary/typography';
 import FontAwesome from './FontAwesome';
+
 import i18n from '@cdo/locale';
+
 import style from './checkbox-dropdown.module.scss';
 
 const CheckboxDropdown = ({
@@ -36,16 +40,17 @@ const CheckboxDropdown = ({
       <ul className={style.dropdownCheckboxUL}>
         {Object.keys(allOptions).map(optionKey => (
           <li key={optionKey} className="checkbox form-group">
-            <input
-              type="checkbox"
-              id={`${optionKey}-check`}
-              name={optionKey}
-              value={optionKey}
-              checked={checkedOptions.includes(optionKey)}
-              onChange={onChange}
-            />
-            <label htmlFor={`${optionKey}-check`}>
-              {allOptions[optionKey]}
+            <label>
+              <input
+                type="checkbox"
+                name={optionKey}
+                value={optionKey}
+                checked={checkedOptions.includes(optionKey)}
+                onChange={onChange}
+              />
+              <Typography semanticTag="span" visualAppearance="body-one">
+                {allOptions[optionKey]}
+              </Typography>
             </label>
           </li>
         ))}
