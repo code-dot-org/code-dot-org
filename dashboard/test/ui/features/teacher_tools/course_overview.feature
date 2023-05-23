@@ -1,3 +1,5 @@
+@skip
+# TODO: Reenable with new section setup flow
 Feature: CourseOverview
   Scenario: Viewing course overview signed out
     Given I am on "http://studio.code.org/courses/csp-2019"

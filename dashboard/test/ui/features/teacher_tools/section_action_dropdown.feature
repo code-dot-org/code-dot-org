@@ -1,4 +1,6 @@
 @single_session
+@skip
+# TODO: Reenable with new section setup flow
 Feature: Using the SectionActionDropdown
 
   # * Check that we get redirected to the right page

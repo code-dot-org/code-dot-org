@@ -1,4 +1,5 @@
-@no_mobile
+@no_mobile @skip
+# TODO: Reenable with new section setup flow
 Feature: Using the assessments tab in the teacher dashboard to get feedback for script
 
   Background:

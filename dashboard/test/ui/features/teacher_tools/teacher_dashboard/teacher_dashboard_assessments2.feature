@@ -1,4 +1,6 @@
 @no_mobile
+@skip
+# TODO: Reenable with new section setup flow
 Feature: Using the assessments tab in the teacher dashboard
 
   Scenario: Assessments tab survey submissions

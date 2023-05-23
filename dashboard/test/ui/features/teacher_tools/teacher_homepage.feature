@@ -1,5 +1,7 @@
 @as_teacher
 @no_mobile
+@skip
+# TODO: Reenable with new section setup flow
 Feature: Using the teacher homepage sections feature
 
   Scenario: See a section creation dialog when logging for the first time

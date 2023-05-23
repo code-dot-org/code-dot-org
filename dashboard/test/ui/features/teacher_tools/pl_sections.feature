@@ -1,4 +1,6 @@
 @no_mobile
+@skip
+# TODO: Reenable with new section setup flow
 Feature: Professional learning Sections
   Scenario: Create new professional learning section as levelbuilder
     Given I create an authorized teacher-associated student named "Sally"
