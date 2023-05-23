@@ -2,7 +2,7 @@ class Grade
   def initialize
   end
 
-  def grade_student_work(prompt, rubric, student_code, student_id, use_cached: false)
+  def grade_student_work(prompt, rubric, student_code, student_id, use_cached: false, examples: [])
     if use_cached && File.exist?("cached_responses/#{student_id}.txt")
       cached_response = File.read("cached_responses/#{student_id}.txt")
       tsv_data = parse_tsv(cached_response.strip)
@@ -15,7 +15,7 @@ class Grade
       'Authorization' => "Bearer #{ENV['OPENAI_API_KEY']}"
     }
 
-    messages = compute_messages(prompt, rubric, student_code)
+    messages = compute_messages(prompt, rubric, student_code, examples: examples)
     data = {
       model: 'gpt-4',
       temperature: 0,
@@ -53,11 +53,15 @@ class Grade
     rows.map {|row| Hash[header.zip(row.split("\t"))]}
   end
 
-  def compute_messages(prompt, rubric, student_code)
-    [
-      {role: 'system', content: prompt},
-      {role: 'user', content: "Rubric:\n#{rubric}\n\nStudent Code:\n#{student_code}"}
+  def compute_messages(prompt, rubric, student_code, examples: [])
+    messages = [
+      {role: 'system', content: "#{prompt}\n\nRubric:\n#{rubric}"}
     ]
+    examples.each do |example_js, example_rubric|
+      messages << {role: 'user', content: example_js}
+      messages << {role: 'assistant', content: example_rubric}
+    end
+    messages << {role: 'user', content: student_code}
   end
 
   def validate_server_response(tsv_data, rubric)

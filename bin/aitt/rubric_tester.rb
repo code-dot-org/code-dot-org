@@ -99,6 +99,16 @@ def get_expected_grades(expected_grades_file)
   expected_grades
 end
 
+def get_examples
+  example_js_files = Dir.glob('examples/*.js').sort
+  example_js_files.map do |example_js_file|
+    example_id = File.basename(example_js_file, '.js')
+    example_code = File.read(example_js_file)
+    example_rubric = File.read("examples/#{example_id}.tsv")
+    [example_code, example_rubric]
+  end
+end
+
 def validate_rubrics(expected_grades, standard_rubric, split_rubric, merge_map, options)
   expected_concepts = expected_grades.values.first.keys[1..].sort
 
@@ -218,6 +228,7 @@ def main
   prompt, standard_rubric, split_rubric, merge_map = read_inputs(prompt_file, standard_rubric_file, split_rubric_file, merge_map_file)
   student_files = get_student_files(max_num_students: options[:max_num_students].to_i, student_ids: options[:student_ids])
   expected_grades = get_expected_grades(expected_grades_file)
+  examples = get_examples
 
   validate_rubrics(expected_grades, standard_rubric, split_rubric, merge_map, options)
 
@@ -226,7 +237,7 @@ def main
   actual_grades = Parallel.map(student_files, in_threads: 7) do |student_file|
     student_id = File.basename(student_file, '.js')
     student_code = File.read(student_file)
-    [student_id, Grade.new.grade_student_work(prompt, rubric, student_code, student_id, use_cached: options[:use_cached])]
+    [student_id, Grade.new.grade_student_work(prompt, rubric, student_code, student_id, use_cached: options[:use_cached], examples: examples)]
   end
 
   # skip students with invalid api response
