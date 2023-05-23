@@ -18,5 +18,5 @@ apt_package 'google-chrome-stable' do
   #
   # This should be at least close to the version we target in browsers.json:
   # https://github.com/code-dot-org/code-dot-org/blob/7c2530fc6f2f8115c5c0cfdbbda2538211493d6f/dashboard/test/ui/browsers.json#L7
-  version '103.0.5060.53-1'
+  version '113.0.5672.126-1'
 end
