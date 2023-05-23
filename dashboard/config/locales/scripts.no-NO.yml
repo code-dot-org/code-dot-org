@@ -2599,3 +2599,15 @@
           lessons:
             lesson-3:
               name: Introduksjon
+        virtual-pl-csd-summer-day1:
+          lessons:
+            lesson-1:
+              name: Introduksjon
+        coursef-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitalt statsborgerskap
+            lessonGroup-4:
+              display_name: Variabler
+          description_short: Lær alle konsepter i Datavitenskap fundamenter og lag
+            din egen kunst, historier og spill.

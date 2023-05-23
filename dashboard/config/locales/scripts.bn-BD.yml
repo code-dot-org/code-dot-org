@@ -962,3 +962,11 @@ bn:
           lessons:
             lesson-3:
               name: ভূমিকা
+        virtual-pl-csd-summer-day1:
+          lessons:
+            lesson-1:
+              name: ভূমিকা
+        coursef-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: চলকগুলো

@@ -13,7 +13,7 @@
     },
     "new_name": null,
     "family_name": "csp5-virtual",
-    "serialized_at": "2022-10-20 16:15:32 UTC",
+    "serialized_at": "2023-05-18 02:06:56 UTC",
     "published_state": "preview",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -207,6 +207,7 @@
       "key": "fdd6ec9b-8d38-4e0b-b72a-f198cfc7bd5a",
       "position": 1,
       "properties": {
+        "duration": 45,
         "name": "Levels"
       },
       "seeding_key": {
@@ -220,6 +221,7 @@
       "key": "992bb30c-80fa-405f-8f65-8b8b9b5efbd0",
       "position": 1,
       "properties": {
+        "duration": 45,
         "name": "Levels"
       },
       "seeding_key": {
@@ -233,6 +235,7 @@
       "key": "dc847bb5-d163-42b9-be27-318bd28b47d9",
       "position": 1,
       "properties": {
+        "duration": 45,
         "name": "Levels"
       },
       "seeding_key": {
@@ -246,6 +249,7 @@
       "key": "5baa0caa-ff72-42b8-9f4f-fe4840441cb6",
       "position": 1,
       "properties": {
+        "duration": 45,
         "name": "Levels"
       },
       "seeding_key": {
@@ -259,6 +263,7 @@
       "key": "06346449-eecc-4f67-a0a4-93c084f304ed",
       "position": 1,
       "properties": {
+        "duration": 45,
         "name": "Levels"
       },
       "seeding_key": {
@@ -272,6 +277,7 @@
       "key": "ccd45bcf-697b-479e-9bdf-2a0a4580f591",
       "position": 1,
       "properties": {
+        "duration": 45,
         "name": "Levels"
       },
       "seeding_key": {
@@ -285,6 +291,7 @@
       "key": "b08397b8-6810-4c47-9b80-1aa8c45c11d5",
       "position": 1,
       "properties": {
+        "duration": 45,
         "name": "Levels"
       },
       "seeding_key": {
@@ -298,6 +305,7 @@
       "key": "b2de0a5e-872e-4b45-aaf3-dc497b9e675b",
       "position": 1,
       "properties": {
+        "duration": 45,
         "name": "Levels"
       },
       "seeding_key": {
@@ -311,6 +319,7 @@
       "key": "3df9ef28-d51f-4b41-b7db-e153d2bae053",
       "position": 1,
       "properties": {
+        "duration": 45,
         "name": "Levels"
       },
       "seeding_key": {
@@ -324,6 +333,7 @@
       "key": "8cd8eb5e-c7bb-4dfa-8943-ac5cff3475d7",
       "position": 1,
       "properties": {
+        "duration": 45,
         "name": "Levels"
       },
       "seeding_key": {
@@ -337,6 +347,7 @@
       "key": "8c68c2f2-d625-4005-8595-7aed6f5a0f59",
       "position": 1,
       "properties": {
+        "duration": 45,
         "name": "Levels"
       },
       "seeding_key": {

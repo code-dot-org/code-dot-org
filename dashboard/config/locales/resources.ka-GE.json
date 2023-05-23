@@ -180,6 +180,7 @@
           "url": "https://docs.google.com/document/d/1Vjn1DhjZm17C-Hde97yDHyeFxMzdPlR6Q-rESZgHw2s/template/preview"
         },
         "introducing_sprite_lab_1/coursef/2022": {
+          "name": "წარმოგიდგენთ Sprite ლაბორატორიას",
           "type": "ვიდეო"
         },
         "blank_space_stories/coursef/2022": {
@@ -1130,12 +1131,14 @@
           "type": "ვიდეო"
         },
         "training_and_testing_in_ai_lab/csd/2022": {
+          "name": "ტრენინგი და ტესტირება AI ლაბორატორიაში",
           "type": "ვიდეო"
         },
         "ai_training_data_bias/csd/2022": {
           "type": "ვიდეო"
         },
         "model_cards_in_ai_lab/csd/2022": {
+          "name": "მოდელის ბარათები AI ლაბორატორიაში",
           "type": "ვიდეო"
         },
         "if-statements_in_app_lab/csd/2022": {
@@ -1643,7 +1646,11 @@
           "name": "აპლიკაციების გამოკვლევა",
           "url": "https://docs.google.com/document/d/1Vjn1DhjZm17C-Hde97yDHyeFxMzdPlR6Q-rESZgHw2s/template/preview"
         },
+        "introducing_sprite_lab/coursef/2021": {
+          "name": "წარმოგიდგენთ Sprite ლაბორატორიას"
+        },
         "introducing_sprite_lab_1/coursef/2021": {
+          "name": "წარმოგიდგენთ Sprite ლაბორატორიას",
           "type": "ვიდეო"
         },
         "sprite_lab_documentation/coursef/2021": {
@@ -2397,12 +2404,14 @@
           "type": "ვიდეო"
         },
         "training_and_testing_in_ai_lab/csd/2021": {
+          "name": "ტრენინგი და ტესტირება AI ლაბორატორიაში",
           "type": "ვიდეო"
         },
         "ai_training_data_bias/csd/2021": {
           "type": "ვიდეო"
         },
         "model_cards_in_ai_lab/csd/2021": {
+          "name": "მოდელის ბარათები AI ლაბორატორიაში",
           "type": "ვიდეო"
         },
         "if-statements_in_app_lab/csd/2021": {

@@ -13,6 +13,7 @@
   "columnDetailsMaximumValue": "最大（さいだい）",
   "dataCardLastUpdated": "最終更新日",
   "predictButton": "予測",
+  "uniqueOptionsWarningNotice": "注記",
   "datasets": {
     "medical_priority": {
       "fields": {

@@ -4588,7 +4588,7 @@ vi-VN:
         - text: màu xanh dương
         - text: màu xanh lá
         - {}
-        - {}
+        - text: màu vàng
         - correct: true
         - text: màu đỏ
         questions:
@@ -5390,7 +5390,7 @@ vi-VN:
         - text: chim cánh cụt
         - text: Ếch
           correct: true
-        - {}
+        - text: hươu cao cổ
         - {}
         questions:
         - {}
@@ -5400,7 +5400,7 @@ vi-VN:
         - text: chim cánh cụt
         - text: Ếch
           correct: true
-        - {}
+        - text: hươu cao cổ
         - {}
         questions:
         - {}
@@ -5410,7 +5410,7 @@ vi-VN:
         - text: chim cánh cụt
         - text: Ếch
           correct: true
-        - {}
+        - text: hươu cao cổ
         - {}
         questions:
         - {}
@@ -5420,7 +5420,7 @@ vi-VN:
           correct: true
         - text: chim cánh cụt
         - text: Ếch
-        - {}
+        - text: hươu cao cổ
         - {}
         questions:
         - {}
@@ -5430,7 +5430,7 @@ vi-VN:
           correct: true
         - text: chim cánh cụt
         - text: Ếch
-        - {}
+        - text: hươu cao cổ
         - {}
         questions:
         - {}
@@ -5440,7 +5440,7 @@ vi-VN:
           correct: true
         - text: chim cánh cụt
         - text: Ếch
-        - {}
+        - text: hươu cao cổ
         - {}
         questions:
         - {}

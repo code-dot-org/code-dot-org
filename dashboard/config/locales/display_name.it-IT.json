@@ -1522,7 +1522,13 @@
         "csd u5 recommender sample": "App di esempio",
         "csd u5 recommender sample_2019": "App di esempio",
         "csd u5 recommender sample_2021": "App di esempio",
-        "csd u5 recommender sample_2022": "App di esempio"
+        "csd u5 recommender sample_2022": "App di esempio",
+        "CSD U6 - Board Outputs - PracA_2222": "Sveglia",
+        "CSD U6 - Board Outputs - PracB_2222": "Debugging!",
+        "CSD U6 - Board Outputs - PracC_2222": "Debugging!",
+        "CSD U6 - Board Outputs - PracD_2222": "Pulsanti del cicalino",
+        "CSD U6 - Color LEDs - PracC_2222": "Sveglia",
+        "CSD U6 - If Variables - ChalE_2222": "Debugging!"
       }
     }
   }

@@ -1884,3 +1884,166 @@ uz:
       7:
         image: 'notes/hoc_dance_congrats_7.png'
         text: "O'quv qo'llanmasining oxirida siz o'zingizning ijodingizga havolani do'stlaringiz bilan baham ko'rishingiz mumkin. Tasavvuringizni kengaytiring va shunchaki zavqlaning!"
+    poemart_intro:
+      1:
+        image: 'notes/hoc_poem_art_2021_introduction_01.jpg'
+        text: "Mening ismim Caia va men shoir va informatika talabasiman. Men kodlashdan juda ko'p narsani o'rgandim, bu meni yaxshi shoirga aylantirdi va she'riyatim haqida ko'p narsa meni kodlashda yaxshiroq qildi, chunki siz tanlagan so'zlar va nimani yaratmoqchi ekanligingiz haqida o'ylashingiz kerak. Hammasi birlashadi."
+      2:
+        image: 'notes/hoc_poem_art_2021_introduction_02.jpg'
+        text: "Keyingi soat ichida siz animatsion she'r yaratib, informatika va she'riyat haqida bilib olasiz. Aslida she'riyat so'z bilan san'at yaratadi. Men o'zimni ifoda etish uchun she'r yarataman; Men o'zimning noyob uslubim va ritmim yordamida yozganimda tomoshabinlarning tasavvurlari va his-tuyg'ularini uyg'otishga harakat qilaman."
+      3:
+        image: 'notes/hoc_poem_art_2021_introduction_03.jpg'
+        text: "Xuddi san'at singari, she'rlarni ham turli yo'llar bilan talqin qilish mumkin. Xuddi shu she'r har xil odamlar uchun juda boshqacha narsani anglatishi mumkin va har bir she'rning o'ziga xos kayfiyati bor. Kayfiyat - bu she'rdan olgan tuyg'u. Ba'zida odamlar ma'lum ranglar va tasvirlarni turli kayfiyat bilan bog'lashadi."
+      4:
+        image: 'notes/hoc_poem_art_2021_introduction_04.jpg'
+        text: "Masalan, sariq rang meni quvnoq his qiladi. Qo'rquv kabi kayfiyat haqida o'ylaganimda, ba'zida boshimda qorong'u va bo'ronli tunni tasavvur qilaman. Ushbu mashg'ulotda siz she'rning kayfiyatini qanday his qilishingizga qarab tasvirlash va jonlantirish imkoniyatiga ega bo'lasiz."
+      5:
+        image: 'notes/hoc_poem_art_2021_introduction_05.jpg'
+        text: "Keling, buni kod yordamida qanday qilishingizni ko'rib chiqaylik. Ekraningiz uchta asosiy qismga bo'linganligini ko'rasiz. Chap tomonda o'yin maydoni joylashgan. Bu erda sizning animatsion she'ringiz paydo bo'ladi. Har bir she'rning nomi va muallifi bor."
+      6:
+        image: 'notes/hoc_poem_art_2021_introduction_06.jpg'
+        text: "Ushbu o'rta maydon asboblar qutisidir. Darsdan o'tayotganda ushbu bo'shliqda yangi kod bloklari paydo bo'ladi."
+      7:
+        image: 'notes/hoc_poem_art_2021_introduction_07.jpg'
+        text: "O'ngdagi bo'sh joy - bu ish maydoni. Dasturingizni yaratish uchun bloklarni asboblar qutisidan va ish maydoniga sudrab borishingiz mumkin."
+      8:
+        image: 'notes/hoc_poem_art_2021_introduction_08.jpg'
+        text: "Har bir daraja uchun ko'rsatmalar bu erda ekranning yuqori qismida bo'ladi. Agar siz maslahat olishni istasangiz, lampochkani bosing."
+      9:
+        image: 'notes/hoc_poem_art_2021_introduction_09.jpg'
+        text: "Birinchidan, o'zingiz yoqtirgan she'rni tanlang. Har xil she'rlar mavjud va siz har bir darajada yangisini tanlashingiz mumkin."
+      10:
+        image: 'notes/hoc_poem_art_2021_introduction_10.jpg'
+        text: "Keyinchalik, she'ringizni jonlantirish uchun asboblar qutisidan bloklarni ish joyingizga sudrab borasiz. Siz she'ringizning kayfiyatiga mos keladigan fon rangini yoki effektini tanlashingiz mumkin, so'ngra she'ringizni amalda ko'rish uchun “Yugurish” tugmasini bosing."
+      11:
+        image: 'notes/hoc_poem_art_2021_introduction_11.jpg'
+        text: "Turli xil she'rlarni o'qish uchun bir oz vaqt sarflang va sizda hissiyotlarni uyg'otadigan she'rni toping. O'zingizni qanday his qilayotganingizni va bu tuyg'uni tasvir va kod orqali qanday etkazishingiz haqida o'ylab ko'ring."
+    poemart_events:
+      1:
+        image: 'notes/hoc_poem_art_2021_events_01.jpg'
+        text: "Ba'zida she'rning kayfiyati she'rning bir qismini o'zgartiradi. Baxtli ovozli she'r sifatida boshlanishi mumkin bo'lgan narsa qayg'uga aylanadi yoki qorong'ulik nurga aylanadi."
+      2:
+        image: 'notes/hoc_poem_art_2021_events_02.jpg'
+        text: "Ushbu mashg'ulotda siz voqealar bilan ishlaysiz. She'ringizdagi ma'lum bir satr paydo bo'lganda, dasturingiz yo'nalishini o'zgartirish uchun ushbu voqea blokidan foydalanishingiz mumkin. E'tibor bering, voqea bloklari sizning asosiy dasturingizga kirmaydi. Buning o'rniga ular o'zlarining kichik dasturlarini yaratadilar."
+      3:
+        image: 'notes/hoc_poem_art_2021_events_03.jpg'
+        text: "She'ringizni o'qing va kayfiyat o'zgarib turadigan lahzani toping. Qaysi satrda sodir bo'lishini hisoblang: bir, ikki, uch. Voqealar blokida satr raqamini kiriting."
+      4:
+        image: 'notes/hoc_poem_art_2021_events_04.jpg'
+        text: "Keyin ekranda bu chiziq paydo bo'lganda kayfiyatning o'zgarishini aks ettirish uchun biror narsani dasturlang. “Run” tugmasini bosganingizda siz kodlagan narsani ko'rishingiz mumkin."
+    poemart_imagery:
+      1:
+        image: 'notes/hoc_poem_art_2021_imagery_01.jpg'
+        text: "She'riyatda mualliflar tasvirdan foydalanib, o'quvchi ongida rasm chizishadi. Timsoh so'zini ko'rganimizda, biz avtomatik ravishda ongimizda yashil timsohni tasavvur qilamiz. Animatsiyaga o'xshash tasvirni olish uchun biz spritlardan foydalanamiz."
+      2:
+        image: 'notes/hoc_poem_art_2021_imagery_02.jpg'
+        text: "Bu sizga sprite qilish va unga kostyum tanlash imkonini beruvchi yangi sprite blokini yaratadi. She'r bilan birga keladigan sprite uchun kostyumni tanlang."
+      3:
+        image: 'notes/hoc_poem_art_2021_imagery_03.jpg'
+        text: "Sprite-ning joylashuvini o'zgartirish uchun siz joylashuv blokidagi pin belgisini bosishingiz va keyin o'yin maydonida qaerga borishni xohlayotganingizni bosishingiz mumkin."
+      4:
+        image: 'notes/hoc_poem_art_2021_imagery_04.jpg'
+        text: "Keyingi bir necha darajalarda siz yangi bloklarni ko'rasiz. Ushbu blok sizning sprite hajmini o'zgartirishga imkon beradi. Ushbu blok sizning sprite-ni xatti-harakatlar bilan jonlantirishga imkon beradi."
+      5:
+        image: 'notes/hoc_poem_art_2021_imagery_05.jpg'
+        text: "Agar she'rda adashgan bulutlar haqida gap ketsa, avval bulutni sprite qiling, so'ngra ushbu xatti-harakatlar blokini tanlang, uni tortib oling va sayr qilishni tanlang."
+      6:
+        image: 'notes/hoc_poem_art_2021_imagery_06.jpg'
+        text: "Sprite kostyumlaringiz mos kelishiga ishonch hosil qiling. Yugurishni bosganingizda, siz aylanib yurgan bulutni o'qiysiz va ko'rasiz."
+      7:
+        image: 'notes/hoc_poem_art_2021_imagery_07.jpg'
+        text: "Endi she'rdagi so'zlarni tasvirlash uchun so'zma-so'z tasvirlarni qo'shishingiz mumkin. Xursand bo'ling!"
+    poemart_celebration:
+      1:
+        image: 'notes/hoc_poem_art_2021_celebration_01.jpg'
+        text: "Tabriklaymiz! Siz hozirgina informatika asoslarini va she'rning kayfiyatini qanday topishni o'rgandingiz. Endi do'stlaringiz bilan baham ko'rish uchun o'zingizning animatsion she'ringizni yaratishingiz mumkin."
+      2:
+        image: 'notes/hoc_poem_art_2021_celebration_02.jpg'
+        text: "Butun she'r uchun oddiy sahnani diqqat bilan tanlaysizmi?"
+      3:
+        image: 'notes/hoc_poem_art_2021_celebration_03.jpg'
+        text: "Yoki she'ringizning har bir satri uchun yangi sahna yaratish uchun ko'plab tadbirlardan foydalanasizmi?"
+      4:
+        image: 'notes/hoc_poem_art_2021_celebration_04.jpg'
+        text: "Qo'llanmaning oxirida do'stlaringiz bilan o'zingizning yaratilishingizga havolani baham ko'rishingiz mumkin."
+      5:
+        image: 'notes/hoc_poem_art_2021_celebration_05.jpg'
+        text: "Tasavvuringizni cho'zing va zavqlaning!"
+    hello_world_intro:
+      1:
+        image: 'notes/hoc_hello_world_2021_introduction_01.jpg'
+        text: "Salom! Mening ismim Erin va men Code.org saytida dasturiy ta'minot muhandisiman. Men juda xursandman, chunki men siz qilmoqchi bo'lgan darslik ustida ishlashim kerak edi! Biz buni “Salom Dunyo” deb ataymiz."
+      2:
+        image: 'notes/hoc_hello_world_2021_introduction_02.jpg'
+        text: "“Salom Dunyo” - bu informatika sohasidagi mashhur ibora va bu iborani namoyish qilish informatika fanini o'rganishda keng tarqalgan birinchi qadamdir. Keyingi soat ichida siz Sprite Lab -da dasturlash orqali informatika bilan shug'ullanasiz."
+      3:
+        image: 'notes/hoc_hello_world_2021_introduction_03.jpg'
+        text: "Sprite Lab - bu xayoliy va qiziqarli loyihalarni yaratish uchun foydalanishingiz mumkin bo'lgan vosita. Ekraningiz uchta asosiy qismga bo'linganligini ko'rasiz. Chap tomonda o'yin maydoni joylashgan. Bu erda sizning spritlaringiz paydo bo'ladi."
+      4:
+        image: 'notes/hoc_hello_world_2021_introduction_04.jpg'
+        text: "Sprites - bu ekrandagi narsalar bo'lib, ular bilan muloqot qilishingiz mumkin, masalan, hikoya yoki o'yindagi belgi yoki element."
+      5:
+        image: 'notes/hoc_hello_world_2021_introduction_05.jpg'
+        text: "Ushbu o'rta maydon asboblar qutisidir. Darsdan o'tayotganda ushbu bo'shliqda yangi kod bloklari paydo bo'ladi."
+      6:
+        image: 'notes/hoc_hello_world_2021_introduction_06.jpg'
+        text: "O'ngdagi bo'sh joy - bu ish maydoni. Dasturingizni yaratish uchun bloklarni asboblar qutisidan va ish maydoniga sudrab borishingiz mumkin."
+      7:
+        image: 'notes/hoc_hello_world_2021_introduction_07.jpg'
+        text: "Har bir daraja uchun ko'rsatmalar bu erda ekranning yuqori qismida bo'ladi. Agar siz maslahat olishni istasangiz, lampochkani bosing."
+      8:
+        image: 'notes/hoc_hello_world_2021_introduction_08.jpg'
+        text: "Boshlash uchun sprite qilaylik! Ushbu blok sizning spriteingizga kostyum va joylashuvni berishga imkon beradi. Kostyum - bu sprite ko'rinishini tasvirlash uchun ishlatadigan so'z. Sprite-ning joylashuvini o'zgartirish uchun siz joylashuv blokidagi pin belgisini bosishingiz va keyin qaerga borishni bosishingiz mumkin."
+      9:
+        image: 'notes/hoc_hello_world_2021_introduction_09.jpg'
+        text: "Keling, sprite o'zini tanishtiraylik! Sprite-ni biror narsa aytishi uchun ushbu “Ayt” blokidan foydalaning va uni dasturingizga qo'shing. “Ayt” blokingizda tanlangan kostyum spritedagi kostyumga mos kelishiga ishonch hosil qiling."
+      10:
+        image: 'notes/hoc_hello_world_2021_introduction_10.jpg'
+        text: "“Run” tugmasini bosganingizda, sprite siz aytgan har qanday matnni aytadi. Endi Sprite Lab bilan ishlashni boshlash va tasavvuringiz sizni qayerga olib borishini ko'rish vaqti keldi!"
+    hello_world_events:
+      1:
+        image: 'notes/hoc_hello_world_2021_events_01.jpg'
+        text: "Endi siz Sprite Lab -dan qanday foydalanishni bilib oldingiz, kimdir u bilan o'ynaganida dasturingizga munosabat bildirishni xohlaysiz. Buning uchun siz voqealardan foydalanasiz. Voqea sizning dasturingizga biror narsa sodir bo'lishini tinglashni va darhol javob berishni aytadi."
+      2:
+        image: 'notes/hoc_hello_world_2021_events_02.jpg'
+        text: "Voqealarning ba'zi misollari sichqonchani bosish, o'q tugmasi yoki ekrandagi kranni tinglashdir. “Chertilganda” kabi bloklar voqea bloklari deb ataladi. Voqealar blokiga ulangan kod tegishli harakat aniqlanganda ishlaydi."
+      3:
+        image: 'notes/hoc_hello_world_2021_events_03.jpg'
+        text: "Misol uchun, agar men ushbu “ayt” blokini “bosilganda” hodisasiga biriktirsam, mening sprite foydalanuvchi bosganida yoki ustiga bosganda biror narsa aytadi. E'tibor bering, voqea bloklari sizning asosiy dasturingizga kirmaydi. Buning o'rniga ular o'zlarining kichik dasturlarini yaratadilar."
+      4:
+        image: 'notes/hoc_hello_world_2021_events_04.jpg'
+        text: "Agar sizda bir nechta spritlar bo'lsa, interaktiv hikoyani aytib berish uchun qo'shimcha tadbirlardan foydalanishingiz mumkin."
+      5:
+        image: 'notes/hoc_hello_world_2021_events_05.jpg'
+        text: "Tez orada siz Sprite laboratoriyasida qanday qilib ko'proq narsani qilishni o'rganasiz, jumladan, sprite o'lchamini yoki ko'rinishini o'zgartirish, turli xil fonlarni o'rnatish, tovushlarni ijro etish va boshqalar. Kimdir ular bilan muloqot qilganda, sizning spritlaringiz nima qilishini xohlaysiz? Bu sizga bog'liq!"
+    hello_world_congrats:
+      1:
+        image: 'notes/hoc_hello_world_2021_freeplay_01.jpg'
+        text: "Tabriklaymiz! Siz hozirgina informatika asoslarini o'rgandingiz. Endi siz xohlagan narsani yaratish uchun Sprite Lab -dan foydalanishingiz mumkin."
+      2:
+        image: 'notes/hoc_hello_world_2021_freeplay_02.jpg'
+        text: "Siz “Kostyumlar” degan tugmani ko'rasiz. Uni bosganingizda kutubxonadan yangi sprite kostyumlarini tanlashingiz mumkin."
+      3:
+        image: 'notes/hoc_hello_world_2021_freeplay_03.jpg'
+        text: "Siz o'zingizni ham chizishingiz mumkin! O'zingiz yoqtirgan kostyumga ega bo'lgach, kodingizga qayting."
+      4:
+        image: 'notes/hoc_hello_world_2021_freeplay_04.jpg'
+        text: "Endi sprite uchun kostyumni tanlang."
+      5:
+        image: 'notes/hoc_hello_world_2021_freeplay_05.jpg'
+        text: "Agar siz asboblar qutisiga qarasangiz, ilgari ko'rmagan yangi bloklarni topasiz. Masalan, sprite-ni qiziqarli va qiziqarli usullar bilan harakatlanishiga imkon beradigan ko'plab xatti-harakatlar bloklari mavjud."
+      6:
+        image: 'notes/hoc_hello_world_2021_freeplay_06.jpg'
+        text: "Ikkita sprit bir-biriga urilganda nima bo'lishini boshqarish uchun siz “tegib ketganda” hodisalar blokidan foydalanishingiz mumkin."
+      7:
+        image: 'notes/hoc_hello_world_2021_freeplay_07.jpg'
+        text: "“Effekt yaratish” blokini qidiring. Ushbu kuchli blokdan buyruq bo'yicha yorilib ketadigan, pop yoki yomg'ir yog'adigan bir nechta spritlarni tayyorlash uchun foydalanish mumkin."
+      8:
+        image: 'notes/hoc_hello_world_2021_freeplay_08.jpg'
+        text: "Atrofga nazar tashlang va ushbu yangi bloklar va xususiyatlar bilan tajriba o'tkazishga harakat qiling. Qo'llanmaning oxirida do'stlaringiz bilan yaratilishingizga havolani almashish uchun “Share” tugmasini bosing."
+      9:
+        image: 'notes/hoc_hello_world_2021_freeplay_09.jpg'
+        text: "Sprite Lab-da ilovalar, o'yinlar va boshqa yangi dasturlarni ishlab chiqishni boshlash uchun sizda barcha kuchli ko'nikmalar mavjud! Yangi kuchlaringizdan yaxshilik uchun foydalaning. Agar siz qog'ozda biror narsa yaratayotgan bo'lsangiz yoki do'stingiz bilan suhbatlashsangiz, xuddi mehribon va hurmatli bo'ling."
+      10:
+        image: 'notes/hoc_hello_world_2021_freeplay_10.jpg'
+        text: "Xo'sh, nima yaratasiz? Siz o'zingiz haqingizda hikoya aytib berishingiz yoki o'zingizning maxsus belgilaringiz bilan tuzishingiz mumkin. Ehtimol, siz hatto keyingi maktab loyihangiz uchun yangi informatika ko'nikmalaringizdan foydalanasiz! Tasavvuringizni cho'zing va zavqlaning!"

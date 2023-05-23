@@ -1,5 +1,5 @@
-@import "color.scss";
-@import "./music-view.module.scss";
+@import 'color.scss';
+@import './music-view.module.scss';
 
 .buttonRow {
   display: flex;
@@ -8,8 +8,8 @@
   max-width: 130px;
 
   .button {
-    background-color: $neutral_dark90;
-    color: $neutral_white;
+    background-color: $dark_black;
+    color: $neutral_light;
     font-size: 13px;
     padding: 5px 10px;
     border-radius: 10px;
@@ -19,44 +19,8 @@
     position: relative;
 
     &:hover {
-      background-color: $neutral_dark80;
+      background-color: $neutral_dark90;
     }
-  }
-}
-
-.saveMessageContainer {
-  position: relative;
-}
-
-.saveMessage {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 150px;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: center;
-  padding: 5px;
-
-  &Saving {
-    color: $neutral-white;
-  }
-
-  &Error {
-    color: $lightest_red;
-  }
-
-  &Text {
-    padding-left: 5px;
-    text-align: right;
-  }
-
-  opacity: 0;
-  transition: opacity 0.1s ease;
-
-  &Show {
-    opacity: 1;
   }
 }
 
@@ -65,7 +29,7 @@
   top: 110px;
   right: 0;
   width: 150px;
-  background-color: $neutral_dark80;
+  background-color: $neutral_dark90;
   border-radius: $default-border-radius;
   padding: 5px;
   opacity: 0;

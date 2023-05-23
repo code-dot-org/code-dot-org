@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-05-15 21:38:53 UTC",
+    "serialized_at": "2023-05-19 22:30:25 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -150,6 +150,8 @@
       "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
+        "overview": "**Purpose:**\nThis session is a facilitator-led orientation to the asynchronous activities. Before sending participants off to complete the asynchronous activities, facilitators should ensure that all participants understand what they are supposed to do and how to access the asynchronous work\n\n**Objectives:**\n\n\n* Participants get an introduction to the asynchronous activities. \n* Participants navigate to the asynchronous activities.\n\n\n**Suggested time:** 10 minutes",
+        "student_overview": "**You will:**\n\n* Get an introduction to the asynchronous activities. \n* Navigate to the asynchronous activities.\n"
       },
       "seeding_key": {
         "lesson.key": "lesson-5",
@@ -159,12 +161,14 @@
     },
     {
       "key": "lesson-6",
-      "name": "Asynchronous Work",
+      "name": "Asynchronous Part 1",
       "absolute_position": 6,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
+        "overview": "**Purpose:**\nThe asynchronous session is an opportunity for participants to both explore a lesson plan for a CS Discoveries lesson and begin to familiarize themselves with the content of their TLO lesson.\n\n**Objectives:**\n* Participants explore the lesson plan and additional resources for their assigned TLO lesson.\n* Participants complete the activities from their assigned TLO lesson. \n\n**Suggested Time:** 60 minutes",
+        "student_overview": "**You will:**\n\n* Explore the lesson plan and additional resources for your assigned TLO lesson.\n* Complete the activities from your assigned TLO lesson. \n"
       },
       "seeding_key": {
         "lesson.key": "lesson-6",
@@ -180,6 +184,8 @@
       "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
+        "overview": "**Purpose:**\nIn this session, participants will have the opportunity to debrief the activities completed as a part of the asynchronous portion of this workshop. \n\n**Objectives:**\n\n* Participants discuss questions that came up during the asynchronous time. \n* Participants reflect on the content introduced in the asynchronous activities. \n* Participants share ideas with the cohort. \n\n**Suggested time:** 15 minutes",
+        "student_overview": "**You will:**\n\n* Discuss questions that came up during the asynchronous time. \n* Reflect on the content introduced in the asynchronous activities. \n* Share ideas with the cohort. \n"
       },
       "seeding_key": {
         "lesson.key": "lesson-7",
@@ -214,7 +220,7 @@
       "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
-        "overview": "**Purpose:** Creating a plan for how to teach the lesson during a 40 minute period in the TLO session at the workshop.\n* Pick a Classroom Practice to Focus On\n* Write out a run of show\n* Make sure everyone in the teaching group has a role\n* Create additional materials needed (posters, etc)\n\n\n**Objectives:**\n* Prepare to deliver TLO lesson\n\n**Suggested Time:** 70 minutes",
+        "overview": "**Purpose:** Creating a plan for how to teach the lesson during a 30-minute period in the TLO session at the workshop.\n* Pick a Classroom Practice to focus on\n* Write out a run of show\n* Make sure everyone in the teaching group has a role\n* Create additional materials needed (posters, etc)\n\n\n**Objectives:**\n* Prepare to deliver TLO lesson\n\n**Suggested Time:** 70 minutes",
         "student_overview": "**You will:**\n* Prepare to deliver your TLO lesson"
       },
       "seeding_key": {
@@ -242,12 +248,14 @@
     },
     {
       "key": "lesson-11",
-      "name": "Asynchronous Work",
+      "name": "Asynchronous Part 2",
       "absolute_position": 11,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 11,
       "properties": {
+        "overview": "**Purpose:**\nThis activity gives participants an opportunity to explore two more instructional strategies in the CS Discoveries curriculum: Using Resources and Assessment. Participants will also have the chance to finish levels they did not complete in the earlier Model Lessons.\n\n**Objectives:**\n* Participants learn more about the key instructional strategies in the CS Discoveries curriculum.\n* Participants contribute to their cohort's shared slide deck and learn from others' responses.\n* Participants complete any remaining challenges from the Model Lessons.\n\n**Suggested time:** 60 minutes",
+        "student_overview": "**You will:**\n\n* Learn more about the key instructional strategies in the CS Discoveries curriculum.\n* Contribute to your cohort's shared slide deck and learn from others' responses.\n* Complete any remaining challenges from the Model Lessons.\n"
       },
       "seeding_key": {
         "lesson.key": "lesson-11",
@@ -336,6 +344,42 @@
       }
     },
     {
+      "key": "0ed6da8d-a76e-4df1-a86d-ccab403ddea8",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0ed6da8d-a76e-4df1-a86d-ccab403ddea8",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csd-summer-day2"
+      }
+    },
+    {
+      "key": "ddf18377-679c-4521-a898-0f7aa8cdff1f",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ddf18377-679c-4521-a898-0f7aa8cdff1f",
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csd-summer-day2"
+      }
+    },
+    {
+      "key": "6e3d9285-e7ac-45d2-a797-fe36c0ef71e1",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6e3d9285-e7ac-45d2-a797-fe36c0ef71e1",
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "virtual-pl-csd-summer-day2"
+      }
+    },
+    {
       "key": "f45ad578-23c3-4787-8c47-c580ada74fb3",
       "position": 1,
       "properties": {
@@ -398,6 +442,18 @@
         "lesson_activity.key": "c65d43db-3239-4650-9f13-e92a12ab283a",
         "lesson.key": "lesson-10",
         "lesson_group.key": "lessonGroup-4",
+        "script.name": "virtual-pl-csd-summer-day2"
+      }
+    },
+    {
+      "key": "8d4a4ff3-50ee-4d14-9caf-0c9de4af1b98",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8d4a4ff3-50ee-4d14-9caf-0c9de4af1b98",
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "virtual-pl-csd-summer-day2"
       }
     }
@@ -529,7 +585,7 @@
       "key": "4d9c0313-7eb5-4e6c-93e0-4d990ac69f7f",
       "position": 4,
       "properties": {
-        "description": "**Discussion Goal:** The parameters in this level will set the *x* and *y* values for the square. Students should recall this from the previous lesson, but what they may not realize is that the top left corner of the square is what will be placed at the *100 x* and *100 y* locations. Using this new information, they will be able to revisit this code at the next level and play with the *x* and *y* parameters to gain a better understanding.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r drawing_in_game_lab_-_part_1/csd3/2023] video in the slides.\n",
+        "description": "**Discussion Goal:** The parameters in this level will set the *x* and *y* values for the square. Students should recall this from the previous lesson, but what they may not realize is that the top left corner of the square is what will be placed at the *100 x* and *100 y* locations. Using this new information, they will be able to revisit this code at the next level and play with the *x* and *y* parameters to gain a better understanding.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r drawing_in_game_lab_-_part_1/csd/2023] video in the slides.\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -580,7 +636,7 @@
       "key": "78a3f8e1-ef11-44bd-ab18-a6efc8b05662",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r drawing_in_game_lab_-_part_2/csd3/2023] video in the slides.\n**Questions to Consider with Video:**\n- What’s the difference between stroke and fill?\n\n**Discussion Goal:** Stroke controls the border color of the shape, and fill controls the color inside of it.\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r drawing_in_game_lab_-_part_2/csd/2023] video in the slides.\n**Questions to Consider with Video:**\n- What’s the difference between stroke and fill?\n\n**Discussion Goal:** Stroke controls the border color of the shape, and fill controls the color inside of it.\n"
       },
       "seeding_key": {
         "activity_section.key": "78a3f8e1-ef11-44bd-ab18-a6efc8b05662",
@@ -683,6 +739,48 @@
       }
     },
     {
+      "key": "713fb254-616d-4b64-bb8e-de996a0ae22f",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "713fb254-616d-4b64-bb8e-de996a0ae22f",
+        "lesson_activity.key": "0ed6da8d-a76e-4df1-a86d-ccab403ddea8"
+      }
+    },
+    {
+      "key": "ef5b9a46-3694-4311-b5bc-7df613f5a9e2",
+      "position": 1,
+      "properties": {
+        "progression_name": "Asynchronous Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "ef5b9a46-3694-4311-b5bc-7df613f5a9e2",
+        "lesson_activity.key": "ddf18377-679c-4521-a898-0f7aa8cdff1f"
+      }
+    },
+    {
+      "key": "fbf8dd2f-fb66-4e34-a052-4c2ac5cc412e",
+      "position": 2,
+      "properties": {
+        "progression_name": "Get to Know Your Lesson"
+      },
+      "seeding_key": {
+        "activity_section.key": "fbf8dd2f-fb66-4e34-a052-4c2ac5cc412e",
+        "lesson_activity.key": "ddf18377-679c-4521-a898-0f7aa8cdff1f"
+      }
+    },
+    {
+      "key": "8f20c443-8bb2-4d03-a51f-0635c3c27713",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "8f20c443-8bb2-4d03-a51f-0635c3c27713",
+        "lesson_activity.key": "6e3d9285-e7ac-45d2-a797-fe36c0ef71e1"
+      }
+    },
+    {
       "key": "7ec1283a-407c-4395-84ca-ae8b16618642",
       "position": 1,
       "properties": {
@@ -778,7 +876,7 @@
       "key": "3b1a7731-92f6-40ca-b77f-18f60db7ee48",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r introduction_to_variables/csd3/2023] video in the slides.\n\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r introduction_to_variables/csd/2023] video in the slides.\n\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -919,6 +1017,50 @@
         "activity_section.key": "2d82b7f6-8e88-48d2-844e-681ccd6caa84",
         "lesson_activity.key": "c65d43db-3239-4650-9f13-e92a12ab283a"
       }
+    },
+    {
+      "key": "cdf03dfc-f73b-482a-84c9-41f4bfccc5c4",
+      "position": 1,
+      "properties": {
+        "progression_name": "Asynchronous Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "cdf03dfc-f73b-482a-84c9-41f4bfccc5c4",
+        "lesson_activity.key": "8d4a4ff3-50ee-4d14-9caf-0c9de4af1b98"
+      }
+    },
+    {
+      "key": "a874a43a-3a8e-4cad-ae26-68bc76dedfa6",
+      "position": 2,
+      "properties": {
+        "progression_name": "Using Resources"
+      },
+      "seeding_key": {
+        "activity_section.key": "a874a43a-3a8e-4cad-ae26-68bc76dedfa6",
+        "lesson_activity.key": "8d4a4ff3-50ee-4d14-9caf-0c9de4af1b98"
+      }
+    },
+    {
+      "key": "261cac50-0765-4d48-ab0a-f500a48a724d",
+      "position": 3,
+      "properties": {
+        "progression_name": "Assessment"
+      },
+      "seeding_key": {
+        "activity_section.key": "261cac50-0765-4d48-ab0a-f500a48a724d",
+        "lesson_activity.key": "8d4a4ff3-50ee-4d14-9caf-0c9de4af1b98"
+      }
+    },
+    {
+      "key": "bc3c6fbd-8421-4c7b-abb3-3ed986e68a60",
+      "position": 4,
+      "properties": {
+        "progression_name": "Completing Model Lesson Levels"
+      },
+      "seeding_key": {
+        "activity_section.key": "bc3c6fbd-8421-4c7b-abb3-3ed986e68a60",
+        "lesson_activity.key": "8d4a4ff3-50ee-4d14-9caf-0c9de4af1b98"
+      }
     }
   ],
   "script_levels": [
@@ -928,6 +1070,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3L3 rect_csd-vpl-23"
+        ],
         "progression": "Predict - Introduction to Game Lab"
       },
       "bonus": false,
@@ -950,6 +1095,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 rect_csd-vpl-23"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -972,6 +1120,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Drawing Squares to Corners_csd-vpl-23"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -994,6 +1145,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 fill_csd-vpl-23"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1016,6 +1170,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 sequence_csd-vpl-23"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1038,6 +1195,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 ellipse_csd-vpl-23"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1060,6 +1220,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 drawing practice choice_csd-vpl-23"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -1082,6 +1245,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U3 debug_csd-vpl-23"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -1104,6 +1270,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 drawing challenges_csd-vpl-23"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -1126,6 +1295,159 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day2-async1"
+        ],
+        "progression": "Asynchronous Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "virtual-pl-csd-summer-day2-async1"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csd-summer-day2",
+        "activity_section.key": "ef5b9a46-3694-4311-b5bc-7df613f5a9e2"
+      },
+      "level_keys": [
+        "virtual-pl-csd-summer-day2-async1"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day2-async1.5"
+        ],
+        "progression": "Get to Know Your Lesson"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "virtual-pl-csd-summer-day2-async1.5"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csd-summer-day2",
+        "activity_section.key": "fbf8dd2f-fb66-4e34-a052-4c2ac5cc412e"
+      },
+      "level_keys": [
+        "virtual-pl-csd-summer-day2-async1.5"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day2-async2"
+        ],
+        "progression": "Get to Know Your Lesson"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "virtual-pl-csd-summer-day2-async2"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csd-summer-day2",
+        "activity_section.key": "fbf8dd2f-fb66-4e34-a052-4c2ac5cc412e"
+      },
+      "level_keys": [
+        "virtual-pl-csd-summer-day2-async2"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day2-async3"
+        ],
+        "progression": "Get to Know Your Lesson"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "virtual-pl-csd-summer-day2-async3"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csd-summer-day2",
+        "activity_section.key": "fbf8dd2f-fb66-4e34-a052-4c2ac5cc412e"
+      },
+      "level_keys": [
+        "virtual-pl-csd-summer-day2-async3"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 5,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day2-async4"
+        ],
+        "progression": "Get to Know Your Lesson"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "virtual-pl-csd-summer-day2-async4"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csd-summer-day2",
+        "activity_section.key": "fbf8dd2f-fb66-4e34-a052-4c2ac5cc412e"
+      },
+      "level_keys": [
+        "virtual-pl-csd-summer-day2-async4"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 6,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day2-async5"
+        ],
+        "progression": "Get to Know Your Lesson"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "virtual-pl-csd-summer-day2-async5"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csd-summer-day2",
+        "activity_section.key": "fbf8dd2f-fb66-4e34-a052-4c2ac5cc412e"
+      },
+      "level_keys": [
+        "virtual-pl-csd-summer-day2-async5"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U3 Variables Predict Where X_csd-vpl-23"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -1143,11 +1465,14 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 17,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Variables Predict Where XY_csd-vpl-23"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -1165,11 +1490,14 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 18,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3L5 - SB1_csd-vpl-23"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1187,11 +1515,14 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 19,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Variables naming rules v2_csd-vpl-23"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1209,11 +1540,14 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 20,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Variables Draw Poppy_csd-vpl-23"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1231,11 +1565,14 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 21,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Games variables practice_csd-vpl-23"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -1253,11 +1590,14 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 22,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U3 Variables assessment_csd-vpl-23"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -1275,11 +1615,14 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 23,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Games variables challenge_csd-vpl-23"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -1294,6 +1637,231 @@
       },
       "level_keys": [
         "CSD Games variables challenge_csd-vpl-23"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day2-async6"
+        ],
+        "progression": "Asynchronous Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "virtual-pl-csd-summer-day2-async6"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "virtual-pl-csd-summer-day2",
+        "activity_section.key": "cdf03dfc-f73b-482a-84c9-41f4bfccc5c4"
+      },
+      "level_keys": [
+        "virtual-pl-csd-summer-day2-async6"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day2-UsingResources1"
+        ],
+        "progression": "Using Resources"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "virtual-pl-csd-summer-day2-UsingResources1"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "virtual-pl-csd-summer-day2",
+        "activity_section.key": "a874a43a-3a8e-4cad-ae26-68bc76dedfa6"
+      },
+      "level_keys": [
+        "virtual-pl-csd-summer-day2-UsingResources1"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day2-UsingResources2"
+        ],
+        "progression": "Using Resources"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "virtual-pl-csd-summer-day2-UsingResources2"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "virtual-pl-csd-summer-day2",
+        "activity_section.key": "a874a43a-3a8e-4cad-ae26-68bc76dedfa6"
+      },
+      "level_keys": [
+        "virtual-pl-csd-summer-day2-UsingResources2"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day2-UsingResources3"
+        ],
+        "progression": "Using Resources"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "virtual-pl-csd-summer-day2-UsingResources3"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "virtual-pl-csd-summer-day2",
+        "activity_section.key": "a874a43a-3a8e-4cad-ae26-68bc76dedfa6"
+      },
+      "level_keys": [
+        "virtual-pl-csd-summer-day2-UsingResources3"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day2-Assessment1"
+        ],
+        "progression": "Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "virtual-pl-csd-summer-day2-Assessment1"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "virtual-pl-csd-summer-day2",
+        "activity_section.key": "261cac50-0765-4d48-ab0a-f500a48a724d"
+      },
+      "level_keys": [
+        "virtual-pl-csd-summer-day2-Assessment1"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 6,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day2-Assessment3"
+        ],
+        "progression": "Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "virtual-pl-csd-summer-day2-Assessment3"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "virtual-pl-csd-summer-day2",
+        "activity_section.key": "261cac50-0765-4d48-ab0a-f500a48a724d"
+      },
+      "level_keys": [
+        "virtual-pl-csd-summer-day2-Assessment3"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 7,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day2-Assessment2"
+        ],
+        "progression": "Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "virtual-pl-csd-summer-day2-Assessment2"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "virtual-pl-csd-summer-day2",
+        "activity_section.key": "261cac50-0765-4d48-ab0a-f500a48a724d"
+      },
+      "level_keys": [
+        "virtual-pl-csd-summer-day2-Assessment2"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 8,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day2-Assessment4"
+        ],
+        "progression": "Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "virtual-pl-csd-summer-day2-Assessment4"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "virtual-pl-csd-summer-day2",
+        "activity_section.key": "261cac50-0765-4d48-ab0a-f500a48a724d"
+      },
+      "level_keys": [
+        "virtual-pl-csd-summer-day2-Assessment4"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day2-Levels"
+        ],
+        "progression": "Completing Model Lesson Levels"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "virtual-pl-csd-summer-day2-Levels"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "virtual-pl-csd-summer-day2",
+        "activity_section.key": "bc3c6fbd-8421-4c7b-abb3-3ed986e68a60"
+      },
+      "level_keys": [
+        "virtual-pl-csd-summer-day2-Levels"
       ]
     }
   ],
@@ -1408,6 +1976,78 @@
     },
     {
       "seeding_key": {
+        "level.key": "virtual-pl-csd-summer-day2-async1",
+        "script_level.level_keys": [
+          "virtual-pl-csd-summer-day2-async1"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csd-summer-day2",
+        "activity_section.key": "ef5b9a46-3694-4311-b5bc-7df613f5a9e2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "virtual-pl-csd-summer-day2-async1.5",
+        "script_level.level_keys": [
+          "virtual-pl-csd-summer-day2-async1.5"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csd-summer-day2",
+        "activity_section.key": "fbf8dd2f-fb66-4e34-a052-4c2ac5cc412e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "virtual-pl-csd-summer-day2-async2",
+        "script_level.level_keys": [
+          "virtual-pl-csd-summer-day2-async2"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csd-summer-day2",
+        "activity_section.key": "fbf8dd2f-fb66-4e34-a052-4c2ac5cc412e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "virtual-pl-csd-summer-day2-async3",
+        "script_level.level_keys": [
+          "virtual-pl-csd-summer-day2-async3"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csd-summer-day2",
+        "activity_section.key": "fbf8dd2f-fb66-4e34-a052-4c2ac5cc412e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "virtual-pl-csd-summer-day2-async4",
+        "script_level.level_keys": [
+          "virtual-pl-csd-summer-day2-async4"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csd-summer-day2",
+        "activity_section.key": "fbf8dd2f-fb66-4e34-a052-4c2ac5cc412e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "virtual-pl-csd-summer-day2-async5",
+        "script_level.level_keys": [
+          "virtual-pl-csd-summer-day2-async5"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csd-summer-day2",
+        "activity_section.key": "fbf8dd2f-fb66-4e34-a052-4c2ac5cc412e"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "CSD U3 Variables Predict Where X_csd-vpl-23",
         "script_level.level_keys": [
           "CSD U3 Variables Predict Where X_csd-vpl-23"
@@ -1500,6 +2140,114 @@
         "lesson_group.key": "lessonGroup-4",
         "script.name": "virtual-pl-csd-summer-day2",
         "activity_section.key": "27820f29-588a-45ba-8696-568e85b83e0e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "virtual-pl-csd-summer-day2-async6",
+        "script_level.level_keys": [
+          "virtual-pl-csd-summer-day2-async6"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "virtual-pl-csd-summer-day2",
+        "activity_section.key": "cdf03dfc-f73b-482a-84c9-41f4bfccc5c4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "virtual-pl-csd-summer-day2-UsingResources1",
+        "script_level.level_keys": [
+          "virtual-pl-csd-summer-day2-UsingResources1"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "virtual-pl-csd-summer-day2",
+        "activity_section.key": "a874a43a-3a8e-4cad-ae26-68bc76dedfa6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "virtual-pl-csd-summer-day2-UsingResources2",
+        "script_level.level_keys": [
+          "virtual-pl-csd-summer-day2-UsingResources2"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "virtual-pl-csd-summer-day2",
+        "activity_section.key": "a874a43a-3a8e-4cad-ae26-68bc76dedfa6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "virtual-pl-csd-summer-day2-UsingResources3",
+        "script_level.level_keys": [
+          "virtual-pl-csd-summer-day2-UsingResources3"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "virtual-pl-csd-summer-day2",
+        "activity_section.key": "a874a43a-3a8e-4cad-ae26-68bc76dedfa6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "virtual-pl-csd-summer-day2-Assessment1",
+        "script_level.level_keys": [
+          "virtual-pl-csd-summer-day2-Assessment1"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "virtual-pl-csd-summer-day2",
+        "activity_section.key": "261cac50-0765-4d48-ab0a-f500a48a724d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "virtual-pl-csd-summer-day2-Assessment3",
+        "script_level.level_keys": [
+          "virtual-pl-csd-summer-day2-Assessment3"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "virtual-pl-csd-summer-day2",
+        "activity_section.key": "261cac50-0765-4d48-ab0a-f500a48a724d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "virtual-pl-csd-summer-day2-Assessment2",
+        "script_level.level_keys": [
+          "virtual-pl-csd-summer-day2-Assessment2"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "virtual-pl-csd-summer-day2",
+        "activity_section.key": "261cac50-0765-4d48-ab0a-f500a48a724d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "virtual-pl-csd-summer-day2-Assessment4",
+        "script_level.level_keys": [
+          "virtual-pl-csd-summer-day2-Assessment4"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "virtual-pl-csd-summer-day2",
+        "activity_section.key": "261cac50-0765-4d48-ab0a-f500a48a724d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "virtual-pl-csd-summer-day2-Levels",
+        "script_level.level_keys": [
+          "virtual-pl-csd-summer-day2-Levels"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "virtual-pl-csd-summer-day2",
+        "activity_section.key": "bc3c6fbd-8421-4c7b-abb3-3ed986e68a60"
       }
     }
   ],

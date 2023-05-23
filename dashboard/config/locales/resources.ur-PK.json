@@ -186,51 +186,64 @@
           "type": "سلائیڈز"
         },
         "graph_paper_programming/coursed/2022": {
+          "name": "گراف کاغذ پروگرامنگ",
           "url": "https://docs.google.com/document/d/1GTB6aTZoQWvkMvx2SWhKerhL8DhevgWlsaetmm5Vpfs/edit?usp=sharing",
           "type": "سرگرمی شیٹ"
         },
         "graph_paper_programming_1/coursed/2022": {
+          "name": "گراف کاغذ پروگرامنگ",
           "url": "https://youtu.be/Y_paSrH2ffw",
           "type": "ان پلگڈ سرگرمی"
         },
         "graph_paper_programming_2/coursed/2022": {
+          "name": "گراف کاغذ پروگرامنگ",
           "url": "https://www.youtube.com/watch?v=vBUtejDNvrs"
         },
         "graph_paper_programming_3/coursed/2022": {
+          "name": "گراف کاغذ پروگرامنگ",
           "url": "https://docs.google.com/document/d/1Nt1vX-8Q-xy7tNyTRElaDFvdVXfpC5e28NbrPreVfPQ/edit",
           "type": "ورک شیٹ کی جوابی کلید"
         },
         "graph_paper_programming_4/coursed/2022": {
+          "name": "گراف کاغذ پروگرامنگ",
           "url": "https://docs.google.com/document/d/1uXNP-9nYnLOeAkh_E8UFzl9Rrpy0rwjVAQVamgdd6XQ/edit",
           "type": "تشخیصات"
         },
         "graph_paper_programming_5/coursed/2022": {
+          "name": "گراف کاغذ پروگرامنگ",
           "url": "https://docs.google.com/document/d/1GXFjDtRjaK8mTnFGb33kT-u72_rXfUh_TyfP7N7Pen4/edit"
         },
         "pair_programming/coursed/2022": {
+          "name": "جوڑی پروگرامنگ",
           "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
           "type": "طالب علم ویڈیو"
         },
         "relay_programming/coursed/2022": {
+          "name": "ریلے پروگرامنگ",
           "url": "https://docs.google.com/document/d/1nneTPNTpboCBMYCr2qpK8DcHSZD6lDi0ovkqkdRDeSc/edit",
           "type": "ورک شیٹ کی جوابی کلید"
         },
         "relay_programming_1/coursed/2022": {
+          "name": "ریلے پروگرامنگ",
           "url": "https://docs.google.com/document/d/1az8K9tDW0XcU2mvQ_1D7CXpZbq7aq5T-x0RiemGlv5s/edit",
           "type": "ورک شیٹ"
         },
         "relay_programming_2/coursed/2022": {
+          "name": "ریلے پروگرامنگ",
           "url": "https://docs.google.com/document/d/1UyiAK9sxuMP3AWjbP0TlsMahNa98LxJwyGWKhcdYpig/edit"
         },
         "relay_programming_3/coursed/2022": {
+          "name": "ریلے پروگرامنگ",
           "url": "https://youtu.be/l5MKkXbzOsk",
           "type": "ان پلگڈ سرگرمی"
         },
         "relay_programming_4/coursed/2022": {
+          "name": "ریلے پروگرامنگ",
           "url": "https://youtu.be/ZULpfAVJOBo",
           "type": "ٹیچر ویڈیو"
         },
         "relay_programming_5/coursed/2022": {
+          "name": "ریلے پروگرامنگ",
           "url": "https://docs.google.com/document/d/1O7nVu6CYhQ_5rWXdAGWEh-e79jZvR__D9xrqSg8Q05o/edit",
           "type": "سرگرمی پیکٹ"
         },
@@ -382,6 +395,7 @@
           "type": "جوابی کلید"
         },
         "introducing_sprite_lab_1/coursef/2022": {
+          "name": "سپرائٹ لیب متعارف کرانا",
           "url": "https://youtu.be/yd-9xZ275dM",
           "type": "ویڈیو"
         },
@@ -441,10 +455,12 @@
           "type": "وسیلہ"
         },
         "internet/coursef/2022": {
+          "name": "انٹرنیٹ",
           "url": "https://docs.google.com/document/d/1xqKUsyGloccd5_qulTARCzw5zLpEF3jSFrvDfLYrqAs/edit",
           "type": "تشخیصات"
         },
         "internet_1/coursef/2022": {
+          "name": "انٹرنیٹ",
           "url": "https://docs.google.com/document/d/1uUY1zm6d7LZySpXzW9CFZaI8tcY4fzw_-w3Z2WbKVwI/edit"
         },
         "ip_address_cards_and_delivery_type_cards/coursef/2022": {
@@ -452,6 +468,7 @@
           "url": "https://docs.google.com/document/d/1wnDD_Jm7JOApWQ5aPOcZVag4_h7lhBpl-QbCFIZAz6o/edit"
         },
         "the_internet/coursef/2022": {
+          "name": "انٹرنیٹ",
           "url": "https://youtu.be/mFOUbqYv1Sc",
           "type": "ان پلگڈ سرگرمی"
         },
@@ -676,18 +693,22 @@
           "type": "وسیلہ"
         },
         "move_it_move_it/courseb/2022": {
+          "name": "اسے منتقل کریں، اسے منتقل کریں",
           "url": "https://docs.google.com/document/d/1xavPzpNq1GO7zzOzreES0Kl8FPcbjILFzfmORUqttcg/edit",
           "type": "نقشہ کی سرگرمی"
         },
         "move_it_move_it_1/courseb/2022": {
+          "name": "اسے منتقل کریں، اسے منتقل کریں",
           "url": "https://docs.google.com/document/d/1eOrX6kpPKLzUD3GpvGy9XxupnMZJrtaeh2bfe0zOz64/edit",
           "type": "ورک شیٹ"
         },
         "move_it_move_it_2/courseb/2022": {
+          "name": "اسے منتقل کریں، اسے منتقل کریں",
           "url": "https://docs.google.com/document/d/1bdGOgeZ9Z4MS_yxBLt-Mit2Rhr4rCNWL7HC-i1Qmpi4/edit",
           "type": "ورک شیٹ کی جوابی کلید"
         },
         "move_it_move_it_3/courseb/2022": {
+          "name": "اسے منتقل کریں، اسے منتقل کریں",
           "url": "http://youtu.be/aV4rqNUG-Jw?list=PL2DhNKNdmOtqBgWyF5kmy2oPh0U-Zfv2G",
           "type": "ٹیچر ویڈیو"
         },
@@ -709,6 +730,7 @@
           "name": "Code.org پر کلاس سیکشن کیسے بنایا جائے۔"
         },
         "pair_programming/courseb/2022": {
+          "name": "جوڑی پروگرامنگ",
           "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
           "type": "طالب علم ویڈیو"
         },
@@ -736,26 +758,32 @@
           "url": "https://docs.google.com/document/d/19dHJCfmQNs3meKN3sTL91qsfmHYjZCYfbFq91J4fj3k/edit"
         },
         "stevie_and_the_big_project/courseb/2022": {
+          "name": "سٹیوی اور بگ پروجیکٹ",
           "url": "https://drive.google.com/file/d/0B-uvt08wYSQqTUFzaGxKSk45QkU/view",
           "type": "وسیلہ"
         },
         "unspotted_bugs/courseb/2022": {
+          "name": "بے داغ کیڑے",
           "url": "https://youtu.be/rah3DYlp5nQ",
           "type": "ویڈیو"
         },
         "getting_loopy/courseb/2022": {
+          "name": "لوپی حاصل کرنا",
           "url": "https://youtu.be/JoKTqHCni0M",
           "type": "ان پلگڈ سرگرمی"
         },
         "getting_loopy_1/courseb/2022": {
+          "name": "لوپی حاصل کرنا",
           "url": "https://docs.google.com/document/d/1SwYDo6fwkEZRRGogPozWBXCLLncddDS5dLNFgRDe6VQ/edit",
           "type": "ورک شیٹ"
         },
         "getting_loopy_2/courseb/2022": {
+          "name": "لوپی حاصل کرنا",
           "url": "https://docs.google.com/document/d/1MG-vF7zU-abEPZ60bVcK4RhwZ4vfuknBfUkm-4tvoX8/edit",
           "type": "تشخیصات"
         },
         "getting_loopy_3/courseb/2022": {
+          "name": "لوپی حاصل کرنا",
           "url": "https://docs.google.com/document/d/15YLSUX5TT6P9nRKW4tA0f9weEe0Qs4wV5Ylu08wzXFs/edit"
         },
         "cs_fundamentals_main_activity_tips/courseb/2022": {
@@ -772,13 +800,16 @@
           "url": "https://docs.google.com/presentation/d/1WzO71WwSTbn2XhkWjG3tvD7vnQbsCSb58rhSBpurQjw/edit#slide=id.g45fb8e6318_0_0"
         },
         "the_big_event/courseb/2022": {
+          "name": "بڑی تقریب",
           "url": "https://www.youtube.com/watch?v=XoApWo-IrI4"
         },
         "the_big_event_1/courseb/2022": {
+          "name": "بڑی تقریب",
           "url": "https://docs.google.com/document/d/1lzVlB8JzpMLLGVumwVL8ybsBX42eFCSSucrZ19-N9Tw/edit",
           "type": "تشخیصات"
         },
         "the_big_event_2/courseb/2022": {
+          "name": "بڑی تقریب",
           "url": "https://docs.google.com/document/d/1VU2rC918ZY6DM2hunN6FsiDUW6Q1vEqyiJAPWQ6aoX8/edit"
         },
         "the_big_event_courses_a_b_/courseb/2022": {
@@ -811,6 +842,7 @@
           "type": "وسیلہ"
         },
         "pair_programming/express/2022": {
+          "name": "جوڑی پروگرامنگ",
           "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
           "type": "ویڈیو"
         },
@@ -842,6 +874,7 @@
           "url": "https://studio.code.org/levels/18623"
         },
         "sprites_in_action/express/2022": {
+          "name": "ایکشن میں سپرائٹس",
           "url": "https://docs.google.com/presentation/d/1JdBmPn9XHWiXhGALqwxoR1g6R5TwFaQhVRmq22XLdYY/template/preview",
           "type": "سلائیڈز"
         },
@@ -916,6 +949,7 @@
           "type": "ٹیچر ویڈیو"
         },
         "pair_programming/pre-express/2022": {
+          "name": "جوڑی پروگرامنگ",
           "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
           "type": "طالب علم ویڈیو"
         },
@@ -994,6 +1028,7 @@
           "type": "ویڈیو"
         },
         "pair_programming/coursea/2022": {
+          "name": "جوڑی پروگرامنگ",
           "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
           "type": "طالب علم ویڈیو"
         },
@@ -1022,6 +1057,7 @@
           "url": "https://docs.google.com/document/d/19dHJCfmQNs3meKN3sTL91qsfmHYjZCYfbFq91J4fj3k/edit"
         },
         "happy_maps/coursea/2022": {
+          "name": "مبارک نقشے",
           "url": "https://youtu.be/hrnhiKAQ1_k",
           "type": "ان پلگڈ سرگرمی"
         },
@@ -1079,14 +1115,17 @@
           "type": "ویڈیو"
         },
         "the_big_event/coursea/2022": {
+          "name": "بڑی تقریب",
           "url": "https://youtu.be/u0WV9shCoak",
           "type": "ان پلگڈ سرگرمی"
         },
         "the_big_event_1/coursea/2022": {
+          "name": "بڑی تقریب",
           "url": "https://docs.google.com/document/d/1lzVlB8JzpMLLGVumwVL8ybsBX42eFCSSucrZ19-N9Tw/edit",
           "type": "تشخیصات"
         },
         "the_big_event_2/coursea/2022": {
+          "name": "بڑی تقریب",
           "url": "https://docs.google.com/document/d/1VU2rC918ZY6DM2hunN6FsiDUW6Q1vEqyiJAPWQ6aoX8/edit"
         },
         "the_big_event_courses_a_b_/coursea/2022": {
@@ -1193,6 +1232,7 @@
           "type": "وسیلہ"
         },
         "pair_programming/coursec/2022": {
+          "name": "جوڑی پروگرامنگ",
           "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
           "type": "ویڈیو"
         },
@@ -1216,14 +1256,17 @@
           "type": "طالب علم کے لیے ہینڈ آؤٹ"
         },
         "the_big_event/coursec/2022": {
+          "name": "بڑی تقریب",
           "url": "https://youtu.be/u0WV9shCoak",
           "type": "ان پلگڈ سرگرمی"
         },
         "the_big_event_1/coursec/2022": {
+          "name": "بڑی تقریب",
           "url": "https://docs.google.com/document/d/1lzVlB8JzpMLLGVumwVL8ybsBX42eFCSSucrZ19-N9Tw/edit",
           "type": "تشخیصات"
         },
         "the_big_event_2/coursec/2022": {
+          "name": "بڑی تقریب",
           "url": "https://docs.google.com/document/d/1VU2rC918ZY6DM2hunN6FsiDUW6Q1vEqyiJAPWQ6aoX8/edit"
         },
         "the_big_event_course_c_/coursec/2022": {
@@ -1256,21 +1299,26 @@
           "type": "ورک شیٹ"
         },
         "binary_bracelets/coursec/2022": {
+          "name": "ثنائی کمگن",
           "url": "https://youtu.be/3S2YfoO4_CM",
           "type": "ان پلگڈ سرگرمی"
         },
         "binary_bracelets_1/coursec/2022": {
+          "name": "ثنائی کمگن",
           "url": "https://www.youtube.com/watch?v=fDLkBqZpxWQ"
         },
         "binary_bracelets_2/coursec/2022": {
+          "name": "ثنائی کمگن",
           "url": "https://docs.google.com/document/d/1YV1Oer_1DMzilyHriimgPVZnaC6JUjU5YDE8Ui065hE/edit",
           "type": "ورک شیٹ"
         },
         "binary_bracelets_3/coursec/2022": {
+          "name": "ثنائی کمگن",
           "url": "https://docs.google.com/document/d/14Huy1clX_WgDnQQFugnF5fwoF6POWRZ-8skc1Eyr4bU/edit",
           "type": "تشخیصات"
         },
         "binary_bracelets_4/coursec/2022": {
+          "name": "ثنائی کمگن",
           "url": "https://docs.google.com/document/d/1EaTbrdNbGpY_mI-FfV0GZ2uHSfcQIGuAkXqd1qFkUbE/edit"
         },
         "bits_versus_bytes/coursec/2022": {
@@ -1382,6 +1430,9 @@
         "data_and_machine_learning/csd/2022": {
           "type": "سلائیڈز"
         },
+        "make_a_recommendation/csd/2022": {
+          "type": "پیر کا جائزہ"
+        },
         "make_a_recommendation_1/csd/2022": {
           "type": "روبرک"
         },
@@ -1394,7 +1445,11 @@
         "problem_solving_process_1/csd/2022": {
           "type": "ویڈیو"
         },
+        "the_problem_solving_process/csd/2022": {
+          "name": "مسئلہ حل کرنے کا عمل"
+        },
         "the_problem_solving_process_1/csd/2022": {
+          "name": "مسئلہ حل کرنے کا عمل",
           "type": "سلائیڈز"
         },
         "solving_problems/csd/2022": {
@@ -1405,6 +1460,9 @@
         },
         "what_is_a_computer/csd/2022": {
           "type": "ویڈیو"
+        },
+        "what_is_a_computer_/csd/2022": {
+          "name": "کمپیوٹر کیا ہے؟"
         },
         "what_is_a_computer_1/csd/2022": {
           "type": "سلائیڈز"
@@ -1423,6 +1481,9 @@
         },
         "apps_and_problem_solving_-_student_checklist/csd/2022": {
           "type": "وسیلہ"
+        },
+        "apps_and_problem_solving_1/csd/2022": {
+          "type": "پیر کا جائزہ"
         },
         "apps_and_problem_solving_2/csd/2022": {
           "type": "روبرک"
@@ -1502,6 +1563,7 @@
           "type": "وسیلہ"
         },
         "the_animation_tab/csd/2022": {
+          "name": "حرکت پذیری ٹیب",
           "type": "ویڈیو"
         },
         "sprites_1/csd/2022": {
@@ -1551,12 +1613,14 @@
           "type": "سلائیڈز"
         },
         "boolean_expressions/csd/2022": {
+          "name": "بولین اظہار",
           "type": "ویڈیو"
         },
         "booleans_and_comparison_operators/csd/2022": {
           "type": "وسیلہ"
         },
         "conditional_statements/csd/2022": {
+          "name": "مشروط بیانات",
           "type": "ویڈیو"
         },
         "if_statements/csd/2022": {
@@ -1573,6 +1637,7 @@
           "type": "وسیلہ"
         },
         "if_else_statements/csd/2022": {
+          "name": "اگر/اور بیانات",
           "type": "ویڈیو"
         },
         "mouse_input/csd/2022": {
@@ -1581,6 +1646,9 @@
         "extra_code_in_challenge_levels_1/csd/2022": {
           "type": "وسیلہ"
         },
+        "interactive_card_2/csd/2022": {
+          "type": "پیر کا جائزہ"
+        },
         "interactive_card_3/csd/2022": {
           "type": "روبرک"
         },
@@ -1588,12 +1656,15 @@
           "type": "سلائیڈز"
         },
         "velocity/csd/2022": {
+          "name": "سمتار",
           "type": "ویڈیو"
         },
         "velocity_1/csd/2022": {
+          "name": "سمتار",
           "type": "وسیلہ"
         },
         "velocity_2/csd/2022": {
+          "name": "سمتار",
           "type": "سلائیڈز"
         },
         "collision_detection_1/csd/2022": {
@@ -1624,12 +1695,15 @@
           "type": "سلائیڈز"
         },
         "functions/csd/2022": {
+          "name": "افعال",
           "type": "ویڈیو"
         },
         "functions_1/csd/2022": {
+          "name": "افعال",
           "type": "وسیلہ"
         },
         "functions_4/csd/2022": {
+          "name": "افعال",
           "type": "سلائیڈز"
         },
         "the_game_design_process/csd/2022": {
@@ -1637,6 +1711,9 @@
         },
         "using_the_game_design_process/csd/2022": {
           "type": "سلائیڈز"
+        },
+        "make_your_own_game_2/csd/2022": {
+          "type": "پیر کا جائزہ"
         },
         "make_your_own_game_3/csd/2022": {
           "type": "روبرک"
@@ -1677,6 +1754,9 @@
         "html_web_page/csd/2022": {
           "type": "روبرک"
         },
+        "html_web_page_2/csd/2022": {
+          "type": "پیر کا جائزہ"
+        },
         "lists/csd/2022": {
           "name": "فہرستیں",
           "type": "وسیلہ"
@@ -1688,9 +1768,11 @@
           "type": "سلائیڈز"
         },
         "intro_to_css_-_part_1/csd/2022": {
+          "name": "سی ایس ایس کا تعارف - حصہ 1",
           "type": "ویڈیو"
         },
         "intro_to_css_-_part_2/csd/2022": {
+          "name": "سی ایس ایس کا تعارف - حصہ 2",
           "type": "ویڈیو"
         },
         "style_sheets/csd/2022": {
@@ -1704,6 +1786,9 @@
         },
         "your_personal_style/csd/2022": {
           "type": "روبرک"
+        },
+        "your_personal_style_1/csd/2022": {
+          "type": "پیر کا جائزہ"
         },
         "mini-project_your_personal_style/csd/2022": {
           "type": "سلائیڈز"
@@ -1734,6 +1819,9 @@
         },
         "extra_code_in_challenge_levels/csd/2022": {
           "type": "وسیلہ"
+        },
+        "personal_web_page/csd/2022": {
+          "type": "پیر کا جائزہ"
         },
         "personal_web_page_-_student_checklist/csd/2022": {
           "type": "وسیلہ"
@@ -1785,6 +1873,9 @@
         },
         "project_-_website_for_a_purpose/csd/2022": {
           "type": "سلائیڈز"
+        },
+        "website_for_a_purpose_1/csd/2022": {
+          "type": "پیر کا جائزہ"
         },
         "peer_review_and_final_touches/csd/2022": {
           "type": "سلائیڈز"
@@ -1901,6 +1992,7 @@
           "type": "سلائیڈز"
         },
         "computer_science_is_changing_everything/csd/2022": {
+          "name": "کمپیوٹر سائنس ہر چیز کو تبدیل کر رہا ہے",
           "type": "ویڈیو"
         },
         "computing_innovations_research_areas/csd/2022": {
@@ -2020,6 +2112,7 @@
           "type": "وسیلہ"
         },
         "introduction_to_arrays/csd/2022": {
+          "name": "آراء کا تعارف",
           "type": "ویڈیو"
         },
         "making_music/csd/2022": {
@@ -2038,15 +2131,19 @@
           "type": "وسیلہ"
         },
         "functions_2/csd/2022": {
+          "name": "افعال",
           "type": "سلائیڈز"
         },
         "functions_3/csd/2022": {
+          "name": "افعال",
           "type": "ویڈیو"
         },
         "functions_with_parameters/csd/2022": {
+          "name": "پیرامیٹرز کے ساتھ افعال",
           "type": "ویڈیو"
         },
         "functions_5/csd/2022": {
+          "name": "افعال",
           "type": "وسیلہ"
         },
         "mini-project_interactive_art/csd/2022": {
@@ -2123,15 +2220,18 @@
           "type": "وسیلہ"
         },
         "introduction_to_ai_lab/csd/2022": {
+          "name": "AI لیب کا تعارف",
           "type": "سلائیڈز"
         },
         "introduction_to_ai_lab_1/csd/2022": {
+          "name": "AI لیب کا تعارف",
           "type": "ویڈیو"
         },
         "selecting_features/csd/2022": {
           "type": "وسیلہ"
         },
         "training_and_testing_in_ai_lab/csd/2022": {
+          "name": "تربیت اور جانچ اس میں AI لیب",
           "type": "ویڈیو"
         },
         "using_data_with_categorical_features/csd/2022": {
@@ -2155,6 +2255,7 @@
           "type": "جوابی کلید"
         },
         "model_cards_in_ai_lab/csd/2022": {
+          "name": "AI لیب میں ماڈل کارڈ",
           "type": "ویڈیو"
         },
         "saving_models_in_ai_lab/csd/2022": {
@@ -2185,9 +2286,14 @@
           "type": "جوابی کلید"
         },
         "numerical_data_in_ai_lab/csd/2022": {
+          "name": "عددی ڈیٹا میں AI لیب",
           "type": "سلائیڈز"
         },
+        "numerical_data_in_ai_lab_1/csd/2022": {
+          "name": "عددی ڈیٹا میں AI لیب"
+        },
         "numerical_data_in_ai_lab_2/csd/2022": {
+          "name": "عددی ڈیٹا میں AI لیب",
           "type": "ویڈیو"
         },
         "using_data_with_numerical_features/csd/2022": {
@@ -2657,10 +2763,12 @@
           "type": "جوابی کلید"
         },
         "introducing_sprite_lab/coursef/2021": {
+          "name": "سپرائٹ لیب متعارف کرانا",
           "url": "https://docs.google.com/presentation/d/1DViz9dJjZv01OJ0uKKUkzD35L5BwSt4ot46KyTonX3A/template/preview",
           "type": "سلائیڈز"
         },
         "introducing_sprite_lab_1/coursef/2021": {
+          "name": "سپرائٹ لیب متعارف کرانا",
           "url": "https://youtu.be/yd-9xZ275dM",
           "type": "ویڈیو"
         },
@@ -2674,6 +2782,7 @@
           "type": "وسیلہ"
         },
         "sprites_in_action/coursef/2021": {
+          "name": "ایکشن میں سپرائٹس",
           "url": "https://docs.google.com/presentation/d/1JdBmPn9XHWiXhGALqwxoR1g6R5TwFaQhVRmq22XLdYY/template/preview",
           "type": "سلائیڈز"
         },
@@ -2743,14 +2852,17 @@
           "type": "ویڈیو"
         },
         "activity-answer-for-loop-fun/coursef/2021": {
+          "name": "لوپ تفریح کے لئے",
           "url": "https://docs.google.com/document/d/1DPEOgWHVAAfnLXhuBWDw51nnGy1qSV9QPj9L2rUrvv8/edit",
           "type": "ورک شیٹ کی جوابی کلید"
         },
         "csf-for-loop-fun-assessment/coursef/2021": {
+          "name": "لوپ تفریح کے لئے",
           "url": "https://docs.google.com/document/d/1iyfroULEOlaLH52MY9PUwUHPk9R6jAMn0rbjlwNtCWs/edit",
           "type": "تشخیصات"
         },
         "csf-for-loop-fun-worksheet/coursef/2021": {
+          "name": "لوپ تفریح کے لئے",
           "url": "https://docs.google.com/document/d/15Sn7JZ-Twp3SUK6ObDClqwueAoA_0Wn0MGlIdxSQGHM/edit",
           "type": "ورک شیٹ"
         },
@@ -2760,9 +2872,11 @@
           "type": "ٹیچر کلید"
         },
         "lesson-in-action-for-loop-fun/coursef/2021": {
+          "name": "لوپ تفریح کے لئے",
           "url": "https://www.youtube.com/watch?v=HO4uhoahtjM"
         },
         "unplugged-video-for-loop-fun/coursef/2021": {
+          "name": "لوپ تفریح کے لئے",
           "url": "https://youtu.be/mX857v5B4gE",
           "type": "ان پلگڈ سرگرمی"
         },
@@ -2790,9 +2904,11 @@
           "type": "ویڈیو"
         },
         "assessment-answer-internet/coursef/2021": {
+          "name": "انٹرنیٹ",
           "url": "https://docs.google.com/document/d/1uUY1zm6d7LZySpXzW9CFZaI8tcY4fzw_-w3Z2WbKVwI/edit"
         },
         "csf-internet-assessment/coursef/2021": {
+          "name": "انٹرنیٹ",
           "url": "https://docs.google.com/document/d/1xqKUsyGloccd5_qulTARCzw5zLpEF3jSFrvDfLYrqAs/edit",
           "type": "تشخیصات"
         },
@@ -2806,6 +2922,7 @@
           "type": "وسیلہ"
         },
         "unplugged-video-internet/coursef/2021": {
+          "name": "انٹرنیٹ",
           "url": "https://youtu.be/mFOUbqYv1Sc",
           "type": "ان پلگڈ سرگرمی"
         },
@@ -2903,18 +3020,22 @@
           "type": "وسیلہ"
         },
         "mimi-activity/courseb/2021": {
+          "name": "اسے منتقل کریں، اسے منتقل کریں",
           "url": "https://docs.google.com/document/d/1xavPzpNq1GO7zzOzreES0Kl8FPcbjILFzfmORUqttcg/edit",
           "type": "نقشہ کی سرگرمی"
         },
         "mimi-debugging/courseb/2021": {
+          "name": "اسے منتقل کریں، اسے منتقل کریں",
           "url": "https://docs.google.com/document/d/1eOrX6kpPKLzUD3GpvGy9XxupnMZJrtaeh2bfe0zOz64/edit",
           "type": "ورک شیٹ"
         },
         "mimi-teacher-puzzle/courseb/2021": {
+          "name": "اسے منتقل کریں، اسے منتقل کریں",
           "url": "https://docs.google.com/document/d/1bdGOgeZ9Z4MS_yxBLt-Mit2Rhr4rCNWL7HC-i1Qmpi4/edit",
           "type": "ورک شیٹ کی جوابی کلید"
         },
         "teacher-video-move-it/courseb/2021": {
+          "name": "اسے منتقل کریں، اسے منتقل کریں",
           "url": "http://youtu.be/aV4rqNUG-Jw?list=PL2DhNKNdmOtqBgWyF5kmy2oPh0U-Zfv2G",
           "type": "ٹیچر ویڈیو"
         },
@@ -2941,6 +3062,7 @@
           "url": "https://studio.code.org/s/jigsaw"
         },
         "pair-programming-vid/courseb/2021": {
+          "name": "جوڑی پروگرامنگ",
           "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
           "type": "طالب علم ویڈیو"
         },
@@ -2964,25 +3086,31 @@
           "url": "https://docs.google.com/document/d/19dHJCfmQNs3meKN3sTL91qsfmHYjZCYfbFq91J4fj3k/edit"
         },
         "stevie_and_the_big_project/courseb/2021": {
+          "name": "سٹیوی اور بگ پروجیکٹ",
           "url": "https://drive.google.com/file/d/0B-uvt08wYSQqTUFzaGxKSk45QkU/view",
           "type": "وسیلہ"
         },
         "unspotted_bugs/courseb/2021": {
+          "name": "بے داغ کیڑے",
           "url": "https://youtu.be/rah3DYlp5nQ",
           "type": "ویڈیو"
         },
         "assessment-answer-getting-loopy/courseb/2021": {
+          "name": "لوپی حاصل کرنا",
           "url": "https://docs.google.com/document/d/15YLSUX5TT6P9nRKW4tA0f9weEe0Qs4wV5Ylu08wzXFs/edit"
         },
         "csf-getting-loopy-activity-worksheet/courseb/2021": {
+          "name": "لوپی حاصل کرنا",
           "url": "https://docs.google.com/document/d/1SwYDo6fwkEZRRGogPozWBXCLLncddDS5dLNFgRDe6VQ/edit",
           "type": "ورک شیٹ"
         },
         "csf-getting-loopy-assessment/courseb/2021": {
+          "name": "لوپی حاصل کرنا",
           "url": "https://docs.google.com/document/d/1MG-vF7zU-abEPZ60bVcK4RhwZ4vfuknBfUkm-4tvoX8/edit",
           "type": "تشخیصات"
         },
         "unplugged-video-getting-loopy/courseb/2021": {
+          "name": "لوپی حاصل کرنا",
           "url": "https://youtu.be/JoKTqHCni0M",
           "type": "ان پلگڈ سرگرمی"
         },
@@ -3000,9 +3128,11 @@
           "url": "https://docs.google.com/presentation/d/1WzO71WwSTbn2XhkWjG3tvD7vnQbsCSb58rhSBpurQjw/edit#slide=id.g45fb8e6318_0_0"
         },
         "assessment-answer-big-event/courseb/2021": {
+          "name": "بڑی تقریب",
           "url": "https://docs.google.com/document/d/1VU2rC918ZY6DM2hunN6FsiDUW6Q1vEqyiJAPWQ6aoX8/edit"
         },
         "csf-the-big-event-assessment/courseb/2021": {
+          "name": "بڑی تقریب",
           "url": "https://docs.google.com/document/d/1lzVlB8JzpMLLGVumwVL8ybsBX42eFCSSucrZ19-N9Tw/edit",
           "type": "تشخیصات"
         },
@@ -3012,6 +3142,7 @@
           "type": "کنٹرولر شبیہ"
         },
         "unplugged-video-big-event/courseb/2021": {
+          "name": "بڑی تقریب",
           "url": "https://www.youtube.com/watch?v=XoApWo-IrI4",
           "type": "ویڈیو"
         },
@@ -3110,6 +3241,7 @@
           "type": "ویڈیو"
         },
         "pair-programming-vid/coursea/2021": {
+          "name": "جوڑی پروگرامنگ",
           "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
           "type": "طالب علم ویڈیو"
         },
@@ -3138,6 +3270,7 @@
           "url": "https://docs.google.com/document/d/19dHJCfmQNs3meKN3sTL91qsfmHYjZCYfbFq91J4fj3k/edit"
         },
         "unplugged-video-happy-maps/coursea/2021": {
+          "name": "مبارک نقشے",
           "url": "https://youtu.be/hrnhiKAQ1_k",
           "type": "ان پلگڈ سرگرمی"
         },
@@ -3220,9 +3353,11 @@
           "type": "وسیلہ"
         },
         "assessment-answer-big-event/coursea/2021": {
+          "name": "بڑی تقریب",
           "url": "https://docs.google.com/document/d/1VU2rC918ZY6DM2hunN6FsiDUW6Q1vEqyiJAPWQ6aoX8/edit"
         },
         "csf-the-big-event-assessment/coursea/2021": {
+          "name": "بڑی تقریب",
           "url": "https://docs.google.com/document/d/1lzVlB8JzpMLLGVumwVL8ybsBX42eFCSSucrZ19-N9Tw/edit",
           "type": "تشخیصات"
         },
@@ -3237,6 +3372,7 @@
           "type": "کنٹرولر شبیہ"
         },
         "unplugged-video-big-event/coursea/2021": {
+          "name": "بڑی تقریب",
           "url": "https://youtu.be/u0WV9shCoak",
           "type": "ان پلگڈ سرگرمی"
         },
@@ -3363,6 +3499,7 @@
           "type": "وسیلہ"
         },
         "pair-programming-vid/coursec/2021": {
+          "name": "جوڑی پروگرامنگ",
           "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
           "type": "ویڈیو"
         },
@@ -3391,9 +3528,11 @@
           "type": "وسیلہ"
         },
         "assessment-answer-big-event/coursec/2021": {
+          "name": "بڑی تقریب",
           "url": "https://docs.google.com/document/d/1VU2rC918ZY6DM2hunN6FsiDUW6Q1vEqyiJAPWQ6aoX8/edit"
         },
         "csf-the-big-event-assessment/coursec/2021": {
+          "name": "بڑی تقریب",
           "url": "https://docs.google.com/document/d/1lzVlB8JzpMLLGVumwVL8ybsBX42eFCSSucrZ19-N9Tw/edit",
           "type": "تشخیصات"
         },
@@ -3403,6 +3542,7 @@
           "type": "ایونٹ کنٹرولر"
         },
         "unplugged-video-big-event/coursec/2021": {
+          "name": "بڑی تقریب",
           "url": "https://youtu.be/u0WV9shCoak",
           "type": "ان پلگڈ سرگرمی"
         },
@@ -3427,13 +3567,16 @@
           "type": "ورک شیٹ"
         },
         "assessment-answer-binary-bracelets/coursec/2021": {
+          "name": "ثنائی کمگن",
           "url": "https://docs.google.com/document/d/1EaTbrdNbGpY_mI-FfV0GZ2uHSfcQIGuAkXqd1qFkUbE/edit"
         },
         "csf-binary-bracelets-activity/coursec/2021": {
+          "name": "ثنائی کمگن",
           "url": "https://docs.google.com/document/d/1YV1Oer_1DMzilyHriimgPVZnaC6JUjU5YDE8Ui065hE/edit",
           "type": "ورک شیٹ"
         },
         "csf-binary-bracelets-assessment/coursec/2021": {
+          "name": "ثنائی کمگن",
           "url": "https://docs.google.com/document/d/14Huy1clX_WgDnQQFugnF5fwoF6POWRZ-8skc1Eyr4bU/edit",
           "type": "تشخیصات"
         },
@@ -3443,9 +3586,11 @@
           "type": "طالب علم ویڈیو"
         },
         "lesson-in-action-binary-bracelets/coursec/2021": {
+          "name": "ثنائی کمگن",
           "url": "https://www.youtube.com/watch?v=fDLkBqZpxWQ"
         },
         "unplugged-video-binary-bracelets/coursec/2021": {
+          "name": "ثنائی کمگن",
           "url": "https://youtu.be/3S2YfoO4_CM",
           "type": "ان پلگڈ سرگرمی"
         },
@@ -3545,51 +3690,64 @@
           "type": "جوابی کلید"
         },
         "activity-answer-graph-paper/coursed/2021": {
+          "name": "گراف کاغذ پروگرامنگ",
           "url": "https://docs.google.com/document/d/1Nt1vX-8Q-xy7tNyTRElaDFvdVXfpC5e28NbrPreVfPQ/edit",
           "type": "ورک شیٹ کی جوابی کلید"
         },
         "assessment-answer-graph-paper/coursed/2021": {
+          "name": "گراف کاغذ پروگرامنگ",
           "url": "https://docs.google.com/document/d/1GXFjDtRjaK8mTnFGb33kT-u72_rXfUh_TyfP7N7Pen4/edit"
         },
         "csf-graph-paper-programming-assessment/coursed/2021": {
+          "name": "گراف کاغذ پروگرامنگ",
           "url": "https://docs.google.com/document/d/1uXNP-9nYnLOeAkh_E8UFzl9Rrpy0rwjVAQVamgdd6XQ/edit",
           "type": "تشخیصات"
         },
         "graph-paper-programming/coursed/2021": {
+          "name": "گراف کاغذ پروگرامنگ",
           "url": "https://docs.google.com/document/d/1GTB6aTZoQWvkMvx2SWhKerhL8DhevgWlsaetmm5Vpfs/edit?usp=sharing",
           "type": "سرگرمی شیٹ"
         },
         "lesson-in-action-graph-paper/coursed/2021": {
+          "name": "گراف کاغذ پروگرامنگ",
           "url": "https://www.youtube.com/watch?v=vBUtejDNvrs"
         },
         "unplugged-video-graph-paper/coursed/2021": {
+          "name": "گراف کاغذ پروگرامنگ",
           "url": "https://youtu.be/Y_paSrH2ffw",
           "type": "ان پلگڈ سرگرمی"
         },
         "pair-programming-vid/coursed/2021": {
+          "name": "جوڑی پروگرامنگ",
           "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
           "type": "طالب علم ویڈیو"
         },
         "csf-relay-programming-activity-packet/coursed/2021": {
+          "name": "ریلے پروگرامنگ",
           "url": "https://docs.google.com/document/d/1O7nVu6CYhQ_5rWXdAGWEh-e79jZvR__D9xrqSg8Q05o/edit",
           "type": "سرگرمی پیکٹ"
         },
         "relay-assessment/coursed/2021": {
+          "name": "ریلے پروگرامنگ",
           "url": "https://docs.google.com/document/d/1az8K9tDW0XcU2mvQ_1D7CXpZbq7aq5T-x0RiemGlv5s/edit",
           "type": "ورک شیٹ"
         },
         "relay-programming-assessment-answer-key/coursed/2021": {
+          "name": "ریلے پروگرامنگ",
           "url": "https://docs.google.com/document/d/1nneTPNTpboCBMYCr2qpK8DcHSZD6lDi0ovkqkdRDeSc/edit",
           "type": "ورک شیٹ کی جوابی کلید"
         },
         "relay-programming-teacher-debugging/coursed/2021": {
+          "name": "ریلے پروگرامنگ",
           "url": "https://docs.google.com/document/d/1UyiAK9sxuMP3AWjbP0TlsMahNa98LxJwyGWKhcdYpig/edit"
         },
         "teacher-video-relay-programming-2/coursed/2021": {
+          "name": "ریلے پروگرامنگ",
           "url": "https://youtu.be/ZULpfAVJOBo",
           "type": "ٹیچر ویڈیو"
         },
         "unplugged-video-relay-programming/coursed/2021": {
+          "name": "ریلے پروگرامنگ",
           "url": "https://youtu.be/l5MKkXbzOsk",
           "type": "ان پلگڈ سرگرمی"
         },
@@ -3694,6 +3852,7 @@
           "type": "وسیلہ"
         },
         "pair_programming/express/2021": {
+          "name": "جوڑی پروگرامنگ",
           "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
           "type": "ویڈیو"
         },
@@ -3734,6 +3893,7 @@
           "type": "وسیلہ"
         },
         "sprites_in_action/express/2021": {
+          "name": "ایکشن میں سپرائٹس",
           "url": "https://docs.google.com/presentation/d/1JdBmPn9XHWiXhGALqwxoR1g6R5TwFaQhVRmq22XLdYY/template/preview",
           "type": "سلائیڈز"
         },
@@ -3834,6 +3994,7 @@
           "type": "جذبات شبیہات"
         },
         "pair-programming-vid/pre-express/2021": {
+          "name": "جوڑی پروگرامنگ",
           "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
           "type": "طالب علم ویڈیو"
         },
@@ -4083,12 +4244,15 @@
           "type": "وسیلہ"
         },
         "introduction_to_ai_lab/csd/2021": {
+          "name": "AI لیب کا تعارف",
           "type": "سلائیڈز"
         },
         "introduction_to_ai_lab_1/csd/2021": {
+          "name": "AI لیب کا تعارف",
           "type": "ویڈیو"
         },
         "training_and_testing_in_ai_lab/csd/2021": {
+          "name": "تربیت اور جانچ اس میں AI لیب",
           "type": "ویڈیو"
         },
         "_key_training_a_model_in_ai_lab/csd/2021": {
@@ -4118,6 +4282,7 @@
           "type": "سلائیڈز"
         },
         "model_cards_in_ai_lab/csd/2021": {
+          "name": "AI لیب میں ماڈل کارڈ",
           "type": "ویڈیو"
         },
         "saving_models_in_ai_lab/csd/2021": {
@@ -4145,9 +4310,14 @@
           "type": "جوابی کلید"
         },
         "numerical_data_in_ai_lab/csd/2021": {
+          "name": "عددی ڈیٹا میں AI لیب",
           "type": "سلائیڈز"
         },
+        "numerical_data_in_ai_lab_1/csd/2021": {
+          "name": "عددی ڈیٹا میں AI لیب"
+        },
         "numerical_data_in_ai_lab_2/csd/2021": {
+          "name": "عددی ڈیٹا میں AI لیب",
           "type": "ویڈیو"
         },
         "_key_-_numerical_data_in_ai_lab/csd/2021": {
@@ -4280,6 +4450,7 @@
           "type": "ویڈیو"
         },
         "innovation-video-1-1/csd/2021": {
+          "name": "کمپیوٹر سائنس ہر چیز کو تبدیل کر رہا ہے",
           "type": "ویڈیو"
         },
         "csd_unit_6_-_physical_computing/csd/2021": {
@@ -4295,6 +4466,7 @@
           "type": "وسیلہ"
         },
         "how_computers_word_hardware_software/csd/2021": {
+          "name": "کمپیوٹر کیسے کام کرتے ہیں: ہارڈ ویئر اور سافٹ ویئر",
           "type": "ویڈیو"
         },
         "circuit_playground/csd/2021": {
@@ -4328,6 +4500,7 @@
           "type": "وسیلہ"
         },
         "functions_2/csd/2021": {
+          "name": "افعال",
           "type": "وسیلہ"
         },
         "if_statements_1/csd/2021": {
@@ -4337,6 +4510,7 @@
           "type": "روبرک"
         },
         "introduction_to_arrays/csd/2021": {
+          "name": "آراء کا تعارف",
           "type": "ویڈیو"
         },
         "arrays/csd/2021": {
@@ -4355,9 +4529,11 @@
           "type": "وسیلہ"
         },
         "loops_in_app_lab/csd/2021": {
+          "name": "لوپس کے لئے",
           "type": "ویڈیو"
         },
         "for_loops/csd/2021": {
+          "name": "لوپس کے لئے",
           "type": "وسیلہ"
         },
         "modifying_arrays/csd/2021": {
@@ -4370,6 +4546,7 @@
           "type": "وسیلہ"
         },
         "circuits-logic-video/csd/2021": {
+          "name": "کمپیوٹر کس طرح کام کرتے ہیں: سرکٹس اور منطق",
           "type": "ویڈیو"
         },
         "circuits_and_buttons/csd/2021": {
@@ -4434,6 +4611,9 @@
         "video_training_data_and_bias/csd/2021": {
           "type": "ویڈیو"
         },
+        "make-a-recommendation-peer-review-2019/csd/2021": {
+          "type": "پیر کا جائزہ"
+        },
         "make-a-recommendation-1/csd/2021": {
           "type": "روبرک"
         },
@@ -4478,6 +4658,7 @@
           "type": "ویڈیو"
         },
         "the_animation_tab/csd/2021": {
+          "name": "حرکت پذیری ٹیب",
           "type": "ویڈیو"
         },
         "animation_tab/csd/2021": {
@@ -4511,9 +4692,11 @@
           "type": "روبرک"
         },
         "boolean_expressions/csd/2021": {
+          "name": "بولین اظہار",
           "type": "ویڈیو"
         },
         "conditional_statements/csd/2021": {
+          "name": "مشروط بیانات",
           "type": "ویڈیو"
         },
         "booleans_and_comparison_operators/csd/2021": {
@@ -4526,7 +4709,11 @@
           "type": "وسیلہ"
         },
         "if_else_statements/csd/2021": {
+          "name": "اگر/اور بیانات",
           "type": "ویڈیو"
+        },
+        "interactive-card-1-2-3-4/csd/2021": {
+          "type": "پیر کا جائزہ"
         },
         "interactive_card/csd/2021": {
           "type": "روبرک"
@@ -4535,9 +4722,11 @@
           "type": "وسیلہ"
         },
         "velocity_1/csd/2021": {
+          "name": "سمتار",
           "type": "ویڈیو"
         },
         "velocity_2/csd/2021": {
+          "name": "سمتار",
           "type": "وسیلہ"
         },
         "collision_detection/csd/2021": {
@@ -4553,10 +4742,15 @@
           "type": "روبرک"
         },
         "calling_and_defining_functions/csd/2021": {
+          "name": "افعال",
           "type": "ویڈیو"
         },
         "functions_1/csd/2021": {
+          "name": "افعال",
           "type": "وسیلہ"
+        },
+        "make-your-own-game-1-2-3/csd/2021": {
+          "type": "پیر کا جائزہ"
         },
         "make_your_own_game/csd/2021": {
           "type": "روبرک"
@@ -4567,14 +4761,23 @@
         "problem-solving-process-1/csd/2021": {
           "type": "ویڈیو"
         },
+        "the-problem-solving-process/csd/2021": {
+          "name": "مسئلہ حل کرنے کا عمل"
+        },
         "solving-problems-exemplar-2020/csd/2021": {
           "type": "جوابی کلید"
+        },
+        "what-is-a-computer-2020/csd/2021": {
+          "name": "کمپیوٹر کیا ہے؟"
         },
         "what-is-a-computer-1-2-3/csd/2021": {
           "type": "ویڈیو"
         },
         "what-do-computers-do/csd/2021": {
           "type": "ویڈیو"
+        },
+        "apps-and-problem-solving-peer-review-2019/csd/2021": {
+          "type": "پیر کا جائزہ"
         },
         "apps_and_problem_solving/csd/2021": {
           "type": "روبرک"
@@ -4612,6 +4815,9 @@
         "mini-project-html-page/csd/2021": {
           "type": "سلائیڈز"
         },
+        "html-web-page/csd/2021": {
+          "type": "پیر کا جائزہ"
+        },
         "formatting_html/csd/2021": {
           "type": "وسیلہ"
         },
@@ -4623,9 +4829,11 @@
           "type": "سلائیڈز"
         },
         "intro_to_css_-_part_1/csd/2021": {
+          "name": "سی ایس ایس کا تعارف - حصہ 1",
           "type": "ویڈیو"
         },
         "intro_to_css_-_part_2/csd/2021": {
+          "name": "سی ایس ایس کا تعارف - حصہ 2",
           "type": "ویڈیو"
         },
         "style_sheets/csd/2021": {
@@ -4637,6 +4845,9 @@
         "your-personal-style-1-2-3/csd/2021": {
           "type": "روبرک"
         },
+        "your-personal-style-1/csd/2021": {
+          "type": "پیر کا جائزہ"
+        },
         "creative-commons-video/csd/2021": {
           "type": "ویڈیو"
         },
@@ -4645,6 +4856,9 @@
         },
         "images_in_html/csd/2021": {
           "type": "وسیلہ"
+        },
+        "personal-web-page-1/csd/2021": {
+          "type": "پیر کا جائزہ"
         },
         "personal-web-page/csd/2021": {
           "type": "روبرک"
@@ -4675,6 +4889,9 @@
         },
         "hyperlinks/csd/2021": {
           "type": "وسیلہ"
+        },
+        "website-for-a-purpose/csd/2021": {
+          "type": "پیر کا جائزہ"
         },
         "standard_mappings/pre-express/2020": {
           "name": "معیاری نقشہ جات"
