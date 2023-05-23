@@ -311,6 +311,9 @@ function initializeBlocklyWrapper(blocklyInstance) {
         transformTextSetLabel
       );
     },
+    injectCss(document) {
+      return Blockly.Css.inject(document);
+    },
   };
   return blocklyWrapper;
 }

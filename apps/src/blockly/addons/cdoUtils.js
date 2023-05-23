@@ -14,6 +14,10 @@ export function setHSV(block, h, s, v) {
   block.setColour(Blockly.utils.colour.hsvToHex(h, s, v * 255));
 }
 
+export function injectCss() {
+  return Blockly.Css.inject(true, 'media');
+}
+
 export function getBlockFields(block) {
   let fields = [];
   block.inputList.forEach(input => {
