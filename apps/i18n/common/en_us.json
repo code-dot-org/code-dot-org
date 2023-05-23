@@ -886,6 +886,7 @@
   "dropletBlock_whileBlock_description": "Creates a loop consisting of a conditional expression and a block of statements executed for each iteration of the loop. The loop continues to execute as long as the condition evaluates to true",
   "dropletBlock_whileBlock_signatureOverride": "while loop",
   "duration": "Duration",
+  "durationLabel": "Duration: {duration}",
   "edit": "Edit",
   "editAll": "Edit all",
   "editProject": "Edit Project",
