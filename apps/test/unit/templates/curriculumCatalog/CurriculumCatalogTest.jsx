@@ -263,7 +263,7 @@ describe('CurriculumCatalog', () => {
   it('applying filters that yield no results shows no results message', () => {
     // Does not show the no results message before filtering
     expect(
-      screen.queryAllByText('No matching curriculums', {
+      screen.queryAllByText('No matching curricula', {
         exact: false,
       }).length
     ).to.equal(0);
