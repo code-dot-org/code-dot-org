@@ -27,6 +27,7 @@ services:
       - mysqldata:/var/lib/mysql
       - yarncache:/home/circleci/.cache
       - gcloud_config:/home/circleci/.config/gcloud
+      - $HOME/.aws:/home/circleci/.aws
     env_file:
       - env.list
     command: /bin/sh -c "docker/unit_tests.sh"
