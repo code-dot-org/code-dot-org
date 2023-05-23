@@ -1,7 +1,7 @@
 %h1.control-legend{data: {toggle: "collapse", target: "#collector"}}
   Collector Settings
 
-#collector.in.collapse
+#collector.collapse
   .field
     = f.label :flower_type, 'Flower Type (bee only)'
     = f.select :flower_type, options_for_select(@level.class.flower_types, @level.flower_type)

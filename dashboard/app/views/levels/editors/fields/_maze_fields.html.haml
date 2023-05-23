@@ -1,7 +1,7 @@
 %h1.control-legend{data: {toggle: "collapse", target: "#maze"}}
   Maze Settings
 
-#maze.in.collapse
+#maze.collapse
   .field
     = f.label :start_direction
     = f.select :start_direction, options_for_select(@level.class.start_directions, @level.start_direction)
