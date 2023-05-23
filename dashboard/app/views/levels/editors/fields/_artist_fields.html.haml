@@ -1,7 +1,7 @@
 %h1.control-legend{data: {toggle: "collapse", target: "#artist"}}
   Artist Settings
 
-#artist.in.collapse
+#artist.collapse
   .field
     = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :enable_download_image, description: "Enable Download Image"}
     %p If checked, there will be a button to download the final image as a PNG.
