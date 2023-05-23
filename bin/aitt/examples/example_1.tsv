@@ -1,0 +1,5 @@
+Key Concept	Grade	Reason
+Program Development 2	Limited Evidence	The program code has few comments and does not consistently use formatting such as whitespace and indentation. The code has some indentation issues and lacks comments to explain the purpose of the added code.
+Algorithms and Control Structures	No Evidence	The game includes no conditionals. The student's code does not include any sprite interactions or user input handling beyond the starter code.
+Position and Movement	No Evidence	There is no movement in the program. The student's code does not add any movement or position changes to the sprites.
+Variables	Limited Evidence	There is at least one variable or sprite property updated in the program. The student added a new sprite but did not properly initialize it or update its properties during the game.

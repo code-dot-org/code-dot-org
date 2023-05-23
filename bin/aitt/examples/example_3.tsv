@@ -1,0 +1,5 @@
+Key Concept	Grade	Reason
+Program Development 2	Convincing Evidence	The program code makes use of whitespace, indentation, and comments. However, it could benefit from more comments to explain the purpose of certain sections of code.
+Algorithms and Control Structures	Extensive Evidence	The game includes multiple different interactions between sprites (player touching coin, player touching obstacles), responds to multiple types of user input (up, left, and right arrow keys).
+Position and Movement	Limited Evidence	The program includes simple movement, such as moving in a straight line.
+Variables	Extensive Evidence	The game includes two sprite properties (player.velocityX, player.velocityY) that are updated during the game and affect the user's experience of playing the game.
