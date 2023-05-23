@@ -6,4 +6,4 @@ Feature: App Lab Clipping
     And I wait for the page to fully load
     Then I reload the page
     And I switch to design mode
-    And selector "#designModeViz" has class "clip-content"
+    And I wait up to 1 seconds for element "#designModeViz.clip-content" to be visible
