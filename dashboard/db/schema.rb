@@ -804,7 +804,7 @@ ActiveRecord::Schema.define(version: 2023_05_18_155319) do
     t.index ["parent_level_id"], name: "index_parent_levels_child_levels_on_parent_level_id"
   end
 
-  create_table "parental_permission_requests", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+  create_table "parental_permission_requests", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id", null: false
     t.string "parent_email", null: false
     t.string "uuid", limit: 36, null: false
