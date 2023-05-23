@@ -4,7 +4,7 @@
 %h1.control-legend{data: {toggle: "collapse", target: "#special-levels"}}
   Special Level Types
 
-#special-levels.in.collapse
+#special-levels.collapse
   -# Dance and Spritelab are special types of Gamelab levels
   - if @level.is_a?(Gamelab) || @level.is_a?(Applab) || @level.is_a?(Weblab) || @level.is_a?(FreeResponse) || @level.is_a?(Javalab)
     = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :submittable, description: "Submittable"}

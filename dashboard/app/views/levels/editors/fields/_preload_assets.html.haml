@@ -4,7 +4,7 @@
 %h1.control-legend{data: {toggle: "collapse", target: "#preload_asset"}}
   Preload Assets
 
-#preload_asset.in.collapse
+#preload_asset.collapse
   = f.label :preload_asset_list, 'Preload asset list'
   %p A list of assets to be preloaded at page load time. The extension must be mp3, ogg, png, gif, jpg, jpeg, mov, or mp4. (click the plus sign to add an asset)
   - @level.preload_asset_list = [''] unless @level.preload_asset_list.try(:present?)
