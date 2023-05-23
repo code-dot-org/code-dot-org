@@ -56,7 +56,7 @@ const initialState: MusicState = {
   timelineAtTop: false,
   showInstructions: false,
   instructionsPosition: InstructionsPosition.LEFT,
-  isBeatPadShowing: false,
+  isBeatPadShowing: true,
   playbackEvents: [],
   lastMeasure: 0,
   levelCount: undefined,

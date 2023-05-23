@@ -345,6 +345,10 @@ export default class MusicBlocklyWorkspace {
     }
   }
 
+  hasTrigger(id) {
+    return !!this.codeHooks[this.triggerIdToEvent(id)];
+  }
+
   getProject() {
     return {
       source: Blockly.serialization.workspaces.save(this.workspace),

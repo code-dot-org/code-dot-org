@@ -23,6 +23,7 @@ const Controls = ({
   instructionsAvailable,
   toggleInstructions,
   instructionsOnRight,
+  hasTrigger,
 }) => {
   const isPlaying = useSelector(state => state.music.isPlaying);
   const isBeatPadShowing = useSelector(state => state.music.isBeatPadShowing);
@@ -38,25 +39,18 @@ const Controls = ({
 
   const renderBeatPad = () => {
     return (
-      <div
-        style={{
-          position: 'absolute',
-          [top ? 'bottom' : 'top']: -175,
-          [instructionsOnRight ? 'left' : 'right']: 10,
+      <BeatPad
+        triggers={Triggers}
+        playTrigger={playTrigger}
+        onClose={() => {
+          dispatch(hideBeatPad());
+          analyticsReporter.onButtonClicked('show-hide-beatpad', {
+            showing: false,
+          });
         }}
-      >
-        <BeatPad
-          triggers={Triggers}
-          playTrigger={playTrigger}
-          onClose={() => {
-            dispatch(hideBeatPad());
-            analyticsReporter.onButtonClicked('show-hide-beatpad', {
-              showing: false,
-            });
-          }}
-          isPlaying={isPlaying}
-        />
-      </div>
+        hasTrigger={hasTrigger}
+        isPlaying={isPlaying}
+      />
     );
   };
 
@@ -93,12 +87,6 @@ const Controls = ({
 
   return (
     <div id="controls" className={moduleStyles.controlsContainer}>
-      {isBeatPadShowing && renderBeatPad()}
-      <div
-        className={classNames(moduleStyles.section, moduleStyles.sectionSide)}
-      >
-        {leftIcon}
-      </div>
       <div
         className={classNames(moduleStyles.section, moduleStyles.sectionCenter)}
       >
@@ -119,28 +107,7 @@ const Controls = ({
           </div>
         </button>
       </div>
-      <div
-        className={classNames(moduleStyles.section, moduleStyles.sectionSide)}
-      >
-        <a
-          href={documentationUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className={classNames(
-            moduleStyles.controlButton,
-            moduleStyles.controlButtonIcon
-          )}
-          onClick={() => {
-            analyticsReporter.onButtonClicked('documentation-link');
-          }}
-        >
-          <FontAwesome
-            icon={'question-circle-o'}
-            className={classNames(moduleStyles.icon, moduleStyles.feedbackIcon)}
-          />
-        </a>
-      </div>
-      {rightIcon}
+      {isBeatPadShowing && renderBeatPad()}
     </div>
   );
 };
@@ -152,6 +119,7 @@ Controls.propTypes = {
   instructionsAvailable: PropTypes.bool.isRequired,
   toggleInstructions: PropTypes.func.isRequired,
   instructionsOnRight: PropTypes.bool.isRequired,
+  hasTrigger: PropTypes.func.isRequired,
 };
 
 export default Controls;
