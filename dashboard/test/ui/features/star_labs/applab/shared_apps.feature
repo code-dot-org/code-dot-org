@@ -12,6 +12,7 @@ Feature: App Lab Scenarios
     And I press "runButton"
     And I wait until element "#divApplab > .screen > button#hello" is visible
     And element "#divApplab > .screen > button#hello" contains text "world"
+    And I wait for 0.5 seconds
     And I press "resetButton"
 
     When I navigate to the shared version of my project
