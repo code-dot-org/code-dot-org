@@ -29,19 +29,7 @@ export const Triggers: Trigger[] = [
     dropdownLabel: '4',
     buttonLabel: '4',
     keyboardKey: '4',
-  },
-  {
-    id: 'trigger5',
-    dropdownLabel: '5',
-    buttonLabel: '5',
-    keyboardKey: '5',
-  },
-  {
-    id: 'trigger6',
-    dropdownLabel: '6',
-    buttonLabel: '6',
-    keyboardKey: '6',
-  },
+  }
 ];
 
 export const BlockMode = {

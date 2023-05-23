@@ -664,6 +664,9 @@ class UnconnectedMusicView extends React.Component {
           instructionsAvailable={!!this.progressManager}
           toggleInstructions={() => this.toggleInstructions(false)}
           instructionsOnRight={instructionsOnRight}
+          hasTrigger={this.musicBlocklyWorkspace.hasTrigger.bind(
+            this.musicBlocklyWorkspace
+          )}
         />
         <Timeline />
       </div>

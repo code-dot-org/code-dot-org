@@ -5,7 +5,7 @@ import styles from './beatpad.module.scss';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import musicI18n from '../locale';
 
-const BUTTONS_PER_ROW = 3;
+const BUTTONS_PER_ROW = 4;
 const enabledClasses = [
   styles.purple,
   styles.strawberry,
@@ -18,13 +18,11 @@ const enabledClasses = [
 /**
  * Renders the Beat Pad component, which can be used to play numbered triggers during playback
  */
-const BeatPad = ({triggers, playTrigger, onClose, isPlaying}) => {
+const BeatPad = ({triggers, playTrigger, onClose, isPlaying, hasTrigger}) => {
   const renderTriggers = () => {
-    const rows = [];
-
-    for (let i = 0; i < triggers.length; i += BUTTONS_PER_ROW) {
-      let buttons = [];
-      for (let j = i; j < i + BUTTONS_PER_ROW; j++) {
+    let buttons = [];
+    for (let j = 0; j < BUTTONS_PER_ROW; j++) {
+      if (hasTrigger(triggers[j].id)) {
         buttons.push(
           <TriggerButton
             label={triggers[j].buttonLabel}
@@ -35,32 +33,12 @@ const BeatPad = ({triggers, playTrigger, onClose, isPlaying}) => {
           />
         );
       }
-      rows.push(
-        <div
-          key={`row-${i / BUTTONS_PER_ROW}`}
-          className={styles.triggerButtonRow}
-        >
-          {buttons}
-        </div>
-      );
     }
 
-    return rows;
+    return buttons;
   };
 
-  return (
-    <div className={styles.container}>
-      <div className={styles.labelContainer}>
-        <p className={styles.label}>{musicI18n.control()}</p>
-        <FontAwesome
-          icon={'times'}
-          onClick={onClose}
-          className={styles.closeIcon}
-        />
-      </div>
-      <div className={styles.triggersContainer}>{renderTriggers()}</div>
-    </div>
-  );
+  return <div className={styles.triggersContainer}>{renderTriggers()}</div>;
 };
 
 const TriggerButton = ({label, onClick, colorClassName, disabled}) => {
@@ -86,6 +64,7 @@ BeatPad.propTypes = {
   playTrigger: PropTypes.func.isRequired,
   onClose: PropTypes.func.isRequired,
   isPlaying: PropTypes.bool.isRequired,
+  hasTrigger: PropTypes.func.isRequired,
 };
 
 export default BeatPad;

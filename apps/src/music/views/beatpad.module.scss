@@ -30,11 +30,16 @@
 
 .triggersContainer {
   width: 200px;
-  flex: 1;
+  /* flex: 1; */
   display: flex;
-  flex-direction: column;
-  background-color: $neutral_dark;
-  padding: 10px;
+  flex-direction: row;
+  /* background-color: #292f36; */
+  /* padding: 10px; */
+  /*justify-content: space-between; */
+  padding-right: 20px;
+  position: absolute;
+  right: 0px;
+  top: 3px;
 }
 
 .triggerButtonRow {
@@ -67,15 +72,15 @@ $hover-opacity: 0.5;
 .triggerButton {
   font-size: 20px;
   border-radius: 8px;
-  border-width: 2px 2px 4px 2px;
   border-style: solid;
   color: $neutral_dark80;
   background-color: $neutral_dark;
   text-align: center;
-  max-width: 40px;
-  height: 40px;
-  line-height: 40px;
+  max-width: 32px;
+  height: 32px;
+  line-height: 32px;
   flex: 1;
+  margin-right: 10px;
 
   &.purple {
     @include enabled-trigger($purple);
