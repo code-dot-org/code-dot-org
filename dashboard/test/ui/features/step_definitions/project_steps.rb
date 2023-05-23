@@ -203,8 +203,9 @@ end
 When /^I open the share dialog$/ do
   Retryable.retryable(on: RSpec::Expectations::ExpectationNotMetError, sleep: 10, tries: 3) do
     steps <<-GHERKIN
-      When I click selector ".project_share"
-      And I wait to see a dialog titled "Share your project"
+      When I wait for 0.5 seconds
+      And I click selector ".project_share"
+      Then I wait to see a dialog titled "Share your project"
     GHERKIN
   end
 end
