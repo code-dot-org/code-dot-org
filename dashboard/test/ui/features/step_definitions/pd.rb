@@ -171,7 +171,7 @@ end
 And(/^I complete Section 2 of the teacher PD application$/) do
   steps <<~GHERKIN
     Then I wait until element "h3" contains text "Section 2: Find Your Region"
-    And I wait until element "#school input" is visible
+    And I wait for 0.25 seconds
     And I press the first "input[name='country']" element
     And I press keys "nonexistent" for element "#school input"
     Then I wait until element ".VirtualizedSelectOption:contains('Other school not listed below')" is visible
@@ -184,12 +184,14 @@ And(/^I complete Section 2 of the teacher PD application$/) do
     And I select the "Washington" option in dropdown "schoolState"
     And I press keys "98101" for element "input#schoolZipCode"
     And I press the first "input[name='schoolType'][value='Other']" element
+    And I wait for 0.25 seconds
   GHERKIN
 end
 
 And(/^I complete Section 3 of the teacher PD application$/) do
   steps <<~GHERKIN
     Then I wait until element "h3" contains text "Section 3: About You"
+    And I wait for 0.25 seconds
     And I press the first "input[name='completingOnBehalfOfSomeoneElse'][value='No']" element
     And I press keys "Severus" for element "input#firstName"
     And I press keys "Snape" for element "input#lastName"
@@ -199,39 +201,45 @@ And(/^I complete Section 3 of the teacher PD application$/) do
     And I select the "Washington" option in dropdown "state"
     And I press keys "98101" for element "input#zipCode"
     And I press the first "input[name='howHeard']" element
+    And I wait for 0.25 seconds
   GHERKIN
 end
 
 And(/^I complete Section 4 of the teacher PD application$/) do
   steps <<~GHERKIN
     Then I wait until element "h3" contains text "Section 4: Additional Demographic Information"
+    And I wait for 0.25 seconds
     And I press the first "input[name='currentRole']" element
     And I press the first "input[name='previousYearlongCdoPd']" element
-    And I press "input[name='genderIdentity']:first" using jQuery
+    And I press the first "input[name='genderIdentity']" element
     And I press the first "input[name='race']" element
+    And I wait for 0.25 seconds
   GHERKIN
 end
 
 And(/^I complete Section 5 of the teacher PD application$/) do
   steps <<~GHERKIN
     Then I wait until element "h3" contains text "Section 5: Administrator/School Leader Information"
+    And I wait for 0.25 seconds
     And I press keys "Headmaster" for element "input#principalRole"
     And I press keys "Albus" for element "input#principalFirstName"
     And I press keys "Dumbledore" for element "input#principalLastName"
     And I press keys "socks@hogwarts.edu" for element "input#principalEmail"
     And I press keys "socks@hogwarts.edu" for element "input#principalConfirmEmail"
     And I press keys "5555882300" for element "input#principalPhoneNumber"
+    And I wait for 0.25 seconds
   GHERKIN
 end
 
 And(/^I complete Section 7 of the teacher PD application$/) do
   steps <<~GHERKIN
     Then I wait until element "h3" contains text "Section 7: Program Requirements and Submission"
-    Then I wait until element "input[name='committed']" is visible
-    And I press "input[name='committed']:first" using jQuery
+    And I wait for 0.25 seconds
+    And I press the first "input[name='committed']" element
     And I press the first "input#understandFee" element
     And I click selector "input[name='payFee']" if I see it
     And I press the first "input#agree" element
+    And I wait for 0.25 seconds
   GHERKIN
 end
 
