@@ -171,6 +171,7 @@ end
 And(/^I complete Section 2 of the teacher PD application$/) do
   steps <<~GHERKIN
     Then I wait until element "h3" contains text "Section 2: Find Your Region"
+    And I wait until element "#school input" is visible
     And I press the first "input[name='country']" element
     And I press keys "nonexistent" for element "#school input"
     Then I wait until element ".VirtualizedSelectOption:contains('Other school not listed below')" is visible
