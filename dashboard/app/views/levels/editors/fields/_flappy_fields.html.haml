@@ -1,7 +1,7 @@
 %h1.control-legend{data: {toggle: "collapse", target: "#flappy"}}
   Flappy Settings
 
-#flappy.in.collapse
+#flappy.collapse
   = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :ground, description: "Include Ground?"}
   = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :obstacles, description: "Include Obstacles?"}
   = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :score, description: "Include Score?"}
