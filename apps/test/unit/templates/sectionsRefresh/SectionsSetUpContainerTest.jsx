@@ -177,6 +177,7 @@ describe('SectionsSetUpContainer', () => {
     expect(fetchBody.participant_type).to.equal('student');
 
     sinon.restore();
+    fetchSpy.restore();
   });
 
   it('passes url attribute to make a new section if save and create new is clicked', () => {
@@ -206,5 +207,6 @@ describe('SectionsSetUpContainer', () => {
     expect(fetchSpy).to.have.been.called.once;
 
     sinon.restore();
+    fetchSpy.restore();
   });
 });
