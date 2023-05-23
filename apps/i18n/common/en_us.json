@@ -1523,7 +1523,7 @@
   "noClassroomsFound": "No classrooms found.",
   "noColumnsInTable": "We couldn't find any columns in \"{table}\". Make sure this table is imported in your project.",
   "noCurriculumSearchResultsBody": "None of our curricula match your exact criteria, but many of our offerings are flexible! Try broadening your search or consider building a custom curriculum from our more modular options (i.e. teaching two quarter-long curricula for a semester).",
-  "noCurriculumSearchResultsHeader": "No matching curriculums",
+  "noCurriculumSearchResultsHeader": "No matching curricula",
   "noIconsFound": "No icons found",
   "noLevelPreviewAvailable": "No preview is available for this level. To view this level click \"{buttonText}\".",
   "noLibraries": "You currently have no libraries.",
