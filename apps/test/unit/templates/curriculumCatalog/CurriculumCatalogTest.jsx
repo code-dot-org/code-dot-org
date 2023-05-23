@@ -283,7 +283,7 @@ describe('CurriculumCatalog', () => {
 
     // Does show the no results message
     expect(
-      screen.queryAllByText('No matching curriculums', {
+      screen.queryAllByText('No matching curricula', {
         exact: false,
       }).length
     ).to.equal(1);
