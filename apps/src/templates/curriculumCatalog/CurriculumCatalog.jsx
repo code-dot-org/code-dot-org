@@ -212,43 +212,55 @@ const CurriculumCatalog = ({curriculaData, isEnglish}) => {
   // message if no results).
   const renderSearchResults = () => {
     if (filteredCurricula.length > 0) {
-      return filteredCurricula
-        .filter(
-          curriculum =>
-            !!curriculum.grade_levels && !!curriculum.course_version_path
-        )
-        .map(
-          ({
-            key,
-            image,
-            display_name,
-            grade_levels,
-            duration,
-            school_subject,
-            cs_topic,
-            course_version_path,
-          }) => (
-            <CurriculumCatalogCard
-              key={key}
-              courseDisplayName={display_name}
-              imageSrc={image || undefined}
-              duration={duration}
-              gradesArray={grade_levels.split(',')}
-              subjects={school_subject?.split(',')}
-              topics={cs_topic?.split(',')}
-              isTranslated={false} // TODO [MEG]: actually pass in this data
-              isEnglish={isEnglish}
-              pathToCourse={course_version_path}
-            />
-          )
-        );
+      return (
+        <div className={style.catalogContentCards}>
+          {filteredCurricula
+            .filter(
+              curriculum =>
+                !!curriculum.grade_levels && !!curriculum.course_version_path
+            )
+            .map(
+              ({
+                key,
+                image,
+                display_name,
+                grade_levels,
+                duration,
+                school_subject,
+                cs_topic,
+                course_version_path,
+              }) => (
+                <CurriculumCatalogCard
+                  key={key}
+                  courseDisplayName={display_name}
+                  imageSrc={image || undefined}
+                  duration={duration}
+                  gradesArray={grade_levels.split(',')}
+                  subjects={school_subject?.split(',')}
+                  topics={cs_topic?.split(',')}
+                  isTranslated={false} // TODO [MEG]: actually pass in this data
+                  isEnglish={isEnglish}
+                  pathToCourse={course_version_path}
+                />
+              )
+            )}
+        </div>
+      );
     } else {
       return (
-        <>
-          <img src={CourseCatalogNoSearchResultPenguin} alt="" />
-          <Heading5>{i18n.noCurriculumSearchResultsHeader()}</Heading5>
-          <BodyOneText>{i18n.noCurriculumSearchResultsBody()}</BodyOneText>
-        </>
+        <div className={style.catalogContentNoResults}>
+          <img
+            className={style.noResultsImage}
+            src={CourseCatalogNoSearchResultPenguin}
+            alt=""
+          />
+          <Heading5 className={style.noResultsHeading}>
+            {i18n.noCurriculumSearchResultsHeader()}
+          </Heading5>
+          <BodyOneText className={style.noResultsBody}>
+            {i18n.noCurriculumSearchResultsBody()}
+          </BodyOneText>
+        </div>
       );
     }
   };
@@ -288,7 +300,7 @@ const CurriculumCatalog = ({curriculaData, isEnglish}) => {
         </button>
       </div>
       <div className={style.catalogContentContainer}>
-        <div className={style.catalogContent}>{renderSearchResults()}</div>
+        {renderSearchResults()}
       </div>
     </>
   );
