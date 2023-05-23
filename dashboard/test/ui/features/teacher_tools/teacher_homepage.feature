@@ -105,6 +105,7 @@ Feature: Using the teacher homepage sections feature
     # loading non-existent section succeeds, with no section selected
     When I am on "http://studio.code.org/s/coursea-2019?section_id=99999"
     And I wait until element "#script-title" is visible
+    And I wait until element ".uitest-sectionselect" is visible
     And element ".uitest-sectionselect" has value ""
 
   Scenario: Assign hidden unit to section
