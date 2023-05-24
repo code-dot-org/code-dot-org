@@ -1,4 +1,5 @@
-require_relative './open_ai.rb'
+# require_relative './open_ai.rb'
+require 'cdo/open_ai'
 
 module PromptFilter
   def self.find_potential_content_violations(student_prompt)

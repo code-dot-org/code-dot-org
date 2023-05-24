@@ -3,9 +3,6 @@ require_relative '../../deployment'
 require 'cdo/prompt_filter'
 require 'cdo/open_ai'
 
-# require_relative '../../lib/cdo/prompt_filter'
-# require_relative '../../lib/cdo/open_ai'
-
 def command_line_options
 end
 
@@ -22,7 +19,8 @@ def main
   main_start_time = Time.now
 
   good_prompts = File.readlines(File.join(__dir__, 'good_prompts.txt')).map(&:chomp)
-  bad_prompts = File.readlines(File.join(__dir__, 'bad_prompts.txt')).map(&:chomp)  
+  bad_prompts = File.readlines(File.join(__dir__, 'bad_prompts.txt')).map(&:chomp) 
+  puts "good_prompts: #{good_prompts}" 
   # output_file = "output.html"
 
   # system("mkdir -p cached_responses")
@@ -31,19 +29,19 @@ def main
   # [expected_passes, expected_failures] = read_inputs(good_prompt_file, bad_prompt_file)
   # expected_grades = get_expected_grades(expected_grades_file)
 
-  good_prompts.each do |prompt|
-    response_code = PromptFilter.find_potential_content_violations(prompt)
-    if response_code != '200'
-      puts "Prompt '#{prompt}' expected to be good but got error."
-    end
-  end
+  # good_prompts.each do |prompt|
+  #   response_code = PromptFilter.find_potential_content_violations(prompt)
+  #   if response_code != '200'
+  #     puts "Prompt '#{prompt}' expected to be good but got error."
+  #   end
+  # end
   
-  bad_prompts.each do |prompt|
-    response_code = PromptFilter.find_potential_content_violations(prompt)
-    if response_code == '200'
-      puts "Prompt '#{prompt}' expected to be bad but got 200."
-    end
-  end
+  # bad_prompts.each do |prompt|
+  #   response_code = PromptFilter.find_potential_content_violations(prompt)
+  #   if response_code == '200'
+  #     puts "Prompt '#{prompt}' expected to be bad but got 200."
+  #   end
+  # end
 
   # Report.new.generate_html_output(
   #   output_file, prompt, rubric, overall_accuracy, actual_grades, expected_grades, options[:passing_grades], accuracy_by_criteria, errors
