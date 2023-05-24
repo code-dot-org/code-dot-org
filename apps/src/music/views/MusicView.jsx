@@ -217,11 +217,11 @@ class UnconnectedMusicView extends React.Component {
           document.getElementById('blockly-div'),
           this.onBlockSpaceChange,
           this.player,
+          this.getStartSources(),
           this.progressManager?.getCurrentStepDetails().toolbox,
           this.props.currentLevelId,
           this.props.currentScriptId,
-          this.props.channelId,
-          this.getStartSources()
+          this.props.channelId
         )
         .then(() => {
           this.musicBlocklyWorkspace.addSaveEventListener(
