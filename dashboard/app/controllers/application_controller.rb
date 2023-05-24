@@ -136,6 +136,8 @@ class ApplicationController < ActionController::Base
     :password_confirmation,
     :locale,
     :gender,
+    :gender_student_input,
+    :gender_teacher_input,
     :login,
     :remember_me,
     :age,
