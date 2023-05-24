@@ -772,6 +772,17 @@ ActiveRecord::Schema.define(version: 2023_05_24_154849) do
     t.index ["platform_id"], name: "index_lti_integrations_on_platform_id"
   end
 
+  create_table "lti_user_identities", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
+    t.string "subject", null: false
+    t.bigint "lti_integration_id", null: false
+    t.integer "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["lti_integration_id"], name: "index_lti_user_identities_on_lti_integration_id"
+    t.index ["subject"], name: "index_lti_user_identities_on_subject"
+    t.index ["user_id"], name: "index_lti_user_identities_on_user_id"
+  end
+
   create_table "metrics", id: :integer, charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -2188,6 +2199,8 @@ ActiveRecord::Schema.define(version: 2023_05_24_154849) do
   add_foreign_key "hint_view_requests", "users"
   add_foreign_key "level_concept_difficulties", "levels"
   add_foreign_key "lti_deployments", "lti_integrations"
+  add_foreign_key "lti_user_identities", "lti_integrations"
+  add_foreign_key "lti_user_identities", "users"
   add_foreign_key "parental_permission_requests", "users"
   add_foreign_key "pd_application_emails", "pd_applications"
   add_foreign_key "pd_application_tags_applications", "pd_application_tags"
