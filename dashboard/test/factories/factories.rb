@@ -1696,4 +1696,9 @@ FactoryBot.define do
     jwks_url {"jwks_url"}
     access_token_url {"access_token_url"}
   end
+
+  factory :parental_permission_request do
+    user {create :student}
+    parent_email {"contact@example.domain"}
+  end
 end
