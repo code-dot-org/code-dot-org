@@ -1139,7 +1139,9 @@ end
 
 And(/^I ctrl-([^"]*)$/) do |key|
   # Note: Safari webdriver does not support actions API
-  @browser.action.key_down(:control).send_keys(key).key_up(:control).perform
+  # and chromedriver on mac cannot generate cmd key events: https://bugs.chromium.org/p/chromedriver/issues/detail?id=30
+  cmd_ctrl = @browser.capabilities.platform_name.include?('mac') ? :command : :control
+  @browser.action.key_down(cmd_ctrl).send_keys(key).key_up(cmd_ctrl).perform
 end
 
 def press_keys(element, key)
