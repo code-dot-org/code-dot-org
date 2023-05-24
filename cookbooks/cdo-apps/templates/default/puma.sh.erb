@@ -17,7 +17,7 @@ set -e
 TIMEOUT=${TIMEOUT-600}
 APP_ROOT=<%= @app_root %>
 PID=<%= @pid_file %>
-CMD="cd $APP_ROOT; LANG=en_US.UTF-8 bundle exec puma -d -C <%= @src_file %> -e <%= @env %>"
+CMD="cd $APP_ROOT; LANG=en_US.UTF-8 bundle exec puma -C <%= @src_file %> -e <%= @env %>"
 AS_USER=<%= @user %>
 <%= @export_env ? @export_env.map{|k,v|"export #{k}=#{v}"}.join("\n") : '' %>
 UPGRADE_DELAY=${UPGRADE_DELAY-30}
