@@ -91,124 +91,135 @@ export default function SectionsSetUpContainer({
     [advancedSettingsOpen]
   );
 
-  const recordSectionSetupEvent = section => {
-    const initialSection = initialSectionRef.current;
-    /*
+  const recordSectionSetupEvent = useCallback(
+    section => {
+      const initialSection = initialSectionRef.current;
+      /*
     We do not currently store version year on the section, and the version dropdown
     does not update it. We will need to query all course offerings or set up a new
     course offerings controller function to populate previousVersionYear and newVersionYear.
     */
-    if (isNewSection) {
-      analyticsReporter.sendEvent(EVENTS.COMPLETED_EVENT, {
-        sectionUnitId: section.course?.unitId,
-        sectionCurriculumLocalizedName: section.course?.displayName,
-        sectionCurriculum: section.course?.courseOfferingId, //this is course Offering id
-        sectionCurriculumVersionYear: section.course?.versionYear,
-        sectionGrade: section.grade ? section.grade[0] : null,
-        sectionLockSelection: section.restrictSection,
-        sectionName: section.name,
-        sectionPairProgramSelection: section.pairingAllowed,
-        flowVersion: NEW,
-      });
-    }
-    /*
+      if (isNewSection) {
+        analyticsReporter.sendEvent(EVENTS.COMPLETED_EVENT, {
+          sectionUnitId: section.course?.unitId,
+          sectionCurriculumLocalizedName: section.course?.displayName,
+          sectionCurriculum: section.course?.courseOfferingId, //this is course Offering id
+          sectionCurriculumVersionYear: section.course?.versionYear,
+          sectionGrade: section.grade ? section.grade[0] : null,
+          sectionLockSelection: section.restrictSection,
+          sectionName: section.name,
+          sectionPairProgramSelection: section.pairingAllowed,
+          flowVersion: NEW,
+        });
+      }
+      /*
     We want to send a 'curriculum assigned' event if this is not a new section
     (the check for initialSection) and if we are changing the courseOffering
     or the unit (hence the checks before and after the ||).
     */
-    if (
-      (section.course?.courseOfferingId &&
-        initialSection &&
-        section.course?.courseOfferingId !==
-          initialSection.course?.courseOfferingId) ||
-      (section.course?.unitId &&
-        initialSection &&
-        section.course?.unitId !== initialSection.course?.unitId)
-    ) {
-      analyticsReporter.sendEvent(EVENTS.CURRICULUM_ASSIGNED, {
-        sectionName: section.name,
-        sectionId: section.id,
-        sectionLoginType: section.loginType,
-        previousUnitId: initialSection.course?.unitId,
-        previousCourseId: initialSection.course?.courseOfferingId,
-        previousCourseVersionId: initialSection.course?.versionId,
-        previousVersionYear: null,
-        newUnitId: section.course?.unitId,
-        newCourseId: section.course?.courseOfferingId,
-        newCourseVersionId: section.course?.courseVersionId,
-        newVersionYear: null,
-        flowVersion: NEW,
-      });
-    }
-  };
+      if (
+        (section.course?.courseOfferingId &&
+          initialSection &&
+          section.course?.courseOfferingId !==
+            initialSection.course?.courseOfferingId) ||
+        (section.course?.unitId &&
+          initialSection &&
+          section.course?.unitId !== initialSection.course?.unitId)
+      ) {
+        analyticsReporter.sendEvent(EVENTS.CURRICULUM_ASSIGNED, {
+          sectionName: section.name,
+          sectionId: section.id,
+          sectionLoginType: section.loginType,
+          previousUnitId: initialSection.course?.unitId,
+          previousCourseId: initialSection.course?.courseOfferingId,
+          previousCourseVersionId: initialSection.course?.versionId,
+          previousVersionYear: null,
+          newUnitId: section.course?.unitId,
+          newCourseId: section.course?.courseOfferingId,
+          newCourseVersionId: section.course?.courseVersionId,
+          newVersionYear: null,
+          flowVersion: NEW,
+        });
+      }
+    },
+    [initialSectionRef, isNewSection]
+  );
 
-  const saveSection = (section, createAnotherSection) => {
-    const shouldShowCelebrationDialogOnRedirect = !!isUsersFirstSection;
-    // Determine data sources and save method based on new vs edit section
-    const dataUrl = isNewSection
-      ? SECTIONS_API
-      : `${SECTIONS_API}/${section.id}`;
-    const method = isNewSection ? 'POST' : 'PATCH';
-    const loginType = isNewSection
-      ? queryParams('loginType')
-      : section.loginType;
-    const participantType = isNewSection
-      ? queryParams('participantType')
-      : section.participantType;
+  const saveSection = useCallback(
+    (section, createAnotherSection) => {
+      const shouldShowCelebrationDialogOnRedirect = !!isUsersFirstSection;
+      // Determine data sources and save method based on new vs edit section
+      const dataUrl = isNewSection
+        ? SECTIONS_API
+        : `${SECTIONS_API}/${section.id}`;
+      const method = isNewSection ? 'POST' : 'PATCH';
+      const loginType = isNewSection
+        ? queryParams('loginType')
+        : section.loginType;
+      const participantType = isNewSection
+        ? queryParams('participantType')
+        : section.participantType;
 
-    const form = document.querySelector(`#${FORM_ID}`);
-    // If we find a missing field in the form, report which one and reset save status
-    if (!form.checkValidity()) {
-      form.reportValidity();
-      setIsSaveInProgress(false);
-      return;
-    }
-
-    const csrfToken = document.querySelector('meta[name="csrf-token"]')
-      .attributes['content'].value;
-
-    const section_data = {
-      login_type: loginType,
-      participant_type: participantType,
-      course_offering_id: section.course?.courseOfferingId,
-      course_version_id: section.course?.versionId,
-      unit_id: section.course?.unitId,
-      restrict_section: section.restrictSection,
-      lesson_extras: section.lessonExtras,
-      pairing_allowed: section.pairingAllowed,
-      tts_autoplay_enabled: section.ttsAutoplayEnabled,
-      sharing_disabled: section.sharingDisabled,
-      grades: section.grade,
-      ...section,
-    };
-
-    fetch(dataUrl, {
-      method: method,
-      headers: {
-        'Content-Type': 'application/json',
-        'X-CSRF-Token': csrfToken,
-      },
-      body: JSON.stringify(section_data),
-    })
-      .then(response => {
-        return response.json();
-      })
-      .then(data => {
-        recordSectionSetupEvent(section);
-        // Redirect to the sections list.
-        let redirectUrl = window.location.origin + '/home';
-        if (createAnotherSection) {
-          redirectUrl += '?openAddSectionDialog=true';
-        } else if (shouldShowCelebrationDialogOnRedirect) {
-          redirectUrl += '?showSectionCreationDialog=true';
-        }
-        navigateToHref(redirectUrl);
-      })
-      .catch(err => {
+      const form = document.querySelector(`#${FORM_ID}`);
+      // If we find a missing field in the form, report which one and reset save status
+      if (!form.checkValidity()) {
+        form.reportValidity();
         setIsSaveInProgress(false);
-        console.error(err);
-      });
-  };
+        return;
+      }
+
+      const csrfToken = document.querySelector('meta[name="csrf-token"]')
+        .attributes['content'].value;
+
+      const section_data = {
+        login_type: loginType,
+        participant_type: participantType,
+        course_offering_id: section.course?.courseOfferingId,
+        course_version_id: section.course?.versionId,
+        unit_id: section.course?.unitId,
+        restrict_section: section.restrictSection,
+        lesson_extras: section.lessonExtras,
+        pairing_allowed: section.pairingAllowed,
+        tts_autoplay_enabled: section.ttsAutoplayEnabled,
+        sharing_disabled: section.sharingDisabled,
+        grades: section.grade,
+        ...section,
+      };
+
+      fetch(dataUrl, {
+        method: method,
+        headers: {
+          'Content-Type': 'application/json',
+          'X-CSRF-Token': csrfToken,
+        },
+        body: JSON.stringify(section_data),
+      })
+        .then(response => {
+          return response.json();
+        })
+        .then(data => {
+          recordSectionSetupEvent(section);
+          // Redirect to the sections list.
+          let redirectUrl = window.location.origin + '/home';
+          if (createAnotherSection) {
+            redirectUrl += '?openAddSectionDialog=true';
+          } else if (shouldShowCelebrationDialogOnRedirect) {
+            redirectUrl += '?showSectionCreationDialog=true';
+          }
+          navigateToHref(redirectUrl);
+        })
+        .catch(err => {
+          setIsSaveInProgress(false);
+          console.error(err);
+        });
+    },
+    [
+      isUsersFirstSection,
+      isNewSection,
+      setIsSaveInProgress,
+      recordSectionSetupEvent,
+    ]
+  );
 
   const onURLClick = () => {
     showVideoDialog(
@@ -224,6 +235,16 @@ export default function SectionsSetUpContainer({
       true
     );
   };
+
+  const sectionToWorkWith = sections[0];
+
+  const onFinishCreatingSections = useCallback(() => {
+    e => {
+      e.preventDefault();
+      setIsSaveInProgress(true);
+      saveSection(sectionToWorkWith, false);
+    };
+  }, [setIsSaveInProgress, saveSection, sectionToWorkWith]);
 
   return (
     <form id={FORM_ID}>
@@ -317,11 +338,7 @@ export default function SectionsSetUpContainer({
           }
           color={Button.ButtonColor.brandSecondaryDefault}
           disabled={isSaveInProgress}
-          onClick={e => {
-            e.preventDefault();
-            setIsSaveInProgress(true);
-            saveSection(sections[0], false);
-          }}
+          onClick={onFinishCreatingSections}
         />
       </div>
     </form>
