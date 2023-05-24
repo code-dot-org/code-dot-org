@@ -489,7 +489,7 @@ def generate_status_page(suite_start_time)
 end
 
 def test_run_identifier(browser, feature)
-  feature_name = feature.gsub('features/', '').gsub('.feature', '').tr('/', '_')
+  feature_name = feature.gsub('features/', '').gsub(/.feature:[0-9]+/, '').tr('/', '_')
   browser_name = browser_name_or_unknown(browser)
   "#{browser_name}_#{feature_name}" + (eyes? ? '_eyes' : '')
 end
