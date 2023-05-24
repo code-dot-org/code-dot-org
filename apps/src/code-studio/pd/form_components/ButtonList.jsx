@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import _ from 'lodash';
+/* eslint-disable no-restricted-imports */
 import {
   Radio,
   Checkbox,
@@ -8,6 +9,7 @@ import {
   FormGroup,
   HelpBlock,
 } from 'react-bootstrap';
+/* eslint-enable no-restricted-imports */
 
 import utils from './utils';
 
