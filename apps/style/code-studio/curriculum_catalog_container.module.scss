@@ -15,9 +15,33 @@
   margin: 1em auto;
 }
 
-.catalogContent {
+.catalogContentCards {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 1em;
+}
+
+.catalogContentNoResults {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70%;
+  margin: 3em auto;
+  text-align: justify;
+}
+
+.noResultsImage {
+  display: block;
+  margin: auto;
+  width: 5em;
+}
+
+.noResultsHeading {
+  color: color.$teal;
+  margin: 1em 0 0 0;
+}
+
+.noResultsBody {
+  margin: 1em;
 }
