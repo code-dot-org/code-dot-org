@@ -115,6 +115,9 @@
         },
         "csd-2022/velocity": {
           "display_name": "Швидкість"
+        },
+        "csd-2022/web-lab": {
+          "display_name": "Веб-лабораторія"
         }
       }
     }

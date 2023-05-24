@@ -1,5 +1,5 @@
 ---
-title: Online Self-Paced Professional Learning for Teachers | Code.org
+title: Online Self-Paced Professional Learning for Teachers
 theme: responsive_full_width
 ---
 
@@ -111,7 +111,7 @@ theme: responsive_full_width
             =hoc_s(:curriculum_name_csp)
           %p
             %strong=hoc_s(:module_label_duration)
-            =hoc_s(:module_duration_35_hrs)
+            =hoc_s(:module_duration_3_hrs)
           %p
             %strong=hoc_s(:module_label_prerequisites)
             =hoc_s(:module_prerequisites_none)
@@ -217,3 +217,5 @@ theme: responsive_full_width
         .content-footer
           %a.link-button{href: "/afe", aria:{label: hoc_s(:aria_label_call_to_action_afe)}}
             =hoc_s(:call_to_action_learn_more)
+
+= view :analytics_event_log_helper, event_name: AnalyticsConstants::SELF_PACED_PL_PAGE_VISITED_EVENT

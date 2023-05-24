@@ -174,6 +174,14 @@ module Cdo
       end
     end
 
+    def javabuilder_demo_url(path = '', scheme = '')
+      'wss://javabuilder-demo.code.org'
+    end
+
+    def javabuilder_demo_upload_url(path = '', scheme = '')
+      'https://javabuilder-demo-http.code.org/seedsources/sources.json'
+    end
+
     # Get a list of all languages for which we want to link to a localized
     # version of CurriculumBuilder. This list is distinct from the list of
     # languages officially supported by CurriculumBuilder in that there are

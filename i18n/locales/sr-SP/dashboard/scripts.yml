@@ -1028,3 +1028,9 @@ sr:
               display_name: Функције
             csf_nested_loops:
               display_name: Кондиционали
+        coursef-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Дигитално држављанство
+            lessonGroup-4:
+              display_name: Променљиве

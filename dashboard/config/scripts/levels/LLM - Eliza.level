@@ -34,7 +34,7 @@
     "fail_on_lint_errors": "false",
     "widget_mode": "false",
     "ai_enabled": "false",
-    "long_instructions": "# Eliza\r\n\r\nEliza was the name of a program that meant to model a therapist who mostly encourages clients to talk. Eliza did not learn from a lot of text like a Large Language Model. Instead, it matched patterns of what people said to things it made sense to say to them in return.\r\n\r\nThis version of Eliza does not have very many patterns pre-programmed, but will give you an idea of what talking to a chatbot that did not involve machine learning can be like.",
+    "long_instructions": "# Eliza\r\n\r\nEliza was the name of a program that modeled a therapist who  encourages clients to talk. Eliza did not learn from a lot of text like a Large Language Model. Instead, it had ready-made responses for things people might say to it. It felt “real” to many.\r\nThis version of Eliza does not have very many responses pre-programmed, but will give you an idea of what talking to a chatbot that did not involve machine learning can be like.",
     "display_name": "Voice Simulator",
     "teacher_markdown": "You may want students to figure out what Eliza's patterns are for themselves, but for your reference, here are the patterns:\r\n* No response\r\n* I feel\r\n* I felt\r\n* My ____ hurts\r\n* Anything with the term \"mother\" or \"father\"\r\n* Anything with \"don't know\"",
     "preload_asset_list": null,
@@ -42,7 +42,7 @@
 
     ]
   },
-  "audit_log": "[{\"changed_at\":\"2023-05-16T15:50:38.441+00:00\",\"changed\":[\"cloned from \\\"LLM - Written Voice Simulator\\\"\"],\"cloned_from\":\"LLM - Written Voice Simulator\"},{\"changed_at\":\"2023-05-16 16:07:25 +0000\",\"changed\":[\"start_blocks\",\"start_html\",\"long_instructions\",\"teacher_markdown\",\"preload_asset_list\"],\"changed_by_id\":18972,\"changed_by_email\":\"sarah.judd@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-05-16T15:50:38.441+00:00\",\"changed\":[\"cloned from \\\"LLM - Written Voice Simulator\\\"\"],\"cloned_from\":\"LLM - Written Voice Simulator\"},{\"changed_at\":\"2023-05-16 16:07:25 +0000\",\"changed\":[\"start_blocks\",\"start_html\",\"long_instructions\",\"teacher_markdown\",\"preload_asset_list\"],\"changed_by_id\":18972,\"changed_by_email\":\"sarah.judd@code.org\"},{\"changed_at\":\"2023-05-23 05:15:59 +0000\",\"changed\":[\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18972,\"changed_by_email\":\"sarah.judd@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

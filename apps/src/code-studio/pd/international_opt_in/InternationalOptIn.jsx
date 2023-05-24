@@ -6,7 +6,7 @@ import formComponentUtils from '../form_components/utils';
 import DatePicker from '../workshop_dashboard/components/date_picker';
 import moment from 'moment';
 import {DATE_FORMAT} from '../workshop_dashboard/workshopConstants';
-import {Row, Col, ControlLabel, FormGroup} from 'react-bootstrap';
+import {Row, Col, ControlLabel, FormGroup} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import i18n from '@cdo/locale';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 

@@ -1147,7 +1147,7 @@
           "courseA_artist_loops7_1": "Ця цифра означає, що лише один блок такого типу може бути використаний у кінцевій відповіді."
         },
         "courseA_artist_loops8_2021": {
-          "courseA_artist_loops8_1": "Ти знаєш, що можеш відступити за лінію, якщо тобі потрібно буде?"
+          "courseA_artist_loops8_1": "Ти знаєш, що можна малювати поверх лінії, якщо буде потрібно?"
         },
         "courseA_playLab_events4_2021": {
           "courseA_playlab_events4_callout1": "Це заклик"
@@ -1168,7 +1168,45 @@
           "courseB_artist_loops3_1": "У наборі інструментів є лише один з цих блоків.  Як ти будеш його використовувати?"
         },
         "courseB_playlab_events6_2021": {
-          "courseB_playlab_events6_a": "Використовуй зелену стрілку списку, що розкривається, для зміни напрямків."
+          "courseB_playlab_events6_a": "Використовуй зелену стрілку розкривного списку для зміни напрямків."
+        },
+        "Fish Tank 3-validated_2021": {
+          "spritelab_comment": "Використовуйте цей блок для приміток для себе або викладача, як працює ваш код."
+        },
+        "courseC_artist_prog2_2021": {
+          "slider": "Тут ти можеш уповільнити свою програму."
+        },
+        "courseD_artist_nestedLoops1a_2021": {
+          "courseD_artist_nestedLoops1a_1": "Тобі не обов'язково використовувати кольори, щоб правильно виконати це завдання. Якщо ти хочеш, цей блок `випадкових кольорів` зробить це простіше простого!"
+        },
+        "courseE_aboutme_2_2021": {
+          "": "Натисніть!"
+        },
+        "courseE_artist_functions2_2021": {
+          "courseD_artist_functions2_1": "Якщо запустити цей зелений блок, запуститься увесь код у функції. Що має зробити художник після того, як намалює перший квадрат?"
+        },
+        "courseE_artist_functions8a_2021": {
+          "courseD_artist_functions8_1": "Твої блоки для створення функцій було переміщено під цю мітку на панелі інструментів."
+        },
+        "courseE_artist_functions_challenge1_2021": {
+          "courseE_artist_functions_challenge1_callout1": "Продовжуй роботу програми, додавши більше коду внизу.",
+          "courseE_artist_functions_challenge1_callout2": "Якщо тобі не подобається цей дизайн, зміни його на будь-який інший!"
+        },
+        "courseE_artist_functions_challenge2_2021": {
+          "courseE_artist_functions_challenge2_callout1": "Продовжуй роботу програми, додавши більше коду внизу.",
+          "courseE_artist_functions_challenge2_callout2": "Якщо тобі не подобається цей дизайн, зміни його на будь-який інший!"
+        },
+        "courseE_farmer_functions13_2021": {
+          "courseE_farmer_functions1a_1": "Цей овоч невідомий.  Він змінюється кожного разу, коли ти запускаєш програму."
+        },
+        "courseE_farmer_functions1_2021": {
+          "courseE_farmer_functions1_2": "Цього разу панель інструментів організована трохи по-іншому! Натисни на різні категорії, щоб побачити, які блоки у тебе є."
+        },
+        "courseE_farmer_functions1a_2021": {
+          "courseE_farmer_functions1a_1": "Цей овоч невідомий.  Він змінюється кожного разу, коли ти запускаєш програму."
+        },
+        "courseE_farmer_functions2b_2021": {
+          "courseE_farmer_functions1a_1": "Цей овоч невідомий.  Він змінюється кожного разу, коли ти запускаєш програму."
         }
       }
     }

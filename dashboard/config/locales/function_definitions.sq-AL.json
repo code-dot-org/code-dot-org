@@ -210,6 +210,12 @@
           },
           "draw a house": {
             "name": "vizato një shtëpi"
+          },
+          "sun": {
+            "name": "diell"
+          },
+          "square": {
+            "name": "katror"
           }
         },
         "Geometric Sun_2018": {
@@ -218,6 +224,12 @@
           },
           "draw a house": {
             "name": "vizato një shtëpi"
+          },
+          "sun": {
+            "name": "diell"
+          },
+          "square": {
+            "name": "katror"
           }
         },
         "InspirationalArtwork": {

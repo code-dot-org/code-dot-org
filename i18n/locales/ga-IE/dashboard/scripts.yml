@@ -3006,6 +3006,14 @@ ga:
           lessons:
             lesson-3:
               name: Réamhrá
+        virtual-pl-csd-summer-day1:
+          lessons:
+            lesson-1:
+              name: Réamhrá
+        virtual-pl-csd-summer-day5:
+          lessons:
+            lesson-3:
+              name: Measúnú
         csd-post-survey-2023:
           title: Suirbhé Iarchúrsa
         focus-on-data-post-survey-2023:
@@ -3020,3 +3028,12 @@ ga:
           title: Suirbhé Iarchúrsa
         focus-on-creativity-post-survey-2023:
           title: Suirbhé Iarchúrsa
+        coursef-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Saoránacht Dhigiteach
+            lessonGroup-3:
+              display_name: Sprideanna
+            lessonGroup-4:
+              display_name: Athróga
+          description_short: Foghlaim na coincheapa go léir i mBuntús na Ríomheolaíochta agus cruthaigh ealaín, scéal, nó cluiche.

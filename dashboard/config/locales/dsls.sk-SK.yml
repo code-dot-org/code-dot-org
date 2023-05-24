@@ -1191,9 +1191,12 @@ sk-SK:
           z predchádzajúcich 2 lekcií naplánujeme a vytvoríme vlastnú hru. Následne,
           na základe vzájomnej spätnej  väzby, hry vylepšíme a nakoniec hotovú hru
           odprezentujeme pred triedou. \n\n## Zdroje\n\n* [Vytvor svoju vlastnú hru
-          - Sprievodca projektom](https://docs.google.com/document/d/1SBye25XfdnytxCrc6a_OtpcS02YsT99nyJ9Vjwp_zeo/export?format=pdf)\n*
+          - Sprievodca projektom](https://docs.google.com/document/d/1mrvQAQPAQ1k_swhOzJaiXzUrmGUUaNSEEv5-1pX_jis/export?format=pdf)\n*
           [Vytvor svoju vlastnú hru - Hotnotiace kritéria](https://docs.google.com/document/d/1WChOizSb4gZsEbdER5KwYXj9c6Ogpeuv0AzegJ5HD8A/export?format=pdf)\n*
           [Vytvor svoju vlastnú hru - Spätná väzba](https://docs.google.com/document/d/1ORjDuRep39xwiFaz20_jF74eWB63FVtK2FIQhq7Wecg/export?format=pdf)\n"
+        teacher_markdown: |
+          * [Vytvor svoju vlastnú hru](https://docs.google.com/document/d/1YxgiptAUfH4Flya_BOtzR1Fk_Hvzn2GBs0C9f93cHck/edit?usp=sharing) – Sprievodca projektom – Riešenie ([PDF](https://docs.google.com/document/d/1YxgiptAUfH4Flya_BOtzR1Fk_Hvzn2GBs0C9f93cHck/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1YxgiptAUfH4Flya_BOtzR1Fk_Hvzn2GBs0C9f93cHck/export?format=doc))
+          * [Vytvor svoju vlastnú hru](https://docs.google.com/document/d/1eCE7xT-YWu1xRyxVLx4xCXggqihxJwtU6XkXcchqk6w/edit) - Peer Review Exemplar ([PDF](https://docs.google.com/document/d/1eCE7xT-YWu1xRyxVLx4xCXggqihxJwtU6XkXcchqk6w/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1eCE7xT-YWu1xRyxVLx4xCXggqihxJwtU6XkXcchqk6w/export?format=doc))
       CSD U3 SFLP Velocity:
         markdown: "# Prehľad\n\nPo krátkom zopakovaní toho, ako sa kód pre počítanie
           používa na nastavenie pohybu  objektu „postava“, spoznáš  vlastnosti, ktoré
@@ -1261,6 +1264,9 @@ sk-SK:
           ## Zdroje
 
           * [Planning Your Platform Game - Project Guide](https://docs.google.com/document/d/1-h8vfW6PfppsDKKqVeVDMU6FxbPP8tA1Up_oc5_p9Dk/export?format=pdf)
+        teacher_markdown: "* [Plánovanie plošinovky](https://docs.google.com/document/d/1W23uN91Z52DWyrxpoHmM8HBenECEwNh9rNpoqzLwVcA/edit)
+          – Sprievodca projektom ([PDF](https://docs.google.com/document/d/1y5Q_3qDIUy1imif1BjiWffZHPzE8NVtyY5w8KlTuzUU/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/1y5Q_3qDIUy1imif1BjiWffZHPzE8NVtyY5w8KlTuzUU/export?format=doc))\n"
       CSD U3 drawSprites placement match:
         answers:
         - text: <img width="300px" src="https://images.code.org/131282b44fe34cd619a9a21bc68888da-image-1523902103487.58.48
@@ -4778,9 +4784,9 @@ sk-SK:
           [key]
 
           *  [Hliníkové člny - Príklad]
-          (https://docs.google.com/a/code.org/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/edit?usp=sharing) - Sprievodca akvitami ([PDF]
-          (https://docs.google.com/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/export?format=pdf) | [DOCX]
-          (https://docs.google.com/a/code.org/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/edit?usp=sharing))
+          (https://docs.google.com/document/d/18gJ_V1wvQk6LvyCcCGFczBhblJHoA8t9ow2pfChMKyc/) - Sprievodca akvitami ([PDF]
+          (https://docs.google.com/document/d/18gJ_V1wvQk6LvyCcCGFczBhblJHoA8t9ow2pfChMKyc/export?format=pdf) | [DOCX]
+          (https://docs.google.com/document/d/18gJ_V1wvQk6LvyCcCGFczBhblJHoA8t9ow2pfChMKyc/export?format=doc))
 
           [/key]
       Unit 1 Lesson 2 Overview:
@@ -4794,7 +4800,7 @@ sk-SK:
           * [Postup riešenia problémov - Sprievodca aktivitami ](https://docs.google.com/document/d/1xEPMYIDy70fWCgyLymBNmxkE-6uJ7BYOXSmV8Vyt-SQ/export?format=pdf)
         teacher_markdown: |-
           * [Postup riešenia problémov]
-          (https://docs.google.com/document/d/1lWv8fKJO2ZRvObUx6Ys1MTVqcSC5ZUfKI8RRXGayRpY/) - Sprievodca aktivitami ([PDF](https://docs.google.com/document/d/1lWv8fKJO2ZRvObUx6Ys1MTVqcSC5ZUfKI8RRXGayRpY/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1lWv8fKJO2ZRvObUx6Ys1MTVqcSC5ZUfKI8RRXGayRpY/export?format=doc))
+          (https://docs.google.com/document/d/1o9DjDCtIu5SqGDVfScUiy8vWe0MNsr_AUzfymg2u49U/) - Sprievodca aktivitami ([PDF](https://docs.google.com/document/d/1o9DjDCtIu5SqGDVfScUiy8vWe0MNsr_AUzfymg2u49U/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1o9DjDCtIu5SqGDVfScUiy8vWe0MNsr_AUzfymg2u49U/export?format=doc))
       Unit 1 Lesson 3 Overview:
         teacher_markdown: "[Riešenie problémov KĽÚČ](https://docs.google.com/document/d/1hmbWujY2ii04XJRvoafIEtGyK-ZNBkJEtdSMFcXS5Uw/)
           - Sprievodca aktivitami ([PDF](https://docs.google.com/document/d/1hmbWujY2ii04XJRvoafIEtGyK-ZNBkJEtdSMFcXS5Uw/export?format=pdf)
@@ -4897,7 +4903,7 @@ sk-SK:
           [Aplikácia a riešenie problémov - Hodnotenie spolužiakov](https://docs.google.com/document/d/13ekhJvtz1vovS6FhGBeDf1mcYFRyJe65bQdi8S8T9lU/export?format=pdf)\n*
           [Aplikácia a riešenie problémov - Formulár](https://docs.google.com/document/d/1ix0LfgiVglwyC5Bb6PBlfBrnbeCOz2wPIPTgXu-qMZE/export?format=pdf)"
         teacher_markdown: |
-          * [Aplikácia a riešenie problémov](https://docs.google.com/document/d/1m8a9nnCGCriSvzWUr5Bh7Siod2iu2FdFQtMEz4TONuc/edit) - Príklad sprievodcu projektom ([PDF](https://docs.google.com/document/d/1m8a9nnCGCriSvzWUr5Bh7Siod2iu2FdFQtMEz4TONuc/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1m8a9nnCGCriSvzWUr5Bh7Siod2iu2FdFQtMEz4TONuc/export?format=doc))
+          * [Aplikácia a riešenie problémov](https://docs.google.com/document/d/1g6RxE2MszcUn3vAjD-DoFThhlyZZqKIPLceQ3427J_w/) - Príklad sprievodcu projektom ([PDF](https://docs.google.com/document/d/1g6RxE2MszcUn3vAjD-DoFThhlyZZqKIPLceQ3427J_w/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1g6RxE2MszcUn3vAjD-DoFThhlyZZqKIPLceQ3427J_w/export?format=doc))
           * [Aplikácia a Riešenie problému](https://docs.google.com/document/d/1hm5wWoVqDhFHbs4MfN0gcAnskZ5a6a5KdO7N3Y0GLoA/edit) - Príklad hodnotenia spolužiakov  ([PDF](https://docs.google.com/document/d/1hm5wWoVqDhFHbs4MfN0gcAnskZ5a6a5KdO7N3Y0GLoA/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1hm5wWoVqDhFHbs4MfN0gcAnskZ5a6a5KdO7N3Y0GLoA/export?format=doc))
       CSD U2 L1 Overview:
         markdown: "# Prehľad\n\nTáto lekcia sa zaoberá účelmi  webových stránok, ktoré
@@ -4965,9 +4971,9 @@ sk-SK:
         markdown: "# Prehľad\n\nV tejto lekcii sa zamyslíš nad tým, ako počítače pomáhajú
           pri riešení určitých problémov, a naučíš sa základné funkcie každého počítača.
           \n\n## Materiály \n\n* [Čo je počítač - Sprievodca aktivitami](https://docs.google.com/document/d/1g4dPcsx2xADEZI0FiMYApLr0hh3_-89NDWd2y86sS6I/export?format=pdf)"
-        teacher_markdown: "[Čo je počítač - Príklad](https://docs.google.com/document/d/19QfEaVJcF85W6iZwITFIcPycO11znVjYTAaKO78VPH0/edit?usp=sharing)
-          - Sprievodca aktivitami ([PDF](https://docs.google.com/document/d/19QfEaVJcF85W6iZwITFIcPycO11znVjYTAaKO78VPH0/export?format=pdf)
-          | [DOCX](https://docs.google.com/document/d/19QfEaVJcF85W6iZwITFIcPycO11znVjYTAaKO78VPH0/export?format=doc))"
+        teacher_markdown: "[Čo je počítač - Príklad](https://docs.google.com/document/d/1kL9sY0P_qDcTzeNFMvHI6vXr9XLVRkW7osWI1QQxak8/)
+          - Sprievodca aktivitou ([PDF](https://docs.google.com/document/d/1kL9sY0P_qDcTzeNFMvHI6vXr9XLVRkW7osWI1QQxak8/export?format=pdf)
+          | [DOCX]((https://docs.google.com/document/d/1kL9sY0P_qDcTzeNFMvHI6vXr9XLVRkW7osWI1QQxak8/export?format=doc))"
       CSD U2 L3 Overview:
         markdown: "# Overview\n\nTáto lekcia predstaví  HTML ako prostiedok pri riešení
           problému pri komunikácii  obsahu a štruktúry webovej stránky smerom k počitaču.
@@ -18118,12 +18124,12 @@ sk-SK:
         markdown: |
           ![](https://images.code.org/8f69603c91afe4e7beb15a6c4e3db945-image-1625589493100.png)
 
-          ## [Klikni sem](https://docs.google.com/forms/d/e/1FAIpQLSdFxPdsfbgqF2ZpAjILjCeLX-GlFCrMdLbGHlk_0-klSf9YcQ/viewform) a vyplň dotazník Odporúčanie topánok.
+          ## [Klikni sem](https://docs.google.com/forms/d/e/1FAIpQLSfQ0hr1uImhBjvqzv6wnyUaa-WDDgsub2O0vx15eqz7azICdA/viewform) a vyplň dotazník Odporúčanie topánok.
       ml-models-shoe survey_2022:
         markdown: |
           ![](https://images.code.org/8f69603c91afe4e7beb15a6c4e3db945-image-1625589493100.png)
 
-          ## [Klikni sem](https://docs.google.com/forms/d/e/1FAIpQLSdFxPdsfbgqF2ZpAjILjCeLX-GlFCrMdLbGHlk_0-klSf9YcQ/viewform) a vyplň dotazník Odporúčanie topánok.
+          ## [Klikni sem](https://docs.google.com/forms/d/e/1FAIpQLSfQ0hr1uImhBjvqzv6wnyUaa-WDDgsub2O0vx15eqz7azICdA/viewform) a vyplň dotazník Odporúčanie topánok.
       ml-model card-medical-1-2021:
         markdown: |
           # ER Recommender V1
@@ -18260,12 +18266,12 @@ sk-SK:
         markdown: |
           ![](https://images.code.org/4f85627c74a140b1b09599a5095622ff-image-1624988925067.png)
 
-          ## [Klikni sem](https://docs.google.com/spreadsheets/d/1XKPrY1ABlrSx3pdKqK7y4dx5OYdSAJkpYdefKrFyqEI/copy) a vytvor kópiu Isaacovych údajov.
+          ## [Klikni sem](https://docs.google.com/spreadsheets/d/161gqtcyWU7qLGF9wxkiAuWjlTcoMaheWOq0aJlLXnvc/copy) a vytvor kópiu Isaacovych údajov.
       ml-good data-isaac data_2022:
         markdown: |
           ![](https://images.code.org/4f85627c74a140b1b09599a5095622ff-image-1624988925067.png)
 
-          ## [Klikni sem](https://docs.google.com/spreadsheets/d/1XKPrY1ABlrSx3pdKqK7y4dx5OYdSAJkpYdefKrFyqEI/copy) a vytvor kópiu Isaacovych údajov.
+          ## [Klikni sem](https://docs.google.com/spreadsheets/d/161gqtcyWU7qLGF9wxkiAuWjlTcoMaheWOq0aJlLXnvc/copy) a vytvor kópiu Isaacovych údajov.
       ml-good data-kim data:
         markdown: |
           ![](https://images.code.org/af7558eeafd15ef5e9f2fad0a6446c6a-image-1624987665106.png)

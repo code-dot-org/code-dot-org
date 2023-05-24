@@ -3,6 +3,10 @@ import {render, screen, fireEvent} from '@testing-library/react';
 import {Provider} from 'react-redux';
 import {configureStore} from '@reduxjs/toolkit';
 import {assert, expect} from '../../../util/reconfiguredChai';
+import {
+  setWindowLocation,
+  resetWindowLocation,
+} from '../../../../src/code-studio/utils';
 import responsive, {
   setResponsiveSize,
   ResponsiveSize,
@@ -222,7 +226,7 @@ describe('CurriculumCatalog', () => {
     // Filters for all courses that support:
     // - Grades 2 or 3
     // - Physical Computing or Interdisciplinary topics
-    // - Chromebooks or tablets
+    // - Tablets or No Device
     expect(
       screen.getAllByText('Learn more', {
         exact: false,
@@ -252,6 +256,150 @@ describe('CurriculumCatalog', () => {
       }).length
     ).to.equal(allFiltersAppliedShownCurricula.length);
     allFiltersAppliedShownCurricula.forEach(curriculum => {
+      expect(screen.getAllByText(curriculum.display_name).length).to.equal(1);
+    });
+  });
+
+  it('applying filters that yield no results shows no results message', () => {
+    // Does not show the no results message before filtering
+    expect(
+      screen.queryAllByText('No matching curricula', {
+        exact: false,
+      }).length
+    ).to.equal(0);
+
+    // Select "Kindergarten" and "No Device" in device filter (which should yield no results)
+    const kindergartenFilterCheckbox = screen.getByDisplayValue('kindergarten');
+    fireEvent.click(kindergartenFilterCheckbox);
+    assert(kindergartenFilterCheckbox.checked);
+    const noDeviceFilterCheckbox = screen.getByDisplayValue('no_device');
+    fireEvent.click(noDeviceFilterCheckbox);
+    assert(noDeviceFilterCheckbox.checked);
+
+    // Does not show any Curriculum Catalog Cards
+    expect(screen.queryAllByText('Learn more', {exact: false}).length).to.equal(
+      0
+    );
+
+    // Does show the no results message
+    expect(
+      screen.queryAllByText('No matching curricula', {
+        exact: false,
+      }).length
+    ).to.equal(1);
+  });
+});
+
+describe('CurriculumCatalog with url params', () => {
+  const defaultProps = {curriculaData: allCurricula, isEnglish: false};
+  let store;
+
+  beforeEach(() => {
+    store = configureStore({reducer: {responsive}});
+    store.dispatch(setResponsiveSize(ResponsiveSize.lg));
+  });
+  afterEach(resetWindowLocation);
+
+  function renderWithUrlParams(urlParams) {
+    setWindowLocation({search: urlParams});
+    render(
+      <Provider store={store}>
+        <CurriculumCatalog {...defaultProps} />
+      </Provider>
+    );
+  }
+
+  it('no url params applies no filters on load', () => {
+    renderWithUrlParams('');
+
+    expect(
+      screen.getAllByText('Learn more', {
+        exact: false,
+      }).length
+    ).to.equal(allShownCurricula.length);
+    allShownCurricula.forEach(curriculum => {
+      expect(screen.getAllByText(curriculum.display_name).length).to.equal(1);
+    });
+  });
+
+  it('param with invalid filter key does not filter anything on load', () => {
+    renderWithUrlParams('?fakeKey=fakeValue');
+
+    expect(
+      screen.getAllByText('Learn more', {
+        exact: false,
+      }).length
+    ).to.equal(allShownCurricula.length);
+    allShownCurricula.forEach(curriculum => {
+      expect(screen.getAllByText(curriculum.display_name).length).to.equal(1);
+    });
+  });
+
+  it('param with valid filter key but no value does not filter anything on load', () => {
+    renderWithUrlParams('?duration=');
+
+    expect(
+      screen.getAllByText('Learn more', {
+        exact: false,
+      }).length
+    ).to.equal(allShownCurricula.length);
+    allShownCurricula.forEach(curriculum => {
+      expect(screen.getAllByText(curriculum.display_name).length).to.equal(1);
+    });
+  });
+
+  it('param with valid filter key but invalid value does not filter anything on load', () => {
+    renderWithUrlParams('?duration=fakeValue');
+
+    expect(
+      screen.getAllByText('Learn more', {
+        exact: false,
+      }).length
+    ).to.equal(allShownCurricula.length);
+    allShownCurricula.forEach(curriculum => {
+      expect(screen.getAllByText(curriculum.display_name).length).to.equal(1);
+    });
+  });
+
+  it('params with valid filter key and value applies filters on load', () => {
+    renderWithUrlParams('?duration=week');
+
+    expect(
+      screen.getAllByText('Learn more', {
+        exact: false,
+      }).length
+    ).to.equal(weeklongShownCurricula.length);
+    weeklongShownCurricula.forEach(curriculum => {
+      expect(screen.getAllByText(curriculum.display_name).length).to.equal(1);
+    });
+  });
+
+  it('params with some valid filter keys and some valid values applies valid filters on load', () => {
+    renderWithUrlParams(
+      '?grade=kindergarten&fakeKey=grade_4&grade=fakeValue&grade=grade_2'
+    );
+
+    expect(
+      screen.getAllByText('Learn more', {
+        exact: false,
+      }).length
+    ).to.equal(gradesKAnd2ShownCurricula.length);
+    gradesKAnd2ShownCurricula.forEach(curriculum => {
+      expect(screen.getAllByText(curriculum.display_name).length).to.equal(1);
+    });
+  });
+
+  it('params with different valid filter keys and different valid values are all applied on load', () => {
+    renderWithUrlParams(
+      '?grade=grade_2&grade=grade_3&topic=interdisciplinary&topic=physical_computing&device=tablet&device=no_device'
+    );
+
+    expect(
+      screen.getAllByText('Learn more', {
+        exact: false,
+      }).length
+    ).to.equal(multipleFiltersAppliedShownCurricula.length);
+    multipleFiltersAppliedShownCurricula.forEach(curriculum => {
       expect(screen.getAllByText(curriculum.display_name).length).to.equal(1);
     });
   });

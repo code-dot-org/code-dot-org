@@ -13,6 +13,7 @@
   "columnDetailsMaximumValue": "अधिकतम",
   "dataCardLastUpdated": "पिछली बार अद्यतन किया",
   "predictButton": "(Predict) पूर्वानुमान लगाइए",
+  "uniqueOptionsWarningNotice": "नोट",
   "datasets": {
     "medical_priority": {
       "fields": {

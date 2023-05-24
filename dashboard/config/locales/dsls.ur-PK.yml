@@ -10196,11 +10196,14 @@ ur-PK:
         - {}
       pre-assessment survey q29:
         answers:
-        - correct: true
-        - correct: true
+        - text: مرد
+          correct: true
+        - text: خواتین
+          correct: true
         - text: دیگر
           correct: true
-        - correct: true
+        - text: جواب دینے کے لئے ترجیح دیں
+          correct: true
         questions:
         - {}
       pre-assessment survey q3:
@@ -10216,15 +10219,19 @@ ur-PK:
       pre-assessment survey q30:
         answers:
         - correct: true
+        - text: ایشین
+          correct: true
+        - text: سیاہ یا افریقی امریکی
+          correct: true
         - correct: true
         - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
+        - text: وائٹ
+          correct: true
         - correct: true
         - text: دیگر
           correct: true
-        - correct: true
+        - text: جواب دینے کے لئے ترجیح دیں
+          correct: true
         questions:
         - {}
       pre-assessment survey q4:

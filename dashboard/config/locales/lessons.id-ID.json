@@ -1438,6 +1438,9 @@
         "csd7-2022/Introduction to AI Lab": {
           "name": "Pengantar Lab AI"
         },
+        "csd7-2022/Numerical Data in AI Lab": {
+          "name": "Data Numerik di Lab AI"
+        },
         "csd7-2022/Survey Planning": {
           "name": "Merancang Pengumpulan Data"
         },
@@ -5090,6 +5093,9 @@
         },
         "csd7-2021/Introduction to AI Lab": {
           "name": "Pengantar Lab AI"
+        },
+        "csd7-2021/Numerical Data in AI Lab": {
+          "name": "Data Numerik di Lab AI"
         },
         "csd7-2021/Survey Planning": {
           "name": "Merancang Pengumpulan Data"
