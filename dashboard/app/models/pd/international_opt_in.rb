@@ -86,7 +86,7 @@ class Pd::InternationalOptIn < ApplicationRecord
   def self.options
     entry_keys = {
       gender: %w(male female non_binary not_listed none),
-      schoolCountry: %w(barbados belize canada chile colombia israel malaysia mexico paraguay thailand uzbekistan),
+      schoolCountry: %w(australia barbados belize brazil canada chile colombia dominican_republic india indonesia israel jamaica kenya malaysia maldives mexico mongolia paraguay portugal slovakia south_korea spain thailand trinidad_and_tobago uzbekistan vietnam),
       ages: %w(ages_under_6 ages_7_8 ages_9_10 ages_11_12 ages_13_14 ages_15_16 ages_17_18 ages_19_over),
       subjects: %w(cs ict math science history la efl music art other na),
       resources: %w(bootstrap codecademy csfirst khan kodable lightbot scratch tynker other na),
