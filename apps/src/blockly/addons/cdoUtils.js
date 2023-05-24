@@ -224,6 +224,10 @@ export function compareBlockArrays(xmlBlocks, jsonBlocks) {
       const keys2 = Object.keys(arg2).sort();
 
       if (keys1.length !== keys2.length) {
+        if (path.endsWith('generatedOptions_') && keys2.length > keys1.length) {
+          // Blockly doesn't serialize all recent variable options to XML.
+          return differences;
+        }
         differences.push({
           result: 'different number of keys',
           path: path,
