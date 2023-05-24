@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import $ from 'jquery';
-import {Button} from 'react-bootstrap';
+import {Button} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import Spinner from '../components/spinner.jsx';
 import ConfirmationDialog from '../components/confirmation_dialog';
 import {SendAdminApprovalEmailStatuses} from '@cdo/apps/generated/pd/teacherApplicationConstants';

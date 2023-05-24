@@ -2,7 +2,7 @@ import React from 'react';
 import {mount} from 'enzyme';
 import {assert} from 'chai';
 import {Factory} from 'rosie';
-import {FormControl} from 'react-bootstrap';
+import {FormControl} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import Permission, {
   WorkshopAdmin,
   ProgramManager,
