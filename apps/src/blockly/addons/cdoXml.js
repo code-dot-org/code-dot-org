@@ -59,6 +59,10 @@ export default function initializeBlocklyXml(blocklyWrapper) {
       });
     });
 
+    // Below this point, we will be repositioning blocks on a rendered workspace.
+    if (!blockSpace.rendered) {
+      return blocks;
+    }
     // Note that RTL languages position blocks from the left within a
     // blockSpace. For instructions and embedded hints, there is no viewWidth,
     // so we determine the starting point based on the width of the block.
