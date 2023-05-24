@@ -30,10 +30,10 @@
         },
         {"message": "Please play three sounds together."}
       ],
-      "starterCode": {
+      "startSources": {
         "blocks": {
           "languageVersion": 0,
-          "blocks": [{"type": "when_run_simple2", "x": 30, "y": 30}]
+          "blocks": [{"type": "when_run_simple2", "x": 35, "y": 35}]
         },
         "variables": [{"name": "currentTime"}, {"name": "i"}]
       }
