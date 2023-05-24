@@ -4,29 +4,53 @@
       "name": "preamble_page",
       "elements": [
         {
-          "type": "radiogroup",
-          "name": "csa_capstone_workshop",
+          "type": "panel",
+          "name": "testing_panel",
           "visible": true,
-          "choices": [
+          "title": " ",
+          "elements": [
             {
-              "value": "w1",
-              "text": "Understanding Curriculum Changes for SY 2023-24"
+              "type": "html",
+              "name": "testing_warning",
+              "html": "<h2 style='background-color: yellow'>Panel for variable testing (hide before shipping)</h2>"
             },
             {
-              "value": "w2",
-              "text": "Sharing Best Practices"
+              "type": "radiogroup",
+              "name": "csa_capstone_workshop",
+              "visible": true,
+              "choices": [
+                {
+                  "value": "w1",
+                  "text": "Understanding Curriculum Changes for SY 2023-24"
+                },
+                {
+                  "value": "w2",
+                  "text": "Sharing Best Practices"
+                },
+                {
+                  "value": "w3",
+                  "text": "Making Sense of AP Data"
+                },
+                {
+                  "value": "w4",
+                  "text": "Building Your CS Community"
+                },
+                {
+                  "value": "w5",
+                  "text": "Regional Partner CSA Capstone"
+                }
+              ]
             },
             {
-              "value": "w3",
-              "text": "Making Sense of AP Data"
+              "type": "html",
+              "name": "variable_testing",
+              "visible": true,
+              "html": "<h3>variables</h3>\n<p>Test to make sure variables are working as expected - make invisible when live</p><p><li>csa_capstone_workshop = {csa_capstone_workshop}</p>"
             },
             {
-              "value": "w4",
-              "text": "Building Your CS Community"
-            },
-            {
-              "value": "w5",
-              "text": "Regional Partner CSA Capstone"
+              "type": "html",
+              "name": "testing_warning",
+              "html": "<p style='background-color: yellow; text-align:center'>-- End of testing panel -- </p>"
             }
           ]
         },
@@ -101,6 +125,23 @@
               "text": "I would recommend this workshop to others."
             }
           ]
+        },
+        {
+          "type": "html",
+          "name": "workshop_experience_space",
+          "html": "\n<p></p>"
+        },
+        {
+          "type": "comment",
+          "name": "workshop_most_useful",
+          "visibleIf": "{csa_capstone_workshop} = 'w5'",
+          "title": "What content from this workshop was most useful to you?"
+        },
+        {
+          "type": "comment",
+          "name": "workshop_expected_content",
+          "visibleIf": "{csa_capstone_workshop} = 'w5'",
+          "title": "What content did you expect to be included in this workshop that wasn’t?"
         }
       ]
     },
@@ -116,7 +157,6 @@
           "type": "radiogroup",
           "name": "csa_taught_current_sy",
           "title": "Did you teach Computer Science A (CSA) during school year 2022-23?",
-          "isRequired": true,
           "choices": [
             {
               "value": "yes",
@@ -133,7 +173,6 @@
           "name": "csa_taught_current_sy_used_cdo",
           "visibleIf": "{csa_taught_current_sy} = 'yes'",
           "title": "What CSA curriculum did you use more often to teach CSA during school year 2022-23?",
-          "isRequired": true,
           "choices": [
             {
               "value": "cdo_curriculum",
@@ -152,20 +191,28 @@
         {
           "type": "comment",
           "name": "csa_taught_enjoy",
-          "visibleIf": "{csa_capstone_workshop} = 'w1' and {csa_taught_current_sy} = 'yes'",
+          "visibleIf": "{csa_capstone_workshop} = 'w1' and {csa_taught_current_sy} <> 'no'",
           "title": "What did you enjoy the most about teaching CSA during school year 2022-23?"
         },
         {
           "type": "comment",
           "name": "csa_taught_challenge",
-          "visibleIf": "{csa_capstone_workshop} = 'w1' and {csa_taught_current_sy} = 'yes'",
+          "visibleIf": "{csa_capstone_workshop} = 'w1' and {csa_taught_current_sy} <> 'no'",
           "title": "What was one challenge you faced teaching CSA during school year 2022-23?"
         },
         {
           "type": "comment",
           "name": "csa_taught_difference",
-          "visibleIf": "{csa_capstone_workshop} = 'w1' and {csa_taught_current_sy} = 'yes'",
+          "visibleIf": "{csa_capstone_workshop} = 'w1' and {csa_taught_current_sy} <> 'no'",
           "title": "What is one thing you did while teaching CSA during school year 2022-23 that “made all the difference” for you or your students?"
+        },
+        {
+          "type": "comment",
+          "name": "other_feedback_teach_csa",
+          "visibleIf": "{csa_capstone_workshop} = 'w1' and {csa_taught_current_sy} <> 'no'",
+          "title": "Is there anything else you’d like to share about your experience teaching CSA?",
+          "cols": 60,
+          "rows": 3
         },
         {
           "type": "html",
@@ -173,22 +220,114 @@
           "html": "\n<p></p>"
         },
         {
+          "type": "comment",
+          "name": "csa_strengthen_ap_cs",
+          "visibleIf": "{csa_capstone_workshop} = 'w3'",
+          "title": "What does your school need to strengthen its AP computer science program?"
+        },
+        {
+          "type": "matrix",
+          "name": "java_knowledge_matrix",
+          "visibleIf": "{csa_capstone_workshop} = 'w2'",
+          "title": "How much do you agree or disagree with the following statements about your knowledge of Java?",
+          "columns": [
+            {
+              "value": "1",
+              "text": "Strongly Disagree"
+            },
+            {
+              "value": "2",
+              "text": "Disagree"
+            },
+            {
+              "value": "3",
+              "text": "Slightly Disagree"
+            },
+            {
+              "value": "4",
+              "text": "Neutral"
+            },
+            {
+              "value": "5",
+              "text": "Slightly Agree"
+            },
+            {
+              "value": "6",
+              "text": "Agree"
+            },
+            {
+              "value": "7",
+              "text": "Strongly Agree"
+            }
+          ],
+          "rows": [
+            {
+              "value": "java_knowledge",
+              "text": "I have the right amount of Java knowledge to successfully teach CSA in SY 2023-24."
+            },
+            {
+              "value": "java_resources",
+              "text": "I would benefit from exploring resources to increase my Java knowledge."
+            }
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "csa_support_preference",
+          "visibleIf": "{csa_capstone_workshop} = 'w2'",
+          "title": "When you face a challenge or have a question regarding teaching CSA, where do you go first to get support?",
+          "choices": [
+            {
+              "value": "other_colleagues",
+              "text": "Colleagues or other computer science teachers"
+            },
+            {
+              "value": "cdo_forum",
+              "text": "Code.org forum"
+            },
+            {
+              "value": "education_platforms",
+              "text": "Education platforms other than Code.org (e.g., Kahn Academy, CodeHS)"
+            },
+            {
+              "value": "search_online",
+              "text": "Search online (e.g., Google, Bing)"
+            },
+            {
+              "value": "social_media",
+              "text": "Social media"
+            },
+            {
+              "value": "ai_platforms",
+              "text": "AI platforms (e.g., ChatGPT, Bard)"
+            },
+            {
+              "value": "other",
+              "text": "Other"
+            }
+          ]
+        },
+        {
+          "type": "html",
+          "name": "csa_plans_next_year_space",
+          "html": "\n<p></p>"
+        },
+        {
           "type": "radiogroup",
           "name": "csa_plans_next_sy",
-          "title": "Are you planning to teach CSA next school year?",
-          "isRequired": true,
+          "title": "We recognize that plans change all the time. We are interested in knowing, at this point in time, if you are planning to teach CSA next school year?",
           "choices": [
             {
               "value": "yes",
-              "text": "Yes"
+              "text": "Yes, I plan to teach CSA next school year."
             },
             {
               "value": "no",
-              "text": "No"
+              "text": "No, I don't plan to teach CSA next school year."
             },
             {
               "value": "not_sure",
-              "text": "Not sure"
+              "text": "I am not sure If I will teach CSA next school year."
             }
           ]
         },
@@ -197,7 +336,6 @@
           "name": "csa_plans_next_sy_reasons_no",
           "visibleIf": "{csa_plans_next_sy} = 'no'",
           "title": "Please select the main reason why you won't be teaching CSA next school year.",
-          "isRequired": true,
           "choices": [
             {
               "value": "changing_subject",
@@ -258,7 +396,241 @@
           "title": "Please describe the main reason why you don't know if you will teach CSA next school year."
         }
       ]
+    },
+    {
+      "name": "future_workshop_preferences_page",
+      "elements": [
+        {
+          "type": "html",
+          "name": "future_workshop_preferences_header",
+          "html": "<h1>Your Preferences For Future CSA Professional Learning Workshops</h1>\n"
+        },
+        {
+          "type": "matrix",
+          "name": "future_workshop_content_matrix",
+          "title": "How likely would you be to attend workshops on the following topics in the future?",
+          "columns": [
+            {
+              "value": "1",
+              "text": "Extremely Unlikely"
+            },
+            {
+              "value": "2",
+              "text": "Unlikely"
+            },
+            {
+              "value": "3",
+              "text": "Somewhat Unlikely"
+            },
+            {
+              "value": "4",
+              "text": "Neutral"
+            },
+            {
+              "value": "5",
+              "text": "Somewhat Likely"
+            },
+            {
+              "value": "6",
+              "text": "Likely"
+            },
+            {
+              "value": "7",
+              "text": "Extremely Likely"
+            }
+          ],
+          "rows": [
+            {
+              "value": "curriculum_updates",
+              "text": "Code.org curriculum updates."
+            },
+            {
+              "value": "java_resources",
+              "text": "Exploring additional resources to strengthen Java skills."
+            },
+            {
+              "value": "networking",
+              "text": "Networking with teachers who are also teaching the curriculum."
+            },
+            {
+              "value": "cdo_staff",
+              "text": "Interacting with Code.org team members who can answer my questions."
+            },
+            {
+              "value": "cs_resources",
+              "text": "Exploring resources to support teaching computer science."
+            },
+            {
+              "value": "prepare_ap_exam",
+              "text": "Preparing students for the AP exam."
+            },
+            {
+              "value": "ap_data",
+              "text": "Using AP data to strengthen teaching practice."
+            },
+            {
+              "value": "diverse_recruiting",
+              "text": "Tips and tools for recruiting diverse students into CS classes."
+            }
+          ]
+        },
+        {
+          "type": "rating",
+          "name": "preference_virtual_inperson",
+          "title": "Are you more likely to attend a virtual or an in-person workshop?",
+          "rateCount": 7,
+          "rateMax": 7,
+          "minRateDescription": "Virtual",
+          "maxRateDescription": "In-Person"
+        },
+        {
+          "type": "rating",
+          "name": "preference_weekdays_weekends",
+          "title": "Are you more likely to attend a workshop during the weekend or during weekdays?",
+          "rateCount": 7,
+          "rateMax": 7,
+          "minRateDescription": "Weekdays",
+          "maxRateDescription": "Weekends"
+        },
+        {
+          "type": "rating",
+          "name": "preference_school_year_summer",
+          "title": "Are you more likely to attend a workshop during the school year or during the summer?",
+          "rateCount": 7,
+          "rateMax": 7,
+          "minRateDescription": "School Year",
+          "maxRateDescription": "Summer"
+        },
+        {
+          "type": "rating",
+          "name": "preference_local_national",
+          "title": "Are you more likely to attend a local workshop (facilitated by and for teachers from your region/state) or a nation-wide one (facilitated by and for teachers from across the country)?",
+          "rateCount": 7,
+          "rateMax": 7,
+          "minRateDescription": "Local",
+          "maxRateDescription": "National"
+        }
+      ]
+    },
+    {
+      "name": "demographics_page",
+      "elements": [
+        {
+          "type": "html",
+          "name": "demographics_header",
+          "html": "<h1>Your Background</h1>\n<p><span style='font-size: 12pt;'>Lastly, we'd like to know a little bit about you and your background.</span></p>"
+        },
+        {
+          "type": "radiogroup",
+          "name": "gender",
+          "title": "What is your gender identity?",
+          "choices": [
+            {
+              "value": "female",
+              "text": "Female"
+            },
+            {
+              "value": "male",
+              "text": "Male"
+            },
+            {
+              "value": "non_binary",
+              "text": "Non-binary"
+            },
+            {
+              "value": "preferred_term_not_listed",
+              "text": "Preferred term not listed"
+            },
+            {
+              "value": "prefer_not_to_answer",
+              "text": "Prefer not to answer"
+            }
+          ]
+        },
+        {
+          "type": "checkbox",
+          "name": "race",
+          "title": "What is your racial or ethnic identity?",
+          "description": "Check all that apply.",
+          "choices": [
+            {
+              "value": "am_indian_alaska_nat",
+              "text": "American Indian/Alaska Native"
+            },
+            {
+              "value": "asian",
+              "text": "Asian"
+            },
+            {
+              "value": "black_aa",
+              "text": "Black or African American"
+            },
+            {
+              "value": "hispanic_latino",
+              "text": "Hispanic or Latino"
+            },
+            {
+              "value": "nat_hawaiian_pac_islander",
+              "text": "Native Hawaiian or other Pacific Islander"
+            },
+            {
+              "value": "white",
+              "text": "White"
+            },
+            {
+              "value": "other",
+              "text": "Other"
+            },
+            {
+              "value": "prefer_not_answer",
+              "text": "Prefer not to answer"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "name": "other_feedback__workshop",
+          "title": "Is there any other feedback you’d like to share about your experience attending this workshop??",
+          "cols": 60,
+          "rows": 3
+        },
+        {
+          "type": "radiogroup",
+          "name": "can_contact",
+          "title": "Would you be open to code.org reaching out to you to gather additional feedback about our professional learning programs?",
+          "choices": [
+            {
+              "value": "yes",
+              "text": "Yes"
+            },
+            {
+              "value": "no",
+              "text": "No"
+            }
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "permission",
+          "title": "I give Code.org permission to quote my written feedback from today for use on social media, promotional materials, and other communications.",
+          "choices": [
+            {
+              "value": "yes",
+              "text": "Yes, I give Code.org permission to quote me."
+            },
+            {
+              "value": "no",
+              "text": "No, I do not give Code.org my permission."
+            }
+          ]
+        },
+        {
+          "type": "html",
+          "name": "cdo_heart_you",
+          "html": "<p><span style='font-size: 12pt;'><br /><img style='display: block; margin-left: auto; margin-right: auto;' src='https://www.jotform.com/uploads/bakerfranke/form_files/codeorg_heart_you.5cc89a7c7f2f20.88587690.png' /></span></p>\n<p><span style='font-size: 12pt;'>Thanks from Code.org for your time, commitment and passion for teaching CSA this year.</span>&nbsp;</p>"
+        }
+      ]
     }
   ],
-  "published": false
+  "published": true
 }
