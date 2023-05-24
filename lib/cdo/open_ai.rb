@@ -1,7 +1,8 @@
+require_relative '../cdo.rb'
 require 'net/http'
 require 'json'
 
-class OpenAI
+module OpenAI
   def self.generate_image(prompt, resolution = "256x256")
     url = URI.parse("https://api.openai.com/v1/images/generations")
     http = Net::HTTP.new(url.host, url.port)
