@@ -139,7 +139,7 @@ class Api::V1::SectionsStudentsControllerTest < ActionController::TestCase
 
   test 'teacher can update gender, name, age, and password info for their student' do
     sign_in @teacher
-    put :update, params: {section_id: @section.id, id: @student.id, student: {gender: 'f', age: 9, name: 'testname', password: 'testpassword'}}
+    put :update, params: {section_id: @section.id, id: @student.id, student: {gender_teacher_input: 'f', age: 9, name: 'testname', password: 'testpassword'}}
     assert_response :success
     assert_equal 'f', JSON.parse(@response.body)['gender']
     assert_equal 9, JSON.parse(@response.body)['age']
@@ -200,7 +200,7 @@ class Api::V1::SectionsStudentsControllerTest < ActionController::TestCase
   test 'teacher can not update invalid info for their student' do
     sign_in @teacher
     User.any_instance.stubs(:update).returns(false)
-    put :update, params: {section_id: @section.id, id: @student.id, student: {gender: 'd'}}
+    put :update, params: {section_id: @section.id, id: @student.id, student: {gender_teacher_input: 'd'}}
     assert_response :bad_request
   end
 
@@ -212,13 +212,13 @@ class Api::V1::SectionsStudentsControllerTest < ActionController::TestCase
 
   test 'non-owner can not update student info' do
     sign_in @other_teacher
-    put :update, params: {section_id: @section.id, id: @student.id, student: {gender: 'f'}}
+    put :update, params: {section_id: @section.id, id: @student.id, student: {gender_teacher_input: 'f'}}
     assert_response :forbidden
   end
 
   test 'teacher can add one student to a word section' do
     sign_in @teacher
-    post :bulk_add, params: {section_id: @section.id, students: [{gender: 'f', age: 9, name: 'name'}]}
+    post :bulk_add, params: {section_id: @section.id, students: [{gender_teacher_input: 'f', age: 9, name: 'name'}]}
     assert_response :success
 
     parsed_response = JSON.parse(@response.body)
@@ -237,7 +237,7 @@ class Api::V1::SectionsStudentsControllerTest < ActionController::TestCase
     sign_in @teacher
     assert_difference 'User.count', 2 do
       post :bulk_add, params: {section_id: @section.id,
-        students: [{gender: 'f', age: 10, name: 'name1'}, {gender: 'm', age: 10, name: 'name2'}]}
+        students: [{gender_teacher_input: 'f', age: 10, name: 'name1'}, {gender_teacher_input: 'm', age: 10, name: 'name2'}]}
     end
     assert_response :success
     assert_equal 2, JSON.parse(@response.body).length
@@ -246,7 +246,7 @@ class Api::V1::SectionsStudentsControllerTest < ActionController::TestCase
   test 'non-owner can not add student' do
     sign_in @other_teacher
     assert_does_not_create User do
-      post :bulk_add, params: {section_id: @section.id, students: [{gender: 'f', age: 9, name: 'name'}]}
+      post :bulk_add, params: {section_id: @section.id, students: [{gender_teacher_input: 'f', age: 9, name: 'name'}]}
     end
     assert_response :forbidden
   end
@@ -254,14 +254,14 @@ class Api::V1::SectionsStudentsControllerTest < ActionController::TestCase
   test 'email section cannot add students' do
     sign_in @teacher
     @section = create(:section, user: @teacher, login_type: 'email')
-    post :bulk_add, params: {section_id: @section.id, students: [{gender: 'f', age: 9, name: 'name'}]}
+    post :bulk_add, params: {section_id: @section.id, students: [{gender_teacher_input: 'f', age: 9, name: 'name'}]}
     assert_response :bad_request
   end
 
   test 'teacher can not add invalid info for their student' do
     sign_in @teacher
     User.stubs(:create!).raises(ActiveRecord::RecordInvalid)
-    post :bulk_add, params: {section_id: @section.id, students: [{gender: 'm', age: 9, name: 'name'}]}
+    post :bulk_add, params: {section_id: @section.id, students: [{gender_teacher_input: 'm', age: 9, name: 'name'}]}
     assert_response :bad_request
   end
 
@@ -272,7 +272,7 @@ class Api::V1::SectionsStudentsControllerTest < ActionController::TestCase
       provider: User::PROVIDER_SPONSORED,
       name: "student_to_delete",
       age: 9,
-      gender: 'm'
+      gender_teacher_input: 'm'
     )
     @section.add_student(student_to_remove)
     num_students = @section.students.length
@@ -293,7 +293,7 @@ class Api::V1::SectionsStudentsControllerTest < ActionController::TestCase
     500.times do
       create(:follower, section: @section)
     end
-    post :bulk_add, params: {section_id: @section.id, students: [{gender: 'f', age: 9, name: 'name'}]}
+    post :bulk_add, params: {section_id: @section.id, students: [{gender_teacher_input: 'f', age: 9, name: 'name'}]}
     assert_response :forbidden
     assert_equal(
       "full",
