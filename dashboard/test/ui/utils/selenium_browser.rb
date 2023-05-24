@@ -46,10 +46,6 @@ module SeleniumBrowser
       raise
     end
 
-    def new_http_client
-      HttpClient.new name: 'webdriver'
-    end
-
     def read_timeout=(timeout)
       super
       @http&.read_timeout = timeout
