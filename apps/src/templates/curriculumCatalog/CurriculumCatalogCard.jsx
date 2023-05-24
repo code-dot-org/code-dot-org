@@ -56,7 +56,7 @@ const CurriculumCatalogCard = ({
     isTranslated={isTranslated}
     translationIconTitle={i18n.courseInYourLanguage()}
     isEnglish={isEnglish}
-    pathToCourse={pathToCourse}
+    pathToCourse={pathToCourse + '?viewAs=Instructor'}
   />
 );
 
