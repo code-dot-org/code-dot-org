@@ -4,6 +4,7 @@ theme: responsive_full_width
 ---
 
 %link{href: "/css/generated/design-system-pegasus.css", rel: "stylesheet"}
+%link{href: "/css/generated/farsi-styles.css", rel: "stylesheet"}
 
 %section
   .wrapper
@@ -17,60 +18,8 @@ theme: responsive_full_width
 
 %section.bg-neutral-light
   .wrapper
-    %ul
-      %li
-        %h3=hoc_s(:grade_level_label_elementary)
-        .text-wrapper
-          %ul
-            %li
-              %p=hoc_s(:farsi_timeline_stage_01_list_01)
-            %li
-              %p=hoc_s(:farsi_timeline_stage_01_list_02)
-            %li
-              %p=hoc_s(:farsi_timeline_stage_01_list_03)
-        %p=hoc_s(:farsi_timeline_stage_01_desc)
-      %li
-        %h3=hoc_s(:farsi_timeline_stage_02_heading)
-        .text-wrapper
-          %ul
-            %li
-              %p=hoc_s(:farsi_timeline_stage_02_list_01)
-            %li
-              %p=hoc_s(:farsi_timeline_stage_02_list_02)
-            %li
-              %p=hoc_s(:farsi_timeline_stage_02_list_03)
-        %p=hoc_s(:farsi_timeline_stage_02_desc)
-      %li
-        %h3=hoc_s(:grade_level_label_middle)
-        .text-wrapper
-          %ul
-            %li
-              %p=hoc_s(:farsi_timeline_stage_03_list_01)
-            %li
-              %p=hoc_s(:farsi_timeline_stage_03_list_02)
-            %li
-              %p=hoc_s(:farsi_timeline_stage_03_list_03)
-        %p=hoc_s(:farsi_timeline_stage_03_desc)
-      %li
-        %h3=hoc_s(:grade_level_label_high)
-        .text-wrapper
-          %ul
-            %li
-              %p=hoc_s(:farsi_timeline_stage_04_list_01)
-            %li
-              %p=hoc_s(:farsi_timeline_stage_04_list_02)
-            %li
-              %p=hoc_s(:farsi_timeline_stage_04_list_03)
-        %p=hoc_s(:farsi_timeline_stage_04_desc)
-      %li
-        %h3=hoc_s(:farsi_timeline_stage_05_heading)
-        .text-wrapper
-          %ul
-            %li
-              %p=hoc_s(:farsi_timeline_stage_05_list_01)
-            %li
-              %p=hoc_s(:farsi_timeline_stage_05_list_02)
-        %p=hoc_s(:farsi_timeline_stage_05_desc)
+    %h2=hoc_s(:farsi_timeline_heading)
+    = view :farsi_timeline
 
 %section
   .wrapper
