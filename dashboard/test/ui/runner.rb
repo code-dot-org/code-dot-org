@@ -821,6 +821,9 @@ def run_feature(browser, feature, options)
     end
   end
 
+  # Don't leave empty log/*.rerun files lying around
+  FileUtils.rm rerun_file, force: true if File.empty(rerun_file)
+
   parsed_output = output_stdout.match(/^(?<scenarios>\d+) scenarios?( \((?<info>.*?)\))?/)
   scenario_count = nil
   unless parsed_output.nil?
