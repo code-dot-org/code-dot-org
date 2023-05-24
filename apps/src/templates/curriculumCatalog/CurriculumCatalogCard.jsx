@@ -31,7 +31,9 @@ const CurriculumCatalogCard = ({
       course_name: courseDisplayName,
     })}
     courseDisplayName={courseDisplayName}
-    duration={translatedCourseOfferingDurations[duration]}
+    duration={i18n.durationLabel({
+      duration: translatedCourseOfferingDurations[duration],
+    })}
     gradeRange={i18n.gradeRange({
       numGrades: gradesArray.length,
       youngestGrade: gradesArray[0],

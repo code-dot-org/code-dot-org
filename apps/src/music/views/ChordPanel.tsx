@@ -6,8 +6,7 @@ import {ChordEventValue, PlayStyle} from '../player/interfaces/ChordEvent';
 import {generateGraphDataFromChord, ChordGraphNote} from '../utils/Chords';
 import PreviewControls from './PreviewControls';
 import musicI18n from '../locale';
-
-const moduleStyles = require('./chordPanel.module.scss').default;
+import moduleStyles from './chordPanel.module.scss';
 
 const NUM_OCTAVES = 3;
 const START_OCTAVE = 4;
