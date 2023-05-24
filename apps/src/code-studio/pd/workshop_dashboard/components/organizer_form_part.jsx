@@ -1,7 +1,7 @@
 import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
-import {Row, Col} from 'react-bootstrap';
+import {Row, Col} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 
 export default class OrganizerFormPart extends React.Component {
   static propTypes = {
