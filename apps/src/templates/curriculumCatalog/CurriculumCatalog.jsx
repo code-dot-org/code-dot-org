@@ -3,10 +3,16 @@ import PropTypes from 'prop-types';
 import {curriculumDataShape} from './curriculumCatalogShapes';
 import i18n from '@cdo/locale';
 import style from '../../../style/code-studio/curriculum_catalog_container.module.scss';
+import {queryParams} from '../../code-studio/utils';
 import HeaderBanner from '../HeaderBanner';
 import CourseCatalogBannerBackground from '../../../static/curriculum_catalog/course-catalog-banner-illustration-01.png';
 import CourseCatalogIllustration01 from '../../../static/curriculum_catalog/course-catalog-illustration-01.png';
-import {Heading6} from '@cdo/apps/componentLibrary/typography';
+import CourseCatalogNoSearchResultPenguin from '../../../static/curriculum_catalog/course-catalog-no-search-result-penguin.png';
+import {
+  Heading5,
+  Heading6,
+  BodyOneText,
+} from '@cdo/apps/componentLibrary/typography';
 import CheckboxDropdown from '../CheckboxDropdown';
 import CurriculumCatalogCard from '@cdo/apps/templates/curriculumCatalog/CurriculumCatalogCard';
 import {
@@ -48,6 +54,32 @@ const getEmptyFilters = () => {
   let filters = {};
   Object.keys(filterTypes).forEach(filterKey => {
     filters[filterKey] = [];
+  });
+  return filters;
+};
+
+// Filters out invalid values for the given filter key.
+const getValidParamValues = (filterKey, paramValues) => {
+  if (!Array.isArray(paramValues)) {
+    paramValues = [paramValues];
+  }
+  return paramValues.filter(paramValue => {
+    return Object.keys(filterTypes[filterKey].options).includes(paramValue);
+  });
+};
+
+// Returns initial filter states based on URL parameters (returns empty filters if
+// no relevant parameters in the URL). The filter params are of the form:
+// "filter_name:checked_value_1,checked_value_2,etc."
+const getInitialFilterStates = () => {
+  const filterTypeKeys = Object.keys(filterTypes);
+  const urlParams = queryParams();
+
+  let filters = getEmptyFilters();
+  Object.keys(urlParams).forEach(paramKey => {
+    if (filterTypeKeys.includes(paramKey)) {
+      filters[paramKey] = getValidParamValues(paramKey, urlParams[paramKey]);
+    }
   });
   return filters;
 };
@@ -122,7 +154,9 @@ const filterByDevice = (curriculum, deviceFilters) => {
 
 const CurriculumCatalog = ({curriculaData, isEnglish}) => {
   const [filteredCurricula, setFilteredCurricula] = useState(curriculaData);
-  const [appliedFilters, setAppliedFilters] = useState(getEmptyFilters());
+  const [appliedFilters, setAppliedFilters] = useState(
+    getInitialFilterStates()
+  );
 
   // Filters out any Curriculum Catalog Cards of courses that do not match the filter criteria.
   useEffect(() => {
@@ -174,6 +208,63 @@ const CurriculumCatalog = ({curriculaData, isEnglish}) => {
     setAppliedFilters(newFilters);
   };
 
+  // Renders search results based on the applied filters (or shows the No matching curriculums
+  // message if no results).
+  const renderSearchResults = () => {
+    if (filteredCurricula.length > 0) {
+      return (
+        <div className={style.catalogContentCards}>
+          {filteredCurricula
+            .filter(
+              curriculum =>
+                !!curriculum.grade_levels && !!curriculum.course_version_path
+            )
+            .map(
+              ({
+                key,
+                image,
+                display_name,
+                grade_levels,
+                duration,
+                school_subject,
+                cs_topic,
+                course_version_path,
+              }) => (
+                <CurriculumCatalogCard
+                  key={key}
+                  courseDisplayName={display_name}
+                  imageSrc={image || undefined}
+                  duration={duration}
+                  gradesArray={grade_levels.split(',')}
+                  subjects={school_subject?.split(',')}
+                  topics={cs_topic?.split(',')}
+                  isTranslated={false} // TODO [MEG]: actually pass in this data
+                  isEnglish={isEnglish}
+                  pathToCourse={course_version_path}
+                />
+              )
+            )}
+        </div>
+      );
+    } else {
+      return (
+        <div className={style.catalogContentNoResults}>
+          <img
+            className={style.noResultsImage}
+            src={CourseCatalogNoSearchResultPenguin}
+            alt=""
+          />
+          <Heading5 className={style.noResultsHeading}>
+            {i18n.noCurriculumSearchResultsHeader()}
+          </Heading5>
+          <BodyOneText className={style.noResultsBody}>
+            {i18n.noCurriculumSearchResultsBody()}
+          </BodyOneText>
+        </div>
+      );
+    }
+  };
+
   return (
     <>
       <HeaderBanner
@@ -209,39 +300,7 @@ const CurriculumCatalog = ({curriculaData, isEnglish}) => {
         </button>
       </div>
       <div className={style.catalogContentContainer}>
-        <div className={style.catalogContent}>
-          {/*TODO [MEG]: calculate and pass in duration and translated from backend */}
-          {filteredCurricula
-            .filter(
-              curriculum =>
-                !!curriculum.grade_levels && !!curriculum.course_version_path
-            )
-            .map(
-              ({
-                key,
-                image,
-                display_name,
-                grade_levels,
-                duration,
-                school_subject,
-                cs_topic,
-                course_version_path,
-              }) => (
-                <CurriculumCatalogCard
-                  key={key}
-                  courseDisplayName={display_name}
-                  imageSrc={image || undefined}
-                  duration={duration}
-                  gradesArray={grade_levels.split(',')}
-                  subjects={school_subject?.split(',')}
-                  topics={cs_topic?.split(',')}
-                  isTranslated={false} // TODO [MEG]: actually pass in this data
-                  isEnglish={isEnglish}
-                  pathToCourse={course_version_path}
-                />
-              )
-            )}
-        </div>
+        {renderSearchResults()}
       </div>
     </>
   );
