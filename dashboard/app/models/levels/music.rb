@@ -24,6 +24,15 @@
 #  index_levels_on_name       (name)
 #
 
+# Music uses level_data, which is actual JSON in each .level file, and
+# currently contains the following top-level fields:
+#
+#   text: instructions text
+#   toolbox: an object containing blockly toolbox categories and member blocks
+#   sounds: an object containing sound categories and member sounds
+#   validations: an array containing validation conditions, responses, and actions.
+#   startSources: an object used as starter content for blockly
+
 class Music < Blockly
   serialized_attrs %w(
     hide_share_and_remix
