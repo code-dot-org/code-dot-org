@@ -34,6 +34,7 @@ Rails.application.reload_routes! if defined?(Rails) && defined?(Rails.applicatio
 require File.expand_path('../../config/environment', __FILE__)
 I18n.load_path += Dir[Rails.root.join('test', 'en.yml')]
 I18n.backend.reload!
+I18n.fallbacks[:'te-ST'] = [:'te-ST', :'en-US', :en]
 CDO.stubs(override_pegasus: nil)
 CDO.stubs(override_dashboard: nil)
 

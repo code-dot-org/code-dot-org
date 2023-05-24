@@ -6,6 +6,10 @@ import DCDO from '@cdo/apps/dcdo';
 import {APP_HEIGHT} from '@cdo/apps/p5lab/constants';
 import {SOUND_PREFIX} from '@cdo/apps/assetManagement/assetPrefix';
 
+export function loadBlocksToWorkspace(workspace, xml, stateToLoad) {
+  return Blockly.Xml.domToBlockSpace(workspace, xml);
+}
+
 export function setHSV(block, h, s, v) {
   block.setColour(Blockly.utils.colour.hsvToHex(h, s, v * 255));
 }
@@ -109,6 +113,7 @@ export function getUserTheme(themeOption) {
 }
 
 export function getCode(workspace) {
+  const shouldSave = workspace.options && !workspace.options.readOnly;
   const dcdoFlagSet = DCDO.get('blockly-json-experiment', false);
   const dcdoSampleRate = DCDO.get('blockly-json-sample-rate', 0);
   const experimentEnabled = experiments.isEnabled(experiments.BLOCKLY_JSON);
@@ -116,7 +121,11 @@ export function getCode(workspace) {
   // This feature can be turned off with DCDO.set('blockly-json-experiment', false).
   // Additionally rate must be specified, e.g. DCDO.set('blockly-json-sample-rate', 0.05).
   // The rate is ignored if the user has added ?enableExperiments=blocklyJson to the URL.
-  if (dcdoFlagSet && (experimentEnabled || dcdoSampleRate >= Math.random())) {
+  if (
+    shouldSave &&
+    dcdoFlagSet &&
+    (experimentEnabled || dcdoSampleRate >= Math.random())
+  ) {
     // Begin collecting data about our ability to correctly serialize a workspace in JSON format.
     setTimeout(() => {
       // Execute the Json serialization test asynchronously so we don't block saving.
@@ -130,28 +139,30 @@ function testJsonSerialization(workspace) {
   const experimentEnabled = experiments.isEnabled(experiments.BLOCKLY_JSON);
   const FIREHOSE_STUDY = 'blockly-json';
   const FIREHOSE_EVENT = 'block-differences';
+  const SORT_BY_POSITION = true;
   Blockly.Events.disable();
 
   // Create an array of blocks based on JSON serialization of the current workspace.
   const jsonSerialization = Blockly.serialization.workspaces.save(workspace);
   const tempJsonWorkspace = new Blockly.Workspace();
   Blockly.serialization.workspaces.load(jsonSerialization, tempJsonWorkspace);
-  const jsonBlocks = tempJsonWorkspace.getAllBlocks();
+  const jsonBlocks = tempJsonWorkspace.getAllBlocks(SORT_BY_POSITION);
+  sortBlocksById(jsonBlocks);
 
   // Create an array of blocks based on the XML encoding of the current workspace.
   const xmlSerialization = Blockly.Xml.blockSpaceToDom(workspace);
   const tempXmlWorkspace = new Blockly.Workspace();
   Blockly.Xml.domToWorkspace(xmlSerialization, tempXmlWorkspace);
-  const xmlBlocks = tempXmlWorkspace.getAllBlocks();
+  const xmlBlocks = tempXmlWorkspace.getAllBlocks(SORT_BY_POSITION);
+  sortBlocksById(xmlBlocks);
 
   // compareBlockArrays returns an array of differences found.
   const differences = compareBlockArrays(xmlBlocks, jsonBlocks);
   if (differences.length > 0 || experimentEnabled) {
     // Log a record to Firehose/Redshift.
     const recordData = {
-      projectUrl: dashboard.project.getShareUrl(),
-      blocklyVersion: Blockly.blockly_.VERSION,
       differences: differences,
+      blocklyVersion: Blockly.blockly_.VERSION,
     };
     firehoseClient.putRecord(
       {
@@ -173,7 +184,12 @@ function testJsonSerialization(workspace) {
       xmlSerialization: xmlSerialization,
     });
   }
+  tempJsonWorkspace.dispose();
+  tempXmlWorkspace.dispose();
   Blockly.Events.enable();
+}
+function sortBlocksById(blocks) {
+  blocks.sort((a, b) => (a.id > b.id ? 1 : -1));
 }
 
 // Used to find differences between blocks created from xml and json sources.
@@ -186,6 +202,7 @@ export function compareBlockArrays(xmlBlocks, jsonBlocks) {
   const visited = new Set();
   // Some block properties are expected to hold different values, or refer to blocks already in the array.
   const keysToSkip = [
+    'childBlocks_', // a circular reference to an array of blocks that are also in the original array
     'parentBlock_', // a circular reference to another block in the array
     'sourceBlock_', // a circular reference to another block in the array
     'workspace', // a reference to the unique temporary workspaces used to create the two block arrays
@@ -207,11 +224,15 @@ export function compareBlockArrays(xmlBlocks, jsonBlocks) {
       const keys2 = Object.keys(arg2).sort();
 
       if (keys1.length !== keys2.length) {
+        if (path.endsWith('generatedOptions_') && keys2.length > keys1.length) {
+          // Blockly doesn't serialize all recent variable options to XML.
+          return differences;
+        }
         differences.push({
           result: 'different number of keys',
           path: path,
-          keys1: keys1.toString(),
-          keys2: keys2.toString(),
+          arg1: arg1.toString(),
+          arg2: arg2.toString(),
         });
         return differences; // Don't try comparing properties if we have the wrong amount.
       }

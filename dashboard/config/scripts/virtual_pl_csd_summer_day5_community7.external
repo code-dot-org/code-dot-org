@@ -1,0 +1,24 @@
+name 'virtual-pl-csd-summer-day5-Community7'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Join the CS Discoveries teacher community
+
+#### You are now part of a network of thousands of teachers across the globe who are teaching CS Discoveries. The Code.org teacher forum is one way to connect directly with other CS Discoveries teachers. This is a space to share ideas, ask questions, and support each other in teaching CS Discoveries. 
+
+<img src="https://images.code.org/59c9b8a356ff4e56ec8c802ba5718b37-image-1684269154206.png" alt="A clipboard with the words TO DO on it. This icon is used to signal an action item for participants." width="30px" style="border-radius:10px; float:left; margin: 0px 10px 5px 0px;">
+
+## Task: Post an introduction on the teacher forum
+
+<img src="https://images.code.org/26556e070cf8f6b25325568183f63728-image-1628821293761.21.19 PM.png" alt="Screenshot of a thread in the teacher forum titled 'Welcome to CS Discoveries 21-22: Introduce Yourself." style="float: left; height: 250px; clear: both; margin: 0 20px 20px 0;">
+
+#### **Step 1:** Open a new tab and log into your Code.org teacher account. 
+#### **Step 2:** Click on the "?" in the upper right hand corner of your screen.
+#### **Step 3:** Select "Teacher forum" from the dropdown menu. 
+#### **Step 4:** Scroll down to the topics area. 
+#### **Step 5:** Find and click on the pinned topic "Welcome to CS Discoveries: Introduce yourself"
+#### **Step 6:** Click "Reply" and introduce yourself to the CS Discoveries teacher community!
+
+<div style="clear:both"/>
+MARKDOWN

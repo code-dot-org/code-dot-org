@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-05-17 03:47:05 UTC",
+    "serialized_at": "2023-05-19 21:56:32 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -159,12 +159,14 @@
     },
     {
       "key": "lesson-6",
-      "name": "Asynchronous Work",
+      "name": "Asynchronous Part 1",
       "absolute_position": 6,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
+        "overview": "**Purpose:**\nThe asynchronous activities will provide participants with a high-level overview of the CS Discoveries curriculum including a high-level overview of the course content and tools, an outline of how the course is structured, and a preview of how the problem solving process is used throughout the course. Participants will go on to learn about the support available to them while teaching the course and reflect on the role of the teacher in a CS Discoveries classroom.  \n\n**Objectives:**\n\n* Participants learn more about the different units of the CS Discoveries curriculum.\n* Participants review a Problem Solving Process lesson in one of units 2-7.\n\n**Suggested time:** 60 minutes",
+        "student_overview": "**You will:**\n\n* Learn more about the different units of the CS Discoveries curriculum.\n* Review a Problem Solving Process lesson in one of units 2-7.\n"
       },
       "seeding_key": {
         "lesson.key": "lesson-6",
@@ -280,12 +282,14 @@
     },
     {
       "key": "lesson-13",
-      "name": "Asynchronous Work",
+      "name": "Asynchronous Part 2",
       "absolute_position": 13,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 13,
       "properties": {
+        "overview": "**Purpose:**\nThe asynchronous session gives participants an opportunity to explore the key instructional strategies in the CS Discoveries curriculum: Pair Programming, Debugging, Journaling, and Discussion. Participants will also have the chance to finish levels they did not complete in the earlier Model Lessons.\n\n**Objectives:**\n\n* Participants learn more about the key instructional strategies in the CS Discoveries curriculum.\n* Participants contribute to their cohort's shared slide deck and learn from other's responses.\n* Participants complete any remaining challenges from the Model Lessons.\n\n**Suggested time:** 60 minutes",
+        "student_overview": "**You will:**\n\n* Learn more about the key instructional strategies in the CS Discoveries curriculum.\n* Contribute to your cohort's shared slide deck and learn from others' responses.\n* Complete any remaining challenges from the Model Lessons."
       },
       "seeding_key": {
         "lesson.key": "lesson-13",
@@ -718,7 +722,7 @@
       "key": "849acd08-0f77-4377-8591-c977e3c4e25d",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r pair_programming/csd2/2023] video in the slides.\n\n**Questions to consider with the video:**\n- Why do you think professional programmers use pair programming?\n- How do you think pair programming will help you to program better?\n\n**Discussion Goal:** The goals of this discussion center less around particular answers to this question and more around promoting positive attitudes toward pair programming. As students discuss its potential benefits, make sure they understand that this is an industry-standard practice, not just something fun to do.\n\n\n\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r pair_programming/csd/2023] video in the slides.\n\n**Questions to consider with the video:**\n- Why do you think professional programmers use pair programming?\n- How do you think pair programming will help you to program better?\n\n**Discussion Goal:** The goals of this discussion center less around particular answers to this question and more around promoting positive attitudes toward pair programming. As students discuss its potential benefits, make sure they understand that this is an industry-standard practice, not just something fun to do.\n\n\n\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -802,7 +806,7 @@
       "key": "185bf444-953f-4468-90c1-4adf17e9e8c2",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r video_intro_to_web_lab_part_1/csd2/2023] video in the slides.\n\n**Question to consider with the video:**\n- What are the different parts of Web Lab, and what are they used for?\n\n**Discussion Goals:**\nWhile there are no broad learning goals for this video, students should understand that the instructions for Web Lab levels appear in the wide panel at the top, and the bottom three panels, from left to right, include the list of files that they are working on, the area where they type in their code, and the area where they see the results of their code. For now, they do not need to worry about every button, as they will be explained later, but they should understand that the inspector tool helps them to link parts of the web page with code that created them, and the refresh and save button allows them to update their webpage if it does not automatically update when they change the code.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r video_intro_to_web_lab_part_1/csd/2023] video in the slides.\n\n**Question to consider with the video:**\n- What are the different parts of Web Lab, and what are they used for?\n\n**Discussion Goals:**\nWhile there are no broad learning goals for this video, students should understand that the instructions for Web Lab levels appear in the wide panel at the top, and the bottom three panels, from left to right, include the list of files that they are working on, the area where they type in their code, and the area where they see the results of their code. For now, they do not need to worry about every button, as they will be explained later, but they should understand that the inspector tool helps them to link parts of the web page with code that created them, and the refresh and save button allows them to update their webpage if it does not automatically update when they change the code.\n",
         "progression_name": "Video: Intro to Web Lab - Part 1",
         "tips": [
           {
@@ -849,7 +853,7 @@
       "key": "8af3153a-735c-4614-bfaf-1ce487bd3f89",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r intro_to_web_lab_part_2/csd2/2023] video in the slides\n\n**Questions to consider with the video:**\n- Why are HTML tags useful?\n- What does the paragraph tag do?\n\n**Discussion Goals**: As students discuss HTML tags, make sure they understand that HTML tags are used to structure, or organize, content on the screen. Talking about the organization, structure, or role of the content in the page (heading, paragraph, list, etc.) is more accurate than talking about specific aspects of its appearance (such as size or spacing).\n\nFor the second prompt, there's a direct answer: the paragraph tag separates text into paragraphs. You may want to follow up this question by asking students how they think a web browser for the blind might deal with paragraphs. For example, while sighted people may use spacing and new lines to separate out paragraphs, what should a screen reader do?\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Key Vocabulary:**\n\n- HTML - Hypertext Markup Language, a language used to create web pages\n- HTML Element - A piece of a website, marked by a start tag and often closed with an end tag\n- HTML Tag - The special set of characters that indicates the start and end of an HTML element and that element's type\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r intro_to_web_lab_part_2/csd/2023] video in the slides\n\n**Questions to consider with the video:**\n- Why are HTML tags useful?\n- What does the paragraph tag do?\n\n**Discussion Goals**: As students discuss HTML tags, make sure they understand that HTML tags are used to structure, or organize, content on the screen. Talking about the organization, structure, or role of the content in the page (heading, paragraph, list, etc.) is more accurate than talking about specific aspects of its appearance (such as size or spacing).\n\nFor the second prompt, there's a direct answer: the paragraph tag separates text into paragraphs. You may want to follow up this question by asking students how they think a web browser for the blind might deal with paragraphs. For example, while sighted people may use spacing and new lines to separate out paragraphs, what should a screen reader do?\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Key Vocabulary:**\n\n- HTML - Hypertext Markup Language, a language used to create web pages\n- HTML Element - A piece of a website, marked by a start tag and often closed with an end tag\n- HTML Tag - The special set of characters that indicates the start and end of an HTML element and that element's type\n",
         "progression_name": "Video: Intro to Web Lab - Part 2"
       },
       "seeding_key": {
@@ -1102,7 +1106,7 @@
       "key": "e53fb6ca-097b-4733-89d2-99c5c84d6797",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r intro_to_css_-_part_1/csd2/2023] video in the slides and discuss the CSS video as a class.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r intro_to_css_-_part_1/csd/2023] video in the slides and discuss the CSS video as a class.\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -1164,7 +1168,7 @@
       "key": "7cd55884-2ab5-414e-9489-f3081b62daa3",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r intro_to_css_-_part_2/csd2/2023] video in the slides and discuss it as a class.\n\n**Question to Consider with Video:**\n- How does the web page know what stylesheet it should be using?\n\n**Discussion Goal:** Make sure all the students understand how to link to their stylesheet from each web page.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r intro_to_css_-_part_2/csd/2023] video in the slides and discuss it as a class.\n\n**Question to Consider with Video:**\n- How does the web page know what stylesheet it should be using?\n\n**Discussion Goal:** Make sure all the students understand how to link to their stylesheet from each web page.",
         "progression_name": "Video: Intro to CSS - Part 2"
       },
       "seeding_key": {
@@ -1380,6 +1384,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day1-async1"
+        ],
         "progression": "Asynchronous Overview"
       },
       "bonus": false,
@@ -1402,6 +1409,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day1-async2"
+        ],
         "progression": "CS Discoveries Units 1 - 7"
       },
       "bonus": false,
@@ -1424,6 +1434,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day1-async3"
+        ],
         "progression": "CS Discoveries Units 1 - 7"
       },
       "bonus": false,
@@ -1446,6 +1459,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day1-async4"
+        ],
         "progression": "CS Discoveries Units 1 - 7"
       },
       "bonus": false,
@@ -1468,6 +1484,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day1-async5"
+        ],
         "progression": "The Problem Solving Process Across CSD"
       },
       "bonus": false,
@@ -1490,6 +1509,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day1-async6"
+        ],
         "progression": "The Problem Solving Process Across CSD"
       },
       "bonus": false,
@@ -1512,6 +1534,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day1-async7"
+        ],
         "progression": "The Problem Solving Process Across CSD"
       },
       "bonus": false,
@@ -2009,6 +2034,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day1-async8"
+        ],
         "progression": "Asynchronous Overview"
       },
       "bonus": false,
@@ -2031,6 +2059,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day1-async9"
+        ],
         "progression": "Pair Programming"
       },
       "bonus": false,
@@ -2053,6 +2084,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day1-async10"
+        ],
         "progression": "Pair Programming"
       },
       "bonus": false,
@@ -2075,6 +2109,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day1-async11"
+        ],
         "progression": "Pair Programming"
       },
       "bonus": false,
@@ -2097,6 +2134,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day1-async20"
+        ],
         "progression": "Pair Programming"
       },
       "bonus": false,
@@ -2119,6 +2159,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day1-async15"
+        ],
         "progression": "Debugging"
       },
       "bonus": false,
@@ -2141,6 +2184,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day1-async16"
+        ],
         "progression": "Debugging"
       },
       "bonus": false,
@@ -2163,6 +2209,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day1-async17"
+        ],
         "progression": "Debugging"
       },
       "bonus": false,
@@ -2185,6 +2234,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day1-async21"
+        ],
         "progression": "Debugging"
       },
       "bonus": false,
@@ -2207,6 +2259,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day1-async19"
+        ],
         "progression": "Journaling"
       },
       "bonus": false,
@@ -2229,6 +2284,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day1-async22"
+        ],
         "progression": "Journaling"
       },
       "bonus": false,
@@ -2251,6 +2309,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day1-async23"
+        ],
         "progression": "Discussion"
       },
       "bonus": false,
@@ -2273,6 +2334,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day1-async24"
+        ],
         "progression": "Discussion"
       },
       "bonus": false,
@@ -2295,6 +2359,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day1-async25"
+        ],
         "progression": "Completing Model Lesson Levels"
       },
       "bonus": false,
