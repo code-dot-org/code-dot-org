@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-05-17 22:46:55 UTC",
+    "serialized_at": "2023-05-22 22:59:10 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -5202,7 +5202,7 @@
     },
     {
       "name": "CSP Lists Make - Reminder App",
-      "url": "https://docs.google.com/document/d/1GlcxUvD-czBrwGGq70ZiiItOSB3R77s0JOSL2XvxecM/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1ASZv664TobGiKJA-ygRh24WVMP9zFqN59jF2q3F5yvo/edit?usp=share_link",
       "key": "csp_lists_make_-_reminder_app",
       "properties": {
         "audience": "Student",
@@ -5215,7 +5215,7 @@
     },
     {
       "name": "CSP Loops Make - Lock Screen Maker",
-      "url": "https://docs.google.com/document/d/1MPQ1wXqf5SwDuqCJtiG7aGzrtmkOwCD5PUiPU32-LE4/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1gA_lrTfWpvW_iXFDAI7a5GnnV0F3BYP2VGaaezPPEKQ/edit?usp=share_link",
       "key": "csp_loops_make_-_lock_screen_maker",
       "properties": {
         "audience": "Student",
@@ -5228,7 +5228,7 @@
     },
     {
       "name": "CSP Traversals Make - Random Forecaster App",
-      "url": "https://docs.google.com/document/d/1a6MK9hALSWPJ_mHs0uM5dwrGammMAr5IfXGbf7gtczg/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1jfhyhfkhBr2iPQH19szkGxO9lrd1Yg2AXxd04c9QJuE/edit?usp=share_link",
       "key": "csp_traversals_make_-_random_forecaster_app",
       "properties": {
         "audience": "Student",
@@ -5241,7 +5241,7 @@
     },
     {
       "name": "CSP Hackathon Project Planning Guide",
-      "url": "https://docs.google.com/document/d/1Hc8LF0AsiPK_JyRaieKC6Kint6savoassU4ncz6GuTc/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1YwiDuYM_Ln3GeVpgGofHAa-Z6AilQtSDwQdm20CE--U/edit?usp=share_link",
       "key": "csp_u5_hackathon_project_planning_guide",
       "properties": {
         "audience": "Student",
@@ -5254,11 +5254,12 @@
     },
     {
       "name": "CSP Hackathon Project Written Response",
-      "url": "https://docs.google.com/document/d/1DN78RvCqq_mlTh9VLsBberQQV4xctby5PU6N4LLhDcU/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1Ton-0LEejjGVg9bNC-8hPptpNPiyyrTu3C3aSmx4lZU/edit?usp=share_link",
       "key": "csp_u5_hackathon_project_written_response",
       "properties": {
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "csp_u5_hackathon_project_written_response"

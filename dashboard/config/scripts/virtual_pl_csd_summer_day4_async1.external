@@ -3,7 +3,7 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Day 4, Asynchronous Part I
+# Day 4, Asynchronous Part 1
 
 ##### Welcome! In this asynchronous module, you will reflect on your identity, how your identity is brought into the classroom, and your responsibility in making sure all students feel like they belong in CS. 
 
@@ -11,9 +11,10 @@ markdown <<MARKDOWN
 
 ## In this module, you will:
 
-* ##### Use a shared definition of unconscious bias
-* ##### Articulate who you believe should have access to CS and what has shaped those beliefs
-* ##### Recognize that all students can and should learn CS
+* ##### Use a shared definition of unconscious bias.
+* ##### Articulate who you believe should have access to CS and what has shaped those beliefs.
+* ##### Recognize that all students can and should learn CS.
+* ##### Complete any remaining challenges from the TLOs.
 
 
 ### **Suggested time:** 60 minutes

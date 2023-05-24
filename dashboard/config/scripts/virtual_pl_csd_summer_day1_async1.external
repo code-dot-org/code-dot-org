@@ -3,7 +3,7 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Day 1, Asynchronous Part I
+# Day 1, Asynchronous Part 1
 
 ##### Welcome! This asynchronous module is designed to give you an overview of the CS Discoveries curriculum and a preview of how the problem solving process is used throughout the course.
 
