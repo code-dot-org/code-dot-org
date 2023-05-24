@@ -122,7 +122,7 @@ Scenario: Student can attempt retriable free response contained level multiple t
   Then I press "resetButton"
   And I verify progress in the header of the current page is "perfect" for level 9
   # And element '.response' is not disabled
-  And I press keys " edited" for element ".response"
+  Then I press keys " edited" for element ".response"
   And element ".response" has value "Here is my response! edited"
   Then I press "runButton"
   Then I press "resetButton"
