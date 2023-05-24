@@ -1,7 +1,5 @@
 @as_teacher
 @no_mobile
-@skip
-# TODO: Reenable with new section setup flow
 Feature: Using the teacher homepage sections feature
 
   Scenario: See a section creation dialog when logging for the first time
@@ -33,6 +31,8 @@ Feature: Using the teacher homepage sections feature
     When I create a new student section and go home
     Then the student section table should have 2 rows
 
+  @skip
+  # TODO TEACH-509: Reenable with new section setup flow
   @no_firefox @no_safari
   Scenario: Navigate to course and unit pages
     # No sections, ensure that levels load correctly after navigating from MiniView
@@ -109,6 +109,8 @@ Feature: Using the teacher homepage sections feature
     And I wait until element "#script-title" is visible
     And element ".uitest-sectionselect" has value ""
 
+  @skip
+  # TODO TEACH-509: Reenable with new section setup flow
   Scenario: Assign hidden unit to section
     Given I am on "http://studio.code.org/home"
     And I create a new student section with course "Computer Science Principles", version "'17-'18" and unit "CSP Unit 1 - The Internet ('17-'18)"
@@ -147,6 +149,8 @@ Feature: Using the teacher homepage sections feature
     And I wait until element ".uitest-CourseScript" is visible
     Then unit "CSP Unit 2 - Digital Information ('17-'18)" is marked as visible
 
+  @skip
+  # TODO TEACH-509: Reenable with new section setup flow
   Scenario: Assign a Course assigns first Unit in Course by default
     Given I am on "http://studio.code.org/home"
     When I see the section set up box
@@ -154,6 +158,8 @@ Feature: Using the teacher homepage sections feature
     Then the student section table should have 1 rows
     And the section table row at index 0 has secondary assignment path "/s/csp1-2017"
 
+  @skip
+  # TODO TEACH-509: Reenable with new section setup flow
   Scenario: Assign a CSF course with multiple versions
     Given I am on "http://studio.code.org/home"
     When I see the section set up box
@@ -172,6 +178,8 @@ Feature: Using the teacher homepage sections feature
     Then I should see the student section table
     And the section table row at index 0 has primary assignment path "/s/coursea-2019"
 
+  @skip
+  # TODO TEACH-509: Reenable with new section setup flow
   Scenario: Navigate to course pages with course versions enabled
     Given I am on "http://studio.code.org/home"
     When I see the section set up box

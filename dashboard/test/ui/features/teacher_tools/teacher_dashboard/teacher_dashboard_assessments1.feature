@@ -1,7 +1,8 @@
-@no_mobile @skip
-# TODO: Reenable with new section setup flow
+@no_mobile
 Feature: Using the assessments tab in the teacher dashboard
 
+  @skip
+  # TODO TEACH-509: Reenable with new section setup flow
   Scenario: Assessments tab initialization
     Given I create an authorized teacher-associated student named "Sally"
 

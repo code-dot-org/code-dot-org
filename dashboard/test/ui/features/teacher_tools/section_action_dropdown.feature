@@ -1,6 +1,4 @@
 @single_session
-@skip
-# TODO: Reenable with new section setup flow
 Feature: Using the SectionActionDropdown
 
   # * Check that we get redirected to the right page
@@ -33,6 +31,8 @@ Feature: Using the SectionActionDropdown
     And I press the first ".print-login-link" element to load a new page
     And I wait until current URL contains "/login_info"
 
+  @skip
+  # TODO TEACH-509: Reenable with new section setup flow
   Scenario: Printing Certificates from SectionActionDropdown shows course name
     Given I create a teacher named "Teacher" and go home
     And I create a new student section named "Oceans Section" assigned to "AI for Oceans"
