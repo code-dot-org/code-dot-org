@@ -2733,6 +2733,27 @@ columns:
     comment: 
   - *32
   - *33
+  lti_user_identities:
+  - *27
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: subject
+    sql_type_metadata: *3
+    'null': false
+    default: 
+    default_function: 
+    collation: utf8_unicode_ci
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: lti_integration_id
+    sql_type_metadata: *30
+    'null': false
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - *13
+  - *32
+  - *33
   metrics:
   - *5
   - *6
@@ -7090,6 +7111,7 @@ primary_keys:
   levels_script_levels: 
   libraries: id
   lti_integrations: id
+  lti_user_identities: id
   metrics: id
   objectives: id
   paired_user_levels: id
@@ -7270,6 +7292,7 @@ data_sources:
   levels_script_levels: true
   libraries: true
   lti_integrations: true
+  lti_user_identities: true
   metrics: true
   objectives: true
   paired_user_levels: true
@@ -8914,6 +8937,46 @@ indexes:
     unique: false
     columns:
     - client_id
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where: 
+    type: 
+    using: :btree
+    comment: 
+  lti_user_identities:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: lti_user_identities
+    name: index_lti_user_identities_on_lti_integration_id
+    unique: false
+    columns:
+    - lti_integration_id
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where: 
+    type: 
+    using: :btree
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: lti_user_identities
+    name: index_lti_user_identities_on_user_id
+    unique: false
+    columns:
+    - user_id
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where: 
+    type: 
+    using: :btree
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: lti_user_identities
+    name: index_lti_user_identities_on_subject
+    unique: false
+    columns:
+    - subject
     lengths: {}
     orders: {}
     opclasses: {}
@@ -12192,7 +12255,7 @@ indexes:
     type: :fulltext
     using: 
     comment: 
-version: 20230518155319
+version: 20230522232402
 database_version: !ruby/object:ActiveRecord::ConnectionAdapters::AbstractAdapter::Version
   version:
   - 5
