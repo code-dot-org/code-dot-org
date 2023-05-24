@@ -154,7 +154,9 @@ class Button extends React.Component {
         this.props.className,
         moduleStyles.main,
         moduleStyles.textButton,
-        'button-active-no-border'
+        'button-active-no-border',
+        color === ButtonColor.brandSecondaryDefault &&
+          moduleStyles.rebrendedTextButton
       );
     } else {
       className = classNames(
@@ -165,6 +167,7 @@ class Button extends React.Component {
       );
     }
 
+    // TODO: Add button type prop to support <button type="submit"> and others
     return (
       <Tag
         className={className}

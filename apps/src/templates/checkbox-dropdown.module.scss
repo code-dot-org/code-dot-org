@@ -1,5 +1,9 @@
 @import "color.scss";
 
+form.dropDownMenuContainer {
+  padding: 0;
+}
+
 .dropdownCheckboxUL {
   list-style-type: none;
   margin: 0;
@@ -7,6 +11,15 @@
 
   li {
     padding: 16px;
+
+    &:hover {
+      background-color: $neutral_dark10;
+    }
+
+    &:focus {
+      outline: 2px solid $neutral_dark;
+    }
+
 
     label {
       display: flex;
@@ -31,4 +44,13 @@
 .affectAllButton {
   display: flex;
   justify-content: center;
+}
+
+.bottomButtonsContainer {
+  display: flex;
+  border-top: 1px solid $neutral_dark20;
+
+  button span {
+    margin: 0;
+  }
 }

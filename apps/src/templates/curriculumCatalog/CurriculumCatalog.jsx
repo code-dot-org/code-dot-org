@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useCallback} from 'react';
 import PropTypes from 'prop-types';
 
 import {curriculumDataShape} from './curriculumCatalogShapes';
@@ -194,9 +194,10 @@ const CurriculumCatalog = ({curriculaData, isEnglish}) => {
   };
 
   // Clears all filter selections.
-  const handleClear = e => {
+  const handleClear = useCallback(e => {
+    e.preventDefault();
     setAppliedFilters(getEmptyFilters());
-  };
+  }, []);
 
   // Clears selections within the given filter.
   const handleClearAllOfFilter = filterKey => {
@@ -236,15 +237,8 @@ const CurriculumCatalog = ({curriculaData, isEnglish}) => {
           onClick={handleClear}
           text={i18n.clearFilters()}
           styleAsText
+          color={Button.ButtonColor.brandSecondaryDefault}
         />
-        <button
-          id="clear-filters"
-          type="button"
-          className={style.catalogClearFiltersButton}
-          onClick={handleClear}
-        >
-          {i18n.clearFilters()}
-        </button>
       </div>
       <div className={style.catalogContentContainer}>
         <div className={style.catalogContent}>
