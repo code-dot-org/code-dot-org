@@ -63,6 +63,8 @@ export default function initializeBlocklyXml(blocklyWrapper) {
     if (!blockSpace.rendered) {
       return blocks;
     }
+
+    // Once we are always converting XML to JSON, we can remove all of this repositioning logic.
     // Note that RTL languages position blocks from the left within a
     // blockSpace. For instructions and embedded hints, there is no viewWidth,
     // so we determine the starting point based on the width of the block.
