@@ -236,13 +236,9 @@ function initializeBlocklyWrapper(blocklyInstance) {
     ['field_number', 'FieldNumber', CdoFieldNumber],
     ['field_angle', 'FieldAngle', CdoFieldAngle],
     ['field_multilinetext', 'FieldMultilineInput', CdoFieldMultilineInput],
+    ['field_flyout', 'FieldFlyout', CdoFieldFlyout],
   ];
   blocklyWrapper.overrideFields(fieldOverrides);
-
-  blocklyWrapper.blockly_.fieldRegistry.register(
-    'field_flyout',
-    CdoFieldFlyout
-  );
 
   // Overrides applied directly to core blockly
   blocklyWrapper.blockly_.FunctionEditor = FunctionEditor;
@@ -635,6 +631,35 @@ function initializeBlocklyWrapper(blocklyInstance) {
         FUNCTION_BLOCK.init;
     }
 
+    Blockly.blockly_.defineBlocksWithJsonArray([
+      {
+        type: 'example_flyout',
+        message0: '%1',
+        args0: [
+          {
+            type: 'field_flyout',
+            name: 'FLYOUT',
+            flyoutKey: 'BLOCK_FLYOUT',
+            foldoutText: 'helper blocks',
+            sizingBehavior: 'fitContent',
+          },
+        ],
+        style: 'example_blocks',
+      },
+    ]);
+
+    Blockly.blockFlyoutCallback = function (workspace) {
+      console.log('blockFlyoutCallback');
+      return [];
+    };
+
+    workspace.registerToolboxCategoryCallback(
+      'BLOCK_FLYOUT',
+      function (workspace) {
+        console.log('BLOCK_FLYOUT callback');
+        return [];
+      }
+    );
     return workspace;
   };
 
