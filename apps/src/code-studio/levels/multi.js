@@ -206,10 +206,7 @@ Multi.prototype.ready = function () {
     }
   }
 
-  if (
-    this.selectedAnswers.length === this.numAnswers &&
-    !this.allowMultipleAttempts
-  ) {
+  if (this.correctNumberAnswersSelected() && !this.allowMultipleAttempts) {
     this.lockAnswers();
   }
 };
@@ -314,7 +311,7 @@ Multi.prototype.submitButtonClick = function () {
     return;
   }
 
-  if (!this.allowMultipleAttempts) {
+  if (!this.allowMultipleAttempts && this.correctNumberAnswersSelected()) {
     this.lockAnswers();
     $('.submitButton')?.hide();
     $('.nextLevelButton')?.show();
