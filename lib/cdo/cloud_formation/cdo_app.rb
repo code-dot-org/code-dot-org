@@ -75,7 +75,7 @@ module Cdo::CloudFormation
 
       log_resource_filter.push 'FrontendLaunchConfig', 'ASGCount'
       tags.push(key: 'environment', value: rack_env)
-      tags.push(key: 'owner', value: Aws::STS::Client.new.get_caller_identity.arn.split(':').last) if rack_env?(:adhoc)
+      tags.push(key: 'owner', value: Aws::ARNParser.parse(Aws::STS::Client.new.get_caller_identity.arn).resource) if rack_env?(:adhoc)
     end
 
     def render(*)
