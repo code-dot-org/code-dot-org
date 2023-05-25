@@ -746,7 +746,7 @@ ActiveRecord::Schema.define(version: 2023_05_24_221710) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "lti_deployments", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
+  create_table "lti_deployments", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
     t.string "deployment_id"
     t.bigint "lti_integration_id", null: false
     t.datetime "created_at", precision: 6, null: false
@@ -755,7 +755,7 @@ ActiveRecord::Schema.define(version: 2023_05_24_221710) do
     t.index ["lti_integration_id"], name: "index_lti_deployments_on_lti_integration_id"
   end
 
-  create_table "lti_integrations", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+  create_table "lti_integrations", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
     t.string "name"
     t.string "platform_id", limit: 36, null: false
     t.string "issuer", null: false
@@ -772,7 +772,7 @@ ActiveRecord::Schema.define(version: 2023_05_24_221710) do
     t.index ["platform_id"], name: "index_lti_integrations_on_platform_id"
   end
 
-  create_table "lti_user_identities", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+  create_table "lti_user_identities", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
     t.string "subject", null: false
     t.bigint "lti_integration_id", null: false
     t.integer "user_id", null: false
@@ -824,7 +824,7 @@ ActiveRecord::Schema.define(version: 2023_05_24_221710) do
     t.index ["parent_level_id"], name: "index_parent_levels_child_levels_on_parent_level_id"
   end
 
-  create_table "parental_permission_requests", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+  create_table "parental_permission_requests", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id", null: false
     t.string "parent_email", null: false
     t.string "uuid", limit: 36, null: false
