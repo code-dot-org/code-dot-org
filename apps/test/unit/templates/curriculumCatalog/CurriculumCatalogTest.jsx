@@ -259,6 +259,35 @@ describe('CurriculumCatalog', () => {
       expect(screen.getAllByText(curriculum.display_name).length).to.equal(1);
     });
   });
+
+  it('applying filters that yield no results shows no results message', () => {
+    // Does not show the no results message before filtering
+    expect(
+      screen.queryAllByText('No matching curricula', {
+        exact: false,
+      }).length
+    ).to.equal(0);
+
+    // Select "Kindergarten" and "No Device" in device filter (which should yield no results)
+    const kindergartenFilterCheckbox = screen.getByDisplayValue('kindergarten');
+    fireEvent.click(kindergartenFilterCheckbox);
+    assert(kindergartenFilterCheckbox.checked);
+    const noDeviceFilterCheckbox = screen.getByDisplayValue('no_device');
+    fireEvent.click(noDeviceFilterCheckbox);
+    assert(noDeviceFilterCheckbox.checked);
+
+    // Does not show any Curriculum Catalog Cards
+    expect(screen.queryAllByText('Learn more', {exact: false}).length).to.equal(
+      0
+    );
+
+    // Does show the no results message
+    expect(
+      screen.queryAllByText('No matching curricula', {
+        exact: false,
+      }).length
+    ).to.equal(1);
+  });
 });
 
 describe('CurriculumCatalog with url params', () => {

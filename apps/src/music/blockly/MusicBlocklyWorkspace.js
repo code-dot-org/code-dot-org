@@ -56,6 +56,7 @@ export default class MusicBlocklyWorkspace {
    * @param {*} container HTML element to inject the workspace into
    * @param {*} onBlockSpaceChange callback fired when any block space change events occur
    * @param {*} player reference to a {@link MusicPlayer}
+   * @param {*} startSources start sources for the current channel
    * @param {*} toolboxAllowList optional object with allowed toolbox entries
    * @param {*} currentLevelId optional level id for the current level
    * @param {*} currentScriptId optional script id for the current script
@@ -70,6 +71,7 @@ export default class MusicBlocklyWorkspace {
     container,
     onBlockSpaceChange,
     player,
+    startSources,
     toolboxAllowList,
     currentLevelId,
     currentScriptId,
@@ -145,7 +147,7 @@ export default class MusicBlocklyWorkspace {
       currentLevelId,
       currentScriptId
     );
-    this.loadCode();
+    this.loadSources(startSources);
 
     Blockly.addChangeListener(Blockly.mainBlockSpace, onBlockSpaceChange);
 
@@ -385,12 +387,13 @@ export default class MusicBlocklyWorkspace {
     return 'musicLabSavedCode' + getBlockMode();
   }
 
-  async loadCode() {
+  // Loads sources using the project manager.  Falls back to the provided default sources.
+  async loadSources(startSources) {
     const projectResponse = await this.projectManager.load();
     if (!projectResponse.ok) {
       if (projectResponse.status === 404) {
         // This is expected if the user has never saved before.
-        this.loadDefaultCode();
+        this.setStartSources(startSources);
       }
 
       // TODO: Error handling
@@ -403,7 +406,7 @@ export default class MusicBlocklyWorkspace {
       const existingCodeJson = JSON.parse(source.source);
       Blockly.serialization.workspaces.load(existingCodeJson, this.workspace);
     } else {
-      this.loadDefaultCode();
+      this.setStartSources(startSources);
     }
   }
 
@@ -418,14 +421,16 @@ export default class MusicBlocklyWorkspace {
   /**
    * Change levels to the given level and script. Handles cleanup of the old level and
    * calls loads code for the new level and script.
+   * @param {*} newStartSources Start sources for new level
    * @param {*} newLevelId Id of new level
    * @param {*} newScriptId Id of new script. Can be undefined if this level does
    * not have a script.
    */
-  async changeLevels(newLevelId, newScriptId) {
+  async changeLevels(newStartSources, newLevelId, newScriptId) {
     await this.levelChangeManager.changeLevel(
       this.getProject(),
       this.projectManager,
+      newStartSources,
       newLevelId,
       newScriptId
     );
@@ -433,23 +438,24 @@ export default class MusicBlocklyWorkspace {
 
   /**
    * Create a new project manager and load code for the new level and script.
+   * @param {*} newStartSources Starter sources for new level
    * @param {*} newLevelId Id of new level
    * @param {*} newScriptId Id of new script. Can be undefined if this level does
    * not have a script.
    */
-  async resetProject(newLevelId, newScriptId) {
+  async resetProject(newStartSources, newLevelId, newScriptId) {
     this.projectManager = await this.getProjectManager(
       undefined,
       newLevelId,
       newScriptId
     );
-    await this.loadCode();
+
+    await this.loadSources(newStartSources);
   }
 
-  loadDefaultCode() {
-    const defaultCodeFilename = 'defaultCode' + getBlockMode();
-    const defaultCode = require(`@cdo/static/music/${defaultCodeFilename}.json`);
-    Blockly.serialization.workspaces.load(defaultCode, this.workspace);
+  // Sets start sources.
+  setStartSources(startSources) {
+    Blockly.serialization.workspaces.load(startSources, this.workspace);
     this.saveCode();
   }
 
