@@ -181,7 +181,7 @@ class LockoutPanel extends Component {
 
           {/* A sign-out button. */}
           <Button
-            style={{...styles.button, float: isRTL ? 'left' : 'none'}}
+            style={styles.button}
             text={i18n.signOutButton()}
             color={Button.ButtonColor.gray}
             href="/users/sign_out"
@@ -190,7 +190,7 @@ class LockoutPanel extends Component {
           {/* The submit button. */}
           {/* An empty onClick will still submit the form. */}
           <Button
-            style={{...styles.button, float: isRTL ? 'none' : 'right'}}
+            style={{...styles.button, float: isRTL ? 'left' : 'right'}}
             text={
               pendingEmail
                 ? i18n.sessionLockoutUpdateSubmit()
@@ -218,7 +218,6 @@ const styles = {
     paddingBottom: 0,
   },
   sections: {
-    display: 'table',
     marginBottom: 25,
   },
   statusSection: {
@@ -226,7 +225,9 @@ const styles = {
     marginTop: 20,
   },
   section: {
-    display: 'table-row',
+    display: 'flex',
+    flexDirection: 'row',
+    width: '100%',
   },
   notSubmitted: {
     color: color.red,
@@ -235,11 +236,11 @@ const styles = {
     color: color.orange,
   },
   statusLabel: {
-    display: 'inline',
+    display: 'inline-block',
     marginRight: 15,
   },
   statusLabelRTL: {
-    display: 'inline',
+    display: 'inline-block',
     marginLeft: 15,
   },
   resendLink: {
@@ -247,21 +248,28 @@ const styles = {
     textDecoration: 'underline',
   },
   label: {
-    display: 'table-cell',
-    paddingRight: 15,
+    display: 'inline-block',
+    flex: '0 0 auto',
+    marginRight: 15,
+    marginTop: 6,
   },
   labelRTL: {
-    display: 'table-cell',
-    paddingLeft: 15,
+    display: 'inline-block',
+    flex: '0 0 auto',
+    marginLeft: 15,
+    marginTop: 6,
   },
   field: {
     color: '#292F36',
     border: '1px solid #C6CACD',
     borderRadius: 4,
+    boxSizing: 'border-box',
     padding: 6,
+    width: '100%',
   },
   fieldSection: {
-    display: 'table-cell',
+    display: 'inline-block',
+    flex: '1 0 auto',
   },
   lastEmail: {
     color: '#4D575F',
