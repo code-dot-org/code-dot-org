@@ -7,6 +7,7 @@ import shapes from './shapes';
 import {getTagString, getTutorialDetailString, DoNotShow} from './util';
 import Image from './image';
 import i18n from '@cdo/tutorialExplorer/locale';
+import googleAnalyticsReporter from '@cdo/apps/lib/util/GoogleAnalyticsReporter';
 
 export default class TutorialDetail extends React.Component {
   static propTypes = {
@@ -43,8 +44,12 @@ export default class TutorialDetail extends React.Component {
 
   startTutorialClicked = () => {
     const shortCode = this.props.item.short_code;
-    ga('send', 'event', 'learn', 'start', shortCode);
-    ga('send', 'event', 'learn', `start-${this.props.grade}`, shortCode);
+    googleAnalyticsReporter.trackEvent('learn', 'start', shortCode);
+    googleAnalyticsReporter.trackEvent(
+      'learn',
+      `start-${this.props.grade}`,
+      shortCode
+    );
   };
 
   render() {
