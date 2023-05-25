@@ -14,4 +14,5 @@
 #  index_lti_deployments_on_lti_integration_id  (lti_integration_id)
 #
 class LtiDeployment < ApplicationRecord
+  belongs_to :lti_integration
 end
