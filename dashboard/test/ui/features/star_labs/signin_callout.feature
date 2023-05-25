@@ -31,7 +31,7 @@ Scenario: Should not see callout on farmer lesson if logged in
 
 @as_student
 Scenario: Should not see callout on CSF coursea lesson if logged in
-  Given I am on "http://studio.code.org/s/coursea-2020/lessons/4/levels/2?noautoplay=true"
+  Given I am on "http://studio.code.org/s/coursea-2022/lessons/4/levels/2?noautoplay=true"
   And I rotate to landscape
   And I wait for the page to fully load
   And element ".uitest-login-callout" is not visible
@@ -70,7 +70,7 @@ Scenario: After dismissing the callout, it should not reappear upon refresh
 
 @no_mobile
 Scenario: Nested callouts should work as expected
-  Given I am on "http://studio.code.org/s/coursea-2020/lessons/2/levels/2?noautoplay=true"
+  Given I am on "http://studio.code.org/s/coursea-2022/lessons/2/levels/2?noautoplay=true"
   And I rotate to landscape
   And I wait for the page to fully load
   And element ".uitest-login-callout" is visible
