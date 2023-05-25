@@ -1,5 +1,6 @@
 @no_mobile
 Feature: Professional learning Sections
+  @rails_env_test
   Scenario: Create new professional learning section as levelbuilder
     Given I create an authorized teacher-associated student named "Sally"
     When I sign in as "Teacher_Sally" and go home
@@ -32,6 +33,7 @@ Feature: Professional learning Sections
     And I wait until element "a:contains(My Section of Teachers)" is visible
     And the href of selector "a:contains(My Section of Teachers)" contains "/teacher_dashboard/sections/"
 
+  @rails_env_test
   Scenario: Create new professional learning section as universal instructor
     Given I create an authorized teacher-associated student named "Sally"
     When I sign in as "Teacher_Sally" and go home
@@ -64,6 +66,7 @@ Feature: Professional learning Sections
     And I wait until element "a:contains(My Section of Teachers)" is visible
     And the href of selector "a:contains(My Section of Teachers)" contains "/teacher_dashboard/sections/"
 
+  @rails_env_test
   Scenario: Create new professional learning section as plc reviewer
     Given I create an authorized teacher-associated student named "Sally"
     When I sign in as "Teacher_Sally" and go home
@@ -96,6 +99,7 @@ Feature: Professional learning Sections
     And I wait until element "a:contains(My Section of Teachers)" is visible
     And the href of selector "a:contains(My Section of Teachers)" contains "/teacher_dashboard/sections/"
 
+  @rails_env_test
   Scenario: Create new professional learning section as facilitator
     Given I create an authorized teacher-associated student named "Sally"
     When I sign in as "Teacher_Sally" and go home
@@ -156,6 +160,7 @@ Feature: Professional learning Sections
     And I click selector "button.ui-test-join-section"
     Then the professional learning joined sections table should have 1 row
 
+  @rails_env_test
   Scenario: Teacher tries to join professional learning section for facilitators
     Given I create an authorized teacher-associated student named "Sally"
     When I sign in as "Teacher_Sally" and go home

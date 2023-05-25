@@ -32,6 +32,7 @@ require_relative './utils/selenium_browser'
 require_relative './utils/selenium_constants'
 
 require 'active_support/core_ext/object/blank'
+require 'active_support/string_inquirer'
 
 ENV['BUILD'] ||= `git rev-parse --short HEAD`
 
@@ -41,6 +42,10 @@ LOCAL_LOG_DIRECTORY = 'log'
 S3_LOGS_BUCKET = 'cucumber-logs'
 S3_LOGS_PREFIX = ENV['CI'] ? "circle/#{ENV['CIRCLE_BUILD_NUM']}" : "#{Socket.gethostname}/#{GIT_BRANCH}"
 LOG_UPLOADER = AWS::S3::LogUploader.new(S3_LOGS_BUCKET, S3_LOGS_PREFIX, true)
+
+def env
+  ActiveSupport::StringInquirer.new(ENV["RAILS_ENV"] || ENV["RACK_ENV"] || "development")
+end
 
 #
 # Run a set of UI/Eyes tests according to the provided options.
@@ -689,6 +694,7 @@ def cucumber_arguments_for_browser(browser, options)
   arguments += skip_tag('@webpurify') unless CDO.webpurify_key
   arguments += skip_tag('@pegasus_db_access') unless options.pegasus_db_access
   arguments += skip_tag('@dashboard_db_access') unless options.dashboard_db_access
+  arguments += skip_tag('@rails_env_test') unless env.test?
   arguments
 end
 
