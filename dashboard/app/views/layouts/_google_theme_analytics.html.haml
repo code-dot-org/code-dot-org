@@ -1,4 +1,3 @@
-- create_params = {cookieDomain: (Rails.env.development? ? 'none' : 'auto')}
 -# The following dimensions must match in order the custom dimension settings in our Google Analytics account.
 - selected_language_dim, age_dim, gender_dim, user_type_dim, env_dim, pixel_ratio, has_teacher = (1..7).map{|x|"dimension#{x}"}
 - dimensions = {}
@@ -11,8 +10,10 @@
   - dimensions[has_teacher] = current_user.teachers.any? ? '1' : '0'
 
 :javascript
-  window.userAnalyticsCreateParams = #{create_params.to_json};
   window.userAnalyticsDimensions = #{dimensions.to_json};
+  if ('devicePixelRatio' in window) {
+    window.userAnalyticsDimensions["#{pixel_ratio}"] = window.devicePixelRatio.toString();
+  }
 
 %script{src: webpack_asset_path("js/code.org/views/theme_google_analytics.js")}
 // Initialize Google Optimize (https://support.google.com/optimize/answer/9692472)
