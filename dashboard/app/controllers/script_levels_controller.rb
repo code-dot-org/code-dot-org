@@ -547,6 +547,9 @@ class ScriptLevelsController < ApplicationController
       success: milestone_response(script_level: @script_level, level: @level, solved?: true),
       failure: milestone_response(script_level: @script_level, level: @level, solved?: false)
     }
+
+    @next_level_link = @script_level.next_level_or_redirect_path_for_user(current_user)
+
     render 'levels/show', formats: [:html]
   end
 
