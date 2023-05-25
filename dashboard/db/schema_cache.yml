@@ -2666,7 +2666,7 @@ columns:
   - *7
   lti_integrations:
   - *27
-  - *40
+  - *39
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: platform_id
     sql_type_metadata: *3
@@ -2731,8 +2731,8 @@ columns:
     default_function: 
     collation: utf8_unicode_ci
     comment: 
-  - *32
-  - *33
+  - *28
+  - *29
   lti_user_identities:
   - *27
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
@@ -2745,15 +2745,15 @@ columns:
     comment: 
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: lti_integration_id
-    sql_type_metadata: *30
+    sql_type_metadata: *31
     'null': false
     default: 
     default_function: 
     collation: 
     comment: 
   - *13
-  - *32
-  - *33
+  - *28
+  - *29
   metrics:
   - *5
   - *6
@@ -2917,8 +2917,8 @@ columns:
     default_function: 
     collation: 
     comment: 
-  - *32
-  - *33
+  - *28
+  - *29
   pd_accepted_programs:
   - *5
   - *6
