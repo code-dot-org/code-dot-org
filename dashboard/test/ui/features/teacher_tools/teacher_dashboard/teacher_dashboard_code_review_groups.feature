@@ -15,6 +15,7 @@ Background:
   And I sign out using jquery
   Given I sign in as "Dumbledore" and go home
 
+  @rails_env_test
   Scenario: Create a code review group, add a student to it, save it, and unassign all from group
     Given I create a new code review group for the section I saved
     When I add the first student to the first code review group
@@ -26,6 +27,7 @@ Background:
     Then element "#uitest-code-review-group-unassigned" has text "Hermione"
     And element ".uitest-base-dialog-confirm" is enabled
 
+  @rails_env_test
   Scenario: Enable code review for a section
     Given I open the code review groups management dialog
     When I click selector ".toggle-input"
