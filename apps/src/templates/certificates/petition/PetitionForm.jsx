@@ -1,13 +1,14 @@
-import React, {useState, useCallback} from 'react';
+import React, {useCallback, useState} from 'react';
 import {Button} from 'react-bootstrap';
-import {range, mapValues, without, find} from 'lodash';
+import {find, mapValues, range, without} from 'lodash';
 import i18n from '@cdo/locale';
 import $ from 'jquery';
+import googleAnalyticsReporter from '@cdo/apps/lib/util/GoogleAnalyticsReporter';
 import {
-  keyValidation,
-  getInvalidFields,
-  getErrorMessage,
   getAgeSafeData,
+  getErrorMessage,
+  getInvalidFields,
+  keyValidation,
   professionOptions,
 } from '@cdo/apps/templates/certificates/petition/petitionHelpers';
 import ControlledFieldGroup from '@cdo/apps/templates/certificates/petition/ControlledFieldGroup';
@@ -53,7 +54,7 @@ const PetitionForm = ({tutorial}) => {
         setErrorMessage('');
         // Do not send email or name server-side for under sixteen users to protect privacy.
         sendDataToEndpoint(getAgeSafeData(sanitizedData));
-        ga('send', 'event', 'studio_petition', 'click', {
+        googleAnalyticsReporter.setCustomDimension('studio_petition', 'click', {
           tutorial: tutorial,
         });
       }
