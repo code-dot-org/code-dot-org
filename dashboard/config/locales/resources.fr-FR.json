@@ -2714,15 +2714,18 @@
           "type": "Ressource"
         },
         "introduction_to_ai_lab/csd/2022": {
+          "name": "Présentation d'AI Lab",
           "type": "Diapositives"
         },
         "introduction_to_ai_lab_1/csd/2022": {
+          "name": "Présentation d'AI Lab",
           "type": "Vidéo"
         },
         "selecting_features/csd/2022": {
           "type": "Ressource"
         },
         "training_and_testing_in_ai_lab/csd/2022": {
+          "name": "Formation et tests dans un laboratoire d'IA",
           "type": "Vidéo"
         },
         "using_data_with_categorical_features/csd/2022": {
@@ -2746,6 +2749,7 @@
           "type": "Corrigé"
         },
         "model_cards_in_ai_lab/csd/2022": {
+          "name": "Modèles de cartes dans un laboratoire d'IA",
           "type": "Vidéo"
         },
         "saving_models_in_ai_lab/csd/2022": {
@@ -2776,9 +2780,14 @@
           "type": "Corrigé"
         },
         "numerical_data_in_ai_lab/csd/2022": {
+          "name": "Données numériques dans un laboratoire d'IA",
           "type": "Diapositives"
         },
+        "numerical_data_in_ai_lab_1/csd/2022": {
+          "name": "Données numériques dans un laboratoire d'IA"
+        },
         "numerical_data_in_ai_lab_2/csd/2022": {
+          "name": "Données numériques dans un laboratoire d'IA",
           "type": "Vidéo"
         },
         "using_data_with_numerical_features/csd/2022": {
@@ -4929,12 +4938,15 @@
           "type": "Ressource"
         },
         "introduction_to_ai_lab/csd/2021": {
+          "name": "Présentation d'AI Lab",
           "type": "Diapositives"
         },
         "introduction_to_ai_lab_1/csd/2021": {
+          "name": "Présentation d'AI Lab",
           "type": "Vidéo"
         },
         "training_and_testing_in_ai_lab/csd/2021": {
+          "name": "Formation et tests dans un laboratoire d'IA",
           "type": "Vidéo"
         },
         "_key_training_a_model_in_ai_lab/csd/2021": {
@@ -4964,6 +4976,7 @@
           "type": "Diapositives"
         },
         "model_cards_in_ai_lab/csd/2021": {
+          "name": "Modèles de cartes dans un laboratoire d'IA",
           "type": "Vidéo"
         },
         "saving_models_in_ai_lab/csd/2021": {
@@ -4991,9 +5004,14 @@
           "type": "Corrigé"
         },
         "numerical_data_in_ai_lab/csd/2021": {
+          "name": "Données numériques dans un laboratoire d'IA",
           "type": "Diapositives"
         },
+        "numerical_data_in_ai_lab_1/csd/2021": {
+          "name": "Données numériques dans un laboratoire d'IA"
+        },
         "numerical_data_in_ai_lab_2/csd/2021": {
+          "name": "Données numériques dans un laboratoire d'IA",
           "type": "Vidéo"
         },
         "_key_-_numerical_data_in_ai_lab/csd/2021": {

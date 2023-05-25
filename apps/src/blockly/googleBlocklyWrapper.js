@@ -527,7 +527,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
       container.style.display = 'inline-block';
       container.appendChild(svg);
       svg.appendChild(workspace.createDom());
-      Blockly.Xml.domToBlockSpace(workspace, xml);
+      Blockly.cdoUtils.loadBlocksToWorkspace(workspace, xml);
 
       // Loop through all the parent blocks and remove vertical translation value
       // This makes the output more condensed and readable, while preserving

@@ -478,6 +478,7 @@ uk-UA:
   homepage_slot_text_link_buy: Взяти участь
   homepage_slot_text_link_donate: Зробити пожертвування
   homepage_slot_text_link_shop: Футболки, капелюхи та інше
+  homepage_slot_text_link_thebadguys: Код з поганими хлопцями
   homepage_slot_text_link_administrators: Привнесить Інформатику до вашої школи
   homepage_gallery_header: Більше %{project_count} мільйонів проектів створено на
     Code.org
@@ -2046,6 +2047,7 @@ uk-UA:
   header_tutorials: Навчальні матеріали
   header_screen_reader_hamburger: Меню
   header_screen_reader_help: Допомога
+  sprite_lab_documentation: Документація Спрайт Лабораторії
   header_documentation: Документація
   user_header_label: Привіт %{username}
   user_header_team: Команда
@@ -2063,6 +2065,8 @@ uk-UA:
   user_header_flappy: Пурх
   user_header_view_all: Переглянути всі проекти...
   user_header_view_project_gallery: Переглянути галерею проекту
+  user_header_view_my_projects: Переглянути мої проекти
+  view_all_sections: Переглянути всі розділи
   view_section: Переглянути секцію
   privacy_doc_explanation: 'Клацніть тут, щоб отримати наші документи про конфіденційність,
     якими можна поділитися або роздрукувати для студентів. '
@@ -2190,6 +2194,9 @@ uk-UA:
   hoc2018_mc_back_journey: Майнкрафт повернувся до Години коду з новеньким підручником!
     Подорожуйте Майнкрафтом з кодом.
   hoc2018_mc_teacher_guide: Переглянути рекомендації для вчителя
+  hoc2018_mc_minecraft_education: Освіта в майнкрафт
+  hoc2018_mc_continue_learning: Продовжуйте навчання з Minecraft.
+  hoc2018_mc_go_to_mc_education: Перейти до освіти Minecraft
   hoc2018_mc_short_description_shorter: Скористайтесь своєю креативністю та вміннями
     розв'язання проблем для того, щоб дослідити та збудувати підводні світи за допомогою
     коду.

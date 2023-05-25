@@ -7,45 +7,143 @@ te-IN:
   email: |2-
 
     ఇమెయిల్
+  csedweek_map_search_reset: రీసెట్
+  cded_sign_up: సైన్ అప్
+  try_now: ఇప్పుడే ప్రయత్నించండి
   gender: లింగం
   studiobar_dance_title: డాన్స్ పార్టీ
+  studiobar_flappy_title: ఫ్లాపీ కోడ్
   studiobar_frozen_title: అవర్ ఆఫ్ కోడ్
+  homepage_slot_text_flappy: ఫ్లాపీ కోడ్
+  homepage_action_text_sign_up: సైన్ అప్
   homepage_slot_text_title_hoc: అవర్ ఆఫ్ కోడ్
+  homepage_slot_text_link_hoc: కోడ్ యొక్క అవర్ ప్రయత్నించండి
+  homepage_slot_text_link_thebadguys: బాడ్ గైస్ తో కోడ్
   homepage_gallery_header: "%{project_count} మిలియన్ కి పైగా Code.org ప్రాజెక్టులు
     సృష్టించబడ్డాయి"
   starwars_blocks_title: బ్లాక్స్
+  minecraft_designer_description: Minecraft యొక్క మీ స్వంత వెర్షన్లో ప్రోగ్రామ్ జంతువులు
+    మరియు ఇతర Minecraft జీవులు.
+  video_title_cs_is_everything: కంప్యూటర్ సైన్స్ ప్రతిదీ మారుతోంది
   video_1min: 1 నిమిషాలు
   video_2min: 2 నిమిషాలు
   video_5min: 5 నిమిషాలు
+  are_you_teacher: మీరు గురువునా?
+  volunteer_engineer_submission_field_email: ఇమెయిల్ చిరునామా
+  volunteer_engineer_submission_field_email_placeholder: ఇమెయిల్ చిరునామా
+  volunteer_engineer_submission_field_email_preference_privacy: "(మా గోప్యతా విధానాన్ని
+    చూడండి)"
   volunteer_engineer_submission_field_email_preference_yes: అవును
   volunteer_engineer_submission_field_email_preference_no: లేదు
   volunteer_engineer_submission_commitment_more: ఎక్కువ
   petition_age: వయస్సు
+  dashboard_landing_print_certificates: ఈ కోర్సు పూర్తి చేసిన విద్యార్థులకు సర్టిఫికేట్లను
+    ముద్రించండి
+  dashboard_landing_educator_blog: మా విద్యావేత్త బ్లాగులో మా పదార్థాలకు వార్తలు మరియు
+    నవీకరణల గురించి చదవండి
+  dashboard_landing_video_player: మీ పాఠశాలలో మా క్రొత్త వీడియో ప్లేయర్ను పరీక్షించండి
+  dashboard_action_cancel: రద్దు
   dashboard_action_delete_yes: అవును
   dashboard_action_delete_no: లేదు
+  dashboard_navigation_section_community: మద్దతు
+  dashboard_progress_not_started: ప్రారంభించలేదు
+  dashboard_progress_in_progress: పురోగతిలో ఉంది
+  dashboard_progress_completed_too_many_blocks: పూర్తయింది, చాలా బ్లాక్స్
+  dashboard_progress_completed_perfect: పూర్తయింది, పరిపూర్ణమైనది
+  dashboard_progress_furthest_level_attempted: అవతలిస్థాయి ప్రయత్నించారు
+  dashboard_progress_submitted: సమర్పించిన
+  dashboard_sections_table_pairing_allowed: పెయిర్ ప్రోగ్రామింగ్
+  dashboard_students_male: మగ
+  dashboard_students_female: అవివాహిత
+  dashboard_sequence: సీక్వెన్స్
   dashboard_login_none: |2-
 
     ఇమెయిల్
   dashboard_stage: వేదిక
   dashboard_puzzle: పజిల్
+  dashboard_correctness_correct: సరైనది
+  learn_more: ఇప్పుడే ప్రయత్నించండి
+  learn_sign_up_button: సైన్ అప్
+  hoc2014_try_new_tutorial: బీటాలో మా కొత్త అవర్ ఆఫ్ కోడ్ ట్యుటోరియల్ని ప్రయత్నించండి
+  hoc2014_try_frozen: ఘనీభవించిన నుండి అన్నా మరియు ఎల్సాతో ఆర్టిస్ట్
+  codeorg_name: క్లాసిక్ మేజ్
+  codeintl_name: క్లాసిక్ మేజ్
+  blockly_name: బ్లాక్లీ
+  hourofcode_name: క్లాసిక్ మేజ్
+  playlab_name: ల్యాబ్ ప్లే
+  infinity_name: ఇన్ఫినిటీ ప్లే ల్యాబ్
+  accelerated_name: వేగవంతమైన కోర్సు
+  20-hour_name: వేగవంతమైన కోర్సు
+  classicmaze_name: క్లాసిక్ మేజ్
+  minecraft_name: మైన్ క్రాఫ్ట్
+  applab_name: యాప్ ల్యాబ్
+  gamelab_name: గేమ్ ల్యాబ్
+  applab_gradelevel: వయస్సు 13+
   thinkersmithspanish_platformtext: అన్‌ప్లగ్డ్
   thinkersmith_platformtext: అన్‌ప్లగ్డ్
   condcards_platformtext: అన్‌ప్లగ్డ్
   thinkersmith2_platformtext: అన్‌ప్లగ్డ్
   kodableunplugged_platformtext: అన్‌ప్లగ్డ్
   projguts_platformtext: అన్‌ప్లగ్డ్
+  infinity_shortdescription: డిస్నీ ఇన్ఫినిటీ పాత్రలు నటించిన కథ లేదా ఆటను సృష్టించడానికి
+    ప్లే ల్యాబ్ ఉపయోగించండి.
+  compatibility_unsupported_browser_markdown: మీ బ్రౌజర్కు మద్దతు లేదు. దయచేసి మీ
+    బ్రౌజర్ను [మా మద్దతు ఉన్న బ్రౌజర్లలో ఒకటి] (%{supported_browsers_url}) కు అప్గ్రేడ్
+    చేయండి. మీరు పేజీని చూడటానికి ప్రయత్నించవచ్చు, కానీ కార్యాచరణ విచ్ఛిన్నమవుతుందని
+    ఆశిస్తారు.
+  header_my_dashboard: నా డాష్బోర్డ్
   header_courses: కోర్సులు
   header_course_catalog: కోర్సు కేటలాగ్
   header_project_gallery: ప్రాజెక్టులు
+  header_sections: సెక్షన్లు
+  header_professional_learning: ప్రొఫెషనల్ లెర్నింగ్
+  header_educate_overview: విద్యావేత్త అవలోకనం
+  header_educate_elementary: ఎలిమెంటరీ స్కూల్
+  header_educate_middle: మిడిల్ స్కూల్
+  header_educate_high: ఉన్నత పాఠశాల
   header_educate_hoc: అవర్ ఆఫ్ కోడ్
+  header_educate_partner: మాతో భాగస్వామి
+  header_educate_beyond: కోడ్. ఆర్గ్ దాటి
+  header_educate_inspire: ఒక విద్యార్థిని ప్రేరేపించండి
+  header_educate_community: ఆన్లైన్ కమ్యూనిటీ
+  header_educate_tools: ఉపకరణాలు మరియు వీడియోలు
+  header_about_us: మా గురించి
+  header_about_leadership: నాయకత్వం
+  header_about_donors: దాతలు
+  header_about_partners: భాగస్వాములు
+  header_about_team: పూర్తి బృందం
+  header_about_news: న్యూస్ రూమ్
+  header_about_evaluation: మూల్యాంకనం
+  header_about_jobs: కెరీర్లు
+  header_about_contact: మమ్మల్ని సంప్రదించండి
+  header_about_faqs: తరచుగా అడిగే ప్రశ్నలు
+  header_learn: తెలుసుకోండి
+  header_teach: నేర్పండి
+  header_help_us: మాకు సహాయం చెయ్యండి
   header_about: పరియచం
   header_help_support: 'సహాయం మరియు మద్దతు '
   header_report_bug: ఒక సమస్యను రిపోర్టు చేయండి
   header_legal_privacy: గోప్యతా పాలసీ
   header_legal_tos: సర్వీసు నిబంధనలు
+  header_tutorials: ట్యుటోరియల్స్
+  header_documentation: డాక్యుమెంటేషన్
+  user_header_label: హాయ్ %{username}
+  user_header_team: జట్టు
+  user_header_settings: ఖాతా సెట్టింగ్లు
+  user_header_logout: సైన్ అవుట్ చేయండి
   user_header_signin: సైన్ ఇన్
   user_header_create: 'సృష్టించు '
+  user_header_gamelab: గేమ్ ల్యాబ్
+  user_header_playlab: ల్యాబ్ ప్లే
   user_header_dance: డాన్స్ పార్టీ
+  user_header_minecraft: మైన్ క్రాఫ్ట్
+  user_header_flappy: ఫ్లాపీ
+  user_header_view_my_projects: నా ప్రాజెక్ట్లను చూడండి
+  view_all_sections: అన్ని విభాగాలను వీక్షించండి
+  account_sign_up_email_opt_in: మా కోర్సులు, స్థానిక అవకాశాలు లేదా ఇతర కంప్యూటర్ సైన్స్
+    వార్తలకు నవీకరణల గురించి మేము మీకు ఇమెయిల్ చేయవచ్చా? (సుమారు నెలకు ఒకసారి)
+  account_sign_up_child_accept_terms: కోడ్. ఆర్గ్ సేవలను ఉపయోగించడానికి నా తల్లిదండ్రులు
+    లేదా చట్టపరమైన సంరక్షకుల అనుమతి ఉందని నేను ధృవీకరిస్తున్నాను.
   hoc_overview_dance_title: డాన్స్ పార్టీ
   hoc_overview_dance_2022_subtitle: మీ స్నేహితులతో పంచుకోవడానికి ఒక డాన్స్ పార్టీని
     కోడ్ చేయండి. బియాన్స్, హ్యారీ స్టైల్స్, లిజ్జో, లిల్ నాస్ ఎక్స్, సెలెనా గోమెజ్
@@ -53,6 +151,8 @@ te-IN:
   hoc_overview_hello_world_2022_alt_text: యానిమేట్ చేయబడిన వ్యోమగామి మరియు జంతువుల
     పాత్రలు భూమి యొక్క ఒక దృష్టాంతము చుట్టూ తేలియాడుతున్నాయి
   hoc2018_creativity_create: సృష్టించు
+  hoc2018_mc_designer_description: Minecraft యొక్క మీ స్వంత వెర్షన్లో ప్రోగ్రామ్ జంతువులు
+    మరియు ఇతర Minecraft జీవులు.
   hoc2022_mc_educators_box3_desc_markdown: 'కోరికపై దీనిని ఉపయోగించుకోండి [ఉచిత కోర్సు]
     (%{free_course_link}) లేదా ఒక అతిథి ఉపాధ్యాయుడితో ప్రత్యక్ష ప్రసారమయ్యే అవర్ ఆఫ్
     కోడ్ కార్యశాలకు హాజరు కావడానికి మీ మొత్తం తరగతిని నమోదు చేయండి. CSEW, డిసెంబర్
@@ -65,8 +165,13 @@ te-IN:
   hoc2018_mc_video_1min: 1 నిమిషాలు
   hoc2018_mc_video_2min: 2 నిమిషాలు
   hoc2018_mc_video_5min: 5 నిమిషాలు
+  hoc2018_mc_video_title_cs_is_everything: కంప్యూటర్ సైన్స్ ప్రతిదీ మారుతోంది
+  hoc2018_mc_minecraft_education: Minecraft విద్య
+  hoc2018_mc_continue_learning: Minecraft తో నేర్చుకోవడం కొనసాగించండి.
+  hoc2018_mc_go_to_mc_education: Minecraft విద్యకు వెళ్లండి
   hoc2018_dance_party_main_heading: డాన్స్ పార్టీ
   hoc2018_dance_party_box_title: డాన్స్ పార్టీ
+  hoc2018_dance_teacher_resources_tile1_button: పాఠ ప్రణాళిక
   hoc2018_dance_teacher_resources_tile2_button: అన్‌ప్లగ్డ్ కార్యాచరణ
   hoc2018_dance_measure: మెజర్
   hoc2018_dance_measure_colon: 'మెజర్:'
@@ -90,8 +195,15 @@ te-IN:
     కోసం విద్యా ప్రచురణ. ఉచిత విద్యావేత్త వనరులు, శిక్షణలు మరియు వీడియోలతో మొదలు పెట్టండి.'
   hoc2022_mc_mee_timecraft_description: 'Minecraft లోని ఈ ఉచిత కోడింగ్ పాఠంలో భవిష్యత్తును
     కాపాడటానికి సకాలములో తిరిగి ప్రయాణించండి: విద్యా ప్రచురణ.'
+  footer_powered_by_aws: అమెజాన్ వెబ్ సర్వీసెస్ మరియు “AWS చేత ఆధారితం” లోగో అమెజాన్.
+    కామ్, ఇంక్ లేదా యునైటెడ్ స్టేట్స్ మరియు/లేదా ఇతర దేశాలలో దాని అనుబంధ సంస్థల ట్రేడ్మార్క్లు.
+  codebytes_skinny_banner_english_only: ఇంగ్లీష్-మాత్రమే
   footer_privacy_policy: గోప్యతా పాలసీ
   footer_about: పరియచం
+  footer_partners: భాగస్వాములు
+  footer_support: మద్దతు
+  footer_terms: నిబంధనలు
+  ai_activity: కార్యాచరణ
   outbreak_tile_subtitle: మాన్‌స్టర్ టౌన్‌కు ఒక వైరస్ సోకింది! వ్యాప్తి సిములేటర్‌ను
     కోడ్ చేయండి మరియు మాన్‌స్టర్ టౌన్ పొరుగువారికి ఏమి జరగబోతుందో అంచనాలు వేయండి.
   hoc2022_banner_title: అన్వేషించండి, ప్లే చేయండి, సృష్టించండి!

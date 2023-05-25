@@ -4195,3 +4195,36 @@ fil:
           lessons:
             lesson-12:
               name: Tapusin Na
+        virtual-pl-csd-summer-day1:
+          lessons:
+            lesson-1:
+              name: Panimula
+            lesson-12:
+              name: Tapusin Na
+        virtual-pl-csd-summer-day2:
+          lessons:
+            lesson-10:
+              name: Tapusin Na
+        virtual-pl-csd-summer-day3:
+          lessons:
+            lesson-12:
+              name: Tapusin Na
+        virtual-pl-csd-summer-day4:
+          lessons:
+            lesson-13:
+              name: Tapusin Na
+        virtual-pl-csd-summer-day5:
+          lessons:
+            lesson-3:
+              name: Pagtatasa
+        coursef-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digital na Pagkamamamayan
+            lessonGroup-3:
+              display_name: Mga Sprites
+            lessonGroup-4:
+              display_name: Mga variable
+          description_audience: 'Mga Edad: 9-13'
+          description_short: Alamin ang lahat ng mga konsepto sa mga Pangunahing Kaalaman
+            sa Computer Science at maglikha ng iyong sariling sining, kuwento o laro.

@@ -32,7 +32,7 @@ class FollowersController < ApplicationController
     # Create boolean to confirm if a user already actively exists on a section roster
     is_existing_follower = !!Follower.find_by(section: @section, student_user: @user)
 
-    if current_user&.display_captcha? && !verify_recaptcha
+    if current_user&.display_join_section_captcha? && !verify_recaptcha
       flash[:alert] = I18n.t('follower.captcha_required')
       # Concatenate section code so user does not have to type section code again
       # Note that @section will always be defined due to validations in load_section

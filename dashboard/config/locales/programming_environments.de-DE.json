@@ -45,6 +45,10 @@
                     }
                   },
                   "short_description": "Spielt eine MP3-Audio-Datei von der angegebenen URL."
+                },
+                "showMobileControls": {
+                  "content": "Ändert die mobilen Steuerelemente, die unter dem Spielfeld sichtbar sind.",
+                  "short_description": "Ändert die mobilen Steuerelemente, die unter dem Spielfeld sichtbar sind."
                 }
               }
             },
@@ -57,6 +61,12 @@
                       "name": "Spirale"
                     }
                   }
+                },
+                "sprite.height": {
+                  "return_value": "Die Höhe des Sprites."
+                },
+                "sprite.width": {
+                  "return_value": "Die Breite des Sprites."
                 }
               }
             },
@@ -114,6 +124,13 @@
             },
             "control": {
               "expressions": {
+                "setInterval": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "Die Anzahl der Millisekunden zwischen jeder Ausführung der Funktion."
+                    }
+                  }
+                },
                 "setTimeout": {
                   "palette_params": {
                     "ms": {
@@ -330,11 +347,23 @@
                   "palette_params": {
                     "imageData": {
                       "type": "Objekt"
+                    },
+                    "x": {
+                      "description": "Die X-Position in Pixeln, beginnend mit der oberen linken Ecke des Bildes, um die Daten auf der Leinwand zu platzieren."
+                    },
+                    "y": {
+                      "description": "Die Y-Position in Pixeln, beginnend mit der oberen linken Ecke des Bildes, um die Daten auf der Leinwand zu platzieren."
                     }
                   }
                 },
                 "rect": {
                   "palette_params": {
+                    "x": {
+                      "description": "Die X-Position in Pixeln der oberen linken Ecke des Rechtecks."
+                    },
+                    "y": {
+                      "description": "Die Y-Position in Pixeln der oberen linken Ecke des Rechtecks."
+                    },
                     "width": {
                       "description": "Die horizontale Breite des Rechtecks in Pixeln."
                     },
@@ -353,8 +382,12 @@
                     },
                     "y": {
                       "description": "Die Y-Position in Pixeln, beginnend mit der oberen linken Ecke des Bildes."
+                    },
+                    "alphaValue": {
+                      "description": "Die Menge an Alpha (Opazität) (von 0 bis 255), die im Pixel festgelegt werden soll."
                     }
-                  }
+                  },
+                  "short_description": "Legt den Alphawert (Opazität) (im Bereich von 0 bis 255) in der Farbe des Pixels fest, das sich an der angegebenen X- und Y-Position in den angegebenen Bilddaten befindet."
                 },
                 "setBlue": {
                   "palette_params": {
@@ -366,8 +399,12 @@
                     },
                     "y": {
                       "description": "Die Y-Position in Pixeln, beginnend mit der oberen linken Ecke des Bildes."
+                    },
+                    "blueValue": {
+                      "description": "Die Menge an Blau (von 0 bis 255), die im Pixel eingestellt werden soll."
                     }
-                  }
+                  },
+                  "short_description": "Setzt den Blauanteil (im Bereich von 0 bis 255) in der Farbe des Pixels, das sich an der angegebenen X- und Y-Position in den angegebenen Bilddaten befindet, auf den BlueValue-Eingabebetrag."
                 },
                 "setGreen": {
                   "palette_params": {
@@ -379,8 +416,12 @@
                     },
                     "y": {
                       "description": "Die Y-Position in Pixeln, beginnend mit der oberen linken Ecke des Bildes."
+                    },
+                    "greenValue": {
+                      "description": "Die Menge an Grün (von 0 bis 255), die im Pixel eingestellt werden soll."
                     }
-                  }
+                  },
+                  "short_description": "Setzt den Grünanteil (im Bereich von 0 bis 255) in der Farbe des Pixels, das sich an der angegebenen X- und Y-Position in den angegebenen Bilddaten befindet, auf den GreenValue-Eingabewert."
                 },
                 "setRGB": {
                   "palette_params": {
@@ -395,6 +436,12 @@
                     },
                     "red": {
                       "description": "Die Anteil der Farbe Rot (von 0 bis 255), die im Pixel eingestellt werden soll."
+                    },
+                    "green": {
+                      "description": "Die Menge an Grün (von 0 bis 255), die im Pixel eingestellt werden soll."
+                    },
+                    "blue": {
+                      "description": "Die Menge an Blau (von 0 bis 255), die im Pixel eingestellt werden soll."
                     },
                     "alpha": {
                       "description": "Optional. Der Grad der Opazität (von 0 bis 255), der im Pixel eingestellt werden soll. Der Standardwert ist 255 (volle Opazität). (Opazität = Lichtundurchlässigkeit)"
@@ -485,6 +532,17 @@
                     }
                   }
                 },
+                "setKeyValue": {
+                  "palette_params": {
+                    "key": {
+                      "description": "Der Name des Schlüssels, der gespeichert werden soll."
+                    },
+                    "value": {
+                      "description": "Die zu speichernden Daten."
+                    }
+                  },
+                  "short_description": "Speichert ein Schlüssel/Wert-Paar im Schlüssel/Wert-Datenspeicher von App Lab und ruft die Callback-Funktion auf, wenn die Aktion abgeschlossen ist."
+                },
                 "startWebRequest": {
                   "palette_params": {
                     "url": {
@@ -540,6 +598,15 @@
                 "penDown": {
                   "short_description": "Setzt den Stift auf, sodass die Schildkröte eine Linie hinter sich zieht, während sie sich bewegt."
                 },
+                "penRGB": {
+                  "short_description": "Legt anhand von RGBA-Werten die Farbe des Stifts fest, mit dem die Schildkröte Linien und Punkte zeichnet."
+                },
+                "penUp": {
+                  "short_description": "Hebt den Stift hoch, sodass die Schildkröte keine Linie zeichnet, wenn sie sich bewegt."
+                },
+                "penWidth": {
+                  "short_description": "Legt die Breite der Linie in Pixeln fest, die die Schildkröte hinter sich zieht, wenn sie sich bewegt."
+                },
                 "show": {
                   "short_description": "Macht die Schildkröte an ihrem aktuellen Standort sichtbar."
                 },
@@ -568,6 +635,13 @@
                   "palette_params": {
                     "timeout": {
                       "description": "Der Wert, der von der setTimeout-Funktion zum Abbrechen zurückgegeben wird."
+                    }
+                  }
+                },
+                "setInterval": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "Die Anzahl der Millisekunden zwischen jeder Ausführung der Funktion."
                     }
                   }
                 },

@@ -5,16 +5,1702 @@
         "list_of_poems/poem-art/2021": {
           "url": "https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing"
         },
+        "poem_art_celebration/poem-art/2021": {
+          "type": "వీడియో"
+        },
+        "poem_art_events/poem-art/2021": {
+          "type": "వీడియో"
+        },
+        "poem_art_imagery/poem-art/2021": {
+          "type": "వీడియో"
+        },
+        "poem_art_introduction/poem-art/2021": {
+          "type": "వీడియో"
+        },
+        "encryption-and-public-keys-optional-1/hoc-encryption/unversioned": {
+          "type": "వీడియో"
+        },
+        "video-text-compression/text-compression/unversioned": {
+          "type": "వీడియో"
+        },
+        "ai-ml/oceans/unversioned": {
+          "type": "వీడియో"
+        },
+        "ai-societal/oceans/unversioned": {
+          "type": "వీడియో"
+        },
+        "ai-training/oceans/unversioned": {
+          "type": "వీడియో"
+        },
+        "curriculum_guide/coursed/2022": {
+          "name": "కరికులం గైడ్"
+        },
+        "teacher_forum/coursed/2022": {
+          "name": "ఉపాధ్యాయ ఫోరం"
+        },
+        "graph_paper_programming/coursed/2022": {
+          "name": "గ్రాఫ్ పేపర్ ప్రోగ్రామింగ్"
+        },
+        "graph_paper_programming_1/coursed/2022": {
+          "name": "గ్రాఫ్ పేపర్ ప్రోగ్రామింగ్"
+        },
+        "graph_paper_programming_2/coursed/2022": {
+          "name": "గ్రాఫ్ పేపర్ ప్రోగ్రామింగ్"
+        },
+        "graph_paper_programming_3/coursed/2022": {
+          "name": "గ్రాఫ్ పేపర్ ప్రోగ్రామింగ్"
+        },
+        "graph_paper_programming_4/coursed/2022": {
+          "name": "గ్రాఫ్ పేపర్ ప్రోగ్రామింగ్",
+          "type": "అసెస్మెంట్"
+        },
+        "graph_paper_programming_5/coursed/2022": {
+          "name": "గ్రాఫ్ పేపర్ ప్రోగ్రామింగ్"
+        },
+        "pair_programming/coursed/2022": {
+          "name": "పెయిర్ ప్రోగ్రామింగ్"
+        },
+        "relay_programming/coursed/2022": {
+          "name": "రిలే ప్రోగ్రామింగ్"
+        },
+        "relay_programming_1/coursed/2022": {
+          "name": "రిలే ప్రోగ్రామింగ్"
+        },
+        "relay_programming_2/coursed/2022": {
+          "name": "రిలే ప్రోగ్రామింగ్"
+        },
+        "relay_programming_3/coursed/2022": {
+          "name": "రిలే ప్రోగ్రామింగ్"
+        },
+        "relay_programming_4/coursed/2022": {
+          "name": "రిలే ప్రోగ్రామింగ్"
+        },
+        "relay_programming_5/coursed/2022": {
+          "name": "రిలే ప్రోగ్రామింగ్"
+        },
+        "pause_and_think_online/coursed/2022": {
+          "type": "వీడియో"
+        },
+        "conditionals_with_cards_2/coursed/2022": {
+          "type": "అసెస్మెంట్"
+        },
+        "curriculum_guide/coursef/2022": {
+          "name": "కరికులం గైడ్"
+        },
+        "teacher_forum/coursef/2022": {
+          "name": "ఉపాధ్యాయ ఫోరం"
+        },
+        "the_power_of_words_the_power_of_words/coursef/2022": {
+          "type": "వీడియో"
+        },
+        "introducing_sprite_lab_1/coursef/2022": {
+          "name": "స్ప్రైట్ ల్యాబ్ను పరిచయం చేస్తోంది",
+          "type": "వీడియో"
+        },
+        "ai_impact_on_society/coursef/2022": {
+          "type": "వీడియో"
+        },
+        "ai_machine_learning/coursef/2022": {
+          "type": "వీడియో"
+        },
+        "ai_training_data_bias/coursef/2022": {
+          "type": "వీడియో"
+        },
+        "internet/coursef/2022": {
+          "name": "అంతర్జాలం",
+          "type": "అసెస్మెంట్"
+        },
+        "internet_1/coursef/2022": {
+          "name": "అంతర్జాలం"
+        },
+        "the_internet/coursef/2022": {
+          "name": "ఇంటర్నెట్"
+        },
+        "cs_fundamentals_final_project/coursef/2022": {
+          "type": "రుబ్రిక్"
+        },
+        "curriculum_guide/coursee/2022": {
+          "name": "కరికులం గైడ్"
+        },
+        "teacher_forum/coursee/2022": {
+          "name": "ఉపాధ్యాయ ఫోరం"
+        },
+        "pause_and_think_online/coursee/2022": {
+          "type": "వీడియో"
+        },
+        "functions_unplugged_songwriting_2/coursee/2022": {
+          "type": "అసెస్మెంట్"
+        },
+        "digital_sharing_ethics_video_/coursee/2022": {
+          "type": "వీడియో"
+        },
+        "cs_fundamentals_final_project/coursee/2022": {
+          "type": "రుబ్రిక్"
+        },
+        "curriculum_guide/courseb/2022": {
+          "name": "కరికులం గైడ్"
+        },
+        "teacher_forum/courseb/2022": {
+          "name": "ఉపాధ్యాయ ఫోరం"
+        },
+        "move_it_move_it/courseb/2022": {
+          "name": "దీన్ని తరలించండి, తరలించండి"
+        },
+        "move_it_move_it_1/courseb/2022": {
+          "name": "దీన్ని తరలించండి, తరలించండి"
+        },
+        "move_it_move_it_2/courseb/2022": {
+          "name": "దీన్ని తరలించండి, తరలించండి"
+        },
+        "move_it_move_it_3/courseb/2022": {
+          "name": "దాన్ని తరలించండి, తరలించండి"
+        },
+        "pair_programming/courseb/2022": {
+          "name": "పెయిర్ ప్రోగ్రామింగ్"
+        },
+        "wiggles_-_gonoodle/courseb/2022": {
+          "type": "వీడియో"
+        },
+        "stevie_and_the_big_project/courseb/2022": {
+          "name": "స్టీవ్ మరియు బిగ్ ప్రాజెక్ట్"
+        },
+        "unspotted_bugs/courseb/2022": {
+          "name": "మచ్చలేని బగ్స్",
+          "type": "వీడియో"
+        },
+        "getting_loopy/courseb/2022": {
+          "name": "లూపీ పొందడం"
+        },
+        "getting_loopy_1/courseb/2022": {
+          "name": "లూపీ పొందడం"
+        },
+        "getting_loopy_2/courseb/2022": {
+          "name": "లూపీ పొందడం",
+          "type": "అసెస్మెంట్"
+        },
+        "getting_loopy_3/courseb/2022": {
+          "name": "లూపీ పొందడం"
+        },
+        "pause_and_think_online/courseb/2022": {
+          "type": "వీడియో"
+        },
+        "the_big_event/courseb/2022": {
+          "name": "బిగ్ ఈవెంట్"
+        },
+        "the_big_event_1/courseb/2022": {
+          "name": "బిగ్ ఈవెంట్",
+          "type": "అసెస్మెంట్"
+        },
+        "the_big_event_2/courseb/2022": {
+          "name": "బిగ్ ఈవెంట్"
+        },
+        "teacher_forum/express/2022": {
+          "name": "ఉపాధ్యాయ ఫోరం"
+        },
+        "pair_programming/express/2022": {
+          "name": "పెయిర్ ప్రోగ్రామింగ్",
+          "type": "వీడియో"
+        },
+        "artist_introduction/express/2022": {
+          "type": "వీడియో"
+        },
+        "turns_angles/express/2022": {
+          "type": "వీడియో"
+        },
+        "sprites_in_action/express/2022": {
+          "name": "చర్యలో స్ప్రిట్స్"
+        },
+        "pause_and_think_online/express/2022": {
+          "type": "వీడియో"
+        },
+        "pair_programming_video/express/2022": {
+          "type": "వీడియో"
+        },
+        "variables/express/2022": {
+          "name": "వేరియబుల్స్"
+        },
+        "cs_fundamentals_final_project/express/2022": {
+          "type": "రుబ్రిక్"
+        },
+        "teacher_forum/pre-express/2022": {
+          "name": "ఉపాధ్యాయ ఫోరం"
+        },
+        "20_20_20_rule/pre-express/2022": {
+          "type": "వీడియో"
+        },
+        "pair_programming/pre-express/2022": {
+          "name": "పెయిర్ ప్రోగ్రామింగ్"
+        },
+        "wiggles_-_go_noodle/pre-express/2022": {
+          "type": "వీడియో"
+        },
+        "pause_and_think_online/pre-express/2022": {
+          "type": "వీడియో"
+        },
+        "curriculum_guide/coursea/2022": {
+          "name": "కరికులం గైడ్"
+        },
+        "teacher_forum/coursea/2022": {
+          "name": "ఉపాధ్యాయ ఫోరం"
+        },
+        "getting_started_-_creating_a_class_section/coursea/2022": {
+          "type": "వీడియో"
+        },
+        "pair_programming/coursea/2022": {
+          "name": "పెయిర్ ప్రోగ్రామింగ్"
+        },
+        "wiggles-go_noodle/coursea/2022": {
+          "type": "వీడియో"
+        },
+        "happy_maps/coursea/2022": {
+          "name": "హ్యాపీ మ్యాప్స్"
+        },
+        "wiggles_-_gonoodle/coursea/2022": {
+          "type": "వీడియో"
+        },
+        "debugging_with_the_step_button/coursea/2022": {
+          "type": "వీడియో"
+        },
+        "pair-programming/coursea/2022": {
+          "type": "వీడియో"
+        },
+        "pause_and_think_online/coursea/2022": {
+          "type": "వీడియో"
+        },
+        "the_big_event/coursea/2022": {
+          "name": "బిగ్ ఈవెంట్"
+        },
+        "the_big_event_1/coursea/2022": {
+          "name": "బిగ్ ఈవెంట్",
+          "type": "అసెస్మెంట్"
+        },
+        "the_big_event_2/coursea/2022": {
+          "name": "బిగ్ ఈవెంట్"
+        },
+        "curriculum_guide/coursec/2022": {
+          "name": "కరికులం గైడ్"
+        },
+        "teacher_forum/coursec/2022": {
+          "name": "ఉపాధ్యాయ ఫోరం"
+        },
+        "pair_programming/coursec/2022": {
+          "name": "పెయిర్ ప్రోగ్రామింగ్",
+          "type": "వీడియో"
+        },
+        "the_big_event/coursec/2022": {
+          "name": "బిగ్ ఈవెంట్"
+        },
+        "the_big_event_1/coursec/2022": {
+          "name": "బిగ్ ఈవెంట్",
+          "type": "అసెస్మెంట్"
+        },
+        "the_big_event_2/coursec/2022": {
+          "name": "బిగ్ ఈవెంట్"
+        },
+        "pause_and_think_online/coursec/2022": {
+          "type": "వీడియో"
+        },
+        "binary_bracelets/coursec/2022": {
+          "name": "బైనరీ కంకణాలు"
+        },
+        "binary_bracelets_1/coursec/2022": {
+          "name": "బైనరీ కంకణాలు"
+        },
+        "binary_bracelets_2/coursec/2022": {
+          "name": "బైనరీ కంకణాలు"
+        },
+        "binary_bracelets_3/coursec/2022": {
+          "name": "బైనరీ కంకణాలు",
+          "type": "అసెస్మెంట్"
+        },
+        "binary_bracelets_4/coursec/2022": {
+          "name": "బైనరీ కంకణాలు"
+        },
+        "teacher_forum/csd/2022": {
+          "name": "ఉపాధ్యాయ ఫోరం"
+        },
+        "binary_and_data/csd/2022": {
+          "type": "వీడియో"
+        },
+        "create_a_representation_2/csd/2022": {
+          "type": "రుబ్రిక్"
+        },
+        "amazon_and_data/csd/2022": {
+          "type": "వీడియో"
+        },
+        "netflix_and_data/csd/2022": {
+          "type": "వీడియో"
+        },
+        "waze_and_data/csd/2022": {
+          "type": "వీడియో"
+        },
+        "video_impact_on_society/csd/2022": {
+          "type": "వీడియో"
+        },
         "video_machine_learning/csd/2022": {
-          "name": "వీడియో: మెషిన్ లెర్నింగ్"
+          "name": "వీడియో: మెషిన్ లెర్నింగ్",
+          "type": "వీడియో"
+        },
+        "video_training_data_and_bias/csd/2022": {
+          "type": "వీడియో"
+        },
+        "make_a_recommendation/csd/2022": {
+          "type": "పీర్ రివ్యూ"
+        },
+        "make_a_recommendation_1/csd/2022": {
+          "type": "రుబ్రిక్"
+        },
+        "problem_solving_process_1/csd/2022": {
+          "type": "వీడియో"
+        },
+        "the_problem_solving_process/csd/2022": {
+          "name": "సమస్య పరిష్కార ప్రక్రియ"
+        },
+        "the_problem_solving_process_1/csd/2022": {
+          "name": "సమస్య పరిష్కార ప్రక్రియ"
+        },
+        "what_is_a_computer/csd/2022": {
+          "type": "వీడియో"
+        },
+        "what_is_a_computer_/csd/2022": {
+          "name": "కంప్యూటర్ అంటే ఏమిటి?"
+        },
+        "what_do_computers_do/csd/2022": {
+          "type": "వీడియో"
+        },
+        "apps_and_problem_solving_1/csd/2022": {
+          "type": "పీర్ రివ్యూ"
+        },
+        "apps_and_problem_solving_2/csd/2022": {
+          "type": "రుబ్రిక్"
+        },
+        "drawing_in_game_lab_-_part_1/csd/2022": {
+          "type": "వీడియో"
+        },
+        "drawing_in_game_lab_-_part_2/csd/2022": {
+          "type": "వీడియో"
+        },
+        "introduction_to_variables/csd/2022": {
+          "type": "వీడియో"
+        },
+        "variables/csd/2022": {
+          "name": "వేరియబుల్స్"
+        },
+        "variables_3/csd/2022": {
+          "name": "వేరియబుల్స్"
+        },
+        "introduction_to_sprites/csd/2022": {
+          "type": "వీడియో"
+        },
+        "the_animation_tab/csd/2022": {
+          "name": "యానిమేషన్ టాబ్",
+          "type": "వీడియో"
+        },
+        "text/csd/2022": {
+          "name": "టెక్స్ట్"
+        },
+        "captioned_scenes/csd/2022": {
+          "type": "రుబ్రిక్"
+        },
+        "flipbook_example_-_by_marnic_bos/csd/2022": {
+          "type": "వీడియో"
+        },
+        "introduction_to_the_draw_loop/csd/2022": {
+          "type": "వీడియో"
+        },
+        "sprite_movement/csd/2022": {
+          "type": "వీడియో"
+        },
+        "animated_scene/csd/2022": {
+          "type": "రుబ్రిక్"
+        },
+        "boolean_expressions/csd/2022": {
+          "name": "బూలియన్ వ్యక్తీకరణలు",
+          "type": "వీడియో"
+        },
+        "conditional_statements/csd/2022": {
+          "name": "షరతులతో కూడిన ప్రకటనలు",
+          "type": "వీడియో"
+        },
+        "conditionals/csd/2022": {
+          "name": "షరతులు"
+        },
+        "if_else_statements/csd/2022": {
+          "name": "If/else స్టేట్మెంట్స్",
+          "type": "వీడియో"
+        },
+        "interactive_card_2/csd/2022": {
+          "type": "పీర్ రివ్యూ"
+        },
+        "interactive_card_3/csd/2022": {
+          "type": "రుబ్రిక్"
+        },
+        "velocity/csd/2022": {
+          "name": "వెలాసిటీ",
+          "type": "వీడియో"
+        },
+        "velocity_1/csd/2022": {
+          "name": "వెలాసిటీ"
+        },
+        "velocity_2/csd/2022": {
+          "name": "వెలాసిటీ"
+        },
+        "side_scroller/csd/2022": {
+          "type": "రుబ్రిక్"
+        },
+        "flyer_game/csd/2022": {
+          "type": "రుబ్రిక్"
+        },
+        "functions/csd/2022": {
+          "name": "విధులు",
+          "type": "వీడియో"
+        },
+        "functions_1/csd/2022": {
+          "name": "విధులు"
+        },
+        "functions_4/csd/2022": {
+          "name": "విధులు"
+        },
+        "make_your_own_game_2/csd/2022": {
+          "type": "పీర్ రివ్యూ"
+        },
+        "make_your_own_game_3/csd/2022": {
+          "type": "రుబ్రిక్"
+        },
+        "intro_to_web_lab_part_2/csd/2022": {
+          "type": "వీడియో"
+        },
+        "video_intro_to_web_lab_part_1/csd/2022": {
+          "type": "వీడియో"
+        },
+        "video_debugging/csd/2022": {
+          "type": "వీడియో"
+        },
+        "video_pair_programming/csd/2022": {
+          "type": "వీడియో"
+        },
+        "html_web_page/csd/2022": {
+          "type": "రుబ్రిక్"
+        },
+        "html_web_page_2/csd/2022": {
+          "type": "పీర్ రివ్యూ"
+        },
+        "lists/csd/2022": {
+          "name": "జాబితాలు"
+        },
+        "intro_to_css_-_part_1/csd/2022": {
+          "name": "CSS కు ఉపోద్ఘాతం - పార్ట్ 1",
+          "type": "వీడియో"
+        },
+        "intro_to_css_-_part_2/csd/2022": {
+          "name": "CSS కు ఉపోద్ఘాతం - పార్ట్ 2",
+          "type": "వీడియో"
+        },
+        "your_personal_style/csd/2022": {
+          "type": "రుబ్రిక్"
+        },
+        "your_personal_style_1/csd/2022": {
+          "type": "పీర్ రివ్యూ"
+        },
+        "creative_commons_overview/csd/2022": {
+          "type": "వీడియో"
+        },
+        "personal_web_page/csd/2022": {
+          "type": "పీర్ రివ్యూ"
+        },
+        "personal_web_page_1/csd/2022": {
+          "type": "రుబ్రిక్"
+        },
+        "publishing_your_website/csd/2022": {
+          "type": "వీడియో"
+        },
+        "video_managing_disagreement/csd/2022": {
+          "type": "వీడియో"
+        },
+        "video_teamwork/csd/2022": {
+          "type": "వీడియో"
+        },
+        "video_how_search_works/csd/2022": {
+          "type": "వీడియో"
+        },
+        "website_for_a_purpose/csd/2022": {
+          "type": "రుబ్రిక్"
+        },
+        "website_for_a_purpose_1/csd/2022": {
+          "type": "పీర్ రివ్యూ"
+        },
+        "the_design_thinking_process/csd/2022": {
+          "type": "వీడియో"
+        },
+        "paper_prototypes/csd/2022": {
+          "type": "రుబ్రిక్"
+        },
+        "what_s_for_lunch_testing/csd/2022": {
+          "type": "వీడియో"
+        },
+        "intro_to_design_mode/csd/2022": {
+          "type": "వీడియో"
+        },
+        "events_in_app_lab_1/csd/2022": {
+          "type": "వీడియో"
+        },
+        "app_presentation/csd/2022": {
+          "type": "రుబ్రిక్"
+        },
+        "computer_science_is_changing_everything/csd/2022": {
+          "name": "కంప్యూటర్ సైన్స్ ప్రతిదీ మారుతోంది",
+          "type": "వీడియో"
+        },
+        "the_internet_of_things/csd/2022": {
+          "type": "వీడియో"
+        },
+        "circuits_and_logic/csd/2022": {
+          "type": "వీడియో"
+        },
+        "if_statements_2/csd/2022": {
+          "type": "వీడియో"
+        },
+        "the_counter_pattern_1/csd/2022": {
+          "type": "వీడియో"
+        },
+        "variables_1/csd/2022": {
+          "name": "వేరియబుల్స్"
+        },
+        "variables_2/csd/2022": {
+          "name": "వేరియబుల్స్",
+          "type": "వీడియో"
+        },
+        "rubric_-_on-the-go_app/csd/2022": {
+          "type": "రుబ్రిక్"
+        },
+        "input_output_devices/csd/2022": {
+          "type": "వీడియో"
+        },
+        "rubric_-_human_device_interaction/csd/2022": {
+          "type": "రుబ్రిక్"
+        },
+        "introduction_to_arrays/csd/2022": {
+          "name": "శ్రేణుల పరిచయం",
+          "type": "వీడియో"
+        },
+        "functions_2/csd/2022": {
+          "name": "విధులు"
+        },
+        "functions_3/csd/2022": {
+          "name": "విధులు",
+          "type": "వీడియో"
+        },
+        "functions_with_parameters/csd/2022": {
+          "name": "పారామితులతో విధులు",
+          "type": "వీడియో"
+        },
+        "functions_5/csd/2022": {
+          "name": "విధులు"
+        },
+        "student_rubric_-_interactive_art/csd/2022": {
+          "type": "రుబ్రిక్"
+        },
+        "prototype_an_innovation/csd/2022": {
+          "type": "రుబ్రిక్"
+        },
+        "ai_what_is_machine_learning_/csd/2022": {
+          "type": "వీడియో"
+        },
+        "seeing_ai/csd/2022": {
+          "type": "వీడియో"
+        },
+        "finding_patterns_in_data/csd/2022": {
+          "type": "వీడియో"
+        },
+        "introduction_to_ai_lab/csd/2022": {
+          "name": "AI ల్యాబ్ పరిచయం"
+        },
+        "introduction_to_ai_lab_1/csd/2022": {
+          "name": "AI ల్యాబ్ పరిచయం",
+          "type": "వీడియో"
+        },
+        "training_and_testing_in_ai_lab/csd/2022": {
+          "name": "AI ల్యాబ్లో శిక్షణ మరియు పరీక్ష",
+          "type": "వీడియో"
+        },
+        "ai_training_data_bias/csd/2022": {
+          "type": "వీడియో"
+        },
+        "model_cards_in_ai_lab/csd/2022": {
+          "name": "AI ల్యాబ్లో మోడల్ కార్డులు",
+          "type": "వీడియో"
+        },
+        "if-statements_in_app_lab/csd/2022": {
+          "type": "వీడియో"
+        },
+        "numerical_data_in_ai_lab/csd/2022": {
+          "name": "AI ల్యాబ్లో సంఖ్యా డేటా"
+        },
+        "numerical_data_in_ai_lab_1/csd/2022": {
+          "name": "AI ల్యాబ్లో సంఖ్యా డేటా"
+        },
+        "numerical_data_in_ai_lab_2/csd/2022": {
+          "name": "AI ల్యాబ్లో సంఖ్యా డేటా",
+          "type": "వీడియో"
+        },
+        "ethics_ai_equal_access_and_algorithmic_bias/csd/2022": {
+          "type": "వీడియో"
+        },
+        "create_an_ml_app/csd/2022": {
+          "type": "రుబ్రిక్"
+        },
+        "creating_a_survey_in_google_forms/csd/2022": {
+          "type": "వీడియో"
+        },
+        "cleaning_survey_data/csd/2022": {
+          "type": "వీడియో"
+        },
+        "view_and_download_survey_data/csd/2022": {
+          "type": "వీడియో"
+        },
+        "design_an_ai_app_1/csd/2022": {
+          "type": "రుబ్రిక్"
+        },
+        "standard_mappings/courseb/2018": {
+          "name": "ప్రామాణిక మ్యాపింగ్లు"
+        },
+        "teacher_forum/courseb/2018": {
+          "name": "ఉపాధ్యాయ ఫోరం"
+        },
+        "vocabulary/courseb/2018": {
+          "name": "పదజాలం"
+        },
+        "standard_mappings/coursea/2018": {
+          "name": "ప్రామాణిక మ్యాపింగ్లు"
+        },
+        "teacher_forum/coursea/2018": {
+          "name": "ఉపాధ్యాయ ఫోరం"
+        },
+        "vocabulary/coursea/2018": {
+          "name": "పదజాలం"
+        },
+        "standard_mappings/coursed/2018": {
+          "name": "ప్రామాణిక మ్యాపింగ్లు"
+        },
+        "teacher_forum/coursed/2018": {
+          "name": "ఉపాధ్యాయ ఫోరం"
+        },
+        "vocabulary/coursed/2018": {
+          "name": "పదజాలం"
+        },
+        "standard_mappings/coursef/2018": {
+          "name": "ప్రామాణిక మ్యాపింగ్లు"
+        },
+        "teacher_forum/coursef/2018": {
+          "name": "ఉపాధ్యాయ ఫోరం"
+        },
+        "vocabulary/coursef/2018": {
+          "name": "పదజాలం"
+        },
+        "standard_mappings/express/2018": {
+          "name": "ప్రామాణిక మ్యాపింగ్లు"
+        },
+        "teacher_forum/express/2018": {
+          "name": "ఉపాధ్యాయ ఫోరం"
+        },
+        "vocabulary/express/2018": {
+          "name": "పదజాలం"
+        },
+        "standard_mappings/coursee/2018": {
+          "name": "ప్రామాణిక మ్యాపింగ్లు"
+        },
+        "teacher_forum/coursee/2018": {
+          "name": "ఉపాధ్యాయ ఫోరం"
+        },
+        "vocabulary/coursee/2018": {
+          "name": "పదజాలం"
+        },
+        "standard_mappings/coursec/2018": {
+          "name": "ప్రామాణిక మ్యాపింగ్లు"
+        },
+        "teacher_forum/coursec/2018": {
+          "name": "ఉపాధ్యాయ ఫోరం"
+        },
+        "vocabulary/coursec/2018": {
+          "name": "పదజాలం"
+        },
+        "code_introduced_1/csd/2018": {
+          "name": "కోడ్ పరిచయం చేయబడింది"
+        },
+        "standard_mappings_2/csd/2018": {
+          "name": "ప్రామాణిక మ్యాపింగ్లు"
+        },
+        "teacher_forum_2/csd/2018": {
+          "name": "ఉపాధ్యాయ ఫోరం"
+        },
+        "vocabulary_2/csd/2018": {
+          "name": "పదజాలం"
+        },
+        "code_introduced_3/csd/2018": {
+          "name": "కోడ్ పరిచయం చేయబడింది"
+        },
+        "standard_mappings_5/csd/2018": {
+          "name": "ప్రామాణిక మ్యాపింగ్లు"
+        },
+        "teacher_forum_5/csd/2018": {
+          "name": "ఉపాధ్యాయ ఫోరం"
+        },
+        "vocabulary_5/csd/2018": {
+          "name": "పదజాలం"
+        },
+        "standard_mappings_4/csd/2018": {
+          "name": "ప్రామాణిక మ్యాపింగ్లు"
+        },
+        "teacher_forum_4/csd/2018": {
+          "name": "ఉపాధ్యాయ ఫోరం"
+        },
+        "vocabulary_4/csd/2018": {
+          "name": "పదజాలం"
+        },
+        "code_introduced_2/csd/2018": {
+          "name": "కోడ్ పరిచయం చేయబడింది"
+        },
+        "standard_mappings_3/csd/2018": {
+          "name": "ప్రామాణిక మ్యాపింగ్లు"
+        },
+        "teacher_forum_3/csd/2018": {
+          "name": "ఉపాధ్యాయ ఫోరం"
+        },
+        "vocabulary_3/csd/2018": {
+          "name": "పదజాలం"
+        },
+        "code_introduced/csd/2018": {
+          "name": "కోడ్ పరిచయం చేయబడింది"
+        },
+        "standard_mappings_1/csd/2018": {
+          "name": "ప్రామాణిక మ్యాపింగ్లు"
+        },
+        "teacher_forum_1/csd/2018": {
+          "name": "ఉపాధ్యాయ ఫోరం"
+        },
+        "vocabulary_1/csd/2018": {
+          "name": "పదజాలం"
+        },
+        "standard_mappings/csd/2018": {
+          "name": "ప్రామాణిక మ్యాపింగ్లు"
+        },
+        "teacher_forum/csd/2018": {
+          "name": "ఉపాధ్యాయ ఫోరం"
+        },
+        "vocabulary/csd/2018": {
+          "name": "పదజాలం"
+        },
+        "curriculum_guide/coursea/2019": {
+          "name": "కరికులం గైడ్"
+        },
+        "standard_mappings/coursea/2019": {
+          "name": "ప్రామాణిక మ్యాపింగ్లు"
+        },
+        "teacher_forum/coursea/2019": {
+          "name": "ఉపాధ్యాయ ఫోరం"
+        },
+        "vocabulary/coursea/2019": {
+          "name": "పదజాలం"
+        },
+        "curriculum_guide/courseb/2019": {
+          "name": "కరికులం గైడ్"
+        },
+        "standard_mappings/courseb/2019": {
+          "name": "ప్రామాణిక మ్యాపింగ్లు"
+        },
+        "teacher_forum/courseb/2019": {
+          "name": "ఉపాధ్యాయ ఫోరం"
+        },
+        "vocabulary/courseb/2019": {
+          "name": "పదజాలం"
+        },
+        "curriculum_guide/coursed/2019": {
+          "name": "కరికులం గైడ్"
+        },
+        "standard_mappings/coursed/2019": {
+          "name": "ప్రామాణిక మ్యాపింగ్లు"
+        },
+        "teacher_forum/coursed/2019": {
+          "name": "ఉపాధ్యాయ ఫోరం"
+        },
+        "vocabulary/coursed/2019": {
+          "name": "పదజాలం"
+        },
+        "curriculum_guide/coursef/2019": {
+          "name": "కరికులం గైడ్"
+        },
+        "standard_mappings/coursef/2019": {
+          "name": "ప్రామాణిక మ్యాపింగ్లు"
+        },
+        "teacher_forum/coursef/2019": {
+          "name": "ఉపాధ్యాయ ఫోరం"
+        },
+        "vocabulary/coursef/2019": {
+          "name": "పదజాలం"
+        },
+        "curriculum_guide/coursee/2019": {
+          "name": "కరికులం గైడ్"
+        },
+        "standard_mappings/coursee/2019": {
+          "name": "ప్రామాణిక మ్యాపింగ్లు"
+        },
+        "teacher_forum/coursee/2019": {
+          "name": "ఉపాధ్యాయ ఫోరం"
+        },
+        "vocabulary/coursee/2019": {
+          "name": "పదజాలం"
+        },
+        "standard_mappings/express/2019": {
+          "name": "ప్రామాణిక మ్యాపింగ్లు"
+        },
+        "teacher_forum/express/2019": {
+          "name": "ఉపాధ్యాయ ఫోరం"
+        },
+        "vocabulary/express/2019": {
+          "name": "పదజాలం"
+        },
+        "curriculum_guide/coursec/2019": {
+          "name": "కరికులం గైడ్"
+        },
+        "standard_mappings/coursec/2019": {
+          "name": "ప్రామాణిక మ్యాపింగ్లు"
+        },
+        "teacher_forum/coursec/2019": {
+          "name": "ఉపాధ్యాయ ఫోరం"
+        },
+        "vocabulary/coursec/2019": {
+          "name": "పదజాలం"
+        },
+        "teacher_forum/csd/2019": {
+          "name": "ఉపాధ్యాయ ఫోరం"
+        },
+        "code_introduced_1/csd/2019": {
+          "name": "కోడ్ పరిచయం చేయబడింది"
+        },
+        "standard_mappings_2/csd/2019": {
+          "name": "ప్రామాణిక మ్యాపింగ్లు"
+        },
+        "vocabulary_2/csd/2019": {
+          "name": "పదజాలం"
+        },
+        "code_introduced_3/csd/2019": {
+          "name": "కోడ్ పరిచయం చేయబడింది"
+        },
+        "standard_mappings_5/csd/2019": {
+          "name": "ప్రామాణిక మ్యాపింగ్లు"
+        },
+        "vocabulary_5/csd/2019": {
+          "name": "పదజాలం"
+        },
+        "code_introduced_2/csd/2019": {
+          "name": "కోడ్ పరిచయం చేయబడింది"
+        },
+        "standard_mappings_3/csd/2019": {
+          "name": "ప్రామాణిక మ్యాపింగ్లు"
+        },
+        "vocabulary_3/csd/2019": {
+          "name": "పదజాలం"
+        },
+        "standard_mappings_4/csd/2019": {
+          "name": "ప్రామాణిక మ్యాపింగ్లు"
+        },
+        "vocabulary_4/csd/2019": {
+          "name": "పదజాలం"
+        },
+        "standard_mappings/csd/2019": {
+          "name": "ప్రామాణిక మ్యాపింగ్లు"
+        },
+        "vocabulary/csd/2019": {
+          "name": "పదజాలం"
+        },
+        "code_introduced/csd/2019": {
+          "name": "కోడ్ పరిచయం చేయబడింది"
+        },
+        "standard_mappings_1/csd/2019": {
+          "name": "ప్రామాణిక మ్యాపింగ్లు"
+        },
+        "vocabulary_1/csd/2019": {
+          "name": "పదజాలం"
+        },
+        "code_introduced_1/csd/2017": {
+          "name": "కోడ్ పరిచయం చేయబడింది"
+        },
+        "standard_mappings_2/csd/2017": {
+          "name": "ప్రామాణిక మ్యాపింగ్లు"
+        },
+        "teacher_forum_2/csd/2017": {
+          "name": "ఉపాధ్యాయ ఫోరం"
+        },
+        "vocabulary_2/csd/2017": {
+          "name": "పదజాలం"
+        },
+        "code_introduced_3/csd/2017": {
+          "name": "కోడ్ పరిచయం చేయబడింది"
+        },
+        "standard_mappings_5/csd/2017": {
+          "name": "ప్రామాణిక మ్యాపింగ్లు"
+        },
+        "teacher_forum_5/csd/2017": {
+          "name": "ఉపాధ్యాయ ఫోరం"
+        },
+        "vocabulary_5/csd/2017": {
+          "name": "పదజాలం"
+        },
+        "code_introduced/csd/2017": {
+          "name": "కోడ్ పరిచయం చేయబడింది"
+        },
+        "standard_mappings_1/csd/2017": {
+          "name": "ప్రామాణిక మ్యాపింగ్లు"
+        },
+        "teacher_forum_1/csd/2017": {
+          "name": "ఉపాధ్యాయ ఫోరం"
+        },
+        "vocabulary_1/csd/2017": {
+          "name": "పదజాలం"
+        },
+        "standard_mappings/csd/2017": {
+          "name": "ప్రామాణిక మ్యాపింగ్లు"
+        },
+        "teacher_forum/csd/2017": {
+          "name": "ఉపాధ్యాయ ఫోరం"
+        },
+        "vocabulary/csd/2017": {
+          "name": "పదజాలం"
+        },
+        "standard_mappings_4/csd/2017": {
+          "name": "ప్రామాణిక మ్యాపింగ్లు"
+        },
+        "teacher_forum_4/csd/2017": {
+          "name": "ఉపాధ్యాయ ఫోరం"
+        },
+        "vocabulary_4/csd/2017": {
+          "name": "పదజాలం"
+        },
+        "code_introduced_2/csd/2017": {
+          "name": "కోడ్ పరిచయం చేయబడింది"
+        },
+        "standard_mappings_3/csd/2017": {
+          "name": "ప్రామాణిక మ్యాపింగ్లు"
+        },
+        "teacher_forum_3/csd/2017": {
+          "name": "ఉపాధ్యాయ ఫోరం"
+        },
+        "vocabulary_3/csd/2017": {
+          "name": "పదజాలం"
         },
         "list_of_poems_1/poem-art/unversioned": {
           "name": "కవిత్వాల లిస్టు",
           "url": "https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing",
           "type": ""
         },
+        "curriculum_guide_1/coursef/2021": {
+          "name": "కరికులం గైడ్"
+        },
+        "teacher_forum_1/coursef/2021": {
+          "name": "ఉపాధ్యాయ ఫోరం"
+        },
+        "introducing_sprite_lab/coursef/2021": {
+          "name": "స్ప్రైట్ ల్యాబ్ను పరిచయం చేస్తోంది"
+        },
+        "introducing_sprite_lab_1/coursef/2021": {
+          "name": "స్ప్రైట్ ల్యాబ్ను పరిచయం చేస్తోంది",
+          "type": "వీడియో"
+        },
+        "sprites_in_action/coursef/2021": {
+          "name": "చర్యలో స్ప్రిట్స్"
+        },
+        "the_power_of_words_the_power_of_words/coursef/2021": {
+          "type": "వీడియో"
+        },
+        "pause_and_think_online/coursef/2021": {
+          "type": "వీడియో"
+        },
+        "activity-answer-for-loop-fun/coursef/2021": {
+          "name": "లూప్ ఫన్ కోసం"
+        },
+        "csf-for-loop-fun-assessment/coursef/2021": {
+          "name": "లూప్ ఫన్ కోసం",
+          "type": "అసెస్మెంట్"
+        },
+        "csf-for-loop-fun-worksheet/coursef/2021": {
+          "name": "లూప్ ఫన్ కోసం"
+        },
+        "lesson-in-action-for-loop-fun/coursef/2021": {
+          "name": "లూప్ ఫన్ కోసం"
+        },
+        "unplugged-video-for-loop-fun/coursef/2021": {
+          "name": "లూప్ ఫన్ కోసం"
+        },
+        "ai-ml/coursef/2021": {
+          "type": "వీడియో"
+        },
+        "ai-societal/coursef/2021": {
+          "type": "వీడియో"
+        },
+        "ai-training/coursef/2021": {
+          "type": "వీడియో"
+        },
+        "assessment-answer-internet/coursef/2021": {
+          "name": "అంతర్జాలం"
+        },
+        "csf-internet-assessment/coursef/2021": {
+          "name": "అంతర్జాలం",
+          "type": "అసెస్మెంట్"
+        },
+        "unplugged-video-internet/coursef/2021": {
+          "name": "ఇంటర్నెట్"
+        },
+        "rubric-csf-final-projects/coursef/2021": {
+          "type": "రుబ్రిక్"
+        },
+        "curriculum_guide_1/courseb/2021": {
+          "name": "కరికులం గైడ్"
+        },
+        "teacher_forum_1/courseb/2021": {
+          "name": "ఉపాధ్యాయ ఫోరం"
+        },
+        "mimi-activity/courseb/2021": {
+          "name": "దీన్ని తరలించండి, తరలించండి"
+        },
+        "mimi-debugging/courseb/2021": {
+          "name": "దీన్ని తరలించండి, తరలించండి"
+        },
+        "mimi-teacher-puzzle/courseb/2021": {
+          "name": "దీన్ని తరలించండి, తరలించండి"
+        },
+        "teacher-video-move-it/courseb/2021": {
+          "name": "దాన్ని తరలించండి, తరలించండి"
+        },
+        "pair-programming-vid/courseb/2021": {
+          "name": "పెయిర్ ప్రోగ్రామింగ్"
+        },
+        "wiggles_-_gonoodle/courseb/2021": {
+          "type": "వీడియో"
+        },
+        "stevie_and_the_big_project/courseb/2021": {
+          "name": "స్టీవ్ మరియు బిగ్ ప్రాజెక్ట్"
+        },
+        "unspotted_bugs/courseb/2021": {
+          "name": "మచ్చలేని బగ్స్",
+          "type": "వీడియో"
+        },
+        "assessment-answer-getting-loopy/courseb/2021": {
+          "name": "లూపీ పొందడం"
+        },
+        "csf-getting-loopy-activity-worksheet/courseb/2021": {
+          "name": "లూపీ పొందడం"
+        },
+        "csf-getting-loopy-assessment/courseb/2021": {
+          "name": "లూపీ పొందడం",
+          "type": "అసెస్మెంట్"
+        },
+        "unplugged-video-getting-loopy/courseb/2021": {
+          "name": "లూపీ పొందడం"
+        },
+        "common-sense-media-pause-think/courseb/2021": {
+          "type": "వీడియో"
+        },
+        "assessment-answer-big-event/courseb/2021": {
+          "name": "బిగ్ ఈవెంట్"
+        },
+        "csf-the-big-event-assessment/courseb/2021": {
+          "name": "బిగ్ ఈవెంట్",
+          "type": "అసెస్మెంట్"
+        },
+        "unplugged-video-big-event/courseb/2021": {
+          "name": "బిగ్ ఈవెంట్",
+          "type": "వీడియో"
+        },
+        "curriculum_guide_1/coursea/2021": {
+          "name": "కరికులం గైడ్"
+        },
+        "teacher_forum_1/coursea/2021": {
+          "name": "ఉపాధ్యాయ ఫోరం"
+        },
+        "how_to_make_a_class_section_on_code_org/coursea/2021": {
+          "type": "వీడియో"
+        },
+        "pair-programming-vid/coursea/2021": {
+          "name": "పెయిర్ ప్రోగ్రామింగ్"
+        },
+        "wiggles-go_noodle/coursea/2021": {
+          "type": "వీడియో"
+        },
+        "unplugged-video-happy-maps/coursea/2021": {
+          "name": "హ్యాపీ మ్యాప్స్"
+        },
+        "wiggles_-_gonoodle/coursea/2021": {
+          "type": "వీడియో"
+        },
+        "csf_debugging_k1_blocks/coursea/2021": {
+          "type": "వీడియో"
+        },
+        "pair-programming/coursea/2021": {
+          "type": "వీడియో"
+        },
+        "common-sense-media-pause-think/coursea/2021": {
+          "type": "వీడియో"
+        },
+        "assessment-answer-big-event/coursea/2021": {
+          "name": "బిగ్ ఈవెంట్"
+        },
+        "csf-the-big-event-assessment/coursea/2021": {
+          "name": "బిగ్ ఈవెంట్",
+          "type": "అసెస్మెంట్"
+        },
+        "unplugged-video-big-event/coursea/2021": {
+          "name": "బిగ్ ఈవెంట్"
+        },
+        "curriculum_guide_1/coursec/2021": {
+          "name": "కరికులం గైడ్"
+        },
+        "teacher_forum_1/coursec/2021": {
+          "name": "ఉపాధ్యాయ ఫోరం"
+        },
+        "pair-programming-vid/coursec/2021": {
+          "name": "పెయిర్ ప్రోగ్రామింగ్",
+          "type": "వీడియో"
+        },
+        "assessment-answer-big-event/coursec/2021": {
+          "name": "బిగ్ ఈవెంట్"
+        },
+        "csf-the-big-event-assessment/coursec/2021": {
+          "name": "బిగ్ ఈవెంట్",
+          "type": "అసెస్మెంట్"
+        },
+        "unplugged-video-big-event/coursec/2021": {
+          "name": "బిగ్ ఈవెంట్"
+        },
+        "pause_and_think_online/coursec/2021": {
+          "type": "వీడియో"
+        },
+        "assessment-answer-binary-bracelets/coursec/2021": {
+          "name": "బైనరీ కంకణాలు"
+        },
+        "csf-binary-bracelets-activity/coursec/2021": {
+          "name": "బైనరీ కంకణాలు"
+        },
+        "csf-binary-bracelets-assessment/coursec/2021": {
+          "name": "బైనరీ కంకణాలు",
+          "type": "అసెస్మెంట్"
+        },
+        "lesson-in-action-binary-bracelets/coursec/2021": {
+          "name": "బైనరీ కంకణాలు"
+        },
+        "unplugged-video-binary-bracelets/coursec/2021": {
+          "name": "బైనరీ కంకణాలు"
+        },
+        "curriculum_guide_1/coursed/2021": {
+          "name": "కరికులం గైడ్"
+        },
+        "teacher_forum_1/coursed/2021": {
+          "name": "ఉపాధ్యాయ ఫోరం"
+        },
+        "activity-answer-graph-paper/coursed/2021": {
+          "name": "గ్రాఫ్ పేపర్ ప్రోగ్రామింగ్"
+        },
+        "assessment-answer-graph-paper/coursed/2021": {
+          "name": "గ్రాఫ్ పేపర్ ప్రోగ్రామింగ్"
+        },
+        "csf-graph-paper-programming-assessment/coursed/2021": {
+          "name": "గ్రాఫ్ పేపర్ ప్రోగ్రామింగ్",
+          "type": "అసెస్మెంట్"
+        },
+        "graph-paper-programming/coursed/2021": {
+          "name": "గ్రాఫ్ పేపర్ ప్రోగ్రామింగ్"
+        },
+        "lesson-in-action-graph-paper/coursed/2021": {
+          "name": "గ్రాఫ్ పేపర్ ప్రోగ్రామింగ్"
+        },
+        "unplugged-video-graph-paper/coursed/2021": {
+          "name": "గ్రాఫ్ పేపర్ ప్రోగ్రామింగ్"
+        },
+        "pair-programming-vid/coursed/2021": {
+          "name": "పెయిర్ ప్రోగ్రామింగ్"
+        },
+        "csf-relay-programming-activity-packet/coursed/2021": {
+          "name": "రిలే ప్రోగ్రామింగ్"
+        },
+        "relay-assessment/coursed/2021": {
+          "name": "రిలే ప్రోగ్రామింగ్"
+        },
+        "relay-programming-assessment-answer-key/coursed/2021": {
+          "name": "రిలే ప్రోగ్రామింగ్"
+        },
+        "relay-programming-teacher-debugging/coursed/2021": {
+          "name": "రిలే ప్రోగ్రామింగ్"
+        },
+        "teacher-video-relay-programming-2/coursed/2021": {
+          "name": "రిలే ప్రోగ్రామింగ్"
+        },
+        "unplugged-video-relay-programming/coursed/2021": {
+          "name": "రిలే ప్రోగ్రామింగ్"
+        },
+        "pause_and_think_online/coursed/2021": {
+          "type": "వీడియో"
+        },
+        "pause_and_think_online_1/coursed/2021": {
+          "type": "వీడియో"
+        },
+        "csf-conditionals-with-cards-assessment/coursed/2021": {
+          "type": "అసెస్మెంట్"
+        },
+        "teacher_forum_1/express/2021": {
+          "name": "ఉపాధ్యాయ ఫోరం"
+        },
+        "pair_programming/express/2021": {
+          "name": "పెయిర్ ప్రోగ్రామింగ్",
+          "type": "వీడియో"
+        },
+        "artist_introduction/express/2021": {
+          "type": "వీడియో"
+        },
+        "turns_angles/express/2021": {
+          "type": "వీడియో"
+        },
+        "sprites_in_action/express/2021": {
+          "name": "చర్యలో స్ప్రిట్స్"
+        },
+        "pause_and_think_online/express/2021": {
+          "type": "వీడియో"
+        },
+        "pair_programming_video/express/2021": {
+          "type": "వీడియో"
+        },
+        "variables_video/express/2021": {
+          "name": "వేరియబుల్స్"
+        },
+        "rubric-csf-final-projects/express/2021": {
+          "type": "రుబ్రిక్"
+        },
+        "teacher_forum_1/pre-express/2021": {
+          "name": "ఉపాధ్యాయ ఫోరం"
+        },
+        "20_20_20_rule/pre-express/2021": {
+          "type": "వీడియో"
+        },
+        "pair-programming-vid/pre-express/2021": {
+          "name": "పెయిర్ ప్రోగ్రామింగ్"
+        },
+        "wiggles_-_go_noodle/pre-express/2021": {
+          "type": "వీడియో"
+        },
+        "common-sense-media-pause-think/pre-express/2021": {
+          "type": "వీడియో"
+        },
+        "curriculum_guide_1/coursee/2021": {
+          "name": "కరికులం గైడ్"
+        },
+        "teacher_forum_1/coursee/2021": {
+          "name": "ఉపాధ్యాయ ఫోరం"
+        },
+        "common-sense-media-pause-think/coursee/2021": {
+          "type": "వీడియో"
+        },
+        "digital-sharing-video/coursee/2021": {
+          "type": "వీడియో"
+        },
+        "csf-songwriting-assessment/coursee/2021": {
+          "type": "అసెస్మెంట్"
+        },
+        "rubric-csf-final-projects/coursee/2021": {
+          "type": "రుబ్రిక్"
+        },
+        "ai_what_is_machine_learning_/csd/2021": {
+          "type": "వీడియో"
+        },
+        "seeing_ai/csd/2021": {
+          "type": "వీడియో"
+        },
+        "finding_patterns_in_data/csd/2021": {
+          "type": "వీడియో"
+        },
+        "introduction_to_ai_lab/csd/2021": {
+          "name": "AI ల్యాబ్ పరిచయం"
+        },
+        "introduction_to_ai_lab_1/csd/2021": {
+          "name": "AI ల్యాబ్ పరిచయం",
+          "type": "వీడియో"
+        },
+        "training_and_testing_in_ai_lab/csd/2021": {
+          "name": "AI ల్యాబ్లో శిక్షణ మరియు పరీక్ష",
+          "type": "వీడియో"
+        },
+        "ai_training_data_bias/csd/2021": {
+          "type": "వీడియో"
+        },
+        "model_cards_in_ai_lab/csd/2021": {
+          "name": "AI ల్యాబ్లో మోడల్ కార్డులు",
+          "type": "వీడియో"
+        },
+        "if-statements_in_app_lab/csd/2021": {
+          "type": "వీడియో"
+        },
+        "numerical_data_in_ai_lab/csd/2021": {
+          "name": "AI ల్యాబ్లో సంఖ్యా డేటా"
+        },
+        "numerical_data_in_ai_lab_1/csd/2021": {
+          "name": "AI ల్యాబ్లో సంఖ్యా డేటా"
+        },
+        "numerical_data_in_ai_lab_2/csd/2021": {
+          "name": "AI ల్యాబ్లో సంఖ్యా డేటా",
+          "type": "వీడియో"
+        },
+        "ethics_ai_equal_access_and_algorithmic_bias/csd/2021": {
+          "type": "వీడియో"
+        },
+        "create_an_ml_app/csd/2021": {
+          "type": "రుబ్రిక్"
+        },
+        "cleaning_survey_data/csd/2021": {
+          "type": "వీడియో"
+        },
+        "view_and_download_survey_data/csd/2021": {
+          "type": "వీడియో"
+        },
+        "design_an_ai_app_1/csd/2021": {
+          "type": "రుబ్రిక్"
+        },
+        "teacher_forum/csd/2021": {
+          "name": "ఉపాధ్యాయ ఫోరం"
+        },
+        "the-design-thinking-process/csd/2021": {
+          "type": "వీడియో"
+        },
+        "paper-prototypes/csd/2021": {
+          "type": "రుబ్రిక్"
+        },
+        "whats-for-lunch-testing/csd/2021": {
+          "type": "వీడియో"
+        },
+        "intro_to_design_mode/csd/2021": {
+          "type": "వీడియో"
+        },
+        "app-presentation/csd/2021": {
+          "type": "రుబ్రిక్"
+        },
+        "internet-of-things-video/csd/2021": {
+          "type": "వీడియో"
+        },
+        "innovation-video-1-1/csd/2021": {
+          "name": "కంప్యూటర్ సైన్స్ ప్రతిదీ మారుతోంది",
+          "type": "వీడియో"
+        },
+        "how_computers_word_hardware_software/csd/2021": {
+          "name": "కంప్యూటర్లు ఎలా పనిచేస్తాయి: హార్డ్వేర్ & సాఫ్ట్వేర్",
+          "type": "వీడియో"
+        },
+        "analog-digital-video/csd/2021": {
+          "type": "వీడియో"
+        },
+        "functions_2/csd/2021": {
+          "name": "విధులు"
+        },
+        "make_a_game_1/csd/2021": {
+          "type": "రుబ్రిక్"
+        },
+        "introduction_to_arrays/csd/2021": {
+          "name": "శ్రేణుల పరిచయం",
+          "type": "వీడియో"
+        },
+        "loops_in_app_lab/csd/2021": {
+          "name": "ఉచ్చులు కోసం",
+          "type": "వీడియో"
+        },
+        "for_loops/csd/2021": {
+          "name": "ఉచ్చులు కోసం"
+        },
+        "circuits-logic-video/csd/2021": {
+          "name": "కంప్యూటర్లు ఎలా పనిచేస్తాయి: సర్క్యూట్లు & లాజిక్",
+          "type": "వీడియో"
+        },
+        "prototype-an-innovation-1/csd/2021": {
+          "type": "రుబ్రిక్"
+        },
+        "how-computers-work-data-and-binary/csd/2021": {
+          "type": "వీడియో"
+        },
+        "create_a_representation/csd/2021": {
+          "type": "రుబ్రిక్"
+        },
+        "how-big-data-is-used-in-amazon-recommendation-systems/csd/2021": {
+          "type": "వీడియో"
+        },
+        "why-are-so-many-drivers-obsessed-with-waze/csd/2021": {
+          "type": "వీడియో"
+        },
+        "netflix-quick-guide-how-does-netflix-make-tv-show-and-movie-suggestions/csd/2021": {
+          "type": "వీడియో"
+        },
+        "video_impact_on_society/csd/2021": {
+          "type": "వీడియో"
+        },
         "video_machine_learning/csd/2021": {
-          "name": "వీడియో: మెషిన్ లెర్నింగ్"
+          "name": "వీడియో: మెషిన్ లెర్నింగ్",
+          "type": "వీడియో"
+        },
+        "video_training_data_and_bias/csd/2021": {
+          "type": "వీడియో"
+        },
+        "make-a-recommendation-peer-review-2019/csd/2021": {
+          "type": "పీర్ రివ్యూ"
+        },
+        "make-a-recommendation-1/csd/2021": {
+          "type": "రుబ్రిక్"
+        },
+        "teacher_forum_1/csd/2021": {
+          "name": "ఉపాధ్యాయ ఫోరం"
+        },
+        "drawing_in_game_lab_-_part_1/csd/2021": {
+          "type": "వీడియో"
+        },
+        "drawing_in_game_lab_-_part_2/csd/2021": {
+          "type": "వీడియో"
+        },
+        "introduction-to-variables/csd/2021": {
+          "type": "వీడియో"
+        },
+        "variables_1/csd/2021": {
+          "name": "వేరియబుల్స్"
+        },
+        "introduction_to_sprites/csd/2021": {
+          "type": "వీడియో"
+        },
+        "the_animation_tab/csd/2021": {
+          "name": "యానిమేషన్ టాబ్",
+          "type": "వీడియో"
+        },
+        "captioned-scenes/csd/2021": {
+          "type": "రుబ్రిక్"
+        },
+        "youtube-flipbook/csd/2021": {
+          "type": "వీడియో"
+        },
+        "introduction_to_the_draw_loop/csd/2021": {
+          "type": "వీడియో"
+        },
+        "animating-sprites/csd/2021": {
+          "type": "వీడియో"
+        },
+        "animated-scene-1/csd/2021": {
+          "type": "రుబ్రిక్"
+        },
+        "boolean_expressions/csd/2021": {
+          "name": "బూలియన్ వ్యక్తీకరణలు",
+          "type": "వీడియో"
+        },
+        "conditional_statements/csd/2021": {
+          "name": "షరతులతో కూడిన ప్రకటనలు",
+          "type": "వీడియో"
+        },
+        "if_else_statements/csd/2021": {
+          "name": "If/else స్టేట్మెంట్స్",
+          "type": "వీడియో"
+        },
+        "interactive-card-1-2-3-4/csd/2021": {
+          "type": "పీర్ రివ్యూ"
+        },
+        "interactive_card/csd/2021": {
+          "type": "రుబ్రిక్"
+        },
+        "velocity_1/csd/2021": {
+          "name": "వెలాసిటీ",
+          "type": "వీడియో"
+        },
+        "velocity_2/csd/2021": {
+          "name": "వెలాసిటీ"
+        },
+        "side-scroller-1/csd/2021": {
+          "type": "రుబ్రిక్"
+        },
+        "flyer-game-1/csd/2021": {
+          "type": "రుబ్రిక్"
+        },
+        "calling_and_defining_functions/csd/2021": {
+          "name": "విధులు",
+          "type": "వీడియో"
+        },
+        "functions_1/csd/2021": {
+          "name": "విధులు"
+        },
+        "make-your-own-game-1-2-3/csd/2021": {
+          "type": "పీర్ రివ్యూ"
+        },
+        "make_your_own_game/csd/2021": {
+          "type": "రుబ్రిక్"
+        },
+        "problem-solving-process-1/csd/2021": {
+          "type": "వీడియో"
+        },
+        "the-problem-solving-process/csd/2021": {
+          "name": "సమస్య పరిష్కార ప్రక్రియ"
+        },
+        "what-is-a-computer-2020/csd/2021": {
+          "name": "కంప్యూటర్ అంటే ఏమిటి?"
+        },
+        "what-is-a-computer-1-2-3/csd/2021": {
+          "type": "వీడియో"
+        },
+        "what-do-computers-do/csd/2021": {
+          "type": "వీడియో"
+        },
+        "apps-and-problem-solving-peer-review-2019/csd/2021": {
+          "type": "పీర్ రివ్యూ"
+        },
+        "apps_and_problem_solving/csd/2021": {
+          "type": "రుబ్రిక్"
+        },
+        "intro_to_web_lab_part_2/csd/2021": {
+          "type": "వీడియో"
+        },
+        "video_intro_to_web_lab_part_1/csd/2021": {
+          "type": "వీడియో"
+        },
+        "video_pair_programming/csd/2021": {
+          "type": "వీడియో"
+        },
+        "video_debugging/csd/2021": {
+          "type": "వీడియో"
+        },
+        "html-web-page-1/csd/2021": {
+          "type": "రుబ్రిక్"
+        },
+        "html-web-page/csd/2021": {
+          "type": "పీర్ రివ్యూ"
+        },
+        "lists/csd/2021": {
+          "name": "జాబితాలు"
+        },
+        "intro_to_css_-_part_1/csd/2021": {
+          "name": "CSS కు ఉపోద్ఘాతం - పార్ట్ 1",
+          "type": "వీడియో"
+        },
+        "intro_to_css_-_part_2/csd/2021": {
+          "name": "CSS కు ఉపోద్ఘాతం - పార్ట్ 2",
+          "type": "వీడియో"
+        },
+        "your-personal-style-1-2-3/csd/2021": {
+          "type": "రుబ్రిక్"
+        },
+        "your-personal-style-1/csd/2021": {
+          "type": "పీర్ రివ్యూ"
+        },
+        "creative-commons-video/csd/2021": {
+          "type": "వీడియో"
+        },
+        "personal-web-page-1/csd/2021": {
+          "type": "పీర్ రివ్యూ"
+        },
+        "personal-web-page/csd/2021": {
+          "type": "రుబ్రిక్"
+        },
+        "publishing_your_website/csd/2021": {
+          "type": "వీడియో"
+        },
+        "teamwork-dealing-with-disagreement/csd/2021": {
+          "type": "వీడియో"
+        },
+        "how-teamwork-works/csd/2021": {
+          "type": "వీడియో"
+        },
+        "how-search-works-video/csd/2021": {
+          "type": "వీడియో"
+        },
+        "website-for-a-purpose-1/csd/2021": {
+          "type": "రుబ్రిక్"
+        },
+        "website-for-a-purpose/csd/2021": {
+          "type": "పీర్ రివ్యూ"
+        },
+        "standard_mappings/pre-express/2020": {
+          "name": "ప్రామాణిక మ్యాపింగ్లు"
+        },
+        "teacher_forum/pre-express/2020": {
+          "name": "ఉపాధ్యాయ ఫోరం"
+        },
+        "vocabulary/pre-express/2020": {
+          "name": "పదజాలం"
+        },
+        "standard_mappings/express/2020": {
+          "name": "ప్రామాణిక మ్యాపింగ్లు"
+        },
+        "teacher_forum/express/2020": {
+          "name": "ఉపాధ్యాయ ఫోరం"
+        },
+        "vocabulary/express/2020": {
+          "name": "పదజాలం"
+        },
+        "curriculum_guide/courseb/2020": {
+          "name": "కరికులం గైడ్"
+        },
+        "standard_mappings/courseb/2020": {
+          "name": "ప్రామాణిక మ్యాపింగ్లు"
+        },
+        "teacher_forum/courseb/2020": {
+          "name": "ఉపాధ్యాయ ఫోరం"
+        },
+        "vocabulary/courseb/2020": {
+          "name": "పదజాలం"
+        },
+        "curriculum_guide/coursed/2020": {
+          "name": "కరికులం గైడ్"
+        },
+        "standard_mappings/coursed/2020": {
+          "name": "ప్రామాణిక మ్యాపింగ్లు"
+        },
+        "teacher_forum/coursed/2020": {
+          "name": "ఉపాధ్యాయ ఫోరం"
+        },
+        "vocabulary/coursed/2020": {
+          "name": "పదజాలం"
+        },
+        "curriculum_guide/coursec/2020": {
+          "name": "కరికులం గైడ్"
+        },
+        "standard_mappings/coursec/2020": {
+          "name": "ప్రామాణిక మ్యాపింగ్లు"
+        },
+        "teacher_forum/coursec/2020": {
+          "name": "ఉపాధ్యాయ ఫోరం"
+        },
+        "vocabulary/coursec/2020": {
+          "name": "పదజాలం"
+        },
+        "curriculum_guide/coursee/2020": {
+          "name": "కరికులం గైడ్"
+        },
+        "standard_mappings/coursee/2020": {
+          "name": "ప్రామాణిక మ్యాపింగ్లు"
+        },
+        "teacher_forum/coursee/2020": {
+          "name": "ఉపాధ్యాయ ఫోరం"
+        },
+        "vocabulary/coursee/2020": {
+          "name": "పదజాలం"
+        },
+        "curriculum_guide/coursea/2020": {
+          "name": "కరికులం గైడ్"
+        },
+        "standard_mappings/coursea/2020": {
+          "name": "ప్రామాణిక మ్యాపింగ్లు"
+        },
+        "teacher_forum/coursea/2020": {
+          "name": "ఉపాధ్యాయ ఫోరం"
+        },
+        "vocabulary/coursea/2020": {
+          "name": "పదజాలం"
+        },
+        "curriculum_guide/coursef/2020": {
+          "name": "కరికులం గైడ్"
+        },
+        "standard_mappings/coursef/2020": {
+          "name": "ప్రామాణిక మ్యాపింగ్లు"
+        },
+        "teacher_forum/coursef/2020": {
+          "name": "ఉపాధ్యాయ ఫోరం"
+        },
+        "vocabulary/coursef/2020": {
+          "name": "పదజాలం"
         }
       }
     }

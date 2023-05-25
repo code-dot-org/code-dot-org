@@ -94,6 +94,7 @@ class CourseOffering < ApplicationRecord
   end
 
   def path_to_latest_published_version
+    return nil unless latest_published_version
     latest_published_version.content_root.link
   end
 
@@ -213,6 +214,7 @@ class CourseOffering < ApplicationRecord
   end
 
   def duration
+    return nil unless latest_published_version
     co_units = latest_published_version.units
     co_duration_in_minutes = co_units.sum(&:duration_in_minutes)
     DURATION_LABEL_TO_MINUTES_CAP.keys.find {|dur| co_duration_in_minutes <= DURATION_LABEL_TO_MINUTES_CAP[dur]}

@@ -1507,10 +1507,15 @@
         "finding_patterns_in_data/csd/2022": {
           "type": "Video"
         },
+        "introduction_to_ai_lab/csd/2022": {
+          "name": "Introducere în AI Lab"
+        },
         "introduction_to_ai_lab_1/csd/2022": {
+          "name": "Introducere în AI Lab",
           "type": "Video"
         },
         "training_and_testing_in_ai_lab/csd/2022": {
+          "name": "Instruire și testare în laboratorul AI",
           "type": "Video"
         },
         "ai_training_data_bias/csd/2022": {
@@ -1519,12 +1524,20 @@
           "type": "Video"
         },
         "model_cards_in_ai_lab/csd/2022": {
+          "name": "Carduri model în AI Lab",
           "type": "Video"
         },
         "if-statements_in_app_lab/csd/2022": {
           "type": "Video"
         },
+        "numerical_data_in_ai_lab/csd/2022": {
+          "name": "Date numerice în laboratorul AI"
+        },
+        "numerical_data_in_ai_lab_1/csd/2022": {
+          "name": "Date numerice în laboratorul AI"
+        },
         "numerical_data_in_ai_lab_2/csd/2022": {
+          "name": "Date numerice în laboratorul AI",
           "type": "Video"
         },
         "ai_ethics_research_reflection/csd/2022": {
@@ -3305,10 +3318,15 @@
         "finding_patterns_in_data/csd/2021": {
           "type": "Video"
         },
+        "introduction_to_ai_lab/csd/2021": {
+          "name": "Introducere în AI Lab"
+        },
         "introduction_to_ai_lab_1/csd/2021": {
+          "name": "Introducere în AI Lab",
           "type": "Video"
         },
         "training_and_testing_in_ai_lab/csd/2021": {
+          "name": "Instruire și testare în laboratorul AI",
           "type": "Video"
         },
         "ai_training_data_bias/csd/2021": {
@@ -3317,12 +3335,20 @@
           "type": "Video"
         },
         "model_cards_in_ai_lab/csd/2021": {
+          "name": "Carduri model în AI Lab",
           "type": "Video"
         },
         "if-statements_in_app_lab/csd/2021": {
           "type": "Video"
         },
+        "numerical_data_in_ai_lab/csd/2021": {
+          "name": "Date numerice în laboratorul AI"
+        },
+        "numerical_data_in_ai_lab_1/csd/2021": {
+          "name": "Date numerice în laboratorul AI"
+        },
         "numerical_data_in_ai_lab_2/csd/2021": {
+          "name": "Date numerice în laboratorul AI",
           "type": "Video"
         },
         "ai_ethics_research_reflection/csd/2021": {

@@ -35,6 +35,7 @@
           "student_overview": "En aquesta lliçó, els alumnes tindran un primer contacte amb la informàtica i crearan un joc a partir d'un codi senzill basat en blocs. Aquesta lliçó està pensada per alumnes de cursos intermedis, des dels 10 als 16 anys, però es pot adaptar per alumnes de menys o més edat amb les propostes alternatives proporcionades."
         },
         "hello-world-soccer-2022/Hello World: Food": {
+          "name": "Hola Món: Futbol",
           "overview": "En aquesta lliçó, els alumnes programaran al Laboratori d’Sprites per aprendre els conceptes bàsics de la informàtica. El Laboratori d’Sprites és una eina que es pot fer servir per construir projectes imaginatius i divertits. Els alumnes aprendran a crear i animar sprites i a fer-los interactius mitjançant esdeveniments.\n\nHi ha diverses versions d’aquesta lliçó. Totes ensenyen els mateixos conceptes, però ho fan a través d’imatges diferents per tal de captar l’atenció dels diferents alumnes. Per més informació, visiteu la [pàgina d’inici d’Hola, món.](https://code.org/helloworld)",
           "preparation": "-   Feu els trencaclosques per trobar qualsevol cosa que pugui presentar problemes a la vostra classe.\n-   Feu servir els recursos de [Connexions Informàtiques](https://code.org/educate/csc) per crear un pla per seguir ensenyant informàtica un cop fet el tutorial inicial.",
           "purpose": "Aquesta lliçó està pensada per preparar els alumnes per crear projectes de programació senzills al Laboratori d'Sprites. Un cop adquireixin aquesta habilitat, seran capaços de crear projectes sobre qualsevol tema, com ara altres matèries escolars o alguna qüestió que els interessi personalment. Visiteu [Connexions Informàtiques](https://code.org/educate/csc) per trobar més idees sobre com integrar les ciències de la computació en altres assignatures."
@@ -58,6 +59,7 @@
           "student_overview": "En aquesta lliçó, els alumnes tindran una experiència d'aproximació a la informàtica i crearan un joc mitjançant un codi de blocs bàsic."
         },
         "hello-world-emoji-2021/Hello World": {
+          "name": "Hola Món: Emoji",
           "overview": "En aquesta lliçó, els alumnes programaran al Laboratori d’Sprites per aprendre els conceptes bàsics de la informàtica. El Laboratori d’Sprites és una eina que es pot fer servir per construir projectes imaginatius i divertits. Els alumnes aprendran a crear i animar sprites i a fer-los interactius mitjançant esdeveniments.\n\nHi ha diverses versions d’aquesta lliçó. Totes ensenyen els mateixos conceptes, però ho fan a través d’imatges diferents per tal de captar l’atenció dels diferents alumnes. Per més informació, visiteu la [pàgina d’inici d’Hola, món.](https://code.org/helloworld)",
           "preparation": "-   Feu els trencaclosques per trobar qualsevol cosa que pugui presentar problemes a la vostra classe.\n-   Feu servir els recursos de [Connexions Informàtiques](https://code.org/educate/csc) per crear un pla per seguir ensenyant informàtica un cop fet el tutorial inicial.",
           "purpose": "Aquesta lliçó està pensada per preparar els alumnes per crear projectes de programació senzills al Laboratori d'Sprites. Un cop adquireixin aquesta habilitat, seran capaços de crear projectes sobre qualsevol tema, com ara altres matèries escolars o alguna qüestió que els interessi personalment. Visiteu [Connexions Informàtiques](https://code.org/educate/csc) per trobar més idees sobre com integrar les ciències de la computació en altres assignatures."
@@ -70,11 +72,13 @@
           "student_overview": "Progamar l'Artista per crear unes imatges precioses."
         },
         "gumball/Gumball Play Lab": {
+          "name": "Gumball Joc Lab",
           "overview": "En aquesta lliçó, els alumnes tindran un primer contacte amb la informàtica i crearan un joc a partir d'un codi senzill basat en blocs. Aquesta lliçó està pensada per alumnes de cursos intermedis, des dels 10 als 16 anys, però es pot adaptar per alumnes de menys o més edat amb les propostes alternatives proporcionades.",
           "purpose": "Aquesta lliçó introdueix els conceptes informàtics principals de la programació i la codificació (amb blocs), així com tècniques senzilles de depuració.",
           "student_overview": "En aquesta lliçó, els alumnes tindran un primer contacte amb la informàtica i crearan un joc a partir d'un codi senzill basat en blocs. Aquesta lliçó està pensada per alumnes de cursos intermedis, des dels 10 als 16 anys, però es pot adaptar per alumnes de menys o més edat amb les propostes alternatives proporcionades."
         },
         "dance/Dance Party": {
+          "name": "Festa de ball (2018)",
           "overview": "En aquesta lliçó, els alumnes de totes les edats s’iniciaran en la programació i la informàtica en un ambient segur i de suport. Aquesta lliçó s’ha dissenyat per alumnes de totes les edats, però per fer-la cal llegir. Per fer aquesta activitat, fa falta so, ja que l’eina está dissenyada per reaccionar a la música.",
           "purpose": "Aquesta lliçó introdueix els conceptes bàsics de la informàtica quant a codificació i programació d'esdeveniments (amb blocs).",
           "student_overview": "En aquesta lliçó, els alumnes de totes les edats s’iniciaran en la programació i la informàtica en un ambient segur i de suport. Aquesta lliçó s’ha dissenyat per alumnes de totes les edats, però per fer-la cal llegir. Per fer aquesta activitat, fa falta so, ja que l’eina está dissenyada per reaccionar a la música."
@@ -99,6 +103,7 @@
           "purpose": "Aquesta lliçó està pensada per preparar els alumnes per crear projectes de programació senzills al Laboratori d'Sprites. Un cop adquireixin aquesta habilitat, seran capaços de crear projectes sobre qualsevol tema, com ara altres matèries escolars o alguna qüestió que els interessi personalment. Visiteu [Connexions Informàtiques](https://code.org/educate/csc) per trobar més idees sobre com integrar les ciències de la computació en altres assignatures."
         },
         "hello-world-animals-2021/Hello World": {
+          "name": "Hola Món: Animals",
           "overview": "En aquesta lliçó, els alumnes programaran al Laboratori d’Sprites per aprendre els conceptes bàsics de la informàtica. El Laboratori d’Sprites és una eina que es pot fer servir per construir projectes imaginatius i divertits. Els alumnes aprendran a crear i animar sprites i a fer-los interactius mitjançant esdeveniments.\n\nHi ha diverses versions d’aquesta lliçó. Totes ensenyen els mateixos conceptes, però ho fan a través d’imatges diferents per tal de captar l’atenció dels diferents alumnes. Per més informació, visiteu la [pàgina d’inici d’Hola, món.](https://code.org/helloworld)",
           "preparation": "-   Feu els trencaclosques per trobar qualsevol cosa que pugui presentar problemes a la vostra classe.\n-   Feu servir els recursos de [Connexions Informàtiques](https://code.org/educate/csc) per crear un pla per seguir ensenyant informàtica un cop fet el tutorial inicial.",
           "purpose": "Aquesta lliçó està pensada per preparar els alumnes per crear projectes de programació senzills al Laboratori d'Sprites. Un cop adquireixin aquesta habilitat, seran capaços de crear projectes sobre qualsevol tema, com ara altres matèries escolars o alguna qüestió que els interessi personalment. Visiteu [Connexions Informàtiques](https://code.org/educate/csc) per trobar més idees sobre com integrar les ciències de la computació en altres assignatures."
@@ -123,7 +128,11 @@
           "purpose": "Aquesta lliçó introdueix els conceptes informàtics principals de la programació i la codificació (amb blocs), així com tècniques senzilles de depuració.",
           "student_overview": "En aquesta lliçó, els alumnes tindran una experiència d'aproximació a la informàtica i crearan un joc mitjançant un codi de blocs bàsic."
         },
+        "applab-intro/Intro to App Lab": {
+          "name": "Introducció a App Lab"
+        },
         "hello-world-retro-2021/Hello World": {
+          "name": "Hola Món: Retro",
           "overview": "En aquesta lliçó, els alumnes programaran al Laboratori d’Sprites per aprendre els conceptes bàsics de la informàtica. El Laboratori d’Sprites és una eina que es pot fer servir per construir projectes imaginatius i divertits. Els alumnes aprendran a crear i animar sprites i a fer-los interactius mitjançant esdeveniments.\n\nHi ha diverses versions d’aquesta lliçó. Totes ensenyen els mateixos conceptes, però ho fan a través d’imatges diferents per tal de captar l’atenció dels diferents alumnes. Per més informació, visiteu la [pàgina d’inici d’Hola, món.](https://code.org/helloworld)",
           "preparation": "-   Feu els trencaclosques per trobar qualsevol cosa que pugui presentar problemes a la vostra classe.\n-   Feu servir els recursos de [Connexions Informàtiques](https://code.org/educate/csc) per crear un pla per seguir ensenyant informàtica un cop fet el tutorial inicial.",
           "purpose": "Aquesta lliçó està pensada per preparar els alumnes per crear projectes de programació senzills al Laboratori d'Sprites. Un cop adquireixin aquesta habilitat, seran capaços de crear projectes sobre qualsevol tema, com ara altres matèries escolars o alguna qüestió que els interessi personalment. Visiteu [Connexions Informàtiques](https://code.org/educate/csc) per trobar més idees sobre com integrar les ciències de la computació en altres assignatures."
@@ -220,6 +229,9 @@
         },
         "K5-OnlinePD/Next Steps": {
           "name": "Propers passos"
+        },
+        "odometer/Odometer Widget": {
+          "name": "Widget comptaquilòmetres"
         },
         "kodea-pd-2021/Getting Started": {
           "name": "Primers passos"
@@ -1104,6 +1116,12 @@
         "csd5-2022/CS Discoveries Post-Course Survey": {
           "name": "Enquesta post-curs Descobriments Informàtics"
         },
+        "csd1-2022/The Problem Solving Process": {
+          "name": "El procés de resolució de problemes"
+        },
+        "csd1-2022/What is a Computer?": {
+          "name": "Què és un ordinador?"
+        },
         "csd3-2022/Variables": {
           "name": "Variables"
         },
@@ -1124,6 +1142,9 @@
         },
         "csd3-2022/Keyboard Input": {
           "name": "Entrada de teclat"
+        },
+        "csd3-2022/Velocity": {
+          "name": "Velocitat"
         },
         "csd3-2022/Collisions": {
           "name": "Col·lisions"
@@ -1160,6 +1181,12 @@
         },
         "csd6-2022/CS Discoveries Post-Course Survey": {
           "name": "Enquesta post-curs Descobriments Informàtics"
+        },
+        "csd7-2022/Introduction to AI Lab": {
+          "name": "Introducció a AI Lab"
+        },
+        "csd7-2022/Numerical Data in AI Lab": {
+          "name": "Dades numèriques en AI Lab"
         },
         "csd7-2022/CS Discoveries Post-Course Survey": {
           "name": "Enquesta post-curs Descobriments Informàtics"
@@ -1202,6 +1229,12 @@
         },
         "courseb-2018/Events in Play Lab": {
           "name": "Una batalla real amb esdeveniments"
+        },
+        "coursea-2018/Debugging: Unspotted Bugs": {
+          "name": "Bugs sense taques"
+        },
+        "coursea-2018/Persistence & Frustration: Stevie and the Big Project": {
+          "name": "Stevie i el gran projecte"
         },
         "coursea-2018/Sequencing in Maze": {
           "name": "Seqüenciació amb Angry Birds"
@@ -1518,6 +1551,12 @@
         "coursec-2018/Binary Bracelets": {
           "name": "Polseres binàries"
         },
+        "pre-express-2018/Debugging: Unspotted Bugs": {
+          "name": "Bugs sense taques"
+        },
+        "pre-express-2018/Persistence & Frustration: Stevie and the Big Project": {
+          "name": "Stevie i el gran projecte"
+        },
         "pre-express-2018/Move It, Move It": {
           "name": "A moure's!"
         },
@@ -1575,6 +1614,9 @@
         "csd3-2018/Keyboard Input": {
           "name": "Entrada de teclat"
         },
+        "csd3-2018/Velocity": {
+          "name": "Velocitat"
+        },
         "csd3-2018/Collisions": {
           "name": "Col·lisions"
         },
@@ -1608,6 +1650,9 @@
         "csd5-2018/CS Discoveries Post-Course Survey": {
           "name": "Enquesta post-curs Descobriments Informàtics"
         },
+        "csd-post-survey-2018/CSD post-course survey": {
+          "name": "CSD Estudiant Post-Curs Enquesta ('18-'19)"
+        },
         "csd4-2018/Linking Screens": {
           "name": "Enllaçar pantalles"
         },
@@ -1622,6 +1667,12 @@
         },
         "csd2-2018/CS Discoveries Post-Course Survey": {
           "name": "Enquesta post-curs Descobriments Informàtics"
+        },
+        "csd1-2018/The Problem Solving Process": {
+          "name": "El procés de resolució de problemes"
+        },
+        "csd1-2018/What is a Computer?": {
+          "name": "Què és un ordinador?"
         },
         "coursea-2019/Going Places Safely": {
           "name": "Anar als llocs amb precaució"
@@ -2013,6 +2064,9 @@
         "csd3-2019/Keyboard Input": {
           "name": "Entrada de teclat"
         },
+        "csd3-2019/Velocity": {
+          "name": "Velocitat"
+        },
         "csd3-2019/Collisions": {
           "name": "Col·lisions"
         },
@@ -2039,6 +2093,12 @@
         },
         "csd5-2019/Combining Representations": {
           "name": "Combinar representacions"
+        },
+        "csd1-2019/The Problem Solving Process": {
+          "name": "El procés de resolució de problemes"
+        },
+        "csd1-2019/What is a Computer?": {
+          "name": "Què és un ordinador?"
         },
         "csd2-2019/Headings": {
           "name": "Títols"
@@ -2112,6 +2172,9 @@
         "coursec-2017/Loops in Artist": {
           "name": "Bucles a l'Artista"
         },
+        "coursec-2017/Loops in Harvester": {
+          "name": "Bucles en Harvester"
+        },
         "coursec-2017/Build a Flappy Game": {
           "name": "Fem un joc de Flappy"
         },
@@ -2172,6 +2235,9 @@
         "csd3-2017/Keyboard Input": {
           "name": "Entrada de teclat"
         },
+        "csd3-2017/Velocity": {
+          "name": "Velocitat"
+        },
         "csd3-2017/Collisions": {
           "name": "Col·lisions"
         },
@@ -2192,6 +2258,12 @@
         },
         "csd2-2017/Lists": {
           "name": "Llistes"
+        },
+        "csd1-2017/The Problem Solving Process": {
+          "name": "El procés de resolució de problemes"
+        },
+        "csd1-2017/What is a Computer?": {
+          "name": "Què és un ordinador?"
         },
         "csd5-2017/Representing Images": {
           "name": "Representant imatges"
@@ -2503,6 +2575,9 @@
           "name": "Puzzle",
           "student_overview": "Fes clic i arrossega per completar els trencaclosques."
         },
+        "csd-post-survey/CSD post-course survey": {
+          "name": "CSD Estudiant Post-Curs Enquesta ('18-'19)"
+        },
         "allthethings/Jigsaw": {
           "name": "Puzzle"
         },
@@ -2533,6 +2608,9 @@
         "allthethings/Odometer": {
           "name": "odòmetre"
         },
+        "allthethings/Pixelation": {
+          "name": "pixelació"
+        },
         "allthethings/Minecraft": {
           "name": "Minecraft"
         },
@@ -2541,6 +2619,9 @@
         },
         "allthethings/Sprite Lab": {
           "name": "Laboratori de personatges"
+        },
+        "allthethings/AI Lab": {
+          "name": "Laboratori d'AI"
         },
         "allthethings/Java Lab": {
           "name": "Laboratori Java"
@@ -3499,6 +3580,12 @@
           "purpose": "És possible que els alumnes ja estiguin preparats per passar a fer els projectes, però aquesta lliçó els ajudarà a definir les idees per crear una planificació. Aquesta estructura farà que els més somniadors toquin de peus a terra i que els que van més perduts tinguin clar per on tirar. Deixeu força temps perquè facin i repassin els projectes. El procés de prova i error inherent a aquest projecte els ensenyarà a resoldre problemes i a ser persistents.",
           "student_overview": "Els projectes d'aquesta magnitud requereixen temps i molta planificació. Trobeu inspiració, desenvolupeu un pla i deixeu-vos portar per la vostra creativitat!"
         },
+        "csd7-2021/Introduction to AI Lab": {
+          "name": "Introducció a AI Lab"
+        },
+        "csd7-2021/Numerical Data in AI Lab": {
+          "name": "Dades numèriques en AI Lab"
+        },
         "csd7-2021/CS Discoveries Post-Course Survey": {
           "name": "Enquesta post-curs Descobriments Informàtics"
         },
@@ -3553,6 +3640,9 @@
         "csd3-2021/Keyboard Input": {
           "name": "Entrada de teclat"
         },
+        "csd3-2021/Velocity": {
+          "name": "Velocitat"
+        },
         "csd3-2021/Collisions": {
           "name": "Col·lisions"
         },
@@ -3561,6 +3651,12 @@
         },
         "csd3-2021/lesson-1": {
           "name": "Enquesta post-curs Descobriments Informàtics"
+        },
+        "csd1-2021/The Problem Solving Process": {
+          "name": "El procés de resolució de problemes"
+        },
+        "csd1-2021/What is a Computer?": {
+          "name": "Què és un ordinador?"
         },
         "csd2-2021/Headings": {
           "name": "Títols"

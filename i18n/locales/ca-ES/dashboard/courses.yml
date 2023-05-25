@@ -49,6 +49,7 @@ ca:
           description_student: Es tracta d'un curs d'introducció a la informàtica que permet als alumnes per crear artefactes autèntics i endinsar-se a la informàtica com a mitjà per expressar la creativitat, comunicar-se, resoldre problemes i passar-s'ho d'allò més bé.
           description_teacher: Es tracta d'un curs d'introducció a la informàtica que permet als alumnes per crear artefactes autèntics i endinsar-se a la informàtica com a mitjà per expressar la creativitat, comunicar-se, resoldre problemes i passar-s'ho d'allò més bé.
         csd-pilot:
+          title: Curs Pilot CSD
           description_student: Es tracta d'un curs d'introducció a la informàtica que permet als alumnes per crear artefactes autèntics i endinsar-se a la informàtica com a mitjà per expressar la creativitat, comunicar-se, resoldre problemes i passar-s'ho d'allò més bé.
         csp-2020:
           description_short: Aprèn els fonaments de la informàtica.
