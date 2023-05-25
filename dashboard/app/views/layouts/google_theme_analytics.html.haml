@@ -1,0 +1,19 @@
+:javascript
+  window.userAnalyticsCreateParams =
+  window.userAnalyticDimensions =  {
+    'dimension1': '<%=request.language%>', // selected_language_dim
+    'dimension5': '<%=env_dim%>', //env_dim
+  }
+  user_signed_in = '<%=user_signed_in%>'
+  if (user_signed_in) {
+    window.userAnalyticDimensions['dimension2']='<%=current_user.age.to_s%>'; // age_dim
+    window.userAnalyticDimensions['dimension3']= '<%=current_user.gender%>'; //gender_dim
+    window.userAnalyticDimensions['dimension4']= '<%=user_type%>'; //user_type_dim
+    window.userAnalyticDimensions['dimension7']= '<%=current_user.teachers.any? ? \'1\' : \'0\'%>'; //has_teacher
+  }
+  if ('devicePixelRatio' in window) {
+    window.userAnalyticDimensions["dimension6"] = window.devicePixelRatio.toString();
+  }
+%script{src: webpack_asset_path("js/code.org/views/theme_google_analytics.js")}
+// Initialize Google Optimize (https://support.google.com/optimize/answer/9692472)
+%script{src: "https://www.googleoptimize.com/optimize.js?id=OPT-KBX3C3L"}
