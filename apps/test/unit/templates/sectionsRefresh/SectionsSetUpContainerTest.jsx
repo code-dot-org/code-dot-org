@@ -17,8 +17,8 @@ describe('SectionsSetUpContainer', () => {
     const wrapper = shallow(<SectionsSetUpContainer />);
 
     expect(wrapper.find('Heading1').length).to.equal(1);
-    expect(wrapper.find('Button').length).to.equal(2);
-    expect(wrapper.find('Button').at(1).props().text).to.equal(
+    expect(wrapper.find('Button').length).to.equal(3);
+    expect(wrapper.find('Button').at(2).props().text).to.equal(
       'Finish creating sections'
     );
   });
@@ -73,7 +73,7 @@ describe('SectionsSetUpContainer', () => {
 
     wrapper
       .find('Button')
-      .at(1)
+      .at(2)
       .simulate('click', {preventDefault: () => {}});
 
     expect(reportSpy).to.have.been.called.once;
@@ -100,7 +100,7 @@ describe('SectionsSetUpContainer', () => {
 
     wrapper
       .find('Button')
-      .at(1)
+      .at(2)
       .simulate('click', {preventDefault: () => {}});
 
     expect(fetchSpy).to.have.been.called.once;
@@ -131,7 +131,7 @@ describe('SectionsSetUpContainer', () => {
 
     wrapper
       .find('Button')
-      .at(1)
+      .at(2)
       .simulate('click', {preventDefault: () => {}});
 
     expect(fetchSpy).to.have.been.called.once;
@@ -168,13 +168,42 @@ describe('SectionsSetUpContainer', () => {
 
     wrapper
       .find('Button')
-      .at(1)
+      .at(2)
       .simulate('click', {preventDefault: () => {}});
 
     expect(fetchSpy).to.have.been.called.once;
     const fetchBody = JSON.parse(fetchSpy.getCall(0).args[1].body);
     expect(fetchBody.login_type).to.equal('word');
     expect(fetchBody.participant_type).to.equal('student');
+
+    sinon.restore();
+  });
+
+  it('passes url attribute to make a new section if save and create new is clicked', () => {
+    sinon
+      .stub(document, 'querySelector')
+      .withArgs('#sections-set-up-container')
+      .returns({
+        checkValidity: () => true,
+      })
+      .withArgs('meta[name="csrf-token"]')
+      .returns({
+        attributes: {content: {value: null}},
+      });
+    sinon
+      .stub(utils, 'queryParams')
+      .withArgs('showSectionCreationDialog')
+      .returns('true');
+    const fetchSpy = sinon.spy(window, 'fetch');
+
+    const wrapper = shallow(<SectionsSetUpContainer />);
+
+    wrapper
+      .find('Button')
+      .at(1)
+      .simulate('click', {preventDefault: () => {}});
+
+    expect(fetchSpy).to.have.been.called.once;
 
     sinon.restore();
   });
