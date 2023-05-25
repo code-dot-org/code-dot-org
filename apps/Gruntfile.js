@@ -820,6 +820,8 @@ describe('entry tests', () => {
       './src/sites/hourofcode.com/pages/views/theme_common_head_after.js',
     'hourofcode.com/views/hoc_events_map':
       './src/sites/hourofcode.com/pages/views/hoc_events_map.js',
+    'hourofcode.com/views/theme_google_analytics':
+      './src/sites/hourofcode.com/pages/views/theme_google_analytics.js',
 
     // shared between code.org and hourofcode.com
     tutorialExplorer: './src/tutorialExplorer/tutorialExplorer.js',
