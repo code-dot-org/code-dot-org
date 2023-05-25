@@ -25,6 +25,7 @@ require 'open3'
 require 'parallel'
 require 'securerandom'
 require 'socket'
+require 'os'
 require 'parallel_tests/cucumber/scenarios'
 
 require_relative './utils/selenium_browser'
@@ -649,6 +650,7 @@ end
 def cucumber_arguments_for_browser(browser, options)
   arguments = ' -S' # strict mode, so that we fail on undefined steps
   arguments += skip_tag('@skip')
+  # arguments += skip_tag('@firebase_needs_shared_secret')
 
   # If --eyes is specified, only run scenarios with the corresponding eyes tag.
   # Otherwise, do not call tag(), allowing any scenarios to run which are not
@@ -700,6 +702,8 @@ def cucumber_arguments_for_feature(options, test_run_string)
 
   # output a .rerun file: on auto-retry or --retry-failed we only run failed scenarios
   arguments += " --format rerun --out #{rerun_filename test_run_string}"
+
+  # arguments += skip_tag('@no_mac') if OS.mac?
 
   # In CircleCI we export additional logs in junit xml format so CircleCI can
   # provide pretty test reports with success/fail/timing data upon completion.
@@ -822,7 +826,7 @@ def run_feature(browser, feature, options)
   end
 
   # Don't leave empty log/*.rerun files lying around
-  FileUtils.rm rerun_file, force: true if File.empty(rerun_file)
+  FileUtils.rm rerun_file, force: true if File.empty?(rerun_file)
 
   parsed_output = output_stdout.match(/^(?<scenarios>\d+) scenarios?( \((?<info>.*?)\))?/)
   scenario_count = nil
