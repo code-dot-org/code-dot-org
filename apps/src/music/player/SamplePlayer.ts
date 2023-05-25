@@ -42,7 +42,10 @@ export default class SamplePlayer {
       .map(group => {
         return group.folders.map(folder => {
           return folder.sounds.map(sound => {
-            return group.path + '/' + folder.path + '/' + sound.src;
+            return {
+              path: group.path + '/' + folder.path + '/' + sound.src,
+              restricted: sound.restricted,
+            };
           });
         });
       })
