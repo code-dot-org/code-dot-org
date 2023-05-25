@@ -10,7 +10,7 @@ class GoogleAnalyticsReporter {
   googleAnalyticsGTag = 'G-L9HT5MZ3HD';
 
   constructor() {
-    alert('hello');
+    console.log('adding new library. Will remove before committing');
     this.#initializeGoogleUniversal(
       window,
       window.document,
