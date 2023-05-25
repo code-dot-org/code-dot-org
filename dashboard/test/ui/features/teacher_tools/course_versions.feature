@@ -19,7 +19,7 @@ Scenario: Version warning announcement on course and script overview pages
   # TODO BEFORE MERGE: why is this element not visible?
   # we are skipping this scenario using rails_env_test.... but is the
   # issue truly running in dev vs test? Or is there something else amiss?
-  And I wait for 500 seconds
+  # And I wait for 500 seconds
   And element "#uitest-version-selector" is visible
   Then element ".announcement-notification:contains(newer version)" is visible
 
