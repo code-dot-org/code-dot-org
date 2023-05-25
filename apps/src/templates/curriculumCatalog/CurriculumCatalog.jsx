@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import {curriculumDataShape} from './curriculumCatalogShapes';
 import i18n from '@cdo/locale';
 import style from '../../../style/code-studio/curriculum_catalog_container.module.scss';
-import {queryParams} from '../../code-studio/utils';
+import {queryParams, updateQueryParam} from '../../code-studio/utils';
 import HeaderBanner from '../HeaderBanner';
 import CourseCatalogBannerBackground from '../../../static/curriculum_catalog/course-catalog-banner-illustration-01.png';
 import CourseCatalogIllustration01 from '../../../static/curriculum_catalog/course-catalog-illustration-01.png';
@@ -60,23 +60,22 @@ const getEmptyFilters = () => {
 
 // Filters out invalid values for the given filter key.
 const getValidParamValues = (filterKey, paramValues) => {
-  if (!Array.isArray(paramValues)) {
-    paramValues = [paramValues];
-  }
-  return paramValues.filter(paramValue => {
-    return Object.keys(filterTypes[filterKey].options).includes(paramValue);
-  });
+  return paramValues
+    .split(',')
+    .filter(paramValue =>
+      Object.keys(filterTypes[filterKey].options).includes(paramValue)
+    );
 };
 
 // Returns initial filter states based on URL parameters (returns empty filters if
-// no relevant parameters in the URL). The filter params are of the form:
-// "filter_name:checked_value_1,checked_value_2,etc."
+// no relevant parameters in the URL).
 const getInitialFilterStates = () => {
   const filterTypeKeys = Object.keys(filterTypes);
   const urlParams = queryParams();
 
   let filters = getEmptyFilters();
   Object.keys(urlParams).forEach(paramKey => {
+    // Ensure valid filter key
     if (filterTypeKeys.includes(paramKey)) {
       filters[paramKey] = getValidParamValues(paramKey, urlParams[paramKey]);
     }
@@ -171,41 +170,50 @@ const CurriculumCatalog = ({curriculaData, isEnglish}) => {
     setFilteredCurricula(newFilteredCurricula);
   }, [curriculaData, appliedFilters]);
 
+  // Handles updating the given filter to have the given values set.
+  const handleUpdateFilter = (filterKey, values) => {
+    // Update appliedFilters object
+    let newFilters = {...appliedFilters};
+    newFilters[filterKey] = values;
+    setAppliedFilters(newFilters);
+
+    // Update URL params
+    let valuesString = values.length > 0 ? values.toString() : undefined;
+    updateQueryParam(filterKey, valuesString, true);
+  };
+
   // Selects the given value in the given filter.
   const handleSelect = (event, filterKey) => {
     const value = event.target.value;
     const isChecked = event.target.checked;
 
-    let newFilters = {...appliedFilters};
+    let filterValues = [...appliedFilters[filterKey]];
     if (isChecked) {
       //Add checked item into applied filters
-      newFilters[filterKey] = [...appliedFilters[filterKey], value];
+      filterValues.push(value);
     } else {
       //Remove unchecked item from applied filters
-      newFilters[filterKey] = appliedFilters[filterKey].filter(
-        item => item !== value
-      );
+      filterValues = filterValues.filter(v => v !== value);
     }
-    setAppliedFilters(newFilters);
+    handleUpdateFilter(filterKey, filterValues);
   };
 
   // Selects all options within the given filter.
   const handleSelectAllOfFilter = filterKey => {
-    let newFilters = {...appliedFilters};
-    newFilters[filterKey] = Object.keys(filterTypes[filterKey].options);
-    setAppliedFilters(newFilters);
+    handleUpdateFilter(filterKey, Object.keys(filterTypes[filterKey].options));
   };
 
   // Clears all filter selections.
   const handleClear = () => {
+    Object.keys(filterTypes).forEach(filterKey =>
+      handleClearAllOfFilter(filterKey)
+    );
     setAppliedFilters(getEmptyFilters());
   };
 
   // Clears selections within the given filter.
   const handleClearAllOfFilter = filterKey => {
-    let newFilters = {...appliedFilters};
-    newFilters[filterKey] = [];
-    setAppliedFilters(newFilters);
+    handleUpdateFilter(filterKey, []);
   };
 
   // Renders search results based on the applied filters (or shows the No matching curriculums
