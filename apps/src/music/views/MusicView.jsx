@@ -217,6 +217,7 @@ class UnconnectedMusicView extends React.Component {
           document.getElementById('blockly-div'),
           this.onBlockSpaceChange,
           this.player,
+          this.getStartSources(),
           this.progressManager?.getCurrentStepDetails().toolbox,
           this.props.currentLevelId,
           this.props.currentScriptId,
@@ -401,6 +402,7 @@ class UnconnectedMusicView extends React.Component {
       if (this.props.currentLevelId) {
         // Change levels for the projects system. Only do this if we have a level.
         await this.musicBlocklyWorkspace.changeLevels(
+          this.getStartSources(),
           this.props.currentLevelId,
           this.props.currentScriptId
         );
@@ -470,9 +472,18 @@ class UnconnectedMusicView extends React.Component {
   };
 
   clearCode = () => {
-    this.musicBlocklyWorkspace.loadDefaultCode();
+    this.musicBlocklyWorkspace.setStartSources(this.getStartSources());
 
     this.setPlaying(false);
+  };
+
+  getStartSources = () => {
+    if (this.hasProgression()) {
+      return this.progressManager.getProgressionStep().startSources;
+    } else {
+      const startSourcesFilename = 'startSources' + getBlockMode();
+      return require(`@cdo/static/music/${startSourcesFilename}.json`);
+    }
   };
 
   onBlockSpaceChange = e => {

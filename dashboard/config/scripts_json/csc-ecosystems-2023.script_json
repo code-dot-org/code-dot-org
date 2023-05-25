@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": "csc-ecosystems",
-    "serialized_at": "2023-05-23 00:47:25 UTC",
+    "serialized_at": "2023-05-24 23:16:14 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1759,7 +1759,7 @@
   "resources": [
     {
       "name": "Ecologist's Notebook",
-      "url": "https://docs.google.com/document/d/1_xi5PFs5TJyO3-8Hz7ftZxCNRPpd5yQBCwhm8IuysY8/preview",
+      "url": "https://docs.google.com/document/d/1_xi5PFs5TJyO3-8Hz7ftZxCNRPpd5yQBCwhm8IuysY8/template/preview",
       "key": "ecologist_s_notebook",
       "properties": {
         "audience": "Student",

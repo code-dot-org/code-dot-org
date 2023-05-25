@@ -1,5 +1,10 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 41,
+  "created_at": "2023-03-30T04:42:16.000Z",
+  "level_num": "custom",
+  "user_id": 832,
   "properties": {
     "skin": "applab",
     "code_functions": {
@@ -28,7 +33,7 @@
     "embed": "false",
     "instructions_important": "false",
     "display_name": "Make, pt 1",
-    "long_instructions": "Build the Photo Liker app, using your [activity guide](https://docs.google.com/document/d/1QqQxO2BRq27yJEo0SpE5ZCmqyM57SjzuSg6xEmGsKWY/edit?usp=sharing) to help you plan. Use the checklist below to make sure you are on track. When you're done, submit your work.\r\n\r\n:::details [**☑️ Checklist Rubric**]\r\n<br>\r\n\r\n| Category    | Checklist Item(s) |\r\n| -------- | ------- |\r\n| Code: Event Handlers Created &nbsp  | 🔲 All required buttons have defined onEvents. <br> &nbsp  |\r\n| Code: Variables | 🔲 Variables store the number of likes and comments.<br> 🔲 Variables are named clearly and understandably.   <br> &nbsp  |\r\n| Code: Event Handlers Written    | 🔲 All necessary variables are updated inside of the onEvents.   <br> &nbsp  |\r\n| Code: Output Information  | 🔲 The screen correctly displays the number of likes and total <br> comments, and sound plays when different buttons are clicked.   <br> &nbsp  |\r\n| Code runs without errors | 🔲 No errors are present in the code.   <br> &nbsp   |\r\n| Coding Comments    | 🔲 Comments are used to correctly explain the purpose and <br> function of all onEvents.    |\r\n\r\n:::",
+    "long_instructions": "Build the Photo Liker app, using your [activity guide](https://docs.google.com/document/d/1QqQxO2BRq27yJEo0SpE5ZCmqyM57SjzuSg6xEmGsKWY/edit?usp=sharing) to help you plan. Use the checklist below to make sure you are on track. When you're done, submit your work.\r\n\r\n:::details [**☑️ Checklist Rubric**]\r\n<br>\r\n\r\n| Category    | Checklist Item(s) |\r\n| -------- | ------- |\r\n| Code: Event Handlers Created &nbsp  | &nbsp<br>🔲 All required buttons have defined onEvents. <br> &nbsp  |\r\n| Code: Variables | 🔲 Variables store the number of likes and comments.<br> 🔲 Variables are named clearly and understandably.   <br> &nbsp  |\r\n| Code: Event Handlers Written    | &nbsp<br>🔲 All necessary variables are updated inside of the onEvents.   <br> &nbsp  |\r\n| Code: Output Information  | &nbsp<br>🔲 The screen correctly displays the number of likes and total <br> comments, and sound plays when different buttons are clicked.   <br> &nbsp  |\r\n| Code runs without errors | &nbsp<br>🔲 No errors are present in the code.   <br> &nbsp   |\r\n| Coding Comments    | &nbsp<br>🔲 Comments are used to correctly explain the purpose and <br> function of all onEvents.    |\r\n\r\n:::",
     "never_autoplay_video": "false",
     "hide_share_and_remix": "false",
     "droplet_tooltips_disabled": "false",
@@ -60,13 +65,8 @@
     "ai_enabled": "false",
     "preload_asset_list": null
   },
-  "game_id": 41,
-  "published": true,
-  "created_at": "2023-03-30T04:42:16.000Z",
-  "level_num": "custom",
-  "user_id": 832,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-03-30T04:42:16.796+00:00\",\"changed\":[\"cloned from \\\"U4 L04 Variables Make Project Submit2022\\\"\"],\"cloned_from\":\"U4 L04 Variables Make Project Submit2022\"},{\"changed_at\":\"2023-03-30 23:12:44 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"long_instructions\",\"makerlab_enabled\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2023-03-30 23:20:27 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2023-03-30 23:22:35 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2023-03-30 23:24:24 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2023-04-03 22:47:10 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-03-30T04:42:16.796+00:00\",\"changed\":[\"cloned from \\\"U4 L04 Variables Make Project Submit2022\\\"\"],\"cloned_from\":\"U4 L04 Variables Make Project Submit2022\"},{\"changed_at\":\"2023-03-30 23:12:44 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"long_instructions\",\"makerlab_enabled\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2023-03-30 23:20:27 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2023-03-30 23:22:35 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2023-03-30 23:24:24 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2023-04-03 22:47:10 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2023-05-24 17:54:43 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>
