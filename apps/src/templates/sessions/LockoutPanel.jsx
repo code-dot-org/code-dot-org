@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import Button from '../Button';
 import i18n from '@cdo/locale';
@@ -15,195 +15,186 @@ import headerThanksImage from './images/dancing_penguin.png';
  * permission. This panel gives a form to request (or see details about a
  * pending request for) parental permission.
  */
-class LockoutPanel extends Component {
-  static propTypes = {
-    apiURL: PropTypes.string.isRequired,
-    deleteDate: PropTypes.instanceOf(Date).isRequired,
-    pendingEmail: PropTypes.string,
-    requestDate: PropTypes.instanceOf(Date),
-  };
-
+export default function LockoutPanel(props) {
   // Set the disabled state of the submit button based on the validity of the
   // email in the field.
-  state = {
-    disabled: !isEmail(this.props.pendingEmail),
-  };
+  const [disabled, setDisabled] = useState(() => !isEmail(props.pendingEmail));
 
   // When the email field is updated, also update the disability state of the
   // submit button.
-  onEmailUpdate = event => {
-    this.setState({
-      disabled: !isEmail(event.target.value),
-    });
+  const onEmailUpdate = event => {
+    setDisabled(!isEmail(event.target.value));
   };
 
   // This will set the email to the current pending email and fire off the
   // form as though they had typed in the same email again.
-  resendPermissionEmail = event => {
+  const resendPermissionEmail = event => {
     // Don't submit the form... we will do that ourselves.
     event.preventDefault();
 
     const field = document.getElementById('parent-email');
-    field.value = this.props.pendingEmail;
+    field.value = props.pendingEmail;
     this.submit();
   };
 
-  render() {
-    // Get the current locale.
-    const locale = cookies.get('language_') || 'en-US';
+  // Get the current locale.
+  const locale = cookies.get('language_') || 'en-US';
 
-    // Gather properties.
-    const {apiURL, pendingEmail, requestDate, deleteDate} = this.props;
+  // Whether or not we are rendering right-to-left.
+  const isRTL = getStore().getState()?.isRtl;
 
-    // Whether or not we are rendering right-to-left.
-    const isRTL = getStore().getState()?.isRtl;
+  // How to format any localized dates on the page.
+  const dateOptions = {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  };
 
-    // How to format any localized dates on the page.
-    const dateOptions = {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric',
-    };
+  // We want to mark the email in the prompt in bold, so we split the
+  // localized string. It is a slight hack since we cannot just embed React
+  // component code into a string. Should work as though we could though.
+  const pendingPrompt = i18n.sessionLockoutPendingPrompt({
+    pendingEmail: '{pendingEmail}',
+  });
+  const pendingPromptParts = pendingPrompt.split('{pendingEmail}');
 
-    // We want to mark the email in the prompt in bold, so we split the
-    // localized string. It is a slight hack since we cannot just embed React
-    // component code into a string. Should work as though we could though.
-    const pendingPrompt = i18n.sessionLockoutPendingPrompt({
-      pendingEmail: '{pendingEmail}',
-    });
-    const pendingPromptParts = pendingPrompt.split('{pendingEmail}');
+  return (
+    <div style={styles.container} className="lockout-panel">
+      {/* Header image: Depends of if permission request is sent. */}
+      <img
+        style={styles.image}
+        src={props.pendingEmail ? headerThanksImage : headerImage}
+      />
 
-    return (
-      <div style={styles.container} className="lockout-panel">
-        {/* Header image: Depends of if permission request is sent. */}
-        <img
-          style={styles.image}
-          src={pendingEmail ? headerThanksImage : headerImage}
-        />
+      <h2>
+        {props.pendingEmail
+          ? i18n.sessionLockoutPendingHeader()
+          : i18n.sessionLockoutNewAccountHeader()}
+      </h2>
 
-        <h2>
-          {pendingEmail
-            ? i18n.sessionLockoutPendingHeader()
-            : i18n.sessionLockoutNewAccountHeader()}
-        </h2>
-
-        {/* This form will post a permission request for the student.*/}
-        <form action={apiURL} method="post">
-          {/* The top prompt, which depends on whether or not a request is pending. */}
-          {pendingEmail && (
-            <p>
-              {pendingPromptParts[0]}
-              <strong>{pendingEmail}</strong>
-              {pendingPromptParts[1]}
-            </p>
-          )}
-          {!pendingEmail && <p>{i18n.sessionLockoutPrompt()}</p>}
-
-          {/* The timezone is set to UTC to ensure that the exact date renders. */}
+      {/* This form will post a permission request for the student.*/}
+      <form action={props.apiURL} method="post">
+        {/* The top prompt, which depends on whether or not a request is pending. */}
+        {props.pendingEmail && (
           <p>
-            {i18n.sessionLockoutNote({
-              deleteDate: deleteDate.toLocaleDateString(locale, {
-                ...dateOptions,
-                timeZone: 'UTC',
-              }),
-            })}
+            {pendingPromptParts[0]}
+            <strong>{props.pendingEmail}</strong>
+            {pendingPromptParts[1]}
           </p>
+        )}
+        {!props.pendingEmail && <p>{i18n.sessionLockoutPrompt()}</p>}
 
-          {/* This field shows the current status of the validation. */}
-          {/* Parent Permission: Not Pending / Pending */}
-          <div style={styles.statusSection}>
+        {/* The timezone is set to UTC to ensure that the exact date renders. */}
+        <p>
+          {i18n.sessionLockoutNote({
+            deleteDate: props.deleteDate.toLocaleDateString(locale, {
+              ...dateOptions,
+              timeZone: 'UTC',
+            }),
+          })}
+        </p>
+
+        {/* This field shows the current status of the validation. */}
+        {/* Parent Permission: Not Pending / Pending */}
+        <div style={styles.statusSection}>
+          <label
+            style={isRTL ? styles.statusLabelRTL : styles.statusLabel}
+            htmlFor="permission-status"
+          >
+            <strong>{i18n.sessionLockoutParentStatusField()}</strong>
+          </label>
+          <span
+            id="permission-status"
+            style={props.pendingEmail ? styles.pending : styles.notSubmitted}
+          >
+            <strong>
+              {props.pendingEmail
+                ? i18n.sessionLockoutStatusPending()
+                : i18n.sessionLockoutStatusNotSubmitted()}
+            </strong>
+          </span>
+
+          {/* This is a floating 'link' that resends the pending email. */}
+          {props.pendingEmail && (
+            <Button
+              styleAsText={true}
+              style={{...styles.resendLink, float: isRTL ? 'left' : 'right'}}
+              text={i18n.sessionLockoutResendEmail()}
+              onClick={resendPermissionEmail}
+            />
+          )}
+        </div>
+
+        {/* This field allows the input of an email address. */}
+        {/* Parent Email: [email] */}
+        <div style={styles.sections}>
+          <div style={styles.section}>
             <label
-              style={isRTL ? styles.statusLabelRTL : styles.statusLabel}
-              htmlFor="permission-status"
+              style={isRTL ? styles.labelRTL : styles.label}
+              htmlFor="parent-email"
             >
-              <strong>{i18n.sessionLockoutParentStatusField()}</strong>
+              <strong>{i18n.sessionLockoutParentEmailField()}</strong>
             </label>
-            <span
-              id="permission-status"
-              style={pendingEmail ? styles.pending : styles.notSubmitted}
-            >
-              <strong>
-                {pendingEmail
-                  ? i18n.sessionLockoutStatusPending()
-                  : i18n.sessionLockoutStatusNotSubmitted()}
-              </strong>
-            </span>
 
-            {/* This is a floating 'link' that resends the pending email. */}
-            {pendingEmail && (
-              <Button
-                styleAsText={true}
-                style={{...styles.resendLink, float: isRTL ? 'left' : 'right'}}
-                text={i18n.sessionLockoutResendEmail()}
-                onClick={this.resendPermissionEmail}
+            {/* Slightly complicated layout allows for text underneath. */}
+            <div style={styles.fieldSection}>
+              <input
+                style={styles.field}
+                onChange={onEmailUpdate}
+                onInput={onEmailUpdate}
+                onBlur={onEmailUpdate}
+                defaultValue={props.pendingEmail}
+                id="parent-email"
               />
-            )}
-          </div>
 
-          {/* This field allows the input of an email address. */}
-          {/* Parent Email: [email] */}
-          <div style={styles.sections}>
-            <div style={styles.section}>
-              <label
-                style={isRTL ? styles.labelRTL : styles.label}
-                htmlFor="parent-email"
-              >
-                <strong>{i18n.sessionLockoutParentEmailField()}</strong>
-              </label>
-
-              {/* Slightly complicated layout allows for text underneath. */}
-              <div style={styles.fieldSection}>
-                <input
-                  style={styles.field}
-                  onChange={this.onEmailUpdate}
-                  onInput={this.onEmailUpdate}
-                  onBlur={this.onEmailUpdate}
-                  defaultValue={this.props.pendingEmail}
-                  id="parent-email"
-                />
-
-                {/* Show a 'Last email sent' prompt when available. */}
-                {pendingEmail && (
-                  <p style={styles.lastEmail}>
-                    <em>
-                      Last email sent:{' '}
-                      {requestDate.toLocaleDateString(locale, {
-                        ...dateOptions,
-                        hour: 'numeric',
-                        minute: 'numeric',
-                      })}
-                    </em>
-                  </p>
-                )}
-              </div>
+              {/* Show a 'Last email sent' prompt when available. */}
+              {props.pendingEmail && (
+                <p style={styles.lastEmail}>
+                  <em>
+                    Last email sent:{' '}
+                    {props.requestDate.toLocaleDateString(locale, {
+                      ...dateOptions,
+                      hour: 'numeric',
+                      minute: 'numeric',
+                    })}
+                  </em>
+                </p>
+              )}
             </div>
           </div>
+        </div>
 
-          {/* A sign-out button. */}
-          <Button
-            style={styles.button}
-            text={i18n.signOutButton()}
-            color={Button.ButtonColor.gray}
-            href="/users/sign_out"
-          />
+        {/* A sign-out button. */}
+        <Button
+          style={styles.button}
+          text={i18n.signOutButton()}
+          color={Button.ButtonColor.gray}
+          href="/users/sign_out"
+        />
 
-          {/* The submit button. */}
-          {/* An empty onClick will still submit the form. */}
-          <Button
-            style={{...styles.button, float: isRTL ? 'left' : 'right'}}
-            text={
-              pendingEmail
-                ? i18n.sessionLockoutUpdateSubmit()
-                : i18n.sessionLockoutSubmit()
-            }
-            disabled={this.state.disabled}
-            onClick={() => {}}
-          />
-        </form>
-      </div>
-    );
-  }
+        {/* The submit button. */}
+        {/* An empty onClick will still submit the form. */}
+        <Button
+          style={{...styles.button, float: isRTL ? 'left' : 'right'}}
+          text={
+            props.pendingEmail
+              ? i18n.sessionLockoutUpdateSubmit()
+              : i18n.sessionLockoutSubmit()
+          }
+          disabled={disabled}
+          onClick={() => {}}
+        />
+      </form>
+    </div>
+  );
 }
+
+LockoutPanel.propTypes = {
+  apiURL: PropTypes.string.isRequired,
+  deleteDate: PropTypes.instanceOf(Date).isRequired,
+  pendingEmail: PropTypes.string,
+  requestDate: PropTypes.instanceOf(Date),
+};
 
 const styles = {
   container: {
@@ -287,5 +278,3 @@ const styles = {
     marginTop: 5,
   },
 };
-
-export default LockoutPanel;
