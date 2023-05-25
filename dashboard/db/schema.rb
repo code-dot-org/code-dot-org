@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_05_22_232402) do
+ActiveRecord::Schema.define(version: 2023_05_24_154849) do
 
   create_table "activities", id: :integer, charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -744,6 +744,15 @@ ActiveRecord::Schema.define(version: 2023_05_22_232402) do
     t.text "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "lti_deployments", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.string "deployment_id"
+    t.bigint "lti_integration_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["deployment_id"], name: "index_lti_deployments_on_deployment_id"
+    t.index ["lti_integration_id"], name: "index_lti_deployments_on_lti_integration_id"
   end
 
   create_table "lti_integrations", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
@@ -2189,6 +2198,7 @@ ActiveRecord::Schema.define(version: 2023_05_22_232402) do
   add_foreign_key "circuit_playground_discount_applications", "schools"
   add_foreign_key "hint_view_requests", "users"
   add_foreign_key "level_concept_difficulties", "levels"
+  add_foreign_key "lti_deployments", "lti_integrations"
   add_foreign_key "lti_user_identities", "lti_integrations"
   add_foreign_key "lti_user_identities", "users"
   add_foreign_key "parental_permission_requests", "users"
