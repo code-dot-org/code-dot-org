@@ -155,7 +155,7 @@ Feature: Using the teacher homepage sections feature
   Scenario: Assign a CSF course with multiple versions
     Given I am on "http://studio.code.org/home"
     When I see the section set up box
-    And I create a new student section with course "Course A", version "2017"
+    And I create a new student section with course "CS Fundamentals: Course A", version "2017"
     Then the student section table should have 1 rows
     And the section table row at index 0 has primary assignment path "/s/coursea-2017"
 
