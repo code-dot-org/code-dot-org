@@ -39,9 +39,7 @@ const LabContainer = ({children}) => {
                 className={classNames('fa-pulse', 'fa-3x')}
               />
             </div>
-            <div className={moduleStyles.spinnerText}>
-              {i18n.labContainerSlowLoading()}
-            </div>
+            <div className={moduleStyles.spinnerText}>{i18n.slowLoading()}</div>
           </div>
         )}
       </div>
