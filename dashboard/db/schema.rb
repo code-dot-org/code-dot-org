@@ -757,7 +757,7 @@ ActiveRecord::Schema.define(version: 2023_05_24_221710) do
 
   create_table "lti_integrations", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
     t.string "name"
-    t.string "platform_id", limit: 36, null: false
+    t.string "platform_id", limit: 32, null: false
     t.string "issuer", null: false
     t.string "client_id", null: false
     t.string "platform_name", null: false
