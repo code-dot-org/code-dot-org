@@ -4,7 +4,7 @@ import WebAudio from './soundSub';
 var soundList = [];
 
 var baseSoundUrl;
-var restrictedSoundUrl;
+var restrictedSoundUrlPath;
 
 var audioSoundBuffers = [];
 var tagGroups = {};
@@ -16,7 +16,7 @@ var audioSystem = null;
 export function InitSound(desiredSounds) {
   // regular web version.
   baseSoundUrl = 'https://curriculum.code.org/media/musiclab/';
-  restrictedSoundUrl = '/restricted/musiclab/';
+  restrictedSoundUrlPath = '/restricted/musiclab/';
   audioSystem = new WebAudio();
 
   LoadSounds(desiredSounds);
@@ -53,14 +53,14 @@ async function LoadSounds(desiredSounds) {
 
   for (let i = 0; i < soundList.length; i++) {
     const sound = soundList[i];
-    const url = sound.restricted ? restrictedSoundUrl : baseSoundUrl;
+    const basePath = sound.restricted ? restrictedSoundUrlPath : baseSoundUrl;
     if (sound.restricted && !canLoadRestrictedContent) {
       // Skip loading restricted songs if we can't load restricted content.
       continue;
     }
 
     audioSystem.LoadSound(
-      url + sound.path + '.mp3',
+      basePath + sound.path + '.mp3',
       function (id, buffer) {
         audioSoundBuffers[id] = buffer;
       }.bind(this, i)
