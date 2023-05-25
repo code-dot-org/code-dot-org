@@ -5,10 +5,10 @@ window.dataLayer = window.dataLayer || [];
  * It is a wrapper class that appends information to window.dataLayer
  * This is the equivalent of ga() in Google Universal
  */
-
 function gtag() {
   window.dataLayer.push(arguments);
 }
+
 /**
  * Class used to control the initialization of Google analytics
  * for code.org properties.
@@ -17,9 +17,6 @@ function gtag() {
  * - Send any dimensions information
  * - Wrap Google Universal and Analytics functions for easier transition
  * - Centralize common code
- * @param  {[type]} arg1 [description]
- * @param  {[type]} arg2 [description]
- * @return {[type]}      [description]
  */
 class GoogleAnalyticsReporter {
   enableGoogleAnalyticsUniversal = true;
@@ -71,7 +68,7 @@ class GoogleAnalyticsReporter {
   }
 
   /**
-   * initialize google Analytics 4 and the property tag
+   * Initialize google Analytics 4 and the property tag
    */
   #initializeGoogleAnalytics() {
     if (this.enabledGoogleAnalytics4) {
