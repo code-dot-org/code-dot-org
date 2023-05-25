@@ -10,6 +10,7 @@ class GoogleAnalyticsReporter {
   googleAnalyticsGTag = 'G-L9HT5MZ3HD';
 
   constructor() {
+    alert('hello');
     this.#initializeGoogleUniversal(
       window,
       window.document,
