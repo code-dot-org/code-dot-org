@@ -1,7 +1,3 @@
-# Temporarily remove one of the URLs in this test to unblock test builds.
-# http://studio.code.org/s/allthethings/lessons/18/levels/5?noautoplay=true (droplet)
-# See ticket for details:
-# https://codedotorg.atlassian.net/browse/SL-878
 @eyes_mobile
 Feature: Look at mobile portait view
 
