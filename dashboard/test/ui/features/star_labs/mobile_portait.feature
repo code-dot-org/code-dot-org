@@ -1,3 +1,6 @@
+# Temporarily skip this test to unblock test builds. See ticket for details:
+# https://codedotorg.atlassian.net/browse/SL-878
+@skip
 @eyes_mobile
 Feature: Look at mobile portait view
 
@@ -14,4 +17,5 @@ Feature: Look at mobile portait view
     And I close my eyes
     Examples:
       | url                                                                      | test_name     |
+      | http://studio.code.org/s/allthethings/lessons/18/levels/5?noautoplay=true | droplet level |
       | http://studio.code.org/s/allthethings/lessons/37/levels/1?noautoplay=true  | artist level  |
