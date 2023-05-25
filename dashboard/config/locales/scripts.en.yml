@@ -10413,7 +10413,7 @@ en:
           title: Simulating a Marine Ecosystem (2023)
           description_audience: ''
           description_short: ''
-          description: ''
+          description: "##Suggested Pre-Work for this Module\n \n**Science:** Students will simulate a marine life ecosystem in Lessons 1 and 2. To build familiarity with this ecosystem, we recommend this [Ocean Animals Video](https://www.youtube.com/watch?v=8adtdg0N2-g) (9:42 minutes). \n\nIn Lesson 2, students will engage in whole-group discussions about an ecosystem. Here is a list of resources to help students prepare: [Extended Connections](https://docs.google.com/document/d/1lWch89nzkrm9ipM7cPD4P-XFh1b_uScQaf3BJwq2OtU/edit#). \n\n**Computer Science:** In this module, students will learn new coding concepts that might be difficult for new-to-computer science students. If students are not familiar with code.org’s Sprite Lab we recommend trying [Swimming Fish with Sprite Lab](https://studio.code.org/s/coursee-2022/lessons/3) (55 minutes) for a basic introduction to the tool. \n\nThis module uses an advanced CS concept called conditional statements. Students learn this concept in a scaffolded way, but some students may benefit from first engaging in this introduction to conditionals unplugged activity: [Conditionals with Cards](https://studio.code.org/s/coursed-2022/lessons/12) (50 minutes).\n"
           student_description: ''
         csc-adaptations-2023:
           lessons:
@@ -11515,11 +11515,11 @@ en:
               name: "[Generative Images Lesson (dall-e-esque)]"
           lesson_groups: {}
           name: ai-temp
-          title: Introduction to AI
+          title: How AI Works
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: These lessons supplement the [How AI Works](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) video series. Each lesson is paired with a single video from the series, diving-deeper into the concepts introduced in the videos. Lessons focus on creating an exciting first experience for students, where students engage in an activity or simulation and then reflect on the experience as a way to build understanding around AI and build empathy with those impacted by it. Some lessons focus more on the technology behind AI, while other lessons focus on the societal impacts and ethical considerations of AI.
+          student_description: Learn how AI works by participating in different experiences and watching the [How AI Works](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) video series!
         focus-on-coding4b-2023:
           lessons: {}
           lesson_groups:

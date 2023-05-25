@@ -4,6 +4,7 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "hideable_lessons": true,
       "include_student_lesson_plans": true,
       "is_course": true,
       "is_migrated": true,
@@ -11,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "ai-temp",
-    "serialized_at": "2023-05-11 17:29:18 UTC",
+    "serialized_at": "2023-05-24 22:32:49 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -91,7 +92,7 @@
     },
     {
       "key": "lesson-7",
-      "name": "Large Language Models (LLMs)",
+      "name": "Chatbots and Large Language Models (LLMs)",
       "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
@@ -161,13 +162,13 @@
     },
     {
       "key": "Blockchain In a Day",
-      "name": "Introduction to AI In a Day",
+      "name": "How AI Works In a Day",
       "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
-        "overview": "⚠️This lesson is intended for classrooms that want to show the entire Introduction to AI video series in a **single day**. It is not intended to be taught in sequence with the other lessons in this unit, which introduces each video one day at a time.\n\nStudents follow along with each video by matching vocabulary from the video, then answering a reflection question about each video. The lesson plan and slides are very sparse and open-ended to allow for improvisation and customization to fit your classroom."
+        "overview": "⚠️This lesson is intended for classrooms that want to show the entire How AI Works video series in a **single day**. It is not intended to be taught in sequence with the other lessons in this unit, which introduces each video one day at a time.\n\nStudents follow along with each video by matching vocabulary from the video, then answering a reflection question about each video. The lesson plan and slides are very sparse and open-ended to allow for improvisation and customization to fit your classroom."
       },
       "seeding_key": {
         "lesson.key": "Blockchain In a Day",
@@ -549,7 +550,7 @@
       "position": 1,
       "properties": {
         "duration": 5,
-        "name": "Introduction to AI"
+        "name": "How AI Works"
       },
       "seeding_key": {
         "lesson_activity.key": "4a5a98de-b492-47df-95a0-6aceefa69ffd",
@@ -1042,7 +1043,7 @@
       "key": "06bdab50-c475-4990-bb5a-31bb6c04ca21",
       "position": 1,
       "properties": {
-        "description": "We'd love to learn more about the folks teaching these lessons and the classroom experience. Please let us know in this [Introduction to AI Teacher Survey](https://docs.google.com/forms/d/e/1FAIpQLSd5Usml_xrjQQ8DdBmZjQc771LcB13FKukCYc3NGLKfVwIneg/viewform).",
+        "description": "We'd love to learn more about the folks teaching these lessons and the classroom experience. Please let us know in this [How AI Works Teacher Survey](https://docs.google.com/forms/d/e/1FAIpQLSd5Usml_xrjQQ8DdBmZjQc771LcB13FKukCYc3NGLKfVwIneg/viewform).",
         "name": "Teacher Survey"
       },
       "seeding_key": {
@@ -1779,7 +1780,7 @@
       "key": "7dec4bea-c382-45c7-bff3-98501fe3e2a1",
       "position": 1,
       "properties": {
-        "description": "We'd love to learn more about the folks teaching these lessons and the classroom experience. Please let us know in this [Introduction to AI Teacher Survey](https://docs.google.com/forms/d/e/1FAIpQLSd5Usml_xrjQQ8DdBmZjQc771LcB13FKukCYc3NGLKfVwIneg/viewform).",
+        "description": "We'd love to learn more about the folks teaching these lessons and the classroom experience. Please let us know in this [How AI Works Teacher Survey](https://docs.google.com/forms/d/e/1FAIpQLSd5Usml_xrjQQ8DdBmZjQc771LcB13FKukCYc3NGLKfVwIneg/viewform).",
         "name": "Teacher Survey"
       },
       "seeding_key": {
@@ -2425,7 +2426,7 @@
       "key": "6cb8ca17-699f-4733-aaee-43d078ae5db6",
       "position": 1,
       "properties": {
-        "description": "We'd love to learn more about the folks teaching these lessons and the classroom experience. Please let us know in this [Introduction to AI Teacher Survey](https://docs.google.com/forms/d/e/1FAIpQLSd5Usml_xrjQQ8DdBmZjQc771LcB13FKukCYc3NGLKfVwIneg/viewform).",
+        "description": "We'd love to learn more about the folks teaching these lessons and the classroom experience. Please let us know in this [How AI Works Teacher Survey](https://docs.google.com/forms/d/e/1FAIpQLSd5Usml_xrjQQ8DdBmZjQc771LcB13FKukCYc3NGLKfVwIneg/viewform).",
         "name": "Teacher Survey"
       },
       "seeding_key": {
@@ -2437,7 +2438,6 @@
       "key": "ce11fd33-a8b0-4edc-86cf-2e4c59f86b10",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:**  Give each student a copy of the \n[r generative_llm_guide/ai-temp/unversioned]"
       },
       "seeding_key": {
         "activity_section.key": "ce11fd33-a8b0-4edc-86cf-2e4c59f86b10",
@@ -2581,9 +2581,9 @@
       "key": "b2a7bd06-caf5-4166-95a6-09c7acaa95d0",
       "position": 1,
       "properties": {
-        "description": "Before we watch the video, which is about Large Language Models, let’s make sure we understand what a model is in the first place.",
+        "description": "Before we watch the video, which is about Large Language Models, let’s make sure we understand what a model is in the first place. Keep track of this vocabulary term in the [r video_and_vocabulary_guide/ai-temp/unversioned]",
         "duration": "10",
-        "name": "Watch the Video",
+        "name": "Watch the Video -- Part 1",
         "remarks": true
       },
       "seeding_key": {
@@ -2632,7 +2632,7 @@
       "key": "b57bec27-2967-40ea-b6b4-fc6a5b4333b7",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the How AI Works: Chatbots and Large Language Models video (WIP link to resource). At key points throughout (described below) we will be pausing the video to give students a chance to synthesize their understanding."
+        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the first part of the How AI Works: Chatbots and Large Language Models video. At key points throughout (described below) we will be pausing the video to give students a chance to synthesize their understanding. We will stop the video halfway through to begin an activity where students explore a similar model to the one the video describes, and resume after that activity. They can keep track of their answers in the [r video_and_vocabulary_guide/ai-temp/unversioned]"
       },
       "seeding_key": {
         "activity_section.key": "b57bec27-2967-40ea-b6b4-fc6a5b4333b7",
@@ -2643,6 +2643,7 @@
       "key": "aeaf296f-5b13-41b0-b736-e6a977c55255",
       "position": 6,
       "properties": {
+        "description": "**NOTE TO REVIEWERS:** [Here is a temporary link to the video in this lesson](https://vimeo.com/822674720/1d6c42ab3c?share=copy). Once the video is finalized, it will be split into 2 - for now, it is all one video."
       },
       "seeding_key": {
         "activity_section.key": "aeaf296f-5b13-41b0-b736-e6a977c55255",
@@ -2653,7 +2654,7 @@
       "key": "58c45ad6-b7e1-4403-949c-d3a19539a03e",
       "position": 7,
       "properties": {
-        "description": "| Video                                                                                                                                                                                                    | Teacher                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |\n|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|\n| [Screenshot of last frame of video]<br /><br />  Pause video at [timestamp] when they say “Everything Available on the Internet”                                                                         | After pausing the video, ask this question: <br /> - What is a large language model? <br /><br />  <i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** <br /> Looking for a quick answer to check for understanding of the video so far<br /><br />  Students should explain that a large language model learns from a very  large  body of text (such as all of wikipedia) in order to generate new text.                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |\n| [Screenshot of last frame of video]<br /><br />  Pause video at [timestamp] when they say “Once we have the next letter, we repeat the process to find the next letter, and the next letter, and so on.” | After pausing the video, ask these questions:<br /> - How is the model picking the next letter?<br /> - What seems to be the problem with this method?<br /><br /> <i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** <br /> The first two questions are looking for a quick check for understanding. Students should mention that the model is picking the next letter randomly, and they have probably noticed that these random picks of letters are not generating real words.<br /><br />  **Follow-up Discussion:**<br /> What might fix that problem?<br /><br />  <i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** <br /> Do not spend too much time on this question, and let students know that wild (on topic) guesses are ok here; the point is to prime students to be interested in the next part of the video, where it explains the fix.<br /><br />  **Say:**<br />  Let’s find out! |\n| [Screenshot of last frame of video]<br /><br />  Pause video at [timestamp] when they say “As you see, this works surprisingly well!”                                                                    | After pausing the video, ask these questions:<br /> - How does the system come up with better results?<br /><br />  <i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** <br /> Quick check for understanding for this part of the video. Better results come from  **context**.  Make sure students also explain what context means – in this case all the words before the word in question.                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |\n| [Screenshot of last frame of video]<br /><br />  This is the end of the video                                                                                                                            | When the video ends, ask this summary question:<br /> - What can a Large Language Model create?<br /><br />  <i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** <br /> LLMs generate text that sounds plausibly like a human might have written it.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |",
+        "description": "| Video                                                                                                                                                                                                   | Teacher                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |\n|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|\n| Pause video at 1:17 when they say “The possibilities seem endless”<br /><br /> ![](https://images.code.org/cf0c6b4e7a88d13bcbe85fa2316c8ada-Screenshot 2023-05-22 155510.png)                                                                        | After pausing the video, ask this question: <br /> - What is a large language model? <br /><br />  <i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** <br /> Looking for a quick answer to check for understanding of the video so far<br /><br />  Students should explain that a large language model learns from a very  large  body of text (such as all of wikipedia) in order to generate new text.                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |\n| Pause video at 3:01 when they say “It's not even English, but it's a first step” <br /><br />![](https://images.code.org/3b4cf5b0a01af59af28fb48d4505715b-Screenshot 2023-05-22 172144.png) | After pausing the video, ask these questions:<br /> - How is the model picking the next letter?<br /> - What seems to be the problem with this method?<br /><br /> <i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** <br /> Looking for a quick check for understanding. Students should mention that the model is picking the next letter randomly, and they have probably noticed that these random picks of letters are not generating real words. |\n                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     ",
         "tips": [
           {
             "type": "contentCorner",
@@ -2670,6 +2671,16 @@
       "key": "25c08b22-1f38-4903-9daf-1456434fb2cf",
       "position": 8,
       "properties": {
+        "description": "The Shakespeare model in the video is guessing a possible next letter from a list based on what Shakespeare has said before. Let's do something similar, but with whole words, based on a written work of our choice.\n\nFor this example, the model will be showing all probable next words, and we, the writers, will get to pick which words we want. Each “probable next word” was chosen by finding the 10 most common words that came after the current word being used.\n\nFor this activity, you will use the [r written_voice_simulator_guide/ai-temp/unversioned] to guide you in writing your own stories, poems, or songs in different styles.\n\nFirst, I’ll show you how this program works, and then you can begin",
+        "duration": "15",
+        "name": " Create With a Language Model ",
+        "remarks": true,
+        "tips": [
+          {
+            "type": "contentCorner",
+            "markdown": "The app is a very small version of [Botnik](https://botnik.org/), which uses a predictive text engine based on previous text from given tv shows, authors, video games, etc. Given Botnik has a lot more options and features, it can generate slightly more coherent text, and you may wish to show students [things that Botnik generated](https://botnik.org/creations/). This [video](https://www.youtube.com/watch?v=WypWvaCw3zs) provides more context around Botnik, starting around 1:20."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "25c08b22-1f38-4903-9daf-1456434fb2cf",
@@ -2677,8 +2688,142 @@
       }
     },
     {
-      "key": "89c6e27a-e752-4993-81aa-dbcc1c1607ca",
+      "key": "a4667108-23d7-4e77-9bae-7cbf0eea3e2b",
       "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Model:**  Show the students how to use the Written Voice Simulator widget, taking examples from the class."
+      },
+      "seeding_key": {
+        "activity_section.key": "a4667108-23d7-4e77-9bae-7cbf0eea3e2b",
+        "lesson_activity.key": "7d7bc071-19f7-4859-84e6-f43bc77d4c3d"
+      }
+    },
+    {
+      "key": "8d660547-7601-4727-9f80-8efcf9132c1d",
+      "position": 10,
+      "properties": {
+        "description": "**Code Studio:** Have students log into Code Studio and begin interacting with the widget. They can follow along in the [r written_voice_simulator_guide/ai-temp/unversioned]",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "After giving instructions, it can be helpful to check that your students understand what is expected of them – questions like “How long do we have to do this activity?” “What is expected at the end of it?” help to make sure the instructions are clear and the students are ready to get to work."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "8d660547-7601-4727-9f80-8efcf9132c1d",
+        "lesson_activity.key": "7d7bc071-19f7-4859-84e6-f43bc77d4c3d"
+      }
+    },
+    {
+      "key": "8c5e5a5d-6815-43d6-9896-86064abf0e9a",
+      "position": 11,
+      "properties": {
+        "progression_name": "Written Voice Simulator Widget"
+      },
+      "seeding_key": {
+        "activity_section.key": "8c5e5a5d-6815-43d6-9896-86064abf0e9a",
+        "lesson_activity.key": "7d7bc071-19f7-4859-84e6-f43bc77d4c3d"
+      }
+    },
+    {
+      "key": "84306b41-5dc3-4574-9ba7-533f280b310d",
+      "position": 12,
+      "properties": {
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As the students write their stories, encourage them by telling them your thoughts and ideas, making sure they stay on task."
+      },
+      "seeding_key": {
+        "activity_section.key": "84306b41-5dc3-4574-9ba7-533f280b310d",
+        "lesson_activity.key": "7d7bc071-19f7-4859-84e6-f43bc77d4c3d"
+      }
+    },
+    {
+      "key": "e1e7bd62-ccf7-4389-8b18-34db3eb90459",
+      "position": 13,
+      "properties": {
+        "description": "**Regroup:** Have students close out of the widget and re-focus as a whole class"
+      },
+      "seeding_key": {
+        "activity_section.key": "e1e7bd62-ccf7-4389-8b18-34db3eb90459",
+        "lesson_activity.key": "7d7bc071-19f7-4859-84e6-f43bc77d4c3d"
+      }
+    },
+    {
+      "key": "4aa3307f-8f88-455c-9102-c0005805b40e",
+      "position": 14,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>**Share Out:** In small groups, have students share the stories they wrote with each other. Students can comment on each other’s stories.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "It is important to share expectations when students are sharing their work with each other. It can be helpful to talk to students about what kind of feedback they would like to receive, and how before encouraging them to give feedback to each other."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "4aa3307f-8f88-455c-9102-c0005805b40e",
+        "lesson_activity.key": "7d7bc071-19f7-4859-84e6-f43bc77d4c3d"
+      }
+    },
+    {
+      "key": "d28d2952-7b58-49f8-8b34-f1fe6456c40c",
+      "position": 15,
+      "properties": {
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Make sure students are on task, being kind, and that all students get to share their stories."
+      },
+      "seeding_key": {
+        "activity_section.key": "d28d2952-7b58-49f8-8b34-f1fe6456c40c",
+        "lesson_activity.key": "7d7bc071-19f7-4859-84e6-f43bc77d4c3d"
+      }
+    },
+    {
+      "key": "8609db90-f18c-4a60-b28e-c9670f676dc4",
+      "position": 16,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:**  What did these stories have in common? How were they different? Why?\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "8609db90-f18c-4a60-b28e-c9670f676dc4",
+        "lesson_activity.key": "7d7bc071-19f7-4859-84e6-f43bc77d4c3d"
+      }
+    },
+    {
+      "key": "bb931295-0da6-414d-93c8-ae12504281eb",
+      "position": 17,
+      "properties": {
+        "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students have probably found that stories told by the same \"voice\" had more similar words, but choosing different words still meant different stories came out. This is to help students begin to have a framework around the Wrap Up Question, about whether LLMs are Creative and/or intelligent."
+      },
+      "seeding_key": {
+        "activity_section.key": "bb931295-0da6-414d-93c8-ae12504281eb",
+        "lesson_activity.key": "7d7bc071-19f7-4859-84e6-f43bc77d4c3d"
+      }
+    },
+    {
+      "key": "715e20fc-e095-4227-bfd4-fdde30a4a368",
+      "position": 18,
+      "properties": {
+        "duration": "10",
+        "name": "Watch The Video -- Part 2"
+      },
+      "seeding_key": {
+        "activity_section.key": "715e20fc-e095-4227-bfd4-fdde30a4a368",
+        "lesson_activity.key": "7d7bc071-19f7-4859-84e6-f43bc77d4c3d"
+      }
+    },
+    {
+      "key": "4206a48b-3a73-4cd7-b10f-d2a2caf94cf4",
+      "position": 19,
+      "properties": {
+        "description": "| Video                                                                                                                                                                                                   | Teacher                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |\n|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|\n| Before you re-start the video | **Predict:**<br /> Recall that the Shakespeare model chose the next letter randomly, which led to words that weren't quite words. What might fix this problem?<br /><br />  <i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** <br /> Pose this prompt, let students know that wild (on topic) guesses are ok here, have students write thoughts on the activity guide for around 30 seconds. Take 1-2 responses, but don't dwell on discussion; the point is to prime students to be interested in the next part of the video, where it explains the fix. <br />It may help to prompt students to compare the Shakespeare-model which *only* knew the letter before when \"choosing\" the next one, compared to their experience in the Widget, where they had seen the whole story. <br /><br />  **Say:**<br />  Let’s find out!\n| Pause video at 4:58 when they say “As you see, this works surprisingly well!” <br /><br /> ![](https://images.code.org/6ac5f71a566c2833a3394a2ef3c7ab31-Screenshot 2023-05-22 170024.png)                                                          | After pausing the video, ask these questions:<br /> - How does the system come up with better results?<br /><br />  <i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** <br /> Quick check for understanding for this part of the video. <br />Better results come from  **context**.  Make sure students also explain what context means – in this case all the words before the word in question.                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |\n| Pause video at 6:01 when they say “Even after this tuning, it is important to note that this system is still just using random probabilities to choose words” <br /><br />   ![](https://images.code.org/121a6bfe2245aa0ffe4d8669b0963bd2-Screenshot 2023-05-22 170444.png)                                                                      | After pausing the video, ask these questions:<br /> - What are the three ways a large language model is different from the letter-by-letter Shakespeare example? <br /><br />  <i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** <br /> Quick check for understanding for this part of the video.  <ol><li> Rather than looking just at Shakespeare, it looks at everything it can find on the internet.</li><li> Instead of predicting letters it predicts whole words, or parts of words.</li><li> There is a lot of human tuning to look for biased or dangerous responses.</li> </ol>**Follow-up question**<br />How was the Writtne Voice Simulator also different from a Large Language Model? <br /> <br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Follow-up Discussion Goal:** <br /> Give students some time to think about this -- a think/pair/share model makes sense for this question. <ol><li>An LLM is usually learning from more words; the Written Voice Simulator, like the Shakespeare model, was using only one very small source.</li>  <li>An LLM has context. Like the Shakespeare model that only knew  only knew the word right before the one being chosen, the Written Voice Simulator only knew one word before the words it gave us an option of. We, the people choosing the next word, had context. (it’s possible the students won’t have noticed this last point, point it out directly if it didn’t come up). <li> The people choosing the next word were also providing the human tuning -- the end result came from the humans not a bot.                                                                                                                                                                                                                                                                                                                                                                                                                                                       |\n| This is the end of the video                                                                                                                      | When the video ends, ask this summary question:<br /> - What can a Large Language Model create?<br /><br />  <i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** <br /> LLMs generate text that sounds plausibly like a human might have written it.                                                             "
+      },
+      "seeding_key": {
+        "activity_section.key": "4206a48b-3a73-4cd7-b10f-d2a2caf94cf4",
+        "lesson_activity.key": "7d7bc071-19f7-4859-84e6-f43bc77d4c3d"
+      }
+    },
+    {
+      "key": "89c6e27a-e752-4993-81aa-dbcc1c1607ca",
+      "position": 20,
       "properties": {
         "description": "<i class=\"fa fa-pencil\" aria-hidden=\"true\"></i> **Vocabulary:**  Review the following vocabulary from the video. Allow students to check their answers from the activity guide.\n\n- Large Language Model (LLM): a general purpose form of AI that is trained on a very, very large body of knowledge.\n- Context:\n"
       },
@@ -2688,18 +2833,8 @@
       }
     },
     {
-      "key": "a4667108-23d7-4e77-9bae-7cbf0eea3e2b",
-      "position": 10,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "a4667108-23d7-4e77-9bae-7cbf0eea3e2b",
-        "lesson_activity.key": "7d7bc071-19f7-4859-84e6-f43bc77d4c3d"
-      }
-    },
-    {
       "key": "f07929f7-fa1e-46cc-8aad-8d609d9bd5ca",
-      "position": 11,
+      "position": 21,
       "properties": {
         "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:**  What’s an example of something you’ve interacted with that probably uses an LLM? What things can you imagine using an LLM for in the future?"
       },
@@ -2709,18 +2844,8 @@
       }
     },
     {
-      "key": "8d660547-7601-4727-9f80-8efcf9132c1d",
-      "position": 12,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "8d660547-7601-4727-9f80-8efcf9132c1d",
-        "lesson_activity.key": "7d7bc071-19f7-4859-84e6-f43bc77d4c3d"
-      }
-    },
-    {
       "key": "c0cd6ed5-3a71-411c-b46d-d771c8548c9b",
-      "position": 13,
+      "position": 22,
       "properties": {
         "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** \nThis discussion connects the video to things the students have experienced – they have probably seen predictive text in emails or cell phones, and have probably heard of ChatGPT, for instance. Students may imagine using this technology for anything that generates text, including writing code or news articles. If students are struggling to find answers, you can provide the examples of predictive text, and / or demonstrate.",
         "tips": [
@@ -2736,18 +2861,8 @@
       }
     },
     {
-      "key": "84306b41-5dc3-4574-9ba7-533f280b310d",
-      "position": 14,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "84306b41-5dc3-4574-9ba7-533f280b310d",
-        "lesson_activity.key": "7d7bc071-19f7-4859-84e6-f43bc77d4c3d"
-      }
-    },
-    {
       "key": "18e9b083-6b59-4be5-86b0-ab74ebc84e51",
-      "position": 15,
+      "position": 23,
       "properties": {
         "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:**  Remember, these LLMs are learning from every word on the internet. What is a benefit of using the entire internet as input? What is a drawback?\n"
       },
@@ -2757,18 +2872,8 @@
       }
     },
     {
-      "key": "e1e7bd62-ccf7-4389-8b18-34db3eb90459",
-      "position": 16,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "e1e7bd62-ccf7-4389-8b18-34db3eb90459",
-        "lesson_activity.key": "7d7bc071-19f7-4859-84e6-f43bc77d4c3d"
-      }
-    },
-    {
       "key": "808eacba-cd56-4608-9090-2d4e48cfdef8",
-      "position": 17,
+      "position": 24,
       "properties": {
         "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Learning from every word on the internet gives Large Language Models a ton of information to learn from, but not all of that information is factual, and not all the wording will be kind or appropriate. \n\nAlso encourage students to consider how people with access to writing on the internet tend to be more privileged voices, and therefore further marginalize the voices of already marginalized groups. ",
         "tips": [
@@ -2784,260 +2889,8 @@
       }
     },
     {
-      "key": "4aa3307f-8f88-455c-9102-c0005805b40e",
-      "position": 18,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "4aa3307f-8f88-455c-9102-c0005805b40e",
-        "lesson_activity.key": "7d7bc071-19f7-4859-84e6-f43bc77d4c3d"
-      }
-    },
-    {
-      "key": "81acc1fa-0168-4fec-b39a-716287c5f75c",
-      "position": 19,
-      "properties": {
-        "description": "Large Language Models often learn from every word on the internet, but what if we limited a model to only the words of a specific person? Let’s explore a Language Model (It’s not very large; it’s only based on one piece of writing) trained entirely based on one song or story, of your choice.\n\nFor this example, the model will be showing all probable next words, and we, the writers, will get to pick which words we want. Each “probable next word” was chosen by finding the 10 most common words that came after the current word being used.\n\nFor this activity, you will have 5 minutes to write a story, lyrics to a song or a poem,  using the predictive text model. Feel free to try a couple of different stories.\n\nFirst, I’ll show you how this program works, and then you’ll write your own stories.\n",
-        "duration": "15",
-        "name": " Create With a Language Model ",
-        "remarks": true,
-        "tips": [
-          {
-            "type": "contentCorner",
-            "markdown": "The app is a very small version of [Botnik](https://botnik.org/), which uses a predictive text engine based on previous text from given tv shows, authors, video games, etc. Given Botnik has a lot more options and features, it can generate slightly more coherent text, and you may wish to show students [things that Botnik generated](https://botnik.org/creations/). This [video](https://www.youtube.com/watch?v=WypWvaCw3zs) provides more context around Botnik, starting around 1:20."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "81acc1fa-0168-4fec-b39a-716287c5f75c",
-        "lesson_activity.key": "7d7bc071-19f7-4859-84e6-f43bc77d4c3d"
-      }
-    },
-    {
-      "key": "d28d2952-7b58-49f8-8b34-f1fe6456c40c",
-      "position": 20,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "d28d2952-7b58-49f8-8b34-f1fe6456c40c",
-        "lesson_activity.key": "7d7bc071-19f7-4859-84e6-f43bc77d4c3d"
-      }
-    },
-    {
-      "key": "715e20fc-e095-4227-bfd4-fdde30a4a368",
-      "position": 21,
-      "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Model:**  Show the students how to use the Predictive Text Widget, taking examples from the class."
-      },
-      "seeding_key": {
-        "activity_section.key": "715e20fc-e095-4227-bfd4-fdde30a4a368",
-        "lesson_activity.key": "7d7bc071-19f7-4859-84e6-f43bc77d4c3d"
-      }
-    },
-    {
-      "key": "4206a48b-3a73-4cd7-b10f-d2a2caf94cf4",
-      "position": 22,
-      "properties": {
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "After giving instructions, it can be helpful to check that your students understand what is expected of them – questions like “How long do we have to do this activity?” “What is expected at the end of it?” help to make sure the instructions are clear and the students are ready to get to work."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "4206a48b-3a73-4cd7-b10f-d2a2caf94cf4",
-        "lesson_activity.key": "7d7bc071-19f7-4859-84e6-f43bc77d4c3d"
-      }
-    },
-    {
-      "key": "02c34eb9-a754-4d55-ac24-78c0ab34e649",
-      "position": 23,
-      "properties": {
-        "description": "**Code Studio:** Have students log into Code Studio and begin interacting with the widget"
-      },
-      "seeding_key": {
-        "activity_section.key": "02c34eb9-a754-4d55-ac24-78c0ab34e649",
-        "lesson_activity.key": "7d7bc071-19f7-4859-84e6-f43bc77d4c3d"
-      }
-    },
-    {
-      "key": "6414a7c4-aeb7-44c3-a365-8f3f6665bcf7",
-      "position": 24,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "6414a7c4-aeb7-44c3-a365-8f3f6665bcf7",
-        "lesson_activity.key": "7d7bc071-19f7-4859-84e6-f43bc77d4c3d"
-      }
-    },
-    {
-      "key": "fe4f53d8-396f-4e67-90e9-ece8fa9945b6",
-      "position": 25,
-      "properties": {
-        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As the students write their stories, encourage them by telling them your thoughts and ideas, making sure they stay on task."
-      },
-      "seeding_key": {
-        "activity_section.key": "fe4f53d8-396f-4e67-90e9-ece8fa9945b6",
-        "lesson_activity.key": "7d7bc071-19f7-4859-84e6-f43bc77d4c3d"
-      }
-    },
-    {
-      "key": "6eb03952-5539-4ba4-81a9-05d3c11f87b3",
-      "position": 26,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "6eb03952-5539-4ba4-81a9-05d3c11f87b3",
-        "lesson_activity.key": "7d7bc071-19f7-4859-84e6-f43bc77d4c3d"
-      }
-    },
-    {
-      "key": "d8503792-ae7d-470d-98e5-072d39553051",
-      "position": 27,
-      "properties": {
-        "description": "**Regroup:** Have students close out of the widget and re-focus as a whole class"
-      },
-      "seeding_key": {
-        "activity_section.key": "d8503792-ae7d-470d-98e5-072d39553051",
-        "lesson_activity.key": "7d7bc071-19f7-4859-84e6-f43bc77d4c3d"
-      }
-    },
-    {
-      "key": "7b6f1784-9206-4f0e-ab5c-b404902eaf27",
-      "position": 28,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "7b6f1784-9206-4f0e-ab5c-b404902eaf27",
-        "lesson_activity.key": "7d7bc071-19f7-4859-84e6-f43bc77d4c3d"
-      }
-    },
-    {
-      "key": "8609db90-f18c-4a60-b28e-c9670f676dc4",
-      "position": 29,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>**Share Out:** In small groups, have students share the stories they wrote with each other. Students can comment on each other’s stories.\n"
-      },
-      "seeding_key": {
-        "activity_section.key": "8609db90-f18c-4a60-b28e-c9670f676dc4",
-        "lesson_activity.key": "7d7bc071-19f7-4859-84e6-f43bc77d4c3d"
-      }
-    },
-    {
-      "key": "bb931295-0da6-414d-93c8-ae12504281eb",
-      "position": 30,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "bb931295-0da6-414d-93c8-ae12504281eb",
-        "lesson_activity.key": "7d7bc071-19f7-4859-84e6-f43bc77d4c3d"
-      }
-    },
-    {
-      "key": "8c5569de-472b-4605-8294-87538485a2ca",
-      "position": 31,
-      "properties": {
-        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Make sure students are on task, being kind, and that all students get to share their stories.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "It is important to share expectations when students are sharing their work with each other. It can be helpful to talk to students about what kind of feedback they would like to receive, and how before encouraging them to give feedback to each other."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "8c5569de-472b-4605-8294-87538485a2ca",
-        "lesson_activity.key": "7d7bc071-19f7-4859-84e6-f43bc77d4c3d"
-      }
-    },
-    {
-      "key": "1d1ea614-e875-438b-bd1a-465d8ea7b742",
-      "position": 32,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "1d1ea614-e875-438b-bd1a-465d8ea7b742",
-        "lesson_activity.key": "7d7bc071-19f7-4859-84e6-f43bc77d4c3d"
-      }
-    },
-    {
-      "key": "774b52e9-6b41-4ceb-96a5-a7bf8268abb3",
-      "position": 33,
-      "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** How was this activity acting like an LLM as described by the video? How was it different?"
-      },
-      "seeding_key": {
-        "activity_section.key": "774b52e9-6b41-4ceb-96a5-a7bf8268abb3",
-        "lesson_activity.key": "7d7bc071-19f7-4859-84e6-f43bc77d4c3d"
-      }
-    },
-    {
-      "key": "195528a4-eafc-45cd-a7df-e6235f55eebf",
-      "position": 34,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "195528a4-eafc-45cd-a7df-e6235f55eebf",
-        "lesson_activity.key": "7d7bc071-19f7-4859-84e6-f43bc77d4c3d"
-      }
-    },
-    {
-      "key": "63466701-0e1a-484a-975e-22356086e24b",
-      "position": 35,
-      "properties": {
-        "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** An LLM is usually learning from more words.  An LLM has context. This model only knew the word right before the one being chosen. We, the people choosing the next word, had context. (it’s possible the students won’t have noticed this, point it out directly if it didn’t come up). "
-      },
-      "seeding_key": {
-        "activity_section.key": "63466701-0e1a-484a-975e-22356086e24b",
-        "lesson_activity.key": "7d7bc071-19f7-4859-84e6-f43bc77d4c3d"
-      }
-    },
-    {
-      "key": "b26fb956-97c3-4f43-9a5a-eba1c0f8debf",
-      "position": 36,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "b26fb956-97c3-4f43-9a5a-eba1c0f8debf",
-        "lesson_activity.key": "7d7bc071-19f7-4859-84e6-f43bc77d4c3d"
-      }
-    },
-    {
-      "key": "94baedf3-8164-4b90-96b3-87e1fdfed32b",
-      "position": 37,
-      "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:**  What did these stories have in common? How were they different? Why?\n"
-      },
-      "seeding_key": {
-        "activity_section.key": "94baedf3-8164-4b90-96b3-87e1fdfed32b",
-        "lesson_activity.key": "7d7bc071-19f7-4859-84e6-f43bc77d4c3d"
-      }
-    },
-    {
-      "key": "b4b80c22-a725-4b12-a26b-eaef761583fd",
-      "position": 38,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "b4b80c22-a725-4b12-a26b-eaef761583fd",
-        "lesson_activity.key": "7d7bc071-19f7-4859-84e6-f43bc77d4c3d"
-      }
-    },
-    {
-      "key": "d9812780-e164-49bc-8897-b3e5c2df5cb8",
-      "position": 39,
-      "properties": {
-        "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students have probably found that stories told by the same \"voice\" had more similar words, but choosing different words still meant different stories came out. This is to help students begin to have a framework around the Wrap Up Question, about whether LLMs are Creative and/or intelligent."
-      },
-      "seeding_key": {
-        "activity_section.key": "d9812780-e164-49bc-8897-b3e5c2df5cb8",
-        "lesson_activity.key": "7d7bc071-19f7-4859-84e6-f43bc77d4c3d"
-      }
-    },
-    {
       "key": "161cb423-7bdb-4eb8-8516-036184133d91",
-      "position": 40,
+      "position": 25,
       "properties": {
       },
       "seeding_key": {
@@ -3047,7 +2900,7 @@
     },
     {
       "key": "1d060652-506b-49c3-8a63-0a93002c46cb",
-      "position": 41,
+      "position": 26,
       "properties": {
         "description": "Most of the things that generate text today use a Large Language Model, but before we had the computing power to allow models to learn from the entire text of wikipedia, there were text-based AIs that were not based on Large Language Models.\n\nInstead, these programs have rules for what sorts of text make sense at different times.\n\nOne of the most famous examples is Eliza, who was a computer program that was supposed to sound like a therapist that was invented in 1966. It was very impressive in its time. Let’s explore what Eliza is and is not capable of.\n",
         "duration": "10",
@@ -3061,8 +2914,9 @@
     },
     {
       "key": "3e9ffcbf-9d1a-44d1-9670-7ef4059a7131",
-      "position": 42,
+      "position": 27,
       "properties": {
+        "progression_name": "Eliza Widget"
       },
       "seeding_key": {
         "activity_section.key": "3e9ffcbf-9d1a-44d1-9670-7ef4059a7131",
@@ -3071,7 +2925,7 @@
     },
     {
       "key": "d802ab4d-027b-406c-a388-ad6d02901ebb",
-      "position": 43,
+      "position": 28,
       "properties": {
         "description": "**Option 1:** Pull up an example Eliza displayed on the projector, and take responses from students for what to say to Eliza.\n"
       },
@@ -3081,20 +2935,10 @@
       }
     },
     {
-      "key": "8c5e5a5d-6815-43d6-9896-86064abf0e9a",
-      "position": 44,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "8c5e5a5d-6815-43d6-9896-86064abf0e9a",
-        "lesson_activity.key": "7d7bc071-19f7-4859-84e6-f43bc77d4c3d"
-      }
-    },
-    {
       "key": "288a039b-6428-48d8-8eea-7173712585f2",
-      "position": 45,
+      "position": 29,
       "properties": {
-        "description": "**Option 2 (takes more time):** Allow students to to play with Eliza on their own computers for a few minutes.\n"
+        "description": "**Option 2 (takes more time):** Allow students to to play with Eliza on their own computers for a few minutes. Follow along in the [r eliza_activity_guide/ai-temp/unversioned]"
       },
       "seeding_key": {
         "activity_section.key": "288a039b-6428-48d8-8eea-7173712585f2",
@@ -3103,7 +2947,7 @@
     },
     {
       "key": "fc32c914-4a76-421b-a217-18096fa92a17",
-      "position": 46,
+      "position": 30,
       "properties": {
       },
       "seeding_key": {
@@ -3113,7 +2957,7 @@
     },
     {
       "key": "8b5cad22-513a-4df7-9375-361cd81cd899",
-      "position": 47,
+      "position": 31,
       "properties": {
         "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:**  How did using Eliza feel different from using a Large Language Model? How does Eliza feel similar to using a Large Language Model?\n"
       },
@@ -3124,7 +2968,7 @@
     },
     {
       "key": "59ddf11a-7eb3-4dbe-99bc-0739052b8e09",
-      "position": 48,
+      "position": 32,
       "properties": {
       },
       "seeding_key": {
@@ -3134,7 +2978,7 @@
     },
     {
       "key": "bf3d8cc5-0d42-4d9e-99ac-d3d1053cd96a",
-      "position": 49,
+      "position": 33,
       "properties": {
         "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:**  Students will probably notice that the responses are more limited, though they may also notice that it can still feel real sometimes.\n"
       },
@@ -3179,7 +3023,7 @@
       "key": "d7cc0b02-94a5-4416-b536-389b0c47a6ca",
       "position": 1,
       "properties": {
-        "description": "We'd love to learn more about the folks teaching these lessons and the classroom experience. Please let us know in this [Introduction to AI Teacher Survey](https://docs.google.com/forms/d/e/1FAIpQLSd5Usml_xrjQQ8DdBmZjQc771LcB13FKukCYc3NGLKfVwIneg/viewform).",
+        "description": "We'd love to learn more about the folks teaching these lessons and the classroom experience. Please let us know in this [How AI Works Teacher Survey](https://docs.google.com/forms/d/e/1FAIpQLSd5Usml_xrjQQ8DdBmZjQc771LcB13FKukCYc3NGLKfVwIneg/viewform).",
         "name": "Teacher Survey"
       },
       "seeding_key": {
@@ -3403,22 +3247,10 @@
       }
     },
     {
-      "key": "71c7f0b9-5087-412b-a759-a804597ab2c6",
-      "position": 4,
-      "properties": {
-        "description": "---\n\n### Assessment: Check For Understanding\n    \n*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\n\n**Question:** Which of the following was an unintended effect of the use of the Twitter cropping algorithm?\n",
-        "progression_name": "Check For Understanding"
-      },
-      "seeding_key": {
-        "activity_section.key": "71c7f0b9-5087-412b-a759-a804597ab2c6",
-        "lesson_activity.key": "672b41e0-8b3b-44d7-a904-aa6b84585145"
-      }
-    },
-    {
       "key": "247a4935-25fb-49e9-b4bb-eb8a95818189",
       "position": 1,
       "properties": {
-        "description": "We'd love to learn more about the folks teaching these lessons and the classroom experience. Please let us know in this [Introduction to AI Teacher Survey](https://docs.google.com/forms/d/e/1FAIpQLSd5Usml_xrjQQ8DdBmZjQc771LcB13FKukCYc3NGLKfVwIneg/viewform).",
+        "description": "We'd love to learn more about the folks teaching these lessons and the classroom experience. Please let us know in this [How AI Works Teacher Survey](https://docs.google.com/forms/d/e/1FAIpQLSd5Usml_xrjQQ8DdBmZjQc771LcB13FKukCYc3NGLKfVwIneg/viewform).",
         "name": "Teacher Survey"
       },
       "seeding_key": {
@@ -3577,10 +3409,31 @@
       }
     },
     {
+      "key": "7f41d974-785e-433b-8031-eaf571e39fe4",
+      "position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "7f41d974-785e-433b-8031-eaf571e39fe4",
+        "lesson_activity.key": "8ed127df-c40b-4809-8803-c1abd706b689"
+      }
+    },
+    {
+      "key": "38447047-80a0-4feb-a90e-5aa2548bac42",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Question of The Day:** What are guidelines we can use to create ethical machine learning apps?\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "38447047-80a0-4feb-a90e-5aa2548bac42",
+        "lesson_activity.key": "8ed127df-c40b-4809-8803-c1abd706b689"
+      }
+    },
+    {
       "key": "904e1685-6341-44a3-9acc-bfc0fa57e933",
       "position": 1,
       "properties": {
-        "description": "We'd love to learn more about the folks teaching these lessons and the classroom experience. Please let us know in this [Introduction to AI Teacher Survey](https://docs.google.com/forms/d/e/1FAIpQLSd5Usml_xrjQQ8DdBmZjQc771LcB13FKukCYc3NGLKfVwIneg/viewform).",
+        "description": "We'd love to learn more about the folks teaching these lessons and the classroom experience. Please let us know in this [How AI Works Teacher Survey](https://docs.google.com/forms/d/e/1FAIpQLSd5Usml_xrjQQ8DdBmZjQc771LcB13FKukCYc3NGLKfVwIneg/viewform).",
         "name": "Teacher Survey"
       },
       "seeding_key": {
@@ -3770,7 +3623,7 @@
       "key": "ca0eb773-44d3-4664-aa7c-74eb256866f4",
       "position": 1,
       "properties": {
-        "description": "We'd love to learn more about the folks teaching these lessons and the classroom experience. Please let us know in this [Introduction to AI Teacher Survey](https://docs.google.com/forms/d/e/1FAIpQLSd5Usml_xrjQQ8DdBmZjQc771LcB13FKukCYc3NGLKfVwIneg/viewform).",
+        "description": "We'd love to learn more about the folks teaching these lessons and the classroom experience. Please let us know in this [How AI Works Teacher Survey](https://docs.google.com/forms/d/e/1FAIpQLSd5Usml_xrjQQ8DdBmZjQc771LcB13FKukCYc3NGLKfVwIneg/viewform).",
         "name": "Teacher Survey"
       },
       "seeding_key": {
@@ -3912,6 +3765,56 @@
       "assessment": false,
       "properties": {
         "level_keys": [
+          "LLM - Written Voice Simulator"
+        ],
+        "progression": "Written Voice Simulator Widget"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "LLM - Written Voice Simulator"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "ai-temp",
+        "activity_section.key": "8c5e5a5d-6815-43d6-9896-86064abf0e9a"
+      },
+      "level_keys": [
+        "LLM - Written Voice Simulator"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "LLM - Eliza"
+        ],
+        "progression": "Eliza Widget"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "LLM - Eliza"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "ai-temp",
+        "activity_section.key": "3e9ffcbf-9d1a-44d1-9670-7ef4059a7131"
+      },
+      "level_keys": [
+        "LLM - Eliza"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
           "U9L5 Cropping Widget_introai"
         ],
         "progression": "Cropping Widget"
@@ -3928,56 +3831,6 @@
       },
       "level_keys": [
         "U9L5 Cropping Widget_introai"
-      ]
-    },
-    {
-      "chapter": 7,
-      "position": 2,
-      "activity_section_position": 1,
-      "assessment": true,
-      "properties": {
-        "level_keys": [
-          "csp_U9L7_CFU12022_introai"
-        ],
-        "progression": "Check For Understanding"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csp_U9L7_CFU12022_introai"
-        ],
-        "lesson.key": "Algorithmic Bias",
-        "lesson_group.key": "",
-        "script.name": "ai-temp",
-        "activity_section.key": "71c7f0b9-5087-412b-a759-a804597ab2c6"
-      },
-      "level_keys": [
-        "csp_U9L7_CFU12022_introai"
-      ]
-    },
-    {
-      "chapter": 8,
-      "position": 3,
-      "activity_section_position": 2,
-      "assessment": true,
-      "properties": {
-        "level_keys": [
-          "U9L7 Free Response_introai"
-        ],
-        "progression": "Check For Understanding"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "U9L7 Free Response_introai"
-        ],
-        "lesson.key": "Algorithmic Bias",
-        "lesson_group.key": "",
-        "script.name": "ai-temp",
-        "activity_section.key": "71c7f0b9-5087-412b-a759-a804597ab2c6"
-      },
-      "level_keys": [
-        "U9L7 Free Response_introai"
       ]
     }
   ],
@@ -4044,6 +3897,30 @@
     },
     {
       "seeding_key": {
+        "level.key": "LLM - Written Voice Simulator",
+        "script_level.level_keys": [
+          "LLM - Written Voice Simulator"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "ai-temp",
+        "activity_section.key": "8c5e5a5d-6815-43d6-9896-86064abf0e9a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "LLM - Eliza",
+        "script_level.level_keys": [
+          "LLM - Eliza"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "ai-temp",
+        "activity_section.key": "3e9ffcbf-9d1a-44d1-9670-7ef4059a7131"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "U9L5 Cropping Widget_introai",
         "script_level.level_keys": [
           "U9L5 Cropping Widget_introai"
@@ -4052,30 +3929,6 @@
         "lesson_group.key": "",
         "script.name": "ai-temp",
         "activity_section.key": "b5e783c8-914b-4fd5-a1e1-200c1aaa5add"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "csp_U9L7_CFU12022_introai",
-        "script_level.level_keys": [
-          "csp_U9L7_CFU12022_introai"
-        ],
-        "lesson.key": "Algorithmic Bias",
-        "lesson_group.key": "",
-        "script.name": "ai-temp",
-        "activity_section.key": "71c7f0b9-5087-412b-a759-a804597ab2c6"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "U9L7 Free Response_introai",
-        "script_level.level_keys": [
-          "U9L7 Free Response_introai"
-        ],
-        "lesson.key": "Algorithmic Bias",
-        "lesson_group.key": "",
-        "script.name": "ai-temp",
-        "activity_section.key": "71c7f0b9-5087-412b-a759-a804597ab2c6"
       }
     }
   ],
@@ -4129,7 +3982,7 @@
       }
     },
     {
-      "name": "Introduction to AI - What is Machine Learning?",
+      "name": "How AI Works - What is Machine Learning?",
       "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
       "key": "ai_what_is_machine_learning_",
       "properties": {
@@ -4192,6 +4045,18 @@
       }
     },
     {
+      "name": "Eliza Activity Guide",
+      "url": "https://docs.google.com/document/d/1IIca15ohoVq2lTLNUAOqQMUT7YgsTLp8yIPfmEnLmXo/edit#heading=h.17wewdcvexo6",
+      "key": "eliza_activity_guide",
+      "properties": {
+        "audience": "Student",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "eliza_activity_guide"
+      }
+    },
+    {
       "name": "Generative LLM",
       "url": "https://docs.google.com/presentation/d/10d_TM6rucYyt8DAuPVoAZ9mgt9v-zzRWcM2A7geDIp0/copy",
       "key": "generative_llm",
@@ -4204,19 +4069,7 @@
       }
     },
     {
-      "name": "Generative LLM Guide",
-      "url": "https://docs.google.com/document/d/1e9CLjhlrADSDx79CdWqAkDLneq7Xj1XH3ZgJJX2EN0I/edit?usp=sharing",
-      "key": "generative_llm_guide",
-      "properties": {
-        "audience": "Student",
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "generative_llm_guide"
-      }
-    },
-    {
-      "name": "Introduction to AI",
+      "name": "How AI Works",
       "url": "https://docs.google.com/presentation/d/1Ca1i3-7p6sjC16TuEVF5chfC6Fw3ecM12inLOFXEKQg/template/preview",
       "key": "introduction_to_ai",
       "properties": {
@@ -4228,7 +4081,7 @@
       }
     },
     {
-      "name": "Introduction to AI - Privacy and Future of Work",
+      "name": "How AI Works - Privacy and Future of Work",
       "url": "https://youtu.be/zNxw5gJtHLc",
       "key": "introduction_to_ai_-_privacy_and_future_of_work",
       "properties": {
@@ -4240,7 +4093,7 @@
       }
     },
     {
-      "name": "Introduction to AI - Societal Impact",
+      "name": "How AI Works - Societal Impact",
       "url": "https://youtu.be/tJQSyzBUAew",
       "key": "introduction_to_ai_-_societal_impact",
       "properties": {
@@ -4252,7 +4105,7 @@
       }
     },
     {
-      "name": "Introduction to AI - Training Data and Bias",
+      "name": "How AI Works - Training Data and Bias",
       "url": "https://youtu.be/x2mRoFNm22g",
       "key": "introduction_to_ai_-_training_data_and_bias",
       "properties": {
@@ -4264,7 +4117,7 @@
       }
     },
     {
-      "name": "Introduction to AI: Ethics & AI: Equal Access and Algorithmic Bias",
+      "name": "How AI Works: Ethics & AI: Equal Access and Algorithmic Bias",
       "url": "https://youtu.be/tJQSyzBUAew",
       "key": "introduction_to_ai_ethics_ai_equal_access_and_algorithmic_bias",
       "properties": {
@@ -4276,7 +4129,7 @@
       }
     },
     {
-      "name": "Introduction to AI: Ethics & AI: Privacy & the Future of Work",
+      "name": "How AI Works: Ethics & AI: Privacy & the Future of Work",
       "url": "https://youtu.be/zNxw5gJtHLc",
       "key": "introduction_to_ai_ethics_ai_privacy_the_future_of_work",
       "properties": {
@@ -4288,7 +4141,7 @@
       }
     },
     {
-      "name": "Introduction to AI: How Computer Vision Works",
+      "name": "How AI Works: How Computer Vision Works",
       "url": "https://youtu.be/2hXG8v8p0KM",
       "key": "introduction_to_ai_how_computer_vision_works",
       "properties": {
@@ -4300,7 +4153,7 @@
       }
     },
     {
-      "name": "Introduction to AI: How Computer Vision Works",
+      "name": "How AI Works: How Computer Vision Works",
       "url": "https://youtu.be/2hXG8v8p0KM",
       "key": "introduction_to_ai_how_computer_vision_works_1",
       "properties": {
@@ -4312,7 +4165,7 @@
       }
     },
     {
-      "name": "Introduction to AI: How Neural Networks Work",
+      "name": "How AI Works: How Neural Networks Work",
       "url": "https://youtu.be/JrXazCEACVo",
       "key": "introduction_to_ai_how_neural_networks_work",
       "properties": {
@@ -4324,7 +4177,7 @@
       }
     },
     {
-      "name": "Introduction to AI: How Neural Networks Work",
+      "name": "How AI Works: How Neural Networks Work",
       "url": "https://youtu.be/JrXazCEACVo",
       "key": "introduction_to_ai_how_neural_networks_work_1",
       "properties": {
@@ -4336,7 +4189,7 @@
       }
     },
     {
-      "name": "Introduction to AI: Introduction",
+      "name": "How AI Works: Introduction",
       "url": "https://youtu.be/Ok-xpKjKp2g",
       "key": "introduction_to_ai_introduction",
       "properties": {
@@ -4348,7 +4201,7 @@
       }
     },
     {
-      "name": "Introduction to AI: Training Data and Bias",
+      "name": "How AI Works: Training Data and Bias",
       "url": "https://youtu.be/x2mRoFNm22g",
       "key": "introduction_to_ai_training_data_and_bias",
       "properties": {
@@ -4360,7 +4213,7 @@
       }
     },
     {
-      "name": "Introduction to AI: What is Machine Learning?",
+      "name": "How AI Works: What is Machine Learning?",
       "url": "https://youtu.be/KHbwOetbmbs",
       "key": "introduction_to_ai_what_is_machine_learning_",
       "properties": {
@@ -4457,6 +4310,18 @@
       }
     },
     {
+      "name": "Video and Vocabulary Guide",
+      "url": "https://docs.google.com/document/d/1zPGOdJ1rcdF7e7CzGXHb4JaWYFMEPX9aeZf4DtbQhNI/edit#heading=h.l82l1gv9gtj4",
+      "key": "video_and_vocabulary_guide",
+      "properties": {
+        "audience": "Student",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "video_and_vocabulary_guide"
+      }
+    },
+    {
       "name": "Vocabulary Matching",
       "url": "https://docs.google.com/document/d/1Tbz8ULln11yU1hpD73OzgRUnujWjdpdOi8fKQsOAiIk/edit",
       "key": "vocabulary_matching",
@@ -4491,6 +4356,18 @@
       },
       "seeding_key": {
         "resource.key": "what_a_neural_network_sees"
+      }
+    },
+    {
+      "name": "Written Voice Simulator Guide",
+      "url": "https://docs.google.com/document/d/1pebKlY2-pFCw-Zo_nI8cLXYT_eyfn3AKzkwvEmkjo2c/edit#heading=h.sa1769guz3cn",
+      "key": "written_voice_simulator_guide",
+      "properties": {
+        "audience": "Student",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "written_voice_simulator_guide"
       }
     }
   ],
@@ -4690,13 +4567,25 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-7",
+        "resource.key": "eliza_activity_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
         "resource.key": "generative_llm"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "lesson-7",
-        "resource.key": "generative_llm_guide"
+        "resource.key": "video_and_vocabulary_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "resource.key": "written_voice_simulator_guide"
       }
     }
   ],

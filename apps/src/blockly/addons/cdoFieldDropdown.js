@@ -7,14 +7,36 @@ import {
 
 export default class CdoFieldDropdown extends GoogleBlockly.FieldDropdown {
   /**
-   * Add special case for '???'.
-   * @override
+   * Ensure that the input value is a valid language-neutral option.
+   * @param newValue The input value.
+   * @returns A valid language-neutral option, or null if invalid.
+   * @override Add special case for '???' and accommodate valid initial values that are not surrounded
+   * by quotes in xml.
    */
   doClassValidation_(newValue) {
     if (newValue === EMPTY_OPTION) {
       return newValue;
     } else {
-      return super.doClassValidation_(newValue);
+      for (const option of this.getOptions(true)) {
+        if (option[1] === newValue) {
+          return newValue;
+        } else if (option[1] === `"${newValue}"`) {
+          return `"${newValue}"`;
+        }
+      }
+
+      if (this.sourceBlock_) {
+        console.warn(
+          "Cannot set the dropdown's value to an unavailable option." +
+            ' Block type: ' +
+            this.sourceBlock_.type +
+            ', Field name: ' +
+            this.name +
+            ', Value: ' +
+            newValue
+        );
+      }
+      return null;
     }
   }
 

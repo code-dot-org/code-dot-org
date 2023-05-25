@@ -19,7 +19,16 @@
 :javascript
   var mdEditor = levelbuilder.initializeCodeMirror('level_long_instructions', 'markdown', {
     callback: function (editor, change) {
-      convertXmlToBlockly(document.getElementById('level_long_instructions_preview'));
+      const xmlContainer = document.getElementById('level_long_instructions_preview');
+
+                // Prevent rendering multiple copies of a block svgs by removing
+                // all Blockly SVG containers before converting any XML into blocks.
+                const blocklySvgs = xmlContainer.querySelectorAll('svg.blocklySvg.readOnlyBlockSpace');
+                // Loop through each svg element and remove its parent element
+                blocklySvgs.forEach(svg => {
+                  svg.parentNode.remove();
+                });
+      convertXmlToBlockly(xmlContainer);
 
       localStorage.setItem('markdown_' + '#{@level.id || html_escape(params[:type])}', editor.getValue());
     },

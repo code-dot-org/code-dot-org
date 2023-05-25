@@ -3,7 +3,7 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Day 2, Asynchronous Part I
+# Day 3, Asynchronous Part 1
 
 ##### Welcome! In this asynchronous module, you will explore data related to access to CS education. The activities in this lesson will prepare you to engage in the discussions in synchronous sessions. 
 
@@ -13,7 +13,7 @@ markdown <<MARKDOWN
 
 * ##### Define access, diversity, and inclusion.
 * ##### Explore CS access data.
-* ##### Complete any remaining challenges you'd like to finish from this morning's TLO.
+* ##### Complete any remaining challenges from the TLO.
 
 ### **Suggested time:** 60 minutes
 
