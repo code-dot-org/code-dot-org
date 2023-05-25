@@ -655,10 +655,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
 
     workspace.registerToolboxCategoryCallback(
       'BLOCK_FLYOUT',
-      function (workspace) {
-        console.log('BLOCK_FLYOUT callback');
-        return [];
-      }
+      Blockly.blockFlyoutCallback
     );
     return workspace;
   };
