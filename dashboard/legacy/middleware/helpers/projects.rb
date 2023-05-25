@@ -488,6 +488,7 @@ class Projects
   # I observed thumbnail URLs of remixed projects having having the channel ID of the parent project,
   # so we assert on the start/end of the URL
   def valid_thumbnail_url?(thumbnail_url)
-    thumbnail_url.start_with?('/v3/files/') && thumbnail_url.end_with?('.metadata/thumbnail.png')
+    (thumbnail_url.start_with?('/v3/files/') && thumbnail_url.end_with?('.metadata/thumbnail.png')) ||
+      thumbnail_url.start_with?('/blockly/media')
   end
 end
