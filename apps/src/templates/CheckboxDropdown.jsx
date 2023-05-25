@@ -40,7 +40,7 @@ const CheckboxDropdown = ({
       <button
         id={`${name}-dropdown-button`}
         type="button"
-        className="selectbox"
+        className={classnames('selectbox', style.dropdownButton)}
         data-toggle="dropdown"
         aria-haspopup={true}
         aria-label={`${name} filter dropdown`}
@@ -52,7 +52,9 @@ const CheckboxDropdown = ({
             title={i18n.filterCheckIconTitle({filter_label: label})}
           />
         )}
-        {label}
+        <Typography semanticTag="span" visualAppearance="body-one">
+          {label}
+        </Typography>
         <FontAwesome id={'chevron-down-icon'} icon={'chevron-down'} />
       </button>
       <form
@@ -69,6 +71,7 @@ const CheckboxDropdown = ({
                   checked={checkedOptions.includes(optionKey)}
                   onChange={onChange}
                 />
+                <i className="fa fa-solid" />
                 <Typography semanticTag="span" visualAppearance="body-one">
                   {allOptions[optionKey]}
                 </Typography>

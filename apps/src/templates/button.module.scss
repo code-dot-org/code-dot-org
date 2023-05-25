@@ -329,5 +329,9 @@ a:visited,
     &:hover {
       color: $brand_secondary_dark;
     }
+
+    &:focus {
+      @include focus-outline;
+    }
   }
 }

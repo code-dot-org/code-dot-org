@@ -1,7 +1,25 @@
 @import "color.scss";
 
+
+button.dropdownButton {
+  background-color: $neutral_light;
+  border: 1px solid $neutral_dark;
+  border-radius: 4px;
+  padding: 8px 12px;
+
+  i {
+    font-size: 19px;
+    width: 1.25em;
+    line-height: 1.25em;
+  }
+
+  span {
+    margin: 0 4px;
+  }
+}
+
 form.dropDownMenuContainer {
-  padding: 0;
+  padding: 5px 0;
 }
 
 .dropdownCheckboxUL {
@@ -10,21 +28,26 @@ form.dropDownMenuContainer {
   padding: 0;
 
   li {
-    padding: 16px;
+    padding: 12px 8px;
 
     &:hover {
       background-color: $neutral_dark10;
     }
 
-    &:focus {
-      outline: 2px solid $neutral_dark;
+    &:focus-within {
+      outline: 2px solid $brand_primary_default;
     }
 
 
     label {
       display: flex;
-      align-items: baseline;
+      align-items: flex-end;
       gap: 12px;
+      margin: 0;
+
+      span {
+        margin: 0;
+      }
     }
 
   }
@@ -34,11 +57,30 @@ form.dropDownMenuContainer {
     height: 24px;
     border: none;
     border-radius: 4px;
-    outline: 2px solid $neutral_dark;
+    accent-color: $brand_primary_default;
     margin: 0;
     float: unset;
 
+    &:checked {
+      +i::before {
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+        vertical-align: bottom;
+        margin-right: 10px;
+        line-height: 20px;
+        text-align: center;
+        box-shadow: inset 0 1px 1px rgb(0 0 0 / 0.075);
+        content: "\f00c";
+        background: red;
+        border: 2px solid blue;
+        border-radius: 4px;
+
+      }
+    }
   }
+
+
 }
 
 .affectAllButton {
@@ -49,6 +91,7 @@ form.dropDownMenuContainer {
 .bottomButtonsContainer {
   display: flex;
   border-top: 1px solid $neutral_dark20;
+  gap: 40px;
 
   button span {
     margin: 0;
