@@ -403,12 +403,19 @@ class ChannelsTest < Minitest::Test
 
     # These hidden and frozen projects should be skipped when considering most_recent
     post '/v3/channels', {hidden: true, level: 'projects/abc'}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+    hidden_channel_id = last_response.location.split('/').last
+
+    Timecop.travel 1
+
     post '/v3/channels', {frozen: true, level: 'projects/xyz'}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
 
     user_storage_id = storage_decrypt_id CGI.unescape @session.cookie_jar[storage_id_cookie_name]
 
     assert_equal abc_channel_id, Projects.new(user_storage_id).most_recent('abc')
     assert_equal xyz_channel_id, Projects.new(user_storage_id).most_recent('xyz')
+
+    # Includes hidden projects if include_hidden is true
+    assert_equal hidden_channel_id, Projects.new(user_storage_id).most_recent('abc', include_hidden: true)
   ensure
     Timecop.return
   end
