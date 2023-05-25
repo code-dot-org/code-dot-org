@@ -39,15 +39,15 @@ export default {
   component: TeacherHomepage,
 };
 
-const Template = (fakeServerArgs, args) => {
-  withFakeServer(fakeServerArgs);
+const Template = args => {
+  withFakeServer(args.fakeServerArgs);
   return (
     <Provider store={reduxStore({teacherSections})}>
       <TeacherHomepage
         announcements={[announcement]}
         isEnglish={true}
         showCensusBanner={false}
-        {...args}
+        {...args.props}
       />
     </Provider>
   );
@@ -55,79 +55,93 @@ const Template = (fakeServerArgs, args) => {
 
 export const NoCoursesNoSections = Template.bind({});
 NoCoursesNoSections.args = {
-  courses: [],
-  plCourses: [],
-  joinedStudentSections: [],
-  joinedPlSections: [],
+  props: {
+    courses: [],
+    plCourses: [],
+    joinedStudentSections: [],
+    joinedPlSections: [],
+  },
 };
 
 export const CoursesNoSections = Template.bind({});
-CoursesNoSections.fakeServerArgs = {courses: serverCourses};
 CoursesNoSections.args = {
-  topCourse: topCourse,
-  courses: courses,
-  joinedStudentSections: [],
-  joinedPlSections: [],
+  fakeServerArgs: {courses: serverCourses},
+  props: {
+    topCourse: topCourse,
+    courses: courses,
+    joinedStudentSections: [],
+    joinedPlSections: [],
+  },
 };
 
 export const NoCoursesSections = Template.bind({});
-NoCoursesSections.fakeServerArgs = {sections: serverSections};
 NoCoursesSections.args = {
-  courses: [],
-  joinedStudentSections: [],
-  joinedPlSections: [],
+  fakeServerArgs: {sections: serverSections},
+  props: {
+    courses: [],
+    joinedStudentSections: [],
+    joinedPlSections: [],
+  },
 };
 
 export const CoursesSections = Template.bind({});
-CoursesSections.fakeServerArgs = {
-  courses: serverCourses,
-  sections: serverSections,
-};
 CoursesSections.args = {
-  courses: courses,
-  topCourse: topCourse,
-  joinedStudentSections: [],
-  joinedPlSections: [],
+  fakeServerArgs: {
+    courses: serverCourses,
+    sections: serverSections,
+  },
+  props: {
+    courses: courses,
+    topCourse: topCourse,
+    joinedStudentSections: [],
+    joinedPlSections: [],
+  },
 };
 
 export const CoursesSectionsStudentSections = Template.bind({});
-CoursesSectionsStudentSections.fakeServerArgs = {
-  courses: serverCourses,
-  sections: serverSections,
-};
 CoursesSectionsStudentSections.args = {
-  courses: courses,
-  topCourse: topCourse,
-  joinedStudentSections: joinedSections,
-  joinedPlSections: [],
+  fakeServerArgs: {
+    courses: serverCourses,
+    sections: serverSections,
+  },
+  props: {
+    courses: courses,
+    topCourse: topCourse,
+    joinedStudentSections: joinedSections,
+    joinedPlSections: [],
+  },
 };
 
 export const StudentAndPLCoursesSectionsStudentSections = Template.bind({});
-StudentAndPLCoursesSectionsStudentSections.fakeServerArgs = {
-  courses: serverCourses,
-  sections: serverSections,
-};
 StudentAndPLCoursesSectionsStudentSections.args = {
-  courses: courses,
-  topCourse: topCourse,
-  plCourses: plCourses,
-  topPlCourse: topPlCourse,
-  joinedStudentSections: joinedSections,
-  joinedPlSections: [],
+  fakeServerArgs: {
+    courses: serverCourses,
+    sections: serverSections,
+  },
+  props: {
+    courses: courses,
+    topCourse: topCourse,
+    plCourses: plCourses,
+    topPlCourse: topPlCourse,
+    joinedStudentSections: joinedSections,
+    joinedPlSections: [],
+  },
 };
 
 export const CoursesSectionsAndJoinedPLSections = Template.bind({});
-CoursesSectionsAndJoinedPLSections.fakeServerArgs = {
-  courses: serverCourses,
-  sections: serverSections,
-};
 CoursesSectionsAndJoinedPLSections.args = {
-  courses: courses,
-  topCourse: topCourse,
-  plCourses: plCourses,
-  topPlCourse: topPlCourse,
-  joinedStudentSections: [],
-  joinedPlSections: joinedPlSections,
+  fakeServerArgs: {
+    courses: serverCourses,
+    sections: serverSections,
+  },
+  props: {
+    courses: courses,
+    topCourse: topCourse,
+    plCourses: plCourses,
+    topPlCourse: topPlCourse,
+    joinedStudentSections: [],
+    joinedPlSections: joinedPlSections,
+  },
 };
 
 function withFakeServer({courses = [], sections = []} = {}) {
