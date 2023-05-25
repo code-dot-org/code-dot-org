@@ -38,7 +38,7 @@ Feature: GDPR Dialog - data transfer agreement
     Given I am on "http://studio.code.org/home?force_in_eu=1"
     Then element ".ui-test-gdpr-dialog" is visible
     Then I click selector ".ui-test-gdpr-dialog-accept"
-    Then element ".ui-test-gdpr-dialog" is not visible
+    Then I wait until element ".ui-test-gdpr-dialog" is not visible
     Then I sign out
     Given I sign in as "Madame Maxime" and go home
     Then I wait to see ".header_user"
