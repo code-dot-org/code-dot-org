@@ -2,7 +2,7 @@ class Grade
   def initialize
   end
 
-  def grade_student_work(prompt, rubric, student_code, student_id, use_cached: false, examples: [])
+  def grade_student_work(prompt, rubric, student_code, student_id, use_cached: false, examples: [], num_responses:, temperature:)
     if use_cached && File.exist?("cached_responses/#{student_id}.txt")
       cached_response = File.read("cached_responses/#{student_id}.txt")
       tsv_data = parse_tsv(cached_response.strip)
@@ -18,8 +18,9 @@ class Grade
     messages = compute_messages(prompt, rubric, student_code, examples: examples)
     data = {
       model: 'gpt-4',
-      temperature: 0,
+      temperature: temperature,
       messages: messages,
+      n: num_responses,
     }
 
     start_time = Time.now

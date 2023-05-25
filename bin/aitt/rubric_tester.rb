@@ -14,7 +14,9 @@ VALID_GRADES = ["Extensive Evidence", "Convincing Evidence", "Limited Evidence",
 def command_line_options
   options = {
     output_filename: 'report.html',
-    max_num_students: 100
+    max_num_students: 100,
+    n: 1,
+    temperature: 0.0
   }
   OptionParser.new do |opts|
     opts.banner = "Usage: #{$0} [options]"
@@ -46,6 +48,13 @@ def command_line_options
     end
 
     opts.on(
+      '-n', '--num-responses N', Integer, 'Number of responses to generate for each student. Defaults to 1.',
+      'If greater than 1, grade will be determined via majority vote.'
+    ) do |num_responses|
+      options[:num_responses] = num_responses
+    end
+
+    opts.on(
       '-p', '--num-passing-grades N', Integer, 'Number of grades which are considered passing.',
       'If specified, report based on whether the pass/fail result is accurate for each criteria.',
       'For example, N=2 means that Extensive Evidence and Convincing Evidence are both passing.'
@@ -63,6 +72,13 @@ def command_line_options
       '--student-ids STUDENT_1,STUDENT_2', Array, 'Comma-separated list of student ids to grade. Defaults to all students.'
     ) do |student_ids|
       options[:student_ids] = student_ids
+    end
+
+    # parameter for setting the temperature of the LLM
+    opts.on(
+      '-t', '--temperature T', Float, 'Temperature of the LLM. Defaults to 0.0.'
+    ) do |temperature|
+      options[:temperature] = temperature
     end
 
     opts.on("-h", "--help", "Prints this help message") do
@@ -246,7 +262,17 @@ def main
   actual_grades = Parallel.map(student_files, in_threads: 7) do |student_file|
     student_id = File.basename(student_file, '.js')
     student_code = File.read(student_file)
-    [student_id, Grade.new.grade_student_work(prompt, rubric, student_code, student_id, use_cached: options[:use_cached], examples: examples)]
+    grades = Grade.new.grade_student_work(
+      prompt,
+      rubric,
+      student_code,
+      student_id,
+      use_cached: options[:use_cached],
+      examples: examples,
+      num_responses: options[:num_responses],
+      temperature: options[:temperature]
+    )
+    [student_id, grades]
   end
 
   # skip students with invalid api response
