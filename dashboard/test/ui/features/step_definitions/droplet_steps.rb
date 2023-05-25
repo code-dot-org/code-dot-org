@@ -123,6 +123,12 @@ Given /^I publish a basic library in (Applab|Game Lab)$/ do |lab_type|
   steps <<-STEPS
     And I start a new #{lab_type} project
     And I wait for the page to fully load
+    And I wait for 500 seconds
+    # TODO ASK ABOUT THIS, see features/star_labs/gamelab/libraries.feature:5
+    # the browser shows "saved a few seconds ago" after a couple seconds
+    # but dashboard.project.__TestInterface.isInitialSaveComplete()
+    # takes almost 20-30s to return true
+    # is this expected, or is this some sort of regression?
     And I wait for initial project save to complete
     And I switch to text mode
     When I add code for a library function
