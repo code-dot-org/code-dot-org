@@ -141,23 +141,17 @@ module Cdo
       exception.set_backtrace []
       raise
     end
-
-    # If +value+ is JSON, parse it.
-    #
-    # If +value+ is a JSON array, return it.
-    #
-    # If +value+ is a JSON object, wrap in ActiveSupport::OrderedOptions so
-    # property-method lookup chains are possible (e.g., secrets.secret.key).
-    #
+    
+    # If +value+ is a JSON array, return an Array.
+    # If +value+ is JSON return its string representation.
     # Otherwise, cast the value to a string.
     #
     # @param value[String]
-    # @return [Array, ActiveSupport::OrderedOptions, String]
+    # @return [Array, String]
     private def parse_json(value)
       parsed = JSON.parse(value)
       return parsed if parsed.is_a?(Array)
-      return ActiveSupport::OrderedOptions[parsed.symbolize_keys] if parsed.is_a?(Hash)
-      return parsed.to_s
+      return value
     rescue JSON::ParserError, TypeError
       value
     end
