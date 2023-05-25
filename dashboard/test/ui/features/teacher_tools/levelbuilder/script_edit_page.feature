@@ -1,5 +1,6 @@
 @no_mobile
 @no_safari
+@levelbuilder
 Feature: Using the Unit Edit Page
 
 Scenario: View the unit edit page

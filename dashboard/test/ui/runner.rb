@@ -111,6 +111,7 @@ def parse_options
     options.advocacy_domain = 'test-advocacy.code.org'
     options.local = nil
     options.local_headless = true
+    options.levelbuilder = false
     options.html = nil
     options.maximize = nil
     options.auto_retry = false
@@ -176,6 +177,9 @@ def parse_options
       end
       opts.on("-r", "--real_mobile_browser", "Use real mobile browser, not emulator") do
         options.realmobile = 'true'
+      end
+      opts.on("--levelbuilder", "Run levelbuilder tests (skips by default unless RACK_ENV is test or levelbuilder)") do
+        options.levelbuilder = true
       end
       opts.on("-m", "--maximize", "Maximize local webdriver window on startup") do
         options.maximize = true
@@ -696,6 +700,11 @@ def cucumber_arguments_for_browser(browser, options)
   arguments += skip_tag('@dashboard_db_access') unless options.dashboard_db_access
   arguments += skip_tag('@rails_env_test') unless env.test?
   arguments += skip_tag('@no_mac') if (options.local && OS.mac?) || browser['platformName'].starts_with?('macOS')
+  # @snickellLOOK INTO THIS BEFORE CONSIDERING MERGING:
+  # this parallels logic in application_controller.rb require_levelbuilder_mode_or_test_env
+  # except that that method ALSO checks Rails.application.config.levelbuilder_mode
+  # which we prolly can't do because loading 'config/environment' would add 10s to runner.rb startup :-P
+  arguments += skip_tag('@levelbuilder') unless options.levelbuilder || ['test', 'levelbuilder'].include?(env)
   arguments
 end
 

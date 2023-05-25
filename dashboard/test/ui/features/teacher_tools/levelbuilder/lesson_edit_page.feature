@@ -1,5 +1,5 @@
 @no_mobile
-
+@levelbuilder
 Feature: Using the Lesson Edit Page
   Scenario: Save changes using the lesson edit page for lesson without lesson plan
     Given I create a levelbuilder named "Levi"

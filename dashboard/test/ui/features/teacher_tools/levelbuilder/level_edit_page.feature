@@ -1,4 +1,5 @@
 @no_mobile
+@levelbuilder
 Feature: Using the Level Edit Page
 
   Scenario: Update a Multi level
