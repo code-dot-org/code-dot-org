@@ -1,4 +1,5 @@
 @no_mobile
+@levelbuilder
 Feature: Creating and deleting data docs
 
   Scenario: Create new data doc, see it on index page, and delete it

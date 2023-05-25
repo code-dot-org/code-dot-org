@@ -1,4 +1,5 @@
 @no_mobile
+@levelbuilder
 Feature: Using the New Unit Page
 
   Scenario: Create a new unit
