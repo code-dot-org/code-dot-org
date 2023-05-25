@@ -4,6 +4,7 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "hideable_lessons": true,
       "include_student_lesson_plans": true,
       "is_course": true,
       "is_migrated": true,
@@ -11,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "ai-temp",
-    "serialized_at": "2023-05-23 23:29:18 UTC",
+    "serialized_at": "2023-05-24 22:32:49 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -91,7 +92,7 @@
     },
     {
       "key": "lesson-7",
-      "name": "Large Language Models (LLMs)",
+      "name": "Chatbots and Large Language Models (LLMs)",
       "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
@@ -161,13 +162,13 @@
     },
     {
       "key": "Blockchain In a Day",
-      "name": "Introduction to AI In a Day",
+      "name": "How AI Works In a Day",
       "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
-        "overview": "⚠️This lesson is intended for classrooms that want to show the entire Introduction to AI video series in a **single day**. It is not intended to be taught in sequence with the other lessons in this unit, which introduces each video one day at a time.\n\nStudents follow along with each video by matching vocabulary from the video, then answering a reflection question about each video. The lesson plan and slides are very sparse and open-ended to allow for improvisation and customization to fit your classroom."
+        "overview": "⚠️This lesson is intended for classrooms that want to show the entire How AI Works video series in a **single day**. It is not intended to be taught in sequence with the other lessons in this unit, which introduces each video one day at a time.\n\nStudents follow along with each video by matching vocabulary from the video, then answering a reflection question about each video. The lesson plan and slides are very sparse and open-ended to allow for improvisation and customization to fit your classroom."
       },
       "seeding_key": {
         "lesson.key": "Blockchain In a Day",
@@ -549,7 +550,7 @@
       "position": 1,
       "properties": {
         "duration": 5,
-        "name": "Introduction to AI"
+        "name": "How AI Works"
       },
       "seeding_key": {
         "lesson_activity.key": "4a5a98de-b492-47df-95a0-6aceefa69ffd",
@@ -1042,7 +1043,7 @@
       "key": "06bdab50-c475-4990-bb5a-31bb6c04ca21",
       "position": 1,
       "properties": {
-        "description": "We'd love to learn more about the folks teaching these lessons and the classroom experience. Please let us know in this [Introduction to AI Teacher Survey](https://docs.google.com/forms/d/e/1FAIpQLSd5Usml_xrjQQ8DdBmZjQc771LcB13FKukCYc3NGLKfVwIneg/viewform).",
+        "description": "We'd love to learn more about the folks teaching these lessons and the classroom experience. Please let us know in this [How AI Works Teacher Survey](https://docs.google.com/forms/d/e/1FAIpQLSd5Usml_xrjQQ8DdBmZjQc771LcB13FKukCYc3NGLKfVwIneg/viewform).",
         "name": "Teacher Survey"
       },
       "seeding_key": {
@@ -1779,7 +1780,7 @@
       "key": "7dec4bea-c382-45c7-bff3-98501fe3e2a1",
       "position": 1,
       "properties": {
-        "description": "We'd love to learn more about the folks teaching these lessons and the classroom experience. Please let us know in this [Introduction to AI Teacher Survey](https://docs.google.com/forms/d/e/1FAIpQLSd5Usml_xrjQQ8DdBmZjQc771LcB13FKukCYc3NGLKfVwIneg/viewform).",
+        "description": "We'd love to learn more about the folks teaching these lessons and the classroom experience. Please let us know in this [How AI Works Teacher Survey](https://docs.google.com/forms/d/e/1FAIpQLSd5Usml_xrjQQ8DdBmZjQc771LcB13FKukCYc3NGLKfVwIneg/viewform).",
         "name": "Teacher Survey"
       },
       "seeding_key": {
@@ -2425,7 +2426,7 @@
       "key": "6cb8ca17-699f-4733-aaee-43d078ae5db6",
       "position": 1,
       "properties": {
-        "description": "We'd love to learn more about the folks teaching these lessons and the classroom experience. Please let us know in this [Introduction to AI Teacher Survey](https://docs.google.com/forms/d/e/1FAIpQLSd5Usml_xrjQQ8DdBmZjQc771LcB13FKukCYc3NGLKfVwIneg/viewform).",
+        "description": "We'd love to learn more about the folks teaching these lessons and the classroom experience. Please let us know in this [How AI Works Teacher Survey](https://docs.google.com/forms/d/e/1FAIpQLSd5Usml_xrjQQ8DdBmZjQc771LcB13FKukCYc3NGLKfVwIneg/viewform).",
         "name": "Teacher Survey"
       },
       "seeding_key": {
@@ -2437,7 +2438,6 @@
       "key": "ce11fd33-a8b0-4edc-86cf-2e4c59f86b10",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:**  Give each student a copy of the \n[r generative_llm_guide/ai-temp/unversioned]"
       },
       "seeding_key": {
         "activity_section.key": "ce11fd33-a8b0-4edc-86cf-2e4c59f86b10",
@@ -3023,7 +3023,7 @@
       "key": "d7cc0b02-94a5-4416-b536-389b0c47a6ca",
       "position": 1,
       "properties": {
-        "description": "We'd love to learn more about the folks teaching these lessons and the classroom experience. Please let us know in this [Introduction to AI Teacher Survey](https://docs.google.com/forms/d/e/1FAIpQLSd5Usml_xrjQQ8DdBmZjQc771LcB13FKukCYc3NGLKfVwIneg/viewform).",
+        "description": "We'd love to learn more about the folks teaching these lessons and the classroom experience. Please let us know in this [How AI Works Teacher Survey](https://docs.google.com/forms/d/e/1FAIpQLSd5Usml_xrjQQ8DdBmZjQc771LcB13FKukCYc3NGLKfVwIneg/viewform).",
         "name": "Teacher Survey"
       },
       "seeding_key": {
@@ -3247,22 +3247,10 @@
       }
     },
     {
-      "key": "71c7f0b9-5087-412b-a759-a804597ab2c6",
-      "position": 4,
-      "properties": {
-        "description": "---\n\n### Assessment: Check For Understanding\n    \n*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\n\n**Question:** Which of the following was an unintended effect of the use of the Twitter cropping algorithm?\n",
-        "progression_name": "Check For Understanding"
-      },
-      "seeding_key": {
-        "activity_section.key": "71c7f0b9-5087-412b-a759-a804597ab2c6",
-        "lesson_activity.key": "672b41e0-8b3b-44d7-a904-aa6b84585145"
-      }
-    },
-    {
       "key": "247a4935-25fb-49e9-b4bb-eb8a95818189",
       "position": 1,
       "properties": {
-        "description": "We'd love to learn more about the folks teaching these lessons and the classroom experience. Please let us know in this [Introduction to AI Teacher Survey](https://docs.google.com/forms/d/e/1FAIpQLSd5Usml_xrjQQ8DdBmZjQc771LcB13FKukCYc3NGLKfVwIneg/viewform).",
+        "description": "We'd love to learn more about the folks teaching these lessons and the classroom experience. Please let us know in this [How AI Works Teacher Survey](https://docs.google.com/forms/d/e/1FAIpQLSd5Usml_xrjQQ8DdBmZjQc771LcB13FKukCYc3NGLKfVwIneg/viewform).",
         "name": "Teacher Survey"
       },
       "seeding_key": {
@@ -3421,10 +3409,31 @@
       }
     },
     {
+      "key": "7f41d974-785e-433b-8031-eaf571e39fe4",
+      "position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "7f41d974-785e-433b-8031-eaf571e39fe4",
+        "lesson_activity.key": "8ed127df-c40b-4809-8803-c1abd706b689"
+      }
+    },
+    {
+      "key": "38447047-80a0-4feb-a90e-5aa2548bac42",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Question of The Day:** What are guidelines we can use to create ethical machine learning apps?\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "38447047-80a0-4feb-a90e-5aa2548bac42",
+        "lesson_activity.key": "8ed127df-c40b-4809-8803-c1abd706b689"
+      }
+    },
+    {
       "key": "904e1685-6341-44a3-9acc-bfc0fa57e933",
       "position": 1,
       "properties": {
-        "description": "We'd love to learn more about the folks teaching these lessons and the classroom experience. Please let us know in this [Introduction to AI Teacher Survey](https://docs.google.com/forms/d/e/1FAIpQLSd5Usml_xrjQQ8DdBmZjQc771LcB13FKukCYc3NGLKfVwIneg/viewform).",
+        "description": "We'd love to learn more about the folks teaching these lessons and the classroom experience. Please let us know in this [How AI Works Teacher Survey](https://docs.google.com/forms/d/e/1FAIpQLSd5Usml_xrjQQ8DdBmZjQc771LcB13FKukCYc3NGLKfVwIneg/viewform).",
         "name": "Teacher Survey"
       },
       "seeding_key": {
@@ -3614,7 +3623,7 @@
       "key": "ca0eb773-44d3-4664-aa7c-74eb256866f4",
       "position": 1,
       "properties": {
-        "description": "We'd love to learn more about the folks teaching these lessons and the classroom experience. Please let us know in this [Introduction to AI Teacher Survey](https://docs.google.com/forms/d/e/1FAIpQLSd5Usml_xrjQQ8DdBmZjQc771LcB13FKukCYc3NGLKfVwIneg/viewform).",
+        "description": "We'd love to learn more about the folks teaching these lessons and the classroom experience. Please let us know in this [How AI Works Teacher Survey](https://docs.google.com/forms/d/e/1FAIpQLSd5Usml_xrjQQ8DdBmZjQc771LcB13FKukCYc3NGLKfVwIneg/viewform).",
         "name": "Teacher Survey"
       },
       "seeding_key": {
@@ -3755,6 +3764,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "LLM - Written Voice Simulator"
+        ],
         "progression": "Written Voice Simulator Widget"
       },
       "bonus": false,
@@ -3777,6 +3789,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "LLM - Eliza"
+        ],
         "progression": "Eliza Widget"
       },
       "bonus": false,
@@ -3816,56 +3831,6 @@
       },
       "level_keys": [
         "U9L5 Cropping Widget_introai"
-      ]
-    },
-    {
-      "chapter": 9,
-      "position": 2,
-      "activity_section_position": 1,
-      "assessment": true,
-      "properties": {
-        "level_keys": [
-          "csp_U9L7_CFU12022_introai"
-        ],
-        "progression": "Check For Understanding"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csp_U9L7_CFU12022_introai"
-        ],
-        "lesson.key": "Algorithmic Bias",
-        "lesson_group.key": "",
-        "script.name": "ai-temp",
-        "activity_section.key": "71c7f0b9-5087-412b-a759-a804597ab2c6"
-      },
-      "level_keys": [
-        "csp_U9L7_CFU12022_introai"
-      ]
-    },
-    {
-      "chapter": 10,
-      "position": 3,
-      "activity_section_position": 2,
-      "assessment": true,
-      "properties": {
-        "level_keys": [
-          "U9L7 Free Response_introai"
-        ],
-        "progression": "Check For Understanding"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "U9L7 Free Response_introai"
-        ],
-        "lesson.key": "Algorithmic Bias",
-        "lesson_group.key": "",
-        "script.name": "ai-temp",
-        "activity_section.key": "71c7f0b9-5087-412b-a759-a804597ab2c6"
-      },
-      "level_keys": [
-        "U9L7 Free Response_introai"
       ]
     }
   ],
@@ -3965,30 +3930,6 @@
         "script.name": "ai-temp",
         "activity_section.key": "b5e783c8-914b-4fd5-a1e1-200c1aaa5add"
       }
-    },
-    {
-      "seeding_key": {
-        "level.key": "csp_U9L7_CFU12022_introai",
-        "script_level.level_keys": [
-          "csp_U9L7_CFU12022_introai"
-        ],
-        "lesson.key": "Algorithmic Bias",
-        "lesson_group.key": "",
-        "script.name": "ai-temp",
-        "activity_section.key": "71c7f0b9-5087-412b-a759-a804597ab2c6"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "U9L7 Free Response_introai",
-        "script_level.level_keys": [
-          "U9L7 Free Response_introai"
-        ],
-        "lesson.key": "Algorithmic Bias",
-        "lesson_group.key": "",
-        "script.name": "ai-temp",
-        "activity_section.key": "71c7f0b9-5087-412b-a759-a804597ab2c6"
-      }
     }
   ],
   "resources": [
@@ -4041,7 +3982,7 @@
       }
     },
     {
-      "name": "Introduction to AI - What is Machine Learning?",
+      "name": "How AI Works - What is Machine Learning?",
       "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
       "key": "ai_what_is_machine_learning_",
       "properties": {
@@ -4128,7 +4069,7 @@
       }
     },
     {
-      "name": "Introduction to AI",
+      "name": "How AI Works",
       "url": "https://docs.google.com/presentation/d/1Ca1i3-7p6sjC16TuEVF5chfC6Fw3ecM12inLOFXEKQg/template/preview",
       "key": "introduction_to_ai",
       "properties": {
@@ -4140,7 +4081,7 @@
       }
     },
     {
-      "name": "Introduction to AI - Privacy and Future of Work",
+      "name": "How AI Works - Privacy and Future of Work",
       "url": "https://youtu.be/zNxw5gJtHLc",
       "key": "introduction_to_ai_-_privacy_and_future_of_work",
       "properties": {
@@ -4152,7 +4093,7 @@
       }
     },
     {
-      "name": "Introduction to AI - Societal Impact",
+      "name": "How AI Works - Societal Impact",
       "url": "https://youtu.be/tJQSyzBUAew",
       "key": "introduction_to_ai_-_societal_impact",
       "properties": {
@@ -4164,7 +4105,7 @@
       }
     },
     {
-      "name": "Introduction to AI - Training Data and Bias",
+      "name": "How AI Works - Training Data and Bias",
       "url": "https://youtu.be/x2mRoFNm22g",
       "key": "introduction_to_ai_-_training_data_and_bias",
       "properties": {
@@ -4176,7 +4117,7 @@
       }
     },
     {
-      "name": "Introduction to AI: Ethics & AI: Equal Access and Algorithmic Bias",
+      "name": "How AI Works: Ethics & AI: Equal Access and Algorithmic Bias",
       "url": "https://youtu.be/tJQSyzBUAew",
       "key": "introduction_to_ai_ethics_ai_equal_access_and_algorithmic_bias",
       "properties": {
@@ -4188,7 +4129,7 @@
       }
     },
     {
-      "name": "Introduction to AI: Ethics & AI: Privacy & the Future of Work",
+      "name": "How AI Works: Ethics & AI: Privacy & the Future of Work",
       "url": "https://youtu.be/zNxw5gJtHLc",
       "key": "introduction_to_ai_ethics_ai_privacy_the_future_of_work",
       "properties": {
@@ -4200,7 +4141,7 @@
       }
     },
     {
-      "name": "Introduction to AI: How Computer Vision Works",
+      "name": "How AI Works: How Computer Vision Works",
       "url": "https://youtu.be/2hXG8v8p0KM",
       "key": "introduction_to_ai_how_computer_vision_works",
       "properties": {
@@ -4212,7 +4153,7 @@
       }
     },
     {
-      "name": "Introduction to AI: How Computer Vision Works",
+      "name": "How AI Works: How Computer Vision Works",
       "url": "https://youtu.be/2hXG8v8p0KM",
       "key": "introduction_to_ai_how_computer_vision_works_1",
       "properties": {
@@ -4224,7 +4165,7 @@
       }
     },
     {
-      "name": "Introduction to AI: How Neural Networks Work",
+      "name": "How AI Works: How Neural Networks Work",
       "url": "https://youtu.be/JrXazCEACVo",
       "key": "introduction_to_ai_how_neural_networks_work",
       "properties": {
@@ -4236,7 +4177,7 @@
       }
     },
     {
-      "name": "Introduction to AI: How Neural Networks Work",
+      "name": "How AI Works: How Neural Networks Work",
       "url": "https://youtu.be/JrXazCEACVo",
       "key": "introduction_to_ai_how_neural_networks_work_1",
       "properties": {
@@ -4248,7 +4189,7 @@
       }
     },
     {
-      "name": "Introduction to AI: Introduction",
+      "name": "How AI Works: Introduction",
       "url": "https://youtu.be/Ok-xpKjKp2g",
       "key": "introduction_to_ai_introduction",
       "properties": {
@@ -4260,7 +4201,7 @@
       }
     },
     {
-      "name": "Introduction to AI: Training Data and Bias",
+      "name": "How AI Works: Training Data and Bias",
       "url": "https://youtu.be/x2mRoFNm22g",
       "key": "introduction_to_ai_training_data_and_bias",
       "properties": {
@@ -4272,7 +4213,7 @@
       }
     },
     {
-      "name": "Introduction to AI: What is Machine Learning?",
+      "name": "How AI Works: What is Machine Learning?",
       "url": "https://youtu.be/KHbwOetbmbs",
       "key": "introduction_to_ai_what_is_machine_learning_",
       "properties": {
