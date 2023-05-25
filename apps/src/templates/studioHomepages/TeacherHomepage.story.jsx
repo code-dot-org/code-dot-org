@@ -163,4 +163,9 @@ function withFakeServer({courses = [], sections = []} = {}) {
     '/dashboardapi/sections/valid_course_offerings',
     successResponse([])
   );
+  server.respondWith(
+    'GET',
+    '/dashboardapi/sections/available_participant_types',
+    successResponse([{availableParticipantTypes: ['student', 'teacher']}])
+  );
 }
