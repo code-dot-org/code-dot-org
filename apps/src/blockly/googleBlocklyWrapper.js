@@ -577,6 +577,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
       },
       renderer: opt_options.renderer || Renderers.DEFAULT,
       comments: false,
+      media: '/blockly/media/google_blockly',
     };
     // CDO Blockly takes assetUrl as an inject option, and it's used throughout
     // apps, so we should also set it here.
