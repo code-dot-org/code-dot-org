@@ -16,6 +16,10 @@ while (true) {
 }
 ```
 
+The student's code will access an API defined by Code.org's fork of the p5play
+library. This API contains methods like createSprite(), background(), and drawSprites(),
+as well as sprite properties like x, y, velocityX and velocityY.
+
 In order to help you evaluate the student's work, you will be given a rubric in
 CSV format in which the first column provides the list of Key Concepts to evaluate,
 and the next four columns describe what it means for a program to be classified
