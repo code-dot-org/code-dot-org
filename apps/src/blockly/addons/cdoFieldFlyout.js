@@ -1,25 +1,37 @@
 import GoogleBlockly from 'blockly/core';
 import CdoBlockFlyout from './cdoBlockFlyout';
 
+/**
+ * @param value The initial value of the field.
+ *     Also accepts Field.SKIP_SETUP if you wish to skip setup (only used by
+ * subclasses that want to handle configuration and setting the field value
+ * after their own constructors have run).
+ * @param opt_validator  A function that is called to validate changes to the
+ *     field's value. Takes in a value & returns a validated value, or null to
+ *     abort the change.
+ * @param opt_config A map of options used to configure the field.
+ *    Refer to the individual field's documentation for a list of properties
+ * this parameter supports.
+ */
 export default class CdoFieldFlyout extends GoogleBlockly.Field {
-  constructor(a, b) {
-    super(a);
-    this.configure_(b);
+  constructor(value, opt_config) {
+    super(value);
+    this.configure_(opt_config);
   }
 
-  static fromJson(a) {
-    return new CdoFieldFlyout(a.flyoutKey, a);
+  static fromJson(options) {
+    return new CdoFieldFlyout(options.flyoutKey, options);
   }
 
   EDITABLE = false;
   CURSOR = 'default';
 
-  configure_(a) {
-    a &&
-      ((this.foldoutText_ = a.foldoutText),
-      (this.sizingBehavior_ = a.sizingBehavior),
-      (this.minWidth_ = a.minWidth),
-      (this.maxWidth_ = a.maxWidth));
+  configure_(config) {
+    config &&
+      ((this.foldoutText_ = config.foldoutText),
+      (this.sizingBehavior_ = config.sizingBehavior),
+      (this.minWidth_ = config.minWidth),
+      (this.maxWidth_ = config.maxWidth));
   }
 
   initView() {
@@ -47,24 +59,33 @@ export default class CdoFieldFlyout extends GoogleBlockly.Field {
     this.setFlyoutVisible(!this.isFlyoutVisible());
   }
 
+  /**
+   * Used by getSize() to move/resize any DOM elements, and get the new size.
+   *
+   * All rendering that has an effect on the size/shape of the block should be
+   * done here, and should be triggered by getSize().
+   */
   render_() {
-    var a = this.fieldGroup_.getBBox();
+    const fieldGroupBBox = this.fieldGroup_.getBBox();
     if (this.flyout_.isVisible()) {
-      var b = this.textElement_.getBBox();
+      const textElementBBox = this.textElement_.getBBox();
       // maybe figure out how to remove global reference?
       this.size_ = new Blockly.utils.Size(
-        Math.max(b.width, this.flyout_.getWidth() + 16),
-        a.height + 14
+        Math.max(textElementBBox.width, this.flyout_.getWidth() + 16),
+        fieldGroupBBox.height + 14
       );
     } else {
-      this.size_ = new Blockly.utils.Size(a.width, a.height);
+      this.size_ = new Blockly.utils.Size(
+        fieldGroupBBox.width,
+        fieldGroupBBox.height
+      );
     }
   }
 
-  setFlyoutVisible(a) {
+  setFlyoutVisible(isVisible) {
     this.flyout_.targetWorkspace_ ||
       (this.flyout_.init(this.workspace_), this.flyout_.svgGroup);
-    a
+    isVisible
       ? ((this.arrow_.nodeValue = '\u25be'), this.flyout_.show(this.getValue()))
       : ((this.arrow_.nodeValue = '\u25b8'), this.flyout_.hide());
     this.forceRerender();
