@@ -695,6 +695,7 @@ def cucumber_arguments_for_browser(browser, options)
   arguments += skip_tag('@pegasus_db_access') unless options.pegasus_db_access
   arguments += skip_tag('@dashboard_db_access') unless options.dashboard_db_access
   arguments += skip_tag('@rails_env_test') unless env.test?
+  arguments += skip_tag('@no_mac') if (options.local && OS.mac?) || browser['platformName'].starts_with?('macOS')
   arguments
 end
 
@@ -708,8 +709,6 @@ def cucumber_arguments_for_feature(options, test_run_string)
 
   # output a .rerun file: on auto-retry or --retry-failed we only run failed scenarios
   arguments += " --format rerun --out #{rerun_filename test_run_string}"
-
-  # arguments += skip_tag('@no_mac') if OS.mac?
 
   # In CircleCI we export additional logs in junit xml format so CircleCI can
   # provide pretty test reports with success/fail/timing data upon completion.

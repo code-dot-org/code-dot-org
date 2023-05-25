@@ -1,5 +1,8 @@
 # Test only on Chrome, Safari webdriver doesn't support interactions API
 @chrome
+# Chrome on Mac doesn't support sending command-c / command-v keys
+# see: https://bugs.chromium.org/p/chromedriver/issues/detail?id=30
+@no_mac
 Feature: Blocks can be copied and pasted using the keyboard
 
 Background:
