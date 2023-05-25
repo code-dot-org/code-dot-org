@@ -141,17 +141,16 @@ module Cdo
       exception.set_backtrace []
       raise
     end
-    
+
     # If +value+ is a JSON array, return an Array.
-    # If +value+ is JSON return its string representation.
+    # If +value+ is JSON return, return a Hash.
     # Otherwise, cast the value to a string.
     #
     # @param value[String]
-    # @return [Array, String]
+    # @return [Array, Hash, String]
     private def parse_json(value)
-      parsed = JSON.parse(value)
-      return parsed if parsed.is_a?(Array)
-      return value
+      # If the Secret value is parseable, its parsed type will be either Array or Hash.
+      return JSON.parse(value)
     rescue JSON::ParserError, TypeError
       value
     end

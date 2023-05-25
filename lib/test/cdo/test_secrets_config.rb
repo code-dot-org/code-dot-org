@@ -79,6 +79,6 @@ class SecretsConfigTest < Minitest::Test
       foo: !Secret
     YAML
     assert_equal({bar: 'baz'}, config.foo)
-    assert_equal 'baz', config.foo.bar
+    assert_equal 'baz', config.foo['bar']
   end
 end
