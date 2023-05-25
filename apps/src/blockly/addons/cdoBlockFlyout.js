@@ -7,15 +7,16 @@ const SIZING_BEHAVIOR = {
 const FOLDOUT_HEIGHT = 20;
 
 export default class CdoBlockFlyout extends GoogleBlockly.HorizontalFlyout {
-  constructor(a) {
-    super(a);
+  constructor(workspaceOptions) {
+    super(workspaceOptions);
     // getMetrics and setMetrics were before super call?
-    a.getMetrics = this.getMetrics_.bind(this);
-    a.setMetrics = this.setMetrics_.bind(this);
+    workspaceOptions.getMetrics = this.getMetrics_.bind(this);
+    workspaceOptions.setMetrics = this.setMetrics_.bind(this);
     this.horizontalLayout_ = !0;
-    this.sizingBehavior_ = a.sizingBehavior || this.sizingBehavior_;
-    this.minWidth_ = a.minWidth || this.minWidth_;
-    this.maxWidth_ = a.maxWidth || this.maxWidth_;
+    this.sizingBehavior_ =
+      workspaceOptions.sizingBehavior || this.sizingBehavior_;
+    this.minWidth_ = workspaceOptions.minWidth || this.minWidth_;
+    this.maxWidth_ = workspaceOptions.maxWidth || this.maxWidth_;
   }
 
   autoClose = false;
@@ -25,29 +26,34 @@ export default class CdoBlockFlyout extends GoogleBlockly.HorizontalFlyout {
 
   getMetrics_() {
     if (!this.isVisible()) return null;
+    let blockBoundingBox;
     try {
-      var a = this.workspace_.getCanvas().getBBox();
+      blockBoundingBox = this.workspace_.getCanvas().getBBox();
     } catch (e) {
-      a = {
+      blockBoundingBox = {
         height: 0,
         y: 0,
         width: 0,
         x: 0,
       };
     }
-    var b = this.height_,
-      c = this.width_ + 2 * this.MARGIN;
+    let viewHeight = this.height_,
+      viewWidth = this.width_ + 2 * this.MARGIN;
+    let contentHeight;
     if (this.sizingBehavior_ === SIZING_BEHAVIOR.FIT_CONTENT) {
-      var d = b;
-      a = c - 1;
+      contentHeight = viewHeight;
+      blockBoundingBox = viewWidth - 1;
     } else
-      (d = (a.height + 2 * this.MARGIN) * this.workspace_.scale),
-        (a = (a.width + this.GAP_X + 2 * this.MARGIN) * this.workspace_.scale);
+      (contentHeight =
+        (blockBoundingBox.height + 2 * this.MARGIN) * this.workspace_.scale),
+        (blockBoundingBox =
+          (blockBoundingBox.width + this.GAP_X + 2 * this.MARGIN) *
+          this.workspace_.scale);
     return {
-      viewHeight: b,
-      viewWidth: c,
-      contentHeight: d,
-      contentWidth: a,
+      viewHeight: viewHeight,
+      viewWidth: viewWidth,
+      contentHeight: contentHeight,
+      contentWidth: blockBoundingBox,
       viewTop: -this.workspace_.scrollY,
       viewLeft: -this.workspace_.scrollX,
       contentTop: 0,
@@ -57,88 +63,132 @@ export default class CdoBlockFlyout extends GoogleBlockly.HorizontalFlyout {
     };
   }
 
-  setMetrics_(a) {
-    var b = this.getMetrics_();
-    b &&
-      ('number' === typeof a.x &&
-        (this.workspace_.scrollX = -b.contentWidth * a.x),
+  /**
+   * Sets the translation of the flyout to match the scrollbars.
+   *
+   * @param xyRatio Contains a y property which is a float between 0 and 1
+   *     specifying the degree of scrolling and a similar x property.
+   */
+  setMetrics_(xyRatio) {
+    var metrics = this.getMetrics_();
+    metrics &&
+      ('number' === typeof xyRatio.x &&
+        (this.workspace_.scrollX = -metrics.contentWidth * xyRatio.x),
       this.workspace_.translate(
-        this.workspace_.scrollX + b.absoluteLeft,
-        this.workspace_.scrollY + b.absoluteTop
+        this.workspace_.scrollX + metrics.absoluteLeft,
+        this.workspace_.scrollY + metrics.absoluteTop
       ));
   }
 
-  createDom(a) {
-    super.createDom(a);
-    a =
+  /**
+   * Creates the flyout's DOM.  Only needs to be called once.  The flyout can
+   * either exist as its own SVG element or be a g element nested inside a
+   * separate SVG element.
+   *
+   * @param tagName The type of tag to
+   *     put the flyout in. This should be <svg> or <g>.
+   * @returns The flyout's SVG group.
+   */
+  createDom(tagName) {
+    super.createDom(tagName);
+    tagName =
       'flyoutClip' +
-      Blockly.utils.idGenerator.getNextUniqueId().replace(/([\(\)])/g, '');
-    var b = Blockly.utils.dom.createSvgElement('defs', {}, this.svgGroup_);
-    b = Blockly.utils.dom.createSvgElement(
+      Blockly.utils.idGenerator.genUid().replace(/([\(\)])/g, '');
+    var definitions = Blockly.utils.dom.createSvgElement(
+      'defs',
+      {},
+      this.svgGroup_
+    );
+    definitions = Blockly.utils.dom.createSvgElement(
       'clipPath',
       {
-        id: a,
+        id: tagName,
       },
-      b
+      definitions
     );
-    this.svgClipPath_ = Blockly.utils.dom.createSvgElement('path', {}, b);
-    this.svgGroup_.setAttribute('clip-path', 'url(#' + a + ')');
+    this.svgClipPath_ = Blockly.utils.dom.createSvgElement(
+      'path',
+      {},
+      definitions
+    );
+    this.svgGroup_.setAttribute('clip-path', 'url(#' + tagName + ')');
     return this.svgGroup_;
   }
 
-  init(a) {
-    super.init(a);
-    // a = this.scrollbar_.outerSvg_;
-    // // what is going on here?
-    // for (
-    //   var b = Blockly.utils.dom.createSvgElement('g', {}, null);
-    //   a.firstChild;
-    //
-    // )
-    //   b.appendChild(a.firstChild);
-    // for (var c = a.attributes.length - 1; 0 <= c; c--)
-    //   b.attributes.setNamedItem(a.attributes[c].cloneNode());
-    // this.scrollbar_.outerSvg_ = b;
+  /**
+   * Initializes the flyout.
+   *
+   * @param targetWorkspace The workspace in which to
+   *     create new blocks.
+   */
+  init(targetWorkspace) {
+    super.init(targetWorkspace);
+    // targetWorkspace = this.scrollbar_.outerSvg_;
+    // what is going on here?
+    for (
+      var svgGroup = Blockly.utils.dom.createSvgElement('g', {}, null);
+      targetWorkspace.firstChild;
+
+    )
+      svgGroup.appendChild(targetWorkspace.firstChild);
+    // for (var c = targetWorkspace.attributes.length - 1; 0 <= c; c--)
+    //   svgGroup.attributes.setNamedItem(
+    //     targetWorkspace.attributes[c].cloneNode()
+    //   );
+    // this.scrollbar_.outerSvg_ = svgGroup;
     // this.svgGroup_.appendChild(this.scrollbar_.outerSvg_);
   }
 
+  /**
+   * Compute height of flyout.  Position mat under each block.
+   * For RTL: Lay out the blocks right-aligned.
+   */
   reflowInternal_() {
-    this.height_ = this.width_ = 0;
-    for (var a = this.workspace_.getTopBlocks(!1), b = 0, c; (c = a[b]); b++) {
-      var d = c.getHeightWidth();
-      this.updateHeight_(d);
-      this.updateWidth_(d);
-      c.flyoutRect_ && this.moveRectToBlock_(c.flyoutRect_, c);
+    this.height_ = 0;
+    this.width_ = 0;
+    const topBlocks = this.workspace_.getTopBlocks(false);
+    for (let i = 0, block; (block = topBlocks[i]); i++) {
+      var blockHW = block.getHeightWidth();
+      this.updateHeight_(blockHW);
+      this.updateWidth_(blockHW);
+      block.flyoutRect_ && this.moveRectToBlock_(block.flyoutRect_, block);
     }
     this.height_ += 2 * this.MARGIN;
     this.setBackgroundPath_(this.width_, this.height_);
     this.position();
   }
 
-  updateHeight_(a) {
-    this.height_ = Math.max(this.height_, a.height);
+  updateHeight_(newHeight) {
+    this.height_ = Math.max(this.height_, newHeight.height);
   }
 
-  updateWidth_(a) {
+  updateWidth_(newWidth) {
     this.sizingBehavior_ === Blockly.BlockFlyout.SIZING_BEHAVIOR.FIT_CONTENT
-      ? ((this.width_ += a.width), (this.width_ += this.GAP_X))
+      ? ((this.width_ += newWidth.width), (this.width_ += this.GAP_X))
       : 0 === this.width_ &&
         (this.width_ = this.sourceBlock_.getHeightWidth().width - 36);
   }
 
+  /** Move the flyout */
   position() {
     this.isVisible() &&
       this.positionAt_(this.width_, this.height_, 0, FOLDOUT_HEIGHT);
   }
 
-  setBackgroundPath_(a, b) {
-    var c = [
+  /**
+   * Create and set the path for the visible boundaries of the flyout.
+   *
+   * @param width The width of the flyout, not including the rounded corners.
+   * @param height The height of the flyout, not including rounded corners.
+   */
+  setBackgroundPath_(width, height) {
+    var path = [
       'M 0,' +
         (this.toolboxPosition_ === Blockly.TOOLBOX_AT_TOP
           ? 0
           : this.CORNER_RADIUS),
     ];
-    c.push(
+    path.push(
       'a',
       this.CORNER_RADIUS,
       this.CORNER_RADIUS,
@@ -148,8 +198,8 @@ export default class CdoBlockFlyout extends GoogleBlockly.HorizontalFlyout {
       this.CORNER_RADIUS,
       -this.CORNER_RADIUS
     );
-    c.push('h', a);
-    c.push(
+    path.push('h', width);
+    path.push(
       'a',
       this.CORNER_RADIUS,
       this.CORNER_RADIUS,
@@ -159,8 +209,8 @@ export default class CdoBlockFlyout extends GoogleBlockly.HorizontalFlyout {
       this.CORNER_RADIUS,
       this.CORNER_RADIUS
     );
-    c.push('v', b);
-    c.push(
+    path.push('v', height);
+    path.push(
       'a',
       this.CORNER_RADIUS,
       this.CORNER_RADIUS,
@@ -170,8 +220,8 @@ export default class CdoBlockFlyout extends GoogleBlockly.HorizontalFlyout {
       -this.CORNER_RADIUS,
       this.CORNER_RADIUS
     );
-    c.push('h', -1 * a);
-    c.push(
+    path.push('h', -1 * width);
+    path.push(
       'a',
       this.CORNER_RADIUS,
       this.CORNER_RADIUS,
@@ -181,13 +231,18 @@ export default class CdoBlockFlyout extends GoogleBlockly.HorizontalFlyout {
       -this.CORNER_RADIUS,
       -this.CORNER_RADIUS
     );
-    c.push('z');
-    c = c.join(' ');
-    this.svgClipPath_.setAttribute('d', c);
-    this.svgBackground_.setAttribute('d', c);
+    path.push('z');
+    path = path.join(' ');
+    this.svgClipPath_.setAttribute('d', path);
+    this.svgBackground_.setAttribute('d', path);
   }
 
-  setSourceBlock_(a) {
-    this.sourceBlock_ = a;
+  /**
+   * Attach this field to a block.
+   *
+   * @param block The block containing this field.
+   */
+  setSourceBlock_(block) {
+    this.sourceBlock_ = block;
   }
 }
