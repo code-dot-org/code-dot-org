@@ -70,7 +70,9 @@ export default class CdoBlockFlyout extends GoogleBlockly.HorizontalFlyout {
 
   createDom(a) {
     super.createDom(a);
-    a = 'flyoutClip' + Blockly.utils.genUid().replace(/([\(\)])/g, '');
+    a =
+      'flyoutClip' +
+      Blockly.utils.idGenerator.getNextUniqueId().replace(/([\(\)])/g, '');
     var b = Blockly.utils.dom.createSvgElement('defs', {}, this.svgGroup_);
     b = Blockly.utils.dom.createSvgElement(
       'clipPath',
@@ -86,18 +88,18 @@ export default class CdoBlockFlyout extends GoogleBlockly.HorizontalFlyout {
 
   init(a) {
     super.init(a);
-    a = this.scrollbar_.outerSvg_;
-    // what is going on here?
-    for (
-      var b = Blockly.utils.dom.createSvgElement('g', {}, null);
-      a.firstChild;
-
-    )
-      b.appendChild(a.firstChild);
-    for (var c = a.attributes.length - 1; 0 <= c; c--)
-      b.attributes.setNamedItem(a.attributes[c].cloneNode());
-    this.scrollbar_.outerSvg_ = b;
-    this.svgGroup_.appendChild(this.scrollbar_.outerSvg_);
+    // a = this.scrollbar_.outerSvg_;
+    // // what is going on here?
+    // for (
+    //   var b = Blockly.utils.dom.createSvgElement('g', {}, null);
+    //   a.firstChild;
+    //
+    // )
+    //   b.appendChild(a.firstChild);
+    // for (var c = a.attributes.length - 1; 0 <= c; c--)
+    //   b.attributes.setNamedItem(a.attributes[c].cloneNode());
+    // this.scrollbar_.outerSvg_ = b;
+    // this.svgGroup_.appendChild(this.scrollbar_.outerSvg_);
   }
 
   reflowInternal_() {
