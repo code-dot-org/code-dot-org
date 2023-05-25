@@ -6,6 +6,8 @@ import {
   FIELD_REST_DURATION_NAME,
   PRIMARY_SOUND_INPUT_NAME,
   FIELD_EFFECTS_NAME,
+  FIELD_TRIGGER_START_NAME,
+  TriggerStart,
 } from './constants';
 import musicI18n from '../locale';
 
@@ -153,6 +155,9 @@ const toolboxBlocks = {
   [BlockTypes.TRIGGERED_AT_SIMPLE2]: {
     kind: 'block',
     type: BlockTypes.TRIGGERED_AT_SIMPLE2,
+    fields: {
+      [FIELD_TRIGGER_START_NAME]: TriggerStart.NEXT_MEASURE,
+    },
   },
   [BlockTypes.FOR_LOOP]: {
     kind: 'block',
