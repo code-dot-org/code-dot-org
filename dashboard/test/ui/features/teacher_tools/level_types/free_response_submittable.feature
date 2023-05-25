@@ -38,7 +38,7 @@ Scenario: Level without multiple attempts allowed is locked after submit
   And I press ".submitButton" using jQuery to load a new page
 
   # Reload the page to see that unsubmit is the option.
-  And I am on "http://studio.code.org/s/allthethings/lessons/27/levels/4"
+  Then I am on "http://studio.code.org/s/allthethings/lessons/27/levels/4"
   And I wait to see ".nextLevelButton"
   And element ".free-response > textarea" contains text "sample response"
   And element ".free-response > textarea" is readonly
