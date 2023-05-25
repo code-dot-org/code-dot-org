@@ -8,7 +8,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import moment from 'moment';
-import {FormControl, InputGroup, Dropdown, MenuItem} from 'react-bootstrap';
+import {FormControl, InputGroup, Dropdown, MenuItem} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {TIME_FORMAT} from '../workshopConstants';
 

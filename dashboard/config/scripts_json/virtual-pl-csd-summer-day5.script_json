@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-05-18 02:58:45 UTC",
+    "serialized_at": "2023-05-19 22:16:44 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -102,7 +102,7 @@
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
-        "overview": "**Purpose:**\nTake a deeper look at assessment resources available in the curriculum\nDiscuss with other teachers who grade and assess in similar ways about how to grade and assess CS Discoveries\n\n\n**Objectives:**\n* Participants develop concrete strategies and plans for assessment while using this curriculum\n* Participants make plans for sharing resources and think about how they can build off of each other’s work\n* Participants become more familiar with the assessment resources in the curriculum\n\n**Suggested Time:** 20 minutes",
+        "overview": "**Purpose:**\nParticipants will take a deeper look at assessment resources available in the curriculum and discuss with other teachers who grade and assess in similar ways.\n\n**Objectives:**\n* Participants develop concrete strategies and plans for assessment while using the curriculum.\n* Participants make plans for sharing resources and think about how they can build off of each other’s work.\n* Participants become more familiar with the assessment resources in the curriculum.\n\n**Suggested Time:** 20 minutes",
         "student_overview": "**You will:**\n* Develop concrete strategies and plans for assessment while using this curriculum\n* Make plans for sharing resources and think about how you can build off of each other’s work\n* Become more familiar with the assessment resources in the curriculum"
       },
       "seeding_key": {
@@ -164,12 +164,14 @@
     },
     {
       "key": "lesson-7",
-      "name": "Asynchronous Work",
+      "name": "Asynchronous Part 1",
       "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
+        "overview": "**Purpose:**\nThe CS community can help students see the real-world relevance of CS and how they fit into CS. It is also important for teachers to connect with other CS educators in order to learn and grow as professionals. The asynchronous work helps guide participants to connect with the CS community after the workshop.\n\n**Objectives:**\n* Participants explore CS Journeys.\n* Participants make a plan for connecting with their local community.\n* Participants make a plan for connecting with other CS educators.\n\n**Suggested Time:** 60 minutes",
+        "student_overview": "**You will:**\n\n* Explore CS Journeys.\n* Make a plan for connecting with your local community.\n* Make a plan for connecting with other CS educators.\n"
       },
       "seeding_key": {
         "lesson.key": "lesson-7",
@@ -494,6 +496,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day5-AsyncIntro"
+        ],
         "progression": "Asynchronous Overview"
       },
       "bonus": false,
@@ -516,6 +521,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day5-Community1"
+        ],
         "progression": "Explore CS Journeys"
       },
       "bonus": false,
@@ -538,6 +546,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day5-Community2"
+        ],
         "progression": "Explore CS Journeys"
       },
       "bonus": false,
@@ -560,6 +571,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day5-Community3"
+        ],
         "progression": "Explore CS Journeys"
       },
       "bonus": false,
@@ -582,6 +596,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day5-Community4"
+        ],
         "progression": "Explore CS Journeys"
       },
       "bonus": false,
@@ -604,6 +621,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day5-Community5"
+        ],
         "progression": "Connect with the CS Community"
       },
       "bonus": false,
@@ -626,6 +646,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day5-Community6"
+        ],
         "progression": "Connect with the CS Community"
       },
       "bonus": false,
@@ -648,6 +671,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day5-Community7"
+        ],
         "progression": "Connect with the CS Community"
       },
       "bonus": false,
@@ -670,6 +696,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day5-Community8"
+        ],
         "progression": "Connect with the CS Community"
       },
       "bonus": false,
@@ -692,6 +721,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day5-WrapUp"
+        ],
         "progression": "Wrap Up"
       },
       "bonus": false,
