@@ -41,6 +41,17 @@ section.bg-secondary { background-color: $brand_secondary_light; }
   -webkit-font-smoothing: antialiased;
 }
 
+// Flex container
+// Use classes to determine flexbox characteristics
+.flex-container {
+  display: flex;
+
+  &.justify-space-between { justify-content: space-between }
+  &.align-items-center { align-items: center; }
+  &.align-items-start { align-items: flex-start; }
+  &.wrap { flex-wrap: wrap; }
+}
+
 // Line divider for use between sections
 // Use .no-margin-bottom to remove extra space above
 // a section that starts with an h2
@@ -153,6 +164,7 @@ a.link-button {
 // (not homepage or campaign pages)
 .hero-banner-basic {
   position: relative;
+  overflow: hidden;
 
   .text-wrapper {
     position: relative;
@@ -179,7 +191,7 @@ ul {
 
   // Lists that use icons next to content
   &.icon-bullet-list {
-    margin: 2em 0 1em;
+    margin: 1em 0;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -427,9 +439,7 @@ details {
   }
 
   summary {
-    font-family: $gotham-bold, sans-serif;
-    font-size: 1.25em;
-    margin-bottom: .5em;
+    @include heading-sm;
     display: flex;
     justify-content: space-between;
     align-items: end;
@@ -501,42 +511,17 @@ form {
 
 // Action blocks wrappers
 .action-block__wrapper {
-  display: flex;
-  justify-content: space-between;
+  margin-top: 2em;
+  display: grid;
+  grid-gap: 1.25em;
 
-  @media screen and (max-width: $width-md) {
-    flex-wrap: wrap;
+  @media screen and (min-width: $width-sm) {
+    grid-template-columns: repeat(2, 1fr);
   }
-}
 
-.action-block__wrapper--two-col {
-  justify-content: space-between;
-
-  & > .action-block--one-col {
-    width: 49%;
-
-    @media screen and (max-width: $width-sm) {
-      width: 100%;
-      margin-top: 1em;
-    }
-  }
-}
-
-.action-block__wrapper--three-col {
-  justify-content: space-between;
-  flex-wrap: wrap;
-  max-width: 960px;
-
-  & > .action-block--one-col {
-    width: 32%;
-    margin-top: 1.25em;
-
-    @media screen and (max-width: $width-md) {
-      width: 49%;
-    }
-
-    @media screen and (max-width: $width-sm) {
-      width: 100%;
+  &.action-block__wrapper--three-col {
+    @media screen and (min-width: $width-lg) {
+      grid-template-columns: repeat(3, 1fr);
     }
   }
 }
@@ -569,9 +554,7 @@ form {
   &.secondary {
 
     h3 {
-      font-family: $gotham-bold, sans-serif;
-      font-size: 1.25em;
-      margin-bottom: 0.5em;
+      @include heading-sm;
     }
   }
 }
@@ -604,6 +587,8 @@ form {
   a.link-button {
     width: 100%;
     text-align: center;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
   }
 }
 
@@ -768,13 +753,24 @@ form {
 // Video series
 // - see example: code.org/blockchain
 .video-series {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  display: grid;
+  grid-gap: 1.25em;
+  margin-top: 2em;
 
-  figure {
-    width: 49%;
-    margin-top: 1.25em;
+  @media screen and (min-width: $width-sm) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  // Overrides styles on the
+  // display_video_thumbnail partial
+  & > div.col-50 {
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100%;
+
+    .video_caption_link {
+      @include figcaption;
+    }
   }
 }
 

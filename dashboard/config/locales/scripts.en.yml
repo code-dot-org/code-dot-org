@@ -131,6 +131,8 @@ en:
           description_audience: Ages 10-18
           lesson_groups: {}
           student_description: This 20-hour course covers the core computer science and programming concepts in courses 2-4. The course is designed for use with ages 10-18. Check out courses 2-4 for a more complete experience!
+          lessons: {}
+          name: 20-hour
         edit-code:
           title: Edit Code
           description: Edit Code
@@ -10411,7 +10413,7 @@ en:
           title: Simulating a Marine Ecosystem (2023)
           description_audience: ''
           description_short: ''
-          description: ''
+          description: "\n"
           student_description: ''
         csc-adaptations-2023:
           lessons:
@@ -11513,7 +11515,7 @@ en:
               name: "[Generative Images Lesson (dall-e-esque)]"
           lesson_groups: {}
           name: ai-temp
-          title: "[Temp] Intro to AI"
+          title: How AI Works
           description_audience: ''
           description_short: ''
           description: ''
@@ -11774,20 +11776,210 @@ en:
           description: ''
           student_description: ''
         virtual-pl-csd-summer-day1:
-          lessons: {}
-          lesson_groups: {}
+          lessons:
+            lesson-1:
+              name: Introduction
+            lesson-2:
+              name: CS Discoveries Overview
+            lesson-3:
+              name: Navigating the Code.org Platform
+            lesson-4:
+              name: Unit 1 - Problem Solving & Computing
+            lesson-5:
+              name: Intro to Async
+            lesson-6:
+              name: Asynchronous Work
+            lesson-7:
+              name: Async Debrief
+            lesson-8:
+              name: Intro to Unit 2
+            lesson-9:
+              name: 'Model Lesson 1: U2L2 Intro to HTML'
+            lesson-10:
+              name: 'Model Lesson 2: U2L6 Styling Text with CSS'
+            lesson-11:
+              name: Instructional Strategies
+            lesson-12:
+              name: Wrap Up
+            lesson-13:
+              name: Asynchronous Work
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchronous Part 1
+            lessonGroup-3:
+              display_name: Asynchronous Part 1
+            lessonGroup-4:
+              display_name: Synchronous Part 2
+            lessonGroup-5:
+              display_name: Asynchronous Part 2
+          name: virtual-pl-csd-summer-day1
+          title: Day 1
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
         virtual-pl-csd-summer-day2:
-          lessons: {}
-          lesson_groups: {}
+          lessons:
+            lesson-1:
+              name: Intro to Day 2
+            lesson-2:
+              name: Unit 2 Connections
+            lesson-3:
+              name: 'Unit 3 Curriculum Investigation: Shapes & Variables'
+            lesson-4:
+              name: 'Model Lesson 3: U3L3 Drawing in Game Lab'
+            lesson-5:
+              name: Intro to Async
+            lesson-6:
+              name: Asynchronous Work
+            lesson-7:
+              name: Async Debrief
+            lesson-8:
+              name: 'Model Lesson 4: U3L5 Variables'
+            lesson-9:
+              name: 'Lesson Planning: Make a Plan'
+            lesson-10:
+              name: Wrap Up
+            lesson-11:
+              name: Asynchronous Work
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchronous Part 1
+            lessonGroup-3:
+              display_name: Asynchronous Part 1
+            lessonGroup-4:
+              display_name: Synchronous Part 2
+            lessonGroup-5:
+              display_name: Asynchronous Part 2
+          name: virtual-pl-csd-summer-day2
+          title: Day 2
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
         virtual-pl-csd-summer-day3:
-          lessons: {}
-          lesson_groups: {}
+          lessons:
+            lesson-1:
+              name: Intro to Day 3
+            lesson-2:
+              name: Being a Lead Learner
+            lesson-3:
+              name: 'Unit 3 Curriculum Investigation: Sprites'
+            lesson-4:
+              name: 'TLO 1: U3L6 Rnadom Numbers'
+            lesson-5:
+              name: Intro to Async
+            lesson-6:
+              name: Asynchronous Work
+            lesson-7:
+              name: Async Debrief
+            lesson-8:
+              name: 'TLO 2: U3L8 Sprites'
+            lesson-9:
+              name: Unit 3 Connections
+            lesson-10:
+              name: 'TLO 3: U4L3 User-Centered Design Define & Prepare'
+            lesson-11:
+              name: Classroom Culture
+            lesson-12:
+              name: Wrap Up
+            lesson-13:
+              name: Asynchronous Work
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchronous Part 1
+            lessonGroup-3:
+              display_name: Asynchronous Part 1
+            lessonGroup-4:
+              display_name: Synchronous Part 2
+            lessonGroup-5:
+              display_name: Asynchronous Part 2
+          name: virtual-pl-csd-summer-day3
+          title: Day 3
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
         virtual-pl-csd-summer-day4:
-          lessons: {}
-          lesson_groups: {}
+          lessons:
+            lesson-1:
+              name: Intro to Day 4
+            lesson-2:
+              name: Intro to Unit 5
+            lesson-3:
+              name: 'TLO 4: U5L1 Representation Matters'
+            lesson-4:
+              name: Intro to Unit 6
+            lesson-5:
+              name: 'TLO 5: U6L2 Physical Designs'
+            lesson-6:
+              name: Intro to Async
+            lesson-7:
+              name: Asynchronous Work
+            lesson-8:
+              name: Async Debrief
+            lesson-9:
+              name: Intro to Unit 7
+            lesson-10:
+              name: 'TLO 6: U7L2 Introduction to Machine Learning'
+            lesson-11:
+              name: Barriers, Opportunities, and Commitments
+            lesson-12:
+              name: Differentiation
+            lesson-13:
+              name: Wrap Up
+            lesson-14:
+              name: Asynchronous Work
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchronous Part 1
+            lessonGroup-3:
+              display_name: Asynchronous Part 1
+            lessonGroup-4:
+              display_name: Synchronous Part 2
+            lessonGroup-5:
+              display_name: Asynchronous Part 2
+          name: virtual-pl-csd-summer-day4
+          title: Day 4
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
         virtual-pl-csd-summer-day5:
-          lessons: {}
-          lesson_groups: {}
+          lessons:
+            lesson-1:
+              name: Intro to Day 5
+            lesson-9:
+              name: Preparing for the Year
+            lesson-3:
+              name: Assessment
+            lesson-4:
+              name: Revisiting Topics from the Week
+            lesson-5:
+              name: Previewing Academic Year Workshops
+            lesson-6:
+              name: Intro to Async
+            lesson-7:
+              name: Asynchronous Work
+            lesson-8:
+              name: Async Debrief
+            lesson-2:
+              name: Planning for the Year
+            lesson-10:
+              name: Closing Ceremonies
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchronous Part 1
+            lessonGroup-3:
+              display_name: Asynchronous Part 1
+            lessonGroup-4:
+              display_name: Synchronous Part 2
+          name: virtual-pl-csd-summer-day5
+          title: Day 5
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
         self-paced-pl-microbit1:
           lessons: {}
           lesson_groups:
@@ -11912,3 +12104,12 @@ en:
           description_short: Learn all the concepts in Computer Science Fundamentals and create your own art, story or game.
           description: We created Course F for students in the fifth grade. The course begins by looking at how users make choices in the apps they use. Students then learn to make a variety of Sprite Lab apps that also offer choices for the user. In the later lessons in the course, students will learn about variables in a variety of contexts. Students are given greater autonomy and more choices throughout this course. By the end of the course, students will have created interactive projects to share with their friends and family.
           student_description: Learn to code with sprites and variables, and discuss societal impacts of computing and the internet. By the end of this course, design and create a project you can share with friends and family.
+        ey-ecosystems:
+          lessons: {}
+          lesson_groups: {}
+          name: ey-ecosystems
+          title: EY Ecosystems (Preview)
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
