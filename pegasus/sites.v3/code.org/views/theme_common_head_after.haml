@@ -6,7 +6,7 @@
 - user_type = request.cookies[cookie_key]
 - user_type = "student" if user_type == "student_y"
 
-%script=view 'google_analytics.js', user_type: user_type
+%script{src: webpack_asset_path("js/code.org/views/theme_google_analytics.js")}
 
 -# webpack-runtime.js must appear exactly once on any page containing webpack entries
 %script{src: webpack_asset_path('js/webpack-runtime.js')}
