@@ -13,6 +13,7 @@ import ProfessionalLearningProgramRequirements from './ProfessionalLearningProgr
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {reload} from '@cdo/apps/utils';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import googleAnalyticsReporter from '@cdo/apps/lib/util/GoogleAnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 const submitButtonText = 'Complete and Send';
@@ -107,8 +108,8 @@ const TeacherApplication = props => {
       url += `?${queryString.stringify(parameters)}`;
     }
 
-    ga('set', 'page', url);
-    ga('send', 'pageview');
+    googleAnalyticsReporter.sendPageView();
+    googleAnalyticsReporter.setCustomDimension('page', url);
   };
 
   return (
