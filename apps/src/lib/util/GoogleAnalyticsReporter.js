@@ -107,7 +107,7 @@ class GoogleAnalyticsReporter {
       ga('set', dimension_name, custom_data);
     }
     if (this.enabledGoogleAnalytics4) {
-      gtag('set', {dimension_name: custom_data});
+      gtag('set', {[dimension_name]: custom_data});
     }
   }
 
