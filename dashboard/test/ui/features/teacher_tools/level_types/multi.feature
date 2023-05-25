@@ -31,11 +31,11 @@ Scenario: Submitting an incorrect option
   And I wait until element "#cross_0" is visible
 
 Scenario: Rendering in another language
-  Given I am on "http://studio.code.org/s/course1/lessons/2/levels/2/lang/es-MX"
+  Given I am on "http://studio.code.org/s/course1/lessons/2/levels/2/lang/es-ES"
   Then I rotate to landscape
   And I wait to see ".submitButton"
   And element ".submitButton" is visible
-  Then element ".multi h1" has "es-MX" text from key "data.dsls.2-3 Algorithms Multi 1.title"
+  Then element ".multi h1" has "es-ES" text from key "data.dsls.2-3 Algorithms Multi 1.title"
 
 Scenario: Does not scroll horizontally
   Given I am on "http://studio.code.org/s/allthethings/lessons/9/levels/2?noautoplay=true"
