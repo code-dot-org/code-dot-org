@@ -69,11 +69,11 @@
               callback: function(editor, change) {
                 const xmlContainer = space.find('.markdown_preview').get(0);
 
-                // Prevent rendering multiple copies of a block svgs by removing
-                // all SVG containers before converting any XML into blocks.
-                const svgs = xmlContainer.querySelectorAll('svg');
-                // Loop through each svg element and remove its parent element
-                svgs.forEach(svg => {
+                // Prevent rendering multiple copies of a block svg by removing
+                // all Blockly SVG containers before converting any XML into blocks.
+                const blocklySvgs = xmlContainer.querySelectorAll('svg[class*="readOnlyBlockSpace"]');
+                // Loop through each Blockly svg element and remove its parent element
+                blocklySvgs.forEach(svg => {
                   svg.parentNode.remove();
                 });
 
