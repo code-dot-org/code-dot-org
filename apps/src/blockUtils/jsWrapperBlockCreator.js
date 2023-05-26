@@ -1,10 +1,10 @@
-import STANDARD_INPUT_TYPES from '@cdo/apps/block_utils_standard_input_types';
+import STANDARD_INPUT_TYPES from './standardInputTypes';
 import {styleTypes} from '@cdo/apps/blockly/themes/cdoBlockStyles.mjs';
 import {
   determineInputs,
   groupInputsByRow,
   interpolateInputs,
-} from './block_utils_input_utils';
+} from './inputHelpers';
 
 const DEFAULT_COLOR = [184, 1.0, 0.74];
 

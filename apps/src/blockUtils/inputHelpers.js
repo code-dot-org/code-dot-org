@@ -6,8 +6,8 @@ import {
   STATEMENT_INPUT,
   VALUE_INPUT,
   VARIABLE_INPUT,
-} from './block_utils_constants';
-import STANDARD_INPUT_TYPES from './block_utils_standard_input_types';
+} from './constants';
+import STANDARD_INPUT_TYPES from './standardInputTypes';
 
 /**
  * @typedef {Object} InputConfig

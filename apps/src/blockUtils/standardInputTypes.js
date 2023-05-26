@@ -6,7 +6,7 @@ import {
   STATEMENT_INPUT,
   FIELD_INPUT,
   VARIABLE_INPUT,
-} from './block_utils_constants';
+} from './constants';
 
 /**
  * @type {Object.<string, InputType>}
