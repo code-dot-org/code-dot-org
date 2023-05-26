@@ -38,12 +38,19 @@ module CdoApps
 
     template unit_file do
       app_server = node['cdo-apps']['app_server']
+      src_file = "#{app_root}/config/#{app_server}.rb"
+      export_env = node['cdo-apps']['bundle_env'].merge(node['cdo-apps'][app_name]['env'] || {})
 
       user 'root'
       group 'root'
       mode '0755'
 
-      variables app_name: app_name
+      variables app_name: app_name,
+        app_root: app_root,
+        env: node.chef_environment,
+        export_env: export_env,
+        src_file: src_file,
+        user: user
       source "#{app_server}.service.erb"
     end
 
