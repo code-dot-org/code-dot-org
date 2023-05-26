@@ -38,6 +38,9 @@ Scenario: School Info Confirmation Dialog
   Then I press "#save-button" using jQuery
 
   # One week later, the teacher does not see the prompt
+
+  # TODO: this is not working reliably, and seems to have side effects
+  # in relationship to the "one year passes" below
   And eight days pass for user "Teacher_Chuba"
   Then I reload the page
   And element ".modal" is not visible
