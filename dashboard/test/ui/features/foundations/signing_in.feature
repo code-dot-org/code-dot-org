@@ -63,6 +63,7 @@ Scenario: Teacher sign in from studio.code.org
   And element ".display_name" contains text "Casey"
 
 Scenario: Join non-existent section from sign in page shows error
+  Given I sign out
   Given I am on "http://studio.code.org/users/sign_in/"
   And I type "9999999999" into "#section_code"
   And I click ".section-sign-in button" to load a new page
