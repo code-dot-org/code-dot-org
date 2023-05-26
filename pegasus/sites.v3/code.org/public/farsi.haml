@@ -6,22 +6,23 @@ theme: responsive_full_width
 %link{href: "/css/generated/design-system-pegasus.css", rel: "stylesheet"}
 %link{href: "/css/generated/farsi-styles.css", rel: "stylesheet"}
 
-%section
+%section.hero-banner-basic.bg-neutral-dark
   .wrapper
-    %h1=hoc_s(:farsi_page_top_heading)
-    %h2.heading-lg
+    %h1{style: "color: white"}
+      =hoc_s(:farsi_page_top_heading)
+    %h2.heading-lg{style: "color: white"}
       =hoc_s(:farsi_page_top_heading_02)
-    %p=hoc_s(:farsi_page_top_desc_01)
-    %p=hoc_s(:farsi_page_top_desc_02)
+    %p{style: "color: white"}
+      =hoc_s(:farsi_page_top_desc)
     %a{href: 'https://donate.code.org/CodeDotOrgInFarsi', class: "link-button", target: "_blank", rel: "noopener noreferrer"}
       =hoc_s(:call_to_action_support_farsi)
 
-%section.bg-neutral-light
+%section
   .wrapper
     %h2=hoc_s(:farsi_timeline_heading)
     = view :farsi_timeline
 
-%section
+%section.bg-neutral-light
   .wrapper
     %h2=hoc_s(:farsi_page_supporters_heading)
     %p.heading-sm
@@ -43,18 +44,18 @@ theme: responsive_full_width
         Ali Partovi
       %li
         Anonymous (2)
-    %hr
+    %hr.dark
     %p=hoc_s(:farsi_page_supporters_desc_02)
     %a{href: 'https://donate.code.org/CodeDotOrgInFarsi', class: "link-button", target: "_blank", rel: "noopener noreferrer"}
       =hoc_s(:call_to_action_support_farsi)
 
-%section.bg-neutral-light
+%section
   .wrapper
     %h2=hoc_s(:farsi_page_founders_heading)
     .photo-carousel-wrapper
       = view :farsi_carousel
 
-%section
+%section.bg-neutral-light
   .wrapper
     %h2=hoc_s(:farsi_page_support_heading)
     %h3.heading-sm{style: "margin-bottom: 1em"}
@@ -64,8 +65,6 @@ theme: responsive_full_width
     %p=hoc_s(:farsi_page_support_contact_us, markdown: :inline, locals: {contact_link: "https://forms.gle/fMb9z7Wy2Qrjrowb7"})
     %a{href: 'https://donate.code.org/CodeDotOrgInFarsi', class: "link-button", target: "_blank", rel: "noopener noreferrer"}
       =hoc_s(:call_to_action_donate_online)
-
-= view :section_divider_line
 
 %section
   .wrapper

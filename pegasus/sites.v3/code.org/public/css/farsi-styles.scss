@@ -3,6 +3,11 @@
 
 @import 'color', 'font', 'breakpoints', 'typography', 'barlow-semi-condensed-font';
 
+.hero-banner-basic {
+  background: url('/images/banners/bg-pattern-triangles.png') center center repeat-x;
+  background-size: contain;
+}
+
 .farsi-timeline {
   margin: 3em 0 0;
 
@@ -12,13 +17,20 @@
     vertical-align: top;
   }
 
-  h3 {
-    @include heading-sm;
-  }
-
   p:last-child {
-    border-top: 1px solid $brand_accent_default;
+    border-top: 1px solid $neutral_dark20;
     margin-bottom: 0.25em;
     padding-top: 1em;
+  }
+}
+
+#farsi-carousel {
+
+  p {
+    margin-bottom: 0;
+
+    @media screen and (max-width: $width-sm) {
+      margin-bottom: 1em;
+    }
   }
 }

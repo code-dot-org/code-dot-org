@@ -71,6 +71,15 @@ div.divider {
   }
 }
 
+// Lines (<hr>)
+hr {
+  border-top: 1px solid $neutral_dark20;
+
+  &.dark {
+    border-top: 1px solid $neutral_dark60;
+  }
+}
+
 // Text links
 p a,
 p a:visited,
