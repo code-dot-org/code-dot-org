@@ -34,6 +34,7 @@ Scenario: Submitting an incorrect solution
   And element ".modal .dialog-title" contains text "Incorrect"
   And I press ".modal #ok-button" using jQuery
   And I wait until element ".xmark" is visible
+  And I wait until jQuery Ajax requests are finished
 
   # For signed-in users, we remember the previous answer and display it when
   # they next come back to the page.
