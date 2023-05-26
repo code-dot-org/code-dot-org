@@ -8,8 +8,9 @@
 - ga_link += "?nominated=true" if params[:nominated]
 
 :javascript
+  import googleAnalyticsReporter from '@cdo/apps/lib/util/GoogleAnalyticsReporter'
   $(document).ready(function() {
     // Report a unique page view to GA.
-    ga('set', 'page', "#{ga_link}");
-    ga('send', 'pageview');
+    googleAnalyticsReporter.setCustomDimension('page', "#{ga_link}");
+    googleAnalyticsReporter.sendPageView();
   });
