@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import {OverlayTrigger} from 'react-bootstrap-2';
 import {concat, intersection} from 'lodash';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import Button from '@cdo/apps/templates/Button';
@@ -13,7 +12,7 @@ import {
   subjectsAndTopicsOrder,
 } from '@cdo/apps/templates/teacherDashboard/CourseOfferingHelpers';
 import style from './curriculum_catalog_card.module.scss';
-import LabelTooltip from '@cdo/apps/templates/curriculumCatalog/LabelTooltip';
+import CardLabels from '@cdo/apps/templates/curriculumCatalog/CardLabels';
 
 const CurriculumCatalogCard = ({
   courseDisplayName,
@@ -108,42 +107,7 @@ const CustomizableCurriculumCatalogCard = ({
     <div className={style.curriculumInfoContainer}>
       <div className={style.labelsAndTranslatabilityContainer}>
         <div className={style.labelsContainer}>
-          {subjectsAndTopics.length > 0 && (
-            <OverlayTrigger
-              placement="top"
-              trigger={['hover', 'focus']}
-              overlay={props => (
-                <LabelTooltip
-                  id="first-label-tooltip"
-                  className={style.labelTooltip}
-                  {...props}
-                >
-                  {subjectsAndTopics[0]}
-                </LabelTooltip>
-              )}
-            >
-              <div tabIndex="0">{subjectsAndTopics[0]}</div>
-            </OverlayTrigger>
-          )}
-          {subjectsAndTopics.length > 1 && (
-            <OverlayTrigger
-              placement="top"
-              trigger={['hover', 'focus']}
-              overlay={props => (
-                <LabelTooltip
-                  id="remaining-labels-tooltip"
-                  className={style.labelTooltip}
-                  {...props}
-                >
-                  {subjectsAndTopics.slice(1).map(label => (
-                    <p key={label}>{label}</p>
-                  ))}
-                </LabelTooltip>
-              )}
-            >
-              <div tabIndex="0">{`+${subjectsAndTopics.length - 1}`}</div>
-            </OverlayTrigger>
-          )}
+          <CardLabels subjectsAndTopics={subjectsAndTopics} />
         </div>
         {/*TODO [MEG]: Ensure this icon matches spec when we update FontAwesome */}
         {isTranslated && (
