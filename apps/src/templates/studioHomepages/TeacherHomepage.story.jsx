@@ -55,6 +55,7 @@ const Template = args => {
 
 export const NoCoursesNoSections = Template.bind({});
 NoCoursesNoSections.args = {
+  fakeServerArgs: {},
   props: {
     courses: [],
     plCourses: [],
