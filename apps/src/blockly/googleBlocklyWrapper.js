@@ -650,7 +650,16 @@ function initializeBlocklyWrapper(blocklyInstance) {
 
     Blockly.blockFlyoutCallback = function (workspace) {
       console.log('blockFlyoutCallback');
-      return [];
+      return [
+        Blockly.Xml.textToDom('<block type="controls_if"/>'),
+        Blockly.Xml.textToDom(
+          '<block type="controls_if">' +
+            '  <next>' +
+            '    <block type="controls_if"/>' +
+            '  </next>' +
+            '</block>'
+        ),
+      ];
     };
 
     workspace.registerToolboxCategoryCallback(
