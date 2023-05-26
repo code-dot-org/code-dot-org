@@ -49,8 +49,8 @@ class SecretsTest < Minitest::Test
     # Ensure API calls to GetSecretValue are cached.
     assert_equal 2, api_requests
 
-    # Secret value that is JSON must be parsed by the consumer of the Secret to access its properties.
-    assert_equal 'my_value', @secrets.json['my_key']
+    # Secret value that is JSON is returned as a Hash.
+    assert_equal 'my_value', @secrets.json[:my_key]
   end
 
   def test_required

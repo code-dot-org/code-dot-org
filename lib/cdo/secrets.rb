@@ -143,14 +143,17 @@ module Cdo
     end
 
     # If +value+ is a JSON array, return an Array.
-    # If +value+ is JSON return, return a Hash.
-    # Otherwise, cast the value to a string.
+    # If +value+ is a JSON object, return a Hash.
+    # Otherwise, return +value+ cast to String.
     #
     # @param value[String]
     # @return [Array, Hash, String]
     private def parse_json(value)
-      # If the Secret value is parseable, its parsed type will be either Array or Hash.
-      return JSON.parse(value)
+      parsed = JSON.parse(value)
+      return parsed if parsed.is_a?(Array)
+      # Return with keys that are symbols to match the Object that was serialized to JSON and PUT into the Secret.
+      return parsed.deep_symbolize_keys if value.is_a?(Hash)
+      return parsed.to_s
     rescue JSON::ParserError, TypeError
       value
     end
