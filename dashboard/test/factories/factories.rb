@@ -1703,6 +1703,11 @@ FactoryBot.define do
     user {create :student}
   end
 
+  factory :lti_deployment do
+    deployment_id {"deployment"}
+    lti_integration {create :lti_integration}
+  end
+
   factory :parental_permission_request do
     user {create :student}
     parent_email {"contact@example.domain"}
