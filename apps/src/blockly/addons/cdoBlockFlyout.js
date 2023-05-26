@@ -123,6 +123,7 @@ export default class CdoBlockFlyout extends GoogleBlockly.HorizontalFlyout {
    */
   init(targetWorkspace) {
     super.init(targetWorkspace);
+    this.targetWorkspace_ = targetWorkspace;
     // targetWorkspace = this.scrollbar_.outerSvg_;
     // what is going on here?
     for (
@@ -163,7 +164,7 @@ export default class CdoBlockFlyout extends GoogleBlockly.HorizontalFlyout {
   }
 
   updateWidth_(newWidth) {
-    this.sizingBehavior_ === Blockly.BlockFlyout.SIZING_BEHAVIOR.FIT_CONTENT
+    this.sizingBehavior_ === SIZING_BEHAVIOR.FIT_CONTENT
       ? ((this.width_ += newWidth.width), (this.width_ += this.GAP_X))
       : 0 === this.width_ &&
         (this.width_ = this.sourceBlock_.getHeightWidth().width - 36);
