@@ -19,9 +19,9 @@ function gtag() {
  * - Centralize common code
  */
 class GoogleAnalyticsReporter {
-  enableGoogleAnalyticsUniversal = true;
-  enabledGoogleAnalytics4 = true;
-  googleUniversalGtag = 'UA-37745279-1';
+  isGoogleAnalyticsUniversalEnabled = true;
+  isGoogleAnalytics4Enabled = true;
+  googleUniversalGTag = 'UA-37745279-1';
   googleAnalyticsGTag = 'G-L9HT5MZ3HD';
 
   constructor() {
@@ -40,12 +40,16 @@ class GoogleAnalyticsReporter {
     window.trackEvent = this.trackEvent;
     window.readCookie = this.readCookie;
   }
+
   /**
-   * Enable Google Universal. This adds the tags and the ga function to the window
-   * to be used across the site.
+   *  Enable Google Universal. This adds the tags and the ga function to the window
+   *  to be used across the site.
+   *  Enable Google Universal (deprecated 2023-07-01). This boilerplate code from
+   *  Google Analytics adds the tags and the `ga` function to the window to be used
+   *  across the site.
    */
   #initializeGoogleUniversal(i, s, o, g, r, a, m) {
-    if (this.enableGoogleAnalyticsUniversal) {
+    if (this.isGoogleAnalyticsUniversalEnabled) {
       i.ga =
         i.ga ||
         function () {
@@ -63,7 +67,7 @@ class GoogleAnalyticsReporter {
       a.async = 1;
       a.src = g;
       m.parentNode.insertBefore(a, m);
-      ga('create', this.googleUniversalGtag, document.location.href);
+      ga('create', this.googleUniversalGTag, document.location.href);
     }
   }
 
@@ -71,7 +75,7 @@ class GoogleAnalyticsReporter {
    * Initialize google Analytics 4 and the property tag
    */
   #initializeGoogleAnalytics() {
-    if (this.enabledGoogleAnalytics4) {
+    if (this.isGoogleAnalytics4Enabled) {
       gtag('js', new Date());
       window.dataLayer = window.dataLayer || [];
       gtag('config', this.googleAnalyticsGTag);
@@ -92,7 +96,7 @@ class GoogleAnalyticsReporter {
    * This is not required by Google Analytics 4
    */
   sendPageView() {
-    if (this.enableGoogleAnalyticsUniversal) {
+    if (this.isGoogleAnalyticsUniversalEnabled) {
       ga('send', 'pageview');
     }
   }
@@ -103,10 +107,10 @@ class GoogleAnalyticsReporter {
    */
   setCustomDimension(dimension_name, custom_data) {
     // Example ga('set', 'page', url);
-    if (this.enableGoogleAnalyticsUniversal) {
+    if (this.isGoogleAnalyticsUniversalEnabled) {
       ga('set', dimension_name, custom_data);
     }
-    if (this.enabledGoogleAnalytics4) {
+    if (this.isGoogleAnalytics4Enabled) {
       gtag('set', {[dimension_name]: custom_data});
     }
   }
@@ -115,10 +119,10 @@ class GoogleAnalyticsReporter {
    * Public function exposed to track custom events in Google Analytics
    */
   trackEvent(category_value, action_name, dimensions) {
-    if (this.enableGoogleAnalyticsUniversal) {
+    if (this.isGoogleAnalyticsUniversalEnabled) {
       ga('send', 'event', category_value, action_name, dimensions);
     }
-    if (this.enabledGoogleAnalytics4) {
+    if (this.isGoogleAnalytics4Enabled) {
       gtag('event', action_name, {
         eventCategory: category_value,
         dimension5: 'custom data',
