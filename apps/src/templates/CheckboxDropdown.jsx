@@ -21,7 +21,7 @@ const CheckboxDropdown = ({
 }) => {
   const onSelectAll = useCallback(
     e => {
-      e.preventDefault();
+      e?.preventDefault();
       handleSelectAll(name);
     },
     [name, handleSelectAll]
@@ -29,7 +29,7 @@ const CheckboxDropdown = ({
 
   const onClearAll = useCallback(
     e => {
-      e.preventDefault();
+      e?.preventDefault();
       handleClearAll(name);
     },
     [name, handleClearAll]
