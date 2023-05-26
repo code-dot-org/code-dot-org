@@ -1,11 +1,11 @@
 import _ from 'lodash';
 import xml from './xml';
-import createJsWrapperBlockCreator from './block_utils_create_js_wrapper_block_creator';
+import createJsWrapperBlockCreator from './blockUtils/jsWrapperBlockCreator';
 import {
   determineInputs,
   groupInputsByRow,
   interpolateInputs,
-} from './block_utils_input_utils';
+} from './blockUtils/inputHelpers';
 const ATTRIBUTES_TO_CLEAN = ['uservisible', 'deletable', 'movable'];
 
 /**
