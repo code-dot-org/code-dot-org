@@ -559,3 +559,5 @@ While it's possible to run the server locally without these, we've found the fol
 - Storage: The repository takes up 20GB
 
 [ubuntu-iso-url]: http://releases.ubuntu.com/bionic/ubuntu-18.04.5-desktop-amd64.iso
+
+🥑

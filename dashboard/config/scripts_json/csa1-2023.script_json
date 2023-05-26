@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-05-19 20:03:19 UTC",
+    "serialized_at": "2023-05-25 13:30:03 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -9712,7 +9712,7 @@
     },
     {
       "name": "Inheritance",
-      "url": "https://youtu.be/H0htNTwNvrY",
+      "url": "https://youtu.be/vvDIkfaCy88",
       "key": "inheritance_1",
       "properties": {
         "audience": "Student",
