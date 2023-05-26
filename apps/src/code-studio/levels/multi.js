@@ -7,8 +7,12 @@ import {
 } from './codeStudioLevels';
 import {sourceForLevel} from '../clientState';
 import Sounds from '../../Sounds';
-import {LegacyTooFewDialog} from '@cdo/apps/lib/ui/LegacyDialogContents';
+import {
+  LegacyIncorrectDialog,
+  LegacyTooFewDialog,
+} from '@cdo/apps/lib/ui/LegacyDialogContents';
 import {reportTeacherReviewingStudentNonLabLevel} from '@cdo/apps/lib/util/analyticsUtils';
+import {TestResults} from '../../constants';
 
 var Multi = function (
   levelId,
@@ -120,7 +124,6 @@ Multi.prototype.clickItem = function (index) {
       $('#' + this.id + ' #checked_' + unselectIndex).hide();
     }
   }
-
   return true;
 };
 
@@ -159,7 +162,6 @@ Multi.prototype.ready = function () {
 
   $('#' + this.id + ' .answerbutton').click(
     $.proxy(function (event) {
-      //console.log("answerbutton clicked", this.id);
       this.choiceClicked($(event.currentTarget));
     }, this)
   );
@@ -203,6 +205,10 @@ Multi.prototype.ready = function () {
       resetButton.click(() => resetContainedLevel());
     }
   }
+
+  if (this.correctNumberAnswersSelected() && !this.allowMultipleAttempts) {
+    this.lockAnswers();
+  }
 };
 
 Multi.prototype.lockAnswers = function () {
@@ -211,6 +217,10 @@ Multi.prototype.lockAnswers = function () {
   }
   $('#' + this.id + ' .answerbutton').addClass('lock-answers');
   $('#reset-predict-progress-button')?.prop('disabled', false);
+};
+
+Multi.prototype.correctNumberAnswersSelected = function () {
+  return this.selectedAnswers.length === this.numAnswers;
 };
 
 Multi.prototype.resetAnswers = function () {
@@ -226,12 +236,7 @@ Multi.prototype.getAppName = function () {
 // called by external result-posting code
 Multi.prototype.getResult = function (dontAllowSubmit) {
   let answer;
-  let errorDialog;
   let valid;
-
-  if (this.numAnswers > 1 && this.selectedAnswers.length !== this.numAnswers) {
-    errorDialog = <LegacyTooFewDialog />;
-  }
 
   if (this.numAnswers === 1) {
     answer = this.lastSelectionIndex;
@@ -241,8 +246,18 @@ Multi.prototype.getResult = function (dontAllowSubmit) {
     valid = this.selectedAnswers.length === this.numAnswers;
   }
 
-  var result;
-  var submitted;
+  let result;
+  let submitted;
+  let errorDialog;
+  let testResult;
+
+  const answerIsCorrect = this.validateAnswers();
+  const tooFewAnswers = !this.correctNumberAnswersSelected();
+  if (tooFewAnswers) {
+    errorDialog = <LegacyTooFewDialog />;
+  } else if (!this.allowMultipleAttempts && !answerIsCorrect) {
+    errorDialog = <LegacyIncorrectDialog />;
+  }
 
   if (
     !dontAllowSubmit &&
@@ -250,17 +265,27 @@ Multi.prototype.getResult = function (dontAllowSubmit) {
   ) {
     result = true;
     submitted = true;
+  } else if (tooFewAnswers) {
+    result = false;
+    submitted = false;
+  } else if (!this.allowMultipleAttempts) {
+    submitted = false;
+    result = answerIsCorrect;
+    // This isn't a great enum for this, but its description suggests it's the best option.
+    // Particularly: "Not validated, but should be treated as a success"
+    testResult = TestResults.CONTAINED_LEVEL_RESULT;
   } else {
-    result = this.validateAnswers();
+    result = answerIsCorrect;
     submitted = false;
   }
 
   return {
     response: answer,
-    result: result,
-    errorDialog: errorDialog,
-    submitted: submitted,
-    valid: valid,
+    result,
+    errorDialog,
+    submitted,
+    valid,
+    testResult,
   };
 };
 
@@ -284,6 +309,12 @@ Multi.prototype.submitButtonClick = function () {
   // Don't show right/wrong answers for submittable.
   if (window.appOptions.level.submittable || this.forceSubmittable) {
     return;
+  }
+
+  if (!this.allowMultipleAttempts && this.correctNumberAnswersSelected()) {
+    this.lockAnswers();
+    $('.submitButton')?.hide();
+    $('.nextLevelButton')?.show();
   }
 
   // If the solution only takes one answer, and it's wrong, and it's not

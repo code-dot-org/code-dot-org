@@ -317,10 +317,10 @@ class Projects
   end
 
   # Find the encrypted channel token for most recent project of the given level type.
-  def most_recent(key)
+  def most_recent(key, include_hidden = false)
     row = @table.where(storage_id: @storage_id).exclude(state: 'deleted').order(Sequel.desc(:updated_at)).find do |i|
       parsed = JSON.parse(i[:value])
-      !parsed['hidden'] && !parsed['frozen'] && parsed['level'].split('/').last == key
+      (include_hidden || !parsed['hidden']) && !parsed['frozen'] && parsed['level'].split('/').last == key
     rescue
       # Malformed channel, or missing level.
     end
