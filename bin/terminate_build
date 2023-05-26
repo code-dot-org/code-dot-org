@@ -56,6 +56,7 @@ execute_system_command("pgrep -g #{process_group_id} -a")
 # The hyphen ('-') in front of the Process Group ID specifies we want to kill all processes with that Process Group ID.
 execute_system_command("kill -9 -#{process_group_id}")
 CDO.log.info 'Done killing the current build and its child processes!'
+ChatClient.log "build terminated via #{$0}"
 
 CDO.log.info 'Deleting the file build-started to prevent a new build from starting on the current commit.'
 FileUtils.rm STARTED if File.file?(STARTED)
