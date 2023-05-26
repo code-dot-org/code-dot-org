@@ -31,7 +31,7 @@ export function convertXmlToJson(xml) {
 
 /**
  * Converts XML serialization to JSON using a temporary unrendered workspace.
- * @param {object} xmlBlocks - an object containing a block and x/y coordinates
+ * @param {Array<Object>} xmlBlocks - an array of "block" objects containing a block and x/y coordinates
  * @param {Map<String, Object>} blockIdMap - a map of ids (keys) and blocks (values)
  */
 function addPositionsToState(xmlBlocks, blockIdMap) {
@@ -46,7 +46,7 @@ function addPositionsToState(xmlBlocks, blockIdMap) {
 
 /**
  * Use a cursor to position blocks on a workspace (if they do not already have positions)
- * @param {workspace} workspace - the current Blockly workspace
+ * @param {Blockly.Workspace} workspace - the current Blockly workspace
  * @param {Map<String, Object>} blockIdMap - a map of ids (keys) and blocks (values)
  */
 export function positionBlocks(workspace) {
@@ -99,7 +99,7 @@ export function positionBlocks(workspace) {
 
 /**
  * Adds an svg frame around a block to signal that it is unused.
- * @param {object} block - a Blockly block
+ * @param {Blockly.Block} block - a Blockly block
  */
 function addUnusedFrame(block) {
   if (block.isUnused() && !block.unusedSvg_) {

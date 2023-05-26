@@ -8,9 +8,9 @@ import experiments from '@cdo/apps/util/experiments';
 /**
  * Loads blocks to a workspace.
  * To maintain backwards compatibility we must be able to use the XML source if no JSON state is provided.
- * @param {workspace} workspace - the current Blockly workspace
+ * @param {Blockly.Workspace} workspace - the current Blockly workspace
  * @param {xml} xml - workspace serialization, current/legacy format
- * @param {json} stateToLoad - modern workspace serialization, may not be present
+ * @param {*} stateToLoad - modern workspace serialization, may not be present
  */
 export function loadBlocksToWorkspace(workspace, xml, stateToLoad) {
   if (experiments.isEnabled(experiments.BLOCKLY_JSON)) {
