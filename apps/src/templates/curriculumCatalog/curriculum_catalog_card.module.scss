@@ -95,6 +95,30 @@ $container-width: 309px;
   }
 }
 
+.labelTooltip {
+  opacity: 1;
+  margin-bottom: 0.75em;
+
+  :global(.tooltip-inner) { /* stylelint-disable-line selector-pseudo-class-no-unknown */
+    border-radius: 5px;
+    color: #fff;
+    background-color: #222;
+
+    p {
+      color: #fff;
+      margin: 0;
+    }
+  }
+
+  :global(.tooltip-arrow) { /* stylelint-disable-line selector-pseudo-class-no-unknown */
+    left: 50%;
+    bottom: 0;
+    border: 15px solid transparent;
+    border-top: 15px solid #222;
+    transform: translate(-50%, calc(100% - 8px));
+  }
+}
+
 .iconWithDescription {
   display: flex;
   align-items: center;

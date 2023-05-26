@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import {Tooltip, OverlayTrigger} from 'react-bootstrap-2';
+import {concat, intersection} from 'lodash';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import Button from '@cdo/apps/templates/Button';
 import i18n from '@cdo/locale';
@@ -10,7 +12,6 @@ import {
   translatedCourseOfferingDurations,
   subjectsAndTopicsOrder,
 } from '@cdo/apps/templates/teacherDashboard/CourseOfferingHelpers';
-import {concat, intersection} from 'lodash';
 import style from './curriculum_catalog_card.module.scss';
 
 const CurriculumCatalogCard = ({
@@ -93,70 +94,110 @@ const CustomizableCurriculumCatalogCard = ({
   quickViewButtonText,
   isEnglish,
   pathToCourse,
-}) => (
-  <div
-    className={classNames(
-      style.curriculumCatalogCardContainer,
-      isEnglish
-        ? style.curriculumCatalogCardContainer_english
-        : style.curriculumCatalogCardContainer_notEnglish
-    )}
-  >
-    <img src={imageSrc} alt={imageAltText} />
-    <div className={style.curriculumInfoContainer}>
-      <div className={style.labelsAndTranslatabilityContainer}>
-        <div className={style.labelsContainer}>
-          {subjectsAndTopics.length > 0 && <div>{subjectsAndTopics[0]}</div>}
-          {subjectsAndTopics.length > 1 && (
-            <div>{`+${subjectsAndTopics.length - 1}`}</div>
+}) => {
+  const firstLabelText = subjectsAndTopics[0];
+  const renderFirstLabelTooltip = ({arrowProps, ...props}) => (
+    <Tooltip id="first-label-tooltip" className={style.labelTooltip} {...props}>
+      {firstLabelText}
+    </Tooltip>
+  );
+
+  const remainingLabelsNode = (
+    <>
+      {subjectsAndTopics.slice(1).map(label => (
+        <p key={label}>{label}</p>
+      ))}
+    </>
+  );
+  const renderRemainingLabelsTooltip = ({arrowProps, ...props}) => (
+    <Tooltip
+      id="remaining-labels-tooltip"
+      className={style.labelTooltip}
+      {...props}
+    >
+      {remainingLabelsNode}
+    </Tooltip>
+  );
+
+  return (
+    <div
+      className={classNames(
+        style.curriculumCatalogCardContainer,
+        isEnglish
+          ? style.curriculumCatalogCardContainer_english
+          : style.curriculumCatalogCardContainer_notEnglish
+      )}
+    >
+      <img src={imageSrc} alt={imageAltText} />
+      <div className={style.curriculumInfoContainer}>
+        <div className={style.labelsAndTranslatabilityContainer}>
+          <div className={style.labelsContainer}>
+            {subjectsAndTopics.length > 0 && (
+              <OverlayTrigger
+                placement="top"
+                trigger={['hover', 'focus']}
+                overlay={renderFirstLabelTooltip}
+              >
+                <div tabIndex="0">{subjectsAndTopics[0]}</div>
+              </OverlayTrigger>
+            )}
+            {subjectsAndTopics.length > 1 && (
+              <OverlayTrigger
+                placement="top"
+                trigger={['hover', 'focus']}
+                overlay={renderRemainingLabelsTooltip}
+              >
+                <div tabIndex="0">{`+${subjectsAndTopics.length - 1}`}</div>
+              </OverlayTrigger>
+            )}
+          </div>
+          {/*TODO [MEG]: Ensure this icon matches spec when we update FontAwesome */}
+          {isTranslated && (
+            <FontAwesome
+              icon="language"
+              className="fa-solid"
+              title={translationIconTitle}
+            />
           )}
         </div>
-        {/*TODO [MEG]: Ensure this icon matches spec when we update FontAwesome */}
-        {isTranslated && (
-          <FontAwesome
-            icon="language"
-            className="fa-solid"
-            title={translationIconTitle}
+        <h4>{courseDisplayName}</h4>
+        <div className={style.iconWithDescription}>
+          <FontAwesome icon="user" className="fa-solid" />
+          <p>{gradeRange}</p>
+        </div>
+        <div className={style.iconWithDescription}>
+          {/*TODO [MEG]: Update this to be clock fa-solid when we update FontAwesome */}
+          <FontAwesome icon="clock-o" />
+          <p>{duration}</p>
+        </div>
+        <div
+          className={classNames(
+            style.buttonsContainer,
+            isEnglish
+              ? style.buttonsContainer_english
+              : style.buttonsContainer_notEnglish
+          )}
+        >
+          <Button
+            __useDeprecatedTag
+            color={Button.ButtonColor.neutralDark}
+            type="button"
+            href={pathToCourse}
+            aria-label={quickViewButtonDescription}
+            text={quickViewButtonText}
           />
-        )}
-      </div>
-      <h4>{courseDisplayName}</h4>
-      <div className={style.iconWithDescription}>
-        <FontAwesome icon="user" className="fa-solid" />
-        <p>{gradeRange}</p>
-      </div>
-      <div className={style.iconWithDescription}>
-        {/*TODO [MEG]: Update this to be clock fa-solid when we update FontAwesome */}
-        <FontAwesome icon="clock-o" />
-        <p>{duration}</p>
-      </div>
-      <div
-        className={classNames(
-          style.buttonsContainer,
-          isEnglish
-            ? style.buttonsContainer_english
-            : style.buttonsContainer_notEnglish
-        )}
-      >
-        <Button
-          __useDeprecatedTag
-          color={Button.ButtonColor.neutralDark}
-          type="button"
-          href={pathToCourse}
-          aria-label={quickViewButtonDescription}
-          text={quickViewButtonText}
-        />
-        <Button
-          color={Button.ButtonColor.brandSecondaryDefault}
-          type="button"
-          onClick={() => {}}
-          aria-label={assignButtonDescription}
-          text={assignButtonText}
-        />
+          <Button
+            color={Button.ButtonColor.brandSecondaryDefault}
+            type="button"
+            onClick={() => {}}
+            aria-label={assignButtonDescription}
+            text={assignButtonText}
+          />
+        </div>
       </div>
     </div>
-  </div>
-);
+  );
+};
 
 CustomizableCurriculumCatalogCard.propTypes = {
   courseDisplayName: PropTypes.string.isRequired,
