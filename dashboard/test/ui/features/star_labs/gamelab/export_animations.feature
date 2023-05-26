@@ -17,6 +17,7 @@ Scenario: Export library animation
   And I wait until I don't see selector "#loadingMask"
   And I click selector ".unsupported-browser .dialog-close" if it exists
   And I press the first ".icon-settings-export-white" element
+  And I wait for the event loop
   And I press the first ".gif-download-button" element
   And I switch to the default content
   And I add a new, blank animation
