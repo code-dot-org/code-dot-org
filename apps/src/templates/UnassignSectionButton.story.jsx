@@ -10,7 +10,7 @@ export default {
   component: UnassignSectionButton,
 };
 
-export const WithSubtitle = () => (
+export const Default = () => (
   <UnassignSectionButton
     sectionId={assignedSection.id}
     unassignSection={action('unassignSection')}
