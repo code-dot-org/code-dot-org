@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import {Tooltip, OverlayTrigger} from 'react-bootstrap-2';
+import {OverlayTrigger} from 'react-bootstrap-2';
 import {concat, intersection} from 'lodash';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import Button from '@cdo/apps/templates/Button';
@@ -13,6 +13,7 @@ import {
   subjectsAndTopicsOrder,
 } from '@cdo/apps/templates/teacherDashboard/CourseOfferingHelpers';
 import style from './curriculum_catalog_card.module.scss';
+import LabelTooltip from '@cdo/apps/templates/curriculumCatalog/LabelTooltip';
 
 const CurriculumCatalogCard = ({
   courseDisplayName,
@@ -95,28 +96,25 @@ const CustomizableCurriculumCatalogCard = ({
   isEnglish,
   pathToCourse,
 }) => {
-  const firstLabelText = subjectsAndTopics[0];
-  const renderFirstLabelTooltip = ({arrowProps, ...props}) => (
-    <Tooltip id="first-label-tooltip" className={style.labelTooltip} {...props}>
-      {firstLabelText}
-    </Tooltip>
+  const renderFirstLabelTooltip = props => (
+    <LabelTooltip
+      id="first-label-tooltip"
+      className={style.labelTooltip}
+      {...props}
+    >
+      {subjectsAndTopics[0]}
+    </LabelTooltip>
   );
-
-  const remainingLabelsNode = (
-    <>
-      {subjectsAndTopics.slice(1).map(label => (
-        <p key={label}>{label}</p>
-      ))}
-    </>
-  );
-  const renderRemainingLabelsTooltip = ({arrowProps, ...props}) => (
-    <Tooltip
+  const renderRemainingLabelsTooltip = props => (
+    <LabelTooltip
       id="remaining-labels-tooltip"
       className={style.labelTooltip}
       {...props}
     >
-      {remainingLabelsNode}
-    </Tooltip>
+      {subjectsAndTopics.slice(1).map(label => (
+        <p key={label}>{label}</p>
+      ))}
+    </LabelTooltip>
   );
 
   return (
