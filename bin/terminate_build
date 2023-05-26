@@ -3,6 +3,7 @@
 require_relative '../deployment'
 require 'os'
 require 'open3'
+require 'cdo/chat_client'
 
 # Terminates a build being executed by aws/ci_build (our polling-based continuous deployment system) by killing
 # the parent process and all of its child processes. The build process carries out many different types of activities
