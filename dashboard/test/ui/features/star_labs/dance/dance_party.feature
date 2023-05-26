@@ -1,6 +1,10 @@
 Feature: Dance Party
   # This test relies on CloudFront signed cookies to access /restricted/ on the
   # test machine, but uses SoundLibraryApi for access in CircleCI.
+
+  # TODO BEFORE MERGE: ask how would this one might/should work in dev 
+  # or on a local test machine (not adhoc)?
+  @rails_env_test
   Scenario: Restricted audio content is protected
     When I am on "http://studio.code.org/restricted/placeholder.txt"
     Then page text does not contain "placeholder for testing"
@@ -62,11 +66,19 @@ Feature: Dance Party
 
   @as_student
   @no_mobile
+
+  # BEFORE MERGE: we're only getting two songs showing up,
+  # probably because unlike CircleCI we aren't (???)
+  # using the SoundLibraryApi
+  @rails_env_test
   Scenario: Dance Party Share
     Given I am on "http://studio.code.org/s/dance/lessons/1/levels/13?noautoplay=true"
     And I rotate to landscape
     And I wait for the page to fully load
     And I wait for the song selector to load
+
+    # Breaks here, we only have Synthesize & Jazzy Beats
+    # no "cheapthrills_sia"
     And element "#song_selector" has value "cheapthrills_sia"
 
     When I navigate to the shared version of my project

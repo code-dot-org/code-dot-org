@@ -1,5 +1,10 @@
 @no_circle
 @no_mobile
+# BEFORE MERGE
+# see ui-test-csa-family-script in seed.rake, this complains its not
+# found probably becuase we aren't seeding SPECIAL_UI_TEST_SCRIPTS
+# error is: NoMethodError at /s/ui-test-csa-family-script
+@rails_env_test
 Feature: Code review Finish Button
   Background:
     Given I set up code review for teacher "Code Review Teacher" with 2 students in a group
