@@ -42,6 +42,7 @@ Scenario: Teacher in English should see 5 header links
 Scenario: Signed out user in Spanish should see 3 header links
   Given I am on "http://code.org/lang/es"
   Then check that I am on "http://code.org/"
+  And I wait until cookie "language_" has the value "es"
   And I dismiss the language selector
   Given I am on "http://studio.code.org/courses"
   And I wait to see ".headerlinks"
