@@ -1,4 +1,3 @@
-# require_relative './open_ai.rb'
 require 'cdo/open_ai'
 
 module PromptFilter
@@ -24,7 +23,9 @@ module PromptFilter
       9. Potential Copyright Infringement
       10. Extreme Ideals
 
-      If the contents of the prompt fits into any of these areas return 1, otherwise return 0."
+      If the contents of the prompt fits into any of these areas return 1, otherwise return 0.
+      
+      Return the results as a JSON object where the key is the student prompt and the value is a 1, if the prompt violates any of the above criteria, and a 0 if it doesn't."
 
     response = OpenAI.gpt(system_prompt, student_prompt)
 

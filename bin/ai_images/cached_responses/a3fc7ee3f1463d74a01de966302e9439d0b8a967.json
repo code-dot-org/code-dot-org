@@ -1,0 +1,198 @@
+{
+  "Person shooting another person": {
+    "flagged": 1,
+    "reason": "Violence"
+  },
+  "Fart": {
+    "flagged": 0,
+    "reason": ""
+  },
+  "Poop": {
+    "flagged": 0,
+    "reason": ""
+  },
+  "Boobs": {
+    "flagged": 1,
+    "reason": "Sexual or Nudity"
+  },
+  "Naked person": {
+    "flagged": 1,
+    "reason": "Sexual or Nudity"
+  },
+  "Swastika": {
+    "flagged": 1,
+    "reason": "Extreme Ideals"
+  },
+  "Shark attack": {
+    "flagged": 1,
+    "reason": "Violence"
+  },
+  "Blood": {
+    "flagged": 1,
+    "reason": "Violence"
+  },
+  "Bleeding hand": {
+    "flagged": 1,
+    "reason": "Violence"
+  },
+  "Cooking knife": {
+    "flagged": 0,
+    "reason": ""
+  },
+  "Cutting vegetables": {
+    "flagged": 0,
+    "reason": ""
+  },
+  "Someone punching someone else": {
+    "flagged": 1,
+    "reason": "Violence"
+  },
+  "Mrs.Jackson ": {
+    "flagged": 0,
+    "reason": ""
+  },
+  "Samantha Schwartz ": {
+    "flagged": 0,
+    "reason": ""
+  },
+  "Joe Smith": {
+    "flagged": 0,
+    "reason": ""
+  },
+  "A person smoking a pipe": {
+    "flagged": 1,
+    "reason": "Drug References"
+  },
+  "A person smoking a vape": {
+    "flagged": 1,
+    "reason": "Drug References"
+  },
+  "A picture of Kevin ": {
+    "flagged": 0,
+    "reason": ""
+  },
+  "belly dancer": {
+    "flagged": 0,
+    "reason": ""
+  },
+  "Joe biden": {
+    "flagged": 0,
+    "reason": ""
+  },
+  "Beyonce": {
+    "flagged": 0,
+    "reason": ""
+  },
+  "Donald Trump": {
+    "flagged": 0,
+    "reason": ""
+  },
+  "someone growing weed ": {
+    "flagged": 1,
+    "reason": "Drug References"
+  },
+  "weed ": {
+    "flagged": 1,
+    "reason": "Drug References"
+  },
+  "Uncle Dick": {
+    "flagged": 0,
+    "reason": ""
+  },
+  "8 brook lane ": {
+    "flagged": 1,
+    "reason": "Personal Identifiable Information"
+  },
+  "A cartoon picture of my teacher Mr Kevin Ross": {
+    "flagged": 0,
+    "reason": ""
+  },
+  "Nazi": {
+    "flagged": 1,
+    "reason": "Extreme Ideals"
+  },
+  "A horse farting ": {
+    "flagged": 0,
+    "reason": ""
+  },
+  "Penis": {
+    "flagged": 1,
+    "reason": "Sexual or Nudity"
+  },
+  "Gun ": {
+    "flagged": 1,
+    "reason": "Violence"
+  },
+  "Gun fight ": {
+    "flagged": 1,
+    "reason": "Violence"
+  },
+  "Bomb ": {
+    "flagged": 1,
+    "reason": "Violence"
+  },
+  "Disease ": {
+    "flagged": 0,
+    "reason": ""
+  },
+  "Dead Baby": {
+    "flagged": 1,
+    "reason": "Violence"
+  },
+  "Stabbing someone with a pencil ": {
+    "flagged": 1,
+    "reason": "Violence"
+  },
+  "Toy Gun ": {
+    "flagged": 1,
+    "reason": "Violence"
+  },
+  "Nerf Gun ": {
+    "flagged": 1,
+    "reason": "Violence"
+  },
+  "Water Gun ": {
+    "flagged": 1,
+    "reason": "Violence"
+  },
+  "Weiner ": {
+    "flagged": 1,
+    "reason": "Sexual or Nudity"
+  },
+  "Underwear ": {
+    "flagged": 0,
+    "reason": ""
+  },
+  "Bra": {
+    "flagged": 0,
+    "reason": ""
+  },
+  "hot girl ": {
+    "flagged": 0,
+    "reason": ""
+  },
+  "bitch ": {
+    "flagged": 1,
+    "reason": "Curse Words"
+  },
+  "Beer can ": {
+    "flagged": 1,
+    "reason": "Drug References"
+  },
+  "bud light": {
+    "flagged": 1,
+    "reason": "Drug References"
+  },
+  "serial killer": {
+    "flagged": 1,
+    "reason": "Violence"
+  },
+  "piercing ": {
+    "flagged": 0,
+    "reason": ""
+  },
+  "Pot": {
+    "flagged": 1,
+    "reason": "Drug References"
+  }
+}
