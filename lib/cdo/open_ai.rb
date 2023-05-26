@@ -33,10 +33,13 @@ module OpenAI
     return response_data
   end
 
-  def self.gpt(system_prompt, prompt)
+  def self.gpt(system_prompt, prompt, timeout_override = nil)
     system_role_content = system_prompt
     url = URI.parse("https://api.openai.com/v1/chat/completions")
     http = Net::HTTP.new(url.host, url.port)
+    if timeout_override
+      http.read_timeout = timeout_override
+    end
     http.use_ssl = true
 
     headers = {
@@ -65,6 +68,11 @@ module OpenAI
       raise Exception.new(response_data['error'])
     end
 
+    puts """
+      FYI! This completion used #{response_data['usage']['total_tokens']} tokens,
+      #{response_data['usage']['prompt_tokens']} for the prompt
+      and #{response_data['usage'][completion_tokens]} for the completion.
+    """
     message_content = response_data['choices'][0]['message']['content']
     return message_content
   end

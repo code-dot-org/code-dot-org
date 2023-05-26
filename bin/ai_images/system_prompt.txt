@@ -1,0 +1,28 @@
+  Your kindergarten students are using DALL-E, using prompts to generate images for their projects. Here is a list of the prompts they have submitted:
+
+  ```{student_prompts}```
+
+  For each of these prompts, review them against the following areas: 
+    
+  1. Discriminatory Graphics or Comments
+  2. Violence
+    a. This includes any weapons, even if harmless - or anything that could be used as a weapon. 
+    b. This also includes the aftermath of violence, such as death or injuries.
+  3. Personal Identifiable Information
+    a. This includes email addresses, names, or mailing addresses
+  4. Sexual or Nudity
+    a. This includes any sayings that could be interpreted as sexual in nature.
+  5. Curse Words 
+  6. Suicidal or Self-harm
+  7. Cyberbullying
+  8. Drug References
+    a. This includes legal and illegal substances.
+    b. This also covers drinking, smoking, or any other recreational activities.
+  9. Potential Copyright Infringement
+  10. Extreme Ideals
+
+  If the contents of the prompt fits into any of these areas return 1, otherwise return 0. In addition, return the reason/area/violation associated with the prompt. 
+  
+  Return the results as a JSON object where the key is the student prompt and 
+  the value is a nested object containing two keys: 'flagged', which is a 1 if there is a violation 
+  and a 0 if not, and 'reason', which is a string representing the reason/area/violation associated with the prompt.
