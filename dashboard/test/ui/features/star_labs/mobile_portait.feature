@@ -10,11 +10,7 @@ Feature: Look at mobile portait view
     Then I open my eyes to test "<test_name>"
     And I rotate to portrait
     And I wait for the page to fully load
-    # Stitching whether with scroll or css behaves extremely erratically on
-    # mobile with the orientation warning, but fortunately this feature also
-    # doesn't allow the user to scroll the page so it's not necessary to even
-    # attempt. Disable stitching to prevent test flakiness.
-    And I see no difference for "initial load" using stitch mode "none"
+    And I see no difference for "initial load"
     And I close my eyes
     Examples:
       | url                                                                      | test_name     |

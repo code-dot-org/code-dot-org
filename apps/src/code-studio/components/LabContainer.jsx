@@ -14,6 +14,7 @@ import {useSelector} from 'react-redux';
 import classNames from 'classnames';
 import moduleStyles from './LabContainer.module.scss';
 import i18n from '@cdo/locale';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
 
 const LabContainer = ({children}) => {
   const isLabLoading = useSelector(state => state.lab.isLoading);
@@ -29,7 +30,19 @@ const LabContainer = ({children}) => {
       <div
         id="fade-overlay"
         className={classNames(moduleStyles.solidBlock, overlayStyle)}
-      />
+      >
+        {isLabLoading && (
+          <div className={moduleStyles.slowLoadContainer}>
+            <div className={moduleStyles.spinnerContainer}>
+              <FontAwesome
+                icon="spinner"
+                className={classNames('fa-pulse', 'fa-3x')}
+              />
+            </div>
+            <div className={moduleStyles.spinnerText}>{i18n.slowLoading()}</div>
+          </div>
+        )}
+      </div>
 
       {isPageError && (
         <div
