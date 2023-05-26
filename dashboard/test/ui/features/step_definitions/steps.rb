@@ -1183,6 +1183,14 @@ And(/^I wait until element "([^"]*)" has the value "([^"]*)"$/) do |selector, va
   end
 end
 
+And(/^I wait until cookie "([^"]*)" has the value "([^"]*)"$/) do |cookie, value|
+  wait_short_until do
+    @browser.manage.cookie_named(cookie)[:value] == value
+  rescue Selenium::WebDriver::Error::NoSuchCookieError
+    false
+  end
+end
+
 When /^I press keys "([^"]*)"$/ do |keys|
   @browser.action.send_keys(*convert_keys(keys)).perform
 end
