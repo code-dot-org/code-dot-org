@@ -18,6 +18,10 @@ export function injectCss() {
   return Blockly.Css.inject(true, 'media');
 }
 
+export function resizeSvg(blockSpace) {
+  return Blockly.svgResize(blockSpace);
+}
+
 export function getBlockFields(block) {
   let fields = [];
   block.inputList.forEach(input => {

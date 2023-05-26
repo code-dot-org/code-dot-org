@@ -17,9 +17,7 @@ function update(blockSpace, container, editor) {
   var metrics = blockSpace.getMetrics();
   var height = metrics.contentHeight + metrics.contentTop;
   container.style.height = height + 'px';
-  if (Blockly.version === 'CDO') {
-    blockSpace.blockSpaceEditor.svgResize();
-  }
+  Blockly.cdoUtils.resizeSvg(blockSpace);
 }
 
 module.exports = function (editor, container) {
