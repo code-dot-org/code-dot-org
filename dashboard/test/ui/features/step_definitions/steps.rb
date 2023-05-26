@@ -174,7 +174,9 @@ And /^I add another version to the project$/ do
     And I add code "// comment A" to ace editor
     And I wait until element "#resetButton" is visible
     And I press "resetButton"
-    And I click selector "#runButton" once I see it
+    And I wait until element "#runButton" is visible
+    And I wait for the event loop
+    And I press "runButton"
   GHERKIN
 end
 
