@@ -96,22 +96,6 @@ const CheckboxDropdown = ({
               color={Button.ButtonColor.brandSecondaryDefault}
             />
           </div>
-          {/*<button*/}
-          {/*  id={'select-all'}*/}
-          {/*  className={style.affectAllButton}*/}
-          {/*  type="button"*/}
-          {/*  onClick={() => handleSelectAll(name)}*/}
-          {/*>*/}
-          {/*  {i18n.selectAll()}*/}
-          {/*</button>*/}
-          {/*<button*/}
-          {/*  id={'clear-all'}*/}
-          {/*  className={style.affectAllButton}*/}
-          {/*  type="button"*/}
-          {/*  onClick={() => handleClearAll(name)}*/}
-          {/*>*/}
-          {/*  {i18n.clearAll()}*/}
-          {/*</button>*/}
         </ul>
       </form>
     </div>
