@@ -1,8 +1,13 @@
 require 'test_helper'
 
 class LtiIntegrationTest < ActiveSupport::TestCase
+  test "platform_id should exist" do
+    integration = create(:lti_integration)
+    assert_not_nil integration.platform_id
+    assert_equal integration.platform_id.length, 32
+  end
+
   test "should validate required fields" do
-    assert_not build(:lti_integration, platform_id: nil).valid? "platform_id is required"
     assert_not build(:lti_integration, issuer: nil).valid? "issuer is required"
     assert_not build(:lti_integration, client_id: nil).valid? "client_id is required"
     assert_not build(:lti_integration, platform_name: nil).valid? "platform_name is required"
