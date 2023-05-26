@@ -25,7 +25,7 @@ class GoogleAnalyticsReporter {
   googleAnalyticsGTag = 'G-L9HT5MZ3HD';
 
   constructor() {
-    this.#initializeGoogleUniversal(
+    this.initializeGoogleUniversal(
       window,
       window.document,
       'script',
@@ -33,9 +33,9 @@ class GoogleAnalyticsReporter {
       'ga'
     );
 
-    this.#initializeGoogleAnalytics();
+    this.initializeGoogleAnalytics();
 
-    this.#addEventListener();
+    this.addEventListener();
 
     window.trackEvent = this.trackEvent;
     window.readCookie = this.readCookie;
@@ -48,7 +48,7 @@ class GoogleAnalyticsReporter {
    *  Google Analytics adds the tags and the `ga` function to the window to be used
    *  across the site.
    */
-  #initializeGoogleUniversal(i, s, o, g, r, a, m) {
+  initializeGoogleUniversal(i, s, o, g, r, a, m) {
     if (this.isGoogleAnalyticsUniversalEnabled) {
       i.ga =
         i.ga ||
@@ -74,7 +74,7 @@ class GoogleAnalyticsReporter {
   /**
    * Initialize google Analytics 4 and the property tag
    */
-  #initializeGoogleAnalytics() {
+  initializeGoogleAnalytics() {
     if (this.isGoogleAnalytics4Enabled) {
       gtag('js', new Date());
       window.dataLayer = window.dataLayer || [];
@@ -82,7 +82,7 @@ class GoogleAnalyticsReporter {
     }
   }
 
-  #addEventListener() {
+  addEventListener() {
     window.addEventListener('load', function () {
       const ga = document.createElement('script');
       ga.type = 'text/javascript';
