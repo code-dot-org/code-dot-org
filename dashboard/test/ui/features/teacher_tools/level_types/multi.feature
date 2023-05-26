@@ -30,7 +30,6 @@ Scenario: Submitting an incorrect option
   And I press ".modal #ok-button" using jQuery
   And I wait until element "#cross_0" is visible
 
-@skip
 Scenario: Rendering in another language
   Given I am on "http://studio.code.org/s/course1/lessons/2/levels/2/lang/es-MX"
   Then I rotate to landscape
