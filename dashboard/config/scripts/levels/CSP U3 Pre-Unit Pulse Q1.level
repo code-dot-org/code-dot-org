@@ -1,5 +1,10 @@
 <FreeResponse>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2023-03-28T23:31:26.000Z",
+  "level_num": "custom",
+  "user_id": 1574,
   "properties": {
     "encrypted": "false",
     "title": "The Pre-Unit Pulse ❤️🎧 - Intro to App Design",
@@ -8,16 +13,11 @@
     "submittable": "false",
     "peer_reviewable": "false",
     "optional": "false",
-    "allow_multiple_attempts": "false",
+    "allow_multiple_attempts": "true",
     "skip_dialog": true,
     "skip_sound": true
   },
-  "game_id": 52,
-  "published": true,
-  "created_at": "2023-03-28T23:31:26.000Z",
-  "level_num": "custom",
-  "user_id": 1574,
-  "audit_log": "[{\"changed_at\":\"2023-03-28T23:31:26.631+00:00\",\"changed\":[\"cloned from \\\"CSP U2InterestInventoryQ3\\\"\"],\"cloned_from\":\"CSP U2InterestInventoryQ3\"},{\"changed_at\":\"2023-03-28 23:32:03 +0000\",\"changed\":[\"title\",\"long_instructions\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2023-04-07 19:00:13 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2023-03-28T23:31:26.631+00:00\",\"changed\":[\"cloned from \\\"CSP U2InterestInventoryQ3\\\"\"],\"cloned_from\":\"CSP U2InterestInventoryQ3\"},{\"changed_at\":\"2023-03-28 23:32:03 +0000\",\"changed\":[\"title\",\"long_instructions\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2023-04-07 19:00:13 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2023-05-22 13:36:45 +0000\",\"changed\":[\"allow_multiple_attempts\"],\"changed_by_id\":897,\"changed_by_email\":\"bethany+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
