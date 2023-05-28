@@ -77,6 +77,7 @@ export interface SoundData {
   length: number;
   type: SoundType;
   note?: number;
+  restricted?: boolean;
 }
 
 export interface SoundFolder {

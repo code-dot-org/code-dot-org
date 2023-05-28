@@ -156,6 +156,7 @@ const PROJECT_URL_PATTERN = /^(.*\/projects\/\w+\/[\w\d-]+)\/.*/;
 
 /**
  * Used by setThumbnailUrl() to set the project thumbnail URL path.
+ * NOTE: if changing this URL, update project thumbnail URL validation as well
  */
 const THUMBNAIL_PATH = '.metadata/thumbnail.png';
 
@@ -1775,6 +1776,7 @@ var projects = (module.exports = {
   },
 
   setThumbnailUrl() {
+    // NOTE: if changing this URL, update project thumbnail URL validation as well
     current.thumbnailUrl = `/v3/files/${current.id}/${THUMBNAIL_PATH}`;
     thumbnailChanged = true;
   },

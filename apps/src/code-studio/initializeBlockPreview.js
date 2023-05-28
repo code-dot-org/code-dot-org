@@ -17,7 +17,7 @@ function update(blockSpace, container, editor) {
   var metrics = blockSpace.getMetrics();
   var height = metrics.contentHeight + metrics.contentTop;
   container.style.height = height + 'px';
-  blockSpace.blockSpaceEditor.svgResize();
+  Blockly.cdoUtils.resizeSvg(blockSpace);
 }
 
 module.exports = function (editor, container) {
@@ -30,8 +30,5 @@ module.exports = function (editor, container) {
     update(blockSpace, container, editor);
   });
 
-  // need to update twice initially to counter Blockly's weird sizing
-  // requirements
-  update(blockSpace, container, editor);
   update(blockSpace, container, editor);
 };

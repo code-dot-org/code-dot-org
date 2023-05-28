@@ -43,7 +43,7 @@ Feature: Using the assessments tab in the teacher dashboard to get feedback for 
     And I click selector ".ui-test-section-dropdown" once I see it
     And I click selector ".edit-section-details-link"
     And I wait until element "#uitest-assignment-family" is visible
-    And I select the "Express Course" option in dropdown "uitest-assignment-family"
+    And I select the "CS Fundamentals: Express Course" option in dropdown "uitest-assignment-family"
     And I press the first ".uitest-saveButton" element
     And I wait until element ".modal-backdrop" is gone
 
