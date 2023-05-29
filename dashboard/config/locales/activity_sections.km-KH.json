@@ -75,11 +75,23 @@
             null
           ]
         },
+        "49994950-2fc5-4779-abd5-2369a402a750": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
         "950807e2-afa0-4c26-9459-4682b3f49602": {
           "progression_name": "ឧទាហរណ៍"
         },
+        "175a6627-901e-40c3-9b54-d156c7da668f": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
+        "96abf95f-d28e-4fe0-a376-016b5dbd6883": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
         "51fbff8e-3efa-4697-8f66-bc9c3b27e82b": {
           "progression_name": "ឧទាហរណ៍"
+        },
+        "14006414-2422-4d85-bbed-d7bd50c95996": {
+          "progression_name": "ការកសាងជំនាញ"
         },
         "a6528f05-51ce-4f9d-ae5e-0cc1543f71b6": {
           "progression_name": "លេងដោយសេរី"
@@ -367,7 +379,7 @@
         },
         "df13fa93-37df-4188-837d-462c48179625": {
           "description": "",
-          "progression_name": ""
+          "progression_name": "ការកសាងជំនាញ"
         },
         "ae9fb00b-5b7e-4ecb-94c9-c778a2eba24e": {
           "description": "",
@@ -543,6 +555,9 @@
             null
           ]
         },
+        "4e14f7ca-7b1a-4769-ae57-9f128722a0dd": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
         "f5627332-703a-420b-ab72-660c350b87d9": {
           "tips": [
             null
@@ -560,6 +575,9 @@
           "tips": [
             null
           ]
+        },
+        "7e3632b0-108a-4179-adf0-89a8e204b031": {
+          "progression_name": "ការកសាងជំនាញ"
         },
         "16d61ffc-4200-4a4d-b11e-6fffb02ab38b": {
           "progression_name": "លេងដោយសេរី"
@@ -581,6 +599,9 @@
         },
         "6c45fccd-0b3b-4db0-9224-2dce4fee891a": {
           "name": "ពាក្យពិបាក"
+        },
+        "eb787c9f-ed60-4591-ab5f-b76a25cf26b3": {
+          "progression_name": "ការកសាងជំនាញ"
         },
         "cda08e32-7472-46e5-900d-947542cde40e": {
           "tips": [
@@ -614,7 +635,13 @@
           "progression_name": "មេរៀនបន្ថែម"
         },
         "23874ed2-c11c-4626-93ce-738a948d9467": {
-          "name": "រង្វិលជុំក្នុងយុគសម័យទឹកកក"
+          "name": "ប្រតិបត្តិដដែលៗ (loops) ក្នុងយុគសម័យទឹកកក"
+        },
+        "d9fbe733-657b-4504-8dbb-eab8104168aa": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
+        "d278b098-4bb0-4e0e-94b2-030bcfdc25bb": {
+          "progression_name": "ការកសាងជំនាញ"
         },
         "e26c0781-e8ca-4864-ab22-1af5ce60b1f4": {
           "progression_name": "មេរៀនបន្ថែម"
@@ -624,8 +651,20 @@
             null
           ]
         },
+        "61fa4607-bb88-4573-8bea-10a12e88181a": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
+        "f52282b3-cfad-49a9-a004-5297a4ca7bbc": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
         "3315af90-e8ff-4568-813e-2b743e90bf30": {
           "progression_name": "មេរៀនបន្ថែម"
+        },
+        "0f7a9d4d-e15d-4efc-a408-644c06c8fcb2": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
+        "535eebb3-357a-451a-95e4-f6cce960290e": {
+          "progression_name": "ការកសាងជំនាញ"
         },
         "791b5b99-593d-4287-ab93-a9970d63744e": {
           "progression_name": "មេរៀនបន្ថែម"
@@ -641,20 +680,42 @@
             null
           ]
         },
+        "419b0732-9e07-4ab2-8c48-0fb798dfdfde": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
+        "c6bd1d9a-a98f-444b-b24b-05fef7ca82ec": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
         "268e56b4-6f3e-4a44-8383-2e538ae1ab72": {
           "progression_name": "លេងដោយសេរី"
         },
         "3ea15706-caac-499b-aef5-a7210f291bfc": {
           "progression_name": "មេរៀនបន្ថែម"
         },
+        "c6c9457f-77f7-4a4a-9f79-72386ab1ac9a": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
+        "106bfc79-23ce-4a84-b0b6-38740eb9df89": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
         "3edea7b4-3cb0-44c0-8705-5e2f51f2802d": {
           "progression_name": "មេរៀនបន្ថែម"
+        },
+        "e1adf430-4152-42c1-a520-f40716ca9378": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
+        "26d62974-617f-4322-ab5d-29e79e49cc87": {
+          "progression_name": "ការកសាងជំនាញ"
         },
         "3694bab1-5f1b-411a-8170-601003b9d32c": {
           "progression_name": "មេរៀនបន្ថែម"
         },
         "88a4ca9a-f917-418e-8c1c-2cc4ac814afd": {
-          "name": "Until Loops នៅក្នុងផ្លូវខ្វាត់ខ្វែង"
+          "name": "Until Loops នៅក្នុងផ្លូវខ្វាត់ខ្វែង",
+          "progression_name": "ការកសាងជំនាញ"
+        },
+        "34a17d75-d294-42da-b0ca-57ddd75b50cb": {
+          "progression_name": "ការកសាងជំនាញ"
         },
         "baf8f43c-6977-4f51-a3c6-3b571a735941": {
           "progression_name": "មេរៀនបន្ថែម"
@@ -692,7 +753,8 @@
         "3f88f7fc-f308-44e8-ad91-df97a9080361": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "ការកសាងជំនាញ"
         },
         "98dedd12-1d66-41ed-9629-e30265862d45": {
           "tips": [
@@ -706,6 +768,9 @@
           "tips": [
             null
           ]
+        },
+        "ddbb537c-edf8-479c-b44d-8188941c0655": {
+          "progression_name": "ការកសាងជំនាញ"
         },
         "d5632c3a-b496-41b6-a90f-1c738211a438": {
           "tips": [
@@ -738,7 +803,8 @@
         "304fbec8-0776-402a-9eeb-1e774da6bc0c": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "ការកសាងជំនាញ"
         },
         "aef1a460-c4ee-406c-9f3e-2e9243f88502": {
           "tips": [
@@ -765,6 +831,9 @@
             null
           ]
         },
+        "e2e2e67f-7883-47c0-b018-118af90abc79": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
         "6962360d-5a78-47ae-8686-4038e83ebfbf": {
           "progression_name": "លេងដោយសេរី"
         },
@@ -783,10 +852,19 @@
             null
           ]
         },
+        "f621cd05-64b4-41d4-8c9a-b310731edecb": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
         "12dc3a29-9b6a-448a-91d7-c795731e097b": {
           "tips": [
             null
           ]
+        },
+        "fc407406-3b2b-46cd-be85-000640f4f949": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
+        "21348baa-81f3-473d-a4d8-bfdef00cc99e": {
+          "progression_name": "ការកសាងជំនាញ"
         },
         "9630adaa-f7c1-4efa-8f7e-5d3ceb155b0b": {
           "tips": [
@@ -876,8 +954,17 @@
             null
           ]
         },
+        "ff7aa3e1-8328-41bf-b516-51ca5ea0a800": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
         "dce569eb-0a60-42a9-9e31-855a6b138f92": {
           "progression_name": "លេងដោយសេរី"
+        },
+        "5c9fce3b-e030-4ff3-8943-67f13f9dbbf8": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
+        "0121aca1-bd15-436e-ac4d-5424f269e25a": {
+          "progression_name": "ការកសាងជំនាញ"
         },
         "83a864f0-7f6f-4ef6-8969-b0627bf8ef55": {
           "progression_name": "លេងដោយសេរី"
@@ -887,6 +974,12 @@
             null
           ]
         },
+        "d8046ff6-568f-4a94-a37c-3f32f63b19fe": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
+        "56779577-ac08-415f-b1bd-9ba7abdcf29e": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
         "0f2d930f-f0ed-4b9a-b2f4-ba259ad3ee4a": {
           "progression_name": "មេរៀនបន្ថែម"
         },
@@ -894,6 +987,12 @@
           "tips": [
             null
           ]
+        },
+        "fe5271b2-e5f3-44f5-94d8-d4630bb9d37d": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
+        "7571aba3-7786-43cb-91e3-4d1a3218c6cc": {
+          "progression_name": "ការកសាងជំនាញ"
         },
         "45275988-8cf4-4043-b5a4-659cc090346a": {
           "progression_name": "លេងដោយសេរី"
@@ -934,11 +1033,32 @@
             null
           ]
         },
+        "db999346-e73e-4580-8c5f-d76e30ab2b7d": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
+        "3ee7b90a-c59c-47ae-96f2-c5e9bc506d2a": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
+        "356734de-fbb9-4ac7-b554-2daaa9d70fee": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
         "6ddf83bf-3856-4d68-a048-ac5a0ac26349": {
           "progression_name": "លេងដោយសេរី"
         },
+        "ada4de0f-53bc-4130-bd2f-0da228ca7b7e": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
         "6698a795-4281-4c01-a74e-ec5703f653b9": {
           "progression_name": "មេរៀនបន្ថែម"
+        },
+        "09b06756-c981-4af6-a6ea-5697f8fa78e2": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
+        "d2e8a5d0-a31d-4a17-a649-8e1cc2aa735a": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
+        "6d700f77-eea3-46c2-8ea6-27454cbaf9ab": {
+          "progression_name": "ការកសាងជំនាញ"
         },
         "cbae92bc-d7b3-4707-a5f9-c5b373bdaee7": {
           "progression_name": "លេងដោយសេរី"
@@ -946,7 +1066,17 @@
         "a24e03d0-5524-46ec-ab96-a0b1d9b24d8b": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "ការកសាងជំនាញ"
+        },
+        "2908bd65-d321-4b6f-a5f3-6d550564bbaa": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
+        "62f9f06c-c008-464b-b1fb-86e224ce1018": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
+        "19a96cd7-57c5-4a55-a7a2-e71a01464fb4": {
+          "progression_name": "ការកសាងជំនាញ"
         },
         "179685a9-6ed2-454f-8a2b-76c4032f1d16": {
           "tips": [
@@ -998,6 +1128,9 @@
             null
           ]
         },
+        "63f75f65-45a9-4de8-9cc0-6b402647ccc1": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
         "c05c857d-b5f3-4136-b505-f9ab43799bcb": {
           "tips": [
             null
@@ -1005,6 +1138,9 @@
         },
         "75c9132a-969b-4198-8b79-cee2349158bf": {
           "name": "ការសរសេរកម្មវិធីជាមួយតួអង្គបក្សី"
+        },
+        "12d31175-b400-43ea-b132-40b08afeb0fa": {
+          "progression_name": "ការកសាងជំនាញ"
         },
         "80691b85-b3f7-42c5-b28d-075f30bcfa91": {
           "progression_name": "មេរៀនបន្ថែម"
@@ -1014,15 +1150,39 @@
             null
           ]
         },
+        "e4f833fe-43bb-4538-8ceb-e014712357b2": {
+          "name": "ការសរសេរកម្មវិធីជាមួយ​ អ្នកប្រមូលផល"
+        },
         "90d01840-ab32-4ff1-9603-1a400df6c870": {
           "tips": [
             null
           ]
         },
+        "49fbb767-771c-46d4-82ed-25acdc22cc34": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
+        "9edf4db6-25f2-432c-962d-7972ad7ef163": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
         "72b7082d-9ed1-465f-8d53-952202764c44": {
           "tips": [
             null
           ]
+        },
+        "16d31221-e844-4e6f-8344-fa1084b9dbf9": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
+        "8cd5852c-c611-485e-967b-a0b071a6e04d": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
+        "6e40f870-a79e-48d1-8868-0e499e80790d": {
+          "progression_name": "វីដេអូ៖ អ្នកប្រមូល"
+        },
+        "bfca3091-4042-4479-acb3-446e166a3dde": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
+        "4926c6b2-f0ed-4508-bbc9-df16b0e5042f": {
+          "progression_name": "ការកសាងជំនាញ"
         },
         "6fd1b50c-48c1-4ebd-a36f-91027caf9587": {
           "progression_name": "មេរៀនបន្ថែម"
@@ -1031,6 +1191,12 @@
           "tips": [
             null
           ]
+        },
+        "b7796885-3fd7-48b7-9a37-60950e9906ee": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
+        "bda70e53-e9ab-4e7c-877f-4d5020435d75": {
+          "progression_name": "ការកសាងជំនាញ"
         },
         "b8b54f7e-0f68-46c7-84d1-756d1d134cdc": {
           "progression_name": "លេងដោយសេរី"
@@ -1050,6 +1216,9 @@
           "tips": [
             null
           ]
+        },
+        "fb86d63a-88cc-40a1-a21e-eef2197c9587": {
+          "name": "សមរភូមិក្សត្រ ដោយប្រើកូដប្លុកព្រឹត្តិការណ៍"
         },
         "d4687de2-d2c6-4e40-ae76-4daca6ebfe30": {
           "progression_name": "លេងដោយសេរី"
@@ -1084,17 +1253,32 @@
             null
           ]
         },
+        "49b2f670-c867-4f10-9a00-69e36e656858": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
         "5b0bad48-bd8f-4217-aef6-6bd8250e1186": {
           "name": "ពាក្យពិបាក"
         },
         "5c133834-038c-48e4-819a-cef93780856b": {
           "name": "ការបំបាត់កំហុសជាមួយ Scrat"
         },
+        "2e366d04-1f25-4c62-8345-e74a5e81799d": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
         "27675226-8c0f-4955-ac5f-f9bfa4c7c475": {
           "progression_name": "មេរៀនបន្ថែម"
         },
+        "ea0d0c84-a0d7-41d0-80cc-efe792db04e8": {
+          "progression_name": "វីដេអូ៖ អ្នកប្រមូល"
+        },
+        "f2310ede-7d4f-478c-aa07-906ae23fe170": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
         "76775349-6666-411c-adea-ee7c7277587c": {
           "progression_name": "មេរៀនបន្ថែម"
+        },
+        "9d3c0460-5365-4117-811d-9728a5a3f9d9": {
+          "progression_name": "ការកសាងជំនាញ"
         },
         "3c6953b2-ead1-488b-b460-2735304f527f": {
           "tips": [
@@ -1114,13 +1298,22 @@
             null
           ]
         },
+        "2a075c6b-296c-42fb-931a-7f035332357c": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
         "048bc86f-ea26-419c-9d73-452f86ff0000": {
           "progression_name": "លេងដោយសេរី"
+        },
+        "25d0dd9f-5a89-4a91-a3de-aba0e507aac8": {
+          "progression_name": "ការកសាងជំនាញ"
         },
         "c4709ef3-6dff-44f9-ab00-7c8d4ceb84de": {
           "tips": [
             null
           ]
+        },
+        "5ee02837-9f63-4306-84d8-ded40216114f": {
+          "progression_name": "ការកសាងជំនាញ"
         },
         "e6d62a4b-b381-4ce6-9301-da64d2be269a": {
           "tips": [
@@ -1148,6 +1341,9 @@
         "109dc08b-1106-4a0d-bc01-7dba9d3a40b2": {
           "name": "រង្វិលជុំ ជាមួយ វៃស៍ និង ប៊ីប៊ី-8។"
         },
+        "398815f4-e1bb-4d7c-b2be-2c9380704b3e": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
         "34e6b039-ccae-45fe-9ab7-b690257c8f6c": {
           "progression_name": "មេរៀនបន្ថែម"
         },
@@ -1162,20 +1358,54 @@
         "504c0708-e9cc-41e8-86b6-fcdcfc8c93e2": {
           "progression_name": "មេរៀនបន្ថែម"
         },
+        "071fbf5c-0fc0-4738-a7d1-558290f78934": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
+        "83daad31-f1c9-4d21-897b-a291d39f55df": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
         "9798ab7a-f709-42df-b9fb-1828099a88d3": {
           "progression_name": "លេងដោយសេរី"
+        },
+        "99b05859-1e56-404c-ab65-0eabd5009dc8": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
+        "2ba5a718-c776-4973-b81b-46c01ee3a611": {
+          "progression_name": "ការកសាងជំនាញ"
         },
         "9419a044-4ad7-4a3f-8718-fc5606ed7958": {
           "progression_name": "មេរៀនបន្ថែម"
         },
+        "599f0ab4-6410-4002-9b4a-540e75d4f815": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
+        "9ab1ae71-66af-4623-b62a-f064c3c1f6eb": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
         "8e573a8a-22a7-4169-b45d-5901ba99c8df": {
           "progression_name": "មេរៀនបន្ថែម"
+        },
+        "ae2702dd-1b90-4eac-a21e-8cb4a84b6cd1": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
+        "1604d928-c94d-4496-a973-156b5ce382a9": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
+        "6ebeff6b-35ce-4b04-8570-ea1ef77e68cc": {
+          "progression_name": "ការកសាងជំនាញ"
         },
         "828088e0-ab60-429b-ac4b-4317696c271c": {
           "progression_name": "លេងដោយសេរី"
         },
         "db031fa5-7047-46ee-8ccf-49a1f15c696a": {
-          "name": "Until Loops នៅក្នុងផ្លូវខ្វាត់ខ្វែង"
+          "name": "Until Loops នៅក្នុងផ្លូវខ្វាត់ខ្វែង",
+          "progression_name": "ការកសាងជំនាញ"
+        },
+        "b19a320c-8372-4505-90c0-a44255e0ae50": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
+        "f93f7ead-cfbc-494a-bfa3-03ed6ed8e7a4": {
+          "progression_name": "ការកសាងជំនាញ"
         },
         "b0e26070-0ca9-4033-9497-dcaaf64de124": {
           "progression_name": "មេរៀនបន្ថែម"
@@ -1190,11 +1420,20 @@
             null
           ]
         },
+        "2d570216-8519-47e7-bc42-58b9e876dd9e": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
+        "4da6304f-c60e-4701-b04e-38b38ddf008f": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
+        "94e730d2-235a-408d-8a51-b9ca83fe59e0": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
         "0cb275f3-0f5c-4b45-a456-c3acd5a7b82d": {
           "progression_name": "លេងដោយសេរី"
         },
         "e0582255-a83c-4278-8b18-9ce09ac1118d": {
-          "progression_name": "អ្នកច្រូតកាត់"
+          "progression_name": "អ្នកប្រមូលផល"
         },
         "556d480c-8833-4dc1-b5ea-fcbd1ed85890": {
           "progression_name": "លេងដោយសេរី"
@@ -1210,7 +1449,8 @@
         "515ecad5-bd7d-46e5-b210-53f7e7a3d43b": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "ការកសាងជំនាញ"
         },
         "bb115604-d0c7-4483-98c0-2d59d04351bb": {
           "tips": [
@@ -1227,8 +1467,20 @@
             null
           ]
         },
+        "93c42114-b7e6-4d21-9e93-0760e125a7b9": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
+        "84a9b36a-0025-40e0-a586-3a4b7922202d": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
         "29bc9a2b-2f0e-4f9f-becf-3264d6d93b43": {
           "progression_name": "លេងដោយសេរី"
+        },
+        "aed9e7b5-5f28-4fef-81d9-35d67a89ce96": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
+        "09232a7b-7302-4953-bf68-8d92ccc592e4": {
+          "progression_name": "ការកសាងជំនាញ"
         },
         "ea00f202-5974-43d9-831a-37197acb6673": {
           "progression_name": "មេរៀនបន្ថែម"
@@ -1237,6 +1489,9 @@
           "tips": [
             null
           ]
+        },
+        "e0e39e0f-93b9-40b2-abe5-18886551cf49": {
+          "progression_name": "ការកសាងជំនាញ"
         },
         "f8950515-c428-4508-b465-0930dcbb9d57": {
           "progression_name": "លេងដោយសេរី"
@@ -1265,7 +1520,7 @@
           ]
         },
         "55fe1e9d-bf0e-4294-88b0-9f43918c4407": {
-          "name": "រៀនអូស និងទម្លាក់ "
+          "name": "រៀនអំពីការអូស និងទម្លាក់"
         },
         "749e673c-fb7b-4101-9308-78d14af34b57": {
           "tips": [
@@ -1276,6 +1531,9 @@
           "tips": [
             null
           ]
+        },
+        "282e9e32-5912-4b7b-b154-daceab2b09db": {
+          "progression_name": "ការកសាងជំនាញ"
         },
         "f1441fec-0659-46e7-b4a8-e5faada350e9": {
           "tips": [
@@ -1292,8 +1550,12 @@
             null
           ]
         },
+        "bc9ddb65-4298-403d-b9b4-d8c7ad98b760": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
         "4b2ae2f9-5106-4ab2-91b3-fa6b5077a205": {
-          "name": "ការសរសេរកម្មវិធីជាមួយតួអង្គបក្សី"
+          "name": "ការសរសេរកម្មវិធីជាមួយតួអង្គបក្សី",
+          "progression_name": "ការកសាងជំនាញ"
         },
         "45d87d50-30ef-4aa3-bc3f-e06911ea7ecd": {
           "progression_name": "មេរៀនបន្ថែម"
@@ -1304,12 +1566,24 @@
           ]
         },
         "0700ca91-8b31-4bd0-bbdc-888c7ca202ac": {
-          "name": "ការសរសេរកូដកម្មវិធិជាមួយ រៃសនិង ប៊ីប៊ី-8។"
+          "name": "សរសេរកម្មវិធីជាមួយ Rey និង BB-8"
+        },
+        "7e274048-6f57-4ec7-b0ef-a9fea4f99ce2": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
+        "4751f547-860d-4156-abbd-9730989185de": {
+          "name": "ការសរសេរកម្មវិធីជាមួយ​ អ្នកប្រមូលផល"
         },
         "30e8181b-a550-477d-9dd7-c9eb8ed6a671": {
           "tips": [
             null
           ]
+        },
+        "5d87e611-aef5-4743-b2c2-4c12c39f3069": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
+        "ac3a1054-1f1e-4c0a-8c2c-e20afa043bdf": {
+          "progression_name": "ការកសាងជំនាញ"
         },
         "40bca876-4212-4432-8e78-451ac05d4b6a": {
           "tips": [
@@ -1321,8 +1595,23 @@
             null
           ]
         },
+        "b7cac6ab-1f77-4f85-8049-a0f88b26e2d1": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
+        "b28b1ad5-4cd6-44ce-b3b9-7dcdebbf95ff": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
         "7976932c-a4b6-489f-baf4-bfe75e9f6e73": {
           "name": "ធ្វើដដែលៗជាមួយនិងឡូរ៉ល។"
+        },
+        "6976e6de-38fa-42aa-b538-606a39e4ab91": {
+          "progression_name": "វីដេអូ៖ អ្នកប្រមូល"
+        },
+        "0c5c0b74-df51-44ca-9b65-78e14fff2a73": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
+        "e371ebd3-968f-49a0-a5dd-c464cdd9e1f0": {
+          "progression_name": "ការកសាងជំនាញ"
         },
         "371fe3c3-843c-447c-b5c2-337d8584e873": {
           "progression_name": "មេរៀនបន្ថែម"
@@ -1332,6 +1621,12 @@
             null
           ]
         },
+        "a3ae6601-d988-4211-bd0f-1a29739732c7": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
+        "f6fd7485-d7ca-40e8-9a20-d1f6236db0a4": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
         "45027086-96db-45ba-baa9-2983b677e8c9": {
           "progression_name": "លេងដោយសេរី"
         },
@@ -1339,9 +1634,13 @@
           "progression_name": "មេរៀនបន្ថែម"
         },
         "4e80fb44-708d-420f-8ae7-c36bfdd20075": {
+          "name": "ការ​គូសសួនច្បារដោយការរង្វិលជុំ",
           "tips": [
             null
           ]
+        },
+        "5a79f620-d679-4a68-9d90-91f8e5f311c9": {
+          "progression_name": "ការកសាងជំនាញ"
         },
         "1c1d446d-d36d-4429-9aa9-c043841d460a": {
           "progression_name": "លេងដោយសេរី"
@@ -1354,11 +1653,17 @@
             null
           ]
         },
+        "d14782c7-0b0d-47ca-bf31-c0c699ad2af6": {
+          "name": "ការផ្លាស់ប្ដូរចលនាដោយប្រើកូដប្លុកព្រឹត្តិការណ៍"
+        },
         "2e28db00-9470-4dcb-9a9b-7098dbf5c12b": {
           "progression_name": "លេងដោយសេរី"
         },
         "8a9bb5d1-721a-426a-9002-318e30cdef0f": {
           "progression_name": "មេរៀនបន្ថែម"
+        },
+        "7f720bee-3f9a-4837-805d-3686a97947ba": {
+          "name": "សមរភូមិក្សត្រ ដោយប្រើកូដប្លុកព្រឹត្តិការណ៍"
         },
         "f030f807-4ee3-45a2-901b-dc4a5c465a1e": {
           "progression_name": "គម្រោងខ្នាតតូច៖ Royal Battle"
@@ -1375,7 +1680,7 @@
           ]
         },
         "f3d9ff95-5a31-4d0d-b1f5-7934be9edf02": {
-          "name": "រៀនអូស និងទម្លាក់ "
+          "name": "រៀនអំពីការអូស និងទម្លាក់"
         },
         "e9117446-0648-4712-9bab-f477cc4a7763": {
           "tips": [
@@ -1386,6 +1691,9 @@
           "tips": [
             null
           ]
+        },
+        "1649ef8d-4ee4-47d1-8bcc-bb5d13194f38": {
+          "progression_name": "ការកសាងជំនាញ"
         },
         "719202e7-e59f-44af-9208-46eb120b3ba0": {
           "tips": [
@@ -1407,10 +1715,19 @@
             null
           ]
         },
+        "26f5ae92-053e-41b6-986f-2000c544fdf1": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
         "312dff10-c9dd-416d-8ef0-210bcb685fa8": {
           "tips": [
             null
           ]
+        },
+        "12694952-dd7c-472d-a1e5-a328dbe61d45": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
+        "d37d8cc9-677b-4872-90aa-c0d034c56046": {
+          "progression_name": "ការកសាងជំនាញ"
         },
         "e84627a8-41ba-41d3-a123-d46a326f856b": {
           "progression_name": "មេរៀនបន្ថែម"
@@ -1421,7 +1738,10 @@
           ]
         },
         "516ebda2-8206-4d7f-b613-9e39338fa563": {
-          "name": "ការសរសេរកូដកម្មវិធិជាមួយ រៃសនិង ប៊ីប៊ី-8។"
+          "name": "សរសេរកម្មវិធីជាមួយ Rey និង BB-8"
+        },
+        "370d17c8-578a-49d9-ab3f-052a436d0217": {
+          "progression_name": "ការកសាងជំនាញ"
         },
         "17baac3e-ab60-45f1-9dea-6fb6e3c0431f": {
           "tips": [
@@ -1433,6 +1753,15 @@
             null
           ]
         },
+        "1cf88d2b-e186-4cf1-b6cb-8a5c5173dfa0": {
+          "name": "ប្រតិបត្តិដដែលៗជាមួយតួអង្គកំប្រុក"
+        },
+        "b3b3ff78-4902-4198-ae3c-a3742e2f141d": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
+        "d2711b59-b742-4252-bd55-ff3126f404d1": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
         "da0d9b08-22ef-4f7d-b750-31f702a06784": {
           "tips": [
             null
@@ -1443,8 +1772,23 @@
             null
           ]
         },
+        "c2bf725d-450c-406b-be75-4d4e91c91269": {
+          "progression_name": "វីដេអូ៖ អ្នកប្រមូល"
+        },
+        "3107f7a8-270f-41aa-9a41-896619d41b1b": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
+        "ee8caf71-360e-4c70-a574-7b7a2745d530": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
         "80af1f77-e7b7-4e3e-b7a8-b5ab36c034af": {
           "progression_name": "មេរៀនបន្ថែម"
+        },
+        "3d60a400-ed5c-4cda-90f5-9f4ae59c23a4": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
+        "fa2be632-6107-465b-a739-2311da75e17f": {
+          "progression_name": "ការកសាងជំនាញ"
         },
         "31c7212e-56c7-41b0-97c8-277498149ef7": {
           "tips": [
@@ -1470,6 +1814,9 @@
           "tips": [
             null
           ]
+        },
+        "60a4885c-c85c-4e63-9f82-79465bccb97c": {
+          "name": "ការផ្លាស់ប្ដូរចលនាដោយប្រើកូដប្លុកព្រឹត្តិការណ៍"
         },
         "c8827180-bb39-48f4-b7bd-bf5804cc5830": {
           "progression_name": "លេងដោយសេរី"
@@ -1517,11 +1864,17 @@
             null
           ]
         },
+        "a0390c7b-253b-4729-bda9-791ef82df43b": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
         "314f4a1b-1e3f-437f-805a-a0ecbfe8fa62": {
           "progression_name": "មេរៀនបន្ថែម"
         },
         "0d59aa71-1a4e-4fd3-8a95-3f0f23933b47": {
           "name": "ពាក្យពិបាក"
+        },
+        "2029eb81-02c4-400f-9c31-585c5a3f2118": {
+          "progression_name": "ការកសាងជំនាញ"
         },
         "04d056ec-242f-479a-b11e-eee90775ef0f": {
           "progression_name": "មេរៀនបន្ថែម"
@@ -1529,11 +1882,20 @@
         "7e073b00-f336-4d89-a848-f79ee9a8bc23": {
           "name": "ពាក្យពិបាក"
         },
+        "f3c465c8-b7b0-4b73-8afc-5f30c132f35b": {
+          "progression_name": "វីដេអូ៖ អ្នកប្រមូល"
+        },
+        "581b9960-a83f-4bdd-87d8-7007977e087c": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
         "520f7482-b58c-4d37-94b7-fa8c4d83314b": {
           "progression_name": "មេរៀនបន្ថែម"
         },
         "7e945f73-76d3-4b83-817d-2b9af9789dd7": {
           "name": "ពាក្យពិបាក"
+        },
+        "efbbafe6-1b5a-4084-be1d-a0adf068fe3c": {
+          "progression_name": "ការកសាងជំនាញ"
         },
         "12b5328f-3f65-46e2-b3e7-9426b47e1f31": {
           "tips": [
@@ -1557,11 +1919,20 @@
         "fe682113-6220-4a20-b2a7-009bde3d8e27": {
           "name": "រង្វិលជុំ ជាមួយ វៃស៍ និង ប៊ីប៊ី-8។"
         },
+        "336c18d5-0c32-44c2-b35c-a6f7eec5abff": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
+        "78b79d53-246f-40a9-ab3a-557fba2f5c1a": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
         "a9c1c890-7b91-4f1a-a207-155306c84f5e": {
           "progression_name": "មេរៀនបន្ថែម"
         },
         "3c79c590-2f48-4931-b8fa-736281002766": {
           "name": "ពាក្យពិបាក"
+        },
+        "38b1f726-8881-479b-a9e5-7fd354aacf31": {
+          "progression_name": "ការកសាងជំនាញ"
         },
         "d83224a8-1d43-4640-9bd6-929d52011c77": {
           "progression_name": "មេរៀនបន្ថែម"
@@ -1600,6 +1971,9 @@
         },
         "4184cd8d-7e62-44ac-91e2-fa4c825a3aa7": {
           "name": "ពាក្យពិបាក"
+        },
+        "70706f4c-ac33-422e-86fd-6f20f63e4438": {
+          "progression_name": "ការកសាងជំនាញ"
         },
         "ddee86f6-7f1f-41b8-bd96-f891312addb0": {
           "tips": [
@@ -2626,7 +3000,8 @@
         "7ac34d77-29c1-48f2-83f9-2958ace257d6": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "ការកសាងជំនាញ"
         },
         "39e245a3-6023-4437-9b2d-be1302738dcf": {
           "tips": [
@@ -2656,7 +3031,8 @@
         "8edada5b-86d6-4a42-ac50-b07edf4532b9": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "ការកសាងជំនាញ"
         },
         "688da228-b907-4c2c-9da1-994c310ee90a": {
           "tips": [
@@ -2691,7 +3067,8 @@
         "07fe88bf-35a4-4aa8-acf7-9c1007644cde": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "ការកសាងជំនាញ"
         },
         "f74ad1cc-b5f7-449b-a326-539985fed8e8": {
           "tips": [
@@ -2712,6 +3089,9 @@
           "tips": [
             null
           ]
+        },
+        "a0264725-895e-4d0e-b484-80c5a27e5cc2": {
+          "progression_name": "ការកសាងជំនាញ"
         },
         "5faee321-0fce-40db-840a-01d1c60a93f3": {
           "tips": [
@@ -2739,11 +3119,18 @@
           ],
           "progression_name": "វីដេអូ: ការណែនាំមកកាន់ Sprites"
         },
+        "d57fe82a-42f4-4970-93f4-0986d14634d8": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
         "b4a96bd4-10b7-422b-b6da-c47207c5dfab": {
           "tips": [
             null
           ],
           "progression_name": "វីដេអូ: ផ្ទាំងគំនូរជីវចល"
+        },
+        "2e9880cf-89f3-43ae-9c97-f6cf3b433745": {
+          "name": "ការកសាងជំនាញ",
+          "progression_name": "ការកសាងជំនាញ"
         },
         "165877c4-3e03-481d-a154-fb67246e645f": {
           "tips": [
@@ -2765,6 +3152,9 @@
             null
           ]
         },
+        "5220005a-c3fe-43a5-b9bb-19b36903e4ad": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
         "80c13844-f45f-4521-8389-785692d08d25": {
           "tips": [
             null
@@ -2779,6 +3169,9 @@
           "tips": [
             null
           ]
+        },
+        "e34ce1fc-a4e7-49bf-80a6-e2b858117d2f": {
+          "progression_name": "ការកសាងជំនាញ"
         },
         "6e1156cb-9a38-4700-be52-a89c8369e931": {
           "tips": [
@@ -2839,10 +3232,16 @@
             null
           ]
         },
+        "8f51b172-1a29-4573-a1fd-0033d63b8da1": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
         "74e39a1e-2693-4a64-a2ec-c48bac2b2c63": {
           "tips": [
             null
           ]
+        },
+        "bf47c328-bb3b-4bfa-9c8b-feb889ea9ba3": {
+          "progression_name": "ការកសាងជំនាញ"
         },
         "295153cb-f9cb-4b1b-94a2-2e5f8588f879": {
           "tips": [
@@ -2868,6 +3267,9 @@
           "tips": [
             null
           ]
+        },
+        "ae66fc73-77cf-4997-89b6-e462459ec4af": {
+          "progression_name": "ការកសាងជំនាញ"
         },
         "22bee33a-d845-4e5a-8a7a-568e3d59d2ed": {
           "tips": [
@@ -2935,10 +3337,16 @@
             null
           ]
         },
+        "6d194426-183e-4481-bbce-fb81d3e1e56b": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
         "36ef31fd-2fa5-4094-94cb-7ac969d0ce87": {
           "tips": [
             null
           ]
+        },
+        "45b91d61-4ce0-4926-958e-854ae5d14009": {
+          "progression_name": "ការកសាងជំនាញ"
         },
         "a165a923-3695-4f37-b717-2fb10df4bbc1": {
           "tips": [
@@ -2960,6 +3368,9 @@
             null
           ]
         },
+        "8b674ee3-5e12-41cb-ada9-79231faed7a1": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
         "36faa123-8d61-46f0-96f8-0582020a1720": {
           "tips": [
             null
@@ -2979,6 +3390,9 @@
           "tips": [
             null
           ]
+        },
+        "3b5b4962-1d02-4591-a4c6-fd1f81665d68": {
+          "progression_name": "ការកសាងជំនាញ"
         },
         "8eb9e876-638b-43a9-bacf-9b3b7a51cd6c": {
           "tips": [
@@ -3025,6 +3439,9 @@
             null
           ]
         },
+        "66c70a69-b26c-448c-bda8-2276640f676f": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
         "6bfb34b7-8459-40b8-8d0b-72a3527e83c6": {
           "tips": [
             null
@@ -3034,7 +3451,8 @@
         "640a6355-8d52-44a5-a894-575214bda979": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "ការកសាងជំនាញ"
         },
         "c93790fe-02a3-47ad-9199-92f4842aadc8": {
           "tips": [
@@ -3063,7 +3481,8 @@
         "64a8ae9e-f9ad-422b-88e4-44d0fa1da466": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "ការកសាងជំនាញ"
         },
         "7864c72c-12b6-4eea-acff-8a373828ad58": {
           "tips": [
@@ -3103,6 +3522,9 @@
             null
           ]
         },
+        "bf671c2c-974c-4324-bd4a-9616e5bb20e4": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
         "a67f4422-b407-43b2-a7bf-e06224301f5c": {
           "tips": [
             null
@@ -3132,6 +3554,9 @@
           "tips": [
             null
           ]
+        },
+        "d6732922-69fb-4e9c-b948-66f12e6f57a3": {
+          "progression_name": "ការកសាងជំនាញ"
         },
         "f9222c7e-7a06-45fb-a1e1-ba6451ebab35": {
           "tips": [
@@ -3169,7 +3594,8 @@
         "13ca0af7-3563-408a-830b-ff9cf0dfba21": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "ការកសាងជំនាញ"
         },
         "2b837cc6-474a-4bb8-9a2e-92b36aa92c6c": {
           "tips": [
@@ -3372,7 +3798,8 @@
         "f07ea960-3ec3-4d96-86e0-cc073c17b228": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "ការកសាងជំនាញ"
         },
         "a3726f27-d799-44a0-95d4-81a834a2cc1e": {
           "tips": [
@@ -3471,12 +3898,16 @@
         "2f24bcd8-4cad-4f5e-8e48-e447e7f11643": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "ការកសាងជំនាញ"
         },
         "7fa2e2fc-b041-45c9-8e0e-b9151489242c": {
           "tips": [
             null
           ]
+        },
+        "7c07f87c-a21e-4662-bb0d-6263882ac387": {
+          "progression_name": "ការកសាងជំនាញ"
         },
         "3faa678d-ec51-4137-be13-f88350002fc9": {
           "tips": [
@@ -3569,6 +4000,9 @@
             null
           ]
         },
+        "314d9957-e9b4-45c0-9440-7462d749c5b3": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
         "f273902f-63fb-4703-8c73-077a259223ec": {
           "tips": [
             null
@@ -3608,6 +4042,9 @@
           "tips": [
             null
           ]
+        },
+        "fc0f6ab0-0642-4088-9837-a115e3dcdd9c": {
+          "progression_name": "ការកសាងជំនាញ"
         },
         "f09be7f8-ad87-407c-be00-6b83a6751663": {
           "tips": [
@@ -3749,6 +4186,9 @@
             null
           ]
         },
+        "050b31c5-9eb8-461a-bde2-8b91be06bc74": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
         "e4ee1214-55ce-4eda-a395-634fd773a278": {
           "tips": [
             null
@@ -3782,6 +4222,9 @@
           "tips": [
             null
           ]
+        },
+        "e0bb7854-a0d5-4a85-85da-fc538f4c21e9": {
+          "progression_name": "ការកសាងជំនាញ"
         },
         "3d1edd9e-b6e0-4a7a-82c6-7f2e901eb943": {
           "tips": [
@@ -4389,7 +4832,8 @@
         "8521baa9-94ef-4752-ad13-09bacfd132d6": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "ការកសាងជំនាញ"
         },
         "a184074d-7a79-46a5-892f-8aeff5829c19": {
           "tips": [
@@ -4399,7 +4843,8 @@
         "010e456f-614d-48fe-a5bc-05ba548140ba": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "ការកសាងជំនាញ"
         },
         "e8a29551-e19b-47bd-9263-f1c1a08575ff": {
           "tips": [
@@ -4430,7 +4875,8 @@
         "a0549135-da45-4397-be95-1aad863b37d2": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "ការកសាងជំនាញ"
         },
         "04b6ab50-104f-420b-9e70-8da663144a51": {
           "tips": [
@@ -4446,6 +4892,9 @@
           "tips": [
             null
           ]
+        },
+        "66906651-7aa5-4c1e-95ea-b80ab57da2c3": {
+          "progression_name": "ការកសាងជំនាញ"
         },
         "fde374b2-aa35-4cb7-9cb2-176b0b48a9ae": {
           "tips": [
@@ -4467,15 +4916,24 @@
             null
           ]
         },
+        "93ea638a-0d81-4055-88cc-d9167581d9be": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
         "a0f4ad44-579c-4404-8ba2-bcb19e459e0c": {
           "tips": [
             null
           ]
         },
+        "c8cebe3f-35da-44ac-9cc6-29190c5b6544": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
         "64e9d8c1-f351-4dec-b424-f4c03bd5324a": {
           "tips": [
             null
           ]
+        },
+        "99737e58-9db8-43d5-8437-03794c232a9c": {
+          "progression_name": "ការកសាងជំនាញ"
         },
         "314cd764-1846-45e2-951b-1fc00d8b5aed": {
           "tips": [
@@ -4486,6 +4944,9 @@
           "tips": [
             null
           ]
+        },
+        "ae140bd7-8f40-4e4b-b867-e72fe2d1894e": {
+          "progression_name": "ការកសាងជំនាញ"
         },
         "103c17a8-f0b0-4836-8eed-93cd0a2fa293": {
           "tips": [
@@ -4539,6 +5000,9 @@
             null
           ]
         },
+        "acf62008-5c0a-42bf-887f-c933e92f107a": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
         "8f9190dd-ac05-4161-a3ec-523af179eb8f": {
           "tips": [
             null
@@ -4553,6 +5017,9 @@
           "tips": [
             null
           ]
+        },
+        "6b3d5fc1-6b24-4b20-b689-859ed60b7781": {
+          "progression_name": "ការកសាងជំនាញ"
         },
         "3b80805c-210e-4afa-b195-9d0849f5a1f0": {
           "tips": [
@@ -4571,6 +5038,9 @@
           "tips": [
             null
           ]
+        },
+        "b61c6ed4-9e1d-4cec-8749-167d1414b515": {
+          "progression_name": "ការកសាងជំនាញ"
         },
         "e13764d2-b1f3-40c7-9632-b0e82f82ee45": {
           "tips": [
@@ -4622,6 +5092,12 @@
             null
           ]
         },
+        "a2936dce-eb0e-42dc-a9f8-dd616f4fc105": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
+        "7f101211-f462-454f-ae75-b7a9da3097fa": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
         "c4973fc1-e3ac-4d75-a00c-b2b1d9ea95e5": {
           "tips": [
             null
@@ -4636,6 +5112,9 @@
           "tips": [
             null
           ]
+        },
+        "39352362-2462-47b6-9319-bd351cfc7c06": {
+          "progression_name": "ការកសាងជំនាញ"
         },
         "c54f7dfb-6a80-43de-b63d-b72945c32a55": {
           "tips": [
@@ -4652,6 +5131,9 @@
             null
           ]
         },
+        "ee143b4c-c0a3-41f2-a7ad-f6a9d17b1aa0": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
         "c4228271-c5b7-4567-a23a-47389f925254": {
           "tips": [
             null
@@ -4661,6 +5143,9 @@
           "tips": [
             null
           ]
+        },
+        "1789c265-b590-41c2-856d-381d22646c28": {
+          "progression_name": "ការកសាងជំនាញ"
         },
         "69126bf3-cf78-4b06-8fe6-f39b86b5ec93": {
           "tips": [
@@ -4687,6 +5172,9 @@
             null
           ]
         },
+        "ee36fb1a-c452-4da6-a983-33c5987f9085": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
         "a37f0b1f-508e-4592-a58b-664fcefb22bf": {
           "tips": [
             null
@@ -4696,6 +5184,9 @@
           "tips": [
             null
           ]
+        },
+        "f0d4f74c-c410-4931-aef8-6438559f83a4": {
+          "progression_name": "ការកសាងជំនាញ"
         },
         "e88de202-5900-475a-87e9-0a47216646d9": {
           "tips": [
@@ -4742,6 +5233,9 @@
             null
           ]
         },
+        "afa4fcac-c0c6-4df6-8b1b-d280c5602fc6": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
         "65990eea-0d83-4814-9076-d63244b6b628": {
           "tips": [
             null
@@ -4751,6 +5245,9 @@
           "tips": [
             null
           ]
+        },
+        "5ef6b3a1-45cf-420c-9ba9-db06070441df": {
+          "progression_name": "ការកសាងជំនាញ"
         },
         "0376c3e9-bb4a-4cc6-90a7-1b7db8535f57": {
           "tips": [
@@ -5627,6 +6124,9 @@
         "aeb15f17-5d0f-4f95-aae8-656189b2a833": {
           "progression_name": "ទិដ្ឋភាព​ទូទៅ​របស់​មេរៀន"
         },
+        "0eb10caa-d6c3-4afd-bba1-c28694a1128a": {
+          "progression_name": "ការបំបាត់កំហុស (Debugging)"
+        },
         "1565f22f-1429-48f2-adbe-58eb4da1f25b": {
           "progression_name": "ទិដ្ឋភាព​ទូទៅ​របស់​មេរៀន"
         },
@@ -5681,7 +6181,7 @@
           "progression_name": "ទិដ្ឋភាព​ទូទៅ​របស់​មេរៀន"
         },
         "647fb9ef-1f2f-4552-8785-1a3b2a5850cb": {
-          "progression_name": "ការសរសេរកូដកម្មវិធិជាមួយ រៃសនិង ប៊ីប៊ី-8។"
+          "progression_name": "សរសេរកម្មវិធីជាមួយ Rey និង BB-8"
         },
         "3ead06ef-2d2b-49b0-b62b-ededeff21bcb": {
           "progression_name": "លេងដោយសេរី"
@@ -5690,7 +6190,7 @@
           "progression_name": "លេងដោយសេរី"
         },
         "4ab2263d-bf26-4d37-bc0e-88278310cfa7": {
-          "progression_name": "អ្នកច្រូតកាត់"
+          "progression_name": "អ្នកប្រមូលផល"
         },
         "ff0bdda6-cf62-4449-a308-76b365386a4c": {
           "progression_name": "លេងដោយសេរី"
@@ -5713,7 +6213,7 @@
           "progression_name": "លេងដោយសេរី"
         },
         "502e09e6-3af3-43cb-ae96-e44507f1250c": {
-          "progression_name": "អ្នកច្រូតកាត់"
+          "progression_name": "អ្នកប្រមូលផល"
         },
         "0914c4d0-b269-4072-a1b7-ed41eb2b7224": {
           "progression_name": "លេងដោយសេរី"
@@ -5776,7 +6276,7 @@
           "progression_name": "លេងដោយសេរី"
         },
         "0b309aa0-00ca-47e2-9f46-288d25694b0d": {
-          "progression_name": "អ្នកច្រូតកាត់"
+          "progression_name": "អ្នកប្រមូលផល"
         },
         "22ed3900-dd2a-4eec-99c1-69f131286de6": {
           "name": "គំរោងអ្នកសិល្បៈ",
@@ -5791,10 +6291,10 @@
           "progression_name": "មេរៀនបន្ថែម"
         },
         "e0d3988c-bdb0-45b1-9512-354e87118d64": {
-          "progression_name": "ការសរសេរកូដកម្មវិធិជាមួយ រៃសនិង ប៊ីប៊ី-8។"
+          "progression_name": "សរសេរកម្មវិធីជាមួយ Rey និង BB-8"
         },
         "b4cf29ee-8a4e-48ff-b637-302f650a2ede": {
-          "progression_name": "អ្នកច្រូតកាត់"
+          "progression_name": "អ្នកប្រមូលផល"
         },
         "84b14f6c-d011-4e52-8664-233fda16599e": {
           "name": "លេងដោយសេរី",
@@ -6205,6 +6705,9 @@
         "75510b66-6276-4220-82e4-b0d28453127b": {
           "progression_name": "ទិដ្ឋភាព​ទូទៅ​របស់​មេរៀន"
         },
+        "9b99bbac-c605-4a93-a573-277dbf0d31fe": {
+          "progression_name": "ការបំបាត់កំហុស (Debugging)"
+        },
         "736313a5-2b8b-4290-bda7-c60ae0ffd965": {
           "progression_name": "ទិដ្ឋភាព​ទូទៅ​របស់​មេរៀន"
         },
@@ -6560,6 +7063,9 @@
         "acda466a-ee2f-4402-a8d7-3be68a220563": {
           "progression_name": "ទិដ្ឋភាព​ទូទៅ​របស់​មេរៀន"
         },
+        "3fcf676a-373f-41b3-8cf1-ecb10c28ec23": {
+          "progression_name": "ការបំបាត់កំហុស (Debugging)"
+        },
         "74b89378-b7af-4b21-9fb5-e11d2718a24b": {
           "progression_name": "ទិដ្ឋភាព​ទូទៅ​របស់​មេរៀន"
         },
@@ -6832,7 +7338,8 @@
         "e64a2440-c243-4f49-8181-171a72e38c5c": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "ការកសាងជំនាញ"
         },
         "20919642-5201-4796-9e45-ee76e368614d": {
           "tips": [
@@ -6854,13 +7361,28 @@
             null
           ]
         },
+        "ef504f91-6fca-4859-a960-7e792de6223e": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
+        "411a2b66-714e-40fe-9636-a184b62c44bf": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
+        "88c99bab-0045-4d56-a8ae-a12f32e2866e": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
         "d6137926-640f-4180-a257-20c5f32317f5": {
           "progression_name": "លេងដោយសេរី"
+        },
+        "f5e9f7d1-a504-4581-bf6a-a44a5a62cd20": {
+          "progression_name": "ការកសាងជំនាញ"
         },
         "6cef858a-437c-47a3-9c8a-1229f634948a": {
           "tips": [
             null
           ]
+        },
+        "aa24a7a8-7cec-408b-b980-89e9c457605a": {
+          "progression_name": "ការកសាងជំនាញ"
         },
         "404887ef-1401-41a7-b88d-c07ab2d119cf": {
           "tips": [
@@ -6877,8 +7399,14 @@
             null
           ]
         },
+        "b500137c-9df8-40c5-8b4d-e4f364f8255e": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
         "7a256684-5f37-4780-b2d7-a75a079dfc95": {
           "progression_name": "មេរៀនបន្ថែម"
+        },
+        "0fddd8bc-8ad0-4604-9ee1-aff82562c1c6": {
+          "progression_name": "ការកសាងជំនាញ"
         },
         "2faabfda-d8cb-4b9d-b49c-2e79c30f7507": {
           "progression_name": "លេងដោយសេរី"
@@ -6895,6 +7423,9 @@
           "tips": [
             null
           ]
+        },
+        "1b81351d-aade-4896-8957-e06fdd93edfa": {
+          "progression_name": "ការកសាងជំនាញ"
         },
         "708bfaf4-4547-4c24-87d4-3822f97185b5": {
           "tips": [
@@ -6984,6 +7515,9 @@
             null
           ]
         },
+        "b43821ea-fcde-4389-a55f-285b77e61964": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
         "7a8f2f22-1330-4e95-934e-8ab9c4441b20": {
           "tips": [
             null
@@ -6991,6 +7525,9 @@
         },
         "8d4c8d73-6930-4a7f-a73d-3c3312a2705b": {
           "name": "ការសរសេរកម្មវិធីជាមួយតួអង្គបក្សី"
+        },
+        "a60dc5a3-0c97-439c-86a4-628f733b0916": {
+          "progression_name": "ការកសាងជំនាញ"
         },
         "59a20536-707e-4328-88ab-71b1c533cd37": {
           "progression_name": "មេរៀនបន្ថែម"
@@ -7000,15 +7537,39 @@
             null
           ]
         },
+        "478f0185-2792-46bb-8d0d-e88788ebb722": {
+          "name": "ការសរសេរកម្មវិធីជាមួយ​ អ្នកប្រមូលផល"
+        },
         "78aa2079-ec2a-438a-90cd-fc04c7fd1a89": {
           "tips": [
             null
           ]
         },
+        "a54a5ab7-02a5-461d-bdc2-49c946a369d7": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
+        "9f24e731-b41f-4339-877d-314aa5813f01": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
         "0d345591-6747-4a5e-aeb9-196c42f905cd": {
           "tips": [
             null
           ]
+        },
+        "297c2fd4-5c7e-4e3a-961a-844203b345e4": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
+        "67ec9493-9942-4f64-b3dc-8870f4e30fdc": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
+        "fe653971-9c18-44ee-adbc-727e8978b387": {
+          "progression_name": "វីដេអូ៖ អ្នកប្រមូល"
+        },
+        "e4d8ad46-dc13-4627-a5e2-8c70b45c0f91": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
+        "c96009cd-a4d7-491a-9ce5-433a04f9fd08": {
+          "progression_name": "ការកសាងជំនាញ"
         },
         "eedc7420-83ed-420a-8bfe-db3e70719c14": {
           "progression_name": "មេរៀនបន្ថែម"
@@ -7017,6 +7578,12 @@
           "tips": [
             null
           ]
+        },
+        "c2a65792-3f2c-49f9-8cba-8b8f975f5f90": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
+        "c96a7cbe-674b-41b9-b829-a62377a97e1a": {
+          "progression_name": "ការកសាងជំនាញ"
         },
         "22891986-f61f-4e37-aae4-177019581071": {
           "progression_name": "លេងដោយសេរី"
@@ -7036,6 +7603,9 @@
           "tips": [
             null
           ]
+        },
+        "707682de-e28a-4f30-8033-e5568bc30572": {
+          "name": "សមរភូមិក្សត្រ ដោយប្រើកូដប្លុកព្រឹត្តិការណ៍"
         },
         "40e7d1f1-3b7e-4a2f-abd8-43d076a34702": {
           "progression_name": "លេងដោយសេរី"
@@ -7065,7 +7635,7 @@
           ]
         },
         "e1c4af11-08ae-4ddd-90dc-da28738444fb": {
-          "name": "រៀនអូស និងទម្លាក់ "
+          "name": "រៀនអំពីការអូស និងទម្លាក់"
         },
         "b1107182-e8bd-4439-bf3e-135d5c0ab145": {
           "tips": [
@@ -7076,6 +7646,9 @@
           "tips": [
             null
           ]
+        },
+        "31f60124-e5bb-4ed5-b5ef-97509d71cbda": {
+          "progression_name": "ការកសាងជំនាញ"
         },
         "4aa550d3-10b9-4151-9ed8-45ce24b49e7d": {
           "tips": [
@@ -7097,10 +7670,19 @@
             null
           ]
         },
+        "88c2697f-a9ba-483a-8091-cc2a1b7bf027": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
         "7119f518-386e-44e7-893d-eff0fbc5a87d": {
           "tips": [
             null
           ]
+        },
+        "487f446a-7245-403f-827c-e1e94663c256": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
+        "af0d64b6-9076-490e-96b8-b4d56d3dc5c5": {
+          "progression_name": "ការកសាងជំនាញ"
         },
         "a0a00f67-afa4-4d4d-a8d4-cd4801ccd329": {
           "progression_name": "មេរៀនបន្ថែម"
@@ -7111,7 +7693,10 @@
           ]
         },
         "71cf3779-677d-4123-8feb-f4c503c32c3e": {
-          "name": "ការសរសេរកូដកម្មវិធិជាមួយ រៃសនិង ប៊ីប៊ី-8។"
+          "name": "សរសេរកម្មវិធីជាមួយ Rey និង BB-8"
+        },
+        "c32e2a10-753e-4e64-b8b8-82d3f4f1a09c": {
+          "progression_name": "ការកសាងជំនាញ"
         },
         "cb522975-96ad-44b4-942c-601fc373771c": {
           "tips": [
@@ -7123,6 +7708,15 @@
             null
           ]
         },
+        "bce76535-3424-40bc-a71b-acafda6a3b62": {
+          "name": "ប្រតិបត្តិដដែលៗជាមួយតួអង្គកំប្រុក"
+        },
+        "595fbc1f-baf6-446c-97dd-c89fa67a6baf": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
+        "c654e7af-7a96-4f1a-af67-5ee47829f1de": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
         "3cd2a8cd-efcc-40cd-a541-17ae2c95b14c": {
           "tips": [
             null
@@ -7133,8 +7727,23 @@
             null
           ]
         },
+        "74314f07-5f4d-4cd4-8d82-8208d5ce529e": {
+          "progression_name": "វីដេអូ៖ អ្នកប្រមូល"
+        },
+        "aa4a5c66-dcf9-40c9-9200-fa9cac74b945": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
+        "88d2b3e5-c082-46bc-8aad-915f42e9a2f1": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
         "5580045e-132a-4c17-8c3f-522b7f01f442": {
           "progression_name": "មេរៀនបន្ថែម"
+        },
+        "d060bb00-33a3-4049-925e-56db3f7508f7": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
+        "665ce7fe-d6ac-4c94-ae9c-3e35402d1a36": {
+          "progression_name": "ការកសាងជំនាញ"
         },
         "1e2c8e78-0b20-48a4-aeba-08cad3060e42": {
           "tips": [
@@ -7160,6 +7769,9 @@
           "tips": [
             null
           ]
+        },
+        "d20df183-f25b-45af-ae7c-f80a4405f2d2": {
+          "name": "ការផ្លាស់ប្ដូរចលនាដោយប្រើកូដប្លុកព្រឹត្តិការណ៍"
         },
         "4221ebcd-383b-44bf-a876-41e658bd8460": {
           "progression_name": "លេងដោយសេរី"
@@ -7201,14 +7813,29 @@
             null
           ]
         },
+        "1ebd42df-a302-418a-be1e-6bbca930cedf": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
         "55ab3586-4bb1-4b3a-bec0-c103e1cf33cb": {
           "progression_name": "មេរៀនបន្ថែម"
+        },
+        "9b6832e5-f80f-4baa-9049-48d9526443ba": {
+          "progression_name": "ការកសាងជំនាញ"
         },
         "12488a0c-dc91-4ea4-bdc7-28e27145f721": {
           "progression_name": "មេរៀនបន្ថែម"
         },
+        "1cecd624-a69a-4e47-9a4b-066f9b8ff31d": {
+          "progression_name": "វីដេអូ៖ អ្នកប្រមូល"
+        },
+        "e79bc3de-623c-4238-bdd7-6a6128f79ff8": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
         "1eb79218-4e1c-4f9f-9a60-20b6c3c2f8b1": {
           "progression_name": "មេរៀនបន្ថែម"
+        },
+        "e6f324ba-3055-45c2-ad1b-3f8a5d8a0c65": {
+          "progression_name": "ការកសាងជំនាញ"
         },
         "16e320f6-0c67-4992-87a4-0ae6396a1080": {
           "tips": [
@@ -7226,8 +7853,17 @@
         "16139473-0792-46d6-b8f8-77c79ceead5c": {
           "name": "រង្វិលជុំ ជាមួយ វៃស៍ និង ប៊ីប៊ី-8។"
         },
+        "aadcbed9-b15e-4fcb-b277-fd1c8156270e": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
+        "6fed6081-6c4a-4a1a-8db9-69ab9fd41513": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
         "f7fc9c06-a367-443c-bbe6-4a9c02ca60c6": {
           "progression_name": "មេរៀនបន្ថែម"
+        },
+        "2f87a826-1460-4d5c-9db3-47911c77a56a": {
+          "progression_name": "ការកសាងជំនាញ"
         },
         "f5cc9272-be27-471b-9cdd-f56920c56a34": {
           "progression_name": "មេរៀនបន្ថែម"
@@ -7260,6 +7896,9 @@
           "tips": [
             null
           ]
+        },
+        "3344bb9f-6bfa-40f1-b21a-26a077f975a5": {
+          "progression_name": "ការកសាងជំនាញ"
         },
         "f505b90a-43b4-4d71-b806-e50fdbfeca75": {
           "tips": [
@@ -7317,6 +7956,9 @@
             null
           ]
         },
+        "b76a05a9-cfc1-405a-a3f7-3a646200f34d": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
         "3b261cf8-73e3-4dd0-bef0-f55ba858297b": {
           "tips": [
             null
@@ -7326,6 +7968,9 @@
           "tips": [
             null
           ]
+        },
+        "0fee56da-4a47-490c-b500-a54be824f01c": {
+          "progression_name": "ការកសាងជំនាញ"
         },
         "57c05fc2-b193-48bc-ac4e-a6ad469f6abb": {
           "progression_name": "លេងដោយសេរី"
@@ -7344,6 +7989,9 @@
           "tips": [
             null
           ]
+        },
+        "72b1888f-765e-42c0-bccc-0e32a5724f40": {
+          "progression_name": "ការកសាងជំនាញ"
         },
         "2708da4e-dd8b-4b03-ad52-f16a0af26363": {
           "tips": [
@@ -7376,10 +8024,28 @@
         "5959da7d-9d44-4fbd-8b75-25a422ccdfbb": {
           "name": "រង្វិលជុំក្នុងយុគសម័យទឹកកក"
         },
+        "dad54c78-6c91-4ba8-bb15-eff5861db842": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
+        "1d8def71-6e6f-417d-bf76-bf420f509e2b": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
         "b2c72983-b5ad-4a39-9f80-e6701c7c6df6": {
           "tips": [
             null
           ]
+        },
+        "1aa2fcd6-f059-4ee1-9d5b-03653ad98460": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
+        "1d0954f1-dbad-49b1-b3f3-19b4273adeac": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
+        "7fe86b33-56e5-43a2-bbd8-760d477b6ee1": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
+        "802e73fc-cff0-462f-8d3d-24c0855bce28": {
+          "progression_name": "ការកសាងជំនាញ"
         },
         "725a7d9a-35a3-483e-a83b-f88bf0033095": {
           "progression_name": "មេរៀនបន្ថែម"
@@ -7392,14 +8058,33 @@
             null
           ]
         },
+        "2f024770-481d-43dc-aa55-7133819f6663": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
         "f5e9d0c0-d9c2-40af-b9aa-781078d95fa2": {
           "progression_name": "លេងដោយសេរី"
+        },
+        "39678b81-ac0a-4d3a-a2b9-f244e7de7eeb": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
+        "3f6678b5-e568-42f2-a629-56defb6374fe": {
+          "progression_name": "ការកសាងជំនាញ"
         },
         "9326c58a-39b6-4f40-a2ba-5c19267c2a3f": {
           "progression_name": "មេរៀនបន្ថែម"
         },
+        "05e52524-87c5-4ce3-92ce-5d351618bc3f": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
+        "60c8c247-570f-4f82-92a1-dddff86de3eb": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
         "743e2b7a-0738-44b2-afb4-44a8f1e3edab": {
-          "name": "Until Loops នៅក្នុងផ្លូវខ្វាត់ខ្វែង"
+          "name": "Until Loops នៅក្នុងផ្លូវខ្វាត់ខ្វែង",
+          "progression_name": "ការកសាងជំនាញ"
+        },
+        "35caf44d-4c1f-4dd0-942d-27132dd2c2ee": {
+          "progression_name": "ការកសាងជំនាញ"
         },
         "ea88a8c8-980d-4d9f-a288-545a8cd65be6": {
           "tips": [
@@ -7422,17 +8107,32 @@
             null
           ]
         },
+        "65c4bba2-442b-4e0d-9264-aa5cb72e80e7": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
         "a03b28fc-fd86-4f3a-ba44-ade5b7437f24": {
           "name": "ពាក្យពិបាក"
         },
         "a253c018-c2ce-4147-a5a4-24db47788f78": {
           "name": "ការបំបាត់កំហុសជាមួយ Scrat"
         },
+        "50d3fc0c-d6f2-418b-aeb5-fd74abc01c94": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
         "509f1df0-4e9b-454e-ae25-a6380f29ab57": {
           "progression_name": "មេរៀនបន្ថែម"
         },
+        "ea56a346-7c58-4d03-a5bc-aa4021627e22": {
+          "progression_name": "វីដេអូ៖ អ្នកប្រមូល"
+        },
+        "0474e6b4-d8ed-450d-a6ac-49d35b6d8872": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
         "d14ea8ad-6eb8-4142-ad1c-a0f1d7024948": {
           "progression_name": "មេរៀនបន្ថែម"
+        },
+        "d9b1cf39-8041-44b2-a8f8-a2e396647ab2": {
+          "progression_name": "ការកសាងជំនាញ"
         },
         "91b196fb-aecb-44e0-ac99-e74dfa8e586d": {
           "tips": [
@@ -7452,6 +8152,9 @@
             null
           ]
         },
+        "90de173c-642d-4906-a7fe-c3d9ad3123ec": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
         "5526b3db-d4a9-4d0d-a4a1-81732ba5d7ab": {
           "progression_name": "លេងដោយសេរី"
         },
@@ -7460,10 +8163,16 @@
             null
           ]
         },
+        "924d0fc2-b5b6-4176-b3fd-391937e4d187": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
         "5eb0801e-a90b-47fe-9787-2f7fc7a79f5f": {
           "tips": [
             null
           ]
+        },
+        "00b7c8be-fa03-430e-9c7c-18c4890ac747": {
+          "progression_name": "ការកសាងជំនាញ"
         },
         "1dbfd53a-9ab8-45e6-85fd-c35f5fd99997": {
           "tips": [
@@ -7491,6 +8200,9 @@
         "2bb620b7-6107-4b46-b717-117c20503ef0": {
           "name": "រង្វិលជុំ ជាមួយ វៃស៍ និង ប៊ីប៊ី-8។"
         },
+        "f62e3109-74fd-45b6-b335-059ef71dc3c3": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
         "be8322ab-77e7-4f99-ad08-40a19edc5c00": {
           "progression_name": "មេរៀនបន្ថែម"
         },
@@ -7505,20 +8217,54 @@
         "20282149-72fa-4e24-aa15-5182f21bcf95": {
           "progression_name": "មេរៀនបន្ថែម"
         },
+        "89a3d9b1-6f7c-4581-8abc-9d6501a009cc": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
+        "db402396-6473-4942-a3b9-e3833beb0cd8": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
         "61cffed6-e526-428f-9d2c-e53fbe5b2653": {
           "progression_name": "លេងដោយសេរី"
+        },
+        "2c223051-9787-4ae5-afb2-c999300ee231": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
+        "431e814c-2fdb-4385-ac49-7a3ad70c8411": {
+          "progression_name": "ការកសាងជំនាញ"
         },
         "fe26d5c2-ccdc-48cc-9678-793d2e491bf5": {
           "progression_name": "មេរៀនបន្ថែម"
         },
+        "23b4fc9a-484e-482b-856b-cb48acb73dcb": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
+        "d1f28a2a-eb91-4271-aeef-7c155109fac4": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
         "c103e631-9559-4d34-9ff9-4227c8fb8baa": {
           "progression_name": "មេរៀនបន្ថែម"
+        },
+        "0c1c356b-b51e-49e9-902a-9bb743c4acbc": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
+        "ebbb5af1-a268-4256-a63b-a179d5813d8d": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
+        "e7ee7550-aa29-42ad-8be2-a126b7919fb4": {
+          "progression_name": "ការកសាងជំនាញ"
         },
         "7064cb92-5320-4d9f-9de2-6de2ca05c5d1": {
           "progression_name": "លេងដោយសេរី"
         },
         "3fabd283-0831-412f-8a9f-76e9bf96206f": {
-          "name": "Until Loops នៅក្នុងផ្លូវខ្វាត់ខ្វែង"
+          "name": "Until Loops នៅក្នុងផ្លូវខ្វាត់ខ្វែង",
+          "progression_name": "ការកសាងជំនាញ"
+        },
+        "308b7268-008e-40c7-9ab3-6977bfd38927": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
+        "38760d27-fbe5-48c9-bd46-2b7eeac81ca2": {
+          "progression_name": "ការកសាងជំនាញ"
         },
         "23df685c-9dd8-48af-9f9a-732ffa1de9c4": {
           "progression_name": "មេរៀនបន្ថែម"
@@ -7533,6 +8279,15 @@
             null
           ]
         },
+        "b891b55a-2a7e-486c-ba28-957df49ac0e6": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
+        "08364a41-ef59-40a4-b3ec-e55ca40c2e6f": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
+        "f05f4ec1-71a1-4e00-8d93-935c6f47e01d": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
         "91e51520-32ea-4e43-bc6e-603cf76a7d22": {
           "progression_name": "លេងដោយសេរី"
         },
@@ -7543,7 +8298,7 @@
           "progression_name": "មេរៀនបន្ថែម"
         },
         "cbe7cad1-610d-4da8-9af6-fceb37bdeeed": {
-          "progression_name": "អ្នកច្រូតកាត់"
+          "progression_name": "អ្នកប្រមូលផល"
         },
         "79cc55bf-53a8-463c-b4dc-86cc8651587a": {
           "tips": [
@@ -7553,10 +8308,20 @@
         "7f90ece3-2607-4a59-a5fa-e70566aaafc9": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "ការកសាងជំនាញ"
+        },
+        "79a73c29-5877-4ffc-8570-fad97926f939": {
+          "progression_name": "ការកសាងជំនាញ"
         },
         "47be5db0-347f-4617-a652-e0b01325b180": {
           "progression_name": "លេងដោយសេរី"
+        },
+        "60fb6e02-bbf3-49df-ab58-79496259ada1": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
+        "a6fa76d1-aeb7-4caa-ac1c-274d1b823ea2": {
+          "progression_name": "ការកសាងជំនាញ"
         },
         "776538d2-aa5d-4210-9c54-cfd0f01db4b0": {
           "progression_name": "មេរៀនបន្ថែម"
@@ -7565,6 +8330,9 @@
           "tips": [
             null
           ]
+        },
+        "5cb283f5-dd23-4694-a205-a97ffd80c3cc": {
+          "progression_name": "ការកសាងជំនាញ"
         },
         "1582774d-bc37-4642-8f63-dccb08adea1c": {
           "progression_name": "លេងដោយសេរី"
@@ -7593,7 +8361,7 @@
           ]
         },
         "4dd75533-0a88-4007-b78d-c6237dc99e05": {
-          "name": "រៀនអូស និងទម្លាក់ "
+          "name": "រៀនអំពីការអូស និងទម្លាក់"
         },
         "f8ae0c1b-6fd2-4f09-9ab3-67830399dfe0": {
           "tips": [
@@ -7604,6 +8372,9 @@
           "tips": [
             null
           ]
+        },
+        "bde027df-b2a3-4252-980a-7e8493d898e6": {
+          "progression_name": "ការកសាងជំនាញ"
         },
         "a6a26f0a-a384-454d-bcae-e6b7f4531439": {
           "tips": [
@@ -7620,8 +8391,12 @@
             null
           ]
         },
+        "0394c5d4-246e-42bc-aca2-97d7bd159173": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
         "c07f590c-4333-4b74-a479-fa00fb43acd4": {
-          "name": "ការសរសេរកម្មវិធីជាមួយតួអង្គបក្សី"
+          "name": "ការសរសេរកម្មវិធីជាមួយតួអង្គបក្សី",
+          "progression_name": "ការកសាងជំនាញ"
         },
         "adf3c7a1-6041-4dfb-bd2a-9645a4751aa3": {
           "progression_name": "មេរៀនបន្ថែម"
@@ -7632,12 +8407,24 @@
           ]
         },
         "5ff6bd4a-2e05-4098-80a6-5e011fa70518": {
-          "name": "ការសរសេរកូដកម្មវិធិជាមួយ រៃសនិង ប៊ីប៊ី-8។"
+          "name": "សរសេរកម្មវិធីជាមួយ Rey និង BB-8"
+        },
+        "3ea0d264-5395-49ba-8d4a-822734bcc3e2": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
+        "0684b025-9c16-437c-936c-d9743cad2d94": {
+          "name": "ការសរសេរកម្មវិធីជាមួយ​ អ្នកប្រមូលផល"
         },
         "dfa32a81-45fc-4e60-b0d0-a3324b044c9b": {
           "tips": [
             null
           ]
+        },
+        "7675abfe-e572-4b1b-9203-ac0c1e6c3407": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
+        "1dae474b-e6aa-4934-b8f8-e8521eadb593": {
+          "progression_name": "ការកសាងជំនាញ"
         },
         "cc53970f-5da8-46dc-9d2b-ba8af22f7f27": {
           "tips": [
@@ -7649,8 +8436,23 @@
             null
           ]
         },
+        "c46e4d51-ddeb-4387-8f5a-73fb0f7e2574": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
+        "ff9ff779-b617-4ae3-80c1-db23e1b9c27b": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
         "96d62dea-f1ff-46d9-a889-5ef9848c0acf": {
           "name": "ធ្វើដដែលៗជាមួយនិងឡូរ៉ល។"
+        },
+        "c3e95f81-dafa-4791-9bf4-1cc0d418b4e3": {
+          "progression_name": "វីដេអូ៖ អ្នកប្រមូល"
+        },
+        "9aa00264-eca7-4093-92fb-60d301554a5b": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
+        "08049c61-d346-4c06-96f3-58775b4bf69d": {
+          "progression_name": "ការកសាងជំនាញ"
         },
         "62dfefbf-589b-46c7-a6ae-2b80bb18b021": {
           "progression_name": "មេរៀនបន្ថែម"
@@ -7660,6 +8462,12 @@
             null
           ]
         },
+        "cd1f7b2a-82e7-4f7f-82f5-a4ce10bf4fab": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
+        "94271c9b-4000-4e8c-a99c-9a04d851549e": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
         "9501ab3a-0fa4-46d5-88a1-d546663cdffa": {
           "progression_name": "លេងដោយសេរី"
         },
@@ -7667,9 +8475,13 @@
           "progression_name": "មេរៀនបន្ថែម"
         },
         "21511f7a-c70c-4aa0-ba16-d10d2e64fd4f": {
+          "name": "ការ​គូសសួនច្បារដោយការរង្វិលជុំ",
           "tips": [
             null
           ]
+        },
+        "1474d69b-c98f-40d9-b8c5-07cbeb090699": {
+          "progression_name": "ការកសាងជំនាញ"
         },
         "92674c9e-c2dc-4023-a386-8fae5c2b8074": {
           "progression_name": "លេងដោយសេរី"
@@ -7682,11 +8494,17 @@
             null
           ]
         },
+        "6c8d4815-0e66-45fd-980a-dacf20015a66": {
+          "name": "ការផ្លាស់ប្ដូរចលនាដោយប្រើកូដប្លុកព្រឹត្តិការណ៍"
+        },
         "708df6be-8599-4a1a-993b-13ca6e874d5c": {
           "progression_name": "លេងដោយសេរី"
         },
         "0a6abf88-92c8-455d-8d64-e8f61ae227ad": {
           "progression_name": "មេរៀនបន្ថែម"
+        },
+        "fbc5ec8c-04e4-4690-8361-be9c49c1daca": {
+          "name": "សមរភូមិក្សត្រ ដោយប្រើកូដប្លុកព្រឹត្តិការណ៍"
         },
         "621d3a54-6cd9-48ae-a4f0-563b8c25a0e7": {
           "progression_name": "គម្រោងខ្នាតតូច៖ Royal Battle"
@@ -7712,6 +8530,9 @@
             null
           ]
         },
+        "56aebeea-5b5c-4acd-838c-2906fbf5700d": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
         "83778d93-2959-4776-94d0-e82985346914": {
           "progression_name": "លេងដោយសេរី"
         },
@@ -7719,6 +8540,12 @@
           "tips": [
             null
           ]
+        },
+        "5661328f-256c-4f27-988b-ea102fde1cbd": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
+        "dc08f2e2-dab1-43b0-8349-9ce3161eec83": {
+          "progression_name": "ការកសាងជំនាញ"
         },
         "f05ee764-4bce-42ba-bc3d-48685d6ba404": {
           "progression_name": "លេងដោយសេរី"
@@ -7738,6 +8565,12 @@
             null
           ]
         },
+        "257e3a1f-5cc5-444e-94e3-ee18c5d7169e": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
+        "6d3e5d46-a1c6-420d-a4ad-7d6af12d9dbb": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
         "1cbfaa5e-bd5f-4861-9152-5fd3e6a37d47": {
           "progression_name": "មេរៀនបន្ថែម"
         },
@@ -7745,6 +8578,12 @@
           "tips": [
             null
           ]
+        },
+        "35342825-ca7b-4305-b02a-365e6095e8f6": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
+        "7f4ec132-6df2-4a23-abe3-853efe35701d": {
+          "progression_name": "ការកសាងជំនាញ"
         },
         "a2a794ce-1af9-4258-84ad-352ee9f9f187": {
           "progression_name": "លេងដោយសេរី"
@@ -7785,11 +8624,32 @@
             null
           ]
         },
+        "cd4d43da-dace-4324-a934-618f8c5b6ec7": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
+        "4130a39a-0232-45ed-b6c7-1f2badada9ee": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
+        "8543e376-7910-45df-b486-372036c19fdc": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
         "faa2f676-cf14-4bd7-b277-8e0a30245c0d": {
           "progression_name": "លេងដោយសេរី"
         },
+        "c8b7ed1a-7b68-48e5-bf78-c411d209179a": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
         "761169d4-a60f-4c9d-b011-2e79adcf8b31": {
           "progression_name": "មេរៀនបន្ថែម"
+        },
+        "ace06bbe-f40f-4333-806c-928527edede6": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
+        "735452ce-870a-4728-8b1b-00a77c5bffbb": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
+        "3b64705c-3a17-44b9-b688-4bbc029ba2ea": {
+          "progression_name": "ការកសាងជំនាញ"
         },
         "dc8187ff-3bc9-4079-adda-93abea4abd16": {
           "progression_name": "លេងដោយសេរី"
@@ -7797,7 +8657,17 @@
         "47ed862d-1562-4505-a98c-8c852ba6d936": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "ការកសាងជំនាញ"
+        },
+        "af239dc4-fc39-4765-a761-8d1979ef5e11": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
+        "dec0ef7e-1dd7-4abb-a1f9-b4fc7b9e9643": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
+        "6da14073-1ba0-4603-989b-5b9c9758c047": {
+          "progression_name": "ការកសាងជំនាញ"
         },
         "076a8517-ba6d-4f59-804d-d40a49d9f184": {
           "tips": [
@@ -9518,6 +10388,9 @@
           ],
           "progression_name": "វីដេអូ: គំនូរគំនូរនៅក្នុងបន្ទប់ពិសោធន៍នៃហ្គេម-ផ្នែកទី២"
         },
+        "74393dee-626c-4743-b131-1566ed43d56c": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
         "9612456b-5030-4f4c-a11b-893694130773": {
           "tips": [
             null
@@ -9542,6 +10415,9 @@
           "tips": [
             null
           ]
+        },
+        "4c1fe47c-e862-4d73-9a70-66843600aa20": {
+          "progression_name": "ការកសាងជំនាញ"
         },
         "ef33e6f2-c5d9-4d5d-85fc-4434062b105f": {
           "tips": [
@@ -9571,7 +10447,8 @@
         "a14285ec-28bc-4b44-a63c-204c0034c19f": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "ការកសាងជំនាញ"
         },
         "58908247-dbee-4578-8155-09f7d934c017": {
           "tips": [
@@ -9587,6 +10464,9 @@
           "tips": [
             null
           ]
+        },
+        "cd7e0902-f7eb-47aa-b09c-b506a3860ff0": {
+          "progression_name": "ការកសាងជំនាញ"
         },
         "dfafff33-7c5b-4a4a-9d38-647e60b34160": {
           "tips": [
@@ -9609,11 +10489,18 @@
           ],
           "progression_name": "វីដេអូ: ការណែនាំមកកាន់ Sprites"
         },
+        "31324d8c-8187-4b66-b0fe-ff74bbb6077e": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
         "8f56a7b9-e17b-4173-bae9-c996824270b4": {
           "tips": [
             null
           ],
           "progression_name": "វីដេអូ: ផ្ទាំងគំនូរជីវចល"
+        },
+        "d78f2220-48f9-4316-aaeb-7b6131700133": {
+          "name": "ការកសាងជំនាញ",
+          "progression_name": "ការកសាងជំនាញ"
         },
         "234316a5-009b-44bd-a51d-fdcb54cc8903": {
           "tips": [
@@ -9630,6 +10517,9 @@
             null
           ]
         },
+        "d77cb04c-3156-47e2-88d1-bbb3c891d9b1": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
         "34fcaf28-d278-49ff-877f-a5f79f77af59": {
           "tips": [
             null
@@ -9639,6 +10529,9 @@
           "tips": [
             null
           ]
+        },
+        "57f321f4-4d9c-4cfe-9142-513345b6aaec": {
+          "progression_name": "ការកសាងជំនាញ"
         },
         "2d0fc04c-aa1b-4148-9efd-06764f14c100": {
           "tips": [
@@ -9684,10 +10577,16 @@
           ],
           "progression_name": "វីដេអូ: សេចក្តីណែនាំអំពីការគូររង្វិលជុំដដែលៗ"
         },
+        "71831a0f-cae7-4f2f-be4d-8d29515588aa": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
         "fcb22a6b-b548-4ea4-b2bf-23f3db9dde29": {
           "tips": [
             null
           ]
+        },
+        "323374c7-2b08-4f0b-a97d-cab7f3f81de7": {
+          "progression_name": "ការកសាងជំនាញ"
         },
         "d1f93971-c590-43fb-be4d-a3ced983e77a": {
           "tips": [
@@ -9713,6 +10612,9 @@
           "tips": [
             null
           ]
+        },
+        "1b41610c-933d-416a-b713-b4d975f298f9": {
+          "progression_name": "ការកសាងជំនាញ"
         },
         "06cad4ef-4d60-42e4-829c-02fd3364c31e": {
           "tips": [
@@ -9752,6 +10654,9 @@
             null
           ]
         },
+        "ba88e2d6-49b9-4e4b-a34f-3a7804ea1ce5": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
         "030bb18c-bfaf-4c13-8ca7-9b251c26c162": {
           "tips": [
             null
@@ -9760,7 +10665,8 @@
         "b3b4d1e4-17c7-4933-8ba6-03ac7a46839a": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "ការកសាងជំនាញ"
         },
         "461492e7-43b9-4c58-9ee4-b63b716dbded": {
           "tips": [
@@ -9776,6 +10682,9 @@
           "tips": [
             null
           ]
+        },
+        "7f5ec4ec-e8ef-46fb-98db-48db8f4510d2": {
+          "progression_name": "ការកសាងជំនាញ"
         },
         "9345c305-ff75-4d36-a595-b0b7a69c094f": {
           "tips": [
@@ -9795,7 +10704,8 @@
         "991be916-6a79-484c-95a2-0e6f753d9ac8": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "ការកសាងជំនាញ"
         },
         "fb40596d-a877-43f3-87b7-325a2fd79c37": {
           "tips": [
@@ -9827,6 +10737,9 @@
             null
           ]
         },
+        "498b10a2-a029-449b-a37d-0b85141e917b": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
         "42d0eae6-06b2-4aa6-a8f6-6081ce2fa560": {
           "tips": [
             null
@@ -9836,7 +10749,8 @@
         "e8b8a1b0-89e9-4b09-978f-11db835db760": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "ការកសាងជំនាញ"
         },
         "a0ba31d0-91f2-4271-aacb-bf5c614aabc3": {
           "tips": [
@@ -9865,7 +10779,8 @@
         "49cfe240-7090-4fbd-9e61-ef725f8bddb1": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "ការកសាងជំនាញ"
         },
         "ef8e8137-1524-4b5d-9e2a-6c6d535cda60": {
           "tips": [
@@ -9889,6 +10804,9 @@
           "tips": [
             null
           ]
+        },
+        "e327d5f5-1886-4b6a-ba54-7eb091abc739": {
+          "progression_name": "ការកសាងជំនាញ"
         },
         "96cef9d3-a478-4852-9dff-061a5fa5dc79": {
           "tips": [
@@ -9920,6 +10838,9 @@
             null
           ]
         },
+        "c6e363e6-23a1-466a-9589-a4b871989618": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
         "6b47f10d-a466-436e-ad48-25f2404ae07a": {
           "tips": [
             null
@@ -9946,7 +10867,8 @@
         "085e06bd-a991-42ec-b8e2-2e27712cf7dd": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "ការកសាងជំនាញ"
         },
         "e4283f2d-5933-4812-80df-341067426cc8": {
           "tips": [
@@ -10561,7 +11483,8 @@
         "27e7e382-bef2-4576-94b2-15f081c1c260": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "ការកសាងជំនាញ"
         },
         "415a1a02-00ce-4eee-9af3-bcddf1369b79": {
           "tips": [
@@ -10622,10 +11545,16 @@
             null
           ]
         },
+        "8c1fda37-7107-43e8-92ad-60e7fc6d2d7d": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
         "bc3aac22-e4eb-4c6f-9b69-60cb02414ac9": {
           "tips": [
             null
           ]
+        },
+        "d9a4b1da-84da-40b3-a256-bbd4223652cd": {
+          "progression_name": "ការកសាងជំនាញ"
         },
         "3d52ed72-b57b-4d05-902a-c9daceffadc6": {
           "tips": [
@@ -10702,6 +11631,9 @@
             null
           ]
         },
+        "f69595ea-98fa-4c39-9686-6916ab265ab4": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
         "cf0abcbd-3e9a-4964-9cb3-de8d7b5bec52": {
           "tips": [
             null
@@ -10741,6 +11673,9 @@
           "tips": [
             null
           ]
+        },
+        "e26e14a3-6dad-4328-82ae-39649c0e2970": {
+          "progression_name": "ការកសាងជំនាញ"
         },
         "60bf9811-2a1c-4ff5-8986-082f04512e85": {
           "tips": [
@@ -10872,6 +11807,9 @@
             null
           ]
         },
+        "6a056ff0-2cca-4983-bfe6-a78771cae232": {
+          "progression_name": "ការកសាងជំនាញ"
+        },
         "d22a9dfb-fec1-43bb-add2-c76ec1a76f2a": {
           "tips": [
             null
@@ -10902,6 +11840,9 @@
         },
         "c78f2804-62f0-4fe5-842f-0ed415de05fc": {
           "name": "បន្ទប់វេប"
+        },
+        "850ba43d-59d1-4cf8-be6c-b2c33b4b4875": {
+          "progression_name": "ការកសាងជំនាញ"
         },
         "34f33cbb-40a2-4d61-aa69-7bf1aa7f4c81": {
           "tips": [
@@ -10942,7 +11883,7 @@
           ]
         },
         "259004b6-d013-48a6-8adb-4da6e8a13e6d": {
-          "progression_name": "អ្នកច្រូតកាត់"
+          "progression_name": "អ្នកប្រមូលផល"
         },
         "eed9001e-67f2-44d8-8704-1f8fd9cf4897": {
           "progression_name": "លេងដោយសេរី"
@@ -10974,7 +11915,7 @@
           "progression_name": "លេងដោយសេរី"
         },
         "68c477cb-6e9a-41d1-9f7e-2b3b84a95f52": {
-          "progression_name": "អ្នកច្រូតកាត់"
+          "progression_name": "អ្នកប្រមូលផល"
         },
         "d82614b6-8420-4d3f-83c7-b7fb9d353453": {
           "progression_name": "លេងដោយសេរី"
@@ -10984,10 +11925,10 @@
           "progression_name": "មេរៀនបន្ថែម"
         },
         "61e56a64-227e-422a-9c65-62c927caed06": {
-          "progression_name": "ការសរសេរកូដកម្មវិធិជាមួយ រៃសនិង ប៊ីប៊ី-8។"
+          "progression_name": "សរសេរកម្មវិធីជាមួយ Rey និង BB-8"
         },
         "e12c3ee1-8c2e-4727-8133-d6dbf630f64d": {
-          "progression_name": "អ្នកច្រូតកាត់"
+          "progression_name": "អ្នកប្រមូលផល"
         },
         "8131dce7-4fb6-4612-aef7-24ffa0c07804": {
           "name": "លេងដោយសេរី",
@@ -11020,10 +11961,10 @@
           "progression_name": "លេងដោយសេរី"
         },
         "f62b5dfa-a6d0-4152-9486-204c989f79d6": {
-          "progression_name": "អ្នកច្រូតកាត់"
+          "progression_name": "អ្នកប្រមូលផល"
         },
         "598993a6-e64b-48e3-8002-c617aae9cdab": {
-          "progression_name": "ការសរសេរកូដកម្មវិធិជាមួយ រៃសនិង ប៊ីប៊ី-8។"
+          "progression_name": "សរសេរកម្មវិធីជាមួយ Rey និង BB-8"
         },
         "9f9f6cf1-1591-4de2-9a70-4e190059f0fe": {
           "progression_name": "លេងដោយសេរី"
