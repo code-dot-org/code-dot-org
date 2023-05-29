@@ -5956,8 +5956,8 @@ sk-SK:
           a ešte viac!
         display_name: Aplikácie v Sprite Labe
         teacher_markdown: |
-          # Prehľad úrovní s výberom možností
-          Úrovne s výberom možností poskytujú žiakom ponuku ďalších úrovní, ktoré môžu absolvovať. Žiaci musia dokončiť aspoň jednu z týchto podúrovní, ale môžu ich absolvovať toľko, koľko chcú (alebo vy).
+          # Prehľad voliteľných úrovní
+          Voliteľné úrovne poskytujú žiakom ponuku ďalších úrovní, ktoré môžu absolvovať. Žiaci musia dokončiť aspoň jednu z týchto podúrovní, ale môžu ich absolvovať toľko, koľko chcú (alebo vy).
 
           Výbery vedú žiakov k vzorovým aplikáciám, ktoré môžu preskúmať. Táto aktivita je určená na koordináciu s pracovným listom Preskúmanie aplikácií, ktorý sa nachádza v [pláne lekcie](.././).
       courseF_sprites_freeplay:

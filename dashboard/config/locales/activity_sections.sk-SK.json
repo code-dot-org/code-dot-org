@@ -2203,7 +2203,7 @@
           "description": "Naposledy sme sa si prezerali aplikácie a hry vytvorené pomocou Sprite Labu. Dnes začneme tým, že si napíšeme vlastný kód a vytvoríme jednoduché animácie so sprajtmi (postavami)."
         },
         "a4ff84ba-5105-458a-a950-ca4fdbc3d23b": {
-          "name": "Vytváranie postáv",
+          "name": "Vytváranie sprajtov",
           "tips": [
             "V úlohách s predpoveďou majú žiaci za úlohu prezrieť si hotový program a odpovedať na otázku, ktorá sa ho týka. Otázku musia zodpovedať ešte predtým, ako stlačia tlačidlo Spustiť. Hoci je možné využiť tieto otázky ako formu hodnotenia, myslite na to, že často sa nachádzajú na začiatku lekcie, aby sa žiaci nad novými vecami začali zamýšľať ešte skôr, než sa naučia, ako v skutočnosti fungujú. "
           ],
@@ -5898,6 +5898,9 @@
           "tips": [
             "Táto lekcia sa môže javiť pomerne odlišná od ostatných vecí, s ktorými ste sa v tomto kurze doteraz stretli. Pred jej začatím sa možno budete chcieť oboznámiť s niektorými novinkami, ktoré sa v úrovniach objavujú. Kód, ktorý žiaci vytvoria v jednej úrovni, sa automaticky prenáša do ostatných úrovní, čo im umožňuje postupne budovať svoj projekt a stavať na nových vedomostiach. Upozorňujeme, že v týchto úrovniach sa nekontroluje správnosť kódu, aby mohli žiaci prichádzať s kreatívnymi riešeniami zadaní. Povzbuďte žiakov, aby sami vyhodnotili, kedy považujú úlohu za splnenú."
           ]
+        },
+        "5bee125c-0e5e-46a8-b72b-fdc8a71f5161": {
+          "progression_name": "Mini-projekt: Samolepka Art"
         },
         "c5f36648-ac0d-405f-af7a-3020ebdce7f3": {
           "progression_name": "Voľná hra"
@@ -12808,7 +12811,7 @@
           ]
         },
         "aef97aca-4210-40f0-9cd3-58fe0a1d1a8f": {
-          "description": "**Úrovne výberu:** Po vytvorení aplikácie na odporúčanie kníh si žiaci môžu vybrať z niekoľkých vzorových aktivít a pokračovať vo vylepšovaní svojej aplikácie. Na každej úrovni sa používa tá istá aplikácia, ktorú už vytvorili, ako predloha, ktorú môžu doplniť. Žiaci si môžu vybrať, koľko týchto úrovní chcú absolvovať – každá z nich im umožní pokračovať v prispôsobovaní a zlepšovaní svojej aplikácie.",
+          "description": "**Voliteľné úrovne:** Po vytvorení aplikácie na odporúčanie kníh si žiaci môžu vybrať z niekoľkých vzorových aktivít a pokračovať vo vylepšovaní svojej aplikácie. Na každej úrovni sa používa tá istá aplikácia, ktorú už vytvorili, ako predloha, ktorú môžu doplniť. Žiaci si môžu vybrať, koľko týchto úrovní chcú absolvovať – každá z nich im umožní pokračovať v prispôsobovaní a zlepšovaní svojej aplikácie.",
           "tips": [
             "**Výber úrovne cvičení žiakmi:** Ak si žiaci sami zvolia úroveň cvičení, je to jeden zo spôsobov diferenciácie vyučovania so žiakmi. Ak sa chcete dozvedieť viac o tom, ako tieto úrovne podporujú diferenciáciu, ako aj o ďalších stratégiách, môžete si prečítať príručku [Objavujeme informatiku: Sprievodca diferenciáciou](https://docs.google.com/document/d/15Y6Mo3fMUtHq16SSskABgcYE-5xfk-Ewv0z_o4uaLdI/preview)."
           ],
@@ -13087,7 +13090,7 @@
           "progression_name": "Hodnotenie"
         },
         "5d073f6e-68fe-48f5-9bf0-7c59870722e5": {
-          "description": "**Úrovne výberu:** Po vytvorení aplikácie na odporúčanie domácich zvierat si žiaci môžu vybrať z niekoľkých vzorových aktivít a pokračovať vo vylepšovaní svojej aplikácie. Na každej úrovni sa používa tá istá aplikácia, ktorú už vytvorili, ako predloha, ktorú môžu doplniť. Žiaci si môžu vybrať, koľko týchto úrovní chcú absolvovať – každá z nich im umožní pokračovať v prispôsobovaní a zlepšovaní svojej aplikácie.",
+          "description": "**Voliteľné úrovne:** Po vytvorení aplikácie na odporúčanie domácich zvierat si žiaci môžu vybrať z niekoľkých vzorových aktivít a pokračovať vo vylepšovaní svojej aplikácie. Na každej úrovni sa používa tá istá aplikácia, ktorú už vytvorili, ako predloha, ktorú môžu doplniť. Žiaci si môžu vybrať, koľko týchto úrovní chcú absolvovať – každá z nich im umožní pokračovať v prispôsobovaní a zlepšovaní svojej aplikácie.",
           "tips": [
             "**Déjà vu?** Žiaci si môžu všimnúť, že úrovne výberu v tejto lekcii vyzerajú povedome – sú to tie isté úrovne, z ktorých si žiaci mohli vybrať v lekcii 7. Je to zámerné, pretože to dáva žiakom možnosť naučiť sa iný kód, ako sa naučili predtým. Žiakov, ktorí už preskúmali jednotlivé možnosti, povzbuďte, aby svoje vedomosti využili v tejto novej aplikácii."
           ]
@@ -13345,7 +13348,7 @@
           "description": "**Monitorujte:** Sledujte žiakov pri vytváraní tejto aplikácie. Žiaci nebudú môcť aplikáciu otestovať, kým nebude úplne dokončená, čo môže byť pre niektorých žiakov problém. Tu je niekoľko vecí, na ktoré si treba dávať pozor počas práce žiakov:\n\n-   **Úroveň 3:** Žiaci si precvičujú odstraňovanie predvolených prvkov, ktoré sa generujú pri prvom importovaní modelu. Ide o krok, ktorý bude dôležitý, keď budú žiaci v rámci neskorších projektov vytvárať vlastné aplikácie.\n-   **Úroveň 4 a 5:** Žiaci iba aktualizujú kód svojej aplikácie, aby použili nové prvky návrhu pre vlastnosti Počet áut a Počasie. Môžu použiť pomôcky v rámci pokynov k úrovni, ktoré im poradia, čo majú v jednotlivých krokoch urobiť.\n-   **Úroveň 6:** Žiaci aktualizujú návrh aj kód svojej aplikácie na zber údajov pre vlastnosť Teplota. Pomôžte žiakom sledovať nový textový vstupný prvok, ktorý pridali na obrazovku teploty, a uistite sa, že ID prvku sa zhoduje s tým, ktoré použili v bloku [\\`getText\\`(#fff176)](/docs/applab/getText/) svojho kódu.\n-   **Úroveň 7:** Žiaci aktualizujú návrh aj kód svojej aplikácie na zber údajov pre vlastnosť Denný čas. Pridanie prvku návrhu a aktualizácia kódu je podobná ako na poslednej úrovni, ale tento krok má pridanú požiadavku použiť kartu modelu na kontrolu možných hodnôt pre túto kategorickú funkciu. Žiaci sa môžu dopustiť pravopisných chýb alebo chýb v písaní veľkých písmen, ktoré môžu ovplyvniť ich kód – nabádajte žiakov, aby si dávali veľký pozor na presnú zhodu možností v rozbaľovacom zozname s kartou modelu.\n-   **Úroveň 8:** Žiaci majú možnosť spustiť svoju aplikáciu a overiť, či funguje. Na tejto úrovni budú musieť žiaci vykonať zmeny v kóde len v prípade, že ich program nefunguje. V opačnom prípade, ak aplikácia funguje správne, môžu žiaci pokračovať na ďalšiu úroveň."
         },
         "244ecc30-2351-4ebd-9596-220197f275fc": {
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Úrovne výberu:** Po vytvorení aplikácie výstražného systému pre vodičov si žiaci môžu vybrať z niekoľkých vzorových aktivít a pokračovať vo vylepšovaní svojej aplikácie. Na každej úrovni sa používa tá istá aplikácia, ktorú už vytvorili, ako predloha, ktorú môžu doplniť. Žiaci si môžu vybrať, koľko týchto úrovní chcú absolvovať – každá z nich im umožní pokračovať v prispôsobovaní a zlepšovaní svojej aplikácie.",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Voliteľné úrovne:** Po vytvorení aplikácie výstražného systému pre vodičov si žiaci môžu vybrať z niekoľkých vzorových aktivít a pokračovať vo vylepšovaní svojej aplikácie. Na každej úrovni sa používa tá istá aplikácia, ktorú už vytvorili, ako predloha, ktorú môžu doplniť. Žiaci si môžu vybrať, koľko týchto úrovní chcú absolvovať – každá z nich im umožní pokračovať v prispôsobovaní a zlepšovaní svojej aplikácie.",
           "tips": [
             "\\*\\* Opakované úrovne:\\*\\* Možnosti v tejto úrovni sú totožné s možnosťami v poslednej lekcii. Je to zámerné, aby mali žiaci viacero príležitostí naučiť sa nové návrhové triky alebo bloky kódu, prípadne pokračovať v precvičovaní nových blokov, ktoré sa naučili v minulej lekcii. Povzbuďte žiakov, aby si pre dnešnú aplikáciu vybrali novú úlohu, ktorá sa líši od tých, ktoré si vybrali včera."
           ]
@@ -18024,7 +18027,7 @@
           "description": "**Urobte toto:** Pomocou úvodných snímok k lekcii alebo tohto [vzorového projektu](https://studio.code.org/projects/spritelab/i1-YKJAmtlLMi54FJRIVNnWR_yLy-xRpmUAKcIAlaa0/view) ukážte žiakom animáciu mravca a vážky.\n\n**Diskusia:** _Ako by ste opísali túto scénu so sprajtmi?\nAk by ste chceli, aby pre vás niekto túto scénu vytvoril na počítači, aké inštrukcie by potreboval?_\n\n**Cieľ diskusie:** Žiaci by mali byť schopní identifikovať oba sprajty v tomto projekte, opísať ich správanie (pohyby) a všimnúť si aj pozadie.\nNechajte žiakom čas na to, aby prišli s nápadmi. Ak si nie sú istí, čo majú povedať, vysvetlite im, že od nich očakávate iba opis toho, čo vidia.\n\nPotom ukáže samotný kód k projektu a vyzvite žiakov, aby sa pokúsili prečítať si ho.\n\n**Reflexia:** V čom sú si naše inštrukcie s týmto kódom podobné? Aké sú medzi nimi rozdiely?"
         },
         "d0b548d1-7ce0-46f1-98c6-2f83efb996c7": {
-          "name": "Vytváranie postáv",
+          "name": "Vytváranie sprajtov",
           "description": "#### Predpoveď (3 minúty)\n\n**Urobte toto:** Dajte žiakom za úlohu prečítať poskytnutý kód a skúsiť predpovedať, čo sa stane. Po stlačení tlačidla Spustiť dajte žiakom čas na to, aby sa zamysleli nad čímkoľvek, čo ich zaujalo alebo prekvapilo.",
           "tips": [
             "V úlohách s predpoveďou majú žiaci za úlohu prezrieť si hotový program a odpovedať na otázku, ktorá sa ho týka. Otázku musia zodpovedať ešte predtým, ako stlačia tlačidlo Spustiť. Hoci je možné využiť tieto otázky ako formu hodnotenia, myslite na to, že často sa nachádzajú na začiatku lekcie, aby sa žiaci nad novými vecami začali zamýšľať ešte skôr, než sa naučia, ako v skutočnosti fungujú. "
@@ -21185,7 +21188,7 @@
           "description": "**Urobte toto:** Pomocou úvodných snímok k lekcii alebo tohto [vzorového projektu](https://studio.code.org/projects/spritelab/i1-YKJAmtlLMi54FJRIVNnWR_yLy-xRpmUAKcIAlaa0/view) ukážte žiakom animáciu mravca a vážky.\n\n**Diskusia:** _Ako by ste opísali túto scénu so sprajtmi?\nAk by ste chceli, aby pre vás niekto túto scénu vytvoril na počítači, aké inštrukcie by potreboval?_\n\n**Cieľ diskusie:** Žiaci by mali byť schopní identifikovať oba sprajty v tomto projekte, opísať ich správanie (pohyby) a všimnúť si aj pozadie.\nNechajte žiakom čas na to, aby prišli s nápadmi. Ak si nie sú istí, čo majú povedať, vysvetlite im, že od nich očakávate iba opis toho, čo vidia.\n\nPotom ukáže samotný kód k projektu a vyzvite žiakov, aby sa pokúsili prečítať si ho.\n\n**Reflexia:** V čom sú si naše inštrukcie s týmto kódom podobné? Aké sú medzi nimi rozdiely?"
         },
         "ff19466f-a215-4f8f-b83a-4a289e985f0f": {
-          "name": "Vytváranie postáv",
+          "name": "Vytváranie sprajtov",
           "description": "#### Predpoveď (3 minúty)\n\n**Urobte toto:** Dajte žiakom za úlohu prečítať poskytnutý kód a skúsiť predpovedať, čo sa stane. Po stlačení tlačidla Spustiť dajte žiakom čas na to, aby sa zamysleli nad čímkoľvek, čo ich zaujalo alebo prekvapilo.",
           "tips": [
             "V úlohách s predpoveďou majú žiaci za úlohu prezrieť si hotový program a odpovedať na otázku, ktorá sa ho týka. Otázku musia zodpovedať ešte predtým, ako stlačia tlačidlo Spustiť. Hoci je možné využiť tieto otázky ako formu hodnotenia, myslite na to, že často sa nachádzajú na začiatku lekcie, aby sa žiaci nad novými vecami začali zamýšľať ešte skôr, než sa naučia, ako v skutočnosti fungujú. "
@@ -23687,7 +23690,7 @@
           ]
         },
         "35bd3261-9e58-490f-a4f7-6f6188cf278e": {
-          "description": "**Úrovne výberu:** Po vytvorení aplikácie na odporúčanie kníh si žiaci môžu vybrať z niekoľkých vzorových aktivít a pokračovať vo vylepšovaní svojej aplikácie. Na každej úrovni sa používa tá istá aplikácia, ktorú už vytvorili, ako predloha, ktorú môžu doplniť. Žiaci si môžu vybrať, koľko týchto úrovní chcú absolvovať – každá z nich im umožní pokračovať v prispôsobovaní a zlepšovaní svojej aplikácie.",
+          "description": "**Voliteľné úrovne:** Po vytvorení aplikácie na odporúčanie kníh si žiaci môžu vybrať z niekoľkých vzorových aktivít a pokračovať vo vylepšovaní svojej aplikácie. Na každej úrovni sa používa tá istá aplikácia, ktorú už vytvorili, ako predloha, ktorú môžu doplniť. Žiaci si môžu vybrať, koľko týchto úrovní chcú absolvovať – každá z nich im umožní pokračovať v prispôsobovaní a zlepšovaní svojej aplikácie.",
           "tips": [
             "**Výber úrovne cvičení žiakmi:** Ak si žiaci sami zvolia úroveň cvičení, je to jeden zo spôsobov diferenciácie vyučovania so žiakmi. Ak sa chcete dozvedieť viac o tom, ako tieto úrovne podporujú diferenciáciu, ako aj o ďalších stratégiách, môžete si prečítať príručku [Objavujeme informatiku: Sprievodca diferenciáciou](https://docs.google.com/document/d/15Y6Mo3fMUtHq16SSskABgcYE-5xfk-Ewv0z_o4uaLdI/preview)."
           ],
@@ -23968,7 +23971,7 @@
           "progression_name": "Hodnotenie"
         },
         "8ded89d7-85cd-4bba-883e-7c4981ce3078": {
-          "description": "**Úrovne výberu:** Po vytvorení aplikácie na odporúčanie domácich zvierat si žiaci môžu vybrať z niekoľkých vzorových aktivít a pokračovať vo vylepšovaní svojej aplikácie. Na každej úrovni sa používa tá istá aplikácia, ktorú už vytvorili, ako predloha, ktorú môžu doplniť. Žiaci si môžu vybrať, koľko týchto úrovní chcú absolvovať – každá z nich im umožní pokračovať v prispôsobovaní a zlepšovaní svojej aplikácie.",
+          "description": "**Voliteľné úrovne:** Po vytvorení aplikácie na odporúčanie domácich zvierat si žiaci môžu vybrať z niekoľkých vzorových aktivít a pokračovať vo vylepšovaní svojej aplikácie. Na každej úrovni sa používa tá istá aplikácia, ktorú už vytvorili, ako predloha, ktorú môžu doplniť. Žiaci si môžu vybrať, koľko týchto úrovní chcú absolvovať – každá z nich im umožní pokračovať v prispôsobovaní a zlepšovaní svojej aplikácie.",
           "tips": [
             "**Déjà vu?** Žiaci si môžu všimnúť, že úrovne výberu v tejto lekcii vyzerajú povedome – sú to tie isté úrovne, z ktorých si žiaci mohli vybrať v lekcii 7. Je to zámerné, pretože to dáva žiakom možnosť naučiť sa iný kód, ako sa naučili predtým. Žiakov, ktorí už preskúmali jednotlivé možnosti, povzbuďte, aby svoje vedomosti využili v tejto novej aplikácii."
           ]
@@ -24238,7 +24241,7 @@
           "description": "**Monitorujte:** Sledujte žiakov pri vytváraní tejto aplikácie. Žiaci nebudú môcť aplikáciu otestovať, kým nebude úplne dokončená, čo môže byť pre niektorých žiakov problém. Tu je niekoľko vecí, na ktoré si treba dávať pozor počas práce žiakov:\n\n-   **Úroveň 3:** Žiaci si precvičujú odstraňovanie predvolených prvkov, ktoré sa generujú pri prvom importovaní modelu. Ide o krok, ktorý bude dôležitý, keď budú žiaci v rámci neskorších projektov vytvárať vlastné aplikácie.\n-   **Úroveň 4 a 5:** Žiaci iba aktualizujú kód svojej aplikácie, aby použili nové prvky návrhu pre vlastnosti Počet áut a Počasie. Môžu použiť pomôcky v rámci pokynov k úrovni, ktoré im poradia, čo majú v jednotlivých krokoch urobiť.\n-   **Úroveň 6:** Žiaci aktualizujú návrh aj kód svojej aplikácie na zber údajov pre vlastnosť Teplota. Pomôžte žiakom sledovať nový textový vstupný prvok, ktorý pridali na obrazovku teploty, a uistite sa, že ID prvku sa zhoduje s tým, ktoré použili v bloku [\\`getText\\`(#fff176)](/docs/applab/getText/) svojho kódu.\n-   **Úroveň 7:** Žiaci aktualizujú návrh aj kód svojej aplikácie na zber údajov pre vlastnosť Denný čas. Pridanie prvku návrhu a aktualizácia kódu je podobná ako na poslednej úrovni, ale tento krok má pridanú požiadavku použiť kartu modelu na kontrolu možných hodnôt pre túto kategorickú funkciu. Žiaci sa môžu dopustiť pravopisných chýb alebo chýb v písaní veľkých písmen, ktoré môžu ovplyvniť ich kód – nabádajte žiakov, aby si dávali veľký pozor na presnú zhodu možností v rozbaľovacom zozname s kartou modelu.\n-   **Úroveň 8:** Žiaci majú možnosť spustiť svoju aplikáciu a overiť, či funguje. Na tejto úrovni budú musieť žiaci vykonať zmeny v kóde len v prípade, že ich program nefunguje. V opačnom prípade, ak aplikácia funguje správne, môžu žiaci pokračovať na ďalšiu úroveň."
         },
         "4e10be5f-60ad-4bae-913d-7a157e519447": {
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Úrovne výberu:** Po vytvorení aplikácie výstražného systému pre vodičov si žiaci môžu vybrať z niekoľkých vzorových aktivít a pokračovať vo vylepšovaní svojej aplikácie. Na každej úrovni sa používa tá istá aplikácia, ktorú už vytvorili, ako predloha, ktorú môžu doplniť. Žiaci si môžu vybrať, koľko týchto úrovní chcú absolvovať – každá z nich im umožní pokračovať v prispôsobovaní a zlepšovaní svojej aplikácie.",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Voliteľné úrovne:** Po vytvorení aplikácie výstražného systému pre vodičov si žiaci môžu vybrať z niekoľkých vzorových aktivít a pokračovať vo vylepšovaní svojej aplikácie. Na každej úrovni sa používa tá istá aplikácia, ktorú už vytvorili, ako predloha, ktorú môžu doplniť. Žiaci si môžu vybrať, koľko týchto úrovní chcú absolvovať – každá z nich im umožní pokračovať v prispôsobovaní a zlepšovaní svojej aplikácie.",
           "tips": [
             "\\*\\* Opakované úrovne:\\*\\* Možnosti v tejto úrovni sú totožné s možnosťami v poslednej lekcii. Je to zámerné, aby mali žiaci viacero príležitostí naučiť sa nové návrhové triky alebo bloky kódu, prípadne pokračovať v precvičovaní nových blokov, ktoré sa naučili v minulej lekcii. Povzbuďte žiakov, aby si pre dnešnú aplikáciu vybrali novú úlohu, ktorá sa líši od tých, ktoré si vybrali včera."
           ]
