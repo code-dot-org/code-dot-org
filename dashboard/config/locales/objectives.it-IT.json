@@ -1479,7 +1479,7 @@
           "description": "utilizzare le istruzioni condizionali per reagire agli input da tastiera o alle modifiche nelle variabili/proprietà"
         },
         "a92a3ce6-e432-4a5e-a484-5f4ca110b2b5": {
-          "description": "applicare uo schema ripetitivo a ll variabili o alle proprietà in un ciclo"
+          "description": "applicare uno schema iterativo a variabili o a proprietà in un ciclo"
         },
         "ecd2dd66-5ac2-4cba-a3db-e86eeb93644f": {
           "description": "mettere le istruzioni nella giusta sequenza così da disegnare nell'ordine corretto"
@@ -1665,10 +1665,10 @@
           "description": "analizzare e scegliere le strategie più appropriate per soddisfare le esigenze degli utenti."
         },
         "1e818391-5de9-4ad0-828e-8457cb34805e": {
-          "description": "Usa un prototipo su carta per testare la progettazione di un'app."
+          "description": "utilizzare un prototipo su carta per testare la progettazione di un'app."
         },
         "2b3a24a7-98b6-4a3d-b446-4630bd4e7a9a": {
-          "description": "raccogliere e analizzare i riscontri sui test effettuati dagli utenti con un prototipo su carta."
+          "description": "raccogliere e analizzare i riscontri sui collaudi effettuati dagli utenti con un prototipo su carta."
         },
         "3c008c53-63fc-4e2c-b766-5e35441f0b48": {
           "description": "utilizzare i commenti di riscontro degli utenti al fine di pianificare l'ulteriore sviluppo di un'app"
@@ -1722,7 +1722,7 @@
           "description": "selezionare l'elemento di input appropriato per un determinato tipo di dati"
         },
         "abc7ae72-467a-4e13-b4b4-00cdc60a9a0c": {
-          "description": "assegnare ruoli e responsabilità a ciascun membro del team quando si collabora per creare un artefatto digitale"
+          "description": "assegnare ruoli e responsabilità a ciascun membro della squadra quando si collabora per creare un artefatto digitale"
         },
         "a720d628-20d7-45f5-a183-eb6823bf8b6f": {
           "description": "creare il prototipo digitale della schermata di un'applicazione"
@@ -1806,7 +1806,7 @@
           "description": "avvalersi degli strumenti di visualizzazione dei dati per decidere quali caratteristiche includere durante l'addestramento di un modello"
         },
         "16648f4d-5313-42ea-9348-5e540f239956": {
-          "description": "Aggiungi schermate ed eventi in \"Sviluppo App\""
+          "description": "aggiungere schermate ed eventi in \"Sviluppo App\""
         },
         "417c1279-8200-49cb-9363-699a49b8f881": {
           "description": "creare un'app che utilizzi l'apprendimento automatico"
@@ -1830,13 +1830,13 @@
           "description": "spiegare come i computer possono prendere decisioni confrontando le somiglianze nei dati"
         },
         "e5903ace-3ee0-42c4-b293-7d7d8a57f3db": {
-          "description": "spiegare in che modo l'accuratezza di calcolo nei dati numerici è diversa da quella dei dati qualitativi"
+          "description": "spiegare in che modo l'accuratezza di calcolo nei dati numerici è diversa da quella dei dati categoriali"
         },
         "27cd4812-b7a4-4a4c-9de4-635f177e9ee4": {
           "description": "utilizzare la visualizzazione dei dati per trovare schemi nei dati numerici"
         },
         "5f04b7b7-96c5-4cc9-9287-839305dfe0d3": {
-          "description": "confrontare e contrappone i dati qualitativi con i dati numerici"
+          "description": "confrontare e contrappone i dati categoriali con i dati numerici"
         },
         "5fe8cd61-2c4d-405c-be23-bfeb420aba2c": {
           "description": "aggiornare il codice del modello predefinito per utilizzare nuovi input in un'app di apprendimento automatico"
@@ -2904,7 +2904,7 @@
           "description": "creare un'app che utilizzi l'apprendimento automatico"
         },
         "1d44b50f-9b7f-4fd8-819b-7f62f60fda8a": {
-          "description": "Aggiungi schermate ed eventi in \"Sviluppo App\""
+          "description": "aggiungere schermate ed eventi in \"Sviluppo App\""
         },
         "a22e4c3d-2f63-4fbc-972c-6bbec9d73c64": {
           "description": "leggere una scheda modello e usarla per valutare un modello"
@@ -2925,13 +2925,13 @@
           "description": "spiegare come i computer possono prendere decisioni confrontando le somiglianze nei dati"
         },
         "8d138ce3-323a-4285-b76d-9fdc215610d4": {
-          "description": "spiegare in che modo l'accuratezza di calcolo nei dati numerici è diversa da quella dei dati qualitativi"
+          "description": "spiegare in che modo l'accuratezza di calcolo nei dati numerici è diversa da quella dei dati categoriali"
         },
         "382925be-583d-4458-a749-9039780ebfed": {
           "description": "utilizzare la visualizzazione dei dati per trovare schemi nei dati numerici"
         },
         "5a207f71-9052-4460-810f-b0118f6067ea": {
-          "description": "confrontare e contrappone i dati qualitativi con i dati numerici"
+          "description": "confrontare e contrappone i dati categoriali con i dati numerici"
         },
         "6d340248-8d1c-472f-8e0a-ceba9d233246": {
           "description": "utilizzare la scheda modello per creare nuovi elementi di input per un'app di apprendimento automatico"
@@ -3003,10 +3003,10 @@
           "description": "analizzare e scegliere le strategie più appropriate per soddisfare le esigenze degli utenti."
         },
         "81d19c33-2675-415e-9b35-12643f8c33be": {
-          "description": "Usa un prototipo su carta per testare la progettazione di un'app."
+          "description": "utilizzare un prototipo su carta per testare la progettazione di un'app."
         },
         "6c20f4f3-4375-4dee-9f00-012a33e7d2af": {
-          "description": "raccogliere e analizzare i riscontri sui test effettuati dagli utenti con un prototipo su carta."
+          "description": "raccogliere e analizzare i riscontri sui collaudi effettuati dagli utenti con un prototipo su carta."
         },
         "cff6cc90-bf04-4c7d-9dac-c6f1a28310a8": {
           "description": "utilizzare i commenti di riscontro degli utenti al fine di pianificare l'ulteriore sviluppo di un'app"
@@ -3057,7 +3057,7 @@
           "description": "analizzare i dati dei test effettuati dagli utenti per individuare le funzionalità che devono essere rimosse, aggiunte o migliorate"
         },
         "0e89a393-31c9-4c3c-b1bb-0285a4a618c7": {
-          "description": "assegnare ruoli e responsabilità a ciascun membro del team quando si collabora per creare un artefatto digitale"
+          "description": "assegnare ruoli e responsabilità a ciascun membro della squadra quando si collabora per creare un artefatto digitale"
         },
         "fec5eaa1-f93f-4255-b69a-080150de17c0": {
           "description": "selezionare l'elemento di input appropriato per un determinato tipo di dati"
@@ -3119,6 +3119,12 @@
         "617e327c-d4cc-4b6e-b456-7233bb9c845b": {
           "description": "utilizzare un programma per controllare un dispositivo fisico"
         },
+        "2b306542-728e-4848-a27f-c0521831a6f4": {
+          "description": "confrontare e distinguere i diversi modi di ricevere input"
+        },
+        "c10da89e-729b-4d0f-b376-3e14e931b870": {
+          "description": "modellare diversi metodi di acquisizione dell'input dell'utente"
+        },
         "37fbfc3d-4e38-4c1c-86bc-6fe3342ba7ff": {
           "description": "collegare un gestore di eventi a un ingresso hardware"
         },
@@ -3154,6 +3160,12 @@
         },
         "84079c5a-326d-4fda-9439-acd6478673b3": {
           "description": "prototipare un programma che integri software e hardware"
+        },
+        "34585635-155a-4032-b653-6cfaa0832b7e": {
+          "description": "accedere a un elemento in una matrice (array) utilizzando il relativo indice"
+        },
+        "57704d64-7732-445a-a82a-81f3b6955df8": {
+          "description": "usare la matrice di LED a colori per controllare singolarmente ogni LED a colori"
         },
         "5f30c244-1a5b-4db9-87bf-71b0e651d2f1": {
           "description": "creare e modificare matrici (array)"
@@ -3378,7 +3390,7 @@
           "description": "mettere le istruzioni nella giusta sequenza così da disegnare nell'ordine corretto"
         },
         "899e51b2-2cb8-4948-9987-aaada64c6a85": {
-          "description": "applicare uo schema ripetitivo a ll variabili o alle proprietà in un ciclo"
+          "description": "applicare uno schema iterativo a variabili o a proprietà in un ciclo"
         },
         "ebf0954f-2190-4e20-8420-f0275aceee0a": {
           "description": "usare i blocchi `velocity` e `rotationSpeed` per creare e modificare i movimenti dei personaggi"

@@ -545,7 +545,11 @@
         "CSD U6 - Board Outputs - ChalB_2222": "Fai accendere il LED quando il mouse passa sopra un oggetto segreto sullo schermo",
         "CSD U6 - Board Outputs - ChalC_2222": "Scopri come usare il blocco di numeri casuali per far suonare il cicalino a una frequenza casuale",
         "CSD U6 - Board Outputs - PracD_2222": "Aggiungi del codice per far sì che ogni pulsante riproduca una determinata frequenza",
-        "CSD U6 - Board Outputs - PracE_2222": "Fai lampeggiare il LED a velocità diverse"
+        "CSD U6 - Board Outputs - PracE_2222": "Fai lampeggiare il LED a velocità diverse",
+        "CSD U6 - Board Outputs - ChalD_2222": "Crea un prototipo di un'app che possa essere utilizzata in un contesto educativo",
+        "CSD U6 - Board Outputs - ChalE_2222": "Crea un prototipo di un'app che possa essere utilizzata in un contesto medico",
+        "ml-models in applab-choice intended warnings": "Usa la scheda modello per aggiungere gli utilizzi e le limitazioni previste dall'app",
+        "ml-models in applab-choice intended warnings_2022": "Usa la scheda modello per aggiungere gli utilizzi e le limitazioni previste dall'app"
       }
     }
   }

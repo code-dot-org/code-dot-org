@@ -2515,12 +2515,14 @@
         "ml-L2 supervised - green glass door-2021": {
           "Accepted": "Accettato",
           "Rejected": "Rifiutato",
-          "Green Glass Door": "Porta in vetro verde"
+          "Green Glass Door": "Porta in vetro verde",
+          "In this game, we're trying to learn what words are allowed through the Green Glass Door.": "In questo gioco, stiamo cercando di capire a quali parole è consentite di attraversare la Porta a vetri verde."
         },
         "ml-L2 supervised - green glass door_2022": {
           "Accepted": "Accettato",
           "Rejected": "Rifiutato",
-          "Green Glass Door": "Porta in vetro verde"
+          "Green Glass Door": "Porta in vetro verde",
+          "In this game, we're trying to learn what words are allowed through the Green Glass Door.": "In questo gioco, stiamo cercando di capire a quali parole è consentite di attraversare la Porta a vetri verde."
         },
         "ml-L2 unsupervised - 1-2021": {
           "Next": "Seguente"
@@ -2537,7 +2539,8 @@
           "vanilla:": "Vanilla",
           "lime:": "lime:",
           "chili en polbo:": "peperoncino in polvere:",
-          "coconut:": "cocco:"
+          "coconut:": "cocco:",
+          "Raspado Recommender": "Suggeritore Raspado"
         },
         "ml-customize-raspado_2022": {
           "yes": "sì",
@@ -2548,7 +2551,8 @@
           "vanilla:": "Vanilla",
           "lime:": "lime:",
           "chili en polbo:": "peperoncino in polvere:",
-          "coconut:": "cocco:"
+          "coconut:": "cocco:",
+          "Raspado Recommender": "Suggeritore Raspado"
         },
         "ml-intro ai lab- fruit veggie widget": {
           "Continue": "Prosegui",
@@ -2642,7 +2646,8 @@
           "1": "1",
           "Predict": "Predict",
           "Back": "Indietro",
-          "4+": "4+"
+          "4+": "4+",
+          "Intended Uses": "Utilizzi previsti"
         },
         "ml-models in applab-choice intended warnings_2022": {
           "3": "3",
@@ -2650,7 +2655,8 @@
           "1": "1",
           "Predict": "Predict",
           "Back": "Indietro",
-          "4+": "4+"
+          "4+": "4+",
+          "Intended Uses": "Utilizzi previsti"
         },
         "ml-models in applab-choice predict typos": {
           "3": "3",
@@ -2681,18 +2687,22 @@
         "ml-models in applab-zoo model embed": {
           "Yes": "Sì",
           "No": "No",
-          "Predict": "Predict"
+          "Predict": "Predict",
+          "Intended Uses": "Utilizzi previsti"
         },
         "ml-models in applab-zoo model embed_2022": {
           "Yes": "Sì",
           "No": "No",
-          "Predict": "Predict"
+          "Predict": "Predict",
+          "Intended Uses": "Utilizzi previsti"
         },
         "ml-models-shoes decision tree-2021": {
-          "Sports": "Sport"
+          "Sports": "Sport",
+          "Improved Shoe Recommender": "Selezionatore di scarpe migliorato"
         },
         "ml-models-shoes decision tree_2022": {
-          "Sports": "Sport"
+          "Sports": "Sport",
+          "Improved Shoe Recommender": "Selezionatore di scarpe migliorato"
         },
         "ml-use model card-example3A-2021": {
           "rain": "pioggia",
@@ -2706,7 +2716,8 @@
           "sunny": "soleggiata",
           "Time Of Day:": "Ora del giorno:",
           "daylight": "luce del giorno",
-          "Temperature:": "Temperatura:"
+          "Temperature:": "Temperatura:",
+          "Driver Alert System": "Sistema di avviso di guida"
         },
         "ml-use model card-example3A_2022": {
           "rain": "pioggia",
@@ -2720,7 +2731,8 @@
           "sunny": "soleggiata",
           "Time Of Day:": "Ora del giorno:",
           "daylight": "luce del giorno",
-          "Temperature:": "Temperatura:"
+          "Temperature:": "Temperatura:",
+          "Driver Alert System": "Sistema di avviso di guida"
         },
         "CSD U1 processing countries_2021": {
           "have more than a billion people?": "ha più di un miliardo di persone?",
@@ -2929,6 +2941,18 @@
           "Half a Second": "Mezzo secondo",
           "Quarter of a Second": "Un quarto di secondo",
           "100 Milliseconds": "100 millisecondi"
+        },
+        "ml-models-shoes points-2021": {
+          "Ultimate Shoe Recommender": "Suggeritore di scarpe definitivo"
+        },
+        "ml-models-shoes points_2022": {
+          "Ultimate Shoe Recommender": "Suggeritore di scarpe definitivo"
+        },
+        "ml-models-shoes random-2021": {
+          "Shoe Recommender": "Suggeritore di scarpe"
+        },
+        "ml-models-shoes random_2022": {
+          "Shoe Recommender": "Suggeritore di scarpe"
         }
       }
     }

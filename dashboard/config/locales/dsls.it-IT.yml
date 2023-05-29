@@ -22708,3 +22708,27 @@ it-IT:
           dici.\n\n***\n\n### Parte 1: La scuola in generale\n\n#### *Per prima cosa,
           vogliamo chiederti quali sono i tuoi pensieri e le tue sensazioni sulla
           scuola, in generale.*"
+      CSD-U5-SFLP Representation Matters:
+        markdown: |
+          # Panoramica
+
+          Ottieni il tuo primo assaggio dell'importanza di come i dati sono rappresentati e di come influenzano il modo in cui prendiamo le decisioni. Aiuterai alcune persone a decidere quale pasto dovrebbero ordinare.
+
+          ## Risorse
+
+          * [Problemi di rappresentazione - Guida alle attività](https://docs.google.com/document/d/1wU8QANCmyz_DiJf2vdg2QPqKHq1YE0XDLGJmEsbKfiU/export?format=pdf)
+        teacher_markdown: |
+          [key]
+
+          * [Problemi di rappresentazione] (https://docs.google.com/document/d/1iBGzpLZVxyU0v1rOQMydrs4EpaXScbsB0x2hvbY3qxA/edit?usp=sharing) - Esempio ([PDF](https://docs.google.com/document/d/1iBGzpLZVxyU0v1rOQMydrs4EpaXScbsB0x2hvbY3qxA/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1iBGzpLZVxyU0v1rOQMydrs4EpaXScbsB0x2hvbY3qxA/export?format=doc))
+          * [Dati sui pasti] ( https://docs.google.com/document/d/1PAuIlPz-GEg3JsHpJd-rEnVcjP_DL3BAxT8wCmvrlGA/edit?usp=sharing) - Risorsa ([PDF](https://docs.google.com/document/d/1PAuIlPz-GEg3JsHpJd-rEnVcjP_DL3BAxT8wCmvrlGA/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1PAuIlPz-GEg3JsHpJd-rEnVcjP_DL3BAxT8wCmvrlGA/export?format=doc))
+
+          [/key]
+      ml-club app-choice parent:
+        display_name: Personalizza la tua app
+      ml-club app-choice parent_2022:
+        display_name: Personalizza la tua app
+      ml-intro app lab-book recommender 5-2021:
+        display_name: Personalizza la tua app
+      ml-intro app lab-book recommender 5_2022:
+        display_name: Personalizza la tua app

@@ -1498,6 +1498,7 @@
           "url": "https://docs.google.com/document/d/1DUpyEfCI3AWk5YQ3CXIlP5WpWhydWE4hKUmOZMHnNRU/preview"
         },
         "meals_data/csd/2022": {
+          "name": "Dati sui pasti",
           "url": "https://docs.google.com/document/d/1nVUNkvIqz4sQjXnr52eBd17Pmi61Ir2aTH6ulVnco9o/edit",
           "type": "Risorse"
         },
@@ -1525,10 +1526,12 @@
           "type": "Guida alle attività"
         },
         "representing_information_1/csd/2022": {
+          "name": "Rappresentazione delle informazioni 1",
           "url": "https://docs.google.com/document/d/1B3BDFK50Na6D28aoZFHHtBTInThj26Qgdu82Z7YrcRI/edit",
           "type": "Modello"
         },
         "representing_information_2/csd/2022": {
+          "name": "Rappresentazione delle informazioni 2",
           "url": "https://docs.google.com/document/d/1XXyUF6qGzMpriXd89XH8Kg10jMwiWIsbC8_utCJIYRY/edit",
           "type": "Modello"
         },
@@ -1537,6 +1540,7 @@
           "type": "Diapositive"
         },
         "ascii/csd/2022": {
+          "name": "ASCII",
           "url": "https://docs.google.com/document/d/1axpDn1sTR1RZUPB6G5rU5Dv_RCGJGSd7JWpd0J_chkU/edit",
           "type": "Modello"
         },
@@ -1570,11 +1574,13 @@
         },
         "number_cards/csd/2022": {
           "name": "Schede con i numeri",
-          "url": "https://docs.google.com/presentation/u/2/d/1pZVjuP_Mwz4nOIxc6Hxz-SFIMzn3oS-zy3klSIgrEAc/copy"
+          "url": "https://docs.google.com/presentation/u/2/d/1pZVjuP_Mwz4nOIxc6Hxz-SFIMzn3oS-zy3klSIgrEAc/copy",
+          "type": "Schede digitali"
         },
         "number_cards_1/csd/2022": {
           "name": "Schede con i numeri",
-          "url": "https://docs.google.com/document/d/1UWJdBo0C7wE3jmSCDVTOSdDtRkxtIBqe4ttN0v5GFXM/"
+          "url": "https://docs.google.com/document/d/1UWJdBo0C7wE3jmSCDVTOSdDtRkxtIBqe4ttN0v5GFXM/",
+          "type": "Schede"
         },
         "representing_numbers/csd/2022": {
           "name": "Rappresentazione dei numeri",
@@ -1810,10 +1816,12 @@
           "type": "Guida al progetto"
         },
         "peer_review_exemplar_1/csd/2022": {
+          "name": "Revisione tra pari - Esempio 1  ",
           "url": "https://docs.google.com/document/d/1D4W-8H1hbNDOk-KNNJ9UgfLjEyn8oNx9fuiKca57Twc/edit",
           "type": "Modello"
         },
         "peer_review_exemplar_2/csd/2022": {
+          "name": "Revisione tra pari - Esempio 2",
           "url": "https://docs.google.com/document/d/1N1gwMu_vOMpB0GeEVsyAc18CTKQn_sleb5dg9zDSROQ/edit",
           "type": "Modello"
         },
@@ -1824,6 +1832,7 @@
         },
         "sample_marked_rubrics_3/csd/2022": {
           "name": "Esempi di applicazione dei criteri di valutazione",
+          "url": "https://docs.google.com/document/d/1fbImuYWBio4mkmFMWWGBolyEWihxFPlvtxgxGhRokIc/edit",
           "type": "Modello"
         },
         "project_-_make_a_recommendation/csd/2022": {
@@ -2253,7 +2262,7 @@
           "type": "Diapositive"
         },
         "flipbook_example_-_by_marnic_bos/csd/2022": {
-          "name": "Esempio di libro sfogliabile - di Marnic Bos",
+          "name": "Esempio di libro animato - di Marnic Bos",
           "url": "https://youtu.be/hol0p29cd8o",
           "type": "Video"
         },
@@ -2263,11 +2272,11 @@
           "type": "Video"
         },
         "random_dot_flipbook/csd/2022": {
-          "name": "Punto casuale - Libro sfogliabile",
+          "name": "Punto casuale - Libro animato",
           "url": "https://docs.google.com/drawings/d/1dOy6qZ1-2VlxRKz63m6bO2G9lgJnDtnLKYxvLH_W16w/edit"
         },
         "random_sprite_flipbook/csd/2022": {
-          "name": "Personaggio casuale - Libro sfogliabile",
+          "name": "Personaggio casuale - Libro animato",
           "url": "https://docs.google.com/drawings/d/1u6hSZ108BcnasuoKM1etB4sEzShGIrmk8GgQyJZ0P8Y/edit"
         },
         "the_draw_loop/csd/2022": {
@@ -3330,6 +3339,7 @@
           "type": "Diapositive"
         },
         "digital_prototype_user_testing/csd/2022": {
+          "name": "Collaudo di prototipi digitali da parte degli utenti",
           "url": "https://docs.google.com/document/d/1hdfiToUH-GACjesuIOIQB_C9FYqS-HjAHkGc5ju1kN0/view",
           "type": "Guida alle attività"
         },
@@ -3338,17 +3348,17 @@
           "type": "Diapositive"
         },
         "bugs_and_features/csd/2022": {
-          "name": "Errori e funzionalità",
+          "name": "Errori e caratteristiche",
           "url": "https://docs.google.com/document/d/1TGQ7XrKwn9fPRG0Mx73KJa8aGns6mZf49Q9FaNd-s4Y/view",
           "type": "Guida alle attività"
         },
         "bugs_and_features_1/csd/2022": {
-          "name": "Errori e funzionalità",
+          "name": "Errori e caratteristiche",
           "url": "https://docs.google.com/document/d/1265CpF9-hjVtzzVy4q9hZzzlTIxE_F8Ky8Std-7vgA8/edit",
           "type": "Modello"
         },
         "bugs_and_features_2/csd/2022": {
-          "name": "Errori e funzionalità",
+          "name": "Errori e caratteristiche",
           "type": "Diapositive"
         },
         "updating_your_prototype/csd/2022": {
@@ -3380,10 +3390,12 @@
           "type": "Diapositive"
         },
         "peer_review_1/csd/2022": {
+          "name": "Revisione tra pari 1",
           "url": "https://docs.google.com/document/d/1CVcpiBI1UeA5U5SbGnkM6xqKmKZo2XefU2J7Tg8zWqk",
           "type": "Modello"
         },
         "peer_review_2/csd/2022": {
+          "name": "Revisione tra pari 2",
           "url": "https://docs.google.com/document/d/1PA_zExhRqRnZ5j6DaJHnceUSYGHBGHgqw3VSfQNm2E0",
           "type": "Modello"
         },
@@ -3437,10 +3449,12 @@
           "type": "Video"
         },
         "circuit_playground/csd/2022": {
+          "name": "Circuit Playground",
           "url": "https://drive.google.com/file/d/1OpB8lF3MQJIpiRm7hFo9ARx346-NpfNf/view?usp=sharing",
           "type": "Risorse"
         },
         "physical_output/csd/2022": {
+          "name": "Output fisico",
           "url": "https://drive.google.com/file/d/1LoSDj7s7Jv45DJnjxmAeLoZO-ex7HFAy/view?usp=sharing",
           "type": "Risorse"
         },
@@ -3475,6 +3489,7 @@
           "type": "Diapositive"
         },
         "physical_input/csd/2022": {
+          "name": "Input fisico",
           "url": "https://drive.google.com/file/d/1TNz91ENBLt-SG1L0459YR9X5yLjQNuSc/view?usp=sharing",
           "type": "Risorse"
         },
@@ -3552,6 +3567,7 @@
           "type": "Diapositive"
         },
         "taking_input_with_getproperty/csd/2022": {
+          "name": "Accettare la ricezione degli input con getProperty",
           "url": "https://drive.google.com/file/d/14JROXSF8nsce64Y1EjrbmzuANtCln1md/view?usp=sharing",
           "type": "Risorse"
         },
@@ -3651,7 +3667,7 @@
           "type": "Risorse"
         },
         "arrays/csd/2022": {
-          "name": "Insiemi",
+          "name": "Matrici (arrays)",
           "url": "https://drive.google.com/file/d/1X8tTj4O9_XVn1LNPhs9LZGIXJVxB6yFX/view?usp=sharing",
           "type": "Risorse"
         },
@@ -3773,14 +3789,17 @@
           "name": "Tutte le voci di glossario"
         },
         "ai_what_is_machine_learning_/csd/2022": {
+          "name": "IA: cos'è l'apprendimento automatico?",
           "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
           "type": "Video"
         },
         "classifying_fish/csd/2022": {
+          "name": "Classificare i pesci",
           "url": "https://docs.google.com/document/d/1Vfp8rokk4JzTGhkUw3LkhyHAD5gLm0hct5N6CDjkNSI/view",
           "type": "Guida alle attività"
         },
         "introduction_to_machine_learning/csd/2022": {
+          "name": "Introduzione all'apprendimento automatico",
           "type": "Diapositive"
         },
         "types_of_machine_learning/csd/2022": {
@@ -3798,16 +3817,19 @@
           "type": "Soluzione"
         },
         "innovations_in_ai/csd/2022": {
+          "name": "Innovazioni nell'IA",
           "type": "Diapositive"
         },
         "innovations_in_ai_-_activity_guide/csd/2022": {
+          "name": "Innovazioni nell'IA - Guida alle attività",
           "url": "https://docs.google.com/document/d/1YBbNfg7H4dAGGANAESiX8cXcqbTX_ml-KiG8HjDatpE/edit#"
         },
         "innovations_in_ai_research_areas_-_student_resource/csd/2022": {
+          "name": "Innovazioni nelle aree di ricerca sull'IA - Risorsa per studenti",
           "url": "https://docs.google.com/document/d/1l63nyHKHrONkgQY5u07tEGyjDuI661559EggvnyQftU/edit#"
         },
         "seeing_ai/csd/2022": {
-          "name": "Vedere l'IA",
+          "name": "Vedere con l'IA",
           "url": "https://www.youtube.com/watch?v=DybczED-GKE",
           "type": "Video"
         },
@@ -3830,45 +3852,54 @@
           "type": "Guida alle attività"
         },
         "shoe_survey/csd/2022": {
+          "name": "Sondaggio sulle scarpe",
           "url": "https://docs.google.com/forms/d/e/1FAIpQLSdFxPdsfbgqF2ZpAjILjCeLX-GlFCrMdLbGHlk_0-klSf9YcQ/viewform",
           "type": "Risorse"
         },
         "_key_classification_models/csd/2022": {
+          "name": "[KEY] Modelli di classificazione",
           "url": "https://docs.google.com/document/d/1mCap8x_7umJbt3x7tRQj6J_txrfJNjHosNNSnyb5FKc/view",
           "type": "Soluzione"
         },
         "classification_models/csd/2022": {
+          "name": "Modelli di classificazione",
           "url": "https://docs.google.com/document/d/12gAWt2e0r-RSWFFUDaV9KgiPMhqFzfr8AoY0Mdm9uRY/edit",
           "type": "Guida alle attività"
         },
         "classification_models_1/csd/2022": {
+          "name": "Modelli di classificazione",
           "type": "Diapositive"
         },
         "fruit_veggie_cards/csd/2022": {
+          "name": "Schede di frutta e verdura",
           "url": "https://docs.google.com/document/d/1tHBrTeEpIflpl06y4wYqLNnT476X8X--wfPZsMjMTiM/edit",
           "type": "Risorse"
         },
         "_key_training_a_model_in_ai_lab/csd/2022": {
+          "name": "[KEY] Addestramento di un modello in Laboratorio IA",
           "url": "https://docs.google.com/document/d/1B1PstB4HD-nWmOvUvyb0bpaZPm-ecx9iBMn9bj9fP4c/view",
           "type": "Soluzione"
         },
         "accuracy_in_ai_lab/csd/2022": {
+          "name": "L'accuratezza e il Laboratorio IA",
           "url": "https://drive.google.com/file/d/1T_YmYjGf4xEauRt7uBwI4ty_NE7KShgY/view?usp=sharing",
           "type": "Risorse"
         },
         "introduction_to_ai_lab/csd/2022": {
-          "name": "Lezione 6",
+          "name": "Introduzione al Laboratorio IA",
           "type": "Diapositive"
         },
         "introduction_to_ai_lab_1/csd/2022": {
-          "name": "Lezione 6",
+          "name": "Introduzione al Laboratorio IA",
           "type": "Video"
         },
         "selecting_features/csd/2022": {
+          "name": "Selezione delle caratteristiche",
           "url": "https://drive.google.com/file/d/1GLf_xq333r4tR2XHMoP24rq0KQVLM8z_/view?usp=sharing",
           "type": "Risorse"
         },
         "training_a_model_in_ai_lab/csd/2022": {
+          "name": "Addestramento di un modello in Laboratorio IA",
           "url": "https://docs.google.com/document/d/17gVZ5E_0_bBddvEKnO_wFTlorJnGkW-KNAcz0zWRbAE/edit",
           "type": "Guida alle attività"
         },
@@ -3877,14 +3908,17 @@
           "type": "Video"
         },
         "using_data_with_categorical_features/csd/2022": {
+          "name": "Utilizzo di dati con caratteristiche categoriali",
           "url": "https://drive.google.com/file/d/1blY6e6hX5DszuAdHXTEeB735kYUy1Hyj/view?usp=sharing",
           "type": "Risorse"
         },
         "importing_a_model_in_app_lab/csd/2022": {
+          "name": "Importazione di un modello in Sviluppo App",
           "url": "https://drive.google.com/file/d/1xxtJnmayTnjT_0KdcaQp5buxBsVJnbsu/view?usp=sharing",
           "type": "Risorse"
         },
         "importing_models_in_app_lab/csd/2022": {
+          "name": "Importazione di modelli in Sviluppo App",
           "type": "Diapositive"
         },
         "ai_training_data_bias/csd/2022": {
@@ -3893,12 +3927,15 @@
           "type": "Video"
         },
         "model_cards/csd/2022": {
+          "name": "Schede modello",
           "type": "Diapositive"
         },
         "model_cards_1/csd/2022": {
+          "name": "Schede modello",
           "type": "Guida alle attività"
         },
         "_key_zoo_models/csd/2022": {
+          "name": "[KEY] Modelli dello Zoo",
           "url": "https://docs.google.com/document/d/1Oz8_h4DT9gIjt0SgFsEle0BZzDlRocl63hcPKHSLclc/view",
           "type": "Soluzione"
         },
@@ -3907,6 +3944,7 @@
           "type": "Video"
         },
         "saving_models_in_ai_lab/csd/2022": {
+          "name": "Salvataggio di modelli in Laboratorio IA",
           "type": "Diapositive"
         },
         "selecting_a_label/csd/2022": {
@@ -3914,6 +3952,7 @@
           "type": "Risorse"
         },
         "zoo_models/csd/2022": {
+          "name": "Modelli dello Zoo",
           "url": "https://docs.google.com/document/d/1ORggvwa-uMH4HUUFEJL6g5v-mYR1948LhKAmHhmJxGc/edit",
           "type": "Guida alle attività"
         },
@@ -3922,12 +3961,14 @@
           "type": "Video"
         },
         "model_cards_in_app_lab/csd/2022": {
+          "name": "Schede modello in Sviluppo App",
           "type": "Diapositive"
         },
         "printable_model_cards/csd/2022": {
           "type": "Risorse"
         },
         "_key_numerical_accuracy/csd/2022": {
+          "name": "[KEY] Accuratezza numerica",
           "url": "https://docs.google.com/document/d/1NtS2vGqt_4uvDpGn1-u5AR2o_Iza_Oi4whtpq41eNt0/edit",
           "type": "Soluzione"
         },
@@ -3936,10 +3977,12 @@
           "type": "Soluzione"
         },
         "numerical_accuracy/csd/2022": {
+          "name": "Accuratezza numerica",
           "url": "https://docs.google.com/document/d/1z1QlqauVb0S3TBFICvoIP2fOvfDGkAItx7hL3FlOnf8/edit#",
           "type": "Guida alle attività"
         },
         "numerical_models/csd/2022": {
+          "name": "Modelli numerici",
           "type": "Diapositive"
         },
         "zombie_prediction/csd/2022": {
@@ -3951,26 +3994,29 @@
           "type": "Soluzione"
         },
         "numerical_data_in_ai_lab/csd/2022": {
-          "name": "Dati numerici in AI Lab",
+          "name": "Dati numerici in Laboratorio IA",
           "type": "Diapositive"
         },
         "numerical_data_in_ai_lab_1/csd/2022": {
-          "name": "Dati numerici in AI Lab",
+          "name": "Dati numerici in Laboratorio IA",
           "url": "https://docs.google.com/document/d/1moMxuz91OA5THt6SxJm0AGyJKG69r1oz2FzeJ_NWeww/edit#",
           "type": "Guida alle attività"
         },
         "numerical_data_in_ai_lab_2/csd/2022": {
-          "name": "Dati numerici in AI Lab",
+          "name": "Dati numerici in Laboratorio IA",
           "type": "Video"
         },
         "using_data_with_numerical_features/csd/2022": {
+          "name": "Utilizzo di dati con caratteristiche numeriche",
           "url": "https://drive.google.com/file/d/1gDKIbkvicZqyXlyj2a5InXaU9_lcxVlU/view?usp=sharing",
           "type": "Risorse"
         },
         "customizing_apps/csd/2022": {
+          "name": "Personalizzazione delle app",
           "type": "Diapositive"
         },
         "ai_code_of_ethics/csd/2022": {
+          "name": "Codice etico dell'IA",
           "type": "Diapositive"
         },
         "ai_ethics_research_areas/csd/2022": {
@@ -3999,6 +4045,7 @@
           "type": "Diapositive"
         },
         "5_why_s_-_activity_guide/csd/2022": {
+          "name": "5 perché - Guida alle attività",
           "url": "https://docs.google.com/presentation/d/1G8bmEuCtGcnQkL8DAcPUqhN4WsbwTnIBc6ihH2i86lU/view"
         },
         "app_brainstorm_-_activity_guide/csd/2022": {
@@ -4013,7 +4060,7 @@
           "type": "Risorse"
         },
         "survey_planning/csd/2022": {
-          "name": "Progettare la Raccolta dei Dati",
+          "name": "Pianificazione del sondaggio",
           "type": "Diapositive"
         },
         "survey_planning_-_activity_guide/csd/2022": {
@@ -4035,31 +4082,37 @@
           "url": "https://docs.google.com/spreadsheets/d/1bVtUc5KrHaBZ4rx6trdYVqjGHIq9J8jBG0Mx2d9nxDM/copy"
         },
         "survey_data_in_ai_lab/csd/2022": {
+          "name": "Dati del sondaggio in Laboratorio IA",
           "type": "Diapositive"
         },
         "view_and_download_survey_data/csd/2022": {
           "type": "Video"
         },
         "troubleshooting_models/csd/2022": {
+          "name": "Modelli di risoluzione dei problemi",
           "type": "Diapositive"
         },
         "troubleshooting_models_-_activity_guide/csd/2022": {
           "url": "https://docs.google.com/document/d/1RLnA_EbFrxwLOI-XGwmuryNbSPlBqndvjXGDlWdndpc/edit"
         },
         "creating_an_app/csd/2022": {
+          "name": "Creazione di un'app",
           "type": "Diapositive"
         },
         "_template_5_why_s/csd/2022": {
+          "name": "[Template] 5 Perché",
           "url": "https://docs.google.com/presentation/d/18OGQCoNKsi63ArkV0jECeHWsS_accFDoYcDh9871ejk/edit",
           "type": "Risorse"
         },
         "design_an_ai_app/csd/2022": {
+          "name": "Progetta un'app di intelligenza artificiale",
           "type": "Diapositive"
         },
         "design_an_ai_app_-_project_guide/csd/2022": {
           "url": "https://docs.google.com/document/d/1pCyhC1u0NPecz52ac8jqgM8QTsFHhgWO7saaCekZ3D4/edit"
         },
         "design_an_ai_app_1/csd/2022": {
+          "name": "Progetta un'app di intelligenza artificiale",
           "url": "https://docs.google.com/document/d/1WTnJ-vxHh0NIYOePvdYps_zoLLiGWJnD8Y9RJabxth8/view",
           "type": "Criteri di valutazione"
         },
@@ -6118,14 +6171,17 @@
           "name": "Tutte le voci di glossario"
         },
         "classifying_fish/csd/2021": {
+          "name": "Classificare i pesci",
           "url": "https://docs.google.com/document/d/1Vfp8rokk4JzTGhkUw3LkhyHAD5gLm0hct5N6CDjkNSI/view",
           "type": "Guida alle attività"
         },
         "introduction_to_machine_learning/csd/2021": {
+          "name": "Introduzione all'apprendimento automatico",
           "url": "https://docs.google.com/presentation/d/1uT4weLbovBliCfxnkCERfjXWlWWRAYiJQ7brwfYP22U/copy",
           "type": "Diapositive"
         },
         "ai_what_is_machine_learning_/csd/2021": {
+          "name": "IA: cos'è l'apprendimento automatico?",
           "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
           "type": "Video"
         },
@@ -6145,17 +6201,20 @@
           "type": "Soluzione"
         },
         "innovations_in_ai/csd/2021": {
+          "name": "Innovazioni nell'IA",
           "url": "https://docs.google.com/presentation/d/1JqvABbuAj3LiCxZQw91KuesvIxlJdXxU5iOabI-FjrM/edit",
           "type": "Diapositive"
         },
         "innovations_in_ai_-_activity_guide/csd/2021": {
+          "name": "Innovazioni nell'IA - Guida alle attività",
           "url": "https://docs.google.com/document/d/1YBbNfg7H4dAGGANAESiX8cXcqbTX_ml-KiG8HjDatpE/edit#"
         },
         "innovations_in_ai_research_areas_-_student_resource/csd/2021": {
+          "name": "Innovazioni nelle aree di ricerca sull'IA - Risorsa per studenti",
           "url": "https://docs.google.com/document/d/1l63nyHKHrONkgQY5u07tEGyjDuI661559EggvnyQftU/edit#"
         },
         "seeing_ai/csd/2021": {
-          "name": "Vedere l'IA",
+          "name": "Vedere con l'IA",
           "url": "https://www.youtube.com/watch?v=DybczED-GKE",
           "type": "Video"
         },
@@ -6175,6 +6234,7 @@
           "type": "Guida alle attività"
         },
         "shoe_survey/csd/2021": {
+          "name": "Sondaggio sulle scarpe",
           "url": "https://docs.google.com/forms/d/e/1FAIpQLSdFxPdsfbgqF2ZpAjILjCeLX-GlFCrMdLbGHlk_0-klSf9YcQ/viewform",
           "type": "Risorse"
         },
@@ -6184,32 +6244,37 @@
           "type": "Soluzione"
         },
         "_key_classification_models/csd/2021": {
+          "name": "[KEY] Modelli di classificazione",
           "url": "https://docs.google.com/document/d/1mCap8x_7umJbt3x7tRQj6J_txrfJNjHosNNSnyb5FKc/view",
           "type": "Soluzione"
         },
         "classification_models/csd/2021": {
+          "name": "Modelli di classificazione",
           "url": "https://docs.google.com/document/d/12gAWt2e0r-RSWFFUDaV9KgiPMhqFzfr8AoY0Mdm9uRY/edit",
           "type": "Guida alle attività"
         },
         "classification_models_1/csd/2021": {
+          "name": "Modelli di classificazione",
           "url": "https://docs.google.com/presentation/d/1f5PG9ASPlRlXNM7gBMOribyQaYpVAaVW9EXWjtrqk1c/copy",
           "type": "Diapositive"
         },
         "fruit_veggie_cards/csd/2021": {
+          "name": "Schede di frutta e verdura",
           "url": "https://docs.google.com/document/d/1tHBrTeEpIflpl06y4wYqLNnT476X8X--wfPZsMjMTiM/edit",
           "type": "Risorse"
         },
         "introduction_to_ai_lab/csd/2021": {
-          "name": "Lezione 6",
+          "name": "Introduzione al Laboratorio IA",
           "url": "https://docs.google.com/presentation/d/1lxgUDjozD9CF0Nv5n9sWmdguEp3lFX9k90cN-NGQnms/copy",
           "type": "Diapositive"
         },
         "introduction_to_ai_lab_1/csd/2021": {
-          "name": "Lezione 6",
+          "name": "Introduzione al Laboratorio IA",
           "url": "https://www.youtube.com/watch?v=bs3slynHTvc",
           "type": "Video"
         },
         "training_a_model_in_ai_lab/csd/2021": {
+          "name": "Addestramento di un modello in Laboratorio IA",
           "url": "https://docs.google.com/document/d/17gVZ5E_0_bBddvEKnO_wFTlorJnGkW-KNAcz0zWRbAE/edit",
           "type": "Guida alle attività"
         },
@@ -6219,26 +6284,32 @@
           "type": "Video"
         },
         "_key_training_a_model_in_ai_lab/csd/2021": {
+          "name": "[KEY] Addestramento di un modello in Laboratorio IA",
           "url": "https://docs.google.com/document/d/1B1PstB4HD-nWmOvUvyb0bpaZPm-ecx9iBMn9bj9fP4c/view",
           "type": "Soluzione"
         },
         "accuracy_in_ai_lab/csd/2021": {
+          "name": "L'accuratezza e il Laboratorio IA",
           "url": "https://drive.google.com/file/d/1T_YmYjGf4xEauRt7uBwI4ty_NE7KShgY/view?usp=sharing",
           "type": "Risorse"
         },
         "selecting_features/csd/2021": {
+          "name": "Selezione delle caratteristiche",
           "url": "https://drive.google.com/file/d/1GLf_xq333r4tR2XHMoP24rq0KQVLM8z_/view?usp=sharing",
           "type": "Risorse"
         },
         "using_data_with_categorical_features/csd/2021": {
+          "name": "Utilizzo di dati con caratteristiche categoriali",
           "url": "https://drive.google.com/file/d/1blY6e6hX5DszuAdHXTEeB735kYUy1Hyj/view?usp=sharing",
           "type": "Risorse"
         },
         "importing_models_in_app_lab/csd/2021": {
+          "name": "Importazione di modelli in Sviluppo App",
           "url": "https://docs.google.com/presentation/d/1gkngAaMoJdp-8q2S9zomxHukJcdChkxtC38EA4dWvc0/copy",
           "type": "Diapositive"
         },
         "importing_a_model_in_app_lab/csd/2021": {
+          "name": "Importazione di un modello in Sviluppo App",
           "url": "https://drive.google.com/file/d/1xxtJnmayTnjT_0KdcaQp5buxBsVJnbsu/view?usp=sharing",
           "type": "Risorse"
         },
@@ -6248,10 +6319,12 @@
           "type": "Video"
         },
         "model_cards/csd/2021": {
+          "name": "Schede modello",
           "url": "https://docs.google.com/presentation/d/1KLPpUnpn_gu5KqS0S5rVAjr3pqv6kBSeZ3V7ngydz4E/copy",
           "type": "Diapositive"
         },
         "model_cards_1/csd/2021": {
+          "name": "Schede modello",
           "url": "https://docs.google.com/document/d/1vdmL2UnG7KaMMenq5UsnsC4wbkuQZVP1OxVuT5WJvk0/edit#",
           "type": "Guida alle attività"
         },
@@ -6261,14 +6334,17 @@
           "type": "Video"
         },
         "saving_models_in_ai_lab/csd/2021": {
+          "name": "Salvataggio di modelli in Laboratorio IA",
           "url": "https://docs.google.com/presentation/d/1M9dxiG9GmZfoYxe2QYE7nQs3vs9T1knh0qxA9tOTtf8/copy",
           "type": "Diapositive"
         },
         "zoo_models/csd/2021": {
+          "name": "Modelli dello Zoo",
           "url": "https://docs.google.com/document/d/1ORggvwa-uMH4HUUFEJL6g5v-mYR1948LhKAmHhmJxGc/edit",
           "type": "Guida alle attività"
         },
         "_key_zoo_models/csd/2021": {
+          "name": "[KEY] Modelli dello Zoo",
           "url": "https://docs.google.com/document/d/1Oz8_h4DT9gIjt0SgFsEle0BZzDlRocl63hcPKHSLclc/view",
           "type": "Soluzione"
         },
@@ -6281,14 +6357,17 @@
           "type": "Video"
         },
         "model_cards_in_app_lab/csd/2021": {
+          "name": "Schede modello in Sviluppo App",
           "url": "https://docs.google.com/presentation/d/1q_9LV_tmFEEqwCMuMo77heheFEyhATwMWYyVg6tn2HE/copy",
           "type": "Diapositive"
         },
         "numerical_accuracy_-_activity_guide/csd/2021": {
+          "name": "Accuratezza numerica",
           "url": "https://docs.google.com/document/d/1z1QlqauVb0S3TBFICvoIP2fOvfDGkAItx7hL3FlOnf8/edit#",
           "type": "Guida alle attività"
         },
         "numerical_models/csd/2021": {
+          "name": "Modelli numerici",
           "url": "https://docs.google.com/presentation/d/1lKn_IQjmALHkAS7B1iJzFfg5DXIexbgJQOhjJ2F0wpM/edit",
           "type": "Diapositive"
         },
@@ -6301,21 +6380,22 @@
           "type": "Soluzione"
         },
         "_key_numerical_accuracy/csd/2021": {
+          "name": "[KEY] Accuratezza numerica",
           "url": "https://docs.google.com/document/d/1NtS2vGqt_4uvDpGn1-u5AR2o_Iza_Oi4whtpq41eNt0/edit",
           "type": "Soluzione"
         },
         "numerical_data_in_ai_lab/csd/2021": {
-          "name": "Dati numerici in AI Lab",
+          "name": "Dati numerici in Laboratorio IA",
           "url": "https://docs.google.com/presentation/d/1lDwfSAfjllPGMuJgo7bJmrJWSUJsidsTLw4Tz67zfyQ/edit",
           "type": "Diapositive"
         },
         "numerical_data_in_ai_lab_1/csd/2021": {
-          "name": "Dati numerici in AI Lab",
+          "name": "Dati numerici in Laboratorio IA",
           "url": "https://docs.google.com/document/d/1moMxuz91OA5THt6SxJm0AGyJKG69r1oz2FzeJ_NWeww/edit#",
           "type": "Guida alle attività"
         },
         "numerical_data_in_ai_lab_2/csd/2021": {
-          "name": "Dati numerici in AI Lab",
+          "name": "Dati numerici in Laboratorio IA",
           "url": "https://www.youtube.com/watch?v=Po4i_EtpDWI",
           "type": "Video"
         },
@@ -6324,14 +6404,17 @@
           "type": "Soluzione"
         },
         "using_data_with_numerical_features/csd/2021": {
+          "name": "Utilizzo di dati con caratteristiche numeriche",
           "url": "https://drive.google.com/file/d/1gDKIbkvicZqyXlyj2a5InXaU9_lcxVlU/view?usp=sharing",
           "type": "Risorse"
         },
         "customizing_apps/csd/2021": {
+          "name": "Personalizzazione delle app",
           "url": "https://docs.google.com/presentation/d/1EaYhIdYec-meNd2rrDnqrM76CYxNU54WDghIb0PCLks/copy",
           "type": "Diapositive"
         },
         "ai_code_of_ethics/csd/2021": {
+          "name": "Codice etico dell'IA",
           "url": "https://docs.google.com/presentation/d/1jpT_cSs45ZwAz7NMYTn6vhefu3ImndFWfGubS_5wkGw/copy",
           "type": "Diapositive"
         },
@@ -6362,6 +6445,7 @@
           "type": "Criteri di valutazione"
         },
         "5_why_s_-_activity_guide/csd/2021": {
+          "name": "5 perché - Guida alle attività",
           "url": "https://docs.google.com/presentation/d/1G8bmEuCtGcnQkL8DAcPUqhN4WsbwTnIBc6ihH2i86lU/view"
         },
         "app_brainstorm_-_activity_guide/csd/2021": {
@@ -6373,7 +6457,7 @@
           "type": "Diapositive"
         },
         "survey_planning/csd/2021": {
-          "name": "Progettare la Raccolta dei Dati",
+          "name": "Pianificazione del sondaggio",
           "url": "https://docs.google.com/presentation/d/1OOvhcw8TjjItSk8j40LauRLaKicLb2uNb-OCSs6fyX4/copy",
           "type": "Diapositive"
         },
@@ -6394,6 +6478,7 @@
           "url": "https://docs.google.com/spreadsheets/d/1bVtUc5KrHaBZ4rx6trdYVqjGHIq9J8jBG0Mx2d9nxDM/copy"
         },
         "survey_data_in_ai_lab/csd/2021": {
+          "name": "Dati del sondaggio in Laboratorio IA",
           "url": "https://docs.google.com/presentation/d/1DhTshRLCTnVkQHEkpThwedSXL5NEXKtjwATlQIJk33w/copy",
           "type": "Diapositive"
         },
@@ -6406,6 +6491,7 @@
           "type": "Video"
         },
         "troubleshooting_models/csd/2021": {
+          "name": "Modelli di risoluzione dei problemi",
           "url": "https://docs.google.com/presentation/d/1LUkDD4PMefznEJh27EZruk6V8343JrYBpMZ3ThjmcLA/copy",
           "type": "Diapositive"
         },
@@ -6413,14 +6499,17 @@
           "url": "https://docs.google.com/document/d/1RLnA_EbFrxwLOI-XGwmuryNbSPlBqndvjXGDlWdndpc/edit"
         },
         "creating_an_app/csd/2021": {
+          "name": "Creazione di un'app",
           "url": "https://docs.google.com/presentation/d/1D6EZitkNOVznhERKFHT1uD0DCVa8aOvengtVf2C2LDQ/copy",
           "type": "Diapositive"
         },
         "_template_5_why_s/csd/2021": {
+          "name": "[Template] 5 Perché",
           "url": "https://docs.google.com/presentation/d/18OGQCoNKsi63ArkV0jECeHWsS_accFDoYcDh9871ejk/edit",
           "type": "Risorse"
         },
         "design_an_ai_app/csd/2021": {
+          "name": "Progetta un'app di intelligenza artificiale",
           "url": "https://docs.google.com/presentation/d/1VOiSzm2soXCy2PhOHfgxiuqmwtKJJrxGQ6xhJlwPfCY/copy",
           "type": "Diapositive"
         },
@@ -6445,6 +6534,7 @@
           "type": "Risorse"
         },
         "design_an_ai_app_1/csd/2021": {
+          "name": "Progetta un'app di intelligenza artificiale",
           "url": "https://docs.google.com/document/d/1WTnJ-vxHh0NIYOePvdYps_zoLLiGWJnD8Y9RJabxth8/view",
           "type": "Criteri di valutazione"
         },
@@ -6753,16 +6843,17 @@
           "type": "Risorse"
         },
         "digital-prototype-user-testing/csd/2021": {
+          "name": "Collaudo di prototipi digitali da parte degli utenti",
           "url": "https://docs.google.com/document/d/1hdfiToUH-GACjesuIOIQB_C9FYqS-HjAHkGc5ju1kN0/view",
           "type": "Guida alle attività"
         },
         "bugs-and-features-planning/csd/2021": {
-          "name": "Errori e funzionalità",
+          "name": "Errori e caratteristiche",
           "url": "https://docs.google.com/document/d/1TGQ7XrKwn9fPRG0Mx73KJa8aGns6mZf49Q9FaNd-s4Y/view",
           "type": "Guida alle attività"
         },
         "bugs_and_features/csd/2021": {
-          "name": "Errori e funzionalità",
+          "name": "Errori e caratteristiche",
           "url": "https://docs.google.com/document/d/1265CpF9-hjVtzzVy4q9hZzzlTIxE_F8Ky8Std-7vgA8/edit",
           "type": "Modello"
         },
@@ -6792,10 +6883,12 @@
           "type": "Modello"
         },
         "peer_review_1/csd/2021": {
+          "name": "Revisione tra pari 1",
           "url": "https://docs.google.com/document/d/1CVcpiBI1UeA5U5SbGnkM6xqKmKZo2XefU2J7Tg8zWqk",
           "type": "Modello"
         },
         "peer_review_2/csd/2021": {
+          "name": "Revisione tra pari 2",
           "url": "https://docs.google.com/document/d/1PA_zExhRqRnZ5j6DaJHnceUSYGHBGHgqw3VSfQNm2E0",
           "type": "Modello"
         },
@@ -6822,6 +6915,7 @@
           "url": "/s/csd6-2021/vocab"
         },
         "circuit_playground_1/csd/2021": {
+          "name": "Circuit Playground",
           "url": "https://code.org/circuitplayground",
           "type": "Risorse"
         },
@@ -6866,10 +6960,12 @@
           "type": "Video"
         },
         "circuit_playground/csd/2021": {
+          "name": "Circuit Playground",
           "url": "https://drive.google.com/file/d/1OpB8lF3MQJIpiRm7hFo9ARx346-NpfNf/view?usp=sharing",
           "type": "Risorse"
         },
         "input-and-events/csd/2021": {
+          "name": "Input ed eventi",
           "url": "https://docs.google.com/document/d/1Pqq09UzF8xNP688FwK7x9zrsjxxM4WajAVtEwM1wYPE/edit",
           "type": "Guida alle attività"
         },
@@ -6879,14 +6975,17 @@
           "type": "Risorse"
         },
         "physical_input/csd/2021": {
+          "name": "Input fisico",
           "url": "https://drive.google.com/file/d/1TNz91ENBLt-SG1L0459YR9X5yLjQNuSc/view?usp=sharing",
           "type": "Risorse"
         },
         "physical_output/csd/2021": {
+          "name": "Output fisico",
           "url": "https://drive.google.com/file/d/1LoSDj7s7Jv45DJnjxmAeLoZO-ex7HFAy/view?usp=sharing",
           "type": "Risorse"
         },
         "taking_input_with_getproperty/csd/2021": {
+          "name": "Accettare la ricezione degli input con getProperty",
           "url": "https://drive.google.com/file/d/14JROXSF8nsce64Y1EjrbmzuANtCln1md/view?usp=sharing",
           "type": "Risorse"
         },
@@ -6955,7 +7054,7 @@
           "type": "Video"
         },
         "arrays/csd/2021": {
-          "name": "Insiemi",
+          "name": "Matrici (arrays)",
           "url": "https://drive.google.com/file/d/1X8tTj4O9_XVn1LNPhs9LZGIXJVxB6yFX/view?usp=sharing",
           "type": "Risorse"
         },
@@ -7030,10 +7129,12 @@
           "type": "Guida al progetto"
         },
         "peer_review_1_1/csd/2021": {
+          "name": "Revisione tra pari 1",
           "url": "https://docs.google.com/document/d/1hCLS30HEvP3YNDdvCYRuWfBa5mao7msUIcY6iopaKbg",
           "type": "Modello"
         },
         "peer_review_2_1/csd/2021": {
+          "name": "Revisione tra pari 2",
           "url": "https://docs.google.com/document/d/1ZwH5a11o-P0w6cvCjhjNpGWiA655M3raz56M2PyyAn0",
           "type": "Modello"
         },
@@ -7068,6 +7169,7 @@
           "type": "Modello"
         },
         "meals-data-resource-2019/csd/2021": {
+          "name": "Dati sui pasti",
           "url": "https://docs.google.com/document/d/1nVUNkvIqz4sQjXnr52eBd17Pmi61Ir2aTH6ulVnco9o/edit",
           "type": "Risorse"
         },
@@ -7082,6 +7184,7 @@
           "type": "Guida alle attività"
         },
         "representing-information-exemplar-2019/csd/2021": {
+          "name": "Rappresentazione delle informazioni 1",
           "url": "https://docs.google.com/document/d/1B3BDFK50Na6D28aoZFHHtBTInThj26Qgdu82Z7YrcRI/edit",
           "type": "Modello"
         },
@@ -7090,10 +7193,12 @@
           "url": "https://docs.google.com/document/d/1C4ibYExm68IWA-1q_RujlEMZhxwwjCKIaH7UT-fMvy8/edit"
         },
         "representing_information_2/csd/2021": {
+          "name": "Rappresentazione delle informazioni 2",
           "url": "https://docs.google.com/document/d/1XXyUF6qGzMpriXd89XH8Kg10jMwiWIsbC8_utCJIYRY/edit",
           "type": "Modello"
         },
         "ascii-exemplar-2019/csd/2021": {
+          "name": "ASCII",
           "url": "https://docs.google.com/document/d/1axpDn1sTR1RZUPB6G5rU5Dv_RCGJGSd7JWpd0J_chkU/edit",
           "type": "Modello"
         },
@@ -7124,7 +7229,8 @@
         },
         "number-cards-1/csd/2021": {
           "name": "Schede con i numeri",
-          "url": "https://docs.google.com/presentation/u/2/d/1pZVjuP_Mwz4nOIxc6Hxz-SFIMzn3oS-zy3klSIgrEAc/copy"
+          "url": "https://docs.google.com/presentation/u/2/d/1pZVjuP_Mwz4nOIxc6Hxz-SFIMzn3oS-zy3klSIgrEAc/copy",
+          "type": "Schede digitali"
         },
         "representing-numbers-exemplar-2019/csd/2021": {
           "name": "Rappresentazione dei numeri",
@@ -7133,7 +7239,8 @@
         },
         "number-cards/csd/2021": {
           "name": "Schede con i numeri",
-          "url": "https://docs.google.com/document/d/1UWJdBo0C7wE3jmSCDVTOSdDtRkxtIBqe4ttN0v5GFXM/"
+          "url": "https://docs.google.com/document/d/1UWJdBo0C7wE3jmSCDVTOSdDtRkxtIBqe4ttN0v5GFXM/",
+          "type": "Schede"
         },
         "pet-records-exemplar-2019/csd/2021": {
           "name": "Registro per animali domestici",
@@ -7319,10 +7426,12 @@
           "type": "Modello"
         },
         "peer_review_exemplar_1/csd/2021": {
+          "name": "Revisione tra pari - Esempio 1  ",
           "url": "https://docs.google.com/document/d/1D4W-8H1hbNDOk-KNNJ9UgfLjEyn8oNx9fuiKca57Twc/edit",
           "type": "Modello"
         },
         "peer_review_exemplar_2/csd/2021": {
+          "name": "Revisione tra pari - Esempio 2",
           "url": "https://docs.google.com/document/d/1N1gwMu_vOMpB0GeEVsyAc18CTKQn_sleb5dg9zDSROQ/edit",
           "type": "Modello"
         },
@@ -7336,6 +7445,7 @@
         },
         "sample_marked_rubrics_3/csd/2021": {
           "name": "Esempi di applicazione dei criteri di valutazione",
+          "url": "https://docs.google.com/document/d/1fbImuYWBio4mkmFMWWGBolyEWihxFPlvtxgxGhRokIc/edit",
           "type": "Modello"
         },
         "teacher_forum_1/csd/2021": {
@@ -7475,15 +7585,15 @@
           "type": "Guida alle attività"
         },
         "random-dot-flipbook/csd/2021": {
-          "name": "Punto casuale - Libro sfogliabile",
+          "name": "Punto casuale - Libro animato",
           "url": "https://docs.google.com/drawings/d/1dOy6qZ1-2VlxRKz63m6bO2G9lgJnDtnLKYxvLH_W16w/edit"
         },
         "random-sprite-flipbook/csd/2021": {
-          "name": "Personaggio casuale - Libro sfogliabile",
+          "name": "Personaggio casuale - Libro animato",
           "url": "https://docs.google.com/drawings/d/1u6hSZ108BcnasuoKM1etB4sEzShGIrmk8GgQyJZ0P8Y/edit"
         },
         "youtube-flipbook/csd/2021": {
-          "name": "Esempio di libro sfogliabile - di Marnic Bos",
+          "name": "Esempio di libro animato - di Marnic Bos",
           "url": "https://youtu.be/hol0p29cd8o",
           "type": "Video"
         },

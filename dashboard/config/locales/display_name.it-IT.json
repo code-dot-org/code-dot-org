@@ -415,7 +415,7 @@
         "CSD U3 shape size map": "Forme e Parametri",
         "CSD U3 shape size map_2018": "Forme e Parametri",
         "CSD U3 shape size map_2019": "Forme e Parametri",
-        "CSD U6 arrays intro_2019": "Insiemi",
+        "CSD U6 arrays intro_2019": "Matrici (arrays)",
         "CSD U6 arrays video": "Video: Introduzione alle matrici (array)",
         "CSD: Drawing in Game Lab 1": "Video: disegnare in Sviluppo Giochi - Parte 1",
         "CSD: Drawing in Game Lab 1_2018": "Video: disegnare in Sviluppo Giochi - Parte 1",
@@ -1543,7 +1543,17 @@
         "CSD U4 Mult Screen Map_2019": "App multischermo",
         "CSD U6 - Board Outputs - ChalA_2222": "Suoni di animali",
         "CSD U6 - Board Outputs - ChalB_2222": "Oggetti nascosti",
-        "CSD U6 - Board Outputs - PracE_2222": "Velocità delle frecce"
+        "CSD U6 - Board Outputs - PracE_2222": "Velocità delle frecce",
+        "CSD U6 - Board Outputs - ChalD_2222": "App educativa",
+        "CSD U6 - Board Outputs - ChalE_2222": "App medica",
+        "ml-customize apps-choice1": "Personalizza la tua app",
+        "ml-customize apps-choice1_2022": "Personalizza la tua app",
+        "ml-intro app lab-book recommender 5A-2021": "Personalizza la tua app",
+        "ml-intro app lab-book recommender 5A_2022": "Personalizza la tua app",
+        "ml-models in applab-choice intended warnings": "Aggiungi utilizzi previsti",
+        "ml-models in applab-choice intended warnings_2022": "Aggiungi utilizzi previsti",
+        "ml-use model card-choice1": "Personalizza la tua app",
+        "ml-use model card-choice1_2022": "Personalizza la tua app"
       }
     }
   }
