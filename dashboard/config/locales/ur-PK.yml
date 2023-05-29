@@ -214,6 +214,7 @@ ur:
     user_type_student_desc: 'ہماری تمام کورسیں اور سرگرمیاں دریافت کریں، مزید برآں:'
     user_type_student_ability_1: اپنی پیشرفت اور پراجیکٹس محفوظ کریں
     user_type_student_ability_2: اپنے استاد کے کلاسروم سیکشن میں شامل ہوں
+    user_type_teacher: ٹیچر
     user_type_teacher_desc: 'وہ سب کچھ جنہیں طلباء کو رسائی حاصل ہو، اور مزید برآں:'
     user_type_teacher_ability_1: کلاسروم کے سیکشن بنائیں
     user_type_teacher_ability_2: طلباء کو کام سونپیں اور پیشرفت ٹریک کریں
@@ -437,6 +438,7 @@ ur:
       create: بنائیں
       algebra_game: الجبرا
       applab: ایپ لیب
+      artist: آرٹسٹ
       artist_k1: آرٹسٹ (پری ریڈر)
       basketball: باسکٹ بال
       bounce: اچھال
@@ -495,6 +497,7 @@ ur:
       student: Talib-e-ilm
       viewing_solution: دیکھنے کا حل
       try_it_yourself: اپنے آپ کو آزمائیں
+      section: سیکشن
       example: مثال کے طور پر حل
       example_with_number: مثال کا حل %{solution_number}
       submitted_on: 'پر جمع کیا گیا:'
@@ -662,6 +665,7 @@ ur:
     none: جواب دینے کے لئے ترجیح دیں
   user_type:
     student: Talib-e-ilm
+    teacher: ٹیچر
   footer:
     thank_you: ہم کوڈ سٹوڈیو بنانے میں تعاون پر اپنے <a href="https://code.org/about/donors">عطیہ
       دہندگان</a>، <a href="https://code.org/about/partners">شراکت دار</a>، ہماری
