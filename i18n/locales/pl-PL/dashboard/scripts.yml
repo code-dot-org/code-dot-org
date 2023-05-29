@@ -6786,32 +6786,45 @@ pl:
               display_name: Przygotowanie do nauczania Tworzenie aplikacji dla urządzeń z micro:bitami
           name: self-paced-pl-microbit2
           title: Przygotowanie do nauczania Tworzenie aplikacji dla urządzeń z micro:bitami
+          description: "**Czeka Cię:**\n\n-   Wprowadzenie do tworzenia aplikacji dla urządzeń.\n-   Skonfigurowanie swojego micro:bita. \n-   Praktyczne przećwiczenie kluczowych pojęć zawartych w jednostce.\n-   Przejrzenie projektów na zakończenie rozdziału.\n-   Rozważenie roli nauczyciela podczas zajęć z informatyki.\n\n**Sugerowany czas:** 100 minut"
+          student_description: "**Czeka Cię:**\n\n-   Wprowadzenie do tworzenia aplikacji dla urządzeń.\n-   Skonfigurowanie swojego micro:bita. \n-   Praktyczne przećwiczenie kluczowych pojęć zawartych w jednostce.\n-   Przejrzenie projektów na zakończenie rozdziału.\n-   Rozważenie roli nauczyciela podczas zajęć z informatyki.\n\n**Sugerowany czas:** 100 minut"
         seesaw-adaptations:
           name: seesaw-adaptations
           title: Huśtawka - adaptacje zwierząt
         csp-bingo-2023:
+          lessons:
+            lesson-1:
+              name: Recenzja gry BINGO przez jednostkę
           name: csp-bingo-2023
+          title: CSP Słownictwo BINGO
         csd-post-survey-2023:
           name: csd-post-survey-2023
           title: Ankieta po odbyciu kursu
+          description: Ta jednostka zawiera ankietę po kursie. Ta jednostka może zostać przypisana po ukończeniu przez uczniów końcowej jednostki w tym kursie.
         focus-on-data-post-survey-2023:
           name: focus-on-data-post-survey-2023
           title: Ankieta po odbyciu kursu
+          description: Ta jednostka zawiera ankietę po kursie. Ta jednostka może zostać przypisana po ukończeniu przez uczniów końcowej jednostki w tym kursie.
         focus-on-impact-in-society-post-survey-2023:
           name: focus-on-impact-in-society-post-survey-2023
           title: Ankieta po odbyciu kursu
+          description: Ta jednostka zawiera ankietę po kursie. Ta jednostka może zostać przypisana po ukończeniu przez uczniów końcowej jednostki w tym kursie.
         focus-on-coding-post-survey-2023:
           name: focus-on-coding-post-survey-2023
           title: Ankieta po odbyciu kursu
+          description: Ta jednostka zawiera ankietę po kursie. Ta jednostka może zostać przypisana po ukończeniu przez uczniów końcowej jednostki w tym kursie.
         focus-on-design-with-purpose-post-survey-2023:
           name: focus-on-design-with-purpose-post-survey-2023
           title: Ankieta po odbyciu kursu
+          description: Ta jednostka zawiera ankietę po kursie. Ta jednostka może zostać przypisana po ukończeniu przez uczniów końcowej jednostki w tym kursie.
         focus-on-hardware-post-survey-2023:
           name: focus-on-hardware-post-survey-2023
           title: Ankieta po odbyciu kursu
+          description: Ta jednostka zawiera ankietę po kursie. Ta jednostka może zostać przypisana po ukończeniu przez uczniów końcowej jednostki w tym kursie.
         focus-on-creativity-post-survey-2023:
           name: focus-on-creativity-post-survey-2023
           title: Ankieta po odbyciu kursu
+          description: Ta jednostka zawiera ankietę po kursie. Ta jednostka może zostać przypisana po ukończeniu przez uczniów końcowej jednostki w tym kursie.
         coursef-2023:
           lesson_groups:
             lessonGroup-2:

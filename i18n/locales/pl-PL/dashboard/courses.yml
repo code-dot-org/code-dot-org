@@ -260,6 +260,7 @@ pl:
         name: Całe słownictwo
         url: "/courses/csd-2023/vocab"
       csd_changelog_23-_24/csd/2023:
+        name: Dziennik zmian CSD '23-'24
         url: https://docs.google.com/document/d/1p5wN0AlEUoKZ0WpcBryjkxLyQKsAr4k6zWqI91faksI/view
       csd_guide_to_assessment/csd/2023:
         name: Przewodnik po ocenie CSD
