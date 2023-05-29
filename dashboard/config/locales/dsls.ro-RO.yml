@@ -12842,3 +12842,8 @@ ro-RO:
         questions:
         - text: Uitați-vă cu atenție la acest cod. Ce credeți că se va întâmpla atunci
             când va rula programul?
+      MoveItMoveIt-Unplugged_2021:
+        markdown: |
+          # Mutați-l, mutați-l
+
+          Utilizați o hartă și dați comenzi pentru a atinge obiectivul.
