@@ -216,6 +216,9 @@
         "courseb-2022/End of Course Project": {
           "name": "Έργο Λήξη Μαθήματος"
         },
+        "express-2022/Creating Art with Code": {
+          "name": "Δημιουργία τέχνης με κώδικα"
+        },
         "express-2022/Swimming Fish in Sprite Lab": {
           "name": "Ψάρια που Κολυμπάνε στο εργαστήριο Sprite"
         },
@@ -233,22 +236,30 @@
           "name": "Έργο Λήξη Μαθήματος"
         },
         "pre-express-2022/Learn to Drag and Drop": {
+          "name": "Μάθετε να σύρετε και να αποθέσετε",
           "student_overview": "Κάντε κλικ και σύρετε για να τελειώσετε τα παζλ."
         },
         "pre-express-2022/Programming with Rey and BB-8": {
           "name": "Προγραμματίζοντας με τον Ρέι και BB-8"
         },
         "coursea-2022/Learn to Drag and Drop": {
+          "name": "Μάθετε να σύρετε και να αποθέσετε",
           "student_overview": "Κάντε κλικ και σύρετε για να τελειώσετε τα παζλ."
         },
         "coursea-2022/Happy Maps": {
           "name": "Χαρούμενοι Χάρτες"
+        },
+        "coursea-2022/Programming with Scrat": {
+          "name": "Προγραμματισμός με τον Scrat"
         },
         "coursea-2022/Programming with Rey and BB-8": {
           "name": "Προγραμματίζοντας με τον Ρέι και BB-8"
         },
         "coursea-2022/End of Course Project": {
           "name": "Έργο Λήξη Μαθήματος"
+        },
+        "coursec-2022/Creating Art with Code": {
+          "name": "Δημιουργία τέχνης με κώδικα"
         },
         "coursec-2022/The Big Event": {
           "name": "Το Μεγάλο Γεγονός"
@@ -355,6 +366,9 @@
         "courseb-2018/Your Digital Footprint": {
           "name": "Το Ψηφιακό σου Αποτύπωμα"
         },
+        "courseb-2018/Programming in Ice Age": {
+          "name": "Προγραμματισμός με τον Scrat"
+        },
         "courseb-2018/Copyright and Creativity": {
           "name": "Είναι Τέλειο να Δημιουργούμε και να Παίζουμε Δίκαια"
         },
@@ -397,6 +411,9 @@
         "coursef-2018/Building a Foundation": {
           "name": "Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο"
         },
+        "coursef-2018/Programming in Artist": {
+          "name": "Δημιουργία τέχνης με κώδικα"
+        },
         "coursef-2018/Loops: My Loopy Robotic Friends": {
           "name": "Οι  Επαναλαμβανόμενοι Ρομποτικοί φίλοι μου"
         },
@@ -414,6 +431,9 @@
         },
         "express-2018/Relay Programming": {
           "name": "Προγραμματισμός Ρελέ"
+        },
+        "express-2018/Programming in Artist": {
+          "name": "Δημιουργία τέχνης με κώδικα"
         },
         "express-2018/Loops: Getting Loopy": {
           "name": "Επαναλαμβανόμαστε"
@@ -454,6 +474,9 @@
         "coursee-2018/Building a Foundation": {
           "name": "Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο"
         },
+        "coursee-2018/Programming in Artist": {
+          "name": "Δημιουργία τέχνης με κώδικα"
+        },
         "coursee-2018/Loops: My Loopy Robotic Friends": {
           "name": "Οι  Επαναλαμβανόμενοι Ρομποτικοί φίλοι μου"
         },
@@ -478,6 +501,9 @@
         "coursec-2018/Building a Foundation": {
           "name": "Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο"
         },
+        "coursec-2018/Programming in Artist": {
+          "name": "Δημιουργία τέχνης με κώδικα"
+        },
         "coursec-2018/Loops: Getting Loopy": {
           "name": "Επαναλαμβανόμαστε"
         },
@@ -498,6 +524,9 @@
         },
         "pre-express-2018/Your Digital Footprint": {
           "name": "Το Ψηφιακό σου Αποτύπωμα"
+        },
+        "pre-express-2018/Programming in Ice Age": {
+          "name": "Προγραμματισμός με τον Scrat"
         },
         "pre-express-2018/Copyright and Creativity": {
           "name": "Είναι Τέλειο να Δημιουργούμε και να Παίζουμε Δίκαια"
@@ -580,8 +609,14 @@
         "coursea-2019/Going Places Safely": {
           "name": "Πηγαίνοντας σε Μέρη με Ασφάλεια"
         },
+        "coursea-2019/Learn to Drag and Drop": {
+          "name": "Μάθετε να σύρετε και να αποθέσετε"
+        },
         "coursea-2019/Programming: Happy Maps": {
           "name": "Χαρούμενοι Χάρτες"
+        },
+        "coursea-2019/Programming in Ice Age": {
+          "name": "Προγραμματισμός με τον Scrat"
         },
         "coursea-2019/Programming with Rey and BB-8": {
           "name": "Προγραμματίζοντας με τον Ρέι και BB-8"
@@ -652,6 +687,9 @@
         "express-2019/Dance Party": {
           "name": "Πάρτι Χορού"
         },
+        "express-2019/Programming in Artist": {
+          "name": "Δημιουργία τέχνης με κώδικα"
+        },
         "express-2019/While Loops in Farmer": {
           "name": "Βρόχοι Ενώ με τον Αγρότη"
         },
@@ -664,6 +702,9 @@
         "coursec-2019/Powerful Passwords": {
           "name": "Ισχυρά Συνθηματικά"
         },
+        "coursec-2019/Programming in Artist": {
+          "name": "Δημιουργία τέχνης με κώδικα"
+        },
         "coursec-2019/Binary Bracelets": {
           "name": "Δυαδικά Βραχιόλια"
         },
@@ -675,6 +716,9 @@
         },
         "coursec-2019/End of Course Project: Create a Play Lab Game": {
           "name": "Έργο Λήξη Μαθήματος"
+        },
+        "pre-express-2019/Learn to Drag and Drop": {
+          "name": "Μάθετε να σύρετε και να αποθέσετε"
         },
         "pre-express-2019/Programming with Rey and BB-8": {
           "name": "Προγραμματίζοντας με τον Ρέι και BB-8"
@@ -1271,16 +1315,23 @@
           "name": "Έργο Λήξη Μαθήματος"
         },
         "coursea-2021/Learn to Drag and Drop": {
+          "name": "Μάθετε να σύρετε και να αποθέσετε",
           "student_overview": "Κάντε κλικ και σύρετε για να τελειώσετε τα παζλ."
         },
         "coursea-2021/Programming: Happy Maps": {
           "name": "Χαρούμενοι Χάρτες"
+        },
+        "coursea-2021/Programming in Ice Age": {
+          "name": "Προγραμματισμός με τον Scrat"
         },
         "coursea-2021/Programming with Rey and BB-8": {
           "name": "Προγραμματίζοντας με τον Ρέι και BB-8"
         },
         "coursea-2021/lesson-1": {
           "name": "Έργο Λήξη Μαθήματος"
+        },
+        "coursec-2021/Programming in Artist": {
+          "name": "Δημιουργία τέχνης με κώδικα"
         },
         "coursec-2021/Loops in Harvester": {
           "preparation": "-   Παίξτε δια μέσου των παζλ για να βρείτε οποιεσδήποτε δυνητικές προβληματικές περιοχές για την τάξη σας.\n-   Βεβαιωθείτε ότι κάθε μαθητής έχει ένα ημερολόγιο σκέψεων."
@@ -1343,6 +1394,9 @@
         "coursed-2021/End of Course Project": {
           "name": "Έργο Λήξη Μαθήματος"
         },
+        "express-2021/Creating Art with Code": {
+          "name": "Δημιουργία τέχνης με κώδικα"
+        },
         "express-2021/Swimming Fish in Sprite Lab": {
           "name": "Ψάρια που Κολυμπάνε στο εργαστήριο Sprite"
         },
@@ -1360,6 +1414,7 @@
           "name": "Έργο Λήξη Μαθήματος"
         },
         "pre-express-2021/Learn to Drag and Drop": {
+          "name": "Μάθετε να σύρετε και να αποθέσετε",
           "student_overview": "Κάντε κλικ και σύρετε για να τελειώσετε τα παζλ."
         },
         "pre-express-2021/Programming with Rey and BB-8": {
@@ -1491,11 +1546,17 @@
         "csd2-2021/lesson-1": {
           "name": "Μελέτη μετά το μάθημα για τις Ανακαλύψεις της Επιστήμης της Πληροφορικής"
         },
+        "pre-express-2020/Learn to Drag and Drop": {
+          "name": "Μάθετε να σύρετε και να αποθέσετε"
+        },
         "pre-express-2020/Programming with Rey and BB-8": {
           "name": "Προγραμματίζοντας με τον Ρέι και BB-8"
         },
         "express-2020/Dance Party": {
           "name": "Πάρτι Χορού"
+        },
+        "express-2020/Creating Art with Code": {
+          "name": "Δημιουργία τέχνης με κώδικα"
         },
         "express-2020/While Loops with the Farmer": {
           "name": "Βρόχοι Ενώ με τον Αγρότη"
@@ -1533,6 +1594,9 @@
         "coursed-2020/End of Course Project": {
           "name": "Έργο Λήξη Μαθήματος"
         },
+        "coursec-2020/Programming in Artist": {
+          "name": "Δημιουργία τέχνης με κώδικα"
+        },
         "coursec-2020/Binary Bracelets": {
           "name": "Δυαδικά Βραχιόλια"
         },
@@ -1568,6 +1632,9 @@
         },
         "coursea-2020/Programming: Happy Maps": {
           "name": "Χαρούμενοι Χάρτες"
+        },
+        "coursea-2020/Programming in Ice Age": {
+          "name": "Προγραμματισμός με τον Scrat"
         },
         "coursea-2020/Programming with Rey and BB-8": {
           "name": "Προγραμματίζοντας με τον Ρέι και BB-8"

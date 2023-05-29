@@ -45,9 +45,9 @@
         "CSD U2 a tag map": "Υπερσύνδεσμοι",
         "CSD U2 a tag map_2018": "Υπερσύνδεσμοι",
         "CSD U2 a tag map_2019": "Υπερσύνδεσμοι",
-        "CSD U2 challenge": "Εξάσκηση",
-        "CSD U2 challenge_2018": "Εξάσκηση",
-        "CSD U2 challenge_2019": "Εξάσκηση",
+        "CSD U2 challenge": "Πρόκληση",
+        "CSD U2 challenge_2018": "Πρόκληση",
+        "CSD U2 challenge_2019": "Πρόκληση",
         "CSD U2 lists map": "Δημιουργία Λίστας στο HTML",
         "CSD U2 lists map_2018": "Δημιουργία Λίστας στο HTML",
         "CSD U2 lists map_2019": "Δημιουργία Λίστας στο HTML",
@@ -180,7 +180,7 @@
         "CourseF_outbreak8": "Ανοσία και Εμβόλια",
         "CourseF_video_introSpriteLab_2021": "Αυτό είναι το Εργαστήριο Χαρακτήρων",
         "OPD-K5 WhatIsCS_dani": "Τι είναι η επιστήμη υπολογιστών;",
-        "courseF_bee_for10_2021": "Εξάσκηση",
+        "courseF_bee_for10_2021": "Πρόκληση",
         "courseF_bee_for5_2021": "Μεταβλητές",
         "courseF_events_freeplay_aquatic": "Υδάτινο",
         "courseF_sprites_freeplay_aquatic": "Υδάτινο",
@@ -322,7 +322,7 @@
         "courseD_artist_nestedLoops9_predict12022": "Πρόβλεψη",
         "courseF_apps_collector2022": "Παιχνίδι Συλλέκτη",
         "courseF_apps_collector_-2022-2": "Παιχνίδι Συλλέκτη",
-        "courseF_bee_for102022": "Εξάσκηση",
+        "courseF_bee_for102022": "Πρόκληση",
         "courseF_bee_for52022": "Μεταβλητές",
         "courseF_events_freeplay_aquatic_-2022-2": "Υδάτινο",
         "courseF_sprites_freeplay_aquatic_-2022-2": "Υδάτινο",
@@ -373,7 +373,9 @@
         "CSD U6 arrays intro_2018": "Εισαγωγή στις συστοιχίες",
         "courseE_artist_functions102022": "Εξάγωνο Μοτίβο",
         "courseE_artist_functions92022": "Τριγωνικό μοτίβο",
-        "courseE_artist_functionsProj2022": "Ελεύθερο σχέδιο"
+        "courseE_artist_functionsProj2022": "Ελεύθερο σχέδιο",
+        "courseD_artist_nestedLoops82022": "Εξάγωνα",
+        "courseD_artist_nestedLoops92022": "Φανταχτερά σχήματα"
       }
     }
   }

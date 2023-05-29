@@ -1326,10 +1326,12 @@
           "Loading...": "Φόρτωση..."
         },
         "ml-intro app lab-book recommender demo-2021": {
-          "Predict": "Προβλέψτε"
+          "Predict": "Προβλέψτε",
+          "Silly": "Χαζούλικο"
         },
         "ml-intro app lab-book recommender demo_2022": {
-          "Predict": "Προβλέψτε"
+          "Predict": "Προβλέψτε",
+          "Silly": "Χαζούλικο"
         },
         "ml-model card-medical app v2 2021-2": {
           "W": "Δ",
@@ -1346,10 +1348,12 @@
           "head": "κεφάλι"
         },
         "ml-model cards-book recommender model card": {
-          "Predict": "Προβλέψτε"
+          "Predict": "Προβλέψτε",
+          "Silly": "Χαζούλικο"
         },
         "ml-model cards-book recommender model card_2022": {
-          "Predict": "Προβλέψτε"
+          "Predict": "Προβλέψτε",
+          "Silly": "Χαζούλικο"
         },
         "ml-models in applab-choice if quotes": {
           "3": "3",
@@ -1506,6 +1510,30 @@
         },
         "CSD U6 analog sound_2021": {
           "value": "εκτιμώ"
+        },
+        "CSD U6 - Board Outputs - A_2222": {
+          "Happy": "Χαρούμενο"
+        },
+        "CSD U6 - Board Outputs - SB4_2222": {
+          "Fish": "Ψάρι"
+        },
+        "CSD U6 - Music - A_2222": {
+          "Happy": "Χαρούμενο"
+        },
+        "CSD U6 - Screen Outputs - ChalB_2222": {
+          "Happy": "Χαρούμενο"
+        },
+        "CSD U6 emotion machine example": {
+          "Happy": "Χαρούμενο"
+        },
+        "CSD U6 emotion machine example_2018": {
+          "Happy": "Χαρούμενο"
+        },
+        "CSD U6 emotion machine example_2019": {
+          "Happy": "Χαρούμενο"
+        },
+        "CSD U6 emotion machine example_2021": {
+          "Happy": "Χαρούμενο"
         }
       }
     }
