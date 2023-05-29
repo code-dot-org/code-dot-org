@@ -1378,6 +1378,7 @@
   "manageLinkedAccounts_rosteredSectionTooltip": "このリンクされたアカウントはセクションに関連付けられているため、接続を解除できません。\n",
   "manageLinkedAccounts_makerAuthError": "このアクションは、Makerアプリからは実行できません。デフォルトのブラウザに戻って、もう一度やり直してください。",
   "manageStudents": "生徒の管理",
+  "manageStudentsAriaLabel": "このセクションには{numStudents}人の学生。学生の管理。",
   "manageStudentsNotificationFailure": "問題が発生しました。",
   "manageStudentsNotificationCannotAdd": "セクションに {numStudents, plural, one {1 student} other {# students}} を追加できませんでした。もう一度試すか、ページを更新してください。\n",
   "manageStudentsNotificationCannotVerb": "{numStudents, plural, other {人の生徒}}をこのセクションに{verb, select, copy {コピー} move {移動} other {追加}}できませんでした",

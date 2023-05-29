@@ -2086,6 +2086,7 @@
   "sharingDisabled": "lo sentimos, este proyecto no está disponible para compartirlo. Si este proyecto es tuyo o de alguno de tus estudiantes, por favor [introuce tus datos]({sign_in_url}) a tu cuenta para ver el proyecto.",
   "show": "Mostrar",
   "showAllLessons": "Mostrar todas las lecciones",
+  "showAnswer": "Mostrar respuesta",
   "showAnswers": "Mostrar respuestas",
   "showAnswersInstructions": "\"Mostrar respuestas\" para poner la evaluación en modo sólo lectura.",
   "showBlock": "Obtén un bloque",
