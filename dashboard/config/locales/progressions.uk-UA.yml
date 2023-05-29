@@ -78,6 +78,8 @@ uk:
       Expanding Your Website: Розширення вашого веб-сайту
       Experiment with Web Lab: Експеримент з Web Lab
       'Exploration: Adding Style': 'Дослідження: Додавання стилю'
+      'Exploration: Sample Apps': 'Дослідження: Зразки застосунків'
+      'Exploration: Sample Programs': 'Дослідження: Приклади програм'
       Explore HTML: Досліджуйте HTML
       Exploring more CSS: Вивчення більш CSS
       Extra: Додатково
@@ -89,6 +91,7 @@ uk:
       For Loops and Repeat Blocks: Для циклів і повторюваних блоків
       Formatting HTML: Форматування HTML
       Free Play: Вільна гра
+      'Free Play: Make a Scene': 'Вільна гра: Створення сцени'
       Functions: Функції
       Functions with Parameters: Функції з параметрами
       Get In Formation: Шикуймося
@@ -137,8 +140,11 @@ uk:
       'Mini-Project: Royal Battle': 'Міні-проект: Королівська битва'
       'Mini-Project: Snowflake #1': 'Міні-проект: Сніжинка #1'
       'Mini-Project: Snowflake #2': 'Міні-проект: Сніжинка #2'
+      'Mini-Project: Sticker Art': 'Міні-проект: Дизайн наліпки'
       'Mini-Project: Swimming Fish': 'Міні-проект: Плавання риби'
       'Mini-Project: Swimming Fish (continued)': 'Міні-проект: Плавання риби (продовження)'
+      'Mini-Project: User Input Programs': 'Міні-проєкт: Програми з введенням даних
+        користувачем'
       'Mini-Project: Virtual Pet': 'Міні-проект: Віртуальний вихованець'
       'Mini-project: Chase Game': 'Міні-проект: Чейз гра'
       'Mini-project: Flappy Game': 'Міні-проект: Flappy гра'
@@ -178,7 +184,7 @@ uk:
       Repeat Blocks: Повторювати блоки
       Repeat Blocks with BB-8: Повторіть блоки з BB-8
       Repeat Blocks with the Artist: Повторіть блоки з виконавцем
-      Review: Рецензія
+      Review: Огляд
       Revise Sprite Lab Project: Переглянути проект Sprite Lab
       Run a simulation: Запустити симуляцію
       Sample Game: Приклад гри
@@ -206,6 +212,7 @@ uk:
       Variables: Змінні
       Velocity: Швидкість
       Video: Відео
+      'Video: How to Make a Sprite': 'Відео: Як створити спрайт'
       'Video: Intro to CSS': 'Відео: Вступ до CSS'
       'Video: Intro to Web Lab - Part 1': |2-
 

@@ -386,7 +386,7 @@ uk:
       sign_in_to_save: Увійдіть для збереження досягнень
       my_dashboard: Моя майстерня
       course_catalog: Каталог курсів
-      project_gallery: Проекти
+      project_gallery: Проєкти
       sections: Секції
       help_support: Допомога та підтримка
       report_bug: Сповістити про проблему
@@ -442,7 +442,7 @@ uk:
       navigator: Навігатор
       create: Створити
       algebra_game: Алгебра
-      applab: App Lab
+      applab: Програмна Лабораторія
       artist: Художник
       artist_k1: Виконавець (Pre-читалка)
       basketball: Баскетбол
@@ -459,18 +459,20 @@ uk:
       infinity: Infinity
       makerlab: Maker Toolkit
       minecraft_adventurer: Майнкрафт - Пригоди
-      minecraft_aquatic: Майнкрафт водні
+      minecraft_aquatic: 'Майнкрафт: Підводна подорож'
       minecraft_codebuilder: 'Майнкрафт: Кодове з''єднання'
       minecraft_designer: Майнкрафт
       minecraft_hero: Майнкрафт Герой
-      playlab: Ігрова студія
+      playlab: Ігрова лабораторія
       playlab_k1: Play Lab (попередній зчитувач)
       poetry: Поезія
       scratch: Scratch
       sports: Спорт
+      spritelab: Спрайт Лабораторія
       starwars: Зоряні війни
       starwarsblocks: Зоряні війни (блоки)
       starwarsblocks_hour: Зоряні війни (блоки)
+      thebadguys: Погані хлопці
       loading: Завантаження...
       weblab: Веб-лабораторія
       view_all: Переглянути всі проекти...
@@ -781,7 +783,7 @@ uk:
       unused: Невикористані рівні
   upsell:
     applab:
-      title: App Lab
+      title: Програмна Лабораторія
       body: App Lab - це середовище програмування для створення простих додатків.
         Розробляйте програму, програмуйте її блоками чи JavaScript, а тоді поділіться
         нею з іншими.
@@ -1050,12 +1052,12 @@ uk:
     completed_courses: Завершені курси
     all_courses: Всі курси
   project:
-    projects: Проекти
+    projects: Проєкти
     create: Створити проект
     create_a_project: 'Створити новий проект:'
     new: Створити новий
     exit: Повернутися до курсу
-    project_gallery: Проекти
+    project_gallery: Проєкти
     publish: Опублікувати
     unpublish: Скасувати публікацію
     share_title: Поділитися своїм проектом
@@ -1371,6 +1373,7 @@ uk:
       свою електронну пошту, щоб бути в курсі успіхів і проектів вашої дитини!"
     link_your_email: Прив'яжіть вашу ел. пошту
     not_now: Не зараз
+  code_org_logo_alt: Домашня сторінка Code.org
   teacher_feedback: Відгук викладача
   lesson_lock:
     error:

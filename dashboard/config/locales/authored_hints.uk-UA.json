@@ -2326,13 +2326,19 @@
           "MC_HOC_2017_13_Cole_a": "Спробуй змусити Agent побудувати кілька мостів, щоб Алекс або Стів міг пересуватися за межами карти!"
         },
         "Overworld House Frame Chosen_2021": {
-          "mc_6_b": "Не бійся помилятися! Запустіть код, щоб побачити, що станеться, навіть якщо ви ще не вирішили головоломку."
+          "mc_6_b": "Не бійся помилятися! Запустіть код, щоб побачити, що станеться, навіть якщо ви ще не вирішили головоломку.",
+          "mc_6_a": "Натисни на стрілку в блоці \"розмістити\" та вибери, що ти хочеш розмістити.",
+          "mc_6_c": "Ти можеш вставити більше одного блоку в `повторюваний` цикл."
         },
         "Overworld Place Wall_2021": {
-          "mc_5_c": "Не бійся помилятися! Запустіть код, щоб побачити, що станеться, навіть якщо ви ще не вирішили головоломку."
+          "mc_5_c": "Не бійся помилятися! Запустіть код, щоб побачити, що станеться, навіть якщо ви ще не вирішили головоломку.",
+          "mc_5_a": "Спочатку використовуй блок `розмістити`, а потім блок `рухатися`.",
+          "mc_5_b": "Переконайся, що обидва блоки знаходяться всередині `повторюваного` циклу, щоб запустити код кілька разів."
         },
         "Overworld Shear Sheep_2021": {
-          "mc_3_c": "Не бійся помилятися! Запустіть код, щоб побачити, що станеться, навіть якщо ви ще не вирішили головоломку."
+          "mc_3_c": "Не бійся помилятися! Запустіть код, щоб побачити, що станеться, навіть якщо ви ще не вирішили головоломку.",
+          "mc_3_a": "Блок `стрижка` розташовує овець перед тобою. Ти стоїш обличчям до овець?",
+          "mc_3_b": "Якщо тобі потрібно змінити напрямок руху, використовуй блок `поворот`."
         },
         "Underground Iron_2021": {
           "mc_10_c": "Не бійся помилятися! Запустіть код, щоб побачити, що станеться, навіть якщо ви ще не вирішили головоломку."
@@ -2366,13 +2372,18 @@
           "courseA_artist_loops_challenge2_b": "Після закінчення одного намету, \"підстрибни\" двічі, щоб дістатися до наступного!"
         },
         "courseA_collector_loops6_2021": {
-          "courseA_collector_loops6_a": "Не можете зрозуміти, що не так? Спробуйте запустити код кілька разів, щоб побачити, що станеться."
+          "courseA_collector_loops6_a": "Не можете зрозуміти, що не так? Спробуйте запустити код кілька разів, щоб побачити, що станеться.",
+          "courseA_collector_loops6_b": "Найкоротший розв'язок містить 2 цикли <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>, один за одним."
         },
         "courseA_collector_loops8_2021": {
-          "courseA_collector_loops8_a": "Якщо у вас виникли проблеми з виявленням цієї головоломки, спробуйте написати рухами на папірці та шукати малюнок."
+          "courseA_collector_loops8_a": "Якщо у вас виникли проблеми з виявленням цієї головоломки, спробуйте написати рухами на папірці та шукати малюнок.",
+          "courseA_collector_loops8_b": "Спробуй розбити це завдання на 3 окремі задачі та написати цикли для кожної з них.",
+          "courseA_collector_loops8_c": "Пам'ятай, що можна писати по одному фрагменту коду за раз, а потім натискати \"Запустити\", щоб зрозуміти, куди потрібно рухатися далі."
         },
         "courseA_harvester_loops9_2021": {
-          "courseA_harvester_loops9_b": "Не бійтеся запускати свій код після кожної частини, щоб побачити, що станеться!"
+          "courseA_harvester_loops9_b": "Не бійтеся запускати свій код після кожної частини, щоб побачити, що станеться!",
+          "courseA_harvester_loops9_a": "Розділи це завдання на три різні частини. Одна частина - шлях до першого повороту, друга частина - шлях до другого повороту, в одна частина - шлях до кінця.",
+          "courseA_harvester_loops9_c": "Щоб зібрати всю кукурудзу, йди цим шляхом."
         },
         "courseA_maze_seq10_2021": {
           "courseA_maze_seq10_a": "Якщо у вас виникли проблеми, спробуйте в першу чергу записати сходинки на папірці.",
@@ -2418,20 +2429,29 @@
         },
         "courseB_maze_seq5_2021": {
           "courseB_maze_seq5_a": "Якщо ви застрягли, спробуйте розібрати шлях на папері.",
-          "courseB_maze_seq5_b": "Є 2 способи вирішити цю загадку!"
+          "courseB_maze_seq5_b": "Є 2 способи вирішити цю загадку!",
+          "courseB_maze_seq5_c": "Не знаєш, як дістатися до жолудя?  Спробуй цей шлях."
         },
         "courseB_maze_seq6_2021": {
-          "courseB_maze_seq5_c": "Існує два способи вирішити цю загадку!"
+          "courseB_maze_seq5_c": "Існує два способи вирішити цю загадку!",
+          "courseB_maze_seq6_a": "Твій остаточний код повинен містити три блоки руху.",
+          "courseB_maze_seq6_b": "Якщо ти застряг, спробуй розв'язати завдання у два етапи: один рух вбік і один вгору-вниз.",
+          "courseB_maze_seq5_d": "Не знаєш, як дістатися до жолудя?  Спробуй цей шлях!"
         },
         "courseB_maze_seq7_2021": {
-          "courseB_maze_seq7_a": "Додати 1 блок, щоб перемістити Scrat до жолудя."
+          "courseB_maze_seq7_a": "Додати 1 блок, щоб перемістити Scrat до жолудя.",
+          "courseB_maze_seq7_b": "Спробуй запустити наданий тобі код і подивись, до чого це призведе.",
+          "courseB_maze_seq7_c": "Не можеш дістатися до жолудя?  Спробуй цей шлях!"
         },
         "courseB_maze_seq9_2021": {
           "courseB_maze_seq9_c": "Існує два способи вирішити цю загадку!",
-          "courseB_maze_seq9_d": "Застряг? Спробуй цей шлях!"
+          "courseB_maze_seq9_d": "Застряг? Спробуй цей шлях!",
+          "courseB_maze_seq9_a": "Спочатку спробуй записати всі кроки на аркуші паперу.",
+          "courseB_maze_seq9_b": "Створюй програму по одному блоку за раз і тестуй її крок за кроком."
         },
         "courseB_maze_seq_challenge1_2021": {
-          "courseB_maze_seq_challenge1_a": "Найкращий шлях може не працювати на цей раз."
+          "courseB_maze_seq_challenge1_a": "Найкращий шлях може не працювати на цей раз.",
+          "courseB_maze_seq_challenge1_b": "Для початку спробуй використати блок <xml><block type=\"maze_moveWest\"/></xml>."
         },
         "courseB_playlab_events6_2021": {
           "courseB_playlab_events6_c": "Отримати всі прапори, щоб пройти!",
@@ -2454,7 +2474,10 @@
           "courseC_artist_prog2_b": "Виникли проблеми з повертанням за ріг? Використай блок \"повернути праворуч на 90 градусів\"."
         },
         "courseC_artist_prog5_2021": {
-          "courseC_artist_prog5_b": "Не бійся помилятися! Спробуйте додати блоки та запустити код, щоб побачити, що станеться, навіть якщо ви не думаєте, що ви вирішили головоломку ще."
+          "courseC_artist_prog5_b": "Не бійся помилятися! Спробуйте додати блоки та запустити код, щоб побачити, що станеться, навіть якщо ви не думаєте, що ви вирішили головоломку ще.",
+          "courseC_artist_prog5_a": "Уповільнюй повзунок до кінця, доки не зможете виконати код рядок за рядком, щоб побачити та зрозуміти, де виникла помилка.",
+          "courseC_artist_prog5_c": "Ти можеш використовувати випадаюче меню в блоках, щоб змінити їхні дії!",
+          "courseC_artist_prog5_d": "Кожен поворот має бути на 90 градусів праворуч."
         },
         "courseC_artist_prog7_2021": {
           "courseC_artist_prog7_a": "Кожен кут - 45 або 90 градусів.",
@@ -2468,7 +2491,8 @@
           "courseC_artist_prog_challenge2_b": "Після закінчення першої ліні поверни праворуч, перш ніж намалювати третю лінію."
         },
         "courseC_collector_prog2_2021": {
-          "courseC_collector_prog2_b": "Не бійся помилятися! Спробуйте додати блоки та запустити код, щоб побачити, що станеться, навіть якщо ви не думаєте, що ви вирішили головоломку ще."
+          "courseC_collector_prog2_b": "Не бійся помилятися! Спробуйте додати блоки та запустити код, щоб побачити, що станеться, навіть якщо ви не думаєте, що ви вирішили головоломку ще.",
+          "courseC_collector_prog2_a": "Ти можеш використати чотири блоки <xml><block type=\"maze_move\"><title name=\"DIR\">moveForward</title></block></xml> або блок <xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>, щоб зробити програму коротшою."
         },
         "courseC_collector_prog4_2021": {
           "courseC_collector_prog4_a": "Якщо ви застрягли, спробуйте виписати кроки на аркуші паперу.",
@@ -2476,10 +2500,14 @@
           "courseC_collector_prog4_c": "Спробуйте цю опцію для шляху."
         },
         "courseC_collector_prog5_2021": {
-          "courseC_collector_prog5_c": "Якщо ви застрягли, спробуйте виписати кроки на аркуші паперу."
+          "courseC_collector_prog5_c": "Якщо ви застрягли, спробуйте виписати кроки на аркуші паперу.",
+          "courseC_collector_prog5_a": "\"Це працює на першому кроці?\nА на другому?\nЩо пішло не так?\"",
+          "courseC_collector_prog5_b": "Якщо ти виправив помилку, але програма все одно не працює, скористайся наведеними вище кроками, щоб знайти інші помилки.",
+          "courseC_collector_prog5_d": "Йдіть стежкою, щоб зібрати скарб."
         },
         "courseC_collector_prog_challenge2_2021": {
-          "courseC_collector_prog_challenge1_b": "Забули свій шлях? Спробуйте цей шлях, щоб вирішити головоломку!"
+          "courseC_collector_prog_challenge1_b": "Забули свій шлях? Спробуйте цей шлях, щоб вирішити головоломку!",
+          "courseC_collector_prog_challenge1_a": "Ти можеш використовувати більше одного блоку `збирати` в кожному проміжку."
         },
         "courseC_harvester_loops3_2021": {
           "courseC_harvester_loops3_a": "Не бійся помилятися! Спробуйте додати блоки та запустити код, щоб побачити, що станеться, навіть якщо ви ще не вирішили головоломку.",
@@ -2495,45 +2523,63 @@
           "courseC_harvester_loops_challenge2_a": "Один із способів вирішити це виглядає як зигзаг. Інший спосіб виглядає як спіраль! Існує безліч різних рішень для загадки, як це. Бути наполегливим!"
         },
         "courseC_maze_debugging1_2021": {
-          "courseC_maze_debugging1_a": "-   Чи все працює після першого кроку?\n-   Чи він все ще працює після другого?\n-   Звідки пішло не так?"
+          "courseC_maze_debugging1_a": "-   Чи все працює після першого кроку?\n-   Чи він все ще працює після другого?\n-   Звідки пішло не так?",
+          "courseC_maze_debugging1_b": "Додай 1 блок, щоб завершити це завдання."
         },
         "courseC_maze_debugging2_2021": {
           "courseC_maze_debugging2_b": "-   Чи все працює після першого кроку?\n-   Чи він все ще працює після другого?\n-   Звідки пішло не так?",
-          "courseC_maze_debugging2_c": "Не можете зрозуміти, що не так? Спробуйте запустити код кілька разів, щоб побачити, що станеться."
+          "courseC_maze_debugging2_c": "Не можете зрозуміти, що не так? Спробуйте запустити код кілька разів, щоб побачити, що станеться.",
+          "courseC_maze_debugging2_a": "У робочій зоні є багато цінного коду.  Не видаляй його повністю та почни спочатку!"
         },
         "courseC_maze_debugging3_2021": {
-          "courseC_maze_debugging3_b": "Не можете зрозуміти, що не так? Спробуйте запустити код кілька разів, щоб побачити, що станеться."
+          "courseC_maze_debugging3_b": "Не можете зрозуміти, що не так? Спробуйте запустити код кілька разів, щоб побачити, що станеться.",
+          "courseC_maze_debugging3_a": "Для видалення блоку з середини коду перетягни усі блоки в іншу частину робочої зони.\n\nПеретягни блок, який ти хочеш видалити, назад у скриньку з інструментами.\n\nНа завершення, поверни інші блоки на місце.\n\n![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)"
         },
         "courseC_maze_debugging7_2021": {
-          "courseC_maze_debugging7_a": "-   Чи все працює на першому кроці?\n-   Як на рахунок другого кроку?\n-   Звідки це не так?"
+          "courseC_maze_debugging7_a": "-   Чи все працює на першому кроці?\n-   Як на рахунок другого кроку?\n-   Звідки це не так?",
+          "courseC_maze_debugging7_b": "Не забувай використовувати кнопку \"Крок\" для покрокового виконання програми!",
+          "courseC_maze_debugging7_c": "Після знаходження та виправлення першої помилки не забувай використовувати процес налагодження знову, щоб знайти наступну помилку.\n\nПовторюй процес налагодження, поки програма не запрацює!"
         },
         "courseC_maze_debugging_challenge1_2021": {
-          "courseC_maze_debugging_challenge1_a": "Вліво або вправо? Тобі вирішувати!"
+          "courseC_maze_debugging_challenge1_a": "Вліво або вправо? Тобі вирішувати!",
+          "courseC_maze_debugging_challenge1_b": "Шлях Скрета має форму прямокутника! Йому потрібно щоразу повертатися в одну сторону.",
+          "courseC_maze_debugging_challenge1_c": "Якщо ти застрягнеш, ти завжди можеш почати все спочатку та знайти новий шлях!"
         },
         "courseC_maze_programming6_2021": {
-          "courseC_maze_programming6_a": "Існує два способи вирішити цю загадку!"
+          "courseC_maze_programming6_a": "Існує два способи вирішити цю загадку!",
+          "courseC_maze_programming6_b": "Прослідкуй пальчиком від пташки до свинки, які кроки ти зробив?",
+          "courseC_maze_programming6_c": "Пам'ятай, що ти маєш повернутися першим, оскільки пташка повернеться обличчям до стіни.",
+          "courseC_maze_programming6_d": "Ти застряг?  Поглянь на цей шлях!"
         },
         "courseC_maze_programming7_2021": {
-          "courseC_maze_programming7_a": "Не забудьте скористатися кнопкою \"Крок\", щоб пройти через блок по блоках і шукати помилки."
+          "courseC_maze_programming7_a": "Не забудьте скористатися кнопкою \"Крок\", щоб пройти через блок по блоках і шукати помилки.",
+          "courseC_maze_programming7_b": "Якщо тобі важко виконати це завдання, спробуй записати кроки на аркуші паперу."
         },
         "courseC_maze_programming8_2021": {
-          "courseC_maze_programming8_b": "Не бійся помилятися! Спробуйте додати блоки та запустити код, щоб побачити, що станеться, навіть якщо ви не думаєте, що ви вирішили головоломку ще."
+          "courseC_maze_programming8_b": "Не бійся помилятися! Спробуйте додати блоки та запустити код, щоб побачити, що станеться, навіть якщо ви не думаєте, що ви вирішили головоломку ще.",
+          "courseC_maze_programming8_a": "Пам'ятай, ти можеш скористатися кнопкою \"Крок\", щоб переглянути код покроково, якщо виникне затримка."
         },
         "courseC_starWars_loops10_2021": {
           "courseC_starWars_loops10_b": "Якщо ви хочете використовувати менше коду, ви можете помістити один цикл `повтор` в інший! Це називається \\*\\* вкладений цикл \\*\\*.",
-          "courseC_starWars_loops10_c": "Не бійся помилятися! Запустіть код, щоб побачити, що станеться, навіть якщо ви ще не вирішили головоломку."
+          "courseC_starWars_loops10_c": "Не бійся помилятися! Запустіть код, щоб побачити, що станеться, навіть якщо ви ще не вирішили головоломку.",
+          "courseC_starWars_loops10_a": "Чи схожий цей шаблон на гігантський набір сходинок? Перевір, чи зможеш ти використати знання, отримані з попередніх завдань, щоб зібрати усі повороти."
         },
         "courseC_starWars_loops1_2021": {
-          "courseC_starWars_loops1_b": "Не бійся помилятися! Запустіть код, щоб побачити, що станеться, навіть якщо ви ще не вирішили головоломку."
+          "courseC_starWars_loops1_b": "Не бійся помилятися! Запустіть код, щоб побачити, що станеться, навіть якщо ви ще не вирішили головоломку.",
+          "courseC_starWars_loops1_a": "Коли BB-8 наступає на металобрухт, він автоматично збирає його.",
+          "courseC_starWars_loops1_c": "Для вирішення цього завдання тобі потрібно буде п'ять разів \" рухатися вперед\"."
         },
         "courseC_starWars_loops6_2021": {
-          "courseC_starWars_loops6_b": "Якщо ви хочете використовувати менше коду, ви можете помістити один цикл `повтор` в інший! Це називається \\*\\* вкладений цикл \\*\\*."
+          "courseC_starWars_loops6_b": "Якщо ви хочете використовувати менше коду, ви можете помістити один цикл `повтор` в інший! Це називається \\*\\* вкладений цикл \\*\\*.",
+          "courseC_starWars_loops6_a": "Спробуй записати рухи на аркуші паперу і пошукати закономірність."
         },
         "courseC_starWars_loops6_dani": {
           "courseC_starWars_loops6_b": "Якщо ви хочете використовувати менше коду, ви можете помістити один цикл `повтор` в інший! Це називається \\*\\* вкладений цикл \\*\\*."
         },
         "courseC_starWars_loops7_2021": {
-          "courseC_starWars_loops7_c": "Не бійся помилятися! Запустіть код, щоб побачити, що станеться, навіть якщо ви ще не вирішили головоломку."
+          "courseC_starWars_loops7_c": "Не бійся помилятися! Запустіть код, щоб побачити, що станеться, навіть якщо ви ще не вирішили головоломку.",
+          "courseC_starWars_loops7_a": "Цей шаблон виглядає складнішим, ніж є насправді! Почни з простої сходинки. Це охоплює весь металолом?",
+          "courseC_starWars_loops7_b": "Якщо у тебе виникають труднощі з цим завданням, спробуй записати всі кроки на аркуші паперу та пошукати закономірність."
         },
         "courseC_starWars_loops7_dani": {
           "courseC_starWars_loops7_c": "Не бійся помилятися! Запустіть код, щоб побачити, що станеться, навіть якщо ви ще не вирішили головоломку."
@@ -2568,7 +2614,8 @@
           "courseD_bee_conditionals2_hintVid1": "Потрібна допомога з початку роботи? Переглянути відео!"
         },
         "courseD_bee_conditionals3_2021": {
-          "courseD_bee_conditionals3_c": "Не бійся помилятися! Спробуйте додати блоки та запустити код, щоб побачити, що станеться, навіть якщо ви ще не вирішили головоломку."
+          "courseD_bee_conditionals3_c": "Не бійся помилятися! Спробуйте додати блоки та запустити код, щоб побачити, що станеться, навіть якщо ви ще не вирішили головоломку.",
+          "courseD_bee_conditionals3_a": "Обов'язково використовуйте інструкцію `if` для перевірки кожної клітинки на наявність у ній квітки або порожнього місця."
         },
         "courseD_bee_conditionals3_dani": {
           "courseD_bee_conditionals3_hintVid1": "Потрібна допомога з початку роботи? Переглянути відео!",
@@ -2581,11 +2628,14 @@
           "courseD_bee_conditionals5_hintVid1": "Потрібна допомога з початку роботи? Переглянути відео!"
         },
         "courseD_bee_conditionals_challenge1_2021": {
-          "courseD_bee_conditionals_challenge1_b": "У цій головоломці кожен простір може мати квітку, медову гребіну або нічого. Це означає, що ви можете повторити ваш `if / else` умовно на кожному квадраті."
+          "courseD_bee_conditionals_challenge1_b": "У цій головоломці кожен простір може мати квітку, медову гребіну або нічого. Це означає, що ви можете повторити ваш `if / else` умовно на кожному квадраті.",
+          "courseD_bee_conditionals_challenge1_a": "Чи можеш ти знайти стежку, яка дістанеться до кожної квітки та стільників, не зачепивши жодного дерева? Найкращий шлях - це спіраль."
         },
         "courseD_collector_nested_loops_challenge2_2021": {
           "courseD_bee_nested_loops_challenge2_a": "Не забувайте, що ви можете `repeat` одній команді або більш довгий шаблон. Ви навіть можете `повторити` блок`repeat`!",
-          "courseD_bee_nested_loops_challenge2_b": "Щоб отримати всі 4 дорогоцінних каменів, спершу скористайтеся циклом, щоб відійти від центру. Поверніть ліворуч або праворуч, а потім використовуйте вкладену петлю, щоб перейти від першої купи скарбів до другої. Якщо ви повторюєте вкладену петлю достатньо разів, колектор буде переміщатися по \\* печері \\* \\* повністю \\*!"
+          "courseD_bee_nested_loops_challenge2_b": "Щоб отримати всі 4 дорогоцінних каменів, спершу скористайтеся циклом, щоб відійти від центру. Поверніть ліворуч або праворуч, а потім використовуйте вкладену петлю, щоб перейти від першої купи скарбів до другої. Якщо ви повторюєте вкладену петлю достатньо разів, колектор буде переміщатися по \\* печері \\* \\* повністю \\*!",
+          "courseD_bee_nested_loops_challenge2_c": "Найкоротша програма, яка допоможе зібрати усі скарби, використовує лише один блок `зібрати` та два повороти.",
+          "courseD_bee_nested_loops_challenge2_d": "**Розв'язок:**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_dropdown\">\n        <title name=\"TIMES\" config=\"3-10\">3</title>\n        <statement name=\"DO\">\n          <block type=\"maze_move\">\n            <title name=\"DIR\">moveForward</title>\n          </block>\n        </statement>\n        <next>\n          <block type=\"maze_turn\">\n            <title name=\"DIR\">turnLeft</title>\n            <next>\n              <block type=\"controls_repeat_dropdown\">\n                <title name=\"TIMES\" config=\"3-10\">3</title>\n                <statement name=\"DO\">\n                  <block type=\"collector_collect\">\n                    <next>\n                      <block type=\"controls_repeat_dropdown\">\n                        <title name=\"TIMES\" config=\"3-10\">3</title>\n                        <statement name=\"DO\">\n                          <block type=\"maze_move\">\n                            <title name=\"DIR\">moveForward</title>\n                          </block>\n                        </statement>\n                        <next>\n                          <block type=\"maze_turn\">\n                            <title name=\"DIR\">turnLeft</title>\n                            <next>\n                              <block type=\"controls_repeat_dropdown\">\n                                <title name=\"TIMES\" config=\"3-10\">3</title>\n                                <statement name=\"DO\">\n                                  <block type=\"maze_move\">\n                                    <title name=\"DIR\">moveForward</title>\n                                  </block>\n                                </statement>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseD_farmer_while3_2021": {
           "courseD_farmer_while3_a": "Цикл може допомогти вам спростити свій код тут.",
@@ -2601,10 +2651,13 @@
           "courseC_maze_programming5_c": "Не бійся помилятися! Спробуйте додати блоки та запустити код, щоб побачити, що станеться, навіть якщо ви не думаєте, що ви вирішили головоломку ще."
         },
         "courseD_maze_nestedLoops3_2021": {
-          "courseD_maze_nestedLoops3_b": "Не вдається з'ясувати, де класти цикли? Спробуйте написати код покроково або дивіться в шаблон."
+          "courseD_maze_nestedLoops3_b": "Не вдається з'ясувати, де класти цикли? Спробуйте написати код покроково або дивіться в шаблон.",
+          "courseD_maze_nestedLoops3_a": "Для виконання цього завдання тобі потрібно буде \"вкласти\" один `повторюваний` цикл в інший.",
+          "courseD_maze_nestedLoops3_c": "Спробуй написати код для одного прямого відрізка шляху та повороту. Чи зможеш ти повторити це, щоб дістатися до соняшника?"
         },
         "courseD_maze_nestedLoops5_2021": {
-          "courseD_maze_nestedLoops5_b": "Не вдається з'ясувати, де класти цикли? Спробуйте написати код покроково або дивіться в шаблон."
+          "courseD_maze_nestedLoops5_b": "Не вдається з'ясувати, де класти цикли? Спробуйте написати код покроково або дивіться в шаблон.",
+          "courseD_maze_nestedLoops5_a": "Шукай шаблон сходинки в цьому лабіринті, щоб знайти, де можна використовувати вкладений цикл."
         },
         "courseD_maze_ramp1_2021": {
           "courseC_maze_programming1_b": "Не бійся помилятися! Спробуйте додати блоки та запустити код, щоб побачити, що станеться, навіть якщо ви не думаєте, що ви вирішили головоломку ще."
@@ -2617,10 +2670,14 @@
         },
         "courseD_maze_until3_2021": {
           "courseD_maze_until3_b": "Якщо ви застрягли, спробуйте виписати кроки на папері та шукати місця, де вони повторюються.",
-          "courseD_maze_until3_c": "Чи є шаблон сходи, який ви можете слідкувати за цією загадкою?"
+          "courseD_maze_until3_c": "Чи є шаблон сходи, який ви можете слідкувати за цією загадкою?",
+          "courseD_maze_until3_a": "-   Що робить твій код?\n-   Що він мав би робити?\n-   Про що це говорить?",
+          "courseD_maze_until3_d": "Не забувай використовувати блок `повторюй поки`, щоб скоротити код."
         },
         "courseD_maze_until4_2021": {
-          "courseD_maze_until4_b": "Чи є шаблон сходи, який ви можете слідкувати за цією загадкою?"
+          "courseD_maze_until4_b": "Чи є шаблон сходи, який ви можете слідкувати за цією загадкою?",
+          "courseD_maze_until4_a": "Використовуй кнопку \"Крок\" та проходь код крок за кроком.\n\n-   Чи все працює на першому кроці?\n-   Чи все працює на другому кроці?\n-   Де сталася помилка?",
+          "courseD_maze_until4_c": "Не забувай використовувати блок `повторюй поки`, щоб скоротити код."
         },
         "courseE_artist_functions1_dani": {
           "courseE_artist_functions1_a": "Квадрати мають 100 пікселів, тобто вам доведеться просувати вперед 175 пікселів перед тим, як малювати свою другу площу.",
@@ -2634,30 +2691,45 @@
           "courseE_artist_functions_challenge1_b": "Ти також можеш `стрибати до` інших позицій або змінювати весь дизайн, як тобі заманеться!"
         },
         "courseF_artist_for10_2021": {
-          "courseF_artist_for10_b": "Зображення на малюнку використовує поворот 61 градус."
+          "courseF_artist_for10_b": "Зображення на малюнку використовує поворот 61 градус.",
+          "courseF_artist_for10_a": "Зображення на малюнку було зроблено з використанням лічильника для блоку `встановити альфа` та `лічильник` / 10 - розмір пензля.",
+          "courseF_artist_for10_c": "Бажаєш дізнатися, як було зроблено зразок зображення?\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"draw_colour\" inline=\"true\" id=\"draw-color\">\n        <value name=\"COLOUR\">\n          <block type=\"colour_picker\">\n            <title name=\"COLOUR\">#ff0000</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"controls_for_counter\" inline=\"true\">\n          <mutation counter=\"counter\"></mutation>\n            <value name=\"FROM\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">15</title>\n              </block>\n            </value>\n            <value name=\"TO\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">175</title>\n              </block>\n            </value>\n            <value name=\"BY\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">2</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"draw_width\" inline=\"false\">\n                <value name=\"WIDTH\">\n                  <block type=\"math_arithmetic\" inline=\"true\">\n                    <title name=\"OP\">DIVIDE</title>\n                    <value name=\"A\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">counter</title>\n                      </block>\n                    </value>\n                    <value name=\"B\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">10</title>\n                      </block>\n                    </value>\n                  </block>\n                </value>\n                <next>\n                  <block type=\"alpha\" inline=\"true\" id=\"alpha\">\n                    <value name=\"VALUE\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">counter</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"draw_move\" inline=\"true\">\n                        <title name=\"DIR\">moveForward</title>\n                        <value name=\"VALUE\">\n                          <block type=\"variables_get\">\n                            <title name=\"VAR\">counter</title>\n                          </block>\n                        </value>\n                        <next>\n                          <block type=\"draw_turn\" inline=\"true\">\n                            <title name=\"DIR\">turnRight</title>\n                            <value name=\"VALUE\">\n                              <block type=\"math_number\">\n                                <title name=\"NUM\">61</title>\n                              </block>\n                            </value>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseF_artist_for7_2021": {
-          "courseF_artist_for7_b": "Зверніть увагу, що ця спіраль виявляється правильним, а не зліва!"
+          "courseF_artist_for7_b": "Зверніть увагу, що ця спіраль виявляється правильним, а не зліва!",
+          "courseF_artist_for7_a": "У цьому завданні інструмент ручка тонша. Перед початком потрібно буде встановити його на `1`.",
+          "courseF_artist_for7_c": "Цикл `for` у цьому завданні проходить від 15 до 300 на 2.",
+          "courseF_artist_for7_d": "Це зображення отримано шляхом повороту на 89 градусів."
         },
         "courseF_artist_variables8_2021": {
-          "courseF_artist_variables8_c": "Обов'язково використовуйте цикл `repeat` для нанесення трикутника."
+          "courseF_artist_variables8_c": "Обов'язково використовуйте цикл `repeat` для нанесення трикутника.",
+          "courseF_artist_variables8_b": "Не забудь почати код трикутника з блоку `встановити довжину` і почати зі 150 пікселів.",
+          "courseF_artist_variables8_a": "Спробуй вставити \n\n<xml>\n<block type=\"math_change\">\n      <title name=\"VAR\">length</title>\n      <value name=\"DELTA\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">1</title>\n        </block>\n      </value>\n    </block>\n</xml>\n\nблок всередину циклу в самому кінці."
         },
         "courseF_bee_for5_2021": {
-          "courseF_bee_for5_c": "Не бійся помилятися! Спробуйте додати блоки та запустити код, щоб побачити, що станеться, навіть якщо ви ще не вирішили головоломку."
+          "courseF_bee_for5_c": "Не бійся помилятися! Спробуйте додати блоки та запустити код, щоб побачити, що станеться, навіть якщо ви ще не вирішили головоломку.",
+          "courseF_bee_for5_a": "Цього разу твій блок `рухайся вперед` та блок `отримати нектар` мають бути в окремих `повторюваних` циклах, обидва всередині одного циклу `for`.",
+          "courseF_bee_for5_b": "Використовуй змінну `лічильник` у кожному циклі, щоб бджола проходила різну відстань між квітками."
         },
         "courseF_bee_for8_2021": {
-          "courseF_bee_for8_b": "У цій головоломці вам доведеться пересуватися по шаблону сходами, щоб дістати до квітів."
+          "courseF_bee_for8_b": "У цій головоломці вам доведеться пересуватися по шаблону сходами, щоб дістати до квітів.",
+          "courseF_bee_for8_a": "Якщо у циклі є лічильник, інкремент додається до значення змінної лічильника при кожному проходженні. \n\nЩо потрібно додати до кожного числа, щоб отримати наступну кількість нектару?",
+          "courseF_bee_for8_c": "Твій цикл буде рахувати _від 3 до 15_ з певним інкрементом. Що це за інкремент?"
         },
         "courseF_bee_for9_2021": {
-          "courseF_bee_for9_c": "Схоже, вам потрібно буде перетворити бджолу на початку кожної ітерації циклу, якщо хочете вирішити головоломку."
+          "courseF_bee_for9_c": "Схоже, вам потрібно буде перетворити бджолу на початку кожної ітерації циклу, якщо хочете вирішити головоломку.",
+          "courseF_bee_for9_a": "Спробуй виконати деякі математичні дії зі змінною лічильника.\n\nЩо треба зробити з лічильником на кожній квітці, щоб він дорівнював кількості нектару, яку потрібно зібрати?",
+          "courseF_bee_for9_b": "**Пам'ятай:** Якщо твій цикл веде підрахунок, інкремент додається до твоєї змінної `лічильник` при кожному виконанні циклу."
         },
         "courseF_bee_for_challenge2_2021": {
           "courseF_bee_for_challenge2_a": "Подивіться на цю опцію для переміщення:  \n\n![](https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)",
           "courseF_bee_for_challenge2_b": "Спробуйте використати два «за» петлі: один для підйому та захоплення нектару, а інший - для підйому та виготовлення меду.",
-          "courseF_bee_for_challenge2_c": "Зверніть увагу, що для циклу `for` потрібні кілька регулярних циклів всередині, що повторюють`counter` times, щоб зробити збільшене зображення сходами. \nІнший `for` петлі потребує лише одного регулярного циклу, щоб зробити `counter` суму мед."
+          "courseF_bee_for_challenge2_c": "Зверніть увагу, що для циклу `for` потрібні кілька регулярних циклів всередині, що повторюють`counter` times, щоб зробити збільшене зображення сходами. \nІнший `for` петлі потребує лише одного регулярного циклу, щоб зробити `counter` суму мед.",
+          "courseF_bee_for_challenge2_d": "**Розв'язок:**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_for\" inline=\"true\">\n        <title name=\"VAR\">counter</title>\n        <value name=\"FROM\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">1</title>\n          </block>\n        </value>\n        <value name=\"TO\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">3</title>\n          </block>\n        </value>\n        <value name=\"BY\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">1</title>\n          </block>\n        </value>\n        <statement name=\"DO\">\n          <block type=\"controls_repeat_ext\" inline=\"true\">\n            <value name=\"TIMES\">\n              <block type=\"variables_get\">\n                <title name=\"VAR\">counter</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"maze_moveForward\"/>\n            </statement>\n            <next>\n              <block type=\"controls_repeat_ext\" inline=\"true\">\n                <value name=\"TIMES\">\n                  <block type=\"variables_get\">\n                    <title name=\"VAR\">counter</title>\n                  </block>\n                </value>\n                <statement name=\"DO\">\n                  <block type=\"maze_nectar\"/>\n                </statement>\n                <next>\n                  <block type=\"maze_turn\">\n                    <title name=\"DIR\">turnLeft</title>\n                    <next>\n                      <block type=\"controls_repeat_ext\" inline=\"true\">\n                        <value name=\"TIMES\">\n                          <block type=\"variables_get\">\n                            <title name=\"VAR\">counter</title>\n                          </block>\n                        </value>\n                        <statement name=\"DO\">\n                          <block type=\"maze_moveForward\"/>\n                        </statement>\n                        <next>\n                          <block type=\"maze_turn\">\n                            <title name=\"DIR\">turnRight</title>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n        <next>\n          <block type=\"maze_turn\">\n            <title name=\"DIR\">turnRight</title>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n                <next>\n                  <block type=\"controls_for\" inline=\"true\">\n                    <title name=\"VAR\">counter</title>\n                    <value name=\"FROM\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">2</title>\n                      </block>\n                    </value>\n                    <value name=\"TO\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">10</title>\n                      </block>\n                    </value>\n                    <value name=\"BY\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">2</title>\n                      </block>\n                    </value>\n                    <statement name=\"DO\">\n                      <block type=\"maze_moveForward\">\n                        <next>\n                          <block type=\"maze_turn\">\n                            <title name=\"DIR\">turnLeft</title>\n                            <next>\n                              <block type=\"maze_moveForward\">\n                                <next>\n                                  <block type=\"maze_turn\">\n                                    <title name=\"DIR\">turnRight</title>\n                                    <next>\n                                      <block type=\"controls_repeat_ext\" inline=\"true\">\n                                        <value name=\"TIMES\">\n                                          <block type=\"variables_get\">\n                                            <title name=\"VAR\">counter</title>\n                                          </block>\n                                        </value>\n                                        <statement name=\"DO\">\n                                          <block type=\"maze_honey\"/>\n                                        </statement>\n                                      </block>\n                                    </next>\n                                  </block>\n                                </next>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </statement>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "coursea_maze_ramp1_2021": {
-          "courseC_maze_programming1_b": "Не бійся помилятися! Спробуйте щось, і якщо він не працює, спробуйте щось інше!"
+          "courseC_maze_programming1_b": "Не бійся помилятися! Спробуйте щось, і якщо він не працює, спробуйте щось інше!",
+          "courseC_maze_programming1_a": "Якщо птах не доходить до свині, впевнись, що обидва блоки були повністю з'єднані, а потім клацни \"Запустити\" ще раз."
         },
         "helloworld_animals_click": {
           "hw_click_sprites": "Клацайте на спрайтах поки виконується програма",
@@ -2729,7 +2801,8 @@
           "courseD_bee_conditionals8_a": "**Пам'ятай:** Цей рівень міняється кожного разу.\\\\\n\nВам потрібно використовувати блок з умовою (`якщо` чи `якщо/інакше`), щоб розв'язувати цю задачу."
         },
         "courseD_bee_conditionals8_2021": {
-          "courseD_bee_conditionals8_a": "**Пам'ятай:** Цей рівень міняється кожного разу.\\\\\n\nВам потрібно використовувати блок з умовою (`якщо` чи `якщо/інакше`), щоб розв'язувати цю задачу."
+          "courseD_bee_conditionals8_a": "**Пам'ятай:** Цей рівень міняється кожного разу.\\\\\n\nВам потрібно використовувати блок з умовою (`якщо` чи `якщо/інакше`), щоб розв'язувати цю задачу.",
+          "courseD_bee_conditionals8_b": "Це непросте завдання, тому що ти не можеш перевірити порожні клітинки, нектар, _та_ мед за допомогою лише однієї умови.\n\nПеревір наявність нектару та меду лише в кінці стежки."
         },
         "courseD_bee_debugging_challenge1a": {
           "courseD_bee_debugging_challenge1_a": "Чому працює перша половина цієї програми? Подумайте, чому бджола повинна рухатися назад. Скільки нектару збирає бджола щоразу, коли рухається над квіткою?"
@@ -2752,7 +2825,8 @@
           "courseD_farmer_condLoops_challenge1_b": "Зазвичай ви використовуєте `зібрати гарбуз`, якщо ви на гарбузі. Що ще потрібно зробити, якщо ви на гарбузі?"
         },
         "courseD_farmer_condLoops_challenge1_2021": {
-          "courseD_farmer_condLoops_challenge1_b": "Зазвичай ви використовуєте `зібрати гарбуз`, якщо ви на гарбузі. Що ще потрібно зробити, якщо ви на гарбузі?"
+          "courseD_farmer_condLoops_challenge1_b": "Зазвичай ви використовуєте `зібрати гарбуз`, якщо ви на гарбузі. Що ще потрібно зробити, якщо ви на гарбузі?",
+          "courseD_farmer_condLoops_challenge1_a": "Кнопка `Крок` може бути дуже корисною в цьому завданні."
         },
         "courseD_iceage_loops1_2021": {
           "courseD_iceage_loops1_a": "Остерігайся тріснутого льоду! Скрет провалиться!",
@@ -3166,7 +3240,8 @@
           "courseF_artist_for7_b": "Зверніть увагу, що ця спіраль виявляється правильним, а не зліва!"
         },
         "courseF_artist_variables82022": {
-          "courseF_artist_variables8_c": "Обов'язково використовуйте цикл `repeat` для нанесення трикутника."
+          "courseF_artist_variables8_c": "Обов'язково використовуйте цикл `repeat` для нанесення трикутника.",
+          "courseF_artist_variables8_a": "Спробуй вставити \n\n<xml>\n<block type=\"math_change\">\n      <title name=\"VAR\">length</title>\n      <value name=\"DELTA\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">1</title>\n        </block>\n      </value>\n    </block>\n</xml>\n\nблок всередину циклу в самому кінці."
         },
         "courseF_bee_for52022": {
           "courseF_bee_for5_c": "Не бійся помилятися! Спробуйте додати блоки та запустити код, щоб побачити, що станеться, навіть якщо ви ще не вирішили головоломку."
@@ -3863,24 +3938,599 @@
           "behavior_list": "Спробуйте використати такі моделі поведінки, як \"рух на схід та створення циклу\", \"оберт  вправо\" та \"блукання\"."
         },
         "courseF_variables_card_finish": {
-          "card_idea2": "Ви можете змінити одну модель поведінки на іншу, використовуючи блок `стоп спрайт` з блоком `почати спрайт` під подією.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">name</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_removeBehaviorSimple\">\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"robot_02_1\"</title>\n          </block>\n        </value>\n        <value name=\"BEHAVIOR\">\n          <block type=\"gamelab_behavior_get\">\n            <mutation></mutation>\n            <title name=\"VAR\" id=\"spinning left\">spinning left</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"robot_02_1\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n            </value>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "card_idea2": "Ви можете змінити одну модель поведінки на іншу, використовуючи блок `стоп спрайт` з блоком `почати спрайт` під подією.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">name</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_removeBehaviorSimple\">\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"robot_02_1\"</title>\n          </block>\n        </value>\n        <value name=\"BEHAVIOR\">\n          <block type=\"gamelab_behavior_get\">\n            <mutation></mutation>\n            <title name=\"VAR\" id=\"spinning left\">spinning left</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"robot_02_1\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n            </value>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>",
+          "card_idea1": "Ти можеш додати другу (третю або четверту) підказку, підключивши новий блок підказок з іншою змінною до першої події `коли надається відповідь`.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">name</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setPrompt\">\n        <value name=\"QUESTION\">\n          <block type=\"text\" can_disconnect_from_parent=\"false\">\n            <title name=\"TEXT\">what do you want for your birthday?</title>\n          </block>\n        </value>\n        <value name=\"VAR\">\n          <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n            <title name=\"VAR\">gift</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>",
+          "card_idea3": "Ти можеш зробити свою програму інтерактивною, зробивши так, щоб інші дії відбувалися, коли користувач натискає клавішу або після закінчення певного часу.\n\n<xml><block type=\"gamelab_keyPressed\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <title name=\"KEY\">\"up\"</title>\n    <next>\n      <block type=\"gamelab_changePropBy\">\n        <title name=\"PROPERTY\">\"scale\"</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"robot_02_1\"</title>\n          </block>\n        </value>\n        <value name=\"VAL\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">10</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
         },
         "courseF_variables_card_finish_-2022-2": {
-          "card_idea2": "Ви можете змінити одну модель поведінки на іншу, використовуючи блок `стоп спрайт` з блоком `почати спрайт` під подією.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">name</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_removeBehaviorSimple\">\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"robot_02_1\"</title>\n          </block>\n        </value>\n        <value name=\"BEHAVIOR\">\n          <block type=\"gamelab_behavior_get\">\n            <mutation></mutation>\n            <title name=\"VAR\" id=\"spinning left\">spinning left</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"robot_02_1\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n            </value>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "card_idea2": "Ви можете змінити одну модель поведінки на іншу, використовуючи блок `стоп спрайт` з блоком `почати спрайт` під подією.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">name</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_removeBehaviorSimple\">\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"robot_02_1\"</title>\n          </block>\n        </value>\n        <value name=\"BEHAVIOR\">\n          <block type=\"gamelab_behavior_get\">\n            <mutation></mutation>\n            <title name=\"VAR\" id=\"spinning left\">spinning left</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"robot_02_1\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n            </value>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>",
+          "card_idea1": "Ти можеш додати другу (третю або четверту) підказку, підключивши новий блок підказок з іншою змінною до першої події `коли надається відповідь`.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">name</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setPrompt\">\n        <value name=\"QUESTION\">\n          <block type=\"text\" can_disconnect_from_parent=\"false\">\n            <title name=\"TEXT\">what do you want for your birthday?</title>\n          </block>\n        </value>\n        <value name=\"VAR\">\n          <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n            <title name=\"VAR\">gift</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>",
+          "card_idea3": "Ти можеш зробити свою програму інтерактивною, зробивши так, щоб інші дії відбувалися, коли користувач натискає клавішу або після закінчення певного часу.\n\n<xml><block type=\"gamelab_keyPressed\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <title name=\"KEY\">\"up\"</title>\n    <next>\n      <block type=\"gamelab_changePropBy\">\n        <title name=\"PROPERTY\">\"scale\"</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"robot_02_1\"</title>\n          </block>\n        </value>\n        <value name=\"VAL\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">10</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
         },
         "courseF_variables_chatbot_finish": {
           "chatbot_idea1": "Ви можете додати другу (третю або четверту) підказку, підключивши новий блок підказок з іншою змінною до вашої першої події `після відповіді`.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">name</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setPrompt\">\n        <value name=\"QUESTION\">\n          <block type=\"text\" can_disconnect_from_parent=\"false\">\n            <title name=\"TEXT\">How old are you?</title>\n          </block>\n        </value>\n        <value name=\"VAR\">\n          <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n            <title name=\"VAR\">age</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>",
-          "chatbot_idea2": "Ви можете змінити одну модель поведінки на іншу, використовуючи блок `стоп спрайт` з блоком `почати спрайт` під подією.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">name</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_removeBehaviorSimple\">\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"robot_02_1\"</title>\n          </block>\n        </value>\n        <value name=\"BEHAVIOR\">\n          <block type=\"gamelab_behavior_get\">\n            <mutation></mutation>\n            <title name=\"VAR\" id=\"spinning left\">spinning left</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"robot_02_1\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n            </value>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "chatbot_idea2": "Ви можете змінити одну модель поведінки на іншу, використовуючи блок `стоп спрайт` з блоком `почати спрайт` під подією.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">name</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_removeBehaviorSimple\">\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"robot_02_1\"</title>\n          </block>\n        </value>\n        <value name=\"BEHAVIOR\">\n          <block type=\"gamelab_behavior_get\">\n            <mutation></mutation>\n            <title name=\"VAR\" id=\"spinning left\">spinning left</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"robot_02_1\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n            </value>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>",
+          "chatbot_idea3": "Ти можеш зробити свою програму інтерактивною, зробивши так, щоб інші дії відбувалися, коли користувач натискає клавішу або після закінчення певного часу.\n\n<xml><block type=\"gamelab_keyPressed\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <title name=\"KEY\">\"up\"</title>\n    <next>\n      <block type=\"gamelab_changePropBy\">\n        <title name=\"PROPERTY\">\"scale\"</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"robot_02_1\"</title>\n          </block>\n        </value>\n        <value name=\"VAL\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">10</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>",
+          "chatbot_idea4": "Ти можеш сповістити про завершення програми за допомогою титульного екранного блоку.\n\n<xml><block type=\"gamelab_showTitleScreen\">\n      <value name=\"TITLE\">\n        <block type=\"text\">\n        <title name=\"TEXT\">The End</title>\n        </block>\n      </value>\n      <value name=\"SUBTITLE\">\n        <block type=\"text\">\n        <title name=\"TEXT\">Thanks for chatting!</title>\n        </block>\n      </value>\n      </block></xml>"
         },
         "courseF_variables_chatbot_finish_-2022-2": {
           "chatbot_idea1": "Ви можете додати другу (третю або четверту) підказку, підключивши новий блок підказок з іншою змінною до вашої першої події `після відповіді`.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">name</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setPrompt\">\n        <value name=\"QUESTION\">\n          <block type=\"text\" can_disconnect_from_parent=\"false\">\n            <title name=\"TEXT\">How old are you?</title>\n          </block>\n        </value>\n        <value name=\"VAR\">\n          <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n            <title name=\"VAR\">age</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>",
-          "chatbot_idea2": "Ви можете змінити одну модель поведінки на іншу, використовуючи блок `стоп спрайт` з блоком `почати спрайт` під подією.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">name</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_removeBehaviorSimple\">\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"robot_02_1\"</title>\n          </block>\n        </value>\n        <value name=\"BEHAVIOR\">\n          <block type=\"gamelab_behavior_get\">\n            <mutation></mutation>\n            <title name=\"VAR\" id=\"spinning left\">spinning left</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"robot_02_1\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n            </value>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "chatbot_idea2": "Ви можете змінити одну модель поведінки на іншу, використовуючи блок `стоп спрайт` з блоком `почати спрайт` під подією.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">name</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_removeBehaviorSimple\">\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"robot_02_1\"</title>\n          </block>\n        </value>\n        <value name=\"BEHAVIOR\">\n          <block type=\"gamelab_behavior_get\">\n            <mutation></mutation>\n            <title name=\"VAR\" id=\"spinning left\">spinning left</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"robot_02_1\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n            </value>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>",
+          "chatbot_idea3": "Ти можеш зробити свою програму інтерактивною, зробивши так, щоб інші дії відбувалися, коли користувач натискає клавішу або після закінчення певного часу.\n\n<xml><block type=\"gamelab_keyPressed\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <title name=\"KEY\">\"up\"</title>\n    <next>\n      <block type=\"gamelab_changePropBy\">\n        <title name=\"PROPERTY\">\"scale\"</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"robot_02_1\"</title>\n          </block>\n        </value>\n        <value name=\"VAL\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">10</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>",
+          "chatbot_idea4": "Ти можеш сповістити про завершення програми за допомогою титульного екранного блоку.\n\n<xml><block type=\"gamelab_showTitleScreen\">\n      <value name=\"TITLE\">\n        <block type=\"text\">\n        <title name=\"TEXT\">The End</title>\n        </block>\n      </value>\n      <value name=\"SUBTITLE\">\n        <block type=\"text\">\n        <title name=\"TEXT\">Thanks for chatting!</title>\n        </block>\n      </value>\n      </block></xml>"
         },
         "courseF_variables_madlib_finish": {
-          "card_idea2": "Ви можете змінити одну модель поведінки на іншу, використовуючи блок `стоп спрайт` з блоком `почати спрайт` під подією.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">name</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_removeBehaviorSimple\">\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"robot_02_1\"</title>\n          </block>\n        </value>\n        <value name=\"BEHAVIOR\">\n          <block type=\"gamelab_behavior_get\">\n            <mutation></mutation>\n            <title name=\"VAR\" id=\"spinning left\">spinning left</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"robot_02_1\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n            </value>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "card_idea2": "Ви можете змінити одну модель поведінки на іншу, використовуючи блок `стоп спрайт` з блоком `почати спрайт` під подією.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">name</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_removeBehaviorSimple\">\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"robot_02_1\"</title>\n          </block>\n        </value>\n        <value name=\"BEHAVIOR\">\n          <block type=\"gamelab_behavior_get\">\n            <mutation></mutation>\n            <title name=\"VAR\" id=\"spinning left\">spinning left</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"robot_02_1\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n            </value>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>",
+          "card_idea1": "Ти можеш додати другу (третю або четверту) підказку, використовуючи новий блок підказок з іншою змінною.\n\n<xml>\n      <block type=\"gamelab_setPrompt\">\n        <value name=\"QUESTION\">\n          <block type=\"text\" can_disconnect_from_parent=\"false\">\n            <title name=\"TEXT\">Enter an action word:</title>\n          </block>\n        </value>\n        <value name=\"VAR\">\n          <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n            <title name=\"VAR\">verb</title>\n          </block>\n        </value>\n      </block>\n    </xml>",
+          "card_idea3": "Ти можеш зробити свою програму інтерактивною, зробивши так, щоб інші дії відбувалися, коли користувач натискає клавішу або після закінчення певного часу.\n\n<xml><block type=\"gamelab_keyPressed\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <title name=\"KEY\">\"up\"</title>\n    <next>\n      <block type=\"gamelab_changePropBy\">\n        <title name=\"PROPERTY\">\"scale\"</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"robot_02_1\"</title>\n          </block>\n        </value>\n        <value name=\"VAL\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">10</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
         },
         "courseF_variables_madlib_finish_-2022-2": {
-          "card_idea2": "Ви можете змінити одну модель поведінки на іншу, використовуючи блок `стоп спрайт` з блоком `почати спрайт` під подією.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">name</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_removeBehaviorSimple\">\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"robot_02_1\"</title>\n          </block>\n        </value>\n        <value name=\"BEHAVIOR\">\n          <block type=\"gamelab_behavior_get\">\n            <mutation></mutation>\n            <title name=\"VAR\" id=\"spinning left\">spinning left</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"robot_02_1\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n            </value>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "card_idea2": "Ви можете змінити одну модель поведінки на іншу, використовуючи блок `стоп спрайт` з блоком `почати спрайт` під подією.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">name</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_removeBehaviorSimple\">\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"robot_02_1\"</title>\n          </block>\n        </value>\n        <value name=\"BEHAVIOR\">\n          <block type=\"gamelab_behavior_get\">\n            <mutation></mutation>\n            <title name=\"VAR\" id=\"spinning left\">spinning left</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"robot_02_1\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n            </value>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>",
+          "card_idea1": "Ти можеш додати другу (третю або четверту) підказку, використовуючи новий блок підказок з іншою змінною.\n\n<xml>\n      <block type=\"gamelab_setPrompt\">\n        <value name=\"QUESTION\">\n          <block type=\"text\" can_disconnect_from_parent=\"false\">\n            <title name=\"TEXT\">Enter an action word:</title>\n          </block>\n        </value>\n        <value name=\"VAR\">\n          <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n            <title name=\"VAR\">verb</title>\n          </block>\n        </value>\n      </block>\n    </xml>",
+          "card_idea3": "Ти можеш зробити свою програму інтерактивною, зробивши так, щоб інші дії відбувалися, коли користувач натискає клавішу або після закінчення певного часу.\n\n<xml><block type=\"gamelab_keyPressed\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <title name=\"KEY\">\"up\"</title>\n    <next>\n      <block type=\"gamelab_changePropBy\">\n        <title name=\"PROPERTY\">\"scale\"</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"robot_02_1\"</title>\n          </block>\n        </value>\n        <value name=\"VAL\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">10</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
+        },
+        "Overworld Avoid Monsters_2021": {
+          "mc_8_a": "Є кілька шляхів, якими ти можеш піти. Який найкоротший?",
+          "mc_8_b": "Використовуйте `повторювані` цикли для спрощення коду.",
+          "mc_8_c": "Твоя мета - потрапити у дверний отвір будинку у верхній частині екрану."
+        },
+        "Overworld Chop Tree_2021": {
+          "mc_2_a": "Щоб опинитися перед ялинкою, потрібно двічі `рухатися вперед`.",
+          "mc_2_b": "Команда `знищити блок` зрубує дерево перед тобою."
+        },
+        "Overworld Chop Trees_2021": {
+          "mc_4_a": "Ти можеш зрубувати дерева у довільному порядку. Який шлях займає найменшу кількість блоків?",
+          "mc_4_b": "Команда `знищити блок` зрубує дерево перед тобою."
+        },
+        "Overworld Move to Sheep_2021": {
+          "mc_1_a": "Блок `рух вперед` знаходиться у верхній частині скриньки з інструментами.",
+          "mc_1_b": "Переконайся, що обидва блоки \"рух вперед\" приєднані до блоку \"при запуску\"."
+        },
+        "Overworld Plant Crops_2021": {
+          "mc_7_a": "Використовуй блок `посадити рослину`, щоб посадити рослину в тому місці, де ти стоїш.",
+          "mc_7_b": "Обидві смуги темно-коричневої землі біля води потрібно засіяти.",
+          "mc_7_c": "Ти можеш вставити більше одного блоку в `повторюваний` цикл."
+        },
+        "Underground Avoiding Lava_2021": {
+          "mc_11_a": "Увесь код для перевірки наявності лави та що з нею робити вже готовий. Все, що тобі потрібно зробити, це додати блок для руху.",
+          "mc_11_b": "Чи має твоя команда `рухатись вперед` бути всередині інструкції `if` або після неї?"
+        },
+        "Underground If Statements_2021": {
+          "mc_12_a": "Клітинки з червоними цяточками - це місце, де ти знайдеш Редстоун.",
+          "mc_12_b": "Чи можеш ти використати `повторюваний` цикл, щоб скоротити код?",
+          "mc_12_c": "Використовуй інструкцію `if` для перевірки клітинок на наявність лави, а потім розміщуй бруківку."
+        },
+        "courseA_collector_loops1_2021": {
+          "courseA_collector_loops1_a": "Коли ти дійдеш до клітинки зі скарбом, використовуй цей блок, щоб забрати його.\n\n<xml>  <block type=\"collector_collect\"/></xml>",
+          "courseA_collector_loops1_b": "Простим рішенням було б переміститися на схід 2 рази, а потім зібрати скарб."
+        },
+        "courseA_collector_loops2_2021": {
+          "courseA_collector_loops2_a": "Щоб забрати скарб, треба рухатися.",
+          "courseA_collector_loops2_b": "Коли ти дійдеш до клітинки зі скарбом, використовуй цей блок, щоб забрати його.\n\n<xml>  <block type=\"collector_collect\"/></xml>"
+        },
+        "courseA_collector_loops3_2021": {
+          "courseA_collector_loops3_a": "Спробуй використати цикл \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>!",
+          "courseA_collector_loops3_b": "Пам'ятай, що в одному циклі <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> можна розміщувати кілька блоків. "
+        },
+        "courseA_collector_loops4_2021": {
+          "courseA_collector_loops4_a": "Для зміни відстані, яку має пройти Лорел, зміни кількість повторень у циклі.",
+          "courseA_collector_loops4_b": "Не забувай, що після завершення  циклу `повторити` <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>, Лорел має спуститися вниз і забрати скарб!"
+        },
+        "courseA_collector_loops5_2021": {
+          "courseA_collector_loops5_a": "Якщо ти не можеш знайти відповідь одразу, спробуй на аркуші паперу визначити, які стрілки тобі знадобляться, і пошукай закономірність.",
+          "courseA_collector_loops5_b": "Спробуй розділити задачу на 2 частини, рухаючись вбік, а потім вниз.",
+          "courseA_collector_loops5_c": "Почни з циклу <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>, який переміщує Лорел на захід і збирає скарби."
+        },
+        "courseA_collector_loops7_2021": {
+          "courseA_collector_loops7_a": "Якщо ти не можеш зрозуміти, що буде далі, спробуй запустити код, щоб побачити, куди потрапляє Лорел."
+        },
+        "courseA_collector_loops9_2021": {
+          "courseA_collector_loops9_a": "Щоб визначити найкращі місця для використання циклів, спробуй кодувати їх крок за кроком і шукай закономірності. ",
+          "courseA_collector_loops9_b": "Спробуй вкласти 2 цикли <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> всередину іншого циклу, щоб скоротити код!"
+        },
+        "courseA_collector_loops_challenge1_2021": {
+          "courseA_collector_loops_challenge1_a": "Якщо щось піде не так, спробуй змінити цифри в кожному циклі.",
+          "courseA_collector_loops_challenge1_b": "Щоб зробити щось лише один раз, не потрібно використовувати цикли.",
+          "courseA_collector_loops_challenge1_c": "Коли ти починаєш гру, у правій частині печери лежить 6 дорогоцінних каменів, але коли ти рухатимешся на південь, потрібно буде зібрати скарб лише 5 разів. Знаєш, чому?",
+          "courseA_collector_loops_challenge1_d": "Початкова програма не збирає останні 2 камінці. Спробуй додати цей код у самому кінці:\n\n<xml><block type=\"maze_moveEast\">\n                        <next>\n                          <block type=\"collector_collect_simplified\">\n                            <next>\n                              <block type=\"maze_moveSouth\">\n                                <next>\n                                  <block type=\"collector_collect\"/>\n                                </next>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block></xml>"
+        },
+        "courseA_collector_loops_challenge2kp_2021": {
+          "courseA_collector_loops_challenge2kp_b": "Спробуй пройти цим шляхом.",
+          "courseA_collector_loops_challenge2kp_a": "Чи можна використати цикли для розв'язання?"
+        },
+        "courseA_harvester_loops1_2021": {
+          "courseA_harvester_loops1_a": "Коли дійдеш до кукурудзи, використовуй цей блок, щоб зібрати її!\n\n<xml><block type=\"harvester_corn\"/></xml>"
+        },
+        "courseA_harvester_loops2_2021": {
+          "courseA_harvester_loops2_a": "У твоєму коді буде **чотири** блоки 'переміститися на захід'\n\n<xml><block type=\"maze_moveWest\"/></xml>\n\nі **чотири** блоки <xml>\n`pick corn`\n  <block type=\"harvester_corn\"/>\n</xml>. ",
+          "courseA_harvester_loops2_b": "Якщо розв'язок все ще знайшовся, спробуй промовляти кроки вголос. "
+        },
+        "courseA_harvester_loops3_2021": {
+          "courseA_harvester_loops3_a": "Тобі допоможе блок 'повторення', як цей!\n\n<xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">4</title>\n  </block></xml>",
+          "courseA_harvester_loops3_b": "Щоб повторити код, використай цикл `повторити` (<xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">4</title>\n  </block></xml>), а потім розмісти всередині нього потрібний тобі блок. "
+        },
+        "courseA_harvester_loops4_2021": {
+          "courseA_harvester_loops4_a": "Не бійся запускати свій код і слідкувати за результатами!",
+          "courseA_harvester_loops4_b": "Скільки всього кукурудзи? Скільки разів повторюється код?"
+        },
+        "courseA_harvester_loops5_2021": {
+          "courseA_harvester_loops5_a": "Якщо одразу знайти розв'язок не вдається, спробуй розділити це завдання на 2 частини, одна частинка тебе чекає перед поворотом, а інша після.",
+          "courseA_harvester_loops5_b": "Твій кінцевий код міститиме **один** цикл `повторити` <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">6</title>\n    </block></xml>, **один** блок `переміститися на Південь` <xml><block type=\"maze_moveSouth\" limit=\"1\"/></xml> та **один** блок `переміститися на Схід` <xml><block type=\"maze_moveEast\" limit=\"1\"/> </xml>.",
+          "courseA_harvester_loops5_c": "Щоб зібрати усю кукурудзу, йди цим шляхом!"
+        },
+        "courseA_harvester_loops5a_2021": {
+          "courseA_harvester_loops5a_a": "Тобі знадобиться один цикл `repeat` <xml> <block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">6</title>\n  </block></xml>, а потім ще один.",
+          "courseA_harvester_loops5a_b": "Один цикл повторюватиме команду `переміститися на Південь` <xml><block type=\"maze_moveSouth\" limit=\"1\"/></xml>, а інший повторюватиме команду `переміститися на Схід` <xml><block type=\"maze_moveEast\" limit=\"1\"/></xml>.",
+          "courseA_harvester_loops5a_c": "Використовуй цей шлях, щоб рухатися в один бік, а потім в інший."
+        },
+        "courseA_harvester_loops5b_2021": {
+          "courseA_harvester_loops5b_a": "Натисни \"Запустити\" і слідкуй за результатом!",
+          "courseA_harvester_loops5b_b": "Чи повторюються твої цикли потрібну кількість разів?",
+          "courseA_harvester_loops5b_c": "Рухайтеся цим шляхом спочатку в одному напрямку, а потім в іншому."
+        },
+        "courseA_harvester_loops6_2021": {
+          "courseA_harvester_loops6_a": "Якщо виникли складнощі, спробуй виписати кроки на папері та і пошукати повторювані шаблони.",
+          "courseA_harvester_loops6_b": "Це шлях, яким слід йти, щоб зібрати всю кукурудзу."
+        },
+        "courseA_harvester_loops7_2021": {
+          "courseA_harvester_loops7_a": "Тобі знадобляться два цикли `repeat` <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">5</title>\n  </block></xml>, один за одним!",
+          "courseA_harvester_loops7_b": "Використай два цикли, щоб пройти цим шляхом."
+        },
+        "courseA_maze_ramp2_2021": {
+          "1": "Твій код має виглядати так:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>."
+        },
+        "courseA_maze_ramp3a_2021": {
+          "1": "Твій код має виглядати так:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveNorth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>."
+        },
+        "courseA_maze_ramp3b_2021": {
+          "1": "Твій код має виглядати так:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveSouth\">\n        <next>\n          <block type=\"maze_moveWest\">\n            <next>\n              <block type=\"maze_moveWest\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>."
+        },
+        "courseA_maze_ramp4a_2021": {
+          "1": "Твій код має виглядати так:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveSouth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>."
+        },
+        "courseA_maze_ramp5a_2021": {
+          "1": "Твій код має виглядати так:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveWest\">\n        <next>\n          <block type=\"maze_moveWest\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>."
+        },
+        "courseB_maze_seq1_2021": {
+          "courseB_maze_seq1_a": "Приєднуй блоки до блоку <xml><block type=\"when_run\"/></xml>, щоб змусити Скрета рухатись!",
+          "courseB_maze_seq1_b": "Перетягни три з цих стрілок <xml><block type=\"maze_moveSouth\"/></xml> і з'єднайте їх з блоком <xml><block type=\"when_run\"/></xml>, щоб довести Скрета до жолудя."
+        },
+        "courseB_maze_seq4_2021": {
+          "courseB_maze_seq4_a": "Спробуй додавати по одній інструкції за раз, доки не дійдеш до жолудя.",
+          "courseB_maze_seq4_b": "Щоб розв'язати це завдання, потрібно використати блок <xml><block type=\"maze_moveEast\"/></xml>."
+        },
+        "courseB_maze_seq8_2021": {
+          "courseB_maze_seq8_a": "Спробуй додавати по одному блоку за раз, доки не розв'яжеш завдання.",
+          "courseB_maze_seq8_b": "Існує декілька способів розв'язати це завдання!",
+          "courseB_maze_seq8_c": "Не знаєш, куди рухатися?  Спробуй цей шлях!"
+        },
+        "courseB_maze_seq_challenge2_2021": {
+          "courseB_maze_seq_challenge2_a": "Щоб розв'язати це завдання, не потрібно додавати або видаляти блоки.",
+          "courseB_maze_seq_challenge2_b": "Перестав блоки та пройди по маршруту \"сходинки\"."
+        },
+        "courseC19_playLab_EOC22022": {
+          "playlab_up": "Щоб перемістити персонажа вгору, з'єднай ці блоки:\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">up</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">1</title>\n      </block>\n    </next>\n  </block>\n  </xml>",
+          "playlab_down": "Щоб перемістити персонажа вниз, з'єднай ці блоки:\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">down</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">4</title>\n      </block>\n    </next>\n  </block>\n  </xml>",
+          "playlab_left": "Щоб перемістити персонажа вліво, з'єднай ці блоки:\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">left</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">8</title>\n      </block>\n    </next>\n  </block>\n  </xml>",
+          "playlab_right": "Щоб перемістити персонажа вправо, з'єднай ці блоки:\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">right</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">2</title>\n      </block>\n    </next>\n  </block>\n  </xml> "
+        },
+        "courseC19_playLab_EOC2_2021": {
+          "playlab_up": "Щоб перемістити персонажа вгору, з'єднай ці блоки:\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">up</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">1</title>\n      </block>\n    </next>\n  </block>\n  </xml>",
+          "playlab_down": "Щоб перемістити персонажа вниз, з'єднай ці блоки:\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">down</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">4</title>\n      </block>\n    </next>\n  </block>\n  </xml>",
+          "playlab_left": "Щоб перемістити персонажа вліво, з'єднай ці блоки:\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">left</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">8</title>\n      </block>\n    </next>\n  </block>\n  </xml>",
+          "playlab_right": "Щоб перемістити персонажа вправо, з'єднай ці блоки:\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">right</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">2</title>\n      </block>\n    </next>\n  </block>\n  </xml> "
+        },
+        "courseC_PlayLab_eventsFP_2021": {
+          "idea1": "_Потрібна ідея?_\n\n**Хто там?**  Зроби так, щоб персонажі з'являлися з випадковими зображеннями, щоб ніхто не знав, хто з'явиться наступним.\n\n<img src= \"https://images.code.org/dbd6ece9d0fb213039ea5dccb91fc425-image-1563577859889.gif\" style=\"width: 200px\">",
+          "idea2": "Потрібна ідея?\\_\n\n**Вирушаймо  у пригоду** - Зміни фон, а потім запрограмуй персонажів розповідати, де вони зараз перебувають.\n\n<img src= \"https://images.code.org/a7f740d73074deb128cdc2826abda9e6-image-1563576781779.gif\" style=\"width: 200px\">",
+          "idea3": "Потрібна ідея?\\_\n\n**Пінбол** - Запрограмуй одного персонажа рухатися за допомогою клавіш зі стрілками (використовуй блоки \"стрілка вгору\", \"стрілка вниз\") і відтворювати випадкові звуки, коли вони стикаються з іншими персонажами на екрані."
+        },
+        "courseC_PlayLab_events_challenge1_2021": {
+          "courseC_PlayLab_events_challenge_a": "Цей блок можна використовувати для переміщення персонажів у різні місця ігрової області.\n\n<xml> <block type=\"studio_setSpritePosition\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">12</title>\n  </block></xml>",
+          "courseC_PlayLab_events_challenge_b": "Спробуй використати блок `встановити персонажа посередині ліворуч`, коли він торкнеться будь-якого з інших персонажів. Це перезавантажить гру, і гравець зможе продовжити спроби!"
+        },
+        "courseC_artist_loops1a_2021": {
+          "courseC_artist_loops1a_a": "Це перший блок, який тобі потрібен:\n\n<xml>\n  <block type=\"jump_to\">\n    <title name=\"VALUE\">13</title>\n  </block>\n</xml>.",
+          "courseC_artist_loops1a_b": "Використовуй цей блок, щоб намалювати наліпку!\n\n<xml>\n<block type=\"sticker\">\n    <title name=\"VALUE\">Bird</title>\n  </block>\n</xml>."
+        },
+        "courseC_artist_loops1b_2021": {
+          "courseC_artist_loops1b_a": "Це перший блок, який тобі знадобиться:\n\n<xml>\n  <block type=\"draw_turn_by_constant_dropdown\">\n    <title name=\"DIR\">???</title>\n    <title name=\"VALUE\" config=\"45,60,90,120,180\">???</title>\n  </block>\n</xml>\n\nТи можеш вибрати як лівий, так і правий бік, а також будь-яку кількість градусів."
+        },
+        "courseC_artist_loops2a_2021": {
+          "courseC_artist_loops2a_a": "Усередині циклу тобі потрібно буде стрибнути до середини, потім повернути, потім намалювати наліпку.",
+          "courseC_artist_loops2a_b": "Натисни на число у верхній частині циклу `повтору`, щоб змінити кількість повторень."
+        },
+        "courseC_artist_loops3a_2021": {
+          "courseC_artist_loops3a_a": "Тобі потрібно буде додати лише один блок всередині циклу після першої наліпки.",
+          "courseC_artist_loops3a_b": "Твоя програма має виглядати наступним чином!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">???</title>\n        <statement name=\"DO\">\n          <block type=\"jump_to\">\n            <title name=\"VALUE\">13</title>\n            <next>\n              <block type=\"draw_turn_by_constant_dropdown\">\n                <title name=\"DIR\">???</title>\n                <title name=\"VALUE\" config=\"1,2,5,10,12,20,30,45,60,90,120,180\">???</title>\n                <next>\n                  <block type=\"sticker\">\n                    <title name=\"VALUE\">Cat</title>\n                    <next>\n                      <block type=\"sticker\">\n                        <title name=\"VALUE\">Dog</title>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>\n\nТи можеш використовувати будь-які наліпки, які тобі подобаються!"
+        },
+        "courseC_artist_loops4a_2021": {
+          "courseC_artist_loops4a_a": "Використовуй цей блок для стрибка вперед:\n\n<xml>\n<block type=\"jump_by_constant\">\n    <title name=\"DIR\">jumpForward</title>\n    <title name=\"VALUE\">???</title>\n  </block>\n</xml>\n\nНе забудь змінювати відстань!",
+          "courseC_artist_loops4a_b": "Твоя програма має виглядати так!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">???</title>\n        <statement name=\"DO\">\n          <block type=\"jump_to\">\n            <title name=\"VALUE\">13</title>\n            <next>\n              <block type=\"draw_turn_by_constant_dropdown\">\n                <title name=\"DIR\">???</title>\n                <title name=\"VALUE\" config=\"1,2,5,10,12,20,30,45,60,90,120,180\">???</title>\n                <next>\n                  <block type=\"sticker\">\n                    <title name=\"VALUE\">Cat</title>\n                    <next>\n                      <block type=\"jump_by_constant\">\n                        <title name=\"DIR\">jumpForward</title>\n                        <title name=\"VALUE\">???</title>\n                        <next>\n                          <block type=\"sticker\">\n                            <title name=\"VALUE\">Dog</title>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>."
+        },
+        "courseC_artist_loops5b_2021": {
+          "courseC_artist_loops5b_a": "Використовуй цей блок, щоб встановити шаблон ліній:\n\n<xml>\n<block type=\"draw_line_style_pattern\">\n    <title name=\"VALUE\">DEFAULT</title>\n  </block>\n</xml>.",
+          "courseC_artist_loops5b_b": "Для створення малюнка, подібного до наведеного вище, тобі потрібно перемістити назад стільки ж блоків, скільки ти перемістив уперед.",
+          "courseC_artist_loops5b_c": "Твоя програма має виглядати так!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"draw_line_style_pattern\">\n        <title name=\"VALUE\">rainbowLine</title>\n        <next>\n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">4</title>\n            <statement name=\"DO\">\n              <block type=\"jump_to\">\n                <title name=\"VALUE\">13</title>\n                <next>\n                  <block type=\"draw_move_by_constant\">\n                    <title name=\"DIR\">moveForward</title>\n                    <title name=\"VALUE\">???</title>\n                    <next>\n                      <block type=\"draw_move_by_constant\">\n                        <title name=\"DIR\">moveBackward</title>\n                        <title name=\"VALUE\">???</title>\n                        <next>\n                          <block type=\"draw_turn_by_constant_dropdown\">\n                            <title name=\"DIR\">???</title>\n                            <title name=\"VALUE\" config=\"1,2,5,10,12,20,30,45,60,90,120,180\">???</title>\n                            <next>\n                              <block type=\"sticker\">\n                                <title name=\"VALUE\">Cat</title>\n                                <next>\n                                  <block type=\"jump_by_constant\">\n                                    <title name=\"DIR\">jumpForward</title>\n                                    <title name=\"VALUE\">???</title>\n                                    <next>\n                                      <block type=\"sticker\">\n                                        <title name=\"VALUE\">Dog</title>\n                                      </block>\n                                    </next>\n                                  </block>\n                                </next>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>."
+        },
+        "courseC_artist_loops6a_2021": {
+          "courseC_artist_loops6a_a": "Для створення малюнка, подібного до наведеного вище, стрибни вперед менш ніж на 75 пікселів між кожною наліпкою."
+        },
+        "courseC_artist_prog6_2021": {
+          "courseC_artist_prog6_a": "Художник вже стоїть перед правильним способом намалювати свою першу лінію.",
+          "courseC_artist_prog6_b": "Цей діамант, насправді, - це просто квадрат, який стоїть на його куті.",
+          "courseC_artist_prog6_c": "Оскільки цей діамант також є квадратом, обов'язково поверни його на 90 градусів по кутах."
+        },
+        "courseC_collector_loops_challenge2_2021": {
+          "courseC_maze_loops_challenge2_b": "Використовуй цикли та продовжуй створювати блоки `зібрати`!"
+        },
+        "courseC_collector_prog1_2021": {
+          "courseC_collector_prog1_a": "Коли дістанешся місця зі скарбом, використовуй блок <xml><block type=\"collector_collect\"/></xml>, щоб забрати його.",
+          "courseC_collector_prog1_b": "Найпростішим рішенням було б рухатися вперед один раз, а потім забрати скарб."
+        },
+        "courseC_collector_prog3_2021": {
+          "courseC_collector_prog3_a": "Програма запускатиме лише ті блоки, які приєднані до блоку <xml><block type=\"when_run\"/></xml>.",
+          "courseC_collector_prog3_b": "Спробуй використовувати кнопку \"Крок\" для виконання коду по одному рядку за раз.  Дізнайся, де код працює неправильно.",
+          "courseC_collector_prog3_c": "Якщо тобі важко виконати це завдання, спробуй записати кроки на аркуші паперу."
+        },
+        "courseC_collector_prog6_2021": {
+          "courseC_collector_prog6_a": "З'ясуй, що відбувається не так?  \n\nСпробуй скористатися кнопкою \"Крок\" для пошуку помилок, виконуючи код рядок за рядком.",
+          "courseC_collector_prog6_b": "Застряг? Йди стежкою, щоб зібрати скарб."
+        },
+        "courseC_collector_prog7_2021": {
+          "courseC_collector_prog7_a": "У робочій зоні вже є багато чудового коду.  Тобі не потрібно нічого видаляти, щоб розв'язати це завдання.",
+          "courseC_collector_prog7_b": "Не бачиш блок, який тобі потрібен, щоб змусити шукачку пригод рухатися в правильному напрямку?  Витягни його зі скриньки інструментів.",
+          "courseC_collector_prog7_c": "Не знаєш, як пройти маршрут, щоб зібрати усі скарби?  Спробуй цей шлях"
+        },
+        "courseC_collector_prog_challenge1_2021": {
+          "courseC_collector_prog_challenge1_a": "Ти можеш використовувати блок `збирати` багато разів, щоб зібрати додатковий скарб."
+        },
+        "courseC_flappy_events2_2021": {
+          "courseC_flappy_events2_a": "Блок, який потрібно додати, називається `встановити швидкість`. ",
+          "courseC_flappy_events2_b": "З'єднай блок `встановити швидкість` з блоком `коли гра починається`, щоб розв'язати це завдання."
+        },
+        "courseC_flappy_events3_2021": {
+          "courseC_flappy_events3_a": "Якщо щось працює неправильно, перевір, чи з'єднані твої блоки з правильними подіями в робочій області."
+        },
+        "courseC_flappy_events4_2021": {
+          "courseC_flappy_events4_a": "З'єднай блок 'завершити гру' з блоком 'коли зіткнувся з перешкодою', щоб розв'язати це завдання."
+        },
+        "courseC_flappy_events5_2021": {
+          "courseC_flappy_events5_a": "Для проходження цього рівня тобі треба використати блок 'зарахувати бал'."
+        },
+        "courseC_harvester_loops1_2021": {
+          "courseC_harvester_loops1_a": "Коли дійдеш до гарбуза, використай blockly block][0], щоб зібрати його.",
+          "courseC_harvester_loops1_b": "Ти можеш використовувати цикл з блоком <xml><block type=\"harvester_pumpkin\"/></xml>, щоб зібрати декілька гарбузів на одній клітинці."
+        },
+        "courseC_maze_debugging4_2021": {
+          "courseC_maze_debugging4_a": "Використовуй кнопку \"Крок\", щоб переглядати інструкції по черзі.  Чи допомогло це тобі знайти місце, де щось пішло не так?",
+          "courseC_maze_debugging4_b": "Один з поворотів змушує Скрета йти у неправильному напрямку. Чи можеш ти з'ясувати, у якому саме?"
+        },
+        "courseC_maze_debugging5_2021": {
+          "courseC_maze_debugging5_a": "У робочій зоні вже є багато корисних блоків.  Не видаляй їх усі! \n\nВикористовуй кнопку \"Крок\", щоб пройти та з'ясувати помилки в коді.",
+          "courseC_maze_debugging5_c": "Ти можеш змінити напрямок блоку повороту, натиснувши на випадаючий список.",
+          "courseC_maze_debugging5_b": "Спробуй вимовити вголос те, що має зробити Скрет.  Чи збігається це з кодом у робочій зоні?  Що відбувається не так?"
+        },
+        "courseC_maze_debugging6_2021": {
+          "courseC_maze_debugging6_a": "-   Що має робити Скрет?\n-   Що робить Скрет?\n-   Про що це тобі говорить?",
+          "courseC_maze_debugging6_b": "Після знаходження та виправлення першої помилки використовуй процес налагодження знову, щоб знайти наступну помилку.\n\nПовторюй процес налагодження, поки програма не запрацює!"
+        },
+        "courseC_maze_debugging_challenge2_2021": {
+          "courseC_maze_debugging_challenge2_b": "Якщо ти застряг, спробуй налагодити код.  Що відбувається не так?",
+          "courseC_maze_debugging_challenge2_c": "Існує два різних шляхи, якими ти можеш пройти, просто рухаючись вперед та повертаючись чотири рази. Якщо ти знайдеш один спосіб використання циклу, їх зможе знайти ще більше таких способів!\n\n![](<https://images.code.org/8a4665671cda35fea1f629a5bcc39e26-image-1493502743154.48.05 PM.png>)"
+        },
+        "courseC_maze_loops_challenge1a_2021": {
+          "courseC_maze_loops_challenge1_a": "Думай про цей шлях, як про два різні етапи. Кожен з них має шаблон, який можна повторити.",
+          "courseC_maze_loops_challenge1_b": "Пригадай, як за допомогою циклів повторити шаблон сходинок."
+        },
+        "courseC_maze_programming1_2021": {
+          "courseC_maze_programming1_0": "Переконайся, що усі блоки були приєднані, а потім знову натисни \"Запустити\"."
+        },
+        "courseC_maze_programming2_2021": {
+          "courseC_maze_programming2_a": "Для використання блоку <xml><block type=\"maze_moveForward\"/></xml> перетягни його з панелі інструментів та приєднай до блоку <xml><block type=\"when_run\"/></xml>.",
+          "courseC_maze_programming2_b": "Переконайся, що усі блоки були приєднані, а потім знову натисни \"Запустити\"."
+        },
+        "courseC_maze_programming3_2021": {
+          "courseC_maze_programming3_a": "Спробуй спочатку запустити код та побачиш, що не так.",
+          "courseC_maze_programming3_b": "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nЩоб видалити блок з середини коду, перетягни усі блоки в іншу частину робочої зони.\n\nПеретягни блок, який ти хочеш видалити, назад у скриньку з інструментами.\n\nНа завершення, поверни інші блоки на місця."
+        },
+        "courseC_maze_programming4_2021": {
+          "courseC_maze_programming4_a": "Пам'ятай, що коли ти повертаєш, ти повертаєш з точки зору пташки.  Якщо ти повернеш праворуч, пташка подивиться вниз.",
+          "courseC_maze_programming4_b": "Виконай наступні дії:\n\n-   рухайся вперед\n-   поверни в один бік\n-   рухайся вперед\n-   поверни в інший бік\n-   рухайся вперед"
+        },
+        "courseC_maze_programming5_2021": {
+          "courseC_maze_programming5_a": "Спробуй використовувати кнопку \"Крок\", щоб виконати свій код рядок за рядком. Дізнайся, що потрібно зробити далі.",
+          "courseC_maze_programming5_b": "Пташці потрібно зробити один оберт, щоб завершити це завдання. Здогадайся в який бік?",
+          "courseC_maze_programming5_c": "Розв'язок складається з двох блоків \"рух вперед\", повороту та ще двох блоків \"рух вперед\"."
+        },
+        "courseC_maze_programming_challenge1_2021": {
+          "courseC_maze_programming_challenge1_a": "Існує багато способів дістатися до свинки. Пошукай шлях пальчиком, а потім запрограмуй його!"
+        },
+        "courseC_maze_programming_challenge2_2021": {
+          "courseC_maze_programming_challenge2_a": "_\"Якщо направляєте мене у зворотньому напрямку, уважно слідкуйте, щоб я повернувся в правильну сторону!\"_",
+          "courseC_maze_programming_challenge2_b": "Найкоротша відповідь використовує лише п'ять блоків, але в ній є цей блок:\n\n<xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>"
+        },
+        "courseC_starWars_loops2_2021": {
+          "courseC_starWars_loops2_a": "Щоб повторити код, використай цикл `повторити`, а потім розмісти всередині нього потрібний тобі блок."
+        },
+        "courseC_starWars_loops4_2021": {
+          "courseC_starWars_loops4_c": "Натиснувши на маленьку стрілку поруч з \"ліворуч\" на блоці повороту, ти зможеш змінити її на \"праворуч\".",
+          "courseC_starWars_loops4_a": "Використовуй два `повторювані` блоки.",
+          "courseC_starWars_loops4_b": "Кожен `повторюваний` цикл буде містити лише одну команду всередині: `рух вперед`."
+        },
+        "courseC_starWars_loops5_2021": {
+          "courseC_starWars_loops5_a": "Найкраще рішення передбачає один \"рух вперед\", потім поворот, потім цикл."
+        },
+        "courseC_starWars_loops8_2021": {
+          "course_starWars_loops8_a": "Спробуй обміркувати цю задачку маленькими фрагментами. Не поспішай. Тобі не потрібно вирішувати її з першої спроби!",
+          "course_starWars_loops8_b": "Поміркуй про першу половину цієї задачки як про задачку на сходинки. Як ти вирішував її раніше?",
+          "course_starWars_loops8_c": "Поглянь на цей шлях.\n\n![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)"
+        },
+        "courseC_starWars_loops9_2021": {
+          "course_starWars_loops9_b": "Ти можеш вставити більше одного блоку в `повторюваний` цикл.",
+          "course_starWars_loops9_c": "Для розв'язання цього завдання не обов'язково повертати ліворуч. Усі повороти можуть бути тільки праворуч.\n\n![](https://images.code.org/3dd00d424aa4112934053548b48bbb69-image-1510198997590.40.57.png)"
+        },
+        "courseD_artist_1_2021": {
+          "courseD_artist_project1_a": "Використовуй випадаюче меню на блоках `повороту`, щоб вибрати кут, який тобі потрібен!",
+          "courseD_artist_project1_b": "Пам'ятай, що коли ти \"рухаєшся вперед\", ти малюєш лінію, а коли \"стрибаєш вперед\" - ні."
+        },
+        "courseD_artist_2_2021": {
+          "courseD_artist_project1_b": "Пам'ятай, що коли ти \"рухаєшся\", ти малюєш лінію, а коли \"стрибаєш\" - ні.",
+          "courseD_artist_project1_a": "Використовуй випадаюче меню на блоках `повороту`, щоб вибрати кут, який тобі потрібен!"
+        },
+        "courseD_artist_5_2021": {
+          "1": "Якщо ти змінюєш форми, не забувай також змінити кути нахилу!"
+        },
+        "courseD_bee_conditionals1_predict1_2021": {
+          "courseD_bee_conditionals1_a": "Тобі потрібно буде використовувати блок `if`, щоб перевірити, чи є квітка під хмарою, перш ніж спробувати дістати нектар."
+        },
+        "courseD_bee_conditionals2_2021": {
+          "courseD_bee_conditionals2_a": "Іноді квітка буде на цьому місці, іноді ні.  Якщо ти хочеш, щоб твій код працював в обох випадках, обов'язково використовуй інструкцію зі словом `if`.",
+          "courseD_bee_conditionals2_c": "Тобі не потрібно перевіряти наявність стільників, під хмарками будуть лише квіти або порожні місця."
+        },
+        "courseD_bee_conditionals4_2021": {
+          "courseD_bee_conditionals4_a": "Ти все ще можеш сприймати кожну клітинку так, ніби над нею висить хмарка, навіть якщо ти бачиш усю стежку.",
+          "courseD_bee_conditionals4_b": "Використовуй інструкцію `if` всередині циклу та перевір кожну клітинку на наявність нектару."
+        },
+        "courseD_bee_conditionals5_2021": {
+          "courseD_bee_conditionals5_a": "Якщо ти використовуєш блок `якщо біля квітки`, ти можеш вирішити це завдання за допомогою вкладеного циклу. Напиши програму для лівої та нижньої стежки, а потім повтори все двічі!",
+          "courseD_bee_conditionals5_c": "Для продовження стежки бджілці потрібно `рухатися вперед`. Під час руху бджілка має перевірити наявність квітки. Якщо квітка є, бджілка має `зібрати нектар`."
+        },
+        "courseD_bee_conditionals6_2021": {
+          "courseD_bee_conditionals6_a": "Обов'язково використовуй інструкцію `if` для перевірки наявності стільників під кожною хмарою.",
+          "courseD_bee_conditionals6_b": "У цьому випадку тобі не потрібно шукати квіти під хмаринками.",
+          "courseD_bee_conditionals6_c": "Чи існує цикл, який можна використати для спрощення коду?"
+        },
+        "courseD_bee_conditionals7_2021": {
+          "courseD_bee_conditionals7_a": "**Пам'ятай:** Це завдання змінюється кожного разу під час запуску.\n\nТобі потрібно використовувати блок з умовою (`if/else`), щоб розв'язати цю задачку.",
+          "courseD_bee_conditionals7_b": "Якщо під хмаринкою немає квітки, обов'язково має бути стільник, тому не варто думати про випадок порожнього місця."
+        },
+        "courseD_bee_conditionals7_predict2_2021": {
+          "courseD_bee_conditionals7_a": "**Пам'ятай:** Це завдання змінюється кожного разу під час запуску.\n\nТобі потрібно використовувати блок з умовою (`if/else`), щоб розв'язати цю задачку."
+        },
+        "courseD_bee_conditionals_challenge2_2021": {
+          "courseD_bee_conditionals_challenge1_b": "Подібно до блоків `якщо біля квітки`, код всередині блоку `якщо нектар > 0` буде виконуватися лише тоді, коли бджілка знаходиться біля квітки. Різниця в тому, що код всередині буде виконуватися знову і знову, поки не залишиться нектару.  Спробуй цей шаблон:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+        },
+        "courseD_bee_nestedLoops1_2021": {
+          "courseD_bee_nestedLoops1_a": "Не працює?  Спробуй скористатися кнопкою \"Крок\", щоб побачити, що відбувається крок за кроком.",
+          "courseD_bee_nestedLoops1_b": "Спробуй спочатку написати код для однієї сторони квадрата. Чи можеш ти зробити це циклічно, щоб отримати весь нектар?",
+          "courseD_bee_nestedLoops1_c": "Не забудь використати блок `отримати нектар`, як тільки потрапиш на квадрат з квіткою."
+        },
+        "courseD_bee_nestedLoops1a_2021": {
+          "courseD_bee_nestedLoops1_a": "Не працює?  Спробуй скористатися кнопкою \"Крок\", щоб побачити, що відбувається крок за кроком.",
+          "courseD_bee_nestedLoops1_c": "Не забудь використати блок `отримати нектар`, як тільки потрапиш на квадрат з квіткою."
+        },
+        "courseD_bee_nestedLoops2_2021": {
+          "courseD_bee_nestedLoops2_a": "Для виконання цього завдання тобі потрібно буде вкласти один `повторюваний` цикл в інший.",
+          "courseD_bee_nestedLoops2_b": "Не вдається з'ясувати, де встановити цикли? Спробуй написати код на папері крок за кроком або дивись шаблон.",
+          "courseD_bee_nestedLoops2_c": "Пам'ятай, ти можеш вставити більше одного блоку в цикл."
+        },
+        "courseD_bee_nestedLoops7_2021": {
+          "courseD_bee_nestedLoops7_a": "Тобі потрібно буде повторити `отримати нектар` всередині іншого `повторюваного` блоку, який також містить блок `рухайся вперед`.",
+          "courseD_bee_nestedLoops7_b": "Для виконання цього завдання тобі потрібно буде використати усі три доступні `повторювані` блоки.",
+          "courseD_bee_nestedLoops7_c": "Встанови блоки по три вглиб, ось так:\n\n-   повтори 4 рази\n    -   повтори 3 рази\n        -   повтори 12 разів\n            -   отримай нектар\n        -   рухайся вперед\n    -   поверни праворуч"
+        },
+        "courseD_farmer_condLoops1_2021": {
+          "courseD_farmer_condLoops1_a": "Тобі потрібно буде шукати кукурудзу 5 разів, використовуючи цикл повторення.",
+          "courseD_farmer_condLoops1_b": "Переконайся, що ти використовуєш блок \"якщо біля кукурудзи\", інакше ти можеш вибрати щось, чого немає на полі!"
+        },
+        "courseD_farmer_condLoops2_2021": {
+          "courseD_farmer_condLoops2_a": "Найкращий спосіб зробити це - вкласти умови `if`, розмістивши одну всередині іншої.",
+          "courseD_farmer_condLoops2_b": "Для цього завдання тобі потрібно написати одну умову `if/else` та одну звичайну умову `if`.",
+          "courseD_farmer_condLoops2_c": "Твоя умова `if` може виглядати приблизно так:\n\n-   якщо біля кукурудзи\n    -   вибрати кукурудзу\n-   інакше\n    -   якщо біля салату\n        -   вибрати салат\n\nЯкщо у клітинці нічого немає, ти нічого не збираєш!"
+        },
+        "courseD_farmer_condLoops3_2021": {
+          "courseD_farmer_condLoops3_a": "Спробуй вкласти умови `if` втричі глибше, щоб зібрати усі рослини.\n\nЦе означає, що ти маєш вкласти одну умову `if` всередину іншої, а потім вкласти третю умову `if` всередину другої.",
+          "courseD_farmer_condLoops3_b": "Для цього завдання тобі потрібно написати дві умови `if/else` та одну просту умову `if`."
+        },
+        "courseD_farmer_condLoops4_2021": {
+          "grade3_RunningFarm_4courseD_farmer_condLoops4": "Ніхто не знає, скільки качанів салату виросте з кожного паростка.\n\nВикористовуй цикл `поки є салат`, щоб продовжувати збирати, поки не буде зібрано всі качани.",
+          "grade3_RunningFarm_4courseD_farmer_condLoops4_b": "Цикл `поки` також буде розглядати порожні пробіли! Оскільки салату немає, він не буде його вибирати та продовжить виконання коду.",
+          "grade3_RunningFarm_4courseD_farmer_condLoops4_c": "Ти можеш використовувати цикл `поки стежка попереду` або цикл `повторення`, щоб зібрати усі рослини."
+        },
+        "courseD_farmer_condLoops5_2021": {
+          "courseD_farmer_condLoops5_a": "З'явився новий цикл: `повторювати до гарбуза`. Чи можеш ти пояснити, як його використати у цьому завданні?",
+          "courseD_farmer_condLoops5_b": "У кожній точці може бути більше однієї рослини кукурудзи або салату. Використовуй цикл `поки`, щоб зібрати їх усі!"
+        },
+        "courseD_farmer_condLoops6_2021": {
+          "courseD_farmer_condLoops6_a": "Використовуй цикл `поки є стежка попереду` або блок `якщо є стежка попереду / інакше` для переміщення фермерки вниз по кожній частині спіралі.",
+          "courseD_farmer_condLoops6_b": "Тобі потрібно перевіряти наявність кукурудзи протягом більшої частини збору врожаю.  Просто візьми один гарбуз в самому кінці програми."
+        },
+        "courseD_farmer_condLoops7_2021": {
+          "courseD_farmer_condLoops7_a": "Зверни увагу, що найпростішим шляхом дістатися до усіх рослин залишається спіраль.\n\n\\[[0]]",
+          "courseD_farmer_condLoops7_b": "Спробуй використати `поки є стежка попереду`, щоб фермерка могла рухатися на потрібну кількість кроків."
+        },
+        "courseD_farmer_condLoops_challenge2_2021": {
+          "courseD_farmer_condLoops_challenge2_a": "Кількість кожного овоча в кожній клітинці різна. Цикл `поки` допоможе!"
+        },
+        "courseD_farmer_while4_2021": {
+          "courseD_farmer_conditionals4_a": "Замість використання циклу `повторення`, використовуй цикл `поки`, щоб продовжувати копати до тих пір, поки купа не зникне.",
+          "courseD_farmer_conditionals4_b": "Це дуже схоже на попереднє завдання, з тією лише різницею, який цикл тобі потрібен."
+        },
+        "courseD_farmer_while5_2021": {
+          "courseD_farmer_conditionals5a_a": "Спробуйте вставити цикл `поки` всередину циклу `повторити`.",
+          "courseD_farmer_conditionals5a_b": "Фермерці потрібно зробити п'ять кроків вперед, щоб дістатися до кінця рядка. Що ще потрібно зробити фермерці?",
+          "courseD_farmer_conditionals5a_c": "Рухайся вперед 5 разів. Щоразу, коли ти рухаєшся вперед, прибирай купу бруду, використовуючи блок `поки є купа`."
+        },
+        "courseD_farmer_while6_2021": {
+          "courseD_farmer_conditionals6_a": "Переконайся, що ти використовуєш цикл `while`, щоб визначити, скільки разів заповнювати кожен отвір.",
+          "courseD_farmer_conditionals6_b": "Зверни увагу, що фермерку потрібно кілька разів перемістити вперед та вниз у вигляді сходинок.",
+          "courseD_farmer_conditionals6_c": "У шаблоні сходинок використовуються наступні блоки\n\n-   рух вперед\n-   заповни отвір\n-   поворот праворуч\n-   рух вперед\n-   заповни отвір\n-   поворот ліворуч\n\nСкільки разів потрібно використовувати цей шаблон сходинок?\n\nПереконайся, що ти використовуєш цикл \"поки є отвір\" для заповнення отвору."
+        },
+        "courseD_farmer_while7_2021": {
+          "courseD_farmer_conditionals8_a": "Блок `поки шлях попереду` дозволяє тобі продовжувати рух, навіть якщо ти не знаєш, скільки клітинок на цьому шляху.",
+          "courseD_farmer_conditionals8_b": "Помістивши цикл `поки шлях попереду` всередину повторюваного циклу, ти можеш допомогти собі у вирішенні цього завдання.",
+          "courseD_farmer_conditionals8_c": "Що потрібно зробити в кінці кожного шляху?"
+        },
+        "courseD_farmer_while8_2021": {
+          "courseD_farmer_conditionals8_a": "Тобі потрібно буде використати більше одного циклу `поки`.",
+          "courseD_farmer_conditionals8_b": "Кожен отвір знаходиться в кінці шляху, тому використовуй `поки шлях попереду` перед тим, як використати `поки є отвір`.",
+          "courseD_farmer_conditionals8_c": "Зверни увагу, що тобі потрібно повторити код `поки шлях попереду`, `поки є отвір` шість разів."
+        },
+        "courseD_farmer_while_challenge1_2021": {
+          "courseD_farmer_while_challenge1_a": "Кожен отвір або купа бруду знаходиться на відстані одного проміжку **позаду** від кінця стежки.",
+          "courseD_farmer_while_challenge1_b": "Якщо ти використовуєш цикл `поки`, ти можеш сказати фермерці, щоб вона прибрала купу або засипала отвір, навіть якщо його там немає. Це означає, що ти можеш запрограмувати прибрати будь-який бруд або засипати будь-який отвір, незалежно від того, де він знаходиться.",
+          "courseD_farmer_conditionals8_c": "Це можна вирішити без використання `повторюваних` циклів. Для цього потрібно використати чотири цикли `поки`."
+        },
+        "courseD_harvester_nested_loops_challenge1_2021": {
+          "courseD_harvester_nested_loops_challenge1_a": "Спробуй пройти цим шляхом, щоб дістатися до кукурудзи! ",
+          "courseD_harvester_nested_loops_challenge1_b": "Щоб зібрати більше одного качана кукурудзи, тобі потрібно використати команду \"збирати кукурудзу\" більше одного разу.",
+          "courseD_harvester_nested_loops_challenge1_c": "Для вирішення цього завдання тобі потрібно вставити невеличкий цикл всередину основного циклу!"
+        },
+        "courseD_maze_nestedLoops4_2021": {
+          "courseD_maze_nestedLoops4_a": "Спробуй пройти цим шляхом через лабіринт.\n\n![](https://images.code.org/565dbbcaf5862da0f60e54195820e814-image-1505961491245.36.09.png)",
+          "courseD_maze_nestedLoops4_b": "Якщо шаблон циклу важко зрозуміти, спочатку спробуй закодувати його повністю та подивись, який код повторюється, перш ніж вставляти цикли.",
+          "courseD_maze_nestedLoops4_c": "Спробуй використати один `повторюваний` цикл всередині іншого, щоб скоротити кількість необхідного тобі коду."
+        },
+        "courseD_maze_nestedLoops6_2021": {
+          "courseD_maze_nestedLoops6_a": "Якщо ти застряг, спробуй спершу виписати код без циклів на папері та пошукати шаблони.",
+          "courseD_maze_nestedLoops6_b": "Встановлення одного `повторюваного` циклу всередині іншого може допомогти зменшити кількість використаних блоків.",
+          "courseD_maze_nestedLoops6_c": "Для розв'язання цього завдання тобі знадобиться два набори вкладених `повторюваних` циклів."
+        },
+        "courseD_maze_until1_2021": {
+          "courseD_maze_until1_a": "Чи є будь-яка послідовність, яку можна зациклити, щоб скоротити код?",
+          "courseD_maze_until1_b": "Спробуй виконати це завдання за допомогою вкладеного циклу."
+        },
+        "courseD_maze_until5_2021": {
+          "courseD_maze_until5_b": "Для використання лише одного `руху вперед` розмісти його всередині блоку `повторювати до соняшника`."
+        },
+        "courseD_maze_until6_2021": {
+          "courseD_maze_until6_b": "Для використання лише одного `руху вперед` розмісти його всередині блоку `повторювати до соняшника`."
+        },
+        "courseD_maze_until7_2021": {
+          "courseD_maze_until7_a": "Тобі не потрібно, щоб твій код був довшим, ніж минулого разу, просто тому, що лабіринт довший!",
+          "courseD_maze_until7_b": "Хоча тут більше поворотів, ніж у попередньому завданні, твій код може бути майже ідентичним завдяки блоку `повторювати поки`!"
+        },
+        "courseD_maze_until9_2021": {
+          "courseD_maze_until8_c": "Не забудь використати блок `повторювати поки`, щоб дістатись до соняшника!"
+        },
+        "courseF_artist_for1_2021": {
+          "courseF_artist_for1_a": "Можеш намалювати щось подібне?\n\n![](https://images.code.org/efee6df2a8840c89fa535bef72e9e45f-image-1530131926453.png)"
+        },
+        "courseF_artist_for6_2021": {
+          "courseF_artist_for6_a": "Твій цикл `for` буде рахувати від 15 до 300 на 15.",
+          "courseF_artist_for6_b": "Розмісти у цикл `for` блок `рухайся вперед` та `поворот`.",
+          "courseF_artist_for6_c": "Все, що тобі потрібно змінити - це кількість градусів у блоці `поворот`."
+        },
+        "courseF_artist_for8_2021": {
+          "courseF_artist_for8_a": "Усе інше у твоєму коді залишається незмінним, змінюється лише кут повороту.",
+          "courseF_artist_for8_b": "За бажанням ти можеш обрати інший колір для своєї спіралі!"
+        },
+        "courseF_artist_for9_2021": {
+          "courseF_artist_for9_a": "Якщо помістити блок `встановити альфа` всередину циклу `for` та використовувати змінну `лічильник` для його зміни, можна створити ось такий малюнок.",
+          "courseF_artist_for9_b": "Блок `встановити альфа` змінює непрозорість кольору. Чим менше значення, тим прозорішим є колір."
+        },
+        "courseF_artist_for_challenge1_2021": {
+          "courseF_artist_for_challenge1_a": "`Ширина інструменту ручка` дорівнює 1. Перший квадрат має кожну сторону 50 пікселів, а кожен наступний квадрат на 50 пікселів ширший за попередній.",
+          "courseF_artist_for_challenge1_b": "Непрозорість на пензлі завжди пов'язана із блоком `лічильник`/2.",
+          "courseF_artist_for_challenge1_c": "Після того, як ти зробиш квадрат, не забувай стрибати назад, повертатися, знову стрибати, потім знову повернутися!",
+          "courseF_artist_for_challenge1_d": "**Розв'язок:**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"draw_width\" inline=\"false\">\n        <value name=\"WIDTH\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">1</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"draw_colour\" inline=\"true\" id=\"draw-color\">\n            <value name=\"COLOUR\">\n              <block type=\"colour_picker\">\n                <title name=\"COLOUR\">#0000cd</title>\n              </block>\n            </value>\n            <next>\n              <block type=\"controls_for_counter\" inline=\"true\">\n              <mutation counter=\"counter\"></mutation>\n                <value name=\"FROM\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">50</title>\n                  </block>\n                </value>\n                <value name=\"TO\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">350</title>\n                  </block>\n                </value>\n                <value name=\"BY\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">50</title>\n                  </block>\n                </value>\n                <statement name=\"DO\">\n                  <block type=\"alpha\" inline=\"true\" id=\"alpha\">\n                    <value name=\"VALUE\">\n                      <block type=\"math_arithmetic\" inline=\"true\">\n                        <title name=\"OP\">DIVIDE</title>\n                        <value name=\"A\">\n                          <block type=\"variables_get\">\n                            <title name=\"VAR\">counter</title>\n                          </block>\n                        </value>\n                        <value name=\"B\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">2</title>\n                          </block>\n                        </value>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"controls_repeat_ext\" inline=\"true\">\n                        <value name=\"TIMES\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">4</title>\n                          </block>\n                        </value>\n                        <statement name=\"DO\">\n                          <block type=\"draw_move\" inline=\"true\">\n                            <title name=\"DIR\">moveForward</title>\n                            <value name=\"VALUE\">\n                              <block type=\"variables_get\">\n                                <title name=\"VAR\">counter</title>\n                              </block>\n                            </value>\n                            <next>\n                              <block type=\"draw_turn\" inline=\"true\">\n                                <title name=\"DIR\">turnRight</title>\n                                <value name=\"VALUE\">\n                                  <block type=\"math_number\">\n                                    <title name=\"NUM\">90</title>\n                                  </block>\n                                </value>\n                              </block>\n                            </next>\n                          </block>\n                        </statement>\n                        <next>\n                          <block type=\"jump\" inline=\"true\">\n                            <title name=\"DIR\">jumpBackward</title>\n                            <value name=\"VALUE\">\n                              <block type=\"math_number\">\n                                <title name=\"NUM\">25</title>\n                              </block>\n                            </value>\n                            <next>\n                              <block type=\"draw_turn\" inline=\"true\">\n                                <title name=\"DIR\">turnRight</title>\n                                <value name=\"VALUE\">\n                                  <block type=\"math_number\">\n                                    <title name=\"NUM\">90</title>\n                                  </block>\n                                </value>\n                                <next>\n                                  <block type=\"jump\" inline=\"true\">\n                                    <title name=\"DIR\">jumpBackward</title>\n                                    <value name=\"VALUE\">\n                                      <block type=\"math_number\">\n                                        <title name=\"NUM\">25</title>\n                                      </block>\n                                    </value>\n                                    <next>\n                                      <block type=\"draw_turn\" inline=\"true\">\n                                        <title name=\"DIR\">turnLeft</title>\n                                        <value name=\"VALUE\">\n                                          <block type=\"math_number\">\n                                            <title name=\"NUM\">90</title>\n                                          </block>\n                                        </value>\n                                      </block>\n                                    </next>\n                                  </block>\n                                </next>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseF_artist_for_challenge2_2021": {
+          "courseF_artist_for_challenge2_c": "Цикл `for` збільшується від 5 до 250 на 2.",
+          "courseF_artist_for_challenge2_a": "Зміна кольору відбувається за допомогою блоку `встановити червоний, зелений, голубий колір`.  Червоний колір встановлено на 255, зелений завжди дорівнює значенню `лічильника`, а синій завжди дорівнює `255 - лічильник`.",
+          "courseF_artist_for_challenge2_b": "Код для цього простіше, ніж ти можеш собі уявити.  Просто встанови колір всередині циклу for, рухайся вперед, а потім поверни.",
+          "courseF_artist_for_challenge2_d": "**Розв'язок:**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"draw_width\" inline=\"false\">\n        <value name=\"WIDTH\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">1</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"controls_for_counter\" inline=\"true\">\n          <mutation counter=\"counter\"></mutation>\n            <value name=\"FROM\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">5</title>\n              </block>\n            </value>\n            <value name=\"TO\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">250</title>\n              </block>\n            </value>\n            <value name=\"BY\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">2</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"draw_colour\" inline=\"true\" id=\"draw-color\">\n                <value name=\"COLOUR\">\n                  <block type=\"colour_rgb\" inline=\"false\">\n                    <value name=\"RED\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">255</title>\n                      </block>\n                    </value>\n                    <value name=\"GREEN\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">counter</title>\n                      </block>\n                    </value>\n                    <value name=\"BLUE\">\n                      <block type=\"math_arithmetic\" inline=\"true\">\n                        <title name=\"OP\">MINUS</title>\n                        <value name=\"A\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">255</title>\n                          </block>\n                        </value>\n                        <value name=\"B\">\n                          <block type=\"variables_get\">\n                            <title name=\"VAR\">counter</title>\n                          </block>\n                        </value>\n                      </block>\n                    </value>\n                  </block>\n                </value>\n                <next>\n                  <block type=\"draw_move\" inline=\"true\">\n                    <title name=\"DIR\">moveForward</title>\n                    <value name=\"VALUE\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">counter</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"draw_turn\" inline=\"true\">\n                        <title name=\"DIR\">turnRight</title>\n                        <value name=\"VALUE\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">80</title>\n                          </block>\n                        </value>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>\n\n![](<https://images.code.org/4ce89e8d907f670408c3705f040e8677-image-1497728974326.49.09 PM.png>)"
+        },
+        "courseF_artist_variables10_2021": {
+          "courseF_artist_variables10_a": "Отримай задоволення від цього рівня! Подивись, що невеликі зміни можуть зробити з твоїм кодом.",
+          "courseF_artist_variables10_b": "Ти можеш спробувати кілька варіантів та запустити свій код кілька разів."
+        },
+        "courseF_artist_variables7_2021": {
+          "courseF_artist_variables7_a": "Почни свій код з блоку `встановити довжину`. Встанови змінну довжини рівною 150.",
+          "courseF_artist_variables7_b": "Ти можеш використовувати `повторюваний` цикл для спрощення коду трикутника.",
+          "courseF_artist_variables7_c": "Тобі потрібно буде повернути ліворуч на 120 градусів, щоб зробити кути трикутника."
+        },
+        "courseF_artist_variables92022": {
+          "courseF_artist_variables9_b": "Переконайся, що блок, який змінює `довжину`, знаходиться у циклі, щоб рядки продовжували ставати довшими."
+        },
+        "courseF_artist_variables9_2021": {
+          "courseF_artist_variables9_a": "У цьому завданні все, що тобі потрібно зробити, - це змінити кількість повторень циклу.",
+          "courseF_artist_variables9_b": "Переконайся, що блок, який змінює `довжину`, знаходиться у циклі, щоб рядки продовжували ставати довшими."
+        },
+        "courseF_artist_variablesFP2022": {
+          "polygon_table": "Бажаєш спробувати інші багатокутники? \n\nВикористовуй кількість сторін у блоці `повтор` та кут у блоці `поворот`.\nСпробуй:\n\n|     Форма     | Сторони |  Кут |\n| :-----------: | :-----: | :--: |\n|   трикутник   |    3    | 120° |\n|    квадрат    |    4    |  90° |\n|  п'ятикутник  |    5    |  72° |\n|  шестикутник  |    6    |  60° |\n|  восьмикутник |    8    |  45° |\n| дев'ятикутник |    9    |  40° |\n|  десятикутник |    10   |  36° |"
+        },
+        "courseF_artist_variablesFP_2021": {
+          "polygon_table": "Бажаєш спробувати інші багатокутники? \n\nВикористовуй кількість сторін у блоці `повтор` та кут у блоці `поворот`.\nСпробуй:\n\n|     Форма     | Сторони |  Кут |\n| :-----------: | :-----: | :--: |\n|   трикутник   |    3    | 120° |\n|    квадрат    |    4    |  90° |\n|  п'ятикутник  |    5    |  72° |\n|  шестикутник  |    6    |  60° |\n|  восьмикутник |    8    |  45° |\n| дев'ятикутник |    9    |  40° |\n|  десятикутник |    10   |  36° |"
+        },
+        "courseF_bee_for10_2021": {
+          "courseF_bee_for10_a": "Чи можеш ти знайти зв'язок між кількістю кроків, які потрібно зробити, та кількістю нектарів, які ти можеш зібрати?",
+          "courseF_bee_for10_b": "У першому наборі квітів загалом **14 квіток**. Щоб дістатися до цього першого набору, бджілка має облетіти **7 клітинок** (або 14 клітинок поділити на 2). Скільки квіток у наступному наборі та скільки клітинок бджілка має облетіти, щоб дістатися до нього?",
+          "courseF_bee_for10_c": "У цьому завданні перший набір квітів складається з **14** квіток, другий набір - з **10** квіток, третій набір - з **6** квіток, а четвертий набір - з **2** квіток.\n\nЗверни увагу, що на цьому малюнку є **7** червоних клітинок, **5** помаранчевих клітинок, **3** зелені клітинки та **1** синя клітинка. \n\n![](<https://images.code.org/602ce14659299af6a59a79ebd0bdb9d4-image-1493221855089.6.11 Hint Drawing.png>)\n\nЯк ці числа пов'язані між собою?",
+          "courseF_bee_for10_d": "Тобі потрібно буде зробити 2 повтори, в одному з яких буде використано математичний блок."
+        },
+        "courseF_bee_for11_2021": {
+          "courseF_bee_for11_a": "На скільки 12 менше 15?\\\nНа скільки 9 менше 12?\n\nБачиш закономірність?"
+        },
+        "courseF_bee_for1_2021": {
+          "courseF_bee_for1_b": "Тобі потрібно буде використати два блоки в ‘повторюваному‘ циклі, щоб зібрати весь нектар."
+        },
+        "courseF_bee_for2_2021": {
+          "courseF_bee_for2_a": "Якщо ти заплутався, починай працювати з однією квіткою та частіше перевіряй.",
+          "courseF_bee_for2_b": "Не забувай рухатися вперед між кожним циклом, щоб дійти до кожної квітки."
+        },
+        "courseF_bee_for4_2021": {
+          "courseF_bee_for4_a": "Використовуй цикл `for`, який проходить від 1 до 7 з кроком 1, щоб виконати це завдання.",
+          "courseF_bee_for4_b": "У циклі \"for\" тобі знадобиться команда `рухайся вперед`, а також цикл для збору нектару.",
+          "courseF_bee_for4_c": "Обов'язково використовуй змінну `лічильник` всередині вкладеного `повторюваного` циклу для отримання достатньої кількості нектару!"
+        },
+        "courseF_bee_for6_2021": {
+          "courseF_bee_for6_a": "Не забудь використовувати змінну `лічильник` всередині `повторюваного` циклу.",
+          "courseF_bee_for6_b": "У циклі \"for\" тобі знадобиться команда `рухайся вперед`, а також цикл для збору нектару.",
+          "courseF_bee_for6_c": "Твій цикл має рахувати **від 5 до 1**."
+        },
+        "courseF_bee_for7_2021": {
+          "courseF_bee_for7_a": "Твій цикл `for` має рахувати від 1 до 7 на 2.",
+          "courseF_bee_for7_b": "У циклі \"for\" тобі знадобиться команда `рухайся вперед`, а також цикл для збору нектару.",
+          "courseF_bee_for7_c": "Не забудь використовувати змінну `лічильник` всередині `повторюваного` циклу."
+        },
+        "courseF_bee_variables_3a2022": {
+          "courseF_bee_variables_3_2021_1": "Щоб продовжити малюнок, збільшуй кількість повторів:\n<xml><block type=\"controls_repeat_ext\">\n      <value name=\"TIMES\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">4</title>\n        </block>\n      </value>\n    </block></xml>."
+        },
+        "courseF_bee_variables_3a_2021": {
+          "courseF_bee_variables_3_2021_1": "Щоб продовжити малюнок, збільшуй кількість повторів:\n<xml><block type=\"controls_repeat_ext\">\n      <value name=\"TIMES\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">4</title>\n        </block>\n      </value>\n    </block></xml>."
+        },
+        "courseF_bee_variables_3aa2022": {
+          "courseF_bee_variables_3_2021_1": "Щоб додати одиницю до змінної, використовуй цей код у своїй програмі:\n<xml><block type=\"math_change\">\n      <title name=\"VAR\">counter</title>\n      <value name=\"DELTA\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">1</title>\n        </block>\n      </value>\n    </block></xml>"
+        },
+        "courseF_bee_variables_3aa_2021": {
+          "courseF_bee_variables_3_2021_1": "Щоб додати одиницю до змінної, використовуй цей код у своїй програмі:\n<xml><block type=\"math_change\">\n      <title name=\"VAR\">counter</title>\n      <value name=\"DELTA\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">1</title>\n        </block>\n      </value>\n    </block></xml>"
+        },
+        "courseF_bee_variables_4a2022": {
+          "courseF_bee_variables_4_2021_1": "Замість того, щоб додавати 1 до змінної, щоразу додавайте 2."
+        },
+        "courseF_bee_variables_4a_2021": {
+          "courseF_bee_variables_4_2021_1": "Замість того, щоб додавати 1 до змінної, щоразу додавайте 2."
+        },
+        "courseF_text_choice_multiprompt": {
+          "when_answered_var": "Спробуй змінити позначку змінної у блоці `після відповіді`. Оскільки підказок може бути декілька, використовуй позначку для _останньої_ підказки, на яку буде надано відповідь.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n      <value name=\"VAR\">\n        <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n          <title name=\"VAR\">???</title>\n        </block>\n      </value>\n    </block></xml>"
+        },
+        "courseF_text_choice_multiprompt_-2022-2": {
+          "when_answered_var": "Спробуй змінити позначку змінної у блоці `після відповіді`. Оскільки підказок може бути декілька, використовуй позначку для _останньої_ підказки, на яку буде надано відповідь.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n      <value name=\"VAR\">\n        <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n          <title name=\"VAR\">???</title>\n        </block>\n      </value>\n    </block></xml>"
+        },
+        "courseF_text_concat": {
+          "prompt_example": "<xml>\n  <block type=\"when_run\" deletable=\"false\">\n    <next>\n      <block type=\"gamelab_setPrompt\">\n        <value name=\"QUESTION\">\n          <block type=\"text\">\n            <title name=\"TEXT\">What is your name?</title>\n          </block>\n        </value>\n        <value name=\"VAR\">\n          <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n            <title name=\"VAR\">name</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n  <block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">name</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_printText\">\n        <value name=\"TEXT\">\n          <block type=\"gamelab_textJoin\">\n            <title name=\"TEXT1\">Hello, </title>\n            <value name=\"TEXT2\">\n              <block type=\"gamelab_textVariableJoin\">\n                <title name=\"VAR\">name</title>\n                <value name=\"TEXT2\">\n                  <block type=\"gamelab_textJoin\">\n                    <title name=\"TEXT1\">!</title>\n                  </block>\n                </value>\n              </block>\n            </value>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
         }
       }
     }

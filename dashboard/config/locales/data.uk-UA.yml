@@ -30,15 +30,16 @@ uk:
         Jigsaw: Пазли
         MazeStep: Покроковий режим лабіринту
         Wordsearch: Пошук слів
-        Webapp: App Lab
+        Webapp: Програмна Лабораторія
         ArtistEC: Художник
         TextMatch: Співставлення тексту
-        StudioEC: Ігрова студія
-        Applab: App Lab
+        StudioEC: Ігрова лабораторія
+        Applab: Програмна Лабораторія
         NetSim: Інтернет симулятор
         Custom: Художник
-        CustomStudio: Ігрова студія
+        CustomStudio: Ігрова лабораторія
         Gamelab: Ігрова лабораторія
+        Spritelab: Спрайт Лабораторія
     trophy:
       name:
         Bronze: Бронза
@@ -751,8 +752,8 @@ uk:
         csd_gamelab_if_else: Якщо/Інші Твердження
         CSF_SpriteLabIntro_CDEF: Це Спрайт Лаб
         CSF_Spritelab_MakeSprite_CDEF: Як зробити Спрайт в Спрайт Лаб
-        CDEF_Video_SpritesInAction: Спрайт в Дії
-        CSF_SpriteLab_SpritesInAction_CDEF: Спрайт в Дії
+        CDEF_Video_SpritesInAction: Спрайти в дії
+        CSF_SpriteLab_SpritesInAction_CDEF: Спрайти в дії
         CSF_StarWars_ProjectIntro: Вступ до проекту Зоряні Війни
         mc_2018_intro: 'Minecraft: Вступ у Водний Вояж'
         MC_2018_loops: 'Minecraft: Водний Вояж Повторити до'
@@ -782,7 +783,7 @@ uk:
         CSF_Going_Places_Safely: Моє Інтернет-сусідство
         CSF_SpriteLab_Intro_v2: Представляємо Лабораторію спрайтів
         CSF_Spritelab_MakeSprite_v2: Як зробити спрайт
-        CSF_SpriteLab_SpritesInAction_v2: Спрайт в Дії
+        CSF_SpriteLab_SpritesInAction_v2: Спрайти в дії
         csd_debugging: Налагодження
         csd_applab_designmode_short: Режим дизайну Лабораторії додатків
         csp-pd-welcome: Ласкаво просимо до родини!

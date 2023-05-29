@@ -2455,6 +2455,12 @@
         "courseE_artist_functions_predict2_2021": {
           "do something": {
             "name": "щось зробити"
+          },
+          "draw line of polygons": {
+            "name": "намалюй лінію багатокутника"
+          },
+          "draw polygon": {
+            "name": "намалюйте багатокутник"
           }
         },
         "courseE_farmer_functions10a1_2021": {
@@ -3255,6 +3261,18 @@
               "length": "довжина",
               "sides": "сторони"
             }
+          },
+          "small flower": {
+            "name": "невелика квітка"
+          },
+          "LOGIC FLOWERS2": {
+            "name": "ЛОГІЧНІ КВІТИ2"
+          },
+          "LOGIC FLOWER": {
+            "name": "ЛОГІЧНА КВІТКА"
+          },
+          "LOGIC FLOWERS": {
+            "name": "ЛОГІЧНІ КВІТИ"
           }
         },
         "CourseD_EOC_artist2022": {
@@ -3602,6 +3620,11 @@
         "CourseF_app_computer_-2022-2": {
           "reset game": {
             "name": "скидання гри"
+          }
+        },
+        "courseF_bee_for_challenge1_2021": {
+          "move and get nectar with counter": {
+            "name": "рухайся та отримуй нектар за допомогою лічильника"
           }
         }
       }

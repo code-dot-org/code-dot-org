@@ -1359,7 +1359,8 @@
           "moving south": "рух на південь",
           "moving north": "рух на північ",
           "jittering": "тремтіння",
-          "moving west": "рух на захід"
+          "moving west": "рух на захід",
+          "swimming left and right": "пливи вліво та вправо"
         },
         "Virtual Pet 2_2021": {
           "wandering": "бродіння",
@@ -1372,7 +1373,8 @@
           "moving south": "рух на південь",
           "moving north": "рух на північ",
           "jittering": "тремтіння",
-          "moving west": "рух на захід"
+          "moving west": "рух на захід",
+          "swimming left and right": "пливи вліво та вправо"
         },
         "Virtual Pet 3_2021": {
           "wandering": "бродіння",
@@ -1385,7 +1387,20 @@
           "moving south": "рух на південь",
           "moving north": "рух на північ",
           "jittering": "тремтіння",
-          "moving west": "рух на захід"
+          "moving west": "рух на захід",
+          "wandering2": "блукання2",
+          "moving east2": "рух на схід2",
+          "spinning left2": "оберт вліво2",
+          "spinning right2": "оберт вправо2",
+          "shrinking2": "стиснення2",
+          "swimming left and right": "пливи вліво та вправо",
+          "growing2": "вирощування2",
+          "moving south2": "рух на південь2",
+          "swimming left and right2": "пливи вліво та вправо2",
+          "moving north2": "рух на північ2",
+          "jittering2": "тремтіння2",
+          "moving west2": "рух на захід2",
+          "patrolling2": "патрулювання2"
         },
         "courseE_aboutme_1_2021": {
           "wobbling": "хитання",
@@ -1892,7 +1907,10 @@
           "moving north": "рух на північ",
           "jittering": "тремтіння",
           "moving west": "рух на захід",
-          "moving east": "рух на схід"
+          "moving east": "рух на схід",
+          "mystery behavior": "таємнича поведінка",
+          "running east": "біжи на схід",
+          "swimming left and right": "пливи вліво та вправо"
         },
         "courseF_events_review": {
           "patrolling": "патрулювання",
@@ -2189,7 +2207,10 @@
           "spinning right": "обертання праворуч",
           "moving south": "рух на південь",
           "moving north": "рух на північ",
-          "jittering": "тремтіння"
+          "jittering": "тремтіння",
+          "mystery behavior": "таємнича поведінка",
+          "running east": "біжи на схід",
+          "swimming left and right": "пливи вліво та вправо"
         },
         "courseF_sprites_properties": {
           "shrinking": "стиснення",
@@ -2272,7 +2293,8 @@
           "moving south": "рух на південь",
           "moving north": "рух на північ",
           "jittering": "тремтіння",
-          "moving west": "рух на захід"
+          "moving west": "рух на захід",
+          "swimming left and right": "пливи вліво та вправо"
         },
         "courseF_text_choice_events": {
           "wandering": "бродіння",
@@ -2291,7 +2313,8 @@
           "moving south": "рух на південь",
           "moving north": "рух на північ",
           "jittering": "тремтіння",
-          "moving west": "рух на захід"
+          "moving west": "рух на захід",
+          "swimming left and right": "пливи вліво та вправо"
         },
         "courseF_text_choice_freeplay": {
           "wandering": "бродіння",
@@ -2310,7 +2333,8 @@
           "moving south": "рух на південь",
           "moving north": "рух на північ",
           "jittering": "тремтіння",
-          "moving west": "рух на захід"
+          "moving west": "рух на захід",
+          "swimming left and right": "пливи вліво та вправо"
         },
         "courseF_text_choice_interview": {
           "wandering": "бродіння",
@@ -2329,7 +2353,8 @@
           "moving south": "рух на південь",
           "moving north": "рух на північ",
           "jittering": "тремтіння",
-          "moving west": "рух на захід"
+          "moving west": "рух на захід",
+          "swimming left and right": "пливи вліво та вправо"
         },
         "courseF_text_choice_multiprompt": {
           "wandering": "бродіння",
@@ -2348,7 +2373,8 @@
           "moving south": "рух на південь",
           "moving north": "рух на північ",
           "jittering": "тремтіння",
-          "moving west": "рух на захід"
+          "moving west": "рух на захід",
+          "swimming left and right": "пливи вліво та вправо"
         },
         "courseF_text_choice_title": {
           "patrolling": "патрулювання",
@@ -2577,7 +2603,10 @@
           "spinning right": "обертання праворуч",
           "moving south": "рух на південь",
           "moving north": "рух на північ",
-          "jittering": "тремтіння"
+          "jittering": "тремтіння",
+          "mystery behavior": "таємнича поведінка",
+          "running east": "біжи на схід",
+          "swimming left and right": "пливи вліво та вправо"
         },
         "simcustom_2021": {
           "wandering": "бродіння",
