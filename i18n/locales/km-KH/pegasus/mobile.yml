@@ -60,7 +60,7 @@
   csedweek_map_signup: "ចុះឈ្មោះ​ព្រឹត្តិការណ៍​របស់​អ្នក"
   csedweek_map_search_placeholder: "ស្វែងរក​ព្រឹត្តិការណ៍ Hour of Code"
   csedweek_map_search_search: "ស្វែងរក"
-  csedweek_map_search_reset: "កំណត់​ឡើង​វិញ"
+  csedweek_map_search_reset: "កំណត់​ឡើង​វិញ "
   csedweek_map_legend_title: "វីរបុរស"
   csedweek_map_legend_event: "​ព្រឹត្តិការណ៍ Hour of Code"
   csedweek_map_legend_cs_tech_jam: "​ព្រឹត្តិការណ៍ពិសេស"
@@ -1361,6 +1361,7 @@
   sphero_beyond_longdescription: "មិនថាអ្នកជាអ្នកអប់រំ ឬឪពុកម្តាយទេ មេរៀន SPRK ផ្តល់ឲ្យក្មេងៗនូវវគ្គសិក្សាដ៏រីករាយក្នុងការបង្កើតរ៉ូបូត ស្របគ្នានឹងការពង្រឹងជំនាញរបស់ពួកគេលើ គណិតវិទ្យា និងវិទ្យាសាស្ត្រ។"
   compatibility_hide_this_warning: "លាក់ការព្រមាននេះ"
   compatibility_unsupported_browser: "កម្មវិធីសម្រាប់ស្វែងរករបស់អ្នកមិនអាចប្រើប្រាស់បានទេ។ សូមធ្វើបច្ចុប្បន្នាភាពកម្មវិធីស្វែងរករបស់អ្នកទៅជា <a href='%{supported_browsers_url}', target='_blank'>' មួយនៃកម្មវិធីស្វែងរករបស់យើងខ្ញុំ</a>។ អ្នកអាចសាកល្បងមើលទំព័រនេះម្តងទៀត ប៉ុន្តែសូមអ្នករំពឹងថាមុខងាររបស់វាត្រូវបានខូច។"
+  compatibility_unsupported_browser_markdown: "កម្មវិធីសម្រាប់ស្វែងរករបស់អ្នកមិនអាចប្រើប្រាស់បានទេ។ សូមធ្វើបច្ចុប្បន្នាភាពកម្មវិធីស្វែងរករបស់អ្នកទៅជា <a href='%{supported_browsers_url}', target='_blank'>' មួយនៃកម្មវិធីស្វែងរករបស់យើងខ្ញុំ</a>។ អ្នកអាចសាកល្បងមើលទំព័រនេះម្តងទៀត ប៉ុន្តែសូមអ្នករំពឹងថាមុខងាររបស់វាត្រូវបានខូច។"
   flappy_shortcode: "ទទះ"
   header_home: "ទំព័រដើម"
   header_my_dashboard: "ផ្ទាំង​គ្រប់គ្រងរបស់ខ្ញុំ"
@@ -1410,7 +1411,7 @@
   user_header_my_projects: "គម្រោងរបស់ខ្ញុំ"
   user_header_settings: "ការកែប្រែក្នុងគណនី​"
   user_header_logout: "ចាកចេញពីគណនី"
-  user_header_signin: "ចូល​គណនី"
+  user_header_signin: "ចូល​គណនី "
   user_header_create: 'បង្កើត'
   user_header_applab: 'App Lab'
   user_header_artist: 'សិល្បករ'
@@ -1625,3 +1626,4 @@
   ai_description: "សេចក្តីពិពណ៌នា"
   footer_cookie_notice: "សេចក្តីជូនដំណឹងអំពីខូគី"
   hoc2022_landing_page_create_title: "បង្កើត"
+  try_it_yourself: "សាកល្បង​ដោយ​ខ្លួន​ឯង!"

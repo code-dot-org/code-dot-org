@@ -974,6 +974,7 @@
   coursef-2020_name: Курс F (2020)
   coursed-2021_name: Курс D (2021)
   coursee-2021_name: Курс Е (2021)
+  coursef-2021_name: Курс F (2021)
   coursed-2022_name: Курс D (2021)
   express-2018_name: Експрес курс (2018)
   express-2019_name: Експрес курс (2019)
@@ -992,7 +993,7 @@
   starwarsblocks_name: "Зоряні війни (блоки)"
   hoc-encryption_name: Просте шифрування
   text-compression_name: Стиснення тексту
-  applab_name: "App Lab"
+  applab_name: "Програмна Лабораторія"
   gamelab_name: "Ігрова лабораторія"
   basketball_name: "Зроби гру в баскетбол"
   sports_name: "Закодуй власну спортивну гру"
@@ -1425,7 +1426,7 @@
   header_my_dashboard: "Моя майстерня"
   header_courses: "курси"
   header_course_catalog: "Каталог курсів"
-  header_project_gallery: "Проекти"
+  header_project_gallery: "Проєкти"
   header_sections: "Секції"
   header_professional_learning: "Підвищення кваліфікації"
   header_educate_overview: "Огляд для педагога"
@@ -1475,8 +1476,9 @@
   user_header_applab: 'App Lab '
   user_header_artist: 'Художник'
   user_header_gamelab: "Ігрова лабораторія"
-  user_header_playlab: "Ігрова студія"
+  user_header_playlab: "Ігрова лабораторія"
   user_header_dance: "Танцювальна вечірка"
+  user_header_spritelab: "Спрайт Лабораторія"
   user_header_minecraft: "Майнкрафт"
   user_header_flappy: "Пурх"
   user_header_view_all: "Переглянути всі проекти..."
