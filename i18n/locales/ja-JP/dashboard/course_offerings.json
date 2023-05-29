@@ -43,12 +43,18 @@
   "mc": "Minecraft Hour of Code プログラミング入門",
   "minecraft": "Minecraft Hour of Code デザイナー",
   "oceans": "海洋のためのAI",
+  "outbreak": "アウトブレイク・シミュレーター",
   "playlab": "プレイラボ",
   "sports": "独自のスポーツゲームをプログラミングしましょう",
   "text-compression": "テキスト圧縮",
   "csa-self-paced-pl": "CSAパイロットティーチャー向けCode.orgのナビゲート",
+  "ai-ethics": "AI倫理活動",
+  "counting-csc": "カウントアクティビティ",
+  "explore-data-1": "データアクティビティ",
   "outbreak-csc": "大流行",
+  "spelling-bee": "スペリングアクティビティ",
   "poem-art": "詩のアート",
+  "hello-world-retro": "ハローワールド：レトロ\n",
   "edit-code": "コードを編集します。",
   "tesstest921": "tesstest921",
   "poetry-hoc3": "poetry-hoc3",
@@ -63,5 +69,6 @@
   "soccer": "サッカー",
   "hello-world-space": "ハローワールド:スペース",
   "hello-world-soccer": "ハローワールド:サッカー",
-  "playground": "遊び場"
+  "playground": "遊び場",
+  "web-development": "ウェブ開発"
 }

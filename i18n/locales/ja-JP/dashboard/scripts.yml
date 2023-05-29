@@ -253,8 +253,12 @@ ja:
           description_short: この多肢選択式の評価では、コンピューター サイエンスの7つの大きなアイデアにわたる質問を扱います。これは、2部構成の50問試験の第2部です。
         CSDU1-Draft:
           description_short: 問題解決
+        CSDU2-Draft:
+          description_short: ウェブ開発
         CSDU5-Draft:
           description_short: データ
+        CSDU6-Draft:
+          description_short: メーカーラボ
         CSF_Secret_Sample_Story:
           description_audience: 8-18 才+
         MikeTest:
@@ -325,6 +329,7 @@ ja:
             practice:
               display_name: 授業実践
         csp1-support:
+          title: ユニット１オンライン専門学習コース
           lesson_groups:
             required:
               display_name: 概要
@@ -546,6 +551,7 @@ ja:
           title: パブリックキー暗号ウィジェット
         csd2-old:
           title: CSDユニット2 (非推奨)
+          description_short: ウェブ開発
         coursea-2017:
           title: コース A
           assignment_family_title: コース A
@@ -2726,12 +2732,16 @@ ja:
           lesson_groups:
             lg_1:
               display_name: 内容
+        outbreak:
+          title: アウトブレイク・シミュレーター
         2021drafting:
           lesson_groups:
             introduction:
               display_name: はじめに
             lessonGroup-3:
               display_name: 変数（へんすう）
+            outbreak:
+              display_name: アウトブレイク・シミュレーター
             debugging:
               display_name: デバッギング
         csd1-2021:
@@ -3146,6 +3156,7 @@ ja:
           lesson_groups:
             lessonGroup-4:
               display_name: アンケート
+          title: AIと機械学習
         vpl-csd-2021:
           lesson_groups:
             CSD_Module 1:
@@ -3168,6 +3179,114 @@ ja:
           lesson_groups:
             lessonGroup-2:
               display_name: ようこそ
+            lessonGroup-3:
+              display_name: Code.orgの操作方法
+            lessonGroup-5:
+              display_name: CS Discoveriesを教えるための準備
+          title: モジュール1：ようこそ
+          description: |-
+            このモジュールは、Code.orgとこの専門学習コースの両方を簡単に紹介するものです。
+
+            **以下のことを行います：**
+
+            -   Code.orgとCS Discoveriesの概要を理解する。
+            -   この 専門学習コースに参加する方法を学ぶ。
+
+            **推奨所要時間：** 10分
+          student_description: |-
+            このモジュールは、Code.orgとこの専門学習コースの両方を簡単に紹介するものです。
+
+            **以下のことを行います：**
+
+            -   Code.orgとCS Discoveriesの概要を理解する。
+            -   この 専門学習コースに参加する方法を学ぶ。
+
+            **推奨所要時間：** 10分
+        self-paced-pl-csd2-2021:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Code.orgの操作方法
+          title: モジュール2：Code. orgの操作方法
+          description: |-
+            このモジュールは、CSDiscoveriesを教える際に、学生をサポートするために使用するツールについて説明するものです。
+
+            **以下のことを行います：**
+
+            -   Code.orgのウェブサイトと教師用ツールをナビゲート。
+            -   教室のセクションを設定
+            -   コースのレッスンプランと教師用リソースを検索して使用。
+            -   コースを教えている間、サポートにアクセスする方法を学ぶ。
+
+            **推奨所要時間:** 60分
+          student_description: |-
+            このモジュールは、CSDiscoveriesを教える際に、学生をサポートするために使用するツールについて説明するものです。
+
+            **以下のことを行います：**
+
+            -   Code.orgのウェブサイトと教師用ツールをナビゲート。
+            -   教室のセクションを設定
+            -   コースのレッスンプランと教師用リソースを検索して使用。
+            -   コースを教えている間、サポートにアクセスする方法を学ぶ。
+
+            **推奨所要時間:** 60分
+        self-paced-pl-csd3-2021:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: CS Discoveriesの概要
+          title: モジュール3：CS Discoveriesの概要
+          description: |-
+            このモジュールでは、コースを通して学生が学ぶ概念と学生が使用するツールに重点を置いて、CS Discoveries コースの概要を説明します。このモジュールに参加することで、教室で実施するコースの内容をどのように選択するかについて判断できるようになります。
+
+            \*\* 以下のことができるようになります： \*\*
+
+            -   CS Discoveriesのカリキュラムを高度に理解。
+            -   CS Discoveriesで使用されるプログラミング環境について理解。
+            -   CS Discoveriesのどのユニットを授業で教えるかを決定。
+
+            \*\*推奨所要時間：60分
+          student_description: |-
+            このモジュールでは、コースを通して学生が学ぶ概念と学生が使用するツールに重点を置いて、CS Discoveries コースの概要を説明します。このモジュールに参加することで、教室で実施するコースの内容をどのように選択するかについて判断できるようになります。
+
+            \*\* 以下のことができるようになります： \*\*
+
+            -   CS Discoveriesのカリキュラムを高度に理解。
+            -   CS Discoveriesで使用されるプログラミング環境について理解。
+            -   CS Discoveriesのどのユニットを授業で教えるかを決定。
+
+            \*\*推奨所要時間：60分
+        self-paced-pl-csd4-2021:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: CS Discoveriesの教育と学習
+          title: モジュール4：CS Discoveriesの教育と学習
+          description: |-
+            このモジュールでは、CS Discoveriesコースを通して学生が取り組む本物のCS実践を紹介します。これらの実践には、デバッグ、リソースの使用、ペアプログラミングが含まれます。また、CSディスカバリーの教室における教師の役割を探り、コースを教えながら学生の学習をどのようにサポートするかについて計画を立てます。
+
+            **以下のことを行います:**
+
+            -   CS Discoveriesの教室における教師の役割について考える。
+            -   CS Discoveriesコースを通して学生が身につける本物のCS実践について学ぶ。
+            -   差別化、継続的な評価、包括的な文化の促進を通じて、学生の学習をどのようにサポートするかについて計画を立てる。
+
+            **推奨所要時間:** 50分
+          student_description: |-
+            このモジュールでは、CS Discoveriesコースを通して学生が取り組む本物のCS実践を紹介します。これらの実践には、デバッグ、リソースの使用、ペアプログラミングが含まれます。また、CSディスカバリーの教室における教師の役割を探り、コースを教えながら学生の学習をどのようにサポートするかについて計画を立てます。
+
+            **以下のことを行います:**
+
+            -   CS Discoveriesの教室における教師の役割について考える。
+            -   CS Discoveriesコースを通して学生が身につける本物のCS実践について学ぶ。
+            -   差別化、継続的な評価、包括的な文化の促進を通じて、学生の学習をどのようにサポートするかについて計画を立てる。
+
+            **推奨所要時間:** 50分
+        self-paced-pl-csd5-2021:
+          title: AIと機械学習の学習
+          description: "この専門学習モジュールは、Code.orgのAIと機械学習のユニットを教えるための準備に役立つよう設計されています。 \n\n**この専門学習モジュールでは、次のことが行われます：**。\n\n-   人工知能と機械学習の概要を理解。\n-   このユニットに含まれる重要な概念を訓練。\n-   AI LabとApp Labに触れる。\n-   章末のプロジェクトに取り組む。\n-   学生と一緒にユニットの実施計画を立てる。\n\n**推奨所要時間:** 120分"
+          student_description: "この専門学習モジュールは、Code.orgのAIと機械学習のユニットを教えるための準備に役立つよう設計されています。 \n\n**この専門学習モジュールでは、次のことが行われます：**。\n\n-   人工知能と機械学習の概要を理解する。\n-   AI Labを使用して機械学習モデルを訓練する。\n-   機械学習アプリに触れる。\n-   AIと機械学習の現実世界への影響について考える。\n-   章末のプロジェクトに取り組む。\n\n**推奨所要時間:** 120分"
+        self-paced-pl-csd6-2021:
+          description: "この専門学習モジュールは、Code.orgのAIと機械学習のユニットを教えるための準備に役立つよう設計されています。 \n\n**この専門学習モジュールでは、次のことが行われます：**。\n\n-   人工知能と機械学習の概要を理解する。\n-   AI Labを使用して機械学習モデルを訓練する。\n-   機械学習アプリに触れる。\n-   AIと機械学習の現実世界への影響について考える。\n-   章末のプロジェクトに取り組む。\n\n**推奨所要時間:** 120分"
+        self-paced-pl-csp2-2021:
+          title: モジュール2：Code. orgの操作方法
         outbreak-module:
           title: 大流行
         csa1-exemplars:
@@ -3226,6 +3345,9 @@ ja:
         hello-world-draft:
           title: '"ハローワールド！"'
         csa-self-paced-pl:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Code.orgの操作方法
           title: CSAパイロットティーチャー向けCode.orgのナビゲート
           description: |-
             このモジュールでは生徒の学習支援に使うツールについて解説します。
@@ -3298,6 +3420,8 @@ ja:
               display_name: デモとリソース
         tesstest921:
           name: tesstest921
+        hello-world-retro:
+          title: ハローワールド：レトロ
         hello-world-batman:
           title: ハローワールド
         csa4-exemplars:
@@ -3310,6 +3434,9 @@ ja:
               display_name: 内容
             lessonGroup-2:
               display_name: 内容
+        ai-ethics:
+          title: 当社のAI倫理規定
+          description_audience: 小学6年生から高校３年生
         csc-things:
           name: csc-things
           title: CSCブレインキャンプ
@@ -3378,9 +3505,14 @@ ja:
             lessonGroup-5:
               display_name: サンド ボックス
         ai-ethics-2021:
+          title: 当社のAI倫理規定
           description_audience: 小学6～高校3年生
         poem-art-2021:
           title: 詩のアート
+        poetry-2021:
+          title: 詩を用いたコーディング
+        hello-world-retro-2021:
+          title: ハローワールド：レトロ
         explore-data-1-2021:
           title: データの視覚化
         counting-csc-2021:
@@ -3671,6 +3803,8 @@ ja:
           lesson_groups:
             lessonGroup-2:
               display_name: 内容
+        self-paced-pl-csa2-2022:
+          title: モジュール2：Code. orgの操作方法
         csa7-pilot-extra:
           lesson_groups:
             lessonGroup-2:
@@ -3748,6 +3882,9 @@ ja:
           description: "この専門学習モジュールは、Code.orgのフィジカルコンピューティングユニットを教えるための準備を支援するよう設計されています。 \n\n**この専門学習モジュールの学習内容:**\n\n-   フィジカルコンピューティングを大まかに知る。\n-   ユニットにある主な概念を訓練。\n-   メーカーアプリに触れる。\n-   チャプタープロジェクトの最後を見て回る。\n\n**所要目安時間:** 90分"
           student_description: "この専門学習モジュールは、Code.orgのフィジカルコンピューティングユニットを教えるための準備を支援するよう設計されています。 \n\n**この専門学習モジュールの学習内容:**\n\n-   フィジカルコンピューティングを大まかに知る。\n-   ユニットにある主な概念を訓練。\n-   メーカーアプリに触れる。\n-   チャプタープロジェクトの最後を見て回る。\n\n**所要目安時間:** 90分"
         vpl-csd7-ci-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: AIと機械学習の学習
           title: 'モジュール 7: AIと機械学習を教えるための準備'
           description: "この専門学習モジュールは、Code.orgの人工知能（AI）と機械学習ユニットを教えるための準備を支援するよう設計されています。 \n\n**この専門学習モジュールの学習内容:**\n\n-   人工知能（AI）と機械学習を大まかに知る。\n-   ユニットにある主な概念を訓練。\n-   AI LabとApp Labに触れる。\n-   チャプタープロジェクトの最後を見て回る。\n-   生徒と一緒にユニットの実施計画を立てる。\n\n**所要目安時間:** 120分"
           student_description: "この専門学習モジュールは、Code.orgの人工知能（AI）と機械学習ユニットを教えるための準備を支援するよう設計されています。 \n\n**この専門学習モジュールの学習内容:**\n\n-   人工知能（AI）と機械学習を大まかに知る。\n-   ユニットにある主な概念を訓練。\n-   AI LabとApp Labに触れる。\n-   チャプタープロジェクトの最後を見て回る。\n-   生徒と一緒にユニットの実施計画を立てる。\n\n**所要目安時間:** 120分"
@@ -3838,12 +3975,113 @@ ja:
           lesson_groups:
             lessonGroup-2:
               display_name: ようこそ
+          title: モジュール1：ようこそ
+          description: |-
+            このモジュールは、Code.orgとこの専門学習コースの両方を簡単に紹介するものです。
+
+            **以下のことを行います：**
+
+            -   Code.orgとCS Discoveriesの概要を理解する。
+            -   この 専門学習コースに参加する方法を学ぶ。
+
+            **推奨所要時間：** 10分
+          student_description: |-
+            このモジュールは、Code.orgとこの専門学習コースの両方を簡単に紹介するものです。
+
+            **以下のことを行います：**
+
+            -   Code.orgとCS Discoveriesの概要を理解する。
+            -   この 専門学習コースに参加する方法を学ぶ。
+
+            **推奨所要時間：** 10分
+        self-paced-pl-csd2-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Code.orgの操作方法
+          title: モジュール2：Code. orgの操作方法
+          description: |-
+            このモジュールは、CSDiscoveriesを教える際に、学生をサポートするために使用するツールについて説明するものです。
+
+            **以下のことを行います：**
+
+            -   Code.orgのウェブサイトと教師用ツールをナビゲート。
+            -   教室のセクションを設定
+            -   コースのレッスンプランと教師用リソースを検索して使用。
+            -   コースを教えている間、サポートにアクセスする方法を学ぶ。
+
+            **推奨所要時間:** 60分
+          student_description: |-
+            このモジュールは、CSDiscoveriesを教える際に、学生をサポートするために使用するツールについて説明するものです。
+
+            **以下のことを行います：**
+
+            -   Code.orgのウェブサイトと教師用ツールをナビゲート。
+            -   教室のセクションを設定
+            -   コースのレッスンプランと教師用リソースを検索して使用。
+            -   コースを教えている間、サポートにアクセスする方法を学ぶ。
+
+            **推奨所要時間:** 60分
+        self-paced-pl-csd3-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: CS Discoveriesの概要
+          title: モジュール3：CS Discoveriesの概要
+          description: |-
+            このモジュールでは、コースを通して学生が学ぶ概念と学生が使用するツールに重点を置いて、CS Discoveries コースの概要を説明します。このモジュールに参加することで、教室で実施するコースの内容をどのように選択するかについて判断できるようになります。
+
+            \*\* 以下のことができるようになります： \*\*
+
+            -   CS Discoveriesのカリキュラムを高度に理解。
+            -   CS Discoveriesで使用されるプログラミング環境について理解。
+            -   CS Discoveriesのどのユニットを授業で教えるかを決定。
+
+            \*\*推奨所要時間：60分
+          student_description: |-
+            このモジュールでは、コースを通して学生が学ぶ概念と学生が使用するツールに重点を置いて、CS Discoveries コースの概要を説明します。このモジュールに参加することで、教室で実施するコースの内容をどのように選択するかについて判断できるようになります。
+
+            \*\* 以下のことができるようになります： \*\*
+
+            -   CS Discoveriesのカリキュラムを高度に理解。
+            -   CS Discoveriesで使用されるプログラミング環境について理解。
+            -   CS Discoveriesのどのユニットを授業で教えるかを決定。
+
+            \*\*推奨所要時間：60分
+        self-paced-pl-csd4-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: CS Discoveriesの教育と学習
+          title: モジュール4：CS Discoveriesの教育と学習
+          description: |-
+            このモジュールでは、CS Discoveriesコースを通して学生が取り組む本物のCS実践を紹介します。これらの実践には、デバッグ、リソースの使用、ペアプログラミングが含まれます。また、CSディスカバリーの教室における教師の役割を探り、コースを教えながら学生の学習をどのようにサポートするかについて計画を立てます。
+
+            **以下のことを行います:**
+
+            -   CS Discoveriesの教室における教師の役割について考える。
+            -   CS Discoveriesコースを通して学生が身につける本物のCS実践について学ぶ。
+            -   差別化、継続的な評価、包括的な文化の促進を通じて、学生の学習をどのようにサポートするかについて計画を立てる。
+
+            **推奨所要時間:** 50分
+          student_description: |-
+            このモジュールでは、CS Discoveriesコースを通して学生が取り組む本物のCS実践を紹介します。これらの実践には、デバッグ、リソースの使用、ペアプログラミングが含まれます。また、CSディスカバリーの教室における教師の役割を探り、コースを教えながら学生の学習をどのようにサポートするかについて計画を立てます。
+
+            **以下のことを行います:**
+
+            -   CS Discoveriesの教室における教師の役割について考える。
+            -   CS Discoveriesコースを通して学生が身につける本物のCS実践について学ぶ。
+            -   差別化、継続的な評価、包括的な文化の促進を通じて、学生の学習をどのようにサポートするかについて計画を立てる。
+
+            **推奨所要時間:** 50分
+        self-paced-pl-csp2-2022:
+          title: モジュール2：Code. orgの操作方法
         dlp-csp-mod1-2022:
           title: CS原則 詳細学習 モジュール1
         vpl-csd1-ayw-pilot-2022:
           lessons:
             lesson-6:
               name: 非同期デバッグ拡張
+        self-paced-pl-csd5-2022:
+          description: "この専門学習モジュールは、Code.orgのAIと機械学習のユニットを教えるための準備に役立つよう設計されています。 \n\n**この専門学習モジュールでは、次のことが行われます：**。\n\n-   人工知能と機械学習の概要を理解。\n-   このユニットに含まれる重要な概念を訓練。\n-   AI LabとApp Labに触れる。\n-   章末のプロジェクトに取り組む。\n-   学生と一緒にユニットの実施計画を立てる。\n\n**推奨所要時間:** 120分"
+          student_description: "この専門学習モジュールは、Code.orgのAIと機械学習のユニットを教えるための準備に役立つよう設計されています。 \n\n**この専門学習モジュールでは、次のことが行われます：**。\n\n-   人工知能と機械学習の概要を理解。\n-   このユニットに含まれる重要な概念を訓練。\n-   AI LabとApp Labに触れる。\n-   章末のプロジェクトに取り組む。\n-   学生と一緒にユニットの実施計画を立てる。\n\n**推奨所要時間:** 120分"
         vpl-csd2-ayw-pilot-2022:
           lessons:
             lesson-6:
@@ -4096,6 +4334,8 @@ ja:
               display_name: コース終了後アンケート
         csp-post-survey-2023:
           title: CS原則 のコース後アンケート
+        self-paced-pl-csa2-2023:
+          title: モジュール2：Code. orgの操作方法
         angelina-playground:
           lessons:
             lesson-5:
@@ -4138,6 +4378,7 @@ ja:
               display_name: '第1章: ウェブページの作成'
             lessonGroup-4:
               display_name: '第2章: マルチページのウェブサイト'
+          title: ウェブ開発
         pre-express-2023:
           lesson_groups:
             csf_sequencing:
@@ -4524,6 +4765,105 @@ ja:
           lesson_groups:
             lessonGroup-2:
               display_name: ようこそ
+          title: モジュール1：ようこそ
+          description: |-
+            このモジュールは、Code.orgとこの専門学習コースの両方を簡単に紹介するものです。
+
+            **以下のことを行います：**
+
+            -   Code.orgとCS Discoveriesの概要を理解する。
+            -   この 専門学習コースに参加する方法を学ぶ。
+
+            **推奨所要時間：** 10分
+          student_description: |-
+            このモジュールは、Code.orgとこの専門学習コースの両方を簡単に紹介するものです。
+
+            **以下のことを行います：**
+
+            -   Code.orgとCS Discoveriesの概要を理解する。
+            -   この 専門学習コースに参加する方法を学ぶ。
+
+            **推奨所要時間：** 10分
+        self-paced-pl-csd2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Code.orgの操作方法
+          title: モジュール2：Code. orgの操作方法
+          description: |-
+            このモジュールは、CSDiscoveriesを教える際に、学生をサポートするために使用するツールについて説明するものです。
+
+            **以下のことを行います：**
+
+            -   Code.orgのウェブサイトと教師用ツールをナビゲート。
+            -   教室のセクションを設定
+            -   コースのレッスンプランと教師用リソースを検索して使用。
+            -   コースを教えている間、サポートにアクセスする方法を学ぶ。
+
+            **推奨所要時間:** 60分
+          student_description: |-
+            このモジュールは、CSDiscoveriesを教える際に、学生をサポートするために使用するツールについて説明するものです。
+
+            **以下のことを行います：**
+
+            -   Code.orgのウェブサイトと教師用ツールをナビゲート。
+            -   教室のセクションを設定
+            -   コースのレッスンプランと教師用リソースを検索して使用。
+            -   コースを教えている間、サポートにアクセスする方法を学ぶ。
+
+            **推奨所要時間:** 60分
+        self-paced-pl-csd3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: CS Discoveriesの概要
+          title: モジュール3：CS Discoveriesの概要
+          description: |-
+            このモジュールでは、コースを通して学生が学ぶ概念と学生が使用するツールに重点を置いて、CS Discoveries コースの概要を説明します。このモジュールに参加することで、教室で実施するコースの内容をどのように選択するかについて判断できるようになります。
+
+            \*\* 以下のことができるようになります： \*\*
+
+            -   CS Discoveriesのカリキュラムを高度に理解。
+            -   CS Discoveriesで使用されるプログラミング環境について理解。
+            -   CS Discoveriesのどのユニットを授業で教えるかを決定。
+
+            \*\*推奨所要時間：60分
+          student_description: |-
+            このモジュールでは、コースを通して学生が学ぶ概念と学生が使用するツールに重点を置いて、CS Discoveries コースの概要を説明します。このモジュールに参加することで、教室で実施するコースの内容をどのように選択するかについて判断できるようになります。
+
+            \*\* 以下のことができるようになります： \*\*
+
+            -   CS Discoveriesのカリキュラムを高度に理解。
+            -   CS Discoveriesで使用されるプログラミング環境について理解。
+            -   CS Discoveriesのどのユニットを授業で教えるかを決定。
+
+            \*\*推奨所要時間：60分
+        self-paced-pl-csd4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: CS Discoveriesの教育と学習
+          title: モジュール4：CS Discoveriesの教育と学習
+          description: |-
+            このモジュールでは、CS Discoveriesコースを通して学生が取り組む本物のCS実践を紹介します。これらの実践には、デバッグ、リソースの使用、ペアプログラミングが含まれます。また、CSディスカバリーの教室における教師の役割を探り、コースを教えながら学生の学習をどのようにサポートするかについて計画を立てます。
+
+            **以下のことを行います:**
+
+            -   CS Discoveriesの教室における教師の役割について考える。
+            -   CS Discoveriesコースを通して学生が身につける本物のCS実践について学ぶ。
+            -   差別化、継続的な評価、包括的な文化の促進を通じて、学生の学習をどのようにサポートするかについて計画を立てる。
+
+            **推奨所要時間:** 50分
+          student_description: |-
+            このモジュールでは、CS Discoveriesコースを通して学生が取り組む本物のCS実践を紹介します。これらの実践には、デバッグ、リソースの使用、ペアプログラミングが含まれます。また、CSディスカバリーの教室における教師の役割を探り、コースを教えながら学生の学習をどのようにサポートするかについて計画を立てます。
+
+            **以下のことを行います:**
+
+            -   CS Discoveriesの教室における教師の役割について考える。
+            -   CS Discoveriesコースを通して学生が身につける本物のCS実践について学ぶ。
+            -   差別化、継続的な評価、包括的な文化の促進を通じて、学生の学習をどのようにサポートするかについて計画を立てる。
+
+            **推奨所要時間:** 50分
+        self-paced-pl-csd5-2023:
+          description: "この専門学習モジュールは、Code.orgのAIと機械学習のユニットを教えるための準備に役立つよう設計されています。 \n\n**この専門学習モジュールでは、次のことが行われます：**。\n\n-   人工知能と機械学習の概要を理解。\n-   このユニットに含まれる重要な概念を訓練。\n-   AI LabとApp Labに触れる。\n-   章末のプロジェクトに取り組む。\n-   学生と一緒にユニットの実施計画を立てる。\n\n**推奨所要時間:** 120分"
+          student_description: "この専門学習モジュールは、Code.orgのAIと機械学習のユニットを教えるための準備に役立つよう設計されています。 \n\n**この専門学習モジュールでは、次のことが行われます：**。\n\n-   人工知能と機械学習の概要を理解。\n-   このユニットに含まれる重要な概念を訓練。\n-   AI LabとApp Labに触れる。\n-   章末のプロジェクトに取り組む。\n-   学生と一緒にユニットの実施計画を立てる。\n\n**推奨所要時間:** 120分"
         pl-csd-summer-day1:
           lessons:
             lesson-3:
