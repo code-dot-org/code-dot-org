@@ -22,13 +22,8 @@ const FooterButtonColor = {
 const DialogStyle = makeEnum('default', 'simple');
 
 export function FooterButton(props) {
-  function color() {
-    if (props.color) {
-      return props.color;
-    }
-
-    return FooterButtonColor[props.type];
-  }
+  const {type, color, ...buttonProps} = props;
+  const buttonColor = color | FooterButtonColor[type] || undefined;
 
   // TODO: We shouldn't need to override <Button/> styles -- they should likely be default.
   // Tracked by https://codedotorg.atlassian.net/browse/STAR-1616.
@@ -37,7 +32,7 @@ export function FooterButton(props) {
     ...(styles.buttons[props.type] || {}),
   };
 
-  return <Button style={style} color={color()} {...props} />;
+  return <Button style={style} color={buttonColor} {...buttonProps} />;
 }
 
 // This component renders a <Button/>, so it will also accept/require any propTypes
