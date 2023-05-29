@@ -1206,7 +1206,7 @@ nl:
     Serena Williams, Neymar Jr, Carmelo Anthony en anderen inspireren studenten om
     door te zetten.
   highlights_constant_athletes_short_heading: Zet door
-  footer_copyright_message: Copyright 2015 Code.org. Alle rechten voorbehouden.
+  footer_copyright_message: Copyright %{current_year} Code.org. Alle rechten voorbehouden.
   footer_trademark_message: CodeUur™ is een handelsmerk van Code.org.
   footer_built_on_github: Built on GitHub from Microsoft
   footer_menu_partners: Partners

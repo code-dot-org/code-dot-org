@@ -1187,7 +1187,7 @@ gl:
   highlights_constant_athletes_heading: Champions and gold medalists Serena Williams,
     Neymar Jr, Carmelo Anthony and more inspire students to push themselves.
   highlights_constant_athletes_short_heading: Push yourself
-  footer_copyright_message: Copyright Code.org 2015. Tódolos dereitos reservados.
+  footer_copyright_message: Copyright Code.org %{current_year}. Tódolos dereitos reservados.
   footer_trademark_message: Hour of Code ™ é unha marca rexistrada de Code.org.
   footer_built_on_github: Built on GitHub from Microsoft
   footer_menu_partners: Socios

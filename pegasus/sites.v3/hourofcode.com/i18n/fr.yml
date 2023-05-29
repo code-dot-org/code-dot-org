@@ -46,8 +46,8 @@ fr:
     ! Venez vous amuser, découvrir et créer avec nous.
   social_hoc2022_dance: Avec Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez,
     de la musique de « Encanto » de Disney et bien plus encore !
-  social_hoc2023_dance: Featuring Beyoncé, BTS, Harry Styles, Lizzo, Lil Nas X, Selena
-    Gomez, music from Disney's "Encanto," and more!
+  social_hoc2023_dance: Avec Beyoncé, BTS, Harry Styles, Lizzo, Lil Nas X, Selena
+    Gomez, de la musique de « Encanto » de Disney et bien plus encore !
   social_hoc2021_cse: 'Au cours de #HourOfCode, nous célébrons #CSEverywhere. Découvrez
     les connexions !'
   hoc2020_header: Apprenez aujourd'hui, construisez un avenir meilleur.
@@ -161,12 +161,12 @@ fr:
     ces vecteurs pour former la SVM. Sur la base des données de formation, la SVM
     sépare « l'espace » de tous les poissons possibles en deux parties qui correspondent
     aux classes que nous essayons d'apprendre (comme « bleu » ou « non bleu »).
-  heading_additional_resources: Additional resources
+  heading_additional_resources: Ressources supplémentaires
   call_to_action_learn_more: En savoir plus
-  call_to_action_watch_now: Watch now
-  call_to_action_try_activity: Try activity
+  call_to_action_watch_now: Regarder maintenant
+  call_to_action_try_activity: Essayes une activité
   call_to_action_explore_unit: Explore unit
-  call_to_action_view_lesson_plan: View lesson plan
+  call_to_action_view_lesson_plan: Voir le plan de cours
   call_to_action_self_paced_pl: Start self-paced professional learning
   call_to_action_watch_panel: Watch panel
   call_to_action_learn_about_challenge: Learn about challenge
@@ -193,9 +193,9 @@ fr:
   pl_superhero_title: Help students become superheroes!
   pl_superhero_desc: Join our highly supportive Professional Learning Program for
     middle and high school educators.
-  teach_ai_homepage_banner_title: Éducation à l'IA pour le monde
-  teach_ai_homepage_banner_desc: Code.org fait partie de TeachAI, dédié à donner aux
-    éducateurs du monde entier les moyens d'enseigner avec l'IA et sur l'IA.
+  teach_ai_homepage_banner_title: L'éducation à l'IA pour le monde entier
+  teach_ai_homepage_banner_desc: Code.org fait partie de TeachAI, qui se consacre
+    à donner aux éducateurs du monde entier les moyens d'enseigner avec l'IA.
   blockchain_hero_heading: How Blockchain Works
   blockchain_hero_desc: Dive into the world of blockchain with "How Blockchain Works,"
     our new video series and accompanying lessons!
@@ -231,7 +231,7 @@ fr:
   blockchain_resources_03_heading: Hour of Code Activity
   blockchain_resources_03_desc: Try a crypto memory game created by Coinbase.
   blockchain_resources_03_button_label: Try the Crypto Memory Game activity
-  ai_2023_banner_title: Éducation à l'IA pour le monde
+  ai_2023_banner_title: L'éducation à l'IA pour le monde entier
   ai_2023_banner_skinny_desc: See how we're planning to bring AI education to classrooms
     everywhere.
   teachai_launch_blog_title: Introducing TeachAI!
@@ -304,7 +304,7 @@ fr:
     series of short videos will introduce you to how artificial intelligence works
     and why it matters. Then delve into issues like algorithmic bias and the ethics
     of AI decision-making.
-  ai_resources_heading: Additional resources
+  ai_resources_heading: Ressources supplémentaires
   ai_resources_desc: Interested in learning more about AI? Here are some additional
     resources that can help extend your students' learning.
   ai_resources_title_01: Ethics of AI Panel
@@ -1281,7 +1281,7 @@ fr:
   highlights_constant_athletes_heading: Les champions et médaillés d’or Serena Williams,
     Neymar Jr., Carmelo Anthony et d'autres inspirent les élèves à se dépasser.
   highlights_constant_athletes_short_heading: Dépassez-vous
-  footer_copyright_message: Copyright 2015 Code.org. Tous droits réservés.
+  footer_copyright_message: Copyright %{current_year} Code.org. Tous droits réservés.
   footer_trademark_message: Une Heure de Code™ est une marque de Code.org.
   footer_built_on_github: Built on GitHub from Microsoft
   footer_menu_partners: Partenaires

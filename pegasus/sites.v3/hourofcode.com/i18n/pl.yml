@@ -944,7 +944,7 @@ pl:
     zrealizować wiele angażujących działań, ale głównym celem jest, aby uczniowie
     i nauczyciele, którzy zaczynają przygodę z informatyką, mieli jak najlepsze wrażenia.
   hoc_faq_tutorial_a_markdown: Jeśli jesteś zainteresowany, by być partnerem samouczków,  [zobacz
-    nasze wskazówki i instrukcje] (%{tutorial_guidelines}). Chcielibyśmy zrealizować
+    nasze wskazówki i instrukcje](%{tutorial_guidelines}). Chcielibyśmy zrealizować
     wiele angażujących działań, ale głównym celem jest, aby uczniowie i nauczyciele,
     którzy zaczynają przygodę z informatyką, mieli jak największe korzyści.
   hoc_faq_account_q: Czy uczniowie muszą się logować i zakładać konto?
@@ -1206,7 +1206,7 @@ pl:
   highlights_constant_athletes_heading: Mistrzowie i złoci medaliści Serena Williams,
     Neymar Jr, Carmelo Anthony i wielu innych inspiruje uczniów do większego wysiłku.
   highlights_constant_athletes_short_heading: Spróbuj jeszcze
-  footer_copyright_message: Copyright 2015 Code.org. Wszelkie prawa zastrzeżone.
+  footer_copyright_message: Copyright %{current_year} Code.org. Wszelkie prawa zastrzeżone.
   footer_trademark_message: Hour od Code™ (Godzina Kodowania™) jest znakiem towarowym
     Code.org.
   footer_built_on_github: Built on GitHub from Microsoft

@@ -802,8 +802,7 @@ fi:
   map_legend_cs_tech_jam: Erikoistapahtuma
   map_warning: Täydellinen luettelo tapahtumista on nähtävissä <a href='%{events_url}'>
     tapahtumasivulla.</a>
-  map_warning_markdown: Täydellinen luettelo tapahtumista on nähtävissä [tapahtumasivulla.]
-    (%{events_url})
+  map_warning_markdown: Täydellinen luettelo tapahtumista on nähtävissä [tapahtumasivulla.](%{events_url})
   meta_tag_og_title: Koodaustunti on täällä
   meta_tag_og_description: Koodaustunti on maailmanlaajuinen liike, joka tavoittaa
     kymmeniä miljoonia ihmisiä yli 180:ssä maassa ja yli 30 eri kielellä. Sopii 4
@@ -931,10 +930,10 @@ fi:
     katso ohjeita ja ohjeita </a>. Haluaisimme isännöidä erilaisia kiinnostavia vaihtoehtoja,
     mutta ensisijaisena tavoitteena on optimoida kokemus opiskelijoille ja opettajille,
     jotka ovat uusia tietojenkäsittelytieteessä.
-  hoc_faq_tutorial_a_markdown: Jos haluat tulla opetuspartneriksi, [katso ohjeet]
-    (%{tutorial_guidelines}). Haluaisimme isännöidä erilaisia kiinnostavia vaihtoehtoja,
-    mutta ensisijaisena tavoitteena on optimoida kokemus opiskelijoille ja opettajille,
-    jotka ovat uusia tietojenkäsittelytieteessä.
+  hoc_faq_tutorial_a_markdown: Jos haluat tulla opetuspartneriksi, [katso ohjeet](%{tutorial_guidelines}).
+    Haluaisimme isännöidä erilaisia kiinnostavia vaihtoehtoja, mutta ensisijaisena
+    tavoitteena on optimoida kokemus opiskelijoille ja opettajille, jotka ovat uusia
+    tietojenkäsittelytieteessä.
   hoc_faq_account_q: Pitääkö opiskelijoiden kirjautua sisään tilillä?
   hoc_faq_account_a: Ei. Rekisteröintiä tai sisäänkirjautumista ei vaadita, jotta
     opiskelijat voivat kokeilla Tunnin koodia. Suurin osa <a href='%{codeorg_url}/learn/beyond'>
@@ -1183,7 +1182,7 @@ fi:
   highlights_constant_athletes_heading: Mestarit ja kultamitalistit Serena Williams,
     Neymar Jr, Carmelo Anthony ja muut innostavat opiskelijoita työntämään itseään.
   highlights_constant_athletes_short_heading: Haasta itseäsi
-  footer_copyright_message: Copyright 2015 Code.org. Kaikki oikeudet pidätetään.
+  footer_copyright_message: Copyright %{current_year} Code.org. Kaikki oikeudet pidätetään.
   footer_trademark_message: Hour of Code™ on Code.org:in tavaramerkki.
   footer_built_on_github: Rakennettu GitHubille Minecraftin avulla
   footer_menu_partners: Kumppanit

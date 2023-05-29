@@ -900,7 +900,7 @@ cn:
   highlights_constant_athletes_heading: 冠军和金牌获得者Serena Williams，Neymar Jr，Carmelo
     Anthony等人激励学生超越自己。
   highlights_constant_athletes_short_heading: 超越自己
-  footer_copyright_message: 版权所有 2015 Code.org。保留所有的权利。
+  footer_copyright_message: 版权所有 %{current_year} Code.org。保留所有的权利。
   footer_trademark_message: Hour of Code ™ 是 Code.org 的注册商标。
   footer_built_on_github: Built on GitHub from Microsoft
   footer_menu_partners: 合作伙伴

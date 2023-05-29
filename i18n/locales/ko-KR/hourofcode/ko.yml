@@ -712,7 +712,7 @@ ko:
   map_legend_hoc_events: Hour of Code 행사
   map_legend_cs_tech_jam: 특별 이벤트
   map_warning: 전체 이벤트 목록은 <a href='%{events_url}'>이벤트 페이지에서 볼 수 있습니다.</a>
-  map_warning_markdown: 전체 이벤트 목록은 [이벤트 페이지]에서 볼 수 있습니다.(%{events_url})
+  map_warning_markdown: 전체 이벤트 목록은 [이벤트 페이지](%{events_url})에서 볼 수 있습니다.
   meta_tag_og_title: Hour of Code 가 여기 있습니다.
   meta_tag_og_description: Hour of Code 는 180개 이상의 나라에서 30개 이상의 언어로, 4세부터 104세까지 수천만
     명의 학생들과 함께하려는 전세계적 운동입니다.
@@ -1026,7 +1026,7 @@ ko:
   highlights_constant_athletes_heading: 챔피온이자 금메달 수상자인 Serena Williams, Neymar Jr와
     Carmelo Anthony 등은 학생들에게 스스로 더 열심히 공부해야 겠다는 열청을 고취시킵니다.
   highlights_constant_athletes_short_heading: 스스로 한계에 도전하세요.
-  footer_copyright_message: Copyright 2015 Code.org. All rights reserved.
+  footer_copyright_message: Copyright %{current_year} Code.org. All rights reserved.
   footer_trademark_message: Hour of Code™와 Hora del Código®는 Code.org의 상표입니다.
   footer_built_on_github: Microsoft의 GitHub 위에 구축
   footer_menu_partners: 파트너

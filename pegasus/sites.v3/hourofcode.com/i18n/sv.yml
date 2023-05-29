@@ -1177,7 +1177,7 @@ sv:
   highlights_constant_athletes_heading: Kämpar och guldmedaljörerna Serena Williams,
     Neymar Jr, Carmelo Anthony och fler inspirerar elever att utmana sig själva.
   highlights_constant_athletes_short_heading: Utmana dig själv
-  footer_copyright_message: Copyright 2016 Code.org. All rights reserved.
+  footer_copyright_message: Copyright %{current_year} Code.org. All rights reserved.
   footer_trademark_message: Hour of Code™ är ett varumärke som tillhör Code.org.
   footer_built_on_github: Built on GitHub from Microsoft
   footer_menu_partners: Partners

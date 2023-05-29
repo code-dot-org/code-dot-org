@@ -1223,7 +1223,7 @@ id:
     Neymar Jr, Carmelo Anthony dan lebih menginspirasi siswa untuk mendorong diri
     mereka sendiri.
   highlights_constant_athletes_short_heading: Paksa dirimu
-  footer_copyright_message: Hak cipta 2015 Code.org. Semua hak dilindungi.
+  footer_copyright_message: Hak cipta %{current_year} Code.org. Semua hak dilindungi.
   footer_trademark_message: Hour of Code® dan Hora del Código® adalah merek dagang
     Code.org.
   footer_built_on_github: Built on GitHub from Microsoft

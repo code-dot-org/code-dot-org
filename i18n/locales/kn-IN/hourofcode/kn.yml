@@ -788,8 +788,8 @@ kn:
   map_legend_cs_tech_jam: Special Event
   map_warning: ಕಾರ್ಯಕ್ರಮಗಳ ಸಂಪೂರ್ಣ ಪಟ್ಟಿಯನ್ನು <a href='%{events_url}'>ಕಾರ್ಯಕ್ರಮಗಳ
     ಪುಟದಲ್ಲಿ ನೋಡಬಹುದು.</a>
-  map_warning_markdown: ಸಂಪೂರ್ಣ ಕಾರ್ಯಕ್ರಮಗಳ ಪಟ್ಟಿಯನ್ನು [ಕಾರ್ಯಕ್ರಮಗಳ ಪುಟ] ದಲ್ಲಿ ನೋಡಬಹುದು.
-    (%{events_url})
+  map_warning_markdown: 'ಸಂಪೂರ್ಣ ಕಾರ್ಯಕ್ರಮಗಳ ಪಟ್ಟಿಯನ್ನು [ಕಾರ್ಯಕ್ರಮಗಳ ಪುಟ](%{events_url})
+    ದಲ್ಲಿ ನೋಡಬಹುದು. '
   meta_tag_og_title: 'Hour of Code: Join the Movement'
   meta_tag_og_description: ಅವರ್ ಆಫ್ ಕೋಡ್ ಎಂಬುದು ಜಾಗತಿಕ ಚಳವಳಿಯಾಗಿದ್ದು, ಕೋಟ್ಯಂತರ ವಿದ್ಯಾರ್ಥಿಗಳನ್ನು
     ತಲುಪುತ್ತಿದೆ. ಒಂದು ಗಂಟೆ ಟ್ಯುಟೋರಿಯಲ್‌ಗಳು 180 ಕ್ಕೂ ದೇಶಗಳಲ್ಲಿ ಮತ್ತು 45 ಕ್ಕೂ ಹೆಚ್ಚು

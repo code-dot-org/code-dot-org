@@ -946,7 +946,7 @@ hu:
     célunk azon hallgatók a tanárok felzárkóztatása, akik újak a számítástechnika
     területén.
   hoc_faq_tutorial_a_markdown: Ha szeretnél te is oktató lenni, [tekintsd meg irányelveinket
-    és útmutatónkat] (%{tutorial_guidelines}). Több lehetőséget is kínálunk, de az
+    és útmutatónkat](%{tutorial_guidelines}). Több lehetőséget is kínálunk, de az
     elsődleges célunk azon hallgatók a tanárok felzárkóztatása, akik újak a számítástechnika
     területén.
   hoc_faq_account_q: Be kell jelentkezniük a diákoknak egy fiókkal?
@@ -1202,7 +1202,7 @@ hu:
   highlights_constant_athletes_heading: Bajnokok, mint Serena Williams, Neymar Jr,
     Carmelo Anthony inspiraljak a diakokat, hogy kihozzak magukbol a maximumot.
   highlights_constant_athletes_short_heading: Haladj előre
-  footer_copyright_message: Copyright 2015 Code.org. Minden jog fenntartva.
+  footer_copyright_message: Copyright %{current_year} Code.org. Minden jog fenntartva.
   footer_trademark_message: Hour of Code™ a Code.org bejegyzett védjegye.
   footer_built_on_github: A Microsoft GitHub-jára épült
   footer_menu_partners: Partnerek

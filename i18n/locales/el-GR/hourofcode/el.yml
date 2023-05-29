@@ -1290,8 +1290,8 @@ el:
     Neymar Jr, Carmelo Anthony και άλλοι εμπνέουν τους μαθητές να κάνου την μέγιστη
     προσπάθεια.
   highlights_constant_athletes_short_heading: Ώθησε τον εαυτό σου
-  footer_copyright_message: Πνευματικά δικαιώματα Code.org 2015. Όλα τα δικαιώματα
-    είναι κατοχυρωμένα.
+  footer_copyright_message: Πνευματικά δικαιώματα Code.org %{current_year}. Όλα τα
+    δικαιώματα είναι κατοχυρωμένα.
   footer_trademark_message: Τα Hour of Code® και Hora del Código®  είναι εμπορικά
     σήματα της Code.org.
   footer_built_on_github: Built on GitHub from Microsoft

@@ -949,7 +949,7 @@ uz:
     oling. "
   hoc_faq_international_a_markdown: Har bir inson dunyoning istalgan nuqtasida "Hour
     of Code" tadbirini tashkil qilishi mumkin. O‘tgan yili butun dunyo bo‘ylab talabalar
-    "Dasturlash soati" uchun birlashdilar. Batafsil ma'lumot [bu yerda](%{promot}).
+    "Dasturlash soati" uchun birlashdilar. Batafsil ma'lumot [bu yerda](%{promote}).
     "
   hoc_faq_tutorial_q: Qanday qilib bir soatlik darslikni tayyorlashim mumkin? '
   hoc_faq_tutorial_a: Agar o‘qituvchi sherik bo‘lishni xohlasangiz, <a href='/tutorial-guidelines'>bizning

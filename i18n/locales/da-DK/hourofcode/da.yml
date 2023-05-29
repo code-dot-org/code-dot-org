@@ -914,7 +914,7 @@ da:
     men hovedformålet er at elever og lærere som slet ikke kender til programmering
     skal få den bedst mulige oplevelse.
   hoc_faq_tutorial_a_markdown: Hvis du er interesseret i at blive en selvstudie-partner,
-    [se vores retningslinjer og instruktioner] (%{tutorial_guidelines}). Vi vil gerne
+    [se vores retningslinjer og instruktioner](%{tutorial_guidelines}). Vi vil gerne
     være vært for en række spændende muligheder, men det primære mål er at optimere
     oplevelsen for studerende og lærere, der er nye inden for datalogi.
   hoc_faq_account_q: Behøver elever at logge på med en konto?
@@ -1161,7 +1161,7 @@ da:
   highlights_constant_athletes_heading: Champions- og guldmedaljevindere Serena Williams,
     Neymar Jr og Carmelo Anthony inspirerer eleverne til at presse sig selv.
   highlights_constant_athletes_short_heading: Pres dig selv
-  footer_copyright_message: Copyright 2015 Code.org. Alle rettigheder forbeholdes.
+  footer_copyright_message: Copyright %{current_year} Code.org. Alle rettigheder forbeholdes.
   footer_trademark_message: Hour of Code™ er et trademark fra Code.org.
   footer_built_on_github: Built on GitHub from Microsoft
   footer_menu_partners: Partnere

@@ -1175,7 +1175,8 @@ is:
   highlights_constant_athletes_heading: Champions and gold medalists Serena Williams,
     Neymar Jr, Carmelo Anthony and more inspire students to push themselves.
   highlights_constant_athletes_short_heading: Ögraðu þér
-  footer_copyright_message: Höfundarréttur 2015 Code.org. Öll réttindi áskilin.
+  footer_copyright_message: Höfundarréttur %{current_year} Code.org. Öll réttindi
+    áskilin.
   footer_trademark_message: Hour of Code™ er vörumerki Code.org.
   footer_built_on_github: Built on GitHub from Microsoft
   footer_menu_partners: Samstarfsaðilar

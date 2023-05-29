@@ -806,7 +806,8 @@ tr:
   map_legend_cs_tech_jam: Özel Etkinlik
   map_warning: "<a href='%{events_url}'>etkinlik sayfasında </a> Etkinliklerin tüm
     listesi görülebilir."
-  map_warning_markdown: Etkinliklerin tam listesi, [etkinlikler sayfasında] görülebilir.(%{events_url})
+  map_warning_markdown: Etkinliklerin tam listesi, [etkinlikler sayfasında](%{events_url})
+    görülebilir.
   meta_tag_og_title: 'Hour of Code: Harekete Katılın'
   meta_tag_og_description: Hour of Code 180'den fazla ülkede gerçekleşen 10 milyonlarca
     öğrenciye ulaşmış küresel bir harekettir. 4'ten 104 yaşına kadar herkes için.

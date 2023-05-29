@@ -921,9 +921,9 @@ sq:
     Do të dëshironim të kishim një mori mundësish angazhimi, por qëllimi kryesor është
     të optimiziohet përvoja për studentët dhe mësimdhënësit e rinj në shkencat kompjuterike.
   hoc_faq_tutorial_a_markdown: Nëse jeni të interesuar të bëheni partner për tutoriale,
-    <a href='target-tutorial-guidelines'>ndiqni udhëzimet dhe instruksionet tona</a>.
-    Do të dëshironim të kishim një mori mundësish angazhimi, por qëllimi kryesor është
-    të optimiziohet përvoja për studentët dhe mësimdhënësit e rinj në shkencat kompjuterike.
+    [ndiqni udhëzimet dhe instruksionet tona](%{tutorial_guidelines}). Do të dëshironim
+    të kishim një mori mundësish angazhimi, por qëllimi kryesor është të optimiziohet
+    përvoja për studentët dhe mësimdhënësit e rinj në shkencat kompjuterike.
   hoc_faq_account_q: A duhet pjesëmarrësit të LOG ON kur përdorin një llogari?
   hoc_faq_account_a: Jo. Absolutisht nuk nevojitet Regjistrim apo Login për nxënësit
     për të provuar Orën e Kodimit. Shumica e <a href='http://%{codeorg_url}/learn/beyond'>kurseve</a>

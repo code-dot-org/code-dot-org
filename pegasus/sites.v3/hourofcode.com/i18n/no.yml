@@ -1160,7 +1160,7 @@
   highlights_constant_athletes_heading: Mestere og gullmedaljevinnere Serena Williams,
     Neymar Jr og Carmelo Anthony inspirerer elevene til å presse seg selv.
   highlights_constant_athletes_short_heading: Press deg selv
-  footer_copyright_message: Kopieringsrettigheter 2015 Code.org. Alle rettigheter
+  footer_copyright_message: Kopieringsrettigheter %{current_year} Code.org. Alle rettigheter
     reservert.
   footer_trademark_message: Varemerket Hour of Code™ tilhører Code.org.
   footer_built_on_github: Built on GitHub from Microsoft

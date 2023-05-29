@@ -1241,7 +1241,7 @@ ms:
     Neymar Jr, Carmelo Anthony dan sebagainya telah memberi inspirasi kepada para
     pelajar untuk mendorong diri mereka.
   highlights_constant_athletes_short_heading: Mendorong diri sendiri
-  footer_copyright_message: Hak Cipta 2015 Code.org. Semua hak terpelihara.
+  footer_copyright_message: Hak Cipta %{current_year} Code.org. Semua hak terpelihara.
   footer_trademark_message: Hour of Code® dan Hora del Código® ialah tanda dagangan
     Code.org.
   footer_built_on_github: Dibina di atas GitHub daripada Microsoft

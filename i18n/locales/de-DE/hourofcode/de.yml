@@ -1218,7 +1218,7 @@ de:
     Williams, Neymar Jr, Carmelo Anthony und viele andere begeistern Schüler sich
     weiter zu entwickeln.
   highlights_constant_athletes_short_heading: Arbeite an dir
-  footer_copyright_message: Copyright 2015 Code.org. Alle Rechte vorbehalten.
+  footer_copyright_message: Copyright %{current_year} Code.org. Alle Rechte vorbehalten.
   footer_trademark_message: Hour of Code™ ist eine Marke von Code.org.
   footer_built_on_github: Built on GitHub from Microsoft
   footer_menu_partners: Partner

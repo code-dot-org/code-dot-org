@@ -1248,7 +1248,7 @@ ph:
     na sina Serena Williams, Neymar Jr, Carmelo Anthony at higit pang napukaw na mga
     estudyante na magpursige.
   highlights_constant_athletes_short_heading: Itulak ang iyong sarili
-  footer_copyright_message: Hindi maaring ankinin. Pagmamay-ari ng Code.org 2015.
+  footer_copyright_message: Hindi maaring ankinin. Pagmamay-ari ng Code.org %{current_year}
   footer_trademark_message: Ang Hour of Code™ ay pagmamay-ari ng Code.org.
   footer_built_on_github: Built on GitHub from Microsoft
   footer_menu_partners: Partners
