@@ -62,6 +62,7 @@ import {
   setProjectUpdatedSaving,
 } from '../../code-studio/projectRedux';
 import {ProjectManagerEvent} from '../../labs/projects/ProjectManager';
+import {logError} from '../utils/MusicMetrics';
 
 /**
  * Top-level container for Music Lab. Manages all views on the page as well as the
@@ -456,7 +457,7 @@ class UnconnectedMusicView extends React.Component {
         levelCount = result.levelCount;
       } catch (e) {
         this.props.setIsPageError(true);
-        console.error(e, e.stack);
+        logError(e);
       }
 
       if (this.hasLevels()) {
