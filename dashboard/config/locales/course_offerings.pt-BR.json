@@ -50,9 +50,14 @@
         "starwarsblocks": "Star Wars: Construa uma galáxia com programação (Blocos)",
         "text-compression": "Compressão de texto",
         "csa-self-paced-pl": "Navegação pelo Code.org para professores-piloto do CSA",
+        "ai-ethics": "Atividade ética com I.A.",
+        "counting-csc": "Atividade de contagem",
+        "explore-data-1": "Atividade com dados",
         "outbreak-csc": "Epidemia",
+        "spelling-bee": "Atividade de ortografia",
         "poem-art": "Arte poética",
         "hello-world-emoji": "Olá, Mundo: Emoji",
+        "hello-world-retro": "\"Olá, mundo: Retrô",
         "edit-code": "Edite o código",
         "tesstest921": "tesstest921",
         "poetry-hoc3": "poetry-hoc3",
@@ -70,7 +75,8 @@
         "soccer": "futebol",
         "hello-world-space": "Olá, Mundo: Espaço",
         "hello-world-soccer": "Olá, Mundo: Futebol",
-        "playground": "Playground"
+        "playground": "Playground",
+        "web-development": "Desenvolvimento na Web"
       }
     }
   }
