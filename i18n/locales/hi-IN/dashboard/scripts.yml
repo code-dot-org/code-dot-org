@@ -2871,6 +2871,7 @@ hi:
           lesson_groups:
             lessonGroup-2:
               display_name: स्वागत है
+          title: 'मॉड्यूल 1: आपका स्वागत है '
         outbreak-module:
           title: प्रकोप
         csa-videos:
@@ -2969,6 +2970,9 @@ hi:
               display_name: डेमो और संसाधन
         hello-world-batman:
           title: हैलो दुनिया
+        ai-ethics:
+          title: हमारी AI आचार संहिता
+          description_audience: ग्रेड 6-12
         csc-things:
           name: सीएससी- वस्तुएँ
           title: सीएससी ब्रेन डंप
@@ -3032,9 +3036,12 @@ hi:
             lessonGroup-5:
               display_name: सैंडबॉक्स
         ai-ethics-2021:
+          title: हमारी AI आचार संहिता
           description_audience: ग्रेड्स 6-12
         poem-art-2021:
           title: कविता आर्ट
+        poetry-2021:
+          title: कविताओं के साथ कोडिंग
         explore-data-1-2021:
           title: डेटा विजुलाइज़ेशन
         counting-csc-2021:
@@ -3550,6 +3557,7 @@ hi:
           lesson_groups:
             lessonGroup-2:
               display_name: स्वागत है
+          title: 'मॉड्यूल 1: आपका स्वागत है '
         dlp-csp-mod1-2022:
           title: CS के मूल सिद्धांत गहन प्रशिक्षण मॉड्यूल 1
         vpl-csd1-ayw-pilot-2022:
@@ -4235,6 +4243,7 @@ hi:
           lesson_groups:
             lessonGroup-2:
               display_name: स्वागत है
+          title: 'मॉड्यूल 1: आपका स्वागत है '
         pl-csd-summer-day1:
           lessons:
             lesson-3:
