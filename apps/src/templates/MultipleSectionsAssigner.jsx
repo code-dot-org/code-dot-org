@@ -69,14 +69,10 @@ const MultipleSectionsAssigner = ({
         s => s.code !== currentSection.code
       );
       setCurrentSectionsAssigned(newList);
-      // TODO: Ensure we don't need to return object
-      // return {currentSectionsAssigned: newList};
     } else {
       const newList = [...currentSectionsAssigned];
       newList.push(currentSection);
       setCurrentSectionsAssigned(newList);
-      // TODO: Ensure we don't need to return object
-      // return {currentSectionsAssigned: newList};
     }
   };
 
@@ -121,18 +117,17 @@ const MultipleSectionsAssigner = ({
   };
 
   const selectAllHandler = () => {
+    let newSectionsAssigned = [...currentSectionsAssigned];
     for (let i = 0; i < sections.length; i++) {
       // if the section is NOT in currentSections assigned, assign it
       const isSectionToBeAssigned = !currentSectionsAssigned.some(
         s => s.code === sections[i].code
       );
       if (isSectionToBeAssigned) {
-        const newList = [...currentSectionsAssigned];
-        newList.push(sections[i]);
-        setCurrentSectionsAssigned(newList);
-        // return {currentSectionsAssigned: newList};
+        newSectionsAssigned.push(sections[i]);
       }
     }
+    setCurrentSectionsAssigned(newSectionsAssigned);
   };
 
   const unhideAndAssignUnit = section => {
