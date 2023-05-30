@@ -22,6 +22,7 @@
 #  index_lti_integrations_on_platform_id  (platform_id)
 #
 class LtiIntegration < ApplicationRecord
+  validates :platform_id, uniqueness: true
   validates :issuer, presence: true
   validates :client_id, presence: true
   validates :platform_name, presence: true
