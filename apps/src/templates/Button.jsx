@@ -158,7 +158,7 @@ class Button extends React.Component {
         moduleStyles.textButton,
         'button-active-no-border',
         color === ButtonColor.brandSecondaryDefault &&
-          moduleStyles.rebrendedTextButton
+          moduleStyles.rebrandedTextButton
       );
     } else {
       className = classNames(
