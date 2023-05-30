@@ -1255,6 +1255,19 @@ es-MX:
             '"z"': z
       gamelab_layoutGrid:
         text: diseño de sprites como una cuadrícula
+      gamelab_layoutSprites:
+        text: diseño {GROUP} como un {FORMAT}
+        options:
+          FORMAT:
+            '"border"': orilla
+            '"circle"': círculo
+            '"grid"': cuadrícula
+            '"top"': fila superior
+            '"row"': renglon
+            '"bottom"': fila inferior
+            '"left"': columna izquierda
+            '"column"': columna
+            '"right"': columna derecha
       gamelab_locationAt:
         text: 'ubicación x: {X} y: {Y}'
       gamelab_locationModifier:
@@ -1281,6 +1294,18 @@ es-MX:
             '"spiral"': espiral
       gamelab_makeNewSpriteAnon:
         text: crear un nuevo sprite {ANIMATION_NAME} en {LOCATION}
+      gamelab_makeNewSpriteGroup:
+        options:
+          FORMAT:
+            '"border"': orilla
+            '"circle"': círculo
+            '"grid"': cuadrícula
+            '"top"': fila superior
+            '"row"': renglon
+            '"bottom"': fila inferior
+            '"left"': columna izquierda
+            '"column"': columna
+            '"right"': columna derecha
       gamelab_makeNumSprites:
         text: hacer {NUM} nuevos {ANIMATION_NAME} sprites
       gamelab_makeProjectile:
@@ -2606,6 +2631,21 @@ es-MX:
           DIR:
             right: derecha ↻
             left: izquierda ↺
+      ecosystems_int10:
+        text: "{VALUE}"
+        options:
+          VALUE:
+            '0': '0'
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       storylab_clearHeadings:
         text: eliminar títulos
       storylab_setForegroundEffect2:

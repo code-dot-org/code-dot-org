@@ -144,6 +144,9 @@
         "the_internet/coursef/2022": {
           "name": "Интернэт"
         },
+        "cs_fundamentals_final_project/coursef/2022": {
+          "type": "Rubric"
+        },
         "curriculum_guide/coursee/2022": {
           "name": "Сургалтын хөтөлбөрийн заавар"
         },
@@ -164,6 +167,9 @@
         },
         "digital_sharing_ethics_video_/coursee/2022": {
           "type": "Видео"
+        },
+        "cs_fundamentals_final_project/coursee/2022": {
+          "type": "Rubric"
         },
         "curriculum_guide/courseb/2022": {
           "name": "Сургалтын хөтөлбөрийн заавар"
@@ -252,6 +258,9 @@
         },
         "variables/express/2022": {
           "name": "Хувьсагчууд"
+        },
+        "cs_fundamentals_final_project/express/2022": {
+          "type": "Rubric"
         },
         "teacher_forum/pre-express/2022": {
           "name": "Багш нарын форум"
@@ -410,6 +419,9 @@
         "computer_science_practices/csd/2022": {
           "type": "Тусгал"
         },
+        "create_a_representation_2/csd/2022": {
+          "type": "Rubric"
+        },
         "structuring_data/csd/2022": {
           "name": "Өгөгдлийг бүтэцчилэх"
         },
@@ -474,6 +486,12 @@
         "video_training_data_and_bias/csd/2022": {
           "type": "Видео"
         },
+        "make_a_recommendation/csd/2022": {
+          "type": "Үе тэнгийн тойм"
+        },
+        "make_a_recommendation_1/csd/2022": {
+          "type": "Rubric"
+        },
         "intro_to_problem_solving/csd/2022": {
           "name": "Асуудлыг шийдвэрлэх талаар танилцуулга"
         },
@@ -518,10 +536,12 @@
           "name": "Апп ба асуудлыг шийдэх"
         },
         "apps_and_problem_solving_1/csd/2022": {
-          "name": "Апп ба асуудлыг шийдэх"
+          "name": "Апп ба асуудлыг шийдэх",
+          "type": "Үе тэнгийн тойм"
         },
         "apps_and_problem_solving_2/csd/2022": {
-          "name": "Апп ба асуудлыг шийдэх"
+          "name": "Апп ба асуудлыг шийдэх",
+          "type": "Rubric"
         },
         "project_-_propose_an_app/csd/2022": {
           "name": "Төсөл - Апп санал болгох"
@@ -566,6 +586,9 @@
         "text/csd/2022": {
           "name": "Текст"
         },
+        "captioned_scenes/csd/2022": {
+          "type": "Rubric"
+        },
         "flipbook_example_-_by_marnic_bos/csd/2022": {
           "type": "Видео"
         },
@@ -585,6 +608,9 @@
         "sprite_movement_1/csd/2022": {
           "name": "Шидтэний хөдөлгөөн"
         },
+        "animated_scene/csd/2022": {
+          "type": "Rubric"
+        },
         "boolean_expressions/csd/2022": {
           "name": "Бүүлийн илэрхийлэл",
           "type": "Видео"
@@ -602,6 +628,12 @@
         "if_else_statements/csd/2022": {
           "name": "Хэрэв/өөр өгүүлбэрүүд",
           "type": "Видео"
+        },
+        "interactive_card_2/csd/2022": {
+          "type": "Үе тэнгийн тойм"
+        },
+        "interactive_card_3/csd/2022": {
+          "type": "Rubric"
         },
         "project_-_interactive_card/csd/2022": {
           "name": "Төсөл - Интерактив карт"
@@ -625,11 +657,17 @@
         "collision_detection_2/csd/2022": {
           "name": "Мөргөлдөөнийг илрүүлэх"
         },
+        "side_scroller/csd/2022": {
+          "type": "Rubric"
+        },
         "complex_sprite_movement/csd/2022": {
           "name": "Шидтэний нийлмэл хөдөлгөөн"
         },
         "collisions/csd/2022": {
           "name": "Мөргөлдөөн"
+        },
+        "flyer_game/csd/2022": {
+          "type": "Rubric"
         },
         "functions/csd/2022": {
           "name": "Функцүүд",
@@ -646,6 +684,12 @@
         },
         "using_the_game_design_process/csd/2022": {
           "name": "Тоглоомын дизайн боловсруулах үйл явцыг ашиглах"
+        },
+        "make_your_own_game_2/csd/2022": {
+          "type": "Үе тэнгийн тойм"
+        },
+        "make_your_own_game_3/csd/2022": {
+          "type": "Rubric"
         },
         "project_-_design_a_game/csd/2022": {
           "name": "Төсөл - Тоглоом зохиох"
@@ -677,6 +721,12 @@
         "headings/csd/2022": {
           "name": "Гарчиг"
         },
+        "html_web_page/csd/2022": {
+          "type": "Rubric"
+        },
+        "html_web_page_2/csd/2022": {
+          "type": "Үе тэнгийн тойм"
+        },
         "lists/csd/2022": {
           "name": "Жагсаалтууд"
         },
@@ -694,6 +744,12 @@
         "styling_text_with_css/csd/2022": {
           "name": "Текстийг CSS ашиглан загварчлах"
         },
+        "your_personal_style/csd/2022": {
+          "type": "Rubric"
+        },
+        "your_personal_style_1/csd/2022": {
+          "type": "Үе тэнгийн тойм"
+        },
         "creative_commons_overview/csd/2022": {
           "type": "Видео"
         },
@@ -705,6 +761,12 @@
         },
         "styling_elements_with_css/csd/2022": {
           "name": "Элементийг CSS ашиглан загварчлах"
+        },
+        "personal_web_page/csd/2022": {
+          "type": "Үе тэнгийн тойм"
+        },
+        "personal_web_page_1/csd/2022": {
+          "type": "Rubric"
         },
         "publishing_your_website/csd/2022": {
           "type": "Видео"
@@ -727,11 +789,17 @@
         "classes/csd/2022": {
           "name": "Ангиуд"
         },
+        "website_for_a_purpose/csd/2022": {
+          "type": "Rubric"
+        },
         "linking_pages/csd/2022": {
           "name": "Хуудас холбох"
         },
         "project_-_website_for_a_purpose/csd/2022": {
           "name": "Төсөл - Зорилго бүхий вэбсайт"
+        },
+        "website_for_a_purpose_1/csd/2022": {
+          "type": "Үе тэнгийн тойм"
         },
         "peer_review_and_final_touches/csd/2022": {
           "name": "Хамтрагчдын хяналт ба төгсгөлийн зөвлөмжүүд"
@@ -752,7 +820,8 @@
           "name": "Хэрэглэгчийн хэрэгцээг тодорхойлох"
         },
         "paper_prototypes/csd/2022": {
-          "name": "Цаасан туршилт"
+          "name": "Цаасан туршилт",
+          "type": "Rubric"
         },
         "project_-_paper_prototype/csd/2022": {
           "name": "Төсөл - Цаасны прототип"
@@ -791,7 +860,8 @@
           "name": "Апп-ыг туршиж байна"
         },
         "app_presentation/csd/2022": {
-          "name": "Апп танилцуулга"
+          "name": "Апп танилцуулга",
+          "type": "Rubric"
         },
         "app_presentation_1/csd/2022": {
           "name": "Апп танилцуулга"
@@ -843,8 +913,14 @@
           "name": "Хувьсагчууд",
           "type": "Видео"
         },
+        "rubric_-_on-the-go_app/csd/2022": {
+          "type": "Rubric"
+        },
         "input_output_devices/csd/2022": {
           "type": "Видео"
+        },
+        "rubric_-_human_device_interaction/csd/2022": {
+          "type": "Rubric"
         },
         "accelerometer/csd/2022": {
           "name": "Хурдасгуур хэмжигч"
@@ -873,8 +949,14 @@
         "functions_5/csd/2022": {
           "name": "Функцүүд"
         },
+        "student_rubric_-_interactive_art/csd/2022": {
+          "type": "Rubric"
+        },
         "project_prototype_an_innovation/csd/2022": {
           "name": "Төсөл: Инновацийг загварчлах"
+        },
+        "prototype_an_innovation/csd/2022": {
+          "type": "Rubric"
         },
         "ai_what_is_machine_learning_/csd/2022": {
           "type": "Видео"
@@ -885,26 +967,42 @@
         "finding_patterns_in_data/csd/2022": {
           "type": "Видео"
         },
+        "introduction_to_ai_lab/csd/2022": {
+          "name": "AI лабораторийн танилцуулга"
+        },
         "introduction_to_ai_lab_1/csd/2022": {
+          "name": "AI лабораторийн танилцуулга",
           "type": "Видео"
         },
         "training_and_testing_in_ai_lab/csd/2022": {
+          "name": "AI Lab дахь сургалт, туршилт",
           "type": "Видео"
         },
         "ai_training_data_bias/csd/2022": {
           "type": "Видео"
         },
         "model_cards_in_ai_lab/csd/2022": {
+          "name": "AI Lab дахь загвар картууд",
           "type": "Видео"
         },
         "if-statements_in_app_lab/csd/2022": {
           "type": "Видео"
         },
+        "numerical_data_in_ai_lab/csd/2022": {
+          "name": "AI лабораторийн тоон өгөгдөл"
+        },
+        "numerical_data_in_ai_lab_1/csd/2022": {
+          "name": "AI лабораторийн тоон өгөгдөл"
+        },
         "numerical_data_in_ai_lab_2/csd/2022": {
+          "name": "AI лабораторийн тоон өгөгдөл",
           "type": "Видео"
         },
         "ethics_ai_equal_access_and_algorithmic_bias/csd/2022": {
           "type": "Видео"
+        },
+        "create_an_ml_app/csd/2022": {
+          "type": "Rubric"
         },
         "survey_planning/csd/2022": {
           "name": "Өгөгдөл цуглуулах ажлыг зохион бүтээх"
@@ -917,6 +1015,9 @@
         },
         "view_and_download_survey_data/csd/2022": {
           "type": "Видео"
+        },
+        "design_an_ai_app_1/csd/2022": {
+          "type": "Rubric"
         },
         "lesson_plans/courseb/2018": {
           "name": "Хичээлийн төлөвлөгөө"
@@ -1421,6 +1522,9 @@
         "unplugged-video-internet/coursef/2021": {
           "name": "Интернэт"
         },
+        "rubric-csf-final-projects/coursef/2021": {
+          "type": "Rubric"
+        },
         "curriculum_guide_1/courseb/2021": {
           "name": "Сургалтын хөтөлбөрийн заавар"
         },
@@ -1684,6 +1788,9 @@
         "variables_video/express/2021": {
           "name": "Хувьсагчууд"
         },
+        "rubric-csf-final-projects/express/2021": {
+          "type": "Rubric"
+        },
         "teacher_forum_1/pre-express/2021": {
           "name": "Багш нарын форум"
         },
@@ -1726,6 +1833,9 @@
         "designing_for_accessibility_1/coursee/2021": {
           "name": "Хүртээмжтэй болгохын тулд дизайн хийх"
         },
+        "rubric-csf-final-projects/coursee/2021": {
+          "type": "Rubric"
+        },
         "ai_what_is_machine_learning_/csd/2021": {
           "type": "Видео"
         },
@@ -1735,26 +1845,42 @@
         "finding_patterns_in_data/csd/2021": {
           "type": "Видео"
         },
+        "introduction_to_ai_lab/csd/2021": {
+          "name": "AI лабораторийн танилцуулга"
+        },
         "introduction_to_ai_lab_1/csd/2021": {
+          "name": "AI лабораторийн танилцуулга",
           "type": "Видео"
         },
         "training_and_testing_in_ai_lab/csd/2021": {
+          "name": "AI Lab дахь сургалт, туршилт",
           "type": "Видео"
         },
         "ai_training_data_bias/csd/2021": {
           "type": "Видео"
         },
         "model_cards_in_ai_lab/csd/2021": {
+          "name": "AI Lab дахь загвар картууд",
           "type": "Видео"
         },
         "if-statements_in_app_lab/csd/2021": {
           "type": "Видео"
         },
+        "numerical_data_in_ai_lab/csd/2021": {
+          "name": "AI лабораторийн тоон өгөгдөл"
+        },
+        "numerical_data_in_ai_lab_1/csd/2021": {
+          "name": "AI лабораторийн тоон өгөгдөл"
+        },
         "numerical_data_in_ai_lab_2/csd/2021": {
+          "name": "AI лабораторийн тоон өгөгдөл",
           "type": "Видео"
         },
         "ethics_ai_equal_access_and_algorithmic_bias/csd/2021": {
           "type": "Видео"
+        },
+        "create_an_ml_app/csd/2021": {
+          "type": "Rubric"
         },
         "survey_planning/csd/2021": {
           "name": "Өгөгдөл цуглуулах ажлыг зохион бүтээх"
@@ -1764,6 +1890,9 @@
         },
         "view_and_download_survey_data/csd/2021": {
           "type": "Видео"
+        },
+        "design_an_ai_app_1/csd/2021": {
+          "type": "Rubric"
         },
         "teacher_forum/csd/2021": {
           "name": "Багш нарын форум"
@@ -1775,7 +1904,8 @@
           "type": "Тусгал"
         },
         "paper-prototypes/csd/2021": {
-          "name": "Цаасан туршилт"
+          "name": "Цаасан туршилт",
+          "type": "Rubric"
         },
         "market-research/csd/2021": {
           "name": "Зах зээлийн судалгаа"
@@ -1799,7 +1929,8 @@
           "name": "Олон дэлгэцийн аппууд"
         },
         "app-presentation/csd/2021": {
-          "name": "Апп танилцуулга"
+          "name": "Апп танилцуулга",
+          "type": "Rubric"
         },
         "app-presentation-exemplar/csd/2021": {
           "name": "Апп танилцуулга"
@@ -1833,6 +1964,9 @@
         "functions_2/csd/2021": {
           "name": "Функцүүд"
         },
+        "make_a_game_1/csd/2021": {
+          "type": "Rubric"
+        },
         "introduction_to_arrays/csd/2021": {
           "name": "Матрицын танилцуулга",
           "type": "Видео"
@@ -1851,6 +1985,9 @@
           "name": "Компьютерууд хэрхэн ажилладаг: Хэлхээ ба логик",
           "type": "Видео"
         },
+        "prototype-an-innovation-1/csd/2021": {
+          "type": "Rubric"
+        },
         "representation-matters-exemplar-2019/csd/2021": {
           "name": "Төлөөллийн асуудал"
         },
@@ -1865,6 +2002,9 @@
         },
         "representing-numbers-exemplar-2019/csd/2021": {
           "name": "Тоог төлөөлөх"
+        },
+        "create_a_representation/csd/2021": {
+          "type": "Rubric"
         },
         "structuring_data/csd/2021": {
           "name": "Өгөгдлийг бүтэцчилэх"
@@ -1915,6 +2055,12 @@
         "video_training_data_and_bias/csd/2021": {
           "type": "Видео"
         },
+        "make-a-recommendation-peer-review-2019/csd/2021": {
+          "type": "Үе тэнгийн тойм"
+        },
+        "make-a-recommendation-1/csd/2021": {
+          "type": "Rubric"
+        },
         "teacher_forum_1/csd/2021": {
           "name": "Багш нарын форум"
         },
@@ -1940,6 +2086,9 @@
         "sprites_1/csd/2021": {
           "name": "Шидтэнгүүд"
         },
+        "captioned-scenes/csd/2021": {
+          "type": "Rubric"
+        },
         "youtube-flipbook/csd/2021": {
           "type": "Видео"
         },
@@ -1953,6 +2102,9 @@
           "name": "Шидтэний хөдөлгөөн",
           "type": "Видео"
         },
+        "animated-scene-1/csd/2021": {
+          "type": "Rubric"
+        },
         "boolean_expressions/csd/2021": {
           "name": "Бүүлийн илэрхийлэл",
           "type": "Видео"
@@ -1964,6 +2116,12 @@
         "if_else_statements/csd/2021": {
           "name": "Хэрэв/өөр өгүүлбэрүүд",
           "type": "Видео"
+        },
+        "interactive-card-1-2-3-4/csd/2021": {
+          "type": "Үе тэнгийн тойм"
+        },
+        "interactive_card/csd/2021": {
+          "type": "Rubric"
         },
         "velocity_1/csd/2021": {
           "name": "Хурд",
@@ -1978,12 +2136,24 @@
         "collision_detection/csd/2021": {
           "name": "Мөргөлдөөнийг илрүүлэх"
         },
+        "side-scroller-1/csd/2021": {
+          "type": "Rubric"
+        },
+        "flyer-game-1/csd/2021": {
+          "type": "Rubric"
+        },
         "calling_and_defining_functions/csd/2021": {
           "name": "Функцүүд",
           "type": "Видео"
         },
         "functions_1/csd/2021": {
           "name": "Функцүүд"
+        },
+        "make-your-own-game-1-2-3/csd/2021": {
+          "type": "Үе тэнгийн тойм"
+        },
+        "make_your_own_game/csd/2021": {
+          "type": "Rubric"
         },
         "problem-solving-process-exemplar-2020/csd/2021": {
           "name": "Асуудал шийдэх үйл явц"
@@ -2017,10 +2187,12 @@
           "name": "Апп ба асуудлыг шийдэх"
         },
         "apps-and-problem-solving-peer-review-2019/csd/2021": {
-          "name": "Апп ба асуудлыг шийдэх"
+          "name": "Апп ба асуудлыг шийдэх",
+          "type": "Үе тэнгийн тойм"
         },
         "apps_and_problem_solving/csd/2021": {
-          "name": "Апп ба асуудлыг шийдэх"
+          "name": "Апп ба асуудлыг шийдэх",
+          "type": "Rubric"
         },
         "exploring-web-pages-exemplar-2020/csd/2021": {
           "name": "Вэб хуудсуудыг судлах"
@@ -2040,6 +2212,12 @@
         "video_debugging/csd/2021": {
           "type": "Видео"
         },
+        "html-web-page-1/csd/2021": {
+          "type": "Rubric"
+        },
+        "html-web-page/csd/2021": {
+          "type": "Үе тэнгийн тойм"
+        },
         "lists/csd/2021": {
           "name": "Жагсаалтууд"
         },
@@ -2054,11 +2232,23 @@
           "name": "CSS-ийн танилцуулга - 2-р хэсэг",
           "type": "Видео"
         },
+        "your-personal-style-1-2-3/csd/2021": {
+          "type": "Rubric"
+        },
+        "your-personal-style-1/csd/2021": {
+          "type": "Үе тэнгийн тойм"
+        },
         "creative-commons-video/csd/2021": {
           "type": "Видео"
         },
         "images_in_html/csd/2021": {
           "name": "HTML дээрх зургууд"
+        },
+        "personal-web-page-1/csd/2021": {
+          "type": "Үе тэнгийн тойм"
+        },
+        "personal-web-page/csd/2021": {
+          "type": "Rubric"
         },
         "publishing_your_website/csd/2021": {
           "type": "Видео"
@@ -2074,6 +2264,12 @@
         },
         "classes/csd/2021": {
           "name": "Ангиуд"
+        },
+        "website-for-a-purpose-1/csd/2021": {
+          "type": "Rubric"
+        },
+        "website-for-a-purpose/csd/2021": {
+          "type": "Үе тэнгийн тойм"
         },
         "lesson_plans/pre-express/2020": {
           "name": "Хичээлийн төлөвлөгөө"

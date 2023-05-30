@@ -1,6 +1,6 @@
 name 'CSA U5L5-L6_2023'
-display_name 'level display_name here'
-description 'level description here'
+display_name 'Practice: Enhanced For Loops and 2D Arrays'
+description 'Practice traversing 2D arrays using enhanced `for` loops.'
 
 sublevels
 level 'CSA U5L5-L6a_2023'

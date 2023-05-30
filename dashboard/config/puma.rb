@@ -31,9 +31,6 @@ on_worker_boot do |_index|
   ActiveRecord::Base.establish_connection
 end
 
-require 'gctools/oobgc'
-out_of_band {GC::OOB.run}
-
 # Log thread backtraces and GC stats from all worker processes every second when enabled.
 plugin :log_stats
 LogStats.threshold = -> {DCDO.get('logStatsDashboard', nil)}

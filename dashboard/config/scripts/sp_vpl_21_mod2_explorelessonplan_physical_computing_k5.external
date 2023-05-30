@@ -25,7 +25,7 @@ markdown <<MARKDOWN
 
 <img src="https://images.code.org/f27eee8babae76ff986f166809610341-image-1680219890915.png" style="float: left; height: 250px; clear: both; margin: 0 20px 20px 0;"> These sections give a high-level description of the lesson. 
 
-The **Overview** describes type of lesson students will engage with and the activities and tasks students will do in the lesson. 
+The **Overview** describes the type of lesson students will engage with and the activities and tasks students will do in the lesson. 
 
 The **Purpose** helps connect this lesson to wider themes or stories throughout the course, and will sometimes explain the instructional decisions or pedagogical practices behind how a lesson is structured.
 
@@ -55,7 +55,7 @@ The **Preparation** section lists any important steps to take before the lesson,
 
 The **Links** section provides resources for teachers and students.  Student resources are usually used throughout the lesson, and will need to be printed.
 
-The **Vocabulary** section provides definitions of academic vocabulary included in the lesson.
+The **Vocabulary** section provides definitions of computer science and academic vocabulary included in the lesson.
 
 <div style="clear:both"/>
 

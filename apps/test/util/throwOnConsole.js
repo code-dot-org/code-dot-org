@@ -24,7 +24,7 @@ function throwOnConsoleEverywhere(methodName) {
     // Method that will stub console[methodName] during each test and throw if
     // that method is called
     throwEverywhere() {
-      beforeEach(function() {
+      beforeEach(function () {
         // Stash test title so that we can include it in the error
         let testTitle;
         if (this.currentTest) {
@@ -47,7 +47,7 @@ function throwOnConsoleEverywhere(methodName) {
         };
       });
 
-      afterEach(function() {
+      afterEach(function () {
         if (wrappedMethod) {
           console[methodName] = wrappedMethod;
         }
@@ -58,13 +58,13 @@ function throwOnConsoleEverywhere(methodName) {
     // Method to be called in tests that want console[methodName] to be called without
     // failure
     allow() {
-      beforeEach(function() {
+      beforeEach(function () {
         throwing = false;
       });
-      afterEach(function() {
+      afterEach(function () {
         throwing = true;
       });
-    }
+    },
   };
 }
 

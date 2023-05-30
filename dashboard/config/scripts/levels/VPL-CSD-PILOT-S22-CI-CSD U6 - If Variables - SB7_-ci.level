@@ -1,9 +1,5 @@
 <Applab>
   <config><![CDATA[{
-  "game_id": 41,
-  "created_at": "2023-03-31T17:10:57.000Z",
-  "level_num": "custom",
-  "user_id": 1,
   "properties": {
     "skin": "applab",
     "code_functions": {
@@ -63,7 +59,7 @@
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "circuitPlayground",
-    "long_instructions": "# If Statements\r\n\r\nIn programming, instructions that depend on whether or not something is true are called conditionals, and the thing that is checked is called the condition. Conditionals are especially useful when we want the program to react to situations that change while the program is running. Students will use if-statements to check to see if a condition is true or false in order to determine which lines of code should be run next. \r\n\r\nIn this example, a student is is developing an app that is meant to simulate someone whispering for you to come closer, only to surprise you with a loud noise. It uses the Counter Pattern to increase the size of the text on the screen. Once the text reaches 30 pixels, the text should change to \"SURPRISE!\" and a sound from the buzzer should play.\r\n\r\n## Do This\r\n1) Add an [`if-statement`(#64B5F6)](/docs/applab/ifBlock/) to your code to check when the `textSize` variable is greater than 30\r\n\t- ::: details [**Show Me How**]\r\n      - Find the section that says `Add your code here!`\r\n      - Drag out a [`if statement`(#64B5F6)](/docs/applab/ifBlock/) block\r\n      - Drag out a `>`(#FFB74D) block\r\n      - On the left side of the `>`(#FFB74D), type the variable name: `textSize`\r\n      - On the right side of the `>`(#FFB74D), type `30`\r\n:::\r\n2) When it is: change the text of the label to \"SURPRISE!\" and play a sound on the buzzer using [`buzzer.frequency`(#f78183)](/docs/applab/buzzer.frequency/).\r\n\t- ::: details [**Show Me How**]\r\n\t\t- Inside the [`if statement`(#64B5F6)](/docs/applab/ifBlock/):\r\n\t\t\t- Drag out a [`setText()`(#fff176)](/docs/applab/setText/) and update the `textLabel` element to say \"Surprise!\"\r\n\t\t\t- Drag out a [`buzzer.frequency`(#f78183)](/docs/applab/buzzer.frequency/) block to play a sound\r\n:::\r\n3) Click the orange \"Run\" button, and use the the left button on your Circuit Playground to change the size of the text.\r\n",
+    "long_instructions": "*This level follows a pop-up video on \"If-statements\". If you missed this video, you can find it in the \"Help and Tips\" tab.*\r\n\r\n# If Statements\r\n\r\nIn programming, instructions that depend on whether or not something is true are called conditionals, and the thing that is checked is called the condition. Conditionals are especially useful when we want the program to react to situations that change while the program is running. Students will use if-statements to check to see if a condition is true or false in order to determine which lines of code should be run next. \r\n\r\nIn this example, a student is is developing an app that is meant to simulate someone whispering for you to come closer, only to surprise you with a loud noise. It uses the Counter Pattern to increase the size of the text on the screen. Once the text reaches 30 pixels, the text should change to \"SURPRISE!\" and a sound from the buzzer should play.\r\n\r\n## Do This\r\n1) Add an [`if-statement`(#64B5F6)](/docs/applab/ifBlock/) to your code to check when the `textSize` variable is greater than 30\r\n\t- ::: details [**Show Me How**]\r\n      - Find the section that says `Add your code here!`\r\n      - Drag out a [`if statement`(#64B5F6)](/docs/applab/ifBlock/) block\r\n      - Drag out a `>`(#FFB74D) block\r\n      - On the left side of the `>`(#FFB74D), type the variable name: `textSize`\r\n      - On the right side of the `>`(#FFB74D), type `30`\r\n:::\r\n2) When it is: change the text of the label to \"SURPRISE!\" and play a sound on the buzzer using [`buzzer.frequency`(#f78183)](/docs/applab/buzzer.frequency/).\r\n\t- ::: details [**Show Me How**]\r\n\t\t- Inside the [`if statement`(#64B5F6)](/docs/applab/ifBlock/):\r\n\t\t\t- Drag out a [`setText()`(#fff176)](/docs/applab/setText/) and update the `textLabel` element to say \"Surprise!\"\r\n\t\t\t- Drag out a [`buzzer.frequency`(#f78183)](/docs/applab/buzzer.frequency/) block to play a sound\r\n:::\r\n3) Click the orange \"Run\" button, and use the the left button on your Circuit Playground to change the size of the text.\r\n",
     "parent_level_id": 20595,
     "name_suffix": "_-ci",
     "mini_rubric": "false",
@@ -83,9 +79,13 @@
     "video_key": "csd_u6_if_statements",
     "preload_asset_list": null
   },
+  "game_id": 41,
   "published": true,
+  "created_at": "2023-03-31T17:10:57.000Z",
+  "level_num": "custom",
+  "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-03-31T17:10:57.743+00:00\",\"changed\":[\"cloned from \\\"VPL-CSD-PILOT-S22-CI-CSD U6 - If Variables - SB7_physical-computing\\\"\"],\"cloned_from\":\"VPL-CSD-PILOT-S22-CI-CSD U6 - If Variables - SB7_physical-computing\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-03-31T17:10:57.743+00:00\",\"changed\":[\"cloned from \\\"VPL-CSD-PILOT-S22-CI-CSD U6 - If Variables - SB7_physical-computing\\\"\"],\"cloned_from\":\"VPL-CSD-PILOT-S22-CI-CSD U6 - If Variables - SB7_physical-computing\"},{\"changed_at\":\"2023-04-11 21:37:47 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

@@ -91,6 +91,9 @@
         "conditionals/coursed/2022": {
           "word": "Нөхцлүүд"
         },
+        "behavior/coursef/2022": {
+          "word": "Зан төлөв"
+        },
         "variable/coursef/2022": {
           "word": "Хувьсагч"
         },
@@ -108,6 +111,9 @@
         },
         "define/coursef/2022": {
           "word": "Тодорхойлох"
+        },
+        "behavior/coursee/2022": {
+          "word": "Зан төлөв"
         },
         "function/coursee/2022": {
           "word": "Функц"
@@ -132,6 +138,9 @@
         },
         "sequencing/express/2022": {
           "word": "Дараалуулах"
+        },
+        "behavior/express/2022": {
+          "word": "Зан төлөв"
         },
         "conditionals/express/2022": {
           "word": "Нөхцлүүд"
@@ -162,6 +171,9 @@
         },
         "sequencing/coursec/2022": {
           "word": "Дараалуулах"
+        },
+        "data/coursec/2022": {
+          "word": "Өгөгдөл"
         },
         "binary/coursec/2022": {
           "word": "Хоёрт"
@@ -216,6 +228,9 @@
           "word": "",
           "definition": ""
         },
+        "behavior/coursef/2021": {
+          "word": "Зан төлөв"
+        },
         "variable/coursef/2021": {
           "word": "Хувьсагч"
         },
@@ -267,6 +282,9 @@
         "sequencing/express/2021": {
           "word": "Дараалуулах"
         },
+        "behavior/express/2021": {
+          "word": "Зан төлөв"
+        },
         "conditionals/express/2021": {
           "word": "Нөхцлүүд"
         },
@@ -284,6 +302,9 @@
         },
         "debugging/pre-express/2021": {
           "word": "Алдааг засах"
+        },
+        "behavior/coursee/2021": {
+          "word": "Зан төлөв"
         },
         "copyright/coursee/2021": {
           "word": "Зохиогчийн эрх"

@@ -6,11 +6,11 @@ import {install, customInputTypes} from '@cdo/apps/p5lab/spritelab/blocks';
 import {valueTypeTabShapeMap} from '@cdo/apps/p5lab/spritelab/constants';
 import {installCustomBlocks} from '@cdo/apps/block_utils';
 
-const customSimpleDialog = function({
+const customSimpleDialog = function ({
   bodyText,
   prompt,
   promptPrefill,
-  onCancel: callback
+  onCancel: callback,
 }) {
   if (prompt) {
     const result = window.prompt(bodyText, promptPrefill);
@@ -29,7 +29,7 @@ Blockly.inject(document.getElementById('blockly-container'), {
   customSimpleDialog,
   valueTypeTabShapeMap: valueTypeTabShapeMap(Blockly),
   hasVerticalScrollbars: true,
-  typeHints: true
+  typeHints: true,
 });
 
 const blockPool = JSON.parse(
@@ -39,7 +39,7 @@ install(Blockly);
 installCustomBlocks({
   blockly: Blockly,
   blockDefinitions: blockPool,
-  customInputTypes // TODO: generalize for other app types.
+  customInputTypes, // TODO: generalize for other app types.
 });
 
 const DEFAULT_NAME = 'acting';
@@ -50,7 +50,7 @@ const blockXml = `<xml>
   </block>
 </xml>`;
 
-Blockly.Xml.domToBlockSpace(
+Blockly.cdoUtils.loadBlocksToWorkspace(
   Blockly.mainBlockSpace,
   Blockly.Xml.textToDom(blockXml)
 );
@@ -75,9 +75,8 @@ if (childBlock) {
 
 Blockly.behaviorEditor.openAndEditFunction(name || DEFAULT_NAME);
 
-document.querySelector('#functionDescriptionText').value = getInput(
-  'description'
-).value;
+document.querySelector('#functionDescriptionText').value =
+  getInput('description').value;
 
 function getInput(name) {
   return document.querySelector(

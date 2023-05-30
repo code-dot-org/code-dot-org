@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import _ from 'lodash';
-import {Panel} from 'react-bootstrap';
+import {Panel} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 
 // This component renders a survey answer for answer_type of 'scale',
 // 'singleSelect', or 'multiSelect'.
@@ -17,7 +17,7 @@ export default class ChoiceResponses extends React.Component {
     possibleAnswersMap: PropTypes.object,
     otherText: PropTypes.string,
     otherAnswers: PropTypes.array,
-    facilitators: PropTypes.object
+    facilitators: PropTypes.object,
   };
 
   getTotalRespondents() {
@@ -65,7 +65,7 @@ export default class ChoiceResponses extends React.Component {
     return percentage.toLocaleString('en-US', {
       style: 'percent',
       minimumFractionDigits: 2,
-      maximumFractionDigits: 2
+      maximumFractionDigits: 2,
     });
   }
 
@@ -144,7 +144,7 @@ export default class ChoiceResponses extends React.Component {
               {`(${this.formatPercentage(
                 count / totalCountsPerFacilitator[j]
               )})`}
-            </td>
+            </td>,
           ])}
           {showTotalCount && (
             <td style={{paddingLeft: '20px'}}>{totalCount}</td>

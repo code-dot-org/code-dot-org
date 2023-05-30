@@ -7,6 +7,10 @@ ruby '2.7.5'
 # see https://www.ruby-lang.org/en/news/2019/12/25/ruby-2-7-0-released/
 gem 'thwait'
 
+# Ruby >= 2.7.7 targets a version of CGI with over-restrictive domain
+# validation; manually target a later version to pick up https://github.com/ruby/cgi/pull/29
+gem 'cgi', '~> 0.3.6'
+
 # Force HTTPS for github-source gems.
 # This is a temporary workaround - remove when bundler version is >=2.0
 # @see https://github.com/bundler/bundler/issues/4978
@@ -15,7 +19,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-gem 'rails', '6.0.6'
+gem 'rails', '~> 6.1'
 gem 'rails-controller-testing', '~> 1.0.5'
 
 # Compile Sprockets assets concurrently in `assets:precompile`.
@@ -27,7 +31,7 @@ gem 'sprockets-rails', '3.3.0'
 # (see: http://guides.rubyonrails.org/4_2_release_notes.html#respond-with-class-level-respond-to)
 gem 'responders', '~> 3.0'
 
-gem 'sinatra', '2.1.0', require: 'sinatra/base'
+gem 'sinatra', '2.2.3', require: 'sinatra/base'
 
 gem 'mysql2', '>= 0.4.1'
 
@@ -61,7 +65,10 @@ gem 'rack-mini-profiler'
 group :development do
   gem 'annotate', '~> 3.1.1'
   gem 'aws-google', '~> 0.2.0'
-  gem 'web-console'
+  gem 'web-console', '~> 4.2.0'
+  # Bootsnap pre-caches Ruby require paths + bytecode and speeds up boot time significantly.
+  # We only use it in development atm to get a feel for it, and the benefit is greatest here.
+  gem 'bootsnap', '>= 1.14.0', require: false
 end
 
 # Rack::Cache middleware used in development/test;
@@ -78,7 +85,6 @@ group :development, :test do
   gem 'active_record_query_trace'
   gem 'benchmark-ips'
   gem 'better_errors', '>= 2.7.0'
-  gem 'binding_of_caller'
   gem 'brakeman'
   gem 'haml-rails' # haml (instead of erb) generators
   gem 'ruby-prof'
@@ -100,10 +106,10 @@ group :development, :test do
   gem 'net-http-persistent'
   gem 'rinku'
   gem 'rspec'
-  gem 'selenium-webdriver', '3.141.0'
-  gem 'spring'
+  gem 'selenium-webdriver', '~> 4.2.0' # 4.x is required for Ruby 3 support; <4.3 required for Http:Persistent to not be deprecated yet
+  gem 'spring', '~> 3.1.1'
   gem 'spring-commands-testunit'
-  gem 'webdrivers', '~> 3.0'
+  gem 'webdrivers', '~> 4.7' # 4.7 required for selenium 4.x
 
   # For pegasus PDF generation / merging testing.
   gem 'parallel_tests'
@@ -111,19 +117,17 @@ group :development, :test do
 end
 
 # Needed for unit testing, and also for /rails/mailers email previews.
-gem 'factory_bot_rails', '~> 4.11', group: [:development, :staging, :test, :adhoc]
+gem 'factory_bot_rails', '~> 6.2', group: [:development, :staging, :test, :adhoc]
 
 # For pegasus PDF generation.
 gem 'open_uri_redirections', require: false
 
-# Ref: https://github.com/tmm1/gctools/pull/17
-gem 'gctools', github: 'wjordan/gctools', ref: 'ruby-2.5'
 # Optimizes copy-on-write memory usage with GC before web-application fork.
 gem 'nakayoshi_fork'
 # Ref: https://github.com/puma/puma/pull/1646
 gem 'puma', github: 'wjordan/puma', branch: 'debugging'
 gem 'puma_worker_killer'
-gem 'unicorn', '~> 5.1.0'
+gem 'raindrops'
 
 gem 'chronic', '~> 0.10.2'
 
@@ -202,16 +206,7 @@ gem 'jwt' # single signon for zendesk
 
 gem 'twilio-ruby' # SMS API for send-to-phone feature
 
-# NOTE: apps/src/applab/Exporter.js depends on the specific names of the font
-# files included here. If you're upgrading to a different version, make sure to
-# check that the filenames have not changed, and copy the latest files from the
-# gem into our project. These font files are currently served from:
-# - /dashboard/public/fonts/
-# - /pegasus/sites.v3/code.org/public/fonts/
-# - /pegasus/sites.v3/hourofcode/public/fonts/
-gem 'font-awesome-rails', '~> 4.7.0.8'
-
-gem 'sequel'
+gem 'sequel', '~> 5.29'
 gem 'user_agent_parser'
 
 gem 'paranoia', '~> 2.5.0'
@@ -281,7 +276,7 @@ gem 'firebase_token_generator'
 gem 'sshkit'
 gem 'validates_email_format_of'
 
-gem 'composite_primary_keys', '~> 12.0'
+gem 'composite_primary_keys', '~> 13.0'
 
 # GitHub API; used by the DotD script to automatically create new
 # releases on deploy
@@ -311,7 +306,7 @@ gem 'sort_alphabetical', github: 'grosser/sort_alphabetical'
 
 gem 'recaptcha', require: 'recaptcha/rails'
 
-gem 'loofah', ' ~> 2.2.1'
+gem 'loofah', '~> 2.19.1'
 
 # Install pg gem only on specific production hosts and the i18n-dev server.
 require_pg = -> do
@@ -338,7 +333,7 @@ gem 'datapackage'
 
 gem 'ruby-progressbar'
 
-gem 'pry'
+gem 'pry', '~> 0.14.0'
 
 # Google's Compact Language Detector
 gem 'cld'

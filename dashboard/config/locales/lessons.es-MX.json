@@ -208,7 +208,7 @@
           "overview": "En esta lección, alumnos de todas las edades continúan su experiencia con la codificación y la informática en un entorno seguro y de apoyo. Esta lección ha sido diseñada para alumnos de todas las edades, pero requiere saber leer. Esta actividad necesita sonido, ya que la herramienta fue construida para responder a la música.",
           "preparation": "-   Revisa y completa tú mismo el tutorial online: [Dancy Party](https://hourofcode.com/us/how-to)\n\n-   Asegúrate de probarlo primero antes de pedir a tus alumnos que lo completen. \n\n-   Comprueba tu tecnología y decide si necesitas solucionar algún problema antes de la Hora del Código.",
           "purpose": "Esta lección presenta los conceptos básicos de las ciencias de la computación para la codificación y la programación de eventos (con bloques).",
-          "student_overview": "Estudiantes de todas las edades continúan con una experiencia introductoria a la codificación y la informática en un entorno seguro y de apoyo. "
+          "student_overview": "Alumnos de todas las edades continúan con una experiencia introductoria a la codificación y la informática en un entorno seguro y de apoyo. "
         },
         "Hour of Code/Hour of Code 2013": {
           "name": "La hora del código 2013"
@@ -5135,6 +5135,9 @@
         },
         "allthethings/lesson-48": {
           "name": "Poesía"
+        },
+        "allthethings/lesson-49": {
+          "name": "Música"
         },
         "coursef-2021/lesson-6": {
           "name": "Presentamos el Laboratorio de sprites",

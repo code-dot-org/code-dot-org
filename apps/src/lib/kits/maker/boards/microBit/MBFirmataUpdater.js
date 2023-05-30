@@ -6,7 +6,7 @@ import {
   MICROBIT_IDS_V1,
   MICROBIT_IDS_V2,
   MICROBIT_V1,
-  MICROBIT_V2
+  MICROBIT_V2,
 } from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitConstants';
 import {DAPLink, WebUSB} from 'dapjs';
 import {getStore} from '@cdo/apps/redux';
@@ -31,7 +31,7 @@ export default class MBFirmataUpdater {
       microBitVersion = MICROBIT_V2;
     }
     analyticsReporter.sendEvent(EVENTS.MAKER_SETUP_PAGE_MB_VERSION_EVENT, {
-      'Microbit Version': microBitVersion
+      'Microbit Version': microBitVersion,
     });
 
     return microBitVersion;
@@ -49,7 +49,7 @@ export default class MBFirmataUpdater {
 
   async updateMBFirmataVersioned() {
     const device = await navigator.usb.requestDevice({
-      filters: [{vendorId: MICROBIT_VENDOR_ID, productId: MICROBIT_PRODUCT_ID}]
+      filters: [{vendorId: MICROBIT_VENDOR_ID, productId: MICROBIT_PRODUCT_ID}],
     });
     const microBitVersion = this.detectMicroBitVersion(device);
     if (microBitVersion === null) {
@@ -84,7 +84,7 @@ export default class MBFirmataUpdater {
       analyticsReporter.sendEvent(
         EVENTS.MAKER_SETUP_PAGE_MB_UPDATE_ERROR_EVENT,
         {
-          'Microbit Update Error': true
+          'Microbit Update Error': true,
         }
       );
       return Promise.reject('Failed to flash Firmata.');

@@ -1,29 +1,32 @@
 name 'cspu5_assess3_array5'
-encrypted 'LSnrlyx8ngW5bcfPtrh7muDs75DgNnnNK65S8f5I8jIP8kCX/pBOqYOlkLPP
-6catD1Kxz/I33ITvSw68IK5QPk7WkEWkTfF7R2RmxkexGNdU+bPA+KG1o2zF
-mslE0lf/Kh5S+lhTEtRjkKRHBsJOedESp67D5UEjPELmeTIa9svjDSMJXcM7
-qJNixpvpQHEtehs9ha1GFWyhz67EG4LEBHbBjS/NazFOulw7v+cG3xN2OhYw
-jHWmuVF+AKOMHzy5QYoDE9elALT/US+IrbzYyXdmDqNcmBJIl8s6gvDzyMOP
-Uy+uSDJR7obUYABty6xrOIdxjIwoWyN6NgtJdlozeAjava+mLAX06WokPHhv
-jZcEiaudWqUjWliNQXGOb6LraX76dR5tqKE4wr+LPhFR3QFonwKIFScBkxwY
-c19iaoOe7ns5FtdM1HcH/nJK/y3gtJqShkXmjaUhWndOyO4PYY7txNLE/jnJ
-V4/MJECm4NVrR9HU5PrQgSxf2Hkxk66XnjZq7++ZiIAPBTr3oHrxho6cuNAH
-6QARml5ZcFqRkCk0dhCPmJtvXIVD3Jlg1tow23/CFHwaXXF83EpaMENGHDqB
-20cNq/sdaMyRBb6TTi1zrr0NdJKlOJ5bsqrD1ftYxeylxTAPh33sjjaE9bOs
-8FrkL3G1OGjlgFTqpoTLjqFMAQYAEvEOrSLCPMCzbDmopWTEHTTSrXIUWKMo
-m77IhtEHqI/RRqM4SNqHv6LhKFQDbxatPa0tJ68Ze3Lr8qALckrLIU48ixWT
-Z7vX7xT2UIh2/hCLEqwGUhFKkfTYPz70Rk+I+FEYwLWDC6M7Y+SxjpagbJ5r
-IytphS9aKSuSblmdH2A9rUPBfBhhhetvnKJmXtnHhcShRi+O94cTgRb+I9wV
-1DOInXlQ2XCJ4Z+ID1lTfgSHSP9ZnlnXyLbL13Kng5+57TSGhhI++v8BmoJ+
-4pK/IPUT8CXD6AiX3sCZMosroowPBrMW8l9OSydZd2YatOgu5Uw9ZAxWN7I5
-GlWaB07gFNJCt/+opoLZliME1fshh57NtKJaMB0mwuFHJLh6B6tNugeQsvF2
-5X92mUMjHQUYf4lHpc8QPLiKXQovQvkWCeWsKFi0ViZTHWSI7lqVBekQ+ixD
-gqVfZh8ztlXblY6ln+IGWWvveM+4UyPoKK8c+fl9EJJRS7Hu61c3J82yVk7C
-UREF91y0b+7tmnS0TCg/LFRfjlA1uQH0uUPPwB0ocQ9Jbov8Ofm40syARfJ+
-e14MFbl8koN2mNfOWGRhC6gGIVml4FJYHg5KKRQfNHfGkkCw2udwMeYioVII
-mgctGFLyKauzLCvbUmxoXm3Xmb5krdFPF7+xpJRaokSqhVj3MaGiheS8DwK/
-Ynr0RyTjnN9B1BFZitRWst7GMBnykaNkEX9f/mVsikiftn2ry9nF6zf84PTa
-SheBAL/K1ZWxL9tn/NKMxdfmtZViWCpF44tqMle6HMTdrVgWdfLEIc7YFF4b
-VOQCpPwV6/CDztBbi/M12ZxZJH7n2VGWuGe/pUGdDSHS7fzLJx4flSJZVVBv
-TWLVIfEL1KzYMStqWHWK7qFGZ0lIB1gGNT8tCfT9
-'
+wrong 'https://images.code.org/195cd447d0cfe1b4eb048e1a262ebed7-image-1477187443881.png'
+right 'https://images.code.org/bedbc9aa4e60e785c208cdc321084443-image-1477187462107.png'
+wrong 'https://images.code.org/a875f2e8fae579e22b2dda3fd3c3a979-image-1477187473193.png'
+wrong 'https://images.code.org/5e3845cf3512d658ed2f6c0d5a80becf-image-1477187484503.png'
+wrong 'https://images.code.org/dedba683454c3e03a50e6ac13381de49-image-1477187494059.png'
+
+markdown <<MARKDOWN
+What is contained in the list data after the following code segment is run?
+
+![](https://images.code.org/e4059928206fbaeed08fedff3e52a1bc-image-1477187364703.png)
+
+	data <- [10, 45, 38, 16, 23]
+	REMOVE(data, 2)
+	REMOVE(data, 3)
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+**Content: Unit 5 Lesson 13**
+
+Going through the code line by line:
+
+* An array named _data_ contains "10,45,38,16,23"
+* You remove the number at index 2.
+* Remember that after removing, the numbers after the removed index are shifted to the left
+* Now, the array looks like: data = [10,38,16,23]
+* You remove the number at index 3. 
+* The array now looks like: data = [10,38,23]
+MARKDOWN
+
+allow_multiple_attempts true

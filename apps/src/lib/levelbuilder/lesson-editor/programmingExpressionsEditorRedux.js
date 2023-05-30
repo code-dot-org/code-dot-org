@@ -10,23 +10,23 @@ const REMOVE_PROGRAMMING_EXPRESSION =
 
 export const initProgrammingExpressions = programmingExpressions => ({
   type: INIT,
-  programmingExpressions
+  programmingExpressions,
 });
 
 export const addProgrammingExpression = newProgrammingExpression => ({
   type: ADD_PROGRAMMING_EXPRESSION,
-  newProgrammingExpression
+  newProgrammingExpression,
 });
 
 export const removeProgrammingExpression = id => ({
   type: REMOVE_PROGRAMMING_EXPRESSION,
-  id
+  id,
 });
 
 // Verify that an array of programmingExpressions all match programmingExpressionShape
 function validateProgrammingExpressionList(programmingExpressions, location) {
   const propTypes = {
-    programmingExpression: PropTypes.arrayOf(programmingExpressionShape)
+    programmingExpression: PropTypes.arrayOf(programmingExpressionShape),
   };
   PropTypes.checkPropTypes(
     propTypes,

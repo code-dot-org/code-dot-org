@@ -227,7 +227,30 @@
         "helloworld_food_sounds_space-2022": "ხმები",
         "helloworld_retro_costumes": "კოსტუმები",
         "helloworld_retro_sizes": "ზომა",
-        "helloworld_retro_sounds": "ხმები"
+        "helloworld_retro_sounds": "ხმები",
+        "CDEF_video_SpritesInAction": "როგორ გააკეთოთ Sprite",
+        "CDEF_video_SpritesInAction_2019": "როგორ გააკეთოთ Sprite",
+        "CDEF_video_SpritesInAction_2020": "როგორ გააკეთოთ Sprite",
+        "CDEF_video_SpritesInAction_2021": "როგორ გააკეთოთ Sprite",
+        "CourseEF_video_MakeSprite": "როგორ გააკეთოთ Sprite",
+        "CourseEF_video_MakeSprite2022": "როგორ გააკეთოთ Sprite",
+        "CourseEF_video_MakeSprite_2019": "როგორ გააკეთოთ Sprite",
+        "CourseEF_video_MakeSprite_2020": "როგორ გააკეთოთ Sprite",
+        "CourseEF_video_MakeSprite_2021": "როგორ გააკეთოთ Sprite",
+        "CourseEF_video_MakeSprite_2021-2": "როგორ გააკეთოთ Sprite",
+        "CourseEF_video_MakeSprite_2021-2_-2022-2": "როგორ გააკეთოთ Sprite",
+        "OPD-K5-spritelab-5-video": "როგორ გააკეთოთ Sprite",
+        "courseD_artist_nestedLoops32022": "ვინდოუსი",
+        "courseF_groups_video_-2022-2": "როგორ გააკეთოთ Sprite",
+        "courseF_lotsofsprites_video": "როგორ გააკეთოთ Sprite",
+        "courseF_outbreak_events_video_-2022-2": "როგორ გააკეთოთ Sprite",
+        "courseF_outbreak_intro_video_-2022-2": "როგორ გააკეთოთ Sprite",
+        "courseF_outbreak_outro_video_-2022-2": "როგორ გააკეთოთ Sprite",
+        "courseF_outbreak_scientist_video_-2022-2": "როგორ გააკეთოთ Sprite",
+        "courseF_pilotVideo_events": "როგორ გააკეთოთ Sprite",
+        "courseF_pilotVideo_events_-2022-2": "როგორ გააკეთოთ Sprite",
+        "courseF_pilotVideo_prompts": "როგორ გააკეთოთ Sprite",
+        "courseF_pilotVideo_prompts_-2022-2": "როგორ გააკეთოთ Sprite"
       }
     }
   }

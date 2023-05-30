@@ -1296,6 +1296,19 @@ ca:
             '"z"': z
       gamelab_layoutGrid:
         text: disposar sprites en una quadrícula
+      gamelab_layoutSprites:
+        text: disposar {GROUP} com a {FORMAT}
+        options:
+          FORMAT:
+            '"border"': marges
+            '"circle"': cercle
+            '"grid"': quadrícula
+            '"top"': fila superior
+            '"row"': classe
+            '"bottom"': fila inferior
+            '"left"': columna esquerra
+            '"column"': columna
+            '"right"': columna dreta
       gamelab_locationAt:
         text: 'ubicació x: {X} y: {Y}'
       gamelab_locationModifier:
@@ -1322,6 +1335,18 @@ ca:
             '"spiral"': espiral
       gamelab_makeNewSpriteAnon:
         text: fer nou sprite {ANIMATION_NAME} a {LOCATION}
+      gamelab_makeNewSpriteGroup:
+        options:
+          FORMAT:
+            '"border"': marges
+            '"circle"': cercle
+            '"grid"': quadrícula
+            '"top"': fila superior
+            '"row"': classe
+            '"bottom"': fila inferior
+            '"left"': columna esquerra
+            '"column"': columna
+            '"right"': columna dreta
       gamelab_makeNumSprites:
         text: fer {NUM} sprites {ANIMATION_NAME} nous
       gamelab_makeProjectile:
@@ -2652,6 +2677,30 @@ ca:
           DIR:
             right: dreta ↻
             left: esquerra ↺
+      ecosystems_goldilocks:
+        text: |2-
+           si {CONDITION}{SPRITE}
+          {STATEMENT}
+        options:
+          CONDITION:
+            '"too much"': massa
+            '"just right"': perfecte
+            '"too little"': massa poc
+      ecosystems_int10:
+        text: "{VALUE}"
+        options:
+          VALUE:
+            '0': '0'
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       storylab_clearHeadings:
         text: esborrar títols
       storylab_setForegroundEffect2:

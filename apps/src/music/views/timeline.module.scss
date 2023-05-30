@@ -1,13 +1,13 @@
 @import "color.scss";
 
 .wrapper {
-  background-color: $neutral_dark90;
   width: 100%;
   height: 100%;
   border-radius: 4px;
   background-size: 100% 200%;
   padding: 10px;
   box-sizing: border-box;
+  background-color: $neutral_dark;
 
   .container {
     width: 100%;
@@ -45,7 +45,7 @@
         padding-left: 6px;
 
         &Current {
-          color: $neutral_white;
+          color: $neutral_light;
         }
       }
     }
@@ -80,14 +80,14 @@
           border-color: brown;
         }
 
-        &Pink {
-          background-color: pink;
-          border-color: slategray;
+        &Pattern {
+          background-color: black;
+          border-color: white;
         }
 
-        &Orange {
-          background-color: orange;
-          border-color: violet;
+        &Chord {
+          background-color: $light_cyan;
+          border-color: $neutral_dark80;
         }
 
         &Playing {

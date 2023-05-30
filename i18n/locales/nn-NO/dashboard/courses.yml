@@ -33,6 +33,8 @@ nn:
           description_short: En introduksjon til kurs i datavitenskap som gir elevene muligheten til å skape autentiske artifakter.
         mike-test:
           title: Grunnleggande datavitskap
+        csd-2023:
+          title: Oppdagingar i datavitskap
     resources:
       curriculum/csd/2020:
         name: Læreplan

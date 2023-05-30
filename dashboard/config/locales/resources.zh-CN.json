@@ -2279,7 +2279,11 @@
         "bugs_and_features_2/csd/2022": {
           "type": "幻灯片"
         },
+        "updating_your_prototype/csd/2022": {
+          "name": "更新您的原型"
+        },
         "updating_your_prototype_1/csd/2022": {
+          "name": "更新您的原型",
           "type": "幻灯片"
         },
         "app_presentation/csd/2022": {
@@ -3034,19 +3038,23 @@
           "name": "词汇表"
         },
         "code_introduced_1/csd/2017": {
-          "name": "引入的代码"
+          "name": "引入的代码",
+          "url": "https://curriculum.code.org/csd/unit3/code/"
         },
         "lesson_plans_2/csd/2017": {
-          "name": "课程计划"
+          "name": "课程计划",
+          "url": "https://curriculum.code.org/csd/unit3/"
         },
         "standard_mappings_2/csd/2017": {
-          "name": "标准映射"
+          "name": "标准映射",
+          "url": "https://curriculum.code.org/csd/unit3/standards/"
         },
         "teacher_forum_2/csd/2017": {
           "name": "教师论坛"
         },
         "vocabulary_2/csd/2017": {
-          "name": "词汇表"
+          "name": "词汇表",
+          "url": "https://curriculum.code.org/csd/unit3/vocab/"
         },
         "code_introduced_3/csd/2017": {
           "name": "引入的代码"
@@ -4950,6 +4958,9 @@
         "responding_to_user_input/csd/2021": {
           "name": "响应用户输入",
           "type": "资源"
+        },
+        "updating-your-prototype/csd/2021": {
+          "name": "更新您的原型"
         },
         "app-presentation/csd/2021": {
           "name": "应用程序演示",

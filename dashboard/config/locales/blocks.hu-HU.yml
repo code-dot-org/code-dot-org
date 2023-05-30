@@ -1228,6 +1228,19 @@ hu:
             '"x"': x
             '"y"': y
             '"z"': z
+      gamelab_layoutSprites:
+        text: "{GROUP} elrendezése így: {FORMAT}"
+        options:
+          FORMAT:
+            '"border"': határ
+            '"circle"': kör
+            '"grid"': rács
+            '"top"': felső sor
+            '"row"': sor
+            '"bottom"': alsó sor
+            '"left"': bal oszlop
+            '"column"': oszlop
+            '"right"': jobb oszlop
       gamelab_locationAt:
         text: 'hely x: {X} y: {Y}'
       gamelab_locationModifier:
@@ -1254,6 +1267,18 @@ hu:
             '"spiral"': spirál
       gamelab_makeNewSpriteAnon:
         text: új {ANIMATION_NAME} szereplő {LOCATION} helyen
+      gamelab_makeNewSpriteGroup:
+        options:
+          FORMAT:
+            '"border"': határ
+            '"circle"': kör
+            '"grid"': rács
+            '"top"': felső sor
+            '"row"': sor
+            '"bottom"': alsó sor
+            '"left"': bal oszlop
+            '"column"': oszlop
+            '"right"': jobb oszlop
       gamelab_makeNumSprites:
         text: csinálj {NUM} új {ANIMATION_NAME} szereplőt
       gamelab_makeProjectile:
@@ -2444,6 +2469,20 @@ hu:
           DIR:
             right: jobbra ↻
             left: balra ↺
+      ecosystems_int10:
+        options:
+          VALUE:
+            '0': '0'
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       storylab_setForegroundEffect2:
         text: készítsen {EFFECT} effektet
         options:

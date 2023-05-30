@@ -847,7 +847,7 @@
           "Based on your preferences, we think you should watch:": "Según tus preferencias, creemos que deberías ver:"
         },
         "CSD U1 storage outfit_2021": {
-          "Clear": "Limpiar",
+          "Clear": "Claro",
           "white": "blanco",
           "pink": "rosa",
           "green": "verde",
@@ -866,7 +866,7 @@
           "Generate Outfit!": "¡Generar Atuendo!"
         },
         "CSD U1 storage outfit_2022": {
-          "Clear": "Limpiar",
+          "Clear": "Claro",
           "white": "blanco",
           "pink": "rosa",
           "green": "verde",
@@ -3463,7 +3463,8 @@
           "lime:": "lima:",
           "chili en polbo:": "chile en polvo:",
           "lechera:": "leche condensada:",
-          "coconut:": "coco:"
+          "coconut:": "coco:",
+          "preference": "preferencia"
         },
         "ml-customize-raspado_2022": {
           "yes": "sí",
@@ -3477,18 +3478,19 @@
           "lime:": "lima:",
           "chili en polbo:": "chile en polvo:",
           "lechera:": "leche condensada:",
-          "coconut:": "coco:"
+          "coconut:": "coco:",
+          "preference": "preferencia"
         },
         "ml-intro ai lab- fruit veggie widget": {
           "Continue": "Continuar",
           "Loading...": "Cargando...",
-          "Hover over a dot to see its name": "Pasa el ratón por encima de un punto para ver su nombre",
+          "Hover over a dot to see its name": "Pasa el cursor sobre un punto para ver su nombre",
           "Try Your Own Food!": "¡Prueba tu propia comida!",
           "x Axis": "Eje X",
           "y Axis": "Eje Y",
           "Flip Colors": "Cambiar colores",
           "Fruit Accuracy:": "Precisión de la fruta:",
-          "Veggie Accuracy:": "Precisión vegetariana:",
+          "Veggie Accuracy:": "Precisión de los vegetales: ",
           "Click in two places to draw a line!": "¡Pulsa en dos lugares para trazar una línea!",
           "What is the nameof your food?": "¿Cuál es el nombre de tu comida?",
           "Let's See What The Model Decides": "Veamos qué decide el modelo",
@@ -3499,13 +3501,13 @@
         "ml-intro ai lab- fruit veggie widget_2022": {
           "Continue": "Continuar",
           "Loading...": "Cargando...",
-          "Hover over a dot to see its name": "Pasa el ratón por encima de un punto para ver su nombre",
+          "Hover over a dot to see its name": "Pasa el cursor sobre un punto para ver su nombre",
           "Try Your Own Food!": "¡Prueba tu propia comida!",
           "x Axis": "Eje X",
           "y Axis": "Eje Y",
           "Flip Colors": "Cambiar colores",
           "Fruit Accuracy:": "Precisión de la fruta:",
-          "Veggie Accuracy:": "Precisión vegetariana:",
+          "Veggie Accuracy:": "Precisión de los vegetales: ",
           "Click in two places to draw a line!": "¡Pulsa en dos lugares para trazar una línea!",
           "What is the nameof your food?": "¿Cuál es el nombre de tu comida?",
           "Let's See What The Model Decides": "Veamos qué decide el modelo",
@@ -3516,8 +3518,8 @@
         "ml-intro app lab-book recommender demo-2021": {
           "Silly": "Tonto",
           "Predict": "Predecir",
-          "Class Book Recommender": "Recomendador de Libros de Texto",
-          "This app can recommend a book to read based on your interests. It's meant for a new student inschool so they can read a book that other people in the school have also read and have something to talk about to make new friends": "Esta aplicación puede recomendarte un libro en función de tus intereses. Está pensada para que los nuevos estudiantes puedan leer un libro que otras personas de la escuela también hayan leído y tener algo de qué hablar para hacer nuevos amigos.",
+          "Class Book Recommender": "Recomendador de Libros de Clase",
+          "This app can recommend a book to read based on your interests. It's meant for a new student inschool so they can read a book that other people in the school have also read and have something to talk about to make new friends": "Esta aplicación puede recomendarte un libro en base a tus intereses. La app fué diseñada para que los nuevos estudiantes puedan leer un libro que otros estudiantes también hayan leído y tener algo de qué hablar para formar nuevas amistades.",
           "Which animal do you like the most?": "¿Qué animal te gusta más?",
           "Wolf": "Lobo",
           "Dragon": "Dragón",
@@ -3537,8 +3539,8 @@
         "ml-intro app lab-book recommender demo_2022": {
           "Silly": "Tonto",
           "Predict": "Predecir",
-          "Class Book Recommender": "Recomendador de Libros de Texto",
-          "This app can recommend a book to read based on your interests. It's meant for a new student inschool so they can read a book that other people in the school have also read and have something to talk about to make new friends": "Esta aplicación puede recomendarte un libro en función de tus intereses. Está pensada para que los nuevos estudiantes puedan leer un libro que otras personas de la escuela también hayan leído y tener algo de qué hablar para hacer nuevos amigos.",
+          "Class Book Recommender": "Recomendador de Libros de Clase",
+          "This app can recommend a book to read based on your interests. It's meant for a new student inschool so they can read a book that other people in the school have also read and have something to talk about to make new friends": "Esta aplicación puede recomendarte un libro en base a tus intereses. La app fué diseñada para que los nuevos estudiantes puedan leer un libro que otros estudiantes también hayan leído y tener algo de qué hablar para formar nuevas amistades.",
           "Which animal do you like the most?": "¿Qué animal te gusta más?",
           "Wolf": "Lobo",
           "Dragon": "Dragón",
@@ -3628,8 +3630,8 @@
         "ml-model cards-book recommender model card": {
           "Silly": "Tonto",
           "Predict": "Predecir",
-          "Class Book Recommender": "Recomendador de Libros de Texto",
-          "This app can recommend a book to read based on your interests. It's meant for a new student inschool so they can read a book that other people in the school have also read and have something to talk about to make new friends": "Esta aplicación puede recomendarte un libro en función de tus intereses. Está pensada para que los nuevos estudiantes puedan leer un libro que otras personas de la escuela también hayan leído y tener algo de qué hablar para hacer nuevos amigos.",
+          "Class Book Recommender": "Recomendador de Libros de Clase",
+          "This app can recommend a book to read based on your interests. It's meant for a new student inschool so they can read a book that other people in the school have also read and have something to talk about to make new friends": "Esta aplicación puede recomendarte un libro en base a tus intereses. La app fué diseñada para que los nuevos estudiantes puedan leer un libro que otros estudiantes también hayan leído y tener algo de qué hablar para formar nuevas amistades.",
           "Which animal do you like the most?": "¿Qué animal te gusta más?",
           "Wolf": "Lobo",
           "Dragon": "Dragón",
@@ -3649,8 +3651,8 @@
         "ml-model cards-book recommender model card_2022": {
           "Silly": "Tonto",
           "Predict": "Predecir",
-          "Class Book Recommender": "Recomendador de Libros de Texto",
-          "This app can recommend a book to read based on your interests. It's meant for a new student inschool so they can read a book that other people in the school have also read and have something to talk about to make new friends": "Esta aplicación puede recomendarte un libro en función de tus intereses. Está pensada para que los nuevos estudiantes puedan leer un libro que otras personas de la escuela también hayan leído y tener algo de qué hablar para hacer nuevos amigos.",
+          "Class Book Recommender": "Recomendador de Libros de Clase",
+          "This app can recommend a book to read based on your interests. It's meant for a new student inschool so they can read a book that other people in the school have also read and have something to talk about to make new friends": "Esta aplicación puede recomendarte un libro en base a tus intereses. La app fué diseñada para que los nuevos estudiantes puedan leer un libro que otros estudiantes también hayan leído y tener algo de qué hablar para formar nuevas amistades.",
           "Which animal do you like the most?": "¿Qué animal te gusta más?",
           "Wolf": "Lobo",
           "Dragon": "Dragón",
@@ -3863,7 +3865,7 @@
           "Yes": "Sí",
           "No": "No",
           "Predict": "Predecir",
-          "Animal Predictor!": "¡Predicción de Animales!",
+          "Animal Predictor!": "¡Predictor de Animales!",
           "This app will predict a type of animal based on four questions!": "Esta aplicación predice el tipo de animal basándose en cuatro preguntas.",
           "More Information": "Más Información",
           "Does it have hair?": "¿Tiene pelo?",
@@ -3887,7 +3889,7 @@
           "Yes": "Sí",
           "No": "No",
           "Predict": "Predecir",
-          "Animal Predictor!": "¡Predicción de Animales!",
+          "Animal Predictor!": "¡Predictor de Animales!",
           "This app will predict a type of animal based on four questions!": "Esta aplicación predice el tipo de animal basándose en cuatro preguntas.",
           "More Information": "Más Información",
           "Does it have hair?": "¿Tiene pelo?",
@@ -4150,7 +4152,7 @@
           "Write code to change my text!": "¡Escribe código para cambiar mi texto!"
         },
         "AppLab Intro 7 - onEvent intro": {
-          "Green-ify!": "¡Ecológico!"
+          "Green-ify!": "Verde-ar!"
         },
         "AppLab Intro 7 - onEvent twoButtons": {
           "On": "Encendido",

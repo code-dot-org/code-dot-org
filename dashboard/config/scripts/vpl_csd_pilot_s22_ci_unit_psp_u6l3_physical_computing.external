@@ -3,40 +3,26 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Programming and the Problem Solving Process
+# The Problem Solving Process With Devices
 
-##### As students begin adding complexity to their apps, it is common for students to get overwhelmed with the open ended nature of programming. The **Problem Solving Process** is a tool students can use to clarify and break down problems into manageable steps so they can easily identify the code they need to write for each step.  
+<div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px; margin-bottom:10px;">
 
-## Define
-<img src="https://images.code.org/0dd1fcc01da9976cdcb100d92c998393-image-1647994716343.png" style="float: right; height: 350px; clear: both; margin: 0 20px 20px 0;">
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; ">As students begin adding complexity to their apps, it is common for students to get overwhelmed with the open ended nature of programming. The <strong>Problem Solving Process</strong> is a tool students can use to clarify and break down problems into manageable steps so they can easily identify the code they need to write for each step. <br><br>The Problem Solving Process is woven throughout the entire course to promote student growth and development. The Creating Apps with Devices unit introduces the Problem Solving Process in lesson 2 with the <strong>Problem Solving Process with Design</strong>. Thereafter, the <strong>Problem Solving Process with Programming</strong> is introduced in the first mini-project and used for the remainder of the unit.
+</p></div>
 
-* ##### Read the instructions carefully to make sure you understand the goals and intended outcomes of the program.
-* ##### If there is a sample program, run it to ensure you understand what it does.
-* ##### If there is starter code, read it to understand what it does.
-* ##### Rephrase the problem in your own words.
-* ##### Identify any new skills you are being asked to apply.
 
-## Prepare
-* ##### Brainstorm as many ideas for the different ways you could program the problem to solve all of its parts.
-* ##### Write out in plain English or pseudocode your ideas for how to solve the problem so that the program does what it is supposed to do.
-* ##### List what you already know how to do and what you don't yet.
-* ##### Describe your ideas to a classmate
-* ##### Review similar programs that you may have written in the past.
-* ##### Sketch out your idea on paper if needed
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">🔎 Problem Solving Process with Design</summary>
+    <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p><img src="https://images.code.org/763516348386c86fb767be352c52a50f-image-1680304623780.png"></p></div>
+</details>
 
-## Try
-* ##### Pick one idea from the previous step and document why you chose that idea. 
-* ##### Implement your chosen idea and write one small piece of code at a time.
-* ##### Test your program often.
-* ##### Use comments to document and keep track of what your code does.
-* ##### Go back to the previous step to look at your other ideas for solving the problem if you get stuck
-* ##### Apply appropriate debugging strategies
+<br>
 
-## Reflect
-* ##### Compare your program to the defined problem … Were you successful in solving all aspects of the problem? How do you know?
-* ##### Ask a classmate to try your program … Are there places where they struggle or show confusion?
-* ##### Ask a classmate to read your code … Is your code and documentation clear and accurate?
-* #####  Try to "break" your program … Did you find types of interaction or input that you could handle better?
-* ##### Are there any changes or improvements you can make to this program or another like it in the future?
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">🔎 Problem Solving Process with Programming</summary>
+    <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p><img src="https://images.code.org/8df26b0e6faa34ef713946e494420476-image-1680304712476.png"></p></div>
+</details>
 
 MARKDOWN

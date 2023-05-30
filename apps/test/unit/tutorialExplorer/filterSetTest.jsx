@@ -23,22 +23,22 @@ const DEFAULT_PROPS = {
       name: 'group-1',
       text: 'Group 1',
       entries: [],
-      singleEntry: false
+      singleEntry: false,
     },
     {
       name: 'group-2',
       text: 'Group 2',
       entries: [{name: 'byzanz'}, {name: 'frobozz'}, {name: 'xyzzy'}],
-      singleEntry: false
-    }
+      singleEntry: false,
+    },
   ],
   selection: {
     'group-1': [],
-    'group-2': ['xyzzy']
+    'group-2': ['xyzzy'],
   },
   onUserInputFilter: FAKE_ON_USER_INPUT,
   onUserInputOrgName: FAKE_ON_ORG_NAME,
-  onUserInputSortBy: FAKE_ON_SORT_BY
+  onUserInputSortBy: FAKE_ON_SORT_BY,
 };
 
 describe('FilterSet', () => {
@@ -85,8 +85,8 @@ describe('FilterSet', () => {
             text: 'Group 1',
             entries: [{name: 'byzanz'}, {name: 'frobozz'}, {name: 'xyzzy'}],
             singleEntry: false,
-            display: false
-          }
+            display: false,
+          },
         ]}
       />
     );
@@ -104,8 +104,8 @@ describe('FilterSet', () => {
             text: 'Group 1',
             entries: [{name: 'byzanz'}, {name: 'frobozz'}, {name: 'xyzzy'}],
             singleEntry: false,
-            headerOnDesktop: true
-          }
+            headerOnDesktop: true,
+          },
         ]}
       />
     );
@@ -123,8 +123,8 @@ describe('FilterSet', () => {
             text: 'Group 1',
             entries: [{name: 'byzanz'}, {name: 'frobozz'}, {name: 'xyzzy'}],
             singleEntry: false,
-            headerOnDesktop: true
-          }
+            headerOnDesktop: true,
+          },
         ]}
       />
     );

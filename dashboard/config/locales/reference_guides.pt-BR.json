@@ -5,9 +5,6 @@
         "csd-2022/accelerometer-events": {
           "display_name": "Eventos do Acelerômetro"
         },
-        "csd-2022/analog-sensors": {
-          "display_name": "Sensores analógicos"
-        },
         "csd-2022/app-lab": {
           "display_name": "Laboratório de Aplicativo"
         },
@@ -29,8 +26,8 @@
         "csd-2022/changing-sensor-scale": {
           "display_name": "Alterando a escala do Sensor"
         },
-        "csd-2022/circuits-and-leds": {
-          "display_name": "Circuitos e LEDs"
+        "csd-2022/circuit-playground": {
+          "display_name": "Visão geral do Circuit Play"
         },
         "csd-2022/classes": {
           "display_name": "Classes"
@@ -145,9 +142,6 @@
         },
         "csd-2022/patterns-overview": {
           "display_name": "Visão geral"
-        },
-        "csd-2022/physical-input": {
-          "display_name": "Entrada física"
         },
         "csd-2022/playing-notes": {
           "display_name": "Jogando Notas"

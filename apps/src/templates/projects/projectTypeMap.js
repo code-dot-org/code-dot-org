@@ -6,9 +6,11 @@ import i18n from '@cdo/locale';
  */
 
 export const PROJECT_TYPE_MAP = {
+  adaptations: i18n.projectTypeAdaptations(),
   algebra_game: i18n.projectTypeAlgebra(),
   applab: i18n.projectTypeApplab(),
   artist: i18n.projectTypeArtist(),
+  ecosystems: i18n.projectTypeEcosystems(),
   frozen: i18n.projectTypeFrozen(),
   gumball: i18n.projectTypeGumball(),
   infinity: i18n.projectTypeInfinity(),
@@ -38,7 +40,7 @@ export const PROJECT_TYPE_MAP = {
   thebadguys: i18n.projectTypeThebadguys(),
   science: i18n.projectTypeScience(),
   story: i18n.projectTypeStory(),
-  time_capsule: i18n.projectTypeTimeCapsule()
+  time_capsule: i18n.projectTypeTimeCapsule(),
 };
 
 export const FEATURED_PROJECT_TYPE_MAP = {
@@ -65,5 +67,5 @@ export const FEATURED_PROJECT_TYPE_MAP = {
   dance: i18n.projectTypeDance(),
   poetry: i18n.projectTypePoetry(),
   thebadguys: i18n.projectTypeThebadguys(),
-  spritelab: i18n.projectTypeSpriteLab()
+  spritelab: i18n.projectTypeSpriteLab(),
 };

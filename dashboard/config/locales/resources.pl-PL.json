@@ -1569,6 +1569,7 @@
           "name": "Całe słownictwo"
         },
         "meals_data/csd/2022": {
+          "name": "Dane dotyczące posiłków",
           "url": "https://docs.google.com/document/d/1nVUNkvIqz4sQjXnr52eBd17Pmi61Ir2aTH6ulVnco9o/edit",
           "type": "Zasoby"
         },
@@ -2011,10 +2012,12 @@
           "name": "Całe słownictwo"
         },
         "cs_in_entertainment/csd/2022": {
+          "name": "Informatyka w rozrywce",
           "url": "https://docs.google.com/document/d/110oPOgyPaeWt1_9_UEaw5T_7cCG_xgPDhwkTF2J47j8/edit",
           "type": "Przewodnik po zajęciach"
         },
         "cs_in_entertainment_1/csd/2022": {
+          "name": "Informatyka w rozrywce",
           "url": "https://docs.google.com/document/d/1lLsZjStrnX9-U02G7AxwSPIq-BENvw942PS2JIkjZww/edit",
           "type": "Wzór"
         },
@@ -3416,12 +3419,15 @@
           "type": "Klucz odpowiedzi"
         },
         "numerical_data_in_ai_lab/csd/2022": {
+          "name": "Dane numeryczne w laboratorium AI",
           "type": "Slajdy"
         },
         "numerical_data_in_ai_lab_1/csd/2022": {
+          "name": "Dane numeryczne w laboratorium AI",
           "type": "Przewodnik po zajęciach"
         },
         "numerical_data_in_ai_lab_2/csd/2022": {
+          "name": "Dane numeryczne w laboratorium AI",
           "type": "Wideo"
         },
         "using_data_with_numerical_features/csd/2022": {
@@ -5800,12 +5806,15 @@
           "type": "Klucz odpowiedzi"
         },
         "numerical_data_in_ai_lab/csd/2021": {
+          "name": "Dane numeryczne w laboratorium AI",
           "type": "Slajdy"
         },
         "numerical_data_in_ai_lab_1/csd/2021": {
+          "name": "Dane numeryczne w laboratorium AI",
           "type": "Przewodnik po zajęciach"
         },
         "numerical_data_in_ai_lab_2/csd/2021": {
+          "name": "Dane numeryczne w laboratorium AI",
           "type": "Wideo"
         },
         "_key_-_numerical_data_in_ai_lab/csd/2021": {
@@ -6292,6 +6301,7 @@
           "type": "Wzór"
         },
         "meals-data-resource-2019/csd/2021": {
+          "name": "Dane dotyczące posiłków",
           "url": "https://docs.google.com/document/d/1nVUNkvIqz4sQjXnr52eBd17Pmi61Ir2aTH6ulVnco9o/edit",
           "type": "Zasoby"
         },
@@ -6495,10 +6505,12 @@
           "url": "/s/csd3-2021/vocab"
         },
         "cs-entertainment-activity/csd/2021": {
+          "name": "Informatyka w rozrywce",
           "url": "https://docs.google.com/document/d/110oPOgyPaeWt1_9_UEaw5T_7cCG_xgPDhwkTF2J47j8/edit",
           "type": "Przewodnik po zajęciach"
         },
         "cs_in_entertainment/csd/2021": {
+          "name": "Informatyka w rozrywce",
           "url": "https://docs.google.com/document/d/1lLsZjStrnX9-U02G7AxwSPIq-BENvw942PS2JIkjZww/edit",
           "type": "Wzór"
         },

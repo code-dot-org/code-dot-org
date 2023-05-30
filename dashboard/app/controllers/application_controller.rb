@@ -151,7 +151,7 @@ class ApplicationController < ActionController::Base
     :parent_email_preference_opt_in_required,
     :parent_email_preference_opt_in,
     :parent_email_preference_email,
-    school_info_attributes: SCHOOL_INFO_ATTRIBUTES,
+    {school_info_attributes: SCHOOL_INFO_ATTRIBUTES},
   ]
 
   PERMITTED_USER_FIELDS.concat(UI_TEST_ATTRIBUTES) if rack_env?(:test, :development)

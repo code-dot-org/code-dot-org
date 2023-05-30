@@ -1227,6 +1227,19 @@ sv:
             '"x"': x
             '"y"': y
             '"z"': z
+      gamelab_layoutSprites:
+        text: utforma {GROUP} som en/ett {FORMAT}
+        options:
+          FORMAT:
+            '"border"': gräns
+            '"circle"': cirkel
+            '"grid"': rutnät
+            '"top"': översta raden
+            '"row"': klass
+            '"bottom"': nedersta raden
+            '"left"': vänstra kolumnen
+            '"column"': kolumn
+            '"right"': högra kolumnen
       gamelab_locationAt:
         text: 'plats x: {X} Y: {Y}'
       gamelab_locationModifier:
@@ -1253,6 +1266,18 @@ sv:
             '"spiral"': spiral
       gamelab_makeNewSpriteAnon:
         text: skapa nya {ANIMATION_NAME} sprite vid {LOCATION}
+      gamelab_makeNewSpriteGroup:
+        options:
+          FORMAT:
+            '"border"': gräns
+            '"circle"': cirkel
+            '"grid"': rutnät
+            '"top"': översta raden
+            '"row"': klass
+            '"bottom"': nedersta raden
+            '"left"': vänstra kolumnen
+            '"column"': kolumn
+            '"right"': högra kolumnen
       gamelab_makeNumSprites:
         text: gör {NUM} ny {ANIMATION_NAME}sprites
       gamelab_makeProjectile:
@@ -2311,6 +2336,20 @@ sv:
           DIR:
             right: höger ↻
             left: vänster ↺
+      ecosystems_int10:
+        options:
+          VALUE:
+            '0': '0'
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       storylab_setForegroundEffect2:
         options:
           EFFECT:

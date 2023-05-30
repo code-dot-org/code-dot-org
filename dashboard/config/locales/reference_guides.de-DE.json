@@ -5,9 +5,6 @@
         "csd-2022/accelerometer-events": {
           "display_name": "Ereignisse mit dem Beschleunigungsmesser"
         },
-        "csd-2022/analog-sensors": {
-          "display_name": "Analoge Sensoren"
-        },
         "csd-2022/app-lab": {
           "display_name": "App-Labor"
         },
@@ -20,8 +17,8 @@
         "csd-2022/board-events": {
           "display_name": "Platinen-Ereignisse"
         },
-        "csd-2022/circuits-and-leds": {
-          "display_name": "Schaltungen und LEDs"
+        "csd-2022/circuit-playground": {
+          "display_name": "Leiterplatten Spielplatz Überblick"
         },
         "csd-2022/classes": {
           "display_name": "Klassen"
@@ -118,9 +115,6 @@
         },
         "csd-2022/patterns-overview": {
           "display_name": "Übersicht"
-        },
-        "csd-2022/physical-input": {
-          "display_name": "Physischer Input"
         },
         "csd-2022/playing-notes": {
           "display_name": "Noten abspielen"

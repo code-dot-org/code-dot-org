@@ -1,19 +1,19 @@
 import {expect} from '../../../../../../util/reconfiguredChai';
 import sinon from 'sinon';
-import {MicrobitStubBoard} from '../makeStubBoard';
+import {MBFirmataClientStub} from '@cdo/apps/lib/kits/maker/util/makeStubBoard';
 import ExternalLed from '@cdo/apps/lib/kits/maker/boards/microBit/ExternalLed';
 
-describe('ExternalLed', function() {
+describe('ExternalLed', function () {
   describe('on() and off()', () => {
     let led;
-    let boardClient = new MicrobitStubBoard();
+    let boardClient = new MBFirmataClientStub();
     let setDigitalOutputSpy;
 
     before(() => {
       led = new ExternalLed({
         board: boardClient,
         pin: 0,
-        isOn: false
+        isOn: false,
       });
       setDigitalOutputSpy = sinon.spy(boardClient, 'setDigitalOutput');
     });
@@ -37,14 +37,14 @@ describe('ExternalLed', function() {
 
   describe('toggle()', () => {
     let led;
-    let boardClient = new MicrobitStubBoard();
+    let boardClient = new MBFirmataClientStub();
     let setDigitalOutputSpy, onSpy, offSpy;
 
     before(() => {
       led = new ExternalLed({
         board: boardClient,
         pin: 0,
-        isOn: false
+        isOn: false,
       });
       setDigitalOutputSpy = sinon.spy(boardClient, 'setDigitalOutput');
       onSpy = sinon.spy(led, 'on');
@@ -73,13 +73,13 @@ describe('ExternalLed', function() {
 
   describe('blink()', () => {
     let led, clock;
-    let boardClient = new MicrobitStubBoard();
+    let boardClient = new MBFirmataClientStub();
 
     before(() => {
       led = new ExternalLed({
         board: boardClient,
         pin: 0,
-        isOn: false
+        isOn: false,
       });
       clock = sinon.useFakeTimers();
       sinon.spy(led, 'setDigitalOutputOn');

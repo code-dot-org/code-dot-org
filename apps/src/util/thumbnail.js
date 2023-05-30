@@ -173,7 +173,7 @@ export function captureThumbnailFromElement(element) {
   isCapturePending = true;
 
   const options = {
-    background: '#eee'
+    background: '#eee',
   };
 
   // html2canvas can take up to 2 seconds to capture the element contents

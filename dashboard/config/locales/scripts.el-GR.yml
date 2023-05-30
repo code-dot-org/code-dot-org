@@ -190,6 +190,10 @@ el:
           description: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
           description_short: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
           student_description: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
+        allthethings:
+          lessons:
+            lesson-49:
+              name: Μουσική
         algebraPD2b:
           description: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
           description_short: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
@@ -398,6 +402,7 @@ el:
           description_short: Αναμείξτε και ταιριάξτε σε όλο το εύρος των αθλημάτων
           description: Αναμείξτε και ταιριάξτε σε όλο το εύρος των αθλημάτων
           student_description: Αναμείξτε και ταιριάξτε σε όλο το εύρος των αθλημάτων
+          name: αθλήματα
         csp3-support:
           lesson_groups:
             required:
@@ -567,6 +572,7 @@ el:
             δραστηριότητα! Ταξίδι στο Minecraft με κώδικα.
           student_description: Το Minecraft επιστρέφει για την Ώρα του Κώδικα, με
             μια ολοκαίνουργια δραστηριότητα! Ταξίδι στο Minecraft με κώδικα.
+          name: ήρωας
         csp-explore-2017:
           lesson_groups:
             cspSurvey:
@@ -792,6 +798,7 @@ el:
             με τους φίλους σας.
           student_description: Δημιουργήστε ένα δικό σας πάρτι χορού για να το μοιραστείτε
             με τους φίλους σας.
+          name: χορός
         aquatic:
           title: 'Minecraft: Υδάτινο Ταξίδι'
           description_short: Το Minecraft επιστρέφει με μία ολοκαίνουργια δραστηριότητα
@@ -1838,6 +1845,7 @@ el:
               display_name: Μεταβλητές
             csf_for_loops:
               display_name: Βρόχοι Για
+          title: Γρήγορο Μάθημα (2022)
         csp1-2022:
           lesson_groups:
             cspSurvey:
@@ -2024,8 +2032,14 @@ el:
               name: Μεταβλητές
         csa3-2023:
           lessons:
+            lesson-1:
+              name: Μονοδιάστατες (1D) συστοιχίες
             lesson-3:
               name: Βρόχοι Για
+        csa8-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Έρευνα
         hello-world-space-2022:
           title: 'Γεια σας κόσμο: Διάστημα'
         hello-world-soccer-2022:
@@ -2098,6 +2112,7 @@ el:
               display_name: Μεταβλητές
             csf_for_loops:
               display_name: Βρόχοι Για
+          title: Γρήγορο Μάθημα (2022)
         coursea-2023:
           lesson_groups:
             csf_digcit:
@@ -2162,3 +2177,53 @@ el:
               display_name: Συναρτήσεις
             csf_nested_loops:
               display_name: Συνθήκες
+        web-development-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Έρευνα
+        interactive-games-animations-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Έρευνα
+        design-process-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Έρευνα
+        data-society-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Έρευνα
+        aiml-2023:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Έρευνα
+        microbit-2023:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Έρευνα
+        devices-2023:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Έρευνα
+        pl-csd-summer-day1:
+          lessons:
+            lesson-3:
+              name: Εισαγωγή
+        virtual-pl-csd-summer-day1:
+          lessons:
+            lesson-1:
+              name: Εισαγωγή
+        virtual-pl-csd-summer-day5:
+          lessons:
+            lesson-3:
+              name: Αξιολόγηση
+        coursef-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ψηφιακή υπηκοότητα
+            lessonGroup-3:
+              display_name: Χαρακτήρας
+            lessonGroup-4:
+              display_name: Μεταβλητές
+          description_short: Μάθετε όλες τις έννοιες των Θεμελιωδών της Επιστήμης
+            της Πληροφορικής και δημιουργήστε τη δική σας τέχνη, ιστορία ή παιχνίδι.

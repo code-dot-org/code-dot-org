@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import ChordPanel, {ChordPanelProps} from '../views/ChordPanel';
-import {BlockSvg, DropDownDiv, Field, WidgetDiv} from 'blockly/core';
+import GoogleBlockly, {BlockSvg, DropDownDiv, Field} from 'blockly/core';
 import {ChordEventValue} from '../player/interfaces/ChordEvent';
 import MusicLibrary from '../player/MusicLibrary';
 import {getNoteName} from '../utils/Notes';
-import GoogleBlockly from 'blockly/core';
 import {generateGraphDataFromChord, ChordGraphNote} from '../utils/Chords';
 const experiments = require('@cdo/apps/util/experiments');
+const color = require('@cdo/apps/util/color');
 
 const MAX_DISPLAY_NOTES = 3;
 const FIELD_WIDTH = 51;
@@ -60,15 +60,14 @@ export default class FieldChord extends Field {
       this.borderRect_.classList.add('blocklyDropdownRect');
     }
 
-    this.backgroundElement = GoogleBlockly.utils.dom.createSvgElement<
-      SVGGraphicsElement
-    >(
-      'g',
-      {
-        transform: 'translate(1,1)'
-      },
-      this.fieldGroup_
-    );
+    this.backgroundElement =
+      GoogleBlockly.utils.dom.createSvgElement<SVGGraphicsElement>(
+        'g',
+        {
+          transform: 'translate(1,1)',
+        },
+        this.fieldGroup_
+      );
 
     this.updateSize_();
   }
@@ -81,7 +80,7 @@ export default class FieldChord extends Field {
     }
     if (this.textElement_) {
       if (experiments.isEnabled('zelos')) {
-        this.textElement_.style.fill = 'white';
+        this.textElement_.style.fill = color.neutral_light;
       }
     }
   }
@@ -103,12 +102,12 @@ export default class FieldChord extends Field {
     GoogleBlockly.utils.dom.createSvgElement(
       'rect',
       {
-        fill: '#54595e',
+        fill: color.neutral_dark90,
         x: 1,
         y: 1,
         width: FIELD_WIDTH,
         height: FIELD_HEIGHT,
-        rx: 3
+        rx: 3,
       },
       this.backgroundElement
     );
@@ -120,19 +119,19 @@ export default class FieldChord extends Field {
       numOctaves: 3,
       startOctave: 4,
       padding: 2,
-      noteHeightScale: 4
+      noteHeightScale: 4,
     });
 
     graphNotes.forEach(graphNote => {
       GoogleBlockly.utils.dom.createSvgElement(
         'rect',
         {
-          fill: '#59b9dc',
+          fill: color.light_cyan,
           x: graphNote.x,
           y: graphNote.y,
           width: graphNote.width,
           height: graphNote.height,
-          rx: 1
+          rx: 1,
         },
         this.backgroundElement
       );
@@ -169,9 +168,9 @@ export default class FieldChord extends Field {
 
     this.renderContent();
 
-    this.newDiv.style.color = 'white';
+    this.newDiv.style.color = color.neutral_light;
     this.newDiv.style.width = 'auto';
-    this.newDiv.style.backgroundColor = 'black';
+    this.newDiv.style.backgroundColor = color.dark_black;
     this.newDiv.style.padding = '5px';
 
     return this.newDiv;
@@ -189,7 +188,7 @@ export default class FieldChord extends Field {
         previewChord: this.options.previewChord,
         previewNote: this.options.previewNote,
         cancelPreviews: this.options.cancelPreviews,
-        onChange: value => this.setValue(value)
+        onChange: this.onValueChange,
       }),
       this.newDiv
     );
@@ -206,4 +205,6 @@ export default class FieldChord extends Field {
       .join(', ');
     return notes.length > MAX_DISPLAY_NOTES ? allNotes + '...' : allNotes;
   }
+
+  private onValueChange = (value: ChordEventValue) => this.setValue(value);
 }

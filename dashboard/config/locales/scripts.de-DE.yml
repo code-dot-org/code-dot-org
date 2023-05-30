@@ -382,6 +382,9 @@ de:
 
             Wenn du ein Code.org-Ingenieur bist: Dieses Skript enthält alle Leveltypen für UI-Tests. Bitte melde dich an, um Applab Levels zu testen (Applab Levels funktionieren von Haus aus nur, wenn du angemeldet bist. Normalerweise müssen sich die Leute anmelden, aber das ist nur für ein ganzes Skript durchsetzbar und wäre für dieses Skript nervig).
           name: alldieDinge
+          lessons:
+            lesson-49:
+              name: Musik
         algebraPD2b:
           title: Informatik in Algebra PD
           description: 'Phase 2 Online: Gemischtes Sommerstudium'
@@ -6672,6 +6675,23 @@ de:
               display_name: Inhalt
             lessonGroup-4:
               display_name: Alternate Lessons (alternative Lerneinheiten)
+        csa7-2023:
+          lessons:
+            lesson-6:
+              name: Geistiges Eigentum
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Inhalt
+            lessonGroup-5:
+              display_name: Alternate Lessons (alternative Lerneinheiten)
+        csa8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Inhalt
+            lessonGroup-4:
+              display_name: Umfrage
+            lessonGroup-5:
+              display_name: Alternate Lessons (alternative Lerneinheiten)
         hello-world-space-2022:
           title: 'Hello World: Weltraum'
         hello-world-soccer-2022:
@@ -7041,6 +7061,9 @@ de:
             lessonGroup-3:
               display_name: 'Kapitel 2: Computer und Problemlösung'
         web-development-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Umfrage
           title: Webentwicklung
           student_description: In Lerneinheit 2 lernen Sie, wie Sie Inhalte auf Ihren
             eigenen Webseiten erstellen und veröffentlichen können. Nachdem Sie entschieden
@@ -7054,6 +7077,8 @@ de:
               display_name: 'Kapitel 1: Bilder und Animationen'
             lessonGroup-3:
               display_name: 'Kapitel 2: Erstellen von Spielen'
+            lessonGroup-4:
+              display_name: Umfrage
           student_description: In Lerneinheit 3 arbeiten Sie bei der Programmierung
             von Animationen, interaktiver Kunst und Spielen im Game Lab mit Ihrer
             Programmiererfahrung. Die Lerneinheit beginnt mit einfachen Formen und
@@ -7067,6 +7092,8 @@ de:
               display_name: 'Kapitel 1: Benutzerzentriertes Design'
             lessonGroup-3:
               display_name: 'Kapitel 2: App Prototyping'
+            lessonGroup-4:
+              display_name: Umfrage
           student_description: Die Lerneinheit 4 stellt die breiteren sozialen Auswirkungen
             der Informatik vor. Anhand einer Reihe von Design-Aufgaben lernen Sie,
             wie Sie die Bedürfnisse anderer besser verstehen und gleichzeitig eine
@@ -7082,6 +7109,8 @@ de:
               display_name: 'Kapitel 1: Darstellung von Informationen'
             lessonGroup-3:
               display_name: 'Kapitel 2: Datenprobleme lösen'
+            lessonGroup-4:
+              display_name: Umfrage
           description_short: Erfahren Sie, wie Menschen Computer verwenden, um Datenprobleme
             zu lösen.
           student_description: Lerneinheit 5 befasst sich mit der Bedeutung von Daten
@@ -7101,6 +7130,8 @@ de:
               display_name: Kapitel 1
             lessonGroup-4:
               display_name: Kapitel 2
+            lessonGroup-5:
+              display_name: Umfrage
         focus-on-creativity1-2023:
           lesson_groups:
             lessonGroup-2:
@@ -7314,3 +7345,216 @@ de:
             lessonGroup-3:
               display_name: 'Chapter 2: Aufbau von physischen Prototypen'
           description_short: Programmieren mit Geräten lernen.
+        microbit-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Ein- und Ausgaben
+            lessonGroup-5:
+              display_name: Umfrage
+        vpl-csd-ci-1:
+          title: 'Modul 1: Vorbereitung auf den Unterricht Problemlösung und Informatik'
+          description: "In diesem professionellen Lernmodul bereiten Sie sich auf
+            den Unterricht der Code.org-Stunde \"Problemlösung und Informatik\" vor.
+            \n\n**Aktivitäten in diesem professionellen Lernmodul:**\n\n– Sie erhalten
+            eine Einführung in das Problemlösen und die Informatik.\n– Sie üben die
+            wichtigsten Konzepte der Unterrichtseinheit.\n– Sie erkunden die Projekte
+            am Ende des Kapitels.\n\n**Geschätzte Dauer:** 30 Minuten"
+          student_description: "In diesem professionellen Lernmodul bereiten Sie sich
+            auf den Unterricht der Code.org-Stunde \"Problemlösung und Informatik\"
+            vor. \n\n**Aktivitäten in diesem professionellen Lernmodul:**\n\n– Sie
+            erhalten eine Einführung in das Problemlösen und die Informatik.\n– Sie
+            üben die wichtigsten Konzepte der Unterrichtseinheit.\n– Sie erkunden
+            die Projekte am Ende des Kapitels.\n\n**Geschätzte Dauer:** 30 Minuten"
+        vpl-csd-ci-2:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Webentwicklung unterrichten
+          title: 'Modul 2: Vorbereitung auf das Unterrichten der Webentwicklung'
+          description: "In diesem professionellen Lernmodul bereiten Sie sich auf
+            die Code.org-Stunde Webentwicklung vor. \n\n**Aktivitäten dieses professionellen
+            Lernmoduls:**\n\n– Einführung in die Webentwicklung.\n– Üben der wichtigsten
+            Konzepte der Lerneinheit.\n– Beschäftigung mit Web Lab.\n– Erkunden der
+            Projekte am Ende des Kapitels.\n\n**Geschätzte Dauer:** 90 Minuten"
+          student_description: "In diesem professionellen Lernmodul bereiten Sie sich
+            auf die Code.org-Stunde Webentwicklung vor. \n\n**Aktivitäten dieses professionellen
+            Lernmoduls:**\n\n– Einführung in die Webentwicklung.\n– Üben der wichtigsten
+            Konzepte der Lerneinheit.\n– Beschäftigung mit Web Lab.\n– Erkunden der
+            Projekte am Ende des Kapitels.\n\n**Geschätzte Dauer:** 90 Minuten"
+        vpl-csd-ci-3:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Vorbereitung auf das Unterrichten von interaktiven Animationen
+                und Spielen
+          title: 'Modul 3: Vorbereitung auf das Unterrichten von interaktiven Animationen
+            und Spielen '
+          description: "In diesem professionellen Lernmodul bereiten Sie sich auf
+            den Unterricht der Code.org-Stunde Interaktive Animationen und Spiele
+            vor. \n\n**Aktivitäten dieses professionellen Lernmoduls:**\n\n– Einführung
+            in interaktive Animationen und Spiele.\n– Üben der wichtigsten Konzepte
+            der Unterrichtseinheit.\n– Beschäftigung mit Game Lab.\n– Erkunden der
+            Projekte am Ende des Kapitels.\n\n**Geschätzte Dauer:** 120 Minuten"
+          student_description: "In diesem professionellen Lernmodul bereiten Sie sich
+            auf den Unterricht der Code.org-Stunde Interaktive Animationen und Spiele
+            vor. \n\n**Aktivitäten dieses professionellen Lernmoduls:**\n\n– Einführung
+            in interaktive Animationen und Spiele.\n– Üben der wichtigsten Konzepte
+            der Unterrichtseinheit.\n– Beschäftigung mit Game Lab.\n– Erkunden der
+            Projekte am Ende des Kapitels.\n\n**Geschätzte Dauer:** 120 Minuten"
+        vpl-csd-ci-4:
+          title: " Modul 4: Vorbereitung auf das Unterrichten des Design-Prozesses"
+          description: "In diesem professionellen Lernmodul bereiten Sie sich auf
+            den Unterricht der Code.org-Stunde \"Design-Prozess\" vor. \n\n**Aktivitäten
+            dieses professionellen Lernmoduls:**\n\n– Eine Einführung in den Designprozess.\n–
+            Üben der wichtigsten Konzepte der Einheit.\n– Beschäftigung mit App Lab.\n–
+            Erkunden der Projekte am Ende des Kapitels.\n\n**Geschätzte Dauer:** 90
+            Minuten"
+          student_description: "In diesem professionellen Lernmodul bereiten Sie sich
+            auf den Unterricht der Code.org-Stunde \"Design-Prozess\" vor. \n\n**Aktivitäten
+            dieses professionellen Lernmoduls:**\n\n– Eine Einführung in den Designprozess.\n–
+            Üben der wichtigsten Konzepte der Einheit.\n– Beschäftigung mit App Lab.\n–
+            Erkunden der Projekte am Ende des Kapitels.\n\n**Geschätzte Dauer:** 90
+            Minuten"
+        vpl-csd-ci-5:
+          title: 'Modul 5: Vorbereitung auf den Unterricht Fakten und Gesellschaft'
+          description: "In diesem professionellen Lernmodul bereiten Sie sich auf
+            den Unterricht der Code.org-Stunde \"Daten und Gesellschaft\" vor. \n\n**Aktivitäten
+            dieses professionellen Lernmoduls:**\n\n– Einführung in das Thema \"Daten
+            und Gesellschaft.\n– Üben der wichtigsten Konzepte der Stunde.\n– Erkunden
+            der Projekte am Ende des Kapitels.\n\n**Geschätzte Dauer:** 90 Minuten"
+          student_description: "In diesem professionellen Lernmodul bereiten Sie sich
+            auf den Unterricht der Code.org-Stunde \"Daten und Gesellschaft\" vor.
+            \n\n**Aktivitäten dieses professionellen Lernmoduls:**\n\n– Einführung
+            in das Thema \"Daten und Gesellschaft.\n– Üben der wichtigsten Konzepte
+            der Stunde.\n– Erkunden der Projekte am Ende des Kapitels.\n\n**Geschätzte
+            Dauer:** 90 Minuten"
+        vpl-csd-ci-7:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Unterrichten von KI und maschinellem Lernen
+          title: 'Modul 7: Vorbereitung auf den Unterricht KI und maschinelles Lernen'
+          description: "In diesem professionellen Lernmodul bereiten Sie sich auf
+            den Unterricht der Code.org-Stunde \"KI und maschinelles Lernen\" vor.
+            \n\n**Aktivitäten dieses professionellen Lernmoduls:**\n\n– Einführung
+            in KI und maschinelles Lernen.\n– Üben der wichtigsten Konzepte der Einheit.\n–
+            Beschäftigung mit AI Lab und App Lab.\n– Erkunden der Projekte am Ende
+            des Kapitels.\n\n**Geschätzte Dauer:** 120 Minuten"
+          student_description: "In diesem professionellen Lernmodul bereiten Sie sich
+            auf den Unterricht der Code.org-Stunde \"KI und maschinelles Lernen\"
+            vor. \n\n**Aktivitäten dieses professionellen Lernmoduls:**\n\n– Einführung
+            in KI und maschinelles Lernen.\n– Üben der wichtigsten Konzepte der Einheit.\n–
+            Beschäftigung mit AI Lab und App Lab.\n– Erkunden der Projekte am Ende
+            des Kapitels.\n\n**Geschätzte Dauer:** 120 Minuten"
+        devices-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Chapter 2: Aufbau von physischen Prototypen'
+            lessonGroup-5:
+              display_name: Umfrage
+        focus-on-creativity4b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Ein- und Ausgaben
+        focus-on-hardware3b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Ein- und Ausgaben
+        focus-on-design-with-purpose4b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Ein- und Ausgaben
+        focus-on-coding4b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Ein- und Ausgaben
+        csd6b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Ein- und Ausgaben
+        self-paced-pl-csd1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Willkommen
+          title: 'Modul 1: Willkommen'
+        self-paced-pl-csd5-2023:
+          title: Unterrichten von KI und maschinellem Lernen
+        pl-csd-summer-day1:
+          lessons:
+            lesson-3:
+              name: Einführung
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tag 1
+          title: Tag 1
+        pl-csd-summer-day2:
+          lessons:
+            lesson-10:
+              name: Zusammenfassung
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tag 2
+          title: Tag 2
+        pl-csd-summer-day3:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tag 3
+          title: Tag 3
+        pl-csd-summer-day4:
+          lessons:
+            lesson-12:
+              name: Zusammenfassung
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tag 4
+          title: Tag 4
+        virtual-pl-csd-summer-day1:
+          lessons:
+            lesson-1:
+              name: Einführung
+            lesson-12:
+              name: Zusammenfassung
+          title: Tag 1
+        virtual-pl-csd-summer-day2:
+          lessons:
+            lesson-10:
+              name: Zusammenfassung
+          title: Tag 2
+        virtual-pl-csd-summer-day3:
+          lessons:
+            lesson-12:
+              name: Zusammenfassung
+          title: Tag 3
+        virtual-pl-csd-summer-day4:
+          lessons:
+            lesson-13:
+              name: Zusammenfassung
+          title: Tag 4
+        virtual-pl-csd-summer-day5:
+          lessons:
+            lesson-3:
+              name: Prüfung
+        csd-post-survey-2023:
+          title: "(Post-Course Survey) Überprüfung nach dem Kurs"
+        focus-on-data-post-survey-2023:
+          title: "(Post-Course Survey) Überprüfung nach dem Kurs"
+        focus-on-impact-in-society-post-survey-2023:
+          title: "(Post-Course Survey) Überprüfung nach dem Kurs"
+        focus-on-coding-post-survey-2023:
+          title: "(Post-Course Survey) Überprüfung nach dem Kurs"
+        focus-on-design-with-purpose-post-survey-2023:
+          title: "(Post-Course Survey) Überprüfung nach dem Kurs"
+        focus-on-hardware-post-survey-2023:
+          title: "(Post-Course Survey) Überprüfung nach dem Kurs"
+        focus-on-creativity-post-survey-2023:
+          title: "(Post-Course Survey) Überprüfung nach dem Kurs"
+        coursef-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitalen Staatsbürgerschaft
+            lessonGroup-3:
+              display_name: Sprites
+            lessonGroup-4:
+              display_name: Variablen
+            lessonGroup-6:
+              display_name: Projekt am Ende des Kurses
+          description_audience: 'Alter: 9-13'
+          description_short: Lernen Sie alle Konzepte in den Grundlagen der Informatik
+            und erstellen Sie Ihre eigene Zeichnung, Geschichte oder Ihr eigenes Spiel.

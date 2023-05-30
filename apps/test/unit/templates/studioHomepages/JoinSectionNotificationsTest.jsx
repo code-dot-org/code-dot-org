@@ -6,57 +6,57 @@ import JoinSectionNotifications from '@cdo/apps/templates/studioHomepages/JoinSe
 const SUCCESSFUL_JOIN = {
   action: 'join',
   result: 'success',
-  name: 'Test Section'
+  name: 'Test Section',
 };
 
 const SUCCESSFUL_LEAVE = {
   action: 'leave',
   result: 'success',
   name: 'Test Section',
-  id: 'ABCDEF'
+  id: 'ABCDEF',
 };
 
 const SECTION_DOESNT_EXIST = {
   action: 'join',
   result: 'section_notfound',
-  id: 'ABCDEF'
+  id: 'ABCDEF',
 };
 
 const FAILED_JOIN = {
   action: 'join',
   result: 'fail',
-  id: 'ABCDEF'
+  id: 'ABCDEF',
 };
 
 const ALREADY_JOINED = {
   action: 'join',
   result: 'exists',
-  name: 'Test Section'
+  name: 'Test Section',
 };
 
 const ALREADY_OWNED = {
   action: 'join',
   result: 'section_owned',
-  id: 'ABCDEF'
+  id: 'ABCDEF',
 };
 
 const AT_CAPACITY = {
   action: 'join',
   result: 'section_full',
   id: 'ABCDEF',
-  sectionCapacity: 500
+  sectionCapacity: 500,
 };
 
 const RESTRICTED_SECTION = {
   action: 'join',
   result: 'section_restricted',
-  id: 'ABCDEF'
+  id: 'ABCDEF',
 };
 
 const SPECIAL_PARTICIPANT_TYPE_SECTION = {
   action: 'join',
   result: 'cant_be_participant',
-  id: 'ABCDEF'
+  id: 'ABCDEF',
 };
 
 describe('JoinSectionNotifications', () => {

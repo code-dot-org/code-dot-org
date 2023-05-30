@@ -1,5 +1,6 @@
 <Gamelab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 50,
   "created_at": "2022-09-19T22:59:11.000Z",
   "level_num": "custom",
@@ -180,7 +181,7 @@
     },
     "show_debug_watch": "false",
     "encrypted": "false",
-    "encrypted_examples": "DRUcQ+P5eGTJqpLbyIUavUyvzO0Vsv1YoR6tEQBjDvmLAE5znwr6GeO9qnlC\naukT\n",
+    "encrypted_examples": "ipL8K//tY9q9N9JnjRTMFjQk4MVUmK4UCR62yeluwal9NFYuZvlLHbeTZ16N\nM0U+zW808G9DgOpY0FaoJL22Fw==\n",
     "embed": "true",
     "display_name": "Example",
     "mini_rubric": "false",
@@ -205,8 +206,7 @@
     "name_suffix": "_2023",
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2022-09-19T22:59:11.436+00:00\",\"changed\":[\"cloned from \\\"CSD U3 - Interactive Card - Example2_2022\\\"\"],\"cloned_from\":\"CSD U3 - Interactive Card - Example2_2022\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-19T22:59:11.436+00:00\",\"changed\":[\"cloned from \\\"CSD U3 - Interactive Card - Example2_2022\\\"\"],\"cloned_from\":\"CSD U3 - Interactive Card - Example2_2022\"},{\"changed_at\":\"2023-05-18 16:55:18 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>

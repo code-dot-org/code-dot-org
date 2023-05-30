@@ -447,6 +447,7 @@
           "student_overview": "Bắt nạt chưa bao giờ là đúng. Bài học này sẽ dạy bạn về những điều nên và không nên phát ngôn trực tuyến."
         },
         "coursef-2022/Introducing Sprite Lab": {
+          "name": "Giới thiệu Sprite Lab",
           "overview": "Trong bài học **thiết lập ngữ cảnh** này, học sinh sẽ thảo luận về vai trò của máy tính và công nghệ trong cuộc sống, tập trung vào cách thức các ứng dụng và công cụ cho người dùng lựa chọn cách sử dụng. Học sinh còn khám phá các ứng dụng tương tự như những ứng dụng mà họ sẽ tự lập trình ở giai đoạn sau.",
           "preparation": "-   Xác định phương thức đăng nhập Code.org của học sinh.\n-   Nếu cần, hãy tạo tài khoản Code.org cho học sinh.\n-   Chỉ định bài Giới thiệu Sprite Lab cho học sinh.\n-   In bảng **\\*Khám phá ứng dụng** (hoặc tải bản mềm lên LMS của bạn).",
           "purpose": "Bài học đầu tiên là giúp học sinh hào hứng với khóa học và gắn kết sở thích cá nhân của họ với khoa học máy tính.",
@@ -460,6 +461,7 @@
           "student_overview": "Trong bài học này, bạn sẽ viết chương trình và tìm hiểu về nhân vật và hành vi."
         },
         "coursef-2022/Sprites in Action": {
+          "name": "Sprites trong hành động",
           "overview": "Trong bài học **phát triển kỹ năng** này, học sinh sẽ thực hiện nhiều cấp độ lập trình trên máy tính, kết thúc bằng nhiệm vụ “chơi tự do” có kết thúc mở để phát triển bất cứ ứng dụng nào họ thích. Học sinh sẽ viết chương trình phản hồi lại các sự kiện theo thời gian và dữ liệu đầu vào của người dùng.",
           "preparation": "Khám phá các cấp độ này và xem lại slide bài học.",
           "purpose": "Bài học này được biên soạn nhằm củng cố các kỹ năng trong bài học trước và giới thiệu cho học sinh kỹ năng lập trình với sự kiện. Trong suốt khóa học này, sự kiện sẽ là phương tiện chính để học sinh thay đổi cách chạy chương trình theo thời gian hoặc để phản hồi lại người dùng.",
@@ -739,6 +741,7 @@
           "student_overview": "Trong bài học này, bạn sẽ viết chương trình và tìm hiểu về nhân vật và hành vi."
         },
         "express-2022/Sprites in Action": {
+          "name": "Sprites trong hành động",
           "overview": "Trong bài học **phát triển kỹ năng** này, học sinh sẽ thực hiện nhiều cấp độ lập trình trên máy tính, kết thúc bằng nhiệm vụ “chơi tự do” có kết thúc mở để phát triển bất cứ ứng dụng nào họ thích. Học sinh sẽ viết chương trình phản hồi lại các sự kiện theo thời gian và dữ liệu đầu vào của người dùng.",
           "preparation": "Khám phá các cấp độ này và xem lại slide bài học.",
           "purpose": "Bài học này được biên soạn nhằm giới thiệu cho học sinh kỹ năng lập trình với sự kiện. Trong suốt khóa học này, sự kiện sẽ là phương tiện chính để học sinh thay đổi cách chạy chương trình theo thời gian hoặc để phản hồi lại người dùng.",
@@ -1139,6 +1142,9 @@
         "csd3-2022/Project - Interactive Card": {
           "name": "Dự án: Thẻ tương tác"
         },
+        "csd3-2022/Velocity": {
+          "name": "Vận tốc"
+        },
         "csd3-2022/Collision Detection": {
           "name": "Phát hiện va chạm"
         },
@@ -1217,8 +1223,14 @@
         "csd6-2022/CS Discoveries Post-Course Survey": {
           "name": "Khám phá KHMT Khảo sát sau khóa học"
         },
+        "csd7-2022/Introduction to AI Lab": {
+          "name": "Giới thiệu về AI Lab"
+        },
         "csd7-2022/Numerical Models": {
           "overview": "Trong bài học này, học sinh sẽ tham gia hoạt động không sử dụng thiết bị điện tử để mô phỏng một đợt bùng phát thây ma. Học sinh sẽ phải dự đoán khu vực nào của thị trấn có ít thây ma nhất bằng cách sử dụng dữ liệu từ thị trấn lân cận. Học sinh sẽ sử dụng mức độ tương đồng và bình quân để đưa ra dự đoán về số lượng thây ma tại một địa điểm cụ thể. Sau đó, học sinh sẽ được giải đáp và so sánh dự đoán của mình với các con số thực tế nhằm thảo luận về độ chính xác của số liệu chênh lệch như thế nào so với dữ liệu phân loại.\n\n**Câu hỏi trong ngày:** Làm cách nào để máy tính học cách đưa ra dự đoán bằng số liệu?"
+        },
+        "csd7-2022/Numerical Data in AI Lab": {
+          "name": "Dữ liệu số trong phòng thí nghiệm AI"
         },
         "csd7-2022/Survey Planning": {
           "name": "Bộ sưu tập Thiết kế dữ liệu"
@@ -1264,6 +1276,12 @@
         },
         "courseb-2018/Events in Play Lab": {
           "name": "Trận chiến hoàng gia với các sự kiện"
+        },
+        "coursea-2018/Debugging: Unspotted Bugs": {
+          "name": "Lỗi chưa phát hiện"
+        },
+        "coursea-2018/Persistence & Frustration: Stevie and the Big Project": {
+          "name": "Stevie và dự án lớn"
         },
         "coursea-2018/Real-life Algorithms: Plant a Seed": {
           "name": "Trồng hạt giống"
@@ -1610,6 +1628,12 @@
         "coursec-2018/Binary Bracelets": {
           "name": "Vòng đeo tay nhị phân"
         },
+        "pre-express-2018/Debugging: Unspotted Bugs": {
+          "name": "Lỗi chưa phát hiện"
+        },
+        "pre-express-2018/Persistence & Frustration: Stevie and the Big Project": {
+          "name": "Stevie và dự án lớn"
+        },
         "pre-express-2018/Move It, Move It": {
           "name": "Di chuyển nó, di chuyển nó"
         },
@@ -1675,6 +1699,9 @@
         },
         "csd3-2018/Project - Interactive Card": {
           "name": "Dự án: Thẻ tương tác"
+        },
+        "csd3-2018/Velocity": {
+          "name": "Vận tốc"
         },
         "csd3-2018/Collision Detection": {
           "name": "Phát hiện va chạm"
@@ -2168,6 +2195,9 @@
         "csd3-2019/Project - Interactive Card": {
           "name": "Dự án: Thẻ tương tác"
         },
+        "csd3-2019/Velocity": {
+          "name": "Vận tốc"
+        },
         "csd3-2019/Collision Detection": {
           "name": "Phát hiện va chạm"
         },
@@ -2534,6 +2564,9 @@
         "coursec-2017/Loops in Artist": {
           "name": "Vòng lặp trong Artist"
         },
+        "coursec-2017/Loops in Harvester": {
+          "name": "Loops trong Harvester"
+        },
         "coursec-2017/Events: The Big Event": {
           "name": "Sự kiện: Sự kiện lớn"
         },
@@ -2752,6 +2785,9 @@
         },
         "csd3-2017/Project - Interactive Card": {
           "name": "Dự án: Thẻ tương tác"
+        },
+        "csd3-2017/Velocity": {
+          "name": "Vận tốc"
         },
         "csd3-2017/Collision Detection": {
           "name": "Phát hiện va chạm"
@@ -3288,7 +3324,11 @@
         "allthethings/lesson-48": {
           "name": "Thơ ca"
         },
+        "allthethings/lesson-49": {
+          "name": "Âm nhạc"
+        },
         "coursef-2021/lesson-6": {
+          "name": "Giới thiệu Sprite Lab",
           "overview": "Trong bài học **thiết lập ngữ cảnh** này, học sinh sẽ thảo luận về vai trò của máy tính và công nghệ trong cuộc sống, tập trung vào cách thức các ứng dụng và công cụ cho người dùng lựa chọn cách sử dụng. Học sinh còn khám phá các ứng dụng tương tự như những ứng dụng mà họ sẽ tự lập trình ở giai đoạn sau.",
           "preparation": "-   Xác định phương thức đăng nhập Code.org của học sinh.\n-   Nếu cần, hãy tạo tài khoản Code.org cho học sinh.\n-   Chỉ định bài Giới thiệu Sprite Lab cho học sinh.\n-   In bảng **\\*Khám phá ứng dụng** (hoặc tải bản mềm lên LMS của bạn).",
           "purpose": "Bài học đầu tiên là giúp học sinh hào hứng với khóa học và gắn kết sở thích cá nhân của họ với khoa học máy tính.",
@@ -3302,6 +3342,7 @@
           "student_overview": "Trong bài học này, bạn sẽ viết chương trình và tìm hiểu về nhân vật và hành vi."
         },
         "coursef-2021/lesson-8": {
+          "name": "Sprites trong hành động",
           "overview": "Trong bài học **phát triển kỹ năng** này, học sinh sẽ thực hiện nhiều cấp độ lập trình trên máy tính, kết thúc bằng nhiệm vụ “chơi tự do” có kết thúc mở để phát triển bất cứ ứng dụng nào họ thích. Học sinh sẽ viết chương trình phản hồi lại các sự kiện theo thời gian và dữ liệu đầu vào của người dùng.",
           "preparation": "Khám phá các cấp độ này và xem lại slide bài học.",
           "purpose": "Bài học này được biên soạn nhằm củng cố các kỹ năng trong bài học trước và giới thiệu cho học sinh kỹ năng lập trình với sự kiện. Trong suốt khóa học này, sự kiện sẽ là phương tiện chính để học sinh thay đổi cách chạy chương trình theo thời gian hoặc để phản hồi lại người dùng.",
@@ -3810,6 +3851,7 @@
           "student_overview": "Trong bài học này, bạn sẽ viết chương trình và tìm hiểu về nhân vật và hành vi."
         },
         "express-2021/lesson-3": {
+          "name": "Sprites trong hành động",
           "overview": "Trong bài học **phát triển kỹ năng** này, học sinh sẽ thực hiện nhiều cấp độ lập trình trên máy tính, kết thúc bằng nhiệm vụ “chơi tự do” có kết thúc mở để phát triển bất cứ ứng dụng nào họ thích. Học sinh sẽ viết chương trình phản hồi lại các sự kiện theo thời gian và dữ liệu đầu vào của người dùng.",
           "preparation": "Khám phá các cấp độ này và xem lại slide bài học.",
           "purpose": "Bài học này được biên soạn nhằm giới thiệu cho học sinh kỹ năng lập trình với sự kiện. Trong suốt khóa học này, sự kiện sẽ là phương tiện chính để học sinh thay đổi cách chạy chương trình theo thời gian hoặc để phản hồi lại người dùng.",
@@ -4113,8 +4155,14 @@
           "purpose": "Học sinh có thể sẵn sàng bắt tay ngay vào việc xây dựng các dự án của mình, nhưng bài học này sẽ giúp hình thành các ý tưởng của họ thành các kế hoạch. Cấu trúc này sẽ giúp những người hay mơ mộng suy nghĩ thực tế hơn và định hướng cho những người đang cảm thấy hoang mang. Hãy cho học sinh nhiều thời gian để tạo và sửa dự án của mình. Thử nghiệm và không thể tránh khỏi sai sót trong bài học này sẽ dạy học sinh cách giải quyết vấn đề cũng như sự kiên trì.",
           "student_overview": "Những dự án lớn tầm cỡ này cần nhiều thời gian và lên kế hoạch kỹ càng. Hãy tìm nguồn cảm hứng, lập kế hoạch và thỏa sức sáng tạo!"
         },
+        "csd7-2021/Introduction to AI Lab": {
+          "name": "Giới thiệu về AI Lab"
+        },
         "csd7-2021/Similarity Models": {
           "overview": "Trong bài học này, học sinh sẽ tham gia hoạt động không sử dụng thiết bị điện tử để mô phỏng một đợt bùng phát thây ma. Học sinh sẽ phải dự đoán khu vực nào của thị trấn có ít thây ma nhất bằng cách sử dụng dữ liệu từ thị trấn lân cận. Học sinh sẽ sử dụng mức độ tương đồng và bình quân để đưa ra dự đoán về số lượng thây ma tại một địa điểm cụ thể. Sau đó, học sinh sẽ được giải đáp và so sánh dự đoán của mình với các con số thực tế nhằm thảo luận về độ chính xác của số liệu chênh lệch như thế nào so với dữ liệu phân loại.\n\n**Câu hỏi trong ngày:** Làm cách nào để máy tính học cách đưa ra dự đoán bằng số liệu?"
+        },
+        "csd7-2021/Numerical Data in AI Lab": {
+          "name": "Dữ liệu số trong phòng thí nghiệm AI"
         },
         "csd7-2021/Survey Planning": {
           "name": "Bộ sưu tập Thiết kế dữ liệu"
@@ -4190,6 +4238,9 @@
         },
         "csd3-2021/Project - Interactive Card": {
           "name": "Dự án: Thẻ tương tác"
+        },
+        "csd3-2021/Velocity": {
+          "name": "Vận tốc"
         },
         "csd3-2021/Collision Detection": {
           "name": "Phát hiện va chạm"

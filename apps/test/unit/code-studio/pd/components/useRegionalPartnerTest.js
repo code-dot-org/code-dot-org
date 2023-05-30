@@ -7,7 +7,7 @@ import sinon from 'sinon';
 import {useRegionalPartner} from '@cdo/apps/code-studio/pd/components/useRegionalPartner';
 import {
   PROGRAM_CSD,
-  PROGRAM_CSA
+  PROGRAM_CSA,
 } from '@cdo/apps/code-studio/pd/application/teacher/TeacherApplicationConstants';
 import _ from 'lodash';
 
@@ -21,7 +21,7 @@ const RegionalPartnerUser = props => {
   return null;
 };
 RegionalPartnerUser.propTypes = {
-  data: PropTypes.object
+  data: PropTypes.object,
 };
 
 const getRegionalPartnerData = () => {
@@ -31,13 +31,13 @@ const getRegionalPartnerData = () => {
 const GOOD_RESPONSE = {
   id: 1,
   name: 'reginald partner',
-  pl_programs_offered: ['CSA']
+  pl_programs_offered: ['CSA'],
 };
 
 const mockApiResponse = (status = 200, body = {}) => {
   return new window.Response(JSON.stringify(body), {
     status,
-    headers: {'Content-type': 'application/json'}
+    headers: {'Content-type': 'application/json'},
   });
 };
 
@@ -60,9 +60,8 @@ describe('useRegionalPartner tests', () => {
     let rendered;
     fetch.resetBehavior();
     rendered = await mount(<RegionalPartnerUser data={{}} />);
-    const [regionalPartner, regionalPartnerError] = getRegionalPartnerData(
-      rendered
-    );
+    const [regionalPartner, regionalPartnerError] =
+      getRegionalPartnerData(rendered);
     expect(regionalPartner).to.equal(undefined);
     expect(regionalPartnerError).to.equal(false);
     rendered.unmount();
@@ -74,9 +73,8 @@ describe('useRegionalPartner tests', () => {
     await act(async () => {
       rendered = await mount(<RegionalPartnerUser data={{}} />);
     });
-    const [regionalPartner, regionalPartnerError] = getRegionalPartnerData(
-      rendered
-    );
+    const [regionalPartner, regionalPartnerError] =
+      getRegionalPartnerData(rendered);
     expect(regionalPartner).to.equal(null);
     expect(regionalPartnerError).to.equal(true);
     rendered.unmount();
@@ -92,15 +90,14 @@ describe('useRegionalPartner tests', () => {
             school: '-1',
             schoolZipCode: '12345',
             schoolState: 'AK',
-            program: PROGRAM_CSA
+            program: PROGRAM_CSA,
           }}
         />
       );
     });
     await clock.runAllAsync();
-    const [regionalPartner, regionalPartnerError] = getRegionalPartnerData(
-      rendered
-    );
+    const [regionalPartner, regionalPartnerError] =
+      getRegionalPartnerData(rendered);
     expect(regionalPartner).to.equal(null);
     expect(regionalPartnerError).to.equal(true);
     rendered.unmount();
@@ -116,16 +113,15 @@ describe('useRegionalPartner tests', () => {
             school: '-1',
             schoolZipCode: '12345',
             schoolState: 'AK',
-            program: PROGRAM_CSD
+            program: PROGRAM_CSD,
           }}
         />
       );
       await clock.runAllAsync();
     });
 
-    const [regionalPartner, regionalPartnerError] = getRegionalPartnerData(
-      rendered
-    );
+    const [regionalPartner, regionalPartnerError] =
+      getRegionalPartnerData(rendered);
     expect(fetch).to.be.calledWith(
       `/api/v1/pd/regional_partner_workshops/find?course=CS+Discoveries&subject=5-day+Summer&zip_code=12345&state=AK`
     );
@@ -144,16 +140,15 @@ describe('useRegionalPartner tests', () => {
             school: '-1',
             schoolZipCode: '12345',
             schoolState: 'AK',
-            program: PROGRAM_CSA
+            program: PROGRAM_CSA,
           }}
         />
       );
       await clock.runAllAsync();
     });
 
-    const [regionalPartner, regionalPartnerError] = getRegionalPartnerData(
-      rendered
-    );
+    const [regionalPartner, regionalPartnerError] =
+      getRegionalPartnerData(rendered);
     expect(fetch).to.be.calledWith(
       `/api/v1/pd/regional_partner_workshops/find?course=Computer+Science+A&subject=5-day+Summer&zip_code=12345&state=AK`
     );

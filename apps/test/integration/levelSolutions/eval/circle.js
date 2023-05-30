@@ -8,29 +8,29 @@ module.exports = {
     solutionBlocks: blockUtils.mathBlockXml('functional_circle', {
       COLOR: blockUtils.mathBlockXml('functional_string', null, {VAL: 'red'}),
       STYLE: blockUtils.mathBlockXml('functional_string', null, {
-        VAL: 'outline'
+        VAL: 'outline',
       }),
-      SIZE: blockUtils.mathBlockXml('functional_math_number', null, {NUM: 50})
+      SIZE: blockUtils.mathBlockXml('functional_math_number', null, {NUM: 50}),
     }),
     requiredBlocks: '',
-    freePlay: false
+    freePlay: false,
   },
   tests: [
     {
       description: 'Nothing',
       expected: {
         result: false,
-        testResult: TestResults.EMPTY_FUNCTIONAL_BLOCK
+        testResult: TestResults.EMPTY_FUNCTIONAL_BLOCK,
       },
-      xml: '<xml>' + '</xml>'
+      xml: '<xml>' + '</xml>',
     },
     {
       description: 'correct answer',
       expected: {
         result: true,
-        testResult: TestResults.ALL_PASS
+        testResult: TestResults.ALL_PASS,
       },
-      customValidator: function(assert) {
+      customValidator: function (assert) {
         var user = document.getElementById('user');
         var circle = user.querySelector('circle');
         var fill = circle.getAttribute('fill');
@@ -46,84 +46,84 @@ module.exports = {
         '<xml>' +
         blockUtils.mathBlockXml('functional_circle', {
           COLOR: blockUtils.mathBlockXml('functional_string', null, {
-            VAL: 'red'
+            VAL: 'red',
           }),
           STYLE: blockUtils.mathBlockXml('functional_string', null, {
-            VAL: 'outline'
+            VAL: 'outline',
           }),
           SIZE: blockUtils.mathBlockXml('functional_math_number', null, {
-            NUM: 50
-          })
+            NUM: 50,
+          }),
         }) +
-        '</xml>'
+        '</xml>',
     },
     {
       description: 'correct answer with style block',
       expected: {
         result: true,
-        testResult: TestResults.ALL_PASS
+        testResult: TestResults.ALL_PASS,
       },
       xml:
         '<xml>' +
         blockUtils.mathBlockXml('functional_circle', {
           COLOR: blockUtils.mathBlockXml('functional_string', null, {
-            VAL: 'red'
+            VAL: 'red',
           }),
           STYLE: blockUtils.mathBlockXml('functional_style', null, {
-            VAL: 'outline'
+            VAL: 'outline',
           }),
           SIZE: blockUtils.mathBlockXml('functional_math_number', null, {
-            NUM: 50
-          })
+            NUM: 50,
+          }),
         }) +
-        '</xml>'
+        '</xml>',
     },
     {
       description: 'correct answer but rotated 15 degrees',
       expected: {
         result: true,
-        testResult: TestResults.ALL_PASS
+        testResult: TestResults.ALL_PASS,
       },
       xml:
         '<xml>' +
         blockUtils.mathBlockXml('rotate', {
           IMAGE: blockUtils.mathBlockXml('functional_circle', {
             COLOR: blockUtils.mathBlockXml('functional_string', null, {
-              VAL: 'red'
+              VAL: 'red',
             }),
             STYLE: blockUtils.mathBlockXml('functional_style', null, {
-              VAL: 'outline'
+              VAL: 'outline',
             }),
             SIZE: blockUtils.mathBlockXml('functional_math_number', null, {
-              NUM: 50
-            })
+              NUM: 50,
+            }),
           }),
           DEGREES: blockUtils.mathBlockXml('functional_math_number', null, {
-            NUM: 15
-          })
+            NUM: 15,
+          }),
         }) +
-        '</xml>'
+        '</xml>',
     },
     {
       description: 'wrong color',
       expected: {
         result: false,
-        testResult: TestResults.LEVEL_INCOMPLETE_FAIL
+        testResult: TestResults.LEVEL_INCOMPLETE_FAIL,
       },
       xml:
         '<xml>' +
         blockUtils.mathBlockXml('functional_circle', {
           COLOR: blockUtils.mathBlockXml('functional_string', null, {
-            VAL: 'blue'
+            VAL: 'blue',
           }),
           STYLE: blockUtils.mathBlockXml('functional_string', null, {
-            VAL: 'outline'
+            VAL: 'outline',
           }),
           SIZE: blockUtils.mathBlockXml('functional_math_number', null, {
-            NUM: 50
-          })
+            NUM: 50,
+          }),
         }) +
-        '</xml>'
-    }
-  ]
+        '</xml>',
+    },
+  ],
 };

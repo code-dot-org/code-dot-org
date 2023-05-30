@@ -501,6 +501,10 @@ kn:
             '"space"': ಸ್ಪೇಸ್
             '"x"': x
             '"y"': y
+      gamelab_layoutSprites:
+        options:
+          FORMAT:
+            '"grid"': ಗ್ರಿಡ್
       gamelab_locationAt:
         text: 'ಸ್ಥಳ x: {X} y: {Y}'
       gamelab_locationModifier:
@@ -527,6 +531,10 @@ kn:
             '"spiral"': ಸ್ಪೈರಲ್
       gamelab_makeNewSpriteAnon:
         text: "{LOCATION} ನಲ್ಲಿ ಹೊಸ {ANIMATION_NAME} ಸ್ಪ್ರೈಟ್‌ಗಳನ್ನು ಮಾಡಿ"
+      gamelab_makeNewSpriteGroup:
+        options:
+          FORMAT:
+            '"grid"': ಗ್ರಿಡ್
       gamelab_makeNumSprites:
         text: "{NUM} ಹೊಸ {ANIMATION_NAME} ಸ್ಪ್ರೈಟ್‌ಗಳನ್ನು ಮಾಡಿ"
       gamelab_makeProjectile:
@@ -1490,6 +1498,20 @@ kn:
           DIR:
             right: ಬಲ ↻
             left: ಎಡ ↺
+      ecosystems_int10:
+        options:
+          VALUE:
+            '0': '0'
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       storylab_setForegroundEffect2:
         text: "{EFFECT} ಎಫೆಕ್ಟ್ ಮಾಡಿ"
         options:

@@ -1236,6 +1236,19 @@ ro:
             '"x"': x
             '"y"': y
             '"z"': z
+      gamelab_layoutSprites:
+        text: schema {GROUP} de forma {FORMAT}
+        options:
+          FORMAT:
+            '"border"': margine
+            '"circle"': cerc
+            '"grid"': rețea
+            '"top"': rândul de sus
+            '"row"': rând
+            '"bottom"': rândul de jos
+            '"left"': coloana stângă
+            '"column"': coloană
+            '"right"': coloana dreaptă
       gamelab_locationAt:
         text: 'locaţie x: {X} y: {Y}'
       gamelab_locationModifier:
@@ -1262,6 +1275,18 @@ ro:
             '"spiral"': spirală
       gamelab_makeNewSpriteAnon:
         text: face noi {ANIMATION_NAME} sprite la {LOCATION}
+      gamelab_makeNewSpriteGroup:
+        options:
+          FORMAT:
+            '"border"': margine
+            '"circle"': cerc
+            '"grid"': rețea
+            '"top"': rândul de sus
+            '"row"': rând
+            '"bottom"': rândul de jos
+            '"left"': coloana stângă
+            '"column"': coloană
+            '"right"': coloana dreaptă
       gamelab_makeNumSprites:
         text: creează {NUM} noi {ANIMATION_NAME} spirite
       gamelab_makeProjectile:
@@ -2410,6 +2435,20 @@ ro:
           DIR:
             right: dreapta ↻
             left: stânga ↺
+      ecosystems_int10:
+        options:
+          VALUE:
+            '0': '0'
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       storylab_setForegroundEffect2:
         text: realizează efectul {EFFECT}
         options:

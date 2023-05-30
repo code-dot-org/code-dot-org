@@ -17,6 +17,9 @@
         "csd-2022/board-events": {
           "display_name": "Mga Pangyayari sa Board"
         },
+        "csd-2022/circuit-playground": {
+          "display_name": "Pangkalahatang-ideya ng Circuit Playground"
+        },
         "csd-2022/classes": {
           "display_name": "Mga Klase"
         },
@@ -79,9 +82,6 @@
         },
         "csd-2022/patterns-overview": {
           "display_name": "Buod"
-        },
-        "csd-2022/physical-input": {
-          "display_name": "Pisikal na Input"
         },
         "csd-2022/playing-notes": {
           "display_name": "Mga Tala ng Laro"

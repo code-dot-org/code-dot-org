@@ -12,3 +12,5 @@ teacher_markdown <<MARKDOWN
 CSS is used to style a web page. Changing the background color and font size are style changes.
 HTML is used to add content, such as images, links, and text.
 MARKDOWN
+
+allow_multiple_attempts true

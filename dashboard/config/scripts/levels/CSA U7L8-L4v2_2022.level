@@ -10,13 +10,14 @@
     "skip_dialog": true,
     "skip_sound": true,
     "title": "Check for Understanding",
-    "encrypted_solution": "WZAHilC9M6crRMjVB1gs+1JrDSck9wEvqo6iyuR8JcI8yyHL7rcGyp6e+AxA\ngWNh1FWun29/8vJeszrtxW3CWSpW3RyANDFR2wa6w/2nbWgUJDnBGDTbAmtA\nUpHNbSIwcRgK23g7fpFvITY/t+44+bPU7Qn2NPqWBPbJwMLdjdy9rEOc1fU+\noJqr+bD2r717CyaNvPXgU3l93IIl3kIHqA==\n"
+    "encrypted_solution": "WZAHilC9M6crRMjVB1gs+1JrDSck9wEvqo6iyuR8JcI8yyHL7rcGyp6e+AxA\ngWNh1FWun29/8vJeszrtxW3CWSpW3RyANDFR2wa6w/2nbWgUJDnBGDTbAmtA\nUpHNbSIwcRgK23g7fpFvITY/t+44+bPU7Qn2NPqWBPbJwMLdjdy9rEOc1fU+\noJqr+bD2r717CyaNvPXgU3l93IIl3kIHqA==\n",
+    "allow_multiple_attempts": "true"
   },
-  "game_id": 52,
-  "published": true,
-  "created_at": "2022-04-18T12:49:04.000Z",
   "level_num": "custom",
+  "game_id": 52,
+  "created_at": "2022-04-18T12:49:04.000Z",
   "user_id": 16889,
+  "published": true,
   "audit_log": "[{\"changed_at\":\"2022-04-18T12:49:04.646+00:00\",\"changed\":[\"cloned from \\\"CSA U7L6-L1v2_2022\\\"\"],\"cloned_from\":\"CSA U7L6-L1v2_2022\"},{\"changed_at\":\"2022-04-18 12:49:06 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-09 00:19:40 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]",
   "level_concept_difficulty": {
   }

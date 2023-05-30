@@ -1253,6 +1253,19 @@ ar:
             '"x"': x
             '"y"': ص
             '"z"': z
+      gamelab_layoutSprites:
+        text: تخطيط {GROUP} كـ {FORMAT}
+        options:
+          FORMAT:
+            '"border"': الحدود
+            '"circle"': دائرة
+            '"grid"': شبكة
+            '"top"': الصف العلوي
+            '"row"': صف
+            '"bottom"': الصف السفلي
+            '"left"': العمود الأيسر
+            '"column"': عمود
+            '"right"': العمود الأيمن
       gamelab_locationAt:
         text: 'الموقع x: {X} Y: {Y}'
       gamelab_locationModifier:
@@ -1279,6 +1292,18 @@ ar:
             '"spiral"': لولبي
       gamelab_makeNewSpriteAnon:
         text: جعل جديده {ANIMATION_NAME} العفريت في {LOCATION}
+      gamelab_makeNewSpriteGroup:
+        options:
+          FORMAT:
+            '"border"': الحدود
+            '"circle"': دائرة
+            '"grid"': شبكة
+            '"top"': الصف العلوي
+            '"row"': صف
+            '"bottom"': الصف السفلي
+            '"left"': العمود الأيسر
+            '"column"': عمود
+            '"right"': العمود الأيمن
       gamelab_makeNumSprites:
         text: صنع {NUM} نقوش متحركة {ANIMATION_NAME} جديدة
       gamelab_makeProjectile:
@@ -2037,6 +2062,7 @@ ar:
             '"leaves"': أوراق
             '"rainbow"': قوس قزح
             '"stars"': نجوم
+            '"waves"': أمواج
       Poetry_addLine:
         text: إضافة سطر {LINE}
       Poetry_animateText:
@@ -2071,6 +2097,8 @@ ar:
             '"sound://category_loops/red_flag_loop1.mp3"': المهمة
             '"sound://category_nature/summer_night_loop.mp3"': ليل
             '"sound://category_background/ocean_waves.mp3"': محيط
+            '"sound://category_background/rainforest_ambient_sound.mp3"': الغابات
+              المطيرة
             '"sound://category_background/repitition.mp3"': ركوب
             '"sound://category_background/wavering_wind.mp3"': نائم
             '"sound://category_loops/stabilizing_breath_loop1.mp3"': بطيء
@@ -2448,6 +2476,21 @@ ar:
           DIR:
             right: إلى اليمين ↻
             left: إلى اليسار ↺
+      ecosystems_int10:
+        text: "{VALUE}"
+        options:
+          VALUE:
+            '0': '0'
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       storylab_setForegroundEffect2:
         text: عمل {EFFECT} تأثير
         options:

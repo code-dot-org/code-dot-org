@@ -23,13 +23,13 @@ class HeightResizer extends React.Component {
      */
     onResize: PropTypes.func.isRequired,
     style: PropTypes.object,
-    vertical: PropTypes.bool
+    vertical: PropTypes.bool,
   };
 
   state = {
     dragging: false,
     dragStart: 0,
-    dragExtraHeight: 0
+    dragExtraHeight: 0,
   };
 
   componentDidMount() {
@@ -102,7 +102,7 @@ class HeightResizer extends React.Component {
     this.setState({
       dragging: true,
       dragStart: this.props.vertical ? pageX : pageY,
-      dragExtraHeight
+      dragExtraHeight,
     });
 
     this.showResizeCursor(true);
@@ -155,9 +155,9 @@ class HeightResizer extends React.Component {
       mainStyle = [
         styles.mainVertical,
         {
-          left: this.props.position - RESIZER_HEIGHT
+          left: this.props.position - RESIZER_HEIGHT,
         },
-        this.props.style
+        this.props.style,
       ];
       ellipsisStyle = styles.ellipsisVertical;
       ellipsisClassName = 'fa fa-ellipsis-v';
@@ -165,9 +165,9 @@ class HeightResizer extends React.Component {
       mainStyle = [
         styles.main,
         {
-          top: this.props.position - RESIZER_HEIGHT
+          top: this.props.position - RESIZER_HEIGHT,
         },
-        this.props.style
+        this.props.style,
       ];
       ellipsisStyle = styles.ellipsis;
       ellipsisClassName = 'fa fa-ellipsis-h';
@@ -191,14 +191,14 @@ const styles = {
     height: RESIZER_HEIGHT,
     left: 0,
     right: 0,
-    cursor: 'ns-resize'
+    cursor: 'ns-resize',
   },
   mainVertical: {
     position: 'absolute',
     width: RESIZER_HEIGHT,
     top: 0,
     bottom: 0,
-    cursor: 'ew-resize'
+    cursor: 'ew-resize',
   },
   ellipsis: {
     width: '100%',
@@ -207,7 +207,7 @@ const styles = {
     textAlign: 'center',
     whiteSpace: 'nowrap',
     lineHeight: RESIZER_HEIGHT + 'px',
-    paddingTop: 1 // results in a slightly better centering
+    paddingTop: 1, // results in a slightly better centering
   },
   ellipsisVertical: {
     width: '100%',
@@ -218,8 +218,8 @@ const styles = {
     lineHeight: RESIZER_HEIGHT + 'px',
     top: '50%',
     position: 'absolute',
-    transform: 'translateY(-50%)'
-  }
+    transform: 'translateY(-50%)',
+  },
 };
 
 export default Radium(HeightResizer);

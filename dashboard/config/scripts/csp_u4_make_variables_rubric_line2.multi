@@ -5,3 +5,5 @@ right '**Limited Evidence:** One variable is present that stores either the amou
 right '**Convincing Evidence:** Variables are defined to store the amount of likes and the comments'
 right '**Extensive Evidence:** Variables are defined to store the amount of likes and the comments. Variables are named in a clear and understandable way.'
 
+
+allow_multiple_attempts true

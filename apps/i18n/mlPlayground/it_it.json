@@ -12,7 +12,9 @@
   "columnDetailsMinimumValue": "min",
   "columnDetailsMaximumValue": "max",
   "dataCardLastUpdated": "Ultimo aggiornamento",
+  "predictHeader": "Provalo!",
   "predictButton": "Predict",
+  "uniqueOptionsWarningNotice": "Nota",
   "datasets": {
     "medical_priority": {
       "fields": {
@@ -312,6 +314,9 @@
         },
         "Writing": {
           "id": "Scrivere"
+        },
+        "Empathy": {
+          "id": "Empatia"
         },
         "Achievements": {
           "id": "Conquiste"

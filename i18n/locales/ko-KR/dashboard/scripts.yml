@@ -121,6 +121,9 @@ ko:
           description: UI 테스트에 대한 모든 레벨의 종류
           description_short: UI 테스트에 대한 모든 레벨의 종류
           student_description: UI 테스트에 대한 모든 레벨의 종류
+          lessons:
+            lesson-49:
+              name: 음악
         algebraPD2b:
           description: '단계 2 온라인: 혼합된 여름 공부'
           description_short: '단계 2 온라인: 혼합된 여름 공부'
@@ -4202,6 +4205,23 @@ ko:
               display_name: 컨텐츠
             lessonGroup-4:
               display_name: 대체 레슨
+        csa7-2023:
+          lessons:
+            lesson-6:
+              name: 지적 재산
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 컨텐츠
+            lessonGroup-5:
+              display_name: 대체 레슨
+        csa8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 컨텐츠
+            lessonGroup-4:
+              display_name: 설문조사
+            lessonGroup-5:
+              display_name: 대체 레슨
         hello-world-space-2022:
           title: '헬로 월드: 스페이스'
         hello-world-soccer-2022:
@@ -4520,6 +4540,8 @@ ko:
               display_name: '챕터 1: 웹페이지 만들기'
             lessonGroup-3:
               display_name: '챕터 2: 멀티 페이지 웹페이지 '
+            lessonGroup-4:
+              display_name: 설문조사
           student_description: " 단원 2에서는 자신의 웹페이지에 콘텐츠를 만들어 공유하는 방법을 배울 것입니다. 어떤 콘텐츠를 세상과 공유할지 결정한 후, HTML과 CSS를 사용해 페이지 구조와 스타일을 만드는 법을 배울 것입니다. 또한 리소스와 팀워크를 사용해, 디버깅과 같은 가치 있는 프로그래밍 기술을 연습할 것입니다. "
         interactive-games-animations-2023:
           lesson_groups:
@@ -4527,6 +4549,8 @@ ko:
               display_name: '챕터 1: 이미지와 애니메이션'
             lessonGroup-3:
               display_name: '챕터 2: 게임 만들기'
+            lessonGroup-4:
+              display_name: 설문조사
           student_description: " 단원 3에서는 게임 랩에서 애니메이션과 인터랙티브 아트, 게임을 프로그래밍하며 코딩 경험을 쌓을 것입니다. 단원은 간단한 모양으로 시작하여 여기에 컴퓨터 과학자들이 매일 사용하는 것과 동일한 프로그래밍 개념과 설계 프로세스를 사용하여 더 정교한 스프라이트 기반 게임을 쌓아 올립니다. 마지막 프로젝트에서는 개인화된 인터랙티브 프로그램을 개발할 것입니다."
         design-process-2023:
           lesson_groups:
@@ -4534,6 +4558,8 @@ ko:
               display_name: '챕터 1: 사용자 중심 설계'
             lessonGroup-3:
               display_name: '챕터 2: 앱 프로토타입'
+            lessonGroup-4:
+              display_name: 설문조사
           student_description: 단원 4는 컴퓨팅의 더 넓은 사회적 영향을 소개합니다. 일련의 설계 도전을 통해, 문제의 해결책을 발전시키는 동안 다른 이의 필요를 더 잘 이해하는 방법을 배울 것입니다. 단원의 후반부는 반복되는 팀 프로젝트로 구성되며 이 기간 동안 팀은 그들이 관심을 둬야 하는 필요를 식별하고 종이와 앱 랩 모두에 솔루션 프로토타입을 만들고 실제 사용자와 함께 솔루션을 테스트하여 피드백을 얻고 더 반복을 추진할 기회를 갖습니다.
         data-society-2023:
           lesson_groups:
@@ -4541,6 +4567,8 @@ ko:
               display_name: '챕터1: 정보 표현하기'
             lessonGroup-3:
               display_name: '챕터 2: 데이터 문제 해결하기'
+            lessonGroup-4:
+              display_name: 설문조사
           description_short: 데이터 문제를 풀기 위해 사람들이 컴퓨터를 사용하는 방식에 대해 배우세요.
           student_description: 단원 5는 문제해결 시 데이터의 중요성에 관한 단원이고 컴퓨터가 이 프로세스를 어떻게 도울 수 있는지를 강조합니다. 첫 번째 챕터는 컴퓨터에서 정보를 나타내는데 사용하는 여러 시스템과 그것을 사용함에 따라 제기되는 도전과 대가를 강조합니다. 두 번째 챕터는 문제를 풀기 위한 데이터 사용 방법과 컴퓨터가 이 프로세스의 각 단계를 자동화하는데 도움을 주는 방식을 배우게 됩니다. 챕터는 데이터 문제해결 프로세스를 특정 영역에 응용하는 방식을 고려하는 것으로서 마칩니다.
         aiml-2023:
@@ -4551,6 +4579,8 @@ ko:
               display_name: 챕터 1
             lessonGroup-4:
               display_name: 챕터 2
+            lessonGroup-5:
+              display_name: 설문조사
         focus-on-creativity1-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4697,3 +4727,154 @@ ko:
             lessonGroup-3:
               display_name: '챕터 2: 물리적 프로토타입 만들기'
           description_short: 물리적 기기로 프로그램 하는 법 배우기
+        microbit-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 인풋 및 아웃풋
+            lessonGroup-5:
+              display_name: 설문조사
+        vpl-csd-ci-1:
+          title: '모듈 1: 문제 해결과 컴퓨팅 교습 준비'
+          description: "이 전문 학습 모듈은 귀하가 Code.org의 문제해결 및 컴퓨팅 단원을 가르칠 준비를 하는 데 도움을 주도록 고안되어 있습니다. \n\n**이 전문 학습 모듈에서, 귀하는 다음을 수행하게 됩니다.**\n\n-   문제 해결 및 컴퓨팅에 대한 소개 학습.\n-   해당 단원에 포함된 핵심 개념 연습.\n-   챕터 마지막의 프로젝트 탐구.\n\n**권장 시간:** 30분"
+          student_description: "이 전문 학습 모듈은 귀하가 Code.org의 문제해결 및 컴퓨팅 단원을 가르칠 준비를 하는 데 도움을 주도록 고안되어 있습니다. \n\n**이 전문 학습 모듈에서, 귀하는 다음을 수행하게 됩니다.**\n\n-   문제 해결 및 컴퓨팅에 대한 소개 학습.\n-   해당 단원에 포함된 핵심 개념 연습.\n-   챕터 마지막의 프로젝트 탐구.\n\n**권장 시간:** 30분"
+        vpl-csd-ci-2:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 교습 웹 개발
+          title: '모듈 2: 웹 개발 교습 준비'
+          description: "이 전문 학습 모듈은 Code.org의 웹 개발 단원을 교습할 준비를 돕도록 고안되어 있습니다. \n\n**이 전문 학습 모듈에서, 귀하는 다음을 수행하게 됩니다:**\n\n-   웹 개발에 대한 도입 확보.\n-   단원에 포함된 키 개념 연습.\n-   웹 랩에 참여.\n-   챕터 말 프로젝트 탐구.\n\n**권장 시간:** 90분"
+          student_description: "이 전문 학습 모듈은 Code.org의 웹 개발 단원을 교습할 준비를 돕도록 고안되어 있습니다. \n\n**이 전문 학습 모듈에서, 귀하는 다음을 수행하게 됩니다:**\n\n-   웹 개발에 대한 도입 확보.\n-   단원에 포함된 키 개념 연습.\n-   웹 랩에 참여.\n-   챕터 말 프로젝트 탐구.\n\n**권장 시간:** 90분"
+        vpl-csd-ci-3:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 인터랙티브 애니메이션 및 게임 교습 준비
+          title: '모듈 3: 인터랙티브 애니메이션과 게임 교습 준비'
+          description: "이 전문 학습 모듈은 Code.org의 인터랙티브 애니메이션과 게임 단원을 교습할 준비를 돕도록 고안되어 있습니다. \n\n**이 전문 학습 모듈에서, 귀하는 다음을 수행하게 됩니다:**\n\n-   인터랙티브 애니메이션 및 게임에 대한 도입 학습.\n-   단원에 포함된 핵심 개념 연습.\n-   게임 랩에 참여.\n-   챕터 마지막 프로젝트 탐구.\n\n**권장 시간:** 120분"
+          student_description: "이 전문 학습 모듈은 Code.org의 인터랙티브 애니메이션과 게임 단원을 교습할 준비를 돕도록 고안되어 있습니다. \n\n**이 전문 학습 모듈에서, 귀하는 다음을 수행하게 됩니다:**\n\n-   인터랙티브 애니메이션 및 게임에 대한 도입 학습.\n-   단원에 포함된 핵심 개념 연습.\n-   게임 랩에 참여.\n-   챕터 마지막 프로젝트 탐구.\n\n**권장 시간:** 120분"
+        vpl-csd-ci-4:
+          title: " 모듈 4: 디자인 프로세스 교습 준비"
+          description: "이 전문 학습 모듈은 Code.org의 디자인 프로세스 단원을 교습할 준비를 돕도록 고안되어 있습니다. \n\n**이 전문 학습 모듈에서, 귀하는 다음을 수행하게 됩니다:**\n\n-   디자인 프로세스에 대한 도입 학습.\n-   단원에 포함된 핵심 개념 연습.\n-   앱 랩에 참여.\n-   챕터 마지막 프로젝트 탐구.\n\n**권장 시간:** 90분"
+          student_description: "이 전문 학습 모듈은 Code.org의 디자인 프로세스 단원을 교습할 준비를 돕도록 고안되어 있습니다. \n\n**이 전문 학습 모듈에서, 귀하는 다음을 수행하게 됩니다:**\n\n-   디자인 프로세스에 대한 도입 학습.\n-   단원에 포함된 핵심 개념 연습.\n-   앱 랩에 참여.\n-   챕터 마지막 프로젝트 탐구.\n\n**권장 시간:** 90분"
+        vpl-csd-ci-5:
+          title: '모듈 5: 데이터 및 사회 교습 준비'
+          description: "이 전문 학습 모듈은 귀하가 Code.org의 데이터 및 사회 단원을 가르칠 준비를 하는 데 도움을 주도록 고안되어 있습니다. \n\n**이 전문 학습 모듈에서, 귀하는 다음을 수행하게 됩니다.**\n\n-   데이터 및 사회에 대한 소개 학습.\n-   해당 단원에 포함된 핵심 개념 연습.\n-   챕터 마지막의 프로젝트 탐구.\n\n**권장 시간:** 90분"
+          student_description: "이 전문 학습 모듈은 귀하가 Code.org의 데이터 및 사회 단원을 가르칠 준비를 하는 데 도움을 주도록 고안되어 있습니다. \n\n**이 전문 학습 모듈에서, 귀하는 다음을 수행하게 됩니다.**\n\n-   데이터 및 사회에 대한 소개 학습.\n-   해당 단원에 포함된 핵심 개념 연습.\n-   챕터 마지막의 프로젝트 탐구.\n\n**권장 시간:** 90분"
+        vpl-csd-ci-7:
+          title: '모듈 7: AI와 머신 러닝 교습 준비'
+          description: "이 전문 학습 모듈은 귀하가 Code.org의 AI 및 머신 러닝을 가르칠 준비를 하는 데 도움을 주도록 고안되어 있습니다. \n\n**이 전문 학습 모듈에서, 귀하는 다음을 수행하게 됩니다.**\n\n-   AI 및 머신 러닝에 대한 소개 학습.\n-   이 단원에 포함된 핵심 개념 연습.\n-   AI 랩과 앱 랩 사용.\n-   챕터 마지막의 프로젝트 탐구.\n-   학생들과 단원을 이행하는 계획 수립.\n\n**권장 시간:** 120분"
+          student_description: "이 전문 학습 모듈은 귀하가 Code.org의 AI 및 머신 러닝을 가르칠 준비를 하는 데 도움을 주도록 고안되어 있습니다. \n\n**이 전문 학습 모듈에서, 귀하는 다음을 수행하게 됩니다.**\n\n-   AI 및 머신 러닝에 대한 소개 학습.\n-   이 단원에 포함된 핵심 개념 연습.\n-   AI 랩과 앱 랩 사용.\n-   챕터 마지막의 프로젝트 탐구.\n-   학생들과 단원을 이행하는 계획 수립.\n\n**권장 시간:** 120분"
+        devices-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: '챕터 2: 물리적 프로토타입 만들기'
+            lessonGroup-5:
+              display_name: 설문조사
+        focus-on-creativity4b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 인풋 및 아웃풋
+        focus-on-hardware3b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 인풋 및 아웃풋
+        focus-on-design-with-purpose4b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 인풋 및 아웃풋
+        focus-on-coding4b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 인풋 및 아웃풋
+        csd6b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 인풋 및 아웃풋
+        self-paced-pl-csd1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 환영합니다
+        pl-csd-summer-day1:
+          lessons:
+            lesson-3:
+              name: 소개
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 1 일차
+          title: 1 일차
+        pl-csd-summer-day2:
+          lessons:
+            lesson-10:
+              name: 마무리
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 2 일차
+          title: 2 일차
+        pl-csd-summer-day3:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 3일차
+          title: 3일차
+        pl-csd-summer-day4:
+          lessons:
+            lesson-12:
+              name: 마무리
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 4일차
+          title: 4일차
+        virtual-pl-csd-summer-day1:
+          lessons:
+            lesson-1:
+              name: 소개
+            lesson-12:
+              name: 마무리
+          title: 1 일차
+        virtual-pl-csd-summer-day2:
+          lessons:
+            lesson-10:
+              name: 마무리
+          title: 2 일차
+        virtual-pl-csd-summer-day3:
+          lessons:
+            lesson-12:
+              name: 마무리
+          title: 3일차
+        virtual-pl-csd-summer-day4:
+          lessons:
+            lesson-13:
+              name: 마무리
+          title: 4일차
+        virtual-pl-csd-summer-day5:
+          lessons:
+            lesson-3:
+              name: 평가
+          title: 5일차
+        csd-post-survey-2023:
+          title: 과정 후 설문조사
+        focus-on-data-post-survey-2023:
+          title: 과정 후 설문조사
+        focus-on-impact-in-society-post-survey-2023:
+          title: 과정 후 설문조사
+        focus-on-coding-post-survey-2023:
+          title: 과정 후 설문조사
+        focus-on-design-with-purpose-post-survey-2023:
+          title: 과정 후 설문조사
+        focus-on-hardware-post-survey-2023:
+          title: 과정 후 설문조사
+        focus-on-creativity-post-survey-2023:
+          title: 과정 후 설문조사
+        coursef-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 디지털 시민의식
+            lessonGroup-3:
+              display_name: 스프라이트
+            lessonGroup-4:
+              display_name: 변수
+            lessonGroup-5:
+              display_name: 데이터 및 시뮬레이션
+            lessonGroup-6:
+              display_name: 과정말 프로젝트
+          description_audience: '나이: 9-13'
+          description_short: 컴퓨터 과학 기초에서의 모든 개념을 배우고 미술작품과 스토리 또는 게임을 만드세요.
+          description: 5학년 학생들을 위해 코스 F를 만들었습니다.이 강좌는 사용자들이 사용하는 앱에서 어떤 선택을 하는지 살펴보는 것으로 시작됩니다.그런 다음 학생들은 사용자가 선택할 수 있는 다양한 Sprite Lab 앱을 만드는 방법을 배웁니다.이 과정의 후반부 수업에서 학생들은 다양한 상황에서의 변수에 대해 배우게 됩니다.학생들은 이 과정을 통해 더 큰 자율성과 더 많은 선택권을 갖게 됩니다.강좌를 마치면 학생들은 대화형 프로젝트를 만들어 친구 및 가족과 공유할 수 있습니다.

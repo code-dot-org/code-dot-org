@@ -330,6 +330,7 @@ kn-IN:
   dashboard_sections_table_secret: ಲಾಗಿನ್ ಕೌಟುಂಬಿಕತೆ
   dashboard_sections_table_grade: ಗ್ರೇಡ್
   dashboard_sections_table_course: ಕೋರ್ಸ್
+  dashboard_sections_table_pairing_allowed: ಜೋಡಿ ಪ್ರೋಗ್ರಾಮಿಂಗ್
   dashboard_sections_table_students: ವಿದ್ಯಾರ್ಥಿಗಳು
   dashboard_sections_table_code: ವಿಭಾಗ ಕೋಡ್
   dashboard_sections_name: 'ವಿಭಾಗ ಹೆಸರು:'
@@ -385,6 +386,7 @@ kn-IN:
   dashboard_pre-express: 'ಪ್ರೀ-ರೀಡರ್ ಎಕ್ಸ್‌ಪ್ರೆಸ್ ಕೋರ್ಸ್:'
   dashboard_curriculum_overview: ಕೆ 5 ಪಠ್ಯಕ್ರಮ ಅವಲೋಕನ
   dashboard_overview: ಮುನ್ನೋಟ
+  dashboard_sequence: ಅನುಕ್ರಮ
   dashboard_framework: ಚೌಕಟ್ಟು
   dashboard_standards: ಮಾನದಂಡಗಳು
   dashboard_implementation_guide: ಅನುಷ್ಠಾನ ಮಾರ್ಗದರ್ಶಿ
@@ -422,6 +424,7 @@ kn-IN:
   codeintl_name: ಕ್ಲಾಸಿಕ್‌ ಮೇಝ್‌
   blockly_name: ಬ್ಲಾಕಿಲಿ
   hourofcode_name: ಕ್ಲಾಸಿಕ್‌ ಮೇಝ್‌
+  playlab_name: ಲ್ಯಾಬ್ ಪ್ಲೇ ಮಾಡಿ
   infinity_name: ಇನ್‌ಫಿನಿಟಿ ಪ್ಲೇ ಲ್ಯಾಬ್
   coursea-draft_name: ಕೋರ್ಸ್‌ ಎ
   coursea_name: ಕೋರ್ಸ್‌ ಎ
@@ -452,6 +455,8 @@ kn-IN:
   minecraft_name: ಮೈನ್‌ಕ್ರಾಫ್ಟ್
   starwarsblocks_name: ಸ್ಟಾರ್ ವಾರ್ಸ್‌ (ಬ್ಲಾಕ್‌ಗಳು)
   hoc-encryption_name: ಸರಳ ಎನ್‌ಕ್ರಿಪ್ಷನ್
+  applab_name: ಅಪ್ಲಿಕೇಶನ್ ಲ್ಯಾಬ್
+  gamelab_name: ಗೇಮ್ ಲ್ಯಾಬ್
   basketball_name: ಬಾಸ್ಕೆಟ್‌ಬಾಲ್‌ ಗೇಮ್‌ ಮಾಡಿ
   applab_gradelevel: ವಯಸ್ಸು 13+
   codeorg_gradelevel: ವಯಸ್ಸು 4-104
@@ -663,6 +668,8 @@ kn-IN:
   user_header_logout: ಸೈನ್ ಔಟ್
   user_header_signin: ಸೈನ್ ಇನ್
   user_header_artist: ಆರ್ಟಿಸ್ಟ್
+  user_header_gamelab: ಗೇಮ್ ಲ್ಯಾಬ್
+  user_header_playlab: ಲ್ಯಾಬ್ ಪ್ಲೇ ಮಾಡಿ
   user_header_dance: ಡ್ಯಾನ್ಸ್ ಪಾರ್ಟಿ
   user_header_minecraft: ಮೈನ್‌ಕ್ರಾಫ್ಟ್
   user_header_flappy: ಫ್ಲಾಪಿ

@@ -387,6 +387,7 @@ zh-TW:
             '"right"': 右排
             '"x"': 十字交叉
             '"plus"': 十字加號
+            '"spiral"': 螺旋
             '"infinity"': 無窮線
             '"random"': 隨機
       Dancelab_makeAnonymousDanceSprite:
@@ -517,6 +518,7 @@ zh-TW:
             '"right"': 右排
             '"x"': 十字交叉
             '"plus"': 十字加號
+            '"spiral"': 螺旋
             '"infinity"': 無窮線
             '"random"': 隨機
       Dancelab_mixColors:
@@ -1255,6 +1257,19 @@ zh-TW:
             '"x"': x
             '"y"': 'y'
             '"z"': z
+      gamelab_layoutSprites:
+        text: 群組 {GROUP} 分佈成 {FORMAT}
+        options:
+          FORMAT:
+            '"border"': 邊框
+            '"circle"': 圓形
+            '"grid"': 格狀
+            '"top"': 上列
+            '"row"': 橫列
+            '"bottom"': 下列
+            '"left"': 左排
+            '"column"': 直排
+            '"right"': 右排
       gamelab_locationAt:
         text: '座標 x: {X} y: {Y}'
       gamelab_locationModifier:
@@ -1275,10 +1290,24 @@ zh-TW:
         text: 使用{NUM} {ANIMATION_NAME}精靈圖，創建{EFFECT}效果
         options:
           EFFECT:
+            '"burst"': 爆發
             '"pop"': 爆破
             '"rain"': 下雨
+            '"spiral"': 螺旋
       gamelab_makeNewSpriteAnon:
         text: 角色 創建一個新的 {ANIMATION_NAME} 定位到 {LOCATION}
+      gamelab_makeNewSpriteGroup:
+        options:
+          FORMAT:
+            '"border"': 邊框
+            '"circle"': 圓形
+            '"grid"': 格狀
+            '"top"': 上列
+            '"row"': 橫列
+            '"bottom"': 下列
+            '"left"': 左排
+            '"column"': 直排
+            '"right"': 右排
       gamelab_makeNumSprites:
         text: 產生 {NUM} 個新的 {ANIMATION_NAME} 小怪
       gamelab_makeProjectile:
@@ -1334,6 +1363,7 @@ zh-TW:
             "'sound://category_digital/boing_2.mp3'": 啵嚶
             "'sound://category_pop/bubble_pop_cluster_airy_1.mp3'": 爆破
             "'sound://category_bell/vibrant_game_bell_twinkle_positive_touch_1.mp3'": 閃爍
+            "'sound://category_app/app_button_1.mp3'": 按鈕
             "'sound://category_collect/clicky_crunch.mp3'": 緊縮
             "'sound://category_swish/quick_swing.mp3'": 搖擺
             "'sound://category_nature/summer_night_loop.mp3'": 夏日夜晚
@@ -1345,12 +1375,15 @@ zh-TW:
             "'sound://category_animals/cow.mp3'": 乳牛
             "'sound://category_animals/pig.mp3'": 豬
             "'sound://category_animals/sheep.mp3'": 綿羊
+            "'sound://category_animals/goat.mp3'": 山羊
             "'sound://category_animals/chicken.mp3'": 雞
+            "'sound://category_animals/rooster.mp3'": 公雞
             "'sound://category_animals/elephant.mp3'": 大象
             "'sound://category_animals/dolphin.mp3'": 海豚
             "'sound://category_nature/thunderstorm_1.mp3'": 雷暴
             "'sound://category_animals/chick.mp3'": 小雞
             "'sound://category_animals/dog.mp3'": 狗
+            "'sound://category_animals/tiger.mp3'": 老虎
             "'sound://category_collect/trill_stings.mp3'": 顫音
             "'sound://category_instrumental/harpe_pluck_1.mp3'": 豎琴
             "'sound://category_tap/vibrant_positive_tap_1.mp3'": 點擊
@@ -1359,6 +1392,7 @@ zh-TW:
             "'sound://category_transition/star_dust_particle_10.mp3'": 星塵
             "'sound://category_whoosh/alien_ship_flyby_whoosh_3_slow.mp3'": 外星飛船
             "'sound://category_projectile/retro_game_magic_spell_6.mp3'": 魔咒
+            "'sound://category_retro/retro_game_ui_select_6.mp3'": 選取
             "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": 古怪低音
             "'sound://category_digital/jump_7.mp3'": 定位到
       gamelab_playSoundOptionsSoccer:
@@ -2088,6 +2122,7 @@ zh-TW:
             '"leaves"': 退出
             '"rainbow"': 彩虹
             '"stars"': 星空
+            '"waves"': 波
       Poetry_addLine:
         text: 添加行{LINE}
       Poetry_animateText:
@@ -2102,8 +2137,10 @@ zh-TW:
         text: 使用{NUM} {ANIMATION_NAME}精靈圖，創建{EFFECT}效果
         options:
           EFFECT:
+            '"burst"': 爆發
             '"pop"': 爆破
             '"rain"': 下雨
+            '"spiral"': 螺旋
       Poetry_makeNewSpriteAnon:
         text: 角色 創建一個新的 {ANIMATION_NAME} 定位到 {LOCATION}
       Poetry_makeNumSprites:
@@ -2122,6 +2159,7 @@ zh-TW:
             '"sound://category_background/ocean_waves.mp3"': 洋
             '"sound://category_background/rainforest_ambient_sound.mp3"': 雨林
             '"sound://category_background/repitition.mp3"': 騎術
+            '"sound://category_background/wavering_wind.mp3"': 睏
             '"sound://category_loops/stabilizing_breath_loop1.mp3"': 緩慢
       Poetry_playSound:
         text: 播放音效 {SOUND}
@@ -2135,6 +2173,7 @@ zh-TW:
             '"sound://category_jump/retro_game_enemy_jump_3.mp3"': 失敗
             '"sound://category_alerts/vibrant_game_flutter_ambient_alert.mp3"': 飄揚
             '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': 跳躍
+            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': 光
             '"sound://category_poof/puzzle_game_poof_04.mp3"': 噗
             '"sound://category_achievements/puzzle_game_achievement_big_03.mp3"': 掃描
             '"sound://category_background/typewriter.mp3"': 打字機
@@ -2501,6 +2540,21 @@ zh-TW:
           DIR:
             right: 右方 ↻
             left: 左方 ↺
+      ecosystems_int10:
+        text: "{VALUE}"
+        options:
+          VALUE:
+            '0': '0'
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       storylab_setForegroundEffect2:
         text: 製作{EFFECT}效果
         options:

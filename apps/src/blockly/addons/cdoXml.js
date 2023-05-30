@@ -6,7 +6,7 @@ export default function initializeBlocklyXml(blocklyWrapper) {
   // to call Google's domToBlock() in the override function.
   blocklyWrapper.Xml.originalDomToBlock = blocklyWrapper.Xml.domToBlock;
   // Override domToBlock so that we can gracefully handle unknown blocks.
-  blocklyWrapper.Xml.domToBlock = function(
+  blocklyWrapper.Xml.domToBlock = function (
     xmlBlock,
     workspace,
     parentConnection,
@@ -34,7 +34,7 @@ export default function initializeBlocklyXml(blocklyWrapper) {
     return block;
   };
 
-  blocklyWrapper.Xml.domToBlockSpace = function(blockSpace, xml) {
+  blocklyWrapper.Xml.domToBlockSpace = function (blockSpace, xml) {
     // To position the blocks, we first render them all to the Block Space
     //  and parse any X or Y coordinates set in the XML. Then, we store
     //  the rendered blocks and the coordinates in an array so that we can
@@ -55,7 +55,7 @@ export default function initializeBlocklyXml(blocklyWrapper) {
       blocks.push({
         blockly_block: blockly_block,
         x: x,
-        y: y
+        y: y,
       });
     });
 
@@ -74,7 +74,7 @@ export default function initializeBlocklyXml(blocklyWrapper) {
     // The cursor is used to position blocks that don't have explicit x/y coordinates
     let cursor = {
       x: padding,
-      y: padding
+      y: padding,
     };
     if (blockSpace.RTL && viewWidth) {
       // Position the cursor from the right of the workspace.
@@ -84,7 +84,7 @@ export default function initializeBlocklyXml(blocklyWrapper) {
       cursor.x = blockWidth - padding;
     }
 
-    const positionBlock = function(block) {
+    const positionBlock = function (block) {
       const heightWidth = block.blockly_block.getHeightWidth();
       const hasFrameSvg = !!block.blockly_block.functionalSvg_;
       const frameSvgSize = hasFrameSvg ? 40 : 0;
@@ -119,13 +119,13 @@ export default function initializeBlocklyXml(blocklyWrapper) {
     blocks.sort(reorderBlocks);
 
     blocks
-      .filter(function(block) {
+      .filter(function (block) {
         return block.blockly_block.isVisible();
       })
       .forEach(positionBlock);
 
     blocks
-      .filter(function(block) {
+      .filter(function (block) {
         return !block.blockly_block.isVisible();
       })
       .forEach(positionBlock);

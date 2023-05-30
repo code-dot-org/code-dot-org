@@ -1,7 +1,7 @@
 name 'VPL-CSD-PILOT-S22-CI-CSD Header Size MC_2018_2019_pilot_2023'
 editor_experiment ''
-display_name 'Check for understanding'
-title 'Check for understanding'
+display_name 'Check for Understanding'
+title 'Check for Understanding'
 description 'Look at the code below and predict how the headings will be displayed. Choose from one of the options on the right.'
 height '125'
 
@@ -24,3 +24,5 @@ teacher_markdown <<MARKDOWN
 
 <div class="clear"></div>
 MARKDOWN
+
+allow_multiple_attempts true

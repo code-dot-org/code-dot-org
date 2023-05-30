@@ -316,6 +316,7 @@ class ScriptLevel < ApplicationRecord
       end
 
       summary = {
+        id: id,
         ids: ids.map(&:to_s),
         activeId: active_id.to_s,
         inactiveIds: inactive_ids.map(&:to_s),
@@ -327,7 +328,8 @@ class ScriptLevel < ApplicationRecord
         url: build_script_level_url(self),
         freePlay: level.try(:free_play) == "true",
         bonus: bonus,
-        display_as_unplugged: level.display_as_unplugged?
+        display_as_unplugged: level.display_as_unplugged?,
+        app: level.game&.app
       }
 
       if progression

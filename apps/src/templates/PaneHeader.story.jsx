@@ -5,17 +5,17 @@ const styles = {
   header: {
     borderLeft: 'thick solid white',
     paddingLeft: 30,
-    paddingRight: 30
+    paddingRight: 30,
   },
   flex: {
     display: 'flex',
-    justifyContent: 'space-between'
-  }
+    justifyContent: 'space-between',
+  },
 };
 
 export default {
   title: 'PaneHeader with PaneSections',
-  component: PaneHeader
+  component: PaneHeader,
 };
 
 export const hasFocus = () => (

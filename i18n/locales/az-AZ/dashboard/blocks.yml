@@ -1233,6 +1233,19 @@ az:
             '"z"': z
       gamelab_layoutGrid:
         text: şəbəkə şəklində spraytı tətrib et
+      gamelab_layoutSprites:
+        text: forma {GROUP} {FORMAT} kimi
+        options:
+          FORMAT:
+            '"border"': kənar
+            '"circle"': dairə
+            '"grid"': tor
+            '"top"': üst sıra
+            '"row"': sinif
+            '"bottom"': alt sıra
+            '"left"': sol sütun
+            '"column"': sütun
+            '"right"': sağ sütun
       gamelab_locationAt:
         text: 'yer x: {X} y: {Y}'
       gamelab_locationModifier:
@@ -1259,6 +1272,18 @@ az:
             '"spiral"': spiral
       gamelab_makeNewSpriteAnon:
         text: "{LOCATION} də yeni {ANIMATION_NAME} spraytı yarat"
+      gamelab_makeNewSpriteGroup:
+        options:
+          FORMAT:
+            '"border"': kənar
+            '"circle"': dairə
+            '"grid"': tor
+            '"top"': üst sıra
+            '"row"': sinif
+            '"bottom"': alt sıra
+            '"left"': sol sütun
+            '"column"': sütun
+            '"right"': sağ sütun
       gamelab_makeNumSprites:
         text: yeni {ANIMATION_NAME} spraytı {NUM} yarat
       gamelab_makeProjectile:
@@ -2420,6 +2445,21 @@ az:
           DIR:
             right: sağa
             left: sola
+      ecosystems_int10:
+        text: dəyər 0
+        options:
+          VALUE:
+            '0': '0'
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       storylab_clearHeadings:
         text: başlıqları təmizlə
       storylab_setForegroundEffect2:

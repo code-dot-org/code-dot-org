@@ -11,6 +11,7 @@
   "columnDetailsMinimumValue": "מינימום",
   "columnDetailsMaximumValue": "מקסימום",
   "dataCardLastUpdated": "עודכן לאחרונה",
+  "uniqueOptionsWarningNotice": "הערה",
   "datasets": {
     "medical_priority": {
       "fields": {
@@ -26,6 +27,9 @@
         },
         "day": {
           "id": "יום"
+        },
+        "shoe": {
+          "id": "פרסה"
         }
       }
     },
@@ -101,6 +105,9 @@
     },
     "nutrition": {
       "fields": {
+        "Category": {
+          "id": "קטגוריה"
+        },
         "Description": {
           "id": "תיאור"
         }
@@ -113,6 +120,9 @@
     },
     "raspado_toy": {
       "fields": {
+        "strawberry": {
+          "id": "תות שדה"
+        },
         "lime": {
           "id": "ליים"
         }
@@ -127,6 +137,9 @@
     },
     "salad_toy": {
       "fields": {
+        "tomato": {
+          "id": "עגבנייה"
+        },
         "avocado": {
           "id": "אבוקדו"
         },
@@ -178,6 +191,9 @@
         "chicken": {
           "id": "תרנגולת"
         },
+        "lamb": {
+          "id": "טלה"
+        },
         "onion": {
           "id": "בצל"
         },
@@ -197,6 +213,9 @@
       "fields": {
         "Internet": {
           "id": "אינטרנט"
+        },
+        "Writing": {
+          "id": "כתיבה"
         }
       }
     },
@@ -237,6 +256,9 @@
       "fields": {
         "people": {
           "id": "אנשים"
+        },
+        "rhino": {
+          "id": "קרנף"
         },
         "elephant": {
           "id": "פיל"
@@ -292,6 +314,9 @@
         },
         "Internet": {
           "id": "אינטרנט"
+        },
+        "Writing": {
+          "id": "כתיבה"
         },
         "Achievements": {
           "id": "הישגים"

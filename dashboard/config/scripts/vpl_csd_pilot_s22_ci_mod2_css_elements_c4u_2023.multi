@@ -1,5 +1,5 @@
 name 'VPL-CSD-PILOT-S22-CI-mod2-CSS-elements-C4U_2023'
-title 'Check for understanding'
+title 'Check for Understanding'
 
 right '1 only'
 wrong '3 only'
@@ -21,3 +21,5 @@ teacher_markdown <<MARKDOWN
 
 
 MARKDOWN
+
+allow_multiple_attempts true

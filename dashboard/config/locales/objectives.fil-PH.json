@@ -329,6 +329,18 @@
         "7728246b-7582-4624-a2b1-229b998fc2ae": {
           "description": "Bumuo ng mga programa na tumutugon sa inoorasang mga event"
         },
+        "fc312ef1-6ea0-41a5-b112-b4e478cef7d3": {
+          "description": "Lumikha ng mga program ng Sprite Lab kung saan ang mga sprite ay nilikha sa mga grupo, at kinokontrol nang paisa-isa gamit ang mga kaganapan."
+        },
+        "29d1cbbf-aba5-45c8-ab1f-fc1ed266bb1b": {
+          "description": "Gumawa ng clicker game sa Sprite Lab kung saan maaaring alisin ang mga sprite para makaiskor ng mga puntos"
+        },
+        "9da7b378-c4e9-4184-b58a-61dfdad47357": {
+          "description": "Gumawa ng variable na nag-iimbak ng impormasyon at nagbabago sa paglipas ng panahon"
+        },
+        "ac5f0f5b-6aa9-4732-930d-08d96a451b99": {
+          "description": "Gumawa ng sarili nilang collector game sa Sprite Lab gamit ang maramihang mga sprite na kinokontrol nang paisa-isa at mga variable para subaybayan ang score ng player"
+        },
         "8a99a9c0-2079-4c7e-a39c-188f940fcfe2": {
           "description": "Talakayin ang papel na ginagampanan ng artificial intelligence sa kanilang buhay."
         },
@@ -364,6 +376,12 @@
         },
         "f6a45c87-6f01-4df0-8020-0a9be77f0d10": {
           "description": "Bumuo ng mga programa na tumutugon sa input ng user"
+        },
+        "4d6b0001-0d41-45ae-8061-1c493e6976ee": {
+          "description": "Gumawa ng clicker game sa Sprite Lab kung saan maaaring alisin ang mga sprite para makaiskor ng mga puntos"
+        },
+        "54f59612-1695-4ba2-bbf4-c03862b02924": {
+          "description": "Gumawa ng variable na nag-iimbak ng impormasyon at nagbabago sa paglipas ng panahon"
         },
         "8d8fffd3-6411-4778-95f5-76953d066786": {
           "description": "Kilalanin kung ano ang inaasahan kapag lumipat ang mga mag-aaral sa computer lab."

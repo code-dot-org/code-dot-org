@@ -1,9 +1,15 @@
 name 'sarah_test_maggie'
-encrypted 'NP4XkAqKQFxak5iMMrnaZWGz2KG2eK50hELxX/yvcLPZ2EZEgTYRKRdYFcE0
-3IzCuVN69R/s+EpaVrU16UAixq1O/lok9E7CaITAEXnx3Fr/RoICZKxaHeYG
-Hu4KXTRM06y0t2iJlEtEsctdK/7YRypYKBvylttpR7qomw2uqyA5LP5FTThe
-PWqg6s/U0uCOTQgqymBLmS4Ws/RHA3uJwt7x8DwwxRgM3ZitkpuV27i1EG1D
-AJ90EuHBZyqsnx+JM7LHIKOoaq+MMxRGlP/jfDypPed6yOKVF+yiQrc0/rfT
-D2OenUtEfYZvzvABMj2sLWVKkJ2/9qFLHStNAviRXLe270aeNtYDtrVHFpJO
-kDw=
-'
+height '160'
+layout 'wrap'
+
+question 'Question'
+wrong 'https://images.code.org/f3a9da9e1cd1ff3613363bd85c663d28-image-1474932944292.png,160'
+right 'right answer'
+wrong 'test'
+wrong 'test'
+
+markdown <<MARKDOWN
+
+MARKDOWN
+
+allow_multiple_attempts true

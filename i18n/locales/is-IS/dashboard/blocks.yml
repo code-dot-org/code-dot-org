@@ -1173,6 +1173,19 @@ is:
             '"x"': x
             '"y"': 'y'
             '"z"': z
+      gamelab_layoutSprites:
+        text: stilla {GROUP} upp sem {FORMAT}
+        options:
+          FORMAT:
+            '"border"': rammi
+            '"circle"': hringur
+            '"grid"': fylking
+            '"top"': efri röð
+            '"row"': bekkur
+            '"bottom"': neðri röð
+            '"left"': vinstri röð
+            '"column"': í röð upp
+            '"right"': hægri röð
       gamelab_locationAt:
         text: 'staður x: {X} y: {Y}'
       gamelab_locationModifier:
@@ -1197,6 +1210,18 @@ is:
             '"spiral"': spírall
       gamelab_makeNewSpriteAnon:
         text: aalab búa til nýja {ANIMATION_NAME} veru á stað {LOCATION}
+      gamelab_makeNewSpriteGroup:
+        options:
+          FORMAT:
+            '"border"': rammi
+            '"circle"': hringur
+            '"grid"': fylking
+            '"top"': efri röð
+            '"row"': bekkur
+            '"bottom"': neðri röð
+            '"left"': vinstri röð
+            '"column"': í röð upp
+            '"right"': hægri röð
       gamelab_makeNumSprites:
         text: búa til {NUM} nýja {ANIMATION_NAME} kvika
       gamelab_makeProjectile:
@@ -2068,6 +2093,20 @@ is:
           DIR:
             right: hægri ↻
             left: vinstri ↺
+      ecosystems_int10:
+        options:
+          VALUE:
+            '0': '0'
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       storylab_setForegroundEffect2:
         options:
           EFFECT:

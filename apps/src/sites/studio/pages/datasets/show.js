@@ -5,13 +5,13 @@ import {getStore, registerReducers} from '@cdo/apps/redux';
 import data, {
   changeView,
   updateTableColumns,
-  updateTableRecords
+  updateTableRecords,
 } from '@cdo/apps/storage/redux/data';
 import {DataView} from '@cdo/apps/storage/constants';
 import getScriptData from '@cdo/apps/util/getScriptData';
 import Dataset from '@cdo/apps/storage/levelbuilder/Dataset';
 
-$(document).ready(function() {
+$(document).ready(function () {
   const dataset = getScriptData('dataset');
   const tableName = getScriptData('tableName');
   const liveDatasets = getScriptData('liveDatasets');

@@ -7,7 +7,7 @@ export default function externalLinks(options = {}) {
   const original = tokenizers.link;
   const all = options.links === 'all';
 
-  tokenizers.link = function(eat, value, silent) {
+  tokenizers.link = function (eat, value, silent) {
     const link = original.call(this, eat, value, silent);
     if (link && link.type === 'link' && (all || isExternalLink(link.url))) {
       link.data = link.data || {};

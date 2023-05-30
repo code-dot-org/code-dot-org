@@ -246,12 +246,20 @@ mk:
             '"while"': Додека
           KEY:
             '"i"': i
+      gamelab_layoutSprites:
+        options:
+          FORMAT:
+            '"grid"': Мрежа
       gamelab_makeBurst:
         options:
           EFFECT:
             '"burst"': пукна
             '"rain"': дожд
             '"spiral"': спирала
+      gamelab_makeNewSpriteGroup:
+        options:
+          FORMAT:
+            '"grid"': Мрежа
       gamelab_makeSpritesWithSize:
         options:
           SIZE:

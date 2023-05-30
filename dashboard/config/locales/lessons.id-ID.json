@@ -1438,6 +1438,9 @@
         "csd7-2022/Introduction to AI Lab": {
           "name": "Pengantar Lab AI"
         },
+        "csd7-2022/Numerical Data in AI Lab": {
+          "name": "Data Numerik di Lab AI"
+        },
         "csd7-2022/Survey Planning": {
           "name": "Merancang Pengumpulan Data"
         },
@@ -4187,6 +4190,9 @@
         "allthethings/lesson-48": {
           "name": "Puisi"
         },
+        "allthethings/lesson-49": {
+          "name": "Musik"
+        },
         "coursef-2021/lesson-6": {
           "name": "Memperkenalkan Sprite Lab",
           "overview": "Dalam pelajaran **pengaturan-konteks** ini, murid akan mendiskusikan peran komputer dan teknologi dalam kehidupan mereka dengan fokus pada cara aplikasi dan alat teknologi tersebut memberikan pilihan cara pakai kepada pengguna. Murid juga akan mengeksplorasi aplikasi yang mirip dengan aplikasi yang akan mereka buat sendiri nanti.",
@@ -5087,6 +5093,9 @@
         },
         "csd7-2021/Introduction to AI Lab": {
           "name": "Pengantar Lab AI"
+        },
+        "csd7-2021/Numerical Data in AI Lab": {
+          "name": "Data Numerik di Lab AI"
         },
         "csd7-2021/Survey Planning": {
           "name": "Merancang Pengumpulan Data"

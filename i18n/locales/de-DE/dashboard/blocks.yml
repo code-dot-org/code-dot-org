@@ -1248,6 +1248,19 @@ de:
             '"x"': x
             '"y"': 'y'
             '"z"': z
+      gamelab_layoutSprites:
+        text: Layout {GROUP} als ein {FORMAT}
+        options:
+          FORMAT:
+            '"border"': Grenze
+            '"circle"': Kreis
+            '"grid"': Raster
+            '"top"': obere Reihe
+            '"row"': Zeile
+            '"bottom"': untere Reihe
+            '"left"': linke Spalte
+            '"column"': Spalte
+            '"right"': rechte Spalte
       gamelab_locationAt:
         text: 'Position x: {X} y: {Y}'
       gamelab_locationModifier:
@@ -1274,6 +1287,18 @@ de:
             '"spiral"': Spirale
       gamelab_makeNewSpriteAnon:
         text: erstelle neuen {ANIMATION_NAME} Sprite in {LOCATION}
+      gamelab_makeNewSpriteGroup:
+        options:
+          FORMAT:
+            '"border"': Grenze
+            '"circle"': Kreis
+            '"grid"': Raster
+            '"top"': obere Reihe
+            '"row"': Zeile
+            '"bottom"': untere Reihe
+            '"left"': linke Spalte
+            '"column"': Spalte
+            '"right"': rechte Spalte
       gamelab_makeNumSprites:
         text: erzeuge {NUM} neue {ANIMATION_NAME} Sprites
       gamelab_makeProjectile:
@@ -2538,6 +2563,20 @@ de:
           DIR:
             right: rechts ↻
             left: links ↺
+      ecosystems_int10:
+        options:
+          VALUE:
+            '0': '0'
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       storylab_setForegroundEffect2:
         text: führe {EFFECT} aus
         options:

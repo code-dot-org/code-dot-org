@@ -11,7 +11,7 @@ const DEFAULT_PROPS = {
   courseOfferings: hocCourseOfferings,
   setSelectedCourseOffering: () => {},
   updateCourse: () => {},
-  sectionCourse: {}
+  sectionCourse: {},
 };
 
 const setUp = (overrideProps = {}) => {
@@ -30,32 +30,17 @@ describe('QuickAssignTable', () => {
     const wrapper = setUp();
     expect(wrapper.find('table').length).to.equal(3);
     // First header displays in table 0
-    expect(
-      wrapper
-        .find('table')
-        .at(0)
-        .contains('Favorites')
-    ).to.be.true;
+    expect(wrapper.find('table').at(0).contains('Favorites')).to.be.true;
     // Fourth header displays in table 0
-    expect(
-      wrapper
-        .find('table')
-        .at(0)
-        .contains('Popular Media')
-    ).to.be.true;
+    expect(wrapper.find('table').at(0).contains('Popular Media')).to.be.true;
     // Fifth header displays in table 1
-    expect(
-      wrapper
-        .find('table')
-        .at(1)
-        .contains('Sports')
-    ).to.be.true;
+    expect(wrapper.find('table').at(1).contains('Sports')).to.be.true;
   });
 
   it('renders Professional Learning as the first and only table/column header', () => {
     const wrapper = setUp({
       marketingAudience: MARKETING_AUDIENCE.PL,
-      courseOfferings: plCourseOfferings
+      courseOfferings: plCourseOfferings,
     });
     expect(wrapper.find('table').length).to.equal(3);
     expect(wrapper.contains(i18n.professionalLearning())).to.be.true;
@@ -64,7 +49,7 @@ describe('QuickAssignTable', () => {
   it('renders one header in each of the first two columns', () => {
     const wrapper = setUp({
       marketingAudience: MARKETING_AUDIENCE.PL,
-      courseOfferings: plCourseOfferings
+      courseOfferings: plCourseOfferings,
     });
     expect(wrapper.find('table').length).to.equal(3);
     // First header displays in table 0
@@ -75,11 +60,6 @@ describe('QuickAssignTable', () => {
         .contains('6–12 Virtual Academic Year Workshops')
     ).to.be.true;
     // Second header displays in table 1
-    expect(
-      wrapper
-        .find('table')
-        .at(1)
-        .contains('Self-Paced')
-    ).to.be.true;
+    expect(wrapper.find('table').at(1).contains('Self-Paced')).to.be.true;
   });
 });

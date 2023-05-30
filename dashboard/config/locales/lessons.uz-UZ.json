@@ -1262,6 +1262,9 @@
         "csd7-2022/Introduction to AI Lab": {
           "name": "6-dars"
         },
+        "csd7-2022/Numerical Data in AI Lab": {
+          "name": "AI laboratoriyasidagi raqamli ma'lumotlar"
+        },
         "csd7-2022/AI Code of Ethics": {
           "overview": "Kichik guruhlarda talabalar o'zlari tanlagan Sun'iy Intellekt (AI) sohasidagi axloqiy tuzoqlarni ochib beradigan maqolalar va videofilmlardan foydalangan holda tadqiqot olib boradilar. Shundan so'ng, har bir guruh o'zlari tanlagan sohaga tegishli kamida bitta yechimga yo'naltirilgan tamoyilni ishlab chiqadi. Keyinchalik ushbu tamoyillar sun'iy intellektni yaratuvchilar va qonun chiqaruvchilar hamma joyda ishlatishi uchun \"Bizning sun'iy intellekt kodeksimiz\" (masalan, slayd taqdimoti, hujjat yoki veb-sahifa) resursiga jamlanadi.",
           "student_overview": "Kichik guruhlarda talabalar o'zlari tanlagan Sun'iy Intellekt (AI) sohasidagi axloqiy tuzoqlarni ochib beradigan maqolalar va videofilmlardan foydalangan holda tadqiqot olib boradilar. Shundan so'ng, har bir guruh o'zlari tanlagan sohaga tegishli kamida bitta yechimga yo'naltirilgan tamoyilni ishlab chiqadi. Keyinchalik ushbu tamoyillar sun'iy intellektni yaratuvchilar va qonun chiqaruvchilar hamma joyda ishlatishi uchun \"Bizning sun'iy intellekt kodeksimiz\" (masalan, slayd taqdimoti, hujjat yoki veb-sahifa) resursiga jamlanadi."
@@ -3966,6 +3969,15 @@
         "allthethings/AI Lab": {
           "name": "AI Lab"
         },
+        "allthethings/Java Lab": {
+          "name": "Java laboratoriyasi"
+        },
+        "allthethings/lesson-48": {
+          "name": "She'riyat"
+        },
+        "allthethings/lesson-49": {
+          "name": "Musiqa"
+        },
         "coursef-2021/lesson-6": {
           "name": "Sprite laboratoriyasi bilan tanishish"
         },
@@ -4638,6 +4650,9 @@
         },
         "csd7-2021/Introduction to AI Lab": {
           "name": "6-dars"
+        },
+        "csd7-2021/Numerical Data in AI Lab": {
+          "name": "AI laboratoriyasidagi raqamli ma'lumotlar"
         },
         "csd7-2021/AI Code of Ethics": {
           "overview": "Kichik guruhlarda talabalar o'zlari tanlagan Sun'iy Intellekt (AI) sohasidagi axloqiy tuzoqlarni ochib beradigan maqolalar va videofilmlardan foydalangan holda tadqiqot olib boradilar. Shundan so'ng, har bir guruh o'zlari tanlagan sohaga tegishli kamida bitta yechimga yo'naltirilgan tamoyilni ishlab chiqadi. Keyinchalik ushbu tamoyillar sun'iy intellektni yaratuvchilar va qonun chiqaruvchilar hamma joyda ishlatishi uchun \"Bizning sun'iy intellekt kodeksimiz\" (masalan, slayd taqdimoti, hujjat yoki veb-sahifa) resursiga jamlanadi.",

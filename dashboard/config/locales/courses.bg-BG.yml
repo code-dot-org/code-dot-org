@@ -32,6 +32,8 @@ bg:
           version_title: "'19-'20"
         mike-test:
           title: Основи на компютърните науки
+        csd-2023:
+          title: Открития в Компютърните Науки
     resources:
       curriculum/csd/2020:
         name: Учебна програма

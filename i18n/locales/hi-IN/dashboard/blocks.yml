@@ -1231,6 +1231,19 @@ hi:
             '"x"': x
             '"y"': 'y'
             '"z"': z
+      gamelab_layoutSprites:
+        text: "{GROUP} को {FORMAT} के रूप में लेआउट दें"
+        options:
+          FORMAT:
+            '"border"': बॉर्डर
+            '"circle"': गोला
+            '"grid"': ग्रिड
+            '"top"': सबसे ऊपर की पंक्ति
+            '"row"': पंक्ति
+            '"bottom"': सबसे नीचे की पंक्ति
+            '"left"': बायां कॉलम
+            '"column"': कॉलम
+            '"right"': दायां कॉलम
       gamelab_locationAt:
         text: 'स्थान x: {X} y: {Y}'
       gamelab_locationModifier:
@@ -1257,6 +1270,18 @@ hi:
             '"spiral"': घुमावदार
       gamelab_makeNewSpriteAnon:
         text: "{LOCATION} पर नया {ANIMATION_NAME} स्प्राइट बनाएं"
+      gamelab_makeNewSpriteGroup:
+        options:
+          FORMAT:
+            '"border"': बॉर्डर
+            '"circle"': गोला
+            '"grid"': ग्रिड
+            '"top"': सबसे ऊपर की पंक्ति
+            '"row"': पंक्ति
+            '"bottom"': सबसे नीचे की पंक्ति
+            '"left"': बायां कॉलम
+            '"column"': कॉलम
+            '"right"': दायां कॉलम
       gamelab_makeNumSprites:
         text: "{NUM} नए {ANIMATION_NAME} स्प्राइट्स बनाएं"
       gamelab_makeProjectile:
@@ -2527,6 +2552,20 @@ hi:
           DIR:
             right: दाएं ↻
             left: बाएं ↺
+      ecosystems_int10:
+        options:
+          VALUE:
+            '0': '0'
+            '1': १
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       storylab_setForegroundEffect2:
         text: "{EFFECT} आगे का इफेक्ट डालें"
         options:

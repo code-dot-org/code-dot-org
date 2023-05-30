@@ -17,6 +17,7 @@
   "trainModelHeading": "Trénovanie",
   "resultsTableFeatureHeader": "Vlastnosti",
   "predictButton": "Predpoveď",
+  "uniqueOptionsWarningNotice": "Poznámka",
   "datasets": {
     "medical_priority": {
       "fields": {
@@ -401,7 +402,7 @@
         },
         "club": {
           "id": "krúžok",
-          "description": "Na aký krúžok sa chcš prihlásiť alebo na aký už chodíš?"
+          "description": "Na aký krúžok sa chceš prihlásiť alebo na aký už chodíš?"
         }
       },
       "card": {
@@ -527,7 +528,7 @@
         },
         "club": {
           "id": "krúžok",
-          "description": "Na aký krúžok sa chcš prihlásiť alebo na aký už chodíš?"
+          "description": "Na aký krúžok sa chceš prihlásiť alebo na aký už chodíš?"
         }
       },
       "card": {
@@ -1522,7 +1523,7 @@
         },
         "club": {
           "id": "krúžok",
-          "description": "Na aký krúžok sa chcš prihlásiť alebo na aký už chodíš?"
+          "description": "Na aký krúžok sa chceš prihlásiť alebo na aký už chodíš?"
         }
       },
       "card": {
@@ -1830,7 +1831,7 @@
         },
         "club": {
           "id": "krúžok",
-          "description": "Na aký krúžok sa chcš prihlásiť alebo na aký už chodíš?"
+          "description": "Na aký krúžok sa chceš prihlásiť alebo na aký už chodíš?"
         }
       },
       "card": {

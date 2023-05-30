@@ -1239,6 +1239,19 @@ sk:
             '"x"': x
             '"y"': 'y'
             '"z"': z
+      gamelab_layoutSprites:
+        text: rozmiestni {GROUP} ako {FORMAT}
+        options:
+          FORMAT:
+            '"border"': okraj
+            '"circle"': kruh
+            '"grid"': mriežka
+            '"top"': horný riadok
+            '"row"': riadok
+            '"bottom"': spodný riadok
+            '"left"': ľavý stĺpec
+            '"column"': stĺpec
+            '"right"': pravý stĺpec
       gamelab_locationAt:
         text: 'poloha x: {X} y: {Y}'
       gamelab_locationModifier:
@@ -1265,6 +1278,18 @@ sk:
             '"spiral"': špirála
       gamelab_makeNewSpriteAnon:
         text: vytvor novú postavu {ANIMATION_NAME} na {LOCATION}
+      gamelab_makeNewSpriteGroup:
+        options:
+          FORMAT:
+            '"border"': okraj
+            '"circle"': kruh
+            '"grid"': mriežka
+            '"top"': horný riadok
+            '"row"': riadok
+            '"bottom"': spodný riadok
+            '"left"': ľavý stĺpec
+            '"column"': stĺpec
+            '"right"': pravý stĺpec
       gamelab_makeNumSprites:
         text: vytvor {NUM} nových {ANIMATION_NAME} postáv
       gamelab_makeProjectile:
@@ -2433,6 +2458,20 @@ sk:
           DIR:
             right: vpravo ↻
             left: vľavo ↺
+      ecosystems_int10:
+        options:
+          VALUE:
+            '0': '0'
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       storylab_setForegroundEffect2:
         text: vykonaj efekt {EFFECT}
         options:

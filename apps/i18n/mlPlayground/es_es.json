@@ -306,7 +306,8 @@
           "description": "El peso total del adulón en gramos."
         },
         "Shucked weight": {
-          "id": "Peso descascarado "
+          "id": "Peso descascarado ",
+          "description": "El peso del caracol sin cáscara en gramos."
         },
         "Viscera weight": {
           "id": "Peso de las vísceras",
@@ -325,7 +326,8 @@
         "context": {
           "potentialUses": "Determina la edad de un abulón."
         }
-      }
+      },
+      "name": "Abulón"
     },
     "zoo": {
       "fields": {

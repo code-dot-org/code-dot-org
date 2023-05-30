@@ -172,7 +172,6 @@ pt:
     data_collection_us: "Entendo que o Code.org é um site sem fins lucrativos com sede nos EUA e que as leis que regem a coleta de dados nos EUA podem diferir das leis do meu país."
     visit_privacy: 'Visite a [Política de Privacidade](%{privacy_url}) do Code.org para saber mais.'
     student_terms_markdown: "Os endereços de email não são armazenados em um formulário que nos permita entrar em contato com os alunos. Os alunos nunca receberão emails do Code.org, exceto para recuperação de senha. Veja nossa [política de privacidade] (http://code.org/privacy) para mais informações."
-    additional_information: "Precisamos de mais informações para continuar com o processo de inscrição."
     user_type_button: "Atualizar Tipo de Conta"
     user_type_label: "Tipo de conta"
     user_type_student: "Estudante"
@@ -1209,6 +1208,25 @@ pt:
     no_teacher_email:
       body_markdown: 'Sua conta não possui um endereço de email. Por favor visite as configurações de sua conta (%{user_registration}) para adicionar o seu endereço de email antes de completar este formulário.'
   courses_category: 'Cursos Completos'
+  course_offering:
+    headers:
+      favorites: 'FAVORITOS'
+      labs_and_skills: 'Laboratórios e habilidades'
+      minecraft: 'Minecraft'
+      hello_world: 'Olá Mundo'
+      popular_media: 'Mídia popular'
+      sports: 'Esportes'
+      express: 'Expresso'
+      csf: 'Conceitos básicos da CC'
+      csc: 'Conexões de CC'
+      year_long: 'Durante todo o ano'
+      csa_labs: 'Laboratórios CSA'
+      self_paced: 'Inindividualizado'
+      teacher_led: 'Liderado por professores'
+      collections: 'Coleções'
+      workshops_k5: 'Workshops K-5'
+      summer_workshops_612: '6-12 workshops de verão'
+      virtual_academic_year_workshops_612: 'Workshops virtuais de 6 a 12 anos acadêmicos'
   cookie_banner:
     message: 'Ao continuar a navegar em nosso site ou ao clicar em "Eu concordo", você concorda com o armazenamento de cookies em seu computador ou dispositivo.'
     more_information: "Consulte a Política de Privacidade do Code.org."

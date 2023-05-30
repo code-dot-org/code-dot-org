@@ -3,19 +3,16 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 import {getStore} from '@cdo/apps/redux';
+import CurriculumCatalog from '../../../../templates/curriculumCatalog/CurriculumCatalog';
+import getScriptData from '@cdo/apps/util/getScriptData';
 
-$(document).ready(function() {
-  const script = document.querySelector('script[data-curricula]');
-  const curriculaData = JSON.parse(script.dataset.curricula);
+$(document).ready(function () {
+  const catalogData = getScriptData('catalog');
+  const {curriculaData, isEnglish} = catalogData;
 
   ReactDOM.render(
     <Provider store={getStore()}>
-      <>
-        <h1>Curriculum Catalog!</h1>
-        {curriculaData.map(curriculum => (
-          <li key={curriculum.key}>{curriculum.display_name}</li>
-        ))}
-      </>
+      <CurriculumCatalog curriculaData={curriculaData} isEnglish={isEnglish} />
     </Provider>,
     document.getElementById('curriculum-catalog-container')
   );

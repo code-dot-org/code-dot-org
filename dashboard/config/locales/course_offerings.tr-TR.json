@@ -266,7 +266,18 @@
         "csd4": "csd4",
         "hello-world-space": "Merhaba dünya: Evren",
         "hello-world-soccer": "Merhaba Dünya: Futbol",
-        "playground": "oyun alanı"
+        "playground": "oyun alanı",
+        "devices": "Cihazlar için Uygulama Oluşturma",
+        "blockchain": "Blockchain",
+        "poemmaker": "şiir yapımcısı",
+        "web-development": "Web Geliştirme",
+        "focus-on-design-with-purpose": "amaçlı-tasarıma-odaklanma",
+        "focus-on-coding": "kodlamaya-odaklanma",
+        "focus-on-hardware": "donanıma-odaklanma",
+        "focus-on-impact-in-society": "toplumda-etkiye-odaklanma",
+        "focus-on-data": "veriye-odaklanma",
+        "focus-on-creativity": "yaratıcılığa-odaklanma",
+        "vpl-csd-summer-ci": "BB Keşifleri Müfredatı İncelemesi"
       }
     }
   }

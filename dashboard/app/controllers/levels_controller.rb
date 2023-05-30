@@ -44,6 +44,7 @@ class LevelsController < ApplicationController
     Match,
     Maze,
     Multi,
+    Music,
     NetSim,
     Odometer,
     Pixelation,
@@ -132,10 +133,17 @@ class LevelsController < ApplicationController
 
     view_options(
       full_width: true,
+      no_footer: @game&.no_footer?,
       small_footer: @game&.uses_small_footer? || @level&.enable_scrolling?,
       has_i18n: @game.has_i18n?,
       blocklyVersion: params[:blocklyVersion]
     )
+  end
+
+  # Get a JSON summary of a level's information, used in modern labs that don't
+  # reload the page between level views.
+  def level_data
+    render json: {level_data: @level.properties["level_data"]}
   end
 
   # GET /levels/1/edit
@@ -284,7 +292,14 @@ class LevelsController < ApplicationController
       return
     end
 
-    @level.assign_attributes(level_params)
+    update_level_params = level_params.to_h
+
+    # Parse the incoming level_data JSON so that it's stored in the database as a
+    # first-order member of the properties JSON, rather than simply as a string of
+    # JSON belonging to a single property.
+    update_level_params[:level_data] = JSON.parse(level_params[:level_data]) if level_params[:level_data]
+
+    @level.assign_attributes(update_level_params)
     @level.log_changes(current_user)
 
     if @level.save
@@ -424,6 +439,8 @@ class LevelsController < ApplicationController
         @game = Game.ailab
       elsif @type_class == Javalab
         @game = Game.javalab
+      elsif @type_class == Music
+        @game = Game.music
       end
       @level = @type_class.new
       render :edit
@@ -475,7 +492,7 @@ class LevelsController < ApplicationController
     @game = @level.game
   end
 
-  # Never trust parameters from the scary internet, only allow the white list through.
+  # Never trust parameters from the scary internet, only allow the allow-list through.
   private def level_params
     permitted_params = [
       :name,
@@ -530,7 +547,7 @@ class LevelsController < ApplicationController
     # Reference links should be stored as an array.
     if params[:level][:reference_links].is_a? String
       params[:level][:reference_links] = params[:level][:reference_links].split("\r\n")
-      params[:level][:reference_links].delete_if(&:blank?)
+      params[:level][:reference_links].compact_blank!
     end
 
     permitted_params.concat(Level.permitted_params)

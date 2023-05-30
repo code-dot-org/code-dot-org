@@ -1329,6 +1329,19 @@ pl:
             '"z"': z
       gamelab_layoutGrid:
         text: układ duszków jako siatka
+      gamelab_layoutSprites:
+        text: formacja {GROUP} jako {FORMAT}
+        options:
+          FORMAT:
+            '"border"': brzeg
+            '"circle"': koło
+            '"grid"': siatka
+            '"top"': górny wiersz
+            '"row"': wiersz
+            '"bottom"': dolny wiersz
+            '"left"': lewa kolumna
+            '"column"': kolumna
+            '"right"': prawa kolumna
       gamelab_locationAt:
         text: 'pozycja x: {X} y: {Y}'
       gamelab_locationModifier:
@@ -1355,6 +1368,19 @@ pl:
             '"spiral"': spirala
       gamelab_makeNewSpriteAnon:
         text: utwórz nowego {ANIMATION_NAME} duszka w {LOCATION}
+      gamelab_makeNewSpriteGroup:
+        text: zrób {N} nową {GROUP} w {FORMAT}
+        options:
+          FORMAT:
+            '"border"': brzeg
+            '"circle"': koło
+            '"grid"': siatka
+            '"top"': górny wiersz
+            '"row"': wiersz
+            '"bottom"': dolny wiersz
+            '"left"': lewa kolumna
+            '"column"': kolumna
+            '"right"': prawa kolumna
       gamelab_makeNumSprites:
         text: utwórz {NUM} nowymi {ANIMATION_NAME} duszkami
       gamelab_makeNumSpritesNear:
@@ -1621,7 +1647,7 @@ pl:
           narysuj tablicę wyników
           {SPRITE1COSTUME}wynik{VAR1}{SPRITE2COSTUME}wynik{VAR2}cel{SPRITE3COSTUME}
       gamelab_setupSim:
-        text: "ustaw symulację  {SPRITE1N}{SPRITE1COSTUME} z prędkością \n{SPRITE1SPEED}\nSPRITE2N][3]{SPRITE2COSTUME}
+        text: "ustaw symulację  {SPRITE1N}{SPRITE1COSTUME} z prędkością \n{SPRITE1SPEED}\nSPRITE2N][3][null][4]
           z prędkością\n {SPRITE2SPEED}\nzbierając\n{SPRITE3N}{SPRITE3COSTUME}"
       gamelab_showTitleScreen:
         text: pokaż ekran tytułowy {BREAK} tytuł {TITLE} podtytuł {SUBTITLE}
@@ -1776,6 +1802,12 @@ pl:
         text: utwórz {NUM} nowe {ANIMATION_NAME} duszki blisko {LOCATION}
       KatiesBlocks_spriteBirdSay:
         text: "{SPRITE} mówi {SPEECH}"
+        options:
+          SPEECH:
+            '"My beak is pointy and strong to find insects in tree bark."': Mój dziób
+              jest spiczasty i silny, aby znaleźć owady w korze drzewa.
+            '"I have a beak like a scoop to catch fish."': Mam dziób jak czerpak do
+              łowienia ryb.
       KatiesBlocks_tumbling:
         text: gimnastykowanie się
       Mikelab_addBehaviorSimple:
@@ -2048,7 +2080,7 @@ pl:
           populacja:{SPRITE2N}
           {TOGGLE}wirus
       Mikelab_setupSim:
-        text: "ustaw symulację  {SPRITE1N}{SPRITE1COSTUME} z prędkością \n{SPRITE1SPEED}\nSPRITE2N][3]{SPRITE2COSTUME}
+        text: "ustaw symulację  {SPRITE1N}{SPRITE1COSTUME} z prędkością \n{SPRITE1SPEED}\nSPRITE2N][3][null][4]
           z prędkością\n {SPRITE2SPEED}\nzbierając\n{SPRITE3N}{SPRITE3COSTUME}"
       Mikelab_showScoreboard:
         options:
@@ -2573,6 +2605,12 @@ pl:
         text: utwórz {NUM} nowe {ANIMATION_NAME} duszki blisko {LOCATION}
       adaptations_spriteBirdSay:
         text: "{SPRITE} mówi {SPEECH}"
+        options:
+          SPEECH:
+            '"My beak is pointy and strong to find insects in tree bark."': Mój dziób
+              jest spiczasty i silny, aby znaleźć owady w korze drzewa.
+            '"I have a beak like a scoop to catch fish."': Mam dziób jak czerpak do
+              łowienia ryb.
       adaptations_startFollowing:
         text: "{SPRITE} zaczyna podążać {TARGET}"
       adaptations_toggleBehaviorSimple:
@@ -2723,6 +2761,34 @@ pl:
           DIR:
             right: w prawo ↻
             left: w lewo ↺
+      ecosystems_catchMe:
+        text: złap {THIS}
+      ecosystems_eat:
+        text: jedz {THIS}
+      ecosystems_goldilocks:
+        text: |2-
+           jeśli {CONDITION}{SPRITE}
+          {STATEMENT}
+        options:
+          CONDITION:
+            '"too much"': za dużo
+            '"just right"': w sam raz
+            '"too little"': za mało
+      ecosystems_int10:
+        text: "{VALUE}"
+        options:
+          VALUE:
+            '0': '0'
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       storylab_clearHeadings:
         text: wyczyść nagłówki
       storylab_setForegroundEffect2:

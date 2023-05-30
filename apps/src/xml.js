@@ -1,5 +1,5 @@
 // Serializes an XML DOM node to a string.
-exports.serialize = function(node) {
+exports.serialize = function (node) {
   var serializer = new XMLSerializer();
   return serializer.serializeToString(node);
 };
@@ -10,7 +10,7 @@ exports.serialize = function(node) {
  * @param {?boolean} noWrap if true, don't wrap in <xml/> element
  * @return {Element}
  */
-exports.parseElement = function(text, noWrap = false) {
+exports.parseElement = function (text, noWrap = false) {
   var parser = new DOMParser();
   text = text.trim();
   var dom =
@@ -32,7 +32,7 @@ exports.parseElement = function(text, noWrap = false) {
 };
 
 // Apply a function to a node and all of its descendants
-exports.visitAll = function(node, callback) {
+exports.visitAll = function (node, callback) {
   callback(node);
   for (let child of node.childNodes) {
     exports.visitAll(child, callback);

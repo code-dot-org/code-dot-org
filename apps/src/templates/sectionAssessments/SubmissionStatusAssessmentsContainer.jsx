@@ -4,7 +4,7 @@ import SubmissionStatusAssessmentsTable from './SubmissionStatusAssessmentsTable
 import {studentOverviewDataPropType} from './assessmentDataShapes';
 import {
   getStudentsMCandMatchSummaryForCurrentAssessment,
-  getExportableSubmissionStatusData
+  getExportableSubmissionStatusData,
 } from './sectionAssessmentsRedux';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
@@ -19,7 +19,7 @@ export const studentExportableDataPropType = PropTypes.shape({
   numMultipleChoice: PropTypes.number,
   numMatchCorrect: PropTypes.number,
   numMatch: PropTypes.number,
-  submissionTimestamp: PropTypes.instanceOf(Date).isRequired
+  submissionTimestamp: PropTypes.instanceOf(Date).isRequired,
 });
 
 const CSV_SUBMISSION_STATUS_HEADERS = [
@@ -28,7 +28,7 @@ const CSV_SUBMISSION_STATUS_HEADERS = [
   {label: i18n.numMultipleChoice(), key: 'numMultipleChoice'},
   {label: i18n.numMatchCorrect(), key: 'numMatchCorrect'},
   {label: i18n.numMatch(), key: 'numMatch'},
-  {label: i18n.submissionTimestamp(), key: 'submissionTimestamp'}
+  {label: i18n.submissionTimestamp(), key: 'submissionTimestamp'},
 ];
 
 class SubmissionStatusAssessmentsContainer extends Component {
@@ -37,7 +37,7 @@ class SubmissionStatusAssessmentsContainer extends Component {
     // from redux
     localeCode: PropTypes.string,
     studentExportableData: PropTypes.arrayOf(studentExportableDataPropType),
-    studentOverviewData: PropTypes.arrayOf(studentOverviewDataPropType)
+    studentOverviewData: PropTypes.arrayOf(studentOverviewDataPropType),
   };
 
   render() {
@@ -78,19 +78,20 @@ const styles = {
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'space-between',
-    alignItems: 'flex-end'
+    alignItems: 'flex-end',
   },
   button: {
     padding: '12px 24px',
     lineHeight: '10px',
-    marginBottom: '5px'
-  }
+    marginBottom: '5px',
+  },
 };
 
-export const UnconnectedSubmissionStatusAssessmentsContainer = SubmissionStatusAssessmentsContainer;
+export const UnconnectedSubmissionStatusAssessmentsContainer =
+  SubmissionStatusAssessmentsContainer;
 
 export default connect(state => ({
   localeCode: state.locales.localeCode,
   studentExportableData: getExportableSubmissionStatusData(state),
-  studentOverviewData: getStudentsMCandMatchSummaryForCurrentAssessment(state)
+  studentOverviewData: getStudentsMCandMatchSummaryForCurrentAssessment(state),
 }))(SubmissionStatusAssessmentsContainer);

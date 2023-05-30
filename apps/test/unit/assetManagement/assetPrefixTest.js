@@ -11,9 +11,9 @@ describe('apps/src/assetManagement/assetPrefix.js', () => {
       reduxStub = sinon.stub(redux, 'getStore').returns({
         getState: () => ({
           level: {
-            name: 'test-level'
-          }
-        })
+            name: 'test-level',
+          },
+        }),
       });
     });
 
@@ -24,16 +24,12 @@ describe('apps/src/assetManagement/assetPrefix.js', () => {
     it('should route an absolute URL through the MEDIA_PROXY', () => {
       result = fixPath('http://example.com/test%20image.png');
       expect(result).to.equal(
-        `//${
-          location.host
-        }/media?u=http%3A%2F%2Fexample.com%2Ftest%2520image.png`
+        `//${location.host}/media?u=http%3A%2F%2Fexample.com%2Ftest%2520image.png`
       );
 
       result = fixPath('https://example.com/test%20image.png');
       expect(result).to.equal(
-        `//${
-          location.host
-        }/media?u=https%3A%2F%2Fexample.com%2Ftest%2520image.png`
+        `//${location.host}/media?u=https%3A%2F%2Fexample.com%2Ftest%2520image.png`
       );
     });
 

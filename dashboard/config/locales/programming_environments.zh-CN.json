@@ -21,6 +21,34 @@
             "game_lab": {
               "name": "游戏实验室",
               "expressions": {
+                "keyDown": {
+                  "palette_params": {
+                    "code": {
+                      "type": "字符串"
+                    }
+                  }
+                },
+                "keyWentDown": {
+                  "palette_params": {
+                    "code": {
+                      "type": "字符串"
+                    }
+                  }
+                },
+                "keyWentUp": {
+                  "palette_params": {
+                    "code": {
+                      "type": "字符串"
+                    }
+                  }
+                },
+                "mouseDown": {
+                  "palette_params": {
+                    "button": {
+                      "type": "字符串"
+                    }
+                  }
+                },
                 "mouseIsOver": {
                   "palette_params": {
                     "sprite": {
@@ -40,6 +68,18 @@
                     "Black and White": {
                       "name": "黑白"
                     }
+                  },
+                  "palette_params": {
+                    "button": {
+                      "type": "字符串"
+                    }
+                  }
+                },
+                "mouseWentUp": {
+                  "palette_params": {
+                    "button": {
+                      "type": "字符串"
+                    }
                   }
                 },
                 "playSound": {
@@ -48,7 +88,53 @@
                       "name": "制作音乐"
                     }
                   },
+                  "palette_params": {
+                    "url": {
+                      "type": "字符串"
+                    },
+                    "loop": {
+                      "type": "布尔值"
+                    }
+                  },
                   "short_description": "从指定的链接播放 MP3 音频文件。"
+                },
+                "playSpeech": {
+                  "palette_params": {
+                    "text": {
+                      "type": "字符串"
+                    },
+                    "gender": {
+                      "type": "字符串"
+                    },
+                    "language": {
+                      "type": "字符串"
+                    }
+                  }
+                },
+                "showMobileControls": {
+                  "content": "更改游戏空间下方可见的移动控件。",
+                  "palette_params": {
+                    "spaceButtonVisible": {
+                      "type": "布尔值"
+                    },
+                    "dpadVisible": {
+                      "type": "布尔值"
+                    },
+                    "dpadFourWay": {
+                      "type": "布尔值"
+                    },
+                    "mobileOnly": {
+                      "type": "布尔值"
+                    }
+                  },
+                  "short_description": "更改游戏空间下方可见的移动控件。"
+                },
+                "stopSound": {
+                  "palette_params": {
+                    "url": {
+                      "type": "字符串"
+                    }
+                  }
                 }
               }
             },
@@ -59,6 +145,108 @@
                   "examples": {
                     "Spiral": {
                       "name": "螺旋"
+                    }
+                  }
+                },
+                "sprite.height": {
+                  "return_value": "精灵的高度。"
+                },
+                "mirrorX": {
+                  "palette_params": {
+                    "dir": {
+                      "type": "数字"
+                    }
+                  }
+                },
+                "mirrorY": {
+                  "palette_params": {
+                    "dir": {
+                      "type": "数字"
+                    }
+                  }
+                },
+                "pointTo": {
+                  "palette_params": {
+                    "x": {
+                      "type": "数字"
+                    },
+                    "y": {
+                      "type": "数字"
+                    }
+                  }
+                },
+                "setAnimation": {
+                  "palette_params": {
+                    "label": {
+                      "type": "字符串"
+                    }
+                  }
+                },
+                "setCollider": {
+                  "palette_params": {
+                    "type": {
+                      "type": "字符串"
+                    },
+                    "xOffset": {
+                      "type": "数字"
+                    },
+                    "yOffset": {
+                      "type": "数字"
+                    },
+                    "width/radius": {
+                      "type": "数字"
+                    },
+                    "height": {
+                      "type": "数字"
+                    },
+                    "rotationOffset": {
+                      "type": "数字"
+                    }
+                  }
+                },
+                "setFrame": {
+                  "palette_params": {
+                    "frame": {
+                      "type": "数字"
+                    }
+                  }
+                },
+                "setSpeedAndDirection": {
+                  "palette_params": {
+                    "speed": {
+                      "type": "数字"
+                    },
+                    "angle": {
+                      "type": "数字"
+                    }
+                  }
+                },
+                "setVelocity": {
+                  "palette_params": {
+                    "x": {
+                      "type": "数字"
+                    },
+                    "y": {
+                      "type": "数字"
+                    }
+                  }
+                },
+                "sprite.width": {
+                  "return_value": "精灵的宽度。"
+                },
+                "createSprite": {
+                  "palette_params": {
+                    "x": {
+                      "type": "数字"
+                    },
+                    "width": {
+                      "type": "数字"
+                    },
+                    "y": {
+                      "type": "数字"
+                    },
+                    "height": {
+                      "type": "数字"
                     }
                   }
                 }
@@ -81,10 +269,53 @@
                     }
                   }
                 },
+                "get": {
+                  "palette_params": {
+                    "i": {
+                      "type": "数字"
+                    }
+                  }
+                },
+                "pointToEach": {
+                  "palette_params": {
+                    "x": {
+                      "type": "数字"
+                    },
+                    "y": {
+                      "type": "数字"
+                    }
+                  }
+                },
                 "remove": {
                   "palette_params": {
                     "sprite": {
                       "type": "精灵"
+                    }
+                  }
+                },
+                "setAnimationEach": {
+                  "palette_params": {
+                    "label": {
+                      "type": "字符串"
+                    }
+                  }
+                },
+                "setColliderEach": {
+                  "palette_params": {
+                    "type": {
+                      "type": "字符串"
+                    },
+                    "yOffset": {
+                      "type": "数字"
+                    },
+                    "width/radius": {
+                      "type": "数字"
+                    },
+                    "height": {
+                      "type": "数字"
+                    },
+                    "rotationOffset": {
+                      "type": "数字"
                     }
                   }
                 },
@@ -95,10 +326,114 @@
                     }
                   }
                 },
+                "setHeightEach": {
+                  "palette_params": {
+                    "height": {
+                      "type": "数字"
+                    }
+                  }
+                },
+                "setLifetimeEach": {
+                  "palette_params": {
+                    "lifetime": {
+                      "type": "数字"
+                    }
+                  }
+                },
+                "setMirrorXEach": {
+                  "palette_params": {
+                    "dir": {
+                      "type": "数字"
+                    }
+                  }
+                },
+                "setMirrorYEach": {
+                  "palette_params": {
+                    "dir": {
+                      "type": "数字"
+                    }
+                  }
+                },
+                "setRotateToDirectionEach": {
+                  "palette_params": {
+                    "bool": {
+                      "type": "布尔值"
+                    }
+                  }
+                },
+                "setRotationEach": {
+                  "palette_params": {
+                    "angle": {
+                      "type": "数字"
+                    }
+                  }
+                },
+                "setRotationSpeedEach": {
+                  "palette_params": {
+                    "speed": {
+                      "type": "数字"
+                    }
+                  }
+                },
+                "setScaleEach": {
+                  "palette_params": {
+                    "scale": {
+                      "type": "数字"
+                    }
+                  }
+                },
+                "setSpeedAndDirectionEach": {
+                  "palette_params": {
+                    "speed": {
+                      "type": "数字"
+                    },
+                    "angle": {
+                      "type": "数字"
+                    }
+                  }
+                },
                 "setTintEach": {
                   "palette_params": {
                     "color": {
                       "type": "颜色"
+                    }
+                  }
+                },
+                "setVelocityEach": {
+                  "palette_params": {
+                    "x": {
+                      "type": "数字"
+                    },
+                    "y": {
+                      "type": "数字"
+                    }
+                  }
+                },
+                "setVelocityXEach": {
+                  "palette_params": {
+                    "velocity": {
+                      "type": "数字"
+                    }
+                  }
+                },
+                "setVelocityYEach": {
+                  "palette_params": {
+                    "velocity": {
+                      "type": "数字"
+                    }
+                  }
+                },
+                "setVisibleEach": {
+                  "palette_params": {
+                    "bool": {
+                      "type": "布尔值"
+                    }
+                  }
+                },
+                "setWidthEach": {
+                  "palette_params": {
+                    "width": {
+                      "type": "数字"
                     }
                   }
                 }
@@ -107,21 +442,251 @@
             "drawing": {
               "name": "绘画",
               "expressions": {
+                "arc": {
+                  "palette_params": {
+                    "x": {
+                      "type": "数字"
+                    },
+                    "y": {
+                      "type": "数字"
+                    },
+                    "w": {
+                      "type": "数字"
+                    },
+                    "h": {
+                      "type": "数字"
+                    },
+                    "start": {
+                      "type": "数字"
+                    },
+                    "stop": {
+                      "type": "数字"
+                    }
+                  }
+                },
+                "background": {
+                  "palette_params": {
+                    "color": {
+                      "type": "字符串"
+                    }
+                  }
+                },
+                "ellipse": {
+                  "palette_params": {
+                    "x": {
+                      "type": "数字"
+                    },
+                    "y": {
+                      "type": "数字"
+                    },
+                    "w": {
+                      "type": "数字"
+                    },
+                    "h": {
+                      "type": "数字"
+                    }
+                  }
+                },
+                "fill": {
+                  "palette_params": {
+                    "color": {
+                      "type": "字符串"
+                    }
+                  }
+                },
+                "line": {
+                  "palette_params": {
+                    "x1": {
+                      "type": "数字"
+                    },
+                    "y1": {
+                      "type": "数字"
+                    },
+                    "x2": {
+                      "type": "数字"
+                    },
+                    "y2": {
+                      "type": "数字"
+                    }
+                  }
+                },
+                "point": {
+                  "palette_params": {
+                    "x": {
+                      "type": "数字"
+                    },
+                    "y": {
+                      "type": "数字"
+                    }
+                  }
+                },
+                "rect": {
+                  "palette_params": {
+                    "x": {
+                      "type": "数字"
+                    },
+                    "y": {
+                      "type": "数字"
+                    },
+                    "w": {
+                      "type": "数字"
+                    },
+                    "h": {
+                      "type": "数字"
+                    }
+                  }
+                },
+                "regularPolygon": {
+                  "palette_params": {
+                    "x": {
+                      "type": "数字"
+                    },
+                    "y": {
+                      "type": "数字"
+                    },
+                    "sides": {
+                      "type": "数字"
+                    },
+                    "size": {
+                      "type": "数字"
+                    }
+                  }
+                },
+                "rgb": {
+                  "palette_params": {
+                    "r": {
+                      "type": "数字"
+                    },
+                    "g": {
+                      "type": "数字"
+                    },
+                    "b": {
+                      "type": "数字"
+                    },
+                    "a": {
+                      "type": "数字"
+                    }
+                  }
+                },
                 "shape": {
                   "examples": {
                     "Star": {
                       "name": "踢腿"
+                    }
+                  },
+                  "palette_params": {
+                    "x1": {
+                      "type": "数字"
+                    },
+                    "y1": {
+                      "type": "数字"
+                    },
+                    "x2": {
+                      "type": "数字"
+                    },
+                    "y2": {
+                      "type": "数字"
+                    }
+                  }
+                },
+                "stroke": {
+                  "palette_params": {
+                    "color": {
+                      "type": "字符串"
+                    }
+                  }
+                },
+                "strokeWeight": {
+                  "palette_params": {
+                    "size": {
+                      "type": "数字"
+                    }
+                  }
+                },
+                "text": {
+                  "palette_params": {
+                    "str": {
+                      "type": "字符串"
+                    },
+                    "x": {
+                      "type": "数字"
+                    },
+                    "y": {
+                      "type": "数字"
+                    },
+                    "width": {
+                      "type": "数字"
+                    },
+                    "height": {
+                      "type": "数字"
+                    }
+                  }
+                },
+                "textAlign": {
+                  "palette_params": {
+                    "horiz": {
+                      "type": "字符串"
+                    },
+                    "vert": {
+                      "type": "字符串"
+                    }
+                  }
+                },
+                "textFont": {
+                  "palette_params": {
+                    "font": {
+                      "type": "字符串"
+                    }
+                  }
+                },
+                "textSize": {
+                  "palette_params": {
+                    "pixels": {
+                      "type": "数字"
                     }
                   }
                 }
               }
             },
             "control": {
-              "name": "控制"
+              "name": "控制",
+              "expressions": {
+                "setInterval": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "每次执行函数之间的毫秒数。"
+                    }
+                  }
+                },
+                "setTimeout": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "在执行函数之前等待的毫秒数。"
+                    }
+                  }
+                }
+              }
             },
             "math": {
               "name": "数学",
               "expressions": {
+                "mathSqrt": {
+                  "palette_params": {
+                    "x": {
+                      "type": "数字"
+                    }
+                  }
+                },
+                "moduloOperator": {
+                  "palette_params": {
+                    "value1": {
+                      "type": "数字"
+                    },
+                    "value2": {
+                      "type": "数字"
+                    }
+                  }
+                },
                 "randomNumber": {
                   "palette_params": {
                     "min": {
@@ -152,6 +717,23 @@
                 },
                 "declareAssign_x": {
                   "short_description": "声明并给一个变量分派上初值。"
+                },
+                "includes": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "要搜索的字符串。"
+                    }
+                  }
+                },
+                "indexOf": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "要搜索的字符串。"
+                    }
+                  }
+                },
+                "length": {
+                  "return_value": "字符串的长度"
                 }
               }
             },
@@ -170,6 +752,16 @@
                 "button": {
                   "short_description": "在屏幕上创建一个按钮，在默认位置 (0,0) 显示所提供的文本并引用所用的ID。"
                 },
+                "getProperty": {
+                  "palette_params": {
+                    "id": {
+                      "type": "字符串"
+                    },
+                    "property": {
+                      "type": "字符串"
+                    }
+                  }
+                },
                 "onEvent": {
                   "examples": {
                     "Shrink and Grow": {
@@ -177,6 +769,12 @@
                     }
                   },
                   "palette_params": {
+                    "type": {
+                      "type": "字符串"
+                    },
+                    "id": {
+                      "type": "字符串"
+                    },
                     "callback": {
                       "type": "函数"
                     }
@@ -188,7 +786,62 @@
                       "name": "制作音乐"
                     }
                   },
+                  "palette_params": {
+                    "loop": {
+                      "type": "布尔值"
+                    }
+                  },
                   "short_description": "从指定的链接播放 MP3 音频文件。"
+                },
+                "playSpeech": {
+                  "palette_params": {
+                    "text": {
+                      "type": "字符串"
+                    },
+                    "gender": {
+                      "type": "字符串"
+                    },
+                    "language": {
+                      "type": "字符串"
+                    }
+                  }
+                },
+                "rgb": {
+                  "palette_params": {
+                    "r": {
+                      "type": "数字"
+                    },
+                    "g": {
+                      "type": "数字"
+                    },
+                    "b": {
+                      "type": "数字"
+                    },
+                    "a": {
+                      "type": "数字"
+                    }
+                  }
+                },
+                "setProperty": {
+                  "palette_params": {
+                    "id": {
+                      "type": "字符串"
+                    },
+                    "property": {
+                      "type": "字符串",
+                      "description": "要更改的属性。"
+                    }
+                  },
+                  "short_description": "将指定元素的属性设置为新值。"
+                },
+                "setScreen": {
+                  "short_description": "将屏幕设置为给定的 screenID。"
+                },
+                "showElement": {
+                  "short_description": "显示带有提供的 ID 的元素。"
+                },
+                "textLabel": {
+                  "short_description": "在屏幕上创建文本标签，在默认位置 (0,0) 显示给定 ID 提供和引用的文本。"
                 }
               }
             },
@@ -202,17 +855,43 @@
                     }
                   }
                 },
+                "drawImage": {
+                  "palette_params": {
+                    "id": {
+                      "description": "要绘制的图像左上角的 x 位置（以像素为单位）。"
+                    },
+                    "x": {
+                      "description": "要绘制的图像左上角的 x 位置（以像素为单位）。"
+                    },
+                    "y": {
+                      "description": "要绘制的图像左上角的 y 位置（以像素为单位）。"
+                    }
+                  }
+                },
                 "getAlpha": {
                   "palette_params": {
                     "imageData": {
                       "type": "对象"
+                    },
+                    "x": {
+                      "description": "从图像左上角开始的 x 位置（以像素为单位）。"
+                    },
+                    "y": {
+                      "description": "从图像左上角开始的 y 位置（以像素为单位）。"
                     }
-                  }
+                  },
+                  "short_description": "返回位于给定图像数据中给定 x 和 y 位置的像素颜色中的 alpha（不透明度）（从 0 到 255）量。"
                 },
                 "getBlue": {
                   "palette_params": {
                     "imageData": {
                       "type": "对象"
+                    },
+                    "x": {
+                      "description": "从图像左上角开始的 x 位置（以像素为单位）。"
+                    },
+                    "y": {
+                      "description": "从图像左上角开始的 y 位置（以像素为单位）。"
                     }
                   }
                 },
@@ -220,6 +899,28 @@
                   "palette_params": {
                     "imageData": {
                       "type": "对象"
+                    },
+                    "x": {
+                      "description": "从图像左上角开始的 x 位置（以像素为单位）。"
+                    },
+                    "y": {
+                      "description": "从图像左上角开始的 y 位置（以像素为单位）。"
+                    }
+                  }
+                },
+                "getImageData": {
+                  "palette_params": {
+                    "x": {
+                      "description": "开始捕获的 x 位置（以像素为单位）。"
+                    },
+                    "y": {
+                      "description": "开始捕获的 y 位置（以像素为单位）。"
+                    },
+                    "width": {
+                      "description": "捕获图像数据的边界矩形的宽度。"
+                    },
+                    "height": {
+                      "description": "捕获图像数据的边界矩形的高度。"
                     }
                   }
                 },
@@ -227,6 +928,12 @@
                   "palette_params": {
                     "imageData": {
                       "type": "对象"
+                    },
+                    "x": {
+                      "description": "从图像左上角开始的 x 位置（以像素为单位）。"
+                    },
+                    "y": {
+                      "description": "从图像左上角开始的 y 位置（以像素为单位）。"
                     }
                   }
                 },
@@ -234,6 +941,28 @@
                   "palette_params": {
                     "imageData": {
                       "type": "对象"
+                    },
+                    "x": {
+                      "description": "从图像左上角开始的 x 位置（以像素为单位），用于将数据放置在画布上。"
+                    },
+                    "y": {
+                      "description": "从图像左上角开始的 y 位置（以像素为单位），用于将数据放置在画布上。"
+                    }
+                  }
+                },
+                "rect": {
+                  "palette_params": {
+                    "x": {
+                      "description": "矩形左上角的 x 位置（以像素为单位）。"
+                    },
+                    "y": {
+                      "description": "矩形左上角的 y 位置（以像素为单位）。"
+                    },
+                    "width": {
+                      "description": "矩形的水平宽度（以像素为单位）。"
+                    },
+                    "height": {
+                      "description": "矩形的垂直高度（以像素为单位）。"
                     }
                   }
                 },
@@ -241,13 +970,40 @@
                   "palette_params": {
                     "imageData": {
                       "type": "对象"
+                    },
+                    "x": {
+                      "description": "从图像左上角开始的 x 位置（以像素为单位）。"
+                    },
+                    "y": {
+                      "description": "从图像左上角开始的 y 位置（以像素为单位）。"
+                    },
+                    "alphaValue": {
+                      "description": "要在像素中设置的阿尔法量（不透明度）（从 0 到 255）。"
                     }
-                  }
+                  },
+                  "short_description": "设置位于给定图像数据中给定 x 和 y 位置的像素颜色中的 alpha 量（不透明度）（范围从 0 到 255）。"
                 },
                 "setBlue": {
                   "palette_params": {
                     "imageData": {
                       "type": "对象"
+                    },
+                    "x": {
+                      "description": "从图像左上角开始的 x 位置（以像素为单位）。"
+                    },
+                    "y": {
+                      "description": "从图像左上角开始的 y 位置（以像素为单位）。"
+                    },
+                    "blueValue": {
+                      "description": "要在像素中设置的蓝色量（从 0 到 255）。"
+                    }
+                  },
+                  "short_description": "将位于给定图像数据中给定 x 和 y 位置的像素颜色的蓝色量（范围从 0 到 255）设置为 BlueValue 输入量。"
+                },
+                "setFillColor": {
+                  "palette_params": {
+                    "color": {
+                      "type": "字符串"
                     }
                   }
                 },
@@ -255,13 +1011,41 @@
                   "palette_params": {
                     "imageData": {
                       "type": "对象"
+                    },
+                    "x": {
+                      "description": "从图像左上角开始的 x 位置（以像素为单位）。"
+                    },
+                    "y": {
+                      "description": "从图像左上角开始的 y 位置（以像素为单位）。"
+                    },
+                    "greenValue": {
+                      "description": "要在像素中设置的绿色量（从 0 到 255）。"
                     }
-                  }
+                  },
+                  "short_description": "将位于给定图像数据中给定 x 和 y 位置的像素颜色中的绿色量（范围从 0 到 255）设置为 GreenValue 输入量。"
                 },
                 "setRGB": {
                   "palette_params": {
                     "imageData": {
                       "type": "对象"
+                    },
+                    "x": {
+                      "description": "从图像左上角开始的 x 位置（以像素为单位）。"
+                    },
+                    "y": {
+                      "description": "从图像左上角开始的 y 位置（以像素为单位）。"
+                    },
+                    "red": {
+                      "description": "要在像素中设置的红色量（从 0 到 255）。"
+                    },
+                    "green": {
+                      "description": "要在像素中设置的绿色量（从 0 到 255）。"
+                    },
+                    "blue": {
+                      "description": "要在像素中设置的蓝色量（从 0 到 255）。"
+                    },
+                    "alpha": {
+                      "description": "可选。要在像素中设置的不透明度（从 0 到 255）。默认为 255（完全不透明度）。"
                     }
                   }
                 },
@@ -269,6 +1053,23 @@
                   "palette_params": {
                     "imageData": {
                       "type": "对象"
+                    },
+                    "x": {
+                      "description": "从图像左上角开始的 x 位置（以像素为单位）。"
+                    },
+                    "y": {
+                      "description": "从图像左上角开始的 y 位置（以像素为单位）。"
+                    },
+                    "redValue": {
+                      "description": "要在像素中设置的红色量（从 0 到 255）。"
+                    }
+                  },
+                  "short_description": "将位于给定图像数据中给定 x 和 y 位置的像素颜色中的红色量（从 0 到 255）设置为 redValue 输入量。"
+                },
+                "setStrokeColor": {
+                  "palette_params": {
+                    "color": {
+                      "type": "字符串"
                     }
                   }
                 }
@@ -281,6 +1082,13 @@
                   "palette_params": {
                     "record": {
                       "type": "对象"
+                    }
+                  }
+                },
+                "createRecordSync": {
+                  "palette_params": {
+                    "table": {
+                      "type": "字符串"
                     }
                   }
                 },
@@ -300,15 +1108,51 @@
                 },
                 "drawChartFromRecords": {
                   "palette_params": {
+                    "tableName": {
+                      "description": "要从中检索记录的表的名称。"
+                    },
                     "options": {
                       "type": "对象"
                     }
                   }
                 },
+                "getColumn": {
+                  "palette_params": {
+                    "table": {
+                      "type": "字符串"
+                    },
+                    "column": {
+                      "type": "字符串"
+                    }
+                  }
+                },
+                "getKeyValue": {
+                  "palette_params": {
+                    "key": {
+                      "description": "要检索的密钥的名称。"
+                    }
+                  }
+                },
                 "getPrediction": {
                   "palette_params": {
+                    "name": {
+                      "type": "字符串"
+                    },
+                    "id": {
+                      "type": "字符串"
+                    },
                     "callback": {
                       "type": "函数"
+                    }
+                  }
+                },
+                "getUserId": {
+                  "short_description": "获取此应用程序当前用户的唯一标识符。"
+                },
+                "onRecordEvent": {
+                  "palette_params": {
+                    "table": {
+                      "description": "此事件处理程序适用的表的名称。"
                     }
                   }
                 },
@@ -316,6 +1160,31 @@
                   "palette_params": {
                     "terms": {
                       "type": "对象"
+                    }
+                  }
+                },
+                "readRecordsSync": {
+                  "palette_params": {
+                    "table": {
+                      "type": "字符串"
+                    }
+                  }
+                },
+                "setKeyValue": {
+                  "palette_params": {
+                    "key": {
+                      "description": "要存储的密钥的名称。"
+                    },
+                    "value": {
+                      "description": "要存储的数据。"
+                    }
+                  },
+                  "short_description": "在 App Lab 的键/值数据存储中存储键/值对，并在操作完成后调用回调函数。"
+                },
+                "startWebRequest": {
+                  "palette_params": {
+                    "url": {
+                      "description": "返回数据的服务的网址。"
                     }
                   }
                 },
@@ -333,14 +1202,113 @@
               "expressions": {
                 "arcLeft": {
                   "short_description": "以平滑的圆弧向前和向左移动海龟。"
+                },
+                "getX": {
+                  "short_description": "获取海龟的当前 x 坐标（以像素为单位）。"
+                },
+                "getY": {
+                  "short_description": "获取海龟的当前 y 坐标（以像素为单位）。"
+                },
+                "hide": {
+                  "short_description": "使海龟在当前位置不可见。"
+                },
+                "move": {
+                  "palette_params": {
+                    "x": {
+                      "description": "向右移动海龟的像素数。"
+                    },
+                    "y": {
+                      "description": "向下移动海龟的像素数。"
+                    }
+                  }
+                },
+                "moveBackward": {
+                  "short_description": "将海龟从当前方向向后移动给定数量的像素。"
+                },
+                "moveForward": {
+                  "short_description": "将海龟沿当前方向向前移动给定数量的像素。"
+                },
+                "moveTo": {
+                  "short_description": "将海龟移动到屏幕上的特定（x，y）位置。"
+                },
+                "penColor": {
+                  "palette_params": {
+                    "color": {
+                      "type": "字符串"
+                    }
+                  },
+                  "short_description": "设置海龟用来画线条和点的笔的颜色。"
+                },
+                "penDown": {
+                  "short_description": "把笔放下，让海龟在移动时在它后面画一条线。"
+                },
+                "penRGB": {
+                  "palette_params": {
+                    "r": {
+                      "type": "数字"
+                    }
+                  },
+                  "short_description": "使用 RGBA 值，设置海龟用来画线条和点的笔的颜色。"
+                },
+                "penUp": {
+                  "short_description": "拿起笔，这样海龟在移动时就不会画线。"
+                },
+                "penWidth": {
+                  "short_description": "以像素为单位设置线条的宽度，海龟在移动时将其绘制在后面。"
+                },
+                "show": {
+                  "short_description": "使海龟在其当前位置可见。"
+                },
+                "speed": {
+                  "short_description": "设置应用程序的执行速度，包括海龟的速度。"
+                },
+                "turnLeft": {
+                  "short_description": "将海龟向左旋转指定角度。海龟的位置保持不变。"
+                },
+                "turnRight": {
+                  "short_description": "将海龟向右旋转指定角度。海龟的位置保持不变。"
+                },
+                "turnTo": {
+                  "short_description": "将海龟的方向更改为特定角度。0 表示向上，90 表示向右，180 表示向下，270 表示向左。"
                 }
               }
             },
             "control": {
               "name": "控制",
               "expressions": {
+                "clearTimeout": {
+                  "palette_params": {
+                    "timeout": {
+                      "description": "要取消的 setTimeout 函数返回的值。"
+                    }
+                  }
+                },
+                "setInterval": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "每次执行函数之间的毫秒数。"
+                    }
+                  }
+                },
+                "setTimeout": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "在执行函数之前等待的毫秒数。"
+                    }
+                  }
+                },
+                "stopTimedLoop": {
+                  "palette_params": {
+                    "loop": {
+                      "type": "数字"
+                    }
+                  }
+                },
                 "timedLoop": {
                   "palette_params": {
+                    "ms": {
+                      "type": "数字"
+                    },
                     "callback": {
                       "type": "函数"
                     }
@@ -351,6 +1319,33 @@
             "math": {
               "name": "数学",
               "expressions": {
+                "mathPow": {
+                  "palette_params": {
+                    "x": {
+                      "type": "数字"
+                    },
+                    "y": {
+                      "type": "数字"
+                    }
+                  }
+                },
+                "mathSqrt": {
+                  "palette_params": {
+                    "x": {
+                      "type": "数字"
+                    }
+                  }
+                },
+                "moduloOperator": {
+                  "palette_params": {
+                    "x": {
+                      "type": "数字"
+                    },
+                    "y": {
+                      "type": "数字"
+                    }
+                  }
+                },
                 "randomNumber_min_max": {
                   "palette_params": {
                     "min": {
@@ -389,8 +1384,37 @@
                 "declareAssign_list_123": {
                   "short_description": "声明数组并赋值给变量"
                 },
+                "includes": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "要搜索的字符串。"
+                    }
+                  }
+                },
+                "indexOf": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "要搜索的字符串。"
+                    }
+                  }
+                },
                 "addPair": {
+                  "palette_params": {
+                    "key": {
+                      "type": "字符串"
+                    }
+                  },
                   "return_value": "没有"
+                },
+                "getValue": {
+                  "palette_params": {
+                    "key": {
+                      "type": "字符串"
+                    }
+                  }
+                },
+                "length": {
+                  "return_value": "字符串的长度"
                 }
               }
             },
@@ -398,10 +1422,113 @@
               "name": "函数"
             },
             "advanced": {
-              "name": "高级"
+              "name": "高级",
+              "expressions": {
+                "setStyle": {
+                  "palette_params": {
+                    "id": {
+                      "type": "字符串"
+                    },
+                    "css": {
+                      "type": "字符串"
+                    }
+                  }
+                }
+              }
             },
             "maker": {
-              "name": "制造"
+              "name": "制造",
+              "expressions": {
+                "pinMode": {
+                  "palette_params": {
+                    "pin": {
+                      "type": "数字"
+                    },
+                    "mode": {
+                      "type": "字符串"
+                    }
+                  }
+                }
+              }
+            },
+            "circuit": {
+              "expressions": {
+                "isPressed": {
+                  "return_value": "布尔值"
+                },
+                "buzzer.play": {
+                  "palette_params": {
+                    "tempo": {
+                      "type": "数字"
+                    }
+                  }
+                },
+                "buzzer.playNotes": {
+                  "palette_params": {
+                    "tempo": {
+                      "type": "数字"
+                    }
+                  }
+                },
+                "buzzer.playSong": {
+                  "palette_params": {
+                    "tempo": {
+                      "type": "数字"
+                    }
+                  }
+                },
+                "toggleSwitch.isOpen": {
+                  "return_value": "布尔值"
+                }
+              }
+            },
+            "micro_bit": {
+              "expressions": {
+                "ledScreen.off": {
+                  "palette_params": {
+                    "x": {
+                      "type": "数字"
+                    },
+                    "y": {
+                      "type": "数字"
+                    }
+                  }
+                },
+                "ledScreen.on": {
+                  "palette_params": {
+                    "x": {
+                      "type": "数字"
+                    },
+                    "y": {
+                      "type": "数字"
+                    }
+                  }
+                },
+                "ledScreen.scrollNumber": {
+                  "palette_params": {
+                    "number": {
+                      "type": "数字"
+                    }
+                  }
+                },
+                "ledScreen.scrollString": {
+                  "palette_params": {
+                    "String": {
+                      "type": "字符串"
+                    }
+                  }
+                },
+                "ledScreen.toggle": {
+                  "palette_params": {
+                    "x": {
+                      "type": "数字"
+                    },
+                    "y": {
+                      "type": "数字"
+                    }
+                  }
+                }
+              }
             }
           }
         },

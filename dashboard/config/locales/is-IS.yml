@@ -210,8 +210,6 @@ is:
       að hafa samband við nemendur. Nemendur munu aldrei fá póst frá Code.org nema
       til að endurstilla aðgangsorð. Sjá nánar um þetta í [persónuverndarstefnu](http://code.org/privacy)
       okkar.
-    additional_information: Við þurfum viðbótarupplýsingar til að geta haldið áfram
-      að skrá þig.
     user_type_button: Uppfæra tegund aðgangs
     user_type_label: Tegund aðgangs
     user_type_student: nemandi
@@ -1357,6 +1355,11 @@ is:
         í notendastillingar þínar](%{user_registration}) til að bæta við netfangi
         þínu áður en þú fyllir út þetta form.
   courses_category: Heil námskeið
+  course_offering:
+    headers:
+      minecraft: Minecraft
+      sports: Íþróttir
+      csf: TF Grunnur
   cookie_banner:
     message: Með því að halda áfram að vafra á vef okkar eða smella á "Ég samþykki"
       samþykkir þú vistun fótspora (cookies) á tölvu þinni eða tæki.

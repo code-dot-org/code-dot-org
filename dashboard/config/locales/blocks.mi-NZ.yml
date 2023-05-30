@@ -1112,12 +1112,37 @@ mi:
             '"w"': w
             '"x"': x
             '"z"': z
+      gamelab_layoutSprites:
+        text: takotohia {GROUP} ki te {FORMAT}
+        options:
+          FORMAT:
+            '"border"': pae
+            '"circle"': porpwhita
+            '"grid"': tukutuku
+            '"top"': rārangi runga
+            '"row"': rārangi
+            '"bottom"': rārangi raro
+            '"left"': pou māui
+            '"column"': pou
+            '"right"': pou mātau
       gamelab_location_picker:
         text: "{LOCATION}"
       gamelab_makeBurst:
         options:
           EFFECT:
             '"rain"': ua
+      gamelab_makeNewSpriteGroup:
+        options:
+          FORMAT:
+            '"border"': pae
+            '"circle"': porpwhita
+            '"grid"': tukutuku
+            '"top"': rārangi runga
+            '"row"': rārangi
+            '"bottom"': rārangi raro
+            '"left"': pou māui
+            '"column"': pou
+            '"right"': pou mātau
       gamelab_makeProjectile:
         options:
           DIRECTION:
@@ -1626,6 +1651,20 @@ mi:
           DIR:
             right: matau ↻
             left: maui ↺
+      ecosystems_int10:
+        options:
+          VALUE:
+            '0': '0'
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       storylab_setForegroundEffect2:
         options:
           EFFECT:

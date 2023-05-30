@@ -14,17 +14,12 @@ export default class PhoneFrame extends React.Component {
     showSelector: PropTypes.bool.isRequired,
     isPaused: PropTypes.bool.isRequired,
     onScreenCreate: PropTypes.func.isRequired,
-    children: PropTypes.node
+    children: PropTypes.node,
   };
 
   render() {
-    const {
-      isDark,
-      screenIds,
-      showSelector,
-      isPaused,
-      onScreenCreate
-    } = this.props;
+    const {isDark, screenIds, showSelector, isPaused, onScreenCreate} =
+      this.props;
     return (
       <span id="phoneFrame">
         <div id="phoneFrameWrapper">
@@ -71,6 +66,6 @@ export default class PhoneFrame extends React.Component {
 
 const styles = {
   buttonMinWidth: {
-    minWidth: CompletionButtonStyles.phoneFrameButton.minWidth
-  }
+    minWidth: CompletionButtonStyles.phoneFrameButton.minWidth,
+  },
 };

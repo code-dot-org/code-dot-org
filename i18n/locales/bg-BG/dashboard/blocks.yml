@@ -1174,6 +1174,18 @@ bg:
             '"x"': x
             '"y"': 'y'
             '"z"': z
+      gamelab_layoutSprites:
+        options:
+          FORMAT:
+            '"border"': рамка
+            '"circle"': кръг
+            '"grid"': мрежа
+            '"top"': най-горен ред
+            '"row"': ред
+            '"bottom"': най-долен ред
+            '"left"': лява колона
+            '"column"': колона
+            '"right"': дясна колона
       gamelab_locationAt:
         text: 'местоположение х: {X} у: {Y}'
       gamelab_locationModifier:
@@ -1200,6 +1212,18 @@ bg:
             '"spiral"': спирала
       gamelab_makeNewSpriteAnon:
         text: създай нов {ANIMATION_NAME} спрайт на {LOCATION}
+      gamelab_makeNewSpriteGroup:
+        options:
+          FORMAT:
+            '"border"': рамка
+            '"circle"': кръг
+            '"grid"': мрежа
+            '"top"': най-горен ред
+            '"row"': ред
+            '"bottom"': най-долен ред
+            '"left"': лява колона
+            '"column"': колона
+            '"right"': дясна колона
       gamelab_makeNumSprites:
         text: създай {NUM} нови {ANIMATION_NAME} спрайтове
       gamelab_makeProjectile:
@@ -2229,6 +2253,21 @@ bg:
           DIR:
             right: дясно ↻
             left: ляво ↺
+      ecosystems_int10:
+        text: "{VALUE}"
+        options:
+          VALUE:
+            '0': '0'
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       storylab_clearHeadings:
         text: изчисти заглавия
       storylab_setForegroundEffect2:

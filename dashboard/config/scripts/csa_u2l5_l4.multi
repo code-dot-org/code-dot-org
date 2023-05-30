@@ -18,3 +18,5 @@ wrong '5'
 wrong '5.0'
 right '7.5'
 wrong '10.5'
+
+allow_multiple_attempts true

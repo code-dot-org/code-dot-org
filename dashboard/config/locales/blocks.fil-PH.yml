@@ -1249,6 +1249,19 @@ fil:
             '"x"': x
             '"y"': y
             '"z"': z
+      gamelab_layoutSprites:
+        text: i-layout ang {GROUP} bilang isang {FORMAT}
+        options:
+          FORMAT:
+            '"border"': border
+            '"circle"': bilog
+            '"grid"': grid
+            '"top"': pinakamataas na hilera
+            '"row"': hilera
+            '"bottom"': pinakamababang hilera
+            '"left"': kaliwang kolum
+            '"column"': kolum
+            '"right"': kanang kolum
       gamelab_locationAt:
         text: 'Lokasyon x: {X} y {Y}'
       gamelab_locationModifier:
@@ -1275,6 +1288,18 @@ fil:
             '"spiral"': paikid
       gamelab_makeNewSpriteAnon:
         text: gumawa ng bagong {ANIMATION_NAME} sprite sa {LOCATION}
+      gamelab_makeNewSpriteGroup:
+        options:
+          FORMAT:
+            '"border"': border
+            '"circle"': bilog
+            '"grid"': grid
+            '"top"': pinakamataas na hilera
+            '"row"': hilera
+            '"bottom"': pinakamababang hilera
+            '"left"': kaliwang kolum
+            '"column"': kolum
+            '"right"': kanang kolum
       gamelab_makeNumSprites:
         text: gumawa ng {NUM} bagong {ANIMATION_NAME} mga tiyanak
       gamelab_makeProjectile:
@@ -2429,6 +2454,21 @@ fil:
           DIR:
             right: right ↻
             left: kaliwang ↺
+      ecosystems_int10:
+        text: "{VALUE}"
+        options:
+          VALUE:
+            '0': '0'
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       storylab_setForegroundEffect2:
         text: gawin ang {EFFECT} effect
         options:

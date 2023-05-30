@@ -10,7 +10,8 @@ theme: responsive
 
 - Chúng tôi đề xuất kết nối Internet của trường học tối thiểu là 15 MBit/giây.
 - Kích thước màn hình nhỏ nhất mà chúng tôi hỗ trợ là 1024 x 728 px.
-- Bạn sẽ cần một chiếc máy tính để bàn hoặc máy tính xách tay có chuột (hoặc bàn di chuột) và bàn phím cho các khóa học cấp trung học cơ sở và trung học phổ thông của chúng tôi: Khám phá KHMT, Nguyên tắc của KHMT và Giới thiệu App Lab. Hầu hết các loại máy tính bảng và thiết bị di động không được hỗ trợ cho các khóa học này. Xem “Chi tiết hỗ trợ dành cho thiết bị di động và máy tính bảng” bên dưới để biết các ngoại lệ cho từng thiết bị.
+- You will need a desktop or laptop computer (Chromebooks are included) with a mouse (or touchpad) and keyboard for our middle and high school-level courses: CS Discoveries, CS Principles, and Intro to App Lab. “See Minimum Supported Browsers and Platforms” below.
+- Most tablets (such as an iPad) and mobile devices are not supported for these courses. Xem “Chi tiết hỗ trợ dành cho thiết bị di động và máy tính bảng” bên dưới để biết các ngoại lệ cho từng thiết bị.
 - Tất cả các nội dung khác, chẳng hạn như các khóa học K-5 (Nguyên tắc cơ bản của Khoa học Máy tính) và các hoạt động của Giờ lập trình đều tương thích trên iPad và Chromebook cũng như tất cả máy tính bảng, máy tính xách tay hoặc máy tính để bàn hiện hành khác.
 - Bạn đang tìm kiếm thông tin hỗ trợ thiết bị di động? Hãy đọc nội dung bên dưới.
 
@@ -82,12 +83,12 @@ theme: responsive
 
 ## Thông tin hỗ trợ thiết bị di động và máy tính bảng
 
-Tất cả các khóa học Khám phá KHMT, Nguyên tắc của KHMT và Giới thiệu App Lab đều không tương thích với máy tính bảng hoặc thiết bị di động – cần có bàn phím và chuột đầy đủ (hoặc bàn di chuột, như trên MacBook). Hầu hết các loại máy tính bảng đều không được hỗ trợ, ngoại trừ:
+All CS Discoveries, CS Principles, CS A, and Intro to App Lab courses are not compatible with tablets or mobile devices - a full keyboard and mouse (or touchpad) are required. Hầu hết các loại máy tính bảng đều không được hỗ trợ, ngoại trừ:
 
 - Microsoft Surface Pro có bàn phím rời
 - iPad chạy iPadOS 13.4 trở lên có bàn phím và chuột rời hoặc bàn di chuột
 
-Tất cả các nội dung khác, chẳng hạn như các khóa học K-5 (Nguyên tắc cơ bản của Khoa học Máy tính) và các hoạt động của Giờ lập trình đều tương thích trên iPad và Chromebook cũng như tất cả máy tính bảng, máy tính xách tay hoặc máy tính để bàn hiện hành khác.
+All other content, such as K-5 courses (Computer Science Fundamentals) and Hour of Code activities are compatible on iPads and other modern tablets and laptop or desktop computers.
 
 ### Điện thoại di động
 

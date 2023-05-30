@@ -9,7 +9,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "long_instructions": "# Debug some sprites\r\n\r\n<img src=\"https://images.code.org/9e62ba920102879979acb2a7f6c216d8-image-1566234200067.36.46 AM.png\" style=\"float: right; width: 150px;\">\r\n\r\nThis program draws three sprites to the screen, but it's not working yet.  The wrong sprite is in front, and one sprite's animation isn't showing up.\r\n\r\n# Do This\r\n\r\n* Run the code to see what happens.\r\n* Fix the two problems in the code.\r\n\r\n*Hint: Just like shapes, sprites are drawn in the order they are created.*",
+    "long_instructions": "# Debug some sprites\r\n\r\n<img src=\"https://images.code.org/9e62ba920102879979acb2a7f6c216d8-image-1566234200067.36.46 AM.png\" style=\"float: right; width: 150px;\">\r\n\r\nThis program draws three sprites to the screen, but it's not working yet.  The wrong sprite is in front, and one sprite's animation isn't showing up.\r\n\r\n# Do This\r\n\r\n1) Run the code to see what happens.\r\n* Fix the two problems in the code.\r\n\r\n*Hint: Just like shapes, sprites are drawn in the order they are created.*",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "true",
@@ -73,7 +73,7 @@
   "level_num": "custom",
   "user_id": 155,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-10-14T13:55:30.818+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Sprites sequencing_2023\\\"\"],\"cloned_from\":\"CSD U3 Sprites sequencing_2023\"},{\"changed_at\":\"2023-03-14 23:22:08 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-03-15 00:56:49 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-03-15 00:56:59 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-10-14T13:55:30.818+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Sprites sequencing_2023\\\"\"],\"cloned_from\":\"CSD U3 Sprites sequencing_2023\"},{\"changed_at\":\"2023-03-14 23:22:08 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-03-15 00:56:49 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-03-15 00:56:59 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-04-05 23:19:00 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>

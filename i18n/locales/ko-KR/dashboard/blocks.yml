@@ -1237,6 +1237,19 @@ ko:
             '"x"': x
             '"y"': 'y'
             '"z"': z
+      gamelab_layoutSprites:
+        text: "{GROUP}(을)를 {FORMAT}(으)로 레이아웃"
+        options:
+          FORMAT:
+            '"border"': 테두리
+            '"circle"': 원
+            '"grid"': 그리드
+            '"top"': 위쪽 행
+            '"row"': class
+            '"bottom"': 아래쪽 행
+            '"left"': 왼쪽 열
+            '"column"': 열
+            '"right"': 오른쪽 열
       gamelab_locationAt:
         text: '위치 x: {X} Y: {Y}'
       gamelab_locationModifier:
@@ -1262,6 +1275,18 @@ ko:
             '"spiral"': 나선
       gamelab_makeNewSpriteAnon:
         text: 새로운 만들기 {ANIMATION_NAME} 스프라이트 에서 {LOCATION}
+      gamelab_makeNewSpriteGroup:
+        options:
+          FORMAT:
+            '"border"': 테두리
+            '"circle"': 원
+            '"grid"': 그리드
+            '"top"': 위쪽 행
+            '"row"': class
+            '"bottom"': 아래쪽 행
+            '"left"': 왼쪽 열
+            '"column"': 열
+            '"right"': 오른쪽 열
       gamelab_makeNumSprites:
         text: "{NUM}개의 새 {ANIMATION_NAME} 스프라이트를 만드세요"
       gamelab_makeProjectile:
@@ -2394,6 +2419,21 @@ ko:
           DIR:
             right: 우측 윙어
             left: 왼쪽
+      ecosystems_int10:
+        text: "{VALUE}"
+        options:
+          VALUE:
+            '0': '0'
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       storylab_setForegroundEffect2:
         text: "{EFFECT} 효과 연출"
         options:

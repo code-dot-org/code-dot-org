@@ -5,17 +5,19 @@
     "login_required": true,
     "properties": {
       "curriculum_umbrella": "CSD",
+      "has_verified_resources": true,
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
       "is_migrated": true,
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-03-30 22:39:25 UTC",
+    "serialized_at": "2023-05-17 16:49:29 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2773,13 +2775,865 @@
     }
   ],
   "resources": [
-
+    {
+      "name": "All Resources",
+      "url": "/s/focus-on-impact-in-society3-2023/resources",
+      "key": "all_resources_3",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources_3"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/focus-on-impact-in-society3-2023/standards",
+      "key": "all_standards_2",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards_2"
+      }
+    },
+    {
+      "name": "Amazon and Data",
+      "url": "https://youtu.be/S4RL6prqtGQ",
+      "key": "amazon_and_data",
+      "properties": {
+        "audience": "Student",
+        "download_url": "https://videos.code.org/cs-discoveries/concept/amazon_data.mp4",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "amazon_and_data"
+      }
+    },
+    {
+      "name": "Automating Data Decisions",
+      "url": "https://docs.google.com/document/d/10h895sg_wlnXX3rxZNjROO1mQdHdtu5ZR_SnBTt-Xu4/edit",
+      "key": "automating_data_decisions",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "automating_data_decisions"
+      }
+    },
+    {
+      "name": "Automating Data Decisions",
+      "url": "https://docs.google.com/document/d/1BaqqDWT1Y0cA80ytaXOfB8RbnVpMsqQ4K7KU_kX__gs/edit",
+      "key": "automating_data_decisions_1",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "automating_data_decisions_1"
+      }
+    },
+    {
+      "name": "Automating Data Decisions",
+      "url": "https://docs.google.com/document/d/1ww7OiPAWu03K2C3c5LKbUm_Opkz9x0lZfizA_uJ7JsI/",
+      "key": "automating_data_decisions_2",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "automating_data_decisions_2"
+      }
+    },
+    {
+      "name": "Automating Data Decisions",
+      "url": "https://docs.google.com/presentation/d/1IJX7-vYg58tTUzY3IZdEEZsVM_K0Z97SvwI36AGVMkA/template/preview",
+      "key": "automating_data_decisions_3",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "automating_data_decisions_3"
+      }
+    },
+    {
+      "name": "Computer Science Practices",
+      "url": "https://docs.google.com/document/d/1Ccf-WMH2qFDhycKaKSILRrZUe42lWESyRqMgdTymCPw/edit",
+      "key": "computer_science_practices",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Reflection"
+      },
+      "seeding_key": {
+        "resource.key": "computer_science_practices"
+      }
+    },
+    {
+      "name": "CSD Guide to Assessment ",
+      "url": "https://docs.google.com/document/d/1IO5XgPW_Apil_Uziq5hAMCBgilm8txZ3sp8atxiKiLU/view",
+      "key": "csd_guide_to_assessment_3",
+      "properties": {
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "csd_guide_to_assessment_3"
+      }
+    },
+    {
+      "name": "CSD Guide to Curriculum Videos ",
+      "url": "https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view",
+      "key": "csd_guide_to_curriculum_videos_3",
+      "properties": {
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "csd_guide_to_curriculum_videos_3"
+      }
+    },
+    {
+      "name": "CSD Guide to Differentiation ",
+      "url": "https://docs.google.com/document/d/10u5N7zCf52IZiSf4drQplEz3d3zS1iqWpegbBMDm0RQ/view",
+      "key": "csd_guide_to_differentiation_3",
+      "properties": {
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "csd_guide_to_differentiation_3"
+      }
+    },
+    {
+      "name": "CSD Guide to Teaching and Learning Strategies",
+      "url": "https://docs.google.com/document/d/1Cg5iTwERoX25Y2DdLNmrPCbVB2d9FPGfUMUvcnVoN8Q/view",
+      "key": "csd_guide_to_teaching_and_learning_strategies_3",
+      "properties": {
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "csd_guide_to_teaching_and_learning_strategies_3"
+      }
+    },
+    {
+      "name": "CSD Guide to Using Resources",
+      "url": "https://docs.google.com/document/d/1NYJMHZYnAZYNctehlQOImSstsu48sRGOMbi4It4ZjkI/view",
+      "key": "csd_guide_to_using_resources",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csd_guide_to_using_resources"
+      }
+    },
+    {
+      "name": "Data and Machine Learning",
+      "url": "https://docs.google.com/presentation/d/15tupPQcqJqImvYWXjE3iikIufWdBU7da7GjxrxrtYpg/template/preview",
+      "key": "data_and_machine_learning",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "data_and_machine_learning"
+      }
+    },
+    {
+      "name": "Data in the Real World",
+      "url": "https://docs.google.com/document/d/1HXqpl795GTX4WVgJB_HxPP31oIy49hTVg6x_GXPdgfY/edit",
+      "key": "data_in_the_real_world",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "data_in_the_real_world"
+      }
+    },
+    {
+      "name": "Data in the Real World",
+      "url": "https://docs.google.com/document/d/10MwyEV-wgpE6tHZxi-d9SQKrTPoz8J-QwmND8rn-m2I/edit?usp=sharing",
+      "key": "data_in_the_real_world_1",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "data_in_the_real_world_1"
+      }
+    },
+    {
+      "name": "Interpreting Data",
+      "url": "https://docs.google.com/document/d/1WFjiEP9-V2v9IIjsqn0MI-o-Xyn19pg_6apNL-a1gGw/edit",
+      "key": "interpreting_data",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "interpreting_data"
+      }
+    },
+    {
+      "name": "Interpreting Data",
+      "url": "https://docs.google.com/document/d/1JZJ5-kZoHb6xI7B4Ua5EHwaS1UiLoeM8i6YUNAAbaEM/edit",
+      "key": "interpreting_data_1",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "interpreting_data_1"
+      }
+    },
+    {
+      "name": "Interpreting Data",
+      "url": "https://docs.google.com/document/d/1KC2wlSjvxZxZqZiezrtUZrPsGumkI70hkJDagR1gNDE/edit",
+      "key": "interpreting_data_2",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "interpreting_data_2"
+      }
+    },
+    {
+      "name": "Interpreting Data",
+      "url": "https://docs.google.com/presentation/d/1vxqJy-RsZBygj5m-_ibHGYY2JVTHQZSNFGGfQBP8YEk/template/preview",
+      "key": "interpreting_data_3",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "interpreting_data_3"
+      }
+    },
+    {
+      "name": "Make a Recommendation",
+      "url": "https://docs.google.com/document/d/1W6WI5qPIs6i-Y7YFllu18kPTD-5WpGyUKAmRK6ILvw0/edit",
+      "key": "make_a_recommendation",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Peer Review"
+      },
+      "seeding_key": {
+        "resource.key": "make_a_recommendation"
+      }
+    },
+    {
+      "name": "Make a Recommendation - Student Checklist",
+      "url": "https://docs.google.com/document/d/1E_k-oOdK8c7CuN1TcR5GWomeAGXvXfafgzLHda1w6J4/edit",
+      "key": "make_a_recommendation_-_student_checklist",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "make_a_recommendation_-_student_checklist"
+      }
+    },
+    {
+      "name": "Make a Recommendation",
+      "url": "https://docs.google.com/document/d/1cx4byvEDUduu9iPdtpRLzrPAvMBwPVRdgKxVeptvJCs/edit",
+      "key": "make_a_recommendation_1",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Rubric"
+      },
+      "seeding_key": {
+        "resource.key": "make_a_recommendation_1"
+      }
+    },
+    {
+      "name": "Make a Recommendation",
+      "url": "https://docs.google.com/document/d/1pKeFH1OkWzfg3MFTPCezhK_r4p8xu7QUkPKSf5vV41c/edit",
+      "key": "make_a_recommendation_2",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Project Guide"
+      },
+      "seeding_key": {
+        "resource.key": "make_a_recommendation_2"
+      }
+    },
+    {
+      "name": "Making Decisions With Data",
+      "url": "https://docs.google.com/document/d/1MJ_Q6TF3pztGNIdKFhwZMC4kHZNXNvWQtbFPPQShQRk/edit",
+      "key": "making_decisions_with_data",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "making_decisions_with_data"
+      }
+    },
+    {
+      "name": "Making Decisions with Data",
+      "url": "https://docs.google.com/document/d/1ByeV-Q0e0VsgphCoVUZOxol0Fp2ArrsyV3rH8djnllg/edit?usp=sharing",
+      "key": "making_decisions_with_data_1",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "making_decisions_with_data_1"
+      }
+    },
+    {
+      "name": "Making Decisions with Data",
+      "url": "https://docs.google.com/presentation/d/19-4q5bIQqXCHDuI6L-AfFeuW7YG7pIwSYT1w8GdSLoQ/template/preview",
+      "key": "making_decisions_with_data_2",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "making_decisions_with_data_2"
+      }
+    },
+    {
+      "name": "Netflix and Data",
+      "url": "https://www.youtube.com/watch?v=hqFHAnkSP2U",
+      "key": "netflix_and_data",
+      "properties": {
+        "audience": "Student",
+        "download_url": "https://videos.code.org/cs-discoveries/concept/netflix_data.mp4",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "netflix_and_data"
+      }
+    },
+    {
+      "name": "Peer Review Exemplar 1 ",
+      "url": "https://docs.google.com/document/d/1D4W-8H1hbNDOk-KNNJ9UgfLjEyn8oNx9fuiKca57Twc/edit",
+      "key": "peer_review_exemplar_1",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "peer_review_exemplar_1"
+      }
+    },
+    {
+      "name": "Peer Review Exemplar 2",
+      "url": "https://docs.google.com/document/d/1N1gwMu_vOMpB0GeEVsyAc18CTKQn_sleb5dg9zDSROQ/edit",
+      "key": "peer_review_exemplar_2",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "peer_review_exemplar_2"
+      }
+    },
+    {
+      "name": "Problem Solving Process with Data",
+      "url": "https://docs.google.com/document/d/1EW18C1XT1qLzXY8XnU1Ryo5QJE2tfmaGE08Y6C5zYo8/edit#heading=h.55w5y6g4xe8d",
+      "key": "problem_solving_process_with_data",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "problem_solving_process_with_data"
+      }
+    },
+    {
+      "name": "Problem Solving Process with Data",
+      "url": "https://docs.google.com/document/d/19pdlJOjWqA5s7f5sr9mTL-v7x_ZMjQP36SlwqzJ-Ipo/view",
+      "key": "problem_solving_process_with_data_1",
+      "properties": {
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "problem_solving_process_with_data_1"
+      }
+    },
+    {
+      "name": "Problem Solving with Big Data",
+      "url": "https://docs.google.com/presentation/d/1pOEp_iDVNnscSE3LZvErt5DMmoBGJc2uixcwqApdpyM/template/preview",
+      "key": "problem_solving_with_big_data",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "problem_solving_with_big_data"
+      }
+    },
+    {
+      "name": "Problem Solving with Data",
+      "url": "https://docs.google.com/document/d/1dNLqA8ejPyONEUcNmz0ZCigzeVAu4pt-_64sQUVQvok/edit",
+      "key": "problem_solving_with_data",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "problem_solving_with_data"
+      }
+    },
+    {
+      "name": "Problem Solving with Data",
+      "url": "https://docs.google.com/document/d/1_5JzwIIl8u72QJq_dFpFPnVcNREBc3UHtQtObkwgckw",
+      "key": "problem_solving_with_data_1",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "problem_solving_with_data_1"
+      }
+    },
+    {
+      "name": "Problem Solving With Data",
+      "url": "https://docs.google.com/presentation/d/17jDnDpFEzc_VRW2neAQN82GSn6Cs0nEITGil3MfWGVg/template/preview",
+      "key": "problem_solving_with_data_2",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "problem_solving_with_data_2"
+      }
+    },
+    {
+      "name": "Project - Make a Recommendation",
+      "url": "https://docs.google.com/presentation/d/1LyAoCCXnDblFsBeNIx22lh-XqYYjxNHPFk3IbQXCBBg/template/preview",
+      "key": "project_-_make_a_recommendation",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "project_-_make_a_recommendation"
+      }
+    },
+    {
+      "name": "Project Guide Exemplar",
+      "url": "https://docs.google.com/document/d/1D-Wr_Q9st_DsT1MF92Ixm8RFnWwI9tYmQN2rUXpd8I8/edit",
+      "key": "project_guide_exemplar",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "project_guide_exemplar"
+      }
+    },
+    {
+      "name": "Sample Marked Rubrics",
+      "url": "https://docs.google.com/document/d/1fbImuYWBio4mkmFMWWGBolyEWihxFPlvtxgxGhRokIc/edit",
+      "key": "sample_marked_rubrics_1",
+      "properties": {
+        "audience": "Verified Teacher",
+        "include_in_pdf": true,
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "sample_marked_rubrics_1"
+      }
+    },
+    {
+      "name": "Structuring Data",
+      "url": "https://docs.google.com/document/d/1lKk4xwVAwst0t5dLICDg64HVaJGVaJm5Ldzix2Ydock/edit",
+      "key": "structuring_data",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "structuring_data"
+      }
+    },
+    {
+      "name": "Structuring Data",
+      "url": "https://docs.google.com/presentation/d/1jrQVjVcYrb7GIP9MdFKEz1SXz9KRibALuXTF8udZV_4/template/preview",
+      "key": "structuring_data_1",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "structuring_data_1"
+      }
+    },
+    {
+      "name": "Structuring Data 2021",
+      "url": "https://docs.google.com/document/d/1edTTFHTHp4uxIi1CrHvvfEfFCZacCB5BXNfL1uaBf-E/view",
+      "key": "structuring_data_2021",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "structuring_data_2021"
+      }
+    },
+    {
+      "name": "Teacher Forum",
+      "url": "https://forum.code.org/c/csd",
+      "key": "teacher_forum",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "teacher_forum"
+      }
+    },
+    {
+      "name": "Video: Impact on Society",
+      "url": "https://www.youtube.com/watch?v=ng4c1g3COfs",
+      "key": "video_impact_on_society",
+      "properties": {
+        "audience": "Student",
+        "download_url": "https://videos.code.org/levelbuilder/03-ai-impactonsociety-sm-mp4.mp4",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "video_impact_on_society"
+      }
+    },
+    {
+      "name": "Video: Machine Learning",
+      "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
+      "key": "video_machine_learning",
+      "properties": {
+        "audience": "Student",
+        "download_url": "https://videos.code.org/levelbuilder/01-ai-machinelearning-sm-mp4.mp4",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "video_machine_learning"
+      }
+    },
+    {
+      "name": "Video: Training Data and Bias",
+      "url": "https://www.youtube.com/watch?v=x2mRoFNm22g",
+      "key": "video_training_data_and_bias",
+      "properties": {
+        "audience": "Student",
+        "download_url": "https://videos.code.org/levelbuilder/02-ai-trainingdata-sm-mp4.mp4",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "video_training_data_and_bias"
+      }
+    },
+    {
+      "name": "Waze and Data",
+      "url": "https://www.youtube.com/watch?v=Uu-uTo_ma9c",
+      "key": "waze_and_data",
+      "properties": {
+        "audience": "Student",
+        "download_url": "https://videos.code.org/cs-discoveries/concept/waze_data.mp4",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "waze_and_data"
+      }
+    }
   ],
   "lessons_resources": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "Automating Data Decisions",
+        "resource.key": "automating_data_decisions"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Automating Data Decisions",
+        "resource.key": "automating_data_decisions_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Automating Data Decisions",
+        "resource.key": "automating_data_decisions_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Automating Data Decisions",
+        "resource.key": "automating_data_decisions_3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Data and Machine Learning",
+        "resource.key": "data_and_machine_learning"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Data and Machine Learning",
+        "resource.key": "video_impact_on_society"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Data and Machine Learning",
+        "resource.key": "video_machine_learning"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Data and Machine Learning",
+        "resource.key": "video_training_data_and_bias"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Interpreting Data",
+        "resource.key": "interpreting_data"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Interpreting Data",
+        "resource.key": "interpreting_data_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Interpreting Data",
+        "resource.key": "interpreting_data_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Interpreting Data",
+        "resource.key": "interpreting_data_3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Making Decisions with Data",
+        "resource.key": "making_decisions_with_data"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Making Decisions with Data",
+        "resource.key": "making_decisions_with_data_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Making Decisions with Data",
+        "resource.key": "making_decisions_with_data_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Making Decisions with Data",
+        "resource.key": "problem_solving_process_with_data"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Problem Solving With Data",
+        "resource.key": "problem_solving_with_data"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Problem Solving With Data",
+        "resource.key": "problem_solving_with_data_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Problem Solving With Data",
+        "resource.key": "problem_solving_with_data_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Problem Solving with Big Data",
+        "resource.key": "amazon_and_data"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Problem Solving with Big Data",
+        "resource.key": "data_in_the_real_world"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Problem Solving with Big Data",
+        "resource.key": "data_in_the_real_world_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Problem Solving with Big Data",
+        "resource.key": "netflix_and_data"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Problem Solving with Big Data",
+        "resource.key": "problem_solving_with_big_data"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Problem Solving with Big Data",
+        "resource.key": "waze_and_data"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Make a Recommendation",
+        "resource.key": "computer_science_practices"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Make a Recommendation",
+        "resource.key": "make_a_recommendation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Make a Recommendation",
+        "resource.key": "make_a_recommendation_-_student_checklist"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Make a Recommendation",
+        "resource.key": "make_a_recommendation_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Make a Recommendation",
+        "resource.key": "make_a_recommendation_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Make a Recommendation",
+        "resource.key": "peer_review_exemplar_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Make a Recommendation",
+        "resource.key": "peer_review_exemplar_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Make a Recommendation",
+        "resource.key": "project_-_make_a_recommendation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Make a Recommendation",
+        "resource.key": "project_guide_exemplar"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Make a Recommendation",
+        "resource.key": "sample_marked_rubrics_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Structuring Data",
+        "resource.key": "structuring_data"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Structuring Data",
+        "resource.key": "structuring_data_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Structuring Data",
+        "resource.key": "structuring_data_2021"
+      }
+    }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "all_resources_3",
+        "script.name": "focus-on-impact-in-society3-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards_2",
+        "script.name": "focus-on-impact-in-society3-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_guide_to_assessment_3",
+        "script.name": "focus-on-impact-in-society3-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_guide_to_curriculum_videos_3",
+        "script.name": "focus-on-impact-in-society3-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_guide_to_differentiation_3",
+        "script.name": "focus-on-impact-in-society3-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_guide_to_teaching_and_learning_strategies_3",
+        "script.name": "focus-on-impact-in-society3-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_guide_to_using_resources",
+        "script.name": "focus-on-impact-in-society3-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "problem_solving_process_with_data_1",
+        "script.name": "focus-on-impact-in-society3-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "teacher_forum",
+        "script.name": "focus-on-impact-in-society3-2023"
+      }
+    }
   ],
   "scripts_student_resources": [
 

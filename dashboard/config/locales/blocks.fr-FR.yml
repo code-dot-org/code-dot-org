@@ -1256,6 +1256,19 @@ fr:
             '"z"': z
       gamelab_layoutGrid:
         text: disposer les sprites sous forme de grille
+      gamelab_layoutSprites:
+        text: afficher {GROUP} en tant que {FORMAT}
+        options:
+          FORMAT:
+            '"border"': frontière
+            '"circle"': cercle
+            '"grid"': grille
+            '"top"': rangée du haut
+            '"row"': rangée
+            '"bottom"': rangée du bas
+            '"left"': colonne de gauche
+            '"column"': colonne
+            '"right"': colonne de droite
       gamelab_locationAt:
         text: 'emplacement x: {X} y: {Y}'
       gamelab_locationModifier:
@@ -1282,6 +1295,18 @@ fr:
             '"spiral"': spirale
       gamelab_makeNewSpriteAnon:
         text: faire un nouveau sprite {ANIMATION_NAME} à {LOCATION}
+      gamelab_makeNewSpriteGroup:
+        options:
+          FORMAT:
+            '"border"': frontière
+            '"circle"': cercle
+            '"grid"': grille
+            '"top"': rangée du haut
+            '"row"': rangée
+            '"bottom"': rangée du bas
+            '"left"': colonne de gauche
+            '"column"': colonne
+            '"right"': colonne de droite
       gamelab_makeNumSprites:
         text: créer {NUM} des nouveaux sprites {ANIMATION_NAME}
       gamelab_makeProjectile:
@@ -2457,7 +2482,7 @@ fr:
       binary_drawBinScreen:
         text: |-
           dessiner écran
-          {B1}{B2}{B3}{B4}{B5}{B6}123_321  123_321 123_321[B7] 123_321 123_321  123_321 123_321  123_321 123_321 123_321  123_321 123_321 123_321[6]{B8}
+          {B1}{B2}{B3}{B4}{B5}{B6}123_321  123_321 123_321[B7] 123_321 123_321  123_321 123_321  123_321 123_321 123_321  123_321 123_321 123_321[6][null][7]
       binary_drawDec:
         text: dessiner décimale {DEC}
       binary_drawPixelHere:
@@ -2577,6 +2602,21 @@ fr:
           DIR:
             right: droite ↻
             left: gauche ↺
+      ecosystems_int10:
+        text: "{VALUE}"
+        options:
+          VALUE:
+            '0': '0'
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       storylab_setForegroundEffect2:
         text: Appliquer {EFFECT} effet
         options:

@@ -1220,6 +1220,19 @@ ur:
             '"x"': x
             '"y"': وائے
             '"z"': z
+      gamelab_layoutSprites:
+        text: لے آؤٹ {GROUP} بطور ایک {FORMAT}
+        options:
+          FORMAT:
+            '"border"': بارڈر
+            '"circle"': دائرہ بنائیں
+            '"grid"': گرڈ
+            '"top"': بالائی قطار
+            '"row"': قطار
+            '"bottom"': زیریں قطار
+            '"left"': بایاں کالم
+            '"column"': کالم
+            '"right"': دایاں کالم
       gamelab_locationAt:
         text: 'مقام ایکس: {X} Y: {Y}'
       gamelab_locationModifier:
@@ -1246,6 +1259,18 @@ ur:
             '"spiral"': پیچ دار
       gamelab_makeNewSpriteAnon:
         text: نیا بنائیں {ANIMATION_NAME} سپریبر {LOCATION}
+      gamelab_makeNewSpriteGroup:
+        options:
+          FORMAT:
+            '"border"': بارڈر
+            '"circle"': دائرہ بنائیں
+            '"grid"': گرڈ
+            '"top"': بالائی قطار
+            '"row"': قطار
+            '"bottom"': زیریں قطار
+            '"left"': بایاں کالم
+            '"column"': کالم
+            '"right"': دایاں کالم
       gamelab_makeNumSprites:
         text: "{NUM} بنائیں نئے {ANIMATION_NAME} سپرائٹس"
       gamelab_makeProjectile:
@@ -2311,6 +2336,20 @@ ur:
           DIR:
             right: ٹھیک ہے
             left: بائیں بازو
+      ecosystems_int10:
+        options:
+          VALUE:
+            '0': '0'
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       storylab_setForegroundEffect2:
         text: "{EFFECT} اثر لگائیں۔"
         options:

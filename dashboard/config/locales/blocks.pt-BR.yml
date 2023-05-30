@@ -1246,6 +1246,19 @@ pt:
             '"x"': x
             '"y"': y
             '"z"': z
+      gamelab_layoutSprites:
+        text: layout {GROUP} como um {FORMAT}
+        options:
+          FORMAT:
+            '"border"': borda
+            '"circle"': círculo
+            '"grid"': grade
+            '"top"': linha superior
+            '"row"': linha
+            '"bottom"': linha inferior
+            '"left"': coluna esquerda
+            '"column"': coluna
+            '"right"': coluna da direita
       gamelab_locationAt:
         text: 'localização x: {X} y: {Y}'
       gamelab_locationModifier:
@@ -1272,6 +1285,18 @@ pt:
             '"spiral"': espiral
       gamelab_makeNewSpriteAnon:
         text: criar novo {ANIMATION_NAME} elemento em {LOCATION}
+      gamelab_makeNewSpriteGroup:
+        options:
+          FORMAT:
+            '"border"': borda
+            '"circle"': círculo
+            '"grid"': grade
+            '"top"': linha superior
+            '"row"': linha
+            '"bottom"': linha inferior
+            '"left"': coluna esquerda
+            '"column"': coluna
+            '"right"': coluna da direita
       gamelab_makeNumSprites:
         text: criar {NUM} novas {ANIMATION_NAME} fadas
       gamelab_makeProjectile:
@@ -2491,6 +2516,21 @@ pt:
           DIR:
             right: à direita ↻
             left: à esquerda ↺
+      ecosystems_int10:
+        text: "{VALUE}"
+        options:
+          VALUE:
+            '0': '0'
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       storylab_setForegroundEffect2:
         text: criar efeito {EFFECT} efeito
         options:

@@ -24,7 +24,7 @@
     state of computer science education at your school. To
     complete the survey prior to the Introduction Workshop, visit
     = link_to 'https://studio.code.org/form/2022_baseline_school_leadership.', 'https://studio.code.org/form/2022_baseline_school_leadership', target: "_blank", rel: "noopener noreferrer"
-- elsif @workshop.ayw? || Pd::Workshop::COURSE_ADMIN_COUNSELOR == @workshop.course
+- elsif @workshop.ayw? || Pd::Workshop::COURSE_ADMIN_COUNSELOR == @workshop.course || Pd::Workshop::SUBJECT_CSA_CAPSTONE == @workshop.subject
   %p
     Thanks for enrolling in
     = "#{@workshop.organizer.name}'#{@workshop.organizer.name.ends_with?('s') ? '' : 's'} "

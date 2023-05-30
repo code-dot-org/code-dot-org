@@ -206,7 +206,7 @@ export default class StudioAnimation {
     // TODO: Improve this by scaling around an explicitly encoded 'sprite center'
     var topLeft = {
       x: center.x - (frame.width / 2) * scale,
-      y: center.y - (frame.height / 2) * (2 * scale - 1)
+      y: center.y - (frame.height / 2) * (2 * scale - 1),
     };
 
     // Offset the spritesheet DOM element by the inverse of the offset of the

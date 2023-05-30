@@ -33,6 +33,8 @@
           description_short: En introduksjon til kurs i datavitenskap som gir elevene muligheten til å skape autentiske artifakter.
         mike-test:
           title: Grunnleggende informatikk
+        csd-2023:
+          title: Informatikkoppdagelser
     resources:
       curriculum/csd/2020:
         name: Pensum

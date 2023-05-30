@@ -5,11 +5,11 @@ import Button from '@cdo/apps/templates/Button';
 class DatasetList extends React.Component {
   static propTypes = {
     datasets: PropTypes.arrayOf(PropTypes.string).isRequired,
-    liveDatasets: PropTypes.arrayOf(PropTypes.string).isRequired
+    liveDatasets: PropTypes.arrayOf(PropTypes.string).isRequired,
   };
 
   state = {
-    newTableName: ''
+    newTableName: '',
   };
 
   render() {

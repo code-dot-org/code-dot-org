@@ -1066,6 +1066,54 @@
                   "return_value": "Boolean"
                 }
               }
+            },
+            "micro_bit": {
+              "expressions": {
+                "ledScreen.off": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Nummer"
+                    },
+                    "y": {
+                      "type": "Nummer"
+                    }
+                  }
+                },
+                "ledScreen.on": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Nummer"
+                    },
+                    "y": {
+                      "type": "Nummer"
+                    }
+                  }
+                },
+                "ledScreen.scrollNumber": {
+                  "palette_params": {
+                    "number": {
+                      "type": "Nummer"
+                    }
+                  }
+                },
+                "ledScreen.scrollString": {
+                  "palette_params": {
+                    "String": {
+                      "type": "Sträng"
+                    }
+                  }
+                },
+                "ledScreen.toggle": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Nummer"
+                    },
+                    "y": {
+                      "type": "Nummer"
+                    }
+                  }
+                }
+              }
             }
           }
         },

@@ -7,3 +7,5 @@ wrong 'The 8-bit system will be able to represent twice as many values as the 4-
 right 'The 8-bit system will be able to represent eight times as many values as the 4-bit system.'
 wrong 'The 8-bit system will be able to represent ten times as many values as the 4-bit system.'
 wrong 'The 8-bit system will be able to represent the same number of values as the 4-bit system, it will just include more zeros.'
+
+allow_multiple_attempts true

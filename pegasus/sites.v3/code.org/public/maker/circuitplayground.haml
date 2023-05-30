@@ -1,13 +1,10 @@
 ---
-title: The Circuit Playground | Code.org
+title: The Circuit Playground
 theme: responsive_full_width
 ---
 
-%link{href: '../shared/css/design-system-pegasus.css', rel: 'stylesheet'}
+%link{href: '/css/generated/design-system-pegasus.css', rel: 'stylesheet'}
 %link{href: '/css/generated/maker-styles.css', rel: 'stylesheet'}
-
--# Import FontAwesome Pro
-%script{src: "https://kit.fontawesome.com/ea2d9d4413.js", crossorigin: "anonymous"}
 
 -# FontAwesome icons
 - icon_stars = "fa-solid fa-stars"
@@ -23,9 +20,9 @@ theme: responsive_full_width
 %section.intro
   .wrapper
     %h1 The Circuit Playground
-    %p.h5-lookalike-style The Circuit Playground is a family of small microcontroller boards with LEDs, buttons, and sensors built in.
+    %p.heading-sm The Circuit Playground is a family of small microcontroller boards with LEDs, buttons, and sensors built in.
     %div.flex-container
-      %ul.icon-bullet-list.col-60
+      %ul.icon-bullet-list.full-width.col-60
         %li
           %div
             %i{class: "#{icon_stars}"}
@@ -47,7 +44,7 @@ theme: responsive_full_width
     %h2 Device setup requirements
     %p The Circuit Playground is a series of circuit boards produced by Adafruit with a variety of sensors and outputs built in.
     %p <strong>There are three variants of the Circuit Playground, two are compatible with App Lab and one of them is not:</strong>
-    %ul.icon-bullet-list{style: "margin-top: 0"}
+    %ul.icon-bullet-list.full-width{style: "margin-top: 0"}
       %li
         %div
           %i{class: "#{icon_circle_check}", style: "color: #3EA33E"}
@@ -67,10 +64,9 @@ theme: responsive_full_width
 
 %section.bg-primary-light
   .wrapper
-    %p.no-margin-bottom
+    %p.heading-sm.no-margin-bottom
       %i{class: "#{icon_flag}", style: "margin-right: 4px"}
-      %strong
-        Once you have your device, <a href="https://studio.code.org/maker/setup">visit the Maker Setup page</a> to connect your Circuit Playground with App Lab.
+      Once you have your device, <a href="https://studio.code.org/maker/setup">visit the Maker Setup page</a> to connect your Circuit Playground with App Lab.
 
 %section
   .wrapper

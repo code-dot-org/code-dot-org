@@ -19,7 +19,7 @@ const PatternPanel = ({
   onChange,
   previewSound,
   previewPattern,
-  cancelPreviews
+  cancelPreviews,
 }) => {
   // Make a copy of the value object so that we don't overwrite Blockly's
   // data.
@@ -45,7 +45,7 @@ const PatternPanel = ({
 
       onChange(currentValue);
     },
-    [currentValue]
+    [onChange, previewSound, currentValue]
   );
 
   const hasEvent = (sound, tick) => {
@@ -76,7 +76,7 @@ const PatternPanel = ({
   const onClear = useCallback(() => {
     currentValue.events = [];
     onChange(currentValue);
-  }, [currentValue]);
+  }, [onChange, currentValue]);
 
   const startPreview = useCallback(() => {
     setCurrentPreviewTick(1);
@@ -89,7 +89,7 @@ const PatternPanel = ({
       clearInterval(intervalId);
       setCurrentPreviewTick(0);
     });
-  }, [setCurrentPreviewTick, currentValue]);
+  }, [previewPattern, bpm, setCurrentPreviewTick, currentValue]);
 
   return (
     <div className={styles.patternPanel}>
@@ -105,7 +105,14 @@ const PatternPanel = ({
       {currentFolder.sounds.map(sound => {
         return (
           <div className={styles.row} key={sound.src}>
-            <div className={styles.name}>{sound.name}</div>
+            <div className={styles.nameContainer}>
+              <span
+                className={styles.name}
+                onClick={() => previewSound(`${currentValue.kit}/${sound.src}`)}
+              >
+                {sound.name}
+              </span>
+            </div>
             {arrayOfTicks.map(tick => {
               return (
                 <div
@@ -140,7 +147,7 @@ PatternPanel.propTypes = {
   onChange: PropTypes.func.isRequired,
   previewSound: PropTypes.func.isRequired,
   previewPattern: PropTypes.func.isRequired,
-  cancelPreviews: PropTypes.func.isRequired
+  cancelPreviews: PropTypes.func.isRequired,
 };
 
 export default PatternPanel;

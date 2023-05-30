@@ -5,7 +5,7 @@ const SET_FACILITATOR_COURSES = 'pd/workshop_dashboard/SET_FACILITATOR_COURSES';
 
 const initialState = {
   permission: new Permission(),
-  facilitatorCourses: []
+  facilitatorCourses: [],
 };
 
 export default function reducer(state = initialState, action) {
@@ -13,13 +13,13 @@ export default function reducer(state = initialState, action) {
     case SET_PERMISSION:
       return {
         ...state,
-        permission: new Permission(action.permissionList)
+        permission: new Permission(action.permissionList),
       };
 
     case SET_FACILITATOR_COURSES:
       return {
         ...state,
-        facilitatorCourses: action.facilitatorCourses
+        facilitatorCourses: action.facilitatorCourses,
       };
 
     default:
@@ -29,10 +29,10 @@ export default function reducer(state = initialState, action) {
 
 export const setPermission = permissionList => ({
   type: SET_PERMISSION,
-  permissionList
+  permissionList,
 });
 
 export const setFacilitatorCourses = facilitatorCourses => ({
   type: SET_FACILITATOR_COURSES,
-  facilitatorCourses
+  facilitatorCourses,
 });

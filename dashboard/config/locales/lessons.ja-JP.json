@@ -1288,6 +1288,9 @@
         "csd1-2022/Exploring Problem Solving": {
           "name": "問題解決の探求"
         },
+        "csd1-2022/What is a Computer?": {
+          "name": "コンピューターとは"
+        },
         "csd1-2022/Input and Output": {
           "name": "入出力"
         },
@@ -1501,6 +1504,12 @@
         },
         "csd6-2022/CS Discoveries Post-Course Survey": {
           "name": "CS発見 コース後アンケート"
+        },
+        "csd7-2022/Introduction to AI Lab": {
+          "name": "AI ラボの紹介"
+        },
+        "csd7-2022/Numerical Data in AI Lab": {
+          "name": "AI ラボの数値データ"
         },
         "csd7-2022/Survey Planning": {
           "name": "データ収集の設計"
@@ -2306,6 +2315,9 @@
         "csd1-2018/Exploring Problem Solving": {
           "name": "問題解決の探求"
         },
+        "csd1-2018/What is a Computer?": {
+          "name": "コンピューターとは"
+        },
         "csd1-2018/Input and Output": {
           "name": "入出力"
         },
@@ -2929,6 +2941,9 @@
         },
         "csd1-2019/Exploring Problem Solving": {
           "name": "問題解決の探求"
+        },
+        "csd1-2019/What is a Computer?": {
+          "name": "コンピューターとは"
         },
         "csd1-2019/Input and Output": {
           "name": "入出力"
@@ -3620,6 +3635,9 @@
         "csd1-2017/Exploring Problem Solving": {
           "name": "問題解決の探求"
         },
+        "csd1-2017/What is a Computer?": {
+          "name": "コンピューターとは"
+        },
         "csd1-2017/Input and Output": {
           "name": "入出力"
         },
@@ -4178,6 +4196,9 @@
         },
         "allthethings/lesson-48": {
           "name": "詩"
+        },
+        "allthethings/lesson-49": {
+          "name": "音楽"
         },
         "coursef-2021/lesson-6": {
           "name": "スプライトラボの紹介",
@@ -5118,6 +5139,12 @@
           "purpose": "生徒はプロジェクトの構築にすぐに取り掛かる準備ができているかもしれませんが、このレッスンでは、彼らのアイデアを計画する手助けをします。この構造により、夢見る生徒は現実的になり、暗闇にとり残されたように感じる生徒には明るい光をともします。プロジェクトを構築および修正するための十分な時間を用意してください。このレッスンに必然的に含まれる試行錯誤により、問題解決と粘り強さの重要性を学べます。",
           "student_overview": "大きなプロジェクトには時間と綿密な計画が必要です。あなたのインスピレーションを見つけ、計画を立て、創造性を解き放ちましょう！"
         },
+        "csd7-2021/Introduction to AI Lab": {
+          "name": "AI ラボの紹介"
+        },
+        "csd7-2021/Numerical Data in AI Lab": {
+          "name": "AI ラボの数値データ"
+        },
         "csd7-2021/Survey Planning": {
           "name": "データ収集の設計"
         },
@@ -5332,6 +5359,9 @@
         },
         "csd1-2021/Exploring Problem Solving": {
           "name": "問題解決の探求"
+        },
+        "csd1-2021/What is a Computer?": {
+          "name": "コンピューターとは"
         },
         "csd1-2021/Input and Output": {
           "name": "入出力"

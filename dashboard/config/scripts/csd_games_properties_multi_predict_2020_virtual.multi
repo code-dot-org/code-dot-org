@@ -7,3 +7,5 @@ right 'a bee sprite in the bottom right corner'
 wrong 'two bee sprites, one in the middle and one in the bottom right corner'
 wrong 'three bee sprites, all in different places'
 wrong 'nothing, there will be an error'
+
+allow_multiple_attempts false

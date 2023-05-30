@@ -1249,6 +1249,19 @@ ja:
             '"x"': x
             '"y"': 'y'
             '"z"': z
+      gamelab_layoutSprites:
+        text: "{GROUP} を {FORMAT} にレイアウト"
+        options:
+          FORMAT:
+            '"border"': 境界
+            '"circle"': 円
+            '"grid"': グリッド
+            '"top"': 一番上の行
+            '"row"': 行
+            '"bottom"': 最終行
+            '"left"': 左の列
+            '"column"': 列
+            '"right"': 右の列
       gamelab_locationAt:
         text: '場所 x: {X} Y： {Y}'
       gamelab_locationModifier:
@@ -1275,6 +1288,18 @@ ja:
             '"spiral"': スパイラル
       gamelab_makeNewSpriteAnon:
         text: 新しくする {ANIMATION_NAME} スプライト {LOCATION}
+      gamelab_makeNewSpriteGroup:
+        options:
+          FORMAT:
+            '"border"': 境界
+            '"circle"': 円
+            '"grid"': グリッド
+            '"top"': 一番上の行
+            '"row"': 行
+            '"bottom"': 最終行
+            '"left"': 左の列
+            '"column"': 列
+            '"right"': 右の列
       gamelab_makeNumSprites:
         text: "{NUM} 個の新しい {ANIMATION_NAME} スプライトを作る"
       gamelab_makeProjectile:
@@ -2556,6 +2581,21 @@ ja:
           DIR:
             right: 右↻
             left: 左↺
+      ecosystems_int10:
+        text: "{VALUE}"
+        options:
+          VALUE:
+            '0': '0'
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       storylab_setForegroundEffect2:
         text: "{EFFECT} 前景エフェクトを実行する"
         options:

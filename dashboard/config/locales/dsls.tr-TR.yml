@@ -14064,10 +14064,13 @@ tr-TR:
       courseC_multi_maze_debugging8_predict12022:
         answers:
         - text: Scrat, palamuda ulaşacak. Kodda hata yok.
+          feedback: Yanlış. Scrat meşe palamuduna ulaşamayacak çünkü yanlış yöne dönüyor.
         - text: Scrat, palamuda ulaşmayacak çünkü yanlış yöne dönüyor.
           correct: true
+          feedback: Doğru! Scrat yanlış yöne döner ve meşe palamuduna ulaşamaz.
         - text: Scrat palamuda ulaşmayacak çünkü yeteri kadar "ileri hareket" bloğu
             yok.
+          feedback: Yanlış. Scrat meşe palamuduna ulaşamayacak çünkü yanlış yöne dönüyor.
         - text: Scrat, birinci bloktan hareket etmeyecek.
           feedback: Scrat, palamuda ulaşmayacak çünkü yanlış yöne dönüyor.
         questions:

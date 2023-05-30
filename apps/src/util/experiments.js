@@ -38,6 +38,8 @@ experiments.OPT_IN_EMAIL_REG_PARTNER = 'optInEmailRegPartner';
 // for Sprite Lab animations
 experiments.BACKGROUNDS_AND_UPLOAD = 'backgroundsTab';
 experiments.SECTION_SETUP_REFRESH = 'sectionSetupRefresh';
+// Experiment for testing Blockly workspace serialization with the JSON system.
+experiments.BLOCKLY_JSON = 'blocklyJson';
 
 /**
  * This was a gamified version of the finish dialog, built in 2018,
@@ -49,16 +51,16 @@ experiments.BUBBLE_DIALOG = 'bubbleDialog';
 /**
  * Get our query string. Provided as a method so that tests can mock this.
  */
-experiments.getQueryString_ = function() {
+experiments.getQueryString_ = function () {
   return window.location.search;
 };
 
-experiments.getStoredExperiments_ = function() {
+experiments.getStoredExperiments_ = function () {
   // Get experiments on current user from experiments cookie
   const experimentsCookie = Cookie.get('_experiments' + window.cookieEnvSuffix);
   const userExperiments = experimentsCookie
     ? JSON.parse(decodeURIComponent(experimentsCookie)).map(name => ({
-        key: name
+        key: name,
       }))
     : [];
 
@@ -82,11 +84,11 @@ experiments.getStoredExperiments_ = function() {
   }
 };
 
-experiments.getEnabledExperiments = function() {
+experiments.getEnabledExperiments = function () {
   return this.getStoredExperiments_().map(experiment => experiment.key);
 };
 
-experiments.setEnabled = function(key, shouldEnable, expiration = undefined) {
+experiments.setEnabled = function (key, shouldEnable, expiration = undefined) {
   const allEnabled = this.getStoredExperiments_();
   const experimentIndex = allEnabled.findIndex(
     experiment => experiment.key === key
@@ -112,7 +114,7 @@ experiments.setEnabled = function(key, shouldEnable, expiration = undefined) {
  * @param {string} key - Name of experiment in question
  * @returns {bool}
  */
-experiments.isEnabled = function(key) {
+experiments.isEnabled = function (key) {
   const storedExperiments = this.getStoredExperiments_();
   let enabled =
     storedExperiments.some(experiment => experiment.key === key) ||

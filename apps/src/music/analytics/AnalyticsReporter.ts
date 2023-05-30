@@ -4,9 +4,11 @@ import {
   Identify,
   identify,
   setSessionId,
-  flush
+  flush,
 } from '@amplitude/analytics-browser';
+import {isDevelopmentEnvironment} from '@cdo/apps/utils';
 import {Block} from 'blockly';
+import {logError} from '../utils/MusicMetrics';
 
 const BlockTypes = require('../blockly/blockTypes').BlockTypes;
 const FIELD_SOUNDS_NAME = require('../blockly/constants').FIELD_SOUNDS_NAME;
@@ -20,14 +22,14 @@ const blockFeatureList = [
   BlockTypes.PLAY_SOUNDS_TOGETHER,
   BlockTypes.PLAY_SOUNDS_SEQUENTIAL,
   'functions',
-  BlockTypes.PLAY_REST_AT_CURRENT_LOCATION_SIMPLE2
+  BlockTypes.PLAY_REST_AT_CURRENT_LOCATION_SIMPLE2,
 ];
 
 const triggerBlocks = [
   BlockTypes.TRIGGERED_AT,
   BlockTypes.TRIGGERED_AT_SIMPLE,
   BlockTypes.TRIGGERED_AT_SIMPLE2,
-  BlockTypes.NEW_TRACK_ON_TRIGGER
+  BlockTypes.NEW_TRACK_ON_TRIGGER,
 ];
 
 const functionBlocks = ['procedures_defnoreturn', 'procedures_callnoreturn'];
@@ -78,7 +80,7 @@ export default class AnalyticsReporter {
       endingTriggerBlocksWithCode: 0,
       maxBlockCount: 0,
       maxTriggerBlockCount: 0,
-      maxTriggerBlocksWithCode: 0
+      maxTriggerBlocksWithCode: 0,
     };
 
     this.featuresUsed = {};
@@ -91,16 +93,33 @@ export default class AnalyticsReporter {
     // Capture start time before making init call
     this.sessionStartTime = Date.now();
 
-    await this.initialize();
-    setSessionId(this.sessionStartTime);
+    try {
+      await this.initialize();
+      setSessionId(this.sessionStartTime);
 
-    this.log(`Session start. Session ID: ${this.sessionStartTime}`);
-    this.sessionInProgress = true;
+      this.log(`Session start. Session ID: ${this.sessionStartTime}`);
+      this.sessionInProgress = true;
+    } catch (error) {
+      const message = error instanceof Error ? error.message : String(error);
+      console.log(
+        `[AMPLITUDE ANALYTICS] Did not initialize analytics reporter.  (${message})`
+      );
+
+      // Log an error if this is not development. On development, this error is expected.
+      if (!isDevelopmentEnvironment()) {
+        logError(message);
+      }
+    }
   }
 
   async initialize(): Promise<void> {
     const response = await fetch(API_KEY_ENDPOINT);
     const responseJson = await response.json();
+
+    if (!responseJson.key) {
+      throw new Error('No key for analytics.');
+    }
+
     return init(responseJson.key, undefined, {minIdLength: 1}).promise;
   }
 
@@ -126,14 +145,14 @@ export default class AnalyticsReporter {
   onButtonClicked(buttonName: string, properties?: object) {
     this.trackUIEvent('Button clicked', {
       buttonName,
-      ...properties
+      ...properties,
     });
   }
 
   onKeyPressed(keyName: string, properties?: object) {
     this.trackUIEvent('Key pressed', {
       keyName,
-      ...properties
+      ...properties,
     });
   }
 
@@ -215,7 +234,7 @@ export default class AnalyticsReporter {
       maxTriggerBlocksWithCode: Math.max(
         this.blockStats.maxTriggerBlocksWithCode,
         triggerBlocksWithCode
-      )
+      ),
     };
   }
 
@@ -236,7 +255,7 @@ export default class AnalyticsReporter {
       lastInstructionsVisited: this.currentInstructionsPage,
       soundsUsed: Array.from(this.soundsUsed),
       blockStats: this.blockStats,
-      featuresUsed: this.featuresUsed
+      featuresUsed: this.featuresUsed,
     };
 
     track('Session end', payload);

@@ -9,7 +9,7 @@
   "trainModel": "Model kamu sedang dilatih (trained).",
   "generateResults": "Model kamu sedang diuji.",
   "results": "Periksa hasilnya",
-  "resultsDetails": "Detail dari hasil ditampilkan.",
+  "resultsDetails": "Rincian hasil sedang ditampilkan.",
   "saveModel": "Simpan model yang telah dilatih untuk digunakan di App Lab.",
   "modelSummary": "Kamu telah berhasil melatih dan menyimpan model kamu. Periksa detail dari model kamu dan klik Selesai untuk menggunakan model yang telah dilatih di App Lab."
 }

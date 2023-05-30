@@ -264,6 +264,9 @@ pt:
           description_short: Todos os tipos de nível para testar UI
           student_description: Todos os tipos de nível para testar UI
           name: todas as coisas
+          lessons:
+            lesson-49:
+              name: Música
         algebraPD2b:
           title: Ciência da computação em álgebra PD
           description: 'Fase 2 - on-line: combinado de estudos de verão'
@@ -4234,6 +4237,19 @@ pt:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+        csa7-2023:
+          lessons:
+            lesson-6:
+              name: Propriedade intelectual
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conteúdo
+        csa8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conteúdo
+            lessonGroup-4:
+              display_name: Questionário
         hello-world-space-2022:
           title: 'Olá, Mundo: Espaço'
         hello-world-soccer-2022:
@@ -4518,12 +4534,18 @@ pt:
               display_name: 'Capítulo 1: O Processo de Solução de Problemas'
             lessonGroup-3:
               display_name: 'Capítulo 2: Computadores e Solução de Problemas'
+        web-development-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Questionário
         interactive-games-animations-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Capítulo 1: Imagens e Amimações'
             lessonGroup-3:
               display_name: 'Capítulo 2: Construindo Jogos'
+            lessonGroup-4:
+              display_name: Questionário
           student_description: " Na Unidade 3, você aproveitará sua experiência de codificação ao programar animações, arte interativa e jogos no Laboratório de Jogos. A unidade começa com formas simples e cria jogos sofisticados baseados em sprites, usando os mesmos conceitos de programação e o processo de design que os cientistas da computação usam diariamente. No projeto final, você desenvolverá um programa interativo personalizado."
         design-process-2023:
           lesson_groups:
@@ -4531,6 +4553,8 @@ pt:
               display_name: 'Capítulo 1: Desenho orientado ao usuário'
             lessonGroup-3:
               display_name: 'Capítulo 1: Prototipando o App'
+            lessonGroup-4:
+              display_name: Questionário
           student_description: A unidade 4 apresenta os impactos sociais mais amplos da computação. Através de uma série de desafios de design, você aprenderá a entender melhor as necessidades de outras pessoas enquanto desenvolve uma solução para um problema. A segunda metade da unidade consiste em um projeto de equipe iterativo, durante o qual as equipes têm a oportunidade de identificar uma necessidade com a qual se preocupam, protótipos de soluções tanto no papel quanto no App Lab e testam soluções com usuários reais para obter feedback e avançar iteração.
         data-society-2023:
           lesson_groups:
@@ -4538,6 +4562,8 @@ pt:
               display_name: 'Capítulo 1: Representando Informação'
             lessonGroup-3:
               display_name: 'Capítulo 2: Resolvendo problemas de dados'
+            lessonGroup-4:
+              display_name: Questionário
           description_short: Aprenda como as pessoas usam computadores para resolver problemas de dados.
           student_description: A unidade 5 trata da importância dos dados na solução de problemas e destaca como os computadores podem ajudar nesse processo. O primeiro capítulo explora os diferentes sistemas usados ​​para representar informações em um computador e os desafios e as vantagens e desvantagens do uso deles. No segundo capítulo, você aprenderá como as coleções de dados são usadas para resolver problemas e como os computadores ajudam a automatizar as etapas desse processo. O capítulo conclui considerando como o processo de solução de problemas de dados pode ser aplicado a uma área de sua escolha.
         aiml-2023:
@@ -4548,6 +4574,8 @@ pt:
               display_name: Capítulo 1
             lessonGroup-4:
               display_name: Capítulo 2
+            lessonGroup-5:
+              display_name: Questionário
         focus-on-creativity1-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4673,3 +4701,150 @@ pt:
             lessonGroup-3:
               display_name: 'Capítulo 2: Construindo protótipos físicos'
           description_short: Aprenda a programar com dispositivos físicos.
+        microbit-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Entradas e saídas
+            lessonGroup-5:
+              display_name: Questionário
+        vpl-csd-ci-1:
+          title: 'Módulo 1: Preparação para lecionar sobre solução de problemas e computação'
+          description: "Este módulo de aprendizagem profissional foi projetado para ajudar você a se preparar para lecionar a unidade de Solução de Problemas e Computação do Code.org.\n\n\\*\\* Neste módulo de aprendizagem profissional, você vai: \\*\\* \n– Ver uma introdução à solução de problemas e computação. \n– Praticar conceitos-chave lecionados na unidade. \n– Explorar os projetos no final do capítulo. \n\n\\*\\* Tempo sugerido: \\*\\* 30 minutos"
+          student_description: "Este módulo de aprendizagem profissional foi projetado para ajudar você a se preparar para lecionar a unidade de Solução de Problemas e Computação do Code.org.\n\n\\*\\* Neste módulo de aprendizagem profissional, você vai: \\*\\* \n– Ver uma introdução à solução de problemas e computação. \n– Praticar conceitos-chave lecionados na unidade. \n– Explorar os projetos no final do capítulo. \n\n\\*\\* Tempo sugerido: \\*\\* 30 minutos"
+        vpl-csd-ci-2:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ensino de desenvolvimento via internet
+          title: 'Módulo 2: Preparação para ensinar o desenvolvimento via internet'
+          description: "Este módulo de aprendizagem profissional foi projetado para ajudar você a se preparar para lecionar a unidade de Desenvolvimento via Internet do Code.org. \n\n\\*\\* Neste módulo de aprendizagem profissional, você vai: \\*\\*\n\n – Ver uma introdução ao desenvolvimento via internet. \n– Praticar conceitos-chave lecionados na unidade. \n\n-   Envolver-se com o laboratório de jogos. \n    – Explorar os projetos no final do capítulo. \n\n\\*\\* Tempo sugerido: \\*\\* 90 minutos"
+          student_description: "Este módulo de aprendizagem profissional foi projetado para ajudar você a se preparar para lecionar a unidade de Desenvolvimento via Internet do Code.org. \n\n\\*\\* Neste módulo de aprendizagem profissional, você vai: \\*\\*\n\n – Ver uma introdução ao desenvolvimento via internet. \n– Praticar conceitos-chave lecionados na unidade. \n\n-   Envolver-se com o laboratório de jogos. \n    – Explorar os projetos no final do capítulo. \n\n\\*\\* Tempo sugerido: \\*\\* 90 minutos"
+        vpl-csd-ci-3:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Preparação para lecionar sobre animações e jogos interativos
+          title: 'Módulo 3: Preparação para lecionar sobre animações e jogos interativos '
+          description: "Este módulo de aprendizagem profissional foi projetado para ajudar você a se preparar para lecionar a unidade de animações e jogos interativos do Code.org. \n\n\\*\\* Neste módulo de aprendizagem profissional, você vai: \\*\\* \n\n– Ver uma introdução às animações e jogos interativos. \n– Praticar conceitos-chave lecionados na unidade. \n– Envolver-se com o laboratório de jogos. \n– Explorar os projetos no final do capítulo. \n\n\\*\\* Tempo sugerido: \\*\\* 120 minutos"
+          student_description: "Este módulo de aprendizagem profissional foi projetado para ajudar você a se preparar para lecionar a unidade de animações e jogos interativos do Code.org. \n\n\\*\\* Neste módulo de aprendizagem profissional, você vai: \\*\\* \n\n– Ver uma introdução às animações e jogos interativos. \n– Praticar conceitos-chave lecionados na unidade. \n– Envolver-se com o laboratório de jogos. \n– Explorar os projetos no final do capítulo. \n\n\\*\\* Tempo sugerido: \\*\\* 120 minutos"
+        vpl-csd-ci-4:
+          title: 'Módulo 4: Preparação para lecionar sobre o processo de elaboração de projetos'
+          description: "Este módulo de aprendizagem profissional foi projetado para ajudar você a se preparar para lecionar a unidade de processo de elaboração de projetos do Code.org. \n\n\\*\\* Neste módulo de aprendizagem profissional, você vai: \\*\\* \n\n– Ver uma introdução ao processo de elaboração de projetos. \n– Praticar conceitos-chave lecionados na unidade. \n– Envolver-se no laboratório de jogos. \n– Explorar os projetos no final do capítulo. \n\n\\*\\* Tempo sugerido: \\*\\* 90 minutos"
+          student_description: "Este módulo de aprendizagem profissional foi projetado para ajudar você a se preparar para lecionar a unidade de processo de elaboração de projetos do Code.org. \n\n\\*\\* Neste módulo de aprendizagem profissional, você vai: \\*\\* \n\n– Ver uma introdução ao processo de elaboração de projetos. \n– Praticar conceitos-chave lecionados na unidade. \n– Envolver-se no laboratório de jogos. \n– Explorar os projetos no final do capítulo. \n\n\\*\\* Tempo sugerido: \\*\\* 90 minutos"
+        vpl-csd-ci-5:
+          title: 'Módulo 5: Preparação para lecionar sobre dados e a sociedade'
+          description: "Este módulo de aprendizagem profissional foi projetado para ajudar você a se preparar para lecionar a unidade de dados e a sociedade do Code.org. \n\n\\*\\* Neste módulo de aprendizagem profissional, você vai: \\*\\* \n\n– Ver uma introdução aos dados e a sociedade. \n– Praticar conceitos-chave lecionados na unidade. \n– Explorar o os projetos no final do capítulo. \n\n\\*\\* Tempo sugerido: \\*\\* 90 minutos"
+          student_description: "Este módulo de aprendizagem profissional foi projetado para ajudar você a se preparar para lecionar a unidade de dados e a sociedade do Code.org. \n\n\\*\\* Neste módulo de aprendizagem profissional, você vai: \\*\\* \n\n– Ver uma introdução aos dados e a sociedade. \n– Praticar conceitos-chave lecionados na unidade. \n– Explorar o os projetos no final do capítulo. \n\n\\*\\* Tempo sugerido: \\*\\* 90 minutos"
+        vpl-csd-ci-7:
+          title: 'Módulo 7: Preparação para lecionar sobre IA e aprendizagem de máquina'
+          description: "Este módulo de aprendizagem profissional foi projetado para ajudar você a se preparar para lecionar a unidade de IA e aprendizagem de máquina do Code.org. \n\n\\*\\* Neste módulo de aprendizagem profissional, você vai: \\*\\* \n\n– Ver uma introdução à IA e aprendizagem de máquina. \n– Praticar conceitos-chave lecionados na unidade. \n– Explorar os projetos no final do capítulo. \n– Planejar a implementação da unidade com seus alunos. \n\n\\*\\* Tempo sugerido: \\*\\* 120 minutos"
+          student_description: "Este módulo de aprendizagem profissional foi projetado para ajudar você a se preparar para lecionar a unidade de IA e aprendizagem de máquina do Code.org. \n\n\\*\\* Neste módulo de aprendizagem profissional, você vai: \\*\\* \n\n– Ver uma introdução à IA e aprendizagem de máquina. \n– Praticar conceitos-chave lecionados na unidade. \n– Explorar os projetos no final do capítulo. \n– Planejar a implementação da unidade com seus alunos. \n\n\\*\\* Tempo sugerido: \\*\\* 120 minutos"
+        devices-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Capítulo 2: Construindo protótipos físicos'
+            lessonGroup-5:
+              display_name: Questionário
+        focus-on-creativity4b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Entradas e saídas
+        focus-on-hardware3b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Entradas e saídas
+        focus-on-design-with-purpose4b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Entradas e saídas
+        focus-on-coding4b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Entradas e saídas
+        csd6b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Entradas e saídas
+        self-paced-pl-csd1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Bem-vindo
+        pl-csd-summer-day1:
+          lessons:
+            lesson-3:
+              name: Introdução
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Dia 1
+          title: Dia 1
+        pl-csd-summer-day2:
+          lessons:
+            lesson-10:
+              name: Resumo
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Dia 2
+          title: Dia 2
+        pl-csd-summer-day3:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Dia 3
+          title: Dia 3
+        pl-csd-summer-day4:
+          lessons:
+            lesson-12:
+              name: Resumo
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Dia 4
+          title: Dia 4
+        virtual-pl-csd-summer-day1:
+          lessons:
+            lesson-1:
+              name: Introdução
+            lesson-12:
+              name: Resumo
+          title: Dia 1
+        virtual-pl-csd-summer-day2:
+          lessons:
+            lesson-10:
+              name: Resumo
+          title: Dia 2
+        virtual-pl-csd-summer-day3:
+          lessons:
+            lesson-12:
+              name: Resumo
+          title: Dia 3
+        virtual-pl-csd-summer-day4:
+          lessons:
+            lesson-13:
+              name: Resumo
+          title: Dia 4
+        virtual-pl-csd-summer-day5:
+          lessons:
+            lesson-3:
+              name: Avaliação
+        csd-post-survey-2023:
+          title: Pesquisa Pós-Curso
+        focus-on-data-post-survey-2023:
+          title: Pesquisa Pós-Curso
+        focus-on-impact-in-society-post-survey-2023:
+          title: Pesquisa Pós-Curso
+        focus-on-coding-post-survey-2023:
+          title: Pesquisa Pós-Curso
+        focus-on-design-with-purpose-post-survey-2023:
+          title: Pesquisa Pós-Curso
+        focus-on-hardware-post-survey-2023:
+          title: Pesquisa Pós-Curso
+        focus-on-creativity-post-survey-2023:
+          title: Pesquisa Pós-Curso
+        coursef-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Cidadania digital
+            lessonGroup-3:
+              display_name: Sprite
+            lessonGroup-4:
+              display_name: variáveis
+            lessonGroup-6:
+              display_name: Projeto de Fim do Curso
+          description_audience: 'Idades: 9-13'
+          description_short: Aprenda todos os conceitos Fundamentais da Ciência da Computação e crie sua própria arte, história ou jogo.

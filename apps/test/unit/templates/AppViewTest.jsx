@@ -9,7 +9,7 @@ describe('AppView', () => {
     isResponsive: false,
     pinWorkspaceToBottom: false,
     visualizationColumn: null,
-    onMount: () => {}
+    onMount: () => {},
   };
 
   it('sets no classes on the visualization column in default configuration', () => {

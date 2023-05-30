@@ -5,3 +5,8 @@ right 'Create areas that are off limits to fishing .', feedback: 'Correct!'
 wrong 'Allow fishing only during specific times of the year. ', feedback: 'Incorrect.'
 wrong 'No fishing allowed.', feedback: 'Incorrect.'
 
+
+allow_multiple_attempts false
+markdown <<MARKDOWN
+
+MARKDOWN

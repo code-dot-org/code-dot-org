@@ -3,11 +3,14 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Styling elements with CSS
+# Styling Elements With CSS
 
-##### CSS properties impact the visual look of a web page and give students more precise control over the layout of their pages. As students expand their knowledge of style properties, many may have questions about how they can do even more with CSS. Curious students can explore more properties at <a href="https://www.w3schools.com/cssref/" target="blank" rel="noopener noreferrer">W3 Schools</a>.
+<div style="background-color: #a6e3e8; border-radius: 40px 40px 40px 40px; color: #000000; width: 95%; padding: 0.5px 20px 1px 20px;">
 
-## Body styling
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 20px; margin-bottom: 20px; font-size: 18px; ">CSS properties impact the visual look of a web page and give students more precise control over the layout of their pages. As students expand their knowledge of style properties, many may have questions about how they can do even more with CSS. Curious students can explore more properties at <a href="https://www.w3schools.com/cssref/" target="blank" rel="noopener noreferrer">W3 Schools</a>.
+</p></div>
+
+## Body Styling
 
 ##### The `<body>` element is a special element that wraps all of the visible content on a web page. Because everything that you see is inside this tag, any rule-set that you create for the body element will apply to every element on page, unless the element itself has a rule that contradicts it. This is useful for establishing a baseline style for everything on your page.
 
@@ -22,7 +25,7 @@ body {
 }
 ```
 
-## Layout properties
+## Layout Properties
 
 ##### There are many properties that help set the styles of web pages.
 

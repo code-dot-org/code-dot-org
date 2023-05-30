@@ -13,6 +13,7 @@
   "columnDetailsMaximumValue": "最大",
   "dataCardLastUpdated": "最近更新",
   "predictButton": "预测",
+  "uniqueOptionsWarningNotice": "注意",
   "datasets": {
     "medical_priority": {
       "fields": {
@@ -49,7 +50,7 @@
           "id": "豆子"
         },
         "lime": {
-          "id": "绿色"
+          "id": "青柠"
         }
       }
     },
@@ -62,6 +63,9 @@
     },
     "poutine_toy": {
       "fields": {
+        "mushrooms": {
+          "id": "蘑菇"
+        },
         "lobster": {
           "id": "龙虾"
         },
@@ -69,7 +73,7 @@
           "id": "培根"
         },
         "cheese": {
-          "id": "奶酪"
+          "id": "芝士"
         },
         "meat": {
           "id": "肉"
@@ -80,6 +84,9 @@
       "fields": {
         "color": {
           "id": "颜色"
+        },
+        "music": {
+          "id": "音乐"
         },
         "food": {
           "id": "食物"
@@ -105,8 +112,11 @@
     },
     "raspado_toy": {
       "fields": {
+        "strawberry": {
+          "id": "草莓"
+        },
         "lime": {
-          "id": "绿色"
+          "id": "青柠"
         }
       }
     },
@@ -138,7 +148,7 @@
           "id": "豆子"
         },
         "cheese": {
-          "id": "奶酪"
+          "id": "芝士"
         }
       }
     },
@@ -154,6 +164,9 @@
     },
     "student_alcohol_consumption": {
       "fields": {
+        "school": {
+          "id": "学校"
+        },
         "age": {
           "id": "年龄"
         },
@@ -168,13 +181,13 @@
           "id": "鸡"
         },
         "lamb": {
-          "id": "小羊"
+          "id": "羊肉"
         },
         "onion": {
           "id": "洋葱"
         },
         "cheese": {
-          "id": "奶酪"
+          "id": "芝士"
         }
       }
     },
@@ -220,11 +233,17 @@
     },
     "safari_toy": {
       "fields": {
+        "people": {
+          "id": "人们"
+        },
+        "rhino": {
+          "id": "犀牛"
+        },
         "elephant": {
           "id": "大象"
         },
         "alligator": {
-          "id": "短吻鳄"
+          "id": "鳄鱼"
         },
         "trees": {
           "id": "树"

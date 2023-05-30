@@ -2,7 +2,7 @@
 title: How-to guide for parents
 ---
 
-# Com fer una Hora de Codi amb el vostre fill
+# Com fer una Hora del Codi amb el vostre fill
 Fer una Hora del Codi és una forma senzilla i divertida d'introduir el vostre fill a la informàtica, potser per primera vegada. La informàtica no és només una part integral de tots els àmbits d'estudi, sinó que, a més, <a href="https://medium.com/@codeorg/cs-helps-students-outperform-in-school-college-and-workplace-66dd64a69536">una sèrie d'estudis recents demostren</a> que els nens que estudien informàtica obtenen millors resultats en altres assignatures, destaquen en la resolució de problemes i tenen un <font color="00adbc">17% més de possibilitats d'anar a la universitat</b></font>.
 
 Si participeu en aquest esdeveniment, us estareu sumant a desenes de milions d'alumnes d'arreu del món. Junts podem il·lusionar els nens i nenes per aprendre, trencar els estereotips i qui sap si ajudar-los a trobar una nova passió. I el millor és que ja disposeu de tot allò que necessiteu per fer l'Hora del Codi a casa!
@@ -69,7 +69,7 @@ No passa res si ni vosaltres ni el vostre fill teniu cap coneixement d'informàt
 <h3>Resoleu problemes plegats</h3>
 Per últim, quan el vostre fill es topi amb alguna dificultat, podeu dir-los el següent:
 - “I don’t know. Let’s figure this out together.”
-- "La tecnologia no sempre funciona com volem."
+- "La tecnologia no sempre funciona com volem".
 - Aprendre a programar és com aprendre una nova llengua; no se n'aprèn de seguida!
 
 La informàtica consisteix a aprendre a "depurar" situacions que no han sortit com esperàvem. Junts, podeu tronar maneres creatives de resoldre el problema!
@@ -85,6 +85,6 @@ L'hora del Codi és un esdeveniment global, i la vostra família es mereix celeb
 
 [<img src="/images/fit-600/Marketing/g8TUlHzF.jpeg" />]({{ urls/learn }})
 
-<h2>Què ve després de l'Hora del Codi?</h2>
+<h2>I desprès de l'Hora del Codi, què?</h2>
 
 Computer science doesn’t have to end with the Hour of Code! Tot i que el 90% dels pares i mares volen que els seus fills aprenguin informàtica, la majoria de les escoles encara no l'ensenyen. Per contribuir en aquest sentit, el nostre pla d'estudis està disponible a la nostra web de manera gratuïta, la qual cosa no canviarà mai. <a href="https://code.org/yourschool">Descobriu com</a> introduir la informàtica a la vostra escola avui mateix.

@@ -172,7 +172,6 @@ hu:
     data_collection_us: "Tudom, hogy a Code.org egy nonprofit webhely, amelynek székhelye az USA-ban van, és az USA adatgyűjtésre vonatkozó törvényei eltérhetnek az én hazám törvényeitől."
     visit_privacy: 'További információkért keresd fel a Code.org webhelyen az [Adatvédelmi Szabályokat](%{privacy_url}).'
     student_terms_markdown: "Az e-mail címeket olyan módon tároljuk, hogy az nem teszi lehetővé számunkra a kapcsolatfelvételt a tanulókkal. A tanulók a jelszóemlékeztető kivételével soha nem fognak e-mailt kapni a Code.org-tól. További információt az [adatvédelem](http://code.org/privacy) részben találsz."
-    additional_information: "Még szükségünk van néhány adatra  a regisztráció folytatásához."
     user_type_button: "Felhasználói fiók-típus módosítása"
     user_type_label: "Fióktípus"
     user_type_student: "Diák"
@@ -1121,6 +1120,13 @@ hu:
     no_teacher_email:
       body_markdown: 'A fiókodnak nincs e-mail-címe. Kérjük, [látogass el a fiók beállításokhoz](%{user_registration}), és az űrlap kitöltése előtt add meg az e-mail-címed.'
   courses_category: 'Komplett tanfolyamok'
+  course_offering:
+    headers:
+      minecraft: 'Minecraft'
+      hello_world: 'Helló világ'
+      sports: 'Sportok'
+      csf: 'A számítógép-tudomány alapjai'
+      csc: 'Kapcsolatok az informatikával'
   cookie_banner:
     message: 'A weboldalunk további böngészésével vagy az Elfogadom gombra kattintással hozzájárulsz a sütik számítógépen vagy más eszközön történő tárolásához.'
     more_information: "Lásd a Code.org adatvédelmi irányelveit."

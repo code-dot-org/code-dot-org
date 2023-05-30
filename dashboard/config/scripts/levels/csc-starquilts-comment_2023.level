@@ -1,9 +1,5 @@
 <Artist>
   <config><![CDATA[{
-  "game_id": 23,
-  "created_at": "2023-03-22T21:50:03.000Z",
-  "level_num": "custom",
-  "user_id": 16,
   "properties": {
     "skin": "artist",
     "short_instructions": "First, let's practice using comments in our code.",
@@ -45,16 +41,20 @@
     "mini_rubric": "false",
     "validation_enabled": "false",
     "enable_download_image": "false",
-    "long_instructions": "Keep your code organized by always using the comment block first. \r\n\r\n- Drag a the `comment` block and snap it under `when run`\r\n- Drag the `set length to 35` block and snap it under your `comment`\r\n- Click Finish\r\n\r\nNote: Nothing will happen yet and that's ok! We're getting our code organized. ",
+    "long_instructions": "Keep your code organized by always using the comment block first. \r\n\r\n- Drag a the <code style=\"color:black; background-color:#c9c9c9\">comment</code> block and snap it under <code style=\"color:black; background-color:#FFBD46\">when run</code>\r\n- Drag the <code style=\"color:black; background-color:#E4CBE6\">set length to 35</code> block and snap it under your <code style=\"color:black; background-color:#c9c9c9\">comment</code>\r\n- Click Finish\r\n\r\nNote: Nothing will happen yet and that's ok! We're getting our code organized. ",
     "project_template_level_name": "csc-starquilts-template_2023",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Your code should look like this: \\n<xml><block type=\\\"when_run\\\" deletable=\\\"false\\\" movable=\\\"false\\\" id=\\\"when_run\\\"><next><block type=\\\"comment\\\"><field name=\\\"TEXT\\\">This sets the length of the rhombus to 35</field><next><block type=\\\"variables_set\\\"><field name=\\\"VAR\\\">length</field><value name=\\\"VALUE\\\"><block type=\\\"math_number\\\"><field name=\\\"NUM\\\">35</field></block></value></block></next></block></next></block></xml>\",\"hint_id\":\"hint1\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/847332db1023482a1bb9b6c20b54d7f9/csc-starquilts-comment.mp3\"}]",
     "name_suffix": "_2023",
     "encrypted_examples": "pLhXhKN+3woO9VnnnSJWoNv2IQ2bfNM09rYCOKqcaTthOE73wKINz4LH5F22\nFpeMi2LKVUe6O3SIQJaCuebpsg==\n",
     "preload_asset_list": null
   },
+  "game_id": 23,
   "published": true,
+  "created_at": "2023-03-22T21:50:03.000Z",
+  "level_num": "custom",
+  "user_id": 16,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-03-22T21:50:03.040+00:00\",\"changed\":[\"cloned from \\\"csc-starquilts-comment_2022\\\"\"],\"cloned_from\":\"csc-starquilts-comment_2022\"}]",
+  "audit_log": "[{\"changed_at\":\"2023-03-22T21:50:03.040+00:00\",\"changed\":[\"cloned from \\\"csc-starquilts-comment_2022\\\"\"],\"cloned_from\":\"csc-starquilts-comment_2022\"},{\"changed_at\":\"2023-04-12 19:43:30 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-04-12 20:25:22 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

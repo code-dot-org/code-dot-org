@@ -8,7 +8,7 @@ export const fakeTeacherSectionsForDropdown = [
     courseOfferingId: 0,
     courseVersionId: 0,
     unitId: 0,
-    participantType: 'student'
+    participantType: 'student',
   },
   {
     name: 'Assigned Section',
@@ -19,7 +19,7 @@ export const fakeTeacherSectionsForDropdown = [
     courseOfferingId: 1,
     courseVersionId: 1,
     unitId: 1,
-    participantType: 'student'
+    participantType: 'student',
   },
   {
     name: 'Unassigned Section',
@@ -30,7 +30,7 @@ export const fakeTeacherSectionsForDropdown = [
     courseOfferingId: null,
     courseVersionId: null,
     unitId: null,
-    participantType: 'student'
+    participantType: 'student',
   },
   {
     name: 'Assigned standalone unit',
@@ -41,7 +41,7 @@ export const fakeTeacherSectionsForDropdown = [
     courseVersionId: 379,
     unitId: null,
     code: 'ddd',
-    participantType: 'student'
+    participantType: 'student',
   },
   {
     name: 'Assigned course but not unit',
@@ -52,7 +52,7 @@ export const fakeTeacherSectionsForDropdown = [
     courseVersionId: 379,
     unitId: null,
     code: 'eee',
-    participantType: 'student'
+    participantType: 'student',
   },
   {
     name: 'Assigned course and unit',
@@ -63,7 +63,7 @@ export const fakeTeacherSectionsForDropdown = [
     courseVersionId: 379,
     unitId: 255,
     code: 'fff',
-    participantType: 'student'
+    participantType: 'student',
   },
   {
     name: 'Teacher facing audience section',
@@ -74,6 +74,6 @@ export const fakeTeacherSectionsForDropdown = [
     courseVersionId: 2,
     unitId: 2,
     code: 'eee',
-    participantType: 'teacher'
-  }
+    participantType: 'teacher',
+  },
 ];

@@ -12,6 +12,7 @@ ms:
           title: Kursus 3
           description_audience: Umur 8-18 tahun
         playlab:
+          title: Main Makmal
           description: Cipta cerita atau buat permainan dengan Makmal Mainan!
           description_short: Cipta cerita atau buat permainan dengan Makmal Mainan!
           student_description: Cipta cerita atau buat permainan dengan Makmal Mainan!
@@ -42,6 +43,8 @@ ms:
           description_short: Gunakan Makmal Mainan untuk mencipta cerita atau permainan yang dibintangi oleh watak Disney Infinity.
           student_description: Gunakan Makmal Mainan untuk mencipta cerita atau permainan yang dibintangi oleh watak Disney Infinity.
           name: infiniti
+        netsim:
+          title: Simulator Internet
         20-hour:
           title: Pengenalan Dipercepatkan kepada Kursus CS
           description: Kursus 20 jam ini memperkenalkan asas Sains komputer dan konsep programming. Kursus ini direka untuk kegunaan di bilik darjah bagi gred K-8, tetapi ia adalah menyeronokkan untuk belajar di semua peringkat umur.
@@ -62,6 +65,7 @@ ms:
           description: Anda mahu menulis permainan anda sendiri dalam masa kurang daripada 10 minit? Cuba tutorial Kod Flappy kami!
           student_description: Anda mahu menulis permainan anda sendiri dalam masa kurang daripada 10 minit? Cuba tutorial Kod Flappy kami!
         jigsaw:
+          title: Gergaji jig
           name: susun suai
         step:
           title: Langkah
@@ -71,6 +75,10 @@ ms:
           student_description: Cuba asas sains komputer dengan watak daripada Angry Birds dan Tumbuhan lwn. Zombi!
         text-compression:
           title: Pemampatan Teks
+        allthethings:
+          lessons:
+            lesson-49:
+              name: Muzik
         asUnplugged:
           description_audience: Umur 6-13 tahun
         afterschool1:
@@ -581,6 +589,8 @@ ms:
               display_name: Pemboleh ubah
             csf_data:
               display_name: Data
+            csf_for_loops:
+              display_name: Untuk Gelung
             csf_internet:
               display_name: Internet
             csf_sprites:
@@ -606,6 +616,8 @@ ms:
               display_name: Gelung
             csf_conditionals:
               display_name: Bersyarat
+            csf_binary:
+              display_name: Perduaan
             csf_digcit:
               display_name: Kewarganegaraan Digital
             end_of_course_project:
@@ -650,6 +662,8 @@ ms:
               display_name: Fungsi
             csf_variables:
               display_name: Pemboleh ubah
+            csf_for_loops:
+              display_name: Untuk Gelung
             csf_sprites:
               display_name: Jin
           student_description: Pelajari sains komputer dengan mencuba pelajaran di bawah mengikut tahap kelajuan anda sendiri! Pelajari mencipta atur cara komputer, membangunkan kemahiran penyelesaian masalah dan berusaha mengharungi cabaran yang menyeronokkan! Buat permainan dan projek kreatif untuk dikongsikan dengan rakan, keluarga dan guru.
@@ -671,6 +685,8 @@ ms:
               display_name: Kewarganegaraan Digital
             csf_sequencing:
               display_name: Penjujukan
+            csf_binary:
+              display_name: Perduaan
             csf_loops:
               display_name: Gelung
             csf_events:
@@ -680,6 +696,8 @@ ms:
             end_of_course_project:
               display_name: Akhir Projek Kursus
           student_description: Cipta atur cara dengan penjujukan, gelung dan peristiwa. Terjemahkan tanda nama anda kepada binari, selidik teknik penyelesaian masalah yang berbeza dan pelajari cara bertindak balas terhadap buli siber. Pada akhir kursus, cipta permainan atau cerita anda sendiri yang boleh anda kongsikan!
+        gamelab:
+          title: Makmal Permainan
         coursea-2019:
           title: Kursus A (2019)
           description: Pelajari asas sains komputer dan keselamatan internet. Pada akhir kursus, cipta permainan atau cerita anda sendiri yang boleh anda kongsikan.
@@ -1034,6 +1052,8 @@ ms:
               display_name: Kewarganegaraan Digital
             csf_sequencing:
               display_name: Penjujukan
+            csf_binary:
+              display_name: Perduaan
             csf_loops:
               display_name: Gelung
             csf_events:
@@ -1057,6 +1077,8 @@ ms:
               display_name: Gelung
             csf_conditionals:
               display_name: Bersyarat
+            csf_binary:
+              display_name: Perduaan
             csf_digcit:
               display_name: Kewarganegaraan Digital
             end_of_course_project:
@@ -1097,6 +1119,8 @@ ms:
               display_name: Pemboleh ubah
             csf_data:
               display_name: Data
+            csf_for_loops:
+              display_name: Untuk Gelung
             csf_sprites:
               display_name: Jin
             end_of_course_project:
@@ -1120,6 +1144,8 @@ ms:
               display_name: Fungsi
             csf_variables:
               display_name: Pemboleh ubah
+            csf_for_loops:
+              display_name: Untuk Gelung
             csf_sprites:
               display_name: Jin
             end_of_course_project:
@@ -1162,6 +1188,8 @@ ms:
           student_description: Gunakan Makmal Jin untuk memprogramkan simulasi wabak virus.
         2021drafting:
           lesson_groups:
+            introduction:
+              display_name: Pengenalan
             lessonGroup-3:
               display_name: Pemboleh ubah
             outbreak:
@@ -1235,6 +1263,8 @@ ms:
               display_name: Kewarganegaraan Digital
             csf_sequencing:
               display_name: Penjujukan
+            csf_binary:
+              display_name: Perduaan
             csf_loops:
               display_name: Gelung
             csf_events:
@@ -1258,6 +1288,8 @@ ms:
               display_name: Gelung
             csf_conditionals:
               display_name: Bersyarat
+            csf_binary:
+              display_name: Perduaan
             csf_digcit:
               display_name: Kewarganegaraan Digital
             end_of_course_project:
@@ -1297,6 +1329,10 @@ ms:
               display_name: Jin
             csf_digcit:
               display_name: Kewarganegaraan Digital
+            csf_variables:
+              display_name: Untuk Gelung
+            csf_for_loops:
+              display_name: Untuk Gelung
             csf_sprites:
               display_name: Kesan Pengkomputeran
             end_of_course_project:
@@ -1325,6 +1361,8 @@ ms:
               display_name: Fungsi
             csf_variables:
               display_name: Pemboleh ubah
+            csf_for_loops:
+              display_name: Untuk Gelung
             csf_sprites:
               display_name: Jin
             end_of_course_project:
@@ -1346,6 +1384,8 @@ ms:
           student_description: Pelajari sains komputer dengan mencuba pelajaran di bawah mengikut tahap kelajuan anda sendiri! Pelajari mencipta atur cara komputer, membangunkan kemahiran penyelesaian masalah dan berusaha mengharungi cabaran yang menyeronokkan! Buat permainan dan projek kreatif untuk dikongsikan dengan rakan, keluarga dan guru.
         csf-2021-pilot:
           lesson_groups:
+            ramp_up:
+              display_name: Pengenalan
             outbreak:
               display_name: Simulasi Wabak
             lessonGroup-3:
@@ -1390,6 +1430,12 @@ ms:
           lesson_groups:
             lessonGroup-5:
               display_name: Sandbox
+        k5-onlinepd-2021:
+          lesson_groups:
+            k5_getting_started_1:
+              display_name: Pengenalan
+            Introduction:
+              display_name: Pengenalan
         outbreak-module:
           title: Wabak
         csa-videos:
@@ -1607,6 +1653,8 @@ ms:
               display_name: Fungsi
             csf_variables:
               display_name: Pemboleh ubah
+            csf_for_loops:
+              display_name: Untuk Gelung
             end_of_course_project:
               display_name: Akhir Projek Kursus
           description: Pelajari sains komputer dengan mencuba pelajaran di bawah mengikut tahap kelajuan anda sendiri! Pelajari mencipta atur cara komputer, membangunkan kemahiran penyelesaian masalah dan berusaha mengharungi cabaran yang menyeronokkan! Buat permainan dan projek kreatif untuk dikongsikan dengan rakan, keluarga dan guru.
@@ -1898,6 +1946,8 @@ ms:
           lessons:
             lesson-1:
               name: Tatasusunan Satu Dimensi (1D)
+            lesson-3:
+              name: Untuk Gelung
         hello-world-space-2022:
           title: 'Helo Dunia: Ruang'
         hello-world-soccer-2022:
@@ -1987,6 +2037,8 @@ ms:
               display_name: Fungsi
             csf_variables:
               display_name: Pemboleh ubah
+            csf_for_loops:
+              display_name: Untuk Gelung
             end_of_course_project:
               display_name: Akhir Projek Kursus
           description: Pelajari sains komputer dengan mencuba pelajaran di bawah mengikut tahap kelajuan anda sendiri! Pelajari mencipta atur cara komputer, membangunkan kemahiran penyelesaian masalah dan berusaha mengharungi cabaran yang menyeronokkan! Buat permainan dan projek kreatif untuk dikongsikan dengan rakan, keluarga dan guru.
@@ -2103,3 +2155,137 @@ ms:
               display_name: Pengenalan kepada Makmal Aplikasi
             lessonGroup-4:
               display_name: Bab 2
+        vpl-csd-ci-1:
+          title: 'Modul 1: Persediaan untuk Mengajar Penyelesaian Masalah dan Pengkomputeran'
+          description: |-
+            Modul pembelajaran profesional ini direka bentuk untuk membantu anda bersedia untuk mengajar unit Penyelesaian Masalah dan Pengkomputeran Code.org.
+
+            **Dalam modul pembelajaran profesional ini, anda akan:**
+
+            -   Dapatkan pengenalan kepada Penyelesaian Masalah dan Pengkomputeran.
+            -   Mengamalkan konsep utama yang disertakan dalam unit.
+            -   Terokai projek akhir bab.
+
+            **Masa yang dicadangkan:** 30 minit
+          student_description: |-
+            Modul pembelajaran profesional ini direka bentuk untuk membantu anda bersedia untuk mengajar unit Penyelesaian Masalah dan Pengkomputeran Code.org.
+
+            **Dalam modul pembelajaran profesional ini, anda akan:**
+
+            -   Dapatkan pengenalan kepada Penyelesaian Masalah dan Pengkomputeran.
+            -   Mengamalkan konsep utama yang disertakan dalam unit.
+            -   Terokai projek akhir bab.
+
+            **Masa yang dicadangkan:** 30 minit
+        vpl-csd-ci-2:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Pengajaran Pembangunan Web
+          title: 'Modul 2: Persediaan untuk Mengajar Pembangunan Web'
+          description: |-
+            Modul pembelajaran profesional ini direka bentuk untuk membantu anda bersedia untuk mengajar unit Pembangunan Web Code.org.
+
+            **Dalam modul pembelajaran profesional ini, anda akan:**
+
+            -   Mendapat pengenalan tentang Pembangunan Web.
+            -   Mengamalkan konsep utama yang disertakan dalam unit.
+            -   Terlibat dengan Makmal Web.
+            -   Terokai projek akhir bab.
+
+            **Masa yang dicadangkan:** 90 minit
+          student_description: |-
+            Modul pembelajaran profesional ini direka bentuk untuk membantu anda bersedia untuk mengajar unit Pembangunan Web Code.org.
+
+            **Dalam modul pembelajaran profesional ini, anda akan:**
+
+            -   Mendapat pengenalan tentang Pembangunan Web.
+            -   Mengamalkan konsep utama yang disertakan dalam unit.
+            -   Terlibat dengan Makmal Web.
+            -   Terokai projek akhir bab.
+
+            **Masa yang dicadangkan:** 90 minit
+        vpl-csd-ci-3:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Bersedia untuk Mengajar Animasi dan Permainan Interaktif
+          title: 'Modul 3: Persediaan untuk Mengajar Animasi dan Permainan Interaktif'
+          description: |-
+            Modul pembelajaran profesional ini direka bentuk untuk membantu anda bersedia untuk mengajar unit Animasi dan Permainan Interaktif Code.org.
+
+            **Dalam modul pembelajaran profesional ini, anda akan:**
+
+            -   Mendapat pengenalan tentang Animasi dan Permainan Interaktif.
+            -   Mengamalkan konsep utama yang disertakan dalam unit.
+            -   Terlibat dengan Makmal Permainan.
+            -   Terokai projek akhir bab.
+
+            **Masa yang dicadangkan:** 120 minit
+          student_description: |-
+            Modul pembelajaran profesional ini direka bentuk untuk membantu anda bersedia untuk mengajar unit Animasi dan Permainan Interaktif Code.org.
+
+            **Dalam modul pembelajaran profesional ini, anda akan:**
+
+            -   Mendapat pengenalan tentang Animasi dan Permainan Interaktif.
+            -   Mengamalkan konsep utama yang disertakan dalam unit.
+            -   Terlibat dengan Makmal Permainan.
+            -   Terokai projek akhir bab.
+
+            **Masa yang dicadangkan:** 120 minit
+        vpl-csd-ci-4:
+          title: 'Modul 4: Persediaan untuk Mengajar Proses Reka Bentuk'
+          description: "Modul pembelajaran profesional ini direka untuk membantu anda bersedia untuk mengajar unit Proses Reka Bentuk Code.org. \n\n**Dalam modul pembelajaran profesional ini, anda akan:**\n\n-   Mendapat pengenalan tentang Proses Reka Bentuk.\n-   Amalkan konsep utama yang termasuk dalam unit.\n-   Terlibat dengan Makmal Aplikasi.\n-   Terokai akhir projek bab.\n\n\\*\\* Masa yang dicadangkan:\\*\\* 90 minit"
+          student_description: "Modul pembelajaran profesional ini direka untuk membantu anda bersedia untuk mengajar unit Proses Reka Bentuk Code.org. \n\n**Dalam modul pembelajaran profesional ini, anda akan:**\n\n-   Mendapat pengenalan tentang Proses Reka Bentuk.\n-   Amalkan konsep utama yang termasuk dalam unit.\n-   Terlibat dengan Makmal Aplikasi.\n-   Terokai akhir projek bab.\n\n\\*\\* Masa yang dicadangkan:\\*\\* 90 minit"
+        vpl-csd-ci-5:
+          title: 'Modul 5: Persediaan mengajar data dan masyarakat'
+          description: "Modul pembelajaran profesional ini direka untuk membantu anda bersedia untuk mengajar unit Data dan Masyarakat Code.org. \n\n**Dalam modul pembelajaran profesional ini, anda akan:**\n\n-   Mendapat pengenalan tentant Data dan Masyarakat.\n-   Amalkan konsep utama yang termasuk dalam unit.\n-   Terokai akhir projek bab.\n\n\\*\\* Masa yang dicadangkan:\\*\\* 90 minit"
+          student_description: "Modul pembelajaran profesional ini direka untuk membantu anda bersedia untuk mengajar unit Data dan Masyarakat Code.org. \n\n**Dalam modul pembelajaran profesional ini, anda akan:**\n\n-   Mendapat pengenalan tentant Data dan Masyarakat.\n-   Amalkan konsep utama yang termasuk dalam unit.\n-   Terokai akhir projek bab.\n\n\\*\\* Masa yang dicadangkan:\\*\\* 90 minit"
+        vpl-csd-ci-7:
+          title: 'Modul 7: Bersedia untuk Mengajar AI dan Pembelajaran Mesin'
+          description: "Modul pembelajaran profesional ini direka untuk membantu anda bersedia untuk mengajar unit AI dan Pembelajaran Mesin Code.org. \n\n**Dalam modul pembelajaran profesional ini, anda akan:**\n\n-   Mendapat pengenalan tentang AI dan Pembelajaran Mesin.\n-   Amalkan konsep utama yang termasuk dalam unit.\n-   Terlibat dengan Makmal AI dan Makmal Aplikasi.\n-   Terokai akhir projek bab.\n-   Buat rancangan untuk melaksanakan unit dengan pelajar anda.\n\n\\*\\* Masa yang dicadangkan:\\*\\* 120 minit"
+          student_description: "Modul pembelajaran profesional ini direka untuk membantu anda bersedia untuk mengajar unit AI dan Pembelajaran Mesin Code.org. \n\n**Dalam modul pembelajaran profesional ini, anda akan:**\n\n-   Mendapat pengenalan tentang AI dan Pembelajaran Mesin.\n-   Amalkan konsep utama yang termasuk dalam unit.\n-   Terlibat dengan Makmal AI dan Makmal Aplikasi.\n-   Terokai akhir projek bab.\n-   Buat rancangan untuk melaksanakan unit dengan pelajar anda.\n\n\\*\\* Masa yang dicadangkan:\\*\\* 120 minit"
+        pl-csd-summer-day1:
+          lessons:
+            lesson-3:
+              name: Pengenalan
+        pl-csd-summer-day2:
+          lessons:
+            lesson-10:
+              name: Penggulungan
+        pl-csd-summer-day4:
+          lessons:
+            lesson-12:
+              name: Penggulungan
+        virtual-pl-csd-summer-day1:
+          lessons:
+            lesson-1:
+              name: Pengenalan
+            lesson-12:
+              name: Penggulungan
+        virtual-pl-csd-summer-day2:
+          lessons:
+            lesson-10:
+              name: Penggulungan
+        virtual-pl-csd-summer-day3:
+          lessons:
+            lesson-12:
+              name: Penggulungan
+        virtual-pl-csd-summer-day4:
+          lessons:
+            lesson-13:
+              name: Penggulungan
+        virtual-pl-csd-summer-day5:
+          lessons:
+            lesson-3:
+              name: Penilaian
+        coursef-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kewarganegaraan Digital
+            lessonGroup-3:
+              display_name: Jin
+            lessonGroup-4:
+              display_name: Pemboleh ubah
+            lessonGroup-6:
+              display_name: Akhir Projek Kursus
+          description_audience: 'Umur: 9-13 tahun'
+          description_short: Pelajari semua konsep dalam Asas Sains Komputer dan cipta seni, cerita atau permainan anda sendiri.

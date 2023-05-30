@@ -75,6 +75,7 @@
           "student_overview": "Ce cours permettra aux apprenants de tous âges de s'initier au codage et à l'informatique tout en travaillant dans un environnement sûr et favorable à l'apprentissage. Il a été conçu pour les apprenants de tous âges, mais il requiert de la lecture. L'activité nécessite du son, car l'outil a été conçu pour s'adapter à la musique."
         },
         "hello-world-food-2021/Hello World": {
+          "name": "Hello World : Nourriture",
           "overview": "Durant ce cours, les élèves vont apprendre les bases de l'informatique à partir de la programmation dans le Labo des Sprites. Le Labo des Sprites est un outil que vous pouvez utiliser pour créer des projets imaginatifs et amusants. Les élèves apprendront à créer et à animer des sprites et à les rendre interactifs à l'aide d'événements. \n\nCe cours est disponible en plusieurs versions. Chaque version enseigne les mêmes concepts, mais présente des images différentes afin de répondre aux besoins de différents élèves. Pour plus d'informations, veuillez visiter la [page d'accueil Hello World](https://code.org/helloworld).",
           "preparation": "-   Parcourez les casse-têtes pour trouver les problèmes potentiels de votre classe.\n-   Utilisez les ressources de [Connexions CS](https://code.org/educate/csc) pour élaborer un plan d'apprentissage en informatique après le tutoriel initial.",
           "purpose": "Ce cours a pour but d'amener les élèves à créer des projets de programmation simples dans le Labo des Sprites. Après avoir acquis cette compétence, les élèves pourront ensuite créer des projets sur n'importe quel sujet, comme un autre sujet scolaire ou quelque chose qui les concerne personnellement. Consultez [Connexions CS](https://code.org/educate/csc) pour trouver des idées sur la manière d'intégrer l'informatique à d'autres disciplines scolaires.",
@@ -97,6 +98,7 @@
           "student_overview": "Durant ce cours, vous allez apprendre les bases de l'informatique en programmant dans le Labo des Sprites. Le Labo des Sprites est un outil que vous pouvez utiliser pour créer des projets imaginatifs et amusants. Vous apprendrez à créer et à animer des sprites et à les rendre interactifs à l'aide d'événements."
         },
         "hello-world-animals-2021/Hello World": {
+          "name": "Bonjour tout le monde : Animaux",
           "overview": "Durant ce cours, les élèves vont apprendre les bases de l'informatique à partir de la programmation dans le Labo des Sprites. Le Labo des Sprites est un outil que vous pouvez utiliser pour créer des projets imaginatifs et amusants. Les élèves apprendront à créer et à animer des sprites et à les rendre interactifs à l'aide d'événements. \n\nCe cours est disponible en plusieurs versions. Chaque version enseigne les mêmes concepts, mais présente des images différentes afin de répondre aux besoins de différents élèves. Pour plus d'informations, veuillez visiter la [page d'accueil Hello World](https://code.org/helloworld).",
           "preparation": "-   Parcourez les casse-têtes pour trouver les problèmes potentiels de votre classe.\n-   Utilisez les ressources de [Connexions CS](https://code.org/educate/csc) pour élaborer un plan d'apprentissage en informatique après le tutoriel initial.",
           "purpose": "Ce cours a pour but d'amener les élèves à créer des projets de programmation simples dans le Labo des Sprites. Après avoir acquis cette compétence, les élèves pourront ensuite créer des projets sur n'importe quel sujet, comme un autre sujet scolaire ou quelque chose qui les concerne personnellement. Consultez [Connexions CS](https://code.org/educate/csc) pour trouver des idées sur la manière d'intégrer l'informatique à d'autres disciplines scolaires.",
@@ -121,12 +123,14 @@
           "student_overview": "À la fin du tutoriel, vous serez en mesure de développer un projet que vous avez commencé à concevoir avec les applications de type « Choose Your Own Adventure »,  « Greeting Card » ou  « Personality Quiz ». Vous pouvez également continuer à développer d'autres projets disponibles sur la page code.org/applab.\n\n Prenez plaisir à terminer votre Heure de codage avec App Lab !"
         },
         "hello-world-retro-2021/Hello World": {
+          "name": "Bonjour tout le monde : Rétro",
           "overview": "Durant ce cours, les élèves vont apprendre les bases de l'informatique à partir de la programmation dans le Labo des Sprites. Le Labo des Sprites est un outil que vous pouvez utiliser pour créer des projets imaginatifs et amusants. Les élèves apprendront à créer et à animer des sprites et à les rendre interactifs à l'aide d'événements. \n\nCe cours est disponible en plusieurs versions. Chaque version enseigne les mêmes concepts, mais présente des images différentes afin de répondre aux besoins de différents élèves. Pour plus d'informations, veuillez visiter la [page d'accueil Hello World](https://code.org/helloworld).",
           "preparation": "-   Parcourez les casse-têtes pour trouver les problèmes potentiels de votre classe.\n-   Utilisez les ressources de [Connexions CS](https://code.org/educate/csc) pour élaborer un plan d'apprentissage en informatique après le tutoriel initial.",
           "purpose": "Ce cours a pour but d'amener les élèves à créer des projets de programmation simples dans le Labo des Sprites. Après avoir acquis cette compétence, les élèves pourront ensuite créer des projets sur n'importe quel sujet, comme un autre sujet scolaire ou quelque chose qui les concerne personnellement. Consultez [Connexions CS](https://code.org/educate/csc) pour trouver des idées sur la manière d'intégrer l'informatique à d'autres disciplines scolaires.",
           "student_overview": "Durant ce cours, vous allez apprendre les bases de l'informatique en programmant dans le Labo des Sprites. Le Labo des Sprites est un outil que vous pouvez utiliser pour créer des projets imaginatifs et amusants. Vous apprendrez à créer et à animer des sprites et à les rendre interactifs à l'aide d'événements."
         },
         "starwarsblocks/Hour of Code 2015": {
+          "name": "Star Wars : Construire une galaxie avec du code (Blockly)",
           "student_overview": "Ce cours permet aux apprenants de tous âges de s'initier au codage et à la science informatique tout en travaillant dans un environnement sûr et favorable à l'apprentissage. Ce cours est disponible en deux versions. "
         },
         "text-compression/Text Compression": {
@@ -294,6 +298,9 @@
         },
         "netsim/Internet Simulator Freeplay": {
           "name": "Simulateur d'Internet en libre accès"
+        },
+        "odometer/Odometer Widget": {
+          "name": "Widget d'odomètre"
         },
         "applab-1hour/Room Escape": {
           "name": "S'Échapper de la Pièce"
@@ -1592,8 +1599,14 @@
         "csd6-2022/CS Discoveries Post-Course Survey": {
           "name": "CS Discoveries Enquête Post-Cours"
         },
+        "csd7-2022/Introduction to AI Lab": {
+          "name": "Présentation d'AI Lab"
+        },
         "csd7-2022/Numerical Models": {
           "overview": "Dans cette leçon, les élèves participent à une activité « déconnectée » simulant une épidémie de zombies. Ils doivent prédire quelles parties de la ville auront le moins de zombies en exploitant les données d’une ville voisine. À l’aide des degrés de similitude et des moyennes, ils pourront faire des prévisions sur le nombre de zombies à un endroit particulier. Ensuite, les ils devront comparer leurs prévisions aux chiffres réels afin d’observer et de définir ensemble comment évolue le niveau de précision entre données numériques et données catégorielles.\n\n\\*\\*La question du jour : \\*\\* Comment les ordinateurs apprennent-ils à faire des prévisions avec des données numériques ?"
+        },
+        "csd7-2022/Numerical Data in AI Lab": {
+          "name": "Données numériques dans un laboratoire d'IA"
         },
         "csd7-2022/Survey Planning": {
           "name": "Concevoir la Collecte de Données"
@@ -4336,11 +4349,17 @@
         "allthethings/ML Fish": {
           "name": "ML Poisson"
         },
+        "allthethings/AI Lab": {
+          "name": "Laboratoire d'IA"
+        },
         "allthethings/Java Lab": {
           "name": "Java Lab"
         },
         "allthethings/lesson-48": {
           "name": "Poésie"
+        },
+        "allthethings/lesson-49": {
+          "name": "Musique"
         },
         "coursef-2021/lesson-6": {
           "name": "Introduction au Labo des Sprites",
@@ -5290,8 +5309,14 @@
           "purpose": "Les élèves seront peut-être prêts à se lancer directement dans la construction de leurs projets, mais cette leçon les aidera à transformer leurs idées en plans. Cette structure gardera les rêveurs ancrés et éclairera le chemin pour ceux qui se sentent perdus. Donnez-leur suffisamment de temps pour construire et réviser leurs projets. Les essais et erreurs qui sont intrinsèques à cette leçon leurs enseigneront la résolution de problèmes et la persévérance. ",
           "student_overview": "Les projets de cette envergure demandent beaucoup de temps et de planification. Trouve l'inspiration, élabore un plan et laisse libre-cours à ta créativité !"
         },
+        "csd7-2021/Introduction to AI Lab": {
+          "name": "Présentation d'AI Lab"
+        },
         "csd7-2021/Similarity Models": {
           "overview": "Dans cette leçon, les élèves participent à une activité « déconnectée » simulant une épidémie de zombies. Ils doivent prédire quelles parties de la ville auront le moins de zombies en exploitant les données d’une ville voisine. À l’aide des degrés de similitude et des moyennes, ils pourront faire des prévisions sur le nombre de zombies à un endroit particulier. Ensuite, les ils devront comparer leurs prévisions aux chiffres réels afin d’observer et de définir ensemble comment évolue le niveau de précision entre données numériques et données catégorielles.\n\n\\*\\*La question du jour : \\*\\* Comment les ordinateurs apprennent-ils à faire des prévisions avec des données numériques ?"
+        },
+        "csd7-2021/Numerical Data in AI Lab": {
+          "name": "Données numériques dans un laboratoire d'IA"
         },
         "csd7-2021/Survey Planning": {
           "name": "Concevoir la Collecte de Données"

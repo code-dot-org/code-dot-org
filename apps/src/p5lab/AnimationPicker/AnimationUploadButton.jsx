@@ -9,11 +9,11 @@ import styles from './animation-upload-button.module.scss';
 import {connect} from 'react-redux';
 import {
   refreshInRestrictedShareMode,
-  refreshTeacherHasConfirmedUploadWarning
+  refreshTeacherHasConfirmedUploadWarning,
 } from '@cdo/apps/code-studio/projectRedux.js';
 import {
   exitedUploadWarning,
-  showingUploadWarning
+  showingUploadWarning,
 } from '../redux/animationPicker.js';
 
 /**
@@ -33,17 +33,14 @@ export function UnconnectedAnimationUploadButton({
   refreshTeacherHasConfirmedUploadWarning,
   showingUploadWarning,
   exitedUploadWarning,
-  currentUserType
+  currentUserType,
 }) {
   const [isUploadModalOpen, setIsUploadModalOpen] = useState(false);
-  const [
-    isPublishedWarningModalOpen,
-    setIsPublishedWarningModalOpen
-  ] = useState(false);
+  const [isPublishedWarningModalOpen, setIsPublishedWarningModalOpen] =
+    useState(false);
   const [noPIIConfirmed, setNoPIIConfirmed] = useState(false);
-  const [restrictedShareConfirmed, setRestrictedShareConfirmed] = useState(
-    false
-  );
+  const [restrictedShareConfirmed, setRestrictedShareConfirmed] =
+    useState(false);
 
   // Some of the behavior (particularly in the confirmation dialog) is conditional
   // on whether a student or teacher is uploading.
@@ -225,7 +222,7 @@ UnconnectedAnimationUploadButton.propTypes = {
   refreshTeacherHasConfirmedUploadWarning: PropTypes.func.isRequired,
   showingUploadWarning: PropTypes.func.isRequired,
   exitedUploadWarning: PropTypes.func.isRequired,
-  currentUserType: PropTypes.string
+  currentUserType: PropTypes.string,
 };
 
 export default connect(
@@ -233,7 +230,7 @@ export default connect(
     inRestrictedShareMode: state.project.inRestrictedShareMode,
     teacherHasConfirmedUploadWarning:
       state.project.teacherHasConfirmedUploadWarning,
-    currentUserType: state.currentUser?.userType
+    currentUserType: state.currentUser?.userType,
   }),
   dispatch => ({
     refreshInRestrictedShareMode: inRestrictedShareMode =>
@@ -241,6 +238,6 @@ export default connect(
     refreshTeacherHasConfirmedUploadWarning: () =>
       dispatch(refreshTeacherHasConfirmedUploadWarning()),
     showingUploadWarning: () => dispatch(showingUploadWarning()),
-    exitedUploadWarning: () => dispatch(exitedUploadWarning())
+    exitedUploadWarning: () => dispatch(exitedUploadWarning()),
   })
 )(UnconnectedAnimationUploadButton);

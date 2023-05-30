@@ -135,6 +135,7 @@
           "student_overview": "Dalam pelajaran ini, pelajar dari semua peringkat umur mendapat pengalaman pengenalan dengan pengekodan dan sains komputer dalam persekitaran yang selamat dan menyokong. Pelajaran ini berfungsi dengan baik untuk mana-mana pelajar yang cukup umur untuk membaca (umur 6+). Pelajar yang lebih muda mungkin tidak akan menghabiskan tutorial, tetapi akan berasa seronok mengerjakan teka-teki selama satu jam. Pelajar sekolah menengah kebanyakannya akan menghabiskan tutorial dan mempunyai sedikit masa untuk bermain pada tahap permainan percuma pada penghujungnya."
         },
         "playlab/Play Lab": {
+          "name": "Main Makmal",
           "overview": "Dalam pelajaran ini, pelajar mendapat pengalaman pengenalan dengan sains komputer dan mencipta permainan menggunakan kod blok asas. Pelajaran ini telah direka bentuk untuk pelajar dalam gred pertengahan, umur 10-16, tetapi boleh disesuaikan untuk pelajar yang lebih muda atau lebih tua menggunakan pembezaan cadangan disediakan.",
           "preparation": "### Satu Minggu Sebelum Waktu Kod Anda\n\n-   Semak [Hour of Code Educator Guide](http://hourofcode.com/resources/how-to/) dan [Best Practice from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) untuk mula merancang acara Hour of Code anda.\n-   [Register your Hour of Code event](http://hourofcode.com) jika anda ingin menerima risalah dan sokongan bilik darjah.\n-   Semak dan lengkapkan tutorial dalam talian sendiri: [Playlab](https://studio.code.org/s/playlab/stage/1/puzzle/1)\n-   Pastikan anda mengujinya terlebih dahulu sebelum meminta pelajar anda menyelesaikannya. Semak teknologi anda dan tentukan sama ada anda perlu menyelesaikan sebarang masalah sebelum Hour of Code anda.\n\n### Sehari Sebelum Waktu Kod Anda\n\n-   Tulis perkataan \"pengekodan\", \"pengaturcaraan\" dan \"penyahpepijatan\" pada papan atau tambahkannya pada dinding perkataan anda jika anda mempunyainya.\n-   Setiap pelajar yang melengkapkan aktiviti harus menerima [certificate](http://code.org/certificates). Cetak satu untuk setiap pelajar terlebih dahulu untuk memudahkan ini pada penghujung Hour of Code anda.",
           "purpose": "Pelajaran ini memperkenal konsep teras CS pengekodan dan pengaturcaraan (menggunakan blok), serta teknik nyahpepijat mudah.",
@@ -231,6 +232,9 @@
         "k5-onlinepd-2019/Variables": {
           "name": "Pemboleh ubah"
         },
+        "k5-onlinepd-2019/For Loops": {
+          "name": "Untuk Gelung"
+        },
         "k5-onlinepd-2019/Sprite Lab": {
           "name": "Sprite Lab"
         },
@@ -295,6 +299,7 @@
           "student_overview": "Masa untuk meraikan! Dalam pelajaran ini, anda akan mengatur cara majlis tari-menari berinteraktif anda sendiri."
         },
         "coursed-2022/Loops in Ice Age": {
+          "name": "Gelung dalam Zaman Ais",
           "purpose": "Dalam pelajaran ini, pelajar akan mempelajari lebih banyak tentang gelung dan cara melaksanakannya dalam kod Blockly. Menggunakan gelung adalah kemahiran penting dalam pengaturcaraan kerana mengulangi perintah secara manual membosankan dan tidak cekap. Dengan teka-teki Code.org ini, pelajar akan belajar menambah arahan kepada gelung sedia ada, mengumpulkan kod berulang ke dalam gelung dan mengenali corak yang perlu diulangi.",
           "student_overview": "Dalam pelajaran ini, anda akan menggunakan blok ulangan untuk membantu Scrat mendapatkan buah oak secekap yang mungkin."
         },
@@ -347,6 +352,7 @@
           "student_overview": "Perbuatan membuli sememangnya sangat teruk. Pelajaran ini akan mengajar anda tentang perkara yang baik atau tidak baik untuk dikatakan dalam talian."
         },
         "coursef-2022/Introducing Sprite Lab": {
+          "name": "Memperkenalkan Sprite Lab",
           "overview": "Dalam pelajaran **tetapan konteks** ini, pelajar akan membincangkan peranan komputer dan teknologi dalam kehidupan mereka, dengan menumpukan kepada cara aplikasi dan alatan memberikan pengguna pilihan tentang cara menggunakannya. Pelajar juga akan meneroka aplikasi yang serupa dengan aplikasi yang akan mereka cipta sendiri nanti.",
           "preparation": "-   Tentukan cara pelajar akan log masuk ke dalam Code.org.\n-   Jika diperlukan, cipta akaun Code.org untuk pelajar.\n-   Berikan topik Memperkenalkan Makmal Peperi kepada pelajar.\n-   Cetak salinan lembaran kerja **\\* Meneroka Aplikasi** (atau siarkan versi digital kepada LMS anda).",
           "purpose": "Pelajaran pertama ialah menjadikan pelajar teruja tentang kursus dan menghubungkan minat peribadi mereka kepada sains komputer. ",
@@ -360,6 +366,7 @@
           "student_overview": "Dalam pelajaran ini anda akan menulis atur cara dan mempelajari tentang peperi dan tingkah laku."
         },
         "coursef-2022/Sprites in Action": {
+          "name": "Sprite dalam Tindakan",
           "overview": "Dalam pelajaran **membina kemahiran** ini, pelajar akan berusaha melalui siri tahap pengaturcaraan pada komputer, menghabiskannya dengan tugas “permainan bebas” terbuka apabila mereka dapat membina apa sahaja yang mereka suka. Pelajar akan menulis atur cara yang bertindak balas terhadap peristiwa yang ditetapkan masanya dan input pengguna. ",
           "preparation": "Sila lalui tahap tersebut dan semak slaid pelajaran.",
           "purpose": "Pelajaran ini direka bentuk untuk mengukuhkan kemahiran daripada pelajaran sebelum ini dan memperkenalkan pelajar kepada pengaturcaraan dengan peristiwa. Sepanjang kursus ini, peristiwa akan menjadi kaedah utama pelajar mengubah cara atur cara mereka berjalan dari masa ke masa atau sebagai respons kepada pengguna.",
@@ -528,6 +535,7 @@
           "student_overview": "Pelajari tentang jejak digital anda dan cara untuk kekal selamat semasa melayari laman web."
         },
         "courseb-2022/Move It, Move It": {
+          "name": "Pindahkan, Pindahkan",
           "preparation": "-   Tonton **\\*Video Guru**\n-   Cetak (atau sebaliknya sediakan untuk dipaparkan) satu **\\*Kunci Jawapan Lembaran Kerja**\n-   Cetak satu **\\*Aktiviti Peta** dan satu **\\*Lembaran Kerja** setiap kumpulan yang mempunyai 2-3 pelajar\n-   Sediakan kertas kosong untuk mengisi grid berjalan yang lain (4-7 diperlukan untuk setiap kumpulan)",
           "purpose": "Dengan menggunakan pergerakan fizikal untuk mengatur cara rakan sekelas mereka, pelajar akan menghadapi isu dan emosi yang serupa dengan perkara yang mereka akan rasa apabila mereka mula mengekod pada komputer. Apabila menghadapi tekanan tersebut dalam persekitaran suka bermain dan terbuka akan membantu mengurangkan intensiti dan membolehkan pelajar mengamalkan kemahiran yang perlu sebelum mereka menghadapi masalah mereka sendiri.",
           "student_overview": "Atur cara akan sekelas anda untuk melangkah dengan berhati-hati dari satu tempat ke tempat yang lain."
@@ -640,6 +648,7 @@
           "student_overview": "Dalam pelajaran ini anda akan menulis atur cara dan mempelajari tentang peperi dan tingkah laku."
         },
         "express-2022/Sprites in Action": {
+          "name": "Sprite dalam Tindakan",
           "overview": "Dalam pelajaran **membina kemahiran** ini, pelajar akan berusaha melalui siri tahap pengaturcaraan pada komputer, menghabiskannya dengan tugas “permainan bebas” terbuka apabila mereka dapat membina apa sahaja yang mereka suka. Pelajar akan menulis atur cara yang bertindak balas terhadap peristiwa yang ditetapkan masanya dan input pengguna. ",
           "preparation": "Sila lalui tahap tersebut dan semak slaid pelajaran.",
           "purpose": "Pelajaran ini direka bentuk untuk memperkenalkan pelajar kepada pengaturcaraan dengan acara. Sepanjang kursus ini, acara akan menjadi kaedah utama pelajar mengubah cara atur cara mereka berjalan dari masa ke masa atau sebagai respons kepada pengguna.",
@@ -1025,6 +1034,12 @@
         "csd5-2022/CS Discoveries Post-Course Survey": {
           "name": "Kajian Pasca Kursus CS Discoveries"
         },
+        "csd1-2022/The Problem Solving Process": {
+          "name": "Proses Penyelesaian Masalah"
+        },
+        "csd1-2022/What is a Computer?": {
+          "name": "Apa itu komputer?"
+        },
         "csd3-2022/Variables": {
           "name": "Pemboleh ubah"
         },
@@ -1042,6 +1057,9 @@
         },
         "csd3-2022/Keyboard Input": {
           "name": "Input Papan Kekunci"
+        },
+        "csd3-2022/Velocity": {
+          "name": "Halaju"
         },
         "csd3-2022/Collisions": {
           "name": "Perlanggaran"
@@ -1076,8 +1094,17 @@
         "csd6-2022/CS Discoveries Post-Course Survey": {
           "name": "Kajian Pasca Kursus CS Discoveries"
         },
+        "csd7-2022/Introduction to AI Lab": {
+          "name": "Pengenalan kepada Makmal AI"
+        },
+        "csd7-2022/Numerical Data in AI Lab": {
+          "name": "Data Berangka di Makmal AI"
+        },
         "csd7-2022/CS Discoveries Post-Course Survey": {
           "name": "Kajian Pasca Kursus CS Discoveries"
+        },
+        "courseb-2018/Move It, Move It": {
+          "name": "Pindahkan, Pindahkan"
         },
         "courseb-2018/Sequencing with Scrat": {
           "name": "Penjujukan dengan Scrat"
@@ -1114,6 +1141,12 @@
         },
         "courseb-2018/Events in Play Lab": {
           "name": "Pertempuran Diraja bersama Acara"
+        },
+        "coursea-2018/Debugging: Unspotted Bugs": {
+          "name": "Bugs Unspotted"
+        },
+        "coursea-2018/Persistence & Frustration: Stevie and the Big Project": {
+          "name": "Stevie dan Projek Besar"
         },
         "coursea-2018/Real-life Algorithms: Plant a Seed": {
           "name": "Tanam Biji Benih"
@@ -1165,6 +1198,9 @@
         },
         "coursed-2018/Events in Bounce": {
           "name": "Peristiwa dalam Lantunan"
+        },
+        "coursed-2018/Loops in Ice Age": {
+          "name": "Gelung dalam Zaman Ais"
         },
         "coursed-2018/Loops in Artist": {
           "name": "Melukis Bentuk dengan Gelung"
@@ -1481,6 +1517,15 @@
         "coursec-2018/Binary Bracelets": {
           "name": "Binary Bracelets"
         },
+        "pre-express-2018/Debugging: Unspotted Bugs": {
+          "name": "Bugs Unspotted"
+        },
+        "pre-express-2018/Persistence & Frustration: Stevie and the Big Project": {
+          "name": "Stevie dan Projek Besar"
+        },
+        "pre-express-2018/Move It, Move It": {
+          "name": "Pindahkan, Pindahkan"
+        },
         "pre-express-2018/Sequencing with Scrat": {
           "name": "Penjujukan dengan Scrat"
         },
@@ -1532,6 +1577,9 @@
         "csd3-2018/Keyboard Input": {
           "name": "Input Papan Kekunci"
         },
+        "csd3-2018/Velocity": {
+          "name": "Halaju"
+        },
         "csd3-2018/Collisions": {
           "name": "Perlanggaran"
         },
@@ -1580,6 +1628,12 @@
         "csd2-2018/CS Discoveries Post-Course Survey": {
           "name": "Kajian Pasca Kursus CS Discoveries"
         },
+        "csd1-2018/The Problem Solving Process": {
+          "name": "Proses Penyelesaian Masalah"
+        },
+        "csd1-2018/What is a Computer?": {
+          "name": "Apa itu komputer?"
+        },
         "coursea-2019/Going Places Safely": {
           "name": "Going Places Safely"
         },
@@ -1618,6 +1672,9 @@
         },
         "courseb-2019/Your Digital Footprint": {
           "name": "Your Digital Footprint"
+        },
+        "courseb-2019/Move It, Move It": {
+          "name": "Pindahkan, Pindahkan"
         },
         "courseb-2019/Sequencing in Maze": {
           "name": "Penjujukan dengan Angry Birds"
@@ -1663,6 +1720,9 @@
         },
         "coursed-2019/Build a Star Wars Game": {
           "name": "Membina Permainan Star Wars"
+        },
+        "coursed-2019/Loops in Ice Age": {
+          "name": "Gelung dalam Zaman Ais"
         },
         "coursed-2019/Loops in Artist": {
           "name": "Melukis Bentuk dengan Gelung"
@@ -1955,6 +2015,9 @@
         "csd3-2019/Keyboard Input": {
           "name": "Input Papan Kekunci"
         },
+        "csd3-2019/Velocity": {
+          "name": "Halaju"
+        },
         "csd3-2019/Collisions": {
           "name": "Perlanggaran"
         },
@@ -1981,6 +2044,12 @@
         },
         "csd5-2019/Combining Representations": {
           "name": "Menggabungkan Perwakilan"
+        },
+        "csd1-2019/The Problem Solving Process": {
+          "name": "Proses Penyelesaian Masalah"
+        },
+        "csd1-2019/What is a Computer?": {
+          "name": "Apa itu komputer?"
         },
         "csd2-2019/Headings": {
           "name": "Headings"
@@ -2255,6 +2324,9 @@
         "coursec-2017/Loops in Artist": {
           "name": "Gelung di dalam Artis"
         },
+        "coursec-2017/Loops in Harvester": {
+          "name": "Gelung dalam Harvester"
+        },
         "coursec-2017/Events: The Big Event": {
           "name": "Peristiwa: Peristiwa Besar"
         },
@@ -2363,6 +2435,9 @@
         "express-2017/Algorithms: Graph Paper Programming": {
           "name": "Pengaturcaraan: Pengaturcaraan Kertas Graf"
         },
+        "express-2017/Introduction": {
+          "name": "Pengenalan"
+        },
         "express-2017/Building a Foundation": {
           "name": "Membina Asas"
         },
@@ -2459,6 +2534,9 @@
         "csd3-2017/Keyboard Input": {
           "name": "Input Papan Kekunci"
         },
+        "csd3-2017/Velocity": {
+          "name": "Halaju"
+        },
         "csd3-2017/Collisions": {
           "name": "Perlanggaran"
         },
@@ -2479,6 +2557,12 @@
         },
         "csd2-2017/Lists": {
           "name": "Senarai"
+        },
+        "csd1-2017/The Problem Solving Process": {
+          "name": "Proses Penyelesaian Masalah"
+        },
+        "csd1-2017/What is a Computer?": {
+          "name": "Apa itu komputer?"
         },
         "csd5-2017/Representing Images": {
           "name": "Mewakili Imej"
@@ -2688,10 +2772,14 @@
           "name": "Going Places Safely"
         },
         "jigsaw/Jigsaw": {
+          "name": "Gergaji jig",
           "overview": "Pelajaran ini akan memberikan idea kepada pelajar mengenai perkara yang dijangkakan apabila mereka menuju ke makmal komputer. Sesi ini dimulakan dengan perbincangan ringkas memperkenalkan mereka kepada peradaban ketika berada di dalam makmal komputer, kemudian mereka akan meneruskan sesi dengan menggunakan komputer untuk menyelesaikan teka-teki dalam talian.",
           "preparation": "-   Semak tapak web [Pelajaran Yang Munasabah](https://www.commonsense.org/education/digital-citizenship) untuk mendapatkan lebih banyak kandungan keselamatan dalam talian.",
           "purpose": "Matlamat utama pelajaran ini adalah untuk membina pengalaman pelajar dengan komputer. Dengan meliputi fungsi komputer yang paling asas seperti mengklik, menyeret, dan menjatuhkan, kami mencipta medan permainan yang lebih sama di dalam kelas untuk teka-teki masa depan. Pelajaran ini juga memberikan peluang yang baik untuk memperkenalkan istilah perkakasan komputer asas, yang berpotensi termasuk \"tetikus\", \"trackpad\" atau \"skrin sentuh\", bergantung pada peranti anda.",
           "student_overview": "Klik dan tarik untuk menyelesaikan teka-teki."
+        },
+        "allthethings/Jigsaw": {
+          "name": "Gergaji jig"
         },
         "allthethings/Maze": {
           "name": "Maze"
@@ -2732,7 +2820,11 @@
         "allthethings/lesson-48": {
           "name": "Puisi"
         },
+        "allthethings/lesson-49": {
+          "name": "Muzik"
+        },
         "coursef-2021/lesson-6": {
+          "name": "Memperkenalkan Sprite Lab",
           "overview": "Dalam pelajaran **tetapan konteks** ini, pelajar akan membincangkan peranan komputer dan teknologi dalam kehidupan mereka, dengan menumpukan kepada cara aplikasi dan alatan memberikan pengguna pilihan tentang cara menggunakannya. Pelajar juga akan meneroka aplikasi yang serupa dengan aplikasi yang akan mereka cipta sendiri nanti.",
           "preparation": "-   Tentukan cara pelajar akan log masuk ke dalam Code.org.\n-   Jika diperlukan, cipta akaun Code.org untuk pelajar.\n-   Berikan topik Memperkenalkan Makmal Peperi kepada pelajar.\n-   Cetak salinan lembaran kerja **\\* Meneroka Aplikasi** (atau siarkan versi digital kepada LMS anda).",
           "purpose": "Pelajaran pertama ialah menjadikan pelajar teruja tentang kursus dan menghubungkan minat peribadi mereka kepada sains komputer. ",
@@ -2746,6 +2838,7 @@
           "student_overview": "Dalam pelajaran ini anda akan menulis atur cara dan mempelajari tentang peperi dan tingkah laku."
         },
         "coursef-2021/lesson-8": {
+          "name": "Sprite dalam Tindakan",
           "overview": "Dalam pelajaran **membina kemahiran** ini, pelajar akan berusaha melalui siri tahap pengaturcaraan pada komputer, menghabiskannya dengan tugas “permainan bebas” terbuka apabila mereka dapat membina apa sahaja yang mereka suka. Pelajar akan menulis atur cara yang bertindak balas terhadap peristiwa yang ditetapkan masanya dan input pengguna. ",
           "preparation": "Sila lalui tahap tersebut dan semak slaid pelajaran.",
           "purpose": "Pelajaran ini direka bentuk untuk mengukuhkan kemahiran daripada pelajaran sebelum ini dan memperkenalkan pelajar kepada pengaturcaraan dengan peristiwa. Sepanjang kursus ini, peristiwa akan menjadi kaedah utama pelajar mengubah cara atur cara mereka berjalan dari masa ke masa atau sebagai respons kepada pengguna.",
@@ -2869,6 +2962,7 @@
           "student_overview": "Pelajari tentang jejak digital anda dan cara untuk kekal selamat semasa melayari laman web."
         },
         "courseb-2021/Move It, Move It": {
+          "name": "Pindahkan, Pindahkan",
           "preparation": "-   Tonton **\\*Video Guru**\n-   Cetak (atau sebaliknya sediakan untuk dipaparkan) satu **\\*Kunci Jawapan Lembaran Kerja**\n-   Cetak satu **\\*Aktiviti Peta** dan satu **\\*Lembaran Kerja** setiap kumpulan yang mempunyai 2-3 pelajar\n-   Sediakan kertas kosong untuk mengisi grid berjalan yang lain (4-7 diperlukan untuk setiap kumpulan)",
           "purpose": "Dengan menggunakan pergerakan fizikal untuk mengatur cara rakan sekelas mereka, pelajar akan menghadapi isu dan emosi yang serupa dengan perkara yang mereka akan rasa apabila mereka mula mengekod pada komputer. Apabila menghadapi tekanan tersebut dalam persekitaran suka bermain dan terbuka akan membantu mengurangkan intensiti dan membolehkan pelajar mengamalkan kemahiran yang perlu sebelum mereka menghadapi masalah mereka sendiri.",
           "student_overview": "Atur cara akan sekelas anda untuk melangkah dengan berhati-hati dari satu tempat ke tempat yang lain."
@@ -3176,6 +3270,7 @@
           "student_overview": "Masa untuk meraikan! Dalam pelajaran ini, anda akan mengatur cara majlis tari-menari berinteraktif anda sendiri."
         },
         "coursed-2021/Loops in Ice Age": {
+          "name": "Gelung dalam Zaman Ais",
           "preparation": "-   (Pilihan) Pilih beberapa teka-teki untuk dilakukan secara berkumpulan dengan seluruh kelas anda.\n-   Pastikan setiap pelajar mempunyai jurnal renungan.",
           "purpose": "Dalam pelajaran ini, pelajar akan mempelajari lebih banyak tentang gelung dan cara melaksanakannya dalam kod Blockly. Menggunakan gelung adalah kemahiran penting dalam pengaturcaraan kerana mengulangi perintah secara manual membosankan dan tidak cekap. Dengan teka-teki Code.org ini, pelajar akan belajar menambah arahan kepada gelung sedia ada, mengumpulkan kod berulang ke dalam gelung dan mengenali corak yang perlu diulangi.",
           "student_overview": "Dalam pelajaran ini, anda akan menggunakan blok ulangan untuk membantu Scrat mendapatkan buah oak secekap yang mungkin."
@@ -3269,6 +3364,7 @@
           "student_overview": "Dalam pelajaran ini anda akan menulis atur cara dan mempelajari tentang peperi dan tingkah laku."
         },
         "express-2021/lesson-3": {
+          "name": "Sprite dalam Tindakan",
           "overview": "Dalam pelajaran **membina kemahiran** ini, pelajar akan berusaha melalui siri tahap pengaturcaraan pada komputer, menghabiskannya dengan tugas “permainan bebas” terbuka apabila mereka dapat membina apa sahaja yang mereka suka. Pelajar akan menulis atur cara yang bertindak balas terhadap peristiwa yang ditetapkan masanya dan input pengguna. ",
           "preparation": "Sila lalui tahap tersebut dan semak slaid pelajaran.",
           "purpose": "Pelajaran ini direka bentuk untuk memperkenalkan pelajar kepada pengaturcaraan dengan acara. Sepanjang kursus ini, acara akan menjadi kaedah utama pelajar mengubah cara atur cara mereka berjalan dari masa ke masa atau sebagai respons kepada pengguna.",
@@ -3579,6 +3675,12 @@
           "purpose": "Pelajar mungkin bersedia untuk terus membina projek mereka, tetapi pelajaran ini akan membantu membentuk idea mereka kepada rancangan. Struktur ini akan memastikan individu yang mempunyai impian tetap berpijak di bumi nyata dan menerangi laluan untuk mereka yang merasa ditinggalkan dalam kegelapan. Menyediakan pelajar masa yang mencukupi untuk membina dan menyemak semula projek mereka. Percubaan yang terpaksa dilakukan serta tidak dapat dielakkan dalam pelajaran ini akan mengajar pelajar mengenai penyelesaian masalah dan ketabahan.",
           "student_overview": "Projek sebesar ini memerlukan masa dan perancangan yang banyak. Cari inspirasi anda, bangunkan rancangan dan luahkan kreativiti anda!"
         },
+        "csd7-2021/Introduction to AI Lab": {
+          "name": "Pengenalan kepada Makmal AI"
+        },
+        "csd7-2021/Numerical Data in AI Lab": {
+          "name": "Data Berangka di Makmal AI"
+        },
         "csd7-2021/CS Discoveries Post-Course Survey": {
           "name": "Kajian Pasca Kursus CS Discoveries"
         },
@@ -3627,6 +3729,9 @@
         "csd3-2021/Keyboard Input": {
           "name": "Input Papan Kekunci"
         },
+        "csd3-2021/Velocity": {
+          "name": "Halaju"
+        },
         "csd3-2021/Collisions": {
           "name": "Perlanggaran"
         },
@@ -3635,6 +3740,12 @@
         },
         "csd3-2021/lesson-1": {
           "name": "Kajian Pasca Kursus CS Discoveries"
+        },
+        "csd1-2021/The Problem Solving Process": {
+          "name": "Proses Penyelesaian Masalah"
+        },
+        "csd1-2021/What is a Computer?": {
+          "name": "Apa itu komputer?"
         },
         "csd2-2021/Headings": {
           "name": "Headings"
@@ -3735,6 +3846,9 @@
         "courseb-2020/Digital Trails": {
           "name": "Jejak Digital"
         },
+        "courseb-2020/Move It, Move It": {
+          "name": "Pindahkan, Pindahkan"
+        },
         "courseb-2020/Sequencing in Maze": {
           "name": "Penjujukan dengan Angry Birds"
         },
@@ -3782,6 +3896,9 @@
         },
         "coursed-2020/Dance Party": {
           "name": "Majlis Tari-Menari"
+        },
+        "coursed-2020/Loops in Ice Age": {
+          "name": "Gelung dalam Zaman Ais"
         },
         "coursed-2020/Loops in Artist": {
           "name": "Melukis Bentuk dengan Gelung"

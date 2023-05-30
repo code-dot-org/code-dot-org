@@ -6,7 +6,7 @@ import * as elementUtils from './elementUtils';
 export default class DefaultScreenButtonPropertyRow extends React.Component {
   static propTypes = {
     handleChange: PropTypes.func.isRequired,
-    screenId: PropTypes.string
+    screenId: PropTypes.string,
   };
 
   handleMakeDefault = event => this.props.handleChange(true);
@@ -21,12 +21,12 @@ export default class DefaultScreenButtonPropertyRow extends React.Component {
     const buttonStyle = {
       paddingTop: '5px',
       paddingBottom: '5px',
-      fontSize: '14px'
+      fontSize: '14px',
     };
 
     const defaultButtonStyle = Object.assign({}, buttonStyle, {
       backgroundColor: '#0aa',
-      color: color.white
+      color: color.white,
     });
 
     return (

@@ -60,6 +60,7 @@
   "predictPlaceholder": "min{minimum}, max {maksimum}",
   "crossTabRelationshipHeader": "Münasibətlər haqqında məlumat",
   "crossTabTooMuchData": "Hal hazırda seçilmiş məlumatlar cədvəldə göstərmək üçün çox böyükdür.",
+  "uniqueOptionsWarningNotice": "Qeyd",
   "predictionStatement": "{giriş} əsasənda {çıxış} proqnozlaşdırın",
   "datasets": {
     "medical_priority": {

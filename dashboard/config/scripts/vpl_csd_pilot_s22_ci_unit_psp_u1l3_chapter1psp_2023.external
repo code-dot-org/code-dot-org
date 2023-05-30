@@ -5,8 +5,10 @@ description 'description here'
 markdown <<MARKDOWN
 # Chapter 1: The Problem Solving Process *(continued)*
 
-##### Future units in CS Discoveries will present problems in contexts that may or may not be familiar. A structured problem solving process will be an important tool for helping students move forward in the face of novel and complex challenges.
+<div style="background-color: #a6e3e8; border-radius: 40px 40px 40px 40px; color: #000000; width: 95%; padding: 0.5px 20px 1px 20px;">
 
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 20px; margin-bottom: 20px; font-size: 18px; ">Future units in CS Discoveries will present problems in contexts that may or may not be familiar. A structured problem solving process will be an important tool for helping students move forward in the face of novel and complex challenges.
+</p></div>
 
 ## Why aren't my students on the computer? 
 

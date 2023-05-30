@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-03-30 04:49:53 UTC",
+    "serialized_at": "2023-05-17 22:47:35 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -293,7 +293,7 @@
     },
     {
       "key": "Project   Decision Maker App Part 1",
-      "name": "Project   Decision Maker App Part 1",
+      "name": "Project - Decision Maker App",
       "absolute_position": 12,
       "lockable": false,
       "has_lesson_plan": true,
@@ -301,9 +301,8 @@
       "properties": {
         "assessment": true,
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "Using a Project Planning Guide, students work through the stages of creating an app from scratch. This is the first day of a three-day project. This lesson is devoted to the planning phase.",
-        "preparation": "* Review the project guide and make sure students have access to copies\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-decision-maker-app-unit-4-lessons-12-14/36477) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
-        "purpose": "The Practice PT gives students the opportunity to design and program an app from scratch. Welcome to The Decision Maker App! Students demonstrate mastery of variables, conditionals, and functions by combining these elements into a useful program designed to solve the problem of making a decision. ",
+        "overview": "Using a Project Planning Guide, students work through the stages of creating an app from scratch. \n* On Day 1, students complete the planning phase.\n* On Day 2, students translate the plans they documented in Part 1 of the Practice PT to a working program in App Lab through a series of steps. \n* On Day 3, students work with classmates to review and update the functionality of their apps before submitting the final project. ",
+        "preparation": "* Review the project guide and make sure students have access to copies\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-decision-maker-app-unit-4-lessons-12-14/36477) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n - If you're teaching virtual, consider checking out our Virtual Modifications for [Day 1](https://docs.google.com/document/d/1zvvaHZ1YTF5G7FxoiKqmJFNFsHfdqiPry_NPsYo44cw/edit?usp=sharing), [Day 2](https://docs.google.com/document/d/1PxbDC71SjLrQGDvItpPws7W3klXrjPNATa8jgWmeKdo/edit?usp=sharing), and [Day 3](https://docs.google.com/document/d/1p3eppLLFOaA9cFLYNsOl9O4m9DCnHiPwJl6-ucU0EWw/edit?usp=sharing)",
         "student_overview": "Create an app from scratch that uses variables, conditionals, and functions to help a user make a decision."
       },
       "seeding_key": {
@@ -313,59 +312,17 @@
       }
     },
     {
-      "key": "Project   Decision Maker App Part 2",
-      "name": "Project   Decision Maker App Part 2",
+      "key": "Assessment Day",
+      "name": "Assessment Day",
       "absolute_position": 13,
-      "lockable": false,
+      "lockable": true,
       "has_lesson_plan": true,
       "relative_position": 13,
       "properties": {
         "assessment": true,
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "Students translate the plans they documented in Part 1 of the Practice PT to a working program in App Lab through a series of steps. ",
-        "preparation": "* Make sure students will have access to their project guides\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-decision-maker-app-unit-4-lessons-12-14/36477) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
-        "purpose": "The Practice PT gives students the opportunity to design and program an app from scratch. Welcome to The Decision Maker App! Students demonstrate mastery of variables, conditionals, and functions by combining these elements into a useful program designed to solve the problem of making a decision. ",
-        "student_overview": "Create an app from scratch that uses variables, conditionals, and functions to help a user make a decision."
-      },
-      "seeding_key": {
-        "lesson.key": "Project   Decision Maker App Part 2",
-        "lesson_group.key": "csp_project",
-        "script.name": "csp4-2023"
-      }
-    },
-    {
-      "key": "Project   Decision Maker App Part 3",
-      "name": "Project   Decision Maker App Part 3",
-      "absolute_position": 14,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 14,
-      "properties": {
-        "assessment": true,
-        "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "The final lesson in the Practice PT progression is devoted to feedback and improvements to the Decision Maker App. Students work with classmates to review and update the functionality of their apps before submitting the final project. ",
-        "preparation": "* Make sure students will have access to their project guides\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-decision-maker-app-unit-4-lessons-12-14/36477) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
-        "purpose": "The Practice PT gives students the opportunity to design and program an app from scratch. Welcome to The Decision Maker App! Students demonstrate mastery of variables, conditionals, and functions by combining these elements into a useful program designed to solve the problem of making a decision.",
-        "student_overview": "Create an app from scratch that uses variables, conditionals, and functions to help a user make a decision. "
-      },
-      "seeding_key": {
-        "lesson.key": "Project   Decision Maker App Part 3",
-        "lesson_group.key": "csp_project",
-        "script.name": "csp4-2023"
-      }
-    },
-    {
-      "key": "Assessment Day",
-      "name": "Assessment Day",
-      "absolute_position": 15,
-      "lockable": true,
-      "has_lesson_plan": true,
-      "relative_position": 15,
-      "properties": {
-        "assessment": true,
-        "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students complete a multiple choice assessment which covers the unit topics.",
-        "preparation": "* Preview the assessment questions",
+        "preparation": "* Preview the assessment questions\n* If you are teaching virtually, check out the [Virtual Modifications](https://docs.google.com/document/d/1uKzYgOlOTqNJNTvVuioqX-o8xhmXQMfjOvAh9pWDcb4/edit?usp=sharing)",
         "student_overview": "Assessment day to conclude the unit."
       },
       "seeding_key": {
@@ -390,8 +347,21 @@
       }
     },
     {
-      "key": "64fc8a32-7181-4f50-849d-7bc4aefa320e",
+      "key": "3ce2c728-50bc-43c0-9f9f-ff4a82024f9d",
       "position": 2,
+      "properties": {
+        "name": "The Pre-Unit Pulse"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3ce2c728-50bc-43c0-9f9f-ff4a82024f9d",
+        "lesson.key": "Variables Explore",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp4-2023"
+      }
+    },
+    {
+      "key": "64fc8a32-7181-4f50-849d-7bc4aefa320e",
+      "position": 3,
       "properties": {
         "duration": 10,
         "name": "Warm Up - Explore Sample Apps"
@@ -405,7 +375,7 @@
     },
     {
       "key": "1c729886-e785-4020-ad1b-857b016ea05c",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 30,
         "name": "Activity"
@@ -419,7 +389,7 @@
     },
     {
       "key": "bbdb766d-8aae-4030-94b5-d0f33730ffd4",
-      "position": 4,
+      "position": 5,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -953,24 +923,11 @@
       }
     },
     {
-      "key": "1244957c-8acc-4a0e-8f46-19ca493ae208",
+      "key": "cbc34937-3f1c-42f7-a949-97d56d1d94eb",
       "position": 1,
       "properties": {
-        "name": "Lesson Modifications"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "1244957c-8acc-4a0e-8f46-19ca493ae208",
-        "lesson.key": "Project   Decision Maker App Part 1",
-        "lesson_group.key": "csp_project",
-        "script.name": "csp4-2023"
-      }
-    },
-    {
-      "key": "cbc34937-3f1c-42f7-a949-97d56d1d94eb",
-      "position": 2,
-      "properties": {
-        "duration": 5,
-        "name": "Warm Up"
+        "duration": 45,
+        "name": "Day 1"
       },
       "seeding_key": {
         "lesson_activity.key": "cbc34937-3f1c-42f7-a949-97d56d1d94eb",
@@ -981,10 +938,10 @@
     },
     {
       "key": "46210050-edd2-4362-a647-275a649d3b07",
-      "position": 3,
+      "position": 2,
       "properties": {
-        "duration": 40,
-        "name": "Activity"
+        "duration": 45,
+        "name": "Day 2"
       },
       "seeding_key": {
         "lesson_activity.key": "46210050-edd2-4362-a647-275a649d3b07",
@@ -994,144 +951,22 @@
       }
     },
     {
-      "key": "4869449c-bbad-42ba-98b5-cb2794c1c89a",
-      "position": 4,
+      "key": "a343fd86-0e51-4c19-a825-5e855ae474c4",
+      "position": 3,
       "properties": {
-        "name": "Wrap Up"
+        "duration": 45,
+        "name": "Day 3"
       },
       "seeding_key": {
-        "lesson_activity.key": "4869449c-bbad-42ba-98b5-cb2794c1c89a",
+        "lesson_activity.key": "a343fd86-0e51-4c19-a825-5e855ae474c4",
         "lesson.key": "Project   Decision Maker App Part 1",
         "lesson_group.key": "csp_project",
         "script.name": "csp4-2023"
       }
     },
     {
-      "key": "2b3549d7-6bf1-43f1-8b78-91fdb2dccbfa",
-      "position": 1,
-      "properties": {
-        "name": "Lesson Modifications"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "2b3549d7-6bf1-43f1-8b78-91fdb2dccbfa",
-        "lesson.key": "Project   Decision Maker App Part 2",
-        "lesson_group.key": "csp_project",
-        "script.name": "csp4-2023"
-      }
-    },
-    {
-      "key": "ab3a9527-289a-486f-97d0-47a87482c077",
-      "position": 2,
-      "properties": {
-        "duration": 2,
-        "name": "Warm Up"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "ab3a9527-289a-486f-97d0-47a87482c077",
-        "lesson.key": "Project   Decision Maker App Part 2",
-        "lesson_group.key": "csp_project",
-        "script.name": "csp4-2023"
-      }
-    },
-    {
-      "key": "9126d71a-155d-4984-ba57-8770be67f0e7",
-      "position": 3,
-      "properties": {
-        "duration": 38,
-        "name": "Activity"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "9126d71a-155d-4984-ba57-8770be67f0e7",
-        "lesson.key": "Project   Decision Maker App Part 2",
-        "lesson_group.key": "csp_project",
-        "script.name": "csp4-2023"
-      }
-    },
-    {
-      "key": "fce07d6a-12b8-475c-a037-3935c70b1260",
-      "position": 4,
-      "properties": {
-        "duration": 5,
-        "name": "Wrap Up"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "fce07d6a-12b8-475c-a037-3935c70b1260",
-        "lesson.key": "Project   Decision Maker App Part 2",
-        "lesson_group.key": "csp_project",
-        "script.name": "csp4-2023"
-      }
-    },
-    {
-      "key": "81c7c75a-0dab-475a-99ad-a81134fc7e12",
-      "position": 1,
-      "properties": {
-        "name": "Lesson Modifications"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "81c7c75a-0dab-475a-99ad-a81134fc7e12",
-        "lesson.key": "Project   Decision Maker App Part 3",
-        "lesson_group.key": "csp_project",
-        "script.name": "csp4-2023"
-      }
-    },
-    {
-      "key": "fe26e801-4131-4be5-934a-d86b9dd355c2",
-      "position": 2,
-      "properties": {
-        "duration": 2,
-        "name": "Warm Up"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "fe26e801-4131-4be5-934a-d86b9dd355c2",
-        "lesson.key": "Project   Decision Maker App Part 3",
-        "lesson_group.key": "csp_project",
-        "script.name": "csp4-2023"
-      }
-    },
-    {
-      "key": "61c9d2df-8c1a-4b0c-ae82-3fdb492e51a3",
-      "position": 3,
-      "properties": {
-        "duration": 33,
-        "name": "Activity"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "61c9d2df-8c1a-4b0c-ae82-3fdb492e51a3",
-        "lesson.key": "Project   Decision Maker App Part 3",
-        "lesson_group.key": "csp_project",
-        "script.name": "csp4-2023"
-      }
-    },
-    {
-      "key": "ebd42990-df87-4045-aee9-797688a3ead9",
-      "position": 4,
-      "properties": {
-        "duration": 10,
-        "name": "Wrap Up"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "ebd42990-df87-4045-aee9-797688a3ead9",
-        "lesson.key": "Project   Decision Maker App Part 3",
-        "lesson_group.key": "csp_project",
-        "script.name": "csp4-2023"
-      }
-    },
-    {
-      "key": "9c862920-accd-4bd8-869b-a697a602aacf",
-      "position": 1,
-      "properties": {
-        "name": "Lesson Modifications"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "9c862920-accd-4bd8-869b-a697a602aacf",
-        "lesson.key": "Assessment Day",
-        "lesson_group.key": "csp_project",
-        "script.name": "csp4-2023"
-      }
-    },
-    {
       "key": "4339e6e3-3531-4b82-bf20-9d69f5ab6acb",
-      "position": 2,
+      "position": 1,
       "properties": {
         "duration": 25,
         "name": "Assessment"
@@ -1145,7 +980,7 @@
     },
     {
       "key": "6cf4df18-ba73-437a-a37d-b2ea604a17be",
-      "position": 3,
+      "position": 2,
       "properties": {
         "duration": 20,
         "name": "Assessment Review"
@@ -1171,6 +1006,24 @@
       }
     },
     {
+      "key": "c186c428-becc-4ba9-9f54-d1c67bb7886a",
+      "position": 1,
+      "properties": {
+        "description": "Have your students complete these questions independently some time before starting this unit.",
+        "progression_name": "The Pre-Unit Pulse",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Pre-Unit Pulse Questions:** The answers to these questions can provide insights into the preferences, strengths, and motivations of your students. If you'd like to adapt the questions or add in your own, you may want to make a copy of [this Google Form](https://docs.google.com/forms/d/1NFy1Tlgjskqo04fKbDqA0q2GmTiE_wwb1f5ALei_oIo/copy) which already has the existing questions populated.\n\nFor more tips and ideas of how to use these questions, check out the [CSP Guide to Pre-Unit Pulse Questions](https://docs.google.com/document/d/1jx43dakN6og2n7iey_uQrNwcpMHQRbv1RCPZFHpQdYw/edit?usp=sharing)"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "c186c428-becc-4ba9-9f54-d1c67bb7886a",
+        "lesson_activity.key": "3ce2c728-50bc-43c0-9f9f-ff4a82024f9d"
+      }
+    },
+    {
       "key": "461c2038-2a59-4d56-8532-6bce5868cbb1",
       "position": 1,
       "properties": {
@@ -1185,7 +1038,7 @@
       "key": "f23982d1-616f-4f18-a9e6-e8705b0d18b7",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Give students 3-5 minutes to explore sample apps that they'll find on Code.org at the beginning of this lesson (in Levels 1-3). Students can explore one or more depending on time.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Give students 3-5 minutes to explore sample apps that they'll find on Code.org at the beginning of this lesson (in Levels 3-5). Students can explore one or more depending on time.",
         "progression_name": "Explore Sample Apps"
       },
       "seeding_key": {
@@ -1435,7 +1288,7 @@
       "key": "98ae6e4b-964d-4f0d-bcc4-0401bf62ce7e",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Level 3:** This program is an updated version of the Thermostat app. This time students should continue to work in partners but do not need to work with other groups. They will need to:\n\n* Run the app: Let students run the app for a few minutes.\n* Discuss Changes: Talk through how the app is different than the first version. \n* Find the [`Math.round`(#FFB74D)](/docs/applab/mathRound/) command: Discuss with a partner how this command might work. Try deleting [`Math.round`(#FFB74D)](/docs/applab/mathRound/) in lines 3, 15, and 28. What happens? Add it back in.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Level 3:** Students look through the code and find the [`Math.round`(#FFB74D)](/docs/applab/mathRound/) command: Discuss with a partner how this command might work. On this predict level, students must answer the question before being able to run the code.\n\n**Level 4:** This program is an updated version of the Thermostat app. This time students should continue to work in partners but do not need to work with other groups. They will need to:\n\n* Run the app: Let students run the app for a few minutes.\n* Discuss Changes: Talk through how the app is different than the first version. \n Try deleting [`Math.round`(#FFB74D)](/docs/applab/mathRound/) in lines 3, 15, and 28. What happens? Add it back in.",
         "duration": "10",
         "name": "Investigation #2: Thermostat App v.2",
         "progression_name": "Investigation #2: Thermostat App v.2"
@@ -1460,7 +1313,7 @@
       "key": "0a62508c-3c1d-4c4f-82ed-07b3e0e7d539",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Level 4:** This program is again an updated version of the Thermostat app with a login screen. \n\n* Run the app: Let students run the app for a few minutes.\n* Predict: Students predict the information that is being stored in variables. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Level 5:** The code for Thermostat App v.3 is displayed.\n\n* Read Code: Give students a few minutes to read and discuss the code with their partners. What has changed? What has stayed the same?",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Level 5:** This program is again an updated version of the Thermostat app with a login screen. \n\n* Run the app: Let students run the app for a few minutes.\n* Predict: Students predict the information that is being stored in variables. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Level 6:** The code for Thermostat App v.3 is displayed.\n\n* Read Code: Give students a few minutes to read and discuss the code with their partners. What has changed? What has stayed the same?",
         "duration": "8",
         "name": "Investigation #3: Thermostat App v.3",
         "progression_name": "Investigation #3: Thermostat App v.3"
@@ -2131,8 +1984,19 @@
       }
     },
     {
-      "key": "57c174d5-6e7e-40d1-90df-82d942b5c83b",
+      "key": "41de0beb-5580-48cd-ae90-748226f8ed91",
       "position": 1,
+      "properties": {
+        "progression_name": "Predict"
+      },
+      "seeding_key": {
+        "activity_section.key": "41de0beb-5580-48cd-ae90-748226f8ed91",
+        "lesson_activity.key": "3f83304a-4ab6-4d5b-b7be-5de673849e3a"
+      }
+    },
+    {
+      "key": "57c174d5-6e7e-40d1-90df-82d942b5c83b",
+      "position": 2,
       "properties": {
         "description": "**Group:** Place students in pairs. One student per group should navigate to the lesson on Code Studio."
       },
@@ -2143,7 +2007,7 @@
     },
     {
       "key": "c209c8f7-76d0-40b1-bc0a-32cf4909c611",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": "15",
         "name": "Investigation 1: If-Statements",
@@ -2161,7 +2025,7 @@
     },
     {
       "key": "21807348-cb79-4378-8ce3-5120d8d722c0",
-      "position": 3,
+      "position": 4,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Video - Conditionals: If Statements** As a class watch the video [r introduction_to_conditionals_-_part_2a/csp/2023] on if-statements.",
         "progression_name": "Condi",
@@ -2179,7 +2043,7 @@
     },
     {
       "key": "36ad57b2-b07b-43c1-bd6b-f115706fb0b7",
-      "position": 4,
+      "position": 5,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Level 1 - Lemon Squeeze App Pt 1:** This code investigation includes a number of steps to help students get familiar with a new app."
       },
@@ -2190,7 +2054,7 @@
     },
     {
       "key": "42da57f3-21d1-485a-81dd-9bc13d019648",
-      "position": 5,
+      "position": 6,
       "properties": {
         "description": "* Form Pairs: Place students in pairs\n* Play the Game: Let students play the game for a couple minutes\n* Assign Code Sections: Count off pairs by three and assign them to one of the three code sections.\n* Read Code: Groups should carefully read the code for their section making sure they understand how it works. Give them 3 minutes to do so.\n* Explain Your Section: Have groups find members of the other two sections and carefully explain how their section works. Give each group 1-2 minutes to do so.\n* **Discuss**: *Ask a few members of each section to quickly share out how their section works. Display the code at the front so you can talk through it together.*\n  * **Discussion Goal:** The goal of this investigation is to get practice carefully reading a program that uses the new concept of conditionals as well as build on their knowledge and understanding of variables.\n    \n    * **What to look for:** As students describe their section of code, push students to go beyond reading the comments in their section of code to describe what their code does.  For example, instead of saying “It increases the score by one”, students should explain HOW that happens.  They might say “The value stored in the score variable increases by 1 and then the setProperty is used to show the increased score on the screen”.\n\n* **Modify**: Have groups return to their original seats. Give them a couple minutes to work on the modify the app so that the game ends once a user has 0 lives remaining."
       },
@@ -2201,7 +2065,7 @@
     },
     {
       "key": "20bf347d-8acc-49c7-adc0-de91dcd53c78",
-      "position": 6,
+      "position": 7,
       "properties": {
         "progression_name": "If-Statements"
       },
@@ -2212,7 +2076,7 @@
     },
     {
       "key": "a8f5e02f-a657-4699-9167-399ff2247409",
-      "position": 7,
+      "position": 8,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video - Conditionals: If-Else Statements** As a class watch the video [r introduction_to_conditionals_-_part_2b/csp/2023] on if-else statements. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Level 2 - Lemon Squeeze App Pt 2:** This code investigation includes a number of steps to help students get familiar with a new app.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Do This:** Now look together at lines 54-58. Students discuss with a partner how they think the MOD operator works.",
         "name": "Investigation 2: If-Else Statements and MOD",
@@ -2230,7 +2094,7 @@
     },
     {
       "key": "b7536dfa-9fec-4b17-87fc-85b0362843ab",
-      "position": 8,
+      "position": 9,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** The MOD operator is just like any other operator - it takes two numbers, processes them, and then returns a value. Click through the animations one by one as students give answers to each arithmetic statement.  \n    \n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Give students a few minutes to practice using the MOD operator with a partner, solving the problem on the screen. Then click through to see the answer."
       },
@@ -2241,7 +2105,7 @@
     },
     {
       "key": "3ab283fb-f7cf-4e87-903d-9197795ae0f3",
-      "position": 9,
+      "position": 10,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> MOD can be a little tricky, but here's what you need to remember: it's the remainder that is left after a number is divided by another number.\n\nWhy is this useful? A common usage is to determine if a number is even or odd. If you divide any number by two and there is no remainder, the number is even! You can also use MOD to determine if a number is divisible by another number.\n\nNow let's get back to another app investigation with functions with parameters and return values.",
         "remarks": true
@@ -2253,7 +2117,7 @@
     },
     {
       "key": "0b0ce97b-af1b-4e7c-9f3c-3c0d65f09225",
-      "position": 10,
+      "position": 11,
       "properties": {
         "progression_name": "If-Else Statements"
       },
@@ -2264,7 +2128,7 @@
     },
     {
       "key": "23d812e6-4c05-426e-a3f7-92ff4ae20c02",
-      "position": 11,
+      "position": 12,
       "properties": {
         "description": "\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video - Conditionals: If-Else-If Statements** As a class watch the video [r introduction_to_conditionals_-_part_2c/csp/2023] on if-else-if statements.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Level 3 - Lemon Squeeze App Pt 3** This program is an updated version of the Lemon Squeeze app. This time students should continue to work in partners but do not need to work with other groups. They will need to",
         "duration": "10",
@@ -2283,7 +2147,7 @@
     },
     {
       "key": "1c1a8993-7fe7-4faa-bebf-99d62780f4f0",
-      "position": 12,
+      "position": 13,
       "properties": {
         "description": "* Play the Game: Have students play the game\n* Discuss Changes: Talk through how the game plays differently now\n* Find the `if-else-if` command: Have students find the command\n* Draw a flowchart: Students should draw a flow chart for the if-else-if command in their journals\n* **Modify**: Modify the program to make the lemon even smaller when the player has more than 15 points."
       },
@@ -2294,7 +2158,7 @@
     },
     {
       "key": "142e29dc-a269-4661-817b-4409f558eba4",
-      "position": 13,
+      "position": 14,
       "properties": {
         "progression_name": "If-Else-If Statements"
       },
@@ -2305,7 +2169,7 @@
     },
     {
       "key": "46577e3e-2960-46c5-bc3f-bafdb23cc543",
-      "position": 14,
+      "position": 15,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video - Conditionals: If-Else Statements** As a class watch the video [r introduction_to_conditionals_-_part_3/csp/2023] on logical operators.",
         "duration": "10",
@@ -2318,7 +2182,7 @@
     },
     {
       "key": "c4db6dc0-85b0-4174-91eb-d4c64d4fb3e2",
-      "position": 15,
+      "position": 16,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Level 4 - Lemon Squeeze App Pt 4:** This program is a final version of the Lemon Squeeze app. Again students should work with partners.",
         "tips": [
@@ -2335,7 +2199,7 @@
     },
     {
       "key": "23486461-f3f1-4361-bba4-2d1a0e6c7673",
-      "position": 16,
+      "position": 17,
       "properties": {
         "description": "* Play the Game: Have students play the game\n* Discuss Changes: Talk through how the game plays differently now\n* Find the `if-else-if` command: Have students find the if-else-if command that was added\n* Draw a Flowchart: Students should draw a flowchart of this new if-else-if command\n* **Modify**: Modify the program to add a new username and password. Students will have to modify the code as well as the user interface."
       },
@@ -2346,7 +2210,7 @@
     },
     {
       "key": "7c061907-0662-4db5-b83c-4e5d618cc95c",
-      "position": 17,
+      "position": 18,
       "properties": {
         "progression_name": "Logical Operators: AND OR"
       },
@@ -3141,21 +3005,12 @@
       }
     },
     {
-      "key": "08a0bb70-3cc9-4ef8-81ee-925187dd73a4",
-      "position": 1,
-      "properties": {
-        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1zvvaHZ1YTF5G7FxoiKqmJFNFsHfdqiPry_NPsYo44cw/edit?usp=sharing) to access the modifications."
-      },
-      "seeding_key": {
-        "activity_section.key": "08a0bb70-3cc9-4ef8-81ee-925187dd73a4",
-        "lesson_activity.key": "1244957c-8acc-4a0e-8f46-19ca493ae208"
-      }
-    },
-    {
       "key": "6e41cde1-c196-4f90-b40f-88b263af57aa",
       "position": 1,
       "properties": {
-        "name": "Intro the Project",
+        "description": "####Intro the Project",
+        "duration": "5",
+        "name": "Warm Up",
         "tips": [
           {
             "type": "teachingTip",
@@ -3181,76 +3036,77 @@
       }
     },
     {
-      "key": "66a1c847-629c-499c-87ed-69c765f5c0cb",
-      "position": 1,
+      "key": "ea7dcb25-25c8-4090-865a-6a31dbc8ccbf",
+      "position": 3,
       "properties": {
-        "description": "**Level 1-2 - Explore:** Have students explore the two sample apps in levels 1 and 2. These apps should spark ideas in what the students can create for this project.\n\n**Sample App #1: Where Should I Eat?** \n\n* Recommends a restaurant to the user.\n* Inputs: text box for user name, drop down menu for restaurant type, up and down buttons to control the amount of dollars the user wants to spend.\n* Outputs: Text box at the bottom of the screen which displays the recommendation and sound that plays when the user interacts with the app. \n* Variables: username, type of restaurant, dollar amount, output text\n* Conditional Logic: If the dollar amount within certain amounts, recommend different restaurants\n* Function: Update the screen every time the user changes an input. \n\n**Sample App #2: Activity Finder** \n\n* Recommends an activity to the user.\n* Inputs: text box for user name, drop down menu for time of day, drop down menu for activity level.\n* Outputs: Text box at the bottom of the screen which displays the recommendation and sound that plays when the user interacts with the app. \n* Variables: username, time of day, activity level, output text\n* Conditional Logic: If the user selects certain times of day and activity levels, make targeted recommendations.  \n* Function: Update the screen every time the user changes an input. \n\n",
-        "name": "Plan the Decision Maker App\r"
+        "description": "####Plan the Decision Maker App\n**Level 1-2 - Explore:** Have students explore the two sample apps in levels 1 and 2. These apps should spark ideas in what the students can create for this project.\n\n**Sample App #1: Where Should I Eat?** \n\n* Recommends a restaurant to the user.\n* Inputs: text box for user name, drop down menu for restaurant type, up and down buttons to control the amount of dollars the user wants to spend.\n* Outputs: Text box at the bottom of the screen which displays the recommendation and sound that plays when the user interacts with the app. \n* Variables: username, type of restaurant, dollar amount, output text\n* Conditional Logic: If the dollar amount within certain amounts, recommend different restaurants\n* Function: Update the screen every time the user changes an input. \n\n**Sample App #2: Activity Finder** \n\n* Recommends an activity to the user.\n* Inputs: text box for user name, drop down menu for time of day, drop down menu for activity level.\n* Outputs: Text box at the bottom of the screen which displays the recommendation and sound that plays when the user interacts with the app. \n* Variables: username, time of day, activity level, output text\n* Conditional Logic: If the user selects certain times of day and activity levels, make targeted recommendations.  \n* Function: Update the screen every time the user changes an input. \n\n",
+        "duration": "40",
+        "name": "Activity"
       },
       "seeding_key": {
-        "activity_section.key": "66a1c847-629c-499c-87ed-69c765f5c0cb",
-        "lesson_activity.key": "46210050-edd2-4362-a647-275a649d3b07"
+        "activity_section.key": "ea7dcb25-25c8-4090-865a-6a31dbc8ccbf",
+        "lesson_activity.key": "cbc34937-3f1c-42f7-a949-97d56d1d94eb"
       }
     },
     {
-      "key": "fcb43dd6-6854-4676-88d7-92f414d4d96f",
-      "position": 2,
+      "key": "a5e79a30-d1fd-45e1-9833-afa4209dc055",
+      "position": 4,
       "properties": {
         "progression_name": "Sample Apps"
       },
       "seeding_key": {
-        "activity_section.key": "fcb43dd6-6854-4676-88d7-92f414d4d96f",
-        "lesson_activity.key": "46210050-edd2-4362-a647-275a649d3b07"
+        "activity_section.key": "a5e79a30-d1fd-45e1-9833-afa4209dc055",
+        "lesson_activity.key": "cbc34937-3f1c-42f7-a949-97d56d1d94eb"
       }
     },
     {
-      "key": "ece23c66-65c8-47aa-ac57-81a67d1d8105",
-      "position": 3,
+      "key": "35b1fc63-ba9c-4657-8e27-266c16f5067f",
+      "position": 5,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *For each app, discuss the following:*"
       },
       "seeding_key": {
-        "activity_section.key": "ece23c66-65c8-47aa-ac57-81a67d1d8105",
-        "lesson_activity.key": "46210050-edd2-4362-a647-275a649d3b07"
+        "activity_section.key": "35b1fc63-ba9c-4657-8e27-266c16f5067f",
+        "lesson_activity.key": "cbc34937-3f1c-42f7-a949-97d56d1d94eb"
       }
     },
     {
-      "key": "ef4137a7-52a0-43c4-b3d3-e2727480a29a",
-      "position": 4,
+      "key": "a32b507c-b729-4324-8b93-95d57dcc8d05",
+      "position": 6,
       "properties": {
         "description": "* *What does this app do?*\n* *What are the inputs?*\n* *What are the outputs?*\n* *What variables do you think would be necessary for this app to work?*\n* *What kinds of conditional logic do you think are necessary to make it work?*\n* *How could a function be used in this app?*\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Each student should have a copy of the Practice PT Decision Maker App Planning Guide."
       },
       "seeding_key": {
-        "activity_section.key": "ef4137a7-52a0-43c4-b3d3-e2727480a29a",
-        "lesson_activity.key": "46210050-edd2-4362-a647-275a649d3b07"
+        "activity_section.key": "a32b507c-b729-4324-8b93-95d57dcc8d05",
+        "lesson_activity.key": "cbc34937-3f1c-42f7-a949-97d56d1d94eb"
       }
     },
     {
-      "key": "a97cb87d-2bcd-4b0e-a217-404b830cb4bf",
-      "position": 5,
+      "key": "ff84271d-610f-4b47-b44e-bad6fb98b579",
+      "position": 7,
       "properties": {
         "description": "For this project you will create an app that helps a user make a decision. Your app must take in at least one number and one string from the user that will help to make the decision. All of this information will be used as part of the decision making process. In addition, your code must include at least one function used to update the screen.",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "a97cb87d-2bcd-4b0e-a217-404b830cb4bf",
-        "lesson_activity.key": "46210050-edd2-4362-a647-275a649d3b07"
+        "activity_section.key": "ff84271d-610f-4b47-b44e-bad6fb98b579",
+        "lesson_activity.key": "cbc34937-3f1c-42f7-a949-97d56d1d94eb"
       }
     },
     {
-      "key": "cd3bc968-59d4-4869-ab48-9a3811e15fee",
-      "position": 6,
+      "key": "f4046f66-a6e1-4fc8-9f50-2c79c6860170",
+      "position": 8,
       "properties": {
         "description": "Review the app requirements in the Planning Guide."
       },
       "seeding_key": {
-        "activity_section.key": "cd3bc968-59d4-4869-ab48-9a3811e15fee",
-        "lesson_activity.key": "46210050-edd2-4362-a647-275a649d3b07"
+        "activity_section.key": "f4046f66-a6e1-4fc8-9f50-2c79c6860170",
+        "lesson_activity.key": "cbc34937-3f1c-42f7-a949-97d56d1d94eb"
       }
     },
     {
-      "key": "17694457-7af0-48b8-a048-a01bb805128d",
-      "position": 7,
+      "key": "1ada5946-7bcc-420d-a27d-f747a605094c",
+      "position": 9,
       "properties": {
         "tips": [
           {
@@ -3260,306 +3116,262 @@
         ]
       },
       "seeding_key": {
-        "activity_section.key": "17694457-7af0-48b8-a048-a01bb805128d",
-        "lesson_activity.key": "46210050-edd2-4362-a647-275a649d3b07"
+        "activity_section.key": "1ada5946-7bcc-420d-a27d-f747a605094c",
+        "lesson_activity.key": "cbc34937-3f1c-42f7-a949-97d56d1d94eb"
       }
     },
     {
-      "key": "43ad639a-f3ea-4244-885c-fc80397a78b6",
-      "position": 8,
+      "key": "70736ff7-4d58-4dd2-b6c5-7d4813f46088",
+      "position": 10,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Display:** Show the steps students will complete today in the Planning Guide.\n\n**Step 1:** Brainstorm App Ideas\n\t\n* Students come up with three distinct ideas\n\n**Step 2:** Choose one Idea\n\n**Step 3:** Survey Your Classmates\n\t\n* Students discuss with two classmates the decision their app will help the user make and decide what information is needed to make this decision. \n\n**Step 4:** Storing Information\n\t\n* Variables needed for storing information are listed in this section. \n\n**Step 5:** Flowchart\n\t\n* Students create a flowchart, following the \"Can I adopt a cat?\" sample flowchart from the Conditionals Explore lesson. \n\n**Step 6:** Design User Interface\n\t\n* There is space for students to design up to three screens. There are no screen requirements for the app, so students may use only one screen."
       },
       "seeding_key": {
-        "activity_section.key": "43ad639a-f3ea-4244-885c-fc80397a78b6",
+        "activity_section.key": "70736ff7-4d58-4dd2-b6c5-7d4813f46088",
+        "lesson_activity.key": "cbc34937-3f1c-42f7-a949-97d56d1d94eb"
+      }
+    },
+    {
+      "key": "583e1f99-7422-4e77-b0af-457f5dcc3be2",
+      "position": 11,
+      "properties": {
+        "description": "No wrap up today. All time should be spent on the project.",
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "583e1f99-7422-4e77-b0af-457f5dcc3be2",
+        "lesson_activity.key": "cbc34937-3f1c-42f7-a949-97d56d1d94eb"
+      }
+    },
+    {
+      "key": "0427909f-6b04-48ef-b5ac-833e58aae8bf",
+      "position": 1,
+      "properties": {
+        "description": "Today we are continuing work on the Decision Maker App. Each level in Code Studio contains a step to think through while constructing your app.",
+        "duration": "2",
+        "name": "Warm Up",
+        "remarks": true,
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Short Intro:** The Warm Up today is short and light. Students should spend the maximum amount of time working on their projects. "
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "0427909f-6b04-48ef-b5ac-833e58aae8bf",
         "lesson_activity.key": "46210050-edd2-4362-a647-275a649d3b07"
       }
     },
     {
-      "key": "cab15816-3a32-4e96-9b6a-b2f73759cae3",
-      "position": 1,
+      "key": "7c249e26-c022-4560-8b66-cc51498106f3",
+      "position": 2,
       "properties": {
-        "description": "No wrap up today. All time should be spent on the project."
-      },
-      "seeding_key": {
-        "activity_section.key": "cab15816-3a32-4e96-9b6a-b2f73759cae3",
-        "lesson_activity.key": "4869449c-bbad-42ba-98b5-cb2794c1c89a"
-      }
-    },
-    {
-      "key": "236e6591-bc88-4cc1-a6ce-26e3af80704a",
-      "position": 1,
-      "properties": {
-        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1PxbDC71SjLrQGDvItpPws7W3klXrjPNATa8jgWmeKdo/edit?usp=sharing) to access the modifications."
-      },
-      "seeding_key": {
-        "activity_section.key": "236e6591-bc88-4cc1-a6ce-26e3af80704a",
-        "lesson_activity.key": "2b3549d7-6bf1-43f1-8b78-91fdb2dccbfa"
-      }
-    },
-    {
-      "key": "a91479e9-3411-4c7a-b183-3278e3eeff85",
-      "position": 1,
-      "properties": {
-        "name": "Intro the Project\r",
+        "description": "####Build the Decision Maker App",
+        "duration": "43",
+        "name": "Activity",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Short Intro:** The Warm Up today is short and light. Students should spend the maximum amount of time working on their projects. \r\n"
+            "markdown": "**Supporting students in Practice PT Lessons**\n\nAt this point in the project attention shifts to App Lab where students design and program their app. Continue to circulate the room and check in with students as needed to make sure instructions are clear and students understand expectations. \n\nWhat should you expect?\n\n* Planning Guides out on desks or tables so students can reference them while setting up their apps\n* A healthy buzz in the classroom as students collaboratively debug\n* There may be some student confusion on the steps to take in building their app. Direct students back to the instructions, and make sure they haven't skipped any of the levels where the steps are delineated.  "
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "a91479e9-3411-4c7a-b183-3278e3eeff85",
-        "lesson_activity.key": "ab3a9527-289a-486f-97d0-47a87482c077"
+        "activity_section.key": "7c249e26-c022-4560-8b66-cc51498106f3",
+        "lesson_activity.key": "46210050-edd2-4362-a647-275a649d3b07"
       }
     },
     {
-      "key": "fa3c49fe-32a3-427d-99fc-79285080e584",
-      "position": 2,
-      "properties": {
-        "description": "Today we are continuing work on the Decision Maker App. Each level in Code Studio contains a step to think through while constructing your app.",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "fa3c49fe-32a3-427d-99fc-79285080e584",
-        "lesson_activity.key": "ab3a9527-289a-486f-97d0-47a87482c077"
-      }
-    },
-    {
-      "key": "084850ec-8e6f-4316-8b42-f39c59e8b990",
-      "position": 1,
-      "properties": {
-        "name": "Build the Decision Maker App\r",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**Supporting students in Practice PT Lessons**\n\nAt this point in the project attention shifts to App Lab where students design and program their app. Continue to circulate the room and check in with students as needed to make sure instructions are clear and students understand expectations. \n\nWhat should you expect?\n\n* Planning Guides out on desks or tables so students can reference them while setting up their apps\n* A healthy buzz in the classroom as students collaboratively debug\n* There may be some student confusion on the steps to take in building their app. Direct students back to the instructions, and make sure they haven't skipped any of the levels where the steps are delineated.  \n\n"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "084850ec-8e6f-4316-8b42-f39c59e8b990",
-        "lesson_activity.key": "9126d71a-155d-4984-ba57-8770be67f0e7"
-      }
-    },
-    {
-      "key": "cfd1d734-9b0b-4482-8802-0f7154b08323",
-      "position": 2,
+      "key": "df6ab478-bf3e-4b5a-86f4-33f87009cbe3",
+      "position": 3,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students now transition to Code Studio where they will build their app."
       },
       "seeding_key": {
-        "activity_section.key": "cfd1d734-9b0b-4482-8802-0f7154b08323",
-        "lesson_activity.key": "9126d71a-155d-4984-ba57-8770be67f0e7"
+        "activity_section.key": "df6ab478-bf3e-4b5a-86f4-33f87009cbe3",
+        "lesson_activity.key": "46210050-edd2-4362-a647-275a649d3b07"
       }
     },
     {
-      "key": "8fd083b2-64f4-4fa0-bf6e-67affe96ed83",
-      "position": 3,
+      "key": "6919488f-b29c-4e21-94ce-5c9c5be0d36f",
+      "position": 4,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Display:** Display the steps for today along with the debugging steps on the board while students work."
       },
       "seeding_key": {
-        "activity_section.key": "8fd083b2-64f4-4fa0-bf6e-67affe96ed83",
-        "lesson_activity.key": "9126d71a-155d-4984-ba57-8770be67f0e7"
+        "activity_section.key": "6919488f-b29c-4e21-94ce-5c9c5be0d36f",
+        "lesson_activity.key": "46210050-edd2-4362-a647-275a649d3b07"
       }
     },
     {
-      "key": "0e177b79-183f-4aa0-b5aa-273523f22ffb",
-      "position": 4,
-      "properties": {
-        "description": "**Level 1:** Design Mode\n\n* Students create the screens they designed in Step 6 in the Planning Guide. \n* Encourage students to use templates where appropriate to speed the process along. \n",
-        "progression_name": "Create the Screens"
-      },
-      "seeding_key": {
-        "activity_section.key": "0e177b79-183f-4aa0-b5aa-273523f22ffb",
-        "lesson_activity.key": "9126d71a-155d-4984-ba57-8770be67f0e7"
-      }
-    },
-    {
-      "key": "11fbb5d9-0511-4e12-ae14-7462752b69b0",
+      "key": "d3497429-2fd7-4d83-94ea-b358b829593b",
       "position": 5,
       "properties": {
-        "description": "\n**Level 2:** Create the Variables\n\n* Using the list of variables from Step 4 in the Planning Guide students create their variables. \n",
+        "description": "**Level 3:** Design Mode\n\n* Students create the screens they designed in Step 6 in the Planning Guide. \n* Encourage students to use templates where appropriate to speed the process along. \n",
+        "progression_name": "Design Mode"
+      },
+      "seeding_key": {
+        "activity_section.key": "d3497429-2fd7-4d83-94ea-b358b829593b",
+        "lesson_activity.key": "46210050-edd2-4362-a647-275a649d3b07"
+      }
+    },
+    {
+      "key": "37523e56-0432-433d-9901-5f508f4b19ca",
+      "position": 6,
+      "properties": {
+        "description": "\n**Level 4:** Create the Variables\n\n* Using the list of variables from Step 4 in the Planning Guide students create their variables. \n",
         "progression_name": "Create the Variables"
       },
       "seeding_key": {
-        "activity_section.key": "11fbb5d9-0511-4e12-ae14-7462752b69b0",
-        "lesson_activity.key": "9126d71a-155d-4984-ba57-8770be67f0e7"
+        "activity_section.key": "37523e56-0432-433d-9901-5f508f4b19ca",
+        "lesson_activity.key": "46210050-edd2-4362-a647-275a649d3b07"
       }
     },
     {
-      "key": "de51e06e-ffb5-4d4c-8ce5-c17a4b0ff341",
-      "position": 6,
+      "key": "c9eb01da-5435-442c-8e61-2d2667cf3a71",
+      "position": 7,
       "properties": {
-        "description": "**Level 3:** Create the Function\n\n* This is most likely the trickiest step. \n* Students create an `updateScreen()` function with a conditional statement\n* Students should reference the flowchart in Step 5 of the Planning Guide to help craft the Boolean expression(s) for the conditional statement. \n* A comment is added to explain what it does (purpose) and how it does that (functionality)",
+        "description": "**Level 5:** Create the Function\n\n* This is most likely the trickiest step. \n* Students create an `updateScreen()` function with a conditional statement\n* Students should reference the flowchart in Step 5 of the Planning Guide to help craft the Boolean expression(s) for the conditional statement. \n* A comment is added to explain what it does (purpose) and how it does that (functionality)",
         "progression_name": "Create the Function"
       },
       "seeding_key": {
-        "activity_section.key": "de51e06e-ffb5-4d4c-8ce5-c17a4b0ff341",
-        "lesson_activity.key": "9126d71a-155d-4984-ba57-8770be67f0e7"
+        "activity_section.key": "c9eb01da-5435-442c-8e61-2d2667cf3a71",
+        "lesson_activity.key": "46210050-edd2-4362-a647-275a649d3b07"
       }
     },
     {
-      "key": "bacab67b-aa3d-45cb-b19d-da43c607ac88",
-      "position": 7,
+      "key": "a28d1b21-ea3d-42ea-807b-333f773ba658",
+      "position": 8,
       "properties": {
-        "description": "\n**Level 4:** Add onEvents\n\n* For each item that can be interacted with on the screen, students add an [`onEvent`(#fff176)](/docs/applab/onEvent/) block where they update the appropriate variable and add a call to the `updateScreen()` function.",
+        "description": "\n**Level 6:** Add onEvents\n\n* For each item that can be interacted with on the screen, students add an [`onEvent`(#fff176)](/docs/applab/onEvent/) block where they update the appropriate variable and add a call to the `updateScreen()` function.",
         "progression_name": "Add onEvents"
       },
       "seeding_key": {
-        "activity_section.key": "bacab67b-aa3d-45cb-b19d-da43c607ac88",
-        "lesson_activity.key": "9126d71a-155d-4984-ba57-8770be67f0e7"
+        "activity_section.key": "a28d1b21-ea3d-42ea-807b-333f773ba658",
+        "lesson_activity.key": "46210050-edd2-4362-a647-275a649d3b07"
       }
     },
     {
-      "key": "2fd8206d-3f9d-44f2-a008-c8e1b099fe16",
-      "position": 1,
+      "key": "77feeee2-5ee2-4482-8b5e-7b5da1b7e0ce",
+      "position": 9,
       "properties": {
-        "description": "No wrap-up today. All time is spent on the project."
+        "description": "No wrap-up today. All time is spent on the project.",
+        "name": "Wrap Up"
       },
       "seeding_key": {
-        "activity_section.key": "2fd8206d-3f9d-44f2-a008-c8e1b099fe16",
-        "lesson_activity.key": "fce07d6a-12b8-475c-a037-3935c70b1260"
+        "activity_section.key": "77feeee2-5ee2-4482-8b5e-7b5da1b7e0ce",
+        "lesson_activity.key": "46210050-edd2-4362-a647-275a649d3b07"
       }
     },
     {
-      "key": "85df8d38-72d0-4858-8723-4f3b9fc70d0c",
+      "key": "07560134-8d64-4f61-b4f8-5271c71d8867",
       "position": 1,
-      "properties": {
-        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1p3eppLLFOaA9cFLYNsOl9O4m9DCnHiPwJl6-ucU0EWw/edit?usp=sharing) to access the modifications."
-      },
-      "seeding_key": {
-        "activity_section.key": "85df8d38-72d0-4858-8723-4f3b9fc70d0c",
-        "lesson_activity.key": "81c7c75a-0dab-475a-99ad-a81134fc7e12"
-      }
-    },
-    {
-      "key": "491800bc-08cf-42e0-8d94-2c27f13d8621",
-      "position": 1,
-      "properties": {
-        "name": "Intro the Project\r",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**Short Intro:** The Warm Up today is short and light. Students should spend the maximum amount of time working on their projects. \r\n"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "491800bc-08cf-42e0-8d94-2c27f13d8621",
-        "lesson_activity.key": "fe26e801-4131-4be5-934a-d86b9dd355c2"
-      }
-    },
-    {
-      "key": "354b3ed7-7909-479a-a7a5-2072322d2285",
-      "position": 2,
       "properties": {
         "description": "For the past few days we've been working on an app to help users make a decision. Now you will share that app with others, get feedback, make improvements, and submit for your final project.",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "354b3ed7-7909-479a-a7a5-2072322d2285",
-        "lesson_activity.key": "fe26e801-4131-4be5-934a-d86b9dd355c2"
-      }
-    },
-    {
-      "key": "5126975c-8b43-4e06-ad4e-a7a691d1085e",
-      "position": 1,
-      "properties": {
-        "name": "Test the Decision Maker App\r",
+        "duration": "2",
+        "name": "Warm Up",
+        "remarks": true,
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Supporting students in Practice PT Lessons**\n\nThis is the final lesson where students complete their projects. The classroom energy will likely increase when students begin Step 8 and collect feedback from classmates. Encourage students to work productively during the testing phase so they have enough time to finish their projects.  \n\nWhat should you expect?\n\n* It's ok to start the testing phase even if the apps aren't finished. Students should be able to explain to each other what they want their app to do when fully operational. \n* Students should have their Planning Guides out again to record feedback and plans for implementing changes\n* Frustration may be higher today if students feel rushed to debug and fix their projects for final submission. Make sure students have debugging partners and are actively making use of their debugging skills. \n* If students are inspired to continue working on their projects or add additional features, you may need to extend the project an extra day or allow students to work outside of class. \n\n\n"
+            "markdown": "**Short Intro:** The Warm Up today is short and light. Students should spend the maximum amount of time working on their projects. "
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "5126975c-8b43-4e06-ad4e-a7a691d1085e",
-        "lesson_activity.key": "61c9d2df-8c1a-4b0c-ae82-3fdb492e51a3"
+        "activity_section.key": "07560134-8d64-4f61-b4f8-5271c71d8867",
+        "lesson_activity.key": "a343fd86-0e51-4c19-a825-5e855ae474c4"
       }
     },
     {
-      "key": "5fac9bf1-5767-4ce3-8d06-188a6f57d228",
+      "key": "0cd92f6c-80e9-4fc4-b63b-ff2b5e96c734",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Group:** Put students in groups of 3-4.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Do This:** Direct students to Level 1 in Code Studio. They should pull out their Planning Guides and with their group complete Step 8: Testing.",
-        "progression_name": "Test Your Decision Maker App"
+        "description": "####Test the Decision Maker App",
+        "duration": "33",
+        "name": "Activity",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Supporting students in Practice PT Lessons**\n\nThis is the final lesson where students complete their projects. The classroom energy will likely increase when students begin Step 8 and collect feedback from classmates. Encourage students to work productively during the testing phase so they have enough time to finish their projects.  \n\nWhat should you expect?\n\n* It's ok to start the testing phase even if the apps aren't finished. Students should be able to explain to each other what they want their app to do when fully operational. \n* Students should have their Planning Guides out again to record feedback and plans for implementing changes\n* Frustration may be higher today if students feel rushed to debug and fix their projects for final submission. Make sure students have debugging partners and are actively making use of their debugging skills. \n* If students are inspired to continue working on their projects or add additional features, you may need to extend the project an extra day or allow students to work outside of class. \n"
+          }
+        ]
       },
       "seeding_key": {
-        "activity_section.key": "5fac9bf1-5767-4ce3-8d06-188a6f57d228",
-        "lesson_activity.key": "61c9d2df-8c1a-4b0c-ae82-3fdb492e51a3"
+        "activity_section.key": "0cd92f6c-80e9-4fc4-b63b-ff2b5e96c734",
+        "lesson_activity.key": "a343fd86-0e51-4c19-a825-5e855ae474c4"
       }
     },
     {
-      "key": "d9e5d155-e064-4892-ae59-ba6d5d2de0c7",
+      "key": "1793eccc-31ff-43b1-b634-e930cb7bfb51",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Step 8:** Testing\n\n* Each app is tested by at least two students.\n* The creator of the app watches these students use the app and records feedback from the testers and things the creator noticed while observing someone else using the app. For example, the creator may notice that the user has difficulty figuring out which button to click on the app to make it run. The creator notes this down in the Planning Guide. \n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Step 9:** Pick Improvements\n\n* In the Planning Guide, students pick at least one improvement that they can make based on feedback from their peers.\n\n**Step 10:** Complete Your app\n\n* Students use the feedback to update their app on Level 1. \n\n**Step 11:** Record Video\n\n* Students make a screen capture of their app being used. \n\n\n**Submit:** Students complete a final check of their completed projects on Level 2. The rubric is displayed in the instruction box.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Group:** Put students in groups of 3-4.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Do This:** Direct students to Level 7 in Code Studio. They should pull out their Planning Guides and with their group complete Step 8: Testing.",
+        "progression_name": "Test the Decision Maker App"
+      },
+      "seeding_key": {
+        "activity_section.key": "1793eccc-31ff-43b1-b634-e930cb7bfb51",
+        "lesson_activity.key": "a343fd86-0e51-4c19-a825-5e855ae474c4"
+      }
+    },
+    {
+      "key": "ace72454-dbf8-448f-8c05-d7d496a3ed53",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Step 8:** Testing\n\n* Each app is tested by at least two students.\n* The creator of the app watches these students use the app and records feedback from the testers and things the creator noticed while observing someone else using the app. For example, the creator may notice that the user has difficulty figuring out which button to click on the app to make it run. The creator notes this down in the Planning Guide. \n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Step 9:** Pick Improvements\n\n* In the Planning Guide, students pick at least one improvement that they can make based on feedback from their peers.\n\n**Step 10:** Complete Your app\n\n* Students use the feedback to update their app on Level 1. \n\n**Step 11:** Record Video\n\n* Students make a screen capture of their app being used. ",
         "progression_name": "Submit Your Decision Maker App"
       },
       "seeding_key": {
-        "activity_section.key": "d9e5d155-e064-4892-ae59-ba6d5d2de0c7",
-        "lesson_activity.key": "61c9d2df-8c1a-4b0c-ae82-3fdb492e51a3"
+        "activity_section.key": "ace72454-dbf8-448f-8c05-d7d496a3ed53",
+        "lesson_activity.key": "a343fd86-0e51-4c19-a825-5e855ae474c4"
       }
     },
     {
-      "key": "c0dfd990-e32d-4553-9c1f-1ff8948c63c7",
-      "position": 1,
+      "key": "9ede8008-c02f-443f-83c5-9b8564128861",
+      "position": 5,
       "properties": {
         "description": "Congratulations! You built an app completely from scratch.",
+        "duration": "10",
+        "name": "Wrap Up",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "c0dfd990-e32d-4553-9c1f-1ff8948c63c7",
-        "lesson_activity.key": "ebd42990-df87-4045-aee9-797688a3ead9"
+        "activity_section.key": "9ede8008-c02f-443f-83c5-9b8564128861",
+        "lesson_activity.key": "a343fd86-0e51-4c19-a825-5e855ae474c4"
       }
     },
     {
-      "key": "1b2f8c18-b1fa-49e3-ad82-98de5dced568",
-      "position": 2,
+      "key": "abe98048-f01c-47da-a4c0-ea04b985dd1f",
+      "position": 6,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Reflection:** Complete the two reflection questions in the Planning Guide\n\n* **Question 1:** Provide a written response that:\n\t* describes the overall purpose of the program \n\t* describes the functionality of your app\n\t* describes the input and outputs of your app\n\t(Approx 150 words)\n\n* **Question 2:** This project was created using a development process that required you to incorporate the ideas of your partner and feedback from your classmates. Provide a written response that describes one part of your app that was improved through input from EITHER your partner or feedback you received from classmates. Include:\n\t* Who specifically provided the idea or recommendation\n\t* What their idea or recommendation was\n\t* The specific change you made to your app’s user interface or functionality in response to the recommendation\n\t* How you believe this change improved your app\n\t(Approx 150 words)\n"
       },
       "seeding_key": {
-        "activity_section.key": "1b2f8c18-b1fa-49e3-ad82-98de5dced568",
-        "lesson_activity.key": "ebd42990-df87-4045-aee9-797688a3ead9"
+        "activity_section.key": "abe98048-f01c-47da-a4c0-ea04b985dd1f",
+        "lesson_activity.key": "a343fd86-0e51-4c19-a825-5e855ae474c4"
       }
     },
     {
-      "key": "6da0ec40-a926-4902-a246-bdc1b282fcea",
-      "position": 3,
+      "key": "7fd2eb6b-bd46-45a3-a31f-6d830f4408ab",
+      "position": 7,
       "properties": {
-        "description": "Use the [CSP U4 Practice PT Rubric](https://docs.google.com/document/d/1mldgFK3CJbsWnTS8WYVDtEY1e7V4c0_V0sv63dYUkG8/edit?usp=sharing) provided with the project to assess student work.",
-        "name": "Assessment: Practice PT Decision Maker Project\r"
+        "description": "####Assessment: Practice PT Decision Maker Project\nUse the [CSP U4 Practice PT Rubric](https://docs.google.com/document/d/1t1A3enKlL6m7XP784neF8Bif6bGMFlx9IUvrgxf3dRY/edit?usp=sharing) provided with the project to assess student work."
       },
       "seeding_key": {
-        "activity_section.key": "6da0ec40-a926-4902-a246-bdc1b282fcea",
-        "lesson_activity.key": "ebd42990-df87-4045-aee9-797688a3ead9"
+        "activity_section.key": "7fd2eb6b-bd46-45a3-a31f-6d830f4408ab",
+        "lesson_activity.key": "a343fd86-0e51-4c19-a825-5e855ae474c4"
       }
     },
     {
-      "key": "0c82d397-774d-4955-9ea6-14f1e0f45483",
-      "position": 4,
+      "key": "90796d52-b51d-402f-a33e-6e197995aef2",
+      "position": 8,
       "properties": {
         "progression_name": "End-of-Unit Survey"
       },
       "seeding_key": {
-        "activity_section.key": "0c82d397-774d-4955-9ea6-14f1e0f45483",
-        "lesson_activity.key": "ebd42990-df87-4045-aee9-797688a3ead9"
-      }
-    },
-    {
-      "key": "e9013e1f-8e25-42ae-8337-d6c86c979b34",
-      "position": 1,
-      "properties": {
-        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1uKzYgOlOTqNJNTvVuioqX-o8xhmXQMfjOvAh9pWDcb4/edit?usp=sharing) to access the modifications."
-      },
-      "seeding_key": {
-        "activity_section.key": "e9013e1f-8e25-42ae-8337-d6c86c979b34",
-        "lesson_activity.key": "9c862920-accd-4bd8-869b-a697a602aacf"
+        "activity_section.key": "90796d52-b51d-402f-a33e-6e197995aef2",
+        "lesson_activity.key": "a343fd86-0e51-4c19-a825-5e855ae474c4"
       }
     },
     {
@@ -3571,7 +3383,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "### Topic Coverage\n\nThe College Board has provided a bank of questions to help formatively assess student understanding of the content in the framework. These questions are mapped to topics with each topic having a handful of questions available.\n\nThe College Board has a few strict guidelines about how topic questions can be used. In particular, students may not receive a grade based on performance on topic questions nor can they be used for teacher evaluation. Beyond these requirements, however, they are primarily intended to formatively assess student progress and learning as they prepare for the end of course exam.\n\nWithin our own course we recommend that you use them in a variety of ways:\n\n* Throughout the unit assign topic questions to students related to the topics students are learning about that day or that week\n* Prior to the unit assessment assign topic questions to help students practice and prepare for the summative assessment\n* After the unit assessment use these topic questions to help students track their progress towards preparation for the AP assessment\n\n![](https://curriculum.code.org/media/uploads/topics4_exilLPP.png)\n\nClick for more info: [Code.org CSP Topic Coverage](https://docs.google.com/document/d/1pjzi6hjYC6WJPjVGiCfsevZcfQQ-c7TgAlprjXjNrwo/edit?usp=sharing)\n"
+            "markdown": "### Topic Coverage\n\nThe College Board has provided a bank of questions to help formatively assess student understanding of the content in the framework. These questions are mapped to topics with each topic having a handful of questions available.\n\nThe College Board has a few strict guidelines about how topic questions can be used. In particular, students may not receive a grade based on performance on topic questions nor can they be used for teacher evaluation. Beyond these requirements, however, they are primarily intended to formatively assess student progress and learning as they prepare for the end of course exam.\n\nWithin our own course we recommend that you use them in a variety of ways:\n\n* Throughout the unit assign topic questions to students related to the topics students are learning about that day or that week\n* Prior to the unit assessment assign topic questions to help students practice and prepare for the summative assessment\n* After the unit assessment use these topic questions to help students track their progress towards preparation for the AP assessment\n\n![](https://curriculum.code.org/media/uploads/topics4_exilLPP.png)\n\nClick for more info: [Code.org CSP Topic Coverage](https://docs.google.com/document/d/1l9VDL92DCIbTNhTiLGIr-enBOTM4wEDTTQOBlJ7bBhM/edit?usp=share_link)\n"
           }
         ]
       },
@@ -3600,6 +3412,56 @@
       "assessment": false,
       "properties": {
         "level_keys": [
+          "CSP U4 Pre-Unit Pulse Q1"
+        ],
+        "progression": "The Pre-Unit Pulse"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U4 Pre-Unit Pulse Q1"
+        ],
+        "lesson.key": "Variables Explore",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp4-2023",
+        "activity_section.key": "c186c428-becc-4ba9-9f54-d1c67bb7886a"
+      },
+      "level_keys": [
+        "CSP U4 Pre-Unit Pulse Q1"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSP U4 Pre-Unit Pulse Q2"
+        ],
+        "progression": "The Pre-Unit Pulse"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U4 Pre-Unit Pulse Q2"
+        ],
+        "lesson.key": "Variables Explore",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp4-2023",
+        "activity_section.key": "c186c428-becc-4ba9-9f54-d1c67bb7886a"
+      },
+      "level_keys": [
+        "CSP U4 Pre-Unit Pulse Q2"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
           "CSP U4 My Pet Rock Example App_2023"
         ],
         "progression": "Explore Sample Apps"
@@ -3619,8 +3481,8 @@
       ]
     },
     {
-      "chapter": 2,
-      "position": 2,
+      "chapter": 4,
+      "position": 4,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -3644,8 +3506,8 @@
       ]
     },
     {
-      "chapter": 3,
-      "position": 3,
+      "chapter": 5,
+      "position": 5,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -3669,11 +3531,14 @@
       ]
     },
     {
-      "chapter": 4,
-      "position": 4,
+      "chapter": 6,
+      "position": 6,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1 L02 CYU MC2022_2023"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -3691,11 +3556,14 @@
       ]
     },
     {
-      "chapter": 5,
+      "chapter": 7,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L02 Thermostat App v1_new2023"
+        ],
         "progression": "Investigation #1: Thermostat App v.1 "
       },
       "bonus": false,
@@ -3713,11 +3581,14 @@
       ]
     },
     {
-      "chapter": 6,
+      "chapter": 8,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L02 Thermostat App v1 Code_new2023"
+        ],
         "progression": "Investigation #1: Thermostat App v.1 "
       },
       "bonus": false,
@@ -3735,11 +3606,39 @@
       ]
     },
     {
-      "chapter": 7,
+      "chapter": 9,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U4L2 Predict Embed"
+        ],
+        "progression": "Investigation #2: Thermostat App v.2"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U4L2 Predict Embed"
+        ],
+        "lesson.key": "Variables Investigate",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp4-2023",
+        "activity_section.key": "98ae6e4b-964d-4f0d-bcc4-0401bf62ce7e"
+      },
+      "level_keys": [
+        "CSP U4L2 Predict Embed"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U4 L02 Thermostat App v2_new2023"
+        ],
         "progression": "Investigation #2: Thermostat App v.2"
       },
       "bonus": false,
@@ -3757,11 +3656,14 @@
       ]
     },
     {
-      "chapter": 8,
-      "position": 4,
+      "chapter": 11,
+      "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L02 Thermostat App v3_new2023"
+        ],
         "progression": "Investigation #3: Thermostat App v.3"
       },
       "bonus": false,
@@ -3779,11 +3681,14 @@
       ]
     },
     {
-      "chapter": 9,
-      "position": 5,
+      "chapter": 12,
+      "position": 6,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L02 Thermostat App v3 pt2_new2023"
+        ],
         "progression": "Investigation #3: Thermostat App v.3"
       },
       "bonus": false,
@@ -3801,11 +3706,14 @@
       ]
     },
     {
-      "chapter": 10,
-      "position": 6,
+      "chapter": 13,
+      "position": 7,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4 L02 CYU Exit Ticket_new2023"
+        ],
         "progression": "Assessment: Check For Understanding\r"
       },
       "bonus": false,
@@ -3823,11 +3731,14 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 14,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L03 Variables numbers practice 1_new2023"
+        ],
         "progression": "Assigning Numbers and Strings"
       },
       "bonus": false,
@@ -3845,11 +3756,14 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 15,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L03 Variables numbers practice 4_new2023"
+        ],
         "progression": "Assigning Numbers and Strings"
       },
       "bonus": false,
@@ -3867,11 +3781,14 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 16,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L03 Variables operator practice 1_new2023"
+        ],
         "progression": "Variables and Operators"
       },
       "bonus": false,
@@ -3889,11 +3806,14 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 17,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L03 Variables operator practice 3_new2023"
+        ],
         "progression": "Variables and Operators"
       },
       "bonus": false,
@@ -3911,11 +3831,14 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 18,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L03 Variables operator practice 2_new2023"
+        ],
         "progression": "Variables and Operators"
       },
       "bonus": false,
@@ -3933,11 +3856,14 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 19,
       "position": 6,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L03 Variables operator practice 5_new2023"
+        ],
         "progression": "Variables and Operators"
       },
       "bonus": false,
@@ -3955,11 +3881,14 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 20,
       "position": 7,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L03 Variables operator practice 6_new2023"
+        ],
         "progression": "Variables and Operators"
       },
       "bonus": false,
@@ -3977,11 +3906,14 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 21,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L03 Variable Scope: Local vs. Global2022_new2023"
+        ],
         "progression": "Debugging Scope Issues"
       },
       "bonus": false,
@@ -3999,11 +3931,14 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 22,
       "position": 9,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L03 Scope Issue_new2023"
+        ],
         "progression": "Debugging Scope Issues"
       },
       "bonus": false,
@@ -4021,11 +3956,14 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 23,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U4L3 Choice_new2023"
+        ],
         "progression": "Putting it Together"
       },
       "bonus": false,
@@ -4043,11 +3981,14 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 24,
       "position": 11,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4L3 CFU Variables Psuedocode2022_new2023"
+        ],
         "progression": "Assessment: Check For Understanding: AP Practice\r"
       },
       "bonus": false,
@@ -4065,11 +4006,14 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 25,
       "position": 12,
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4L3 CFU Variables Randomness Psuedocode2022_new2023"
+        ],
         "progression": "Assessment: Check For Understanding: AP Practice\r"
       },
       "bonus": false,
@@ -4087,11 +4031,14 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 26,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L04 Variables Make Project_new2023"
+        ],
         "progression": "Try the Photo Liker app"
       },
       "bonus": false,
@@ -4109,11 +4056,14 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 27,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4 L04 Variables Make Project Submit_new2023"
+        ],
         "progression": "Make the Photo Liker app"
       },
       "bonus": false,
@@ -4131,7 +4081,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 28,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4156,7 +4106,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 29,
       "position": 2,
       "activity_section_position": 2,
       "assessment": true,
@@ -4181,8 +4131,33 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 30,
       "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSP U4L6 Predict"
+        ],
+        "progression": "Predict"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U4L6 Predict"
+        ],
+        "lesson.key": "Conditionals Investigate",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp4-2023",
+        "activity_section.key": "41de0beb-5580-48cd-ae90-748226f8ed91"
+      },
+      "level_keys": [
+        "CSP U4L6 Predict"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4206,8 +4181,8 @@
       ]
     },
     {
-      "chapter": 28,
-      "position": 2,
+      "chapter": 32,
+      "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4231,8 +4206,8 @@
       ]
     },
     {
-      "chapter": 29,
-      "position": 3,
+      "chapter": 33,
+      "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4256,8 +4231,8 @@
       ]
     },
     {
-      "chapter": 30,
-      "position": 4,
+      "chapter": 34,
+      "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4281,8 +4256,8 @@
       ]
     },
     {
-      "chapter": 31,
-      "position": 5,
+      "chapter": 35,
+      "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4306,8 +4281,8 @@
       ]
     },
     {
-      "chapter": 32,
-      "position": 6,
+      "chapter": 36,
+      "position": 7,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
@@ -4331,7 +4306,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 37,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4356,7 +4331,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 38,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -4381,7 +4356,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 39,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -4406,7 +4381,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 40,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -4431,7 +4406,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 41,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -4456,7 +4431,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 42,
       "position": 6,
       "activity_section_position": 2,
       "assessment": true,
@@ -4481,7 +4456,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 43,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4506,7 +4481,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 44,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -4531,7 +4506,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 45,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4556,7 +4531,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 46,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -4581,7 +4556,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 47,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4606,7 +4581,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 48,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -4631,7 +4606,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 49,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -4656,7 +4631,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 50,
       "position": 6,
       "activity_section_position": 4,
       "assessment": false,
@@ -4681,7 +4656,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 51,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -4706,7 +4681,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 52,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
@@ -4731,7 +4706,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 53,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4756,7 +4731,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 54,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -4781,7 +4756,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 55,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -4806,7 +4781,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 56,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -4831,7 +4806,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 57,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -4856,7 +4831,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 58,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -4881,7 +4856,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 59,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
@@ -4906,7 +4881,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 60,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -4931,7 +4906,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 61,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -4956,7 +4931,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 62,
       "position": 10,
       "activity_section_position": 1,
       "assessment": true,
@@ -4981,7 +4956,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 63,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5006,7 +4981,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 64,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -5031,7 +5006,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 65,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5049,14 +5024,14 @@
         "lesson.key": "Project   Decision Maker App Part 1",
         "lesson_group.key": "csp_project",
         "script.name": "csp4-2023",
-        "activity_section.key": "fcb43dd6-6854-4676-88d7-92f414d4d96f"
+        "activity_section.key": "a5e79a30-d1fd-45e1-9833-afa4209dc055"
       },
       "level_keys": [
         "U4 L12 Practice PT 1_2023"
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 66,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5074,40 +5049,40 @@
         "lesson.key": "Project   Decision Maker App Part 1",
         "lesson_group.key": "csp_project",
         "script.name": "csp4-2023",
-        "activity_section.key": "fcb43dd6-6854-4676-88d7-92f414d4d96f"
+        "activity_section.key": "a5e79a30-d1fd-45e1-9833-afa4209dc055"
       },
       "level_keys": [
         "U4 L12 Practice PT 2_2023"
       ]
     },
     {
-      "chapter": 63,
-      "position": 1,
+      "chapter": 67,
+      "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U4 L13 Practice PT 1_2023"
         ],
-        "progression": "Create the Screens"
+        "progression": "Design Mode"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L13 Practice PT 1_2023"
         ],
-        "lesson.key": "Project   Decision Maker App Part 2",
+        "lesson.key": "Project   Decision Maker App Part 1",
         "lesson_group.key": "csp_project",
         "script.name": "csp4-2023",
-        "activity_section.key": "0e177b79-183f-4aa0-b5aa-273523f22ffb"
+        "activity_section.key": "d3497429-2fd7-4d83-94ea-b358b829593b"
       },
       "level_keys": [
         "U4 L13 Practice PT 1_2023"
       ]
     },
     {
-      "chapter": 64,
-      "position": 2,
+      "chapter": 68,
+      "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -5121,18 +5096,18 @@
         "script_level.level_keys": [
           "U4 L13 Practice PT 2_2023"
         ],
-        "lesson.key": "Project   Decision Maker App Part 2",
+        "lesson.key": "Project   Decision Maker App Part 1",
         "lesson_group.key": "csp_project",
         "script.name": "csp4-2023",
-        "activity_section.key": "11fbb5d9-0511-4e12-ae14-7462752b69b0"
+        "activity_section.key": "37523e56-0432-433d-9901-5f508f4b19ca"
       },
       "level_keys": [
         "U4 L13 Practice PT 2_2023"
       ]
     },
     {
-      "chapter": 65,
-      "position": 3,
+      "chapter": 69,
+      "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -5146,18 +5121,18 @@
         "script_level.level_keys": [
           "U4 L13 Practice PT 3_2023"
         ],
-        "lesson.key": "Project   Decision Maker App Part 2",
+        "lesson.key": "Project   Decision Maker App Part 1",
         "lesson_group.key": "csp_project",
         "script.name": "csp4-2023",
-        "activity_section.key": "de51e06e-ffb5-4d4c-8ce5-c17a4b0ff341"
+        "activity_section.key": "c9eb01da-5435-442c-8e61-2d2667cf3a71"
       },
       "level_keys": [
         "U4 L13 Practice PT 3_2023"
       ]
     },
     {
-      "chapter": 66,
-      "position": 4,
+      "chapter": 70,
+      "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -5171,43 +5146,43 @@
         "script_level.level_keys": [
           "U4 L13 Practice PT 4_2023"
         ],
-        "lesson.key": "Project   Decision Maker App Part 2",
+        "lesson.key": "Project   Decision Maker App Part 1",
         "lesson_group.key": "csp_project",
         "script.name": "csp4-2023",
-        "activity_section.key": "bacab67b-aa3d-45cb-b19d-da43c607ac88"
+        "activity_section.key": "a28d1b21-ea3d-42ea-807b-333f773ba658"
       },
       "level_keys": [
         "U4 L13 Practice PT 4_2023"
       ]
     },
     {
-      "chapter": 67,
-      "position": 1,
+      "chapter": 71,
+      "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U4 L14 Practice PT 1_2023"
         ],
-        "progression": "Test Your Decision Maker App"
+        "progression": "Test the Decision Maker App"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L14 Practice PT 1_2023"
         ],
-        "lesson.key": "Project   Decision Maker App Part 3",
+        "lesson.key": "Project   Decision Maker App Part 1",
         "lesson_group.key": "csp_project",
         "script.name": "csp4-2023",
-        "activity_section.key": "5fac9bf1-5767-4ce3-8d06-188a6f57d228"
+        "activity_section.key": "1793eccc-31ff-43b1-b634-e930cb7bfb51"
       },
       "level_keys": [
         "U4 L14 Practice PT 1_2023"
       ]
     },
     {
-      "chapter": 68,
-      "position": 2,
+      "chapter": 72,
+      "position": 8,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
@@ -5221,18 +5196,18 @@
         "script_level.level_keys": [
           "U4 L14 Practice PT 2_2023"
         ],
-        "lesson.key": "Project   Decision Maker App Part 3",
+        "lesson.key": "Project   Decision Maker App Part 1",
         "lesson_group.key": "csp_project",
         "script.name": "csp4-2023",
-        "activity_section.key": "d9e5d155-e064-4892-ae59-ba6d5d2de0c7"
+        "activity_section.key": "ace72454-dbf8-448f-8c05-d7d496a3ed53"
       },
       "level_keys": [
         "U4 L14 Practice PT 2_2023"
       ]
     },
     {
-      "chapter": 69,
-      "position": 3,
+      "chapter": 73,
+      "position": 9,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
@@ -5246,17 +5221,17 @@
         "script_level.level_keys": [
           "Student End of Unit Survey_csp4_2023"
         ],
-        "lesson.key": "Project   Decision Maker App Part 3",
+        "lesson.key": "Project   Decision Maker App Part 1",
         "lesson_group.key": "csp_project",
         "script.name": "csp4-2023",
-        "activity_section.key": "0c82d397-774d-4955-9ea6-14f1e0f45483"
+        "activity_section.key": "90796d52-b51d-402f-a33e-6e197995aef2"
       },
       "level_keys": [
         "Student End of Unit Survey_csp4_2023"
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 74,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -5282,6 +5257,30 @@
     }
   ],
   "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "CSP U4 Pre-Unit Pulse Q1",
+        "script_level.level_keys": [
+          "CSP U4 Pre-Unit Pulse Q1"
+        ],
+        "lesson.key": "Variables Explore",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp4-2023",
+        "activity_section.key": "c186c428-becc-4ba9-9f54-d1c67bb7886a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U4 Pre-Unit Pulse Q2",
+        "script_level.level_keys": [
+          "CSP U4 Pre-Unit Pulse Q2"
+        ],
+        "lesson.key": "Variables Explore",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp4-2023",
+        "activity_section.key": "c186c428-becc-4ba9-9f54-d1c67bb7886a"
+      }
+    },
     {
       "seeding_key": {
         "level.key": "CSP U4 My Pet Rock Example App_2023",
@@ -5352,6 +5351,18 @@
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2023",
         "activity_section.key": "a9c9bc81-fc45-4258-8e6e-a21821732b5e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U4L2 Predict Embed",
+        "script_level.level_keys": [
+          "CSP U4L2 Predict Embed"
+        ],
+        "lesson.key": "Variables Investigate",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp4-2023",
+        "activity_section.key": "98ae6e4b-964d-4f0d-bcc4-0401bf62ce7e"
       }
     },
     {
@@ -5592,6 +5603,18 @@
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2023",
         "activity_section.key": "f5a4d780-a1ef-4296-9317-3e3849440046"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U4L6 Predict",
+        "script_level.level_keys": [
+          "CSP U4L6 Predict"
+        ],
+        "lesson.key": "Conditionals Investigate",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp4-2023",
+        "activity_section.key": "41de0beb-5580-48cd-ae90-748226f8ed91"
       }
     },
     {
@@ -6011,7 +6034,7 @@
         "lesson.key": "Project   Decision Maker App Part 1",
         "lesson_group.key": "csp_project",
         "script.name": "csp4-2023",
-        "activity_section.key": "fcb43dd6-6854-4676-88d7-92f414d4d96f"
+        "activity_section.key": "a5e79a30-d1fd-45e1-9833-afa4209dc055"
       }
     },
     {
@@ -6023,7 +6046,7 @@
         "lesson.key": "Project   Decision Maker App Part 1",
         "lesson_group.key": "csp_project",
         "script.name": "csp4-2023",
-        "activity_section.key": "fcb43dd6-6854-4676-88d7-92f414d4d96f"
+        "activity_section.key": "a5e79a30-d1fd-45e1-9833-afa4209dc055"
       }
     },
     {
@@ -6032,10 +6055,10 @@
         "script_level.level_keys": [
           "U4 L13 Practice PT 1_2023"
         ],
-        "lesson.key": "Project   Decision Maker App Part 2",
+        "lesson.key": "Project   Decision Maker App Part 1",
         "lesson_group.key": "csp_project",
         "script.name": "csp4-2023",
-        "activity_section.key": "0e177b79-183f-4aa0-b5aa-273523f22ffb"
+        "activity_section.key": "d3497429-2fd7-4d83-94ea-b358b829593b"
       }
     },
     {
@@ -6044,10 +6067,10 @@
         "script_level.level_keys": [
           "U4 L13 Practice PT 2_2023"
         ],
-        "lesson.key": "Project   Decision Maker App Part 2",
+        "lesson.key": "Project   Decision Maker App Part 1",
         "lesson_group.key": "csp_project",
         "script.name": "csp4-2023",
-        "activity_section.key": "11fbb5d9-0511-4e12-ae14-7462752b69b0"
+        "activity_section.key": "37523e56-0432-433d-9901-5f508f4b19ca"
       }
     },
     {
@@ -6056,10 +6079,10 @@
         "script_level.level_keys": [
           "U4 L13 Practice PT 3_2023"
         ],
-        "lesson.key": "Project   Decision Maker App Part 2",
+        "lesson.key": "Project   Decision Maker App Part 1",
         "lesson_group.key": "csp_project",
         "script.name": "csp4-2023",
-        "activity_section.key": "de51e06e-ffb5-4d4c-8ce5-c17a4b0ff341"
+        "activity_section.key": "c9eb01da-5435-442c-8e61-2d2667cf3a71"
       }
     },
     {
@@ -6068,10 +6091,10 @@
         "script_level.level_keys": [
           "U4 L13 Practice PT 4_2023"
         ],
-        "lesson.key": "Project   Decision Maker App Part 2",
+        "lesson.key": "Project   Decision Maker App Part 1",
         "lesson_group.key": "csp_project",
         "script.name": "csp4-2023",
-        "activity_section.key": "bacab67b-aa3d-45cb-b19d-da43c607ac88"
+        "activity_section.key": "a28d1b21-ea3d-42ea-807b-333f773ba658"
       }
     },
     {
@@ -6080,10 +6103,10 @@
         "script_level.level_keys": [
           "U4 L14 Practice PT 1_2023"
         ],
-        "lesson.key": "Project   Decision Maker App Part 3",
+        "lesson.key": "Project   Decision Maker App Part 1",
         "lesson_group.key": "csp_project",
         "script.name": "csp4-2023",
-        "activity_section.key": "5fac9bf1-5767-4ce3-8d06-188a6f57d228"
+        "activity_section.key": "1793eccc-31ff-43b1-b634-e930cb7bfb51"
       }
     },
     {
@@ -6092,10 +6115,10 @@
         "script_level.level_keys": [
           "U4 L14 Practice PT 2_2023"
         ],
-        "lesson.key": "Project   Decision Maker App Part 3",
+        "lesson.key": "Project   Decision Maker App Part 1",
         "lesson_group.key": "csp_project",
         "script.name": "csp4-2023",
-        "activity_section.key": "d9e5d155-e064-4892-ae59-ba6d5d2de0c7"
+        "activity_section.key": "ace72454-dbf8-448f-8c05-d7d496a3ed53"
       }
     },
     {
@@ -6104,10 +6127,10 @@
         "script_level.level_keys": [
           "Student End of Unit Survey_csp4_2023"
         ],
-        "lesson.key": "Project   Decision Maker App Part 3",
+        "lesson.key": "Project   Decision Maker App Part 1",
         "lesson_group.key": "csp_project",
         "script.name": "csp4-2023",
-        "activity_section.key": "0c82d397-774d-4955-9ea6-14f1e0f45483"
+        "activity_section.key": "90796d52-b51d-402f-a33e-6e197995aef2"
       }
     },
     {
@@ -6185,16 +6208,6 @@
       }
     },
     {
-      "name": "CSP Curriculum Guide",
-      "url": "https://docs.google.com/document/d/1s5w7_UnVIGHOdkqCtK2O78rQ7JJFAWlOeZkZNsCovOY/preview",
-      "key": "csp_curriculum_guide",
-      "properties": {
-      },
-      "seeding_key": {
-        "resource.key": "csp_curriculum_guide"
-      }
-    },
-    {
       "name": "CSP Debugging Guide",
       "url": "https://docs.google.com/document/d/175I17p2cSfL0q7Uuvw2yBsb1eogbu_gVvV_AIfG8AnA/edit?usp=sharing",
       "key": "csp_debugging_guide",
@@ -6234,7 +6247,7 @@
     },
     {
       "name": "CSP U4 Practice PT Planning Guide",
-      "url": "https://docs.google.com/document/d/1-K9Fq9GPQlAuYfsrcJCVhls0Bcih7jLxLcirufVDwXI/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1adsKH325tVTJQr4mIj42oT4YBwxvSmE1NnWL4MBXLqM/edit?usp=sharing",
       "key": "csp_u4_practice_pt_planning_guide",
       "properties": {
         "audience": "Student",
@@ -6246,7 +6259,7 @@
     },
     {
       "name": "CSP U4 Practice PT Rubric",
-      "url": "https://docs.google.com/document/d/1NfOGQsV9pT72cRKwSaN8PmYaBMwepjPzPjcXySnJg7E/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1t1A3enKlL6m7XP784neF8Bif6bGMFlx9IUvrgxf3dRY/edit?usp=sharing",
       "key": "csp_u4_practice_pt_rubric",
       "properties": {
         "audience": "Student",
@@ -6473,6 +6486,18 @@
       }
     },
     {
+      "name": "Project - Decision Maker App",
+      "url": "https://docs.google.com/presentation/d/1rddTRuz2TqWzeLHuCWcQ3_oLutX50FTageNRfkqsk4Q/template/preview",
+      "key": "project_-_decision_maker_app",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "project_-_decision_maker_app"
+      }
+    },
+    {
       "name": "Song Lyrics",
       "url": "https://docs.google.com/document/d/1Kf0x84kHyOPXsEVp3LnXEYGiGybKXqqL86a4xgKHBLI/edit?usp=sharing",
       "key": "song_lyrics",
@@ -6483,6 +6508,18 @@
       },
       "seeding_key": {
         "resource.key": "song_lyrics"
+      }
+    },
+    {
+      "name": "Syllabus",
+      "url": "https://docs.google.com/document/d/1yg2L8OAKSqjtxzETYRw7G5XCinTR1wKNscyyBx3dJGk/edit?usp=sharing",
+      "key": "syllabus",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "syllabus"
       }
     },
     {
@@ -6736,66 +6773,30 @@
     {
       "seeding_key": {
         "lesson.key": "Project   Decision Maker App Part 1",
-        "resource.key": "csp_unit_4_-_variables_conditionals_and_functions"
+        "resource.key": "project_-_decision_maker_app"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Project   Decision Maker App Part 2",
-        "resource.key": "csp_u4_practice_pt_planning_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project   Decision Maker App Part 2",
-        "resource.key": "csp_u4_practice_pt_rubric"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project   Decision Maker App Part 2",
-        "resource.key": "csp_unit_4_-_variables_conditionals_and_functions"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project   Decision Maker App Part 3",
-        "resource.key": "csp_u4_practice_pt_planning_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project   Decision Maker App Part 3",
-        "resource.key": "csp_u4_practice_pt_rubric"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project   Decision Maker App Part 3",
-        "resource.key": "csp_unit_4_-_variables_conditionals_and_functions"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project   Decision Maker App Part 3",
+        "lesson.key": "Project   Decision Maker App Part 1",
         "resource.key": "u4_high_score_sample_app"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Project   Decision Maker App Part 3",
+        "lesson.key": "Project   Decision Maker App Part 1",
         "resource.key": "u4_high_score_sample_planning_guide_rubric"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Project   Decision Maker App Part 3",
+        "lesson.key": "Project   Decision Maker App Part 1",
         "resource.key": "u4_mid_score_sample_app"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Project   Decision Maker App Part 3",
+        "lesson.key": "Project   Decision Maker App Part 1",
         "resource.key": "u4_mid_score_sample_planning_guide_rubric"
       }
     },
@@ -6941,12 +6942,6 @@
     },
     {
       "seeding_key": {
-        "resource.key": "csp_curriculum_guide",
-        "script.name": "csp4-2023"
-      }
-    },
-    {
-      "seeding_key": {
         "resource.key": "eipm_a_short_introduction",
         "script.name": "csp4-2023"
       }
@@ -6954,6 +6949,12 @@
     {
       "seeding_key": {
         "resource.key": "guide_to_eipm_lessons",
+        "script.name": "csp4-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "syllabus",
         "script.name": "csp4-2023"
       }
     },
@@ -7086,26 +7087,6 @@
       "seeding_key": {
         "lesson.key": "Conditionals Explore",
         "objective.key": "4cb9a282-3c4f-410b-bc0a-87abeb5167c3"
-      }
-    },
-    {
-      "key": "4d78683f-3fe9-4d8b-98e9-c0eba0086455",
-      "properties": {
-        "description": "See rubric for guidance in measuring student learning"
-      },
-      "seeding_key": {
-        "lesson.key": "Project   Decision Maker App Part 2",
-        "objective.key": "4d78683f-3fe9-4d8b-98e9-c0eba0086455"
-      }
-    },
-    {
-      "key": "4f0bb527-d39b-457b-94d5-978f9b9244be",
-      "properties": {
-        "description": "See rubric for guidance in measuring student learning"
-      },
-      "seeding_key": {
-        "lesson.key": "Project   Decision Maker App Part 3",
-        "objective.key": "4f0bb527-d39b-457b-94d5-978f9b9244be"
       }
     },
     {
@@ -7704,62 +7685,6 @@
     {
       "seeding_key": {
         "lesson.key": "Project   Decision Maker App Part 1",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3B-AP-14"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project   Decision Maker App Part 2",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-10"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project   Decision Maker App Part 2",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-11"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project   Decision Maker App Part 2",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3A-AP-16"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project   Decision Maker App Part 2",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3B-AP-14"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project   Decision Maker App Part 3",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-10"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project   Decision Maker App Part 3",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-11"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project   Decision Maker App Part 3",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3A-AP-16"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project   Decision Maker App Part 3",
         "framework.shortcode": "csta",
         "standard.shortcode": "3B-AP-14"
       }

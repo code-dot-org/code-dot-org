@@ -1229,6 +1229,7 @@ tr-TR:
   khanpl_name: JavaScript'e giriş
   tynker_name: Kendi oyununu oluştur
   scratch_name: Kodlama ile yaratıcı olun
+  thinkersmith_name: Robotik Arkadaşlarım
   condcards_name: Kartlarla Koşullu Önermeler
   codehs_name: Karel ile Kodlama Öğren
   codemonkey_name: CodeMonkey
@@ -1305,6 +1306,7 @@ tr-TR:
   coursef-2021_name: Kurs F (2021)
   coursea-2022_name: Kurs A (2022)
   courseb-2022_name: Kurs B (2022)
+  coursec-2022_name: Kurs C (2022)
   coursed-2022_name: Kurs D (2022)
   coursee-2022_name: Kurs E (2022)
   coursef-2022_name: Kurs F (2022)
@@ -2189,6 +2191,7 @@ tr-TR:
   app_lab_tutorials: Uygulama Laboratuvar Eğitimleri
   game_lab_documentation: Oyun Laboratuvar Belgelendirmesi
   game_lab_tutorials: Oyun Laboratuvar Eğitimi
+  sprite_lab_documentation: Sprite Lab Dökümanları
   sprite_lab_tutorials: Peri Laboratuvar Eğitimi
   header_documentation: Belgeler
   user_header_label: Merhaba %{username}
@@ -2683,3 +2686,5 @@ tr-TR:
     Code özelliği için NASA'ya katılın!
   hoc2022_nasa_banner_description: 5 Aralık saat 10:00 ET(Eastern Time)  NASA STEM'in
     YouTube kanalında ilk gösterim.
+  hoc2022_nasa_banner_heading_posthoc: Uzayda bilgisayar bilimi hakkında NASA'nın
+    özel Kodlama Saati özelliğine göz atın!

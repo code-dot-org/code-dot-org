@@ -4,7 +4,7 @@ import React, {
   useContext,
   useLayoutEffect,
   useEffect,
-  useState
+  useState,
 } from 'react';
 import styles from './video.module.scss';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
@@ -64,7 +64,7 @@ const Video = ({id, onClose}) => {
             width="100%"
             height="100%"
             style={{border: 'none'}}
-            src="https://www.youtube-nocookie.com/embed/ab2SBrfkKXU"
+            src="https://www.youtube-nocookie.com/embed/ab2SBrfkKXU?rel=0"
             title=""
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen
@@ -80,7 +80,7 @@ const Video = ({id, onClose}) => {
 
 Video.propTypes = {
   id: PropTypes.string.isRequired,
-  onClose: PropTypes.func.isRequired
+  onClose: PropTypes.func.isRequired,
 };
 
 export default Video;

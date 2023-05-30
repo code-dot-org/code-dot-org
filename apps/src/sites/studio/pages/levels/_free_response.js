@@ -1,4 +1,3 @@
-/* global dashboard appOptions */
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -14,7 +13,7 @@ import {getStore} from '@cdo/apps/redux';
 $(document).ready(() => {
   const scriptData = getScriptData('freeresponse');
 
-  $('#containedLevel0 > #summaryEntryPoint').each(function() {
+  $('#summaryEntryPoint').each(function () {
     const container = this;
     const store = getStore();
 
@@ -28,7 +27,7 @@ $(document).ready(() => {
     );
   });
 
-  $('.free-response > .markdown-container').each(function() {
+  $('.free-response > .markdown-container').each(function () {
     const container = this;
     if (!container.dataset.markdown) {
       return;
@@ -47,7 +46,7 @@ $(document).ready(() => {
   const attachmentsMountPoint = document.querySelector('#free-response-upload');
   const attachmentsProps = scriptData.attachments_props;
   if (attachmentsMountPoint && attachmentsProps) {
-    dashboard.project.getCurrentId = function() {
+    dashboard.project.getCurrentId = function () {
       return appOptions.channel;
     };
 

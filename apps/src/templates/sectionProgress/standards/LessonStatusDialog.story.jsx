@@ -8,28 +8,29 @@ import sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgress
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import unitSelection from '@cdo/apps/redux/unitSelectionRedux';
 
-export default storybook => {
+export default {
+  title: 'LessonStatusDialog',
+  component: LessonStatusDialog,
+};
+
+export const overview = () => {
   const store = createStore(
     combineReducers({
       sectionStandardsProgress,
       sectionProgress,
       unitSelection,
-      teacherSections
+      teacherSections,
     }),
     {
       teacherSections: {
-        selectedSectionId: 1
-      }
+        selectedSectionId: 1,
+      },
     }
   );
 
-  return storybook
-    .storiesOf('Standards/LessonStatusDialog', module)
-    .add('overview', () => {
-      return (
-        <Provider store={store}>
-          <LessonStatusDialog isOpen handleConfirm={action('Confirm')} />
-        </Provider>
-      );
-    });
+  return (
+    <Provider store={store}>
+      <LessonStatusDialog isOpen handleConfirm={action('Confirm')} />
+    </Provider>
+  );
 };

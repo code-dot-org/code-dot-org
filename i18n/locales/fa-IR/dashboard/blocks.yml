@@ -1227,6 +1227,19 @@ fa:
             '"z"': z
       gamelab_layoutGrid:
         text: اسپرایتها را به شکل شبکه منظم کن
+      gamelab_layoutSprites:
+        text: '[GROUP][0] را به شکل [FORMAT][1] طراحی کن'
+        options:
+          FORMAT:
+            '"border"': حاشیه
+            '"circle"': دایره‌
+            '"grid"': شبکه
+            '"top"': ردیف بالا
+            '"row"': کلاس
+            '"bottom"': ردیف پایین
+            '"left"': ستون چپ
+            '"column"': ستون
+            '"right"': ستون راست
       gamelab_locationAt:
         text: 'مختصات x: [X][0] , y: [Y][1]'
       gamelab_locationModifier:
@@ -1253,6 +1266,18 @@ fa:
             '"spiral"': مارپیچ
       gamelab_makeNewSpriteAnon:
         text: یک اسپرایت جدید [ANIMATION_NAME][0] در محل [LOCATION][1] بساز
+      gamelab_makeNewSpriteGroup:
+        options:
+          FORMAT:
+            '"border"': حاشیه
+            '"circle"': دایره‌
+            '"grid"': شبکه
+            '"top"': ردیف بالا
+            '"row"': کلاس
+            '"bottom"': ردیف پایین
+            '"left"': ستون چپ
+            '"column"': ستون
+            '"right"': ستون راست
       gamelab_makeNumSprites:
         text: '[NUM][0] اسپرایت جدید [ANIMATION_NAME][1] بساز'
       gamelab_makeProjectile:
@@ -2567,6 +2592,21 @@ fa:
           DIR:
             right: راست ↻
             left: چپ ↺
+      ecosystems_int10:
+        text: "[VALUE][0]"
+        options:
+          VALUE:
+            '0': '0'
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       storylab_clearHeadings:
         text: پاک کردن عنوانها
       storylab_setForegroundEffect2:

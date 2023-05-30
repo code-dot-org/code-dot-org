@@ -8,34 +8,34 @@ import Dialog, {
   Body,
   Footer,
   Confirm,
-  Cancel
+  Cancel,
 } from '../../templates/Dialog';
 
 const style = {
   description: {
-    fontSize: 'smaller'
+    fontSize: 'smaller',
   },
   warning: {
     color: color.red,
     fontSize: 'smaller',
     fontStyle: 'italic',
     textAlign: 'center',
-    padding: 10
+    padding: 10,
   },
   footerButtons: {
     display: 'flex',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
   },
   buttonGroupSpacing: {
-    marginLeft: 15
-  }
+    marginLeft: 15,
+  },
 };
 
 export class ConfirmEnableMakerDialog extends Component {
   static propTypes = {
     isOpen: PropTypes.bool.isRequired,
     handleConfirm: PropTypes.func.isRequired,
-    handleCancel: PropTypes.func.isRequired
+    handleCancel: PropTypes.func.isRequired,
   };
 
   render() {

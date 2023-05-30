@@ -1201,6 +1201,14 @@ mi:
           lesson_groups:
             lessonGroup-2:
               display_name: Ihirangi
+        csa7-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ihirangi
+        csa8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ihirangi
         csp4-2023:
           lesson_groups:
             csp_variables:
@@ -1283,3 +1291,17 @@ mi:
               display_name: Ngā Taumahi
             csf_nested_loops:
               display_name: Ngā Here
+        pl-csd-summer-day1:
+          lessons:
+            lesson-3:
+              name: Kupu Whakataki
+        virtual-pl-csd-summer-day1:
+          lessons:
+            lesson-1:
+              name: Kupu Whakataki
+        coursef-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Te Kirirarautanga Matihiko
+            lessonGroup-4:
+              display_name: Ngā Taurangi

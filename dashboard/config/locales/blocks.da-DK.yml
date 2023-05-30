@@ -1159,6 +1159,19 @@ da:
             '"x"': x
             '"y"': y
             '"z"': z
+      gamelab_layoutSprites:
+        text: formgiv {GROUP} som en {FORMAT}
+        options:
+          FORMAT:
+            '"border"': grænse
+            '"circle"': cirkel
+            '"grid"': gitter
+            '"top"': øverste række
+            '"row"': række
+            '"bottom"': nederste række
+            '"left"': venstre kolonne
+            '"column"': kolonne
+            '"right"': højre kolonne
       gamelab_locationAt:
         text: 'placering x: {X} y: {Y}'
       gamelab_locationModifier:
@@ -1180,6 +1193,18 @@ da:
             '"rain"': regn
       gamelab_makeNewSpriteAnon:
         text: dan en ny {ANIMATION_NAME} figur på {LOCATION}
+      gamelab_makeNewSpriteGroup:
+        options:
+          FORMAT:
+            '"border"': grænse
+            '"circle"': cirkel
+            '"grid"': gitter
+            '"top"': øverste række
+            '"row"': række
+            '"bottom"': nederste række
+            '"left"': venstre kolonne
+            '"column"': kolonne
+            '"right"': højre kolonne
       gamelab_makeProjectile:
         options:
           DIRECTION:
@@ -1895,6 +1920,20 @@ da:
           DIR:
             right: til højre ↻
             left: til venstre ↺
+      ecosystems_int10:
+        options:
+          VALUE:
+            '0': '0'
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       storylab_setForegroundEffect2:
         options:
           EFFECT:

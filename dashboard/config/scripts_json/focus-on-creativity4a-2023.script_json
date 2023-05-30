@@ -5,17 +5,19 @@
     "login_required": true,
     "properties": {
       "curriculum_umbrella": "CSD",
+      "has_verified_resources": true,
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
       "is_migrated": true,
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-03-22 22:30:00 UTC",
+    "serialized_at": "2023-05-17 16:38:53 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1523,7 +1525,7 @@
       "key": "d0afb210-b303-4983-be9b-8e821c98c0af",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** What's an example of a problem you've had to solve recently?\n\n**Circulate & Distribute:** Have students share their thoughts with a neighbor. Listen for examples that may be worth using as examples throughout the lesson.\n\nAs students share, distribute a copy of the [r _warm_up_word_search/csd6/2023] to each student, face down. Make sure students don't start the word search ahead of time."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** What's an example of a problem you've had to solve recently?\n\n**Circulate & Distribute:** Have students share their thoughts with a neighbor. Listen for examples that may be worth using as examples throughout the lesson.\n\nAs students share, distribute a copy of the [r _warm_up_word_search/csd/2023] to each student, face down. Make sure students don't start the word search ahead of time."
       },
       "seeding_key": {
         "activity_section.key": "d0afb210-b303-4983-be9b-8e821c98c0af",
@@ -1591,7 +1593,7 @@
       "key": "a56247e4-8e96-45fb-a016-ff070c9c51f0",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show students the [r the_problem_solving_process/csd6/2023] video in the slides.\n\n**Questions to Consider with Video:**\n* What are the 4 steps to the Problem-Solving Process?",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show students the [r the_problem_solving_process/csd/2023] video in the slides.\n\n**Questions to Consider with Video:**\n* What are the 4 steps to the Problem-Solving Process?",
         "duration": "5",
         "name": "The Problem Solving Process",
         "tips": [
@@ -1693,7 +1695,7 @@
       "key": "b55bb929-c860-4709-be6e-e7b09401e1d5",
       "position": 2,
       "properties": {
-        "description": "**Group:** Put students in pairs.\n\n**Distribute:** Pass out a copy of the [r app_design_for_users/csd6/2023] activity guide to each student. \n\n",
+        "description": "**Group:** Put students in pairs.\n\n**Distribute:** Pass out a copy of the [r app_design_for_users/csd/2023] activity guide to each student. \n\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -1792,7 +1794,7 @@
       "key": "8b9ea091-88df-490d-832a-1d1c814929be",
       "position": 8,
       "properties": {
-        "description": "**Overview:** Have students flip to the back of their activity guide and read the overview of the next part of the activity. Students will choose a user to create a basic physical design for, following the Problem-Solving Process. Students can sketch their design on pen and paper, or use the provided Google Slides template to create their design. These designs are meant to be sketches - students will not have enough time to \"perfect\" their designs.\n\n**Distribute:** Pass out copies of the [r problem_solving_and_design/csd6/2023] resource. Students can use this when preparing their design, and it can be a reference throughout the unit.\n\n**Circulate:** Monitor students as they complete this activity, ensuring that students are creating designs that match the needs of the user they chose. Monitor student conversations as well to make sure both voices are being heard during discussions and decisions. Students will be working in pairs throughout the unit, so it can be good to intervene early to reinforce good collaboration habits.\n\n**(Optional) Share Out:** Depending on how much time is left in class, allow students to trade with other groups and share their designs. Encourage students to share with another group who picked the same user so they can see similarities and differences in their designs.\n\n",
+        "description": "**Overview:** Have students flip to the back of their activity guide and read the overview of the next part of the activity. Students will choose a user to create a basic physical design for, following the Problem-Solving Process. Students can sketch their design on pen and paper, or use the provided Google Slides template to create their design. These designs are meant to be sketches - students will not have enough time to \"perfect\" their designs.\n\n**Distribute:** Pass out copies of the [r problem_solving_and_design/csd/2023] resource. Students can use this when preparing their design, and it can be a reference throughout the unit.\n\n**Circulate:** Monitor students as they complete this activity, ensuring that students are creating designs that match the needs of the user they chose. Monitor student conversations as well to make sure both voices are being heard during discussions and decisions. Students will be working in pairs throughout the unit, so it can be good to intervene early to reinforce good collaboration habits.\n\n**(Optional) Share Out:** Depending on how much time is left in class, allow students to trade with other groups and share their designs. Encourage students to share with another group who picked the same user so they can see similarities and differences in their designs.\n\n",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -5054,6 +5056,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "App Lab Intro 8 - Video Getting Started_csd62023"
+        ],
         "progression": "App Lab Intro - Video"
       },
       "bonus": false,
@@ -5076,6 +5081,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "AppLab Intro 7 - Change Screen Color_csd62023"
+        ],
         "progression": "Setting Properties"
       },
       "bonus": false,
@@ -5098,6 +5106,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "AppLab Intro 7 - Change Text 2_csd62023"
+        ],
         "progression": "Setting Properties"
       },
       "bonus": false,
@@ -5120,6 +5131,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "AppLab Intro 7 - Full Text_csd62023"
+        ],
         "progression": "Setting Properties"
       },
       "bonus": false,
@@ -5142,6 +5156,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "App Lab Intro 8 - Video Make It Interactive_csd62023"
+        ],
         "progression": "Make it Interactive"
       },
       "bonus": false,
@@ -5164,6 +5181,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "AppLab Intro 7 - onEvent intro_csd62023"
+        ],
         "progression": "Make it Interactive"
       },
       "bonus": false,
@@ -5186,6 +5206,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "AppLab Intro 7 - onEvent twoButtons_csd62023"
+        ],
         "progression": "Make it Interactive"
       },
       "bonus": false,
@@ -5208,6 +5231,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "App Lab Intro 8 - Video Images and Sounds_csd62023"
+        ],
         "progression": "Images and Sounds"
       },
       "bonus": false,
@@ -5230,6 +5256,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "AppLab Intro 7 - playSound_csd62023"
+        ],
         "progression": "Images and Sounds"
       },
       "bonus": false,
@@ -5252,6 +5281,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "App Lab Intro 8 - Video Design Mode_csd62023"
+        ],
         "progression": "Design Mode"
       },
       "bonus": false,
@@ -5274,6 +5306,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "AppLab Intro 7 - thisOrThatAddButton_csd62023"
+        ],
         "progression": "Design Mode"
       },
       "bonus": false,
@@ -5296,6 +5331,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "AppLab Intro 7 - thisOrThatAddScreen_csd62023"
+        ],
         "progression": "Design Mode"
       },
       "bonus": false,
@@ -5318,6 +5356,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "AppLab Intro 7 - thisOrThatSetScreen_csd62023"
+        ],
         "progression": "Design Mode"
       },
       "bonus": false,
@@ -5340,6 +5381,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "App Lab Intro 8 - Video Share Your App_csd62023"
+        ],
         "progression": "Share Your App"
       },
       "bonus": false,
@@ -5362,6 +5406,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "AppLab Intro 7 - thisOrThatPersonalize_csd62023"
+        ],
         "progression": "Share Your App"
       },
       "bonus": false,
@@ -5384,6 +5431,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 L1 - Design Templates_2023a"
+        ],
         "progression": "Physical Design Prototypes"
       },
       "bonus": false,
@@ -5406,6 +5456,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "intro-pulse-survey_csd6_2023"
+        ],
         "progression": "Check-In Survey"
       },
       "bonus": false,
@@ -5428,6 +5481,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU6 Circuit Playground Test_2023"
+        ],
         "progression": "Setup"
       },
       "bonus": false,
@@ -5450,6 +5506,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Board Outputs - P_2023"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -5472,6 +5531,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Board Outputs - SB1_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5494,6 +5556,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Board Outputs - SB2_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5516,6 +5581,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Board Outputs - P2_2023"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -5538,6 +5606,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Board Outputs - SB3_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5560,6 +5631,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Board Outputs - SB4_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5582,6 +5656,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Board Outputs - Prac_2023"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -5604,6 +5681,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Board Outputs - A_2023"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -5626,6 +5706,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Board Outputs - Chal_2023"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -5648,6 +5731,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Outputs - P_2023"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -5670,6 +5756,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Outputs - SB1_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5692,6 +5781,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Outputs - SB1.1_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5714,6 +5806,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Outputs - SB2_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5736,6 +5831,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Outputs - SB3_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5758,6 +5856,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Outputs - SB4_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5780,6 +5881,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Outputs - Prac_2023"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -5802,6 +5906,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Outputs - ChalB_2023"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -5824,6 +5931,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Outputs - Chal_2023"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -5846,6 +5956,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Board Inputs - P_2023"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -5868,6 +5981,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Board Inputs - SB1_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5890,6 +6006,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Board Inputs - SB2_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5912,6 +6031,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Board Inputs - SB3_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5934,6 +6056,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Board Inputs - SB4_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5956,6 +6081,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Board Inputs - Prac_2023"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -5978,6 +6106,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Board Inputs - A_2023"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -6000,6 +6131,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Board Inputs - Chal_2023"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -6022,6 +6156,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - If Variables - P_2023"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -6044,6 +6181,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - If Variables - SB0_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6066,6 +6206,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - If Variables - SB3_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6088,6 +6231,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - If Variables - SB2_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6110,6 +6256,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - If Variables - SB4_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6132,6 +6281,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - If Variables - SB5_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6154,6 +6306,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - If Variables - P2_2023"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -6176,6 +6331,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - If Variables - SB7_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6198,6 +6356,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - If Variables - SB6_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6220,6 +6381,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U6 - If Variables - A_2023"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -6242,6 +6406,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - If Variables - Chal_2023"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -6264,6 +6431,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - On The Go - Design_2023"
+        ],
         "progression": "Field Collector App"
       },
       "bonus": false,
@@ -6286,6 +6456,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - On The Go - Events_2023"
+        ],
         "progression": "Field Collector App"
       },
       "bonus": false,
@@ -6308,6 +6481,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - On The Go - Logic_2023"
+        ],
         "progression": "Field Collector App"
       },
       "bonus": false,
@@ -6330,6 +6506,9 @@
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U6 - On The Go - Review_2023"
+        ],
         "progression": "Field Collector App"
       },
       "bonus": false,
@@ -6352,6 +6531,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Color LEDs - P_2023a"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -6374,6 +6556,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Color LEDs - SB1_2023a"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6396,6 +6581,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Color LEDs - SB2_2023a"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6418,6 +6606,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Color LEDs - SB3_2023a"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6440,6 +6631,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Color LEDs - SB4_2023a"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6462,6 +6656,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Color LEDs - Prac_2023a"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -6484,6 +6681,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Color LEDs - A_2023a"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -6506,6 +6706,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Color LEDs - Chal_2023a"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -6528,6 +6731,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Inputs - P_2023"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -6550,6 +6756,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Inputs - SB1_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6572,6 +6781,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Inputs - SB2.1_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6594,6 +6806,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Inputs - SB2.2_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6616,6 +6831,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Inputs - SB3_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6638,6 +6856,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Inputs - SB4_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6660,6 +6881,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Inputs - SB5_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6682,6 +6906,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Inputs - Prac_2023"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -6704,6 +6931,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Inputs - A_2023"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -6726,6 +6956,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Inputs - Chal_2023"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -6748,6 +6981,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Combine Inputs - P_2023a"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -6770,6 +7006,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Combine Inputs - SB1_2023a"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6792,6 +7031,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Combine Inputs - SB2_2023a"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6814,6 +7056,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Combine Inputs - SB3_2023a"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6836,6 +7081,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Combine Inputs - SB4_2023a"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6858,6 +7106,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Combine Inputs - Prac_2023a"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -6880,6 +7131,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Combine Inputs - A_2023a"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -6902,6 +7156,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Combine Inputs - Chal_2023a"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -6924,6 +7181,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Human Device - Design_2023a"
+        ],
         "progression": "Human Device Interaction"
       },
       "bonus": false,
@@ -6946,6 +7206,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Human Device - Events_2023a"
+        ],
         "progression": "Human Device Interaction"
       },
       "bonus": false,
@@ -6968,6 +7231,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Human Device - Logic_2023a"
+        ],
         "progression": "Human Device Interaction"
       },
       "bonus": false,
@@ -6990,6 +7256,9 @@
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Human Device - Review_2023a"
+        ],
         "progression": "Human Device Interaction"
       },
       "bonus": false,
@@ -7012,6 +7281,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csd-pulse-check-survey-1-levelgroup U6Ch1_pilot_2023a"
+        ],
         "progression": "Reflection"
       },
       "bonus": false,
@@ -7034,6 +7306,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Sensors - P_2023a"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -7056,6 +7331,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Sensors - SB1_2023a"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -7078,6 +7356,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Sensors - SB2_2023a"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -7100,6 +7381,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Sensors - P2_2023a"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -7122,6 +7406,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Sensors - SB3_2023a"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -7144,6 +7431,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Sensors - SB4.1_2023a"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -7166,6 +7456,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Sensors - SB4_2023a"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -7188,6 +7481,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Sensors - Prac_2023a"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -7210,6 +7506,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Sensors - A_2023a"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -7232,6 +7531,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Sensors - Chal_2023a"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -7254,6 +7556,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Accelerometer - P_2023a"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -7276,6 +7581,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Accelerometer - SB1_2023a"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -7298,6 +7606,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Accelerometer - SB2_2023a"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -7320,6 +7631,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Accelerometer - SB3_2023a"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -7342,6 +7656,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Accelerometer - PC_2023a"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -7364,6 +7681,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Accelerometer - PB_2023a"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -7386,6 +7706,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Accelerometer - Prac_2023a"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -7408,6 +7731,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Accelerometer - A_2023a"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -7430,6 +7756,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Accelerometer - Chal_2023a"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -7452,6 +7781,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Music - P_2023"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -7474,6 +7806,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Music - Piano_2023"
+        ],
         "progression": "Investigate"
       },
       "bonus": false,
@@ -7496,6 +7831,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Music - SB1_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -7518,6 +7856,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Music - SB2_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -7540,6 +7881,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Music - SB2.1_2023"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -7562,6 +7906,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Music - SB2.2_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -7584,6 +7931,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Music - SB2.5_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -7606,6 +7956,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Music - SB3_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -7628,6 +7981,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Music - SB4_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -7650,6 +8006,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Music - SB5_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -7672,6 +8031,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Music - A_2023"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -7694,6 +8056,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Music - Chal_2023"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -7716,6 +8081,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Functions - P_2023a"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -7738,6 +8106,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Functions - Functions Video_2023a"
+        ],
         "progression": "Video - Functions"
       },
       "bonus": false,
@@ -7760,6 +8131,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Functions - SB1_2023a"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -7782,6 +8156,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Functions - SB2_2023a"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -7804,6 +8181,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Functions - SB3_2023a"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -7826,6 +8206,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Functions - SB4_2023a"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -7848,6 +8231,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Functions - P2_2023a"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -7870,6 +8256,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Functions - Parameters Video_2023a"
+        ],
         "progression": "Video - Parameters"
       },
       "bonus": false,
@@ -7892,6 +8281,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Functions - SB5_2023a"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -7914,6 +8306,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Functions - SB6_2023a"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -7936,6 +8331,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Functions - SB7_2023a"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -7958,6 +8356,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Functions - Prac_2023a"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -7980,6 +8381,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Functions - A_2023a"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -8002,6 +8406,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Interactive Art - Events_2023a"
+        ],
         "progression": "Interactive Art"
       },
       "bonus": false,
@@ -8024,6 +8431,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Interactive Art - Logic_2023a"
+        ],
         "progression": "Interactive Art"
       },
       "bonus": false,
@@ -8046,6 +8456,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Interactive Art - Review_2023a"
+        ],
         "progression": "Interactive Art"
       },
       "bonus": false,
@@ -8068,6 +8481,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Board Outputs - Setup_2023"
+        ],
         "progression": "Setup"
       },
       "bonus": false,
@@ -8090,6 +8506,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Physical Output - P_2023"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -8112,6 +8531,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Physical Output - SB1_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -8134,6 +8556,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Physical Output - SB2_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -8156,6 +8581,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Physical Output - SB2.2_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -8178,6 +8606,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Physical Output - Prac_2023"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -8200,6 +8631,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Physical Output - A_2023"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -8222,6 +8656,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Physical Output - Chal_2023"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -8244,6 +8681,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Physical Input - SB1_2023"
+        ],
         "progression": "Setup"
       },
       "bonus": false,
@@ -8266,6 +8706,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Physical Input - SB2_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -8288,6 +8731,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Physical Input - SB3_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -8310,6 +8756,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Physical Input - SB4_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -8332,6 +8781,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Physical Input - Prac_2023"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -8354,6 +8806,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Physical Input - A_2023"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -8376,6 +8831,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Physical Input - Chal_2023"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -8398,6 +8856,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Prototype Innovation - Design_2023"
+        ],
         "progression": "Prototype an Innovation"
       },
       "bonus": false,
@@ -8420,6 +8881,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Prototype Innovation - Events_2023"
+        ],
         "progression": "Prototype an Innovation"
       },
       "bonus": false,
@@ -8442,6 +8906,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Physical Innovations - Logic_2023"
+        ],
         "progression": "Prototype an Innovation"
       },
       "bonus": false,
@@ -8464,6 +8931,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Physical Innovations - Review_2023"
+        ],
         "progression": "Prototype an Innovation"
       },
       "bonus": false,
@@ -8486,6 +8956,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "Student End of Unit Survey_csd6_2023"
+        ],
         "progression": "End-Of-Unit Survey"
       },
       "bonus": false,
@@ -8508,6 +8981,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD Physical Computing Post-Project Test_2023"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -10661,13 +11137,25 @@
       }
     },
     {
-      "name": "CSD Curriculum Guide",
-      "url": "https://docs.google.com/document/d/1lTLydMBm2M5a5tq_35m-qj8Gat79WUYBWfpB3ikQyuY/view",
-      "key": "csd_curriculum_guide",
+      "name": "CSD Guide to Assessment ",
+      "url": "https://docs.google.com/document/d/1IO5XgPW_Apil_Uziq5hAMCBgilm8txZ3sp8atxiKiLU/view",
+      "key": "csd_guide_to_assessment_4",
       "properties": {
+        "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "csd_curriculum_guide"
+        "resource.key": "csd_guide_to_assessment_4"
+      }
+    },
+    {
+      "name": "CSD Guide to Curriculum Videos ",
+      "url": "https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view",
+      "key": "csd_guide_to_curriculum_videos_4",
+      "properties": {
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "csd_guide_to_curriculum_videos_4"
       }
     },
     {
@@ -10675,6 +11163,7 @@
       "url": "https://docs.google.com/document/d/145lvpomqz0tUuzXLbkAFgP9zMDpECMwFYiEIG1_hQFg/view",
       "key": "csd_guide_to_debugging",
       "properties": {
+        "include_in_pdf": true
       },
       "seeding_key": {
         "resource.key": "csd_guide_to_debugging"
@@ -10685,9 +11174,21 @@
       "url": "https://docs.google.com/document/d/10u5N7zCf52IZiSf4drQplEz3d3zS1iqWpegbBMDm0RQ/view",
       "key": "csd_guide_to_differentiation",
       "properties": {
+        "include_in_pdf": true
       },
       "seeding_key": {
         "resource.key": "csd_guide_to_differentiation"
+      }
+    },
+    {
+      "name": "CSD Guide to Teaching and Learning Strategies",
+      "url": "https://docs.google.com/document/d/1Cg5iTwERoX25Y2DdLNmrPCbVB2d9FPGfUMUvcnVoN8Q/view",
+      "key": "csd_guide_to_teaching_and_learning_strategies_4",
+      "properties": {
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "csd_guide_to_teaching_and_learning_strategies_4"
       }
     },
     {
@@ -10701,30 +11202,11 @@
       }
     },
     {
-      "name": "CSD Implementation Guide",
-      "url": "https://docs.google.com/document/d/1sM_1Oxb7TGp5gSfuMjs0X0_Tko9tm8QJ4N6L26NI_iE/view",
-      "key": "csd_implementation_guide",
-      "properties": {
-      },
-      "seeding_key": {
-        "resource.key": "csd_implementation_guide"
-      }
-    },
-    {
-      "name": "CSD Learning Frameworks",
-      "url": "https://docs.google.com/document/d/1WlmAr6CeU4NAQhPAa0YAO-ujVTls_12fOP3lbc2SLxo/view",
-      "key": "csd_learning_frameworks",
-      "properties": {
-      },
-      "seeding_key": {
-        "resource.key": "csd_learning_frameworks"
-      }
-    },
-    {
       "name": "CSD Programming Levels Guide",
       "url": "https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view",
       "key": "csd_programming_levels_guide",
       "properties": {
+        "include_in_pdf": true
       },
       "seeding_key": {
         "resource.key": "csd_programming_levels_guide"
@@ -11152,6 +11634,27 @@
       },
       "seeding_key": {
         "resource.key": "problem_solving_and_design_1"
+      }
+    },
+    {
+      "name": "Problem Solving Process with Design",
+      "url": "https://docs.google.com/document/d/1qgiwCyO7948qPSWbTvYmR7DjH0nkh8HpfxP1HxubDis/view",
+      "key": "problem_solving_process_for_design_2",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "problem_solving_process_for_design_2"
+      }
+    },
+    {
+      "name": "Problem Solving Process with Programming",
+      "url": "https://docs.google.com/document/d/1q10YfeMqY95SAq0VAB3wnLPK2aDuJEoD2j82n-i183Y/view",
+      "key": "problem_solving_process_with_programming_3",
+      "properties": {
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "problem_solving_process_with_programming_3"
       }
     },
     {
@@ -12034,7 +12537,13 @@
     },
     {
       "seeding_key": {
-        "resource.key": "csd_curriculum_guide",
+        "resource.key": "csd_guide_to_assessment_4",
+        "script.name": "focus-on-creativity4a-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_guide_to_curriculum_videos_4",
         "script.name": "focus-on-creativity4a-2023"
       }
     },
@@ -12052,25 +12561,31 @@
     },
     {
       "seeding_key": {
+        "resource.key": "csd_guide_to_teaching_and_learning_strategies_4",
+        "script.name": "focus-on-creativity4a-2023"
+      }
+    },
+    {
+      "seeding_key": {
         "resource.key": "csd_guide_to_using_resources",
         "script.name": "focus-on-creativity4a-2023"
       }
     },
     {
       "seeding_key": {
-        "resource.key": "csd_implementation_guide",
-        "script.name": "focus-on-creativity4a-2023"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "csd_learning_frameworks",
-        "script.name": "focus-on-creativity4a-2023"
-      }
-    },
-    {
-      "seeding_key": {
         "resource.key": "csd_programming_levels_guide",
+        "script.name": "focus-on-creativity4a-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "problem_solving_process_for_design_2",
+        "script.name": "focus-on-creativity4a-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "problem_solving_process_with_programming_3",
         "script.name": "focus-on-creativity4a-2023"
       }
     },

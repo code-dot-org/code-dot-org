@@ -318,10 +318,10 @@
           "description": "Unutulmaz ve güçlü bir şifre oluşturarak pratik yapın."
         },
         "2d16e09e-308f-4fe5-b53a-bfd2a50ec736": {
-          "description": "Bir adım dizisini kodlanmış bir program olarak yeniden çerçeveleme"
+          "description": "Bir dizi adımı kodlanmış bir program olarak yeniden çerçevelendirin"
         },
         "e2eb4dfd-1b5b-4a01-aceb-1b96c49cd254": {
-          "description": "İnsan dilinden makine diline çevirme sorunlarının kısıtlamalarını açıklayın."
+          "description": "Sorunları insan dilinden makine diline çevirmenin kısıtlamalarını açıklayın"
         },
         "86d6703f-6086-48c6-820f-d9d972471655": {
           "description": "Hareket komutlarını bir programda sıralı adımlar olarak sıralayın."
@@ -333,22 +333,22 @@
           "description": "Hataları çözmek için mevcut bir programı değiştirin."
         },
         "15927fdc-d944-4de3-89ca-f238d8014f55": {
-          "description": "Kod ve sembolleri kullanarak fikirleri tanımlama."
+          "description": "Kod ve sembolleri kullanarak fikirleri tanımlayın."
         },
         "55ae003d-10f1-4364-ab38-3a3360491e38": {
-          "description": "Hayal kırıklığı işaretlerini tanımlama "
+          "description": "Hayal kırıklığı belirtilerini tanımlayın"
         },
         "d5c5bdd3-6ca6-48b2-ae3b-5aaf0c8dbb70": {
           "description": "Takım arkadaşları tarafından yapılan çalışmayı doğrulama."
         },
         "0d2e39ca-970f-40e0-b26a-84bcecf9315d": {
-          "description": "Bir programdan hata ayıklamak için bir planı açıklama ve uygulama."
+          "description": "Bir programda hata ayıklamak için bir plan tanımlayın ve uygulayın."
         },
         "59c4efee-e0c3-4293-9609-a82db6698755": {
-          "description": "Verilen kodu okuma ve kavrama."
+          "description": "Verilen kodu okuyun ve anlayın."
         },
         "66a6e0e0-c56c-4148-9d57-ce509afa4fc6": {
-          "description": "Bir hatayı ve bunun bir programda neden olduğu problemleri tanımlama."
+          "description": "Bir programda bir hatayı ve neden olduğu sorunları tanımlayın."
         },
         "a7fe08e4-1943-4bbc-a18a-e10bd0942173": {
           "description": "Yaratıcı bir eseri diğer öğrencilerle paylaşma."
@@ -363,7 +363,7 @@
           "description": "Girdi olayları ile ilişkili hareketleri tanımlama."
         },
         "f47c401e-4a61-4f0e-a4d3-75f3bd9d8908": {
-          "description": "Sıra ve olayları kullanarak hareketli, interaktif bir oyun oluşturma."
+          "description": "Sekans ve olayları kullanarak animasyonlu, etkileşimli bir oyun yaratın."
         },
         "4ed9cede-cc9a-409d-b433-781185b454b6": {
           "description": "Kod ile dans animasyonları oluşturma"
@@ -381,46 +381,52 @@
           "description": "Tekrar alanlarını bularak ve bunları döngüsel yapılara taşıyarak mevcut kodu iyileştirin"
         },
         "c2ec43ae-26ae-48df-8657-373765b01821": {
-          "description": "Döngülerde tekrarlanması gereken komutlar ve kendi başına kullanılması gereken komutlar arasındaki farkı belirtme."
+          "description": "Döngülerde tekrarlanması gereken komutlar ile kendi başına kullanılması gereken komutlar arasında ayrım yapın."
+        },
+        "f9dc8f2c-6f5a-4854-b0bb-296d0ca89233": {
+          "description": "Manuel tekrarlama yerine bir döngü yapısı kullanmanın faydalarını tanımlayın."
         },
         "64421cd8-645b-40d1-b071-4f4238065252": {
-          "description": "Karmaşık görevleri daha küçük tekrarlanabilir bölümlere ayırma."
+          "description": "Karmaşık görevleri tekrarlanabilir daha küçük bölümlere ayırın."
         },
         "ddac6ae3-6abe-444e-af05-8a6b2a5eec65": {
-          "description": "Daha küçük tekrarlı desenlerden yapıldığı üzere büyük tekrarlı desenleri tanıma."
+          "description": "Tekrarlanan büyük kalıpları daha küçük tekrarlanan kalıplardan yapılmış olarak tanıyın."
+        },
+        "f466b8aa-18bf-460d-9780-1abcb7f32589": {
+          "description": "Manuel tekrarlama yerine bir döngü yapısı kullanmanın faydalarını tanımlayın."
         },
         "1368d16e-4e0d-4b76-8473-2765f5379362": {
-          "description": "Kriterlere dayanarak bir koşulun karşılanıp karşılanmadığını belirleme."
+          "description": "Ölçütlere göre bir koşulun karşılanıp karşılanmadığını belirleyin."
         },
         "744e09fe-1aaa-4253-95e2-7f1c8fc4e5dc": {
-          "description": "Bir programın belirli kısımlarının çalıştırılmasının gerektiği ve çalıştırılmamasının gerektiği durumları tanımlama."
+          "description": "Bir programın belirli bölümlerinin ne zaman çalıştırılması ve ne zaman çalıştırılmaması gerektiğini tanımlayın."
         },
         "ec9adec1-48c1-458e-bae1-37f2be6a863b": {
-          "description": "Bir programı dikkatle inceleme ve bir dizi girdi göz önünde bulundurularak sonucu tahmin etme."
+          "description": "Bir programda çapraz geçiş yapın ve bir dizi girdi verildiğinde sonucu tahmin edin."
         },
         "3ca80839-1859-48e0-a010-de7ef526512d": {
-          "description": "Kriterlere dayanarak bir koşulun karşılanıp karşılanmadığını belirleme."
+          "description": "Ölçütlere göre bir koşulun karşılanıp karşılanmadığını belirleyin."
         },
         "c6a481f9-8493-4b50-876c-c16309ec4e50": {
-          "description": "Bir programın belirli kısımlarının çalıştırılmasının gerektiği ve çalıştırılmamasının gerektiği durumları tanımlama."
+          "description": "Bir programın belirli bölümlerinin ne zaman çalıştırılması ve ne zaman çalıştırılmaması gerektiğini tanımlayın."
         },
         "37326a7f-29b6-4ea6-9ed5-a08c2aa2dfd4": {
-          "description": "Döngüsel sıralar ve koşulların bir kombinasyonunu kullanarak bulmaca çözme."
+          "description": "Döngülü diziler ve koşullu ifadelerin bir kombinasyonunu kullanarak bulmacaları çözün."
         },
         "b7bbc7eb-a6d3-4820-9b4b-27b64ec0b0d4": {
-          "description": "Bir programda konuşulan dili koşul ifadelerine çevirme."
+          "description": "Konuşma dilindeki koşullu ifadeleri bir programa çevirin."
         },
         "a4808383-ef10-4135-9a5d-f695b62aeb36": {
-          "description": "Bilinmeyen değerleri olan sorunları çözebilecek programlar oluşturmak için bir süresince döngüsü kullanma."
+          "description": "Bilinmeyen değerlerle ilgili sorunları çözebilecek programlar oluşturmak için bir süre döngüsü kullanın."
         },
         "d8494711-ae41-4ccd-8db3-04385d787ca3": {
-          "description": "Sabit bir sayıda tekrarlanan döngüler ve bir koşul doğru olduğu sürece tekrarlanan döngüler arasındaki farkı ayırt etme."
+          "description": "Sabit sayıda tekrar eden döngüler ile bir koşul doğru olduğu sürece tekrar eden döngüler arasında ayrım yapın."
         },
         "115e7f69-47a1-495a-bc11-8a9ed3270324": {
-          "description": "Koşulları uygulamak için birçok stratejinin anlaşılacağı programlar oluşturma."
+          "description": "Koşullu ifadeleri uygulamak için birden çok stratejiyi anlayarak programlar oluşturun."
         },
         "7164456d-4573-432f-b255-a0596e702d96": {
-          "description": "Bir programda konuşulan dili koşul ifadelerine çevirme."
+          "description": "Konuşma dilindeki koşullu ifadeleri ve döngüleri bir programa çevirin."
         },
         "bbd1a283-a817-4fd2-9335-651b698f63d2": {
           "description": "Zaman kısıtlamaları veya hatalar gibi engellerin üstesinden gelin."
@@ -481,6 +487,18 @@
         },
         "ea8b6be7-f51c-420f-a295-ec02488a066f": {
           "description": "Değişkenleri istemlerle birlikte kullanın."
+        },
+        "fc312ef1-6ea0-41a5-b112-b4e478cef7d3": {
+          "description": "Karakterlerin gruplar halinde oluşturulduğu ve olaylar kullanılarak bireysel olarak kontrol edildiği Sprite Lab programları oluşturun."
+        },
+        "29d1cbbf-aba5-45c8-ab1f-fc1ed266bb1b": {
+          "description": "Sprite Lab'de puan almak için hareketli nesne yokedebilen bir tıklama oyunu oluşturun"
+        },
+        "9da7b378-c4e9-4184-b58a-61dfdad47357": {
+          "description": "Bilgileri depolayan ve zaman içinde değiştiren bir değişken oluşturun"
+        },
+        "ac5f0f5b-6aa9-4732-930d-08d96a451b99": {
+          "description": "Oyuncunun skorunu izlemek için bireysel olarak kontrol edilen birden fazla karakter ve değişkenler kullanarak Sprite Lab'de kendi toplayıcı oyunlarını oluşturun"
         },
         "3606812b-a55f-4eb9-8a40-a9ca52df3726": {
           "description": "Simülasyon değişkenlerini değiştirerek tahmin yapın ve test edin"
@@ -548,14 +566,17 @@
         "6a824aaa-b3b2-4c7f-b2f9-daed0835a2c5": {
           "description": "Metin ve özel görüntülerle kim olduklarını ifade eden etkileşimli bir bilgisayar programı oluşturun."
         },
+        "62ffafea-c5f4-4942-b283-9462c41d52cd": {
+          "description": "Manuel tekrarlama yerine bir döngü yapısı kullanmanın faydalarını tanımlayın."
+        },
         "68b90262-3e0e-4c90-9888-21796cd30869": {
-          "description": "Döngülerde tekrarlanması gereken komutlar ve kendi başına kullanılması gereken komutlar arasındaki farkı belirtme."
+          "description": "Döngülerde tekrarlanması gereken komutlar ile kendi başına kullanılması gereken komutlar arasında ayrım yapın."
         },
         "3fac17b3-f27c-4f5c-98f1-a43e3e18d4e0": {
           "description": "Bir eylemin kaç kez tekrarlanması gerektiğini sayın ve bunu bir döngü olarak gösterin."
         },
         "81e6c614-6b5d-43db-8178-3adf983eb5b6": {
-          "description": "Karmaşık görevleri daha küçük tekrarlanabilir bölümlere ayırma."
+          "description": "Karmaşık görevleri tekrarlanabilir daha küçük bölümlere ayırın."
         },
         "e4a76fad-2750-4f3b-8138-0e0a932b5e2b": {
           "description": "Basit şekilleri, iç içe geçmiş döngüler ile karmaşık tasarımlarla birleştirme."
@@ -591,16 +612,16 @@
           "description": "Kodu kullanışlı fonksiyonlara kategorize etme ve genelleştirme."
         },
         "818dc160-2ce6-4d7d-a358-208b9026debb": {
-          "description": "Kriterlere dayanarak bir koşulun karşılanıp karşılanmadığını belirleme."
+          "description": "Ölçütlere göre bir koşulun karşılanıp karşılanmadığını belirleyin."
         },
         "cb32fed2-db37-4e6c-9651-3b1f39fd4741": {
-          "description": "Bir programın belirli kısımlarının çalıştırılmasının gerektiği ve çalıştırılmamasının gerektiği durumları tanımlama."
+          "description": "Bir programın belirli bölümlerinin ne zaman çalıştırılması ve ne zaman çalıştırılmaması gerektiğini tanımlayın."
         },
         "1b6a66df-472f-49d6-acdf-13c2f6fdb263": {
-          "description": "Kriterlere dayanarak bir koşulun karşılanıp karşılanmadığını belirleme."
+          "description": "Ölçütlere göre bir koşulun karşılanıp karşılanmadığını belirleyin."
         },
         "80cf9584-e814-4880-8c83-119966ed7a89": {
-          "description": "Bir programın belirli kısımlarının çalıştırılmasının gerektiği ve çalıştırılmamasının gerektiği durumları tanımlama."
+          "description": "Bir programın belirli bölümlerinin ne zaman çalıştırılması ve ne zaman çalıştırılmaması gerektiğini tanımlayın."
         },
         "59e29159-7e29-48ce-95c7-8510877793e9": {
           "description": "Bir fonksiyonun, ne zaman bir programı basitleştirmeye yarayabileceğini belirleme."
@@ -691,6 +712,12 @@
         },
         "be1a4163-770d-4fbd-85a1-4c18198d5c94": {
           "description": "Belirli bir görev için bir dizi komutu döngüye sokan bir program oluşturun."
+        },
+        "dbb376e1-41ba-4f5f-8125-30a2de24cead": {
+          "description": "Manuel tekrarlama yerine bir döngü yapısı kullanmanın faydalarını tanımlayın."
+        },
+        "36786d0a-ce44-48d7-b557-a7e44c32c28d": {
+          "description": "Manuel tekrarlama yerine bir döngü yapısı kullanmanın faydalarını tanımlayın."
         },
         "6baba9ab-130e-4a58-bf30-7cee60bacb18": {
           "description": "Uzun bir talimat dizisini mümkün olan en küçük yinelenebilir diziye bölün."
@@ -809,14 +836,23 @@
         "8a54dbc1-2cc5-4fbe-a69d-1fcdeb521415": {
           "description": "Uzun bir talimat dizisini tekrarlanabilir en büyük diziye ayırın."
         },
+        "d1a8cfa4-2a01-4cd1-bf6b-7bdb85dfbba2": {
+          "description": "Manuel tekrarlama yerine bir döngü yapısı kullanmanın faydalarını tanımlayın."
+        },
+        "19f2a21b-7cd6-49c1-b058-a71afadfbf0f": {
+          "description": "Manuel tekrarlama yerine bir döngü yapısı kullanmanın faydalarını tanımlayın."
+        },
         "bbb2787f-1faa-4193-93ec-e2e5ff8de139": {
-          "description": "Döngülerde tekrarlanması gereken komutlar ve kendi başına kullanılması gereken komutlar arasındaki farkı belirtme."
+          "description": "Döngülerde tekrarlanması gereken komutlar ile kendi başına kullanılması gereken komutlar arasında ayrım yapın."
         },
         "64f8b4e0-c197-41bc-9e3d-b957587027d9": {
-          "description": "Daha küçük tekrarlı desenlerden yapıldığı üzere büyük tekrarlı desenleri tanıma."
+          "description": "Tekrarlanan büyük kalıpları daha küçük tekrarlanan kalıplardan yapılmış olarak tanıyın."
+        },
+        "a3d9c13d-e5d1-4c96-8605-b6c6968e446a": {
+          "description": "Manuel tekrarlama yerine bir döngü yapısı kullanmanın faydalarını tanımlayın."
         },
         "f875fba7-8b45-4faa-b661-24d7eae983b5": {
-          "description": "Karmaşık görevleri daha küçük tekrarlanabilir bölümlere ayırma."
+          "description": "Karmaşık görevleri tekrarlanabilir daha küçük bölümlere ayırın."
         },
         "2dc48a33-af54-4ea5-b2a5-4b8c16018529": {
           "description": "Bir döngü ve iç içe geçmiş bir döngü kullanmanın arasındaki farkı tanımlayın."
@@ -828,34 +864,34 @@
           "description": "Hem döngüleri hem de iç içe geçmiş döngüleri kullanarak kodu en büyük tekrarlanabilir sıralara ayırın."
         },
         "5abe1116-ce82-4bce-8454-7537bdce12d4": {
-          "description": "Kriterlere dayanarak bir koşulun karşılanıp karşılanmadığını belirleme."
+          "description": "Ölçütlere göre bir koşulun karşılanıp karşılanmadığını belirleyin."
         },
         "b75b5c74-2020-4cba-abb7-9c1d2432c93f": {
-          "description": "Bir programın belirli kısımlarının çalıştırılmasının gerektiği ve çalıştırılmamasının gerektiği durumları tanımlama."
+          "description": "Bir programın belirli bölümlerinin ne zaman çalıştırılması ve ne zaman çalıştırılmaması gerektiğini tanımlayın."
         },
         "94a0640b-eaf9-4797-b448-601edefe53f7": {
-          "description": "Bir programda konuşulan dili koşul ifadelerine çevirme."
+          "description": "Konuşma dilindeki koşullu ifadeleri bir programa çevirin."
         },
         "da9556fa-6a34-4735-a0fe-4f61e5dfba88": {
-          "description": "Döngüsel sıralar ve koşulların bir kombinasyonunu kullanarak bulmaca çözme."
+          "description": "Döngülü diziler ve koşullu ifadelerin bir kombinasyonunu kullanarak bulmacaları çözün."
         },
         "9a923506-c553-4734-8675-3925b4205a40": {
-          "description": "Sabit bir sayıda tekrarlanan döngüler ve bir koşul doğru olduğu sürece tekrarlanan döngüler arasındaki farkı ayırt etme."
+          "description": "Sabit sayıda tekrar eden döngüler ile bir koşul doğru olduğu sürece tekrar eden döngüler arasında ayrım yapın."
         },
         "ef9064e8-a2fc-43a5-a847-0e504ffd7043": {
-          "description": "Bilinmeyen değerleri olan sorunları çözebilecek programlar oluşturmak için bir süresince döngüsü kullanma."
+          "description": "Bilinmeyen değerlerle ilgili sorunları çözebilecek programlar oluşturmak için bir süre döngüsü kullanın."
         },
         "11cc6b71-35eb-4651-87ef-17cb48e8e93a": {
-          "description": "Bir programın belirli kısımlarının çalıştırılmasının gerektiği ve çalıştırılmamasının gerektiği durumları tanımlama."
+          "description": "Bir programın belirli bölümlerinin ne zaman çalıştırılması ve ne zaman çalıştırılmaması gerektiğini tanımlayın."
         },
         "979a7e2a-759e-4ffc-96b2-552fe5888fb9": {
-          "description": "Kriterlere dayanarak bir koşulun karşılanıp karşılanmadığını belirleme."
+          "description": "Ölçütlere göre bir koşulun karşılanıp karşılanmadığını belirleyin."
         },
         "580ad418-73dc-42d0-8934-42fe0a9af98a": {
-          "description": "Koşulları uygulamak için birçok stratejinin anlaşılacağı programlar oluşturma."
+          "description": "Koşullu ifadeleri uygulamak için birden çok stratejiyi anlayarak programlar oluşturun."
         },
         "94e41188-94ca-4365-878b-408e000c2a1d": {
-          "description": "Bir programda konuşulan dili koşul ifadelerine çevirme."
+          "description": "Konuşma dilindeki koşullu ifadeleri ve döngüleri bir programa çevirin."
         },
         "24fd8517-7a14-4489-8d76-76ddf7b9a7fe": {
           "description": "Bir döngü ve koşul ifadesini birlikte eşleştirme."
@@ -886,6 +922,12 @@
         },
         "fc585f17-d535-4c1d-aaba-65e878894373": {
           "description": "Eylemler Kelimeleri ve ifadeleri tutmak için değişkenleri kullanın."
+        },
+        "4d6b0001-0d41-45ae-8061-1c493e6976ee": {
+          "description": "Sprite Lab'de puan almak için hareketli nesne yokedebilen bir tıklama oyunu oluşturun"
+        },
+        "54f59612-1695-4ba2-bbf4-c03862b02924": {
+          "description": "Bilgileri depolayan ve zaman içinde değiştiren bir değişken oluşturun"
         },
         "75953ae5-c4fa-40d3-85e1-deb508c32847": {
           "description": "Değerleri mevcut değişkenlere atama."
@@ -955,6 +997,9 @@
         },
         "65939b9f-ba0f-4834-8f54-24419c9391e5": {
           "description": "Tekrar alanlarını bularak ve bunları döngüsel yapılara taşıyarak mevcut kodu iyileştirin"
+        },
+        "3a06cce8-584a-431c-8cca-05ad9b0df32d": {
+          "description": "Manuel tekrarlama yerine bir döngü yapısı kullanmanın faydalarını tanımlayın."
         },
         "d7a5432f-6854-483b-8a5b-fcb1844dd603": {
           "description": "Uzun bir talimat dizisini mümkün olan en küçük yinelenebilir diziye bölün."
@@ -1055,6 +1100,9 @@
         "95c27888-7fcc-4606-8647-b8d7aca4841c": {
           "description": "Uzun bir talimat dizisini mümkün olan en küçük yinelenebilir diziye bölün."
         },
+        "afb9f46f-81f6-4f0a-a017-4e9c5fd5c7f6": {
+          "description": "Manuel tekrarlama yerine bir döngü yapısı kullanmanın faydalarını tanımlayın."
+        },
         "03eb830d-5a23-4897-b23b-067e5eb0180f": {
           "description": "Bir şekli en büyük tekrarlanabilir dizisine ayrıştırın."
         },
@@ -1142,6 +1190,9 @@
         "b2de5b75-e224-4eee-aa3a-ab51792f3dea": {
           "description": "Uzun bir talimat dizisini tekrarlanabilir en büyük diziye ayırın."
         },
+        "be258fd0-4790-440a-99ef-bb20ce2d3c8b": {
+          "description": "Manuel tekrarlama yerine bir döngü yapısı kullanmanın faydalarını tanımlayın."
+        },
         "2998b3d3-4953-4cbf-94f2-004630893e21": {
           "description": "Eylemleri taşımak ve gerçekleştirmek için sıralı ve döngülü komutların bir kombinasyonunu kullanın."
         },
@@ -1152,7 +1203,10 @@
           "description": "Belirli bir görev için tek bir komutu döngüye sokan bir program yazın."
         },
         "cf1d581f-7554-4432-a92e-3e5f57f9144e": {
-          "description": "Döngülerde tekrarlanması gereken komutlar ve kendi başına kullanılması gereken komutlar arasındaki farkı belirtme."
+          "description": "Döngülerde tekrarlanması gereken komutlar ile kendi başına kullanılması gereken komutlar arasında ayrım yapın."
+        },
+        "dda209ff-ec81-4914-93c0-2716153efce4": {
+          "description": "Manuel tekrarlama yerine bir döngü yapısı kullanmanın faydalarını tanımlayın."
         },
         "05615b7c-1833-4ca9-96a8-45812c1e8a4a": {
           "description": "Önceden tanımlanmış eylemleri ve olaya dayalı olanları ayırt etme alıştırması yapın."
@@ -1280,8 +1334,11 @@
         "a1e3a5d5-d609-4c1f-a4ef-6000a4335957": {
           "description": "Kullanıcı girişine yanıt veren etkileşimli bir bilgisayar programı oluşturun."
         },
+        "0272de44-fd6e-4cc0-a5f1-b4f21a96d21b": {
+          "description": "Manuel tekrarlama yerine bir döngü yapısı kullanmanın faydalarını tanımlayın."
+        },
         "5936ef50-add4-4fbb-a911-224d5c1e9fcc": {
-          "description": "Döngülerde tekrarlanması gereken komutlar ve kendi başına kullanılması gereken komutlar arasındaki farkı belirtme."
+          "description": "Döngülerde tekrarlanması gereken komutlar ile kendi başına kullanılması gereken komutlar arasında ayrım yapın."
         },
         "8cba8ac9-820e-48fd-b726-f7926ecf3348": {
           "description": "Değerleri mevcut değişkenlere atama."
@@ -1293,10 +1350,13 @@
           "description": "Bir döngü içerisindeki değerleri değiştirmek için değişkenleri kullanma."
         },
         "dd570e3f-8340-4838-8ba1-de856546f834": {
-          "description": "Karmaşık görevleri daha küçük tekrarlanabilir bölümlere ayırma."
+          "description": "Karmaşık görevleri tekrarlanabilir daha küçük bölümlere ayırın."
         },
         "12412b47-e83e-43a9-ad42-e98cba364913": {
-          "description": "Daha küçük tekrarlı desenlerden yapıldığı üzere büyük tekrarlı desenleri tanıma."
+          "description": "Tekrarlanan büyük kalıpları daha küçük tekrarlanan kalıplardan yapılmış olarak tanıyın."
+        },
+        "931f4770-e471-4bf8-a79a-b9a7c9d14890": {
+          "description": "Manuel tekrarlama yerine bir döngü yapısı kullanmanın faydalarını tanımlayın."
         },
         "059b2997-3d05-4186-8450-066fceeb8c5b": {
           "description": "Çalışma zamanı sırasında miktarları değiştirmek için değişkenleri kullanabilecekleri alanları tanımlama. "
@@ -1632,7 +1692,7 @@
           "description": "Manuel tekrarlama yerine bir döngü yapısı kullanmanın faydalarını tanımlayın."
         },
         "b27f9553-dc95-452c-a4ee-dc69db0fc913": {
-          "description": "Döngülerde tekrarlanması gereken komutlar ve kendi başına kullanılması gereken komutlar arasındaki farkı belirtme."
+          "description": "Döngülerde tekrarlanması gereken komutlar ile kendi başına kullanılması gereken komutlar arasında ayrım yapın."
         },
         "74ce2354-89e9-4396-8cf5-5f9a43e02bd4": {
           "description": "Bir eğitmen tarafından verilen komutları tekrarlama."
@@ -1689,10 +1749,10 @@
           "description": "Unutulmaz ve güçlü bir şifre oluşturarak pratik yapın."
         },
         "3c4b51d5-b72f-42df-a55a-86c146214424": {
-          "description": "Bir adım dizisini kodlanmış bir program olarak yeniden çerçeveleme"
+          "description": "Bir dizi adımı kodlanmış bir program olarak yeniden çerçevelendirin"
         },
         "16d1e174-7b4d-4b5e-a7be-9d4399743d19": {
-          "description": "İnsan dilinden makine diline çevirme sorunlarının kısıtlamalarını açıklayın."
+          "description": "Sorunları insan dilinden makine diline çevirmenin kısıtlamalarını açıklayın"
         },
         "69023643-6dd6-4d71-b31a-d2dff7952ea7": {
           "description": "Hareket komutlarını bir programda sıralı adımlar olarak sıralayın."
@@ -1704,22 +1764,22 @@
           "description": "Uzun bir talimat dizisini tekrarlanabilir en büyük diziye ayırın."
         },
         "8a0addda-b47f-4551-8c82-9115be3c130d": {
-          "description": "Kod ve sembolleri kullanarak fikirleri tanımlama."
+          "description": "Kod ve sembolleri kullanarak fikirleri tanımlayın."
         },
         "dfde2f15-333a-4ca0-942e-eb7642ea3239": {
           "description": "Takım arkadaşları tarafından yapılan çalışmayı doğrulama."
         },
         "8dba466d-d809-49c6-8f60-218c27964411": {
-          "description": "Hayal kırıklığı işaretlerini tanımlama "
+          "description": "Hayal kırıklığı belirtilerini tanımlayın"
         },
         "2d84b5eb-70d6-4f6d-88c5-7838a4983a78": {
-          "description": "Verilen kodu okuma ve kavrama."
+          "description": "Verilen kodu okuyun ve anlayın."
         },
         "71cede4e-3e93-41d6-a422-f2443f756a61": {
-          "description": "Bir hatayı ve bunun bir programda neden olduğu problemleri tanımlama."
+          "description": "Bir programda bir hatayı ve neden olduğu sorunları tanımlayın."
         },
         "2f25fa99-cf66-4ed5-b41d-aaab9b796d5e": {
-          "description": "Bir programdan hata ayıklamak için bir planı açıklama ve uygulama."
+          "description": "Bir programda hata ayıklamak için bir plan tanımlayın ve uygulayın."
         },
         "3b4a2468-e182-4060-861f-2a922730445b": {
           "description": "Girdi olayları ile ilişkili hareketleri tanımlama."
@@ -1731,7 +1791,7 @@
           "description": "Yaratıcı bir eseri diğer öğrencilerle paylaşma."
         },
         "bafea2a8-7a23-4046-9360-77d760c54c2b": {
-          "description": "Sıra ve olayları kullanarak hareketli, interaktif bir oyun oluşturma."
+          "description": "Sekans ve olayları kullanarak animasyonlu, etkileşimli bir oyun yaratın."
         },
         "e3dce354-a602-47d1-99d1-dc729d0f4ff4": {
           "description": "Girdi olayları ile ilişkili hareketleri tanımlama."
@@ -1751,47 +1811,53 @@
         "982d25cd-d5ff-491b-8505-be2606ba0a5e": {
           "description": "Tekrar alanlarını bularak ve bunları döngüsel yapılara taşıyarak mevcut kodu iyileştirin"
         },
+        "d0dae7ad-246b-4f90-8800-8cc9f1de25aa": {
+          "description": "Manuel tekrarlama yerine bir döngü yapısı kullanmanın faydalarını tanımlayın."
+        },
         "079d7fb4-c8a7-4319-80d6-53037ad705eb": {
-          "description": "Döngülerde tekrarlanması gereken komutlar ve kendi başına kullanılması gereken komutlar arasındaki farkı belirtme."
+          "description": "Döngülerde tekrarlanması gereken komutlar ile kendi başına kullanılması gereken komutlar arasında ayrım yapın."
         },
         "3a50aae3-6e0f-4821-9539-d06669eba0b1": {
-          "description": "Karmaşık görevleri daha küçük tekrarlanabilir bölümlere ayırma."
+          "description": "Karmaşık görevleri tekrarlanabilir daha küçük bölümlere ayırın."
         },
         "a19b271e-27b4-410c-bd3f-20c07f3ce2f0": {
-          "description": "Daha küçük tekrarlı desenlerden yapıldığı üzere büyük tekrarlı desenleri tanıma."
+          "description": "Tekrarlanan büyük kalıpları daha küçük tekrarlanan kalıplardan yapılmış olarak tanıyın."
+        },
+        "673ddc56-5217-45a9-919c-b42024f7de2b": {
+          "description": "Manuel tekrarlama yerine bir döngü yapısı kullanmanın faydalarını tanımlayın."
         },
         "fd3464fd-5921-4873-a850-c0799c55eecd": {
-          "description": "Bir programın belirli kısımlarının çalıştırılmasının gerektiği ve çalıştırılmamasının gerektiği durumları tanımlama."
+          "description": "Bir programın belirli bölümlerinin ne zaman çalıştırılması ve ne zaman çalıştırılmaması gerektiğini tanımlayın."
         },
         "494526f8-7392-4788-9126-b2e2dd53b241": {
-          "description": "Kriterlere dayanarak bir koşulun karşılanıp karşılanmadığını belirleme."
+          "description": "Ölçütlere göre bir koşulun karşılanıp karşılanmadığını belirleyin."
         },
         "3f9795a0-e52c-4fcd-ade0-d436facf382c": {
-          "description": "Bir programı dikkatle inceleme ve bir dizi girdi göz önünde bulundurularak sonucu tahmin etme."
+          "description": "Bir programda çapraz geçiş yapın ve bir dizi girdi verildiğinde sonucu tahmin edin."
         },
         "f3746860-8db9-414b-bd6e-5d2503fc81b4": {
-          "description": "Bir programın belirli kısımlarının çalıştırılmasının gerektiği ve çalıştırılmamasının gerektiği durumları tanımlama."
+          "description": "Bir programın belirli bölümlerinin ne zaman çalıştırılması ve ne zaman çalıştırılmaması gerektiğini tanımlayın."
         },
         "83b6020a-2273-4966-abd6-0049afa1eb4e": {
-          "description": "Kriterlere dayanarak bir koşulun karşılanıp karşılanmadığını belirleme."
+          "description": "Ölçütlere göre bir koşulun karşılanıp karşılanmadığını belirleyin."
         },
         "4a1dcde3-13a7-47d1-859a-b29ade558f5d": {
-          "description": "Bir programda konuşulan dili koşul ifadelerine çevirme."
+          "description": "Konuşma dilindeki koşullu ifadeleri bir programa çevirin."
         },
         "b9f29764-7d0f-4dfc-9400-9277f0ad9e4f": {
-          "description": "Döngüsel sıralar ve koşulların bir kombinasyonunu kullanarak bulmaca çözme."
+          "description": "Döngülü diziler ve koşullu ifadelerin bir kombinasyonunu kullanarak bulmacaları çözün."
         },
         "f06bf36a-d520-4a73-b194-6d1e131a07ec": {
-          "description": "Sabit bir sayıda tekrarlanan döngüler ve bir koşul doğru olduğu sürece tekrarlanan döngüler arasındaki farkı ayırt etme."
+          "description": "Sabit sayıda tekrar eden döngüler ile bir koşul doğru olduğu sürece tekrar eden döngüler arasında ayrım yapın."
         },
         "38cd04a9-3d07-4df9-b22d-18e39369e387": {
-          "description": "Bilinmeyen değerleri olan sorunları çözebilecek programlar oluşturmak için bir süresince döngüsü kullanma."
+          "description": "Bilinmeyen değerlerle ilgili sorunları çözebilecek programlar oluşturmak için bir süre döngüsü kullanın."
         },
         "fd7ce60d-0e0f-403e-85a4-cf0d7e5eeac3": {
-          "description": "Koşulları uygulamak için birçok stratejinin anlaşılacağı programlar oluşturma."
+          "description": "Koşullu ifadeleri uygulamak için birden çok stratejiyi anlayarak programlar oluşturun."
         },
         "630e79db-15ec-49fd-804c-060b8adf40ea": {
-          "description": "Bir programda konuşulan dili koşul ifadelerine çevirme."
+          "description": "Konuşma dilindeki koşullu ifadeleri ve döngüleri bir programa çevirin."
         },
         "92ad0a98-e2e5-4104-8a9f-1dee9409f300": {
           "description": "Zaman kısıtlamaları veya hatalar gibi engellerin üstesinden gelin."
@@ -1862,20 +1928,29 @@
         "50bc6662-3d3d-4bc6-ac09-8c2d2961bed2": {
           "description": "Kod ile dans animasyonları oluşturma"
         },
+        "f66d5b0d-f5b6-441f-b3c0-c24a7a857912": {
+          "description": "Manuel tekrarlama yerine bir döngü yapısı kullanmanın faydalarını tanımlayın."
+        },
         "d41cb934-ead6-42d0-a3c6-3a692fa53626": {
           "description": "Uzun bir talimat dizisini tekrarlanabilir en büyük diziye ayırın."
         },
         "19dc83bf-d44c-4e6b-a7ac-c11ada6cb656": {
           "description": "Bir labirentin sonuna ulaşmak için sıralı ve döngülü komutların bir kombinasyonunu kullanın."
         },
+        "7304a528-6a3a-4670-9e66-1438d26c3fc2": {
+          "description": "Manuel tekrarlama yerine bir döngü yapısı kullanmanın faydalarını tanımlayın."
+        },
         "32250c07-4872-43ce-9968-33e17f779cf3": {
-          "description": "Döngülerde tekrarlanması gereken komutlar ve kendi başına kullanılması gereken komutlar arasındaki farkı belirtme."
+          "description": "Döngülerde tekrarlanması gereken komutlar ile kendi başına kullanılması gereken komutlar arasında ayrım yapın."
         },
         "06be5715-7c67-4b13-816d-acb7253a13b2": {
-          "description": "Karmaşık görevleri daha küçük tekrarlanabilir bölümlere ayırma."
+          "description": "Karmaşık görevleri tekrarlanabilir daha küçük bölümlere ayırın."
         },
         "b884b12d-1247-42f3-a907-652dd25566f2": {
-          "description": "Daha küçük tekrarlı desenlerden yapıldığı üzere büyük tekrarlı desenleri tanıma."
+          "description": "Tekrarlanan büyük kalıpları daha küçük tekrarlanan kalıplardan yapılmış olarak tanıyın."
+        },
+        "aca03fc9-6f07-4b4a-9b83-26e9ff32ce1f": {
+          "description": "Manuel tekrarlama yerine bir döngü yapısı kullanmanın faydalarını tanımlayın."
         },
         "f35a3857-a630-4783-98c3-c0e6304af48f": {
           "description": "Hem döngüleri hem de iç içe geçmiş döngüleri kullanarak kodu en büyük tekrarlanabilir sıralara ayırın."
@@ -1887,34 +1962,34 @@
           "description": "Bir döngü ve iç içe geçmiş döngüye ne zaman ihtiyaç duyulduğunu veya döngüye ne zaman ihtiyaç duyulmadığını açıklama."
         },
         "d10e3ab4-a6ef-4f07-8a30-3ef1f9c181f6": {
-          "description": "Bir programın belirli kısımlarının çalıştırılmasının gerektiği ve çalıştırılmamasının gerektiği durumları tanımlama."
+          "description": "Bir programın belirli bölümlerinin ne zaman çalıştırılması ve ne zaman çalıştırılmaması gerektiğini tanımlayın."
         },
         "feac1e8e-b6f7-466e-9727-d62bdfaf4f09": {
-          "description": "Kriterlere dayanarak bir koşulun karşılanıp karşılanmadığını belirleme."
+          "description": "Ölçütlere göre bir koşulun karşılanıp karşılanmadığını belirleyin."
         },
         "7002da51-158a-4849-b733-48282a764b82": {
-          "description": "Bir programda konuşulan dili koşul ifadelerine çevirme."
+          "description": "Konuşma dilindeki koşullu ifadeleri bir programa çevirin."
         },
         "08f476a4-492c-47ee-8291-a435761059ac": {
-          "description": "Döngüsel sıralar ve koşulların bir kombinasyonunu kullanarak bulmaca çözme."
+          "description": "Döngülü diziler ve koşullu ifadelerin bir kombinasyonunu kullanarak bulmacaları çözün."
         },
         "e85d8d23-86c2-4644-9449-94af8b02f763": {
-          "description": "Sabit bir sayıda tekrarlanan döngüler ve bir koşul doğru olduğu sürece tekrarlanan döngüler arasındaki farkı ayırt etme."
+          "description": "Sabit sayıda tekrar eden döngüler ile bir koşul doğru olduğu sürece tekrar eden döngüler arasında ayrım yapın."
         },
         "8bee7277-31d3-4032-a8ea-2d2c820425ec": {
-          "description": "Bilinmeyen değerleri olan sorunları çözebilecek programlar oluşturmak için bir süresince döngüsü kullanma."
+          "description": "Bilinmeyen değerlerle ilgili sorunları çözebilecek programlar oluşturmak için bir süre döngüsü kullanın."
         },
         "e6f6f67a-369a-4a9d-8197-e3abf61af68e": {
-          "description": "Bir programın belirli kısımlarının çalıştırılmasının gerektiği ve çalıştırılmamasının gerektiği durumları tanımlama."
+          "description": "Bir programın belirli bölümlerinin ne zaman çalıştırılması ve ne zaman çalıştırılmaması gerektiğini tanımlayın."
         },
         "b932c234-ce5d-429e-9c70-cf6d0b28570c": {
-          "description": "Kriterlere dayanarak bir koşulun karşılanıp karşılanmadığını belirleme."
+          "description": "Ölçütlere göre bir koşulun karşılanıp karşılanmadığını belirleyin."
         },
         "ed2d18ce-a51e-4d24-b821-05c631de2b55": {
-          "description": "Koşulları uygulamak için birçok stratejinin anlaşılacağı programlar oluşturma."
+          "description": "Koşullu ifadeleri uygulamak için birden çok stratejiyi anlayarak programlar oluşturun."
         },
         "8c19055d-8287-441c-8c20-c0bb9e68aba3": {
-          "description": "Bir programda konuşulan dili koşul ifadelerine çevirme."
+          "description": "Konuşma dilindeki koşullu ifadeleri ve döngüleri bir programa çevirin."
         },
         "8107c1bb-a8ed-4cb4-9f5e-1a21126a4700": {
           "description": "Eğer, değilse eğer, değilse mantığını kullanarak birçok değer koşulunu analiz etmek için iç içe koşullar."
@@ -2015,6 +2090,9 @@
         "b6f41a7c-0967-4986-b7b6-910819b28396": {
           "description": "Tekrar alanlarını bularak ve bunları döngüsel yapılara taşıyarak mevcut kodu iyileştirin"
         },
+        "442a1fcc-3ffc-4e3a-9c55-9cfd94d281e1": {
+          "description": "Manuel tekrarlama yerine bir döngü yapısı kullanmanın faydalarını tanımlayın."
+        },
         "8fef5927-aacf-4340-b4c3-d221ebe3f13a": {
           "description": "Uzun bir talimat dizisini mümkün olan en küçük yinelenebilir diziye bölün."
         },
@@ -2090,8 +2168,11 @@
         "0709575a-e9e6-4856-a4f4-02b290f86975": {
           "description": "Oluşturdukları malzemelere ilişkin kendi haklarını anlama"
         },
+        "5d061773-3d1d-4dc1-866b-66a878b9b5e4": {
+          "description": "Manuel tekrarlama yerine bir döngü yapısı kullanmanın faydalarını tanımlayın."
+        },
         "c94bf0ed-de3d-428d-b6af-f3d9283d6b81": {
-          "description": "Döngülerde tekrarlanması gereken komutlar ve kendi başına kullanılması gereken komutlar arasındaki farkı belirtme."
+          "description": "Döngülerde tekrarlanması gereken komutlar ile kendi başına kullanılması gereken komutlar arasında ayrım yapın."
         },
         "70f5581b-eb40-4ba7-9a34-3eb09e0f5ea8": {
           "description": "Basit şekilleri, iç içe geçmiş döngüler ile karmaşık tasarımlarla birleştirme."
@@ -2100,7 +2181,7 @@
           "description": "Bir eylemin kaç kez tekrarlanması gerektiğini sayın ve bunu bir döngü olarak gösterin."
         },
         "5b77c883-5479-4cfe-a31a-605957dd083d": {
-          "description": "Karmaşık görevleri daha küçük tekrarlanabilir bölümlere ayırma."
+          "description": "Karmaşık görevleri tekrarlanabilir daha küçük bölümlere ayırın."
         },
         "6174da85-eb3a-4c0e-925d-360b04604fdb": {
           "description": "Bir döngü ve iç içe geçmiş döngüye ne zaman ihtiyaç duyulduğunu veya döngüye ne zaman ihtiyaç duyulmadığını açıklama."
@@ -2133,16 +2214,16 @@
           "description": "Bir fonksiyonun, ne zaman bir programı basitleştirmeye yarayabileceğini belirleme."
         },
         "e23e9b8a-cb10-4ec2-ac46-516d6a538d91": {
-          "description": "Bir programın belirli kısımlarının çalıştırılmasının gerektiği ve çalıştırılmamasının gerektiği durumları tanımlama."
+          "description": "Bir programın belirli bölümlerinin ne zaman çalıştırılması ve ne zaman çalıştırılmaması gerektiğini tanımlayın."
         },
         "fa7e3e31-19dd-47cb-b3f3-fdf47765b870": {
-          "description": "Kriterlere dayanarak bir koşulun karşılanıp karşılanmadığını belirleme."
+          "description": "Ölçütlere göre bir koşulun karşılanıp karşılanmadığını belirleyin."
         },
         "9c7ff713-c208-4acf-9691-da7a4a152565": {
-          "description": "Bir programın belirli kısımlarının çalıştırılmasının gerektiği ve çalıştırılmamasının gerektiği durumları tanımlama."
+          "description": "Bir programın belirli bölümlerinin ne zaman çalıştırılması ve ne zaman çalıştırılmaması gerektiğini tanımlayın."
         },
         "3f2ab1f9-4d27-49f5-a370-e9e4f9cf5bfc": {
-          "description": "Kriterlere dayanarak bir koşulun karşılanıp karşılanmadığını belirleme."
+          "description": "Ölçütlere göre bir koşulun karşılanıp karşılanmadığını belirleyin."
         },
         "dc1b604a-9814-45f4-aed5-b76776ad818c": {
           "description": "Bir fonksiyonun, ne zaman bir programı basitleştirmeye yarayabileceğini belirleme."

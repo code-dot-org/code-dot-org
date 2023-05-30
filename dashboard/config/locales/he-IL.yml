@@ -164,7 +164,6 @@ he:
     invalid_password: הסיסמא חייבת להכיל לפחות 6 תווים
     mismatch_password: שתי הסיסמאות שהזנת אינן תואמות
     student_consent: אני מאשר שיש לי אישור הורה או אפוטרופוס להשתמש בשירותי Code.org.
-    additional_information: יש צורך במידע נוסף כדי להמשיך ביצירת החשבון שלך.
     user_type_button: עדכן סוג חשבון
     user_type_label: סוג חשבון
     user_type_student: תלמיד
@@ -380,7 +379,9 @@ he:
       artist_k1: האמן (טרום-קריאה)
       basketball: כדורסל
       bounce: להקפיץ
+      calc: Calc
       dance: מסיבת ריקודים
+      eval: הערכה
       flappy: פלאפי
       frozen: לשבור את הקרח
       gamelab: מעבדת המשחקים
@@ -395,8 +396,10 @@ he:
       minecraft_hero: גיבור מיינקראפט
       playlab: מעבדת הצעצועים
       playlab_k1: מעבדת הצעצועים (טרום-קריאה)
+      poetry: שירה
       poetry_hoc: אומנות השירה
       scratch: סקראצ'
+      sports: ספורט
       starwars: מלחמת הכוכבים
       loading: טוען...
       weblab: מעבדת האתרים
@@ -707,6 +710,8 @@ he:
       body: תכנת חיות ויצורי מיינקראפט נוספים בגרסת מיינקראפט משלך.
     poem-art:
       title: אומנות השירה
+    sports:
+      title: ספורט
     starwars:
       title: מלחמת הכוכבים
     text-compression:
@@ -1114,6 +1119,12 @@ he:
         opt_in_yes: כן
         opt_in_no: לא
   courses_category: קורסים מלאים
+  course_offering:
+    headers:
+      minecraft: מיינקראפט
+      sports: ספורט
+      csf: יסודות מדעי המחשב
+      csc: חיבורי CS
   cookie_banner:
     more_information: הצג את מדיניות הפרטיות של Code.org.
     accept: מסכים

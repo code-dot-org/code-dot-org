@@ -9,18 +9,18 @@ export default class ChangeEmailForm extends React.Component {
     values: PropTypes.shape({
       newEmail: PropTypes.string,
       currentPassword: PropTypes.string,
-      emailOptIn: PropTypes.string
+      emailOptIn: PropTypes.string,
     }).isRequired,
     validationErrors: PropTypes.shape({
       newEmail: PropTypes.string,
       currentPassword: PropTypes.string,
-      emailOptIn: PropTypes.string
+      emailOptIn: PropTypes.string,
     }).isRequired,
     userType: PropTypes.oneOf(['teacher', 'student']).isRequired,
     isPasswordRequired: PropTypes.bool.isRequired,
     disabled: PropTypes.bool,
     onChange: PropTypes.func.isRequired,
-    onSubmit: PropTypes.func.isRequired
+    onSubmit: PropTypes.func.isRequired,
   };
 
   componentDidMount() {
@@ -39,19 +39,19 @@ export default class ChangeEmailForm extends React.Component {
   onNewEmailChange = event =>
     this.props.onChange({
       ...this.props.values,
-      newEmail: event.target.value
+      newEmail: event.target.value,
     });
 
   onCurrentPasswordChange = event =>
     this.props.onChange({
       ...this.props.values,
-      currentPassword: event.target.value
+      currentPassword: event.target.value,
     });
 
   onEmailOptInChange = event =>
     this.props.onChange({
       ...this.props.values,
-      emailOptIn: event.target.value
+      emailOptIn: event.target.value,
     });
 
   onKeyDown = event => {
@@ -77,13 +77,8 @@ export default class ChangeEmailForm extends React.Component {
   }
 
   render() {
-    const {
-      values,
-      validationErrors,
-      disabled,
-      userType,
-      isPasswordRequired
-    } = this.props;
+    const {values, validationErrors, disabled, userType, isPasswordRequired} =
+      this.props;
     return (
       <div>
         <Field
@@ -165,9 +160,9 @@ export default class ChangeEmailForm extends React.Component {
 
 const styles = {
   input: {
-    marginBottom: 4
+    marginBottom: 4,
   },
   radio: {
-    margin: '0px 5px 0px 0px'
-  }
+    margin: '0px 5px 0px 0px',
+  },
 };

@@ -13,14 +13,14 @@ describe('NewCourseFormTest', () => {
         'family-1': {
           instructor_audience: 'teacher',
           participant_audience: 'student',
-          instruction_type: 'teacher_led'
+          instruction_type: 'teacher_led',
         },
         'family-2': {
           instructor_audience: 'universal_instructor',
           participant_audience: 'teacher',
-          instruction_type: 'self_paced'
-        }
-      }
+          instruction_type: 'self_paced',
+        },
+      },
     };
   });
 

@@ -11,7 +11,7 @@ const publishDialogDefaultProps = {
   projectId: PROJECT_ID,
   projectType: PROJECT_TYPE,
   onConfirmPublish: action('publish'),
-  onClose: action('close')
+  onClose: action('close'),
 };
 
 const Template = overrides => (
@@ -22,10 +22,10 @@ export const DialogOpen = Template.bind({});
 
 export const DialogOpenPublishPending = Template.bind({});
 DialogOpenPublishPending.args = {
-  isPublishPending: true
+  isPublishPending: true,
 };
 
 export default {
   title: 'PublishDialog',
-  component: PublishDialog
+  component: PublishDialog,
 };

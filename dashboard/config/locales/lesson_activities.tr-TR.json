@@ -642,7 +642,7 @@
           "name": "Isınmak"
         },
         "0976277c-63c8-40f5-a91c-46463ebc49fb": {
-          "name": "Köprüleme Aktiviteleri - Programlama"
+          "name": "Köprü Kurma Faaliyetleri - Programlama"
         },
         "34f9cd2c-cd89-445e-9323-d83630338704": {
           "name": "Asıl Faaliyet"
@@ -974,6 +974,9 @@
         "b69f4d33-0eac-44f4-95b3-11c2a269112a": {
           "name": "Gün 3 - Projenizi Oluşturun"
         },
+        "a972f4d5-c803-4861-82ff-af8bf36db789": {
+          "name": "4.  Gün - Geri Bildirim ve Düzenlemeler"
+        },
         "9291f0b4-758d-4006-b10f-a2d5dfcbbf42": {
           "name": "Gün 5 & 6 - Projenizi Sunun"
         },
@@ -999,10 +1002,10 @@
           "name": "Isınma: Ayağa Kalk, Otur"
         },
         "6114e1af-1c83-4f1f-add9-a97c2523b343": {
-          "name": "Analiz: İnsanlar Neden Paylaşırlar?"
+          "name": "Analiz et: İnsanlar Neden Paylaşırlar?"
         },
         "d1c5ae68-dd15-4aec-aff6-44d0ea484781": {
-          "name": "Analiz: Özel mi, Kişisel mi?"
+          "name": "Analiz et: Özel mi, Kişisel mi?"
         },
         "776101b2-57fc-4032-b1b3-1ec318adfbb2": {
           "name": "Toparlama: Çıkış Bileti"
@@ -7005,7 +7008,7 @@
           "name": "Isınmak"
         },
         "6b7f225b-884f-47b3-8390-7226087e8fd1": {
-          "name": "Köprüleme Aktiviteleri - Programlama"
+          "name": "Köprü Kurma Faaliyetleri - Programlama"
         },
         "e514547a-7e9e-43e5-991d-3e3daab0ef20": {
           "name": "Asıl Faaliyet"
@@ -7632,10 +7635,10 @@
           "name": "Isınma: Ayağa Kalk, Otur"
         },
         "3d33781b-194e-4311-b493-e6cd3bf140ac": {
-          "name": "Analiz: İnsanlar Neden Paylaşırlar?"
+          "name": "Analiz et: İnsanlar Neden Paylaşırlar?"
         },
         "202398a5-6b48-4360-9ed8-10db2039b064": {
-          "name": "Analiz: Özel mi, Kişisel mi?"
+          "name": "Analiz et: Özel mi, Kişisel mi?"
         },
         "d7df338d-c42c-4fce-aa60-ec516fd2d48d": {
           "name": "Toparlama: Çıkış Bileti"

@@ -1186,6 +1186,15 @@ ta:
             '"x"': x
             '"y"': 'y'
             '"z"': z
+      gamelab_layoutSprites:
+        text: "{FORMAT} ஆக {GROUP}-ஐ தளவமைக்கவும்"
+        options:
+          FORMAT:
+            '"border"': பார்டர்
+            '"circle"': வட்டம்
+            '"grid"': கிரிட்
+            '"row"': வரிசை
+            '"column"': பத்தி
       gamelab_locationAt:
         text: 'இடம் x: {X} y: {Y}'
       gamelab_locationModifier:
@@ -1212,6 +1221,14 @@ ta:
             '"spiral"': சுருள்
       gamelab_makeNewSpriteAnon:
         text: புதியதாக்கு {ANIMATION_NAME}ஸ்பிரைட் மணிக்கு {LOCATION}
+      gamelab_makeNewSpriteGroup:
+        options:
+          FORMAT:
+            '"border"': பார்டர்
+            '"circle"': வட்டம்
+            '"grid"': கிரிட்
+            '"row"': வரிசை
+            '"column"': பத்தி
       gamelab_makeNumSprites:
         text: புதிய {ANIMATION_NAME}உருவங்களை உருவாக்குங்கள் {NUM}
       gamelab_makeProjectile:
@@ -2255,6 +2272,20 @@ ta:
           DIR:
             right: சரி ↻
             left: இடது  ↺
+      ecosystems_int10:
+        options:
+          VALUE:
+            '0': '0'
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       storylab_setForegroundEffect2:
         text: விளைவு {EFFECT}செய்ய
         options:

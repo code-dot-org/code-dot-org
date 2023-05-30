@@ -3,14 +3,14 @@ import {stubWindowDashboard, stubWindowPegasus} from '../../../util/testUtils';
 import {
   pegasus,
   studio,
-  metaTagDescription
+  metaTagDescription,
 } from '@cdo/apps/lib/util/urlHelpers';
 import sinon from 'sinon';
 
 describe('pegasus()', () => {
   describe('from dashboard', () => {
     stubWindowDashboard({
-      CODE_ORG_URL: '//test.code.org'
+      CODE_ORG_URL: '//test.code.org',
     });
 
     it('gives an absolute pegasus url', () => {
@@ -33,7 +33,7 @@ describe('pegasus()', () => {
 describe('studio()', () => {
   describe('from pegasus', () => {
     stubWindowPegasus({
-      STUDIO_URL: '//test-studio.code.org'
+      STUDIO_URL: '//test-studio.code.org',
     });
 
     it('gives an absolute studio url', () => {
@@ -90,8 +90,8 @@ describe('metaTagDescription() for valid urls', () => {
     const res = new window.Response(bodyText, {
       status: 200,
       headers: {
-        'Content-type': 'text/html'
-      }
+        'Content-type': 'text/html',
+      },
     });
     sandbox.stub(window, 'fetch').returns(Promise.resolve(res));
 
@@ -103,8 +103,8 @@ describe('metaTagDescription() for valid urls', () => {
     const res = new window.Response(bodyTextWithoutTag, {
       status: 200,
       headers: {
-        'Content-type': 'text/html'
-      }
+        'Content-type': 'text/html',
+      },
     });
     sandbox.stub(window, 'fetch').returns(Promise.resolve(res));
 

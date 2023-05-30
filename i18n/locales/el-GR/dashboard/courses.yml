@@ -32,6 +32,8 @@ el:
           version_title: "'19-'20"
         mike-test:
           title: Βασικές αρχές της επιστήμης υπολογιστών
+        csd-2023:
+          title: Ανακαλύψεις στην επιστήμη υπολογιστών
     resources:
       curriculum/csd/2020:
         name: Πρόγραμμα σπουδών

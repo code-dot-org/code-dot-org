@@ -375,6 +375,7 @@ id:
             '"right"': kolom kanan
             '"x"': berselang-seling
             '"plus"': plus
+            '"spiral"': spiral
             '"infinity"': infinite line
             '"random"': acak
       Dancelab_makeAnonymousDanceSprite:
@@ -505,6 +506,7 @@ id:
             '"right"': kolom kanan
             '"x"': berselang-seling
             '"plus"': plus
+            '"spiral"': spiral
             '"infinity"': infinite line
             '"random"': acak
       Dancelab_mixColors:
@@ -1252,6 +1254,19 @@ id:
             '"x"': x
             '"y"': y
             '"z"': z
+      gamelab_layoutSprites:
+        text: tata letak {GROUP} sebagai {FORMAT}
+        options:
+          FORMAT:
+            '"border"': batas
+            '"circle"': loop
+            '"grid"': Kisi
+            '"top"': baris atas
+            '"row"': baris
+            '"bottom"': baris bawah
+            '"left"': kolom kiri
+            '"column"': kolom
+            '"right"': kolom kanan
       gamelab_locationAt:
         text: 'lokasi x: {X} y: {Y}'
       gamelab_locationModifier:
@@ -1275,8 +1290,21 @@ id:
             '"burst"': letupan
             '"pop"': meletup
             '"rain"': hujan
+            '"spiral"': spiral
       gamelab_makeNewSpriteAnon:
         text: buat sprite {ANIMATION_NAME} baru di {LOCATION}
+      gamelab_makeNewSpriteGroup:
+        options:
+          FORMAT:
+            '"border"': batas
+            '"circle"': loop
+            '"grid"': Kisi
+            '"top"': baris atas
+            '"row"': baris
+            '"bottom"': baris bawah
+            '"left"': kolom kiri
+            '"column"': kolom
+            '"right"': kolom kanan
       gamelab_makeNumSprites:
         text: buat {NUM} sprite {ANIMATION_NAME} baru
       gamelab_makeProjectile:
@@ -2117,6 +2145,7 @@ id:
             '"burst"': letupan
             '"pop"': meletup
             '"rain"': hujan
+            '"spiral"': spiral
       Poetry_makeNewSpriteAnon:
         text: buat sprite {ANIMATION_NAME} baru di {LOCATION}
       Poetry_makeNumSprites:
@@ -2499,6 +2528,21 @@ id:
           DIR:
             right: kanan
             left: kiri -
+      ecosystems_int10:
+        text: "{VALUE}"
+        options:
+          VALUE:
+            '0': '0'
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       storylab_setForegroundEffect2:
         text: lakukan efek {EFFECT}
         options:

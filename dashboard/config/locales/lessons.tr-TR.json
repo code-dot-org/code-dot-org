@@ -408,44 +408,44 @@
         "coursed-2022/Graph Paper Programming": {
           "name": "Grafik Kağıdı Programlama",
           "overview": "Resim çizmesi için bir başkasını \"programlayarak\", öğrenciler programlamanın ana kavramlarından bazılarını eğlenceli ve ulaşılabilir bir şekilde deneyimleme fırsatını bulur. Öğrencilerin, önceden oluşturulmuş bir resmi yeniden üretmeye gayret ederek grafik kağıt üzerindeki kareleri boyamak üzere birbirlerini yönlendirmek üzere sembolleri kullanmasıyla sınıf başlayacaktır. Eğer vaktiniz olursa, ders öğrencilerin kendi oluşturacakları resimlerle tamamlanabilir.  ",
-          "preparation": "-   (İsteğe bağlı) **\\\\ \\*Eylem Dersi** videosunu izleyin.\n-   Her öğrenci için bir**\\\\ \\* çalışma sayfası** ve **\\\\ \\* değerlendirme** yazdırın.",
+          "preparation": "-   (İsteğe bağlı) **\\*Eylem Dersi** videosunu izleyin.\n-   Her öğrenci için bir**\\*çalışma sayfası** ve **\\*değerlendirme** yazdırın.",
           "purpose": "Bu etkinliğin amacı, kurs boyunca kullanılacak bazı temel programlama kavramlarını tanıtırken, kurs için eleştirel düşünme becerileri ve heyecan oluşturmaktır.  Sıralama ve algoritmalar gibi temel kavramları sınıfa bağlantısız bir etkinlikle tanıtarak, bilgisayarlardan korkan öğrenciler yine de bu konularda bir anlayış temeli oluşturabilirler.  Bu derste, öğrenciler bir algoritma geliştirmeyi ve onu bir programa kodlamayı öğrenecekler.",
           "student_overview": "Bu derste, resimleri çizmesi için sınıf arkadaşınızı programlayacaksınız!"
         },
         "coursed-2022/Introduction to Online Puzzles": {
           "name": "Çevrimiçi Bulmacalara Giriş",
-          "overview": "Bu bulmaca setinde, öğrenciler Code.org'un çevrimiçi çalışma alanına giriş (veya sınıf tecrübesine göre inceleme) ile başlayacaklar. Çalışma alanının, \\`Çalıştır',' Sıfırla', ve 'Adım' düğmeleri gibi temel işlevselliğine işaret eden videolar olacaktır. Ayrıca bu videolarda da tartışılmıştır: Blockly bloklarını sürükleme, Blockly bloklarını silme ve Blockly bloklarını bağlama. Sonra, öğrenciler labirentte _sequencing_ ve _debug_ becerilerini uygulayacaklardır. Oradan, öğrenciler _loops_'un temellerini öğrendiğinde Koleksiyoner, Sanatçı ve Biçerdöver gibi yeni bulmaca türlerini görecekler.",
+          "overview": "Bu **beceri geliştirme** dersinde, öğrenciler _sıralama_ ve hata ayıklama becerilerini labirent bulmacalarında uygulayacaklar.",
           "preparation": "-   Sınıfınız için potansiyel sorunlu alanları bulmak için bulmacaları oynayın.",
-          "purpose": "Her sınıfın her konu için bir anlama spektrumu olduğunu biliyoruz. Sınıfınızdaki bazı öğrenciler, bilgisayar dâhisi olabilirken, diğerleri pek de çok deneyimli olmayabilir. Eşit bir oynama (ve öğrenme) alanı oluşturmak için, Kurs D için bu \"Aşamayı Arttır\"ı geliştirdik. Bu, Code.org ve temel bilgisayar bilimi kavramlarının nasıl kullanılacağına dair bir giriş veya bir gözden geçirme olarak kullanılabilir. Bu aşama, Kurs D'ye başlamak için gereken tüm ön şartları kapsar.",
-          "student_overview": "Bu ders, bu kursta ihtiyacınız olan becerilere çalışmanızı sağlayacak."
+          "purpose": "Her sınıfın her konu için bir anlayış yelpazesine sahip olduğunun farkındayız.  Sınıfınızdaki bazı öğrenciler bilgisayar sihirbazı olabilirken, diğerlerinin hiç deneyimi olmayabilir.  Eşit bir oyun (ve öğrenme) alanı yaratmak için D Kursu için bu \"Yükseltme Aşamasını\" geliştirdik. Bu, Code.org ve temel bilgisayar bilimi kavramlarının nasıl kullanılacağına dair bir giriş veya inceleme olarak kullanılabilir.  Bu aşama, Kurs D'ye başlamak için gereken tüm ön koşulları kapsar.",
+          "student_overview": "Bu ders, bu kurs için ihtiyaç duyacağınız beceriler konusunda size pratik sağlayacaktır."
         },
         "coursed-2022/Relay Programming": {
           "name": "Röle Programlama",
-          "overview": "Bu **bağlam belirleme** dersi, hata ayıklama ve kalıcılık üzerine kısa bir dersle başlayacak, ardından öğrenciler takımlara ayrılıp her seferinde bir talimat yazmak için birlikte çalışırken hızla zamana karşı bir yarışa geçecektir.",
-          "preparation": "-   \\*\\* \\*Öğretmen Videosunu izleyin \\*\\*.\n-   Spor salonu veya dış bahçe gibi bu aktivite için geniş bir açık alan bulun.\n-   Her grup için bir \\*\\* \\*Etkinlik Paketi \\*\\* yazdırın.\n-   Her gruba bol miktarda kağıt ve kalem sağlayın.\n-   Her öğrenci için bir \\*\\* \\*Çalışma Sayfası \\*\\* yazdırın.",
-          "purpose": "Bilgisayar bilimlerinde takım çalışması çok önemlidir. Takımlar birey olarak çalışmak yerine birbirleriyle kod yazıp hata ayıklarlar. Bu derste öğrenciler mümkün olduğunca verimli olmakla birlikte çalışmayı öğreneceklerdir. \n\nBu etkinlik aynı zamanda öğrencilere zamanlarını dikkatli bir şekilde dengelemeyi ve çok geride kalmadan hataları önlemeyi öğretecek bir aciliyet duygusu da sağlar. Bu deneyim stresli olabilir (beklenen!) Öğrencilere potansiyel hayal kırıklığı ile başa çıkmaları için gerekli araçları sağladığınızdan emin olun.",
-          "student_overview": "Kod ile çizimler yaptığınız kursun başını hatırlayın. Bu derste, çok benzer bir şey yapmak için bir takımla birlikte çalışacaksınız!"
+          "overview": "Bu **bağlam belirleme** dersi, hata ayıklama ve sebat üzerine kısa bir dersle başlayacak, ardından öğrenciler takımlara ayrılıp her seferinde bir talimat içeren bir program yazmak için birlikte çalışırken hızla zamana karşı bir yarışa geçecektir.",
+          "preparation": "-   **\\*Öğretmen Videosunu** izleyin .\n-   Spor salonu veya dış bahçe gibi bu aktivite için geniş bir açık alan bulun.\n-   Her grup için bir **\\*Etkinlik Paketi** yazdırın.\n-   Her gruba bol miktarda kağıt ve kalem sağlayın.\n-   Her öğrenci için bir **\\*Çalışma Sayfası** yazdırın.",
+          "purpose": "Bilgisayar biliminde takım çalışması çok önemlidir.  Ekipler, bireysel olarak çalışmak yerine birbirleriyle kod yazar ve hata ayıklar.  Bu derste, öğrenciler mümkün olduğunca verimli olurken birlikte çalışmayı öğrenecekler.\n\n Bu aktivite aynı zamanda öğrencilere zamanlarını dikkatli bir şekilde dengelemeyi ve çok geride kalmadan hatalardan kaçınmayı öğretecek bir aciliyet duygusu sağlar.  Bu deneyim stresli olabilir (ki bu beklenir!) Öğrencilerinize olası hayal kırıklıklarıyla başa çıkmaları için gereken araçları sağladığınızdan emin olun.",
+          "student_overview": "Kursun başında kodla çizim yaptığınız zamanı hatırlıyor musunuz?  Bu derste, buna çok benzer bir şey yapmak için bir ekiple birlikte çalışıyor olacaksınız!"
         },
         "coursed-2022/Debugging with Laurel": {
           "name": "Laurel ile Hata Ayıklama",
-          "overview": "Bu çevirim içi etkinlikte, öğrenciler 'toplayıcı' ortamında hata ayıklama üzerinde çalışacaklar. Öğrenciler, basit algoritmalar, döngüler ve iç içe döngüler ile bulmacaları çözmek için kod okuma ve düzenleme alıştırması yapacaklar.",
+          "overview": "Bu **beceri geliştirme** dersinde, öğrenciler \"toplayıcı\" ortamında hata ayıklama alıştırması yapacaklardır.  Öğrenciler basit algoritmalar, döngüler ve iç içe döngülerle bulmacaları çözmek için kod okuma ve düzenleme alıştırması yapacaklar.",
           "preparation": "-   Sınıfınız için potansiyel sorunlu alanları bulmak için bulmacaları oynayın.",
-          "purpose": "Bu dersin amacı öğrencilere yeni bir beceri öğrenirken başarısızlığın normal olduğunu öğretmektir. Öğrencilere çalışmayan önceden yazılı programlar verilecektir. Bu programları düzeltmeleri istenecektir. Hata ayıklama adı verilen bu süreç öğrencilere temel problem çözme ve eleştirel düşünme becerilerini öğretir. Öğrenciler daha zor ve daha zor programlama projelerine devam ettikleri için bu beceriler aktarılır.",
-          "student_overview": "Kodlama esnasında hiç problem yaşadınız mı? Bu ders, size, hata ayıklamanın sırlarını öğretecek. Hata ayıklama, kodunuzdaki hataları bulma ve düzeltme sürecidir."
+          "purpose": "Bu dersin amacı, öğrencilere yeni bir beceri öğrenirken başarısızlığın normal olduğunu öğretmektir.  Öğrencilere ÇALIŞMAYAN önceden yazılmış programlar verilecektir.  Bu programları düzeltmeleri istenecek.  Hata ayıklama adı verilen bu süreç, öğrencilere temel problem çözme ve eleştirel düşünme becerilerini öğretir.  Bu beceriler, öğrenciler gittikçe daha zor programlama projelerine geçtikçe aktarılır.",
+          "student_overview": "Kodlama yaparken hiç sorunla karşılaştınız mı?  Bu derste, hata ayıklamanın sırlarını öğreneceksiniz.  Hata ayıklama, kodunuzdaki sorunları bulma ve düzeltme işlemidir."
         },
         "coursed-2022/Events in Bounce": {
           "name": "Bounce'daki Etkinlikler",
-          "overview": "Bu çevrim içi etkinlikte, öğrenciler, olayların ne olduğunu, bilgisayarın video oyunlar gibi programlarda olayları nasıl kullandığını öğrenirler. Öğrenciler, olaylara (yön düğmelerine basmak gibi) tepki veren program yapmak için bulmacalar üzerinde çalışırlar. Bulmacanın sonunda, öğrencilerin, oyunlarında farklı hızları ve sesleri kullanabilecekleri fırsatları olacak.",
+          "overview": "Bu **bağlam belirleme**/**beceri geliştirme** dersinde öğrenciler olayların ne olduğunu ve programcıların bunları video oyunlarında nasıl kullandıklarını öğrenecekler.  Öğrenciler, farklı hız ve seslerle özelleştirebilecekleri bir oyun inşa edecekler.",
           "preparation": "-   Sınıfınız için potansiyel sorunlu alanları bulmak için bulmacaları oynayın.",
-          "purpose": "Bilgisayar programlarında, özellikle de video oyunlarında olaylar çok yaygındır.  \n\nBu derste öğrenciler, spor temelli bir oyun yaparak olayları daha iyi anlayacaklar. Öğrenciler, paletlerini ok anahtarlarına göre hareket ettirmeyi ve nesneler çarpıştığında ses çıkarmayı öğrenecekler. En sonunda oyunlarını benzersiz yapmak için onu kişiselleştirmeyi öğrenecekler.",
+          "purpose": "Bilgisayar programlarında, özellikle video oyunlarında olaylar çok yaygındır.\n\n Bu derste öğrenciler spora dayalı bir oyun yaparak olaylara ilişkin anlayışlarını geliştireceklerdir.  Öğrenciler küreklerini ok tuşlarına göre hareket ettirmeyi ve nesneler çarpıştığında ses çıkarmayı öğrenecekler.  En sonunda, oyunlarını daha benzersiz hale getirmek için özelleştirecekler!",
           "student_overview": "Hiç okulda bilgisayar oyunları oynamayı dilediniz mi? Bu derste kendi oyununuzu oluşturacaksınız!"
         },
         "coursed-2022/Build a Star Wars Game": {
           "name": "Star Wars oyunu oluştur",
-          "overview": "Bu derste öğrenciler, olayları kullanarak çevrimiçi olarak paylaşabilecekleri bir oyun yapacaklar. R2-D2 ve diğer Star Wars karakterleri eşliğinde öğrenciler olaylar süresince yönlendirilecek ve sonra kendi oyunlarını oluşturmaları için süre verilecek.",
+          "overview": "Bu **beceri geliştirme** dersinde öğrenciler, paylaşabilecekleri bir oyun oluşturmak için etkinlikleri kullanarak pratik yapacaklar.",
           "preparation": "-   Sınıfınız için potansiyel sorunlu alanları bulmak için bulmacaları oynayın.",
-          "purpose": "CS Fundamentals sadece bilgisayar bilimini öğretmekle ilgili değildir, bilgisayar bilimini eğlenceli ve heyecan verici hale getirmekle ilgilidir. Bu seride öğrenciler _Star Wars_ adlı popüler karakterleri kullanan etkinlikler hakkında bilgi sahibi olacaklar. Bu bulmacalar “öğrenme” ve “eğlenceli” arasındaki çizgileri bulanıklaştırır. Ayrıca öğrenciler oyunlarda düzenli programlama uygulamalarını tanımayı öğreneceklerdir, böylece evde oyun oynarken yaygın bilgisayar bilimi ilkelerinin kullanıldığını görebilirler.",
-          "student_overview": "Bu derste kendi Star Wars oyununu kurarken gücünü hissedin."
+          "purpose": "CS Fundamentals, yalnızca bilgisayar bilimi öğretmekle ilgili değildir, bilgisayar bilimini eğlenceli ve heyecan verici hale getirmekle ilgilidir.  Bu dizide öğrenciler, _Star Wars_'tan popüler karakterleri kullanarak olayları öğrenecekler.  Bu bulmacalar \"öğrenme\" ve \"eğlence\" arasındaki çizgiyi bulanıklaştırır.  Ayrıca öğrenciler, evde oyun oynarken yaygın bilgisayar bilimi ilkelerinin kullanıldığını görebilmek için oyunlardaki düzenli programlama uygulamalarını tanımayı öğreneceklerdir.",
+          "student_overview": "Bu derste kendi Star Wars oyununuzu oluştururken gücü hissedin."
         },
         "coursed-2022/Dance Party": {
           "name": "Dans Partisi",
@@ -465,55 +465,55 @@
           "name": "Döngüler ile Şekiller Çizme",
           "overview": "Bu ders, önceki derslerden döngülerin anlaşılmasına katkıda bulunur ve öğrenciye tam anlamıyla yaratıcı olma şansını verir. Bu aktivite, ekstra problem-çözme pratiği için bir hata ayıklama egzersizi olarak da kullanılır.",
           "preparation": "-   Sınıfınız için potansiyel sorunlu alanları bulmak için bulmacaları oynayın.",
-          "purpose": "Bu seri, öğrencilerin 'repeat\\` döngülerinin neden uzun boydan üstün olduğunu düşünmelerini sağlamak için bir dizi bulmacayla döngülerin gücünü vurgular.",
+          "purpose": "Bu seri, öğrencilerin \"tekrar\" döngülerin neden el yazısına göre daha üstün olduğunu düşünmelerini sağlamayı amaçlayan bir dizi bulmacayla döngülerin gücünü vurguluyor.",
           "student_overview": "Bu derste döngüler, Sanatçı ile süper resimler yapmayı kolaylaştırır."
         },
         "coursed-2022/Nested Loops in Maze": {
           "name": "Labirentte İçiçe Döngüler",
-          "overview": "Bu çevrimiçi etkinlikte, öğrenciler döngü anlayışlarını yepyeni bir seviyeye çekme fırsatına sahip olacaklar. Arı ve Bitkiler vs Zombiler ile oynayarak, öğrenciler bir döngünün başka bir döngünün içinde nasıl programlanacağını öğreneceklerdir. Ayrıca, her iki döngüde de küçük değişiklikler `Çalıştır`a tıklandığında programlarını etkileyeceğini anlamaya teşvik edilecekler.",
+          "overview": "Bu **beceri geliştirme** dersinde öğrenciler, bir döngüyü başka bir döngü içinde nasıl programlayacaklarını öğrenecekler.",
           "preparation": "-   Sınıfınız için potansiyel sorunlu alanları bulmak için bulmacaları oynayın.",
-          "purpose": "İç içe döngü girişinde öğrenciler bulmacalara daha verimli çözümler üretmek için konfor alanlarının dışına çıkacaklar.  \n\nÖnceki bulmacalarda, döngüler öğrencileri tekrarlamayı tanımaya itti. Burada, öğrenciler bu iç içe döngüleri geliştirmek için tekrarlanan desenleri _within_ kalıplarını tanımayı öğrenecekler. Bu aşama, öğrencileri kodun rahatsız edici ve uzun yoldan yazmak için çok karmaşık olduğu bir bulmacayı çözmeye çalışmaya teşvik ederek başlar. Bir video iç içe geçmiş döngüler tanıdıktan sonra öğrencilere bir örnek gösterilir ve başka bir döngünün içine bir döngü yerleştirildiğinde ne olacağını tahmin etmeleri istenir. Bu ilerleme, öğrencilerin programlamada döngü anlayışlarını sağlamlaştırmaları ve geliştirmeleri için birçok uygulamaya yol açar.",
+          "purpose": "İç içe döngülere bu girişte, öğrenciler bulmacalara daha verimli çözümler oluşturmak için rahatlık alanlarının dışına çıkacaklar.\n\n Daha önceki bulmacalarda, döngüler öğrencileri tekrarı tanımaya itiyordu.  Burada öğrenciler, bu iç içe döngüleri geliştirmek için tekrarlanan kalıplar içindeki kalıpları tanımayı öğrenecekler.  Bu aşama, öğrencileri kodun rahatsız edici ve uzun yoldan yazamayacak kadar karmaşık olduğu bir bulmacayı çözmeye teşvik ederek başlar.  Bir video iç içe döngüleri tanıttıktan sonra, öğrencilere bir örnek gösterilir ve bir döngü başka bir döngünün içine yerleştirildiğinde ne olacağını tahmin etmeleri istenir.  Bu ilerleme, öğrencilerin programlamada döngü anlayışını sağlamlaştırması ve üzerine inşa etmesi için pek çok alıştırmaya yol açar.",
           "student_overview": "Döngülerin içindeki döngülerin içindeki döngüler. Bu ne anlama geliyor? Bu ders, size, içiçe bir döngü oluşturduğunuzda ne olacağını öğretecektir."
         },
         "coursed-2022/Conditionals with Cards": {
           "name": "Kartlarla Koşullu Önermeler",
-          "overview": "Bu **context-setting** dersinde öğrenciler basit kart oyunlarının kurallarını belirtmek için \\_conditional (if/else) ifadeleri yazacaktır. ",
+          "overview": "Bu **bağlam belirleme** dersinde, öğrenciler basit kart oyunlarının kurallarını belirtmek için _koşullu (eğer/else) ifadeleri_ yazacaklar.",
           "preparation": "-   Kart destesi veya benzeri bir şey toplayın.\n-   **\\*örnek programları** yazdırın veya görüntüleyin.\n-   Her öğrenci için bir **\\*değerlendirme** yazdırın.",
-          "purpose": "Koşulları öğretmenin en iyi parçalarından biri, öğrencilerin bu konsepti günlük yaşamlarından anlamalarıdır. \n\nBu ders, bir koşulun doğru mu yanlış mı olduğunu söyleme yeteneklerini oluşturarak bilgisayar bilimini gerçek dünyaya birleştirir. Öğrenciler belirli bir komutun ne zaman çalıştırılması gerektiğini beyan etmek için if deyimlerinin yanı sıra bir komutun ne zaman çalıştırılması gerektiğini ve ne zaman çalıştırılacağını bildirmek için if ifadelerini kullanmayı öğreneceklerdir. Öğrenciler şartları tanımıyor olabilir, ancak çoğu öğrenci “eğer” kullanma fikrini anlayacaklardır. Bazı eylemlerin yalnızca olması gerektiği zaman gerçekleştiğinden emin olmak için.",
-          "student_overview": "Yalnızca kesin şartlar altında puan kazanacağınız bir oyunu oynama zaman geldi!"
+          "purpose": "Koşullu ifadeleri öğretmenin en iyi yanlarından biri, öğrencilerin kavramı zaten günlük yaşamlarından anlamış olmalarıdır.\n\n Bu ders, bir koşulun doğru mu yoksa yanlış mı olduğunu anlama yeteneklerini geliştirerek bilgisayar bilimini gerçek dünyayla birleştirir.  Öğrenciler, belirli bir komutun ne zaman çalıştırılması gerektiğini bildirmek için if ifadelerini kullanmayı ve ayrıca bir komutun ne zaman çalıştırılması gerektiğini ve aksi halde ne çalıştırılacağını bildirmek için if / else ifadelerini kullanmayı öğreneceklerdir.  Öğrenciler koşullu kelimeyi tanımayabilir, ancak çoğu öğrenci, bazı eylemlerin yalnızca olması gerektiği zaman gerçekleştiğinden emin olmak için \"eğer\" kullanma fikrini anlayacaktır.",
+          "student_overview": "Sadece belirli koşullar altında puan kazandığınız bir oyun oynama zamanı!"
         },
         "coursed-2022/Looking Ahead with Minecraft": {
           "name": "Minecraft ile ileriye bakmak",
-          "overview": "Bu ders, aslında Minecraft takımında Kod Saati için oluşturuldu. Öğrencilerin, şu ana kadar öğrendikleri fikirleri pratiğe dökme ve ayrıca koşullara şöyle bir göz atma şansı olacak!",
+          "overview": "Bu **beceri geliştirme** dersi, öğrencilere bu noktaya kadar öğrendikleri kavramları uygulama ve koşullu ifadelerle ilk deneyimlerini kazanma şansı verir!",
           "preparation": "-   Sınıfınız için olası sorunlu alanları bulmak için bu dersle ilişkili bulmacaları oynayın.",
-          "purpose": "Bu bulmaca dizisi, döngüler hakkındaki bilgilerini pekiştirmeye ve arttırmaya yarayacaktır, ve koşulları tanıtacaktır. Bu iki kavramı birbiri ile eşleştirerek öğrenciler, yeni ve heyecan verici bir ortamda eğlenceli ve yenilikçi programlar oluşturma potansiyelini keşfedebilecekler.",
+          "purpose": "Bu bulmaca seti, döngüler bilgisini sağlamlaştırmak ve üzerine inşa etmek için çalışacak ve koşullu ifadeleri tanıtacaktır.  Bu iki kavramı bir araya getirerek öğrenciler, yeni ve heyecan verici bir ortamda eğlenceli ve yenilikçi programlar yaratma potansiyelini keşfedebilecekler.",
           "student_overview": "Lavdan Kaçının! Burada Minecraft dünyasındaki koşulları öğrenmeye başlayacaksınız."
         },
         "coursed-2022/If/Else with Bee": {
           "name": "Arı ile \"Eğer/Başka\"",
-          "overview": "Bu noktaya kadar öğrenciler her çalıştırıldığında aynı biçimde çalışan kod yazıyor - güvenilir, ama bu çok esnek değildir. Bu derste, sınıfınız, koşullu koşullarla kodlamaya başlayacak ve programın karşılaştığı özel koşullara bağlı olarak farklı biçimde çalışan kod yazmalarına izin verecektir.",
+          "overview": "Bu **beceri geliştirme** dersinde, sınıfınız koşullu ifadelerle kodlamaya devam edecek ve programın karşılaştığı belirli koşullara bağlı olarak farklı işlev gören kod yazmalarına olanak tanıyacaktır.",
           "preparation": "-   Sınıfınız için potansiyel sorunlu alanları bulmak için bulmacaları oynayın.",
-          "purpose": "“Kartlı Şartlar” programında koşullara tanıtıldıktan sonra öğrenciler şimdi programlarında bunları kullanarak pratik yapacaklar. “if/else” blokları daha esnek bir program sağlar. Arı sadece nektar toplayacak _if_ bir çiçek var ya da bal yapmak _if_ bir petek var. ",
-          "student_overview": "Şimdi koşulları anladığınıza göre, nektar ve balı toplaması için arıyı programlama zamanı. "
+          "purpose": "\"Kartlı Koşullar\"da koşul ifadeleriyle tanıştıktan sonra, öğrenciler şimdi bunları programlarında kullanma alıştırması yapacaklar.  \"if / else\" blokları daha esnek bir programa izin verecektir.  Arı sadece çiçek varsa nektar toplar veya petek varsa bal yapar.",
+          "student_overview": "Artık koşul şartlarını anladığınıza göre, Bee'yi bal ve nektar toplarken bunları kullanması için programlamanın zamanı geldi."
         },
         "coursed-2022/While Loops in Farmer": {
           "name": "Farmer'da Süresince Döngüleri",
-          "overview": "Bu **beceri geliştirme** dersinde, öğrenciler Farmer'da çukurları doldurmak ve toprak kazmak için çalışacaklar, ancak deliklerin boyutunu veya toprak yığınlarının yüksekliğini bilemeyecekler. Bu bulmacaları çözmek için öğrenciler yeni bir tür döngü kullanacaklar.",
+          "overview": "Bu **beceri geliştirme** dersinde, öğrenciler Çiftçi de çukurları doldurmak ve toprak kazmak için çalışacaklar, ancak deliklerin boyutunu veya toprak yığınlarının yüksekliğini bilmeyecekler.  Bu bulmacaları çözmek için öğrenciler yeni bir tür döngü kullanacaklar.",
           "preparation": "-   Sınıfınız için potansiyel sorunlu alanları bulmak için bulmacaları oynayın.",
-          "purpose": "Öğrencileriniz döngü bilgilerini derinleştirmeye devam ettikçe, bir komutun tekrarlanması gereken sorunlarla karşılaşacaklardır, ancak kaç kez tekrarlanması gerektiği bilinmemektedir. Bu sırada döngüler devreye giriyor. Bugünün dersinde, öğrenciler, yeni başlayanların koşullara dayalı döngüler anlayışını geliştirecek ve genel olarak döngüler bilgisini genişletecektir. ",
-          "student_overview": "Döngüler kodlama için oldukça kullanışlıdır. Bu ders size yeni bir döngüyü öğretecek: süresince (while) döngüleri!"
+          "purpose": "Öğrencileriniz döngü bilgilerini derinleştirmeye devam ettikçe, bir komutun tekrarlanması gereken ancak kaç kez tekrarlanması gerektiği bilinmeyen problemlerle karşılaşacaklar.  Döngülerin devreye girdiği yer burasıdır. Bugünün dersinde öğrenciler, başlangıç ​​düzeyindekiler için koşul tabanlı döngüler anlayışı geliştirecek ve ayrıca genel olarak döngüler hakkındaki bilgilerini genişletecekler.",
+          "student_overview": "Döngüler kodlamada çok faydalıdır.  Bu ders size yeni bir döngü türünü öğretecek: while döngüleri!"
         },
         "coursed-2022/Until Loops in Maze": {
           "name": "Labirentte Bitiş Döngüleri",
           "overview": "Bu derste öğrenciler, 'e kadar' döngülerini öğrenecektir. Öğrenciler, ana karakterin istenilen durma noktasına varana 'kadar' hareketlerine devam ettiği programları yapacaktır.",
           "preparation": "-   Sınıfınız için potansiyel sorunlu alanları bulmak için bulmacaları oynayın.",
-          "purpose": "Bu bulmaca dizisi, 'e kadar' koşulunu ekleyerek döngüler hakkındaki bilgilerini pekiştirmeye ve arttırmaya yarayacaktır. Bu kavramları birbiri ile eşleştirerek öğrenciler, karmaşık ve yenilikçi programlar oluşturma potansiyelini keşfedebilecekler.",
+          "purpose": "Bu bulmaca seti, \"kadar\" şart koşulunu ekleyerek döngü bilgisini sağlamlaştırmaya ve üzerine inşa etmeye çalışacak.  Bu kavramları bir araya getirerek, öğrenciler karmaşık ve yenilikçi programlar yaratma potansiyelini keşfedebilecekler.",
           "student_overview": "'E kadar' döngülerini kullandığınızda inanılmaz şeyler yapabilirsiniz!"
         },
         "coursed-2022/End of Course Project": {
           "name": "Ders Projesinin Sonu",
           "overview": "Bu bitirme dersi, öğrencileri kendi projelerini tasarlama, geliştirme ve sergileme süreçlerinden geçirir.",
-          "preparation": "-   Sınıfınız için olası sorunlu alanları bulmak için bulmacaları oynayın.\n-   Her öğrenci (veya çift) için bir **\\\\ \\*Proje Planlama Kılavuzu** yazdırın.\n-   (İsteğe bağlı) Kendi planlama rehberinizi tamamlayın ve öğrencilere göstermek için kendi projenizi kodlayın!",
+          "preparation": "-   Sınıfınız için olası sorunlu alanları bulmak için bulmacaları oynayın.\n-   Her öğrenci (veya çift) için bir **\\*Proje Planlama Kılavuzu** yazdırın.\n-   (İsteğe bağlı) Kendi planlama kılavuzunuzu tamamlayın ve öğrencilere göstermek için kendi projenizi kodlayın!",
           "purpose": "Bu ders, planlama gerektiren ama aynı zamanda geniş yaratıcılığa da izin veren adım adım bir süreç kullanarak öğrencilere kendi tasarımlarına sahip bir proje oluşturmaları için alan sağlar.",
           "student_overview": "Ellerinizi bolca kodlamaya hazırlayın!  Projenizi oluşturmaya başlama zamanı."
         },
@@ -574,13 +574,25 @@
           "student_overview": "Değişkenlerle yeni becerilerinizi üç açık uçlu projeden birine uygulayın."
         },
         "coursef-2022/[New] Lots of Sprites": {
-          "name": "Bir sürü hareketli nesne"
+          "name": "Bir sürü hareketli nesne",
+          "overview": "Bu **bağlam belirleme**/**beceri geliştirme** dersinde, öğrenciler Sprite Lab'in yeteneklerini daha derinlemesine inceleyecek ve aynı kostüme sahip karakter gruplarını nasıl yöneteceklerini öğrenecekler.",
+          "preparation": "Seviyeleri oynayın ve\\*\\* ders slaytlarını\\*\\* gözden geçirin.",
+          "purpose": "Bu ders geçici olarak değişkenlerden uzaklaşır ve bunun yerine karakter gruplarıyla programlamaya odaklanır. Kursun ilerleyen bölümlerinde öğrenciler değişkenler ve simülasyonlar hakkında daha fazla bilgi edinecekler. Öğrencilerin bu derste oluşturdukları program türleri, bu dersler için ek bağlam sağlayacaktır.",
+          "student_overview": "Sprite Lab ile daha fazlasını nasıl yapacağınızı ve çok sayıda karakter ile projeler yapmayı öğreneceksiniz!"
         },
         "coursef-2022/[New] Counting with Variables": {
-          "name": "Değişkenlerle Sayma"
+          "name": "Değişkenlerle Sayma",
+          "overview": "Bu \\*\\* beceri geliştirme\\*\\* dersinde öğrenciler, sayaç gibi zaman içinde değişen bir değeri izlemek için değişkenleri kullanacaklardır. Bu ders ayrıca öğrencilerin basit bir oyun oluşturduğu kısa bir **mini proje** içerir.",
+          "preparation": "Seviyeleri oynayın ve\\*\\* ders slaytlarını\\*\\* gözden geçirin.",
+          "purpose": "Önceki derslerde, öğrenciler daha sonra alınabilecek verileri depolamak için değişkenleri kullanmayı öğrenirler. Bu derste, öğrenciler bir değişkende saklanan verileri değiştirmeyi öğrenmeye başlayacaklar. Değişkenlerin nasıl çalıştığına dair bu temel anlayış, daha gelişmiş projeler oluşturmalarını da sağlayacaktır.",
+          "student_overview": "Bir sayaç yapmak veya bir oyunda skoru takip etmek için değişkenleri kullanmayı öğreneceksiniz."
         },
         "coursef-2022/[New] Mini-Project: Collector Game": {
-          "name": "Mini-Proje: Koleksiyoncu Oyunu"
+          "name": "Mini-Proje: Koleksiyoncu Oyunu",
+          "overview": "Bu \\*\\* mini proje\\*\\* dersinde, öğrenciler, kullanıcının nesneleri toplamak için bir karakter hareket ettirdiği özelleştirilmiş bir “toplayıcı oyunu” yaratacaklar.",
+          "preparation": "Seviyeleri oynayın ve\\*\\* ders slaytlarını\\*\\* gözden geçirin.",
+          "purpose": "Bu proje, öğrencilerin yeni değişken bilgilerini eğlenceli bir şekilde uygulamalarını sağlamak için tasarlanmıştır. Bir değişkende depolanan değerin nasıl değiştirileceğini anlayarak, öğrenciler, oyuncunun eylemlerine göre skoru otomatik olarak tutan bir oyun oluşturabilir.",
+          "student_overview": "Tüm hareketli nesneleri toplayın! Bu projede, başkalarının oynayabileceği bir oyun yaratacaksınız."
         },
         "coursef-2022/Simulating Experiments": {
           "name": "Deneyleri Benzetme",
@@ -653,7 +665,7 @@
         },
         "coursee-2022/Drawing with Loops": {
           "name": "Döngüler ile çizim",
-          "overview": "Az sayıda blok ve dijital etiketleri kullanarak kendi mükemmel tasarımlarını yaptıkça öğrencilerinizin ne kadar neşelendiğine bakın! Bu ders, önceki derslerden döngülerin anlaşılmasını geliştirir ve öğrencilere gerçek bir yaratıcı olma şansını verir. Bu aktivite, portföyler veya anne-baba/öğretmen konferansları için  eserler üretmek için mükemmeldir.",
+          "overview": "Bu **bağlam belirleme** dersi, odağı Sprite Lab'den öğrencilerin kursun geri kalanında keşfedecekleri yeni bir araç olan Artist'e kaydırır.",
           "preparation": "-   Sınıfınız için varsa bir potansiyel sorun alanını bulmak üzere bulmacalarla oynayın. \n-   Her öğrencinin bir düşünce günlüğü olduğundan emin olun.",
           "purpose": "Öğrenciler, yaklaşan dersler boyunca tekrar gözden geçirilecek bir kavram olan döngüleri kullanarak pratik yapacaklar.",
           "student_overview": "Bu derste döngüler, Sanatçı ile daha güzel resimler yapmayı kolaylaştırır."
@@ -663,7 +675,7 @@
           "overview": "Bu **beceri geliştirme** dersinde öğrenciler Sanatçıyı kullanarak karmaşık tasarımlar oluşturacaklar. Ders, öğrencilerin kendi tasarımlarını yaratmaları için bir fırsatla sona erer.",
           "preparation": "-   Sınıfınız için olası sorunlu alanları bulmak üzere bulmacalarla oynayın.\n-   Her öğrencinin bir düşünce günlüğü olduğundan emin olun.\n-   Dönüşler ve açılarla ilgili olarak öğrencilerinizin ne tür desteklere ihtiyaç duyabileceğini düşünün.",
           "purpose": "Bu çevrimiçi aktivitede öğrenciler, Oyuncuda, sevdikleri ile gururla paylaşabilecekleri tasarımlar oluşturacaklar. \n\nBu aktivitenin amacı, sanatsal zihinleri olan öğrencilere kodlamayı başka bir yaratıcı çıkış noktası olarak görmeleri için ilham vermenin bir yolu olarak iç içe geçmiş döngüleri kullanmaktır. Bu bulmaca dizisi, tamamı iç içe döngüler kapsamında olan eleştirel düşünme becerileri, temel geometriyi anlama ve yaratıcılığı geliştirmek üzere oluşturulmuştur.",
-          "student_overview": "Daha iç içe döngüler! Bu sefer, iç içe geçmiş döngülerle biraz İLGİNÇ çizimler yapacaksınız."
+          "student_overview": "Daha fazla iç içe döngüler! Bu sefer, iç içe geçmiş döngülerle biraz İLGİNÇ çizimler yapacaksınız."
         },
         "coursee-2022/Mini-Project: Design a Snowflake": {
           "name": "Mini Proje: Bir Kar Tanesi Tasarlayın",
@@ -674,10 +686,10 @@
         },
         "coursee-2022/Songwriting": {
           "name": "Şarkı yazma",
-          "overview": "Bilgisayar bilimi dünyasındaki en harika yapılardan birisi de fonksiyonlardır. Fonksiyonlar (ya da bazen method da deriz) asıl büyük programımız içinde tekrar tekrar kullanabildiğimiz mini programlardır. Bu ders öğrencilerin neden bir yığın kodu fonksiyonun içine yerleştirmenin ne kadar yararlı olduğunu kavramalarına yardımcı olacaktır.",
+          "overview": "Bu **bağlam belirleme** dersi, öğrencilerin kod parçalarını işlevlerde birleştirmenin neden yararlı bir uygulama olabileceğini anlamalarına yardımcı olacaktır.",
           "preparation": "-   (İsteğe bağlı) **\\*Eylem Halinde Ders** Videosunu izleyin.\n-   Her grup için birkaç **\\*çalışma sayfası** yazdırın.\n-   Her öğrenci için bir **\\*değerlendirme** yazdırın.\n-   Aktivite için şarkılara ve şarkı sözlerine güvenli erişim.\n-   Her öğrencinin bir günlüğü olduğundan emin olun.",
           "purpose": "Fonksiyonların kullanımı, kodu basitleştirmeye ve öğrencinin programlarını düzenleme kabiliyetlerini geliştirmeye yardım eder. Öğrenciler, fonksiyonları yazmanın programlarını okumayı ve eğer bir şeyler yanlış giderse hata ayıklamayı kolaylaştırabileceğini hemen anlayacaklar. ",
-          "student_overview": "Müzik yıldızı için bile programlama yeteneği gerektirir. Bu ders şarkı sözleri kullanarak fonksiyonları öğretecektir."
+          "student_overview": "Rock yıldızlarının bile programlama becerilerine ihtiyacı vardır. Bu ders size şarkıların sözlerini kullanan işlevler hakkında bilgi verecektir."
         },
         "coursee-2022/Functions in Minecraft": {
           "name": " Minecraft Fonksiyonları",
@@ -696,20 +708,20 @@
         "coursee-2022/Conditionals in Minecraft: Voyage Aquatic": {
           "name": "Minecraft'ta Koşullar: Su Yolculuğu",
           "overview": "Bu **beceri geliştirme/bağlam belirleme** dersinde öğrenciler, bu noktaya kadar öğrendikleri içeriği uygulama ve koşullu ifadelere göz atma şansına sahip olacaklar!",
-          "preparation": "-   Sınıfınız için olası sorunlu alanları bulmak için bu dersle ilişkili bulmacaları oynayın.\n-   Her öğrencinin bir yansıma dergisi olduğundan emin olun.",
-          "purpose": "Bu bulmaca dizisi, döngüler hakkındaki bilgilerini pekiştirmeye ve arttırmaya yarayacaktır, ve koşulları tanıtacaktır. Bu iki kavramı birbiri ile eşleştirerek öğrenciler, yeni ve heyecan verici bir ortamda eğlenceli ve yenilikçi programlar oluşturma potansiyelini keşfedebilecekler.",
+          "preparation": "-   Sınıfınız için olası sorunlu alanları bulmak için bu dersle ilişkili bulmacaları oynayın.\n-   Her öğrencinin bir yansıtma günlüğü olduğundan emin olun.",
+          "purpose": "Bu bulmaca seti, döngüler bilgisini sağlamlaştırmak ve üzerine inşa etmek için çalışacak ve koşullu ifadeleri tanıtacaktır.  Bu iki kavramı bir araya getirerek öğrenciler, yeni ve heyecan verici bir ortamda eğlenceli ve yenilikçi programlar yaratma potansiyelini keşfedebilecekler.",
           "student_overview": "Burada Minecraft dünyasındaki koşulları öğreneceksiniz."
         },
         "coursee-2022/Conditionals with the Farmer": {
           "name": "Çiftçi Koşulları",
-          "overview": "Bu ders öğrencilere `while` döngüleri ve`if / else` ifadeleri tanıtır. \\_ While loops\\_, koşullar doğru olduğu sürece komutları yinelemeye devam eden döngülerdir. Döngüler, programcı tam olarak kaç kez komutun bilmediğini bilmediğinde kullanılır; ama programcı döngülerin döngüye devam edebilmesi için hangi koşulun doğru olması gerektiğini bilir. `If / Else` ifadeleri, bütün bölümleri sadece bir şey doğruysa çalıştırarak programlamada esneklik sağlar, aksi halde bu döngüler başka bir şey çalıştırır.",
+          "overview": "Bu **beceri geliştirme** dersi, ekin dikmek için tarlalarını hazırlaması gereken bir çiftçinin yer aldığı yeni bir tür programlama bulmacasına odaklanır.",
           "preparation": "-   Sınıfınız için varsa bir potansiyel sorun alanını bulmak üzere bulmacalarla oynayın. \n-   Her öğrencinin bir düşünce günlüğü olduğundan emin olun.",
-          "purpose": "Bu ders öğrencilere while döngülerini ve \"if / else\" ifadelerini tanıtmaktadır.",
-          "student_overview": "Bu zorlu ve eğlenceli seride, kesin koşullar altında bilgisayara ne yapacağını söyleyeceksin."
+          "purpose": "Bu ders öğrencilere süresince döngülerini ve \"eğer / başka\" ifadelerini tanıtmaktadır.",
+          "student_overview": "Çiftçinin tarlalarını ekin ekmeye hazırlamasına yardım edin ve koşullar hakkında daha fazlasını öğrenin!"
         },
         "coursee-2022/Functions with Harvester": {
           "name": "Hasatçı Fonksiyonları",
-          "overview": "Öğrenciler, Sanatçıda etkileyici tasarımlar oluşturma ve Arıda labirentlerde gezinmede pratik yapmıştır ama bugün Hasatçıda ürünleri hasat etmek için fonksiyonları kullanacaktır. Bu ders, `süresince` döngüleri ve `eğer / değilse` ifadeleri ile bunları birleştirerek öğrencilerin bu fonksiyonları yeni şekillerde kullanmasını sağlayacaktır.",
+          "overview": "Bu **beceri geliştirme** dersinde öğrenciler, _Hasatçı_'da ekinleri hasat etmek için işlevlere sahip koşul ifadeleri kullanacaklar.",
           "preparation": "-   Sınıfınız için varsa bir potansiyel sorun alanını bulmak üzere bulmacalarla oynayın. \n-   Her öğrencinin bir düşünce günlüğü olduğundan emin olun.",
           "purpose": "Bu ders, öğrencileri fonksiyonlarla koşulları kullanmaya daha fazla teşvik etmek içindir. Bu bulmacalar problem çözme ve eleştirel düşünme becerilerini geliştirmeyi amaçlamaktadır.",
           "student_overview": "Çiftçiye hasadında yardımcı olduğunuz gibi fonksiyonlar da sizi işlerin çoğunda kurtarır!"
@@ -730,7 +742,7 @@
         },
         "coursee-2022/End of Course Project": {
           "name": "Ders Projesinin Sonu",
-          "overview": "Bir sonraki dört ders öğrencilerin kodlama becerilerini bir bitirme projesinde kullanmalarına imkan sağlar. Bu proje kişilerin kodlamayla ilgili tecrübe kazanmalarına yardımcı olacak ve akranları ve sevdikleri ile paylaşmaları için bir örnek oluşturacaktır. Birden fazla derslik veya birden fazla haftalık bir deneyim olması planlanmıştır, öğrenciler beyin fırtınasını keşfederek, tasarım sürecini öğrenerek, bitirme çalışmalarını oluşturup sunarak vakit geçirecekler. \\\\r\n\\\\r\nKeşfetme aşamasında öğrenciler ilham almak için hem Sanatçı hem de Hareketli Nesne Laboratuvarında önceden hazırlanmış projelerin örnekleri ile oynayacak. Sonrasında öğrenciler tasarım sürecini ve bunu kendi projelerinde nasıl uygulayacaklarını öğrenecekler. Sonrasında kendi projelerini Sanatçı, Hareketli Nesne Laboratuvarı veya bildikleri başka bir arayüzde oluşturmak için öğrencilere alan verilecektir (bu muhtemelen projenin en uzun aşamasıdır). En sonunda öğrenciler bitmiş çalışmalarını akranlarına sunabilecekler.",
+          "overview": "Bu **proje** dersi, öğrencileri yeni projeleri tasarlama, geliştirme ve sergileme sürecinden geçirir!",
           "preparation": "-   Hem Sanatçı hem de Hareketli Nesne Laboratuvarı ile kendi projenizi yapmak için zaman ayırın. Her aracın yetenekleri ve sınırlamaları hakkında bilgi edinin.\n-   **\\*Değerlendirme tablosunu** sınıf hedeflerinize uyacak şekilde değiştirin ve her öğrenci için bir kopya yazdırın.\n-   **\\*Proje tasarım çalışma sayfasını** sınıfınıza uyacak şekilde değiştirin ve her öğrenci için bir paket yazdırın.",
           "purpose": "Öğrenciler doğrudan projelerini inşa etmeye hazır olabilirler, ancak bu ders fikirlerini planlara dönüştürmeye yardımcı olacaktır. Bu yapı hayalperestleri topraklanmış tutacak ve karanlıkta kalan hisler için bir yol aydınlatacak. Öğrencilere projelerini oluşturmak ve revize etmek için yeterli zaman sağlayın. Bu derste kaçınılmaz olarak yer alan deneme yanılma, problem çözme ve kalıcılık öğretilecektir.",
           "student_overview": "Bu kadar büyük projeler zaman alır ve bir sürü planlama gerektirir. İlhamını bul, bir plan geliştir ve yaratıcılığını serbest bırak!"
@@ -905,7 +917,7 @@
         },
         "express-2022/Nested Loops in Maze": {
           "name": "Labirentte İçiçe Döngüler",
-          "overview": "Bu çevrimiçi etkinlikte, öğrenciler döngü anlayışlarını yepyeni bir seviyeye çekme fırsatına sahip olacaklar. Arı ve Bitkiler vs Zombiler ile oynayarak, öğrenciler bir döngünün başka bir döngünün içinde nasıl programlanacağını öğreneceklerdir. Ayrıca, her iki döngüde de küçük değişiklikler `Çalıştır`a tıklandığında programlarını etkileyeceğini anlamaya teşvik edilecekler.",
+          "overview": "Bu **beceri geliştirme** dersinde öğrenciler, bir döngüyü başka bir döngü içinde nasıl programlayacaklarını öğrenecekler.",
           "preparation": "-   Sınıfınız için olası sorunlu alanları bulmak için bulmacaları oynayın.\n-   Her öğrencinin bir Yansıma Dergisi olduğundan emin olun.",
           "purpose": "İç içe döngü girişinde öğrenciler bulmacalara daha verimli çözümler üretmek için konfor alanlarının dışına çıkacaklar.  \n\nÖnceki bulmacalarda, döngüler öğrencileri tekrarlamayı tanımaya itti. Burada, öğrenciler bu iç içe döngüleri geliştirmek için tekrarlanan desenleri _within_ kalıplarını tanımayı öğrenecekler. Bu aşama, öğrencileri kodun rahatsız edici ve uzun yoldan yazmak için karmaşık olduğu bir bulmacayı çözmeye çalışmaya teşvik ederek başlar. Bir video iç içe geçmiş döngüler tanıdıktan sonra öğrencilere bir örnek gösterilir ve başka bir döngünün içine bir döngü yerleştirildiğinde ne olacağını tahmin etmeleri istenir. Bu ilerleme, öğrencilerin programlamada döngü anlayışlarını sağlamlaştırmaları ve geliştirmeleri için birçok uygulamaya yol açar.",
           "student_overview": "Döngülerin içindeki döngülerin içindeki döngüler. Bu ne anlama geliyor? Bu ders, size, içiçe bir döngü oluşturduğunuzda ne olacağını öğretecektir."
@@ -914,28 +926,29 @@
           "name": "Frozen'da İç İçe Döngüler",
           "overview": "Şimdi, öğrenciler döngülerini nasıl kademe kademe yapacaklarını bildiklerine göre çok güzel şeyler oluşturabilirler. Bu ders, öğrencilerin Anna ve Elsa'nın mükemmel buz pateni yapma becerilerini kullanarak kendi hazır resim dosyalarını oluşturmaları için bir dizi alıştırma yapmalarını sağlayacak!",
           "preparation": "-   Sınıfınız için potansiyel sorunlu alanları bulmak ve bulmak için dersi oynayın.\n-   Her öğrencinin bir Yansıma Dergisi olduğundan emin olun.",
+          "purpose": "Bu seride öğrenciler, paylaşmaktan heyecan duyacakları görüntüler oluştururken iç içe döngüler alıştırması yapacaklar.\n\nBir avuç dolusu talimatla başlayarak, öğrenciler tekrar için tasarımlar oluşturmaya gelince kendi kararlarını verecekler. Daha sonra, gerçekten benzersiz bir sanat eseri elde etmek için bunları çeşitli şekillerde döndürecekler.",
           "student_overview": "Anna ve Elsa'nın mükemmel buz pateni yapma becerileri var ancak buzda desenler oluşturmak için yardımınıza ihtiyaçları var. Süper MUHTEŞEM bir şey oluşturmak için içiçe döngüleri kullanın."
         },
         "express-2022/Looking Ahead with Minecraft": {
           "name": "Minecraft ile ileriye bakmak",
-          "overview": "Bu ders, aslında Minecraft takımında Kod Saati için oluşturuldu. Öğrencilerin, şu ana kadar öğrendikleri fikirleri pratiğe dökme ve ayrıca koşullara şöyle bir göz atma şansı olacak!",
+          "overview": "Bu **beceri geliştirme** dersi, öğrencilere bu noktaya kadar öğrendikleri kavramları uygulama ve koşullu ifadelerle ilk deneyimlerini kazanma şansı verir!",
           "preparation": "-   Sınıfınız için olası sorunlu alanları bulmak için bu dersle ilişkili bulmacaları oynayın.\n-   Her öğrencinin bir Yansıma Dergisi olduğundan emin olun.",
-          "purpose": "Bu bulmaca dizisi, döngüler hakkındaki bilgilerini pekiştirmeye ve arttırmaya yarayacaktır, ve koşulları tanıtacaktır. Bu iki kavramı birbiri ile eşleştirerek öğrenciler, yeni ve heyecan verici bir ortamda eğlenceli ve yenilikçi programlar oluşturma potansiyelini keşfedebilecekler.",
+          "purpose": "Bu bulmaca seti, döngüler bilgisini sağlamlaştırmak ve üzerine inşa etmek için çalışacak ve koşullu ifadeleri tanıtacaktır.  Bu iki kavramı bir araya getirerek öğrenciler, yeni ve heyecan verici bir ortamda eğlenceli ve yenilikçi programlar yaratma potansiyelini keşfedebilecekler.",
           "student_overview": "Lavdan Kaçının! Burada Minecraft dünyasındaki koşulları öğrenmeye başlayacaksınız."
         },
         "express-2022/If/Else with Bee": {
           "name": "Arı ile \"Eğer/Başka\"",
-          "overview": "Bu noktaya kadar öğrenciler her çalıştırıldığında aynı biçimde çalışan kod yazıyor - güvenilir, ama bu çok esnek değildir. Bu derste, sınıfınız, koşullu koşullarla kodlamaya başlayacak ve programın karşılaştığı özel koşullara bağlı olarak farklı biçimde çalışan kod yazmalarına izin verecektir.",
+          "overview": "Bu **beceri geliştirme** dersinde, sınıfınız koşullu ifadelerle kodlamaya devam edecek ve programın karşılaştığı belirli koşullara bağlı olarak farklı işlev gören kod yazmalarına olanak tanıyacaktır.",
           "preparation": "-   Sınıfınız için olası sorunlu alanları bulmak için bulmacaları oynayın.\n-   Her öğrencinin bir Yansıma Dergisi olduğundan emin olun.",
           "purpose": "Öğrenciler programlarında şartları kullanma pratiği yapabileceklerdir. if/else blokları daha esnek bir programa izin verecektir. Arı sadece nektar toplayacak _if_ bir çiçek var ya da bal yapmak _if_ bir petek var. ",
-          "student_overview": "Şimdi koşulları anladığınıza göre, nektar ve balı toplaması için arıyı programlama zamanı. "
+          "student_overview": "Artık koşul şartlarını anladığınıza göre, Bee'yi bal ve nektar toplarken bunları kullanması için programlamanın zamanı geldi."
         },
         "express-2022/While Loops in Farmer": {
           "name": "Farmer'da Süresince Döngüleri",
-          "overview": "Bu **beceri geliştirme** dersinde, öğrenciler Farmer'da çukurları doldurmak ve toprak kazmak için çalışacaklar, ancak deliklerin boyutunu veya toprak yığınlarının yüksekliğini bilemeyecekler. Bu bulmacaları çözmek için öğrenciler yeni bir tür döngü kullanacaklar.",
+          "overview": "Bu **beceri geliştirme** dersinde, öğrenciler Çiftçi de çukurları doldurmak ve toprak kazmak için çalışacaklar, ancak deliklerin boyutunu veya toprak yığınlarının yüksekliğini bilmeyecekler.  Bu bulmacaları çözmek için öğrenciler yeni bir tür döngü kullanacaklar.",
           "preparation": "-   Sınıfınız için olası sorunlu alanları bulmak için bulmacaları oynayın.\n-   Her öğrencinin bir Yansıma Dergisi olduğundan emin olun.",
-          "purpose": "Öğrencileriniz döngü bilgilerini derinleştirmeye devam ettikçe, bir komutun tekrarlanması gereken sorunlarla karşılaşacaklardır, ancak kaç kez tekrarlanması gerektiği bilinmemektedir. Bu sırada döngüler devreye giriyor. Bugünün dersinde, öğrenciler, yeni başlayanların koşullara dayalı döngüler anlayışını geliştirecek ve genel olarak döngüler bilgisini genişletecektir. ",
-          "student_overview": "Döngüler kodlama için oldukça kullanışlıdır. Bu ders size yeni bir döngüyü öğretecek: süresince (while) döngüleri!"
+          "purpose": "Öğrencileriniz döngü bilgilerini derinleştirmeye devam ettikçe, bir komutun tekrarlanması gereken ancak kaç kez tekrarlanması gerektiği bilinmeyen problemlerle karşılaşacaklar.  Döngülerin devreye girdiği yer burasıdır. Bugünün dersinde öğrenciler, başlangıç ​​düzeyindekiler için koşul tabanlı döngüler anlayışı geliştirecek ve ayrıca genel olarak döngüler hakkındaki bilgilerini genişletecekler.",
+          "student_overview": "Döngüler kodlamada çok faydalıdır.  Bu ders size yeni bir döngü türünü öğretecek: while döngüleri!"
         },
         "express-2022/Conditionals in Minecraft: Voyage Aquatic": {
           "name": "Minecraft'ta Koşullar: Su Yolculuğu",
@@ -987,7 +1000,11 @@
           "student_overview": "Bu derste Sprite Lab'da değişkenlerle pratik yapacaksınız.."
         },
         "express-2022/[New] Counting with Variables": {
-          "name": "Değişkenlerle Sayma"
+          "name": "Değişkenlerle Sayma",
+          "overview": "Bu \\*\\* beceri geliştirme\\*\\* dersinde öğrenciler, sayaç gibi zaman içinde değişen bir değeri izlemek için değişkenleri kullanacaklardır. Bu ders ayrıca öğrencilerin basit bir oyun oluşturduğu kısa bir **mini proje** içerir.",
+          "preparation": "Seviyeleri oynayın ve ders planlarını gözden geçirin.",
+          "purpose": "Önceki derslerde, öğrenciler daha sonra alınabilecek verileri depolamak için değişkenleri kullanmayı öğrenirler. Bu derste, öğrenciler bir değişkende saklanan verileri değiştirmeyi öğrenmeye başlayacaklar. Değişkenlerin nasıl çalıştığına dair bu temel anlayış, daha gelişmiş projeler oluşturmalarını da sağlayacaktır.",
+          "student_overview": "Bir sayaç yapmak veya bir oyunda skoru takip etmek için değişkenleri kullanmayı öğreneceksiniz."
         },
         "express-2022/Using Variables with the Artist": {
           "name": "Değişkenleri Sanatçı ile Kullanma",
@@ -1197,7 +1214,7 @@
           "student_overview": "Bu derste, kötülüğün ne olduğunu ve bununla çevrimiçi ortamda karşılaşırsanız ne yapacağınızı öğreneceksiniz."
         },
         "coursec-2022/My Robotic Friends Jr": {
-          "overview": "Bu \\*\\* bağlam ayarı\\*\\* dersinde, öğrenciler bir “robot” a bardakları farklı desenlerde istifleme talimatı vermek için bir dizi sembol kullanacaklar. Öğrenciler sırayla robot olarak katılacaklar, sadece akranları tarafından tanımlanan algoritmaya tepki verecekler.",
+          "overview": "Bu **bağlam ayarı** dersinde, öğrenciler bir “robot” a bardakları farklı desenlerde istifleme talimatı vermek için bir dizi sembol kullanacaklar. Öğrenciler sırayla robot olarak katılacaklar, sadece akranları tarafından tanımlanan algoritmaya tepki verecekler.",
           "preparation": "-   Her 2-3 öğrencilik grup için 20 kağıt bardak (veya kağıttan yamuk) bir yığın hazırlayın.\n-   Öğrencilerin ders boyunca başvurabilecekleri **\\\\ \\*Sembol Anahtarı** simgesindeki sembolleri görüntüleyin.\n-   (İsteğe bağlı) 2-3  kişilik öğrenci grubu başına bir**\\\\ \\* Kupa İstifleme Fikirleri** yazdırın.",
           "purpose": "Bu bağlantısız ders, sınıfı tamamlaması gereken basit bir görevle bir ekip olarak bir araya getiriyor: belirli bir tasarımda bardakları istiflemek için bir \"robot\" edinin.  Bu aktivite, öğrencilerin açık bir şekilde iletilmiş bir algoritma tanımlamanın önemini öğrenirken kurs boyunca yapacakları programlama için temel oluşturur.",
           "student_overview": "Bu derste, sınıf arkadaşlarınız robotmuş gibi davranacaksınız ve istiflenmiş kupa desenleri oluşturmaları için onları programlayacaksınız."
@@ -1345,16 +1362,24 @@
           "name": "Bilgisayar Bilimi Keşifleri Kurs Sonrası Anketi"
         },
         "csd1-2022/Intro to Problem Solving": {
-          "name": "Problem çözme tanıtımı"
+          "name": "Problem çözme tanıtımı",
+          "assessment_opportunities": "1.  **Bir sorunu çözmek için sınıf arkadaşlarınızla iletişim kurun ve işbirliği yapın**\n\n     İşbirliği ile ilgili özet tartışma sorusunda, problem çözmede işbirliğinin avantajlarını kontrol edin ve zorlukların üstesinden gelmek için uygun stratejileri listeleyebilirsiniz. Bu uygulama ünite ve kurs boyunca pekiştirilecektir.\n2.  **Bir sorunun çözümünü yinelemeli olarak iyileştirin**\n\n     Etkinlik Kılavuzunda, öğrencilerin orijinal tasarımındaki güçlü ve zayıf yönleri ve projenin bir sonraki tekrarı için uygun değişikliklerle bağlantısını kontrol edin.\n3.  **Bir sorunu çözmek için kullanılan farklı stratejileri belirleyin**\n\n     Etkinlik Kılavuzunda, etkinlikteki zorlukların üstesinden gelmek için stratejiler olup olmadığına bakın. Rehberin ikinci sayfasında planlarını geliştirmenin bir parçası olarak öğrencilerin listeledikleri tasarımlarının \"güçlü yanlarını\" da kontrol etmek isteyebilirsiniz.",
+          "preparation": "**Her grup için**\n\n-   Her biri 13x13 cm uzunluğunda 2 yaprak alüminyum folyo\n-   8-12 cm su tutabilen 1 kap\n-   Kabın altına yerleştirilebilecek birkaç kağıt havlu veya paçavra\n-   15 tane kuruş\n-   Etkinlik kılavuzunun bir kopyası\n\n**öğretmen için**\n\n-   8-12 cm su tutabilen 1 kap\n-   50 adet kuruş\n-   Ekstra kağıt havlu veya paçavra\n-   Diğer öğretmenler tarafından paylaşılan ek stratejiler veya kaynaklar bulmak için doğrulanmış öğretmenler için [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-1-lessons-1-3/36188) forumunu kontrol edin\n-   Sanal olarak öğretiyorsanız, [Sanal Ders Değişikliklerimizi](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview) kontrol etmeyi düşünün."
         },
         "csd1-2022/The Problem Solving Process": {
-          "name": "Problem çözme süreci"
+          "name": "Problem çözme süreci",
+          "assessment_opportunities": "1.  **Bir problem verildiğinde, problem çözme sürecinin her adımında yer alacak bireysel eylemleri tanımlayın**\n\n     Etkinlik kılavuzunun 2. sayfasında, öğrencilerin çözmeye çalıştıkları problemdeki dört adımın her biri için makul eylemleri yazıp yazmadıklarını kontrol edin.\n\n2.  **Problem çözme sürecinin her adımında yararlı stratejiler belirleyin**\n\n     Sonuç olarak, öğrencilerin sürecin her adımı için etkili stratejiler geliştirip geliştirmediklerini kontrol edin.",
+          "preparation": "Her öğrenci için\n\n-   Etkinlik Kılavuzunun bir kopyasını yazdırın\n\nsınıf için\n\n-   Poster kağıdı\n-   İşaretleyiciler/renkli kalemler\n\nÖğretmen için\n\n-   Diğer öğretmenler tarafından paylaşılan ek stratejiler veya kaynaklar bulmak için doğrulanmış öğretmenler için [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-1-lessons-1-3/36188) forumunu kontrol edin\n-   Sanal olarak öğretiyorsanız, [Sanal Ders Değişikliklerimizi](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview) kontrol etmeyi düşünün."
         },
         "csd1-2022/Exploring Problem Solving": {
-          "name": "Problem çözmeyi keşfetme"
+          "name": "Problem çözmeyi keşfetme",
+          "assessment_opportunities": "1.  **Çeşitli problemlere yaklaşmak için problem çözme sürecini uygulayın**\n\n     Etkinlik Kılavuzunun 5. sayfasında, öğrencilerin her problem için makul adımlar attığından emin olmak için tabloyu kontrol edin.\n\n2.  **Bir sorunun ne kadar iyi tanımlandığını değerlendirin ve sorunu daha kesin bir şekilde tanımlamak için stratejiler kullanın**\n\n     Etkinlik Kılavuzu'nun 5. sayfasındaki son soru için, öğrencilerin bir sorunu daha iyi tanımlamanın etkili bir yolu olacak en az bir sorusu veya stratejisi olduğundan emin olun.",
+          "preparation": "-   Her öğrenci için etkinlik kılavuzunu yazdırın\n-   Doğum Günü Partisi problemi için karalama kağıdı\n-   Sonuç tartışmasında sorunları tanımlamaya yönelik stratejileri kaydetmek için poster\n-   Diğer öğretmenler tarafından paylaşılan ek stratejiler veya kaynaklar bulmak için doğrulanmış öğretmenler için [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-1-lessons-1-3/36188) forumunu kontrol edin\n-   Sanal olarak öğretiyorsanız, [Sanal Ders Değişikliklerimizi](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview) kontrol etmeyi düşünün."
         },
         "csd1-2022/What is a Computer?": {
-          "name": "Bilgisayar nedir?"
+          "name": "Bilgisayar nedir?",
+          "assessment_opportunities": "1.  **Bilgisayarı bilgiyle çalışan bir makine olarak tanımlayın.**\n\n     Ana etkinliğin son tartışmasında, öğrencilerin bir aygıtın bilgisayar olup olmadığı konusundaki akıl yürütmelerini kontrol edin. Bilgi kullandığından veya bilgi (veya düşünme) problemlerini çözdüğünden bahsettiklerinden emin olun.\n\n2.  **Belirli nesnelerin bilgisayar olup olmadığına ilişkin neden.**\n\n     Ana etkinliğin son tartışmasında, öğrencilerin bir aygıtın bilgisayar olup olmadığı konusundaki akıl yürütmelerini kontrol edin. Bilgi kullandığından veya bilgi (veya düşünme) problemlerini çözdüğünden bahsettiklerinden emin olun.\n\n3.  **Bilgisayarla çözülebilecek sorunları seçin ve bu seçenekleri gerekçelendirin.**\n\n     Tamamlama etkinliğinde, öğrencilerin bilgi problemlerini seçtiklerini ve bir bilgisayarın problemi çözmek için gerekli bilgiyi nasıl aldığını ve kullandığını açıklayıp açıklamadıklarını kontrol edin.",
+          "preparation": "**Her grup için**\n\n-   Etkinlik kılavuzunun kopyalarını yazdırın. İki set resim olduğunu unutmayın, ancak her grubun yalnızca tek bir sete ihtiyacı vardır.\n-   Makas (Dersten önce resimleri kesecek vaktiniz yoksa)\n-   Poster kağıdı\n-   İşaretleyiciler veya renkli kalemler\n-   Resimleri yapıştırmak için yapıştırıcı veya bant\n\n**Öğretmen için**\n\n-   Diğer öğretmenler tarafından paylaşılan ek stratejiler veya kaynaklar bulmak için doğrulanmış öğretmenler için [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-2-lessons-4-8/36189) forumunu kontrol edin\n-   Sanal olarak öğretiyorsanız, [Sanal Ders Değişikliklerimizi](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview) kontrol etmeyi düşünün."
         },
         "csd1-2022/Input and Output": {
           "name": "Girdiler ve çıktılar"
@@ -1369,19 +1394,24 @@
           "name": "Proje - bir uygulama önermek"
         },
         "csd1-2022/Intro to Problem Solving - Newspaper Table (Alternate Lesson 1)": {
-          "name": "Problem Çözmeye Giriş - Gazete Tablosu (Alternatif Ders 1)"
+          "name": "Problem Çözmeye Giriş - Gazete Tablosu (Alternatif Ders 1)",
+          "assessment_opportunities": "1.  **Bir sorunu çözmek için sınıf arkadaşlarınızla iletişim kurun ve işbirliği yapın**\n\n     İşbirliği ile ilgili özet tartışma sorusunda, problem çözmede işbirliğinin avantajlarını kontrol edin ve zorlukların üstesinden gelmek için uygun stratejileri listeleyebilirsiniz. Bu uygulama ünite ve kurs boyunca pekiştirilecektir.\n2.  **Bir sorunun çözümünü yinelemeli olarak iyileştirin**\n\n     Etkinlik Kılavuzunda, öğrencilerin orijinal tasarımındaki güçlü ve zayıf yönleri ve projenin bir sonraki tekrarı için uygun değişikliklerle bağlantısını kontrol edin.\n3.  **Bir sorunu çözmek için kullanılan farklı stratejileri belirleyin**\n\n     Etkinlik Kılavuzunda, etkinlikteki zorlukların üstesinden gelmek için stratejiler olup olmadığına bakın. Rehberin ikinci sayfasında planlarını geliştirmenin bir parçası olarak öğrencilerin listeledikleri tasarımlarının \"güçlü yanlarını\" da kontrol etmek isteyebilirsiniz."
         },
         "csd1-2022/Intro to Problem Solving - Spaghetti Bridge (Alternate Lesson 1)": {
-          "name": "Problem Çözmeye Giriş - Spagetti Köprüsü (Alternatif Ders 1)"
+          "name": "Problem Çözmeye Giriş - Spagetti Köprüsü (Alternatif Ders 1)",
+          "assessment_opportunities": "1.  **Bir sorunu çözmek için sınıf arkadaşlarınızla iletişim kurun ve işbirliği yapın**\n\n     İşbirliği ile ilgili özet tartışma sorusunda, problem çözmede işbirliğinin avantajlarını kontrol edin ve zorlukların üstesinden gelmek için uygun stratejileri listeleyebilirsiniz. Bu uygulama ünite ve kurs boyunca pekiştirilecektir.\n2.  **Bir sorunun çözümünü yinelemeli olarak iyileştirin**\n\n     Etkinlik Kılavuzunda, öğrencilerin orijinal tasarımındaki güçlü ve zayıf yönleri ve projenin bir sonraki tekrarı için uygun değişikliklerle bağlantısını kontrol edin.\n3.  **Bir sorunu çözmek için kullanılan farklı stratejileri belirleyin**\n\n     Etkinlik Kılavuzunda, etkinlikteki zorlukların üstesinden gelmek için stratejiler olup olmadığına bakın. Rehberin ikinci sayfasında planlarını geliştirmenin bir parçası olarak öğrencilerin listeledikleri tasarımlarının \"güçlü yanlarını\" da kontrol etmek isteyebilirsiniz."
         },
         "csd1-2022/Intro to Problem Solving - Paper Tower (Alternate Lesson 1)": {
-          "name": "Problem Çözmeye Giriş - Kağıt Kule (Alternatif Ders 1)"
+          "name": "Problem Çözmeye Giriş - Kağıt Kule (Alternatif Ders 1)",
+          "assessment_opportunities": "1.  **Bir sorunu çözmek için sınıf arkadaşlarınızla iletişim kurun ve işbirliği yapın**\n\n     İşbirliği ile ilgili özet tartışma sorusunda, problem çözmede işbirliğinin avantajlarını kontrol edin ve zorlukların üstesinden gelmek için uygun stratejileri listeleyebilirsiniz. Bu uygulama ünite ve kurs boyunca pekiştirilecektir.\n2.  **Bir sorunun çözümünü yinelemeli olarak iyileştirin**\n\n     Etkinlik Kılavuzunda, öğrencilerin orijinal tasarımındaki güçlü ve zayıf yönleri ve projenin bir sonraki tekrarı için uygun değişikliklerle bağlantısını kontrol edin.\n3.  **Bir sorunu çözmek için kullanılan farklı stratejileri belirleyin**\n\n     Etkinlik Kılavuzunda, etkinlikteki zorlukların üstesinden gelmek için stratejiler olup olmadığına bakın. Rehberin ikinci sayfasında planlarını geliştirmenin bir parçası olarak öğrencilerin listeledikleri tasarımlarının \"güçlü yanlarını\" da kontrol etmek isteyebilirsiniz."
         },
         "csd1-2022/Exploring Problem Solving - Animals Theme (Alternate Lesson 3)": {
-          "name": "Problem Çözmeyi Keşfetme - Hayvan Teması (Alternatif Ders 3)"
+          "name": "Problem Çözmeyi Keşfetme - Hayvan Teması (Alternatif Ders 3)",
+          "assessment_opportunities": "1.  **Çeşitli problemlere yaklaşmak için problem çözme sürecini uygulayın**\n\n     Etkinlik Kılavuzunun 5. sayfasında, öğrencilerin her problem için makul adımlar attığından emin olmak için tabloyu kontrol edin.\n\n2.  **Bir sorunun ne kadar iyi tanımlandığını değerlendirin ve sorunu daha kesin bir şekilde tanımlamak için stratejiler kullanın**\n\n     Etkinlik Kılavuzu'nun 5. sayfasındaki son soru için, öğrencilerin bir sorunu daha iyi tanımlamanın etkili bir yolu olacak en az bir sorusu veya stratejisi olduğundan emin olun."
         },
         "csd1-2022/Exploring Problem Solving - Games Theme (Alternate Lesson 3)": {
-          "name": "Problem Çözmeyi Keşfetme - Oyun Teması (Alternatif Ders 3)"
+          "name": "Problem Çözmeyi Keşfetme - Oyun Teması (Alternatif Ders 3)",
+          "assessment_opportunities": "1.  **Çeşitli problemlere yaklaşmak için problem çözme sürecini uygulayın**\n\n     Etkinlik Kılavuzunun 5. sayfasında, öğrencilerin her problem için makul adımlar attığından emin olmak için tabloyu kontrol edin.\n\n2.  **Bir sorunun ne kadar iyi tanımlandığını değerlendirin ve sorunu daha kesin bir şekilde tanımlamak için stratejiler kullanın**\n\n     Etkinlik Kılavuzu'nun 5. sayfasındaki son soru için, öğrencilerin bir sorunu daha iyi tanımlamanın etkili bir yolu olacak en az bir sorusu veya stratejisi olduğundan emin olun."
         },
         "csd3-2022/Programming for Entertainment": {
           "name": "Eğlence için programlama"
@@ -1626,6 +1656,12 @@
         "courseb-2018/Events in Play Lab": {
           "name": "Etkinliklerle Kraliyet Savaşı"
         },
+        "coursea-2018/Debugging: Unspotted Bugs": {
+          "name": "Fark Edilmeyen Hatalar"
+        },
+        "coursea-2018/Persistence & Frustration: Stevie and the Big Project": {
+          "name": "Stevie ve Büyük Proje"
+        },
         "coursea-2018/Real-life Algorithms: Plant a Seed": {
           "name": "Bir Tohum Ek"
         },
@@ -1718,6 +1754,9 @@
         },
         "coursed-2018/Artist Binary": {
           "name": "Oyuncu ile İkili Resimler"
+        },
+        "coursef-2018/Programming: My Robotic Friends": {
+          "name": "Robotik Arkadaşlarım"
         },
         "coursef-2018/Sequence in Maze": {
           "name": "Yorumlarla Kodlama"
@@ -1935,6 +1974,9 @@
         "express-2018/Crowdsourcing": {
           "name": "Kalabalık Kaynaklandırma 'Crowdsourcing'"
         },
+        "coursee-2018/Programming: My Robotic Friends": {
+          "name": "Robotik Arkadaşlarım"
+        },
         "coursee-2018/Sequence in Maze": {
           "name": "Yorumlarla Kodlama"
         },
@@ -2063,6 +2105,12 @@
         },
         "coursec-2018/Binary Bracelets": {
           "name": "İkilik Bileklikler"
+        },
+        "pre-express-2018/Debugging: Unspotted Bugs": {
+          "name": "Fark Edilmeyen Hatalar"
+        },
+        "pre-express-2018/Persistence & Frustration: Stevie and the Big Project": {
+          "name": "Stevie ve Büyük Proje"
         },
         "pre-express-2018/Move It, Move It": {
           "name": "Oynat, Oynat"
@@ -4294,6 +4342,9 @@
         "allthethings/lesson-48": {
           "name": "Şiir"
         },
+        "allthethings/lesson-49": {
+          "name": "Müzik"
+        },
         "coursef-2021/lesson-6": {
           "name": "Hareketli Nesne Laboratuvarı Tanıtımı",
           "overview": "Bu **bağlam ayarı** dersinde öğrenciler, uygulamaların ve araçların kullanıcılara bunları nasıl kullanacakları konusunda nasıl seçenekler sunduğuna odaklanarak bilgisayarların ve teknolojinin hayatlarındaki rolünü tartışacaklar. Öğrenciler daha sonra kendilerini oluşturacaklarına benzer uygulamaları da keşfedecekler.",
@@ -4743,50 +4794,50 @@
         },
         "coursed-2021/Introduction to Online Puzzles": {
           "name": "Çevrimiçi Bulmacalara Giriş",
-          "overview": "Bu bulmaca setinde, öğrenciler Code.org'un çevrimiçi çalışma alanına giriş (veya sınıf tecrübesine göre inceleme) ile başlayacaklar. Çalışma alanının, \\`Çalıştır',' Sıfırla', ve 'Adım' düğmeleri gibi temel işlevselliğine işaret eden videolar olacaktır. Ayrıca bu videolarda da tartışılmıştır: Blockly bloklarını sürükleme, Blockly bloklarını silme ve Blockly bloklarını bağlama. Sonra, öğrenciler labirentte _sequencing_ ve _debug_ becerilerini uygulayacaklardır. Oradan, öğrenciler _loops_'un temellerini öğrendiğinde Koleksiyoner, Sanatçı ve Biçerdöver gibi yeni bulmaca türlerini görecekler.",
+          "overview": "Bu **beceri geliştirme** dersinde, öğrenciler _sıralama_ ve hata ayıklama becerilerini labirent bulmacalarında uygulayacaklar.",
           "preparation": "-   Sınıfınız için varsa bir potansiyel sorun alanını bulmak üzere bulmacalarla oynayın. \n-   Her öğrencinin bir düşünce günlüğü olduğundan emin olun.",
-          "purpose": "Her sınıfın her konu için bir anlama spektrumu olduğunu biliyoruz. Sınıfınızdaki bazı öğrenciler, bilgisayar dâhisi olabilirken, diğerleri pek de çok deneyimli olmayabilir. Eşit bir oynama (ve öğrenme) alanı oluşturmak için, Kurs D için bu \"Aşamayı Arttır\"ı geliştirdik. Bu, Code.org ve temel bilgisayar bilimi kavramlarının nasıl kullanılacağına dair bir giriş veya bir gözden geçirme olarak kullanılabilir. Bu aşama, Kurs D'ye başlamak için gereken tüm ön şartları kapsar.",
-          "student_overview": "Bu ders, bu kursta ihtiyacınız olan becerilere çalışmanızı sağlayacak."
+          "purpose": "Her sınıfın her konu için bir anlayış yelpazesine sahip olduğunun farkındayız.  Sınıfınızdaki bazı öğrenciler bilgisayar sihirbazı olabilirken, diğerlerinin hiç deneyimi olmayabilir.  Eşit bir oyun (ve öğrenme) alanı yaratmak için D Kursu için bu \"Yükseltme Aşamasını\" geliştirdik. Bu, Code.org ve temel bilgisayar bilimi kavramlarının nasıl kullanılacağına dair bir giriş veya inceleme olarak kullanılabilir.  Bu aşama, Kurs D'ye başlamak için gereken tüm ön koşulları kapsar.",
+          "student_overview": "Bu ders, bu kurs için ihtiyaç duyacağınız beceriler konusunda size pratik sağlayacaktır."
         },
         "coursed-2021/Relay Programming": {
           "name": "Röle Programlama",
-          "overview": "Bu **bağlam belirleme** dersi, hata ayıklama ve kalıcılık üzerine kısa bir dersle başlayacak, ardından öğrenciler takımlara ayrılıp her seferinde bir talimat yazmak için birlikte çalışırken hızla zamana karşı bir yarışa geçecektir.",
-          "preparation": "-   **\\\\ \\*Öğretmen Video** izleyin.\n-   Spor salonu veya açık alan gibi bu etkinlik için geniş bir açık alan bulun.\n-   Her grup için bir **\\\\ \\*Etkinlik Paketi** yazdırın.\n-   Her gruba bol kağıt ve kalem/kalem ile tedarik edin.\n-   Her öğrenci için bir **\\\\ \\*Çalışma Sayfası** yazdırın.\n-   Her öğrencinin bir yansıma dergisi olduğundan emin olun.",
-          "purpose": "Bilgisayar bilimlerinde takım çalışması çok önemlidir. Takımlar birey olarak çalışmak yerine birbirleriyle kod yazıp hata ayıklarlar. Bu derste öğrenciler mümkün olduğunca verimli olmakla birlikte çalışmayı öğreneceklerdir. \n\nBu etkinlik aynı zamanda öğrencilere zamanlarını dikkatli bir şekilde dengelemeyi ve çok geride kalmadan hataları önlemeyi öğretecek bir aciliyet duygusu da sağlar. Bu deneyim stresli olabilir (beklenen!) Öğrencilere potansiyel hayal kırıklığı ile başa çıkmaları için gerekli araçları sağladığınızdan emin olun.",
-          "student_overview": "Kod ile çizimler yaptığınız kursun başını hatırlayın. Bu derste, çok benzer bir şey yapmak için bir takımla birlikte çalışacaksınız!"
+          "overview": "Bu **bağlam belirleme** dersi, hata ayıklama ve sebat üzerine kısa bir dersle başlayacak, ardından öğrenciler takımlara ayrılıp her seferinde bir talimat içeren bir program yazmak için birlikte çalışırken hızla zamana karşı bir yarışa geçecektir.",
+          "preparation": "-   **\\*Öğretmen Videosunu** izleyin.\n-   Bu aktivite için spor salonu veya açık alan gibi geniş bir açık alan bulun.\n-   Her grup için bir **\\*Etkinlik Paketi** yazdırın.\n-   Her gruba bol miktarda kağıt ve tükenmez kalem/kurşun kalem verin.\n-   Her öğrenci için bir **\\*Çalışma Sayfası** yazdırın.\n-   Her öğrencinin bir yansıtma günlüğü olduğundan emin olun.",
+          "purpose": "Bilgisayar biliminde takım çalışması çok önemlidir.  Ekipler, bireysel olarak çalışmak yerine birbirleriyle kod yazar ve hata ayıklar.  Bu derste, öğrenciler mümkün olduğunca verimli olurken birlikte çalışmayı öğrenecekler.\n\n Bu aktivite aynı zamanda öğrencilere zamanlarını dikkatli bir şekilde dengelemeyi ve çok geride kalmadan hatalardan kaçınmayı öğretecek bir aciliyet duygusu sağlar.  Bu deneyim stresli olabilir (ki bu beklenir!) Öğrencilerinize olası hayal kırıklıklarıyla başa çıkmaları için gereken araçları sağladığınızdan emin olun.",
+          "student_overview": "Kursun başında kodla çizim yaptığınız zamanı hatırlıyor musunuz?  Bu derste, buna çok benzer bir şey yapmak için bir ekiple birlikte çalışıyor olacaksınız!"
         },
         "coursed-2021/Debugging in Collector": {
           "name": "Laurel ile Hata Ayıklama",
-          "overview": "Bu çevirim içi etkinlikte, öğrenciler 'toplayıcı' ortamında hata ayıklama üzerinde çalışacaklar. Öğrenciler, basit algoritmalar, döngüler ve iç içe döngüler ile bulmacaları çözmek için kod okuma ve düzenleme alıştırması yapacaklar.",
+          "overview": "Bu **beceri geliştirme** dersinde, öğrenciler \"toplayıcı\" ortamında hata ayıklama alıştırması yapacaklardır.  Öğrenciler basit algoritmalar, döngüler ve iç içe döngülerle bulmacaları çözmek için kod okuma ve düzenleme alıştırması yapacaklar.",
           "preparation": "-   Sınıfınız için varsa bir potansiyel sorun alanını bulmak üzere bulmacalarla oynayın. \n-   Her öğrencinin bir düşünce günlüğü olduğundan emin olun.",
-          "purpose": "Bu dersin amacı öğrencilere yeni bir beceri öğrenirken başarısızlığın normal olduğunu öğretmektir. Öğrencilere çalışmayan önceden yazılı programlar verilecektir. Bu programları düzeltmeleri istenecektir. Hata ayıklama adı verilen bu süreç öğrencilere temel problem çözme ve eleştirel düşünme becerilerini öğretir. Öğrenciler daha zor ve daha zor programlama projelerine devam ettikleri için bu beceriler aktarılır.",
-          "student_overview": "Kodlama esnasında hiç problem yaşadınız mı? Bu ders, size, hata ayıklamanın sırlarını öğretecek. Hata ayıklama, kodunuzdaki hataları bulma ve düzeltme sürecidir."
+          "purpose": "Bu dersin amacı, öğrencilere yeni bir beceri öğrenirken başarısızlığın normal olduğunu öğretmektir.  Öğrencilere ÇALIŞMAYAN önceden yazılmış programlar verilecektir.  Bu programları düzeltmeleri istenecek.  Hata ayıklama adı verilen bu süreç, öğrencilere temel problem çözme ve eleştirel düşünme becerilerini öğretir.  Bu beceriler, öğrenciler gittikçe daha zor programlama projelerine geçtikçe aktarılır.",
+          "student_overview": "Kodlama yaparken hiç sorunla karşılaştınız mı?  Bu derste, hata ayıklamanın sırlarını öğreneceksiniz.  Hata ayıklama, kodunuzdaki sorunları bulma ve düzeltme işlemidir."
         },
         "coursed-2021/Events in Bounce": {
           "name": "Bounce'daki Etkinlikler",
-          "overview": "Bu çevrim içi etkinlikte, öğrenciler, olayların ne olduğunu, bilgisayarın video oyunlar gibi programlarda olayları nasıl kullandığını öğrenirler. Öğrenciler, olaylara (yön düğmelerine basmak gibi) tepki veren program yapmak için bulmacalar üzerinde çalışırlar. Bulmacanın sonunda, öğrencilerin, oyunlarında farklı hızları ve sesleri kullanabilecekleri fırsatları olacak.",
-          "preparation": "-   Her öğrencinin bir yansıma günlüğü olduğundan emin ol.\n-   Sınıfınız için herhangi bir potansiyel sorun alanları bulmak için bulmaca ile oynayın.\n-   **\\\\ \\*slayt güvertesi** okuyun (sınıf sonunda öğrencilere sunulacak).",
-          "purpose": "Bilgisayar programlarında, özellikle de video oyunlarında olaylar çok yaygındır.  \n\nBu derste öğrenciler, spor temelli bir oyun yaparak olayları daha iyi anlayacaklar. Öğrenciler, paletlerini ok anahtarlarına göre hareket ettirmeyi ve nesneler çarpıştığında ses çıkarmayı öğrenecekler. En sonunda oyunlarını benzersiz yapmak için onu kişiselleştirmeyi öğrenecekler.",
+          "overview": "Bu **bağlam belirleme**/**beceri geliştirme** dersinde öğrenciler olayların ne olduğunu ve programcıların bunları video oyunlarında nasıl kullandıklarını öğrenecekler.  Öğrenciler, farklı hız ve seslerle özelleştirebilecekleri bir oyun inşa edecekler.",
+          "preparation": "-   Her öğrencinin bir yansıtma günlüğü olduğundan emin olun.\n-   Sınıfınız için olası sorunlu alanları bulmak için bulmacaları oynayın.\n-   **\\*slayt destesini** okuyun (dersin sonunda öğrencilere sunulacak).",
+          "purpose": "Bilgisayar programlarında, özellikle video oyunlarında olaylar çok yaygındır.\n\n Bu derste öğrenciler spora dayalı bir oyun yaparak olaylara ilişkin anlayışlarını geliştireceklerdir.  Öğrenciler küreklerini ok tuşlarına göre hareket ettirmeyi ve nesneler çarpıştığında ses çıkarmayı öğrenecekler.  En sonunda, oyunlarını daha benzersiz hale getirmek için özelleştirecekler!",
           "student_overview": "Hiç okulda bilgisayar oyunları oynamayı dilediniz mi? Bu derste kendi oyununuzu oluşturacaksınız!"
         },
         "coursed-2021/Build a Star Wars Game": {
           "name": "Star Wars oyunu oluştur",
-          "overview": "Bu derste öğrenciler, olayları kullanarak çevrimiçi olarak paylaşabilecekleri bir oyun yapacaklar. R2-D2 ve diğer Star Wars karakterleri eşliğinde öğrenciler olaylar süresince yönlendirilecek ve sonra kendi oyunlarını oluşturmaları için süre verilecek.",
-          "preparation": "-   Bulmacalar üzerinden oynayın ve olası sorunlu alanları bulun.\n-   Her öğrencinin bir yansıma dergisi olduğundan emin olun.",
-          "purpose": "CS Fundamentals sadece bilgisayar bilimini öğretmekle ilgili değildir, bilgisayar bilimini eğlenceli ve heyecan verici hale getirmekle ilgilidir. Bu seride öğrenciler _Star Wars_ adlı popüler karakterleri kullanan etkinlikler hakkında bilgi sahibi olacaklar. Bu bulmacalar “öğrenme” ve “eğlenceli” arasındaki çizgileri bulanıklaştırır. Ayrıca öğrenciler oyunlarda düzenli programlama uygulamalarını tanımayı öğreneceklerdir, böylece evde oyun oynarken yaygın bilgisayar bilimi ilkelerinin kullanıldığını görebilirler.",
-          "student_overview": "Bu derste kendi Star Wars oyununu kurarken gücünü hissedin."
+          "overview": "Bu **beceri geliştirme** dersinde öğrenciler, paylaşabilecekleri bir oyun oluşturmak için etkinlikleri kullanarak pratik yapacaklar.",
+          "preparation": "-   Bulmacaları oynayın ve olası sorunlu alanları bulun.\n-   Her öğrencinin bir yansıtma günlüğü olduğundan emin olun.",
+          "purpose": "CS Fundamentals, yalnızca bilgisayar bilimi öğretmekle ilgili değildir, bilgisayar bilimini eğlenceli ve heyecan verici hale getirmekle ilgilidir.  Bu dizide öğrenciler, _Star Wars_'tan popüler karakterleri kullanarak olayları öğrenecekler.  Bu bulmacalar \"öğrenme\" ve \"eğlence\" arasındaki çizgiyi bulanıklaştırır.  Ayrıca öğrenciler, evde oyun oynarken yaygın bilgisayar bilimi ilkelerinin kullanıldığını görebilmek için oyunlardaki düzenli programlama uygulamalarını tanımayı öğreneceklerdir.",
+          "student_overview": "Bu derste kendi Star Wars oyununuzu oluştururken gücü hissedin."
         },
         "coursed-2021/Dance Party": {
           "name": "Dans Partisi",
           "overview": "Bu derste öğrenciler, kendi etkileşimli dans partisini programlayacak. Araç müziğe yanıt verecek şekilde oluşturulduğundan dolayı bu aktivite ses gerektirir.",
-          "preparation": "-   Sınıfınız için olası sorunlu alanları bulmak için bulmacaları oynayın.\n-   Her öğrencinin bir yansıma dergisi olduğundan emin olun.\n-   Kulaklık ihtiyacını göz önünde bulundurun. Bu etkinlik sese dayanır.",
+          "preparation": "-   Sınıfınız için olası sorunlu alanları bulmak için bulmacaları oynayın.\n-   Her öğrencinin bir yansıtma günlüğü olduğundan emin olun.\n-   Kulaklık ihtiyacını göz önünde bulundurun.  Bu etkinlik sese dayalıdır.",
           "purpose": "Bu ders, kodlamanın ve  etkinlik programlamanın (blokları kullanarak) temel Bilgisar Bilimi kavramlarını anlatır.",
           "student_overview": "Kutlama zamanı! Bu derste kendi etkileşimli dans partinizi programlayacaksınız."
         },
         "coursed-2021/Loops in Ice Age": {
           "name": "Buz Devrindeki Döngüler",
           "overview": "Döngüleri kullanmaya yönelik hızlı bir güncelleme (veya giriş) olarak bu aşama, Scrat'in meşe palamuduna daha etkili bir şekilde ulaşmasını sağlamak için öğrencilerin 'tekrarla' bloğunu kullanmasını sağlayacaktır.",
-          "preparation": "-   (İsteğe bağlı) Sınıfınızla bir grup olarak yapmak için birkaç bulmaca seçin.\n-   Her öğrencinin bir yansıma dergisi olduğundan emin olun.",
+          "preparation": "-   (İsteğe bağlı) Sınıfınızla bir grup olarak yapmak için birkaç bulmaca seçin.\n-   Her öğrencinin bir yansıtma günlüğü olduğundan emin olun.",
           "purpose": "Bu derste, öğrenciler döngüler ve bunları Blockly kodunda nasıl uygulayacakları hakkında daha fazla şey öğrenecekler.  Döngüleri kullanmak, programlamada önemli bir beceridir çünkü komutları manuel olarak tekrarlamak sıkıcı ve verimsizdir.  Bu Code.org bulmacalarıyla öğrenciler, mevcut döngülere talimat eklemeyi, tekrarlanan kodları döngülerde toplamayı ve tekrarlanması gereken kalıpları tanımayı öğrenecekler.",
           "student_overview": "Bu derste Scrat'in mümkün olduğunca etkili bir şekilde meşe palamuduna ulaşmasına yardım etmek için tekrar bloğunu kullanacaksınız."
         },
@@ -4794,55 +4845,55 @@
           "name": "Döngüler ile Şekiller Çizme",
           "overview": "Bu ders, önceki derslerden döngülerin anlaşılmasına katkıda bulunur ve öğrenciye tam anlamıyla yaratıcı olma şansını verir. Bu aktivite, ekstra problem-çözme pratiği için bir hata ayıklama egzersizi olarak da kullanılır.",
           "preparation": "-   Sınıfınız için varsa bir potansiyel sorun alanını bulmak üzere bulmacalarla oynayın. \n-   Her öğrencinin bir düşünce günlüğü olduğundan emin olun.",
-          "purpose": "Bu seri, öğrencilerin 'repeat\\` döngülerinin neden uzun boydan üstün olduğunu düşünmelerini sağlamak için bir dizi bulmacayla döngülerin gücünü vurgular.",
+          "purpose": "Bu seri, öğrencilerin \"tekrar\" döngülerin neden el yazısına göre daha üstün olduğunu düşünmelerini sağlamayı amaçlayan bir dizi bulmacayla döngülerin gücünü vurguluyor.",
           "student_overview": "Bu derste döngüler, Sanatçı ile süper resimler yapmayı kolaylaştırır."
         },
         "coursed-2021/Nested Loops in Bee": {
           "name": "Labirentte İçiçe Döngüler",
-          "overview": "Bu çevrimiçi etkinlikte, öğrenciler döngü anlayışlarını yepyeni bir seviyeye çekme fırsatına sahip olacaklar. Arı ve Bitkiler vs Zombiler ile oynayarak, öğrenciler bir döngünün başka bir döngünün içinde nasıl programlanacağını öğreneceklerdir. Ayrıca, her iki döngüde de küçük değişiklikler `Çalıştır`a tıklandığında programlarını etkileyeceğini anlamaya teşvik edilecekler.",
+          "overview": "Bu **beceri geliştirme** dersinde öğrenciler, bir döngüyü başka bir döngü içinde nasıl programlayacaklarını öğrenecekler.",
           "preparation": "-   Sınıfınız için varsa bir potansiyel sorun alanını bulmak üzere bulmacalarla oynayın. \n-   Her öğrencinin bir düşünce günlüğü olduğundan emin olun.",
-          "purpose": "İç içe döngü girişinde öğrenciler bulmacalara daha verimli çözümler üretmek için konfor alanlarının dışına çıkacaklar.  \n\nÖnceki bulmacalarda, döngüler öğrencileri tekrarlamayı tanımaya itti. Burada, öğrenciler bu iç içe döngüleri geliştirmek için tekrarlanan desenleri _within_ kalıplarını tanımayı öğrenecekler. Bu aşama, öğrencileri kodun rahatsız edici ve uzun yoldan yazmak için çok karmaşık olduğu bir bulmacayı çözmeye çalışmaya teşvik ederek başlar. Bir video iç içe geçmiş döngüler tanıdıktan sonra öğrencilere bir örnek gösterilir ve başka bir döngünün içine bir döngü yerleştirildiğinde ne olacağını tahmin etmeleri istenir. Bu ilerleme, öğrencilerin programlamada döngü anlayışlarını sağlamlaştırmaları ve geliştirmeleri için birçok uygulamaya yol açar.",
+          "purpose": "İç içe döngülere bu girişte, öğrenciler bulmacalara daha verimli çözümler oluşturmak için rahatlık alanlarının dışına çıkacaklar.\n\n Daha önceki bulmacalarda, döngüler öğrencileri tekrarı tanımaya itiyordu.  Burada öğrenciler, bu iç içe döngüleri geliştirmek için tekrarlanan kalıplar içindeki kalıpları tanımayı öğrenecekler.  Bu aşama, öğrencileri kodun rahatsız edici ve uzun yoldan yazamayacak kadar karmaşık olduğu bir bulmacayı çözmeye teşvik ederek başlar.  Bir video iç içe döngüleri tanıttıktan sonra, öğrencilere bir örnek gösterilir ve bir döngü başka bir döngünün içine yerleştirildiğinde ne olacağını tahmin etmeleri istenir.  Bu ilerleme, öğrencilerin programlamada döngü anlayışını sağlamlaştırması ve üzerine inşa etmesi için pek çok alıştırmaya yol açar.",
           "student_overview": "Döngülerin içindeki döngülerin içindeki döngüler. Bu ne anlama geliyor? Bu ders, size, içiçe bir döngü oluşturduğunuzda ne olacağını öğretecektir."
         },
         "coursed-2021/Conditionals with Cards": {
           "name": "Kartlarla Koşullu Önermeler",
-          "overview": "Bu **context-setting** dersinde öğrenciler basit kart oyunlarının kurallarını belirtmek için \\_conditional (if/else) ifadeleri yazacaktır. ",
-          "preparation": "-   Kartların güverte veya benzer bir şey toplayın.\n-   **\\\\ \\*örnek programlar** yazdırın veya görüntüleyin.\n-   Her öğrenci için bir **\\\\ \\*değerlendirme** yazdırın.\n-   Her öğrencinin bir yansıma dergisi olduğundan emin olun.",
-          "purpose": "Koşulları öğretmenin en iyi parçalarından biri, öğrencilerin bu konsepti günlük yaşamlarından anlamalarıdır. \n\nBu ders, bir koşulun doğru mu yanlış mı olduğunu söyleme yeteneklerini oluşturarak bilgisayar bilimini gerçek dünyaya birleştirir. Öğrenciler belirli bir komutun ne zaman çalıştırılması gerektiğini beyan etmek için if deyimlerinin yanı sıra bir komutun ne zaman çalıştırılması gerektiğini ve ne zaman çalıştırılacağını bildirmek için if ifadelerini kullanmayı öğreneceklerdir. Öğrenciler şartları tanımıyor olabilir, ancak çoğu öğrenci “eğer” kullanma fikrini anlayacaklardır. Bazı eylemlerin yalnızca olması gerektiği zaman gerçekleştiğinden emin olmak için.",
-          "student_overview": "Yalnızca kesin şartlar altında puan kazanacağınız bir oyunu oynama zaman geldi!"
+          "overview": "Bu **bağlam belirleme** dersinde, öğrenciler basit kart oyunlarının kurallarını belirtmek için _koşullu (eğer/else) ifadeleri_ yazacaklar.",
+          "preparation": "-   Kart destesi veya benzeri bir şey toplayın.\n-   **\\*örnek programları** yazdırın veya görüntüleyin.\n-   Her öğrenci için bir **\\*değerlendirme** yazdırın.\n-   Her öğrencinin bir yansıtma günlüğü olduğundan emin olun.",
+          "purpose": "Koşullu ifadeleri öğretmenin en iyi yanlarından biri, öğrencilerin kavramı zaten günlük yaşamlarından anlamış olmalarıdır.\n\n Bu ders, bir koşulun doğru mu yoksa yanlış mı olduğunu anlama yeteneklerini geliştirerek bilgisayar bilimini gerçek dünyayla birleştirir.  Öğrenciler, belirli bir komutun ne zaman çalıştırılması gerektiğini bildirmek için if ifadelerini kullanmayı ve ayrıca bir komutun ne zaman çalıştırılması gerektiğini ve aksi halde ne çalıştırılacağını bildirmek için if / else ifadelerini kullanmayı öğreneceklerdir.  Öğrenciler koşullu kelimeyi tanımayabilir, ancak çoğu öğrenci, bazı eylemlerin yalnızca olması gerektiği zaman gerçekleştiğinden emin olmak için \"eğer\" kullanma fikrini anlayacaktır.",
+          "student_overview": "Sadece belirli koşullar altında puan kazandığınız bir oyun oynama zamanı!"
         },
         "coursed-2021/lesson-6": {
           "name": "Minecraft ile ileriye bakmak",
-          "overview": "Bu ders, aslında Minecraft takımında Kod Saati için oluşturuldu. Öğrencilerin, şu ana kadar öğrendikleri fikirleri pratiğe dökme ve ayrıca koşullara şöyle bir göz atma şansı olacak!",
-          "preparation": "-   Sınıfınız için olası sorunlu alanları bulmak için bu dersle ilişkili bulmacaları oynayın.\n-   Her öğrencinin bir yansıma dergisi olduğundan emin olun.",
-          "purpose": "Bu bulmaca dizisi, döngüler hakkındaki bilgilerini pekiştirmeye ve arttırmaya yarayacaktır, ve koşulları tanıtacaktır. Bu iki kavramı birbiri ile eşleştirerek öğrenciler, yeni ve heyecan verici bir ortamda eğlenceli ve yenilikçi programlar oluşturma potansiyelini keşfedebilecekler.",
+          "overview": "Bu **beceri geliştirme** dersi, öğrencilere bu noktaya kadar öğrendikleri kavramları uygulama ve koşullu ifadelerle ilk deneyimlerini kazanma şansı verir!",
+          "preparation": "-   Sınıfınız için olası sorunlu alanları bulmak için bu dersle ilişkili bulmacaları oynayın.\n-   Her öğrencinin bir yansıtma günlüğü olduğundan emin olun.",
+          "purpose": "Bu bulmaca seti, döngüler bilgisini sağlamlaştırmak ve üzerine inşa etmek için çalışacak ve koşullu ifadeleri tanıtacaktır.  Bu iki kavramı bir araya getirerek öğrenciler, yeni ve heyecan verici bir ortamda eğlenceli ve yenilikçi programlar yaratma potansiyelini keşfedebilecekler.",
           "student_overview": "Lavdan Kaçının! Burada Minecraft dünyasındaki koşulları öğrenmeye başlayacaksınız."
         },
         "coursed-2021/Conditionals in Bee": {
           "name": "Arı ile \"Eğer/Başka\"",
-          "overview": "Bu noktaya kadar öğrenciler her çalıştırıldığında aynı biçimde çalışan kod yazıyor - güvenilir, ama bu çok esnek değildir. Bu derste, sınıfınız, koşullu koşullarla kodlamaya başlayacak ve programın karşılaştığı özel koşullara bağlı olarak farklı biçimde çalışan kod yazmalarına izin verecektir.",
+          "overview": "Bu **beceri geliştirme** dersinde, sınıfınız koşullu ifadelerle kodlamaya devam edecek ve programın karşılaştığı belirli koşullara bağlı olarak farklı işlev gören kod yazmalarına olanak tanıyacaktır.",
           "preparation": "-   Sınıfınız için varsa bir potansiyel sorun alanını bulmak üzere bulmacalarla oynayın. \n-   Her öğrencinin bir düşünce günlüğü olduğundan emin olun.",
-          "purpose": "“Kartlı Şartlar” programında koşullara tanıtıldıktan sonra öğrenciler şimdi programlarında bunları kullanarak pratik yapacaklar. “if/else” blokları daha esnek bir program sağlar. Arı sadece nektar toplayacak _if_ bir çiçek var ya da bal yapmak _if_ bir petek var. ",
-          "student_overview": "Şimdi koşulları anladığınıza göre, nektar ve balı toplaması için arıyı programlama zamanı. "
+          "purpose": "\"Kartlı Koşullar\"da koşul ifadeleriyle tanıştıktan sonra, öğrenciler şimdi bunları programlarında kullanma alıştırması yapacaklar.  \"if / else\" blokları daha esnek bir programa izin verecektir.  Arı sadece çiçek varsa nektar toplar veya petek varsa bal yapar.",
+          "student_overview": "Artık koşul şartlarını anladığınıza göre, Bee'yi bal ve nektar toplarken bunları kullanması için programlamanın zamanı geldi."
         },
         "coursed-2021/While Loops in Farmer": {
           "name": "Farmer'da Süresince Döngüleri",
-          "overview": "Bu **beceri geliştirme** dersinde, öğrenciler Farmer'da çukurları doldurmak ve toprak kazmak için çalışacaklar, ancak deliklerin boyutunu veya toprak yığınlarının yüksekliğini bilemeyecekler. Bu bulmacaları çözmek için öğrenciler yeni bir tür döngü kullanacaklar.",
+          "overview": "Bu **beceri geliştirme** dersinde, öğrenciler Çiftçi de çukurları doldurmak ve toprak kazmak için çalışacaklar, ancak deliklerin boyutunu veya toprak yığınlarının yüksekliğini bilmeyecekler.  Bu bulmacaları çözmek için öğrenciler yeni bir tür döngü kullanacaklar.",
           "preparation": "-   Sınıfınız için varsa bir potansiyel sorun alanını bulmak üzere bulmacalarla oynayın. \n-   Her öğrencinin bir düşünce günlüğü olduğundan emin olun.",
-          "purpose": "Öğrencileriniz döngü bilgilerini derinleştirmeye devam ettikçe, bir komutun tekrarlanması gereken sorunlarla karşılaşacaklardır, ancak kaç kez tekrarlanması gerektiği bilinmemektedir. Bu sırada döngüler devreye giriyor. Bugünün dersinde, öğrenciler, yeni başlayanların koşullara dayalı döngüler anlayışını geliştirecek ve genel olarak döngüler bilgisini genişletecektir. ",
-          "student_overview": "Döngüler kodlama için oldukça kullanışlıdır. Bu ders size yeni bir döngüyü öğretecek: süresince (while) döngüleri!"
+          "purpose": "Öğrencileriniz döngü bilgilerini derinleştirmeye devam ettikçe, bir komutun tekrarlanması gereken ancak kaç kez tekrarlanması gerektiği bilinmeyen problemlerle karşılaşacaklar.  Döngülerin devreye girdiği yer burasıdır. Bugünün dersinde öğrenciler, başlangıç ​​düzeyindekiler için koşul tabanlı döngüler anlayışı geliştirecek ve ayrıca genel olarak döngüler hakkındaki bilgilerini genişletecekler.",
+          "student_overview": "Döngüler kodlamada çok faydalıdır.  Bu ders size yeni bir döngü türünü öğretecek: while döngüleri!"
         },
         "coursed-2021/Until Loops in Maze": {
           "name": "Labirentte Bitiş Döngüleri",
           "overview": "Bu derste öğrenciler, 'e kadar' döngülerini öğrenecektir. Öğrenciler, ana karakterin istenilen durma noktasına varana 'kadar' hareketlerine devam ettiği programları yapacaktır.",
           "preparation": "-   Sınıfınız için varsa bir potansiyel sorun alanını bulmak üzere bulmacalarla oynayın. \n-   Her öğrencinin bir düşünce günlüğü olduğundan emin olun.",
-          "purpose": "Bu bulmaca dizisi, 'e kadar' koşulunu ekleyerek döngüler hakkındaki bilgilerini pekiştirmeye ve arttırmaya yarayacaktır. Bu kavramları birbiri ile eşleştirerek öğrenciler, karmaşık ve yenilikçi programlar oluşturma potansiyelini keşfedebilecekler.",
+          "purpose": "Bu bulmaca seti, \"kadar\" şart koşulunu ekleyerek döngü bilgisini sağlamlaştırmaya ve üzerine inşa etmeye çalışacak.  Bu kavramları bir araya getirerek, öğrenciler karmaşık ve yenilikçi programlar yaratma potansiyelini keşfedebilecekler.",
           "student_overview": "'E kadar' döngülerini kullandığınızda inanılmaz şeyler yapabilirsiniz!"
         },
         "coursed-2021/End of Course Project": {
           "name": "Ders Projesinin Sonu",
           "overview": "Bu bitirme dersi, öğrencileri kendi projelerini tasarlama, geliştirme ve sergileme süreçlerinden geçirir.",
-          "preparation": "-   Sınıfınız için olası sorunlu alanları bulmak için bulmacaları oynayın.\n-   Her öğrenci (veya çift) için bir **\\\\ \\*Proje Planlama Kılavuzu** yazdırın.\n-   (İsteğe bağlı) Kendi planlama rehberinizi tamamlayın ve öğrencilere göstermek için kendi projenizi kodlayın!",
+          "preparation": "-   Sınıfınız için olası sorunlu alanları bulmak için bulmacaları oynayın.\n-   Her öğrenci (veya çift) için bir **\\*Proje Planlama Kılavuzu** yazdırın.\n-   (İsteğe bağlı) Kendi planlama kılavuzunuzu tamamlayın ve öğrencilere göstermek için kendi projenizi kodlayın!",
           "purpose": "Bu ders, planlama gerektiren ama aynı zamanda geniş yaratıcılığa da izin veren adım adım bir süreç kullanarak öğrencilere kendi tasarımlarına sahip bir proje oluşturmaları için alan sağlar.",
           "student_overview": "Ellerinizi bolca kodlamaya hazırlayın!  Projenizi oluşturmaya başlama zamanı."
         },
@@ -4925,7 +4976,7 @@
         },
         "express-2021/Nested Loops in Maze": {
           "name": "Labirentte İçiçe Döngüler",
-          "overview": "Bu çevrimiçi etkinlikte, öğrenciler döngü anlayışlarını yepyeni bir seviyeye çekme fırsatına sahip olacaklar. Arı ve Bitkiler vs Zombiler ile oynayarak, öğrenciler bir döngünün başka bir döngünün içinde nasıl programlanacağını öğreneceklerdir. Ayrıca, her iki döngüde de küçük değişiklikler `Çalıştır`a tıklandığında programlarını etkileyeceğini anlamaya teşvik edilecekler.",
+          "overview": "Bu **beceri geliştirme** dersinde öğrenciler, bir döngüyü başka bir döngü içinde nasıl programlayacaklarını öğrenecekler.",
           "preparation": "-   Sınıfınız için olası sorunlu alanları bulmak için bulmacaları oynayın.\n-   Her öğrencinin bir Yansıma Dergisi olduğundan emin olun.",
           "purpose": "İç içe döngü girişinde öğrenciler bulmacalara daha verimli çözümler üretmek için konfor alanlarının dışına çıkacaklar.  \n\nÖnceki bulmacalarda, döngüler öğrencileri tekrarlamayı tanımaya itti. Burada, öğrenciler bu iç içe döngüleri geliştirmek için tekrarlanan desenleri _within_ kalıplarını tanımayı öğrenecekler. Bu aşama, öğrencileri kodun rahatsız edici ve uzun yoldan yazmak için karmaşık olduğu bir bulmacayı çözmeye çalışmaya teşvik ederek başlar. Bir video iç içe geçmiş döngüler tanıdıktan sonra öğrencilere bir örnek gösterilir ve başka bir döngünün içine bir döngü yerleştirildiğinde ne olacağını tahmin etmeleri istenir. Bu ilerleme, öğrencilerin programlamada döngü anlayışlarını sağlamlaştırmaları ve geliştirmeleri için birçok uygulamaya yol açar.",
           "student_overview": "Döngülerin içindeki döngülerin içindeki döngüler. Bu ne anlama geliyor? Bu ders, size, içiçe bir döngü oluşturduğunuzda ne olacağını öğretecektir."
@@ -4939,24 +4990,24 @@
         },
         "express-2021/Looking Ahead with Minecraft ": {
           "name": "Minecraft ile ileriye bakmak",
-          "overview": "Bu ders, aslında Minecraft takımında Kod Saati için oluşturuldu. Öğrencilerin, şu ana kadar öğrendikleri fikirleri pratiğe dökme ve ayrıca koşullara şöyle bir göz atma şansı olacak!",
+          "overview": "Bu **beceri geliştirme** dersi, öğrencilere bu noktaya kadar öğrendikleri kavramları uygulama ve koşullu ifadelerle ilk deneyimlerini kazanma şansı verir!",
           "preparation": "-   Sınıfınız için olası sorunlu alanları bulmak için bu dersle ilişkili bulmacaları oynayın.\n-   Her öğrencinin bir Yansıma Dergisi olduğundan emin olun.",
-          "purpose": "Bu bulmaca dizisi, döngüler hakkındaki bilgilerini pekiştirmeye ve arttırmaya yarayacaktır, ve koşulları tanıtacaktır. Bu iki kavramı birbiri ile eşleştirerek öğrenciler, yeni ve heyecan verici bir ortamda eğlenceli ve yenilikçi programlar oluşturma potansiyelini keşfedebilecekler.",
+          "purpose": "Bu bulmaca seti, döngüler bilgisini sağlamlaştırmak ve üzerine inşa etmek için çalışacak ve koşullu ifadeleri tanıtacaktır.  Bu iki kavramı bir araya getirerek öğrenciler, yeni ve heyecan verici bir ortamda eğlenceli ve yenilikçi programlar yaratma potansiyelini keşfedebilecekler.",
           "student_overview": "Lavdan Kaçının! Burada Minecraft dünyasındaki koşulları öğrenmeye başlayacaksınız."
         },
         "express-2021/If/Else with Bee": {
           "name": "Arı ile \"Eğer/Başka\"",
-          "overview": "Bu noktaya kadar öğrenciler her çalıştırıldığında aynı biçimde çalışan kod yazıyor - güvenilir, ama bu çok esnek değildir. Bu derste, sınıfınız, koşullu koşullarla kodlamaya başlayacak ve programın karşılaştığı özel koşullara bağlı olarak farklı biçimde çalışan kod yazmalarına izin verecektir.",
+          "overview": "Bu **beceri geliştirme** dersinde, sınıfınız koşullu ifadelerle kodlamaya devam edecek ve programın karşılaştığı belirli koşullara bağlı olarak farklı işlev gören kod yazmalarına olanak tanıyacaktır.",
           "preparation": "-   Sınıfınız için olası sorunlu alanları bulmak için bulmacaları oynayın.\n-   Her öğrencinin bir Yansıma Dergisi olduğundan emin olun.",
           "purpose": "Öğrenciler programlarında şartları kullanma pratiği yapabileceklerdir. if/else blokları daha esnek bir programa izin verecektir. Arı sadece nektar toplayacak _if_ bir çiçek var ya da bal yapmak _if_ bir petek var. ",
-          "student_overview": "Şimdi koşulları anladığınıza göre, nektar ve balı toplaması için arıyı programlama zamanı. "
+          "student_overview": "Artık koşul şartlarını anladığınıza göre, Bee'yi bal ve nektar toplarken bunları kullanması için programlamanın zamanı geldi."
         },
         "express-2021/While Loops with the Farmer": {
           "name": "Farmer'da Süresince Döngüleri",
-          "overview": "Bu **beceri geliştirme** dersinde, öğrenciler Farmer'da çukurları doldurmak ve toprak kazmak için çalışacaklar, ancak deliklerin boyutunu veya toprak yığınlarının yüksekliğini bilemeyecekler. Bu bulmacaları çözmek için öğrenciler yeni bir tür döngü kullanacaklar.",
+          "overview": "Bu **beceri geliştirme** dersinde, öğrenciler Çiftçi de çukurları doldurmak ve toprak kazmak için çalışacaklar, ancak deliklerin boyutunu veya toprak yığınlarının yüksekliğini bilmeyecekler.  Bu bulmacaları çözmek için öğrenciler yeni bir tür döngü kullanacaklar.",
           "preparation": "-   Sınıfınız için olası sorunlu alanları bulmak için bulmacaları oynayın.\n-   Her öğrencinin bir Yansıma Dergisi olduğundan emin olun.",
-          "purpose": "Öğrencileriniz döngü bilgilerini derinleştirmeye devam ettikçe, bir komutun tekrarlanması gereken sorunlarla karşılaşacaklardır, ancak kaç kez tekrarlanması gerektiği bilinmemektedir. Bu sırada döngüler devreye giriyor. Bugünün dersinde, öğrenciler, yeni başlayanların koşullara dayalı döngüler anlayışını geliştirecek ve genel olarak döngüler bilgisini genişletecektir. ",
-          "student_overview": "Döngüler kodlama için oldukça kullanışlıdır. Bu ders size yeni bir döngüyü öğretecek: süresince (while) döngüleri!"
+          "purpose": "Öğrencileriniz döngü bilgilerini derinleştirmeye devam ettikçe, bir komutun tekrarlanması gereken ancak kaç kez tekrarlanması gerektiği bilinmeyen problemlerle karşılaşacaklar.  Döngülerin devreye girdiği yer burasıdır. Bugünün dersinde öğrenciler, başlangıç ​​düzeyindekiler için koşul tabanlı döngüler anlayışı geliştirecek ve ayrıca genel olarak döngüler hakkındaki bilgilerini genişletecekler.",
+          "student_overview": "Döngüler kodlamada çok faydalıdır.  Bu ders size yeni bir döngü türünü öğretecek: while döngüleri!"
         },
         "express-2021/Conditionals in Minecraft: Voyage Aquatic": {
           "name": "Minecraft'ta Koşullar: Su Yolculuğu",
@@ -5167,7 +5218,7 @@
         },
         "coursee-2021/Programming and Loops with the Artist": {
           "name": "Döngüler ile çizim",
-          "overview": "Az sayıda blok ve dijital etiketleri kullanarak kendi mükemmel tasarımlarını yaptıkça öğrencilerinizin ne kadar neşelendiğine bakın! Bu ders, önceki derslerden döngülerin anlaşılmasını geliştirir ve öğrencilere gerçek bir yaratıcı olma şansını verir. Bu aktivite, portföyler veya anne-baba/öğretmen konferansları için  eserler üretmek için mükemmeldir.",
+          "overview": "Bu **bağlam belirleme** dersi, odağı Sprite Lab'den öğrencilerin kursun geri kalanında keşfedecekleri yeni bir araç olan Artist'e kaydırır.",
           "preparation": "-   Sınıfınız için varsa bir potansiyel sorun alanını bulmak üzere bulmacalarla oynayın. \n-   Her öğrencinin bir düşünce günlüğü olduğundan emin olun.",
           "purpose": "Öğrenciler, yaklaşan dersler boyunca tekrar gözden geçirilecek bir kavram olan döngüleri kullanarak pratik yapacaklar.",
           "student_overview": "Bu derste döngüler, Sanatçı ile daha güzel resimler yapmayı kolaylaştırır."
@@ -5177,7 +5228,7 @@
           "overview": "Bu **beceri geliştirme** dersinde öğrenciler Sanatçıyı kullanarak karmaşık tasarımlar oluşturacaklar. Ders, öğrencilerin kendi tasarımlarını yaratmaları için bir fırsatla sona erer.",
           "preparation": "-   Sınıfınız için olası sorunlu alanları bulmak üzere bulmacalarla oynayın.\n-   Her öğrencinin bir düşünce günlüğü olduğundan emin olun.\n-   Dönüşler ve açılarla ilgili olarak öğrencilerinizin ne tür desteklere ihtiyaç duyabileceğini düşünün.",
           "purpose": "Bu çevrimiçi aktivitede öğrenciler, Oyuncuda, sevdikleri ile gururla paylaşabilecekleri tasarımlar oluşturacaklar. \n\nBu aktivitenin amacı, sanatsal zihinleri olan öğrencilere kodlamayı başka bir yaratıcı çıkış noktası olarak görmeleri için ilham vermenin bir yolu olarak iç içe geçmiş döngüleri kullanmaktır. Bu bulmaca dizisi, tamamı iç içe döngüler kapsamında olan eleştirel düşünme becerileri, temel geometriyi anlama ve yaratıcılığı geliştirmek üzere oluşturulmuştur.",
-          "student_overview": "Daha iç içe döngüler! Bu sefer, iç içe geçmiş döngülerle biraz İLGİNÇ çizimler yapacaksınız."
+          "student_overview": "Daha fazla iç içe döngüler! Bu sefer, iç içe geçmiş döngülerle biraz İLGİNÇ çizimler yapacaksınız."
         },
         "coursee-2021/Nested Loops in Frozen": {
           "name": "Mini Proje: Bir Kar Tanesi Tasarlayın",
@@ -5188,10 +5239,10 @@
         },
         "coursee-2021/Functions: Songwriting": {
           "name": "Şarkı yazma",
-          "overview": "Bilgisayar bilimi dünyasındaki en harika yapılardan birisi de fonksiyonlardır. Fonksiyonlar (ya da bazen method da deriz) asıl büyük programımız içinde tekrar tekrar kullanabildiğimiz mini programlardır. Bu ders öğrencilerin neden bir yığın kodu fonksiyonun içine yerleştirmenin ne kadar yararlı olduğunu kavramalarına yardımcı olacaktır.",
+          "overview": "Bu **bağlam belirleme** dersi, öğrencilerin kod parçalarını işlevlerde birleştirmenin neden yararlı bir uygulama olabileceğini anlamalarına yardımcı olacaktır.",
           "preparation": "-   (İsteğe bağlı) **\\*Eylem Halinde Ders** Videosunu izleyin.\n-   Her grup için birkaç **\\*çalışma sayfası** yazdırın.\n-   Her öğrenci için bir **\\*değerlendirme** yazdırın.\n-   Aktivite için şarkılara ve şarkı sözlerine güvenli erişim.\n-   Her öğrencinin bir günlüğü olduğundan emin olun.",
           "purpose": "Fonksiyonların kullanımı, kodu basitleştirmeye ve öğrencinin programlarını düzenleme kabiliyetlerini geliştirmeye yardım eder. Öğrenciler, fonksiyonları yazmanın programlarını okumayı ve eğer bir şeyler yanlış giderse hata ayıklamayı kolaylaştırabileceğini hemen anlayacaklar. ",
-          "student_overview": "Müzik yıldızı için bile programlama yeteneği gerektirir. Bu ders şarkı sözleri kullanarak fonksiyonları öğretecektir."
+          "student_overview": "Rock yıldızlarının bile programlama becerilerine ihtiyacı vardır. Bu ders size şarkıların sözlerini kullanan işlevler hakkında bilgi verecektir."
         },
         "coursee-2021/Functions in Minecraft": {
           "name": " Minecraft Fonksiyonları",
@@ -5210,20 +5261,20 @@
         "coursee-2021/Conditionals in Minecraft: Voyage Aquatic": {
           "name": "Minecraft'ta Koşullar: Su Yolculuğu",
           "overview": "Bu ders, aslında Minecraft takımında Kod Saati için oluşturuldu. Öğrencilerin, şu ana kadar öğrendikleri fikirleri pratiğe dökme ve ayrıca koşullara şöyle bir göz atma şansı olacak!",
-          "preparation": "-   Sınıfınız için olası sorunlu alanları bulmak için bu dersle ilişkili bulmacaları oynayın.\n-   Her öğrencinin bir yansıma dergisi olduğundan emin olun.",
-          "purpose": "Bu bulmaca dizisi, döngüler hakkındaki bilgilerini pekiştirmeye ve arttırmaya yarayacaktır, ve koşulları tanıtacaktır. Bu iki kavramı birbiri ile eşleştirerek öğrenciler, yeni ve heyecan verici bir ortamda eğlenceli ve yenilikçi programlar oluşturma potansiyelini keşfedebilecekler.",
+          "preparation": "-   Sınıfınız için olası sorunlu alanları bulmak için bu dersle ilişkili bulmacaları oynayın.\n-   Her öğrencinin bir yansıtma günlüğü olduğundan emin olun.",
+          "purpose": "Bu bulmaca seti, döngüler bilgisini sağlamlaştırmak ve üzerine inşa etmek için çalışacak ve koşullu ifadeleri tanıtacaktır.  Bu iki kavramı bir araya getirerek öğrenciler, yeni ve heyecan verici bir ortamda eğlenceli ve yenilikçi programlar yaratma potansiyelini keşfedebilecekler.",
           "student_overview": "Burada Minecraft dünyasındaki koşulları öğreneceksiniz."
         },
         "coursee-2021/Conditionals": {
           "name": "Çiftçi Koşulları",
-          "overview": "Bu ders öğrencilere `while` döngüleri ve`if / else` ifadeleri tanıtır. \\_ While loops\\_, koşullar doğru olduğu sürece komutları yinelemeye devam eden döngülerdir. Döngüler, programcı tam olarak kaç kez komutun bilmediğini bilmediğinde kullanılır; ama programcı döngülerin döngüye devam edebilmesi için hangi koşulun doğru olması gerektiğini bilir. `If / Else` ifadeleri, bütün bölümleri sadece bir şey doğruysa çalıştırarak programlamada esneklik sağlar, aksi halde bu döngüler başka bir şey çalıştırır.",
+          "overview": "Bu **beceri geliştirme** dersi, ekin dikmek için tarlalarını hazırlaması gereken bir çiftçinin yer aldığı yeni bir tür programlama bulmacasına odaklanır.",
           "preparation": "-   Sınıfınız için varsa bir potansiyel sorun alanını bulmak üzere bulmacalarla oynayın. \n-   Her öğrencinin bir düşünce günlüğü olduğundan emin olun.",
-          "purpose": "Bu ders öğrencilere while döngülerini ve \"if / else\" ifadelerini tanıtmaktadır.",
-          "student_overview": "Bu zorlu ve eğlenceli seride, kesin koşullar altında bilgisayara ne yapacağını söyleyeceksin."
+          "purpose": "Bu ders öğrencilere süresince döngülerini ve \"eğer / başka\" ifadelerini tanıtmaktadır.",
+          "student_overview": "Çiftçinin tarlalarını ekin ekmeye hazırlamasına yardım edin ve koşullar hakkında daha fazlasını öğrenin!"
         },
         "coursee-2021/Functions in Harvester": {
           "name": "Hasatçı Fonksiyonları",
-          "overview": "Öğrenciler, Sanatçıda etkileyici tasarımlar oluşturma ve Arıda labirentlerde gezinmede pratik yapmıştır ama bugün Hasatçıda ürünleri hasat etmek için fonksiyonları kullanacaktır. Bu ders, `süresince` döngüleri ve `eğer / değilse` ifadeleri ile bunları birleştirerek öğrencilerin bu fonksiyonları yeni şekillerde kullanmasını sağlayacaktır.",
+          "overview": "Bu **beceri geliştirme** dersinde öğrenciler, _Hasatçı_'da ekinleri hasat etmek için işlevlere sahip koşul ifadeleri kullanacaklar.",
           "preparation": "-   Sınıfınız için varsa bir potansiyel sorun alanını bulmak üzere bulmacalarla oynayın. \n-   Her öğrencinin bir düşünce günlüğü olduğundan emin olun.",
           "purpose": "Bu ders, öğrencileri fonksiyonlarla koşulları kullanmaya daha fazla teşvik etmek içindir. Bu bulmacalar problem çözme ve eleştirel düşünme becerilerini geliştirmeyi amaçlamaktadır.",
           "student_overview": "Çiftçiye hasadında yardımcı olduğunuz gibi fonksiyonlar da sizi işlerin çoğunda kurtarır!"
@@ -5237,7 +5288,7 @@
         },
         "coursee-2021/End of Course Project": {
           "name": "Ders Projesinin Sonu",
-          "overview": "Bir sonraki dört ders öğrencilerin kodlama becerilerini bir bitirme projesinde kullanmalarına imkan sağlar. Bu proje kişilerin kodlamayla ilgili tecrübe kazanmalarına yardımcı olacak ve akranları ve sevdikleri ile paylaşmaları için bir örnek oluşturacaktır. Birden fazla derslik veya birden fazla haftalık bir deneyim olması planlanmıştır, öğrenciler beyin fırtınasını keşfederek, tasarım sürecini öğrenerek, bitirme çalışmalarını oluşturup sunarak vakit geçirecekler. \\\\r\n\\\\r\nKeşfetme aşamasında öğrenciler ilham almak için hem Sanatçı hem de Hareketli Nesne Laboratuvarında önceden hazırlanmış projelerin örnekleri ile oynayacak. Sonrasında öğrenciler tasarım sürecini ve bunu kendi projelerinde nasıl uygulayacaklarını öğrenecekler. Sonrasında kendi projelerini Sanatçı, Hareketli Nesne Laboratuvarı veya bildikleri başka bir arayüzde oluşturmak için öğrencilere alan verilecektir (bu muhtemelen projenin en uzun aşamasıdır). En sonunda öğrenciler bitmiş çalışmalarını akranlarına sunabilecekler.",
+          "overview": "Bu **proje** dersi, öğrencileri yeni projeleri tasarlama, geliştirme ve sergileme sürecinden geçirir!",
           "preparation": "-   Hem Sanatçı hem de Hareketli Nesne Laboratuvarı ile kendi projenizi yapmak için zaman ayırın. Her aracın yetenekleri ve sınırlamaları hakkında bilgi edinin.\n-   **\\*Değerlendirme tablosunu** sınıf hedeflerinize uyacak şekilde değiştirin ve her öğrenci için bir kopya yazdırın.\n-   **\\*Proje tasarım çalışma sayfasını** sınıfınıza uyacak şekilde değiştirin ve her öğrenci için bir paket yazdırın.",
           "purpose": "Öğrenciler doğrudan projelerini inşa etmeye hazır olabilirler, ancak bu ders fikirlerini planlara dönüştürmeye yardımcı olacaktır. Bu yapı hayalperestleri topraklanmış tutacak ve karanlıkta kalan hisler için bir yol aydınlatacak. Öğrencilere projelerini oluşturmak ve revize etmek için yeterli zaman sağlayın. Bu derste kaçınılmaz olarak yer alan deneme yanılma, problem çözme ve kalıcılık öğretilecektir.",
           "student_overview": "Bu kadar büyük projeler zaman alır ve bir sürü planlama gerektirir. İlhamını bul, bir plan geliştir ve yaratıcılığını serbest bırak!"
@@ -5469,16 +5520,20 @@
           "name": "Bilgisayar Bilimi Keşifleri Kurs Sonrası Anketi"
         },
         "csd1-2021/Intro to Problem Solving": {
-          "name": "Problem çözme tanıtımı"
+          "name": "Problem çözme tanıtımı",
+          "assessment_opportunities": "1.  **Bir sorunu çözmek için sınıf arkadaşlarınızla iletişim kurun ve işbirliği yapın**\n\n     İşbirliği ile ilgili özet tartışma sorusunda, problem çözmede işbirliğinin avantajlarını kontrol edin ve zorlukların üstesinden gelmek için uygun stratejileri listeleyebilirsiniz. Bu uygulama ünite ve kurs boyunca pekiştirilecektir.\n2.  **Bir sorunun çözümünü yinelemeli olarak iyileştirin**\n\n     Etkinlik Kılavuzunda, öğrencilerin orijinal tasarımındaki güçlü ve zayıf yönleri ve projenin bir sonraki tekrarı için uygun değişikliklerle bağlantısını kontrol edin.\n3.  **Bir sorunu çözmek için kullanılan farklı stratejileri belirleyin**\n\n     Etkinlik Kılavuzunda, etkinlikteki zorlukların üstesinden gelmek için stratejiler olup olmadığına bakın. Rehberin ikinci sayfasında planlarını geliştirmenin bir parçası olarak öğrencilerin listeledikleri tasarımlarının \"güçlü yanlarını\" da kontrol etmek isteyebilirsiniz."
         },
         "csd1-2021/The Problem Solving Process": {
-          "name": "Problem çözme süreci"
+          "name": "Problem çözme süreci",
+          "assessment_opportunities": "1.  **Bir problem verildiğinde, problem çözme sürecinin her adımında yer alacak bireysel eylemleri tanımlayın**\n\n     Etkinlik kılavuzunun 2. sayfasında, öğrencilerin çözmeye çalıştıkları problemdeki dört adımın her biri için makul eylemleri yazıp yazmadıklarını kontrol edin.\n\n2.  **Problem çözme sürecinin her adımında yararlı stratejiler belirleyin**\n\n     Sonuç olarak, öğrencilerin sürecin her adımı için etkili stratejiler geliştirip geliştirmediklerini kontrol edin."
         },
         "csd1-2021/Exploring Problem Solving": {
-          "name": "Problem çözmeyi keşfetme"
+          "name": "Problem çözmeyi keşfetme",
+          "assessment_opportunities": "1.  **Çeşitli problemlere yaklaşmak için problem çözme sürecini uygulayın**\n\n     Etkinlik Kılavuzunun 5. sayfasında, öğrencilerin her problem için makul adımlar attığından emin olmak için tabloyu kontrol edin.\n\n2.  **Bir sorunun ne kadar iyi tanımlandığını değerlendirin ve sorunu daha kesin bir şekilde tanımlamak için stratejiler kullanın**\n\n     Etkinlik Kılavuzu'nun 5. sayfasındaki son soru için, öğrencilerin bir sorunu daha iyi tanımlamanın etkili bir yolu olacak en az bir sorusu veya stratejisi olduğundan emin olun."
         },
         "csd1-2021/What is a Computer?": {
-          "name": "Bilgisayar nedir?"
+          "name": "Bilgisayar nedir?",
+          "assessment_opportunities": "1.  **Bilgisayarı bilgiyle çalışan bir makine olarak tanımlayın.**\n\n     Ana etkinliğin son tartışmasında, öğrencilerin bir aygıtın bilgisayar olup olmadığı konusundaki akıl yürütmelerini kontrol edin. Bilgi kullandığından veya bilgi (veya düşünme) problemlerini çözdüğünden bahsettiklerinden emin olun.\n\n2.  **Belirli nesnelerin bilgisayar olup olmadığına ilişkin neden.**\n\n     Ana etkinliğin son tartışmasında, öğrencilerin bir aygıtın bilgisayar olup olmadığı konusundaki akıl yürütmelerini kontrol edin. Bilgi kullandığından veya bilgi (veya düşünme) problemlerini çözdüğünden bahsettiklerinden emin olun.\n\n3.  **Bilgisayarla çözülebilecek sorunları seçin ve bu seçenekleri gerekçelendirin.**\n\n     Tamamlama etkinliğinde, öğrencilerin bilgi problemlerini seçtiklerini ve bir bilgisayarın problemi çözmek için gerekli bilgiyi nasıl aldığını ve kullandığını açıklayıp açıklamadıklarını kontrol edin."
         },
         "csd1-2021/Input and Output": {
           "name": "Girdiler ve çıktılar"
@@ -5493,19 +5548,24 @@
           "name": "Proje - bir uygulama önermek"
         },
         "csd1-2021/Intro to Problem Solving - Newspaper Table (Alternate Lesson 1)": {
-          "name": "Problem Çözmeye Giriş - Gazete Tablosu (Alternatif Ders 1)"
+          "name": "Problem Çözmeye Giriş - Gazete Tablosu (Alternatif Ders 1)",
+          "assessment_opportunities": "1.  **Bir sorunu çözmek için sınıf arkadaşlarınızla iletişim kurun ve işbirliği yapın**\n\n     İşbirliği ile ilgili özet tartışma sorusunda, problem çözmede işbirliğinin avantajlarını kontrol edin ve zorlukların üstesinden gelmek için uygun stratejileri listeleyebilirsiniz. Bu uygulama ünite ve kurs boyunca pekiştirilecektir.\n2.  **Bir sorunun çözümünü yinelemeli olarak iyileştirin**\n\n     Etkinlik Kılavuzunda, öğrencilerin orijinal tasarımındaki güçlü ve zayıf yönleri ve projenin bir sonraki tekrarı için uygun değişikliklerle bağlantısını kontrol edin.\n3.  **Bir sorunu çözmek için kullanılan farklı stratejileri belirleyin**\n\n     Etkinlik Kılavuzunda, etkinlikteki zorlukların üstesinden gelmek için stratejiler olup olmadığına bakın. Rehberin ikinci sayfasında planlarını geliştirmenin bir parçası olarak öğrencilerin listeledikleri tasarımlarının \"güçlü yanlarını\" da kontrol etmek isteyebilirsiniz."
         },
         "csd1-2021/Intro to Problem Solving - Spaghetti Bridge (Alternate Lesson 1)": {
-          "name": "Problem Çözmeye Giriş - Spagetti Köprüsü (Alternatif Ders 1)"
+          "name": "Problem Çözmeye Giriş - Spagetti Köprüsü (Alternatif Ders 1)",
+          "assessment_opportunities": "1.  **Bir sorunu çözmek için sınıf arkadaşlarınızla iletişim kurun ve işbirliği yapın**\n\n     İşbirliği ile ilgili özet tartışma sorusunda, problem çözmede işbirliğinin avantajlarını kontrol edin ve zorlukların üstesinden gelmek için uygun stratejileri listeleyebilirsiniz. Bu uygulama ünite ve kurs boyunca pekiştirilecektir.\n2.  **Bir sorunun çözümünü yinelemeli olarak iyileştirin**\n\n     Etkinlik Kılavuzunda, öğrencilerin orijinal tasarımındaki güçlü ve zayıf yönleri ve projenin bir sonraki tekrarı için uygun değişikliklerle bağlantısını kontrol edin.\n3.  **Bir sorunu çözmek için kullanılan farklı stratejileri belirleyin**\n\n     Etkinlik Kılavuzunda, etkinlikteki zorlukların üstesinden gelmek için stratejiler olup olmadığına bakın. Rehberin ikinci sayfasında planlarını geliştirmenin bir parçası olarak öğrencilerin listeledikleri tasarımlarının \"güçlü yanlarını\" da kontrol etmek isteyebilirsiniz."
         },
         "csd1-2021/Intro to Problem Solving - Paper Tower (Alternate Lesson 1)": {
-          "name": "Problem Çözmeye Giriş - Kağıt Kule (Alternatif Ders 1)"
+          "name": "Problem Çözmeye Giriş - Kağıt Kule (Alternatif Ders 1)",
+          "assessment_opportunities": "1.  **Bir sorunu çözmek için sınıf arkadaşlarınızla iletişim kurun ve işbirliği yapın**\n\n     İşbirliği ile ilgili özet tartışma sorusunda, problem çözmede işbirliğinin avantajlarını kontrol edin ve zorlukların üstesinden gelmek için uygun stratejileri listeleyebilirsiniz. Bu uygulama ünite ve kurs boyunca pekiştirilecektir.\n2.  **Bir sorunun çözümünü yinelemeli olarak iyileştirin**\n\n     Etkinlik Kılavuzunda, öğrencilerin orijinal tasarımındaki güçlü ve zayıf yönleri ve projenin bir sonraki tekrarı için uygun değişikliklerle bağlantısını kontrol edin.\n3.  **Bir sorunu çözmek için kullanılan farklı stratejileri belirleyin**\n\n     Etkinlik Kılavuzunda, etkinlikteki zorlukların üstesinden gelmek için stratejiler olup olmadığına bakın. Rehberin ikinci sayfasında planlarını geliştirmenin bir parçası olarak öğrencilerin listeledikleri tasarımlarının \"güçlü yanlarını\" da kontrol etmek isteyebilirsiniz."
         },
         "csd1-2021/Exploring Problem Solving - Animals Theme (Alternate Lesson 3)": {
-          "name": "Problem Çözmeyi Keşfetme - Hayvan Teması (Alternatif Ders 3)"
+          "name": "Problem Çözmeyi Keşfetme - Hayvan Teması (Alternatif Ders 3)",
+          "assessment_opportunities": "1.  **Çeşitli problemlere yaklaşmak için problem çözme sürecini uygulayın**\n\n     Etkinlik Kılavuzunun 5. sayfasında, öğrencilerin her problem için makul adımlar attığından emin olmak için tabloyu kontrol edin.\n\n2.  **Bir sorunun ne kadar iyi tanımlandığını değerlendirin ve sorunu daha kesin bir şekilde tanımlamak için stratejiler kullanın**\n\n     Etkinlik Kılavuzu'nun 5. sayfasındaki son soru için, öğrencilerin bir sorunu daha iyi tanımlamanın etkili bir yolu olacak en az bir sorusu veya stratejisi olduğundan emin olun."
         },
         "csd1-2021/Exploring Problem Solving - Games Theme (Alternate Lesson 3)": {
-          "name": "Problem Çözmeyi Keşfetme - Oyun Teması (Alternatif Ders 3)"
+          "name": "Problem Çözmeyi Keşfetme - Oyun Teması (Alternatif Ders 3)",
+          "assessment_opportunities": "1.  **Çeşitli problemlere yaklaşmak için problem çözme sürecini uygulayın**\n\n     Etkinlik Kılavuzunun 5. sayfasında, öğrencilerin her problem için makul adımlar attığından emin olmak için tabloyu kontrol edin.\n\n2.  **Bir sorunun ne kadar iyi tanımlandığını değerlendirin ve sorunu daha kesin bir şekilde tanımlamak için stratejiler kullanın**\n\n     Etkinlik Kılavuzu'nun 5. sayfasındaki son soru için, öğrencilerin bir sorunu daha iyi tanımlamanın etkili bir yolu olacak en az bir sorusu veya stratejisi olduğundan emin olun."
         },
         "csd2-2021/Exploring Web Pages": {
           "name": "Web Sayfalarını Keşfetme"
