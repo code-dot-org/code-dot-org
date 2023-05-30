@@ -4,22 +4,6 @@
 # stored separately here so that they can be modified directly.
 #
 module InternationalOptInPeople
-  facilitators = {
-    barbados: ["Code.org"],
-    belize: ["Code.org"],
-    chile: ["Fundacion Kodea", "Centro de Innovación - Mineduc", "Rodrigo Fabrega"],
-    paraguay: ["Paraguay Educa"],
-    israel: ["Hana Zimmerman Karl"],
-    uzbekistan: ["IT Park Team"]
-  }
-
-  INTERNATIONAL_OPT_IN_FACILITATORS = (facilitators.each_value do |facilitator_list|
-    facilitator_list.append(
-      I18n.t('pd.international_opt_in.facilitator_not_listed'),
-      I18n.t('pd.international_opt_in.facilitator_not_applicable')
-    )
-  end).freeze
-
   partners = {
     barbados: ["The Trust for the Americas"],
     belize: ["The Trust for the Americas"],

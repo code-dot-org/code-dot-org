@@ -1267,6 +1267,8 @@ en:
         csf_express: 'CS Fundamentals (Pre-Express or Express)'
         csd: 'CS Discoveries'
         csp: 'CS Principles'
+        csa: 'Computer Science A'
+        other: 'Other'
         not_applicable: "Not applicable"
       email_opt_in:
         opt_in_yes: 'Yes'
