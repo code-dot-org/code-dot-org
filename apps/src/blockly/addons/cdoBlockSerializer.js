@@ -1,9 +1,6 @@
 import GoogleBlockly from 'blockly/core';
 
 const unknownBlockState = {type: 'unknown', enabled: false};
-const getRecordUndo = function () {
-  return true;
-};
 
 export default class CdoBlockSerializer extends GoogleBlockly.serialization
   .blocks.BlockSerializer {
@@ -21,7 +18,7 @@ export default class CdoBlockSerializer extends GoogleBlockly.serialization
     for (const blockState of blockStates) {
       try {
         GoogleBlockly.serialization.blocks.append(blockState, workspace, {
-          recordUndo: getRecordUndo(),
+          recordUndo: Blockly.Events.getRecordUndo(),
         });
       } catch (e) {
         console.warn(`Creating "unknown block". ${e.message}`);
@@ -29,7 +26,7 @@ export default class CdoBlockSerializer extends GoogleBlockly.serialization
           Object.assign(unknownBlockState, {x: blockState.x, y: blockState.y}),
           workspace,
           {
-            recordUndo: getRecordUndo(),
+            recordUndo: Blockly.Events.getRecordUndo(),
           }
         );
       }
