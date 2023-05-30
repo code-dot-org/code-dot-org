@@ -1,7 +1,10 @@
 // Utilities for retrieving various types of data for Music Lab.
 
-import {getJson} from '@cdo/apps/util/HttpClient';
-import MusicLibrary, {LibraryJson} from '../player/MusicLibrary';
+import {getJson, ResponseValidator} from '@cdo/apps/util/HttpClient';
+import MusicLibrary, {
+  LibraryJson,
+  LibraryValidator,
+} from '../player/MusicLibrary';
 import {Progression, ProgressionStep} from '../progress/ProgressManager';
 
 const AppConfig = require('../appConfig').default;
@@ -34,7 +37,9 @@ export const loadLibrary = async (): Promise<MusicLibrary> => {
       : 'music-library.json';
 
     const libraryJsonResponse = await getJson<LibraryJson>(
-      baseUrl + libraryFilename
+      baseUrl + libraryFilename,
+      {},
+      LibraryValidator
     );
     return new MusicLibrary(libraryJsonResponse.value);
   }
@@ -57,14 +62,23 @@ const loadProgressionFile = async (): Promise<Progression> => {
   }
 };
 
-interface LevelDataResponse {
+type LevelDataResponse = {
   level_data: ProgressionStep;
-}
+};
 
 interface ProgressionStepData {
   progressionStep: ProgressionStep | undefined;
   levelCount: number | undefined;
 }
+
+const LevelDataValidator: ResponseValidator<LevelDataResponse> = response => {
+  const levelDataResponse = response as LevelDataResponse;
+  if (response.level_data === undefined) {
+    throw new Error('Missing required parameter: level_data');
+  }
+
+  return levelDataResponse;
+};
 
 // Loads a progression step.
 export const loadProgressionStepFromSource = async (
@@ -77,11 +91,19 @@ export const loadProgressionStepFromSource = async (
 
   if (levelSource === LevelSource.LEVELS) {
     // Since we have levels, we'll asynchronously retrieve the current level data.
-    const response = await getJson<LevelDataResponse>(levelDataPath);
+    const response = await getJson<LevelDataResponse>(
+      levelDataPath,
+      {},
+      LevelDataValidator
+    );
     progressionStep = response.value.level_data;
   } else if (levelSource === LevelSource.LEVEL) {
     // Since we have a level, we'll asynchronously retrieve the current level data.
-    const response = await getJson<LevelDataResponse>(levelDataPath);
+    const response = await getJson<LevelDataResponse>(
+      levelDataPath,
+      {},
+      LevelDataValidator
+    );
     progressionStep = response.value.level_data;
     levelCount = 1;
   } else if (levelSource === LevelSource.FILE) {
