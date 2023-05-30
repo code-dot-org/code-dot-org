@@ -62,6 +62,7 @@ import {
   setProjectUpdatedSaving,
 } from '../../code-studio/projectRedux';
 import {ProjectManagerEvent} from '../../labs/projects/ProjectManager';
+import {logError} from '../utils/MusicMetrics';
 
 /**
  * Top-level container for Music Lab. Manages all views on the page as well as the
@@ -456,7 +457,7 @@ class UnconnectedMusicView extends React.Component {
         levelCount = result.levelCount;
       } catch (e) {
         this.props.setIsPageError(true);
-        console.error(e, e.stack);
+        logError(e);
       }
 
       if (this.hasLevels()) {
@@ -550,10 +551,17 @@ class UnconnectedMusicView extends React.Component {
       return;
     }
     this.analyticsReporter.onButtonClicked('trigger', {id});
-    const currentPosition = this.player.getCurrentPlayheadPosition();
+    const triggerStartPosition =
+      this.musicBlocklyWorkspace.getTriggerStartPosition(
+        id,
+        this.player.getCurrentPlayheadPosition()
+      );
+    if (!triggerStartPosition) {
+      return;
+    }
 
     this.sequencer.clear();
-    this.musicBlocklyWorkspace.executeTrigger(id, currentPosition);
+    this.musicBlocklyWorkspace.executeTrigger(id, triggerStartPosition);
     const playbackEvents = this.sequencer.getPlaybackEvents();
     this.props.addPlaybackEvents({
       events: playbackEvents,
@@ -563,7 +571,7 @@ class UnconnectedMusicView extends React.Component {
 
     this.playingTriggers.push({
       id,
-      startPosition: currentPosition,
+      startPosition: triggerStartPosition,
     });
   };
 
