@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,500;0,600;1,500;1,600&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Gotham 4r', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #292F36;
+}
+
+.container_responsive {
+  padding-top: 2em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #292F36;
+  margin: 0 0 0.5em;
+  line-height: 1.2;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-weight: 600;
+}
+
+h5, h6 {
+  font-family: 'Gotham 5r', sans-serif;
+}
+
+h1 { font-size: 3em; }
+h2 { font-size: 2.125em; }
+h3 { font-size: 1.75em; }
+h4 { font-size: 1.5em; }
+h5 { font-size: 1.25em; }
+h6 { font-size: 1em; }
+
+p {
+  font-size: 1em;
+  line-height: 1.5;
+  margin-bottom: 1em;
+}
+
+p.body-two {
+  font-size: .875em;
+}
+
+p.overline {
+  font-size: .75em;
+  font-family: 'Gotham 5r', sans-serif;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+}
+
+figure span {
+  width: 500px;
+  height: 250px;
+  background: #c7c7c7;
+  display: block;
+}
+
+figcaption {
+  font-family: 'Gotham 5r', sans-serif;
+  font-size: .875em;
+  margin: .5em 0 1em;
+  line-height: 1.2;
+}
+
+a,
+a:link,
+a:visited {
+  text-decoration: underline;
+  font-family: 'Gotham 5r', sans-serif;
+  color: #9660BF;
+  cursor: pointer;
+  text-decoration: underline;
+  transition: color .2s ease-in-out;
+}
+
+a:hover,
+a:focus {
+  color: #6F488E;
+  text-decoration: underline;
+}
+/*----------------------------------------*/
+/**/
+/* UPDATED TYPOGRAPHY STYLES STARTS HERE*/
+/**/
+/*----------------------------------------*/
+
+html {
+  font-size: 100%;
+}
+
+h1 {
+  font-size: 48px;
+  line-height: 3.5rem;
+  margin: 0;
+}
+
+h2 {
+  font-size: 34px;
+  line-height: 2.625rem;
+  margin: 0 ;
+}
+
+h3 {
+  font-size: 28px;
+  line-height: 2.25rem;
+  margin: 0;
+}
+
+h4 {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 2rem;
+  margin: 0;
+}
+
+h5 {
+  font-size: 20px;
+  line-height: 1.75rem;
+  margin: 0;
+}
+
+h6 {
+  font-size: 16px;
+  line-height: 1.5rem;
+  margin: 0;
+}
+
+p.body-one {
+  font-size: 20px;
+  line-height: 1.75rem;
+  margin: 0;
+}
+
+p, p.body-two {
+  font-size: 16px;
+  line-height: 1.5rem;
+  margin: 0;
+}
+
+p.body-three {
+  font-size: 14px;
+  line-height: 1.375rem;
+  margin: 0;
+}
+
+p.body-four {
+  font-size: 12px;
+  line-height: 1.25rem;
+  margin: 0;
+}
+
+a.body-one {
+  font-size: 20px;
+  line-height: 1.75rem;
+  margin: 0;
+}
+
+a, a.body-two {
+  font-size: 16px;
+  line-height: 1.5rem;
+  margin: 0;
+}
+
+a.body-three {
+  font-size: 14px;
+  line-height: 1.375rem;
+  margin: 0;
+}
+
+a.body-four {
+  font-size: 12px;
+  line-height: 1.25rem;
+}
+
+button.button-one {
+  font-size: 20px;
+  line-height: 1.75rem;
+}
+
+button.button-two {
+  font-size: 16px;
+  line-height: 1.5rem;
+  margin: 0;
+}
+
+button.button-three {
+  font-size: 14px;
+  line-height: 1.375rem;
+  margin: 0;
+}
+
+button.button-four {
+  font-size: 12px;
+  line-height: 1.25rem;
+}
+
+p.overline-one {
+  font-size: 14px;
+  line-height: 1.375rem;
+  margin: 0;
+}
+
+p.overline, p.overline-two {
+  font-size: 12px;
+  line-height: 1.25rem;
+  margin: 0;
+}
+
+p.overline-three {
+  font-size: 10px;
+  line-height: 1.125rem;
+  margin: 0;
+}
+
+figcaption, p.caption {
+  font-size: 12px;
+  line-height: 1.25rem;
+  margin: 0;
+}
+
+label.label-one {
+  font-size: 16px;
+  line-height: 1.5rem;
+  margin: 0;
+}
+
+label.label-two {
+  font-size: 14px;
+  line-height: 1.375rem;
+  margin: 0;
+}
+
+label.label-three {
+  font-size: 12px;
+  line-height: 1.25rem;
+  margin: 0;
+}
+
+label.label-four {
+  font-size: 10px;
+  line-height: 1.125rem;
+  margin: 0
+}
