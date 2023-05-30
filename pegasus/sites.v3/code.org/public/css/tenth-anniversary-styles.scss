@@ -1,0 +1,32 @@
+// Custom styles for code.org/10years
+// — supplemental to shared/css/design-system-pegasus.scss
+
+@import 'breakpoints', 'color';
+
+// Homepage blurb
+.tenth-anniversary-homepage {
+  margin: 3em auto;
+  padding: 0 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+
+  img {
+    width: 60px;
+  }
+
+  p {
+    margin-bottom: 0;
+    color: $neutral_dark;
+
+    a {
+      cursor: pointer;
+      transition: color ease-in-out .2s;
+
+      @media screen and (max-width: $width-sm) {
+        display: block;
+      }
+    }
+  }
+}
