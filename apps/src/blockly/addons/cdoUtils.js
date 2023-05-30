@@ -2,7 +2,7 @@ import {ToolboxType, CLAMPED_NUMBER_REGEX, DEFAULT_SOUND} from '../constants';
 import cdoTheme from '../themes/cdoTheme';
 import {APP_HEIGHT} from '@cdo/apps/p5lab/constants';
 import {SOUND_PREFIX} from '@cdo/apps/assetManagement/assetPrefix';
-import {convertXmlToJson, positionBlocks} from './cdoSerializationUtils';
+import {convertXmlToJson, positionBlocks} from './cdoSerializationHelpers';
 import experiments from '@cdo/apps/util/experiments';
 
 /**
