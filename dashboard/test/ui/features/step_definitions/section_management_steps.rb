@@ -8,16 +8,18 @@ And(/^I create a new (student|teacher|facilitator) section( and go home)?$/) do 
   navigate_to replace_hostname('http://studio.code.org') if home
 end
 
-And /^I create a new student section named "([^"]*)" assigned to "([^"]*)"(?: version "([^"]*)")?(?: and unit "([^"]*)")?$/ do |section_name, assignment_family, version_year, secondary|
+And /^I create a new "([^"]*)" student section named "([^"]*)" assigned to "([^"]*)"(?: version "([^"]*)")?(?: and unit "([^"]*)")?$/ do |marketing_audience, section_name, assignment_family, version_year, secondary|
   individual_steps <<~GHERKIN
     When I see the section set up box
     When I press the new section button
     Then I should see the new section dialog
     When I select email login
-    Then I wait to see "#uitest-section-name"
-    And I press keys "#{section_name}" for element "#uitest-section-name"
-    Then I wait to see "#uitest-assignment-family"
-    When I select the "#{assignment_family}" option in dropdown "uitest-assignment-family"
+    Then I wait to see "#sections-set-up-container"
+    And I press keys "#{section_name}" for element "#uitest-section-name-setup"
+    And I press the first "input[name='grades[]']" element
+    And I wait until element "button:contains(#{marketing_audience})" is visible
+    And I click selector "button:contains(#{marketing_audience})"
+    And I press the first "input[name='#{assignment_family}']" element
   GHERKIN
 
   if version_year
@@ -35,9 +37,8 @@ And /^I create a new student section named "([^"]*)" assigned to "([^"]*)"(?: ve
   end
 
   individual_steps <<~GHERKIN
-    And I press the save button to create a new section
-    And I wait for the dialog to close
-    Then I should see the student section table
+    And I press the first "#uitest-save-section-changes" element
+    And I wait until element "#classroom-sections" is visible
   GHERKIN
 end
 
@@ -49,17 +50,19 @@ Given(/^I create a new student section assigned to "([^"]*)"$/) do |script_name|
   )
 end
 
-And /^I create a new student section with course "([^"]*)", version "([^"]*)"(?: and unit "([^"]*)")?$/ do |assignment_family, version_year, secondary|
+And /^I create a new "([^"]*)" student section with course "([^"]*)", version "([^"]*)"(?: and unit "([^"]*)")?$/ do |marketing_audience, assignment_family, version_year, secondary|
   individual_steps <<~GHERKIN
     When I see the section set up box
     When I press the new section button
     Then I should see the new section dialog
 
     When I select email login
-    Then I wait to see "#uitest-assignment-family"
 
-    When I select the "#{assignment_family}" option in dropdown "uitest-assignment-family"
-
+    And I wait until element "button:contains(#{marketing_audience})" is visible
+    And I press keys "Testing section" for element "#uitest-section-name-setup"
+    And I press the first "input[name='grades[]']" element
+    And I click selector "button:contains(#{marketing_audience})"
+    And I press the first "input[name='#{assignment_family}']" element
     And I click selector "#assignment-version-year" once I see it
     And I click selector ".assignment-version-title:contains(#{version_year})" once I see it
   GHERKIN
@@ -72,9 +75,9 @@ And /^I create a new student section with course "([^"]*)", version "([^"]*)"(?:
   end
 
   individual_steps <<~GHERKIN
-    And I press the save button to create a new section
-    And I wait for the dialog to close using jQuery
-    Then I should see the student section table
+    And I press the first "#uitest-save-section-changes" element
+    And I click selector "button:contains('Go to dashboard')" if I see it
+    And I wait until element "#classroom-sections" is visible
   GHERKIN
 end
 
