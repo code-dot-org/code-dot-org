@@ -798,6 +798,7 @@ GEM
       scenic (>= 1.4.0)
     scss_lint (0.60.0)
       sass (~> 3.5, >= 3.5.5)
+    sd_notify (0.1.1)
     selenium-webdriver (4.2.1)
       childprocess (>= 0.5, < 5.0)
       rexml (~> 3.2, >= 3.2.5)
@@ -1053,6 +1054,7 @@ DEPENDENCIES
   scenic
   scenic-mysql_adapter
   scss_lint
+  sd_notify
   selenium-webdriver (~> 4.2.0)
   sequel (~> 5.29)
   shotgun
