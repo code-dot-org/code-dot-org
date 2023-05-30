@@ -32,6 +32,7 @@ import FieldChord from './FieldChord';
 import {Renderers} from '@cdo/apps/blockly/constants';
 import musicI18n from '../locale';
 import LevelChangeManager from '@cdo/apps/labs/LevelChangeManager';
+import {logError, logWarning} from '../utils/MusicMetrics';
 
 /**
  * Wraps the Blockly workspace for Music Lab. Provides functions to setup the
@@ -319,7 +320,7 @@ export default class MusicBlocklyWorkspace {
    */
   executeCompiledSong(triggerEvents = []) {
     if (this.compiledEvents === null) {
-      console.warn('executeCompiledSong called before compileSong.');
+      logWarning('executeCompiledSong called before compileSong.');
       return;
     }
 
@@ -492,10 +493,7 @@ export default class MusicBlocklyWorkspace {
     try {
       fn.call(this, ...args);
     } catch (e) {
-      // swallow error. should we also log this somewhere?
-      if (console) {
-        console.log(e);
-      }
+      logError(e);
     }
   }
 
