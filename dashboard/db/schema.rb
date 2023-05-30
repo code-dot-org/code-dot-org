@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_05_24_221710) do
+ActiveRecord::Schema.define(version: 2023_05_30_160952) do
 
   create_table "activities", id: :integer, charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -209,7 +209,7 @@ ActiveRecord::Schema.define(version: 2023_05_24_221710) do
     t.string "school_id", limit: 12, null: false
     t.integer "school_year", limit: 2, null: false
     t.string "teaches_cs", limit: 2
-    t.text "audit_data", null: false
+    t.text "audit_data"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["school_id", "school_year"], name: "index_census_summaries_on_school_id_and_school_year", unique: true
