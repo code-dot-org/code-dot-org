@@ -241,7 +241,7 @@ class RosterDialog extends React.Component {
         break;
     }
 
-    const testingUserId = 0;
+    const testingUserId = -1;
 
     return (
       <BaseDialog
@@ -278,7 +278,7 @@ class RosterDialog extends React.Component {
           >
             {locale.dialogCancel()}
           </button>
-          {this.props.userId % 10 === testingUserId && (
+          {this.props.userId % 10 !== testingUserId && (
             <button
               id="import-button-and-redirect"
               type="button"
@@ -293,7 +293,7 @@ class RosterDialog extends React.Component {
               {locale.chooseSection()}
             </button>
           )}
-          {this.props.userId % 10 !== testingUserId && (
+          {this.props.userId % 10 === testingUserId && (
             <button
               id="import-button"
               type="button"
