@@ -48,11 +48,6 @@ service 'nginx' do
   supports restart: true, reload: true, status: true
   action [:enable, :start]
 
-  # Ensure app services are updated to their current listener configuration before (re)starting nginx.
-  %w(pegasus dashboard).each do |app|
-    notifies :create, "file[#{app}_listeners]", :before
-  end
-
   # Nginx upstart scripts are broken in Ubuntu 14.04, so force non-Upstart scripts.
   # Ref: https://bugs.launchpad.net/nginx/+bug/1476296
   provider Chef::Provider::Service::Debian
