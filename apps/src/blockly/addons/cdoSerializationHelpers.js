@@ -30,16 +30,17 @@ export function convertXmlToJson(xml) {
 }
 
 /**
- * Converts XML serialization to JSON using a temporary unrendered workspace.
+ * Adds x/y values from XML to JSON serialization.
  * @param {Array<Object>} xmlBlocks - an array of "block" objects containing a block and x/y coordinates
  * @param {Map<String, Object>} blockIdMap - a map of ids (keys) and blocks (values)
  */
 function addPositionsToState(xmlBlocks, blockIdMap) {
   xmlBlocks.forEach(xmlBlock => {
     const block = blockIdMap.get(xmlBlock.blockly_block.id);
-    if (block && xmlBlock.x && xmlBlock.y) {
-      block.x = xmlBlock.x;
-      block.y = xmlBlock.y;
+    if (block) {
+      // Do not change block values if xmlBlock values are NaN (unspecified in XML)
+      block.x = xmlBlock.x || block.x;
+      block.y = xmlBlock.y || block.y;
     }
   });
 }
