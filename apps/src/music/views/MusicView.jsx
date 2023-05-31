@@ -62,6 +62,7 @@ import {
   setProjectUpdatedSaving,
 } from '../../code-studio/projectRedux';
 import {ProjectManagerEvent} from '../../labs/projects/ProjectManager';
+import {ProjectManagerContext} from '@cdo/apps/labs/projects/ProjectManagerContext';
 
 /**
  * Top-level container for Music Lab. Manages all views on the page as well as the
@@ -117,6 +118,8 @@ class UnconnectedMusicView extends React.Component {
     setIsPageError: PropTypes.func,
     setLevelCount: PropTypes.func,
   };
+
+  static contextType = ProjectManagerContext;
 
   constructor(props) {
     super(props);
@@ -219,9 +222,7 @@ class UnconnectedMusicView extends React.Component {
           this.player,
           this.getStartSources(),
           this.progressManager?.getCurrentStepDetails().toolbox,
-          this.props.currentLevelId,
-          this.props.currentScriptId,
-          this.props.channelId
+          this.getProjectManager
         )
         .then(() => {
           this.musicBlocklyWorkspace.addSaveEventListener(
@@ -316,6 +317,11 @@ class UnconnectedMusicView extends React.Component {
     if (this.hasLevels() && currentState.satisfied) {
       this.props.sendSuccessReport('music');
     }
+  };
+
+  getProjectManager = () => {
+    console.log('context is: ', this.context);
+    return this.context;
   };
 
   // Returns whether we just have a standalone level.

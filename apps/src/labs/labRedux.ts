@@ -5,7 +5,7 @@
 
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 
-interface LabState {
+export interface LabState {
   isLoading: boolean;
   isPageError: boolean;
 }

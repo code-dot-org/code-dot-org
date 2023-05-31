@@ -155,6 +155,8 @@ export default class ProjectManager {
       );
       if (!sourceResponse.ok) {
         this.saveInProgress = false;
+        console.log(`save fail response`);
+        console.log(sourceResponse);
         this.executeListeners(ProjectManagerEvent.SaveFail, sourceResponse);
 
         // TODO: Should we wrap this response in some way?
@@ -184,6 +186,8 @@ export default class ProjectManager {
 
     this.saveInProgress = false;
     this.lastSaveResponse = channelSaveResponse;
+    console.log(`save success response`);
+    console.log(channelSaveResponse);
     this.executeListeners(
       ProjectManagerEvent.SaveSuccess,
       this.lastSaveResponse
@@ -215,7 +219,10 @@ export default class ProjectManager {
     );
   }
 
-  addEventListener(type: ProjectManagerEvent, listener: () => void) {
+  addEventListener(
+    type: ProjectManagerEvent,
+    listener: (status: object) => void
+  ) {
     if (this.eventListeners[type]) {
       this.eventListeners[type]?.push(listener);
     } else {
