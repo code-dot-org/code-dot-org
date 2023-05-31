@@ -181,6 +181,12 @@ class Blockly < Level
     VARIABLE: 'Variables',
   }
   def self.convert_toolbox_to_category(xml_string)
+    is_google_blockly = false
+    google_blockly_namespace = "<xml xmlns=\"https://developers.google.com/blockly/xml\">"
+    if xml_string.include? google_namespace
+      is_google_blockly = true
+      xml_string[google_blockly_namespace] = "<xml>"
+    end
     xml = Nokogiri::XML(xml_string, &:noblanks)
     tag = Blockly.field_or_title(xml)
     return xml_string if xml.nil? || xml.xpath('/xml/block[@type="category"]').empty?
@@ -208,10 +214,18 @@ class Blockly < Level
       end
     end
     default_category.remove if default_category.element_children.empty?
-    xml.serialize(save_with: XML_OPTIONS).delete("\n").strip
+    xml_string = xml.serialize(save_with: XML_OPTIONS).delete("\n").strip
+    if is_google_blockly
+      xml_string["<xml>"] = google_blockly_namespace
+    end
+    return xml_string
   end
 
   def self.convert_category_to_toolbox(xml_string)
+    google_blockly_namespace = "<xml xmlns=\"https://developers.google.com/blockly/xml\">"
+    if xml_string.include? google_blockly_namespace
+      xml_string[google_blockly_namespace] = "<xml>"
+    end
     xml = Nokogiri::XML(xml_string, &:noblanks).child
     tag = Blockly.field_or_title(xml)
     return xml_string if xml.nil?
@@ -237,7 +251,9 @@ class Blockly < Level
       xml << category.children
       #block.xpath('statement')[0] << wrap_blocks(category.xpath('block').to_a) unless category.xpath('block').empty?
     end
-    xml.serialize(save_with: XML_OPTIONS).delete("\n").strip
+    xml_string = xml.serialize(save_with: XML_OPTIONS).delete("\n").strip
+    p xml_string
+    return xml_string
   end
 
   # "counter" mutations should not be stored because it results in the language being
