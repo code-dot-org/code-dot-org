@@ -2295,6 +2295,9 @@
         "e270db37-e123-4995-8e60-a5d7e9f1e6f2": {
           "description": "**Vorgehensweise:** Wiederholen Sie den Begriff **Algorithmus** als eine Liste der Schritte zur Ausführung einer Aufgabe."
         },
+        "d954cdfd-7126-43ca-a817-12ef8812a38a": {
+          "name": "Folgen Sie dem Algorithmus"
+        },
         "cf819fb5-aff2-47a4-9c0f-8ab6af6f218f": {
           "description": "Heute beginnen wir mit einem kurzen Spiel. In diesem Spiel gebe ich Ihnen Befehle, die Sie befolgen müssen. Sie haben also die Aufgabe, dem **Algorithmus** zu folgen. Die Befehle beginnen immer mit \"beginnen\" oder \"stoppen\". Wenn ich Ihnen sage, dass Sie mit etwas beginnen sollen, beginnen Sie mit diesem Verhalten und behalten es solange bei, bis ich Ihnen sage, dass Sie aufhören sollen. Ich kann Ihnen auch sagen, dass Sie \"alles stoppen\" sollen, was bedeutet, dass Sie alle Verhaltensweisen beenden, die ich Ihnen bisher gezeigt habe. Wir spielen 3 Runden spielen und nach jeder Runde stelle ich Ihnen einige Fragen.",
           "tips": [
@@ -2398,6 +2401,7 @@
           "description": "Am Ende der letzten Stunde haben wir uns mit den Ähnlichkeiten zwischen Lückengeschichten und Apps beschäftigt, die den Benutzer um eine Eingabe bitten. \nWenn eine Nachricht auf dem Computerbildschirm auf Ihre Eingabe wartet, nennen wir das eine Eingabeaufforderung. \nWenn ein Benutzer etwas in eine Eingabeaufforderung eingibt, ist es, als ob der Computer die Informationen in einem Behälter speichert. \nDie Bezeichnung der Variablen sagt uns, welche Art von Information wir erwarten können. Heute werden wir den Code zum Erstellen einer Eingabeaufforderung in Sprite Lab kennen lernen."
         },
         "14e9da9c-a429-47db-b4bd-c07d5dc4401f": {
+          "name": "Text und Eingabeaufforderungen",
           "progression_name": "Vorhersage"
         },
         "71f32e49-99e7-46d2-9a4d-a6b0b07d5a17": {
@@ -3931,6 +3935,7 @@
           "description": "**Das tun:** Das Wort **Algorithmus** wiederholen oder einführen: _eine Liste von Schritten, um eine Aufgabe zu erledigen._"
         },
         "c4709ef3-6dff-44f9-ab00-7c8d4ceb84de": {
+          "name": "Folgen Sie dem Algorithmus",
           "description": "Heute beginnen wir mit einem schnellen Spiel. In diesem Spiel gebe ich dir alle Befehle, die du befolgen musst, und deine Aufgabe ist es, dem Algorithmus zu folgen. Die Befehle beginnen immer mit \"anfangen\" oder \"aufhören\". Wenn ich dir sage, du sollst mit etwas beginnen, musst du dieses Verhalten ausführen und so lange beibehalten, bis ich dir sage, du sollst aufhören. Ich kann dir auch sagen, dass du \"alles stoppen\" sollst, was bedeutet, dass du alle Verhaltensweisen beenden kannst, die ich dir bisher gezeigt habe. Wir werden 3 Runden spielen und nach jeder Runde werde ich euch ein paar Fragen stellen.",
           "tips": [
             "Achten Sie darauf, dass zwischen den Befehlen etwas Zeit bleibt. Überlegen Sie, ob Sie in jedem dieser Abschnitte die gesamte Sequenz ohne Diskussion ausführen und sie später wiederholen, nachdem alle die Möglichkeit hatten, eine Nachbesprechung durchzuführen und eventuelle Unklarheiten zu beseitigen."
@@ -4504,6 +4509,7 @@
           "description": "Wenn eine Meldung auf dem Computerbildschirm auf Ihre Eingabe wartet, nennen wir das eine Eingabeaufforderung. Wenn ein Benutzer eine Eingabeaufforderung eingibt, ist es so, als ob der Computer die Informationen in einem Container speichert. Die Bezeichnung der Variablen sagt uns, welche Art von Information wir erwarten können. Heute werden wir den Code zum Erstellen eines Prompts in Sprite Lab lernen."
         },
         "c69862bf-8fe7-4a68-bb37-ff81924f4bf5": {
+          "name": "Text und Eingabeaufforderungen",
           "description": "#### Vorhersage (5 Min.)\n\n**Vorgehensweise:** Lassen Sie die SchülerInnen den vorgegebenen Code lesen und vorhersagen, was passieren wird. Nachdem sie auf \"Ausführen\" geklickt haben, lassen Sie den SchülerInnenn Zeit, um über alles nachzudenken, was sie interessant fanden oder was sie überrascht hat.",
           "progression_name": "Vorhersage"
         },
@@ -5958,6 +5964,9 @@
           "tips": [
             "Diese Lektion mag sich ganz anders anfühlen als die vorangegangenen Lektionen. Diese Stufen haben einige neue Eigenschaften, die Sie vielleicht erst einmal kennenlernen möchten. Der Code, den Ihre SchülerInnen in einer Stufe schreiben, wird automatisch auf die anderen Stufen übertragen. Auf diese Weise können sie schrittweise aufbauen und ihre Ideen während des Lernens wiederholen. Beachten Sie, dass diese Stufen nicht auf Korrektheit geprüft werden, um der Kreativität freien Lauf zu lassen. Geben Sie Ihren SchülerInnenn die Möglichkeit, selbst zu bestimmen, wann sie die einzelnen Aufgaben abgeschlossen haben."
           ]
+        },
+        "5bee125c-0e5e-46a8-b72b-fdc8a71f5161": {
+          "progression_name": "Mini-Projekt: Sticker Art"
         },
         "c5f36648-ac0d-405f-af7a-3020ebdce7f3": {
           "progression_name": "Freies Spiel"
@@ -15190,6 +15199,7 @@
           "description": "**Vorgehensweise:** Wiederholen Sie den Begriff **Algorithmus** als eine Liste der Schritte zur Ausführung einer Aufgabe."
         },
         "9c5a2a2f-7a92-4928-a7c4-89d29765cb01": {
+          "name": "Folgen Sie dem Algorithmus",
           "description": "Heute beginnen wir mit einem kurzen Spiel. In diesem Spiel gebe ich Ihnen Befehle, die Sie befolgen müssen. Sie haben also die Aufgabe, dem **Algorithmus** zu folgen. Die Befehle beginnen immer mit \"beginnen\" oder \"stoppen\". Wenn ich Ihnen sage, dass Sie mit etwas beginnen sollen, beginnen Sie mit diesem Verhalten und behalten es solange bei, bis ich Ihnen sage, dass Sie aufhören sollen. Ich kann Ihnen auch sagen, dass Sie \"alles stoppen\" sollen, was bedeutet, dass Sie alle Verhaltensweisen beenden, die ich Ihnen bisher gezeigt habe. Wir spielen 3 Runden spielen und nach jeder Runde stelle ich Ihnen einige Fragen.",
           "tips": [
             "Achten Sie darauf, dass zwischen den Befehlen etwas Zeit bleibt. Überlegen Sie, ob Sie in jedem dieser Abschnitte die gesamte Sequenz ohne Diskussion ausführen und sie später wiederholen, nachdem alle die Möglichkeit hatten, eine Nachbesprechung durchzuführen und eventuelle Unklarheiten zu beseitigen."
@@ -15334,6 +15344,7 @@
           "description": "Am Ende der letzten Stunde haben wir uns mit den Ähnlichkeiten zwischen Lückengeschichten und Apps beschäftigt, die den Benutzer um eine Eingabe bitten. \nWenn eine Nachricht auf dem Computerbildschirm auf Ihre Eingabe wartet, nennen wir das eine Eingabeaufforderung. \nWenn ein Benutzer etwas in eine Eingabeaufforderung eingibt, ist es, als ob der Computer die Informationen in einem Behälter speichert. \nDie Bezeichnung der Variablen sagt uns, welche Art von Information wir erwarten können. Heute werden wir den Code zum Erstellen einer Eingabeaufforderung in Sprite Lab kennen lernen."
         },
         "05818b32-90cc-466a-b952-8fcf048e4e5c": {
+          "name": "Text und Eingabeaufforderungen",
           "description": "#### Vorhersage (5 Min.)\n\n**Vorgehensweise:** Lassen Sie die SchülerInnen den vorgegebenen Code lesen und vorhersagen, was passieren wird. Nachdem sie auf \"Ausführen\" geklickt haben, lassen Sie den SchülerInnenn Zeit, um über alles nachzudenken, was sie interessant fanden oder was sie überrascht hat.",
           "progression_name": "Vorhersage"
         },
@@ -18346,6 +18357,7 @@
           "description": "**Das tun:** Das Wort **Algorithmus** wiederholen oder einführen: _eine Liste von Schritten, um eine Aufgabe zu erledigen._"
         },
         "5eb0801e-a90b-47fe-9787-2f7fc7a79f5f": {
+          "name": "Folgen Sie dem Algorithmus",
           "description": "Heute beginnen wir mit einem schnellen Spiel. In diesem Spiel gebe ich dir alle Befehle, die du befolgen musst, und deine Aufgabe ist es, dem Algorithmus zu folgen. Die Befehle beginnen immer mit \"anfangen\" oder \"aufhören\". Wenn ich dir sage, du sollst mit etwas beginnen, musst du dieses Verhalten ausführen und so lange beibehalten, bis ich dir sage, du sollst aufhören. Ich kann dir auch sagen, dass du \"alles stoppen\" sollst, was bedeutet, dass du alle Verhaltensweisen beenden kannst, die ich dir bisher gezeigt habe. Wir werden 3 Runden spielen und nach jeder Runde werde ich euch ein paar Fragen stellen.",
           "tips": [
             "Achten Sie darauf, dass zwischen den Befehlen etwas Zeit bleibt. Überlegen Sie, ob Sie in jedem dieser Abschnitte die gesamte Sequenz ohne Diskussion ausführen und sie später wiederholen, nachdem alle die Möglichkeit hatten, eine Nachbesprechung durchzuführen und eventuelle Unklarheiten zu beseitigen."
@@ -18920,6 +18932,7 @@
           "description": "Wenn eine Meldung auf dem Computerbildschirm auf Ihre Eingabe wartet, nennen wir das eine Eingabeaufforderung. Wenn ein Benutzer eine Eingabeaufforderung eingibt, ist es so, als ob der Computer die Informationen in einem Container speichert. Die Bezeichnung der Variablen sagt uns, welche Art von Information wir erwarten können. Heute werden wir den Code zum Erstellen eines Prompts in Sprite Lab lernen."
         },
         "e7833677-6e13-40dc-9e36-56388378828d": {
+          "name": "Text und Eingabeaufforderungen",
           "description": "#### Vorhersage (5 Min.)\n\n**Vorgehensweise:** Lassen Sie die SchülerInnen den vorgegebenen Code lesen und vorhersagen, was passieren wird. Nachdem sie auf \"Ausführen\" geklickt haben, lassen Sie den SchülerInnenn Zeit, um über alles nachzudenken, was sie interessant fanden oder was sie überrascht hat.",
           "progression_name": "Vorhersage"
         },
@@ -19493,6 +19506,7 @@
           "description": "-   Welche Teile Ihres Körpers benutzen Sie? Ändert sich dies an verschiedenen Stellen? - Gibt es Zeiten, in denen du eine Aktion unterbrechen musst, bevor du eine andere beginnen kannst? (z. B. musst du aufhören, den Basketball zu dribbeln, bevor du ihn werfen kannst.) **Ziel:** Helfen Sie den SchülerInnenn, darüber nachzudenken, wann sie mehrere Aufgaben oder Anweisungen gleichzeitig erledigen müssen. Die Hauptaktivität bringt die SchülerInnen dazu, alberne Handlungen auszuführen, entweder nacheinander oder gleichzeitig. Dies wird schließlich zu Verbindungen über eine neue Art, Programme zu schreiben, führen, aber Sie müssen die Diskussion noch nicht bis dorthin führen."
         },
         "9a413780-6d7b-4341-9041-e8a1e3f540b6": {
+          "name": "Folgen Sie dem Algorithmus",
           "description": "Heute beginnen wir mit einem kurzen Spiel. In diesem Spiel werde ich dir alle Befehle geben, die du befolgen sollst, und deine Aufgabe ist es, meinen Anweisungen zu folgen. Die Befehle beginnen immer mit \"anfangen\" oder \"aufhören\". Wenn ich dir sage, dass du mit etwas beginnen sollst, musst du mit diesem Verhalten beginnen und es beibehalten, bis ich dir sage, dass du aufhören sollst. Ich kann dir auch sagen, dass du mit allem aufhören sollst, was bedeutet, dass du alle Verhaltensweisen beenden kannst, die ich dir bisher gezeigt habe. Wir werden 3 Runden spielen und nach jeder Runde werde ich euch ein paar Fragen stellen.",
           "progression_name": "Folge dem Algorithmus - Aktivität ohne Computer"
         },
