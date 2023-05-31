@@ -53,6 +53,7 @@ export default class ProjectManagerFactory {
     if (!channelId) {
       throw new Error('Could not load channel for level');
     }
+    console.log(`about to init project manager with channel id ${channelId}`);
     return new ProjectManager(
       this.getSourcesStore(projectManagerStorageType),
       channelsStore,

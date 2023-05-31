@@ -31,7 +31,7 @@ export default class LevelChangeManager {
   ) {
     if (existingProjectManager.hasUnsavedChanges()) {
       // Force a save with the current code before changing levels if there are unsaved changes.
-      await existingProjectManager.save(existingProject, true);
+      await existingProjectManager.save(existingProject.source, true);
     }
     // Clear out any remaining enqueued saves from the existing project manager.
     existingProjectManager.destroy();

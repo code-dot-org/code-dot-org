@@ -12,7 +12,7 @@
  */
 import {SourcesStore} from './SourcesStore';
 import {ChannelsStore} from './ChannelsStore';
-import {Project} from '../types';
+import {Channel, Source} from '../types';
 
 export enum ProjectManagerEvent {
   SaveStart,
@@ -25,7 +25,7 @@ export default class ProjectManager {
   channelId: string;
   sourcesStore: SourcesStore;
   channelsStore: ChannelsStore;
-  projectToSave: Project | undefined;
+  sourceToSave: Source | undefined;
 
   private nextSaveTime: number | null = null;
   private readonly saveInterval: number = 30 * 1000; // 30 seconds
@@ -35,7 +35,7 @@ export default class ProjectManager {
     [key in keyof typeof ProjectManagerEvent]?: [(payload: object) => void];
   } = {};
   private lastSource: string | undefined;
-  private lastChannel: string | undefined;
+  private channel: Channel | undefined;
   // Id of the last timeout we set on a save, or undefined if there is no current timeout.
   // When we enqueue a save, we set a timeout to execute the save after the save interval.
   // If we force a save or destroy the ProjectManager, we clear the remaining timeout,
@@ -73,9 +73,9 @@ export default class ProjectManager {
       return channelResponse;
     }
 
-    const channel = await channelResponse.json();
-    this.lastChannel = JSON.stringify(channel);
-    const project = {source, channel};
+    this.channel = await channelResponse.json();
+    const channelString = JSON.stringify(this.channel);
+    const project = {source, channelString};
     const blob = new Blob([JSON.stringify(project)], {
       type: 'application/json',
     });
@@ -98,18 +98,18 @@ export default class ProjectManager {
   /**
    * Enqueue a save to happen in the next saveInterval, unless a force save is requested.
    * If a save is already enqueued, update this.projectToSave with the given project.
-   * @param project Project: the project to save
+   * @param source Source: the project to save
    * @param forceSave boolean: if the save should happen immediately
    * @returns a promise that resolves to a Response. If the save is successful, the response
    * will be empty, otherwise it will contain failure information.
    */
-  async save(project: Project, forceSave = false) {
+  async save(source: Source, forceSave = false) {
     if (this.destroyed) {
       // If we have already been destroyed, don't attempt to save.
       this.resetSaveState();
       return this.getNoopResponseAndSendSaveNoopEvent();
     }
-    this.projectToSave = project;
+    this.sourceToSave = source;
     if (!this.canSave(forceSave)) {
       if (!this.saveQueued) {
         this.enqueueSave();
@@ -133,7 +133,7 @@ export default class ProjectManager {
    * otherwise it will contain failure or no-op information.
    */
   private async saveHelper(): Promise<Response> {
-    if (!this.projectToSave) {
+    if (!this.sourceToSave || !this.channel) {
       return this.getNoopResponseAndSendSaveNoopEvent();
     }
     this.resetSaveState();
@@ -151,7 +151,7 @@ export default class ProjectManager {
     if (sourceChanged) {
       const sourceResponse = await this.sourcesStore.save(
         this.channelId,
-        this.projectToSave.source
+        this.sourceToSave
       );
       if (!sourceResponse.ok) {
         this.saveInProgress = false;
@@ -163,15 +163,13 @@ export default class ProjectManager {
         // Maybe add a more specific statusText to the response?
         return sourceResponse;
       }
-      this.lastSource = JSON.stringify(this.projectToSave.source);
+      this.lastSource = JSON.stringify(this.sourceToSave);
     }
 
     // Always save the channel--either the channel has changed and/or the source changed.
     // Even if only the source changed, we still update the channel to modify the last
     // updated time.
-    const channelResponse = await this.channelsStore.save(
-      this.projectToSave.channel
-    );
+    const channelResponse = await this.channelsStore.save(this.channel);
     if (!channelResponse.ok) {
       this.saveInProgress = false;
       this.executeListeners(ProjectManagerEvent.SaveFail, channelResponse);
@@ -180,7 +178,6 @@ export default class ProjectManager {
       // Maybe add a more specific statusText to the response?
       return channelResponse;
     }
-    this.lastChannel = JSON.stringify(this.projectToSave.channel);
 
     const channelSaveResponse = await channelResponse.json();
 
@@ -245,17 +242,14 @@ export default class ProjectManager {
   }
 
   private sourceChanged(): boolean {
-    if (!this.projectToSave) {
+    if (!this.sourceToSave) {
       return false;
     }
-    return this.lastSource !== JSON.stringify(this.projectToSave.source);
+    return this.lastSource !== JSON.stringify(this.sourceToSave);
   }
 
   private channelChanged(): boolean {
-    if (!this.projectToSave) {
-      return false;
-    }
-    return this.lastChannel !== JSON.stringify(this.projectToSave.channel);
+    return false;
   }
 
   private resetSaveState(): void {

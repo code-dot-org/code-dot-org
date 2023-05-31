@@ -61,8 +61,6 @@ import {
   setProjectUpdatedError,
   setProjectUpdatedSaving,
 } from '../../code-studio/projectRedux';
-import {ProjectManagerEvent} from '../../labs/projects/ProjectManager';
-import {ProjectManagerContext} from '@cdo/apps/labs/projects/ProjectManagerContext';
 import {logError} from '../utils/MusicMetrics';
 
 /**
@@ -118,9 +116,8 @@ class UnconnectedMusicView extends React.Component {
     setIsLoading: PropTypes.func,
     setIsPageError: PropTypes.func,
     setLevelCount: PropTypes.func,
+    source: PropTypes.object,
   };
-
-  static contextType = ProjectManagerContext;
 
   constructor(props) {
     super(props);
@@ -154,10 +151,6 @@ class UnconnectedMusicView extends React.Component {
   }
 
   componentDidMount() {
-    const initialLevelIndex = this.props.currentLevelIndex;
-
-    this.props.setIsLoading(true);
-
     this.analyticsReporter.startSession().then(() => {
       this.analyticsReporter.setUserProperties(
         this.props.userId,
@@ -216,51 +209,14 @@ class UnconnectedMusicView extends React.Component {
 
       this.setAllowedSoundsForProgress();
 
-      this.musicBlocklyWorkspace
-        .init(
-          document.getElementById('blockly-div'),
-          this.onBlockSpaceChange,
-          this.player,
-          this.getStartSources(),
-          this.progressManager?.getCurrentStepDetails().toolbox,
-          this.getProjectManager
-        )
-        .then(() => {
-          this.musicBlocklyWorkspace.addSaveEventListener(
-            ProjectManagerEvent.SaveStart,
-            () => {
-              this.props.setProjectUpdatedSaving();
-            }
-          );
-          this.musicBlocklyWorkspace.addSaveEventListener(
-            ProjectManagerEvent.SaveSuccess,
-            status => {
-              this.props.setProjectUpdatedAt(status.updatedAt);
-            }
-          );
-          this.musicBlocklyWorkspace.addSaveEventListener(
-            ProjectManagerEvent.SaveNoop,
-            status => {
-              this.props.setProjectUpdatedAt(status.updatedAt);
-            }
-          );
-          this.musicBlocklyWorkspace.addSaveEventListener(
-            ProjectManagerEvent.SaveFail,
-            () => {
-              this.props.setProjectUpdatedError();
-            }
-          );
-          this.player.initialize(this.library);
-          setInterval(this.updateTimer, 1000 / 30);
-
-          // If the level changed while we were loading, then hand off
-          // to handlePanelChange to load that new level.
-          if (this.props.currentLevelIndex !== initialLevelIndex) {
-            this.handlePanelChange();
-          } else {
-            this.props.setIsLoading(false);
-          }
-        });
+      this.musicBlocklyWorkspace.init(
+        document.getElementById('blockly-div'),
+        this.onBlockSpaceChange,
+        this.player,
+        this.progressManager?.getCurrentStepDetails().toolbox
+      );
+      this.player.initialize(this.library);
+      setInterval(this.updateTimer, 1000 / 30);
     });
   }
 
@@ -296,6 +252,18 @@ class UnconnectedMusicView extends React.Component {
     ) {
       this.updateHighlightedBlocks();
     }
+    // If we just finished loading the lab, then we need to update the
+    // sources in musicBlocklyWorkspace.
+    if (
+      prevProps.isLabLoading &&
+      !this.props.isLabLoading &&
+      (this.getStartSources() || this.props.source)
+    ) {
+      this.musicBlocklyWorkspace.loadSources(
+        this.getStartSources(),
+        this.props.source
+      );
+    }
   }
 
   updateTimer = () => {
@@ -318,11 +286,6 @@ class UnconnectedMusicView extends React.Component {
     if (this.hasLevels() && currentState.satisfied) {
       this.props.sendSuccessReport('music');
     }
-  };
-
-  getProjectManager = () => {
-    console.log('context is: ', this.context);
-    return this.context;
   };
 
   // Returns whether we just have a standalone level.
@@ -804,6 +767,7 @@ const MusicView = connect(
     instructionsPosition: state.music.instructionsPosition,
     currentScriptId: state.progress.scriptId,
     currentlyPlayingBlockIds: getCurrentlyPlayingBlockIds(state),
+    source: state.lab.source,
   }),
   dispatch => ({
     setIsPlaying: isPlaying => dispatch(setIsPlaying(isPlaying)),
