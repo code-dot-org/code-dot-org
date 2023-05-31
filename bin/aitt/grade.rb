@@ -2,6 +2,9 @@ class Grade
   def initialize
   end
 
+  class InvalidResponseError < StandardError
+  end
+
   def grade_student_work(prompt, rubric, student_code, student_id, use_cached: false, examples: [], num_responses:, temperature:)
     if use_cached && File.exist?("cached_responses/#{student_id}.txt")
       cached_response = File.read("cached_responses/#{student_id}.txt")
@@ -31,24 +34,26 @@ class Grade
       return nil
     end
 
-    if response.code == 200
-      tokens = response.parsed_response['usage']['total_tokens']
-      puts "#{student_id} request succeeded in #{(Time.now - start_time).to_i} seconds. #{tokens} tokens used."
-      completed_text = response.parsed_response['choices'][0]['message']['content']
-      tsv_data = parse_tsv(completed_text.strip)
-      valid, reason = validate_server_response(tsv_data, rubric)
-      if valid
-        File.write("cached_responses/#{student_id}.txt", completed_text)
-        tsv_data.map(&:to_h)
-      else
-        puts "#{student_id} Invalid api response: #{reason}\n#{completed_text}}"
-        nil
-      end
-    else
+    unless response.code == 200
       puts "#{student_id} Error calling the API: #{response.code}"
       puts "#{student_id} Response body: #{response.body}"
-      nil
+      return nil
     end
+
+    tokens = response.parsed_response['usage']['total_tokens']
+    puts "#{student_id} request succeeded in #{(Time.now - start_time).to_i} seconds. #{tokens} tokens used."
+    completed_text = response.parsed_response['choices'][0]['message']['content']
+    tsv_data = parse_tsv(completed_text.strip)
+
+    begin
+      validate_server_response(tsv_data, rubric)
+    rescue InvalidResponseError => exception
+      puts "#{student_id} Invalid response: #{exception.message}\n#{completed_text}}"
+      return nil
+    end
+
+    File.write("cached_responses/#{student_id}.txt", completed_text)
+    tsv_data.map(&:to_h)
   end
 
   private
@@ -77,18 +82,16 @@ class Grade
     rubric_key_concepts = CSV.parse(rubric, headers: true).map {|row| row['Key Concept']}.uniq
 
     # 1. The response represents a table in TSV format
-    return [false, 'invalid format'] unless tsv_data.is_a?(Array)
+    raise InvalidResponseError.new('invalid format') unless tsv_data.is_a?(Array)
 
     # 2. The table's column names are "Key Concept", "Grade", and "Reason"
-    return [false, 'incorrect column names'] unless tsv_data.all? {|row| (row.keys & expected_columns) == expected_columns}
+    raise InvalidResponseError.new('incorrect column names') unless tsv_data.all? {|row| (row.keys & expected_columns) == expected_columns}
 
     # 3. The Key Concept column contains one entry for each Key Concept listed in the rubric
     key_concepts_from_response = tsv_data.map {|row| row["Key Concept"]}.uniq
-    return [false, 'invalid or missing key concept'] unless rubric_key_concepts.sort == key_concepts_from_response.sort
+    raise InvalidResponseError.new('invalid or missing key concept') unless rubric_key_concepts.sort == key_concepts_from_response.sort
 
     # 4. All entries in the Grade column are one of the valid values
-    return [false, 'invalid grade value'] unless tsv_data.all? {|row| VALID_GRADES.include?(row["Grade"])}
-
-    [true, nil]
+    raise InvalidResponseError.new('invalid grade value') unless tsv_data.all? {|row| VALID_GRADES.include?(row["Grade"])}
   end
 end
