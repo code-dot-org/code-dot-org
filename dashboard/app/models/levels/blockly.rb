@@ -183,7 +183,7 @@ class Blockly < Level
   def self.convert_toolbox_to_category(xml_string)
     is_google_blockly = false
     google_blockly_namespace = "<xml xmlns=\"https://developers.google.com/blockly/xml\">"
-    if xml_string.include? google_namespace
+    if xml_string.include? google_blockly_namespace
       is_google_blockly = true
       xml_string[google_blockly_namespace] = "<xml>"
     end
