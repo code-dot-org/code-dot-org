@@ -98,7 +98,7 @@ describe('SectionActionDropdown', () => {
       <SectionActionDropdown
         {...DEFAULT_PROPS}
         sectionData={sections[1]}
-        userId={1539347}
+        userId={-1}
       />
     );
     expect(wrapper).to.contain('View Progress');
@@ -117,7 +117,7 @@ describe('SectionActionDropdown', () => {
       <SectionActionDropdown
         {...DEFAULT_PROPS}
         sectionData={sections[0]}
-        userId={1539347}
+        userId={-1}
       />
     );
     expect(wrapper).to.contain('View Progress');
@@ -150,7 +150,7 @@ describe('SectionActionDropdown', () => {
       <SectionActionDropdown
         {...DEFAULT_PROPS}
         sectionData={sections[3]}
-        userId={1539340}
+        userId={90}
       />
     );
     const sectionId = wrapper.instance().props.sectionData.id;
@@ -167,7 +167,7 @@ describe('SectionActionDropdown', () => {
       <SectionActionDropdown
         {...DEFAULT_PROPS}
         sectionData={sections[3]}
-        userId={1539347}
+        userId={-1}
         handleEdit={onEditFunction}
       />
     );

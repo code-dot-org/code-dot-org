@@ -1,6 +1,8 @@
 @no_mobile
 Feature: Using the assessments tab in the teacher dashboard
 
+  @skip
+  # TODO TEACH-509: Reenable with new section setup flow
   Scenario: Assessments tab survey submissions
     Given I create an authorized teacher-associated student named "Sally"
     And I submit the assessment on "http://studio.code.org/s/csp-post-survey/lessons/1/levels/1/page/6"

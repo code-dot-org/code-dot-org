@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "csc-mappinglandmarks",
-    "serialized_at": "2023-05-04 15:40:10 UTC",
+    "serialized_at": "2023-05-30 23:22:04 UTC",
     "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -2080,83 +2080,103 @@
   ],
   "objectives": [
     {
-      "key": "080a5204-8346-4ff4-9203-b779c67be2bc",
+      "key": "1a27b887-2aa2-4f1b-8137-85395c9d1db8",
       "properties": {
-        "description": "Students will learn the basics of Sprite Lab by creating multiple sprites, changing their location, setting their size property, making the sprite “speak,” assigning a behavior, and using the `when touches` event to make their program interactive."
-      },
-      "seeding_key": {
-        "lesson.key": "US Landmarks",
-        "objective.key": "080a5204-8346-4ff4-9203-b779c67be2bc"
-      }
-    },
-    {
-      "key": "4cd30fb3-8178-41f4-91b4-88fca7538c9e",
-      "properties": {
-        "description": "Students will use cardinal directions to navigate a map."
-      },
-      "seeding_key": {
-        "lesson.key": "US Landmarks",
-        "objective.key": "4cd30fb3-8178-41f4-91b4-88fca7538c9e"
-      }
-    },
-    {
-      "key": "b3fc8e73-7d09-48b5-820c-2cc6c3674637",
-      "properties": {
-        "description": "Students will write a plan for their digital mapping landmarks project."
+        "description": "Reflect on the role of a map maker to develop a deeper appreciation for the purpose and value of maps as tools for understanding the world around them."
       },
       "seeding_key": {
         "lesson.key": "Local Landmarks - Unplugged Project Planning",
-        "objective.key": "b3fc8e73-7d09-48b5-820c-2cc6c3674637"
+        "objective.key": "1a27b887-2aa2-4f1b-8137-85395c9d1db8"
       }
     },
     {
-      "key": "b40d5d58-f5eb-4a1a-8cbd-2c203dabc03a",
+      "key": "2a8ffef0-4b21-4dad-99b2-2cd1e48dbcbb",
       "properties": {
-        "description": "Use strategies for an effective presentation. "
+        "description": "Identify ways in which maps can vary based on the mapmaker's decisions."
+      },
+      "seeding_key": {
+        "lesson.key": "Local Landmarks - Coding Your Project",
+        "objective.key": "2a8ffef0-4b21-4dad-99b2-2cd1e48dbcbb"
+      }
+    },
+    {
+      "key": "46412626-979f-4311-a180-f4e43809b4db",
+      "properties": {
+        "description": "Demonstrate geographic knowledge, coding skills and creativity by coding an interactive map with personally relevant and important landmarks. "
+      },
+      "seeding_key": {
+        "lesson.key": "Local Landmarks - Coding Your Project",
+        "objective.key": "46412626-979f-4311-a180-f4e43809b4db"
+      }
+    },
+    {
+      "key": "80a85b7e-ae26-4786-98ed-9632de96ea24",
+      "properties": {
+        "description": "Given a series of maps showing different components, students will analyze and compare the different purposes of each map. "
+      },
+      "seeding_key": {
+        "lesson.key": "US Landmarks",
+        "objective.key": "80a85b7e-ae26-4786-98ed-9632de96ea24"
+      }
+    },
+    {
+      "key": "829ee795-fac0-4509-8b25-cd11f443e52e",
+      "properties": {
+        "description": "Practice effective presentation strategies when showcasing the tour guide app to peers, including clear communication of implemented features, the purpose, and the significance of the project. "
       },
       "seeding_key": {
         "lesson.key": "Project Share Out",
-        "objective.key": "b40d5d58-f5eb-4a1a-8cbd-2c203dabc03a"
+        "objective.key": "829ee795-fac0-4509-8b25-cd11f443e52e"
       }
     },
     {
-      "key": "cab7afb5-f6c7-49f0-b52d-e63dafc3af4a",
+      "key": "84fb7001-86ee-4932-8d58-b6122037e146",
       "properties": {
-        "description": "Students will use maps and other simple geographic models to identify cultural and environmental characteristics of places."
+        "description": "Learn the basics of Sprite Lab by creating multiple sprites, changing their location, setting their size property, making the sprite “speak,” assigning a behavior, and using the when touches event to make their program interactive."
+      },
+      "seeding_key": {
+        "lesson.key": "US Landmarks",
+        "objective.key": "84fb7001-86ee-4932-8d58-b6122037e146"
+      }
+    },
+    {
+      "key": "ac701f5c-93be-48e3-b614-d5be26d5b11d",
+      "properties": {
+        "description": "Reflect on the coding process of creating a digital map, highlighting successes, challenges, and lessons learned."
+      },
+      "seeding_key": {
+        "lesson.key": "Project Share Out",
+        "objective.key": "ac701f5c-93be-48e3-b614-d5be26d5b11d"
+      }
+    },
+    {
+      "key": "ade6631d-16d1-43dd-a955-09eba7039e81",
+      "properties": {
+        "description": "Write thoughtful observations and provide constructive evaluations of peer projects, offering feedback and suggestions for improvement. "
+      },
+      "seeding_key": {
+        "lesson.key": "Project Share Out",
+        "objective.key": "ade6631d-16d1-43dd-a955-09eba7039e81"
+      }
+    },
+    {
+      "key": "f625be86-4b66-4421-8a7c-f724fd230eb5",
+      "properties": {
+        "description": "Incorporate text explanations within the interactive map to communicate the significance of landmarks."
+      },
+      "seeding_key": {
+        "lesson.key": "Local Landmarks - Coding Your Project",
+        "objective.key": "f625be86-4b66-4421-8a7c-f724fd230eb5"
+      }
+    },
+    {
+      "key": "fdb3a900-9efd-4710-8096-6108ed735cb6",
+      "properties": {
+        "description": "Use decomposition by breaking down their digital mapping landmarks project into smaller tasks as they plan their map project."
       },
       "seeding_key": {
         "lesson.key": "Local Landmarks - Unplugged Project Planning",
-        "objective.key": "cab7afb5-f6c7-49f0-b52d-e63dafc3af4a"
-      }
-    },
-    {
-      "key": "d01d5982-2f53-4d84-a553-63093a58c8ac",
-      "properties": {
-        "description": "Understand the power of using code to make a map interactive"
-      },
-      "seeding_key": {
-        "lesson.key": "Project Share Out",
-        "objective.key": "d01d5982-2f53-4d84-a553-63093a58c8ac"
-      }
-    },
-    {
-      "key": "e97f5b17-1c05-4ad3-8a3d-b84b85e4df1a",
-      "properties": {
-        "description": "Students will create a digital map of an area with key landmarks. "
-      },
-      "seeding_key": {
-        "lesson.key": "Local Landmarks - Coding Your Project",
-        "objective.key": "e97f5b17-1c05-4ad3-8a3d-b84b85e4df1a"
-      }
-    },
-    {
-      "key": "f908e942-e501-4ad4-8946-36c717955216",
-      "properties": {
-        "description": "Students will use text to explain the importance and/or significance of landmarks in the area. "
-      },
-      "seeding_key": {
-        "lesson.key": "Local Landmarks - Coding Your Project",
-        "objective.key": "f908e942-e501-4ad4-8946-36c717955216"
+        "objective.key": "fdb3a900-9efd-4710-8096-6108ed735cb6"
       }
     }
   ],

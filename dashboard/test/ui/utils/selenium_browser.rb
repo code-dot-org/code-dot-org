@@ -41,7 +41,7 @@ module SeleniumBrowser
       if (msg = exception.message.match(/unexpected response, code=(?<code>\d+).*\n(?<error>.*)/))
         error = msg[:error]
         error = JSON.parse(error)['value']['error'] rescue error
-        exception.message.replace("Error #{msg[:code]}: #{error}")
+        raise exception, "Error #{msg[:code]}: #{error}", exception.backtrace
       end
       raise
     end

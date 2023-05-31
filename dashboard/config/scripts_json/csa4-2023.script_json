@@ -12,11 +12,12 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-05-15 14:56:17 UTC",
+    "serialized_at": "2023-05-25 13:34:12 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -8088,7 +8089,7 @@
     },
     {
       "name": "The equals() Method",
-      "url": "https://youtu.be/F1WhwH4abX4",
+      "url": "https://youtu.be/60JCBG05Sac",
       "key": "the_equals_method",
       "properties": {
         "audience": "Student",

@@ -12,6 +12,7 @@ import Spinner from '../../components/spinner';
 import SessionListFormPart from './session_list_form_part';
 import FacilitatorListFormPart from './facilitator_list_form_part';
 import OrganizerFormPart from './organizer_form_part';
+/* eslint-disable no-restricted-imports */
 import {
   Grid,
   Row,
@@ -26,6 +27,7 @@ import {
   Radio,
   Alert,
 } from 'react-bootstrap';
+/* eslint-enable no-restricted-imports */
 import {TIME_FORMAT, DATE_FORMAT, DATETIME_FORMAT} from '../workshopConstants';
 import {
   PermissionPropType,
