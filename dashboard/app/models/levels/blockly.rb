@@ -189,7 +189,7 @@ class Blockly < Level
     end
     xml = Nokogiri::XML(xml_string, &:noblanks)
     tag = Blockly.field_or_title(xml)
-    return xml_string if xml.nil? || xml.xpath('/xml/block[@type="category"]').empty?
+    return xml_string if xml.nil? || (xml.xpath('/xml/block[@type="category"]').empty? && xml.xpath('xml/block[@type="custom_category"]').empty?)
     default_category = category_node = Nokogiri::XML("<category name='Default'>").child
     xml.child << default_category
     xml.xpath('/xml/block').each do |block|
