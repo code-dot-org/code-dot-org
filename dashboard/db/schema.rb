@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_05_30_160952) do
+ActiveRecord::Schema.define(version: 2023_05_30_215538) do
 
   create_table "activities", id: :integer, charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -757,7 +757,7 @@ ActiveRecord::Schema.define(version: 2023_05_30_160952) do
 
   create_table "lti_integrations", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
     t.string "name"
-    t.string "platform_id", limit: 32, null: false
+    t.string "platform_id", limit: 36, null: false
     t.string "issuer", null: false
     t.string "client_id", null: false
     t.string "platform_name", null: false
