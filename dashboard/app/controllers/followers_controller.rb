@@ -70,7 +70,10 @@ class FollowersController < ApplicationController
   end
 
   private def followers_params(user_type)
-    allowed_params = params[:user].permit([:name, :password, :gender, :age, :email, :hashed_email])
+    allowed_params = params[:user].permit(
+      [:name, :password, :gender, :age, :email, :hashed_email, :us_state,
+       :country_code]
+    )
     if user_type == User::TYPE_TEACHER
       allowed_params.merge(params[:user].permit([:school, :full_address]))
     end

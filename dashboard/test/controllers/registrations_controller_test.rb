@@ -556,4 +556,17 @@ class RegistrationsControllerTest < ActionController::TestCase
     assert_select "a[href=?]", "/users/sign_in?user_return_to=%2Fusers%2Fedit"
     assert_select "a[href=?]", "/users/sign_up?user_return_to=%2Fusers%2Fedit"
   end
+
+  test "the us_state and country_code attributes can be set and updated" do
+    user = create :student, us_state: "CO", country_code: "US"
+    assert_equal "CO", user.us_state
+    assert_equal "US", user.country_code
+    sign_in user
+
+    put :update, params: {user: {us_state: "??", country_code: "PR"}}
+    user.reload
+    assert_response :redirect
+    assert_equal "??", user.us_state
+    assert_equal "PR", user.country_code
+  end
 end

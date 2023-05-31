@@ -93,6 +93,7 @@ class User < ApplicationRecord
   #     of the data transfer agreement string the user to agreed to, for a given
   #     data_transfer_agreement_source.  This value should be bumped each time
   #     the corresponding user-facing string is updated.
+  #   us_state: A 2 letter code United States state code the user has given us.
   serialized_attrs %w(
     ops_first_name
     ops_last_name
@@ -120,6 +121,8 @@ class User < ApplicationRecord
     section_attempts_last_reset
     share_teacher_email_regional_partner_opt_in
     last_verified_captcha_at
+    us_state
+    country_code
   )
 
   attr_accessor(
@@ -249,6 +252,8 @@ class User < ApplicationRecord
   before_validation on: :create, if: -> {gender.present?} do
     self.gender = Policies::Gender.normalize gender
   end
+
+  validate :validate_us_state, on: :create
 
   def save_email_preference
     if teacher?
@@ -2586,5 +2591,42 @@ class User < ApplicationRecord
   private def validate_parent_email
     errors.add(:parent_email) unless parent_email.nil? ||
       Cdo::EmailValidator.email_address?(parent_email)
+  end
+
+  US_STATE_DROPDOWN_OPTIONS = {
+    '??' => I18n.t('signup_form.us_state_dropdown_options.not_a_state'),
+    'AL' => 'Alabama', 'AK' => 'Alaska', 'AZ' => 'Arizona', 'AR' => 'Arkansas',
+    'CA' => 'California', 'CO' => 'Colorado', 'CT' => 'Connecticut',
+    'DE' => 'Delaware', 'FL' => 'Florida', 'GA' => 'Georgia', 'HI' => 'Hawaii',
+    'ID' => 'Idaho', 'IL' => 'Illinois', 'IN' => 'Indiana', 'IA' => 'Iowa',
+    'KS' => 'Kansas', 'KY' => 'Kentucky', 'LA' => 'Louisiana', 'ME' => 'Maine',
+    'MD' => 'Maryland', 'MA' => 'Massachusetts', 'MI' => 'Michigan',
+    'MN' => 'Minnesota', 'MS' => 'Mississippi', 'MO' => 'Missouri',
+    'MT' => 'Montana', 'NE' => 'Nebraska', 'NV' => 'Nevada',
+    'NH' => 'New Hampshire', 'NJ' => 'New Jersey', 'NM' => 'New Mexico',
+    'NY' => 'New York', 'NC' => 'North Carolina', 'ND' => 'North Dakota',
+    'OH' => 'Ohio', 'OK' => 'Oklahoma', 'OR' => 'Oregon',
+    'PA' => 'Pennsylvania', 'RI' => 'Rhode Island', 'SC' => 'South Carolina',
+    'SD' => 'South Dakota', 'TN' => 'Tennessee', 'TX' => 'Texas',
+    'UT' => 'Utah', 'VT' => 'Vermont', 'VA' => 'Virginia', 'WA' => 'Washington',
+    'WV' => 'West Virginia', 'WI' => 'Wisconsin', 'WY' => 'Wyoming'
+  }
+
+  # Verifies that the serialized attribute "us_state" is a 2 character string
+  # representing a US State or "??" which represents a "N/A" kind of response.
+  private def validate_us_state
+    # tracking a user's US State is currently limited to students.
+    return unless user_type == TYPE_STUDENT
+    # us_state is only a required field if the User lives in the US.
+    return unless %w[US RD].include? country_code
+    # us_state must be selected.
+    if us_state.blank?
+      errors.add(:us_state, :blank)
+      return
+    end
+    # Report an error if an invalid value was submitted (probably tampering).
+    unless US_STATE_DROPDOWN_OPTIONS.include?(us_state)
+      errors.add(:us_state, :invalid)
+    end
   end
 end
