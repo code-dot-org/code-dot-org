@@ -3694,6 +3694,7 @@ class UserTest < ActiveSupport::TestCase
         hashed_email: @student.hashed_email,
         user_type: @student.user_type,
         gender: @student.gender,
+        gender_teacher_input: nil,
         birthday: @student.birthday,
         secret_words: @student.secret_words,
         secret_picture_name: @student.secret_picture.name,
