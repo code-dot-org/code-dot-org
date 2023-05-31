@@ -513,3 +513,31 @@ en:
           description_student: "**You will:**\n\n* Prepare to teach CS Discoveries.\n* Practice key concepts in the CS Discoveries curriculum.\n* Grow in your understanding of equitable CS education. \n* Develop empathy for the student experience. \n* Become a part of a network of teachers who are doing similar work."
           description_teacher: "**Participants will:**\n\n* Prepare to teach CS Discoveries.\n* Practice key concepts in the CS Discoveries curriculum.\n* Grow in their understanding of equitable CS education. \n* Develop empathy for the student experience. \n* Become a part of a network of teachers who are doing similar work."
           version_title: ''
+        self-paced-pl-csp-2023:
+          title: Teaching CS Principles
+          description_short: ''
+          description_student: |-
+            ## Welcome
+
+            ##### Welcome to Code.org's free self-paced online modules for educators to get started teaching CS Principles! After completing these online modules, you'll be ready to get started teaching Code.org’s Computer Science Principles course with your students.
+
+            ###Find the learning that works for you
+
+            ##### **Go at your own pace**: These self-paced modules are designed to put you in the driver's seat and give you control over your own learning. Suggested times are given for each module and lesson. However, we encourage you to engage with the content at your own pace.
+
+            ### Pick your content
+
+            ##### The content of these professional learning modules is organized in the suggested progression for teachers new to both Code.org and CS Principles. However, you can engage with the content in the order that best meets your needs. We recommend all teachers start with the short welcome unit to learn more about these professional learning modules before getting started.
+          description_teacher: |-
+            ## Welcome
+
+            ##### Welcome to Code.org's free self-paced online modules for educators to get started teaching CS Principles! After completing these online modules, you'll be ready to get started teaching Code.org’s Computer Science Principles course with your students.
+
+            ###Find the learning that works for you
+
+            ##### **Go at your own pace**: These self-paced modules are designed to put you in the driver's seat and give you control over your own learning. Suggested times are given for each module and lesson. However, we encourage you to engage with the content at your own pace.
+
+            ### Pick your content
+
+            ##### The content of these professional learning modules is organized in the suggested progression for teachers new to both Code.org and CS Principles. However, you can engage with the content in the order that best meets your needs. We recommend all teachers start with the short welcome unit to learn more about these professional learning modules before getting started.
+          version_title: 22-23

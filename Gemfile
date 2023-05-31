@@ -19,7 +19,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-gem 'rails', '6.1.4.7'
+gem 'rails', '~> 6.1'
 gem 'rails-controller-testing', '~> 1.0.5'
 
 # Compile Sprockets assets concurrently in `assets:precompile`.
@@ -122,8 +122,6 @@ gem 'factory_bot_rails', '~> 6.2', group: [:development, :staging, :test, :adhoc
 # For pegasus PDF generation.
 gem 'open_uri_redirections', require: false
 
-# Ref: https://github.com/tmm1/gctools/pull/17
-gem 'gctools', github: 'wjordan/gctools', ref: 'ruby-2.5'
 # Optimizes copy-on-write memory usage with GC before web-application fork.
 gem 'nakayoshi_fork'
 

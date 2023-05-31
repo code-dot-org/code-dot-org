@@ -62,6 +62,7 @@ import {
   setProjectUpdatedSaving,
 } from '../../code-studio/projectRedux';
 import {ProjectManagerEvent} from '../../labs/projects/ProjectManager';
+import {logError} from '../utils/MusicMetrics';
 
 /**
  * Top-level container for Music Lab. Manages all views on the page as well as the
@@ -217,6 +218,7 @@ class UnconnectedMusicView extends React.Component {
           document.getElementById('blockly-div'),
           this.onBlockSpaceChange,
           this.player,
+          this.getStartSources(),
           this.progressManager?.getCurrentStepDetails().toolbox,
           this.props.currentLevelId,
           this.props.currentScriptId,
@@ -401,6 +403,7 @@ class UnconnectedMusicView extends React.Component {
       if (this.props.currentLevelId) {
         // Change levels for the projects system. Only do this if we have a level.
         await this.musicBlocklyWorkspace.changeLevels(
+          this.getStartSources(),
           this.props.currentLevelId,
           this.props.currentScriptId
         );
@@ -454,7 +457,7 @@ class UnconnectedMusicView extends React.Component {
         levelCount = result.levelCount;
       } catch (e) {
         this.props.setIsPageError(true);
-        console.error(e, e.stack);
+        logError(e);
       }
 
       if (this.hasLevels()) {
@@ -470,9 +473,18 @@ class UnconnectedMusicView extends React.Component {
   };
 
   clearCode = () => {
-    this.musicBlocklyWorkspace.loadDefaultCode();
+    this.musicBlocklyWorkspace.setStartSources(this.getStartSources());
 
     this.setPlaying(false);
+  };
+
+  getStartSources = () => {
+    if (this.hasProgression()) {
+      return this.progressManager.getProgressionStep().startSources;
+    } else {
+      const startSourcesFilename = 'startSources' + getBlockMode();
+      return require(`@cdo/static/music/${startSourcesFilename}.json`);
+    }
   };
 
   onBlockSpaceChange = e => {
@@ -539,10 +551,17 @@ class UnconnectedMusicView extends React.Component {
       return;
     }
     this.analyticsReporter.onButtonClicked('trigger', {id});
-    const currentPosition = this.player.getCurrentPlayheadPosition();
+    const triggerStartPosition =
+      this.musicBlocklyWorkspace.getTriggerStartPosition(
+        id,
+        this.player.getCurrentPlayheadPosition()
+      );
+    if (!triggerStartPosition) {
+      return;
+    }
 
     this.sequencer.clear();
-    this.musicBlocklyWorkspace.executeTrigger(id, currentPosition);
+    this.musicBlocklyWorkspace.executeTrigger(id, triggerStartPosition);
     const playbackEvents = this.sequencer.getPlaybackEvents();
     this.props.addPlaybackEvents({
       events: playbackEvents,
@@ -552,7 +571,7 @@ class UnconnectedMusicView extends React.Component {
 
     this.playingTriggers.push({
       id,
-      startPosition: currentPosition,
+      startPosition: triggerStartPosition,
     });
   };
 
