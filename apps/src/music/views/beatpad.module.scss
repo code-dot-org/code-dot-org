@@ -9,6 +9,7 @@
   flex-direction: column;
   border: $neutral_dark90 solid;
   border-radius: $default-border-radius;
+  height: 35px;
 }
 
 .labelContainer {
@@ -37,9 +38,10 @@
   /* padding: 10px; */
   /*justify-content: space-between; */
   padding-right: 20px;
-  position: absolute;
+  /* position: absolute; */
   right: 0px;
   top: 3px;
+  height: 35px;
 }
 
 .triggerButtonRow {
@@ -81,9 +83,22 @@ $hover-opacity: 0.5;
   line-height: 32px;
   flex: 1;
   margin-right: 10px;
+  border-width: 3px;
+
+  &.greenTrigger {
+    cursor: pointer;
+    border-color: #00bc3e;
+    /*background-color: #b0e4b5;*/
+    background-color: #00bc3e;
+    color: white;
+  }
 
   &.purple {
     @include enabled-trigger($purple);
+  }
+
+  &.selected {
+    border-color: #fc3;
   }
 
   &.strawberry {

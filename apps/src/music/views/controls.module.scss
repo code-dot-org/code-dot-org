@@ -11,6 +11,8 @@
   border-radius: $default-border-radius;
   margin: $default-spacing 0;
   position: relative;
+  padding: 10px;
+  flex-direction: column;
 }
 
 .section {
@@ -18,6 +20,7 @@
   text-align: center;
   align-items: center;
   justify-content: center;
+  margin-bottom: 10px;
 
   &Side {
     flex: 0;
@@ -31,13 +34,25 @@
 .controlButton {
   text-align: center;
   color: $neutral_light;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  border: initial;
+  margin: 0px;
+
+  &:active {
+    border: initial !important;
+  }
 
   &Run {
     display: flex;
     align-items: center;
-    background-color: $brand_secondary_default;
+    /*background-color: $brand_secondary_default;*/
     font-size: 14px;
     padding: 5px 10px;
+    background-color: #fca401;
+    border-radius: 8px;
+    height: 38px;
 
     .text {
       padding-left: 10px;
