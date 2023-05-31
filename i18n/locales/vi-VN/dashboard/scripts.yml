@@ -73,6 +73,7 @@ vi:
           description_short: Khóa học 20 giờ này bao gồm khoa học máy tính và các khái niệm lập trình cốt lõi trong các khóa học từ 2-4.
           description_audience: Lứa tuổi 10 + (sau khóa học 3)
           student_description: Khóa học 20-giờ sẽ giới thiệu mục đích ngành khoa học máy tính và các khái niệm lập trình. Khóa học được soạn cho các lớp K-8, tuy nhiên nó khá thú vị để tìm hiểu ở tất cả các lứa tuổi.
+          name: 20 giờ
         edit-code:
           title: Hiệu chỉnh mã
           description: Hiệu chỉnh mã
@@ -3180,6 +3181,8 @@ vi:
           lesson_groups:
             lessonGroup-5:
               display_name: Khảo sát
+        ai-temp:
+          title: Cách thức hoạt động của AI
         self-paced-pl-csd1-2023:
           lesson_groups:
             lessonGroup-2:
