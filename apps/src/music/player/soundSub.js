@@ -1,3 +1,4 @@
+import {logError} from '../utils/MusicMetrics';
 import SoundEffects from './soundEffects';
 
 // audio
@@ -39,7 +40,7 @@ function WebAudio() {
   try {
     audioContext = createAudioContext(48000);
   } catch (e) {
-    console.log('Web Audio API is not supported in this browser');
+    logError('Web Audio API is not supported in this browser');
     audioContext = null;
     return;
   }
@@ -60,8 +61,6 @@ WebAudio.prototype.LoadSound = function (url, callback) {
   request.open('GET', url, true);
   request.responseType = 'arraybuffer';
 
-  //console.log("loading sound", url);
-
   // Decode asynchronously
   request.onload = function () {
     try {
@@ -71,11 +70,11 @@ WebAudio.prototype.LoadSound = function (url, callback) {
           callback(buffer);
         },
         function (e) {
-          console.log('error ' + e);
+          logError(e);
         }
       );
     } catch (e) {
-      console.log('failed to decode');
+      logError(e);
     }
   };
   request.send();
@@ -93,7 +92,7 @@ WebAudio.prototype.LoadSoundFromBuffer = function (buffer, callback) {
       }
     );
   } catch (e) {
-    console.log('failed to decode', e);
+    logError(e);
   }
 };
 

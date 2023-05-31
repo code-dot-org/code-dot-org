@@ -6,10 +6,10 @@
     "background": "music-black",
     "level_data": {
       "text": "Try everything!",
-        "starterCode": {
+      "startSources": {
         "blocks": {
           "languageVersion": 0,
-          "blocks": [{"type": "when_run_simple2", "x": 30, "y": 30}]
+          "blocks": [{"type": "when_run_simple2", "x": 36, "y": 36}]
         },
         "variables": [{"name": "currentTime"}, {"name": "i"}]
       }

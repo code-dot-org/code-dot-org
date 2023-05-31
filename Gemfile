@@ -19,7 +19,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-gem 'rails', '6.1.4.7'
+gem 'rails', '~> 6.1'
 gem 'rails-controller-testing', '~> 1.0.5'
 
 # Compile Sprockets assets concurrently in `assets:precompile`.
@@ -106,10 +106,10 @@ group :development, :test do
   gem 'net-http-persistent'
   gem 'rinku'
   gem 'rspec'
-  gem 'selenium-webdriver', '3.141.0'
+  gem 'selenium-webdriver', '~> 4.2.0' # 4.x is required for Ruby 3 support; <4.3 required for Http:Persistent to not be deprecated yet
   gem 'spring', '~> 3.1.1'
   gem 'spring-commands-testunit'
-  gem 'webdrivers', '~> 3.0'
+  gem 'webdrivers', '~> 4.7' # 4.7 required for selenium 4.x
 
   # For pegasus PDF generation / merging testing.
   gem 'parallel_tests'
@@ -122,8 +122,6 @@ gem 'factory_bot_rails', '~> 6.2', group: [:development, :staging, :test, :adhoc
 # For pegasus PDF generation.
 gem 'open_uri_redirections', require: false
 
-# Ref: https://github.com/tmm1/gctools/pull/17
-gem 'gctools', github: 'wjordan/gctools', ref: 'ruby-2.5'
 # Optimizes copy-on-write memory usage with GC before web-application fork.
 gem 'nakayoshi_fork'
 # Ref: https://github.com/puma/puma/pull/1646

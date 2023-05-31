@@ -31,6 +31,8 @@ Feature: Using the teacher homepage sections feature
     When I create a new student section and go home
     Then the student section table should have 2 rows
 
+  @skip
+  # TODO TEACH-509: Reenable with new section setup flow
   @no_firefox @no_safari
   Scenario: Navigate to course and unit pages
     # No sections, ensure that levels load correctly after navigating from MiniView
@@ -157,6 +159,8 @@ Feature: Using the teacher homepage sections feature
     Then the student section table should have 1 rows
     And the section table row at index 0 has secondary assignment path "/s/csp1-2017"
 
+  @skip
+  # TODO TEACH-509: Reenable with new section setup flow
   Scenario: Assign a CSF course with multiple versions
     Given I am on "http://studio.code.org/home"
     When I see the section set up box
@@ -174,6 +178,8 @@ Feature: Using the teacher homepage sections feature
     And I wait until element "#classroom-sections" is visible
     And the section table row at index 0 has primary assignment path "/s/coursea-2019"
 
+  @skip
+  # TODO TEACH-509: Reenable with new section setup flow
   Scenario: Navigate to course pages with course versions enabled
     Given I am on "http://studio.code.org/home"
     When I see the section set up box

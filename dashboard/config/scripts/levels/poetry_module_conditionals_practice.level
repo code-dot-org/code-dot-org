@@ -1,5 +1,6 @@
 <Poetry>
   <config><![CDATA[{
+  "published": true,
   "game_id": 69,
   "created_at": "2021-10-13T14:35:46.000Z",
   "level_num": "custom",
@@ -46,8 +47,7 @@
     "encrypted_examples": "BA4UPhKAKZYgeu810wL8KW8aZqqGjTze93MzG/fzVT9YhzbrfZ3Ui3XBETgS\nYDePttGo6id9/VRscXZlrKCmng==\n",
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2021-10-13T14:35:46.344+00:00\",\"changed\":[\"cloned from \\\"poetry_module_conditionals_freeplay\\\"\"],\"cloned_from\":\"poetry_module_conditionals_freeplay\"},{\"changed_at\":\"2021-10-13 14:44:46 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"callout_json\",\"long_instructions\",\"instructions_icon\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-13 14:47:12 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-28 15:43:28 +0000\",\"changed\":[\"name\",\"start_blocks\",\"toolbox_blocks\",\"default_poem\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-29 16:27:50 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-29 16:28:47 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"preload_asset_list\",\"default_poem\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-29 19:36:09 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"hide_share_and_remix\",\"preload_asset_list\",\"default_poem\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-11-05 20:42:10 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16435,\"changed_by_email\":\"katleiah+test@code.org\"},{\"changed_at\":\"2021-11-15 18:26:40 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"default_poem\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-11-15 19:13:23 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"use_default_sprites\",\"preload_asset_list\",\"default_poem\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-11-19 20:15:40 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"default_poem\",\"contained_level_names\"],\"changed_by_id\":8945,\"changed_by_email\":\"debbie.spear@code.org\"},{\"changed_at\":\"2021-11-23 23:14:35 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"default_poem\",\"contained_level_names\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-11-23 23:15:05 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"default_poem\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2023-05-23 04:39:22 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18596,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2021-10-13T14:35:46.344+00:00\",\"changed\":[\"cloned from \\\"poetry_module_conditionals_freeplay\\\"\"],\"cloned_from\":\"poetry_module_conditionals_freeplay\"},{\"changed_at\":\"2021-10-13 14:44:46 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"callout_json\",\"long_instructions\",\"instructions_icon\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-13 14:47:12 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-28 15:43:28 +0000\",\"changed\":[\"name\",\"start_blocks\",\"toolbox_blocks\",\"default_poem\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-29 16:27:50 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-29 16:28:47 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"preload_asset_list\",\"default_poem\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-29 19:36:09 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"hide_share_and_remix\",\"preload_asset_list\",\"default_poem\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-11-05 20:42:10 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16435,\"changed_by_email\":\"katleiah+test@code.org\"},{\"changed_at\":\"2021-11-15 18:26:40 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"default_poem\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-11-15 19:13:23 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"use_default_sprites\",\"preload_asset_list\",\"default_poem\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-11-19 20:15:40 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"default_poem\",\"contained_level_names\"],\"changed_by_id\":8945,\"changed_by_email\":\"debbie.spear@code.org\"},{\"changed_at\":\"2021-11-23 23:14:35 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"default_poem\",\"contained_level_names\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-11-23 23:15:05 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"default_poem\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2023-05-23 04:39:22 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18596,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-23 17:07:52 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\",\"available_poems\"],\"changed_by_id\":18596,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-23 17:23:23 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18596,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-25 13:29:41 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\",\"available_poems\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -59,194 +59,185 @@
       </xml>
     </start_blocks>
     <toolbox_blocks>
-      <xml xmlns="https://developers.google.com/blockly/xml">
-        <variables>
-          <variable id="+`l|iF$JsUXTh/bVEo$x">???</variable>
-        </variables>
-        <block type="category" id="HJ*3K_sh0vJ4GXeCij-|" x="20" y="16">
-          <field name="CATEGORY">Events</field>
-        </block>
-        <block type="Poetry_whenLineShows" id="jkCz(sMR#}Ws=e4@;kJJ" x="16" y="54">
-          <field name="N">0</field>
-        </block>
-        <block type="gamelab_whenAllPromptsAnswered" id="jlOf)6eEW0=)2yX/DH`W" x="16" y="96"/>
-        <block type="category" id="[8t^u,nGH^bh$ej?C!7;" x="20" y="138">
-          <field name="CATEGORY">Text</field>
-        </block>
-        <block type="Poetry_setTitle" id="MJuaXyS=WdiyV2+QiVAC" x="16" y="176">
-          <value name="TITLE">
-            <shadow type="text" id="p2Eq+,~qx+D|ZDlr0dby">
-              <field name="TEXT"/>
-            </shadow>
-            <block type="gamelab_textJoin" id=")LdztsX3{R/xuD}(#{E)">
-              <field name="TEXT1"/>
-            </block>
-          </value>
-        </block>
-        <block type="Poetry_setAuthor" id="$;48PdArc}D5COHjQrD_" x="16" y="218">
-          <value name="AUTHOR">
-            <shadow type="text" id="C1;zwnWg?(T$qpJcv_N|">
-              <field name="TEXT"/>
-            </shadow>
-            <block type="gamelab_textJoin" id="`t!M=]h.@alT%1MU[P-g">
-              <field name="TEXT1"/>
-            </block>
-          </value>
-        </block>
-        <block type="Poetry_addLine" id="ro9Rlsxc4)Vo=yXIfA63" x="16" y="260">
-          <value name="LINE">
-            <shadow type="text" id="SKDVn)@yT|4Ing(oBZ:D">
-              <field name="TEXT"/>
-            </shadow>
-            <block type="gamelab_textJoin" id="Rp2c}Etbh[tztY~Wt@F%">
-              <field name="TEXT1"/>
-            </block>
-          </value>
-        </block>
-        <block type="Poetry_animateText" id="vddDvI92?Z6_-aHr(+:{" x="16" y="302"/>
-        <block type="gamelab_textJoin" id=",%Ep?wNbF*RX,+S_d1ku" x="16" y="344">
-          <field name="TEXT1"/>
-        </block>
-        <block type="category" id="EDHX?*tt|SRK(G6/{Xc5" x="20" y="382">
-          <field name="CATEGORY">Variables</field>
-        </block>
-        <block type="gamelab_setPrompt" id="tl.f3Uy]RzMvw#7RxKSq" x="16" y="420">
-          <value name="QUESTION">
-            <shadow type="text" id=".OvoXDF{RHY4fs{NFhZ,">
-              <field name="TEXT"/>
-            </shadow>
-          </value>
-          <value name="VAR">
-            <block type="variables_get" id="OXY]8O+.fow=|eY!h65P" movable="false">
-              <field name="VAR" id="+`l|iF$JsUXTh/bVEo$x">???</field>
-            </block>
-          </value>
-        </block>
-        <block type="gamelab_setPromptWithChoices" id="^7QCMutwdHWJfCWD+[j*" x="16" y="490">
-          <value name="QUESTION">
-            <shadow type="text" id="@QKt?Z-f7*Y(Rg#VlQs?">
-              <field name="TEXT"/>
-            </shadow>
-          </value>
-          <value name="VAR">
-            <block type="variables_get" id="h[s7Uq#p7^GMP@eW9!eM" movable="false">
-              <field name="VAR" id="+`l|iF$JsUXTh/bVEo$x">???</field>
-            </block>
-          </value>
-          <value name="A">
-            <shadow type="Poetry_stringValue" id="5zd?vhsIX3Dg2G`i:18_">
-              <field name="TEXT"/>
-            </shadow>
-          </value>
-          <value name="B">
-            <shadow type="Poetry_stringValue" id="#~o+mVZyiUp8W[4Z9q#T">
-              <field name="TEXT"/>
-            </shadow>
-          </value>
-          <value name="C">
-            <shadow type="Poetry_stringValue" id="hsEK~vP$vg9E?)1e|~PS">
-              <field name="TEXT"/>
-            </shadow>
-          </value>
-        </block>
-        <block type="gamelab_textVariableJoin" id="$N/2V[B^[BRJ}CWMNh;`" x="16" y="644">
-          <field name="VAR" id="+`l|iF$JsUXTh/bVEo$x">???</field>
-        </block>
-        <block type="category" id="}0IE$8|v68w8sRYM=Ut^" x="20" y="682">
-          <field name="CATEGORY">Effects</field>
-        </block>
-        <block type="Poetry_setFont" id="BXzk*Oo7*f[h-/:u$DcT" x="16" y="720">
-          <field name="FONT">"Courier"</field>
-        </block>
-        <block type="Poetry_setFontColor" id="z5AZuwhz4bM|cQ85k76r" x="16" y="762">
-          <value name="FILL">
-            <shadow type="colour_picker" id="J+bgV4fuLn2rdJ-7[CxM">
-              <field name="COLOUR">#99ff99</field>
-            </shadow>
-          </value>
-        </block>
-        <block type="Poetry_setTextEffect" id="3^_4zh;4~A8/);7qBG#u" x="16" y="804">
-          <field name="EFFECT">"fade"</field>
-        </block>
-        <block type="Poetry_addTextHighlight" id="xqpC1Y`7gtiL@2,PXfas" x="16" y="846">
-          <value name="COLOR">
-            <shadow type="colour_picker" id="1@O6#+%JGh{vu(v4S+@g">
-              <field name="COLOUR">#99ff99</field>
-            </shadow>
-          </value>
-        </block>
-        <block type="Poetry_playSound" id="um1MWOO;7]%Ff4s)iYxc" x="16" y="888">
-          <field name="SOUND">"sound://category_bell/long_bell_notification.mp3"</field>
-        </block>
-        <block type="Poetry_playMusic" id="@I2NSJ`Gf-;71e$$ldGd" x="16" y="930">
-          <field name="SOUND">"sound://category_loops/vibrant_game_welcome_to_heaven_loop_1.mp3"</field>
-        </block>
-        <block type="Poetry_setForegroundEffect" id="fLVr0{J7^BGX{47pLv0t" x="16" y="972">
-          <field name="EFFECT">"rain"</field>
-        </block>
-        <block type="Poetry_addFrame" id="`];l,7_Az*h5L=]~;Kfh" x="16" y="1014">
-          <field name="BRUSH">"rainbow"</field>
-        </block>
-        <block type="Poetry_setBackground" id="AZ)67qi!9/rYdsGkO~5E" x="16" y="1056">
-          <value name="COLOR">
-            <shadow type="colour_picker" id="hkI79ANC_0H9uWEIPW%F">
-              <field name="COLOUR">#cc0000</field>
-            </shadow>
-          </value>
-        </block>
-        <block type="Poetry_setBackgroundImageAs" id="0:^VoS1_-~-Fz!%|ECS*" x="16" y="1098">
-          <field name="IMG">"cave"</field>
-        </block>
-        <block type="Poetry_setBackgroundEffect" id="f|.Y[yPDMZM:=V+2}MgR" x="16" y="1172">
-          <field name="EFFECT">"colors"</field>
-          <field name="PALETTE">"grayscale"</field>
-        </block>
-        <block type="category" id="r:k6__Zb8F+P:u5vrRLh" x="20" y="1214">
-          <field name="CATEGORY">Sprites</field>
-        </block>
-        <block type="Poetry_makeNewSpriteAnon" id="b!;j!)bM;WBH#bG`D!{Z" x="16" y="1252">
-          <field name="ANIMATION_NAME">"cloud_single"</field>
-          <field name="LOCATION">{"x":75,"y":200}</field>
-        </block>
-        <block type="Poetry_setSize" id="T()XoUUB/eDsoI#G-G|W" x="16" y="1318">
-          <field name="SPRITE">"cloud_single"</field>
-          <field name="VAL">50</field>
-        </block>
-        <block type="Poetry_startBehavior" id="1HPQ}7wBD]@6b$.QNnqs" x="16" y="1384">
-          <field name="ANIMATION_NAME">"cloud_single"</field>
-          <field name="BEHAVIOR">"fluttering"</field>
-        </block>
-        <block type="Poetry_stopBehavior" id="d(_i`^/HsDo{T$3CKBL^" x="16" y="1450">
-          <field name="ANIMATION_NAME">"cloud_single"</field>
-          <field name="BEHAVIOR">"fluttering"</field>
-        </block>
-        <block type="Poetry_destroy" id="D}6*r2dRThVTIAJvupwF" x="16" y="1516">
-          <field name="ANIMATION_NAME">"cloud_single"</field>
-        </block>
-        <block type="Poetry_makeBurst" id="|QXYkBDf};M{Zy~Jpa29" x="16" y="1582">
-          <field name="EFFECT">"burst"</field>
-          <field name="NUM">10</field>
-          <field name="ANIMATION_NAME">"cloud_single"</field>
-        </block>
-        <block type="Poetry_makeNumSprites" id="Q5=pVo$V(ZPV7VI^hjbV" x="16" y="1648">
-          <field name="NUM">3</field>
-          <field name="ANIMATION_NAME">"cloud_single"</field>
-        </block>
-        <block type="Poetry_glideTo" id="26" x="16" y="1714">
-          <field name="SPRITE">"cloud_single"</field>
-          <field name="LOCATION">{"x": 200, "y": 200}</field>
-        </block>
-        <block type="category" id="Q3#+G|#.x;0ipYFL0=9M" x="20" y="1780">
-          <field name="CATEGORY">Logic</field>
-        </block>
-        <block type="gamelab_ifVarEquals" id="l+{MOF/N4oL#YK=!AZ7F" x="16" y="1818">
-          <field name="NUM" id="+`l|iF$JsUXTh/bVEo$x">???</field>
-          <value name="VAL">
-            <shadow type="Poetry_stringValue" id="l!Mk1OD[Yd,1n!b.cwp^">
-              <field name="TEXT"/>
-            </shadow>
-          </value>
-        </block>
+      <xml>
+        <category name="Events">
+          <block type="Poetry_whenLineShows">
+            <title name="N">0</title>
+          </block>
+          <block type="gamelab_whenAllPromptsAnswered"/>
+        </category>
+        <category name="Text">
+          <block type="Poetry_setTitle">
+            <value name="TITLE">
+              <shadow type="text">
+                <title name="TEXT"/>
+              </shadow>
+              <block type="gamelab_textJoin">
+                <title name="TEXT1"/>
+              </block>
+            </value>
+          </block>
+          <block type="Poetry_setAuthor">
+            <value name="AUTHOR">
+              <shadow type="text">
+                <title name="TEXT"/>
+              </shadow>
+              <block type="gamelab_textJoin">
+                <title name="TEXT1"/>
+              </block>
+            </value>
+          </block>
+          <block type="Poetry_addLine">
+            <value name="LINE">
+              <shadow type="text">
+                <title name="TEXT"/>
+              </shadow>
+              <block type="gamelab_textJoin">
+                <title name="TEXT1"/>
+              </block>
+            </value>
+          </block>
+          <block type="Poetry_animateText"/>
+          <block type="gamelab_textJoin">
+            <title name="TEXT1"/>
+          </block>
+        </category>
+        <category name="Variables">
+          <block type="gamelab_setPrompt">
+            <value name="QUESTION">
+              <shadow type="text" can_disconnect_from_parent="false">
+                <title name="TEXT"/>
+              </shadow>
+            </value>
+            <value name="VAR">
+              <block type="variables_get" movable="false">
+                <title name="VAR">???</title>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_setPromptWithChoices">
+            <value name="QUESTION">
+              <shadow type="text" can_disconnect_from_parent="false">
+                <title name="TEXT"/>
+              </shadow>
+            </value>
+            <value name="VAR">
+              <block type="variables_get" movable="false">
+                <title name="VAR">???</title>
+              </block>
+            </value>
+            <value name="A">
+              <shadow type="Poetry_stringValue" can_disconnect_from_parent="false">
+                <title name="TEXT"/>
+              </shadow>
+            </value>
+            <value name="B">
+              <shadow type="Poetry_stringValue" can_disconnect_from_parent="false">
+                <title name="TEXT"/>
+              </shadow>
+            </value>
+            <value name="C">
+              <shadow type="Poetry_stringValue" can_disconnect_from_parent="false">
+                <title name="TEXT"/>
+              </shadow>
+            </value>
+          </block>
+          <block type="gamelab_textVariableJoin">
+            <title name="VAR">???</title>
+          </block>
+        </category>
+        <category name="Effects">
+          <block type="Poetry_setFont">
+            <title name="FONT">"Courier"</title>
+          </block>
+          <block type="Poetry_setFontColor">
+            <value name="FILL">
+              <shadow type="colour_picker">
+                <title name="COLOUR">#99ff99</title>
+              </shadow>
+            </value>
+          </block>
+          <block type="Poetry_setTextEffect">
+            <title name="EFFECT">"fade"</title>
+          </block>
+          <block type="Poetry_addTextHighlight">
+            <value name="COLOR">
+              <shadow type="colour_picker" can_disconnect_from_parent="false">
+                <title name="COLOUR">#99ff99</title>
+              </shadow>
+            </value>
+          </block>
+          <block type="Poetry_playSound">
+            <title name="SOUND">"sound://category_loops/vibrant_game_welcome_to_heaven_loop_1.mp3"</title>
+          </block>
+          <block type="Poetry_playMusic">
+            <title name="SOUND">"placeholder"</title>
+          </block>
+          <block type="Poetry_setForegroundEffect">
+            <title name="EFFECT">"rain"</title>
+          </block>
+          <block type="Poetry_addFrame">
+            <title name="BRUSH">"rainbow"</title>
+          </block>
+          <block type="Poetry_setBackground">
+            <value name="COLOR">
+              <shadow type="colour_picker">
+                <title name="COLOUR">#cc0000</title>
+              </shadow>
+            </value>
+          </block>
+          <block type="Poetry_setBackgroundImageAs">
+            <title name="IMG">"cave"</title>
+          </block>
+          <block type="Poetry_setBackgroundEffect">
+            <title name="EFFECT">"colors"</title>
+            <title name="PALETTE">"grayscale"</title>
+          </block>
+        </category>
+        <category name="Sprites">
+          <block type="Poetry_makeNewSpriteAnon">
+            <title name="ANIMATION_NAME">"bear"</title>
+            <title name="LOCATION">{"x":75,"y":200}</title>
+          </block>
+          <block type="Poetry_setSize">
+            <title name="SPRITE">"bear"</title>
+            <title name="VAL">50</title>
+          </block>
+          <block type="Poetry_startBehavior">
+            <title name="ANIMATION_NAME">"bear"</title>
+            <title name="BEHAVIOR">fluttering</title>
+          </block>
+          <block type="Poetry_stopBehavior">
+            <title name="ANIMATION_NAME">"bear"</title>
+            <title name="BEHAVIOR">fluttering</title>
+          </block>
+          <block type="Poetry_destroy">
+            <title name="ANIMATION_NAME">"bear"</title>
+          </block>
+          <block type="Poetry_makeBurst">
+            <title name="EFFECT">"burst"</title>
+            <title name="NUM">10</title>
+            <title name="ANIMATION_NAME">"bear"</title>
+          </block>
+          <block type="Poetry_makeNumSprites">
+            <title name="NUM">3</title>
+            <title name="ANIMATION_NAME">"bear"</title>
+          </block>
+          <block type="Poetry_glideTo" id="26">
+            <title name="SPRITE">"night_cloud"</title>
+            <title name="LOCATION">{"x": 200, "y": 200}</title>
+          </block>
+        </category>
+        <category name="Logic">
+          <block type="gamelab_ifVarEquals">
+            <title name="NUM">???</title>
+            <value name="VAL">
+              <shadow type="Poetry_stringValue">
+                <title name="TEXT"/>
+              </shadow>
+            </value>
+          </block>
+        </category>
       </xml>
     </toolbox_blocks>
   </blocks>
