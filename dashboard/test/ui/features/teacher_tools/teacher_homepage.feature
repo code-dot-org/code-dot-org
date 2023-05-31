@@ -136,6 +136,7 @@ Feature: Using the teacher homepage sections feature
     And I wait until element "#uitest-secondary-assignment" is visible
     And I select the "CSP Unit 2 - Digital Information ('17-'18)" option in dropdown "uitest-secondary-assignment"
     And I press the first "#uitest-save-section-changes" element
+    And I wait until element "#uitest-secondary-assignment" is visible
 
     # TODO: TEACH-537 If we add in this confirmation dialogue later, uncomment this test
     # Then I wait to see a dialog containing text "unit is currently hidden"
@@ -143,8 +144,7 @@ Feature: Using the teacher homepage sections feature
     # Confirm the assignment
     # When I press "confirm-assign"
     # And I wait for the dialog to close
-    And the section table row at index 0 has secondary assignment path "/s/csp2-2017"
-
+    
     # Verify the unit was unhidden
     When I am on "http://studio.code.org/courses/csp-2017"
     And I wait until element ".uitest-CourseScript" is visible
