@@ -107,9 +107,9 @@ export default function initializeBlocklyXml(blocklyWrapper) {
 
       if (isNaN(block.y)) {
         block.y = cursor.y + frameSvgTop;
-        cursor.y +=
-          heightWidth.height + verticalSpaceBetweenBlocks + frameSvgSize;
       }
+      cursor.y +=
+        heightWidth.height + verticalSpaceBetweenBlocks + frameSvgSize;
 
       block.blockly_block.moveTo(
         new Blockly.utils.Coordinate(block.x, block.y)
