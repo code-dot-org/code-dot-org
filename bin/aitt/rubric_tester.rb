@@ -42,7 +42,7 @@ def command_line_options
       '-l', '--llm-model MODEL_NAME', String, "Which LLM model to use. Supported models: #{SUPPORTED_MODELS.join(', ')}. Default: gpt-4"
     ) do |model|
       unless SUPPORTED_MODELS.include?(model)
-        raise "Unsupported LLM model: #{model}. Supported models are: #{SUPPORTED_MODELS}"
+        raise "Unsupported LLM model: #{model}. Supported models are: #{SUPPORTED_MODELS.join(', ')}"
       end
       options[:llm_model] = model
     end
@@ -275,6 +275,7 @@ def main
       student_id,
       use_cached: options[:use_cached],
       examples: examples,
+      llm_model: options[:llm_model],
       num_responses: options[:num_responses],
       temperature: options[:temperature]
     )

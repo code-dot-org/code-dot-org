@@ -5,7 +5,7 @@ class Grade
   class InvalidResponseError < StandardError
   end
 
-  def grade_student_work(prompt, rubric, student_code, student_id, use_cached: false, examples: [], num_responses:, temperature:)
+  def grade_student_work(prompt, rubric, student_code, student_id, use_cached: false, examples: [], num_responses:, temperature:, llm_model:)
     if use_cached && File.exist?("cached_responses/#{student_id}.json")
       return JSON.parse(File.read("cached_responses/#{student_id}.json"))
     end
@@ -18,7 +18,7 @@ class Grade
 
     messages = compute_messages(prompt, rubric, student_code, examples: examples)
     data = {
-      model: 'gpt-4',
+      model: llm_model,
       temperature: temperature,
       messages: messages,
       n: num_responses,
