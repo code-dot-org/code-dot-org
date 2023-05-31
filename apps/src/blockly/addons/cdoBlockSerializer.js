@@ -23,7 +23,7 @@ export default class CdoBlockSerializer extends GoogleBlockly.serialization
       } catch (e) {
         console.warn(`Creating "unknown block". ${e.message}`);
         GoogleBlockly.serialization.blocks.append(
-          Object.assign(unknownBlockState, {x: blockState.x, y: blockState.y}),
+          {...unknownBlockState, x: blockState.x, y: blockState.y},
           workspace,
           {
             recordUndo: Blockly.Events.getRecordUndo(),
