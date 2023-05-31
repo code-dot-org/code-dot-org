@@ -3,12 +3,21 @@ import {
   getAuthenticityToken,
 } from './AuthenticityTokenStore';
 
+export type ResponseValidator<ResponseType> = (
+  bodyJson: Record<string, unknown>
+) => ResponseType;
+
+export type GetResponse<ResponseType> = {
+  value: ResponseType;
+  response: Response;
+};
+
 /**
  * Get a JSON response from the given endpoint and
  * return it as the specified type. Can also perform
  * response validation if provided a validator function.
  */
-export async function getJson<ResponseType>(
+async function fetchJson<ResponseType>(
   endpoint: string,
   init?: RequestInit,
   validator?: ResponseValidator<ResponseType>
@@ -19,7 +28,7 @@ export async function getJson<ResponseType>(
   }
 
   const json = await response.json();
-  let value = json;
+  let value: ResponseType = json;
 
   if (validator) {
     value = validator(json);
@@ -35,7 +44,7 @@ export async function getJson<ResponseType>(
  * POST to the given endpoint. Adds the Rails authenticity
  * token if useAuthenticityToken is true.
  */
-export async function post(
+async function post(
   endpoint: string,
   body: string,
   useAuthenticityToken = false,
@@ -46,18 +55,20 @@ export async function post(
     headers[AUTHENTICITY_TOKEN_HEADER] = token;
   }
 
-  return fetch(endpoint, {
+  const response = await fetch(endpoint, {
     method: 'POST',
     body,
     headers,
   });
+
+  if (!response.ok) {
+    throw new Error(response.status + ' ' + response.statusText);
+  }
+
+  return response;
 }
 
-export type ResponseValidator<ResponseType> = (
-  bodyJson: Record<string, unknown>
-) => ResponseType;
-
-export type GetResponse<ResponseType> = {
-  value: ResponseType;
-  response: Response;
+export default {
+  fetchJson,
+  post,
 };

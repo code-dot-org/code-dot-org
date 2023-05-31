@@ -1,6 +1,6 @@
 // Utilities for retrieving various types of data for Music Lab.
 
-import {getJson, ResponseValidator} from '@cdo/apps/util/HttpClient';
+import HttpClient, {ResponseValidator} from '@cdo/apps/util/HttpClient';
 import MusicLibrary, {
   LibraryJson,
   LibraryValidator,
@@ -15,6 +15,15 @@ enum LevelSource {
   LEVELS = 'LEVELS',
   LEVEL = 'LEVEL',
   FILE = 'FILE',
+}
+
+type LevelDataResponse = {
+  level_data: ProgressionStep;
+};
+
+interface ProgressionStepData {
+  progressionStep: ProgressionStep | undefined;
+  levelCount: number | undefined;
 }
 
 // Exporting enum as object for use in JS files
@@ -36,7 +45,7 @@ export const loadLibrary = async (): Promise<MusicLibrary> => {
       ? `music-library-${libraryParameter}.json`
       : 'music-library.json';
 
-    const libraryJsonResponse = await getJson<LibraryJson>(
+    const libraryJsonResponse = await HttpClient.fetchJson<LibraryJson>(
       baseUrl + libraryFilename,
       {},
       LibraryValidator
@@ -57,19 +66,12 @@ const loadProgressionFile = async (): Promise<Progression> => {
     const progressionFilename = progressionParameter
       ? `music-progression-${progressionParameter}.json`
       : 'music-progression.json';
-
-    return (await getJson<Progression>(baseUrl + progressionFilename)).value;
+    const progressionResponse = await HttpClient.fetchJson<Progression>(
+      baseUrl + progressionFilename
+    );
+    return progressionResponse.value;
   }
 };
-
-type LevelDataResponse = {
-  level_data: ProgressionStep;
-};
-
-interface ProgressionStepData {
-  progressionStep: ProgressionStep | undefined;
-  levelCount: number | undefined;
-}
 
 const LevelDataValidator: ResponseValidator<LevelDataResponse> = response => {
   const levelDataResponse = response as LevelDataResponse;
@@ -91,7 +93,7 @@ export const loadProgressionStepFromSource = async (
 
   if (levelSource === LevelSource.LEVELS) {
     // Since we have levels, we'll asynchronously retrieve the current level data.
-    const response = await getJson<LevelDataResponse>(
+    const response = await HttpClient.fetchJson<LevelDataResponse>(
       levelDataPath,
       {},
       LevelDataValidator
@@ -99,7 +101,7 @@ export const loadProgressionStepFromSource = async (
     progressionStep = response.value.level_data;
   } else if (levelSource === LevelSource.LEVEL) {
     // Since we have a level, we'll asynchronously retrieve the current level data.
-    const response = await getJson<LevelDataResponse>(
+    const response = await HttpClient.fetchJson<LevelDataResponse>(
       levelDataPath,
       {},
       LevelDataValidator
