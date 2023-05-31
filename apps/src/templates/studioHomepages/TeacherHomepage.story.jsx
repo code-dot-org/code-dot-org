@@ -18,6 +18,7 @@ import {
 } from '../../../test/unit/templates/studioHomepages/homepagesTestData';
 
 const serverSections = taughtSections.map(serverSectionFromSection);
+const joinedServerSections = joinedSections.map(serverSectionFromSection);
 
 const serverCourses = [
   {
@@ -77,30 +78,16 @@ CoursesNoSections.args = {
 
 export const NoCoursesSections = Template.bind({});
 NoCoursesSections.args = {
-  fakeServerArgs: {sections: serverSections},
+  fakeServerArgs: {sections: joinedServerSections},
   props: {
     courses: [],
-    joinedStudentSections: [],
+    joinedStudentSections: joinedSections,
     joinedPlSections: [],
   },
 };
 
 export const CoursesSections = Template.bind({});
 CoursesSections.args = {
-  fakeServerArgs: {
-    courses: serverCourses,
-    sections: serverSections,
-  },
-  props: {
-    courses: courses,
-    topCourse: topCourse,
-    joinedStudentSections: [],
-    joinedPlSections: [],
-  },
-};
-
-export const CoursesSectionsStudentSections = Template.bind({});
-CoursesSectionsStudentSections.args = {
   fakeServerArgs: {
     courses: serverCourses,
     sections: serverSections,
@@ -117,7 +104,7 @@ export const StudentAndPLCoursesSectionsStudentSections = Template.bind({});
 StudentAndPLCoursesSectionsStudentSections.args = {
   fakeServerArgs: {
     courses: serverCourses,
-    sections: serverSections,
+    sections: joinedServerSections,
   },
   props: {
     courses: courses,
@@ -133,14 +120,14 @@ export const CoursesSectionsAndJoinedPLSections = Template.bind({});
 CoursesSectionsAndJoinedPLSections.args = {
   fakeServerArgs: {
     courses: serverCourses,
-    sections: serverSections,
+    sections: [].concat(serverSections, joinedServerSections),
   },
   props: {
     courses: courses,
     topCourse: topCourse,
     plCourses: plCourses,
     topPlCourse: topPlCourse,
-    joinedStudentSections: [],
+    joinedStudentSections: joinedSections,
     joinedPlSections: joinedPlSections,
   },
 };
@@ -167,6 +154,6 @@ function withFakeServer({courses = [], sections = []} = {}) {
   server.respondWith(
     'GET',
     '/dashboardapi/sections/available_participant_types',
-    successResponse([{availableParticipantTypes: ['student', 'teacher']}])
+    successResponse({availableParticipantTypes: ['student', 'teacher']})
   );
 }
