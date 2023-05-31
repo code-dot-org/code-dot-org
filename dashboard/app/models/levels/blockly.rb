@@ -252,7 +252,6 @@ class Blockly < Level
       #block.xpath('statement')[0] << wrap_blocks(category.xpath('block').to_a) unless category.xpath('block').empty?
     end
     xml_string = xml.serialize(save_with: XML_OPTIONS).delete("\n").strip
-    p xml_string
     return xml_string
   end
 
