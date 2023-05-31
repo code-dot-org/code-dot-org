@@ -11,9 +11,12 @@ require_relative './report'
 
 VALID_GRADES = ["Extensive Evidence", "Convincing Evidence", "Limited Evidence", "No Evidence"]
 
+SUPPORTED_MODELS = ['gpt-4', 'gpt-4-32k']
+
 def command_line_options
   options = {
     output_filename: 'report.html',
+    llm_model: 'gpt-4',
     max_num_students: 100,
     n: 1,
     temperature: 0.0
@@ -36,9 +39,12 @@ def command_line_options
     end
 
     opts.on(
-      '-l', '--llm-model MODEL_NAME', String, "Reserved. Which LLM model to use. Currently GPT-4, but could include other LLMs in the future."
-    ) do
-      options[:llm_model] = 'gpt-4'
+      '-l', '--llm-model MODEL_NAME', String, "Which LLM model to use. Supported models: #{SUPPORTED_MODELS.join(', ')}. Default: gpt-4"
+    ) do |model|
+      unless SUPPORTED_MODELS.include?(model)
+        raise "Unsupported LLM model: #{model}. Supported models are: #{SUPPORTED_MODELS}"
+      end
+      options[:llm_model] = model
     end
 
     opts.on(
