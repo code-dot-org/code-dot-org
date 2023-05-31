@@ -33,7 +33,7 @@ const CardLabels = ({subjectsAndTopics}) => (
           </LabelTooltip>
         )}
       >
-        <div tabIndex="0" role="note">
+        <div tabIndex="0" role="tooltip">
           {subjectsAndTopics[0]}
         </div>
       </LabelOverlayTrigger>
@@ -54,7 +54,7 @@ const CardLabels = ({subjectsAndTopics}) => (
       >
         <div
           tabIndex="0"
-          role="note"
+          role="tooltip"
           aria-label={subjectsAndTopics.slice(1).join(', ')}
         >{`+${subjectsAndTopics.length - 1}`}</div>
       </LabelOverlayTrigger>
