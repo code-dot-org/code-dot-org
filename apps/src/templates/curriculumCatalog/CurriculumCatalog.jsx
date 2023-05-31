@@ -171,49 +171,50 @@ const CurriculumCatalog = ({curriculaData, isEnglish}) => {
     setFilteredCurricula(newFilteredCurricula);
   }, [curriculaData, appliedFilters]);
 
+  // Handles updating the given filter and the URL parameters.
+  const handleUpdateFilter = (filterKey, values) => {
+    // Update appliedFilters object
+    let newFilters = {...appliedFilters};
+    newFilters[filterKey] = values;
+    setAppliedFilters(newFilters);
+
+    // Update URL params
+    const valuesParam = values.length > 0 ? values : undefined;
+    updateQueryParam(filterKey, valuesParam, true);
+  };
+
   // Selects the given value in the given filter.
   const handleSelect = (event, filterKey) => {
     const value = event.target.value;
     const isChecked = event.target.checked;
 
-    let newFilters = {...appliedFilters};
     let updatedFilters;
     if (isChecked) {
-      //Add checked item into applied filters
+      // Add checked item into applied filters
       updatedFilters = [...appliedFilters[filterKey], value];
-      newFilters[filterKey] = updatedFilters;
     } else {
-      //Remove unchecked item from applied filters
+      // Remove unchecked item from applied filters
       updatedFilters = appliedFilters[filterKey].filter(item => item !== value);
-      newFilters[filterKey] = updatedFilters;
     }
-    setAppliedFilters(newFilters);
-    updateQueryParam(filterKey, updatedFilters, true);
+    handleUpdateFilter(filterKey, updatedFilters);
   };
 
   // Selects all options within the given filter.
   const handleSelectAllOfFilter = filterKey => {
-    let newFilters = {...appliedFilters};
-    const allFilterOptions = Object.keys(filterTypes[filterKey].options);
-    newFilters[filterKey] = allFilterOptions;
-    setAppliedFilters(newFilters);
-    updateQueryParam(filterKey, allFilterOptions, true);
+    handleUpdateFilter(filterKey, Object.keys(filterTypes[filterKey].options));
   };
 
   // Clears all filter selections.
   const handleClear = () => {
     setAppliedFilters(getEmptyFilters());
     Object.keys(filterTypes).forEach(filterKey =>
-      updateQueryParam(filterKey, '', true)
+      updateQueryParam(filterKey, undefined, false)
     );
   };
 
   // Clears selections within the given filter.
   const handleClearAllOfFilter = filterKey => {
-    let newFilters = {...appliedFilters};
-    newFilters[filterKey] = [];
-    setAppliedFilters(newFilters);
-    updateQueryParam(filterKey, '', true);
+    handleUpdateFilter(filterKey, []);
   };
 
   // Renders search results based on the applied filters (or shows the No matching curriculums
