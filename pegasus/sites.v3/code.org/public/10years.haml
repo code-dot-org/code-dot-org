@@ -4,24 +4,32 @@ theme: responsive_full_width
 ---
 
 %link{href: '/css/generated/design-system-pegasus.css', rel: 'stylesheet'}
+%link{href: '/css/generated/tenth-anniversary-styles.css', rel: 'stylesheet'}
 
 %section
   .wrapper
-    %h1=hoc_s(:ten_years_top_heading)
-    %p=hoc_s(:ten_years_top_desc)
+    %h1=hoc_s(:tenth_anniversary_top_heading)
+    %p=hoc_s(:tenth_anniversary_top_desc)
     %img{src: "/images/cdo-10years-logo.svg", alt: ""}
+    %img{src: "/images/fullteam-2023.gif", alt: ""}
 
-%section
+%section.bg-neutral-light
   .wrapper
     %h2 A decade of milestones
+    %figure.video-responsive
+      %div
+        %iframe{src: "https://www.youtube-nocookie.com/embed/lK3Jy8JjuCo", allowFullScreen: "true", frameborder: "0", title: hoc_s(:blockchain_video_title_01)}
 
 %section
   .wrapper
     %h2 See where it all began
+    %figure.video-responsive
+      %div
+        %iframe{src: "https://www.youtube-nocookie.com/embed/nKIu9yen5nc", allowFullScreen: "true", frameborder: "0", title: hoc_s(:blockchain_video_title_01)}
 
-%section
+%section.bg-neutral-light
   .wrapper
-    %h2 EMBED TWEETS HERE
+    = view :tenth_anniversary_tweets
 
 %section
   .wrapper

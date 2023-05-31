@@ -30,3 +30,14 @@
     }
   }
 }
+
+// Landing page
+.tenth-anniversary-tweets {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1em;
+
+  .twitter-tweet {
+    margin: 0 !important;
+  }
+}

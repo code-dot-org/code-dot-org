@@ -208,9 +208,6 @@
   blockchain_resources_03_desc: 'Try a crypto memory game created by Coinbase.'
   blockchain_resources_03_button_label: 'Try the Crypto Memory Game activity'
 
-  ten_years_top_heading: "Code.org celebrates 10 years!"
-  ten_years_top_desc: "We're celebrating a decade of empowering students to explore computer science."
-
   ai_2023_banner_title: "AI education for the world"
   ai_2023_banner_skinny_desc: "See how we're planning to bring AI education to classrooms everywhere."
 
@@ -308,6 +305,8 @@
 
   tenth_anniversary_homepage_blurb: "Code.org is 10 years old!"
   tenth_anniversary_homepage_link: "Check out the impact we've had."
+  tenth_anniversary_top_heading: "Code.org celebrates 10 years!"
+  tenth_anniversary_top_desc: "We're celebrating a decade of empowering students to explore computer science."
 
   hoc_live: 'Hour of Code Live'
   hoc_live_sign_up_title: 'Sign up for Hour of Code Live'
