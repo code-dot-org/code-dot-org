@@ -638,7 +638,7 @@ columns:
     default_function: 
     collation: utf8_unicode_ci
     comment: 
-  - &65 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+  - &64 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: course
     sql_type_metadata: *3
     'null': true
@@ -2316,7 +2316,7 @@ columns:
     comment: 
   - *6
   - *7
-  - &66 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+  - &65 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: position
     sql_type_metadata: *2
     'null': true
@@ -2497,7 +2497,7 @@ columns:
   - *14
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: md5
-    sql_type_metadata: &62 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
+    sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
       delegate_dc_obj: !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
         sql_type: varchar(32)
         type: :string
@@ -2674,7 +2674,7 @@ columns:
     default_function: 
     collation: utf8_unicode_ci
     comment: 
-  - &63 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+  - &62 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: lti_integration_id
     sql_type_metadata: *30
     'null': false
@@ -2689,7 +2689,14 @@ columns:
   - *40
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: platform_id
-    sql_type_metadata: *62
+    sql_type_metadata: &66 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
+      delegate_dc_obj: !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+        sql_type: varchar(36)
+        type: :string
+        limit: 36
+        precision: 
+        scale: 
+      extra: ''
     'null': false
     default: 
     default_function: 
@@ -2763,7 +2770,7 @@ columns:
     default_function: 
     collation: utf8_unicode_ci
     comment: 
-  - *63
+  - *62
   - *13
   - *32
   - *33
@@ -2773,7 +2780,7 @@ columns:
   - *7
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: computed_on
-    sql_type_metadata: &64 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
+    sql_type_metadata: &63 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
       delegate_dc_obj: !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
         sql_type: date
         type: :date
@@ -2796,13 +2803,13 @@ columns:
     comment: 
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: metric_on
-    sql_type_metadata: *64
+    sql_type_metadata: *63
     'null': false
     default: 
     default_function: 
     collation: 
     comment: 
-  - *65
+  - *64
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: breakdown
     sql_type_metadata: *3
@@ -2887,7 +2894,7 @@ columns:
     default_function: 
     collation: 
     comment: 
-  - *66
+  - *65
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: kind
     sql_type_metadata: *3
@@ -2909,14 +2916,7 @@ columns:
     comment: 
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: uuid
-    sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
-      delegate_dc_obj: !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
-        sql_type: varchar(36)
-        type: :string
-        limit: 36
-        precision: 
-        scale: 
-      extra: ''
+    sql_type_metadata: *66
     'null': false
     default: 
     default_function: 
@@ -3076,7 +3076,7 @@ columns:
     comment: 
   - *6
   - *7
-  - *65
+  - *64
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: response_scores
     sql_type_metadata: *12
@@ -3349,7 +3349,7 @@ columns:
   - *13
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: tc1_arrive
-    sql_type_metadata: *64
+    sql_type_metadata: *63
     'null': true
     default: 
     default_function: 
@@ -3357,7 +3357,7 @@ columns:
     comment: 
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: tc1_depart
-    sql_type_metadata: *64
+    sql_type_metadata: *63
     'null': true
     default: 
     default_function: 
@@ -3365,7 +3365,7 @@ columns:
     comment: 
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: fit1_arrive
-    sql_type_metadata: *64
+    sql_type_metadata: *63
     'null': true
     default: 
     default_function: 
@@ -3373,7 +3373,7 @@ columns:
     comment: 
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: fit1_depart
-    sql_type_metadata: *64
+    sql_type_metadata: *63
     'null': true
     default: 
     default_function: 
@@ -3389,7 +3389,7 @@ columns:
     comment: 
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: tc2_arrive
-    sql_type_metadata: *64
+    sql_type_metadata: *63
     'null': true
     default: 
     default_function: 
@@ -3397,7 +3397,7 @@ columns:
     comment: 
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: tc2_depart
-    sql_type_metadata: *64
+    sql_type_metadata: *63
     'null': true
     default: 
     default_function: 
@@ -3405,7 +3405,7 @@ columns:
     comment: 
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: fit2_arrive
-    sql_type_metadata: *64
+    sql_type_metadata: *63
     'null': true
     default: 
     default_function: 
@@ -3413,7 +3413,7 @@ columns:
     comment: 
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: fit2_depart
-    sql_type_metadata: *64
+    sql_type_metadata: *63
     'null': true
     default: 
     default_function: 
@@ -3429,7 +3429,7 @@ columns:
     comment: 
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: tc3_arrive
-    sql_type_metadata: *64
+    sql_type_metadata: *63
     'null': true
     default: 
     default_function: 
@@ -3437,7 +3437,7 @@ columns:
     comment: 
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: tc3_depart
-    sql_type_metadata: *64
+    sql_type_metadata: *63
     'null': true
     default: 
     default_function: 
@@ -3445,7 +3445,7 @@ columns:
     comment: 
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: fit3_arrive
-    sql_type_metadata: *64
+    sql_type_metadata: *63
     'null': true
     default: 
     default_function: 
@@ -3453,7 +3453,7 @@ columns:
     comment: 
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: fit3_depart
-    sql_type_metadata: *64
+    sql_type_metadata: *63
     'null': true
     default: 
     default_function: 
@@ -3510,7 +3510,7 @@ columns:
     default_function: 
     collation: 
     comment: 
-  - *65
+  - *64
   - &73 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: subject
     sql_type_metadata: *3
@@ -3563,7 +3563,7 @@ columns:
     comment: 
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: start_date
-    sql_type_metadata: *64
+    sql_type_metadata: *63
     'null': false
     default: 
     default_function: 
@@ -3571,13 +3571,13 @@ columns:
     comment: 
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: end_date
-    sql_type_metadata: *64
+    sql_type_metadata: *63
     'null': true
     default: 
     default_function: 
     collation: 
     comment: 
-  - *65
+  - *64
   - *73
   - *46
   - *6
@@ -4317,7 +4317,7 @@ columns:
     comment: 
   - *6
   - *7
-  - *66
+  - *65
   programming_environments:
   - *27
   - *49
@@ -4353,7 +4353,7 @@ columns:
     collation: 
     comment: 
   - *96
-  - *66
+  - *65
   - *40
   - *61
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
@@ -5242,7 +5242,7 @@ columns:
   - *18
   - *19
   - *110
-  - *66
+  - *65
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: assessment
     sql_type_metadata: *20
@@ -6771,7 +6771,7 @@ columns:
     comment: 
   - &151 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: birthday
-    sql_type_metadata: *64
+    sql_type_metadata: *63
     'null': true
     default: 
     default_function: 
@@ -12297,7 +12297,7 @@ indexes:
     type: :fulltext
     using: 
     comment: 
-version: 20230524221710
+version: 20230530215538
 database_version: !ruby/object:ActiveRecord::ConnectionAdapters::AbstractAdapter::Version
   version:
   - 5
