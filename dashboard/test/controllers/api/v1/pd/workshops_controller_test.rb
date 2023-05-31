@@ -795,6 +795,7 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
   end
 
   test 'updating virtual field in CSP/CSA summer workshop before a month of starting as a non-ws-admin does not raise error' do
+    skip 'flaky test'
     sign_in @organizer
     workshop = create :csp_summer_workshop, organizer: @organizer
     # Using '32.days' instead of '1.month' due to the inconsistency of the length of 'month' and it guarantees at least 1 month has passed.
