@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-05-17 16:48:06 UTC",
+    "serialized_at": "2023-05-30 22:53:31 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -17483,6 +17483,18 @@
       }
     },
     {
+      "name": "Variables",
+      "url": "https://docs.google.com/presentation/d/1HtBUmXrH6cqE2SPhCtaxnouYF_xaitoWrvBgZDFOnpk/template/preview",
+      "key": "variables_2",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "variables_2"
+      }
+    },
+    {
       "name": "Velocity",
       "url": "https://youtu.be/zcP94yMYqrI",
       "key": "velocity",
@@ -18221,6 +18233,12 @@
       "seeding_key": {
         "lesson.key": "Variables",
         "resource.key": "variables_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables",
+        "resource.key": "variables_2"
       }
     },
     {

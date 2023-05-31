@@ -1697,6 +1697,17 @@ FactoryBot.define do
     access_token_url {"access_token_url"}
   end
 
+  factory :lti_user_identity do
+    subject {"subject"}
+    lti_integration {create :lti_integration}
+    user {create :student}
+  end
+
+  factory :lti_deployment do
+    deployment_id {"deployment"}
+    lti_integration {create :lti_integration}
+  end
+
   factory :parental_permission_request do
     user {create :student}
     parent_email {"contact@example.domain"}

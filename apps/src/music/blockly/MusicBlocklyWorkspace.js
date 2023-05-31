@@ -14,7 +14,9 @@ import {
   FIELD_CHORD_TYPE,
   FIELD_PATTERN_TYPE,
   FIELD_SOUNDS_TYPE,
+  FIELD_TRIGGER_START_NAME,
   PLAY_MULTI_MUTATOR,
+  TriggerStart,
   TRIGGER_FIELD,
 } from './constants';
 import {
@@ -28,6 +30,7 @@ import FieldChord from './FieldChord';
 import {Renderers} from '@cdo/apps/blockly/constants';
 import musicI18n from '../locale';
 import LevelChangeManager from '@cdo/apps/labs/LevelChangeManager';
+import {logError, logWarning} from '../utils/MusicMetrics';
 
 /**
  * Wraps the Blockly workspace for Music Lab. Provides functions to setup the
@@ -37,6 +40,7 @@ export default class MusicBlocklyWorkspace {
   constructor() {
     this.codeHooks = {};
     this.compiledEvents = null;
+    this.triggerIdToStartType = {};
     this.lastExecutedEvents = null;
     this.channel = {};
     this.getProjectManager = () => null;
@@ -171,6 +175,7 @@ export default class MusicBlocklyWorkspace {
     Blockly.getGenerator().init(this.workspace);
 
     this.compiledEvents = {};
+    this.triggerIdToStartType = {};
 
     const topBlocks = this.workspace.getTopBlocks();
 
@@ -267,6 +272,10 @@ export default class MusicBlocklyWorkspace {
             Blockly.JavaScript.blockToCode(block) + functionImplementationsCode,
           args: ['startPosition'],
         };
+        // Also save the value of the trigger start field at compile time so we can
+        // compute the correct start time at each invocation.
+        this.triggerIdToStartType[this.triggerIdToEvent(id)] =
+          block.getFieldValue(FIELD_TRIGGER_START_NAME);
       }
     });
 
@@ -303,7 +312,7 @@ export default class MusicBlocklyWorkspace {
    */
   executeCompiledSong(triggerEvents = []) {
     if (this.compiledEvents === null) {
-      console.warn('executeCompiledSong called before compileSong.');
+      logWarning('executeCompiledSong called before compileSong.');
       return;
     }
 
@@ -336,6 +345,27 @@ export default class MusicBlocklyWorkspace {
     const hook = this.codeHooks[this.triggerIdToEvent(id)];
     if (hook) {
       this.callUserGeneratedCode(hook, [startPosition]);
+    }
+  }
+
+  /**
+   * Given the exact current playback position, get the start position of the trigger,
+   * adjusted based on when the trigger should play (immediately, next beat, or next measure).
+   */
+  getTriggerStartPosition(id, currentPosition) {
+    const triggerStart = this.triggerIdToStartType[this.triggerIdToEvent(id)];
+    if (!triggerStart) {
+      console.warn('No compiled trigger with ID: ' + id);
+      return;
+    }
+
+    switch (triggerStart) {
+      case TriggerStart.IMMEDIATELY:
+        return currentPosition;
+      case TriggerStart.NEXT_BEAT:
+        return Math.ceil(currentPosition * 4) / 4;
+      case TriggerStart.NEXT_MEASURE:
+        return Math.ceil(currentPosition);
     }
   }
 
@@ -455,10 +485,7 @@ export default class MusicBlocklyWorkspace {
     try {
       fn.call(this, ...args);
     } catch (e) {
-      // swallow error. should we also log this somewhere?
-      if (console) {
-        console.log(e);
-      }
+      logError(e);
     }
   }
 
