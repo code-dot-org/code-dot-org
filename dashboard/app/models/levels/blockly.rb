@@ -183,9 +183,7 @@ class Blockly < Level
 
   GOOGLE_BLOCKLY_NAMESPACE_XML = "<xml xmlns=\"https://developers.google.com/blockly/xml\">"
   def self.convert_toolbox_to_category(xml_string)
-    is_google_blockly = false
     if xml_string.include? GOOGLE_BLOCKLY_NAMESPACE_XML
-      is_google_blockly = true
       xml_string[GOOGLE_BLOCKLY_NAMESPACE_XML] = "<xml>"
     end
     xml = Nokogiri::XML(xml_string, &:noblanks)
@@ -217,11 +215,7 @@ class Blockly < Level
       end
     end
     default_category.remove if default_category.element_children.empty?
-    xml_string = xml.serialize(save_with: XML_OPTIONS).delete("\n").strip
-    if is_google_blockly
-      xml_string["<xml>"] = GOOGLE_BLOCKLY_NAMESPACE_XML
-    end
-    return xml_string
+    xml.serialize(save_with: XML_OPTIONS).delete("\n").strip
   end
 
   def self.convert_category_to_toolbox(xml_string)
@@ -253,8 +247,7 @@ class Blockly < Level
       xml << category.children
       #block.xpath('statement')[0] << wrap_blocks(category.xpath('block').to_a) unless category.xpath('block').empty?
     end
-    xml_string = xml.serialize(save_with: XML_OPTIONS).delete("\n").strip
-    return xml_string
+    xml.serialize(save_with: XML_OPTIONS).delete("\n").strip
   end
 
   # "counter" mutations should not be stored because it results in the language being
