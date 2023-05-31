@@ -21,6 +21,7 @@
       text-align: center;
       display: flex;
       flex-direction: column;
+      align-items: center;
       gap: 1em;
 
       @media screen and (min-width: $width-sm) and (max-width: $width-md) {
