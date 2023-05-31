@@ -1,7 +1,7 @@
 <Karel>
   <config><![CDATA[{
   "game_id": 25,
-  "created_at": "2023-03-21T08:34:16.000Z",
+  "created_at": "2022-01-06T19:46:18.000Z",
   "level_num": "custom",
   "user_id": 285,
   "properties": {
@@ -27,8 +27,8 @@
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
     "short_instructions": "Move Laurel to the treasure, then use `collect` to pick it up.",
-    "long_instructions": "Move Laurel to the treasure, then use the <xml><block type=\"collector_collect\" block-text=\"collect\"/></xml> \r\n block to pick it up.",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"You can use four <xml><block type=\\\"maze_move\\\"><title name=\\\"DIR\\\">moveForward</title></block></xml> blocks or use the <xml><block type=\\\"controls_repeat_dropdown\\\"><title name=\\\"TIMES\\\" config=\\\"3-10\\\">???</title></block></xml> block to make your program shorter.\",\"hint_id\":\"courseC_collector_prog2_a\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/35f1470dc2ad2afc815155e695ef6e9b/courseC_collector_prog22022.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet.\",\"hint_id\":\"courseC_collector_prog2_b\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/249f9a599d949ae950f131138cdd91b7/courseC_collector_prog22022.mp3\"}]",
+    "long_instructions": "Move Laurel to the treasure, then use the <xml><block type=\"collector_collect\" block-text=\"collect\"/></xml> block to pick it up.",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"You can use four <xml><block type=\\\"maze_move\\\"><title name=\\\"DIR\\\">moveForward</title></block></xml> blocks or use the <xml><block type=\\\"controls_repeat_dropdown\\\"><title name=\\\"TIMES\\\" config=\\\"3-10\\\">???</title></block></xml> block to make your program shorter.\",\"hint_id\":\"courseC_collector_prog2_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/35f1470dc2ad2afc815155e695ef6e9b/courseC_collector_prog2.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet.\",\"hint_id\":\"courseC_collector_prog2_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/249f9a599d949ae950f131138cdd91b7/courseC_collector_prog2.mp3\"}]",
     "instructions_important": "false",
     "min_collected": "1",
     "hide_share_and_remix": "false",
@@ -42,12 +42,12 @@
     "mini_rubric": "false",
     "top_level_procedure_autopopulate": "false",
     "show_type_hints": "false",
-    "hint_prompt_attempts_threshold": "1",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "Not enough blocks in workspace puzzle",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T19:46:18.705+00:00\",\"changed\":[\"cloned from \\\"courseC_collector_prog2_2021\\\"\"],\"cloned_from\":\"courseC_collector_prog2_2021\"},{\"changed_at\":\"2023-05-23 12:44:21 -0500\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-23 18:54:53 -0500\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\"],\"changed_by_id\":1,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-23 18:57:13 -0500\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\"],\"changed_by_id\":1,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-23 19:08:08 -0500\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\"],\"changed_by_id\":1,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-26 11:45:17 -0500\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\"],\"changed_by_id\":1,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-30 17:09:59 -0500\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-30 19:23:38 -0500\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-30 19:25:12 -0500\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-31 09:34:06 -0500\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-31 09:34:55 -0500\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-01-06T19:46:18.705+00:00\",\"changed\":[\"cloned from \\\"courseC_collector_prog2_2021\\\"\"],\"cloned_from\":\"courseC_collector_prog2_2021\"}]",
   "level_concept_difficulty": {
     "sequencing": 3,
     "repeat_loops": 1
@@ -61,20 +61,19 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <category name="K1 blocks">
-          <block type="controls_repeat_simplified">
-            <field name="TIMES">5</field>
-          </block>
-          <block type="maze_moveNorth"/>
-        </category>
-        <category name="Actions">
-          <block type="maze_move">
-            <field name="DIR">moveForward</field>
-          </block>
-          <block type="maze_turn">
-            <field name="DIR">turnLeft</field>
-          </block>
-        </category>
+        <block type="maze_move">
+          <title name="DIR">moveForward</title>
+        </block>
+        <block type="maze_turn">
+          <title name="DIR">turnRight</title>
+        </block>
+        <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+        </block>
+        <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">???</title>
+        </block>
+        <block type="collector_collect"/>
       </xml>
     </toolbox_blocks>
     <solution_blocks>

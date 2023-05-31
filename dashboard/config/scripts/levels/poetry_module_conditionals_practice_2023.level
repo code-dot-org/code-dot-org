@@ -1,9 +1,5 @@
 <Poetry>
   <config><![CDATA[{
-  "game_id": 69,
-  "created_at": "2023-03-21T08:34:16.000Z",
-  "level_num": "custom",
-  "user_id": 13468,
   "properties": {
     "encrypted": "false",
     "skin": "gamelab",
@@ -21,7 +17,7 @@
     "embed": "false",
     "callout_json": "[]",
     "instructions_important": "false",
-    "long_instructions": "*You can use different effects or sprites based on the words the user chooses.*\r\n\r\n* Add an `if` block under one of the events in your code.\r\n* Select a variable that will already have a value, and word that the user might pick.\r\n* Inside the `if` block, add more code that will happen if the right word is selected. \r\n\r\n<xml><block type=\"gamelab_ifVarEquals\">\r\n      <title name=\"NUM\">animal</title>\r\n      <value name=\"VAL\">\r\n        <block type=\"Poetry_stringValue\">\r\n          <title name=\"TEXT\">Octopus</title>\r\n        </block>\r\n      </value>\r\n    </block></xml>",
+    "long_instructions": "*You can use different effects or sprites based on the words the user chooses.*\r\n\r\n* Add an `if` block under one of the events in your code.\r\n* Select a variable that will already have a value, and word that the user might pick.\r\n* Inside the `if` block, add more code that will happen if the right word is selected.\r\n\r\n<xml><block type=\"gamelab_ifVarEquals\">\r\n      <title name=\"NUM\">animal</title>\r\n      <value name=\"VAL\">\r\n        <block type=\"Poetry_stringValue\">\r\n          <title name=\"TEXT\">Octopus</title>\r\n        </block>\r\n      </value>\r\n    </block></xml>",
     "submittable": "false",
     "hide_share_and_remix": "true",
     "never_autoplay_video": "false",
@@ -46,8 +42,12 @@
     "name_suffix": "_2023",
     "preload_asset_list": null
   },
+  "game_id": 69,
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2023-03-09T15:17:20.991+00:00\",\"changed\":[\"cloned from \\\"poetry_module_conditionals_practice\\\"\"],\"cloned_from\":\"poetry_module_conditionals_practice\"},{\"changed_at\":\"2023-03-14 21:23:41 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"project_template_level_name\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2023-05-26 10:42:07 -0500\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-26 11:02:07 -0500\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":1,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-26 11:45:21 -0500\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":1,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-30 14:24:49 -0500\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":1,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-30 14:26:42 -0500\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":1,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-30 14:27:31 -0500\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-30 14:36:02 -0500\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":1,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-30 16:12:24 -0500\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":1,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-30 16:13:18 -0500\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-30 16:39:35 -0500\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":1,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-30 16:41:24 -0500\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":1,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-30 16:41:52 -0500\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":1,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-30 16:43:26 -0500\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":1,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-30 16:44:35 -0500\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-30 16:47:29 -0500\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":1,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-30 16:51:08 -0500\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":1,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-30 18:47:14 -0500\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-30 18:48:12 -0500\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":1,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-30 18:48:45 -0500\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-30 18:49:22 -0500\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":1,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-30 19:04:44 -0500\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-30 19:05:16 -0500\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-30 19:17:21 -0500\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":1,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-30 19:29:43 -0500\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-30 19:31:41 -0500\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-30 19:36:24 -0500\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-30 19:42:44 -0500\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-30 19:48:50 -0500\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-30 19:51:11 -0500\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-30 19:52:57 -0500\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-30 20:05:55 -0500\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":1,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-30 20:08:17 -0500\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":1,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-30 20:09:35 -0500\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-30 20:16:48 -0500\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-30 20:17:09 -0500\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-30 20:18:51 -0500\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-30 20:19:45 -0500\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-31 09:00:31 -0500\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-31 09:00:46 -0500\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-31 09:23:23 -0500\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-31 09:30:45 -0500\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-31 09:31:28 -0500\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-31 09:32:33 -0500\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-31 09:33:23 -0500\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-31 09:36:59 -0500\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-31 09:37:14 -0500\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-31 09:37:31 -0500\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-31 09:37:58 -0500\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-31 09:38:23 -0500\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-31 09:38:42 -0500\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-31 09:39:41 -0500\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-31 09:40:08 -0500\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-31 09:41:37 -0500\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-31 09:42:04 -0500\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-31 09:42:38 -0500\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-31 09:42:55 -0500\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-31 09:43:15 -0500\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-31 09:44:46 -0500\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-31 09:45:44 -0500\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-31 09:47:43 -0500\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-31 09:48:40 -0500\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"}]",
+  "created_at": "2023-03-09T15:17:20.000Z",
+  "level_num": "custom",
+  "user_id": 13468,
+  "audit_log": "[{\"changed_at\":\"2023-03-09T15:17:20.991+00:00\",\"changed\":[\"cloned from \\\"poetry_module_conditionals_practice\\\"\"],\"cloned_from\":\"poetry_module_conditionals_practice\"},{\"changed_at\":\"2023-03-14 21:23:41 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"project_template_level_name\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -59,14 +59,185 @@
       </xml>
     </start_blocks>
     <toolbox_blocks>
-      <xml xmlns="https://developers.google.com/blockly/xml">
-        <category name="Default">
-          <block type="gamelab_checkTouching" id="Jw-TImW`f8Tc)N9,LrU|" x="147" y="55">
-            <field name="CONDITION">"when"</field>
+      <xml>
+        <category name="Events">
+          <block type="Poetry_whenLineShows">
+            <title name="N">0</title>
           </block>
-          <block type="gamelab_addBehaviorSimple" id="@`D-9i4UF7,qkzn__a~c" x="31" y="84"/>
+          <block type="gamelab_whenAllPromptsAnswered"/>
         </category>
-        <category name="Functions" custom="PROCEDURE"/>
+        <category name="Text">
+          <block type="Poetry_setTitle">
+            <value name="TITLE">
+              <shadow type="text">
+                <title name="TEXT"/>
+              </shadow>
+              <block type="gamelab_textJoin">
+                <title name="TEXT1"/>
+              </block>
+            </value>
+          </block>
+          <block type="Poetry_setAuthor">
+            <value name="AUTHOR">
+              <shadow type="text">
+                <title name="TEXT"/>
+              </shadow>
+              <block type="gamelab_textJoin">
+                <title name="TEXT1"/>
+              </block>
+            </value>
+          </block>
+          <block type="Poetry_addLine">
+            <value name="LINE">
+              <shadow type="text">
+                <title name="TEXT"/>
+              </shadow>
+              <block type="gamelab_textJoin">
+                <title name="TEXT1"/>
+              </block>
+            </value>
+          </block>
+          <block type="Poetry_animateText"/>
+          <block type="gamelab_textJoin">
+            <title name="TEXT1"/>
+          </block>
+        </category>
+        <category name="Variables">
+          <block type="gamelab_setPrompt">
+            <value name="QUESTION">
+              <shadow type="text" can_disconnect_from_parent="false">
+                <title name="TEXT"/>
+              </shadow>
+            </value>
+            <value name="VAR">
+              <block type="variables_get" movable="false">
+                <title name="VAR">???</title>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_setPromptWithChoices">
+            <value name="QUESTION">
+              <shadow type="text" can_disconnect_from_parent="false">
+                <title name="TEXT"/>
+              </shadow>
+            </value>
+            <value name="VAR">
+              <block type="variables_get" movable="false">
+                <title name="VAR">???</title>
+              </block>
+            </value>
+            <value name="A">
+              <shadow type="Poetry_stringValue" can_disconnect_from_parent="false">
+                <title name="TEXT"/>
+              </shadow>
+            </value>
+            <value name="B">
+              <shadow type="Poetry_stringValue" can_disconnect_from_parent="false">
+                <title name="TEXT"/>
+              </shadow>
+            </value>
+            <value name="C">
+              <shadow type="Poetry_stringValue" can_disconnect_from_parent="false">
+                <title name="TEXT"/>
+              </shadow>
+            </value>
+          </block>
+          <block type="gamelab_textVariableJoin">
+            <title name="VAR">???</title>
+          </block>
+        </category>
+        <category name="Effects">
+          <block type="Poetry_setFont">
+            <title name="FONT">"Courier"</title>
+          </block>
+          <block type="Poetry_setFontColor">
+            <value name="FILL">
+              <shadow type="colour_picker">
+                <title name="COLOUR">#99ff99</title>
+              </shadow>
+            </value>
+          </block>
+          <block type="Poetry_setTextEffect">
+            <title name="EFFECT">"fade"</title>
+          </block>
+          <block type="Poetry_addTextHighlight">
+            <value name="COLOR">
+              <shadow type="colour_picker" can_disconnect_from_parent="false">
+                <title name="COLOUR">#99ff99</title>
+              </shadow>
+            </value>
+          </block>
+          <block type="Poetry_playSound">
+            <title name="SOUND">"sound://category_loops/vibrant_game_welcome_to_heaven_loop_1.mp3"</title>
+          </block>
+          <block type="Poetry_playMusic">
+            <title name="SOUND">"placeholder"</title>
+          </block>
+          <block type="Poetry_setForegroundEffect">
+            <title name="EFFECT">"rain"</title>
+          </block>
+          <block type="Poetry_addFrame">
+            <title name="BRUSH">"rainbow"</title>
+          </block>
+          <block type="Poetry_setBackground">
+            <value name="COLOR">
+              <shadow type="colour_picker">
+                <title name="COLOUR">#cc0000</title>
+              </shadow>
+            </value>
+          </block>
+          <block type="Poetry_setBackgroundImageAs">
+            <title name="IMG">"cave"</title>
+          </block>
+          <block type="Poetry_setBackgroundEffect">
+            <title name="EFFECT">"colors"</title>
+            <title name="PALETTE">"grayscale"</title>
+          </block>
+        </category>
+        <category name="Sprites">
+          <block type="Poetry_makeNewSpriteAnon">
+            <title name="ANIMATION_NAME">"bear"</title>
+            <title name="LOCATION">{"x":75,"y":200}</title>
+          </block>
+          <block type="Poetry_setSize">
+            <title name="SPRITE">"bear"</title>
+            <title name="VAL">50</title>
+          </block>
+          <block type="Poetry_startBehavior">
+            <title name="ANIMATION_NAME">"bear"</title>
+            <title name="BEHAVIOR">fluttering</title>
+          </block>
+          <block type="Poetry_stopBehavior">
+            <title name="ANIMATION_NAME">"bear"</title>
+            <title name="BEHAVIOR">fluttering</title>
+          </block>
+          <block type="Poetry_destroy">
+            <title name="ANIMATION_NAME">"bear"</title>
+          </block>
+          <block type="Poetry_makeBurst">
+            <title name="EFFECT">"burst"</title>
+            <title name="NUM">10</title>
+            <title name="ANIMATION_NAME">"bear"</title>
+          </block>
+          <block type="Poetry_makeNumSprites">
+            <title name="NUM">3</title>
+            <title name="ANIMATION_NAME">"bear"</title>
+          </block>
+          <block type="Poetry_glideTo" id="26">
+            <title name="SPRITE">"night_cloud"</title>
+            <title name="LOCATION">{"x": 200, "y": 200}</title>
+          </block>
+        </category>
+        <category name="Logic">
+          <block type="gamelab_ifVarEquals">
+            <title name="NUM">???</title>
+            <value name="VAL">
+              <shadow type="Poetry_stringValue">
+                <title name="TEXT"/>
+              </shadow>
+            </value>
+          </block>
+        </category>
       </xml>
     </toolbox_blocks>
   </blocks>
