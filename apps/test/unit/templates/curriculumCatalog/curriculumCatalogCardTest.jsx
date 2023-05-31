@@ -87,6 +87,37 @@ describe('CurriculumCatalogCard', () => {
     screen.getByText(`+${subjects.length + topics.length - 1}`);
   });
 
+  it('renders tooltip showing full text of first label when hovering over it', () => {
+    render(
+      <CurriculumCatalogCard
+        {...defaultProps}
+        subjects={subjects}
+        topics={topics}
+      />
+    );
+    const firstLabelText =
+      translatedLabels[subjectsAndTopicsOrder[firstSubjectIndexUsed]];
+    const firstLabelNode = screen.getByText(firstLabelText);
+
+    fireEvent.mouseOver(firstLabelNode);
+    expect(screen.getAllByText(firstLabelText)).to.have.lengthOf(2);
+  });
+
+  it('renders tooltip showing full text of first label when focused on it', () => {
+    render(
+      <CurriculumCatalogCard
+        {...defaultProps}
+        subjects={subjects}
+        topics={topics}
+      />
+    );
+    const firstLabelText =
+      translatedLabels[subjectsAndTopicsOrder[firstSubjectIndexUsed]];
+    const firstLabelNode = screen.getByText(firstLabelText);
+    firstLabelNode.focus();
+    expect(screen.getAllByText(firstLabelText)).to.have.lengthOf(2);
+  });
+
   it('renders tooltip showing remaining labels when hovering on plus sign', () => {
     render(
       <CurriculumCatalogCard
