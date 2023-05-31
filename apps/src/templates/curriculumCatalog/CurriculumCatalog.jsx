@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import {curriculumDataShape} from './curriculumCatalogShapes';
 import i18n from '@cdo/locale';
 import style from '../../../style/code-studio/curriculum_catalog_container.module.scss';
-import {queryParams} from '../../code-studio/utils';
+import {queryParams, updateQueryParam} from '../../code-studio/utils';
 import HeaderBanner from '../HeaderBanner';
 import CourseCatalogBannerBackground from '../../../static/curriculum_catalog/course-catalog-banner-illustration-01.png';
 import CourseCatalogIllustration01 from '../../../static/curriculum_catalog/course-catalog-illustration-01.png';
@@ -69,14 +69,14 @@ const getValidParamValues = (filterKey, paramValues) => {
 };
 
 // Returns initial filter states based on URL parameters (returns empty filters if
-// no relevant parameters in the URL). The filter params are of the form:
-// "filter_name:checked_value_1,checked_value_2,etc."
+// no relevant parameters in the URL).
 const getInitialFilterStates = () => {
   const filterTypeKeys = Object.keys(filterTypes);
   const urlParams = queryParams();
 
   let filters = getEmptyFilters();
   Object.keys(urlParams).forEach(paramKey => {
+    // Ensure valid filter key
     if (filterTypeKeys.includes(paramKey)) {
       filters[paramKey] = getValidParamValues(paramKey, urlParams[paramKey]);
     }
@@ -177,28 +177,35 @@ const CurriculumCatalog = ({curriculaData, isEnglish}) => {
     const isChecked = event.target.checked;
 
     let newFilters = {...appliedFilters};
+    let updatedFilters;
     if (isChecked) {
       //Add checked item into applied filters
-      newFilters[filterKey] = [...appliedFilters[filterKey], value];
+      updatedFilters = [...appliedFilters[filterKey], value];
+      newFilters[filterKey] = updatedFilters;
     } else {
       //Remove unchecked item from applied filters
-      newFilters[filterKey] = appliedFilters[filterKey].filter(
-        item => item !== value
-      );
+      updatedFilters = appliedFilters[filterKey].filter(item => item !== value);
+      newFilters[filterKey] = updatedFilters;
     }
     setAppliedFilters(newFilters);
+    updateQueryParam(filterKey, updatedFilters, true);
   };
 
   // Selects all options within the given filter.
   const handleSelectAllOfFilter = filterKey => {
     let newFilters = {...appliedFilters};
-    newFilters[filterKey] = Object.keys(filterTypes[filterKey].options);
+    const allFilterOptions = Object.keys(filterTypes[filterKey].options);
+    newFilters[filterKey] = allFilterOptions;
     setAppliedFilters(newFilters);
+    updateQueryParam(filterKey, allFilterOptions, true);
   };
 
   // Clears all filter selections.
   const handleClear = () => {
     setAppliedFilters(getEmptyFilters());
+    Object.keys(filterTypes).forEach(filterKey =>
+      updateQueryParam(filterKey, '', true)
+    );
   };
 
   // Clears selections within the given filter.
@@ -206,6 +213,7 @@ const CurriculumCatalog = ({curriculaData, isEnglish}) => {
     let newFilters = {...appliedFilters};
     newFilters[filterKey] = [];
     setAppliedFilters(newFilters);
+    updateQueryParam(filterKey, '', true);
   };
 
   // Renders search results based on the applied filters (or shows the No matching curriculums

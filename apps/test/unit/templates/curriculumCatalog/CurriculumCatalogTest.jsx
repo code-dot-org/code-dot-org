@@ -6,6 +6,7 @@ import {assert, expect} from '../../../util/reconfiguredChai';
 import {
   setWindowLocation,
   resetWindowLocation,
+  updateQueryParam,
 } from '../../../../src/code-studio/utils';
 import responsive, {
   setResponsiveSize,
@@ -13,6 +14,7 @@ import responsive, {
 } from '@cdo/apps/code-studio/responsiveRedux';
 import CurriculumCatalog from '@cdo/apps/templates/curriculumCatalog/CurriculumCatalog';
 import {
+  filterTypes,
   allCurricula,
   allShownCurricula,
   gradesKAnd2ShownCurricula,
@@ -37,6 +39,14 @@ describe('CurriculumCatalog', () => {
         <CurriculumCatalog {...defaultProps} />
       </Provider>
     );
+  });
+
+  afterEach(() => {
+    resetWindowLocation();
+
+    filterTypes.forEach(filterKey => {
+      updateQueryParam(filterKey, '', true);
+    });
   });
 
   it('renders page title', () => {
@@ -298,7 +308,14 @@ describe('CurriculumCatalog with url params', () => {
     store = configureStore({reducer: {responsive}});
     store.dispatch(setResponsiveSize(ResponsiveSize.lg));
   });
-  afterEach(resetWindowLocation);
+
+  afterEach(() => {
+    resetWindowLocation();
+
+    filterTypes.forEach(filterKey => {
+      updateQueryParam(filterKey, '', true);
+    });
+  });
 
   function renderWithUrlParams(urlParams) {
     setWindowLocation({search: urlParams});
