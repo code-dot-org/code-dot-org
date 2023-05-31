@@ -87,11 +87,6 @@ $container-width: 309px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-
-    &:hover {
-      max-width: inherit;
-      overflow: inherit;
-    }
   }
 }
 
@@ -158,6 +153,8 @@ $container-width: 309px;
   a:link,
   a:visited {
     width: 100%;
+    display: flex;
+    justify-content: center;
   }
 }
 
