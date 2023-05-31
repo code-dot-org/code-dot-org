@@ -1,5 +1,3 @@
-const filterTypes = ['grade', 'duration', 'topic', 'device'];
-
 // Individual curricula definitions
 const makerCurriculum = {
   key: 'devices',
@@ -195,7 +193,6 @@ const allFiltersAppliedShownCurricula = [
 ];
 
 export default {
-  filterTypes,
   allCurricula,
   allShownCurricula,
   gradesKAnd2ShownCurricula,

@@ -6,7 +6,6 @@ import {assert, expect} from '../../../util/reconfiguredChai';
 import {
   setWindowLocation,
   resetWindowLocation,
-  updateQueryParam,
 } from '../../../../src/code-studio/utils';
 import responsive, {
   setResponsiveSize,
@@ -14,7 +13,6 @@ import responsive, {
 } from '@cdo/apps/code-studio/responsiveRedux';
 import CurriculumCatalog from '@cdo/apps/templates/curriculumCatalog/CurriculumCatalog';
 import {
-  filterTypes,
   allCurricula,
   allShownCurricula,
   gradesKAnd2ShownCurricula,
@@ -30,10 +28,12 @@ import {
 
 describe('CurriculumCatalog', () => {
   const defaultProps = {curriculaData: allCurricula, isEnglish: false};
+  let replaceStateOrig = window.history.replaceState;
 
   beforeEach(() => {
     const store = configureStore({reducer: {responsive}});
     store.dispatch(setResponsiveSize(ResponsiveSize.lg));
+    window.history.replaceState = (_, __, newLocation) => newLocation;
     render(
       <Provider store={store}>
         <CurriculumCatalog {...defaultProps} />
@@ -43,10 +43,7 @@ describe('CurriculumCatalog', () => {
 
   afterEach(() => {
     resetWindowLocation();
-
-    filterTypes.forEach(filterKey => {
-      updateQueryParam(filterKey, '', true);
-    });
+    window.history.replaceState = replaceStateOrig;
   });
 
   it('renders page title', () => {
@@ -303,18 +300,27 @@ describe('CurriculumCatalog', () => {
 describe('CurriculumCatalog with url params', () => {
   const defaultProps = {curriculaData: allCurricula, isEnglish: false};
   let store;
+  let replaceStateOrig = window.history.replaceState;
+  let fakeWindowLocation = {
+    search: '',
+    pathname: '',
+  };
+  let replacedLocation;
 
   beforeEach(() => {
     store = configureStore({reducer: {responsive}});
     store.dispatch(setResponsiveSize(ResponsiveSize.lg));
+
+    setWindowLocation(fakeWindowLocation);
+    replacedLocation = undefined;
+    window.history.replaceState = (_, __, newLocation) => {
+      replacedLocation = newLocation;
+    };
   });
 
   afterEach(() => {
     resetWindowLocation();
-
-    filterTypes.forEach(filterKey => {
-      updateQueryParam(filterKey, '', true);
-    });
+    window.history.replaceState = replaceStateOrig;
   });
 
   function renderWithUrlParams(urlParams) {
@@ -419,5 +425,63 @@ describe('CurriculumCatalog with url params', () => {
     multipleFiltersAppliedShownCurricula.forEach(curriculum => {
       expect(screen.getAllByText(curriculum.display_name).length).to.equal(1);
     });
+  });
+
+  it('params update when first filter checkbox is selected', () => {
+    renderWithUrlParams('');
+
+    // Select "Week" in grade level filter
+    const weekFilterCheckbox = screen.getByDisplayValue('week');
+    fireEvent.click(weekFilterCheckbox);
+    assert(weekFilterCheckbox.checked);
+
+    assert(replacedLocation.includes('duration=week'));
+  });
+
+  it('params update when filter checkbox is selected with others in same filter already selected', () => {
+    renderWithUrlParams('?duration=lesson');
+
+    // Select "Week" in grade level filter
+    const weekFilterCheckbox = screen.getByDisplayValue('week');
+    fireEvent.click(weekFilterCheckbox);
+    assert(weekFilterCheckbox.checked);
+
+    assert(replacedLocation.includes('duration=lesson&duration=week'));
+  });
+
+  it('params update when filter checkbox is selected with others in different filter already selected', () => {
+    renderWithUrlParams('?grade=grade_2&grade=grade_3');
+
+    // Select "Week" in grade level filter
+    const weekFilterCheckbox = screen.getByDisplayValue('week');
+    fireEvent.click(weekFilterCheckbox);
+    assert(weekFilterCheckbox.checked);
+
+    assert(replacedLocation.includes('grade=grade_2&grade=grade_3'));
+    assert(replacedLocation.includes('duration=week'));
+  });
+
+  it('params update when only checked filter checkbox is deselected', () => {
+    renderWithUrlParams('?duration=lesson');
+
+    // Deselect "Lesson" in grade level filter
+    const lessonFilterCheckbox = screen.getByDisplayValue('lesson');
+    fireEvent.click(lessonFilterCheckbox);
+    assert(!lessonFilterCheckbox.checked);
+
+    // When no params are present, replacedLocation is set to undefined
+    expect(replacedLocation).to.be.undefined;
+  });
+
+  it('params update when one of checked filter checkboxes is deselected', () => {
+    renderWithUrlParams('?duration=lesson&duration=week');
+
+    // Deselect "Lesson" in grade level filter
+    const lessonFilterCheckbox = screen.getByDisplayValue('lesson');
+    fireEvent.click(lessonFilterCheckbox);
+    assert(!lessonFilterCheckbox.checked);
+
+    assert(!replacedLocation.includes('lesson'));
+    assert(replacedLocation.includes('duration=week'));
   });
 });
