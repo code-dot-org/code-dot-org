@@ -180,12 +180,13 @@ class Blockly < Level
     PROCEDURE: 'Functions',
     VARIABLE: 'Variables',
   }
+
+  GOOGLE_BLOCKLY_NAMESPACE_XML = "<xml xmlns=\"https://developers.google.com/blockly/xml\">"
   def self.convert_toolbox_to_category(xml_string)
     is_google_blockly = false
-    google_blockly_namespace = "<xml xmlns=\"https://developers.google.com/blockly/xml\">"
-    if xml_string.include? google_blockly_namespace
+    if xml_string.include? GOOGLE_BLOCKLY_NAMESPACE_XML
       is_google_blockly = true
-      xml_string[google_blockly_namespace] = "<xml>"
+      xml_string[GOOGLE_BLOCKLY_NAMESPACE_XML] = "<xml>"
     end
     xml = Nokogiri::XML(xml_string, &:noblanks)
     tag = Blockly.field_or_title(xml)
@@ -218,15 +219,14 @@ class Blockly < Level
     default_category.remove if default_category.element_children.empty?
     xml_string = xml.serialize(save_with: XML_OPTIONS).delete("\n").strip
     if is_google_blockly
-      xml_string["<xml>"] = google_blockly_namespace
+      xml_string["<xml>"] = GOOGLE_BLOCKLY_NAMESPACE_XML
     end
     return xml_string
   end
 
   def self.convert_category_to_toolbox(xml_string)
-    google_blockly_namespace = "<xml xmlns=\"https://developers.google.com/blockly/xml\">"
-    if xml_string.include? google_blockly_namespace
-      xml_string[google_blockly_namespace] = "<xml>"
+    if xml_string.include? GOOGLE_BLOCKLY_NAMESPACE_XML
+      xml_string[GOOGLE_BLOCKLY_NAMESPACE_XML] = "<xml>"
     end
     xml = Nokogiri::XML(xml_string, &:noblanks).child
     tag = Blockly.field_or_title(xml)
