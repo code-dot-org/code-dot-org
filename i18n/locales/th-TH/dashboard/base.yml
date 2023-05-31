@@ -65,6 +65,7 @@ th:
   unsubmit: ไม่ส่งคำตอบ
   previous_page: หน้าที่แล้ว
   next_page: หน้าถัดไป
+  next_level: ระดับถัดไป
   next_resource: ทรัพยากรที่มีให้ใช้ถัดไป
   done_with_module: เสร็จสิ้นด้วยโมดูลการเรียนรู้นี้
   cancel: "ยกเลิก"
@@ -427,6 +428,7 @@ th:
       prizes_link: 'ข้อมูลเพิ่มเติม'
   teacher:
     answer: คำตอบ
+    dashboard: 'แดชบอร์ดครู'
     for_teachers_only: สำหรับคุณครูเท่านั้น
     title:
       one: 'อาจารย์ของคุณ:'
@@ -443,6 +445,7 @@ th:
       student: 'นักเรียน'
       viewing_solution: 'ดูเฉลย'
       try_it_yourself: 'ลองด้วยตัวเอง'
+      section: 'หมวด'
       example: 'ตัวอย่างวิธีการแก้ปัญหา'
       example_with_number: 'ตัวอย่างโซลูชัน %{solution_number}'
       submitted_on: 'ส่งให้:'
