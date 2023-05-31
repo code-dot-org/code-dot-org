@@ -209,6 +209,8 @@ class Blockly < Level
         xml.child << category_node
         block.remove
       else
+        block.remove_attribute('x')
+        block.remove_attribute('y')
         block.remove
         category_node << block
       end
