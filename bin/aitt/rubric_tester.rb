@@ -127,6 +127,14 @@ def validate_rubrics(expected_grades, standard_rubric, split_rubric, merge_map, 
   end
 end
 
+def validate_students(student_files, expected_grades)
+  expected_students = expected_grades.keys.sort
+  actual_students = student_files.map {|student_file| File.basename(student_file, '.js')}.sort
+
+  unexpected_students = actual_students - expected_students
+  raise "unexpected students: #{unexpected_students}" unless unexpected_students.empty?
+end
+
 # Given an array of grade rows:
 # [
 #   {
@@ -231,6 +239,7 @@ def main
   examples = get_examples
 
   validate_rubrics(expected_grades, standard_rubric, split_rubric, merge_map, options)
+  validate_students(student_files, expected_grades)
 
   rubric = options[:merge] ? split_rubric : standard_rubric
 
