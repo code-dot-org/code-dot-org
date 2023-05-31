@@ -134,13 +134,11 @@
         {
           "type": "comment",
           "name": "workshop_most_useful",
-          "visibleIf": "{csa_capstone_workshop} = 'w5'",
           "title": "What content from this workshop was most useful to you?"
         },
         {
           "type": "comment",
           "name": "workshop_expected_content",
-          "visibleIf": "{csa_capstone_workshop} = 'w5'",
           "title": "What content did you expect to be included in this workshop that wasn’t?"
         }
       ]
@@ -191,25 +189,25 @@
         {
           "type": "comment",
           "name": "csa_taught_enjoy",
-          "visibleIf": "{csa_capstone_workshop} = 'w1' and {csa_taught_current_sy} <> 'no'",
+          "visibleIf": "{csa_taught_current_sy} <> 'no'",
           "title": "What did you enjoy the most about teaching CSA during school year 2022-23?"
         },
         {
           "type": "comment",
           "name": "csa_taught_challenge",
-          "visibleIf": "{csa_capstone_workshop} = 'w1' and {csa_taught_current_sy} <> 'no'",
+          "visibleIf": "{csa_taught_current_sy} <> 'no'",
           "title": "What was one challenge you faced teaching CSA during school year 2022-23?"
         },
         {
           "type": "comment",
           "name": "csa_taught_difference",
-          "visibleIf": "{csa_capstone_workshop} = 'w1' and {csa_taught_current_sy} <> 'no'",
+          "visibleIf": "{csa_taught_current_sy} <> 'no'",
           "title": "What is one thing you did while teaching CSA during school year 2022-23 that “made all the difference” for you or your students?"
         },
         {
           "type": "comment",
           "name": "other_feedback_teach_csa",
-          "visibleIf": "{csa_capstone_workshop} = 'w1' and {csa_taught_current_sy} <> 'no'",
+          "visibleIf": "{csa_taught_current_sy} <> 'no'",
           "title": "Is there anything else you’d like to share about your experience teaching CSA?",
           "cols": 60,
           "rows": 3
@@ -222,13 +220,11 @@
         {
           "type": "comment",
           "name": "csa_strengthen_ap_cs",
-          "visibleIf": "{csa_capstone_workshop} = 'w3'",
           "title": "What does your school need to strengthen its AP computer science program?"
         },
         {
           "type": "matrix",
           "name": "java_knowledge_matrix",
-          "visibleIf": "{csa_capstone_workshop} = 'w2'",
           "title": "How much do you agree or disagree with the following statements about your knowledge of Java?",
           "columns": [
             {
@@ -274,7 +270,6 @@
         {
           "type": "radiogroup",
           "name": "csa_support_preference",
-          "visibleIf": "{csa_capstone_workshop} = 'w2'",
           "title": "When you face a challenge or have a question regarding teaching CSA, where do you go first to get support?",
           "choices": [
             {
@@ -593,21 +588,6 @@
           "title": "Is there any other feedback you’d like to share about your experience attending this workshop??",
           "cols": 60,
           "rows": 3
-        },
-        {
-          "type": "radiogroup",
-          "name": "can_contact",
-          "title": "Would you be open to code.org reaching out to you to gather additional feedback about our professional learning programs?",
-          "choices": [
-            {
-              "value": "yes",
-              "text": "Yes"
-            },
-            {
-              "value": "no",
-              "text": "No"
-            }
-          ]
         },
         {
           "type": "radiogroup",
