@@ -8,8 +8,8 @@ class Grade
   def grade_student_work(prompt, rubric, student_code, student_id, use_cached: false, examples: [], num_responses:, temperature:)
     if use_cached && File.exist?("cached_responses/#{student_id}.txt")
       cached_response = File.read("cached_responses/#{student_id}.txt")
-      tsv_data = parse_tsv(cached_response.strip)
-      return tsv_data.map(&:to_h)
+      tsv_data = get_tsv_data_if_valid(cached_response, rubric, student_id)
+      return tsv_data
     end
 
     api_url = 'https://api.openai.com/v1/chat/completions'
@@ -43,17 +43,12 @@ class Grade
     tokens = response.parsed_response['usage']['total_tokens']
     puts "#{student_id} request succeeded in #{(Time.now - start_time).to_i} seconds. #{tokens} tokens used."
     completed_text = response.parsed_response['choices'][0]['message']['content']
-    tsv_data = parse_tsv(completed_text.strip)
+    tsv_data = get_tsv_data_if_valid(completed_text, rubric, student_id)
 
-    begin
-      validate_server_response(tsv_data, rubric)
-    rescue InvalidResponseError => exception
-      puts "#{student_id} Invalid response: #{exception.message}\n#{completed_text}}"
-      return nil
-    end
+    # only write to cache if the response is valid
+    File.write("cached_responses/#{student_id}.txt", completed_text) if tsv_data
 
-    File.write("cached_responses/#{student_id}.txt", completed_text)
-    tsv_data.map(&:to_h)
+    tsv_data
   end
 
   private
@@ -67,6 +62,16 @@ class Grade
       messages << {role: 'assistant', content: example_rubric}
     end
     messages << {role: 'user', content: student_code}
+  end
+
+  # returns an array of hashes representing the AI's assessment, or nil if response_text is invalid.
+  def get_tsv_data_if_valid(response_text, rubric, student_id)
+    tsv_data = parse_tsv(response_text.strip)
+    validate_server_response(tsv_data, rubric)
+    tsv_data.map(&:to_h)
+  rescue InvalidResponseError => exception
+    puts "#{student_id} Invalid response: #{exception.message}\n#{response_text}}"
+    nil
   end
 
   def parse_tsv(tsv_text)
