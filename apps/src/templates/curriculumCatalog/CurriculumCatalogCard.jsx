@@ -10,6 +10,7 @@ import {
   translatedCourseOfferingSchoolSubjects,
   translatedCourseOfferingDurations,
   subjectsAndTopicsOrder,
+  translatedLabels,
 } from '@cdo/apps/templates/teacherDashboard/CourseOfferingHelpers';
 import style from './curriculum_catalog_card.module.scss';
 import CardLabels from '@cdo/apps/templates/curriculumCatalog/CardLabels';
@@ -44,11 +45,7 @@ const CurriculumCatalogCard = ({
     subjectsAndTopics={intersection(
       subjectsAndTopicsOrder,
       concat(subjects, topics)
-    )?.map(
-      subject_or_topic_key =>
-        translatedCourseOfferingSchoolSubjects[subject_or_topic_key] ||
-        translatedCourseOfferingCsTopics[subject_or_topic_key]
-    )}
+    )?.map(subject_or_topic_key => translatedLabels[subject_or_topic_key])}
     quickViewButtonDescription={i18n.quickViewDescription({
       course_name: courseDisplayName,
     })}
