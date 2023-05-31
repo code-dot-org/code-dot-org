@@ -182,8 +182,13 @@ class Blockly < Level
   }
 
   GOOGLE_BLOCKLY_NAMESPACE_XML = "<xml xmlns=\"https://developers.google.com/blockly/xml\">"
+
+  # This function converts category blocks used by levelbuilders to edit the toolbox to category tags
+  # and places the appropriate blocks within each category
   def self.convert_toolbox_to_category(xml_string)
+    is_google_blockly = false
     if xml_string.include? GOOGLE_BLOCKLY_NAMESPACE_XML
+      is_google_blockly = true
       xml_string[GOOGLE_BLOCKLY_NAMESPACE_XML] = "<xml>"
     end
     xml = Nokogiri::XML(xml_string, &:noblanks)
@@ -215,9 +220,15 @@ class Blockly < Level
       end
     end
     default_category.remove if default_category.element_children.empty?
-    xml.serialize(save_with: XML_OPTIONS).delete("\n").strip
+    xml_string = xml.serialize(save_with: XML_OPTIONS).delete("\n").strip
+    if is_google_blockly
+      xml_string["<xml>"] = GOOGLE_BLOCKLY_NAMESPACE_XML
+    end
+    return xml_string
   end
 
+  # This function converts category tags to blocks so that levelbuilders can more easily edit
+  # a toolbox that contains categories.
   def self.convert_category_to_toolbox(xml_string)
     if xml_string.include? GOOGLE_BLOCKLY_NAMESPACE_XML
       xml_string[GOOGLE_BLOCKLY_NAMESPACE_XML] = "<xml>"
