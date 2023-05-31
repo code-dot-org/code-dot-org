@@ -24,7 +24,12 @@ class Grade
     }
 
     start_time = Time.now
-    response = HTTParty.post(api_url, headers: headers, body: data.to_json, timeout: 120)
+    begin
+      response = HTTParty.post(api_url, headers: headers, body: data.to_json, timeout: 120)
+    rescue Net::ReadTimeout
+      puts "#{student_id} request timed out in #{(Time.now - start_time).to_i} seconds."
+      return nil
+    end
 
     if response.code == 200
       tokens = response.parsed_response['usage']['total_tokens']
