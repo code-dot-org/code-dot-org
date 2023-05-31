@@ -58,12 +58,6 @@ class Grade
 
   private
 
-  def parse_tsv(tsv_text)
-    rows = tsv_text.split("\n")
-    header = rows.shift.split("\t")
-    rows.map {|row| Hash[header.zip(row.split("\t"))]}
-  end
-
   def compute_messages(prompt, rubric, student_code, examples: [])
     messages = [
       {role: 'system', content: "#{prompt}\n\nRubric:\n#{rubric}"}
@@ -73,6 +67,12 @@ class Grade
       messages << {role: 'assistant', content: example_rubric}
     end
     messages << {role: 'user', content: student_code}
+  end
+
+  def parse_tsv(tsv_text)
+    rows = tsv_text.split("\n")
+    header = rows.shift.split("\t")
+    rows.map {|row| Hash[header.zip(row.split("\t"))]}
   end
 
   def validate_server_response(tsv_data, rubric)
