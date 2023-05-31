@@ -1,8 +1,5 @@
 - @page_title = t('activerecord.attributes.user.edit_header')
 - no_email = current_user.no_personal_email? || params[:noEmail] == 'true'
-- location = Geocoder.search(request.ip).try(:first)
-- country_code = location&.country_code.to_s.upcase
-- state_code = location&.state_code.to_s.upcase
 
 = link_to :back do
   %i.fa.fa-chevron-left
@@ -75,12 +72,6 @@
       = f.label :full_address, class: "label-bold"
       = f.text_area :full_address, class: 'input-xxlarge', rows: 4, maxlength: 255
     = f.hidden_field :age, value: "21"
-  - if !resource.teacher?
-    .field
-      = f.label :us_state
-      = f.select :us_state, us_state_options, selected: current_user.us_state,
-        include_blank: true
-      = f.hidden_field :country_code, value: country_code
 
   %div#submit-update= f.submit t('user.update'), class: 'btn btn-primary'
 
