@@ -483,11 +483,14 @@ class Projects
     true
   end
 
-  # valid thumbnail URLs should be of the format:
+  # valid thumbnail URLs are typically of the format:
   # /v3/files/<channel_id>/.metadata/thumbnail.png
   # I observed thumbnail URLs of remixed projects having having the channel ID of the parent project,
-  # so we assert on the start/end of the URL
+  # so we assert on the start/end of the URL.
+  # We also use placeholder thumbnail images in a couple of labs (dance, flappy),
+  # so accepting those as valid as well
   def valid_thumbnail_url?(thumbnail_url)
-    thumbnail_url.start_with?('/v3/files/') && thumbnail_url.end_with?('.metadata/thumbnail.png')
+    (thumbnail_url.start_with?('/v3/files/') && thumbnail_url.end_with?('.metadata/thumbnail.png')) ||
+      thumbnail_url.start_with?('/blockly/media')
   end
 end
