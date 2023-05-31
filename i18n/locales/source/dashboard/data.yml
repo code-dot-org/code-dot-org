@@ -789,6 +789,7 @@ en:
         csa_sorting_algorithms: 'CSA: Sorting Algorithms'
         star_quilts_intro_to_artist: 'Star Quilts: Intro to Artist'
         upload_sprites_backgrounds: Uploading Custom Sprites and Backgrounds
+        PL_CSD_EquityBlindSpotsvid: Bias & Responsibility
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block
