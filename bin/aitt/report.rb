@@ -26,7 +26,8 @@ class Report
       file.puts "  <h2>Command Line:</h2>"
       file.puts "  <p><pre>#{$command_line}</pre><\p>"
 
-      file.puts "  <h2>Overall Accuracy: #{accuracy.to_i}%</h2>"
+      accuracy = accuracy.nan? ? 'N/A' : "#{accuracy.to_i}%"
+      file.puts "  <h2>Overall Accuracy: #{accuracy}</h2>"
       file.puts "  <h2>Accuracy by Key Concept:</h2>"
       file.puts generate_accuracy_table(accuracy_by_criteria)
 
