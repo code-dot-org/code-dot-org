@@ -4,7 +4,7 @@
 #
 #  id                :bigint           not null, primary key
 #  name              :string(255)
-#  platform_id       :string(32)       not null
+#  platform_id       :string(36)       not null
 #  issuer            :string(255)      not null
 #  client_id         :string(255)      not null
 #  platform_name     :string(255)      not null
@@ -33,6 +33,6 @@ class LtiIntegration < ApplicationRecord
   before_create :set_uuid
 
   def set_uuid
-    self.platform_id = SecureRandom.uuid.delete "-"
+    self.platform_id = SecureRandom.uuid
   end
 end

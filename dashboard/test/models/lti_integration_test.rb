@@ -4,7 +4,7 @@ class LtiIntegrationTest < ActiveSupport::TestCase
   test "platform_id should exist" do
     integration = create(:lti_integration)
     assert_not_nil integration.platform_id
-    assert_equal integration.platform_id.length, 32
+    assert_equal integration.platform_id.length, 36
   end
 
   test "should validate required fields" do
