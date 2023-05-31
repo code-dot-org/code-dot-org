@@ -667,6 +667,17 @@ class UnconnectedMusicView extends React.Component {
           vertical={position !== InstructionsPositions.TOP}
           right={position === InstructionsPositions.RIGHT}
         />
+        <Controls
+          setPlaying={this.setPlaying}
+          playTrigger={this.playTrigger}
+          top={this.props.timelineAtTop}
+          instructionsAvailable={!!this.progressManager}
+          toggleInstructions={() => this.toggleInstructions(false)}
+          instructionsOnRight={false}
+          hasTrigger={this.musicBlocklyWorkspace.hasTrigger.bind(
+            this.musicBlocklyWorkspace
+          )}
+        />
       </div>
     );
   }
@@ -680,17 +691,6 @@ class UnconnectedMusicView extends React.Component {
           timelineAtTop ? moduleStyles.timelineTop : moduleStyles.timelineBottom
         )}
       >
-        <Controls
-          setPlaying={this.setPlaying}
-          playTrigger={this.playTrigger}
-          top={timelineAtTop}
-          instructionsAvailable={!!this.progressManager}
-          toggleInstructions={() => this.toggleInstructions(false)}
-          instructionsOnRight={instructionsOnRight}
-          hasTrigger={this.musicBlocklyWorkspace.hasTrigger.bind(
-            this.musicBlocklyWorkspace
-          )}
-        />
         <Timeline />
       </div>
     );

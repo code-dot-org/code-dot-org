@@ -1,24 +1,33 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import {useSelector} from 'react-redux';
 import classNames from 'classnames';
 import styles from './beatpad.module.scss';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import musicI18n from '../locale';
+import {BlockTypes} from '../blockly/blockTypes';
+import {TRIGGER_FIELD} from '../blockly/constants';
 
 const BUTTONS_PER_ROW = 4;
 const enabledClasses = [
-  styles.purple,
-  styles.strawberry,
-  styles.orange,
-  styles.yellow,
-  styles.green,
-  styles.teal,
+  styles.greenTrigger,
+  styles.greenTrigger,
+  styles.greenTrigger,
+  styles.greenTrigger,
+  styles.greenTrigger,
+  styles.greenTrigger,
 ];
 
 /**
  * Renders the Beat Pad component, which can be used to play numbered triggers during playback
  */
 const BeatPad = ({triggers, playTrigger, onClose, isPlaying, hasTrigger}) => {
+  const selectedBlockId = useSelector(state => state.music.selectedBlockId);
+  const selectedBlock =
+    selectedBlockId && Blockly.mainBlockSpace.getBlockById(selectedBlockId);
+  const isSelectedBlockTriggerAt =
+    selectedBlock?.type === BlockTypes.TRIGGERED_AT_SIMPLE2;
+  const selectedTriggerId =
+    isSelectedBlockTriggerAt && selectedBlock?.getFieldValue(TRIGGER_FIELD);
+
   const renderTriggers = () => {
     let buttons = [];
     for (let j = 0; j < BUTTONS_PER_ROW; j++) {
@@ -28,7 +37,8 @@ const BeatPad = ({triggers, playTrigger, onClose, isPlaying, hasTrigger}) => {
             label={triggers[j].buttonLabel}
             onClick={() => playTrigger(triggers[j].id)}
             key={triggers[j].id}
-            colorClassName={classNames(isPlaying && enabledClasses[j])}
+            colorClassName={classNames(/*isPlaying && */ enabledClasses[j])}
+            isSelected={triggers[j].id === selectedTriggerId}
             disabled={!isPlaying}
           />
         );
@@ -41,10 +51,20 @@ const BeatPad = ({triggers, playTrigger, onClose, isPlaying, hasTrigger}) => {
   return <div className={styles.triggersContainer}>{renderTriggers()}</div>;
 };
 
-const TriggerButton = ({label, onClick, colorClassName, disabled}) => {
+const TriggerButton = ({
+  label,
+  onClick,
+  colorClassName,
+  isSelected,
+  disabled,
+}) => {
   return (
     <div
-      className={classNames(styles.triggerButton, colorClassName)}
+      className={classNames(
+        styles.triggerButton,
+        colorClassName,
+        isSelected && styles.selected
+      )}
       onClick={disabled ? null : onClick}
     >
       {label}
