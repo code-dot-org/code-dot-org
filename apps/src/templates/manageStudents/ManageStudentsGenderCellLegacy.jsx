@@ -12,10 +12,10 @@ const GENDERS = {
   o: i18n.genderNotListed(),
 };
 
-class ManageStudentGenderCell extends Component {
+class ManageStudentGenderCellLegacy extends Component {
   static propTypes = {
     id: PropTypes.number.isRequired,
-    genderTeacherInput: PropTypes.string,
+    gender: PropTypes.string,
     isEditing: PropTypes.bool,
     editedValue: PropTypes.string,
     // Provided by redux
@@ -23,21 +23,17 @@ class ManageStudentGenderCell extends Component {
   };
 
   state = {
-    genderValue: this.props.genderTeacherInput,
+    genderValue: this.props.gender,
   };
 
   onChangeGender = e => {
-    this.props.editStudent(this.props.id, {
-      genderTeacherInput: e.target.value,
-    });
+    this.props.editStudent(this.props.id, {gender: e.target.value});
   };
 
   render() {
     return (
       <div>
-        {!this.props.isEditing && (
-          <div>{GENDERS[this.props.genderTeacherInput]}</div>
-        )}
+        {!this.props.isEditing && <div>{GENDERS[this.props.gender]}</div>}
         {this.props.isEditing && (
           <select
             ref={element => (this.root = element)}
@@ -65,4 +61,4 @@ export default connect(
       dispatch(editStudent(id, studentInfo));
     },
   })
-)(ManageStudentGenderCell);
+)(ManageStudentGenderCellLegacy);
