@@ -59,9 +59,9 @@ export function positionBlocksOnWorkspace(
   if (!workspace.rendered) {
     return blocks;
   }
-  const metrics = workspace.getMetrics();
+  const metrics = workspace.getMetrics() || {contentWidth: 0, viewWidth: 0};
   const contentWidth = metrics.contentWidth;
-  const viewWidth = metrics ? metrics.viewWidth : 0;
+  const viewWidth = metrics.viewWidth;
   const padding = viewWidth ? 16 : 0;
 
   // The "cursor" object tracks a position on the workspace that starts in the top
@@ -91,8 +91,8 @@ export function positionBlocksOnWorkspace(
  */
 export function positionBlock(block, workspace, cursor) {
   const verticalSpaceBetweenBlocks = 10;
-  const metrics = workspace.getMetrics();
-  const viewWidth = metrics ? metrics.viewWidth : 0;
+  const metrics = workspace.getMetrics() || {viewWidth: 0};
+  const viewWidth = metrics.viewWidth;
   addUnusedFrame(block);
   let blockLocationUnset = true;
   const position = block.getRelativeToSurfaceXY();
@@ -143,8 +143,8 @@ export function positionBlockLegacy(block, workspace, cursor) {
   const frameSvgSize = hasFrameSvg ? 40 : 0;
   const frameSvgTop = hasFrameSvg ? 35 : 0;
   const frameSvgMargin = hasFrameSvg ? 16 : 0;
-  const metrics = workspace.getMetrics();
-  const viewWidth = metrics ? metrics.viewWidth : 0;
+  const metrics = workspace.getMetrics() || {viewWidth: 0};
+  const viewWidth = metrics.viewWidth;
 
   // If the block doesn't already have coordinates, use the cursor.
   if (isNaN(block.x)) {
