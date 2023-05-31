@@ -21,8 +21,8 @@ And
 Alex Brenner<br>
 Director of Accounting and Finance<br>
 Code.org<br>
-1501 4th Ave, Suite 9000<br>
-Seattle, WA 98101
+801 5th Avenue, Suite 2100<br>
+Seattle, WA 98104
 
 <br>
 I, [Superintendent’s/Principal’s Name at High School/District,] [Title], give permission to the College Board to release the following school-level data to Code.org:
@@ -45,7 +45,7 @@ Please send the data to:
 Alex Brenner<br>
 Director of Accounting and Finance<br>
 Code.org<br>
-1501 4th Ave, Suite 9000<br>
+801 5th Avenue, Suite 2100<br>
 Seattle, WA 98101
 
 Sincerely,
