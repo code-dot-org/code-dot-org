@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_05_18_155319) do
+ActiveRecord::Schema.define(version: 2023_05_30_215538) do
 
   create_table "activities", id: :integer, charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -746,9 +746,18 @@ ActiveRecord::Schema.define(version: 2023_05_18_155319) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "lti_deployments", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
+    t.string "deployment_id"
+    t.bigint "lti_integration_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["deployment_id"], name: "index_lti_deployments_on_deployment_id"
+    t.index ["lti_integration_id"], name: "index_lti_deployments_on_lti_integration_id"
+  end
+
   create_table "lti_integrations", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
     t.string "name"
-    t.string "platform_id", null: false
+    t.string "platform_id", limit: 36, null: false
     t.string "issuer", null: false
     t.string "client_id", null: false
     t.string "platform_name", null: false
@@ -761,6 +770,17 @@ ActiveRecord::Schema.define(version: 2023_05_18_155319) do
     t.index ["client_id"], name: "index_lti_integrations_on_client_id"
     t.index ["issuer"], name: "index_lti_integrations_on_issuer"
     t.index ["platform_id"], name: "index_lti_integrations_on_platform_id"
+  end
+
+  create_table "lti_user_identities", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
+    t.string "subject", null: false
+    t.bigint "lti_integration_id", null: false
+    t.integer "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["lti_integration_id"], name: "index_lti_user_identities_on_lti_integration_id"
+    t.index ["subject"], name: "index_lti_user_identities_on_subject"
+    t.index ["user_id"], name: "index_lti_user_identities_on_user_id"
   end
 
   create_table "metrics", id: :integer, charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
@@ -2178,6 +2198,9 @@ ActiveRecord::Schema.define(version: 2023_05_18_155319) do
   add_foreign_key "circuit_playground_discount_applications", "schools"
   add_foreign_key "hint_view_requests", "users"
   add_foreign_key "level_concept_difficulties", "levels"
+  add_foreign_key "lti_deployments", "lti_integrations"
+  add_foreign_key "lti_user_identities", "lti_integrations"
+  add_foreign_key "lti_user_identities", "users"
   add_foreign_key "parental_permission_requests", "users"
   add_foreign_key "pd_application_emails", "pd_applications"
   add_foreign_key "pd_application_tags_applications", "pd_application_tags"
