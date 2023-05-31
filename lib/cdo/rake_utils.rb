@@ -24,15 +24,16 @@ module RakeUtils
   end
 
   def self.upgrade_service(id)
-    sudo 'service', id.to_s, 'upgrade' if OS.linux? && CDO.chef_managed
+    sudo 'systemctl', 'daemon-reload' if OS.linux? && CDO.chef_managed
+    restart_service(id)
   end
 
   def self.start_service(id)
-    sudo 'service', id.to_s, 'start' if OS.linux? && CDO.chef_managed
+    sudo 'systemctl', 'start', id.to_s if OS.linux? && CDO.chef_managed
   end
 
   def self.stop_service(id)
-    sudo 'service', id.to_s, 'stop' if OS.linux? && CDO.chef_managed
+    sudo 'systemctl', 'stop', id.to_s if OS.linux? && CDO.chef_managed
   end
 
   # We've been having problems with 'sudo service dashboard stop', where it
@@ -68,7 +69,7 @@ module RakeUtils
   end
 
   def self.restart_service(id)
-    sudo 'service', id.to_s, 'restart' if OS.linux? && CDO.chef_managed
+    sudo 'systemctl', 'restart', id.to_s if OS.linux? && CDO.chef_managed
   end
 
   def self.system_(*args)
