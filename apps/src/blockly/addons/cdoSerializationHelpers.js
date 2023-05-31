@@ -19,10 +19,10 @@ export function convertXmlToJson(xml) {
   const stateToLoad = Blockly.serialization.workspaces.save(tempWorkspace);
 
   // Create a map of ids (key) and blocks (value).
-  const blockIdMap = new Map();
-  stateToLoad.blocks.blocks.forEach(block => {
-    blockIdMap.set(block.id, block);
-  });
+  const blockIdMap = stateToLoad.blocks.blocks.reduce(
+    (map, block) => map.set(block.id, block),
+    new Map()
+  );
 
   addPositionsToState(xmlBlocks, blockIdMap);
   tempWorkspace.dispose();
@@ -46,12 +46,16 @@ function addPositionsToState(xmlBlocks, blockIdMap) {
 }
 
 /**
- * Use a cursor to position blocks on a workspace (if they do not already have positions)
+ * Position blocks on a workspace (if they do not already have positions)
  * @param {Blockly.Workspace} workspace - the current Blockly workspace
- * @param {Map<String, Object>} blockIdMap - a map of ids (keys) and blocks (values)
+ * @param {function} positionBlock - moves a single block using the current cursor coordinates
+ * @param {Array<block>} blocks - an array of block objects
  */
-export function positionBlocks(workspace) {
-  const blocks = workspace.getTopBlocks(SORT_BY_POSITION);
+export function positionBlocksOnWorkspace(
+  workspace,
+  positionBlock,
+  blocks = workspace.getTopBlocks(SORT_BY_POSITION)
+) {
   if (!workspace.rendered) {
     return blocks;
   }
@@ -59,7 +63,6 @@ export function positionBlocks(workspace) {
   const contentWidth = metrics.contentWidth;
   const viewWidth = metrics ? metrics.viewWidth : 0;
   const padding = viewWidth ? 16 : 0;
-  const verticalSpaceBetweenBlocks = 10;
 
   // The "cursor" object tracks a position on the workspace that starts in the top
   // corner, then moves below each block that is manually repositioned.
@@ -75,27 +78,40 @@ export function positionBlocks(workspace) {
     cursor.x = contentWidth - padding;
   }
 
-  blocks.forEach(block => {
-    addUnusedFrame(block);
-    let blockLocationUnset = true;
-    const position = block.getRelativeToSurfaceXY();
-    if (position) {
-      blockLocationUnset =
-        position.y === 0 && position.x === (workspace.RTL ? viewWidth : 0);
-    }
-    if (blockLocationUnset) {
-      const hasSvgFrame = !!block.functionalSvg_ || !!block.unusedSvg_;
-      const frameSvgTop = hasSvgFrame ? 35 : 0;
-      const frameSvgHeight = hasSvgFrame ? 40 : 0;
-      const frameSvgMargin = hasSvgFrame ? 16 : 0;
-      const height = block.getHeightWidth().height + frameSvgHeight;
-      block.moveTo({
-        x: cursor.x + (workspace.RTL ? -frameSvgMargin : frameSvgMargin),
-        y: cursor.y + frameSvgTop,
-      });
-      cursor.y += height + verticalSpaceBetweenBlocks;
-    }
-  });
+  blocks.forEach(block => positionBlock(block, workspace, cursor));
+}
+
+/**
+ * Use a cursor to position a block on a workspace (if it does not already have a position)
+ * @param {Blockly.Block} block - the block to be moved
+ * @param {Blockly.Workspace} workspace - the current Blockly workspace
+ * @param {object} cursor - a location for moving a block, if needed
+ * @param {number} cursor.x - an x-coordinate for moving a block
+ * @param {number} cursor.y - a y-coordinate for moving a block
+ */
+export function positionBlock(block, workspace, cursor) {
+  const verticalSpaceBetweenBlocks = 10;
+  const metrics = workspace.getMetrics();
+  const viewWidth = metrics ? metrics.viewWidth : 0;
+  addUnusedFrame(block);
+  let blockLocationUnset = true;
+  const position = block.getRelativeToSurfaceXY();
+  if (position) {
+    blockLocationUnset =
+      position.y === 0 && position.x === (workspace.RTL ? viewWidth : 0);
+  }
+  if (blockLocationUnset) {
+    const hasSvgFrame = !!block.functionalSvg_ || !!block.unusedSvg_;
+    const frameSvgTop = hasSvgFrame ? 35 : 0;
+    const frameSvgHeight = hasSvgFrame ? 40 : 0;
+    const frameSvgMargin = hasSvgFrame ? 16 : 0;
+    const height = block.getHeightWidth().height + frameSvgHeight;
+    block.moveTo({
+      x: cursor.x + (workspace.RTL ? -frameSvgMargin : frameSvgMargin),
+      y: cursor.y + frameSvgTop,
+    });
+    cursor.y += height + verticalSpaceBetweenBlocks;
+  }
 }
 
 /**
@@ -107,4 +123,47 @@ function addUnusedFrame(block) {
     block.unusedSvg_ = new BlockSvgUnused(block);
     block.unusedSvg_.render(block.svgGroup_, block.RTL);
   }
+}
+
+/**
+ * Use a cursor to position a block on a workspace (if it does not already have a position)
+ * @param {object} block - the block to be moved and a pair of coordinates
+ * @param {Blockly.block} block.blockly_block - the actual Blockly block to be moved
+ * @param {number} [block.x] - an x-coordinate from the XML serialization
+ * @param {number} [block.y] - a y-coordinate frmo the XML serialization
+ * @param {Blockly.Workspace} workspace - the current Blockly workspace
+ * @param {object} cursor - a location for moving a block, if needed
+ * @param {number} cursor.x - an x-coordinate for moving a block
+ * @param {number} cursor.y - a y-coordinate for moving a block
+ */
+export function positionBlockLegacy(block, workspace, cursor) {
+  const verticalSpaceBetweenBlocks = 10;
+  const heightWidth = block.blockly_block.getHeightWidth();
+  const hasFrameSvg = !!block.blockly_block.functionalSvg_;
+  const frameSvgSize = hasFrameSvg ? 40 : 0;
+  const frameSvgTop = hasFrameSvg ? 35 : 0;
+  const frameSvgMargin = hasFrameSvg ? 16 : 0;
+  const metrics = workspace.getMetrics();
+  const viewWidth = metrics ? metrics.viewWidth : 0;
+
+  // If the block doesn't already have coordinates, use the cursor.
+  if (isNaN(block.x)) {
+    block.x = cursor.x;
+  } else if (workspace.RTL) {
+    // Position RTLs with coordinates from the left.
+    block.x = viewWidth - block.x;
+  }
+  // Adjust for Svg Frames for function definition blocks
+  if (!workspace.RTL) {
+    block.x += frameSvgMargin;
+  } else {
+    block.x -= frameSvgMargin;
+  }
+
+  if (isNaN(block.y)) {
+    block.y = cursor.y + frameSvgTop;
+    cursor.y += heightWidth.height + verticalSpaceBetweenBlocks + frameSvgSize;
+  }
+
+  block.blockly_block.moveTo(new Blockly.utils.Coordinate(block.x, block.y));
 }

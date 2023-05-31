@@ -2,7 +2,12 @@ import {ToolboxType, CLAMPED_NUMBER_REGEX, DEFAULT_SOUND} from '../constants';
 import cdoTheme from '../themes/cdoTheme';
 import {APP_HEIGHT} from '@cdo/apps/p5lab/constants';
 import {SOUND_PREFIX} from '@cdo/apps/assetManagement/assetPrefix';
-import {convertXmlToJson, positionBlocks} from './cdoSerializationHelpers';
+import {
+  convertXmlToJson,
+  positionBlock,
+  positionBlockLegacy,
+  positionBlocksOnWorkspace,
+} from './cdoSerializationHelpers';
 import experiments from '@cdo/apps/util/experiments';
 
 /**
@@ -18,9 +23,10 @@ export function loadBlocksToWorkspace(workspace, xml, stateToLoad) {
       stateToLoad = convertXmlToJson(xml);
     }
     Blockly.serialization.workspaces.load(stateToLoad, workspace);
-    positionBlocks(workspace);
+    positionBlocksOnWorkspace(workspace, positionBlock);
   } else {
-    Blockly.Xml.domToBlockSpace(workspace, xml);
+    const cdoXmlBlocks = Blockly.Xml.domToBlockSpace(workspace, xml);
+    positionBlocksOnWorkspace(workspace, positionBlockLegacy, cdoXmlBlocks);
   }
 }
 
