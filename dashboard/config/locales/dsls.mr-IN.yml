@@ -11823,3 +11823,27 @@ mr-IN:
         questions:
         - text: हा कोड काळजीपूर्वक पहा. जेव्हा प्रोग्रॅम रन होईल तेव्हा काय होईल असे
             तुम्हाला वाटते?
+      Test Contained Retriable Multi:
+        answers:
+        - text: '0'
+        - text: '1'
+        - text: '2'
+          correct: true
+        - text: '4'
+        questions:
+        - {}
+      test-single-multi-standalone-retriable:
+        answers:
+        - text: काहीच घडणार नाही.
+          feedback: चूक. टम्बलवीड टम्बल व्हायला सुरुवात करेल.
+        - text: टम्बलवीड स्क्रीनच्या वरच्या भागात तरंगेल
+          feedback: चूक. टम्बलवीड टम्बल व्हायला सुरुवात करेल.
+        - text: 'टम्बलवीड टम्बल व्हायला सुरुवात करेल
+
+'
+          correct: true
+          feedback: बरोबर!
+        - text: टम्बलवीड मध्येमध्ये डोळे मिचकावेल.
+          feedback: चूक. टम्बलवीड टम्बल व्हायला सुरुवात करेल.
+        questions:
+        - text: खालचा कोड काळजीपूर्वक बघा. तुम्ही 'Run' क्लिक करता तेव्हा काय होईल?
