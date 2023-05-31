@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "csc-ecosystems",
-    "serialized_at": "2023-05-26 21:30:07 UTC",
+    "serialized_at": "2023-05-30 23:26:23 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -44,7 +44,7 @@
       "relative_position": 1,
       "properties": {
         "overview": "In this **skill-building** lesson, students will program a model of an aquatic ecosystem and then simulate an overfishing situation. Students will learn how to program conditional statements to check the amount of algae in the water. If there is too much algae, the coral becomes sick. If there is too little algae, the fish have no food source and leave the area. If there is just the right amount of algae, the sick coral will heal and the fish will stay in the area. \n",
-        "preparation": "- Play through the levels and review the lesson slides.\n- Decide on pacing between student work time and whole group instruction.\n- Check your technology and decide if you need to troubleshoot anything in advance.\n- Consider this prework (link\n- Consider these extensions (link)",
+        "preparation": "- Play through the levels and review the lesson slides.\n- Decide on pacing between student work time and whole group instruction.\n- Check your technology and decide if you need to troubleshoot anything in advance.\n- Consider assigning students the recommended preparation ([link](https://levelbuilder-studio.code.org/s/csc-ecosystems-2023/lessons/1#activity-4050222))\n- Consider these related extensions options ([link](https://levelbuilder-studio.code.org/s/csc-ecosystems-2023/lessons/1#activity-4050221))",
         "purpose": "Students will learn that marine ecosystems have many organisms which interact and keep each other in balance. This lesson combines computer science with life sciences as students create a model that simulates the effects of overfishing. "
       },
       "seeding_key": {
