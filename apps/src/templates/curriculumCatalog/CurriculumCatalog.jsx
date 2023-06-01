@@ -76,7 +76,6 @@ const getInitialFilterStates = () => {
 
   let filters = getEmptyFilters();
   Object.keys(urlParams).forEach(paramKey => {
-    // Ensure valid filter key
     if (filterTypeKeys.includes(paramKey)) {
       filters[paramKey] = getValidParamValues(paramKey, urlParams[paramKey]);
     }
@@ -173,12 +172,10 @@ const CurriculumCatalog = ({curriculaData, isEnglish}) => {
 
   // Handles updating the given filter and the URL parameters.
   const handleUpdateFilter = (filterKey, values) => {
-    // Update appliedFilters object
     let newFilters = {...appliedFilters};
     newFilters[filterKey] = values;
     setAppliedFilters(newFilters);
 
-    // Update URL params
     const valuesParam = values.length > 0 ? values : undefined;
     updateQueryParam(filterKey, valuesParam, true);
   };

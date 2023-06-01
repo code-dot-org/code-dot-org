@@ -28,12 +28,11 @@ import {
 
 describe('CurriculumCatalog', () => {
   const defaultProps = {curriculaData: allCurricula, isEnglish: false};
-  let replaceStateOrig = window.history.replaceState;
 
   beforeEach(() => {
     const store = configureStore({reducer: {responsive}});
     store.dispatch(setResponsiveSize(ResponsiveSize.lg));
-    window.history.replaceState = (_, __, newLocation) => newLocation;
+    window.history.replaceState = () => {};
     render(
       <Provider store={store}>
         <CurriculumCatalog {...defaultProps} />
@@ -43,7 +42,6 @@ describe('CurriculumCatalog', () => {
 
   afterEach(() => {
     resetWindowLocation();
-    window.history.replaceState = replaceStateOrig;
   });
 
   it('renders page title', () => {
