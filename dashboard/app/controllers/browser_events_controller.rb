@@ -5,9 +5,11 @@ class BrowserEventsController < ApplicationController
   FIREHOSE_STUDY_NAME = 'browser-cloudwatch-metrics-errors'
 
   LOGS_CLIENT = Aws::CloudWatchLogs::Client.new
-  LOG_GROUP_PREFIX = rack_env?(:adhoc) ? CDO.stack_name : rack_env
-  LOG_GROUP_NAME = "#{LOG_GROUP_PREFIX}-browser-events"
-  LOG_STREAM_NAME = LOG_GROUP_PREFIX
+  CLOUDWATCH_CLIENT = Aws::CloudWatch::Client.new
+  ENV_PREFIX = rack_env?(:adhoc) ? CDO.stack_name : rack_env
+  LOG_GROUP_NAME = "#{ENV_PREFIX}-browser-events"
+  LOG_STREAM_NAME = ENV_PREFIX
+  METRIC_NAMESPACE = "#{ENV_PREFIX}-browser-metrics"
 
   before_action :check_preconditions
 
@@ -40,6 +42,40 @@ class BrowserEventsController < ApplicationController
       error_message: "Error publishing logs to Cloudwatch"
     )
     render status: :internal_server_error, json: {error: exception}
+  end
+
+  # POST /put_metric_data
+  def put_metric_data
+    body = JSON.parse(request.body.read)
+
+    return render status :bad_request, json: {message: 'missing required params: metricData'} unless body["metricData"]
+
+    CLOUDWATCH_CLIENT.put_metric_data(
+      {
+        namespace: METRIC_NAMESPACE,
+        metric_data: body["metricData"].map {|datum| convert_metric_datum(datum)}
+      }
+    )
+
+    render status: :ok, json: {}
+  rescue => exception
+    Honeybadger.notify(
+      exception,
+      error_message: "Error publishing metrics to Cloudwatch"
+    )
+    render status: :internal_server_error, json: {error: exception}
+  end
+
+  private def convert_metric_datum(metric_datum)
+    return nil unless metric_datum["name"]
+
+    # Replace the 'name' key with 'metric_name'
+    metric_datum["metric_name"] = metric_datum["name"]
+    metric_datum.delete("name")
+    # put_metric_data requires ISO timestamp
+    metric_datum["timestamp"] = Time.now
+
+    metric_datum.deep_symbolize_keys
   end
 
   # Adds shared params to all log objects and convert to stringified JSON
