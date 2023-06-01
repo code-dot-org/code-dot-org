@@ -14661,3 +14661,25 @@ tr-TR:
           olduğu kadar çok tamamla. Olay ve hareeketli nesne gruplarıyla alıştırma
           yapmaya devam et!
         display_name: Çok sayıda Hareketli Nesne Alıştırmaları
+      Test Contained Retriable Multi:
+        answers:
+        - text: '0'
+        - text: '1'
+        - text: '2'
+          correct: true
+        - text: '4'
+        questions:
+        - {}
+      test-single-multi-standalone-retriable:
+        answers:
+        - text: Hiçbir şey olmayacak.
+          feedback: Yanlış. Kuru ot yuvarlanmaya başlayacak
+        - text: Kuru ot ekranın üst kısmına doğru kayacak
+          feedback: Yanlış. Kuru ot yuvarlanmaya başlayacak
+        - text: Kuru ot yuvarlanmaya başlayacak
+          correct: true
+          feedback: Doğru!
+        - text: Kuru ot göz kırpacak.
+          feedback: Yanlış. Kuru ot yuvarlanmaya başlayacak
+        questions:
+        - text: Aşağıdaki kodu iyice inceleyin. "Çalıştır"a bastıktan sonra ne olacak?

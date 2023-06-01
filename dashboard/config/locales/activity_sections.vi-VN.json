@@ -2043,6 +2043,7 @@
           "name": "Xem trước bài tập trực tuyến"
         },
         "a4ab31f7-6915-461a-b307-aad86879a097": {
+          "name": "Nếu/Khác với Bee",
           "description": "Một số câu hỏi có thể phát sinh từ những bài tập này, vì vậy hãy để học sinh làm việc theo cặp hoặc thực hiện quy tắc “Hỏi ba người trước khi hỏi tôi” (yêu cầu học sinh nhờ ba bạn khác giúp đỡ trước khi đến gặp giáo viên). Phương pháp này sẽ mở ra các cuộc thảo luận giúp mỗi học sinh hiểu bài hơn."
         },
         "f581d038-c3fb-4ac3-a56e-31b84d50ba91": {
@@ -2126,6 +2127,7 @@
           "description": "Trong bài học này, học sinh sẽ tạo vòng lặp chỉ chạy “đến khi” điều kiện đúng. Hãy giúp học sinh hiểu cách hoạt động của công cụ này bằng cách dẫn dắt họ tham gia các hoạt động nhóm và yêu cầu họ thực hiện một hành động “đến khi” điều kiện nào đó đúng. Ví dụ: Cho học sinh sờ mũi “đến khi” bạn bảo họ dừng lại."
         },
         "88a4ca9a-f917-418e-8c1c-2cc4ac814afd": {
+          "name": "Cho đến khi vòng trong Mê cung",
           "progression_name": "Phát triển kĩ năng"
         },
         "fad7d572-0e05-4122-854b-ee145920d5ec": {
@@ -3797,6 +3799,7 @@
           "description": "Kéo một bài tập trong giai đoạn trực tuyến tương ứng. Chúng tôi đề xuất bài tập 7. Hãy cho học sinh thảo luận một mẫu mà họ nghĩ rằng sẽ giúp _Nhà thám hiểm Laurel_ lấy toàn bộ kho báu. Hãy để học sinh chia sẻ. Hãy xem có bao nhiêu học sinh khác có cùng câu trả lời nhé!"
         },
         "8c9b5729-021b-4d95-b232-e523b7956513": {
+          "name": "Thu thập kho báu với Laurel",
           "description": "_Nhà thám hiểm Laurel_ đang tìm cách thu thập càng nhiều kho báu càng tốt. Hãy hướng dẫn học sinh đi qua bài tập để thu thập bất cứ thứ gì họ có thể. Một số cấp độ sẽ yêu cầu bạn chỉ lấy một mảnh kho báu, nhưng những cấp độ khác sẽ yêu cầu bạn lấy toàn bộ kho báu. Hãy chú ý hướng dẫn để biết mình phải làm gì nhé!"
         },
         "ea0d0c84-a0d7-41d0-80cc-efe792db04e8": {
@@ -3829,6 +3832,7 @@
           "description": "Hãy cho học sinh xem một hoặc cả hai video sau để giới thiệu về các góc:\n\n\\*_\\\\_Giới thiệu Họa sĩ \\*\\* (dài 1,5 phút)\n\n**\\*Lượt rẽ & góc** (dài 2 phút)\n\nHãy sử dụng **\\*Tài liệu phát cho học sinh** để cho học sinh xem các góc bên trong và bên ngoài của các hình khối khác nhau. Tài liệu này có thể dùng để phát hoặc có thể chọn in ra làm poster để học sinh tham khảo.\n\n**Thảo luận** về hình vuông và tam giác trong tài liệu.\n\n-   _Bạn sẽ lập trình máy tính như thế nào để vẽ được hình đó?_\n-   _Chỉ dẫn cần phải theo thứ tự nào?_\n\nHãy cho học sinh biết rằng trong các bài tập này, họ sẽ di chuyển một nhân vật để lại một đường thẳng trên đường đi. Học sinh sẽ lập trình để nhân vật vẽ các hình khối khác nhau, bao gồm cả hình vuông."
         },
         "a87f5d31-b7cb-48e5-b7c7-06f8a43e329f": {
+          "name": "Tạo nghệ thuật bằng mã",
           "description": "Trong bộ bài tập này, họa sĩ sẽ không còn bị giới hạn ở các góc 90 độ nữa. Chuẩn bị sẵn thước đo góc thật có thể giúp học sinh hình dung rõ hơn về các góc mà họ cần. Nếu không, giai đoạn này cũng cho sẵn hình ảnh các góc khi học sinh chọn góc để dùng. (Lưu ý: Lựa chọn góc bị giới hạn ở hai loại trong menu thả xuống, giảm số lượng lựa chọn mà học sinh phải đưa ra.)\n\nTrước khi đưa học sinh đến vị trí máy tính để giải bài tập, bạn có thể trình bày ngắn gọn cách sử dụng các công cụ trong cấp độ này. Chúng tôi đề xuất bài tập 5 là một bài tập hay để hướng dẫn cách sử dụng thước đo góc trực tuyến."
         },
         "c2639856-d143-4f85-ae32-262da1af5808": {
@@ -4112,6 +4116,7 @@
           "description": "Ở thời điểm này, học sinh đã được giới thiệu nhiều lần về vòng lặp. Dựa trên những lợi ích đối với lớp học, chúng tôi khuyên bạn nên:\n\n-   Sáng tạo một điệu nhảy, đặt các bước nhảy lặp lại trong vòng lặp.\n-   Cả lớp xem bài tập trong bài học trước, “Vòng lặp với Rey và BB-8”.\n-   Ôn lại cách sử dụng Họa sĩ bằng cách xem bài tập từ hoạt động “Vẽ tranh bằng mã lệnh”.\n-   Xem trước một bài tập trong bài học này.\n\nTất cả các lựa chọn này sẽ ôn lại về vòng lặp hoặc họa sĩ, từ đó giúp cả lớp chuẩn bị vui chơi với các bài tập trực tuyến!"
         },
         "ca09b8e6-6cc8-4fc5-a47e-3126629b1002": {
+          "name": "Sticker Art với vòng",
           "description": "Hãy khuyến khích sự sáng tạo trong hoạt động này! Hướng dẫn đưa ra ví dụ nhưng học sinh có thể thử nghiệm với các sticker hoặc kiểu thiết kế khác nhau. Ngay cả các lời giải ví dụ mà chúng tôi cung cấp cũng không phải là lời giải _duy nhất_!",
           "tips": [
             "Bài học này có thể cho cảm giác rất khác so với những phần trước đó trong khóa học. Các cấp độ này có một số đặc điểm mới mà bạn có thể muốn khám phá trước khi bắt đầu. Mã lệnh mà học sinh của bạn viết trong một cấp độ sẽ tự động chuyển sang các cấp độ khác. Điều này giúp các em xây dựng dần dần và lặp lại các ý tưởng trong khi học. Lưu ý rằng các cấp độ này giúp mở rộng khả năng sáng tạo. Hãy để học sinh của bạn tự xác định thời điểm các em hoàn thành mỗi bài tập."
@@ -4213,6 +4218,7 @@
           "description": "Bây giờ, chúng ta sẽ sử dụng **lệnh điều kiện** với chú ong Code.org để giúp cậu xử lý mấy đám mây bí ẩn. Chúng ta không biết liệu trong bông hoa có mật hay không, vì vậy chúng ta cần sử dụng lệnh điều kiện để đảm bảo rằng chúng ta thu thập mật hoa nếu có, nhưng sẽ không cố gắng lấy mật hoa từ một bông hoa không có mật.\n\nMở bài tập từ bài học này, chúng tôi đề xuất bài tập 9.\n\n-   Hỏi cả lớp xem chú ong phải làm gì ở vị trí đám mây.\n    -   Chú ong nên sử dụng lệnh điều kiện để kiểm tra bông hoa hoặc tổ ong.\n-   Sử dụng khối “if at flower/else” (nếu ở hoa/nếu không). Hỏi cả lớp xem chú ong phải làm gì nếu có hoa. Nếu không có hoa thì sẽ có tổ ong. Khi đó chú ong phải làm gì?\n    -   Chú ong nên “get nectar” (lấy mật hoa) nếu có hoa và “make honey” (làm mật) nếu có tổ ong.\n\nĐiền vào phần còn lại của mã lệnh và nhấn “Run” (chạy). Hãy thảo luận với cả lớp lý do mã lệnh này lại có tác dụng."
         },
         "13e970f9-2c63-49d0-9995-322afdd7f201": {
+          "name": "Nếu/Khác với Bee",
           "description": "Một số câu hỏi có thể phát sinh từ những bài tập này, vì vậy hãy để học sinh làm việc theo cặp hoặc thực hiện quy tắc “Hỏi ba người trước khi hỏi tôi” (yêu cầu học sinh nhờ ba bạn khác giúp đỡ trước khi đến gặp giáo viên). Phương pháp này sẽ mở ra các cuộc thảo luận giúp mỗi học sinh hiểu bài hơn."
         },
         "b1dd72db-135f-4732-a4c7-6d157c9ffee9": {
@@ -4329,6 +4335,7 @@
           "description": "#### Xem trước Bài tập trực tuyến\n\nMở một bài tập trong số các bài tập của Code Studio ngày hôm nay. Chúng tôi đề xuất bài tập 4.\n\n-   Hỏi cả lớp xem chú chim phải lặp lại hành động nào để đến chỗ con heo.\n    -   Chú chim nên lặp lại hành động tiến về phía trước, xoay phải, tiến về phía trước, rồi xoay trái.\n-   Hỏi cả lớp công cụ họ có thể dùng để lặp lại mã lệnh này.\n    -   Chú chim nên lặp lại mẫu này _đến khi_ tới chỗ con heo.\n\nĐiền vào phần còn lại của mã lệnh bằng cách sử dụng vòng lặp “repeat until” (lặp lại đến khi) và nhấn “Run” (chạy). Thảo luận với cả lớp tại sao cách này lại hiệu quả."
         },
         "db031fa5-7047-46ee-8ccf-49a1f15c696a": {
+          "name": "Cho đến khi vòng trong Mê cung",
           "description": "Tổng kết các khái niệm không hề dễ, nhưng bộ bài học này nhằm giúp học sinh thấy được khả năng vô tận của lập trình khi sử dụng điều kiện. Nếu học sinh gặp khó khăn khi tìm hiểu điểm giống hoặc khác nhau giữa vòng lặp while và vòng lặp until, hãy để họ thử nghĩ xem họ sẽ sử dụng các câu lệnh tương tự như thế nào trong cuộc sống thực.",
           "progression_name": "Phát triển kĩ năng"
         },
@@ -4359,6 +4366,7 @@
           "description": "Hôm nay chúng ta không cần giới thiệu nhiều về các khái niệm với học sinh vì họ đã được thực hành với chúng trong bài học trước. Thay vào đó, bạn có thể chia sẻ câu chuyện của người thu hoạch.\n\nNgười thu hoạch đang cố gắng hái các loại cây trồng như bí ngô, rau diếp và ngô. Tuy nhiên, người nông dân đã quên nơi trồng những loại cây này nên cần kiểm tra từng cây trước khi thu hoạch."
         },
         "88047116-9c78-4003-99fe-cd24ceb91b93": {
+          "name": "Thu hoạch với điều kiện",
           "description": "Học sinh sẽ tiếp tục làm việc với các câu lệnh if/else, các vòng lặp while và các vòng lặp until. Những bài tập này khó hơn một chút nên hãy khuyến khích học sinh tập trung cho đến khi họ có thể mô tả những gì cần làm trong mỗi chương trình.",
           "progression_name": "Video: Thu hoạch với lệnh điều kiện"
         },
@@ -5747,6 +5755,7 @@
           "name": "Xem trước các bài tập trực tuyến cùng cả lớp"
         },
         "2780e63f-ba52-459a-9176-4208568b6163": {
+          "name": "Thu thập kho báu với Laurel",
           "description": "_Nhà thám hiểm Laurel_ đang tìm cách thu thập càng nhiều kho báu càng tốt. Hãy hướng dẫn học sinh đi qua bài tập để thu thập bất cứ thứ gì họ có thể. Một số cấp độ sẽ yêu cầu bạn chỉ lấy một mảnh kho báu, nhưng những cấp độ khác sẽ yêu cầu bạn lấy toàn bộ kho báu. Hãy chú ý hướng dẫn để biết mình phải làm gì nhé!"
         },
         "f3c465c8-b7b0-4b73-8afc-5f30c132f35b": {
@@ -5781,6 +5790,9 @@
         },
         "9f1508f1-3a4b-42fb-82fb-d31a0aad9576": {
           "name": "Giới thiệu"
+        },
+        "285edd36-99af-46e6-ba3a-91300c2ef572": {
+          "name": "Tạo nghệ thuật bằng mã"
         },
         "0b1b669c-1acf-42de-9f59-8182f34db782": {
           "progression_name": "Video: Giới thiệu về họa sĩ với JR Hildebrand"
@@ -5937,10 +5949,14 @@
           "name": "Giới thiệu"
         },
         "f5af8f45-b9fa-46f2-8006-05af25fe0b04": {
+          "name": "Sticker Art với vòng",
           "description": "Hãy khuyến khích sự sáng tạo trong hoạt động này! Hướng dẫn đưa ra ví dụ nhưng học sinh có thể thử nghiệm với các sticker hoặc kiểu thiết kế khác nhau. Ngay cả các lời giải ví dụ mà chúng tôi cung cấp cũng không phải là lời giải _duy nhất_!",
           "tips": [
             "Bài học này có thể cho cảm giác rất khác so với những phần trước đó trong khóa học. Các cấp độ này có một số đặc điểm mới mà bạn có thể muốn khám phá trước khi bắt đầu. Mã lệnh mà học sinh của bạn viết trong một cấp độ sẽ tự động chuyển sang các cấp độ khác. Điều này giúp các em xây dựng dần dần và lặp lại các ý tưởng trong khi học. Lưu ý rằng các cấp độ này giúp mở rộng khả năng sáng tạo. Hãy để học sinh của bạn tự xác định thời điểm các em hoàn thành mỗi bài tập."
           ]
+        },
+        "5bee125c-0e5e-46a8-b72b-fdc8a71f5161": {
+          "progression_name": "Mini-Project: Sticker Art"
         },
         "c5f36648-ac0d-405f-af7a-3020ebdce7f3": {
           "progression_name": "Chơi tự do"
@@ -15534,6 +15550,7 @@
           "description": "Kéo một bài tập trong giai đoạn trực tuyến tương ứng. Chúng tôi đề xuất bài tập 7. Hãy cho học sinh thảo luận một mẫu mà họ nghĩ rằng sẽ giúp _Nhà thám hiểm Laurel_ lấy toàn bộ kho báu. Hãy để học sinh chia sẻ. Hãy xem có bao nhiêu học sinh khác có cùng câu trả lời nhé!"
         },
         "e2aaa332-2426-4380-b14b-cd681477be54": {
+          "name": "Thu thập kho báu với Laurel",
           "description": "_Nhà thám hiểm Laurel_ đang tìm cách thu thập càng nhiều kho báu càng tốt. Hãy hướng dẫn học sinh đi qua bài tập để thu thập bất cứ thứ gì họ có thể. Một số cấp độ sẽ yêu cầu bạn chỉ lấy một mảnh kho báu, nhưng những cấp độ khác sẽ yêu cầu bạn lấy toàn bộ kho báu. Hãy chú ý hướng dẫn để biết mình phải làm gì nhé!"
         },
         "1cecd624-a69a-4e47-9a4b-066f9b8ff31d": {
@@ -15566,6 +15583,7 @@
           "description": "Hãy cho học sinh xem một hoặc cả hai video sau để giới thiệu về các góc:\n\n\\*_\\\\_Giới thiệu Họa sĩ \\*\\* - video dành cho học sinh (dài 1,5 phút)\n\n**\\*Lượt rẽ & góc** - video dành cho học sinh (dài 2 phút)\n\nHãy sử dụng **\\*tài liệu phát cho học sinh** để cho học sinh xem các góc bên trong và bên ngoài của các hình khối khác nhau. Tài liệu này có thể dùng để phát hoặc có thể chọn in ra làm poster để học sinh tham khảo.\n\n**Thảo luận** về hình vuông và tam giác trong tài liệu.\n\n-   _Bạn sẽ lập trình máy tính như thế nào để vẽ được hình đó?_\n-   _Chỉ dẫn cần phải theo thứ tự nào?_\n\nHãy cho học sinh biết rằng trong các bài tập này, họ sẽ di chuyển một nhân vật để lại một đường thẳng trên đường đi. Học sinh sẽ lập trình để nhân vật vẽ các hình khối khác nhau, bao gồm cả hình vuông."
         },
         "3861a12f-7e0f-43bf-8d29-1d526a2c90b2": {
+          "name": "Tạo nghệ thuật bằng mã",
           "description": "Trong bộ bài tập này, họa sĩ sẽ không còn bị giới hạn ở các góc 90 độ nữa. Chuẩn bị sẵn thước đo góc thật có thể giúp học sinh hình dung rõ hơn về các góc mà họ cần. Nếu không, giai đoạn này cũng cho sẵn hình ảnh các góc khi học sinh chọn góc để dùng. (Lưu ý: Lựa chọn góc bị giới hạn ở hai loại trong menu thả xuống, giảm số lượng lựa chọn mà học sinh phải đưa ra.)\n\nTrước khi đưa học sinh đến vị trí máy tính để giải bài tập, bạn có thể trình bày ngắn gọn cách sử dụng các công cụ trong cấp độ này. Chúng tôi đề xuất bài tập 5 là một bài tập hay để hướng dẫn cách sử dụng thước đo góc trực tuyến."
         },
         "e054a7d9-9c28-49d4-886f-e9fd771d378e": {
@@ -15724,6 +15742,7 @@
           "description": "Ở thời điểm này, học sinh đã được giới thiệu nhiều lần về vòng lặp. Dựa trên những lợi ích đối với lớp học, chúng tôi khuyên bạn nên:\n\n-   Sáng tạo một điệu nhảy mới với các vòng lặp giống như trong hoạt động “Bắt lấy Loopy”.\n-   Cả lớp xem bài tập trong bài học trước, “Vòng lặp với Rey và BB-8”.\n-   Ôn lại cách sử dụng Họa sĩ bằng cách xem bài tập từ hoạt động “Lập trình trong Họa sĩ”.\n-   Xem trước một bài tập trong bài học này.\n\nTất cả các lựa chọn này sẽ ôn lại về vòng lặp hoặc họa sĩ, từ đó giúp cả lớp chuẩn bị vui chơi với các bài tập trực tuyến!"
         },
         "8966320f-572a-4c6c-afc5-6b3e8240e250": {
+          "name": "Sticker Art với vòng",
           "description": "Hãy khuyến khích sự sáng tạo trong hoạt động này! Hướng dẫn đưa ra ví dụ nhưng học sinh có thể thử nghiệm với các sticker hoặc kiểu thiết kế khác nhau. Ngay cả các lời giải ví dụ mà chúng tôi cung cấp cũng không phải là lời giải _duy nhất_!",
           "tips": [
             "Bài học này có thể cho cảm giác rất khác so với những phần trước đó trong khóa học. Các cấp độ này có một số đặc điểm mới mà bạn có thể muốn khám phá trước khi bắt đầu. Mã lệnh mà học sinh của bạn viết trong một cấp độ sẽ tự động chuyển sang các cấp độ khác. Điều này giúp các em xây dựng dần dần và lặp lại các ý tưởng trong khi học. Lưu ý rằng các cấp độ này giúp mở rộng khả năng sáng tạo. Hãy để học sinh của bạn tự xác định thời điểm các em hoàn thành mỗi bài tập."
@@ -16464,6 +16483,7 @@
           "description": "Mở bài tập từ bài học này, chúng tôi đề xuất bài tập 9.\n\n-   Hỏi cả lớp xem chú ong phải làm gì ở vị trí đám mây.\n-   Chú ong nên sử dụng lệnh điều kiện để kiểm tra bông hoa hoặc tổ ong.\n-   Sử dụng khối “if at flower/else” (nếu ở hoa/nếu không). Hỏi cả lớp xem chú ong phải làm gì nếu có hoa. Nếu không có hoa thì sẽ có tổ ong. Khi đó chú ong phải làm gì?\n-   Chú ong nên “get nectar” (lấy mật hoa) nếu có hoa và “make honey” (làm mật) nếu có tổ ong.\n\nĐiền vào phần còn lại của mã lệnh và nhấn “Run” (chạy). Hãy thảo luận với cả lớp lý do mã lệnh này lại có tác dụng."
         },
         "7f949bd4-c8d6-42b7-a6b2-a835a8a63e41": {
+          "name": "Nếu/Khác với Bee",
           "description": "Một số câu hỏi có thể phát sinh từ những bài tập này, vì vậy hãy để học sinh làm việc theo cặp hoặc thực hiện quy tắc “Hỏi ba người trước khi hỏi tôi” (yêu cầu học sinh nhờ ba bạn khác giúp đỡ trước khi đến gặp giáo viên). Phương pháp này sẽ mở ra các cuộc thảo luận giúp mỗi học sinh hiểu bài hơn."
         },
         "ca607451-3bb5-4aea-bca0-efd3fed0c6be": {
@@ -16548,6 +16568,7 @@
           "description": "#### Xem trước Bài tập trực tuyến\n\nMở một bài tập trong số các bài tập của Code Studio ngày hôm nay. Chúng tôi đề xuất bài tập 4.\n\n-   Hỏi cả lớp xem chú chim phải lặp lại hành động nào để đến chỗ con heo.\n-   Chú chim nên lặp lại hành động “tiến về phía trước”, “xoay phải”, “tiến về phía trước”, rồi “xoay trái”.\n-   Hỏi cả lớp công cụ họ có thể dùng để lặp lại mã lệnh này.\n-   Chú chim nên lặp lại mẫu này _đến khi_ tới chỗ con heo.\n\nĐiền vào phần còn lại của mã lệnh bằng cách sử dụng vòng lặp “repeat until” (lặp lại đến khi) và nhấn “Run” (chạy). Thảo luận với cả lớp tại sao cách này lại hiệu quả."
         },
         "743e2b7a-0738-44b2-afb4-44a8f1e3edab": {
+          "name": "Cho đến khi vòng trong Mê cung",
           "description": "#### Bài tập trực tuyến\n\nTổng kết các khái niệm không hề dễ, nhưng bộ bài học này nhằm giúp học sinh thấy được khả năng vô tận của lập trình khi sử dụng điều kiện. Nếu học sinh gặp khó khăn khi tìm hiểu điểm giống hoặc khác nhau giữa vòng lặp “while” và vòng lặp “until”, hãy để họ thử nghĩ xem họ sẽ sử dụng các câu lệnh tương tự như thế nào trong cuộc sống thực.",
           "progression_name": "Phát triển kĩ năng"
         },
@@ -16694,6 +16715,7 @@
           "description": "Kéo một bài tập trong giai đoạn trực tuyến tương ứng. Chúng tôi đề xuất bài tập 7. Hãy cho học sinh thảo luận một mẫu mà họ nghĩ rằng sẽ giúp _Nhà thám hiểm Laurel_ lấy toàn bộ kho báu. Hãy để học sinh chia sẻ. Hãy xem có bao nhiêu học sinh khác có cùng câu trả lời nhé!"
         },
         "44711c15-152c-4e84-9eca-d87c42edd4a8": {
+          "name": "Thu thập kho báu với Laurel",
           "description": "_Nhà thám hiểm Laurel_ đang tìm cách thu thập càng nhiều kho báu càng tốt. Hãy hướng dẫn học sinh đi qua bài tập để thu thập bất cứ thứ gì họ có thể. Một số cấp độ sẽ yêu cầu bạn chỉ lấy một mảnh kho báu, nhưng những cấp độ khác sẽ yêu cầu bạn lấy toàn bộ kho báu. Hãy chú ý hướng dẫn để biết mình phải làm gì nhé!"
         },
         "ea56a346-7c58-4d03-a5bc-aa4021627e22": {
@@ -16726,6 +16748,7 @@
           "description": "Hãy cho học sinh xem một hoặc cả hai video sau để giới thiệu về các góc:\n\n\\*_\\\\_Giới thiệu Họa sĩ \\*\\* (dài 1,5 phút)\n\n**\\*Lượt rẽ & góc** (dài 2 phút)\n\nHãy sử dụng **\\*Tài liệu phát cho học sinh** để cho học sinh xem các góc bên trong và bên ngoài của các hình khối khác nhau. Tài liệu này có thể dùng để phát hoặc có thể chọn in ra làm poster để học sinh tham khảo.\n\n**Thảo luận** về hình vuông và tam giác trong tài liệu.\n\n-   _Bạn sẽ lập trình máy tính như thế nào để vẽ được hình đó?_\n-   _Chỉ dẫn cần phải theo thứ tự nào?_\n\nHãy cho học sinh biết rằng trong các bài tập này, họ sẽ di chuyển một nhân vật để lại một đường thẳng trên đường đi. Học sinh sẽ lập trình để nhân vật vẽ các hình khối khác nhau, bao gồm cả hình vuông."
         },
         "9594ae73-93bc-4660-aa85-9346451fdf4a": {
+          "name": "Tạo nghệ thuật bằng mã",
           "description": "Trong bộ bài tập này, họa sĩ sẽ không còn bị giới hạn ở các góc 90 độ nữa. Chuẩn bị sẵn thước đo góc thật có thể giúp học sinh hình dung rõ hơn về các góc mà họ cần. Nếu không, giai đoạn này cũng cho sẵn hình ảnh các góc khi học sinh chọn góc để dùng. (Lưu ý: Lựa chọn góc bị giới hạn ở hai loại trong menu thả xuống, giảm số lượng lựa chọn mà học sinh phải đưa ra.)\n\nTrước khi đưa học sinh đến vị trí máy tính để giải bài tập, bạn có thể trình bày ngắn gọn cách sử dụng các công cụ trong cấp độ này. Chúng tôi đề xuất bài tập 5 là một bài tập hay để hướng dẫn cách sử dụng thước đo góc trực tuyến."
         },
         "c01e356b-bb48-45a6-bf67-5bcb3d959cc1": {
@@ -17029,6 +17052,7 @@
           "description": "Ở thời điểm này, học sinh đã được giới thiệu nhiều lần về vòng lặp. Dựa trên những lợi ích đối với lớp học, chúng tôi khuyên bạn nên:\n\n-   Sáng tạo một điệu nhảy, đặt các bước nhảy lặp lại trong vòng lặp.\n-   Cả lớp xem bài tập trong bài học trước, “Vòng lặp với Rey và BB-8”.\n-   Ôn lại cách sử dụng Họa sĩ bằng cách xem bài tập từ hoạt động “Vẽ tranh bằng mã lệnh”.\n-   Xem trước một bài tập trong bài học này.\n\nTất cả các lựa chọn này sẽ ôn lại về vòng lặp hoặc họa sĩ, từ đó giúp cả lớp chuẩn bị vui chơi với các bài tập trực tuyến!"
         },
         "049d42a9-4582-4ba6-8083-2605a7584613": {
+          "name": "Sticker Art với vòng",
           "description": "Hãy khuyến khích sự sáng tạo trong hoạt động này! Hướng dẫn đưa ra ví dụ nhưng học sinh có thể thử nghiệm với các sticker hoặc kiểu thiết kế khác nhau. Ngay cả các lời giải ví dụ mà chúng tôi cung cấp cũng không phải là lời giải _duy nhất_!",
           "tips": [
             "Bài học này có thể cho cảm giác rất khác so với những phần trước đó trong khóa học. Các cấp độ này có một số đặc điểm mới mà bạn có thể muốn khám phá trước khi bắt đầu. Mã lệnh mà học sinh của bạn viết trong một cấp độ sẽ tự động chuyển sang các cấp độ khác. Điều này giúp các em xây dựng dần dần và lặp lại các ý tưởng trong khi học. Lưu ý rằng các cấp độ này giúp mở rộng khả năng sáng tạo. Hãy để học sinh của bạn tự xác định thời điểm các em hoàn thành mỗi bài tập."
@@ -17130,6 +17154,7 @@
           "description": "Bây giờ, chúng ta sẽ sử dụng **lệnh điều kiện** với chú ong Code.org để giúp cậu xử lý mấy đám mây bí ẩn. Chúng ta không biết liệu trong bông hoa có mật hay không, vì vậy chúng ta cần sử dụng lệnh điều kiện để đảm bảo rằng chúng ta thu thập mật hoa nếu có, nhưng sẽ không cố gắng lấy mật hoa từ một bông hoa không có mật.\n\nMở bài tập từ bài học này, chúng tôi đề xuất bài tập 9.\n\n-   Hỏi cả lớp xem chú ong phải làm gì ở vị trí đám mây.\n    -   Chú ong nên sử dụng lệnh điều kiện để kiểm tra bông hoa hoặc tổ ong.\n-   Sử dụng khối “if at flower/else” (nếu ở hoa/nếu không). Hỏi cả lớp xem chú ong phải làm gì nếu có hoa. Nếu không có hoa thì sẽ có tổ ong. Khi đó chú ong phải làm gì?\n    -   Chú ong nên “get nectar” (lấy mật hoa) nếu có hoa và “make honey” (làm mật) nếu có tổ ong.\n\nĐiền vào phần còn lại của mã lệnh và nhấn “Run” (chạy). Hãy thảo luận với cả lớp lý do mã lệnh này lại có tác dụng."
         },
         "22580642-ad9a-48f6-9ad6-8693e42ed9d3": {
+          "name": "Nếu/Khác với Bee",
           "description": "Một số câu hỏi có thể phát sinh từ những bài tập này, vì vậy hãy để học sinh làm việc theo cặp hoặc thực hiện quy tắc “Hỏi ba người trước khi hỏi tôi” (yêu cầu học sinh nhờ ba bạn khác giúp đỡ trước khi đến gặp giáo viên). Phương pháp này sẽ mở ra các cuộc thảo luận giúp mỗi học sinh hiểu bài hơn."
         },
         "c622f540-96a1-4448-9a80-18850f23abdd": {
@@ -17247,6 +17272,7 @@
           "description": "#### Xem trước Bài tập trực tuyến\n\nMở một bài tập trong số các bài tập của Code Studio ngày hôm nay. Chúng tôi đề xuất bài tập 4.\n\n-   Hỏi cả lớp xem chú chim phải lặp lại hành động nào để đến chỗ con heo.\n    -   Chú chim nên lặp lại hành động tiến về phía trước, xoay phải, tiến về phía trước, rồi xoay trái.\n-   Hỏi cả lớp công cụ họ có thể dùng để lặp lại mã lệnh này.\n    -   Chú chim nên lặp lại mẫu này _đến khi_ tới chỗ con heo.\n\nĐiền vào phần còn lại của mã lệnh bằng cách sử dụng vòng lặp “repeat until” (lặp lại đến khi) và nhấn “Run” (chạy). Thảo luận với cả lớp tại sao cách này lại hiệu quả."
         },
         "3fabd283-0831-412f-8a9f-76e9bf96206f": {
+          "name": "Cho đến khi vòng trong Mê cung",
           "description": "Tổng kết các khái niệm không hề dễ, nhưng bộ bài học này nhằm giúp học sinh thấy được khả năng vô tận của lập trình khi sử dụng điều kiện. Nếu học sinh gặp khó khăn khi tìm hiểu điểm giống hoặc khác nhau giữa vòng lặp while và vòng lặp until, hãy để họ thử nghĩ xem họ sẽ sử dụng các câu lệnh tương tự như thế nào trong cuộc sống thực.",
           "progression_name": "Phát triển kĩ năng"
         },
@@ -17277,6 +17303,7 @@
           "description": "Hôm nay chúng ta không cần giới thiệu nhiều về các khái niệm với học sinh vì họ đã được thực hành với chúng trong bài học trước. Thay vào đó, bạn có thể chia sẻ câu chuyện của người thu hoạch.\n\nNgười thu hoạch đang cố gắng hái các loại cây trồng như bí ngô, rau diếp và ngô. Tuy nhiên, người nông dân đã quên nơi trồng những loại cây này nên cần kiểm tra từng cây trước khi thu hoạch."
         },
         "26679730-3364-4598-abd8-b07e9d9f9ad9": {
+          "name": "Thu hoạch với điều kiện",
           "description": "Học sinh sẽ tiếp tục làm việc với các câu lệnh if/else, các vòng lặp while và các vòng lặp until. Những bài tập này khó hơn một chút nên hãy khuyến khích học sinh tập trung cho đến khi họ có thể mô tả những gì cần làm trong mỗi chương trình.",
           "progression_name": "Video: Thu hoạch với lệnh điều kiện"
         },

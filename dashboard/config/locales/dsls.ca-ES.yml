@@ -11750,3 +11750,26 @@ ca-ES:
         display_name: Personalitza la teva aplicació
       ml-intro app lab-book recommender 5_2022:
         display_name: Personalitza la teva aplicació
+      Test Contained Retriable Multi:
+        answers:
+        - text: '0'
+        - text: '1'
+        - text: '2'
+          correct: true
+        - text: '4'
+        questions:
+        - {}
+      test-single-multi-standalone-retriable:
+        answers:
+        - text: No passarà res.
+          feedback: Incorrecte. La planta començarà a rodolar.
+        - text: La planta flotarà cap a la part superior de la pantalla.
+          feedback: Incorrecte. La planta començarà a rodolar.
+        - text: La planta començarà a rodolar.
+          correct: true
+          feedback: Correcte!
+        - text: La planta parpellejarà, il·luminant-se i apagant-se.
+          feedback: Incorrecte. La planta començarà a rodolar.
+        questions:
+        - text: Fixa't bé en el codi que hi ha a continuació. Què passarà quan facis
+            clic a "Executar"?

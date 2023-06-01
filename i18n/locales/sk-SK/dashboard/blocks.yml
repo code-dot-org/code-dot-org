@@ -7,7 +7,7 @@ sk:
       AmysBlocks_spriteSayVar:
         text: "{SPRITE}hovorí{TEXT1}"
       BadGuys_makeNewBadGuysSprite:
-        text: vytvor novú postavu {ANIMATION_NAME} na {LOCATION}
+        text: vytvor nový sprajt {ANIMATION_NAME} na {LOCATION}
       BadGuys_setSizeAll_dropdown:
         options:
           SIZE:
@@ -1277,7 +1277,7 @@ sk:
             '"rain"': dážď
             '"spiral"': špirála
       gamelab_makeNewSpriteAnon:
-        text: vytvor novú postavu {ANIMATION_NAME} na {LOCATION}
+        text: vytvor nový sprajt {ANIMATION_NAME} na {LOCATION}
       gamelab_makeNewSpriteGroup:
         options:
           FORMAT:
@@ -2016,7 +2016,7 @@ sk:
             '"rain"': dážď
             '"spiral"': špirála
       Poetry_makeNewSpriteAnon:
-        text: vytvor novú postavu {ANIMATION_NAME} na {LOCATION}
+        text: vytvor nový sprajt {ANIMATION_NAME} na {LOCATION}
       Poetry_makeNumSprites:
         text: vytvor {NUM} nových {ANIMATION_NAME} postáv
       Poetry_playMusic:

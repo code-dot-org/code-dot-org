@@ -167,7 +167,8 @@
         },
         "password_power-up_if_then_scenarios/coursed/2022": {
           "name": "Silnejšie heslá: situácie ak/tak",
-          "url": "https://docs.google.com/document/d/1JeZtFU6hMFTYITAAPaA_CRmOVknvkcKZQszL6u7DRG4/edit"
+          "url": "https://docs.google.com/document/d/1JeZtFU6hMFTYITAAPaA_CRmOVknvkcKZQszL6u7DRG4/edit",
+          "type": "podanie"
         },
         "password_power-up_if_then_scenarios_1/coursed/2022": {
           "name": "Silnejšie heslá: situácie ak/tak",
@@ -191,7 +192,8 @@
         },
         "password_power-up_power-up_your_password/coursed/2022": {
           "name": "Silnejšie heslá: ako si vytvoriť silnejšie heslo",
-          "url": "https://docs.google.com/document/d/1ihf7K4Kjupe3C0wrzzgUa-a9paNserfCfMAS2oj7178/edit"
+          "url": "https://docs.google.com/document/d/1ihf7K4Kjupe3C0wrzzgUa-a9paNserfCfMAS2oj7178/edit",
+          "type": "podanie"
         },
         "password_power-up_power-up_your_password_1/coursed/2022": {
           "name": "Silnejšie heslá: ako si vytvoriť silnejšie heslo",
@@ -203,19 +205,23 @@
         },
         "graph_paper_programming/coursed/2022": {
           "name": "Programovanie na štvorčekový papier",
-          "url": "https://docs.google.com/document/d/1GTB6aTZoQWvkMvx2SWhKerhL8DhevgWlsaetmm5Vpfs/edit?usp=sharing"
+          "url": "https://docs.google.com/document/d/1GTB6aTZoQWvkMvx2SWhKerhL8DhevgWlsaetmm5Vpfs/edit?usp=sharing",
+          "type": "Pracovný hárok aktivity"
         },
         "graph_paper_programming_1/coursed/2022": {
           "name": "Programovanie na štvorčekový papier",
-          "url": "https://youtu.be/Y_paSrH2ffw"
+          "url": "https://youtu.be/Y_paSrH2ffw",
+          "type": "Odpojené Video"
         },
         "graph_paper_programming_2/coursed/2022": {
           "name": "Programovanie na štvorčekový papier",
-          "url": "https://www.youtube.com/watch?v=vBUtejDNvrs"
+          "url": "https://www.youtube.com/watch?v=vBUtejDNvrs",
+          "type": "Lekcia v akčnom videu"
         },
         "graph_paper_programming_3/coursed/2022": {
           "name": "Programovanie na štvorčekový papier",
-          "url": "https://docs.google.com/document/d/1Nt1vX-8Q-xy7tNyTRElaDFvdVXfpC5e28NbrPreVfPQ/edit"
+          "url": "https://docs.google.com/document/d/1Nt1vX-8Q-xy7tNyTRElaDFvdVXfpC5e28NbrPreVfPQ/edit",
+          "type": "Kľúč odpovede na pracovný hárok"
         },
         "graph_paper_programming_4/coursed/2022": {
           "name": "Programovanie na štvorčekový papier",
@@ -224,7 +230,8 @@
         },
         "graph_paper_programming_5/coursed/2022": {
           "name": "Programovanie na štvorčekový papier",
-          "url": "https://docs.google.com/document/d/1GXFjDtRjaK8mTnFGb33kT-u72_rXfUh_TyfP7N7Pen4/edit"
+          "url": "https://docs.google.com/document/d/1GXFjDtRjaK8mTnFGb33kT-u72_rXfUh_TyfP7N7Pen4/edit",
+          "type": "Kľúč odpovede na hodnotenie"
         },
         "pair_programming/coursed/2022": {
           "name": "Párové programovanie",
@@ -233,31 +240,38 @@
         },
         "relay_programming/coursed/2022": {
           "name": "Štafetové programovanie",
-          "url": "https://docs.google.com/document/d/1nneTPNTpboCBMYCr2qpK8DcHSZD6lDi0ovkqkdRDeSc/edit"
+          "url": "https://docs.google.com/document/d/1nneTPNTpboCBMYCr2qpK8DcHSZD6lDi0ovkqkdRDeSc/edit",
+          "type": "Kľúč odpovede na pracovný hárok"
         },
         "relay_programming_1/coursed/2022": {
           "name": "Štafetové programovanie",
-          "url": "https://docs.google.com/document/d/1az8K9tDW0XcU2mvQ_1D7CXpZbq7aq5T-x0RiemGlv5s/edit"
+          "url": "https://docs.google.com/document/d/1az8K9tDW0XcU2mvQ_1D7CXpZbq7aq5T-x0RiemGlv5s/edit",
+          "type": "Pracovný hárok"
         },
         "relay_programming_2/coursed/2022": {
           "name": "Štafetové programovanie",
-          "url": "https://docs.google.com/document/d/1UyiAK9sxuMP3AWjbP0TlsMahNa98LxJwyGWKhcdYpig/edit"
+          "url": "https://docs.google.com/document/d/1UyiAK9sxuMP3AWjbP0TlsMahNa98LxJwyGWKhcdYpig/edit",
+          "type": "Obrázok ladenia učiteľov"
         },
         "relay_programming_3/coursed/2022": {
           "name": "Štafetové programovanie",
-          "url": "https://youtu.be/l5MKkXbzOsk"
+          "url": "https://youtu.be/l5MKkXbzOsk",
+          "type": "Odpojené Video"
         },
         "relay_programming_4/coursed/2022": {
           "name": "Štafetové programovanie",
-          "url": "https://youtu.be/ZULpfAVJOBo"
+          "url": "https://youtu.be/ZULpfAVJOBo",
+          "type": "Video Učiteľa"
         },
         "relay_programming_5/coursed/2022": {
           "name": "Štafetové programovanie",
-          "url": "https://docs.google.com/document/d/1O7nVu6CYhQ_5rWXdAGWEh-e79jZvR__D9xrqSg8Q05o/edit"
+          "url": "https://docs.google.com/document/d/1O7nVu6CYhQ_5rWXdAGWEh-e79jZvR__D9xrqSg8Q05o/edit",
+          "type": "Paket aktivity"
         },
         "unplugged_blocks_courses_c-f_/coursed/2022": {
           "name": " Bloky na použitie bez počítača (kurzy C – F)",
-          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
+          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit",
+          "type": "Manipulatíva"
         },
         "open-ended_programming_levels/coursed/2022": {
           "name": "Úrovne na otvorené programovanie",
@@ -280,7 +294,8 @@
         },
         "dance_party_project_guide/coursed/2022": {
           "name": "Tanečná párty – sprievodca projektom",
-          "url": "https://docs.google.com/document/d/1F9dc129iWUWHmkU7fL23PQqxEK-wYstblbs-XitZ9FM/edit"
+          "url": "https://docs.google.com/document/d/1F9dc129iWUWHmkU7fL23PQqxEK-wYstblbs-XitZ9FM/edit",
+          "type": "Pracovný hárok"
         },
         "dance_party_unplugged/coursed/2022": {
           "name": "Tanečná párty: bez počítača",
@@ -297,15 +312,18 @@
         },
         "feeling_faces/coursed/2022": {
           "name": "Smajlíkovia",
-          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/"
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/",
+          "type": "Emócie Obrázky"
         },
         "conditionals_with_cards/coursed/2022": {
           "name": "Podmienky s kartami",
-          "url": "https://youtu.be/UymN4lTL50s"
+          "url": "https://youtu.be/UymN4lTL50s",
+          "type": "Odpojené Video"
         },
         "conditionals_with_cards_1/coursed/2022": {
           "name": "Podmienky s kartami",
-          "url": "https://www.youtube.com/watch?v=2m2Rn9VxHfU"
+          "url": "https://www.youtube.com/watch?v=2m2Rn9VxHfU",
+          "type": "Lekcia v akčnom videu"
         },
         "conditionals_with_cards_2/coursed/2022": {
           "name": "Podmienky s kartami",
@@ -314,15 +332,18 @@
         },
         "conditionals_with_cards_3/coursed/2022": {
           "name": "Podmienky s kartami",
-          "url": "https://youtu.be/TbUaEnAYPjI"
+          "url": "https://youtu.be/TbUaEnAYPjI",
+          "type": "Hodnotenie Video"
         },
         "conditionals_with_cards_4/coursed/2022": {
           "name": "Podmienky s kartami",
-          "url": "https://docs.google.com/document/d/1SsfkUoEg316vjBSxrRNLN4q4V2-yYW8HAK4m9snLtac/edit"
+          "url": "https://docs.google.com/document/d/1SsfkUoEg316vjBSxrRNLN4q4V2-yYW8HAK4m9snLtac/edit",
+          "type": "Kľúč odpovede na hodnotenie"
         },
         "conditionals_with_cards_sample_program/coursed/2022": {
           "name": "Podmienky s kartami: ukážkový program",
-          "url": "https://docs.google.com/document/d/151s4_0NuDhuzprjPGlDubPZodeJQCEJElsvdkSSqzPM/edit"
+          "url": "https://docs.google.com/document/d/151s4_0NuDhuzprjPGlDubPZodeJQCEJElsvdkSSqzPM/edit",
+          "type": "Príručka pre prípravu učiteľov"
         },
         "csf_course_d_end_of_course_project_planning_guide/coursed/2022": {
           "name": "Základy informatiky: kurz D – Sprievodca plánovaním záverečného projektu v expresnom kurze",
@@ -402,7 +423,8 @@
         },
         "the_power_of_words_words_can_hurt/coursef/2022": {
           "name": "Objav silu slov: Slová dokážu ublížiť",
-          "url": "https://docs.google.com/document/d/1gJcgF03GdltY81jfccsl-tOpgwxMfHI5S1KvzhEhyIw/edit"
+          "url": "https://docs.google.com/document/d/1gJcgF03GdltY81jfccsl-tOpgwxMfHI5S1KvzhEhyIw/edit",
+          "type": "podanie"
         },
         "csf_-_course_f_-_slides_2022-2023/coursef/2022": {
           "type": "Prezentácia"
@@ -423,7 +445,7 @@
           "type": "Video"
         },
         "making_sprites/coursef/2022": {
-          "name": "Vytváranie postáv",
+          "name": "Vytváranie sprajtov",
           "url": "https://docs.google.com/presentation/d/1u8gueXrKIKoYNgTxbr3bIvmbVlCsJcVT7qcDeqsOh1U/template/preview",
           "type": "Prezentácia"
         },
@@ -459,7 +481,8 @@
         },
         "running_simulations/coursef/2022": {
           "name": "Vytváranie simulácií",
-          "url": "https://docs.google.com/document/d/1sgUd9UcthM3M-A1EKX1m3AwsgLrivx0jF0i-e_79kk8/edit"
+          "url": "https://docs.google.com/document/d/1sgUd9UcthM3M-A1EKX1m3AwsgLrivx0jF0i-e_79kk8/edit",
+          "type": "Pracovný hárok"
         },
         "ai_impact_on_society/coursef/2022": {
           "name": "Umelá inteligencia: Vplyv na spoločnosť",
@@ -488,15 +511,18 @@
         },
         "internet_1/coursef/2022": {
           "name": "Internet",
-          "url": "https://docs.google.com/document/d/1uUY1zm6d7LZySpXzW9CFZaI8tcY4fzw_-w3Z2WbKVwI/edit"
+          "url": "https://docs.google.com/document/d/1uUY1zm6d7LZySpXzW9CFZaI8tcY4fzw_-w3Z2WbKVwI/edit",
+          "type": "Kľúč odpovede na hodnotenie"
         },
         "ip_address_cards_and_delivery_type_cards/coursef/2022": {
           "name": "Kartičky s adresou IP a kartičky s typom doručenia",
-          "url": "https://docs.google.com/document/d/1wnDD_Jm7JOApWQ5aPOcZVag4_h7lhBpl-QbCFIZAz6o/edit"
+          "url": "https://docs.google.com/document/d/1wnDD_Jm7JOApWQ5aPOcZVag4_h7lhBpl-QbCFIZAz6o/edit",
+          "type": "Manipulatíva"
         },
         "the_internet/coursef/2022": {
           "name": "Internet",
-          "url": "https://youtu.be/mFOUbqYv1Sc"
+          "url": "https://youtu.be/mFOUbqYv1Sc",
+          "type": "Odpojené Video"
         },
         "cs_fundamentals_final_project/coursef/2022": {
           "name": "Základy informatiky – záverečný projekt",
@@ -573,7 +599,8 @@
         },
         "private_and_personal_information_lesson_quiz/coursee/2022": {
           "name": "Súkromné a osobné informácie: kvíz pre lekciu",
-          "url": "https://docs.google.com/forms/d/1iXNQu1c_I19GGasTbz95xGmIBLz3YokGSErREzTukpQ/copy"
+          "url": "https://docs.google.com/forms/d/1iXNQu1c_I19GGasTbz95xGmIBLz3YokGSErREzTukpQ/copy",
+          "type": "Formulár"
         },
         "private_and_personal_information_lesson_quiz_1/coursee/2022": {
           "name": "Súkromné a osobné informácie: kvíz pre lekciu",
@@ -595,14 +622,16 @@
         },
         "swimming_fish_teacher_sandbox/coursee/2022": {
           "name": "Plávajúca ryba – priestor učiteľa",
-          "url": "https://studio.code.org/levels/18623"
+          "url": "https://studio.code.org/levels/18623",
+          "type": "Úroveň programovania"
         },
         "csf_-_course_e_-_slides_2022-2023_1/coursee/2022": {
           "type": "Prezentácia"
         },
         "about_me_planning_guide/coursee/2022": {
           "name": "O mne: sprievodca plánovaním",
-          "url": "https://docs.google.com/document/d/1EQvXTvg4ujk4Xkn2noldwgzUXbR7M3dsAOkJyo4KO3o/template/preview"
+          "url": "https://docs.google.com/document/d/1EQvXTvg4ujk4Xkn2noldwgzUXbR7M3dsAOkJyo4KO3o/template/preview",
+          "type": "podanie"
         },
         "pause_and_think_online/coursee/2022": {
           "name": "Mysli celým telom, keď si online",
@@ -621,11 +650,13 @@
         },
         "functions_unplugged_songwriting/coursee/2022": {
           "name": "Funkcie bez počítača: Písanie pesničiek",
-          "url": "https://www.youtube.com/watch?v=QuIMLel1mmw"
+          "url": "https://www.youtube.com/watch?v=QuIMLel1mmw",
+          "type": "Lekcia v akčnom videu"
         },
         "functions_unplugged_songwriting_1/coursee/2022": {
           "name": "Funkcie bez počítača: Písanie pesničiek",
-          "url": "https://docs.google.com/document/d/130ah2vRMrvuEj6Y-t1ThAHrHSVvLMnd94Qv9TLgZPMM/edit"
+          "url": "https://docs.google.com/document/d/130ah2vRMrvuEj6Y-t1ThAHrHSVvLMnd94Qv9TLgZPMM/edit",
+          "type": "Pracovný hárok"
         },
         "functions_unplugged_songwriting_2/coursee/2022": {
           "name": "Funkcie bez počítača: Písanie pesničiek",
@@ -634,15 +665,18 @@
         },
         "functions_unplugged_songwriting_3/coursee/2022": {
           "name": "Funkcie bez počítača: Písanie pesničiek",
-          "url": "https://docs.google.com/document/d/1L9YwWrsDBbTOZEVFCBhDxIIrYjkzZY3o1ZARKqa6lxw/edit"
+          "url": "https://docs.google.com/document/d/1L9YwWrsDBbTOZEVFCBhDxIIrYjkzZY3o1ZARKqa6lxw/edit",
+          "type": "Kľúč odpovede na hodnotenie"
         },
         "songwriting_with_functions/coursee/2022": {
           "name": "Písanie pesničiek s funkciami",
-          "url": "https://youtu.be/5iDCKkI6y2Y"
+          "url": "https://youtu.be/5iDCKkI6y2Y",
+          "type": "Odpojené Video"
         },
         "unplugged_blocks_courses_c-f_/coursee/2022": {
           "name": " Bloky na použitie bez počítača (kurzy C – F)",
-          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
+          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit",
+          "type": "Manipulatíva"
         },
         "types_of_disabilities/coursee/2022": {
           "name": "Typy zdravotných postihnutí",
@@ -724,7 +758,8 @@
         },
         "digital_trails_follow_the_digital_trail/courseb/2022": {
           "name": "Digitálne stopy: Sleduj digitálnu stopu",
-          "url": "https://www.commonsense.org/education/videos/follow-the-digital-trail"
+          "url": "https://www.commonsense.org/education/videos/follow-the-digital-trail",
+          "type": "Video lekcie"
         },
         "digital_trails_lesson_slides/courseb/2022": {
           "name": "Digitálne stopy: prezentácia k lekcii",
@@ -738,19 +773,23 @@
         },
         "move_it_move_it/courseb/2022": {
           "name": "Pohni sa, pohni sa",
-          "url": "https://docs.google.com/document/d/1xavPzpNq1GO7zzOzreES0Kl8FPcbjILFzfmORUqttcg/edit"
+          "url": "https://docs.google.com/document/d/1xavPzpNq1GO7zzOzreES0Kl8FPcbjILFzfmORUqttcg/edit",
+          "type": "Aktivita na mape"
         },
         "move_it_move_it_1/courseb/2022": {
           "name": "Pohni sa, pohni sa",
-          "url": "https://docs.google.com/document/d/1eOrX6kpPKLzUD3GpvGy9XxupnMZJrtaeh2bfe0zOz64/edit"
+          "url": "https://docs.google.com/document/d/1eOrX6kpPKLzUD3GpvGy9XxupnMZJrtaeh2bfe0zOz64/edit",
+          "type": "Pracovný hárok"
         },
         "move_it_move_it_2/courseb/2022": {
           "name": "Pohni sa, pohni sa",
-          "url": "https://docs.google.com/document/d/1bdGOgeZ9Z4MS_yxBLt-Mit2Rhr4rCNWL7HC-i1Qmpi4/edit"
+          "url": "https://docs.google.com/document/d/1bdGOgeZ9Z4MS_yxBLt-Mit2Rhr4rCNWL7HC-i1Qmpi4/edit",
+          "type": "Kľúč odpovede na pracovný hárok"
         },
         "move_it_move_it_3/courseb/2022": {
           "name": "Pohni sa, pohni sa",
-          "url": "http://youtu.be/aV4rqNUG-Jw?list=PL2DhNKNdmOtqBgWyF5kmy2oPh0U-Zfv2G"
+          "url": "http://youtu.be/aV4rqNUG-Jw?list=PL2DhNKNdmOtqBgWyF5kmy2oPh0U-Zfv2G",
+          "type": "Video Učiteľa"
         },
         "20_20_20_rule/courseb/2022": {
           "name": "Pravidlo 20/20/20",
@@ -763,7 +802,8 @@
         },
         "feeling_faces/courseb/2022": {
           "name": "Smajlíkovia",
-          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/"
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/",
+          "type": "Emócie Obrázky"
         },
         "how_to_make_a_class_section_on_code_org/courseb/2022": {
           "name": "Ako na Code.org vytvoriť triedu"
@@ -775,7 +815,8 @@
         },
         "unplugged_blockly_blocks_grades_k-1_/courseb/2022": {
           "name": "Bloky Blockly na použitie bez počítača (1. ročník)",
-          "url": "https://docs.google.com/presentation/d/1PoSQZUCUj6yw6g1yZImaHu5Gn4Gdok0iDmrrmXInavQ/edit"
+          "url": "https://docs.google.com/presentation/d/1PoSQZUCUj6yw6g1yZImaHu5Gn4Gdok0iDmrrmXInavQ/edit",
+          "type": "Manipulatíva"
         },
         "wiggles_-_gonoodle/courseb/2022": {
           "name": "Keď sú žiaci neposední – GoNoodle",
@@ -784,7 +825,8 @@
         },
         "compass_rose/courseb/2022": {
           "name": "Smerová ružica",
-          "url": "https://docs.google.com/document/d/1ah3Alc68karxsADBVpCQkzlFAmqO6aTO9QUpZiIQ7BE/edit"
+          "url": "https://docs.google.com/document/d/1ah3Alc68karxsADBVpCQkzlFAmqO6aTO9QUpZiIQ7BE/edit",
+          "type": "podanie"
         },
         "feeling_faces_-_emotion_image/courseb/2022": {
           "name": "Obrázok so smajlíkmi na vyjadrenie pocitov",
@@ -793,7 +835,8 @@
         },
         "happy_map_game_pieces/courseb/2022": {
           "name": "Dieliky k hre Veselé mapy",
-          "url": "https://docs.google.com/document/d/19dHJCfmQNs3meKN3sTL91qsfmHYjZCYfbFq91J4fj3k/edit"
+          "url": "https://docs.google.com/document/d/19dHJCfmQNs3meKN3sTL91qsfmHYjZCYfbFq91J4fj3k/edit",
+          "type": "Manipulatíva"
         },
         "stevie_and_the_big_project/courseb/2022": {
           "name": "Stevie a jej veľký projekt",
@@ -807,11 +850,13 @@
         },
         "getting_loopy/courseb/2022": {
           "name": "Cykly sa zacykľujú",
-          "url": "https://youtu.be/JoKTqHCni0M"
+          "url": "https://youtu.be/JoKTqHCni0M",
+          "type": "Odpojené Video"
         },
         "getting_loopy_1/courseb/2022": {
           "name": "Cykly sa zacykľujú",
-          "url": "https://docs.google.com/document/d/1SwYDo6fwkEZRRGogPozWBXCLLncddDS5dLNFgRDe6VQ/edit"
+          "url": "https://docs.google.com/document/d/1SwYDo6fwkEZRRGogPozWBXCLLncddDS5dLNFgRDe6VQ/edit",
+          "type": "Pracovný hárok"
         },
         "getting_loopy_2/courseb/2022": {
           "name": "Cykly sa zacykľujú",
@@ -820,11 +865,13 @@
         },
         "getting_loopy_3/courseb/2022": {
           "name": "Cykly sa zacykľujú",
-          "url": "https://docs.google.com/document/d/15YLSUX5TT6P9nRKW4tA0f9weEe0Qs4wV5Ylu08wzXFs/edit"
+          "url": "https://docs.google.com/document/d/15YLSUX5TT6P9nRKW4tA0f9weEe0Qs4wV5Ylu08wzXFs/edit",
+          "type": "Kľúč odpovede na hodnotenie"
         },
         "cs_fundamentals_main_activity_tips/courseb/2022": {
           "name": "Základy informatiky – tipy k hlavnej aktivite",
-          "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing"
+          "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing",
+          "type": "Odporúčania lekcie"
         },
         "pause_and_think_online/courseb/2022": {
           "name": "Mysli celým telom, keď si online",
@@ -847,15 +894,18 @@
         },
         "the_big_event_2/courseb/2022": {
           "name": "Veľká udalosť",
-          "url": "https://docs.google.com/document/d/1VU2rC918ZY6DM2hunN6FsiDUW6Q1vEqyiJAPWQ6aoX8/edit"
+          "url": "https://docs.google.com/document/d/1VU2rC918ZY6DM2hunN6FsiDUW6Q1vEqyiJAPWQ6aoX8/edit",
+          "type": "Kľúč odpovede na hodnotenie"
         },
         "the_big_event_courses_a_b_/courseb/2022": {
           "name": "Veľká udalosť (kurzy A, B)",
-          "url": "https://docs.google.com/document/d/1A9yAObCTJwHsIKtaBZY8KaGwgbxbfolpbIpeJfZRgvs/edit"
+          "url": "https://docs.google.com/document/d/1A9yAObCTJwHsIKtaBZY8KaGwgbxbfolpbIpeJfZRgvs/edit",
+          "type": "Ovládač obrazu"
         },
         "play_lab_project_planning_guide/courseb/2022": {
           "name": "Sprievodca plánovaním projektu v Play Labe",
-          "url": "https://docs.google.com/document/d/1XiBMkmdQtaCYcaQsGnoY32tGimfiGgBEwenuAadEqT8/template/preview"
+          "url": "https://docs.google.com/document/d/1XiBMkmdQtaCYcaQsGnoY32tGimfiGgBEwenuAadEqT8/template/preview",
+          "type": "podanie"
         },
         "play_lab_project_planning_guide_1/courseb/2022": {
           "name": "Sprievodca plánovaním projektu v Play Labe",
@@ -906,7 +956,8 @@
         },
         "turns_angles_1/express/2022": {
           "name": "Otáčanie a uhly",
-          "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit"
+          "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit",
+          "type": "podanie"
         },
         "sprite_lab_documentation/express/2022": {
           "url": "https://studio.code.org/docs/spritelab/",
@@ -928,7 +979,8 @@
         },
         "dance_party_project_guide/express/2022": {
           "name": "Tanečná párty – sprievodca projektom",
-          "url": "https://docs.google.com/document/d/1F9dc129iWUWHmkU7fL23PQqxEK-wYstblbs-XitZ9FM/edit"
+          "url": "https://docs.google.com/document/d/1F9dc129iWUWHmkU7fL23PQqxEK-wYstblbs-XitZ9FM/edit",
+          "type": "Pracovný hárok"
         },
         "open-ended_programming_levels/express/2022": {
           "name": "Úrovne na otvorené programovanie",
@@ -993,11 +1045,13 @@
         },
         "feeling_faces/pre-express/2022": {
           "name": "Smajlíkovia",
-          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/"
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/",
+          "type": "Emócie Obrázky"
         },
         "how_to_make_a_class_section_on_code_org/pre-express/2022": {
           "name": "Ako na Code.org vytvoriť triedu",
-          "url": "https://www.youtube.com/watch?v=ebQY8fb2OV4"
+          "url": "https://www.youtube.com/watch?v=ebQY8fb2OV4",
+          "type": "Video Učiteľa"
         },
         "pair_programming/pre-express/2022": {
           "name": "Párové programovanie",
@@ -1066,7 +1120,8 @@
         },
         "safety_in_my_online_neighborhood_my_online_neighborhood/coursea/2022": {
           "name": "Bezpečnosť v mojej online štvrti: Moja online štvrť",
-          "url": "https://www.commonsense.org/education/videos/my-online-neighborhood"
+          "url": "https://www.commonsense.org/education/videos/my-online-neighborhood",
+          "type": "Video lekcie"
         },
         "safety_in_my_online_neighborhood_pause_and_think_moment/coursea/2022": {
           "name": "Bezpečnosť v mojej online štvrti: Chvíľa na zamyslenie",
@@ -1075,7 +1130,8 @@
         },
         "safety_in_my_online_neighborhood_safety_it_rules_/coursea/2022": {
           "name": "Bezpečnosť v mojej online štvrti: Chrániť sa je to pravé!",
-          "url": "https://docs.google.com/document/d/1_fc870l0ndjhUMazjwLSaJOx9lIMsvbd3BYYEtLykIY/edit"
+          "url": "https://docs.google.com/document/d/1_fc870l0ndjhUMazjwLSaJOx9lIMsvbd3BYYEtLykIY/edit",
+          "type": "Báseň Plagát"
         },
         "20_20_20_rule/coursea/2022": {
           "name": "Pravidlo 20/20/20",
@@ -1104,23 +1160,28 @@
         },
         "happy_map_cards/coursea/2022": {
           "name": "Karty s veselými mapami",
-          "url": "https://docs.google.com/document/d/15uNhf_dISlr0ZT5j3sBu-z3I7v_v5Av9H5jsdLXhE8c/edit"
+          "url": "https://docs.google.com/document/d/15uNhf_dISlr0ZT5j3sBu-z3I7v_v5Av9H5jsdLXhE8c/edit",
+          "type": "Pracovný hárok"
         },
         "happy_map_cards_1/coursea/2022": {
           "name": "Karty s veselými mapami",
-          "url": "https://docs.google.com/document/d/1faZj8Szk1st2pMg2f_2S0jXgoGXgbfqOFxbJ6f3LnH0/edit"
+          "url": "https://docs.google.com/document/d/1faZj8Szk1st2pMg2f_2S0jXgoGXgbfqOFxbJ6f3LnH0/edit",
+          "type": "Kľúč odpovede na pracovný hárok"
         },
         "happy_map_game_pieces/coursea/2022": {
           "name": "Dieliky k hre Veselé mapy",
-          "url": "https://docs.google.com/document/d/19dHJCfmQNs3meKN3sTL91qsfmHYjZCYfbFq91J4fj3k/edit"
+          "url": "https://docs.google.com/document/d/19dHJCfmQNs3meKN3sTL91qsfmHYjZCYfbFq91J4fj3k/edit",
+          "type": "Manipulatíva"
         },
         "happy_maps/coursea/2022": {
           "name": "Veselé mapy",
-          "url": "https://youtu.be/hrnhiKAQ1_k"
+          "url": "https://youtu.be/hrnhiKAQ1_k",
+          "type": "Odpojené Video"
         },
         "unplugged_blockly_blocks_grades_k-1_/coursea/2022": {
           "name": "Bloky Blockly na použitie bez počítača (1. ročník)",
-          "url": "https://docs.google.com/presentation/d/1PoSQZUCUj6yw6g1yZImaHu5Gn4Gdok0iDmrrmXInavQ/edit"
+          "url": "https://docs.google.com/presentation/d/1PoSQZUCUj6yw6g1yZImaHu5Gn4Gdok0iDmrrmXInavQ/edit",
+          "type": "Manipulatíva"
         },
         "wiggles_-_gonoodle/coursea/2022": {
           "name": "Keď sú žiaci neposední – GoNoodle",
@@ -1144,15 +1205,18 @@
         },
         "happy_map_cards_xl/coursea/2022": {
           "name": "Karty s veselými mapami XL",
-          "url": "https://docs.google.com/document/d/1ohSi_DzymdRdN66NVMAI-KI6LuaB3srbUMnpG74aPM8/edit"
+          "url": "https://docs.google.com/document/d/1ohSi_DzymdRdN66NVMAI-KI6LuaB3srbUMnpG74aPM8/edit",
+          "type": "Pracovný hárok"
         },
         "happy_map_game_pieces_bonus_pack/coursea/2022": {
           "name": "Bonusový balík dielikov k hre Veselé mapy",
-          "url": "https://docs.google.com/document/d/14qEVzSR7pr0slqkRn2WM8XxVyeDhdmfhtsmTrERCTNs/edit"
+          "url": "https://docs.google.com/document/d/14qEVzSR7pr0slqkRn2WM8XxVyeDhdmfhtsmTrERCTNs/edit",
+          "type": "Manipulatíva"
         },
         "feeling_faces/coursea/2022": {
           "name": "Smajlíkovia",
-          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/"
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/",
+          "type": "Emócie Obrázky"
         },
         "pair-programming/coursea/2022": {
           "name": "Párové programovanie",
@@ -1171,7 +1235,8 @@
         },
         "the_big_event/coursea/2022": {
           "name": "Veľká udalosť",
-          "url": "https://youtu.be/u0WV9shCoak"
+          "url": "https://youtu.be/u0WV9shCoak",
+          "type": "Odpojené Video"
         },
         "the_big_event_1/coursea/2022": {
           "name": "Veľká udalosť",
@@ -1180,11 +1245,13 @@
         },
         "the_big_event_2/coursea/2022": {
           "name": "Veľká udalosť",
-          "url": "https://docs.google.com/document/d/1VU2rC918ZY6DM2hunN6FsiDUW6Q1vEqyiJAPWQ6aoX8/edit"
+          "url": "https://docs.google.com/document/d/1VU2rC918ZY6DM2hunN6FsiDUW6Q1vEqyiJAPWQ6aoX8/edit",
+          "type": "Kľúč odpovede na hodnotenie"
         },
         "the_big_event_courses_a_b_/coursea/2022": {
           "name": "Veľká udalosť (kurzy A, B)",
-          "url": "https://docs.google.com/document/d/1A9yAObCTJwHsIKtaBZY8KaGwgbxbfolpbIpeJfZRgvs/edit"
+          "url": "https://docs.google.com/document/d/1A9yAObCTJwHsIKtaBZY8KaGwgbxbfolpbIpeJfZRgvs/edit",
+          "type": "Ovládač obrazu"
         },
         "cs_fundamentals_main_activity_tips/coursea/2022": {
           "name": "Základy informatiky – tipy k hlavnej aktivite",
@@ -1192,7 +1259,8 @@
         },
         "artist_project_planning_guide/coursea/2022": {
           "name": "Sprievodca plánovaním projektu s Umelcom",
-          "url": "https://docs.google.com/document/d/16jZwjsALk--UIsqN0i35odey5dei1-uHGCTl8x23B2M/template/preview"
+          "url": "https://docs.google.com/document/d/16jZwjsALk--UIsqN0i35odey5dei1-uHGCTl8x23B2M/template/preview",
+          "type": "podanie"
         },
         "artist_project_planning_guide_1/coursea/2022": {
           "name": "Sprievodca plánovaním projektu s Umelcom",
@@ -1262,23 +1330,28 @@
         },
         "my_robotic_friends/coursec/2022": {
           "name": "Moji robotickí kamaráti",
-          "url": "https://docs.google.com/document/d/1jGz8znfkzhgZ3RNd7Kg1AnDZ2LZ7vjf7VujzPz_84b4/edit"
+          "url": "https://docs.google.com/document/d/1jGz8znfkzhgZ3RNd7Kg1AnDZ2LZ7vjf7VujzPz_84b4/edit",
+          "type": "Rozstup pohárov"
         },
         "my_robotic_friends_1/coursec/2022": {
           "name": "Moji robotickí kamaráti",
-          "url": "https://docs.google.com/document/d/1D8W0FETv5OBGj-Fl8gJGHruSvbAhoEtCs6SZxSkKOSc/edit"
+          "url": "https://docs.google.com/document/d/1D8W0FETv5OBGj-Fl8gJGHruSvbAhoEtCs6SZxSkKOSc/edit",
+          "type": "Symbolový kľúč"
         },
         "my_robotic_friends_2/coursec/2022": {
           "name": "Moji robotickí kamaráti",
-          "url": "https://youtu.be/xaW3PAzHxCU"
+          "url": "https://youtu.be/xaW3PAzHxCU",
+          "type": "Odpojené Video"
         },
         "my_robotic_friends_3/coursec/2022": {
           "name": "Moji robotickí kamaráti",
-          "url": "https://docs.google.com/document/d/1cq6CvIuCrpS9MfRySO1070uXZ238OuXcqou1mfjV7BM/edit"
+          "url": "https://docs.google.com/document/d/1cq6CvIuCrpS9MfRySO1070uXZ238OuXcqou1mfjV7BM/edit",
+          "type": "Nápady na stohovanie pohárov"
         },
         "my_robotic_friends_4/coursec/2022": {
           "name": "Moji robotickí kamaráti",
-          "url": "https://docs.google.com/document/d/1go_BJorY8OzmqWyB5z8_FY7bbPCWg1ZBxfjewU0nMmA/edit"
+          "url": "https://docs.google.com/document/d/1go_BJorY8OzmqWyB5z8_FY7bbPCWg1ZBxfjewU0nMmA/edit",
+          "type": "Papier lichobežníkový šablóna"
         },
         "maze_bridging_page/coursec/2022": {
           "name": "Stránka premostenia bludiska",
@@ -1286,11 +1359,13 @@
         },
         "unplugged_maze_blocks/coursec/2022": {
           "name": "Bloky bludiska bez počítača",
-          "url": "https://docs.google.com/presentation/d/1k_7SSLsm-E4aisa9-LmbsCVzH6J-8yGD9T2LwPb2v48/edit"
+          "url": "https://docs.google.com/presentation/d/1k_7SSLsm-E4aisa9-LmbsCVzH6J-8yGD9T2LwPb2v48/edit",
+          "type": "Manipulatíva"
         },
         "cs_fundamentals_main_activity_tips/coursec/2022": {
           "name": "Základy informatiky – tipy k hlavnej aktivite",
-          "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing"
+          "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing",
+          "type": "Odporúčania lekcie"
         },
         "debugging_guide/coursec/2022": {
           "name": "Sprievodca ladením",
@@ -1304,7 +1379,8 @@
         },
         "unplugged_blocks_courses_c-f_/coursec/2022": {
           "name": " Bloky na použitie bez počítača (kurzy C – F)",
-          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
+          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit",
+          "type": "Manipulatíva"
         },
         "artist_introduction/coursec/2022": {
           "name": "Predstavenie Umelca",
@@ -1323,7 +1399,8 @@
         },
         "the_big_event/coursec/2022": {
           "name": "Veľká udalosť",
-          "url": "https://youtu.be/u0WV9shCoak"
+          "url": "https://youtu.be/u0WV9shCoak",
+          "type": "Odpojené Video"
         },
         "the_big_event_1/coursec/2022": {
           "name": "Veľká udalosť",
@@ -1332,11 +1409,13 @@
         },
         "the_big_event_2/coursec/2022": {
           "name": "Veľká udalosť",
-          "url": "https://docs.google.com/document/d/1VU2rC918ZY6DM2hunN6FsiDUW6Q1vEqyiJAPWQ6aoX8/edit"
+          "url": "https://docs.google.com/document/d/1VU2rC918ZY6DM2hunN6FsiDUW6Q1vEqyiJAPWQ6aoX8/edit",
+          "type": "Kľúč odpovede na hodnotenie"
         },
         "the_big_event_course_c_/coursec/2022": {
           "name": "Veľká udalosť (kurz C)",
-          "url": "https://docs.google.com/document/d/1WlrJ6FKqrcvuyDWADnJiGpOo7rfolKcT5QH4W4uEptQ/edit"
+          "url": "https://docs.google.com/document/d/1WlrJ6FKqrcvuyDWADnJiGpOo7rfolKcT5QH4W4uEptQ/edit",
+          "type": "Ovládač udalostí"
         },
         "level_solutions/coursec/2022": {
           "name": "Úrovne na otvorené programovanie",
@@ -1359,19 +1438,23 @@
         },
         "graphing_data_from_play_lab/coursec/2022": {
           "name": "Grafické znázorňovanie údajov z Play Labu",
-          "url": "https://docs.google.com/document/d/177NVkzjc--XVvd5jssO5TZolUTzz9SD5pAw1DazflQ8/edit#heading=h.v577cjs0yrx5"
+          "url": "https://docs.google.com/document/d/177NVkzjc--XVvd5jssO5TZolUTzz9SD5pAw1DazflQ8/edit#heading=h.v577cjs0yrx5",
+          "type": "Pracovný hárok"
         },
         "binary_bracelets/coursec/2022": {
           "name": "Binárne náramky",
-          "url": "https://youtu.be/3S2YfoO4_CM"
+          "url": "https://youtu.be/3S2YfoO4_CM",
+          "type": "Odpojené Video"
         },
         "binary_bracelets_1/coursec/2022": {
           "name": "Binárne náramky",
-          "url": "https://www.youtube.com/watch?v=fDLkBqZpxWQ"
+          "url": "https://www.youtube.com/watch?v=fDLkBqZpxWQ",
+          "type": "Lekcia v akčnom videu"
         },
         "binary_bracelets_2/coursec/2022": {
           "name": "Binárne náramky",
-          "url": "https://docs.google.com/document/d/1YV1Oer_1DMzilyHriimgPVZnaC6JUjU5YDE8Ui065hE/edit"
+          "url": "https://docs.google.com/document/d/1YV1Oer_1DMzilyHriimgPVZnaC6JUjU5YDE8Ui065hE/edit",
+          "type": "Pracovný hárok"
         },
         "binary_bracelets_3/coursec/2022": {
           "name": "Binárne náramky",
@@ -1380,7 +1463,8 @@
         },
         "binary_bracelets_4/coursec/2022": {
           "name": "Binárne náramky",
-          "url": "https://docs.google.com/document/d/1EaTbrdNbGpY_mI-FfV0GZ2uHSfcQIGuAkXqd1qFkUbE/edit"
+          "url": "https://docs.google.com/document/d/1EaTbrdNbGpY_mI-FfV0GZ2uHSfcQIGuAkXqd1qFkUbE/edit",
+          "type": "Kľúč odpovede na hodnotenie"
         },
         "bits_versus_bytes/coursec/2022": {
           "name": "Bity a bajty",
@@ -1389,11 +1473,13 @@
         },
         "play_lab_project_planning_guide/coursec/2022": {
           "name": "Sprievodca plánovaním projektu v Play Labe",
-          "url": "https://docs.google.com/document/d/1qT5Zz1Pec5wuvLSTRfSMJSW5r1LjmWKqoK75Lz1ZYTs/edit"
+          "url": "https://docs.google.com/document/d/1qT5Zz1Pec5wuvLSTRfSMJSW5r1LjmWKqoK75Lz1ZYTs/edit",
+          "type": "Pracovný hárok"
         },
         "play_lab_project_planning_guide_exemplar_/coursec/2022": {
           "name": "Sprievodca plánovaním projektu v Play Labe (model)",
-          "url": "https://docs.google.com/document/d/1CKzMi1JfhUpwfu8JMllUvKwlgJZaw7RQ6pLp6fu0H_I/edit?usp=sharing"
+          "url": "https://docs.google.com/document/d/1CKzMi1JfhUpwfu8JMllUvKwlgJZaw7RQ6pLp6fu0H_I/edit?usp=sharing",
+          "type": "Zdroj lekcie"
         },
         "csd_curriculum_guide/csd/2022": {
           "name": "Sprievodca osnovami pre kurz Objavujeme informatiku"
@@ -1972,7 +2058,7 @@
         },
         "random_numbers/csd/2022": {
           "name": "Náhodné čísla",
-          "url": "https://drive.google.com/file/d/1BZwjs4cvsGdhtNhY8qjUXWkCgblmZUcD/view",
+          "url": "https://docs.google.com/document/d/1aOIGIiL3F9ml309f8SyDeWC53pOAmaFUh7WG12MsD0k/view",
           "type": "Zdroj"
         },
         "random_numbers_2/csd/2022": {
@@ -1981,7 +2067,7 @@
         },
         "animation_tab/csd/2022": {
           "name": "Karta Animácie",
-          "url": "https://drive.google.com/file/d/1ytsY-Hv17uCKmwY4Af7OpljWdsLtGfTn/view",
+          "url": "https://docs.google.com/document/d/15SMe7U_8fsrGtPcFwekGN9X0HY9vQfRCsjDEusgz9b4/view",
           "type": "Zdroj"
         },
         "introduction_to_sprites/csd/2022": {
@@ -1990,7 +2076,7 @@
         },
         "sprites/csd/2022": {
           "name": "Sprajty",
-          "url": "https://drive.google.com/file/d/1WS_5m8Ffy0u4OKILPEVSjs2KamZr2a41/view",
+          "url": "https://docs.google.com/document/d/1CcMWooCGNYE8eEBtnTmI2Mkm30zAZ2uomYVU4C1sM3w/view",
           "type": "Zdroj"
         },
         "the_animation_tab/csd/2022": {
@@ -2004,7 +2090,7 @@
         },
         "sprite_properties/csd/2022": {
           "name": "Vlastnosti sprajtov",
-          "url": "https://drive.google.com/file/d/1E4UZKHRQM0erDbb-rPTRbRVpj7IquA3p/view?usp=sharing",
+          "url": "https://docs.google.com/document/d/11HX56vUOm9bk5NkPMNKdPe5uZ59gdhXCQfTwJUQa0L0/view?usp=sharing",
           "type": "Zdroj"
         },
         "sprite_properties_1/csd/2022": {
@@ -2178,7 +2264,7 @@
         },
         "velocity_1/csd/2022": {
           "name": "Rýchlosť",
-          "url": "https://drive.google.com/file/d/10n2QcpY__sDlycr09Xar6o-2iDAb0P49/view?usp=sharing",
+          "url": "https://docs.google.com/document/d/1OW_KB7Z1hiW3oNYYJzm12BF1VE0gkjYxi44vQBjTthQ/view?usp=sharing",
           "type": "Zdroj"
         },
         "velocity_2/csd/2022": {
@@ -2266,7 +2352,7 @@
         },
         "functions_1/csd/2022": {
           "name": "Funkcie",
-          "url": "https://drive.google.com/file/d/1m4GATuAOfc3cL-kgb5Bmc4yciCNyxgVH/view?usp=sharing",
+          "url": "https://docs.google.com/document/d/1f0Dq6pRWWLJUxND0ekBWXqfaILYUKwtwP1k2PMlVZRY/view?usp=sharing",
           "type": "Zdroj"
         },
         "functions_4/csd/2022": {
@@ -3350,16 +3436,17 @@
         },
         "classification_models/csd/2022": {
           "name": "Klasifikačné modely",
-          "url": "https://docs.google.com/document/d/12gAWt2e0r-RSWFFUDaV9KgiPMhqFzfr8AoY0Mdm9uRY/edit",
+          "url": "https://docs.google.com/document/d/1iUaMCFC7-GDjt2NBsTemaZDnLvILKeFrPIO0Hp9lqFM/edit",
           "type": "Sprievodca aktivitou"
         },
         "classification_models_1/csd/2022": {
           "name": "Klasifikačné modely",
+          "url": "https://docs.google.com/presentation/d/1yCen1Eea7LdyYdKyefSFtUy-KJUQKcwqAljWObKmVls/template/preview",
           "type": "Prezentácia"
         },
         "fruit_veggie_cards/csd/2022": {
           "name": "Kartičky s ovocím a zeleninou",
-          "url": "https://docs.google.com/document/d/1tHBrTeEpIflpl06y4wYqLNnT476X8X--wfPZsMjMTiM/edit",
+          "url": "https://docs.google.com/document/d/1hs7JBBt7eYJ34CuygsZM3gfArNhcLJTmISoI1WSNdLE/edit",
           "type": "Zdroj"
         },
         "_key_training_a_model_in_ai_lab/csd/2022": {
@@ -3383,12 +3470,12 @@
         },
         "selecting_features/csd/2022": {
           "name": "Výber vlastností",
-          "url": "https://drive.google.com/file/d/1GLf_xq333r4tR2XHMoP24rq0KQVLM8z_/view?usp=sharing",
+          "url": "https://docs.google.com/document/d/1sAar-EcQiOHW2zR38-q2p4QRPG11E--Du-z0Oodwr5I/view?usp=sharing",
           "type": "Zdroj"
         },
         "training_a_model_in_ai_lab/csd/2022": {
           "name": "Trénovanie modelu v AI Labe",
-          "url": "https://docs.google.com/document/d/17gVZ5E_0_bBddvEKnO_wFTlorJnGkW-KNAcz0zWRbAE/edit",
+          "url": "https://docs.google.com/document/d/1SPSUmfleYPw58Wp4uvoZ_EeBt41ldLcBcfmof0kf3OQ/edit",
           "type": "Sprievodca aktivitou"
         },
         "training_and_testing_in_ai_lab/csd/2022": {
@@ -3397,16 +3484,17 @@
         },
         "using_data_with_categorical_features/csd/2022": {
           "name": "Používanie údajov s kategorickými vlastnosťami",
-          "url": "https://drive.google.com/file/d/1blY6e6hX5DszuAdHXTEeB735kYUy1Hyj/view?usp=sharing",
+          "url": "https://docs.google.com/document/d/11q1xnO7AAtteuGaVyA2zmznwE1lfibkRroUbtNL2GGc/view?usp=sharing",
           "type": "Zdroj"
         },
         "importing_a_model_in_app_lab/csd/2022": {
           "name": "Importovanie modelu v App Labe",
-          "url": "https://drive.google.com/file/d/1xxtJnmayTnjT_0KdcaQp5buxBsVJnbsu/view?usp=sharing",
+          "url": "https://docs.google.com/document/d/1Q2k9AZYIbrmEybPM9xWrodachJCESGrbp2Mpot782xo/view?usp=sharing",
           "type": "Zdroj"
         },
         "importing_models_in_app_lab/csd/2022": {
-          "name": "Importovanie modelov v App Labe",
+          "name": "Importovanie modelov do App Labu",
+          "url": "https://docs.google.com/presentation/d/1EytdJHye-dSY04th0W2qxg0UhGPJ-bj4dUsA4ooObBQ/template/preview",
           "type": "Prezentácia"
         },
         "ai_training_data_bias/csd/2022": {
@@ -3433,16 +3521,17 @@
         },
         "saving_models_in_ai_lab/csd/2022": {
           "name": "Ukladanie modelov v AI Labe",
+          "url": "https://docs.google.com/presentation/d/1CyFkh-LggpJw9yVdaBPKeAASogMWWvhXp9D24ChDnPk/template/preview",
           "type": "Prezentácia"
         },
         "selecting_a_label/csd/2022": {
           "name": "Výber označenia",
-          "url": "https://drive.google.com/file/d/1iCd0-YM5JK2Bk1u3XgEY6o0xcGwJdkau/view?usp=sharing",
+          "url": "https://docs.google.com/document/d/12iftU_mkjODKEU5ZPSIQp5spIYfc1h5q_f_XiDt4Oxc/view?usp=sharing",
           "type": "Zdroj"
         },
         "zoo_models/csd/2022": {
           "name": "Modely pre zoo",
-          "url": "https://docs.google.com/document/d/1ORggvwa-uMH4HUUFEJL6g5v-mYR1948LhKAmHhmJxGc/edit",
+          "url": "https://docs.google.com/document/d/13xk6xvTIQEMk2H6tiSI1HZ0w29MjB0gGlOwguHlLd2s/edit",
           "type": "Sprievodca aktivitou"
         },
         "if-statements_in_app_lab/csd/2022": {
@@ -3452,6 +3541,7 @@
         },
         "model_cards_in_app_lab/csd/2022": {
           "name": "Karty modelov v App Labe",
+          "url": "https://docs.google.com/presentation/d/1oFg_9yMYf95hwVx4iuzrCZw1-Z2ivY7GTC7mdTrDjJA/template/preview",
           "type": "Prezentácia"
         },
         "printable_model_cards/csd/2022": {
@@ -3469,16 +3559,17 @@
         },
         "numerical_accuracy/csd/2022": {
           "name": "Číselná presnosť",
-          "url": "https://docs.google.com/document/d/1z1QlqauVb0S3TBFICvoIP2fOvfDGkAItx7hL3FlOnf8/edit#",
+          "url": "https://docs.google.com/document/d/1qC_E9BIL-W0vmfNV1kU6_d6mwZNx-_t-ibXWc82521g/edit#",
           "type": "Sprievodca aktivitou"
         },
         "numerical_models/csd/2022": {
           "name": "Číselné modely",
+          "url": "https://docs.google.com/presentation/d/1ZJTZDKBR5MR1SofSxX21g2AJl-oVvpcm8eEVCYPmTYQ/template/preview",
           "type": "Prezentácia"
         },
         "zombie_prediction/csd/2022": {
           "name": "Predpovedanie zombíkov",
-          "url": "https://docs.google.com/document/d/1mylu7XueQyZQpTftM5UqtuDY4cYKAR7YTdlSHOXbkSA/edit#",
+          "url": "https://docs.google.com/document/d/1htmItXxjsGuhTMYOj_5ilt77y-uewaUqKiT0xeIcB6k/edit#",
           "type": "Sprievodca aktivitou"
         },
         "_key_-_numerical_data_in_ai_lab/csd/2022": {
@@ -3488,11 +3579,12 @@
         },
         "numerical_data_in_ai_lab/csd/2022": {
           "name": "Číselné údaje v AI Labe",
+          "url": "https://docs.google.com/presentation/d/15FIseQCmCrQnPD4b2di8tUG8WLe_mNzvEc_cv6kYH5I/template/preview",
           "type": "Prezentácia"
         },
         "numerical_data_in_ai_lab_1/csd/2022": {
           "name": "Číselné údaje v AI Labe",
-          "url": "https://docs.google.com/document/d/1moMxuz91OA5THt6SxJm0AGyJKG69r1oz2FzeJ_NWeww/edit#",
+          "url": "https://docs.google.com/document/d/1iwchy0h-tX3NerizjbYVgtYM3NNemWs5K5lgmL7WC18/edit#",
           "type": "Sprievodca aktivitou"
         },
         "numerical_data_in_ai_lab_2/csd/2022": {
@@ -3501,7 +3593,7 @@
         },
         "using_data_with_numerical_features/csd/2022": {
           "name": "Používanie údajov s číselnými vlastnosťami",
-          "url": "https://drive.google.com/file/d/1gDKIbkvicZqyXlyj2a5InXaU9_lcxVlU/view?usp=sharing",
+          "url": "https://docs.google.com/document/d/1PmL5SyFs30mzbsfsUzKMXchUHjUvN13d5jOEci3TdgQ/view?usp=sharing",
           "type": "Zdroj"
         },
         "customizing_apps/csd/2022": {
@@ -3511,15 +3603,16 @@
         },
         "ai_code_of_ethics/csd/2022": {
           "name": "Etický kódex umelej inteligencie",
+          "url": "https://docs.google.com/presentation/d/1fubkSum7AK6rLnMlt_EBxXjoe1DK8MfVKQ-IaXUhG1I/template/preview",
           "type": "Prezentácia"
         },
         "ai_ethics_research_areas/csd/2022": {
           "name": "Oblasti výskumu etiky umelej inteligencie",
-          "url": "https://docs.google.com/document/d/1duhFg6-NyUw5GBhCdkJbnC21IP_PoILvrlvl_HdOdZY/edit"
+          "url": "https://docs.google.com/document/d/113_NoKEG8wIK_b0bwhFbLFNfnRM7cbVj9b5H-uT6Z2A/edit"
         },
         "ai_ethics_research_reflection/csd/2022": {
           "name": "Úvaha o výskume etiky umelej inteligencie",
-          "url": "https://docs.google.com/document/d/19vF4UVAcJa6UsqkdKynWzSR80Mlnb2G3coBoWNxpIYc/edit?usp=sharing",
+          "url": "https://docs.google.com/document/d/1DGTHgJ8aI342YafoUM3rVyJtvqX5mQSekvERYdwOfdg/edit?usp=sharing",
           "type": "Podklady pre žiakov"
         },
         "ethics_ai_equal_access_and_algorithmic_bias/csd/2022": {
@@ -3529,17 +3622,17 @@
         },
         "our_ai_code_of_ethics_template_/csd/2022": {
           "name": "Náš etický kódex umelej inteligencie [Šablóna]",
-          "url": "https://docs.google.com/presentation/d/1SJEXpTCKwf5fbDy5GuDjDGAsuUrkI9QfxKF-1pMSndg/edit?usp=sharing",
+          "url": "https://docs.google.com/presentation/d/12Q0EqLwi7t179sxUOekPkaeEkUuT-FgHQNLhWk-l9RM/edit?usp=sharing",
           "type": "Prezentácia"
         },
         "create_an_ml_app/csd/2022": {
           "name": "Vytvorenie aplikácie strojového učenia",
-          "url": "https://docs.google.com/document/d/1iB8J-cuTNv00K-WSykY53O-UONmms6xxExgNXlLdVeA/view",
+          "url": "https://docs.google.com/document/d/1iqWYU7_aprYnnvvddMhggJwFgraAJ6DKvDv4A0uvyqw/view",
           "type": "Hodnotenie"
         },
         "create_an_ml_app_-_project_guide/csd/2022": {
           "name": "Vytvorenie aplikácie strojového učenia – sprievodca projektom",
-          "url": "https://docs.google.com/document/d/1UAGmOyfoqr5xKjKp8SjpYRmdemNK8FWV1fcrERoeoDo/edit"
+          "url": "https://docs.google.com/document/d/1deEo9mj_GpDWjY4KKKrrvJ0kA2f9ELZPQskrb541fPc/edit"
         },
         "make_a_machine_learning_app/csd/2022": {
           "name": "Vytvorenie aplikácie strojového učenia",
@@ -3547,7 +3640,7 @@
         },
         "5_why_s_-_activity_guide/csd/2022": {
           "name": "5 prečo – Sprievodca aktivitou",
-          "url": "https://docs.google.com/presentation/d/1G8bmEuCtGcnQkL8DAcPUqhN4WsbwTnIBc6ihH2i86lU/view"
+          "url": "https://docs.google.com/presentation/d/1-Tx-CEQDbTcN7z9LkCotIX5TA-zY7anjeNXkb13p-Jg/view"
         },
         "app_brainstorm_-_activity_guide/csd/2022": {
           "name": "Vymyslenie aplikácie – Sprievodca aktivitou",
@@ -3560,20 +3653,21 @@
         },
         "creating_a_survey/csd/2022": {
           "name": "Vytvorenie dotazníka",
-          "url": "https://drive.google.com/file/d/1L8WM8UEpOUW7rY1DaGImAco2BGzj6J_y/view?usp=sharing",
+          "url": "https://docs.google.com/document/d/1Hk6vJdsEMBFB2nJalpCA0xBbcw1DvRsKDyZbn2LwC1w/view?usp=sharing",
           "type": "Zdroj"
         },
         "survey_planning/csd/2022": {
           "name": "Plánovanie dotazníka",
+          "url": "https://docs.google.com/presentation/d/1KIgGpvmh6TdXRrgnbmgNKkfJYmYdeavoZdCX4gz3l40/template/preview",
           "type": "Prezentácia"
         },
         "survey_planning_-_activity_guide/csd/2022": {
           "name": "Plánovanie dotazníka – sprievodca aktivitou",
-          "url": "https://docs.google.com/document/d/1vLzqaZDRjA8_wvb4dePTLpXY5Skhy44JvxpCIAcLDE8/view"
+          "url": "https://docs.google.com/document/d/1WoTGXFkrtU5jys0DYoSWDe_JnhcSc2JeYJdr2jpYBKU/view"
         },
         "survey_template_google_form_/csd/2022": {
           "name": "Šablóna dotazníka [Formulár Google]",
-          "url": "https://docs.google.com/forms/d/1E4sGp03dDW6TYVh1G6zlNITuuSaLFGlMox2E0Iiczzo/copy"
+          "url": "https://docs.google.com/forms/d/1iUUNRsTy4AfLjBj-tslrePH_j5rV0hnuYwcBL8YTBKQ/copy"
         },
         "creating_a_survey_in_google_forms/csd/2022": {
           "type": "Video"
@@ -3592,6 +3686,7 @@
         },
         "survey_data_in_ai_lab/csd/2022": {
           "name": "Údaje z dotazníka v AI Labe",
+          "url": "https://docs.google.com/presentation/d/1G239Dj2EveinRpIbz8ioa9Wl4KruYNvU_rey4H5s6jU/template/preview",
           "type": "Prezentácia"
         },
         "view_and_download_survey_data/csd/2022": {
@@ -3604,7 +3699,7 @@
         },
         "troubleshooting_models_-_activity_guide/csd/2022": {
           "name": "Riešenie problémov s modelmi – sprievodca aktivitou",
-          "url": "https://docs.google.com/document/d/1RLnA_EbFrxwLOI-XGwmuryNbSPlBqndvjXGDlWdndpc/edit"
+          "url": "https://docs.google.com/document/d/1f2QoFtHBY04kLQx7I8eF4W7NjG71wfhTPs_yMG0Vbuc/edit"
         },
         "creating_an_app/csd/2022": {
           "name": "Vytvorenie aplikácie",
@@ -3627,7 +3722,7 @@
         },
         "design_an_ai_app_1/csd/2022": {
           "name": "Návrh aplikácie umelej inteligencie",
-          "url": "https://docs.google.com/document/d/1WTnJ-vxHh0NIYOePvdYps_zoLLiGWJnD8Y9RJabxth8/view",
+          "url": "\\<﻿<https://docs.google.com/document/d/12hyKNQGCpUxtgremu0XvlGp4bmFdMsP_7zrTogsCoaY/view>",
           "type": "Hodnotenie"
         },
         "exemplar_-_design_an_ai_app/csd/2022": {
@@ -3644,12 +3739,12 @@
         },
         "model_card_-_digital_template/csd/2022": {
           "name": "Karta modelu – digitálna šablóna",
-          "url": "https://docs.google.com/presentation/d/1voKIV3MzBgU33ah0bjEsUGL-Eue53mtmwAlt2oIHwbA/view",
+          "url": "https://docs.google.com/presentation/d/1LHgqCb3fVEf20U63Q4h8d1YqKmA9b7IaBZACURp5CIs/view",
           "type": "Zdroj"
         },
         "model_card_-_printable_template/csd/2022": {
-          "name": "Karta modelu – šablóna na vytlačenie",
-          "url": "https://docs.google.com/presentation/d/1Pg5gCzLLzv_I8jxPhTrdgL76gYPEJtFpAE1NN2bt8xI/view",
+          "name": "Karta modelu – šablóna na tlač",
+          "url": "https://docs.google.com/presentation/d/18tA7dJZi6UZzUA4KN8i9OkigzUJv9xbCzpviVNJkIcc/view",
           "type": "Zdroj"
         },
         "lesson_plans/courseb/2018": {
@@ -4164,7 +4259,7 @@
           "type": "Video"
         },
         "making_sprites/coursef/2021": {
-          "name": "Vytváranie postáv",
+          "name": "Vytváranie sprajtov",
           "url": "https://docs.google.com/presentation/d/1u8gueXrKIKoYNgTxbr3bIvmbVlCsJcVT7qcDeqsOh1U/template/preview",
           "type": "Prezentácia"
         },
@@ -4199,7 +4294,8 @@
         },
         "the_power_of_words_words_can_hurt/coursef/2021": {
           "name": "Objav silu slov: Slová dokážu ublížiť",
-          "url": "https://docs.google.com/document/d/1gJcgF03GdltY81jfccsl-tOpgwxMfHI5S1KvzhEhyIw/edit"
+          "url": "https://docs.google.com/document/d/1gJcgF03GdltY81jfccsl-tOpgwxMfHI5S1KvzhEhyIw/edit",
+          "type": "podanie"
         },
         "blank_space_stories/coursef/2021": {
           "name": "Príbehy na doplnenie",
@@ -4248,7 +4344,8 @@
         },
         "activity-answer-for-loop-fun/coursef/2021": {
           "name": "Zábava s cyklami \"for\"",
-          "url": "https://docs.google.com/document/d/1DPEOgWHVAAfnLXhuBWDw51nnGy1qSV9QPj9L2rUrvv8/edit"
+          "url": "https://docs.google.com/document/d/1DPEOgWHVAAfnLXhuBWDw51nnGy1qSV9QPj9L2rUrvv8/edit",
+          "type": "Kľúč odpovede na pracovný hárok"
         },
         "csf-for-loop-fun-assessment/coursef/2021": {
           "name": "Zábava s cyklami \"for\"",
@@ -4257,27 +4354,33 @@
         },
         "csf-for-loop-fun-worksheet/coursef/2021": {
           "name": "Zábava s cyklami \"for\"",
-          "url": "https://docs.google.com/document/d/15Sn7JZ-Twp3SUK6ObDClqwueAoA_0Wn0MGlIdxSQGHM/edit"
+          "url": "https://docs.google.com/document/d/15Sn7JZ-Twp3SUK6ObDClqwueAoA_0Wn0MGlIdxSQGHM/edit",
+          "type": "Pracovný hárok"
         },
         "flf-assessment-teacher-key/coursef/2021": {
           "name": "Zábava s cyklami „for“ - kľúč k hodnoteniu",
-          "url": "https://docs.google.com/document/d/11nIyoZ8jLVO-US-b0P8B-kisfFGdTwY6xjKhbTi-gGI/edit"
+          "url": "https://docs.google.com/document/d/11nIyoZ8jLVO-US-b0P8B-kisfFGdTwY6xjKhbTi-gGI/edit",
+          "type": "Učiteľ kľúč"
         },
         "lesson-in-action-for-loop-fun/coursef/2021": {
           "name": "Zábava s cyklami \"for\"",
-          "url": "https://www.youtube.com/watch?v=HO4uhoahtjM"
+          "url": "https://www.youtube.com/watch?v=HO4uhoahtjM",
+          "type": "Lekcia v akčnom videu"
         },
         "unplugged-video-for-loop-fun/coursef/2021": {
           "name": "Zábava s cyklami \"for\"",
-          "url": "https://youtu.be/mX857v5B4gE"
+          "url": "https://youtu.be/mX857v5B4gE",
+          "type": "Odpojené Video"
         },
         "course-cf-blockly-blocks/coursef/2021": {
           "name": " Bloky na použitie bez počítača (kurzy C – F)",
-          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
+          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit",
+          "type": "Manipulatíva"
         },
         "running-simulations/coursef/2021": {
           "name": "Vytváranie simulácií",
-          "url": "https://docs.google.com/document/d/1sgUd9UcthM3M-A1EKX1m3AwsgLrivx0jF0i-e_79kk8/edit"
+          "url": "https://docs.google.com/document/d/1sgUd9UcthM3M-A1EKX1m3AwsgLrivx0jF0i-e_79kk8/edit",
+          "type": "Pracovný hárok"
         },
         "ai-ml/coursef/2021": {
           "name": "Umelá inteligencia: Strojové učenie",
@@ -4296,7 +4399,8 @@
         },
         "assessment-answer-internet/coursef/2021": {
           "name": "Internet",
-          "url": "https://docs.google.com/document/d/1uUY1zm6d7LZySpXzW9CFZaI8tcY4fzw_-w3Z2WbKVwI/edit"
+          "url": "https://docs.google.com/document/d/1uUY1zm6d7LZySpXzW9CFZaI8tcY4fzw_-w3Z2WbKVwI/edit",
+          "type": "Kľúč odpovede na hodnotenie"
         },
         "csf-internet-assessment/coursef/2021": {
           "name": "Internet",
@@ -4305,7 +4409,8 @@
         },
         "csf-ip-address-cards-and-delivery-type-cards/coursef/2021": {
           "name": "Kartičky s adresou IP a kartičky s typom doručenia",
-          "url": "https://docs.google.com/document/d/1wnDD_Jm7JOApWQ5aPOcZVag4_h7lhBpl-QbCFIZAz6o/edit"
+          "url": "https://docs.google.com/document/d/1wnDD_Jm7JOApWQ5aPOcZVag4_h7lhBpl-QbCFIZAz6o/edit",
+          "type": "Manipulatíva"
         },
         "get-site-ip-com/coursef/2021": {
           "name": "get-site-ip-com",
@@ -4314,15 +4419,18 @@
         },
         "unplugged-video-internet/coursef/2021": {
           "name": "Internet",
-          "url": "https://youtu.be/mFOUbqYv1Sc"
+          "url": "https://youtu.be/mFOUbqYv1Sc",
+          "type": "Odpojené Video"
         },
         "design-process/coursef/2021": {
           "name": "Proces návrhu",
-          "url": "https://docs.google.com/document/d/18hBG-cWRYOkpNXFelRFUVgRrMd4XQsvZziH-mtNKbec/"
+          "url": "https://docs.google.com/document/d/18hBG-cWRYOkpNXFelRFUVgRrMd4XQsvZziH-mtNKbec/",
+          "type": "Príručka pre prípravu učiteľov"
         },
         "final-project-design-worksheet/coursef/2021": {
           "name": "Návrh záverečného projektu",
-          "url": "https://docs.google.com/document/d/1sVrwglrvfm-cq9dzbvB9Cn2iuztrs3_VdWjluYPNaDE/"
+          "url": "https://docs.google.com/document/d/1sVrwglrvfm-cq9dzbvB9Cn2iuztrs3_VdWjluYPNaDE/",
+          "type": "Pracovný hárok"
         },
         "rubric-csf-final-projects/coursef/2021": {
           "name": "Základy informatiky – záverečný projekt",
@@ -4396,7 +4504,8 @@
         },
         "digital-trails-follow-the-digital-trail/courseb/2021": {
           "name": "Digitálne stopy: Sleduj digitálnu stopu",
-          "url": "https://www.commonsense.org/education/videos/follow-the-digital-trail"
+          "url": "https://www.commonsense.org/education/videos/follow-the-digital-trail",
+          "type": "Video lekcie"
         },
         "digital-trails-lesson-slides/courseb/2021": {
           "name": "Digitálne stopy: prezentácia k lekcii",
@@ -4410,19 +4519,23 @@
         },
         "mimi-activity/courseb/2021": {
           "name": "Pohni sa, pohni sa",
-          "url": "https://docs.google.com/document/d/1xavPzpNq1GO7zzOzreES0Kl8FPcbjILFzfmORUqttcg/edit"
+          "url": "https://docs.google.com/document/d/1xavPzpNq1GO7zzOzreES0Kl8FPcbjILFzfmORUqttcg/edit",
+          "type": "Aktivita na mape"
         },
         "mimi-debugging/courseb/2021": {
           "name": "Pohni sa, pohni sa",
-          "url": "https://docs.google.com/document/d/1eOrX6kpPKLzUD3GpvGy9XxupnMZJrtaeh2bfe0zOz64/edit"
+          "url": "https://docs.google.com/document/d/1eOrX6kpPKLzUD3GpvGy9XxupnMZJrtaeh2bfe0zOz64/edit",
+          "type": "Pracovný hárok"
         },
         "mimi-teacher-puzzle/courseb/2021": {
           "name": "Pohni sa, pohni sa",
-          "url": "https://docs.google.com/document/d/1bdGOgeZ9Z4MS_yxBLt-Mit2Rhr4rCNWL7HC-i1Qmpi4/edit"
+          "url": "https://docs.google.com/document/d/1bdGOgeZ9Z4MS_yxBLt-Mit2Rhr4rCNWL7HC-i1Qmpi4/edit",
+          "type": "Kľúč odpovede na pracovný hárok"
         },
         "teacher-video-move-it/courseb/2021": {
           "name": "Pohni sa, pohni sa",
-          "url": "http://youtu.be/aV4rqNUG-Jw?list=PL2DhNKNdmOtqBgWyF5kmy2oPh0U-Zfv2G"
+          "url": "http://youtu.be/aV4rqNUG-Jw?list=PL2DhNKNdmOtqBgWyF5kmy2oPh0U-Zfv2G",
+          "type": "Video Učiteľa"
         },
         "20_20_20_rule/courseb/2021": {
           "name": "Pravidlo 20/20/20",
@@ -4435,11 +4548,13 @@
         },
         "course-ab-blockly-blocks/courseb/2021": {
           "name": "Bloky Blockly na použitie bez počítača (1. ročník)",
-          "url": "https://docs.google.com/presentation/d/1PoSQZUCUj6yw6g1yZImaHu5Gn4Gdok0iDmrrmXInavQ/edit"
+          "url": "https://docs.google.com/presentation/d/1PoSQZUCUj6yw6g1yZImaHu5Gn4Gdok0iDmrrmXInavQ/edit",
+          "type": "Manipulatíva"
         },
         "feeling-faces-image/courseb/2021": {
           "name": "Smajlíkovia",
-          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/"
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/",
+          "type": "Emócie Obrázky"
         },
         "jigsaw/courseb/2021": {
           "name": "Precvičovanie presúvania",
@@ -4457,7 +4572,8 @@
         },
         "compass-rose/courseb/2021": {
           "name": "Smerová ružica",
-          "url": "https://docs.google.com/document/d/1ah3Alc68karxsADBVpCQkzlFAmqO6aTO9QUpZiIQ7BE/edit"
+          "url": "https://docs.google.com/document/d/1ah3Alc68karxsADBVpCQkzlFAmqO6aTO9QUpZiIQ7BE/edit",
+          "type": "podanie"
         },
         "feeling_faces_-_emotion_image/courseb/2021": {
           "name": "Obrázok so smajlíkmi na vyjadrenie pocitov",
@@ -4466,7 +4582,8 @@
         },
         "happy-map-game-pieces/courseb/2021": {
           "name": "Dieliky k hre Veselé mapy",
-          "url": "https://docs.google.com/document/d/19dHJCfmQNs3meKN3sTL91qsfmHYjZCYfbFq91J4fj3k/edit"
+          "url": "https://docs.google.com/document/d/19dHJCfmQNs3meKN3sTL91qsfmHYjZCYfbFq91J4fj3k/edit",
+          "type": "Manipulatíva"
         },
         "stevie_and_the_big_project/courseb/2021": {
           "name": "Stevie a jej veľký projekt",
@@ -4480,11 +4597,13 @@
         },
         "assessment-answer-getting-loopy/courseb/2021": {
           "name": "Cykly sa zacykľujú",
-          "url": "https://docs.google.com/document/d/15YLSUX5TT6P9nRKW4tA0f9weEe0Qs4wV5Ylu08wzXFs/edit"
+          "url": "https://docs.google.com/document/d/15YLSUX5TT6P9nRKW4tA0f9weEe0Qs4wV5Ylu08wzXFs/edit",
+          "type": "Kľúč odpovede na hodnotenie"
         },
         "csf-getting-loopy-activity-worksheet/courseb/2021": {
           "name": "Cykly sa zacykľujú",
-          "url": "https://docs.google.com/document/d/1SwYDo6fwkEZRRGogPozWBXCLLncddDS5dLNFgRDe6VQ/edit"
+          "url": "https://docs.google.com/document/d/1SwYDo6fwkEZRRGogPozWBXCLLncddDS5dLNFgRDe6VQ/edit",
+          "type": "Pracovný hárok"
         },
         "csf-getting-loopy-assessment/courseb/2021": {
           "name": "Cykly sa zacykľujú",
@@ -4493,11 +4612,13 @@
         },
         "unplugged-video-getting-loopy/courseb/2021": {
           "name": "Cykly sa zacykľujú",
-          "url": "https://youtu.be/JoKTqHCni0M"
+          "url": "https://youtu.be/JoKTqHCni0M",
+          "type": "Odpojené Video"
         },
         "csf-lesson-recommend/courseb/2021": {
           "name": "Základy informatiky – tipy k hlavnej aktivite",
-          "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing"
+          "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing",
+          "type": "Odporúčania lekcie"
         },
         "common-sense-media-pause-think/courseb/2021": {
           "name": "Mysli celým telom, keď si online",
@@ -4511,7 +4632,8 @@
         },
         "assessment-answer-big-event/courseb/2021": {
           "name": "Veľká udalosť",
-          "url": "https://docs.google.com/document/d/1VU2rC918ZY6DM2hunN6FsiDUW6Q1vEqyiJAPWQ6aoX8/edit"
+          "url": "https://docs.google.com/document/d/1VU2rC918ZY6DM2hunN6FsiDUW6Q1vEqyiJAPWQ6aoX8/edit",
+          "type": "Kľúč odpovede na hodnotenie"
         },
         "csf-the-big-event-assessment/courseb/2021": {
           "name": "Veľká udalosť",
@@ -4520,7 +4642,8 @@
         },
         "the_big_event_courses_a_b_/courseb/2021": {
           "name": "Veľká udalosť (kurzy A, B)",
-          "url": "https://docs.google.com/document/d/1A9yAObCTJwHsIKtaBZY8KaGwgbxbfolpbIpeJfZRgvs/edit"
+          "url": "https://docs.google.com/document/d/1A9yAObCTJwHsIKtaBZY8KaGwgbxbfolpbIpeJfZRgvs/edit",
+          "type": "Ovládač obrazu"
         },
         "unplugged-video-big-event/courseb/2021": {
           "name": "Veľká udalosť",
@@ -4529,7 +4652,8 @@
         },
         "play_lab_project_planning_guide/courseb/2021": {
           "name": "Sprievodca plánovaním projektu v Play Labe",
-          "url": "https://docs.google.com/document/d/1XiBMkmdQtaCYcaQsGnoY32tGimfiGgBEwenuAadEqT8/template/preview"
+          "url": "https://docs.google.com/document/d/1XiBMkmdQtaCYcaQsGnoY32tGimfiGgBEwenuAadEqT8/template/preview",
+          "type": "podanie"
         },
         "play_lab_project_planning_guide_1/courseb/2021": {
           "name": "Sprievodca plánovaním projektu v Play Labe",
@@ -4598,7 +4722,8 @@
         },
         "safety-in-my-online-neighborhood-my-online-neighborhood/coursea/2021": {
           "name": "Bezpečnosť v mojej online štvrti: Moja online štvrť",
-          "url": "https://www.commonsense.org/education/videos/my-online-neighborhood"
+          "url": "https://www.commonsense.org/education/videos/my-online-neighborhood",
+          "type": "Video lekcie"
         },
         "safety-in-my-online-neighborhood-pause-and-think-moment/coursea/2021": {
           "name": "Bezpečnosť v mojej online štvrti: Chvíľa na zamyslenie",
@@ -4607,7 +4732,8 @@
         },
         "safety-in-my-online-neighborhood-safety-it-rules/coursea/2021": {
           "name": "Bezpečnosť v mojej online štvrti: Chrániť sa je to pravé!",
-          "url": "https://docs.google.com/document/d/1_fc870l0ndjhUMazjwLSaJOx9lIMsvbd3BYYEtLykIY/edit"
+          "url": "https://docs.google.com/document/d/1_fc870l0ndjhUMazjwLSaJOx9lIMsvbd3BYYEtLykIY/edit",
+          "type": "Báseň Plagát"
         },
         "20_20_20_rule/coursea/2021": {
           "name": "Pravidlo 20/20/20",
@@ -4631,7 +4757,8 @@
         },
         "activity-answer-happy-maps/coursea/2021": {
           "name": "Karty s veselými mapami",
-          "url": "https://docs.google.com/document/d/1faZj8Szk1st2pMg2f_2S0jXgoGXgbfqOFxbJ6f3LnH0/edit"
+          "url": "https://docs.google.com/document/d/1faZj8Szk1st2pMg2f_2S0jXgoGXgbfqOFxbJ6f3LnH0/edit",
+          "type": "Kľúč odpovede na pracovný hárok"
         },
         "feeling_faces_-_emotion_image/coursea/2021": {
           "name": "Obrázok so smajlíkmi na vyjadrenie pocitov",
@@ -4640,15 +4767,18 @@
         },
         "happy-map-cards/coursea/2021": {
           "name": "Karty s veselými mapami",
-          "url": "https://docs.google.com/document/d/15uNhf_dISlr0ZT5j3sBu-z3I7v_v5Av9H5jsdLXhE8c/edit"
+          "url": "https://docs.google.com/document/d/15uNhf_dISlr0ZT5j3sBu-z3I7v_v5Av9H5jsdLXhE8c/edit",
+          "type": "Pracovný hárok"
         },
         "happy-map-game-pieces/coursea/2021": {
           "name": "Dieliky k hre Veselé mapy",
-          "url": "https://docs.google.com/document/d/19dHJCfmQNs3meKN3sTL91qsfmHYjZCYfbFq91J4fj3k/edit"
+          "url": "https://docs.google.com/document/d/19dHJCfmQNs3meKN3sTL91qsfmHYjZCYfbFq91J4fj3k/edit",
+          "type": "Manipulatíva"
         },
         "unplugged-video-happy-maps/coursea/2021": {
           "name": "Veselé mapy",
-          "url": "https://youtu.be/hrnhiKAQ1_k"
+          "url": "https://youtu.be/hrnhiKAQ1_k",
+          "type": "Odpojené Video"
         },
         "20_20_20_rule_1/coursea/2021": {
           "name": "Pravidlo 20/20/20",
@@ -4657,7 +4787,8 @@
         },
         "course-ab-blockly-blocks/coursea/2021": {
           "name": "Bloky Blockly na použitie bez počítača (1. ročník)",
-          "url": "https://docs.google.com/presentation/d/1PoSQZUCUj6yw6g1yZImaHu5Gn4Gdok0iDmrrmXInavQ/edit"
+          "url": "https://docs.google.com/presentation/d/1PoSQZUCUj6yw6g1yZImaHu5Gn4Gdok0iDmrrmXInavQ/edit",
+          "type": "Manipulatíva"
         },
         "wiggles_-_gonoodle/coursea/2021": {
           "name": "Keď sú žiaci neposední – GoNoodle",
@@ -4686,15 +4817,18 @@
         },
         "happy-map-cards-xl/coursea/2021": {
           "name": "Karty s veselými mapami XL",
-          "url": "https://docs.google.com/document/d/1ohSi_DzymdRdN66NVMAI-KI6LuaB3srbUMnpG74aPM8/edit"
+          "url": "https://docs.google.com/document/d/1ohSi_DzymdRdN66NVMAI-KI6LuaB3srbUMnpG74aPM8/edit",
+          "type": "Pracovný hárok"
         },
         "happy-map-game-pieces-bonus-pack/coursea/2021": {
           "name": "Bonusový balík dielikov k hre Veselé mapy",
-          "url": "https://docs.google.com/document/d/14qEVzSR7pr0slqkRn2WM8XxVyeDhdmfhtsmTrERCTNs/edit"
+          "url": "https://docs.google.com/document/d/14qEVzSR7pr0slqkRn2WM8XxVyeDhdmfhtsmTrERCTNs/edit",
+          "type": "Manipulatíva"
         },
         "feeling-faces-image/coursea/2021": {
           "name": "Smajlíkovia",
-          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/"
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/",
+          "type": "Emócie Obrázky"
         },
         "pair-programming/coursea/2021": {
           "name": "Párové programovanie",
@@ -4728,7 +4862,8 @@
         },
         "assessment-answer-big-event/coursea/2021": {
           "name": "Veľká udalosť",
-          "url": "https://docs.google.com/document/d/1VU2rC918ZY6DM2hunN6FsiDUW6Q1vEqyiJAPWQ6aoX8/edit"
+          "url": "https://docs.google.com/document/d/1VU2rC918ZY6DM2hunN6FsiDUW6Q1vEqyiJAPWQ6aoX8/edit",
+          "type": "Kľúč odpovede na hodnotenie"
         },
         "csf-the-big-event-assessment/coursea/2021": {
           "name": "Veľká udalosť",
@@ -4742,11 +4877,13 @@
         },
         "the_big_event_courses_a_b_/coursea/2021": {
           "name": "Veľká udalosť (kurzy A, B)",
-          "url": "https://docs.google.com/document/d/1A9yAObCTJwHsIKtaBZY8KaGwgbxbfolpbIpeJfZRgvs/edit"
+          "url": "https://docs.google.com/document/d/1A9yAObCTJwHsIKtaBZY8KaGwgbxbfolpbIpeJfZRgvs/edit",
+          "type": "Ovládač obrazu"
         },
         "unplugged-video-big-event/coursea/2021": {
           "name": "Veľká udalosť",
-          "url": "https://youtu.be/u0WV9shCoak"
+          "url": "https://youtu.be/u0WV9shCoak",
+          "type": "Odpojené Video"
         },
         "csf-lesson-recommend/coursea/2021": {
           "name": "Základy informatiky – tipy k hlavnej aktivite",
@@ -4764,7 +4901,8 @@
         },
         "artist_project_planning_guide/coursea/2021": {
           "name": "Sprievodca plánovaním projektu s Umelcom",
-          "url": "https://docs.google.com/document/d/16jZwjsALk--UIsqN0i35odey5dei1-uHGCTl8x23B2M/template/preview"
+          "url": "https://docs.google.com/document/d/16jZwjsALk--UIsqN0i35odey5dei1-uHGCTl8x23B2M/template/preview",
+          "type": "podanie"
         },
         "artist_project_planning_guide_1/coursea/2021": {
           "name": "Sprievodca plánovaním projektu s Umelcom",
@@ -4838,23 +4976,28 @@
         },
         "csf-mrf-cup-spacing/coursec/2021": {
           "name": "Moji robotickí kamaráti",
-          "url": "https://docs.google.com/document/d/1jGz8znfkzhgZ3RNd7Kg1AnDZ2LZ7vjf7VujzPz_84b4/edit"
+          "url": "https://docs.google.com/document/d/1jGz8znfkzhgZ3RNd7Kg1AnDZ2LZ7vjf7VujzPz_84b4/edit",
+          "type": "Rozstup pohárov"
         },
         "csf-mrf-cup-stacking-ideas/coursec/2021": {
           "name": "Moji robotickí kamaráti",
-          "url": "https://docs.google.com/document/d/1cq6CvIuCrpS9MfRySO1070uXZ238OuXcqou1mfjV7BM/edit"
+          "url": "https://docs.google.com/document/d/1cq6CvIuCrpS9MfRySO1070uXZ238OuXcqou1mfjV7BM/edit",
+          "type": "Nápady na stohovanie pohárov"
         },
         "csf-mrf-paper-trapezoid-template/coursec/2021": {
           "name": "Moji robotickí kamaráti",
-          "url": "https://docs.google.com/document/d/1go_BJorY8OzmqWyB5z8_FY7bbPCWg1ZBxfjewU0nMmA/edit"
+          "url": "https://docs.google.com/document/d/1go_BJorY8OzmqWyB5z8_FY7bbPCWg1ZBxfjewU0nMmA/edit",
+          "type": "Papier lichobežníkový šablóna"
         },
         "csf-mrf-symbol-key/coursec/2021": {
           "name": "Moji robotickí kamaráti",
-          "url": "https://docs.google.com/document/d/1D8W0FETv5OBGj-Fl8gJGHruSvbAhoEtCs6SZxSkKOSc/edit"
+          "url": "https://docs.google.com/document/d/1D8W0FETv5OBGj-Fl8gJGHruSvbAhoEtCs6SZxSkKOSc/edit",
+          "type": "Symbolový kľúč"
         },
         "unplugged-video-robotic-friends/coursec/2021": {
           "name": "Moji robotickí kamaráti",
-          "url": "https://youtu.be/xaW3PAzHxCU"
+          "url": "https://youtu.be/xaW3PAzHxCU",
+          "type": "Odpojené Video"
         },
         "c2-maze-bridge/coursec/2021": {
           "name": "Stránka premostenia bludiska",
@@ -4862,11 +5005,13 @@
         },
         "unplugged-maze-blocks/coursec/2021": {
           "name": "Bloky bludiska bez počítača",
-          "url": "https://docs.google.com/presentation/d/1k_7SSLsm-E4aisa9-LmbsCVzH6J-8yGD9T2LwPb2v48/edit"
+          "url": "https://docs.google.com/presentation/d/1k_7SSLsm-E4aisa9-LmbsCVzH6J-8yGD9T2LwPb2v48/edit",
+          "type": "Manipulatíva"
         },
         "csf-lesson-recommend/coursec/2021": {
           "name": "Základy informatiky – tipy k hlavnej aktivite",
-          "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing"
+          "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing",
+          "type": "Odporúčania lekcie"
         },
         "debugging_guide/coursec/2021": {
           "name": "Sprievodca ladením",
@@ -4880,7 +5025,8 @@
         },
         "course-cf-blockly-blocks/coursec/2021": {
           "name": " Bloky na použitie bez počítača (kurzy C – F)",
-          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
+          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit",
+          "type": "Manipulatíva"
         },
         "csf-artist-intro-video/coursec/2021": {
           "name": "Predstavenie Umelca",
@@ -4904,7 +5050,8 @@
         },
         "assessment-answer-big-event/coursec/2021": {
           "name": "Veľká udalosť",
-          "url": "https://docs.google.com/document/d/1VU2rC918ZY6DM2hunN6FsiDUW6Q1vEqyiJAPWQ6aoX8/edit"
+          "url": "https://docs.google.com/document/d/1VU2rC918ZY6DM2hunN6FsiDUW6Q1vEqyiJAPWQ6aoX8/edit",
+          "type": "Kľúč odpovede na hodnotenie"
         },
         "csf-the-big-event-assessment/coursec/2021": {
           "name": "Veľká udalosť",
@@ -4913,11 +5060,13 @@
         },
         "the_big_event_course_c_/coursec/2021": {
           "name": "Veľká udalosť (kurz C)",
-          "url": "https://docs.google.com/document/d/1WlrJ6FKqrcvuyDWADnJiGpOo7rfolKcT5QH4W4uEptQ/edit"
+          "url": "https://docs.google.com/document/d/1WlrJ6FKqrcvuyDWADnJiGpOo7rfolKcT5QH4W4uEptQ/edit",
+          "type": "Ovládač udalostí"
         },
         "unplugged-video-big-event/coursec/2021": {
           "name": "Veľká udalosť",
-          "url": "https://youtu.be/u0WV9shCoak"
+          "url": "https://youtu.be/u0WV9shCoak",
+          "type": "Odpojené Video"
         },
         "open-ended_programming_levels/coursec/2021": {
           "name": "Úrovne na otvorené programovanie",
@@ -4936,15 +5085,18 @@
         },
         "right-app-scenarios/coursec/2021": {
           "name": "Grafické znázorňovanie údajov z Play Labu",
-          "url": "https://docs.google.com/document/d/177NVkzjc--XVvd5jssO5TZolUTzz9SD5pAw1DazflQ8/edit#heading=h.v577cjs0yrx5"
+          "url": "https://docs.google.com/document/d/177NVkzjc--XVvd5jssO5TZolUTzz9SD5pAw1DazflQ8/edit#heading=h.v577cjs0yrx5",
+          "type": "Pracovný hárok"
         },
         "assessment-answer-binary-bracelets/coursec/2021": {
           "name": "Binárne náramky",
-          "url": "https://docs.google.com/document/d/1EaTbrdNbGpY_mI-FfV0GZ2uHSfcQIGuAkXqd1qFkUbE/edit"
+          "url": "https://docs.google.com/document/d/1EaTbrdNbGpY_mI-FfV0GZ2uHSfcQIGuAkXqd1qFkUbE/edit",
+          "type": "Kľúč odpovede na hodnotenie"
         },
         "csf-binary-bracelets-activity/coursec/2021": {
           "name": "Binárne náramky",
-          "url": "https://docs.google.com/document/d/1YV1Oer_1DMzilyHriimgPVZnaC6JUjU5YDE8Ui065hE/edit"
+          "url": "https://docs.google.com/document/d/1YV1Oer_1DMzilyHriimgPVZnaC6JUjU5YDE8Ui065hE/edit",
+          "type": "Pracovný hárok"
         },
         "csf-binary-bracelets-assessment/coursec/2021": {
           "name": "Binárne náramky",
@@ -4958,19 +5110,23 @@
         },
         "lesson-in-action-binary-bracelets/coursec/2021": {
           "name": "Binárne náramky",
-          "url": "https://www.youtube.com/watch?v=fDLkBqZpxWQ"
+          "url": "https://www.youtube.com/watch?v=fDLkBqZpxWQ",
+          "type": "Lekcia v akčnom videu"
         },
         "unplugged-video-binary-bracelets/coursec/2021": {
           "name": "Binárne náramky",
-          "url": "https://youtu.be/3S2YfoO4_CM"
+          "url": "https://youtu.be/3S2YfoO4_CM",
+          "type": "Odpojené Video"
         },
         "play-lab-project-guide/coursec/2021": {
           "name": "Sprievodca plánovaním projektu v Play Labe",
-          "url": "https://docs.google.com/document/d/1qT5Zz1Pec5wuvLSTRfSMJSW5r1LjmWKqoK75Lz1ZYTs/edit"
+          "url": "https://docs.google.com/document/d/1qT5Zz1Pec5wuvLSTRfSMJSW5r1LjmWKqoK75Lz1ZYTs/edit",
+          "type": "Pracovný hárok"
         },
         "play-lab-project-planning-guide-exemplar/coursec/2021": {
           "name": "Sprievodca plánovaním projektu v Play Labe (model)",
-          "url": "https://docs.google.com/document/d/1CKzMi1JfhUpwfu8JMllUvKwlgJZaw7RQ6pLp6fu0H_I/edit?usp=sharing"
+          "url": "https://docs.google.com/document/d/1CKzMi1JfhUpwfu8JMllUvKwlgJZaw7RQ6pLp6fu0H_I/edit?usp=sharing",
+          "type": "Zdroj lekcie"
         },
         "2021_change_log/coursed/2021": {
           "name": "Zoznam zmien pre rok 2021",
@@ -5029,7 +5185,8 @@
         },
         "password_power-up_if_then_scenarios/coursed/2021": {
           "name": "Silnejšie heslá: situácie ak/tak",
-          "url": "https://docs.google.com/document/d/1JeZtFU6hMFTYITAAPaA_CRmOVknvkcKZQszL6u7DRG4/edit"
+          "url": "https://docs.google.com/document/d/1JeZtFU6hMFTYITAAPaA_CRmOVknvkcKZQszL6u7DRG4/edit",
+          "type": "podanie"
         },
         "password_power-up_if_then_scenarios_answer_key/coursed/2021": {
           "name": "Silnejšie heslá: situácie ak/tak",
@@ -5053,7 +5210,8 @@
         },
         "password_power-up_power-up_your_password/coursed/2021": {
           "name": "Silnejšie heslá: ako si vytvoriť silnejšie heslo",
-          "url": "https://docs.google.com/document/d/1ihf7K4Kjupe3C0wrzzgUa-a9paNserfCfMAS2oj7178/edit"
+          "url": "https://docs.google.com/document/d/1ihf7K4Kjupe3C0wrzzgUa-a9paNserfCfMAS2oj7178/edit",
+          "type": "podanie"
         },
         "password_power-up_power-up_your_password_answer_key/coursed/2021": {
           "name": "Silnejšie heslá: ako si vytvoriť silnejšie heslo",
@@ -5062,11 +5220,13 @@
         },
         "activity-answer-graph-paper/coursed/2021": {
           "name": "Programovanie na štvorčekový papier",
-          "url": "https://docs.google.com/document/d/1Nt1vX-8Q-xy7tNyTRElaDFvdVXfpC5e28NbrPreVfPQ/edit"
+          "url": "https://docs.google.com/document/d/1Nt1vX-8Q-xy7tNyTRElaDFvdVXfpC5e28NbrPreVfPQ/edit",
+          "type": "Kľúč odpovede na pracovný hárok"
         },
         "assessment-answer-graph-paper/coursed/2021": {
           "name": "Programovanie na štvorčekový papier",
-          "url": "https://docs.google.com/document/d/1GXFjDtRjaK8mTnFGb33kT-u72_rXfUh_TyfP7N7Pen4/edit"
+          "url": "https://docs.google.com/document/d/1GXFjDtRjaK8mTnFGb33kT-u72_rXfUh_TyfP7N7Pen4/edit",
+          "type": "Kľúč odpovede na hodnotenie"
         },
         "csf-graph-paper-programming-assessment/coursed/2021": {
           "name": "Programovanie na štvorčekový papier",
@@ -5075,15 +5235,18 @@
         },
         "graph-paper-programming/coursed/2021": {
           "name": "Programovanie na štvorčekový papier",
-          "url": "https://docs.google.com/document/d/1GTB6aTZoQWvkMvx2SWhKerhL8DhevgWlsaetmm5Vpfs/edit?usp=sharing"
+          "url": "https://docs.google.com/document/d/1GTB6aTZoQWvkMvx2SWhKerhL8DhevgWlsaetmm5Vpfs/edit?usp=sharing",
+          "type": "Pracovný hárok aktivity"
         },
         "lesson-in-action-graph-paper/coursed/2021": {
           "name": "Programovanie na štvorčekový papier",
-          "url": "https://www.youtube.com/watch?v=vBUtejDNvrs"
+          "url": "https://www.youtube.com/watch?v=vBUtejDNvrs",
+          "type": "Lekcia v akčnom videu"
         },
         "unplugged-video-graph-paper/coursed/2021": {
           "name": "Programovanie na štvorčekový papier",
-          "url": "https://youtu.be/Y_paSrH2ffw"
+          "url": "https://youtu.be/Y_paSrH2ffw",
+          "type": "Odpojené Video"
         },
         "pair-programming-vid/coursed/2021": {
           "name": "Párové programovanie",
@@ -5092,31 +5255,38 @@
         },
         "csf-relay-programming-activity-packet/coursed/2021": {
           "name": "Štafetové programovanie",
-          "url": "https://docs.google.com/document/d/1O7nVu6CYhQ_5rWXdAGWEh-e79jZvR__D9xrqSg8Q05o/edit"
+          "url": "https://docs.google.com/document/d/1O7nVu6CYhQ_5rWXdAGWEh-e79jZvR__D9xrqSg8Q05o/edit",
+          "type": "Paket aktivity"
         },
         "relay-assessment/coursed/2021": {
           "name": "Štafetové programovanie",
-          "url": "https://docs.google.com/document/d/1az8K9tDW0XcU2mvQ_1D7CXpZbq7aq5T-x0RiemGlv5s/edit"
+          "url": "https://docs.google.com/document/d/1az8K9tDW0XcU2mvQ_1D7CXpZbq7aq5T-x0RiemGlv5s/edit",
+          "type": "Pracovný hárok"
         },
         "relay-programming-assessment-answer-key/coursed/2021": {
           "name": "Štafetové programovanie",
-          "url": "https://docs.google.com/document/d/1nneTPNTpboCBMYCr2qpK8DcHSZD6lDi0ovkqkdRDeSc/edit"
+          "url": "https://docs.google.com/document/d/1nneTPNTpboCBMYCr2qpK8DcHSZD6lDi0ovkqkdRDeSc/edit",
+          "type": "Kľúč odpovede na pracovný hárok"
         },
         "relay-programming-teacher-debugging/coursed/2021": {
           "name": "Štafetové programovanie",
-          "url": "https://docs.google.com/document/d/1UyiAK9sxuMP3AWjbP0TlsMahNa98LxJwyGWKhcdYpig/edit"
+          "url": "https://docs.google.com/document/d/1UyiAK9sxuMP3AWjbP0TlsMahNa98LxJwyGWKhcdYpig/edit",
+          "type": "Obrázok ladenia učiteľov"
         },
         "teacher-video-relay-programming-2/coursed/2021": {
           "name": "Štafetové programovanie",
-          "url": "https://youtu.be/ZULpfAVJOBo"
+          "url": "https://youtu.be/ZULpfAVJOBo",
+          "type": "Video Učiteľa"
         },
         "unplugged-video-relay-programming/coursed/2021": {
           "name": "Štafetové programovanie",
-          "url": "https://youtu.be/l5MKkXbzOsk"
+          "url": "https://youtu.be/l5MKkXbzOsk",
+          "type": "Odpojené Video"
         },
         "course-cf-blockly-blocks/coursed/2021": {
           "name": " Bloky na použitie bez počítača (kurzy C – F)",
-          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
+          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit",
+          "type": "Manipulatíva"
         },
         "events-in-bounce-how-do-they-happen/coursed/2021": {
           "name": "Udalosti v Bounce – Ako fungujú? ",
@@ -5143,7 +5313,8 @@
         },
         "dance-party-project-guide/coursed/2021": {
           "name": "Tanečná párty – sprievodca projektom",
-          "url": "https://docs.google.com/document/d/1F9dc129iWUWHmkU7fL23PQqxEK-wYstblbs-XitZ9FM/edit"
+          "url": "https://docs.google.com/document/d/1F9dc129iWUWHmkU7fL23PQqxEK-wYstblbs-XitZ9FM/edit",
+          "type": "Pracovný hárok"
         },
         "dance_party_unplugged/coursed/2021": {
           "name": "Tanečná párty: bez počítača",
@@ -5157,7 +5328,8 @@
         },
         "feeling-faces-image/coursed/2021": {
           "name": "Smajlíkovia",
-          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/"
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/",
+          "type": "Emócie Obrázky"
         },
         "pause_and_think_online_1/coursed/2021": {
           "name": "Mysli celým telom, keď si online",
@@ -5166,11 +5338,13 @@
         },
         "assessment-answer-conditionals-cards/coursed/2021": {
           "name": "Podmienky s kartami",
-          "url": "https://docs.google.com/document/d/1SsfkUoEg316vjBSxrRNLN4q4V2-yYW8HAK4m9snLtac/edit"
+          "url": "https://docs.google.com/document/d/1SsfkUoEg316vjBSxrRNLN4q4V2-yYW8HAK4m9snLtac/edit",
+          "type": "Kľúč odpovede na hodnotenie"
         },
         "conditionals-with-cards-assessment-video/coursed/2021": {
           "name": "Podmienky s kartami",
-          "url": "https://youtu.be/TbUaEnAYPjI"
+          "url": "https://youtu.be/TbUaEnAYPjI",
+          "type": "Hodnotenie Video"
         },
         "csf-conditionals-with-cards-assessment/coursed/2021": {
           "name": "Podmienky s kartami",
@@ -5179,15 +5353,18 @@
         },
         "csf-conditionals-with-cards-sample-program/coursed/2021": {
           "name": "Podmienky s kartami: ukážkový program",
-          "url": "https://docs.google.com/document/d/151s4_0NuDhuzprjPGlDubPZodeJQCEJElsvdkSSqzPM/edit"
+          "url": "https://docs.google.com/document/d/151s4_0NuDhuzprjPGlDubPZodeJQCEJElsvdkSSqzPM/edit",
+          "type": "Príručka pre prípravu učiteľov"
         },
         "lesson-in-action-conditional-cards/coursed/2021": {
           "name": "Podmienky s kartami",
-          "url": "https://www.youtube.com/watch?v=2m2Rn9VxHfU"
+          "url": "https://www.youtube.com/watch?v=2m2Rn9VxHfU",
+          "type": "Lekcia v akčnom videu"
         },
         "unplugged-video-conditionals-cards/coursed/2021": {
           "name": "Podmienky s kartami",
-          "url": "https://youtu.be/UymN4lTL50s"
+          "url": "https://youtu.be/UymN4lTL50s",
+          "type": "Odpojené Video"
         },
         "course-d-project-planning-guide-1/coursed/2021": {
           "name": "Základy informatiky: kurz D – Sprievodca plánovaním záverečného projektu v expresnom kurze",
@@ -5239,7 +5416,8 @@
         },
         "turns_angles_1/express/2021": {
           "name": "Otáčanie a uhly",
-          "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit"
+          "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit",
+          "type": "podanie"
         },
         "sprite_lab_documentation/express/2021": {
           "url": "https://studio.code.org/docs/spritelab/",
@@ -5250,7 +5428,7 @@
           "url": "https://studio.code.org/levels/18623"
         },
         "making_sprites/express/2021": {
-          "name": "Vytváranie postáv",
+          "name": "Vytváranie sprajtov",
           "url": "https://docs.google.com/presentation/d/1u8gueXrKIKoYNgTxbr3bIvmbVlCsJcVT7qcDeqsOh1U/template/preview",
           "type": "Prezentácia"
         },
@@ -5274,7 +5452,8 @@
         },
         "dance-party-project-guide/express/2021": {
           "name": "Tanečná párty – sprievodca projektom",
-          "url": "https://docs.google.com/document/d/1F9dc129iWUWHmkU7fL23PQqxEK-wYstblbs-XitZ9FM/edit"
+          "url": "https://docs.google.com/document/d/1F9dc129iWUWHmkU7fL23PQqxEK-wYstblbs-XitZ9FM/edit",
+          "type": "Pracovný hárok"
         },
         "open-ended_programming_levels/express/2021": {
           "name": "Úrovne na otvorené programovanie",
@@ -5352,11 +5531,13 @@
         },
         "class-section-video/pre-express/2021": {
           "name": "Ako na Code.org vytvoriť triedu",
-          "url": "https://www.youtube.com/watch?v=ebQY8fb2OV4"
+          "url": "https://www.youtube.com/watch?v=ebQY8fb2OV4",
+          "type": "Video Učiteľa"
         },
         "feeling-faces-image/pre-express/2021": {
           "name": "Smajlíkovia",
-          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/"
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/",
+          "type": "Emócie Obrázky"
         },
         "pair-programming-vid/pre-express/2021": {
           "name": "Párové programovanie",
@@ -5443,7 +5624,8 @@
         },
         "swimming-fish-teacher-sandbox/coursee/2021": {
           "name": "Plávajúca ryba – priestor učiteľa",
-          "url": "https://studio.code.org/levels/18623"
+          "url": "https://studio.code.org/levels/18623",
+          "type": "Úroveň programovania"
         },
         "be_a_super_digital_citizen_lesson_slides/coursee/2021": {
           "name": "Buď super digitálny občan: snímky pre lekciu",
@@ -5460,7 +5642,8 @@
         },
         "private-and-personal-information-lesson-quiz/coursee/2021": {
           "name": "Súkromné a osobné informácie: kvíz pre lekciu",
-          "url": "https://docs.google.com/forms/d/1iXNQu1c_I19GGasTbz95xGmIBLz3YokGSErREzTukpQ/copy"
+          "url": "https://docs.google.com/forms/d/1iXNQu1c_I19GGasTbz95xGmIBLz3YokGSErREzTukpQ/copy",
+          "type": "Formulár"
         },
         "private-and-personal-information-lesson-quiz-answer-key/coursee/2021": {
           "name": "Súkromné a osobné informácie: kvíz pre lekciu",
@@ -5479,7 +5662,8 @@
         },
         "about_me_planning_guide/coursee/2021": {
           "name": "O mne: sprievodca plánovaním",
-          "url": "https://docs.google.com/document/d/1EQvXTvg4ujk4Xkn2noldwgzUXbR7M3dsAOkJyo4KO3o/template/preview"
+          "url": "https://docs.google.com/document/d/1EQvXTvg4ujk4Xkn2noldwgzUXbR7M3dsAOkJyo4KO3o/template/preview",
+          "type": "podanie"
         },
         "common-sense-media-pause-think/coursee/2021": {
           "name": "Mysli celým telom, keď si online",
@@ -5508,7 +5692,8 @@
         },
         "assessment-answer-songwriting/coursee/2021": {
           "name": "Funkcie bez počítača: Písanie pesničiek",
-          "url": "https://docs.google.com/document/d/1L9YwWrsDBbTOZEVFCBhDxIIrYjkzZY3o1ZARKqa6lxw/edit"
+          "url": "https://docs.google.com/document/d/1L9YwWrsDBbTOZEVFCBhDxIIrYjkzZY3o1ZARKqa6lxw/edit",
+          "type": "Kľúč odpovede na hodnotenie"
         },
         "csf-songwriting-assessment/coursee/2021": {
           "name": "Funkcie bez počítača: Písanie pesničiek",
@@ -5517,19 +5702,23 @@
         },
         "csf-songwriting-worksheets/coursee/2021": {
           "name": "Funkcie bez počítača: Písanie pesničiek",
-          "url": "https://docs.google.com/document/d/130ah2vRMrvuEj6Y-t1ThAHrHSVvLMnd94Qv9TLgZPMM/edit"
+          "url": "https://docs.google.com/document/d/130ah2vRMrvuEj6Y-t1ThAHrHSVvLMnd94Qv9TLgZPMM/edit",
+          "type": "Pracovný hárok"
         },
         "lesson-in-action-songwriting/coursee/2021": {
           "name": "Funkcie bez počítača: Písanie pesničiek",
-          "url": "https://www.youtube.com/watch?v=QuIMLel1mmw"
+          "url": "https://www.youtube.com/watch?v=QuIMLel1mmw",
+          "type": "Lekcia v akčnom videu"
         },
         "unplugged-video-songwriting-functions/coursee/2021": {
           "name": "Písanie pesničiek s funkciami",
-          "url": "https://youtu.be/5iDCKkI6y2Y"
+          "url": "https://youtu.be/5iDCKkI6y2Y",
+          "type": "Odpojené Video"
         },
         "course-cf-blockly-blocks/coursee/2021": {
           "name": " Bloky na použitie bez počítača (kurzy C – F)",
-          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
+          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit",
+          "type": "Manipulatíva"
         },
         "designing_for_accessibility_1/coursee/2021": {
           "name": "Navrhovanie s ohľadom na zjednodušenie ovládania",
@@ -5548,11 +5737,13 @@
         },
         "design-process/coursee/2021": {
           "name": "Proces návrhu",
-          "url": "https://docs.google.com/document/d/18hBG-cWRYOkpNXFelRFUVgRrMd4XQsvZziH-mtNKbec/"
+          "url": "https://docs.google.com/document/d/18hBG-cWRYOkpNXFelRFUVgRrMd4XQsvZziH-mtNKbec/",
+          "type": "Príručka pre prípravu učiteľov"
         },
         "end-of-course-project-guide/coursee/2021": {
           "name": "Sprievodca záverečným projektom",
-          "url": "https://docs.google.com/document/d/1W3k1Hj7FRDCf1qJsgYxnnjZBCXcGGtVbIK-BSGqd3ko/edit"
+          "url": "https://docs.google.com/document/d/1W3k1Hj7FRDCf1qJsgYxnnjZBCXcGGtVbIK-BSGqd3ko/edit",
+          "type": "Pracovný hárok"
         },
         "rubric-csf-final-projects/coursee/2021": {
           "name": "Základy informatiky – záverečný projekt",
@@ -5672,17 +5863,17 @@
         },
         "classification_models/csd/2021": {
           "name": "Klasifikačné modely",
-          "url": "https://docs.google.com/document/d/12gAWt2e0r-RSWFFUDaV9KgiPMhqFzfr8AoY0Mdm9uRY/edit",
+          "url": "https://docs.google.com/document/d/1iUaMCFC7-GDjt2NBsTemaZDnLvILKeFrPIO0Hp9lqFM/edit",
           "type": "Sprievodca aktivitou"
         },
         "classification_models_1/csd/2021": {
           "name": "Klasifikačné modely",
-          "url": "https://docs.google.com/presentation/d/1f5PG9ASPlRlXNM7gBMOribyQaYpVAaVW9EXWjtrqk1c/copy",
+          "url": "https://docs.google.com/presentation/d/1yCen1Eea7LdyYdKyefSFtUy-KJUQKcwqAljWObKmVls/copy",
           "type": "Prezentácia"
         },
         "fruit_veggie_cards/csd/2021": {
           "name": "Kartičky s ovocím a zeleninou",
-          "url": "https://docs.google.com/document/d/1tHBrTeEpIflpl06y4wYqLNnT476X8X--wfPZsMjMTiM/edit",
+          "url": "https://docs.google.com/document/d/1hs7JBBt7eYJ34CuygsZM3gfArNhcLJTmISoI1WSNdLE/edit",
           "type": "Zdroj"
         },
         "introduction_to_ai_lab/csd/2021": {
@@ -5697,7 +5888,7 @@
         },
         "training_a_model_in_ai_lab/csd/2021": {
           "name": "Trénovanie modelu v AI Labe",
-          "url": "https://docs.google.com/document/d/17gVZ5E_0_bBddvEKnO_wFTlorJnGkW-KNAcz0zWRbAE/edit",
+          "url": "https://docs.google.com/document/d/1SPSUmfleYPw58Wp4uvoZ_EeBt41ldLcBcfmof0kf3OQ/edit",
           "type": "Sprievodca aktivitou"
         },
         "training_and_testing_in_ai_lab/csd/2021": {
@@ -5717,22 +5908,22 @@
         },
         "selecting_features/csd/2021": {
           "name": "Výber vlastností",
-          "url": "https://drive.google.com/file/d/1GLf_xq333r4tR2XHMoP24rq0KQVLM8z_/view?usp=sharing",
+          "url": "https://docs.google.com/document/d/1sAar-EcQiOHW2zR38-q2p4QRPG11E--Du-z0Oodwr5I/view?usp=sharing",
           "type": "Zdroj"
         },
         "using_data_with_categorical_features/csd/2021": {
           "name": "Používanie údajov s kategorickými vlastnosťami",
-          "url": "https://drive.google.com/file/d/1blY6e6hX5DszuAdHXTEeB735kYUy1Hyj/view?usp=sharing",
+          "url": "https://docs.google.com/document/d/11q1xnO7AAtteuGaVyA2zmznwE1lfibkRroUbtNL2GGc/view?usp=sharing",
           "type": "Zdroj"
         },
         "importing_models_in_app_lab/csd/2021": {
-          "name": "Importovanie modelov v App Labe",
-          "url": "https://docs.google.com/presentation/d/1gkngAaMoJdp-8q2S9zomxHukJcdChkxtC38EA4dWvc0/copy",
+          "name": "Importovanie modelov do App Labu",
+          "url": "https://docs.google.com/presentation/d/1EytdJHye-dSY04th0W2qxg0UhGPJ-bj4dUsA4ooObBQ/copy",
           "type": "Prezentácia"
         },
         "importing_a_model_in_app_lab/csd/2021": {
           "name": "Importovanie modelu v App Labe",
-          "url": "https://drive.google.com/file/d/1xxtJnmayTnjT_0KdcaQp5buxBsVJnbsu/view?usp=sharing",
+          "url": "https://docs.google.com/document/d/1Q2k9AZYIbrmEybPM9xWrodachJCESGrbp2Mpot782xo/view?usp=sharing",
           "type": "Zdroj"
         },
         "ai_training_data_bias/csd/2021": {
@@ -5742,12 +5933,12 @@
         },
         "model_cards/csd/2021": {
           "name": "Karty modelov",
-          "url": "https://docs.google.com/presentation/d/1KLPpUnpn_gu5KqS0S5rVAjr3pqv6kBSeZ3V7ngydz4E/copy",
+          "url": "https://docs.google.com/presentation/d/1Kh69x0a5vCyk39IB-31GfMwpXKKgLe0duXx5Y5rbMNA/copy",
           "type": "Prezentácia"
         },
         "model_cards_1/csd/2021": {
           "name": "Karty modelov",
-          "url": "https://docs.google.com/document/d/1vdmL2UnG7KaMMenq5UsnsC4wbkuQZVP1OxVuT5WJvk0/edit#",
+          "url": "https://docs.google.com/document/d/1qcdpCPjTrnYZQaG-x5pF5RhLQwgm5YpzyqR9bhQ7rD0/edit#",
           "type": "Sprievodca aktivitou"
         },
         "model_cards_in_ai_lab/csd/2021": {
@@ -5757,12 +5948,12 @@
         },
         "saving_models_in_ai_lab/csd/2021": {
           "name": "Ukladanie modelov v AI Labe",
-          "url": "https://docs.google.com/presentation/d/1M9dxiG9GmZfoYxe2QYE7nQs3vs9T1knh0qxA9tOTtf8/copy",
+          "url": "https://docs.google.com/presentation/d/1CyFkh-LggpJw9yVdaBPKeAASogMWWvhXp9D24ChDnPk/copy",
           "type": "Prezentácia"
         },
         "zoo_models/csd/2021": {
           "name": "Modely pre zoo",
-          "url": "https://docs.google.com/document/d/1ORggvwa-uMH4HUUFEJL6g5v-mYR1948LhKAmHhmJxGc/edit",
+          "url": "https://docs.google.com/document/d/13xk6xvTIQEMk2H6tiSI1HZ0w29MjB0gGlOwguHlLd2s/edit",
           "type": "Sprievodca aktivitou"
         },
         "_key_zoo_models/csd/2021": {
@@ -5772,7 +5963,7 @@
         },
         "selecting_a_label/csd/2021": {
           "name": "Výber označenia",
-          "url": "https://drive.google.com/file/d/1iCd0-YM5JK2Bk1u3XgEY6o0xcGwJdkau/view?usp=sharing",
+          "url": "https://docs.google.com/document/d/12iftU_mkjODKEU5ZPSIQp5spIYfc1h5q_f_XiDt4Oxc/view?usp=sharing",
           "type": "Zdroj"
         },
         "if-statements_in_app_lab/csd/2021": {
@@ -5782,22 +5973,22 @@
         },
         "model_cards_in_app_lab/csd/2021": {
           "name": "Karty modelov v App Labe",
-          "url": "https://docs.google.com/presentation/d/1q_9LV_tmFEEqwCMuMo77heheFEyhATwMWYyVg6tn2HE/copy",
+          "url": "https://docs.google.com/presentation/d/1oFg_9yMYf95hwVx4iuzrCZw1-Z2ivY7GTC7mdTrDjJA/copy",
           "type": "Prezentácia"
         },
         "numerical_accuracy_-_activity_guide/csd/2021": {
           "name": "Číselná presnosť",
-          "url": "https://docs.google.com/document/d/1z1QlqauVb0S3TBFICvoIP2fOvfDGkAItx7hL3FlOnf8/edit#",
+          "url": "https://docs.google.com/document/d/1qC_E9BIL-W0vmfNV1kU6_d6mwZNx-_t-ibXWc82521g/edit#",
           "type": "Sprievodca aktivitou"
         },
         "numerical_models/csd/2021": {
           "name": "Číselné modely",
-          "url": "https://docs.google.com/presentation/d/1lKn_IQjmALHkAS7B1iJzFfg5DXIexbgJQOhjJ2F0wpM/edit",
+          "url": "https://docs.google.com/presentation/d/1ZJTZDKBR5MR1SofSxX21g2AJl-oVvpcm8eEVCYPmTYQ/edit",
           "type": "Prezentácia"
         },
         "zombie_prediction_-_activity_guide/csd/2021": {
           "name": "Predpovedanie zombíkov",
-          "url": "https://docs.google.com/document/d/1mylu7XueQyZQpTftM5UqtuDY4cYKAR7YTdlSHOXbkSA/edit#",
+          "url": "https://docs.google.com/document/d/1htmItXxjsGuhTMYOj_5ilt77y-uewaUqKiT0xeIcB6k/edit#",
           "type": "Sprievodca aktivitou"
         },
         "zombie_prediction_-_answer_key/csd/2021": {
@@ -5812,12 +6003,12 @@
         },
         "numerical_data_in_ai_lab/csd/2021": {
           "name": "Číselné údaje v AI Labe",
-          "url": "https://docs.google.com/presentation/d/1lDwfSAfjllPGMuJgo7bJmrJWSUJsidsTLw4Tz67zfyQ/edit",
+          "url": "https://docs.google.com/presentation/d/15FIseQCmCrQnPD4b2di8tUG8WLe_mNzvEc_cv6kYH5I/edit",
           "type": "Prezentácia"
         },
         "numerical_data_in_ai_lab_1/csd/2021": {
           "name": "Číselné údaje v AI Labe",
-          "url": "https://docs.google.com/document/d/1moMxuz91OA5THt6SxJm0AGyJKG69r1oz2FzeJ_NWeww/edit#",
+          "url": "https://docs.google.com/document/d/1iwchy0h-tX3NerizjbYVgtYM3NNemWs5K5lgmL7WC18/edit#",
           "type": "Sprievodca aktivitou"
         },
         "numerical_data_in_ai_lab_2/csd/2021": {
@@ -5832,7 +6023,7 @@
         },
         "using_data_with_numerical_features/csd/2021": {
           "name": "Používanie údajov s číselnými vlastnosťami",
-          "url": "https://drive.google.com/file/d/1gDKIbkvicZqyXlyj2a5InXaU9_lcxVlU/view?usp=sharing",
+          "url": "https://docs.google.com/document/d/1PmL5SyFs30mzbsfsUzKMXchUHjUvN13d5jOEci3TdgQ/view?usp=sharing",
           "type": "Zdroj"
         },
         "customizing_apps/csd/2021": {
@@ -5842,16 +6033,16 @@
         },
         "ai_code_of_ethics/csd/2021": {
           "name": "Etický kódex umelej inteligencie",
-          "url": "https://docs.google.com/presentation/d/1jpT_cSs45ZwAz7NMYTn6vhefu3ImndFWfGubS_5wkGw/copy",
+          "url": "https://docs.google.com/presentation/d/1fubkSum7AK6rLnMlt_EBxXjoe1DK8MfVKQ-IaXUhG1I/copy",
           "type": "Prezentácia"
         },
         "ai_ethics_research_areas/csd/2021": {
           "name": "Oblasti výskumu etiky umelej inteligencie",
-          "url": "https://docs.google.com/document/d/1duhFg6-NyUw5GBhCdkJbnC21IP_PoILvrlvl_HdOdZY/edit"
+          "url": "https://docs.google.com/document/d/113_NoKEG8wIK_b0bwhFbLFNfnRM7cbVj9b5H-uT6Z2A/edit"
         },
         "ai_ethics_research_reflection/csd/2021": {
           "name": "Úvaha o výskume etiky umelej inteligencie",
-          "url": "https://docs.google.com/document/d/19vF4UVAcJa6UsqkdKynWzSR80Mlnb2G3coBoWNxpIYc/edit?usp=sharing",
+          "url": "https://docs.google.com/document/d/1DGTHgJ8aI342YafoUM3rVyJtvqX5mQSekvERYdwOfdg/edit?usp=sharing",
           "type": "Podklady pre žiakov"
         },
         "ethics_ai_equal_access_and_algorithmic_bias/csd/2021": {
@@ -5861,26 +6052,26 @@
         },
         "our_ai_code_of_ethics_template_/csd/2021": {
           "name": "Náš etický kódex umelej inteligencie [Šablóna]",
-          "url": "https://docs.google.com/presentation/d/1SJEXpTCKwf5fbDy5GuDjDGAsuUrkI9QfxKF-1pMSndg/edit?usp=sharing",
+          "url": "https://docs.google.com/presentation/d/12Q0EqLwi7t179sxUOekPkaeEkUuT-FgHQNLhWk-l9RM/edit?usp=sharing",
           "type": "Prezentácia"
         },
         "create_an_ml_app_-_project_guide/csd/2021": {
           "name": "Vytvorenie aplikácie strojového učenia – sprievodca projektom",
-          "url": "https://docs.google.com/document/d/1UAGmOyfoqr5xKjKp8SjpYRmdemNK8FWV1fcrERoeoDo/edit"
+          "url": "https://docs.google.com/document/d/1deEo9mj_GpDWjY4KKKrrvJ0kA2f9ELZPQskrb541fPc/edit"
         },
         "make_a_machine_learning_app/csd/2021": {
           "name": "Vytvorenie aplikácie strojového učenia",
-          "url": "https://docs.google.com/presentation/d/1SDcwI7zrjM9G6H8ncufxiJXBZoozWk7SwvKl_GOMle4/copy",
+          "url": "https://docs.google.com/presentation/d/1pRwWl4VErM7lAjyjft2XtjLTTbpNb0YvqTcu3cgPDMg/copy",
           "type": "Prezentácia"
         },
         "create_an_ml_app/csd/2021": {
           "name": "Vytvorenie aplikácie strojového učenia",
-          "url": "https://docs.google.com/document/d/1iB8J-cuTNv00K-WSykY53O-UONmms6xxExgNXlLdVeA/view",
+          "url": "https://docs.google.com/document/d/1iqWYU7_aprYnnvvddMhggJwFgraAJ6DKvDv4A0uvyqw/view",
           "type": "Hodnotenie"
         },
         "5_why_s_-_activity_guide/csd/2021": {
           "name": "5 prečo – Sprievodca aktivitou",
-          "url": "https://docs.google.com/presentation/d/1G8bmEuCtGcnQkL8DAcPUqhN4WsbwTnIBc6ihH2i86lU/view"
+          "url": "https://docs.google.com/presentation/d/1-Tx-CEQDbTcN7z9LkCotIX5TA-zY7anjeNXkb13p-Jg/view"
         },
         "app_brainstorm_-_activity_guide/csd/2021": {
           "name": "Vymyslenie aplikácie – Sprievodca aktivitou",
@@ -5893,20 +6084,20 @@
         },
         "survey_planning/csd/2021": {
           "name": "Plánovanie dotazníka",
-          "url": "https://docs.google.com/presentation/d/1OOvhcw8TjjItSk8j40LauRLaKicLb2uNb-OCSs6fyX4/copy",
+          "url": "https://docs.google.com/presentation/d/1KIgGpvmh6TdXRrgnbmgNKkfJYmYdeavoZdCX4gz3l40/copy",
           "type": "Prezentácia"
         },
         "survey_planning_-_activity_guide/csd/2021": {
           "name": "Plánovanie dotazníka – sprievodca aktivitou",
-          "url": "https://docs.google.com/document/d/1vLzqaZDRjA8_wvb4dePTLpXY5Skhy44JvxpCIAcLDE8/view"
+          "url": "https://docs.google.com/document/d/1WoTGXFkrtU5jys0DYoSWDe_JnhcSc2JeYJdr2jpYBKU/view"
         },
         "survey_template_google_form_/csd/2021": {
           "name": "Šablóna dotazníka [Formulár Google]",
-          "url": "https://docs.google.com/forms/d/1E4sGp03dDW6TYVh1G6zlNITuuSaLFGlMox2E0Iiczzo/copy"
+          "url": "https://docs.google.com/forms/d/1iUUNRsTy4AfLjBj-tslrePH_j5rV0hnuYwcBL8YTBKQ/copy"
         },
         "creating_a_survey/csd/2021": {
           "name": "Vytvorenie dotazníka",
-          "url": "https://drive.google.com/file/d/1L8WM8UEpOUW7rY1DaGImAco2BGzj6J_y/view?usp=sharing",
+          "url": "https://docs.google.com/document/d/1Hk6vJdsEMBFB2nJalpCA0xBbcw1DvRsKDyZbn2LwC1w/view?usp=sharing",
           "type": "Zdroj"
         },
         "isaac_s_survey_data_-_student_resource/csd/2021": {
@@ -5919,7 +6110,7 @@
         },
         "survey_data_in_ai_lab/csd/2021": {
           "name": "Údaje z dotazníka v AI Labe",
-          "url": "https://docs.google.com/presentation/d/1DhTshRLCTnVkQHEkpThwedSXL5NEXKtjwATlQIJk33w/copy",
+          "url": "https://docs.google.com/presentation/d/1G239Dj2EveinRpIbz8ioa9Wl4KruYNvU_rey4H5s6jU/copy",
           "type": "Prezentácia"
         },
         "cleaning_survey_data/csd/2021": {
@@ -5934,12 +6125,12 @@
         },
         "troubleshooting_models/csd/2021": {
           "name": "Riešenie problémov s modelmi",
-          "url": "https://docs.google.com/presentation/d/1LUkDD4PMefznEJh27EZruk6V8343JrYBpMZ3ThjmcLA/copy",
+          "url": "https://docs.google.com/presentation/d/13P01IInclCfETn8naQkouKj1rdLSo4AGIDWoMAiJmgI/copy",
           "type": "Prezentácia"
         },
         "troubleshooting_models_-_activity_guide/csd/2021": {
           "name": "Riešenie problémov s modelmi – sprievodca aktivitou",
-          "url": "https://docs.google.com/document/d/1RLnA_EbFrxwLOI-XGwmuryNbSPlBqndvjXGDlWdndpc/edit"
+          "url": "https://docs.google.com/document/d/1f2QoFtHBY04kLQx7I8eF4W7NjG71wfhTPs_yMG0Vbuc/edit"
         },
         "creating_an_app/csd/2021": {
           "name": "Vytvorenie aplikácie",
@@ -5974,17 +6165,17 @@
         },
         "model_card_-_digital_template/csd/2021": {
           "name": "Karta modelu – digitálna šablóna",
-          "url": "https://docs.google.com/presentation/d/1voKIV3MzBgU33ah0bjEsUGL-Eue53mtmwAlt2oIHwbA/view",
+          "url": "https://docs.google.com/presentation/d/1LHgqCb3fVEf20U63Q4h8d1YqKmA9b7IaBZACURp5CIs/view",
           "type": "Zdroj"
         },
         "model_card_-_printable_template/csd/2021": {
-          "name": "Karta modelu – šablóna na vytlačenie",
-          "url": "https://docs.google.com/presentation/d/1Pg5gCzLLzv_I8jxPhTrdgL76gYPEJtFpAE1NN2bt8xI/view",
+          "name": "Karta modelu – šablóna na tlač",
+          "url": "https://docs.google.com/presentation/d/18tA7dJZi6UZzUA4KN8i9OkigzUJv9xbCzpviVNJkIcc/view",
           "type": "Zdroj"
         },
         "design_an_ai_app_1/csd/2021": {
           "name": "Návrh aplikácie umelej inteligencie",
-          "url": "https://docs.google.com/document/d/1WTnJ-vxHh0NIYOePvdYps_zoLLiGWJnD8Y9RJabxth8/view",
+          "url": "\\<﻿<https://docs.google.com/document/d/12hyKNQGCpUxtgremu0XvlGp4bmFdMsP_7zrTogsCoaY/view>",
           "type": "Hodnotenie"
         },
         "teacher_forum/csd/2021": {
@@ -6617,7 +6808,7 @@
         },
         "random_numbers/csd/2021": {
           "name": "Náhodné čísla",
-          "url": "https://drive.google.com/file/d/1BZwjs4cvsGdhtNhY8qjUXWkCgblmZUcD/view",
+          "url": "https://docs.google.com/document/d/1aOIGIiL3F9ml309f8SyDeWC53pOAmaFUh7WG12MsD0k/view",
           "type": "Zdroj"
         },
         "introduction_to_sprites/csd/2021": {
@@ -6631,17 +6822,17 @@
         },
         "animation_tab/csd/2021": {
           "name": "Karta Animácie",
-          "url": "https://drive.google.com/file/d/1ytsY-Hv17uCKmwY4Af7OpljWdsLtGfTn/view",
+          "url": "https://docs.google.com/document/d/15SMe7U_8fsrGtPcFwekGN9X0HY9vQfRCsjDEusgz9b4/view",
           "type": "Zdroj"
         },
         "sprites_1/csd/2021": {
           "name": "Sprajty",
-          "url": "https://drive.google.com/file/d/1WS_5m8Ffy0u4OKILPEVSjs2KamZr2a41/view",
+          "url": "https://docs.google.com/document/d/1CcMWooCGNYE8eEBtnTmI2Mkm30zAZ2uomYVU4C1sM3w/view",
           "type": "Zdroj"
         },
         "sprite_properties/csd/2021": {
           "name": "Vlastnosti sprajtov",
-          "url": "https://drive.google.com/file/d/1E4UZKHRQM0erDbb-rPTRbRVpj7IquA3p/view?usp=sharing",
+          "url": "https://docs.google.com/document/d/11HX56vUOm9bk5NkPMNKdPe5uZ59gdhXCQfTwJUQa0L0/view?usp=sharing",
           "type": "Zdroj"
         },
         "mini-project-captioned-scenes-2020/csd/2021": {
@@ -6775,7 +6966,7 @@
         },
         "velocity_2/csd/2021": {
           "name": "Rýchlosť",
-          "url": "https://drive.google.com/file/d/10n2QcpY__sDlycr09Xar6o-2iDAb0P49/view?usp=sharing",
+          "url": "https://docs.google.com/document/d/1OW_KB7Z1hiW3oNYYJzm12BF1VE0gkjYxi44vQBjTthQ/view?usp=sharing",
           "type": "Zdroj"
         },
         "collision-detection-exemplar-2020/csd/2021": {
@@ -6839,7 +7030,7 @@
         },
         "functions_1/csd/2021": {
           "name": "Funkcie",
-          "url": "https://drive.google.com/file/d/1m4GATuAOfc3cL-kgb5Bmc4yciCNyxgVH/view?usp=sharing",
+          "url": "https://docs.google.com/document/d/1f0Dq6pRWWLJUxND0ekBWXqfaILYUKwtwP1k2PMlVZRY/view?usp=sharing",
           "type": "Zdroj"
         },
         "project-guide-defender-game/csd/2021": {

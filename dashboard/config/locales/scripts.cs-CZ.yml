@@ -147,6 +147,7 @@ cs:
             informatiky a programování obsáhnuté v kurzích 2-4. Kurz je navrhnut pro
             žáky staré 10 - 18 let. Pokud máš zájem o detailnejší kurz, vyzkoušej
             kurzy 2-4!
+          name: 20hod.
         edit-code:
           title: Upravit kód
           description: Upravit kód
@@ -11529,3 +11530,28 @@ cs:
           student_description: Naučte se kódovat pomocí skřítků a proměnných, a diskutovat
             o společenských dopadech výpočetní techniky a internetu. Na konci tohoto
             kurzu navrhněte a vytvořte projekt, který můžete sdílet s přáteli a rodinou.
+        self-paced-pl-csp2-2023:
+          title: 'Modul 2: Navigace Code.org'
+        self-paced-pl-csp4-2023:
+          description: |-
+            V tomto modulu, seznámíte se s autentickými praktikami CS, se kterými se studenti budou zabývat během kurzu CS Principles. Tyto postupy zahrnují ladění, pomocí prostředků, a párování programování. Prozkoumáte také roli učitele ve třídě CS Principles a vytvoříte plán, jak budete podporovat učení studentů při výuce kurzu.
+
+            **Budete**:
+
+            -   Zvažte roli učitele ve třídě CS Principles.
+            -   Seznamte se s autentickými praktikami CS, které studenti budou rozvíjet v průběhu kurzu CS Principles.
+            -   Vytvořte plán, jak budete podporovat učení studentů prostřednictvím diferenciace, průběžného hodnocení a podpory kultury začleňování.
+            -   Zjistěte více o příležitostech spojit se s širší komunitou CS.
+
+            **Doporučený čas**: 70 minut
+          student_description: |-
+            V tomto modulu, seznámíte se s autentickými praktikami CS, se kterými se studenti budou zabývat během kurzu CS Principles. Tyto postupy zahrnují ladění, pomocí prostředků, a párování programování. Prozkoumáte také roli učitele ve třídě CS Principles a vytvoříte plán, jak budete podporovat učení studentů při výuce kurzu.
+
+            **Budete**:
+
+            -   Zvažte roli učitele ve třídě CS Principles.
+            -   Seznamte se s autentickými praktikami CS, které studenti budou rozvíjet v průběhu kurzu CS Principles.
+            -   Vytvořte plán, jak budete podporovat učení studentů prostřednictvím diferenciace, průběžného hodnocení a podpory kultury začleňování.
+            -   Zjistěte více o příležitostech spojit se s širší komunitou CS.
+
+            **Doporučený čas**: 70 minut
