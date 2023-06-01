@@ -81,6 +81,18 @@ export const LibraryValidator: ResponseValidator<LibraryJson> = response => {
 
 export type SoundType = 'beat' | 'bass' | 'lead' | 'fx';
 
+export interface SequenceEvent {
+  beat: number;
+  note: number;
+  length: number;
+}
+
+export interface SampleSequence {
+  instrument: string;
+  rootKey: number;
+  events: SequenceEvent[];
+}
+
 export interface SoundData {
   name: string;
   src: string;
@@ -88,6 +100,7 @@ export interface SoundData {
   type: SoundType;
   note?: number;
   restricted?: boolean;
+  sequence?: SampleSequence;
 }
 
 export interface SoundFolder {
