@@ -12966,3 +12966,26 @@ ar-SA:
         questions:
         - text: انضر جيداً إلى هذا الكود البرمجي. ماذا تظن أنه سيحدث لو شغلنا هذا
             الكود؟
+      Test Contained Retriable Multi:
+        answers:
+        - text: '0'
+        - text: '1'
+        - text: '2'
+          correct: true
+        - text: '4'
+        questions:
+        - {}
+      test-single-multi-standalone-retriable:
+        answers:
+        - text: لن يحدث شيئًا.
+          feedback: خطأ. سيبدأ الحشيش بالتدحرج
+        - text: سيطفو الحشيش الى أعلى الشاشة
+          feedback: خطأ. سيبدأ الحشيش بالتدحرج
+        - text: سيبدأ الحشيش بالتدحرج
+          correct: true
+          feedback: صحيح!
+        - text: سيومض الحشيش.
+          feedback: خطأ. سيبدأ الحشيش بالتدحرج
+        questions:
+        - text: أمعن النظر في حلقات التكرار المتداخلة أدناه. ما الذي يحدث عند الضغط
+            على زر "تشغيل"؟

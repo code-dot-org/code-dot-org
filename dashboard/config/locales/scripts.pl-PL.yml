@@ -137,6 +137,7 @@ pl:
             z zakresu informatyki i programowania z kursów 2-4. Kurs jest przeznaczony
             dla uczniów w wieku 10-18 lat. Przejrzyj bogatsze w doświadczenia kursy
             2-4!
+          name: 20 godzina
         edit-code:
           title: Edytuj kod
           description: Edytuj kod
@@ -8818,6 +8819,8 @@ pl:
               name: 'Dziennikarstwo i dykusja '
             lesson-10:
               name: 'Dzień 1 Podsumowanie '
+            lesson-11:
+              name: Proces rozwiązywania problemów w CSD
           lesson_groups:
             lessonGroup-2:
               display_name: Dzień 1
@@ -8923,10 +8926,26 @@ pl:
               name: Przegląd CS Discoveries (Odkrycia informatyki)
             lesson-3:
               name: Poruszanie się po platformie Code.org
+            lesson-4:
+              name: Jednostka 1 - Rozwiązywanie problemów i informatyka
+            lesson-5:
+              name: Wprowadzenie do Async
+            lesson-6:
+              name: Praca asynchroniczna
+            lesson-7:
+              name: Podsumowanie asynchroniczne
             lesson-8:
               name: Wprowadzenie do Jednostki 2
+            lesson-9:
+              name: 'Modelowa lekcja 1: U2L2 Wprowadzenie do HTML'
+            lesson-10:
+              name: 'Modelowa lekcja 2: Tekst stylizacji U2L6 z CSS'
+            lesson-11:
+              name: Strategie instruktażowe
             lesson-12:
               name: Zakończenie
+            lesson-13:
+              name: Praca asynchroniczna
           lesson_groups:
             lessonGroup-2:
               display_name: Synchroniczna Część 1
@@ -8936,13 +8955,32 @@ pl:
               display_name: Synchroniczna Część 2
             lessonGroup-5:
               display_name: Asynchroniczna Część 2
+          name: virtual-pl-csd-summer-day1
           title: Dzień 1
         virtual-pl-csd-summer-day2:
           lessons:
+            lesson-1:
+              name: Wprowadzenie do Dnia 2
             lesson-2:
               name: Jednostka 2 Powiązania
+            lesson-3:
+              name: 'Jednostka 3 Badanie programu nauczania: kształty i zmienne'
+            lesson-4:
+              name: 'Modelowa lekcja 3: Rysunek U3L3 w Game Lab'
+            lesson-5:
+              name: Wprowadzenie do Async
+            lesson-6:
+              name: Praca asynchroniczna
+            lesson-7:
+              name: Podsumowanie asynchroniczne
+            lesson-8:
+              name: 'Modelowa lekcja 4: Zmienne U3L5'
+            lesson-9:
+              name: 'Planowanie lekcji: Zrób plan'
             lesson-10:
               name: Zakończenie
+            lesson-11:
+              name: Praca asynchroniczna
           lesson_groups:
             lessonGroup-2:
               display_name: Synchroniczna Część 1
@@ -8952,19 +8990,37 @@ pl:
               display_name: Synchroniczna Część 2
             lessonGroup-5:
               display_name: Asynchroniczna Część 2
+          name: virtual-pl-csd-summer-day2
           title: Dzień 2
         virtual-pl-csd-summer-day3:
           lessons:
+            lesson-1:
+              name: Wprowadzenie do Dnia 3
             lesson-2:
               name: Bycie wiodącym uczniem
             lesson-3:
               name: 'Część 3 Badanie programu nauczania: Duszki'
+            lesson-4:
+              name: 'TLO 1: U3L6 Liczby losowe'
+            lesson-5:
+              name: Wprowadzenie do Async
+            lesson-6:
+              name: Praca asynchroniczna
+            lesson-7:
+              name: Podsumowanie asynchroniczne
+            lesson-8:
+              name: 'TLO 2: U3L8 Duszki'
             lesson-9:
               name: Jednostka 3 Powiązania
+            lesson-10:
+              name: 'TLO 3: U4L3 Konstrukcja zorientowana na użytkownika Zdefiniuj
+                i Przygotuj'
             lesson-11:
               name: Kultura w klasie
             lesson-12:
               name: Zakończenie
+            lesson-13:
+              name: Praca asynchroniczna
           lesson_groups:
             lessonGroup-2:
               display_name: Synchroniczna Część 1
@@ -8974,17 +9030,38 @@ pl:
               display_name: Synchroniczna Część 2
             lessonGroup-5:
               display_name: Asynchroniczna Część 2
+          name: virtual-pl-csd-summer-day3
           title: Dzień 3
         virtual-pl-csd-summer-day4:
           lessons:
+            lesson-1:
+              name: Wprowadzenie do Dnia 4
             lesson-2:
               name: Wstęp do Jednostki 5
+            lesson-3:
+              name: 'TLO 4: U5L1 Sprawy reprezentacji '
+            lesson-4:
+              name: Wprowadzenie do Jednostki 6
+            lesson-5:
+              name: 'TLO 5: U6L2 Projekty fizyczne'
+            lesson-6:
+              name: Wprowadzenie do Async
+            lesson-7:
+              name: Praca asynchroniczna
+            lesson-8:
+              name: Podsumowanie asynchroniczne
+            lesson-9:
+              name: Wprowadzenie do Jednostki 7
+            lesson-10:
+              name: 'TLO 6: U7L2 Wprowadzenie do uczenia maszynowego'
             lesson-11:
               name: Bariery, szanse i zobowiązania
             lesson-12:
               name: Różnicowanie
             lesson-13:
               name: Zakończenie
+            lesson-14:
+              name: Praca asynchroniczna
           lesson_groups:
             lessonGroup-2:
               display_name: Synchroniczna Część 1
@@ -8994,9 +9071,12 @@ pl:
               display_name: Synchroniczna Część 2
             lessonGroup-5:
               display_name: Asynchroniczna Część 2
+          name: virtual-pl-csd-summer-day4
           title: Dzień 4
         virtual-pl-csd-summer-day5:
           lessons:
+            lesson-1:
+              name: Wprowadzenie do Dnia 5
             lesson-9:
               name: Przygotowanie na rok
             lesson-3:
@@ -9005,6 +9085,12 @@ pl:
               name: Powracając do tematów z tygodnia
             lesson-5:
               name: Podgląd warsztatów roku akademickiego
+            lesson-6:
+              name: Wprowadzenie do Async
+            lesson-7:
+              name: Praca asynchroniczna
+            lesson-8:
+              name: Podsumowanie asynchroniczne
             lesson-2:
               name: Planowanie na rok
             lesson-10:
@@ -9016,6 +9102,7 @@ pl:
               display_name: Asynchroniczna Część 1
             lessonGroup-4:
               display_name: Synchroniczna Część 2
+          name: virtual-pl-csd-letni-dzień5
         self-paced-pl-microbit1:
           name: self-paced-pl-microbit1
         self-paced-pl-microbit2:
@@ -9025,32 +9112,60 @@ pl:
                 z micro:bitami
           name: self-paced-pl-microbit2
           title: Przygotowanie do nauczania Tworzenie aplikacji dla urządzeń z micro:bitami
+          description: "**Czeka Cię:**\n\n-   Wprowadzenie do tworzenia aplikacji
+            dla urządzeń.\n-   Skonfigurowanie swojego micro:bita. \n-   Praktyczne
+            przećwiczenie kluczowych pojęć zawartych w jednostce.\n-   Przejrzenie
+            projektów na zakończenie rozdziału.\n-   Rozważenie roli nauczyciela podczas
+            zajęć z informatyki.\n\n**Sugerowany czas:** 100 minut"
+          student_description: "**Czeka Cię:**\n\n-   Wprowadzenie do tworzenia aplikacji
+            dla urządzeń.\n-   Skonfigurowanie swojego micro:bita. \n-   Praktyczne
+            przećwiczenie kluczowych pojęć zawartych w jednostce.\n-   Przejrzenie
+            projektów na zakończenie rozdziału.\n-   Rozważenie roli nauczyciela podczas
+            zajęć z informatyki.\n\n**Sugerowany czas:** 100 minut"
         seesaw-adaptations:
           name: seesaw-adaptations
           title: Huśtawka - adaptacje zwierząt
         csp-bingo-2023:
+          lessons:
+            lesson-1:
+              name: Recenzja gry BINGO przez jednostkę
           name: csp-bingo-2023
+          title: CSP Słownictwo BINGO
         csd-post-survey-2023:
           name: csd-post-survey-2023
           title: Ankieta po odbyciu kursu
+          description: Ta jednostka zawiera ankietę po kursie. Ta jednostka może zostać
+            przypisana po ukończeniu przez uczniów końcowej jednostki w tym kursie.
         focus-on-data-post-survey-2023:
           name: focus-on-data-post-survey-2023
           title: Ankieta po odbyciu kursu
+          description: Ta jednostka zawiera ankietę po kursie. Ta jednostka może zostać
+            przypisana po ukończeniu przez uczniów końcowej jednostki w tym kursie.
         focus-on-impact-in-society-post-survey-2023:
           name: focus-on-impact-in-society-post-survey-2023
           title: Ankieta po odbyciu kursu
+          description: Ta jednostka zawiera ankietę po kursie. Ta jednostka może zostać
+            przypisana po ukończeniu przez uczniów końcowej jednostki w tym kursie.
         focus-on-coding-post-survey-2023:
           name: focus-on-coding-post-survey-2023
           title: Ankieta po odbyciu kursu
+          description: Ta jednostka zawiera ankietę po kursie. Ta jednostka może zostać
+            przypisana po ukończeniu przez uczniów końcowej jednostki w tym kursie.
         focus-on-design-with-purpose-post-survey-2023:
           name: focus-on-design-with-purpose-post-survey-2023
           title: Ankieta po odbyciu kursu
+          description: Ta jednostka zawiera ankietę po kursie. Ta jednostka może zostać
+            przypisana po ukończeniu przez uczniów końcowej jednostki w tym kursie.
         focus-on-hardware-post-survey-2023:
           name: focus-on-hardware-post-survey-2023
           title: Ankieta po odbyciu kursu
+          description: Ta jednostka zawiera ankietę po kursie. Ta jednostka może zostać
+            przypisana po ukończeniu przez uczniów końcowej jednostki w tym kursie.
         focus-on-creativity-post-survey-2023:
           name: focus-on-creativity-post-survey-2023
           title: Ankieta po odbyciu kursu
+          description: Ta jednostka zawiera ankietę po kursie. Ta jednostka może zostać
+            przypisana po ukończeniu przez uczniów końcowej jednostki w tym kursie.
         coursef-2023:
           lesson_groups:
             lessonGroup-2:
@@ -9061,6 +9176,8 @@ pl:
               display_name: Zmienne
             lessonGroup-6:
               display_name: Koniec projektu kursu
+          name: coursef-2023
+          title: Kurs F (2023)
           description_audience: W wieku 9-13
           description_short: Poznaj wszystkie pojęcia z podstaw informatyki i stwórz
             własne dzieło sztuki, historyjkę lub grę.
@@ -9075,3 +9192,6 @@ pl:
           student_description: Naucz się kodować z duszkami i zmiennymi, oraz omów
             wpływ komputerów i internetu na społeczeństwo. Pod koniec tego kursu zaprojektuj
             i stwórz projekt, którym możesz podzielić się z przyjaciółmi i rodziną.
+        ey-ecosystems:
+          name: ey-ecosystems
+          title: EY Ecosystems (zapowiedź)

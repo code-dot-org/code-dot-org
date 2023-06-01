@@ -41,7 +41,7 @@ el:
           κλικ εδώ αν δεν έχετε διεύθυνση ηλεκτρονικού ταχυδρομείου)](%{url})
         username: 'όνομα χρήστη '
         password: Κωδικός πρόσβασης
-        verified_teacher: Πιστοποιημένη Δασκάλα
+        verified_teacher: Επαληθευμένος Δάσκαλος
         password_confirmation: Επιβεβαίωση κωδικού
         current_password: Τρέχων κωδικός
         locale: Γλώσσα
@@ -71,6 +71,7 @@ el:
   unsubmit: Ανακλήθηκε
   previous_page: Προηγούμενη σελίδα
   next_page: Επόμενη σελίδα
+  next_level: Επόμενο επίπεδο
   next_resource: Επόμενος πόρος
   done_with_module: Ολοκληρώθηκε αυτή η ενότητα εκμάθησης
   cancel: Άκυρο
@@ -459,12 +460,12 @@ el:
       educate_requirements: Τεχνικές Απαιτήσεις
       educate_tools: Εργαλεία και Βίντεο
       about_us: Σχετικά με εμάς
-      about_leadership: Ηγεμονία
+      about_leadership: Ηγεσία
       about_donors: Δωρητές
       about_partners: Συνεργάτες
       about_team: Πλήρης Ομάδα
       about_news: Αίθουσα Ειδήσεων
-      about_evaluation: Αξιολογήσεις
+      about_evaluation: Αξιολόγηση
       about_jobs: Θέσεις εργασίας
       about_contact: Επικοινωνία
       about_faqs: Συχνές ερωτήσεις
@@ -477,7 +478,7 @@ el:
       legal: Απόρρητο & Νομικά
       legal_privacy: Πολιτική Απορρήτου
       legal_cookie_notice: Ειδοποιήση Cookie
-      legal_tos: Όροι
+      legal_tos: Όροι παροχής υπηρεσιών
     user:
       classroom: Αρχική Σελίδα Εκπαιδευτή
       district_dashboard: Περιοχή Ταμπλό
@@ -495,7 +496,7 @@ el:
       navigator: Πλοηγός
       create: Δημιουργία
       algebra_game: Άλγεβρα
-      applab: App Lab
+      applab: Εργαστήριο εφαρμογών
       artist: Καλλιτέχνης
       artist_k1: Καλλιτέχνης (Προαναγνώστης)
       basketball: Μπάσκετ
@@ -784,7 +785,7 @@ el:
     support: Βοήθεια και Κοινότητα
     support_url: http://support.code.org/
     tos_short: Όροι
-    tos: Όροι
+    tos: Όροι παροχής υπηρεσιών
     privacy: Πολιτική Απορρήτου
     privacy_updated: Πολιτική Απορρήτου (ενημερωμένη)
     secure: Ασφαλής έκδοση
@@ -872,7 +873,7 @@ el:
       unused: Αχρησιμοποίητα επίπεδα
   upsell:
     applab:
-      title: App Lab
+      title: Εργαστήριο εφαρμογών
       body: Το App Lab (Εργαστήριο Εφαρμογών) είναι ένα περιβάλλον προγραμματισμού
         όπου μπορείς να φτιάξεις απλές εφαρμογές (apps). Σχεδίασε μια εφαρμογή (app),
         γράψε κώδικα με μπλοκ ή JavaScript για να την κάνεις να δουλέψει και μετά
@@ -1203,7 +1204,7 @@ el:
       γονεϊκή συγκατάθεση για τη συλλογή προσωπικών πληροφοριών των μαθητών για τη
       χρήση και το ώφελος των σχολείων, συμπεριλαμβανομένων εκπαιδευτικών προγραμμάτων
       όπως το Code Studio.
-    tos: Όροι
+    tos: Όροι παροχής υπηρεσιών
     privacy: Πολιτική Απορρήτου
     privacy_notice: Σημείωση απορρήτου
     accept_label: Συμφωνώ με <a href="%{tos_url}" target="_blank">τους Όρους Χρήσης</a>
@@ -1463,7 +1464,7 @@ el:
   no_exemplar_access_teacher: Μόνο πιστοποιημένες δασκάλες μπορούν να έχουν πρόσβαση
     σε παραδειγματικούς κώδικες. Αν θέλετε να γίνετε μια πιστοποιημένη δασκάλα, παρακαλούμε
     να στείλετε μήνυμα ηλεκτρονικού ταχυδρομείου σε support@code.org.
-  return_unit_overview: Πηγαίνετε στην επισκόπηση της μονάδας
+  return_unit_overview: Πηγαίνετε στην επισκόπηση του μαθήματος
   return_course_overview: Πηγαίνετε στην επισκόπηση του μαθήματος
   view_all_units: Δείτε όλες τις μονάδες
   view_teacher_guide: Προβολή Οδηγού Εκπαιδευτικού
