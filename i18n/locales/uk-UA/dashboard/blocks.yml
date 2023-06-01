@@ -46,7 +46,7 @@ uk:
             MOVES.ClapHigh: Плескання вгорі
             MOVES.Dab: Деб
             MOVES.DoubleJam: Подвійний вниз
-            MOVES.Drop: Дроп
+            MOVES.Drop: Відпустити
             MOVES.Floss: Флосс
             MOVES.Fresh: Фреш
             MOVES.Clown: Гангнам
@@ -58,7 +58,7 @@ uk:
             MOVES.ClapHigh: Плескання вгорі
             MOVES.Dab: Деб
             MOVES.DoubleJam: Подвійний вниз
-            MOVES.Drop: Дроп
+            MOVES.Drop: Відпустити
             MOVES.Floss: Флосс
             MOVES.Fresh: Фреш
             MOVES.Clown: Гангнам
@@ -103,7 +103,7 @@ uk:
             MOVES.ClapHigh: Плескання вгорі
             MOVES.Dab: Деб
             MOVES.DoubleJam: Подвійний вниз
-            MOVES.Drop: Дроп
+            MOVES.Drop: Відпустити
             MOVES.Floss: Флосс
             MOVES.Fresh: Фреш
             MOVES.Clown: Гангнам
@@ -121,7 +121,7 @@ uk:
             MOVES.ClapHigh: Плескання вгорі
             MOVES.Dab: Деб
             MOVES.DoubleJam: Подвійний вниз
-            MOVES.Drop: Дроп
+            MOVES.Drop: Відпустити
             MOVES.Floss: Флосс
             MOVES.Fresh: Фреш
             MOVES.Clown: Гангнам
@@ -188,7 +188,7 @@ uk:
             MOVES.Dab: Деб
             MOVES.XFever: Диско
             MOVES.DoubleJam: Подвійний вниз
-            MOVES.Drop: Дроп
+            MOVES.Drop: Відпустити
             MOVES.Floss: Флосс
             MOVES.Fresh: Фреш
             MOVES.Clown: Гангнам
@@ -216,7 +216,7 @@ uk:
             MOVES.Dab: Деб
             MOVES.XFever: Диско
             MOVES.DoubleJam: Подвійний вниз
-            MOVES.Drop: Дроп
+            MOVES.Drop: Відпустити
             MOVES.Floss: Флосс
             MOVES.Fresh: Фреш
             MOVES.Clown: Гангнам
@@ -278,7 +278,7 @@ uk:
             MOVES.Clown: Гангнам
             MOVES.Dab: Деб
             MOVES.DoubleJam: Подвійний вниз
-            MOVES.Drop: Дроп
+            MOVES.Drop: Відпустити
             MOVES.Floss: Флосс
             MOVES.Fresh: Фреш
             MOVES.Roll: Хвиля
@@ -1730,7 +1730,7 @@ uk:
             MOVES.Clown: Гангнам
             MOVES.Dab: Деб
             MOVES.DoubleJam: Подвійний вниз
-            MOVES.Drop: Дроп
+            MOVES.Drop: Відпустити
             MOVES.Floss: Флосс
             MOVES.Fresh: Фреш
             MOVES.Roll: Хвиля

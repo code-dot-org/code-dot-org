@@ -228,22 +228,28 @@
           "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Mutați un sprite spre dreapta pe ecran. Când se stinge din partea dreaptă a ecranului, mutați-l înapoi în partea stângă a ecranului."
         },
         "CourseF_outbreak1": {
-          "move a sprite, changing its direction randomly": "mutați un sprite, schimbându-și direcția la întâmplare"
+          "move a sprite, changing its direction randomly": "mutați un sprite, schimbându-și direcția la întâmplare",
+          "gradually recover from sickness": "se recuperează treptat de boală"
         },
         "CourseF_outbreak1_-2022-2": {
-          "move a sprite, changing its direction randomly": "mutați un sprite, schimbându-și direcția la întâmplare"
+          "move a sprite, changing its direction randomly": "mutați un sprite, schimbându-și direcția la întâmplare",
+          "gradually recover from sickness": "se recuperează treptat de boală"
         },
         "CourseF_outbreak2": {
-          "move a sprite, changing its direction randomly": "mutați un sprite, schimbându-și direcția la întâmplare"
+          "move a sprite, changing its direction randomly": "mutați un sprite, schimbându-și direcția la întâmplare",
+          "gradually recover from sickness": "se recuperează treptat de boală"
         },
         "CourseF_outbreak2_-2022-2": {
-          "move a sprite, changing its direction randomly": "mutați un sprite, schimbându-și direcția la întâmplare"
+          "move a sprite, changing its direction randomly": "mutați un sprite, schimbându-și direcția la întâmplare",
+          "gradually recover from sickness": "se recuperează treptat de boală"
         },
         "CourseF_outbreak3": {
-          "move a sprite, changing its direction randomly": "mutați un sprite, schimbându-și direcția la întâmplare"
+          "move a sprite, changing its direction randomly": "mutați un sprite, schimbându-și direcția la întâmplare",
+          "gradually recover from sickness": "se recuperează treptat de boală"
         },
         "CourseF_outbreak3_-2022-2": {
-          "move a sprite, changing its direction randomly": "mutați un sprite, schimbându-și direcția la întâmplare"
+          "move a sprite, changing its direction randomly": "mutați un sprite, schimbându-și direcția la întâmplare",
+          "gradually recover from sickness": "se recuperează treptat de boală"
         },
         "CourseF_outbreak4": {
           "move a sprite, changing its direction randomly": "mutați un sprite, schimbându-și direcția la întâmplare",
@@ -256,7 +262,8 @@
           "move a sprite upwards across the screen": "mutați un sprite în sus pe ecran",
           "randomly change the size of a sprite": "schimba aleatoriu dimensiunea unui sprite",
           "move a sprite to the left across the screen": "mutați un sprite spre stânga pe ecran",
-          "move a sprite across the screen, reversing direction if it touches the edges": "mutați un sprite pe ecran, inversând direcția dacă atinge marginile"
+          "move a sprite across the screen, reversing direction if it touches the edges": "mutați un sprite pe ecran, inversând direcția dacă atinge marginile",
+          "gradually recover from sickness": "se recuperează treptat de boală"
         },
         "CourseF_outbreak4_-2022-2": {
           "move a sprite, changing its direction randomly": "mutați un sprite, schimbându-și direcția la întâmplare",
@@ -269,19 +276,24 @@
           "move a sprite upwards across the screen": "mutați un sprite în sus pe ecran",
           "randomly change the size of a sprite": "schimba aleatoriu dimensiunea unui sprite",
           "move a sprite to the left across the screen": "mutați un sprite spre stânga pe ecran",
-          "move a sprite across the screen, reversing direction if it touches the edges": "mutați un sprite pe ecran, inversând direcția dacă atinge marginile"
+          "move a sprite across the screen, reversing direction if it touches the edges": "mutați un sprite pe ecran, inversând direcția dacă atinge marginile",
+          "gradually recover from sickness": "se recuperează treptat de boală"
         },
         "CourseF_outbreak5": {
-          "move a sprite, changing its direction randomly": "mutați un sprite, schimbându-și direcția la întâmplare"
+          "move a sprite, changing its direction randomly": "mutați un sprite, schimbându-și direcția la întâmplare",
+          "gradually recover from sickness": "se recuperează treptat de boală"
         },
         "CourseF_outbreak5_-2022-2": {
-          "move a sprite, changing its direction randomly": "mutați un sprite, schimbându-și direcția la întâmplare"
+          "move a sprite, changing its direction randomly": "mutați un sprite, schimbându-și direcția la întâmplare",
+          "gradually recover from sickness": "se recuperează treptat de boală"
         },
         "CourseF_outbreak6": {
-          "move a sprite, changing its direction randomly": "mutați un sprite, schimbându-și direcția la întâmplare"
+          "move a sprite, changing its direction randomly": "mutați un sprite, schimbându-și direcția la întâmplare",
+          "gradually recover from sickness": "se recuperează treptat de boală"
         },
         "CourseF_outbreak6_-2022-2": {
-          "move a sprite, changing its direction randomly": "mutați un sprite, schimbându-și direcția la întâmplare"
+          "move a sprite, changing its direction randomly": "mutați un sprite, schimbându-și direcția la întâmplare",
+          "gradually recover from sickness": "se recuperează treptat de boală"
         },
         "CourseF_outbreak7": {
           "move a sprite, changing its direction randomly": "mutați un sprite, schimbându-și direcția la întâmplare",
@@ -294,7 +306,8 @@
           "move a sprite upwards across the screen": "mutați un sprite în sus pe ecran",
           "randomly change the size of a sprite": "schimba aleatoriu dimensiunea unui sprite",
           "move a sprite to the left across the screen": "mutați un sprite spre stânga pe ecran",
-          "move a sprite across the screen, reversing direction if it touches the edges": "mutați un sprite pe ecran, inversând direcția dacă atinge marginile"
+          "move a sprite across the screen, reversing direction if it touches the edges": "mutați un sprite pe ecran, inversând direcția dacă atinge marginile",
+          "gradually recover from sickness": "se recuperează treptat de boală"
         },
         "CourseF_outbreak7_-2022-2": {
           "move a sprite, changing its direction randomly": "mutați un sprite, schimbându-și direcția la întâmplare",
@@ -307,7 +320,8 @@
           "move a sprite upwards across the screen": "mutați un sprite în sus pe ecran",
           "randomly change the size of a sprite": "schimba aleatoriu dimensiunea unui sprite",
           "move a sprite to the left across the screen": "mutați un sprite spre stânga pe ecran",
-          "move a sprite across the screen, reversing direction if it touches the edges": "mutați un sprite pe ecran, inversând direcția dacă atinge marginile"
+          "move a sprite across the screen, reversing direction if it touches the edges": "mutați un sprite pe ecran, inversând direcția dacă atinge marginile",
+          "gradually recover from sickness": "se recuperează treptat de boală"
         },
         "CourseF_outbreak8": {
           "move a sprite, changing its direction randomly": "mutați un sprite, schimbându-și direcția la întâmplare",
@@ -320,7 +334,8 @@
           "move a sprite upwards across the screen": "mutați un sprite în sus pe ecran",
           "randomly change the size of a sprite": "schimba aleatoriu dimensiunea unui sprite",
           "move a sprite to the left across the screen": "mutați un sprite spre stânga pe ecran",
-          "move a sprite across the screen, reversing direction if it touches the edges": "mutați un sprite pe ecran, inversând direcția dacă atinge marginile"
+          "move a sprite across the screen, reversing direction if it touches the edges": "mutați un sprite pe ecran, inversând direcția dacă atinge marginile",
+          "gradually recover from sickness": "se recuperează treptat de boală"
         },
         "CourseF_outbreak8_-2022-2": {
           "move a sprite, changing its direction randomly": "mutați un sprite, schimbându-și direcția la întâmplare",
@@ -333,7 +348,8 @@
           "move a sprite upwards across the screen": "mutați un sprite în sus pe ecran",
           "randomly change the size of a sprite": "schimba aleatoriu dimensiunea unui sprite",
           "move a sprite to the left across the screen": "mutați un sprite spre stânga pe ecran",
-          "move a sprite across the screen, reversing direction if it touches the edges": "mutați un sprite pe ecran, inversând direcția dacă atinge marginile"
+          "move a sprite across the screen, reversing direction if it touches the edges": "mutați un sprite pe ecran, inversând direcția dacă atinge marginile",
+          "gradually recover from sickness": "se recuperează treptat de boală"
         },
         "Dance Party 2": {
           "rotate a sprite to its left": "roti un sprite la stânga",
@@ -1147,7 +1163,9 @@
           "move a sprite upwards across the screen": "mutați un sprite în sus pe ecran",
           "randomly change the size of a sprite": "schimba aleatoriu dimensiunea unui sprite",
           "move a sprite across the screen, reversing direction if it touches the edges": "mutați un sprite pe ecran, inversând direcția dacă atinge marginile",
-          "move a sprite if the user is pressing the arrow keys": "mutați un sprite dacă utilizatorul apasă tastele săgeți"
+          "move a sprite if the user is pressing the arrow keys": "mutați un sprite dacă utilizatorul apasă tastele săgeți",
+          "Move a sprite to the left across the screen. If it goes off the left side of the screen it moves to the right side of the screen.": "Mutați un sprite la stânga pe ecran. Dacă se stinge din partea stângă a ecranului, acesta se deplasează în partea dreaptă a ecranului.",
+          "randomly move the sprite up or down": "mutați aleatoriu sprite în sus sau în jos"
         },
         "courseF_apps_collector2022": {
           "move a sprite, changing its direction randomly": "mutați un sprite, schimbându-și direcția la întâmplare",
@@ -1161,7 +1179,9 @@
           "move a sprite upwards across the screen": "mutați un sprite în sus pe ecran",
           "randomly change the size of a sprite": "schimba aleatoriu dimensiunea unui sprite",
           "move a sprite across the screen, reversing direction if it touches the edges": "mutați un sprite pe ecran, inversând direcția dacă atinge marginile",
-          "move a sprite if the user is pressing the arrow keys": "mutați un sprite dacă utilizatorul apasă tastele săgeți"
+          "move a sprite if the user is pressing the arrow keys": "mutați un sprite dacă utilizatorul apasă tastele săgeți",
+          "Move a sprite to the left across the screen. If it goes off the left side of the screen it moves to the right side of the screen.": "Mutați un sprite la stânga pe ecran. Dacă se stinge din partea stângă a ecranului, acesta se deplasează în partea dreaptă a ecranului.",
+          "randomly move the sprite up or down": "mutați aleatoriu sprite în sus sau în jos"
         },
         "courseF_apps_collector_-2022-2": {
           "move a sprite, changing its direction randomly": "mutați un sprite, schimbându-și direcția la întâmplare",
@@ -1175,7 +1195,9 @@
           "move a sprite upwards across the screen": "mutați un sprite în sus pe ecran",
           "randomly change the size of a sprite": "schimba aleatoriu dimensiunea unui sprite",
           "move a sprite across the screen, reversing direction if it touches the edges": "mutați un sprite pe ecran, inversând direcția dacă atinge marginile",
-          "move a sprite if the user is pressing the arrow keys": "mutați un sprite dacă utilizatorul apasă tastele săgeți"
+          "move a sprite if the user is pressing the arrow keys": "mutați un sprite dacă utilizatorul apasă tastele săgeți",
+          "Move a sprite to the left across the screen. If it goes off the left side of the screen it moves to the right side of the screen.": "Mutați un sprite la stânga pe ecran. Dacă se stinge din partea stângă a ecranului, acesta se deplasează în partea dreaptă a ecranului.",
+          "randomly move the sprite up or down": "mutați aleatoriu sprite în sus sau în jos"
         },
         "courseF_apps_collector_drag_-2022-2": {
           "move a sprite, changing its direction randomly": "mutați un sprite, schimbându-și direcția la întâmplare",

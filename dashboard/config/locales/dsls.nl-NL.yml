@@ -11344,3 +11344,22 @@ nl-NL:
             niets ligt, en dat veroorzaakt een fout.
         questions:
         - {}
+      Test Contained Retriable Multi:
+        answers:
+        - text: '0'
+        - text: '1'
+        - text: '2'
+          correct: true
+        - text: '4'
+        questions:
+        - {}
+      test-single-multi-standalone-retriable:
+        answers:
+        - text: Er zal niets gebeuren.
+        - {}
+        - correct: true
+          feedback: Juist!
+        - {}
+        questions:
+        - text: Kijk eens goed naar onderstaande code. Wat zal er gebeuren als je
+            op `start` klikt?

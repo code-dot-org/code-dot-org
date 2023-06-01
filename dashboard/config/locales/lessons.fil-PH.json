@@ -152,6 +152,7 @@
           "student_overview": "Sa pagtatapos ng tutorial, magagawa mong i-extend ang isang proyekto na sinimulan mong gawin sa isang \"Piliin ang Sarili mong Pakikipagsapalaran\", \"Greeting Card\", o \"Personality Quiz\" na app. Maaari ka ring magpatuloy sa pagbuo ng higit pang mga proyektong itinatampok sa pahina ng code.org/applab.\n\nMagsaya sa pagkumpleto ng Hour of Code mo gamit ang App Lab!"
         },
         "hello-world-retro-2021/Hello World": {
+          "name": "Hello World: Retro",
           "overview": "Sa araling ito, matututunan ng mga mag-aaral ang mga pangunahing kaalaman sa computer science sa pamamagitan ng programming sa Sprite Lab. Isang tool ang Sprite Lab na magagamit mo upang bumuo ng mga mapanlikha at nakakatuwang proyekto. Matututo ang mga mag-aaral na lumikha at magbigay-buhay sa mga tiyanak at gawin silang interactive gamit ang mga event.\n\nMayroong maraming mga bersyon ng araling ito. Nagtuturo ang bawat bersyon ng parehong mga konsepto ngunit nagtatampok ng iba't ibang mga imahe upang maakit sa iba't ibang mga mag-aaral. Para sa higit pang impormasyon bisitahin ang [Hello World landing page.](https://code.org/helloworld)",
           "preparation": "-   Maglaro sa mga puzzle upang mahanap ang anumang mga potensyal na problema sa klase mo. - Gamitin ang mga mapagkukunan sa [CS Connections](https://code.org/educate/csc) upang gumawa ng plano sa higit pang pag-aaral ng computer science pagkatapos ng unang tutorial.",
           "purpose": "Inilaan ng araling ito upang ihanda ang mga mag-aaral na lumikha ng mga simpleng proyekto ng programming sa Sprite Lab. Gamit ang kasanayang ito, maaaring gumawa ng mga proyekto ang mga mag-aaral sa anumang paksa, tulad ng ibang paksa sa paaralan o isang bagay na personal na nauugnay sa kanila. Bisitahin ang [CS Connections](https://code.org/educate/csc) para sa mga ideya tungkol sa kung paano isama ang computer science sa ibang mga paksa.",
@@ -435,7 +436,11 @@
           "student_overview": "Ang pang-aapi ay hindi talaga mabuti. Ang araling ito ay magtuturo sa iyong tungkol sa kung ano pwede at hindi pwedeng sabihin online."
         },
         "coursef-2022/Introducing Sprite Lab": {
-          "name": "Ipinapakilala ang Sprite Lab"
+          "name": "Ipinapakilala ang Sprite Lab",
+          "overview": "Sa **context-setting** lesson na ito, tatalakayin ng mga mag-aaral ang papel ng mga computer at teknolohiya sa kanilang buhay, na tumutuon sa kung paano binibigyan ng mga app at tool ang mga user ng mga pagpipilian tungkol sa kung paano gamitin ang mga ito. Tutuklasin din ng mga mag-aaral ang mga app na katulad ng mga ginawa nila sa ibang pagkakataon.",
+          "preparation": "-   Tukuyin kung paano mag-login ang mga mag-aaral sa Code.org.\n-   Kung kinakailangan, gumawa ng Code.org account para sa mga mag-aaral.\n-   Italaga ang Pagpapakilala sa Sprite Lab sa mga mag-aaral.\n-   Mag-print ng mga kopya ng **\\*Pagtuklas ng Mga App** na worksheet (o i-post ang digital na bersiyon sa LMS mo).",
+          "purpose": "Ang unang aralin ay tungkol sa pagpapasigla sa mga mag-aaral tungkol sa kurso at pagkonekta ng kanilang sariling mga personal na interes sa computer science.",
+          "student_overview": "Tatalakayin mo ang papel ng mga computer at teknolohiya sa buhay mo na may pagtuon sa kung paano binibigyan ng mga app at tool ang mga user ng mga pagpipilian tungkol sa kung paano gamitin ang mga ito."
         },
         "coursef-2022/Making Sprites": {
           "name": "Paggawa ng mga Sprite"
@@ -3253,7 +3258,11 @@
           "name": "Musika"
         },
         "coursef-2021/lesson-6": {
-          "name": "Ipinapakilala ang Sprite Lab"
+          "name": "Ipinapakilala ang Sprite Lab",
+          "overview": "Sa **context-setting** lesson na ito, tatalakayin ng mga mag-aaral ang papel ng mga computer at teknolohiya sa kanilang buhay, na tumutuon sa kung paano binibigyan ng mga app at tool ang mga user ng mga pagpipilian tungkol sa kung paano gamitin ang mga ito. Tutuklasin din ng mga mag-aaral ang mga app na katulad ng mga ginawa nila sa ibang pagkakataon.",
+          "preparation": "-   Tukuyin kung paano mag-login ang mga mag-aaral sa Code.org.\n-   Kung kinakailangan, gumawa ng Code.org account para sa mga mag-aaral.\n-   Italaga ang Pagpapakilala sa Sprite Lab sa mga mag-aaral.\n-   Mag-print ng mga kopya ng **\\*Pagtuklas ng Mga App** na worksheet (o i-post ang digital na bersiyon sa LMS mo).",
+          "purpose": "Ang unang aralin ay tungkol sa pagpapasigla sa mga mag-aaral tungkol sa kurso at pagkonekta ng kanilang sariling mga personal na interes sa computer science.",
+          "student_overview": "Tatalakayin mo ang papel ng mga computer at teknolohiya sa buhay mo na may pagtuon sa kung paano binibigyan ng mga app at tool ang mga user ng mga pagpipilian tungkol sa kung paano gamitin ang mga ito."
         },
         "coursef-2021/lesson-7": {
           "name": "Paggawa ng mga Sprite"
