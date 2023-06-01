@@ -368,6 +368,10 @@ ul {
     gap: 1.5em;
 
     @media screen and (min-width: $width-sm) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media screen and (min-width: $width-md) {
       grid-template-columns: repeat(3, 1fr);
     }
 
