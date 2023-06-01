@@ -18,9 +18,11 @@ Scenario: Script Level Versions
   And I ensure droplet is in block mode
   And I switch to text mode
   And I add code "// comment 2" to ace editor
+  And I wait for the event loop to settle
   Then ace editor code is equal to "// comment 2// comment 1"
   And I press "runButton"
   And element ".project_updated_at" eventually contains text "Saved"
+  And I wait until jQuery Ajax requests are finished
 
   When I press "versions-header"
   And I wait until element "button:contains(Restore):eq(0)" is visible
@@ -29,6 +31,8 @@ Scenario: Script Level Versions
   And I click selector "button.btn-info:eq(0)" to load a new page
   And I wait for the page to fully load
   Then ace editor code is equal to "// comment 1"
+  And I wait until element "#workspace-header-span" is visible
+  And I wait for the event loop
   And element "#workspace-header-span" contains text "View only"
 
   When I am on "http://studio.code.org/s/allthethings/lessons/18/levels/1?noautoplay=true"
