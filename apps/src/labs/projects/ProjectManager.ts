@@ -197,8 +197,6 @@ export default class ProjectManager {
     );
   }
 
-  // On save success, listeners may want to know the updated channel,
-  // so we have a specific listener for that.
   addSaveSuccessListener(listener: (channel: Channel) => void) {
     this.saveSuccessListeners.push(listener);
   }

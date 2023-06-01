@@ -54,16 +54,7 @@ export default class MusicBlocklyWorkspace {
    * @param {*} container HTML element to inject the workspace into
    * @param {*} onBlockSpaceChange callback fired when any block space change events occur
    * @param {*} player reference to a {@link MusicPlayer}
-   * @param {*} startSources start sources for the current channel
    * @param {*} toolboxAllowList optional object with allowed toolbox entries
-   * @param {*} currentLevelId optional level id for the current level
-   * @param {*} currentScriptId optional script id for the current script
-   * @param {*} channelId optional channel id for the current channel
-   *
-   * Either currentLevelId or channelId must be provided. If currentLevelId is provided,
-   * currentScriptId may optionally be provided as well. If channelId is provided, the
-   * project manager will be created for that channel id. Otherwise, we will get the channel
-   * for the given level and script.
    */
   init(container, onBlockSpaceChange, player, toolboxAllowList) {
     this.container = container;

@@ -358,7 +358,7 @@ class UnconnectedMusicView extends React.Component {
   };
 
   // When the external system lets us know that the user changed level,
-  // we need up update our progress manager to reflect that.
+  // we need to update our progress manager to reflect that.
   goToPanel = () => {
     this.progressManager?.goToStep(this.props.currentLevelIndex);
 
