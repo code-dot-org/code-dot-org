@@ -297,6 +297,7 @@ const CurriculumCatalog = ({curriculaData, isEnglish}) => {
         <Button
           id="clear-filters"
           className={style.catalogClearFiltersButton}
+          type="button"
           onClick={handleClear}
           text={i18n.clearFilters()}
           styleAsText
