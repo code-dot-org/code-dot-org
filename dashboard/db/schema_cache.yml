@@ -937,7 +937,7 @@ columns:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: audit_data
     sql_type_metadata: *12
-    'null': false
+    'null': true
     default: 
     default_function: 
     collation: utf8_unicode_ci
