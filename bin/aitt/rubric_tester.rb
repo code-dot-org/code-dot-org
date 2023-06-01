@@ -11,7 +11,7 @@ require_relative './report'
 
 VALID_GRADES = ["Extensive Evidence", "Convincing Evidence", "Limited Evidence", "No Evidence"]
 
-SUPPORTED_MODELS = ['gpt-4', 'gpt-4-32k']
+SUPPORTED_MODELS = ['gpt-4', 'gpt-4-0314', 'gpt-4-32k', 'gpt-4-32k-0314']
 
 def command_line_options
   options = {
