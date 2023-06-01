@@ -4,7 +4,7 @@
   in_level_group ||= false
   left_align = local_assigns[:left_align]
   is_contained_level ||= false
-  enforce_allow_multiple_attempts = DCDO.get('enforce_allow_multiple_attempts', false)
+  enforce_allow_multiple_attempts = DCDO.get('enforce_allow_multiple_attempts', true)
   allow_multiple_attempts = enforce_allow_multiple_attempts ? level.allow_multiple_attempts? : !is_contained_level
   js_data = {
     response_count: @responses&.count || 0,
