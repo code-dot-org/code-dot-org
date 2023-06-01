@@ -60,7 +60,7 @@ function addPositionsToState(xmlBlocks, blockIdMap) {
  */
 export function positionBlocksOnWorkspace(
   workspace,
-  positionBlock = positionBlockWtihCursor,
+  positionBlock = positionBlockWithCursor,
   blocks = workspace.getTopBlocks(SORT_BY_POSITION)
 ) {
   if (!workspace.rendered) {
@@ -92,7 +92,7 @@ export function positionBlocksOnWorkspace(
  * @param {number} cursor.y - a y-coordinate for moving a block
  * @return {object} the cursor with updated coordinates
  */
-export function positionBlockWtihCursor(block, cursor) {
+export function positionBlockWithCursor(block, cursor) {
   addUnusedFrame(block);
   if (blockLocationUnset(block)) {
     block.moveTo(getNewLocation(block, cursor));
@@ -169,7 +169,7 @@ export function positionBlockXmlHelper(block, cursor) {
     y: y,
   });
 
-  positionBlockWtihCursor(block.blockly_block, cursor);
+  positionBlockWithCursor(block.blockly_block, cursor);
 }
 
 /**
