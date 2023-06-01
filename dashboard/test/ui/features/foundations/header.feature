@@ -44,6 +44,7 @@ Scenario: Signed out user in Spanish should see 3 header links
   Then check that I am on "http://code.org/"
   And I wait until cookie "language_" has the value "es"
   And I dismiss the language selector
+  And I wait for the event loop
   Given I am on "http://studio.code.org/courses"
   And I wait to see ".headerlinks"
   And I see "#header-non-en-courses"
