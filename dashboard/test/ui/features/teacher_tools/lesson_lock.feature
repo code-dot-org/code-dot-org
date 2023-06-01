@@ -27,6 +27,7 @@ Scenario: Readonly view does not show teacher only boxes
   # need to open lesson lock dialog for right lesson
   And I show lesson answers for students
   And I wait until element ".modal-backdrop" is gone
+  And I wait until jQuery Ajax requests are finished
 
   # now unlocked/submitted for student
 
