@@ -93,6 +93,8 @@ class User < ApplicationRecord
   #     of the data transfer agreement string the user to agreed to, for a given
   #     data_transfer_agreement_source.  This value should be bumped each time
   #     the corresponding user-facing string is updated.
+  #   gender_student_input: The original string input by the user during account creation.
+  #     The normalized single-character gender value is stored in the gender column.
   #   us_state: A 2 letter code United States state code the user has given us.
   serialized_attrs %w(
     ops_first_name
@@ -121,6 +123,9 @@ class User < ApplicationRecord
     section_attempts_last_reset
     share_teacher_email_regional_partner_opt_in
     last_verified_captcha_at
+    gender_student_input
+    gender_teacher_input
+    gender_third_party_input
     us_state
     country_code
   )
@@ -141,7 +146,7 @@ class User < ApplicationRecord
     :share_teacher_email_reg_partner_opt_in_radio_choice,
     :data_transfer_agreement_required,
     :raw_token,
-    :child_users
+    :child_users,
   )
 
   # Include default devise modules. Others available are:
@@ -254,6 +259,17 @@ class User < ApplicationRecord
   end
 
   validate :validate_us_state, on: :create
+
+  before_validation on: [:create, :update], if: -> {gender_teacher_input.present? && will_save_change_to_attribute?('properties')} do
+    self.gender = Policies::Gender.normalize gender_teacher_input
+  end
+
+  before_validation on: [:create, :update], if: -> {gender_student_input.present? && will_save_change_to_attribute?('properties')} do
+    gender_student_input.strip!
+    self.gender = Policies::Gender.normalize gender_student_input
+  end
+
+  validates :gender_student_input, length: {maximum: 50}
 
   def save_email_preference
     if teacher?
@@ -749,9 +765,9 @@ class User < ApplicationRecord
     omniauth_user = find_by_credential(type: auth.provider, id: auth.uid)
 
     unless omniauth_user
-      omniauth_user = create do |user|
-        initialize_new_oauth_user(user, auth, params)
-      end
+      omniauth_user = create
+      initialize_new_oauth_user(omniauth_user, auth, params)
+      omniauth_user.save
       SignUpTracking.log_sign_up_result(omniauth_user, session)
     end
 
@@ -795,6 +811,8 @@ class User < ApplicationRecord
       user.birthday = nil
       user.age = user_age
     end
+
+    user.gender_third_party_input = auth.info.gender
     user.gender = Policies::Gender.normalize auth.info.gender
   end
 
@@ -2026,6 +2044,7 @@ class User < ApplicationRecord
       hashed_email: hashed_email,
       user_type: user_type,
       gender: gender,
+      gender_teacher_input: gender_teacher_input,
       birthday: birthday,
       secret_words: secret_words,
       secret_picture_name: secret_picture&.name,
@@ -2594,7 +2613,7 @@ class User < ApplicationRecord
   end
 
   US_STATE_DROPDOWN_OPTIONS = {
-    '??' => I18n.t('signup_form.us_state_dropdown_options.not_a_state'),
+    '??' => I18n.t('signup_form.us_state_dropdown_options.other'),
     'AL' => 'Alabama', 'AK' => 'Alaska', 'AZ' => 'Arizona', 'AR' => 'Arkansas',
     'CA' => 'California', 'CO' => 'Colorado', 'CT' => 'Connecticut',
     'DE' => 'Delaware', 'FL' => 'Florida', 'GA' => 'Georgia', 'HI' => 'Hawaii',

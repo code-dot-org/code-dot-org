@@ -359,7 +359,7 @@ class RegistrationsControllerTest < ActionController::TestCase
       post :create, params: {user: teacher_params}
       mail = ActionMailer::Base.deliveries.first
       assert_equal I18n.t('teacher_mailer.new_teacher_subject', locale: 'es-MX'), mail.subject
-      assert_match /Hola/, mail.body.to_s
+      assert_match(/Hola/, mail.body.to_s)
     end
   end
 
@@ -568,5 +568,17 @@ class RegistrationsControllerTest < ActionController::TestCase
     assert_response :redirect
     assert_equal "??", user.us_state
     assert_equal "PR", user.country_code
+  end
+
+  test "student-entered gender is saved and properly sets the normalized gender value" do
+    student = create :student, gender_student_input: "female"
+    assert_equal "female", student.gender_student_input
+    assert_equal "f", student.gender
+    sign_in student
+
+    put :update, params: {user: {gender_student_input: "male"}}
+    student.reload
+    assert_equal "male", student.gender_student_input
+    assert_equal "m", student.gender
   end
 end
