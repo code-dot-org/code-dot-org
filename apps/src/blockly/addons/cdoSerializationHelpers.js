@@ -25,9 +25,9 @@ export function convertXmlToJson(xml) {
 
   const stateToLoad = Blockly.serialization.workspaces.save(tempWorkspace);
 
-  // Create a map of ids (key) and blocks (value).
+  // Create a map of ids (key) and block serializations (value).
   const blockIdMap = stateToLoad.blocks.blocks.reduce(
-    (map, block) => map.set(block.id, block),
+    (map, blockJson) => map.set(blockJson.id, blockJson),
     new Map()
   );
 
@@ -39,15 +39,15 @@ export function convertXmlToJson(xml) {
 /**
  * Adds x/y values from XML to JSON serialization.
  * @param {Array<Object>} xmlBlocks - an array of "block" objects containing a block and x/y coordinates
- * @param {Map<String, Object>} blockIdMap - a map of ids (keys) and blocks (values)
+ * @param {Map<String, Object>} blockIdMap - a map of ids (keys) and serialized blocks (values)
  */
 function addPositionsToState(xmlBlocks, blockIdMap) {
   xmlBlocks.forEach(xmlBlock => {
-    const block = blockIdMap.get(xmlBlock.blockly_block.id);
-    if (block) {
-      // Do not change block values if xmlBlock values are NaN (unspecified in XML)
-      block.x = xmlBlock.x || block.x;
-      block.y = xmlBlock.y || block.y;
+    const blockJson = blockIdMap.get(xmlBlock.blockly_block.id);
+    if (blockJson) {
+      // Do not change values if xmlBlock values are NaN (unspecified in XML)
+      blockJson.x = xmlBlock.x || blockJson.x;
+      blockJson.y = xmlBlock.y || blockJson.y;
     }
   });
 }
@@ -92,9 +92,9 @@ export function positionBlocksOnWorkspace(
  * @param {number} cursor.y - a y-coordinate for moving a block
  * @return {object} the cursor with updated coordinates
  */
-export function positionBlockWithCursor(block, cursor) {
+function positionBlockWithCursor(block, cursor) {
   addUnusedFrame(block);
-  if (blockLocationUnset(block)) {
+  if (isBlockLocationUnset(block)) {
     block.moveTo(getNewLocation(block, cursor));
     cursor.y += getCursorYAdjustment(block);
   }
@@ -132,12 +132,13 @@ function getCursorYAdjustment(block) {
     VERTICAL_SPACE_BETWEEN_BLOCKS + (blockHasFrameSvg ? SVG_FRAME_HEIGHT : 0);
   return blockHeight + blockVerticalPadding;
 }
+
 /**
  * Determines whether a block needs to be repositioned, based on its current position.
  * @param {Blockly.Block} block - the block being considered
  * @return {boolean} - true if the block is at the top corner of the workspace
  */
-function blockLocationUnset(block) {
+function isBlockLocationUnset(block) {
   const workspace = block.workspace;
   const isRTL = workspace.RTL;
   const {viewWidth = 0} = workspace.getMetrics();
