@@ -109,6 +109,7 @@ Feature: Using the teacher homepage sections feature
     And I wait until element "#script-title" is visible
     And element ".uitest-sectionselect" has value ""
 
+  @skip
   # TODO TEACH-509: Reenable with new section setup flow
   Scenario: Assign hidden unit to section
     Given I am on "http://studio.code.org/home"
