@@ -1,3 +1,4 @@
+- require 'cdo/cpa'
 - location = Geocoder.search(request.ip).try(:first)
 - country_code = location&.country_code.to_s.upcase
 - state_code = location&.state_code.to_s.upcase
