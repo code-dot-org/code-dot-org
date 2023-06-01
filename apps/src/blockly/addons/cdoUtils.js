@@ -4,8 +4,7 @@ import {APP_HEIGHT} from '@cdo/apps/p5lab/constants';
 import {SOUND_PREFIX} from '@cdo/apps/assetManagement/assetPrefix';
 import {
   convertXmlToJson,
-  positionBlock,
-  positionBlockLegacy,
+  positionBlockXmlHelper,
   positionBlocksOnWorkspace,
 } from './cdoSerializationHelpers';
 import experiments from '@cdo/apps/util/experiments';
@@ -23,10 +22,10 @@ export function loadBlocksToWorkspace(workspace, xml, stateToLoad) {
       stateToLoad = convertXmlToJson(xml);
     }
     Blockly.serialization.workspaces.load(stateToLoad, workspace);
-    positionBlocksOnWorkspace(workspace, positionBlock);
+    positionBlocksOnWorkspace(workspace);
   } else {
     const cdoXmlBlocks = Blockly.Xml.domToBlockSpace(workspace, xml);
-    positionBlocksOnWorkspace(workspace, positionBlockLegacy, cdoXmlBlocks);
+    positionBlocksOnWorkspace(workspace, positionBlockXmlHelper, cdoXmlBlocks);
   }
 }
 
