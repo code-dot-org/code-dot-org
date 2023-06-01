@@ -22,7 +22,7 @@ import locales from '@cdo/apps/redux/localesRedux';
  * due to timeout while processing so much data. Set this value to `true` to
  * enable all the stories.
  */
-const INCLUDE_LARGE_STORIES = true;
+const INCLUDE_LARGE_STORIES = false;
 
 const defaultExport = {
   title: 'ProgressTableView',
