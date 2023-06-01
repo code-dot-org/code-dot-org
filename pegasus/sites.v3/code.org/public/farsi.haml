@@ -6,48 +6,63 @@ theme: responsive_full_width
 %link{href: "/css/generated/design-system-pegasus.css", rel: "stylesheet"}
 %link{href: "/css/generated/farsi-styles.css", rel: "stylesheet"}
 
-%section.hero-banner-basic.bg-neutral-dark
-  .wrapper
-    %h1{style: "color: white"}
-      =hoc_s(:farsi_page_top_heading)
-    %h2.heading-lg{style: "color: white"}
-      =hoc_s(:farsi_page_top_heading_02)
-    %p{style: "color: white"}
-      =hoc_s(:farsi_page_top_desc)
-    %a{href: 'https://donate.code.org/CodeDotOrgInFarsi', class: "link-button", target: "_blank", rel: "noopener noreferrer"}
-      =hoc_s(:call_to_action_support_farsi)
-
 %section
   .wrapper
-    %h2=hoc_s(:farsi_timeline_heading)
-    = view :farsi_timeline
+    %h1=hoc_s(:farsi_page_top_heading)
+    %div.flex-container.justify-space-between.wrap
+      %div.col-60{style: "margin-bottom: 1em"}
+        %h2.heading-lg=hoc_s(:farsi_page_top_heading_02)
+        %p=hoc_s(:farsi_page_top_desc)
+        %a{href: 'https://donate.code.org/CodeDotOrgInFarsi', class: "link-button", target: "_blank", rel: "noopener noreferrer"}
+          =hoc_s(:call_to_action_support_farsi)
+      %div.col-33{style: "float:right"}
+        %img{src: "/images/farsi-page-students.jpg", alt: "", style: "width: 100%"}
+      .clear
 
 %section.bg-neutral-light
+  .wrapper
+    %h2 The Global Impact of Iranians in Education & Technology
+    %p=hoc_s(:farsi_page_global_desc_01)
+    %p=hoc_s(:farsi_page_global_desc_02)
+    %p=hoc_s(:farsi_page_global_desc_03)
+
+%section
   .wrapper
     %h2=hoc_s(:farsi_page_supporters_heading)
     %p.heading-sm
       =hoc_s(:farsi_page_supporters_desc)
     %ul.supporters-list
-      %li
-        Bita Daryabari
-      %li
-        Arash Ferdowsi
-      %li
-        Dara Khosrowshahi
-      %li
-        Shahrokh Mortazavi
-      %li
-        F. Francis Najafi
-      %li
-        Kate Nowrouzi
-      %li
-        Ali Partovi
-      %li
-        Anonymous (2)
+      %li Amidi Family
+      %li Nima Asgharbeygi
+      %li Nima & Cindi Badiey
+      %li Narges Baniasadi
+      %li Jeff Huber & Angel Vossough
+      %li Azadeh Khazraee
+      %li Milan Kordestani
+      %li Ashkan & Nansi Marsh
+      %li Mohsen Moazami
+      %li Ramtin Naimi
+      %li Steve & Shanna Nasiri
+      %li Babak Pahlavan & Arezou Azar
+      %li Hooman Radfar
+      %li Poorya Sabounchi & Newsha Sharifzadeh
+      %li Mehran Sahami
+      %li Darian & Hilary Shirazi
+      %li Parisa Tabriz
+      %li AmirAli & Maryam Talasaz
+      %li Sahar Tashakorinia
+      %li Leila Yari
+      %li Bobby Yazdani
+      %li Anonymous
     %hr.dark
     %p=hoc_s(:farsi_page_supporters_desc_02)
     %a{href: 'https://donate.code.org/CodeDotOrgInFarsi', class: "link-button", target: "_blank", rel: "noopener noreferrer"}
       =hoc_s(:call_to_action_support_farsi)
+
+%section.bg-neutral-light
+  .wrapper
+    %h2=hoc_s(:farsi_timeline_heading)
+    = view :farsi_timeline
 
 %section
   .wrapper
