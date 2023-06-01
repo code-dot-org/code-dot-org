@@ -12192,3 +12192,17 @@ en:
             * Learn about opportunities to connect with the broader CS community.
 
             **Suggested Time**: 70 minutes
+        musiclab:
+          lessons:
+            lesson-1:
+              name: Remix Projects
+          lesson_groups: {}
+          name: musiclab
+          title: Music Lab Test Lessons
+          description_audience: ''
+          description_short: ''
+          description: |-
+            Hi there! This is a special unit that Code.org uses for testing Music Lab. None of the lessons or levels in this unit are meant to be used in classrooms!
+
+            If you're not a code.org engineer but managed to discover this unit: congratulations! It's like you discovered a secret on our website! But if you're looking for more info about our curricula or tools, we recommend checking out https://code.org/educate/ instead.
+          student_description: ''
