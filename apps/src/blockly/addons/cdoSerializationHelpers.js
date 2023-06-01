@@ -17,7 +17,7 @@ const VERTICAL_SPACE_BETWEEN_BLOCKS = 10;
 export function convertXmlToJson(xml) {
   const tempWorkspace = new Blockly.Workspace();
 
-  // domToBlockSpace returns an array of "block" objects with the following property:
+  // domToBlockSpace returns an array of "block" objects with the following properties:
   //   blockly_block: the actual block object created by Blockly
   //   x: the x attribute found in <block/> element
   //   y: the y attribute found in <block/> element
