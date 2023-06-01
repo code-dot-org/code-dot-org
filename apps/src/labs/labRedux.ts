@@ -7,6 +7,12 @@ import {createAsyncThunk, createSlice, PayloadAction} from '@reduxjs/toolkit';
 import {Channel, ProjectManagerStorageType, Source} from './types';
 import LabRegistry from './LabRegistry';
 import ProjectManagerFactory from './projects/ProjectManagerFactory';
+import {ProjectManagerEvent} from './projects/ProjectManager';
+import {
+  setProjectUpdatedAt,
+  setProjectUpdatedError,
+  setProjectUpdatedSaving,
+} from '../code-studio/projectRedux';
 
 export interface LabState {
   isLoading: boolean;
@@ -26,29 +32,56 @@ const initialState: LabState = {
 export const setUpForLevel = createAsyncThunk(
   'lab/setUpForLevel',
   async (payload: {levelId: number; scriptId: number}, thunkAPI) => {
+    // Check for an existing project manager and clean it up, if it exists.
+    const existingProjectManager =
+      LabRegistry.getInstance().getProjectManager();
+    if (existingProjectManager) {
+      if (existingProjectManager.hasUnsavedChanges()) {
+        // Force a save with the existing code before changing levels if there are unsaved changes.
+        const state = thunkAPI.getState() as {lab: LabState};
+        if (state.lab.source) {
+          await existingProjectManager.save(state.lab.source, true);
+        }
+      }
+      // Clear out any remaining enqueued saves from the existing project manager.
+      existingProjectManager.destroy();
+    }
+    // Create a new project manager.
     const projectManager =
       await ProjectManagerFactory.getProjectManagerForLevel(
         ProjectManagerStorageType.REMOTE,
         payload.levelId,
         payload.scriptId
       );
+    // Only set the project manager and initiate load
+    // if this request hasn't been cancelled.
     if (thunkAPI.signal.aborted) {
       return;
     }
-    // Only set the project manager and initiate load
-    // if this request hasn't been cancelled.
     LabRegistry.getInstance().setProjectManager(projectManager);
     // set up event listeners
-    // load
+    projectManager.addEventListener(ProjectManagerEvent.SaveStart, () =>
+      thunkAPI.dispatch(setProjectUpdatedSaving())
+    );
+    projectManager.addEventListener(ProjectManagerEvent.SaveSuccess, () => {
+      const state = thunkAPI.getState() as {lab: LabState};
+      thunkAPI.dispatch(setProjectUpdatedAt(state.lab.channel?.updatedAt));
+    });
+    projectManager.addEventListener(ProjectManagerEvent.SaveFail, () =>
+      thunkAPI.dispatch(setProjectUpdatedError())
+    );
+    // load channel and source
     const projectResponse = await projectManager.load();
     if (!projectResponse.ok) {
       return thunkAPI.rejectWithValue(projectResponse);
     }
     const {source, channel} = await projectResponse.json();
+    // Only set channel and sources if the request has not been cancelled.
     if (thunkAPI.signal.aborted) {
       return;
     }
     console.log(`loaded sources and channel, storing in redux`);
+    console.log(channel);
     thunkAPI.dispatch(setChannel(channel));
     thunkAPI.dispatch(setSource(source));
   }

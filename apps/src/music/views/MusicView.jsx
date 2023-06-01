@@ -50,7 +50,7 @@ import {
   ProgressLevelType,
   getProgressLevelType,
 } from '@cdo/apps/code-studio/progressRedux';
-import {setIsLoading, setIsPageError} from '@cdo/apps/labs/labRedux';
+import {setIsLoading, setIsPageError, setSource} from '@cdo/apps/labs/labRedux';
 import Simple2Sequencer from '../player/sequencer/Simple2Sequencer';
 import MusicPlayerStubSequencer from '../player/sequencer/MusicPlayerStubSequencer';
 import {BlockMode} from '../constants';
@@ -116,6 +116,7 @@ class UnconnectedMusicView extends React.Component {
     setIsPageError: PropTypes.func,
     setLevelCount: PropTypes.func,
     source: PropTypes.object,
+    setSource: PropTypes.func,
   };
 
   constructor(props) {
@@ -366,7 +367,6 @@ class UnconnectedMusicView extends React.Component {
     let currentLevelIndexLoading;
 
     this.stopSong();
-    this.props.setIsLoading(true);
 
     do {
       currentLevelIndexLoading = this.props.currentLevelIndex;
@@ -375,17 +375,7 @@ class UnconnectedMusicView extends React.Component {
 
       this.setToolboxForProgress();
       this.setAllowedSoundsForProgress();
-
-      if (this.props.currentLevelId) {
-        // Change levels for the projects system. Only do this if we have a level.
-        await this.musicBlocklyWorkspace.changeLevels(
-          this.getStartSources(),
-          this.props.currentLevelId,
-          this.props.currentScriptId
-        );
-      }
     } while (currentLevelIndexLoading !== this.props.currentLevelIndex);
-    this.props.setIsLoading(false);
   };
 
   setToolboxForProgress = () => {
@@ -503,6 +493,7 @@ class UnconnectedMusicView extends React.Component {
         this.props.selectBlockId(e.newElementId);
       }
     }
+    this.props.setSource(this.musicBlocklyWorkspace.getCode());
 
     // This may no-op due to throttling.
     this.musicBlocklyWorkspace.saveCode();
@@ -798,6 +789,7 @@ const MusicView = connect(
     setProjectUpdatedError: () => dispatch(setProjectUpdatedError()),
     setIsLoading: isLoading => dispatch(setIsLoading(isLoading)),
     setIsPageError: isPageError => dispatch(setIsPageError(isPageError)),
+    setSource: source => dispatch(setSource(source)),
   })
 )(UnconnectedMusicView);
 
