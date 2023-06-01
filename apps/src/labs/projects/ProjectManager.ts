@@ -77,7 +77,7 @@ export default class ProjectManager {
   }
 
   hasUnsavedChanges(): boolean {
-    return this.sourceChanged() || this.channelChanged();
+    return this.sourceChanged();
   }
 
   // Shut down this project manager. All we do here is clear the existing
@@ -114,13 +114,13 @@ export default class ProjectManager {
     }
   }
 
+  // TODO: Add rename function. Rename sets the name on the channel.
+  // https://codedotorg.atlassian.net/browse/SL-891
+
   /**
    * Helper function to save a project, called either after a timeout or directly by save()
    * On a save, we check if there are unsaved changes. If there are none, we can skip the save.
-   * If only the source has changed, we save both the source and channel, as we want to update the
-   * lastUpdatedTime on the channel. If only the channel has changed, we skip saving the source and only
-   * save the channel.
-   * If we are saving both source and channel, only if the source save succeeds do we update the channel, as the
+   * Only if the source save succeeds do we update the channel, as the
    * channel is metadata about the project and we don't want to save it unless the source
    * save succeeded.
    * @returns a Response. If the save is successful, the response will be empty,
@@ -134,33 +134,26 @@ export default class ProjectManager {
     this.saveInProgress = true;
     this.nextSaveTime = Date.now() + this.saveInterval;
     this.executeSaveStartListeners();
-    const sourceChanged = this.sourceChanged();
-    const channelChanged = this.channelChanged();
-    // If neither source nor channel has actually changed, no need to save again.
-    if (!sourceChanged && !channelChanged) {
+    // If the source has not actually changed, no need to save again.
+    if (!this.sourceChanged()) {
       this.saveInProgress = false;
       return this.getNoopResponseAndSendSaveNoopEvent();
     }
-    // Only save the source if it has changed.
-    if (sourceChanged) {
-      const sourceResponse = await this.sourcesStore.save(
-        this.channelId,
-        this.sourceToSave
-      );
-      if (!sourceResponse.ok) {
-        this.saveInProgress = false;
-        this.executeSaveFailListeners(sourceResponse);
 
-        // TODO: Should we wrap this response in some way?
-        // Maybe add a more specific statusText to the response?
-        return sourceResponse;
-      }
-      this.lastSource = JSON.stringify(this.sourceToSave);
+    const sourceResponse = await this.sourcesStore.save(
+      this.channelId,
+      this.sourceToSave
+    );
+    if (!sourceResponse.ok) {
+      this.saveInProgress = false;
+      this.executeSaveFailListeners(sourceResponse);
+
+      // TODO: Should we wrap this response in some way?
+      // Maybe add a more specific statusText to the response?
+      return sourceResponse;
     }
+    this.lastSource = JSON.stringify(this.sourceToSave);
 
-    // Always save the channel--either the channel has changed and/or the source changed.
-    // Even if only the source changed, we still update the channel to modify the last
-    // updated time.
     const channelResponse = await this.channelsStore.save(this.channel);
     if (!channelResponse.ok) {
       this.saveInProgress = false;
@@ -253,10 +246,6 @@ export default class ProjectManager {
       return false;
     }
     return this.lastSource !== JSON.stringify(this.sourceToSave);
-  }
-
-  private channelChanged(): boolean {
-    return false;
   }
 
   private resetSaveState(): void {
