@@ -5,16 +5,35 @@
 #
 module InternationalOptInPeople
   partners = {
+    australia: ["Grok Academy"],
+    brazil: ["ENTER Tech Edu"],
     barbados: ["The Trust for the Americas"],
     belize: ["The Trust for the Americas"],
-    thailand: ["Aksorn"],
     colombia: ["Computadores para Educar"],
     chile: ["Fundacion Kodea", "Mineduc"],
-    paraguay: ["Paraguay Educa"],
-    malaysia: ["Malaysia Digital Economy Corporation"],
+    dominican_republic: ["The Trust for the Americas"],
+    india: [
+      "Asha Chennai", "Educational Initiatives", "Leadership for Equity", "Literacy India",
+      "NavGurukul Foundation for Social Welfare", "Nirmaan Organization", "Peepul", "Quest Alliance"
+    ],
+    indonesia: ["Coding Bee Academy"],
     israel: ["Wix.com"],
+    jamaica: ["The Trust for the Americas"],
+    kenya: ["STEAMLabs Africa"],
+    malaysia: ["Malaysia Digital Economy Corporation"],
+    maldives: ["Women in Tech Maldives"],
     mexico: ["Cuantrix"],
-    uzbekistan: ["IT Park"]
+    mongolia: ["Codercub"],
+    new_zealand: ["Pam Fergusson Charitable Trust T/A OMGTech!"],
+    paraguay: ["Paraguay Educa"],
+    portugal: ["DRE - Direção Regional de Educação (Madeira)"],
+    slovakia: ["Accenture / Informatika 2.0"],
+    south_korea: ["Future Class Network", "KISEF", "AIEDAP"],
+    spain: ["Generacion Code / Ewolucion apps"],
+    thailand: ["Aksorn"],
+    trinidad_and_tobago: ["The Trust for the Americas"],
+    uzbekistan: ["IT Park"],
+    vietnam: ["Vietnet-ICT"]
   }
 
   INTERNATIONAL_OPT_IN_PARTNERS = (partners.each_value do |partner_list|
