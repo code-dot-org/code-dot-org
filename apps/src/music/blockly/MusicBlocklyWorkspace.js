@@ -43,9 +43,6 @@ export default class MusicBlocklyWorkspace {
     this.triggerIdToStartType = {};
     this.lastExecutedEvents = null;
     this.channel = {};
-    // this.levelChangeManager = new LevelChangeManager(
-    //   this.resetProject.bind(this)
-    // );
   }
 
   triggerIdToEvent = id => `triggeredAtButton-${id}`;
@@ -439,11 +436,5 @@ export default class MusicBlocklyWorkspace {
   updateToolbox(allowList) {
     const toolbox = getToolbox(allowList);
     this.workspace.updateToolbox(toolbox);
-  }
-
-  addSaveEventListener(event, listener) {
-    LabRegistry.getInstance()
-      .getProjectManager()
-      .addEventListener(event, listener);
   }
 }
