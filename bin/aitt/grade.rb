@@ -76,11 +76,15 @@ class Grade
 
   # returns an array of hashes representing the AI's assessment, or nil if response_text is invalid.
   def get_tsv_data_if_valid(response_text, rubric, student_id, choice_index: nil)
+    choice_text = choice_index ? "Choice #{choice_index}: " : ''
+    unless response_text
+      puts "#{student_id} #{choice_text} Invalid response: empty response"
+      return nil
+    end
     tsv_data = parse_tsv(response_text.strip)
     validate_server_response(tsv_data, rubric)
     tsv_data.map(&:to_h)
   rescue InvalidResponseError => exception
-    choice_text = choice_index ? "Choice #{choice_index}: " : ''
     puts "#{student_id} #{choice_text} Invalid response: #{exception.message}\n#{response_text}}"
     nil
   end
