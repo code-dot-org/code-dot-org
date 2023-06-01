@@ -26,6 +26,7 @@ class CsvToSqlTable
 
   def import!
     ChatClient.log "Importing <b>#{@table}</b> table from <b>#{File.basename(@path)}</b>"
+    ChatClient.log "Executing csv_to_sql_table.import! on <b>#{`hostname`}. Stack trace: #{caller}<b>"
 
     # Starting with 1 means the first item's ID is 2 which matches the id to the line number of the item.
     at = 1
