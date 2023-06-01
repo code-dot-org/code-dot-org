@@ -217,7 +217,7 @@ en:
     parent_account_email_label: "Parent/Guardian Email"
     us_state: 'State'
     us_state_dropdown_options:
-      not_a_state: "I don't live in a US State"
+      other: "I live somewhere not listed here"
   school_info:
     title: 'School Information (optional)'
     school_country: 'School Country'
