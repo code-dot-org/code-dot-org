@@ -22,8 +22,15 @@ body {
 // Use these classes to change a section's background color
 section.bg-neutral-light { background-color: $neutral_light; }
 section.bg-neutral-dark { background-color: $neutral_dark; }
-section.bg-primary-light { background-color: rgba($brand_primary_light, .5); }
 section.bg-secondary { background-color: $brand_secondary_light; }
+section.bg-primary-light {
+  background-color: rgba($brand_primary_light, .5);
+
+  a { color: $neutral_dark !important;
+    &:hover { color: $brand_secondary_dark !important; }
+    &.link-button { color: $neutral_white !important; }
+  }
+}
 
 // Centers a block-level element
 .centered { text-align: center !important; }
