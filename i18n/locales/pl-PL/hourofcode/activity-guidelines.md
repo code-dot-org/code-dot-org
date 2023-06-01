@@ -78,9 +78,9 @@ Jeśli tworzysz zajęcia lub samouczek, który jest przeznaczony dla uczniów o 
 
 Celem Godziny Kodowania jest przekazanie początkującym dostępnego dla nich pierwszego "smaku" informatyki lub programowania. Ton powinien być następujący:
 
-- Każdy może uczyć się informatyki, bez względu na wiek, płeć, rasę czy sprawność/niepełnosprawność. 
+- Każdy może uczyć się informatyki, bez względu na wiek, płeć, rasę czy sprawność/niepełnosprawność.
 - Informatyka łączy się z wieloma dziedzinami i zainteresowaniami. Każdy powinien się jej uczyć!
-- Zachęcaj uczniów to stworzenia czegoś niepowtarzalnego, czym mogą się podzielić przed rodzicami/znajomymi albo online. 
+- Zachęcaj uczniów to stworzenia czegoś niepowtarzalnego, czym mogą się podzielić przed rodzicami/znajomymi albo online.
 
 Aktywiści powinni uczyć pojęć informatycznych takich, jak: pętle, wyrażenia warunkowe, szyfrowanie lub sposób działania Internetu. Na zajęciach można również uczyć, w jaki sposób informatyka łączy się z zawodami, wydarzeniami lub historią świata realnego. Na przykład, uczenie projektowania UX, aby tworzyć aplikacje przydatne dla odbiorców. Zniechęcamy do zajęć, które koncentrują się bardziej na składni programowania niż na pojęciach. Na przykład, będziemy uwzględniać, ale nie podkreślać zajęć, na których uczy się języka HTML. Podobnie zniechęcamy do prowadzenia lekcji programowania blokowego, na których nacisk kładzie się na opcje ustawień/zmian konfiguracji, zamiast na nauce, jak się modeluje algorytm lub proces.
 
@@ -122,7 +122,7 @@ Czego będziesz potrzebować:
 
 #### Dodatkowe rzeczy, które będą potrzebne do przedłożenia planów lekcji
 
-* Link to Twojego planu lekcji. To może być strona internetowa, link do dropboxa, Google drive lub podobna usługa. 
+* Link to Twojego planu lekcji. To może być strona internetowa, link do dropboxa, Google drive lub podobna usługa.
 * Jakie oprogramowanie i/lub sprzęt będą potrzebne nauczycielowi do realizacji Twojego planu lekcji (Scratch? Roboty? Nic?)
 
 #### Dodatkowe rzeczy, które będą potrzebne do przedłożenia zajęć online
@@ -181,7 +181,7 @@ Jeśli komitet weryfikujący przyzna zajęciom ocenę zero za jakość wykonania
 Ponadto, aby znaleźć się w wykazie, wszystkie zajęcia:
 
 - Muszą nadawać się dla uczniów szkół publicznych (nie można w nich przedstawiać broni palnej, nie mogą zawierać treści przeznaczonych dla osób dorosłych, nie mogą zawierać treści religijnych, itp.)
-- Nie mogą wymagać rejestracji 
+- Nie mogą wymagać rejestracji
 - Nie mogą być płatne (z wyjątkiem zajęć z robotyki, do których może być potrzebne nabycie robota/zestawu robota).
 
 W przypadku zajęć samodzielnych dla nowych nauczycieli i uczniów komisja oceniająca będzie sprawdzać, czy:
@@ -212,7 +212,7 @@ Możesz uwzględnić [logo Godziny Kodowania](https://hourofcode.com/us/promote/
 
 - Na jakich platformach i przeglądarkach samouczek działa najlepiej?
 - Czy działa na smartfonach? Tabletach?
-- Czy zalecasz programowanie w parach? 
+- Czy zalecasz programowanie w parach?
 - Rozważania dotyczące użycia w klasie? Przykładowo, jeśli są filmy wideo doradź nauczycielom, aby pokazali filmy wideo na ekranie projektora, aby cała klasa mogła je obejrzeć wspólnie
 
 **Włącz informacje zwrotne pod koniec zajęć.** (Na przykład: “Ukończyłeś 10 poziomów i dowiedziałeś się o pętlach! Świetnie Ci poszło!")
@@ -275,4 +275,4 @@ Prosimy o promocję swoich zajęć w swojej sieci! Przekieruj ich do swojej stro
 
 [**Powrót do góry**](#top)
 
-{{ signup_button }} <!-- Adding in specific year for 2022 per Eric for later fix on line 18 as site was not auto-udpating to correct year -->
+{{ signup_button }}

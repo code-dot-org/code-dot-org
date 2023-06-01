@@ -527,6 +527,15 @@
         "9183e5a7-1776-4ffb-a65b-730edea18bc3": {
           "description": "Aprender a se planejar para uma tarefa contínua."
         },
+        "0265cc40-2950-42f3-a457-7b967fa9c0d9": {
+          "description": "Explique a diferença entre informações pessoais e privadas."
+        },
+        "16baead5-8507-4681-94b1-0314783a5418": {
+          "description": "Explique por que é arriscado compartilhar informações privadas on-line."
+        },
+        "d4c584f8-36e7-471a-9b83-713ca5e4711a": {
+          "description": "Identifique os motivos pelos quais as pessoas compartilham informações sobre si mesmas on-line."
+        },
         "6f3e5897-b529-4f7a-a41f-83c11f7f03c5": {
           "description": "Crie novos sprites e atribua a eles fantasias e comportamentos."
         },
@@ -538,6 +547,12 @@
         },
         "884d4f4c-abd4-493c-8029-cde7399519f4": {
           "description": "Crie uma animação interativa utilizando fadas e eventos."
+        },
+        "41232751-173e-4eaa-9bc4-bb5b65957d03": {
+          "description": "Escolha quais informações sobre eles mesmos são seguras para compartilhar on-line."
+        },
+        "6a824aaa-b3b2-4c7f-b2f9-daed0835a2c5": {
+          "description": "Crie um programa de computador interativo que expresse quem eles são com texto e imagens personalizadas."
         },
         "62ffafea-c5f4-4942-b283-9462c41d52cd": {
           "description": "Identificar as vantagens do uso de uma estrutura de laço em vez da repetição manual."
@@ -601,6 +616,21 @@
         },
         "b92ee5de-79d3-4fd6-8bf6-e86e3dad779a": {
           "description": "Usar funções predeterminadas para concluir tarefas comumente repetidas."
+        },
+        "5fb6d430-a2bf-4d0b-b128-5592afc2d856": {
+          "description": "Melhore o design de um aplicativo existente abordando as necessidades de acessibilidade dos usuários."
+        },
+        "bb1f6fd9-3327-411d-b91e-d3b4e756fff3": {
+          "description": "Explique por que a acessibilidade é uma parte importante do design de um aplicativo para os usuários."
+        },
+        "fcecef31-84d0-4df2-80cd-f8641b06c24f": {
+          "description": "Descreva o impacto dos aplicativos móveis no mundo moderno."
+        },
+        "2c0ee6b8-608a-47b6-9093-dbab81b92cbf": {
+          "description": "Entenda seus próprios direitos em relação aos materiais que eles criaram"
+        },
+        "a8686006-16c5-4b08-94d2-32430cd6d77f": {
+          "description": "Interprete o compartilhamento ético de material protegido por direitos autorais versus o compartilhamento que não é ético."
         },
         "0c9da891-a9a1-4747-a7da-dc2c76462eb4": {
           "description": "Explicar como as limitações do sistema podem influenciar o design do projeto."
@@ -2084,6 +2114,9 @@
         "9ea5d8fd-1b7d-4655-b4b1-75fd09545838": {
           "description": "Compartilhar um artefato criativo com outros alunos."
         },
+        "a937dee9-2cd3-4978-8f88-09f8af577395": {
+          "description": "comece a fazer conexões sobre uma nova maneira de escrever programas"
+        },
         "88e512c1-9ce0-4aaf-9dab-e0f2716c73ae": {
           "description": "Defina “sprite” como um personagem ou objeto na tela que pode ser movido e alterado."
         },
@@ -2092,6 +2125,30 @@
         },
         "57a5eb7e-bd65-420e-b1b5-65a796565f9b": {
           "description": "Identificar ações que se correlacionem com eventos de entrada."
+        },
+        "ce28bc63-1bc8-4239-985b-43ff3a8b98ea": {
+          "description": "Crie uma animação interativa usando sprites, comportamentos e eventos."
+        },
+        "33b4a09f-5e7c-4e05-84e6-414b2424ef68": {
+          "description": "Identifique os motivos pelos quais as pessoas compartilham informações sobre si mesmas on-line."
+        },
+        "c89aa3e0-f0ba-4188-b2b3-39731a6d0fac": {
+          "description": "Explique a diferença entre informações pessoais e privadas."
+        },
+        "ffeaa29c-8d0a-47c0-be5b-275f8a01e138": {
+          "description": "Explique por que é arriscado compartilhar informações privadas on-line."
+        },
+        "c217a50f-4aa2-4eb7-998d-7d06b38bdd93": {
+          "description": "Escolha quais informações sobre eles mesmos são seguras para compartilhar on-line."
+        },
+        "3ab2d965-5fe5-4a1e-b745-8118e6815776": {
+          "description": "Crie um programa de computador interativo que expresse quem eles são com texto e imagens personalizadas."
+        },
+        "0ab15cd0-3d1b-48a6-8a93-53c87d679c05": {
+          "description": "Interprete o compartilhamento ético de material protegido por direitos autorais versus o compartilhamento que não é ético."
+        },
+        "0709575a-e9e6-4856-a4f4-02b290f86975": {
+          "description": "Entenda seus próprios direitos em relação aos materiais que eles criaram"
         },
         "5d061773-3d1d-4dc1-866b-66a878b9b5e4": {
           "description": "Identificar as vantagens do uso de uma estrutura de laço em vez da repetição manual."
@@ -2155,6 +2212,15 @@
         },
         "cff52f84-5090-495e-a37b-02cf8b666ad6": {
           "description": "Usar funções predeterminadas para concluir tarefas comumente repetidas."
+        },
+        "87094122-056f-4fa4-83b7-e3d6abb52e67": {
+          "description": "Descreva o impacto dos aplicativos móveis no mundo moderno."
+        },
+        "b672db1b-ee05-44b3-9f82-73b1b1f94e1a": {
+          "description": "Explique por que a acessibilidade é uma parte importante do design de um aplicativo para os usuários."
+        },
+        "3a5ae2ad-5774-4da7-b4e4-4e0aaeb02cbe": {
+          "description": "Melhore o design de um aplicativo existente abordando as necessidades de acessibilidade dos usuários."
         },
         "cc7b3a7a-21b5-4450-9b38-e85bb5c378bc": {
           "description": "Aprender a se planejar para uma tarefa contínua."

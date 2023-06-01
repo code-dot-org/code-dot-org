@@ -1,0 +1,39 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2023-06-01T00:27:52.000Z",
+  "level_num": "custom",
+  "user_id": 976,
+  "properties": {
+    "encrypted": "false",
+    "level_data": {
+      "text": "Base Mix",
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "id": "when-run-block",
+              "type": "when_run_simple2",
+              "x": 34,
+              "y": 34
+            }
+          ]
+        },
+        "variables": [
+          {
+            "name": "currentTime"
+          },
+          {
+            "name": "i"
+          }
+        ]
+      }
+    },
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2023-06-01 00:31:18 +0000\",\"changed\":[\"published\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

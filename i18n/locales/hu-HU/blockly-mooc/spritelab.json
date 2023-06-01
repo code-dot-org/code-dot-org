@@ -72,6 +72,7 @@
   "createNotDraggableSPrite": "Csak az eledel sprite-nak kell húzhatónak lenni. Távolítsd el a viselkedést a kedvenc háziállatodról.",
   "createTwoDraggableSprites": "A háziállatod eledel- és barát sprite-jának el kell kezdenie a „Húzható” viselkedést.",
   "createVariable": "Be kell állítanod egy változót. \n<xml>\n<block type=\"variables_set\">\n    <title name=\"VAR\">számláló</title>\n    <value name=\"VALUE\">\n      <block type=\"math_number\">\n        <title name=\"NUM\">0</title>\n      </block>\n    </value>\n  </block>\n  </xml>",
+  "cscAdaptationsRightArrowKey": "Figyelj arra, hogy a *„Futtatás”* gomb megnyomása után nyomj meg egy nyílbillentyűt. Kattints a játéktér alatt lévő narancssárga gombokra, vagy nyomd meg a billentyűket a billentyűzeten.",
   "debugBehaviors": "Van egy karakterekhez köthető hibád.",
   "debugEvents": "Van egy eseményekhez köthető hibád.",
   "debugGroups": "Van egy a sprite-csoportokhoz köthető hibád.",

@@ -2,13 +2,6 @@
   "ro-RO": {
     "data": {
       "course_offerings": {
-        "coursea": "Curs A",
-        "courseb": "Curs B",
-        "coursec": "Curs C",
-        "coursed": "Curs D",
-        "coursee": "Curs E",
-        "coursef": "Curs F",
-        "express": "Curs Expres",
         "csd": "Descoperiri în știința calculatoarelor",
         "csp": "Principiile științei calculatoarelor",
         "20-hour": "Introducere accelerată a cursului de informatică",
@@ -17,13 +10,13 @@
         "algebra": "Informatică în Algebră",
         "aquatic": "Minecraft: Voiaj Acvatic",
         "artist": "Artist",
-        "basketball": "Realizeaza un joc de baschet",
         "course1": "Curs 1",
         "course2": "Cursul 2",
         "course3": "Cursul 3",
         "course4": "Curs 4",
         "frozen": "Programati cu Anna și Elsa",
         "gumball": "Laboratorul Joaca Gumball",
+        "hero": "Minecraft: Călătoria eroului",
         "hourofcode": "Labirint Clasic",
         "iceage": "Laboratorul Joaca Ice Age",
         "infinity": "Laborator de joacă Disney Infinity",
@@ -32,7 +25,7 @@
         "outbreak": "Simulator Epidemie",
         "pixelation": "Pixelare",
         "playlab": "Laborator de Joacă",
-        "sports": "Propgrameaza propriul joc sport",
+        "sports": "Programează-ți propriul joc sportiv",
         "starwars": "Star Wars: Programarea unei galaxii",
         "starwarsblocks": "Star Wars: Programarea unei galaxii",
         "text-compression": "Comprimare de text",
@@ -51,7 +44,8 @@
         "soccer": "fotbal",
         "hello-world-space": "Bunā Lume: Spațiu",
         "hello-world-soccer": "Bunā Lume: Fotbal",
-        "playground": "loc de joacă"
+        "playground": "loc de joacă",
+        "design-process": "Procesul de design"
       }
     }
   }

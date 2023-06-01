@@ -96,7 +96,7 @@ describe('TeacherDashboardHeader', () => {
 
   it('renders button to old edit section details', () => {
     const wrapper = shallow(
-      <TeacherDashboardHeader {...DEFAULT_PROPS} userId={99} />
+      <TeacherDashboardHeader {...DEFAULT_PROPS} userId={-1} />
     );
     let editSectionButton = wrapper.findWhere(
       element =>

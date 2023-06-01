@@ -12452,3 +12452,26 @@ ms-MY:
           # Kejiranan Dalam Talian Saya
 
           ## Bagaimanakah anda pergi ke tempat dengan selamat secara dalam talian?
+      Test Contained Retriable Multi:
+        answers:
+        - text: '0'
+        - text: '1'
+        - text: '2'
+          correct: true
+        - text: '4'
+        questions:
+        - {}
+      test-single-multi-standalone-retriable:
+        answers:
+        - text: Tiada apa yang akan berlaku.
+          feedback: Salah. Rumpai bergolek akan mula bergolek.
+        - text: Rumpai bergolek akan terapung pada bahagian atas skrin.
+          feedback: Salah. Rumpai bergolek akan mula bergolek.
+        - text: Rumpai bergolek akan mula bergolek.
+          correct: true
+          feedback: Betul!
+        - text: Rumpai bergolek akan berkelip-kelip.
+          feedback: Salah. Rumpai bergolek akan mula bergolek.
+        questions:
+        - text: Perhatikan dengan teliti kod di bawah. Apakah yang akan berlaku selepas
+            anda mengklik "Jalankan"?

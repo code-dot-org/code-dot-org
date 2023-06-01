@@ -67,6 +67,7 @@ ms:
             dan konsep programming. Kursus ini direka untuk kegunaan di bilik darjah
             bagi gred K-8, tetapi ia adalah menyeronokkan untuk belajar di semua peringkat
             umur.
+          name: 20 jam
         edit-code:
           title: Mengedit kod
           description: Mengedit kod
@@ -2688,6 +2689,8 @@ ms:
             yang termasuk dalam unit.\n-   Terlibat dengan Makmal AI dan Makmal Aplikasi.\n-
             \  Terokai akhir projek bab.\n-   Buat rancangan untuk melaksanakan unit
             dengan pelajar anda.\n\n\\*\\* Masa yang dicadangkan:\\*\\* 120 minit"
+        ai-temp:
+          title: Cara AI Berfungsi
         pl-csd-summer-day1:
           lessons:
             lesson-3:
