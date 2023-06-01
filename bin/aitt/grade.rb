@@ -108,7 +108,9 @@ class Grade
     raise InvalidResponseError.new('invalid or missing key concept') unless rubric_key_concepts.sort == key_concepts_from_response.sort
 
     # 4. All entries in the Grade column are one of the valid values
-    raise InvalidResponseError.new('invalid grade value') unless tsv_data.all? {|row| VALID_GRADES.include?(row["Grade"])}
+    tsv_data.each do |row|
+      return [false, "invalid grade value: #{row['Grade']}"] unless VALID_GRADES.include?(row["Grade"])
+    end
   end
 
   # given a preprocessed list of choices returned by the AI, return a single consensus response.
