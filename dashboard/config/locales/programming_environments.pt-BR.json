@@ -217,6 +217,11 @@
                   "short_description": "Cria um botão na tela exibindo o texto fornecido e referenciado pelo id fornecido no local padrão (0,0)."
                 },
                 "onEvent": {
+                  "examples": {
+                    "Shrink and Grow": {
+                      "name": "Encolher e crescer"
+                    }
+                  },
                   "palette_params": {
                     "callback": {
                       "type": "Função"

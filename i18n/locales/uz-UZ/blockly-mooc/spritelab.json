@@ -75,7 +75,7 @@
   "cscAdaptationsMoveOctopusToPlant": "Ahtapotni o'simlikka tegizish uchun siljitish uchun o'q tugmalaridan foydalanishni unutmang, shunda u kostyumni aralashtirish uchun o'zgartiradi.",
   "cscAdaptationsNeedWhenClicked": "Siz xatti -harakatni qo'shganga o'xshaysiz, lekin sprite avval</code> blokni bosganda <code style=\"color:black; background-color:#6AF36C\">qo'shishni unutgansiz. Voqealar blokidan keyin xatti-harakatlar blokini qo'shganingizga ishonch hosil qiling.",
   "cscAdaptationsNight": "O'q</code> blok bosilganda <code style=\"color:black; background-color:#6AF36C\">ostida tungi fon qo'shganingizga ishonch hosil qiling.",
-  "cscAdaptationsSeaweed": "Ahtapotingiz tegib turgan dengiz o'tlari bilan bir xil rangda o'zgarayotganiga ishonch hosil qiling",
+  "cscAdaptationsRightArrowKey": "*\"Yugurish” * tugmasini bosgandan so'ng o'q tugmachasini bosganingizga ishonch hosil qiling. O'yin maydoni ostidagi to'q sariq tugmachalarni bosishingiz yoki klaviaturadagi tugmachalarni bosishingiz mumkin.",
   "cscAdaptationsSetBackground": "Orqa fonni o'rnatganingizga ishonch hosil qiling.",
   "cscAdaptationsSetBehavior": "Sprite-ning o'lchamini o'rnatganingizdan so'ng, sprite xatti-harakatlarini o'rnatganingizga ishonch hosil qiling.",
   "cscAdaptationsSetFastSpeed": "Gepard sprite tezligini tezlikka o'rnatganingizga ishonch hosil qiling.",
