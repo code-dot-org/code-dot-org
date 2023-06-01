@@ -81,15 +81,27 @@ export const LibraryValidator: ResponseValidator<LibraryJson> = response => {
 
 export type SoundType = 'beat' | 'bass' | 'lead' | 'fx';
 
+/**
+ * A single event in a {@link SampleSequence}
+ */
 export interface SequenceEvent {
-  beat: number;
-  note: number;
+  /** 1-indexed start position of this event, in 16th notes */
+  position: number;
+  /**
+   * The note value of this event, expressed as a numerical semitone
+   * offset from the project root note.
+   */
+  noteOffset: number;
+  /** Length of this event, in 16th notes */
   length: number;
 }
 
+/**
+ * A sequence of individual samples, used to programmaticaly
+ * generate sounds at the current key and BPM.
+ */
 export interface SampleSequence {
   instrument: string;
-  rootKey: number;
   events: SequenceEvent[];
 }
 

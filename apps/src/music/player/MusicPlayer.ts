@@ -301,14 +301,14 @@ export default class MusicPlayer {
     triggered: boolean,
     effects?: Effects
   ): SampleEvent[] {
-    const {instrument, rootKey, events} = sequence;
+    const {instrument, events} = sequence;
     const samples: SampleEvent[] = [];
 
     events.forEach(event => {
-      const tranposedNote = getTranposedNote(this.key, rootKey, event.note);
+      const tranposedNote = getTranposedNote(this.key, event.noteOffset);
       const sampleId = this.getSampleForNote(tranposedNote, instrument);
       if (sampleId !== null) {
-        const eventWhen = eventStart + (event.beat - 1) / 16;
+        const eventWhen = eventStart + (event.position - 1) / 16;
         const lengthSeconds = (event.length / 16) * this.secondsPerMeasure();
         samples.push({
           sampleId,
