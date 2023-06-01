@@ -87,7 +87,7 @@
   "cscAdaptationsMoveOctopusToPlant": "Vergiss nicht, deinen Oktopus mit den Pfeiltasten so zu bewegen, dass er die Pflanze berührt, sodass er das Kostüm wechselt und sich einfügt.",
   "cscAdaptationsNeedWhenClicked": "Es sieht so aus, als ob du ein Verhalten hinzugefügt hast, aber vergessen hast, eine <code style=\"color:black; background-color:#6AF36C\">hinzuzufügen, als Sprite zuerst auf</code> Block geklickt hat. Stellen Sie sicher, dass Sie den Verhaltensblock nach dem Eventblock hinzufügen.",
   "cscAdaptationsNight": "Stellen Sie sicher, dass Sie unter der <code style=\"color:black; background-color:#6AF36C\">einen nächtlichen Hintergrund hinzufügen, wenn der Pfeil</code> Block gedrückt hat.",
-  "cscAdaptationsSeaweed": "Achte darauf, dass dein Oktopus die gleiche Farbe annimmt wie der Seetang, den er berührt",
+  "cscAdaptationsRightArrowKey": "Achte darauf, dass du nach dem Drücken von \"Ausführen\" eine Pfeiltaste drückst. Du kannst auf die orangefarbenen Schaltflächen unter dem Spielbereich klicken oder die Tasten auf deiner Tastatur drücken.",
   "cscAdaptationsSetBackground": "Stellen Sie sicher, dass Sie einen Hintergrund festlegen.",
   "cscAdaptationsSetBehavior": "Stellen Sie sicher, dass Sie das Verhalten des Sprites festlegen, nachdem Sie die Größe des Sprites festgelegt haben.",
   "cscAdaptationsSetFastSpeed": "Stellen Sie sicher, dass Sie die Geschwindigkeit des Gepardensprites auf schnell einstellen.",

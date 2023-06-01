@@ -357,6 +357,13 @@
           "rubric_performance_level_2": "Viene creata una nuova matrice e memorizzata in una variabile, ma potrebbero esserci errori non correlati che impediscono la riproduzione di una nota quando si preme il pulsante destro.",
           "rubric_performance_level_3": "Viene creata una nuova matrice, ma non è memorizzata in un elemento oppure è vuota, quindi il programma non può funzionare come descritto.",
           "rubric_performance_level_4": "Nel programma non ci sono matrici."
+        },
+        "CSD U6 - Board Outputs - A_2222": {
+          "rubric_key_concept": "Rispondi all'input dell'utente usando il LED e il cicalino del Circuit Playground",
+          "rubric_performance_level_1": "Ogni pulsante corrisponde correttamente alla descrizione della sua emozione, utilizzando sia i blocchi del LED che del cicalino in ogni pulsante.\n",
+          "rubric_performance_level_2": "Ogni pulsante utilizza sia i blocchi del LED che del cicalino, ma i parametri potrebbero non corrispondere alla descrizione corretta (ad esempio: hanno tutti la stessa durata)",
+          "rubric_performance_level_3": "In alcuni pulsanti mancano interi blocchi del LED o del cicalino",
+          "rubric_performance_level_4": "Non sono stati aggiunti ulteriori blocchi del LED o del cicalino al programma"
         }
       }
     }

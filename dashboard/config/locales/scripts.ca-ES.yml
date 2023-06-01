@@ -143,6 +143,7 @@ ca:
           student_description: Aquest curs de 20 hores és una introducció als conceptes
             bàsics d'informàtica i programació. El curs ha estat dissenyat per impartir
             a alumnes de 1er d'ESO, però és divertit d'aprendre a qualsevol edat.
+          name: 20 hores
         edit-code:
           title: Edita el codi
           description: Edita el codi
@@ -11922,3 +11923,28 @@ ca:
           student_description: Aprendre a codificar amb sprites i variables, i discutir
             els impactes socials de la informàtica i Internet. Al final d'aquest curs,
             dissenyar i crear un projecte que puguis compartir amb amics i familiars.
+        self-paced-pl-csp2-2023:
+          title: 'Mòdul 2: Navegant per Code.org'
+        self-paced-pl-csp4-2023:
+          description: |-
+            En aquest mòdul, se li introduirà a pràctiques autèntiques de CS que els estudiants es comprometran al llarg de l'assignatura de principis de CS. Aquestes pràctiques inclouen la depuració, l'ús de recursos i la programació de parells. També explorareu el paper del professor dins d'una aula de principis CS i feu un pla de com donareu suport a l'aprenentatge dels estudiants mentre ensenyeu el curs.
+
+            **Vostè vol**:
+
+            -   Considerar el paper del professor en una aula de CS Principis.
+            -   Conèixer les pràctiques autèntiques de CS que els estudiants desenvoluparan al llarg de l'assignatura Principis CS.
+            -   Feu un pla de com donareu suport a l'aprenentatge dels estudiants a través de la diferenciació, l'avaluació continuada i la promoció d'una cultura d'inclusió.
+            -   Obteniu informació sobre les oportunitats per connectar-vos amb la comunitat CS més àmplia.
+
+            \*\* Temps suggerit: 70 minuts
+          student_description: |-
+            En aquest mòdul, se li introduirà a pràctiques autèntiques de CS que els estudiants es comprometran al llarg de l'assignatura de principis de CS. Aquestes pràctiques inclouen la depuració, l'ús de recursos i la programació de parells. També explorareu el paper del professor dins d'una aula de principis CS i feu un pla de com donareu suport a l'aprenentatge dels estudiants mentre ensenyeu el curs.
+
+            **Vostè vol**:
+
+            -   Considerar el paper del professor en una aula de CS Principis.
+            -   Conèixer les pràctiques autèntiques de CS que els estudiants desenvoluparan al llarg de l'assignatura Principis CS.
+            -   Feu un pla de com donareu suport a l'aprenentatge dels estudiants a través de la diferenciació, l'avaluació continuada i la promoció d'una cultura d'inclusió.
+            -   Obteniu informació sobre les oportunitats per connectar-vos amb la comunitat CS més àmplia.
+
+            \*\* Temps suggerit: 70 minuts

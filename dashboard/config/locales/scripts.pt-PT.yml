@@ -161,6 +161,7 @@ pt:
           student_description: Este curso de 20 horas apresenta o informática de núcleo
             e conceitos de programação. O curso é projetado para uso em salas de aula
             para os graus K-8, mas é divertido de aprender em todos os tempos.
+          name: 20 horas
         edit-code:
           title: Edite o código
           description: Edite o código

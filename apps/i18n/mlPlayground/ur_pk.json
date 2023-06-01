@@ -215,6 +215,13 @@
         }
       }
     },
+    "songs": {
+      "fields": {
+        "Artist": {
+          "id": "آرٹسٹ"
+        }
+      }
+    },
     "safari_toy": {
       "fields": {
         "people": {
