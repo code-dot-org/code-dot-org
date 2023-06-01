@@ -209,6 +209,10 @@ test:
   # It almost never makes sense to turn on the agent when running
   # unit, functional or integration tests or the like.
   monitor_mode: false
+  # Temporarily enable instrumentation for one specific Rake task which has
+  # been mysteriously executing outside the context of a build
+  rake:
+    tasks: ["seed:import_pegasus_data"]
 
 # Turn on the agent in production for 24x7 monitoring. NewRelic
 # testing shows an average performance impact of < 5 ms per
