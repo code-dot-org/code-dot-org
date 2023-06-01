@@ -983,6 +983,7 @@ mr-IN:
   dashboard_sections_table_secret: लॉगिन प्रकार
   dashboard_sections_table_grade: 'इयत्ता '
   dashboard_sections_table_course: 'कोर्स '
+  dashboard_sections_table_pairing_allowed: पेअर प्रोग्रामिंग
   dashboard_sections_table_stage_extras: 'अतिरिक्त स्टेज '
   dashboard_sections_table_students: विद्यार्थी
   dashboard_sections_table_code: विभागाचा कोड
