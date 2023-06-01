@@ -3,7 +3,7 @@ import {useSelector} from 'react-redux';
 import ProjectManagerFactory from '@cdo/apps/labs/projects/ProjectManagerFactory';
 import {ProjectManagerStorageType} from '@cdo/apps/labs/types';
 import LabRegistry from '../LabRegistry';
-import {setUpForLevel} from '../labRedux';
+import {loadProject, setUpForLevel} from '../labRedux';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
 const ProjectContainer: React.FunctionComponent<ProjectContainerProps> = ({
@@ -25,6 +25,11 @@ const ProjectContainer: React.FunctionComponent<ProjectContainerProps> = ({
     // If we have a channel id, create a project manager with that channel id.
     // Otherwise, dispatch an action which will create a
     // project manager for the current level id and script.
+
+    // The redux types are very complicated, so in order to re-use this variable
+    // we are defining it as any.
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    let promise: any;
     if (channelId) {
       LabRegistry.getInstance().setProjectManager(
         ProjectManagerFactory.getProjectManager(
@@ -32,14 +37,15 @@ const ProjectContainer: React.FunctionComponent<ProjectContainerProps> = ({
           channelId
         )
       );
+      promise = dispatch(loadProject());
     } else {
-      const promise = dispatch(
-        setUpForLevel({levelId: currentLevelId, scriptId})
-      );
-      return () => {
-        promise.abort();
-      };
+      promise = dispatch(setUpForLevel({levelId: currentLevelId, scriptId}));
     }
+    return () => {
+      // If we have an early return, we will abort the promise in progress.
+      // An early return could happen if the level is changed mid-load.
+      promise.abort();
+    };
   }, [channelId, currentLevelId, scriptId, dispatch]);
 
   return <>{children}</>;

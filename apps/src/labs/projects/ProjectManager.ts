@@ -14,13 +14,6 @@ import {SourcesStore} from './SourcesStore';
 import {ChannelsStore} from './ChannelsStore';
 import {Channel, Source} from '../types';
 
-export enum ProjectManagerEvent {
-  SaveStart,
-  SaveNoop,
-  SaveSuccess,
-  SaveFail,
-}
-
 export default class ProjectManager {
   channelId: string;
   sourcesStore: SourcesStore;
@@ -31,9 +24,10 @@ export default class ProjectManager {
   private readonly saveInterval: number = 30 * 1000; // 30 seconds
   private saveInProgress = false;
   private saveQueued = false;
-  private eventListeners: {
-    [key in keyof typeof ProjectManagerEvent]?: [(payload: object) => void];
-  } = {};
+  private saveSuccessListeners: ((channel: Channel) => void)[] = [];
+  private saveNoopListeners: ((channel?: Channel) => void)[] = [];
+  private saveFailListeners: ((response: Response) => void)[] = [];
+  private saveStartListeners: (() => void)[] = [];
   private lastSource: string | undefined;
   private channel: Channel | undefined;
   // Id of the last timeout we set on a save, or undefined if there is no current timeout.
@@ -75,7 +69,7 @@ export default class ProjectManager {
 
     this.channel = await channelResponse.json();
     const channelString = JSON.stringify(this.channel);
-    const project = {source, channelString};
+    const project = {source, channel: channelString};
     const blob = new Blob([JSON.stringify(project)], {
       type: 'application/json',
     });
@@ -139,7 +133,7 @@ export default class ProjectManager {
     this.resetSaveState();
     this.saveInProgress = true;
     this.nextSaveTime = Date.now() + this.saveInterval;
-    this.executeListeners(ProjectManagerEvent.SaveStart);
+    this.executeSaveStartListeners();
     const sourceChanged = this.sourceChanged();
     const channelChanged = this.channelChanged();
     // If neither source nor channel has actually changed, no need to save again.
@@ -155,9 +149,7 @@ export default class ProjectManager {
       );
       if (!sourceResponse.ok) {
         this.saveInProgress = false;
-        console.log(`save fail response`);
-        console.log(sourceResponse);
-        this.executeListeners(ProjectManagerEvent.SaveFail, sourceResponse);
+        this.executeSaveFailListeners(sourceResponse);
 
         // TODO: Should we wrap this response in some way?
         // Maybe add a more specific statusText to the response?
@@ -172,7 +164,7 @@ export default class ProjectManager {
     const channelResponse = await this.channelsStore.save(this.channel);
     if (!channelResponse.ok) {
       this.saveInProgress = false;
-      this.executeListeners(ProjectManagerEvent.SaveFail, channelResponse);
+      this.executeSaveFailListeners(channelResponse);
 
       // TODO: Should we wrap this response in some way?
       // Maybe add a more specific statusText to the response?
@@ -183,12 +175,8 @@ export default class ProjectManager {
 
     this.saveInProgress = false;
     this.lastSaveResponse = channelSaveResponse;
-    console.log(`save success response`);
-    console.log(channelSaveResponse);
-    this.executeListeners(
-      ProjectManagerEvent.SaveSuccess,
-      this.lastSaveResponse
-    );
+    this.channel = channelSaveResponse as Channel;
+    this.executeSaveSuccessListeners(this.channel);
     return new Response();
   }
 
@@ -216,19 +204,38 @@ export default class ProjectManager {
     );
   }
 
-  addEventListener(
-    type: ProjectManagerEvent,
-    listener: (status: object) => void
-  ) {
-    if (this.eventListeners[type]) {
-      this.eventListeners[type]?.push(listener);
-    } else {
-      this.eventListeners[type] = [listener];
-    }
+  // On save success, listeners may want to know the updated channel,
+  // so we have a specific listener for that.
+  addSaveSuccessListener(listener: (channel: Channel) => void) {
+    this.saveSuccessListeners.push(listener);
   }
 
-  private executeListeners(type: ProjectManagerEvent, payload: object = {}) {
-    this.eventListeners[type]?.forEach(listener => listener(payload));
+  addSaveNoopListener(listener: (channel?: Channel) => void) {
+    this.saveNoopListeners.push(listener);
+  }
+
+  addSaveFailListener(listener: (response: Response) => void) {
+    this.saveFailListeners.push(listener);
+  }
+
+  addSaveStartListener(listener: () => void) {
+    this.saveStartListeners.push(listener);
+  }
+
+  private executeSaveSuccessListeners(channel: Channel) {
+    this.saveSuccessListeners.forEach(listener => listener(channel));
+  }
+
+  private executeSaveNoopListeners(channel?: Channel) {
+    this.saveNoopListeners.forEach(listener => listener(channel));
+  }
+
+  private executeSaveFailListeners(response: Response) {
+    this.saveFailListeners.forEach(listener => listener(response));
+  }
+
+  private executeSaveStartListeners() {
+    this.saveStartListeners.forEach(listener => listener());
   }
 
   private getNoopResponse() {
@@ -237,7 +244,7 @@ export default class ProjectManager {
 
   private getNoopResponseAndSendSaveNoopEvent() {
     const noopResponse = this.getNoopResponse();
-    this.executeListeners(ProjectManagerEvent.SaveNoop, this.lastSaveResponse);
+    this.executeSaveNoopListeners(this.channel);
     return noopResponse;
   }
 

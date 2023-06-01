@@ -50,7 +50,12 @@ import {
   ProgressLevelType,
   getProgressLevelType,
 } from '@cdo/apps/code-studio/progressRedux';
-import {setIsLoading, setIsPageError, setSource} from '@cdo/apps/labs/labRedux';
+import {
+  setIsLoading,
+  setIsPageError,
+  setLabReadyForReload,
+  setSource,
+} from '@cdo/apps/labs/labRedux';
 import Simple2Sequencer from '../player/sequencer/Simple2Sequencer';
 import MusicPlayerStubSequencer from '../player/sequencer/MusicPlayerStubSequencer';
 import {BlockMode} from '../constants';
@@ -73,7 +78,6 @@ class UnconnectedMusicView extends React.Component {
   static propTypes = {
     progressLevelType: PropTypes.string,
     appConfig: PropTypes.object,
-    channelId: PropTypes.string,
 
     /**
      * True if Music Lab is being presented from the Incubator page (i.e. under /projectbeats),
@@ -117,6 +121,8 @@ class UnconnectedMusicView extends React.Component {
     setLevelCount: PropTypes.func,
     source: PropTypes.object,
     setSource: PropTypes.func,
+    labReadyForReload: PropTypes.bool,
+    setLabReadyForReload: PropTypes.func,
   };
 
   constructor(props) {
@@ -258,14 +264,15 @@ class UnconnectedMusicView extends React.Component {
     // If we just finished loading the lab, then we need to update the
     // sources in musicBlocklyWorkspace.
     if (
-      prevProps.isLabLoading &&
-      !this.props.isLabLoading &&
+      !prevProps.labReadyForReload &&
+      this.props.labReadyForReload &&
       (this.getStartSources() || this.props.source)
     ) {
       this.musicBlocklyWorkspace.loadSources(
         this.getStartSources(),
         this.props.source
       );
+      this.props.setLabReadyForReload(false);
     }
   }
 
@@ -350,7 +357,8 @@ class UnconnectedMusicView extends React.Component {
     }
   };
 
-  // When the external system lets us know that the user changed level.
+  // When the external system lets us know that the user changed level,
+  // we need up update our progress manager to reflect that.
   goToPanel = () => {
     this.progressManager?.goToStep(this.props.currentLevelIndex);
 
@@ -361,7 +369,7 @@ class UnconnectedMusicView extends React.Component {
     }
   };
 
-  // Handle a change in panel, including loading necessary data.
+  // Handle a change in panel for progress and toolbox.
   // Also handles a change in the active level index during this load.
   handlePanelChange = async () => {
     let currentLevelIndexLoading;
@@ -765,6 +773,7 @@ const MusicView = connect(
     currentScriptId: state.progress.scriptId,
     currentlyPlayingBlockIds: getCurrentlyPlayingBlockIds(state),
     source: state.lab.source,
+    labReadyForReload: state.lab.labReadyForReload,
   }),
   dispatch => ({
     setIsPlaying: isPlaying => dispatch(setIsPlaying(isPlaying)),
@@ -790,6 +799,8 @@ const MusicView = connect(
     setIsLoading: isLoading => dispatch(setIsLoading(isLoading)),
     setIsPageError: isPageError => dispatch(setIsPageError(isPageError)),
     setSource: source => dispatch(setSource(source)),
+    setLabReadyForReload: labReadyForReload =>
+      dispatch(setLabReadyForReload(labReadyForReload)),
   })
 )(UnconnectedMusicView);
 

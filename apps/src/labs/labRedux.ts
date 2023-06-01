@@ -7,11 +7,11 @@ import {createAsyncThunk, createSlice, PayloadAction} from '@reduxjs/toolkit';
 import {Channel, ProjectManagerStorageType, Source} from './types';
 import LabRegistry from './LabRegistry';
 import ProjectManagerFactory from './projects/ProjectManagerFactory';
-import {ProjectManagerEvent} from './projects/ProjectManager';
 import {
   setProjectUpdatedAt,
   setProjectUpdatedError,
   setProjectUpdatedSaving,
+  setProjectUpdatedSaved,
 } from '../code-studio/projectRedux';
 
 export interface LabState {
@@ -19,6 +19,7 @@ export interface LabState {
   isPageError: boolean;
   channel: Channel | undefined;
   source: Source | undefined;
+  labReadyForReload: boolean;
 }
 
 const initialState: LabState = {
@@ -26,6 +27,7 @@ const initialState: LabState = {
   isPageError: false,
   channel: undefined,
   source: undefined,
+  labReadyForReload: false,
 };
 
 // Thunks
@@ -59,18 +61,37 @@ export const setUpForLevel = createAsyncThunk(
       return;
     }
     LabRegistry.getInstance().setProjectManager(projectManager);
-    // set up event listeners
-    projectManager.addEventListener(ProjectManagerEvent.SaveStart, () =>
+    await thunkAPI.dispatch(loadProject());
+  }
+);
+
+export const loadProject = createAsyncThunk(
+  'lab/loadProject',
+  async (_: void, thunkAPI) => {
+    const projectManager = LabRegistry.getInstance().getProjectManager();
+    if (!projectManager) {
+      return thunkAPI.rejectWithValue('No project manager found.');
+    }
+    // Set up event listeners.
+    projectManager.addSaveStartListener(() =>
       thunkAPI.dispatch(setProjectUpdatedSaving())
     );
-    projectManager.addEventListener(ProjectManagerEvent.SaveSuccess, () => {
-      const state = thunkAPI.getState() as {lab: LabState};
-      thunkAPI.dispatch(setProjectUpdatedAt(state.lab.channel?.updatedAt));
+    projectManager.addSaveSuccessListener(channel => {
+      thunkAPI.dispatch(setProjectUpdatedAt(channel.updatedAt));
+      thunkAPI.dispatch(setChannel(channel));
     });
-    projectManager.addEventListener(ProjectManagerEvent.SaveFail, () =>
+    projectManager.addSaveNoopListener(channel => {
+      if (channel) {
+        thunkAPI.dispatch(setProjectUpdatedAt(channel.updatedAt));
+        thunkAPI.dispatch(setChannel(channel));
+      } else {
+        thunkAPI.dispatch(setProjectUpdatedSaved());
+      }
+    });
+    projectManager.addSaveFailListener(() =>
       thunkAPI.dispatch(setProjectUpdatedError())
     );
-    // load channel and source
+    // Load channel and source.
     const projectResponse = await projectManager.load();
     if (!projectResponse.ok) {
       return thunkAPI.rejectWithValue(projectResponse);
@@ -80,10 +101,9 @@ export const setUpForLevel = createAsyncThunk(
     if (thunkAPI.signal.aborted) {
       return;
     }
-    console.log(`loaded sources and channel, storing in redux`);
-    console.log(channel);
     thunkAPI.dispatch(setChannel(channel));
     thunkAPI.dispatch(setSource(source));
+    thunkAPI.dispatch(setLabReadyForReload(true));
   }
 );
 
@@ -103,24 +123,48 @@ const labSlice = createSlice({
     setSource(state, action: PayloadAction<Source>) {
       state.source = action.payload;
     },
+    setLabReadyForReload(state, action: PayloadAction<boolean>) {
+      state.labReadyForReload = action.payload;
+    },
   },
   extraReducers: builder => {
     builder.addCase(setUpForLevel.fulfilled, state => {
-      console.log('set up for level fulfilled');
       state.isLoading = false;
     });
-    builder.addCase(setUpForLevel.rejected, state => {
-      console.log('set up for level rejected');
-      state.isLoading = false;
+    builder.addCase(setUpForLevel.rejected, (state, action) => {
+      // If the set up was aborted, that means another load got started
+      // before we finished. Therefore we only set loading to false if the
+      // action was not aborted.
+      if (!action.meta.aborted) {
+        state.isLoading = false;
+      }
     });
     builder.addCase(setUpForLevel.pending, state => {
-      console.log('set up for level pending');
+      state.isLoading = true;
+    });
+    builder.addCase(loadProject.fulfilled, state => {
+      state.isLoading = false;
+    });
+    builder.addCase(loadProject.rejected, (state, action) => {
+      // If the set up was aborted, that means another load got started
+      // before we finished. Therefore we only set loading to false if the
+      // action was not aborted.
+      if (!action.meta.aborted) {
+        state.isLoading = false;
+      }
+    });
+    builder.addCase(loadProject.pending, state => {
       state.isLoading = true;
     });
   },
 });
 
-export const {setIsLoading, setIsPageError, setChannel, setSource} =
-  labSlice.actions;
+export const {
+  setIsLoading,
+  setIsPageError,
+  setChannel,
+  setSource,
+  setLabReadyForReload,
+} = labSlice.actions;
 
 export default labSlice.reducer;
