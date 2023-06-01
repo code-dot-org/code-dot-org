@@ -59,7 +59,7 @@ LabContainer.propTypes = {
   onError: PropTypes.func.isRequired,
 };
 
-const ErrorUI = () => (
+export const ErrorUI = () => (
   <div id="page-error-container" className={moduleStyles.pageErrorContainer}>
     <div id="page-error" className={moduleStyles.pageError}>
       <img
@@ -71,7 +71,7 @@ const ErrorUI = () => (
   </div>
 );
 
-const ErrorFallbackPage = () => (
+export const ErrorFallbackPage = () => (
   <div id="lab-container" className={moduleStyles.labContainer}>
     <ErrorUI />
   </div>
