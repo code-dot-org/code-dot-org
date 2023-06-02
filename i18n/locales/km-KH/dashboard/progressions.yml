@@ -14,6 +14,7 @@ km:
       Course E Artist Project: វគ្គសិក្សា​ E គម្រោងអ្នកសិល្បៈ
       Creating Sprites: ការបង្កើត Sprites
       Dance Crews: ក្រុមរាំ
+      Debugging: ការបំបាត់កំហុស (Debugging)
       Designing Screens with Code: ការរចនា​អេក្រង់​ជាមួយ​កូដ
       Drawing: គំនូរ
       Drawing Shapes: គំនូរគូរជារាង
@@ -32,23 +33,25 @@ km:
       Lists: បញ្ជី
       Make a Prediction: សូម​ធ្វើការ​ប៉ាន់ស្មាន
       'Minecraft: Hero''s Journey': 'Minecraft: ដំណើរផ្សងព្រេងរបស់វារៈបុរស'
+      'Mini-Project: Royal Battle': 'គម្រោងខ្នាតតូច៖ Royal Battle'
       More Buttons: ប៊ូតុងបន្ថែម
       Naming Variables: ការដាក់ឈ្មោះអថេរ
       Overview: ទិដ្ឋភាពទូទៅ 
       Plotting Shapes in Game Lab: គម្រោងរូបភាពនៅក្នុងបន្ទប់ល្បែងពិសោធន៍
-      Programming with Rey and BB-8: ការសរសេរកូដកម្មវិធិជាមួយ រៃសនិង ប៊ីប៊ី-8។
+      Programming with Rey and BB-8: សរសេរកម្មវិធីជាមួយ Rey និង BB-8
       Properties: ធាតុ
       Quarter Notes: រង្វាស់ ១ ភាគ ៤
       Random Numbers: លេខចៃដន្យ
       Sample Game: ល្បែងគំរូ
       Shapes and Parameters: រូបរាងនិងប៉ារ៉ាម៉ែត្រ
+      Skill Building: ការកសាងជំនាញ
       Speed it Up, Slow it Down: ជាន់ហ្គែរ ចាប់ហ្វ្រាំង
       Sprite Interactions: Sprite អន្តរកម្ម
       Sprite Properties: លក្ខណៈសម្បត្តិនៃ sprite
       Sprite Scenes: ឈុតឆាក ស្រ្ពៃយ៍
       Sprite Velocity: ល្បឿន Sprite
       The Draw Loop: ការគូររង្វិលជុំដដែលៗ
-      The Harvester: អ្នកច្រូតកាត់
+      The Harvester: អ្នកប្រមូលផល
       Using the Grid: ប្រើប្រាស់រូបក្រឡាចត្រង្គ
       Variables: អ​ថេរ
       Velocity and the Counter Pattern: ល្បឿននិងលំនាំរាប់
@@ -61,6 +64,7 @@ km:
       'Video: Introduction to the Draw Loop': 'វីដេអូ: សេចក្តីណែនាំអំពីការគូររង្វិលជុំដដែលៗ'
       'Video: Problem Solving Process': 'វីដេអូ៖ របៀបដោះស្រាយបញ្ហា'
       'Video: The Animation Tab': 'វីដេអូ: ផ្ទាំងគំនូរជីវចល'
+      'Video: The Collector': 'វីដេអូ៖ អ្នកប្រមូល'
       'Video: Velocity': 'វីដេអូ៖ ល្បឿន'
       'Video: What Makes a Computer, a Computer?': 'វីដេអូ: តើអ្វីទៅដែលធ្វើអោយកុំព្យូរទ័រទៅជាកុំព្យូរទ័រ?'
       Where'd They Go?: តើគេទៅណាអស់ទៅ?

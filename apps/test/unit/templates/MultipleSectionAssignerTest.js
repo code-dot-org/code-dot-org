@@ -140,8 +140,7 @@ describe('MultipleSectionsAssigner', () => {
     ).to.be.false;
   });
 
-  // this feels like a spot check - should we check another version where the participant audience is 'teacher'?
-  it('renders all assignable sections for the course', () => {
+  it('renders all student sections for a student course', () => {
     const wrapper = setUp({
       isOnCoursePage: true,
       courseId: assignedCourseANDUnitSection.courseId,
@@ -151,29 +150,61 @@ describe('MultipleSectionsAssigner', () => {
       courseVersionId: assignedCourseANDUnitSection.courseVersionId,
     });
 
-    // Check that courses 1-6 have TeacherOptions and course 7 does not.
-    for (let i = 0; i < wrapper.instance().props.sections.length; i++) {
-      wrapper.instance().props.sections[i].participantType ===
-      wrapper.instance().props.participantAudience
-        ? expect(
-            wrapper
-              .find('TeacherSectionOption')
-              .filterWhere(
-                n =>
-                  n.props().section.id ===
-                  wrapper.instance().props.sections[i].id
-              )
-          ).to.exist
-        : expect(
-            wrapper
-              .find('TeacherSectionOption')
-              .filterWhere(
-                n =>
-                  n.props().section.id ===
-                  wrapper.instance().props.sections[i].id
-              )
-          ).to.have.lengthOf(0);
-    }
+    const assignableSections = fakeTeacherSectionsForDropdown.filter(
+      section => section.participantType === 'student'
+    );
+    assignableSections.forEach(section => {
+      expect(
+        wrapper
+          .find('TeacherSectionOption')
+          .filterWhere(option => option.props().section.id === section.id)
+      ).to.exist;
+    });
+
+    const notAssignableSections = fakeTeacherSectionsForDropdown.filter(
+      section => section.participantType === 'teacher'
+    );
+    notAssignableSections.forEach(section => {
+      expect(
+        wrapper
+          .find('TeacherSectionOption')
+          .filterWhere(option => option.props().section.id === section.id)
+      ).to.have.lengthOf(0);
+    });
+  });
+
+  it('renders all teacher sections for a teacher course', () => {
+    const wrapper = setUp({
+      isOnCoursePage: true,
+      courseId: assignedCourseANDUnitSection.courseId,
+      isStandAloneUnit: false,
+      scriptId: assignedCourseANDUnitSection.unitId,
+      courseOfferingId: assignedCourseANDUnitSection.courseOfferingId,
+      courseVersionId: assignedCourseANDUnitSection.courseVersionId,
+      participantAudience: 'teacher',
+    });
+
+    const assignableSections = fakeTeacherSectionsForDropdown.filter(
+      section => section.participantType === 'teacher'
+    );
+    assignableSections.forEach(section => {
+      expect(
+        wrapper
+          .find('TeacherSectionOption')
+          .filterWhere(option => option.props().section.id === section.id)
+      ).to.exist;
+    });
+
+    const notAssignableSections = fakeTeacherSectionsForDropdown.filter(
+      section => section.participantType === 'student'
+    );
+    notAssignableSections.forEach(section => {
+      expect(
+        wrapper
+          .find('TeacherSectionOption')
+          .filterWhere(option => option.props().section.id === section.id)
+      ).to.have.lengthOf(0);
+    });
   });
 
   it('unassigns a unit but keeps the course assignment on the UNIT landing page of a non-standalone course when checkbox is unchecked', () => {

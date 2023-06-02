@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-05-17 21:50:20 UTC",
+    "serialized_at": "2023-05-19 22:07:18 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -161,12 +161,14 @@
     },
     {
       "key": "lesson-6",
-      "name": "Asynchronous Work",
+      "name": "Asynchronous Part 1",
       "absolute_position": 6,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
+        "overview": "**Purpose:**\nParticipants will explore data related to access to CS education. The activities in this asynchronous session will prepare participants to engage in the discussions in synchronous sessions.\n\n**Objectives:**\n\n* Participants define access, diversity, and inclusion.\n* Participants explore CS access data.\n* Participants complete any remaining challenges from the TLO.\n\n**Suggested time:** 60 minutes",
+        "student_overview": "**You will:**\n\n* Define access, diversity, and inclusion.\n* Explore CS access data.\n* Complete any remaining challenges from the TLO."
       },
       "seeding_key": {
         "lesson.key": "lesson-6",
@@ -254,6 +256,8 @@
       "has_lesson_plan": true,
       "relative_position": 11,
       "properties": {
+        "overview": "**Purpose:**\nThis session serves as a bridge to the Asynchronous Part 2 session. Participants will get an overview of the work they’ll be completing in their cohort’s shared slide deck.\n\n**Objectives:**\n\n* Participants prepare to engage in thinking about their classroom culture.\n* Participants know where they will complete their Asynchronous Work in their cohort’s shared slide deck.\n\n**Suggested time:** 10 minutes",
+        "student_overview": "**You will:**\n\n* Prepare to engage in thinking about your classroom culture.\n* Know where you will complete your Asynchronous Work in your cohort’s shared slide deck.\n"
       },
       "seeding_key": {
         "lesson.key": "lesson-11",
@@ -280,12 +284,14 @@
     },
     {
       "key": "lesson-13",
-      "name": "Asynchronous Work",
+      "name": "Asynchronous Part 2",
       "absolute_position": 13,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 13,
       "properties": {
+        "overview": "**Purpose:**\nParticipants will build on the synchronous Classroom Culture session by learning more about how to create an inclusive classroom culture.\n\n**Objectives:**\n\n* Participants create an artifact that represents a positive classroom culture.\n* Participants reflect on the role of the teacher in creating a positive classroom culture.\n* Participants get an overview of how teamwork is incorporated into the CS Discoveries curriculum.\n* Participants complete any remaining challenges from the TLOs.\n\n**Suggested time:** 60 minutes",
+        "student_overview": "**You will:**\n\n* Create an artifact that represents a positive classroom culture.\n* Reflect on the role of the teacher in creating a positive classroom culture.\n* Get an overview of how teamwork is incorporated into the CS Discoveries curriculum.\n* Complete any remaining challenges from the TLOs."
       },
       "seeding_key": {
         "lesson.key": "lesson-13",
@@ -501,6 +507,18 @@
       "seeding_key": {
         "lesson_activity.key": "ab8a4c08-7743-4e7d-a7ce-5614a0c98c40",
         "lesson.key": "User Centered Design - Define and Prepare",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "virtual-pl-csd-summer-day3"
+      }
+    },
+    {
+      "key": "be5fd475-ddf2-4d45-bc9d-f42e5e5160dd",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "be5fd475-ddf2-4d45-bc9d-f42e5e5160dd",
+        "lesson.key": "lesson-11",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "virtual-pl-csd-summer-day3"
       }
@@ -1405,6 +1423,16 @@
       }
     },
     {
+      "key": "fe96749b-b307-4f95-bda0-ae33af892e97",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "fe96749b-b307-4f95-bda0-ae33af892e97",
+        "lesson_activity.key": "be5fd475-ddf2-4d45-bc9d-f42e5e5160dd"
+      }
+    },
+    {
       "key": "d8cf8079-049d-4bd3-b7d1-7965c37dcc07",
       "position": 1,
       "properties": {
@@ -1655,6 +1683,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day3-Context1"
+        ],
         "progression": "Asynchronous Overview"
       },
       "bonus": false,
@@ -1677,6 +1708,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day3-UnderstandingContext2"
+        ],
         "progression": "Understanding Context"
       },
       "bonus": false,
@@ -1699,6 +1733,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day3-Context3"
+        ],
         "progression": "Understanding Context"
       },
       "bonus": false,
@@ -1721,6 +1758,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day3-Context4"
+        ],
         "progression": "Understanding Context"
       },
       "bonus": false,
@@ -1743,6 +1783,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day3-Context5"
+        ],
         "progression": "Understanding Context"
       },
       "bonus": false,
@@ -1765,6 +1808,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day3-Context6"
+        ],
         "progression": "Understanding Context"
       },
       "bonus": false,
@@ -1787,6 +1833,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day3-Levels1"
+        ],
         "progression": "Completing TLO Lesson Levels"
       },
       "bonus": false,
@@ -2188,6 +2237,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day3-Pt2"
+        ],
         "progression": "Asynchronous Work Overview"
       },
       "bonus": false,
@@ -2210,6 +2262,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day3-ClassroomCulture2"
+        ],
         "progression": "Classroom Culture"
       },
       "bonus": false,
@@ -2232,6 +2287,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day3-ClassroomCulture3"
+        ],
         "progression": "Classroom Culture"
       },
       "bonus": false,
@@ -2254,6 +2312,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day3-ClassroomCulture4"
+        ],
         "progression": "Classroom Culture"
       },
       "bonus": false,
@@ -2276,6 +2337,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day3-ClassroomCulture5"
+        ],
         "progression": "Classroom Culture"
       },
       "bonus": false,
@@ -2298,6 +2362,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day3-ClassroomCulture1"
+        ],
         "progression": "Classroom Culture"
       },
       "bonus": false,
@@ -2320,6 +2387,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day3-Pt2end"
+        ],
         "progression": "Completing TLO Levels"
       },
       "bonus": false,

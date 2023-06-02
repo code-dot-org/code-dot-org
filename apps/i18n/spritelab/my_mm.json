@@ -65,6 +65,7 @@
   "createDraggableSprite": "သင်ရဲ့ Pet's food spriteက 'being draggable' behaviorနဲ့စဖို့လိုပါတယ်.",
   "createNotDraggableSPrite": "သင်ရဲ့Food spriteတစ်ခုကပဲဆွဲဆန့်လိုရပါမယ်. သင်ရဲ့ အိမ်မွေးတိရစ္ဆာန်ကbehaviorကိုဖယ်လိုက်ပါ.",
   "createTwoDraggableSprites": "သင်ရဲ့ Pet's food and Friend Spriteက 'being draggable' behaviour စဖို့လိုပါတယ်",
+  "cscAdaptationsRightArrowKey": "*\"Run\"*ကို ဖိပြီးရင် Arrow keyတစ်ခုကိုဖိဖို့မမေ့ပါနဲ့. Play areaအောက်က လိမ္မော်ရောင် ခလုတ် သို့မဟုတ် သင့်keyboardပေါ်က keysတွေကိုနှိပ်နိုင်ပါတယ်",
   "debugBehaviors": "Behavioursနဲ့ပတ်သက်ပြီး အမှားတစ်ခုရှိနေပါတယ်",
   "debugEvents": "Eventsတွေနဲ့ပတ်သက်ပြီးအမှားရှိနေပါတယ်",
   "debugGroups": "Spriteအုပ်စုနဲ့ပတ်သက်ပြီးအမှားရှိနေပါတယ်",

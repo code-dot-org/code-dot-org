@@ -88,6 +88,7 @@ ro:
           description_short: Acest curs de 20 de ore acopera elementele de baza in informatica si concepte de programare in cadrul cursurilor 2-4.
           description_audience: Vârste 10 - 18 ani
           student_description: Acest curs de 20 de ore prezintă concepte de bază din informatică şi programare. Cursul este creat pentru utilizarea în săli de clasă pentru clasele K-8, dar este distractiv de învăţat la toate vârstele.
+          name: 20 ore
         edit-code:
           title: Editează Codul
           description: Editează Codul
@@ -3823,3 +3824,7 @@ ro:
           description_audience: 'Vârsta: 9-13 ani'
           description_short: Învățați toate conceptele din fundamentele informaticii şi creați propria dvs. artă, poveste sau joc.
         ey-ecosystems: {}
+        self-paced-pl-csp1-2023: {}
+        self-paced-pl-csp2-2023: {}
+        self-paced-pl-csp3-2023: {}
+        self-paced-pl-csp4-2023: {}

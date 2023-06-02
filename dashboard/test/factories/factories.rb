@@ -1686,4 +1686,29 @@ FactoryBot.define do
     data_synced {{db_Opt_In: 'No'}}
     data_synced_at {Time.now.utc}
   end
+
+  factory :lti_integration do
+    issuer {"issuer"}
+    client_id {"client_id"}
+    platform_name {"platform_name"}
+    auth_redirect_url {"auth_redirect_url"}
+    jwks_url {"jwks_url"}
+    access_token_url {"access_token_url"}
+  end
+
+  factory :lti_user_identity do
+    subject {"subject"}
+    lti_integration {create :lti_integration}
+    user {create :student}
+  end
+
+  factory :lti_deployment do
+    deployment_id {"deployment"}
+    lti_integration {create :lti_integration}
+  end
+
+  factory :parental_permission_request do
+    user {create :student}
+    parent_email {"contact@example.domain"}
+  end
 end

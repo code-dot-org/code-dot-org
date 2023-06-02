@@ -14151,3 +14151,22 @@ mn-MN:
             оролддог бөгөөд энэ нь алдаа үүсгэдэг.
         questions:
         - {}
+      Test Contained Retriable Multi:
+        answers:
+        - text: '0'
+        - text: '1'
+        - text: '2'
+          correct: true
+        - text: '4'
+        questions:
+        - {}
+      test-single-multi-standalone-retriable:
+        answers:
+        - text: Юу ч болохгүй.
+        - {}
+        - correct: true
+          feedback: Зөв!
+        - {}
+        questions:
+        - text: Доорх кодыг анхааралтай ажиглаарай. "Ажиллуулах" дээр дарахад юу болох
+            вэ?

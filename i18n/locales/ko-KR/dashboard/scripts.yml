@@ -77,6 +77,7 @@ ko:
           description_short: 이 20시간 과정은 과정2-4 에서의 핵심 컴퓨터과학(정보과학) 과 프로그래밍을 배웁니다.
           description_audience: 나이 10세-13세
           student_description: 이 20시간 과정은 컴퓨터과학(정보과학) 에서의 프로그래밍 기초 개념들을 소개합니다. 유치원~중2(K-8) 학생들을 대상으로 설계되어있지만, 연령에 상관없이 재미있게 배울 수 있습니다.
+          name: 20-시간
         edit-code:
           title: 코드 수정
           description: 코드 수정
@@ -4781,6 +4782,8 @@ ko:
           lesson_groups:
             lessonGroup-3:
               display_name: 인풋 및 아웃풋
+        ai-temp:
+          title: AI 작동방법
         focus-on-coding4b-2023:
           lesson_groups:
             lessonGroup-3:

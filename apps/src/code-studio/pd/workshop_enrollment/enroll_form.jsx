@@ -4,6 +4,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import $ from 'jquery';
+/* eslint-disable no-restricted-imports */
 import {
   FormGroup,
   Button,
@@ -11,6 +12,7 @@ import {
   HelpBlock,
   Alert,
 } from 'react-bootstrap';
+/* eslint-enable no-restricted-imports */
 import Select from 'react-select';
 import {ButtonList} from '../form_components/ButtonList.jsx';
 import FieldGroup from '../form_components/FieldGroup';

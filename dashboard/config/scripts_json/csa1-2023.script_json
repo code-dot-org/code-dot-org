@@ -12,11 +12,12 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-05-15 14:01:39 UTC",
+    "serialized_at": "2023-05-31 16:06:35 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -347,7 +348,7 @@
       "relative_position": 14,
       "properties": {
         "overview": "**How can I check if a condition is NOT `true` or execute a separate block of code if the condition is `false`?**\n\nStudents expand their knowledge of selection statements and Boolean values to learn how to use two-way selection statements and the NOT ( `!` ) logical operator. Students explore the functionality of two-way selection statements and the NOT ( `!` ) logical operator and consider how these can be used to expand or improve the algorithms they have developed so far. Students then practice using these to develop algorithms and create a new subclass of the `PainterPlus` class.",
-        "preparation": "* **(Optional)** Print copies of the U1L14 Guided Notes (one for each student)\n* Print copies of the CS Bingo Cards (one card for each student)\n* Print the CS Bingo Definitions resource and mix them up\n* Print copies of the Investigate: Selection and Logic handout (one for each pair of students)\n* Print copies of the Unit 1 Study Guide (one for each student)\n* Preview the *Two-Way Selection and NOT* video\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-1-14-two-way-selection-statements/37868) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* **(Optional)** Print copies of the U1L14 Guided Notes (one for each student)\n* Print copies of the CS Bingo Cards (one card for each student)\n* Print the CS Bingo Definitions resource and mix them up OR use [**this web-based version**](https://csabingo.up.railway.app/) to show the terms and definitions\n* Print copies of the Investigate: Selection and Logic handout (one for each pair of students)\n* Print copies of the Unit 1 Study Guide (one for each student)\n* Preview the *Two-Way Selection and NOT* video\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-1-14-two-way-selection-statements/37868) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I check if a condition is NOT `true` or execute a separate block of code if the condition is `false`?**\n\nSo far, you have used selection statements and Boolean values to execute a specific block of code if a condition is true. In this lesson, you learn how to use two-way selection statements and the NOT ( `!` ) logical operator. You explore the functionality of two-way selection statements and the NOT ( `!` ) logical operator and consider how these can be used to expand or improve the algorithms you have developed so far. You then practice using these to develop algorithms and create a new subclass of the `PainterPlus` class."
       },
       "seeding_key": {
@@ -9408,18 +9409,6 @@
       }
     },
     {
-      "name": "[KEY] Writing Algorithms",
-      "url": "https://docs.google.com/document/d/1vC8YSyvjxns_saIvd9TsUdJMX72YalxxC_MIQnwD7R4/edit?usp=sharing",
-      "key": "_key_writing_algorithms",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_writing_algorithms"
-      }
-    },
-    {
       "name": "All Resources",
       "url": "/s/csa1-2023/resources",
       "key": "all_resources_1",
@@ -9711,7 +9700,7 @@
     },
     {
       "name": "Inheritance",
-      "url": "https://youtu.be/H0htNTwNvrY",
+      "url": "https://youtu.be/vvDIkfaCy88",
       "key": "inheritance_1",
       "properties": {
         "audience": "Student",
@@ -11070,12 +11059,6 @@
       "seeding_key": {
         "lesson.key": "lesson-6",
         "resource.key": "_key_u1l7_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-6",
-        "resource.key": "_key_writing_algorithms"
       }
     },
     {

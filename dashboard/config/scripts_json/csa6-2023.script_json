@@ -12,11 +12,12 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-05-15 15:05:26 UTC",
+    "serialized_at": "2023-05-19 20:03:40 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -176,7 +177,7 @@
       "relative_position": 6,
       "properties": {
         "overview": "**How can I determine if a list of `String` objects are in alphabetical order?**\n\nStudents have previously learned how to use several of the methods in the String class. In this lesson, students explore the `compareTo()` method and discover how this method can be used to check if a list of `String` objects is in alphabetical order. They then practice using the `compareTo()` method to evaluate `String` objects and using the methods in the `String` class to implement algorithms.",
-        "preparation": "* **(Optional)** Print copies of the U6L6 Guided Notes (one for each student)\n* Print copies of the CS Bingo Cards (one card for each student)\n* Print the CS Bingo Definitions resource and mix them up\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-6-6-comparing-strings/37927) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* **(Optional)** Print copies of the U6L6 Guided Notes (one for each student)\n* Print copies of the CS Bingo Cards (one card for each student)\n* Print the CS Bingo Definitions resource and mix them up OR use [**this web-based version**](https://csabingo.up.railway.app/) to show the terms and definitions\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-6-6-comparing-strings/37927) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I determine if a list of `String` objects are in alphabetical order?**\n\nYou have previously learned how to use several of the methods in the `String` class. In this lesson, you explore the `compareTo()` method and discover how this method can be used to check if a list of `String` objects is in alphabetical order. You then practice using the `compareTo()` method to evaluate `String` objects and using the methods in the `String` class to implement algorithms."
       },
       "seeding_key": {
