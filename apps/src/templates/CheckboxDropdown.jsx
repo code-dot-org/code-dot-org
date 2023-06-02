@@ -19,21 +19,13 @@ const CheckboxDropdown = ({
   handleSelectAll,
   handleClearAll,
 }) => {
-  const onSelectAll = useCallback(
-    e => {
-      e?.preventDefault();
-      handleSelectAll(name);
-    },
-    [name, handleSelectAll]
-  );
+  const onSelectAll = useCallback(() => {
+    handleSelectAll(name);
+  }, [name, handleSelectAll]);
 
-  const onClearAll = useCallback(
-    e => {
-      e?.preventDefault();
-      handleClearAll(name);
-    },
-    [name, handleClearAll]
-  );
+  const onClearAll = useCallback(() => {
+    handleClearAll(name);
+  }, [name, handleClearAll]);
 
   return (
     <div id={`${name}-dropdown`} className="dropdown">
