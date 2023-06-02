@@ -7,20 +7,31 @@ te-IN:
   email: |2-
 
     ఇమెయిల్
+  hoc2014_students: విద్యార్థులు
+  hoc2014_teachers: టీచర్లు
   csedweek_map_search_reset: రీసెట్
   cded_sign_up: సైన్ అప్
   try_now: ఇప్పుడే ప్రయత్నించండి
+  congratulations: అభినందనలు!
+  view_course: కోర్సును చూడండి
   gender: లింగం
   studiobar_dance_title: డాన్స్ పార్టీ
   studiobar_flappy_title: ఫ్లాపీ కోడ్
   studiobar_frozen_title: అవర్ ఆఫ్ కోడ్
+  homepage_slot_text_teacher: టీచర్ డ్యాష్‌బోర్డ్
   homepage_slot_text_flappy: ఫ్లాపీ కోడ్
   homepage_action_text_sign_up: సైన్ అప్
   homepage_slot_text_title_hoc: అవర్ ఆఫ్ కోడ్
   homepage_slot_text_link_hoc: కోడ్ యొక్క అవర్ ప్రయత్నించండి
+  homepage_slot_text_title_students: విద్యార్థులు
+  homepage_slot_text_link_elementary: ప్రాథమిక పాఠశాల
+  homepage_slot_text_link_middle: మాధ్యమిక పాఠశాల
+  homepage_slot_text_link_high: ఉన్నత పాఠశాల
   homepage_slot_text_link_thebadguys: బాడ్ గైస్ తో కోడ్
   homepage_gallery_header: "%{project_count} మిలియన్ కి పైగా Code.org ప్రాజెక్టులు
     సృష్టించబడ్డాయి"
+  class_submission_level_middle_school: మాధ్యమిక పాఠశాల
+  class_submission_level_high_school: ఉన్నత పాఠశాల
   starwars_blocks_title: బ్లాక్స్
   minecraft_designer_description: Minecraft యొక్క మీ స్వంత వెర్షన్లో ప్రోగ్రామ్ జంతువులు
     మరియు ఇతర Minecraft జీవులు.
@@ -37,31 +48,65 @@ te-IN:
   volunteer_engineer_submission_field_email_preference_no: లేదు
   volunteer_engineer_submission_commitment_more: ఎక్కువ
   petition_age: వయస్సు
+  dashboard_landing_title: 'టీచర్ హోమ్ పేజీ '
+  dashboard_landing_welcome: కొత్త మరియు మెరుగుపడిన టీచర్ డ్యాష్‌బోర్డుకు స్వాగతం.
   dashboard_landing_print_certificates: ఈ కోర్సు పూర్తి చేసిన విద్యార్థులకు సర్టిఫికేట్లను
     ముద్రించండి
   dashboard_landing_educator_blog: మా విద్యావేత్త బ్లాగులో మా పదార్థాలకు వార్తలు మరియు
     నవీకరణల గురించి చదవండి
   dashboard_landing_video_player: మీ పాఠశాలలో మా క్రొత్త వీడియో ప్లేయర్ను పరీక్షించండి
+  dashboard_landing_teacher_forum: వృత్తినిపుణులైన అభ్యసన సమాజములో చేరండి.
   dashboard_action_cancel: రద్దు
   dashboard_action_delete_yes: అవును
   dashboard_action_delete_no: లేదు
+  dashboard_assessments_none: అనేక మంది ఉపాధ్యాయులు “వ్యూ ప్రోగ్రెస్” టాబ్ ఉపయోగించి
+    తమ విద్యార్థుల పురోగతిని కొలుస్తారు. ఒకవేళ మీ విద్యార్థులకు అదనపు మదింపులను ఇవ్వడానికి
+    మీకు ఆసక్తి ఉంటే, మీరు పాఠ్య ప్రణాళికలలో సిఫార్సు చేయబడిన ప్రశ్నలు మరియు అంశాలను
+    కనుగొనవచ్చు. ఇవి Code.org బయట చేయబడ్డాయి.
+  dashboard_navigation_home_page: 'టీచర్ హోమ్ పేజీ '
+  dashboard_navigation_section_teacher_progress: మీ కోర్సు పురోగతి
   dashboard_navigation_section_community: మద్దతు
+  dashboard_navigation_add_students: విద్యార్థులను జోడించండి
+  dashboard_navigation_lesson_plans_resources: పాఠాంశ ప్రణాళిక ప్రమాణాలు
   dashboard_progress_not_started: ప్రారంభించలేదు
   dashboard_progress_in_progress: పురోగతిలో ఉంది
   dashboard_progress_completed_too_many_blocks: పూర్తయింది, చాలా బ్లాక్స్
   dashboard_progress_completed_perfect: పూర్తయింది, పరిపూర్ణమైనది
   dashboard_progress_furthest_level_attempted: అవతలిస్థాయి ప్రయత్నించారు
   dashboard_progress_submitted: సమర్పించిన
+  dashboard_progress_pair_programming: పెయిర్ ప్రోగ్రామింగ్
+  dashboard_sections_table_section: 'సెక్షన్ '
+  dashboard_sections_table_grade: గ్రేడు
+  dashboard_sections_table_course: 'కోర్సు '
   dashboard_sections_table_pairing_allowed: పెయిర్ ప్రోగ్రామింగ్
+  dashboard_sections_table_stage_extras: 'దశ అదనాలు '
+  dashboard_sections_table_students: విద్యార్థులు
+  dashboard_sections_one_per_teacher: విద్యార్థులు ఒక్కో ఉపాధ్యాయునికి ఒక సెక్షన్
+    లో మాత్రమే ఉంటారు. మీ విద్యార్థులు ఈ క్రొత్ సెక్షన్ కు చేర్చబడతారు మరియు వారి
+    పాత సెక్షన్ వదిలివేస్తారు.
+  dashboard_sections_other_section: వేరే టీచర్
+  dashboard_sections_assign_hoc_script_msg: అవర్ ఆఫ్ కోడ్ కోసం మా సైట్ అందుకోబోయే
+    ట్రాఫిక్ పరిమాణం కారణంగా డిసెంబర్ 3 నుండి 11 వరకు మేము ఈ కోర్సులో పురోగతిని సేవ్
+    చేయలేకపోతామని దయచేసి గమనించండి. ఈ ట్యుటోరియల్ లోని మిగతావన్నీ కూడా ఊహించిన విధంగా
+    పని చేయడం కొనసాగిస్తాయి. మీరు ఇప్పటికీ కోర్సును కేటాయించవచ్చు మరియు పాల్గొనడానికై
+    విద్యార్థులందరికీ ధృవీకరణ పత్రాలను ఇవ్వవచ్చు. (అనేక మంది ఉపాధ్యాయులు <a href='%{certificate_url}'>వీటిని
+    ముందుగానే ప్రింట్ చేస్తారు</a>.) మేము సంవత్సరంలో ప్రతి రెండో వారంలో విద్యార్థుల
+    పురోగతిని సేవ్ చేస్తాము మరియు నివేదిస్తాము.
+  dashboard_error_other_section: ఒకవేళ మీరు మీ స్వంత సెక్షన్ల మధ్య విద్యార్థుల్ని
+    తరలిస్తుంటే, డ్రాప్‌డౌన్ నుండి మీ సెక్షన్ ఎంపిక చేయండి. మీ విద్యార్థులను వేరే
+    టీచర్ సెక్షన్ కి తరలించడానికి మాత్రమే 'ఇతర సెక్షన్' ఎంపిక చేయండి.
   dashboard_students_male: మగ
   dashboard_students_female: అవివాహిత
   dashboard_sequence: సీక్వెన్స్
+  dashboard_classroom_strategies: ఉపాధ్యాయుల కోసం తరగతి గది వ్యూహాలు
+  dashboard_teacher_worksheet: టీచర్ వర్క్‌షీట్
   dashboard_login_none: |2-
 
     ఇమెయిల్
   dashboard_stage: వేదిక
   dashboard_puzzle: పజిల్
   dashboard_correctness_correct: సరైనది
+  dashboard_teacher: టీచర్
   learn_more: ఇప్పుడే ప్రయత్నించండి
   learn_sign_up_button: సైన్ అప్
   hoc2014_try_new_tutorial: బీటాలో మా కొత్త అవర్ ఆఫ్ కోడ్ ట్యుటోరియల్ని ప్రయత్నించండి
@@ -72,6 +117,19 @@ te-IN:
   hourofcode_name: క్లాసిక్ మేజ్
   playlab_name: ల్యాబ్ ప్లే
   infinity_name: ఇన్ఫినిటీ ప్లే ల్యాబ్
+  artist_name: కళాకారుడు
+  coursea-draft_name: కోర్సు A.
+  coursea_name: కోర్సు A.
+  courseb-draft_name: కోర్సు B
+  courseb_name: కోర్సు B
+  coursec-draft_name: కోర్సు C
+  coursec_name: కోర్సు C
+  coursed-draft_name: కోర్సు D
+  coursed_name: కోర్సు D
+  coursee-draft_name: కోర్సు E
+  coursee_name: కోర్సు E
+  coursef-draft_name: కోర్సు F
+  coursef_name: కోర్సు F
   accelerated_name: వేగవంతమైన కోర్సు
   20-hour_name: వేగవంతమైన కోర్సు
   classicmaze_name: క్లాసిక్ మేజ్
@@ -79,6 +137,11 @@ te-IN:
   applab_name: యాప్ ల్యాబ్
   gamelab_name: గేమ్ ల్యాబ్
   applab_gradelevel: వయస్సు 13+
+  codehs_gradelevel: ఉన్నత పాఠశాల
+  codecademy_gradelevel: ఉన్నత పాఠశాల
+  processing_gradelevel: ఉన్నత పాఠశాల
+  makeschool_gradelevel: ఉన్నత పాఠశాల
+  touchdevelop_gradelevel: ఉన్నత పాఠశాల
   thinkersmithspanish_platformtext: అన్‌ప్లగ్డ్
   thinkersmith_platformtext: అన్‌ప్లగ్డ్
   condcards_platformtext: అన్‌ప్లగ్డ్
@@ -87,6 +150,12 @@ te-IN:
   projguts_platformtext: అన్‌ప్లగ్డ్
   infinity_shortdescription: డిస్నీ ఇన్ఫినిటీ పాత్రలు నటించిన కథ లేదా ఆటను సృష్టించడానికి
     ప్లే ల్యాబ్ ఉపయోగించండి.
+  codecademy_beyond_gradelevel: ఉన్నత పాఠశాల
+  hacketyhack_beyond_gradelevel: ఉన్నత పాఠశాల
+  makeschool_beyond_gradelevel: ఉన్నత పాఠశాల
+  touchdevelop_beyond_gradelevel: ఉన్నత పాఠశాల
+  codehs_beyond_gradelevel: ఉన్నత పాఠశాల
+  processing_beyond_gradelevel: ఉన్నత పాఠశాల
   compatibility_unsupported_browser_markdown: మీ బ్రౌజర్కు మద్దతు లేదు. దయచేసి మీ
     బ్రౌజర్ను [మా మద్దతు ఉన్న బ్రౌజర్లలో ఒకటి] (%{supported_browsers_url}) కు అప్గ్రేడ్
     చేయండి. మీరు పేజీని చూడటానికి ప్రయత్నించవచ్చు, కానీ కార్యాచరణ విచ్ఛిన్నమవుతుందని
@@ -121,6 +190,7 @@ te-IN:
   header_teach: నేర్పండి
   header_help_us: మాకు సహాయం చెయ్యండి
   header_about: పరియచం
+  header_teacher_community: ఉపాధ్యాయ సమాజం
   header_help_support: 'సహాయం మరియు మద్దతు '
   header_report_bug: ఒక సమస్యను రిపోర్టు చేయండి
   header_legal_privacy: గోప్యతా పాలసీ
@@ -203,6 +273,7 @@ te-IN:
   footer_partners: భాగస్వాములు
   footer_support: మద్దతు
   footer_terms: నిబంధనలు
+  ai_for_oceans: AI ఫర్ ఓషన్స్
   ai_activity: కార్యాచరణ
   outbreak_tile_subtitle: మాన్‌స్టర్ టౌన్‌కు ఒక వైరస్ సోకింది! వ్యాప్తి సిములేటర్‌ను
     కోడ్ చేయండి మరియు మాన్‌స్టర్ టౌన్ పొరుగువారికి ఏమి జరగబోతుందో అంచనాలు వేయండి.

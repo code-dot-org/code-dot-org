@@ -79,9 +79,9 @@ Si creas una actividad o tutorial diseñado para estudiantes con necesidades esp
 
 El objetivo de una Hora del Código es que los principiantes puedan tener un primer acercamiento a las ciencias de la computación o a la programación. El tono debería ser que:
 
-- Todos pueden aprender ciencias de la computación, independientemente de su edad, género o raza. 
+- Todos pueden aprender ciencias de la computación, independientemente de su edad, género o raza.
 - Las ciencias de la computación están conectadas a una amplia variedad de campos e intereses. ¡Todos deberían aprenderlas!
-- Anima a los estudiantes a crear algo único que puedan compartir con amigos o familiares, o en línea. 
+- Anima a los estudiantes a crear algo único que puedan compartir con amigos o familiares, o en línea.
 
 El objetivo de una Hora del Código es que los principiantes puedan tener un primer acercamiento a las ciencias de la computación o a la programación. El tono debería ser que: Por ejemplo, enseñar el diseño de la experiencia de usuario para crear aplicaciones que tengan sentido para una audiencia o causa específica. Desalentamos las actividades que se centran en la sintaxis de la programación en lugar de los conceptos. Por ejemplo, enumeraremos, pero no destacaremos, las actividades que enseñan HTML. Del mismo modo, desaconsejamos las lecciones de programación en bloque que se centran en establecer o cambiar las opciones de configuración en lugar de aprender a modelar un algoritmo o proceso.
 
@@ -123,7 +123,7 @@ Qué necesitas:
 
 #### Cosas adicionales que necesitarás cuando envíes planes de lecciones
 
-* Enlace a tu plan de estudios. Puede ser una página web, un enlace de Dropbox, Google Drive o un servicio similar. 
+* Enlace a tu plan de estudios. Puede ser una página web, un enlace de Dropbox, Google Drive o un servicio similar.
 * ¿Qué software y/o hardware necesitará el profesor para realizar su plan de estudios (Scratch? ¿Robots? ¿Ninguno?)
 
 #### Otras cosas que necesitarás cuando envíes actividades en línea
@@ -182,7 +182,7 @@ Si el comité de revisión califica la actividad como nula en calidad de producc
 Además, para ser incluidas en la lista, todas las actividades deben:
 
 - Ser apropiadas para un aula de escuela pública (no debe incluir armas, contenido explícito o maduro, contenido religioso, etc.)
-- No requerir registro 
+- No requerir registro
 - No requerir pago (a excepción de las actividades de robótica, que pueden requerir la compra de un robot o kit) Para actividades autodirigidas para nuevos docentes y estudiantes, el comité de revisión buscará si:
 
 En el caso de las actividades autodidácticas para nuevos docentes y estudiantes, el comité de revisión buscará si:
@@ -213,7 +213,7 @@ Puedes incluir el [Logotipo de la Hora del Código](https://hourofcode.com/us/pr
 
 - ¿En qué plataformas y navegadores funciona mejor el tutorial?
 - ¿Funciona en smartphones? ¿Y en tablets?
-- Organiza un evento local o pide a tus empleados que lo hagan en escuelas locales o grupos comunitarios. 
+- Organiza un evento local o pide a tus empleados que lo hagan en escuelas locales o grupos comunitarios.
 - ¿Existen aspectos a tener en cuenta a la hora de realizar la actividad en un aula? Por ejemplo, si hay videos, aconseja a los docentes a que los muestren en una pantalla proyectada para que toda la clase pueda verlos
 
 **Anima a los estudiantes a publicar en las redes sociales (donde sea apropiado) una vez que terminen.** Por ejemplo, "He completado una Hora del Código con ________ ¿Y tú? #HoraDelCódigo”, o “He completado una #HoraDelCódigo como parte de la #CSEdWeek.
@@ -276,4 +276,4 @@ Esto nos permitirá contar a los usuarios que hacen tu tutorial de la Hora del C
 
 [**Volver al principio**](#top)
 
-Nota: no es necesario hacer esto en aplicaciones que se instalan (aplicaciones para iOS/Android o aplicaciones que se instalan en equipos de escritorio)<!-- Adding in specific year for 2022 per Eric for later fix on line 18 as site was not auto-udpating to correct year -->
+Nota: no es necesario hacer esto en aplicaciones que se instalan (aplicaciones para iOS/Android o aplicaciones que se instalan en equipos de escritorio)
