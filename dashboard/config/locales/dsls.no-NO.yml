@@ -9490,3 +9490,19 @@ no-NO:
         - {}
       csf_password_power-up2022:
         content1: beskrivelse her
+      Test Contained Retriable Multi:
+        answers:
+        - {}
+        - {}
+        - {}
+        - text: '4'
+        questions:
+        - {}
+      test-single-multi-standalone-retriable:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}

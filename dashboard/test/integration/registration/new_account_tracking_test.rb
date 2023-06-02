@@ -53,7 +53,6 @@ module RegistrationsControllerTests
           data[:data_string] == UUID &&
           stream == :analysis
       end
-      expect_gender_input_record(USER_PARAMS_GOOD[:gender], 'none')
 
       get '/users/sign_up'
 
@@ -81,7 +80,6 @@ module RegistrationsControllerTests
           data[:data_string] == UUID &&
           stream == :analysis
       end
-      expect_gender_input_record(USER_PARAMS_GOOD[:gender], 'none')
 
       get '/users/sign_up'
 
@@ -185,18 +183,6 @@ module RegistrationsControllerTests
           refresh_token: args[:refresh_token] || nil
         }
       )
-    end
-
-    def expect_gender_input_record(gender, input_type)
-      FirehoseClient.instance.expects(:put_record).with do |stream, data|
-        data_json = JSON.parse(data[:data_json] || "{}")
-        data[:study] == 'gender-input-type' &&
-          data[:event] == 'account_created' &&
-          data_json['gender'] == gender &&
-          data_json['user_type'] == 'student' &&
-          data_json['input_type'] == input_type &&
-          stream == :analysis
-      end
     end
   end
 end

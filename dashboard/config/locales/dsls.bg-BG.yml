@@ -9993,3 +9993,22 @@ bg-BG:
           колкото се може повече. Продължете да се упражнявате със събития и групи
           от спрайтове!
         display_name: Много Спрайтове Упражнение
+      Test Contained Retriable Multi:
+        answers:
+        - text: '0'
+        - feedback: Не, това е 1 * 1.
+        - text: '2'
+          feedback: Да, ти си гений!
+        - text: '4'
+          feedback: Не, това дори не е близо.
+        content1: Ето малко информация.
+        questions:
+        - text: Какво е 1 + 1?
+      test-single-multi-standalone-retriable:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}

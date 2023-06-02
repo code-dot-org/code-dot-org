@@ -88,7 +88,7 @@
   "cscAdaptationsMissingOctopus": "Assicurati che all'inizio della scena compaia uno sprite polipo.",
   "cscAdaptationsMoveOctopusToPlant": "Non dimenticare di usare i tasti freccia per spostare il polpo e toccare la pianta in modo che cambi costume per mimetizzarsi.",
   "cscAdaptationsNight": "Assicurati di aggiungere uno sfondo notturno sotto lo <code style=\"color:black; background-color:#6AF36C\">quando la freccia preme</code> blocco.",
-  "cscAdaptationsSeaweed": "Assicurati che il polpo stia cambiando dello stesso colore delle alghe che tocca",
+  "cscAdaptationsRightArrowKey": "Assicurati di premere un tasto freccia dopo aver premuto *\"Esegui\"*. Puoi cliccare sui pulsanti arancione sotto l'area di gioco oppure premi i tasti sulla tastiera.",
   "cscAdaptationsSetBackground": "Assicurati di impostare uno sfondo.",
   "cscAdaptationsSetBehavior": "Assicurati di impostare il comportamento dello sprite dopo aver impostato la dimensione dello sprite.",
   "cscAdaptationsSetFastSpeed": "Assicurati di impostare la velocità dello sprite del ghepardo su alta.",

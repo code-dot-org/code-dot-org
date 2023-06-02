@@ -155,6 +155,8 @@ az:
           title: CS Discoveries Kurikulum Araşdırması
         self-paced-pl-csd-2023:
           title: öz templi-pl-csd-2021
+        self-paced-pl-csp-2023:
+          title: öz templi-pl-csp-2021
     resources:
       curriculum/csd/2020:
         name: Kurikulum

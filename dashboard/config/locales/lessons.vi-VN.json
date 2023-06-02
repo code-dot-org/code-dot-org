@@ -361,52 +361,63 @@
         },
         "coursed-2022/Graph Paper Programming": {
           "name": "lập trình đồ thị trên giấy",
+          "overview": "Trong bài học \\*\\*cài đặt ngữ cảnh này, học sinh sử dụng các ký hiệu để hướng dẫn nhau tô màu các ô vuông trên giấy đồ thị. Bằng cách “lập trình” nhau để vẽ tranh, sinh viên có cơ hội trải nghiệm một số khái niệm cốt lõi của lập trình một cách thú vị và dễ tiếp cận. ",
           "purpose": "Mục tiêu của hoạt động này là phát triển kỹ năng tư duy phản biện và sự hứng thú cho khóa học, đồng thời giới thiệu một số khái niệm lập trình cơ bản sẽ dùng trong suốt khóa học. Bằng cách giới thiệu các khái niệm cơ bản như trình tự sắp xếp và thuật toán cho lớp học trong một hoạt động không dùng thiết bị điện tử, học sinh sợ máy tính vẫn có thể tiếp thu kiến thức căn bản về các chủ đề này. Trong bài học này, học sinh sẽ học cách phát triển một thuật toán và mã hóa thành một chương trình.",
           "student_overview": "Trong bài học này, bạn sẽ lập trình cho bạn cùng lớp của mình vẽ những bức tranh!"
         },
         "coursed-2022/Introduction to Online Puzzles": {
           "name": "Giới thiệu về Bài tập trực tuyến",
+          "overview": "Trong bài học này, sinh viên sẽ thực hành các kỹ năng _sequencing_ và gỡ lỗi trong câu đố mê cung.",
           "purpose": "Chúng tôi nhận ra rằng mỗi lớp học đều có nhiều mức độ hiểu biết về mọi chủ đề. Một số học sinh trong lớp của bạn có thể là chuyên gia máy tính, còn những người khác chưa có nhiều kinh nghiệm. Để tạo ra một sân chơi (và học tập) bình đẳng, chúng tôi đã phát triển “Giai đoạn chuẩn bị” này cho Khóa học D. Bước này có thể dùng làm phần giới thiệu hoặc đánh giá về cách sử dụng Code.org cũng như các khái niệm khoa học máy tính cơ bản. Giai đoạn này bao gồm tất cả các điều kiện tiên quyết cần thiết để bắt đầu Khóa học D.",
           "student_overview": "Bài học này sẽ cho bạn thực hành các kỹ năng bạn sẽ cần cho khóa học này."
         },
         "coursed-2022/Relay Programming": {
           "name": "Chương trình chuyển tiếp",
+          "overview": "Bài học **context-setting** này sẽ bắt đầu với một bài học ngắn về gỡ lỗi và kiên trì, sau đó sẽ nhanh chóng chuyển sang một cuộc đua chống lại đồng hồ khi học sinh đột nhập vào nhóm và làm việc cùng nhau để viết một chương trình một hướng dẫn tại một thời điểm.",
           "purpose": "Làm việc theo nhóm rất quan trọng trong khoa học máy tính. Các nhóm viết và sửa lỗi mã cùng nhau thay vì làm việc với tư cách cá nhân. Trong bài học này, học sinh sẽ học cách làm việc cùng nhau sao cho hiệu quả nhất có thể.\n\nHoạt động này cũng mang lại cảm giác cấp bách, giúp học sinh cân bằng thời gian cẩn thận và tránh mắc sai lầm mà không bị tụt lại quá xa. Trải nghiệm này có thể gây căng thẳng (theo dự tính!) Hãy đảm bảo rằng bạn cung cấp cho học sinh các công cụ để đối phó với sự bực bội tiềm ẩn.",
           "student_overview": "Bạn có nhớ ở phần đầu khóa học khi bạn vẽ tranh bằng mã lệnh không? Trong bài học này, bạn sẽ làm công việc tương tự theo nhóm!"
         },
         "coursed-2022/Debugging with Laurel": {
           "name": "Sửa lỗi với Laurel",
+          "overview": "Trong bài học “Xây dựng kỹ năng” này, sinh viên sẽ thực hành gỡ lỗi trong môi trường “sưu tập”. Học sinh sẽ được thực hành đọc và chỉnh sửa mã để sửa các câu đố với các thuật toán đơn giản, vòng lặp và vòng lặp lồng nhau.",
           "purpose": "Mục đích của bài học này là dạy học sinh rằng thất bại là chuyện bình thường khi học kỹ năng mới. Học sinh sẽ được cung cấp các chương trình viết sẵn KHÔNG hoạt động. Họ sẽ được yêu cầu sửa các chương trình này. Quá trình được gọi là sửa lỗi này sẽ dạy cho học sinh các kỹ năng giải quyết vấn đề và tư duy phản biện cần thiết. Những kỹ năng này sẽ phát huy tác dụng khi học sinh tiến hành các dự án lập trình ngày càng khó hơn.",
           "student_overview": "Bạn đã bao giờ gặp sự cố khi viết mã lệnh chưa? Trong bài học này, bạn sẽ tìm hiểu về bí mật của việc sửa lỗi. Sửa lỗi là quá trình tìm kiếm và khắc phục các sự cố trong mã lệnh của bạn."
         },
         "coursed-2022/Events in Bounce": {
           "name": "Sự kiện trong game Ném bóng",
+          "overview": "Trong bài học \\*\\*cài đặt ngữ cảnh này, học viên sẽ tìm hiểu các sự kiện là gì và các lập trình viên sử dụng chúng trong trò chơi điện tử như thế nào. Học sinh sẽ xây dựng một trò chơi mà họ có thể tùy chỉnh với tốc độ và âm thanh khác nhau.",
           "purpose": "Sự kiện rất phổ biến trong chương trình máy tính, đặc biệt là trong trò chơi điện tử.\n\nTrong bài học này, học sinh sẽ mở rộng kiến thức về sự kiện bằng cách làm game đề tài thể thao. Học sinh sẽ học cách di chuyển mái chèo theo các phím mũi tên và tạo ra tiếng động khi các vật thể va chạm. Cuối cùng, họ sẽ phải tùy chỉnh để khiến game của mình trở nên độc đáo hơn!",
           "student_overview": "Bạn đã bao giờ ước mình có thể chơi game ở trường chưa? Trong bài học này, bạn sẽ tự làm game đấy!"
         },
         "coursed-2022/Build a Star Wars Game": {
           "name": "Làm game Chiến tranh giữa các vì sao",
+          "overview": "Trong bài học này, sinh viên sẽ thực hành sử dụng các sự kiện để xây dựng một trò chơi mà họ có thể chia sẻ.",
           "purpose": "“Nguyên tắc cơ bản của KHMT” không chỉ đơn giản là giảng dạy về khoa học máy tính, mà còn khiến khoa học máy tính trở nên thú vị và hấp dẫn. Trong loạt bài học này, học sinh sẽ tìm hiểu về sự kiện sử dụng các nhân vật nổi tiếng trong _Chiến tranh giữa các vì sao_. Những bài tập này xóa nhòa ranh giới giữa “học tập” và “vui chơi”. Ngoài ra, học sinh sẽ học cách nhận biết các nguyên tắc lập trình thông thường trong game để khi chơi game ở nhà, họ có thể thấy các nguyên tắc khoa học máy tính đang áp dụng phổ biến.",
           "student_overview": "Hãy cảm nhận thần lực khi làm game Chiến tranh giữa các vì sao của riêng mình trong bài học này."
         },
         "coursed-2022/Dance Party": {
           "name": "Bữa Tiệc Khiêu Vũ",
+          "overview": "Trong bài học “Xây dựng kỹ năng” này, sinh viên sẽ lập trình một bữa tiệc khiêu vũ tương tác. ",
           "purpose": "Bài học này giới thiệu các khái niệm Khoa học Máy tính cốt lõi về mã hóa và lập trình sự kiện (sử dụng các khối).",
           "student_overview": "Đã đến lúc ăn mừng rồi! Trong bài học này, bạn sẽ tự lập trình một bữa tiệc khiêu vũ tương tác của riêng mình."
         },
         "coursed-2022/Loops in Ice Age": {
           "name": "Vòng lặp trong Kỷ băng hà",
+          "overview": "Bài học \\*\\*Cài đặt/xây dựng kỹ năng này sẽ nhanh chóng giới thiệu cho sinh viên các vòng lặp.",
           "purpose": "Trong bài học này, học sinh sẽ tìm hiểu thêm về vòng lặp và cách triển khai chúng trong mã lệnh Blockly. Sử dụng vòng lặp là một kỹ năng quan trọng trong lập trình vì lệnh lặp lại thủ công sẽ rất tẻ nhạt và không hiệu quả. Với các bài tập Code.org này, học sinh sẽ học cách thêm hướng dẫn vào các vòng lặp hiện có, tập hợp mã lệnh lặp lại thành các vòng lặp và nhận ra các mẫu cần được lặp lại.",
           "student_overview": "Trong bài học này, bạn sẽ sử dụng khối lặp lại để giúp Scrat tiếp cận hạt sồi một cách hiệu quả nhất có thể."
         },
         "coursed-2022/Drawing Shapes with Loops": {
           "name": "Vẽ hình với vòng lặp",
+          "overview": "Bài học \\*\\* xây dựng kỹ năng này được xây dựng dựa trên sự hiểu biết về các vòng lặp từ bài học trước đó và tăng gấp đôi như một bài tập gỡ lỗi để thực hành giải quyết vấn đề thêm.",
           "purpose": "Loạt bài học này nhấn mạnh tác dụng của vòng lặp với một loạt các bài tập nhằm giúp học sinh suy nghĩ về lý do vòng lặp `repeat` (lặp lại) vượt trội hơn so với viết đầy đủ.",
           "student_overview": "Trong bài học này, vòng lặp giúp bạn dễ dàng tạo ra những hình ảnh thú vị với Artist!"
         },
         "coursed-2022/Nested Loops in Maze": {
           "name": "Vòng lặp lồng nhau trong game Mê cung",
-          "purpose": "Trong phần giới thiệu về vòng lặp lồng nhau này, học sinh sẽ bước ra khỏi vùng an toàn của bản thân để tạo ra các giải pháp hiệu quả hơn cho bài tập.\n\nTrong các bài tập trước đó, vòng lặp đã thúc đẩy học sinh nhận ra sự lặp lại. Tại đây, học sinh sẽ học cách nhận ra các mẫu _nằm trong_ các mẫu lặp lại để phát triển các vòng lặp lồng nhau này. Giai đoạn này bắt đầu bằng cách khuyến khích học sinh cố gắng giải một bài tập trong đó mã lệnh thật khó chịu và quá phức tạp để viết ra toàn bộ. Sau khi video giới thiệu vòng lặp lồng nhau, học sinh được xem một ví dụ và được yêu cầu dự đoán điều gì sẽ xảy ra khi một vòng lặp được đưa vào bên trong một vòng lặp khác. Bước tiến này dẫn đến nhiều cơ hội thực hành cho học sinh để củng cố và phát triển dựa trên kiến thức về phép lặp trong lập trình."
+          "overview": "Trong bài học “Xây dựng kỹ năng” này, học sinh sẽ học cách lập trình một vòng lặp bên trong vòng lặp khác.",
+          "purpose": "Trong phần giới thiệu về vòng lặp lồng nhau này, học sinh sẽ bước ra khỏi vùng an toàn của bản thân để tạo ra các giải pháp hiệu quả hơn cho bài tập.\n\nTrong các bài tập trước đó, vòng lặp đã thúc đẩy học sinh nhận ra sự lặp lại. Tại đây, học sinh sẽ học cách nhận ra các mẫu _nằm trong_ các mẫu lặp lại để phát triển các vòng lặp lồng nhau này. Giai đoạn này bắt đầu bằng cách khuyến khích học sinh cố gắng giải một bài tập trong đó mã lệnh thật khó chịu và quá phức tạp để viết ra toàn bộ. Sau khi video giới thiệu vòng lặp lồng nhau, học sinh được xem một ví dụ và được yêu cầu dự đoán điều gì sẽ xảy ra khi một vòng lặp được đưa vào bên trong một vòng lặp khác. Bước tiến này dẫn đến nhiều cơ hội thực hành cho học sinh để củng cố và phát triển dựa trên kiến thức về phép lặp trong lập trình.",
+          "student_overview": "Bài học này sẽ dạy cho bạn những gì xảy ra khi bạn đặt vòng bên trong vòng lặp bên trong vòng lặp."
         },
         "coursed-2022/Conditionals with Cards": {
           "name": "Lệnh điều kiện với lá bài",
@@ -416,9 +427,13 @@
         },
         "coursed-2022/Looking Ahead with Minecraft": {
           "name": "Nhìn về phía trước",
-          "purpose": "Bộ bài tập này sẽ củng cố và xây dựng kiến thức về vòng lặp cũng như giới thiệu lệnh điều kiện. Bằng cách kết hợp hai khái niệm này với nhau, học sinh sẽ có thể khám phá tiềm năng tạo ra các chương trình vui nhộn và sáng tạo trong một môi trường mới và thú vị."
+          "overview": "Bài học “Xây dựng kỹ năng” này mang đến cho sinh viên cơ hội thực hành các khái niệm mà các em đã học được cho đến thời điểm này và có được trải nghiệm đầu tiên của họ với điều kiện!",
+          "purpose": "Bộ bài tập này sẽ củng cố và xây dựng kiến thức về vòng lặp cũng như giới thiệu lệnh điều kiện. Bằng cách kết hợp hai khái niệm này với nhau, học sinh sẽ có thể khám phá tiềm năng tạo ra các chương trình vui nhộn và sáng tạo trong một môi trường mới và thú vị.",
+          "student_overview": "Tránh dung nham! Ở đây bạn sẽ bắt đầu tìm hiểu về điều kiện trong thế giới của _Minecraft_."
         },
         "coursed-2022/If/Else with Bee": {
+          "name": "Nếu/Khác với Bee",
+          "overview": "Trong bài học \\*\\* xây dựng kỹ năng này, lớp học của bạn sẽ tiếp tục mã hóa với điều kiện, cho phép họ viết mã có chức năng khác nhau tùy thuộc vào điều kiện cụ thể mà chương trình gặp phải.",
           "purpose": "Sau khi được giới thiệu về lệnh điều kiện trong “Lệnh điều kiện với lá bài”, bây giờ học sinh sẽ thực hành sử dụng chúng trong chương trình. Các khối “if/else” (nếu/nếu không) sẽ giúp chương trình linh hoạt hơn. Chú ong sẽ chỉ lấy mật hoa _nếu_ có hoa hoặc làm mật ong _nếu_ có tổ ong.",
           "student_overview": "Bây giờ bạn đã hiểu về lệnh điều kiện, đã đến lúc lập trình game Chú ong và sử dụng lệnh điều kiện khi lấy mật ong và mật hoa."
         },
@@ -429,6 +444,8 @@
           "student_overview": "Vòng lặp rất hữu ích trong quá trình viết mã lệnh. Bài học này sẽ dạy bạn về một loại vòng lặp mới: vòng lặp while!"
         },
         "coursed-2022/Until Loops in Maze": {
+          "name": "Cho đến khi vòng trong Mê cung",
+          "overview": "Trong bài học “Xây dựng kỹ năng” này, học viên sẽ học về các vòng lặp “until”. Sinh viên sẽ xây dựng các chương trình có các hành động lặp lại nhân vật chính “cho đến khi” họ đạt đến điểm dừng mong muốn của họ.",
           "purpose": "Bộ bài tập này sẽ đóng vai trò củng cố và mở rộng kiến thức về vòng lặp bằng cách bổ sung lệnh điều kiện `until` (đến khi). Bằng cách kết hợp các khái niệm này với nhau, học sinh có thể khám phá tiềm năng tạo ra các chương trình phức tạp và sáng tạo.",
           "student_overview": "Bạn có thể làm những điều vô cùng thú vị khi sử dụng vòng lặp `đến khi` đấy!"
         },
@@ -545,6 +562,7 @@
         },
         "coursee-2022/Swimming Fish with Sprite Lab": {
           "name": "Cá bơi với Sprite Lab",
+          "overview": "Học sinh sẽ lập trình một cảnh dưới nước hoạt hình đơn giản trong bài học \\*\\* xây dựng kỹ năng \\*\\* này.",
           "preparation": "-   Khám phá các bài tập để tìm ra bất kỳ vấn đề tiềm ẩn nào trong lớp học.\n-   Đảm bảo mỗi học sinh đều có nhật ký suy nghĩ.",
           "purpose": "Bài học này được thiết kế để giới thiệu cho học sinh vốn từ vựng cốt lõi của Sprite Lab và giúp họ áp dụng các khái niệm đã học trong các môi trường khác vào công cụ này. Bằng cách tạo ra một bể cá, học sinh sẽ bắt đầu hình thành kiến thức về mô hình lập trình của công cụ này và khám phá những cách sử dụng để thể hiện bản thân.",
           "student_overview": "Tìm hiểu cách tạo và chỉnh sửa nhân vật."
@@ -555,10 +573,12 @@
         "coursee-2022/Mini-Project: About Me": {
           "name": "Dự án nhỏ: Giới thiệu bản thân",
           "overview": "Học sinh sẽ áp dụng kiến thức về chia sẻ thông tin cá nhân và riêng tư trên web bằng cách tạo áp phích tương tác trong **dự án nhỏ** này.",
-          "purpose": "Bài học này nhằm giúp học sinh liên hệ bài học trước về thông tin cá nhân và thông tin riêng tư với bản thân. Với các ví dụ AN TOÀN (cá nhân) và KHÔNG AN TOÀN (riêng tư), học sinh thực hành cách tự thể hiện bản thân trên web một cách an toàn, sử dụng SpriteLab để tạo trang phục cho nhân vật của mình và tạo văn bản."
+          "purpose": "Bài học này nhằm giúp học sinh liên hệ bài học trước về thông tin cá nhân và thông tin riêng tư với bản thân. Với các ví dụ AN TOÀN (cá nhân) và KHÔNG AN TOÀN (riêng tư), học sinh thực hành cách tự thể hiện bản thân trên web một cách an toàn, sử dụng SpriteLab để tạo trang phục cho nhân vật của mình và tạo văn bản.",
+          "student_overview": "Tạo một poster tương tác, nhưng hãy suy nghĩ cẩn thận về những thông tin nào là an toàn để chia sẻ trực tuyến."
         },
         "coursee-2022/Drawing with Loops": {
           "name": "Vẽ bằng vòng lặp",
+          "overview": "Bài học \\*\\*cài đặt ngữ cảnh này chuyển trọng tâm từ Sprite Lab sang Nghệ sĩ, một công cụ mới mà học sinh sẽ khám phá trong suốt thời gian còn lại của khóa học.  ",
           "preparation": "-   Khám phá các bài tập để tìm ra bất kỳ vấn đề tiềm ẩn nào trong lớp học.\n-   Đảm bảo mỗi học sinh đều có nhật ký suy nghĩ.",
           "purpose": "Học sinh sẽ thực hành sử dụng vòng lặp, một khái niệm sẽ được ôn tập trong các bài học sắp tới.",
           "student_overview": "Trong bài học này, **vòng lặp** giúp bạn dễ dàng tạo những hình ảnh thú vị với Họa sĩ!"
@@ -571,23 +591,29 @@
           "student_overview": "Lại thêm vòng lặp lồng nhau nè! Lần này, bạn có thể thực hiện một số bản vẽ TUYỆT VỜI với các vòng lặp lồng nhau."
         },
         "coursee-2022/Mini-Project: Design a Snowflake": {
+          "name": "Mini-Project: Thiết kế một bông tuyết",
+          "overview": "Bài học **mini-project** này sẽ giúp học sinh trải qua một loạt các bài tập để tạo ra hình ảnh bông tuyết bằng cách sử dụng các nhân vật trong phim _Frozen_.",
           "preparation": "-   Làm thử bài tập để tìm ra bất kỳ vấn đề tiềm ẩn nào đối với lớp của bạn.\n-   Đảm bảo tất cả học sinh đều có nhật ký suy nghĩ.",
-          "purpose": "Trong bài học này, học sinh sẽ áp dụng các kỹ năng của mình với vòng lặp lồng nhau để tạo ra các hình ảnh mà họ sẽ hào hứng chia sẻ."
+          "purpose": "Trong bài học này, học sinh sẽ áp dụng các kỹ năng của mình với vòng lặp lồng nhau để tạo ra các hình ảnh mà họ sẽ hào hứng chia sẻ.",
+          "student_overview": "_Anna_ và _Elsa_ có kỹ năng trượt băng tuyệt vời, nhưng cần sự giúp đỡ của bạn để tạo ra các mô hình trong băng. Sử dụng vòng lặp lồng nhau để tạo ra một cái gì đó siêu COOL. "
         },
         "coursee-2022/Songwriting": {
           "name": "Sáng tác với tham số",
+          "overview": "Bài học **context-setting** này sẽ giúp sinh viên hiểu tại sao kết hợp các khối mã vào các hàm có thể là một thực hành hữu ích.",
           "preparation": "-   (Tùy chọn) Xem video **\\*Thực hành bài học**.\n-   In vài **\\*bảng học tập** cho mỗi nhóm.\n-   In một **\\*bài đánh giá** cho mỗi học sinh.\n-   Truy cập an toàn vào các bài hát và lời bài hát cho hoạt động.\n-   Đảm bảo tất cả học sinh đều có nhật ký suy nghĩ.",
           "purpose": "Việc sử dụng hàm giúp đơn giản hóa mã lệnh và phát triển khả năng tổ chức chương trình của học sinh. Học sinh sẽ nhanh chóng nhận ra rằng việc viết hàm có thể làm cho các chương trình dài của họ dễ đọc hơn và dễ sửa lỗi hơn nếu có sự cố.",
           "student_overview": "Ngay cả ngôi sao nhạc rock cũng cần kỹ năng lập trình. Bài học này sẽ hướng dẫn bạn về các hàm bằng lời bài hát."
         },
         "coursee-2022/Functions in Minecraft": {
           "name": "Hàm trong Minecraft",
+          "overview": "Trong bài học “Xây dựng kỹ năng” này, học sinh sẽ bắt đầu hiểu các chức năng hữu ích như thế nào!",
           "preparation": "-   Khám phá các bài tập để tìm ra bất kỳ vấn đề tiềm ẩn nào trong lớp học.\n-   Đảm bảo mỗi học sinh đều có nhật ký suy nghĩ.",
           "purpose": "Học sinh sẽ khám phá tính linh hoạt trong lập trình bằng cách thực hành với hàm trong các môi trường khác nhau. Tại đây, học sinh sẽ nhận ra các mẫu có thể tái sử dụng và có thể kết hợp các khối được đặt tên để gọi hàm được xác định trước.",
           "student_overview": "Bạn có thể tìm ra cách sử dụng các hàm để tạo ra mã lệnh hiệu quả nhất không?"
         },
         "coursee-2022/Functions with Artist": {
           "name": "Hàm trong Artist",
+          "overview": "Trong bài học “Xây dựng kỹ năng” này, học sinh sẽ sử dụng các chức năng với Nghệ sĩ.",
           "preparation": "-   Khám phá các bài tập để tìm ra bất kỳ vấn đề tiềm ẩn nào trong lớp học.\n-   Đảm bảo mỗi học sinh đều có nhật ký suy nghĩ.",
           "purpose": "Một trong những thành phần quan trọng nhất của bài học này là cho học sinh cơ hội để sáng tạo tác phẩm nào đó khiến họ tự hào. Những bài tập như vậy ngày càng có nhiều hình ảnh phức tạp hơn, nhưng mỗi bài tập mới chỉ dựa vào nền tảng là bài tập trước đó. Khi kết thúc bài học này, học sinh sẽ cảm thấy tự tin và tự hào về nỗ lực của mình.",
           "student_overview": "Hãy tạo ra những bức tranh phức tạp thật dễ dàng bằng các hàm!"
@@ -595,26 +621,33 @@
         "coursee-2022/Conditionals in Minecraft: Voyage Aquatic": {
           "name": "Lệnh điều kiện trong Minecraft: Chuyến du hành dưới nước",
           "preparation": "-   Làm thử bài tập liên quan đến bài học này để tìm ra bất kỳ vấn đề tiềm ẩn nào đối với lớp của bạn.\n-   Đảm bảo tất cả học sinh đều có nhật ký suy nghĩ.",
-          "purpose": "Bộ bài tập này sẽ củng cố và xây dựng kiến thức về vòng lặp cũng như giới thiệu lệnh điều kiện. Bằng cách kết hợp hai khái niệm này với nhau, học sinh sẽ có thể khám phá tiềm năng tạo ra các chương trình vui nhộn và sáng tạo trong một môi trường mới và thú vị."
+          "purpose": "Bộ bài tập này sẽ củng cố và xây dựng kiến thức về vòng lặp cũng như giới thiệu lệnh điều kiện. Bằng cách kết hợp hai khái niệm này với nhau, học sinh sẽ có thể khám phá tiềm năng tạo ra các chương trình vui nhộn và sáng tạo trong một môi trường mới và thú vị.",
+          "student_overview": "Ở đây bạn sẽ tìm hiểu về điều kiện trong thế giới của _Minecraft_."
         },
         "coursee-2022/Conditionals with the Farmer": {
           "name": "Lệnh điều kiện với game Bác nông dân",
+          "overview": "Bài học \\*\\* xây dựng kỹ năng này tập trung vào một loại hình mới của câu đố lập trình, bao gồm một nông dân cần chuẩn bị cánh đồng của mình để trồng cây trồng. ",
           "preparation": "-   Khám phá các bài tập để tìm ra bất kỳ vấn đề tiềm ẩn nào trong lớp học.\n-   Đảm bảo mỗi học sinh đều có nhật ký suy nghĩ.",
-          "purpose": "Bài học này giới thiệu cho học sinh về vòng lặp while và câu lệnh “if/else” (nếu/nếu không)."
+          "purpose": "Bài học này giới thiệu cho học sinh về vòng lặp while và câu lệnh “if/else” (nếu/nếu không).",
+          "student_overview": "Giúp nông dân chuẩn bị cánh đồng của mình để trồng cây trồng và tìm hiểu thêm về điều kiện!"
         },
         "coursee-2022/Functions with Harvester": {
           "name": "Hàm với game Người thu hoạch",
+          "overview": "Trong bài học “Xây dựng kỹ năng” này, học sinh sẽ sử dụng các điều kiện có chức năng để thu hoạch mùa màng trong _Harvester_.",
           "preparation": "-   Khám phá các bài tập để tìm ra bất kỳ vấn đề tiềm ẩn nào trong lớp học.\n-   Đảm bảo mỗi học sinh đều có nhật ký suy nghĩ.",
           "purpose": "Bài học này nhằm khuyến khích học sinh sử dụng lệnh điều kiện cùng hàm. Những bài tập này nhằm củng cố kỹ năng giải quyết vấn đề và tư duy phản biện.",
           "student_overview": "Các hàm sẽ giúp bạn tiết kiệm rất nhiều công sức khi giúp người nông dân thu hoạch!"
         },
         "coursee-2022/Designing for Accessibility": {
           "name": "Thiết kế cho trợ năng",
+          "overview": "Trong bài học \\*\\* giải thích\\*\\* này, sinh viên sẽ tìm hiểu về khả năng tiếp cận và giá trị của sự đồng cảm thông qua động não và thiết kế các giải pháp dễ tiếp cận cho các ứng dụng giả thuyết. ",
           "preparation": "-   Để hiểu ngữ cảnh, hãy đọc về **\\*các dạng khuyết tật**.\n-   Đọc ghi chú của người thuyết trình trong **\\*trang thuyết trình**.\n-   Chuẩn bị đủ dùng cụ phác thảo/vẽ cho tất cả học sinh.",
-          "purpose": "Thông qua việc tìm hiểu về trợ năng, học sinh nhận ra tác động của máy tính đối với cuộc sống của chính họ. Trợ năng có thể không phải là chủ đề KHMT liên quan, nhưng việc tạo ra công nghệ cho người dùng thiệt thòi sử dụng sẽ giúp cải thiện công nghệ cho tất cả mọi người."
+          "purpose": "Thông qua việc tìm hiểu về trợ năng, học sinh nhận ra tác động của máy tính đối với cuộc sống của chính họ. Trợ năng có thể không phải là chủ đề KHMT liên quan, nhưng việc tạo ra công nghệ cho người dùng thiệt thòi sử dụng sẽ giúp cải thiện công nghệ cho tất cả mọi người.",
+          "student_overview": "Tìm hiểu về khả năng tiếp cận và giá trị của sự đồng cảm thông qua động não và thiết kế các giải pháp có thể truy cập cho các ứng dụng giả thuyết. "
         },
         "coursee-2022/Digital Sharing": {
           "name": "Chia sẻ nội dung số",
+          "overview": "Bài học \\*\\* giải thích\\*\\* này giúp học sinh hiểu được những thách thức và lợi ích của việc tôn trọng quyền sở hữu và bản quyền, đặc biệt là trong môi trường kỹ thuật số. ",
           "preparation": "-   Tìm **\\*Video Chia sẻ Bản quyền** trong “Liên kết” bên dưới\n-   Tải xuống và xem lại toàn bộ **\\*Giáo án Chia sẻ nội dung số** từ Bản quyền và Sáng tạo\n-   Hãy tạo một tác phẩm nghệ thuật cho bài học (ảnh, bài hát, slide trình chiếu, v.v.) với tư cách là giáo viên\n-   Đảm bảo tất cả học sinh đều có Nhật ký suy nghĩ.\n-   Bạn sẽ cần máy tính bảng hoặc điện thoại thông minh để làm mẫu bước chia sẻ tác phẩm đó",
           "purpose": "Học sinh sẽ sớm tạo các dự án để chia sẻ và hầu hết các dự án này sẽ chứa mã lệnh hoặc hình ảnh mà học sinh không tự tạo. Bài học này đóng vai trò cho học sinh thấy cách thích hợp để kiểm soát hành vi sử dụng nội dung không phải của chính mình.",
           "student_overview": "Trong bài học này, bạn sẽ tìm hiểu về những thách thức và lợi ích của quyền sở hữu và bản quyền."
@@ -670,65 +703,82 @@
         },
         "courseb-2022/Loops with Harvester": {
           "name": "Vòng lặp với game Người thu hoạch",
+          "overview": "Trong bài học “Xây dựng kỹ năng” này, học sinh sẽ giúp người thu hoạch cây trồng bằng cách sử dụng vòng lặp.",
           "preparation": "-   Làm thử bài tập để tìm ra bất kỳ vấn đề tiềm ẩn nào đối với lớp của bạn.\n-   Xem lại **\\*Các nguyên tắc cơ bản của KHMT Mẹo hoạt động chính – Đề xuất bài học**.\n-   Đảm bảo mỗi học sinh đều có nhật ký suy nghĩ.\n-   (Tùy chọn) Chọn vài bài tập để làm theo nhóm trên lớp.\n-   (Tùy chọn) Nếu chưa có, hãy in và cắt các khối từ **\\*Dụng cụ học tập** để chuẩn bị cho một trong các hoạt động chuyển tiếp trong bài học này.",
           "purpose": "Trong bài học này, học sinh sẽ tìm hiểu thêm về vòng lặp và cách triển khai chúng trong mã lệnh Blockly. Sử dụng vòng lặp là một kỹ năng quan trọng trong lập trình vì lệnh lặp lại thủ công sẽ rất tẻ nhạt và không hiệu quả. Với các bài tập Code.org, học sinh sẽ học cách thêm hướng dẫn vào các vòng lặp hiện có, tập hợp mã lệnh lặp lại thành các vòng lặp và nhận ra các mẫu cần được lặp lại.",
           "student_overview": "Giúp Người thu hoạch thu hoạch thật nhiều mùa màng bằng cách sử dụng vòng lặp!"
         },
         "courseb-2022/Loops with Laurel": {
           "name": "Vòng lặp với Laurel",
+          "overview": "Trong bài học “Xây dựng kỹ năng” này, học sinh sẽ tiếp tục học khái niệm về vòng lặp. Tại đây, Laurel the Adventurer sử dụng vòng để thu thập kho báu trong không gian hang động mở. ",
           "preparation": "-   Làm thử bài tập để tìm ra bất kỳ vấn đề tiềm ẩn nào đối với lớp của bạn.\n-   (Tùy chọn) Chọn vài bài tập để làm theo nhóm trên lớp.\n-   Xem lại **\\*Các nguyên tắc cơ bản của KHMT Mẹo hoạt động chính – Đề xuất bài học**.\n-   Đảm bảo mỗi học sinh đều có nhật ký suy nghĩ.",
           "purpose": "Bài học này giúp học sinh thực hành vòng lặp nhiều hơn và khuyến khích họ đặt nhiều khối bên trong `repeat` (lặp lại) trong khi cố gắng thu thập càng nhiều kho báu càng tốt.",
           "student_overview": "Lập trình nhà thám hiểm Laurel để thu thập kho báu trong hang động mở."
         },
         "courseb-2022/Drawing Gardens with Loops": {
           "name": "Vẽ khu vườn bằng vòng lặp",
+          "overview": "Trong bài học \\*\\* xây dựng kỹ năng này, học sinh học cách vẽ hình ảnh bằng cách lặp lại các chuỗi hướng dẫn đơn giản. Ở đây, sinh viên sử dụng vòng lặp để tạo ra các mẫu. ",
           "preparation": "-   Làm thử bài tập để tìm ra bất kỳ vấn đề tiềm ẩn nào đối với lớp của bạn.\n-   Xem lại **\\*Các nguyên tắc cơ bản của KHMT Mẹo hoạt động chính – Đề xuất bài học**.\n-   Đảm bảo mỗi học sinh đều có nhật ký suy nghĩ.",
           "purpose": "Bài học này cung cấp một cái nhìn khác về cách các vòng lặp có thể tạo ra mọi thứ trong lập trình. Học sinh sẽ kiểm tra kỹ năng tư duy phản biện bằng cách đánh giá mã lệnh đã cho và xác định những nội dung cần bổ sung để giải bài tập. Học sinh cũng có thể suy nghĩ về hiệu quả thấp khi lập trình không dùng vòng lặp ở đây vì chương trình sẽ cần đến bao nhiêu khối mà không có sự trợ giúp của vòng lặp `repeat` (lặp lại).",
           "student_overview": "Sử dụng mô hình và vòng lặp để hoàn thành các hình ảnh."
         },
         "courseb-2022/The Right App": {
+          "overview": "Trong bài học **exploratory** này, học sinh đồng cảm với một số người dùng điện thoại thông minh hư cấu để giúp họ tìm ra “ứng dụng phù hợp” đáp ứng nhu cầu của họ.",
           "preparation": "-   Đọc ghi chú của người thuyết trình trong **\\*trang thuyết trình**.\n-   Chuẩn bị đủ đồ dùng phác họa/vẽ cho tất cả học sinh.\n-   Đảm bảo mỗi học sinh đều có nhật ký suy nghĩ.",
           "purpose": "Ngày nay, máy tính trở nên phổ biến hơn bao giờ hết. Mọi người thuộc mọi tầng lớp đều sử dụng phần mềm trên nhiều thiết bị khác nhau, đặc biệt là điện thoại thông minh, để cập nhật thông tin, liên lạc và giải trí. Bởi vì mọi người có những trải nghiệm và nhu cầu đa dạng như vậy, các chuyên gia khoa học máy tính tập sự phải đồng cảm với mọi người và chú tâm tìm ra các giải pháp cho người dùng.",
           "student_overview": "Phác thảo ứng dụng điện thoại thông minh của riêng bạn."
         },
         "courseb-2022/The Big Event Jr": {
           "name": "Sự kiện lớn – nâng cao",
+          "overview": "Trong bài học **context-setting** này, lớp học sẽ trải nghiệm khái niệm sự kiện thông qua một trò chơi mà chúng di chuyển hoặc hét lên khi bạn nhấn nút trên một điều khiển từ xa khổng lồ.",
           "preparation": "-   Chuẩn bị chiếu **\\*Hình ảnh bộ điều khiển**.\n-   In một **\\*Bài đánh giá** cho mỗi học sinh.\n-   Đảm bảo mỗi học sinh đều có nhật ký suy nghĩ.",
           "purpose": "Hôm nay, học sinh sẽ học cách phân biệt các sự kiện với các hành động. Học sinh sẽ thấy các hoạt động bị gián đoạn khi nhấn “nút” trên chiếc điều khiển bằng giấy. Khi nhìn thấy sự kiện này, cả lớp sẽ phản ứng bằng một hành động duy nhất. Sự kiện ứng dụng rộng rãi trong lập trình và sẽ dễ dàng nhận ra sau bài học này.",
           "student_overview": "Di chuyển hoặc hét lên khi giáo viên của bạn nhấn các nút trên chiếc điều khiển từ xa khổng lồ."
         },
         "courseb-2022/Mini-Project: A Royal Battle with Events": {
+          "name": "Mini-Project: Một trận chiến Hoàng gia với các sự kiện",
+          "overview": "Trong dự án mini này, sinh viên sẽ có cơ hội học cách sử dụng các sự kiện trong Play Lab và áp dụng tất cả các kỹ năng mã hóa mà họ đã học để tạo ra một trò chơi hoạt hình. ",
           "preparation": "-   Làm thử bài tập để tìm ra bất kỳ vấn đề tiềm ẩn nào đối với lớp của bạn.\n-   (Tùy chọn) Chọn vài bài tập để làm theo nhóm trên lớp.\n-   Xem lại **\\*Các nguyên tắc cơ bản của KHMT Mẹo hoạt động chính – Đề xuất bài học**.\n-   Đảm bảo tất cả học sinh đều có nhật ký suy nghĩ.",
           "purpose": "Trong hoạt động trực tuyến này, học sinh sẽ học cách sử dụng các sự kiện trong Play Lab. Họ sẽ bắt đầu bằng cách huấn luyện hiệp sĩ di chuyển khi nhấn một phím mũi tên, sau đó kết thúc bài học với cơ hội thể hiện các kỹ năng còn lại mà họ đã học được trong suốt khóa học này, bao gồm trình tự và vòng lặp, trong bài tập chơi tự do cuối cùng.",
           "student_overview": "Sử dụng sự kiện để tạo một câu chuyện hoặc làm game tương tác."
         },
         "courseb-2022/End of Course Project": {
           "name": "Dự án tổng kết khóa học",
+          "overview": "Trong bài học **project** này, học sinh áp dụng những gì họ đã học được về trình tự và các sự kiện trong một dự án mở với Play Lab.",
           "preparation": "-   Hãy tự lập trình trước các dự án Play Lab của riêng bạn để truyền cảm hứng cho học sinh nhé!",
-          "purpose": "Bài học này mang đến cho học sinh cơ hội cuối cùng để vận dụng sáng tạo các kỹ năng khoa học máy tính mới của mình."
+          "purpose": "Bài học này mang đến cho học sinh cơ hội cuối cùng để vận dụng sáng tạo các kỹ năng khoa học máy tính mới của mình.",
+          "student_overview": "Tạo câu chuyện hoặc trò chơi của riêng bạn."
         },
         "express-2022/Programming with Angry Birds": {
           "name": "Lập trình với Angry Birds",
+          "overview": "Trong bài học “Xây dựng kỹ năng” này, học sinh sẽ phát triển các thuật toán tuần tự để di chuyển một con chim từ một bên của mê cung sang con lợn ở phía bên kia. Để làm điều này, chúng sẽ xếp các khối mã lại với nhau trong một dãy tuyến tính, làm cho chúng di chuyển thẳng, rẽ trái, hoặc rẽ phải.",
           "preparation": "-   Làm thử bài tập để tìm ra bất kỳ vấn đề tiềm ẩn nào đối với lớp của bạn.\n-   (Tùy chọn) Chọn vài bài tập để làm theo nhóm trên lớp.\n-   Đảm bảo tất cả học sinh đều có nhật ký suy nghĩ.",
-          "purpose": "Trong bài học này, học sinh sẽ phát triển các kỹ năng lập trình trên nền tảng máy tính. Định dạng kiểu khối của những bài tập này giúp học sinh tìm hiểu về trình tự và khái niệm mà không cần phải lo lắng về việc hoàn thiện cú pháp."
+          "purpose": "Trong bài học này, học sinh sẽ phát triển các kỹ năng lập trình trên nền tảng máy tính. Định dạng kiểu khối của những bài tập này giúp học sinh tìm hiểu về trình tự và khái niệm mà không cần phải lo lắng về việc hoàn thiện cú pháp.",
+          "student_overview": "Tìm hiểu về trình tự và thuật toán với _Angry Birds_."
         },
         "express-2022/Debugging in Maze": {
           "name": "Sửa lỗi trong game Mê cung",
+          "overview": "Trong bài học “Xây dựng kỹ năng” này, học sinh sẽ gặp phải những đoạn mã được viết sẵn có chứa các lỗi. Họ sẽ cần phải bước qua mã hiện có để xác định lỗi.",
           "preparation": "-   Xem thử bài học để tìm ra bất kỳ vấn đề tiềm ẩn nào đối với lớp của bạn.\n-   (Tùy chọn) Chọn vài bài tập để làm theo nhóm trên lớp.\n-   Đảm bảo tất cả học sinh đều có Nhật ký suy nghĩ.",
           "purpose": "Học sinh trong lớp của bạn có thể trở nên bực bội với bài học này do bản chất của việc sửa lỗi. Sửa lỗi là một khái niệm rất quan trọng đối với lập trình máy tính. Các nhà khoa học máy tính phải thực sự giỏi trong việc tìm lỗi trong chương trình của chính họ. Sửa lỗi buộc học sinh phải nhận ra vấn đề và khắc phục chúng trong quá trình trau dồi tư duy phản biện và kỹ năng giải quyết vấn đề.",
           "student_overview": "Tìm vấn đề trong bài tập và thực hành kỹ năng sửa lỗi."
         },
         "express-2022/Collecting Treasure with Laurel": {
+          "name": "Thu thập kho báu với Laurel",
+          "overview": "Trong bài học “Xây dựng kỹ năng” này, học sinh sẽ tiếp tục phát triển hiểu biết về thuật toán và gỡ lỗi. Với một nhân vật mới, _Laurel the Adventurer_, sinh viên sẽ tạo ra các thuật toán tuần tự để có được _Laurel_ để lấy kho báu khi cô đi dọc theo một con đường.",
           "preparation": "-   Làm thử bài tập để tìm ra bất kỳ vấn đề tiềm ẩn đối với lớp của bạn.\n-   Đảm bảo tất cả học sinh đều có Nhật ký suy nghĩ.",
           "purpose": "Trong bài học này, học sinh sẽ thực hành các kỹ năng lập trình của mình bằng cách sử dụng một nhân vật mới, _Nhà thám hiểm Laurel_. Khi bắt đầu lập trình, người ta ghép các hướng dẫn lại với nhau theo một thứ tự cụ thể bằng cách sử dụng ngôn ngữ mà máy tính có thể đọc được. Thông qua quá trình sử dụng chương trình, học sinh sẽ dần hiểu cách máy tính điều hướng lệnh và trình tự. Sử dụng một nhân vật mới với một mục tiêu bài tập khác sẽ giúp học sinh mở rộng phạm vi trải nghiệm với trình tự và thuật toán trong lập trình.",
           "student_overview": "Viết thuật toán để giúp _Nhà thám hiểm Laurel_ thu thập thật nhiều đá quý!"
         },
         "express-2022/Creating Art with Code": {
+          "name": "Tạo nghệ thuật bằng mã",
+          "overview": "Trong bài học “Xây dựng kỹ năng” này, học sinh sẽ kiểm soát Nghệ sĩ để hoàn thành các bản vẽ trên màn hình.",
           "preparation": "-   Làm thử bài tập để tìm ra bất kỳ vấn đề tiềm ẩn đối với lớp của bạn.\n-   (Tùy chọn) Mua thước đo góc cho lớp để hình dung các góc mà họ phải dùng khi làm bài tập.\n-   In một **\\*Tài liệu phát cho học sinh** cho mỗi học sinh.",
           "purpose": "Dựa trên kinh nghiệm trước đây của học sinh với trình tự, bài học này sẽ truyền thêm cảm hứng sáng tạo với lập trình. Mục đích của bài học này là củng cố kiến thức về trình tự bằng cách giới thiệu các khối và mục tiêu mới. Trong trường hợp này, học sinh tìm hiểu thêm về điểm ảnh và góc bằng cách sử dụng các khối mới, đồng thời thực hành các kỹ năng sắp xếp trình tự. Ngoài ra, học sinh sẽ có thể hình dung các mục tiêu mới như lập trình để Họa sĩ vẽ hình vuông.",
           "student_overview": "Tạo hình ảnh đẹp bằng cách lập trình Artist."
         },
         "express-2022/Swimming Fish in Sprite Lab": {
+          "overview": "Sinh viên sẽ lập trình một cảnh dưới nước hoạt hình đơn giản trong bài học \\*\\* xây dựng kỹ năng này\\*\\* này.",
           "preparation": "-   Làm thử bài tập để tìm ra bất kỳ vấn đề tiềm ẩn nào đối với lớp của bạn.\n-   Đảm bảo mỗi học sinh đều có Nhật ký suy nghĩ.",
           "purpose": "Bài học này được thiết kế để giới thiệu cho học sinh vốn từ vựng cốt lõi của Sprite Lab và giúp họ áp dụng các khái niệm đã học trong các môi trường khác vào công cụ này. Bằng cách tạo ra một bể cá, học sinh sẽ bắt đầu hình thành kiến thức về mô hình lập trình của công cụ này và khám phá những cách sử dụng để thể hiện bản thân.",
           "student_overview": "Tìm hiểu cách tạo và chỉnh sửa nhân vật."
@@ -756,6 +806,7 @@
         },
         "express-2022/Dance Party": {
           "name": "Bữa Tiệc Khiêu Vũ",
+          "overview": "Trong bài học “Xây dựng kỹ năng” này, sinh viên sẽ lập trình một bữa tiệc khiêu vũ tương tác. ",
           "preparation": "-   Làm thử bài tập để tìm ra bất kỳ vấn đề tiềm ẩn nào đối với lớp của bạn.\n-   Đảm bảo mỗi học sinh đều có Nhật ký suy nghĩ.\n-   Cân nhắc nhu cầu dùng tai nghe. Hoạt động này phụ thuộc vào âm thanh.",
           "purpose": "Bài học này giới thiệu các khái niệm Khoa học Máy tính cốt lõi về mã hóa và lập trình sự kiện (sử dụng các khối).",
           "student_overview": "Đã đến lúc ăn mừng rồi! Trong bài học này, bạn sẽ tự lập trình một bữa tiệc khiêu vũ tương tác của riêng mình."
@@ -764,29 +815,39 @@
           "name": "Vòng lặp với Rey và BB-8",
           "overview": "Bài học **phát triển kỹ năng** này cho học sinh sử dụng vòng lặp để giúp _BB-8_, nhân vật trong _Chiến tranh giữa các vì sao_ đi qua mê cung một cách hiệu quả.",
           "preparation": "-   Làm thử bài tập để xác định xem có bất kỳ vấn đề tiềm ẩn nào đối với lớp của bạn hay không.\n-   Đảm bảo tất cả học sinh đều có Nhật ký suy nghĩ.",
-          "purpose": "Trong bài học này, học sinh sẽ tìm hiểu về vòng lặp và cách triển khai chúng trong mã lệnh Blockly. Sử dụng vòng lặp là một kỹ năng quan trọng trong lập trình vì lệnh lặp lại thủ công sẽ rất tẻ nhạt và không hiệu quả. Với các bài tập Code.org, học sinh sẽ học cách thêm hướng dẫn vào các vòng lặp hiện có, tập hợp mã lệnh lặp lại thành các vòng lặp và nhận ra các mẫu cần được lặp lại. Cần lưu ý rằng học sinh sẽ đối mặt với những bài tập có nhiều lời giải. Điều này sẽ mở ra cơ hội thảo luận những cách khác nhau để giải bài tập với những lợi ích và bất lợi của mỗi cách tiếp cận."
+          "purpose": "Trong bài học này, học sinh sẽ tìm hiểu về vòng lặp và cách triển khai chúng trong mã lệnh Blockly. Sử dụng vòng lặp là một kỹ năng quan trọng trong lập trình vì lệnh lặp lại thủ công sẽ rất tẻ nhạt và không hiệu quả. Với các bài tập Code.org, học sinh sẽ học cách thêm hướng dẫn vào các vòng lặp hiện có, tập hợp mã lệnh lặp lại thành các vòng lặp và nhận ra các mẫu cần được lặp lại. Cần lưu ý rằng học sinh sẽ đối mặt với những bài tập có nhiều lời giải. Điều này sẽ mở ra cơ hội thảo luận những cách khác nhau để giải bài tập với những lợi ích và bất lợi của mỗi cách tiếp cận.",
+          "student_overview": "Trợ giúp _BB-8_ thông qua mê cung bằng cách sử dụng vòng lặp! "
         },
         "express-2022/Mini-Project: Sticker Art": {
+          "name": "Mini-Project: Sticker Art",
+          "overview": "Bài học \\*\\*mini-dự án này được xây dựng trên sự hiểu biết của các vòng lặp. Học sinh sẽ tạo ra tác phẩm nghệ thuật độc đáo với Nghệ sĩ.",
           "preparation": "-   Thực hành tạo thiết kế của riêng bạn. Hãy lưu ý xem các cấp độ này khác với những cấp độ trước đây ở điểm nào.\n-   Đảm bảo tất cả học sinh đều có Nhật ký suy nghĩ.",
           "purpose": "Loạt bài này nhấn mạnh lợi ích của vòng lặp với các thiết kế cá tính và sáng tạo.\n\nVới vai trò là một giai đoạn tiến hành trên cơ sở dự án, giai đoạn này sẽ giúp học sinh phát triển tác phẩm của riêng mình và tạo ra các tác phẩm tuyệt vời.",
           "student_overview": "Trong bài học này, các vòng lặp giúp bạn dễ dàng tạo ra những bức ảnh tuyệt tác với Artist!"
         },
         "express-2022/Nested Loops in Maze": {
           "name": "Vòng lặp lồng nhau trong game Mê cung",
+          "overview": "Trong bài học “Xây dựng kỹ năng” này, học sinh sẽ học cách lập trình một vòng lặp bên trong vòng lặp khác.",
           "preparation": "-   Làm thử bài tập để tìm ra bất kỳ vấn đề tiềm ẩn nào đối với lớp của bạn.\n-   Đảm bảo mỗi học sinh đều có Nhật ký suy nghĩ.",
           "purpose": "Trong phần giới thiệu về vòng lặp lồng nhau này, học sinh sẽ bước ra khỏi vùng an toàn của bản thân để tạo ra các giải pháp hiệu quả hơn cho bài tập.\n\nTrong các bài tập trước đó, vòng lặp đã thúc đẩy học sinh nhận ra sự lặp lại. Tại đây, học sinh sẽ học cách nhận ra các mẫu _nằm trong_ các mẫu lặp lại để phát triển các vòng lặp lồng nhau này. Giai đoạn này bắt đầu bằng cách khuyến khích học sinh cố gắng giải một bài tập trong đó mã lệnh thật khó chịu và phức tạp để viết ra toàn bộ. Sau khi video giới thiệu vòng lặp lồng nhau, học sinh được xem một ví dụ và được yêu cầu dự đoán điều gì sẽ xảy ra khi một vòng lặp được đưa vào bên trong một vòng lặp khác. Bước tiến này dẫn đến nhiều cơ hội thực hành cho học sinh để củng cố và phát triển dựa trên kiến thức về phép lặp trong lập trình.",
           "student_overview": "Vòng lặp trong vòng lặp trong vòng lặp. Điều này có nghĩa là gì? Bài học này sẽ cho bạn thấy hiện tượng xảy ra khi bạn tạo vòng lặp lồng nhau."
         },
         "express-2022/Snowflakes with Anna and Elsa": {
           "name": "Bông tuyết với Anna và Elsa",
-          "preparation": "-   Xem thử bài học để tìm ra bất kỳ vấn đề tiềm ẩn nào đối với lớp của bạn.\n-   Đảm bảo tất cả học sinh đều có Nhật ký suy nghĩ."
+          "overview": "Bài học **mini-project** này sẽ giúp học sinh trải qua một loạt các bài tập để tạo ra hình ảnh bông tuyết bằng cách sử dụng các nhân vật trong phim _Frozen_.",
+          "preparation": "-   Xem thử bài học để tìm ra bất kỳ vấn đề tiềm ẩn nào đối với lớp của bạn.\n-   Đảm bảo tất cả học sinh đều có Nhật ký suy nghĩ.",
+          "student_overview": "_Anna_ và _Elsa_ có kỹ năng trượt băng tuyệt vời, nhưng cần sự giúp đỡ của bạn để tạo ra các mô hình trong băng. Sử dụng vòng lặp lồng nhau để tạo ra một cái gì đó siêu COOL. "
         },
         "express-2022/Looking Ahead with Minecraft": {
           "name": "Nhìn về phía trước",
+          "overview": "Bài học “Xây dựng kỹ năng” này mang đến cho sinh viên cơ hội thực hành các khái niệm mà các em đã học được cho đến thời điểm này và có được trải nghiệm đầu tiên của họ với điều kiện!",
           "preparation": "-   Làm thử bài tập liên quan đến bài học này để tìm ra bất kỳ vấn đề tiềm ẩn nào đối với lớp của bạn.\n-   Đảm bảo tất cả học sinh đều có Nhật ký suy nghĩ.",
-          "purpose": "Bộ bài tập này sẽ củng cố và xây dựng kiến thức về vòng lặp cũng như giới thiệu lệnh điều kiện. Bằng cách kết hợp hai khái niệm này với nhau, học sinh sẽ có thể khám phá tiềm năng tạo ra các chương trình vui nhộn và sáng tạo trong một môi trường mới và thú vị."
+          "purpose": "Bộ bài tập này sẽ củng cố và xây dựng kiến thức về vòng lặp cũng như giới thiệu lệnh điều kiện. Bằng cách kết hợp hai khái niệm này với nhau, học sinh sẽ có thể khám phá tiềm năng tạo ra các chương trình vui nhộn và sáng tạo trong một môi trường mới và thú vị.",
+          "student_overview": "Tránh dung nham! Ở đây bạn sẽ bắt đầu tìm hiểu về điều kiện trong thế giới của _Minecraft_."
         },
         "express-2022/If/Else with Bee": {
+          "name": "Nếu/Khác với Bee",
+          "overview": "Trong bài học \\*\\* xây dựng kỹ năng này, lớp học của bạn sẽ tiếp tục mã hóa với điều kiện, cho phép họ viết mã có chức năng khác nhau tùy thuộc vào điều kiện cụ thể mà chương trình gặp phải.",
           "preparation": "-   Làm thử bài tập để tìm ra bất kỳ vấn đề tiềm ẩn nào đối với lớp của bạn.\n-   Đảm bảo mỗi học sinh đều có Nhật ký suy nghĩ.",
           "purpose": "Học sinh sẽ thực hành sử dụng lệnh điều kiện trong chương trình. Các khối “if/else” (nếu/nếu không) sẽ giúp chương trình linh hoạt hơn. Chú ong sẽ chỉ lấy mật hoa _nếu_ có hoa hoặc làm mật ong _nếu_ có tổ ong.",
           "student_overview": "Bây giờ bạn đã hiểu về lệnh điều kiện, đã đến lúc lập trình game Chú ong và sử dụng lệnh điều kiện khi lấy mật ong và mật hoa."
@@ -800,15 +861,20 @@
         },
         "express-2022/Conditionals in Minecraft: Voyage Aquatic": {
           "name": "Lệnh điều kiện trong Minecraft: Chuyến du hành dưới nước",
+          "overview": "Trong bài học “Cài đặt ngữ cảnh” này, học sinh sẽ có cơ hội thực hành nội dung mà các em đã học được cho đến thời điểm này, cũng như được xem qua các điều kiện!",
           "preparation": "-   Làm thử bài tập liên quan đến bài học này để tìm ra bất kỳ vấn đề tiềm ẩn nào đối với lớp của bạn.\n-   Đảm bảo tất cả học sinh đều có Nhật ký suy nghĩ.",
-          "purpose": "Bộ bài tập này sẽ củng cố và xây dựng kiến thức về vòng lặp cũng như lệnh điều kiện. Bằng cách kết hợp hai khái niệm này với nhau, học sinh sẽ có thể khám phá tiềm năng tạo ra các chương trình vui nhộn và sáng tạo trong một môi trường mới và thú vị."
+          "purpose": "Bộ bài tập này sẽ củng cố và xây dựng kiến thức về vòng lặp cũng như lệnh điều kiện. Bằng cách kết hợp hai khái niệm này với nhau, học sinh sẽ có thể khám phá tiềm năng tạo ra các chương trình vui nhộn và sáng tạo trong một môi trường mới và thú vị.",
+          "student_overview": "Ở đây bạn sẽ sử dụng điều kiện trong thế giới của Minecraft."
         },
         "express-2022/Until Loops in Maze": {
+          "name": "Cho đến khi vòng trong Mê cung",
+          "overview": "Trong bài học “Xây dựng kỹ năng” này, học sinh sẽ học về cho đến khi vòng lặp. Sinh viên sẽ xây dựng các chương trình có các hành động lặp lại nhân vật chính cho đến khi họ đạt đến điểm dừng mong muốn của họ.",
           "preparation": "-   Làm thử bài tập để tìm ra bất kỳ vấn đề tiềm ẩn nào đối với lớp của bạn.\n-   Đảm bảo mỗi học sinh đều có Nhật ký suy nghĩ.",
           "purpose": "Bộ bài tập này sẽ đóng vai trò củng cố và mở rộng kiến thức về vòng lặp bằng cách bổ sung lệnh điều kiện “until” (đến khi). Bằng cách kết hợp các khái niệm này với nhau, học sinh có thể khám phá tiềm năng tạo ra các chương trình phức tạp và sáng tạo.",
           "student_overview": "Bạn có thể làm những điều vô cùng thú vị khi sử dụng vòng lặp `đến khi` đấy!"
         },
         "express-2022/Harvesting with Conditionals": {
+          "name": "Thu hoạch với điều kiện",
           "overview": "Học sinh sẽ thực hành các vòng lặp `while`, vòng lặp `đến khi` và các câu lệnh `if/else`. Tất cả các khối này đều sử dụng lệnh điều kiện. Bằng cách thực hành cả ba loại vòng lặp, học sinh sẽ biết cách viết mã lệnh phức tạp và linh hoạt.",
           "preparation": "-   Xem thử bài học để tìm ra bất kỳ vấn đề tiềm ẩn nào đối với lớp của bạn.\n-   Đảm bảo tất cả học sinh đều có Nhật ký suy nghĩ.",
           "purpose": "Thực hành sử dụng lệnh điều kiện trong các kịch bản khác nhau giúp phát triển kiến thức của học sinh về các công dụng của lệnh điều kiện. Trong bài học trước, học sinh chỉ sử dụng lệnh điều kiện để di chuyển trong mê cung. Trong bài học này, học sinh sẽ sử dụng lệnh điều kiện để giúp người nông dân biết khi nào cần thu hoạch mùa vụ. Các mẫu mới sẽ xuất hiện và học sinh sẽ sử dụng óc sáng tạo cũng như tư duy logic để xác định các điều kiện mà mã lệnh nên chạy và lặp lại.",
@@ -816,18 +882,21 @@
         },
         "express-2022/Functions in Minecraft": {
           "name": "Hàm trong Minecraft",
+          "overview": "Trong bài học “Xây dựng kỹ năng” này, học sinh sẽ bắt đầu hiểu các chức năng hữu ích như thế nào!",
           "preparation": "-   Làm thử bài tập để tìm ra bất kỳ vấn đề tiềm ẩn nào đối với lớp của bạn.\n-   Đảm bảo mỗi học sinh đều có Nhật ký suy nghĩ.",
           "purpose": "Học sinh sẽ khám phá tính linh hoạt trong lập trình bằng cách thực hành với hàm trong các môi trường khác nhau. Tại đây, học sinh sẽ nhận ra các mẫu có thể tái sử dụng và có thể kết hợp các khối được đặt tên để gọi hàm được xác định trước.",
           "student_overview": "Bạn có thể tìm ra cách sử dụng các hàm để tạo ra mã lệnh hiệu quả nhất không?"
         },
         "express-2022/Functions with Harvester": {
           "name": "Hàm với game Người thu hoạch",
+          "overview": "Trong bài học “Xây dựng kỹ năng” này, học sinh sẽ sử dụng các điều kiện có chức năng để thu hoạch cây trồng tại Harvester.",
           "preparation": "-   Làm thử bài tập để tìm ra bất kỳ vấn đề tiềm ẩn nào đối với lớp của bạn.\n-   Đảm bảo tất cả học sinh đều có Nhật ký suy nghĩ.",
           "purpose": "Bài học này nhằm thúc đẩy học sinh sử dụng hàm theo những phương thức sáng tạo. Học sinh sẽ học được rằng có nhiều cách để tiếp cận một vấn đề, nhưng có một số cách hiệu quả hơn những cách khác. Những bài tập này nhằm củng cố kỹ năng giải quyết vấn đề và tư duy phản biện.",
           "student_overview": "Các hàm sẽ giúp bạn tiết kiệm rất nhiều công sức khi giúp người nông dân thu hoạch!"
         },
         "express-2022/Functions with Artist": {
           "name": "Hàm trong Artist",
+          "overview": "Trong bài học “Xây dựng kỹ năng” này, học sinh sẽ sử dụng các chức năng với Nghệ sĩ.",
           "preparation": "-   Làm thử bài tập để tìm ra bất kỳ vấn đề tiềm ẩn nào đối với lớp của bạn.\n-   Đảm bảo mỗi học sinh đều có Nhật ký suy nghĩ.",
           "purpose": "Một trong những thành phần quan trọng nhất của bài học này là cho học sinh cơ hội để sáng tạo tác phẩm nào đó khiến họ tự hào. Những bài tập như vậy ngày càng có nhiều hình ảnh phức tạp hơn, nhưng mỗi bài tập mới chỉ dựa vào nền tảng là bài tập trước đó. Khi kết thúc bài học này, học sinh sẽ cảm thấy tự tin và tự hào về nỗ lực của mình.",
           "student_overview": "Hãy tạo ra những bức tranh phức tạp thật dễ dàng bằng các hàm!"
@@ -840,6 +909,7 @@
           "student_overview": "Trong bài học này, bạn sẽ thực hành với các biến trong Sprite Lab."
         },
         "express-2022/Using Variables with the Artist": {
+          "name": "Sử dụng Biến với Nghệ sĩ",
           "overview": "Trong bài học **xây dựng kỹ năng** này, học sinh sẽ khám phá việc tạo ra các thiết kế lặp lại bằng cách sử dụng biến trong môi trường Artist. Học sinh sẽ học cách các biến khiến mã lệnh dễ viết và dễ đọc hơn. Sau các bài tập có hướng dẫn, học sinh sẽ kết thúc với cấp độ khám phá tự do để thể hiện những kiến thức đã học và tạo ra thiết kế mới.",
           "preparation": "-   Làm thử bài tập để tìm ra bất kỳ vấn đề tiềm ẩn nào đối với lớp của bạn.\n-   Đảm bảo mỗi học sinh đều có Nhật ký suy nghĩ.",
           "purpose": "Về cơ bản, biến là trình giữ chỗ cho các giá trị có thể không xác định tại thời điểm bạn chạy chương trình của mình hoặc cho các giá trị có thể thay đổi trong quá trình thực thi chương trình. Các biến này rất quan trọng trong việc tạo mã lệnh linh động vì chúng cho phép chương trình thay đổi và phát triển dựa trên bất kỳ số lần sửa đổi tiềm năng nào. Giai đoạn này củng cố cách sử dụng biến bằng các chức năng cơ bản nhất trong quá trình thiết lập và sử dụng biến.",
@@ -874,12 +944,14 @@
         },
         "pre-express-2022/Learn to Drag and Drop": {
           "name": "Học cách kéo và thả",
+          "overview": "Bài học “Xây dựng kỹ năng” này sẽ cung cấp cho sinh viên một ý tưởng về những gì mong đợi khi họ đến phòng máy tính. Nó bắt đầu với một cuộc thảo luận ngắn gọn giới thiệu họ về cách cư xử của phòng thí nghiệm máy tính, sau đó họ sẽ tiến bộ vào sử dụng một máy tính để hoàn thành các câu đố trực tuyến.",
           "preparation": "-   Xem **\\*Cách tạo nhóm đào tạo** trên Code.org – Video dành cho giáo viên. Tạo nhóm đào tạo của riêng bạn trên Code.org và đảm bảo rằng mọi học sinh đều có thẻ ghi mật mã của họ trên đó.\n-   Đảm bảo học sinh có thể truy cập Bài 2 từ thiết bị của mình. Hãy cân nhắc xem bạn có muốn ẩn các bài học trong tương lai để ngăn học sinh học tiếp quá nhanh hay không.\n-   Yêu cầu nhân viên CNTT của trường thêm liên kết nhanh đến nhóm đào tạo của bạn vào màn hình máy tính.\n-   Xem lại trang web Common Sense Education để biết thêm nội dung an toàn trên mạng.",
           "purpose": "Mục tiêu chính của bài học này là phát triển trải nghiệm của học sinh với máy tính. Bằng cách đề cập đến các chức năng máy tính cơ bản nhất như nhấp chuột, kéo và thả, chúng ta đang tạo ra một sân chơi công bằng hơn trong lớp cho các bài tập trong tương lai. Bài học này cũng là cơ hội tuyệt vời để giới thiệu thuật ngữ phần cứng máy tính cơ bản, có thể bao gồm “chuột”, “bàn di chuột” hoặc “màn hình cảm ứng”, tùy thuộc vào thiết bị của bạn.",
           "student_overview": "Nhấp chuột và kéo để hoàn thành các bài tập."
         },
         "pre-express-2022/Sequencing with Scrat": {
           "name": "Học về chuỗi tuần tự cùng sóc Scrat",
+          "overview": "Trong bài học \\*\\* xây dựng kỹ năng này, học sinh sẽ phát triển các thuật toán tuần tự để di chuyển một nhân vật sóc từ một bên của một mê cung sang trái cây ở phía bên kia. Để làm điều này họ sẽ xếp các khối mã lại với nhau trong một chuỗi tuyến tính.",
           "preparation": "-   Đảm bảo mỗi học sinh đều có Nhật ký suy nghĩ.",
           "purpose": "Trong bài học này, học sinh sẽ phát triển các kỹ năng lập trình và sửa lỗi trên nền tảng máy tính. Định dạng kiểu khối của những bài tập này giúp học sinh tìm hiểu về trình tự và khái niệm mà không cần phải lo lắng về việc hoàn thiện cú pháp.",
           "student_overview": "Viết chương trình để Scrat tìm đến hạt sồi."
@@ -892,17 +964,20 @@
         },
         "pre-express-2022/Programming with Rey and BB-8": {
           "name": "Lập trình cùng Rey và robot BB-8",
+          "overview": "Trong bài học này, sinh viên sẽ sử dụng các kỹ năng lập trình mới của mình theo những cách phức tạp hơn để điều hướng một khóa học khó khăn với BB-8.",
           "preparation": "-   Xem thử bài học để tìm ra bất kỳ vấn đề tiềm ẩn nào đối với lớp của bạn.\n-   Đảm bảo tất cả học sinh đều có Nhật ký suy nghĩ.",
           "purpose": "Với tâm thế truyền tải kiến thức, bài học này mang đến cho học sinh một môi trường mới để thực hành các kỹ năng mà họ đã và đang trau dồi. Người hâm mộ Chiến tranh giữa các vì sao sẽ nhảy cẫng lên sung sướng khi nhìn thấy những bài tập này. Mỗi bài tập trong loạt bài tập này đã được bổ sung để giúp học sinh hiểu sâu hơn về các khái niệm cơ bản sẽ sử dụng trong suốt phần còn lại của khóa học này."
         },
         "pre-express-2022/Programming with Harvester": {
           "name": "Lập trình với game Người thu hoạch",
+          "overview": "Trong bài học này, sinh viên sẽ áp dụng các khái niệm lập trình mà họ đã học được vào môi trường Harvester. Sinh viên sẽ tiếp tục phát triển các kỹ năng thuật toán tuần tự và bắt đầu sử dụng quy trình gỡ lỗi. ",
           "preparation": "-   Làm thử bài tập để tìm ra bất kỳ vấn đề tiềm ẩn nào đối với lớp của bạn.\n-   Đảm bảo mỗi học sinh đều có Nhật ký suy nghĩ.",
           "purpose": "Trong bài học này, học sinh sẽ phát triển các kỹ năng sửa lỗi và sẽ tiếp tục phát triển các kỹ năng lập trình của mình.",
           "student_overview": "Giúp Người thu hoạch thu thập các loại rau trên đường đi."
         },
         "pre-express-2022/Loops with Scrat": {
           "name": "Vòng lặp với Scrat",
+          "overview": "Trong bài học \\*\\* xây dựng kỹ năng này, học sinh sẽ thực hành khái niệm vòng lặp trong các câu đố lập trình, nơi mục tiêu là giúp con sóc đạt được acorn.",
           "preparation": "-   (Tùy chọn) Chọn vài bài tập để làm theo nhóm với lớp.\n-   Đảm bảo mỗi học sinh đều có Nhật ký suy nghĩ.",
           "purpose": "Trong bài học này, học sinh sẽ tìm hiểu thêm về vòng lặp và cách triển khai chúng trong mã lệnh Blockly. Sử dụng _vòng lặp_ là một kỹ năng quan trọng trong lập trình vì lệnh lặp lại thủ công sẽ rất tẻ nhạt và không hiệu quả. Với các bài tập Code.org, học sinh sẽ học cách thêm hướng dẫn vào các vòng lặp hiện có, tập hợp mã lệnh lặp lại thành các vòng lặp và nhận ra các mẫu cần được lặp lại.",
           "student_overview": "Giúp Scrat lấp đất nhiều hơn bằng cách sử dụng vòng lặp."
@@ -915,24 +990,28 @@
         },
         "pre-express-2022/Ocean Scene with Loops": {
           "name": "Vòng lặp trong câu chuyện về biển",
+          "overview": "Trong bài học \\*\\* xây dựng kỹ năng này, học sinh học cách vẽ hình ảnh bằng cách lặp lại các chuỗi hướng dẫn đơn giản. Ở đây, các vòng lặp đang tạo ra các mẫu. Cuối bài học này, học sinh sẽ có cơ hội để tạo ra hình ảnh của riêng mình.",
           "preparation": "-   Làm thử bài tập để tìm ra bất kỳ vấn đề tiềm ẩn nào đối với lớp của bạn.\n-   Đảm bảo mỗi học sinh đều có Nhật ký suy nghĩ.",
           "purpose": "Bài học này cung cấp một cái nhìn khác về cách các vòng lặp có thể tạo ra mọi thứ trong lập trình. Học sinh cũng có thể suy nghĩ về hiệu quả thấp khi lập trình không dùng vòng lặp ở đây vì chương trình sẽ cần đến bao nhiêu khối mà không có sự trợ giúp của vòng lặp `repeat` (lặp lại).",
           "student_overview": "Sử dụng vòng lặp và các mô hình để hoàn thành hình ảnh."
         },
         "pre-express-2022/Drawing Gardens with Loops": {
           "name": "Vẽ khu vườn bằng vòng lặp",
+          "overview": "Trong bài học \\*\\* xây dựng kỹ năng này, học sinh học cách vẽ hình ảnh bằng cách lặp lại các chuỗi hướng dẫn đơn giản. Ở đây, sinh viên sử dụng vòng lặp để tạo ra các mẫu. Cuối bài học này, học sinh sẽ có cơ hội để tạo ra hình ảnh của riêng mình.",
           "preparation": "-   Xem thử bài học để tìm ra bất kỳ vấn đề tiềm ẩn nào đối với lớp của bạn.\n-   Đảm bảo mỗi học sinh đều có nhật ký suy nghĩ.",
           "purpose": "Bài học này cung cấp một cái nhìn khác về cách các vòng lặp có thể tạo ra mọi thứ trong lập trình. Học sinh sẽ kiểm tra kỹ năng tư duy phản biện bằng cách đánh giá mã lệnh đã cho và xác định những nội dung cần bổ sung để giải bài tập. Học sinh cũng có thể suy nghĩ về hiệu quả thấp khi lập trình không dùng vòng lặp ở đây vì chương trình sẽ cần đến bao nhiêu khối mà không có sự trợ giúp của vòng lặp `repeat` (lặp lại).",
           "student_overview": "Sử dụng mô hình và vòng lặp để hoàn thành các hình ảnh."
         },
         "pre-express-2022/On the Move with Events": {
           "name": "Di chuyển cùng sự kiện",
+          "overview": "Trong dự án mini này, sinh viên sẽ có cơ hội học cách sử dụng các sự kiện trong Play Lab và áp dụng tất cả các kỹ năng mã hóa mà họ đã học để tạo ra một trò chơi hoạt hình. Đã đến lúc sáng tạo và tạo ra một câu chuyện trong Play Lab!",
           "preparation": "-   Làm thử bài tập để tìm ra bất kỳ vấn đề tiềm ẩn nào đối với lớp của bạn.\n-   (Tùy chọn) Chọn vài bài tập để làm theo nhóm trên lớp.\n-   Đảm bảo tất cả học sinh đều có Nhật ký suy nghĩ",
           "purpose": "Hôm nay, học sinh sẽ tìm hiểu thêm về các sự kiện khi sử dụng Play Lab. Sự kiện rất phổ biến trong hầu hết các chương trình máy tính. Trong hoạt động này, học sinh sẽ sử dụng sự kiện để làm cho nhân vật di chuyển xung quanh màn hình, tạo ra tiếng động và thay đổi hình nền dựa trên các sự kiện do người dùng khởi tạo.",
           "student_overview": "Làm game hoặc sáng tạo câu chuyện của riêng bạn."
         },
         "pre-express-2022/A Royal Battle with Events": {
           "name": "Trận chiến hoàng gia với các sự kiện",
+          "overview": "Trong dự án mini này, sinh viên sẽ có cơ hội học cách sử dụng các sự kiện trong Play Lab và áp dụng tất cả các kỹ năng mã hóa mà họ đã học để tạo ra một trò chơi hoạt hình. ",
           "preparation": "-   Làm thử bài tập để tìm ra bất kỳ vấn đề tiềm ẩn nào đối với lớp của bạn.\n-   (Tùy chọn) Chọn vài bài tập để làm theo nhóm trên lớp.\n-   Đảm bảo tất cả học sinh đều có Nhật ký suy nghĩ.",
           "purpose": "Trong hoạt động trực tuyến này, học sinh sẽ học cách sử dụng các sự kiện trong Play Lab. Họ sẽ bắt đầu bằng cách huấn luyện hiệp sĩ di chuyển khi nhấn một phím mũi tên, sau đó kết thúc bài học với cơ hội thể hiện các kỹ năng còn lại mà họ đã học được trong suốt khóa học này, bao gồm trình tự và vòng lặp, trong bài tập chơi tự do cuối cùng.",
           "student_overview": "Sử dụng sự kiện để tạo một câu chuyện hoặc làm game tương tác."
@@ -946,18 +1025,21 @@
         },
         "coursea-2022/Learn to Drag and Drop": {
           "name": "Học cách kéo và thả",
+          "overview": "Bài học “Xây dựng kỹ năng” này sẽ cung cấp cho sinh viên một ý tưởng về những gì mong đợi khi họ đến phòng máy tính. Nó bắt đầu với một cuộc thảo luận ngắn gọn giới thiệu họ về cách cư xử của phòng thí nghiệm máy tính, sau đó họ sẽ tiến bộ vào sử dụng một máy tính để hoàn thành các câu đố trực tuyến.",
           "preparation": "-   Xem **\\*Cách tạo nhóm đào tạo** trên Code.org – Video dành cho giáo viên. Tạo nhóm đào tạo của riêng bạn trên Code.org và đảm bảo rằng mọi học sinh đều có thẻ ghi mật mã của họ trên đó.\n-   Đảm bảo học sinh có thể truy cập Bài 2 từ thiết bị của mình. Hãy cân nhắc xem bạn có muốn ẩn các bài học trong tương lai để ngăn học sinh học tiếp quá nhanh hay không.\n-   Yêu cầu nhân viên CNTT của trường thêm liên kết nhanh đến nhóm đào tạo của bạn vào màn hình máy tính.\n-   Xem lại trang web Common Sense Education để biết thêm nội dung an toàn trên mạng.",
           "purpose": "Mục tiêu chính của bài học này là phát triển trải nghiệm của học sinh với máy tính. Bằng cách đề cập đến các chức năng máy tính cơ bản nhất như nhấp chuột, kéo và thả, chúng ta đang tạo ra một sân chơi công bằng hơn trong lớp cho các bài tập trong tương lai. Bài học này cũng là cơ hội tuyệt vời để giới thiệu thuật ngữ phần cứng máy tính cơ bản, có thể bao gồm “chuột”, “bàn di chuột” hoặc “màn hình cảm ứng”, tùy thuộc vào thiết bị của bạn.",
           "student_overview": "Nhấp chuột và kéo để hoàn thành các bài tập."
         },
         "coursea-2022/Happy Maps": {
           "name": "Bản đồ thú vị",
+          "overview": "Bài học **bối cảnh cài đặt** này tập hợp các đội với một nhiệm vụ đơn giản: có được “flurb” cho trái cây. Học sinh sẽ thực hành viết các hướng dẫn chính xác khi họ làm việc để dịch các hướng dẫn thành các ký hiệu được cung cấp.",
           "preparation": "-   In một **\\*Bảng học tập** và một bộ **\\*Dụng cụ học tập** cho mỗi nhóm 2-3 người.\n-   Đảm bảo mỗi học sinh đều có Nhật ký suy nghĩ.",
           "purpose": "Bước chuyển giao từ thuật toán đến lập trình có thể đơn giản nếu học sinh hiểu được sự khác biệt giữa việc lập kế hoạch một trình tự và mã hóa trình tự đó thành ngôn ngữ thích hợp. Hoạt động này sẽ giúp học sinh có kinh nghiệm đọc và viết mã rút gọn.",
           "student_overview": "Viết hướng dẫn để đưa Flurb đến chỗ trái cây."
         },
         "coursea-2022/Sequencing with Scrat": {
           "name": "Học về chuỗi tuần tự cùng sóc Scrat",
+          "overview": "Trong bài học \\*\\* xây dựng kỹ năng này, học sinh sẽ phát triển các thuật toán tuần tự để di chuyển một nhân vật sóc từ một bên của một mê cung sang trái cây ở phía bên kia. Để làm điều này họ sẽ xếp các khối mã lại với nhau trong một chuỗi tuyến tính.",
           "preparation": "-   Cắt các khối phương hướng khỏi **\\*Dụng cụ học tập** để sử dụng với hoạt động chuyển tiếp Bản đồ vui vẻ.\n-   Đảm bảo mỗi học sinh đều có Nhật ký suy nghĩ.",
           "purpose": "Trong bài học này, học sinh sẽ phát triển các kỹ năng lập trình và sửa lỗi trên nền tảng máy tính. Định dạng kiểu khối của những bài tập này giúp học sinh tìm hiểu về trình tự và khái niệm mà không cần phải lo lắng về việc hoàn thiện cú pháp.",
           "student_overview": "Viết chương trình để Scrat tìm đến hạt sồi."
@@ -971,49 +1053,59 @@
         },
         "coursea-2022/Programming with Rey and BB-8": {
           "name": "Lập trình cùng Rey và robot BB-8",
+          "overview": "Trong bài học này, sinh viên sẽ sử dụng các kỹ năng lập trình mới của họ theo những cách phức tạp hơn để điều hướng một khóa học khó khăn với _BB-8_.",
           "preparation": "-   Làm thử bài tập tương ứng với bài học này để tìm ra bất kỳ vấn đề tiềm ẩn nào đối với lớp của bạn.\n-   Xem lại **\\*Các nguyên tắc cơ bản của KHMT Mẹo hoạt động chính – Đề xuất bài học**.\n-   Đảm bảo tất cả học sinh đều có Nhật ký suy nghĩ.",
           "purpose": "Với tâm thế truyền tải kiến thức, bài học này mang đến cho học sinh một môi trường mới để thực hành các kỹ năng mà họ đã và đang trau dồi. Người hâm mộ _Chiến tranh giữa các vì sao_ sẽ nhảy cẫng lên sung sướng khi nhìn thấy những bài tập này. Mỗi bài tập trong loạt bài tập này đã được bổ sung để giúp học sinh hiểu sâu hơn về các khái niệm cơ bản sẽ sử dụng trong suốt phần còn lại của khóa học này.",
           "student_overview": "Giúp BB-8 thu thập kim loại phế liệu."
         },
         "coursea-2022/Happy Loops": {
           "name": "Vòng lặp hạnh phúc",
+          "overview": "Bài học \\*\\*cài đặt ngữ cảnh này sẽ xem lại bản đồ Happy Maps. Lần này, sinh viên sẽ sử dụng vòng lặp để giải các câu đố lớn hơn, dài hơn với mã của họ.",
           "preparation": "-   In **\\*Bảng học tập** cho cả lớp xem\n-   In một **\\*Mảnh ghép trò chơi, \\*Bảng học tập XL và \\*Gói dụng cụ học tập bổ sung** cho mỗi nhóm 2-3 người.\n-   Đảm bảo mỗi học sinh đều có Nhật ký suy nghĩ.",
           "purpose": "Bài học này đóng vai trò giới thiệu về vòng lặp. Vòng lặp giúp học sinh đơn giản hóa mã lệnh bằng cách nhóm các lệnh cần lặp lại. Học sinh sẽ phát triển các kỹ năng tư duy phản biện bằng cách nhận ra sự lặp lại trong chuyển động của các bạn cùng lớp và xác định số lần lặp lại các lệnh. Bằng cách ôn lại “Bản đồ vui vẻ”, học sinh sẽ có cơ hội liên hệ các khái niệm cũ, chẳng hạn như trình tự sắp xếp với khái niệm mới về vòng lặp.",
           "student_overview": "Giúp Flurb giải quyết các vấn đề lớn hơn bằng cách sử dụng vòng lặp."
         },
         "coursea-2022/Loops with Scrat": {
           "name": "Vòng lặp với Scrat",
+          "overview": "Trong bài học \\*\\* xây dựng kỹ năng này, học sinh sẽ thực hành các vòng lặp trong các câu đố lập trình, nơi mục tiêu là giúp con sóc đạt được acorn.",
           "preparation": "-   Ôn lại bài học đã không dùng thiết bị điện tử trước đó và soạn các câu hỏi để nhắc nhở học sinh lý do sử dụng vòng lặp.\n-   (Tùy chọn) Chọn vài bài tập để làm theo nhóm với lớp.\n-   Thu thập đồ dùng từ bài Vòng lặp vui vẻ trước đó để tái sử dụng lại cho bước khởi động\n-   Đảm bảo mỗi học sinh đều có Nhật ký suy nghĩ.",
           "purpose": "Trong bài học này, học sinh sẽ tìm hiểu thêm về vòng lặp và cách triển khai chúng trong mã lệnh Blockly. Sử dụng vòng lặp là một kỹ năng quan trọng trong lập trình vì lệnh lặp lại thủ công sẽ rất tẻ nhạt và không hiệu quả. Với các bài tập Code.org này, học sinh sẽ học cách thêm hướng dẫn vào các vòng lặp hiện có, tập hợp mã lệnh lặp lại thành các vòng lặp và nhận ra các mẫu cần được lặp lại.",
           "student_overview": "Giúp Scrat lấp đất nhiều hơn bằng cách sử dụng vòng lặp."
         },
         "coursea-2022/Loops with Laurel": {
           "name": "Vòng lặp với Laurel",
+          "overview": "Trong bài học “Xây dựng kỹ năng” này, học sinh sẽ tiếp tục học khái niệm về vòng lặp. Tại đây, học sinh sử dụng vòng để thu thập kho báu trong các không gian hang động mở.",
           "preparation": "-   Làm thử bài tập để tìm ra bất kỳ vấn đề tiềm ẩn nào đối với lớp của bạn.\n-   (Tùy chọn) Chọn vài bài tập để làm theo nhóm trên lớp.\n-   Xem lại **\\*Các NTCB của KHMT – Đề xuất bài học**.\n-   Đảm bảo mỗi học sinh đều có nhật ký suy nghĩ",
           "purpose": "Bài học này giúp học sinh thực hành nhiều hơn với vòng lặp và giới thiệu một khối mới, `get treasure` (lấy kho báu). Khối này hoạt động giống như khối `pick corn` (nhặt ngô) trong chương trình Người thu hoạch. Những bài tập này tự do hơn, giúp học sinh linh hoạt hơn khi đưa ra các giải pháp cuối cùng.",
           "student_overview": "Giúp Laurel nhà thám hiểm thu thập kho báu dưới lòng đất."
         },
         "coursea-2022/Ocean Scene with Loops": {
           "name": "Vòng lặp trong câu chuyện về biển",
+          "overview": "Trong bài học \\*\\* xây dựng kỹ năng này, học sinh học cách vẽ hình ảnh bằng cách lặp lại các chuỗi hướng dẫn đơn giản. Ở đây, các vòng lặp đang tạo ra các mẫu. Cuối bài học này, học sinh sẽ tạo ra hình ảnh của riêng mình.",
           "preparation": "-   Làm thử bài tập để tìm ra bất kỳ vấn đề tiềm ẩn nào đối với lớp của bạn.\n-   Xem lại **\\*Các NTCB của KHMT – Đề xuất bài học**.\n-   Đảm bảo mỗi học sinh đều có nhật ký suy nghĩ.",
           "purpose": "Bài học này cung cấp một cái nhìn khác về cách các vòng lặp có thể tạo ra mọi thứ trong lập trình. Học sinh cũng có thể suy nghĩ về hiệu quả thấp khi lập trình không dùng vòng lặp ở đây vì chương trình sẽ cần đến bao nhiêu khối mà không có sự trợ giúp của vòng lặp `repeat` (lặp lại).",
           "student_overview": "Sử dụng vòng lặp và các mô hình để hoàn thành hình ảnh."
         },
         "coursea-2022/The Big Event Jr": {
           "name": "Sự kiện lớn – nâng cao",
+          "overview": "Trong bài học **context-setting** này, lớp học sẽ trải nghiệm khái niệm sự kiện thông qua một trò chơi mà chúng di chuyển hoặc hét lên khi bạn nhấn nút trên một điều khiển từ xa khổng lồ.",
           "preparation": "-   Chuẩn bị chiếu **\\*Hình ảnh bộ điều khiển**.\n-   In một **\\*Bài đánh giá** cho mỗi học sinh.\n-   Đảm bảo mỗi học sinh đều có nhật ký suy nghĩ.",
           "purpose": "Hôm nay, học sinh sẽ học cách phân biệt các sự kiện với các hành động. Học sinh sẽ thấy các hoạt động bị gián đoạn khi nhấn “nút” trên chiếc điều khiển bằng giấy. Khi nhìn thấy sự kiện này, cả lớp sẽ phản ứng bằng một hành động duy nhất. Sự kiện ứng dụng rộng rãi trong lập trình và sẽ dễ dàng nhận ra sau bài học này.",
           "student_overview": "Di chuyển và hét lên khi giáo viên của bạn nhấn các nút trên chiếc điều khiển từ xa khổng lồ."
         },
         "coursea-2022/Mini-Project: On the Move with Play Lab": {
+          "name": "Mini-Project: Di chuyển với Play Lab",
+          "overview": "Trong dự án mini này, sinh viên sẽ sử dụng các sự kiện trong Play Lab và áp dụng tất cả các kỹ năng mã hóa mà họ đã học để tạo ra một trò chơi hoạt hình. Đã đến lúc sáng tạo và tạo ra một câu chuyện trong Play Lab!",
           "preparation": "-   Làm thử bài tập để tìm ra bất kỳ vấn đề tiềm ẩn nào đối với lớp của bạn.\n-   (Tùy chọn) Chọn vài bài tập để làm theo nhóm trên lớp.\n-   Ôn lại **\\*Các NTCB của KHMT – Đề xuất bài học**.\n-   Đảm bảo tất cả học sinh đều có nhật ký suy nghĩ.",
           "purpose": "Hôm nay, học sinh sẽ tìm hiểu thêm về các sự kiện khi sử dụng Play Lab. Sự kiện rất phổ biến trong hầu hết các chương trình máy tính. Trong hoạt động này, học sinh sẽ sử dụng sự kiện để làm cho nhân vật di chuyển xung quanh màn hình, tạo ra tiếng động và thay đổi hình nền dựa trên các sự kiện do người dùng khởi tạo.",
           "student_overview": "Làm game hoặc sáng tạo câu chuyện của riêng bạn."
         },
         "coursea-2022/End of Course Project": {
           "name": "Dự án tổng kết khóa học",
+          "overview": "Trong bài học **project** này, học sinh áp dụng những gì họ đã học được về trình tự và vòng lặp với Nghệ sĩ.",
           "preparation": "-   Viết và lập trình trước câu chuyện của riêng bạn trong Họa sĩ để truyền cảm hứng cho học sinh!",
-          "purpose": "Bài học này mang đến cho học sinh cơ hội cuối cùng để vận dụng sáng tạo các kỹ năng khoa học máy tính mới của mình."
+          "purpose": "Bài học này mang đến cho học sinh cơ hội cuối cùng để vận dụng sáng tạo các kỹ năng khoa học máy tính mới của mình.",
+          "student_overview": "Kể một câu chuyện với Nghệ sĩ!"
         },
         "coursec-2022/Putting a STOP to Online Meanness": {
           "name": "Hãy CHẤM DỨT hành vi tiêu cực trên mạng",
@@ -1029,30 +1121,40 @@
         },
         "coursec-2022/Programming with Angry Birds": {
           "name": "Lập trình với Angry Birds",
-          "purpose": "Trong bài học này, học sinh sẽ phát triển các kỹ năng lập trình và sửa lỗi trên nền tảng máy tính. Định dạng kiểu khối của những bài tập này giúp học sinh tìm hiểu về trình tự và khái niệm mà không cần phải lo lắng về việc hoàn thiện cú pháp."
+          "overview": "Trong bài học \\*\\* xây dựng kỹ năng này, học sinh sẽ phát triển các thuật toán tuần tự để di chuyển một con chim từ một bên của mê cung sang con lợn ở phía bên kia. Để làm điều này họ sẽ xếp các khối mã lại với nhau trong một chuỗi tuyến tính, làm cho chúng di chuyển thẳng, rẽ trái, hoặc rẽ phải.",
+          "purpose": "Trong bài học này, học sinh sẽ phát triển các kỹ năng lập trình và sửa lỗi trên nền tảng máy tính. Định dạng kiểu khối của những bài tập này giúp học sinh tìm hiểu về trình tự và khái niệm mà không cần phải lo lắng về việc hoàn thiện cú pháp.",
+          "student_overview": "Tìm hiểu về trình tự và thuật toán với _Angry Birds_."
         },
         "coursec-2022/Debugging in Maze": {
           "name": "Sửa lỗi trong game Mê cung",
+          "overview": "Trong bài học “Xây dựng kỹ năng” này, học sinh sẽ gặp phải những đoạn mã được viết sẵn có chứa các lỗi. Họ sẽ cần phải bước qua mã hiện có để xác định lỗi.",
           "purpose": "Học sinh trong lớp của bạn có thể trở nên bực bội với bài học này do bản chất của việc sửa lỗi. Sửa lỗi là một khái niệm rất quan trọng đối với lập trình máy tính. Các nhà khoa học máy tính phải thực sự giỏi trong việc đối mặt với lỗi trong chương trình của chính họ. Sửa lỗi buộc học sinh phải nhận ra vấn đề và khắc phục chúng trong quá trình trau dồi tư duy phản biện và kỹ năng giải quyết vấn đề.",
           "student_overview": "Tìm vấn đề trong bài tập và thực hành kỹ năng sửa lỗi."
         },
         "coursec-2022/Collecting Treasure with Laurel": {
+          "name": "Thu thập kho báu với Laurel",
+          "overview": "Trong bài học “Xây dựng kỹ năng” này, học sinh sẽ tiếp tục phát triển hiểu biết về thuật toán và gỡ lỗi. Với một nhân vật mới, _Laurel the Adventurer_, sinh viên sẽ tạo ra các thuật toán tuần tự để có được _Laurel_ để lấy kho báu khi cô đi dọc theo một con đường.",
           "purpose": "Trong bài học này, học sinh sẽ thực hành các kỹ năng lập trình của mình bằng cách sử dụng một nhân vật mới, Nhà thám hiểm Laurel. Khi bắt đầu lập trình, người ta ghép các hướng dẫn lại với nhau theo một thứ tự cụ thể bằng cách sử dụng ngôn ngữ mà máy tính có thể đọc được. Thông qua quá trình sử dụng chương trình, học sinh sẽ dần hiểu cách máy tính điều hướng lệnh và trình tự. Sử dụng một nhân vật mới với một mục tiêu bài tập khác sẽ giúp học sinh mở rộng phạm vi trải nghiệm với trình tự và thuật toán trong lập trình.",
           "student_overview": "Viết thuật toán để giúp Nhà phiêu lưu Laurel thu thập thật nhiều đá quý!"
         },
         "coursec-2022/Creating Art with Code": {
+          "name": "Tạo nghệ thuật bằng mã",
+          "overview": "Trong bài học “Xây dựng kỹ năng” này, học sinh sẽ kiểm soát Nghệ sĩ để hoàn thành các bản vẽ trên màn hình.",
           "preparation": "-   Làm thử bài tập để tìm ra bất kỳ vấn đề tiềm ẩn đối với lớp của bạn.\n-   (Tùy chọn) Mua thước đo góc cho lớp để hình dung các góc mà họ phải dùng khi làm bài tập.\n-   In một **\\*Tài liệu phát cho học sinh** cho mỗi học sinh.",
           "purpose": "Dựa trên kinh nghiệm trước đây của học sinh với trình tự, bài học này sẽ truyền thêm cảm hứng sáng tạo với lập trình. Mục đích của bài học này là củng cố kiến thức về trình tự bằng cách giới thiệu các khối và mục tiêu mới. Trong trường hợp này, học sinh tìm hiểu thêm về điểm ảnh và góc bằng cách sử dụng các khối mới, đồng thời thực hành các kỹ năng sắp xếp trình tự. Ngoài ra, học sinh sẽ có thể hình dung các mục tiêu mới như lập trình để Họa sĩ vẽ hình vuông.",
           "student_overview": "Tạo hình ảnh đẹp bằng cách lập trình Artist."
         },
         "coursec-2022/My Loopy Robotic Friends Jr": {
           "name": "Những người bạn robot Loopy của tôi – nâng cao",
+          "overview": "Bài học \\*\\*cài đặt ngữ cảnh này được xây dựng dựa trên hoạt động ban đầu “My Robotic Friends”, với các thiết kế lớn hơn và phức tạp hơn. ",
           "purpose": "Bài học này dùng để giới thiệu lại về vòng lặp với bộ chỉ dẫn lập trình “robot” quen thuộc hiện tại. Học sinh sẽ phát triển các kỹ năng tư duy phản biện bằng cách tìm kiếm các mẫu lặp lại trong chuyển động của các bạn cùng lớp và xác định cách đơn giản hóa các mẫu lặp lại đó bằng vòng lặp.",
           "student_overview": "Trong bài học này, bạn sẽ lại lập trình cho các bạn cùng lớp của mình, nhưng bằng cách sử dụng các vòng lặp, bạn sẽ có thể giải các bài toán lớn hơn và phức tạp hơn."
         },
         "coursec-2022/Loops with Rey and BB-8": {
           "name": "Vòng lặp với Rey và BB-8",
-          "purpose": "Trong bài học này, học sinh sẽ tìm hiểu thêm về vòng lặp và cách triển khai chúng trong mã lệnh Blockly. Sử dụng vòng lặp là một kỹ năng quan trọng trong lập trình vì lệnh lặp lại thủ công sẽ rất tẻ nhạt và không hiệu quả. Với các bài tập Code.org, học sinh sẽ học cách thêm hướng dẫn vào các vòng lặp hiện có, tập hợp mã lệnh lặp lại thành các vòng lặp và nhận ra các mẫu cần được lặp lại. Cần lưu ý rằng học sinh sẽ đối mặt với những bài tập có nhiều lời giải. Điều này sẽ mở ra cơ hội thảo luận những cách khác nhau để giải bài tập với những lợi ích và bất lợi của mỗi cách tiếp cận."
+          "overview": "Bài học \\*\\*Xây dựng kỹ năng này giúp học sinh sử dụng các vòng lặp để giúp BB-8 đi qua một mê cung một cách hiệu quả.",
+          "purpose": "Trong bài học này, học sinh sẽ tìm hiểu thêm về vòng lặp và cách triển khai chúng trong mã lệnh Blockly. Sử dụng vòng lặp là một kỹ năng quan trọng trong lập trình vì lệnh lặp lại thủ công sẽ rất tẻ nhạt và không hiệu quả. Với các bài tập Code.org, học sinh sẽ học cách thêm hướng dẫn vào các vòng lặp hiện có, tập hợp mã lệnh lặp lại thành các vòng lặp và nhận ra các mẫu cần được lặp lại. Cần lưu ý rằng học sinh sẽ đối mặt với những bài tập có nhiều lời giải. Điều này sẽ mở ra cơ hội thảo luận những cách khác nhau để giải bài tập với những lợi ích và bất lợi của mỗi cách tiếp cận.",
+          "student_overview": "Trợ giúp _BB-8_ thông qua mê cung bằng cách sử dụng vòng lặp! "
         },
         "coursec-2022/Harvesting Crops with Loops": {
           "name": "Thu hoạch mùa màng bằng vòng lặp",
@@ -1061,35 +1163,44 @@
           "student_overview": "Hãy sử dụng vòng lặp để giúp máy gặt thu hoạch một số loại rau nhé!"
         },
         "coursec-2022/Mini-Project: Sticker Art": {
+          "name": "Mini-Project: Sticker Art",
           "overview": "Bài học **dự án nhỏ** này được xây dựng dựa trên kiến thức về vòng lặp từ các bài học trước. Học sinh sẽ tạo ra các tác phẩm nghệ thuật độc đáo với Họa sĩ.",
           "purpose": "Loạt bài này nhấn mạnh lợi ích của vòng lặp với các thiết kế cá tính và sáng tạo.\n\nVới vai trò là một giai đoạn tiến hành trên cơ sở dự án, giai đoạn này sẽ giúp học sinh phát triển tác phẩm của riêng mình và tạo ra các tác phẩm tuyệt vời.",
           "student_overview": "Trong bài học này, các vòng lặp giúp bạn dễ dàng tạo ra những bức ảnh tuyệt tác với Artist!"
         },
         "coursec-2022/The Big Event": {
           "name": "Sự kiện lớn",
+          "overview": "Trong bài học \\*\\*cài đặt ngữ cảnh này, học sinh sẽ học được rằng sự kiện là một cách tuyệt vời để thêm tính linh hoạt cho một thuật toán được viết sẵn.",
           "purpose": "Hôm nay, học sinh sẽ học cách phân biệt các sự kiện và hành động. Học sinh sẽ thấy các hoạt động bị gián đoạn khi nhấn “nút” trên chiếc điều khiển bằng giấy. Khi nhìn thấy sự kiện này, cả lớp sẽ phản ứng bằng một hành động duy nhất. Sự kiện ứng dụng rộng rãi trong lập trình và sẽ dễ dàng nhận ra sau bài học này.",
           "student_overview": "Chơi game thú vị để tìm hiểu về sự kiện."
         },
         "coursec-2022/Build a Flappy Game": {
           "name": "Làm game dạng Flappy Bird",
+          "overview": "Bài học này kết hợp \\*\\* xây dựng kỹ năng \\*\\* xung quanh các sự kiện với một dự án mini, nơi sinh viên có thể xây dựng trò chơi Flappy Bird của riêng mình. Vào cuối bài học, học sinh sẽ có thể tùy chỉnh trò chơi của mình bằng cách thay đổi hình ảnh hoặc quy tắc.",
           "purpose": "Sự kiện rất phổ biến trong các chương trình máy tính. Trong bài học này, học sinh sẽ mở rộng kiến thức về sự kiện bằng cách làm game _Flappy Bird_. Học sinh sẽ học cách cho nhân vật di chuyển trên màn hình, tạo ra tiếng động và phản ứng với các chướng ngại vật dựa trên sự kiện do người dùng khởi tạo.",
           "student_overview": "Xây dựng game dạng Flappy Bird của riêng mình theo cách bạn thích, sau đó chia sẻ với bạn bè!"
         },
         "coursec-2022/Mini-Project: Chase Game": {
+          "name": "Mini-Project: Chase Game",
+          "overview": "Bài học này kết hợp \\*\\* xây dựng kỹ năng xung quanh các sự kiện với một dự án nhỏ, nơi sinh viên có thể xây dựng trò chơi hoạt hình của riêng mình.",
           "purpose": "Tại đây, học sinh sẽ mở rộng kiến thức về các sự kiện bằng Play Lab. Học sinh sẽ sử dụng các sự kiện để làm nhân vật di chuyển quanh màn hình, tạo ra tiếng động và thay đổi hình nền dựa trên thông tin đầu vào của người dùng. Vào cuối chuỗi bài tập, học sinh sẽ có cơ hội chia sẻ dự án của mình.",
           "student_overview": "Đã đến lúc sáng tạo và làm game trong Play Lab rồi!"
         },
         "coursec-2022/Picturing Data": {
           "name": "Dữ liệu ảnh",
-          "purpose": "Máy tính được tạo ra để giúp xử lý dữ liệu. Lượng dữ liệu trên thế giới ngày một tăng, vì vậy kỹ năng đọc và phân tích dữ liệu là rất quan trọng. Bài học này nhằm đảm bảo học sinh có kinh nghiệm cơ bản về thu thập, trực quan hóa và phân tích một tập hợp dữ liệu đơn giản."
+          "overview": "Học sinh sẽ thu thập dữ liệu từ một dự án Play Lab và hình dung nó bằng các đồ thị khác nhau trong bài học **exploratory** này.",
+          "purpose": "Máy tính được tạo ra để giúp xử lý dữ liệu. Lượng dữ liệu trên thế giới ngày một tăng, vì vậy kỹ năng đọc và phân tích dữ liệu là rất quan trọng. Bài học này nhằm đảm bảo học sinh có kinh nghiệm cơ bản về thu thập, trực quan hóa và phân tích một tập hợp dữ liệu đơn giản.",
+          "student_overview": "Dữ liệu có thể được sử dụng để hiểu thế giới của chúng ta và trả lời các câu hỏi thú vị. "
         },
         "coursec-2022/Binary Bracelets": {
           "name": "Vòng đeo tay nhị phân",
+          "overview": "Bài học **explory** này giới thiệu khái niệm nhị phân là cách máy tính ngày nay lưu trữ tất cả các loại thông tin.",
           "purpose": "Trong bài học này, học sinh sẽ học cách biểu diễn thông tin sao cho máy tính có thể diễn giải và lưu trữ. Khi học hệ nhị phân, học sinh sẽ có cơ hội lập trình và chia sẻ với các bạn cùng lớp dưới dạng thông điệp bí mật. Sau đó, hoạt động này có thể liên hệ trở lại cách máy tính đọc chương trình, dịch sang hệ nhị phân, sử dụng thông tin theo một cách nào đó, sau đó trả lời lại theo hình thức mà con người có thể hiểu được. Ví dụ, khi chúng ta nhập một câu vào tài liệu rồi nhấn lưu, máy tính sẽ dịch câu đó thành hệ nhị phân, lưu trữ thông tin, sau đó hiện thông báo cho biết tài liệu đã được lưu lại.",
           "student_overview": "Hãy tạo vòng đeo tay nhị phân của riêng bạn và tìm hiểu cách máy tính ghi nhớ thông tin!"
         },
         "coursec-2022/End of Course Project": {
           "name": "Dự án tổng kết khóa học",
+          "overview": "Bài học \\*\\* dự án này sẽ giúp sinh viên thiết kế, phát triển và giới thiệu các dự án Play Lab mới.",
           "preparation": "-   Làm thử bài tập để tìm ra bất kỳ vấn đề tiềm ẩn đối với lớp của bạn.\n-   In **\\*Hướng dẫn lập kế hoạch dự án** cho mỗi học sinh (hoặc cặp học sinh).\n-   Xem lại tài liệu **\\*Hướng dẫn lập kế hoạch dự án (Ví dụ minh họa)**.\n-   (Tùy chọn) Tự hoàn thành hướng dẫn lập kế hoạch và lập trình dự án của riêng bạn để minh họa cho học sinh!",
           "purpose": "Bài học này cung cấp cho học sinh không gian để tạo một dự án thiết kế của riêng họ, sử dụng quy trình từng bước đòi hỏi phải lập kế hoạch nhưng cũng cho phép thoải mái sáng tạo.",
           "student_overview": "Hãy sẵn sàng lập trình nào! Đã đến lúc bắt đầu xây dựng dự án của bạn."
@@ -1352,8 +1463,17 @@
         "coursed-2018/While Loops in Farmer": {
           "name": "Vòng lặp while trong game Bác nông dân"
         },
+        "coursed-2018/Until Loops in Maze": {
+          "name": "Cho đến khi vòng trong Mê cung"
+        },
         "coursed-2018/Conditionals with Cards": {
           "name": "Lệnh điều kiện với lá bài"
+        },
+        "coursed-2018/Conditionals in Bee": {
+          "name": "Nếu/Khác với Bee"
+        },
+        "coursed-2018/Conditionals & Loops in Harvester": {
+          "name": "Thu hoạch với điều kiện"
         },
         "coursed-2018/Digital Citizenship": {
           "name": "Công dân số"
@@ -1375,6 +1495,9 @@
         },
         "coursef-2018/Debugging with Scrat": {
           "name": "Sửa lỗi với Scrat"
+        },
+        "coursef-2018/Programming in Artist": {
+          "name": "Tạo nghệ thuật bằng mã"
         },
         "coursef-2018/Loops: My Loopy Robotic Friends": {
           "name": "Những người bạn robot Loopy của tôi"
@@ -1436,11 +1559,20 @@
         "express-2018/Debugging in Maze": {
           "name": "Sửa lỗi với Scrat"
         },
+        "express-2018/Programming in Collector": {
+          "name": "Thu thập kho báu với Laurel"
+        },
+        "express-2018/Programming in Artist": {
+          "name": "Tạo nghệ thuật bằng mã"
+        },
         "express-2018/Loops: Getting Loopy": {
           "name": "Tạo vòng lặp"
         },
         "express-2018/Loops with Rey and BB-8": {
           "name": "Vòng lặp với Rey và BB-8"
+        },
+        "express-2018/Loops in Artist": {
+          "name": "Sticker Art với vòng"
         },
         "express-2018/Concept Practice with Minecraft ": {
           "name": "Nhìn về phía trước"
@@ -1451,8 +1583,17 @@
         "express-2018/While Loops in Farmer": {
           "name": "Vòng lặp while với Người nông dân"
         },
+        "express-2018/Until Loops in Maze": {
+          "name": "Cho đến khi vòng trong Mê cung"
+        },
         "express-2018/Conditionals with Cards": {
           "name": "Lệnh điều kiện với lá bài"
+        },
+        "express-2018/Conditionals in Bee": {
+          "name": "Nếu/Khác với Bee"
+        },
+        "express-2018/Conditionals & Loops in Harvester": {
+          "name": "Thu hoạch với điều kiện"
         },
         "express-2018/Functions: Songwriting": {
           "name": "Sáng tác với tham số"
@@ -1529,6 +1670,9 @@
         "coursee-2018/Debugging with Scrat": {
           "name": "Sửa lỗi với Scrat"
         },
+        "coursee-2018/Programming in Artist": {
+          "name": "Tạo nghệ thuật bằng mã"
+        },
         "coursee-2018/Loops: My Loopy Robotic Friends": {
           "name": "Những người bạn robot Loopy của tôi"
         },
@@ -1601,11 +1745,20 @@
         "coursec-2018/Real-life Algorithms: Paper Planes": {
           "name": "Máy bay giấy"
         },
+        "coursec-2018/Programming in Collector": {
+          "name": "Thu thập kho báu với Laurel"
+        },
+        "coursec-2018/Programming in Artist": {
+          "name": "Tạo nghệ thuật bằng mã"
+        },
         "coursec-2018/Loops: Getting Loopy": {
           "name": "Tạo vòng lặp"
         },
         "coursec-2018/Loops with Rey and BB-8": {
           "name": "Vòng lặp với Rey và BB-8"
+        },
+        "coursec-2018/Loops in Artist": {
+          "name": "Sticker Art với vòng"
         },
         "coursec-2018/Loops in Harvester": {
           "name": "Thu hoạch mùa màng bằng vòng lặp"
@@ -1916,8 +2069,17 @@
         "coursed-2019/Conditionals with Cards": {
           "name": "Lệnh điều kiện với lá bài"
         },
+        "coursed-2019/Conditionals in Bee": {
+          "name": "Nếu/Khác với Bee"
+        },
         "coursed-2019/While Loops in Farmer": {
           "name": "Vòng lặp while trong game Bác nông dân"
+        },
+        "coursed-2019/Until Loops in Maze": {
+          "name": "Cho đến khi vòng trong Mê cung"
+        },
+        "coursed-2019/Conditionals & Loops in Harvester": {
+          "name": "Thu hoạch với điều kiện"
         },
         "coursed-2019/Unplugged: Binary": {
           "name": "Hình ảnh Nhị phân"
@@ -2045,8 +2207,17 @@
         "express-2019/Debugging in Maze": {
           "name": "Sửa lỗi với Scrat"
         },
+        "express-2019/Programming in Collector": {
+          "name": "Thu thập kho báu với Laurel"
+        },
+        "express-2019/Programming in Artist": {
+          "name": "Tạo nghệ thuật bằng mã"
+        },
         "express-2019/Loops with Rey and BB-8": {
           "name": "Vòng lặp với Rey và BB-8"
+        },
+        "express-2019/Loops in Artist": {
+          "name": "Sticker Art với vòng"
         },
         "express-2019/Nested Loops in Bee": {
           "name": "Vòng lặp lồng nhau trong game Mê cung"
@@ -2057,11 +2228,20 @@
         "express-2019/Concept Practice with Minecraft ": {
           "name": "Nhìn về phía trước"
         },
+        "express-2019/Conditionals in Bee": {
+          "name": "Nếu/Khác với Bee"
+        },
         "express-2019/While Loops in Farmer": {
           "name": "Vòng lặp while với Người nông dân"
         },
         "express-2019/Conditionals in Minecraft: Voyage Aquatic": {
           "name": "Lệnh điều kiện trong Minecraft: Chuyến du hành dưới nước"
+        },
+        "express-2019/Until Loops in Maze": {
+          "name": "Cho đến khi vòng trong Mê cung"
+        },
+        "express-2019/Conditionals & Loops in Harvester": {
+          "name": "Thu hoạch với điều kiện"
         },
         "express-2019/Functions in Minecraft": {
           "name": "Hàm trong Minecraft"
@@ -2105,6 +2285,12 @@
         "coursec-2019/Debugging in Maze": {
           "name": "Sửa lỗi trong game Mê cung"
         },
+        "coursec-2019/Programming in Collector": {
+          "name": "Thu thập kho báu với Laurel"
+        },
+        "coursec-2019/Programming in Artist": {
+          "name": "Tạo nghệ thuật bằng mã"
+        },
         "coursec-2019/Binary Bracelets": {
           "name": "Vòng đeo tay nhị phân"
         },
@@ -2119,6 +2305,9 @@
         },
         "coursec-2019/Looking Ahead": {
           "name": "Nhìn về phía trước"
+        },
+        "coursec-2019/Sticker Art with Loops": {
+          "name": "Sticker Art với vòng"
         },
         "coursec-2019/Events: The Big Event": {
           "name": "Sự kiện lớn"
@@ -2710,6 +2899,9 @@
         },
         "express-2017/While Loops in Farmer": {
           "name": "Vòng lặp while trong game Bác nông dân"
+        },
+        "express-2017/Until Loops in Maze": {
+          "name": "Cho đến khi vòng trong Mê cung"
         },
         "express-2017/Conditionals in Minecraft": {
           "name": "Lệnh điều kiện trong Minecraft"
@@ -3391,6 +3583,7 @@
           "student_overview": "Trong bài học này, **vòng lặp** giúp bạn dễ dàng tạo những hình ảnh thú vị với Họa sĩ!"
         },
         "coursef-2021/Variables that Change in Artist": {
+          "name": "Sử dụng Biến với Nghệ sĩ",
           "overview": "Trong bài học **xây dựng kỹ năng** này, học sinh sẽ khám phá việc tạo ra các thiết kế lặp lại bằng cách sử dụng biến trong môi trường Artist. Học sinh sẽ học cách các biến khiến mã lệnh dễ viết và dễ đọc hơn. Sau các bài tập có hướng dẫn, học sinh sẽ kết thúc với cấp độ khám phá tự do để thể hiện những kiến thức đã học và tạo ra thiết kế mới.",
           "preparation": "-   Khám phá các bài tập để tìm ra bất kỳ vấn đề tiềm ẩn nào trong lớp học.\n-   Đảm bảo mỗi học sinh đều có nhật ký suy nghĩ.",
           "purpose": "Về cơ bản, biến là trình giữ chỗ cho các giá trị có thể không xác định tại thời điểm bạn chạy chương trình của mình hoặc cho các giá trị có thể thay đổi trong quá trình thực thi chương trình. Các biến này rất quan trọng trong việc tạo mã lệnh linh động vì chúng cho phép chương trình thay đổi và phát triển dựa trên bất kỳ số lần sửa đổi tiềm năng nào. Giai đoạn này củng cố cách sử dụng biến bằng các chức năng cơ bản nhất trong quá trình thiết lập và sử dụng biến.",
@@ -3508,42 +3701,51 @@
         },
         "courseb-2021/Loops in Harvester": {
           "name": "Vòng lặp với game Người thu hoạch",
+          "overview": "Trong bài học “Xây dựng kỹ năng” này, học sinh sẽ giúp người thu hoạch cây trồng bằng cách sử dụng vòng lặp.",
           "preparation": "-   Làm thử bài tập để tìm ra bất kỳ vấn đề tiềm ẩn nào đối với lớp của bạn.\n-   Xem lại **\\*Các nguyên tắc cơ bản của KHMT Mẹo hoạt động chính – Đề xuất bài học**.\n-   Đảm bảo mỗi học sinh đều có nhật ký suy nghĩ.\n-   (Tùy chọn) Chọn vài bài tập để làm theo nhóm trên lớp.\n-   (Tùy chọn) Nếu chưa có, hãy in và cắt các khối từ **\\*Dụng cụ học tập** để chuẩn bị cho một trong các hoạt động chuyển tiếp trong bài học này.",
           "purpose": "Trong bài học này, học sinh sẽ tìm hiểu thêm về vòng lặp và cách triển khai chúng trong mã lệnh Blockly. Sử dụng vòng lặp là một kỹ năng quan trọng trong lập trình vì lệnh lặp lại thủ công sẽ rất tẻ nhạt và không hiệu quả. Với các bài tập Code.org, học sinh sẽ học cách thêm hướng dẫn vào các vòng lặp hiện có, tập hợp mã lệnh lặp lại thành các vòng lặp và nhận ra các mẫu cần được lặp lại.",
           "student_overview": "Giúp Người thu hoạch thu hoạch thật nhiều mùa màng bằng cách sử dụng vòng lặp!"
         },
         "courseb-2021/Loops in Collector": {
           "name": "Vòng lặp với Laurel",
+          "overview": "Trong bài học “Xây dựng kỹ năng” này, học sinh sẽ tiếp tục học khái niệm về vòng lặp. Tại đây, Laurel the Adventurer sử dụng vòng để thu thập kho báu trong không gian hang động mở. ",
           "preparation": "-   Làm thử bài tập để tìm ra bất kỳ vấn đề tiềm ẩn nào đối với lớp của bạn.\n-   (Tùy chọn) Chọn vài bài tập để làm theo nhóm trên lớp.\n-   Xem lại **\\*Các nguyên tắc cơ bản của KHMT Mẹo hoạt động chính – Đề xuất bài học**.\n-   Đảm bảo mỗi học sinh đều có nhật ký suy nghĩ.",
           "purpose": "Bài học này giúp học sinh thực hành vòng lặp nhiều hơn và khuyến khích họ đặt nhiều khối bên trong `repeat` (lặp lại) trong khi cố gắng thu thập càng nhiều kho báu càng tốt.",
           "student_overview": "Lập trình nhà thám hiểm Laurel để thu thập kho báu trong hang động mở."
         },
         "courseb-2021/Loops in Artist": {
           "name": "Vẽ khu vườn bằng vòng lặp",
+          "overview": "Trong bài học \\*\\* xây dựng kỹ năng này, học sinh học cách vẽ hình ảnh bằng cách lặp lại các chuỗi hướng dẫn đơn giản. Ở đây, sinh viên sử dụng vòng lặp để tạo ra các mẫu. ",
           "preparation": "-   Làm thử bài tập để tìm ra bất kỳ vấn đề tiềm ẩn nào đối với lớp của bạn.\n-   Xem lại **\\*Các nguyên tắc cơ bản của KHMT Mẹo hoạt động chính – Đề xuất bài học**.\n-   Đảm bảo mỗi học sinh đều có nhật ký suy nghĩ.",
           "purpose": "Bài học này cung cấp một cái nhìn khác về cách các vòng lặp có thể tạo ra mọi thứ trong lập trình. Học sinh sẽ kiểm tra kỹ năng tư duy phản biện bằng cách đánh giá mã lệnh đã cho và xác định những nội dung cần bổ sung để giải bài tập. Học sinh cũng có thể suy nghĩ về hiệu quả thấp khi lập trình không dùng vòng lặp ở đây vì chương trình sẽ cần đến bao nhiêu khối mà không có sự trợ giúp của vòng lặp `repeat` (lặp lại).",
           "student_overview": "Sử dụng mô hình và vòng lặp để hoàn thành các hình ảnh."
         },
         "courseb-2021/The Right App": {
+          "overview": "Trong bài học **exploratory** này, học sinh đồng cảm với một số người dùng điện thoại thông minh hư cấu để giúp họ tìm ra “ứng dụng phù hợp” đáp ứng nhu cầu của họ.",
           "preparation": "-   Đọc ghi chú của người thuyết trình trong **\\*trang thuyết trình**.\n-   Chuẩn bị đủ đồ dùng phác họa/vẽ cho tất cả học sinh.\n-   Đảm bảo mỗi học sinh đều có nhật ký suy nghĩ.",
           "purpose": "Ngày nay, máy tính trở nên phổ biến hơn bao giờ hết. Mọi người thuộc mọi tầng lớp đều sử dụng phần mềm trên nhiều thiết bị khác nhau, đặc biệt là điện thoại thông minh, để cập nhật thông tin, liên lạc và giải trí. Bởi vì mọi người có những trải nghiệm và nhu cầu đa dạng như vậy, các chuyên gia khoa học máy tính tập sự phải đồng cảm với mọi người và chú tâm tìm ra các giải pháp cho người dùng.",
           "student_overview": "Phác thảo ứng dụng điện thoại thông minh của riêng bạn."
         },
         "courseb-2021/Events: The Big Event": {
           "name": "Sự kiện lớn – nâng cao",
+          "overview": "Trong bài học **context-setting** này, lớp học sẽ trải nghiệm khái niệm sự kiện thông qua một trò chơi mà chúng di chuyển hoặc hét lên khi bạn nhấn nút trên một điều khiển từ xa khổng lồ.",
           "preparation": "-   Chuẩn bị chiếu **\\*Hình ảnh bộ điều khiển**.\n-   In một **\\*Bài đánh giá** cho mỗi học sinh.\n-   Đảm bảo mỗi học sinh đều có nhật ký suy nghĩ.",
           "purpose": "Hôm nay, học sinh sẽ học cách phân biệt các sự kiện với các hành động. Học sinh sẽ thấy các hoạt động bị gián đoạn khi nhấn “nút” trên chiếc điều khiển bằng giấy. Khi nhìn thấy sự kiện này, cả lớp sẽ phản ứng bằng một hành động duy nhất. Sự kiện ứng dụng rộng rãi trong lập trình và sẽ dễ dàng nhận ra sau bài học này.",
           "student_overview": "Di chuyển hoặc hét lên khi giáo viên của bạn nhấn các nút trên chiếc điều khiển từ xa khổng lồ."
         },
         "courseb-2021/Events in Play Lab": {
+          "name": "Mini-Project: Một trận chiến Hoàng gia với các sự kiện",
+          "overview": "Trong dự án mini này, sinh viên sẽ có cơ hội học cách sử dụng các sự kiện trong Play Lab và áp dụng tất cả các kỹ năng mã hóa mà họ đã học để tạo ra một trò chơi hoạt hình. ",
           "preparation": "-   Làm thử bài tập để tìm ra bất kỳ vấn đề tiềm ẩn nào đối với lớp của bạn.\n-   (Tùy chọn) Chọn vài bài tập để làm theo nhóm trên lớp.\n-   Xem lại **\\*Các nguyên tắc cơ bản của KHMT Mẹo hoạt động chính – Đề xuất bài học**.\n-   Đảm bảo tất cả học sinh đều có nhật ký suy nghĩ.",
           "purpose": "Trong hoạt động trực tuyến này, học sinh sẽ học cách sử dụng các sự kiện trong Play Lab. Họ sẽ bắt đầu bằng cách huấn luyện hiệp sĩ di chuyển khi nhấn một phím mũi tên, sau đó kết thúc bài học với cơ hội thể hiện các kỹ năng còn lại mà họ đã học được trong suốt khóa học này, bao gồm trình tự và vòng lặp, trong bài tập chơi tự do cuối cùng.",
           "student_overview": "Sử dụng sự kiện để tạo một câu chuyện hoặc làm game tương tác."
         },
         "courseb-2021/lesson-1": {
           "name": "Dự án tổng kết khóa học",
+          "overview": "Trong bài học **project** này, học sinh áp dụng những gì họ đã học được về trình tự và các sự kiện trong một dự án mở với Play Lab.",
           "preparation": "-   Hãy tự lập trình trước các dự án Play Lab của riêng bạn để truyền cảm hứng cho học sinh nhé!",
-          "purpose": "Bài học này mang đến cho học sinh cơ hội cuối cùng để vận dụng sáng tạo các kỹ năng khoa học máy tính mới của mình."
+          "purpose": "Bài học này mang đến cho học sinh cơ hội cuối cùng để vận dụng sáng tạo các kỹ năng khoa học máy tính mới của mình.",
+          "student_overview": "Tạo câu chuyện hoặc trò chơi của riêng bạn."
         },
         "coursea-2021/Safety in My Online Neighborhood": {
           "name": "Giữ an toàn trong môi trường trực tuyến của tôi",
@@ -3554,18 +3756,21 @@
         },
         "coursea-2021/Learn to Drag and Drop": {
           "name": "Học cách kéo và thả",
+          "overview": "Bài học “Xây dựng kỹ năng” này sẽ cung cấp cho sinh viên một ý tưởng về những gì mong đợi khi họ đến phòng máy tính. Nó bắt đầu với một cuộc thảo luận ngắn gọn giới thiệu họ về cách cư xử của phòng thí nghiệm máy tính, sau đó họ sẽ tiến bộ vào sử dụng một máy tính để hoàn thành các câu đố trực tuyến.",
           "preparation": "-   Xem **\\*Cách tạo nhóm đào tạo** trên Code.org – Video dành cho giáo viên. Tạo nhóm đào tạo của riêng bạn trên Code.org và đảm bảo rằng mọi học sinh đều có thẻ ghi mật mã của họ trên đó.\n-   Đảm bảo học sinh có thể truy cập Bài 2 từ thiết bị của mình. Hãy cân nhắc xem bạn có muốn ẩn các bài học trong tương lai để ngăn học sinh học tiếp quá nhanh hay không.\n-   Yêu cầu nhân viên CNTT của trường thêm liên kết nhanh đến nhóm đào tạo của bạn vào màn hình máy tính.\n-   Xem lại trang web Common Sense Education để biết thêm nội dung an toàn trên mạng.",
           "purpose": "Mục tiêu chính của bài học này là phát triển trải nghiệm của học sinh với máy tính. Bằng cách đề cập đến các chức năng máy tính cơ bản nhất như nhấp chuột, kéo và thả, chúng ta đang tạo ra một sân chơi công bằng hơn trong lớp cho các bài tập trong tương lai. Bài học này cũng là cơ hội tuyệt vời để giới thiệu thuật ngữ phần cứng máy tính cơ bản, có thể bao gồm “chuột”, “bàn di chuột” hoặc “màn hình cảm ứng”, tùy thuộc vào thiết bị của bạn.",
           "student_overview": "Nhấp chuột và kéo để hoàn thành các bài tập."
         },
         "coursea-2021/Programming: Happy Maps": {
           "name": "Bản đồ thú vị",
+          "overview": "Bài học **bối cảnh cài đặt** này tập hợp các đội với một nhiệm vụ đơn giản: có được “flurb” cho trái cây. Học sinh sẽ thực hành viết các hướng dẫn chính xác khi họ làm việc để dịch các hướng dẫn thành các ký hiệu được cung cấp.",
           "preparation": "-   In một **\\*Bảng học tập** và một bộ **\\*Dụng cụ học tập** cho mỗi nhóm 2-3 người.\n-   Đảm bảo mỗi học sinh đều có Nhật ký suy nghĩ.",
           "purpose": "Bước chuyển giao từ thuật toán đến lập trình có thể đơn giản nếu học sinh hiểu được sự khác biệt giữa việc lập kế hoạch một trình tự và mã hóa trình tự đó thành ngôn ngữ thích hợp. Hoạt động này sẽ giúp học sinh có kinh nghiệm đọc và viết mã rút gọn.",
           "student_overview": "Viết hướng dẫn để đưa Flurb đến chỗ trái cây."
         },
         "coursea-2021/Sequencing with Scrat": {
           "name": "Học về chuỗi tuần tự cùng sóc Scrat",
+          "overview": "Trong bài học \\*\\* xây dựng kỹ năng này, học sinh sẽ phát triển các thuật toán tuần tự để di chuyển một nhân vật sóc từ một bên của một mê cung sang trái cây ở phía bên kia. Để làm điều này họ sẽ xếp các khối mã lại với nhau trong một chuỗi tuyến tính.",
           "preparation": "-   Cắt các khối phương hướng khỏi **\\*Dụng cụ học tập** để sử dụng với hoạt động chuyển tiếp Bản đồ vui vẻ.\n-   Đảm bảo mỗi học sinh đều có Nhật ký suy nghĩ.",
           "purpose": "Trong bài học này, học sinh sẽ phát triển các kỹ năng lập trình và sửa lỗi trên nền tảng máy tính. Định dạng kiểu khối của những bài tập này giúp học sinh tìm hiểu về trình tự và khái niệm mà không cần phải lo lắng về việc hoàn thiện cú pháp.",
           "student_overview": "Viết chương trình để Scrat tìm đến hạt sồi."
@@ -3579,49 +3784,59 @@
         },
         "coursea-2021/Programming with Rey and BB-8": {
           "name": "Lập trình cùng Rey và robot BB-8",
+          "overview": "Trong bài học này, sinh viên sẽ sử dụng các kỹ năng lập trình mới của họ theo những cách phức tạp hơn để điều hướng một khóa học khó khăn với _BB-8_.",
           "preparation": "-   Làm thử bài tập tương ứng với bài học này để tìm ra bất kỳ vấn đề tiềm ẩn nào đối với lớp của bạn.\n-   Xem lại **\\*Các nguyên tắc cơ bản của KHMT Mẹo hoạt động chính – Đề xuất bài học**.\n-   Đảm bảo tất cả học sinh đều có Nhật ký suy nghĩ.",
           "purpose": "Với tâm thế truyền tải kiến thức, bài học này mang đến cho học sinh một môi trường mới để thực hành các kỹ năng mà họ đã và đang trau dồi. Người hâm mộ _Chiến tranh giữa các vì sao_ sẽ nhảy cẫng lên sung sướng khi nhìn thấy những bài tập này. Mỗi bài tập trong loạt bài tập này đã được bổ sung để giúp học sinh hiểu sâu hơn về các khái niệm cơ bản sẽ sử dụng trong suốt phần còn lại của khóa học này.",
           "student_overview": "Giúp BB-8 thu thập kim loại phế liệu."
         },
         "coursea-2021/Loops: Happy Loops": {
           "name": "Vòng lặp hạnh phúc",
+          "overview": "Bài học \\*\\*cài đặt ngữ cảnh này sẽ xem lại bản đồ Happy Maps. Lần này, sinh viên sẽ sử dụng vòng lặp để giải các câu đố lớn hơn, dài hơn với mã của họ.",
           "preparation": "-   In **\\*Bảng học tập** cho cả lớp xem\n-   In một **\\*Mảnh ghép trò chơi, \\*Bảng học tập XL và \\*Gói dụng cụ học tập bổ sung** cho mỗi nhóm 2-3 người.\n-   Đảm bảo mỗi học sinh đều có Nhật ký suy nghĩ.",
           "purpose": "Bài học này đóng vai trò giới thiệu về vòng lặp. Vòng lặp giúp học sinh đơn giản hóa mã lệnh bằng cách nhóm các lệnh cần lặp lại. Học sinh sẽ phát triển các kỹ năng tư duy phản biện bằng cách nhận ra sự lặp lại trong chuyển động của các bạn cùng lớp và xác định số lần lặp lại các lệnh. Bằng cách ôn lại “Bản đồ vui vẻ”, học sinh sẽ có cơ hội liên hệ các khái niệm cũ, chẳng hạn như trình tự sắp xếp với khái niệm mới về vòng lặp.",
           "student_overview": "Giúp Flurb giải quyết các vấn đề lớn hơn bằng cách sử dụng vòng lặp."
         },
         "coursea-2021/Loops in Ice Age": {
           "name": "Vòng lặp với Scrat",
+          "overview": "Trong bài học \\*\\* xây dựng kỹ năng này, học sinh sẽ thực hành các vòng lặp trong các câu đố lập trình, nơi mục tiêu là giúp con sóc đạt được acorn.",
           "preparation": "-   Ôn lại bài học đã không dùng thiết bị điện tử trước đó và soạn các câu hỏi để nhắc nhở học sinh lý do sử dụng vòng lặp.\n-   (Tùy chọn) Chọn vài bài tập để làm theo nhóm với lớp.\n-   Thu thập đồ dùng từ bài Vòng lặp vui vẻ trước đó để tái sử dụng lại cho bước khởi động\n-   Đảm bảo mỗi học sinh đều có Nhật ký suy nghĩ.",
           "purpose": "Trong bài học này, học sinh sẽ tìm hiểu thêm về vòng lặp và cách triển khai chúng trong mã lệnh Blockly. Sử dụng vòng lặp là một kỹ năng quan trọng trong lập trình vì lệnh lặp lại thủ công sẽ rất tẻ nhạt và không hiệu quả. Với các bài tập Code.org này, học sinh sẽ học cách thêm hướng dẫn vào các vòng lặp hiện có, tập hợp mã lệnh lặp lại thành các vòng lặp và nhận ra các mẫu cần được lặp lại.",
           "student_overview": "Giúp Scrat lấp đất nhiều hơn bằng cách sử dụng vòng lặp."
         },
         "coursea-2021/Loops in Collector": {
           "name": "Vòng lặp với Laurel",
+          "overview": "Trong bài học “Xây dựng kỹ năng” này, học sinh sẽ tiếp tục học khái niệm về vòng lặp. Tại đây, học sinh sử dụng vòng để thu thập kho báu trong các không gian hang động mở.",
           "preparation": "-   Làm thử bài tập để tìm ra bất kỳ vấn đề tiềm ẩn nào đối với lớp của bạn.\n-   (Tùy chọn) Chọn vài bài tập để làm theo nhóm trên lớp.\n-   Xem lại **\\*Các NTCB của KHMT – Đề xuất bài học**.\n-   Đảm bảo mỗi học sinh đều có nhật ký suy nghĩ",
           "purpose": "Bài học này giúp học sinh thực hành nhiều hơn với vòng lặp và giới thiệu một khối mới, `get treasure` (lấy kho báu). Khối này hoạt động giống như khối `pick corn` (nhặt ngô) trong chương trình Người thu hoạch. Những bài tập này tự do hơn, giúp học sinh linh hoạt hơn khi đưa ra các giải pháp cuối cùng.",
           "student_overview": "Giúp Laurel nhà thám hiểm thu thập kho báu dưới lòng đất."
         },
         "coursea-2021/Ocean Scene with Loops": {
           "name": "Vòng lặp trong câu chuyện về biển",
+          "overview": "Trong bài học \\*\\* xây dựng kỹ năng này, học sinh học cách vẽ hình ảnh bằng cách lặp lại các chuỗi hướng dẫn đơn giản. Ở đây, các vòng lặp đang tạo ra các mẫu. Cuối bài học này, học sinh sẽ tạo ra hình ảnh của riêng mình.",
           "preparation": "-   Làm thử bài tập để tìm ra bất kỳ vấn đề tiềm ẩn nào đối với lớp của bạn.\n-   Xem lại **\\*Các NTCB của KHMT – Đề xuất bài học**.\n-   Đảm bảo mỗi học sinh đều có nhật ký suy nghĩ.",
           "purpose": "Bài học này cung cấp một cái nhìn khác về cách các vòng lặp có thể tạo ra mọi thứ trong lập trình. Học sinh cũng có thể suy nghĩ về hiệu quả thấp khi lập trình không dùng vòng lặp ở đây vì chương trình sẽ cần đến bao nhiêu khối mà không có sự trợ giúp của vòng lặp `repeat` (lặp lại).",
           "student_overview": "Sử dụng vòng lặp và các mô hình để hoàn thành hình ảnh."
         },
         "coursea-2021/Events: The Big Event": {
           "name": "Sự kiện lớn – nâng cao",
+          "overview": "Trong bài học **context-setting** này, lớp học sẽ trải nghiệm khái niệm sự kiện thông qua một trò chơi mà chúng di chuyển hoặc hét lên khi bạn nhấn nút trên một điều khiển từ xa khổng lồ.",
           "preparation": "-   Chuẩn bị chiếu **\\*Hình ảnh bộ điều khiển**.\n-   In một **\\*Bài đánh giá** cho mỗi học sinh.\n-   Đảm bảo mỗi học sinh đều có nhật ký suy nghĩ.",
           "purpose": "Hôm nay, học sinh sẽ học cách phân biệt các sự kiện với các hành động. Học sinh sẽ thấy các hoạt động bị gián đoạn khi nhấn “nút” trên chiếc điều khiển bằng giấy. Khi nhìn thấy sự kiện này, cả lớp sẽ phản ứng bằng một hành động duy nhất. Sự kiện ứng dụng rộng rãi trong lập trình và sẽ dễ dàng nhận ra sau bài học này.",
           "student_overview": "Di chuyển và hét lên khi giáo viên của bạn nhấn các nút trên chiếc điều khiển từ xa khổng lồ."
         },
         "coursea-2021/Events in Play Lab": {
+          "name": "Mini-Project: Di chuyển với Play Lab",
+          "overview": "Trong dự án mini này, sinh viên sẽ sử dụng các sự kiện trong Play Lab và áp dụng tất cả các kỹ năng mã hóa mà họ đã học để tạo ra một trò chơi hoạt hình. Đã đến lúc sáng tạo và tạo ra một câu chuyện trong Play Lab!",
           "preparation": "-   Làm thử bài tập để tìm ra bất kỳ vấn đề tiềm ẩn nào đối với lớp của bạn.\n-   (Tùy chọn) Chọn vài bài tập để làm theo nhóm trên lớp.\n-   Ôn lại **\\*Các NTCB của KHMT – Đề xuất bài học**.\n-   Đảm bảo tất cả học sinh đều có nhật ký suy nghĩ.",
           "purpose": "Hôm nay, học sinh sẽ tìm hiểu thêm về các sự kiện khi sử dụng Play Lab. Sự kiện rất phổ biến trong hầu hết các chương trình máy tính. Trong hoạt động này, học sinh sẽ sử dụng sự kiện để làm cho nhân vật di chuyển xung quanh màn hình, tạo ra tiếng động và thay đổi hình nền dựa trên các sự kiện do người dùng khởi tạo.",
           "student_overview": "Làm game hoặc sáng tạo câu chuyện của riêng bạn."
         },
         "coursea-2021/lesson-1": {
           "name": "Dự án tổng kết khóa học",
+          "overview": "Trong bài học **project** này, học sinh áp dụng những gì họ đã học được về trình tự và vòng lặp với Nghệ sĩ.",
           "preparation": "-   Viết và lập trình trước câu chuyện của riêng bạn trong Họa sĩ để truyền cảm hứng cho học sinh!",
-          "purpose": "Bài học này mang đến cho học sinh cơ hội cuối cùng để vận dụng sáng tạo các kỹ năng khoa học máy tính mới của mình."
+          "purpose": "Bài học này mang đến cho học sinh cơ hội cuối cùng để vận dụng sáng tạo các kỹ năng khoa học máy tính mới của mình.",
+          "student_overview": "Kể một câu chuyện với Nghệ sĩ!"
         },
         "coursec-2021/Putting a STOP to Online Meanness": {
           "name": "Hãy CHẤM DỨT hành vi tiêu cực trên mạng",
@@ -3632,41 +3847,52 @@
         },
         "coursec-2021/Programming: My Robotic Friends": {
           "name": "Những người bạn robot của tôi – nâng cao",
+          "overview": "Trong bài học **context-setting** này, học sinh sẽ sử dụng một bộ ký hiệu để hướng dẫn một “robot” xếp chén theo các mẫu khác nhau. Học sinh sẽ thay phiên nhau tham gia với tư cách là robot, chỉ đáp ứng các thuật toán được xác định bởi các đồng nghiệp của họ.",
           "preparation": "-   Chuẩn bị một chồng 20 cốc giấy (hoặc hình thang bằng giấy) cho mỗi nhóm 2-3 học sinh.\n-   Đặt các biểu tượng trong **\\*Bộ biểu tượng** ở vị trí mà học sinh có thể tham khảo trong suốt bài học.\n-   (Tùy chọn) In ra một **\\*Ý tưởng xếp cốc** cho mỗi nhóm 2-3 học sinh.\n-   Đảm bảo mỗi học sinh đều có nhật ký suy nghĩ.",
           "purpose": "Bài học không dụng thiết bị điện tử này tập hợp cả lớp lại thành một đội với một nhiệm vụ đơn giản phải hoàn thành là: cho “robot” xếp cốc theo một thiết kế cụ thể. Hoạt động này đặt nền tảng cho hoạt động lập trình mà học sinh sẽ thực hiện trong suốt khóa học khi họ hiểu được tầm quan trọng của việc định nghĩa một thuật toán truyền đạt rõ ràng.",
           "student_overview": "Trong bài học này, bạn sẽ giả vờ rằng các bạn cùng lớp của mình là rô bốt và lập trình các bạn để tạo ra các mô hình cốc xếp chồng lên nhau."
         },
         "coursec-2021/Programming in Maze": {
           "name": "Lập trình với Angry Birds",
+          "overview": "Trong bài học \\*\\* xây dựng kỹ năng này, học sinh sẽ phát triển các thuật toán tuần tự để di chuyển một con chim từ một bên của mê cung sang con lợn ở phía bên kia. Để làm điều này họ sẽ xếp các khối mã lại với nhau trong một chuỗi tuyến tính, làm cho chúng di chuyển thẳng, rẽ trái, hoặc rẽ phải.",
           "preparation": "-   Làm thử bài tập để tìm ra bất kỳ vấn đề tiềm ẩn nào đối với lớp của bạn.\n-   (Tùy chọn) Chọn vài bài tập để làm theo nhóm trên lớp.\n-   Đảm bảo tất cả học sinh đều có nhật ký suy nghĩ.",
-          "purpose": "Trong bài học này, học sinh sẽ phát triển các kỹ năng lập trình và sửa lỗi trên nền tảng máy tính. Định dạng kiểu khối của những bài tập này giúp học sinh tìm hiểu về trình tự và khái niệm mà không cần phải lo lắng về việc hoàn thiện cú pháp."
+          "purpose": "Trong bài học này, học sinh sẽ phát triển các kỹ năng lập trình và sửa lỗi trên nền tảng máy tính. Định dạng kiểu khối của những bài tập này giúp học sinh tìm hiểu về trình tự và khái niệm mà không cần phải lo lắng về việc hoàn thiện cú pháp.",
+          "student_overview": "Tìm hiểu về trình tự và thuật toán với _Angry Birds_."
         },
         "coursec-2021/Debugging in Maze": {
           "name": "Sửa lỗi trong game Mê cung",
+          "overview": "Trong bài học “Xây dựng kỹ năng” này, học sinh sẽ gặp phải những đoạn mã được viết sẵn có chứa các lỗi. Họ sẽ cần phải bước qua mã hiện có để xác định lỗi.",
           "preparation": "-   Làm thử bài tập để tìm ra bất kỳ vấn đề tiềm ẩn nào đối với lớp của bạn.\n-   (Tùy chọn) Chọn vài bài tập để làm theo nhóm trên lớp.\n-   Ôn lại **\\*Các nguyên tắc cơ bản của KHMT Mẹo hoạt động chính – Đề xuất bài học**.\n-   Xem lại **\\*Hướng dẫn sửa lỗi** trên trang tổng quan giáo trình của khóa học này cùng cả lớp.\n-   Đảm bảo tất cả học sinh đều có nhật ký suy nghĩ.",
           "purpose": "Học sinh trong lớp của bạn có thể trở nên bực bội với bài học này do bản chất của việc sửa lỗi. Sửa lỗi là một khái niệm rất quan trọng đối với lập trình máy tính. Các nhà khoa học máy tính phải thực sự giỏi trong việc đối mặt với lỗi trong chương trình của chính họ. Sửa lỗi buộc học sinh phải nhận ra vấn đề và khắc phục chúng trong quá trình trau dồi tư duy phản biện và kỹ năng giải quyết vấn đề.",
           "student_overview": "Tìm vấn đề trong bài tập và thực hành kỹ năng sửa lỗi."
         },
         "coursec-2021/Programming in Collector": {
+          "name": "Thu thập kho báu với Laurel",
+          "overview": "Trong bài học “Xây dựng kỹ năng” này, học sinh sẽ tiếp tục phát triển hiểu biết về thuật toán và gỡ lỗi. Với một nhân vật mới, _Laurel the Adventurer_, sinh viên sẽ tạo ra các thuật toán tuần tự để có được _Laurel_ để lấy kho báu khi cô đi dọc theo một con đường.",
           "preparation": "-   Làm thử bài tập để tìm ra bất kỳ vấn đề tiềm ẩn đối với lớp của bạn.\n-   Đảm bảo tất cả học sinh đều có nhật ký suy nghĩ.",
           "purpose": "Trong bài học này, học sinh sẽ thực hành các kỹ năng lập trình của mình bằng cách sử dụng một nhân vật mới, Nhà thám hiểm Laurel. Khi bắt đầu lập trình, người ta ghép các hướng dẫn lại với nhau theo một thứ tự cụ thể bằng cách sử dụng ngôn ngữ mà máy tính có thể đọc được. Thông qua quá trình sử dụng chương trình, học sinh sẽ dần hiểu cách máy tính điều hướng lệnh và trình tự. Sử dụng một nhân vật mới với một mục tiêu bài tập khác sẽ giúp học sinh mở rộng phạm vi trải nghiệm với trình tự và thuật toán trong lập trình.",
           "student_overview": "Viết thuật toán để giúp Nhà phiêu lưu Laurel thu thập thật nhiều đá quý!"
         },
         "coursec-2021/Programming in Artist": {
+          "name": "Tạo nghệ thuật bằng mã",
+          "overview": "Trong bài học “Xây dựng kỹ năng” này, học sinh sẽ kiểm soát Nghệ sĩ để hoàn thành các bản vẽ trên màn hình.",
           "preparation": "-   Làm thử bài tập để tìm ra bất kỳ vấn đề tiềm ẩn đối với lớp của bạn.\n-   (Tùy chọn) Mua thước đo góc cho lớp để hình dung các góc mà họ phải dùng khi làm bài tập.\n-   In một **\\*Tài liệu phát cho học sinh** cho mỗi học sinh.",
           "purpose": "Dựa trên kinh nghiệm trước đây của học sinh với trình tự, bài học này sẽ truyền thêm cảm hứng sáng tạo với lập trình. Mục đích của bài học này là củng cố kiến thức về trình tự bằng cách giới thiệu các khối và mục tiêu mới. Trong trường hợp này, học sinh tìm hiểu thêm về điểm ảnh và góc bằng cách sử dụng các khối mới, đồng thời thực hành các kỹ năng sắp xếp trình tự. Ngoài ra, học sinh sẽ có thể hình dung các mục tiêu mới như lập trình để Họa sĩ vẽ hình vuông.",
           "student_overview": "Tạo hình ảnh đẹp bằng cách lập trình Artist."
         },
         "coursec-2021/Loops: My Loopy Robotic Friends": {
           "name": "Những người bạn robot Loopy của tôi – nâng cao",
+          "overview": "Bài học \\*\\*cài đặt ngữ cảnh này được xây dựng dựa trên hoạt động ban đầu “My Robotic Friends”, với các thiết kế lớn hơn và phức tạp hơn. ",
           "preparation": "-   Đảm bảo mỗi học sinh đều có nhật ký\n-   Chuẩn bị một chồng 20 cốc giấy (hoặc **\\*hình thang bằng giấy**) cho mỗi nhóm 4 học sinh.\n-   Đặt các **\\*biểu tượng** ở vị trí mà học sinh có thể tham khảo trong suốt bài học.\n-   (Tùy chọn) In ra một **\\*Ý tưởng xếp cốc** cho mỗi nhóm 4 học sinh.\n-   Đảm bảo mỗi học sinh đều có nhật ký suy nghĩ.",
           "purpose": "Bài học này dùng để giới thiệu lại về vòng lặp với bộ chỉ dẫn lập trình “robot” quen thuộc hiện tại. Học sinh sẽ phát triển các kỹ năng tư duy phản biện bằng cách tìm kiếm các mẫu lặp lại trong chuyển động của các bạn cùng lớp và xác định cách đơn giản hóa các mẫu lặp lại đó bằng vòng lặp.",
           "student_overview": "Trong bài học này, bạn sẽ lại lập trình cho các bạn cùng lớp của mình, nhưng bằng cách sử dụng các vòng lặp, bạn sẽ có thể giải các bài toán lớn hơn và phức tạp hơn."
         },
         "coursec-2021/Loops with Rey and BB-8": {
           "name": "Vòng lặp với Rey và BB-8",
+          "overview": "Bài học \\*\\*Xây dựng kỹ năng này giúp học sinh sử dụng các vòng lặp để giúp BB-8 đi qua một mê cung một cách hiệu quả.",
           "preparation": "-   Làm thử bài tập để xác định xem có bất kỳ vấn đề tiềm ẩn nào đối với lớp của bạn hay không.\n-   Đảm bảo tất cả học sinh đều có nhật ký suy nghĩ.",
-          "purpose": "Trong bài học này, học sinh sẽ tìm hiểu thêm về vòng lặp và cách triển khai chúng trong mã lệnh Blockly. Sử dụng vòng lặp là một kỹ năng quan trọng trong lập trình vì lệnh lặp lại thủ công sẽ rất tẻ nhạt và không hiệu quả. Với các bài tập Code.org, học sinh sẽ học cách thêm hướng dẫn vào các vòng lặp hiện có, tập hợp mã lệnh lặp lại thành các vòng lặp và nhận ra các mẫu cần được lặp lại. Cần lưu ý rằng học sinh sẽ đối mặt với những bài tập có nhiều lời giải. Điều này sẽ mở ra cơ hội thảo luận những cách khác nhau để giải bài tập với những lợi ích và bất lợi của mỗi cách tiếp cận."
+          "purpose": "Trong bài học này, học sinh sẽ tìm hiểu thêm về vòng lặp và cách triển khai chúng trong mã lệnh Blockly. Sử dụng vòng lặp là một kỹ năng quan trọng trong lập trình vì lệnh lặp lại thủ công sẽ rất tẻ nhạt và không hiệu quả. Với các bài tập Code.org, học sinh sẽ học cách thêm hướng dẫn vào các vòng lặp hiện có, tập hợp mã lệnh lặp lại thành các vòng lặp và nhận ra các mẫu cần được lặp lại. Cần lưu ý rằng học sinh sẽ đối mặt với những bài tập có nhiều lời giải. Điều này sẽ mở ra cơ hội thảo luận những cách khác nhau để giải bài tập với những lợi ích và bất lợi của mỗi cách tiếp cận.",
+          "student_overview": "Trợ giúp _BB-8_ thông qua mê cung bằng cách sử dụng vòng lặp! "
         },
         "coursec-2021/Loops in Harvester": {
           "name": "Thu hoạch mùa màng bằng vòng lặp",
@@ -3676,6 +3902,7 @@
           "student_overview": "Hãy sử dụng vòng lặp để giúp máy gặt thu hoạch một số loại rau nhé!"
         },
         "coursec-2021/Sticker Art with Loops": {
+          "name": "Mini-Project: Sticker Art",
           "overview": "Bài học **dự án nhỏ** này được xây dựng dựa trên kiến thức về vòng lặp từ các bài học trước. Học sinh sẽ tạo ra các tác phẩm nghệ thuật độc đáo với Họa sĩ.",
           "preparation": "-   Thực hành tạo thiết kế của riêng bạn. Hãy lưu ý xem các cấp độ này khác với những cấp độ trước đây ở điểm nào.\n-   Đảm bảo tất cả học sinh đều có nhật ký suy nghĩ.",
           "purpose": "Loạt bài này nhấn mạnh lợi ích của vòng lặp với các thiết kế cá tính và sáng tạo.\n\nVới vai trò là một giai đoạn tiến hành trên cơ sở dự án, giai đoạn này sẽ giúp học sinh phát triển tác phẩm của riêng mình và tạo ra các tác phẩm tuyệt vời.",
@@ -3683,34 +3910,42 @@
         },
         "coursec-2021/Events: The Big Event": {
           "name": "Sự kiện lớn",
+          "overview": "Trong bài học \\*\\*cài đặt ngữ cảnh này, học sinh sẽ học được rằng sự kiện là một cách tuyệt vời để thêm tính linh hoạt cho một thuật toán được viết sẵn.",
           "preparation": "-   In hoặc chiếu **\\*Bộ điều khiển sự kiện**.\n-   In một **\\*bài đánh giá** cho mỗi học sinh.\n-   Đảm bảo tất cả học sinh đều có nhật ký suy nghĩ.",
           "purpose": "Hôm nay, học sinh sẽ học cách phân biệt các sự kiện và hành động. Học sinh sẽ thấy các hoạt động bị gián đoạn khi nhấn “nút” trên chiếc điều khiển bằng giấy. Khi nhìn thấy sự kiện này, cả lớp sẽ phản ứng bằng một hành động duy nhất. Sự kiện ứng dụng rộng rãi trong lập trình và sẽ dễ dàng nhận ra sau bài học này.",
           "student_overview": "Chơi game thú vị để tìm hiểu về sự kiện."
         },
         "coursec-2021/Build a Flappy Game": {
           "name": "Làm game dạng Flappy Bird",
+          "overview": "Bài học này kết hợp \\*\\* xây dựng kỹ năng \\*\\* xung quanh các sự kiện với một dự án mini, nơi sinh viên có thể xây dựng trò chơi Flappy Bird của riêng mình. Vào cuối bài học, học sinh sẽ có thể tùy chỉnh trò chơi của mình bằng cách thay đổi hình ảnh hoặc quy tắc.",
           "preparation": "-   Khám phá các bài tập để tìm ra bất kỳ vấn đề tiềm ẩn nào trong lớp học.\n-   Đảm bảo mỗi học sinh đều có nhật ký suy nghĩ.",
           "purpose": "Sự kiện rất phổ biến trong các chương trình máy tính. Trong bài học này, học sinh sẽ mở rộng kiến thức về sự kiện bằng cách làm game _Flappy Bird_. Học sinh sẽ học cách cho nhân vật di chuyển trên màn hình, tạo ra tiếng động và phản ứng với các chướng ngại vật dựa trên sự kiện do người dùng khởi tạo.",
           "student_overview": "Xây dựng game dạng Flappy Bird của riêng mình theo cách bạn thích, sau đó chia sẻ với bạn bè!"
         },
         "coursec-2021/Events in Play Lab": {
+          "name": "Mini-Project: Chase Game",
+          "overview": "Bài học này kết hợp \\*\\* xây dựng kỹ năng xung quanh các sự kiện với một dự án nhỏ, nơi sinh viên có thể xây dựng trò chơi hoạt hình của riêng mình.",
           "preparation": "-   Khám phá các bài tập để tìm ra bất kỳ vấn đề tiềm ẩn nào trong lớp học.\n-   Đảm bảo mỗi học sinh đều có nhật ký suy nghĩ.",
           "purpose": "Tại đây, học sinh sẽ mở rộng kiến thức về các sự kiện bằng Play Lab. Học sinh sẽ sử dụng các sự kiện để làm nhân vật di chuyển quanh màn hình, tạo ra tiếng động và thay đổi hình nền dựa trên thông tin đầu vào của người dùng. Vào cuối chuỗi bài tập, học sinh sẽ có cơ hội chia sẻ dự án của mình.",
           "student_overview": "Đã đến lúc sáng tạo và làm game trong Play Lab rồi!"
         },
         "coursec-2021/Picturing Data": {
           "name": "Dữ liệu ảnh",
+          "overview": "Học sinh sẽ thu thập dữ liệu từ một dự án Play Lab và hình dung nó bằng các đồ thị khác nhau trong bài học **exploratory** này.",
           "preparation": "-   In một **\\*bảng học tập** cho mỗi học sinh.\n-   Hãy thử bài học hôm nay trên Code Studio. Chương trình này được dùng như một công cụ cho hoạt động hôm nay. Hãy chuẩn bị chiếu trước lớp hoặc để học sinh xem trên máy tính của riêng mình.\n-   Đảm bảo tất cả học sinh đều có nhật ký suy nghĩ.",
-          "purpose": "Máy tính được tạo ra để giúp xử lý dữ liệu. Lượng dữ liệu trên thế giới ngày một tăng, vì vậy kỹ năng đọc và phân tích dữ liệu là rất quan trọng. Bài học này nhằm đảm bảo học sinh có kinh nghiệm cơ bản về thu thập, trực quan hóa và phân tích một tập hợp dữ liệu đơn giản."
+          "purpose": "Máy tính được tạo ra để giúp xử lý dữ liệu. Lượng dữ liệu trên thế giới ngày một tăng, vì vậy kỹ năng đọc và phân tích dữ liệu là rất quan trọng. Bài học này nhằm đảm bảo học sinh có kinh nghiệm cơ bản về thu thập, trực quan hóa và phân tích một tập hợp dữ liệu đơn giản.",
+          "student_overview": "Dữ liệu có thể được sử dụng để hiểu thế giới của chúng ta và trả lời các câu hỏi thú vị. "
         },
         "coursec-2021/Binary Bracelets": {
           "name": "Vòng đeo tay nhị phân",
+          "overview": "Bài học **explory** này giới thiệu khái niệm nhị phân là cách máy tính ngày nay lưu trữ tất cả các loại thông tin.",
           "preparation": "-   (Tùy chọn) Xem video **\\*Thực hành bài học**.\n-   Tập hợp bút dạ để làm vòng tay. Các đồ trang trí khác như hạt và que cọ ống hút là tùy chọn.\n-   In một **\\*bảng học tập** và một **\\*Bài đánh giá** cho mỗi học sinh.\n-   Đảm bảo tất cả học sinh đều có nhật ký suy nghĩ.\n-   (Tùy chọn) Viết một lời nhắn ngắn lên bảng ở dạng nhị phân.",
           "purpose": "Trong bài học này, học sinh sẽ học cách biểu diễn thông tin sao cho máy tính có thể diễn giải và lưu trữ. Khi học hệ nhị phân, học sinh sẽ có cơ hội lập trình và chia sẻ với các bạn cùng lớp dưới dạng thông điệp bí mật. Sau đó, hoạt động này có thể liên hệ trở lại cách máy tính đọc chương trình, dịch sang hệ nhị phân, sử dụng thông tin theo một cách nào đó, sau đó trả lời lại theo hình thức mà con người có thể hiểu được. Ví dụ, khi chúng ta nhập một câu vào tài liệu rồi nhấn lưu, máy tính sẽ dịch câu đó thành hệ nhị phân, lưu trữ thông tin, sau đó hiện thông báo cho biết tài liệu đã được lưu lại.",
           "student_overview": "Hãy tạo vòng đeo tay nhị phân của riêng bạn và tìm hiểu cách máy tính ghi nhớ thông tin!"
         },
         "coursec-2021/End of Course Project: Create a Play Lab Game": {
           "name": "Dự án tổng kết khóa học",
+          "overview": "Bài học \\*\\* dự án này sẽ giúp sinh viên thiết kế, phát triển và giới thiệu các dự án Play Lab mới.",
           "preparation": "-   Làm thử bài tập để tìm ra bất kỳ vấn đề tiềm ẩn đối với lớp của bạn.\n-   In **\\*Hướng dẫn lập kế hoạch dự án** cho mỗi học sinh (hoặc cặp học sinh).\n-   Xem lại tài liệu **\\*Hướng dẫn lập kế hoạch dự án (Ví dụ minh họa)**.\n-   (Tùy chọn) Tự hoàn thành hướng dẫn lập kế hoạch và lập trình dự án của riêng bạn để minh họa cho học sinh!",
           "purpose": "Bài học này cung cấp cho học sinh không gian để tạo một dự án thiết kế của riêng họ, sử dụng quy trình từng bước đòi hỏi phải lập kế hoạch nhưng cũng cho phép thoải mái sáng tạo.",
           "student_overview": "Hãy sẵn sàng lập trình nào! Đã đến lúc bắt đầu xây dựng dự án của bạn."
@@ -3724,62 +3959,73 @@
         },
         "coursed-2021/Algorithms: Graph Paper Programming": {
           "name": "lập trình đồ thị trên giấy",
+          "overview": "Trong bài học \\*\\*cài đặt ngữ cảnh này, học sinh sử dụng các ký hiệu để hướng dẫn nhau tô màu các ô vuông trên giấy đồ thị. Bằng cách “lập trình” nhau để vẽ tranh, sinh viên có cơ hội trải nghiệm một số khái niệm cốt lõi của lập trình một cách thú vị và dễ tiếp cận. ",
           "preparation": "-   (Tùy chọn) Xem video **\\*Thực hành bài học**.\n-   In một **\\*bảng học tập** và **\\*bài đánh giá** cho mỗi học sinh.\n-   Đảm bảo tất cả học sinh đều có nhật ký suy nghĩ.",
           "purpose": "Mục tiêu của hoạt động này là phát triển kỹ năng tư duy phản biện và sự hứng thú cho khóa học, đồng thời giới thiệu một số khái niệm lập trình cơ bản sẽ dùng trong suốt khóa học. Bằng cách giới thiệu các khái niệm cơ bản như trình tự sắp xếp và thuật toán cho lớp học trong một hoạt động không dùng thiết bị điện tử, học sinh sợ máy tính vẫn có thể tiếp thu kiến thức căn bản về các chủ đề này. Trong bài học này, học sinh sẽ học cách phát triển một thuật toán và mã hóa thành một chương trình.",
           "student_overview": "Trong bài học này, bạn sẽ lập trình cho bạn cùng lớp của mình vẽ những bức tranh!"
         },
         "coursed-2021/Introduction to Online Puzzles": {
           "name": "Giới thiệu về Bài tập trực tuyến",
+          "overview": "Trong bài học này, sinh viên sẽ thực hành các kỹ năng _sequencing_ và gỡ lỗi trong câu đố mê cung.",
           "preparation": "-   Khám phá các bài tập để tìm ra bất kỳ vấn đề tiềm ẩn nào trong lớp học.\n-   Đảm bảo mỗi học sinh đều có nhật ký suy nghĩ.",
           "purpose": "Chúng tôi nhận ra rằng mỗi lớp học đều có nhiều mức độ hiểu biết về mọi chủ đề. Một số học sinh trong lớp của bạn có thể là chuyên gia máy tính, còn những người khác chưa có nhiều kinh nghiệm. Để tạo ra một sân chơi (và học tập) bình đẳng, chúng tôi đã phát triển “Giai đoạn chuẩn bị” này cho Khóa học D. Bước này có thể dùng làm phần giới thiệu hoặc đánh giá về cách sử dụng Code.org cũng như các khái niệm khoa học máy tính cơ bản. Giai đoạn này bao gồm tất cả các điều kiện tiên quyết cần thiết để bắt đầu Khóa học D.",
           "student_overview": "Bài học này sẽ cho bạn thực hành các kỹ năng bạn sẽ cần cho khóa học này."
         },
         "coursed-2021/Relay Programming": {
           "name": "Chương trình chuyển tiếp",
+          "overview": "Bài học **context-setting** này sẽ bắt đầu với một bài học ngắn về gỡ lỗi và kiên trì, sau đó sẽ nhanh chóng chuyển sang một cuộc đua chống lại đồng hồ khi học sinh đột nhập vào nhóm và làm việc cùng nhau để viết một chương trình một hướng dẫn tại một thời điểm.",
           "preparation": "-   Xem \\*_\\\\_Video dành cho giáo viên \\*\\*.\n-   Tìm một không gian rộng rãi cho hoạt động này, chẳng hạn như phòng tập thể dục hoặc sân cỏ ngoài trời.\n-   In một **\\*Gói hoạt động** cho mỗi nhóm.\n-   Phát cho mỗi nhóm nhiều giấy và bút/bút chì.\n-   In một **\\*bảng học tập** cho mỗi học sinh.\n-   Đảm bảo tất cả học sinh đều có nhật ký suy nghĩ.",
           "purpose": "Làm việc theo nhóm rất quan trọng trong khoa học máy tính. Các nhóm viết và sửa lỗi mã cùng nhau thay vì làm việc với tư cách cá nhân. Trong bài học này, học sinh sẽ học cách làm việc cùng nhau sao cho hiệu quả nhất có thể.\n\nHoạt động này cũng mang lại cảm giác cấp bách, giúp học sinh cân bằng thời gian cẩn thận và tránh mắc sai lầm mà không bị tụt lại quá xa. Trải nghiệm này có thể gây căng thẳng (theo dự tính!) Hãy đảm bảo rằng bạn cung cấp cho học sinh các công cụ để đối phó với sự bực bội tiềm ẩn.",
           "student_overview": "Bạn có nhớ ở phần đầu khóa học khi bạn vẽ tranh bằng mã lệnh không? Trong bài học này, bạn sẽ làm công việc tương tự theo nhóm!"
         },
         "coursed-2021/Debugging in Collector": {
           "name": "Sửa lỗi với Laurel",
+          "overview": "Trong bài học “Xây dựng kỹ năng” này, sinh viên sẽ thực hành gỡ lỗi trong môi trường “sưu tập”. Học sinh sẽ được thực hành đọc và chỉnh sửa mã để sửa các câu đố với các thuật toán đơn giản, vòng lặp và vòng lặp lồng nhau.",
           "preparation": "-   Khám phá các bài tập để tìm ra bất kỳ vấn đề tiềm ẩn nào trong lớp học.\n-   Đảm bảo mỗi học sinh đều có nhật ký suy nghĩ.",
           "purpose": "Mục đích của bài học này là dạy học sinh rằng thất bại là chuyện bình thường khi học kỹ năng mới. Học sinh sẽ được cung cấp các chương trình viết sẵn KHÔNG hoạt động. Họ sẽ được yêu cầu sửa các chương trình này. Quá trình được gọi là sửa lỗi này sẽ dạy cho học sinh các kỹ năng giải quyết vấn đề và tư duy phản biện cần thiết. Những kỹ năng này sẽ phát huy tác dụng khi học sinh tiến hành các dự án lập trình ngày càng khó hơn.",
           "student_overview": "Bạn đã bao giờ gặp sự cố khi viết mã lệnh chưa? Trong bài học này, bạn sẽ tìm hiểu về bí mật của việc sửa lỗi. Sửa lỗi là quá trình tìm kiếm và khắc phục các sự cố trong mã lệnh của bạn."
         },
         "coursed-2021/Events in Bounce": {
           "name": "Sự kiện trong game Ném bóng",
+          "overview": "Trong bài học \\*\\*cài đặt ngữ cảnh này, học viên sẽ tìm hiểu các sự kiện là gì và các lập trình viên sử dụng chúng trong trò chơi điện tử như thế nào. Học sinh sẽ xây dựng một trò chơi mà họ có thể tùy chỉnh với tốc độ và âm thanh khác nhau.",
           "preparation": "-   Đảm bảo tất cả học sinh đều có nhật ký suy nghĩ.\n-   Làm thử bài tập để tìm ra bất kỳ vấn đề tiềm ẩn đối với lớp của bạn.\n-   Đọc **\\*trang thuyết trình** (sẽ trình bày với học sinh vào cuối giờ).",
           "purpose": "Sự kiện rất phổ biến trong chương trình máy tính, đặc biệt là trong trò chơi điện tử.\n\nTrong bài học này, học sinh sẽ mở rộng kiến thức về sự kiện bằng cách làm game đề tài thể thao. Học sinh sẽ học cách di chuyển mái chèo theo các phím mũi tên và tạo ra tiếng động khi các vật thể va chạm. Cuối cùng, họ sẽ phải tùy chỉnh để khiến game của mình trở nên độc đáo hơn!",
           "student_overview": "Bạn đã bao giờ ước mình có thể chơi game ở trường chưa? Trong bài học này, bạn sẽ tự làm game đấy!"
         },
         "coursed-2021/Build a Star Wars Game": {
           "name": "Làm game Chiến tranh giữa các vì sao",
+          "overview": "Trong bài học này, sinh viên sẽ thực hành sử dụng các sự kiện để xây dựng một trò chơi mà họ có thể chia sẻ.",
           "preparation": "-   Làm thử bài tập để tìm ra bất kỳ vấn đề tiềm ẩn nào.\n-   Đảm bảo tất cả học sinh đều có nhật ký suy nghĩ.",
           "purpose": "“Nguyên tắc cơ bản của KHMT” không chỉ đơn giản là giảng dạy về khoa học máy tính, mà còn khiến khoa học máy tính trở nên thú vị và hấp dẫn. Trong loạt bài học này, học sinh sẽ tìm hiểu về sự kiện sử dụng các nhân vật nổi tiếng trong _Chiến tranh giữa các vì sao_. Những bài tập này xóa nhòa ranh giới giữa “học tập” và “vui chơi”. Ngoài ra, học sinh sẽ học cách nhận biết các nguyên tắc lập trình thông thường trong game để khi chơi game ở nhà, họ có thể thấy các nguyên tắc khoa học máy tính đang áp dụng phổ biến.",
           "student_overview": "Hãy cảm nhận thần lực khi làm game Chiến tranh giữa các vì sao của riêng mình trong bài học này."
         },
         "coursed-2021/Dance Party": {
           "name": "Bữa Tiệc Khiêu Vũ",
+          "overview": "Trong bài học “Xây dựng kỹ năng” này, sinh viên sẽ lập trình một bữa tiệc khiêu vũ tương tác. ",
           "preparation": "-   Làm thử bài tập để tìm ra bất kỳ vấn đề tiềm ẩn nào đối với lớp của bạn.\n-   Đảm bảo mỗi học sinh đều có nhật ký suy nghĩ.\n-   Cân nhắc nhu cầu dùng tai nghe. Hoạt động này phụ thuộc vào âm thanh.",
           "purpose": "Bài học này giới thiệu các khái niệm Khoa học Máy tính cốt lõi về mã hóa và lập trình sự kiện (sử dụng các khối).",
           "student_overview": "Đã đến lúc ăn mừng rồi! Trong bài học này, bạn sẽ tự lập trình một bữa tiệc khiêu vũ tương tác của riêng mình."
         },
         "coursed-2021/Loops in Ice Age": {
           "name": "Vòng lặp trong Kỷ băng hà",
+          "overview": "Bài học \\*\\*Cài đặt/xây dựng kỹ năng này sẽ nhanh chóng giới thiệu cho sinh viên các vòng lặp.",
           "preparation": "-   (Tùy chọn) Chọn vài bài tập để làm theo nhóm với lớp.\n-   Đảm bảo mỗi học sinh đều có nhật ký suy nghĩ.",
           "purpose": "Trong bài học này, học sinh sẽ tìm hiểu thêm về vòng lặp và cách triển khai chúng trong mã lệnh Blockly. Sử dụng vòng lặp là một kỹ năng quan trọng trong lập trình vì lệnh lặp lại thủ công sẽ rất tẻ nhạt và không hiệu quả. Với các bài tập Code.org này, học sinh sẽ học cách thêm hướng dẫn vào các vòng lặp hiện có, tập hợp mã lệnh lặp lại thành các vòng lặp và nhận ra các mẫu cần được lặp lại.",
           "student_overview": "Trong bài học này, bạn sẽ sử dụng khối lặp lại để giúp Scrat tiếp cận hạt sồi một cách hiệu quả nhất có thể."
         },
         "coursed-2021/Loops in Artist": {
           "name": "Vẽ hình với vòng lặp",
+          "overview": "Bài học \\*\\* xây dựng kỹ năng này được xây dựng dựa trên sự hiểu biết về các vòng lặp từ bài học trước đó và tăng gấp đôi như một bài tập gỡ lỗi để thực hành giải quyết vấn đề thêm.",
           "preparation": "-   Khám phá các bài tập để tìm ra bất kỳ vấn đề tiềm ẩn nào trong lớp học.\n-   Đảm bảo mỗi học sinh đều có nhật ký suy nghĩ.",
           "purpose": "Loạt bài học này nhấn mạnh tác dụng của vòng lặp với một loạt các bài tập nhằm giúp học sinh suy nghĩ về lý do vòng lặp `repeat` (lặp lại) vượt trội hơn so với viết đầy đủ.",
           "student_overview": "Trong bài học này, vòng lặp giúp bạn dễ dàng tạo ra những hình ảnh thú vị với Artist!"
         },
         "coursed-2021/Nested Loops in Bee": {
           "name": "Vòng lặp lồng nhau trong game Mê cung",
+          "overview": "Trong bài học “Xây dựng kỹ năng” này, học sinh sẽ học cách lập trình một vòng lặp bên trong vòng lặp khác.",
           "preparation": "-   Khám phá các bài tập để tìm ra bất kỳ vấn đề tiềm ẩn nào trong lớp học.\n-   Đảm bảo mỗi học sinh đều có nhật ký suy nghĩ.",
-          "purpose": "Trong phần giới thiệu về vòng lặp lồng nhau này, học sinh sẽ bước ra khỏi vùng an toàn của bản thân để tạo ra các giải pháp hiệu quả hơn cho bài tập.\n\nTrong các bài tập trước đó, vòng lặp đã thúc đẩy học sinh nhận ra sự lặp lại. Tại đây, học sinh sẽ học cách nhận ra các mẫu _nằm trong_ các mẫu lặp lại để phát triển các vòng lặp lồng nhau này. Giai đoạn này bắt đầu bằng cách khuyến khích học sinh cố gắng giải một bài tập trong đó mã lệnh thật khó chịu và quá phức tạp để viết ra toàn bộ. Sau khi video giới thiệu vòng lặp lồng nhau, học sinh được xem một ví dụ và được yêu cầu dự đoán điều gì sẽ xảy ra khi một vòng lặp được đưa vào bên trong một vòng lặp khác. Bước tiến này dẫn đến nhiều cơ hội thực hành cho học sinh để củng cố và phát triển dựa trên kiến thức về phép lặp trong lập trình."
+          "purpose": "Trong phần giới thiệu về vòng lặp lồng nhau này, học sinh sẽ bước ra khỏi vùng an toàn của bản thân để tạo ra các giải pháp hiệu quả hơn cho bài tập.\n\nTrong các bài tập trước đó, vòng lặp đã thúc đẩy học sinh nhận ra sự lặp lại. Tại đây, học sinh sẽ học cách nhận ra các mẫu _nằm trong_ các mẫu lặp lại để phát triển các vòng lặp lồng nhau này. Giai đoạn này bắt đầu bằng cách khuyến khích học sinh cố gắng giải một bài tập trong đó mã lệnh thật khó chịu và quá phức tạp để viết ra toàn bộ. Sau khi video giới thiệu vòng lặp lồng nhau, học sinh được xem một ví dụ và được yêu cầu dự đoán điều gì sẽ xảy ra khi một vòng lặp được đưa vào bên trong một vòng lặp khác. Bước tiến này dẫn đến nhiều cơ hội thực hành cho học sinh để củng cố và phát triển dựa trên kiến thức về phép lặp trong lập trình.",
+          "student_overview": "Bài học này sẽ dạy cho bạn những gì xảy ra khi bạn đặt vòng bên trong vòng lặp bên trong vòng lặp."
         },
         "coursed-2021/Conditionals with Cards": {
           "name": "Lệnh điều kiện với lá bài",
@@ -3790,10 +4036,14 @@
         },
         "coursed-2021/lesson-6": {
           "name": "Nhìn về phía trước",
+          "overview": "Bài học “Xây dựng kỹ năng” này mang đến cho sinh viên cơ hội thực hành các khái niệm mà các em đã học được cho đến thời điểm này và có được trải nghiệm đầu tiên của họ với điều kiện!",
           "preparation": "-   Làm thử bài tập liên quan đến bài học này để tìm ra bất kỳ vấn đề tiềm ẩn nào đối với lớp của bạn.\n-   Đảm bảo tất cả học sinh đều có nhật ký suy nghĩ.",
-          "purpose": "Bộ bài tập này sẽ củng cố và xây dựng kiến thức về vòng lặp cũng như giới thiệu lệnh điều kiện. Bằng cách kết hợp hai khái niệm này với nhau, học sinh sẽ có thể khám phá tiềm năng tạo ra các chương trình vui nhộn và sáng tạo trong một môi trường mới và thú vị."
+          "purpose": "Bộ bài tập này sẽ củng cố và xây dựng kiến thức về vòng lặp cũng như giới thiệu lệnh điều kiện. Bằng cách kết hợp hai khái niệm này với nhau, học sinh sẽ có thể khám phá tiềm năng tạo ra các chương trình vui nhộn và sáng tạo trong một môi trường mới và thú vị.",
+          "student_overview": "Tránh dung nham! Ở đây bạn sẽ bắt đầu tìm hiểu về điều kiện trong thế giới của _Minecraft_."
         },
         "coursed-2021/Conditionals in Bee": {
+          "name": "Nếu/Khác với Bee",
+          "overview": "Trong bài học \\*\\* xây dựng kỹ năng này, lớp học của bạn sẽ tiếp tục mã hóa với điều kiện, cho phép họ viết mã có chức năng khác nhau tùy thuộc vào điều kiện cụ thể mà chương trình gặp phải.",
           "preparation": "-   Khám phá các bài tập để tìm ra bất kỳ vấn đề tiềm ẩn nào trong lớp học.\n-   Đảm bảo mỗi học sinh đều có nhật ký suy nghĩ.",
           "purpose": "Sau khi được giới thiệu về lệnh điều kiện trong “Lệnh điều kiện với lá bài”, bây giờ học sinh sẽ thực hành sử dụng chúng trong chương trình. Các khối “if/else” (nếu/nếu không) sẽ giúp chương trình linh hoạt hơn. Chú ong sẽ chỉ lấy mật hoa _nếu_ có hoa hoặc làm mật ong _nếu_ có tổ ong.",
           "student_overview": "Bây giờ bạn đã hiểu về lệnh điều kiện, đã đến lúc lập trình game Chú ong và sử dụng lệnh điều kiện khi lấy mật ong và mật hoa."
@@ -3806,6 +4056,8 @@
           "student_overview": "Vòng lặp rất hữu ích trong quá trình viết mã lệnh. Bài học này sẽ dạy bạn về một loại vòng lặp mới: vòng lặp while!"
         },
         "coursed-2021/Until Loops in Maze": {
+          "name": "Cho đến khi vòng trong Mê cung",
+          "overview": "Trong bài học “Xây dựng kỹ năng” này, học viên sẽ học về các vòng lặp “until”. Sinh viên sẽ xây dựng các chương trình có các hành động lặp lại nhân vật chính “cho đến khi” họ đạt đến điểm dừng mong muốn của họ.",
           "preparation": "-   Khám phá các bài tập để tìm ra bất kỳ vấn đề tiềm ẩn nào trong lớp học.\n-   Đảm bảo mỗi học sinh đều có nhật ký suy nghĩ.",
           "purpose": "Bộ bài tập này sẽ đóng vai trò củng cố và mở rộng kiến thức về vòng lặp bằng cách bổ sung lệnh điều kiện `until` (đến khi). Bằng cách kết hợp các khái niệm này với nhau, học sinh có thể khám phá tiềm năng tạo ra các chương trình phức tạp và sáng tạo.",
           "student_overview": "Bạn có thể làm những điều vô cùng thú vị khi sử dụng vòng lặp `đến khi` đấy!"
@@ -3819,26 +4071,34 @@
         },
         "express-2021/Programming with Angry Birds": {
           "name": "Lập trình với Angry Birds",
+          "overview": "Trong bài học “Xây dựng kỹ năng” này, học sinh sẽ phát triển các thuật toán tuần tự để di chuyển một con chim từ một bên của mê cung sang con lợn ở phía bên kia. Để làm điều này, chúng sẽ xếp các khối mã lại với nhau trong một dãy tuyến tính, làm cho chúng di chuyển thẳng, rẽ trái, hoặc rẽ phải.",
           "preparation": "-   Làm thử bài tập để tìm ra bất kỳ vấn đề tiềm ẩn nào đối với lớp của bạn.\n-   (Tùy chọn) Chọn vài bài tập để làm theo nhóm trên lớp.\n-   Đảm bảo tất cả học sinh đều có nhật ký suy nghĩ.",
-          "purpose": "Trong bài học này, học sinh sẽ phát triển các kỹ năng lập trình trên nền tảng máy tính. Định dạng kiểu khối của những bài tập này giúp học sinh tìm hiểu về trình tự và khái niệm mà không cần phải lo lắng về việc hoàn thiện cú pháp."
+          "purpose": "Trong bài học này, học sinh sẽ phát triển các kỹ năng lập trình trên nền tảng máy tính. Định dạng kiểu khối của những bài tập này giúp học sinh tìm hiểu về trình tự và khái niệm mà không cần phải lo lắng về việc hoàn thiện cú pháp.",
+          "student_overview": "Tìm hiểu về trình tự và thuật toán với _Angry Birds_."
         },
         "express-2021/Debugging with Scrat": {
           "name": "Sửa lỗi trong game Mê cung",
+          "overview": "Trong bài học “Xây dựng kỹ năng” này, học sinh sẽ gặp phải những đoạn mã được viết sẵn có chứa các lỗi. Họ sẽ cần phải bước qua mã hiện có để xác định lỗi.",
           "preparation": "-   Xem thử bài học để tìm ra bất kỳ vấn đề tiềm ẩn nào đối với lớp của bạn.\n-   (Tùy chọn) Chọn vài bài tập để làm theo nhóm trên lớp.\n-   Đảm bảo tất cả học sinh đều có Nhật ký suy nghĩ.",
           "purpose": "Học sinh trong lớp của bạn có thể trở nên bực bội với bài học này do bản chất của việc sửa lỗi. Sửa lỗi là một khái niệm rất quan trọng đối với lập trình máy tính. Các nhà khoa học máy tính phải thực sự giỏi trong việc tìm lỗi trong chương trình của chính họ. Sửa lỗi buộc học sinh phải nhận ra vấn đề và khắc phục chúng trong quá trình trau dồi tư duy phản biện và kỹ năng giải quyết vấn đề.",
           "student_overview": "Tìm vấn đề trong bài tập và thực hành kỹ năng sửa lỗi."
         },
         "express-2021/Collecting Treasure with Laurel": {
+          "name": "Thu thập kho báu với Laurel",
+          "overview": "Trong bài học “Xây dựng kỹ năng” này, học sinh sẽ tiếp tục phát triển hiểu biết về thuật toán và gỡ lỗi. Với một nhân vật mới, _Laurel the Adventurer_, sinh viên sẽ tạo ra các thuật toán tuần tự để có được _Laurel_ để lấy kho báu khi cô đi dọc theo một con đường.",
           "preparation": "-   Làm thử bài tập để tìm ra bất kỳ vấn đề tiềm ẩn đối với lớp của bạn.\n-   Đảm bảo tất cả học sinh đều có Nhật ký suy nghĩ.",
           "purpose": "Trong bài học này, học sinh sẽ thực hành các kỹ năng lập trình của mình bằng cách sử dụng một nhân vật mới, _Nhà thám hiểm Laurel_. Khi bắt đầu lập trình, người ta ghép các hướng dẫn lại với nhau theo một thứ tự cụ thể bằng cách sử dụng ngôn ngữ mà máy tính có thể đọc được. Thông qua quá trình sử dụng chương trình, học sinh sẽ dần hiểu cách máy tính điều hướng lệnh và trình tự. Sử dụng một nhân vật mới với một mục tiêu bài tập khác sẽ giúp học sinh mở rộng phạm vi trải nghiệm với trình tự và thuật toán trong lập trình.",
           "student_overview": "Viết thuật toán để giúp _Nhà thám hiểm Laurel_ thu thập thật nhiều đá quý!"
         },
         "express-2021/Creating Art with Code": {
+          "name": "Tạo nghệ thuật bằng mã",
+          "overview": "Trong bài học “Xây dựng kỹ năng” này, học sinh sẽ kiểm soát Nghệ sĩ để hoàn thành các bản vẽ trên màn hình.",
           "preparation": "-   Làm thử bài tập để tìm ra bất kỳ vấn đề tiềm ẩn đối với lớp của bạn.\n-   (Tùy chọn) Mua thước đo góc cho lớp để hình dung các góc mà họ phải dùng khi làm bài tập.\n-   In một **\\*Tài liệu phát cho học sinh** cho mỗi học sinh.",
           "purpose": "Dựa trên kinh nghiệm trước đây của học sinh với trình tự, bài học này sẽ truyền thêm cảm hứng sáng tạo với lập trình. Mục đích của bài học này là củng cố kiến thức về trình tự bằng cách giới thiệu các khối và mục tiêu mới. Trong trường hợp này, học sinh tìm hiểu thêm về điểm ảnh và góc bằng cách sử dụng các khối mới, đồng thời thực hành các kỹ năng sắp xếp trình tự. Ngoài ra, học sinh sẽ có thể hình dung các mục tiêu mới như lập trình để Họa sĩ vẽ hình vuông.",
           "student_overview": "Tạo hình ảnh đẹp bằng cách lập trình Artist."
         },
         "express-2021/Swimming Fish in Sprite Lab": {
+          "overview": "Sinh viên sẽ lập trình một cảnh dưới nước hoạt hình đơn giản trong bài học \\*\\* xây dựng kỹ năng này\\*\\* này.",
           "preparation": "-   Làm thử bài tập để tìm ra bất kỳ vấn đề tiềm ẩn nào đối với lớp của bạn.\n-   Đảm bảo mỗi học sinh đều có Nhật ký suy nghĩ.",
           "purpose": "Bài học này được thiết kế để giới thiệu cho học sinh vốn từ vựng cốt lõi của Sprite Lab và giúp họ áp dụng các khái niệm đã học trong các môi trường khác vào công cụ này. Bằng cách tạo ra một bể cá, học sinh sẽ bắt đầu hình thành kiến thức về mô hình lập trình của công cụ này và khám phá những cách sử dụng để thể hiện bản thân.",
           "student_overview": "Tìm hiểu cách tạo và chỉnh sửa nhân vật."
@@ -3866,6 +4126,7 @@
         },
         "express-2021/lesson-1": {
           "name": "Bữa Tiệc Khiêu Vũ",
+          "overview": "Trong bài học “Xây dựng kỹ năng” này, sinh viên sẽ lập trình một bữa tiệc khiêu vũ tương tác. ",
           "preparation": "-   Làm thử bài tập để tìm ra bất kỳ vấn đề tiềm ẩn nào đối với lớp của bạn.\n-   Đảm bảo mỗi học sinh đều có Nhật ký suy nghĩ.\n-   Cân nhắc nhu cầu dùng tai nghe. Hoạt động này phụ thuộc vào âm thanh.",
           "purpose": "Bài học này giới thiệu các khái niệm Khoa học Máy tính cốt lõi về mã hóa và lập trình sự kiện (sử dụng các khối).",
           "student_overview": "Đã đến lúc ăn mừng rồi! Trong bài học này, bạn sẽ tự lập trình một bữa tiệc khiêu vũ tương tác của riêng mình."
@@ -3874,30 +4135,40 @@
           "name": "Vòng lặp với Rey và BB-8",
           "overview": "Bài học **phát triển kỹ năng** này cho học sinh sử dụng vòng lặp để giúp _BB-8_, nhân vật trong _Chiến tranh giữa các vì sao_ đi qua mê cung một cách hiệu quả.",
           "preparation": "-   Làm thử bài tập để xác định xem có bất kỳ vấn đề tiềm ẩn nào đối với lớp của bạn hay không.\n-   Đảm bảo tất cả học sinh đều có Nhật ký suy nghĩ.",
-          "purpose": "Trong bài học này, học sinh sẽ tìm hiểu về vòng lặp và cách triển khai chúng trong mã lệnh Blockly. Sử dụng vòng lặp là một kỹ năng quan trọng trong lập trình vì lệnh lặp lại thủ công sẽ rất tẻ nhạt và không hiệu quả. Với các bài tập Code.org, học sinh sẽ học cách thêm hướng dẫn vào các vòng lặp hiện có, tập hợp mã lệnh lặp lại thành các vòng lặp và nhận ra các mẫu cần được lặp lại. Cần lưu ý rằng học sinh sẽ đối mặt với những bài tập có nhiều lời giải. Điều này sẽ mở ra cơ hội thảo luận những cách khác nhau để giải bài tập với những lợi ích và bất lợi của mỗi cách tiếp cận."
+          "purpose": "Trong bài học này, học sinh sẽ tìm hiểu về vòng lặp và cách triển khai chúng trong mã lệnh Blockly. Sử dụng vòng lặp là một kỹ năng quan trọng trong lập trình vì lệnh lặp lại thủ công sẽ rất tẻ nhạt và không hiệu quả. Với các bài tập Code.org, học sinh sẽ học cách thêm hướng dẫn vào các vòng lặp hiện có, tập hợp mã lệnh lặp lại thành các vòng lặp và nhận ra các mẫu cần được lặp lại. Cần lưu ý rằng học sinh sẽ đối mặt với những bài tập có nhiều lời giải. Điều này sẽ mở ra cơ hội thảo luận những cách khác nhau để giải bài tập với những lợi ích và bất lợi của mỗi cách tiếp cận.",
+          "student_overview": "Trợ giúp _BB-8_ thông qua mê cung bằng cách sử dụng vòng lặp! "
         },
         "express-2021/Sticker Art with Loops": {
+          "name": "Mini-Project: Sticker Art",
+          "overview": "Bài học \\*\\*mini-dự án này được xây dựng trên sự hiểu biết của các vòng lặp. Học sinh sẽ tạo ra tác phẩm nghệ thuật độc đáo với Nghệ sĩ.",
           "preparation": "-   Thực hành tạo thiết kế của riêng bạn. Hãy lưu ý xem các cấp độ này khác với những cấp độ trước đây ở điểm nào.\n-   Đảm bảo tất cả học sinh đều có Nhật ký suy nghĩ.",
           "purpose": "Loạt bài này nhấn mạnh lợi ích của vòng lặp với các thiết kế cá tính và sáng tạo.\n\nVới vai trò là một giai đoạn tiến hành trên cơ sở dự án, giai đoạn này sẽ giúp học sinh phát triển tác phẩm của riêng mình và tạo ra các tác phẩm tuyệt vời.",
           "student_overview": "Trong bài học này, các vòng lặp giúp bạn dễ dàng tạo ra những bức ảnh tuyệt tác với Artist!"
         },
         "express-2021/Nested Loops in Maze": {
           "name": "Vòng lặp lồng nhau trong game Mê cung",
+          "overview": "Trong bài học “Xây dựng kỹ năng” này, học sinh sẽ học cách lập trình một vòng lặp bên trong vòng lặp khác.",
           "preparation": "-   Làm thử bài tập để tìm ra bất kỳ vấn đề tiềm ẩn nào đối với lớp của bạn.\n-   Đảm bảo mỗi học sinh đều có Nhật ký suy nghĩ.",
           "purpose": "Trong phần giới thiệu về vòng lặp lồng nhau này, học sinh sẽ bước ra khỏi vùng an toàn của bản thân để tạo ra các giải pháp hiệu quả hơn cho bài tập.\n\nTrong các bài tập trước đó, vòng lặp đã thúc đẩy học sinh nhận ra sự lặp lại. Tại đây, học sinh sẽ học cách nhận ra các mẫu _nằm trong_ các mẫu lặp lại để phát triển các vòng lặp lồng nhau này. Giai đoạn này bắt đầu bằng cách khuyến khích học sinh cố gắng giải một bài tập trong đó mã lệnh thật khó chịu và phức tạp để viết ra toàn bộ. Sau khi video giới thiệu vòng lặp lồng nhau, học sinh được xem một ví dụ và được yêu cầu dự đoán điều gì sẽ xảy ra khi một vòng lặp được đưa vào bên trong một vòng lặp khác. Bước tiến này dẫn đến nhiều cơ hội thực hành cho học sinh để củng cố và phát triển dựa trên kiến thức về phép lặp trong lập trình.",
           "student_overview": "Vòng lặp trong vòng lặp trong vòng lặp. Điều này có nghĩa là gì? Bài học này sẽ cho bạn thấy hiện tượng xảy ra khi bạn tạo vòng lặp lồng nhau."
         },
         "express-2021/Snowflakes with Anna and Elsa": {
           "name": "Bông tuyết với Anna và Elsa",
+          "overview": "Bài học **mini-project** này sẽ giúp học sinh trải qua một loạt các bài tập để tạo ra hình ảnh bông tuyết bằng cách sử dụng các nhân vật trong phim _Frozen_.",
           "preparation": "-   Xem thử bài học để tìm ra bất kỳ vấn đề tiềm ẩn nào đối với lớp của bạn.\n-   Đảm bảo tất cả học sinh đều có Nhật ký suy nghĩ.",
-          "purpose": "Trong loạt bài học này, học sinh sẽ thực hành vòng lặp lồng nhau trong khi tạo ra các hình ảnh khiến họ hào hứng chia sẻ.\n\nHọc sinh sẽ bắt đầu với một số hướng dẫn hữu ích, sau đó tự đưa ra quyết định khi tạo thiết kế lặp lại. Tiếp theo, họ sẽ xoay những hình đó theo nhiều cách khác nhau để tạo ra một tác phẩm nghệ thuật thực sự độc đáo."
+          "purpose": "Trong loạt bài học này, học sinh sẽ thực hành vòng lặp lồng nhau trong khi tạo ra các hình ảnh khiến họ hào hứng chia sẻ.\n\nHọc sinh sẽ bắt đầu với một số hướng dẫn hữu ích, sau đó tự đưa ra quyết định khi tạo thiết kế lặp lại. Tiếp theo, họ sẽ xoay những hình đó theo nhiều cách khác nhau để tạo ra một tác phẩm nghệ thuật thực sự độc đáo.",
+          "student_overview": "_Anna_ và _Elsa_ có kỹ năng trượt băng tuyệt vời, nhưng cần sự giúp đỡ của bạn để tạo ra các mô hình trong băng. Sử dụng vòng lặp lồng nhau để tạo ra một cái gì đó siêu COOL. "
         },
         "express-2021/Looking Ahead with Minecraft ": {
           "name": "Nhìn về phía trước",
+          "overview": "Bài học “Xây dựng kỹ năng” này mang đến cho sinh viên cơ hội thực hành các khái niệm mà các em đã học được cho đến thời điểm này và có được trải nghiệm đầu tiên của họ với điều kiện!",
           "preparation": "-   Làm thử bài tập liên quan đến bài học này để tìm ra bất kỳ vấn đề tiềm ẩn nào đối với lớp của bạn.\n-   Đảm bảo tất cả học sinh đều có Nhật ký suy nghĩ.",
-          "purpose": "Bộ bài tập này sẽ củng cố và xây dựng kiến thức về vòng lặp cũng như giới thiệu lệnh điều kiện. Bằng cách kết hợp hai khái niệm này với nhau, học sinh sẽ có thể khám phá tiềm năng tạo ra các chương trình vui nhộn và sáng tạo trong một môi trường mới và thú vị."
+          "purpose": "Bộ bài tập này sẽ củng cố và xây dựng kiến thức về vòng lặp cũng như giới thiệu lệnh điều kiện. Bằng cách kết hợp hai khái niệm này với nhau, học sinh sẽ có thể khám phá tiềm năng tạo ra các chương trình vui nhộn và sáng tạo trong một môi trường mới và thú vị.",
+          "student_overview": "Tránh dung nham! Ở đây bạn sẽ bắt đầu tìm hiểu về điều kiện trong thế giới của _Minecraft_."
         },
         "express-2021/If/Else with Bee": {
+          "name": "Nếu/Khác với Bee",
+          "overview": "Trong bài học \\*\\* xây dựng kỹ năng này, lớp học của bạn sẽ tiếp tục mã hóa với điều kiện, cho phép họ viết mã có chức năng khác nhau tùy thuộc vào điều kiện cụ thể mà chương trình gặp phải.",
           "preparation": "-   Làm thử bài tập để tìm ra bất kỳ vấn đề tiềm ẩn nào đối với lớp của bạn.\n-   Đảm bảo mỗi học sinh đều có Nhật ký suy nghĩ.",
           "purpose": "Học sinh sẽ thực hành sử dụng lệnh điều kiện trong chương trình. Các khối “if/else” (nếu/nếu không) sẽ giúp chương trình linh hoạt hơn. Chú ong sẽ chỉ lấy mật hoa _nếu_ có hoa hoặc làm mật ong _nếu_ có tổ ong.",
           "student_overview": "Bây giờ bạn đã hiểu về lệnh điều kiện, đã đến lúc lập trình game Chú ong và sử dụng lệnh điều kiện khi lấy mật ong và mật hoa."
@@ -3911,15 +4182,20 @@
         },
         "express-2021/Conditionals in Minecraft: Voyage Aquatic": {
           "name": "Lệnh điều kiện trong Minecraft: Chuyến du hành dưới nước",
+          "overview": "Trong bài học “Cài đặt ngữ cảnh” này, học sinh sẽ có cơ hội thực hành nội dung mà các em đã học được cho đến thời điểm này, cũng như được xem qua các điều kiện!",
           "preparation": "-   Làm thử bài tập liên quan đến bài học này để tìm ra bất kỳ vấn đề tiềm ẩn nào đối với lớp của bạn.\n-   Đảm bảo tất cả học sinh đều có Nhật ký suy nghĩ.",
-          "purpose": "Bộ bài tập này sẽ củng cố và xây dựng kiến thức về vòng lặp cũng như lệnh điều kiện. Bằng cách kết hợp hai khái niệm này với nhau, học sinh sẽ có thể khám phá tiềm năng tạo ra các chương trình vui nhộn và sáng tạo trong một môi trường mới và thú vị."
+          "purpose": "Bộ bài tập này sẽ củng cố và xây dựng kiến thức về vòng lặp cũng như lệnh điều kiện. Bằng cách kết hợp hai khái niệm này với nhau, học sinh sẽ có thể khám phá tiềm năng tạo ra các chương trình vui nhộn và sáng tạo trong một môi trường mới và thú vị.",
+          "student_overview": "Ở đây bạn sẽ sử dụng điều kiện trong thế giới của Minecraft."
         },
         "express-2021/Until Loops in Maze": {
+          "name": "Cho đến khi vòng trong Mê cung",
+          "overview": "Trong bài học “Xây dựng kỹ năng” này, học sinh sẽ học về cho đến khi vòng lặp. Sinh viên sẽ xây dựng các chương trình có các hành động lặp lại nhân vật chính cho đến khi họ đạt đến điểm dừng mong muốn của họ.",
           "preparation": "-   Làm thử bài tập để tìm ra bất kỳ vấn đề tiềm ẩn nào đối với lớp của bạn.\n-   Đảm bảo mỗi học sinh đều có Nhật ký suy nghĩ.",
           "purpose": "Bộ bài tập này sẽ đóng vai trò củng cố và mở rộng kiến thức về vòng lặp bằng cách bổ sung lệnh điều kiện “until” (đến khi). Bằng cách kết hợp các khái niệm này với nhau, học sinh có thể khám phá tiềm năng tạo ra các chương trình phức tạp và sáng tạo.",
           "student_overview": "Bạn có thể làm những điều vô cùng thú vị khi sử dụng vòng lặp `đến khi` đấy!"
         },
         "express-2021/Harvesting with Conditionals": {
+          "name": "Thu hoạch với điều kiện",
           "overview": "Học sinh sẽ thực hành các vòng lặp `while`, vòng lặp `đến khi` và các câu lệnh `if/else`. Tất cả các khối này đều sử dụng lệnh điều kiện. Bằng cách thực hành cả ba loại vòng lặp, học sinh sẽ biết cách viết mã lệnh phức tạp và linh hoạt.",
           "preparation": "-   Xem thử bài học để tìm ra bất kỳ vấn đề tiềm ẩn nào đối với lớp của bạn.\n-   Đảm bảo tất cả học sinh đều có Nhật ký suy nghĩ.",
           "purpose": "Thực hành sử dụng lệnh điều kiện trong các kịch bản khác nhau giúp phát triển kiến thức của học sinh về các công dụng của lệnh điều kiện. Trong bài học trước, học sinh chỉ sử dụng lệnh điều kiện để di chuyển trong mê cung. Trong bài học này, học sinh sẽ sử dụng lệnh điều kiện để giúp người nông dân biết khi nào cần thu hoạch mùa vụ. Các mẫu mới sẽ xuất hiện và học sinh sẽ sử dụng óc sáng tạo cũng như tư duy logic để xác định các điều kiện mà mã lệnh nên chạy và lặp lại.",
@@ -3927,18 +4203,21 @@
         },
         "express-2021/Functions in Minecraft": {
           "name": "Hàm trong Minecraft",
+          "overview": "Trong bài học “Xây dựng kỹ năng” này, học sinh sẽ bắt đầu hiểu các chức năng hữu ích như thế nào!",
           "preparation": "-   Làm thử bài tập để tìm ra bất kỳ vấn đề tiềm ẩn nào đối với lớp của bạn.\n-   Đảm bảo mỗi học sinh đều có Nhật ký suy nghĩ.",
           "purpose": "Học sinh sẽ khám phá tính linh hoạt trong lập trình bằng cách thực hành với hàm trong các môi trường khác nhau. Tại đây, học sinh sẽ nhận ra các mẫu có thể tái sử dụng và có thể kết hợp các khối được đặt tên để gọi hàm được xác định trước.",
           "student_overview": "Bạn có thể tìm ra cách sử dụng các hàm để tạo ra mã lệnh hiệu quả nhất không?"
         },
         "express-2021/Functions with Artist": {
           "name": "Hàm trong Artist",
+          "overview": "Trong bài học “Xây dựng kỹ năng” này, học sinh sẽ sử dụng các chức năng với Nghệ sĩ.",
           "preparation": "-   Làm thử bài tập để tìm ra bất kỳ vấn đề tiềm ẩn nào đối với lớp của bạn.\n-   Đảm bảo mỗi học sinh đều có Nhật ký suy nghĩ.",
           "purpose": "Một trong những thành phần quan trọng nhất của bài học này là cho học sinh cơ hội để sáng tạo tác phẩm nào đó khiến họ tự hào. Những bài tập như vậy ngày càng có nhiều hình ảnh phức tạp hơn, nhưng mỗi bài tập mới chỉ dựa vào nền tảng là bài tập trước đó. Khi kết thúc bài học này, học sinh sẽ cảm thấy tự tin và tự hào về nỗ lực của mình.",
           "student_overview": "Hãy tạo ra những bức tranh phức tạp thật dễ dàng bằng các hàm!"
         },
         "express-2021/Functions with Harvester": {
           "name": "Hàm với game Người thu hoạch",
+          "overview": "Trong bài học “Xây dựng kỹ năng” này, học sinh sẽ sử dụng các điều kiện có chức năng để thu hoạch cây trồng tại Harvester.",
           "preparation": "-   Làm thử bài tập để tìm ra bất kỳ vấn đề tiềm ẩn nào đối với lớp của bạn.\n-   Đảm bảo tất cả học sinh đều có Nhật ký suy nghĩ.",
           "purpose": "Bài học này nhằm thúc đẩy học sinh sử dụng hàm theo những phương thức sáng tạo. Học sinh sẽ học được rằng có nhiều cách để tiếp cận một vấn đề, nhưng có một số cách hiệu quả hơn những cách khác. Những bài tập này nhằm củng cố kỹ năng giải quyết vấn đề và tư duy phản biện.",
           "student_overview": "Các hàm sẽ giúp bạn tiết kiệm rất nhiều công sức khi giúp người nông dân thu hoạch!"
@@ -3951,6 +4230,7 @@
           "student_overview": "Trong bài học này, bạn sẽ thực hành với các biến trong Sprite Lab."
         },
         "express-2021/Variables with Artist": {
+          "name": "Sử dụng Biến với Nghệ sĩ",
           "overview": "Trong bài học **xây dựng kỹ năng** này, học sinh sẽ khám phá việc tạo ra các thiết kế lặp lại bằng cách sử dụng biến trong môi trường Artist. Học sinh sẽ học cách các biến khiến mã lệnh dễ viết và dễ đọc hơn. Sau các bài tập có hướng dẫn, học sinh sẽ kết thúc với cấp độ khám phá tự do để thể hiện những kiến thức đã học và tạo ra thiết kế mới.",
           "preparation": "-   Làm thử bài tập để tìm ra bất kỳ vấn đề tiềm ẩn nào đối với lớp của bạn.\n-   Đảm bảo mỗi học sinh đều có Nhật ký suy nghĩ.",
           "purpose": "Về cơ bản, biến là trình giữ chỗ cho các giá trị có thể không xác định tại thời điểm bạn chạy chương trình của mình hoặc cho các giá trị có thể thay đổi trong quá trình thực thi chương trình. Các biến này rất quan trọng trong việc tạo mã lệnh linh động vì chúng cho phép chương trình thay đổi và phát triển dựa trên bất kỳ số lần sửa đổi tiềm năng nào. Giai đoạn này củng cố cách sử dụng biến bằng các chức năng cơ bản nhất trong quá trình thiết lập và sử dụng biến.",
@@ -3985,12 +4265,14 @@
         },
         "pre-express-2021/Learn to Drag and Drop": {
           "name": "Học cách kéo và thả",
+          "overview": "Bài học “Xây dựng kỹ năng” này sẽ cung cấp cho sinh viên một ý tưởng về những gì mong đợi khi họ đến phòng máy tính. Nó bắt đầu với một cuộc thảo luận ngắn gọn giới thiệu họ về cách cư xử của phòng thí nghiệm máy tính, sau đó họ sẽ tiến bộ vào sử dụng một máy tính để hoàn thành các câu đố trực tuyến.",
           "preparation": "-   Xem **\\*Cách tạo nhóm đào tạo** trên Code.org – Video dành cho giáo viên. Tạo nhóm đào tạo của riêng bạn trên Code.org và đảm bảo rằng mọi học sinh đều có thẻ ghi mật mã của họ trên đó.\n-   Đảm bảo học sinh có thể truy cập Bài 2 từ thiết bị của mình. Hãy cân nhắc xem bạn có muốn ẩn các bài học trong tương lai để ngăn học sinh học tiếp quá nhanh hay không.\n-   Yêu cầu nhân viên CNTT của trường thêm liên kết nhanh đến nhóm đào tạo của bạn vào màn hình máy tính.\n-   Xem lại trang web Common Sense Education để biết thêm nội dung an toàn trên mạng.",
           "purpose": "Mục tiêu chính của bài học này là phát triển trải nghiệm của học sinh với máy tính. Bằng cách đề cập đến các chức năng máy tính cơ bản nhất như nhấp chuột, kéo và thả, chúng ta đang tạo ra một sân chơi công bằng hơn trong lớp cho các bài tập trong tương lai. Bài học này cũng là cơ hội tuyệt vời để giới thiệu thuật ngữ phần cứng máy tính cơ bản, có thể bao gồm “chuột”, “bàn di chuột” hoặc “màn hình cảm ứng”, tùy thuộc vào thiết bị của bạn.",
           "student_overview": "Nhấp chuột và kéo để hoàn thành các bài tập."
         },
         "pre-express-2021/Sequencing with Scrat": {
           "name": "Học về chuỗi tuần tự cùng sóc Scrat",
+          "overview": "Trong bài học \\*\\* xây dựng kỹ năng này, học sinh sẽ phát triển các thuật toán tuần tự để di chuyển một nhân vật sóc từ một bên của một mê cung sang trái cây ở phía bên kia. Để làm điều này họ sẽ xếp các khối mã lại với nhau trong một chuỗi tuyến tính.",
           "preparation": "-   Đảm bảo mỗi học sinh đều có Nhật ký suy nghĩ.",
           "purpose": "Trong bài học này, học sinh sẽ phát triển các kỹ năng lập trình và sửa lỗi trên nền tảng máy tính. Định dạng kiểu khối của những bài tập này giúp học sinh tìm hiểu về trình tự và khái niệm mà không cần phải lo lắng về việc hoàn thiện cú pháp.",
           "student_overview": "Viết chương trình để Scrat tìm đến hạt sồi."
@@ -4003,17 +4285,20 @@
         },
         "pre-express-2021/Programming with Rey and BB-8": {
           "name": "Lập trình cùng Rey và robot BB-8",
+          "overview": "Trong bài học này, sinh viên sẽ sử dụng các kỹ năng lập trình mới của mình theo những cách phức tạp hơn để điều hướng một khóa học khó khăn với BB-8.",
           "preparation": "-   Xem thử bài học để tìm ra bất kỳ vấn đề tiềm ẩn nào đối với lớp của bạn.\n-   Đảm bảo tất cả học sinh đều có Nhật ký suy nghĩ.",
           "purpose": "Với tâm thế truyền tải kiến thức, bài học này mang đến cho học sinh một môi trường mới để thực hành các kỹ năng mà họ đã và đang trau dồi. Người hâm mộ Chiến tranh giữa các vì sao sẽ nhảy cẫng lên sung sướng khi nhìn thấy những bài tập này. Mỗi bài tập trong loạt bài tập này đã được bổ sung để giúp học sinh hiểu sâu hơn về các khái niệm cơ bản sẽ sử dụng trong suốt phần còn lại của khóa học này."
         },
         "pre-express-2021/Programming in Harvester": {
           "name": "Lập trình với game Người thu hoạch",
+          "overview": "Trong bài học này, sinh viên sẽ áp dụng các khái niệm lập trình mà họ đã học được vào môi trường Harvester. Sinh viên sẽ tiếp tục phát triển các kỹ năng thuật toán tuần tự và bắt đầu sử dụng quy trình gỡ lỗi. ",
           "preparation": "-   Làm thử bài tập để tìm ra bất kỳ vấn đề tiềm ẩn nào đối với lớp của bạn.\n-   Đảm bảo mỗi học sinh đều có Nhật ký suy nghĩ.",
           "purpose": "Trong bài học này, học sinh sẽ phát triển các kỹ năng sửa lỗi và sẽ tiếp tục phát triển các kỹ năng lập trình của mình.",
           "student_overview": "Giúp Người thu hoạch thu thập các loại rau trên đường đi."
         },
         "pre-express-2021/Loops with Scrat": {
           "name": "Vòng lặp với Scrat",
+          "overview": "Trong bài học \\*\\* xây dựng kỹ năng này, học sinh sẽ thực hành khái niệm vòng lặp trong các câu đố lập trình, nơi mục tiêu là giúp con sóc đạt được acorn.",
           "preparation": "-   (Tùy chọn) Chọn vài bài tập để làm theo nhóm với lớp.\n-   Đảm bảo mỗi học sinh đều có Nhật ký suy nghĩ.",
           "purpose": "Trong bài học này, học sinh sẽ tìm hiểu thêm về vòng lặp và cách triển khai chúng trong mã lệnh Blockly. Sử dụng _vòng lặp_ là một kỹ năng quan trọng trong lập trình vì lệnh lặp lại thủ công sẽ rất tẻ nhạt và không hiệu quả. Với các bài tập Code.org, học sinh sẽ học cách thêm hướng dẫn vào các vòng lặp hiện có, tập hợp mã lệnh lặp lại thành các vòng lặp và nhận ra các mẫu cần được lặp lại.",
           "student_overview": "Giúp Scrat lấp đất nhiều hơn bằng cách sử dụng vòng lặp."
@@ -4026,42 +4311,49 @@
         },
         "pre-express-2021/Ocean Scene with Loops": {
           "name": "Vòng lặp trong câu chuyện về biển",
+          "overview": "Trong bài học \\*\\* xây dựng kỹ năng này, học sinh học cách vẽ hình ảnh bằng cách lặp lại các chuỗi hướng dẫn đơn giản. Ở đây, các vòng lặp đang tạo ra các mẫu. Cuối bài học này, học sinh sẽ có cơ hội để tạo ra hình ảnh của riêng mình.",
           "preparation": "-   Làm thử bài tập để tìm ra bất kỳ vấn đề tiềm ẩn nào đối với lớp của bạn.\n-   Đảm bảo mỗi học sinh đều có Nhật ký suy nghĩ.",
           "purpose": "Bài học này cung cấp một cái nhìn khác về cách các vòng lặp có thể tạo ra mọi thứ trong lập trình. Học sinh cũng có thể suy nghĩ về hiệu quả thấp khi lập trình không dùng vòng lặp ở đây vì chương trình sẽ cần đến bao nhiêu khối mà không có sự trợ giúp của vòng lặp `repeat` (lặp lại).",
           "student_overview": "Sử dụng vòng lặp và các mô hình để hoàn thành hình ảnh."
         },
         "pre-express-2021/Drawing Gardens with Loops": {
           "name": "Vẽ khu vườn bằng vòng lặp",
+          "overview": "Trong bài học \\*\\* xây dựng kỹ năng này, học sinh học cách vẽ hình ảnh bằng cách lặp lại các chuỗi hướng dẫn đơn giản. Ở đây, sinh viên sử dụng vòng lặp để tạo ra các mẫu. Cuối bài học này, học sinh sẽ có cơ hội để tạo ra hình ảnh của riêng mình.",
           "preparation": "-   Xem thử bài học để tìm ra bất kỳ vấn đề tiềm ẩn nào đối với lớp của bạn.\n-   Đảm bảo mỗi học sinh đều có nhật ký suy nghĩ.",
           "purpose": "Bài học này cung cấp một cái nhìn khác về cách các vòng lặp có thể tạo ra mọi thứ trong lập trình. Học sinh sẽ kiểm tra kỹ năng tư duy phản biện bằng cách đánh giá mã lệnh đã cho và xác định những nội dung cần bổ sung để giải bài tập. Học sinh cũng có thể suy nghĩ về hiệu quả thấp khi lập trình không dùng vòng lặp ở đây vì chương trình sẽ cần đến bao nhiêu khối mà không có sự trợ giúp của vòng lặp `repeat` (lặp lại).",
           "student_overview": "Sử dụng mô hình và vòng lặp để hoàn thành các hình ảnh."
         },
         "pre-express-2021/On the Move with Events": {
           "name": "Di chuyển cùng sự kiện",
+          "overview": "Trong dự án mini này, sinh viên sẽ có cơ hội học cách sử dụng các sự kiện trong Play Lab và áp dụng tất cả các kỹ năng mã hóa mà họ đã học để tạo ra một trò chơi hoạt hình. Đã đến lúc sáng tạo và tạo ra một câu chuyện trong Play Lab!",
           "preparation": "-   Làm thử bài tập để tìm ra bất kỳ vấn đề tiềm ẩn nào đối với lớp của bạn.\n-   (Tùy chọn) Chọn vài bài tập để làm theo nhóm trên lớp.\n-   Đảm bảo tất cả học sinh đều có Nhật ký suy nghĩ",
           "purpose": "Hôm nay, học sinh sẽ tìm hiểu thêm về các sự kiện khi sử dụng Play Lab. Sự kiện rất phổ biến trong hầu hết các chương trình máy tính. Trong hoạt động này, học sinh sẽ sử dụng sự kiện để làm cho nhân vật di chuyển xung quanh màn hình, tạo ra tiếng động và thay đổi hình nền dựa trên các sự kiện do người dùng khởi tạo.",
           "student_overview": "Làm game hoặc sáng tạo câu chuyện của riêng bạn."
         },
         "pre-express-2021/A Royal Battle with Events": {
           "name": "Trận chiến hoàng gia với các sự kiện",
+          "overview": "Trong dự án mini này, sinh viên sẽ có cơ hội học cách sử dụng các sự kiện trong Play Lab và áp dụng tất cả các kỹ năng mã hóa mà họ đã học để tạo ra một trò chơi hoạt hình. ",
           "preparation": "-   Làm thử bài tập để tìm ra bất kỳ vấn đề tiềm ẩn nào đối với lớp của bạn.\n-   (Tùy chọn) Chọn vài bài tập để làm theo nhóm trên lớp.\n-   Đảm bảo tất cả học sinh đều có Nhật ký suy nghĩ.",
           "purpose": "Trong hoạt động trực tuyến này, học sinh sẽ học cách sử dụng các sự kiện trong Play Lab. Họ sẽ bắt đầu bằng cách huấn luyện hiệp sĩ di chuyển khi nhấn một phím mũi tên, sau đó kết thúc bài học với cơ hội thể hiện các kỹ năng còn lại mà họ đã học được trong suốt khóa học này, bao gồm trình tự và vòng lặp, trong bài tập chơi tự do cuối cùng.",
           "student_overview": "Sử dụng sự kiện để tạo một câu chuyện hoặc làm game tương tác."
         },
         "coursee-2021/Simon Says": {
           "name": "Làm theo thuật toán",
+          "overview": "Trong bài học \\*\\*cài đặt ngữ cảnh này, học sinh sẽ chơi một trò chơi nhằm giúp các em suy nghĩ về hướng dẫn tuần tự.",
           "preparation": "-   Khám phá các bài tập để tìm ra bất kỳ vấn đề tiềm ẩn nào trong lớp học.\n-   Đảm bảo mỗi học sinh đều có nhật ký suy nghĩ.",
           "purpose": "Bài học này được thiết kế để chuẩn bị cho học sinh tư duy về một trong những khái niệm lập trình cốt lõi trong Sprite Lab là hành vi.",
           "student_overview": "Hãy chơi game và suy nghĩ về những lệnh cần thiết để cho kết quả phù hợp."
         },
         "coursee-2021/Learning Sprites with Sprite Lab": {
           "name": "Cá bơi với Sprite Lab",
+          "overview": "Học sinh sẽ lập trình một cảnh dưới nước hoạt hình đơn giản trong bài học \\*\\* xây dựng kỹ năng \\*\\* này.",
           "preparation": "-   Khám phá các bài tập để tìm ra bất kỳ vấn đề tiềm ẩn nào trong lớp học.\n-   Đảm bảo mỗi học sinh đều có nhật ký suy nghĩ.",
           "purpose": "Bài học này được thiết kế để giới thiệu cho học sinh vốn từ vựng cốt lõi của Sprite Lab và giúp họ áp dụng các khái niệm đã học trong các môi trường khác vào công cụ này. Bằng cách tạo ra một bể cá, học sinh sẽ bắt đầu hình thành kiến thức về mô hình lập trình của công cụ này và khám phá những cách sử dụng để thể hiện bản thân.",
           "student_overview": "Tìm hiểu cách tạo và chỉnh sửa nhân vật."
         },
         "coursee-2021/Alien Dance Party with Sprite Lab": {
           "name": "Bữa tiệc khiêu vũ của người ngoài hành tinh với Sprite Lab",
+          "overview": "Sinh viên sẽ sử dụng các sự kiện để làm cho các sprites di chuyển xung quanh màn hình dựa trên đầu vào của người dùng trong bài học \\*\\* xây dựng kỹ năng này.",
           "preparation": "-   Khám phá các bài tập để tìm ra bất kỳ vấn đề tiềm ẩn nào trong lớp học.\n-   Đảm bảo mỗi học sinh đều có nhật ký suy nghĩ.",
           "purpose": "Bài học này là bài giới thiệu tuyệt vời về sự kiện trong lập trình và thậm chí còn cho học sinh cơ hội thể hiện sự sáng tạo! Sau khi học xong, học sinh sẽ có cơ hội chia sẻ các dự án của mình.",
           "student_overview": "Hãy tạo một dự án tương tác có thể chia sẻ với các bạn cùng lớp."
@@ -4084,16 +4376,19 @@
           "name": "Dự án nhỏ: Giới thiệu bản thân",
           "overview": "Học sinh sẽ áp dụng kiến thức về chia sẻ thông tin cá nhân và riêng tư trên web bằng cách tạo áp phích tương tác trong **dự án nhỏ** này.",
           "preparation": "-   (Tùy chọn) In bản sao **\\*hướng dẫn lập kế hoạch** cho học sinh hoặc gửi bản mềm.\n-   Cân nhắc việc tự tạo một dự án ví dụ để chia sẻ với cả lớp.\n-   Đảm bảo mỗi học sinh đều có nhật ký suy nghĩ.",
-          "purpose": "Bài học này nhằm giúp học sinh liên hệ bài học trước về thông tin cá nhân và thông tin riêng tư với bản thân. Với các ví dụ AN TOÀN (cá nhân) và KHÔNG AN TOÀN (riêng tư), học sinh thực hành cách tự thể hiện bản thân trên web một cách an toàn, sử dụng SpriteLab để tạo trang phục cho nhân vật của mình và tạo văn bản."
+          "purpose": "Bài học này nhằm giúp học sinh liên hệ bài học trước về thông tin cá nhân và thông tin riêng tư với bản thân. Với các ví dụ AN TOÀN (cá nhân) và KHÔNG AN TOÀN (riêng tư), học sinh thực hành cách tự thể hiện bản thân trên web một cách an toàn, sử dụng SpriteLab để tạo trang phục cho nhân vật của mình và tạo văn bản.",
+          "student_overview": "Tạo một poster tương tác, nhưng hãy suy nghĩ cẩn thận về những thông tin nào là an toàn để chia sẻ trực tuyến."
         },
         "coursee-2021/Digital Sharing": {
           "name": "Chia sẻ nội dung số",
+          "overview": "Bài học \\*\\* giải thích\\*\\* này giúp học sinh hiểu được những thách thức và lợi ích của việc tôn trọng quyền sở hữu và bản quyền, đặc biệt là trong môi trường kỹ thuật số. ",
           "preparation": "-   Tìm **\\*Video Chia sẻ Bản quyền** trong “Liên kết” bên dưới\n-   Tải xuống và xem lại toàn bộ **\\*Giáo án Chia sẻ nội dung số** từ Bản quyền và Sáng tạo\n-   Hãy tạo một tác phẩm nghệ thuật cho bài học (ảnh, bài hát, slide trình chiếu, v.v.) với tư cách là giáo viên\n-   Đảm bảo tất cả học sinh đều có Nhật ký suy nghĩ.\n-   Bạn sẽ cần máy tính bảng hoặc điện thoại thông minh để làm mẫu bước chia sẻ tác phẩm đó",
           "purpose": "Học sinh sẽ sớm tạo các dự án để chia sẻ và hầu hết các dự án này sẽ chứa mã lệnh hoặc hình ảnh mà học sinh không tự tạo. Bài học này đóng vai trò cho học sinh thấy cách thích hợp để kiểm soát hành vi sử dụng nội dung không phải của chính mình.",
           "student_overview": "Trong bài học này, bạn sẽ tìm hiểu về những thách thức và lợi ích của quyền sở hữu và bản quyền."
         },
         "coursee-2021/Programming and Loops with the Artist": {
           "name": "Vẽ bằng vòng lặp",
+          "overview": "Bài học \\*\\*cài đặt ngữ cảnh này chuyển trọng tâm từ Sprite Lab sang Nghệ sĩ, một công cụ mới mà học sinh sẽ khám phá trong suốt thời gian còn lại của khóa học.  ",
           "preparation": "-   Khám phá các bài tập để tìm ra bất kỳ vấn đề tiềm ẩn nào trong lớp học.\n-   Đảm bảo mỗi học sinh đều có nhật ký suy nghĩ.",
           "purpose": "Học sinh sẽ thực hành sử dụng vòng lặp, một khái niệm sẽ được ôn tập trong các bài học sắp tới.",
           "student_overview": "Trong bài học này, **vòng lặp** giúp bạn dễ dàng tạo những hình ảnh thú vị với Họa sĩ!"
@@ -4106,47 +4401,60 @@
           "student_overview": "Lại thêm vòng lặp lồng nhau nè! Lần này, bạn có thể thực hiện một số bản vẽ TUYỆT VỜI với các vòng lặp lồng nhau."
         },
         "coursee-2021/Nested Loops in Frozen": {
+          "name": "Mini-Project: Thiết kế một bông tuyết",
+          "overview": "Bài học **mini-project** này sẽ giúp học sinh trải qua một loạt các bài tập để tạo ra hình ảnh bông tuyết bằng cách sử dụng các nhân vật trong phim _Frozen_.",
           "preparation": "-   Làm thử bài tập để tìm ra bất kỳ vấn đề tiềm ẩn nào đối với lớp của bạn.\n-   Đảm bảo tất cả học sinh đều có nhật ký suy nghĩ.",
-          "purpose": "Trong bài học này, học sinh sẽ áp dụng các kỹ năng của mình với vòng lặp lồng nhau để tạo ra các hình ảnh mà họ sẽ hào hứng chia sẻ."
+          "purpose": "Trong bài học này, học sinh sẽ áp dụng các kỹ năng của mình với vòng lặp lồng nhau để tạo ra các hình ảnh mà họ sẽ hào hứng chia sẻ.",
+          "student_overview": "_Anna_ và _Elsa_ có kỹ năng trượt băng tuyệt vời, nhưng cần sự giúp đỡ của bạn để tạo ra các mô hình trong băng. Sử dụng vòng lặp lồng nhau để tạo ra một cái gì đó siêu COOL. "
         },
         "coursee-2021/Functions: Songwriting": {
           "name": "Sáng tác với tham số",
+          "overview": "Bài học **context-setting** này sẽ giúp sinh viên hiểu tại sao kết hợp các khối mã vào các hàm có thể là một thực hành hữu ích.",
           "preparation": "-   (Tùy chọn) Xem video **\\*Thực hành bài học**.\n-   In vài **\\*bảng học tập** cho mỗi nhóm.\n-   In một **\\*bài đánh giá** cho mỗi học sinh.\n-   Truy cập an toàn vào các bài hát và lời bài hát cho hoạt động.\n-   Đảm bảo tất cả học sinh đều có nhật ký suy nghĩ.",
           "purpose": "Việc sử dụng hàm giúp đơn giản hóa mã lệnh và phát triển khả năng tổ chức chương trình của học sinh. Học sinh sẽ nhanh chóng nhận ra rằng việc viết hàm có thể làm cho các chương trình dài của họ dễ đọc hơn và dễ sửa lỗi hơn nếu có sự cố.",
           "student_overview": "Ngay cả ngôi sao nhạc rock cũng cần kỹ năng lập trình. Bài học này sẽ hướng dẫn bạn về các hàm bằng lời bài hát."
         },
         "coursee-2021/Functions in Minecraft": {
           "name": "Hàm trong Minecraft",
+          "overview": "Trong bài học “Xây dựng kỹ năng” này, học sinh sẽ bắt đầu hiểu các chức năng hữu ích như thế nào!",
           "preparation": "-   Khám phá các bài tập để tìm ra bất kỳ vấn đề tiềm ẩn nào trong lớp học.\n-   Đảm bảo mỗi học sinh đều có nhật ký suy nghĩ.",
           "purpose": "Học sinh sẽ khám phá tính linh hoạt trong lập trình bằng cách thực hành với hàm trong các môi trường khác nhau. Tại đây, học sinh sẽ nhận ra các mẫu có thể tái sử dụng và có thể kết hợp các khối được đặt tên để gọi hàm được xác định trước.",
           "student_overview": "Bạn có thể tìm ra cách sử dụng các hàm để tạo ra mã lệnh hiệu quả nhất không?"
         },
         "coursee-2021/Functions in Artist": {
           "name": "Hàm trong Artist",
+          "overview": "Trong bài học “Xây dựng kỹ năng” này, học sinh sẽ sử dụng các chức năng với Nghệ sĩ.",
           "preparation": "-   Khám phá các bài tập để tìm ra bất kỳ vấn đề tiềm ẩn nào trong lớp học.\n-   Đảm bảo mỗi học sinh đều có nhật ký suy nghĩ.",
           "purpose": "Một trong những thành phần quan trọng nhất của bài học này là cho học sinh cơ hội để sáng tạo tác phẩm nào đó khiến họ tự hào. Những bài tập như vậy ngày càng có nhiều hình ảnh phức tạp hơn, nhưng mỗi bài tập mới chỉ dựa vào nền tảng là bài tập trước đó. Khi kết thúc bài học này, học sinh sẽ cảm thấy tự tin và tự hào về nỗ lực của mình.",
           "student_overview": "Hãy tạo ra những bức tranh phức tạp thật dễ dàng bằng các hàm!"
         },
         "coursee-2021/Conditionals in Minecraft: Voyage Aquatic": {
           "name": "Lệnh điều kiện trong Minecraft: Chuyến du hành dưới nước",
+          "overview": "Trong bài học “Cài đặt ngữ cảnh” này, học sinh sẽ có cơ hội thực hành nội dung mà các em đã học được cho đến thời điểm này, cũng như được xem qua các điều kiện!",
           "preparation": "-   Làm thử bài tập liên quan đến bài học này để tìm ra bất kỳ vấn đề tiềm ẩn nào đối với lớp của bạn.\n-   Đảm bảo tất cả học sinh đều có nhật ký suy nghĩ.",
-          "purpose": "Bộ bài tập này sẽ củng cố và xây dựng kiến thức về vòng lặp cũng như giới thiệu lệnh điều kiện. Bằng cách kết hợp hai khái niệm này với nhau, học sinh sẽ có thể khám phá tiềm năng tạo ra các chương trình vui nhộn và sáng tạo trong một môi trường mới và thú vị."
+          "purpose": "Bộ bài tập này sẽ củng cố và xây dựng kiến thức về vòng lặp cũng như giới thiệu lệnh điều kiện. Bằng cách kết hợp hai khái niệm này với nhau, học sinh sẽ có thể khám phá tiềm năng tạo ra các chương trình vui nhộn và sáng tạo trong một môi trường mới và thú vị.",
+          "student_overview": "Ở đây bạn sẽ tìm hiểu về điều kiện trong thế giới của _Minecraft_."
         },
         "coursee-2021/Conditionals": {
           "name": "Lệnh điều kiện với game Bác nông dân",
+          "overview": "Bài học \\*\\* xây dựng kỹ năng này tập trung vào một loại hình mới của câu đố lập trình, bao gồm một nông dân cần chuẩn bị cánh đồng của mình để trồng cây trồng. ",
           "preparation": "-   Khám phá các bài tập để tìm ra bất kỳ vấn đề tiềm ẩn nào trong lớp học.\n-   Đảm bảo mỗi học sinh đều có nhật ký suy nghĩ.",
-          "purpose": "Bài học này giới thiệu cho học sinh về vòng lặp while và câu lệnh “if/else” (nếu/nếu không)."
+          "purpose": "Bài học này giới thiệu cho học sinh về vòng lặp while và câu lệnh “if/else” (nếu/nếu không).",
+          "student_overview": "Giúp nông dân chuẩn bị cánh đồng của mình để trồng cây trồng và tìm hiểu thêm về điều kiện!"
         },
         "coursee-2021/Functions in Harvester": {
           "name": "Hàm với game Người thu hoạch",
+          "overview": "Trong bài học “Xây dựng kỹ năng” này, học sinh sẽ sử dụng các điều kiện có chức năng để thu hoạch mùa màng trong _Harvester_.",
           "preparation": "-   Khám phá các bài tập để tìm ra bất kỳ vấn đề tiềm ẩn nào trong lớp học.\n-   Đảm bảo mỗi học sinh đều có nhật ký suy nghĩ.",
           "purpose": "Bài học này nhằm khuyến khích học sinh sử dụng lệnh điều kiện cùng hàm. Những bài tập này nhằm củng cố kỹ năng giải quyết vấn đề và tư duy phản biện.",
           "student_overview": "Các hàm sẽ giúp bạn tiết kiệm rất nhiều công sức khi giúp người nông dân thu hoạch!"
         },
         "coursee-2021/lesson-1": {
           "name": "Thiết kế cho trợ năng",
+          "overview": "Trong bài học \\*\\* giải thích\\*\\* này, sinh viên sẽ tìm hiểu về khả năng tiếp cận và giá trị của sự đồng cảm thông qua động não và thiết kế các giải pháp dễ tiếp cận cho các ứng dụng giả thuyết. ",
           "preparation": "-   Để hiểu ngữ cảnh, hãy đọc về **\\*các dạng khuyết tật**.\n-   Đọc ghi chú của người thuyết trình trong **\\*trang thuyết trình**.\n-   Chuẩn bị đủ dùng cụ phác thảo/vẽ cho tất cả học sinh.",
-          "purpose": "Thông qua việc tìm hiểu về trợ năng, học sinh nhận ra tác động của máy tính đối với cuộc sống của chính họ. Trợ năng có thể không phải là chủ đề KHMT liên quan, nhưng việc tạo ra công nghệ cho người dùng thiệt thòi sử dụng sẽ giúp cải thiện công nghệ cho tất cả mọi người."
+          "purpose": "Thông qua việc tìm hiểu về trợ năng, học sinh nhận ra tác động của máy tính đối với cuộc sống của chính họ. Trợ năng có thể không phải là chủ đề KHMT liên quan, nhưng việc tạo ra công nghệ cho người dùng thiệt thòi sử dụng sẽ giúp cải thiện công nghệ cho tất cả mọi người.",
+          "student_overview": "Tìm hiểu về khả năng tiếp cận và giá trị của sự đồng cảm thông qua động não và thiết kế các giải pháp có thể truy cập cho các ứng dụng giả thuyết. "
         },
         "coursee-2021/End of Course Project": {
           "name": "Dự án tổng kết khóa học",
@@ -4335,8 +4643,17 @@
         "express-2020/Debugging with Scrat": {
           "name": "Sửa lỗi với Scrat"
         },
+        "express-2020/Collecting Treasure with Laurel": {
+          "name": "Thu thập kho báu với Laurel"
+        },
+        "express-2020/Creating Art with Code": {
+          "name": "Tạo nghệ thuật bằng mã"
+        },
         "express-2020/Loops with Rey and BB-8": {
           "name": "Vòng lặp với Rey và BB-8"
+        },
+        "express-2020/Sticker Art with Loops": {
+          "name": "Sticker Art với vòng"
         },
         "express-2020/Nested Loops in Maze": {
           "name": "Vòng lặp lồng nhau trong game Mê cung"
@@ -4344,11 +4661,20 @@
         "express-2020/Snowflakes with Anna and Elsa": {
           "name": "Bông tuyết với Anna và Elsa"
         },
+        "express-2020/If/Else with Bee": {
+          "name": "Nếu/Khác với Bee"
+        },
         "express-2020/While Loops with the Farmer": {
           "name": "Vòng lặp while với Người nông dân"
         },
         "express-2020/Conditionals in Minecraft: Voyage Aquatic": {
           "name": "Lệnh điều kiện trong Minecraft: Chuyến du hành dưới nước"
+        },
+        "express-2020/Until Loops in Maze": {
+          "name": "Cho đến khi vòng trong Mê cung"
+        },
+        "express-2020/Harvesting with Conditionals": {
+          "name": "Thu hoạch với điều kiện"
         },
         "express-2020/Functions in Minecraft": {
           "name": "Hàm trong Minecraft"
@@ -4443,8 +4769,17 @@
         "coursed-2020/Conditionals with Cards": {
           "name": "Lệnh điều kiện với lá bài"
         },
+        "coursed-2020/Conditionals in Bee": {
+          "name": "Nếu/Khác với Bee"
+        },
         "coursed-2020/While Loops in Farmer": {
           "name": "Vòng lặp while trong game Bác nông dân"
+        },
+        "coursed-2020/Until Loops in Maze": {
+          "name": "Cho đến khi vòng trong Mê cung"
+        },
+        "coursed-2020/Conditionals & Loops in Harvester": {
+          "name": "Thu hoạch với điều kiện"
         },
         "coursed-2020/Unplugged: Binary": {
           "name": "Hình ảnh Nhị phân"
@@ -4470,6 +4805,12 @@
         "coursec-2020/Debugging in Maze": {
           "name": "Sửa lỗi trong game Mê cung"
         },
+        "coursec-2020/Programming in Collector": {
+          "name": "Thu thập kho báu với Laurel"
+        },
+        "coursec-2020/Programming in Artist": {
+          "name": "Tạo nghệ thuật bằng mã"
+        },
         "coursec-2020/Binary Bracelets": {
           "name": "Vòng đeo tay nhị phân"
         },
@@ -4484,6 +4825,9 @@
         },
         "coursec-2020/Looking Ahead": {
           "name": "Nhìn về phía trước"
+        },
+        "coursec-2020/Sticker Art with Loops": {
+          "name": "Sticker Art với vòng"
         },
         "coursec-2020/Events: The Big Event": {
           "name": "Sự kiện lớn"

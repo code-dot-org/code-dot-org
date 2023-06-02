@@ -135,6 +135,7 @@ hu:
           student_description: Ez a 20 órás kurzus bemutatja a  számítástechnika és
             programozás alap fogalmait. A kurzus általános iskolásoknak lett kitalálva,
             de mindenki számára jó időtöltés lehet.
+          name: 20 órás
         edit-code:
           title: Kód szerkesztése
           description: Kód szerkesztése
@@ -3507,6 +3508,8 @@ hu:
           lesson_groups:
             lessonGroup-5:
               display_name: Kérdőív
+        ai-temp:
+          title: Hogyan működik az MI?
         pl-csd-summer-day1:
           lessons:
             lesson-3:

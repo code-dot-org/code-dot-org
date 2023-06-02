@@ -1,10 +1,12 @@
 import React from 'react';
-import {render, screen} from '@testing-library/react';
+import {fireEvent, render, screen} from '@testing-library/react';
+import {pull} from 'lodash';
 import {expect} from '../../../util/reconfiguredChai';
 import CurriculumCatalogCard from '@cdo/apps/templates/curriculumCatalog/CurriculumCatalogCard';
 import {
   subjectsAndTopicsOrder,
   translatedCourseOfferingCsTopics,
+  translatedLabels,
 } from '@cdo/apps/templates/teacherDashboard/CourseOfferingHelpers';
 
 describe('CurriculumCatalogCard', () => {
@@ -83,6 +85,81 @@ describe('CurriculumCatalogCard', () => {
     );
 
     screen.getByText(`+${subjects.length + topics.length - 1}`);
+  });
+
+  it('renders tooltip showing full text of first label when hovering over it', () => {
+    render(
+      <CurriculumCatalogCard
+        {...defaultProps}
+        subjects={subjects}
+        topics={topics}
+      />
+    );
+    const firstLabelText =
+      translatedLabels[subjectsAndTopicsOrder[firstSubjectIndexUsed]];
+    const firstLabelNode = screen.getByText(firstLabelText);
+
+    fireEvent.mouseOver(firstLabelNode);
+    expect(screen.getAllByText(firstLabelText)).to.have.lengthOf(2);
+  });
+
+  it('renders tooltip showing full text of first label when focused on it', () => {
+    render(
+      <CurriculumCatalogCard
+        {...defaultProps}
+        subjects={subjects}
+        topics={topics}
+      />
+    );
+    const firstLabelText =
+      translatedLabels[subjectsAndTopicsOrder[firstSubjectIndexUsed]];
+    const firstLabelNode = screen.getByText(firstLabelText);
+    firstLabelNode.focus();
+    expect(screen.getAllByText(firstLabelText)).to.have.lengthOf(2);
+  });
+
+  it('renders tooltip showing remaining labels when hovering on plus sign', () => {
+    render(
+      <CurriculumCatalogCard
+        {...defaultProps}
+        subjects={subjects}
+        topics={topics}
+      />
+    );
+    const remainingLabels = pull(
+      [...subjects, ...topics],
+      subjectsAndTopicsOrder[firstSubjectIndexUsed]
+    );
+    const plusSignText = screen.getByText(
+      `+${subjects.length + topics.length - 1}`
+    );
+
+    // does not show when not hovered
+    remainingLabels.forEach(
+      label => expect(screen.queryByText(translatedLabels[label])).to.be.null
+    );
+
+    fireEvent.mouseOver(plusSignText);
+    remainingLabels.forEach(label => screen.getByText(translatedLabels[label]));
+  });
+
+  it('renders tooltip showing remaining labels when plus sign is focused', () => {
+    render(
+      <CurriculumCatalogCard
+        {...defaultProps}
+        subjects={subjects}
+        topics={topics}
+      />
+    );
+    const remainingLabels = pull(
+      [...subjects, ...topics],
+      subjectsAndTopicsOrder[firstSubjectIndexUsed]
+    );
+    const plusSignText = screen.getByText(
+      `+${subjects.length + topics.length - 1}`
+    );
+    plusSignText.focus();
+    remainingLabels.forEach(label => screen.getByText(translatedLabels[label]));
   });
 
   it('renders one topic, the first available from ordered list, if no subject present', () => {
