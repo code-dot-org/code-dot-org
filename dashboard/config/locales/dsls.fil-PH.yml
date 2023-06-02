@@ -5207,7 +5207,7 @@ fil-PH:
           correct: true
         - correct: true
         questions:
-        - {}
+        - text: Pagbuo ng Web
       csd-post-survey-2019-I like cs:
         answers:
         - correct: true
@@ -10943,3 +10943,47 @@ fil-PH:
       express_EOC_2021:
         description: Naabot mo na ang dulo ng Course E! Pumili ng proyektong gagawin.
         display_name: Proyekto sa Katapusan ng Kurso
+      Test Contained Retriable Multi:
+        answers:
+        - text: '0'
+        - text: '1'
+        - text: '2'
+          correct: true
+        - text: '4'
+        questions:
+        - {}
+      csd-post-survey-2018-markdown-with-link-to-survey:
+        teacher_markdown: |-
+          **Pakiusapan ang mga mag-aaral na kumpletuhin ang survey na ito!!! **
+
+          * Makakakita ka ng mga hindi kilalang resulta ng survey sa dashboard ng guro mo
+          * Ang mga resulta ay mahalaga sa amin (code.org) upang mapanatili ang mga kurso at gumawa ng mga pagpapabuti.
+          * Magkakaroon din ng survey ng guro, kung saan maaari kang magbigay ng sarili mong input, na aabisuhan ka sa pamamagitan ng email.
+
+          **Tandaan:**
+
+          * Ang button sa pahinang ito ay nagre-redirect sa [studio.code.org/s/csp-post-survey](https://studio.code.org/s/csp-post-survey)
+          * Kung gusto mo, maaari mong itakda ang "Survey sa Post-Course ng Mag-aaral" bilang kasalukuyang yunit sa iyong seksiyon sa dropdown na menu sa dashboard ng guro.
+      csd-post-survey-2018-markdown-with-link-to-survey_v2:
+        teacher_markdown: |-
+          **Pakiusapan ang mga mag-aaral na kumpletuhin ang survey na ito!!! **
+
+          * Ang mga resulta ay mahalaga sa amin (code.org) upang mapanatili ang mga kurso at gumawa ng mga pagpapabuti.
+          * Magkakaroon din ng survey ng guro, kung saan maaari kang magbigay ng sarili mong input, na aabisuhan ka sa pamamagitan ng email.
+
+          **Upang makita ang mga resulta** - ang survey pagkatapos ng kurso ay medyo naiiba. Ang survey na nasa sarili nitong yunit ng kurso, at ang pahinang ito ay nagli-link lamang dito.
+
+          * Upang tingnan ang mga hindi kilalang resulta ng survey sa dashboard ng iyong guro, kailangan mong (1) tingnan ang survey/pagsusuri, at pagkatapos ay (2) piliin ang yunit ng survey pagkatapos ng kurso bilang yunit na gusto mong tingnan.
+
+          * **Higit pang Mga Tagubilin sa pagtingin sa mga resulta ng post-course survey**: [[google doc](https://docs.google.com/document/d/1EQfPy0D6lSWA3s3d2hkgVLSRn1vrjLLXaZBSz3-E9aw)] [[pdf](https://docs.google.com/document/d/1EQfPy0D6lSWA3s3d2hkgVLSRn1vrjLLXaZBSz3-E9aw/export?format=pdf)]
+      test-single-multi-standalone-retriable:
+        answers:
+        - feedback: Mali. Magsisimulang bumagsak ang tumbleweed.
+        - text: Lulutang ang tumbleweed sa tuktok ng screen.
+          feedback: Mali. Magsisimulang bumagsak ang tumbleweed.
+        - text: Magsisimulang bumagsak ang tumbleweed.
+          correct: true
+        - text: Ang tumbleweed ay kumukurap-kurap.
+          feedback: Mali. Magsisimulang bumagsak ang tumbleweed.
+        questions:
+        - {}

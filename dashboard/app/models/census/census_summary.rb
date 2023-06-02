@@ -6,7 +6,7 @@
 #  school_id   :string(12)       not null
 #  school_year :integer          not null
 #  teaches_cs  :string(2)
-#  audit_data  :text(65535)      not null
+#  audit_data  :text(65535)
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
 #

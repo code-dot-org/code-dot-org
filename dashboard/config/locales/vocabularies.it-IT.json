@@ -853,6 +853,7 @@
           "definition": "modificare il modo in cui le informazioni vengono rappresentate in modo che possano essere lette da un computer"
         },
         "ascii/csd/2022": {
+          "word": "ASCII",
           "definition": "un sistema popolare per rappresentare il testo in formato binario"
         },
         "binary_system/csd/2022": {
@@ -1022,6 +1023,10 @@
           "word": "Interfaccia Utente",
           "definition": "Gli elementi visivi di un programma attraverso i quali un utente controlla o comunica con l'applicazione. Interfaccia utente spesso abbreviata in UI (User Interface)."
         },
+        "feature/csd/2022": {
+          "word": "Caratteristica (feature)",
+          "definition": "Componente di un programma che aggiunge funzionalità per l'utente"
+        },
         "innovation/csd/2022": {
           "word": "Innovazione"
         },
@@ -1033,8 +1038,49 @@
           "word": "Cos'è l'Apprendimento Automatico (Machine Learning)",
           "definition": "In che modo i computer riconoscono certi modelli e prendono decisioni senza essere programmati esplicitamente"
         },
+        "features/csd/2022": {
+          "word": "Caratteristiche",
+          "definition": "I dati in ingresso (input) che un modello utilizza per prendere decisioni"
+        },
+        "label/csd/2022": {
+          "word": "Etichetta",
+          "definition": "Il dato in uscita (output) che stai cercando di decidere o prevedere con un modello"
+        },
+        "model/csd/2022": {
+          "word": "Modello",
+          "definition": "Un programma informatico progettato per prendere una decisione"
+        },
+        "supervised_learning/csd/2022": {
+          "word": "Apprendimento con supervisione",
+          "definition": "Quando un operatore umano addestra un modello, facendolo apprendere attraverso degli esempi"
+        },
+        "training/csd/2022": {
+          "word": "Addestramento",
+          "definition": "Fornire esempi di un modello in modo che possa apprendere"
+        },
         "unsupervised_learning/csd/2022": {
-          "definition": "Individuazione di modelli nei dati sprovvisti di etichette"
+          "word": "Apprendimento senza supervisione",
+          "definition": "Individuazione di schemi in dati sprovvisti di etichette"
+        },
+        "categorical_data/csd/2022": {
+          "word": "Dati categoriali",
+          "definition": "dati che possono essere suddivisi in gruppi o categorie"
+        },
+        "classification/csd/2022": {
+          "word": "Classificazione",
+          "definition": "previsione di una categoria in base ad altre caratteristiche"
+        },
+        "bias/csd/2022": {
+          "word": "Pregiudizio (bias)",
+          "definition": "Decisioni che favoriscono alcuni aspetti e ne riducono le priorità o ne escludono altri"
+        },
+        "numerical_data/csd/2022": {
+          "word": "Dati numerici",
+          "definition": "dati che possono essere contati o misurati"
+        },
+        "ethics/csd/2022": {
+          "word": "Etica",
+          "definition": "linee guida per una buona condotta."
         },
         "code/poem-art/unversioned": {
           "word": "Codice",
@@ -1588,8 +1634,49 @@
           "word": "Cos'è l'Apprendimento Automatico (Machine Learning)",
           "definition": "In che modo i computer riconoscono certi modelli e prendono decisioni senza essere programmati esplicitamente"
         },
+        "features/csd/2021": {
+          "word": "Caratteristiche",
+          "definition": "I dati in ingresso (input) che un modello utilizza per prendere decisioni"
+        },
+        "label/csd/2021": {
+          "word": "Etichetta",
+          "definition": "Il dato in uscita (output) che stai cercando di decidere o prevedere con un modello"
+        },
+        "model/csd/2021": {
+          "word": "Modello",
+          "definition": "Un programma informatico progettato per prendere una decisione"
+        },
+        "supervised_learning/csd/2021": {
+          "word": "Apprendimento con supervisione",
+          "definition": "Quando un operatore umano addestra un modello, facendolo apprendere attraverso degli esempi"
+        },
+        "training/csd/2021": {
+          "word": "Addestramento",
+          "definition": "Fornire esempi di un modello in modo che possa apprendere"
+        },
         "unsupervised_learning/csd/2021": {
-          "definition": "Individuazione di modelli nei dati sprovvisti di etichette"
+          "word": "Apprendimento senza supervisione",
+          "definition": "Individuazione di schemi in dati sprovvisti di etichette"
+        },
+        "categorical_data/csd/2021": {
+          "word": "Dati categoriali",
+          "definition": "dati che possono essere suddivisi in gruppi o categorie"
+        },
+        "classification/csd/2021": {
+          "word": "Classificazione",
+          "definition": "previsione di una categoria in base ad altre caratteristiche"
+        },
+        "bias/csd/2021": {
+          "word": "Pregiudizio (bias)",
+          "definition": "Decisioni che favoriscono alcuni aspetti e ne riducono le priorità o ne escludono altri"
+        },
+        "numerical_data/csd/2021": {
+          "word": "Dati numerici",
+          "definition": "dati che possono essere contati o misurati"
+        },
+        "ethics/csd/2021": {
+          "word": "Etica",
+          "definition": "linee guida per una buona condotta."
         },
         "empathy/csd/2021": {
           "word": "Empatia",
@@ -1614,6 +1701,10 @@
         "bug/csd/2021": {
           "word": "Bug (errore)",
           "definition": "Parte di un programma che non funziona correttamente."
+        },
+        "feature/csd/2021": {
+          "word": "Caratteristica (feature)",
+          "definition": "Componente di un programma che aggiunge funzionalità per l'utente"
         },
         "innovation/csd/2021": {
           "word": "Innovazione",
@@ -1656,6 +1747,7 @@
           "definition": "un modo per rappresentare le informazioni utilizzando solo due opzioni"
         },
         "ascii/csd/2021": {
+          "word": "ASCII",
           "definition": "un sistema popolare per rappresentare il testo in formato binario"
         },
         "bit/csd/2021": {
