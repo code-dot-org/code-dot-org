@@ -30,3 +30,12 @@ rescue Selenium::WebDriver::Error::TimeoutError => exception
   check_window_for_js_errors('after timeout')
   raise exception
 end
+
+if ENV['SCREENSHOT_ON_FAIL'] == 'true'
+  After do |scenario|
+    if scenario.failed?
+      feature_name = scenario.location.to_s.gsub('features/', '').gsub(/.feature(:[0-9]+)*/, '')
+      take_screenshot("#{feature_name}__#{scenario.name}__failed")
+    end
+  end
+end

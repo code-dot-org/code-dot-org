@@ -118,6 +118,7 @@ def parse_options
     options.magic_retry = false
     options.parallel_limit = 1
     options.abort_when_failures_exceed = Float::INFINITY
+    options.screenshot_on_fail = false
     options.priority = '99'
 
     # start supporting some basic command line filtering of which browsers we run against
@@ -151,6 +152,7 @@ def parse_options
         options.hourofcode_domain = 'localhost.hourofcode.com:3000'
         options.csedweek_domain = 'localhost.csedweek.org:3000'
         options.advocacy_domain = 'localhost-advocacy.code.org:3000'
+        options.screenshot_on_fail = true
       end
       opts.on("--headed", "Open visible chrome browser windows. Runs in headless mode without this flag. Only relevant when -l is specified.") do
         options.local_headless = false
@@ -764,6 +766,7 @@ def run_feature(browser, feature, options)
   run_environment['TEST_RUN_NAME'] = test_run_string
   run_environment['IS_CIRCLE'] = options.is_circle ? "true" : "false"
   run_environment['PRIORITY'] = options.priority
+  run_environment['SCREENSHOT_ON_FAIL'] = options.screenshot_on_fail ? "true" : "false"
 
   # disable some stuff to make require_rails_env run faster within cucumber.
   # These things won't be disabled in the dashboard instance we're testing against.
