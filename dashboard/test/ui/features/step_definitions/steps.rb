@@ -1461,3 +1461,7 @@ And(/^I see custom certificate image with name "([^"]*)" and course "([^"]*)"$/)
   expect(params['name']).to eq(name)
   expect(params['course']).to eq(course)
 end
+
+And(/^I take a screenshot named "([^"]*)"$/) do |shot_name|
+  take_screenshot(shot_name)
+end

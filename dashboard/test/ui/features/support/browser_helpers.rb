@@ -141,6 +141,14 @@ module BrowserHelpers
     puts "DEBUG: Unable to check window for JS errors; #{exception}"
   end
 
+  def take_screenshot(shot_name)
+    screenshots_dir = "log/screenshots"
+    shot_name = shot_name.gsub(/[^0-9A-Za-z.\-]/, '_')
+    screenshot_path = "#{screenshots_dir}/#{shot_name}.png"
+    FileUtils.mkdir_p(screenshots_dir)
+    @browser.save_screenshot(screenshot_path)
+  end
+
   def wait
     Selenium::WebDriver::Wait.new(timeout: 60 * 2)
   end
