@@ -32,12 +32,72 @@
 }
 
 // Landing page
+.hero-banner-basic {
+  background: url(/images/banners/banner-bg-lines-light-grey.png) center repeat-x;
+  background-size: contain;
+
+  .text-wrapper {
+
+    @media screen and (max-width: $width-md) {
+      width: 60%;
+    }
+
+    @media screen and (max-width: $width-sm) {
+      width: 100%;
+    }
+  }
+
+  figure {
+
+    @media screen and (max-width: $width-md) {
+      width: 33%;
+    }
+
+    @media screen and (max-width: $width-sm) {
+      width: 100%;
+      margin-top: 2em;
+    }
+  }
+
+  img {
+    @media screen and (max-width: $width-md) {
+      display: block;
+    }
+  }
+}
+
+.tenth-anniversary-timeline {
+
+  figure {
+    width: 100%;
+    overflow: auto;
+    border-left: 1px solid;
+    border-right: 1px solid;
+    margin-bottom: 1em;
+
+    img {
+      width: 330%;
+    }
+  }
+
+  p {
+    margin-left: -2px;
+
+    i {
+      font-size: 1.25em;
+      vertical-align: middle;
+    }
+  }
+}
+
 .tenth-anniversary-tweets {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1em;
+  max-height: 339px;
+  border-bottom: 1px solid;
+  width: 35%;
+  overflow: auto;
 
   .twitter-tweet {
-    margin: 0 !important;
+    margin: 0 auto 1em !important;
+    width: 96% !important;
   }
 }

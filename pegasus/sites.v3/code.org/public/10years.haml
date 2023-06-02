@@ -6,30 +6,44 @@ theme: responsive_full_width
 %link{href: '/css/generated/design-system-pegasus.css', rel: 'stylesheet'}
 %link{href: '/css/generated/tenth-anniversary-styles.css', rel: 'stylesheet'}
 
-%section
+-# FontAwesome icons
+- icon_arrows = "fa-solid fa-arrows-left-right"
+
+%section.hero-banner-basic
   .wrapper
-    %h1=hoc_s(:tenth_anniversary_top_heading)
-    %p=hoc_s(:tenth_anniversary_top_desc)
-    %img{src: "/images/cdo-10years-logo.svg", alt: ""}
-    %img{src: "/images/fullteam-2023.gif", alt: ""}
+    .flex-container.justify-space-between.align-items-center
+      .text-wrapper
+        %h1=hoc_s(:tenth_anniversary_top_heading)
+        %p=hoc_s(:tenth_anniversary_top_desc)
+      %figure
+        %img{src: "/images/cdo-10years-logo.svg", alt: "", style: "position: relative; width: 100%;"}
+
+%section.tenth-anniversary-timeline
+  .wrapper
+    %h2 A decade of milestones
+    %figure
+      %img{src: "/images/10-Years-of-CodeDotOrg-horizontal.png", alt: ""}
+    %p.figcaption
+      %i{class: "#{icon_arrows}"}
+      Scroll for more!
 
 %section.bg-neutral-light
   .wrapper
-    %h2 A decade of milestones
-    %figure.video-responsive
-      %div
-        %iframe{src: "https://www.youtube-nocookie.com/embed/lK3Jy8JjuCo", allowFullScreen: "true", frameborder: "0", title: hoc_s(:blockchain_video_title_01)}
+    %h2 Celebrate with us
+    %div.flex-container.justify-space-between.wrap
+      %figure
+        %img{src: "/images/fullteam-2023.gif", alt: ""}
+      = view :tenth_anniversary_tweets
 
 %section
   .wrapper
     %h2 See where it all began
-    %figure.video-responsive
-      %div
-        %iframe{src: "https://www.youtube-nocookie.com/embed/nKIu9yen5nc", allowFullScreen: "true", frameborder: "0", title: hoc_s(:blockchain_video_title_01)}
+    %div.flex-container.justify-space-between.wrap
+      %figure.video-responsive{style: "max-width: unset"}
+        %div
+          %iframe{src: "https://www.youtube-nocookie.com/embed/nKIu9yen5nc", allowFullScreen: "true", frameborder: "0", title: hoc_s(:blockchain_video_title_01)}
 
-%section.bg-neutral-light
-  .wrapper
-    = view :tenth_anniversary_tweets
+= view :section_divider_line
 
 %section
   .wrapper
