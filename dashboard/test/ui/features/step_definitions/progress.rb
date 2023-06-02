@@ -41,6 +41,7 @@ def verify_progress(selector, test_result, no_wait=false)
     steps %{
       And I wait for 2 seconds
       And I wait until jQuery Ajax requests are finished
+      And I wait until jQuery animations are finished
     }
   end
 
