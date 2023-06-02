@@ -60,25 +60,6 @@ form.dropDownMenuContainer {
     accent-color: $brand_primary_default;
     margin: 0;
     float: unset;
-
-    //TODO: Template for checkbox component styles.
-    // Delete once checkbox component is ready.
-    //&:checked {
-    //  +i::before {
-    //    width: 20px;
-    //    height: 20px;
-    //    display: inline-block;
-    //    vertical-align: bottom;
-    //    margin-right: 10px;
-    //    line-height: 20px;
-    //    text-align: center;
-    //    box-shadow: inset 0 1px 1px rgb(0 0 0 / 0.075);
-    //    content: "\f00c";
-    //    background: red;
-    //    border: 2px solid blue;
-    //    border-radius: 4px;
-    //  }
-    //}
   }
 
 

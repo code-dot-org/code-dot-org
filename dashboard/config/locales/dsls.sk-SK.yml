@@ -1269,45 +1269,29 @@ sk-SK:
           | [DOCX](https://docs.google.com/document/d/1y5Q_3qDIUy1imif1BjiWffZHPzE8NVtyY5w8KlTuzUU/export?format=doc))\n"
       CSD U3 drawSprites placement match:
         answers:
-        - text: <img width="300px" src="https://images.code.org/131282b44fe34cd619a9a21bc68888da-image-1523902103487.58.48
-            AM.png">
-        - text: <img src="https://images.code.org/2fbe4029dc47f6f048e7c9f90ac99cac-image-1523902103485.25.09
-            AM.png">
-        - text: <img src="https://images.code.org/c4cb49e00f7087765865da87cff37549-image-1523902103477.58.00
-            AM.png">
-        - text: <img src="https://images.code.org/7465035fc6701dcb91731fe9d160b638-image-1523902103481.58.28
-            AM.png">
+        - {}
+        - {}
+        - {}
+        - {}
         content1: Spoj kód s obrázkom, ktorý vytvorí.
         questions:
-        - text: <img src="https://images.code.org/cd11d762b2cb3e36c3d45157b965c968-image-1523901253224.59.08
-            AM.png">
-        - text: <img src="https://images.code.org/653dff2d49f07341b2f2552747212b34-image-1523901253222.59.21
-            AM.png">
-        - text: <img src="https://images.code.org/db71e0cde6861faabc0b5a55d67c739e-image-1523901253227.58.12
-            AM.png">
-        - text: <img src="https://images.code.org/15d6014329fa3da9b73016af9f1d0d74-image-1523901253226.58.34
-            AM.png">
+        - {}
+        - {}
+        - {}
+        - {}
         title: drawSprites
       CSD U3 drawSprites placement match_2019:
         answers:
-        - text: <img width="300px" src="https://images.code.org/131282b44fe34cd619a9a21bc68888da-image-1523902103487.58.48
-            AM.png">
-        - text: <img src="https://images.code.org/2fbe4029dc47f6f048e7c9f90ac99cac-image-1523902103485.25.09
-            AM.png">
-        - text: <img src="https://images.code.org/c4cb49e00f7087765865da87cff37549-image-1523902103477.58.00
-            AM.png">
-        - text: <img src="https://images.code.org/7465035fc6701dcb91731fe9d160b638-image-1523902103481.58.28
-            AM.png">
+        - {}
+        - {}
+        - {}
+        - {}
         content1: Spoj kód s obrázkom, ktorý vytvorí.
         questions:
-        - text: <img src="https://images.code.org/cd11d762b2cb3e36c3d45157b965c968-image-1523901253224.59.08
-            AM.png">
-        - text: <img src="https://images.code.org/653dff2d49f07341b2f2552747212b34-image-1523901253222.59.21
-            AM.png">
-        - text: <img src="https://images.code.org/db71e0cde6861faabc0b5a55d67c739e-image-1523901253227.58.12
-            AM.png">
-        - text: <img src="https://images.code.org/15d6014329fa3da9b73016af9f1d0d74-image-1523901253226.58.34
-            AM.png">
+        - {}
+        - {}
+        - {}
+        - {}
         title: drawSprites
       CSD U3 game intro:
         markdown: "# Vytvor svoju vlastnú hru\n\nNaučili sme sa všetko, čo potrebuješ
@@ -5956,8 +5940,8 @@ sk-SK:
           a ešte viac!
         display_name: Aplikácie v Sprite Labe
         teacher_markdown: |
-          # Prehľad úrovní s výberom možností
-          Úrovne s výberom možností poskytujú žiakom ponuku ďalších úrovní, ktoré môžu absolvovať. Žiaci musia dokončiť aspoň jednu z týchto podúrovní, ale môžu ich absolvovať toľko, koľko chcú (alebo vy).
+          # Prehľad voliteľných úrovní
+          Voliteľné úrovne poskytujú žiakom ponuku ďalších úrovní, ktoré môžu absolvovať. Žiaci musia dokončiť aspoň jednu z týchto podúrovní, ale môžu ich absolvovať toľko, koľko chcú (alebo vy).
 
           Výbery vedú žiakov k vzorovým aplikáciám, ktoré môžu preskúmať. Táto aktivita je určená na koordináciu s pracovným listom Preskúmanie aplikácií, ktorý sa nachádza v [pláne lekcie](.././).
       courseF_sprites_freeplay:
@@ -6172,24 +6156,16 @@ sk-SK:
         - {}
       CSD U3 drawSprites placement match_2019_pilot_2021:
         answers:
-        - text: <img width="300px" src="https://images.code.org/131282b44fe34cd619a9a21bc68888da-image-1523902103487.58.48
-            AM.png">
-        - text: <img src="https://images.code.org/2fbe4029dc47f6f048e7c9f90ac99cac-image-1523902103485.25.09
-            AM.png">
-        - text: <img src="https://images.code.org/c4cb49e00f7087765865da87cff37549-image-1523902103477.58.00
-            AM.png">
-        - text: <img src="https://images.code.org/7465035fc6701dcb91731fe9d160b638-image-1523902103481.58.28
-            AM.png">
+        - {}
+        - {}
+        - {}
+        - {}
         content1: Spoj kód s obrázkom, ktorý vytvorí.
         questions:
-        - text: <img src="https://images.code.org/cd11d762b2cb3e36c3d45157b965c968-image-1523901253224.59.08
-            AM.png">
-        - text: <img src="https://images.code.org/653dff2d49f07341b2f2552747212b34-image-1523901253222.59.21
-            AM.png">
-        - text: <img src="https://images.code.org/db71e0cde6861faabc0b5a55d67c739e-image-1523901253227.58.12
-            AM.png">
-        - text: <img src="https://images.code.org/15d6014329fa3da9b73016af9f1d0d74-image-1523901253226.58.34
-            AM.png">
+        - {}
+        - {}
+        - {}
+        - {}
         title: drawSprites
       CSD U3 drawing practice choice_2021:
         display_name: Cvičenie
@@ -7438,23 +7414,15 @@ sk-SK:
         title: Otázka č. 3
       CSD U3 drawSprites placement match_2022:
         answers:
-        - text: <img src="https://images.code.org/cd11d762b2cb3e36c3d45157b965c968-image-1523901253224.59.08
-            AM.png">
-        - text: <img src="https://images.code.org/653dff2d49f07341b2f2552747212b34-image-1523901253222.59.21
-            AM.png">
-        - text: <img src="https://images.code.org/db71e0cde6861faabc0b5a55d67c739e-image-1523901253227.58.12
-            AM.png">
-        - text: <img src="https://images.code.org/15d6014329fa3da9b73016af9f1d0d74-image-1523901253226.58.34
-            AM.png">
+        - {}
+        - {}
+        - {}
+        - {}
         questions:
-        - text: <img width="300px" src="https://images.code.org/131282b44fe34cd619a9a21bc68888da-image-1523902103487.58.48
-            AM.png">
-        - text: <img src="https://images.code.org/2fbe4029dc47f6f048e7c9f90ac99cac-image-1523902103485.25.09
-            AM.png">
-        - text: <img src="https://images.code.org/c4cb49e00f7087765865da87cff37549-image-1523902103477.58.00
-            AM.png">
-        - text: <img src="https://images.code.org/7465035fc6701dcb91731fe9d160b638-image-1523902103481.58.28
-            AM.png">
+        - {}
+        - {}
+        - {}
+        - {}
         title: drawSprites
       CSD U3 drawing practice choice_2022:
         display_name: Cvičenie
@@ -18306,3 +18274,25 @@ sk-SK:
         display_name: Modely v App Labe – cvičenia
       ml-use models applab-practice choice_2022:
         display_name: Modely v App Labe – cvičenia
+      Test Contained Retriable Multi:
+        answers:
+        - text: '0'
+        - text: '1'
+        - text: '2'
+          correct: true
+        - text: '4'
+        questions:
+        - {}
+      test-single-multi-standalone-retriable:
+        answers:
+        - text: Nestane sa nič.
+          feedback: Nesprávne. Klbko sena sa začne kotúľať.
+        - text: Klbko sena vzlietne k hornej časti obrazovky.
+          feedback: Nesprávne. Klbko sena sa začne kotúľať.
+        - text: Klbko sena sa začne kotúľať.
+          correct: true
+          feedback: Správne!
+        - text: Klbko sena zabliká – objaví sa a zmizne.
+          feedback: Nesprávne. Klbko sena sa začne kotúľať.
+        questions:
+        - text: Pozri sa pozorne na tento kód.  Čo sa stane, keď klikneš "Spustiť"?

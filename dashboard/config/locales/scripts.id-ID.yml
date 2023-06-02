@@ -154,6 +154,7 @@ id:
             tingkat dasar dan konsep-konsep pemrograman. Kursus ini dirancang untuk
             digunakan di ruang kelas untuk sekolah dasar dan menengah, tapi tetap
             menyenangkan dipelajari untuk semua usia.
+          name: 20 jam
         edit-code:
           title: Mengedit kode
           description: Mengedit kode
@@ -6454,6 +6455,8 @@ id:
           lesson_groups:
             lessonGroup-3:
               display_name: Masukan dan keluaran
+        ai-temp:
+          title: Bagaimana AI bekerja
         focus-on-coding4b-2023:
           lesson_groups:
             lessonGroup-3:

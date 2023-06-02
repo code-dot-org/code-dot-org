@@ -2,8 +2,6 @@
   "bs-BA": {
     "data": {
       "course_offerings": {
-        "coursea": "Kurs A",
-        "courseb": "Kurs B",
         "csd": "Otkrića računarske nauke",
         "csp": "Principi računarske nauke",
         "20-hour": "20-satni Uvodni Kurs",
@@ -11,7 +9,6 @@
         "jigsaw": "Slagalica",
         "algebra": "Računarstvo u Algebri",
         "artist": "Umjetnik",
-        "basketball": "Napravi igru košarke",
         "course1": "Kurs 1",
         "course2": "Kurs 2",
         "course3": "Kurs 3",

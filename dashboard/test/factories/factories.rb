@@ -1688,7 +1688,6 @@ FactoryBot.define do
   end
 
   factory :lti_integration do
-    platform_id {"platform_id"}
     issuer {"issuer"}
     client_id {"client_id"}
     platform_name {"platform_name"}

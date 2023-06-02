@@ -158,6 +158,7 @@ de:
             Programmierkonzepte aus den Kursen 2-4. Der Kurs eignet sich für Kinder
             und Jugendliche zwischen 10 und 18 Jahren. Unsere Kurse 2-4 vermitteln
             umfassendere Kenntnisse!
+          name: 20 Stunden
         edit-code:
           title: Code bearbeiten
           description: Code bearbeiten
@@ -7461,6 +7462,8 @@ de:
           lesson_groups:
             lessonGroup-3:
               display_name: Ein- und Ausgaben
+        ai-temp:
+          title: So funktioniert KI
         focus-on-coding4b-2023:
           lesson_groups:
             lessonGroup-3:

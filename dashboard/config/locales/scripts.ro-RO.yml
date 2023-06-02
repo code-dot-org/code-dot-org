@@ -148,6 +148,7 @@ ro:
           student_description: Acest curs de 20 de ore prezintă concepte de bază din
             informatică şi programare. Cursul este creat pentru utilizarea în săli
             de clasă pentru clasele K-8, dar este distractiv de învăţat la toate vârstele.
+          name: 20 ore
         edit-code:
           title: Editează Codul
           description: Editează Codul
