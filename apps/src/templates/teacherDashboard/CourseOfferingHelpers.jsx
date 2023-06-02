@@ -15,16 +15,21 @@ export const translatedCourseOfferingCsTopics = {
   programming: i18n.courseOfferingCsTopicProgramming(),
 };
 
-export const translatedInterdisciplinary = {
-  interdisciplinary: i18n.courseOfferingInterdisciplinary(),
-};
-
 // Same list as CourseOfferingSchoolSubjects in sharedCourseConstants but with translated strings
 export const translatedCourseOfferingSchoolSubjects = {
   math: i18n.courseOfferingSchoolSubjectMath(),
   science: i18n.courseOfferingSchoolSubjectScience(),
   english_language_arts: i18n.courseOfferingSchoolSubjectEnglishLanguageArts(),
   history: i18n.courseOfferingSchoolSubjectHistory(),
+};
+
+export const translatedLabels = {
+  ...translatedCourseOfferingCsTopics,
+  ...translatedCourseOfferingSchoolSubjects,
+};
+
+export const translatedInterdisciplinary = {
+  interdisciplinary: i18n.courseOfferingInterdisciplinary(),
 };
 
 // Same list as DeviceTypes in sharedCourseConstants but with translated strings
