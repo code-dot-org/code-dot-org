@@ -91,7 +91,6 @@ class UnconnectedMusicView extends React.Component {
     currentLevelId: PropTypes.string,
     levelCount: PropTypes.number,
     levelDataPath: PropTypes.string,
-    isLabLoading: PropTypes.bool,
     userId: PropTypes.number,
     userType: PropTypes.string,
     signInState: PropTypes.oneOf(Object.values(SignInState)),
@@ -150,6 +149,7 @@ class UnconnectedMusicView extends React.Component {
 
     this.state = {
       showingVideo: true,
+      changingPanels: false,
     };
 
     // Music Lab currently does not support share and remix
@@ -244,6 +244,7 @@ class UnconnectedMusicView extends React.Component {
     }
 
     if (prevProps.currentLevelIndex !== this.props.currentLevelIndex) {
+      console.log('[DEBUG] go  to panel from level index change');
       this.goToPanel();
     }
 
@@ -272,6 +273,8 @@ class UnconnectedMusicView extends React.Component {
         this.getStartSources(),
         this.props.source
       );
+      console.log('[DEBUG] go to panel from lab ready for reload');
+      this.goToPanel();
       this.props.setLabReadyForReload(false);
     }
   }
@@ -362,9 +365,9 @@ class UnconnectedMusicView extends React.Component {
   goToPanel = () => {
     this.progressManager?.goToStep(this.props.currentLevelIndex);
 
-    // If we are already loading, then the existing execution of handlePanelChange
+    // If we are already changing panels, then the existing execution of handlePanelChange
     // will detect the change in active level and start loading again.
-    if (!this.props.isLabLoading) {
+    if (!this.state.changingPanels) {
       this.handlePanelChange();
     }
   };
@@ -372,6 +375,8 @@ class UnconnectedMusicView extends React.Component {
   // Handle a change in panel for progress and toolbox.
   // Also handles a change in the active level index during this load.
   handlePanelChange = async () => {
+    this.setState({changingPanels: true});
+
     let currentLevelIndexLoading;
 
     this.stopSong();
@@ -384,6 +389,8 @@ class UnconnectedMusicView extends React.Component {
       this.setToolboxForProgress();
       this.setAllowedSoundsForProgress();
     } while (currentLevelIndexLoading !== this.props.currentLevelIndex);
+
+    this.setState({changingPanels: false});
   };
 
   setToolboxForProgress = () => {
@@ -758,8 +765,6 @@ const MusicView = connect(
 
     // The URL path for retrieving level_data from the server.
     levelDataPath: getLevelDataPath(state),
-
-    isLabLoading: state.lab?.isLoading,
 
     userId: state.currentUser.userId,
     userType: state.currentUser.userType,
