@@ -13733,3 +13733,25 @@ zh-TW:
         - text: '仔細看一下這段程式碼。你認為程式執行後會發生什麼？
 
 '
+      Test Contained Retriable Multi:
+        answers:
+        - text: '0'
+        - text: '1'
+        - text: '2'
+          correct: true
+        - text: '4'
+        questions:
+        - {}
+      test-single-multi-standalone-retriable:
+        answers:
+        - text: 什麼都不會發生。
+          feedback: 不正確。風滾草將開始翻滾
+        - text: 風滾草將飄浮到螢幕頂部
+          feedback: 不正確。風滾草將開始翻滾
+        - text: 風滾草將開始翻滾
+          correct: true
+          feedback: 正確！
+        - text: 風滾草將忽明忽暗。
+          feedback: 不正確。風滾草將開始翻滾
+        questions:
+        - text: 仔細查看下方的程式。點擊「運行」按鈕後會發生什麼事呢？

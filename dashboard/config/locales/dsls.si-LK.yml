@@ -9254,9 +9254,12 @@ si-LK:
         - {}
       courseC_multi_maze_debugging8_predict12022:
         answers:
-        - {}
-        - {}
-        - {}
+        - feedback: වැරදියි! ස්‍ක්‍රැට් වැරදි මාවතකට හැරීම හේතුවෙන් ඒකෝන් වෙත ළඟා
+            නොවනු ඇත.
+        - feedback: නිවැරදියි! ස්‍ක්‍රැට් වැරදි දිශාවකට හැරෙන අතර ඒකෝන් වෙත ළඟා නොවනු
+            ඇත.
+        - feedback: වැරදියි! ස්‍ක්‍රැට් වැරදි මාවතකට හැරීම හේතුවෙන් ඒකෝන් වෙත ළඟා
+            නොවනු ඇත.
         - {}
         questions:
         - {}
@@ -9478,6 +9481,22 @@ si-LK:
       csf_putting_a_stop_to_online_meanness2022:
         content1: විස්තරය මෙහි
       grade2_multi_collector_A_predict12022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      Test Contained Retriable Multi:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      test-single-multi-standalone-retriable:
         answers:
         - {}
         - {}

@@ -309,13 +309,13 @@
           "craft_drag_block_callout": "\"앞으로 이동\" 블록을 드래그하여 다른 블록 아래에 끼우세요."
         },
         "Overworld Place Wall": {
-          "craft_inside_repeat": "블록들을 이곳에 놓아서 행동을 반복하세요"
+          "craft_inside_repeat": "블록들을 이곳에 놓아서 작업을 반복하세요"
         },
         "Overworld Place Wall_2019": {
-          "craft_inside_repeat": "블록들을 이곳에 놓아서 행동을 반복하세요"
+          "craft_inside_repeat": "블록들을 이곳에 놓아서 작업을 반복하세요"
         },
         "Overworld Place Wall_2020": {
-          "craft_inside_repeat": "블록들을 이곳에 놓아서 행동을 반복하세요"
+          "craft_inside_repeat": "블록들을 이곳에 놓아서 작업을 반복하세요"
         },
         "Underground Avoiding Lava": {
           "craft_callout_moveforward": "이 코드는 용암을 확인합니다. 앞으로 이동하기 명령을 추가할 수 있나요?"
@@ -394,7 +394,7 @@
           "replace_questions": "\"???\" 부분에 수를 입력하면 됩니다."
         },
         "MC HOC 2016 Level 2-2": {
-          "craft2_run_button_callout": "준비 되었을 때 \"실행\" 버튼을 눌러 프로그램을 실행해 보세요."
+          "craft2_run_button_callout": "준비가 됐다면, '실행' 버튼을 눌러 프로그램을 실행해 보세요."
         },
         "courseA_maze_seq1": {
           "courseA_maze_seq1_1": "힌트가 필요하면 전구를 클릭하세요!"
@@ -1369,7 +1369,7 @@
           "AppLabHoCFinal11": "이제 설계 모드에 있습니다."
         },
         "MC HOC 2016 New Walk": {
-          "MC_HOC_2016_New_Walk_callout2": "\"실행\" 버튼을 눌러 이동을 시작하세요."
+          "MC_HOC_2016_New_Walk_callout2": "'실행' 버튼을 눌러 이동을 시작하세요."
         },
         "CourseD_Dance_2020_01_2021": {
           "dance_callout_01": "여기에서 댄서 유형을 선택하세요!"
@@ -1423,7 +1423,7 @@
           "craft_drag_block_callout": "\"앞으로 이동\" 블록을 드래그하여 다른 블록 아래에 끼우세요."
         },
         "Overworld Place Wall_2021": {
-          "craft_inside_repeat": "블록들을 이곳에 놓아서 행동을 반복하세요"
+          "craft_inside_repeat": "블록들을 이곳에 놓아서 작업을 반복하세요"
         },
         "Underground Avoiding Lava_2021": {
           "craft_callout_moveforward": "이 코드는 용암을 확인합니다. 앞으로 이동하기 명령을 추가할 수 있나요?"
@@ -2115,7 +2115,7 @@
           "craft_drag_block_callout": "\"앞으로 이동\" 블록을 드래그하여 다른 블록 아래에 끼우세요."
         },
         "Overworld Place Wall2022": {
-          "craft_inside_repeat": "블록들을 이곳에 놓아서 행동을 반복하세요"
+          "craft_inside_repeat": "블록들을 이곳에 놓아서 작업을 반복하세요"
         },
         "Underground Avoiding Lava2022": {
           "craft_callout_moveforward": "이 코드는 용암을 확인합니다. 앞으로 이동하기 명령을 추가할 수 있나요?"
