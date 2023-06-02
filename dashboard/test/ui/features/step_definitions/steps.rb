@@ -279,6 +279,10 @@ When /^I wait until jQuery Ajax requests are finished$/ do
   wait_short_until {@browser.execute_script("return $.active == 0")}
 end
 
+When /^I wait until jQuery animations are finished$/ do
+  wait_short_until {@browser.execute_script("return $(':animated').length == 0")}
+end
+
 Then /^I make all links open in the current tab$/ do
   @browser.execute_script("$('a[target=_blank]').attr('target', '_parent');")
 end
