@@ -1,5 +1,6 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useCallback} from 'react';
 import PropTypes from 'prop-types';
+
 import {curriculumDataShape} from './curriculumCatalogShapes';
 import i18n from '@cdo/locale';
 import style from '../../../style/code-studio/curriculum_catalog_container.module.scss';
@@ -8,6 +9,8 @@ import HeaderBanner from '../HeaderBanner';
 import CourseCatalogBannerBackground from '../../../static/curriculum_catalog/course-catalog-banner-illustration-01.png';
 import CourseCatalogIllustration01 from '../../../static/curriculum_catalog/course-catalog-illustration-01.png';
 import CourseCatalogNoSearchResultPenguin from '../../../static/curriculum_catalog/course-catalog-no-search-result-penguin.png';
+
+import Button from '@cdo/apps/templates/Button';
 import {
   Heading5,
   Heading6,
@@ -202,12 +205,13 @@ const CurriculumCatalog = ({curriculaData, isEnglish}) => {
   };
 
   // Clears all filter selections.
-  const handleClear = () => {
+  const handleClear = useCallback(e => {
+    e.preventDefault();
     setAppliedFilters(getEmptyFilters());
     Object.keys(filterTypes).forEach(filterKey =>
       updateQueryParam(filterKey, undefined, false)
     );
-  };
+  }, []);
 
   // Clears selections within the given filter.
   const handleClearAllOfFilter = filterKey => {
@@ -296,14 +300,15 @@ const CurriculumCatalog = ({curriculaData, isEnglish}) => {
             handleClearAll={() => handleClearAllOfFilter(filterKey)}
           />
         ))}
-        <button
+        <Button
           id="clear-filters"
-          type="button"
           className={style.catalogClearFiltersButton}
+          type="button"
           onClick={handleClear}
-        >
-          {i18n.clearFilters()}
-        </button>
+          text={i18n.clearFilters()}
+          styleAsText
+          color={Button.ButtonColor.brandSecondaryDefault}
+        />
       </div>
       <div className={style.catalogContentContainer}>
         {renderSearchResults()}

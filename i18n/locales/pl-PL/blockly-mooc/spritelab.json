@@ -98,7 +98,7 @@
   "cscAdaptationsMoveOctopusToPlant": "Nie zapomnij użyć klawiszy strzałek do przeniesienia ośmiornicy, aby dotknęła roślinę tak, by zmieniła kostium, aby się wtopić.",
   "cscAdaptationsNeedWhenClicked": "Wygląda na to, że dodałeś zachowanie, ale zapomniałeś dodać <code style=\"color:black; background-color:#6AF36C\">, gdy duszek kliknął</code> blok najpierw. Upewnij się, że dodałeś blok zachowania po bloku zdarzenia.",
   "cscAdaptationsNight": "Upewnij się, że dodałeś nocne tło pod blokiem <code style=\"color:black; background-color:#6AF36C\">po naciśnięciu strzałki</code>.",
-  "cscAdaptationsSeaweed": "Upewnij się, że ośmiornica zmienia ten sam kolor, co wodorosty, które dotyka",
+  "cscAdaptationsRightArrowKey": "Pamiętaj, aby nacisnąć klawisz strzałki po naciśnięciu przycisku Uruchom. Możesz klikać pomarańczowe przyciski pod obszarem gry lub naciskać klawisze na klawiaturze. ",
   "cscAdaptationsSetBackground": "Upewnij się, że ustawiłeś tło.",
   "cscAdaptationsSetBehavior": "Upewnij się, że ustawiłeś zachowanie duszka po ustawieniu jego rozmiaru.",
   "cscAdaptationsSetFastSpeed": "Upewnij się, że ustawiłeś szybkość duszka geparda na dużą.",

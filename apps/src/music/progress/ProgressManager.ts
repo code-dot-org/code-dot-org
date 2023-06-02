@@ -10,6 +10,11 @@ export abstract class Validator {
   abstract clear(): void;
 }
 
+export interface Progression {
+  path: string;
+  steps: ProgressionStep[];
+}
+
 // A validation inside the progression step.
 interface Validation {
   conditions: string[];
@@ -18,7 +23,7 @@ interface Validation {
 }
 
 // The definition of a progression step.
-interface ProgressionStep {
+export interface ProgressionStep {
   text: string;
   toolbox: {
     [key: string]: string;

@@ -1990,6 +1990,7 @@
           "name": "Pengenalan"
         },
         "2143fa63-5aea-47af-8684-29aa626fd1d7": {
+          "name": "Melihat ke hadapan dengan Minecraft",
           "description": "#### Teka-Teki Dalam Talian\n\nPelajar benar-benar menggemari pelajaran ini. Kemungkinan besar kebanyakan pelajar anda pernah mendengar tentang _Minecraft_, tetapi berikan pengenalan ringkas untuk mereka yang mungkin tidak tahu.\n\n_Minecraft_ ialah permainan kiub. Anda boleh bermain sebagai Alex atau Steve semasa anda berusaha mengharungi jalan dalam pagar sesat. Anda perlu mengelak lahar gunung berapi, mengambil item dan meneroka dalam dunia yang diperbuat daripada kiub.\n\nTunjukkan satu daripada teka-teki kepada kelas (kami sarankan teka-teki 11). Sebaik sahaja semua soalan telah dijawab, alihkan pelajar kepada komputer dan biarkan mereka memulakan pengaturcaraan pasangan."
         },
         "419b0732-9e07-4ab2-8c48-0fb798dfdfde": {
@@ -2020,6 +2021,7 @@
           "name": "Pratonton Teka-Teki Dalam Talian"
         },
         "a4ab31f7-6915-461a-b307-aad86879a097": {
+          "name": "Jika/Lain dengan Bee",
           "description": "Teka-teki ini mungkin menimbulkan beberapa soalan, oleh itu minta pelajar bekerja secara berpasangan atau laksanakan peraturan \"Tanya tiga sebelum anda bertanya saya\" (minta pelajar meminta bantuan tiga rakan lain sebelum mereka pergi kepada guru.) Ini akan mencetuskan perbincangan yang akan mengembangkan kefahaman setiap pelajar."
         },
         "f581d038-c3fb-4ac3-a56e-31b84d50ba91": {
@@ -2103,6 +2105,7 @@
           "description": "Dalam pelajaran ini, pelajar akan mencipta gelung yang hanya berjalan \"sehingga\" syaratnya benar. Bantu pelajar memahami cara gelung ini berfungsi dengan menerajui mereka dalam aktiviti kumpulan dan minta mereka melakukan tindakan \"sehingga\" beberapa syarat menjadi benar. Sebagai contoh: Minta pelajar menyentuh hidung mereka \"sehingga\" anda menyuruh mereka berhenti."
         },
         "88a4ca9a-f917-418e-8c1c-2cc4ac814afd": {
+          "name": "Sehingga Gelung di Maze",
           "progression_name": "Bangunan Kemahiran"
         },
         "fad7d572-0e05-4122-854b-ee145920d5ec": {
@@ -2535,7 +2538,8 @@
         "12dc3a29-9b6a-448a-91d7-c795731e097b": {
           "tips": [
             "Blok peristiwa dalam pelajaran ini lebih canggih berbanding blok yang telah digunakan pelajar setakat ini dalam kursus. Pastikan pelajar tahu bahawa mereka boleh mengembangkan blok peristiwa hijau dengan menekan butang +. Pelajar bekerja dengan banyak peperi hari ini. Kebiasaannya, perintah di dalam Makmal Peperi memberikan kesak kepada semua peperi dengan kostum yang sama. Blok di dalam blok peristiwa akan menjadikannya supaya setiap tindakan yang dipasang hanya memberikan kesan kepada peperi yang terlibat dalam peristiwa itu."
-          ]
+          ],
+          "progression_name": "Video: Simulator Wabak: Pengenalan"
         },
         "fc407406-3b2b-46cd-be85-000640f4f949": {
           "progression_name": "Bangunan Kemahiran"
@@ -4170,6 +4174,7 @@
           "description": "Kumpulkan kelas bersama dan minta dua sukarelawan berjalan lurus ke arah tertentu di dalam kelas. Jika mereka menemui kerusi yang tidak berada di tempatnya, mereka mesti melangkah ke atasnya. Jika mereka sampai di dinding, mereka mesti duduk.\n\nSebaik sahaja semua pelajar duduk, tanya cara mereka akan mengatur cara robot untuk bertindak balas terhadap dinding atau kerusi. Ingatkan pelajar bahawa anda tidak boleh hanya berkata \"Melangkah ke atas kerusi\" melainkan jika anda tahu ada kerusi dan anda tidak akan sentiasa tahu terdapat kerusi. Mungkin berguna untuk menterjemah tugasan kepada arahan seperti: \n\n-   selagi ada laluan di hadapan  \n    -   jalan ke hadapan\n    -   jika ada kerusi, maka pijaknya\n-   duduk\n\nBeritahu pelajar bahawa mereka akan menggunakan bersyarat semasa pelajaran ini. Berikan takrifan untuk:\n\n-   **Syarat**: Pernyataan bahawa atur cara menyemak untuk melihat sama ada ia benar atau salah. Jika benar, tindakan diambil. Jika tidak, tindakan diabaikan.\n-   **Bersyarat**: Pernyataan yang hanya berjalan dalam keadaan tertentu.\n\nBuka perbincangan mengenai masa anda mungkin menggunakan bersyarat dalam kod anda."
         },
         "83daad31-f1c9-4d21-897b-a291d39f55df": {
+          "name": "Melihat ke hadapan dengan Minecraft",
           "description": "#### Teka-Teki Dalam Talian\n\nPelajar benar-benar menggemari pelajaran ini. Kemungkinan besar kebanyakan pelajar anda pernah mendengar tentang _Minecraft_, tetapi berikan pengenalan ringkas untuk mereka yang mungkin tidak tahu.\n\n_Minecraft_ ialah permainan kiub. Anda boleh bermain sebagai Alex atau Steve semasa anda berusaha mengharungi jalan dalam pagar sesat. Anda perlu mengelak lahar gunung berapi, mengambil item dan meneroka dalam dunia yang diperbuat daripada kiub.\n\nTunjukkan satu daripada teka-teki kepada kelas (kami sarankan teka-teki 11). Sebaik sahaja semua soalan telah dijawab, alihkan pelajar kepada komputer dan biarkan mereka memulakan pengaturcaraan pasangan.",
           "progression_name": "Bangunan Kemahiran"
         },
@@ -4191,6 +4196,7 @@
           "description": "Kita akan menggunakan **bersyarat** dengan Code.org _lebah_ untuk membantunya menangani sebahagian awan misteri. Kita tidak tahu jika bunganya mempunyai nektar atau tidak, oleh itu kita perlu menggunakan syarat untuk memastikan kita mengumpul nektar jika ada, tetapi kita tidak akan cuba mengumpul nektar daripada bunga yang tidak mempunyai apa-apa.\n\nTarik ke atas teka-teki daripada pelajaran ini, kami sarankan teka-teki 9. \n\n-   Tanya kelas perkara yang perlu dilakukan oleh lebah apabila ia sampai ke awan.\n    -   Lebah perlu menggunakan syarat untuk memeriksa bunga atau sarang lebah.\n-   Gunakan blok jika pada bunga / lain. Tanya kelas perkara yang perlu dilakukan oleh lebah jika ada bunga. Jika tiada bunga, akan ada sarang lebah. Apakah yang perlu dilakukan oleh lebah itu?\n    -   Lebah sepatutnya mendapat nektar jika ada bunga dan membuat madu jika ada sarang lebah.\n\nIsikan kod yang selebihnya dan tekan Jalankan. Bincangkan dengan kelas sebab aktiviti ini berjaya dilakukan."
         },
         "13e970f9-2c63-49d0-9995-322afdd7f201": {
+          "name": "Jika/Lain dengan Bee",
           "description": "Teka-teki ini mungkin menimbulkan beberapa soalan, oleh itu minta pelajar bekerja secara berpasangan atau laksanakan peraturan \"Tanya tiga sebelum anda bertanya saya\" (minta pelajar meminta bantuan tiga rakan lain sebelum mereka pergi kepada guru.) Ini akan mencetuskan perbincangan yang akan mengembangkan kefahaman setiap pelajar."
         },
         "b1dd72db-135f-4732-a4c7-6d157c9ffee9": {
@@ -4307,6 +4313,7 @@
           "description": "#### Pratonton Teka-teki Dalam Talian\n\nTarik atas teka-teki daripada teka-teki Studio Kod dalam talian hari ini. Kami sarankan Teka-teki 4. \n\n-   Tanya kelas perkara yang burung perlu ulangi untuk sampai kepada khinzir.\n    -   Burung perlu mengulangi bergerak ke hadapan, belok ke kanan, bergerak ke hadapan dan kemudian belok ke kiri.\n-   Tanya kelas perkara yang boleh mereka gunakan untuk mengulangi kod ini. \n    -   Burung itu mesti mengulangi corak ini _sehingga_ ia sampai kepada khinzir. \n\nIsikan kod selebihnya dengan menggunakan gelung ulang sehingga dan tekan Jalankan. Bincangkan dengan kelas sebab ini berkesan."
         },
         "db031fa5-7047-46ee-8ccf-49a1f15c696a": {
+          "name": "Sehingga Gelung di Maze",
           "description": "Menggabungkan konsep bukan sesuatu yang mudah, tetapi set tahap ini bertujuan membantu pelajar melihat kemungkinan pengekodan yang tidak berkesudahan apabila menggunakan syarat. Jika pelajar mengalami kesusahan memahami persamaan atau perbezaan antara gelung semasa dan gelung sehingga, minta mereka cuba fikirkan cara mereka akan menggunakan pernyataan yang serupa dalam kehidupan mereka yang sebenar.",
           "progression_name": "Bangunan Kemahiran"
         },
@@ -4337,6 +4344,7 @@
           "description": "Pelajar tidak memerlukan banyak pengenalan konsep pada hari ini kerana mereka telah berlatih dengannya dalam pelajaran sebelum ini. Sebaliknya, anda boleh berkongsi kisah penuai.\n\nPenuai cuba memetik hasil tanaman seperti labu, daun salad dan jagung. Walau bagaimanapun, petani telah terlupa lokasi dia menanam tanaman ini, oleh itu dia perlu memeriksa setiap tanaman sebelum menuai."
         },
         "88047116-9c78-4003-99fe-cd24ceb91b93": {
+          "name": "Penuaian dengan Conditionals",
           "description": "Pelajar akan terus berusaha dengan pernyataan jika / lain, gelung semasa dan gelung sehingga. Teka-teki ini agak mencabar, namun, ia menggalakkan pelajar untuk mengikutinya sehingga mereka dapat menghuraikan perkara yang perlu berlaku untuk setiap atur cara.",
           "progression_name": "Video: Harvesting with Conditionals"
         },
@@ -5924,6 +5932,9 @@
           "tips": [
             "Pelajaran ini mungkin terasa sangat berbeza daripada yang telah dipelajari lebih awal dalam kursus. Tahap ini mempunyai beberapa ciri baharu yang mungkin anda mahu terokai sebelum bermula. Kod yang ditulis oleh pelajar anda dalam satu tahap akan dipindahkan secara automatik kepada yang lain. Ini membolehkan mereka membina secara beransur-ansur dan mengulangi idea mereka sambil mereka belajar. Ambil perhatian bahawa tahap ini tidak disemak untuk ketepatannya bertujuan membolehkan lebih banyak kreativiti terbuka. Perkasakan pelajar anda untuk menentukan untuk diri mereka sendiri apabila mereka telah menyelesaikan setiap tugasan."
           ]
+        },
+        "5bee125c-0e5e-46a8-b72b-fdc8a71f5161": {
+          "progression_name": "Projek Mini: Seni Pelekat"
         },
         "c5f36648-ac0d-405f-af7a-3020ebdce7f3": {
           "progression_name": "Permainan Bebas"
@@ -14092,7 +14103,8 @@
           "description": "**Lakukan Ini:** Tunjukkan video “Banyak Peperi” dan bincangkan cara blok khas di dalam blok peristiwa berfungsi.",
           "tips": [
             "Blok peristiwa dalam pelajaran ini lebih canggih berbanding blok yang telah digunakan pelajar setakat ini dalam kursus. Pastikan pelajar tahu bahawa mereka boleh mengembangkan blok peristiwa hijau dengan menekan butang +. Pelajar bekerja dengan banyak peperi hari ini. Kebiasaannya, perintah di dalam Makmal Peperi memberikan kesak kepada semua peperi dengan kostum yang sama. Blok di dalam blok peristiwa akan menjadikannya supaya setiap tindakan yang dipasang hanya memberikan kesan kepada peperi yang terlibat dalam peristiwa itu."
-          ]
+          ],
+          "progression_name": "Video: Simulator Wabak: Pengenalan"
         },
         "1b81351d-aade-4896-8957-e06fdd93edfa": {
           "description": "**Lakukan Ini:** Peralihan pelajar ke komputer mereka, dan minta mereka mula mengikut arahan untuk setiap peringkat dalam bahagian pembinaan kemahiran. Jika pelajar menghabiskan bahagian ini lebih awal, mereka boleh meneruskan percubaan dengan kod mereka di Tahap 6 sehingga kelas bersedia untuk meneruskan.",
@@ -16380,6 +16392,7 @@
           "description": "Kumpulkan kelas bersama dan minta dua sukarelawan berjalan lurus ke arah tertentu di dalam kelas. Jika mereka menemui kerusi yang tidak berada di tempatnya, mereka mesti melangkah ke atasnya. Jika mereka sampai di dinding, mereka mesti duduk.\n\nSebaik sahaja semua pelajar duduk, tanya cara mereka akan mengatur cara robot untuk bertindak balas terhadap dinding atau kerusi. Ingatkan pelajar bahawa anda tidak boleh hanya berkata \"Melangkah ke atas kerusi\" melainkan jika anda tahu ada kerusi dan anda tidak akan sentiasa tahu terdapat kerusi. Mungkin berguna untuk menterjemah tugasan kepada arahan seperti: \n\n-   selagi ada laluan di hadapan  \n    -   jalan ke hadapan\n    -   jika ada kerusi, maka pijaknya\n-   duduk\n\nBeritahu pelajar bahawa mereka akan menggunakan bersyarat semasa pelajaran ini. Berikan takrifan untuk:\n\n-   **Syarat**: Pernyataan bahawa atur cara menyemak untuk melihat sama ada ia benar atau salah. Jika benar, tindakan diambil. Jika tidak, tindakan diabaikan.\n-   **Bersyarat**: Pernyataan yang hanya berjalan dalam keadaan tertentu.\n\nBuka perbincangan mengenai masa anda mungkin menggunakan bersyarat dalam kod anda."
         },
         "2f024770-481d-43dc-aa55-7133819f6663": {
+          "name": "Melihat ke hadapan dengan Minecraft",
           "description": "#### Teka-Teki Dalam Talian\n\nPelajar benar-benar menggemari pelajaran ini. Kemungkinan besar kebanyakan pelajar anda pernah mendengar tentang _Minecraft_, tetapi berikan pengenalan ringkas untuk mereka yang mungkin tidak tahu.\n\n_Minecraft_ ialah permainan kiub. Anda boleh bermain sebagai Alex atau Steve semasa anda berusaha mengharungi jalan dalam pagar sesat. Anda perlu mengelak lahar gunung berapi, mengambil item dan meneroka dalam dunia yang diperbuat daripada kiub.\n\nTunjukkan satu daripada teka-teki kepada kelas (kami sarankan teka-teki 11). Sebaik sahaja semua soalan telah dijawab, alihkan pelajar kepada komputer dan biarkan mereka memulakan pengaturcaraan pasangan.",
           "progression_name": "Bangunan Kemahiran"
         },
@@ -16405,6 +16418,7 @@
           "description": "Tarik ke atas teka-teki daripada pelajaran ini, kami sarankan teka-teki 9. \n\n-   Tanya kelas perkara yang perlu dilakukan oleh lebah apabila ia sampai ke awan.\n    -   Lebah perlu menggunakan syarat untuk memeriksa bunga atau sarang lebah.\n-   Gunakan blok \"jika pada bunga / lain\". Tanya kelas perkara yang perlu dilakukan oleh lebah jika ada bunga. Jika tiada bunga, akan ada sarang lebah. Apakah yang perlu dilakukan oleh lebah itu?\n    -   Lebah sepatutnya \"mendapat nektar\" jika ada bunga dan \"membuat madu\" jika ada sarang lebah.\n\nIsikan kod yang selebihnya dan tekan \"Jalankan\". Bincangkan dengan kelas sebab aktiviti ini berjaya dilakukan."
         },
         "7f949bd4-c8d6-42b7-a6b2-a835a8a63e41": {
+          "name": "Jika/Lain dengan Bee",
           "description": "Teka-teki ini mungkin menimbulkan beberapa soalan, oleh itu minta pelajar bekerja secara berpasangan atau laksanakan peraturan \"Tanya tiga sebelum anda bertanya saya\" (minta pelajar meminta bantuan tiga rakan lain sebelum mereka pergi kepada guru.) Ini akan mencetuskan perbincangan yang akan mengembangkan kefahaman setiap pelajar."
         },
         "ca607451-3bb5-4aea-bca0-efd3fed0c6be": {
@@ -16489,6 +16503,7 @@
           "description": "#### Pratonton Teka-teki Dalam Talian\n\nTarik atas teka-teki daripada teka-teki Studio Kod dalam talian hari ini. Kami sarankan Teka-teki 4. \n\n-   Tanya kelas perkara yang burung perlu ulangi untuk sampai kepada khinzir.\n    -   Burung perlu mengulangi \"bergerak ke hadapan\", \"belok ke kanan\", \"bergerak ke hadapan\" dan kemudian \"belok ke kiri\".\n-   Tanya kelas perkara yang boleh mereka gunakan untuk mengulangi kod ini. \n    -   Burung itu mesti mengulangi corak ini _sehingga_ ia sampai kepada khinzir. \n\nIsikan kod selebihnya dengan menggunakan gelung \"ulang sehingga\" dan tekan \"Jalankan\". Bincangkan dengan kelas sebab ini berkesan."
         },
         "743e2b7a-0738-44b2-afb4-44a8f1e3edab": {
+          "name": "Sehingga Gelung di Maze",
           "description": "#### Teka-teki Dalam Talian\n\nMenggabungkan konsep bukan sesuatu yang mudah, tetapi set pelajaran ini bertujuan membantu pelajar melihat kemungkinan pengekodan yang tidak berkesudahan apabila menggunakan syarat. Jika pelajar mengalami kesusahan memahami persamaan atau perbezaan antara gelung \"semasa\" dan gelung \"sehingga\", minta mereka cuba fikirkan cara mereka akan menggunakan pernyataan yang serupa dalam kehidupan mereka yang sebenar.",
           "progression_name": "Bangunan Kemahiran"
         },
@@ -17052,6 +17067,7 @@
           "description": "Kumpulkan kelas bersama dan minta dua sukarelawan berjalan lurus ke arah tertentu di dalam kelas. Jika mereka menemui kerusi yang tidak berada di tempatnya, mereka mesti melangkah ke atasnya. Jika mereka sampai di dinding, mereka mesti duduk.\n\nSebaik sahaja semua pelajar duduk, tanya cara mereka akan mengatur cara robot untuk bertindak balas terhadap dinding atau kerusi. Ingatkan pelajar bahawa anda tidak boleh hanya berkata \"Melangkah ke atas kerusi\" melainkan jika anda tahu ada kerusi dan anda tidak akan sentiasa tahu terdapat kerusi. Mungkin berguna untuk menterjemah tugasan kepada arahan seperti: \n\n-   selagi ada laluan di hadapan  \n    -   jalan ke hadapan\n    -   jika ada kerusi, maka pijaknya\n-   duduk\n\nBeritahu pelajar bahawa mereka akan menggunakan bersyarat semasa pelajaran ini. Berikan takrifan untuk:\n\n-   **Syarat**: Pernyataan bahawa atur cara menyemak untuk melihat sama ada ia benar atau salah. Jika benar, tindakan diambil. Jika tidak, tindakan diabaikan.\n-   **Bersyarat**: Pernyataan yang hanya berjalan dalam keadaan tertentu.\n\nBuka perbincangan mengenai masa anda mungkin menggunakan bersyarat dalam kod anda."
         },
         "db402396-6473-4942-a3b9-e3833beb0cd8": {
+          "name": "Melihat ke hadapan dengan Minecraft",
           "description": "#### Teka-Teki Dalam Talian\n\nPelajar benar-benar menggemari pelajaran ini. Kemungkinan besar kebanyakan pelajar anda pernah mendengar tentang _Minecraft_, tetapi berikan pengenalan ringkas untuk mereka yang mungkin tidak tahu.\n\n_Minecraft_ ialah permainan kiub. Anda boleh bermain sebagai Alex atau Steve semasa anda berusaha mengharungi jalan dalam pagar sesat. Anda perlu mengelak lahar gunung berapi, mengambil item dan meneroka dalam dunia yang diperbuat daripada kiub.\n\nTunjukkan satu daripada teka-teki kepada kelas (kami sarankan teka-teki 11). Sebaik sahaja semua soalan telah dijawab, alihkan pelajar kepada komputer dan biarkan mereka memulakan pengaturcaraan pasangan.",
           "progression_name": "Bangunan Kemahiran"
         },
@@ -17073,6 +17089,7 @@
           "description": "Kita akan menggunakan **bersyarat** dengan Code.org _lebah_ untuk membantunya menangani sebahagian awan misteri. Kita tidak tahu jika bunganya mempunyai nektar atau tidak, oleh itu kita perlu menggunakan syarat untuk memastikan kita mengumpul nektar jika ada, tetapi kita tidak akan cuba mengumpul nektar daripada bunga yang tidak mempunyai apa-apa.\n\nTarik ke atas teka-teki daripada pelajaran ini, kami sarankan teka-teki 9. \n\n-   Tanya kelas perkara yang perlu dilakukan oleh lebah apabila ia sampai ke awan.\n    -   Lebah perlu menggunakan syarat untuk memeriksa bunga atau sarang lebah.\n-   Gunakan blok jika pada bunga / lain. Tanya kelas perkara yang perlu dilakukan oleh lebah jika ada bunga. Jika tiada bunga, akan ada sarang lebah. Apakah yang perlu dilakukan oleh lebah itu?\n    -   Lebah sepatutnya mendapat nektar jika ada bunga dan membuat madu jika ada sarang lebah.\n\nIsikan kod yang selebihnya dan tekan Jalankan. Bincangkan dengan kelas sebab aktiviti ini berjaya dilakukan."
         },
         "22580642-ad9a-48f6-9ad6-8693e42ed9d3": {
+          "name": "Jika/Lain dengan Bee",
           "description": "Teka-teki ini mungkin menimbulkan beberapa soalan, oleh itu minta pelajar bekerja secara berpasangan atau laksanakan peraturan \"Tanya tiga sebelum anda bertanya saya\" (minta pelajar meminta bantuan tiga rakan lain sebelum mereka pergi kepada guru.) Ini akan mencetuskan perbincangan yang akan mengembangkan kefahaman setiap pelajar."
         },
         "c622f540-96a1-4448-9a80-18850f23abdd": {
@@ -17190,6 +17207,7 @@
           "description": "#### Pratonton Teka-teki Dalam Talian\n\nTarik atas teka-teki daripada teka-teki Studio Kod dalam talian hari ini. Kami sarankan Teka-teki 4. \n\n-   Tanya kelas perkara yang burung perlu ulangi untuk sampai kepada khinzir.\n    -   Burung perlu mengulangi bergerak ke hadapan, belok ke kanan, bergerak ke hadapan dan kemudian belok ke kiri.\n-   Tanya kelas perkara yang boleh mereka gunakan untuk mengulangi kod ini. \n    -   Burung itu mesti mengulangi corak ini _sehingga_ ia sampai kepada khinzir. \n\nIsikan kod selebihnya dengan menggunakan gelung ulang sehingga dan tekan Jalankan. Bincangkan dengan kelas sebab ini berkesan."
         },
         "3fabd283-0831-412f-8a9f-76e9bf96206f": {
+          "name": "Sehingga Gelung di Maze",
           "description": "Menggabungkan konsep bukan sesuatu yang mudah, tetapi set tahap ini bertujuan membantu pelajar melihat kemungkinan pengekodan yang tidak berkesudahan apabila menggunakan syarat. Jika pelajar mengalami kesusahan memahami persamaan atau perbezaan antara gelung semasa dan gelung sehingga, minta mereka cuba fikirkan cara mereka akan menggunakan pernyataan yang serupa dalam kehidupan mereka yang sebenar.",
           "progression_name": "Bangunan Kemahiran"
         },
@@ -17220,6 +17238,7 @@
           "description": "Pelajar tidak memerlukan banyak pengenalan konsep pada hari ini kerana mereka telah berlatih dengannya dalam pelajaran sebelum ini. Sebaliknya, anda boleh berkongsi kisah penuai.\n\nPenuai cuba memetik hasil tanaman seperti labu, daun salad dan jagung. Walau bagaimanapun, petani telah terlupa lokasi dia menanam tanaman ini, oleh itu dia perlu memeriksa setiap tanaman sebelum menuai."
         },
         "26679730-3364-4598-abd8-b07e9d9f9ad9": {
+          "name": "Penuaian dengan Conditionals",
           "description": "Pelajar akan terus berusaha dengan pernyataan jika / lain, gelung semasa dan gelung sehingga. Teka-teki ini agak mencabar, namun, ia menggalakkan pelajar untuk mengikutinya sehingga mereka dapat menghuraikan perkara yang perlu berlaku untuk setiap atur cara.",
           "progression_name": "Video: Harvesting with Conditionals"
         },

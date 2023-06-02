@@ -79,7 +79,7 @@
   "cscAdaptationsMoveOctopusToPlant": "Mos harroni të përdorni arrow keys për të lëvizur oktapod tuaj për të prekur bimore në mënyrë që ajo ndryshon kostum të përzierje në.",
   "cscAdaptationsNeedWhenClicked": "Duket sikur keni shtuar një sjellje, por harruat të shtoni një <code style=\"color:black; background-color:#6AF36C\">kur sprite klikoi</code> bllok së pari. Sigurohuni që të shtoni bllokun e sjelljes pas bllokut të ngjarjes.",
   "cscAdaptationsNight": "Sigurohuni që të shtoni një sfond të natës nën <code style=\"color:black; background-color:#6AF36C\">kur shigjeta shtypet</code> bllok.",
-  "cscAdaptationsSeaweed": "Sigurohuni që oktapodi juaj po ndryshon të njëjtën ngjyrë si alga deti që prek",
+  "cscAdaptationsRightArrowKey": "Sigurohuni që të shtypni një buton shigjete pasi të shtypni *\"Run\"*. Ju mund të klikoni butonat portokalli nën zonën e lojës ose të shtypni tastet në tastierën tuaj.",
   "cscAdaptationsSetBackground": "Sigurohuni që të vendosni një sfond.",
   "cscAdaptationsSetBehavior": "Sigurohuni që të vendosni sjelljen e sprite pas vendosjes së madhësisë së sprite.",
   "cscAdaptationsSetFastSpeed": "Sigurohuni që të vendosni shpejtësinë e sprite të cheetah në shpejtësi.",

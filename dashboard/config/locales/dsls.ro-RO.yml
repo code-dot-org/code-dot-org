@@ -12842,3 +12842,37 @@ ro-RO:
         questions:
         - text: Uitați-vă cu atenție la acest cod. Ce credeți că se va întâmpla atunci
             când va rula programul?
+      MoveItMoveIt-Unplugged_2021:
+        markdown: |
+          # Mutați-l, mutați-l
+
+          Utilizați o hartă și dați comenzi pentru a atinge obiectivul.
+      Test Contained Retriable Multi:
+        answers:
+        - text: '0'
+          correct: true
+        - text: '1'
+          correct: true
+        - text: '2'
+          correct: true
+        - text: '4'
+          correct: true
+        questions:
+        - {}
+      test-single-multi-standalone-retriable:
+        answers:
+        - text: Nu se va întâmpla nimic.
+          correct: true
+          feedback: Greșit. Ghemul de ierburi va începe să se rostogolească
+        - text: Ghemul de ierburi va pluti către partea de sus a ecranului
+          correct: true
+          feedback: Greșit. Ghemul de ierburi va începe să se rostogolească
+        - text: Ghemul de ierburi va începe să se rostogolească
+          correct: true
+          feedback: Corect!
+        - text: Tumbleweed va clipi intermitent.
+          correct: true
+          feedback: Greșit. Ghemul de ierburi va începe să se rostogolească
+        questions:
+        - text: Uitați-vă cu atenție la codul care urmează. Ce se va întâmpla după
+            ce veți face clic pe „Rulează”?

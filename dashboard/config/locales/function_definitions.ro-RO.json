@@ -4140,6 +4140,19 @@
           "end game": {
             "name": "sfârşitul jocului"
           }
+        },
+        "MC_HOC_2017_FP20x20_2021": {
+          "function 1": {
+            "name": "funcţia 1"
+          },
+          "function 2": {
+            "name": "funcţia 2"
+          }
+        },
+        "courseF_bee_for_challenge1_2021": {
+          "move and get nectar with counter": {
+            "name": "mutați și obțineți nectar cu contor"
+          }
         }
       }
     }

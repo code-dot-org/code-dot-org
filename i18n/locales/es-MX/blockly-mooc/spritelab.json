@@ -98,7 +98,7 @@
   "cscAdaptationsMoveOctopusToPlant": "No olvides usar las teclas de flecha para mover el pulpo hasta tocar la planta y que cambie de disfraz para mimetizarse.",
   "cscAdaptationsNeedWhenClicked": "Parece que has añadido un comportamiento pero te has olvidado de añadir un <code style=\"color:black; background-color:#6AF36C\">bloque primero</code> al pulsar el sprite. Asegúrate de añadir el bloque de comportamiento después del bloque de evento.",
   "cscAdaptationsNight": "Asegúrate de añadir un fondo nocturno bajo el <code style=\"color:black; background-color:#6AF36C\">bloque</code> al presionar la flecha.",
-  "cscAdaptationsSeaweed": "Asegúrate de que el pulpo cambia al mismo color que las algas que toca.",
+  "cscAdaptationsRightArrowKey": "Asegúrate de pulsar una tecla de flecha, después de pulsar Ejecutar. Puedes hacer clic en los botones naranjas bajo el área de reproducción o pulsar las teclas del teclado.",
   "cscAdaptationsSetBackground": "Asegúrate de configurar un fondo.",
   "cscAdaptationsSetBehavior": "Asegúrate de configurar el comportamiento del sprite después de configurar el tamaño del sprite.",
   "cscAdaptationsSetFastSpeed": "Asegúrate de configurar la velocidad del sprite del guepardo a rápida.",

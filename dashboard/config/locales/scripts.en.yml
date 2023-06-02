@@ -10517,7 +10517,9 @@ en:
           description: ''
           student_description: ''
         csc-bookcovers-2023:
-          lessons: {}
+          lessons:
+            lesson-4:
+              name: Plan Your Interactive Book Cover
           lesson_groups: {}
           name: csc-bookcovers-2023
           title: Coding Book Covers (2023)
@@ -12192,3 +12194,42 @@ en:
             * Learn about opportunities to connect with the broader CS community.
 
             **Suggested Time**: 70 minutes
+        musiclab:
+          lessons:
+            lesson-1:
+              name: Remix Projects
+          lesson_groups: {}
+          name: musiclab
+          title: Music Lab Test Lessons
+          description_audience: ''
+          description_short: ''
+          description: |-
+            Hi there! This is a special unit that Code.org uses for testing Music Lab. None of the lessons or levels in this unit are meant to be used in classrooms!
+
+            If you're not a code.org engineer but managed to discover this unit: congratulations! It's like you discovered a secret on our website! But if you're looking for more info about our curricula or tools, we recommend checking out https://code.org/educate/ instead.
+          student_description: ''
+        csa-software-engineering:
+          lessons:
+            lesson-1:
+              name: Intro to GitHub
+            lesson-2:
+              name: Intro to Copilot
+            lesson-3:
+              name: Build with Copilot
+            lesson-4:
+              name: Intro to AI Models
+            lesson-5:
+              name: Training Your Model
+            lesson-6:
+              name: Using Your Model
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Chapter 1: GitHub and Copilot'
+            lessonGroup-3:
+              display_name: 'Chapter 2: Computer Vision'
+          name: csa-software-engineering
+          title: Software Engineering & Computer Vision
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''

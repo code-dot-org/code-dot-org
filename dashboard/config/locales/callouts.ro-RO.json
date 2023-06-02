@@ -1931,6 +1931,42 @@
         },
         "helloworld_food_click_space-2022": {
           "hw_Run": "Faceți clic mai întâi aici!"
+        },
+        "courseA_artist_loops4_2021": {
+          "courseA_artist_loops4_1": "Acest număr vă spune câte dintre aceste blocuri puteți utiliza în acest puzzle."
+        },
+        "courseA_collector_loops1_2021": {
+          "courseA_collector_loops1_1": "Utilizați acest bloc pentru a colecta comoara."
+        },
+        "courseA_collector_loops3_2021": {
+          "gradek_adventurer_loops2_1": "Acest număr vă spune câte dintre aceste blocuri puteți utiliza în acest puzzle."
+        },
+        "courseA_maze_seq1_2021": {
+          "courseA_maze_seq1_1": "Faceți clic pe bec atunci când aveți nevoie de un indiciu!"
+        },
+        "courseB_Scrat_ramp1_2021": {
+          "grade2_CaringForNewPet_0_1": "După conectarea tuturor blocurilor, apăsați „Alerga” pentru a porni programul."
+        },
+        "courseB_collector_loops1_2021": {
+          "courseB_collector_loops1_1": "Utilizați acest bloc pentru a colecta comoara."
+        },
+        "courseB_maze_seq1_2021": {
+          "courseB_maze_seq1": "Faceți clic pe bec atunci când aveți nevoie de un indiciu!"
+        },
+        "courseC_harvester_loops1_2021": {
+          "courseC_harvester_loops1_callout1": "Numărul patru de pe dovleac vă spune că există patru dovleci disponibile pentru a alege."
+        },
+        "courseC_maze_programming1_2021": {
+          "grade2_CaringForNewPet_0_1": "După conectarea tuturor blocurilor, apăsați „Alerga” pentru a porni programul."
+        },
+        "courseD_bee_conditionals_challenge2_2021": {
+          "courseD_bee_conditionals_challenge2_1": "Utilizați această buclă pentru a colecta toate nectar (sau miere) de la o floare (sau fagure de miere)."
+        },
+        "courseD_maze_ramp1_2021": {
+          "grade2_CaringForNewPet_0_1": "După conectarea tuturor blocurilor, apăsați „Alerga” pentru a porni programul."
+        },
+        "coursea_maze_ramp1_2021": {
+          "grade2_CaringForNewPet_0_1": "După ce ați rupt toate blocurile împreună, apăsați „Alerga” pentru a porni programul."
         }
       }
     }

@@ -18,6 +18,7 @@
   "designToolboxHeader": "กล่องเครื่องมือการออกแบบ",
   "designWorkspaceDescription": "คลิกที่องค์ประกอบหรือเลือกได้จากแบบเลื่อนลงด้านล่างเพื่อแก้ไขคุณสมบัติของมันสร้างรหัสในเหตุการณ์",
   "designWorkspaceHeader": "พื้นที่ทำงาน",
+  "designElementPhotoSelectClickName": "เปลี่ยน",
   "designElementPhotoSelectClickDescription": "ทำงานเมื่อมีการเลือกภาพถ่าย",
   "dropletBlock_appendItem_description": "ผนวกรายการไปยังจุดสิ้นสุดของอาร์เรย์",
   "dropletBlock_appendItem_param0_description": "อาร์เรย์ที่จะปรับเปลี่ยน",

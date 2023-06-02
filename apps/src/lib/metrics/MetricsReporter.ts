@@ -1,8 +1,6 @@
+import {isDevelopmentEnvironment} from '@cdo/apps/utils';
 import DashboardMetricsApi from './DashboardMetricsApi';
 import {MetricsApi} from './MetricsApi';
-
-const isDevelopmentEnvironment =
-  require('../../utils').isDevelopmentEnvironment;
 
 /**
  * If we receive an unauthorized response from the server, this may
@@ -57,7 +55,7 @@ class MetricsReporter {
     }
   }
 
-  private log(level: LogLevel, message: string | object) {
+  private async log(level: LogLevel, message: string | object) {
     const payload = {
       level,
       message,
@@ -69,7 +67,8 @@ class MetricsReporter {
       return;
     }
 
-    this.metricsApi.sendLogs([payload]).then(response => {
+    try {
+      const response = await this.metricsApi.sendLogs([payload]);
       if (!response.ok) {
         this.fallbackLog(payload);
       }
@@ -79,7 +78,9 @@ class MetricsReporter {
         // We will check again after a time period of CHECK_CAN_REPORT_INTERVAL
         this.setReportingDisabled();
       }
-    });
+    } catch (error) {
+      console.error(error);
+    }
   }
 
   private getDeviceInfo(): object {

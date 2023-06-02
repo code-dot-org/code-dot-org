@@ -3062,6 +3062,8 @@ nl:
               display_name: 'Hoofdstuk 2: Hardware Input'
             lessonGroup-5:
               display_name: Vragenlijst
+        ai-temp:
+          title: Hoe AI werkt
         self-paced-pl-csd1-2023:
           lesson_groups:
             lessonGroup-2:

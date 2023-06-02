@@ -602,9 +602,6 @@
         "GPE": {
           "description": "Geometriai tulajdonságok kifejezése egyenletekkel"
         },
-        "IC": {
-          "description": "Következtetések levonása és következtetések igazolása"
-        },
         "ID": {
           "description": "Kategorikus és mennyiségi adatok értelmezése"
         },
@@ -727,6 +724,9 @@
         },
         "6": {
           "description": "A hallgatók bizonyítják a technológiai koncepciók, rendszerek és műveletek alapos megértését."
+        },
+        "IC": {
+          "description": "Következtetések levonása és következtetések igazolása"
         }
       }
     }
