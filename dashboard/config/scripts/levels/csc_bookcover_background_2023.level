@@ -1,5 +1,10 @@
 <GamelabJr>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 64,
+  "created_at": "2023-04-12T21:02:31.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
   "properties": {
     "encrypted": "false",
     "skin": "gamelab",
@@ -33,8 +38,8 @@
     "start_in_animation_tab": "false",
     "mini_toolbox": "false",
     "hide_pause_button": "false",
-    "authored_hints": "[{\"hint_class\":null,\"hint_markdown\":\"Drag the `set background` block under when run\",\"hint_id\":\"hint1\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/d4690d209fd8e4115b74a02140745cf7/csc_bookcover_background.mp3\"},{\"hint_class\":null,\"hint_markdown\":\"Select a background from the dropdown menu\\n\\n<xml>\\n<block type=\\\"gamelab_setBackgroundImageAs\\\">\\n  <field name=\\\"IMG\\\">\\\"hw_sky_background\\\"</field>\\n</block>\\n</xml>\\n\\n\",\"hint_id\":\"hint2\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/9c7e1bda3996d577f16a440b93ee4626/csc_bookcover_background.mp3\"}]",
-    "long_instructions": "**Time to decorate your book cover.** \r\n \r\n##Do This\r\n- Drag a <code style=\"color:black; background-color:#B3B2FB\">set background</code> to block and connect it under when run. ",
+    "authored_hints": "[{\"hint_class\":null,\"hint_markdown\":\"The <code style=\\\"color:black; background-color:#B3B2FB\\\">set background</code> block goes at the end of the program. \\n\\nAfter the other code under <code style=\\\"color:black; background-color:#FFBD46\\\">When run</code>.\",\"hint_id\":\"hint1\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/f2754e34007c8e737a96df34037ca9a4/csc_bookcover_background_2023.mp3\"},{\"hint_class\":null,\"hint_markdown\":\"Select a background from the dropdown menu\\n\\n<xml>\\n<block type=\\\"gamelab_setBackgroundImageAs\\\">\\n  <field name=\\\"IMG\\\">\\\"hw_sky_background\\\"</field>\\n</block>\\n</xml>\\n\\n\",\"hint_id\":\"hint2\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/9c7e1bda3996d577f16a440b93ee4626/csc_bookcover_background_2023.mp3\"}]",
+    "long_instructions": "**Design your book cover with a background!** \r\n \r\n\r\n- Add a <code style=\"color:black; background-color:#B3B2FB\">set background</code> block to your code.\r\n\r\n- Choose a background that you like for this book cover. \r\n- Click <code style=\"color:black; background-color:#FFBD46\">Run</code> ",
     "instructions_icon": "bear",
     "name_suffix": "_2023",
     "start_animations": "{\"orderedKeys\":[\"1e71474d-f62d-454a-b39a-e45dec93ea2d\"],\"propsByKey\":{\"1e71474d-f62d-454a-b39a-e45dec93ea2d\":{\"name\":\"sci_fi\",\"categories\":[\"backgrounds\"],\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-01-19 23:53:38 UTC\",\"pngLastModified\":\"2021-01-19 23:53:39 UTC\",\"version\":\"0qaMBfuUPDzY7TO.DacrNIBod8CUquPT\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/0qaMBfuUPDzY7TO.DacrNIBod8CUquPT/category_backgrounds/background_scifi.png\",\"sourceSize\":{\"x\":400,\"y\":400}}}}",
@@ -43,14 +48,10 @@
     "preload_asset_list": null,
     "encrypted_examples": [
 
-    ]
+    ],
+    "short_instructions": "Design your book cover with a <code style=\"color:black; background-color:#B3B2FB\">set background</code> block!"
   },
-  "game_id": 64,
-  "published": true,
-  "created_at": "2023-04-12T21:02:31.000Z",
-  "level_num": "custom",
-  "user_id": 1196,
-  "audit_log": "[{\"changed_at\":\"2023-04-12T21:02:31.655+00:00\",\"changed\":[\"cloned from \\\"csc_bookcover_background_-wonder\\\"\"],\"cloned_from\":\"csc_bookcover_background_-wonder\"},{\"changed_at\":\"2023-04-14 15:08:09 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2023-04-12T21:02:31.655+00:00\",\"changed\":[\"cloned from \\\"csc_bookcover_background_-wonder\\\"\"],\"cloned_from\":\"csc_bookcover_background_-wonder\"},{\"changed_at\":\"2023-04-14 15:08:09 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-06-01 16:39:26 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-06-01 16:42:13 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"authored_hints\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-06-01 16:42:57 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
