@@ -18919,3 +18919,32 @@ de-DE:
         questions:
         - text: Sieh dir diesen Code genau an. Was wird deiner Meinung nach passieren,
             wenn das Programm läuft?
+      Test Contained Retriable Multi:
+        answers:
+        - text: '0'
+          correct: true
+        - text: '1'
+          correct: true
+        - text: '2'
+          correct: true
+        - text: '4'
+          correct: true
+        questions:
+        - {}
+      test-single-multi-standalone-retriable:
+        answers:
+        - text: Nichts wird passieren.
+          correct: true
+          feedback: Falsch. Das Unkraut wird sich in Bewegung setzen
+        - text: Das Unkraut wird an den oberen Rand des Bildschirms schweben
+          correct: true
+          feedback: Falsch. Das Unkraut wird sich in Bewegung setzen
+        - text: Das Unkraut wird sich in Bewegung setzen
+          correct: true
+          feedback: Richtig!
+        - text: Das Unkraut blinkt an und aus.
+          correct: true
+          feedback: Falsch. Das Unkraut wird sich in Bewegung setzen
+        questions:
+        - text: Schau dir den Code unten genau an. Was passiert, wenn du auf "Ausführen"
+            klickst?

@@ -9307,3 +9307,19 @@ sl-SI:
           # Mo(go)čna gesla
 
           Razišči, zakaj ljudje uporabljajo gesla, nauči se prednosti uporabe gesel in odkrij strategije za ustvarjanje in ohranjanje močnih in varnih gesel.
+      Test Contained Retriable Multi:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      test-single-multi-standalone-retriable:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}

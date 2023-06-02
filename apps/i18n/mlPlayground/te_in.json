@@ -184,6 +184,13 @@
         }
       }
     },
+    "songs": {
+      "fields": {
+        "Artist": {
+          "id": "కళాకారుడు"
+        }
+      }
+    },
     "safari_toy": {
       "fields": {
         "people": {

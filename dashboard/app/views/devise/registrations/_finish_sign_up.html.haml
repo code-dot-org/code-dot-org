@@ -1,3 +1,4 @@
+- require '../shared/middleware/helpers/experiments'
 - SignUpTracking.log_load_finish_sign_up session, (@user.provider || 'email')
 - require 'geocoder'
 - require 'country_codes'
@@ -97,21 +98,12 @@
       .span5
         = f.select :age, age_options, include_blank: true
 
-    - if ask_gender_experiment?(request, session.id.to_s)
-      - gender_input_type = gender_input_type?(request, session)
-      - SignUpTracking.log_gender_input_type_started(session, gender_input_type, request.locale, 'email_signup')
-      - if gender_input_type != User::GenderExperimentHelper::GENDER_INPUT_TYPE_NONE
-        .row#gender-dropdown{style: "display: none;"}
-          .span3.signup-field-label
-            = f.label :gender, t('signup_form.gender')
-          - if @user.errors[:gender].present?
-            %span.error= @user.errors[:gender].join(', ')
-          - if gender_input_type == User::GenderExperimentHelper::GENDER_INPUT_TYPE_DROPDOWN
-            .span5
-              = f.select :gender, gender_options
-          - else
-            .span5
-              = f.text_field :gender
+    - if experiment_value('gender')
+      .row#gender-field
+        .span3.signup-field-label
+          = f.label :gender_student_input, t('signup_form.gender')
+        .span5
+          = f.text_field :gender_student_input, maxlength: 50
 
     .row#school-info-section{style: "display: none;"}
       .span10

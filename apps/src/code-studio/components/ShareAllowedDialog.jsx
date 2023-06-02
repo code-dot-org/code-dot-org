@@ -306,7 +306,6 @@ class ShareAllowedDialog extends React.Component {
                   </div>
                   <div>
                     <Button
-                      type="primary"
                       color={Button.ButtonColor.brandSecondaryDefault}
                       id="sharing-dialog-copy-button"
                       icon="clipboard"
