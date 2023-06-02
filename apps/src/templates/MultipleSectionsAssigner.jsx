@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import React, {Component} from 'react';
+import React, {useState} from 'react';
 import {connect} from 'react-redux';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
@@ -13,102 +13,78 @@ import {
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {updateHiddenScript} from '@cdo/apps/code-studio/hiddenLessonRedux';
 
-class MultipleSectionsAssigner extends Component {
-  static propTypes = {
-    courseId: PropTypes.number,
-    assignmentName: PropTypes.string.isRequired,
-    onClose: PropTypes.func.isRequired,
-    forceReload: PropTypes.bool,
-    courseOfferingId: PropTypes.number,
-    courseVersionId: PropTypes.number,
-    scriptId: PropTypes.number,
-    reassignConfirm: PropTypes.func,
-    isOnCoursePage: PropTypes.bool,
-    isStandAloneUnit: PropTypes.bool,
-    participantAudience: PropTypes.string,
-    // Redux
-    sections: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
-    unassignSection: PropTypes.func.isRequired,
-    assignToSection: PropTypes.func.isRequired,
-    updateHiddenScript: PropTypes.func.isRequired,
-    selectedSectionId: PropTypes.number,
-  };
+const MultipleSectionsAssigner = ({
+  courseId,
+  assignmentName,
+  onClose,
+  courseOfferingId,
+  courseVersionId,
+  scriptId,
+  reassignConfirm,
+  isOnCoursePage,
+  isStandAloneUnit,
+  participantAudience,
+  // Redux
+  sections,
+  unassignSection,
+  assignToSection,
+  updateHiddenScript,
+}) => {
+  let initialSectionsAssigned = [];
 
-  constructor(props) {
-    super(props);
-
-    let initialSectionsAssignedToCourseList = [];
-
-    // check to see if this is coming from the UNIT landing page - if so add courses featuring this unit
-    if (!this.props.isOnCoursePage) {
-      if (this.props.isStandAloneUnit) {
-        for (let i = 0; i < this.props.sections.length; i++) {
-          if (
-            this.props.courseVersionId ===
-            this.props.sections[i].courseVersionId
-          ) {
-            initialSectionsAssignedToCourseList.push(this.props.sections[i]);
-          }
-        }
-      } else {
-        for (let i = 0; i < this.props.sections.length; i++) {
-          if (this.props.scriptId === this.props.sections[i].unitId) {
-            initialSectionsAssignedToCourseList.push(this.props.sections[i]);
-          }
+  // check to see if this is coming from the UNIT landing page - if so add courses featuring this unit
+  if (!isOnCoursePage) {
+    if (isStandAloneUnit) {
+      for (let i = 0; i < sections.length; i++) {
+        if (courseVersionId === sections[i].courseVersionId) {
+          initialSectionsAssigned.push(sections[i]);
         }
       }
-    } else if (this.props.isOnCoursePage) {
-      // checks to see if this is coming from the COURSE landing page
-      for (let i = 0; i < this.props.sections.length; i++) {
-        if (this.props.courseId === this.props.sections[i].courseId) {
-          initialSectionsAssignedToCourseList.push(this.props.sections[i]);
+    } else {
+      for (let i = 0; i < sections.length; i++) {
+        if (scriptId === sections[i].unitId) {
+          initialSectionsAssigned.push(sections[i]);
         }
       }
     }
-
-    this.state = {
-      currentSectionsAssigned: initialSectionsAssignedToCourseList,
-      initialSectionsAssigned: initialSectionsAssignedToCourseList,
-    };
+  } else if (isOnCoursePage) {
+    // checks to see if this is coming from the COURSE landing page
+    for (let i = 0; i < sections.length; i++) {
+      if (courseId === sections[i].courseId) {
+        initialSectionsAssigned.push(sections[i]);
+      }
+    }
   }
 
-  handleChangedCheckbox = currentSection => {
-    const isUnchecked = this.state.currentSectionsAssigned.some(
+  const [currentSectionsAssigned, setCurrentSectionsAssigned] = useState(
+    initialSectionsAssigned
+  );
+
+  const handleChangedCheckbox = currentSection => {
+    const isUnchecked = currentSectionsAssigned.some(
       s => s.code === currentSection.code
     );
     if (isUnchecked) {
-      this.setState(state => {
-        const newList = state.currentSectionsAssigned.filter(
-          s => s.code !== currentSection.code
-        );
-        return {currentSectionsAssigned: newList};
-      });
+      const newList = currentSectionsAssigned.filter(
+        s => s.code !== currentSection.code
+      );
+      setCurrentSectionsAssigned(newList);
     } else {
-      this.setState(state => {
-        const newList = [...state.currentSectionsAssigned];
-        newList.push(currentSection);
-        return {currentSectionsAssigned: newList};
-      });
+      const newList = [...currentSectionsAssigned];
+      newList.push(currentSection);
+      setCurrentSectionsAssigned(newList);
     }
   };
 
-  reassignSections = () => {
-    const {
-      courseId,
-      courseOfferingId,
-      courseVersionId,
-      scriptId,
-      assignToSection,
-      isOnCoursePage,
-    } = this.props;
+  const reassignSections = () => {
     // Assign any courses that need to be assigned
-    for (let i = 0; i < this.state.currentSectionsAssigned.length; i++) {
-      const needsToBeAssigned = !this.state.initialSectionsAssigned.some(
-        s => s.code === this.state.currentSectionsAssigned[i].code
+    for (let i = 0; i < currentSectionsAssigned.length; i++) {
+      const needsToBeAssigned = !initialSectionsAssigned.some(
+        s => s.code === currentSectionsAssigned[i].code
       );
       if (needsToBeAssigned) {
         if (isOnCoursePage) {
-          const sectionId = this.state.currentSectionsAssigned[i].id;
+          const sectionId = currentSectionsAssigned[i].id;
           assignToSection(
             sectionId,
             courseId,
@@ -117,41 +93,44 @@ class MultipleSectionsAssigner extends Component {
             scriptId
           );
         } else {
-          this.unhideAndAssignUnit(this.state.currentSectionsAssigned[i]);
+          unhideAndAssignUnit(currentSectionsAssigned[i]);
         }
       }
     }
 
     // If any sections need to be removed from being assigned, remove them
-    for (let i = 0; i < this.state.initialSectionsAssigned.length; i++) {
-      const isSectionToBeRemoved = !this.state.currentSectionsAssigned.some(
-        s => s.code === this.state.initialSectionsAssigned[i].code
+    for (let i = 0; i < initialSectionsAssigned.length; i++) {
+      const isSectionToBeRemoved = !currentSectionsAssigned.some(
+        s => s.code === initialSectionsAssigned[i].code
       );
 
       if (isSectionToBeRemoved) {
         // if on COURSE landing page or a STANDALONE UNIT, unassign entirely
-        isOnCoursePage || this.props.isStandAloneUnit
-          ? this.props.unassignSection(
-              this.state.initialSectionsAssigned[i].id,
-              ''
-            )
-          : this.assignCourseWithoutUnit(this.state.initialSectionsAssigned[i]);
+        isOnCoursePage || isStandAloneUnit
+          ? unassignSection(initialSectionsAssigned[i].id, '')
+          : assignCourseWithoutUnit(initialSectionsAssigned[i]);
       }
     }
     // close dialogue
-    this.props.reassignConfirm();
-    this.props.onClose();
+    reassignConfirm();
+    onClose();
   };
 
-  unhideAndAssignUnit = section => {
-    const {
-      courseId,
-      courseOfferingId,
-      courseVersionId,
-      scriptId,
-      assignToSection,
-      updateHiddenScript,
-    } = this.props;
+  const selectAllHandler = () => {
+    let newSectionsAssigned = [...currentSectionsAssigned];
+    for (let i = 0; i < sections.length; i++) {
+      // if the section is NOT in currentSections assigned, assign it
+      const isSectionToBeAssigned = !currentSectionsAssigned.some(
+        s => s.code === sections[i].code
+      );
+      if (isSectionToBeAssigned) {
+        newSectionsAssigned.push(sections[i]);
+      }
+    }
+    setCurrentSectionsAssigned(newSectionsAssigned);
+  };
+
+  const unhideAndAssignUnit = section => {
     const sectionId = section.id;
     updateHiddenScript(sectionId, scriptId, false);
     assignToSection(
@@ -164,9 +143,7 @@ class MultipleSectionsAssigner extends Component {
   };
 
   // this is identical to unhideAndAssignUnit above but just has null as the scriptId
-  assignCourseWithoutUnit = section => {
-    const {courseId, courseOfferingId, courseVersionId, assignToSection} =
-      this.props;
+  const assignCourseWithoutUnit = section => {
     const sectionId = section.id;
     assignToSection(
       sectionId,
@@ -177,84 +154,80 @@ class MultipleSectionsAssigner extends Component {
     );
   };
 
-  isAssignableToSection = sectionParticipantType => {
-    return sectionParticipantType === this.props.participantAudience;
+  const isAssignableToSection = sectionParticipantType => {
+    return sectionParticipantType === participantAudience;
   };
 
-  selectAllHandler = () => {
-    for (let i = 0; i < this.props.sections.length; i++) {
-      // if the section is NOT in currentSections assigned, assign it
-      const isSectionToBeAssigned = !this.state.currentSectionsAssigned.some(
-        s => s.code === this.props.sections[i].code
-      );
-      if (isSectionToBeAssigned) {
-        this.setState(state => {
-          const newList = [...state.currentSectionsAssigned];
-          newList.push(this.props.sections[i]);
-          return {currentSectionsAssigned: newList};
-        });
-      }
-    }
-  };
+  return (
+    <BaseDialog isOpen={true} handleClose={onClose}>
+      <div style={styles.header} className="uitest-confirm-assignment-dialog">
+        {i18n.chooseSectionsPrompt({assignmentName})}
+      </div>
+      <div style={styles.content}>{i18n.chooseSectionsDirections()}</div>
+      <div style={styles.header} className="uitest-confirm-assignment-dialog">
+        {i18n.yourSectionsList()}
+      </div>
+      <hr />
+      <div style={styles.grid}>
+        {sections &&
+          sections.map(
+            section =>
+              isAssignableToSection(section.participantType) && (
+                <TeacherSectionOption
+                  key={section.id}
+                  section={section}
+                  isChecked={
+                    !!currentSectionsAssigned.some(s => s.code === section.code)
+                  }
+                  assignedSections={currentSectionsAssigned}
+                  onChange={() => handleChangedCheckbox(section)} // this function should update the state of multiple section assigner
+                  editedValue={section.isAssigned}
+                />
+              )
+          )}
+      </div>
+      <a
+        style={styles.selectAllSectionsLabel}
+        onClick={selectAllHandler}
+        className="select-all-sections"
+      >
+        Select All
+      </a>
+      <div style={{textAlign: 'right'}}>
+        <Button
+          text={i18n.dialogCancel()}
+          onClick={onClose}
+          color={Button.ButtonColor.gray}
+        />
+        <Button
+          id="confirm-assign"
+          text={i18n.confirmAssignment()}
+          style={{marginLeft: 5}}
+          onClick={reassignSections}
+          color={Button.ButtonColor.orange}
+        />
+      </div>
+    </BaseDialog>
+  );
+};
 
-  render() {
-    const {sections, assignmentName, onClose} = this.props;
-
-    return (
-      <BaseDialog isOpen={true} handleClose={onClose}>
-        <div style={styles.header} className="uitest-confirm-assignment-dialog">
-          {i18n.chooseSectionsPrompt({assignmentName})}
-        </div>
-        <div style={styles.content}>{i18n.chooseSectionsDirections()}</div>
-        <div style={styles.header} className="uitest-confirm-assignment-dialog">
-          {i18n.yourSectionsList()}
-        </div>
-        <hr />
-        <div style={styles.grid}>
-          {sections &&
-            sections.map(
-              section =>
-                this.isAssignableToSection(section.participantType) && (
-                  <TeacherSectionOption
-                    key={section.id}
-                    section={section}
-                    isChecked={
-                      !!this.state.currentSectionsAssigned.some(
-                        s => s.code === section.code
-                      )
-                    }
-                    assignedSections={this.state.currentSectionsAssigned}
-                    onChange={() => this.handleChangedCheckbox(section)} // this fucntion should update the state of multiple secion assigner
-                    editedValue={section.isAssigned}
-                  />
-                )
-            )}
-        </div>
-        <a
-          style={styles.selectAllSectionsLabel}
-          onClick={this.selectAllHandler}
-          className="select-all-sections"
-        >
-          Select All
-        </a>
-        <div style={{textAlign: 'right'}}>
-          <Button
-            text={i18n.dialogCancel()}
-            onClick={onClose}
-            color={Button.ButtonColor.gray}
-          />
-          <Button
-            id="confirm-assign"
-            text={i18n.confirmAssignment()}
-            style={{marginLeft: 5}}
-            onClick={this.reassignSections}
-            color={Button.ButtonColor.orange}
-          />
-        </div>
-      </BaseDialog>
-    );
-  }
-}
+MultipleSectionsAssigner.propTypes = {
+  courseId: PropTypes.number,
+  assignmentName: PropTypes.string.isRequired,
+  onClose: PropTypes.func.isRequired,
+  courseOfferingId: PropTypes.number,
+  courseVersionId: PropTypes.number,
+  scriptId: PropTypes.number,
+  reassignConfirm: PropTypes.func,
+  isOnCoursePage: PropTypes.bool,
+  isStandAloneUnit: PropTypes.bool,
+  participantAudience: PropTypes.string,
+  // Redux
+  sections: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
+  unassignSection: PropTypes.func.isRequired,
+  assignToSection: PropTypes.func.isRequired,
+  updateHiddenScript: PropTypes.func.isRequired,
+};
 
 const styles = {
   header: {
