@@ -45,9 +45,9 @@ Feature: Using the assessments tab in the teacher dashboard to get feedback for 
     And I click selector ".ui-test-section-dropdown" once I see it
     And I click selector ".edit-section-details-link"
     And I press the first "input[name='grades[]']" element
-    And I wait until element "button:contains(Elementary School)" is visible
-    And I click selector "button:contains(Elementary School)"
-    And I press the first "input[name='Express Course']" element
+    And I wait until element "button:contains(Hour of Code)" is visible
+    And I click selector "button:contains(Hour of Code)"
+    And I press the first "input[name='Text Compression']" element
     And I press the first "#uitest-save-section-changes" element
     And I wait until element "#classroom-sections" is visible
 
