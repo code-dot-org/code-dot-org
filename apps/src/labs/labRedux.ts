@@ -3,7 +3,13 @@
 // other existing redux store.  It also holds useful state for newer labs
 // that use LabContainer.
 
-import {createAsyncThunk, createSlice, PayloadAction} from '@reduxjs/toolkit';
+import {
+  AnyAction,
+  createAsyncThunk,
+  createSlice,
+  PayloadAction,
+  ThunkDispatch,
+} from '@reduxjs/toolkit';
 import {Channel, ProjectManagerStorageType, Source} from './types';
 import LabRegistry from './LabRegistry';
 import ProjectManagerFactory from './projects/ProjectManagerFactory';
@@ -13,6 +19,7 @@ import {
   setProjectUpdatedSaving,
   setProjectUpdatedSaved,
 } from '../code-studio/projectRedux';
+import ProjectManager from './projects/ProjectManager';
 
 export interface LabState {
   isLoading: boolean;
@@ -31,6 +38,10 @@ const initialState: LabState = {
 };
 
 // Thunks
+
+// Set up the project manager for the given level and script,
+// then load the project and store the channel and source in redux.
+// If we get an aborted signal, we will exit early.
 export const setUpForLevel = createAsyncThunk(
   'lab/setUpForLevel',
   async (payload: {levelId: number; scriptId: number}, thunkAPI) => {
@@ -61,10 +72,22 @@ export const setUpForLevel = createAsyncThunk(
       return;
     }
     LabRegistry.getInstance().setProjectManager(projectManager);
-    await thunkAPI.dispatch(loadProject());
+    // Load channel and source.
+    const projectResponse = await setUpAndLoadProject(
+      projectManager,
+      thunkAPI.dispatch
+    );
+    if (!projectResponse.ok) {
+      return thunkAPI.rejectWithValue(projectResponse);
+    }
+    const {source, channel} = await projectResponse.json();
+    setProjectData(source, channel, thunkAPI.signal.aborted, thunkAPI.dispatch);
   }
 );
 
+// Load the project from the existing project manager and store the channel
+// and source in redux.
+// If we get an aborted signal, we will exit early.
 export const loadProject = createAsyncThunk(
   'lab/loadProject',
   async (_: void, thunkAPI) => {
@@ -72,38 +95,16 @@ export const loadProject = createAsyncThunk(
     if (!projectManager) {
       return thunkAPI.rejectWithValue('No project manager found.');
     }
-    // Set up event listeners.
-    projectManager.addSaveStartListener(() =>
-      thunkAPI.dispatch(setProjectUpdatedSaving())
-    );
-    projectManager.addSaveSuccessListener(channel => {
-      thunkAPI.dispatch(setProjectUpdatedAt(channel.updatedAt));
-      thunkAPI.dispatch(setChannel(channel));
-    });
-    projectManager.addSaveNoopListener(channel => {
-      if (channel) {
-        thunkAPI.dispatch(setProjectUpdatedAt(channel.updatedAt));
-        thunkAPI.dispatch(setChannel(channel));
-      } else {
-        thunkAPI.dispatch(setProjectUpdatedSaved());
-      }
-    });
-    projectManager.addSaveFailListener(() =>
-      thunkAPI.dispatch(setProjectUpdatedError())
-    );
     // Load channel and source.
-    const projectResponse = await projectManager.load();
+    const projectResponse = await setUpAndLoadProject(
+      projectManager,
+      thunkAPI.dispatch
+    );
     if (!projectResponse.ok) {
       return thunkAPI.rejectWithValue(projectResponse);
     }
     const {source, channel} = await projectResponse.json();
-    // Only set channel and sources if the request has not been cancelled.
-    if (thunkAPI.signal.aborted) {
-      return;
-    }
-    thunkAPI.dispatch(setChannel(channel));
-    thunkAPI.dispatch(setSource(source));
-    thunkAPI.dispatch(setLabReadyForReload(true));
+    setProjectData(source, channel, thunkAPI.signal.aborted, thunkAPI.dispatch);
   }
 );
 
@@ -158,6 +159,53 @@ const labSlice = createSlice({
     });
   },
 });
+
+// Helper function to add event listeners to the project manager
+// and load the project. Returns the project load response.
+// This should be called from a thunk, which will provide its
+// thunk dispatch method.
+async function setUpAndLoadProject(
+  projectManager: ProjectManager,
+  dispatch: ThunkDispatch<unknown, unknown, AnyAction>
+) {
+  projectManager.addSaveStartListener(() =>
+    dispatch(setProjectUpdatedSaving())
+  );
+  projectManager.addSaveSuccessListener(channel => {
+    dispatch(setProjectUpdatedAt(channel.updatedAt));
+    dispatch(setChannel(channel));
+  });
+  projectManager.addSaveNoopListener(channel => {
+    if (channel) {
+      dispatch(setProjectUpdatedAt(channel.updatedAt));
+      dispatch(setChannel(channel));
+    } else {
+      dispatch(setProjectUpdatedSaved());
+    }
+  });
+  projectManager.addSaveFailListener(() => dispatch(setProjectUpdatedError()));
+  return await projectManager.load();
+}
+
+// Helper function to set the channel and source in redux.
+// If aborted is true, we won't set anything in redux. Once
+// we are done, we will mark the lab as ready for reload.
+// This should be called from a thunk, which will provide its
+// thunk dispatch method.
+function setProjectData(
+  source: Source,
+  channel: Channel,
+  aborted: boolean,
+  dispatch: ThunkDispatch<unknown, unknown, AnyAction>
+) {
+  // Only set channel and sources if the request has not been cancelled.
+  if (aborted) {
+    return;
+  }
+  dispatch(setChannel(channel));
+  dispatch(setSource(source));
+  dispatch(setLabReadyForReload(true));
+}
 
 export const {
   setIsLoading,

@@ -244,7 +244,6 @@ class UnconnectedMusicView extends React.Component {
     }
 
     if (prevProps.currentLevelIndex !== this.props.currentLevelIndex) {
-      console.log('[DEBUG] go  to panel from level index change');
       this.goToPanel();
     }
 
@@ -273,7 +272,6 @@ class UnconnectedMusicView extends React.Component {
         this.getStartSources(),
         this.props.source
       );
-      console.log('[DEBUG] go to panel from lab ready for reload');
       this.goToPanel();
       this.props.setLabReadyForReload(false);
     }

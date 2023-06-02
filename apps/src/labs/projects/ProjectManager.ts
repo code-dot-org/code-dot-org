@@ -91,8 +91,8 @@ export default class ProjectManager {
   // HoC "emergency mode" (see 1182-1187 in project.js).
   /**
    * Enqueue a save to happen in the next saveInterval, unless a force save is requested.
-   * If a save is already enqueued, update this.projectToSave with the given project.
-   * @param source Source: the project to save
+   * If a save is already enqueued, update this.sourceToSave with the given source.
+   * @param source Source: the source to save
    * @param forceSave boolean: if the save should happen immediately
    * @returns a promise that resolves to a Response. If the save is successful, the response
    * will be empty, otherwise it will contain failure information.
@@ -114,11 +114,27 @@ export default class ProjectManager {
     }
   }
 
+  addSaveSuccessListener(listener: (channel: Channel) => void) {
+    this.saveSuccessListeners.push(listener);
+  }
+
+  addSaveNoopListener(listener: (channel?: Channel) => void) {
+    this.saveNoopListeners.push(listener);
+  }
+
+  addSaveFailListener(listener: (response: Response) => void) {
+    this.saveFailListeners.push(listener);
+  }
+
+  addSaveStartListener(listener: () => void) {
+    this.saveStartListeners.push(listener);
+  }
+
   // TODO: Add rename function. Rename sets the name on the channel.
   // https://codedotorg.atlassian.net/browse/SL-891
 
   /**
-   * Helper function to save a project, called either after a timeout or directly by save()
+   * Helper function to save a project, called either after a timeout or directly by save().
    * On a save, we check if there are unsaved changes. If there are none, we can skip the save.
    * Only if the source save succeeds do we update the channel, as the
    * channel is metadata about the project and we don't want to save it unless the source
@@ -197,38 +213,6 @@ export default class ProjectManager {
     );
   }
 
-  addSaveSuccessListener(listener: (channel: Channel) => void) {
-    this.saveSuccessListeners.push(listener);
-  }
-
-  addSaveNoopListener(listener: (channel?: Channel) => void) {
-    this.saveNoopListeners.push(listener);
-  }
-
-  addSaveFailListener(listener: (response: Response) => void) {
-    this.saveFailListeners.push(listener);
-  }
-
-  addSaveStartListener(listener: () => void) {
-    this.saveStartListeners.push(listener);
-  }
-
-  private executeSaveSuccessListeners(channel: Channel) {
-    this.saveSuccessListeners.forEach(listener => listener(channel));
-  }
-
-  private executeSaveNoopListeners(channel?: Channel) {
-    this.saveNoopListeners.forEach(listener => listener(channel));
-  }
-
-  private executeSaveFailListeners(response: Response) {
-    this.saveFailListeners.forEach(listener => listener(response));
-  }
-
-  private executeSaveStartListeners() {
-    this.saveStartListeners.forEach(listener => listener());
-  }
-
   private getNoopResponse() {
     return new Response(null, {status: 304});
   }
@@ -252,5 +236,22 @@ export default class ProjectManager {
       this.currentTimeoutId = undefined;
     }
     this.saveQueued = false;
+  }
+
+  // LISTENERS
+  private executeSaveSuccessListeners(channel: Channel) {
+    this.saveSuccessListeners.forEach(listener => listener(channel));
+  }
+
+  private executeSaveNoopListeners(channel?: Channel) {
+    this.saveNoopListeners.forEach(listener => listener(channel));
+  }
+
+  private executeSaveFailListeners(response: Response) {
+    this.saveFailListeners.forEach(listener => listener(response));
+  }
+
+  private executeSaveStartListeners() {
+    this.saveStartListeners.forEach(listener => listener());
   }
 }
