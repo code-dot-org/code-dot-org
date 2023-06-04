@@ -86,6 +86,7 @@ Scenario: Versions warning announcement on script overview page
   # Close the unit version warning banner
   When I click selector ".announcement-notification:contains(newer version) .fa-times"
   Then I wait until element ".announcement-notification:contains(newer version)" is not visible
+  And I wait until jQuery Ajax requests are finished
 
   # The unit version warning banner stays closed on refresh
   When I reload the page
