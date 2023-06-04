@@ -35,12 +35,8 @@ Feature: Professional learning Sections
     And I wait until element "a:contains(My Section of Teachers)" is visible
     And the href of selector "a:contains(My Section of Teachers)" contains "/teacher_dashboard/sections/"
 
-<<<<<<< HEAD
-  @rails_env_test
-=======
   @skip
   # TODO TEACH-509: Reenable with new section setup flow
->>>>>>> origin/staging
   Scenario: Create new professional learning section as universal instructor
     Given I create an authorized teacher-associated student named "Sally"
     When I sign in as "Teacher_Sally" and go home
@@ -73,12 +69,8 @@ Feature: Professional learning Sections
     And I wait until element "a:contains(My Section of Teachers)" is visible
     And the href of selector "a:contains(My Section of Teachers)" contains "/teacher_dashboard/sections/"
 
-<<<<<<< HEAD
-  @rails_env_test
-=======
   @skip
   # TODO TEACH-509: Reenable with new section setup flow
->>>>>>> origin/staging
   Scenario: Create new professional learning section as plc reviewer
     Given I create an authorized teacher-associated student named "Sally"
     When I sign in as "Teacher_Sally" and go home
