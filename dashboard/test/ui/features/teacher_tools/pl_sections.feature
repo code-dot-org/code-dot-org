@@ -1,12 +1,8 @@
 @no_mobile
 Feature: Professional learning Sections
-<<<<<<< HEAD
-  @rails_env_test
-=======
 
   @skip
   # TODO TEACH-509: Reenable with new section setup flow
->>>>>>> origin/staging
   Scenario: Create new professional learning section as levelbuilder
     Given I create an authorized teacher-associated student named "Sally"
     When I sign in as "Teacher_Sally" and go home
