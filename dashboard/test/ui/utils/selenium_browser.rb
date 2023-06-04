@@ -9,6 +9,7 @@ module SeleniumBrowser
     when :chrome
       options[:options] = Selenium::WebDriver::Chrome::Options.new
       options[:options].add_argument('headless') if headless
+      options[:options].add_argument('--mute-audio') if headless
       options[:options].add_argument('window-size=1280,1024')
     when :firefox
       options[:options] = Selenium::WebDriver::Firefox::Options.new
