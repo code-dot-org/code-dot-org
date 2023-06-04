@@ -94,7 +94,7 @@ Scenario: Authorized Teacher on App Lab with free response contained level
 
 Scenario: Teacher can reset progress on free response contained level
   Given I sign in as "Teacher_Lillian"
-  And I am on "http://studio.code.org/s/allthethings/lessons/41/levels/3?enableExperiments=instructorPredictLevelReset"
+  And I am on "http://studio.code.org/s/allthethings/lessons/41/levels/3"
   And I rotate to landscape
   And I wait for the page to fully load
   And I press keys "Here is my response!" for element ".response"
@@ -111,3 +111,23 @@ Scenario: Teacher can reset progress on free response contained level
   Then I press "runButton"
   Then I press "resetButton"
   And I verify progress in the header of the current page is "perfect" for level 3
+
+Scenario: Student can attempt retriable free response contained level multiple times
+  Given I am on "http://studio.code.org/s/allthethings/lessons/41/levels/9"
+  And I rotate to landscape
+  And I wait for the page to fully load
+  And I press keys "Here is my response!" for element ".response"
+  And element ".response" has value "Here is my response!"
+  Then I press "runButton"
+  Then I press "resetButton"
+  And I verify progress in the header of the current page is "perfect" for level 9
+  # And element '.response' is not disabled
+  Then I press keys " edited" for element ".response"
+  And element ".response" has value "Here is my response! edited"
+  Then I press "runButton"
+  Then I press "resetButton"
+  Then I am on "http://studio.code.org/s/allthethings/lessons/41/levels/9"
+  And I rotate to landscape
+  And I wait to see ".response"
+  And element ".response" has value "Here is my response! edited"
+  And I verify progress in the header of the current page is "perfect" for level 9
