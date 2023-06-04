@@ -10,6 +10,9 @@ class Projects
   class NotFound < Sinatra::NotFound
   end
 
+  class ValidationError < StandardError
+  end
+
   def initialize(storage_id)
     @storage_id = storage_id
 
@@ -17,6 +20,8 @@ class Projects
   end
 
   def create(value, ip:, type: nil, published_at: nil, remix_parent_id: nil, standalone: true, level: nil)
+    validate_thumbnail_url(nil, value['thumbnailUrl'])
+
     project_type = type || level&.project_type
     timestamp = DateTime.now
     row = {
@@ -93,6 +98,8 @@ class Projects
 
       raise ProfanityPrivacyError.new(share_failure.content) if share_failure
     end
+
+    validate_thumbnail_url(channel_id, value['thumbnailUrl'])
 
     row = {
       value: value.to_json,
@@ -310,10 +317,10 @@ class Projects
   end
 
   # Find the encrypted channel token for most recent project of the given level type.
-  def most_recent(key)
+  def most_recent(key, include_hidden = false)
     row = @table.where(storage_id: @storage_id).exclude(state: 'deleted').order(Sequel.desc(:updated_at)).find do |i|
       parsed = JSON.parse(i[:value])
-      !parsed['hidden'] && !parsed['frozen'] && parsed['level'].split('/').last == key
+      (include_hidden || !parsed['hidden']) && !parsed['frozen'] && parsed['level'].split('/').last == key
     rescue
       # Malformed channel, or missing level.
     end
@@ -456,5 +463,34 @@ class Projects
     # Others have no content on S3, and may be just-created stub projects.
     # Report these as 'unknown'.
     'unknown'
+  end
+
+  # Temporarily logging rather than erroring in order
+  # to confirm that only valid thumbnail URLs are present in existing projects.
+  # DCDO flag in place to choose when to enable/disable logging (off by default).
+  def validate_thumbnail_url(channel_id, thumbnail_url)
+    return true unless thumbnail_url
+
+    if !valid_thumbnail_url?(thumbnail_url) && DCDO.get('log_thumbnail_url_validation', false)
+      # raise ValidationError
+      Honeybadger.notify(
+        error_class: 'Project::ValidationError',
+        error_message: 'A project was saved with an unexpected thumbnail URL.',
+        context: {channel_id: channel_id, thumbnail_url: thumbnail_url}
+      )
+    end
+
+    true
+  end
+
+  # valid thumbnail URLs are typically of the format:
+  # /v3/files/<channel_id>/.metadata/thumbnail.png
+  # I observed thumbnail URLs of remixed projects having having the channel ID of the parent project,
+  # so we assert on the start/end of the URL.
+  # We also use placeholder thumbnail images in a couple of labs (dance, flappy),
+  # so accepting those as valid as well
+  def valid_thumbnail_url?(thumbnail_url)
+    (thumbnail_url.start_with?('/v3/files/') && thumbnail_url.end_with?('.metadata/thumbnail.png')) ||
+      thumbnail_url.start_with?('/blockly/media')
   end
 end

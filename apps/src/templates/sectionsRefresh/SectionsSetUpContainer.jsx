@@ -142,7 +142,7 @@ export default function SectionsSetUpContainer({
     }
   };
 
-  const saveSection = section => {
+  const saveSection = (section, createAnotherSection) => {
     const shouldShowCelebrationDialogOnRedirect = !!isUsersFirstSection;
     // Determine data sources and save method based on new vs edit section
     const dataUrl = isNewSection
@@ -167,6 +167,9 @@ export default function SectionsSetUpContainer({
     const csrfToken = document.querySelector('meta[name="csrf-token"]')
       .attributes['content'].value;
 
+    const computedGrades =
+      participantType === 'teacher' ? ['pl'] : section.grade;
+
     const section_data = {
       login_type: loginType,
       participant_type: participantType,
@@ -178,7 +181,7 @@ export default function SectionsSetUpContainer({
       pairing_allowed: section.pairingAllowed,
       tts_autoplay_enabled: section.ttsAutoplayEnabled,
       sharing_disabled: section.sharingDisabled,
-      grades: section.grade,
+      grades: computedGrades,
       ...section,
     };
 
@@ -197,7 +200,9 @@ export default function SectionsSetUpContainer({
         recordSectionSetupEvent(section);
         // Redirect to the sections list.
         let redirectUrl = window.location.origin + '/home';
-        if (shouldShowCelebrationDialogOnRedirect) {
+        if (createAnotherSection) {
+          redirectUrl += '?openAddSectionDialog=true';
+        } else if (shouldShowCelebrationDialogOnRedirect) {
           redirectUrl += '?showSectionCreationDialog=true';
         }
         navigateToHref(redirectUrl);
@@ -286,37 +291,26 @@ export default function SectionsSetUpContainer({
           )}
         </div>
       </div>
-
       <div
         className={classnames(
-          moduleStyles.buttonsContainer,
+          moduleStyles.splitButtonsContainer,
           moduleStyles.containerWithMarginTop
         )}
       >
-        {/*
-         TODO: for the first iteration of this feature we will only have
-        participants create one section at a time.  For edit section redirects,
-        adding another section is not needed.  This can be uncommented when the
-        functionality of adding another class section is ready.
-
-        {isNewSection && (
+        {isNewSection && ( // Only show 'save and add another' button when creating a new section
+          <Button
+            className={moduleStyles.buttonLeft}
+            icon="plus"
+            text={i18n.addAnotherClassSection()}
+            color={Button.ButtonColor.neutralDark}
+            onClick={e => {
+              e.preventDefault();
+              saveSection(sections[0], true);
+            }}
+          />
+        )}
         <Button
-          useDefaultLineHeight
-          icon="plus"
-          text={i18n.addAnotherClassSection()}
-          color={Button.ButtonColor.neutralDark}
-          onClick={e => {
-            e.preventDefault();
-            console.log('Add Another Class Section clicked');
-          }}
-        />
-        */}
-        {/*
-        TODO: currently this button just changes text if it is a "new" or "editied"
-        screen, depending on how we want the functionality of this button to work,
-        this might mean creating a different button for the "edit" page
-        */}
-        <Button
+          className={moduleStyles.buttonRight}
           text={
             isSaveInProgress
               ? i18n.saving()
@@ -329,7 +323,7 @@ export default function SectionsSetUpContainer({
           onClick={e => {
             e.preventDefault();
             setIsSaveInProgress(true);
-            saveSection(sections[0]);
+            saveSection(sections[0], false);
           }}
         />
       </div>

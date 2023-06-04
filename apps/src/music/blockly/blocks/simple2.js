@@ -9,6 +9,8 @@ import {
   FIELD_EFFECTS_VALUE,
   FIELD_CHORD_NAME,
   DOCS_BASE_URL,
+  FIELD_TRIGGER_START_NAME,
+  TriggerStart,
 } from '../constants';
 import {
   fieldSoundsDefinition,
@@ -94,11 +96,29 @@ export const whenRunSimple2 = {
 export const triggeredAtSimple2 = {
   definition: {
     type: BlockTypes.TRIGGERED_AT_SIMPLE2,
-    message0: musicI18n.blockly_blockTriggered({trigger: '%1'}),
+    message0: musicI18n.blockly_blockTriggered({trigger: '%1', when: '%2'}),
     args0: [
       {
         type: 'input_dummy',
         name: TRIGGER_FIELD,
+      },
+      {
+        type: 'field_dropdown',
+        name: FIELD_TRIGGER_START_NAME,
+        options: [
+          [
+            musicI18n.blockly_fieldTriggerStartImmediately(),
+            TriggerStart.IMMEDIATELY,
+          ],
+          [
+            musicI18n.blockly_fieldTriggerStartNextBeat(),
+            TriggerStart.NEXT_BEAT,
+          ],
+          [
+            musicI18n.blockly_fieldTriggerStartNextMeasure(),
+            TriggerStart.NEXT_MEASURE,
+          ],
+        ],
       },
     ],
     inputsInline: true,
@@ -110,7 +130,7 @@ export const triggeredAtSimple2 = {
   },
   generator: block =>
     `
-      Sequencer.newSequence(Math.ceil(startPosition), true);
+      Sequencer.newSequence(startPosition, true);
       Sequencer.startFunctionContext('${block.getFieldValue(TRIGGER_FIELD)}');
       Sequencer.playSequential();
     `,

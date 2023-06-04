@@ -20,10 +20,10 @@
         },
         {"message": "Please play one sound."}
       ],
-      "starterCode": {
+      "startSources": {
         "blocks": {
           "languageVersion": 0,
-          "blocks": [{"type": "when_run_simple2", "x": 30, "y": 30}]
+          "blocks": [{"id": "when-run-block", "type": "when_run_simple2", "x": 34, "y": 34}]
         },
         "variables": [{"name": "currentTime"}, {"name": "i"}]
       }

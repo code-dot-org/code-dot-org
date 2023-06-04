@@ -94,6 +94,7 @@ class CourseOffering < ApplicationRecord
   end
 
   def path_to_latest_published_version
+    return nil unless latest_published_version
     latest_published_version.content_root.link
   end
 
