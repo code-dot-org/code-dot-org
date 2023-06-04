@@ -160,6 +160,8 @@ pl:
   call_to_action_watch_now: Watch now
   call_to_action_try_activity: Try activity
   call_to_action_explore_unit: Explore unit
+  call_to_action_explore_curriculum: Explore curriculum
+  call_to_action_explore_modules: Explore modules
   call_to_action_view_lesson_plan: View lesson plan
   call_to_action_self_paced_pl: Start self-paced professional learning
   call_to_action_watch_panel: Watch panel
@@ -167,6 +169,66 @@ pl:
   call_to_action_explore_website: Explore website
   call_to_action_read_more: Czytaj więcej
   call_to_action_special_announcement: See special announcement
+  call_to_action_start_pl: Start professional learning
+  call_to_action_contact_regional_partner: Contact your Regional Partner
+  call_to_action_join_csta: Join CSTA
+  aria_label_call_to_action_afe: Learn more about Amazon Future Engineer
+  aria_label_call_to_action_teaching_csf: Start the Teaching Computer Science Fundamentals
+    professional learning program
+  aria_label_call_to_action_teaching_csd: Start the Teaching Computer Science Discoveries
+    professional learning program
+  aria_label_call_to_action_teaching_csp: Start the Teaching Computer Science Principles
+    professional learning program
+  aria_label_call_to_action_teaching_ai: Start the Teaching AI and Machine Learning
+    professional learning program
+  aria_label_call_to_action_teaching_maker_cp: Start the Teaching Creating Apps with
+    Devices (Circuit Playground) professional learning program
+  aria_label_call_to_action_teaching_maker_microbit: Start the Teaching Creating Apps
+    with Devices (micro:bit) professional learning program
+  aria_label_call_to_action_curriculum_csf: Explore the Computer Science Fundamentals
+    curriculum
+  aria_label_call_to_action_curriculum_csd: Explore the Computer Science Discoveries
+    curriculum
+  aria_label_call_to_action_curriculum_csp: Explore the Computer Science Principles
+    curriculum
+  aria_label_call_to_action_curriculum_ai: Explore the AI and Machine Learning curriculum
+  aria_label_call_to_action_curriculum_maker_cp: Explore the Creating Apps with Devices
+    (Circuit Playground) curriculum
+  aria_label_call_to_action_curriculum_maker_microbit: Explore the Creating Apps with
+    Devices (micro:bit) curriculum
+  video_title_professional_learning_program: Code.org's Professional Learning Program
+  curriculum_name_csf: Computer Science Fundamentals
+  curriculum_name_csf_02: Any CS Fundamentals (Course A-F)
+  curriculum_name_csd: Computer Science Discoveries
+  curriculum_name_csp: Computer Science Principles
+  curriculum_name_ai: AI [sztuczna inteligencja] i nauka maszynowa
+  curriculum_name_maker_cp: Creating Apps with Devices (Circuit Playground)
+  curriculum_name_maker_microbit: Creating Apps with Devices (micro:bit)
+  module_grade_k_5: K-5 Teachers
+  module_grade_6_10: 6-10 Teachers
+  module_grade_9_12: 9-12 Teachers
+  module_label_curriculum: 'Curriculum:'
+  module_label_duration: 'Duration:'
+  module_duration_2_hrs: 2 hours
+  module_duration_3_hrs: 3 hours
+  module_duration_8_hrs: 8 hours
+  module_duration_35_hrs: 35 hours
+  module_label_prerequisites: 'Prerequisites:'
+  module_prerequisites_none: Żaden
+  module_prerequisites_maker_cp: Access to a Circuit Playground
+  module_prerequisites_maker_microbit: Access to a micro:bit
+  module_label_teaching_csf: Teaching Computer Science Fundamentals
+  module_label_teaching_csd: Teaching Computer Science Discoveries
+  module_label_teaching_csp: Teaching Computer Science Principles
+  module_label_teaching_ai: Teaching AI and Machine Learning
+  module_label_teaching_maker_cp: Teaching Creating Apps with Devices (Circuit Playground)
+  module_label_teaching_maker_microbit: Teaching Creating Apps with Devices (micro:bit)
+  values_01: We believe computer science is foundational for all students
+  values_02: We are committed to equity, access, and opportunity
+  values_03: We believe in the power of a collaborative education community
+  values_04: We are agile and responsive to feedback
+  values_05: We act with integrity and transparency
+  values_06: We believe broad impact requires thinking big and acting holistically
   social_hoc2019_oceans_title: 'AI dla oceanów #CSForGood'
   social_hoc2019_oceans_desc: Dowiedz się o sztucznej inteligencji, uczeniu maszynowym,
     danych szkoleniowych i uprzedzeniach, wyjaśniając jednocześnie kwestie etyczne
@@ -187,9 +249,10 @@ pl:
   pl_superhero_title: Help students become superheroes!
   pl_superhero_desc: Join our highly supportive Professional Learning Program for
     middle and high school educators.
-  teach_ai_homepage_banner_title: AI education for the world
-  teach_ai_homepage_banner_desc: Code.org is part of TeachAI, dedicated to empowering
-    educators everywhere to teach with AI and about AI.
+  teach_ai_homepage_banner_title: Sztuczna inteligencja Edukacja dla świata
+  teach_ai_homepage_banner_desc: Code.org jest częścią TeachAI, poświęconej umożliwieniu
+    nauczycielom na całym świecie nauczania za pomocą sztucznej inteligencji i sztucznej
+    inteligencji.
   blockchain_hero_heading: How Blockchain Works
   blockchain_hero_desc: Dive into the world of blockchain with "How Blockchain Works,"
     our new video series and accompanying lessons!
@@ -225,7 +288,7 @@ pl:
   blockchain_resources_03_heading: Hour of Code Activity
   blockchain_resources_03_desc: Try a crypto memory game created by Coinbase.
   blockchain_resources_03_button_label: Try the Crypto Memory Game activity
-  ai_2023_banner_title: AI education for the world
+  ai_2023_banner_title: Sztuczna inteligencja Edukacja dla świata
   ai_2023_banner_skinny_desc: See how we're planning to bring AI education to classrooms
     everywhere.
   teachai_launch_blog_title: Introducing TeachAI!
@@ -316,6 +379,59 @@ pl:
     throughout K-12. Offer free professional development, webinars, conference presentations,
     and peer-to-peer learning opportunities.
   ai_resources_btn_aria_label_03: Explore the AI for Teachers website
+  self_paced_pl_hero_heading: Self-Paced Professional Learning For Educators
+  self_paced_pl_hero_desc: Professional learning offerings to support teachers in
+    every stage of their computer science teaching journey.
+  self_paced_pl_intro_heading: Professional learning on your timeline
+  self_paced_pl_intro_desc: Code.org is pleased to offer self-paced modules for teachers.
+    These modules are available at no cost to any educator with a Code.org account
+    worldwide!
+  self_paced_pl_intro_list_title_01: Flexibility and Convenience
+  self_paced_pl_intro_list_desc_01: Engage with the material at your own pace and
+    on your own time.
+  self_paced_pl_intro_list_title_02: Personalized Learning Experience
+  self_paced_pl_intro_list_desc_02: Focus on the areas that are most important to
+    your needs and teaching context.
+  self_paced_pl_intro_list_title_03: Access to High-Quality Content
+  self_paced_pl_intro_list_desc_03: Get the latest best practices, research, and strategies
+    for teaching computer science effectively.
+  self_paced_pl_callout: Looking for facilitator-led professional learning options?
+  self_paced_pl_callout_link: Check out our in-person and virtual workshops.
+  self_paced_pl_modules_heading: Self-paced professional learning modules
+  self_paced_pl_modules_desc: Through reading, viewing videos, completing interactive
+    puzzles, and reflecting on your learning, you will develop your own understanding
+    while preparing to teach computer science in your classroom.
+  self_paced_pl_modules_list_heading: 'After completing one of these modules, participants
+    will:'
+  self_paced_pl_modules_list_01: Learn how to navigate the Code.org website and teacher
+    tools.
+  self_paced_pl_modules_list_02: Gain a high level understanding of the content, tools,
+    and pedagogy.
+  self_paced_pl_modules_list_03: Prepare to begin teaching the curriculum with your
+    students.
+  self_paced_pl_facilitator_heading: Want to take your learning further?
+  self_paced_pl_facilitator_subheading: Facilitator-led workshops
+  self_paced_pl_facilitator_desc: In addition to the above self-paced online modules,
+    facilitator-led professional learning workshops are available for teachers. Join
+    the more than 100,000 teachers who have participated in our workshops. More than
+    90% of attendees would recommend our program to other teachers.
+  self_paced_pl_facilitator_call_to_action: Explore facilitator-led professional learning
+  self_paced_pl_resources_heading: Additional resources for teachers
+  self_paced_pl_resources_title_01: Code.org Regional Partner
+  self_paced_pl_resources_desc_01: Connect with your Code.org Regional Partner to
+    learn what's going on in your region. Your local Code.org Regional Partner provides
+    facilitator-led workshops to teachers, and can help guide your school or district
+    on implementation, certification, funding, and more.
+  self_paced_pl_resources_title_02: Computer Science Teachers Association
+  self_paced_pl_resources_desc_02: Join the world's largest Computer Science department!
+    Connect with over 19,000 CS teachers from around the globe, find strength in your
+    local community, and get support from other CS teachers.
+  self_paced_pl_resources_title_03: Amazon Future Engineer
+  self_paced_pl_resources_desc_03: Code.org has partnered with Amazon Future Engineer
+    to offer teachers at underserved schools a growing number of resources and benefits
+    at no cost! Find out if your school is eligible.
+  tenth_anniversary_homepage_blurb: Code.org is 10 years old!
+  tenth_anniversary_homepage_link: Check out the impact we've had.
   hoc_live: '"Godzina kodowania" na żywo'
   hoc_live_sign_up_title: Zaloguj się do "Godziny kodowania" na żywo
   hoc_live_learn_title: Ucz się z Godziną Kodowania na Żywo
@@ -943,7 +1059,7 @@ pl:
     zrealizować wiele angażujących działań, ale głównym celem jest, aby uczniowie
     i nauczyciele, którzy zaczynają przygodę z informatyką, mieli jak najlepsze wrażenia.
   hoc_faq_tutorial_a_markdown: Jeśli jesteś zainteresowany, by być partnerem samouczków,  [zobacz
-    nasze wskazówki i instrukcje] (%{tutorial_guidelines}). Chcielibyśmy zrealizować
+    nasze wskazówki i instrukcje](%{tutorial_guidelines}). Chcielibyśmy zrealizować
     wiele angażujących działań, ale głównym celem jest, aby uczniowie i nauczyciele,
     którzy zaczynają przygodę z informatyką, mieli jak największe korzyści.
   hoc_faq_account_q: Czy uczniowie muszą się logować i zakładać konto?
@@ -1205,7 +1321,7 @@ pl:
   highlights_constant_athletes_heading: Mistrzowie i złoci medaliści Serena Williams,
     Neymar Jr, Carmelo Anthony i wielu innych inspiruje uczniów do większego wysiłku.
   highlights_constant_athletes_short_heading: Spróbuj jeszcze
-  footer_copyright_message: Copyright 2015 Code.org. Wszelkie prawa zastrzeżone.
+  footer_copyright_message: Copyright %{current_year} Code.org. Wszelkie prawa zastrzeżone.
   footer_trademark_message: Hour od Code™ (Godzina Kodowania™) jest znakiem towarowym
     Code.org.
   footer_built_on_github: Built on GitHub from Microsoft

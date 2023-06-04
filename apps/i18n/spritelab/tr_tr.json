@@ -94,7 +94,7 @@
   "cscAdaptationsMoveOctopusToPlant": "Ahtapotunuzu bitkiye dokunmak için hareket ettirmek için ok tuşlarını kullanmayı unutmayın, böylece kostümü karıştırmak için değiştirir.",
   "cscAdaptationsNeedWhenClicked": "Görünüşe göre bir davranış eklediniz ancak bir <code style=\"color:black; background-color:#6AF36C\">sprite tıklandığında</code> önce engelle. Olay bloğundan sonra davranış bloğunu eklediğinizden emin olun.",
   "cscAdaptationsNight": "Ok</code> bloğuna basıldığında <code style=\"color:black; background-color:#6AF36C\">öğesinin altına gece arka planı eklediğinizden emin olun.",
-  "cscAdaptationsSeaweed": "Ahtapotunuzun dokunduğu deniz yosunu ile aynı rengi değiştirdiğinden emin olun",
+  "cscAdaptationsRightArrowKey": "*\"Çalıştır\"*'a bastıktan sonra bir ok tuşuna bastığınızdan emin olun. Oyun alanının altındaki turuncu düğmelere tıklayabilir veya klavyenizdeki tuşlara basabilirsiniz.",
   "cscAdaptationsSetBackground": "Bir arka plan ayarladığınızdan emin olun.",
   "cscAdaptationsSetBehavior": "Hareketlinin boyutunu ayarladıktan sonra hareketli grafi davranışını ayarladığınızdan emin olun.",
   "cscAdaptationsSetFastSpeed": "Çita sprite hızını hızlı olarak ayarladığınızdan emin olun.",

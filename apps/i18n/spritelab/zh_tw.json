@@ -94,7 +94,7 @@
   "cscAdaptationsMoveOctopusToPlant": "不要忘記使用箭頭鍵移動章魚觸摸植物，以便它改變服裝以融入。",
   "cscAdaptationsNeedWhenClicked": "看起來你添加了一個行為，但是當精靈首先點擊</code> 個塊時忘記添加一個 <code style=\"color:black; background-color:#6AF36C\">。確保在事件塊之後添加行為塊。",
   "cscAdaptationsNight": "當箭頭按下</code> 塊時，請確保在 <code style=\"color:black; background-color:#6AF36C\">下添加夜間背景。",
-  "cscAdaptationsSeaweed": "確保章魚的顏色與接觸到的海藻相同",
+  "cscAdaptationsRightArrowKey": "點擊運行後，請確保有按方向鍵。你可以點擊遊戲區的橙色按鈕或按鍵盤上的鍵。",
   "cscAdaptationsSetBackground": "請務必設定背景。",
   "cscAdaptationsSetBehavior": "請務必在設定 Sprite 的大小之後設定精靈的行為。",
   "cscAdaptationsSetFastSpeed": "確保將獵豹精靈的速度設置為快速。",

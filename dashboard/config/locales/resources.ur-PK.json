@@ -152,18 +152,22 @@
           "type": "وسیلہ"
         },
         "password_power-up_if_then_scenarios/coursed/2022": {
+          "name": "پاس ورڈ پاور اپ: اگر... پھر... منظرنامے",
           "url": "https://docs.google.com/document/d/1JeZtFU6hMFTYITAAPaA_CRmOVknvkcKZQszL6u7DRG4/edit",
           "type": "ہینڈ آؤٹ"
         },
         "password_power-up_if_then_scenarios_1/coursed/2022": {
+          "name": "پاس ورڈ پاور اپ: اگر... پھر... منظرنامے",
           "url": "https://docs.google.com/document/d/1yrL1rD9eCSEYAvsM8XiL5g-uKpqizYwAk73_6ddZOAQ/edit",
           "type": "جوابی کلید"
         },
         "password_power-up_lesson_quiz/coursed/2022": {
+          "name": "پاس ورڈ پاور اپ: سبق کوئز",
           "url": "https://docs.google.com/forms/d/1OBS37DZUmIxM4ZciCD6qWFMam3_u8djgZNJd9IOK6Zs/copy",
           "type": "وسیلہ"
         },
         "password_power-up_lesson_quiz_1/coursed/2022": {
+          "name": "پاس ورڈ پاور اپ: سبق کوئز",
           "url": "https://www.commonsense.org/education/digital-citizenship/quiz/password-power-up-lesson-quiz",
           "type": "جوابی کلید"
         },
@@ -197,7 +201,8 @@
         },
         "graph_paper_programming_2/coursed/2022": {
           "name": "گراف کاغذ پروگرامنگ",
-          "url": "https://www.youtube.com/watch?v=vBUtejDNvrs"
+          "url": "https://www.youtube.com/watch?v=vBUtejDNvrs",
+          "type": "ایکشن ویڈیو میں سبق"
         },
         "graph_paper_programming_3/coursed/2022": {
           "name": "گراف کاغذ پروگرامنگ",
@@ -211,7 +216,8 @@
         },
         "graph_paper_programming_5/coursed/2022": {
           "name": "گراف کاغذ پروگرامنگ",
-          "url": "https://docs.google.com/document/d/1GXFjDtRjaK8mTnFGb33kT-u72_rXfUh_TyfP7N7Pen4/edit"
+          "url": "https://docs.google.com/document/d/1GXFjDtRjaK8mTnFGb33kT-u72_rXfUh_TyfP7N7Pen4/edit",
+          "type": "تشخیص جواب کی کلید"
         },
         "pair_programming/coursed/2022": {
           "name": "جوڑی پروگرامنگ",
@@ -230,7 +236,8 @@
         },
         "relay_programming_2/coursed/2022": {
           "name": "ریلے پروگرامنگ",
-          "url": "https://docs.google.com/document/d/1UyiAK9sxuMP3AWjbP0TlsMahNa98LxJwyGWKhcdYpig/edit"
+          "url": "https://docs.google.com/document/d/1UyiAK9sxuMP3AWjbP0TlsMahNa98LxJwyGWKhcdYpig/edit",
+          "type": "ٹیچر ڈیبگنگ تصویر"
         },
         "relay_programming_3/coursed/2022": {
           "name": "ریلے پروگرامنگ",
@@ -249,7 +256,8 @@
         },
         "unplugged_blocks_courses_c-f_/coursed/2022": {
           "name": " ان پلگڈ بلاکس (کورسز C-F)",
-          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
+          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit",
+          "type": "جوڑ توڑ"
         },
         "open-ended_programming_levels/coursed/2022": {
           "name": "اوپن اینڈڈ پروگرامنگ لیولز",
@@ -276,6 +284,7 @@
           "type": "ورک شیٹ"
         },
         "dance_party_unplugged/coursed/2022": {
+          "name": "رقص پارٹی: ان پلگ",
           "type": "وسیلہ"
         },
         "open-ended_programming_levels_2/coursed/2022": {
@@ -297,21 +306,25 @@
           "type": "ان پلگڈ سرگرمی"
         },
         "conditionals_with_cards_1/coursed/2022": {
-          "url": "https://www.youtube.com/watch?v=2m2Rn9VxHfU"
+          "url": "https://www.youtube.com/watch?v=2m2Rn9VxHfU",
+          "type": "ایکشن ویڈیو میں سبق"
         },
         "conditionals_with_cards_2/coursed/2022": {
           "url": "https://docs.google.com/document/d/1LAJIGKZkVE8Hx68qJZxOUyQ0iw1jhgIWSMGh_fv5zN0/edit",
           "type": "تشخیصات"
         },
         "conditionals_with_cards_3/coursed/2022": {
-          "url": "https://youtu.be/TbUaEnAYPjI"
+          "url": "https://youtu.be/TbUaEnAYPjI",
+          "type": "تشخیص ویڈیو"
         },
         "conditionals_with_cards_4/coursed/2022": {
-          "url": "https://docs.google.com/document/d/1SsfkUoEg316vjBSxrRNLN4q4V2-yYW8HAK4m9snLtac/edit"
+          "url": "https://docs.google.com/document/d/1SsfkUoEg316vjBSxrRNLN4q4V2-yYW8HAK4m9snLtac/edit",
+          "type": "تشخیص جواب کی کلید"
         },
         "conditionals_with_cards_sample_program/coursed/2022": {
           "name": "کارڈ سیمپل پروگرام کے ساتھ کنڈیشنلز",
-          "url": "https://docs.google.com/document/d/151s4_0NuDhuzprjPGlDubPZodeJQCEJElsvdkSSqzPM/edit"
+          "url": "https://docs.google.com/document/d/151s4_0NuDhuzprjPGlDubPZodeJQCEJElsvdkSSqzPM/edit",
+          "type": "استاد تیار گائیڈ"
         },
         "csf_course_d_end_of_course_project_planning_guide/coursed/2022": {
           "name": "CSF کورس D کورس کے اختتام پراجیکٹ پلاننگ گائیڈ",
@@ -387,10 +400,12 @@
           "type": "سلائیڈز"
         },
         "exploring_apps/coursef/2022": {
+          "name": "ایپس کی تلاش",
           "url": "https://docs.google.com/document/d/1CMFO9cWrBa0E97raNZnEXHC5e2WHrprMokSW5jmJzDs/template/preview",
           "type": "وسیلہ"
         },
         "exploring_apps_1/coursef/2022": {
+          "name": "ایپس کی تلاش",
           "url": "https://docs.google.com/document/d/1Vjn1DhjZm17C-Hde97yDHyeFxMzdPlR6Q-rESZgHw2s/template/preview",
           "type": "جوابی کلید"
         },
@@ -405,9 +420,11 @@
           "type": "سلائیڈز"
         },
         "blank_space_stories/coursef/2022": {
+          "name": "خالی خلائی کہانیاں",
           "url": "https://docs.google.com/document/d/1fJNyI0WQTi-Q-XMZDn9sIgD_o6KjGHwZesQRa93ko5E/template/preview"
         },
         "blank_space_stories_1/coursef/2022": {
+          "name": "خالی خلائی کہانیاں",
           "url": "https://docs.google.com/document/d/1mXI-U7ve1JjDchlyhjD53pkdSXKqeMemb7upFGareV4/template/preview",
           "type": "جوابی کلید"
         },
@@ -431,6 +448,7 @@
           "url": "https://docs.google.com/document/d/1FZAVAVabeADxUlDZACeZojuPK1gBN7g0_UfYfvxzah4/template/preview"
         },
         "running_simulations/coursef/2022": {
+          "name": "مجازی چل رہا ہے",
           "url": "https://docs.google.com/document/d/1sgUd9UcthM3M-A1EKX1m3AwsgLrivx0jF0i-e_79kk8/edit",
           "type": "ورک شیٹ"
         },
@@ -461,11 +479,13 @@
         },
         "internet_1/coursef/2022": {
           "name": "انٹرنیٹ",
-          "url": "https://docs.google.com/document/d/1uUY1zm6d7LZySpXzW9CFZaI8tcY4fzw_-w3Z2WbKVwI/edit"
+          "url": "https://docs.google.com/document/d/1uUY1zm6d7LZySpXzW9CFZaI8tcY4fzw_-w3Z2WbKVwI/edit",
+          "type": "تشخیص جواب کی کلید"
         },
         "ip_address_cards_and_delivery_type_cards/coursef/2022": {
           "name": "IP ایڈریس کارڈز اور ڈیلیوری ٹائپ کارڈز",
-          "url": "https://docs.google.com/document/d/1wnDD_Jm7JOApWQ5aPOcZVag4_h7lhBpl-QbCFIZAz6o/edit"
+          "url": "https://docs.google.com/document/d/1wnDD_Jm7JOApWQ5aPOcZVag4_h7lhBpl-QbCFIZAz6o/edit",
+          "type": "جوڑ توڑ"
         },
         "the_internet/coursef/2022": {
           "name": "انٹرنیٹ",
@@ -586,7 +606,8 @@
         },
         "functions_unplugged_songwriting/coursee/2022": {
           "name": "فنکشنز ان پلگ: نغمہ نگاری۔",
-          "url": "https://www.youtube.com/watch?v=QuIMLel1mmw"
+          "url": "https://www.youtube.com/watch?v=QuIMLel1mmw",
+          "type": "ایکشن ویڈیو میں سبق"
         },
         "functions_unplugged_songwriting_1/coursee/2022": {
           "name": "فنکشنز ان پلگ: نغمہ نگاری۔",
@@ -600,7 +621,8 @@
         },
         "functions_unplugged_songwriting_3/coursee/2022": {
           "name": "فنکشنز ان پلگ: نغمہ نگاری۔",
-          "url": "https://docs.google.com/document/d/1L9YwWrsDBbTOZEVFCBhDxIIrYjkzZY3o1ZARKqa6lxw/edit"
+          "url": "https://docs.google.com/document/d/1L9YwWrsDBbTOZEVFCBhDxIIrYjkzZY3o1ZARKqa6lxw/edit",
+          "type": "تشخیص جواب کی کلید"
         },
         "songwriting_with_functions/coursee/2022": {
           "name": "فنکشنز کے ساتھ گانا لکھنا",
@@ -609,7 +631,8 @@
         },
         "unplugged_blocks_courses_c-f_/coursee/2022": {
           "name": " ان پلگڈ بلاکس (کورسز C-F)",
-          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
+          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit",
+          "type": "جوڑ توڑ"
         },
         "types_of_disabilities/coursee/2022": {
           "name": "معذوری کی اقسام",
@@ -736,7 +759,8 @@
         },
         "unplugged_blockly_blocks_grades_k-1_/courseb/2022": {
           "name": "ان پلگڈ بلاکی بلاکس (گریڈز K-1)",
-          "url": "https://docs.google.com/presentation/d/1PoSQZUCUj6yw6g1yZImaHu5Gn4Gdok0iDmrrmXInavQ/edit"
+          "url": "https://docs.google.com/presentation/d/1PoSQZUCUj6yw6g1yZImaHu5Gn4Gdok0iDmrrmXInavQ/edit",
+          "type": "جوڑ توڑ"
         },
         "wiggles_-_gonoodle/courseb/2022": {
           "name": "Wiggles - GoNoodle",
@@ -755,7 +779,8 @@
         },
         "happy_map_game_pieces/courseb/2022": {
           "name": "Happy Map کھیل کے حصے",
-          "url": "https://docs.google.com/document/d/19dHJCfmQNs3meKN3sTL91qsfmHYjZCYfbFq91J4fj3k/edit"
+          "url": "https://docs.google.com/document/d/19dHJCfmQNs3meKN3sTL91qsfmHYjZCYfbFq91J4fj3k/edit",
+          "type": "جوڑ توڑ"
         },
         "stevie_and_the_big_project/courseb/2022": {
           "name": "سٹیوی اور بگ پروجیکٹ",
@@ -784,11 +809,13 @@
         },
         "getting_loopy_3/courseb/2022": {
           "name": "لوپی حاصل کرنا",
-          "url": "https://docs.google.com/document/d/15YLSUX5TT6P9nRKW4tA0f9weEe0Qs4wV5Ylu08wzXFs/edit"
+          "url": "https://docs.google.com/document/d/15YLSUX5TT6P9nRKW4tA0f9weEe0Qs4wV5Ylu08wzXFs/edit",
+          "type": "تشخیص جواب کی کلید"
         },
         "cs_fundamentals_main_activity_tips/courseb/2022": {
           "name": "CS کے بنیادی اصول سرگرمی کے اہم نکات",
-          "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing"
+          "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing",
+          "type": "سبق کی سفارشات"
         },
         "pause_and_think_online/courseb/2022": {
           "name": "رکیں اور سوچیں آن لائن",
@@ -810,7 +837,8 @@
         },
         "the_big_event_2/courseb/2022": {
           "name": "بڑی تقریب",
-          "url": "https://docs.google.com/document/d/1VU2rC918ZY6DM2hunN6FsiDUW6Q1vEqyiJAPWQ6aoX8/edit"
+          "url": "https://docs.google.com/document/d/1VU2rC918ZY6DM2hunN6FsiDUW6Q1vEqyiJAPWQ6aoX8/edit",
+          "type": "تشخیص جواب کی کلید"
         },
         "the_big_event_courses_a_b_/courseb/2022": {
           "name": "بڑا ایونٹ (کورسز A، B)",
@@ -907,6 +935,7 @@
           "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
         },
         "text_and_prompts/express/2022": {
+          "name": "متن اور اشارے",
           "url": "https://docs.google.com/presentation/d/1ImZg6MHmaj5ouvrYdgsungbeLXRDAu106-NXOroJg14/template/preview",
           "type": "سلائیڈز"
         },
@@ -1054,7 +1083,8 @@
         },
         "happy_map_game_pieces/coursea/2022": {
           "name": "Happy Map کھیل کے حصے",
-          "url": "https://docs.google.com/document/d/19dHJCfmQNs3meKN3sTL91qsfmHYjZCYfbFq91J4fj3k/edit"
+          "url": "https://docs.google.com/document/d/19dHJCfmQNs3meKN3sTL91qsfmHYjZCYfbFq91J4fj3k/edit",
+          "type": "جوڑ توڑ"
         },
         "happy_maps/coursea/2022": {
           "name": "مبارک نقشے",
@@ -1063,7 +1093,8 @@
         },
         "unplugged_blockly_blocks_grades_k-1_/coursea/2022": {
           "name": "ان پلگڈ بلاکی بلاکس (گریڈز K-1)",
-          "url": "https://docs.google.com/presentation/d/1PoSQZUCUj6yw6g1yZImaHu5Gn4Gdok0iDmrrmXInavQ/edit"
+          "url": "https://docs.google.com/presentation/d/1PoSQZUCUj6yw6g1yZImaHu5Gn4Gdok0iDmrrmXInavQ/edit",
+          "type": "جوڑ توڑ"
         },
         "wiggles_-_gonoodle/coursea/2022": {
           "name": "Wiggles - GoNoodle",
@@ -1092,7 +1123,8 @@
         },
         "happy_map_game_pieces_bonus_pack/coursea/2022": {
           "name": "Happy Map گیم پیسز بونس پیک",
-          "url": "https://docs.google.com/document/d/14qEVzSR7pr0slqkRn2WM8XxVyeDhdmfhtsmTrERCTNs/edit"
+          "url": "https://docs.google.com/document/d/14qEVzSR7pr0slqkRn2WM8XxVyeDhdmfhtsmTrERCTNs/edit",
+          "type": "جوڑ توڑ"
         },
         "feeling_faces/coursea/2022": {
           "name": "محسوس کرنے والے چہرے",
@@ -1126,7 +1158,8 @@
         },
         "the_big_event_2/coursea/2022": {
           "name": "بڑی تقریب",
-          "url": "https://docs.google.com/document/d/1VU2rC918ZY6DM2hunN6FsiDUW6Q1vEqyiJAPWQ6aoX8/edit"
+          "url": "https://docs.google.com/document/d/1VU2rC918ZY6DM2hunN6FsiDUW6Q1vEqyiJAPWQ6aoX8/edit",
+          "type": "تشخیص جواب کی کلید"
         },
         "the_big_event_courses_a_b_/coursea/2022": {
           "name": "بڑا ایونٹ (کورسز A، B)",
@@ -1198,7 +1231,8 @@
           "type": "سلائیڈز"
         },
         "my_robotic_friends/coursec/2022": {
-          "url": "https://docs.google.com/document/d/1jGz8znfkzhgZ3RNd7Kg1AnDZ2LZ7vjf7VujzPz_84b4/edit"
+          "url": "https://docs.google.com/document/d/1jGz8znfkzhgZ3RNd7Kg1AnDZ2LZ7vjf7VujzPz_84b4/edit",
+          "type": "کپ وقفہ"
         },
         "my_robotic_friends_1/coursec/2022": {
           "url": "https://docs.google.com/document/d/1D8W0FETv5OBGj-Fl8gJGHruSvbAhoEtCs6SZxSkKOSc/edit",
@@ -1209,10 +1243,12 @@
           "type": "ان پلگڈ سرگرمی"
         },
         "my_robotic_friends_3/coursec/2022": {
-          "url": "https://docs.google.com/document/d/1cq6CvIuCrpS9MfRySO1070uXZ238OuXcqou1mfjV7BM/edit"
+          "url": "https://docs.google.com/document/d/1cq6CvIuCrpS9MfRySO1070uXZ238OuXcqou1mfjV7BM/edit",
+          "type": "کپ اسٹیکنگ خیالات"
         },
         "my_robotic_friends_4/coursec/2022": {
-          "url": "https://docs.google.com/document/d/1go_BJorY8OzmqWyB5z8_FY7bbPCWg1ZBxfjewU0nMmA/edit"
+          "url": "https://docs.google.com/document/d/1go_BJorY8OzmqWyB5z8_FY7bbPCWg1ZBxfjewU0nMmA/edit",
+          "type": "کاغذ ٹریپیزاوڈ سانچے"
         },
         "maze_bridging_page/coursec/2022": {
           "name": "بھول بھلیا بریجنگ صفحہ",
@@ -1220,11 +1256,13 @@
         },
         "unplugged_maze_blocks/coursec/2022": {
           "name": "ان پلگڈ بھول بھلیا بلاکس",
-          "url": "https://docs.google.com/presentation/d/1k_7SSLsm-E4aisa9-LmbsCVzH6J-8yGD9T2LwPb2v48/edit"
+          "url": "https://docs.google.com/presentation/d/1k_7SSLsm-E4aisa9-LmbsCVzH6J-8yGD9T2LwPb2v48/edit",
+          "type": "جوڑ توڑ"
         },
         "cs_fundamentals_main_activity_tips/coursec/2022": {
           "name": "CS کے بنیادی اصول سرگرمی کے اہم نکات",
-          "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing"
+          "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing",
+          "type": "سبق کی سفارشات"
         },
         "debugging_guide/coursec/2022": {
           "name": "ڈیبگنگ گائیڈ",
@@ -1238,7 +1276,8 @@
         },
         "unplugged_blocks_courses_c-f_/coursec/2022": {
           "name": " ان پلگڈ بلاکس (کورسز C-F)",
-          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
+          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit",
+          "type": "جوڑ توڑ"
         },
         "artist_introduction/coursec/2022": {
           "name": "آرٹسٹ کا تعارف",
@@ -1267,7 +1306,8 @@
         },
         "the_big_event_2/coursec/2022": {
           "name": "بڑی تقریب",
-          "url": "https://docs.google.com/document/d/1VU2rC918ZY6DM2hunN6FsiDUW6Q1vEqyiJAPWQ6aoX8/edit"
+          "url": "https://docs.google.com/document/d/1VU2rC918ZY6DM2hunN6FsiDUW6Q1vEqyiJAPWQ6aoX8/edit",
+          "type": "تشخیص جواب کی کلید"
         },
         "the_big_event_course_c_/coursec/2022": {
           "name": "بڑا ایونٹ (کورس C)",
@@ -1305,7 +1345,8 @@
         },
         "binary_bracelets_1/coursec/2022": {
           "name": "ثنائی کمگن",
-          "url": "https://www.youtube.com/watch?v=fDLkBqZpxWQ"
+          "url": "https://www.youtube.com/watch?v=fDLkBqZpxWQ",
+          "type": "ایکشن ویڈیو میں سبق"
         },
         "binary_bracelets_2/coursec/2022": {
           "name": "ثنائی کمگن",
@@ -1319,7 +1360,8 @@
         },
         "binary_bracelets_4/coursec/2022": {
           "name": "ثنائی کمگن",
-          "url": "https://docs.google.com/document/d/1EaTbrdNbGpY_mI-FfV0GZ2uHSfcQIGuAkXqd1qFkUbE/edit"
+          "url": "https://docs.google.com/document/d/1EaTbrdNbGpY_mI-FfV0GZ2uHSfcQIGuAkXqd1qFkUbE/edit",
+          "type": "تشخیص جواب کی کلید"
         },
         "bits_versus_bytes/coursec/2022": {
           "name": "بٹس بمقابلہ بائٹس",
@@ -1333,7 +1375,8 @@
         },
         "play_lab_project_planning_guide_exemplar_/coursec/2022": {
           "name": "پلے لیب پروجیکٹ پلاننگ گائیڈ (مثالی)",
-          "url": "https://docs.google.com/document/d/1CKzMi1JfhUpwfu8JMllUvKwlgJZaw7RQ6pLp6fu0H_I/edit?usp=sharing"
+          "url": "https://docs.google.com/document/d/1CKzMi1JfhUpwfu8JMllUvKwlgJZaw7RQ6pLp6fu0H_I/edit?usp=sharing",
+          "type": "سبق وسائل"
         },
         "teacher_forum/csd/2022": {
           "name": "ٹیچر فورم"
@@ -2755,10 +2798,12 @@
           "type": "وسیلہ"
         },
         "exploring_apps/coursef/2021": {
+          "name": "ایپس کی تلاش",
           "url": "https://docs.google.com/document/d/1CMFO9cWrBa0E97raNZnEXHC5e2WHrprMokSW5jmJzDs/template/preview",
           "type": "وسیلہ"
         },
         "exploring_apps_1/coursef/2021": {
+          "name": "ایپس کی تلاش",
           "url": "https://docs.google.com/document/d/1Vjn1DhjZm17C-Hde97yDHyeFxMzdPlR6Q-rESZgHw2s/template/preview",
           "type": "جوابی کلید"
         },
@@ -2812,10 +2857,12 @@
           "type": "ہینڈ آؤٹ"
         },
         "blank_space_stories/coursef/2021": {
+          "name": "خالی خلائی کہانیاں",
           "url": "https://docs.google.com/document/d/1mXI-U7ve1JjDchlyhjD53pkdSXKqeMemb7upFGareV4/template/preview",
           "type": "جوابی کلید"
         },
         "blank_space_stories_-_worksheet/coursef/2021": {
+          "name": "خالی خلائی کہانیاں",
           "url": "https://docs.google.com/document/d/1fJNyI0WQTi-Q-XMZDn9sIgD_o6KjGHwZesQRa93ko5E/template/preview"
         },
         "variables_blank_space_stories/coursef/2021": {
@@ -2824,6 +2871,7 @@
           "type": "سلائیڈز"
         },
         "text_and_prompts/coursef/2021": {
+          "name": "متن اور اشارے",
           "url": "https://docs.google.com/presentation/d/1ImZg6MHmaj5ouvrYdgsungbeLXRDAu106-NXOroJg14/template/preview",
           "type": "سلائیڈز"
         },
@@ -2873,7 +2921,8 @@
         },
         "lesson-in-action-for-loop-fun/coursef/2021": {
           "name": "لوپ تفریح کے لئے",
-          "url": "https://www.youtube.com/watch?v=HO4uhoahtjM"
+          "url": "https://www.youtube.com/watch?v=HO4uhoahtjM",
+          "type": "ایکشن ویڈیو میں سبق"
         },
         "unplugged-video-for-loop-fun/coursef/2021": {
           "name": "لوپ تفریح کے لئے",
@@ -2882,9 +2931,11 @@
         },
         "course-cf-blockly-blocks/coursef/2021": {
           "name": " ان پلگڈ بلاکس (کورسز C-F)",
-          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
+          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit",
+          "type": "جوڑ توڑ"
         },
         "running-simulations/coursef/2021": {
+          "name": "مجازی چل رہا ہے",
           "url": "https://docs.google.com/document/d/1sgUd9UcthM3M-A1EKX1m3AwsgLrivx0jF0i-e_79kk8/edit",
           "type": "ورک شیٹ"
         },
@@ -2905,7 +2956,8 @@
         },
         "assessment-answer-internet/coursef/2021": {
           "name": "انٹرنیٹ",
-          "url": "https://docs.google.com/document/d/1uUY1zm6d7LZySpXzW9CFZaI8tcY4fzw_-w3Z2WbKVwI/edit"
+          "url": "https://docs.google.com/document/d/1uUY1zm6d7LZySpXzW9CFZaI8tcY4fzw_-w3Z2WbKVwI/edit",
+          "type": "تشخیص جواب کی کلید"
         },
         "csf-internet-assessment/coursef/2021": {
           "name": "انٹرنیٹ",
@@ -2914,7 +2966,8 @@
         },
         "csf-ip-address-cards-and-delivery-type-cards/coursef/2021": {
           "name": "IP ایڈریس کارڈز اور ڈیلیوری ٹائپ کارڈز",
-          "url": "https://docs.google.com/document/d/1wnDD_Jm7JOApWQ5aPOcZVag4_h7lhBpl-QbCFIZAz6o/edit"
+          "url": "https://docs.google.com/document/d/1wnDD_Jm7JOApWQ5aPOcZVag4_h7lhBpl-QbCFIZAz6o/edit",
+          "type": "جوڑ توڑ"
         },
         "get-site-ip-com/coursef/2021": {
           "name": "get-site-ip-com",
@@ -2928,7 +2981,8 @@
         },
         "design-process/coursef/2021": {
           "name": "ڈیزائن کا پروسیس",
-          "url": "https://docs.google.com/document/d/18hBG-cWRYOkpNXFelRFUVgRrMd4XQsvZziH-mtNKbec/"
+          "url": "https://docs.google.com/document/d/18hBG-cWRYOkpNXFelRFUVgRrMd4XQsvZziH-mtNKbec/",
+          "type": "استاد تیار گائیڈ"
         },
         "final-project-design-worksheet/coursef/2021": {
           "name": "فائنل پروجیکٹ ڈیزائن",
@@ -3050,7 +3104,8 @@
         },
         "course-ab-blockly-blocks/courseb/2021": {
           "name": "ان پلگڈ بلاکی بلاکس (گریڈز K-1)",
-          "url": "https://docs.google.com/presentation/d/1PoSQZUCUj6yw6g1yZImaHu5Gn4Gdok0iDmrrmXInavQ/edit"
+          "url": "https://docs.google.com/presentation/d/1PoSQZUCUj6yw6g1yZImaHu5Gn4Gdok0iDmrrmXInavQ/edit",
+          "type": "جوڑ توڑ"
         },
         "feeling-faces-image/courseb/2021": {
           "name": "محسوس کرنے والے چہرے",
@@ -3083,7 +3138,8 @@
         },
         "happy-map-game-pieces/courseb/2021": {
           "name": "Happy Map کھیل کے حصے",
-          "url": "https://docs.google.com/document/d/19dHJCfmQNs3meKN3sTL91qsfmHYjZCYfbFq91J4fj3k/edit"
+          "url": "https://docs.google.com/document/d/19dHJCfmQNs3meKN3sTL91qsfmHYjZCYfbFq91J4fj3k/edit",
+          "type": "جوڑ توڑ"
         },
         "stevie_and_the_big_project/courseb/2021": {
           "name": "سٹیوی اور بگ پروجیکٹ",
@@ -3097,7 +3153,8 @@
         },
         "assessment-answer-getting-loopy/courseb/2021": {
           "name": "لوپی حاصل کرنا",
-          "url": "https://docs.google.com/document/d/15YLSUX5TT6P9nRKW4tA0f9weEe0Qs4wV5Ylu08wzXFs/edit"
+          "url": "https://docs.google.com/document/d/15YLSUX5TT6P9nRKW4tA0f9weEe0Qs4wV5Ylu08wzXFs/edit",
+          "type": "تشخیص جواب کی کلید"
         },
         "csf-getting-loopy-activity-worksheet/courseb/2021": {
           "name": "لوپی حاصل کرنا",
@@ -3116,7 +3173,8 @@
         },
         "csf-lesson-recommend/courseb/2021": {
           "name": "CS کے بنیادی اصول سرگرمی کے اہم نکات",
-          "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing"
+          "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing",
+          "type": "سبق کی سفارشات"
         },
         "common-sense-media-pause-think/courseb/2021": {
           "name": "رکیں اور سوچیں آن لائن",
@@ -3129,7 +3187,8 @@
         },
         "assessment-answer-big-event/courseb/2021": {
           "name": "بڑی تقریب",
-          "url": "https://docs.google.com/document/d/1VU2rC918ZY6DM2hunN6FsiDUW6Q1vEqyiJAPWQ6aoX8/edit"
+          "url": "https://docs.google.com/document/d/1VU2rC918ZY6DM2hunN6FsiDUW6Q1vEqyiJAPWQ6aoX8/edit",
+          "type": "تشخیص جواب کی کلید"
         },
         "csf-the-big-event-assessment/courseb/2021": {
           "name": "بڑی تقریب",
@@ -3267,7 +3326,8 @@
         },
         "happy-map-game-pieces/coursea/2021": {
           "name": "Happy Map کھیل کے حصے",
-          "url": "https://docs.google.com/document/d/19dHJCfmQNs3meKN3sTL91qsfmHYjZCYfbFq91J4fj3k/edit"
+          "url": "https://docs.google.com/document/d/19dHJCfmQNs3meKN3sTL91qsfmHYjZCYfbFq91J4fj3k/edit",
+          "type": "جوڑ توڑ"
         },
         "unplugged-video-happy-maps/coursea/2021": {
           "name": "مبارک نقشے",
@@ -3281,7 +3341,8 @@
         },
         "course-ab-blockly-blocks/coursea/2021": {
           "name": "ان پلگڈ بلاکی بلاکس (گریڈز K-1)",
-          "url": "https://docs.google.com/presentation/d/1PoSQZUCUj6yw6g1yZImaHu5Gn4Gdok0iDmrrmXInavQ/edit"
+          "url": "https://docs.google.com/presentation/d/1PoSQZUCUj6yw6g1yZImaHu5Gn4Gdok0iDmrrmXInavQ/edit",
+          "type": "جوڑ توڑ"
         },
         "wiggles_-_gonoodle/coursea/2021": {
           "name": "Wiggles - GoNoodle",
@@ -3315,7 +3376,8 @@
         },
         "happy-map-game-pieces-bonus-pack/coursea/2021": {
           "name": "Happy Map گیم پیسز بونس پیک",
-          "url": "https://docs.google.com/document/d/14qEVzSR7pr0slqkRn2WM8XxVyeDhdmfhtsmTrERCTNs/edit"
+          "url": "https://docs.google.com/document/d/14qEVzSR7pr0slqkRn2WM8XxVyeDhdmfhtsmTrERCTNs/edit",
+          "type": "جوڑ توڑ"
         },
         "feeling-faces-image/coursea/2021": {
           "name": "محسوس کرنے والے چہرے",
@@ -3354,7 +3416,8 @@
         },
         "assessment-answer-big-event/coursea/2021": {
           "name": "بڑی تقریب",
-          "url": "https://docs.google.com/document/d/1VU2rC918ZY6DM2hunN6FsiDUW6Q1vEqyiJAPWQ6aoX8/edit"
+          "url": "https://docs.google.com/document/d/1VU2rC918ZY6DM2hunN6FsiDUW6Q1vEqyiJAPWQ6aoX8/edit",
+          "type": "تشخیص جواب کی کلید"
         },
         "csf-the-big-event-assessment/coursea/2021": {
           "name": "بڑی تقریب",
@@ -3465,13 +3528,16 @@
           "type": "طالب علم کے لیے ہینڈ آؤٹ"
         },
         "csf-mrf-cup-spacing/coursec/2021": {
-          "url": "https://docs.google.com/document/d/1jGz8znfkzhgZ3RNd7Kg1AnDZ2LZ7vjf7VujzPz_84b4/edit"
+          "url": "https://docs.google.com/document/d/1jGz8znfkzhgZ3RNd7Kg1AnDZ2LZ7vjf7VujzPz_84b4/edit",
+          "type": "کپ وقفہ"
         },
         "csf-mrf-cup-stacking-ideas/coursec/2021": {
-          "url": "https://docs.google.com/document/d/1cq6CvIuCrpS9MfRySO1070uXZ238OuXcqou1mfjV7BM/edit"
+          "url": "https://docs.google.com/document/d/1cq6CvIuCrpS9MfRySO1070uXZ238OuXcqou1mfjV7BM/edit",
+          "type": "کپ اسٹیکنگ خیالات"
         },
         "csf-mrf-paper-trapezoid-template/coursec/2021": {
-          "url": "https://docs.google.com/document/d/1go_BJorY8OzmqWyB5z8_FY7bbPCWg1ZBxfjewU0nMmA/edit"
+          "url": "https://docs.google.com/document/d/1go_BJorY8OzmqWyB5z8_FY7bbPCWg1ZBxfjewU0nMmA/edit",
+          "type": "کاغذ ٹریپیزاوڈ سانچے"
         },
         "csf-mrf-symbol-key/coursec/2021": {
           "url": "https://docs.google.com/document/d/1D8W0FETv5OBGj-Fl8gJGHruSvbAhoEtCs6SZxSkKOSc/edit",
@@ -3487,11 +3553,13 @@
         },
         "unplugged-maze-blocks/coursec/2021": {
           "name": "ان پلگڈ بھول بھلیا بلاکس",
-          "url": "https://docs.google.com/presentation/d/1k_7SSLsm-E4aisa9-LmbsCVzH6J-8yGD9T2LwPb2v48/edit"
+          "url": "https://docs.google.com/presentation/d/1k_7SSLsm-E4aisa9-LmbsCVzH6J-8yGD9T2LwPb2v48/edit",
+          "type": "جوڑ توڑ"
         },
         "csf-lesson-recommend/coursec/2021": {
           "name": "CS کے بنیادی اصول سرگرمی کے اہم نکات",
-          "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing"
+          "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing",
+          "type": "سبق کی سفارشات"
         },
         "debugging_guide/coursec/2021": {
           "name": "ڈیبگنگ گائیڈ",
@@ -3505,7 +3573,8 @@
         },
         "course-cf-blockly-blocks/coursec/2021": {
           "name": " ان پلگڈ بلاکس (کورسز C-F)",
-          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
+          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit",
+          "type": "جوڑ توڑ"
         },
         "csf-artist-intro-video/coursec/2021": {
           "name": "آرٹسٹ کا تعارف",
@@ -3529,7 +3598,8 @@
         },
         "assessment-answer-big-event/coursec/2021": {
           "name": "بڑی تقریب",
-          "url": "https://docs.google.com/document/d/1VU2rC918ZY6DM2hunN6FsiDUW6Q1vEqyiJAPWQ6aoX8/edit"
+          "url": "https://docs.google.com/document/d/1VU2rC918ZY6DM2hunN6FsiDUW6Q1vEqyiJAPWQ6aoX8/edit",
+          "type": "تشخیص جواب کی کلید"
         },
         "csf-the-big-event-assessment/coursec/2021": {
           "name": "بڑی تقریب",
@@ -3568,7 +3638,8 @@
         },
         "assessment-answer-binary-bracelets/coursec/2021": {
           "name": "ثنائی کمگن",
-          "url": "https://docs.google.com/document/d/1EaTbrdNbGpY_mI-FfV0GZ2uHSfcQIGuAkXqd1qFkUbE/edit"
+          "url": "https://docs.google.com/document/d/1EaTbrdNbGpY_mI-FfV0GZ2uHSfcQIGuAkXqd1qFkUbE/edit",
+          "type": "تشخیص جواب کی کلید"
         },
         "csf-binary-bracelets-activity/coursec/2021": {
           "name": "ثنائی کمگن",
@@ -3587,7 +3658,8 @@
         },
         "lesson-in-action-binary-bracelets/coursec/2021": {
           "name": "ثنائی کمگن",
-          "url": "https://www.youtube.com/watch?v=fDLkBqZpxWQ"
+          "url": "https://www.youtube.com/watch?v=fDLkBqZpxWQ",
+          "type": "ایکشن ویڈیو میں سبق"
         },
         "unplugged-video-binary-bracelets/coursec/2021": {
           "name": "ثنائی کمگن",
@@ -3601,7 +3673,8 @@
         },
         "play-lab-project-planning-guide-exemplar/coursec/2021": {
           "name": "پلے لیب پروجیکٹ پلاننگ گائیڈ (مثالی)",
-          "url": "https://docs.google.com/document/d/1CKzMi1JfhUpwfu8JMllUvKwlgJZaw7RQ6pLp6fu0H_I/edit?usp=sharing"
+          "url": "https://docs.google.com/document/d/1CKzMi1JfhUpwfu8JMllUvKwlgJZaw7RQ6pLp6fu0H_I/edit?usp=sharing",
+          "type": "سبق وسائل"
         },
         "2021_change_log/coursed/2021": {
           "name": "2021 تبدیلی لاگ",
@@ -3659,18 +3732,22 @@
           "type": "وسیلہ"
         },
         "password_power-up_if_then_scenarios/coursed/2021": {
+          "name": "پاس ورڈ پاور اپ: اگر... پھر... منظرنامے",
           "url": "https://docs.google.com/document/d/1JeZtFU6hMFTYITAAPaA_CRmOVknvkcKZQszL6u7DRG4/edit",
           "type": "ہینڈ آؤٹ"
         },
         "password_power-up_if_then_scenarios_answer_key/coursed/2021": {
+          "name": "پاس ورڈ پاور اپ: اگر... پھر... منظرنامے",
           "url": "https://docs.google.com/document/d/1yrL1rD9eCSEYAvsM8XiL5g-uKpqizYwAk73_6ddZOAQ/edit",
           "type": "جوابی کلید"
         },
         "password_power-up_lesson_quiz/coursed/2021": {
+          "name": "پاس ورڈ پاور اپ: سبق کوئز",
           "url": "https://docs.google.com/forms/d/1OBS37DZUmIxM4ZciCD6qWFMam3_u8djgZNJd9IOK6Zs/copy",
           "type": "وسیلہ"
         },
         "password_power-up_lesson_quiz_answer_key/coursed/2021": {
+          "name": "پاس ورڈ پاور اپ: سبق کوئز",
           "url": "https://www.commonsense.org/education/digital-citizenship/quiz/password-power-up-lesson-quiz",
           "type": "جوابی کلید"
         },
@@ -3696,7 +3773,8 @@
         },
         "assessment-answer-graph-paper/coursed/2021": {
           "name": "گراف کاغذ پروگرامنگ",
-          "url": "https://docs.google.com/document/d/1GXFjDtRjaK8mTnFGb33kT-u72_rXfUh_TyfP7N7Pen4/edit"
+          "url": "https://docs.google.com/document/d/1GXFjDtRjaK8mTnFGb33kT-u72_rXfUh_TyfP7N7Pen4/edit",
+          "type": "تشخیص جواب کی کلید"
         },
         "csf-graph-paper-programming-assessment/coursed/2021": {
           "name": "گراف کاغذ پروگرامنگ",
@@ -3710,7 +3788,8 @@
         },
         "lesson-in-action-graph-paper/coursed/2021": {
           "name": "گراف کاغذ پروگرامنگ",
-          "url": "https://www.youtube.com/watch?v=vBUtejDNvrs"
+          "url": "https://www.youtube.com/watch?v=vBUtejDNvrs",
+          "type": "ایکشن ویڈیو میں سبق"
         },
         "unplugged-video-graph-paper/coursed/2021": {
           "name": "گراف کاغذ پروگرامنگ",
@@ -3739,7 +3818,8 @@
         },
         "relay-programming-teacher-debugging/coursed/2021": {
           "name": "ریلے پروگرامنگ",
-          "url": "https://docs.google.com/document/d/1UyiAK9sxuMP3AWjbP0TlsMahNa98LxJwyGWKhcdYpig/edit"
+          "url": "https://docs.google.com/document/d/1UyiAK9sxuMP3AWjbP0TlsMahNa98LxJwyGWKhcdYpig/edit",
+          "type": "ٹیچر ڈیبگنگ تصویر"
         },
         "teacher-video-relay-programming-2/coursed/2021": {
           "name": "ریلے پروگرامنگ",
@@ -3753,7 +3833,8 @@
         },
         "course-cf-blockly-blocks/coursed/2021": {
           "name": " ان پلگڈ بلاکس (کورسز C-F)",
-          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
+          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit",
+          "type": "جوڑ توڑ"
         },
         "events-in-bounce-how-do-they-happen/coursed/2021": {
           "name": "باونس میں ایونٹس - وہ کیسے ہوتے ہیں؟",
@@ -3784,6 +3865,7 @@
           "type": "ورک شیٹ"
         },
         "dance_party_unplugged/coursed/2021": {
+          "name": "رقص پارٹی: ان پلگ",
           "url": "https://studio.code.org/s/dance-unplugged/lessons/1",
           "type": "وسیلہ"
         },
@@ -3803,10 +3885,12 @@
           "type": "ویڈیو"
         },
         "assessment-answer-conditionals-cards/coursed/2021": {
-          "url": "https://docs.google.com/document/d/1SsfkUoEg316vjBSxrRNLN4q4V2-yYW8HAK4m9snLtac/edit"
+          "url": "https://docs.google.com/document/d/1SsfkUoEg316vjBSxrRNLN4q4V2-yYW8HAK4m9snLtac/edit",
+          "type": "تشخیص جواب کی کلید"
         },
         "conditionals-with-cards-assessment-video/coursed/2021": {
-          "url": "https://youtu.be/TbUaEnAYPjI"
+          "url": "https://youtu.be/TbUaEnAYPjI",
+          "type": "تشخیص ویڈیو"
         },
         "csf-conditionals-with-cards-assessment/coursed/2021": {
           "url": "https://docs.google.com/document/d/1LAJIGKZkVE8Hx68qJZxOUyQ0iw1jhgIWSMGh_fv5zN0/edit",
@@ -3814,10 +3898,12 @@
         },
         "csf-conditionals-with-cards-sample-program/coursed/2021": {
           "name": "کارڈ سیمپل پروگرام کے ساتھ کنڈیشنلز",
-          "url": "https://docs.google.com/document/d/151s4_0NuDhuzprjPGlDubPZodeJQCEJElsvdkSSqzPM/edit"
+          "url": "https://docs.google.com/document/d/151s4_0NuDhuzprjPGlDubPZodeJQCEJElsvdkSSqzPM/edit",
+          "type": "استاد تیار گائیڈ"
         },
         "lesson-in-action-conditional-cards/coursed/2021": {
-          "url": "https://www.youtube.com/watch?v=2m2Rn9VxHfU"
+          "url": "https://www.youtube.com/watch?v=2m2Rn9VxHfU",
+          "type": "ایکشن ویڈیو میں سبق"
         },
         "unplugged-video-conditionals-cards/coursed/2021": {
           "url": "https://youtu.be/UymN4lTL50s",
@@ -3942,6 +4028,7 @@
           "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
         },
         "text_and_prompts/express/2021": {
+          "name": "متن اور اشارے",
           "url": "https://docs.google.com/presentation/d/1ImZg6MHmaj5ouvrYdgsungbeLXRDAu106-NXOroJg14/template/preview",
           "type": "سلائیڈز"
         },
@@ -4068,6 +4155,7 @@
           "type": "وسیلہ"
         },
         "follow_the_algorithm/coursee/2021": {
+          "name": "الگورتھم کی پیروی کریں",
           "url": "https://docs.google.com/presentation/d/16r9HpwQodVnmSfRlfJmOfZajqE66YlZz0aG60CFsVMk/template/preview",
           "type": "سلائیڈز"
         },
@@ -4144,7 +4232,8 @@
         },
         "assessment-answer-songwriting/coursee/2021": {
           "name": "فنکشنز ان پلگ: نغمہ نگاری۔",
-          "url": "https://docs.google.com/document/d/1L9YwWrsDBbTOZEVFCBhDxIIrYjkzZY3o1ZARKqa6lxw/edit"
+          "url": "https://docs.google.com/document/d/1L9YwWrsDBbTOZEVFCBhDxIIrYjkzZY3o1ZARKqa6lxw/edit",
+          "type": "تشخیص جواب کی کلید"
         },
         "csf-songwriting-assessment/coursee/2021": {
           "name": "فنکشنز ان پلگ: نغمہ نگاری۔",
@@ -4158,7 +4247,8 @@
         },
         "lesson-in-action-songwriting/coursee/2021": {
           "name": "فنکشنز ان پلگ: نغمہ نگاری۔",
-          "url": "https://www.youtube.com/watch?v=QuIMLel1mmw"
+          "url": "https://www.youtube.com/watch?v=QuIMLel1mmw",
+          "type": "ایکشن ویڈیو میں سبق"
         },
         "unplugged-video-songwriting-functions/coursee/2021": {
           "name": "فنکشنز کے ساتھ گانا لکھنا",
@@ -4167,7 +4257,8 @@
         },
         "course-cf-blockly-blocks/coursee/2021": {
           "name": " ان پلگڈ بلاکس (کورسز C-F)",
-          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
+          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit",
+          "type": "جوڑ توڑ"
         },
         "designing_for_accessibility_1/coursee/2021": {
           "url": "https://docs.google.com/presentation/d/1hgMk91Ij1UxeobZ74uMiucJ0261yaHf5WLU9ItoQKZA/template/preview",
@@ -4185,7 +4276,8 @@
         },
         "design-process/coursee/2021": {
           "name": "ڈیزائن کا پروسیس",
-          "url": "https://docs.google.com/document/d/18hBG-cWRYOkpNXFelRFUVgRrMd4XQsvZziH-mtNKbec/"
+          "url": "https://docs.google.com/document/d/18hBG-cWRYOkpNXFelRFUVgRrMd4XQsvZziH-mtNKbec/",
+          "type": "استاد تیار گائیڈ"
         },
         "end-of-course-project-guide/coursee/2021": {
           "name": "کورس کے اختتام پراجیکٹ گائیڈ",

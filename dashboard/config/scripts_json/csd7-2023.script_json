@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-05-17 16:44:41 UTC",
+    "serialized_at": "2023-05-26 22:46:53 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -5480,7 +5480,7 @@
       "key": "1252d395-a94d-4da3-b791-53166b69774e",
       "position": 6,
       "properties": {
-        "description": "\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students log into Code Studio and open the first level. Students will spend most of the lesson exploring data in the first panel and recording their results on the activity guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Pass out \n[r numerical_data_in_ai_lab/csd/2023] to each student.",
+        "description": "\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students log into Code Studio and open the first level. Students will spend most of the lesson exploring data in the first panel and recording their results on the activity guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Pass out \n[r numerical_data_in_ai_lab_1/csd/2023] to each student.\n\n",
         "progression_name": "Safari Model"
       },
       "seeding_key": {
