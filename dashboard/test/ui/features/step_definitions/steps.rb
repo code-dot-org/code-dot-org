@@ -782,6 +782,7 @@ def element_exists?(selector)
 end
 
 def element_visible?(selector)
+  wait_for_jquery
   @browser.execute_script(jquery_is_element_visible(selector))
 end
 
