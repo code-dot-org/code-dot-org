@@ -39,9 +39,10 @@ def verify_progress(selector, test_result, no_wait=false)
   # checking to ensure progress is loaded and the bubble is the correct color.
   unless no_wait
     steps %{
-      And I wait for 2 seconds
+      And I wait for 1 seconds
       And I wait until jQuery Ajax requests are finished
       And I wait until jQuery animations are finished
+      And I wait for 1 seconds
     }
   end
 
