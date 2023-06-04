@@ -84,7 +84,7 @@
   "cscAdaptationsMissingGiraffe": "تأكد من ظهور حيوان زرافة في بداية المشهد.",
   "cscAdaptationsMissingOctopus": "تأكد من ظهور كائن الأخطبوط في بداية المشهد.",
   "cscAdaptationsMoveOctopusToPlant": "لا تنس استخدام مفاتيح الأسهم لتحريك الأخطبوط الخاص بك للمس النبات بحيث يغير الزي لينسجم.",
-  "cscAdaptationsSeaweed": "تأكد من أن الأخطبوط الخاص بك يغير نفس لون الأعشاب البحرية التي يلمسها",
+  "cscAdaptationsRightArrowKey": "تأكد من الضغط على مفتاح السهم بعد الضغط على *\"تشغيل\"*. يمكنك النقر فوق الأزرار البرتقالية أسفل منطقة التشغيل أو الضغط على المفاتيح الموجودة على لوحة المفاتيح.",
   "cscAdaptationsSetBackground": "تأكد من تعيين خلفية.",
   "cscAdaptationsSetBehavior": "تأكد من تعيين سلوك الكائن بعد تعيين حجم الكائن.",
   "cscAdaptationsSetFastSpeed": "تأكد من ضبط سرعة شبح الفهد على السرعة.",

@@ -556,4 +556,16 @@ class RegistrationsControllerTest < ActionController::TestCase
     assert_select "a[href=?]", "/users/sign_in?user_return_to=%2Fusers%2Fedit"
     assert_select "a[href=?]", "/users/sign_up?user_return_to=%2Fusers%2Fedit"
   end
+
+  test "student-entered gender is saved and properly sets the normalized gender value" do
+    student = create :student, gender_student_input: "female"
+    assert_equal "female", student.gender_student_input
+    assert_equal "f", student.gender
+    sign_in student
+
+    put :update, params: {user: {gender_student_input: "male"}}
+    student.reload
+    assert_equal "male", student.gender_student_input
+    assert_equal "m", student.gender
+  end
 end
