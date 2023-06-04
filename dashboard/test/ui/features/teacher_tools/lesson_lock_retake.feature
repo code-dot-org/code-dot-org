@@ -129,6 +129,7 @@ Scenario: Lock settings for retake after submit scenario
   And I open the lesson lock dialog
   And I unlock the lesson for students
   And I wait until element ".modal-backdrop" is gone
+  And I wait until jQuery Ajax requests are finished
 
   # now editable, and student can see unsubmit button
 
