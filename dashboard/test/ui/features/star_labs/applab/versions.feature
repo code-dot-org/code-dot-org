@@ -18,7 +18,6 @@ Scenario: Script Level Versions
   And I ensure droplet is in block mode
   And I switch to text mode
   And I add code "// comment 2" to ace editor
-  And I wait for the event loop to settle
   Then ace editor code is equal to "// comment 2// comment 1"
   And I press "runButton"
   And element ".project_updated_at" eventually contains text "Saved"
