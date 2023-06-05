@@ -20,7 +20,7 @@ const MultipleSectionsAssigner = ({
   courseOfferingId,
   courseVersionId,
   scriptId,
-  reassignConfirm,
+  reassignConfirm = () => {},
   isOnCoursePage,
   isStandAloneUnit,
   participantAudience,
