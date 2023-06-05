@@ -283,7 +283,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
 
   test 'invalid params does not create section and returns an error' do
     sign_in @facilitator
-    
+
     assert_does_not_create(Section) do
       # As is, this will fail because the grade "PL" is not provided but
       # this test is meant to ensure a non-200 is returned when creating a section fails
@@ -291,7 +291,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
         login_type: Section::LOGIN_TYPE_EMAIL,
         participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher,
       }
- 
+
       assert_response :bad_request
     end
   end
