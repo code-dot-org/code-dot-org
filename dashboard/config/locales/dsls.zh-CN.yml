@@ -7564,6 +7564,11 @@ zh-CN:
 
 
 
+        teacher_markdown: "**请让您的学生完成此调查！**\n\n* 结果对我们（code.org）维持我们的课程并进行改进至关重要。\n*
+          还有一项教师调查，您可以在其中提供自己的意见，您会受到电子邮件通知。\n\n**查看结果** -- 课后调查略有不同。调查位于课程的单独单元中，此页面有链接。\n\n*
+          若要在您的教师控制面板中查看匿名调查结果，您需要 (1) 查看调查/评估，然后 (2) 选择课后调查单元作为您想查看的单元。  \n\n* **关于查看课后调查结果的更多说明**：[[google
+          doc](https://docs.google.com/document/d/1EQfPy0D6lSWA3s3d2hkgVLSRn1vrjLLXaZBSz3-E9aw)]
+          [[pdf](https://docs.google.com/document/d/1EQfPy0D6lSWA3s3d2hkgVLSRn1vrjLLXaZBSz3-E9aw/export?format=pdf)]\n\n\n\n\n"
       csd-post-survey-levelgroup-2018:
         title: 计算机科学发现课程 期末学生问卷
       csd-pre-survey-2017-levelgroup:
@@ -17555,3 +17560,34 @@ zh-CN:
         title: 人工智能和机器学习快速调查！
       aiml-intro-pulse-survey_2022:
         title: 人工智能和机器学习快速调查！
+      OPD-K5 Stage9Start_copy:
+        markdown: |
+          # 探索教师资源
+
+          是时候开始计划教学了。在这个阶段，我们将浏览Code.org平台和**<a href="http://studio.code.org/" target="blank" rel="noopener noreferrer">教师控制面板</a>**的其他区域。
+
+          教师控制面板的屏幕截图如下。您需要登录Code.org教师账户才能看到它。登录后，它应该是您在Code.org网站上看到的默认界面。如果您没有教师账户，可以**<a href="https://studio.code.org/users/sign_up" target="blank" rel="noopener noreferrer">在此处注册</a>**。
+
+          <a href="http://studio.code.org/" target="blank" rel="noopener noreferrer">![](https://images.code.org/d6345709495f764a71d9cb0994dbd7e4-image-1549064603589.png)</a>
+      Test Contained Retriable Multi:
+        answers:
+        - text: '0'
+        - text: '1'
+        - text: '2'
+          correct: true
+        - text: '4'
+        questions:
+        - {}
+      test-single-multi-standalone-retriable:
+        answers:
+        - text: 什么都不会发生。
+          feedback: 不正确。风滚草将开始翻滚
+        - text: 风滚草将飘浮到屏幕顶部
+          feedback: 不正确。风滚草将开始翻滚
+        - text: 风滚草将开始翻滚
+          correct: true
+          feedback: 叮咚！答对啦！
+        - text: 风滚草将忽明忽暗。
+          feedback: 不正确。风滚草将开始翻滚
+        questions:
+        - text: 仔细阅读下面的代码。 点击 "运行" 后，会发生什么？
