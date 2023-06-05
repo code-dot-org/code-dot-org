@@ -6,12 +6,16 @@
   "saveProgress": "Зберегти",
   "correctAnswer": "Правильно",
   "incorrectAnswer": "Неправильно",
+  "modelCardLabel": "Мітка",
   "modelCardPossibleValuesMinimum": "мінімум",
   "modelCardPossibleValuesMaximum": "максимум",
+  "modelCardFeatures": "Ознаки",
   "columnInspectorDescription": "Опис",
   "columnDetailsMinimumValue": "мінімум",
   "columnDetailsMaximumValue": "максимум",
   "dataCardLastUpdated": "Останнє оновлення",
+  "trainModelHeading": "Тренування",
+  "resultsTableFeatureHeader": "Ознаки",
   "datasets": {
     "medical_priority": {
       "fields": {
