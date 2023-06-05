@@ -75,5 +75,20 @@ describe('Testing CdoFieldDropdown function - getUpdateOptionsFromConfig', () =>
         ['giraffe', "'GIRAFFE'"],
       ]);
     });
+
+    it('Config has an option for which human-readable string is different from language-neutral string', () => {
+      const config = "'scale', 'rotation'";
+      const menuGenerator = [
+        ['size', "'scale'"],
+        ['rotation', "'rotation'"],
+        ['direction', "'direction'"],
+      ];
+      const options = getUpdatedOptionsFromConfig(config, menuGenerator);
+
+      expect(options).to.deep.equal([
+        ['size', "'scale'"],
+        ['rotation', "'rotation'"],
+      ]);
+    });
   });
 });
