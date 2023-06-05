@@ -153,6 +153,8 @@ class ApplicationController < ActionController::Base
     :parent_email_preference_opt_in_required,
     :parent_email_preference_opt_in,
     :parent_email_preference_email,
+    :us_state,
+    :country_code,
     {school_info_attributes: SCHOOL_INFO_ATTRIBUTES},
   ]
 
