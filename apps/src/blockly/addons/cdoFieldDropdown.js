@@ -90,9 +90,15 @@ export default class CdoFieldDropdown extends GoogleBlockly.FieldDropdown {
     // See CDO implementation at https://github.com/code-dot-org/blockly/blob/main/core/ui/fields/field_dropdown.js#L305
     this.config = element.getAttribute('config');
     if (this.config) {
+      // If `menuGenerator_` is an array, it is an array of options with
+      // each option represented by an array containing 2 elements -
+      // a human-readable string and a language-neutral string. For example,
+      // [['first item', 'ITEM1'], ['second item', 'ITEM2'], ['third item', 'ITEM3']].
+      // Options are included in the block definition.
+      const existingOptionsMap = arrayToMap(this.menuGenerator_);
       this.menuGenerator_ = getUpdatedOptionsFromConfig(
         this.config,
-        this.menuGenerator_
+        existingOptionsMap
       );
     }
     // Call super so value is set.
@@ -122,22 +128,27 @@ function toHumanReadableString(text) {
 }
 
 /**
- * Updates field options based on `config` attribute of field
- * @param config attribute of field
- * @return Array of option arrays
+ * Converts an array of option arrays to a map of options
+ * For example the array [['first item', 'ITEM1'], ['second item', 'ITEM2']]
+ * would be converted to {'first item': 'ITEM1', 'second item': 'ITEM2'}
+ * @param optionsArray  field
+ * @return map of options
  */
-function getUpdatedOptionsFromConfig(config, menuGenerator) {
-  // If `menuGenerator_` is an array, it is an array of options with
-  // each option represented by an array containing 2 elements -
-  // a human-readable string and a language-neutral string. For example,
-  // [['first item', 'ITEM1'], ['second item', 'ITEM2'], ['third item', 'ITEM3']].
-  // Options are included in the block definition.
-  const originalOptionsMap = Array.isArray(menuGenerator)
-    ? menuGenerator.reduce((optionsMap, curr) => {
+export function arrayToMap(optionsArray) {
+  return Array.isArray(optionsArray)
+    ? optionsArray.reduce((optionsMap, curr) => {
         optionsMap[curr[1]] = curr[0];
         return optionsMap;
       }, {})
     : {};
+}
+
+/**
+ * Updates field options based on `config` attribute of field
+ * @param config attribute of field
+ * @return Array of option arrays
+ */
+export function getUpdatedOptionsFromConfig(config, existingOptionsMap) {
   const numberList = printerStyleNumberRangeToList(config);
   // If numberList is assigned a non-empty array, it contains a list of numbers.
   // Convert this list to a string of dropdown options separated by commas and assign to options.
@@ -150,8 +161,8 @@ function getUpdatedOptionsFromConfig(config, menuGenerator) {
     val = val.trim();
     // If val is one of the options in this.menuGenerator_,
     // human-readable string is displayed.
-    if (originalOptionsMap[val]) {
-      return [originalOptionsMap[val], val];
+    if (existingOptionsMap[val]) {
+      return [existingOptionsMap[val], val];
     } else {
       // Remove quotes and display option with lowercase characters.
       // For example, "GIRAFFE" would be transformed to giraffe.
@@ -161,7 +172,3 @@ function getUpdatedOptionsFromConfig(config, menuGenerator) {
   });
   return options;
 }
-
-export var __TestInterface = {
-  getUpdatedOptionsFromConfig: getUpdatedOptionsFromConfig,
-};

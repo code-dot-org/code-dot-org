@@ -1,14 +1,14 @@
-import {__TestInterface} from '@cdo/apps/blockly/addons/cdoFieldDropdown';
+import {
+  getUpdatedOptionsFromConfig,
+  arrayToMap,
+} from '@cdo/apps/blockly/addons/cdoFieldDropdown';
 import {expect} from '../../../util/reconfiguredChai';
 
-describe('Testing CdoFieldDropdown function - getUpdateOptionsFromConfig', () => {
-  const getUpdatedOptionsFromConfig =
-    __TestInterface.getUpdatedOptionsFromConfig;
-
+describe('Testing function getUpdateOptionsFromConfig', () => {
   describe('Test config string with printer-style number range', () => {
     it('Config only has a number range', () => {
       const config = '6-8';
-      const options = getUpdatedOptionsFromConfig(config);
+      const options = getUpdatedOptionsFromConfig(config, {});
 
       expect(options).to.deep.equal([
         ['6', '6'],
@@ -19,7 +19,7 @@ describe('Testing CdoFieldDropdown function - getUpdateOptionsFromConfig', () =>
 
     it('Config has only numbers separated by commas', () => {
       const config = '2, 5, 11';
-      const options = getUpdatedOptionsFromConfig(config);
+      const options = getUpdatedOptionsFromConfig(config, {});
 
       expect(options).to.deep.equal([
         ['2', '2'],
@@ -30,7 +30,7 @@ describe('Testing CdoFieldDropdown function - getUpdateOptionsFromConfig', () =>
 
     it('Config has number range and numbers separated by commas', () => {
       const config = '2, 4, 16-18';
-      const options = getUpdatedOptionsFromConfig(config);
+      const options = getUpdatedOptionsFromConfig(config, {});
 
       expect(options).to.deep.equal([
         ['2', '2'],
@@ -51,7 +51,8 @@ describe('Testing CdoFieldDropdown function - getUpdateOptionsFromConfig', () =>
         ['alien', "'ALIEN'"],
         ['bear', "'BEAR'"],
       ];
-      const options = getUpdatedOptionsFromConfig(config, menuGenerator);
+      const existingOptionsMap = arrayToMap(menuGenerator);
+      const options = getUpdatedOptionsFromConfig(config, existingOptionsMap);
 
       expect(options).to.deep.equal([
         ['cat', "'CAT'"],
@@ -67,7 +68,8 @@ describe('Testing CdoFieldDropdown function - getUpdateOptionsFromConfig', () =>
         ['alien', "'ALIEN'"],
         ['bear', "'BEAR'"],
       ];
-      const options = getUpdatedOptionsFromConfig(config, menuGenerator);
+      const existingOptionsMap = arrayToMap(menuGenerator);
+      const options = getUpdatedOptionsFromConfig(config, existingOptionsMap);
 
       expect(options).to.deep.equal([
         ['cat', "'CAT'"],
@@ -83,8 +85,8 @@ describe('Testing CdoFieldDropdown function - getUpdateOptionsFromConfig', () =>
         ['rotation', "'rotation'"],
         ['direction', "'direction'"],
       ];
-      const options = getUpdatedOptionsFromConfig(config, menuGenerator);
-
+      const existingOptionsMap = arrayToMap(menuGenerator);
+      const options = getUpdatedOptionsFromConfig(config, existingOptionsMap);
       expect(options).to.deep.equal([
         ['size', "'scale'"],
         ['rotation', "'rotation'"],
