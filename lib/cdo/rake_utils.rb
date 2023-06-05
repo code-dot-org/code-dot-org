@@ -23,9 +23,19 @@ module RakeUtils
     args.map(&:to_s).join(' ')
   end
 
-  def self.upgrade_service(id)
-    sudo 'systemctl', 'daemon-reload' if OS.linux? && CDO.chef_managed
-    restart_service(id)
+  def self.restart_web_server(id)
+    return unless OS.linux? && CDO.chef_managed
+
+    pidfile = File.expand_path(
+      File.join(
+        File.dirname(__FILE__),
+        '../..',
+        id,
+        'config',
+        'puma.rb.pid'
+      )
+    )
+    sudo "pumactl -P #{pidfile} restart" if File.exist?(pidfile)
   end
 
   def self.start_service(id)

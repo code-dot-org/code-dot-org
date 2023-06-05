@@ -114,8 +114,8 @@ namespace :build do
         RakeUtils.rake 'assets:precompile'
       end
 
-      ChatClient.log 'Upgrading <b>dashboard</b>.'
-      RakeUtils.upgrade_service CDO.dashboard_unicorn_name unless rack_env?(:development)
+      ChatClient.log 'Restarting <b>dashboard</b> web server.'
+      RakeUtils.restart_web_server CDO.dashboard_web_server_name unless rack_env?(:development)
 
       if rack_env?(:production)
         RakeUtils.rake "honeybadger:deploy TO=#{rack_env} REVISION=`git rev-parse HEAD`"
@@ -138,8 +138,8 @@ namespace :build do
         end
       end
 
-      ChatClient.log 'Upgrading <b>pegasus</b>.'
-      RakeUtils.upgrade_service CDO.pegasus_unicorn_name unless rack_env?(:development)
+      ChatClient.log 'Restarting <b>pegasus</b> web server.'
+      RakeUtils.restart_web_server CDO.pegasus_web_server_name unless rack_env?(:development)
     end
   end
 

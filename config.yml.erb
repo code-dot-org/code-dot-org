@@ -387,7 +387,7 @@ dashboard_secret_key_base: !Secret
 dashboard_host: 0.0.0.0
 dashboard_port: 3000
 dashboard_workers: 8
-dashboard_unicorn_name: dashboard
+dashboard_web_server_name: dashboard
 dashboard_sock:
 
 # Causes dashboard-server to run pegasus as middleware, starting both in a
@@ -399,7 +399,7 @@ override_pegasus:
 pegasus_host:
 pegasus_sock:
 pegasus_port: 3000
-pegasus_unicorn_name: pegasus
+pegasus_web_server_name: pegasus
 pegasus_workers: 8
 sinatra_session_secret:
 
