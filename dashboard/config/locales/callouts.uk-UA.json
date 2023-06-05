@@ -580,7 +580,8 @@
           "craft_callout_preplaced_house": "Цей код розпочне побудову будинку. Можеш його завершити?"
         },
         "Overworld Move to Sheep_2021": {
-          "craft_run_button_callout": "Натисни \"Запустити\", щоб випробувати програму"
+          "craft_run_button_callout": "Натисни \"Запустити\", щоб випробувати програму",
+          "craft_drag_block_callout": "Перетягни блок \"рух вперед\" та прикріпи його під іншим блоком"
         },
         "Overworld Place Wall_2021": {
           "craft_inside_repeat": "Повторюй дії, розміщуючи тут блоки"
@@ -1207,6 +1208,363 @@
         },
         "courseE_farmer_functions2b_2021": {
           "courseE_farmer_functions1a_1": "Цей овоч невідомий.  Він змінюється кожного разу, коли ти запускаєш програму."
+        },
+        "CSD U3 Random add_2021": {
+          "CSD_U3_butterfly": "Уважно подивися на цей код."
+        },
+        "CSD U3 Random add_2022": {
+          "CSD_U3_butterfly": "Уважно подивися на цей код."
+        },
+        "Virtual Pet 2_-2022-2": {
+          "vp_costumes": "Натисни, щоб додати нові костюми до свого проєкту!"
+        },
+        "Virtual Pet 2_2021": {
+          "vp_costumes": "Натисни, щоб додати нові костюми до свого проєкту!"
+        },
+        "Virtual Pet 6_-2022-2": {
+          "vp_costumes": "Натисни, щоб додати нові костюми до свого проєкту!"
+        },
+        "Virtual Pet 6_2021": {
+          "vp_costumes": "Натисни, щоб додати нові костюми до свого проєкту!"
+        },
+        "courseA_EOC_playlab_animals": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_animals2022": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_fantasy": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_fantasy2022": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_people": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_people2022": {
+          "question_mark": "?"
+        },
+        "courseA_maze_ramp2_2021": {
+          "courseC_maze_programming2_1": "Це панель інструментів. Тут ти знайдеш додаткові блоки для розв'язання завдань."
+        },
+        "courseC19_playLab_EOC3_2021": {
+          "courseE_playLab_scaffold3_1": "Перемісти персонажа до цього прапора, щоб перейти на наступний рівень."
+        },
+        "courseC_PlayLab_events8_2021": {
+          "courseC_PlayLab_events8_callout1": "Використовуй ей блок, коли Веддлз і Чомп торкаються один одного!"
+        },
+        "courseC_artist_loops1a_2021": {
+          "jumpto_callout": "Цей блок дуже важливий для цього проєкту. Обов'язково використовуй його!"
+        },
+        "courseC_artist_loops1b_2021": {
+          "sticker2": "Додай це в середину своєї програми."
+        },
+        "courseC_artist_prog22022": {
+          "slider": "Тут ти можеш уповільнити свою програму."
+        },
+        "courseC_collector_prog1_2021": {
+          "courseC_collector_prog1_1": "Бачиш нові блоки у скриньці інструментів?  Не хвилюйся, ми покажемо тобі, як ними користуватися на наступному уроці."
+        },
+        "courseC_collector_prog7_2021": {
+          "courseC_collector_prog7_1": "Ти можеш використовувати більше блоків зі скриньки інструментів, якщо вони тобі потрібні!"
+        },
+        "courseC_harvester_loops1_2021": {
+          "courseC_harvester_loops1_callout1": "Цифра 4 на гарбузі означає, що на цій клітинці є чотири гарбузи, які можна зібрати."
+        },
+        "courseC_maze_debugging5_2021": {
+          "courseC_maze_debugging5_1": "Ці блоки заблоковані, ти не зможеш їх видалити!"
+        },
+        "courseC_maze_debugging9_2021": {
+          "courseC_maze_debugging9_2019_1": "Перетягуй блоки з панелі інструментів у робочу область."
+        },
+        "courseC_maze_programming1_2021": {
+          "grade2_CaringForNewPet_0_1": "Після з'єднання усіх блоків натисни \"Запустити\" та запусти програму."
+        },
+        "courseC_maze_programming2_2021": {
+          "courseC_maze_programming2_1": "Це скринька з інструментами. Тут ти знайдеш додаткові блоки для завершення завдань."
+        },
+        "courseC_maze_programming3_2021": {
+          "courseC_maze_programming3_2": "Ти можеш перетягнути зайві блоки у скриньку з інструментами та викинути їх.",
+          "courseC_maze_programming3_3": "Ці блоки виробленні з каміння та не можуть бути викинутими."
+        },
+        "courseC_maze_programming4_2021": {
+          "courseC_maze_programming4_1": "Це твій ліміт блоків.  Він показує, скільки блоків тобі залишилося використати."
+        },
+        "courseC_maze_programming5_2021": {
+          "": "На цих блоках немає номерів. Ти можеш використовувати стільки, скільки захочеш!"
+        },
+        "courseC_starWars_loops2_2021": {
+          "courseC_starWars_loops2": "У цьому завданні тобі доступний лише один з цих блоків."
+        },
+        "courseD_bee_conditionals_challenge2_2021": {
+          "courseD_bee_conditionals_challenge2_1": "Використовуй цей цикл, щоб зібрати весь нектар (або мед) з однієї квітки (або стільника)."
+        },
+        "courseD_bee_nestedLoops1a2022": {
+          "stepButton": "Спробуй проходити код по одному блоку за раз."
+        },
+        "courseD_bee_nestedLoops1a_2021": {
+          "stepButton": "Спробуй проходити код по одному блоку за раз."
+        },
+        "courseD_farmer_while7_2021": {
+          "courseD_farmer_while7_2018_PathAhead": "Для виконання цього завдання тобі потрібно використати блок `поки шлях попереду`."
+        },
+        "courseD_maze_intro4_2021": {
+          "courseC_maze_programming4_1": "Це твій ліміт блоків.  Він показує, скільки вільних блоків в тебе залишилося."
+        },
+        "courseD_maze_intro5a_2021": {
+          "": "На цих блоках немає чисел. Ти можеш використовувати стільки, скільки захочеш!"
+        },
+        "courseD_maze_ramp1_2021": {
+          "grade2_CaringForNewPet_0_1": "Після з'єднання усіх блоків натисни \"Запустити\" щоб випробувати свою програму."
+        },
+        "courseD_maze_ramp2_2021": {
+          "courseC_maze_programming2_1": "Це панель інструментів. Тут ти знайдеш додаткові блоки для розв'язання завдань."
+        },
+        "courseD_maze_ramp3_2021": {
+          "courseC_maze_programming3_2": "Ти можеш перетягувати зайві блоки на панель інструментів і залишати їх там.",
+          "stone_block_2": "Сірі блоки не можна видалити."
+        },
+        "courseD_maze_ramp5_2021": {
+          "": "На цих блоках немає чисел. Ти можеш використовувати стільки, скільки захочеш!"
+        },
+        "courseF_apps_aquarium": {
+          "run_button": "Спочатку натисніть кнопку \"Запустити\"!",
+          "visualizationResizeBar": "Перетягни 3 точки, щоб змінити розмір ігрової зони."
+        },
+        "courseF_apps_aquarium2022": {
+          "run_button": "Спочатку натисніть кнопку \"Запустити\"!",
+          "visualizationResizeBar": "Перетягни 3 точки, щоб змінити розмір ігрової зони."
+        },
+        "courseF_apps_aquarium_-2022-2": {
+          "run_button": "Спочатку натисніть кнопку \"Запустити\"!",
+          "visualizationResizeBar": "Перетягни 3 точки, щоб змінити розмір ігрової зони."
+        },
+        "courseF_apps_card": {
+          "visualizationResizeBar": "Перетягни 3 точки, щоб змінити розмір ігрової зони."
+        },
+        "courseF_apps_card2022": {
+          "visualizationResizeBar": "Перетягни 3 точки, щоб змінити розмір ігрової зони."
+        },
+        "courseF_apps_card_-2022-2": {
+          "visualizationResizeBar": "Перетягни 3 точки, щоб змінити розмір ігрової зони."
+        },
+        "courseF_apps_chatbot": {
+          "run_button": "Спочатку натисніть кнопку \"Запустити\"!",
+          "visualizationResizeBar": "Перетягни 3 точки, щоб змінити розмір ігрової зони."
+        },
+        "courseF_apps_chatbot2022": {
+          "run_button": "Спочатку натисніть кнопку \"Запустити\"!",
+          "visualizationResizeBar": "Перетягни 3 точки, щоб змінити розмір ігрової зони."
+        },
+        "courseF_apps_chatbot_-2022-2": {
+          "run_button": "Спочатку натисніть кнопку \"Запустити\"!",
+          "visualizationResizeBar": "Перетягни 3 точки, щоб змінити розмір ігрової зони."
+        },
+        "courseF_apps_collector": {
+          "run_button": "Спочатку натисніть кнопку \"Запустити\"!",
+          "visualizationResizeBar": "Перетягни 3 точки, щоб змінити розмір ігрової зони."
+        },
+        "courseF_apps_collector2022": {
+          "run_button": "Спочатку натисніть кнопку \"Запустити\"!",
+          "visualizationResizeBar": "Перетягни 3 точки, щоб змінити розмір ігрової зони."
+        },
+        "courseF_apps_collector_-2022-2": {
+          "run_button": "Спочатку натисніть кнопку \"Запустити\"!",
+          "visualizationResizeBar": "Перетягни 3 точки, щоб змінити розмір ігрової зони."
+        },
+        "courseF_apps_collector_drag_-2022-2": {
+          "visualizationResizeBar": "Перетягни 3 точки, щоб змінити розмір ігрової зони."
+        },
+        "courseF_apps_collector_drive_-2022-2": {
+          "visualizationResizeBar": "Перетягни 3 точки, щоб змінити розмір ігрової зони."
+        },
+        "courseF_apps_collector_move2_-2022-2": {
+          "visualizationResizeBar": "Перетягни 3 точки, щоб змінити розмір ігрової зони."
+        },
+        "courseF_apps_collector_move_-2022-2": {
+          "visualizationResizeBar": "Перетягни 3 точки, щоб змінити розмір ігрової зони."
+        },
+        "courseF_apps_madlib": {
+          "visualizationResizeBar": "Перетягни 3 точки, щоб змінити розмір ігрової зони."
+        },
+        "courseF_apps_madlib2022": {
+          "visualizationResizeBar": "Перетягни 3 точки, щоб змінити розмір ігрової зони."
+        },
+        "courseF_apps_madlib_-2022-2": {
+          "visualizationResizeBar": "Перетягни 3 точки, щоб змінити розмір ігрової зони."
+        },
+        "courseF_apps_pet": {
+          "run_button": "Спочатку натисніть кнопку \"Запустити\"!",
+          "visualizationResizeBar": "Перетягни 3 точки, щоб змінити розмір ігрової зони."
+        },
+        "courseF_apps_pet2022": {
+          "run_button": "Спочатку натисніть кнопку \"Запустити\"!",
+          "visualizationResizeBar": "Перетягни 3 точки, щоб змінити розмір ігрової зони."
+        },
+        "courseF_apps_pet_-2022-2": {
+          "run_button": "Спочатку натисніть кнопку \"Запустити\"!",
+          "visualizationResizeBar": "Перетягни 3 точки, щоб змінити розмір ігрової зони."
+        },
+        "courseF_artist_for1_2021": {
+          "courseF_artist_for1_1": "Панель інструментів знаходиться у режимі \"категорії\", що дає більше місця для написання коду.  Цикли `for` знаходяться тут."
+        },
+        "courseF_bee_for4_2021": {
+          "courseF_bee_for4_1": "Тут ти знайдеш цикл `for`!"
+        },
+        "courseF_bee_for9_2021": {
+          "courseF_bee_for9_1": "Тут ти знайдеш цикл `математика`!"
+        },
+        "courseF_bee_variables_1a_2021": {
+          "courseF_bee_functions_1_2018_1": "Ти можеш знайти свої змінні тут!"
+        },
+        "courseF_editable_card": {
+          "visualizationResizeBar": "Перетягни 3 точки, щоб змінити розмір ігрової зони."
+        },
+        "courseF_editable_card_-2022-2": {
+          "visualizationResizeBar": "Перетягни 3 точки, щоб змінити розмір ігрової зони."
+        },
+        "courseF_editable_chatbot": {
+          "visualizationResizeBar": "Перетягни 3 точки, щоб змінити розмір ігрової зони."
+        },
+        "courseF_editable_chatbot_-2022-2": {
+          "visualizationResizeBar": "Перетягни 3 точки, щоб змінити розмір ігрової зони."
+        },
+        "courseF_editable_madlib": {
+          "visualizationResizeBar": "Перетягни 3 точки, щоб змінити розмір ігрової зони."
+        },
+        "courseF_editable_madlib_-2022-2": {
+          "visualizationResizeBar": "Перетягни 3 точки, щоб змінити розмір ігрової зони."
+        },
+        "courseF_events_choice_penguin": {
+          "whenToWhile": "Спробуй змінити \"коли\" на \"при\"."
+        },
+        "courseF_events_choice_penguin_-2022-2": {
+          "whenToWhile": "Спробуй змінити \"коли\" на \"при\"."
+        },
+        "courseF_events_conflict": {
+          "stops_block": "Нові блоки тут!"
+        },
+        "courseF_events_conflict_-2022-2": {
+          "stops_block": "Нові блоки тут!"
+        },
+        "courseF_events_key": {
+          "whenKey": "Використовуй новий блок подій, який можна знайти тут."
+        },
+        "courseF_events_key_-2022-2": {
+          "whenKey": "Використовуй новий блок подій, який можна знайти тут."
+        },
+        "courseF_events_practice_reorder": {
+          "stopAllBug": "Цей блок знаходиться в неправильному порядку."
+        },
+        "courseF_events_practice_reorder_-2022-2": {
+          "stopAllBug": "Цей блок знаходиться в неправильному порядку."
+        },
+        "courseF_events_predict": {
+          "behaviors_edit": "Натисни, щоб побачити, як працює ця модель поведінки."
+        },
+        "courseF_events_time": {
+          "events_category": "Натисніть, щоб відкрити категорію Події."
+        },
+        "courseF_events_time_-2022-2": {
+          "events_category": "Натисніть, щоб відкрити категорію Події."
+        },
+        "courseF_label_predict": {
+          "variablesPredict": "Подивись уважно на код нижче цього пункту."
+        },
+        "courseF_label_predict_-2022-2": {
+          "variablesPredict": "Подивись уважно на код нижче цього пункту."
+        },
+        "courseF_sprites_behaviors": {
+          "behaviors_category": "Натисніть, щоб відкрити категорію Моделей поведінки."
+        },
+        "courseF_sprites_behaviors_-2022-2": {
+          "behaviors_category": "Натисніть, щоб відкрити категорію Моделей поведінки."
+        },
+        "courseF_sprites_make": {
+          "sprites_category": "Натисніть, щоб відкрити категорію Спрайтів."
+        },
+        "courseF_sprites_make_-2022-2": {
+          "sprites_category": "Натисніть, щоб відкрити категорію Спрайтів."
+        },
+        "courseF_sprites_positioning": {
+          "locations_category": "Натисніть, щоб відкрити категорію Місць розташування."
+        },
+        "courseF_sprites_positioning_-2022-2": {
+          "locations_category": "Натисніть, щоб відкрити категорію Місць розташування."
+        },
+        "courseF_sprites_properties": {
+          "sprites_category2": "Шукай новий блок тут."
+        },
+        "courseF_sprites_properties_-2022-2": {
+          "sprites_category2": "Шукай новий блок тут."
+        },
+        "courseF_text_answer": {
+          "answered_block": "Шукай новий блок тут!"
+        },
+        "courseF_text_answer_-2022-2": {
+          "answered_block": "Шукай новий блок тут!"
+        },
+        "courseF_text_choice_color": {
+          "text_color_finish": "Чи змінювався колір фону, коли ти відповідав на питання? Якщо так, натисни 'Завершити'. Якщо ні, натисни 'Скинути', зміни код та знову натисни 'Запустити'."
+        },
+        "courseF_text_choice_color_-2022-2": {
+          "text_color_finish": "Чи змінювався колір фону, коли ти відповідав на питання? Якщо так, натисни 'Завершити'. Якщо ні, натисни 'Скинути', зміни код та знову натисни 'Запустити'."
+        },
+        "courseF_text_choice_conversation": {
+          "text_generic_finish": "Ти закінчив? Якщо так, натисни 'Завершити'. Якщо ні, натисни 'Скинути', зміни код та знову натисни 'Запустити'."
+        },
+        "courseF_text_choice_conversation_-2022-2": {
+          "text_generic_finish": "Ти закінчив? Якщо так, натисни 'Завершити'. Якщо ні, натисни 'Скинути', зміни код та знову натисни 'Запустити'."
+        },
+        "courseF_text_choice_title": {
+          "title_block": "Шукай два нові блоки тут!",
+          "text_answer_finish": "Титульний екран відображається протягом 3 секунд? Якщо так, натисни \"Кінець\". Якщо ні, натисни \"Скидання\", зміни свій код та знову натисни \"Запустити\". "
+        },
+        "courseF_text_choice_title_-2022-2": {
+          "title_block": "Шукай два нові блоки тут!",
+          "text_answer_finish": "Титульний екран відображається протягом 3 секунд? Якщо так, натисни \"Кінець\". Якщо ні, натисни \"Скидання\", зміни свій код та знову натисни \"Запустити\". "
+        },
+        "courseF_text_concat": {
+          "join_blocks": "Шукай нові блоки тут!"
+        },
+        "courseF_text_concat_-2022-2": {
+          "join_blocks": "Шукай нові блоки тут!"
+        },
+        "courseF_text_events": {
+          "events_category": "Натисніть, щоб відкрити категорію Події."
+        },
+        "courseF_text_events_-2022-2": {
+          "events_category": "Натисніть, щоб відкрити категорію Події."
+        },
+        "courseF_text_print": {
+          "print_block": "Знайди блок друку тут!",
+          "text_print_finish": "Чи надрукувалося твоє повідомлення вище? Якщо так, натисни \"Завершити\". Якщо ні, натисни \"Скинути\", зміни свій код та знову натисни \"Запустити\"."
+        },
+        "courseF_text_print_-2022-2": {
+          "print_block": "Знайди блок друку тут!",
+          "text_print_finish": "Чи надрукувалося твоє повідомлення вище? Якщо так, натисни \"Завершити\". Якщо ні, натисни \"Скинути\", зміни свій код та знову натисни \"Запустити\"."
+        },
+        "courseF_text_prompts": {
+          "prompt_block": "Знайди блок підказки тут!"
+        },
+        "courseF_text_prompts_-2022-2": {
+          "prompt_block": "Знайди блок підказки тут!"
+        },
+        "courseF_variables2_predict_-2022-2": {
+          "variablesPredict": "Подивись уважно на код нижче цього пункту."
+        },
+        "courseF_variables_predict": {
+          "variablesPredict": "Подивись уважно на код нижче цього пункту."
+        },
+        "courseF_variables_predict_-2022-2": {
+          "variablesPredict": "Подивись уважно на код нижче цього пункту."
+        },
+        "coursea_maze_ramp1_2021": {
+          "grade2_CaringForNewPet_0_1": "Після з'єднання усіх блоків натисни \"Запустити\" щоб запустити програму."
+        },
+        "express_maze_debugging9_2021": {
+          "express_maze_debugging9_2019_1": "Перетягни блоки зі скриньки інструментів у робочу зону."
         }
       }
     }
