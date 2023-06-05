@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": "csc-bookcovers",
-    "serialized_at": "2023-06-01 21:15:52 UTC",
+    "serialized_at": "2023-06-02 21:43:34 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -42,9 +42,9 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
-        "overview": "In this CS and ELA integrated lesson for new coders, students will learn to code a digital book cover. First, they will look at existing book covers and discuss what graphic design choices were made. Next, students will look at an digital book cover example before creating several of their own. Students will learn to select sprites to represent the characters in a book and to use events to make the characters speak. Finally, they will use prompts and variables to make the book cover interactive. \n",
+        "overview": "In this CS and ELA integrated lesson for new coders, students will learn to code a digital book cover. First, they will look at existing book covers and discuss what graphic design choices were made. Next, students will look at an digital book cover example before creating several of their own. Students will learn to select sprites to represent the characters in a book and to use events to make the characters speak. \n",
         "preparation": "- Play through the levels and review the lesson slides.",
-        "student_overview": "In this lesson, you will learn how to code a digital book cover. First, you will select the background and characters.Then, you will learn how to program the characters to have a short conversation. By the end of the lesson, you will have coded several examples of interactive book covers."
+        "student_overview": "In this lesson, you will learn how to code a digital book cover. First, you will select the background and characters. Then, you will learn how to program the characters talk when clicked. By the end of the lesson, you will have coded several examples of interactive book covers."
       },
       "seeding_key": {
         "lesson.key": "Learn to Code a Book Cover ",
@@ -352,7 +352,7 @@
       "key": "1ec05345-979b-421f-a808-190fa01f44ab",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 3-9 - Skill Building” slide\n\n**Transition**: Have students move to their computer and sign in. All students should complete all levels in this section in order. \n\nStudents should complete the Skill Building levels and then spend any remaining time trying out the extension choices in level 11.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 3-10 - Skill Building” slide\n\n**Transition**: Have students move to their computer and sign in. All students should complete all levels in this section in order. \n",
         "name": "Skill Building"
       },
       "seeding_key": {
@@ -422,7 +422,8 @@
       "key": "5cef3b1a-9242-4550-96f5-2a76e817ac21",
       "position": 1,
       "properties": {
-        "name": "Plan your Interactive Book Cover!"
+        "name": "Make a plan",
+        "progression_name": "Plan your Interactive Book Cover!"
       },
       "seeding_key": {
         "activity_section.key": "5cef3b1a-9242-4550-96f5-2a76e817ac21",
@@ -525,7 +526,7 @@
       "key": "2db057e6-30c0-4b7e-8129-b88b4a5d2d68",
       "position": 1,
       "properties": {
-        "description": "Now you will code your own book cover. As you work through these levels, refer back to your planning work in your handout. If you need to review any skills from the previous lesson, you are able to go back and visit Lesson One to practice those skill building levels. ",
+        "description": "Now you will code your own interactive book cover! Use your plan as a guide and read the instruction and hints on each level carefully. Your code will be saved on each level so you can build your book cover step by step.",
         "name": "Code Your Own Book Cover ",
         "remarks": true
       },
@@ -538,7 +539,7 @@
       "key": "b367c44e-85d6-450e-8bce-1a1db1302e08",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Skill Building - Levels 1-4” slide\n\n**Transition**: Have students move to their computer and sign in. All students should complete all levels in this section in order. The code they build will follow them to the next level so they can build their interactive book cover step by step."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Skill Building - Levels 1-7” slide\n\n**Transition**: Have students move to their computer and sign in. All students should complete all levels in this section in order. The code they build will follow them to the next level so they can build their interactive book cover step by step."
       },
       "seeding_key": {
         "activity_section.key": "b367c44e-85d6-450e-8bce-1a1db1302e08",
@@ -560,23 +561,11 @@
       "key": "d9aa4220-c040-4c4b-b51e-69b302c6475a",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Choice Level - Level 5” slide\n\n**Level 5:** This is a choice level for students to customize their book covers. They can choose to add sounds, foreground effects, background effects and more! When students are done customizing their book cover they can move on to the final Free Play level to add finishing touches.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Finishing Touches - Level 8” slide\n\n**Do This:** If students finish early, encourage them to show their work to a partner. Invite students to share ideas and to learn from each other. After a brief discussion, students have the opportunity to finish their book cover and make any last revisions before next class.\n",
         "progression_name": "Extend Your Book Cover!"
       },
       "seeding_key": {
         "activity_section.key": "d9aa4220-c040-4c4b-b51e-69b302c6475a",
-        "lesson_activity.key": "ecba58f8-a011-438e-b900-35c2b5dce108"
-      }
-    },
-    {
-      "key": "47e8c845-c7cb-4b1d-8caf-7f7e348005df",
-      "position": 5,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Free Play - Level 6” slide\n\n**Do This:** If a student finishes early, encourage them to show their work to a partner. Invite students to share ideas and to learn from each other. After a brief discussion, students have the opportunity to finish their book cover and make any last revisions before next class.\n",
-        "progression_name": "Free Play"
-      },
-      "seeding_key": {
-        "activity_section.key": "47e8c845-c7cb-4b1d-8caf-7f7e348005df",
         "lesson_activity.key": "ecba58f8-a011-438e-b900-35c2b5dce108"
       }
     },
@@ -907,6 +896,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_bookcover_clicksay_2023"
+        ],
         "progression": "Interactive Characters"
       },
       "bonus": false,
@@ -929,6 +921,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_bookcover_print_2023"
+        ],
         "progression": "Book Summary"
       },
       "bonus": false,
@@ -951,6 +946,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_bookcover_extensions_choice_2023"
+        ],
         "progression": "Extension choices"
       },
       "bonus": false,
@@ -973,6 +971,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_bookcovers_planning"
+        ],
+        "progression": "Plan your Interactive Book Cover!"
       },
       "bonus": false,
       "seeding_key": {
@@ -994,6 +996,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_bookcover_project_title"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1016,6 +1021,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_bookcovers_project_background"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1038,6 +1046,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "student_sprite_management"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1060,6 +1071,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_bookcovers_project_character1"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1082,6 +1096,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_bookcovers_project_character2"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1104,6 +1121,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_bookcovers_project_clicksay"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1126,6 +1146,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_bookcovers_project_print"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1148,6 +1171,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_bookcovers_project_final"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1167,26 +1193,23 @@
     {
       "chapter": 21,
       "position": 9,
-      "activity_section_position": 1,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csc_bookcover_freeplay_2023"
-        ],
-        "progression": "Free Play"
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "csc_bookcover_freeplay_2023"
+          "csc_bookcovers_project_template"
         ],
         "lesson.key": "Code Your Own Book Cover ",
         "lesson_group.key": "",
         "script.name": "csc-bookcovers-2023",
-        "activity_section.key": "47e8c845-c7cb-4b1d-8caf-7f7e348005df"
+        "activity_section.key": "d8f8bba0-ad64-49c2-ada5-b8bf1337264c"
       },
       "level_keys": [
-        "csc_bookcover_freeplay_2023"
+        "csc_bookcovers_project_template"
       ]
     },
     {
@@ -1458,14 +1481,14 @@
     },
     {
       "seeding_key": {
-        "level.key": "csc_bookcover_freeplay_2023",
+        "level.key": "csc_bookcovers_project_template",
         "script_level.level_keys": [
-          "csc_bookcover_freeplay_2023"
+          "csc_bookcovers_project_template"
         ],
         "lesson.key": "Code Your Own Book Cover ",
         "lesson_group.key": "",
         "script.name": "csc-bookcovers-2023",
-        "activity_section.key": "47e8c845-c7cb-4b1d-8caf-7f7e348005df"
+        "activity_section.key": "d8f8bba0-ad64-49c2-ada5-b8bf1337264c"
       }
     },
     {
