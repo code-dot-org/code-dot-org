@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "ai-temp",
-    "serialized_at": "2023-06-01 18:30:07 UTC",
+    "serialized_at": "2023-06-02 18:08:59 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -3135,7 +3135,7 @@
       "key": "1c5b7350-d527-4f81-b502-b9b4a763424f",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the first part of the WIP update video link video. At key points throughout (described below) we will be pausing the video to give students a chance to synthesize their understanding.",
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:**  Hand out the [r video_and_vocabulary_guide_1/ai-temp/unversioned]\n\n<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the first part of the WIP update video link video. At key points throughout (described below) we will be pausing the video to give students a chance to synthesize their understanding.",
         "duration": "20",
         "name": "Show the Video"
       },
@@ -3294,6 +3294,7 @@
       "position": 15,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students log into code studio and interact with the Noisy Image Widget\n",
+        "progression_name": "Noisy Image Widget",
         "tips": [
           {
             "type": "teachingTip",
@@ -4207,6 +4208,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Noisy Image Widget"
+        ],
+        "progression": "Noisy Image Widget"
       },
       "bonus": false,
       "seeding_key": {
@@ -4772,6 +4777,18 @@
       }
     },
     {
+      "name": "Video and Vocabulary Guide",
+      "url": "https://docs.google.com/document/d/1GtTFgGzPcoyokR3KsJ43ZjvgJnwUCWdZXvtrXoa78rQ/edit?usp=sharing",
+      "key": "video_and_vocabulary_guide_1",
+      "properties": {
+        "audience": "Student",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "video_and_vocabulary_guide_1"
+      }
+    },
+    {
       "name": "Vocabulary Matching",
       "url": "https://docs.google.com/document/d/1Tbz8ULln11yU1hpD73OzgRUnujWjdpdOi8fKQsOAiIk/edit",
       "key": "vocabulary_matching",
@@ -5048,6 +5065,12 @@
       "seeding_key": {
         "lesson.key": "lesson-8",
         "resource.key": "noisy_image_widget_activity_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "video_and_vocabulary_guide_1"
       }
     }
   ],
