@@ -280,6 +280,16 @@
   ai_resources_desc_03: "Supports integration of Artificial Intelligence knowledge throughout K-12. Offer free professional development, webinars, conference presentations, and peer-to-peer learning opportunities."
   ai_resources_btn_aria_label_03: "Explore the AI for Teachers website"
 
+  ai_vid_intro_caption: "Introducing How AI Works"
+  ai_vid_chatbots_caption: "How Chatbots and Large Language Models Work"
+  ai_vid_creativity_caption: "Does AI Have Creativity and Imagination?"
+  ai_vid_mlintro_caption: "What is Machine Learning?"
+  ai_vid_trainingdata_caption: "Training Data & Bias"
+  ai_vid_neuralnetworks_caption: "Neural Networks"
+  ai_vid_computervision_caption: "Computer Vision"
+  ai_vid_ethics1_caption: "Ethics & AI: Equal Access and Algorithmic Bias"
+  ai_vid_ethics2_caption: "Ethics & AI: Privacy and the Future of Work"
+
   self_paced_pl_hero_heading: "Self-Paced Professional Learning For Educators"
   self_paced_pl_hero_desc: "Professional learning offerings to support teachers in every stage of their computer science teaching journey."
   self_paced_pl_intro_heading: "Professional learning on your timeline"
