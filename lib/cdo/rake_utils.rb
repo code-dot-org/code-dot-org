@@ -26,16 +26,20 @@ module RakeUtils
   def self.restart_web_server(id)
     return unless OS.linux? && CDO.chef_managed
 
-    pidfile = File.expand_path(
-      File.join(
-        File.dirname(__FILE__),
-        '../..',
-        id,
-        'config',
-        'puma.rb.pid'
+    if system("systemctl is-active #{id}")
+      pidfile = File.expand_path(
+        File.join(
+          File.dirname(__FILE__),
+          '../..',
+          id,
+          'config',
+          'puma.rb.pid'
+        )
       )
-    )
-    sudo "pumactl -P #{pidfile} restart" if File.exist?(pidfile)
+      sudo "pumactl -P #{pidfile} restart" if File.exist?(pidfile)
+    else
+      start_service(id)
+    end
   end
 
   def self.start_service(id)
