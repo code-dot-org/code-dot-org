@@ -78,7 +78,6 @@ export function positionBlocksOnWorkspace(
   };
   // If the workspace is RTL, horizontally mirror the starting position.
   cursor.x = workspace.RTL ? width - cursor.x : cursor.x;
-
   blocks.forEach(block => {
     positionBlock(block, cursor);
   });
@@ -148,29 +147,6 @@ export function isBlockLocationUnset(block) {
   };
   const {x = 0, y = 0} = block.getRelativeToSurfaceXY();
   return x === defaultLocation.x && y === defaultLocation.y;
-}
-
-/**
- * Initializes a block's position so that it can be repositioned with the cursor.
- * @param {object} block - and objecting containing the block to be moved and x/y coordinates
- * @param {Blockly.block} block.blockly_block - the actual Blockly block to be moved
- * @param {number} [block.x] - an x-coordinate from the XML serialization
- * @param {number} [block.y] - a y-coordinate frmo the XML serialization
- * @param {object} cursor - a location for moving a block
- */
-export function positionBlockXmlHelper(block, cursor) {
-  const isRTL = block.blockly_block.RTL;
-  const {viewWidth = 0} = block.blockly_block.workspace.getMetrics();
-  let {x, y} = block;
-  x = isNaN(x) ? 0 : x;
-  y = isNaN(y) ? 0 : y;
-
-  block.blockly_block.moveTo({
-    x: isRTL ? viewWidth - x : x,
-    y: y,
-  });
-
-  positionBlockWithCursor(block.blockly_block, cursor);
 }
 
 /**

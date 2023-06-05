@@ -48,7 +48,6 @@ class DCDOBase < DynamicConfigBase
       'csta-form-extension': DCDO.get('csta-form-extension', false),
       'pl-launch-hero-banner': DCDO.get('pl-launch-hero-banner', false),
       'teach-ai-launch-2023': DCDO.get('teach-ai-launch-2023', false),
-      'blockly-convert-xml-to-json': DCDO.get('blockly-convert-xml-to-json', false),
     }
   end
 end
