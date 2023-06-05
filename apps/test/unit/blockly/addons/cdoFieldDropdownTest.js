@@ -4,8 +4,8 @@ import {expect} from '../../../util/reconfiguredChai';
 describe('Testing CdoFieldDropdown function - getUpdateOptionsFromConfig', () => {
   const getUpdatedOptionsFromConfig =
     __TestInterface.getUpdatedOptionsFromConfig;
-  describe('test config string with printer-style number range', () => {
-    it('only a number range', () => {
+  describe('Test config string with printer-style number range', () => {
+    it('Config only has a number range', () => {
       const config = '6-8';
       const options = getUpdatedOptionsFromConfig(config);
       expect(options).to.deep.equal([
@@ -14,7 +14,7 @@ describe('Testing CdoFieldDropdown function - getUpdateOptionsFromConfig', () =>
         ['8', '8'],
       ]);
     });
-    it('only numbers separated by commas', () => {
+    it('Config has only numbers separated by commas', () => {
       const config = '2, 5, 11';
       const options = getUpdatedOptionsFromConfig(config);
       expect(options).to.deep.equal([
@@ -23,7 +23,7 @@ describe('Testing CdoFieldDropdown function - getUpdateOptionsFromConfig', () =>
         ['11', '11'],
       ]);
     });
-    it('number range and numbers separated by commas', () => {
+    it('Config has number range and numbers separated by commas', () => {
       const config = '2, 4, 16-18';
       const options = getUpdatedOptionsFromConfig(config);
       expect(options).to.deep.equal([
@@ -35,8 +35,8 @@ describe('Testing CdoFieldDropdown function - getUpdateOptionsFromConfig', () =>
       ]);
     });
   });
-  describe('test config string', () => {
-    it('test config string with fewer options than menuGenerator', () => {
+  describe('Test config string that does not contain numbers', () => {
+    it('Config has with fewer options than menuGenerator', () => {
       const config = "'CAT', 'SLOTH'";
       const menuGenerator = [
         ['cat', "'CAT'"],
@@ -50,7 +50,7 @@ describe('Testing CdoFieldDropdown function - getUpdateOptionsFromConfig', () =>
         ['sloth', "'SLOTH'"],
       ]);
     });
-    it('test config string with option not included in menuGenerator', () => {
+    it('Config has an option not included in menuGenerator', () => {
       const config = "'CAT', 'SLOTH', 'GIRAFFE'";
       const menuGenerator = [
         ['cat', "'CAT'"],
