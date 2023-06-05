@@ -13,7 +13,7 @@ module InternationalOptInPeople
     chile: ["Fundacion Kodea", "Mineduc"],
     dominican_republic: ["The Trust for the Americas"],
     india: [
-      "Asha Chennai", "Educational Initiatives", "Leadership for Equity", "Literacy India",
+      "Asha for Education (Asha Chennai)", "Educational Initiatives", "Leadership for Equity", "Literacy India",
       "NavGurukul Foundation for Social Welfare", "Nirmaan Organization", "Peepul", "Quest Alliance"
     ],
     indonesia: ["Coding Bee Academy"],
