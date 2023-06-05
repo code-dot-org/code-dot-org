@@ -35,7 +35,9 @@ export class RemoteSourcesStore implements SourcesStore {
   private lastSaveTime: number | null = null;
 
   async load(channelId: string) {
+    console.groupCollapsed('fetching main.json');
     const response = await sourcesApi.get(channelId);
+    console.groupEnd();
 
     if (response.ok) {
       this.currentVersionId = response.headers.get('S3-Version-Id');
