@@ -2,14 +2,12 @@
   "de-DE": {
     "data": {
       "course_offerings": {
-        "coursea": "Kurs A",
-        "courseb": "Kurs B",
-        "coursec": "Kurs C",
-        "coursed": "Kurs D",
-        "coursee": "Kurs E",
-        "coursef": "Kurs F",
-        "express": "Expresskurs (2018)",
-        "pre-express": "Schnellkurs für Leseanfänger",
+        "coursea": "CS-Grundlagen: Kurs A",
+        "courseb": "CS-Grundlagen: Kurs B",
+        "coursec": "CS-Grundlagen: Kurs C",
+        "coursed": "CS-Grundlagen: Kurs D",
+        "coursee": "CS-Grundlagen: Kurs E",
+        "coursef": "CS-Grundlagen: Kurs F",
         "csd": "Informatik Entdeckungen",
         "csp": "Informatik-Prinzipien",
         "csa": "Informatik A",
@@ -20,7 +18,6 @@
         "applab-intro": "Einführung in AppLab",
         "aquatic": "Minecraft: Aquatische Bedingungen Reise",
         "artist": "Künstler",
-        "basketball": "Wähle Dein Team und spiele eine Runde Basketball",
         "code-break-younger": "Code Break für jüngere SchülerInnen",
         "code-break": "Code Break",
         "course1": "Kurs 1",
@@ -51,7 +48,7 @@
         "outbreak": "Ausbruch-Simulator",
         "pixelation": "Pixelierung",
         "playlab": "Spielelabor",
-        "sports": "Programmiere Dein eigenes Sport-Spiel",
+        "sports": "Programmieren Sie Ihr eigenes Sportspiel",
         "starwars": "Star Wars: Erschaffe eine Galaxie mit Code (JavaScript)",
         "starwarsblocks": "Star Wars: Erschaffe eine Galaxie mit Code (Blocky)",
         "text-compression": "Text-Kompression",
@@ -87,6 +84,7 @@
         "hello-world-space": "Hello World: Weltraum",
         "hello-world-soccer": "Hello World: Fußball",
         "playground": "Spielplatz",
+        "design-process": "Der Entwurfsprozess",
         "web-development": "Webentwicklung"
       }
     }
