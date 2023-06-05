@@ -42,7 +42,6 @@ export default class MusicBlocklyWorkspace {
     this.compiledEvents = null;
     this.triggerIdToStartType = {};
     this.lastExecutedEvents = null;
-    this.channel = {};
   }
 
   triggerIdToEvent = id => `triggeredAtButton-${id}`;
@@ -349,13 +348,6 @@ export default class MusicBlocklyWorkspace {
     return Blockly.serialization.workspaces.save(this.workspace);
   }
 
-  getProject() {
-    return {
-      source: Blockly.serialization.workspaces.save(this.workspace),
-      channel: this.channel,
-    };
-  }
-
   getAllBlocks() {
     return this.workspace.getAllBlocks();
   }
@@ -389,15 +381,10 @@ export default class MusicBlocklyWorkspace {
     return 'musicLabSavedCode' + getBlockMode();
   }
 
-  // Either initialize the workspace with the given loadedSources,
-  // or fall back to start sources.
-  loadSources(startSources, loadedSources) {
-    if (loadedSources && loadedSources.source) {
-      const existingCodeJson = JSON.parse(loadedSources.source);
-      Blockly.serialization.workspaces.load(existingCodeJson, this.workspace);
-    } else {
-      this.setStartSources(startSources);
-    }
+  // Load the workspace with the given code, and call save.
+  loadCode(code) {
+    Blockly.serialization.workspaces.load(code, this.workspace);
+    this.saveCode();
   }
 
   saveCode(forceSave = false) {
@@ -408,12 +395,6 @@ export default class MusicBlocklyWorkspace {
 
   hasUnsavedChanges() {
     return LabRegistry.getInstance().getProjectManager().hasUnsavedChanges();
-  }
-
-  // Sets start sources.
-  setStartSources(startSources) {
-    Blockly.serialization.workspaces.load(startSources, this.workspace);
-    this.saveCode();
   }
 
   callUserGeneratedCode(fn, args = []) {

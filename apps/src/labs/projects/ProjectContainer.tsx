@@ -11,13 +11,14 @@ const ProjectContainer: React.FunctionComponent<ProjectContainerProps> = ({
   channelId,
 }) => {
   const currentLevelId = useSelector(
-    // TODO: Convert progress redux to typescript so this can be typed
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    (state: any) => state.progress.currentLevelId
+    // TODO: Convert progress redux to typescript so this can be typed better
+    (state: {progress: {currentLevelId: string}}) =>
+      state.progress.currentLevelId
   );
-  // TODO: Convert progress redux to typescript so this can be typed
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const scriptId = useSelector((state: any) => state.progress.scriptId);
+  // TODO: Convert progress redux to typescript so this can be typed better
+  const scriptId = useSelector(
+    (state: {progress: {scriptId: number}}) => state.progress.scriptId
+  );
 
   const dispatch = useAppDispatch();
 
@@ -39,7 +40,9 @@ const ProjectContainer: React.FunctionComponent<ProjectContainerProps> = ({
       );
       promise = dispatch(loadProject());
     } else {
-      promise = dispatch(setUpForLevel({levelId: currentLevelId, scriptId}));
+      promise = dispatch(
+        setUpForLevel({levelId: parseInt(currentLevelId), scriptId})
+      );
     }
     return () => {
       // If we have an early return, we will abort the promise in progress.

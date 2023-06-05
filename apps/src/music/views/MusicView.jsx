@@ -268,10 +268,11 @@ class UnconnectedMusicView extends React.Component {
       this.props.labReadyForReload &&
       (this.getStartSources() || this.props.source)
     ) {
-      this.musicBlocklyWorkspace.loadSources(
-        this.getStartSources(),
-        this.props.source
-      );
+      let codeToLoad = this.getStartSources();
+      if (this.props.source && this.props.source.source) {
+        codeToLoad = JSON.parse(this.props.source.source);
+      }
+      this.musicBlocklyWorkspace.loadCode(codeToLoad);
       this.goToPanel();
       this.props.setLabReadyForReload(false);
     }
@@ -451,7 +452,7 @@ class UnconnectedMusicView extends React.Component {
   };
 
   clearCode = () => {
-    this.musicBlocklyWorkspace.setStartSources(this.getStartSources());
+    this.musicBlocklyWorkspace.loadCode(this.getStartSources());
 
     this.setPlaying(false);
   };

@@ -16,10 +16,10 @@ import {Channel, Source} from '../types';
 
 export default class ProjectManager {
   channelId: string;
-  sourcesStore: SourcesStore;
-  channelsStore: ChannelsStore;
   sourceToSave: Source | undefined;
 
+  private readonly sourcesStore: SourcesStore;
+  private readonly channelsStore: ChannelsStore;
   private nextSaveTime: number | null = null;
   private readonly saveInterval: number = 30 * 1000; // 30 seconds
   private saveInProgress = false;
@@ -36,7 +36,6 @@ export default class ProjectManager {
   // if it exists.
   private currentTimeoutId: number | undefined;
   private destroyed = false;
-  private lastSaveResponse: object | undefined;
 
   constructor(
     sourcesStore: SourcesStore,
@@ -183,7 +182,6 @@ export default class ProjectManager {
     const channelSaveResponse = await channelResponse.json();
 
     this.saveInProgress = false;
-    this.lastSaveResponse = channelSaveResponse;
     this.channel = channelSaveResponse as Channel;
     this.executeSaveSuccessListeners(this.channel);
     return new Response();
