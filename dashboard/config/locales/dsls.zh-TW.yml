@@ -2885,7 +2885,8 @@ zh-TW:
         - text: 仔細查看下方的程式。點擊「運行」按鈕後，會有什麼結果呢？請記住：每朵雲的後面只會有*一*個蜂窩或*一*朵花。
       courseD_multi_bee_conditionals7_predict2_2018_2019:
         answers:
-        - correct: true
+        - text: 蜜蜂在每朵花上獲取花蜜，在每個蜂窩上釀造蜂蜜。
+          correct: true
           feedback: 正確！
         - text: 蜜蜂會嘗試從花朵和蜂窩中獲取花蜜。
         - text: 蜜蜂會嘗試從花朵和蜂窩中獲取蜂蜜。
@@ -2896,7 +2897,8 @@ zh-TW:
 '
       courseD_multi_bee_conditionals7_predict2_2018_2019_2020:
         answers:
-        - correct: true
+        - text: 蜜蜂在每朵花上獲取花蜜，在每個蜂窩上釀造蜂蜜。
+          correct: true
           feedback: 正確！
         - text: 蜜蜂會嘗試從花朵和蜂窩中獲取花蜜。
         - text: 蜜蜂會嘗試從花朵和蜂窩中獲取蜂蜜。
@@ -13350,7 +13352,8 @@ zh-TW:
         - text: 雲朵遮擋了視線。雲朵下可能會有花。如果有花，蜜蜂就需要採集一次花蜜。如果沒有花，則蜜蜂應該什麼也不做。好好看看下方的程式。你認為點擊「運行」按鈕後會發生什麼事呢？
       courseD_multi_bee_conditionals7_predict22022:
         answers:
-        - correct: true
+        - text: 蜜蜂在每朵花上獲取花蜜，在每個蜂窩上釀造蜂蜜。
+          correct: true
           feedback: 正確！
         - text: 蜜蜂會嘗試從花朵和蜂窩中獲取花蜜。
         - text: 蜜蜂會嘗試從花朵和蜂窩中獲取蜂蜜。
@@ -13733,3 +13736,86 @@ zh-TW:
         - text: '仔細看一下這段程式碼。你認為程式執行後會發生什麼？
 
 '
+      OPD-K5 Stage9Go:
+        markdown: |+
+          # 計劃 > 回顧
+
+          <img src="https://images.code.org/34e1d20a6ae73e28c6c88c5981fd6be6-image-1434411459379.JPG" width="450px">
+
+          本階段中，您應該已經：
+
+          - 回顧了教師面板和其他Code.org資源
+          - 規劃如何將計算機科學融入自己的的實踐中
+
+          在第 11 階段，即最後階段中，您將：
+
+          - 反思自己的學習
+          - 為下一步繼續學習做計劃
+          - 與對計算機科學教育感興趣的全球教育工作者社區建立聯繫
+
+      OPD-K5 Stage9Go_dani:
+        markdown: |+
+          # 計劃 > 回顧
+
+          <img src="https://images.code.org/34e1d20a6ae73e28c6c88c5981fd6be6-image-1434411459379.JPG" width="450px">
+
+          本階段中，您應該已經：
+
+          - 回顧了教師面板和其他Code.org資源
+          - 規劃如何將計算機科學融入自己的的實踐中
+
+          在第 11 階段，即最後階段中，您將：
+
+          - 反思自己的學習
+          - 為下一步繼續學習做計劃
+          - 與對計算機科學教育感興趣的全球教育工作者社區建立聯繫
+
+      OPD-K5 Stage9Start_copy:
+        markdown: |
+          # 探索教師資源
+
+          是時候開始計畫教學了。在這個階段，我們將流覽Code.org平臺和**<a href="http://studio.code.org/" target="blank" rel="noopener noreferrer">教師控制台</a>**的其他區域。
+
+          教師控制台的螢幕截圖如下。您需要登錄Code.org教師帳戶才能看到它。登錄後，它應該是您在Code.org網站上看到的預設介面。如果您沒有教師帳戶，可以**<a href="https://studio.code.org/users/sign_up" target="blank" rel="noopener noreferrer">在此處註冊</a>**。
+
+          <a href="http://studio.code.org/" target="blank" rel="noopener noreferrer">![](https://images.code.org/d6345709495f764a71d9cb0994dbd7e4-image-1549064603589.png)</a>
+      Test Contained Retriable Multi:
+        answers:
+        - text: '0'
+        - text: '1'
+        - text: '2'
+          correct: true
+        - text: '4'
+        questions:
+        - {}
+      csd-post-survey-2018-markdown-with-link-to-survey:
+        teacher_markdown: |
+          ** 請讓您的學生完成此調查！**
+
+          * 您可以在教師控制面板上看到調查的匿名結果
+          * 結果對於我們（code.org）維持我們的課程並進行改進至關重要。
+          * 還有一項教師調查，您可以在其中提供自己的意見，您會收到電子郵件通知。
+
+          ** 注意：**
+
+          * 此頁面上的按鈕會重新導向至[studio.code.org/s/csp-post-survey](https://studio.code.org/s/csp-post-survey)
+          * 如果您願意，您可以從教師控制面板的下拉式選單中，將「學生課後調查」設定為您所在部分的當前單元。
+      csd-post-survey-2018-markdown-with-link-to-survey_v2:
+        teacher_markdown: "**請讓您的學生完成此調查！**\n\n* 結果對我們（code.org）維持我們的課程並進行改進至關重要。\n*
+          還有一項教師調查，您可以在其中提供自己的意見，您會收到電子郵件通知。\n\n**查看結果** -- 課後調查略有不同。調查位於課程的單獨單元中，此頁面有連結。\n\n*
+          若要在您的教師控制台中查看匿名調查結果，您需要 (1) 查看調查/評估，然後 (2) 選擇課後調查單元作為您想查看的單元。  \n\n* **關於查看課後調查結果的更多說明**：[[google
+          doc](https://docs.google.com/document/d/1EQfPy0D6lSWA3s3d2hkgVLSRn1vrjLLXaZBSz3-E9aw)]
+          [[pdf](https://docs.google.com/document/d/1EQfPy0D6lSWA3s3d2hkgVLSRn1vrjLLXaZBSz3-E9aw/export?format=pdf)]\n\n\n\n\n"
+      test-single-multi-standalone-retriable:
+        answers:
+        - text: 什麼都不會發生。
+          feedback: 不正確。風滾草將開始翻滾
+        - text: 風滾草將飄浮到螢幕頂部
+          feedback: 不正確。風滾草將開始翻滾
+        - text: 風滾草將開始翻滾
+          correct: true
+          feedback: 正確！
+        - text: 風滾草將忽明忽暗。
+          feedback: 不正確。風滾草將開始翻滾
+        questions:
+        - text: 仔細查看下方的程式。點擊「運行」按鈕後會發生什麼事呢？
