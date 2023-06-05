@@ -1,9 +1,11 @@
 - require '../shared/middleware/helpers/experiments'
 - SignUpTracking.log_load_finish_sign_up session, (@user.provider || 'email')
+- require 'cdo/cpa'
 - require 'geocoder'
-- require 'country_codes'
 - location = Geocoder.search(request.ip).try(:first)
-- us_ip = location.nil? || ['US', 'RD'].include?(location.country_code.to_s.upcase)
+- country_code = location&.country_code.to_s.upcase
+- state_code = location&.state_code.to_s.upcase
+- us_ip = ['US', 'RD', nil].include?(country_code)
 - @page_title = t('activerecord.attributes.user.finish_sign_up_header')
 
 #signup
@@ -86,7 +88,7 @@
         #student-name-label{style: "display: none;"}
           = f.label :name, t('activerecord.attributes.user.name_example')
         - if @user.errors[:name].present?
-          %p.error= @user.errors[:name].join(', ')
+          %p.error= @user.errors[:name].join('\n')
       .span5
         = f.text_field :name, maxlength: 255
 
@@ -94,9 +96,20 @@
       .span3.signup-field-label
         = f.label :age
         - if @user.errors[:age].present?
-          %p.error= @user.errors[:age].join(', ')
+          %p.error= @user.errors[:age].join('\n')
       .span5
         = f.select :age, age_options, include_blank: true
+
+    - if cpa_experience
+      .row#us-state-dropdown{style: "display: none;"}
+        .span3.signup-field-label
+          = f.label :us_state
+          - if @user.errors[:us_state].present?
+            %p.error= @user.errors[:us_state].join('\n')
+        .span5
+          = f.select :us_state, us_state_options, selected: state_code,
+          include_blank: true
+          = f.hidden_field :country_code, value: country_code
 
     - if experiment_value('gender')
       .row#gender-field
