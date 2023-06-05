@@ -33,8 +33,9 @@
 
 // Landing page
 .hero-banner-basic {
-  background: url(/images/banners/banner-bg-lines-light-grey.png) center repeat-x;
+  background: url(/images/banners/banner-bg-lines-light-grey.png) center repeat;
   background-size: contain;
+  border-bottom: 1px solid $neutral_light;
 
   .text-wrapper {
 
@@ -60,8 +61,16 @@
   }
 
   img {
+    width: 100%;
+    position: relative;
+
     @media screen and (max-width: $width-md) {
       display: block;
+    }
+
+    @media screen and (max-width: $width-sm) {
+      width: 70%;
+      margin: 2em auto 0;
     }
   }
 }
@@ -76,7 +85,7 @@
     margin-bottom: 1em;
 
     img {
-      width: 330%;
+      height: 380px;
     }
   }
 
@@ -90,14 +99,38 @@
   }
 }
 
-.tenth-anniversary-tweets {
-  max-height: 339px;
-  border-bottom: 1px solid;
-  width: 35%;
-  overflow: auto;
+.tenth-anniversary-celebrate {
 
-  .twitter-tweet {
-    margin: 0 auto 1em !important;
-    width: 96% !important;
+  .grid-container {
+    align-items: end;
+    gap: 2em;
+
+    @media screen and (min-width: $width-md) {
+      grid-template-columns: repeat(2, 1fr);
+
+      figure {
+        grid-column: 1 / span 2;
+      }
+    }
+
+    @media screen and (min-width: $width-lg) {
+      grid-template-columns: repeat(3, 1fr);
+
+      figure {
+        grid-column: 1 / span 2;
+      }
+    }
+
+    .tenth-anniversary-tweets {
+      max-height: 355px;
+      border-bottom: 1px solid;
+      overflow: auto;
+
+      .twitter-tweet {
+        margin: 0 auto 1em !important;
+      }
+    }
   }
 }
+
+

@@ -65,6 +65,12 @@ i.fa-fw {
   &.wrap { flex-wrap: wrap; }
 }
 
+// Grid container
+// Use classes to determine flexbox characteristics
+.grid-container {
+  display: grid;
+}
+
 // Line divider for use between sections
 // Use .no-margin-bottom to remove extra space above
 // a section that starts with an h2
