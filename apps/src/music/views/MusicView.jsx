@@ -54,7 +54,6 @@ import {
   setIsLoading,
   setIsPageError,
   setLabReadyForReload,
-  setSource,
 } from '@cdo/apps/labs/labRedux';
 import Simple2Sequencer from '../player/sequencer/Simple2Sequencer';
 import MusicPlayerStubSequencer from '../player/sequencer/MusicPlayerStubSequencer';
@@ -119,7 +118,6 @@ class UnconnectedMusicView extends React.Component {
     setIsPageError: PropTypes.func,
     setLevelCount: PropTypes.func,
     source: PropTypes.object,
-    setSource: PropTypes.func,
     labReadyForReload: PropTypes.bool,
     setLabReadyForReload: PropTypes.func,
   };
@@ -169,13 +167,6 @@ class UnconnectedMusicView extends React.Component {
     // correct approach.
     window.addEventListener('beforeunload', event => {
       this.analyticsReporter.endSession();
-      // Force a save before the page unloads, if there are unsaved changes.
-      // If we need to force a save, prevent navigation so we can save first.
-      if (this.musicBlocklyWorkspace.hasUnsavedChanges()) {
-        this.musicBlocklyWorkspace.saveCode(true);
-        event.preventDefault();
-        event.returnValue = '';
-      }
     });
 
     const musicValidator = new MusicValidator(
@@ -507,7 +498,6 @@ class UnconnectedMusicView extends React.Component {
         this.props.selectBlockId(e.newElementId);
       }
     }
-    this.props.setSource(this.musicBlocklyWorkspace.getCode());
 
     // This may no-op due to throttling.
     this.musicBlocklyWorkspace.saveCode();
@@ -802,7 +792,6 @@ const MusicView = connect(
     setProjectUpdatedError: () => dispatch(setProjectUpdatedError()),
     setIsLoading: isLoading => dispatch(setIsLoading(isLoading)),
     setIsPageError: isPageError => dispatch(setIsPageError(isPageError)),
-    setSource: source => dispatch(setSource(source)),
     setLabReadyForReload: labReadyForReload =>
       dispatch(setLabReadyForReload(labReadyForReload)),
   })

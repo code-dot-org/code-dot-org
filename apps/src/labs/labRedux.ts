@@ -48,17 +48,9 @@ export const setUpForLevel = createAsyncThunk(
     // Check for an existing project manager and clean it up, if it exists.
     const existingProjectManager =
       LabRegistry.getInstance().getProjectManager();
-    if (existingProjectManager) {
-      if (existingProjectManager.hasUnsavedChanges()) {
-        // Force a save with the existing code before changing levels if there are unsaved changes.
-        const state = thunkAPI.getState() as {lab: LabState};
-        if (state.lab.source) {
-          await existingProjectManager.save(state.lab.source, true);
-        }
-      }
-      // Clear out any remaining enqueued saves from the existing project manager.
-      existingProjectManager.destroy();
-    }
+    // Save any usaved code and clear out any remaining enqueued
+    // saves from the existing project manager.
+    await existingProjectManager?.cleanUp();
     // Create a new project manager.
     const projectManager =
       await ProjectManagerFactory.getProjectManagerForLevel(
@@ -171,8 +163,9 @@ async function setUpAndLoadProject(
   projectManager.addSaveStartListener(() =>
     dispatch(setProjectUpdatedSaving())
   );
-  projectManager.addSaveSuccessListener(channel => {
+  projectManager.addSaveSuccessListener((channel, source) => {
     dispatch(setProjectUpdatedAt(channel.updatedAt));
+    dispatch(setSource(source));
     dispatch(setChannel(channel));
   });
   projectManager.addSaveNoopListener(channel => {

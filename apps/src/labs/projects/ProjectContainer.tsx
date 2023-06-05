@@ -51,6 +51,17 @@ const ProjectContainer: React.FunctionComponent<ProjectContainerProps> = ({
     };
   }, [channelId, currentLevelId, scriptId, dispatch]);
 
+  window.addEventListener('beforeunload', event => {
+    const projectManager = LabRegistry.getInstance().getProjectManager();
+    // Force a save before the page unloads, if there are unsaved changes.
+    // If we need to force a save, prevent navigation so we can save first.
+    if (projectManager?.hasUnsavedChanges()) {
+      projectManager.cleanUp();
+      event.preventDefault();
+      event.returnValue = '';
+    }
+  });
+
   return <>{children}</>;
 };
 

@@ -393,10 +393,6 @@ export default class MusicBlocklyWorkspace {
       .save(this.getCode(), forceSave);
   }
 
-  hasUnsavedChanges() {
-    return LabRegistry.getInstance().getProjectManager().hasUnsavedChanges();
-  }
-
   callUserGeneratedCode(fn, args = []) {
     try {
       fn.call(this, ...args);

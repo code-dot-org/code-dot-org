@@ -24,7 +24,8 @@ export default class ProjectManager {
   private readonly saveInterval: number = 30 * 1000; // 30 seconds
   private saveInProgress = false;
   private saveQueued = false;
-  private saveSuccessListeners: ((channel: Channel) => void)[] = [];
+  private saveSuccessListeners: ((channel: Channel, source: Source) => void)[] =
+    [];
   private saveNoopListeners: ((channel?: Channel) => void)[] = [];
   private saveFailListeners: ((response: Response) => void)[] = [];
   private saveStartListeners: (() => void)[] = [];
@@ -86,6 +87,14 @@ export default class ProjectManager {
     this.destroyed = true;
   }
 
+  // Save any enqueued unsaved changes, then destroy the project manager.
+  async cleanUp() {
+    if (this.sourceToSave) {
+      await this.save(this.sourceToSave, true);
+    }
+    this.destroy();
+  }
+
   // TODO: Add functionality to reduce channel updates during
   // HoC "emergency mode" (see 1182-1187 in project.js).
   /**
@@ -113,7 +122,7 @@ export default class ProjectManager {
     }
   }
 
-  addSaveSuccessListener(listener: (channel: Channel) => void) {
+  addSaveSuccessListener(listener: (channel: Channel, source: Source) => void) {
     this.saveSuccessListeners.push(listener);
   }
 
@@ -183,7 +192,7 @@ export default class ProjectManager {
 
     this.saveInProgress = false;
     this.channel = channelSaveResponse as Channel;
-    this.executeSaveSuccessListeners(this.channel);
+    this.executeSaveSuccessListeners(this.channel, this.sourceToSave);
     return new Response();
   }
 
@@ -237,8 +246,8 @@ export default class ProjectManager {
   }
 
   // LISTENERS
-  private executeSaveSuccessListeners(channel: Channel) {
-    this.saveSuccessListeners.forEach(listener => listener(channel));
+  private executeSaveSuccessListeners(channel: Channel, source: Source) {
+    this.saveSuccessListeners.forEach(listener => listener(channel, source));
   }
 
   private executeSaveNoopListeners(channel?: Channel) {
