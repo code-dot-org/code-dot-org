@@ -24,6 +24,7 @@ export const sections = [
     courseOfferingId: null,
     courseVersionId: null,
     unitId: null,
+    isAssigned: true,
   },
   {
     id: 12,
@@ -42,6 +43,7 @@ export const sections = [
     courseOfferingId: null,
     courseVersionId: null,
     unitId: null,
+    isAssigned: true,
   },
 ];
 

@@ -2,12 +2,13 @@ import React from 'react';
 import {fireEvent, render, screen} from '@testing-library/react';
 import {pull} from 'lodash';
 import {expect} from '../../../util/reconfiguredChai';
-import CurriculumCatalogCard from '@cdo/apps/templates/curriculumCatalog/CurriculumCatalogCard';
+import {UnconnectedCurriculumCatalogCard as CurriculumCatalogCard} from '@cdo/apps/templates/curriculumCatalog/CurriculumCatalogCard';
 import {
   subjectsAndTopicsOrder,
   translatedCourseOfferingCsTopics,
   translatedLabels,
 } from '@cdo/apps/templates/teacherDashboard/CourseOfferingHelpers';
+import {sections} from '../studioHomepages/fakeSectionUtils';
 
 describe('CurriculumCatalogCard', () => {
   const translationIconTitle = 'Curriculum is available in your language';
@@ -37,6 +38,7 @@ describe('CurriculumCatalogCard', () => {
       gradesArray: ['4', '5', '6', '7', '8'],
       isEnglish: true,
       pathToCourse: '/s/course',
+      sectionsForDropdown: sections,
     };
   });
 
