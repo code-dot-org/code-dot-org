@@ -132,7 +132,3 @@ export function fixMenuGenerator(menuGenerator, width, height) {
     return [{src: url, width: width, height: height, alt: code_id}, code_id];
   });
 }
-
-export var __TestInterface = {
-  fixMenuGenerator: fixMenuGenerator,
-};
