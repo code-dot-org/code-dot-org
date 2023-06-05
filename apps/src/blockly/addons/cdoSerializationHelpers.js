@@ -151,29 +151,6 @@ function isBlockLocationUnset(block) {
 }
 
 /**
- * Initializes a block's position so that it can be repositioned with the cursor.
- * @param {object} block - and objecting containing the block to be moved and x/y coordinates
- * @param {Blockly.block} block.blockly_block - the actual Blockly block to be moved
- * @param {number} [block.x] - an x-coordinate from the XML serialization
- * @param {number} [block.y] - a y-coordinate frmo the XML serialization
- * @param {object} cursor - a location for moving a block
- */
-export function positionBlockXmlHelper(block, cursor) {
-  const isRTL = block.blockly_block.RTL;
-  const {viewWidth = 0} = block.blockly_block.workspace.getMetrics();
-  let {x, y} = block;
-  x = isNaN(x) ? 0 : x;
-  y = isNaN(y) ? 0 : y;
-
-  block.blockly_block.moveTo({
-    x: isRTL ? viewWidth - x : x,
-    y: y,
-  });
-
-  positionBlockWithCursor(block.blockly_block, cursor);
-}
-
-/**
  * Adds an svg frame around a block to signal that it is unused.
  * @param {Blockly.Block} block - a Blockly block
  */
