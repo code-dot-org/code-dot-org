@@ -69,6 +69,7 @@ it:
   unsubmit: Annulla l'invio delle risposte
   previous_page: Pagina precedente
   next_page: Pagina successiva
+  next_level: Livello successivo
   next_resource: Risorsa successiva
   done_with_module: Lezione completata
   cancel: "Annulla"
@@ -865,6 +866,8 @@ it:
     submit-incomplete-body: "Non hai risposto a tutte le domande. Non è possibile modificare le tue risposte dopo averle inviate.  Sei sicuro di volerle inviare?"
     submit-complete-title: "Invia le tue risposte"
     submit-complete-body: "Non puoi modificare la tue risposte dopo averle inviate.  Sei sicuro?"
+  level_summary:
+    correct_answer: "Risposta Corretta"
   match:
     wrong_title: "Riprova!"
     wrong_body: "La risposta che hai scelto non è corretta.  Per favore riprova!"
@@ -1261,7 +1264,7 @@ it:
       forbidden: "L'utente non può aggiornare lo stato bloccabile dello studente"
   reset_predict_progress_button: "Eliminare la risposta"
   pixelation:
-    raw_format: "Formato Raw"
+    raw_format: "Formato grezzo"
     raw_format_alt: "Visualizza i bit senza alcuna formattazione"
     readable_format: "Formato leggibile"
     readable_format_alt: "Visualizza i bit separati da pixel"
