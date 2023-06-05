@@ -111,7 +111,7 @@ export class CdoFieldImageDropdown extends FieldGridDropdown {
   }
 }
 
-function fixMenuGenerator(menuGenerator, width, height) {
+export function fixMenuGenerator(menuGenerator, width, height) {
   // Google Blockly supports images in dropdowns but has a different format,
   // so we just need to restructure our menu items before passing through to
   // the FieldDropdown constructor.
