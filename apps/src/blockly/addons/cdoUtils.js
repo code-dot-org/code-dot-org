@@ -27,7 +27,7 @@ export function loadBlocksToWorkspace(workspace, xml, stateToLoad) {
         stateToLoad = convertXmlToJson(xml);
       }
       Blockly.serialization.workspaces.load(stateToLoad, workspace);
-      positionBlocksOnWorkspace();
+      positionBlocksOnWorkspace(workspace);
     } catch (error) {
       firehoseClient.putRecord(
         {
