@@ -31,8 +31,6 @@ const CurriculumCatalogCard = ({
   imageSrc = 'https://images.code.org/0a24eb3b51bd86e054362f0760c6e64e-image-1681413990565.png',
   subjects = [],
   topics = [],
-  isTranslated = false,
-  isEnglish,
   pathToCourse,
   ...props
 }) => (
@@ -60,9 +58,7 @@ const CurriculumCatalogCard = ({
     })}
     quickViewButtonText={i18n.learnMore()}
     imageAltText={imageAltText}
-    isTranslated={isTranslated}
     translationIconTitle={i18n.courseInYourLanguage()}
-    isEnglish={isEnglish}
     pathToCourse={pathToCourse + '?viewAs=Instructor'}
     {...props}
   />
