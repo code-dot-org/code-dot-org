@@ -95,6 +95,7 @@ ru:
           description_short: Этот 20-часовой курс охватывает основы информатики и программирования в курсах 2-4.
           description_audience: Возраст 10-18 лет
           student_description: Этот 20-часовой курс охватывает основы информатики и программирования в курсах 2-4. Курс предназначен для учеников в возрасте 10-18 лет. Проверьте свое знание курсов 2-4 для более глубокого освоения!
+          name: 20-часовой
         edit-code:
           title: Редактирование кода
           description: Редактирование кода
@@ -4004,6 +4005,8 @@ ru:
               display_name: 'Глава 2: Создание физических прототипов'
             lessonGroup-5:
               display_name: Опрос
+        ai-temp:
+          title: Как ИИ Работает
         self-paced-pl-csd1-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4022,6 +4025,28 @@ ru:
           lessons:
             lesson-12:
               name: Подведение итогов
+        virtual-pl-csd-summer-day1:
+          lessons:
+            lesson-1:
+              name: Введение
+            lesson-12:
+              name: Подведение итогов
+        virtual-pl-csd-summer-day2:
+          lessons:
+            lesson-10:
+              name: Подведение итогов
+        virtual-pl-csd-summer-day3:
+          lessons:
+            lesson-12:
+              name: Подведение итогов
+        virtual-pl-csd-summer-day4:
+          lessons:
+            lesson-13:
+              name: Подведение итогов
+        virtual-pl-csd-summer-day5:
+          lessons:
+            lesson-3:
+              name: Оценка
         csd-post-survey-2023:
           title: Опрос после окончания курса
         focus-on-data-post-survey-2023:
@@ -4036,3 +4061,15 @@ ru:
           title: Опрос после окончания курса
         focus-on-creativity-post-survey-2023:
           title: Опрос после окончания курса
+        coursef-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Цифровое гражданство
+            lessonGroup-3:
+              display_name: Спрайты
+            lessonGroup-4:
+              display_name: Переменные
+            lessonGroup-6:
+              display_name: Завершение Курсового Проекта
+          description_audience: 'Возраст: 9-13'
+          description_short: Изучи все понятия в Основах компьютерных наук и создай собственную картинку, игру или историю!

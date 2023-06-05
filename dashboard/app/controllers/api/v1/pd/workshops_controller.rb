@@ -331,7 +331,8 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
   # Returns true if the following are all true:
   #   - it is a CSP or CSA Summer Workshop
   #   - the user is not a Workshop Admin
-  #   - it is being created within a month of it starting
+  #   - it is being created within a month of it starting (averaged to 30 days to avoid odd
+  #     behavior from time edge cases)
   # If true, then setting/updating 'virtual' is limited:
   #   - when creating this workshop, 'virtual' can only be set as false (i.e. 'in-person').
   #   - when editing this workshop, 'virtual' cannot be changed.
@@ -340,7 +341,7 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
       [Pd::Workshop::COURSE_CSP, Pd::Workshop::COURSE_CSA].include?(course) &&
       subject == Pd::Workshop::SUBJECT_SUMMER_WORKSHOP &&
       !current_user.permission?(UserPermission::WORKSHOP_ADMIN) &&
-      (start_date - 1.month <= Time.zone.now && Time.zone.now <= start_date)
+      (start_date - 30.days <= Time.zone.now && Time.zone.now <= start_date)
     )
   end
 end

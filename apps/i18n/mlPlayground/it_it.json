@@ -6,14 +6,19 @@
   "saveProgress": "Salva",
   "correctAnswer": "Corretta",
   "incorrectAnswer": "Sbagliata",
+  "modelCardLabel": "Etichetta",
   "modelCardPossibleValuesMinimum": "min",
   "modelCardPossibleValuesMaximum": "max",
+  "modelCardFeatures": "Caratteristiche",
   "columnInspectorDescription": "Descrizione",
   "columnDetailsMinimumValue": "min",
   "columnDetailsMaximumValue": "max",
   "dataCardLastUpdated": "Ultimo aggiornamento",
+  "trainModelHeading": "Addestramento",
+  "resultsTableFeatureHeader": "Caratteristiche",
   "predictHeader": "Provalo!",
   "predictButton": "Predict",
+  "uniqueOptionsWarningNotice": "Nota",
   "datasets": {
     "medical_priority": {
       "fields": {
@@ -118,7 +123,8 @@
         "lime": {
           "id": "lime"
         }
-      }
+      },
+      "name": "Raspado"
     },
     "shapes_v2_toy": {
       "fields": {

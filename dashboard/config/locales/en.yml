@@ -73,6 +73,7 @@ en:
         reset_password_token: "The reset password link you have followed"
         error:
           future: can't be in the future
+        us_state: 'State'
 
   beta: "beta"
   hello: "Hello world"
@@ -83,6 +84,7 @@ en:
   unsubmit: Unsubmit
   previous_page: Previous page
   next_page: Next page
+  next_level: Next level
   next_resource: Next resource
   done_with_module: Done with this Learning Module
   cancel: "Cancel"
@@ -213,6 +215,9 @@ en:
     parent_account_checkbox: "I am a parent/guardian signing up on behalf of my child"
     parent_account_email_progress_permission: "Can we email you with occasional updates on your child’s progress and projects, and updates about their course and computer science? [(See our privacy policy)](%{privacy_policy_url})"
     parent_account_email_label: "Parent/Guardian Email"
+    us_state: 'State'
+    us_state_dropdown_options:
+      other: "I live somewhere not listed here"
   school_info:
     title: 'School Information (optional)'
     school_country: 'School Country'

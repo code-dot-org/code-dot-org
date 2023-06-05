@@ -285,7 +285,7 @@ pl:
             -   W menu Zasoby dla nauczycieli poniżej możesz znaleźć _Przewodnik po programie nauczania_, _Słownictwo dotyczące kursu_ i inne zasoby, które pomogą Ci wdrożyć ten program nauczania.
           version_title: "'23-'24"
         self-paced-pl-physical-computing-2022:
-          title: 'Nauczanie tworzenia aplikacji za pomocą urządzeń '
+          title: Nauczanie tworzenia aplikacji za pomocą urządzeń
           version_title: "'22 - '23"
         csp-2023:
           title: Zasady informatyki '23-'24
@@ -341,6 +341,20 @@ pl:
             podobną pracę."
         virtual-pl-csd-summer-2023:
           title: virtual-pl-csd-summer-2023
+          description_student: "\\*\\*Co Cię czeka: \\*\\*\n\n-   Przygotujesz się
+            do nauczania kursu Odkrycia Informatyki.\n-   Przećwiczysz kluczowe pojęcia
+            z programu nauczania Odkrycia Informatyki.\n-   Zwiększysz zrozumienie
+            sprawiedliwej edukacji informatycznej. \n-   Rozwiniesz empatię dla doświadczeń
+            uczniów. \n-   Staniesz się częścią sieci nauczycieli, którzy wykonują
+            podobną pracę."
+          description_teacher: "\\*\\*Co Cię czeka: \\*\\*\n\n-   Przygotujesz się
+            do nauczania kursu Odkrycia Informatyki.\n-   Przećwiczysz kluczowe pojęcia
+            z programu nauczania Odkrycia Informatyki.\n-   Zwiększysz zrozumienie
+            sprawiedliwej edukacji informatycznej. \n-   Rozwiniesz empatię dla doświadczeń
+            uczniów. \n-   Staniesz się częścią sieci nauczycieli, którzy wykonują
+            podobną pracę."
+        self-paced-pl-csp-2023:
+          title: self-paced-pl-csp-2021
     resources:
       curriculum/csd/2020:
         name: Program nauczania
@@ -404,6 +418,9 @@ pl:
       all_vocabulary_2/csd/2023:
         name: Całe słownictwo
         url: "/courses/csd-2023/vocab"
+      csd_changelog_23-_24/csd/2023:
+        name: Dziennik zmian CSD '23-'24
+        url: https://docs.google.com/document/d/1p5wN0AlEUoKZ0WpcBryjkxLyQKsAr4k6zWqI91faksI/view
       csd_guide_to_assessment/csd/2023:
         name: Przewodnik po ocenie CSD
         url: https://docs.google.com/document/d/1IO5XgPW_Apil_Uziq5hAMCBgilm8txZ3sp8atxiKiLU/view

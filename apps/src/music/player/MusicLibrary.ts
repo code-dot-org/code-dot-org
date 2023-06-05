@@ -1,12 +1,10 @@
+import {ResponseValidator} from '@cdo/apps/util/HttpClient';
+
 export default class MusicLibrary {
   groups: FolderGroup[];
   private allowedSounds: Sounds | null;
 
-  constructor(libraryJson: {groups?: FolderGroup[]}) {
-    if (!libraryJson.groups || libraryJson.groups.length === 0) {
-      throw new Error(`Invalid library JSON: ${libraryJson}`);
-    }
-
+  constructor(libraryJson: LibraryJson) {
     this.groups = libraryJson.groups;
     this.allowedSounds = null;
   }
@@ -69,6 +67,18 @@ export default class MusicLibrary {
   }
 }
 
+export type LibraryJson = {
+  groups: FolderGroup[];
+};
+
+export const LibraryValidator: ResponseValidator<LibraryJson> = response => {
+  const libraryJson = response as LibraryJson;
+  if (!libraryJson.groups || libraryJson.groups.length === 0) {
+    throw new Error(`Invalid library JSON: ${response}`);
+  }
+  return libraryJson;
+};
+
 export type SoundType = 'beat' | 'bass' | 'lead' | 'fx';
 
 export interface SoundData {
@@ -77,6 +87,7 @@ export interface SoundData {
   length: number;
   type: SoundType;
   note?: number;
+  restricted?: boolean;
 }
 
 export interface SoundFolder {

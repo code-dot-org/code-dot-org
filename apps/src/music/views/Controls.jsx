@@ -8,6 +8,7 @@ import BeatPad from './BeatPad';
 import {AnalyticsContext} from '../context';
 import {useDispatch, useSelector} from 'react-redux';
 import {hideBeatPad, showBeatPad, toggleBeatPad} from '../redux/musicRedux';
+import commonI18n from '@cdo/locale';
 
 const documentationUrl = '/docs/ide/projectbeats';
 
@@ -59,56 +60,83 @@ const Controls = ({
     );
   };
 
-  const renderIconButton = (icon, onClick) => (
-    <div className={classNames(moduleStyles.controlButtons, moduleStyles.side)}>
-      <FontAwesome
-        icon={icon}
-        className={moduleStyles.iconButton}
-        onClick={onClick}
-      />
-    </div>
+  const renderIconButton = (icon, onClick, hide) => (
+    <button
+      className={classNames(
+        moduleStyles.controlButton,
+        moduleStyles.controlButtonIcon,
+        hide && moduleStyles.controlButtonHide
+      )}
+      onClick={onClick}
+      type="button"
+    >
+      <FontAwesome icon={icon} className={moduleStyles.icon} />
+    </button>
   );
 
-  const beatPadIconSection = renderIconButton('th', () => {
+  const beatPadIconButton = renderIconButton('th', () => {
     analyticsReporter.onButtonClicked('show-hide-beatpad', {
       showing: !isBeatPadShowing,
     });
     dispatch(toggleBeatPad());
   });
-  const infoIconSection = instructionsAvailable
-    ? renderIconButton('info-circle', toggleInstructions)
-    : null;
+
+  const infoIconButton = renderIconButton(
+    'info-circle',
+    toggleInstructions,
+    !instructionsAvailable
+  );
 
   const [leftIcon, rightIcon] = instructionsOnRight
-    ? [beatPadIconSection, infoIconSection]
-    : [infoIconSection, beatPadIconSection];
+    ? [beatPadIconButton, infoIconButton]
+    : [infoIconButton, beatPadIconButton];
 
   return (
     <div id="controls" className={moduleStyles.controlsContainer}>
       {isBeatPadShowing && renderBeatPad()}
-      {leftIcon}
       <div
-        className={classNames(moduleStyles.controlButtons, moduleStyles.center)}
+        className={classNames(moduleStyles.section, moduleStyles.sectionSide)}
       >
-        <FontAwesome
-          icon={isPlaying ? 'stop-circle' : 'play-circle'}
-          onClick={() => setPlaying(!isPlaying)}
-          className={moduleStyles.iconButton}
-        />
+        {leftIcon}
       </div>
       <div
-        className={classNames(moduleStyles.controlButtons, moduleStyles.side)}
+        className={classNames(moduleStyles.section, moduleStyles.sectionCenter)}
       >
-        <a href={documentationUrl} target="_blank" rel="noopener noreferrer">
+        <button
+          className={classNames(
+            moduleStyles.controlButton,
+            moduleStyles.controlButtonRun
+          )}
+          onClick={() => setPlaying(!isPlaying)}
+          type="button"
+        >
+          <FontAwesome
+            icon={isPlaying ? 'stop' : 'play'}
+            className={moduleStyles.playStopIcon}
+          />
+          <div className={moduleStyles.text}>
+            {isPlaying ? commonI18n.stop() : commonI18n.runProgram()}
+          </div>
+        </button>
+      </div>
+      <div
+        className={classNames(moduleStyles.section, moduleStyles.sectionSide)}
+      >
+        <a
+          href={documentationUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={classNames(
+            moduleStyles.controlButton,
+            moduleStyles.controlButtonIcon
+          )}
+          onClick={() => {
+            analyticsReporter.onButtonClicked('documentation-link');
+          }}
+        >
           <FontAwesome
             icon={'question-circle-o'}
-            onClick={() => {
-              analyticsReporter.onButtonClicked('documentation-link');
-            }}
-            className={classNames(
-              moduleStyles.iconButton,
-              moduleStyles.iconButtonLink
-            )}
+            className={classNames(moduleStyles.icon, moduleStyles.feedbackIcon)}
           />
         </a>
       </div>

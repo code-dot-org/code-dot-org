@@ -6892,7 +6892,7 @@ cs-CZ:
           correct: true
         - correct: true
         questions:
-        - {}
+        - text: Vývoj webových aplikací
       csd-post-survey-2019-I like cs:
         answers:
         - correct: true
@@ -12575,3 +12575,25 @@ cs-CZ:
         questions:
         - text: Podívej se pečlivě na tento kód. Co se podle tebe stane, když se program
             spustí?
+      Test Contained Retriable Multi:
+        answers:
+        - text: '0'
+        - text: '1'
+        - text: '2'
+          correct: true
+        - text: '4'
+        questions:
+        - {}
+      test-single-multi-standalone-retriable:
+        answers:
+        - text: Nic se nestane.
+          feedback: Nesprávně. Stepní běžec se začne převalovat
+        - text: Stepní běžec se přesune nahoru na obrazovku
+          feedback: Nesprávně. Stepní běžec se začne převalovat
+        - text: Stepní běžec se začne převalovat
+          correct: true
+          feedback: Správně!
+        - text: 'Stepní běžec bude blikat: zapnutý, vypnutý.'
+          feedback: Nesprávně. Stepní běžec se začne převalovat
+        questions:
+        - text: Podívej se pozorně na kód níže. Co se stane poté, co zmáčkneš "Spustit"?

@@ -22,8 +22,15 @@ body {
 // Use these classes to change a section's background color
 section.bg-neutral-light { background-color: $neutral_light; }
 section.bg-neutral-dark { background-color: $neutral_dark; }
-section.bg-primary-light { background-color: rgba($brand_primary_light, .5); }
 section.bg-secondary { background-color: $brand_secondary_light; }
+section.bg-primary-light {
+  background-color: rgba($brand_primary_light, .5);
+
+  a { color: $neutral_dark !important;
+    &:hover { color: $brand_secondary_dark !important; }
+    &.link-button { color: $neutral_white !important; }
+  }
+}
 
 // Centers a block-level element
 .centered { text-align: center !important; }
@@ -35,10 +42,27 @@ section.bg-secondary { background-color: $brand_secondary_light; }
 .no-padding-bottom { padding-bottom: 0 !important;}
 
 // FontAwesome icon defaults
+// Sets fixed height on icon container to maintain consistent
+// spacing when icons have varying widths and heights
+i.fa-fw {
+  line-height: 1.25em;
+}
+
 .icon::before {
   display: inline-block;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
+}
+
+// Flex container
+// Use classes to determine flexbox characteristics
+.flex-container {
+  display: flex;
+
+  &.justify-space-between { justify-content: space-between }
+  &.align-items-center { align-items: center; }
+  &.align-items-start { align-items: flex-start; }
+  &.wrap { flex-wrap: wrap; }
 }
 
 // Line divider for use between sections
@@ -57,6 +81,15 @@ div.divider {
     border-top: 1px solid $neutral_dark60;
     margin: 0;
     width: 100%;
+  }
+}
+
+// Lines (<hr>)
+hr {
+  border-top: 1px solid $neutral_dark20;
+
+  &.dark {
+    border-top: 1px solid $neutral_dark60;
   }
 }
 
@@ -153,6 +186,7 @@ a.link-button {
 // (not homepage or campaign pages)
 .hero-banner-basic {
   position: relative;
+  overflow: hidden;
 
   .text-wrapper {
     position: relative;
@@ -179,7 +213,7 @@ ul {
 
   // Lists that use icons next to content
   &.icon-bullet-list {
-    margin: 2em 0 1em;
+    margin: 1em 0;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -198,6 +232,7 @@ ul {
       display: flex;
       width: 48%;
       margin: 1.5em 0;
+      gap: 1em;
 
       @media screen and (max-width: $width-sm) {
         width: 100%;
@@ -207,14 +242,8 @@ ul {
         content: none;
       }
 
-      div > i {
-        width: 40px;
-        text-align: center;
-      }
-
       i {
-        font-size: 2.25em;
-        margin: 2px 16px 0 0;
+        font-size: 2em;
       }
 
       h3 {
@@ -316,8 +345,6 @@ ul {
 
       i {
         font-size: 1.25em;
-        margin: 3px 0 0;
-        vertical-align: text-bottom;
 
         &:before {
           color: $brand_secondary_default;
@@ -335,6 +362,31 @@ ul {
         i:before {
           color: $brand_secondary_dark;
         }
+      }
+    }
+  }
+
+  // Lists that show supporters or other text content in a table format
+  &.supporters-list {
+    margin: 3em auto;
+    display: grid;
+    justify-items: center;
+    gap: 1.5em;
+
+    @media screen and (min-width: $width-sm) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media screen and (min-width: $width-md) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    li {
+      all: unset;
+      text-align: center;
+
+      &:before {
+        content: "";
       }
     }
   }
@@ -427,9 +479,7 @@ details {
   }
 
   summary {
-    font-family: $gotham-bold, sans-serif;
-    font-size: 1.25em;
-    margin-bottom: .5em;
+    @include heading-sm;
     display: flex;
     justify-content: space-between;
     align-items: end;
@@ -501,42 +551,17 @@ form {
 
 // Action blocks wrappers
 .action-block__wrapper {
-  display: flex;
-  justify-content: space-between;
+  margin-top: 2em;
+  display: grid;
+  grid-gap: 1.25em;
 
-  @media screen and (max-width: $width-md) {
-    flex-wrap: wrap;
+  @media screen and (min-width: $width-sm) {
+    grid-template-columns: repeat(2, 1fr);
   }
-}
 
-.action-block__wrapper--two-col {
-  justify-content: space-between;
-
-  & > .action-block--one-col {
-    width: 49%;
-
-    @media screen and (max-width: $width-sm) {
-      width: 100%;
-      margin-top: 1em;
-    }
-  }
-}
-
-.action-block__wrapper--three-col {
-  justify-content: space-between;
-  flex-wrap: wrap;
-  max-width: 960px;
-
-  & > .action-block--one-col {
-    width: 32%;
-    margin-top: 1.25em;
-
-    @media screen and (max-width: $width-md) {
-      width: 49%;
-    }
-
-    @media screen and (max-width: $width-sm) {
-      width: 100%;
+  &.action-block__wrapper--three-col {
+    @media screen and (min-width: $width-lg) {
+      grid-template-columns: repeat(3, 1fr);
     }
   }
 }
@@ -569,9 +594,7 @@ form {
   &.secondary {
 
     h3 {
-      font-family: $gotham-bold, sans-serif;
-      font-size: 1.25em;
-      margin-bottom: 0.5em;
+      @include heading-sm;
     }
   }
 }
@@ -604,6 +627,8 @@ form {
   a.link-button {
     width: 100%;
     text-align: center;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
   }
 }
 
@@ -633,10 +658,70 @@ form {
   }
 }
 
+// Carousels
+// Uses the carouFredSel jQuery plugin: https://github.com/nzy/carouFredSel
+.carousel-wrapper {
+  margin: 2em 0 0;
+
+  @media screen and (max-width: $width-sm) {
+    padding-bottom: 1em;
+  }
+
+  // Set a min-height inline on the .carousel div
+  // inside .carousel-wrapper to account for varying
+  // quote lengths and prevent vertical height changes
+  .carousel {
+    overflow: hidden;
+
+    @media screen and (max-width: $width-md) {
+      height: unset !important;
+      overflow: unset;
+    }
+  }
+
+  // The plugin we're using disappears when <html dir="rtl">
+  // - updating the inset value fixes it; it does remove the swiping
+  // animation between slides on desktop, but keeps the content
+  .slides.rtl {
+    inset: 0 !important;
+  }
+
+  p {
+    font-family: $barlowSemiCondensed-medium, sans-serif;
+  }
+
+  .pagination {
+    margin: 1em 0 0 0;
+
+    @media screen and (max-width: $width-sm) {
+      margin-top: 3em;
+    }
+
+    &.left-align {
+      text-align: left;
+
+      @media screen and (max-width: $width-md) {
+        text-align: center;
+      }
+
+      a:first-child {
+        margin-left: 0;
+      }
+    }
+
+    a{
+      background: $brand_primary_light;
+
+      &.selected {
+        background: $brand_primary_default;
+      }
+    }
+  }
+}
+
 // Quotes carousel
 // See code.org/educate/professional-learning/middle-high
 // and /views/pl_middle_high_carousel.haml for an example
-// – uses the carouFredSel jQuery plugin: https://github.com/nzy/carouFredSel
 .quotes-wrapper {
 
   img {
@@ -654,24 +739,6 @@ form {
   }
 
   .carousel-wrapper {
-    font-family: $barlowSemiCondensed-medium, sans-serif;
-    margin: 2em 0 0;
-
-    @media screen and (max-width: $width-sm) {
-      padding-bottom: 1em;
-    }
-
-    // Set a min-height inline on the .carousel div
-    // inside .carousel-wrapper to account for varying
-    // quote lengths and prevent vertical height changes
-    .carousel {
-      overflow: hidden;
-
-      @media screen and (max-width: $width-md) {
-        height: unset !important;
-        overflow: unset;
-      }
-    }
 
     .with-image {
       display: flex;
@@ -699,7 +766,6 @@ form {
     }
 
     p {
-      font-family: $barlowSemiCondensed-medium, sans-serif;
       font-size: 1.25em;
 
       &.quote-text {
@@ -727,26 +793,59 @@ form {
       color: $brand_accent_default;
       margin: 0 2px;
     }
+  }
+}
 
-    .pagination {
-      text-align: left;
-      margin: 1em 0 0 0;
+// Photo slideshow carousel
+// See code.org/educate/professional-learning/middle-high
+// and /views/pl_middle_high_carousel.haml for an example
+.photo-carousel-wrapper {
+
+  .with-image {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5em;
+
+    @media screen and (max-width: $width-md) {
+      gap: 3em;
+    }
+
+    @media screen and (max-width: $width-sm) {
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1em;
+    }
+
+    img {
+      width: 450px;
+      height: auto;
+      border-radius: 1em;
+
+      @media screen and (max-width: $width-md) {
+        width: 300px;
+      }
 
       @media screen and (max-width: $width-sm) {
-        margin-top: 3em;
+        width: 100%;
       }
+    }
+  }
 
-      a{
-        background: $brand_primary_light;
+  p {
+    font-size: 1.5em;
 
-        &:first-child {
-          margin-left: 0;
-        }
+    @media screen and (max-width: $width-md) {
+      font-size: 1.25em;
+      margin-bottom: 1em;
+    }
+  }
 
-        &.selected {
-          background: $brand_primary_default;
-        }
-      }
+  .pagination {
+    margin-top: 2em;
+
+    @media screen and (max-width: $width-md) {
+      margin-top: 3em;
     }
   }
 }
@@ -768,13 +867,24 @@ form {
 // Video series
 // - see example: code.org/blockchain
 .video-series {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  display: grid;
+  grid-gap: 1.25em;
+  margin-top: 2em;
 
-  figure {
-    width: 49%;
-    margin-top: 1.25em;
+  @media screen and (min-width: $width-sm) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  // Overrides styles on the
+  // display_video_thumbnail partial
+  & > div.col-50 {
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100%;
+
+    .video_caption_link {
+      @include figcaption;
+    }
   }
 }
 
@@ -784,7 +894,7 @@ form {
   .wrapper{
     display: flex;
     justify-content: space-between;
-    gap: 2em;
+    gap: 1em;
   }
 
   i {

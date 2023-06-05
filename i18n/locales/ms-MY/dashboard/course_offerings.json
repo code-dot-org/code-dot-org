@@ -1,13 +1,7 @@
 {
-  "coursea": "Kursus A",
-  "courseb": "Kursus B",
-  "coursec": "Kursus C",
-  "coursed": "Kursus D",
-  "coursee": "Kursus E",
-  "coursef": "Kursus F",
-  "express": "Kursus Ekspres",
   "20-hour": "Pengenalan Dipercepatkan kepada Kursus CS",
   "flappy": "Kod Flappy",
+  "jigsaw": "Gergaji jig",
   "algebra": "Sains Komputer dalam Algebra",
   "applab-intro": "Pengenalan kepada Makmal Aplikasi",
   "aquatic": "Minecraft: Voyage Aquatic",
@@ -19,11 +13,13 @@
   "dance-extras-2019": "Teruskan Menari (2019)",
   "dance-extras": "Teruskan Menari (2018)",
   "frozen": "Kod dengan Anna dan Elsa",
+  "hero": "Minecraft: Hero's Journey",
   "hourofcode": "Pagar Sesat Klasik",
   "mc": "Jam Kod Minecraft",
   "oceans": "Kecerdasan Buatan (AI) untuk Lautan",
   "outbreak": "Simulator Wabak",
-  "sports": "Mengekod permainan sukan anda sendiri",
+  "playlab": "Main Makmal",
+  "sports": "Mengekod Permainan Sukan Anda Sendiri",
   "text-compression": "Pemampatan Teks",
   "csa-self-paced-pl": "Menavigasi Code.org untuk Guru Perintis CSA",
   "outbreak-csc": "Wabak",
@@ -40,5 +36,6 @@
   "soccer": "bola sepak",
   "hello-world-space": "Helo Dunia: Ruang",
   "hello-world-soccer": "Helo Dunia: Bola Sepak",
-  "playground": "taman permainan"
+  "playground": "taman permainan",
+  "design-process": "Proses Reka Bentuk"
 }

@@ -171,6 +171,7 @@ ms:
       Fonts and Style: Fonts dan Style
       FoodFight: FoodFight
       For Loop Fun - Unplugged Activity: Gelung Untuk yang Menyeronokkan - Aktiviti Nirplag
+      For Loops: Untuk Gelung
       For Loops and Color LEDs: Untuk Gelung dan LED Warna
       For Loops and Repeat Blocks: Untuk Gelung dan Blok Berulang
       Free Play: Permainan Bebas
@@ -204,6 +205,8 @@ ms:
       Intro to Side Scrollers: Pengenalan kepada Side Scrollers
       Intro to Sprites: Pengenalan kepada Sprite
       Intro to Variables: Pengenalan kepada Variables
+      Introducing Sprite Lab: Memperkenalkan Sprite Lab
+      Introduction to Arrays: Pengenalan kepada Tatasusunan
       Isaac's Survey Data: Data Tinjauan Isaac
       Iteration and Parameters: Lelaran dan Parameter
       Keep On Dancing!: Teruskan Menari!
@@ -245,6 +248,7 @@ ms:
       'Mini-Project: Royal Battle': 'Projek Mini: Pertempuran Diraja'
       "Mini-Project: Snowflake #1": "Projek Mini: Kepingan Salji #1"
       "Mini-Project: Snowflake #2": "Projek Mini: Kepingan Salji #2"
+      'Mini-Project: Sticker Art': 'Projek Mini: Seni Pelekat'
       'Mini-Project: Swimming Fish': 'Projek Mini: Ikan Berenang'
       'Mini-Project: Swimming Fish (continued)': 'Projek Mini: Ikan Berenang (sambungan)'
       'Mini-Project: User Input Programs': 'Projek Mini: Program Input Pengguna'
@@ -265,6 +269,7 @@ ms:
       Multiframe Animations: "\nAnimasi Multiframe"
       Musical Arrays: Susunan Muzik
       My Loopy Robotic Friends - Unplugged Activity: My Loopy Robotic Friends - Aktiviti Nirplag
+      My Online Neighborhood: Kejiranan Dalam Talian Saya
       My Robotic Friends - Unplugged Activity: My Robotic Friends - Aktiviti Nirplag
       Nested Loops with the Bee: Nested Loops with the Bee
       New Challenge Introduction: Pengenalan Cabaran Baharu
@@ -276,6 +281,7 @@ ms:
       'Overview: Images': 'Gambaran keseluruhan: Imej'
       'Overview: onEvent': 'Gambaran keseluruhan: onEvent'
       'Overview: setPosition': 'Gambaran keseluruhan: setPosition'
+      Pair Programming: Pengaturcaraan Pasangan
       Pet Recommender: Pengesyor Haiwan Kesayangan
       Picturing Data: Memotret Data
       Pizza Party Data: Data Parti Pizza
@@ -377,10 +383,12 @@ ms:
       'Technique: Frequency Analysis': 'Teknik: Analisis Kekerapan'
       Terminology Recap: Rakaman Terminologi
       Text Compression: Pemampatan Teks
+      The Animation Tab: Tab Animasi
       The Artist in Code Studio: Artis dalam Studio Kod
       The Big Event - Unplugged Activity: Acara Besar - Aktiviti Nirplag
       The Buzzer: The Buzzer
       The Collector: The Collector
+      The Harvester: Penuai
       The Internet - Unplugged Activity: Internet - Aktiviti Nirplag
       The Power of Words - Unplugged Activity: Kuasa Kata-kata - Aktiviti Nirplag
       The Right App - Unplugged Activity: Aplikasi The Right - Aktiviti Nirplag
@@ -398,8 +406,10 @@ ms:
       Using Random Numbers: Menggunakan Nombor Rawak
       Using Training Data: Menggunakan Data Latihan
       Using the LED: Menggunakan LED
+      Using the Repeat Block: Menggunakan Blok Ulang
       Using the Switch: Menggunakan Switch
       Variables: Pemboleh ubah
+      Velocity: Halaju
       Velocity and the Counter Pattern: Halaju dan Corak Kaunter
       Video: Video
       Video - Encryption and Public Keys: Video - Penyulitan dan Kunci Awam
@@ -461,6 +471,7 @@ ms:
       'Video: Nested Loops': 'Video: Gelung Bersarang'
       'Video: Nested Loops with the Bee': 'Video: Nested Loops with the Bee'
       'Video: Netflix and Data': 'Video: Netflix dan Data'
+      'Video: Outbreak Simulator: Introduction': 'Video: Simulator Wabak: Pengenalan'
       'Video: Pair Programming': 'Video: Pengaturcaraan Berpasangan'
       'Video: Pair Programming ': 'Video: Pengaturcaraan Berpasangan'
       'Video: Programming with Blocks': 'Video: Pengaturcaraan dengan Blok'

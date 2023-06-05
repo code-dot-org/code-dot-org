@@ -181,17 +181,6 @@ Setup steps for macOS:
 
     3. Running `nvm alias default $(cat ./.nvmrc)` will set your default node version for future shells.
 
-    4. For Apple Silicon (M1) systems, Node 14 is not available. We can temporarily switch to an x86_64 shell to install Node 14, which will then be available from our normal arm64 shell.
-
-       ```sh
-       arch -arch x86_64 zsh
-       # You are now in a new shell, run `arch` to confirm
-       nvm install # or `nvm install 18.16.0`
-       exit
-       # You are now back in the original shell, run `arch` to confirm
-       nvm use && nvm alias default $(cat ./.nvmrc)
-       ```
-
 1. Install **yarn** via `npm install -g yarn@1.22.19`
 
 1. Install **OpenSSL**

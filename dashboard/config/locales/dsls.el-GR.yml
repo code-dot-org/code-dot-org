@@ -1476,8 +1476,11 @@ el-GR:
         - {}
       courseC_multi_maze_debugging8_predict1_2018_2019_2020:
         answers:
-        - {}
-        - correct: true
+        - text: Ο Σκρατ θα φτάσει στο βελανίδι. Δεν υπάρχουν σφάλματα στον κώδικα.
+          feedback: Λάθος Πρώτα, ο Σκρατ στρίβει προς τη λάθος κατεύθυνση και μετά  δεν
+            προχωράει αρκετές φορές μπροστά για να φτάσει το βελανίδι.
+        - text: Ο Σκρατ δε θα φτάσει το βελανίδι επειδή στρίβει λάθος.
+          correct: true
         - correct: true
         - {}
         questions:
@@ -1988,36 +1991,40 @@ el-GR:
         - {}
       courseD_multi_farmer_while4_predict1:
         answers:
-        - {}
-        - {}
+        - text: Τίποτα δεν θα συμβεί.
+        - text: Ο αγρότης δεν θα σταματήσει ποτέ να αφαιρεί χώμα.
         - correct: true
         - {}
         questions:
-        - {}
+        - text: Κοιτάξτε προσεκτικά τον παρακάτω κώδικα. Τι θα συμβεί αφού κάνετε
+            κλικ στο κουμπί «Εκτέλεση»;
       courseD_multi_farmer_while4_predict1_2018:
         answers:
-        - {}
-        - {}
+        - text: Τίποτα δεν θα συμβεί.
+        - text: Ο αγρότης δεν θα σταματήσει ποτέ να αφαιρεί χώμα.
         - correct: true
         - {}
         questions:
-        - {}
+        - text: Κοιτάξτε προσεκτικά τον παρακάτω κώδικα. Τι θα συμβεί αφού κάνετε
+            κλικ στο κουμπί «Εκτέλεση»;
       courseD_multi_farmer_while4_predict1_2018_2019:
         answers:
-        - {}
-        - {}
+        - text: Τίποτα δεν θα συμβεί.
+        - text: Ο αγρότης δεν θα σταματήσει ποτέ να αφαιρεί χώμα.
         - correct: true
         - {}
         questions:
-        - {}
+        - text: Κοιτάξτε προσεκτικά τον παρακάτω κώδικα. Τι θα συμβεί αφού κάνετε
+            κλικ στο κουμπί «Εκτέλεση»;
       courseD_multi_farmer_while4_predict1_2018_2019_2020:
         answers:
-        - {}
-        - {}
+        - text: Τίποτα δεν θα συμβεί.
+        - text: Ο αγρότης δεν θα σταματήσει ποτέ να αφαιρεί χώμα.
         - correct: true
         - {}
         questions:
-        - {}
+        - text: Κοιτάξτε προσεκτικά τον παρακάτω κώδικα. Τι θα συμβεί αφού κάνετε
+            κλικ στο κουμπί «Εκτέλεση»;
       courseD_multi_maze_until10_predict2:
         answers:
         - correct: true
@@ -2368,6 +2375,8 @@ el-GR:
         content1: περιγραφή εδώ
       csf_putting_a_stop_to_online_meanness:
         content1: περιγραφή εδώ
+        markdown: Σταματάμε την κακία! Τι πρέπει να κάνετε αν κάποιος σας συμπεριφέρεται
+          με κακία όσο είστε συνδεδεμένος στο διαδίκτυο;
       grade2_multi_collector_A_predict1:
         answers:
         - {}
@@ -2604,8 +2613,11 @@ el-GR:
         - {}
       courseC_multi_maze_debugging8_predict1_2021:
         answers:
-        - {}
-        - correct: true
+        - text: Ο Σκρατ θα φτάσει στο βελανίδι. Δεν υπάρχουν σφάλματα στον κώδικα.
+          feedback: Λάθος Πρώτα, ο Σκρατ στρίβει προς τη λάθος κατεύθυνση και μετά  δεν
+            προχωράει αρκετές φορές μπροστά για να φτάσει το βελανίδι.
+        - text: Ο Σκρατ δε θα φτάσει το βελανίδι επειδή στρίβει λάθος.
+          correct: true
         - correct: true
         - {}
         questions:
@@ -2703,12 +2715,13 @@ el-GR:
         - {}
       courseD_multi_farmer_while4_predict1_2021:
         answers:
-        - {}
-        - {}
+        - text: Τίποτα δεν θα συμβεί.
+        - text: Ο αγρότης δεν θα σταματήσει ποτέ να αφαιρεί χώμα.
         - correct: true
         - {}
         questions:
-        - {}
+        - text: Κοιτάξτε προσεκτικά τον παρακάτω κώδικα. Τι θα συμβεί αφού κάνετε
+            κλικ στο κουμπί «Εκτέλεση»;
       courseD_multi_maze_until10_predict2_2021:
         answers:
         - correct: true
@@ -2727,7 +2740,7 @@ el-GR:
         - {}
       courseE_multi_dance_events_predict1_2021:
         answers:
-        - {}
+        - text: Τίποτα δεν θα συμβεί.
         - {}
         - correct: true
         - {}
@@ -2759,12 +2772,13 @@ el-GR:
         - {}
       courseE_swim_fish_behavior_predict1_2021:
         answers:
-        - {}
+        - text: Τίποτα δεν θα συμβεί.
         - {}
         - correct: true
         - {}
         questions:
-        - {}
+        - text: Κοιτάξτε προσεκτικά τον παρακάτω κώδικα. Τι θα συμβεί αφού κάνετε
+            κλικ στο κουμπί «Εκτέλεση»;
       courseF_events_predict_multi:
         answers:
         - {}
@@ -2830,6 +2844,8 @@ el-GR:
         content1: περιγραφή εδώ
       csf_putting_a_stop_to_online_meanness_2021:
         content1: περιγραφή εδώ
+        markdown: Σταματάμε την κακία! Τι πρέπει να κάνετε αν κάποιος σας συμπεριφέρεται
+          με κακία όσο είστε συνδεδεμένος στο διαδίκτυο;
       grade2_multi_collector_A_predict1_2021:
         answers:
         - {}
@@ -3069,6 +3085,9 @@ el-GR:
         - {}
         - {}
         - {}
+        content1: Μια ομάδα φτιάχνει μια εφαρμογή που θα βοηθήσει τους ανθρώπους να
+          αποφασίσουν τι ρούχα θα φορέσουν το πρωί. Συνδυάστε τέσσερα πράγματα που
+          κάνει η εφαρμογή με την είσοδο, την έξοδο, την αποθήκευση και την επεξεργασία.
       CSD U1 IOSP match_2021:
         answers:
         - {}
@@ -3080,6 +3099,9 @@ el-GR:
         - {}
         - {}
         - {}
+        content1: Μια ομάδα φτιάχνει μια εφαρμογή που θα βοηθήσει τους ανθρώπους να
+          αποφασίσουν τι ρούχα θα φορέσουν το πρωί. Συνδυάστε τέσσερα πράγματα που
+          κάνει η εφαρμογή με την είσοδο, την έξοδο, την αποθήκευση και την επεξεργασία.
       CSD U1 IOSP match_2022:
         answers:
         - {}
@@ -3091,6 +3113,9 @@ el-GR:
         - {}
         - {}
         - {}
+        content1: Μια ομάδα φτιάχνει μια εφαρμογή που θα βοηθήσει τους ανθρώπους να
+          αποφασίσουν τι ρούχα θα φορέσουν το πρωί. Συνδυάστε τέσσερα πράγματα που
+          κάνει η εφαρμογή με την είσοδο, την έξοδο, την αποθήκευση και την επεξεργασία.
       CSD U1 Test PSP match:
         answers:
         - {}
@@ -3770,7 +3795,7 @@ el-GR:
         - text: πιγκουίνος
         - text: Βάτραχος
           correct: true
-        - {}
+        - text: καμηλοπάρδαλη
         - {}
         questions:
         - {}
@@ -3780,7 +3805,7 @@ el-GR:
         - text: πιγκουίνος
         - text: Βάτραχος
           correct: true
-        - {}
+        - text: καμηλοπάρδαλη
         - {}
         questions:
         - {}
@@ -3790,7 +3815,7 @@ el-GR:
         - text: πιγκουίνος
         - text: Βάτραχος
           correct: true
-        - {}
+        - text: καμηλοπάρδαλη
         - {}
         questions:
         - {}
@@ -3800,7 +3825,7 @@ el-GR:
           correct: true
         - text: πιγκουίνος
         - text: Βάτραχος
-        - {}
+        - text: καμηλοπάρδαλη
         - {}
         questions:
         - {}
@@ -3810,7 +3835,7 @@ el-GR:
           correct: true
         - text: πιγκουίνος
         - text: Βάτραχος
-        - {}
+        - text: καμηλοπάρδαλη
         - {}
         questions:
         - {}
@@ -3820,7 +3845,7 @@ el-GR:
           correct: true
         - text: πιγκουίνος
         - text: Βάτραχος
-        - {}
+        - text: καμηλοπάρδαλη
         - {}
         questions:
         - {}
@@ -4921,7 +4946,7 @@ el-GR:
           correct: true
         - correct: true
         questions:
-        - {}
+        - text: Ανάπτυξη διαδικτύου
       csd-post-survey-2019-I like cs:
         answers:
         - correct: true
@@ -8245,10 +8270,14 @@ el-GR:
         - {}
       csp-pre-survey-2017-q16_2022:
         answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
+        - text: Συμφωνώ απόλυτα
+          correct: true
+        - text: Συμφωνώ
+          correct: true
+        - text: Συμφωνώ ελαφρώς
+          correct: true
+        - text: Τίποτα από τα δύο
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -8853,11 +8882,13 @@ el-GR:
       csp-pre-survey-2017-q3_2022:
         answers:
         - correct: true
+        - text: Συμφωνώ
+          correct: true
         - correct: true
         - correct: true
         - correct: true
-        - correct: true
-        - correct: true
+        - text: Διαφωνώ
+          correct: true
         - correct: true
         questions:
         - {}
@@ -8919,7 +8950,8 @@ el-GR:
       csp-pre-survey-2017-q4_2022:
         answers:
         - correct: true
-        - correct: true
+        - text: Συμφωνώ
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -9621,12 +9653,18 @@ el-GR:
         - {}
       reasons-took-course:
         answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
+        - text: Είχα φίλους που το έπαιρναν
+          correct: true
+        - text: Μου αρέσει πολύ ο δάσκαλος
+          correct: true
+        - text: Σκέφτηκα ότι θα είχε πλάκα.
+          correct: true
+        - text: Ήθελα να μάθω περισσότερα για την επιστήμη των υπολογιστών
+          correct: true
+        - text: Νόμιζα ότι θα ήταν εύκολο.
+          correct: true
+        - text: Σκέφτηκα ότι θα ήταν μια πρόκληση
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -9636,24 +9674,36 @@ el-GR:
         - {}
       reasons-took-course-csd_2021:
         answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
+        - text: Είχα φίλους που το έπαιρναν
+          correct: true
+        - text: Μου αρέσει πολύ ο δάσκαλος
+          correct: true
+        - text: Σκέφτηκα ότι θα είχε πλάκα.
+          correct: true
+        - text: Ήθελα να μάθω περισσότερα για την επιστήμη των υπολογιστών
+          correct: true
+        - text: Νόμιζα ότι θα ήταν εύκολο.
+          correct: true
+        - text: Σκέφτηκα ότι θα ήταν μια πρόκληση
+          correct: true
         - correct: true
         - correct: true
         questions:
         - {}
       reasons-took-course-csd_2022:
         answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
+        - text: Είχα φίλους που το έπαιρναν
+          correct: true
+        - text: Μου αρέσει πολύ ο δάσκαλος
+          correct: true
+        - text: Σκέφτηκα ότι θα είχε πλάκα.
+          correct: true
+        - text: Ήθελα να μάθω περισσότερα για την επιστήμη των υπολογιστών
+          correct: true
+        - text: Νόμιζα ότι θα ήταν εύκολο.
+          correct: true
+        - text: Σκέφτηκα ότι θα ήταν μια πρόκληση
+          correct: true
         - correct: true
         - correct: true
         questions:
@@ -9748,7 +9798,8 @@ el-GR:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Θα είμαι πραγματικά σε θέση να είμαι ο εαυτός μου σε αυτό το μάθημα
+            της επιστήμης των υπολογιστών.
       will-be-myself-in-cs_2021:
         answers:
         - correct: true
@@ -9759,7 +9810,8 @@ el-GR:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Θα είμαι πραγματικά σε θέση να είμαι ο εαυτός μου σε αυτό το μάθημα
+            της επιστήμης των υπολογιστών.
       will-be-myself-in-cs_2022:
         answers:
         - correct: true
@@ -9770,7 +9822,8 @@ el-GR:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Θα είμαι πραγματικά σε θέση να είμαι ο εαυτός μου σε αυτό το μάθημα
+            της επιστήμης των υπολογιστών.
       worried-less-capable:
         answers:
         - correct: true
@@ -9781,7 +9834,8 @@ el-GR:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Ανησυχώ ότι οι άλλοι θα με θεωρήσουν λιγότερο ικανό στην επιστήμη
+            των υπολογιστών.
       worried-seen-incapable:
         answers:
         - correct: true
@@ -9912,30 +9966,34 @@ el-GR:
         - {}
       courseC_multi_maze_debugging8_predict12022:
         answers:
-        - feedback: Λανθασμένο. Ο Σκρατ δεν θα φτάσει το βελανίδι επειδή γυρίζει λάθος.
-        - correct: true
+        - text: Ο Σκρατ θα φτάσει στο βελανίδι. Δεν υπάρχουν σφάλματα στον κώδικα.
+          feedback: Λανθασμένο. Ο Σκρατ δεν θα φτάσει το βελανίδι επειδή στρίβει λάθος.
+        - text: Ο Σκρατ δε θα φτάσει το βελανίδι επειδή στρίβει λάθος.
+          correct: true
           feedback: Σωστό! Ο Σκρατ γυρίζει προς τη λάθος κατεύθυνση και δεν θα φτάσει
             στο βελανίδι.
-        - feedback: Λανθασμένο. Ο Σκρατ δεν θα φτάσει το βελανίδι επειδή γυρίζει λάθος.
-        - {}
+        - feedback: Λανθασμένο. Ο Σκρατ δεν θα φτάσει το βελανίδι επειδή στρίβει λάθος.
+        - feedback: Ο Σκρατ δε θα φτάσει το βελανίδι επειδή στρίβει λάθος.
         questions:
         - {}
       courseC_multi_maze_programming8_predict12022:
         answers:
         - {}
         - correct: true
+          feedback: Σωστό!
         - {}
         - {}
         questions:
         - {}
       courseC_multi_starWars_predict12022:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: Ο ΒΒ-8 δεν θα κινηθεί.
+        - text: Το BB-8 θα κινηθεί μόνο ένα τετράγωνο.
+        - text: BB-8 θα κινηθεί 5 φορές και θα πάρει όλα τα παλιοσίδερα
+          correct: true
+        - text: Το BB-8 θα μετακινηθεί μόνο 3 τετράγωνα.
         questions:
-        - {}
+        - text: Τι νομίζετε ότι θα συμβεί όταν κάνετε κλικ στο κουμπί «Εκτέλεση»;
       courseC_multi_starWars_predict22022:
         answers:
         - {}
@@ -10004,18 +10062,24 @@ el-GR:
         - {}
       courseD_multi_farmer_while4_predict12022:
         answers:
-        - {}
-        - {}
+        - text: Τίποτα δεν θα συμβεί.
+        - text: Ο αγρότης δεν θα σταματήσει ποτέ να αφαιρεί χώμα.
         - correct: true
         - {}
         questions:
-        - {}
+        - text: Κοιτάξτε προσεκτικά τον παρακάτω κώδικα. Τι θα συμβεί αφού κάνετε
+            κλικ στο κουμπί «Εκτέλεση»;
       courseD_multi_maze_until10_predict22022:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: Το ζόμπι θα περάσει από το σωστό μονοπάτι και θα καταλήξει να πηγαινοέρχεται
+            για πάντα.
+          correct: true
+        - feedback: Το ζόμπι θα περάσει από το σωστό μονοπάτι και θα καταλήξει να
+            πηγαινοέρχεται για πάντα.
+        - feedback: Το ζόμπι θα περάσει από το σωστό μονοπάτι και θα καταλήξει να
+            πηγαινοέρχεται για πάντα.
+        - feedback: Το ζόμπι θα περάσει από το σωστό μονοπάτι και θα καταλήξει να
+            πηγαινοέρχεται για πάντα.
         questions:
         - {}
       courseD_multi_maze_until2_predict12022:
@@ -10044,12 +10108,13 @@ el-GR:
         - {}
       courseE_swim_fish_behavior_predict12022:
         answers:
-        - {}
+        - text: Τίποτα δε θα συμβεί.
         - {}
         - correct: true
         - {}
         questions:
-        - {}
+        - text: Κοιτάξτε προσεκτικά τον παρακάτω κώδικα. Τι θα συμβεί αφού κάνετε
+            κλικ στο κουμπί «Εκτέλεση»;
       courseF_events_predict_multi2022_2022_pilot_-2022-2:
         answers:
         - {}
@@ -10060,12 +10125,18 @@ el-GR:
         - {}
       courseF_groups_predict_multi_2022_pilot_-2022-2:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: Ο χαρακτήρας που κάνετε κλικ θα γίνει μεγαλύτερος.
+          correct: true
+          feedback: Σωστά! Ο χαρακτήρας που κάνετε κλικ θα γίνει μεγαλύτερος.
+        - text: Ο χαρακτήρας που κάνετε κλικ θα γίνει μεγαλύτερος.
+          feedback: Λάθος. Ο χαρακτήρας που κάνατε κλικ θα γίνει μεγαλύτερος.
+        - text: Όλοι οι χαρακτήρες θα γίνουν μεγαλύτεροι.
+          feedback: Λάθος. Ο χαρακτήρας που κάνατε κλικ θα γίνει μεγαλύτερος.
+        - text: Όλοι οι χαρακτήρες θα γίνουν μικρότεροι.
+          feedback: Λάθος. Ο χαρακτήρας που κάνατε κλικ θα γίνει μεγαλύτερος.
         questions:
-        - {}
+        - text: 'Κάντε μία πρόβλεψη: Αφού πατήσετε Εκτέλεση, τί θα συμβεί όταν κάνετε
+            κλικ σε έναν χαρακτήρα;'
       courseF_labels_predict_multi2022_2022_pilot_-2022-2:
         answers:
         - {}
@@ -10101,20 +10172,40 @@ el-GR:
         - {}
       courseF_variables2_predict2_multi2022_-2022-2:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: Το λαγουδάκι θα πει "5".
+          correct: true
+          feedback: Σωστό! Ο αριθμός 5 αποθηκεύεται στη μεταβλητή και στη συνέχεια
+            χρησιμοποιείται ξανά όταν μιλάει ο χαρακτήρας.
+        - text: Το κουνελάκι θα πει ό, τι αριθμό πληκτρολογείται.
+          feedback: Λανθασμένο. Δεν υπάρχει προτροπή σε αυτό το πρόγραμμα. Ο αριθμός
+            ορίζεται απευθείας στον κώδικα.
+        - text: Το λαγουδάκι θα πει «μέτρησε».
+          feedback: Λανθασμένο. Το «count» είναι μια μεταβλητή. Όταν αυτό το μπλοκ
+            τρέχει, παίρνει τον αριθμό που είναι αποθηκευμένος. Το λαγουδάκι θα πει
+            "5".
+        - text: Τίποτα δε θα συμβεί, γιατί το «count» δεν είναι αριθμός.
+          feedback: Λανθασμένο. Ο αριθμός 5 αποθηκεύεται στη μεταβλητή και χρησιμοποιείται
+            όταν μιλάει ο χαρακτήρας.
         questions:
-        - {}
+        - text: 'Κάντε μια πρόβλεψη: Τι θα πει το λαγουδάκι;'
       courseF_variables2_predict_multi2022_2022_pilot_-2022-2:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: Το πρόγραμμα θα εκτυπώσει όποιον αριθμό πληκτρολογηθεί.
+          feedback: Λανθασμένο. Ο αριθμός αποθηκεύεται στη μεταβλητή και χρησιμοποιείται
+            για τη δημιουργία χαρακτήρων καρότου.
+        - text: Το κουνελάκι θα πει ό, τι αριθμό πληκτρολογείται.
+          feedback: Λανθασμένο. Ο αριθμός αποθηκεύεται στη μεταβλητή και χρησιμοποιείται
+            για τη δημιουργία χαρακτήρων καρότου.
+        - text: Το πρόγραμμα θα κάνει τόσα πολλά νέα καρότα.
+          correct: true
+          feedback: Σωστό! Ο αριθμός των χαρακτήρων που γίνονται είναι ο αριθμός που
+            είναι αποθηκευμένος στη μεταβλητή.
+        - text: Τίποτα δε θα συμβεί, γιατί το «count» δεν είναι αριθμός.
+          feedback: Λανθασμένο. Ο αριθμός αποθηκεύεται στη μεταβλητή και χρησιμοποιείται
+            για τη δημιουργία χαρακτήρων καρότου.
         questions:
-        - {}
+        - text: 'Κάντε μια πρόβλεψη: Τι θα συμβεί μετά την πληκτρολόγηση ενός αριθμού
+            στην προτροπή;'
       courseF_variables_predict_multi2022_2022_pilot_-2022-2:
         answers:
         - {}
@@ -10139,6 +10230,8 @@ el-GR:
         content1: περιγραφή εδώ
       csf_putting_a_stop_to_online_meanness2022:
         content1: περιγραφή εδώ
+        markdown: Σταματάμε την κακία! Τι πρέπει να κάνετε αν κάποιος σας συμπεριφέρεται
+          με κακία όσο είστε συνδεδεμένος στο διαδίκτυο;
       grade2_multi_collector_A_predict12022:
         answers:
         - {}
@@ -10147,3 +10240,120 @@ el-GR:
         - {}
         questions:
         - {}
+      CSD Student End of Unit Survey - Unit 1_2022:
+        title: 'Ανακαλύψετε την Επιστήμη Υπολογιστών:  Έρευνα κατά το τέλος της ενότητας!'
+      CourseE_Lesson_11_Artist_Practice_2022:
+        description: Σπουδαία δουλειά μέχρι τώρα! Επιλέξτε την επόμενη δραστηριότητά
+          σας. Ολοκλήρωσε όσα περισσότερα μπορείς. Συνεχίστε την εξάσκηση με τους
+          εμφωλευμένους βρόχους και τον Καλλιτέχνη!
+      CourseE_Lesson_7_Artist_Practice_2022:
+        description: Σπουδαία δουλειά μέχρι τώρα! Επιλέξτε την επόμενη δραστηριότητά
+          σας. Ολοκλήρωσε όσα περισσότερα μπορείς. Συνεχίστε την εξάσκηση με τους
+          εμφωλευμένους βρόχους και τον Καλλιτέχνη!
+      GoingPlacesSafely-unplugged:
+        markdown: |
+          # Πηγαίνοντας σε μέρη με ασφάλεια
+
+          Το Διαδίκτυο είναι ένα ισχυρό, αλλά μερικές φορές επικίνδυνο μέρος. Μείνετε ασφαλείς κατά την πλοήγηση στο Internet!
+
+          <p align=center>
+      HappyMaps-Unplugged:
+        markdown: |
+          # Χαρούμενοι Χάρτες
+
+          Δημιουργήστε έναν αλγόριθμο για να μετακινήσετε ένα χαρακτήρα μέσα σε ένα λαβύρινθο.
+      HappyMaps-Unplugged2022:
+        markdown: |
+          # Χαρούμενοι Χάρτες
+
+          Δημιουργήστε έναν αλγόριθμο για να μετακινήσετε ένα χαρακτήρα μέσα σε ένα λαβύρινθο.
+      HappyMaps-Unplugged_2020:
+        markdown: |
+          # Χαρούμενοι Χάρτες
+
+          Δημιουργήστε έναν αλγόριθμο για να μετακινήσετε ένα χαρακτήρα μέσα σε ένα λαβύρινθο.
+      HappyMaps-Unplugged_2021:
+        markdown: |
+          # Χαρούμενοι Χάρτες
+
+          Δημιουργήστε έναν αλγόριθμο για να μετακινήσετε ένα χαρακτήρα μέσα σε ένα λαβύρινθο.
+      Test Contained Retriable Multi:
+        answers:
+        - text: '0'
+        - text: '1'
+        - text: '2'
+          correct: true
+        - text: '4'
+        questions:
+        - {}
+      courseAB_EOC2022:
+        display_name: Έργο Λήξη Μαθήματος
+      courseAB_EOC_2021:
+        display_name: Έργο Λήξη Μαθήματος
+      courseB_EOC2022:
+        display_name: Έργο Λήξη Μαθήματος
+      courseB_EOC_2021:
+        display_name: Έργο Λήξη Μαθήματος
+      courseD_EOC2022:
+        display_name: Έργο Λήξη Μαθήματος
+      courseD_EOC_2020:
+        display_name: Έργο Λήξη Μαθήματος
+      courseD_EOC_2021:
+        display_name: Έργο Λήξη Μαθήματος
+      courseE_EOC2022:
+        display_name: Έργο Λήξη Μαθήματος
+      courseE_EOC_2020:
+        display_name: Έργο Λήξη Μαθήματος
+      courseE_EOC_2021:
+        display_name: Έργο Λήξη Μαθήματος
+      courseE_EOC_examples2022:
+        display_name: Έργο Λήξη Μαθήματος
+      courseE_EOC_examples_2021:
+        display_name: Έργο Λήξη Μαθήματος
+      courseExpress_EOC_2020:
+        display_name: Έργο Λήξη Μαθήματος
+      courseF_EOC_2020:
+        display_name: Έργο Λήξη Μαθήματος
+      courseF_EOC_2021:
+        display_name: Έργο Λήξη Μαθήματος
+      courseF_EOC_examples2022_2022_pilot_-2022-2:
+        display_name: Έργο Λήξη Μαθήματος
+      courseF_EOC_examples_2021:
+        display_name: Έργο Λήξη Μαθήματος
+      courseF_EOC_samples2022:
+        display_name: Έργο Λήξη Μαθήματος
+      courseF_EOC_samples_2021:
+        display_name: Έργο Λήξη Μαθήματος
+      courseF_intro_apps2022_2022_pilot_-2022-2:
+        description: Όλα αυτά τα έργα δημιουργήθηκαν με το Εργαστήριο Χαρακτήρων.
+          Δοκίμασέ τα τώρα για να δείς τί είναι δυνατό. Με την ολοκλήρωση αυτού του
+          μαθήματος, θα είσαι σε θέση να δημιουργείς τα δικά σου έργα σαν αυτά...
+          και άλλα πολλά!
+      csf_digital_trails:
+        markdown: |
+          # Ακολουθήστε το Ψηφιακό Ίχνος
+
+          ## Τι πληροφορίες είναι εντάξει να έχετε στο ψηφιακό σας αποτύπωμα;
+      csf_digital_trails2022:
+        markdown: |
+          # Ακολουθήστε το Ψηφιακό Ίχνος
+
+          ## Τι πληροφορίες είναι εντάξει να έχετε στο ψηφιακό σας αποτύπωμα;
+      csf_digital_trails_2021:
+        markdown: |
+          # Ακολουθήστε το Ψηφιακό Ίχνος
+
+          ## Τι πληροφορίες είναι εντάξει να έχετε στο ψηφιακό σας αποτύπωμα;
+      express_EOC2022:
+        display_name: Έργο Λήξη Μαθήματος
+      express_EOC_2021:
+        display_name: Έργο Λήξη Μαθήματος
+      test-single-multi-standalone-retriable:
+        answers:
+        - text: Τίποτα δεν θα συμβεί.
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - text: Κοιτάξτε προσεκτικά τον παρακάτω κώδικα. Τι θα συμβεί αφού κάνετε
+            κλικ στο κουμπί «Εκτέλεση»;

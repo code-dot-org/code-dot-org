@@ -4016,26 +4016,25 @@ es-ES:
           Para simplificar el proceso de creación de prototipos, los equipos pueden pensar en cada tarjeta que crearon en el Prototipo en Papel como una pantalla separada en la repetición de su aplicación en el Laboratorio de Aplicaciones. En realidad, las pantallas que son muy similares, a menudo se pueden desarrollar como una sola pantalla con contenido que cambia en función de la intervención del usuario. En la próxima lección los alumnos verán algunos ejemplos de cómo podría funcionar eso, pero no se espera que incorporen ese tipo de funcionalidad en este proyecto.
       New Challenge Introduction:
         content1: descripción aquí
-        markdown: "### Nuevo desafío: descifrar un cifrado de sustitución aleatoria...
-          con un nuevo widget\n\n¿Qué pasaría si, en lugar de desplazar todo el alfabeto,
-          asignamos a cada letra del alfabeto otra letra al azar? Esto se llama cifrado
-          de sustitución aleatoria.**\n\n![](https://images.code.org/7837e7fef2f38659f4bf51a29b6dc4d3-image-1473863470440.gif)\n\nAhora,
-          en lugar de codificar el mensaje secreto con un desplazamiento alfabético
-          simple, verás mensajes codificados con **sustitución aleatoria**.\n\n\nEsto
+        markdown: "### Nuevo Desafío: Descifrar un Cifrado de Sustitución Aleatoria...
+          con un nuevo widget\n\n¿Qué pasaría si en lugar de desplazar todo el alfabeto,
+          mapeáramos cada letra del alfabeto a una letra diferente aleatoria del alfabeto?
+          Esto se llama **cifrado de sustitución aleatoria.**\n\n![](https://images.code.org/7837e7fef2f38659f4bf51a29b6dc4d3-image-1473863470440.gif)\n\nAhora,
+          en lugar de codificar el mensaje secreto con un simple desplazamiento alfabético,
+          te enfrentarás a mensajes codificados con **sustitución aleatoria**.  \n\n\n\nEsto
           es mucho más difícil de descifrar y requiere una herramienta más sofisticada,
-          así que...\n\nCuando hagas clic en continuar, verás una **versión nueva
-          y más sofisticada de la herramienta de cifrado** que te muestra muchas cosas
-          diferentes.\n\n¡Pero lo que hace es un misterio!\n\n### Tu tarea:\n\n *
-          Descubrir qué está pasando en esta nueva versión de la herramienta\n * ¿Qué
-          información te presenta?\n * Descubrir qué te permite hacer la herramienta\n
-          * Como siempre: no puedes adivinar. Así que haz clic en las cosas e investiga.\n
-          * Si lo descubres, es posible que puedas descifrar un mensaje codificado
-          con sustitución aleatoria.\n \n### Te damos una pista\n\n* ¿Sabías que la
-          letra **E** es la más utilizada en el idioma inglés?\n\n### Volver a reunirse
-          y debatir\nDespués de jugar un tiempo con la herramienta, debes reunirte
-          con alguien (un compañero, un grupo pequeño o toda la clase) para conversar
-          sobre lo que encontraste y verificar que conoces lo que está sucediendo
-          y las diversas formas en que puedes usar la herramienta.\n\n\n"
+          así que...\n\nCuando hagas clic en continuar, verás una **nueva y más sofisticada
+          versión de la herramienta de encriptación** que te muestra un montón de
+          cosas diferentes.\n\nPero lo que hace es un poco misterioso.  \n\n### Tu
+          Tarea:\n\n * Averiguar qué está pasando en esta nueva versión de la herramienta.\n
+          * ¿Qué información se te presenta?\n * Averigua qué te permite hacer la
+          herramienta\n * Como siempre: no puedes romperla.  Así que haz clic en las
+          cosas, curiosea.\n * Si lo averiguas podrías ser capaz de descifrar un mensaje
+          codificado con sustitución aleatoria.\n \n### Pista\n\n* ¿Sabías que **E**
+          es la letra más común usada en inglés?\n\n### Convocatoria y Debate\n Después
+          de un rato jugando, deberías reunirte con alguien -compañero, pequeño grupo,
+          toda la clase- para comentar lo que has descubierto y verificar que sabes
+          lo que ocurre y las distintas formas en que puedes utilizar la herramienta.\n\n\n"
       OPD-K5 About:
         markdown: |
           # Primeros pasos: sobre este curso
@@ -6111,9 +6110,9 @@ es-ES:
           ¡Es hora de presentar tus proyectos! Tu profesor te dará más detalles sobre cómo vas a presentar tu trabajo a tus compañeros.
       Responding to User Input:
         markdown: |+
-          # Responder a la entrada del usuario
+          # Respondiendo a la Entrada del Usuario
 
-          El Modo de diseño hace que sea muy fácil diseñar la interfaz de usuario para su aplicación, pero necesitaremos sumergirnos en el Modo de código para que realmente responda a los usuarios.
+          El Modo Diseño hace que sea muy fácil diseñar la interfaz de usuario para su aplicación, pero necesitaremos sumergirnos en el Modo de código para que realmente responda a los usuarios.
 
           En Laboratorio de juegos, el bucle Dibujar solo ejecutaba código constantemente, usando condicionales para verificar las interacciones del usuario. Laboratorio de aplicaciones, por otro lado, espera responder a ciertos **eventos** que ocurren en un programa. Es la forma en que Laboratorio de aplicaciones dice "¡Oye! ¡Algo sucedió!". Esto significa que no es necesario que se ejecute ningún código cuando no interactúas directamente con una aplicación, y tu código puede responder a cada uno de estos eventos a medida que ocurren.
 
@@ -6145,7 +6144,7 @@ es-ES:
 
           ### Cambio de pantallas con un "clic"
 
-          En la programación dirigida por eventos, es importante comprender que:
+          En la programación dirigida a eventos, es importante comprender que:
 
           * **Los usuarios activan eventos**: los eventos ocurren cuando los usuarios hacen clic en un botón, tocan la pantalla, mueven el mouse, escriben una tecla en el teclado, etc.
           * **Código de activación de eventos**: cuando se produce un evento o se "dispara", se puede utilizar para activar una función de JavaScript en particular.
@@ -16845,7 +16844,7 @@ es-ES:
         - text: No estoy seguro de qué es esto
           correct: true
         questions:
-        - text: Programación Informática
+        - text: Programación de Ordenadores
       csd-post-survey-2018-topic-robotics:
         answers:
         - text: Sí
@@ -17245,7 +17244,7 @@ es-ES:
       csd-post-survey-unit4-preamble:
         content1: descripción aquí
         markdown: |
-          # Unidad 4: El proceso de Diseño
+          # Unidad 4: El Proceso de Diseño
 
           ![](https://images.code.org/d3c87c83a8c190d86951169c5b9b6c6d-image-1526918019889.png)
       csd-post-survey-unit5-preamble:
@@ -26432,3 +26431,35 @@ es-ES:
 
           Esta es una segunda muestra de un texto de instrucciones que está almacenado en un archivo .external.  Aquí hay un poco de texto extra para que podamos obtener un poco de ajuste de líneas cuando veamos esto en nuestro LevelGroup que utilizará esto para mostrar algunas instrucciones entre los niveles regulares incrustados.
 
+      Test Contained Retriable Multi:
+        answers:
+        - text: '0'
+          feedback: No, eso es 1 - 1.
+        - text: '1'
+          feedback: No, eso es 1 x 1.
+        - text: '2'
+          correct: true
+          feedback: "¡Sí, eres un genio!"
+        - text: '4'
+          feedback: No, eso no es ni de lejos.
+        content1: Aquí hay algo de información.
+        markdown: 'Prueba **markdown** _aquí_
+
+'
+        questions:
+        - text: "¿Cuánto es 1 + 1?"
+        title: Contenido Multi
+      test-single-multi-standalone-retriable:
+        answers:
+        - text: No sucederá nada.
+          feedback: Incorrecto. La planta rodadora comenzará a dar vueltas
+        - text: La planta rodadora flotará hasta la parte superior de la pantalla
+          feedback: Incorrecto. La planta rodadora comenzará a dar vueltas
+        - text: La planta rodadora comenzará a caer
+          correct: true
+          feedback: "¡Correcto!"
+        - text: La planta rodadora se encenderá y apagará.
+          feedback: Incorrecto. La planta rodadora comenzará a dar vueltas
+        questions:
+        - text: Mira el siguiente código con atención. ¿Qué sucederá cuando hagas
+            clic en "Ejecutar"?

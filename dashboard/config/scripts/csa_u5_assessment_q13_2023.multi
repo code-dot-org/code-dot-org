@@ -27,3 +27,6 @@ The code does not work as intended. Which of the following arrays can be passed 
 MARKDOWN
 
 allow_multiple_attempts true
+teacher_markdown <<MARKDOWN
+If we pass the array `{{1, 0, 0}, {1, 0, 0}}` to the `shift()` method, it will return `{{0, 0, 0}, {0, 0, 0}}` instead of the expected result `{{0, 0, 1}, {0, 0, 1}}`. This shows that the method does not correctly shift the elements one position to the left.
+MARKDOWN

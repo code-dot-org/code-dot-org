@@ -1468,3 +1468,13 @@ kk:
           lessons:
             lesson-3:
               name: Кіріспе
+        virtual-pl-csd-summer-day1:
+          lessons:
+            lesson-1:
+              name: Кіріспе
+        coursef-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Сандық Азаматтық
+            lessonGroup-4:
+              display_name: Айнымалылар

@@ -22,6 +22,15 @@
         },
         "iste": {
           "name": "ISTE Standards für Studenten"
+        },
+        "c3ss": {
+          "name": "C3 Standards für Sozialkunde"
+        },
+        "csa": {
+          "name": "Konzeptioneller Rahmen für CSA"
+        },
+        "ai4k12-2021": {
+          "name": "AI4K12 Nationale Richtlinien 2021"
         }
       }
     }

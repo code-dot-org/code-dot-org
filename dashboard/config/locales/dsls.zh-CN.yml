@@ -11935,7 +11935,7 @@ zh-CN:
           correct: true
         - correct: true
         questions:
-        - {}
+        - text: 网页开发
       csd-post-survey-2019-I like cs:
         answers:
         - correct: true
@@ -17555,3 +17555,25 @@ zh-CN:
         title: 人工智能和机器学习快速调查！
       aiml-intro-pulse-survey_2022:
         title: 人工智能和机器学习快速调查！
+      Test Contained Retriable Multi:
+        answers:
+        - text: '0'
+        - text: '1'
+        - text: '2'
+          correct: true
+        - text: '4'
+        questions:
+        - {}
+      test-single-multi-standalone-retriable:
+        answers:
+        - text: 什么都不会发生。
+          feedback: 不正确。风滚草将开始翻滚
+        - text: 风滚草将飘浮到屏幕顶部
+          feedback: 不正确。风滚草将开始翻滚
+        - text: 风滚草将开始翻滚
+          correct: true
+          feedback: 叮咚！答对啦！
+        - text: 风滚草将忽明忽暗。
+          feedback: 不正确。风滚草将开始翻滚
+        questions:
+        - text: 仔细阅读下面的代码。 点击 "运行" 后，会发生什么？

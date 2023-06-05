@@ -562,19 +562,19 @@
           "courseD_scrat_programming6_c": "កុំមានភាពភ័យខ្លាចក្នុងការធ្វើខុស! ព្យាយាមបន្ថែមប្លុក និងដំណើរការកូដ ដើម្បីមើលថាមានអ្វីកើតឡើង បើទោះបីជាអ្នកមិនទាន់គិតថាអ្នកបានដោះស្រាយបញ្ហានេះក៏ដោយ។"
         },
         "courseA_maze_seq1": {
-          "courseA_maze_seq1_a": "ប្រសិនបើអ្នកកំពុងមានបញ្ហាក្នុងការនាំតួអង្គបក្សីផ្លាស់ទី ត្រូវប្រាកដថាប្លុកត្រូវបានរៀបតាមលំដាប់លំដោយ [ប្លុកនៅក្នុងប្លុក] [0]",
+          "courseA_maze_seq1_a": "ប្រសិនបើអ្នកកំពុងមានបញ្ហាក្នុងការផ្លាស់ទីបក្សី សូមអ្នកប្រាកដថាប្លុកត្រូវបានរៀបតាមលំដាប់លំដោយ [blockly block] [0]",
           "courseA_maze_seq1_b": "តួអង្គបក្សីតម្រូវអោយផ្លាស់ទីទៅខាងលិចចំនួន ៣ ដងដើម្បីទៅដល់តួអង្គជ្រូក។ ចូរប្រើប្លុកនេះ <xml><block type=\"maze_moveWest\"/></xml>"
         },
         "courseA_maze_seq1_2018": {
-          "courseA_maze_seq1_a": "ប្រសិនបើអ្នកកំពុងមានបញ្ហាក្នុងការនាំតួអង្គបក្សីផ្លាស់ទី ត្រូវប្រាកដថាប្លុកត្រូវបានរៀបតាមលំដាប់លំដោយ [ប្លុកនៅក្នុងប្លុក] [0]",
+          "courseA_maze_seq1_a": "ប្រសិនបើអ្នកកំពុងមានបញ្ហាក្នុងការផ្លាស់ទីបក្សី សូមអ្នកប្រាកដថាប្លុកត្រូវបានរៀបតាមលំដាប់លំដោយ [blockly block] [0]",
           "courseA_maze_seq1_b": "តួអង្គបក្សីតម្រូវអោយផ្លាស់ទីទៅខាងលិចចំនួន ៣ ដងដើម្បីទៅដល់តួអង្គជ្រូក។ ចូរប្រើប្លុកនេះ <xml><block type=\"maze_moveWest\"/></xml>"
         },
         "courseA_maze_seq1_2019": {
-          "courseA_maze_seq1_a": "ប្រសិនបើអ្នកកំពុងមានបញ្ហាក្នុងការនាំតួអង្គបក្សីផ្លាស់ទី ត្រូវប្រាកដថាប្លុកត្រូវបានរៀបតាមលំដាប់លំដោយ [ប្លុកនៅក្នុងប្លុក] [0]",
+          "courseA_maze_seq1_a": "ប្រសិនបើអ្នកកំពុងមានបញ្ហាក្នុងការផ្លាស់ទីបក្សី សូមអ្នកប្រាកដថាប្លុកត្រូវបានរៀបតាមលំដាប់លំដោយ [blockly block] [0]",
           "courseA_maze_seq1_b": "តួអង្គបក្សីតម្រូវអោយផ្លាស់ទីទៅខាងលិចចំនួន ៣ ដងដើម្បីទៅដល់តួអង្គជ្រូក។ ចូរប្រើប្លុកនេះ <xml><block type=\"maze_moveWest\"/></xml>"
         },
         "courseA_maze_seq1_2020": {
-          "courseA_maze_seq1_a": "ប្រសិនបើអ្នកកំពុងមានបញ្ហាក្នុងការនាំតួអង្គបក្សីផ្លាស់ទី ត្រូវប្រាកដថាប្លុកត្រូវបានរៀបតាមលំដាប់លំដោយ [ប្លុកនៅក្នុងប្លុក] [0]",
+          "courseA_maze_seq1_a": "ប្រសិនបើអ្នកកំពុងមានបញ្ហាក្នុងការផ្លាស់ទីបក្សី សូមអ្នកប្រាកដថាប្លុកត្រូវបានរៀបតាមលំដាប់លំដោយ [blockly block] [0]",
           "courseA_maze_seq1_b": "តួអង្គបក្សីតម្រូវអោយផ្លាស់ទីទៅខាងលិចចំនួន ៣ ដងដើម្បីទៅដល់តួអង្គជ្រូក។ ចូរប្រើប្លុកនេះ <xml><block type=\"maze_moveWest\"/></xml>"
         },
         "courseA_maze_seq2": {
@@ -655,59 +655,65 @@
           "courseC_maze_programming4_b": "ដើម្បីឲ្យស្របតាមផ្លូវ:\n\\-ឆ្ពោះទៅមុខ\n\\-បង្វែរផ្លូវមួយទៀត\n\\-ឆ្ពោះទៅមុខ\n\\-ត្រឡប់ក្រោយទៅផ្លូវមួយផ្សេងទៀត\n\\-ឆ្ពោះទៅមុខ"
         },
         "courseA_harvester_loops5": {
-          "courseA_harvester_loops5_a": "ប្រសិនបើអ្នកធ្វើមិនចេញ ព្យាយាមដោះស្រាយល្បែងផ្គុំរូបនៅក្នុងពីរផ្នែក។ផ្នែកទីមួយមុនកាច់ជ្រុង ហើយផ្នែកទីពីរក្រោយកាច់ជ្រុង"
+          "courseA_harvester_loops5_a": "ប្រសិនបើអ្នកធ្វើមិនចេញ ព្យាយាមដោះស្រាយល្បែងផ្គុំរូបជាពីរផ្នែក។​ ផ្នែកទីមួយមុនកាច់ជ្រុង ហើយផ្នែកទីពីរក្រោយកាច់ជ្រុង។"
         },
         "courseA_harvester_loops5_2019": {
-          "courseA_harvester_loops5_a": "ប្រសិនបើអ្នកធ្វើមិនចេញ ព្យាយាមដោះស្រាយល្បែងផ្គុំរូបនៅក្នុងពីរផ្នែក។ផ្នែកទីមួយមុនកាច់ជ្រុង ហើយផ្នែកទីពីរក្រោយកាច់ជ្រុង"
+          "courseA_harvester_loops5_a": "ប្រសិនបើអ្នកធ្វើមិនចេញ ព្យាយាមដោះស្រាយល្បែងផ្គុំរូបជាពីរផ្នែក។​ ផ្នែកទីមួយមុនកាច់ជ្រុង ហើយផ្នែកទីពីរក្រោយកាច់ជ្រុង។"
         },
         "courseA_harvester_loops5_2020": {
-          "courseA_harvester_loops5_a": "ប្រសិនបើអ្នកធ្វើមិនចេញ ព្យាយាមដោះស្រាយល្បែងផ្គុំរូបនៅក្នុងពីរផ្នែក។ផ្នែកទីមួយមុនកាច់ជ្រុង ហើយផ្នែកទីពីរក្រោយកាច់ជ្រុង"
+          "courseA_harvester_loops5_a": "ប្រសិនបើអ្នកធ្វើមិនចេញ ព្យាយាមដោះស្រាយល្បែងផ្គុំរូបជាពីរផ្នែក។​ ផ្នែកទីមួយមុនកាច់ជ្រុង ហើយផ្នែកទីពីរក្រោយកាច់ជ្រុង។"
         },
         "courseA_harvester_seq2": {
-          "courseA_harvester_seq2_b": "ព្យាយាមសរសេរនូវជំហានទាំងអស់នៅលើក្រដាសដើម្បីរកដំណោះស្រាយ"
+          "courseA_harvester_seq2_b": "ព្យាយាមសរសេរនូវជំហានទាំងអស់នៅលើក្រដាសដើម្បីរកដំណោះស្រាយ",
+          "courseA_harvester_seq2_a": "កុំភ្លេចប្រើ <xml><block type=\"harvester_corn\"/></xml> ដើម្បីប្រមូលពោត!"
         },
         "courseA_harvester_seq2_2019": {
-          "courseA_harvester_seq2_b": "ព្យាយាមសរសេរនូវជំហានទាំងអស់នៅលើក្រដាសដើម្បីរកដំណោះស្រាយ"
+          "courseA_harvester_seq2_b": "ព្យាយាមសរសេរនូវជំហានទាំងអស់នៅលើក្រដាសដើម្បីរកដំណោះស្រាយ",
+          "courseA_harvester_seq2_a": "កុំភ្លេចប្រើ <xml><block type=\"harvester_corn\"/></xml> ដើម្បីប្រមូលពោត!"
         },
         "courseA_harvester_seq2_2020": {
-          "courseA_harvester_seq2_b": "ព្យាយាមសរសេរនូវជំហានទាំងអស់នៅលើក្រដាសដើម្បីរកដំណោះស្រាយ"
+          "courseA_harvester_seq2_b": "ព្យាយាមសរសេរនូវជំហានទាំងអស់នៅលើក្រដាសដើម្បីរកដំណោះស្រាយ",
+          "courseA_harvester_seq2_a": "កុំភ្លេចប្រើ <xml><block type=\"harvester_corn\"/></xml> ដើម្បីប្រមូលពោត!"
         },
         "courseA_maze_seq5": {
           "courseA_maze_seq5_a": "ព្យាយាមសរសេរនូវជំហានទាំងអស់នៅលើក្រដាសដើម្បីរកដំណោះស្រាយ",
           "courseA_maze_seq5_b": "អ្នកនឹងត្រូវការពីរប្លុក  ដៅនៅក្នុងទិសដៅពីរ"
         },
         "courseA_maze_seq5_2018": {
-          "1": "ព្យាយាមសរសេរនូវជំហានទាំងអស់នៅលើក្រដាសដើម្បីរកដំណោះស្រាយ"
+          "1": "ព្យាយាមសរសេរនូវជំហានទាំងអស់នៅលើក្រដាសដើម្បីរកដំណោះស្រាយ",
+          "2": "អ្នកត្រូវតែប្រើប្លុកមួយនេះ៖\n\n<xml><block type=\"maze_moveSouth\"/></xml>"
         },
         "courseA_maze_seq5_2019": {
-          "1": "ព្យាយាមសរសេរនូវជំហានទាំងអស់នៅលើក្រដាសដើម្បីរកដំណោះស្រាយ"
+          "1": "ព្យាយាមសរសេរនូវជំហានទាំងអស់នៅលើក្រដាសដើម្បីរកដំណោះស្រាយ",
+          "2": "អ្នកត្រូវតែប្រើប្លុកមួយនេះ៖\n\n<xml><block type=\"maze_moveSouth\"/></xml>"
         },
         "courseA_maze_seq5_2020": {
-          "1": "ព្យាយាមសរសេរនូវជំហានទាំងអស់នៅលើក្រដាសដើម្បីរកដំណោះស្រាយ"
+          "1": "ព្យាយាមសរសេរនូវជំហានទាំងអស់នៅលើក្រដាសដើម្បីរកដំណោះស្រាយ",
+          "2": "អ្នកត្រូវតែប្រើប្លុកមួយនេះ៖\n\n<xml><block type=\"maze_moveSouth\"/></xml>"
         },
         "courseA_maze_seq5_copy": {
           "courseA_maze_seq5_a": "ព្យាយាមសរសេរនូវជំហានទាំងអស់នៅលើក្រដាសដើម្បីរកដំណោះស្រាយ",
           "courseA_maze_seq5_b": "អ្នកនឹងត្រូវការពីរប្លុក  ដៅនៅក្នុងទិសដៅពីរ"
         },
         "courseA_maze_seq6": {
-          "courseA_maze_seq6_a": "កូដចុងក្រោយរបស់អ្នកគួរតែមានប្លុកផ្លាស់ទី៣",
-          "courseA_maze_seq6_b": "ប្រសិនបើអ្នកធ្វើមិនចេញ ព្យាយាមដោះស្រាយល្បែងផ្គុំរូបនៅក្នុងពីរផ្នែក។ផ្នែកទីមួយមុនកាច់ជ្រុង ហើយផ្នែកទីពីរក្រោយកាច់ជ្រុង"
+          "courseA_maze_seq6_a": "កូដសម្រេចរបស់អ្នក គួរតែមានកូដប្លុកផ្លាស់ទី ចំនួន៣ប្លុក។",
+          "courseA_maze_seq6_b": "ប្រសិនបើអ្នកធ្វើមិនចេញ ព្យាយាមដោះស្រាយល្បែងផ្គុំរូបជាពីរផ្នែក។​ ផ្នែកទីមួយមុនកាច់ជ្រុង ហើយផ្នែកទីពីរក្រោយកាច់ជ្រុង។"
         },
         "courseA_maze_seq6_2018": {
-          "courseA_maze_seq6_a": "កូដចុងក្រោយរបស់អ្នកគួរតែមានប្លុកផ្លាស់ទី៣",
-          "courseA_maze_seq6_b": "ប្រសិនបើអ្នកធ្វើមិនចេញ ព្យាយាមដោះស្រាយល្បែងផ្គុំរូបនៅក្នុងពីរផ្នែក។ផ្នែកទីមួយមុនកាច់ជ្រុង ហើយផ្នែកទីពីរក្រោយកាច់ជ្រុង"
+          "courseA_maze_seq6_a": "កូដសម្រេចរបស់អ្នក គួរតែមានកូដប្លុកផ្លាស់ទី ចំនួន៣ប្លុក។",
+          "courseA_maze_seq6_b": "ប្រសិនបើអ្នកធ្វើមិនចេញ ព្យាយាមដោះស្រាយល្បែងផ្គុំរូបជាពីរផ្នែក។​ ផ្នែកទីមួយមុនកាច់ជ្រុង ហើយផ្នែកទីពីរក្រោយកាច់ជ្រុង។"
         },
         "courseA_maze_seq6_2019": {
-          "courseA_maze_seq6_a": "កូដចុងក្រោយរបស់អ្នកគួរតែមានប្លុកផ្លាស់ទី៣",
-          "courseA_maze_seq6_b": "ប្រសិនបើអ្នកធ្វើមិនចេញ ព្យាយាមដោះស្រាយល្បែងផ្គុំរូបនៅក្នុងពីរផ្នែក។ផ្នែកទីមួយមុនកាច់ជ្រុង ហើយផ្នែកទីពីរក្រោយកាច់ជ្រុង"
+          "courseA_maze_seq6_a": "កូដសម្រេចរបស់អ្នក គួរតែមានកូដប្លុកផ្លាស់ទី ចំនួន៣ប្លុក។",
+          "courseA_maze_seq6_b": "ប្រសិនបើអ្នកធ្វើមិនចេញ ព្យាយាមដោះស្រាយល្បែងផ្គុំរូបជាពីរផ្នែក។​ ផ្នែកទីមួយមុនកាច់ជ្រុង ហើយផ្នែកទីពីរក្រោយកាច់ជ្រុង។"
         },
         "courseA_maze_seq6_2020": {
-          "courseA_maze_seq6_a": "កូដចុងក្រោយរបស់អ្នកគួរតែមានប្លុកផ្លាស់ទី៣",
-          "courseA_maze_seq6_b": "ប្រសិនបើអ្នកធ្វើមិនចេញ ព្យាយាមដោះស្រាយល្បែងផ្គុំរូបនៅក្នុងពីរផ្នែក។ផ្នែកទីមួយមុនកាច់ជ្រុង ហើយផ្នែកទីពីរក្រោយកាច់ជ្រុង"
+          "courseA_maze_seq6_a": "កូដសម្រេចរបស់អ្នក គួរតែមានកូដប្លុកផ្លាស់ទី ចំនួន៣ប្លុក។",
+          "courseA_maze_seq6_b": "ប្រសិនបើអ្នកធ្វើមិនចេញ ព្យាយាមដោះស្រាយល្បែងផ្គុំរូបជាពីរផ្នែក។​ ផ្នែកទីមួយមុនកាច់ជ្រុង ហើយផ្នែកទីពីរក្រោយកាច់ជ្រុង។"
         },
         "courseA_maze_seq6_copy": {
-          "courseA_maze_seq6_a": "កូដចុងក្រោយរបស់អ្នកគួរតែមានប្លុកផ្លាស់ទី៣",
-          "courseA_maze_seq6_b": "ប្រសិនបើអ្នកធ្វើមិនចេញ ព្យាយាមដោះស្រាយល្បែងផ្គុំរូបនៅក្នុងពីរផ្នែក។ផ្នែកទីមួយមុនកាច់ជ្រុង ហើយផ្នែកទីពីរក្រោយកាច់ជ្រុង"
+          "courseA_maze_seq6_a": "កូដសម្រេចរបស់អ្នក គួរតែមានកូដប្លុកផ្លាស់ទី ចំនួន៣ប្លុក។",
+          "courseA_maze_seq6_b": "ប្រសិនបើអ្នកធ្វើមិនចេញ ព្យាយាមដោះស្រាយល្បែងផ្គុំរូបជាពីរផ្នែក។​ ផ្នែកទីមួយមុនកាច់ជ្រុង ហើយផ្នែកទីពីរក្រោយកាច់ជ្រុង។"
         },
         "courseA_maze_seq7": {
           "courseA_maze_seq7_a": "មានប្លុកមួយដែលអ្នកត្រូវបន្ថែមដើម្បីផ្លាស់ទីតួអង្គបក្សីទៅកាន់តួអង្គជ្រូក",
@@ -746,13 +752,16 @@
           "courseA_maze_seq10_b": "អ្នកនឹងត្រូវទៅទិសដៅចំនួន៣ដើម្បីដោះស្រាយល្បែងផ្គុំរូបនេះ"
         },
         "courseA_maze_seq10_2018": {
-          "courseA_maze_seq10_a": "ប្រសិនបើអ្នកកំពុងមានបញ្ហា ព្យាយាមសរសេរនូវជំហាននៅលើក្រដាសជាមុនសិន"
+          "courseA_maze_seq10_a": "ប្រសិនបើអ្នកកំពុងមានបញ្ហា ព្យាយាមសរសេរនូវជំហាននៅលើក្រដាសជាមុនសិន",
+          "courseA_maze_seq10_b": "អ្នកនឹងត្រូវប្រើប្រាស់ទិសដៅ៣ផ្សេងគ្នា ដើម្បីដោះស្រាយរូបផ្គុំនេះ។"
         },
         "courseA_maze_seq10_2019": {
-          "courseA_maze_seq10_a": "ប្រសិនបើអ្នកកំពុងមានបញ្ហា ព្យាយាមសរសេរនូវជំហាននៅលើក្រដាសជាមុនសិន"
+          "courseA_maze_seq10_a": "ប្រសិនបើអ្នកកំពុងមានបញ្ហា ព្យាយាមសរសេរនូវជំហាននៅលើក្រដាសជាមុនសិន",
+          "courseA_maze_seq10_b": "អ្នកនឹងត្រូវប្រើប្រាស់ទិសដៅ៣ផ្សេងគ្នា ដើម្បីដោះស្រាយរូបផ្គុំនេះ។"
         },
         "courseA_maze_seq10_2020": {
-          "courseA_maze_seq10_a": "ប្រសិនបើអ្នកកំពុងមានបញ្ហា ព្យាយាមសរសេរនូវជំហាននៅលើក្រដាសជាមុនសិន"
+          "courseA_maze_seq10_a": "ប្រសិនបើអ្នកកំពុងមានបញ្ហា ព្យាយាមសរសេរនូវជំហាននៅលើក្រដាសជាមុនសិន",
+          "courseA_maze_seq10_b": "អ្នកនឹងត្រូវប្រើប្រាស់ទិសដៅ៣ផ្សេងគ្នា ដើម្បីដោះស្រាយរូបផ្គុំនេះ។"
         },
         "courseA_maze_seq10_copy": {
           "courseA_maze_seq10_a": "ប្រសិនបើអ្នកកំពុងមានបញ្ហា ព្យាយាមសរសេរនូវជំហាននៅលើក្រដាសជាមុនសិន",
@@ -770,11 +779,13 @@
         },
         "courseA_maze_seq13_2019": {
           "courseA_maze_seq13_a": "ប្រសិនបើផ្លូវដែលអ្នកត្រូវការមិនច្បាស់ ប្រើម្រាមដៃរបស់អ្នកដើម្បីដានផ្លូវរបស់អ្នកពីតួអង្គបក្សីទៅតួអង្គជ្រូក",
-          "courseA_maze_seq13_b": "កុំខ្លាចក្នុងការធ្វើខុស! ​ព្យាយាមបន្ថែមប្លុកហើយដំណើរការកូដដើម្បីដឹងថានឹងមានអ្វីកើតឡើង"
+          "courseA_maze_seq13_b": "កុំខ្លាចក្នុងការធ្វើខុស! ​ព្យាយាមបន្ថែមប្លុកហើយដំណើរការកូដដើម្បីដឹងថានឹងមានអ្វីកើតឡើង",
+          "courseA_maze_seq13_c": "ប្លុកទាំងនេះ <xml><block type=\"maze_moveNorth\"/></xml>\n\n<xml><block type=\"maze_moveEast\"/></xml>\n\nនឹងជួយអ្នកក្នុងការផ្លាស់ទីបក្សីទៅកាន់តែជិតជ្រូក។"
         },
         "courseA_maze_seq13_2020": {
           "courseA_maze_seq13_a": "ប្រសិនបើផ្លូវដែលអ្នកត្រូវការមិនច្បាស់ ប្រើម្រាមដៃរបស់អ្នកដើម្បីដានផ្លូវរបស់អ្នកពីតួអង្គបក្សីទៅតួអង្គជ្រូក",
-          "courseA_maze_seq13_b": "កុំខ្លាចក្នុងការធ្វើខុស! ​ព្យាយាមបន្ថែមប្លុកហើយដំណើរការកូដដើម្បីដឹងថានឹងមានអ្វីកើតឡើង"
+          "courseA_maze_seq13_b": "កុំខ្លាចក្នុងការធ្វើខុស! ​ព្យាយាមបន្ថែមប្លុកហើយដំណើរការកូដដើម្បីដឹងថានឹងមានអ្វីកើតឡើង",
+          "courseA_maze_seq13_c": "ប្លុកទាំងនេះ <xml><block type=\"maze_moveNorth\"/></xml>\n\n<xml><block type=\"maze_moveEast\"/></xml>\n\nនឹងជួយអ្នកក្នុងការផ្លាស់ទីបក្សីទៅកាន់តែជិតជ្រូក។"
         },
         "course1_maze_seq_challenge1": {
           "courseA_maze_seq_challenge2_a": "ព្យាយាមរាប់ចន្លោះជាមួយម្រាមដៃរបស់អ្នក។ ត្រូវចាំថាមិនចាំបាច់រាប់ចន្លោះដែលអ្នកចាប់ផ្ដើមទេ!"
@@ -2449,16 +2460,17 @@
           "courseB_maze_seq9_c": "មានវិធីពីរយ៉ាងដើម្បីដោះស្រាយល្បែងផ្គុំរូបនេះ។"
         },
         "courseB_starWars_prog8": {
-          "courseB_starWars_prog8_a": "អ្នកអាចត្រលប់ក្រោយទៅកាន់កំណត់នៃប្រលោះដែលអ្នកបានឆ្លងកាត់រួចហើយ។",
-          "courseB_starWars_prog8_b": "ព្យាយាមប្រើប្លុក `ធ្វើឡើងវិញ` ដើម្បីមើលដំណើរការលើកូដដែលអ្នកបានដាក់ចូល។\n<xml>\n  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
+          "courseB_starWars_prog8_a": "អ្នកអាចត្រលប់ក្រោយទៅកាន់ផ្លូវដែលអ្នកបានឆ្លងកាត់រួចហើយ។",
+          "courseB_starWars_prog8_b": "សាកល្បងដាក់កូដរបស់អ្នកក្នុងប្លុក `ធ្វើឡើងវិញ` ដើម្បីមើលថា តើនឹងមានអ្វីកើតឡើង។\n<xml>\n  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
         },
         "courseB_starWars_prog8_2018": {
-          "courseB_starWars_prog8_a": "អ្នកអាចត្រលប់ក្រោយទៅកាន់កំណត់នៃប្រលោះដែលអ្នកបានឆ្លងកាត់រួចហើយ។",
-          "courseB_starWars_prog8_b": "ព្យាយាមប្រើប្លុក `ធ្វើឡើងវិញ` ដើម្បីមើលដំណើរការលើកូដដែលអ្នកបានដាក់ចូល។\n<xml>\n  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
+          "courseB_starWars_prog8_a": "អ្នកអាចត្រលប់ក្រោយទៅកាន់ផ្លូវដែលអ្នកបានឆ្លងកាត់រួចហើយ។",
+          "courseB_starWars_prog8_b": "សាកល្បងដាក់កូដរបស់អ្នកក្នុងប្លុក `ធ្វើឡើងវិញ` ដើម្បីមើលថា តើនឹងមានអ្វីកើតឡើង។\n<xml>\n  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
         },
         "courseB_starWars_prog9": {
           "courseB_starWars_prog9_c": "តើការប្រើរង្វិលជុំដដែលៗ `ធ្វើម្ដងទៀត` អាចជួយដោះស្រាយបានឬទេ?",
-          "courseB_starWars_prog9_b": "មានវិធីពីរយ៉ាងដើម្បីដោះស្រាយល្បែងផ្គុំរូបនេះ។"
+          "courseB_starWars_prog9_b": "មានវិធីសាស្រ្តច្រើនក្នុងការដោះស្រាយល្បែងផ្គុំរូបនេះ។",
+          "courseB_starWars_prog9_a": "កុំខ្លាចការបង្កើតកំហុស! ចុច \"▶ ប៊ូតុងដំណើរការ\" ដើម្បីមើលថាមានអ្វីកើតឡើង, ទោះបីមិនទាន់ធ្វើហើយទាំងស្រុងក៏ដោយ។"
         },
         "courseC19_playLab_EOC4": {
           "courseE_playLab_scaffold4_a": "ប្រើ `ពិន្ទុ` ដើម្បីបន្ថែមចំណុចហើយ `ដកចំនុច` ដើម្បីដកមួយ។"
@@ -2778,12 +2790,12 @@
           "courseB_maze_seq_challenge2_b": "រៀបចំប្លុកសារជាថ្មីហើយដើរតាមផ្លូវរាងជណ្ដើរ"
         },
         "courseB_starWars_prog8_2019": {
-          "courseB_starWars_prog8_a": "អ្នកអាចត្រលប់ក្រោយទៅកាន់កំណត់នៃប្រលោះដែលអ្នកបានឆ្លងកាត់រួចហើយ។",
-          "courseB_starWars_prog8_b": "ព្យាយាមប្រើប្លុក `ធ្វើឡើងវិញ` ដើម្បីមើលដំណើរការលើកូដដែលអ្នកបានដាក់ចូល។\n<xml>\n  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
+          "courseB_starWars_prog8_a": "អ្នកអាចត្រលប់ក្រោយទៅកាន់ផ្លូវដែលអ្នកបានឆ្លងកាត់រួចហើយ។",
+          "courseB_starWars_prog8_b": "សាកល្បងដាក់កូដរបស់អ្នកក្នុងប្លុក `ធ្វើឡើងវិញ` ដើម្បីមើលថា តើនឹងមានអ្វីកើតឡើង។\n<xml>\n  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
         },
         "courseB_starWars_prog8_2020": {
-          "courseB_starWars_prog8_a": "អ្នកអាចត្រលប់ក្រោយទៅកាន់កំណត់នៃប្រលោះដែលអ្នកបានឆ្លងកាត់រួចហើយ។",
-          "courseB_starWars_prog8_b": "ព្យាយាមប្រើប្លុក `ធ្វើឡើងវិញ` ដើម្បីមើលដំណើរការលើកូដដែលអ្នកបានដាក់ចូល។\n<xml>\n  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
+          "courseB_starWars_prog8_a": "អ្នកអាចត្រលប់ក្រោយទៅកាន់ផ្លូវដែលអ្នកបានឆ្លងកាត់រួចហើយ។",
+          "courseB_starWars_prog8_b": "សាកល្បងដាក់កូដរបស់អ្នកក្នុងប្លុក `ធ្វើឡើងវិញ` ដើម្បីមើលថា តើនឹងមានអ្វីកើតឡើង។\n<xml>\n  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
         },
         "courseC19_playLab_EOC1": {
           "courseE_playLab_scaffold1_a": "The `ឈុតតារាសម្តែង ១ ដល់ ??? រូបភាព`ប្លុកអាចត្រូវបានប្រើដើម្បីបន្ថែមតារាសម្តែងទៅឆាក។",
@@ -3100,16 +3112,20 @@
           "courseC_maze_programming_challenge2_b": "ដំណោះស្រាយខ្លីបំផុតគឺប្រើប្រាស់ត្រឹមតែ៥ប្លុកតែប៉ុណ្ណោះ, ក៏ប៉ុន្តែប្រើប្លុកនេះៈ\n\n<xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>"
         },
         "courseC_starWars_loops1": {
-          "courseC_starWars_loops1_c": "អ្នកនឹងត្រូវប្រើ `រំកិលទៅមុខ` ចំនួនប្រាំដងដើម្បីដោះស្រាយចំណោទមួយនេះ។"
+          "courseC_starWars_loops1_c": "អ្នកនឹងត្រូវប្រើ `រំកិលទៅមុខ` ចំនួនប្រាំដងដើម្បីដោះស្រាយចំណោទមួយនេះ។",
+          "courseC_starWars_loops1_b": "កុំខ្លាចការបង្កើតកំហុស! ចុច \"▶ ប៊ូតុងដំណើរការ\" ដើម្បីមើលថាមានអ្វីកើតឡើង, ទោះបីមិនទាន់ធ្វើហើយទាំងស្រុងក៏ដោយ។"
         },
         "courseC_starWars_loops1_2018": {
-          "courseC_starWars_loops1_c": "អ្នកនឹងត្រូវប្រើ `រំកិលទៅមុខ` ចំនួនប្រាំដងដើម្បីដោះស្រាយចំណោទមួយនេះ។"
+          "courseC_starWars_loops1_c": "អ្នកនឹងត្រូវប្រើ `រំកិលទៅមុខ` ចំនួនប្រាំដងដើម្បីដោះស្រាយចំណោទមួយនេះ។",
+          "courseC_starWars_loops1_b": "កុំខ្លាចការបង្កើតកំហុស! ចុច \"▶ ប៊ូតុងដំណើរការ\" ដើម្បីមើលថាមានអ្វីកើតឡើង, ទោះបីមិនទាន់ធ្វើហើយទាំងស្រុងក៏ដោយ។"
         },
         "courseC_starWars_loops1_2019": {
-          "courseC_starWars_loops1_c": "អ្នកនឹងត្រូវប្រើ `រំកិលទៅមុខ` ចំនួនប្រាំដងដើម្បីដោះស្រាយចំណោទមួយនេះ។"
+          "courseC_starWars_loops1_c": "អ្នកនឹងត្រូវប្រើ `រំកិលទៅមុខ` ចំនួនប្រាំដងដើម្បីដោះស្រាយចំណោទមួយនេះ។",
+          "courseC_starWars_loops1_b": "កុំខ្លាចការបង្កើតកំហុស! ចុច \"▶ ប៊ូតុងដំណើរការ\" ដើម្បីមើលថាមានអ្វីកើតឡើង, ទោះបីមិនទាន់ធ្វើហើយទាំងស្រុងក៏ដោយ។"
         },
         "courseC_starWars_loops1_2020": {
-          "courseC_starWars_loops1_c": "អ្នកនឹងត្រូវប្រើ `រំកិលទៅមុខ` ចំនួនប្រាំដងដើម្បីដោះស្រាយចំណោទមួយនេះ។"
+          "courseC_starWars_loops1_c": "អ្នកនឹងត្រូវប្រើ `រំកិលទៅមុខ` ចំនួនប្រាំដងដើម្បីដោះស្រាយចំណោទមួយនេះ។",
+          "courseC_starWars_loops1_b": "កុំខ្លាចការបង្កើតកំហុស! ចុច \"▶ ប៊ូតុងដំណើរការ\" ដើម្បីមើលថាមានអ្វីកើតឡើង, ទោះបីមិនទាន់ធ្វើហើយទាំងស្រុងក៏ដោយ។"
         },
         "courseC_starWars_loops4": {
           "courseC_starWars_loops4_a": "ប្រើប្លុក `ធ្វើម្ដងទៀត` ចំនួនពីរ។"
@@ -3386,41 +3402,52 @@
           "courseA_collector_loops2_b": "ក្រោយពីអ្នកផ្លាស់ទីទៅចតុកោណកែងមួយដែលមានកំណប់ ប្រើប្លុកនេះដើម្បីរើសវាឡើង។\n\n<xml>  <block type=\"collector_collect\"/></xml>"
         },
         "courseA_playLab_events2": {
-          "courseA_playLab_events2_a": "ចូររកប្លុកដែលធ្វើអោយឆ្កែនិយាយស្តីអ្វីមួយ។"
+          "courseA_playLab_events2_a": "ចូររកប្លុកដែលធ្វើអោយឆ្កែនិយាយស្តីអ្វីមួយ។",
+          "courseA_playLab_events2_b": "នេះជាកូដដែលអ្នកត្រូវប្រើដើម្បីបញ្ចប់លើល្បែងផ្គុំរូបនេះ៖\n\n<xml>\n<block type=\"when_run\" movable=\"false\" deletable=\"false\">\n<next>\n<block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</next>\n</block>\n</xml>"
         },
         "courseA_playLab_events2_2018": {
-          "courseA_playLab_events2_a": "ចូររកប្លុកដែលធ្វើអោយឆ្កែនិយាយស្តីអ្វីមួយ។"
+          "courseA_playLab_events2_a": "ចូររកប្លុកដែលធ្វើអោយឆ្កែនិយាយស្តីអ្វីមួយ។",
+          "courseA_playLab_events2_b": "នេះជាកូដដែលអ្នកត្រូវប្រើដើម្បីបញ្ចប់លើល្បែងផ្គុំរូបនេះ៖\n\n<xml>\n<block type=\"when_run\" movable=\"false\" deletable=\"false\">\n<next>\n<block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</next>\n</block>\n</xml>"
         },
         "courseA_playLab_events2_2019": {
-          "courseA_playLab_events2_a": "ចូររកប្លុកដែលធ្វើអោយឆ្កែនិយាយស្តីអ្វីមួយ។"
+          "courseA_playLab_events2_a": "ចូររកប្លុកដែលធ្វើអោយឆ្កែនិយាយស្តីអ្វីមួយ។",
+          "courseA_playLab_events2_b": "នេះជាកូដដែលអ្នកត្រូវប្រើដើម្បីបញ្ចប់លើល្បែងផ្គុំរូបនេះ៖\n\n<xml>\n<block type=\"when_run\" movable=\"false\" deletable=\"false\">\n<next>\n<block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</next>\n</block>\n</xml>"
         },
         "courseA_playLab_events2_2020": {
-          "courseA_playLab_events2_a": "ចូររកប្លុកដែលធ្វើអោយឆ្កែនិយាយស្តីអ្វីមួយ។"
+          "courseA_playLab_events2_a": "ចូររកប្លុកដែលធ្វើអោយឆ្កែនិយាយស្តីអ្វីមួយ។",
+          "courseA_playLab_events2_b": "នេះជាកូដដែលអ្នកត្រូវប្រើដើម្បីបញ្ចប់លើល្បែងផ្គុំរូបនេះ៖\n\n<xml>\n<block type=\"when_run\" movable=\"false\" deletable=\"false\">\n<next>\n<block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</next>\n</block>\n</xml>"
         },
         "courseB_artist_loops2": {
-          "courseB_artist_loops2_b": "ព្យាយាមដំណើរការលេខកូដជាមុនសិនដើម្បីដឹងពីកន្លែងដែលវិចិត្រករបញ្ចប់។"
+          "courseB_artist_loops2_b": "ព្យាយាមដំណើរការលេខកូដជាមុនសិនដើម្បីដឹងពីកន្លែងដែលវិចិត្រករបញ្ចប់។",
+          "courseB_artist_loops2_a": "ប្រសិនបើអ្នកចង់ធ្វើរង្វិលជុំលើសពី 4 ដង អ្នកអាចប្តូរលេខនៅផ្នែកខាងលើនៃប្លុក។"
         },
         "courseB_artist_loops2_2018": {
-          "courseB_artist_loops2_b": "ព្យាយាមដំណើរការលេខកូដជាមុនសិនដើម្បីដឹងពីកន្លែងដែលវិចិត្រករបញ្ចប់។"
+          "courseB_artist_loops2_b": "ព្យាយាមដំណើរការលេខកូដជាមុនសិនដើម្បីដឹងពីកន្លែងដែលវិចិត្រករបញ្ចប់។",
+          "courseB_artist_loops2_a": "ប្រសិនបើអ្នកចង់ធ្វើរង្វិលជុំលើសពី 4 ដង អ្នកអាចប្តូរលេខនៅផ្នែកខាងលើនៃប្លុក។"
         },
         "courseB_artist_loops2_2019": {
-          "courseB_artist_loops2_b": "ព្យាយាមដំណើរការលេខកូដជាមុនសិនដើម្បីដឹងពីកន្លែងដែលវិចិត្រករបញ្ចប់។"
+          "courseB_artist_loops2_b": "ព្យាយាមដំណើរការលេខកូដជាមុនសិនដើម្បីដឹងពីកន្លែងដែលវិចិត្រករបញ្ចប់។",
+          "courseB_artist_loops2_a": "ប្រសិនបើអ្នកចង់ធ្វើរង្វិលជុំលើសពី 4 ដង អ្នកអាចប្តូរលេខនៅផ្នែកខាងលើនៃប្លុក។"
         },
         "courseB_artist_loops2_2020": {
-          "courseB_artist_loops2_b": "ព្យាយាមដំណើរការលេខកូដជាមុនសិនដើម្បីដឹងពីកន្លែងដែលវិចិត្រករបញ្ចប់។"
+          "courseB_artist_loops2_b": "ព្យាយាមដំណើរការលេខកូដជាមុនសិនដើម្បីដឹងពីកន្លែងដែលវិចិត្រករបញ្ចប់។",
+          "courseB_artist_loops2_a": "ប្រសិនបើអ្នកចង់ធ្វើរង្វិលជុំលើសពី 4 ដង អ្នកអាចប្តូរលេខនៅផ្នែកខាងលើនៃប្លុក។"
         },
         "courseB_artist_loops3": {
           "courseB_artist_loops3_a": "កុំភ្លេចប្រើរង្វិលជុំ `ធ្វើម្តងទៀត`ដើម្បីទទួលបានលេខកូដប្រសើរជាងនេះ!",
           "courseB_artist_loops3_b": "សិល្បករនឹងចង់ផ្លាស់ទីទៅខាងត្បូងដើម្បីគូរបន្ទាត់នេះ។"
         },
         "courseB_artist_loops3_2018": {
-          "courseB_artist_loops3_b": "សិល្បករនឹងចង់ផ្លាស់ទីទៅខាងត្បូងដើម្បីគូរបន្ទាត់នេះ។"
+          "courseB_artist_loops3_b": "សិល្បករនឹងចង់ផ្លាស់ទីទៅខាងត្បូងដើម្បីគូរបន្ទាត់នេះ។",
+          "courseB_artist_loops3_a": "កុំភ្លេចប្រើរង្វិលជុំ 'repeat' ដើម្បីឲ្យកូដកាន់តែប្រសើរ!"
         },
         "courseB_artist_loops3_2019": {
-          "courseB_artist_loops3_b": "សិល្បករនឹងចង់ផ្លាស់ទីទៅខាងត្បូងដើម្បីគូរបន្ទាត់នេះ។"
+          "courseB_artist_loops3_b": "សិល្បករនឹងចង់ផ្លាស់ទីទៅខាងត្បូងដើម្បីគូរបន្ទាត់នេះ។",
+          "courseB_artist_loops3_a": "កុំភ្លេចប្រើរង្វិលជុំ 'repeat' ដើម្បីឲ្យកូដកាន់តែប្រសើរ!"
         },
         "courseB_artist_loops3_2020": {
-          "courseB_artist_loops3_b": "សិល្បករនឹងចង់ផ្លាស់ទីទៅខាងត្បូងដើម្បីគូរបន្ទាត់នេះ។"
+          "courseB_artist_loops3_b": "សិល្បករនឹងចង់ផ្លាស់ទីទៅខាងត្បូងដើម្បីគូរបន្ទាត់នេះ។",
+          "courseB_artist_loops3_a": "កុំភ្លេចប្រើរង្វិលជុំ 'repeat' ដើម្បីឲ្យកូដកាន់តែប្រសើរ!"
         },
         "courseB_artist_loops4": {
           "courseB_artist_loops4_a": "ប្លុកលោតអនុញ្ញាតឱ្យអ្នកឆ្ពោះទៅមុខដោយមិនចាំបាច់គូសបន្ទាត់។",
@@ -3495,19 +3522,23 @@
         },
         "courseB_artist_loops9": {
           "courseB_artist_loops9_a": "ចងចាំថាប្លុកលោតអាចត្រូវបានប្រើដើម្បីផ្លាស់ទីដោយមិនគូរបន្ទាត់។",
-          "courseB_artist_loops9_b": "អ្នកអាចនឹងត្រូវប្រើWប្លុកដើម្បីដោះស្រាយបញ្ហានេះ។"
+          "courseB_artist_loops9_b": "អ្នកអាចនឹងត្រូវប្រើWប្លុកដើម្បីដោះស្រាយបញ្ហានេះ។",
+          "courseB_artist_loops9_c": "មិន​​ដឹង​ថា​ត្រូវ​ដាក់​រង្វិលជុំ​កន្លែងណាមែនទេ? សាកល្បងសរសេរកូដជាជំហានៗ ហើយរកមើលលំនាំស្ទួន។"
         },
         "courseB_artist_loops9_2018": {
           "courseB_artist_loops9_a": "ចងចាំថាប្លុកលោតអាចត្រូវបានប្រើដើម្បីផ្លាស់ទីដោយមិនគូរបន្ទាត់។",
-          "courseB_artist_loops9_b": "អ្នកអាចនឹងត្រូវប្រើWប្លុកដើម្បីដោះស្រាយបញ្ហានេះ។"
+          "courseB_artist_loops9_b": "អ្នកអាចនឹងត្រូវប្រើWប្លុកដើម្បីដោះស្រាយបញ្ហានេះ។",
+          "courseB_artist_loops9_c": "មិន​​ដឹង​ថា​ត្រូវ​ដាក់​រង្វិលជុំ​កន្លែងណាមែនទេ? សាកល្បងសរសេរកូដជាជំហានៗ ហើយរកមើលលំនាំស្ទួន។"
         },
         "courseB_artist_loops9_2019": {
           "courseB_artist_loops9_a": "ចងចាំថាប្លុកលោតអាចត្រូវបានប្រើដើម្បីផ្លាស់ទីដោយមិនគូរបន្ទាត់។",
-          "courseB_artist_loops9_b": "អ្នកអាចនឹងត្រូវប្រើWប្លុកដើម្បីដោះស្រាយបញ្ហានេះ។"
+          "courseB_artist_loops9_b": "អ្នកអាចនឹងត្រូវប្រើWប្លុកដើម្បីដោះស្រាយបញ្ហានេះ។",
+          "courseB_artist_loops9_c": "មិន​​ដឹង​ថា​ត្រូវ​ដាក់​រង្វិលជុំ​កន្លែងណាមែនទេ? សាកល្បងសរសេរកូដជាជំហានៗ ហើយរកមើលលំនាំស្ទួន។"
         },
         "courseB_artist_loops9_2020": {
           "courseB_artist_loops9_a": "ចងចាំថាប្លុកលោតអាចត្រូវបានប្រើដើម្បីផ្លាស់ទីដោយមិនគូរបន្ទាត់។",
-          "courseB_artist_loops9_b": "អ្នកអាចនឹងត្រូវប្រើWប្លុកដើម្បីដោះស្រាយបញ្ហានេះ។"
+          "courseB_artist_loops9_b": "អ្នកអាចនឹងត្រូវប្រើWប្លុកដើម្បីដោះស្រាយបញ្ហានេះ។",
+          "courseB_artist_loops9_c": "មិន​​ដឹង​ថា​ត្រូវ​ដាក់​រង្វិលជុំ​កន្លែងណាមែនទេ? សាកល្បងសរសេរកូដជាជំហានៗ ហើយរកមើលលំនាំស្ទួន។"
         },
         "courseB_artist_loops_challenge1": {
           "courseB_artist_loops_challenge1_a": "ប្លុកដូចនេះ: [blockly block] [0] នឹងអនុញ្ញាតឱ្យសិល្បកររបស់អ្នកផ្លាស់ប្តូរនៅកន្លែងលេងល្បែងមួយ!",
@@ -3714,103 +3745,103 @@
           "courseB_collector_loops_challenge2_d": "សាកល្បងដំណោះស្រាយនេះ៖\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_simplified_dropdown\">\n        <title name=\"TIMES\" config=\"3-10\">4</title>\n        <statement name=\"DO\">\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"collector_collect\">\n                <next>\n                  <block type=\"maze_moveWest\">\n                    <next>\n                      <block type=\"maze_moveWest\">\n                        <next>\n                          <block type=\"maze_moveSouth\"/>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n        <next>\n          <block type=\"controls_repeat_simplified_dropdown\">\n            <title name=\"TIMES\" config=\"3-10\">6</title>\n            <statement name=\"DO\">\n              <block type=\"collector_collect\"/>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseB_playlab_events2": {
-          "courseB_playlab_events2_a": "នេះជាប្លុកដែលធ្វើអោយឌីសានិយាយអ្វីមួយ៖\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n  </xml>"
+          "courseB_playlab_events2_a": "នេះជាប្លុកដែលធ្វើឲ្យ Daisy និយាយអ្វីមួយ៖\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n  </xml>\""
         },
         "courseB_playlab_events2_2018": {
-          "courseB_playlab_events2_a": "នេះជាប្លុកដែលធ្វើអោយឌីសានិយាយអ្វីមួយ៖\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n  </xml>"
+          "courseB_playlab_events2_a": "នេះជាប្លុកដែលធ្វើឲ្យ Daisy និយាយអ្វីមួយ៖\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n  </xml>\""
         },
         "courseB_playlab_events2_2019": {
-          "courseB_playlab_events2_a": "នេះជាប្លុកដែលធ្វើអោយឌីសានិយាយអ្វីមួយ៖\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n  </xml>"
+          "courseB_playlab_events2_a": "នេះជាប្លុកដែលធ្វើឲ្យ Daisy និយាយអ្វីមួយ៖\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n  </xml>\""
         },
         "courseB_playlab_events2_2020": {
-          "courseB_playlab_events2_a": "នេះជាប្លុកដែលធ្វើអោយឌីសានិយាយអ្វីមួយ៖\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n  </xml>"
+          "courseB_playlab_events2_a": "នេះជាប្លុកដែលធ្វើឲ្យ Daisy និយាយអ្វីមួយ៖\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n  </xml>\""
         },
         "courseB_playlab_events3": {
-          "courseB_playlab_events3_a": "នេះជាប្លុកដែលអ្នកគួរប្រើដើម្បីបន្ថែមព្រឹត្តិការណ៍៖\n\n<xml>\n<block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">0</title>\n  </block>\n  </xml>",
-          "courseB_playlab_events3_b": "នេះគឺជាបណ្តុំដែលអ្នកត្រូវការដើម្បីប្តូរអារម្មណ៍របស់Daisy:\n\n<xml>\n<block type=\"studio_setSpriteEmotion\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">random</title>\n  </block>\n  </xml>"
+          "courseB_playlab_events3_a": "នេះជាប្លុកដែលអ្នកគួរប្រើ ដើម្បីបន្ថែមព្រឹត្តិការណ៍៖\n\n<xml>\n<block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">0</title>\n  </block>\n  </xml>",
+          "courseB_playlab_events3_b": "នេះជាប្លុកដែលអ្នកត្រូវផ្លាស់ប្តូរ អារម្មណ៍របស់ Daisy៖\n\n<xml>\n<block type=\"studio_setSpriteEmotion\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">random</title>\n  </block>\n  </xml>"
         },
         "courseB_playlab_events3_2018": {
-          "courseB_playlab_events3_a": "នេះជាប្លុកដែលអ្នកគួរប្រើដើម្បីបន្ថែមព្រឹត្តិការណ៍៖\n\n<xml>\n<block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">0</title>\n  </block>\n  </xml>",
-          "courseB_playlab_events3_b": "នេះគឺជាបណ្តុំដែលអ្នកត្រូវការដើម្បីប្តូរអារម្មណ៍របស់Daisy:\n\n<xml>\n<block type=\"studio_setSpriteEmotion\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">random</title>\n  </block>\n  </xml>"
+          "courseB_playlab_events3_a": "នេះជាប្លុកដែលអ្នកគួរប្រើ ដើម្បីបន្ថែមព្រឹត្តិការណ៍៖\n\n<xml>\n<block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">0</title>\n  </block>\n  </xml>",
+          "courseB_playlab_events3_b": "នេះជាប្លុកដែលអ្នកត្រូវផ្លាស់ប្តូរ អារម្មណ៍របស់ Daisy៖\n\n<xml>\n<block type=\"studio_setSpriteEmotion\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">random</title>\n  </block>\n  </xml>"
         },
         "courseB_playlab_events3_2019": {
-          "courseB_playlab_events3_a": "នេះជាប្លុកដែលអ្នកគួរប្រើដើម្បីបន្ថែមព្រឹត្តិការណ៍៖\n\n<xml>\n<block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">0</title>\n  </block>\n  </xml>",
-          "courseB_playlab_events3_b": "នេះគឺជាបណ្តុំដែលអ្នកត្រូវការដើម្បីប្តូរអារម្មណ៍របស់Daisy:\n\n<xml>\n<block type=\"studio_setSpriteEmotion\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">random</title>\n  </block>\n  </xml>"
+          "courseB_playlab_events3_a": "នេះជាប្លុកដែលអ្នកគួរប្រើ ដើម្បីបន្ថែមព្រឹត្តិការណ៍៖\n\n<xml>\n<block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">0</title>\n  </block>\n  </xml>",
+          "courseB_playlab_events3_b": "នេះជាប្លុកដែលអ្នកត្រូវផ្លាស់ប្តូរ អារម្មណ៍របស់ Daisy៖\n\n<xml>\n<block type=\"studio_setSpriteEmotion\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">random</title>\n  </block>\n  </xml>"
         },
         "courseB_playlab_events3_2020": {
-          "courseB_playlab_events3_a": "នេះជាប្លុកដែលអ្នកគួរប្រើដើម្បីបន្ថែមព្រឹត្តិការណ៍៖\n\n<xml>\n<block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">0</title>\n  </block>\n  </xml>",
-          "courseB_playlab_events3_b": "នេះគឺជាបណ្តុំដែលអ្នកត្រូវការដើម្បីប្តូរអារម្មណ៍របស់Daisy:\n\n<xml>\n<block type=\"studio_setSpriteEmotion\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">random</title>\n  </block>\n  </xml>"
+          "courseB_playlab_events3_a": "នេះជាប្លុកដែលអ្នកគួរប្រើ ដើម្បីបន្ថែមព្រឹត្តិការណ៍៖\n\n<xml>\n<block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">0</title>\n  </block>\n  </xml>",
+          "courseB_playlab_events3_b": "នេះជាប្លុកដែលអ្នកត្រូវផ្លាស់ប្តូរ អារម្មណ៍របស់ Daisy៖\n\n<xml>\n<block type=\"studio_setSpriteEmotion\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">random</title>\n  </block>\n  </xml>"
         },
         "courseB_playlab_events4": {
           "courseB_playlab_events4_a": "នេះគឺជាព្រឹត្តិការណ៍ដែលគ្រប់គ្រងព្រួញខាងឆ្វេង៖\n\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">left</title>\n  </block>\n  </xml>",
-          "courseB_playlab_events4_b": "នេះគឺជាប្លុកដែលធ្វើឱ្យអ្នកជិះសេះផ្លាស់ប្តូរទៅខាងឆ្វេង។\n\n<xml>\n<block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">8</title>\n  </block>\n  </xml>"
+          "courseB_playlab_events4_b": "នេះគឺជាប្លុកដែលធ្វើឱ្យមេទ័ព ផ្លាស់ទីទៅខាងឆ្វេង។\n\n<xml>\n<block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">8</title>\n  </block>\n  </xml>"
         },
         "courseB_playlab_events4_2018": {
           "courseB_playlab_events4_a": "នេះគឺជាព្រឹត្តិការណ៍ដែលគ្រប់គ្រងព្រួញខាងឆ្វេង៖\n\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">left</title>\n  </block>\n  </xml>",
-          "courseB_playlab_events4_b": "នេះគឺជាប្លុកដែលធ្វើឱ្យអ្នកជិះសេះផ្លាស់ប្តូរទៅខាងឆ្វេង។\n\n<xml>\n<block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">8</title>\n  </block>\n  </xml>"
+          "courseB_playlab_events4_b": "នេះគឺជាប្លុកដែលធ្វើឱ្យមេទ័ព ផ្លាស់ទីទៅខាងឆ្វេង។\n\n<xml>\n<block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">8</title>\n  </block>\n  </xml>"
         },
         "courseB_playlab_events4_2019": {
           "courseB_playlab_events4_a": "នេះគឺជាព្រឹត្តិការណ៍ដែលគ្រប់គ្រងព្រួញខាងឆ្វេង៖\n\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">left</title>\n  </block>\n  </xml>",
-          "courseB_playlab_events4_b": "នេះគឺជាប្លុកដែលធ្វើឱ្យអ្នកជិះសេះផ្លាស់ប្តូរទៅខាងឆ្វេង។\n\n<xml>\n<block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">8</title>\n  </block>\n  </xml>"
+          "courseB_playlab_events4_b": "នេះគឺជាប្លុកដែលធ្វើឱ្យមេទ័ព ផ្លាស់ទីទៅខាងឆ្វេង។\n\n<xml>\n<block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">8</title>\n  </block>\n  </xml>"
         },
         "courseB_playlab_events4_2020": {
           "courseB_playlab_events4_a": "នេះគឺជាព្រឹត្តិការណ៍ដែលគ្រប់គ្រងព្រួញខាងឆ្វេង៖\n\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">left</title>\n  </block>\n  </xml>",
-          "courseB_playlab_events4_b": "នេះគឺជាប្លុកដែលធ្វើឱ្យអ្នកជិះសេះផ្លាស់ប្តូរទៅខាងឆ្វេង។\n\n<xml>\n<block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">8</title>\n  </block>\n  </xml>"
+          "courseB_playlab_events4_b": "នេះគឺជាប្លុកដែលធ្វើឱ្យមេទ័ព ផ្លាស់ទីទៅខាងឆ្វេង។\n\n<xml>\n<block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">8</title>\n  </block>\n  </xml>"
         },
         "courseB_playlab_events5": {
-          "courseB_playlab_events5_a": "នេះគឺជាប្លុកព្រឹត្តិការណ៍ដែលគ្រប់គ្រងព្រួញខាងស្តាំ៖\n\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">right</title>\n  </block>\n  </xml>",
-          "courseB_playlab_events5_b": "នេះគឺជាប្លុកដែលធ្វើឱ្យអ្នកជិះសេះផ្លាស់ប្តូរទៅខាងឆ្ងាយ។\n\n<xml>\n<block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">2</title>\n  </block>\n</xml>"
+          "courseB_playlab_events5_a": "នេះគឺជាប្លុកព្រឹត្តិការណ៍ ដែលគ្រប់គ្រងព្រួញខាងស្តាំ៖\n\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">right</title>\n  </block>\n  </xml>",
+          "courseB_playlab_events5_b": "នេះគឺជាប្លុកដែលធ្វើឱ្យមេទ័ពរត់ចេញ។\n\n<xml>\n<block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">2</title>\n  </block>\n</xml>"
         },
         "courseB_playlab_events5_2018": {
-          "courseB_playlab_events5_a": "នេះគឺជាប្លុកព្រឹត្តិការណ៍ដែលគ្រប់គ្រងព្រួញខាងស្តាំ៖\n\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">right</title>\n  </block>\n  </xml>",
-          "courseB_playlab_events5_b": "នេះគឺជាប្លុកដែលធ្វើឱ្យអ្នកជិះសេះផ្លាស់ប្តូរទៅខាងឆ្ងាយ។\n\n<xml>\n<block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">2</title>\n  </block>\n</xml>"
+          "courseB_playlab_events5_a": "នេះគឺជាប្លុកព្រឹត្តិការណ៍ ដែលគ្រប់គ្រងព្រួញខាងស្តាំ៖\n\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">right</title>\n  </block>\n  </xml>",
+          "courseB_playlab_events5_b": "នេះគឺជាប្លុកដែលធ្វើឱ្យមេទ័ពរត់ចេញ។\n\n<xml>\n<block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">2</title>\n  </block>\n</xml>"
         },
         "courseB_playlab_events5_2019": {
-          "courseB_playlab_events5_a": "នេះគឺជាប្លុកព្រឹត្តិការណ៍ដែលគ្រប់គ្រងព្រួញខាងស្តាំ៖\n\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">right</title>\n  </block>\n  </xml>",
-          "courseB_playlab_events5_b": "នេះគឺជាប្លុកដែលធ្វើឱ្យអ្នកជិះសេះផ្លាស់ប្តូរទៅខាងឆ្ងាយ។\n\n<xml>\n<block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">2</title>\n  </block>\n</xml>"
+          "courseB_playlab_events5_a": "នេះគឺជាប្លុកព្រឹត្តិការណ៍ ដែលគ្រប់គ្រងព្រួញខាងស្តាំ៖\n\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">right</title>\n  </block>\n  </xml>",
+          "courseB_playlab_events5_b": "នេះគឺជាប្លុកដែលធ្វើឱ្យមេទ័ពរត់ចេញ។\n\n<xml>\n<block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">2</title>\n  </block>\n</xml>"
         },
         "courseB_playlab_events5_2020": {
-          "courseB_playlab_events5_a": "នេះគឺជាប្លុកព្រឹត្តិការណ៍ដែលគ្រប់គ្រងព្រួញខាងស្តាំ៖\n\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">right</title>\n  </block>\n  </xml>",
-          "courseB_playlab_events5_b": "នេះគឺជាប្លុកដែលធ្វើឱ្យអ្នកជិះសេះផ្លាស់ប្តូរទៅខាងឆ្ងាយ។\n\n<xml>\n<block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">2</title>\n  </block>\n</xml>"
+          "courseB_playlab_events5_a": "នេះគឺជាប្លុកព្រឹត្តិការណ៍ ដែលគ្រប់គ្រងព្រួញខាងស្តាំ៖\n\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">right</title>\n  </block>\n  </xml>",
+          "courseB_playlab_events5_b": "នេះគឺជាប្លុកដែលធ្វើឱ្យមេទ័ពរត់ចេញ។\n\n<xml>\n<block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">2</title>\n  </block>\n</xml>"
         },
         "courseB_playlab_events6": {
           "courseB_playlab_events6_a": "អ្នកនឹងត្រូវការប្លុកព្រឹត្តិការណ៍ទាំងនេះ៖\n\n<xml>\n  <block type=\"studio_whenArrow\" id=\"callMe\">\n    <title name=\"VALUE\">up</title>\n  </block>\n  <block type=\"studio_whenArrow\" id=\"callMe\">\n    <title name=\"VALUE\">down</title>\n  </block>\n  </xml>",
-          "courseB_playlab_events6_b": "ប្រើព្រួញទម្លាក់ចុះនៅលើ `ពេលដែលព្រួញចុចប៊ូតុងព្រួញចុច` ដើម្បីជ្រើសរើសទិសដៅផ្សេងៗ។\n\n\\[] [0]",
-          "courseB_playlab_events6_c": "យកទង់ជាតិទាំងអស់នេអដើម្បីឆ្លងកាត់!"
+          "courseB_playlab_events6_b": "ប្រើព្រួញទម្លាក់ចុះលើពណ៌បៃតង `នៅពេលព្រួញ ___ចុច` ប្លុកព្រឹត្តិការណ៍ ដើម្បីជ្រើសរើសទិសដៅផ្សេងៗ។\n\n\\[] [0]",
+          "courseB_playlab_events6_c": "ទៅ​កាន់​ទង់ជាតិ​ទាំង​អស់​ដើម្បី​ឆ្លង​កាត់កម្រិត!"
         },
         "courseB_playlab_events6_2018": {
           "courseB_playlab_events6_a": "អ្នកនឹងត្រូវការប្លុកព្រឹត្តិការណ៍ទាំងនេះ៖\n\n<xml>\n  <block type=\"studio_whenArrow\" id=\"callMe\">\n    <title name=\"VALUE\">up</title>\n  </block>\n  <block type=\"studio_whenArrow\" id=\"callMe\">\n    <title name=\"VALUE\">down</title>\n  </block>\n  </xml>",
-          "courseB_playlab_events6_b": "ប្រើព្រួញទម្លាក់ចុះនៅលើ `ពេលដែលព្រួញចុចប៊ូតុងព្រួញចុច` ដើម្បីជ្រើសរើសទិសដៅផ្សេងៗ។\n\n\\[] [0]",
-          "courseB_playlab_events6_c": "យកទង់ជាតិទាំងអស់នេអដើម្បីឆ្លងកាត់!"
+          "courseB_playlab_events6_b": "ប្រើព្រួញទម្លាក់ចុះលើពណ៌បៃតង `នៅពេលព្រួញ ___ចុច` ប្លុកព្រឹត្តិការណ៍ ដើម្បីជ្រើសរើសទិសដៅផ្សេងៗ។\n\n\\[] [0]",
+          "courseB_playlab_events6_c": "ទៅ​កាន់​ទង់ជាតិ​ទាំង​អស់​ដើម្បី​ឆ្លង​កាត់កម្រិត!"
         },
         "courseB_playlab_events6_2019": {
           "courseB_playlab_events6_a": "អ្នកនឹងត្រូវការប្លុកព្រឹត្តិការណ៍ទាំងនេះ៖\n\n<xml>\n  <block type=\"studio_whenArrow\" id=\"callMe\">\n    <title name=\"VALUE\">up</title>\n  </block>\n  <block type=\"studio_whenArrow\" id=\"callMe\">\n    <title name=\"VALUE\">down</title>\n  </block>\n  </xml>",
-          "courseB_playlab_events6_b": "ប្រើព្រួញទម្លាក់ចុះនៅលើ `ពេលដែលព្រួញចុចប៊ូតុងព្រួញចុច` ដើម្បីជ្រើសរើសទិសដៅផ្សេងៗ។\n\n\\[] [0]",
-          "courseB_playlab_events6_c": "យកទង់ជាតិទាំងអស់នេអដើម្បីឆ្លងកាត់!"
+          "courseB_playlab_events6_b": "ប្រើព្រួញទម្លាក់ចុះលើពណ៌បៃតង `នៅពេលព្រួញ ___ចុច` ប្លុកព្រឹត្តិការណ៍ ដើម្បីជ្រើសរើសទិសដៅផ្សេងៗ។\n\n\\[] [0]",
+          "courseB_playlab_events6_c": "ទៅ​កាន់​ទង់ជាតិ​ទាំង​អស់​ដើម្បី​ឆ្លង​កាត់កម្រិត!"
         },
         "courseB_playlab_events6_2020": {
           "courseB_playlab_events6_a": "អ្នកនឹងត្រូវការប្លុកព្រឹត្តិការណ៍ទាំងនេះ៖\n\n<xml>\n  <block type=\"studio_whenArrow\" id=\"callMe\">\n    <title name=\"VALUE\">up</title>\n  </block>\n  <block type=\"studio_whenArrow\" id=\"callMe\">\n    <title name=\"VALUE\">down</title>\n  </block>\n  </xml>",
-          "courseB_playlab_events6_b": "ប្រើព្រួញទម្លាក់ចុះនៅលើ `ពេលដែលព្រួញចុចប៊ូតុងព្រួញចុច` ដើម្បីជ្រើសរើសទិសដៅផ្សេងៗ។\n\n\\[] [0]",
-          "courseB_playlab_events6_c": "យកទង់ជាតិទាំងអស់នេអដើម្បីឆ្លងកាត់!"
+          "courseB_playlab_events6_b": "ប្រើព្រួញទម្លាក់ចុះលើពណ៌បៃតង `នៅពេលព្រួញ ___ចុច` ប្លុកព្រឹត្តិការណ៍ ដើម្បីជ្រើសរើសទិសដៅផ្សេងៗ។\n\n\\[] [0]",
+          "courseB_playlab_events6_c": "ទៅ​កាន់​ទង់ជាតិ​ទាំង​អស់​ដើម្បី​ឆ្លង​កាត់កម្រិត!"
         },
         "courseB_playlab_events7": {
           "courseB_playlab_events7_a": "នេះគឺជាប្លុកដំបូងដែលអ្នកនឹងត្រូវការ:\n\n<xml>\n<block type=\"studio_whenSpriteCollided\">\n    <title name=\"SPRITE1\">0</title>\n    <title name=\"SPRITE2\">1</title>\n  </block>\n</xml>",
-          "courseB_playlab_events7_b": "នេះគឺជាបណ្តុំដែលអ្នកត្រូវការចាក់សម្លេង។\n\n<xml>\n<block type=\"studio_playSound\">\n    <title name=\"SOUND\">slap</title>\n  </block>\n</xml>",
+          "courseB_playlab_events7_b": "នេះគឺជាប្លុកដែលអ្នកត្រូវការដើម្បីចាក់សំឡេង។\n\n<xml>\n<block type=\"studio_playSound\">\n    <title name=\"SOUND\">slap</title>\n  </block>\n</xml>",
           "courseB_playlab_events7_c": "នេះគឺជាប្លុកដែលអ្នកត្រូវការដើម្បីធ្វើឱ្យអ្នកជិះសេះបាត់ខ្លួន:\n\n<xml>\n<block type=\"studio_vanish\">\n    <title name=\"SPRITE\">1</title>\n  </block>\n</xml>"
         },
         "courseB_playlab_events7_2018": {
           "courseB_playlab_events7_a": "នេះគឺជាប្លុកដំបូងដែលអ្នកនឹងត្រូវការ:\n\n<xml>\n<block type=\"studio_whenSpriteCollided\">\n    <title name=\"SPRITE1\">0</title>\n    <title name=\"SPRITE2\">1</title>\n  </block>\n</xml>",
-          "courseB_playlab_events7_b": "នេះគឺជាបណ្តុំដែលអ្នកត្រូវការចាក់សម្លេង។\n\n<xml>\n<block type=\"studio_playSound\">\n    <title name=\"SOUND\">slap</title>\n  </block>\n</xml>",
+          "courseB_playlab_events7_b": "នេះគឺជាប្លុកដែលអ្នកត្រូវការដើម្បីចាក់សំឡេង។\n\n<xml>\n<block type=\"studio_playSound\">\n    <title name=\"SOUND\">slap</title>\n  </block>\n</xml>",
           "courseB_playlab_events7_c": "នេះគឺជាប្លុកដែលអ្នកត្រូវការដើម្បីធ្វើឱ្យអ្នកជិះសេះបាត់ខ្លួន:\n\n<xml>\n<block type=\"studio_vanish\">\n    <title name=\"SPRITE\">1</title>\n  </block>\n</xml>"
         },
         "courseB_playlab_events7_2019": {
           "courseB_playlab_events7_a": "នេះគឺជាប្លុកដំបូងដែលអ្នកនឹងត្រូវការ:\n\n<xml>\n<block type=\"studio_whenSpriteCollided\">\n    <title name=\"SPRITE1\">0</title>\n    <title name=\"SPRITE2\">1</title>\n  </block>\n</xml>",
-          "courseB_playlab_events7_b": "នេះគឺជាបណ្តុំដែលអ្នកត្រូវការចាក់សម្លេង។\n\n<xml>\n<block type=\"studio_playSound\">\n    <title name=\"SOUND\">slap</title>\n  </block>\n</xml>",
+          "courseB_playlab_events7_b": "នេះគឺជាប្លុកដែលអ្នកត្រូវការដើម្បីចាក់សំឡេង។\n\n<xml>\n<block type=\"studio_playSound\">\n    <title name=\"SOUND\">slap</title>\n  </block>\n</xml>",
           "courseB_playlab_events7_c": "នេះគឺជាប្លុកដែលអ្នកត្រូវការដើម្បីធ្វើឱ្យអ្នកជិះសេះបាត់ខ្លួន:\n\n<xml>\n<block type=\"studio_vanish\">\n    <title name=\"SPRITE\">1</title>\n  </block>\n</xml>"
         },
         "courseB_playlab_events7_2020": {
           "courseB_playlab_events7_a": "នេះគឺជាប្លុកដំបូងដែលអ្នកនឹងត្រូវការ:\n\n<xml>\n<block type=\"studio_whenSpriteCollided\">\n    <title name=\"SPRITE1\">0</title>\n    <title name=\"SPRITE2\">1</title>\n  </block>\n</xml>",
-          "courseB_playlab_events7_b": "នេះគឺជាបណ្តុំដែលអ្នកត្រូវការចាក់សម្លេង។\n\n<xml>\n<block type=\"studio_playSound\">\n    <title name=\"SOUND\">slap</title>\n  </block>\n</xml>",
+          "courseB_playlab_events7_b": "នេះគឺជាប្លុកដែលអ្នកត្រូវការដើម្បីចាក់សំឡេង។\n\n<xml>\n<block type=\"studio_playSound\">\n    <title name=\"SOUND\">slap</title>\n  </block>\n</xml>",
           "courseB_playlab_events7_c": "នេះគឺជាប្លុកដែលអ្នកត្រូវការដើម្បីធ្វើឱ្យអ្នកជិះសេះបាត់ខ្លួន:\n\n<xml>\n<block type=\"studio_vanish\">\n    <title name=\"SPRITE\">1</title>\n  </block>\n</xml>"
         },
         "courseB_playlab_events_challenge1": {
@@ -3834,154 +3865,160 @@
           "courseB_playlab_events_challenge1_c": "តើមនុស្សគ្រប់គ្នានឹងនិយាយអ្វីខ្លះនៅពេលការប្រណាំងបានបញ្ចប់? ធ្វើឱ្យពួកគេនិយាយជាមួយព្រឹត្តិការណ៍នេះ៖\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_saySpriteChoices\">\n        <title name=\"SPRITE\">2</title>\n        <title name=\"VALUE\">Woo hoo!</title>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseB_playlab_events_challenge2": {
-          "courseB_playlab_events_challenge2_a": "សត្វនីមួយៗនៅក្នុងហ្គេមគួរតែបាត់នៅពេលចុច។ វាក៏គួរតែត្រលប់មកវិញដែរបន្ទាប់ពីមួយឬពីរវិនាទី!",
+          "courseB_playlab_events_challenge2_a": "សត្វនីមួយៗនៅក្នុងហ្គេម គួរតែបាត់ខ្លួននៅពេលចុច។ ហើយក៏គួរតែបង្ហាញខ្លួនមកវិញផងដែរបន្ទាប់ពីមួយឬពីរវិនាទី!",
           "courseB_playlab_events_challenge2_b": "ប្រើប្លុកព្រឹត្តិការណ៍ផ្សេងៗដើម្បីធ្វើឱ្យសត្វដទៃទៀតបាត់!\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">1</title>\n  </block>\n  </xml>",
           "courseB_playlab_events_challenge2_c": "ប្រើពាក្យបញ្ជាបន្ថែមដើម្បីចាក់សំឡេងឬពិន្ទុនៅពេលអ្នកចុចលើសត្វ!\n\n<xml>\n  <block type=\"studio_playSound\">\n    <title name=\"SOUND\">slap</title>\n  </block>\n  <block type=\"studio_changeScore\"/></xml>",
           "courseB_playlab_events_challenge2_d": "បញ្ចូលគ្នា!\n\nធ្វើឱ្យសត្វខ្លះផ្តល់ពិន្ទុច្រើនជាងអ្នកដទៃ។\nប្រើសំឡេងខុសគ្នា។\nផ្លាស់ប្តូរអារម្មណ៍របស់សត្វ!"
         },
         "courseB_playlab_events_challenge2_2018": {
-          "courseB_playlab_events_challenge2_a": "សត្វនីមួយៗនៅក្នុងហ្គេមគួរតែបាត់នៅពេលចុច។ វាក៏គួរតែត្រលប់មកវិញដែរបន្ទាប់ពីមួយឬពីរវិនាទី!",
+          "courseB_playlab_events_challenge2_a": "សត្វនីមួយៗនៅក្នុងហ្គេម គួរតែបាត់ខ្លួននៅពេលចុច។ ហើយក៏គួរតែបង្ហាញខ្លួនមកវិញផងដែរបន្ទាប់ពីមួយឬពីរវិនាទី!",
           "courseB_playlab_events_challenge2_b": "ប្រើប្លុកព្រឹត្តិការណ៍ផ្សេងៗដើម្បីធ្វើឱ្យសត្វដទៃទៀតបាត់!\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">1</title>\n  </block>\n  </xml>",
           "courseB_playlab_events_challenge2_c": "ប្រើពាក្យបញ្ជាបន្ថែមដើម្បីចាក់សំឡេងឬពិន្ទុនៅពេលអ្នកចុចលើសត្វ!\n\n<xml>\n  <block type=\"studio_playSound\">\n    <title name=\"SOUND\">slap</title>\n  </block>\n  <block type=\"studio_changeScore\"/></xml>",
           "courseB_playlab_events_challenge2_d": "បញ្ចូលគ្នា!\n\nធ្វើឱ្យសត្វខ្លះផ្តល់ពិន្ទុច្រើនជាងអ្នកដទៃ។\nប្រើសំឡេងខុសគ្នា។\nផ្លាស់ប្តូរអារម្មណ៍របស់សត្វ!"
         },
         "courseB_playlab_events_challenge2_2019": {
-          "courseB_playlab_events_challenge2_a": "សត្វនីមួយៗនៅក្នុងហ្គេមគួរតែបាត់នៅពេលចុច។ វាក៏គួរតែត្រលប់មកវិញដែរបន្ទាប់ពីមួយឬពីរវិនាទី!",
+          "courseB_playlab_events_challenge2_a": "សត្វនីមួយៗនៅក្នុងហ្គេម គួរតែបាត់ខ្លួននៅពេលចុច។ ហើយក៏គួរតែបង្ហាញខ្លួនមកវិញផងដែរបន្ទាប់ពីមួយឬពីរវិនាទី!",
           "courseB_playlab_events_challenge2_b": "ប្រើប្លុកព្រឹត្តិការណ៍ផ្សេងៗដើម្បីធ្វើឱ្យសត្វដទៃទៀតបាត់!\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">1</title>\n  </block>\n  </xml>",
           "courseB_playlab_events_challenge2_c": "ប្រើពាក្យបញ្ជាបន្ថែមដើម្បីចាក់សំឡេងឬពិន្ទុនៅពេលអ្នកចុចលើសត្វ!\n\n<xml>\n  <block type=\"studio_playSound\">\n    <title name=\"SOUND\">slap</title>\n  </block>\n  <block type=\"studio_changeScore\"/></xml>",
           "courseB_playlab_events_challenge2_d": "បញ្ចូលគ្នា!\n\nធ្វើឱ្យសត្វខ្លះផ្តល់ពិន្ទុច្រើនជាងអ្នកដទៃ។\nប្រើសំឡេងខុសគ្នា។\nផ្លាស់ប្តូរអារម្មណ៍របស់សត្វ!"
         },
         "courseB_playlab_events_challenge2_2020": {
-          "courseB_playlab_events_challenge2_a": "សត្វនីមួយៗនៅក្នុងហ្គេមគួរតែបាត់នៅពេលចុច។ វាក៏គួរតែត្រលប់មកវិញដែរបន្ទាប់ពីមួយឬពីរវិនាទី!",
+          "courseB_playlab_events_challenge2_a": "សត្វនីមួយៗនៅក្នុងហ្គេម គួរតែបាត់ខ្លួននៅពេលចុច។ ហើយក៏គួរតែបង្ហាញខ្លួនមកវិញផងដែរបន្ទាប់ពីមួយឬពីរវិនាទី!",
           "courseB_playlab_events_challenge2_b": "ប្រើប្លុកព្រឹត្តិការណ៍ផ្សេងៗដើម្បីធ្វើឱ្យសត្វដទៃទៀតបាត់!\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">1</title>\n  </block>\n  </xml>",
           "courseB_playlab_events_challenge2_c": "ប្រើពាក្យបញ្ជាបន្ថែមដើម្បីចាក់សំឡេងឬពិន្ទុនៅពេលអ្នកចុចលើសត្វ!\n\n<xml>\n  <block type=\"studio_playSound\">\n    <title name=\"SOUND\">slap</title>\n  </block>\n  <block type=\"studio_changeScore\"/></xml>",
           "courseB_playlab_events_challenge2_d": "បញ្ចូលគ្នា!\n\nធ្វើឱ្យសត្វខ្លះផ្តល់ពិន្ទុច្រើនជាងអ្នកដទៃ។\nប្រើសំឡេងខុសគ្នា។\nផ្លាស់ប្តូរអារម្មណ៍របស់សត្វ!"
         },
         "courseB_starWars_prog1": {
-          "courseB_starWars_prog1_a": "ព្យាយាមបន្ថែមប្លុកមួយក្នុងពេលតែមួយបន្ទាប់មកចុច \"រត់\" ដើម្បីមើលថាមានអ្វីកើតឡើង។",
+          "courseB_starWars_prog1_a": "ព្យាយាមបន្ថែមប្លុកម្ដងមួយៗ បន្ទាប់មក ចុច \"▶ ប៊ូតុងដំណើរការ\" ដើម្បីពិនិត្យមើលថាមានអ្វីកើតឡើង។",
           "courseB_starWars_prog1_b": "អ្នកនឹងចង់ផ្លាស់ទីទៅខាងកើតដើម្បីដោះស្រាយល្បែងផ្គុំរូបនេះ។ តើអ្នកត្រូវការផ្លាស់ទីឆ្ងាយប៉ុណ្ណា?\n\n[blockly block] [0]"
         },
         "courseB_starWars_prog1_2018": {
-          "courseB_starWars_prog1_a": "ព្យាយាមបន្ថែមប្លុកមួយក្នុងពេលតែមួយបន្ទាប់មកចុច \"រត់\" ដើម្បីមើលថាមានអ្វីកើតឡើង។",
+          "courseB_starWars_prog1_a": "ព្យាយាមបន្ថែមប្លុកម្ដងមួយៗ បន្ទាប់មក ចុច \"▶ ប៊ូតុងដំណើរការ\" ដើម្បីពិនិត្យមើលថាមានអ្វីកើតឡើង។",
           "courseB_starWars_prog1_b": "អ្នកនឹងចង់ផ្លាស់ទីទៅខាងកើតដើម្បីដោះស្រាយល្បែងផ្គុំរូបនេះ។ តើអ្នកត្រូវការផ្លាស់ទីឆ្ងាយប៉ុណ្ណា?\n\n[blockly block] [0]"
         },
         "courseB_starWars_prog1_2019": {
-          "courseB_starWars_prog1_a": "ព្យាយាមបន្ថែមប្លុកមួយក្នុងពេលតែមួយបន្ទាប់មកចុច \"រត់\" ដើម្បីមើលថាមានអ្វីកើតឡើង។",
+          "courseB_starWars_prog1_a": "ព្យាយាមបន្ថែមប្លុកម្ដងមួយៗ បន្ទាប់មក ចុច \"▶ ប៊ូតុងដំណើរការ\" ដើម្បីពិនិត្យមើលថាមានអ្វីកើតឡើង។",
           "courseB_starWars_prog1_b": "អ្នកនឹងចង់ផ្លាស់ទីទៅខាងកើតដើម្បីដោះស្រាយល្បែងផ្គុំរូបនេះ។ តើអ្នកត្រូវការផ្លាស់ទីឆ្ងាយប៉ុណ្ណា?\n\n[blockly block] [0]"
         },
         "courseB_starWars_prog1_2020": {
-          "courseB_starWars_prog1_a": "ព្យាយាមបន្ថែមប្លុកមួយក្នុងពេលតែមួយបន្ទាប់មកចុច \"រត់\" ដើម្បីមើលថាមានអ្វីកើតឡើង។",
+          "courseB_starWars_prog1_a": "ព្យាយាមបន្ថែមប្លុកម្ដងមួយៗ បន្ទាប់មក ចុច \"▶ ប៊ូតុងដំណើរការ\" ដើម្បីពិនិត្យមើលថាមានអ្វីកើតឡើង។",
           "courseB_starWars_prog1_b": "អ្នកនឹងចង់ផ្លាស់ទីទៅខាងកើតដើម្បីដោះស្រាយល្បែងផ្គុំរូបនេះ។ តើអ្នកត្រូវការផ្លាស់ទីឆ្ងាយប៉ុណ្ណា?\n\n[blockly block] [0]"
         },
         "courseB_starWars_prog2": {
-          "courseB_starWars_prog2_a": "បំបែកបញ្ហានេះជាពីរផ្នែក។ យកដែកសំណល់អេតចាយមួយដុំបន្ទាប់មករកវិធីដើម្បីទៅយកមួយផ្សេងទៀត។"
+          "courseB_starWars_prog2_a": "ចែកបញ្ហានេះជាពីរផ្នែក។ យកសំណល់ដែកមួយគំនរ បន្ទាប់មករកមធ្យោបាយដើម្បីទៅយកមួយគំនរទៀត។"
         },
         "courseB_starWars_prog2_2019": {
-          "courseB_starWars_prog2_a": "បំបែកបញ្ហានេះជាពីរផ្នែក។ យកដែកសំណល់អេតចាយមួយដុំបន្ទាប់មករកវិធីដើម្បីទៅយកមួយផ្សេងទៀត។"
+          "courseB_starWars_prog2_a": "ចែកបញ្ហានេះជាពីរផ្នែក។ យកសំណល់ដែកមួយគំនរ បន្ទាប់មករកមធ្យោបាយដើម្បីទៅយកមួយគំនរទៀត។"
         },
         "courseB_starWars_prog2_2020": {
-          "courseB_starWars_prog2_a": "បំបែកបញ្ហានេះជាពីរផ្នែក។ យកដែកសំណល់អេតចាយមួយដុំបន្ទាប់មករកវិធីដើម្បីទៅយកមួយផ្សេងទៀត។"
+          "courseB_starWars_prog2_a": "ចែកបញ្ហានេះជាពីរផ្នែក។ យកសំណល់ដែកមួយគំនរ បន្ទាប់មករកមធ្យោបាយដើម្បីទៅយកមួយគំនរទៀត។"
         },
         "courseB_starWars_prog3": {
-          "courseB_starWars_prog3_a": "អ្នកនឹងត្រូវប្ដូរ៣ទិសដៅដើម្បីដោះស្រាយល្បែងផ្គុំរូបនេះ",
-          "courseB_starWars_prog3_b": "បង្កើតលេខកូដមួយក្នុងពេលតែមួយ។ រត់វាដើម្បីរកកន្លែងដែលត្រូវទៅពីទីនោះ។"
+          "courseB_starWars_prog3_a": "អ្នកនឹងត្រូវផ្លាស់ទី ៣ទិសដៅដើម្បីដោះស្រាយល្បែងផ្គុំរូបនេះ",
+          "courseB_starWars_prog3_b": "ភ្ជាប់ប្លុកម្ដងមួយៗដើម្បីប្រមូលសំណល់ដែក។ ចុច \"▶ ប៊ូតុងដំណើរការ\" ដើម្បីរកមើលបញ្ហា និងត្រូវធ្វើបន្តដោយរបៀបណា។"
         },
         "courseB_starWars_prog3_2018": {
-          "courseB_starWars_prog3_a": "អ្នកនឹងត្រូវប្ដូរ៣ទិសដៅដើម្បីដោះស្រាយល្បែងផ្គុំរូបនេះ",
-          "courseB_starWars_prog3_b": "បង្កើតលេខកូដមួយក្នុងពេលតែមួយ។ រត់វាដើម្បីរកកន្លែងដែលត្រូវទៅពីទីនោះ។"
+          "courseB_starWars_prog3_a": "អ្នកនឹងត្រូវផ្លាស់ទី ៣ទិសដៅដើម្បីដោះស្រាយល្បែងផ្គុំរូបនេះ",
+          "courseB_starWars_prog3_b": "ភ្ជាប់ប្លុកម្ដងមួយៗដើម្បីប្រមូលសំណល់ដែក។ ចុច \"▶ ប៊ូតុងដំណើរការ\" ដើម្បីរកមើលបញ្ហា និងត្រូវធ្វើបន្តដោយរបៀបណា។"
         },
         "courseB_starWars_prog3_2019": {
-          "courseB_starWars_prog3_a": "អ្នកនឹងត្រូវប្ដូរ៣ទិសដៅដើម្បីដោះស្រាយល្បែងផ្គុំរូបនេះ",
-          "courseB_starWars_prog3_b": "បង្កើតលេខកូដមួយក្នុងពេលតែមួយ។ រត់វាដើម្បីរកកន្លែងដែលត្រូវទៅពីទីនោះ។"
+          "courseB_starWars_prog3_a": "អ្នកនឹងត្រូវផ្លាស់ទី ៣ទិសដៅដើម្បីដោះស្រាយល្បែងផ្គុំរូបនេះ",
+          "courseB_starWars_prog3_b": "ភ្ជាប់ប្លុកម្ដងមួយៗដើម្បីប្រមូលសំណល់ដែក។ ចុច \"▶ ប៊ូតុងដំណើរការ\" ដើម្បីរកមើលបញ្ហា និងត្រូវធ្វើបន្តដោយរបៀបណា។"
         },
         "courseB_starWars_prog3_2020": {
-          "courseB_starWars_prog3_a": "អ្នកនឹងត្រូវប្ដូរ៣ទិសដៅដើម្បីដោះស្រាយល្បែងផ្គុំរូបនេះ",
-          "courseB_starWars_prog3_b": "បង្កើតលេខកូដមួយក្នុងពេលតែមួយ។ រត់វាដើម្បីរកកន្លែងដែលត្រូវទៅពីទីនោះ។"
+          "courseB_starWars_prog3_a": "អ្នកនឹងត្រូវផ្លាស់ទី ៣ទិសដៅដើម្បីដោះស្រាយល្បែងផ្គុំរូបនេះ",
+          "courseB_starWars_prog3_b": "ភ្ជាប់ប្លុកម្ដងមួយៗដើម្បីប្រមូលសំណល់ដែក។ ចុច \"▶ ប៊ូតុងដំណើរការ\" ដើម្បីរកមើលបញ្ហា និងត្រូវធ្វើបន្តដោយរបៀបណា។"
         },
         "courseB_starWars_prog4": {
-          "courseB_starWars_prog4_a": "បង្កើតលេខកូដមួយក្នុងពេលតែមួយ។ រត់វាដើម្បីរកកន្លែងដែលត្រូវទៅពីទីនោះ។",
-          "courseB_starWars_prog4_b": "ព្យាយាមប្រើ `ដដែលៗ`សម្រាប់លេខកូដខ្លីជាងនេះ។\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
+          "courseB_starWars_prog4_a": "ភ្ជាប់ប្លុកម្ដងមួយៗដើម្បីប្រមូលសំណល់ដែក។ ចុច \"▶ ប៊ូតុងដំណើរការ\" ដើម្បីរកមើលបញ្ហា និងត្រូវធ្វើបន្តដោយរបៀបណា។",
+          "courseB_starWars_prog4_b": "សាកល្បងប្រើ ប្លុក `ធ្វើ​ឡើង​វិញ` ដើម្បីឱ្យកូដខ្លីជាងនេះ។\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
         },
         "courseB_starWars_prog4_2018": {
-          "courseB_starWars_prog4_a": "បង្កើតលេខកូដមួយក្នុងពេលតែមួយ។ រត់វាដើម្បីរកកន្លែងដែលត្រូវទៅពីទីនោះ។",
-          "courseB_starWars_prog4_b": "ព្យាយាមប្រើ `ដដែលៗ`សម្រាប់លេខកូដខ្លីជាងនេះ។\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
+          "courseB_starWars_prog4_a": "ភ្ជាប់ប្លុកម្ដងមួយៗដើម្បីប្រមូលសំណល់ដែក។ ចុច \"▶ ប៊ូតុងដំណើរការ\" ដើម្បីរកមើលបញ្ហា និងត្រូវធ្វើបន្តដោយរបៀបណា។",
+          "courseB_starWars_prog4_b": "សាកល្បងប្រើ ប្លុក `ធ្វើ​ឡើង​វិញ` ដើម្បីឱ្យកូដខ្លីជាងនេះ។\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
         },
         "courseB_starWars_prog4_2019": {
-          "courseB_starWars_prog4_a": "បង្កើតលេខកូដមួយក្នុងពេលតែមួយ។ រត់វាដើម្បីរកកន្លែងដែលត្រូវទៅពីទីនោះ។",
-          "courseB_starWars_prog4_b": "ព្យាយាមប្រើ `ដដែលៗ`សម្រាប់លេខកូដខ្លីជាងនេះ។\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
+          "courseB_starWars_prog4_a": "ភ្ជាប់ប្លុកម្ដងមួយៗដើម្បីប្រមូលសំណល់ដែក។ ចុច \"▶ ប៊ូតុងដំណើរការ\" ដើម្បីរកមើលបញ្ហា និងត្រូវធ្វើបន្តដោយរបៀបណា។",
+          "courseB_starWars_prog4_b": "សាកល្បងប្រើ ប្លុក `ធ្វើ​ឡើង​វិញ` ដើម្បីឱ្យកូដខ្លីជាងនេះ។\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
         },
         "courseB_starWars_prog4_2020": {
-          "courseB_starWars_prog4_a": "បង្កើតលេខកូដមួយក្នុងពេលតែមួយ។ រត់វាដើម្បីរកកន្លែងដែលត្រូវទៅពីទីនោះ។",
-          "courseB_starWars_prog4_b": "ព្យាយាមប្រើ `ដដែលៗ`សម្រាប់លេខកូដខ្លីជាងនេះ។\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
+          "courseB_starWars_prog4_a": "ភ្ជាប់ប្លុកម្ដងមួយៗដើម្បីប្រមូលសំណល់ដែក។ ចុច \"▶ ប៊ូតុងដំណើរការ\" ដើម្បីរកមើលបញ្ហា និងត្រូវធ្វើបន្តដោយរបៀបណា។",
+          "courseB_starWars_prog4_b": "សាកល្បងប្រើ ប្លុក `ធ្វើ​ឡើង​វិញ` ដើម្បីឱ្យកូដខ្លីជាងនេះ។\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
         },
         "courseB_starWars_prog5": {
-          "courseB_starWars_prog5_a": "តើលំនាំនេះមិនដូចរូបផ្គុំចុងក្រោយទេដែរឬ?",
-          "courseB_starWars_prog5_b": "BB-8 នឹងចាប់យកscrap metalនៅពេលគាត់ក្រឡុកលើវា។",
-          "courseB_starWars_prog5_c": "តាមដានលំនាំនេះដោយម្រាមដៃរបស់អ្នក។ រាប់បំណែកនៃលោហៈនៅពេលអ្នកផ្លាស់ទី។",
-          "courseB_starWars_prog5_da": "រកមើលតើមានអ្វីកើតឡើងប្រសិនបើអ្នកប្រើដំណោះស្រាយដូចគ្នានឹងជណ្តើររូបផ្គុំ។\n\n\\[] [0]"
+          "courseB_starWars_prog5_a": "តើលំនាំនេះមើលទៅដូច រូបផ្គុំចុងក្រោយដែរឬទេ?",
+          "courseB_starWars_prog5_b": "BB-8 នឹងប្រមូលសំណល់ដែកនៅពេលដែល BB-8 រត់នៅលើដែកទាំងនោះ។",
+          "courseB_starWars_prog5_c": "ប្រើម្រាមដៃរបស់អ្នកដើម្បីមើលលំនាំនៃផ្លូវត្រូវផ្លាស់ទី ហើយរាប់ចំនួនជំហានផ្លាស់ទី ផ្ទឹមនិងគំនរដែកផ្សេងៗ។​",
+          "courseB_starWars_prog5_da": "មើលថាមានអ្វីកើតឡើងប្រសិនបើអ្នកប្រើដំណោះស្រាយដូចគ្នាទៅ និងល្បែងរូបផ្គុំរាងជណ្តើរ។\n\n\\[] [0]"
         },
         "courseB_starWars_prog5_2018": {
-          "courseB_starWars_prog5_a": "តើលំនាំនេះមិនដូចរូបផ្គុំចុងក្រោយទេដែរឬ?",
-          "courseB_starWars_prog5_b": "BB-8 នឹងចាប់យកscrap metalនៅពេលគាត់ក្រឡុកលើវា។",
-          "courseB_starWars_prog5_c": "តាមដានលំនាំនេះដោយម្រាមដៃរបស់អ្នក។ រាប់បំណែកនៃលោហៈនៅពេលអ្នកផ្លាស់ទី។",
-          "courseB_starWars_prog5_da": "រកមើលតើមានអ្វីកើតឡើងប្រសិនបើអ្នកប្រើដំណោះស្រាយដូចគ្នានឹងជណ្តើររូបផ្គុំ។\n\n\\[] [0]"
+          "courseB_starWars_prog5_a": "តើលំនាំនេះមើលទៅដូច រូបផ្គុំចុងក្រោយដែរឬទេ?",
+          "courseB_starWars_prog5_b": "BB-8 នឹងប្រមូលសំណល់ដែកនៅពេលដែល BB-8 រត់នៅលើដែកទាំងនោះ។",
+          "courseB_starWars_prog5_c": "ប្រើម្រាមដៃរបស់អ្នកដើម្បីមើលលំនាំនៃផ្លូវត្រូវផ្លាស់ទី ហើយរាប់ចំនួនជំហានផ្លាស់ទី ផ្ទឹមនិងគំនរដែកផ្សេងៗ។​",
+          "courseB_starWars_prog5_da": "មើលថាមានអ្វីកើតឡើងប្រសិនបើអ្នកប្រើដំណោះស្រាយដូចគ្នាទៅ និងល្បែងរូបផ្គុំរាងជណ្តើរ។\n\n\\[] [0]"
         },
         "courseB_starWars_prog5_2019": {
-          "courseB_starWars_prog5_a": "តើលំនាំនេះមិនដូចរូបផ្គុំចុងក្រោយទេដែរឬ?",
-          "courseB_starWars_prog5_b": "BB-8 នឹងចាប់យកscrap metalនៅពេលគាត់ក្រឡុកលើវា។",
-          "courseB_starWars_prog5_c": "តាមដានលំនាំនេះដោយម្រាមដៃរបស់អ្នក។ រាប់បំណែកនៃលោហៈនៅពេលអ្នកផ្លាស់ទី។",
-          "courseB_starWars_prog5_da": "រកមើលតើមានអ្វីកើតឡើងប្រសិនបើអ្នកប្រើដំណោះស្រាយដូចគ្នានឹងជណ្តើររូបផ្គុំ។\n\n\\[] [0]"
+          "courseB_starWars_prog5_a": "តើលំនាំនេះមើលទៅដូច រូបផ្គុំចុងក្រោយដែរឬទេ?",
+          "courseB_starWars_prog5_b": "BB-8 នឹងប្រមូលសំណល់ដែកនៅពេលដែល BB-8 រត់នៅលើដែកទាំងនោះ។",
+          "courseB_starWars_prog5_c": "ប្រើម្រាមដៃរបស់អ្នកដើម្បីមើលលំនាំនៃផ្លូវត្រូវផ្លាស់ទី ហើយរាប់ចំនួនជំហានផ្លាស់ទី ផ្ទឹមនិងគំនរដែកផ្សេងៗ។​",
+          "courseB_starWars_prog5_da": "មើលថាមានអ្វីកើតឡើងប្រសិនបើអ្នកប្រើដំណោះស្រាយដូចគ្នាទៅ និងល្បែងរូបផ្គុំរាងជណ្តើរ។\n\n\\[] [0]"
         },
         "courseB_starWars_prog5_2020": {
-          "courseB_starWars_prog5_a": "តើលំនាំនេះមិនដូចរូបផ្គុំចុងក្រោយទេដែរឬ?",
-          "courseB_starWars_prog5_b": "BB-8 នឹងចាប់យកscrap metalនៅពេលគាត់ក្រឡុកលើវា។",
-          "courseB_starWars_prog5_c": "តាមដានលំនាំនេះដោយម្រាមដៃរបស់អ្នក។ រាប់បំណែកនៃលោហៈនៅពេលអ្នកផ្លាស់ទី។",
-          "courseB_starWars_prog5_da": "រកមើលតើមានអ្វីកើតឡើងប្រសិនបើអ្នកប្រើដំណោះស្រាយដូចគ្នានឹងជណ្តើររូបផ្គុំ។\n\n\\[] [0]"
+          "courseB_starWars_prog5_a": "តើលំនាំនេះមើលទៅដូច រូបផ្គុំចុងក្រោយដែរឬទេ?",
+          "courseB_starWars_prog5_b": "BB-8 នឹងប្រមូលសំណល់ដែកនៅពេលដែល BB-8 រត់នៅលើដែកទាំងនោះ។",
+          "courseB_starWars_prog5_c": "ប្រើម្រាមដៃរបស់អ្នកដើម្បីមើលលំនាំនៃផ្លូវត្រូវផ្លាស់ទី ហើយរាប់ចំនួនជំហានផ្លាស់ទី ផ្ទឹមនិងគំនរដែកផ្សេងៗ។​",
+          "courseB_starWars_prog5_da": "មើលថាមានអ្វីកើតឡើងប្រសិនបើអ្នកប្រើដំណោះស្រាយដូចគ្នាទៅ និងល្បែងរូបផ្គុំរាងជណ្តើរ។\n\n\\[] [0]"
         },
         "courseB_starWars_prog6": {
           "courseB_starWars_prog6_a": "លំនាំនេះគ្រាន់តែជាជំហានមួយដែលមានចលនាពីរក្នុងមួយទិសដៅប៉ុណ្ណោះ!",
-          "courseB_starWars_prog6_b": "ព្យាយាមប្រើ `ដដែលៗ`សម្រាប់លេខកូដខ្លីជាងនេះ។\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
+          "courseB_starWars_prog6_b": "សាកល្បងប្រើ ប្លុក `ធ្វើ​ឡើង​វិញ` ដើម្បីឱ្យកូដខ្លីជាងនេះ។\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
         },
         "courseB_starWars_prog6_2018": {
           "courseB_starWars_prog6_a": "លំនាំនេះគ្រាន់តែជាជំហានមួយដែលមានចលនាពីរក្នុងមួយទិសដៅប៉ុណ្ណោះ!",
-          "courseB_starWars_prog6_b": "ព្យាយាមប្រើ `ដដែលៗ`សម្រាប់លេខកូដខ្លីជាងនេះ។\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
+          "courseB_starWars_prog6_b": "សាកល្បងប្រើ ប្លុក `ធ្វើ​ឡើង​វិញ` ដើម្បីឱ្យកូដខ្លីជាងនេះ។\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
         },
         "courseB_starWars_prog6_2019": {
           "courseB_starWars_prog6_a": "លំនាំនេះគ្រាន់តែជាជំហានមួយដែលមានចលនាពីរក្នុងមួយទិសដៅប៉ុណ្ណោះ!",
-          "courseB_starWars_prog6_b": "ព្យាយាមប្រើ `ដដែលៗ`សម្រាប់លេខកូដខ្លីជាងនេះ។\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
+          "courseB_starWars_prog6_b": "សាកល្បងប្រើ ប្លុក `ធ្វើ​ឡើង​វិញ` ដើម្បីឱ្យកូដខ្លីជាងនេះ។\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
         },
         "courseB_starWars_prog6_2020": {
           "courseB_starWars_prog6_a": "លំនាំនេះគ្រាន់តែជាជំហានមួយដែលមានចលនាពីរក្នុងមួយទិសដៅប៉ុណ្ណោះ!",
-          "courseB_starWars_prog6_b": "ព្យាយាមប្រើ `ដដែលៗ`សម្រាប់លេខកូដខ្លីជាងនេះ។\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
+          "courseB_starWars_prog6_b": "សាកល្បងប្រើ ប្លុក `ធ្វើ​ឡើង​វិញ` ដើម្បីឱ្យកូដខ្លីជាងនេះ។\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
         },
         "courseB_starWars_prog7": {
-          "courseB_starWars_prog7_a": "តើលំនាំនេះមិនដូចរូបផ្គុំចុងក្រោយទេដែរឬ?",
-          "courseB_starWars_prog7_b": "BB-8 នឹងចាប់យកscrap metalនៅពេលគាត់ក្រឡុកលើវា។",
-          "courseB_starWars_prog7_c": "សាកល្បងគូរជំហ៊ានជណ្តើរធំ ៗ លើរូបផ្គុំនេះ។ តើវាគ្របដណ្ដប់លើដែកអេតចាយទាំងអស់ទេ?"
+          "courseB_starWars_prog7_a": "តើលំនាំនេះមើលទៅដូច រូបផ្គុំចុងក្រោយដែរឬទេ?",
+          "courseB_starWars_prog7_b": "BB-8 នឹងប្រមូលសំណល់ដែកនៅពេលដែល BB-8 រត់នៅលើដែកទាំងនោះ។",
+          "courseB_starWars_prog7_c": "សាកល្បងគូរលំនាំជំហ៊ានជណ្តើរធំៗ លើរូបផ្គុំនេះ។ តើជំហ៊ានជណ្តើរគ្របដណ្ដប់លើសំណល់ដែកទាំងអស់ឬទេ?"
         },
         "courseB_starWars_prog7_2018": {
-          "courseB_starWars_prog7_a": "តើលំនាំនេះមិនដូចរូបផ្គុំចុងក្រោយទេដែរឬ?",
-          "courseB_starWars_prog7_b": "BB-8 នឹងចាប់យកscrap metalនៅពេលគាត់ក្រឡុកលើវា។",
-          "courseB_starWars_prog7_c": "សាកល្បងគូរជំហ៊ានជណ្តើរធំ ៗ លើរូបផ្គុំនេះ។ តើវាគ្របដណ្ដប់លើដែកអេតចាយទាំងអស់ទេ?"
+          "courseB_starWars_prog7_a": "តើលំនាំនេះមើលទៅដូច រូបផ្គុំចុងក្រោយដែរឬទេ?",
+          "courseB_starWars_prog7_b": "BB-8 នឹងប្រមូលសំណល់ដែកនៅពេលដែល BB-8 រត់នៅលើដែកទាំងនោះ។",
+          "courseB_starWars_prog7_c": "សាកល្បងគូរលំនាំជំហ៊ានជណ្តើរធំៗ លើរូបផ្គុំនេះ។ តើជំហ៊ានជណ្តើរគ្របដណ្ដប់លើសំណល់ដែកទាំងអស់ឬទេ?"
         },
         "courseB_starWars_prog7_2019": {
-          "courseB_starWars_prog7_a": "តើលំនាំនេះមិនដូចរូបផ្គុំចុងក្រោយទេដែរឬ?",
-          "courseB_starWars_prog7_b": "BB-8 នឹងចាប់យកscrap metalនៅពេលគាត់ក្រឡុកលើវា។",
-          "courseB_starWars_prog7_c": "សាកល្បងគូរជំហ៊ានជណ្តើរធំ ៗ លើរូបផ្គុំនេះ។ តើវាគ្របដណ្ដប់លើដែកអេតចាយទាំងអស់ទេ?"
+          "courseB_starWars_prog7_a": "តើលំនាំនេះមើលទៅដូច រូបផ្គុំចុងក្រោយដែរឬទេ?",
+          "courseB_starWars_prog7_b": "BB-8 នឹងប្រមូលសំណល់ដែកនៅពេលដែល BB-8 រត់នៅលើដែកទាំងនោះ។",
+          "courseB_starWars_prog7_c": "សាកល្បងគូរលំនាំជំហ៊ានជណ្តើរធំៗ លើរូបផ្គុំនេះ។ តើជំហ៊ានជណ្តើរគ្របដណ្ដប់លើសំណល់ដែកទាំងអស់ឬទេ?"
         },
         "courseB_starWars_prog7_2020": {
-          "courseB_starWars_prog7_a": "តើលំនាំនេះមិនដូចរូបផ្គុំចុងក្រោយទេដែរឬ?",
-          "courseB_starWars_prog7_b": "BB-8 នឹងចាប់យកscrap metalនៅពេលគាត់ក្រឡុកលើវា។",
-          "courseB_starWars_prog7_c": "សាកល្បងគូរជំហ៊ានជណ្តើរធំ ៗ លើរូបផ្គុំនេះ។ តើវាគ្របដណ្ដប់លើដែកអេតចាយទាំងអស់ទេ?"
+          "courseB_starWars_prog7_a": "តើលំនាំនេះមើលទៅដូច រូបផ្គុំចុងក្រោយដែរឬទេ?",
+          "courseB_starWars_prog7_b": "BB-8 នឹងប្រមូលសំណល់ដែកនៅពេលដែល BB-8 រត់នៅលើដែកទាំងនោះ។",
+          "courseB_starWars_prog7_c": "សាកល្បងគូរលំនាំជំហ៊ានជណ្តើរធំៗ លើរូបផ្គុំនេះ។ តើជំហ៊ានជណ្តើរគ្របដណ្ដប់លើសំណល់ដែកទាំងអស់ឬទេ?"
         },
         "courseB_starWars_prog9_2018": {
-          "courseB_starWars_prog9_b": "មានវិធីពីរយ៉ាងដើម្បីដោះស្រាយល្បែងផ្គុំរូបនេះ។"
+          "courseB_starWars_prog9_b": "មានវិធីសាស្រ្តច្រើនក្នុងការដោះស្រាយល្បែងផ្គុំរូបនេះ។",
+          "courseB_starWars_prog9_a": "កុំខ្លាចការបង្កើតកំហុស! ចុច \"▶ ប៊ូតុងដំណើរការ\" ដើម្បីមើលថាមានអ្វីកើតឡើង, ទោះបីមិនទាន់ធ្វើហើយទាំងស្រុងក៏ដោយ។",
+          "courseB_starWars_prog9_c": "សាកប្រើប្លុក `ធ្វើឡើងវិញ` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block></xml> តើអាចជួយដោះស្រាយបញ្ហានេះបានទេ?"
         },
         "courseB_starWars_prog9_2019": {
-          "courseB_starWars_prog9_b": "មានវិធីពីរយ៉ាងដើម្បីដោះស្រាយល្បែងផ្គុំរូបនេះ។"
+          "courseB_starWars_prog9_b": "មានវិធីសាស្រ្តច្រើនក្នុងការដោះស្រាយល្បែងផ្គុំរូបនេះ។",
+          "courseB_starWars_prog9_a": "កុំខ្លាចការបង្កើតកំហុស! ចុច \"▶ ប៊ូតុងដំណើរការ\" ដើម្បីមើលថាមានអ្វីកើតឡើង, ទោះបីមិនទាន់ធ្វើហើយទាំងស្រុងក៏ដោយ។",
+          "courseB_starWars_prog9_c": "សាកប្រើប្លុក `ធ្វើឡើងវិញ` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block></xml> តើអាចជួយដោះស្រាយបញ្ហានេះបានទេ?"
         },
         "courseB_starWars_prog9_2020": {
-          "courseB_starWars_prog9_b": "មានវិធីពីរយ៉ាងដើម្បីដោះស្រាយល្បែងផ្គុំរូបនេះ។"
+          "courseB_starWars_prog9_b": "មានវិធីសាស្រ្តច្រើនក្នុងការដោះស្រាយល្បែងផ្គុំរូបនេះ។",
+          "courseB_starWars_prog9_a": "កុំខ្លាចការបង្កើតកំហុស! ចុច \"▶ ប៊ូតុងដំណើរការ\" ដើម្បីមើលថាមានអ្វីកើតឡើង, ទោះបីមិនទាន់ធ្វើហើយទាំងស្រុងក៏ដោយ។",
+          "courseB_starWars_prog9_c": "សាកប្រើប្លុក `ធ្វើឡើងវិញ` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block></xml> តើអាចជួយដោះស្រាយបញ្ហានេះបានទេ?"
         },
         "courseC_collector_prog6": {
           "courseC_collector_prog6_a": "តើអ្នកដឹងថាមានបញ្ហានៅត្រង់ណាដែរឬទេ?  \n\nសាកល្បងប្រើប៊ូតុង \"ជំហាន\" ដើម្បីស្វែងរកកំហុសដោយដំណើរកូដជាជួរៗ។",
@@ -4192,13 +4229,15 @@
           "courseA_collector_loops_challenge2kp_a": "តើអ្នកអាចប្រើរវិលជំុដដែលៗដើម្បីដោះស្រាយបញ្ហានេះទេ?"
         },
         "courseA_harvester_loops5_2021": {
-          "courseA_harvester_loops5_a": "ប្រសិនបើអ្នកធ្វើមិនចេញ ព្យាយាមដោះស្រាយល្បែងផ្គុំរូបនៅក្នុងពីរផ្នែក។ផ្នែកទីមួយមុនកាច់ជ្រុង ហើយផ្នែកទីពីរក្រោយកាច់ជ្រុង"
+          "courseA_harvester_loops5_a": "ប្រសិនបើអ្នកធ្វើមិនចេញ ព្យាយាមដោះស្រាយល្បែងផ្គុំរូបជាពីរផ្នែក។​ ផ្នែកទីមួយមុនកាច់ជ្រុង ហើយផ្នែកទីពីរក្រោយកាច់ជ្រុង។"
         },
         "courseA_harvester_seq2_2021": {
-          "courseA_harvester_seq2_b": "ព្យាយាមសរសេរនូវជំហានទាំងអស់នៅលើក្រដាសដើម្បីរកដំណោះស្រាយ"
+          "courseA_harvester_seq2_b": "ព្យាយាមសរសេរនូវជំហានទាំងអស់នៅលើក្រដាសដើម្បីរកដំណោះស្រាយ",
+          "courseA_harvester_seq2_a": "កុំភ្លេចប្រើ <xml><block type=\"harvester_corn\"/></xml> ដើម្បីប្រមូលពោត!"
         },
         "courseA_maze_seq10_2021": {
-          "courseA_maze_seq10_a": "ប្រសិនបើអ្នកកំពុងមានបញ្ហា ព្យាយាមសរសេរនូវជំហាននៅលើក្រដាសជាមុនសិន"
+          "courseA_maze_seq10_a": "ប្រសិនបើអ្នកកំពុងមានបញ្ហា ព្យាយាមសរសេរនូវជំហាននៅលើក្រដាសជាមុនសិន",
+          "courseA_maze_seq10_b": "អ្នកនឹងត្រូវប្រើប្រាស់ទិសដៅ៣ផ្សេងគ្នា ដើម្បីដោះស្រាយរូបផ្គុំនេះ។"
         },
         "courseA_maze_seq10_dani": {
           "courseA_maze_seq10_a": "ប្រសិនបើអ្នកកំពុងមានបញ្ហា ព្យាយាមសរសេរនូវជំហាននៅលើក្រដាសជាមុនសិន",
@@ -4206,10 +4245,11 @@
         },
         "courseA_maze_seq13_2021": {
           "courseA_maze_seq13_a": "ប្រសិនបើផ្លូវដែលអ្នកត្រូវការមិនច្បាស់ ប្រើម្រាមដៃរបស់អ្នកដើម្បីដានផ្លូវរបស់អ្នកពីតួអង្គបក្សីទៅតួអង្គជ្រូក",
-          "courseA_maze_seq13_b": "កុំខ្លាចក្នុងការធ្វើខុស! ​ព្យាយាមបន្ថែមប្លុកហើយដំណើរការកូដដើម្បីដឹងថានឹងមានអ្វីកើតឡើង"
+          "courseA_maze_seq13_b": "កុំខ្លាចក្នុងការធ្វើខុស! ​ព្យាយាមបន្ថែមប្លុកហើយដំណើរការកូដដើម្បីដឹងថានឹងមានអ្វីកើតឡើង",
+          "courseA_maze_seq13_c": "ប្លុកទាំងនេះ <xml><block type=\"maze_moveNorth\"/></xml>\n\n<xml><block type=\"maze_moveEast\"/></xml>\n\nនឹងជួយអ្នកក្នុងការផ្លាស់ទីបក្សីទៅកាន់តែជិតជ្រូក។"
         },
         "courseA_maze_seq1_2021": {
-          "courseA_maze_seq1_a": "ប្រសិនបើអ្នកកំពុងមានបញ្ហាក្នុងការនាំតួអង្គបក្សីផ្លាស់ទី ត្រូវប្រាកដថាប្លុកត្រូវបានរៀបតាមលំដាប់លំដោយ [ប្លុកនៅក្នុងប្លុក] [0]",
+          "courseA_maze_seq1_a": "ប្រសិនបើអ្នកកំពុងមានបញ្ហាក្នុងការផ្លាស់ទីបក្សី សូមអ្នកប្រាកដថាប្លុកត្រូវបានរៀបតាមលំដាប់លំដោយ [blockly block] [0]",
           "courseA_maze_seq1_b": "តួអង្គបក្សីតម្រូវអោយផ្លាស់ទីទៅខាងលិចចំនួន ៣ ដងដើម្បីទៅដល់តួអង្គជ្រូក។ ចូរប្រើប្លុកនេះ <xml><block type=\"maze_moveWest\"/></xml>"
         },
         "courseA_maze_seq5_2021": {
@@ -4221,12 +4261,12 @@
           "courseA_maze_seq5_b": "អ្នកនឹងត្រូវការពីរប្លុក  ដៅនៅក្នុងទិសដៅពីរ"
         },
         "courseA_maze_seq6_2021": {
-          "courseA_maze_seq6_a": "កូដចុងក្រោយរបស់អ្នកគួរតែមានប្លុកផ្លាស់ទី៣",
-          "courseA_maze_seq6_b": "ប្រសិនបើអ្នកធ្វើមិនចេញ ព្យាយាមដោះស្រាយល្បែងផ្គុំរូបនៅក្នុងពីរផ្នែក។ផ្នែកទីមួយមុនកាច់ជ្រុង ហើយផ្នែកទីពីរក្រោយកាច់ជ្រុង"
+          "courseA_maze_seq6_a": "កូដសម្រេចរបស់អ្នក គួរតែមានកូដប្លុកផ្លាស់ទី ចំនួន៣ប្លុក។",
+          "courseA_maze_seq6_b": "ប្រសិនបើអ្នកធ្វើមិនចេញ ព្យាយាមដោះស្រាយល្បែងផ្គុំរូបជាពីរផ្នែក។​ ផ្នែកទីមួយមុនកាច់ជ្រុង ហើយផ្នែកទីពីរក្រោយកាច់ជ្រុង។"
         },
         "courseA_maze_seq6_dani": {
-          "courseA_maze_seq6_a": "កូដចុងក្រោយរបស់អ្នកគួរតែមានប្លុកផ្លាស់ទី៣",
-          "courseA_maze_seq6_b": "ប្រសិនបើអ្នកធ្វើមិនចេញ ព្យាយាមដោះស្រាយល្បែងផ្គុំរូបនៅក្នុងពីរផ្នែក។ផ្នែកទីមួយមុនកាច់ជ្រុង ហើយផ្នែកទីពីរក្រោយកាច់ជ្រុង"
+          "courseA_maze_seq6_a": "កូដសម្រេចរបស់អ្នក គួរតែមានកូដប្លុកផ្លាស់ទី ចំនួន៣ប្លុក។",
+          "courseA_maze_seq6_b": "ប្រសិនបើអ្នកធ្វើមិនចេញ ព្យាយាមដោះស្រាយល្បែងផ្គុំរូបជាពីរផ្នែក។​ ផ្នែកទីមួយមុនកាច់ជ្រុង ហើយផ្នែកទីពីរក្រោយកាច់ជ្រុង។"
         },
         "courseA_maze_seq7_dani": {
           "courseA_maze_seq7_a": "មានប្លុកមួយដែលអ្នកត្រូវបន្ថែមដើម្បីផ្លាស់ទីតួអង្គបក្សីទៅកាន់តួអង្គជ្រូក",
@@ -4245,13 +4285,16 @@
           "courseA_maze_seq_challenge2_a": "ព្យាយាមរាប់ចន្លោះជាមួយម្រាមដៃរបស់អ្នក។ ត្រូវចាំថាមិនចាំបាច់រាប់ចន្លោះដែលអ្នកចាប់ផ្ដើមទេ!"
         },
         "courseA_playLab_events2_2021": {
-          "courseA_playLab_events2_a": "ចូររកប្លុកដែលធ្វើអោយឆ្កែនិយាយស្តីអ្វីមួយ។"
+          "courseA_playLab_events2_a": "ចូររកប្លុកដែលធ្វើអោយឆ្កែនិយាយស្តីអ្វីមួយ។",
+          "courseA_playLab_events2_b": "នេះជាកូដដែលអ្នកត្រូវប្រើដើម្បីបញ្ចប់លើល្បែងផ្គុំរូបនេះ៖\n\n<xml>\n<block type=\"when_run\" movable=\"false\" deletable=\"false\">\n<next>\n<block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</next>\n</block>\n</xml>"
         },
         "courseB_artist_loops2_2021": {
-          "courseB_artist_loops2_b": "ព្យាយាមដំណើរការលេខកូដជាមុនសិនដើម្បីដឹងពីកន្លែងដែលវិចិត្រករបញ្ចប់។"
+          "courseB_artist_loops2_b": "ព្យាយាមដំណើរការលេខកូដជាមុនសិនដើម្បីដឹងពីកន្លែងដែលវិចិត្រករបញ្ចប់។",
+          "courseB_artist_loops2_a": "ប្រសិនបើអ្នកចង់ធ្វើរង្វិលជុំលើសពី 4 ដង អ្នកអាចប្តូរលេខនៅផ្នែកខាងលើនៃប្លុក។"
         },
         "courseB_artist_loops3_2021": {
-          "courseB_artist_loops3_b": "សិល្បករនឹងចង់ផ្លាស់ទីទៅខាងត្បូងដើម្បីគូរបន្ទាត់នេះ។"
+          "courseB_artist_loops3_b": "សិល្បករនឹងចង់ផ្លាស់ទីទៅខាងត្បូងដើម្បីគូរបន្ទាត់នេះ។",
+          "courseB_artist_loops3_a": "កុំភ្លេចប្រើរង្វិលជុំ 'repeat' ដើម្បីឲ្យកូដកាន់តែប្រសើរ!"
         },
         "courseB_artist_loops4_2021": {
           "courseB_artist_loops4_a": "ប្លុកលោតអនុញ្ញាតឱ្យអ្នកឆ្ពោះទៅមុខដោយមិនចាំបាច់គូសបន្ទាត់។",
@@ -4272,7 +4315,8 @@
         },
         "courseB_artist_loops9_2021": {
           "courseB_artist_loops9_a": "ចងចាំថាប្លុកលោតអាចត្រូវបានប្រើដើម្បីផ្លាស់ទីដោយមិនគូរបន្ទាត់។",
-          "courseB_artist_loops9_b": "អ្នកអាចនឹងត្រូវប្រើWប្លុកដើម្បីដោះស្រាយបញ្ហានេះ។"
+          "courseB_artist_loops9_b": "អ្នកអាចនឹងត្រូវប្រើWប្លុកដើម្បីដោះស្រាយបញ្ហានេះ។",
+          "courseB_artist_loops9_c": "មិន​​ដឹង​ថា​ត្រូវ​ដាក់​រង្វិលជុំ​កន្លែងណាមែនទេ? សាកល្បងសរសេរកូដជាជំហានៗ ហើយរកមើលលំនាំស្ទួន។"
         },
         "courseB_artist_loops_challenge1_2021": {
           "courseB_artist_loops_challenge1_a": "ប្លុកដូចនេះ: [blockly block] [0] នឹងអនុញ្ញាតឱ្យសិល្បកររបស់អ្នកផ្លាស់ប្តូរនៅកន្លែងលេងល្បែងមួយ!",
@@ -4367,28 +4411,28 @@
           "courseB_maze_seq_challenge2_b": "រៀបចំប្លុកសារជាថ្មីហើយដើរតាមផ្លូវរាងជណ្ដើរ"
         },
         "courseB_playlab_events2_2021": {
-          "courseB_playlab_events2_a": "នេះជាប្លុកដែលធ្វើអោយឌីសានិយាយអ្វីមួយ៖\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n  </xml>"
+          "courseB_playlab_events2_a": "នេះជាប្លុកដែលធ្វើឲ្យ Daisy និយាយអ្វីមួយ៖\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n  </xml>\""
         },
         "courseB_playlab_events3_2021": {
-          "courseB_playlab_events3_a": "នេះជាប្លុកដែលអ្នកគួរប្រើដើម្បីបន្ថែមព្រឹត្តិការណ៍៖\n\n<xml>\n<block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">0</title>\n  </block>\n  </xml>",
-          "courseB_playlab_events3_b": "នេះគឺជាបណ្តុំដែលអ្នកត្រូវការដើម្បីប្តូរអារម្មណ៍របស់Daisy:\n\n<xml>\n<block type=\"studio_setSpriteEmotion\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">random</title>\n  </block>\n  </xml>"
+          "courseB_playlab_events3_a": "នេះជាប្លុកដែលអ្នកគួរប្រើ ដើម្បីបន្ថែមព្រឹត្តិការណ៍៖\n\n<xml>\n<block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">0</title>\n  </block>\n  </xml>",
+          "courseB_playlab_events3_b": "នេះជាប្លុកដែលអ្នកត្រូវផ្លាស់ប្តូរ អារម្មណ៍របស់ Daisy៖\n\n<xml>\n<block type=\"studio_setSpriteEmotion\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">random</title>\n  </block>\n  </xml>"
         },
         "courseB_playlab_events4_2021": {
           "courseB_playlab_events4_a": "នេះគឺជាព្រឹត្តិការណ៍ដែលគ្រប់គ្រងព្រួញខាងឆ្វេង៖\n\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">left</title>\n  </block>\n  </xml>",
-          "courseB_playlab_events4_b": "នេះគឺជាប្លុកដែលធ្វើឱ្យអ្នកជិះសេះផ្លាស់ប្តូរទៅខាងឆ្វេង។\n\n<xml>\n<block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">8</title>\n  </block>\n  </xml>"
+          "courseB_playlab_events4_b": "នេះគឺជាប្លុកដែលធ្វើឱ្យមេទ័ព ផ្លាស់ទីទៅខាងឆ្វេង។\n\n<xml>\n<block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">8</title>\n  </block>\n  </xml>"
         },
         "courseB_playlab_events5_2021": {
-          "courseB_playlab_events5_a": "នេះគឺជាប្លុកព្រឹត្តិការណ៍ដែលគ្រប់គ្រងព្រួញខាងស្តាំ៖\n\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">right</title>\n  </block>\n  </xml>",
-          "courseB_playlab_events5_b": "នេះគឺជាប្លុកដែលធ្វើឱ្យអ្នកជិះសេះផ្លាស់ប្តូរទៅខាងឆ្ងាយ។\n\n<xml>\n<block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">2</title>\n  </block>\n</xml>"
+          "courseB_playlab_events5_a": "នេះគឺជាប្លុកព្រឹត្តិការណ៍ ដែលគ្រប់គ្រងព្រួញខាងស្តាំ៖\n\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">right</title>\n  </block>\n  </xml>",
+          "courseB_playlab_events5_b": "នេះគឺជាប្លុកដែលធ្វើឱ្យមេទ័ពរត់ចេញ។\n\n<xml>\n<block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">2</title>\n  </block>\n</xml>"
         },
         "courseB_playlab_events6_2021": {
           "courseB_playlab_events6_a": "អ្នកនឹងត្រូវការប្លុកព្រឹត្តិការណ៍ទាំងនេះ៖\n\n<xml>\n  <block type=\"studio_whenArrow\" id=\"callMe\">\n    <title name=\"VALUE\">up</title>\n  </block>\n  <block type=\"studio_whenArrow\" id=\"callMe\">\n    <title name=\"VALUE\">down</title>\n  </block>\n  </xml>",
-          "courseB_playlab_events6_b": "ប្រើព្រួញទម្លាក់ចុះនៅលើ `ពេលដែលព្រួញចុចប៊ូតុងព្រួញចុច` ដើម្បីជ្រើសរើសទិសដៅផ្សេងៗ។\n\n\\[] [0]",
-          "courseB_playlab_events6_c": "យកទង់ជាតិទាំងអស់នេអដើម្បីឆ្លងកាត់!"
+          "courseB_playlab_events6_b": "ប្រើព្រួញទម្លាក់ចុះលើពណ៌បៃតង `នៅពេលព្រួញ ___ចុច` ប្លុកព្រឹត្តិការណ៍ ដើម្បីជ្រើសរើសទិសដៅផ្សេងៗ។\n\n\\[] [0]",
+          "courseB_playlab_events6_c": "ទៅ​កាន់​ទង់ជាតិ​ទាំង​អស់​ដើម្បី​ឆ្លង​កាត់កម្រិត!"
         },
         "courseB_playlab_events7_2021": {
           "courseB_playlab_events7_a": "នេះគឺជាប្លុកដំបូងដែលអ្នកនឹងត្រូវការ:\n\n<xml>\n<block type=\"studio_whenSpriteCollided\">\n    <title name=\"SPRITE1\">0</title>\n    <title name=\"SPRITE2\">1</title>\n  </block>\n</xml>",
-          "courseB_playlab_events7_b": "នេះគឺជាបណ្តុំដែលអ្នកត្រូវការចាក់សម្លេង។\n\n<xml>\n<block type=\"studio_playSound\">\n    <title name=\"SOUND\">slap</title>\n  </block>\n</xml>",
+          "courseB_playlab_events7_b": "នេះគឺជាប្លុកដែលអ្នកត្រូវការដើម្បីចាក់សំឡេង។\n\n<xml>\n<block type=\"studio_playSound\">\n    <title name=\"SOUND\">slap</title>\n  </block>\n</xml>",
           "courseB_playlab_events7_c": "នេះគឺជាប្លុកដែលអ្នកត្រូវការដើម្បីធ្វើឱ្យអ្នកជិះសេះបាត់ខ្លួន:\n\n<xml>\n<block type=\"studio_vanish\">\n    <title name=\"SPRITE\">1</title>\n  </block>\n</xml>"
         },
         "courseB_playlab_events_challenge1_2021": {
@@ -4397,47 +4441,49 @@
           "courseB_playlab_events_challenge1_c": "តើមនុស្សគ្រប់គ្នានឹងនិយាយអ្វីខ្លះនៅពេលការប្រណាំងបានបញ្ចប់? ធ្វើឱ្យពួកគេនិយាយជាមួយព្រឹត្តិការណ៍នេះ៖\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_saySpriteChoices\">\n        <title name=\"SPRITE\">2</title>\n        <title name=\"VALUE\">Woo hoo!</title>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseB_playlab_events_challenge2_2021": {
-          "courseB_playlab_events_challenge2_a": "សត្វនីមួយៗនៅក្នុងហ្គេមគួរតែបាត់នៅពេលចុច។ វាក៏គួរតែត្រលប់មកវិញដែរបន្ទាប់ពីមួយឬពីរវិនាទី!",
+          "courseB_playlab_events_challenge2_a": "សត្វនីមួយៗនៅក្នុងហ្គេម គួរតែបាត់ខ្លួននៅពេលចុច។ ហើយក៏គួរតែបង្ហាញខ្លួនមកវិញផងដែរបន្ទាប់ពីមួយឬពីរវិនាទី!",
           "courseB_playlab_events_challenge2_b": "ប្រើប្លុកព្រឹត្តិការណ៍ផ្សេងៗដើម្បីធ្វើឱ្យសត្វដទៃទៀតបាត់!\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">1</title>\n  </block>\n  </xml>",
           "courseB_playlab_events_challenge2_c": "ប្រើពាក្យបញ្ជាបន្ថែមដើម្បីចាក់សំឡេងឬពិន្ទុនៅពេលអ្នកចុចលើសត្វ!\n\n<xml>\n  <block type=\"studio_playSound\">\n    <title name=\"SOUND\">slap</title>\n  </block>\n  <block type=\"studio_changeScore\"/></xml>",
           "courseB_playlab_events_challenge2_d": "បញ្ចូលគ្នា!\n\nធ្វើឱ្យសត្វខ្លះផ្តល់ពិន្ទុច្រើនជាងអ្នកដទៃ។\nប្រើសំឡេងខុសគ្នា។\nផ្លាស់ប្តូរអារម្មណ៍របស់សត្វ!"
         },
         "courseB_starWars_prog1_2021": {
-          "courseB_starWars_prog1_a": "ព្យាយាមបន្ថែមប្លុកមួយក្នុងពេលតែមួយបន្ទាប់មកចុច \"រត់\" ដើម្បីមើលថាមានអ្វីកើតឡើង។",
+          "courseB_starWars_prog1_a": "ព្យាយាមបន្ថែមប្លុកម្ដងមួយៗ បន្ទាប់មក ចុច \"▶ ប៊ូតុងដំណើរការ\" ដើម្បីពិនិត្យមើលថាមានអ្វីកើតឡើង។",
           "courseB_starWars_prog1_b": "អ្នកនឹងចង់ផ្លាស់ទីទៅខាងកើតដើម្បីដោះស្រាយល្បែងផ្គុំរូបនេះ។ តើអ្នកត្រូវការផ្លាស់ទីឆ្ងាយប៉ុណ្ណា?\n\n[blockly block] [0]"
         },
         "courseB_starWars_prog2_2021": {
-          "courseB_starWars_prog2_a": "បំបែកបញ្ហានេះជាពីរផ្នែក។ យកដែកសំណល់អេតចាយមួយដុំបន្ទាប់មករកវិធីដើម្បីទៅយកមួយផ្សេងទៀត។"
+          "courseB_starWars_prog2_a": "ចែកបញ្ហានេះជាពីរផ្នែក។ យកសំណល់ដែកមួយគំនរ បន្ទាប់មករកមធ្យោបាយដើម្បីទៅយកមួយគំនរទៀត។"
         },
         "courseB_starWars_prog3_2021": {
-          "courseB_starWars_prog3_a": "អ្នកនឹងត្រូវប្ដូរ៣ទិសដៅដើម្បីដោះស្រាយល្បែងផ្គុំរូបនេះ",
-          "courseB_starWars_prog3_b": "បង្កើតលេខកូដមួយក្នុងពេលតែមួយ។ រត់វាដើម្បីរកកន្លែងដែលត្រូវទៅពីទីនោះ។"
+          "courseB_starWars_prog3_a": "អ្នកនឹងត្រូវផ្លាស់ទី ៣ទិសដៅដើម្បីដោះស្រាយល្បែងផ្គុំរូបនេះ",
+          "courseB_starWars_prog3_b": "ភ្ជាប់ប្លុកម្ដងមួយៗដើម្បីប្រមូលសំណល់ដែក។ ចុច \"▶ ប៊ូតុងដំណើរការ\" ដើម្បីរកមើលបញ្ហា និងត្រូវធ្វើបន្តដោយរបៀបណា។"
         },
         "courseB_starWars_prog4_2021": {
-          "courseB_starWars_prog4_a": "បង្កើតលេខកូដមួយក្នុងពេលតែមួយ។ រត់វាដើម្បីរកកន្លែងដែលត្រូវទៅពីទីនោះ។",
-          "courseB_starWars_prog4_b": "ព្យាយាមប្រើ `ដដែលៗ`សម្រាប់លេខកូដខ្លីជាងនេះ។\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
+          "courseB_starWars_prog4_a": "ភ្ជាប់ប្លុកម្ដងមួយៗដើម្បីប្រមូលសំណល់ដែក។ ចុច \"▶ ប៊ូតុងដំណើរការ\" ដើម្បីរកមើលបញ្ហា និងត្រូវធ្វើបន្តដោយរបៀបណា។",
+          "courseB_starWars_prog4_b": "សាកល្បងប្រើ ប្លុក `ធ្វើ​ឡើង​វិញ` ដើម្បីឱ្យកូដខ្លីជាងនេះ។\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
         },
         "courseB_starWars_prog5_2021": {
-          "courseB_starWars_prog5_a": "តើលំនាំនេះមិនដូចរូបផ្គុំចុងក្រោយទេដែរឬ?",
-          "courseB_starWars_prog5_b": "BB-8 នឹងចាប់យកscrap metalនៅពេលគាត់ក្រឡុកលើវា។",
-          "courseB_starWars_prog5_c": "តាមដានលំនាំនេះដោយម្រាមដៃរបស់អ្នក។ រាប់បំណែកនៃលោហៈនៅពេលអ្នកផ្លាស់ទី។",
-          "courseB_starWars_prog5_da": "រកមើលតើមានអ្វីកើតឡើងប្រសិនបើអ្នកប្រើដំណោះស្រាយដូចគ្នានឹងជណ្តើររូបផ្គុំ។\n\n\\[] [0]"
+          "courseB_starWars_prog5_a": "តើលំនាំនេះមើលទៅដូច រូបផ្គុំចុងក្រោយដែរឬទេ?",
+          "courseB_starWars_prog5_b": "BB-8 នឹងប្រមូលសំណល់ដែកនៅពេលដែល BB-8 រត់នៅលើដែកទាំងនោះ។",
+          "courseB_starWars_prog5_c": "ប្រើម្រាមដៃរបស់អ្នកដើម្បីមើលលំនាំនៃផ្លូវត្រូវផ្លាស់ទី ហើយរាប់ចំនួនជំហានផ្លាស់ទី ផ្ទឹមនិងគំនរដែកផ្សេងៗ។​",
+          "courseB_starWars_prog5_da": "មើលថាមានអ្វីកើតឡើងប្រសិនបើអ្នកប្រើដំណោះស្រាយដូចគ្នាទៅ និងល្បែងរូបផ្គុំរាងជណ្តើរ។\n\n\\[] [0]"
         },
         "courseB_starWars_prog6_2021": {
           "courseB_starWars_prog6_a": "លំនាំនេះគ្រាន់តែជាជំហានមួយដែលមានចលនាពីរក្នុងមួយទិសដៅប៉ុណ្ណោះ!",
-          "courseB_starWars_prog6_b": "ព្យាយាមប្រើ `ដដែលៗ`សម្រាប់លេខកូដខ្លីជាងនេះ។\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
+          "courseB_starWars_prog6_b": "សាកល្បងប្រើ ប្លុក `ធ្វើ​ឡើង​វិញ` ដើម្បីឱ្យកូដខ្លីជាងនេះ។\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
         },
         "courseB_starWars_prog7_2021": {
-          "courseB_starWars_prog7_a": "តើលំនាំនេះមិនដូចរូបផ្គុំចុងក្រោយទេដែរឬ?",
-          "courseB_starWars_prog7_b": "BB-8 នឹងចាប់យកscrap metalនៅពេលគាត់ក្រឡុកលើវា។",
-          "courseB_starWars_prog7_c": "សាកល្បងគូរជំហ៊ានជណ្តើរធំ ៗ លើរូបផ្គុំនេះ។ តើវាគ្របដណ្ដប់លើដែកអេតចាយទាំងអស់ទេ?"
+          "courseB_starWars_prog7_a": "តើលំនាំនេះមើលទៅដូច រូបផ្គុំចុងក្រោយដែរឬទេ?",
+          "courseB_starWars_prog7_b": "BB-8 នឹងប្រមូលសំណល់ដែកនៅពេលដែល BB-8 រត់នៅលើដែកទាំងនោះ។",
+          "courseB_starWars_prog7_c": "សាកល្បងគូរលំនាំជំហ៊ានជណ្តើរធំៗ លើរូបផ្គុំនេះ។ តើជំហ៊ានជណ្តើរគ្របដណ្ដប់លើសំណល់ដែកទាំងអស់ឬទេ?"
         },
         "courseB_starWars_prog8_2021": {
-          "courseB_starWars_prog8_a": "អ្នកអាចត្រលប់ក្រោយទៅកាន់កំណត់នៃប្រលោះដែលអ្នកបានឆ្លងកាត់រួចហើយ។",
-          "courseB_starWars_prog8_b": "ព្យាយាមប្រើប្លុក `ធ្វើឡើងវិញ` ដើម្បីមើលដំណើរការលើកូដដែលអ្នកបានដាក់ចូល។\n<xml>\n  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
+          "courseB_starWars_prog8_a": "អ្នកអាចត្រលប់ក្រោយទៅកាន់ផ្លូវដែលអ្នកបានឆ្លងកាត់រួចហើយ។",
+          "courseB_starWars_prog8_b": "សាកល្បងដាក់កូដរបស់អ្នកក្នុងប្លុក `ធ្វើឡើងវិញ` ដើម្បីមើលថា តើនឹងមានអ្វីកើតឡើង។\n<xml>\n  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
         },
         "courseB_starWars_prog9_2021": {
-          "courseB_starWars_prog9_b": "មានវិធីពីរយ៉ាងដើម្បីដោះស្រាយល្បែងផ្គុំរូបនេះ។"
+          "courseB_starWars_prog9_b": "មានវិធីសាស្រ្តច្រើនក្នុងការដោះស្រាយល្បែងផ្គុំរូបនេះ។",
+          "courseB_starWars_prog9_a": "កុំខ្លាចការបង្កើតកំហុស! ចុច \"▶ ប៊ូតុងដំណើរការ\" ដើម្បីមើលថាមានអ្វីកើតឡើង, ទោះបីមិនទាន់ធ្វើហើយទាំងស្រុងក៏ដោយ។",
+          "courseB_starWars_prog9_c": "សាកប្រើប្លុក `ធ្វើឡើងវិញ` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block></xml> តើអាចជួយដោះស្រាយបញ្ហានេះបានទេ?"
         },
         "courseC19_playLab_EOC1_2021": {
           "courseE_playLab_scaffold1_a": "The `ឈុតតារាសម្តែង ១ ដល់ ??? រូបភាព`ប្លុកអាចត្រូវបានប្រើដើម្បីបន្ថែមតារាសម្តែងទៅឆាក។",
@@ -4614,7 +4660,8 @@
           "courseC_maze_programming_challenge2_b": "ដំណោះស្រាយខ្លីបំផុតគឺប្រើប្រាស់ត្រឹមតែ៥ប្លុកតែប៉ុណ្ណោះ, ក៏ប៉ុន្តែប្រើប្លុកនេះៈ\n\n<xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>"
         },
         "courseC_starWars_loops1_2021": {
-          "courseC_starWars_loops1_c": "អ្នកនឹងត្រូវប្រើ `រំកិលទៅមុខ` ចំនួនប្រាំដងដើម្បីដោះស្រាយចំណោទមួយនេះ។"
+          "courseC_starWars_loops1_c": "អ្នកនឹងត្រូវប្រើ `រំកិលទៅមុខ` ចំនួនប្រាំដងដើម្បីដោះស្រាយចំណោទមួយនេះ។",
+          "courseC_starWars_loops1_b": "កុំខ្លាចការបង្កើតកំហុស! ចុច \"▶ ប៊ូតុងដំណើរការ\" ដើម្បីមើលថាមានអ្វីកើតឡើង, ទោះបីមិនទាន់ធ្វើហើយទាំងស្រុងក៏ដោយ។"
         },
         "courseC_starWars_loops4_2021": {
           "courseC_starWars_loops4_a": "ប្រើប្លុក `ធ្វើម្ដងទៀត` ចំនួនពីរ។"
@@ -5082,29 +5129,32 @@
           "courseA_collector_loops_challenge2kp_a": "តើអ្នកអាចប្រើរវិលជំុដដែលៗដើម្បីដោះស្រាយបញ្ហានេះទេ?"
         },
         "courseA_harvester_loops52022": {
-          "courseA_harvester_loops5_a": "ប្រសិនបើអ្នកធ្វើមិនចេញ ព្យាយាមដោះស្រាយល្បែងផ្គុំរូបនៅក្នុងពីរផ្នែក។ផ្នែកទីមួយមុនកាច់ជ្រុង ហើយផ្នែកទីពីរក្រោយកាច់ជ្រុង"
+          "courseA_harvester_loops5_a": "ប្រសិនបើអ្នកធ្វើមិនចេញ ព្យាយាមដោះស្រាយល្បែងផ្គុំរូបជាពីរផ្នែក។​ ផ្នែកទីមួយមុនកាច់ជ្រុង ហើយផ្នែកទីពីរក្រោយកាច់ជ្រុង។"
         },
         "courseA_harvester_seq22022": {
-          "courseA_harvester_seq2_b": "ព្យាយាមសរសេរនូវជំហានទាំងអស់នៅលើក្រដាសដើម្បីរកដំណោះស្រាយ"
+          "courseA_harvester_seq2_b": "ព្យាយាមសរសេរនូវជំហានទាំងអស់នៅលើក្រដាសដើម្បីរកដំណោះស្រាយ",
+          "courseA_harvester_seq2_a": "កុំភ្លេចប្រើ <xml><block type=\"harvester_corn\"/></xml> ដើម្បីប្រមូលពោត!"
         },
         "courseA_maze_seq102022": {
-          "courseA_maze_seq10_a": "ប្រសិនបើអ្នកកំពុងមានបញ្ហា ព្យាយាមសរសេរនូវជំហាននៅលើក្រដាសជាមុនសិន"
+          "courseA_maze_seq10_a": "ប្រសិនបើអ្នកកំពុងមានបញ្ហា ព្យាយាមសរសេរនូវជំហាននៅលើក្រដាសជាមុនសិន",
+          "courseA_maze_seq10_b": "អ្នកនឹងត្រូវប្រើប្រាស់ទិសដៅ៣ផ្សេងគ្នា ដើម្បីដោះស្រាយរូបផ្គុំនេះ។"
         },
         "courseA_maze_seq12022": {
-          "courseA_maze_seq1_a": "ប្រសិនបើអ្នកកំពុងមានបញ្ហាក្នុងការនាំតួអង្គបក្សីផ្លាស់ទី ត្រូវប្រាកដថាប្លុកត្រូវបានរៀបតាមលំដាប់លំដោយ [ប្លុកនៅក្នុងប្លុក] [0]",
+          "courseA_maze_seq1_a": "ប្រសិនបើអ្នកកំពុងមានបញ្ហាក្នុងការផ្លាស់ទីបក្សី សូមអ្នកប្រាកដថាប្លុកត្រូវបានរៀបតាមលំដាប់លំដោយ [blockly block] [0]",
           "courseA_maze_seq1_b": "តួអង្គបក្សីតម្រូវអោយផ្លាស់ទីទៅខាងលិចចំនួន ៣ ដងដើម្បីទៅដល់តួអង្គជ្រូក។ ចូរប្រើប្លុកនេះ <xml><block type=\"maze_moveWest\"/></xml>"
         },
         "courseA_maze_seq132022": {
           "courseA_maze_seq13_a": "ប្រសិនបើផ្លូវដែលអ្នកត្រូវការមិនច្បាស់ ប្រើម្រាមដៃរបស់អ្នកដើម្បីដានផ្លូវរបស់អ្នកពីតួអង្គបក្សីទៅតួអង្គជ្រូក",
-          "courseA_maze_seq13_b": "កុំខ្លាចក្នុងការធ្វើខុស! ​ព្យាយាមបន្ថែមប្លុកហើយដំណើរការកូដដើម្បីដឹងថានឹងមានអ្វីកើតឡើង"
+          "courseA_maze_seq13_b": "កុំខ្លាចក្នុងការធ្វើខុស! ​ព្យាយាមបន្ថែមប្លុកហើយដំណើរការកូដដើម្បីដឹងថានឹងមានអ្វីកើតឡើង",
+          "courseA_maze_seq13_c": "ប្លុកទាំងនេះ <xml><block type=\"maze_moveNorth\"/></xml>\n\n<xml><block type=\"maze_moveEast\"/></xml>\n\nនឹងជួយអ្នកក្នុងការផ្លាស់ទីបក្សីទៅកាន់តែជិតជ្រូក។"
         },
         "courseA_maze_seq52022": {
           "1": "ព្យាយាមសរសេរនូវជំហានទាំងអស់នៅលើក្រដាសដើម្បីរកដំណោះស្រាយ",
           "2": "អ្នកត្រូវតែប្រើប្លុកមួយនេះ៖\n\n<xml><block type=\"maze_moveSouth\"/></xml>"
         },
         "courseA_maze_seq62022": {
-          "courseA_maze_seq6_a": "កូដចុងក្រោយរបស់អ្នកគួរតែមានប្លុកផ្លាស់ទី៣",
-          "courseA_maze_seq6_b": "ប្រសិនបើអ្នកធ្វើមិនចេញ ព្យាយាមដោះស្រាយល្បែងផ្គុំរូបនៅក្នុងពីរផ្នែក។ផ្នែកទីមួយមុនកាច់ជ្រុង ហើយផ្នែកទីពីរក្រោយកាច់ជ្រុង"
+          "courseA_maze_seq6_a": "កូដសម្រេចរបស់អ្នក គួរតែមានកូដប្លុកផ្លាស់ទី ចំនួន៣ប្លុក។",
+          "courseA_maze_seq6_b": "ប្រសិនបើអ្នកធ្វើមិនចេញ ព្យាយាមដោះស្រាយល្បែងផ្គុំរូបជាពីរផ្នែក។​ ផ្នែកទីមួយមុនកាច់ជ្រុង ហើយផ្នែកទីពីរក្រោយកាច់ជ្រុង។"
         },
         "courseA_maze_seq82022": {
           "courseA_maze_seq8_a": "ប្រសិនបើអ្នកគិតមិនចេញ ព្យាយាមគូររូបលើក្រដាសដើម្បីឃើញពីរបៀបដែលតួអង្គបក្សីគួរបំលាស់ទី"
@@ -5116,13 +5166,16 @@
           "courseA_maze_seq_challenge2_a": "ព្យាយាមរាប់ចន្លោះជាមួយម្រាមដៃរបស់អ្នក។ ត្រូវចាំថាមិនចាំបាច់រាប់ចន្លោះដែលអ្នកចាប់ផ្ដើមទេ!"
         },
         "courseA_playLab_events22022": {
-          "courseA_playLab_events2_a": "ចូររកប្លុកដែលធ្វើអោយឆ្កែនិយាយស្តីអ្វីមួយ។"
+          "courseA_playLab_events2_a": "ចូររកប្លុកដែលធ្វើអោយឆ្កែនិយាយស្តីអ្វីមួយ។",
+          "courseA_playLab_events2_b": "នេះជាកូដដែលអ្នកត្រូវប្រើដើម្បីបញ្ចប់លើល្បែងផ្គុំរូបនេះ៖\n\n<xml>\n<block type=\"when_run\" movable=\"false\" deletable=\"false\">\n<next>\n<block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</next>\n</block>\n</xml>"
         },
         "courseB_artist_loops22022": {
-          "courseB_artist_loops2_b": "ព្យាយាមដំណើរការលេខកូដជាមុនសិនដើម្បីដឹងពីកន្លែងដែលវិចិត្រករបញ្ចប់។"
+          "courseB_artist_loops2_b": "ព្យាយាមដំណើរការលេខកូដជាមុនសិនដើម្បីដឹងពីកន្លែងដែលវិចិត្រករបញ្ចប់។",
+          "courseB_artist_loops2_a": "ប្រសិនបើអ្នកចង់ធ្វើរង្វិលជុំលើសពី 4 ដង អ្នកអាចប្តូរលេខនៅផ្នែកខាងលើនៃប្លុក។"
         },
         "courseB_artist_loops32022": {
-          "courseB_artist_loops3_b": "សិល្បករនឹងចង់ផ្លាស់ទីទៅខាងត្បូងដើម្បីគូរបន្ទាត់នេះ។"
+          "courseB_artist_loops3_b": "សិល្បករនឹងចង់ផ្លាស់ទីទៅខាងត្បូងដើម្បីគូរបន្ទាត់នេះ។",
+          "courseB_artist_loops3_a": "កុំភ្លេចប្រើរង្វិលជុំ 'repeat' ដើម្បីឲ្យកូដកាន់តែប្រសើរ!"
         },
         "courseB_artist_loops42022": {
           "courseB_artist_loops4_a": "ប្លុកលោតអនុញ្ញាតឱ្យអ្នកឆ្ពោះទៅមុខដោយមិនចាំបាច់គូសបន្ទាត់។",
@@ -5143,7 +5196,8 @@
         },
         "courseB_artist_loops92022": {
           "courseB_artist_loops9_a": "ចងចាំថាប្លុកលោតអាចត្រូវបានប្រើដើម្បីផ្លាស់ទីដោយមិនគូរបន្ទាត់។",
-          "courseB_artist_loops9_b": "អ្នកអាចនឹងត្រូវប្រើWប្លុកដើម្បីដោះស្រាយបញ្ហានេះ។"
+          "courseB_artist_loops9_b": "អ្នកអាចនឹងត្រូវប្រើWប្លុកដើម្បីដោះស្រាយបញ្ហានេះ។",
+          "courseB_artist_loops9_c": "មិន​​ដឹង​ថា​ត្រូវ​ដាក់​រង្វិលជុំ​កន្លែងណាមែនទេ? សាកល្បងសរសេរកូដជាជំហានៗ ហើយរកមើលលំនាំស្ទួន។"
         },
         "courseB_artist_loops_challenge12022": {
           "courseB_artist_loops_challenge1_a": "ប្លុកដូចនេះ: [blockly block] [0] នឹងអនុញ្ញាតឱ្យសិល្បកររបស់អ្នកផ្លាស់ប្តូរនៅកន្លែងលេងល្បែងមួយ!",
@@ -5238,29 +5292,29 @@
           "courseB_maze_seq_challenge2_b": "រៀបចំប្លុកសារជាថ្មីហើយដើរតាមផ្លូវរាងជណ្ដើរ"
         },
         "courseB_playlab_events22022": {
-          "courseB_playlab_events2_a": "នេះជាប្លុកដែលធ្វើអោយឌីសានិយាយអ្វីមួយ៖\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n  </xml>"
+          "courseB_playlab_events2_a": "នេះជាប្លុកដែលធ្វើឲ្យ Daisy និយាយអ្វីមួយ៖\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n  </xml>\""
         },
         "courseB_playlab_events32022": {
-          "courseB_playlab_events3_a": "នេះជាប្លុកដែលអ្នកគួរប្រើដើម្បីបន្ថែមព្រឹត្តិការណ៍៖\n\n<xml>\n<block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">0</title>\n  </block>\n  </xml>",
-          "courseB_playlab_events3_b": "នេះគឺជាបណ្តុំដែលអ្នកត្រូវការដើម្បីប្តូរអារម្មណ៍របស់Daisy:\n\n<xml>\n<block type=\"studio_setSpriteEmotion\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">random</title>\n  </block>\n  </xml>"
+          "courseB_playlab_events3_a": "នេះជាប្លុកដែលអ្នកគួរប្រើ ដើម្បីបន្ថែមព្រឹត្តិការណ៍៖\n\n<xml>\n<block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">0</title>\n  </block>\n  </xml>",
+          "courseB_playlab_events3_b": "នេះជាប្លុកដែលអ្នកត្រូវផ្លាស់ប្តូរអារម្មណ៍របស់ Daisy៖\n\n<xml>\n<block type=\"studio_setSpriteEmotion\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">random</title>\n  </block>\n  </xml>"
         },
         "courseB_playlab_events42022": {
           "courseB_playlab_events4_a": "នេះគឺជាព្រឹត្តិការណ៍ដែលគ្រប់គ្រងព្រួញខាងឆ្វេង៖\n\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">left</title>\n  </block>\n  </xml>",
-          "courseB_playlab_events4_b": "នេះគឺជាប្លុកដែលធ្វើឱ្យអ្នកជិះសេះផ្លាស់ប្តូរទៅខាងឆ្វេង។\n\n<xml>\n<block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">8</title>\n  </block>\n  </xml>"
+          "courseB_playlab_events4_b": "នេះគឺជាប្លុកដែលធ្វើឱ្យមេទ័ព ផ្លាស់ទីទៅខាងឆ្វេង។\n\n<xml>\n<block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">8</title>\n  </block>\n  </xml>"
         },
         "courseB_playlab_events52022": {
-          "courseB_playlab_events5_a": "នេះគឺជាប្លុកព្រឹត្តិការណ៍ដែលគ្រប់គ្រងព្រួញខាងស្តាំ៖\n\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">right</title>\n  </block>\n  </xml>",
-          "courseB_playlab_events5_b": "នេះគឺជាប្លុកដែលធ្វើឱ្យអ្នកជិះសេះផ្លាស់ប្តូរទៅខាងឆ្ងាយ។\n\n<xml>\n<block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">2</title>\n  </block>\n</xml>"
+          "courseB_playlab_events5_a": "នេះគឺជាប្លុកព្រឹត្តិការណ៍ ដែលគ្រប់គ្រងព្រួញខាងស្តាំ៖\n\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">right</title>\n  </block>\n  </xml>",
+          "courseB_playlab_events5_b": "នេះគឺជាប្លុកដែលធ្វើឱ្យមេទ័ពរត់ចេញ។\n\n<xml>\n<block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">2</title>\n  </block>\n</xml>"
         },
         "courseB_playlab_events62022": {
           "courseB_playlab_events6_a": "អ្នកនឹងត្រូវការប្លុកព្រឹត្តិការណ៍ទាំងនេះ៖\n\n<xml>\n  <block type=\"studio_whenArrow\" id=\"callMe\">\n    <title name=\"VALUE\">up</title>\n  </block>\n  <block type=\"studio_whenArrow\" id=\"callMe\">\n    <title name=\"VALUE\">down</title>\n  </block>\n  </xml>",
-          "courseB_playlab_events6_b": "ប្រើព្រួញទម្លាក់ចុះនៅលើ `ពេលដែលព្រួញចុចប៊ូតុងព្រួញចុច` ដើម្បីជ្រើសរើសទិសដៅផ្សេងៗ។\n\n\\[] [0]",
-          "courseB_playlab_events6_c": "យកទង់ជាតិទាំងអស់នេអដើម្បីឆ្លងកាត់!"
+          "courseB_playlab_events6_b": "ប្រើព្រួញទម្លាក់ចុះលើពណ៌បៃតង `នៅពេលព្រួញ ___ចុច` ប្លុកព្រឹត្តិការណ៍ ដើម្បីជ្រើសរើសទិសដៅផ្សេងៗ។\n\n\\[] [0]",
+          "courseB_playlab_events6_c": "ទៅ​កាន់​ទង់ជាតិ​ទាំង​អស់​ដើម្បី​ឆ្លង​កាត់កម្រិត!"
         },
         "courseB_playlab_events72022": {
           "courseB_playlab_events7_a": "នេះគឺជាប្លុកដំបូងដែលអ្នកនឹងត្រូវការ:\n\n<xml>\n<block type=\"studio_whenSpriteCollided\">\n    <title name=\"SPRITE1\">0</title>\n    <title name=\"SPRITE2\">1</title>\n  </block>\n</xml>",
-          "courseB_playlab_events7_b": "នេះគឺជាបណ្តុំដែលអ្នកត្រូវការចាក់សម្លេង។\n\n<xml>\n<block type=\"studio_playSound\">\n    <title name=\"SOUND\">slap</title>\n  </block>\n</xml>",
-          "courseB_playlab_events7_c": "នេះគឺជាប្លុកដែលអ្នកត្រូវការដើម្បីធ្វើឱ្យអ្នកជិះសេះបាត់ខ្លួន:\n\n<xml>\n<block type=\"studio_vanish\">\n    <title name=\"SPRITE\">1</title>\n  </block>\n</xml>"
+          "courseB_playlab_events7_b": "នេះគឺជាប្លុកដែលអ្នកត្រូវការដើម្បីចាក់សំឡេង។\n\n<xml>\n<block type=\"studio_playSound\">\n    <title name=\"SOUND\">slap</title>\n  </block>\n</xml>",
+          "courseB_playlab_events7_c": "នេះគឺជាប្លុកដែលអ្នកត្រូវការដើម្បីធ្វើឱ្យមេទ័ពបាត់ខ្លួន:\n\n<xml>\n<block type=\"studio_vanish\">\n    <title name=\"SPRITE\">1</title>\n  </block>\n</xml>"
         },
         "courseB_playlab_events_challenge12022": {
           "courseB_playlab_events_challenge1_a": "ធ្វើឱ្យសត្វផ្សេងទៀតរំកិលចុះក្រោមនៅពេលអ្នកចុច `▼` ។\n\n<xml>\n  <block type=\"studio_whenArrow\" movable=\"false\">\n    <title name=\"VALUE\">down</title>\n  </block>\n</xml>",
@@ -5268,47 +5322,49 @@
           "courseB_playlab_events_challenge1_c": "តើមនុស្សគ្រប់គ្នានឹងនិយាយអ្វីខ្លះនៅពេលការប្រណាំងបានបញ្ចប់? ធ្វើឱ្យពួកគេនិយាយជាមួយព្រឹត្តិការណ៍នេះ៖\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_saySpriteChoices\">\n        <title name=\"SPRITE\">2</title>\n        <title name=\"VALUE\">Woo hoo!</title>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseB_playlab_events_challenge22022": {
-          "courseB_playlab_events_challenge2_a": "សត្វនីមួយៗនៅក្នុងហ្គេមគួរតែបាត់នៅពេលចុច។ វាក៏គួរតែត្រលប់មកវិញដែរបន្ទាប់ពីមួយឬពីរវិនាទី!",
-          "courseB_playlab_events_challenge2_b": "ប្រើប្លុកព្រឹត្តិការណ៍ផ្សេងៗដើម្បីធ្វើឱ្យសត្វដទៃទៀតបាត់!\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">1</title>\n  </block>\n  </xml>",
-          "courseB_playlab_events_challenge2_c": "ប្រើពាក្យបញ្ជាបន្ថែមដើម្បីចាក់សំឡេងឬពិន្ទុនៅពេលអ្នកចុចលើសត្វ!\n\n<xml>\n  <block type=\"studio_playSound\">\n    <title name=\"SOUND\">slap</title>\n  </block>\n  <block type=\"studio_changeScore\"/></xml>",
-          "courseB_playlab_events_challenge2_d": "បញ្ចូលគ្នា!\n\nធ្វើឱ្យសត្វខ្លះផ្តល់ពិន្ទុច្រើនជាងអ្នកដទៃ។\nប្រើសំឡេងខុសគ្នា។\nផ្លាស់ប្តូរអារម្មណ៍របស់សត្វ!"
+          "courseB_playlab_events_challenge2_a": "សត្វនីមួយៗនៅក្នុងហ្គេម គួរតែបាត់ខ្លួននៅពេលចុច។ ហើយក៏គួរតែបង្ហាញខ្លួនមកវិញផងដែរបន្ទាប់ពីមួយឬពីរវិនាទី!",
+          "courseB_playlab_events_challenge2_b": "ប្រើប្លុកព្រឹត្តិការណ៍ផ្សេងៗ ដើម្បីធ្វើឱ្យសត្វដទៃទៀតបាត់ខ្លួន!\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">1</title>\n  </block>\n  </xml>",
+          "courseB_playlab_events_challenge2_c": "ប្រើពាក្យបញ្ជាបន្ថែមដើម្បីចាក់សំឡេងឬផ្ដល់ពិន្ទុនៅពេលអ្នកចុចលើសត្វ!\n\n<xml>\n  <block type=\"studio_playSound\">\n    <title name=\"SOUND\">slap</title>\n  </block>\n  <block type=\"studio_changeScore\"/></xml>",
+          "courseB_playlab_events_challenge2_d": "ដាក់បញ្ចូលគ្នា!\n\nធ្វើឱ្យសត្វខ្លះផ្តល់ពិន្ទុច្រើនជាងអ្នកដទៃ។\nប្រើសំឡេងខុសគ្នា។\nផ្លាស់ប្តូរអារម្មណ៍របស់សត្វ!"
         },
         "courseB_starWars_prog12022": {
-          "courseB_starWars_prog1_a": "ព្យាយាមបន្ថែមប្លុកមួយក្នុងពេលតែមួយបន្ទាប់មកចុច \"រត់\" ដើម្បីមើលថាមានអ្វីកើតឡើង។",
+          "courseB_starWars_prog1_a": "ព្យាយាមបន្ថែមប្លុកម្ដងមួយៗ បន្ទាប់មក ចុច \"▶ ប៊ូតុងដំណើរការ\" ដើម្បីពិនិត្យមើលថាមានអ្វីកើតឡើង។",
           "courseB_starWars_prog1_b": "អ្នកនឹងចង់ផ្លាស់ទីទៅខាងកើតដើម្បីដោះស្រាយល្បែងផ្គុំរូបនេះ។ តើអ្នកត្រូវការផ្លាស់ទីឆ្ងាយប៉ុណ្ណា?\n\n[blockly block] [0]"
         },
         "courseB_starWars_prog22022": {
-          "courseB_starWars_prog2_a": "បំបែកបញ្ហានេះជាពីរផ្នែក។ យកដែកសំណល់អេតចាយមួយដុំបន្ទាប់មករកវិធីដើម្បីទៅយកមួយផ្សេងទៀត។"
+          "courseB_starWars_prog2_a": "ចែកបញ្ហានេះជាពីរផ្នែក។ យកសំណល់ដែកមួយគំនរ បន្ទាប់មករកមធ្យោបាយដើម្បីទៅយកមួយគំនរទៀត។"
         },
         "courseB_starWars_prog32022": {
-          "courseB_starWars_prog3_a": "អ្នកនឹងត្រូវប្ដូរ៣ទិសដៅដើម្បីដោះស្រាយល្បែងផ្គុំរូបនេះ",
-          "courseB_starWars_prog3_b": "បង្កើតលេខកូដមួយក្នុងពេលតែមួយ។ រត់វាដើម្បីរកកន្លែងដែលត្រូវទៅពីទីនោះ។"
+          "courseB_starWars_prog3_a": "អ្នកនឹងត្រូវផ្លាស់ទី ៣ទិសដៅដើម្បីដោះស្រាយល្បែងផ្គុំរូបនេះ",
+          "courseB_starWars_prog3_b": "ភ្ជាប់ប្លុកម្ដងមួយៗដើម្បីប្រមូលសំណល់ដែក។ ចុច \"▶ ប៊ូតុងដំណើរការ\" ដើម្បីរកមើលបញ្ហា និងត្រូវធ្វើបន្តដោយរបៀបណា។"
         },
         "courseB_starWars_prog42022": {
-          "courseB_starWars_prog4_a": "បង្កើតលេខកូដមួយក្នុងពេលតែមួយ។ រត់វាដើម្បីរកកន្លែងដែលត្រូវទៅពីទីនោះ។",
-          "courseB_starWars_prog4_b": "ព្យាយាមប្រើ `ដដែលៗ`សម្រាប់លេខកូដខ្លីជាងនេះ។\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
+          "courseB_starWars_prog4_a": "ភ្ជាប់ប្លុកម្ដងមួយៗដើម្បីប្រមូលសំណល់ដែក។ ចុច \"▶ ប៊ូតុងដំណើរការ\" ដើម្បីរកមើលបញ្ហា និងត្រូវធ្វើបន្តដោយរបៀបណា។",
+          "courseB_starWars_prog4_b": "សាកល្បងប្រើ ប្លុក `ធ្វើ​ឡើង​វិញ` ដើម្បីឱ្យកូដខ្លីជាងនេះ។\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
         },
         "courseB_starWars_prog52022": {
-          "courseB_starWars_prog5_a": "តើលំនាំនេះមិនដូចរូបផ្គុំចុងក្រោយទេដែរឬ?",
-          "courseB_starWars_prog5_b": "BB-8 នឹងចាប់យកscrap metalនៅពេលគាត់ក្រឡុកលើវា។",
-          "courseB_starWars_prog5_c": "តាមដានលំនាំនេះដោយម្រាមដៃរបស់អ្នក។ រាប់បំណែកនៃលោហៈនៅពេលអ្នកផ្លាស់ទី។",
-          "courseB_starWars_prog5_da": "រកមើលតើមានអ្វីកើតឡើងប្រសិនបើអ្នកប្រើដំណោះស្រាយដូចគ្នានឹងជណ្តើររូបផ្គុំ។\n\n\\[] [0]"
+          "courseB_starWars_prog5_a": "តើលំនាំនេះមើលទៅដូច រូបផ្គុំចុងក្រោយដែរឬទេ?",
+          "courseB_starWars_prog5_b": "BB-8 នឹងប្រមូលសំណល់ដែកនៅពេលដែល BB-8 រត់នៅលើដែកទាំងនោះ។",
+          "courseB_starWars_prog5_c": "ប្រើម្រាមដៃរបស់អ្នកដើម្បីមើលលំនាំនៃផ្លូវត្រូវផ្លាស់ទី ហើយរាប់ចំនួនជំហានផ្លាស់ទី ផ្ទឹមនិងគំនរដែកផ្សេងៗ។​",
+          "courseB_starWars_prog5_da": "មើលថាមានអ្វីកើតឡើងប្រសិនបើអ្នកប្រើដំណោះស្រាយដូចគ្នាទៅ និងល្បែងរូបផ្គុំរាងជណ្តើរ។\n\n\\[] [0]"
         },
         "courseB_starWars_prog62022": {
           "courseB_starWars_prog6_a": "លំនាំនេះគ្រាន់តែជាជំហានមួយដែលមានចលនាពីរក្នុងមួយទិសដៅប៉ុណ្ណោះ!",
-          "courseB_starWars_prog6_b": "ព្យាយាមប្រើ `ដដែលៗ`សម្រាប់លេខកូដខ្លីជាងនេះ។\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
+          "courseB_starWars_prog6_b": "សាកល្បងប្រើ ប្លុក `ធ្វើ​ឡើង​វិញ` ដើម្បីឱ្យកូដខ្លីជាងនេះ។\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
         },
         "courseB_starWars_prog72022": {
-          "courseB_starWars_prog7_a": "តើលំនាំនេះមិនដូចរូបផ្គុំចុងក្រោយទេដែរឬ?",
-          "courseB_starWars_prog7_b": "BB-8 នឹងចាប់យកscrap metalនៅពេលគាត់ក្រឡុកលើវា។",
-          "courseB_starWars_prog7_c": "សាកល្បងគូរជំហ៊ានជណ្តើរធំ ៗ លើរូបផ្គុំនេះ។ តើវាគ្របដណ្ដប់លើដែកអេតចាយទាំងអស់ទេ?"
+          "courseB_starWars_prog7_a": "តើលំនាំនេះមើលទៅដូច រូបផ្គុំចុងក្រោយដែរឬទេ?",
+          "courseB_starWars_prog7_b": "BB-8 នឹងប្រមូលសំណល់ដែកនៅពេលដែល BB-8 រត់នៅលើដែកទាំងនោះ។",
+          "courseB_starWars_prog7_c": "សាកល្បងគូរលំនាំជំហ៊ានជណ្តើរធំៗ លើរូបផ្គុំនេះ។ តើជំហ៊ានជណ្តើរគ្របដណ្ដប់លើសំណល់ដែកទាំងអស់ឬទេ?"
         },
         "courseB_starWars_prog82022": {
-          "courseB_starWars_prog8_a": "អ្នកអាចត្រលប់ក្រោយទៅកាន់កំណត់នៃប្រលោះដែលអ្នកបានឆ្លងកាត់រួចហើយ។",
-          "courseB_starWars_prog8_b": "ព្យាយាមប្រើប្លុក `ធ្វើឡើងវិញ` ដើម្បីមើលដំណើរការលើកូដដែលអ្នកបានដាក់ចូល។\n<xml>\n  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
+          "courseB_starWars_prog8_a": "អ្នកអាចត្រលប់ក្រោយទៅកាន់ផ្លូវដែលអ្នកបានឆ្លងកាត់រួចហើយ។",
+          "courseB_starWars_prog8_b": "សាកល្បងដាក់កូដរបស់អ្នកក្នុងប្លុក `ធ្វើឡើងវិញ` ដើម្បីមើលថា តើនឹងមានអ្វីកើតឡើង។\n<xml>\n  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
         },
         "courseB_starWars_prog92022": {
-          "courseB_starWars_prog9_b": "មានវិធីពីរយ៉ាងដើម្បីដោះស្រាយល្បែងផ្គុំរូបនេះ។"
+          "courseB_starWars_prog9_b": "មានវិធីសាស្រ្តច្រើនក្នុងការដោះស្រាយល្បែងផ្គុំរូបនេះ។",
+          "courseB_starWars_prog9_a": "កុំខ្លាចការបង្កើតកំហុស! ចុច \"▶ ប៊ូតុងដំណើរការ\" ដើម្បីមើលថាមានអ្វីកើតឡើង, ទោះបីមិនទាន់ធ្វើហើយទាំងស្រុងក៏ដោយ។",
+          "courseB_starWars_prog9_c": "សាកប្រើប្លុក `ធ្វើឡើងវិញ` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block></xml> តើអាចជួយដោះស្រាយបញ្ហានេះបានទេ?"
         },
         "courseC19_playLab_EOC12022": {
           "courseE_playLab_scaffold1_a": "The `ឈុតតារាសម្តែង ១ ដល់ ??? រូបភាព`ប្លុកអាចត្រូវបានប្រើដើម្បីបន្ថែមតារាសម្តែងទៅឆាក។",
@@ -5485,7 +5541,8 @@
           "courseC_maze_programming_challenge2_b": "ដំណោះស្រាយខ្លីបំផុតគឺប្រើប្រាស់ត្រឹមតែ៥ប្លុកតែប៉ុណ្ណោះ, ក៏ប៉ុន្តែប្រើប្លុកនេះៈ\n\n<xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>"
         },
         "courseC_starWars_loops12022": {
-          "courseC_starWars_loops1_c": "អ្នកនឹងត្រូវប្រើ `រំកិលទៅមុខ` ចំនួនប្រាំដងដើម្បីដោះស្រាយចំណោទមួយនេះ។"
+          "courseC_starWars_loops1_c": "អ្នកនឹងត្រូវប្រើ `រំកិលទៅមុខ` ចំនួនប្រាំដងដើម្បីដោះស្រាយចំណោទមួយនេះ។",
+          "courseC_starWars_loops1_b": "កុំខ្លាចការបង្កើតកំហុស! ចុច \"▶ ប៊ូតុងដំណើរការ\" ដើម្បីមើលថាមានអ្វីកើតឡើង, ទោះបីមិនទាន់ធ្វើហើយទាំងស្រុងក៏ដោយ។"
         },
         "courseC_starWars_loops42022": {
           "courseC_starWars_loops4_a": "ប្រើប្លុក `ធ្វើម្ដងទៀត` ចំនួនពីរ។"
@@ -5730,31 +5787,885 @@
           "1": "កូដប្លុករបស់អ្នកគួរតែមើលទៅដូចនេះ៖\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveWest\">\n        <next>\n          <block type=\"maze_moveWest\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseB_Scrat_ramp12022": {
-          "2": "កុំខ្លាចការបង្កើតកំហុស! សាកល្បងធ្វើ​ ហើយ​បើ​សិនមិនដំណើរការ សូម​សាកល្បង​វិធីសាស្រ្តផ្សេងៗទៀត!"
+          "2": "កុំខ្លាចការបង្កើតកំហុស! សាកល្បងធ្វើ​ ហើយ​ប្រសិនបើមិនដំណើរការ សូម​សាកល្បង​វិធីសាស្រ្តផ្សេងៗទៀត!",
+          "1": "ប្រសិនបើកំប្រុកមិនធ្វើអ្វីដូចដែលអ្នកចង់បាន ត្រូវប្រាកដថា ប្លុកទាំងពីរត្រូវបានភ្ជាប់ជាមួយគ្នា ហើយបន្ទាប់មកចុច \"▶ ប៊ូតុងដំណើរការ\"!​ ម្តងទៀត។"
         },
         "courseB_Scrat_ramp1_2018": {
-          "2": "កុំខ្លាចការបង្កើតកំហុស! សាកល្បងធ្វើ​ ហើយ​បើ​សិនមិនដំណើរការ សូម​សាកល្បង​វិធីសាស្រ្តផ្សេងៗទៀត!"
+          "2": "កុំខ្លាចការបង្កើតកំហុស! សាកល្បងធ្វើ​ ហើយ​ប្រសិនបើមិនដំណើរការ សូម​សាកល្បង​វិធីសាស្រ្តផ្សេងៗទៀត!",
+          "1": "ប្រសិនបើកំប្រុកមិនធ្វើអ្វីដូចដែលអ្នកចង់បាន ត្រូវប្រាកដថា ប្លុកទាំងពីរត្រូវបានភ្ជាប់ជាមួយគ្នា ហើយបន្ទាប់មកចុច \"▶ ប៊ូតុងដំណើរការ\"!​ ម្តងទៀត។"
         },
         "courseB_Scrat_ramp1_2019": {
-          "2": "កុំខ្លាចការបង្កើតកំហុស! សាកល្បងធ្វើ​ ហើយ​បើ​សិនមិនដំណើរការ សូម​សាកល្បង​វិធីសាស្រ្តផ្សេងៗទៀត!"
+          "2": "កុំខ្លាចការបង្កើតកំហុស! សាកល្បងធ្វើ​ ហើយ​ប្រសិនបើមិនដំណើរការ សូម​សាកល្បង​វិធីសាស្រ្តផ្សេងៗទៀត!",
+          "1": "ប្រសិនបើកំប្រុកមិនធ្វើអ្វីដូចដែលអ្នកចង់បាន ត្រូវប្រាកដថា ប្លុកទាំងពីរត្រូវបានភ្ជាប់ជាមួយគ្នា ហើយបន្ទាប់មកចុច \"▶ ប៊ូតុងដំណើរការ\"!​ ម្តងទៀត។"
         },
         "courseB_Scrat_ramp1_2020": {
-          "2": "កុំខ្លាចការបង្កើតកំហុស! សាកល្បងធ្វើ​ ហើយ​បើ​សិនមិនដំណើរការ សូម​សាកល្បង​វិធីសាស្រ្តផ្សេងៗទៀត!"
+          "2": "កុំខ្លាចការបង្កើតកំហុស! សាកល្បងធ្វើ​ ហើយ​ប្រសិនបើមិនដំណើរការ សូម​សាកល្បង​វិធីសាស្រ្តផ្សេងៗទៀត!",
+          "1": "ប្រសិនបើកំប្រុកមិនធ្វើអ្វីដូចដែលអ្នកចង់បាន ត្រូវប្រាកដថា ប្លុកទាំងពីរត្រូវបានភ្ជាប់ជាមួយគ្នា ហើយបន្ទាប់មកចុច \"▶ ប៊ូតុងដំណើរការ\"!​ ម្តងទៀត។"
         },
         "coursea_maze_ramp12022": {
-          "courseC_maze_programming1_b": "កុំខ្លាចការបង្កើតកំហុស! សាកល្បងធ្វើ​ ហើយ​បើ​សិនមិនដំណើរការ សូម​សាកល្បង​វិធីសាស្រ្តផ្សេងៗទៀត!"
+          "courseC_maze_programming1_b": "កុំខ្លាចការបង្កើតកំហុស! សាកល្បងធ្វើ​ ហើយ​ប្រសិនបើមិនដំណើរការ សូម​សាកល្បង​វិធីសាស្រ្តផ្សេងៗទៀត!"
         },
         "coursea_maze_ramp1_2018": {
-          "courseC_maze_programming1_b": "កុំខ្លាចការបង្កើតកំហុស! សាកល្បងធ្វើ​ ហើយ​បើ​សិនមិនដំណើរការ សូម​សាកល្បង​វិធីសាស្រ្តផ្សេងៗទៀត!"
+          "courseC_maze_programming1_b": "កុំខ្លាចការបង្កើតកំហុស! សាកល្បងធ្វើ​ ហើយ​ប្រសិនបើមិនដំណើរការ សូម​សាកល្បង​វិធីសាស្រ្តផ្សេងៗទៀត!"
         },
         "coursea_maze_ramp1_2019": {
-          "courseC_maze_programming1_b": "កុំខ្លាចការបង្កើតកំហុស! សាកល្បងធ្វើ​ ហើយ​បើ​សិនមិនដំណើរការ សូម​សាកល្បង​វិធីសាស្រ្តផ្សេងៗទៀត!"
+          "courseC_maze_programming1_b": "កុំខ្លាចការបង្កើតកំហុស! សាកល្បងធ្វើ​ ហើយ​ប្រសិនបើមិនដំណើរការ សូម​សាកល្បង​វិធីសាស្រ្តផ្សេងៗទៀត!"
         },
         "coursea_maze_ramp1_2020": {
-          "courseC_maze_programming1_b": "កុំខ្លាចការបង្កើតកំហុស! សាកល្បងធ្វើ​ ហើយ​បើ​សិនមិនដំណើរការ សូម​សាកល្បង​វិធីសាស្រ្តផ្សេងៗទៀត!"
+          "courseC_maze_programming1_b": "កុំខ្លាចការបង្កើតកំហុស! សាកល្បងធ្វើ​ ហើយ​ប្រសិនបើមិនដំណើរការ សូម​សាកល្បង​វិធីសាស្រ្តផ្សេងៗទៀត!"
         },
         "coursea_maze_ramp1_2021": {
-          "courseC_maze_programming1_b": "កុំខ្លាចការបង្កើតកំហុស! សាកល្បងធ្វើ​ ហើយ​បើ​សិនមិនដំណើរការ សូម​សាកល្បង​វិធីសាស្រ្តផ្សេងៗទៀត!"
+          "courseC_maze_programming1_b": "កុំខ្លាចការបង្កើតកំហុស! សាកល្បងធ្វើ​ ហើយ​ប្រសិនបើមិនដំណើរការ សូម​សាកល្បង​វិធីសាស្រ្តផ្សេងៗទៀត!"
+        },
+        "courseA_maze_ramp22022": {
+          "1": "កូដប្លុករបស់អ្នកគួរតែដូចខាងក្រោមនេះ៖\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp2_2018": {
+          "1": "កូដប្លុករបស់អ្នកគួរតែដូចខាងក្រោមនេះ៖\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp2_2019": {
+          "1": "កូដប្លុករបស់អ្នកគួរតែដូចខាងក្រោមនេះ៖\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp2_2020": {
+          "1": "កូដប្លុករបស់អ្នកគួរតែដូចខាងក្រោមនេះ៖\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp2_2021": {
+          "1": "កូដប្លុករបស់អ្នកគួរតែដូចខាងក្រោមនេះ៖\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp3a2022": {
+          "1": "កូដប្លុករបស់អ្នកគួរតែដូចខាងក្រោមនេះ៖\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveNorth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp3a_2018": {
+          "1": "កូដប្លុករបស់អ្នកគួរតែដូចខាងក្រោមនេះ៖\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveNorth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp3a_2019": {
+          "1": "កូដប្លុករបស់អ្នកគួរតែដូចខាងក្រោមនេះ៖\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveNorth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp3a_2020": {
+          "1": "កូដប្លុករបស់អ្នកគួរតែដូចខាងក្រោមនេះ៖\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveNorth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp3a_2021": {
+          "1": "កូដប្លុករបស់អ្នកគួរតែដូចខាងក្រោមនេះ៖\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveNorth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp3b2022": {
+          "1": "កូដប្លុករបស់អ្នកគួរតែដូចខាងក្រោមនេះ៖\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveSouth\">\n        <next>\n          <block type=\"maze_moveWest\">\n            <next>\n              <block type=\"maze_moveWest\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp3b_2018": {
+          "1": "កូដប្លុករបស់អ្នកគួរតែដូចខាងក្រោមនេះ៖\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveSouth\">\n        <next>\n          <block type=\"maze_moveWest\">\n            <next>\n              <block type=\"maze_moveWest\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp3b_2019": {
+          "1": "កូដប្លុករបស់អ្នកគួរតែដូចខាងក្រោមនេះ៖\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveSouth\">\n        <next>\n          <block type=\"maze_moveWest\">\n            <next>\n              <block type=\"maze_moveWest\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp3b_2020": {
+          "1": "កូដប្លុករបស់អ្នកគួរតែដូចខាងក្រោមនេះ៖\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveSouth\">\n        <next>\n          <block type=\"maze_moveWest\">\n            <next>\n              <block type=\"maze_moveWest\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp3b_2021": {
+          "1": "កូដប្លុករបស់អ្នកគួរតែដូចខាងក្រោមនេះ៖\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveSouth\">\n        <next>\n          <block type=\"maze_moveWest\">\n            <next>\n              <block type=\"maze_moveWest\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp4a2022": {
+          "1": "កូដប្លុករបស់អ្នកគួរតែដូចខាងក្រោមនេះ៖\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveSouth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp4a_2018": {
+          "1": "កូដប្លុករបស់អ្នកគួរតែដូចខាងក្រោមនេះ៖\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveSouth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp4a_2019": {
+          "1": "កូដប្លុករបស់អ្នកគួរតែដូចខាងក្រោមនេះ៖\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveSouth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp4a_2020": {
+          "1": "កូដប្លុករបស់អ្នកគួរតែដូចខាងក្រោមនេះ៖\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveSouth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp4a_2021": {
+          "1": "កូដប្លុករបស់អ្នកគួរតែដូចខាងក្រោមនេះ៖\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveSouth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp5a2022": {
+          "1": "កូដប្លុករបស់អ្នកគួរតែដូចខាងក្រោមនេះ៖\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveWest\">\n        <next>\n          <block type=\"maze_moveWest\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp5a_2018": {
+          "1": "កូដប្លុករបស់អ្នកគួរតែដូចខាងក្រោមនេះ៖\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveWest\">\n        <next>\n          <block type=\"maze_moveWest\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp5a_2019": {
+          "1": "កូដប្លុករបស់អ្នកគួរតែដូចខាងក្រោមនេះ៖\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveWest\">\n        <next>\n          <block type=\"maze_moveWest\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp5a_2020": {
+          "1": "កូដប្លុករបស់អ្នកគួរតែដូចខាងក្រោមនេះ៖\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveWest\">\n        <next>\n          <block type=\"maze_moveWest\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp5a_2021": {
+          "1": "កូដប្លុករបស់អ្នកគួរតែដូចខាងក្រោមនេះ៖\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveWest\">\n        <next>\n          <block type=\"maze_moveWest\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp22022": {
+          "1": "កូដប្លុករបស់អ្នកគួរតែដូចខាងក្រោមនេះ៖\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp2_2018": {
+          "1": "កូដប្លុករបស់អ្នកគួរតែដូចខាងក្រោមនេះ៖\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp2_2019": {
+          "1": "កូដប្លុករបស់អ្នកគួរតែដូចខាងក្រោមនេះ៖\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp2_2020": {
+          "1": "កូដប្លុករបស់អ្នកគួរតែដូចខាងក្រោមនេះ៖\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp3a2022": {
+          "1": "កូដប្លុករបស់អ្នកគួរតែដូចខាងក្រោមនេះ៖\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveNorth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp3a_2018": {
+          "1": "កូដប្លុករបស់អ្នកគួរតែដូចខាងក្រោមនេះ៖\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveNorth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp3a_2019": {
+          "1": "កូដប្លុករបស់អ្នកគួរតែដូចខាងក្រោមនេះ៖\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveNorth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp3a_2020": {
+          "1": "កូដប្លុករបស់អ្នកគួរតែដូចខាងក្រោមនេះ៖\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveNorth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp3b2022": {
+          "1": "កូដប្លុករបស់អ្នកគួរតែដូចខាងក្រោមនេះ៖\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveSouth\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveEast\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp3b_2018": {
+          "1": "កូដប្លុករបស់អ្នកគួរតែដូចខាងក្រោមនេះ៖\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveSouth\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveEast\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp3b_2019": {
+          "1": "កូដប្លុករបស់អ្នកគួរតែដូចខាងក្រោមនេះ៖\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveSouth\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveEast\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp3b_2020": {
+          "1": "កូដប្លុករបស់អ្នកគួរតែដូចខាងក្រោមនេះ៖\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveSouth\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveEast\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp4a2022": {
+          "1": "កូដប្លុករបស់អ្នកគួរតែដូចខាងក្រោមនេះ៖\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveSouth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp4a_2018": {
+          "1": "កូដប្លុករបស់អ្នកគួរតែដូចខាងក្រោមនេះ៖\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveSouth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp4a_2019": {
+          "1": "កូដប្លុករបស់អ្នកគួរតែដូចខាងក្រោមនេះ៖\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveSouth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp4a_2020": {
+          "1": "កូដប្លុករបស់អ្នកគួរតែដូចខាងក្រោមនេះ៖\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveSouth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp5a2022": {
+          "1": "កូដប្លុករបស់អ្នកគួរតែដូចខាងក្រោមនេះ៖\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveWest\">\n        <next>\n          <block type=\"maze_moveWest\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp5a_2018": {
+          "1": "កូដប្លុករបស់អ្នកគួរតែដូចខាងក្រោមនេះ៖\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveWest\">\n        <next>\n          <block type=\"maze_moveWest\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp5a_2019": {
+          "1": "កូដប្លុករបស់អ្នកគួរតែដូចខាងក្រោមនេះ៖\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveWest\">\n        <next>\n          <block type=\"maze_moveWest\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp5a_2020": {
+          "1": "កូដប្លុករបស់អ្នកគួរតែដូចខាងក្រោមនេះ៖\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveWest\">\n        <next>\n          <block type=\"maze_moveWest\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_iceage_loops1": {
+          "courseB_iceage_loops1_b": "អ្នកនឹងត្រូវប្រើប្លុកនេះ៖​\n\n<xml><block type=\"maze_moveEast\"/></xml>",
+          "courseB_iceage_loops1_a": "ប្រយ័ត្នទឹកកកបាក់!  កំប្រុកនឹងធ្លាក់ភ្លាមៗ!"
+        },
+        "courseB_iceage_loops12022": {
+          "courseB_iceage_loops1_a": "ប្រយ័ត្នទឹកកកបាក់!  កំប្រុកនឹងធ្លាក់ភ្លាមៗ!",
+          "courseB_iceage_loops1_b": "អ្នកនឹងត្រូវប្រើប្លុកនេះ៖​\n\n<xml><block type=\"maze_moveEast\"/></xml>"
+        },
+        "courseB_iceage_loops1_2019": {
+          "courseB_iceage_loops1_b": "អ្នកនឹងត្រូវប្រើប្លុកនេះ៖​\n\n<xml><block type=\"maze_moveEast\"/></xml>",
+          "courseB_iceage_loops1_a": "ប្រយ័ត្នទឹកកកបាក់!  កំប្រុកនឹងធ្លាក់ភ្លាមៗ!"
+        },
+        "courseB_iceage_loops1_2020": {
+          "courseB_iceage_loops1_b": "អ្នកនឹងត្រូវប្រើប្លុកនេះ៖​\n\n<xml><block type=\"maze_moveEast\"/></xml>",
+          "courseB_iceage_loops1_a": "ប្រយ័ត្នទឹកកកបាក់!  កំប្រុកនឹងធ្លាក់ភ្លាមៗ!"
+        },
+        "courseB_iceage_loops1_2021": {
+          "courseB_iceage_loops1_b": "អ្នកនឹងត្រូវប្រើប្លុកនេះ៖​\n\n<xml><block type=\"maze_moveEast\"/></xml>",
+          "courseB_iceage_loops1_a": "ប្រយ័ត្នទឹកកកបាក់!  កំប្រុកនឹងធ្លាក់ភ្លាមៗ!"
+        },
+        "courseB_iceage_loops2": {
+          "courseB_iceage_loops2_a": "បំបែកល្បែងផ្គុំរូបនេះជា២ ផ្នែក, មួយនៅមុនកាច់ជ្រុង និងមួយទៀតនៅបន្ទាប់ពីកាច់ជ្រុង។",
+          "courseB_iceage_loops2_b": "ប្រសិនបើអ្នកជាប់គាំង, សាកល្បងនិយាយពីជំហានធ្វើ ឱ្យខ្លាំងៗ​។",
+          "courseB_iceage_loops2_c": "ដើរតាមផ្លូវនេះដើម្បីកំប្រុកទទួលបាន  ផ្លែផ្លេសេន។"
+        },
+        "courseB_iceage_loops22022": {
+          "courseB_iceage_loops2_a": "បំបែកល្បែងផ្គុំរូបនេះជា២ ផ្នែក, មួយនៅមុនកាច់ជ្រុង និងមួយទៀតនៅបន្ទាប់ពីកាច់ជ្រុង។",
+          "courseB_iceage_loops2_b": "ប្រសិនបើអ្នកជាប់គាំង, សាកល្បងនិយាយពីជំហានធ្វើ ឱ្យខ្លាំងៗ​។",
+          "courseB_iceage_loops2_c": "ដើរតាមផ្លូវនេះដើម្បីកំប្រុកទទួលបាន  ផ្លែផ្លេសេន។"
+        },
+        "courseB_iceage_loops2_2019": {
+          "courseB_iceage_loops2_a": "បំបែកល្បែងផ្គុំរូបនេះជា២ ផ្នែក, មួយនៅមុនកាច់ជ្រុង និងមួយទៀតនៅបន្ទាប់ពីកាច់ជ្រុង។",
+          "courseB_iceage_loops2_b": "ប្រសិនបើអ្នកជាប់គាំង, សាកល្បងនិយាយពីជំហានធ្វើ ឱ្យខ្លាំងៗ​។",
+          "courseB_iceage_loops2_c": "ដើរតាមផ្លូវនេះដើម្បីកំប្រុកទទួលបាន  ផ្លែផ្លេសេន។"
+        },
+        "courseB_iceage_loops2_2020": {
+          "courseB_iceage_loops2_a": "បំបែកល្បែងផ្គុំរូបនេះជា២ ផ្នែក, មួយនៅមុនកាច់ជ្រុង និងមួយទៀតនៅបន្ទាប់ពីកាច់ជ្រុង។",
+          "courseB_iceage_loops2_b": "ប្រសិនបើអ្នកជាប់គាំង, សាកល្បងនិយាយពីជំហានធ្វើ ឱ្យខ្លាំងៗ​។",
+          "courseB_iceage_loops2_c": "ដើរតាមផ្លូវនេះដើម្បីកំប្រុកទទួលបាន  ផ្លែផ្លេសេន។"
+        },
+        "courseB_iceage_loops2_2021": {
+          "courseB_iceage_loops2_a": "បំបែកល្បែងផ្គុំរូបនេះជា២ ផ្នែក, មួយនៅមុនកាច់ជ្រុង និងមួយទៀតនៅបន្ទាប់ពីកាច់ជ្រុង។",
+          "courseB_iceage_loops2_b": "ប្រសិនបើអ្នកជាប់គាំង, សាកល្បងនិយាយពីជំហានធ្វើ ឱ្យខ្លាំងៗ​។",
+          "courseB_iceage_loops2_c": "ដើរតាមផ្លូវនេះដើម្បីកំប្រុកទទួលបាន  ផ្លែផ្លេសេន។"
+        },
+        "courseD_iceage_loops1": {
+          "courseD_iceage_loops1_b": "អ្នកនឹងត្រូវប្រើប្លុកនេះ៖​\n\n<xml><block type=\"maze_moveForward\"/></xml>",
+          "courseD_iceage_loops1_a": "ប្រយ័ត្នទឹកកកបាក់!  កំប្រុកនឹងធ្លាក់ភ្លាមៗ!"
+        },
+        "courseD_iceage_loops12022": {
+          "courseD_iceage_loops1_b": "អ្នកនឹងត្រូវប្រើប្លុកនេះ៖​\n\n<xml><block type=\"maze_moveForward\"/></xml>",
+          "courseD_iceage_loops1_a": "ប្រយ័ត្នទឹកកកបាក់!  កំប្រុកនឹងធ្លាក់ភ្លាមៗ!"
+        },
+        "courseD_iceage_loops1_2019": {
+          "courseD_iceage_loops1_b": "អ្នកនឹងត្រូវប្រើប្លុកនេះ៖​\n\n<xml><block type=\"maze_moveForward\"/></xml>",
+          "courseD_iceage_loops1_a": "ប្រយ័ត្នទឹកកកបាក់!  កំប្រុកនឹងធ្លាក់ភ្លាមៗ!"
+        },
+        "courseD_iceage_loops1_2020": {
+          "courseD_iceage_loops1_b": "អ្នកនឹងត្រូវប្រើប្លុកនេះ៖​\n\n<xml><block type=\"maze_moveForward\"/></xml>",
+          "courseD_iceage_loops1_a": "ប្រយ័ត្នទឹកកកបាក់!  កំប្រុកនឹងធ្លាក់ភ្លាមៗ!"
+        },
+        "courseD_iceage_loops1_2021": {
+          "courseD_iceage_loops1_b": "អ្នកនឹងត្រូវប្រើប្លុកនេះ៖​\n\n<xml><block type=\"maze_moveForward\"/></xml>",
+          "courseD_iceage_loops1_a": "ប្រយ័ត្នទឹកកកបាក់!  កំប្រុកនឹងធ្លាក់ភ្លាមៗ!"
+        },
+        "courseD_iceage_loops2": {
+          "courseD_iceage_loops2_a": "បំបែកល្បែងផ្គុំរូបនេះជា២ ផ្នែក, មួយនៅមុនកាច់ជ្រុង និងមួយទៀតនៅបន្ទាប់ពីកាច់ជ្រុង។",
+          "courseD_iceage_loops2_b": "ប្រសិនបើអ្នកជាប់គាំង, សាកល្បងនិយាយពីជំហានធ្វើ ឱ្យខ្លាំងៗ​។",
+          "courseD_iceage_loops2_c": "ដើរតាមផ្លូវនេះដើម្បីកំប្រុកទទួលបាន  ផ្លែផ្លេសេន។"
+        },
+        "courseD_iceage_loops22022": {
+          "courseD_iceage_loops2_a": "បំបែកល្បែងផ្គុំរូបនេះជា២ ផ្នែក, មួយនៅមុនកាច់ជ្រុង និងមួយទៀតនៅបន្ទាប់ពីកាច់ជ្រុង។",
+          "courseD_iceage_loops2_b": "ប្រសិនបើអ្នកជាប់គាំង, សាកល្បងនិយាយពីជំហានធ្វើ ឱ្យខ្លាំងៗ​។",
+          "courseD_iceage_loops2_c": "ដើរតាមផ្លូវនេះដើម្បីកំប្រុកទទួលបាន  ផ្លែផ្លេសេន។"
+        },
+        "courseD_iceage_loops2_2019": {
+          "courseD_iceage_loops2_a": "បំបែកល្បែងផ្គុំរូបនេះជា២ ផ្នែក, មួយនៅមុនកាច់ជ្រុង និងមួយទៀតនៅបន្ទាប់ពីកាច់ជ្រុង។",
+          "courseD_iceage_loops2_b": "ប្រសិនបើអ្នកជាប់គាំង, សាកល្បងនិយាយពីជំហានធ្វើ ឱ្យខ្លាំងៗ​។",
+          "courseD_iceage_loops2_c": "ដើរតាមផ្លូវនេះដើម្បីកំប្រុកទទួលបាន  ផ្លែផ្លេសេន។"
+        },
+        "courseD_iceage_loops2_2020": {
+          "courseD_iceage_loops2_a": "បំបែកល្បែងផ្គុំរូបនេះជា២ ផ្នែក, មួយនៅមុនកាច់ជ្រុង និងមួយទៀតនៅបន្ទាប់ពីកាច់ជ្រុង។",
+          "courseD_iceage_loops2_b": "ប្រសិនបើអ្នកជាប់គាំង, សាកល្បងនិយាយពីជំហានធ្វើ ឱ្យខ្លាំងៗ​។",
+          "courseD_iceage_loops2_c": "ដើរតាមផ្លូវនេះដើម្បីកំប្រុកទទួលបាន  ផ្លែផ្លេសេន។"
+        },
+        "courseD_iceage_loops2_2021": {
+          "courseD_iceage_loops2_a": "បំបែកល្បែងផ្គុំរូបនេះជា២ ផ្នែក, មួយនៅមុនកាច់ជ្រុង និងមួយទៀតនៅបន្ទាប់ពីកាច់ជ្រុង។",
+          "courseD_iceage_loops2_b": "ប្រសិនបើអ្នកជាប់គាំង, សាកល្បងនិយាយពីជំហានធ្វើ ឱ្យខ្លាំងៗ​។",
+          "courseD_iceage_loops2_c": "ដើរតាមផ្លូវនេះដើម្បីកំប្រុកទទួលបាន  ផ្លែផ្លេសេន។"
+        },
+        "Overworld House Frame Chosen": {
+          "mc_6_b": "កុំខ្លាចការបង្កើតកំហុស! ចុច \"▶ ប៊ូតុងដំណើរការ\" ដើម្បីមើលថាមានអ្វីកើតឡើង, ទោះបីមិនទាន់ធ្វើហើយទាំងស្រុងក៏ដោយ។"
+        },
+        "Overworld House Frame Chosen2022": {
+          "mc_6_b": "កុំខ្លាចការបង្កើតកំហុស! ចុច \"▶ ប៊ូតុងដំណើរការ\" ដើម្បីមើលថាមានអ្វីកើតឡើង, ទោះបីមិនទាន់ធ្វើហើយទាំងស្រុងក៏ដោយ។"
+        },
+        "Overworld House Frame Chosen_2019": {
+          "mc_6_b": "កុំខ្លាចការបង្កើតកំហុស! ចុច \"▶ ប៊ូតុងដំណើរការ\" ដើម្បីមើលថាមានអ្វីកើតឡើង, ទោះបីមិនទាន់ធ្វើហើយទាំងស្រុងក៏ដោយ។"
+        },
+        "Overworld House Frame Chosen_2020": {
+          "mc_6_b": "កុំខ្លាចការបង្កើតកំហុស! ចុច \"▶ ប៊ូតុងដំណើរការ\" ដើម្បីមើលថាមានអ្វីកើតឡើង, ទោះបីមិនទាន់ធ្វើហើយទាំងស្រុងក៏ដោយ។"
+        },
+        "Overworld House Frame Chosen_2021": {
+          "mc_6_b": "កុំខ្លាចការបង្កើតកំហុស! ចុច \"▶ ប៊ូតុងដំណើរការ\" ដើម្បីមើលថាមានអ្វីកើតឡើង, ទោះបីមិនទាន់ធ្វើហើយទាំងស្រុងក៏ដោយ។"
+        },
+        "Overworld Place Wall": {
+          "mc_5_c": "កុំខ្លាចការបង្កើតកំហុស! ចុច \"▶ ប៊ូតុងដំណើរការ\" ដើម្បីមើលថាមានអ្វីកើតឡើង, ទោះបីមិនទាន់ធ្វើហើយទាំងស្រុងក៏ដោយ។"
+        },
+        "Overworld Place Wall2022": {
+          "mc_5_c": "កុំខ្លាចការបង្កើតកំហុស! ចុច \"▶ ប៊ូតុងដំណើរការ\" ដើម្បីមើលថាមានអ្វីកើតឡើង, ទោះបីមិនទាន់ធ្វើហើយទាំងស្រុងក៏ដោយ។"
+        },
+        "Overworld Place Wall_2019": {
+          "mc_5_c": "កុំខ្លាចការបង្កើតកំហុស! ចុច \"▶ ប៊ូតុងដំណើរការ\" ដើម្បីមើលថាមានអ្វីកើតឡើង, ទោះបីមិនទាន់ធ្វើហើយទាំងស្រុងក៏ដោយ។"
+        },
+        "Overworld Place Wall_2020": {
+          "mc_5_c": "កុំខ្លាចការបង្កើតកំហុស! ចុច \"▶ ប៊ូតុងដំណើរការ\" ដើម្បីមើលថាមានអ្វីកើតឡើង, ទោះបីមិនទាន់ធ្វើហើយទាំងស្រុងក៏ដោយ។"
+        },
+        "Overworld Place Wall_2021": {
+          "mc_5_c": "កុំខ្លាចការបង្កើតកំហុស! ចុច \"▶ ប៊ូតុងដំណើរការ\" ដើម្បីមើលថាមានអ្វីកើតឡើង, ទោះបីមិនទាន់ធ្វើហើយទាំងស្រុងក៏ដោយ។"
+        },
+        "Overworld Shear Sheep": {
+          "mc_3_c": "កុំខ្លាចការបង្កើតកំហុស! ចុច \"▶ ប៊ូតុងដំណើរការ\" ដើម្បីមើលថាមានអ្វីកើតឡើង, ទោះបីមិនទាន់ធ្វើហើយទាំងស្រុងក៏ដោយ។"
+        },
+        "Overworld Shear Sheep2022": {
+          "mc_3_c": "កុំខ្លាចការបង្កើតកំហុស! ចុច \"▶ ប៊ូតុងដំណើរការ\" ដើម្បីមើលថាមានអ្វីកើតឡើង, ទោះបីមិនទាន់ធ្វើហើយទាំងស្រុងក៏ដោយ។"
+        },
+        "Overworld Shear Sheep_2019": {
+          "mc_3_c": "កុំខ្លាចការបង្កើតកំហុស! ចុច \"▶ ប៊ូតុងដំណើរការ\" ដើម្បីមើលថាមានអ្វីកើតឡើង, ទោះបីមិនទាន់ធ្វើហើយទាំងស្រុងក៏ដោយ។"
+        },
+        "Overworld Shear Sheep_2020": {
+          "mc_3_c": "កុំខ្លាចការបង្កើតកំហុស! ចុច \"▶ ប៊ូតុងដំណើរការ\" ដើម្បីមើលថាមានអ្វីកើតឡើង, ទោះបីមិនទាន់ធ្វើហើយទាំងស្រុងក៏ដោយ។"
+        },
+        "Overworld Shear Sheep_2021": {
+          "mc_3_c": "កុំខ្លាចការបង្កើតកំហុស! ចុច \"▶ ប៊ូតុងដំណើរការ\" ដើម្បីមើលថាមានអ្វីកើតឡើង, ទោះបីមិនទាន់ធ្វើហើយទាំងស្រុងក៏ដោយ។"
+        },
+        "Underground Iron": {
+          "mc_10_c": "កុំខ្លាចការបង្កើតកំហុស! ចុច \"▶ ប៊ូតុងដំណើរការ\" ដើម្បីមើលថាមានអ្វីកើតឡើង, ទោះបីមិនទាន់ធ្វើហើយទាំងស្រុងក៏ដោយ។"
+        },
+        "Underground Iron2022": {
+          "mc_10_c": "កុំខ្លាចការបង្កើតកំហុស! ចុច \"▶ ប៊ូតុងដំណើរការ\" ដើម្បីមើលថាមានអ្វីកើតឡើង, ទោះបីមិនទាន់ធ្វើហើយទាំងស្រុងក៏ដោយ។"
+        },
+        "Underground Iron_2019": {
+          "mc_10_c": "កុំខ្លាចការបង្កើតកំហុស! ចុច \"▶ ប៊ូតុងដំណើរការ\" ដើម្បីមើលថាមានអ្វីកើតឡើង, ទោះបីមិនទាន់ធ្វើហើយទាំងស្រុងក៏ដោយ។"
+        },
+        "Underground Iron_2020": {
+          "mc_10_c": "កុំខ្លាចការបង្កើតកំហុស! ចុច \"▶ ប៊ូតុងដំណើរការ\" ដើម្បីមើលថាមានអ្វីកើតឡើង, ទោះបីមិនទាន់ធ្វើហើយទាំងស្រុងក៏ដោយ។"
+        },
+        "Underground Iron_2021": {
+          "mc_10_c": "កុំខ្លាចការបង្កើតកំហុស! ចុច \"▶ ប៊ូតុងដំណើរការ\" ដើម្បីមើលថាមានអ្វីកើតឡើង, ទោះបីមិនទាន់ធ្វើហើយទាំងស្រុងក៏ដោយ។"
+        },
+        "courseA_artist_loops4": {
+          "courseA_artist_loops4_a": "ប្រសិនបើអ្នកចង់ធ្វើរង្វិលជុំលើសពី 4 ដង អ្នកអាចប្តូរលេខនៅផ្នែកខាងលើនៃប្លុក។"
+        },
+        "courseA_artist_loops42022": {
+          "courseA_artist_loops4_a": "ប្រសិនបើអ្នកចង់ធ្វើរង្វិលជុំលើសពី 4 ដង អ្នកអាចប្តូរលេខនៅផ្នែកខាងលើនៃប្លុក។"
+        },
+        "courseA_artist_loops4_2018": {
+          "courseA_artist_loops4_a": "ប្រសិនបើអ្នកចង់ធ្វើរង្វិលជុំលើសពី 4 ដង អ្នកអាចប្តូរលេខនៅផ្នែកខាងលើនៃប្លុក។"
+        },
+        "courseA_artist_loops4_2019": {
+          "courseA_artist_loops4_a": "ប្រសិនបើអ្នកចង់ធ្វើរង្វិលជុំលើសពី 4 ដង អ្នកអាចប្តូរលេខនៅផ្នែកខាងលើនៃប្លុក។"
+        },
+        "courseA_artist_loops4_2020": {
+          "courseA_artist_loops4_a": "ប្រសិនបើអ្នកចង់ធ្វើរង្វិលជុំលើសពី 4 ដង អ្នកអាចប្តូរលេខនៅផ្នែកខាងលើនៃប្លុក។"
+        },
+        "courseA_artist_loops4_2021": {
+          "courseA_artist_loops4_a": "ប្រសិនបើអ្នកចង់ធ្វើរង្វិលជុំលើសពី 4 ដង អ្នកអាចប្តូរលេខនៅផ្នែកខាងលើនៃប្លុក។"
+        },
+        "courseA_artist_loops5": {
+          "courseA_artist_loops5_b": "ប្រសិនបើអ្នកចង់ធ្វើរង្វិលជុំលើសពី 4 ដង អ្នកអាចប្តូរលេខនៅផ្នែកខាងលើនៃប្លុក។"
+        },
+        "courseA_artist_loops52022": {
+          "courseA_artist_loops5_b": "ប្រសិនបើអ្នកចង់ធ្វើរង្វិលជុំលើសពី 4 ដង អ្នកអាចប្តូរលេខនៅផ្នែកខាងលើនៃប្លុក។"
+        },
+        "courseA_artist_loops5_2018": {
+          "courseA_artist_loops5_b": "ប្រសិនបើអ្នកចង់ធ្វើរង្វិលជុំលើសពី 4 ដង អ្នកអាចប្តូរលេខនៅផ្នែកខាងលើនៃប្លុក។"
+        },
+        "courseA_artist_loops5_2019": {
+          "courseA_artist_loops5_b": "ប្រសិនបើអ្នកចង់ធ្វើរង្វិលជុំលើសពី 4 ដង អ្នកអាចប្តូរលេខនៅផ្នែកខាងលើនៃប្លុក។"
+        },
+        "courseA_artist_loops5_2020": {
+          "courseA_artist_loops5_b": "ប្រសិនបើអ្នកចង់ធ្វើរង្វិលជុំលើសពី 4 ដង អ្នកអាចប្តូរលេខនៅផ្នែកខាងលើនៃប្លុក។"
+        },
+        "courseA_artist_loops5_2021": {
+          "courseA_artist_loops5_b": "ប្រសិនបើអ្នកចង់ធ្វើរង្វិលជុំលើសពី 4 ដង អ្នកអាចប្តូរលេខនៅផ្នែកខាងលើនៃប្លុក។"
+        },
+        "courseA_artist_loops7": {
+          "courseA_artist_loops7_a": "មិន​​ដឹង​ថា​ត្រូវ​ដាក់​រង្វិលជុំ​កន្លែងណាមែនទេ? សាកល្បងសរសេរកូដជាជំហានៗ ហើយរកមើលលំនាំស្ទួន។"
+        },
+        "courseA_artist_loops72022": {
+          "courseA_artist_loops7_a": "មិន​​ដឹង​ថា​ត្រូវ​ដាក់​រង្វិលជុំ​កន្លែងណាមែនទេ? សាកល្បងសរសេរកូដជាជំហានៗ ហើយរកមើលលំនាំស្ទួន។"
+        },
+        "courseA_artist_loops7_2018": {
+          "courseA_artist_loops7_a": "មិន​​ដឹង​ថា​ត្រូវ​ដាក់​រង្វិលជុំ​កន្លែងណាមែនទេ? សាកល្បងសរសេរកូដជាជំហានៗ ហើយរកមើលលំនាំស្ទួន។"
+        },
+        "courseA_artist_loops7_2019": {
+          "courseA_artist_loops7_a": "មិន​​ដឹង​ថា​ត្រូវ​ដាក់​រង្វិលជុំ​កន្លែងណាមែនទេ? សាកល្បងសរសេរកូដជាជំហានៗ ហើយរកមើលលំនាំស្ទួន។"
+        },
+        "courseA_artist_loops7_2020": {
+          "courseA_artist_loops7_a": "មិន​​ដឹង​ថា​ត្រូវ​ដាក់​រង្វិលជុំ​កន្លែងណាមែនទេ? សាកល្បងសរសេរកូដជាជំហានៗ ហើយរកមើលលំនាំស្ទួន។"
+        },
+        "courseA_artist_loops7_2021": {
+          "courseA_artist_loops7_a": "មិន​​ដឹង​ថា​ត្រូវ​ដាក់​រង្វិលជុំ​កន្លែងណាមែនទេ? សាកល្បងសរសេរកូដជាជំហានៗ ហើយរកមើលលំនាំស្ទួន។"
+        },
+        "courseA_harvester_seq1": {
+          "courseA_harvester_seq1_a": "ប្រើប្លុកនេៈ​ជួយអ្នកប្រមូលផល ដើម្បីប្រមូលពោត!\n\n<xml>\n  <block type=\"harvester_corn\"/>\n</xml>",
+          "courseA_harvester_seq1_b": "អ្នកប្រមូលផល ត្រូវផ្លាស់ទីទៅខាងកើតចំនួនបីដងដើម្បីប្រមូលពោត៕ ប្រើប្លុកនេះ\n\n<xml>\n  <block type=\"maze_moveEast\"/>\n</xml>"
+        },
+        "courseA_harvester_seq10": {
+          "courseA_harvester_seq10_a": "តើអ្នក​ជាប់គាំង​មែន​ទេ? សាកល្បង​សរ​សេរ​ជំហាន​នៅលើក្រ​ដា​ស់ជាមុន​សិន។",
+          "courseA_harvester_seq10_b": "អ្នក​ត្រូវ `ផ្លាស់ទីទៅខាង​កើត`, បន្ទាប់មក `ផ្លាស់ទីទៅខាង​ជើង`។ ធ្វើបែបនេះចំនួន២​ដង។​ កុំភ្លេច​ប្រមូល​យក​ពោត​ទាំង​អ​ស់ផង​ណា!",
+          "courseA_harvester_seq10_c": "សាកល្បង​ប្រើផ្លូវនេះដើម្បីប្រមូលពោត​ទាំង់អ​ស់។"
+        },
+        "courseA_harvester_seq102022": {
+          "courseA_harvester_seq10_a": "តើអ្នក​ជាប់គាំង​មែន​ទេ? សាកល្បង​សរ​សេរ​ជំហាន​នៅលើក្រ​ដា​ស់ជាមុន​សិន។",
+          "courseA_harvester_seq10_b": "អ្នក​ត្រូវ `ផ្លាស់ទីទៅខាង​កើត`, បន្ទាប់មក `ផ្លាស់ទីទៅខាង​ជើង`។ ធ្វើបែបនេះចំនួន២​ដង។​ កុំភ្លេច​ប្រមូល​យក​ពោត​ទាំង​អ​ស់ផង​ណា!",
+          "courseA_harvester_seq10_c": "សាកល្បង​ប្រើផ្លុវនេះដើម្បីរើសពោត​ទាំង់អ​ស់។"
+        },
+        "courseA_harvester_seq10_2019": {
+          "courseA_harvester_seq10_a": "តើអ្នក​ជាប់គាំង​មែន​ទេ? សាកល្បង​សរ​សេរ​ជំហាន​នៅលើក្រ​ដា​ស់ជាមុន​សិន។",
+          "courseA_harvester_seq10_b": "អ្នក​ត្រូវ `ផ្លាស់ទីទៅខាង​កើត`, បន្ទាប់មក `ផ្លាស់ទីទៅខាង​ជើង`។ ធ្វើបែបនេះចំនួន២​ដង។​ កុំភ្លេច​ប្រមូល​យក​ពោត​ទាំង​អ​ស់ផង​ណា!",
+          "courseA_harvester_seq10_c": "សាកល្បង​ប្រើផ្លូវនេះដើម្បីប្រមូលពោត​ទាំង់អ​ស់។"
+        },
+        "courseA_harvester_seq10_2020": {
+          "courseA_harvester_seq10_a": "តើអ្នក​ជាប់គាំង​មែន​ទេ? សាកល្បង​សរ​សេរ​ជំហាន​នៅលើក្រ​ដា​ស់ជាមុន​សិន។",
+          "courseA_harvester_seq10_b": "អ្នក​ត្រូវ `ផ្លាស់ទីទៅខាង​កើត`, បន្ទាប់មក `ផ្លាស់ទីទៅខាង​ជើង`។ ធ្វើបែបនេះចំនួន២​ដង។​ កុំភ្លេច​ប្រមូល​យក​ពោត​ទាំង​អ​ស់ផង​ណា!",
+          "courseA_harvester_seq10_c": "សាកល្បង​ប្រើផ្លូវនេះដើម្បីប្រមូលពោត​ទាំង់អ​ស់។"
+        },
+        "courseA_harvester_seq10_2021": {
+          "courseA_harvester_seq10_a": "តើអ្នក​ជាប់គាំង​មែន​ទេ? សាកល្បង​សរ​សេរ​ជំហាន​នៅលើក្រ​ដា​ស់ជាមុន​សិន។",
+          "courseA_harvester_seq10_b": "អ្នក​ត្រូវ `ផ្លាស់ទីទៅខាង​កើត`, បន្ទាប់មក `ផ្លាស់ទីទៅខាង​ជើង`។ ធ្វើបែបនេះចំនួន២​ដង។​ កុំភ្លេច​ប្រមូល​យក​ពោត​ទាំង​អ​ស់ផង​ណា!",
+          "courseA_harvester_seq10_c": "សាកល្បង​ប្រើផ្លូវនេះដើម្បីប្រមូលពោត​ទាំង់អ​ស់។"
+        },
+        "courseA_harvester_seq12022": {
+          "courseA_harvester_seq1_a": "ប្រើប្លុកនេៈ​ជួយអ្នកប្រមូលផល ដើម្បីប្រមូលពោត!\n\n<xml>\n  <block type=\"harvester_corn\"/>\n</xml>",
+          "courseA_harvester_seq1_b": "អ្នកប្រមូលផល ត្រូវផ្លាស់ទីទៅខាងកើតចំនួនបីដងដើម្បីប្រមូលពោត៕ ប្រើប្លុកនេះ\n\n<xml>\n  <block type=\"maze_moveEast\"/>\n</xml>"
+        },
+        "courseA_harvester_seq13": {
+          "courseA_bee_seq1_a": "ប្រើប្លុកនេះដើម្បីប្រមូល​ពោត​ បន្ទាប់ពី​អ្នក​ប្រមូល​ផល​ទៅ​ដ​ល់​ពោត។\n\n​<xml>\n  <block type=\"harvester_corn\"/>\n</xml>"
+        },
+        "courseA_harvester_seq132022": {
+          "courseA_bee_seq1_a": "ប្រើប្លុកនេះដើម្បីប្រមូល​ពោត​ បន្ទាប់ពី​អ្នក​ប្រមូល​ផល​ទៅ​ដ​ល់​ពោត។\n\n​<xml>\n  <block type=\"harvester_corn\"/>\n</xml>"
+        },
+        "courseA_harvester_seq13_2019": {
+          "courseA_bee_seq1_a": "ប្រើប្លុកនេះដើម្បីប្រមូល​ពោត​ បន្ទាប់ពី​អ្នក​ប្រមូល​ផល​ទៅ​ដ​ល់​ពោត។\n\n​<xml>\n  <block type=\"harvester_corn\"/>\n</xml>"
+        },
+        "courseA_harvester_seq13_2020": {
+          "courseA_bee_seq1_a": "ប្រើប្លុកនេះដើម្បីប្រមូល​ពោត​ បន្ទាប់ពី​អ្នក​ប្រមូល​ផល​ទៅ​ដ​ល់​ពោត។\n\n​<xml>\n  <block type=\"harvester_corn\"/>\n</xml>"
+        },
+        "courseA_harvester_seq13_2021": {
+          "courseA_bee_seq1_a": "ប្រើប្លុកនេះដើម្បីប្រមូល​ពោត​ បន្ទាប់ពី​អ្នក​ប្រមូល​ផល​ទៅ​ដ​ល់​ពោត។\n\n​<xml>\n  <block type=\"harvester_corn\"/>\n</xml>"
+        },
+        "courseA_harvester_seq1_2019": {
+          "courseA_harvester_seq1_a": "ប្រើប្លុកនេៈ​ជួយអ្នកប្រមូលផល ដើម្បីប្រមូលពោត!\n\n<xml>\n  <block type=\"harvester_corn\"/>\n</xml>",
+          "courseA_harvester_seq1_b": "អ្នកប្រមូលផល ត្រូវផ្លាស់ទីទៅខាងកើតចំនួនបីដងដើម្បីប្រមូលពោត៕ ប្រើប្លុកនេះ\n\n<xml>\n  <block type=\"maze_moveEast\"/>\n</xml>"
+        },
+        "courseA_harvester_seq1_2020": {
+          "courseA_harvester_seq1_a": "ប្រើប្លុកនេៈ​ជួយអ្នកប្រមូលផល ដើម្បីប្រមូលពោត!\n\n<xml>\n  <block type=\"harvester_corn\"/>\n</xml>",
+          "courseA_harvester_seq1_b": "អ្នកប្រមូលផល ត្រូវផ្លាស់ទីទៅខាងកើតចំនួនបីដងដើម្បីប្រមូលពោត៕ ប្រើប្លុកនេះ\n\n<xml>\n  <block type=\"maze_moveEast\"/>\n</xml>"
+        },
+        "courseA_harvester_seq1_2021": {
+          "courseA_harvester_seq1_a": "ប្រើប្លុកនេៈ​ជួយអ្នកប្រមូលផល ដើម្បីប្រមូលពោត!\n\n<xml>\n  <block type=\"harvester_corn\"/>\n</xml>",
+          "courseA_harvester_seq1_b": "អ្នកប្រមូលផល ត្រូវផ្លាស់ទីទៅខាងកើតចំនួនបីដងដើម្បីប្រមូលពោត៕ ប្រើប្លុកនេះ\n\n<xml>\n  <block type=\"maze_moveEast\"/>\n</xml>"
+        },
+        "courseA_harvester_seq3": {
+          "courseA_harvester_seq3_a": "តើអ្នកចាំការប្រើប្រាស់ប្លុកនេះឬទេ?\n\n<xml><block type=\"harvester_corn\"/></xml>",
+          "courseA_harvester_seq3_b": "និយាយពីជំហានធ្វើខ្លាំងៗមួយៗ។  តើវិធីសាស្រ្តនេះអាចជួយអ្នករកចម្លើយបានដែលឬទេ?"
+        },
+        "courseA_harvester_seq32022": {
+          "courseA_harvester_seq3_a": "តើអ្នកចាំការប្រើប្រាស់ប្លុកនេះឬទេ?\n\n<xml><block type=\"harvester_corn\"/></xml>",
+          "courseA_harvester_seq3_b": "និយាយពីជំហានធ្វើខ្លាំងៗមួយៗ។  តើវិធីសាស្រ្តនេះអាចជួយអ្នករកចម្លើយបានដែលឬទេ?"
+        },
+        "courseA_harvester_seq3_2019": {
+          "courseA_harvester_seq3_a": "តើអ្នកចាំការប្រើប្រាស់ប្លុកនេះឬទេ?\n\n<xml><block type=\"harvester_corn\"/></xml>",
+          "courseA_harvester_seq3_b": "និយាយពីជំហានធ្វើខ្លាំងៗមួយៗ។  តើវិធីសាស្រ្តនេះអាចជួយអ្នករកចម្លើយបានដែលឬទេ?"
+        },
+        "courseA_harvester_seq3_2020": {
+          "courseA_harvester_seq3_a": "តើអ្នកចាំការប្រើប្រាស់ប្លុកនេះឬទេ?\n\n<xml><block type=\"harvester_corn\"/></xml>",
+          "courseA_harvester_seq3_b": "និយាយពីជំហានធ្វើខ្លាំងៗមួយៗ។  តើវិធីសាស្រ្តនេះអាចជួយអ្នករកចម្លើយបានដែលឬទេ?"
+        },
+        "courseA_harvester_seq3_2021": {
+          "courseA_harvester_seq3_a": "តើអ្នកចាំការប្រើប្រាស់ប្លុកនេះឬទេ?\n\n<xml><block type=\"harvester_corn\"/></xml>",
+          "courseA_harvester_seq3_b": "និយាយពីជំហានធ្វើខ្លាំងៗមួយៗ។  តើវិធីសាស្រ្តនេះអាចជួយអ្នករកចម្លើយបានដែលឬទេ?"
+        },
+        "courseA_harvester_seq4": {
+          "courseA_harvester_seq4_a": "តើមានចន្លោះប៉ុន្មានរវាងអ្នកប្រមូលផល និងពោត? តើមានប្លុកប៉ុន្មានដែលអ្នកបានដាក់រួចហើយ?",
+          "courseA_harvester_seq4_b": "អ្នកត្រូវការប្លុក ផ្លាស់ទីទៅខាងកើត ចំនួន៥ និងប្លុក 'រើសពោត' ចំនួនមួយ៖\n\n<xml><block type=\"harvester_corn\"/></xml>"
+        },
+        "courseA_harvester_seq42022": {
+          "courseA_harvester_seq4_a": "តើមានចន្លោះប៉ុន្មានរវាងអ្នកប្រមូលផល និងពោត? តើមានប្លុកប៉ុន្មានដែលអ្នកបានដាក់រួចហើយ?",
+          "courseA_harvester_seq4_b": "អ្នកត្រូវការប្លុក ផ្លាស់ទីទៅខាងកើត ចំនួន៥ និងប្លុក 'រើសពោត' ចំនួនមួយ៖\n\n<xml><block type=\"harvester_corn\"/></xml>"
+        },
+        "courseA_harvester_seq4_2019": {
+          "courseA_harvester_seq4_a": "តើមានចន្លោះប៉ុន្មានរវាងអ្នកប្រមូលផល និងពោត? តើមានប្លុកប៉ុន្មានដែលអ្នកបានដាក់រួចហើយ?",
+          "courseA_harvester_seq4_b": "អ្នកត្រូវការប្លុក ផ្លាស់ទីទៅខាងកើត ចំនួន៥ និងប្លុក 'រើសពោត' ចំនួនមួយ៖\n\n<xml><block type=\"harvester_corn\"/></xml>"
+        },
+        "courseA_harvester_seq4_2020": {
+          "courseA_harvester_seq4_a": "តើមានចន្លោះប៉ុន្មានរវាងអ្នកប្រមូលផល និងពោត? តើមានប្លុកប៉ុន្មានដែលអ្នកបានដាក់រួចហើយ?",
+          "courseA_harvester_seq4_b": "អ្នកត្រូវការប្លុក ផ្លាស់ទីទៅខាងកើត ចំនួន៥ និងប្លុក 'រើសពោត' ចំនួនមួយ៖\n\n<xml><block type=\"harvester_corn\"/></xml>"
+        },
+        "courseA_harvester_seq4_2021": {
+          "courseA_harvester_seq4_a": "តើមានចន្លោះប៉ុន្មានរវាងអ្នកប្រមូលផល និងពោត? តើមានប្លុកប៉ុន្មានដែលអ្នកបានដាក់រួចហើយ?",
+          "courseA_harvester_seq4_b": "អ្នកត្រូវការប្លុក ផ្លាស់ទីទៅខាងកើត ចំនួន៥ និងប្លុក 'រើសពោត' ចំនួនមួយ៖\n\n<xml><block type=\"harvester_corn\"/></xml>"
+        },
+        "courseA_harvester_seq5": {
+          "courseA_harvester_seq5_a": "តើប្លុកមួយ​ណាដែលនាំឱ្យ ​អ្នក​ប្រមូលផល​ផ្លាស់ទីខុស​ផ្លូវ?",
+          "courseA_harvester_seq5_b": "អ្នក​ត្រូវ​តែដក​ប្លុកមួយ​ចេញ។",
+          "courseA_harvester_seq5_c": "ដកប្លុកនេះចេញពីកូដរបស់អ្នក!\n\n<xml><block type=\"maze_moveNorth\"/></xml>"
+        },
+        "courseA_harvester_seq52022": {
+          "courseA_harvester_seq5_a": "តើប្លុកមួយ​ណាដែលនាំឱ្យ ​អ្នក​ប្រមូលផល​ផ្លាស់ទីខុស​ផ្លូវ?",
+          "courseA_harvester_seq5_b": "អ្នក​ត្រូវ​តែដក​ប្លុកមួយ​ចេញ។",
+          "courseA_harvester_seq5_c": "ដក​ប្លុកនេះចេញ​ពីកូដ​រប​ស់អ្នក!\n\n<xml><block type=\"maze_moveNorth\"/></xml>"
+        },
+        "courseA_harvester_seq5_2019": {
+          "courseA_harvester_seq5_a": "តើប្លុកមួយ​ណាដែលនាំឱ្យ ​អ្នក​ប្រមូលផល​ផ្លាស់ទីខុស​ផ្លូវ?",
+          "courseA_harvester_seq5_b": "អ្នក​ត្រូវ​តែដក​ប្លុកមួយ​ចេញ។",
+          "courseA_harvester_seq5_c": "ដកប្លុកនេះចេញពីកូដរបស់អ្នក!\n\n<xml><block type=\"maze_moveNorth\"/></xml>"
+        },
+        "courseA_harvester_seq5_2020": {
+          "courseA_harvester_seq5_a": "តើប្លុកមួយ​ណាដែលនាំឱ្យ ​អ្នក​ប្រមូលផល​ផ្លាស់ទីខុស​ផ្លូវ?",
+          "courseA_harvester_seq5_b": "អ្នក​ត្រូវ​តែដក​ប្លុកមួយ​ចេញ។",
+          "courseA_harvester_seq5_c": "ដកប្លុកនេះចេញពីកូដរបស់អ្នក!\n\n<xml><block type=\"maze_moveNorth\"/></xml>"
+        },
+        "courseA_harvester_seq5_2021": {
+          "courseA_harvester_seq5_a": "តើប្លុកមួយ​ណាដែលនាំឱ្យ ​អ្នក​ប្រមូលផល​ផ្លាស់ទីខុស​ផ្លូវ?",
+          "courseA_harvester_seq5_b": "អ្នក​ត្រូវ​តែដក​ប្លុកមួយ​ចេញ។",
+          "courseA_harvester_seq5_c": "ដកប្លុកនេះចេញពីកូដរបស់អ្នក!\n\n<xml><block type=\"maze_moveNorth\"/></xml>"
+        },
+        "courseA_harvester_seq6": {
+          "courseA_harvester_seq6_a": "ប្រសិនបើអ្នក​ជាប់គាំង, សាកល្បង​និយាយ​ជំហាន​ឪ្យ​ខ្លាំង​ៗ។ វាអាច​ជួយ​អ្នក​ក្ន​ង​​ការស្វែង​រក​ផ្លូវ​ត្រឹម​ត្រូវ។"
+        },
+        "courseA_harvester_seq62022": {
+          "courseA_harvester_seq6_a": "ប្រសិនបើអ្នក​ជាប់គាំង, សាកល្បង​និយាយ​ជំហាន​ឪ្យ​ខ្លាំង​ៗ។ វាអាច​ជួយ​អ្នក​ក្ន​ង​​ការស្វែង​រក​ផ្លូវ​ត្រឹម​ត្រូវ។"
+        },
+        "courseA_harvester_seq6_2019": {
+          "courseA_harvester_seq6_a": "ប្រសិនបើអ្នក​ជាប់គាំង, សាកល្បង​និយាយ​ជំហាន​ឪ្យ​ខ្លាំង​ៗ។ វាអាច​ជួយ​អ្នក​ក្ន​ង​​ការស្វែង​រក​ផ្លូវ​ត្រឹម​ត្រូវ។"
+        },
+        "courseA_harvester_seq6_2020": {
+          "courseA_harvester_seq6_a": "ប្រសិនបើអ្នក​ជាប់គាំង, សាកល្បង​និយាយ​ជំហាន​ឪ្យ​ខ្លាំង​ៗ។ វាអាច​ជួយ​អ្នក​ក្ន​ង​​ការស្វែង​រក​ផ្លូវ​ត្រឹម​ត្រូវ។"
+        },
+        "courseA_harvester_seq6_2021": {
+          "courseA_harvester_seq6_a": "ប្រសិនបើអ្នក​ជាប់គាំង, សាកល្បង​និយាយ​ជំហាន​ឪ្យ​ខ្លាំង​ៗ។ វាអាច​ជួយ​អ្នក​ក្ន​ង​​ការស្វែង​រក​ផ្លូវ​ត្រឹម​ត្រូវ។"
+        },
+        "courseA_harvester_seq7": {
+          "courseA_harvester_seq7_a": "ព្យាយាម​ដោះស្រាយ​ប​ញ្ហា​នេះដោយ​ចែក​ជា ២ផ្នែក, ផ្នែក​ទីមួយមុនកាច់​ជ្រុង ​ហើយ​ផ្នែក​ទី២ បន្ទាប់កាច់ជ្រុង។",
+          "courseA_harvester_seq7_b": "តើអ្នក​មាន​ប​ញ្ហាឬ​ទេ​? ​នេះ​គឺជាផ្លូវ​​ដែល​អ្នក​ប្រមូល​ផល​គួរតែដើរតាម។ ​"
+        },
+        "courseA_harvester_seq72022": {
+          "courseA_harvester_seq7_a": "ប្រសិនបើអ្នក​ធ្វើមិន​ចេញ ព្យា​យាម​ដោះស្រាយ​ល្បែង​ផ្គុំរូប​ជាពីរ​ផ្នែក។​ ផ្នែក​ទីមួយមុនកាច់ជ្រុង ហើយ​ផ្នែក​ទីពីរក្រោយកាច់ជ្រុង។",
+          "courseA_harvester_seq7_b": "តើអ្នក​មាន​ប​ញ្ហាឬ​ទេ​? ​នេះ​គឺជាផ្លូវ​​ដែល​អ្នក​ប្រមូល​ផល​គួរតែដើរតាម។ ​"
+        },
+        "courseA_harvester_seq7_2019": {
+          "courseA_harvester_seq7_a": "ព្យាយាម​ដោះស្រាយ​ប​ញ្ហា​នេះដោយ​ចែក​ជា ២ផ្នែក, ផ្នែក​ទីមួយមុនកាច់​ជ្រុង ​ហើយ​ផ្នែក​ទី២ បន្ទាប់កាច់ជ្រុង។",
+          "courseA_harvester_seq7_b": "តើអ្នក​មាន​ប​ញ្ហាឬ​ទេ​? ​នេះ​គឺជាផ្លូវ​​ដែល​អ្នក​ប្រមូល​ផល​គួរតែដើរតាម។ ​"
+        },
+        "courseA_harvester_seq7_2020": {
+          "courseA_harvester_seq7_a": "ព្យាយាម​ដោះស្រាយ​ប​ញ្ហា​នេះដោយ​ចែក​ជា ២ផ្នែក, ផ្នែក​ទីមួយមុនកាច់​ជ្រុង ​ហើយ​ផ្នែក​ទី២ បន្ទាប់កាច់ជ្រុង។",
+          "courseA_harvester_seq7_b": "តើអ្នក​មាន​ប​ញ្ហាឬ​ទេ​? ​នេះ​គឺជាផ្លូវ​​ដែល​អ្នក​ប្រមូល​ផល​គួរតែដើរតាម។ ​"
+        },
+        "courseA_harvester_seq7_2021": {
+          "courseA_harvester_seq7_a": "ព្យាយាម​ដោះស្រាយ​ប​ញ្ហា​នេះដោយ​ចែក​ជា ២ផ្នែក, ផ្នែក​ទីមួយមុនកាច់​ជ្រុង ​ហើយ​ផ្នែក​ទី២ បន្ទាប់កាច់ជ្រុង។",
+          "courseA_harvester_seq7_b": "តើអ្នក​មាន​ប​ញ្ហាឬ​ទេ​? ​នេះ​គឺជាផ្លូវ​​ដែល​អ្នក​ប្រមូល​ផល​គួរតែដើរតាម។ ​"
+        },
+        "courseA_harvester_seq8": {
+          "courseA_harvester_seq8_a": "កូត​សម្រេច​ចុង​ក្រោយ​រ​ប​ស់អ្នក​គួរតែមាន​​ **4**​ ប្លុក​ផ្លាស់ទី ហើយ **2** ប្លុកប្រមូល​ពោត។"
+        },
+        "courseA_harvester_seq82022": {
+          "courseA_harvester_seq8_a": "កូត​សម្រេច​ចុង​ក្រោយ​រ​ប​ស់អ្នក​គួរតែមាន​​ **4**​ ប្លុក​ផ្លាស់ទី ហើយ **2** ប្លុកប្រមូល​ពោត។"
+        },
+        "courseA_harvester_seq8_2019": {
+          "courseA_harvester_seq8_a": "កូត​សម្រេច​ចុង​ក្រោយ​រ​ប​ស់អ្នក​គួរតែមាន​​ **4**​ ប្លុក​ផ្លាស់ទី ហើយ **2** ប្លុកប្រមូល​ពោត។"
+        },
+        "courseA_harvester_seq8_2020": {
+          "courseA_harvester_seq8_a": "កូត​សម្រេច​ចុង​ក្រោយ​រ​ប​ស់អ្នក​គួរតែមាន​​ **4**​ ប្លុក​ផ្លាស់ទី ហើយ **2** ប្លុកប្រមូល​ពោត។"
+        },
+        "courseA_harvester_seq8_2021": {
+          "courseA_harvester_seq8_a": "កូត​សម្រេច​ចុង​ក្រោយ​រ​ប​ស់អ្នក​គួរតែមាន​​ **4**​ ប្លុក​ផ្លាស់ទី ហើយ **2** ប្លុកប្រមូល​ពោត។"
+        },
+        "courseA_harvester_seq9": {
+          "courseA_harvester_seq9_a": "ដំណើរការកូដ ២, ៣ ដង​ដើម្បីមើល​ថា​មាន​អ្វី​កើត​ឡើង។ តើអ្នក​ប្រមូល​ផល ​ឈប់នៅត្រង់​ណា?",
+          "courseA_harvester_seq9_b": "សូមកុំភ្លេចប្រមូលយកពោត​ទាំង​​អ​ស់​!​ អ្នក​នឹង​ត្រូវការ **3** ប្លុក \"រើសពោត\"​។",
+          "courseA_harvester_seq9_c": "អ្នក​គួរតែជ្រើសរើស​ផ្លូវនេះដើម្បីរើសពោត​ទាំង​អ​ស់។"
+        },
+        "courseA_harvester_seq92022": {
+          "courseA_harvester_seq9_a": "ដំណើរការកូដ ២, ៣ ដង​ដើម្បីមើល​ថា​មាន​អ្វី​កើត​ឡើង។ តើអ្នកប្រមូលផល ​ឈប់នៅត្រង់​ណា?",
+          "courseA_harvester_seq9_b": "សូមកុំភ្លេចប្រមូលយកពោត​ទាំង​​អ​ស់​!​ អ្នក​នឹង​ត្រូវការ **3** ប្លុក \"រើសពោត\"​។",
+          "courseA_harvester_seq9_c": "អ្នក​គួរតែជ្រើសរើស​ផ្លូវនេះដើម្បីរើសពោត​ទាំង​អ​ស់។"
+        },
+        "courseA_harvester_seq9_2019": {
+          "courseA_harvester_seq9_a": "ដំណើរការកូដ ២, ៣ ដង​ដើម្បីមើល​ថា​មាន​អ្វី​កើត​ឡើង។ តើអ្នក​ប្រមូល​ផល ​ឈប់នៅត្រង់​ណា?",
+          "courseA_harvester_seq9_b": "សូមកុំភ្លេចប្រមូលយកពោត​ទាំង​​អ​ស់​!​ អ្នក​នឹង​ត្រូវការ **3** ប្លុក \"រើសពោត\"​។",
+          "courseA_harvester_seq9_c": "អ្នក​គួរតែជ្រើសរើស​ផ្លូវនេះដើម្បីរើសពោត​ទាំង​អ​ស់។"
+        },
+        "courseA_harvester_seq9_2020": {
+          "courseA_harvester_seq9_a": "ដំណើរការកូដ ២, ៣ ដង​ដើម្បីមើល​ថា​មាន​អ្វី​កើត​ឡើង។ តើអ្នក​ប្រមូល​ផល ​ឈប់នៅត្រង់​ណា?",
+          "courseA_harvester_seq9_b": "សូមកុំភ្លេចប្រមូលយកពោត​ទាំង​​អ​ស់​!​ អ្នក​នឹង​ត្រូវការ **3** ប្លុក \"រើសពោត\"​។",
+          "courseA_harvester_seq9_c": "អ្នក​គួរតែជ្រើសរើស​ផ្លូវនេះដើម្បីរើសពោត​ទាំង​អ​ស់។"
+        },
+        "courseA_harvester_seq9_2021": {
+          "courseA_harvester_seq9_a": "ដំណើរការកូដ ២, ៣ ដង​ដើម្បីមើល​ថា​មាន​អ្វី​កើត​ឡើង។ តើអ្នក​ប្រមូល​ផល ​ឈប់នៅត្រង់​ណា?",
+          "courseA_harvester_seq9_b": "សូមកុំភ្លេចប្រមូលយកពោត​ទាំង​​អ​ស់​!​ អ្នក​នឹង​ត្រូវការ **3** ប្លុក \"រើសពោត\"​។",
+          "courseA_harvester_seq9_c": "អ្នក​គួរតែជ្រើសរើស​ផ្លូវនេះដើម្បីរើសពោត​ទាំង​អ​ស់។"
+        },
+        "courseA_maze_seq5a2022": {
+          "1": "និយាយអំពីជំហាននីមួយៗឱ្យខ្លាំងៗ ហើយមើលថាតើវាជួយអ្នករកចម្លើយដែរឬទេ"
+        },
+        "courseA_maze_seq5a_2018": {
+          "1": "និយាយពីជំហានធ្វើខ្លាំងៗមួយៗ។  តើវិធីសាស្រ្តនេះអាចជួយអ្នករកចម្លើយបានដែលឬទេ?"
+        },
+        "courseA_maze_seq5a_2019": {
+          "1": "និយាយពីជំហានធ្វើខ្លាំងៗមួយៗ។  តើវិធីសាស្រ្តនេះអាចជួយអ្នករកចម្លើយបានដែលឬទេ?"
+        },
+        "courseA_maze_seq5a_2020": {
+          "1": "និយាយពីជំហានធ្វើខ្លាំងៗមួយៗ។  តើវិធីសាស្រ្តនេះអាចជួយអ្នករកចម្លើយបានដែលឬទេ?"
+        },
+        "courseA_maze_seq5a_2021": {
+          "1": "និយាយពីជំហានធ្វើខ្លាំងៗមួយៗ។  តើវិធីសាស្រ្តនេះអាចជួយអ្នករកចម្លើយបានដែលឬទេ?"
+        },
+        "courseA_playLab_events3": {
+          "courseA_playLab_events3_a": "ទាញប្លុកនេះ <xml><block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">8</title>\n  </block></xml> ចេញ ហើយភ្ជាប់វាទៅបាតនៃ <xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">left</title>\n  </block></xml>"
+        },
+        "courseA_playLab_events32022": {
+          "courseA_playLab_events3_a": "ទាញប្លុកនេះ <xml><block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">8</title>\n  </block></xml> ចេញ ហើយភ្ជាប់វាទៅបាតនៃ <xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">left</title>\n  </block></xml>"
+        },
+        "courseA_playLab_events3_2018": {
+          "courseA_playLab_events3_a": "ទាញប្លុកនេះ <xml><block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">8</title>\n  </block></xml> ចេញ ហើយភ្ជាប់វាទៅបាតនៃ <xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">left</title>\n  </block></xml>"
+        },
+        "courseA_playLab_events3_2019": {
+          "courseA_playLab_events3_a": "ទាញប្លុកនេះ <xml><block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">8</title>\n  </block></xml> ចេញ ហើយភ្ជាប់វាទៅបាតនៃ <xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">left</title>\n  </block></xml>"
+        },
+        "courseA_playLab_events3_2020": {
+          "courseA_playLab_events3_a": "ទាញប្លុកនេះ <xml><block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">8</title>\n  </block></xml> ចេញ ហើយភ្ជាប់វាទៅបាតនៃ <xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">left</title>\n  </block></xml>"
+        },
+        "courseA_playLab_events3_2021": {
+          "courseA_playLab_events3_a": "ទាញប្លុកនេះ <xml><block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">8</title>\n  </block></xml> ចេញ ហើយភ្ជាប់វាទៅបាតនៃ <xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">left</title>\n  </block></xml>"
+        },
+        "courseB_artist_loops52022": {
+          "courseB_artist_loops5_a": "ទាញរង្វិលជុំ `repeat` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> បន្ទាប់មកដាក់ប្លុកផ្សេងទៀតនៅខាងក្នុង។ តើអ្នកត្រូវការធ្វើរង្វិលជុំប៉ុន្មានដង?"
+        },
+        "courseB_artist_loops5_2018": {
+          "courseB_artist_loops5_a": "ទាញរង្វិលជុំ `repeat` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> បន្ទាប់មកដាក់ប្លុកផ្សេងទៀតនៅខាងក្នុង។ តើអ្នកត្រូវការធ្វើរង្វិលជុំប៉ុន្មានដង?"
+        },
+        "courseB_artist_loops5_2019": {
+          "courseB_artist_loops5_a": "ទាញរង្វិលជុំ `repeat` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> បន្ទាប់មកដាក់ប្លុកផ្សេងទៀតនៅខាងក្នុង។ តើអ្នកត្រូវការធ្វើរង្វិលជុំប៉ុន្មានដង?"
+        },
+        "courseB_artist_loops5_2020": {
+          "courseB_artist_loops5_a": "ទាញរង្វិលជុំ `repeat` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> បន្ទាប់មកដាក់ប្លុកផ្សេងទៀតនៅខាងក្នុង។ តើអ្នកត្រូវការធ្វើរង្វិលជុំប៉ុន្មានដង?"
+        },
+        "courseB_artist_loops5_2021": {
+          "courseB_artist_loops5_a": "ទាញរង្វិលជុំ `repeat` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> បន្ទាប់មកដាក់ប្លុកផ្សេងទៀតនៅខាងក្នុង។ តើអ្នកត្រូវការធ្វើរង្វិលជុំប៉ុន្មានដង?"
+        },
+        "courseB_iceage_loops10": {
+          "courseB_iceage_loops10_a": "ប្រយ័ត្នទឹកកកបាក់! កំប្រុកនឹងធ្លាក់ចូលទៅក្នុងទឹក!"
+        },
+        "courseB_iceage_loops102022": {
+          "courseB_iceage_loops10_a": "ប្រយ័ត្នទឹកកកបាក់! កំប្រុកនឹងធ្លាក់ចូលទៅក្នុងទឹក!"
+        },
+        "courseB_iceage_loops10_2019": {
+          "courseB_iceage_loops10_a": "ប្រយ័ត្នទឹកកកបាក់! កំប្រុកនឹងធ្លាក់ចូលទៅក្នុងទឹក!"
+        },
+        "courseB_iceage_loops10_2020": {
+          "courseB_iceage_loops10_a": "ប្រយ័ត្នទឹកកកបាក់! កំប្រុកនឹងធ្លាក់ចូលទៅក្នុងទឹក!"
+        },
+        "courseB_iceage_loops10_2021": {
+          "courseB_iceage_loops10_a": "ប្រយ័ត្នទឹកកកបាក់! កំប្រុកនឹងធ្លាក់ចូលទៅក្នុងទឹក!"
+        },
+        "courseB_iceage_loops32022": {
+          "courseB_iceage_loops3_a": "ប្រើប្លុកថ្មីនេះ!​\n\n <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"3-10\">5</title>\n    </block></xml>",
+          "courseB_iceage_loops3_b": "ដើម្បីឱ្យកូដធ្វើឡើងវិញដដែលៗច្រើនដង ប្រើប្លុក `ធ្វើឡើងវិញ` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> , បន្ទាប់មកដាក់​ប្លុក ដែលអ្នកចង់បាននៅខាងក្នុងវា។"
+        },
+        "courseB_iceage_loops3_2019": {
+          "courseB_iceage_loops3_a": "ប្រើប្លុកថ្មីនេះ!​\n\n <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"3-10\">5</title>\n    </block></xml>",
+          "courseB_iceage_loops3_b": "ដើម្បីឱ្យកូដធ្វើឡើងវិញដដែលៗច្រើនដង ប្រើប្លុក `ធ្វើឡើងវិញ` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> , បន្ទាប់មកដាក់​ប្លុក ដែលអ្នកចង់បាននៅខាងក្នុងវា។"
+        },
+        "courseB_iceage_loops3_2020": {
+          "courseB_iceage_loops3_a": "ប្រើប្លុកថ្មីនេះ!​\n\n <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"3-10\">5</title>\n    </block></xml>",
+          "courseB_iceage_loops3_b": "ដើម្បីឱ្យកូដធ្វើឡើងវិញដដែលៗច្រើនដង ប្រើប្លុក `ធ្វើឡើងវិញ` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> , បន្ទាប់មកដាក់​ប្លុក ដែលអ្នកចង់បាននៅខាងក្នុងវា។"
+        },
+        "courseB_iceage_loops3_2021": {
+          "courseB_iceage_loops3_a": "ប្រើប្លុកថ្មីនេះ!​\n\n <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"3-10\">5</title>\n    </block></xml>",
+          "courseB_iceage_loops3_b": "ដើម្បីឱ្យកូដធ្វើឡើងវិញដដែលៗច្រើនដង ប្រើប្លុក `ធ្វើឡើងវិញ` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> , បន្ទាប់មកដាក់​ប្លុក ដែលអ្នកចង់បាននៅខាងក្នុងវា។"
+        },
+        "courseB_iceage_loops4": {
+          "courseB_iceage_loops4_a": "ព្យាយាមសរសេរជំហានដែល កំប្រុកអាចផ្លាស់ទីទៅដល់ផ្លែផ្លេសេន។ តើអ្នកឃើញលំនាំរូបរាងឬទេ?",
+          "courseB_iceage_loops4_b": "កុំខ្លាចក្នុងការដំណើរការកូដរបស់អ្នក ហើយមើលថាតើមានអ្វីកើតឡើង!",
+          "courseB_iceage_loops4_c": "នេះគឺជាផ្លូវដែល កំប្រុកគួរតែដើរ។"
+        },
+        "courseB_iceage_loops42022": {
+          "courseB_iceage_loops4_a": "ព្យាយាមសរសេរជំហានដែល កំប្រុកអាចផ្លាស់ទីទៅដល់ផ្លែផ្លេសេន។ តើអ្នកឃើញលំនាំរូបរាងឬទេ?",
+          "courseB_iceage_loops4_b": "កុំខ្លាចក្នុងការដំណើរការកូដរបស់អ្នក ហើយមើលថាតើមានអ្វីកើតឡើង!",
+          "courseB_iceage_loops4_c": "នេះគឺជាផ្លូវដែល កំប្រុកគួរតែដើរ។"
+        },
+        "courseB_iceage_loops4_2019": {
+          "courseB_iceage_loops4_a": "ព្យាយាមសរសេរជំហានដែល កំប្រុកអាចផ្លាស់ទីទៅដល់ផ្លែផ្លេសេន។ តើអ្នកឃើញលំនាំរូបរាងឬទេ?",
+          "courseB_iceage_loops4_b": "កុំខ្លាចក្នុងការដំណើរការកូដរបស់អ្នក ហើយមើលថាតើមានអ្វីកើតឡើង!",
+          "courseB_iceage_loops4_c": "នេះគឺជាផ្លូវដែល កំប្រុកគួរតែដើរ។"
+        },
+        "courseB_iceage_loops4_2020": {
+          "courseB_iceage_loops4_a": "ព្យាយាមសរសេរជំហានដែល កំប្រុកអាចផ្លាស់ទីទៅដល់ផ្លែផ្លេសេន។ តើអ្នកឃើញលំនាំរូបរាងឬទេ?",
+          "courseB_iceage_loops4_b": "កុំខ្លាចក្នុងការដំណើរការកូដរបស់អ្នក ហើយមើលថាតើមានអ្វីកើតឡើង!",
+          "courseB_iceage_loops4_c": "នេះគឺជាផ្លូវដែល កំប្រុកគួរតែដើរ។"
+        },
+        "courseB_iceage_loops4_2021": {
+          "courseB_iceage_loops4_a": "ព្យាយាមសរសេរជំហានដែល កំប្រុកអាចផ្លាស់ទីទៅដល់ផ្លែផ្លេសេន។ តើអ្នកឃើញលំនាំរូបរាងឬទេ?",
+          "courseB_iceage_loops4_b": "កុំខ្លាចក្នុងការដំណើរការកូដរបស់អ្នក ហើយមើលថាតើមានអ្វីកើតឡើង!",
+          "courseB_iceage_loops4_c": "នេះគឺជាផ្លូវដែល កំប្រុកគួរតែដើរ។"
+        },
+        "courseB_iceage_loops6": {
+          "courseB_iceage_loops6_a": "កូដសម្រេចចុងក្រោយរបស់អ្នក ត្រូវមាន ប្លុកផ្លាស់ទីចំនួន ៣ប្លុក ។",
+          "courseB_iceage_loops6_b": "អ្នកគ្រាន់តែត្រូវបន្ថែមមួយប្លុក 'ធ្វើឡើងវិញ' ទៀតទេ!",
+          "courseB_iceage_loops6_c": "ផ្លូវត្រូវដើរសម្រេចចុងក្រោយ គួរតែមើលទៅដូចនេះ (មើលផ្ទាំងបង្ហាញ)។"
+        },
+        "courseB_iceage_loops62022": {
+          "courseB_iceage_loops6_a": "កូដសម្រេចចុងក្រោយរបស់អ្នក ត្រូវមាន ប្លុកផ្លាស់ទីចំនួន ៣ប្លុក ។",
+          "courseB_iceage_loops6_b": "អ្នកគ្រាន់តែត្រូវបន្ថែមមួយប្លុក 'ធ្វើឡើងវិញ' ទៀតទេ!",
+          "courseB_iceage_loops6_c": "ផ្លូវត្រូវដើរសម្រេចចុងក្រោយ គួរតែមើលទៅដូចនេះ (មើលផ្ទាំងបង្ហាញ)។"
+        },
+        "courseB_iceage_loops6_2019": {
+          "courseB_iceage_loops6_a": "កូដសម្រេចចុងក្រោយរបស់អ្នក ត្រូវមាន ប្លុកផ្លាស់ទីចំនួន ៣ប្លុក ។",
+          "courseB_iceage_loops6_b": "អ្នកគ្រាន់តែត្រូវបន្ថែមមួយប្លុក 'ធ្វើឡើងវិញ' ទៀតទេ!",
+          "courseB_iceage_loops6_c": "ផ្លូវត្រូវដើរសម្រេចចុងក្រោយ គួរតែមើលទៅដូចនេះ (មើលផ្ទាំងបង្ហាញ)។"
+        },
+        "courseB_iceage_loops6_2020": {
+          "courseB_iceage_loops6_a": "កូដសម្រេចចុងក្រោយរបស់អ្នក ត្រូវមាន ប្លុកផ្លាស់ទីចំនួន ៣ប្លុក ។",
+          "courseB_iceage_loops6_b": "អ្នកគ្រាន់តែត្រូវបន្ថែមមួយប្លុក 'ធ្វើឡើងវិញ' ទៀតទេ!",
+          "courseB_iceage_loops6_c": "ផ្លូវត្រូវដើរសម្រេចចុងក្រោយ គួរតែមើលទៅដូចនេះ (មើលផ្ទាំងបង្ហាញ)។"
+        },
+        "courseB_iceage_loops6_2021": {
+          "courseB_iceage_loops6_a": "កូដសម្រេចចុងក្រោយរបស់អ្នក ត្រូវមាន ប្លុកផ្លាស់ទីចំនួន ៣ប្លុក ។",
+          "courseB_iceage_loops6_b": "អ្នកគ្រាន់តែត្រូវបន្ថែមមួយប្លុក 'ធ្វើឡើងវិញ' ទៀតទេ!",
+          "courseB_iceage_loops6_c": "ផ្លូវត្រូវដើរសម្រេចចុងក្រោយ គួរតែមើលទៅដូចនេះ (មើលផ្ទាំងបង្ហាញ)។"
+        },
+        "courseB_iceage_loops7": {
+          "courseB_iceage_loops7_a": "ប្រសិនបើអ្នកជាប់គាំង, ព្យាយាមសរសេរជំហានដោះស្រាយលើក្រដាស។ តើអ្នកឃើញលំនាំរូបរាងផ្លូវឬទេ?",
+          "courseB_iceage_loops7_b": "កំប្រុកគូរតែដើរតាមផ្លូវដែលបានបង្ហាញដើម្បីទៅដល់ផ្លែ ផ្លេសេន។"
+        },
+        "courseB_iceage_loops72022": {
+          "courseB_iceage_loops7_a": "ប្រសិនបើអ្នកជាប់គាំង, ព្យាយាមសរសេរជំហានដោះស្រាយលើក្រដាស។ តើអ្នកឃើញលំនាំរូបរាងផ្លូវឬទេ?",
+          "courseB_iceage_loops7_b": "កំប្រុកគូរតែដើរតាមផ្លូវដែលបានបង្ហាញដើម្បីទៅដល់ផ្លែ ផ្លេសេន។"
+        },
+        "courseB_iceage_loops7_2019": {
+          "courseB_iceage_loops7_a": "ប្រសិនបើអ្នកជាប់គាំង, ព្យាយាមសរសេរជំហានដោះស្រាយលើក្រដាស។ តើអ្នកឃើញលំនាំរូបរាងផ្លូវឬទេ?",
+          "courseB_iceage_loops7_b": "កំប្រុកគូរតែដើរតាមផ្លូវដែលបានបង្ហាញដើម្បីទៅដល់ផ្លែ ផ្លេសេន។"
+        },
+        "courseB_iceage_loops7_2020": {
+          "courseB_iceage_loops7_a": "ប្រសិនបើអ្នកជាប់គាំង, ព្យាយាមសរសេរជំហានដោះស្រាយលើក្រដាស។ តើអ្នកឃើញលំនាំរូបរាងផ្លូវឬទេ?",
+          "courseB_iceage_loops7_b": "កំប្រុកគូរតែដើរតាមផ្លូវដែលបានបង្ហាញដើម្បីទៅដល់ផ្លែ ផ្លេសេន។"
+        },
+        "courseB_iceage_loops7_2021": {
+          "courseB_iceage_loops7_a": "ប្រសិនបើអ្នកជាប់គាំង, ព្យាយាមសរសេរជំហានដោះស្រាយលើក្រដាស។ តើអ្នកឃើញលំនាំរូបរាងផ្លូវឬទេ?",
+          "courseB_iceage_loops7_b": "កំប្រុកគូរតែដើរតាមផ្លូវដែលបានបង្ហាញដើម្បីទៅដល់ផ្លែ ផ្លេសេន។"
+        },
+        "courseB_iceage_loops8": {
+          "courseB_iceage_loops8_a": "តើវាជាប្លុកផ្លាស់ទីត្រូវទេ? តើអ្នកអាចផ្លាស់ប្តូរអ្វីទៀត?"
+        },
+        "courseB_iceage_loops82022": {
+          "courseB_iceage_loops8_a": "តើវាជាប្លុកផ្លាស់ទីត្រូវទេ? តើអ្នកអាចផ្លាស់ប្តូរអ្វីទៀត?"
+        },
+        "courseB_iceage_loops8_2019": {
+          "courseB_iceage_loops8_a": "តើវាជាប្លុកផ្លាស់ទីត្រូវទេ? តើអ្នកអាចផ្លាស់ប្តូរអ្វីទៀត?"
+        },
+        "courseB_iceage_loops8_2020": {
+          "courseB_iceage_loops8_a": "តើវាជាប្លុកផ្លាស់ទីត្រូវទេ? តើអ្នកអាចផ្លាស់ប្តូរអ្វីទៀត?"
+        },
+        "courseB_iceage_loops8_2021": {
+          "courseB_iceage_loops8_a": "តើវាជាប្លុកផ្លាស់ទីត្រូវទេ? តើអ្នកអាចផ្លាស់ប្តូរអ្វីទៀត?"
+        },
+        "courseB_iceage_loops9": {
+          "courseB_iceage_loops9_a": "កំពុងមាន​បញ្ហាមែនទេ? ព្យាយាមបំបែករូបផ្គុំនេះទៅជាបំណែកតូចៗ។ កុំខ្លាចក្នុងការដំណើរការល្បែងផ្គុំរូបរបស់អ្នកដូចដែលអ្នកសរសេរកូដ!"
+        },
+        "courseB_iceage_loops92022": {
+          "courseB_iceage_loops9_a": "កំពុងមាន​បញ្ហាមែនទេ? ព្យាយាមបំបែករូបផ្គុំនេះទៅជាបំណែកតូចៗ។ កុំខ្លាចក្នុងការដំណើរការល្បែងផ្គុំរូបរបស់អ្នកដូចដែលអ្នកសរសេរកូដ!"
+        },
+        "courseB_iceage_loops9_2019": {
+          "courseB_iceage_loops9_a": "កំពុងមាន​បញ្ហាមែនទេ? ព្យាយាមបំបែករូបផ្គុំនេះទៅជាបំណែកតូចៗ។ កុំខ្លាចក្នុងការដំណើរការល្បែងផ្គុំរូបរបស់អ្នកដូចដែលអ្នកសរសេរកូដ!"
+        },
+        "courseB_iceage_loops9_2020": {
+          "courseB_iceage_loops9_a": "កំពុងមាន​បញ្ហាមែនទេ? ព្យាយាមបំបែករូបផ្គុំនេះទៅជាបំណែកតូចៗ។ កុំខ្លាចក្នុងការដំណើរការល្បែងផ្គុំរូបរបស់អ្នកដូចដែលអ្នកសរសេរកូដ!"
+        },
+        "courseB_iceage_loops9_2021": {
+          "courseB_iceage_loops9_a": "កំពុងមាន​បញ្ហាមែនទេ? ព្យាយាមបំបែករូបផ្គុំនេះទៅជាបំណែកតូចៗ។ កុំខ្លាចក្នុងការដំណើរការល្បែងផ្គុំរូបរបស់អ្នកដូចដែលអ្នកសរសេរកូដ!"
+        },
+        "courseC_starWars_loops10": {
+          "courseC_starWars_loops10_c": "កុំខ្លាចការបង្កើតកំហុស! ចុច \"▶ ប៊ូតុងដំណើរការ\" ដើម្បីមើលថាមានអ្វីកើតឡើង, ទោះបីមិនទាន់ធ្វើហើយទាំងស្រុងក៏ដោយ។"
+        },
+        "courseC_starWars_loops102022": {
+          "courseC_starWars_loops10_c": "កុំខ្លាចការបង្កើតកំហុស! ចុច \"▶ ប៊ូតុងដំណើរការ\" ដើម្បីមើលថាមានអ្វីកើតឡើង, ទោះបីមិនទាន់ធ្វើហើយទាំងស្រុងក៏ដោយ។"
+        },
+        "courseC_starWars_loops10_2018": {
+          "courseC_starWars_loops10_c": "កុំខ្លាចការបង្កើតកំហុស! ចុច \"▶ ប៊ូតុងដំណើរការ\" ដើម្បីមើលថាមានអ្វីកើតឡើង, ទោះបីមិនទាន់ធ្វើហើយទាំងស្រុងក៏ដោយ។"
+        },
+        "courseC_starWars_loops10_2019": {
+          "courseC_starWars_loops10_c": "កុំខ្លាចការបង្កើតកំហុស! ចុច \"▶ ប៊ូតុងដំណើរការ\" ដើម្បីមើលថាមានអ្វីកើតឡើង, ទោះបីមិនទាន់ធ្វើហើយទាំងស្រុងក៏ដោយ។"
+        },
+        "courseC_starWars_loops10_2020": {
+          "courseC_starWars_loops10_c": "កុំខ្លាចការបង្កើតកំហុស! ចុច \"▶ ប៊ូតុងដំណើរការ\" ដើម្បីមើលថាមានអ្វីកើតឡើង, ទោះបីមិនទាន់ធ្វើហើយទាំងស្រុងក៏ដោយ។"
+        },
+        "courseC_starWars_loops10_2021": {
+          "courseC_starWars_loops10_c": "កុំខ្លាចការបង្កើតកំហុស! ចុច \"▶ ប៊ូតុងដំណើរការ\" ដើម្បីមើលថាមានអ្វីកើតឡើង, ទោះបីមិនទាន់ធ្វើហើយទាំងស្រុងក៏ដោយ។"
+        },
+        "courseC_starWars_loops7": {
+          "courseC_starWars_loops7_c": "កុំខ្លាចការបង្កើតកំហុស! ចុច \"▶ ប៊ូតុងដំណើរការ\" ដើម្បីមើលថាមានអ្វីកើតឡើង, ទោះបីមិនទាន់ធ្វើហើយទាំងស្រុងក៏ដោយ។"
+        },
+        "courseC_starWars_loops72022": {
+          "courseC_starWars_loops7_c": "កុំខ្លាចការបង្កើតកំហុស! ចុច \"▶ ប៊ូតុងដំណើរការ\" ដើម្បីមើលថាមានអ្វីកើតឡើង, ទោះបីមិនទាន់ធ្វើហើយទាំងស្រុងក៏ដោយ។"
+        },
+        "courseC_starWars_loops7_2018": {
+          "courseC_starWars_loops7_c": "កុំខ្លាចការបង្កើតកំហុស! ចុច \"▶ ប៊ូតុងដំណើរការ\" ដើម្បីមើលថាមានអ្វីកើតឡើង, ទោះបីមិនទាន់ធ្វើហើយទាំងស្រុងក៏ដោយ។"
+        },
+        "courseC_starWars_loops7_2019": {
+          "courseC_starWars_loops7_c": "កុំខ្លាចការបង្កើតកំហុស! ចុច \"▶ ប៊ូតុងដំណើរការ\" ដើម្បីមើលថាមានអ្វីកើតឡើង, ទោះបីមិនទាន់ធ្វើហើយទាំងស្រុងក៏ដោយ។"
+        },
+        "courseC_starWars_loops7_2020": {
+          "courseC_starWars_loops7_c": "កុំខ្លាចការបង្កើតកំហុស! ចុច \"▶ ប៊ូតុងដំណើរការ\" ដើម្បីមើលថាមានអ្វីកើតឡើង, ទោះបីមិនទាន់ធ្វើហើយទាំងស្រុងក៏ដោយ។"
+        },
+        "courseC_starWars_loops7_2021": {
+          "courseC_starWars_loops7_c": "កុំខ្លាចការបង្កើតកំហុស! ចុច \"▶ ប៊ូតុងដំណើរការ\" ដើម្បីមើលថាមានអ្វីកើតឡើង, ទោះបីមិនទាន់ធ្វើហើយទាំងស្រុងក៏ដោយ។"
+        },
+        "courseC_starWars_loops7_copy": {
+          "courseC_starWars_loops7_c": "កុំខ្លាចការបង្កើតកំហុស! ចុច \"▶ ប៊ូតុងដំណើរការ\" ដើម្បីមើលថាមានអ្វីកើតឡើង, ទោះបីមិនទាន់ធ្វើហើយទាំងស្រុងក៏ដោយ។"
+        },
+        "courseC_starWars_loops7_dani": {
+          "courseC_starWars_loops7_c": "កុំខ្លាចការបង្កើតកំហុស! ចុច \"▶ ប៊ូតុងដំណើរការ\" ដើម្បីមើលថាមានអ្វីកើតឡើង, ទោះបីមិនទាន់ធ្វើហើយទាំងស្រុងក៏ដោយ។"
+        },
+        "courseD_iceage_loops10": {
+          "courseB_iceage_loops10_a": "ប្រយ័ត្នទឹកកកបាក់! កំប្រុកនឹងធ្លាក់ចូលទៅក្នុងទឹក!"
+        },
+        "courseD_iceage_loops102022": {
+          "courseB_iceage_loops10_a": "ប្រយ័ត្នទឹកកកបាក់! កំប្រុកនឹងធ្លាក់ចូលទៅក្នុងទឹក!"
+        },
+        "courseD_iceage_loops10_2019": {
+          "courseB_iceage_loops10_a": "ប្រយ័ត្នទឹកកកបាក់! កំប្រុកនឹងធ្លាក់ចូលទៅក្នុងទឹក!"
+        },
+        "courseD_iceage_loops10_2020": {
+          "courseB_iceage_loops10_a": "ប្រយ័ត្នទឹកកកបាក់! កំប្រុកនឹងធ្លាក់ចូលទៅក្នុងទឹក!"
+        },
+        "courseD_iceage_loops10_2021": {
+          "courseB_iceage_loops10_a": "ប្រយ័ត្នទឹកកកបាក់! កំប្រុកនឹងធ្លាក់ចូលទៅក្នុងទឹក!"
+        },
+        "courseD_iceage_loops4": {
+          "courseD_iceage_loops4_a": "កុំខ្លាចក្នុងការដំណើរការកូដរបស់អ្នក ហើយមើលថាតើមានអ្វីកើតឡើង!",
+          "courseD_iceage_loops4_c": "នេះគឺជាផ្លូវដែល កំប្រុកគួរតែដើរ។"
+        },
+        "courseD_iceage_loops42022": {
+          "courseD_iceage_loops4_a": "កុំខ្លាចក្នុងការដំណើរការកូដរបស់អ្នក ហើយមើលថាតើមានអ្វីកើតឡើង!",
+          "courseD_iceage_loops4_c": "នេះគឺជាផ្លូវដែល កំប្រុកគួរតែដើរ។"
+        },
+        "courseD_iceage_loops4_2019": {
+          "courseD_iceage_loops4_a": "កុំខ្លាចក្នុងការដំណើរការកូដរបស់អ្នក ហើយមើលថាតើមានអ្វីកើតឡើង!",
+          "courseD_iceage_loops4_c": "នេះគឺជាផ្លូវដែល កំប្រុកគួរតែដើរ។"
+        },
+        "courseD_iceage_loops4_2020": {
+          "courseD_iceage_loops4_a": "កុំខ្លាចក្នុងការដំណើរការកូដរបស់អ្នក ហើយមើលថាតើមានអ្វីកើតឡើង!",
+          "courseD_iceage_loops4_c": "នេះគឺជាផ្លូវដែល កំប្រុកគួរតែដើរ។"
+        },
+        "courseD_iceage_loops4_2021": {
+          "courseD_iceage_loops4_a": "កុំខ្លាចក្នុងការដំណើរការកូដរបស់អ្នក ហើយមើលថាតើមានអ្វីកើតឡើង!",
+          "courseD_iceage_loops4_c": "នេះគឺជាផ្លូវដែល កំប្រុកគួរតែដើរ។"
+        },
+        "courseD_iceage_loops6": {
+          "courseD_iceage_loops6_b": "អ្នកគ្រាន់តែត្រូវបន្ថែមមួយប្លុក 'ធ្វើឡើងវិញ' ទៀតទេ!",
+          "courseD_iceage_loops6_c": "ផ្លូវត្រូវដើរសម្រេចចុងក្រោយ គួរតែមើលទៅដូចនេះ (មើលផ្ទាំងបង្ហាញ)។"
+        },
+        "courseD_iceage_loops62022": {
+          "courseD_iceage_loops6_b": "អ្នកគ្រាន់តែត្រូវបន្ថែមមួយប្លុក 'ធ្វើឡើងវិញ' ទៀតទេ!",
+          "courseD_iceage_loops6_c": "ផ្លូវត្រូវដើរសម្រេចចុងក្រោយ គួរតែមើលទៅដូចនេះ (មើលផ្ទាំងបង្ហាញ)។"
+        },
+        "courseD_iceage_loops6_2019": {
+          "courseD_iceage_loops6_b": "អ្នកគ្រាន់តែត្រូវបន្ថែមមួយប្លុក 'ធ្វើឡើងវិញ' ទៀតទេ!",
+          "courseD_iceage_loops6_c": "ផ្លូវត្រូវដើរសម្រេចចុងក្រោយ គួរតែមើលទៅដូចនេះ (មើលផ្ទាំងបង្ហាញ)។"
+        },
+        "courseD_iceage_loops6_2020": {
+          "courseD_iceage_loops6_b": "អ្នកគ្រាន់តែត្រូវបន្ថែមមួយប្លុក 'ធ្វើឡើងវិញ' ទៀតទេ!",
+          "courseD_iceage_loops6_c": "ផ្លូវត្រូវដើរសម្រេចចុងក្រោយ គួរតែមើលទៅដូចនេះ (មើលផ្ទាំងបង្ហាញ)។"
+        },
+        "courseD_iceage_loops6_2021": {
+          "courseD_iceage_loops6_b": "អ្នកគ្រាន់តែត្រូវបន្ថែមមួយប្លុក 'ធ្វើឡើងវិញ' ទៀតទេ!",
+          "courseD_iceage_loops6_c": "ផ្លូវត្រូវដើរសម្រេចចុងក្រោយ គួរតែមើលទៅដូចនេះ (មើលផ្ទាំងបង្ហាញ)។"
+        },
+        "courseD_iceage_loops7": {
+          "courseB_iceage_loops7_a": "ប្រសិនបើអ្នកជាប់គាំង, ព្យាយាមសរសេរជំហានដោះស្រាយលើក្រដាស។ តើអ្នកឃើញលំនាំរូបរាងផ្លូវឬទេ?",
+          "courseB_iceage_loops7_b": "កំប្រុកគូរតែដើរតាមផ្លូវដែលបានបង្ហាញដើម្បីទៅដល់ផ្លែ ផ្លេសេន។"
+        },
+        "courseD_iceage_loops72022": {
+          "courseB_iceage_loops7_a": "ប្រសិនបើអ្នកជាប់គាំង, ព្យាយាមសរសេរជំហានដោះស្រាយលើក្រដាស។ តើអ្នកឃើញលំនាំរូបរាងផ្លូវឬទេ?",
+          "courseB_iceage_loops7_b": "កំប្រុកគូរតែដើរតាមផ្លូវដែលបានបង្ហាញដើម្បីទៅដល់ផ្លែ ផ្លេសេន។"
+        },
+        "courseD_iceage_loops7_2019": {
+          "courseB_iceage_loops7_a": "ប្រសិនបើអ្នកជាប់គាំង, ព្យាយាមសរសេរជំហានដោះស្រាយលើក្រដាស។ តើអ្នកឃើញលំនាំរូបរាងផ្លូវឬទេ?",
+          "courseB_iceage_loops7_b": "កំប្រុកគូរតែដើរតាមផ្លូវដែលបានបង្ហាញដើម្បីទៅដល់ផ្លែ ផ្លេសេន។"
+        },
+        "courseD_iceage_loops7_2020": {
+          "courseB_iceage_loops7_a": "ប្រសិនបើអ្នកជាប់គាំង, ព្យាយាមសរសេរជំហានដោះស្រាយលើក្រដាស។ តើអ្នកឃើញលំនាំរូបរាងផ្លូវឬទេ?",
+          "courseB_iceage_loops7_b": "កំប្រុកគូរតែដើរតាមផ្លូវដែលបានបង្ហាញដើម្បីទៅដល់ផ្លែ ផ្លេសេន។"
+        },
+        "courseD_iceage_loops7_2021": {
+          "courseB_iceage_loops7_a": "ប្រសិនបើអ្នកជាប់គាំង, ព្យាយាមសរសេរជំហានដោះស្រាយលើក្រដាស។ តើអ្នកឃើញលំនាំរូបរាងផ្លូវឬទេ?",
+          "courseB_iceage_loops7_b": "កំប្រុកគូរតែដើរតាមផ្លូវដែលបានបង្ហាញដើម្បីទៅដល់ផ្លែ ផ្លេសេន។"
+        },
+        "courseD_iceage_loops9": {
+          "courseD_iceage_loops9_a": "កំពុងមាន​បញ្ហាមែនទេ? ព្យាយាមបំបែករូបផ្គុំនេះទៅជាបំណែកតូចៗ។ កុំខ្លាចក្នុងការដំណើរការល្បែងផ្គុំរូបរបស់អ្នកដូចដែលអ្នកសរសេរកូដ!"
+        },
+        "courseD_iceage_loops92022": {
+          "courseD_iceage_loops9_a": "កំពុងមាន​បញ្ហាមែនទេ? ព្យាយាមបំបែករូបផ្គុំនេះទៅជាបំណែកតូចៗ។ កុំខ្លាចក្នុងការដំណើរការល្បែងផ្គុំរូបរបស់អ្នកដូចដែលអ្នកសរសេរកូដ!"
+        },
+        "courseD_iceage_loops9_2019": {
+          "courseD_iceage_loops9_a": "កំពុងមាន​បញ្ហាមែនទេ? ព្យាយាមបំបែករូបផ្គុំនេះទៅជាបំណែកតូចៗ។ កុំខ្លាចក្នុងការដំណើរការល្បែងផ្គុំរូបរបស់អ្នកដូចដែលអ្នកសរសេរកូដ!"
+        },
+        "courseD_iceage_loops9_2020": {
+          "courseD_iceage_loops9_a": "កំពុងមាន​បញ្ហាមែនទេ? ព្យាយាមបំបែករូបផ្គុំនេះទៅជាបំណែកតូចៗ។ កុំខ្លាចក្នុងការដំណើរការល្បែងផ្គុំរូបរបស់អ្នកដូចដែលអ្នកសរសេរកូដ!"
+        },
+        "courseD_iceage_loops9_2021": {
+          "courseD_iceage_loops9_a": "កំពុងមាន​បញ្ហាមែនទេ? ព្យាយាមបំបែករូបផ្គុំនេះទៅជាបំណែកតូចៗ។ កុំខ្លាចក្នុងការដំណើរការល្បែងផ្គុំរូបរបស់អ្នកដូចដែលអ្នកសរសេរកូដ!"
         }
       }
     }

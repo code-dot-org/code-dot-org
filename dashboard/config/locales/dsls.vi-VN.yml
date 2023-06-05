@@ -4588,7 +4588,7 @@ vi-VN:
         - text: màu xanh dương
         - text: màu xanh lá
         - {}
-        - {}
+        - text: màu vàng
         - correct: true
         - text: màu đỏ
         questions:
@@ -5390,7 +5390,7 @@ vi-VN:
         - text: chim cánh cụt
         - text: Ếch
           correct: true
-        - {}
+        - text: hươu cao cổ
         - {}
         questions:
         - {}
@@ -5400,7 +5400,7 @@ vi-VN:
         - text: chim cánh cụt
         - text: Ếch
           correct: true
-        - {}
+        - text: hươu cao cổ
         - {}
         questions:
         - {}
@@ -5410,7 +5410,7 @@ vi-VN:
         - text: chim cánh cụt
         - text: Ếch
           correct: true
-        - {}
+        - text: hươu cao cổ
         - {}
         questions:
         - {}
@@ -5420,7 +5420,7 @@ vi-VN:
           correct: true
         - text: chim cánh cụt
         - text: Ếch
-        - {}
+        - text: hươu cao cổ
         - {}
         questions:
         - {}
@@ -5430,7 +5430,7 @@ vi-VN:
           correct: true
         - text: chim cánh cụt
         - text: Ếch
-        - {}
+        - text: hươu cao cổ
         - {}
         questions:
         - {}
@@ -5440,7 +5440,7 @@ vi-VN:
           correct: true
         - text: chim cánh cụt
         - text: Ếch
-        - {}
+        - text: hươu cao cổ
         - {}
         questions:
         - {}
@@ -12246,3 +12246,26 @@ vi-VN:
         questions:
         - text: Hãy xem kỹ mã lệnh này. Bạn nghĩ điều gì sẽ xảy ra khi chạy chương
             trình?
+      Test Contained Retriable Multi:
+        answers:
+        - text: '0'
+        - text: '1'
+        - text: '2'
+          correct: true
+        - text: '4'
+        questions:
+        - {}
+      test-single-multi-standalone-retriable:
+        answers:
+        - text: Sẽ không có gì xảy ra.
+          feedback: Sai. Cỏ lăn sẽ bắt đầu lăn
+        - text: Cỏ lăn sẽ nổi lên trên cùng của màn hình
+          feedback: Sai. Cỏ lăn sẽ bắt đầu lăn
+        - text: Cỏ lăn sẽ bắt đầu lăn
+          correct: true
+          feedback: Chính xác!
+        - text: Cỏ lăn sẽ nhấp nháy.
+          feedback: Sai. Cỏ lăn sẽ bắt đầu lăn
+        questions:
+        - text: Hãy xem kỹ mã lệnh bên dưới. Điều gì sẽ xảy ra sau khi bạn nhấp chuột
+            vào nút “Run” (chạy)?

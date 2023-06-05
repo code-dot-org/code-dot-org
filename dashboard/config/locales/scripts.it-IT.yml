@@ -164,6 +164,7 @@ it:
             Il corso è pensato per l'uso nelle scuole a partire dai 10 anni, ma è
             divertente per imparare un po' di informatica a qualunque età. Fai i corsi
             2, 3, 4 se vuoi imparare in modo più graduale ed approfondito.
+          name: 20 ore
         edit-code:
           title: Modifica il Codice
           description: Modifica il Codice
@@ -2966,9 +2967,9 @@ it:
               description: Gli studenti iniziano a programmare animazioni interattive
                 nell'ambiente Sviluppo giochi. Iniziano con forme semplici e oggetti
                 "personaggio", quindi usano i cicli per creare animazioni in stile
-                flipbook. Successivamente, imparano a usare i valori booleani e le
-                istruzioni condizionali per rispondere all'input dell'utente. Alla
-                fine del capitolo, gli studenti progettano e creano un'animazione
+                libro animato. Successivamente, imparano a usare i valori booleani
+                e le istruzioni condizionali per rispondere all'input dell'utente.
+                Alla fine del capitolo, gli studenti progettano e creano un'animazione
                 interattiva che possono condividere con chiunque.
             csd3_2:
               display_name: 'Capitolo 2: Costruzione di Giochi'
@@ -3588,6 +3589,8 @@ it:
               display_name: Lezione 4
             Lesson 5:
               display_name: Lezione 5
+        ai-classroom-test:
+          title: Laboratorio IA - Test in aula
         csp-post-survey-2020:
           lesson_groups:
             cspSurvey2020:
@@ -3666,6 +3669,17 @@ it:
               display_name: Sondaggio
           title: Intelligenza artificiale (AI) e Apprendimento automatico (Machine
             Learning)
+          description: |-
+            L'Unità 7 è un'introduzione pratica allo sviluppo di un modello di apprendimento automatico con dati tabulari. Gli studenti esplorano il modo in cui i computer apprendono dai dati per prendere decisioni, quindi sviluppano progetti di apprendimento automatico riguardanti dati del mondo reale. L'unità culmina nella progettazione di un'app di apprendimento automatico per risolvere un problema rilevante a livello personale.
+
+            **Guida all'implementazione per l'Unità 7**
+
+            -   Completa l'Unità 1 Capitolo 1 prima di iniziare questa unità
+            -   Questa unità presuppone che gli studenti abbiano familiarità con "Sviluppo App", in particolare nell'utilizzo della "modalità interfaccia" per creare un'interfaccia utente e nell'utilizzo degli eventi per cambiare le schermate quando si fa clic su un pulsante. [Fai clic qui](https://docs.google.com/document/d/1SkMCN4Eid3-mGoRUQkurQGJqoOJ9PydfB7uGE0xZyFA/preview) per saperne di più sui consigli per introdurre gli studenti a "Sviluppo App" prima di questa unità.
+            -   Si tratta di un'unità opzionale che può essere utilizzata al posto di un'altra unità del corso - Per ulteriori informazioni consultare la [Guida all'implementazione](https://docs.google.com/document/d/1SkMCN4Eid3-mGoRUQkurQGJqoOJ9PydfB7uGE0xZyFA/preview)
+            -   Per ulteriori informazioni su questa unità, è possibile visualizzare l'intera [Guida al piano di studi](https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview)
+
+            **Sviluppo professionale:** se sei interessato a insegnare questo corso, ti consigliamo di completare il [Modulo di sviluppo professionale personalizzato AI/ML](https://studio.code.org/s/self-paced-pl-csd5-2021) gratuito. Il modulo è progettato per richiedere 2 ore per essere completato. Non è richiesta alcuna precedente esperienza con la programmazione o con l'intelligenza artificiale.
         kodea-pd-2021:
           description: 'Guida online gratuita per imparare autonomamente come insegnare
             l''informatica usando il corso di Code.org "Fondamenti di informatica"
@@ -5401,6 +5415,8 @@ it:
           lesson_groups:
             lessonGroup-3:
               display_name: Ingressi e uscite
+        ai-temp:
+          title: Come funziona l'IA
         focus-on-coding4b-2023:
           lesson_groups:
             lessonGroup-3:
@@ -5415,18 +5431,61 @@ it:
           lessons:
             lesson-3:
               name: Introduzione
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 1° giorno
+          title: 1° giorno
         pl-csd-summer-day2:
           lessons:
             lesson-10:
               name: Conclusione
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 2° giorno
+          title: 2° giorno
         pl-csd-summer-day3:
           lessons:
             lesson-10:
               name: 'Conclusione '
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 3° giorno
+          title: 3° giorno
         pl-csd-summer-day4:
           lessons:
             lesson-12:
               name: Conclusione
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 4° giorno
+          title: 4° giorno
+        virtual-pl-csd-summer-day1:
+          lessons:
+            lesson-1:
+              name: Introduzione
+            lesson-12:
+              name: Conclusione
+          title: 1° giorno
+        virtual-pl-csd-summer-day2:
+          lessons:
+            lesson-10:
+              name: Conclusione
+          title: 2° giorno
+        virtual-pl-csd-summer-day3:
+          lessons:
+            lesson-12:
+              name: Conclusione
+          title: 3° giorno
+        virtual-pl-csd-summer-day4:
+          lessons:
+            lesson-13:
+              name: Conclusione
+          title: 4° giorno
+        virtual-pl-csd-summer-day5:
+          lessons:
+            lesson-3:
+              name: Valutazione
+          title: Giorno 5
         csd-post-survey-2023:
           title: Sondaggio Post-corso
         focus-on-data-post-survey-2023:
@@ -5441,3 +5500,18 @@ it:
           title: Sondaggio Post-corso
         focus-on-creativity-post-survey-2023:
           title: Sondaggio Post-corso
+        coursef-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Cittadinanza digitale
+            lessonGroup-3:
+              display_name: Personaggi
+            lessonGroup-4:
+              display_name: Variabili
+            lessonGroup-5:
+              display_name: Dati e simulazioni
+            lessonGroup-6:
+              display_name: Progetto di fine corso
+          description_audience: Da 9 a 13 anni
+          description_short: Impara tutti i concetti dei corsi di fondamenti di informatica
+            e crea disegni, storie o giochi interattivi.

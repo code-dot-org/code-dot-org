@@ -68,6 +68,7 @@ uk:
   unsubmit: Відкликати
   previous_page: Попередня сторінка
   next_page: Наступна сторінка
+  next_level: Наступний рівень
   next_resource: Наступний ресурс
   cancel: "Скасувати"
   okay: "Добре"
@@ -117,6 +118,7 @@ uk:
     facebook: 'Facebook'
     windowslive: 'обліковий запис Microsoft'
     microsoft_v2_auth: 'обліковий запис Microsoft'
+    clever: 'Розумний'
     powerschool: 'Powerschool'
     forgot_password: 'Забули пароль?'
     migration_success: 'Успіх! Ви оновилися до нашої нової версії акаунтів.'
@@ -271,6 +273,7 @@ uk:
       picture: 'Графічний пароль'
       word: 'Таємне слово'
       email: 'Електронна пошта'
+      clever: 'Розумний'
   follower:
     invite_sent: 'Запрошення надіслано'
     added_teacher: '%{name} додано як Вашого учителя'
@@ -319,7 +322,7 @@ uk:
       sign_in_to_save: 'Увійдіть для збереження досягнень'
       my_dashboard: "Моя майстерня"
       course_catalog: "Каталог курсів"
-      project_gallery: "Проекти"
+      project_gallery: "Проєкти"
       sections: "Секції"
       help_support: "Допомога та підтримка"
       report_bug: "Сповістити про проблему"
@@ -328,6 +331,7 @@ uk:
       professional_learning: "Підвищення кваліфікації"
       documentation: "Документація"
       tutorials: "Навчальні матеріали"
+      sprite_lab_documentation: "Документація Спрайт Лабораторії"
       web_lab_documentation: "Документація веб-лабораторії"
       educate_overview: "Огляд для педагога"
       educate_elementary: "Початкова школа"
@@ -374,8 +378,10 @@ uk:
       navigator: 'Навігатор'
       create: 'Створити'
       algebra_game: 'Алгебра'
-      applab: 'App Lab'
+      applab: 'Програмна Лабораторія'
       artist: 'Художник'
+      artist_k1: 'Виконавець (Pre-читалка)'
+      basketball: 'Баскетбол'
       bounce: 'Арканоід'
       calc: 'Калькулятор'
       dance: 'Танцювальна вечірка'
@@ -383,20 +389,28 @@ uk:
       flappy: 'Пурх'
       frozen: 'Крижане серце'
       gamelab: 'Ігрова лабораторія'
+      gamelab_jr: 'Ігрова лабораторія (бета-версія)'
       gumball: 'Гамбол'
       iceage: 'Льодовиковий період'
       infinity: 'Infinity'
       makerlab: 'Maker Toolkit'
       minecraft_adventurer: 'Майнкрафт - Пригоди'
+      minecraft_aquatic: 'Майнкрафт: Підводна подорож'
       minecraft_codebuilder: 'Майнкрафт: Кодове з''єднання'
       minecraft_designer: 'Майнкрафт'
-      playlab: 'Ігрова студія'
+      minecraft_hero: 'Майнкрафт Герой'
+      playlab: 'Ігрова лабораторія'
+      playlab_k1: 'Play Lab (попередній зчитувач)'
+      poetry: 'Поезія'
       scratch: 'Scratch'
       sports: 'Спорт'
+      spritelab: 'Спрайт Лабораторія'
       starwars: 'Зоряні війни'
       starwarsblocks: 'Зоряні війни (блоки)'
       starwarsblocks_hour: 'Зоряні війни (блоки)'
+      thebadguys: 'Погані хлопці'
       loading: 'Завантаження...'
+      weblab: 'Веб-лабораторія'
       view_all: 'Переглянути всі проекти...'
     popup:
       progress_for_user: "Прогрес %{name}"
@@ -479,6 +493,7 @@ uk:
     remove_parent_email_label: "Видалити"
     none: "Немає"
     only_one_parent_email_supported_warning: "Примітка. Наразі ми можемо зареєструвати лише одну електронну пошту батьків/опікуна на один обліковий запис учня."
+    encrypted: "зашифровані"
   user_level:
     completed: 'Завершено'
     tried: 'Спробував'
@@ -625,7 +640,7 @@ uk:
       unused: "Невикористані рівні"
   upsell:
     applab:
-      title: 'App Lab'
+      title: 'Програмна Лабораторія'
       body: "App Lab - це середовище програмування для створення простих додатків. Розробляйте програму, програмуйте її блоками чи JavaScript, а тоді поділіться нею з іншими."
       body_short: "Розробляйте програму, програмуйте її блоками чи JavaScript, а тоді поділіться нею з іншими."
       audience: 'Вік 13+'
@@ -828,12 +843,12 @@ uk:
     completed_courses: "Завершені курси"
     all_courses: "Всі курси"
   project:
-    projects: "Проекти"
+    projects: "Проєкти"
     create: "Створити проект"
     create_a_project: 'Створити новий проект:'
     new: "Створити новий"
     exit: "Повернутися до курсу"
-    project_gallery: "Проекти"
+    project_gallery: "Проєкти"
     publish: "Опублікувати"
     unpublish: "Скасувати публікацію"
     share_title: Поділитися своїм проектом
@@ -968,7 +983,9 @@ uk:
       gender: 'Гендерна приналежність'
       school: 'Школа'
       school_name: 'Назва школи'
+      school_city: 'Шкільне місто'
       school_country: 'Країна твоєї школи'
+      colombian_school_city: 'Шкільне місто'
       colombian_school_municipality: 'Навчальний муніципалітет'
       colombian_chilean_school_name: 'Назва школи'
       ages: 'Які віку ви навчали в цьому році?'
@@ -1065,6 +1082,7 @@ uk:
       minecraft: 'Майнкрафт'
       sports: 'Спорт'
       csf: 'Основи інформатики'
+      csc: 'Підключення CS'
   cookie_banner:
     more_information: "Переглянути політику конфіденційності в Code.org."
     accept: 'Погоджуюся'
@@ -1083,6 +1101,7 @@ uk:
     text: "**Ви один з батьків або опікун? **Прив’яжіть до цього облікового запису свою електронну пошту, щоб бути в курсі успіхів і проектів вашої дитини!"
     link_your_email: "Прив'яжіть вашу ел. пошту"
     not_now: "Не зараз"
+  code_org_logo_alt: "Домашня сторінка Code.org"
   teacher_feedback: "Відгук викладача"
   lesson_lock:
     error:

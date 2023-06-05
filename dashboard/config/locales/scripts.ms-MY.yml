@@ -12,6 +12,7 @@ ms:
           title: Kursus 3
           description_audience: Umur 8-18 tahun
         playlab:
+          title: Main Makmal
           description: Cipta cerita atau buat permainan dengan Makmal Mainan!
           description_short: Cipta cerita atau buat permainan dengan Makmal Mainan!
           student_description: Cipta cerita atau buat permainan dengan Makmal Mainan!
@@ -54,6 +55,8 @@ ms:
           student_description: Gunakan Makmal Mainan untuk mencipta cerita atau permainan
             yang dibintangi oleh watak Disney Infinity.
           name: infiniti
+        netsim:
+          title: Simulator Internet
         20-hour:
           title: Pengenalan Dipercepatkan kepada Kursus CS
           description: Kursus 20 jam ini memperkenalkan asas Sains komputer dan konsep
@@ -64,6 +67,7 @@ ms:
             dan konsep programming. Kursus ini direka untuk kegunaan di bilik darjah
             bagi gred K-8, tetapi ia adalah menyeronokkan untuk belajar di semua peringkat
             umur.
+          name: 20 jam
         edit-code:
           title: Mengedit kod
           description: Mengedit kod
@@ -81,6 +85,7 @@ ms:
           student_description: Anda mahu menulis permainan anda sendiri dalam masa
             kurang daripada 10 minit? Cuba tutorial Kod Flappy kami!
         jigsaw:
+          title: Gergaji jig
           name: susun suai
         step:
           title: Langkah
@@ -733,6 +738,8 @@ ms:
               display_name: Pemboleh ubah
             csf_data:
               display_name: Data
+            csf_for_loops:
+              display_name: Untuk Gelung
             csf_internet:
               display_name: Internet
             csf_sprites:
@@ -766,6 +773,8 @@ ms:
               display_name: Gelung
             csf_conditionals:
               display_name: Bersyarat
+            csf_binary:
+              display_name: Perduaan
             csf_digcit:
               display_name: Kewarganegaraan Digital
             end_of_course_project:
@@ -824,6 +833,8 @@ ms:
               display_name: Fungsi
             csf_variables:
               display_name: Pemboleh ubah
+            csf_for_loops:
+              display_name: Untuk Gelung
             csf_sprites:
               display_name: Jin
           student_description: Pelajari sains komputer dengan mencuba pelajaran di
@@ -853,6 +864,8 @@ ms:
               display_name: Kewarganegaraan Digital
             csf_sequencing:
               display_name: Penjujukan
+            csf_binary:
+              display_name: Perduaan
             csf_loops:
               display_name: Gelung
             csf_events:
@@ -866,6 +879,8 @@ ms:
             masalah yang berbeza dan pelajari cara bertindak balas terhadap buli siber.
             Pada akhir kursus, cipta permainan atau cerita anda sendiri yang boleh
             anda kongsikan!
+        gamelab:
+          title: Makmal Permainan
         coursea-2019:
           title: Kursus A (2019)
           description: Pelajari asas sains komputer dan keselamatan internet. Pada
@@ -1255,6 +1270,8 @@ ms:
               display_name: Kewarganegaraan Digital
             csf_sequencing:
               display_name: Penjujukan
+            csf_binary:
+              display_name: Perduaan
             csf_loops:
               display_name: Gelung
             csf_events:
@@ -1285,6 +1302,8 @@ ms:
               display_name: Gelung
             csf_conditionals:
               display_name: Bersyarat
+            csf_binary:
+              display_name: Perduaan
             csf_digcit:
               display_name: Kewarganegaraan Digital
             end_of_course_project:
@@ -1339,6 +1358,8 @@ ms:
               display_name: Pemboleh ubah
             csf_data:
               display_name: Data
+            csf_for_loops:
+              display_name: Untuk Gelung
             csf_sprites:
               display_name: Jin
             end_of_course_project:
@@ -1371,6 +1392,8 @@ ms:
               display_name: Fungsi
             csf_variables:
               display_name: Pemboleh ubah
+            csf_for_loops:
+              display_name: Untuk Gelung
             csf_sprites:
               display_name: Jin
             end_of_course_project:
@@ -1430,6 +1453,8 @@ ms:
             virus.
         2021drafting:
           lesson_groups:
+            introduction:
+              display_name: Pengenalan
             lessonGroup-3:
               display_name: Pemboleh ubah
             outbreak:
@@ -1509,6 +1534,8 @@ ms:
               display_name: Kewarganegaraan Digital
             csf_sequencing:
               display_name: Penjujukan
+            csf_binary:
+              display_name: Perduaan
             csf_loops:
               display_name: Gelung
             csf_events:
@@ -1537,6 +1564,8 @@ ms:
               display_name: Gelung
             csf_conditionals:
               display_name: Bersyarat
+            csf_binary:
+              display_name: Perduaan
             csf_digcit:
               display_name: Kewarganegaraan Digital
             end_of_course_project:
@@ -1577,6 +1606,10 @@ ms:
               display_name: Jin
             csf_digcit:
               display_name: Kewarganegaraan Digital
+            csf_variables:
+              display_name: Untuk Gelung
+            csf_for_loops:
+              display_name: Untuk Gelung
             csf_sprites:
               display_name: Kesan Pengkomputeran
             end_of_course_project:
@@ -1610,6 +1643,8 @@ ms:
               display_name: Fungsi
             csf_variables:
               display_name: Pemboleh ubah
+            csf_for_loops:
+              display_name: Untuk Gelung
             csf_sprites:
               display_name: Jin
             end_of_course_project:
@@ -1644,6 +1679,8 @@ ms:
             dengan rakan, keluarga dan guru.
         csf-2021-pilot:
           lesson_groups:
+            ramp_up:
+              display_name: Pengenalan
             outbreak:
               display_name: Simulasi Wabak
             lessonGroup-3:
@@ -1690,6 +1727,12 @@ ms:
           lesson_groups:
             lessonGroup-5:
               display_name: Sandbox
+        k5-onlinepd-2021:
+          lesson_groups:
+            k5_getting_started_1:
+              display_name: Pengenalan
+            Introduction:
+              display_name: Pengenalan
         outbreak-module:
           title: Wabak
         csa-videos:
@@ -1918,6 +1961,8 @@ ms:
               display_name: Fungsi
             csf_variables:
               display_name: Pemboleh ubah
+            csf_for_loops:
+              display_name: Untuk Gelung
             end_of_course_project:
               display_name: Akhir Projek Kursus
           description: Pelajari sains komputer dengan mencuba pelajaran di bawah mengikut
@@ -2285,6 +2330,8 @@ ms:
           lessons:
             lesson-1:
               name: Tatasusunan Satu Dimensi (1D)
+            lesson-3:
+              name: Untuk Gelung
         hello-world-space-2022:
           title: 'Helo Dunia: Ruang'
         hello-world-soccer-2022:
@@ -2384,6 +2431,8 @@ ms:
               display_name: Fungsi
             csf_variables:
               display_name: Pemboleh ubah
+            csf_for_loops:
+              display_name: Untuk Gelung
             end_of_course_project:
               display_name: Akhir Projek Kursus
           description: Pelajari sains komputer dengan mencuba pelajaran di bawah mengikut
@@ -2640,6 +2689,12 @@ ms:
             yang termasuk dalam unit.\n-   Terlibat dengan Makmal AI dan Makmal Aplikasi.\n-
             \  Terokai akhir projek bab.\n-   Buat rancangan untuk melaksanakan unit
             dengan pelajar anda.\n\n\\*\\* Masa yang dicadangkan:\\*\\* 120 minit"
+        ai-temp:
+          title: Cara AI Berfungsi
+        pl-csd-summer-day1:
+          lessons:
+            lesson-3:
+              name: Pengenalan
         pl-csd-summer-day2:
           lessons:
             lesson-10:
@@ -2648,3 +2703,38 @@ ms:
           lessons:
             lesson-12:
               name: Penggulungan
+        virtual-pl-csd-summer-day1:
+          lessons:
+            lesson-1:
+              name: Pengenalan
+            lesson-12:
+              name: Penggulungan
+        virtual-pl-csd-summer-day2:
+          lessons:
+            lesson-10:
+              name: Penggulungan
+        virtual-pl-csd-summer-day3:
+          lessons:
+            lesson-12:
+              name: Penggulungan
+        virtual-pl-csd-summer-day4:
+          lessons:
+            lesson-13:
+              name: Penggulungan
+        virtual-pl-csd-summer-day5:
+          lessons:
+            lesson-3:
+              name: Penilaian
+        coursef-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kewarganegaraan Digital
+            lessonGroup-3:
+              display_name: Jin
+            lessonGroup-4:
+              display_name: Pemboleh ubah
+            lessonGroup-6:
+              display_name: Akhir Projek Kursus
+          description_audience: 'Umur: 9-13 tahun'
+          description_short: Pelajari semua konsep dalam Asas Sains Komputer dan cipta
+            seni, cerita atau permainan anda sendiri.

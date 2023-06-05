@@ -47,6 +47,7 @@ mr:
           description: या 20 तासांच्या अभ्यासक्रमात 2-4 अभ्यासक्रमांमधील मुख्य संगणक विज्ञान आणि प्रोग्रामिंग संकल्पना समाविष्ट आहेत. हा कोर्स 10-18 वयोगटातील वापरासाठी डिझाइन केला आहे. अधिक संपूर्ण अनुभवासाठी 2-4 अभ्यासक्रम पहा!
           description_audience: वय वर्षे 10-18
           student_description: या 20 तासांच्या अभ्यासक्रमात 2-4 अभ्यासक्रमांमधील मुख्य संगणक विज्ञान आणि प्रोग्रामिंग संकल्पना समाविष्ट आहेत. हा कोर्स 10-18 वयोगटातील वापरासाठी डिझाइन केला आहे. अधिक संपूर्ण अनुभवासाठी 2-4 अभ्यासक्रम पहा!
+          name: 20-तास
         events:
           title: ईव्हेंट्स
           description: ईव्हेंट्स
@@ -1992,6 +1993,8 @@ mr:
             -   तुमच्या विद्यार्थ्यांसह युनिट कार्यान्वित करण्यासाठी एक योजना बनवा.
 
             **सुचवलेला वेळ:** 120 मिनिटे
+        ai-temp:
+          title: AI कसे कार्य करते
         pl-csd-summer-day2:
           lessons:
             lesson-10:
@@ -2000,3 +2003,32 @@ mr:
           lessons:
             lesson-12:
               name: समाप्ती
+        virtual-pl-csd-summer-day1:
+          lessons:
+            lesson-12:
+              name: समाप्ती
+        virtual-pl-csd-summer-day2:
+          lessons:
+            lesson-10:
+              name: समाप्ती
+        virtual-pl-csd-summer-day3:
+          lessons:
+            lesson-12:
+              name: समाप्ती
+        virtual-pl-csd-summer-day4:
+          lessons:
+            lesson-13:
+              name: समाप्ती
+        virtual-pl-csd-summer-day5:
+          lessons:
+            lesson-3:
+              name: मूल्यांकन
+        coursef-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: डिजिटल सिटीझनशिप
+            lessonGroup-4:
+              display_name: व्हेरीएबल्स
+            lessonGroup-6:
+              display_name: अभ्यासक्रमाच्या समाप्तीचा प्रोजेक्ट
+          description_short: संगणक शास्त्राच्या मूलभूत गोष्टींच्या सर्व संकल्पना शिका आणि तुमची स्वत:ची कला, गोष्ट किंवा गेम तयार करा.

@@ -11168,7 +11168,7 @@ fr-FR:
           correct: true
         - correct: true
         questions:
-        - {}
+        - text: Développement Web
       csd-post-survey-2019-I like cs:
         answers:
         - correct: true
@@ -16998,3 +16998,26 @@ fr-FR:
       csf_digital_trails2022:
         markdown: "# Suis les Traces Numériques\n\n## Quelles informations est-il
           sûr d'avoir dans son empreinte numérique ? \n"
+      Test Contained Retriable Multi:
+        answers:
+        - text: '0'
+        - text: '1'
+        - text: '2'
+          correct: true
+        - text: '4'
+        questions:
+        - {}
+      test-single-multi-standalone-retriable:
+        answers:
+        - text: Rien ne se passera.
+          feedback: Incorrect. Le virevoltant se mettra à rouler.
+        - text: Le virevoltant va voleter vers le haut de l'écran.
+          feedback: Incorrect. Le virevoltant se mettra à rouler.
+        - text: Le virevoltant se mettra à rouler.
+          correct: true
+          feedback: Correct !
+        - text: Le virevoltant va clignoter.
+          feedback: Incorrect. Le virevoltant se mettra à rouler.
+        questions:
+        - text: Regarde de près le code ci-dessous. Que va-t-il se passer lorsqu'on
+            clique sur « Démarrer » ?

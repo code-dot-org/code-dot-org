@@ -69,6 +69,7 @@ de:
   unsubmit: Zurücknehmen
   previous_page: Vorherige Seite
   next_page: Nächste Seite
+  next_level: Nächstes Level
   next_resource: Nächste Ressource
   done_with_module: Mit dieser Lerneinheit abgeschlossen
   cancel: "Abbrechen"
@@ -1209,11 +1210,23 @@ de:
   courses_category: 'Vollständige Kurse'
   course_offering:
     headers:
+      favorites: 'Favoriten'
+      labs_and_skills: 'Labore und Fähigkeiten'
       minecraft: 'Minecraft'
       hello_world: 'Hallo Welt'
+      popular_media: 'Populäre Medien'
       sports: 'Sport'
+      express: 'Expres'
       csf: 'Einführung in Informatik und Programmieren'
       csc: 'CS Connections'
+      year_long: 'Jahr lang'
+      csa_labs: 'CSA Labs'
+      self_paced: 'Im eigenen Tempo'
+      teacher_led: 'Von Lehrern geleitet'
+      collections: 'Sammlungen'
+      workshops_k5: 'K-5-Workshops'
+      summer_workshops_612: '6-12 Sommerworkshops'
+      virtual_academic_year_workshops_612: '6—12 Workshops für das virtuelle akademische Jahr'
   cookie_banner:
     message: 'Indem Sie unsere Website weiter benutzen oder auf "Ich stimme zu" klicken, stimmen Sie der Speicherung von Cookies auf Ihrem Computer oder Gerät zu.'
     more_information: "Siehe Datenschutzerklärung von Code.org."

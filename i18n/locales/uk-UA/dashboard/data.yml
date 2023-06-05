@@ -30,15 +30,16 @@ uk:
         Jigsaw: Пазли
         MazeStep: Покроковий режим лабіринту
         Wordsearch: Пошук слів
-        Webapp: App Lab
+        Webapp: Програмна Лабораторія
         ArtistEC: Художник
         TextMatch: Співставлення тексту
-        StudioEC: Ігрова студія
-        Applab: App Lab
+        StudioEC: Ігрова лабораторія
+        Applab: Програмна Лабораторія
         NetSim: Інтернет симулятор
         Custom: Художник
-        CustomStudio: Ігрова студія
+        CustomStudio: Ігрова лабораторія
         Gamelab: Ігрова лабораторія
+        Spritelab: Спрайт Лабораторія
     trophy:
       name:
         Bronze: Бронза
@@ -496,8 +497,8 @@ uk:
         csd_gamelab_if_else: Якщо/Інші Твердження
         CSF_SpriteLabIntro_CDEF: Це Спрайт Лаб
         CSF_Spritelab_MakeSprite_CDEF: Як зробити Спрайт в Спрайт Лаб
-        CDEF_Video_SpritesInAction: Спрайт в Дії
-        CSF_SpriteLab_SpritesInAction_CDEF: Спрайт в Дії
+        CDEF_Video_SpritesInAction: Спрайти в дії
+        CSF_SpriteLab_SpritesInAction_CDEF: Спрайти в дії
         CSF_StarWars_ProjectIntro: Вступ до проекту Зоряні Війни
         mc_2018_intro: 'Minecraft: Вступ у Водний Вояж'
         MC_2018_loops: 'Minecraft: Водний Вояж Повторити до'
@@ -507,6 +508,7 @@ uk:
         hoc_dance_events: Танцювальна вечірка - Події
         hoc_dance_properties: Танцювальна вечірка - Властивості
         hoc_dance_congrats: Танцювальна вечірка - Вечірка Почалась!
+        c_and_c_digital_sharing: Обмін та поширення онлайн
         what_is_cs: Що таке інформатика?
         repeat_block: Використання блоку повторів
         lesson_planning: Планування уроку
@@ -521,9 +523,9 @@ uk:
         csd_applab_loops: Цикли в Лабораторії додатків
         csd_problem_solving_process: Процес вирішення проблем
         CSF_Going_Places_Safely: Моє Інтернет-сусідство
-        CSF_SpriteLab_Intro_v2: Представляємо Лабораторію спрайтів
+        CSF_SpriteLab_Intro_v2: Представляємо Спрайт Лабораторію
         CSF_Spritelab_MakeSprite_v2: Як зробити спрайт
-        CSF_SpriteLab_SpritesInAction_v2: Спрайт в Дії
+        CSF_SpriteLab_SpritesInAction_v2: Спрайти в дії
         csd_debugging: Налагодження
         csd_applab_designmode_short: Режим дизайну Лабораторії додатків
         csp-pd-welcome: Ласкаво просимо до родини!
@@ -538,10 +540,11 @@ uk:
         csd_what_computers_do: Що роблять комп’ютери?
         csf_my_online_neighborhood_2020: Моє Інтернет-сусідство
         csf_follow_the_digital_trail: Йди за цифровим шляхом
-        csf_private_and_personal_information: Приватна та Особиста інформація
+        csf_private_and_personal_information: Приватна та особиста інформація
         csd_what_computers_are: Що таке комп’ютер?
         playlab_2021: Вступ до Ігрової лабораторії
         playlab_2021_reader: Вступ до Ігрової лабораторії
+        PL_CS_Journeys_Overview: Подорожі CS
         csp_applab_parameters: Функції з параметрами
         CS_Changing_Everything: Інформатика змінює все
     callout:

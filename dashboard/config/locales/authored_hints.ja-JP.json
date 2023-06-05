@@ -5254,10 +5254,10 @@
           "courseD_artist_nestedLoopsFP_c": "くりかえしの入れ子を使って、一辺が50ピクセルの五角形を48度まがりながら15個かきます。"
         },
         "courseD_artist_nestedLoops_challenge1": {
-          "courseD_artist_nestedLoops_challenge1_a": "はじめに線の色を青にして、一辺が50ピクセルの八角形をかいたら、45度まがります。",
-          "courseD_artist_nestedLoops_challenge1_b": "次に線の色を緑にして、50ピクセル前にすすむと、120度左にまがるを 使って 三角形をかきます。",
+          "courseD_artist_nestedLoops_challenge1_a": "はじめに線の色を青にして、一辺が50ピクセル、左に45度まがって八角形を作成します。",
+          "courseD_artist_nestedLoops_challenge1_b": "次に線の色を緑にして、一辺が50ピクセル、左に120度まがるを 使って 三角形を作成します。",
           "courseD_artist_nestedLoops_challenge1_c": "２つ図形を かいたら、50ピクセル前に ジャンプしてから、90度まがります。",
-          "courseD_artist_nestedLoops_challenge1_d": "それをくりかえしの中に入れて、4回くりかえすようにすれば かんせいです。"
+          "courseD_artist_nestedLoops_challenge1_d": "最後に4回くりかえしを使って完成させてください。"
         },
         "courseD_artist_nestedLoops_challenge1_2018": {
           "courseD_artist_nestedLoops_challenge1_a": "はじめに線の色を青にして、一辺が50ピクセルの八角形をかいたら、45度まがります。",
@@ -5279,7 +5279,7 @@
         },
         "courseD_artist_nestedLoops_challenge2": {
           "courseD_artist_nestedLoops_challenge2_a": "正八角形をかくには、45度まがるを８回行います。",
-          "courseD_artist_nestedLoops_challenge2_b": "正方形をかくには、90度まがるを4回行います。"
+          "courseD_artist_nestedLoops_challenge2_b": "六角形をかくには、60度まがるを6回行います。\n正方形をかくには、90度まがるを4回行います。"
         },
         "courseD_artist_nestedLoops_challenge2_2018": {
           "courseD_artist_nestedLoops_challenge2_a": "正八角形をかくには、45度まがるを８回行います。",
