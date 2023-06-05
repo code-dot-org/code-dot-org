@@ -23,7 +23,7 @@ import {
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shapes';
 
-const CurriculumCatalogCard = ({
+export const UnconnectedCurriculumCatalogCard = ({
   courseDisplayName,
   duration,
   gradesArray,
@@ -34,7 +34,7 @@ const CurriculumCatalogCard = ({
   pathToCourse,
   ...props
 }) => (
-  <ConnectedCustomizableCurriculumCatalogCard
+  <CustomizableCurriculumCatalogCard
     assignButtonText={i18n.assign()}
     assignButtonDescription={i18n.assignDescription({
       course_name: courseDisplayName,
@@ -64,7 +64,7 @@ const CurriculumCatalogCard = ({
   />
 );
 
-CurriculumCatalogCard.propTypes = {
+UnconnectedCurriculumCatalogCard.propTypes = {
   courseDisplayName: PropTypes.string.isRequired,
   duration: PropTypes.oneOf(Object.keys(translatedCourseOfferingDurations))
     .isRequired,
@@ -123,6 +123,13 @@ const CustomizableCurriculumCatalogCard = ({
             <CardLabels subjectsAndTopics={subjectsAndTopics} />
           </div>
         </div>
+        {isTranslated && (
+          <FontAwesome
+            icon="language"
+            className="fa-solid"
+            title={translationIconTitle}
+          />
+        )}
         <h4>{courseDisplayName}</h4>
         <div className={style.iconWithDescription}>
           <FontAwesome icon="user" className="fa-solid" />
@@ -196,7 +203,7 @@ CustomizableCurriculumCatalogCard.propTypes = {
   assignButtonDescription: PropTypes.string.isRequired,
 };
 
-const ConnectedCustomizableCurriculumCatalogCard = connect(
+const CurriculumCatalogCard = connect(
   (state, ownProps) => ({
     sectionsForDropdown: sectionsForDropdown(
       state.teacherSections,
@@ -209,6 +216,6 @@ const ConnectedCustomizableCurriculumCatalogCard = connect(
     assignToSection,
     unassignSection,
   }
-)(CustomizableCurriculumCatalogCard);
+)(UnconnectedCurriculumCatalogCard);
 
 export default CurriculumCatalogCard;
