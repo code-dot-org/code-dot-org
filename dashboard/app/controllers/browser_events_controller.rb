@@ -1,11 +1,11 @@
-# A controller for reporting browser logs and metrics to Cloudwatch
+require 'cdo/aws/metrics'
 
+# A controller for reporting browser logs and metrics to Cloudwatch
 class BrowserEventsController < ApplicationController
   EXPERIMENT_FLAG_NAME = 'browser-cloudwatch-metrics'
   FIREHOSE_STUDY_NAME = 'browser-cloudwatch-metrics-errors'
 
   LOGS_CLIENT = Aws::CloudWatchLogs::Client.new
-  CLOUDWATCH_CLIENT = Aws::CloudWatch::Client.new
   ENV_PREFIX = rack_env?(:adhoc) ? CDO.stack_name : rack_env
   LOG_GROUP_NAME = "#{ENV_PREFIX}-browser-events"
   LOG_STREAM_NAME = ENV_PREFIX
@@ -50,12 +50,8 @@ class BrowserEventsController < ApplicationController
 
     return render status :bad_request, json: {message: 'missing required params: metricData'} unless body["metricData"]
 
-    CLOUDWATCH_CLIENT.put_metric_data(
-      {
-        namespace: METRIC_NAMESPACE,
-        metric_data: body["metricData"].map {|datum| convert_metric_datum(datum)}
-      }
-    )
+    metrics = body["metricData"].map {|datum| convert_metric_datum(datum)}
+    Cdo::Metrics.push(METRIC_NAMESPACE, metrics)
 
     render status: :ok, json: {}
   rescue => exception
@@ -73,7 +69,7 @@ class BrowserEventsController < ApplicationController
     # (AWS Ruby SDK requires a 'metric_name' parameter)
     metric_datum["metric_name"] = metric_datum["name"]
     metric_datum.delete("name")
-    # put_metric_data requires ISO timestamp
+    # put_metric_data uses ISO timestamps
     metric_datum["timestamp"] = Time.now
 
     metric_datum.deep_symbolize_keys
