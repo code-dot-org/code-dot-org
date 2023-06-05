@@ -17,7 +17,6 @@ import {
   BodyOneText,
 } from '@cdo/apps/componentLibrary/typography';
 import CheckboxDropdown from '../CheckboxDropdown';
-import {sectionsForDropdown} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import CurriculumCatalogCard from '@cdo/apps/templates/curriculumCatalog/CurriculumCatalogCard';
 import {
   translatedCourseOfferingCsTopics,
@@ -257,7 +256,6 @@ const CurriculumCatalog = ({curriculaData, isEnglish}) => {
                   isTranslated={false} // TODO [MEG]: actually pass in this data
                   isEnglish={isEnglish}
                   pathToCourse={course_version_path}
-                  sectionsForAssign={sectionsForDropdown}
                   courseVersionId={course_version_id}
                   courseId={course_id}
                   courseOfferingId={course_offering_id}
