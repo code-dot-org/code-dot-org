@@ -4,11 +4,8 @@ import {APP_HEIGHT} from '@cdo/apps/p5lab/constants';
 import {SOUND_PREFIX} from '@cdo/apps/assetManagement/assetPrefix';
 import {
   convertXmlToJson,
-  positionBlockXmlHelper,
   positionBlocksOnWorkspace,
 } from './cdoSerializationHelpers';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
-import DCDO from '@cdo/apps/dcdo';
 
 /**
  * Loads blocks to a workspace.
@@ -18,39 +15,11 @@ import DCDO from '@cdo/apps/dcdo';
  * @param {*} stateToLoad - modern workspace serialization, may not be present
  */
 export function loadBlocksToWorkspace(workspace, xml, stateToLoad) {
-  const dcdoFlagSet = DCDO.get('blockly-convert-xml-to-json', false);
-  if (dcdoFlagSet) {
-    const FIREHOSE_STUDY = 'blockly-json';
-    const FIREHOSE_EVENT = 'xml-convert-failed';
-    try {
-      if (!stateToLoad) {
-        stateToLoad = convertXmlToJson(xml);
-      }
-      Blockly.serialization.workspaces.load(stateToLoad, workspace);
-      positionBlocksOnWorkspace(workspace);
-    } catch (error) {
-      firehoseClient.putRecord(
-        {
-          study: FIREHOSE_STUDY,
-          event: FIREHOSE_EVENT,
-          data_json: JSON.stringify(error.message),
-        },
-        {
-          alwaysPut: true, // Allows logging from development environments
-          includeUserId: true,
-        }
-      );
-      const cdoXmlBlocks = Blockly.Xml.domToBlockSpace(workspace, xml);
-      positionBlocksOnWorkspace(
-        workspace,
-        positionBlockXmlHelper,
-        cdoXmlBlocks
-      );
-    }
-  } else {
-    const cdoXmlBlocks = Blockly.Xml.domToBlockSpace(workspace, xml);
-    positionBlocksOnWorkspace(workspace, positionBlockXmlHelper, cdoXmlBlocks);
+  if (!stateToLoad) {
+    stateToLoad = convertXmlToJson(xml);
   }
+  Blockly.serialization.workspaces.load(stateToLoad, workspace);
+  positionBlocksOnWorkspace(workspace);
 }
 
 export function setHSV(block, h, s, v) {
