@@ -129,8 +129,14 @@ FactoryBot.define do
       trait :not_first_sign_in do
         sign_in_count {2}
       end
+      trait :with_recent_captcha do
+        last_verified_captcha_at {Time.now.utc}
+      end
       factory :terms_of_service_teacher do
         with_terms_of_service
+      end
+      factory :with_recent_captcha_teacher do
+        with_recent_captcha
       end
       factory :levelbuilder do
         after(:create) do |levelbuilder|
@@ -1679,5 +1685,30 @@ FactoryBot.define do
     pardot_id_updated_at {Time.now.utc - 1.hour}
     data_synced {{db_Opt_In: 'No'}}
     data_synced_at {Time.now.utc}
+  end
+
+  factory :lti_integration do
+    issuer {"issuer"}
+    client_id {"client_id"}
+    platform_name {"platform_name"}
+    auth_redirect_url {"auth_redirect_url"}
+    jwks_url {"jwks_url"}
+    access_token_url {"access_token_url"}
+  end
+
+  factory :lti_user_identity do
+    subject {"subject"}
+    lti_integration {create :lti_integration}
+    user {create :student}
+  end
+
+  factory :lti_deployment do
+    deployment_id {"deployment"}
+    lti_integration {create :lti_integration}
+  end
+
+  factory :parental_permission_request do
+    user {create :student}
+    parent_email {"contact@example.domain"}
   end
 end

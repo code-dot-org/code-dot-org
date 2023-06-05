@@ -5,15 +5,17 @@ import {Provider} from 'react-redux';
 import {getStore} from '@cdo/apps/redux';
 import LabContainer from '@cdo/apps/code-studio/components/LabContainer';
 import MusicLabView from '@cdo/apps/music/views/MusicView';
-import getScriptData from '@cdo/apps/util/getScriptData';
+import {logError} from '@cdo/apps/music/utils/MusicMetrics';
 
 $(document).ready(function () {
-  const appOptions = getScriptData('appoptions');
-
   ReactDOM.render(
     <Provider store={getStore()}>
-      <LabContainer>
-        <MusicLabView appOptions={appOptions} />
+      <LabContainer
+        onError={(error, componentStack) =>
+          logError({error: error.toString(), componentStack})
+        }
+      >
+        <MusicLabView />
       </LabContainer>
     </Provider>,
     document.getElementById('musiclab-container')

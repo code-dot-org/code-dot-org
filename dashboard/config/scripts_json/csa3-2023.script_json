@@ -12,11 +12,12 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-05-10 21:08:27 UTC",
+    "serialized_at": "2023-05-19 20:03:28 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -158,7 +159,7 @@
       "relative_position": 5,
       "properties": {
         "overview": "**How can I perform calculations on the values stored in a 1D array?**\n\nStudents have learned how to create one-dimensional (1D) arrays using the `new` keyword and initializer lists and access and modify one or multiple elements. In this lesson, students explore how values from a text file can be read and stored in a 1D array and consider the preconditions and postconditions an algorithm should satisfy. Students then apply their knowledge of 1D arrays, loops, and returning values from methods to plan and implement algorithms to calculate the sum and average of the values in a 1D array. ",
-        "preparation": "* **(Optional)** Print copies of the U3L5 Guided Notes (one for each student)\n* Print copies of the CS Bingo Cards (one card for each student)\n* Print the CS Bingo Definitions resource and mix them up\n* Print copies of the Writing Algorithms with Arrays (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-3-5-preconditions-and-postconditions/37889) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* **(Optional)** Print copies of the U3L5 Guided Notes (one for each student)\n* Print copies of the CS Bingo Cards (one card for each student)\n* Print the CS Bingo Definitions resource and mix them up OR use [**this web-based version**](https://csabingo.up.railway.app/) to show the terms and definitions\n* Print copies of the Writing Algorithms with Arrays (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-3-5-preconditions-and-postconditions/37889) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I perform calculations on the values stored in a 1D array?**\n\nYou have learned how to create one-dimensional (1D) arrays using the `new` keyword and initializer lists and access and modify one or multiple elements. In this lesson, you explore how values from a text file can be read and stored in a 1D array and consider the preconditions and postconditions an algorithm should satisfy. You then apply your knowledge of 1D arrays, loops, and returning values from methods to plan and implement algorithms to calculate the sum and average of the values in a 1D array."
       },
       "seeding_key": {
@@ -1203,7 +1204,7 @@
       "key": "33327f1a-4ff9-48a5-8137-0fa428c98e76",
       "position": 6,
       "properties": {
-        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).",
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 2.2\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
         "name": "AP Classroom Topic Questions"
       },
       "seeding_key": {
@@ -1514,7 +1515,7 @@
       "key": "d636842b-9cd5-4a5a-bc0c-a882b08e31e2",
       "position": 6,
       "properties": {
-        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 6.1\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).",
         "name": "AP Classroom Topic Questions"
       },
       "seeding_key": {
@@ -1814,7 +1815,7 @@
       "key": "54197dd0-eecf-4f1b-8bb1-825796f5e379",
       "position": 6,
       "properties": {
-        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).",
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 4.2\n* Topic Questions 6.1\n* Topic Questions 6.2\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
         "name": "AP Classroom Topic Questions"
       },
       "seeding_key": {
@@ -2154,7 +2155,7 @@
       "key": "c3e68f8c-1ab1-49a9-9345-7a86c0d5bb5c",
       "position": 6,
       "properties": {
-        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 4.2\n* Topic Questions 6.2\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 1.4\n* Topic Questions 6.2\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
         "name": "AP Classroom Topic Questions"
       },
       "seeding_key": {
@@ -2446,7 +2447,7 @@
       "key": "be81990c-8cae-4f74-93af-d2f733ab3793",
       "position": 7,
       "properties": {
-        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 4.1\n* Topic Questions 5.3\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 5.3\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
         "name": "AP Classroom Topic Questions"
       },
       "seeding_key": {
@@ -2727,7 +2728,7 @@
       "key": "7b21fcda-7d77-4e8f-97bc-eb73070b80fa",
       "position": 6,
       "properties": {
-        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 9.3\n* Topic Questions 9.5\n* Topic Questions 9.6\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 6.1\n* Topic Questions 9.5\n* Topic Questions 9.6\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
         "name": "AP Classroom Topic Questions"
       },
       "seeding_key": {
@@ -3319,7 +3320,7 @@
       "key": "92fb37dc-e132-48cc-932c-2012e6a38d3e",
       "position": 6,
       "properties": {
-        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 6.4\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 9.7\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
         "name": "AP Classroom Topic Questions"
       },
       "seeding_key": {
@@ -3582,7 +3583,7 @@
       "key": "db419a42-6817-4da4-9940-81cd190fc38f",
       "position": 6,
       "properties": {
-        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 4.4\n* Topic Questions 5.8\n* Topic Questions 5.9\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 4.4\n* Topic Questions 6.4\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
         "name": "AP Classroom Topic Questions"
       },
       "seeding_key": {
@@ -9368,6 +9369,69 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-22"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-18"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-23"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-18"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-2",
         "framework.shortcode": "csa",
         "standard.shortcode": "VAR-2.A.2"
@@ -9385,6 +9449,20 @@
         "lesson.key": "lesson-2",
         "framework.shortcode": "csa",
         "standard.shortcode": "VAR-2.A.6"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-22"
       }
     },
     {
@@ -9413,6 +9491,20 @@
         "lesson.key": "lesson-3",
         "framework.shortcode": "csa",
         "standard.shortcode": "VAR-2.B.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-22"
       }
     },
     {
@@ -9466,6 +9558,20 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-4",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-22"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-5",
         "framework.shortcode": "csa",
         "standard.shortcode": "CON-2.I.1"
@@ -9497,6 +9603,34 @@
         "lesson.key": "lesson-5",
         "framework.shortcode": "csa",
         "standard.shortcode": "MOD-2.F.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-22"
       }
     },
     {
@@ -9543,6 +9677,20 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-6",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-22"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-7",
         "framework.shortcode": "csa",
         "standard.shortcode": "VAR-2.C.1"
@@ -9571,9 +9719,65 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-7",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-22"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-8",
         "framework.shortcode": "csa",
         "standard.shortcode": "CON-2.I.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-22"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-23"
       }
     },
     {
@@ -9595,6 +9799,34 @@
         "lesson.key": "lesson-9",
         "framework.shortcode": "csa",
         "standard.shortcode": "CON-2.I.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-22"
       }
     }
   ],

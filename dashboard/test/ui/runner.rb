@@ -68,6 +68,8 @@ def main(options)
   rescue => exception
     ChatClient.log "Exception: #{exception.message}", color: 'red'
     raise
+  ensure
+    Infrastructure::Logger.flush
   end
 
   # Produce a final report if we aborted due to excess failures
@@ -337,7 +339,14 @@ def run_tests(env, feature, arguments, log_prefix)
     stderr = stderr.read
     cucumber_succeeded = wait_thr.value.exitstatus == 0
     eyes_succeeded = count_eyes_errors(stdout) == 0
-    return cucumber_succeeded, eyes_succeeded, stdout, stderr, Time.now - start_time
+    duration = Time.now - start_time
+    extra_dimensions = {test_type: test_type,
+                        feature_name: feature}
+    # Metrics for individual feature runs. They will be flushed once all of them run
+    Infrastructure::Logger.put("runner_feature_success", cucumber_succeeded ? 1 : 0, extra_dimensions)
+    Infrastructure::Logger.put("runner_feature_failure", cucumber_succeeded ? 0 : 1, extra_dimensions)
+    Infrastructure::Logger.put("runner_feature_execution_time", duration, extra_dimensions)
+    return cucumber_succeeded, eyes_succeeded, stdout, stderr, duration
   end
 end
 

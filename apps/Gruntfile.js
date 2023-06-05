@@ -31,7 +31,7 @@ module.exports = function (grunt) {
     const loadContext = isDirectory
       ? `let testsContext = require.context(${JSON.stringify(
           path.resolve(process.env.mocha_entry)
-        )}, true, /\\.jsx?$/);`
+        )}, true, /\\.[j|t]sx?$/);`
       : '';
     const runTests = isDirectory
       ? 'testsContext.keys().forEach(testsContext);'
@@ -171,6 +171,12 @@ describe('entry tests', () => {
           src: ['**'],
           //TODO: Would be preferrable to separate Blockly media.
           dest: 'build/package/media',
+        },
+        {
+          expand: true,
+          cwd: 'node_modules/blockly/media',
+          src: ['**'],
+          dest: 'build/package/media/google_blockly',
         },
         {
           expand: true,
@@ -319,13 +325,6 @@ describe('entry tests', () => {
           },
         },
       ],
-    },
-  };
-
-  config.ts = {
-    default: {
-      tsconfig: './tsconfig.json',
-      src: ['./src/**/*.ts', './src/**/*.tsx'],
     },
   };
 
@@ -1261,7 +1260,6 @@ describe('entry tests', () => {
     watch: {
       tasks: [
         'watch',
-        'ts',
         envConstants.HOT ? 'webpack-dev-server:watch' : 'webpack:watch',
       ],
       options: {

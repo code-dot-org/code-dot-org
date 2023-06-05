@@ -11,5 +11,5 @@
   "image": "https://images.code.org/8a841e0b0459055ef17e93618de248c2-Hello World Space.png",
   "cs_topic": "art_and_design,games_and_animations,programming",
   "school_subject": null,
-  "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"ideal\",\"mobile\":\"not_recommended\",\"no_device\":\"incompatible\"}"
+  "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"ideal\",\"mobile\":\"ideal\",\"no_device\":\"incompatible\"}"
 }

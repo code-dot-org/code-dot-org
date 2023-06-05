@@ -2,9 +2,43 @@ import {ToolboxType, CLAMPED_NUMBER_REGEX, DEFAULT_SOUND} from '../constants';
 import cdoTheme from '../themes/cdoTheme';
 import {APP_HEIGHT} from '@cdo/apps/p5lab/constants';
 import {SOUND_PREFIX} from '@cdo/apps/assetManagement/assetPrefix';
+import {
+  convertXmlToJson,
+  positionBlockXmlHelper,
+  positionBlocksOnWorkspace,
+} from './cdoSerializationHelpers';
+import experiments from '@cdo/apps/util/experiments';
+
+/**
+ * Loads blocks to a workspace.
+ * To maintain backwards compatibility we must be able to use the XML source if no JSON state is provided.
+ * @param {Blockly.Workspace} workspace - the current Blockly workspace
+ * @param {xml} xml - workspace serialization, current/legacy format
+ * @param {*} stateToLoad - modern workspace serialization, may not be present
+ */
+export function loadBlocksToWorkspace(workspace, xml, stateToLoad) {
+  if (experiments.isEnabled(experiments.BLOCKLY_JSON)) {
+    if (!stateToLoad) {
+      stateToLoad = convertXmlToJson(xml);
+    }
+    Blockly.serialization.workspaces.load(stateToLoad, workspace);
+    positionBlocksOnWorkspace(workspace);
+  } else {
+    const cdoXmlBlocks = Blockly.Xml.domToBlockSpace(workspace, xml);
+    positionBlocksOnWorkspace(workspace, positionBlockXmlHelper, cdoXmlBlocks);
+  }
+}
 
 export function setHSV(block, h, s, v) {
   block.setColour(Blockly.utils.colour.hsvToHex(h, s, v * 255));
+}
+
+export function injectCss() {
+  return Blockly.Css.inject(true, 'media');
+}
+
+export function resizeSvg(blockSpace) {
+  return Blockly.svgResize(blockSpace);
 }
 
 export function getBlockFields(block) {
@@ -107,8 +141,6 @@ export function getUserTheme(themeOption) {
 
 export function getCode(workspace) {
   return Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(workspace));
-  // After supporting JSON block sources, change to:
-  // return JSON.stringify(Blockly.serialization.workspaces.save(workspace));
 }
 
 export function soundField(onClick, transformText, icon) {
