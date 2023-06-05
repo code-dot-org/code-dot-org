@@ -70,6 +70,7 @@ class BrowserEventsController < ApplicationController
     return nil unless metric_datum["name"]
 
     # Replace the 'name' key with 'metric_name'
+    # (AWS Ruby SDK requires a 'metric_name' parameter)
     metric_datum["metric_name"] = metric_datum["name"]
     metric_datum.delete("name")
     # put_metric_data requires ISO timestamp
