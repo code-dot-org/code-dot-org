@@ -19,6 +19,7 @@ const STUDENT_ONLY_FIELDS = [
   '#student-name-label',
   '#gender-field',
   '#age-dropdown',
+  '#us-state-dropdown',
   '#student-consent',
   '#parent-email-container',
   '#student-gdpr',
