@@ -123,15 +123,32 @@
         "all_vocabulary/coursed/2022": {
           "url": "/s/coursed-2022/vocab"
         },
+        "common_core_and_ngss_guidance/coursed/2022": {
+          "name": "Pangkaraniwang Batayan at Mga Patnubay ng NGSS"
+        },
+        "cross-curricular_extension_activities/coursed/2022": {
+          "name": "Mga Aktibidad sa Cross-Curricular Extension",
+          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
+        },
         "curriculum_guide/coursed/2022": {
           "name": "Gabay sa Kurikulum",
           "url": "https://docs.google.com/document/d/12j5IkeGEWeAmWnZY9krbNSo8oKOKT5nIQGUH5J7Si80/preview"
         },
+        "debugging_guide/coursed/2022": {
+          "name": "Gabay sa Pag-debug",
+          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
+        },
         "implementation_guide/coursed/2022": {
-          "name": "Gabay sa Pagpapatupad"
+          "name": "Gabay sa Pagpapatupad",
+          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
+        },
+        "lesson_type_guide/coursed/2022": {
+          "name": "Gabay sa Uri ng Aralin",
+          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
         },
         "teacher_forum/coursed/2022": {
-          "name": "Pagtitipon ng Guro"
+          "name": "Pagtitipon ng Guro",
+          "url": "https://forum.code.org/c/csf/"
         },
         "virtual_lesson_modifications/coursed/2022": {
           "name": "Mga Pagbabago sa Virtual Lesson",
@@ -185,7 +202,12 @@
         "relay_programming_5/coursed/2022": {
           "name": "Relay Programming"
         },
+        "unplugged_blocks_courses_c-f_/coursed/2022": {
+          "name": "Mga Hindi Naka-plug na Block (Mga Kursong CF)",
+          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
+        },
         "pause_and_think_online/coursed/2022": {
+          "name": "Huminto at Mag-isip Online",
           "type": "Video"
         },
         "open-ended_programming_levels_1/coursed/2022": {
@@ -230,21 +252,37 @@
         "all_vocabulary/coursef/2022": {
           "url": "/s/coursef-2022/vocab"
         },
+        "common_core_and_ngss_guidance/coursef/2022": {
+          "name": "Pangkaraniwang Batayan at Mga Patnubay ng NGSS",
+          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.8jtw7rltkhe3"
+        },
+        "cross-curricular_extension_activities/coursef/2022": {
+          "name": "Mga Aktibidad sa Cross-Curricular Extension",
+          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
+        },
         "curriculum_guide/coursef/2022": {
           "name": "Gabay sa Kurikulum",
           "url": "https://docs.google.com/document/d/12j5IkeGEWeAmWnZY9krbNSo8oKOKT5nIQGUH5J7Si80/preview"
         },
+        "debugging_guide/coursef/2022": {
+          "name": "Gabay sa Pag-debug",
+          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
+        },
         "implementation_guide/coursef/2022": {
-          "name": "Gabay sa Pagpapatupad"
+          "name": "Gabay sa Pagpapatupad",
+          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
         },
         "lesson_type_guide/coursef/2022": {
+          "name": "Gabay sa Uri ng Aralin",
           "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/preview"
         },
         "sprite_lab_documentation/coursef/2022": {
-          "name": "Dokumentasyon ng Sprite Lab"
+          "name": "Dokumentasyon ng Sprite Lab",
+          "url": "https://studio.code.org/docs/spritelab/"
         },
         "teacher_forum/coursef/2022": {
-          "name": "Pagtitipon ng Guro"
+          "name": "Pagtitipon ng Guro",
+          "url": "https://forum.code.org/c/csf/"
         },
         "virtual_lesson_modifications/coursef/2022": {
           "name": "Mga Pagbabago sa Virtual Lesson",
@@ -254,25 +292,75 @@
           "name": "Mga Extension na Aralin sa micro:bit",
           "url": "https://code.org/maker/csf-microbit"
         },
+        "the_power_of_words_lesson_quiz/coursef/2022": {
+          "name": "Ang Kapangyarihan ng mga Salita: Aralin sa Quiz",
+          "url": "https://docs.google.com/forms/d/1OKy2U3F37NSgCBUez9XMi0UJtlHKPXIe_rxy0l_KEOg/copy"
+        },
+        "the_power_of_words_lesson_quiz_1/coursef/2022": {
+          "name": "Ang Kapangyarihan ng mga Salita: Aralin sa Quiz",
+          "url": "https://www.commonsense.org/education/digital-citizenship/quiz/the-power-of-words-lesson-quiz"
+        },
+        "the_power_of_words_lesson_slides/coursef/2022": {
+          "name": "Ang Kapangyarihan ng mga Salita: Aralin sa Mga Slide",
+          "url": "https://docs.google.com/presentation/d/1kUVxRuQ_CUDpeSm3Sqg4yyueITjc3qQMUpSTi0WP4so/edit"
+        },
         "the_power_of_words_the_power_of_words/coursef/2022": {
+          "name": "Ang Kapangyarihan ng mga Salita: Ang Kapangyarihan ng mga Salita",
+          "url": "https://www.commonsense.org/education/videos/the-power-of-words",
           "type": "Video"
+        },
+        "the_power_of_words_words_can_hurt/coursef/2022": {
+          "name": "Ang Kapangyarihan ng mga Salita: Ang mga Salita ay Maaaring Makasakit",
+          "url": "https://docs.google.com/document/d/1gJcgF03GdltY81jfccsl-tOpgwxMfHI5S1KvzhEhyIw/edit"
         },
         "csf_-_course_f_-_slides_2022-2023/coursef/2022": {
           "name": "CSF - Kurso F - Mga Slide 2022-2023",
           "url": "https://docs.google.com/presentation/d/1MMT5npnQb5bWPmUGia4YT_mYMiFczu1HbL-KCShsxYU/template/preview"
         },
         "exploring_apps/coursef/2022": {
-          "name": "Pagtuklas ng mga Apps"
+          "name": "Pagtuklas ng mga Apps",
+          "url": "https://docs.google.com/document/d/1CMFO9cWrBa0E97raNZnEXHC5e2WHrprMokSW5jmJzDs/template/preview"
         },
         "exploring_apps_1/coursef/2022": {
-          "name": "Pagtuklas ng mga Apps"
+          "name": "Pagtuklas ng mga Apps",
+          "url": "https://docs.google.com/document/d/1Vjn1DhjZm17C-Hde97yDHyeFxMzdPlR6Q-rESZgHw2s/template/preview"
         },
         "introducing_sprite_lab_1/coursef/2022": {
           "name": "Ipinapakilala ang Sprite Lab",
+          "url": "https://youtu.be/yd-9xZ275dM",
           "type": "Video"
         },
         "making_sprites/coursef/2022": {
-          "name": "Paggawa ng mga Sprite"
+          "name": "Paggawa ng mga Sprite",
+          "url": "https://docs.google.com/presentation/d/1u8gueXrKIKoYNgTxbr3bIvmbVlCsJcVT7qcDeqsOh1U/template/preview"
+        },
+        "blank_space_stories/coursef/2022": {
+          "name": "Mga Kuwentong Blank Space",
+          "url": "https://docs.google.com/document/d/1fJNyI0WQTi-Q-XMZDn9sIgD_o6KjGHwZesQRa93ko5E/template/preview"
+        },
+        "blank_space_stories_1/coursef/2022": {
+          "name": "Mga Kuwentong Blank Space",
+          "url": "https://docs.google.com/document/d/1mXI-U7ve1JjDchlyhjD53pkdSXKqeMemb7upFGareV4/template/preview"
+        },
+        "mini_project_user_input_programs/coursef/2022": {
+          "name": "Mini Project: Mga Program sa Input ng User",
+          "url": "https://docs.google.com/presentation/d/1AGDl6WPPsPId6J3GXjySlvFJMaLDnt0P9Tu6ujjZeG0/edit#slide=id.gc6acec9c41_0_68"
+        },
+        "mini_project_user_input_programs_1/coursef/2022": {
+          "name": "Mini Project: Mga Program sa Input ng User",
+          "url": "https://docs.google.com/document/d/1nDzSayssOEjdUhPgyhPtCOLrfMYIgLAmWeQTLYnBReM/template/preview"
+        },
+        "teacher_sandbox_level/coursef/2022": {
+          "name": "Antas ng Sandbox ng Guro",
+          "url": "https://studio.code.org/levels/27300"
+        },
+        "user_input_programs/coursef/2022": {
+          "name": "Mga Program sa Input ng User",
+          "url": "https://docs.google.com/document/d/1FZAVAVabeADxUlDZACeZojuPK1gBN7g0_UfYfvxzah4/template/preview"
+        },
+        "running_simulations/coursef/2022": {
+          "name": "Pagpapatakbo ng Mga Simulation",
+          "url": "https://docs.google.com/document/d/1sgUd9UcthM3M-A1EKX1m3AwsgLrivx0jF0i-e_79kk8/edit"
         },
         "ai_impact_on_society/coursef/2022": {
           "name": "AI: Epekto sa Lipunan",
@@ -289,17 +377,29 @@
           "url": "https://youtu.be/x2mRoFNm22g",
           "type": "Video"
         },
+        "get-site-ip-com/coursef/2022": {
+          "name": "get-site-ip-com",
+          "url": "http://get-site-ip.com/"
+        },
         "internet/coursef/2022": {
           "name": "Internet",
+          "url": "https://docs.google.com/document/d/1xqKUsyGloccd5_qulTARCzw5zLpEF3jSFrvDfLYrqAs/edit",
           "type": "Pagtatasa"
         },
         "internet_1/coursef/2022": {
-          "name": "Internet"
+          "name": "Internet",
+          "url": "https://docs.google.com/document/d/1uUY1zm6d7LZySpXzW9CFZaI8tcY4fzw_-w3Z2WbKVwI/edit"
+        },
+        "ip_address_cards_and_delivery_type_cards/coursef/2022": {
+          "name": "Mga IP Address Card at Mga Uri ng Delivery Card",
+          "url": "https://docs.google.com/document/d/1wnDD_Jm7JOApWQ5aPOcZVag4_h7lhBpl-QbCFIZAz6o/edit"
         },
         "the_internet/coursef/2022": {
-          "name": "The Internet"
+          "name": "The Internet",
+          "url": "https://youtu.be/mFOUbqYv1Sc"
         },
         "cs_fundamentals_final_project/coursef/2022": {
+          "name": "Pangwakas na Proyekto ng Mga Batayan sa CS",
           "url": "https://docs.google.com/document/d/1xt4PzGNhs-qJo-ZuRWmsoX4VpCLsk4NIqv38ThewhGo/edit",
           "type": "Rubric"
         },
@@ -319,18 +419,36 @@
         "all_vocabulary/coursee/2022": {
           "url": "/s/coursee-2022/vocab"
         },
+        "common_core_and_ngss_guidance/coursee/2022": {
+          "name": "Pangkaraniwang Batayan at Mga Patnubay ng NGSS"
+        },
+        "cross-curricular_extension_activities/coursee/2022": {
+          "name": "Mga Aktibidad sa Cross-Curricular Extension",
+          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
+        },
         "curriculum_guide/coursee/2022": {
           "name": "Gabay sa Kurikulum",
           "url": "https://docs.google.com/document/d/12j5IkeGEWeAmWnZY9krbNSo8oKOKT5nIQGUH5J7Si80/preview"
         },
+        "debugging_guide/coursee/2022": {
+          "name": "Gabay sa Pag-debug",
+          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
+        },
         "implementation_guide/coursee/2022": {
-          "name": "Gabay sa Pagpapatupad"
+          "name": "Gabay sa Pagpapatupad",
+          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
+        },
+        "lesson_type_guide/coursee/2022": {
+          "name": "Gabay sa Uri ng Aralin",
+          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
         },
         "sprite_lab_documentation/coursee/2022": {
-          "name": "Dokumentasyon ng Sprite Lab"
+          "name": "Dokumentasyon ng Sprite Lab",
+          "url": "https://studio.code.org/docs/spritelab/"
         },
         "teacher_forum/coursee/2022": {
-          "name": "Pagtitipon ng Guro"
+          "name": "Pagtitipon ng Guro",
+          "url": "https://forum.code.org/c/csf/"
         },
         "virtual_lesson_modifications/coursee/2022": {
           "name": "Mga Pagbabago sa Virtual Lesson",
@@ -352,6 +470,7 @@
           "url": "https://docs.google.com/presentation/d/1Zt7oK0fuOR8XyKsCjWos3jfifO1uD0KFZfK8cbJulH8/template/preview"
         },
         "pause_and_think_online/coursee/2022": {
+          "name": "Huminto at Mag-isip Online",
           "type": "Video"
         },
         "turns_angles/coursee/2022": {
@@ -365,10 +484,15 @@
         "functions_unplugged_songwriting_2/coursee/2022": {
           "type": "Pagtatasa"
         },
+        "unplugged_blocks_courses_c-f_/coursee/2022": {
+          "name": "Mga Hindi Naka-plug na Block (Mga Kursong CF)",
+          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
+        },
         "digital_sharing_ethics_video_/coursee/2022": {
           "type": "Video"
         },
         "cs_fundamentals_final_project/coursee/2022": {
+          "name": "Pangwakas na Proyekto ng Mga Batayan sa CS",
           "url": "https://docs.google.com/document/d/10G5rzAr3L3atKbp5JPIX9VyYIPhRwwxpCkzhIVlyHag/edit",
           "type": "Rubric"
         },
@@ -388,37 +512,76 @@
         "all_vocabulary/courseb/2022": {
           "url": "/s/courseb-2022/vocab"
         },
+        "common_core_and_ngss_guidance/courseb/2022": {
+          "name": "Pangkaraniwang Batayan at Mga Patnubay ng NGSS",
+          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.rar8dpsqsjqe"
+        },
+        "cross-curricular_extension_activities/courseb/2022": {
+          "name": "Mga Aktibidad sa Cross-Curricular Extension",
+          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
+        },
         "curriculum_guide/courseb/2022": {
           "name": "Gabay sa Kurikulum",
           "url": "https://docs.google.com/document/d/12j5IkeGEWeAmWnZY9krbNSo8oKOKT5nIQGUH5J7Si80/preview"
         },
+        "debugging_guide/courseb/2022": {
+          "name": "Gabay sa Pag-debug",
+          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
+        },
         "implementation_guide/courseb/2022": {
-          "name": "Gabay sa Pagpapatupad"
+          "name": "Gabay sa Pagpapatupad",
+          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
+        },
+        "lesson_type_guide/courseb/2022": {
+          "name": "Gabay sa Uri ng Aralin",
+          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
         },
         "teacher_forum/courseb/2022": {
-          "name": "Pagtitipon ng Guro"
+          "name": "Pagtitipon ng Guro",
+          "url": "https://forum.code.org/c/csf/"
         },
         "virtual_lesson_modifications/courseb/2022": {
           "name": "Mga Pagbabago sa Virtual Lesson",
           "url": "https://docs.google.com/document/d/1lB1bXzIatKSSWLDLsLnRPXgoKR7Q-YzDQ1ClM0OcurU/view"
         },
         "digital_trails_animal_tracks/courseb/2022": {
+          "name": "Mga Digital Trail: Mga Track ng Hayop",
+          "url": "https://docs.google.com/document/d/1WLUpUXDh1503PwlnJ06DqWr6KaiX7E8KOpDJjrCkLzM/",
           "type": "Handout ng Mag-aaral"
         },
         "digital_trails_digital_trail_squares/courseb/2022": {
+          "name": "Mga Digital Trail: Digital Trail na Parisukat",
+          "url": "https://docs.google.com/document/d/1Ild_AQ98V1kXXvc-ncnC1cTNnIQrZUG_QS-ZiEi4EY8/edit",
           "type": "Handout ng Mag-aaral"
         },
+        "digital_trails_follow_the_digital_trail/courseb/2022": {
+          "name": "Mga Digital Trail: Sundan ang Digital Trail",
+          "url": "https://www.commonsense.org/education/videos/follow-the-digital-trail"
+        },
+        "digital_trails_lesson_slides/courseb/2022": {
+          "name": "Mga Digital Trail: Mga Slide ng Aralin",
+          "url": "https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit"
+        },
+        "feeling_faces_emotion_image/courseb/2022": {
+          "name": "Nadarama ng mga Mukha Imahe ng Emosyon",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
+        },
         "move_it_move_it/courseb/2022": {
-          "name": "Galawin ito, Galawin ito"
+          "name": "Galawin ito, Galawin ito",
+          "url": "https://docs.google.com/document/d/1xavPzpNq1GO7zzOzreES0Kl8FPcbjILFzfmORUqttcg/edit",
+          "type": "Map Activity"
         },
         "move_it_move_it_1/courseb/2022": {
-          "name": "Galawin ito, Galawin ito"
+          "name": "Galawin ito, Galawin ito",
+          "url": "https://docs.google.com/document/d/1eOrX6kpPKLzUD3GpvGy9XxupnMZJrtaeh2bfe0zOz64/edit"
         },
         "move_it_move_it_2/courseb/2022": {
-          "name": "Galawin ito, Galawin ito"
+          "name": "Galawin ito, Galawin ito",
+          "url": "https://docs.google.com/document/d/1bdGOgeZ9Z4MS_yxBLt-Mit2Rhr4rCNWL7HC-i1Qmpi4/edit"
         },
         "move_it_move_it_3/courseb/2022": {
-          "name": "Iusog mo, Iusog mo"
+          "name": "Iusog mo, Iusog mo",
+          "url": "http://youtu.be/aV4rqNUG-Jw?list=PL2DhNKNdmOtqBgWyF5kmy2oPh0U-Zfv2G"
         },
         "how_to_make_a_class_section_on_code_org/courseb/2022": {
           "url": "https://youtu.be/4Wugxc80fNU"
@@ -428,6 +591,9 @@
         },
         "wiggles_-_gonoodle/courseb/2022": {
           "type": "Video"
+        },
+        "feeling_faces_-_emotion_image/courseb/2022": {
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
         },
         "stevie_and_the_big_project/courseb/2022": {
           "name": "Stevie at ang Big Project"
@@ -450,6 +616,7 @@
           "name": "Pagiging Loopy"
         },
         "pause_and_think_online/courseb/2022": {
+          "name": "Huminto at Mag-isip Online",
           "type": "Video"
         },
         "the_big_event/courseb/2022": {
@@ -471,12 +638,19 @@
         "all_vocabulary/express/2022": {
           "url": "/s/express-2022/bokab"
         },
+        "debugging_guide/express/2022": {
+          "name": "Gabay sa Pag-debug"
+        },
         "teacher_forum/express/2022": {
-          "name": "Pagtitipon ng Guro"
+          "name": "Pagtitipon ng Guro",
+          "url": "https://forum.code.org/c/csf/"
         },
         "pair_programming/express/2022": {
           "name": "Pair programming",
           "type": "Video"
+        },
+        "unplugged_blocks_courses_c-f_/express/2022": {
+          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
         },
         "artist_introduction/express/2022": {
           "name": "Introduksiyon ng Artist",
@@ -492,12 +666,14 @@
           "name": "Mga Pagliko at Anggulo"
         },
         "sprite_lab_documentation/express/2022": {
-          "name": "Dokumentasyon ng Sprite Lab"
+          "name": "Dokumentasyon ng Sprite Lab",
+          "url": "https://studio.code.org/docs/spritelab/"
         },
         "sprites_in_action/express/2022": {
           "name": "Sprites sa aksyon"
         },
         "pause_and_think_online/express/2022": {
+          "name": "Huminto at Mag-isip Online",
           "type": "Video"
         },
         "spotify_playlist_all_ages_/express/2022": {
@@ -507,10 +683,20 @@
         "pair_programming_video/express/2022": {
           "type": "Video"
         },
+        "unplugged_blocks_courses_c-f__1/express/2022": {
+          "name": "Mga Hindi Naka-plug na Block (Mga Kursong CF)",
+          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
+        },
+        "text_and_prompts/express/2022": {
+          "name": "Text at Mga Prompt",
+          "url": "https://docs.google.com/presentation/d/1ImZg6MHmaj5ouvrYdgsungbeLXRDAu106-NXOroJg14/template/preview"
+        },
         "variables/express/2022": {
           "name": "Mga variable"
         },
         "cs_fundamentals_final_project/express/2022": {
+          "name": "Pangwakas na Proyekto ng Mga Batayan sa CS",
+          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/",
           "type": "Rubric"
         },
         "csf_express_end_of_course_project_planning_guide/express/2022": {
@@ -525,8 +711,12 @@
         "all_vocabulary/pre-express/2022": {
           "url": "/s/pre-express-2022/bokab"
         },
+        "debugging_guide/pre-express/2022": {
+          "name": "Gabay sa Pag-debug"
+        },
         "teacher_forum/pre-express/2022": {
-          "name": "Pagtitipon ng Guro"
+          "name": "Pagtitipon ng Guro",
+          "url": "https://forum.code.org/c/csf/"
         },
         "20_20_20_rule/pre-express/2022": {
           "type": "Video"
@@ -538,21 +728,38 @@
           "type": "Video"
         },
         "pause_and_think_online/pre-express/2022": {
+          "name": "Huminto at Mag-isip Online",
           "type": "Video"
         },
         "2022_change_log/coursea/2022": {
           "name": "2022 Log ng Pagbabago",
           "url": "https://docs.google.com/document/d/1sX7-ByjcMmuYt8EvJdA9ON2sOYEWn0Cuzifbsyc8bUc/preview"
         },
+        "common_core_and_ngss_guidance/coursea/2022": {
+          "name": "Pangkaraniwang Batayan at Mga Patnubay ng NGSS"
+        },
+        "cross-curricular_extension_activities/coursea/2022": {
+          "name": "Mga Aktibidad sa Cross-Curricular Extension"
+        },
         "curriculum_guide/coursea/2022": {
           "name": "Gabay sa Kurikulum",
           "url": "https://docs.google.com/document/d/12j5IkeGEWeAmWnZY9krbNSo8oKOKT5nIQGUH5J7Si80/preview"
         },
+        "debugging_guide/coursea/2022": {
+          "name": "Gabay sa Pag-debug",
+          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
+        },
         "implementation_guide/coursea/2022": {
-          "name": "Gabay sa Pagpapatupad"
+          "name": "Gabay sa Pagpapatupad",
+          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
+        },
+        "lesson_type_guide/coursea/2022": {
+          "name": "Gabay sa Uri ng Aralin",
+          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
         },
         "teacher_forum/coursea/2022": {
-          "name": "Pagtitipon ng Guro"
+          "name": "Pagtitipon ng Guro",
+          "url": "https://forum.code.org/c/csf/"
         },
         "virtual_lesson_modifications/coursea/2022": {
           "name": "Mga Pagbabago sa Virtual Lesson",
@@ -579,10 +786,18 @@
         "debugging_with_the_step_button/coursea/2022": {
           "type": "Video"
         },
+        "feeling_faces_emotion_image/coursea/2022": {
+          "name": "Nadarama ng mga Mukha Imahe ng Emosyon",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
+        },
+        "feeling_faces_-_emotion_image_1/coursea/2022": {
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
+        },
         "pair-programming/coursea/2022": {
           "type": "Video"
         },
         "pause_and_think_online/coursea/2022": {
+          "name": "Huminto at Mag-isip Online",
           "type": "Video"
         },
         "the_big_event/coursea/2022": {
@@ -608,15 +823,32 @@
         "all_vocabulary/coursec/2022": {
           "url": "/s/coursec-2022/vocab"
         },
+        "common_core_and_ngss_guidance/coursec/2022": {
+          "name": "Pangkaraniwang Batayan at Mga Patnubay ng NGSS"
+        },
+        "cross-curricular_extension_activities/coursec/2022": {
+          "name": "Mga Aktibidad sa Cross-Curricular Extension",
+          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
+        },
         "curriculum_guide/coursec/2022": {
           "name": "Gabay sa Kurikulum",
           "url": "https://docs.google.com/document/d/12j5IkeGEWeAmWnZY9krbNSo8oKOKT5nIQGUH5J7Si80/preview"
         },
+        "debugging_guide_1/coursec/2022": {
+          "name": "Gabay sa Pag-debug",
+          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
+        },
         "implementation_guide/coursec/2022": {
-          "name": "Gabay sa Pagpapatupad"
+          "name": "Gabay sa Pagpapatupad",
+          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
+        },
+        "lesson_type_guide/coursec/2022": {
+          "name": "Gabay sa Uri ng Aralin",
+          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
         },
         "teacher_forum/coursec/2022": {
-          "name": "Pagtitipon ng Guro"
+          "name": "Pagtitipon ng Guro",
+          "url": "https://forum.code.org/c/csf/"
         },
         "virtual_lesson_modifications/coursec/2022": {
           "name": "Mga Pagbabago sa Virtual Lesson",
@@ -648,9 +880,16 @@
         "my_robotic_friends_4/coursec/2022": {
           "name": "Ang Robot Kong Mga Kaibigan"
         },
+        "debugging_guide/coursec/2022": {
+          "name": "Gabay sa Pag-debug"
+        },
         "pair_programming/coursec/2022": {
           "name": "Pair programming",
           "type": "Video"
+        },
+        "unplugged_blocks_courses_c-f_/coursec/2022": {
+          "name": "Mga Hindi Naka-plug na Block (Mga Kursong CF)",
+          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
         },
         "artist_introduction/coursec/2022": {
           "name": "Introduksiyon ng Artist",
@@ -678,6 +917,7 @@
           "url": "https://docs.google.com/document/d/1cJ_FIgqGEt1OikBc53bEJGhFFOLrppJ2pRWAw-bmV0k/view"
         },
         "pause_and_think_online/coursec/2022": {
+          "name": "Huminto at Mag-isip Online",
           "type": "Video"
         },
         "binary_bracelets/coursec/2022": {
@@ -1810,65 +2050,170 @@
           "name": "2021 Log ng Pagbabago",
           "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview"
         },
+        "common_core_and_ngss_guidance/coursef/2021": {
+          "name": "Pangkaraniwang Batayan at Mga Patnubay ng NGSS",
+          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.8jtw7rltkhe3"
+        },
+        "course_vocabulary/coursef/2021": {
+          "name": "Bokabularyo ng Kurso",
+          "url": "https://studio.code.org/s/coursef-2021/vocab"
+        },
+        "cross-curricular_extension_activities_1/coursef/2021": {
+          "name": "Mga Aktibidad sa Cross-Curricular Extension",
+          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
+        },
+        "csta_standards_mapping/coursef/2021": {
+          "name": "Pagmapa ng Mga Pamantayan ng CSTA",
+          "url": "https://studio.code.org/s/coursef-2021/standards"
+        },
         "curriculum_guide_1/coursef/2021": {
-          "name": "Gabay sa Kurikulum"
+          "name": "Gabay sa Kurikulum",
+          "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview"
+        },
+        "debugging_guide/coursef/2021": {
+          "name": "Gabay sa Pag-debug",
+          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
         },
         "implementation_guide/coursef/2021": {
-          "name": "Gabay sa Pagpapatupad"
+          "name": "Gabay sa Pagpapatupad",
+          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
+        },
+        "lesson_type_guide/coursef/2021": {
+          "name": "Gabay sa Uri ng Aralin",
+          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
         },
         "sprite_lab_documentation_1/coursef/2021": {
-          "name": "Dokumentasyon ng Sprite Lab"
+          "name": "Dokumentasyon ng Sprite Lab",
+          "url": "https://studio.code.org/docs/spritelab/"
         },
         "teacher_forum_1/coursef/2021": {
-          "name": "Pagtitipon ng Guro"
+          "name": "Pagtitipon ng Guro",
+          "url": "https://forum.code.org/c/csf/"
         },
         "virtual_lesson_modifications/coursef/2021": {
           "name": "Mga Pagbabago sa Virtual Lesson",
           "url": "https://docs.google.com/document/d/14BNL2IO5Dayx5BWeT9wh_w2VXfea_TvB_pCRpuojuho/edit"
         },
         "exploring_apps/coursef/2021": {
-          "name": "Pagtuklas ng mga Apps"
+          "name": "Pagtuklas ng mga Apps",
+          "url": "https://docs.google.com/document/d/1CMFO9cWrBa0E97raNZnEXHC5e2WHrprMokSW5jmJzDs/template/preview"
         },
         "exploring_apps_1/coursef/2021": {
-          "name": "Pagtuklas ng mga Apps"
+          "name": "Pagtuklas ng mga Apps",
+          "url": "https://docs.google.com/document/d/1Vjn1DhjZm17C-Hde97yDHyeFxMzdPlR6Q-rESZgHw2s/template/preview"
         },
         "introducing_sprite_lab/coursef/2021": {
-          "name": "Ipinapakilala ang Sprite Lab"
+          "name": "Ipinapakilala ang Sprite Lab",
+          "url": "https://docs.google.com/presentation/d/1DViz9dJjZv01OJ0uKKUkzD35L5BwSt4ot46KyTonX3A/template/preview"
         },
         "introducing_sprite_lab_1/coursef/2021": {
           "name": "Ipinapakilala ang Sprite Lab",
+          "url": "https://youtu.be/yd-9xZ275dM",
           "type": "Video"
         },
         "making_sprites/coursef/2021": {
-          "name": "Paggawa ng mga Sprite"
+          "name": "Paggawa ng mga Sprite",
+          "url": "https://docs.google.com/presentation/d/1u8gueXrKIKoYNgTxbr3bIvmbVlCsJcVT7qcDeqsOh1U/template/preview"
         },
         "sprite_lab_documentation/coursef/2021": {
-          "name": "Dokumentasyon ng Sprite Lab"
+          "name": "Dokumentasyon ng Sprite Lab",
+          "url": "https://studio.code.org/docs/spritelab/"
         },
         "sprites_in_action/coursef/2021": {
-          "name": "Sprites sa aksyon"
+          "name": "Sprites sa aksyon",
+          "url": "https://docs.google.com/presentation/d/1JdBmPn9XHWiXhGALqwxoR1g6R5TwFaQhVRmq22XLdYY/template/preview"
+        },
+        "the_power_of_words_lesson_quiz/coursef/2021": {
+          "name": "Ang Kapangyarihan ng mga Salita: Aralin sa Quiz",
+          "url": "https://docs.google.com/forms/d/1OKy2U3F37NSgCBUez9XMi0UJtlHKPXIe_rxy0l_KEOg/copy"
+        },
+        "the_power_of_words_lesson_quiz_answer_key/coursef/2021": {
+          "name": "Ang Kapangyarihan ng mga Salita: Aralin sa Quiz",
+          "url": "https://www.commonsense.org/education/digital-citizenship/quiz/the-power-of-words-lesson-quiz"
+        },
+        "the_power_of_words_lesson_slides/coursef/2021": {
+          "name": "Ang Kapangyarihan ng mga Salita: Aralin sa Mga Slide",
+          "url": "https://docs.google.com/presentation/d/1kUVxRuQ_CUDpeSm3Sqg4yyueITjc3qQMUpSTi0WP4so/edit"
         },
         "the_power_of_words_the_power_of_words/coursef/2021": {
+          "name": "Ang Kapangyarihan ng mga Salita: Ang Kapangyarihan ng mga Salita",
+          "url": "https://www.commonsense.org/education/videos/the-power-of-words",
           "type": "Video"
         },
+        "the_power_of_words_words_can_hurt/coursef/2021": {
+          "name": "Ang Kapangyarihan ng mga Salita: Ang mga Salita ay Maaaring Makasakit",
+          "url": "https://docs.google.com/document/d/1gJcgF03GdltY81jfccsl-tOpgwxMfHI5S1KvzhEhyIw/edit"
+        },
+        "blank_space_stories/coursef/2021": {
+          "name": "Mga Kuwentong Blank Space",
+          "url": "https://docs.google.com/document/d/1mXI-U7ve1JjDchlyhjD53pkdSXKqeMemb7upFGareV4/template/preview"
+        },
+        "blank_space_stories_-_worksheet/coursef/2021": {
+          "name": "Mga Kuwentong Blank Space",
+          "url": "https://docs.google.com/document/d/1fJNyI0WQTi-Q-XMZDn9sIgD_o6KjGHwZesQRa93ko5E/template/preview"
+        },
+        "variables_blank_space_stories/coursef/2021": {
+          "name": "Mga Variable: Mga Kwentong Blank Space",
+          "url": "https://docs.google.com/presentation/d/1x7kbu1-DNs0lAkb6WMVzjye3NrMjA0jAEiwj6o2_B1g/template/preview"
+        },
+        "text_and_prompts/coursef/2021": {
+          "name": "Text at Mga Prompt",
+          "url": "https://docs.google.com/presentation/d/1ImZg6MHmaj5ouvrYdgsungbeLXRDAu106-NXOroJg14/template/preview"
+        },
+        "mini_project_user_input_programs/coursef/2021": {
+          "name": "Mini Project: Mga Program sa Input ng User",
+          "url": "https://docs.google.com/presentation/d/1AGDl6WPPsPId6J3GXjySlvFJMaLDnt0P9Tu6ujjZeG0/edit#slide=id.gc6acec9c41_0_68"
+        },
+        "mini_project_user_input_programs_1/coursef/2021": {
+          "name": "Mini Project: Mga Program sa Input ng User",
+          "url": "https://docs.google.com/document/d/1nDzSayssOEjdUhPgyhPtCOLrfMYIgLAmWeQTLYnBReM/template/preview"
+        },
+        "teacher_sandbox_level/coursef/2021": {
+          "name": "Antas ng Sandbox ng Guro",
+          "url": "https://studio.code.org/levels/27300"
+        },
+        "user_input_programs/coursef/2021": {
+          "name": "Mga Program sa Input ng User",
+          "url": "https://docs.google.com/document/d/1FZAVAVabeADxUlDZACeZojuPK1gBN7g0_UfYfvxzah4/template/preview"
+        },
         "pause_and_think_online/coursef/2021": {
+          "name": "Huminto at Mag-isip Online",
+          "url": "https://www.youtube.com/watch?v=X_duZ-1LApg&t=0s",
           "type": "Video"
         },
         "activity-answer-for-loop-fun/coursef/2021": {
-          "name": "Saya sa For Loop"
+          "name": "Saya sa For Loop",
+          "url": "https://docs.google.com/document/d/1DPEOgWHVAAfnLXhuBWDw51nnGy1qSV9QPj9L2rUrvv8/edit"
         },
         "csf-for-loop-fun-assessment/coursef/2021": {
           "name": "Saya sa For Loop",
+          "url": "https://docs.google.com/document/d/1iyfroULEOlaLH52MY9PUwUHPk9R6jAMn0rbjlwNtCWs/edit",
           "type": "Pagtatasa"
         },
         "csf-for-loop-fun-worksheet/coursef/2021": {
-          "name": "Saya sa For Loop"
+          "name": "Saya sa For Loop",
+          "url": "https://docs.google.com/document/d/15Sn7JZ-Twp3SUK6ObDClqwueAoA_0Wn0MGlIdxSQGHM/edit"
+        },
+        "flf-assessment-teacher-key/coursef/2021": {
+          "name": "Para sa Loop Fun - Assessment Key",
+          "url": "https://docs.google.com/document/d/11nIyoZ8jLVO-US-b0P8B-kisfFGdTwY6xjKhbTi-gGI/edit",
+          "type": "Key ng Guro"
         },
         "lesson-in-action-for-loop-fun/coursef/2021": {
-          "name": "Saya sa For Loop"
+          "name": "Saya sa For Loop",
+          "url": "https://www.youtube.com/watch?v=HO4uhoahtjM"
         },
         "unplugged-video-for-loop-fun/coursef/2021": {
-          "name": "Saya sa For Loop"
+          "name": "Saya sa For Loop",
+          "url": "https://youtu.be/mX857v5B4gE"
+        },
+        "course-cf-blockly-blocks/coursef/2021": {
+          "name": "Mga Hindi Naka-plug na Block (Mga Kursong CF)",
+          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
+        },
+        "running-simulations/coursef/2021": {
+          "name": "Pagpapatakbo ng Mga Simulation",
+          "url": "https://docs.google.com/document/d/1sgUd9UcthM3M-A1EKX1m3AwsgLrivx0jF0i-e_79kk8/edit"
         },
         "ai-ml/coursef/2021": {
           "name": "AI: Machine Learning",
@@ -1886,58 +2231,130 @@
           "type": "Video"
         },
         "assessment-answer-internet/coursef/2021": {
-          "name": "Internet"
+          "name": "Internet",
+          "url": "https://docs.google.com/document/d/1uUY1zm6d7LZySpXzW9CFZaI8tcY4fzw_-w3Z2WbKVwI/edit"
         },
         "csf-internet-assessment/coursef/2021": {
           "name": "Internet",
+          "url": "https://docs.google.com/document/d/1xqKUsyGloccd5_qulTARCzw5zLpEF3jSFrvDfLYrqAs/edit",
           "type": "Pagtatasa"
         },
+        "csf-ip-address-cards-and-delivery-type-cards/coursef/2021": {
+          "name": "Mga IP Address Card at Mga Uri ng Delivery Card",
+          "url": "https://docs.google.com/document/d/1wnDD_Jm7JOApWQ5aPOcZVag4_h7lhBpl-QbCFIZAz6o/edit"
+        },
+        "get-site-ip-com/coursef/2021": {
+          "name": "get-site-ip-com",
+          "url": "http://get-site-ip.com/"
+        },
         "unplugged-video-internet/coursef/2021": {
-          "name": "The Internet"
+          "name": "The Internet",
+          "url": "https://youtu.be/mFOUbqYv1Sc"
+        },
+        "design-process/coursef/2021": {
+          "name": "Proseso ng Pagdidisenyo",
+          "url": "https://docs.google.com/document/d/18hBG-cWRYOkpNXFelRFUVgRrMd4XQsvZziH-mtNKbec/"
+        },
+        "final-project-design-worksheet/coursef/2021": {
+          "name": "Pangwakas na Disenyo ng Proyekto",
+          "url": "https://docs.google.com/document/d/1sVrwglrvfm-cq9dzbvB9Cn2iuztrs3_VdWjluYPNaDE/"
         },
         "rubric-csf-final-projects/coursef/2021": {
+          "name": "Pangwakas na Proyekto ng Mga Batayan sa CS",
+          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/",
           "type": "Rubric"
         },
         "2021_change_log/courseb/2021": {
           "name": "2021 Log ng Pagbabago",
           "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview"
         },
+        "common_core_and_ngss_guidance/courseb/2021": {
+          "name": "Pangkaraniwang Batayan at Mga Patnubay ng NGSS",
+          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.rar8dpsqsjqe"
+        },
+        "course_vocabulary/courseb/2021": {
+          "name": "Bokabularyo ng Kurso",
+          "url": "https://studio.code.org/s/courseb-2021/vocab"
+        },
+        "cross-curricular_extension_activities/courseb/2021": {
+          "name": "Mga Aktibidad sa Cross-Curricular Extension",
+          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
+        },
+        "csta_standards_mapping/courseb/2021": {
+          "name": "Pagmapa ng Mga Pamantayan ng CSTA",
+          "url": "https://studio.code.org/s/courseb-2021/standards"
+        },
         "curriculum_guide_1/courseb/2021": {
-          "name": "Gabay sa Kurikulum"
+          "name": "Gabay sa Kurikulum",
+          "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview"
+        },
+        "debugging_guide/courseb/2021": {
+          "name": "Gabay sa Pag-debug",
+          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
         },
         "implementation_guide/courseb/2021": {
-          "name": "Gabay sa Pagpapatupad"
+          "name": "Gabay sa Pagpapatupad",
+          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
+        },
+        "lesson_type_guide/courseb/2021": {
+          "name": "Gabay sa Uri ng Aralin",
+          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
         },
         "teacher_forum_1/courseb/2021": {
-          "name": "Pagtitipon ng Guro"
+          "name": "Pagtitipon ng Guro",
+          "url": "https://forum.code.org/c/csf/"
         },
         "virtual_lesson_modifications/courseb/2021": {
           "name": "Mga Pagbabago sa Virtual Lesson",
           "url": "https://docs.google.com/document/d/1uR3JBx-UWSomzLMGgH8xPbeU720RsUECNufH7VObUgk/edit"
         },
         "digital-trails-animal-tracks/courseb/2021": {
+          "name": "Mga Digital Trail: Mga Track ng Hayop",
+          "url": "https://docs.google.com/document/d/1WLUpUXDh1503PwlnJ06DqWr6KaiX7E8KOpDJjrCkLzM/",
           "type": "Handout ng Mag-aaral"
         },
         "digital-trails-digital-trail-squares/courseb/2021": {
+          "name": "Mga Digital Trail: Digital Trail na Parisukat",
+          "url": "https://docs.google.com/document/d/1Ild_AQ98V1kXXvc-ncnC1cTNnIQrZUG_QS-ZiEi4EY8/edit",
           "type": "Handout ng Mag-aaral"
         },
+        "digital-trails-follow-the-digital-trail/courseb/2021": {
+          "name": "Mga Digital Trail: Sundan ang Digital Trail",
+          "url": "https://www.commonsense.org/education/videos/follow-the-digital-trail"
+        },
+        "digital-trails-lesson-slides/courseb/2021": {
+          "name": "Mga Digital Trail: Mga Slide ng Aralin",
+          "url": "https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit"
+        },
+        "feeling_faces_emotion_image/courseb/2021": {
+          "name": "Nadarama ng mga Mukha Imahe ng Emosyon",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
+        },
         "mimi-activity/courseb/2021": {
-          "name": "Galawin ito, Galawin ito"
+          "name": "Galawin ito, Galawin ito",
+          "url": "https://docs.google.com/document/d/1xavPzpNq1GO7zzOzreES0Kl8FPcbjILFzfmORUqttcg/edit",
+          "type": "Map Activity"
         },
         "mimi-debugging/courseb/2021": {
-          "name": "Galawin ito, Galawin ito"
+          "name": "Galawin ito, Galawin ito",
+          "url": "https://docs.google.com/document/d/1eOrX6kpPKLzUD3GpvGy9XxupnMZJrtaeh2bfe0zOz64/edit"
         },
         "mimi-teacher-puzzle/courseb/2021": {
-          "name": "Galawin ito, Galawin ito"
+          "name": "Galawin ito, Galawin ito",
+          "url": "https://docs.google.com/document/d/1bdGOgeZ9Z4MS_yxBLt-Mit2Rhr4rCNWL7HC-i1Qmpi4/edit"
         },
         "teacher-video-move-it/courseb/2021": {
-          "name": "Iusog mo, Iusog mo"
+          "name": "Iusog mo, Iusog mo",
+          "url": "http://youtu.be/aV4rqNUG-Jw?list=PL2DhNKNdmOtqBgWyF5kmy2oPh0U-Zfv2G"
         },
         "pair-programming-vid/courseb/2021": {
           "name": "Pair programming"
         },
         "wiggles_-_gonoodle/courseb/2021": {
           "type": "Video"
+        },
+        "feeling_faces_-_emotion_image/courseb/2021": {
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
         },
         "stevie_and_the_big_project/courseb/2021": {
           "name": "Stevie at ang Big Project"
@@ -1960,6 +2377,7 @@
           "name": "Pagiging Loopy"
         },
         "common-sense-media-pause-think/courseb/2021": {
+          "name": "Huminto at Mag-isip Online",
           "type": "Video"
         },
         "assessment-answer-big-event/courseb/2021": {
@@ -1977,14 +2395,37 @@
           "name": "2021 Log ng Pagbabago",
           "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview"
         },
+        "common_core_and_ngss_guidance/coursea/2021": {
+          "name": "Pangkaraniwang Batayan at Mga Patnubay ng NGSS"
+        },
+        "course_vocabulary/coursea/2021": {
+          "name": "Bokabularyo ng Kurso"
+        },
+        "cross-curricular_extension_activities/coursea/2021": {
+          "name": "Mga Aktibidad sa Cross-Curricular Extension"
+        },
+        "csta_standards_mapping/coursea/2021": {
+          "name": "Pagmapa ng Mga Pamantayan ng CSTA"
+        },
         "curriculum_guide_1/coursea/2021": {
-          "name": "Gabay sa Kurikulum"
+          "name": "Gabay sa Kurikulum",
+          "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview"
+        },
+        "debugging_guide/coursea/2021": {
+          "name": "Gabay sa Pag-debug",
+          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
         },
         "implementation_guide/coursea/2021": {
-          "name": "Gabay sa Pagpapatupad"
+          "name": "Gabay sa Pagpapatupad",
+          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
+        },
+        "lesson_type_guide/coursea/2021": {
+          "name": "Gabay sa Uri ng Aralin",
+          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
         },
         "teacher_forum_1/coursea/2021": {
-          "name": "Pagtitipon ng Guro"
+          "name": "Pagtitipon ng Guro",
+          "url": "https://forum.code.org/c/csf/"
         },
         "virtual_lesson_modifications/coursea/2021": {
           "name": "Mga Pagbabago sa Virtual Lesson",
@@ -2011,11 +2452,31 @@
         "csf_debugging_k1_blocks/coursea/2021": {
           "type": "Video"
         },
+        "feeling_faces_emotion_image/coursea/2021": {
+          "name": "Nadarama ng mga Mukha Imahe ng Emosyon",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
+        },
+        "feeling_faces_-_emotion_image_1/coursea/2021": {
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
+        },
+        "feeling_faces_emotion_image_1/coursea/2021": {
+          "name": "Nadarama ng mga Mukha Imahe ng Emosyon",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
+        },
         "pair-programming/coursea/2021": {
           "type": "Video"
         },
+        "feeling_faces_emotion_image_2/coursea/2021": {
+          "name": "Nadarama ng mga Mukha Imahe ng Emosyon",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
+        },
         "common-sense-media-pause-think/coursea/2021": {
+          "name": "Huminto at Mag-isip Online",
           "type": "Video"
+        },
+        "feeling_faces_emotion_image_3/coursea/2021": {
+          "name": "Nadarama ng mga Mukha Imahe ng Emosyon",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
         },
         "assessment-answer-big-event/coursea/2021": {
           "name": "The Big Event"
@@ -2024,21 +2485,51 @@
           "name": "The Big Event",
           "type": "Pagtatasa"
         },
+        "feeling_faces_-_emotion_image_2/coursea/2021": {
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
+        },
         "unplugged-video-big-event/coursea/2021": {
           "name": "The Big Event"
+        },
+        "feeling_faces_-_emotion_image_3/coursea/2021": {
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
         },
         "2021_change_log/coursec/2021": {
           "name": "2021 Log ng Pagbabago",
           "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview"
         },
+        "common_core_and_ngss_guidance/coursec/2021": {
+          "name": "Pangkaraniwang Batayan at Mga Patnubay ng NGSS"
+        },
+        "course_vocabulary/coursec/2021": {
+          "name": "Bokabularyo ng Kurso"
+        },
+        "cross-curricular_extension_activities/coursec/2021": {
+          "name": "Mga Aktibidad sa Cross-Curricular Extension",
+          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
+        },
+        "csta_standards_mapping/coursec/2021": {
+          "name": "Pagmapa ng Mga Pamantayan ng CSTA"
+        },
         "curriculum_guide_1/coursec/2021": {
-          "name": "Gabay sa Kurikulum"
+          "name": "Gabay sa Kurikulum",
+          "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview"
+        },
+        "debugging_guide_1/coursec/2021": {
+          "name": "Gabay sa Pag-debug",
+          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
         },
         "implementation_guide/coursec/2021": {
-          "name": "Gabay sa Pagpapatupad"
+          "name": "Gabay sa Pagpapatupad",
+          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
+        },
+        "lesson_type_guide/coursec/2021": {
+          "name": "Gabay sa Uri ng Aralin",
+          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
         },
         "teacher_forum_1/coursec/2021": {
-          "name": "Pagtitipon ng Guro"
+          "name": "Pagtitipon ng Guro",
+          "url": "https://forum.code.org/c/csf/"
         },
         "virtual_lesson_modifications/coursec/2021": {
           "name": "Mga Pagbabago sa Virtual Lesson",
@@ -2062,9 +2553,16 @@
         "unplugged-video-robotic-friends/coursec/2021": {
           "name": "Ang Robot Kong Mga Kaibigan"
         },
+        "debugging_guide/coursec/2021": {
+          "name": "Gabay sa Pag-debug"
+        },
         "pair-programming-vid/coursec/2021": {
           "name": "Pair programming",
           "type": "Video"
+        },
+        "course-cf-blockly-blocks/coursec/2021": {
+          "name": "Mga Hindi Naka-plug na Block (Mga Kursong CF)",
+          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
         },
         "csf-artist-intro-video/coursec/2021": {
           "name": "Introduksiyon ng Artist",
@@ -2078,6 +2576,9 @@
           "name": "Mga Pagliko at Anggulo",
           "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs"
         },
+        "feeling_faces_emotion_image/coursec/2021": {
+          "name": "Nadarama ng mga Mukha Imahe ng Emosyon"
+        },
         "assessment-answer-big-event/coursec/2021": {
           "name": "The Big Event"
         },
@@ -2089,6 +2590,7 @@
           "name": "The Big Event"
         },
         "pause_and_think_online/coursec/2021": {
+          "name": "Huminto at Mag-isip Online",
           "type": "Video"
         },
         "assessment-answer-binary-bracelets/coursec/2021": {
@@ -2111,14 +2613,38 @@
           "name": "2021 Log ng Pagbabago",
           "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview"
         },
+        "common_core_and_ngss_guidance/coursed/2021": {
+          "name": "Pangkaraniwang Batayan at Mga Patnubay ng NGSS"
+        },
+        "course_vocabulary/coursed/2021": {
+          "name": "Bokabularyo ng Kurso"
+        },
+        "cross-curricular_extension_activities/coursed/2021": {
+          "name": "Mga Aktibidad sa Cross-Curricular Extension",
+          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
+        },
+        "csta_standards_mapping/coursed/2021": {
+          "name": "Pagmapa ng Mga Pamantayan ng CSTA"
+        },
         "curriculum_guide_1/coursed/2021": {
-          "name": "Gabay sa Kurikulum"
+          "name": "Gabay sa Kurikulum",
+          "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview"
+        },
+        "debugging_guide/coursed/2021": {
+          "name": "Gabay sa Pag-debug",
+          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
         },
         "implementation_guide/coursed/2021": {
-          "name": "Gabay sa Pagpapatupad"
+          "name": "Gabay sa Pagpapatupad",
+          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
+        },
+        "lesson_type_guide/coursed/2021": {
+          "name": "Gabay sa Uri ng Aralin",
+          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
         },
         "teacher_forum_1/coursed/2021": {
-          "name": "Pagtitipon ng Guro"
+          "name": "Pagtitipon ng Guro",
+          "url": "https://forum.code.org/c/csf/"
         },
         "virtual_lesson_modifications/coursed/2021": {
           "name": "Mga Pagbabago sa Virtual Lesson",
@@ -2164,10 +2690,15 @@
         "unplugged-video-relay-programming/coursed/2021": {
           "name": "Relay Programming"
         },
+        "course-cf-blockly-blocks/coursed/2021": {
+          "name": "Mga Hindi Naka-plug na Block (Mga Kursong CF)",
+          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
+        },
         "events-in-bounce-how-do-they-happen/coursed/2021": {
           "name": "Mga Event sa Bounce - Paano Ito Nangyayari?"
         },
         "pause_and_think_online/coursed/2021": {
+          "name": "Huminto at Mag-isip Online",
           "type": "Video"
         },
         "dance-party-playlist/coursed/2021": {
@@ -2175,6 +2706,7 @@
           "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
         },
         "pause_and_think_online_1/coursed/2021": {
+          "name": "Huminto at Mag-isip Online",
           "type": "Video"
         },
         "assessment-answer-conditionals-cards/coursed/2021": {
@@ -2196,12 +2728,25 @@
         "course-d-project-planning-guide-1/coursed/2021": {
           "type": "Gabay sa Proyekto"
         },
+        "course_vocabulary_1/express/2021": {
+          "name": "Bokabularyo ng Kurso"
+        },
+        "csta_standards_mapping/express/2021": {
+          "name": "Pagmapa ng Mga Pamantayan ng CSTA"
+        },
+        "debugging_guide/express/2021": {
+          "name": "Gabay sa Pag-debug"
+        },
         "teacher_forum_1/express/2021": {
-          "name": "Pagtitipon ng Guro"
+          "name": "Pagtitipon ng Guro",
+          "url": "https://forum.code.org/c/csf/"
         },
         "pair_programming/express/2021": {
           "name": "Pair programming",
           "type": "Video"
+        },
+        "unplugged_blocks_courses_c-f_/express/2021": {
+          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
         },
         "artist_introduction/express/2021": {
           "name": "Introduksiyon ng Artist",
@@ -2217,18 +2762,21 @@
           "name": "Mga Pagliko at Anggulo"
         },
         "sprite_lab_documentation/express/2021": {
-          "name": "Dokumentasyon ng Sprite Lab"
+          "name": "Dokumentasyon ng Sprite Lab",
+          "url": "https://studio.code.org/docs/spritelab/"
         },
         "making_sprites/express/2021": {
           "name": "Paggawa ng mga Sprite"
         },
         "sprite_lab_documentation_1/express/2021": {
-          "name": "Dokumentasyon ng Sprite Lab"
+          "name": "Dokumentasyon ng Sprite Lab",
+          "url": "https://studio.code.org/docs/spritelab/"
         },
         "sprites_in_action/express/2021": {
           "name": "Sprites sa aksyon"
         },
         "pause_and_think_online/express/2021": {
+          "name": "Huminto at Mag-isip Online",
           "type": "Video"
         },
         "dance-party-playlist/express/2021": {
@@ -2238,6 +2786,27 @@
         "pair_programming_video/express/2021": {
           "type": "Video"
         },
+        "unplugged_blocks_courses_c-f__1/express/2021": {
+          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
+        },
+        "unplugged_blocks_courses_c-f__2/express/2021": {
+          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
+        },
+        "unplugged_blocks_courses_c-f__3/express/2021": {
+          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
+        },
+        "unplugged_blocks_courses_c-f__4/express/2021": {
+          "name": "Mga Hindi Naka-plug na Block (Mga Kursong CF)",
+          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
+        },
+        "unplugged_blocks_courses_c-f__5/express/2021": {
+          "name": "Mga Hindi Naka-plug na Block (Mga Kursong CF)",
+          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
+        },
+        "text_and_prompts/express/2021": {
+          "name": "Text at Mga Prompt",
+          "url": "https://docs.google.com/presentation/d/1ImZg6MHmaj5ouvrYdgsungbeLXRDAu106-NXOroJg14/template/preview"
+        },
         "variables_video/express/2021": {
           "name": "Mga variable"
         },
@@ -2245,10 +2814,22 @@
           "type": "Gabay sa Proyekto"
         },
         "rubric-csf-final-projects/express/2021": {
+          "name": "Pangwakas na Proyekto ng Mga Batayan sa CS",
+          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/",
           "type": "Rubric"
         },
+        "course_vocabulary/pre-express/2021": {
+          "name": "Bokabularyo ng Kurso"
+        },
+        "csta_standards_mapping/pre-express/2021": {
+          "name": "Pagmapa ng Mga Pamantayan ng CSTA"
+        },
+        "debugging_guide/pre-express/2021": {
+          "name": "Gabay sa Pag-debug"
+        },
         "teacher_forum_1/pre-express/2021": {
-          "name": "Pagtitipon ng Guro"
+          "name": "Pagtitipon ng Guro",
+          "url": "https://forum.code.org/c/csf/"
         },
         "20_20_20_rule/pre-express/2021": {
           "type": "Video"
@@ -2260,35 +2841,66 @@
           "type": "Video"
         },
         "common-sense-media-pause-think/pre-express/2021": {
+          "name": "Huminto at Mag-isip Online",
           "type": "Video"
         },
         "2021_change_log/coursee/2021": {
           "name": "2021 Log ng Pagbabago",
           "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview"
         },
+        "common_core_and_ngss_guidance/coursee/2021": {
+          "name": "Pangkaraniwang Batayan at Mga Patnubay ng NGSS"
+        },
+        "course_vocabulary/coursee/2021": {
+          "name": "Bokabularyo ng Kurso"
+        },
+        "cross-curricular_extension_activities/coursee/2021": {
+          "name": "Mga Aktibidad sa Cross-Curricular Extension",
+          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
+        },
+        "csta_standards_mapping/coursee/2021": {
+          "name": "Pagmapa ng Mga Pamantayan ng CSTA"
+        },
         "curriculum_guide_1/coursee/2021": {
-          "name": "Gabay sa Kurikulum"
+          "name": "Gabay sa Kurikulum",
+          "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview"
+        },
+        "debugging_guide/coursee/2021": {
+          "name": "Gabay sa Pag-debug",
+          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
         },
         "implementation_guide/coursee/2021": {
-          "name": "Gabay sa Pagpapatupad"
+          "name": "Gabay sa Pagpapatupad",
+          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
+        },
+        "lesson_type_guide/coursee/2021": {
+          "name": "Gabay sa Uri ng Aralin",
+          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
         },
         "sprite_lab_documentation_1/coursee/2021": {
-          "name": "Dokumentasyon ng Sprite Lab"
+          "name": "Dokumentasyon ng Sprite Lab",
+          "url": "https://studio.code.org/docs/spritelab/"
         },
         "teacher_forum_1/coursee/2021": {
-          "name": "Pagtitipon ng Guro"
+          "name": "Pagtitipon ng Guro",
+          "url": "https://forum.code.org/c/csf/"
         },
         "virtual_lesson_modifications/coursee/2021": {
           "name": "Mga Pagbabago sa Virtual Lesson",
           "url": "https://docs.google.com/document/d/1vQPpivN-p1sQfT5TuiiEXU2Ppy9e6vikeIwfStWF_Vw/edit"
         },
+        "follow_the_algorithm/coursee/2021": {
+          "name": "Sundin ang Algorithm"
+        },
         "sprite_lab_documentation/coursee/2021": {
-          "name": "Dokumentasyon ng Sprite Lab"
+          "name": "Dokumentasyon ng Sprite Lab",
+          "url": "https://studio.code.org/docs/spritelab/"
         },
         "private-and-personal-information-exit-ticket/coursee/2021": {
           "type": "Handout ng Mag-aaral"
         },
         "common-sense-media-pause-think/coursee/2021": {
+          "name": "Huminto at Mag-isip Online",
           "type": "Video"
         },
         "digital-sharing-video/coursee/2021": {
@@ -2305,10 +2917,20 @@
         "csf-songwriting-assessment/coursee/2021": {
           "type": "Pagtatasa"
         },
+        "course-cf-blockly-blocks/coursee/2021": {
+          "name": "Mga Hindi Naka-plug na Block (Mga Kursong CF)",
+          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
+        },
         "designing_for_accessibility_1/coursee/2021": {
           "name": "Pagdidisenyo sa Accessibility"
         },
+        "design-process/coursee/2021": {
+          "name": "Proseso ng Pagdidisenyo",
+          "url": "https://docs.google.com/document/d/18hBG-cWRYOkpNXFelRFUVgRrMd4XQsvZziH-mtNKbec/"
+        },
         "rubric-csf-final-projects/coursee/2021": {
+          "name": "Pangwakas na Proyekto ng Mga Batayan sa CS",
+          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/",
           "type": "Rubric"
         },
         "ai_what_is_machine_learning_/csd/2021": {
