@@ -59,7 +59,7 @@ And /^I create a new "([^"]*)" student section with course "([^"]*)", version "(
     When I select email login
 
     And I wait until element "button:contains(#{marketing_audience})" is visible
-    And I press keys "Testing section" for element "#uitest-section-name-setup"
+    And I press keys "Untitled Section" for element "#uitest-section-name-setup"
     And I press the first "input[name='grades[]']" element
     And I click selector "button:contains(#{marketing_audience})"
     And I press the first "input[name='#{assignment_family}']" element
