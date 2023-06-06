@@ -359,9 +359,9 @@
   farsi_page_founders_slide_06: "In 2013, Hadi and Ali launched the education nonprofit Code.org, which Hadi continues to lead as CEO. Since its inception, Code.org has started a massive movement to teach computer science and coding to K-12 students globally. It is also the largest provider of computer  science curricula in the world, with over 80 million student users in 180 countries."
   farsi_page_support_heading: "Your Support and Your Voice"
   farsi_page_support_heading_02: "Thank you for your interest in Code.org in Farsi."
-  farsi_page_support_get_updates: "Sign up below to learn more about this specific project and get updated on its staged release dates."
+  farsi_page_support_get_updates: "[Sign up](%{form_url}) to learn more about this specific project and get updated on its staged release dates."
   farsi_page_support_contact_us: "If you'd like to support this initiative or learn more, please [contact us](%{contact_link}) or donate below."
-  farsi_page_compliance_heading: "Compliance In Support Of Farsi Translations."
+  farsi_page_compliance_heading: "Compliance In Support Of Farsi Translations"
   farsi_page_compliance_desc: "As a U.S. nonprofit, Code.org is subject to laws regarding sanctions with Iran. After consulting with U.S. legal counsel experienced in the Iranian Sanctions and Translations Regulations (ITSR), Code.org believes that it may fund, prepare, and distribute the Farsi Translations of CS Curriculum in the United States and elsewhere around the world, including within Iran. The ITSR provides an exemption for “information and informational materials” (the IIM Exemption) and Code.org believes that this exemption will fully shield its funding, preparation, and distribution of the Farsi Translations and thus enable its Farsi Translations effort to proceed in full compliance with U.S. economic sanctions requirements."
 
   hoc_live: 'Hour of Code Live'
