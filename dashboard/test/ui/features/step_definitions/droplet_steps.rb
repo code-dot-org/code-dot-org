@@ -100,7 +100,7 @@ def add_code_to_editor(code)
     "aceEditor.onTextInput(\"#{code}\");\n"
 
   @browser.execute_script(script)
-  steps 'I wait for the event loop to settle'
+  steps 'I wait for the JS event loop to settle'
 end
 
 When /^ace editor code is equal to "([^"]+)"$/ do |expected_code|
