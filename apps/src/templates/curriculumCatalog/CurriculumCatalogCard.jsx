@@ -173,7 +173,7 @@ const CustomizableCurriculumCatalogCard = ({
           assignmentName={courseDisplayName}
           onClose={() => setIsAssignDialogOpen(false)}
           sections={sectionsForDropdown}
-          participantAudience={'student'}
+          participantAudience="student"
           {...props}
         />
       )}

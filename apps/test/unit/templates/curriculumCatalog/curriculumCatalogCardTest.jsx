@@ -244,4 +244,20 @@ describe('CurriculumCatalogCard', () => {
       ),
     });
   });
+
+  it('clicking Assign button shows sections', () => {
+    renderCurriculumCard();
+
+    const assignButton = screen.getByRole('button', {
+      name: new RegExp(
+        `Assign ${defaultProps.courseDisplayName} to your classroom`
+      ),
+    });
+
+    sections.forEach(
+      section => expect(screen.queryByText(section.name)).to.be.null
+    );
+    fireEvent.click(assignButton);
+    sections.forEach(section => screen.getByText(section.name));
+  });
 });
