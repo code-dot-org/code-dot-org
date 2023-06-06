@@ -26,7 +26,10 @@ module RakeUtils
   def self.restart_web_server(id)
     return unless OS.linux? && CDO.chef_managed
 
-    if system("systemctl is-active #{id}")
+    # Use pumactl to issue a restart command to the appropriate web server if
+    # it's already active. If we don't already have a server up, fall back to
+    # simply starting rather than restarting.
+    if Kernel.system("systemctl is-active #{id}")
       pidfile = File.expand_path(
         File.join(
           File.dirname(__FILE__),
