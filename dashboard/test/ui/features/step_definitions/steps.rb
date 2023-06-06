@@ -338,9 +338,9 @@ end
 def wait_n_event_loop_iterations(n)
   wait_short_until do
     n_event_loop_iterations = <<-JS
-      function nEventLoopIterations (n, callback) {
-        setTimeout(nEventLoopIterations, 1, n-1, callback)
-      }(arguments[0], arguments[1])
+      const callback = arguments[1];
+      const nEventLoopIterations = (n) => n === 0 ? callback(true) : setTimeout(nEventLoopIterations, 1, n-1);
+      nEventLoopIterations(arguments[0]);
     JS
     @browser.execute_async_script(n_event_loop_iterations, n)
   end
