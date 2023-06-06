@@ -381,4 +381,3 @@ Where applicable, we will not make any material changes to the Privacy Policy th
 <a name="contacting-codeorg"></a>
 ## Contacting Code.org
 Please contact Code.org with any questions or comments about this Privacy Policy by emailing us at privacy@code.org. As set forth above, requests to access, update, or delete your personal data should be submitted by email to [support@code.org](mailto:support@code.org) or entered at: [https://code.org/contact](https://code.org/contact).
-
