@@ -311,19 +311,38 @@ Then /^check that the URL contains "([^"]*)"$/i do |url|
   expect(@browser.current_url).to include(url)
 end
 
-# See "I wait for the next event loop" for a potentially better alternative
+# If you're waiting...
+# ...for async JS like .then chains or react re-renders, see: "I wait for the event loop to settle"
+# ...for a network request, see: "I wait until jQuery Ajax requests are finished"
+# ...for an animation, see: "I wait until jQuery animations are finished"
 When /^I wait for (\d+(?:\.\d*)?) seconds?$/ do |seconds|
   sleep seconds.to_f
 end
 
-# "I wait for the next event loop" and "I wait for N event loop iterations"
-# allows blocking until N async JS operations complete, e.g. .then chains
-# triggered by clicking/manipulating DOM elements. When relevant, this a
-# slightly better alternative to fixing tests with "I wait for N seconds"
-When /^I wait for (\d+|the next) event loop( iterations)?$/ do |num_iterations, _|
-  num_iterations = num_iterations == "the next" ? 1 : num_iterations.to_i
+# Gives up to 25 chained async JS operations time to complete.
+# Takes ~100ms with an idle event loop, but scales correctly with a busy event loop.
+# Try this first if you need an async delay, unless you know you're waiting on an
+# explicit time delay, network request, or animation.
+When /^I wait for the event loop to settle$/ do
+  wait_n_event_loop_iterations(25)
+end
+
+When /^I wait for the next event loop$/ do
+  wait_n_event_loop_iterations(1)
+end
+
+When /^I wait for (\d+) event loop iterations$/ do |num_iterations|
+  wait_n_event_loop_iterations(num_iterations)
+end
+
+def wait_n_event_loop_iterations(n)
   wait_short_until do
-    num_iterations.times {@browser.execute_async_script("setTimeout(arguments[0], 1)")}
+    n_event_loop_iterations = <<-JS
+      function nEventLoopIterations (n, callback) {
+        setTimeout(nEventLoopIterations, 1, n-1, callback)
+      }(arguments[0], arguments[1])
+    JS
+    @browser.execute_async_script(n_event_loop_iterations, num_iterations)
   end
 end
 
