@@ -505,6 +505,7 @@ end
 When /^I click selector "([^"]*)"(?: to load a new (page|tab))?$/ do |jquery_selector, load|
   # normal a href links can only be clicked this way
   page_load(load) do
+    wait_for_jquery
     @browser.execute_script("$(\"#{jquery_selector}\")[0].click();")
   end
 end
