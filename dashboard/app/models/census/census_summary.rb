@@ -28,6 +28,4 @@ class Census::CensusSummary < ApplicationRecord
     HISTORICAL_MAYBE: "HM",
   }.freeze
   enum teaches_cs: TEACHES
-
-  validates_presence_of :audit_data
 end

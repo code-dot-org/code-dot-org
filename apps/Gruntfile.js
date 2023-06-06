@@ -174,6 +174,12 @@ describe('entry tests', () => {
         },
         {
           expand: true,
+          cwd: 'node_modules/blockly/media',
+          src: ['**'],
+          dest: 'build/package/media/google_blockly',
+        },
+        {
+          expand: true,
           cwd: 'node_modules/@code-dot-org/craft/dist/assets',
           src: ['**'],
           dest: 'build/package/media/skins/craft',
