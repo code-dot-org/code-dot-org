@@ -11,6 +11,7 @@ import responsive, {
   setResponsiveSize,
   ResponsiveSize,
 } from '@cdo/apps/code-studio/responsiveRedux';
+import {restoreRedux} from '@cdo/apps/redux';
 import CurriculumCatalog from '@cdo/apps/templates/curriculumCatalog/CurriculumCatalog';
 import {
   allCurricula,
@@ -25,6 +26,10 @@ import {
   noGradesCurriculum,
   noPathCurriculum,
 } from './CurriculumCatalogTestHelper';
+import teacherSections, {
+  setSections,
+} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {sections} from '../studioHomepages/fakeSectionUtils';
 
 describe('CurriculumCatalog', () => {
   const defaultProps = {curriculaData: allCurricula, isEnglish: false};
@@ -34,8 +39,9 @@ describe('CurriculumCatalog', () => {
   let replaceStateOrig = window.history.replaceState;
 
   beforeEach(() => {
-    store = configureStore({reducer: {responsive}});
+    store = configureStore({reducer: {responsive, teacherSections}});
     store.dispatch(setResponsiveSize(ResponsiveSize.lg));
+    store.dispatch(setSections(sections));
 
     replacedLocation = undefined;
     window.history.replaceState = (_, __, newLocation) => {
@@ -44,6 +50,7 @@ describe('CurriculumCatalog', () => {
   });
 
   afterEach(() => {
+    restoreRedux();
     resetWindowLocation();
     window.history.replaceState = replaceStateOrig;
   });
