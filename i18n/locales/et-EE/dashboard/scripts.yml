@@ -67,6 +67,7 @@ et:
           description_short: See 20-tunnine kursus hõlmab peamise arvutiteaduse ja programmeerimise kontseptsiooni kursustel 2-4.
           description_audience: Vanustele 10-18
           student_description: See 20-tunnine kursus käsitleb peamisi arvutiteaduse ja programmeerimise kontseptsioone kursustel 2-4. Kursus on mõeldud kasutamiseks vanuses 10-18 aastat. Tutvu kursustega 2-4 põhjalikuma kogemuse saamiseks!
+          name: 20 tunnine
         edit-code:
           title: Muuda koodi
           description: Muuda koodi

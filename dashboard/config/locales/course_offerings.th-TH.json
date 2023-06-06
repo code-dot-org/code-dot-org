@@ -2,12 +2,6 @@
   "th-TH": {
     "data": {
       "course_offerings": {
-        "coursea": "หลักสูตร A",
-        "courseb": "หลักสูตร B",
-        "coursec": "หลักสูตร C",
-        "coursed": "หลักสูตร D",
-        "coursee": "หลักสูตร E",
-        "coursef": "หลักสูตร F",
         "20-hour": "Accelerated Intro to CS คอร์ส",
         "flappy": "แฟลปปี้โค้ด",
         "jigsaw": "จิ๊กซอว์",
@@ -21,16 +15,24 @@
         "dance-extras-2019": "สร้างโค้ดเต้นรำกันต่อไป (2019)",
         "dance-extras": "สร้างโค้ดเต้นรำกันต่อไป (2018)",
         "frozen": "เขียนโค้ดไปพร้อมกับแอนนาและเอลซ่า",
+        "hero": "ไมน์คราฟท์: การผจญภัยของฮีโร่",
         "hourofcode": "เขาวงกตสุดคลาสสิค",
         "mc": "ชั่วโมงแห่งการเขียนโค้ดกับไมน์คราฟท์",
         "minecraft": "นักออกแบบชั่วโมงแห่งโค้ดตอนไมน์คราฟท์",
         "oceans": "ปัญญาประดิษฐ์สำหรับท้องทะเล",
         "outbreak": "เครื่องจำลองการระบาด",
         "playlab": "เรื่องราวและเกม",
+        "sports": "เขียนโค้ดเกมกีฬาของคุณเอง",
         "text-compression": "การบีบอัดข้อความ",
         "csa-self-paced-pl": "ไปที่ครูนำร่อง CSA ใน Code.org",
+        "ai-ethics": "กิจกรรมจริยธรรม AI",
+        "counting-csc": "กิจกรรมการนับ",
+        "explore-data-1": "กิจกรรมข้อมูล",
         "outbreak-csc": "การระบาด",
+        "spelling-bee": "กิจกรรมการสะกด",
         "poem-art": "ภาพปกบทกวี",
+        "poetry": "การเข้ารหัสด้วยบทกวี",
+        "hello-world-retro": "Hello World: เรโทร",
         "edit-code": "แก้ไข Code",
         "tesstest921": "testest921",
         "poetry-hoc3": "poetry-hoc3",
@@ -43,7 +45,9 @@
         "soccer": "สนามฟุตบอล",
         "hello-world-space": "สวัสดีชาวโลก: จักรวาล",
         "hello-world-soccer": "สวัสดีชาวโลก: ฟุตบอล",
-        "playground": "สนามเด็กเล่น"
+        "playground": "สนามเด็กเล่น",
+        "design-process": "ขั้นตอนการออกแบบ",
+        "web-development": "การพัฒนาเว็บ"
       }
     }
   }

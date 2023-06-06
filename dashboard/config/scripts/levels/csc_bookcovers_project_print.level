@@ -1,0 +1,132 @@
+<GamelabJr>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 64,
+  "created_at": "2023-06-01T21:15:01.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "skin": "gamelab",
+    "show_debug_watch": "true",
+    "block_pools": [
+      "GamelabJr",
+      "storylab"
+    ],
+    "helper_libraries": [
+      "NativeSpriteLab",
+      "zStorybookModule-CSC"
+    ],
+    "use_default_sprites": "false",
+    "hide_animation_mode": "false",
+    "show_type_hints": true,
+    "hide_custom_blocks": true,
+    "all_animations_single_frame": "true",
+    "use_modal_function_editor": "true",
+    "embed": "false",
+    "instructions_important": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "never_autoplay_video": "true",
+    "disable_param_editing": "true",
+    "disable_if_else_editing": "false",
+    "include_shared_functions": "false",
+    "free_play": "false",
+    "expand_debugger": "false",
+    "debugger_disabled": "false",
+    "validation_enabled": "false",
+    "start_in_animation_tab": "false",
+    "mini_toolbox": "false",
+    "hide_pause_button": "false",
+    "authored_hints": "[{\"hint_class\":null,\"hint_markdown\":\"Make sure to connect at least one <code style=\\\"color:black; background-color:#5ED5DD\\\">print</code> block under <code style=\\\"color:black; background-color:#6AF36C\\\">when sprite clicked</code>.\",\"hint_id\":\"hint1\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/3356d2b9f7abe86995cd220d7e17a2b7/csc_bookcovers_project_print.mp3\"}]",
+    "long_instructions": "**Add the summary of the book when the main character is clicked!** \r\n- Add a <code style=\"color:black; background-color:#6AF36C\">when sprite clicked</code> event to your workspace. \r\n- Be sure to set the costume to the main character.\r\n\r\n- Connect a <code style=\"color:black; background-color:#5ED5DD\">print</code> block under that event. \r\n\r\n- Click <code style=\"color:black; background-color:#FFBD46\">Run</code> then **click both of the sprites** to test your code.\r\n\r\n*Hint: You can change the text in the print block.*\r\n",
+    "instructions_icon": "emoji",
+    "name_suffix": "_2023",
+    "callout_json": "[]",
+    "validation_code": "//Make sure [CSC Module Helper Library] is included as a library in this level\r\nif (World.frameCount == 1) {\r\n  //Everything in this if-statement will just run once, during the first frame of your level\r\n  //README() //uncomment this to see the README for the helper library in the console of this level\r\n  //turnOnDebugging() //uncomment this to use a DEBUG global variable to control console.log statements in your code\r\n  \r\n  setFailTime(150); // Frames to wait before failing student\r\n  setDelayTime(90); // Frames to wait after success before stopping program\r\n  setupPrevious(); //Defines the validationProps.previous{} object. To use it, call updatePrevious() at the end of this box\r\n  \r\n  //use addCriteria to setup the validation logic.\r\n  //You can use criterion commands as helper functions: \r\n  //https://github.com/code-dot-org/code-dot-org/blob/staging/apps/src/p5lab/spritelab/commands/criterionCommands.js\r\n  addCriteria(function() {\r\n    //Check that, at some point during the program, a print block was detected.\r\n    //If not: show feedback string \"Add a print block\"\r\n    return checkAtLeastNPrints(1);\r\n  }, \"addPrintBlock\");  // include i18n feedback string\r\n  \r\n  addCriteria(function() {\r\n    //Check that a print was detected AND that no events happened, which means it must be attached to whenRun\r\n    //If not: show feedback string \"It looks like you added a print block, but in the wrong place. Add it to the bottom of the when run block\"\r\n    return checkAtLeastNPrints(1) && eventLog.length == 0;\r\n  }, \"cscBookcoverPrintNotOnRun\");  // include i18n feedback string\r\n  \r\n}\r\n//Everything after this will run during each 'tick' of the draw loop in your level\r\n//Be careful about putting console.log statements here\r\n\r\n//Always have this first to get most up-to-date helper variables\r\ngetHelperVars();\r\n\r\n//This is what calls updateValidation in \r\n//https://github.com/code-dot-org/code-dot-org/blob/staging/apps/src/p5lab/spritelab/commands/validationCommands.js\r\n//To check the validation criteria\r\ncheck();\r\n\r\n//Always have this at end to store previous state in validationProps.previous\r\nupdatePrevious();\r\n\r\n\r\n\r\n",
+    "standalone_app_name": "spritelab",
+    "short_instructions": "Add a second <code style=\"color:black; background-color:#6AF36C\">when sprite clicked</code> event and a <code style=\"color:black; background-color:#5ED5DD\">print</code> block to include the summary on this book cover",
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ],
+    "project_template_level_name": "csc_bookcovers_project_template",
+    "video_key": "csc-event-short-intro"
+  },
+  "audit_log": "[{\"changed_at\":\"2023-06-01T21:15:01.896+00:00\",\"changed\":[\"cloned from \\\"csc_bookcover_print_2023\\\"\"],\"cloned_from\":\"csc_bookcover_print_2023\"},{\"changed_at\":\"2023-06-02 20:32:43 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-06-02 20:33:16 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-06-02 20:34:28 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"instructions_icon\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-06-02 20:39:13 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-06-02 20:40:42 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"authored_hints\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-06-02 21:35:56 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"hide_animation_mode\",\"hide_share_and_remix\",\"start_animations\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-06-02 21:39:02 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"never_autoplay_video\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false"/>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="storylab_setHeading">
+          <value name="HEADING">
+            <block type="text">
+              <field name="TEXT">Front Desk</field>
+            </block>
+          </value>
+        </block>
+        <block type="storylab_setSubheading">
+          <value name="SUBHEADING">
+            <block type="text">
+              <field name="TEXT">Kelly Yang</field>
+            </block>
+          </value>
+        </block>
+        <block type="gamelab_setBackgroundImageAs">
+          <field name="IMG">"desk"</field>
+        </block>
+        <block type="gamelab_makeNewSpriteAnon">
+          <field name="ANIMATION_NAME">"man-gray-hair"</field>
+          <value name="LOCATION">
+            <block type="gamelab_location_picker" can_disconnect_from_parent="false">
+              <field name="LOCATION">{"x":300,"y":270}</field>
+            </block>
+          </value>
+        </block>
+        <block type="gamelab_spriteSay">
+          <field name="SPEECH">Hello!</field>
+          <value name="SPRITE">
+            <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
+              <field name="ANIMATION">"man-gray-hair"</field>
+            </block>
+          </value>
+        </block>
+        <block type="gamelab_setProp" editable="false">
+          <field name="PROPERTY">"scale"</field>
+          <value name="SPRITE">
+            <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
+              <field name="ANIMATION">"man-gray-hair"</field>
+            </block>
+          </value>
+          <value name="VAL">
+            <block type="math_number" can_disconnect_from_parent="false">
+              <field name="NUM">150</field>
+            </block>
+          </value>
+        </block>
+        <block type="gamelab_spriteClicked">
+          <field name="CONDITION">"when"</field>
+          <value name="SPRITE">
+            <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
+              <field name="ANIMATION">"man-gray-hair"</field>
+            </block>
+          </value>
+        </block>
+        <block type="gamelab_printText">
+          <value name="TEXT">
+            <block type="text">
+              <field name="TEXT">This book is about...</field>
+            </block>
+          </value>
+        </block>
+      </xml>
+    </toolbox_blocks>
+  </blocks>
+</GamelabJr>

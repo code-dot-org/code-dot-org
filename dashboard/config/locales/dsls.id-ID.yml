@@ -13118,3 +13118,26 @@ id-ID:
         questions:
         - text: Perhatikan kode berikut ini. Menurutmu apa yang akan terjadi saat
             programnya dijalankan?
+      Test Contained Retriable Multi:
+        answers:
+        - text: '0'
+        - text: '1'
+        - text: '2'
+          correct: true
+        - text: '4'
+        questions:
+        - {}
+      test-single-multi-standalone-retriable:
+        answers:
+        - text: Tidak akan terjadi apa-apa.
+          feedback: Salah. Gulma raksasa akan mulai berguling-guling
+        - text: Gulma raksasa akan mengambang ke bagian atas layar
+          feedback: Salah. Gulma raksasa akan mulai berguling-guling
+        - text: Gulma raksasa akan mulai berguling-guling
+          correct: true
+          feedback: Benar!
+        - text: Gulma raksasa akan berkedip-kedip.
+          feedback: Salah. Gulma raksasa akan mulai berguling-guling
+        questions:
+        - text: Cermati code di bawah ini. Apa yang akan terjadi setelah Anda mengklik
+            "Jalankan"?

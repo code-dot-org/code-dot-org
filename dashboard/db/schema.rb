@@ -209,7 +209,7 @@ ActiveRecord::Schema.define(version: 2023_05_30_215538) do
     t.string "school_id", limit: 12, null: false
     t.integer "school_year", limit: 2, null: false
     t.string "teaches_cs", limit: 2
-    t.text "audit_data", null: false
+    t.text "audit_data"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["school_id", "school_year"], name: "index_census_summaries_on_school_id_and_school_year", unique: true

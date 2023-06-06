@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "ai-temp",
-    "serialized_at": "2023-05-31 02:25:39 UTC",
+    "serialized_at": "2023-06-02 18:08:59 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -3135,7 +3135,7 @@
       "key": "1c5b7350-d527-4f81-b502-b9b4a763424f",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the first part of the WIP update video link video. At key points throughout (described below) we will be pausing the video to give students a chance to synthesize their understanding.",
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:**  Hand out the [r video_and_vocabulary_guide_1/ai-temp/unversioned]\n\n<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the first part of the WIP update video link video. At key points throughout (described below) we will be pausing the video to give students a chance to synthesize their understanding.",
         "duration": "20",
         "name": "Show the Video"
       },
@@ -3251,7 +3251,7 @@
       "key": "7a9a0fca-8f87-4ee9-aaa6-78b6f37c9bd7",
       "position": 11,
       "properties": {
-        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:**  Hand out the Noisy Image activity Guide"
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:**  Hand out the \n[r noisy_image_widget_activity_guide/ai-temp/unversioned]"
       },
       "seeding_key": {
         "activity_section.key": "7a9a0fca-8f87-4ee9-aaa6-78b6f37c9bd7",
@@ -3293,7 +3293,14 @@
       "key": "401de1bc-f480-4a70-b028-f1505fe8abe9",
       "position": 15,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students log into code studio and interact with the widget\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students log into code studio and interact with the Noisy Image Widget\n",
+        "progression_name": "Noisy Image Widget",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The noisy images can take a short while to load here (usually less than a minute, but nothing is happening for that time). We recommend you warn students this is the case, and give them something to be focusing on, for example, choosing the next image / numbers, sketching / describing the image on the back of their worksheets, or solving side puzzles for extra credit."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "401de1bc-f480-4a70-b028-f1505fe8abe9",
@@ -4202,6 +4209,31 @@
       "assessment": false,
       "properties": {
         "level_keys": [
+          "Noisy Image Widget"
+        ],
+        "progression": "Noisy Image Widget"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Noisy Image Widget"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "ai-temp",
+        "activity_section.key": "401de1bc-f480-4a70-b028-f1505fe8abe9"
+      },
+      "level_keys": [
+        "Noisy Image Widget"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
           "U9L5 Cropping Widget_introai"
         ],
         "progression": "Cropping Widget"
@@ -4304,6 +4336,18 @@
         "lesson_group.key": "",
         "script.name": "ai-temp",
         "activity_section.key": "3e9ffcbf-9d1a-44d1-9670-7ef4059a7131"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Noisy Image Widget",
+        "script_level.level_keys": [
+          "Noisy Image Widget"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "ai-temp",
+        "activity_section.key": "401de1bc-f480-4a70-b028-f1505fe8abe9"
       }
     },
     {
@@ -4660,6 +4704,18 @@
       }
     },
     {
+      "name": "Noisy Image Widget Activity Guide",
+      "url": "https://docs.google.com/document/d/1rxB-NpxulH6SUyweHwGTxatqYAQc5Qt8ZQN9Dkgi6sE/",
+      "key": "noisy_image_widget_activity_guide",
+      "properties": {
+        "audience": "Student",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "noisy_image_widget_activity_guide"
+      }
+    },
+    {
       "name": "Our AI Code of Ethics [Template]",
       "url": "https://docs.google.com/presentation/d/1SJEXpTCKwf5fbDy5GuDjDGAsuUrkI9QfxKF-1pMSndg/edit?usp=sharing",
       "key": "our_ai_code_of_ethics_template_",
@@ -4718,6 +4774,18 @@
       },
       "seeding_key": {
         "resource.key": "video_and_vocabulary_guide"
+      }
+    },
+    {
+      "name": "Video and Vocabulary Guide",
+      "url": "https://docs.google.com/document/d/1GtTFgGzPcoyokR3KsJ43ZjvgJnwUCWdZXvtrXoa78rQ/edit?usp=sharing",
+      "key": "video_and_vocabulary_guide_1",
+      "properties": {
+        "audience": "Student",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "video_and_vocabulary_guide_1"
       }
     },
     {
@@ -4991,6 +5059,18 @@
       "seeding_key": {
         "lesson.key": "lesson-8",
         "resource.key": "generative_images"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "noisy_image_widget_activity_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "video_and_vocabulary_guide_1"
       }
     }
   ],
