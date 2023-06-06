@@ -470,16 +470,7 @@ class Projects
   # DCDO flag in place to choose when to enable/disable logging (off by default).
   def validate_thumbnail_url(channel_id, thumbnail_url)
     return true unless thumbnail_url
-
-    if !valid_thumbnail_url?(thumbnail_url) && DCDO.get('log_thumbnail_url_validation', false)
-      # raise ValidationError
-      Honeybadger.notify(
-        error_class: 'Project::ValidationError',
-        error_message: 'A project was saved with an unexpected thumbnail URL.',
-        context: {channel_id: channel_id, thumbnail_url: thumbnail_url}
-      )
-    end
-
+    raise ValidationError unless valid_thumbnail_url?(thumbnail_url)
     true
   end
 
