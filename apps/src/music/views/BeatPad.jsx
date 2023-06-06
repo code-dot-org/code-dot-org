@@ -60,6 +60,7 @@ const TriggerButton = ({
 }) => {
   return (
     <div
+      id="beat-pad"
       className={classNames(
         styles.triggerButton,
         colorClassName,
@@ -77,6 +78,7 @@ TriggerButton.propTypes = {
   onClick: PropTypes.func.isRequired,
   colorClassName: PropTypes.string,
   disabled: PropTypes.bool,
+  isSelected: PropTypes.bool.isRequired,
 };
 
 BeatPad.propTypes = {

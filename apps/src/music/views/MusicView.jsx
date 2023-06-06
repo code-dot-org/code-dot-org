@@ -647,6 +647,7 @@ class UnconnectedMusicView extends React.Component {
     // instructions in AI Lab.
     return (
       <div
+        id="instructions-area"
         className={classNames(
           moduleStyles.instructionsArea,
           position === InstructionsPositions.TOP
@@ -667,6 +668,19 @@ class UnconnectedMusicView extends React.Component {
           vertical={position !== InstructionsPositions.TOP}
           right={position === InstructionsPositions.RIGHT}
         />
+      </div>
+    );
+  }
+
+  renderPlayArea(timelineAtTop) {
+    return (
+      <div
+        id="play-area"
+        className={classNames(
+          moduleStyles.playArea,
+          timelineAtTop ? moduleStyles.playAreaTop : moduleStyles.playAreaBottom
+        )}
+      >
         <Controls
           setPlaying={this.setPlaying}
           playTrigger={this.playTrigger}
@@ -678,19 +692,6 @@ class UnconnectedMusicView extends React.Component {
             this.musicBlocklyWorkspace
           )}
         />
-      </div>
-    );
-  }
-
-  renderTimelineArea(timelineAtTop, instructionsOnRight) {
-    return (
-      <div
-        id="timeline-area"
-        className={classNames(
-          moduleStyles.timelineArea,
-          timelineAtTop ? moduleStyles.timelineTop : moduleStyles.timelineBottom
-        )}
-      >
         <Timeline />
       </div>
     );
@@ -717,13 +718,9 @@ class UnconnectedMusicView extends React.Component {
             <Video id="initial-modal-0" onClose={this.onVideoClosed} />
           )}
 
-          {timelineAtTop &&
-            this.renderTimelineArea(
-              true,
-              instructionsPosition === InstructionsPositions.RIGHT
-            )}
+          {timelineAtTop && this.renderPlayArea(true)}
 
-          <div className={moduleStyles.middleArea}>
+          <div id="work-area" className={moduleStyles.workArea}>
             {showInstructions &&
               instructionsPosition === InstructionsPositions.LEFT &&
               this.renderInstructions(InstructionsPositions.LEFT)}
@@ -744,11 +741,7 @@ class UnconnectedMusicView extends React.Component {
               this.renderInstructions(InstructionsPositions.RIGHT)}
           </div>
 
-          {!timelineAtTop &&
-            this.renderTimelineArea(
-              false,
-              instructionsPosition === InstructionsPositions.RIGHT
-            )}
+          {!timelineAtTop && this.renderPlayArea(false)}
         </div>
       </AnalyticsContext.Provider>
     );

@@ -55,7 +55,7 @@ $default-spacing: 5px;
   }
 }
 
-.middleArea {
+.workArea {
   flex: 1;
   display: flex;
   flex-direction: row;
@@ -74,20 +74,20 @@ $default-spacing: 5px;
   overflow: hidden;
   flex: 1;
   position: relative;
-  margin-bottom: 5px;
 }
 
-.timelineArea {
+.playArea {
   width: 100%;
   height: $timeline-area-height;
   box-sizing: border-box;
   display: flex;
+  flex-direction: row;
 
-  &.timelineBottom {
-    flex-direction: column;
+  &.playAreaBottom {
+    margin-top: $default-spacing;
   }
 
-  &.timelineTop {
-    flex-direction: column-reverse;
+  &.playAreaTop {
+    margin-bottom: $default-spacing;
   }
 }
