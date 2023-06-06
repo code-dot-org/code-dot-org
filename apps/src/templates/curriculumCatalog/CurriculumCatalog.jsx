@@ -205,8 +205,7 @@ const CurriculumCatalog = ({curriculaData, isEnglish}) => {
   };
 
   // Clears all filter selections.
-  const handleClear = useCallback(e => {
-    e.preventDefault();
+  const handleClear = useCallback(() => {
     setAppliedFilters(getEmptyFilters());
     Object.keys(filterTypes).forEach(filterKey =>
       updateQueryParam(filterKey, undefined, false)
