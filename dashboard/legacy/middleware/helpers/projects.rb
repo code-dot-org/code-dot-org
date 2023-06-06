@@ -465,9 +465,6 @@ class Projects
     'unknown'
   end
 
-  # Temporarily logging rather than erroring in order
-  # to confirm that only valid thumbnail URLs are present in existing projects.
-  # DCDO flag in place to choose when to enable/disable logging (off by default).
   def validate_thumbnail_url(channel_id, thumbnail_url)
     return true unless thumbnail_url
     raise ValidationError unless valid_thumbnail_url?(thumbnail_url)
