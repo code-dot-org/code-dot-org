@@ -93,14 +93,21 @@ When /^I add code "([^"]+)" to ace editor$/ do |code|
   add_code_to_editor(code)
 end
 
-def add_code_to_editor(code)
-  script =
-    "var aceEditor = __TestInterface.getDroplet().aceEditor;\n" \
-    "aceEditor.textInput.focus();\n" \
-    "aceEditor.onTextInput(\"#{code}\");\n"
 
-  @browser.execute_script(script)
-  steps 'I wait for the JS event loop to settle'
+def add_code_to_editor(code, append: false)
+  script = <<-JS
+    const [code, append, callback] = arguments;
+    const aceEditor = __TestInterface.getDroplet().aceEditor;
+    aceEditor.textInput.focus();
+    if (append) aceEditor.navigateFileEnd();
+    aceEditor.renderer.on('afterRender', function onAfterRender() {
+      aceEditor.renderer.off('afterRender', onAfterRender);
+      callback(true);
+    });
+    aceEditor.onTextInput(code);
+  JS
+
+  wait_short_until {@browser.execute_async_script(script, code, append)}
 end
 
 When /^ace editor code is equal to "([^"]+)"$/ do |expected_code|
