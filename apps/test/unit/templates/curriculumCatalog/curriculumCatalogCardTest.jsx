@@ -2,18 +2,23 @@ import React from 'react';
 import {fireEvent, render, screen} from '@testing-library/react';
 import {pull} from 'lodash';
 import {expect} from '../../../util/reconfiguredChai';
-import {UnconnectedCurriculumCatalogCard as CurriculumCatalogCard} from '@cdo/apps/templates/curriculumCatalog/CurriculumCatalogCard';
+import CurriculumCatalogCard from '@cdo/apps/templates/curriculumCatalog/CurriculumCatalogCard';
 import {
   subjectsAndTopicsOrder,
   translatedCourseOfferingCsTopics,
   translatedLabels,
 } from '@cdo/apps/templates/teacherDashboard/CourseOfferingHelpers';
 import {sections} from '../studioHomepages/fakeSectionUtils';
+import {Provider} from 'react-redux';
+import {configureStore} from '@reduxjs/toolkit';
+import {restoreRedux} from '@cdo/apps/redux';
+import teacherSections, {
+  setSections,
+} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
 describe('CurriculumCatalogCard', () => {
   const translationIconTitle = 'Curriculum is available in your language';
 
-  let defaultProps;
   const firstSubjectIndexInList = 0;
   const firstSubjectIndexUsed = firstSubjectIndexInList + 1;
   const subjects = [
@@ -31,25 +36,40 @@ describe('CurriculumCatalogCard', () => {
     subjectsAndTopicsOrder[firstTopicIndexUsed + 4],
   ];
 
+  let defaultProps;
+  let store;
+  const renderCurriculumCard = (props = defaultProps) =>
+    render(
+      <Provider store={store}>
+        <CurriculumCatalogCard {...props} />
+      </Provider>
+    );
+
   beforeEach(() => {
+    store = configureStore({reducer: {teacherSections}});
+    store.dispatch(setSections(sections));
     defaultProps = {
       courseDisplayName: 'AI for Oceans',
       duration: 'quarter',
       gradesArray: ['4', '5', '6', '7', '8'],
       isEnglish: true,
       pathToCourse: '/s/course',
-      sectionsForDropdown: sections,
+      scriptId: 1,
     };
   });
 
+  afterEach(() => {
+    restoreRedux();
+  });
+
   it('renders course name', () => {
-    render(<CurriculumCatalogCard {...defaultProps} />);
+    renderCurriculumCard();
 
     screen.getByRole('heading', {name: defaultProps.courseName});
   });
 
   it('renders image with empty alt text by default', () => {
-    render(<CurriculumCatalogCard {...defaultProps} />);
+    renderCurriculumCard();
 
     // with empty alt text, the image name is the same as the header name
     screen.getByRole('img', {name: defaultProps.courseName});
@@ -57,20 +77,14 @@ describe('CurriculumCatalogCard', () => {
 
   it('renders image with alt text if passed in', () => {
     const altText = 'Two people coding';
-    render(<CurriculumCatalogCard {...defaultProps} imageAltText={altText} />);
+    renderCurriculumCard({...defaultProps, imageAltText: altText});
 
     // when alt text is present, the img name is the alt text
     screen.getByRole('img', {name: altText});
   });
 
   it('renders one subject name, the first available from ordered list, when present', () => {
-    render(
-      <CurriculumCatalogCard
-        {...defaultProps}
-        subjects={subjects}
-        topics={topics}
-      />
-    );
+    renderCurriculumCard({...defaultProps, subjects: subjects, topics: topics});
 
     screen.getByText(subjectsAndTopicsOrder[firstSubjectIndexUsed], {
       exact: false,
@@ -78,25 +92,13 @@ describe('CurriculumCatalogCard', () => {
   });
 
   it('renders label of number of remaining subjects and topics when there is more than one present', () => {
-    render(
-      <CurriculumCatalogCard
-        {...defaultProps}
-        subjects={subjects}
-        topics={topics}
-      />
-    );
+    renderCurriculumCard({...defaultProps, subjects: subjects, topics: topics});
 
     screen.getByText(`+${subjects.length + topics.length - 1}`);
   });
 
   it('renders tooltip showing full text of first label when hovering over it', () => {
-    render(
-      <CurriculumCatalogCard
-        {...defaultProps}
-        subjects={subjects}
-        topics={topics}
-      />
-    );
+    renderCurriculumCard({...defaultProps, subjects: subjects, topics: topics});
     const firstLabelText =
       translatedLabels[subjectsAndTopicsOrder[firstSubjectIndexUsed]];
     const firstLabelNode = screen.getByText(firstLabelText);
@@ -106,13 +108,7 @@ describe('CurriculumCatalogCard', () => {
   });
 
   it('renders tooltip showing full text of first label when focused on it', () => {
-    render(
-      <CurriculumCatalogCard
-        {...defaultProps}
-        subjects={subjects}
-        topics={topics}
-      />
-    );
+    renderCurriculumCard({...defaultProps, subjects: subjects, topics: topics});
     const firstLabelText =
       translatedLabels[subjectsAndTopicsOrder[firstSubjectIndexUsed]];
     const firstLabelNode = screen.getByText(firstLabelText);
@@ -121,13 +117,7 @@ describe('CurriculumCatalogCard', () => {
   });
 
   it('renders tooltip showing remaining labels when hovering on plus sign', () => {
-    render(
-      <CurriculumCatalogCard
-        {...defaultProps}
-        subjects={subjects}
-        topics={topics}
-      />
-    );
+    renderCurriculumCard({...defaultProps, subjects: subjects, topics: topics});
     const remainingLabels = pull(
       [...subjects, ...topics],
       subjectsAndTopicsOrder[firstSubjectIndexUsed]
@@ -146,13 +136,7 @@ describe('CurriculumCatalogCard', () => {
   });
 
   it('renders tooltip showing remaining labels when plus sign is focused', () => {
-    render(
-      <CurriculumCatalogCard
-        {...defaultProps}
-        subjects={subjects}
-        topics={topics}
-      />
-    );
+    renderCurriculumCard({...defaultProps, subjects: subjects, topics: topics});
     const remainingLabels = pull(
       [...subjects, ...topics],
       subjectsAndTopicsOrder[firstSubjectIndexUsed]
@@ -165,7 +149,7 @@ describe('CurriculumCatalogCard', () => {
   });
 
   it('renders one topic, the first available from ordered list, if no subject present', () => {
-    render(<CurriculumCatalogCard {...defaultProps} topics={topics} />);
+    renderCurriculumCard({...defaultProps, topics: topics});
 
     screen.getByText(
       translatedCourseOfferingCsTopics[
@@ -178,43 +162,41 @@ describe('CurriculumCatalogCard', () => {
   });
 
   it('does not render label of remaining subjects and topics when exactly one subject or topic is present', () => {
-    render(
-      <CurriculumCatalogCard
-        {...defaultProps}
-        subjects={['math']}
-        topics={undefined}
-      />
-    );
+    renderCurriculumCard({
+      ...defaultProps,
+      subjects: ['math'],
+      topics: undefined,
+    });
+
     expect(screen.queryByText('+')).to.be.null;
 
-    render(
-      <CurriculumCatalogCard
-        {...defaultProps}
-        topics={['data']}
-        subjects={undefined}
-      />
-    );
+    renderCurriculumCard({
+      ...defaultProps,
+      topics: ['data'],
+      subjects: undefined,
+    });
     expect(screen.queryByText('+')).to.be.null;
   });
 
   it('does not render translation icon by default', () => {
-    const {container} = render(<CurriculumCatalogCard {...defaultProps} />);
+    const {container} = renderCurriculumCard();
 
     expect(screen.queryByTitle(translationIconTitle)).to.be.null;
     expect(container.querySelectorAll('i[class*=language]')).to.have.length(0);
   });
 
   it('renders translation icon when translation is available', () => {
-    const {container} = render(
-      <CurriculumCatalogCard {...defaultProps} isTranslated />
-    );
+    const {container} = renderCurriculumCard({
+      ...defaultProps,
+      isTranslated: true,
+    });
 
     screen.getByTitle(translationIconTitle);
     expect(container.querySelectorAll('i[class*=language]')).to.have.length(1);
   });
 
   it('renders grade range with icon', () => {
-    const {container} = render(<CurriculumCatalogCard {...defaultProps} />);
+    const {container} = renderCurriculumCard();
 
     screen.getByText(
       new RegExp(
@@ -228,23 +210,24 @@ describe('CurriculumCatalogCard', () => {
 
   it('renders single grade with icon when one grade passed in', () => {
     const grade = '12';
-    const {container} = render(
-      <CurriculumCatalogCard {...defaultProps} gradesArray={[grade]} />
-    );
+    const {container} = renderCurriculumCard({
+      ...defaultProps,
+      gradesArray: [grade],
+    });
 
     screen.getByText(new RegExp(`Grade: ${grade}`));
     expect(container.querySelectorAll('i[class*=user]')).to.have.length(1);
   });
 
   it('renders duration with icon', () => {
-    const {container} = render(<CurriculumCatalogCard {...defaultProps} />);
+    const {container} = renderCurriculumCard();
 
     screen.getByText(defaultProps.duration, {exact: false});
     expect(container.querySelectorAll('i[class*=clock]')).to.have.length(1);
   });
 
   it('renders Quick View button with descriptive label', () => {
-    render(<CurriculumCatalogCard {...defaultProps} />);
+    renderCurriculumCard();
 
     const link = screen.getByRole('link', {
       name: new RegExp(`View details about ${defaultProps.courseDisplayName}`),
@@ -253,7 +236,7 @@ describe('CurriculumCatalogCard', () => {
   });
 
   it('renders Assign button with descriptive label', () => {
-    render(<CurriculumCatalogCard {...defaultProps} />);
+    renderCurriculumCard();
 
     screen.getByRole('button', {
       name: new RegExp(

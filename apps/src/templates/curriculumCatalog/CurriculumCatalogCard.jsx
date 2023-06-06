@@ -23,7 +23,7 @@ import {
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shapes';
 
-export const UnconnectedCurriculumCatalogCard = ({
+const CurriculumCatalogCard = ({
   courseDisplayName,
   duration,
   gradesArray,
@@ -64,7 +64,7 @@ export const UnconnectedCurriculumCatalogCard = ({
   />
 );
 
-UnconnectedCurriculumCatalogCard.propTypes = {
+CurriculumCatalogCard.propTypes = {
   courseDisplayName: PropTypes.string.isRequired,
   duration: PropTypes.oneOf(Object.keys(translatedCourseOfferingDurations))
     .isRequired,
@@ -203,19 +203,17 @@ CustomizableCurriculumCatalogCard.propTypes = {
   assignButtonDescription: PropTypes.string.isRequired,
 };
 
-const CurriculumCatalogCard = connect(
+export default connect(
   (state, ownProps) => ({
     sectionsForDropdown: sectionsForDropdown(
       state.teacherSections,
       ownProps.courseOfferingId,
       ownProps.courseVersionId,
-      state.progress.scriptId
+      state.progress?.scriptId
     ),
   }),
   {
     assignToSection,
     unassignSection,
   }
-)(UnconnectedCurriculumCatalogCard);
-
-export default CurriculumCatalogCard;
+)(CurriculumCatalogCard);
