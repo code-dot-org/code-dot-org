@@ -7995,6 +7995,7 @@
           ]
         },
         "e446dbf0-d9fe-4c8b-9309-252706515f4e": {
+          "name": "पेअर प्रोग्रामिंग",
           "tips": [
             null
           ]
@@ -10880,6 +10881,9 @@
           "name": "HTML टॅग वापरणे",
           "progression_name": "HTML टॅग वापरणे"
         },
+        "bcc27c68-f369-4469-a472-2047c24ee541": {
+          "progression_name": "पेअर प्रोग्रामिंग"
+        },
         "972406a9-7dc2-4751-a1bf-01b58f25fd7f": {
           "progression_name": "मथळे /हेडिंग्ज "
         },
@@ -10981,6 +10985,9 @@
           "name": "सराव",
           "progression_name": "सराव"
         },
+        "3fea4a8d-84f4-4f63-a8d2-7085c77b4fef": {
+          "progression_name": "पेअर प्रोग्रामिंग"
+        },
         "80d94088-1899-463f-96de-8ea8ee270fca": {
           "progression_name": "सराव"
         },
@@ -11079,6 +11086,9 @@
         "b69124ec-a82e-4819-bbd7-2f1868e21990": {
           "name": "सराव",
           "progression_name": "सराव"
+        },
+        "282dad48-141f-46bb-9675-9f0629dab0fc": {
+          "progression_name": "पेअर प्रोग्रामिंग"
         },
         "e792415e-c2aa-4759-9388-1d1ccd20f307": {
           "progression_name": "सराव"
@@ -12311,6 +12321,9 @@
           "name": "HTML टॅग वापरणे",
           "progression_name": "HTML टॅग वापरणे"
         },
+        "4dcbbc45-c3df-4c2c-a75e-c5b2b5cc23db": {
+          "progression_name": "पेअर प्रोग्रामिंग"
+        },
         "6c3bc892-7aba-43bd-a742-7d73bbf74ed3": {
           "progression_name": "मथळे /हेडिंग्ज "
         },
@@ -12875,6 +12888,9 @@
         "0d111204-1803-4a47-9225-9e3fd5f02276": {
           "name": "HTML टॅग वापरणे",
           "progression_name": "HTML टॅग वापरणे"
+        },
+        "322f42db-5491-4424-9d7b-b64af0b54703": {
+          "progression_name": "पेअर प्रोग्रामिंग"
         },
         "e504413d-b7a2-436c-b46d-c9235f899699": {
           "progression_name": "मथळे /हेडिंग्ज "
@@ -21603,6 +21619,7 @@
           ]
         },
         "ec491dbb-ef99-4e6e-9abf-f1f90c22e838": {
+          "name": "पेअर प्रोग्रामिंग",
           "tips": [
             null
           ]
@@ -22184,6 +22201,9 @@
         "cf04f300-1bb8-4024-a77f-cfdeae97ccba": {
           "name": "सराव",
           "progression_name": "सराव"
+        },
+        "cef1dcf2-8240-4b77-b667-040c16bc6526": {
+          "progression_name": "पेअर प्रोग्रामिंग"
         },
         "86f6557c-2299-42b0-bf40-5d28c301fae9": {
           "progression_name": "सराव"
@@ -22840,6 +22860,9 @@
         "e5184970-6f86-4d50-b651-d79c6d41c585": {
           "name": "सराव",
           "progression_name": "सराव"
+        },
+        "600a7d5e-a862-4d84-bd9f-0ec3ec9f8223": {
+          "progression_name": "पेअर प्रोग्रामिंग"
         },
         "42476819-609d-42ca-9393-85740f3703dc": {
           "progression_name": "सराव"

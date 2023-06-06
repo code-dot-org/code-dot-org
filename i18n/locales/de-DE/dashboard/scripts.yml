@@ -93,6 +93,7 @@ de:
           description_short: Dieser 20-stündige Kurs umfasst die Informatik- und Programmierkonzepte aus den Kursen 2-4.
           description_audience: 'Alter: 10-18'
           student_description: Dieser 20-stündige Kurs umfasst die Informatik- und Programmierkonzepte aus den Kursen 2-4. Der Kurs eignet sich für Kinder und Jugendliche zwischen 10 und 18 Jahren. Unsere Kurse 2-4 vermitteln umfassendere Kenntnisse!
+          name: 20 Stunden
         edit-code:
           title: Code bearbeiten
           description: Code bearbeiten
@@ -5243,7 +5244,8 @@ de:
           lesson_groups:
             lessonGroup-3:
               display_name: Ein- und Ausgaben
-        ai-temp: {}
+        ai-temp:
+          title: So funktioniert KI
         focus-on-coding4b-2023:
           lesson_groups:
             lessonGroup-3:
@@ -5352,3 +5354,7 @@ de:
           description_audience: 'Alter: 9-13'
           description_short: Lernen Sie alle Konzepte in den Grundlagen der Informatik und erstellen Sie Ihre eigene Zeichnung, Geschichte oder Ihr eigenes Spiel.
         ey-ecosystems: {}
+        self-paced-pl-csp1-2023: {}
+        self-paced-pl-csp2-2023: {}
+        self-paced-pl-csp3-2023: {}
+        self-paced-pl-csp4-2023: {}

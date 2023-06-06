@@ -167,6 +167,9 @@ export default function SectionsSetUpContainer({
     const csrfToken = document.querySelector('meta[name="csrf-token"]')
       .attributes['content'].value;
 
+    const computedGrades =
+      participantType === 'teacher' ? ['pl'] : section.grade;
+
     const section_data = {
       login_type: loginType,
       participant_type: participantType,
@@ -178,7 +181,7 @@ export default function SectionsSetUpContainer({
       pairing_allowed: section.pairingAllowed,
       tts_autoplay_enabled: section.ttsAutoplayEnabled,
       sharing_disabled: section.sharingDisabled,
-      grades: section.grade,
+      grades: computedGrades,
       ...section,
     };
 

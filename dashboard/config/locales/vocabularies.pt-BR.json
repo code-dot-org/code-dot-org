@@ -508,7 +508,8 @@
           "definition": "Laço que continua se repetindo enquanto uma condição for verdadeira."
         },
         "copyright/coursee/2022": {
-          "word": "Direitos Autorais"
+          "word": "Direitos Autorais",
+          "definition": "o direito legal exclusivo de imprimir, publicar, executar, filmar ou gravar material literário, artístico ou musical e autorizar outros a fazer o mesmo"
         },
         "define/coursee/2022": {
           "word": "Definir",
@@ -864,7 +865,8 @@
           "word": "Pegada Digital"
         },
         "copyright/csd/2022": {
-          "word": "Direitos Autorais"
+          "word": "Direitos Autorais",
+          "definition": "o direito legal exclusivo de imprimir, publicar, executar, filmar ou gravar material literário, artístico ou musical e autorizar outros a fazer o mesmo"
         },
         "user/csd/2022": {
           "word": "Usuário",
@@ -1360,7 +1362,8 @@
           "definition": "Uma ação que faz com que algo aconteça."
         },
         "algorithm/coursee/2021": {
-          "word": "algoritmo"
+          "word": "algoritmo",
+          "definition": "Uma lista de etapas para concluir uma tarefa"
         },
         "behavior/coursee/2021": {
           "word": "Comportamento",
@@ -1375,7 +1378,8 @@
           "definition": "Uma ação que faz com que algo aconteça."
         },
         "copyright/coursee/2021": {
-          "word": "Direitos Autorais"
+          "word": "Direitos Autorais",
+          "definition": "o direito legal exclusivo de imprimir, publicar, executar, filmar ou gravar material literário, artístico ou musical e autorizar outros a fazer o mesmo"
         },
         "loop/coursee/2021": {
           "word": "Laço de repetição",
@@ -1473,7 +1477,8 @@
           "word": "Pegada Digital"
         },
         "copyright/csd/2021": {
-          "word": "Direitos Autorais"
+          "word": "Direitos Autorais",
+          "definition": "o direito legal exclusivo de imprimir, publicar, executar, filmar ou gravar material literário, artístico ou musical e autorizar outros a fazer o mesmo"
         }
       }
     }

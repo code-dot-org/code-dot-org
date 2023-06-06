@@ -1,0 +1,206 @@
+{
+  "script": {
+    "name": "csa-software-engineering",
+    "wrapup_video_id": null,
+    "login_required": true,
+    "properties": {
+      "curriculum_umbrella": "CSA",
+      "hideable_lessons": true,
+      "is_course": true,
+      "is_migrated": true,
+      "student_detail_progress_view": true,
+      "version_year": "unversioned"
+    },
+    "new_name": null,
+    "family_name": "csa-software-engineering",
+    "serialized_at": "2023-06-01 20:18:41 UTC",
+    "published_state": "in_development",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
+    "seeding_key": {
+      "script.name": "csa-software-engineering"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "lessonGroup-2",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Chapter 1: GitHub and Copilot"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-software-engineering"
+      }
+    },
+    {
+      "key": "lessonGroup-3",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "Chapter 2: Computer Vision"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-software-engineering"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "lesson-1",
+      "name": "Intro to GitHub",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-software-engineering"
+      }
+    },
+    {
+      "key": "lesson-2",
+      "name": "Intro to Copilot",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-software-engineering"
+      }
+    },
+    {
+      "key": "lesson-3",
+      "name": "Build with Copilot",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-software-engineering"
+      }
+    },
+    {
+      "key": "lesson-4",
+      "name": "Intro to AI Models",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-software-engineering"
+      }
+    },
+    {
+      "key": "lesson-5",
+      "name": "Training Your Model",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-software-engineering"
+      }
+    },
+    {
+      "key": "lesson-6",
+      "name": "Using Your Model",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-software-engineering"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "550d737e-3a95-481b-9475-c7981e1168b3",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "550d737e-3a95-481b-9475-c7981e1168b3",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-software-engineering"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "08793d33-c868-4dbf-8f33-a9db2f6ca60d",
+      "position": 1,
+      "properties": {
+        "progression_name": "GitHub Scavenger Hunt"
+      },
+      "seeding_key": {
+        "activity_section.key": "08793d33-c868-4dbf-8f33-a9db2f6ca60d",
+        "lesson_activity.key": "550d737e-3a95-481b-9475-c7981e1168b3"
+      }
+    }
+  ],
+  "script_levels": [
+
+  ],
+  "levels_script_levels": [
+
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

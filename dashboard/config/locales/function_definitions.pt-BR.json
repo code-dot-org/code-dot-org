@@ -3900,6 +3900,18 @@
               "length": "comprimento",
               "sides": "lados"
             }
+          },
+          "small flower": {
+            "name": "flor pequena"
+          },
+          "LOGIC FLOWERS2": {
+            "name": "FLORES LÓGICAS 2"
+          },
+          "LOGIC FLOWER": {
+            "name": "FLOR LÓGICA"
+          },
+          "LOGIC FLOWERS": {
+            "name": "FLORES LÓGICAS"
           }
         },
         "Course F: Artist Project_Flowers_examples_2021": {
@@ -4470,6 +4482,18 @@
               "length": "comprimento",
               "sides": "lados"
             }
+          },
+          "small flower": {
+            "name": "flor pequena"
+          },
+          "LOGIC FLOWERS2": {
+            "name": "FLORES LÓGICAS 2"
+          },
+          "LOGIC FLOWER": {
+            "name": "FLOR LÓGICA"
+          },
+          "LOGIC FLOWERS": {
+            "name": "FLORES LÓGICAS"
           }
         },
         "CourseD_EOC_artist2022": {
@@ -4886,6 +4910,21 @@
         "courseF_bee_for_challenge12022": {
           "move and get nectar with counter": {
             "name": "mover e obter néctar com contador"
+          }
+        },
+        "CourseF_app_computer": {
+          "reset game": {
+            "name": "reiniciar o jogo"
+          }
+        },
+        "CourseF_app_computer2022": {
+          "reset game": {
+            "name": "reiniciar o jogo"
+          }
+        },
+        "CourseF_app_computer_-2022-2": {
+          "reset game": {
+            "name": "reiniciar o jogo"
           }
         }
       }

@@ -6,8 +6,10 @@
           "name": "បន្ទប់វេប"
         },
         "gamelab": {
+          "name": "មន្ទីរពិសោធន៍ ល្បែង",
           "categories": {
             "game_lab": {
+              "name": "មន្ទីរពិសោធន៍ ល្បែង",
               "expressions": {
                 "playSound": {
                   "short_description": "ចាក់ឯកសារសំឡេង MP3 ពី URL ដែលបានបញ្ជាក់។"
@@ -70,6 +72,7 @@
           }
         },
         "applab": {
+          "name": "មន្ទីរពិសោធន៍កម្មវិធី​",
           "categories": {
             "ui_controls": {
               "expressions": {

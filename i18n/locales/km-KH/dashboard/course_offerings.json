@@ -1,13 +1,7 @@
 {
-  "coursea": "វគ្គសិក្សា A",
-  "courseb": "វគ្គសិក្សា B",
-  "coursec": "វគ្គសិក្សា C",
-  "coursed": "វគ្គសិក្សា D",
-  "coursee": "វគ្គសិក្សា E",
-  "coursef": "វគ្គសិក្សា F",
-  "pre-express": "វគ្គសំរាប់ក្មេងៗដែលមិនទាន់ចេះអាន ឬ ទេីបរៀនអាន",
   "flappy": "Flappy កូដ",
-  "basketball": "បង្កើតហ្គេមបោះបាល់",
+  "artist": "សិល្បករ",
+  "hero": "Minecraft: ដំណើរផ្សងព្រេងរបស់វារៈបុរស",
   "mc": "Minecraft Hour of Code",
   "step": "ជំហាន",
   "soccer": "បាល់ទាត់"
