@@ -342,7 +342,7 @@ def wait_n_event_loop_iterations(n)
         setTimeout(nEventLoopIterations, 1, n-1, callback)
       }(arguments[0], arguments[1])
     JS
-    @browser.execute_async_script(n_event_loop_iterations, num_iterations)
+    @browser.execute_async_script(n_event_loop_iterations, n)
   end
 end
 
