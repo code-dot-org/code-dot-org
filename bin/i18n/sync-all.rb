@@ -40,7 +40,8 @@ class I18nSync
 
   def run
     if @options[:interactive]
-      return_to_staging_branch
+      # force switch to the staging branch before sync-in as it contains the most relevant English content
+      return_to_staging_branch(force: true)
       sync_in if should_i "sync in"
       sync_up if should_i "sync up"
       CreateI18nPullRequests.in_and_up if @options[:with_pull_request] && should_i("create the in & up PR")
@@ -138,15 +139,16 @@ class I18nSync
     end
   end
 
-  def return_to_staging_branch
+  def return_to_staging_branch(force: false)
     case GitUtils.current_branch
     when "staging"
       # If we're already on staging, we don't need to bother
       return
     when /^i18n-sync/
-      # If we're on an i18n sync branch, only return to staging if the branch
-      # has been merged.
-      return unless GitUtils.current_branch_merged_into? "origin/staging"
+      unless force
+        # If we're on an i18n sync branch, only return to staging if the branch has been merged.
+        return unless GitUtils.current_branch_merged_into?('origin/staging')
+      end
     else
       # If we're on some other branch, then we're in some kind of weird state,
       # so error out.
