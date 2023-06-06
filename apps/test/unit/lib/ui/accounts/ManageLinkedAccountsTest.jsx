@@ -250,6 +250,25 @@ describe('ManageLinkedAccounts', () => {
     expect(googleConnectButton).to.have.attr('disabled');
   });
 
+  describe('CPA lockout to prevent students from connecting oauth accounts without parent permission', () => {
+    beforeEach(() => {
+      replaceOnWindow('CPA_EXPERIENCE', 'true');
+    });
+
+    afterEach(() => {
+      restoreOnWindow('CPA_EXPERIENCE', undefined);
+    });
+
+    it('disables the connect button for users under 13 when CPA is enabled', () => {
+      const wrapper = mount(
+        <ManageLinkedAccounts {...DEFAULT_PROPS} userAge={12} />
+      );
+      const googleConnectButton = wrapper.find('BootstrapButton').at(0);
+      expect(googleConnectButton).to.have.attr('disabled');
+      expect(googleConnectButton).to.be.disabled();
+    });
+  });
+
   describe('in the Maker App', () => {
     beforeEach(() => {
       replaceOnWindow('MakerBridge', true);

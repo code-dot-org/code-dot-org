@@ -10,6 +10,7 @@ import {connect} from 'react-redux';
 import RailsAuthenticityToken from '../../util/RailsAuthenticityToken';
 import {OAuthProviders} from '@cdo/apps/lib/ui/accounts/constants';
 import {isCodeOrgBrowser} from '@cdo/apps/lib/kits/maker/util/browserChecks';
+import getScriptData from '@cdo/apps/util/getScriptData';
 
 export const ENCRYPTED = `*** ${i18n.encrypted()} ***`;
 const authOptionPropType = PropTypes.shape({
@@ -35,6 +36,7 @@ class ManageLinkedAccounts extends React.Component {
     userHasPassword: PropTypes.bool.isRequired,
     isGoogleClassroomStudent: PropTypes.bool.isRequired,
     isCleverStudent: PropTypes.bool.isRequired,
+    userAge: PropTypes.number,
   };
 
   cannotDisconnectGoogle = authOption => {
@@ -159,6 +161,7 @@ class ManageLinkedAccounts extends React.Component {
                     option.id ? this.disconnectDisabledStatus(option) : null
                   }
                   error={option.error}
+                  userAge={this.props.userAge}
                 />
               );
             })}
@@ -176,6 +179,7 @@ export default connect(state => ({
   userHasPassword: state.manageLinkedAccounts.userHasPassword,
   isGoogleClassroomStudent: state.manageLinkedAccounts.isGoogleClassroomStudent,
   isCleverStudent: state.manageLinkedAccounts.isCleverStudent,
+  userAge: getScriptData('edit').userAge,
 }))(ManageLinkedAccounts);
 
 class OauthConnection extends React.Component {
@@ -186,6 +190,7 @@ class OauthConnection extends React.Component {
     email: PropTypes.string,
     disconnectDisabledStatus: PropTypes.string,
     error: PropTypes.string,
+    userAge: PropTypes.number,
   };
 
   getDisconnectDisabledTooltip = () => {
@@ -199,6 +204,10 @@ class OauthConnection extends React.Component {
     }
   };
 
+  shouldDisableConnectButton = userAge => {
+    return !!(window.CPA_EXPERIENCE && userAge < 13);
+  };
+
   render() {
     const {
       credentialType,
@@ -207,6 +216,7 @@ class OauthConnection extends React.Component {
       id,
       email,
       error,
+      userAge,
     } = this.props;
     // if given an email, we are already connected to this provider and should
     // present the option to disconnect. Otherwise, we should present the
@@ -257,7 +267,10 @@ class OauthConnection extends React.Component {
                 type="submit"
                 style={styles.button}
                 text={buttonText}
-                disabled={!!disconnectDisabledMessage}
+                disabled={
+                  !!disconnectDisabledMessage ||
+                  (!isConnected && this.shouldDisableConnectButton(userAge))
+                }
               />
               <RailsAuthenticityToken />
             </form>
