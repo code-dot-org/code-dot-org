@@ -31,12 +31,15 @@ required_certs = ARGV.dup
 def get_certificate_expiration(common_name)
   # Run the Acmesmith command using Ruby's system-level command execution and capture its output
   certificate_info = `acmesmith show-certificate #{common_name}`
-  not_after_line = certificate_info.split("\n").find { |line| line =~ /Not After/ }
+  not_after_line = certificate_info.split("\n").find {|line| line.include?('Not After')}
   not_after = Date.parse(not_after_line.split(': ').last)
-  return not_after;
+  return not_after
 end
 
 begin
+  # Uncomment to force regeneration of a new certificate
+  # raise 'new cert'
+
   CDO.log.info "Checking for existing certificate for #{common_name}..."
   Acmesmith::Command.start ['current', common_name] rescue raise 'cert not found'
 
@@ -44,15 +47,18 @@ begin
   expiration_date = get_certificate_expiration(common_name)
   raise 'cert expired' if expiration_date < Date.today
   CDO.log.info "Existing certificate for #{common_name} is valid until #{expiration_date}."
-rescue => e
-  case e.message
+rescue => exception
+  case exception.message
   when 'cert not found'
-    CDO.log.info "No existing certificate found for #{common_name}. Authorizing a new one."
+    CDO.log.info "No existing certificate found for #{common_name}."
   when 'cert expired'
-    CDO.log.info "Existing certificate for #{common_name} is expired. Requesting a new one."
+    CDO.log.info "Existing certificate for #{common_name} is expired."
+  when 'new cert'
+    CDO.log.info "'new cert' error manually raised."
   else
-    raise e
+    raise exception
   end
 
+  CDO.log.info "Requesting new certificate for #{required_certs}"
   Acmesmith::Command.start ['order'].concat(required_certs)
 end
