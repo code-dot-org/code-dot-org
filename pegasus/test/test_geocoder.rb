@@ -59,7 +59,7 @@ class GeocoderTest < Minitest::Test
       'location_p' => '47.610183,-122.337401',
       'location_street_number_s' => '1501',
       'location_route_s' => '4th Avenue',
-      'location_street_address_s' => '1501 4th Avenue',
+      'location_street_address_s' => '801 5th Avenue',
       'location_city_s' => 'Seattle',
       'location_state_s' => 'Washington',
       'location_state_code_s' => 'WA',
@@ -71,9 +71,9 @@ class GeocoderTest < Minitest::Test
     expected_country_code = 'US'
     expected_street_number = '1501'
     expected_route = '4th Avenue'
-    expected_street_address = '1501 4th Avenue'
-    expected_address = '1501 4th Avenue, Seattle, Washington 98101, United States'
-    expected_formatted_address = '1501 4th Avenue, Seattle, Washington 98101, United States'
+    expected_street_address = '801 5th Avenue'
+    expected_address = '801 5th Avenue, Seattle, Washington 98101, United States'
+    expected_formatted_address = '801 5th Avenue, Seattle, Washington 98101, United States'
 
     location = Geocoder.search('1501 4th Ave, Seattle, WA 98101').first
     assert_equal(expected_summarize, location.summarize)
