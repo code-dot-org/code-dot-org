@@ -108,74 +108,76 @@ const CustomizableCurriculumCatalogCard = ({
   const [isAssignDialogOpen, setIsAssignDialogOpen] = useState(false);
 
   return (
-    <div
-      className={classNames(
-        style.curriculumCatalogCardContainer,
-        isEnglish
-          ? style.curriculumCatalogCardContainer_english
-          : style.curriculumCatalogCardContainer_notEnglish
-      )}
-    >
-      <img src={imageSrc} alt={imageAltText} />
-      <div className={style.curriculumInfoContainer}>
-        <div className={style.labelsAndTranslatabilityContainer}>
-          <div className={style.labelsContainer}>
-            <CardLabels subjectsAndTopics={subjectsAndTopics} />
-          </div>
-        </div>
-        {isTranslated && (
-          <FontAwesome
-            icon="language"
-            className="fa-solid"
-            title={translationIconTitle}
-          />
+    <>
+      <div
+        className={classNames(
+          style.curriculumCatalogCardContainer,
+          isEnglish
+            ? style.curriculumCatalogCardContainer_english
+            : style.curriculumCatalogCardContainer_notEnglish
         )}
-        <h4>{courseDisplayName}</h4>
-        <div className={style.iconWithDescription}>
-          <FontAwesome icon="user" className="fa-solid" />
-          <p>{gradeRange}</p>
-        </div>
-        <div className={style.iconWithDescription}>
-          <FontAwesome icon="clock" className="fa-solid" />
-          <p>{duration}</p>
-        </div>
-        <div
-          className={classNames(
-            style.buttonsContainer,
-            isEnglish
-              ? style.buttonsContainer_english
-              : style.buttonsContainer_notEnglish
-          )}
-        >
-          <Button
-            __useDeprecatedTag
-            color={Button.ButtonColor.neutralDark}
-            type="button"
-            href={pathToCourse}
-            aria-label={quickViewButtonDescription}
-            text={quickViewButtonText}
-          />
-          <Button
-            color={Button.ButtonColor.brandSecondaryDefault}
-            type="button"
-            onClick={() => {
-              setIsAssignDialogOpen(true);
-            }}
-            aria-label={assignButtonDescription}
-            text={assignButtonText}
-          />
-          {isAssignDialogOpen && (
-            <MultipleSectionsAssigner
-              assignmentName={courseDisplayName}
-              onClose={() => setIsAssignDialogOpen(false)}
-              sections={sectionsForDropdown}
-              participantAudience={'student'}
-              {...props}
+      >
+        <img src={imageSrc} alt={imageAltText} />
+        <div className={style.curriculumInfoContainer}>
+          <div className={style.labelsAndTranslatabilityContainer}>
+            <div className={style.labelsContainer}>
+              <CardLabels subjectsAndTopics={subjectsAndTopics} />
+            </div>
+          </div>
+          {isTranslated && (
+            <FontAwesome
+              icon="language"
+              className="fa-solid"
+              title={translationIconTitle}
             />
           )}
+          <h4>{courseDisplayName}</h4>
+          <div className={style.iconWithDescription}>
+            <FontAwesome icon="user" className="fa-solid" />
+            <p>{gradeRange}</p>
+          </div>
+          <div className={style.iconWithDescription}>
+            <FontAwesome icon="clock" className="fa-solid" />
+            <p>{duration}</p>
+          </div>
+          <div
+            className={classNames(
+              style.buttonsContainer,
+              isEnglish
+                ? style.buttonsContainer_english
+                : style.buttonsContainer_notEnglish
+            )}
+          >
+            <Button
+              __useDeprecatedTag
+              color={Button.ButtonColor.neutralDark}
+              type="button"
+              href={pathToCourse}
+              aria-label={quickViewButtonDescription}
+              text={quickViewButtonText}
+            />
+            <Button
+              color={Button.ButtonColor.brandSecondaryDefault}
+              type="button"
+              onClick={() => {
+                setIsAssignDialogOpen(true);
+              }}
+              aria-label={assignButtonDescription}
+              text={assignButtonText}
+            />
+          </div>
         </div>
       </div>
-    </div>
+      {isAssignDialogOpen && (
+        <MultipleSectionsAssigner
+          assignmentName={courseDisplayName}
+          onClose={() => setIsAssignDialogOpen(false)}
+          sections={sectionsForDropdown}
+          participantAudience={'student'}
+          {...props}
+        />
+      )}
+    </>
   );
 };
 

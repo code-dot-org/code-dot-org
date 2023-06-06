@@ -193,7 +193,7 @@ const MultipleSectionsAssigner = ({
       >
         Select All
       </a>
-      <div style={{textAlign: 'right'}}>
+      <div style={styles.buttonContainer}>
         <Button
           text={i18n.dialogCancel()}
           onClick={onClose}
@@ -202,7 +202,6 @@ const MultipleSectionsAssigner = ({
         <Button
           id="confirm-assign"
           text={i18n.confirmAssignment()}
-          style={{marginLeft: 5}}
           onClick={reassignSections}
           color={Button.ButtonColor.orange}
         />
@@ -234,6 +233,11 @@ const styles = {
     fontSize: 16,
     marginBottom: 5,
     fontWeight: 'bold',
+  },
+  buttonContainer: {
+    display: 'flex',
+    gap: 5,
+    justifyContent: 'flex-end',
   },
   content: {
     fontSize: 14,
@@ -271,9 +275,6 @@ const styles = {
     fontSize: 16,
     cursor: 'pointer',
     color: color.link_color,
-    ':hover': {
-      color: color.link_color,
-    },
   },
 };
 
