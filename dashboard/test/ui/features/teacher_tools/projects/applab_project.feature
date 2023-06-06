@@ -66,7 +66,7 @@ Scenario: Applab Flow
   # Don't actually get redirect this time (stay on /view)
   And I get redirected to "/projects/applab/([^\/]*?)/view" via "nothing"
   And I wait to see "#codeWorkspace"
-  And I wait for the event loop
+  And I wait for the next event loop
   And selector "#codeWorkspace" has class "readonly"
   And I should see title includes "Code Ninja - App Lab - Code.org"
 
