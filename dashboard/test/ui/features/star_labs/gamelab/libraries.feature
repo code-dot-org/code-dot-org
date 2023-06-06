@@ -31,7 +31,7 @@ Feature: Libraries
     Then I open the Manage Libraries dialog
     And I wait until element "h2:contains('Import library from ID')" is visible
     And I type the saved channel id into element "#ui-test-import-library > input"
-    And I wait for the event loop
+    And I wait for the next event loop
     And I click selector "#ui-test-import-library > button" to load a new page
 
     # Confirm Student1's library is in Student2's project

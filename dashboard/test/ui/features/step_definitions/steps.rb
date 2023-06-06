@@ -175,7 +175,7 @@ And /^I add another version to the project$/ do
     And I wait until element "#resetButton" is visible
     And I press "resetButton"
     And I wait until element "#runButton" is visible
-    And I wait for the event loop
+    And I wait for the next event loop
     And I press "runButton"
   GHERKIN
 end
@@ -311,17 +311,17 @@ Then /^check that the URL contains "([^"]*)"$/i do |url|
   expect(@browser.current_url).to include(url)
 end
 
-# See "I wait for the event loop" for a potentially better alternative
+# See "I wait for the next event loop" for a potentially better alternative
 When /^I wait for (\d+(?:\.\d*)?) seconds?$/ do |seconds|
   sleep seconds.to_f
 end
 
-# "I wait for the event loop" and "I wait for N event loop iterations"
+# "I wait for the next event loop" and "I wait for N event loop iterations"
 # allows blocking until N async JS operations complete, e.g. .then chains
 # triggered by clicking/manipulating DOM elements. When relevant, this a
 # slightly better alternative to fixing tests with "I wait for N seconds"
-When /^I wait for (\d+|the) event loop( iterations)?$/ do |num_iterations, _|
-  num_iterations = num_iterations == "the" ? 1 : num_iterations.to_i
+When /^I wait for (\d+|the next) event loop( iterations)?$/ do |num_iterations, _|
+  num_iterations = num_iterations == "the next" ? 1 : num_iterations.to_i
   wait_short_until do
     num_iterations.times {@browser.execute_async_script("setTimeout(arguments[0], 1)")}
   end

@@ -34,6 +34,7 @@ Scenario: Submit anything, unsubmit, be able to resubmit.
 Scenario: Level without multiple attempts allowed is locked after submit
   # First, submit something.
   Given I am on "http://studio.code.org/s/allthethings/lessons/27/levels/4"
+  And I wait for the next event loop
   And I type "sample response" into ".free-response > textarea"
   And I press ".submitButton" using jQuery to load a new page
 
