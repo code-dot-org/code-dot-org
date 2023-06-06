@@ -795,14 +795,16 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
   end
 
   test 'updating virtual field in CSP/CSA summer workshop before a month of starting as a non-ws-admin does not raise error' do
-    skip 'flaky test'
     sign_in @organizer
-    workshop = create :csp_summer_workshop, organizer: @organizer
+
     # Using '32.days' instead of '1.month' due to the inconsistency of the length of 'month' and it guarantees at least 1 month has passed.
     session_start = (tomorrow_at 9) + 32.days
     session_end = session_start + 8.hours
+    session = create :pd_session, start: session_start, end: session_end
+    workshop = create :workshop, workshop_params.merge(course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP, organizer: @organizer, funding_type: nil, sessions: [session])
 
-    put :update, params: {id: workshop.id, pd_workshop: workshop_params.merge(course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP, funding_type: nil, virtual: true, sessions_attributes: [{start: session_start, end: session_end}])}
+    put :update, params: {id: workshop.id, pd_workshop: {virtual: true}}
+
     assert_response :success
   end
 

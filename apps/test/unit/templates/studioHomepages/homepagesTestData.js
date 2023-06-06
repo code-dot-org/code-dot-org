@@ -88,7 +88,6 @@ export const taughtSections = [
     grade: 'K',
     providerManaged: false,
     hidden: false,
-    participantType: 'student',
   },
   {
     id: 15,
@@ -105,7 +104,6 @@ export const taughtSections = [
     grade: '7',
     providerManaged: false,
     hidden: false,
-    participantType: 'student',
   },
 ];
 
@@ -120,7 +118,6 @@ export const joinedSections = [
     numberOfStudents: 1,
     linkToStudents: manageStudentsUrl,
     code: 'ClassOneCode',
-    participantType: 'student',
   },
   {
     id: 12,
@@ -134,7 +131,6 @@ export const joinedSections = [
     numberOfStudents: 2,
     linkToStudents: manageStudentsUrl,
     code: 'ClassTwoCode',
-    participantType: 'student',
   },
   {
     id: 13,
@@ -147,7 +143,6 @@ export const joinedSections = [
     linkToStudents: manageStudentsUrl,
     login_type: 'google_classroom',
     code: 'DoNotShowThis',
-    participantType: 'student',
   },
   {
     id: 14,
@@ -160,7 +155,6 @@ export const joinedSections = [
     linkToStudents: manageStudentsUrl,
     login_type: 'clever',
     code: 'OrThisEither',
-    participantType: 'student',
   },
 ];
 
@@ -175,7 +169,6 @@ export const joinedPlSections = [
     numberOfStudents: 1,
     linkToStudents: manageStudentsUrl,
     code: 'ClassOneCode',
-    participantType: 'teacher',
   },
   {
     id: 12,
@@ -189,7 +182,6 @@ export const joinedPlSections = [
     numberOfStudents: 2,
     linkToStudents: manageStudentsUrl,
     code: 'ClassTwoCode',
-    participantType: 'teacher',
   },
   {
     id: 13,
@@ -202,7 +194,6 @@ export const joinedPlSections = [
     linkToStudents: manageStudentsUrl,
     login_type: 'google_classroom',
     code: 'DoNotShowThis',
-    participantType: 'teacher',
   },
   {
     id: 14,
@@ -215,7 +206,6 @@ export const joinedPlSections = [
     linkToStudents: manageStudentsUrl,
     login_type: 'clever',
     code: 'OrThisEither',
-    participantType: 'teacher',
   },
 ];
 
