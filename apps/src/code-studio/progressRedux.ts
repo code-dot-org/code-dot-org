@@ -1,14 +1,30 @@
-import {PUZZLE_PAGE_NONE} from '@cdo/apps/templates/progress/progressTypes';
+import {
+  Lesson,
+  LessonGroup,
+  UnitProgress,
+  PeerReviewLessonInfo,
+  PeerReviewSummary,
+  PUZZLE_PAGE_NONE,
+  InitProgressPayload,
+} from '@cdo/apps/types/progressTypes';
+import {PayloadAction, createSlice} from '@reduxjs/toolkit';
+import _ from 'lodash';
+import {
+  processedLevel,
+  processServerStudentProgress,
+  getLevelResult,
+} from '@cdo/apps/templates/progress/progressHelpers';
 
 interface ProgressState {
   currentLevelId: string | null;
-  currentLessonId: number | null;
+  currentLessonId: number | undefined;
   deeperLearningCourse: boolean | null;
   saveAnswersBeforeNavigation: boolean | null;
   lessons: Lesson[] | null;
   lessonGroups: LessonGroup[] | null;
   scriptId: number | null;
   scriptName: string | null;
+  scriptDisplayName: string | undefined;
   unitTitle: string | null;
   courseId: number | null;
   isLessonExtras: boolean;
@@ -33,107 +49,15 @@ interface ProgressState {
   usingDbProgress: boolean;
   currentPageNumber: number;
   courseVersionId: number | undefined;
+  unitDescription: string | undefined;
+  unitStudentDescription: string | undefined;
 }
-
-interface Lesson {
-  assessment: boolean;
-  description_student: string;
-  description_teacher: string;
-  hasLessonPlan: boolean;
-  id: number;
-  key: string;
-  lessonEditPath: string;
-  lessonNumber: number;
-  lessonStartUrl: string;
-  lesson_extras_level_url: string;
-  lesson_group_display_name: string;
-  levels: Level[];
-  lockable: boolean;
-  name: string;
-  num_script_lessons: number;
-  numberedLesson: boolean;
-  position: number;
-  relative_position: number;
-  script_id: number;
-  script_name: string;
-  title: string;
-  unplugged: boolean | null;
-}
-
-interface LessonGroup {
-  big_questions: string | null;
-  description: string | null;
-  display_name: string;
-  id: number;
-  key: string;
-  position: number;
-  user_facing: boolean;
-}
-
-interface Level {
-  activeId: string;
-  app: string;
-  bonus: boolean;
-  display_as_unplugged: boolean;
-  freePlay: boolean;
-  icon: string | null;
-  id: number;
-  ids: string[];
-  inactiveIds: string[];
-  is_concept_level: boolean;
-  kind: string;
-  position: number;
-  title: number;
-  url: string;
-}
-
-interface UnitProgress {
-  lastTimestamp: number | undefined;
-  locked: boolean;
-  pages: UnitProgress[] | null;
-  paired: boolean;
-  result: number;
-  status: string;
-  teacherFeedbackReviewState: keyof typeof ReviewStates | undefined; // TODO: is this a string?
-  timeSpent: number | undefined;
-}
-
-interface PeerReviewLessonInfo {
-  name: string;
-  lesson_group_display_name: string;
-  levels: PeerReveiwLevelInfo[];
-  lockable: boolean;
-}
-
-interface PeerReveiwLevelInfo {
-  id: number;
-  kind: string;
-  title: string;
-  url: string;
-  name: string;
-  icon: string;
-  locked: boolean;
-}
-
-interface PeerReviewSummary {
-  status: string;
-  name: string;
-  result: string;
-  icon: string;
-  locked: boolean;
-}
-
-const ReviewStates = {
-  completed: 'completed',
-  keepWorking: 'keepWorking',
-  awaitingReview: 'awaitingReview',
-};
 
 const initialState: ProgressState = {
   currentLevelId: null,
 
   // These first fields never change after initialization
-  currentLessonId: null,
+  currentLessonId: undefined,
   deeperLearningCourse: null,
   // used on multi-page assessments
   saveAnswersBeforeNavigation: null,
@@ -141,6 +65,7 @@ const initialState: ProgressState = {
   lessonGroups: null,
   scriptId: null,
   scriptName: null,
+  scriptDisplayName: undefined,
   unitTitle: null,
   courseId: null,
   isLessonExtras: false,
@@ -171,4 +96,79 @@ const initialState: ProgressState = {
   usingDbProgress: false,
   currentPageNumber: PUZZLE_PAGE_NONE,
   courseVersionId: undefined,
+  unitDescription: undefined,
+  unitStudentDescription: undefined,
 };
+
+const progressSlice = createSlice({
+  name: 'progress',
+  initialState,
+  reducers: {
+    initProgress(state, action: PayloadAction<InitProgressPayload>) {
+      const lessons = action.payload.lessons;
+      // Re-initializing with full set of lessons shouldn't blow away currentLessonId
+      const currentLessonId =
+        state.currentLessonId ||
+        (lessons.length === 1 ? lessons[0].id : undefined);
+      state.currentLevelId ||= action.payload.currentLevelId;
+      state.deeperLearningCourse = action.payload.deeperLearningCourse;
+      state.saveAnswersBeforeNavigation =
+        action.payload.saveAnswersBeforeNavigation;
+      state.lessons = processedLessons(
+        lessons,
+        action.payload.deeperLearningCourse
+      );
+      state.lessonGroups = action.payload.lessonGroups;
+      state.peerReviewLessonInfo = action.payload.peerReviewLessonInfo;
+      state.scriptId = action.payload.scriptId;
+      state.scriptName = action.payload.scriptName;
+      state.scriptDisplayName = action.payload.scriptDisplayName;
+      state.unitTitle = action.payload.unitTitle;
+      state.unitDescription = action.payload.unitDescription;
+      state.courseId = action.payload.courseId;
+      state.courseVersionId = action.payload.courseVersionId;
+      state.currentLessonId = currentLessonId;
+      state.hasFullProgress = action.payload.isFullProgress;
+      state.isLessonExtras = action.payload.isLessonExtras;
+      state.currentPageNumber = action.payload.currentPageNumber;
+    },
+    setCurrentLevelId(state, action: PayloadAction<string>) {
+      state.currentLevelId = action.payload;
+    },
+    setScriptProgress(
+      state,
+      action: PayloadAction<{
+        [levelId: number]: UnitProgress;
+      }>
+    ) {
+      state.unitProgress = processServerStudentProgress(action.payload);
+      state.unitProgressHasLoaded = true;
+    },
+  },
+});
+
+// Helpers
+
+/**
+ * Does some processing of our passed in lesson, namely
+ * - Removes 'hidden' field
+ * - Adds 'lessonNumber' field for non-PLC lessons which
+ * are not lockable or have a lesson plan
+ */
+export function processedLessons(lessons: Lesson[], isPlc: boolean) {
+  let numLessonsWithLessonPlan = 0;
+
+  return lessons.map(lesson => {
+    let lessonNumber;
+    if (!isPlc && lesson.numberedLesson) {
+      numLessonsWithLessonPlan++;
+      lessonNumber = numLessonsWithLessonPlan;
+    }
+    return {
+      ..._.omit(lesson, 'hidden'),
+      lessonNumber,
+    };
+  });
+}
+
+export default progressSlice.reducer;
