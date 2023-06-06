@@ -44,6 +44,7 @@ Feature: Using the assessments tab in the teacher dashboard to get feedback for 
     When I sign in as "Teacher_Sally" and go home
     And I click selector ".ui-test-section-dropdown" once I see it
     And I click selector ".edit-section-details-link"
+    And I press keys "testingSection" for element "#uitest-section-name-setup"
     And I press the first "input[name='grades[]']" element
     And I wait until element "button:contains(Hour of Code)" is visible
     And I click selector "button:contains(Hour of Code)"
