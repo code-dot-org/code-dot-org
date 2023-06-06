@@ -45,6 +45,11 @@ theme: responsive_full_width
 
 = view :section_divider_line
 
-%section
+%section.tenth-anniversary-testimonials
   .wrapper
     %h2=hoc_s(:tenth_anniversary_testimonials_heading)
+    .quotes-wrapper
+      = view :tenth_anniversary_testimonials_carousel
+    %hr
+    = view :tenth_anniversary_tweets_testimonials
+

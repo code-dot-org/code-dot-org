@@ -99,10 +99,11 @@
   }
 }
 
-.tenth-anniversary-celebrate {
+.tenth-anniversary-celebrate,
+.tenth-anniversary-testimonials {
 
   .grid-container {
-    align-items: end;
+    align-items: start;
     gap: 2em;
 
     @media screen and (min-width: $width-md) {
@@ -121,16 +122,23 @@
       }
     }
 
-    .tenth-anniversary-tweets {
-      max-height: 355px;
+    .tenth-anniversary-tweets,
+    .tenth-anniversary-tweets-testimonials {
       border-bottom: 1px solid;
       overflow: auto;
 
       .twitter-tweet {
         margin: 0 auto 1em !important;
+        width: 100%;
       }
     }
   }
+
+  .tenth-anniversary-tweets {
+    max-height: 355px;
+  }
+
+  .tenth-anniversary-tweets-testimonials {
+    margin-top: 2em;
+  }
 }
-
-
