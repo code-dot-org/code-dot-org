@@ -7,10 +7,8 @@ import moduleStyles from './controls.module.scss';
 import BeatPad from './BeatPad';
 import {AnalyticsContext} from '../context';
 import {useDispatch, useSelector} from 'react-redux';
-import {hideBeatPad, showBeatPad, toggleBeatPad} from '../redux/musicRedux';
+import {hideBeatPad, showBeatPad} from '../redux/musicRedux';
 import commonI18n from '@cdo/locale';
-
-const documentationUrl = '/docs/ide/projectbeats';
 
 /**
  * Renders the playback controls bar, including the play/pause button, show/hide beat pad button,
@@ -54,43 +52,11 @@ const Controls = ({
     );
   };
 
-  const renderIconButton = (icon, onClick, hide) => (
-    <button
-      className={classNames(
-        moduleStyles.controlButton,
-        moduleStyles.controlButtonIcon,
-        hide && moduleStyles.controlButtonHide
-      )}
-      onClick={onClick}
-      type="button"
-    >
-      <FontAwesome icon={icon} className={moduleStyles.icon} />
-    </button>
-  );
-
-  const beatPadIconButton = renderIconButton('th', () => {
-    analyticsReporter.onButtonClicked('show-hide-beatpad', {
-      showing: !isBeatPadShowing,
-    });
-    dispatch(toggleBeatPad());
-  });
-
-  const infoIconButton = renderIconButton(
-    'info-circle',
-    toggleInstructions,
-    !instructionsAvailable
-  );
-
-  const [leftIcon, rightIcon] = instructionsOnRight
-    ? [beatPadIconButton, infoIconButton]
-    : [infoIconButton, beatPadIconButton];
-
   return (
     <div id="controls" className={moduleStyles.controlsContainer}>
-      <div
-        className={classNames(moduleStyles.section, moduleStyles.sectionCenter)}
-      >
+      <div className={moduleStyles.section}>
         <button
+          id="run-button"
           className={classNames(
             moduleStyles.controlButton,
             moduleStyles.controlButtonRun
