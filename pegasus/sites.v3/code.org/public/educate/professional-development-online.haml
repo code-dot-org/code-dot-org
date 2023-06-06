@@ -50,7 +50,7 @@ theme: responsive_full_width
 
 %section.bg-primary-light
   .wrapper
-    %p.heading-sm.no-margin-bottom
+    %p.heading-xs.no-margin-bottom
       =hoc_s(:self_paced_pl_callout)
       %a{href: "/professional-learning"}=hoc_s(:self_paced_pl_callout_link)
 
@@ -181,7 +181,8 @@ theme: responsive_full_width
     %div.col-50{style: "margin-bottom: 1em;"}
       %h2=hoc_s(:self_paced_pl_facilitator_heading)
       %h3.heading-sm=hoc_s(:self_paced_pl_facilitator_subheading)
-      %p=hoc_s(:self_paced_pl_facilitator_desc)
+      %p.body-two
+        =hoc_s(:self_paced_pl_facilitator_desc)
       %a.link-button{href: "/professional-learning"}=hoc_s(:self_paced_pl_facilitator_call_to_action)
     %div.col-45{style: "float:right; margin-top: 0.5em"}
       %figure.video-responsive{style: "max-width: unset"}

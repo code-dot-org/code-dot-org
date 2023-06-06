@@ -28,7 +28,6 @@ theme: responsive_full_width
     %figure.col-33{style: "float: right"}
       %img.fade-in-out{src: "/images/banners/ai-bot-wizard.svg", alt: "", style: "z-index: 10"}
       %img{src: "/images/banners/ai-bot-default.svg", alt: "", style: "position: relative;"}
-
     .clear
 
 %section.intro
@@ -68,7 +67,7 @@ theme: responsive_full_width
         %h2.heading-lg=hoc_s(:teachai_launch_blog_title)
         %p
           %strong=hoc_s(:teachai_launch_blog_desc_01)
-        %p=hoc_s(:teachai_launch_blog_desc_02)
+        %p.body-two=hoc_s(:teachai_launch_blog_desc_02)
         %a.link-button{href: "https://teachai.org/launch", target: "_blank", rel: "noopener noreferrer"}=hoc_s(:call_to_action_read_more)
 
 %section.bg-neutral-light
