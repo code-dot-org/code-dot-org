@@ -15,8 +15,9 @@ import classNames from 'classnames';
 import moduleStyles from './LabContainer.module.scss';
 import i18n from '@cdo/locale';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import ErrorBoundary from './ErrorBoundary';
 
-const LabContainer = ({children}) => {
+const LabContainer = ({children, onError}) => {
   const isLabLoading = useSelector(state => state.lab.isLoading);
   const isPageError = useSelector(state => state.lab.isPageError);
 
@@ -25,45 +26,55 @@ const LabContainer = ({children}) => {
     : moduleStyles.fadeInBlock;
 
   return (
-    <div id="lab-container" className={moduleStyles.labContainer}>
-      {children}
-      <div
-        id="fade-overlay"
-        className={classNames(moduleStyles.solidBlock, overlayStyle)}
-      >
-        {isLabLoading && (
-          <div className={moduleStyles.slowLoadContainer}>
-            <div className={moduleStyles.spinnerContainer}>
-              <FontAwesome
-                icon="spinner"
-                className={classNames('fa-pulse', 'fa-3x')}
-              />
-            </div>
-            <div className={moduleStyles.spinnerText}>{i18n.slowLoading()}</div>
-          </div>
-        )}
-      </div>
-
-      {isPageError && (
+    <ErrorBoundary fallback={<ErrorFallbackPage />} onError={onError}>
+      <div id="lab-container" className={moduleStyles.labContainer}>
+        {children}
         <div
-          id="page-error-container"
-          className={moduleStyles.pageErrorContainer}
+          id="fade-overlay"
+          className={classNames(moduleStyles.solidBlock, overlayStyle)}
         >
-          <div id="page-error" className={moduleStyles.pageError}>
-            <img
-              className={moduleStyles.pageErrorImage}
-              src="/shared/images/sad-bee-avatar.png"
-            />
-            {i18n.loadingError()}
-          </div>
+          {isLabLoading && (
+            <div className={moduleStyles.slowLoadContainer}>
+              <div className={moduleStyles.spinnerContainer}>
+                <FontAwesome
+                  icon="spinner"
+                  className={classNames('fa-pulse', 'fa-3x')}
+                />
+              </div>
+              <div className={moduleStyles.spinnerText}>
+                {i18n.slowLoading()}
+              </div>
+            </div>
+          )}
         </div>
-      )}
-    </div>
+
+        {isPageError && <ErrorUI />}
+      </div>
+    </ErrorBoundary>
   );
 };
 
 LabContainer.propTypes = {
   children: PropTypes.node.isRequired,
+  onError: PropTypes.func.isRequired,
 };
+
+export const ErrorUI = () => (
+  <div id="page-error-container" className={moduleStyles.pageErrorContainer}>
+    <div id="page-error" className={moduleStyles.pageError}>
+      <img
+        className={moduleStyles.pageErrorImage}
+        src="/shared/images/sad-bee-avatar.png"
+      />
+      {i18n.loadingError()}
+    </div>
+  </div>
+);
+
+export const ErrorFallbackPage = () => (
+  <div id="lab-container" className={moduleStyles.labContainer}>
+    <ErrorUI />
+  </div>
+);
 
 export default LabContainer;
