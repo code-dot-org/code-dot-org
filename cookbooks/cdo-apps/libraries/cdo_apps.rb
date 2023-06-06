@@ -44,6 +44,7 @@ module CdoApps
       recursive true
     end
 
+    # Set up a SystemD service to monitor the web server process.
     template unit_file do
       app_server = node['cdo-apps']['app_server']
       src_file = "#{app_root}/config/#{app_server}.rb"
@@ -60,6 +61,55 @@ module CdoApps
         src_file: src_file,
         user: user
       source "#{app_server}.service.erb"
+
+      notifies :run, "execute[restart #{app_name} service]", :delayed
+    end
+
+    # Define an execute resource for restarting the entire SystemD service,
+    # which can be invoked by other Chef resources
+    execute "restart #{app_name} service" do
+      command "systemctl restart #{app_name}"
+
+      # Don't run by default; rely on notifications.
+      action :nothing
+
+      # Restart when Ruby is upgraded.
+      # Full restart needed because the path to app-server executable changed.
+      subscribes :run, "apt_package[ruby#{node['cdo-ruby']['version']}]", :delayed if node['cdo-ruby']
+
+      # Ensure globals.yml is up-to-date before (re)starting service.
+      notifies :create, 'template[globals]', :before
+
+      only_if {File.exist? unit_file}
+    end
+
+    # Define an execute resource for restarting just the puma web server, which
+    # can be invoked by other Chef resources
+    execute "restart #{app_name} web server" do
+      command "pumactl -P #{src_file}.pid restart"
+
+      # Don't run by default; rely on notifications.
+      action :nothing
+
+      # Reload when gem bundle is updated.
+      subscribes :run, 'execute[bundle-install]', :delayed
+
+      # Reload when application is rebuilt.
+      subscribes :run, 'execute[build-cdo]', :delayed
+
+      # Reload when global config is updated to pick up changes.
+      subscribes :run, 'template[globals]', :delayed
+
+      only_if "systemctl is-active #{app_name}"
+    end
+
+    # We always want to restart the web server whenever port/socket listener
+    # configuration is changed, so create a file with that information as its
+    # contents and invoke the restart whenever those contents change.
+    file "#{app_name}_listeners" do
+      path "#{Chef::Config[:file_cache_path]}/#{app_name}_listeners"
+      content lazy {"#{node['cdo-secrets']["#{app_name}_sock"]}:#{node['cdo-secrets']["#{app_name}_port"]}"}
+      notifies :run, "execute[restart #{app_name} web server]", :immediately
     end
 
     log_dir = File.join app_root, 'log'
