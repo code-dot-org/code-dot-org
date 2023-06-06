@@ -65,8 +65,8 @@ module CdoApps
       notifies :run, "execute[restart #{app_name} service]", :delayed
     end
 
-    # Define an execute resource for restarting the entire SystemD service,
-    # which can be invoked by other Chef resources
+    # Define an execute resource for restarting (or starting) the entire
+    # SystemD service, which can be invoked by other Chef resources
     execute "restart #{app_name} service" do
       command "systemctl restart #{app_name}"
 
@@ -74,22 +74,7 @@ module CdoApps
       action :nothing
 
       # Restart when Ruby is upgraded.
-      # Full restart needed because the path to app-server executable changed.
       subscribes :run, "apt_package[ruby#{node['cdo-ruby']['version']}]", :delayed if node['cdo-ruby']
-
-      # Ensure globals.yml is up-to-date before (re)starting service.
-      notifies :create, 'template[globals]', :before
-
-      only_if {File.exist? unit_file}
-    end
-
-    # Define an execute resource for restarting just the puma web server, which
-    # can be invoked by other Chef resources
-    execute "restart #{app_name} web server" do
-      command "pumactl -P #{src_file}.pid restart"
-
-      # Don't run by default; rely on notifications.
-      action :nothing
 
       # Reload when gem bundle is updated.
       subscribes :run, 'execute[bundle-install]', :delayed
@@ -100,16 +85,19 @@ module CdoApps
       # Reload when global config is updated to pick up changes.
       subscribes :run, 'template[globals]', :delayed
 
-      only_if "systemctl is-active #{app_name}"
+      # Ensure globals.yml is up-to-date before (re)starting service.
+      notifies :create, 'template[globals]', :before
+
+      only_if {File.exist? unit_file}
     end
 
-    # We always want to restart the web server whenever port/socket listener
-    # configuration is changed, so create a file with that information as its
-    # contents and invoke the restart whenever those contents change.
+    # We always want to restart the web server process whenever port/socket
+    # listener configuration is changed, so create a file with that information
+    # as its contents and invoke the restart whenever those contents change.
     file "#{app_name}_listeners" do
       path "#{Chef::Config[:file_cache_path]}/#{app_name}_listeners"
       content lazy {"#{node['cdo-secrets']["#{app_name}_sock"]}:#{node['cdo-secrets']["#{app_name}_port"]}"}
-      notifies :run, "execute[restart #{app_name} web server]", :immediately
+      notifies :run, "execute[restart #{app_name} service]", :immediately
     end
 
     log_dir = File.join app_root, 'log'
