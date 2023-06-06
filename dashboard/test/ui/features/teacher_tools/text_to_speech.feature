@@ -27,13 +27,15 @@ Scenario: Listen to TTS Audio in CSF
   And I wait to see ".uitest-topInstructions-inline-feedback"
   And I resize top instructions to "500" pixels tall
   And I wait for 0.5 seconds
+  And I wait until jQuery animations are finished
   Then I see 2 of jquery selector .csf-top-instructions .inline-audio
   And I listen to the 0th inline audio element
   And I listen to the 1st inline audio element
 
   # requesting a hint should give me another
   When I press "lightbulb"
-  And I wait for 2 event loop iterations
+  And I wait for 0.5 seconds
+  And I wait until jQuery animations are finished
   Then I see 3 of jquery selector .csf-top-instructions .inline-audio
   And I resize top instructions to "500" pixels tall
   And I listen to the 2nd inline audio element
@@ -44,6 +46,7 @@ Scenario: Listen to TTS Audio in CSF
   And I wait to see ".block-space"
   And I resize top instructions to "500" pixels tall
   And I wait for 0.5 seconds
+  And I wait until jQuery animations are finished
   Then I see 2 of jquery selector .csf-top-instructions .inline-audio
   #Checks that inline audio does not disappear (indication of error)
   And I listen to the 1st inline audio element
