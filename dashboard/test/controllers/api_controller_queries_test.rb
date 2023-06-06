@@ -20,6 +20,9 @@ class ApiControllerQueriesTest < ActionDispatch::IntegrationTest
       end
       create :teacher_feedback, student: students.first, teacher: section.teacher, level: script_level.level, script: script
     end
+    # This test has been flaky due to one fewer query on the teacher_feedbacks table.
+    # Without a better theory for why, assert that there are teacher_feedback entries.
+    refute_empty section.teacher.teacher_feedbacks
 
     sign_in_as section.teacher
 
