@@ -9863,6 +9863,7 @@
         },
         "43fde334-6c07-4b1b-b23d-4b67f5fbfbc0": {
           "name": "Rekapitulace",
+          "description": "\\*\\* Sesbírejte: \\*\\* Dejte svým studentům za úkol odeslat své prototypy a odeslat své aplikace v App Lab. \n\n\\*\\* Reflektujte: \\*\\* Dejte svým studentům za úkol vyplnit rychlý průzkum s pěti otázkami v Code Studio. Anonymizované výsledky si budete moci zobrazit v řídicím panelu učitelů.",
           "progression_name": "Reflexe"
         },
         "b46cfe31-9b5e-4820-b368-fc8a4fa139a7": {
@@ -10144,6 +10145,7 @@
         },
         "7799c3eb-e76a-465b-9f24-69d6c04a01c7": {
           "name": "Reflexe",
+          "description": "\\*\\*Code Studio: \\*\\* Nechte studenty odpovědět na 5 rychlých dotazů na začátku této jednotky o AI a strojovém učení. Až průzkum vyplní alespoň 5 studentů, budete si moci v učitelském ovládacím panelu zobrazit anonymizované výsledky. Některé z těchto otázek budou položeny znovu na konci prvního projektu, což může být užitečné, protože uvidíte pokroky studentů a posuny postojů v průběhu výukové jednotky.",
           "progression_name": "Průzkum při registraci"
         },
         "b5acd50c-8f0e-4c22-8918-0e4801b137e1": {
@@ -18714,6 +18716,7 @@
         },
         "d26ab8fe-dc83-4704-8aba-bd0cdbdd80a4": {
           "name": "Reflexe",
+          "description": "\\*\\*Code Studio: \\*\\* Nechte studenty odpovědět na 5 rychlých dotazů na začátku této jednotky o AI a strojovém učení. Až průzkum vyplní alespoň 5 studentů, budete si moci v učitelském ovládacím panelu zobrazit anonymizované výsledky. Některé z těchto otázek budou položeny znovu na konci prvního projektu, což může být užitečné, protože uvidíte pokroky studentů a posuny postojů v průběhu výukové jednotky.",
           "progression_name": "Průzkum při registraci"
         },
         "8bdf1f4e-1c20-42bd-a5d5-7217dfa0bd4f": {
