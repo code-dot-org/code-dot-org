@@ -39,6 +39,9 @@ Feature: Using the assessments tab in the teacher dashboard to get feedback for 
     And I select the "All teacher feedback in this unit" option in dropdown "assessment-selector"
     Then I wait until element "div:contains(Download CSV of Feedback)" is visible
 
+
+  @skip
+  # TODO TEACH-509: Reenable with new section setup flow
   Scenario: Assessments tab does not have feedback download
    # Assign a unit without feedback
     When I sign in as "Teacher_Sally" and go home
