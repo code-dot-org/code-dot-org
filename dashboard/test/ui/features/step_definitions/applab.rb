@@ -137,7 +137,7 @@ And /^I append text to droplet "([^"]*)"$/ do |text|
     aceEditor.onTextInput("#{text}");
   JAVASCRIPT
   @browser.execute_script(script)
-  steps 'I wait for the event loop to settle'
+  steps 'I wait for the JS event loop to settle'
 end
 
 def set_nth_input(n, value)

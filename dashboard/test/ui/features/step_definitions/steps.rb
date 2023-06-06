@@ -175,7 +175,7 @@ And /^I add another version to the project$/ do
     And I wait until element "#resetButton" is visible
     And I press "resetButton"
     And I wait until element "#runButton" is visible
-    And I wait for the next event loop
+    And I wait for the next JS event loop
     And I press "runButton"
   GHERKIN
 end
@@ -312,37 +312,32 @@ Then /^check that the URL contains "([^"]*)"$/i do |url|
 end
 
 # If you're waiting...
-# ...for async JS like .then chains or react re-renders, see: "I wait for the event loop to settle"
+# ...for async JS like .then chains or react re-renders, see: "I wait for the JS event loop to settle"
 # ...for a network request, see: "I wait until jQuery Ajax requests are finished"
 # ...for an animation, see: "I wait until jQuery animations are finished"
 When /^I wait for (\d+(?:\.\d*)?) seconds?$/ do |seconds|
   sleep seconds.to_f
 end
 
-# Gives up to 25 chained async JS operations time to complete.
+# Waits for up to 25 chained async JS operations to complete.
 # Takes ~100ms with an idle event loop, but scales correctly with a busy event loop.
 # Try this first if you need an async delay, unless you know you're waiting on an
 # explicit time delay, network request, or animation.
-When /^I wait for the event loop to settle$/ do
-  wait_n_event_loop_iterations(25)
+When /^I wait for the JS event loop to settle$/ do
+  wait_n_js_event_loops(25)
 end
 
-When /^I wait for the next event loop$/ do
-  wait_n_event_loop_iterations(1)
+When /^I wait for the next JS event loop$/ do
+  wait_n_js_event_loops(1)
 end
 
-When /^I wait for (\d+) event loop iterations$/ do |num_iterations|
-  wait_n_event_loop_iterations(num_iterations)
-end
-
-def wait_n_event_loop_iterations(n)
+def wait_n_js_event_loops(n)
   wait_short_until do
-    n_event_loop_iterations = <<-JS
+    @browser.execute_async_script(<<-JS, n)
       const callback = arguments[1];
-      const nEventLoopIterations = (n) => n === 0 ? callback(true) : setTimeout(nEventLoopIterations, 1, n-1);
-      nEventLoopIterations(arguments[0]);
+      const nEventLoops = (n) => n === 0 ? callback(true) : setTimeout(nEventLoops, 1, n-1);
+      nEventLoops(arguments[0]);
     JS
-    @browser.execute_async_script(n_event_loop_iterations, n)
   end
 end
 

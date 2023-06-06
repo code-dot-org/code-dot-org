@@ -31,7 +31,7 @@ Scenario: Script Level Versions
   And I wait for the page to fully load
   Then ace editor code is equal to "// comment 1"
   And I wait until element "#workspace-header-span" is visible
-  And I wait for the next event loop
+  And I wait for the next JS event loop
   And element "#workspace-header-span" contains text "View only"
 
   When I am on "http://studio.code.org/s/allthethings/lessons/18/levels/1?noautoplay=true"
