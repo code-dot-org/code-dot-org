@@ -66,7 +66,8 @@ i.fa-fw {
 }
 
 // Grid container
-// Use classes to determine flexbox characteristics
+// Apply class to containers that use grid, but declare
+// column/row characteristics on a case-by-case basis
 .grid-container {
   display: grid;
 }
