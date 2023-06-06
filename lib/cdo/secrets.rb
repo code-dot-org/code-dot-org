@@ -150,9 +150,7 @@ module Cdo
     # @return [Array, Hash, String]
     private def parse_json(value)
       parsed = JSON.parse(value)
-      return parsed if parsed.is_a?(Array)
-      # Return with keys that are symbols to match the Object that was serialized to JSON and PUT into the Secret.
-      return parsed.deep_symbolize_keys if value.is_a?(Hash)
+      return parsed if parsed.is_a?(Array) || parsed.is_a?(Hash)
       return parsed.to_s
     rescue JSON::ParserError, TypeError
       value

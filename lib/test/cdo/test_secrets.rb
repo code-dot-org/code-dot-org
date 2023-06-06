@@ -50,7 +50,7 @@ class SecretsTest < Minitest::Test
     assert_equal 2, api_requests
 
     # Secret value that is JSON is returned as a Hash.
-    assert_equal 'my_value', @secrets.json[:my_key]
+    assert_equal 'my_value', @secrets.json['my_key']
   end
 
   def test_required
