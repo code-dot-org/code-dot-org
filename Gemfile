@@ -205,7 +205,10 @@ gem 'mini_racer', group: [:staging, :test, :production, :levelbuilder]
 
 gem 'jwt' # single signon for zendesk
 
-gem 'twilio-ruby' # SMS API for send-to-phone feature
+# SMS API for send-to-phone feature; 6.0 includes some breaking changes which
+# we'll need to prepare for:
+# https://github.com/twilio/twilio-ruby/blob/6.0.0/UPGRADE.md#2023-05-03-5xx-to-6xx
+gem 'twilio-ruby', '< 6.0'
 
 gem 'sequel', '~> 5.29'
 gem 'user_agent_parser'

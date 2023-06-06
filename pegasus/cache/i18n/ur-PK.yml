@@ -53,6 +53,7 @@ ur-PK:
     ہے.
   csedweek_og_description_here: پیش خدمت ہے Hour of Code. کمپیوٹر سائنس کی تعلیم ہر
     طالب علم کے لئے بنیادی حیثیت کی حامل ہے.
+  hoc2014_students: طلباء
   hoc2014_try: یہ آزمائیے
   hoc2014_teachers: اساتذہ
   hoc2014_host: منعقد کرنا
@@ -84,6 +85,7 @@ ur-PK:
   congratulations_volunteer: 'مبارک باد: اب جب کہ آپ نے کوڈ کی گھڑی کی کوشش کی ہے،
     <a href="https://code.org/volunteer"> ایک کلاس روم میں رضاکارانہ کام کے لئے سائن
     اپ کریں</a> اور مدد کریں طالب علموں کو ایک کوڈ کی گھڑی سیکھنے میں!'
+  view_course: کورس کو دیکھیں
   third_party_gradelevel_kto8: گریڈ 2-8
   third_party_gradelevel_kto2: گریڈ 2-2
   third_party_gradelevel_2to8: درجہ 2-8
@@ -258,6 +260,7 @@ ur-PK:
   homepage_slot_text_link_host: Hour of Code منعقد کریں
   homepage_slot_text_link_hocserved: "# خدمات سر انجام دیں"
   homepage_solot_text_link_volunteer: کوڈ کی گھڑی کے رضا کار
+  homepage_slot_text_title_students: طلباء
   homepage_slot_text_blurb_students: ہمارے سارے اسباق کو دیکھیے۔
   homepage_slot_text_blurb_students_courses: ہمارے کورس دیکھیے
   homepage_slot_text_link_codestudio: کوڈ سٹوڈیو ٹرائی کریں
@@ -422,22 +425,49 @@ ur-PK:
   dashboard_landing_more_tutorials_desc: یہاں مزید اسباق ہیں <a href="/learn/beyond">
     ہمارے شراکت داروں کی طرف سے ۔</a> روبوٹس کے ساتھ پروگرام، ویب صفحات بنائیں، اپنا
     اپلیکیشن بنانے یا دیگر زبانوں جیسے c + +، روبی، یا ازگر دریافت کرنا سیکھیں!
+  dashboard_landing_teacher_forum: پیشہ ورانہ لرننگ کمیونٹی میں شمولیت اختیار کریں۔
   dashboard_course_ecs: کمپیوٹر سائنس کی تلاش
   dashboard_action_cancel: منسوخ کریں
   dashboard_action_delete_yes: جی
   dashboard_action_delete_no: نہيں
+  dashboard_assessments_none: اکثر ٹیچرز "پیش رفت دیکھیں" کے ٹیب کو استعمال کرتے ہوئے
+    اپنے طلباء کی پیش رفت کا جائزہ لیتے ہیں۔ اگر آپ اپنے طلباء کو اضافی جائزے دینے
+    میں دلچسپی رکھتے ہیں، تو آپ سبق کے پلانز میں تجویز کردہ سوالات اور شعبے تلاش کر
+    سکتے ہیں۔ یہ Code.org سے باہر سرانجام پاتے ہیں۔
   dashboard_navigation_home_page: ٹیچر ہوم پیج
+  dashboard_navigation_section_teacher_progress: آپ کے کورس کی پیش رفت
   dashboard_navigation_section_community: سپورٹ
   dashboard_navigation_add_students: طلباء کا ا ضافہ کریں
+  dashboard_navigation_lesson_plans_resources: نصاب کے معیارات
   dashboard_progress_not_started: شروع نہیں کیا
   dashboard_progress_in_progress: پیش رفت میں
   dashboard_progress_completed_too_many_blocks: مکمل، بہت سے بلاکس
   dashboard_progress_completed_perfect: مکمل، کامل
   dashboard_progress_furthest_level_attempted: دور کی سطح کی کوشش
   dashboard_progress_submitted: جمع کرایا
+  dashboard_progress_pair_programming: پیئر پروگرامنگ
+  dashboard_sections_table_section: سیکشن
+  dashboard_sections_table_grade: گریڈ
+  dashboard_sections_table_course: کورس
   dashboard_sections_table_pairing_allowed: جوڑی پروگرامنگ
+  dashboard_sections_table_stage_extras: اسٹیج ایکسٹراز
+  dashboard_sections_table_students: طلباء
   dashboard_sections_close: بند
+  dashboard_sections_one_per_teacher: ہر ٹیچر کے لیے طلباء صرف ایک سیکشن میں ہو سکتے
+    ہیں۔ آپ کے طلباء کو اس نئے سیکشن میں شامل کر دیا جائے گا اور انہیں پرانے سیکشن
+    سے ہٹا دیا جائے گا۔
   dashboard_sections_move_to_section: 'کو سیکشن میں منتقل:'
+  dashboard_sections_other_section: دیگر ٹیچر
+  dashboard_sections_assign_hoc_script_msg: براہ کرم نوٹ کریں کہ 3 - 11 دسمبر کے دوران
+    Hour of Code کی وجہ سے ہماری سائٹ کو ٹریفک کی بڑی تعداد موصول ہو گی لہٰذا اس دوران
+    ہم اس کورس میں پیش رفت کو محفوظ کرنے کے قابل نہیں ہوں گے۔ اس ٹیوٹوریل میں باقی
+    ہر چیز متوقع طور پر کام کرنا جاری رکھے گی۔ آپ اب بھی کورس کو تفویض کر سکتے ہیں
+    اور تمام طلباء کو حصہ لینے پر سرٹیفکیٹس بھی دے سکتے ہیں۔ (اکثر ٹیچرز <a href='%{certificate_url}'>انہیں
+    پہلے ہی پرنٹ کر لیتے ہیں</a>۔) ہم طالب علم کی پیش رفت کو سال کے باقی ہر ہفتے میں
+    محفوظ اور رپورٹ کریں گے۔
+  dashboard_error_other_section: اگر آپ طباء کو اپنے ذاتی سیکشنز کے درمیان منتقل کر
+    رہے ہیں، تو اپنے سیکشن کو ڈراپ ڈاؤن سے منتخب کریں۔ اپنے طلباء کو دوسرے ٹیچر کے
+    سیکشن میں منتقل کرنے کے لیے صرف 'دیگر سیکشن' کو منتخب کریں۔
   dashboard_students_name: نام
   dashboard_students_male: مرد
   dashboard_students_female: خواتین
@@ -445,6 +475,8 @@ ur-PK:
     لیے اپنے طلبہ کو بتائیں
   dashboard_pre-express: 'پری ریڈر ایکسپریس کورس:'
   dashboard_sequence: تسلسل
+  dashboard_classroom_strategies: ٹیچرز کے لیے کلاس روم کی حکمت عملیاں
+  dashboard_teacher_worksheet: ٹیچر کی ورک شیٹ
   dashboard_curriculum_ecs: 'کمپیوٹر سائنس کی تلاش:'
   dashboard_grade_other: دیگر
   dashboard_login_none: Email
@@ -452,6 +484,7 @@ ur-PK:
   dashboard_puzzle: پزل(Puzzle)
   dashboard_correctness_correct: درست
   stats_hoc_2013_image_alt: کوڈ کی گھڑی کے شماریات 2013
+  dashboard_teacher: ٹیچر
   dashboard_student: Talib-e-ilm
   learn_more: مزید سیکھے
   learn_sign_up_button: سائن اپ کریں
@@ -466,6 +499,7 @@ ur-PK:
   hourofcode_name: کلاسک بھولبلییا
   playlab_name: لیب کھیلیں
   infinity_name: انفینٹی پلے لیب
+  artist_name: آرٹسٹ
   coursea-draft_name: کورس A
   coursea_name: کورس A
   courseb-draft_name: کورس B
@@ -807,6 +841,7 @@ ur-PK:
   header_teach: سکھائیں
   header_help_us: ہماری مدد کریں
   header_about: متعلق
+  header_teacher_community: ٹیچر کمیونٹی
   header_help_support: 'مدد اور معاونت '
   header_report_bug: ایک مسئلہ کی اطلاع دیں
   header_legal_privacy: رازداری کی پالیسی
@@ -920,6 +955,7 @@ ur-PK:
   footer_donate: عطیہ کریں
   footer_support: سپورٹ
   footer_terms: شرائط
+  ai_for_oceans: AI فار اوشنز
   ai_for_oceans_lesson_plan: سبق کا منصوبہ
   ai_microsoft_thanks: ہم Microsoft کا شکریہ ادا کرتے ہیں کہ انہوں نے ہماری بصیرت
     اور مشن کہ ہر بچے کو کمپیوٹر سائنس اور 21ویں صدی میں کامیابی کی مہارتیں سیکھنے

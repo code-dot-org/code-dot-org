@@ -60,7 +60,7 @@ Founder, Code.org
 
 <hr>
 
-<small>You're receiving this email because you signed the petition on <a href="https://Code.org/">Code.org</a>. Code.org is a 501c3 non-profit. Our address is 1501 4th Avenue, Suite 900, Seattle, WA 98101.</small> <br />
+<small>You're receiving this email because you signed the petition on <a href="https://Code.org/">Code.org</a>. Code.org is a 501c3 non-profit. Our address is 801 5th Avenue, Suite 2100, Seattle, WA 98104.</small> <br />
 <small><strong>Don't like these emails? [Unsubscribe here](<%= local_assigns.fetch(:unsubscribe_link, "") %>).</strong></small>
 
 
