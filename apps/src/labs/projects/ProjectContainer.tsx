@@ -1,3 +1,9 @@
+/**
+ * Wrapper component for labs that use the project system.
+ * This component will create a project manager for the current level and script
+ * or channel, and will clean up the project manager on level change or unmount.
+ */
+
 import React, {useEffect} from 'react';
 import {useSelector} from 'react-redux';
 import ProjectManagerFactory from '@cdo/apps/labs/projects/ProjectManagerFactory';
@@ -51,16 +57,18 @@ const ProjectContainer: React.FunctionComponent<ProjectContainerProps> = ({
     };
   }, [channelId, currentLevelId, scriptId, dispatch]);
 
-  window.addEventListener('beforeunload', event => {
-    const projectManager = LabRegistry.getInstance().getProjectManager();
-    // Force a save before the page unloads, if there are unsaved changes.
-    // If we need to force a save, prevent navigation so we can save first.
-    if (projectManager?.hasUnsavedChanges()) {
-      projectManager.cleanUp();
-      event.preventDefault();
-      event.returnValue = '';
-    }
-  });
+  useEffect(() => {
+    window.addEventListener('beforeunload', event => {
+      const projectManager = LabRegistry.getInstance().getProjectManager();
+      // Force a save before the page unloads, if there are unsaved changes.
+      // If we need to force a save, prevent navigation so we can save first.
+      if (projectManager?.hasUnsavedChanges()) {
+        projectManager.cleanUp();
+        event.preventDefault();
+        event.returnValue = '';
+      }
+    });
+  }, []);
 
   return <>{children}</>;
 };

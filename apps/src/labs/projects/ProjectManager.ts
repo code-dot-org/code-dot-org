@@ -15,9 +15,8 @@ import {ChannelsStore} from './ChannelsStore';
 import {Channel, Source} from '../types';
 
 export default class ProjectManager {
-  channelId: string;
-  sourceToSave: Source | undefined;
-
+  private sourceToSave: Source | undefined;
+  private readonly channelId: string;
   private readonly sourcesStore: SourcesStore;
   private readonly channelsStore: ChannelsStore;
   private nextSaveTime: number | null = null;

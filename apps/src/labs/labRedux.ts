@@ -21,11 +21,16 @@ import {
 } from '../code-studio/projectRedux';
 import ProjectManager from './projects/ProjectManager';
 
-export interface LabState {
+interface LabState {
+  // If we are currently loading a lab.
   isLoading: boolean;
   isPageError: boolean;
+  // channel for the current project, or undefined if there is no current project.
   channel: Channel | undefined;
+  // last saved source for the current project, or undefined if we have not loaded or saved yet.
   source: Source | undefined;
+  // Whether the lab is ready for a reload.  This is used to manage the case where multiple loads
+  // happen in a row, and we only want to reload the lab when we are done.
   labReadyForReload: boolean;
 }
 
