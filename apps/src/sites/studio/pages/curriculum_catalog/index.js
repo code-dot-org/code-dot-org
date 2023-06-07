@@ -12,7 +12,7 @@ $(document).ready(function () {
   const {curriculaData, isEnglish, sections} = catalogData;
 
   const store = getStore();
-  store.dispatch(setSections(sections));
+  sections && store.dispatch(setSections(sections));
 
   ReactDOM.render(
     <Provider store={store}>
