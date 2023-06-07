@@ -117,12 +117,12 @@ describe('Browser Detector', () => {
         'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:70.0) Gecko/20100101 Firefox/22.0'
       );
       expect(isUnsupportedBrowser()).to.be.true;
-    });
 
-    // Firefox > 25 (supported)
-    userAgentStub.value(
-      'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:70.0) Gecko/20100101 Firefox/70.0'
-    );
-    expect(isUnsupportedBrowser()).to.be.false;
+      // Firefox > 25 (supported)
+      userAgentStub.value(
+        'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:70.0) Gecko/20100101 Firefox/70.0'
+      );
+      expect(isUnsupportedBrowser()).to.be.false;
+    });
   });
 });
