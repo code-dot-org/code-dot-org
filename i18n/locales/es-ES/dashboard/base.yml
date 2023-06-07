@@ -69,6 +69,7 @@ es:
   unsubmit: NO enviado
   previous_page: Página anterior
   next_page: Página siguiente
+  next_level: Siguiente nivel
   next_resource: Siguiente recurso
   done_with_module: Hecho con este Módulo de Aprendizaje
   cancel: "Cancelar"
@@ -188,7 +189,7 @@ es:
     accept_terms: "Debes estar de acuerdo para crear una cuenta."
     error: "Ocurrió un error."
     email_preference_question: "¿Podemos enviarte actualizaciones de nuestros cursos, oportunidades en tu zona u otras noticias sobre ciencias de la computación por correo electrónico? (aproximadamente una vez al mes)"
-    email_preference_privacy: "(Vea nuestra politica de privacidad)"
+    email_preference_privacy: "(Consulta nuestra política de privacidad)"
     email_preference_yes: "Sí"
     email_preference_no: "No"
     email_preference_required: "Debes especificar una preferencia de correo electrónico."
@@ -1079,7 +1080,7 @@ es:
         math: 'Matemáticas'
         science: 'Ciencia'
         history: 'Historia / Estudios Sociales'
-        la: 'Linguistica'
+        la: 'Lengua y Literatura'
         efl: 'Inglés como lengua extranjera'
         music: 'Música'
         art: 'Arte'
@@ -1139,7 +1140,7 @@ es:
       hello_world: 'Hola Mundo'
       sports: 'Deportes'
       csf: 'Fundamentos de Ciencias de la Computación'
-      csc: 'Conexiones a las Ciencias de la Computación'
+      csc: 'Conexiones con la Informática'
   cookie_banner:
     message: 'Si continúas navegando nuestro sitio web o haces clic en "Acepto", aceptas que se guarden las cookies en tu computadora o dispositivo.'
     more_information: "Mira la política de privacidad de Code.org."
