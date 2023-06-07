@@ -64,6 +64,7 @@ i.fa-fw {
   display: flex;
 
   &.justify-space-between { justify-content: space-between }
+  &.justify-end { justify-content: end; }
   &.align-items-center { align-items: center; }
   &.align-items-start { align-items: flex-start; }
   &.wrap { flex-wrap: wrap; }
@@ -621,7 +622,7 @@ form {
   // blocks are vastly different heights due to content length
   // — use .content-wrapper and .content-footer as seen on
   // views/maker_curriculum_microbit.haml
-  &.flex-space-between {
+  & {
     justify-content: space-between;
   }
 
@@ -639,11 +640,7 @@ form {
     text-align: center;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
-    margin: 0;
-
-    &.secondary {
-      margin-top: 1em;
-    }
+    margin: 1rem 0 0;
   }
 }
 
