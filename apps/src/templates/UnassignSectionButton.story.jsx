@@ -4,15 +4,16 @@ import {UnconnectedUnassignSectionButton as UnassignSectionButton} from './Unass
 import {fakeTeacherSectionsForDropdown} from '@cdo/apps/templates/teacherDashboard/sectionAssignmentTestHelper';
 
 const assignedSection = fakeTeacherSectionsForDropdown[1];
-
-export default {
-  name: 'UnassignSectionButton',
-  component: UnassignSectionButton,
+export default storybook => {
+  storybook.storiesOf('Buttons/UnassignSectionButton', module).addStoryTable([
+    {
+      name: 'UnassignSectionButton',
+      story: () => (
+        <UnassignSectionButton
+          sectionId={assignedSection.id}
+          unassignSection={action('unassignSection')}
+        />
+      ),
+    },
+  ]);
 };
-
-export const Default = () => (
-  <UnassignSectionButton
-    sectionId={assignedSection.id}
-    unassignSection={action('unassignSection')}
-  />
-);
