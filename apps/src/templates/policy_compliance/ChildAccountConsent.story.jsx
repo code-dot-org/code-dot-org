@@ -1,12 +1,12 @@
 import React from 'react';
-import NewStudentAccountConsent from './NewStudentAccountConsent';
+import ChildAccountConsent from './ChildAccountConsent';
 
 export default {
-  title: 'NewStudentAccountConsent',
-  component: NewStudentAccountConsent,
+  title: 'ChildAccountConsent',
+  component: ChildAccountConsent,
 };
 
-const Template = args => <NewStudentAccountConsent {...args} />;
+const Template = args => <ChildAccountConsent {...args} />;
 
 export const ValidToken = Template.bind({});
 ValidToken.args = {

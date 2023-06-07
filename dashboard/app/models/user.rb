@@ -98,8 +98,8 @@ class User < ApplicationRecord
   #   us_state: A 2 letter code United States state code the user has given us.
   #   country_code: The country the user was in when they told us their
   #   us_state.
-  #   cpa_compliance: The state of a user's compliance with the CPA.
-  #   cpa_compliance_date: The date the user became compliant with the CPA.
+  #   child_account_compliance_state: The state of a user's compliance with the CPA.
+  #   child_account_compliance_state_last_updated: The date the user became compliant with the CPA.
   serialized_attrs %w(
     ops_first_name
     ops_last_name
@@ -130,8 +130,8 @@ class User < ApplicationRecord
     gender_student_input
     gender_teacher_input
     gender_third_party_input
-    cpa_compliance
-    cpa_compliance_date
+    child_account_compliance_state
+    child_account_compliance_state_last_updated
     us_state
     country_code
   )
@@ -2656,8 +2656,8 @@ class User < ApplicationRecord
     end
   end
 
-  # Values for the `cpa_compliance` attribute
-  module CpaCompliance
+  # Values for the `child_account_compliance_state` attribute
+  module ChildAccountCompliance
     # The student's account has been approved by their parent.
     PERMISSION_GRANTED = 'g'.freeze
   end

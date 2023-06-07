@@ -47,7 +47,7 @@ function expiredTokenMessage() {
     </div>
   );
 }
-export default function NewStudentAccountConsent(props) {
+export default function ChildAccountConsent(props) {
   if (props.permissionGranted) {
     return permissionGrantedMessage(props.permissionGrantedDate);
   } else {
@@ -55,7 +55,7 @@ export default function NewStudentAccountConsent(props) {
   }
 }
 
-NewStudentAccountConsent.propTypes = {
+ChildAccountConsent.propTypes = {
   permissionGranted: PropTypes.bool,
   permissionGrantedDate: PropTypes.instanceOf(Date),
 };

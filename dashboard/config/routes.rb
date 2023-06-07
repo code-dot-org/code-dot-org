@@ -1054,7 +1054,7 @@ Dashboard::Application.routes.draw do
     get '/get_token', to: 'authenticity_token#get_token'
 
     # Policy Compliance
-    get '/policy_compliance/new_student_account_consent/', to:
-      'policy_compliance#new_student_account_consent'
+    get '/policy_compliance/child_account_consent/', to:
+      'policy_compliance#child_account_consent'
   end
 end

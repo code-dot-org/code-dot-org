@@ -1,12 +1,10 @@
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import NewStudentAccountConsent from '@cdo/apps/templates/policy_compliance/NewStudentAccountConsent';
+import ChildAccountConsent from '@cdo/apps/templates/policy_compliance/ChildAccountConsent';
 
 $(document).ready(function () {
-  const element = document.getElementById(
-    'new-student-account-consent-container'
-  );
+  const element = document.getElementById('child-account-consent-container');
   const permissionGranted = element.hasAttribute('data-permission-granted');
   const permissionGrantedDateString = element.getAttribute(
     'data-permission-granted-date'
@@ -15,7 +13,7 @@ $(document).ready(function () {
     ? new Date(permissionGrantedDateString)
     : undefined;
   ReactDOM.render(
-    <NewStudentAccountConsent
+    <ChildAccountConsent
       permissionGranted={permissionGranted}
       permissionGrantedDate={permissionGrantedDate}
     />,
