@@ -80,6 +80,7 @@ function createStore(numStudents, numLessons) {
     sectionProgress: {
       ...buildSectionProgress(section.students, scriptData),
       lessonOfInterest: 0,
+      currentView: ViewType.SUMMARY,
     },
     teacherSections: {
       selectedSectionId: section.id,

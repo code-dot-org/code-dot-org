@@ -92,7 +92,7 @@ export function buildSectionProgress(students, scriptData) {
     studentLessonProgressByUnit: {
       [scriptData.id]: lessonProgressForSection(progress, scriptData.lessons),
     },
-    studentLastUpdateByUnit: {[scriptData.id]: lastUpdates},
+    studentLastUpdateByUnit: lastUpdates,
   };
 }
 
