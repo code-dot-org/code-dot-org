@@ -50,6 +50,7 @@
   "addStudentsSyncThirdParty": "Συγχρονίσετε τη λίστα των μαθητών σας με μια άλλη ταξη σε ένα εργαλείο τρίτων",
   "addStudentsToSectionInstructions": "Επιλέξτε πώς θέλετε να προσθέσετε τους μαθητές σας:",
   "addStudentsToSectionInstructionsUpdated": "Πώς θέλετε οι μαθητές σας να συνδέονται;",
+  "addStudentsToSectionPermissionHeader": "Εάν οι μαθητές στην τάξη σας είναι κάτω των 13 ετών:",
   "addToProjects": "Προσθήκη στα Εργα",
   "addedToProjects": "Προστέθηκε",
   "addingToProjects": "Προστίθεται...",

@@ -1383,6 +1383,7 @@
   "manageLinkedAccounts_rosteredSectionTooltip": "不能断开连接的账户，因为它与至少一个小组相联系。",
   "manageLinkedAccounts_makerAuthError": "无法从Maker应用程序执行此操作。请返回默认浏览器并重试。",
   "manageStudents": "管理学生",
+  "manageStudentsAriaLabel": "此部分有{numStudents}个学生。管理学生",
   "manageStudentsNotificationFailure": "出错了。",
   "manageStudentsNotificationCannotAdd": "你不能增加{numStudents, plural, other {#个学生}}到小组里。请重试或刷新页面。",
   "manageStudentsNotificationCannotVerb": "{numStudents, plural, one {学生} other {学生}}无法{verb, select, copy {复制} move {移动} other {添加}}到此小组",

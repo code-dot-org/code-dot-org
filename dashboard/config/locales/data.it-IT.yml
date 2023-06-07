@@ -1094,6 +1094,7 @@ it:
         csa_sorting_algorithms: 'CSA: algoritmi di ordinamento'
         star_quilts_intro_to_artist: 'Star Quilts: Introduzione all''artista'
         upload_sprites_backgrounds: Caricamento di sprite e sfondi personalizzati
+        PL_CSD_EquityBlindSpotsvid: Pregiudizi e Responsabilità
     callout:
       text:
         drag_blocks: Prendi qui a sinistra il blocco "vai avanti" ed attaccalo sotto

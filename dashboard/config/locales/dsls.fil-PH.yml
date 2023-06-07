@@ -3370,9 +3370,9 @@ fil-PH:
         - {}
         - {}
         questions:
-        - {}
-        - {}
-        - {}
+        - text: Maghanda
+        - text: Pag-isipan
+        - text: Subukan
         - text: magtakda
       CSD U1 Test PSP match_2021:
         answers:
@@ -3381,9 +3381,9 @@ fil-PH:
         - {}
         - {}
         questions:
-        - {}
-        - {}
-        - {}
+        - text: Maghanda
+        - text: Pag-isipan
+        - text: Subukan
         - text: magtakda
       CSD U1 Test PSP match_2022:
         answers:
@@ -3392,9 +3392,9 @@ fil-PH:
         - {}
         - {}
         questions:
-        - {}
-        - {}
-        - {}
+        - text: Maghanda
+        - text: Pag-isipan
+        - text: Subukan
         - text: magtakda
       CSD U1 Test define a computer:
         answers:
@@ -9347,6 +9347,56 @@ fil-PH:
         - {}
       csp_unit_assessment_overview:
         content1: paglalarawan dito
+        teacher_markdown: "### PAG-IINGAT: Ano ang pagtatasa na ito at ang hindi ito\n\n*
+          Ang pagtatasa na ito ay **dinisenyo upang maging sa \"estilo\" ng AP** na
+          mga pagsusuri sa maramihang pagpipilian.\n\n* Nangangahulugan iyon na ang
+          mga tanong **ay hindi** partikular tungkol sa mga aralin na sakop bago ang
+          puntong ito. Sa halip, ang mga tanong ay nauugnay sa pinagbabatayan ng mga
+          layunin sa pag-aaral ng AP na ayon sa teorya ay natugunan.\n\n* Ito ay **nangangahulugan**
+          na maaaring kailanganin ng mga mag-aaral na gumawa ng ilang extrapolation
+          mula sa kung ano ang kanilang natutunan upang masagot ang mga tanong.\n\n*
+          Ito ay **nangangahulugan** na maaaring \"mahirap\" ang mga tanong, lalo
+          na para sa unang beses na pagkakalantad.\n\nKaya sa pangkalahatan, **GAMITIN
+          NG MAY PAG-IINGAT**\n\n* Gamitin ang iyong paghuhusga tungkol sa kung anong
+          mga stake ang isasama sa pagtatasa na ito.\n\t* Hindi mo kailangang gamitin
+          ang pagtatasa na ito upang bigyan ng grado ang mga mag-aaral, o...\n    *
+          Maaari mong bigyan ng grado ang mga mag-aaral sa ibang paraan kaysa sa simpleng
+          pagkuha ng % na tama.\n\n* Siguraduhin na ginagamit mo sa paraang mapanatili
+          ang diwa ng klase sa mga tuntunin ng pagsisiyasat ng kaalaman.\n\t* Kung
+          kinakabahan ka na masisiraan ng loob ang mga mag-aaral, marahil ay muling
+          ibalangkas ang pagtatasa na ito bilang isang pagkakataon na mag-imbestiga
+          -- hayaang subukan ng mga mag-aaral ang mga tanong, pagkatapos ay magsaliksik
+          ng mga sagot, at baguhin kung ano ang kanilang mali, o bumuo ng sarili nilang
+          hanay ng mga tanong.\n\n\n---\n\n#### FAQ -- Paano maghanda, mangasiwa,
+          at magsuri ng mga pagtatasa\n\nPakitingnan ang aming tumatakbo **[FAQ na
+          dokumento dito](https://docs.google.com/document/d/1zEpD1PFt6ec2S8ourxuMH0HD6tiyRvqAGUKGDCOt-qs/edit#heading=h.kewgp6z8qdde)**
+          na naglalaman ng:\n\n* mga screenshot kung paano maghanda, mangasiwa, at
+          magsuri ng mga pagtatasa\n* tumutugon sa mga karaniwang isyu/problema\n\n\n####
+          Mabilis na buod ng kung paano makita / suriin ang mga sagot ng mag-aaral\n\n1.
+          Pumunta sa iyong [Dashboard ng Guro](https://code.org/teacher-dashboard#/)\n2.
+          Piliin ang seksiyon mo ng Mga Prinsipyo ng CS\n3. Makakakita ka ng ilang
+          mga purple na tab kasama ang Mga Tugon sa Text, Mga Pagsusuri, atbp.\n4.
+          I-click ang **Mga Pagsusuri/Survey**\n5. Mula sa dropdown ng tagapili ng
+          kurso, **piliin ang yunit kung saan lumabas ang pagtatasa na ito (hal. Yunit
+          1: Ang Internet)**\n6. Sa lahat ng mag-aaral na *nagsumite* ng kanilang
+          pagtatasa, makikita mo ang dalawang talahanayan:\n   * Ang unang talahanayan
+          ay isang view ng buod na nagbubuod sa porsyento ng tama mula sa lahat ng
+          mga mag-aaral na nagsumite, kasama ang timestamp na kanilang isinumite noong\n
+          \  * Ang pangalawang talahanayan ay komprehensibong listahan ng bawat sagot
+          sa bawat tanong na isinumite ng bawat mag-aaral\n\n    Sa itaas ng parehong
+          talahanayang ito ay **I-download (o i-export) bilang csv** na buton - na
+          nagbibigay-daan sa iyong iproseso ang mga sagot sa spreadsheet (inirerekomenda).\n\n7.
+          Kung kailangan mong payagan ang mag-aaral na BAWIIN ang kanilang pagsusulit,
+          idirekta ang mag-aaral na mag-navigate sa huling pahina ng pagsusulit at
+          pindutin ang \"bawiin.\"\n\n** TANDAAN ang tungkol sa PAGBABAWI:**\n\nDapat
+          kang gumawa ng malinaw na mga panuntunan sa iyong mga mag-aaral tungkol
+          sa pagbawi ng pagsusulit. Maaaring isipin ng mga mag-aaral na ito ay magandang
+          paraan upang baguhin ang sagot pagkatapos ng pagsusulit (ibig sabihin, cheat)
+          ngunit makakakita ka ng timestamp kung kailan isinumite ng mag-aaral ang
+          pagsusulit.  \n\nIminumungkahi na itatag mo na lang na hindi mo isasaalang-alang
+          ang pag-iskor o pagmamarka ng anumang mga pagsusulit pagkatapos ng partikular
+          na oras. Kung hindi ito naisumite bago ang tinukoy na deadline, parang hindi
+          mo ito natanggap."
       curriculum-how-challenging:
         answers:
         - correct: true
@@ -10987,3 +11037,261 @@ fil-PH:
           feedback: Mali. Magsisimulang bumagsak ang tumbleweed.
         questions:
         - {}
+      OPD-K5 Outline:
+        markdown: |-
+          # Pagsisimula > Balangkas ng Kurso
+
+          Ang kurso ay nahahati sa labing-isang yugto, at ang bawat yugto ay binubuo ng "mga antas" o "mga palaisipan." Narito ang pangkalahatang-ideya kung ano ang matututunan mo kung kukumpletuhin mo ang buong kurso:
+
+          ## Yugto 1: Pagsisimula (10-30 minuto)
+
+          Sa pagkumpleto ng Yugto 1, ikaw ay:
+
+          - Suriin ang mga detalye ng kurso
+          - Magsanay gamit ang Code.org bilang platform sa pag-aaral
+          - Planuhin ang pakikilahok mo sa kursong ito
+
+          ## Yugto 2: Mga Batayan ng Computer Science (10-30 minuto)
+
+          By completing Stage 2, you will:
+
+          - Tukuyin ang computer science at suriin ang pangunahing bokabularyo
+          - Kilalanin ang mga pakinabang ng pagtuturo at pag-aaral ng computer science
+          - Pagkakaiba sa pagitan ng "coding" at "computer science"
+          - Ipaliwanag ang mga benepisyo ng pagsisimula sa code gamit ang visual programming
+
+          ## Yugto 3: Pagtingin ng Abante (10 min.)
+
+          Sa pamamagitan ng pagkumpleto ng Yugto 3, ikaw ay:
+
+          - Maghanda na "makabisado ang mga pangunahing kaalaman" ng computer science sa pamamagitan ng pagsusuri kung ano ang susunod sa kurso
+
+          ## Yugto 4: Pagdadalubhasa sa Pangunahing Bagay: Pagsusunod-sunod (10-30 minuto)
+
+          Sa pamamagitan ng pagkumpleto ng Yugto 4, ikaw ay:
+
+          - Tukuyin ang "program" at "algorithm"
+          - Gamitin ang Code.org visual programming engine para magsulat ng mga simpleng program
+          - Pagnilayan ang aplikasyon sa silid-aralan
+
+          ## Yugto 5: Pagdadalubhasa sa Pangunahing Bagay: Mga Loop (20-45 minuto)
+
+          Sa pamamagitan ng pagkumpleto ng Yugto 5, ikaw ay:
+
+          - Tukuyin ang "mga loop" at ipaliwanag ang kanilang kahalagahan
+          - Magsanay sa pag-coding ng mga simpleng loop
+          - Mag-isip tungkol sa aplikasyon sa silid-aralan
+
+          ## Yugto 6: Pagdadalubhasa sa Pangunahing Bagay: Mga Conditional (20-45 minuto)
+
+          Sa pagkumpleto ng Yugto 6, ikaw ay:
+
+          - Tukuyin ang "mga conditional" at ipaliwanag ang kanilang kahalagahan
+          - Magsanay sa pag-coding ng mga simpleng conditional
+          - Mag-isip tungkol sa aplikasyon sa silid-aralan
+
+          ## Stage 7: Pagdadalubhasa sa Pangunahing Bagay: Mga Function (20-45 minuto)
+
+          Sa pagkumpleto ng Yugto 7, ikaw ay:
+
+          - Tukuyin ang "mga function" at ipaliwanag ang kanilang kahalagahan
+          - Magsanay ng coding ng mga simpleng function
+          - Mag-isip tungkol sa aplikasyon sa silid-aralan
+
+          ## Yugto 8: Pagdadalubhasa sa Pangunahing Bagay: Mga Kaganapan (30-60 minuto)
+
+          Sa pagkumpleto ng Yugto 8, ikaw ay:
+
+          - Tukuyin ang "mga kaganapan" at ipaliwanag ang kanilang kahalagahan
+          - Magsanay sa pag-coding ng mga simpleng kaganapan
+          - Mag-isip tungkol sa aplikasyon sa silid-aralan
+
+          ## Yugto 9: Pinakamahuhusay na Kasanayan sa Pagtuturo ng Computer Science (30-60 minuto)
+
+          Sa pagkumpleto ng Stage 9, ikaw ay:
+
+          - Suriin ang pinakamahuhusay na kasanayan sa pagtuturo ng computer science
+
+          ## Yugto 10: Pagpaplano (30-60 minuto)
+
+          Sa pagkumpleto ng Stage 10, ikaw ay:
+
+          - Tuklasin ang mga mapagkukunan ng Code.org, kabilang ang dashboard ng guro
+          - Magplano kung paano mo maaaring isama ang computer science sa iyong pagsasanay
+
+          ## Yugto 11: Mga Susunod na Hakbang (10-30 minuto)
+
+          Sa pamamagitan ng pagkumpleto ng Yugto 11, magagawa mo
+
+          - Isipin ang natutunan mo
+          - Magplano sa mga susunod na hakbang na maaari mong gawin upang ipagpatuloy ang pag-aaral mo
+          - Kumonekta sa pandaigdigang komunidad ng mga kapwa tagapagturo na interesado sa edukasyon sa computer science
+          - Ibahagi ang iyong mga takeaway at feedback sa kursong ito
+
+          > **Tandaan**: Ang mga iminungkahing oras ay ibinigay sa itaas upang matulungan kang planuhin ang pag-aaral mo. Pakitandaan na maaaring gusto mong gumugol ng mas marami o mas kaunting oras sa partikular na yugto, depende sa iyong dating kaalaman, interes at kapasidad. Tandaan na ang kursong ito ay ganap na self-paced; maaari kang laging umalis sa kurso at bumalik o muling bisitahin ang anumang yugto o antas anumang oras.
+      OPD-K5 Outline_dani:
+        markdown: |-
+          # Pagsisimula > Balangkas ng Kurso
+
+          Ang kurso ay nahahati sa labing-isang yugto, at ang bawat yugto ay binubuo ng "mga antas" o "mga palaisipan." Narito ang pangkalahatang-ideya kung ano ang matututunan mo kung kukumpletuhin mo ang buong kurso:
+
+          ## Yugto 1: Pagsisimula (10-30 minuto)
+
+          Sa pagkumpleto ng Yugto 1, ikaw ay:
+
+          - Suriin ang mga detalye ng kurso
+          - Magsanay gamit ang Code.org bilang platform sa pag-aaral
+          - Planuhin ang pakikilahok mo sa kursong ito
+
+          ## Yugto 2: Mga Batayan ng Computer Science (10-30 minuto)
+
+          By completing Stage 2, you will:
+
+          - Tukuyin ang computer science at suriin ang pangunahing bokabularyo
+          - Kilalanin ang mga pakinabang ng pagtuturo at pag-aaral ng computer science
+          - Pagkakaiba sa pagitan ng "coding" at "computer science"
+          - Ipaliwanag ang mga benepisyo ng pagsisimula sa code gamit ang visual programming
+
+          ## Yugto 3: Pagtingin ng Abante (10 min.)
+
+          Sa pamamagitan ng pagkumpleto ng Yugto 3, ikaw ay:
+
+          - Maghanda na "makabisado ang mga pangunahing kaalaman" ng computer science sa pamamagitan ng pagsusuri kung ano ang susunod sa kurso
+
+          ## Yugto 4: Pagdadalubhasa sa Pangunahing Bagay: Pagsusunod-sunod (10-30 minuto)
+
+          Sa pamamagitan ng pagkumpleto ng Yugto 4, ikaw ay:
+
+          - Tukuyin ang "program" at "algorithm"
+          - Gamitin ang Code.org visual programming engine para magsulat ng mga simpleng program
+          - Pagnilayan ang aplikasyon sa silid-aralan
+
+          ## Yugto 5: Pagdadalubhasa sa Pangunahing Bagay: Mga Loop (20-45 minuto)
+
+          Sa pamamagitan ng pagkumpleto ng Yugto 5, ikaw ay:
+
+          - Tukuyin ang "mga loop" at ipaliwanag ang kanilang kahalagahan
+          - Magsanay sa pag-coding ng mga simpleng loop
+          - Mag-isip tungkol sa aplikasyon sa silid-aralan
+
+          ## Yugto 6: Pagdadalubhasa sa Pangunahing Bagay: Mga Conditional (20-45 minuto)
+
+          Sa pagkumpleto ng Yugto 6, ikaw ay:
+
+          - Tukuyin ang "mga conditional" at ipaliwanag ang kanilang kahalagahan
+          - Magsanay sa pag-coding ng mga simpleng conditional
+          - Mag-isip tungkol sa aplikasyon sa silid-aralan
+
+          ## Stage 7: Pagdadalubhasa sa Pangunahing Bagay: Mga Function (20-45 minuto)
+
+          Sa pagkumpleto ng Yugto 7, ikaw ay:
+
+          - Tukuyin ang "mga function" at ipaliwanag ang kanilang kahalagahan
+          - Magsanay ng coding ng mga simpleng function
+          - Mag-isip tungkol sa aplikasyon sa silid-aralan
+
+          ## Yugto 8: Pagdadalubhasa sa Pangunahing Bagay: Mga Kaganapan (30-60 minuto)
+
+          Sa pagkumpleto ng Yugto 8, ikaw ay:
+
+          - Tukuyin ang "mga kaganapan" at ipaliwanag ang kanilang kahalagahan
+          - Magsanay sa pag-coding ng mga simpleng kaganapan
+          - Mag-isip tungkol sa aplikasyon sa silid-aralan
+
+          ## Yugto 9: Pinakamahuhusay na Kasanayan sa Pagtuturo ng Computer Science (30-60 minuto)
+
+          Sa pagkumpleto ng Stage 9, ikaw ay:
+
+          - Suriin ang pinakamahuhusay na kasanayan sa pagtuturo ng computer science
+
+          ## Yugto 10: Pagpaplano (30-60 minuto)
+
+          Sa pagkumpleto ng Stage 10, ikaw ay:
+
+          - Tuklasin ang mga mapagkukunan ng Code.org, kabilang ang dashboard ng guro
+          - Magplano kung paano mo maaaring isama ang computer science sa iyong pagsasanay
+
+          ## Yugto 11: Mga Susunod na Hakbang (10-30 minuto)
+
+          Sa pamamagitan ng pagkumpleto ng Yugto 11, magagawa mo
+
+          - Isipin ang natutunan mo
+          - Magplano sa mga susunod na hakbang na maaari mong gawin upang ipagpatuloy ang pag-aaral mo
+          - Kumonekta sa pandaigdigang komunidad ng mga kapwa tagapagturo na interesado sa edukasyon sa computer science
+          - Ibahagi ang iyong mga takeaway at feedback sa kursong ito
+
+          > **Tandaan**: Ang mga iminungkahing oras ay ibinigay sa itaas upang matulungan kang planuhin ang pag-aaral mo. Pakitandaan na maaaring gusto mong gumugol ng mas marami o mas kaunting oras sa partikular na yugto, depende sa iyong dating kaalaman, interes at kapasidad. Tandaan na ang kursong ito ay ganap na self-paced; maaari kang laging umalis sa kurso at bumalik o muling bisitahin ang anumang yugto o antas anumang oras.
+      OPD-K5 Stage9Go:
+        markdown: |-
+          # Pagpaplano > Repaso
+
+          <img src="https://images.code.org/34e1d20a6ae73e28c6c88c5981fd6be6-image-1434411459379.JPG" width="450px">
+
+          Sa yugtong ito, dapat kang:
+
+          - Sinuri ang Dashboard ng Guro at iba pang mapagkukunan sa Code.org
+          - Nakaplano sa kung paano mo maaaring isama ang computer science sa pagsasanay mo
+
+          Sa Yugto 11, sa ating huling yugto, gagawin mo
+
+          - Isipin ang natutunan mo
+          - Magplano sa mga susunod na hakbang na maaari mong gawin upang ipagpatuloy ang pag-aaral mo
+          - Kumonekta sa pandaigdigang komunidad ng mga kapwa tagapagturo na interesado sa edukasyon sa computer science
+      OPD-K5 Stage9Go_dani:
+        markdown: |-
+          # Pagpaplano > Repaso
+
+          <img src="https://images.code.org/34e1d20a6ae73e28c6c88c5981fd6be6-image-1434411459379.JPG" width="450px">
+
+          Sa yugtong ito, dapat kang:
+
+          - Sinuri ang Dashboard ng Guro at iba pang mapagkukunan sa Code.org
+          - Nakaplano sa kung paano mo maaaring isama ang computer science sa pagsasanay mo
+
+          Sa Yugto 11, sa ating huling yugto, gagawin mo
+
+          - Isipin ang natutunan mo
+          - Magplano sa mga susunod na hakbang na maaari mong gawin upang ipagpatuloy ang pag-aaral mo
+          - Kumonekta sa pandaigdigang komunidad ng mga kapwa tagapagturo na interesado sa edukasyon sa computer science
+      OPD-K5 Stage9Start:
+        markdown: "# Pagpaplano > Pagtuklas ng Mga Mapagkukunan ng Guro\n\nSa buong
+          Yugto 4-8, tiningnan mo ang ilan sa mga \"di naka-plug\" at online na mapagkukunan
+          ng pag-aaral na available sa Mga Batayan ng CS, habang naaayon ang mga ito
+          sa mga konsepto ng computer science na natututuhan mo.\n\nNgayon na mayroon
+          ka nang ilang pag-unawa sa kung paano mag-code, pati na rin kung paano magturo
+          ng computer science, oras na upang simulan ang pagpaplano ng pagtuturo mo.
+          Sa yugtong ito, lilibutin natin ang iba pang mga lugar ng Code.org platform
+          at ang **[Dashboard ng Guro](http://studio.code.org/)**. \n\nSa pagkumpleto
+          ng Yugto 10, ikaw ay:\n\n- Tuklasin ang mga mapagkukunan na magagamit ng
+          mga guro\n- Tuklasin ang Code.org **[Dashboard ng Guro](http://studio.code.org/)**\n-
+          Magplano kung paano mo maaaring isama ang computer science sa iyong pagsasanay\n\n***\n\nNasa
+          ibaba ang screenshot ng Dashboard ng Guro. Kakailanganin mong mag-log in
+          sa iyong account ng guro sa Code.org upang makita ito -- kapag naka-log
+          in ka na, dapat itong maging default na screen na makikita mo sa website
+          ng Code.org. Kung wala kang account ng guro, maaari kang **[mag-sign up
+          dito](https://studio.code.org/users/sign_up)**.\n\n![](https://images.code.org/d6345709495f764a71d9cb0994dbd7e4-image-1549064603589.png)"
+      OPD-K5 Stage9Start_copy:
+        markdown: |-
+          # Pagtuklas ng Mga Mapagkukunan ng Guro
+
+          Oras na para simulan ang pagpaplano ng pagtuturo mo. Sa yugtong ito, lilibutin natin ang iba pang mga lugar ng Code.org platform at ang **<a href="http://studio.code.org/" target="blank" rel="noopener noreferrer">Dashboard ng Guro</a>**.
+
+          Nasa ibaba ang screenshot ng Dashboard ng Guro. Kakailanganin mong mag-log in sa iyong Code.org teacher account para makita ito. Kapag naka-log in ka na, ito dapat ang default na screen na makikita mo sa website ng Code.org. Kung wala kang account ng guro, maaari kang **<a href="https://studio.code.org/users/sign_up" target="blank" rel="noopener noreferrer">mag-sign up para sa isa dito</a>**.
+
+          <a href="http://studio.code.org/" target="blank" rel="noopener noreferrer">![](https://images.code.org/d6345709495f764a71d9cb0994dbd7e4-image-1549064603589.png)</a>
+      OPD-K5 Stage9Start_dani:
+        markdown: "# Pagpaplano > Pagtuklas ng Mga Mapagkukunan ng Guro\n\nSa buong
+          Yugto 4-8, tiningnan mo ang ilan sa mga \"di naka-plug\" at online na mapagkukunan
+          ng pag-aaral na available sa Mga Batayan ng CS, habang naaayon ang mga ito
+          sa mga konsepto ng computer science na natututuhan mo.\n\nNgayon na mayroon
+          ka nang ilang pag-unawa sa kung paano mag-code, pati na rin kung paano magturo
+          ng computer science, oras na upang simulan ang pagpaplano ng pagtuturo mo.
+          Sa yugtong ito, lilibutin natin ang iba pang mga lugar ng Code.org platform
+          at ang **[Dashboard ng Guro](http://studio.code.org/)**. \n\nSa pagkumpleto
+          ng Yugto 10, ikaw ay:\n\n- Tuklasin ang mga mapagkukunan na magagamit ng
+          mga guro\n- Tuklasin ang Code.org **[Dashboard ng Guro](http://studio.code.org/)**\n-
+          Magplano kung paano mo maaaring isama ang computer science sa iyong pagsasanay\n\n***\n\nNasa
+          ibaba ang screenshot ng Dashboard ng Guro. Kakailanganin mong mag-log in
+          sa iyong account ng guro sa Code.org upang makita ito – kapag naka-log in
+          ka na, dapat itong maging default na screen na makikita mo sa website ng
+          Code.org. Kung wala kang account ng guro, maaari kang **[mag-sign up dito](https://studio.code.org/users/sign_up)**.\n\n![](https://images.code.org/d6345709495f764a71d9cb0994dbd7e4-image-1549064603589.png)"

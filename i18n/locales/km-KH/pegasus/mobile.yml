@@ -940,6 +940,7 @@
   AlgebraB_name: "វគ្គសិក្សា \"ខ\"៖ ពិជគណិតសម្រាប់វិទ្យាសាស្ត្រកុំព្យូទ័រ"
   gumball_name: "Gumball"
   iceage_name: "Ice Age"
+  minecraft_name: "ម៉ាញក្រាស់"
   starwarsblocks_name: "Star Wars (ប្លុក)"
   hoc-encryption_name: ការអ៉ីនគ្រីបធម្មតា
   applab_name: "មន្ទីរពិសោធន៍កម្មវិធី​"
@@ -1421,6 +1422,7 @@
   user_header_gamelab: "មន្ទីរពិសោធន៍ ល្បែង"
   user_header_dance: "Dance Party"
   user_header_spritelab: "Sprite Lab"
+  user_header_minecraft: "ម៉ាញក្រាស់"
   user_header_view_all: "មើលគម្រោងទាំងអស់"
   user_header_view_project_gallery: "មើលបណ្តុំនៃគម្រោង"
   user_header_view_my_projects: "មើលគម្រោងរបស់ខ្ញុំ"

@@ -12000,18 +12000,22 @@
           "courseD_artist_nestedLoops4_c": "Usa un ciclo annidato per disegnare i cerchi 4 volte."
         },
         "courseD_artist_nestedLoops52022": {
-          "courseD_artist_nestedLoops5_b": "Per fare un cerchio, devi impostare un ciclo `ripeti 360 volte`, all'interno del quale l'artista va avanti di 1 pixel e gira di 1 grado."
+          "courseD_artist_nestedLoops5_b": "Per fare un cerchio, devi impostare un ciclo `ripeti 360 volte`, all'interno del quale l'artista va avanti di 1 pixel e gira di 1 grado.",
+          "courseD_artist_nestedLoops5_a": "Per farlo facilmente:\n\n- ripeti 4 volte\n  - crea un cerchio\n  - salta in avanti di 50 pixel\n  - ruota a destra di 90 gradi"
         },
         "courseD_artist_nestedLoops72022": {
-          "courseD_artist_nestedLoops7_a": "Qui dovrai usare dei cicli annidati. Innanzitutto, serve un ciclo per disegnare un quadrato. Cosa dovrà fare il ciclo esterno se quello interno disegna un quadrato?"
+          "courseD_artist_nestedLoops7_a": "Qui dovrai usare dei cicli annidati. Innanzitutto, serve un ciclo per disegnare un quadrato. Cosa dovrà fare il ciclo esterno se quello interno disegna un quadrato?",
+          "courseD_artist_nestedLoops7_b": "Utilizza un ciclo nidificato, in cui il ciclo interno è il codice per un quadrato.\n\n- ripeti 6 volte\n  - crea il quadrato\n  - salta in avanti di **50 pixel**\n  - ruota di **60 gradi**"
         },
         "courseD_artist_nestedLoops82022": {
           "courseD_artist_nestedLoops8_a": "Per ottenere otto esagoni nel tuo disegno, dovrai girare di **45 gradi** tra uno e l'altro. Perché? Perché per fare un giro completo servono 360 gradi e se devi distribuire 8 esagoni in un giro completo, devi dividere i 360 gradi in 8 parti, quindi 360:8=45.",
-          "courseD_artist_nestedLoops8_b": "Se sei bloccato, prendi spunto dall'ultimo esercizio e cerca di capire cosa c'è di diverso."
+          "courseD_artist_nestedLoops8_b": "Se sei bloccato, prendi spunto dall'ultimo esercizio e cerca di capire cosa c'è di diverso.",
+          "courseD_artist_nestedLoops8_c": "Utilizza un ciclo nidificato\n\n  - Ripeti 8 volte\n    - disegna un esagono\n    - salta in avanti di 50 pixel\n    - ruota a destra di 45 gradi"
         },
         "courseD_artist_nestedLoops92022": {
           "courseD_artist_nestedLoops9_a": "Inizia utilizzando un ciclo annidato come quello usato in precedenza, ma questa volta fai disegnare dei quadrati.",
-          "courseD_artist_nestedLoops9_b": "Aggiungi un secondo gruppo di cicli annidati dopo il primo gruppo, ma questa volta disegna dei triangoli."
+          "courseD_artist_nestedLoops9_b": "Aggiungi un secondo gruppo di cicli annidati dopo il primo gruppo, ma questa volta disegna dei triangoli.",
+          "courseD_artist_nestedLoops9_c": "Utilizza due cicli nidificati:\n  - Ripeti 8 volte\n    - disegna un quadrato\n    - salta in avanti di 50 pixel\n    - ruota a destra di 45 gradi\n  - Ripeti 8 volte\n    - disegna un triangolo\n    - salta in avanti di 50 pixel\n    - ruota a destra di 45 gradi"
         },
         "courseD_artist_nestedLoopsFP2022": {
           "courseD_artist_nestedLoopsFP_a": "<img src=\"https://images.code.org/9257cbf61f238f5a749a949059731934-image-1478732674615.02.25.png\" width=\"200px\"/>\n\nQuesta immagine è stata realizzata con un ciclo annidato che ripete un esagono (con lati di 50 pixel) 15 volte usando un angolo di 48 gradi.",
@@ -12708,6 +12712,9 @@
         },
         "helloworld_food_say_space-2022": {
           "hello-world-first-solution-pizza": "Per fare in modo che il personaggio dica qualcosa, collega i blocchi in questo modo:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"face_pizza_1\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_pizza_1\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
+        },
+        "courseC_artist_loops7a2022": {
+          "courseC_artist_loops7a_a": "Un cerchio ha 360 gradi. Moltiplica i gradi della tua svolta per il numero di volte per cui la ripeti. Equivale a 360?\nControlla le rotazioni suggerite per vedere se funziona!\n\nEcco alcuni esempi per iniziare:\n\n-   Prova una svolta a 60 gradi per 6 volte\n-   Prova una svolta a 45 gradi per 8 volte\n-   Prova una svolta a 30 gradi per 12 volte"
         }
       }
     }
