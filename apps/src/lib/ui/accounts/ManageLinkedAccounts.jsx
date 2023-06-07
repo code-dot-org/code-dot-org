@@ -37,6 +37,7 @@ class ManageLinkedAccounts extends React.Component {
     isGoogleClassroomStudent: PropTypes.bool.isRequired,
     isCleverStudent: PropTypes.bool.isRequired,
     userAge: PropTypes.number,
+    usIp: PropTypes.bool,
   };
 
   cannotDisconnectGoogle = authOption => {
@@ -162,6 +163,7 @@ class ManageLinkedAccounts extends React.Component {
                   }
                   error={option.error}
                   userAge={this.props.userAge}
+                  usIp={this.props.usIp}
                 />
               );
             })}
@@ -180,6 +182,7 @@ export default connect(state => ({
   isGoogleClassroomStudent: state.manageLinkedAccounts.isGoogleClassroomStudent,
   isCleverStudent: state.manageLinkedAccounts.isCleverStudent,
   userAge: getScriptData('edit').userAge,
+  usIp: getScriptData('edit').usIp,
 }))(ManageLinkedAccounts);
 
 class OauthConnection extends React.Component {
@@ -191,6 +194,7 @@ class OauthConnection extends React.Component {
     disconnectDisabledStatus: PropTypes.string,
     error: PropTypes.string,
     userAge: PropTypes.number,
+    usIp: PropTypes.bool,
   };
 
   getDisconnectDisabledTooltip = () => {
@@ -204,8 +208,8 @@ class OauthConnection extends React.Component {
     }
   };
 
-  shouldDisableConnectButton = userAge => {
-    return !!(window.CPA_EXPERIENCE && userAge < 13);
+  shouldDisableConnectButton = (userAge, usIp) => {
+    return !!(window.CPA_EXPERIENCE && usIp && userAge < 13);
   };
 
   render() {
@@ -217,6 +221,7 @@ class OauthConnection extends React.Component {
       email,
       error,
       userAge,
+      usIp,
     } = this.props;
     // if given an email, we are already connected to this provider and should
     // present the option to disconnect. Otherwise, we should present the
@@ -269,7 +274,8 @@ class OauthConnection extends React.Component {
                 text={buttonText}
                 disabled={
                   !!disconnectDisabledMessage ||
-                  (!isConnected && this.shouldDisableConnectButton(userAge))
+                  (!isConnected &&
+                    this.shouldDisableConnectButton(userAge, usIp))
                 }
               />
               <RailsAuthenticityToken />

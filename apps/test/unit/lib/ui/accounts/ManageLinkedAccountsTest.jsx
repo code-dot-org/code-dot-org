@@ -259,13 +259,22 @@ describe('ManageLinkedAccounts', () => {
       restoreOnWindow('CPA_EXPERIENCE', undefined);
     });
 
-    it('disables the connect button for users under 13 when CPA is enabled', () => {
+    it('disables the connect button for US-based users under 13 when CPA is enabled', () => {
       const wrapper = mount(
-        <ManageLinkedAccounts {...DEFAULT_PROPS} userAge={12} />
+        <ManageLinkedAccounts {...DEFAULT_PROPS} userAge={12} usIp={true} />
       );
       const googleConnectButton = wrapper.find('BootstrapButton').at(0);
       expect(googleConnectButton).to.have.attr('disabled');
       expect(googleConnectButton).to.be.disabled();
+    });
+
+    it('only disables the buttons when the user IP is in the US, even if they are under 13', () => {
+      const wrapper = mount(
+        <ManageLinkedAccounts {...DEFAULT_PROPS} userAge={12} usIp={false} />
+      );
+      const googleConnectButton = wrapper.find('BootstrapButton').at(0);
+      expect(googleConnectButton).to.not.have.attr('disabled');
+      expect(googleConnectButton).to.not.be.disabled();
     });
   });
 

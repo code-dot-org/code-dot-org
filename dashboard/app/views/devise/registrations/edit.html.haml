@@ -1,4 +1,8 @@
 - require '../shared/middleware/helpers/experiments'
+- require 'geocoder'
+- location = Geocoder.search(request.ip).try(:first)
+- country_code = location&.country_code.to_s.upcase
+- us_ip = ['US', 'RD', nil].include?(country_code)
 - @page_title = t('activerecord.attributes.user.edit_header')
 - no_email = current_user.no_personal_email? || params[:noEmail] == 'true'
 
@@ -235,7 +239,8 @@
       isGoogleClassroomStudent: current_user.google_classroom_student?,
       isCleverStudent: current_user.clever_student?,
       dependentStudents: current_user.dependent_students,
-      studentCount: current_user.students.count
+      studentCount: current_user.students.count,
+      usIp: us_ip,
     }.to_json
   }
 %script{src: webpack_asset_path('js/devise/registrations/edit.js'), data: script_data}
