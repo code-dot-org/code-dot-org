@@ -64,6 +64,11 @@ export default function LockoutPanel(props) {
       <img
         style={styles.image}
         src={props.pendingEmail ? headerThanksImage : headerImage}
+        alt={
+          props.pendingEmail
+            ? i18n.sessionLockoutHeaderThanksDescription()
+            : i18n.sessionLockoutHeaderDescription()
+        }
       />
 
       <h2>
@@ -97,28 +102,30 @@ export default function LockoutPanel(props) {
         {/* This field shows the current status of the validation. */}
         {/* Parent Permission: Not Pending / Pending */}
         <div style={styles.statusSection}>
-          <label
-            style={isRTL ? styles.statusLabelRTL : styles.statusLabel}
-            htmlFor="permission-status"
-          >
-            <strong>{i18n.sessionLockoutParentStatusField()}</strong>
-          </label>
-          <span
-            id="permission-status"
-            style={props.pendingEmail ? styles.pending : styles.notSubmitted}
-          >
-            <strong>
-              {props.pendingEmail
-                ? i18n.sessionLockoutStatusPending()
-                : i18n.sessionLockoutStatusNotSubmitted()}
-            </strong>
-          </span>
+          <div>
+            <label
+              style={isRTL ? styles.statusLabelRTL : styles.statusLabel}
+              htmlFor="permission-status"
+            >
+              <strong>{i18n.sessionLockoutParentStatusField()}</strong>
+            </label>
+            <span
+              id="permission-status"
+              style={props.pendingEmail ? styles.pending : styles.notSubmitted}
+            >
+              <strong>
+                {props.pendingEmail
+                  ? i18n.sessionLockoutStatusPending()
+                  : i18n.sessionLockoutStatusNotSubmitted()}
+              </strong>
+            </span>
+          </div>
 
           {/* This is a floating 'link' that resends the pending email. */}
           {props.pendingEmail && (
             <Button
               styleAsText={true}
-              style={{...styles.resendLink, float: isRTL ? 'left' : 'right'}}
+              style={styles.resendLink}
               text={i18n.sessionLockoutResendEmail()}
               onClick={resendPermissionEmail}
             />
@@ -164,26 +171,28 @@ export default function LockoutPanel(props) {
           </div>
         </div>
 
-        {/* A sign-out button. */}
-        <Button
-          style={styles.button}
-          text={i18n.signOutButton()}
-          color={Button.ButtonColor.gray}
-          href="/users/sign_out"
-        />
+        <div style={styles.buttons}>
+          {/* A sign-out button. */}
+          <Button
+            style={styles.button}
+            text={i18n.signOutButton()}
+            color={Button.ButtonColor.gray}
+            href="/users/sign_out"
+          />
 
-        {/* The submit button. */}
-        {/* An empty onClick will still submit the form. */}
-        <Button
-          style={{...styles.button, float: isRTL ? 'left' : 'right'}}
-          text={
-            props.pendingEmail
-              ? i18n.sessionLockoutUpdateSubmit()
-              : i18n.sessionLockoutSubmit()
-          }
-          disabled={disabled}
-          onClick={() => {}}
-        />
+          {/* The submit button. */}
+          {/* An empty onClick will still submit the form. */}
+          <Button
+            style={styles.button}
+            text={
+              props.pendingEmail
+                ? i18n.sessionLockoutUpdateSubmit()
+                : i18n.sessionLockoutSubmit()
+            }
+            disabled={disabled}
+            onClick={() => {}}
+          />
+        </div>
       </form>
     </div>
   );
@@ -212,6 +221,8 @@ const styles = {
     marginBottom: 25,
   },
   statusSection: {
+    display: 'flex',
+    justifyContent: 'space-between',
     marginBottom: 20,
     marginTop: 20,
   },
@@ -272,6 +283,11 @@ const styles = {
     marginLeft: 'auto',
     marginRight: 'auto',
     width: 116,
+  },
+  buttons: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
   },
   button: {
     margin: 0,
