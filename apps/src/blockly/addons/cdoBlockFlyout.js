@@ -63,21 +63,9 @@ export default class CdoBlockFlyout extends GoogleBlockly.HorizontalFlyout {
     };
   }
 
-  /**
-   * Sets the translation of the flyout to match the scrollbars.
-   *
-   * @param xyRatio Contains a y property which is a float between 0 and 1
-   *     specifying the degree of scrolling and a similar x property.
-   */
-  setMetrics_(xyRatio) {
-    var metrics = this.getMetrics_();
-    metrics &&
-      ('number' === typeof xyRatio.x &&
-        (this.workspace_.scrollX = -metrics.contentWidth * xyRatio.x),
-      this.workspace_.translate(
-        this.workspace_.scrollX + metrics.absoluteLeft,
-        this.workspace_.scrollY + metrics.absoluteTop
-      ));
+  isScrollable() {
+    console.log('isScrollable -> false');
+    return false;
   }
 
   /**
@@ -124,20 +112,6 @@ export default class CdoBlockFlyout extends GoogleBlockly.HorizontalFlyout {
   init(targetWorkspace) {
     super.init(targetWorkspace);
     this.targetWorkspace_ = targetWorkspace;
-    // targetWorkspace = this.scrollbar_.outerSvg_;
-    // what is going on here?
-    for (
-      var svgGroup = Blockly.utils.dom.createSvgElement('g', {}, null);
-      targetWorkspace.firstChild;
-
-    )
-      svgGroup.appendChild(targetWorkspace.firstChild);
-    // for (var c = targetWorkspace.attributes.length - 1; 0 <= c; c--)
-    //   svgGroup.attributes.setNamedItem(
-    //     targetWorkspace.attributes[c].cloneNode()
-    //   );
-    // this.scrollbar_.outerSvg_ = svgGroup;
-    // this.svgGroup_.appendChild(this.scrollbar_.outerSvg_);
   }
 
   /**
@@ -164,10 +138,11 @@ export default class CdoBlockFlyout extends GoogleBlockly.HorizontalFlyout {
   }
 
   updateWidth_(newWidth) {
-    this.sizingBehavior_ === SIZING_BEHAVIOR.FIT_CONTENT
-      ? ((this.width_ += newWidth.width), (this.width_ += this.GAP_X))
-      : 0 === this.width_ &&
-        (this.width_ = this.sourceBlock_.getHeightWidth().width - 36);
+    // this.sizingBehavior_ === SIZING_BEHAVIOR.FIT_CONTENT
+    //   ? ((this.width_ += newWidth.width), (this.width_ += this.GAP_X))
+    //   : 0 === this.width_ &&
+    //     (this.width_ = this.sourceBlock_.getHeightWidth().width - 36);
+    this.width_ += newWidth.width + this.GAP_X;
   }
 
   /** Move the flyout */
