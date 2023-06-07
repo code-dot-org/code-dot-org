@@ -48,7 +48,11 @@ const BeatPad = ({triggers, playTrigger, onClose, isPlaying, hasTrigger}) => {
     return buttons;
   };
 
-  return <div className={styles.triggersContainer}>{renderTriggers()}</div>;
+  return (
+    <div id="beat-pad" className={styles.triggersContainer}>
+      {renderTriggers()}
+    </div>
+  );
 };
 
 const TriggerButton = ({
@@ -60,7 +64,6 @@ const TriggerButton = ({
 }) => {
   return (
     <div
-      id="beat-pad"
       className={classNames(
         styles.triggerButton,
         colorClassName,

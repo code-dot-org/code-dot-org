@@ -54,7 +54,7 @@ const Controls = ({
 
   return (
     <div id="controls" className={moduleStyles.controlsContainer}>
-      <div className={moduleStyles.section}>
+      <div id="controls-section" className={moduleStyles.section}>
         <button
           id="run-button"
           className={classNames(

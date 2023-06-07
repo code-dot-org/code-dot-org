@@ -2,10 +2,10 @@
 
 // Constants
 $timeline-area-height: 200px;
-$default-border-radius: 4px;
-$default-spacing: 5px;
+$default-border-radius: 0;
+$default-spacing: 2px;
 
-.container {
+.musicLab {
   position: relative;
   background-color: $dark_black;
   width: 100%;
@@ -17,6 +17,31 @@ $default-spacing: 5px;
   user-select: none;
   display: flex;
   flex-direction: column;
+  gap: $default-spacing;
+}
+
+.workArea {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  max-height: calc(100% - $timeline-area-height);
+  gap: $default-spacing;
+
+  .topButtonsContainer {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    z-index: 10;
+  }
+}
+
+.playArea {
+  width: 100%;
+  height: $timeline-area-height;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  gap: $default-spacing;
 }
 
 .instructionsArea {
@@ -30,7 +55,6 @@ $default-spacing: 5px;
   &.instructionsTop {
     flex-direction: row;
     height: 90px;
-    margin-bottom: $default-spacing;
     width: 100%;
   }
 
@@ -38,14 +62,6 @@ $default-spacing: 5px;
     flex-direction: column;
     height: 100%;
     width: 20%;
-
-    &.instructionsLeft {
-      margin-right: $default-spacing;
-    }
-
-    &.instructionsRight {
-      margin-left: $default-spacing;
-    }
   }
 }
 
@@ -55,39 +71,9 @@ $default-spacing: 5px;
   }
 }
 
-.workArea {
-  flex: 1;
-  display: flex;
-  flex-direction: row;
-  max-height: calc(100% - $timeline-area-height);
-
-  .topButtonsContainer {
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    z-index: 10;
-  }
-}
-
 .blocklyArea {
   border-radius: $default-border-radius;
   overflow: hidden;
   flex: 1;
   position: relative;
-}
-
-.playArea {
-  width: 100%;
-  height: $timeline-area-height;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: row;
-
-  &.playAreaBottom {
-    margin-top: $default-spacing;
-  }
-
-  &.playAreaTop {
-    margin-bottom: $default-spacing;
-  }
 }
