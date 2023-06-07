@@ -220,6 +220,17 @@ class CourseOffering < ApplicationRecord
     DURATION_LABEL_TO_MINUTES_CAP.keys.find {|dur| co_duration_in_minutes <= DURATION_LABEL_TO_MINUTES_CAP[dur]}
   end
 
+  def recommended?(locale_code = 'en-us')
+    locale_str = locale_code&.to_s
+    return true if locale_str&.start_with?('en')
+
+    if latest_published_version.content_root_type == 'Unit'
+      Unit.latest_stable_version(latest_published_version.content_root.family_name, locale: locale_code)&.version_year == latest_published_version&.version_year
+    else
+      UnitGroup.latest_stable_version(latest_published_version.content_root.family_name, locale: locale_code)&.version_year == latest_published_version&.version_year
+    end
+  end
+
   def summarize_for_edit
     {
       key: key,
@@ -238,7 +249,7 @@ class CourseOffering < ApplicationRecord
     }
   end
 
-  def summarize_for_catalog
+  def summarize_for_catalog(locale_code)
     {
       key: key,
       display_name: display_name,
@@ -248,7 +259,8 @@ class CourseOffering < ApplicationRecord
       cs_topic: cs_topic,
       school_subject: school_subject,
       device_compatibility: device_compatibility,
-      course_version_path: path_to_latest_published_version
+      course_version_path: path_to_latest_published_version,
+      is_recommended: recommended?(locale_code)
     }
   end
 
