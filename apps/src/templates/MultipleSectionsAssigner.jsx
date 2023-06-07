@@ -167,7 +167,6 @@ const MultipleSectionsAssigner = ({
       <div style={styles.header} className="uitest-confirm-assignment-dialog">
         {i18n.yourSectionsList()}
       </div>
-      <hr />
       <div style={styles.grid}>
         {sections &&
           sections.map(
@@ -186,6 +185,7 @@ const MultipleSectionsAssigner = ({
               )
           )}
       </div>
+      <hr />
       <a
         style={styles.selectAllSectionsLabel}
         onClick={selectAllHandler}
