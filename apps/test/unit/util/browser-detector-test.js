@@ -1,4 +1,8 @@
-import {isUnsupportedBrowser, isIE11} from '@cdo/apps/util/browser-detector';
+import {
+  isUnsupportedBrowser,
+  isIE11,
+  getBrowserName,
+} from '@cdo/apps/util/browser-detector';
 import sinon from 'sinon';
 import {expect} from '../../util/reconfiguredChai';
 
@@ -76,53 +80,97 @@ describe('Browser Detector', () => {
       userAgentStub.value(IE11);
       expect(isIE11()).to.be.true;
     });
+
+    it('Detects IE browser and version', () => {
+      userAgentStub.value(IE9);
+      expect(getBrowserName(false)).to.equal('Internet Explorer');
+      expect(getBrowserName(true)).to.equal('Internet Explorer 9');
+
+      stubIE11();
+      userAgentStub.value(IE11);
+      expect(getBrowserName(false)).to.equal('Internet Explorer');
+      expect(getBrowserName(true)).to.equal('Internet Explorer 11');
+    });
   });
 
   describe('Chrome', () => {
+    const chrome30 =
+      'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.0.0 Safari/537.36';
+    const chrome114 =
+      'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36';
+
     it('Detects unsupported Chrome versions', () => {
       // Chrome < 33 (not supported)
-      userAgentStub.value(
-        'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.0.0 Safari/537.36'
-      );
+      userAgentStub.value(chrome30);
       expect(isUnsupportedBrowser()).to.be.true;
 
       // Chrome > 33 (supported)
-      userAgentStub.value(
-        'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'
-      );
+      userAgentStub.value(chrome114);
       expect(isUnsupportedBrowser()).to.be.false;
+    });
+
+    it('Detects Chrome browser and version', () => {
+      userAgentStub.value(chrome30);
+      expect(getBrowserName(false)).to.equal('Chrome');
+      expect(getBrowserName(true)).to.equal('Chrome 30');
+
+      userAgentStub.value(chrome114);
+      expect(getBrowserName(false)).to.equal('Chrome');
+      expect(getBrowserName(true)).to.equal('Chrome 114');
     });
   });
 
   describe('Safari', () => {
+    const safari6 =
+      'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/6.0.3 Safari/605.1.15';
+    const safari13 =
+      'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Safari/605.1.15';
+
     it('Detects unsupported Safari versions', () => {
       // Safari < 7 (not supported)
-      userAgentStub.value(
-        'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/6.0.3 Safari/605.1.15'
-      );
+      userAgentStub.value(safari6);
       expect(isUnsupportedBrowser()).to.be.true;
 
       // Safari > 7 (supported)
-      userAgentStub.value(
-        'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Safari/605.1.15'
-      );
+      userAgentStub.value(safari13);
       expect(isUnsupportedBrowser()).to.be.false;
+    });
+
+    it('Detects Safari browser and version', () => {
+      userAgentStub.value(safari6);
+      expect(getBrowserName(false)).to.equal('Safari');
+      expect(getBrowserName(true)).to.equal('Safari 6');
+
+      userAgentStub.value(safari13);
+      expect(getBrowserName(false)).to.equal('Safari');
+      expect(getBrowserName(true)).to.equal('Safari 13');
     });
   });
 
   describe('Firefox', () => {
+    const firefox22 =
+      'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:70.0) Gecko/20100101 Firefox/22.0';
+    const firefox70 =
+      'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:70.0) Gecko/20100101 Firefox/70.0';
+
     it('Detects unsupported Firefox versions', () => {
       // Firefox < 25 (not supported)
-      userAgentStub.value(
-        'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:70.0) Gecko/20100101 Firefox/22.0'
-      );
+      userAgentStub.value(firefox22);
       expect(isUnsupportedBrowser()).to.be.true;
 
       // Firefox > 25 (supported)
-      userAgentStub.value(
-        'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:70.0) Gecko/20100101 Firefox/70.0'
-      );
+      userAgentStub.value(firefox70);
       expect(isUnsupportedBrowser()).to.be.false;
+    });
+
+    it('Detects Firefox browser and version', () => {
+      userAgentStub.value(firefox22);
+      expect(getBrowserName(false)).to.equal('Firefox');
+      expect(getBrowserName(true)).to.equal('Firefox 22');
+
+      userAgentStub.value(firefox70);
+      expect(getBrowserName(false)).to.equal('Firefox');
+      expect(getBrowserName(true)).to.equal('Firefox 70');
     });
   });
 });
