@@ -28,6 +28,10 @@ section.bg-primary-light {
 
   p {
     @include strong;
+
+    &.body-two {
+      @include body-two;
+    }
   }
 
   a { color: $neutral_dark !important;
@@ -97,7 +101,6 @@ hr {
     border-top: 1px solid $neutral_dark60;
   }
 }
-
 // Text links
 p a,
 p a:visited,
@@ -324,7 +327,7 @@ ul {
 
   // Lists of links with icons
   &.link-list {
-    margin: 2rem 0 1rem;
+    margin: 2rem 0 0;
     display: flex;
     justify-content: start;
     flex-wrap: wrap;
@@ -352,6 +355,7 @@ ul {
       a {
         @include heading-xs;
         color: $brand_secondary_default;
+        margin-bottom: 0;
       }
 
       &:hover {
