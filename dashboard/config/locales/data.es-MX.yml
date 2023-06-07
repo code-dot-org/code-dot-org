@@ -994,7 +994,7 @@ es-MX:
         csa-pl-intro-to-equals-method: Introducción al método .equals()
         csa-pl-equals-book: Escribir el método equals() para la clase Libro
         csa-multi-select-pl: Sentencias de selección múltiple en Java
-        csc_timecapsule_intro: Introducción a la Cápsula del Tiempo
+        csc_timecapsule_intro: Cápsula del Tiempo - Módulo
         PL_Equity_in_CS_Education: Igualdad en la Enseñanza de la Informática
         csc_fm_pilot: Máquinas Funcionales (Piloto)
         csc_fm_pilot_v2: Máquinas Funcionales (Introducción)
@@ -1057,6 +1057,7 @@ es-MX:
         PL_CSD_MicroBit_Intro: Introducción al Micro:bit
         csc_animal_adaptations_intro: Introducción a las Adaptaciones Animales
         upload_sprites_backgrounds: Cargando Sprites y Fondos Personalizados
+        PL_CSD_EquityBlindSpotsvid: Sesgo y responsabilidad
     callout:
       text:
         drag_blocks: Arrastra un bloque "mover" y colócalo debajo del otro bloque

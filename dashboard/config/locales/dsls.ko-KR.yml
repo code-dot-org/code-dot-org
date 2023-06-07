@@ -13823,3 +13823,25 @@ ko-KR:
         display_name: 앱 랩에서 모델을 사용해 연습
       ml-use models applab-practice choice_2022:
         display_name: 앱 랩에서 모델을 사용해 연습
+      Test Contained Retriable Multi:
+        answers:
+        - text: '0'
+        - text: '1'
+        - text: '2'
+          correct: true
+        - text: '4'
+        questions:
+        - {}
+      test-single-multi-standalone-retriable:
+        answers:
+        - text: 아무 일도 일어나지 않을 거예요.
+          feedback: 틀렸습니다. 회전초는 굴러가기 시작할 것입니다
+        - text: 회전초는 화면 상단으로 떠올라갈 것입니다
+          feedback: 틀렸습니다. 회전초는 굴러가기 시작할 것입니다
+        - text: 회전초는 굴러가기 시작할 것입니다
+          correct: true
+          feedback: 맞습니다!
+        - text: 회전초는 깜박거릴 것입니다.
+          feedback: 틀렸습니다. 회전초는 굴러가기 시작할 것입니다
+        questions:
+        - text: 아래 코드를 자세히 보세요. "실행"을 클릭하면 무슨 일이 벌어질까요?

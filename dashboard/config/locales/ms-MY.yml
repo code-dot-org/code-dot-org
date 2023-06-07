@@ -68,6 +68,7 @@ ms:
   unsubmit: Tidak diserahkan
   previous_page: Halaman sebelumnya
   next_page: Halaman seterusnya
+  next_level: Tahap seterusnya
   next_resource: Sumber seterusnya
   done_with_module: Selesai dengan Modul Pembelajaran ini
   cancel: Batal
@@ -793,6 +794,10 @@ ms:
       weblab_unsupported_locale_storage: Anda mungkin mengalami masalah menggunakan
         Web Lab dalam mod Pelayar Peribadi. Sila muat semula projek anda dalam mod
         biasa. Maaf atas kesulitan ini.
+  deprecation:
+    algebra_lab: 'CS dalam kurikulum dan kandungan Algebra sedang ditamatkan. Dalam
+      beberapa bulan akan datang, makmal ini tidak akan tersedia lagi. Sila lihat
+      [Bootstrap: Algebra](%{bootstrap_algebra_url}) sebaliknya. [Ketahui Lebih Lanjut](%{cs_algebra_url}).'
   slow_loading: Ini memakan masa lebih lama daripada biasa...
   try_reloading: Cuba memuat semula halaman
   next_stage: Selesai! Teruskan ke tahap seterusnya

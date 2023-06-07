@@ -2119,6 +2119,8 @@ sv:
               display_name: Kapitel 1
             lessonGroup-4:
               display_name: Kapitel 2
+        ai-temp:
+          title: Hur AI fungerar
         self-paced-pl-csd1-2023:
           lesson_groups:
             lessonGroup-2:

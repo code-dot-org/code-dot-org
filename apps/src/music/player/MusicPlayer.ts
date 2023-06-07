@@ -5,6 +5,7 @@ import {SoundEvent} from './interfaces/SoundEvent';
 import MusicLibrary, {SoundFolder} from './MusicLibrary';
 import SamplePlayer, {SampleEvent} from './SamplePlayer';
 import {generateNotesFromChord, ChordNote} from '../utils/Chords';
+import {logWarning} from '../utils/MusicMetrics';
 
 // Using require() to import JS in TS files
 const soundApi = require('./sound');
@@ -233,11 +234,7 @@ export default class MusicPlayer {
 
     generatedNotes.forEach(note => {
       const sampleId = this.getSampleForNote(note.note, instrument);
-      if (sampleId === null) {
-        console.warn(
-          `No sound for note value ${note} on instrument ${instrument}`
-        );
-      } else {
+      if (sampleId !== null) {
         const noteWhen = chordEvent.when + (note.tick - 1) / 16;
 
         results.push({
@@ -253,7 +250,7 @@ export default class MusicPlayer {
 
   private getSampleForNote(note: number, instrument: string): string | null {
     if (this.library === null) {
-      console.warn('Music Player not initialized');
+      logWarning('Music Player not initialized');
       return null;
     }
 
@@ -261,15 +258,13 @@ export default class MusicPlayer {
       this.library.getFolderForPath(instrument);
 
     if (folder === null) {
-      console.warn(`No instrument ${instrument}`);
+      logWarning(`No instrument ${instrument}`);
       return null;
     }
 
     const sound = folder.sounds.find(sound => sound.note === note) || null;
     if (sound === null) {
-      console.warn(
-        `No sound for note value ${note} on instrument ${instrument}`
-      );
+      logWarning(`No sound for note value ${note} on instrument ${instrument}`);
       return null;
     }
 

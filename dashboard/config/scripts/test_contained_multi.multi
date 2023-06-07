@@ -6,7 +6,7 @@ wrong '0', feedback: 'No, that is 1 - 1.'
 wrong '1', feedback: 'No, that is 1 * 1.'
 right '2', feedback: 'Yes, you are a genius!'
 wrong '4', feedback: 'No, that is not even close.'
-allow_multiple_attempts true
+allow_multiple_attempts false
 
 markdown <<MARKDOWN
 Test **markdown** _here_

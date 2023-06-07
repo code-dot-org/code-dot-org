@@ -65,6 +65,7 @@ ur:
   unsubmit: غیر جمع کرائیں
   previous_page: پچھلا صفحہ
   next_page: اگلا صفحہ
+  next_level: اگلی سطح
   next_resource: اگلا وسائل
   done_with_module: اس لرننگ ماڈیول کے ساتھ کیا
   cancel: منسوخ کریں
@@ -214,6 +215,7 @@ ur:
     user_type_student_desc: 'ہماری تمام کورسیں اور سرگرمیاں دریافت کریں، مزید برآں:'
     user_type_student_ability_1: اپنی پیشرفت اور پراجیکٹس محفوظ کریں
     user_type_student_ability_2: اپنے استاد کے کلاسروم سیکشن میں شامل ہوں
+    user_type_teacher: ٹیچر
     user_type_teacher_desc: 'وہ سب کچھ جنہیں طلباء کو رسائی حاصل ہو، اور مزید برآں:'
     user_type_teacher_ability_1: کلاسروم کے سیکشن بنائیں
     user_type_teacher_ability_2: طلباء کو کام سونپیں اور پیشرفت ٹریک کریں
@@ -437,6 +439,7 @@ ur:
       create: بنائیں
       algebra_game: الجبرا
       applab: ایپ لیب
+      artist: آرٹسٹ
       artist_k1: آرٹسٹ (پری ریڈر)
       basketball: باسکٹ بال
       bounce: اچھال
@@ -495,6 +498,7 @@ ur:
       student: Talib-e-ilm
       viewing_solution: دیکھنے کا حل
       try_it_yourself: اپنے آپ کو آزمائیں
+      section: سیکشن
       example: مثال کے طور پر حل
       example_with_number: مثال کا حل %{solution_number}
       submitted_on: 'پر جمع کیا گیا:'
@@ -662,6 +666,7 @@ ur:
     none: جواب دینے کے لئے ترجیح دیں
   user_type:
     student: Talib-e-ilm
+    teacher: ٹیچر
   footer:
     thank_you: ہم کوڈ سٹوڈیو بنانے میں تعاون پر اپنے <a href="https://code.org/about/donors">عطیہ
       دہندگان</a>، <a href="https://code.org/about/partners">شراکت دار</a>، ہماری
@@ -993,9 +998,9 @@ ur:
     wrong_body: جوابات جمع کروانے کا شکریہ۔
     correct_title: آپکا شکریہ
     correct_body: جوابات جمع کروانے کا شکریہ۔
-    hide_survey_last_answer: یہ سروے گمنام ہے. مجموعی نتائج کے لئے استاد ڈیش بورڈ
-      ملاحظہ کریں. نوٹ کریں کہ نتائج صرف اس صورت میں نظر آتے ہیں جب کم از کم پانچ
-      طالب علموں نے سروے پیش کیا.
+    hide_survey_last_answer: یہ سروے گمنام ہے۔ مجموعی نتائج کے لئے ٹیچر ڈیش بورڈ ملاحظہ
+      کریں۔ نوٹ کریں کہ نتائج صرف اس صورت میں نظر آتے ہیں جب کم از کم پانچ طالب علموں
+      نے سروے پیش کیا۔
     survey_submission_thankyou: اس سروے جمع کرنے کے لئے آپ کا شکریہ! سروے کو صاف کر
       دیا گیا ہے تاکہ آپ کے ردعمل گمنام رہیں. نوٹ کریں کہ آپ کا استاد اب بھی پوری
       کلاس کے جوابات کو دیکھنے کے قابل ہو جائے گا، لیکن ناموں کے بغیر منسلک.
