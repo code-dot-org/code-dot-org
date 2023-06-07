@@ -121,3 +121,6 @@ export interface InitProgressPayload {
   isFullProgress: boolean;
   currentPageNumber: number;
 }
+
+// LevelResults is a map of levelId -> TestResult. TestResult is a number.
+export type LevelResults = {[key: number]: number};

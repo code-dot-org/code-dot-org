@@ -6,6 +6,8 @@ import {
   PeerReviewSummary,
   PUZZLE_PAGE_NONE,
   InitProgressPayload,
+  LevelResults,
+  PeerReveiwLevelInfo,
 } from '@cdo/apps/types/progressTypes';
 import {PayloadAction, createSlice} from '@reduxjs/toolkit';
 import _ from 'lodash';
@@ -14,6 +16,7 @@ import {
   processServerStudentProgress,
   getLevelResult,
 } from '@cdo/apps/templates/progress/progressHelpers';
+import {mergeActivityResult, activityCssClass} from './activityUtils';
 
 interface ProgressState {
   currentLevelId: string | null;
@@ -32,10 +35,7 @@ interface ProgressState {
     [key: number]: UnitProgress;
   };
   unitProgressHasLoaded: boolean;
-  // levelResults is a map of levelId -> TestResult. TestResult is a number.
-  levelResults: {
-    [key: number]: number;
-  };
+  levelResults: LevelResults;
   focusAreaLessonIds: number[];
   peerReviewLessonInfo: PeerReviewLessonInfo | null;
   peerReviewsPerformed: PeerReviewSummary[];
@@ -51,6 +51,8 @@ interface ProgressState {
   courseVersionId: number | undefined;
   unitDescription: string | undefined;
   unitStudentDescription: string | undefined;
+  changeFocusAreaPath: string | undefined;
+  unitCompleted: boolean | undefined;
 }
 
 const initialState: ProgressState = {
@@ -75,7 +77,6 @@ const initialState: ProgressState = {
   // studentLevelProgressType)
   unitProgress: {},
   unitProgressHasLoaded: false,
-  // levelResults is a map of levelId -> TestResult
   // note: eventually, we expect usage of this field to be replaced with unitProgress
   levelResults: {},
   focusAreaLessonIds: [],
@@ -98,6 +99,8 @@ const initialState: ProgressState = {
   courseVersionId: undefined,
   unitDescription: undefined,
   unitStudentDescription: undefined,
+  changeFocusAreaPath: undefined,
+  unitCompleted: undefined,
 };
 
 const progressSlice = createSlice({
@@ -144,6 +147,90 @@ const progressSlice = createSlice({
       state.unitProgress = processServerStudentProgress(action.payload);
       state.unitProgressHasLoaded = true;
     },
+    clearResults(state) {
+      state.levelResults = initialState.levelResults;
+    },
+    useDbProgress(state) {
+      state.usingDbProgress = true;
+    },
+    mergeResults(state, action: PayloadAction<LevelResults>) {
+      const newLevelResults: LevelResults = {};
+      const combinedLevels = Object.keys({
+        ...state.levelResults,
+        ...action.payload,
+      });
+      combinedLevels.forEach(key => {
+        const levelId = parseInt(key);
+        newLevelResults[levelId] = mergeActivityResult(
+          state.levelResults[levelId],
+          action.payload[levelId]
+        );
+      });
+      state.levelResults = newLevelResults;
+    },
+    overwriteResults(state, action: PayloadAction<LevelResults>) {
+      state.levelResults = action.payload;
+    },
+    mergePeerReviewProgress(
+      state,
+      action: PayloadAction<PeerReveiwLevelInfo[]>
+    ) {
+      if (state.peerReviewLessonInfo) {
+        state.peerReviewLessonInfo = {
+          ...state.peerReviewLessonInfo,
+          levels: state.peerReviewLessonInfo.levels.map((level, index) => ({
+            ...level,
+            ...action.payload[index],
+          })),
+        };
+      }
+    },
+    updateFocusArea: {
+      reducer(
+        state,
+        action: PayloadAction<{
+          changeFocusAreaPath: string;
+          focusAreaLessonIds: number[];
+        }>
+      ) {
+        state.changeFocusAreaPath = action.payload.changeFocusAreaPath;
+        state.focusAreaLessonIds = action.payload.focusAreaLessonIds;
+      },
+      prepare(changeFocusAreaPath: string, focusAreaLessonIds: number[]) {
+        return {
+          payload: {
+            changeFocusAreaPath,
+            focusAreaLessonIds,
+          },
+        };
+      },
+    },
+    disablePostMilestone(state) {
+      state.postMilestoneDisabled = true;
+    },
+    setIsAge13Required(state, action: PayloadAction<boolean>) {
+      state.isAge13Required = action.payload;
+    },
+    setIsSummaryView(state, action: PayloadAction<boolean>) {
+      state.isSummaryView = action.payload;
+    },
+    setIsMiniView(state, action: PayloadAction<boolean>) {
+      state.isMiniView = action.payload;
+    },
+    setStudentDefaultsSummaryView(state, action: PayloadAction<boolean>) {
+      state.studentDefaultsSummaryView = action.payload;
+    },
+    setCurrentLessonId(state, action: PayloadAction<number>) {
+      // if we already have a currentLessonId, that means we're on a puzzle page,
+      // and we want currentLessonId to remain the same (rather than reflecting
+      // the last lesson the user has made progress on).
+      if (!state.currentLessonId) {
+        state.currentLessonId = action.payload;
+      }
+    },
+    setScriptCompleted(state) {
+      state.unitCompleted = true;
+    }
   },
 });
 
