@@ -8,6 +8,7 @@
         "flappy": "Codul Flappy",
         "jigsaw": "Puzzle",
         "algebra": "Informatică în Algebră",
+        "applab-intro": "Introducere în App Lab",
         "aquatic": "Minecraft: Voiaj Acvatic",
         "artist": "Artist",
         "course1": "Curs 1",
@@ -22,6 +23,7 @@
         "infinity": "Laborator de joacă Disney Infinity",
         "mc": "Ora de Programare Minecraft",
         "minecraft": "Minecraft Designer Hour of Code",
+        "oceans": "IA pentru Oceane",
         "outbreak": "Simulator Epidemie",
         "pixelation": "Pixelare",
         "playlab": "Laborator de Joacă",
@@ -30,8 +32,14 @@
         "starwarsblocks": "Star Wars: Programarea unei galaxii",
         "text-compression": "Comprimare de text",
         "csa-self-paced-pl": "Navighează Code.org pentru Profesorii CSA Pilot",
+        "ai-ethics": "Activitatea IA Etică",
+        "counting-csc": "Activitate de Numărare",
+        "explore-data-1": "Activitate de Date",
         "outbreak-csc": "Epidemie",
+        "spelling-bee": "Activitate de Ortografiere",
         "poem-art": "Arta Poeziei",
+        "poetry": "Codare cu Poezie",
+        "hello-world-retro": "Bună Lume: Retro",
         "edit-code": "Editează Codul",
         "poetry-hoc3": "poetry-hoc3",
         "csa-u8-dev": "csa-u8-dev",
@@ -45,7 +53,8 @@
         "hello-world-space": "Bunā Lume: Spațiu",
         "hello-world-soccer": "Bunā Lume: Fotbal",
         "playground": "loc de joacă",
-        "design-process": "Procesul de design"
+        "design-process": "Procesul de design",
+        "web-development": "Dezvoltare Web"
       }
     }
   }
