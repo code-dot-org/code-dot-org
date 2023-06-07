@@ -42,9 +42,9 @@ class LtiV1Controller < ApplicationController
   end
 
   private def create_and_set_nonce
-    # generate nonce, this will be set as a cookie. 
+    # generate nonce, this will be set as a cookie.
     nonce = generate_random_string 10
-    # generate hashed nonce, this will be returned to the LTI Platform in the 
+    # generate hashed nonce, this will be returned to the LTI Platform in the
     # request params https://openid.net/specs/openid-connect-core-1_0.html#NonceNotes
     hashed_nonce = Digest::SHA2.hexdigest nonce
     set_cookie("nonce", nonce)
