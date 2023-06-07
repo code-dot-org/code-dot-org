@@ -139,10 +139,14 @@
           "text": "văn bản"
         },
         "CSD U1 processing live_2021": {
-          "bear": "Gấu"
+          "bear": "Gấu",
+          "walking": "đi dạo",
+          "rat": "con chuột"
         },
         "CSD U1 processing live_2022": {
-          "bear": "Gấu"
+          "bear": "Gấu",
+          "walking": "đi dạo",
+          "rat": "con chuột"
         },
         "CSD U1 processing npark_2021": {
           "Correct!": "Chính xác!",
@@ -217,12 +221,18 @@
         "CSD U1 storage outfit_2021": {
           "Clear": "Xóa",
           "green": "màu xanh lá",
-          "black": "đen"
+          "black": "đen",
+          "white": "trắng",
+          "pink": "màu hồng",
+          "purple": "màu tím"
         },
         "CSD U1 storage outfit_2022": {
           "Clear": "Xóa",
           "green": "màu xanh lá",
-          "black": "đen"
+          "black": "đen",
+          "white": "trắng",
+          "pink": "màu hồng",
+          "purple": "màu tím"
         },
         "CSD U2 RGB intro": {
           "1": "1",
@@ -314,7 +324,9 @@
           "left": "trái",
           "right": "phải",
           "red": "màu đỏ",
-          "green": "màu xanh lá"
+          "green": "màu xanh lá",
+          "yellow": "màu vàng",
+          "purple": "màu tím"
         },
         "CSD U6 - Combine Inputs - CA_2022": {
           "on": "trên",
@@ -336,10 +348,13 @@
         },
         "CSD U6 - Combine Inputs - PracC_2222": {
           "green": "màu xanh lá",
-          "blue": "màu xanh dương"
+          "blue": "màu xanh dương",
+          "yellow": "màu vàng",
+          "orange": "màu cam"
         },
         "CSD U6 - Combine Inputs - PracD_2222": {
-          "Test": "Kiểm tra"
+          "Test": "Kiểm tra",
+          "quiet": "Yên tĩnh"
         },
         "CSD U6 - Combine Inputs - SB2_2222": {
           "short": "ngắn",
@@ -500,10 +515,12 @@
           "Welcome": "Chào mừng bạn"
         },
         "CSD U6 - Screen Inputs - SB2.1_2022": {
-          "black": "đen"
+          "black": "đen",
+          "white": "trắng"
         },
         "CSD U6 - Screen Inputs - SB2.2_2022": {
-          "black": "đen"
+          "black": "đen",
+          "white": "trắng"
         },
         "CSD U6 - Screen Outputs - ChalB_2222": {
           "?": "?"
@@ -539,7 +556,8 @@
           "low": "thấp"
         },
         "CSD U6 - Sensors - SB2_2222": {
-          "Update": "Cập nhật"
+          "Update": "Cập nhật",
+          "value": "giá trị"
         },
         "CSD U6 Driver pt 2": {
           "You did it!": "Bạn đã làm được!"
@@ -614,16 +632,20 @@
           "Success!": "Thành công!"
         },
         "CSD U6 analog light": {
-          "Update": "Cập nhật"
+          "Update": "Cập nhật",
+          "value": "giá trị"
         },
         "CSD U6 analog light_2018": {
-          "Update": "Cập nhật"
+          "Update": "Cập nhật",
+          "value": "giá trị"
         },
         "CSD U6 analog light_2019": {
-          "Update": "Cập nhật"
+          "Update": "Cập nhật",
+          "value": "giá trị"
         },
         "CSD U6 analog light_2021": {
-          "Update": "Cập nhật"
+          "Update": "Cập nhật",
+          "value": "giá trị"
         },
         "CSD U6 array piano": {
           "C": "C",
@@ -1494,6 +1516,54 @@
           "night": "đêm",
           "dusk": "Hoàng hôn",
           "Predict": "Dự đoán"
+        },
+        "CSD U6 - Sensors - SB1_2222": {
+          "value": "giá trị"
+        },
+        "CSD U6 - Sensors - SB3_2222": {
+          "value": "giá trị"
+        },
+        "CSD U6 - Sensors - SB4.1_2222": {
+          "value": "giá trị"
+        },
+        "CSD U6 - Sensors - SB4_2222": {
+          "value": "giá trị"
+        },
+        "CSD U6 analog change": {
+          "value": "giá trị"
+        },
+        "CSD U6 analog change_2018": {
+          "value": "giá trị"
+        },
+        "CSD U6 analog change_2019": {
+          "value": "giá trị"
+        },
+        "CSD U6 analog change_2021": {
+          "value": "giá trị"
+        },
+        "CSD U6 analog data": {
+          "value": "giá trị"
+        },
+        "CSD U6 analog data_2018": {
+          "value": "giá trị"
+        },
+        "CSD U6 analog data_2019": {
+          "value": "giá trị"
+        },
+        "CSD U6 analog data_2021": {
+          "value": "giá trị"
+        },
+        "CSD U6 analog sound": {
+          "value": "giá trị"
+        },
+        "CSD U6 analog sound_2018": {
+          "value": "giá trị"
+        },
+        "CSD U6 analog sound_2019": {
+          "value": "giá trị"
+        },
+        "CSD U6 analog sound_2021": {
+          "value": "giá trị"
         }
       }
     }

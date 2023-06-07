@@ -292,7 +292,8 @@
           "99": "99",
           "You won!": "Ти виграв!",
           "The number was": "Було загадане число",
-          "No more tries!": "Спроби скінчилися!"
+          "No more tries!": "Спроби скінчилися!",
+          "?": "?"
         },
         "CSD U1 processing guess_2022": {
           "1": "1",
@@ -380,7 +381,8 @@
           "99": "99",
           "You won!": "Ти виграв!",
           "The number was": "Було загадане число",
-          "No more tries!": "Спроби скінчилися!"
+          "No more tries!": "Спроби скінчилися!",
+          "?": "?"
         },
         "CSD U1 processing live_2021": {
           "bear": "Ведмідь",
@@ -545,7 +547,8 @@
           "What season is it?": "Який зараз сезон?",
           "Cloudy": "Хмарно",
           "Generate Outfit!": "Сформувати вбрання!",
-          "Outfit Picker": "Помічник з вибору одягу"
+          "Outfit Picker": "Помічник з вибору одягу",
+          "Clear": "Очистити"
         },
         "CSD U1 storage outfit_2022": {
           "white": "білий",
@@ -560,7 +563,8 @@
           "What season is it?": "Який зараз сезон?",
           "Cloudy": "Хмарно",
           "Generate Outfit!": "Сформувати вбрання!",
-          "Outfit Picker": "Помічник з вибору одягу"
+          "Outfit Picker": "Помічник з вибору одягу",
+          "Clear": "Очистити"
         },
         "CSD U2 RGB intro": {
           "1": "1",
@@ -1146,7 +1150,9 @@
           "Blue": "Синя",
           "Yes": "Так",
           "No": "Ні",
-          "Save": "Зберегти"
+          "Save": "Зберегти",
+          "User Profile": "Профіль користувача",
+          "User": "Користувач"
         },
         "CSDU4 Crowdsource App Demo_2018": {
           "About": "Про нас",
@@ -1158,7 +1164,9 @@
           "Blue": "Синя",
           "Yes": "Так",
           "No": "Ні",
-          "Save": "Зберегти"
+          "Save": "Зберегти",
+          "User Profile": "Профіль користувача",
+          "User": "Користувач"
         },
         "CSDU4 Crowdsource App Demo_2019": {
           "About": "Про нас",
@@ -1170,25 +1178,30 @@
           "Blue": "Синя",
           "Yes": "Так",
           "No": "Ні",
-          "Save": "Зберегти"
+          "Save": "Зберегти",
+          "User Profile": "Профіль користувача",
+          "User": "Користувач"
         },
         "CSDU4 Decision App Demo": {
           "About": "Про нас",
           "I don't know": "Не знаю",
           "When?": "Коли?",
-          "About Us": "Про нас"
+          "About Us": "Про нас",
+          "Why?": "Чому?"
         },
         "CSDU4 Decision App Demo_2018": {
           "About": "Про нас",
           "I don't know": "Не знаю",
           "When?": "Коли?",
-          "About Us": "Про нас"
+          "About Us": "Про нас",
+          "Why?": "Чому?"
         },
         "CSDU4 Decision App Demo_2019": {
           "About": "Про нас",
           "I don't know": "Не знаю",
           "When?": "Коли?",
-          "About Us": "Про нас"
+          "About Us": "Про нас",
+          "Why?": "Чому?"
         },
         "CSDU4 Functionality visible": {
           "Hide": "Приховати",
@@ -1216,19 +1229,22 @@
           "About": "Про нас",
           "Submit": "Надіслати",
           "When?": "Коли?",
-          "About Us": "Про нас"
+          "About Us": "Про нас",
+          "Why?": "Чому?"
         },
         "CSDU4 Quiz App Demo_2018": {
           "About": "Про нас",
           "Submit": "Надіслати",
           "When?": "Коли?",
-          "About Us": "Про нас"
+          "About Us": "Про нас",
+          "Why?": "Чому?"
         },
         "CSDU4 Quiz App Demo_2019": {
           "About": "Про нас",
           "Submit": "Надіслати",
           "When?": "Коли?",
-          "About Us": "Про нас"
+          "About Us": "Про нас",
+          "Why?": "Чому?"
         },
         "CSDU6 - UI and Inputs - getNumber": {
           "+": "+",
@@ -1596,6 +1612,174 @@
           "have won the World Cup?": "вигравали Чемпіонат світу?",
           "have more than a billion people?": "мають населення понад мільярд людей?",
           "have sent people to space?": "відправляли людей у космос?"
+        },
+        "CSD U6 - Board Inputs - SB1_2222": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 - Board Inputs - SB2_2222": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 - Board Inputs - SB3_2222": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 - Board Outputs - P_2222": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 - Board Outputs - SB1_2222": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 - Board Outputs - SB2_2222": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 - Board Outputs - Setup_2222": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 - Color LEDs - PracA_2222": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 - Color LEDs - SB2_2222": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 - Color LEDs - SB3_2222": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 - Music - SB4_2222": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 - Physical Input - ChalA_2222": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 - Physical Input - ChalB_2222": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 - Physical Input - ChalC_2222": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 - Physical Input - PC_2222": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 - Physical Input - PD_2222": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 - Physical Input - SB1_2222": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 - Physical Output - ChalA_2222": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 - Physical Output - ChalB_2222": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 - Physical Output - ChalC_2222": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 - Physical Output - PB_2222": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 - Physical Output - PC_2222": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 - Physical Output - P_2222": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 - Physical Output - SB1_2222": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 - Physical Output - SB2.2_2222": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 - Physical Output - SB2_2222": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 LED toggle": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 LED toggle_2018": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 LED toggle_2019": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 LED toggle_2021": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 add LED button": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 add LED button_2018": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 add LED button_2019": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 add LED button_2021": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 predict LED button": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 predict LED button_2018": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 predict LED button_2019": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 predict LED button_2021": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 test LED": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 test LED_2018": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 test LED_2019": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 test LED_2021": {
+          "Success!": "Успіху!"
+        },
+        "CSDU6 Circuit Playground Test": {
+          "Success!": "Успіху!"
+        },
+        "CSDU6 Circuit Playground Test_2018": {
+          "Success!": "Успіху!"
+        },
+        "CSDU6 Circuit Playground Test_2019": {
+          "Success!": "Успіху!"
+        },
+        "CSDU6 Circuit Playground Test_2021": {
+          "Success!": "Успіху!"
+        },
+        "CSDU6 Circuit Playground Test_2222": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 - Screen Outputs - ChalB_2222": {
+          "?": "?"
+        },
+        "CSD U6 emotion machine example": {
+          "?": "?"
+        },
+        "CSD U6 emotion machine example_2018": {
+          "?": "?"
+        },
+        "CSD U6 emotion machine example_2019": {
+          "?": "?"
+        },
+        "CSD U6 emotion machine example_2021": {
+          "?": "?"
+        },
+        "CSD U6 emoji race demo": {
+          "Emoji Race": "Перегони емодзі"
+        },
+        "CSD U6 emoji race demo_2018": {
+          "Emoji Race": "Перегони емодзі"
+        },
+        "CSD U6 emoji race demo_2019": {
+          "Emoji Race": "Перегони емодзі"
+        },
+        "CSD U6 emoji race demo_2021": {
+          "Emoji Race": "Перегони емодзі"
         }
       }
     }

@@ -26,7 +26,7 @@
     "embed": "false",
     "instructions_important": "false",
     "short_instructions": "Add a block to make the boat catch fish.",
-    "long_instructions": "##Set up your ecosystem!\r\n\r\n<img src=\"https://images.code.org/52250e01b9599c2d3a6ed7ab352aa553-image-1683583051407.jpg\" width=255 style=\"margin-left: 10px; float: right\">\r\n\r\n**Use your plan to help you modify this template:**\r\n\r\n- Change the **environment** on the `set background` block \r\n\r\n- Change all of the **producers** (algae) costumes\r\n\r\n- Change all of the **primary consumers** (fish) costumes\r\n\r\n- Change all of the **secondary consumers** (boat) costumes \r\n\r\n- Change the **habitat** (coral) costume \r\n- Click `run` to see your ecosystem in action!\r\n\r\n\r\n",
+    "long_instructions": "##THIS IS THE TEMPLATE\r\n\r\n\r\n",
     "submittable": "false",
     "hide_share_and_remix": "true",
     "never_autoplay_video": "false",
@@ -50,7 +50,7 @@
 
     ]
   },
-  "audit_log": "[{\"changed_at\":\"2023-05-08T22:06:07.431+00:00\",\"changed\":[\"cloned from \\\"csc_ecosystems_simulation_setup\\\"\"],\"cloned_from\":\"csc_ecosystems_simulation_setup\"},{\"changed_at\":\"2023-05-08 22:08:53 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2023-05-08T22:06:07.431+00:00\",\"changed\":[\"cloned from \\\"csc_ecosystems_simulation_setup\\\"\"],\"cloned_from\":\"csc_ecosystems_simulation_setup\"},{\"changed_at\":\"2023-05-08 22:08:53 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-09 15:27:09 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

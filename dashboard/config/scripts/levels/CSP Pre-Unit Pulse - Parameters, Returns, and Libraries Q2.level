@@ -1,0 +1,24 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2023-05-17T21:54:59.000Z",
+  "level_num": "custom",
+  "user_id": 1574,
+  "properties": {
+    "encrypted": "false",
+    "title": "The Pre-Unit Pulse ❤️🎧 - Parameters, Returns, and Libraries",
+    "long_instructions": "#####These pre-unit questions should take 5 minutes or less to complete. There are two purposes to these questions:\r\n* *To help you reflect on what you've learned already in this course*\r\n* *To get you thinking about topics that will come in handy later in this next unit*\r\n\r\n> **Describe a time during this course when you have wanted to share code with someone or have someone else share code with you. How did you go about doing that?**",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "audit_log": "[{\"changed_at\":\"2023-05-17T21:54:59.427+00:00\",\"changed\":[\"cloned from \\\"CSP Pre-Unit Pulse - Parameters, Returns, and Libraries Q1\\\"\"],\"cloned_from\":\"CSP Pre-Unit Pulse - Parameters, Returns, and Libraries Q1\"},{\"changed_at\":\"2023-05-17 22:07:57 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2023-05-17 22:26:22 +0000\",\"changed\":[\"title\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

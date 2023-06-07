@@ -401,7 +401,8 @@
           "F": "จ",
           "G": "ฉ",
           "A": "ก",
-          "B": "ข"
+          "B": "ข",
+          "Note:": "หมายเหตุ:"
         },
         "CSD U6 - Music - SB1_2222": {
           "C": "ค",
@@ -547,7 +548,8 @@
           "low": "ต่ำ"
         },
         "CSD U6 - Sensors - SB2_2222": {
-          "Update": "อัพเดท"
+          "Update": "อัพเดท",
+          "value": "มูลค่า"
         },
         "CSD U6 Driver pt 2": {
           "You did it!": "คุณทำได้แล้ว!"
@@ -622,16 +624,20 @@
           "Success!": "สำเร็จ!"
         },
         "CSD U6 analog light": {
-          "Update": "อัพเดท"
+          "Update": "อัพเดท",
+          "value": "มูลค่า"
         },
         "CSD U6 analog light_2018": {
-          "Update": "อัพเดท"
+          "Update": "อัพเดท",
+          "value": "มูลค่า"
         },
         "CSD U6 analog light_2019": {
-          "Update": "อัพเดท"
+          "Update": "อัพเดท",
+          "value": "มูลค่า"
         },
         "CSD U6 analog light_2021": {
-          "Update": "อัพเดท"
+          "Update": "อัพเดท",
+          "value": "มูลค่า"
         },
         "CSD U6 array piano": {
           "C": "ค",
@@ -1454,6 +1460,62 @@
           "cloudy": "มีเมฆมาก",
           "night": "กลางคืน",
           "dusk": "อัสดง"
+        },
+        "CSD U6 - Sensors - SB1_2222": {
+          "value": "มูลค่า"
+        },
+        "CSD U6 - Sensors - SB3_2222": {
+          "value": "มูลค่า"
+        },
+        "CSD U6 - Sensors - SB4.1_2222": {
+          "value": "มูลค่า"
+        },
+        "CSD U6 - Sensors - SB4_2222": {
+          "value": "มูลค่า"
+        },
+        "CSD U6 analog change": {
+          "value": "มูลค่า"
+        },
+        "CSD U6 analog change_2018": {
+          "value": "มูลค่า"
+        },
+        "CSD U6 analog change_2019": {
+          "value": "มูลค่า"
+        },
+        "CSD U6 analog change_2021": {
+          "value": "มูลค่า"
+        },
+        "CSD U6 analog data": {
+          "value": "มูลค่า"
+        },
+        "CSD U6 analog data_2018": {
+          "value": "มูลค่า"
+        },
+        "CSD U6 analog data_2019": {
+          "value": "มูลค่า"
+        },
+        "CSD U6 analog data_2021": {
+          "value": "มูลค่า"
+        },
+        "CSD U6 analog sound": {
+          "value": "มูลค่า"
+        },
+        "CSD U6 analog sound_2018": {
+          "value": "มูลค่า"
+        },
+        "CSD U6 analog sound_2019": {
+          "value": "มูลค่า"
+        },
+        "CSD U6 analog sound_2021": {
+          "value": "มูลค่า"
+        },
+        "ml-L2 supervised - green glass door-2021": {
+          "Accepted": "ได้รับการยอมรับ",
+          "Rejected": "ถูกปฏิเสธ"
+        },
+        "ml-L2 supervised - green glass door_2022": {
+          "Accepted": "ได้รับการยอมรับ",
+          "Rejected": "ถูกปฏิเสธ"
         }
       }
     }

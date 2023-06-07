@@ -1317,6 +1317,7 @@ he:
             "'sound://category_animals/bear.mp3'": דוב
             "'sound://category_animals/cat.mp3'": חתול
             "'sound://category_animals/cow.mp3'": פרה
+            "'sound://category_animals/pig.mp3'": חזיר
             "'sound://category_animals/sheep.mp3'": כבשה
             "'sound://category_animals/goat.mp3'": עז
             "'sound://category_animals/chicken.mp3'": תרנגולת
@@ -1325,6 +1326,7 @@ he:
             "'sound://category_animals/dolphin.mp3'": דולפין
             "'sound://category_animals/chick.mp3'": אפרוח
             "'sound://category_animals/dog.mp3'": כלב
+            "'sound://category_animals/tiger.mp3'": נמר
             "'sound://category_collect/trill_stings.mp3'": סלסול
             "'sound://category_instrumental/harpe_pluck_1.mp3'": נבל
             "'sound://category_tap/vibrant_positive_tap_1.mp3'": נקישה
@@ -1412,7 +1414,12 @@ he:
             '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': רשת
             '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': אחו
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': קשת
+            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': שלב
             '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': כוכבים
+            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': מעבר
+              תת קרקעי
+            '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': מתחת
+              לאדמה
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': תת-ימי
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': חורף
             undefined: אף אחד
@@ -1759,6 +1766,11 @@ he:
           BG:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': עיר
             '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': אחו
+            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': שלב
+            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': מעבר
+              תת קרקעי
+            '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': מתחת
+              לאדמה
       Mikelab_setProp:
         options:
           PROPERTY:
@@ -1884,6 +1896,7 @@ he:
             '"decorative"': קישוטים
             '"donuts"': דונאטס
             '"fire"': אש
+            '"flowers"': פרחים
             '"gilded"': זהב
             '"hearts"': לבבות
             '"iceCream"': גלידה
@@ -1948,6 +1961,7 @@ he:
             '"sound://category_jump/retro_game_enemy_jump_3.mp3"': כישלון
             '"sound://category_alerts/vibrant_game_flutter_ambient_alert.mp3"': התרגשות
             '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': קפיצה
+            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': קל
             '"sound://category_poof/puzzle_game_poof_04.mp3"': פוף!
             '"sound://category_achievements/puzzle_game_achievement_big_03.mp3"': חיפוש
             '"sound://category_background/typewriter.mp3"': מכונת כתיבה
@@ -2046,6 +2060,7 @@ he:
             '"shrinking"': להתכווץ
             '"spinning_left"': להסתובב שמאלה
             '"spinning_right"': להסתובב ימינה
+            '"swimming_left_and_right"': שחייה
             '"wandering"': לשוטט
             '"wobbling"': להתנדנד
       Poetry_stopBehavior:
@@ -2058,6 +2073,7 @@ he:
             '"shrinking"': להתכווץ
             '"spinning_left"': להסתובב שמאלה
             '"spinning_right"': להסתובב ימינה
+            '"swimming_left_and_right"': שחייה
             '"wandering"': לשוטט
             '"wobbling"': להתנדנד
       Poetry_whenLineShows:
@@ -2285,6 +2301,20 @@ he:
           DIR:
             right: ימינה
             left: שמאלה
+      ecosystems_int10:
+        options:
+          VALUE:
+            '0': '0'
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       storylab_setForegroundEffect2:
         text: בצע אפקט {EFFECT}
         options:

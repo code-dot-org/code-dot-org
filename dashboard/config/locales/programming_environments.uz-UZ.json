@@ -39,6 +39,10 @@
                 },
                 "playSound": {
                   "short_description": "Ko'rsatilgan URL-dan MP3 ovozli faylni ishga tushiradi."
+                },
+                "showMobileControls": {
+                  "content": "O'yin maydoni ostida ko'rinadigan mobil boshqaruv elementlarini o'zgartiradi.",
+                  "short_description": "O'yin maydoni ostida ko'rinadigan mobil boshqaruv elementlarini o'zgartiradi."
                 }
               }
             },
@@ -51,6 +55,12 @@
                       "name": "Spiral"
                     }
                   }
+                },
+                "sprite.height": {
+                  "return_value": "Sprite balandligi."
+                },
+                "sprite.width": {
+                  "return_value": "Sprite kengligi."
                 }
               }
             },
@@ -106,6 +116,24 @@
                 }
               }
             },
+            "control": {
+              "expressions": {
+                "setInterval": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "Funktsiyaning har bir bajarilishi orasidagi millisekundlar soni."
+                    }
+                  }
+                },
+                "setTimeout": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "Funktsiyani bajarishdan oldin kutish kerak bo'lgan millisekundlar soni."
+                    }
+                  }
+                }
+              }
+            },
             "math": {
               "name": "Matematik",
               "expressions": {
@@ -132,7 +160,26 @@
               }
             },
             "variables": {
-              "name": "O‘zgaruvchilar"
+              "name": "O‘zgaruvchilar",
+              "expressions": {
+                "includes": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "Qidirilamoqchi bo'lgan satr."
+                    }
+                  }
+                },
+                "indexOf": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "Qidirilamoqchi bo'lgan satr."
+                    }
+                  }
+                },
+                "length": {
+                  "return_value": "Ipning uzunligi"
+                }
+              }
             },
             "functions": {
               "name": "Funksiyalar"
@@ -150,7 +197,8 @@
                     "Example: Simple Turtle Control 1": {
                       "description": "Har bir tugmani bosishda toshbaqani oldinga siljiting."
                     }
-                  }
+                  },
+                  "short_description": "Ekranda standart joylashuvda berilgan id tomonidan taqdim etilgan va havola qilingan matnni ko'rsatadigan tugma hosil qiladi (0,0)."
                 },
                 "onEvent": {
                   "palette_params": {
@@ -161,22 +209,72 @@
                 },
                 "playSound": {
                   "short_description": "Ko'rsatilgan URL-dan MP3 ovozli faylni ishga tushiradi."
+                },
+                "setProperty": {
+                  "palette_params": {
+                    "property": {
+                      "description": "O'zgartirish uchun mulk."
+                    }
+                  },
+                  "short_description": "Belgilangan element uchun xususiyatni yangi qiymatga o'rnatadi."
+                },
+                "setScreen": {
+                  "short_description": "Ekranni berilgan ScreenID-ga o'rnatadi."
+                },
+                "showElement": {
+                  "short_description": "Taqdim etilgan id bilan elementni ko'rsatadi."
+                },
+                "textLabel": {
+                  "short_description": "Ekranda standart joylashuvda berilgan id tomonidan taqdim etilgan va havola qilingan matnni ko'rsatadigan matn yorlig'ini yaratadi (0,0)."
                 }
               }
             },
             "canvas": {
               "expressions": {
+                "circle": {
+                  "palette_params": {
+                    "radius": {
+                      "description": "Aylananing radiusi, piksellarda."
+                    }
+                  }
+                },
+                "drawImage": {
+                  "palette_params": {
+                    "id": {
+                      "description": "Rasmning yuqori chap burchagidagi piksellardagi x pozitsiyasi chizish uchun."
+                    },
+                    "x": {
+                      "description": "Rasmning yuqori chap burchagidagi piksellardagi x pozitsiyasi chizish uchun."
+                    },
+                    "y": {
+                      "description": "Chizish uchun rasmning yuqori chap burchagidagi piksellardagi y pozitsiyasi."
+                    }
+                  }
+                },
                 "getAlpha": {
                   "palette_params": {
                     "imageData": {
                       "type": "obyekt"
+                    },
+                    "x": {
+                      "description": "Rasmning yuqori chap burchagidan boshlab pikseldagi x pozitsiyasi."
+                    },
+                    "y": {
+                      "description": "Tasvirning yuqori chap burchagidan boshlab piksellardagi y pozitsiyasi."
                     }
-                  }
+                  },
+                  "short_description": "Berilgan rasm ma'lumotlarida berilgan x va y pozitsiyasida joylashgan piksel rangidagi alfa (shaffoflik) miqdorini (0 dan 255 gacha) qaytaradi."
                 },
                 "getBlue": {
                   "palette_params": {
                     "imageData": {
                       "type": "obyekt"
+                    },
+                    "x": {
+                      "description": "Rasmning yuqori chap burchagidan boshlab pikseldagi x pozitsiyasi."
+                    },
+                    "y": {
+                      "description": "Tasvirning yuqori chap burchagidan boshlab piksellardagi y pozitsiyasi."
                     }
                   }
                 },
@@ -184,6 +282,28 @@
                   "palette_params": {
                     "imageData": {
                       "type": "obyekt"
+                    },
+                    "x": {
+                      "description": "Rasmning yuqori chap burchagidan boshlab pikseldagi x pozitsiyasi."
+                    },
+                    "y": {
+                      "description": "Tasvirning yuqori chap burchagidan boshlab piksellardagi y pozitsiyasi."
+                    }
+                  }
+                },
+                "getImageData": {
+                  "palette_params": {
+                    "x": {
+                      "description": "Rasmga olishni boshlash uchun pikseldagi x pozitsiyasi."
+                    },
+                    "y": {
+                      "description": "Rasmga olishni boshlash uchun pikseldagi y pozitsiyasi."
+                    },
+                    "width": {
+                      "description": "Rasm ma'lumotlarini olish uchun chegaralangan to'rtburchakning kengligi."
+                    },
+                    "height": {
+                      "description": "Rasm ma'lumotlarini olish uchun chegaralangan to'rtburchakning balandligi."
                     }
                   }
                 },
@@ -191,6 +311,12 @@
                   "palette_params": {
                     "imageData": {
                       "type": "obyekt"
+                    },
+                    "x": {
+                      "description": "Rasmning yuqori chap burchagidan boshlab pikseldagi x pozitsiyasi."
+                    },
+                    "y": {
+                      "description": "Tasvirning yuqori chap burchagidan boshlab piksellardagi y pozitsiyasi."
                     }
                   }
                 },
@@ -198,6 +324,28 @@
                   "palette_params": {
                     "imageData": {
                       "type": "obyekt"
+                    },
+                    "x": {
+                      "description": "Ma'lumotlarni tuvalga joylashtirish uchun tasvirning yuqori chap burchagidan boshlab pikseldagi x pozitsiyasi."
+                    },
+                    "y": {
+                      "description": "Ma'lumotlarni tuvalga joylashtirish uchun tasvirning yuqori chap burchagidan boshlab piksellardagi y pozitsiyasi."
+                    }
+                  }
+                },
+                "rect": {
+                  "palette_params": {
+                    "x": {
+                      "description": "To'rtburchakning yuqori chap burchagidagi piksellardagi x pozitsiyasi."
+                    },
+                    "y": {
+                      "description": "To'rtburchakning yuqori chap burchagidagi piksellardagi y pozitsiyasi."
+                    },
+                    "width": {
+                      "description": "To'rtburchakning piksellaridagi gorizontal kenglik."
+                    },
+                    "height": {
+                      "description": "To'rtburchakning piksellaridagi vertikal balandlik."
                     }
                   }
                 },
@@ -205,27 +353,75 @@
                   "palette_params": {
                     "imageData": {
                       "type": "obyekt"
+                    },
+                    "x": {
+                      "description": "Rasmning yuqori chap burchagidan boshlab pikseldagi x pozitsiyasi."
+                    },
+                    "y": {
+                      "description": "Tasvirning yuqori chap burchagidan boshlab piksellardagi y pozitsiyasi."
+                    },
+                    "alphaValue": {
+                      "description": "Pikselda o'rnatiladigan alfa (shaffoflik) miqdori (0 dan 255 gacha)."
                     }
-                  }
+                  },
+                  "short_description": "Berilgan rasm ma'lumotlarida berilgan x va y pozitsiyasida joylashgan piksel rangidagi alfa (shaffoflik) miqdorini (0 dan 255 gacha) o'rnatadi."
                 },
                 "setBlue": {
                   "palette_params": {
                     "imageData": {
                       "type": "obyekt"
+                    },
+                    "x": {
+                      "description": "Rasmning yuqori chap burchagidan boshlab pikseldagi x pozitsiyasi."
+                    },
+                    "y": {
+                      "description": "Tasvirning yuqori chap burchagidan boshlab piksellardagi y pozitsiyasi."
+                    },
+                    "blueValue": {
+                      "description": "(0 255 dan) ko'k miqdori piksel o'rnatish uchun."
                     }
-                  }
+                  },
+                  "short_description": "Berilgan rasm ma'lumotlarida berilgan x va y pozitsiyasida joylashgan piksel rangidagi ko'k (0 dan 255 gacha) miqdorini BlueValue kirish miqdoriga o'rnatadi."
                 },
                 "setGreen": {
                   "palette_params": {
                     "imageData": {
                       "type": "obyekt"
+                    },
+                    "x": {
+                      "description": "Rasmning yuqori chap burchagidan boshlab pikseldagi x pozitsiyasi."
+                    },
+                    "y": {
+                      "description": "Tasvirning yuqori chap burchagidan boshlab piksellardagi y pozitsiyasi."
+                    },
+                    "greenValue": {
+                      "description": "Pikselda o'rnatiladigan yashil rang miqdori (0 dan 255 gacha)."
                     }
-                  }
+                  },
+                  "short_description": "Berilgan rasm ma'lumotlarida berilgan x va y pozitsiyasida joylashgan piksel rangidagi yashil rang miqdorini (0 dan 255 gacha) GreenValue kirish miqdoriga o'rnatadi."
                 },
                 "setRGB": {
                   "palette_params": {
                     "imageData": {
                       "type": "obyekt"
+                    },
+                    "x": {
+                      "description": "Rasmning yuqori chap burchagidan boshlab pikseldagi x pozitsiyasi."
+                    },
+                    "y": {
+                      "description": "Tasvirning yuqori chap burchagidan boshlab piksellardagi y pozitsiyasi."
+                    },
+                    "red": {
+                      "description": "(0 255 dan) qizil miqdori piksel o'rnatish uchun."
+                    },
+                    "green": {
+                      "description": "Pikselda o'rnatiladigan yashil rang miqdori (0 dan 255 gacha)."
+                    },
+                    "blue": {
+                      "description": "(0 255 dan) ko'k miqdori piksel o'rnatish uchun."
+                    },
+                    "alpha": {
+                      "description": "Ixtiyoriy. Pikselda o'rnatiladigan shaffoflik miqdori (0 dan 255 gacha). Standart 255 (to'liq shaffoflik) ga teng."
                     }
                   }
                 },
@@ -233,12 +429,23 @@
                   "palette_params": {
                     "imageData": {
                       "type": "obyekt"
+                    },
+                    "x": {
+                      "description": "Rasmning yuqori chap burchagidan boshlab pikseldagi x pozitsiyasi."
+                    },
+                    "y": {
+                      "description": "Tasvirning yuqori chap burchagidan boshlab piksellardagi y pozitsiyasi."
+                    },
+                    "redValue": {
+                      "description": "(0 255 dan) qizil miqdori piksel o'rnatish uchun."
                     }
-                  }
+                  },
+                  "short_description": "Berilgan rasm ma'lumotlarida berilgan x va y pozitsiyasida joylashgan piksel rangidagi qizil (0 dan 255 gacha) miqdorini RedValue kirish miqdoriga o'rnatadi."
                 }
               }
             },
             "data": {
+              "name": "Maʼlumotlar",
               "expressions": {
                 "createRecord": {
                   "palette_params": {
@@ -263,8 +470,18 @@
                 },
                 "drawChartFromRecords": {
                   "palette_params": {
+                    "tableName": {
+                      "description": "Yozuvlarni olish uchun jadval nomi."
+                    },
                     "options": {
                       "type": "obyekt"
+                    }
+                  }
+                },
+                "getKeyValue": {
+                  "palette_params": {
+                    "key": {
+                      "description": "Qabul qilinadigan kalitning nomi."
                     }
                   }
                 },
@@ -275,10 +492,38 @@
                     }
                   }
                 },
+                "getUserId": {
+                  "short_description": "Ushbu ilovaning joriy foydalanuvchisi uchun noyob identifikatorni oladi."
+                },
+                "onRecordEvent": {
+                  "palette_params": {
+                    "table": {
+                      "description": "Ushbu voqea ishlovchisi qo'llaniladigan jadvalning nomi."
+                    }
+                  }
+                },
                 "readRecords": {
                   "palette_params": {
                     "terms": {
                       "type": "obyekt"
+                    }
+                  }
+                },
+                "setKeyValue": {
+                  "palette_params": {
+                    "key": {
+                      "description": "Saqlanadigan kalitning nomi."
+                    },
+                    "value": {
+                      "description": "Saqlanadigan ma'lumotlar."
+                    }
+                  },
+                  "short_description": "App Lab kalit/qiymat ma'lumotlarini saqlashda kalit/qiymat juftligini saqlaydi va harakat tugagandan so'ng qayta qo'ng'iroq qilish funktsiyasini chaqiradi."
+                },
+                "startWebRequest": {
+                  "palette_params": {
+                    "url": {
+                      "description": "Ma'lumotlarni qaytaradigan xizmatning veb-manzili."
                     }
                   }
                 },
@@ -291,8 +536,94 @@
                 }
               }
             },
+            "turtle": {
+              "expressions": {
+                "arcLeft": {
+                  "short_description": "Kaplumbağani oldinga va chapga silliq, dumaloq yoyda siljitadi."
+                },
+                "getX": {
+                  "short_description": "Toshbaqaning piksellarida joriy x koordinatasini oladi."
+                },
+                "getY": {
+                  "short_description": "Kaplumbağa piksellarida joriy y koordinatasini oladi."
+                },
+                "hide": {
+                  "short_description": "Toshbaqani hozirgi joyida ko'rinmas holga keltiradi."
+                },
+                "move": {
+                  "palette_params": {
+                    "x": {
+                      "description": "Kaplumbağani o'ngga siljitish uchun piksellar soni."
+                    },
+                    "y": {
+                      "description": "Kaplumbağani pastga siljitish uchun piksellar soni."
+                    }
+                  }
+                },
+                "moveBackward": {
+                  "short_description": "Toshbaqani joriy yo'nalishdan ma'lum miqdordagi pikselni orqaga siljitadi."
+                },
+                "moveForward": {
+                  "short_description": "Toshbaqani joriy yo'nalishda ma'lum miqdordagi pikselni oldinga siljitadi."
+                },
+                "moveTo": {
+                  "short_description": "Toshbaqani ekrandagi ma'lum bir (x, y) holatiga o'tkazadi."
+                },
+                "penColor": {
+                  "short_description": "Chiziqlar va nuqta chizish uchun kaplumbağa tomonidan ishlatiladigan qalam rangini o'rnatadi."
+                },
+                "penDown": {
+                  "short_description": "Qalamni pastga qo'yadi, shunda toshbaqa harakatlanayotganda uning orqasida chiziq tortadi."
+                },
+                "penRGB": {
+                  "short_description": "RGBA qiymatlaridan foydalanib, chiziqlar va nuqta chizish uchun kaplumbağa tomonidan ishlatiladigan qalam rangini belgilaydi."
+                },
+                "penUp": {
+                  "short_description": "Kaplumbağa harakatlanayotganda chiziq chizmasligi uchun qalamni yuqoriga ko'taradi."
+                },
+                "penWidth": {
+                  "short_description": "Kaplumbağa harakatlanayotganda uning orqasiga tortadigan chiziqning kengligini piksellarga o'rnatadi."
+                },
+                "show": {
+                  "short_description": "Toshbaqani hozirgi joyida ko'rinadigan qiladi."
+                },
+                "speed": {
+                  "short_description": "Kaplumbağa tezligini o'z ichiga olgan dasturni bajarish tezligini belgilaydi."
+                },
+                "turnLeft": {
+                  "short_description": "Belgilangan burchak ostida qolgan toshbaqani aylantiradi. Kaplumbağaning pozitsiyasi bir xil bo'lib qoladi."
+                },
+                "turnRight": {
+                  "short_description": "Kaplumbağani belgilangan burchak bilan o'ngga aylantiradi. Kaplumbağaning pozitsiyasi bir xil bo'lib qoladi."
+                },
+                "turnTo": {
+                  "short_description": "Kaplumbağa yo'nalishini ma'lum bir burchakka o'zgartiradi. 0 yuqoriga, 90 o'ngga, 180 pastga va 270 chapga."
+                }
+              }
+            },
             "control": {
               "expressions": {
+                "clearTimeout": {
+                  "palette_params": {
+                    "timeout": {
+                      "description": "Bekor qilish uchun setTimeout funktsiyasi tomonidan qaytarilgan qiymat."
+                    }
+                  }
+                },
+                "setInterval": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "Funktsiyaning har bir bajarilishi orasidagi millisekundlar soni."
+                    }
+                  }
+                },
+                "setTimeout": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "Funktsiyani bajarishdan oldin kutish kerak bo'lgan millisekundlar soni."
+                    }
+                  }
+                },
                 "timedLoop": {
                   "palette_params": {
                     "callback": {
@@ -330,8 +661,28 @@
             "variables": {
               "name": "O‘zgaruvchilar",
               "expressions": {
+                "declareAssign_list_123": {
+                  "short_description": "O'zgaruvchiga massivni e'lon qiling va tayinlang"
+                },
+                "includes": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "Qidirilamoqchi bo'lgan satr."
+                    }
+                  }
+                },
+                "indexOf": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "Qidirilamoqchi bo'lgan satr."
+                    }
+                  }
+                },
                 "addPair": {
                   "return_value": "Hech biri"
+                },
+                "length": {
+                  "return_value": "Ipning uzunligi"
                 }
               }
             },

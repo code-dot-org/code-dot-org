@@ -3,6 +3,8 @@ km:
   data:
     script:
       name:
+        artist:
+          title: សិល្បករ
         frozen:
           description_short: តោះប្រើកូដ ដើម្បីចូលរួមជាមួយ Anna និងElsa នៅពេលពួកគេស្វែងយល់ពីវេទមន្តនិងសម្រស់នៃទឹកកក។
         events:
@@ -321,6 +323,8 @@ km:
               display_name: អ​ថេរ
         coursed-2019:
           lesson_groups:
+            csf_sequencing:
+              display_name: លំដាប់
             csf_events:
               display_name: ព្រឹត្តិការណ៍
             csf_loops:
@@ -335,6 +339,8 @@ km:
           description_short: 'សេចក្តីផ្តើមពីវិទ្យាសាស្ត្រកុំព្យូទ័រ៖ ប្រមូលផ្តុំកម្មវិធីថ្នាក់បឋមសិក្សាដ៏ល្អបំផុតរបស់យេីងសំរាប់សិស្សធំៗ។ '
           description_audience: 'អាយុ: ៩- ១៨'
           lesson_groups:
+            csf_sequencing:
+              display_name: លំដាប់
             csf_loops:
               display_name: រង្វិល​ជុំ
             csf_conditionals:
@@ -354,19 +360,27 @@ km:
           student_description: បន្តលើសពីមួយម៉ោងដំបូង ជាមួយនឹងគំនិតគម្រោងបន្ថែមទៀត។
         coursec-2019:
           lesson_groups:
+            csf_sequencing:
+              display_name: លំដាប់
             csf_loops:
               display_name: រង្វិល​ជុំ
             csf_events:
               display_name: ព្រឹត្តិការណ៍
+        gamelab:
+          title: មន្ទីរពិសោធន៍ ល្បែង
         coursea-2019:
           description_short: សេចក្តីណែនាំអំពី វិទ្យាសាស្ដ្រកុំព្យូទ័រ សម្រាប់អ្នកអានមុន។
           lesson_groups:
+            csf_sequencing:
+              display_name: លំដាប់
             csf_loops:
               display_name: រង្វិល​ជុំ
             csf_events:
               display_name: ព្រឹត្តិការណ៍
         courseb-2019:
           lesson_groups:
+            csf_sequencing:
+              display_name: លំដាប់
             csf_loops:
               display_name: រង្វិល​ជុំ
             csf_events:
@@ -375,6 +389,8 @@ km:
           description_short: 'សេចក្តីផ្តើមពីវិទ្យាសាស្ត្រកុំព្យូទ័រសំរាប់ក្មេងៗដែលមិនទាន់ចេះអាន ឬ ទេីបរៀនអាន៖ ប្រមូលផ្តុំនូវវគ្គសិក្សាថ្នាក់មតេយ្យ និង ថ្នាក់ទីមួយដ៏ល្អបំផុត។ '
           description_audience: 'អាយុ: ៤-៨'
           lesson_groups:
+            csf_sequencing:
+              display_name: លំដាប់
             csf_loops:
               display_name: រង្វិល​ជុំ
             csf_events:
@@ -478,6 +494,8 @@ km:
               display_name: ទិដ្ឋភាពទូទៅ
         csl-vn:
           lesson_groups:
+            csf_sequencing:
+              display_name: លំដាប់
             csf_loops:
               display_name: រង្វិល​ជុំ
             csf_events:
@@ -552,6 +570,8 @@ km:
               display_name: អនុ​គមន៍
         time4cs-control-unit-1:
           lesson_groups:
+            csf_sequencing:
+              display_name: លំដាប់
             csf_loops:
               display_name: រង្វិល​ជុំ
             csf_conditionals:
@@ -560,6 +580,8 @@ km:
               display_name: ព្រឹត្តិការណ៍
         time4cs-experiment-unit-1:
           lesson_groups:
+            csf_sequencing:
+              display_name: លំដាប់
             csf_loops:
               display_name: រង្វិល​ជុំ
             csf_conditionals:
@@ -587,24 +609,32 @@ km:
         coursea-2020:
           description_short: សេចក្តីណែនាំអំពី វិទ្យាសាស្ដ្រកុំព្យូទ័រ សម្រាប់អ្នកអានមុន។
           lesson_groups:
+            csf_sequencing:
+              display_name: លំដាប់
             csf_loops:
               display_name: រង្វិល​ជុំ
             csf_events:
               display_name: ព្រឹត្តិការណ៍
         courseb-2020:
           lesson_groups:
+            csf_sequencing:
+              display_name: លំដាប់
             csf_loops:
               display_name: រង្វិល​ជុំ
             csf_events:
               display_name: ព្រឹត្តិការណ៍
         coursec-2020:
           lesson_groups:
+            csf_sequencing:
+              display_name: លំដាប់
             csf_loops:
               display_name: រង្វិល​ជុំ
             csf_events:
               display_name: ព្រឹត្តិការណ៍
         coursed-2020:
           lesson_groups:
+            csf_sequencing:
+              display_name: លំដាប់
             csf_events:
               display_name: ព្រឹត្តិការណ៍
             csf_loops:
@@ -624,6 +654,8 @@ km:
           description_short: 'សេចក្តីផ្តើមពីវិទ្យាសាស្ត្រកុំព្យូទ័រ៖ ប្រមូលផ្តុំកម្មវិធីថ្នាក់បឋមសិក្សាដ៏ល្អបំផុតរបស់យេីងសំរាប់សិស្សធំៗ។ '
           description_audience: 'អាយុ: ៩- ១៨'
           lesson_groups:
+            csf_sequencing:
+              display_name: លំដាប់
             csf_loops:
               display_name: រង្វិល​ជុំ
             csf_conditionals:
@@ -636,6 +668,8 @@ km:
           description_short: 'សេចក្តីផ្តើមពីវិទ្យាសាស្ត្រកុំព្យូទ័រសំរាប់ក្មេងៗដែលមិនទាន់ចេះអាន ឬ ទេីបរៀនអាន៖ ប្រមូលផ្តុំនូវវគ្គសិក្សាថ្នាក់មតេយ្យ និង ថ្នាក់ទីមួយដ៏ល្អបំផុត។ '
           description_audience: 'អាយុ: ៤-៨'
           lesson_groups:
+            csf_sequencing:
+              display_name: លំដាប់
             csf_loops:
               display_name: រង្វិល​ជុំ
             csf_events:
@@ -644,6 +678,8 @@ km:
           lesson_groups:
             lessonGroup-3:
               display_name: អ​ថេរ
+            debugging:
+              display_name: ការបំបាត់កំហុស (Debugging)
         csp4-2021:
           lesson_groups:
             csp_variables:
@@ -661,18 +697,24 @@ km:
         coursea-2021:
           description_short: សេចក្តីណែនាំអំពី វិទ្យាសាស្ដ្រកុំព្យូទ័រ សម្រាប់អ្នកអានមុន។
           lesson_groups:
+            csf_sequencing:
+              display_name: លំដាប់
             csf_loops:
               display_name: រង្វិល​ជុំ
             csf_events:
               display_name: ព្រឹត្តិការណ៍
         courseb-2021:
           lesson_groups:
+            csf_sequencing:
+              display_name: លំដាប់
             csf_loops:
               display_name: រង្វិល​ជុំ
             csf_events:
               display_name: ព្រឹត្តិការណ៍
         coursec-2021:
           lesson_groups:
+            csf_sequencing:
+              display_name: លំដាប់
             csf_loops:
               display_name: រង្វិល​ជុំ
             csf_events:
@@ -680,6 +722,8 @@ km:
           name: វគ្គសិក្សាស៊ី-2021
         coursed-2021:
           lesson_groups:
+            csf_sequencing:
+              display_name: លំដាប់
             csf_events:
               display_name: ព្រឹត្តិការណ៍
             csf_loops:
@@ -703,6 +747,8 @@ km:
           description_short: 'សេចក្តីផ្តើមពីវិទ្យាសាស្ត្រកុំព្យូទ័រ៖ ប្រមូលផ្តុំកម្មវិធីថ្នាក់បឋមសិក្សាដ៏ល្អបំផុតរបស់យេីងសំរាប់សិស្សធំៗ។ '
           description_audience: 'អាយុ: ៩- ១៨'
           lesson_groups:
+            csf_sequencing:
+              display_name: លំដាប់
             csf_loops:
               display_name: រង្វិល​ជុំ
             csf_conditionals:
@@ -717,6 +763,8 @@ km:
           description_short: 'សេចក្តីផ្តើមពីវិទ្យាសាស្ត្រកុំព្យូទ័រសំរាប់ក្មេងៗដែលមិនទាន់ចេះអាន ឬ ទេីបរៀនអាន៖ ប្រមូលផ្តុំនូវវគ្គសិក្សាថ្នាក់មតេយ្យ និង ថ្នាក់ទីមួយដ៏ល្អបំផុត។ '
           description_audience: 'អាយុ: ៤-៨'
           lesson_groups:
+            csf_sequencing:
+              display_name: លំដាប់
             csf_loops:
               display_name: រង្វិល​ជុំ
             csf_events:
@@ -753,6 +801,8 @@ km:
               display_name: អ​ថេរ
         coursea-2022:
           lesson_groups:
+            csf_sequencing:
+              display_name: លំដាប់
             csf_loops:
               display_name: រង្វិល​ជុំ
             csf_events:
@@ -760,6 +810,8 @@ km:
           description_short: សេចក្តីណែនាំអំពី វិទ្យាសាស្ដ្រកុំព្យូទ័រ សម្រាប់អ្នកអានមុន។
         express-2022:
           lesson_groups:
+            csf_sequencing:
+              display_name: លំដាប់
             lessonGroup-9:
               display_name: ព្រឹត្តិការណ៍
             csf_loops:
@@ -788,18 +840,24 @@ km:
               display_name: រង្វិល​ជុំ
         courseb-2022:
           lesson_groups:
+            csf_sequencing:
+              display_name: លំដាប់
             csf_loops:
               display_name: រង្វិល​ជុំ
             csf_events:
               display_name: ព្រឹត្តិការណ៍
         coursec-2022:
           lesson_groups:
+            csf_sequencing:
+              display_name: លំដាប់
             csf_loops:
               display_name: រង្វិល​ជុំ
             csf_events:
               display_name: ព្រឹត្តិការណ៍
         coursed-2022:
           lesson_groups:
+            csf_sequencing:
+              display_name: លំដាប់
             csf_events:
               display_name: ព្រឹត្តិការណ៍
             csf_loops:
@@ -819,8 +877,10 @@ km:
           description_short: សិក្សាអំពីក្បួនទាំងអស់ នៅក្នុងមូលដ្ឋានគ្រឹះនៃវិទ្យាសាស្ដ្រកុំព្យូទ័រ និងបង្កើតសិល្បៈផ្ទាល់ខ្លួន រួមទាំងរឿងរ៉ាវ ឬហ្គេម។
         pre-express-2022:
           lesson_groups:
+            csf_sequencing:
+              display_name: លំដាប់លំដោយ
             csf_loops:
-              display_name: រង្វិល​ជុំ
+              display_name: ប្រតិបត្តិការដដែលៗ
             csf_events:
               display_name: ព្រឹត្តិការណ៍
           description_audience: 'អាយុ: ៤-៨'
@@ -864,6 +924,8 @@ km:
               name: ការវាយតម្លៃ
         pre-express-2023:
           lesson_groups:
+            csf_sequencing:
+              display_name: លំដាប់
             csf_loops:
               display_name: រង្វិល​ជុំ
             csf_events:
@@ -872,6 +934,8 @@ km:
           description_audience: 'អាយុ: ៤-៨'
         express-2023:
           lesson_groups:
+            csf_sequencing:
+              display_name: លំដាប់
             lessonGroup-9:
               display_name: ព្រឹត្តិការណ៍
             csf_loops:
@@ -886,6 +950,8 @@ km:
           description_audience: 'អាយុ: ៩- ១៨'
         coursea-2023:
           lesson_groups:
+            csf_sequencing:
+              display_name: លំដាប់
             csf_loops:
               display_name: រង្វិល​ជុំ
             csf_events:
@@ -893,18 +959,24 @@ km:
           description_short: សេចក្តីណែនាំអំពី វិទ្យាសាស្ដ្រកុំព្យូទ័រ សម្រាប់អ្នកអានមុន។
         courseb-2023:
           lesson_groups:
+            csf_sequencing:
+              display_name: លំដាប់
             csf_loops:
               display_name: រង្វិល​ជុំ
             csf_events:
               display_name: ព្រឹត្តិការណ៍
         coursec-2023:
           lesson_groups:
+            csf_sequencing:
+              display_name: លំដាប់
             csf_loops:
               display_name: រង្វិល​ជុំ
             csf_events:
               display_name: ព្រឹត្តិការណ៍
         coursed-2023:
           lesson_groups:
+            csf_sequencing:
+              display_name: លំដាប់
             csf_events:
               display_name: ព្រឹត្តិការណ៍
             csf_loops:
@@ -917,3 +989,8 @@ km:
               display_name: អនុ​គមន៍
             csf_nested_loops:
               display_name: លក្ខខណ្ឌ
+        coursef-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: អ​ថេរ
+          description_short: សិក្សាអំពីក្បួនទាំងអស់ នៅក្នុងមូលដ្ឋានគ្រឹះនៃវិទ្យាសាស្ដ្រកុំព្យូទ័រ និងបង្កើតសិល្បៈផ្ទាល់ខ្លួន រួមទាំងរឿងរ៉ាវ ឬហ្គេម។

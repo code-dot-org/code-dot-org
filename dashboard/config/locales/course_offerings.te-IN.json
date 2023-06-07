@@ -2,10 +2,30 @@
   "te-IN": {
     "data": {
       "course_offerings": {
+        "flappy": "ఫ్లాపీ కోడ్",
+        "jigsaw": "అడ్డదిడ్డంగా",
+        "applab-intro": "యాప్ ల్యాబ్ కు పరిచయం",
+        "artist": "కళాకారుడు",
+        "hourofcode": "క్లాసిక్ మేజ్",
+        "oceans": "AI ఫర్ ఓషన్స్",
+        "outbreak": "ఔట్‌బ్రేక్ సిమ్యులేటర్ ",
+        "playlab": "ల్యాబ్ ప్లే",
+        "ai-ethics": "AI నైతికతల చర్య",
+        "counting-csc": "లెక్కింపు కార్యక్రమం",
+        "explore-data-1": "డేటా చర్య ",
+        "spelling-bee": "స్పెల్లింగ్ చర్య",
+        "poem-art": "పద్య కళ ",
+        "poetry": "కవిత్వముతో కోడింగ్",
+        "hello-world-retro": "హలో వరల్డ్: రెట్రో",
+        "valentine": "వాలెంటైన్",
+        "halloween": "హాలోవీన్",
         "katie-practice": "కేటీ-ప్రాక్టీస్",
+        "soccer": "సాకర్",
         "hello-world-space": "హలో వరల్డ్: స్పేస్",
         "hello-world-soccer": "హలో వరల్డ్: సాకర్",
-        "playground": "ఆటమైదానము"
+        "playground": "ఆటమైదానము",
+        "design-process": "రూపకల్పన ప్రక్రియ",
+        "web-development": "వెబ్ అభివృద్ధి"
       }
     }
   }

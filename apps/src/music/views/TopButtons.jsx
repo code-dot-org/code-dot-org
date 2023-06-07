@@ -6,12 +6,13 @@ import moduleStyles from './topbuttons.module.scss';
 import FontAwesome from '../../templates/FontAwesome';
 import AppConfig from '../appConfig';
 import musicI18n from '../locale';
+import SaveStatus from './SaveStatus';
 
 /**
  * Renders a set of miscellaneous buttons in the top of the Music Lab workspace,
  * including Start Over, Share, Feedback, and optionally Upload Sound.
  */
-const TopButtons = ({clearCode, uploadSound}) => {
+const TopButtons = ({clearCode, uploadSound, canShowSaveStatus}) => {
   const analyticsReporter = useContext(AnalyticsContext);
   const [shareMessageShowing, setShareMessageShowing] = useState(false);
   const inputRef = useRef(null);
@@ -80,6 +81,7 @@ const TopButtons = ({clearCode, uploadSound}) => {
         <FontAwesome icon={'commenting'} />
         &nbsp; {musicI18n.feedback()}
       </button>
+      {canShowSaveStatus && <SaveStatus />}
       {showUploadSound && (
         <fieldset>
           <input
@@ -106,6 +108,7 @@ const TopButtons = ({clearCode, uploadSound}) => {
 TopButtons.propTypes = {
   clearCode: PropTypes.func.isRequired,
   uploadSound: PropTypes.func.isRequired,
+  canShowSaveStatus: PropTypes.bool.isRequired,
 };
 
 export default TopButtons;

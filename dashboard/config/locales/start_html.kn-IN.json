@@ -366,7 +366,8 @@
           "low": "ಕಡಿಮೆ"
         },
         "CSD U6 - Sensors - SB2_2222": {
-          "Update": "ನವೀಕರಿಸಿ"
+          "Update": "ನವೀಕರಿಸಿ",
+          "value": "ಮೌಲ್ಯ"
         },
         "CSD U6 Driver pt 2": {
           "You did it!": "ನೀವು ಮಾಡಿದಿರಿ!"
@@ -417,16 +418,20 @@
           "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
         },
         "CSD U6 analog light": {
-          "Update": "ನವೀಕರಿಸಿ"
+          "Update": "ನವೀಕರಿಸಿ",
+          "value": "ಮೌಲ್ಯ"
         },
         "CSD U6 analog light_2018": {
-          "Update": "ನವೀಕರಿಸಿ"
+          "Update": "ನವೀಕರಿಸಿ",
+          "value": "ಮೌಲ್ಯ"
         },
         "CSD U6 analog light_2019": {
-          "Update": "ನವೀಕರಿಸಿ"
+          "Update": "ನವೀಕರಿಸಿ",
+          "value": "ಮೌಲ್ಯ"
         },
         "CSD U6 analog light_2021": {
-          "Update": "ನವೀಕರಿಸಿ"
+          "Update": "ನವೀಕರಿಸಿ",
+          "value": "ಮೌಲ್ಯ"
         },
         "CSD U6 array piano": {
           "C": "c",
@@ -1024,6 +1029,62 @@
           "cloudy": "ಕ್ಲೌಡ್‌",
           "night": "ರಾತ್ರಿ",
           "dusk": "ಮುಸ್ಸಂಜೆ"
+        },
+        "CSD U6 - Sensors - SB1_2222": {
+          "value": "ಮೌಲ್ಯ"
+        },
+        "CSD U6 - Sensors - SB3_2222": {
+          "value": "ಮೌಲ್ಯ"
+        },
+        "CSD U6 - Sensors - SB4.1_2222": {
+          "value": "ಮೌಲ್ಯ"
+        },
+        "CSD U6 - Sensors - SB4_2222": {
+          "value": "ಮೌಲ್ಯ"
+        },
+        "CSD U6 analog change": {
+          "value": "ಮೌಲ್ಯ"
+        },
+        "CSD U6 analog change_2018": {
+          "value": "ಮೌಲ್ಯ"
+        },
+        "CSD U6 analog change_2019": {
+          "value": "ಮೌಲ್ಯ"
+        },
+        "CSD U6 analog change_2021": {
+          "value": "ಮೌಲ್ಯ"
+        },
+        "CSD U6 analog data": {
+          "value": "ಮೌಲ್ಯ"
+        },
+        "CSD U6 analog data_2018": {
+          "value": "ಮೌಲ್ಯ"
+        },
+        "CSD U6 analog data_2019": {
+          "value": "ಮೌಲ್ಯ"
+        },
+        "CSD U6 analog data_2021": {
+          "value": "ಮೌಲ್ಯ"
+        },
+        "CSD U6 analog sound": {
+          "value": "ಮೌಲ್ಯ"
+        },
+        "CSD U6 analog sound_2018": {
+          "value": "ಮೌಲ್ಯ"
+        },
+        "CSD U6 analog sound_2019": {
+          "value": "ಮೌಲ್ಯ"
+        },
+        "CSD U6 analog sound_2021": {
+          "value": "ಮೌಲ್ಯ"
+        },
+        "ml-L2 supervised - green glass door-2021": {
+          "Accepted": "ಸ್ವೀಕರಿಸಲಾಗಿದೆ",
+          "Rejected": "ತಿರಸ್ಕರಿಸಲಾಗಿದೆ"
+        },
+        "ml-L2 supervised - green glass door_2022": {
+          "Accepted": "ಸ್ವೀಕರಿಸಲಾಗಿದೆ",
+          "Rejected": "ತಿರಸ್ಕರಿಸಲಾಗಿದೆ"
         }
       }
     }

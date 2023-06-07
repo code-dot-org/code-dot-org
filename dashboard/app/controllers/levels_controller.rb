@@ -140,6 +140,12 @@ class LevelsController < ApplicationController
     )
   end
 
+  # Get a JSON summary of a level's information, used in modern labs that don't
+  # reload the page between level views.
+  def level_data
+    render json: {level_data: @level.properties["level_data"]}
+  end
+
   # GET /levels/1/edit
   def edit
     # Make sure that the encrypted property is a boolean
@@ -286,7 +292,14 @@ class LevelsController < ApplicationController
       return
     end
 
-    @level.assign_attributes(level_params)
+    update_level_params = level_params.to_h
+
+    # Parse the incoming level_data JSON so that it's stored in the database as a
+    # first-order member of the properties JSON, rather than simply as a string of
+    # JSON belonging to a single property.
+    update_level_params[:level_data] = JSON.parse(level_params[:level_data]) if level_params[:level_data]
+
+    @level.assign_attributes(update_level_params)
     @level.log_changes(current_user)
 
     if @level.save
@@ -479,7 +492,7 @@ class LevelsController < ApplicationController
     @game = @level.game
   end
 
-  # Never trust parameters from the scary internet, only allow the white list through.
+  # Never trust parameters from the scary internet, only allow the allow-list through.
   private def level_params
     permitted_params = [
       :name,

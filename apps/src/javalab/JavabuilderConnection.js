@@ -21,7 +21,6 @@ const SERVER_WAIT_TIME_MS = 10000;
 // Creates and maintains a websocket connection with javabuilder while a user's code is running.
 export default class JavabuilderConnection {
   constructor(
-    javabuilderUrl,
     onMessage,
     miniApp,
     serverLevelId,
@@ -36,10 +35,10 @@ export default class JavabuilderConnection {
     csrfToken,
     onValidationPassed,
     onValidationFailed,
-    onConnectDone
+    onConnectDone,
+    setIsCaptchaDialogOpen
   ) {
     this.channelId = project.getCurrentId();
-    this.javabuilderUrl = javabuilderUrl;
     this.onOutputMessage = onMessage;
     this.miniApp = miniApp;
     this.levelId = serverLevelId;
@@ -55,6 +54,7 @@ export default class JavabuilderConnection {
     this.onValidationPassed = onValidationPassed;
     this.onValidationFailed = onValidationFailed;
     this.onConnectDone = onConnectDone;
+    this.setIsCaptchaDialogOpen = setIsCaptchaDialogOpen;
 
     this.seenUnsupportedNeighborhoodMessage = false;
     this.seenUnsupportedTheaterMessage = false;
@@ -156,10 +156,16 @@ export default class JavabuilderConnection {
     try {
       const result = await $.ajax(ajaxPayload);
       this.resetRunState();
-      this.establishWebsocketConnection(result.token);
+      this.establishWebsocketConnection(result.javabuilder_url, result.token);
     } catch (error) {
       if (error.status === 403) {
-        this.displayUnauthorizedMessage(error);
+        if (error.responseJSON?.captcha_required === true) {
+          this.setIsCaptchaDialogOpen(true);
+          this.onOutputMessage(javalabMsg.verificationRequiredMessage());
+          this.onNewlineMessage();
+        } else {
+          this.displayUnauthorizedMessage(error);
+        }
       } else {
         this.onOutputMessage(
           `${STATUS_MESSAGE_PREFIX} ${javalabMsg.errorJavabuilderConnectionGeneral()}`
@@ -180,8 +186,8 @@ export default class JavabuilderConnection {
     };
   }
 
-  establishWebsocketConnection(token) {
-    const url = `${this.javabuilderUrl}?Authorization=${token}`;
+  establishWebsocketConnection(javabuilderUrl, token) {
+    const url = `${javabuilderUrl}?Authorization=${token}`;
     this.socket = new WebSocket(url);
     this.socket.onopen = this.onOpen.bind(this);
     this.socket.onmessage = this.onMessage.bind(this);

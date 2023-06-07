@@ -555,7 +555,8 @@
           "low": "குறைவு"
         },
         "CSD U6 - Sensors - SB2_2222": {
-          "Update": "புதுப்பிக்கவும்"
+          "Update": "புதுப்பிக்கவும்",
+          "value": "மதிப்பு"
         },
         "CSD U6 Driver pt 2": {
           "You did it!": "நீ செய்தாய்!"
@@ -618,16 +619,20 @@
           "Success!": "வெற்றி!"
         },
         "CSD U6 analog light": {
-          "Update": "புதுப்பிக்கவும்"
+          "Update": "புதுப்பிக்கவும்",
+          "value": "மதிப்பு"
         },
         "CSD U6 analog light_2018": {
-          "Update": "புதுப்பிக்கவும்"
+          "Update": "புதுப்பிக்கவும்",
+          "value": "மதிப்பு"
         },
         "CSD U6 analog light_2019": {
-          "Update": "புதுப்பிக்கவும்"
+          "Update": "புதுப்பிக்கவும்",
+          "value": "மதிப்பு"
         },
         "CSD U6 analog light_2021": {
-          "Update": "புதுப்பிக்கவும்"
+          "Update": "புதுப்பிக்கவும்",
+          "value": "மதிப்பு"
         },
         "CSD U6 array piano": {
           "C": "இ",
@@ -1490,6 +1495,54 @@
           "night": "இரவு",
           "dusk": "அந்தி",
           "Predict": "கணிக்கவும்"
+        },
+        "CSD U6 - Sensors - SB1_2222": {
+          "value": "மதிப்பு"
+        },
+        "CSD U6 - Sensors - SB3_2222": {
+          "value": "மதிப்பு"
+        },
+        "CSD U6 - Sensors - SB4.1_2222": {
+          "value": "மதிப்பு"
+        },
+        "CSD U6 - Sensors - SB4_2222": {
+          "value": "மதிப்பு"
+        },
+        "CSD U6 analog change": {
+          "value": "மதிப்பு"
+        },
+        "CSD U6 analog change_2018": {
+          "value": "மதிப்பு"
+        },
+        "CSD U6 analog change_2019": {
+          "value": "மதிப்பு"
+        },
+        "CSD U6 analog change_2021": {
+          "value": "மதிப்பு"
+        },
+        "CSD U6 analog data": {
+          "value": "மதிப்பு"
+        },
+        "CSD U6 analog data_2018": {
+          "value": "மதிப்பு"
+        },
+        "CSD U6 analog data_2019": {
+          "value": "மதிப்பு"
+        },
+        "CSD U6 analog data_2021": {
+          "value": "மதிப்பு"
+        },
+        "CSD U6 analog sound": {
+          "value": "மதிப்பு"
+        },
+        "CSD U6 analog sound_2018": {
+          "value": "மதிப்பு"
+        },
+        "CSD U6 analog sound_2019": {
+          "value": "மதிப்பு"
+        },
+        "CSD U6 analog sound_2021": {
+          "value": "மதிப்பு"
         }
       }
     }

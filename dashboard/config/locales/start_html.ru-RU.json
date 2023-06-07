@@ -659,7 +659,8 @@
           "low": "низкий"
         },
         "CSD U6 - Sensors - SB2_2222": {
-          "Update": "Обновить"
+          "Update": "Обновить",
+          "value": "значение"
         },
         "CSD U6 Driver pt 2": {
           "You did it!": "У тебя получилось!"
@@ -734,16 +735,20 @@
           "Success!": "Успешно!"
         },
         "CSD U6 analog light": {
-          "Update": "Обновить"
+          "Update": "Обновить",
+          "value": "значение"
         },
         "CSD U6 analog light_2018": {
-          "Update": "Обновить"
+          "Update": "Обновить",
+          "value": "значение"
         },
         "CSD U6 analog light_2019": {
-          "Update": "Обновить"
+          "Update": "Обновить",
+          "value": "значение"
         },
         "CSD U6 analog light_2021": {
-          "Update": "Обновить"
+          "Update": "Обновить",
+          "value": "значение"
         },
         "CSD U6 array piano": {
           "C": "В",
@@ -1686,6 +1691,54 @@
           "night": "ночь",
           "dusk": "Сумерки ",
           "Predict": "Предсказать"
+        },
+        "CSD U6 - Sensors - SB1_2222": {
+          "value": "значение"
+        },
+        "CSD U6 - Sensors - SB3_2222": {
+          "value": "значение"
+        },
+        "CSD U6 - Sensors - SB4.1_2222": {
+          "value": "значение"
+        },
+        "CSD U6 - Sensors - SB4_2222": {
+          "value": "значение"
+        },
+        "CSD U6 analog change": {
+          "value": "значение"
+        },
+        "CSD U6 analog change_2018": {
+          "value": "значение"
+        },
+        "CSD U6 analog change_2019": {
+          "value": "значение"
+        },
+        "CSD U6 analog change_2021": {
+          "value": "значение"
+        },
+        "CSD U6 analog data": {
+          "value": "значение"
+        },
+        "CSD U6 analog data_2018": {
+          "value": "значение"
+        },
+        "CSD U6 analog data_2019": {
+          "value": "значение"
+        },
+        "CSD U6 analog data_2021": {
+          "value": "значение"
+        },
+        "CSD U6 analog sound": {
+          "value": "значение"
+        },
+        "CSD U6 analog sound_2018": {
+          "value": "значение"
+        },
+        "CSD U6 analog sound_2019": {
+          "value": "значение"
+        },
+        "CSD U6 analog sound_2021": {
+          "value": "значение"
         }
       }
     }

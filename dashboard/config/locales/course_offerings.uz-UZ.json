@@ -2,14 +2,6 @@
   "uz-UZ": {
     "data": {
       "course_offerings": {
-        "coursea": "Kurs A",
-        "courseb": "Kurs B",
-        "coursec": "Kurs C",
-        "coursed": "Kurs D",
-        "coursee": "Kurs E",
-        "coursef": "Kurs F",
-        "express": "Ekspress Kurs",
-        "pre-express": "Maktabgacha yoshdagilar uchun tezkor kurs",
         "csd": "Informatika kashfiyotlari",
         "csp": "Informatika tamoyillari",
         "20-hour": "Accelerated Intro to CS Course",
@@ -20,7 +12,6 @@
         "applab-intro": "Intro to App Lab",
         "aquatic": "Minecraft: Suvga sayohat",
         "artist": "Rassom",
-        "basketball": "Choose your team and make a basketball game",
         "course1": "Kurs 1",
         "course2": "Kurs 2",
         "course3": "Kurs 3",
@@ -34,6 +25,7 @@
         "deepdive-debugging": "Debugging Lessons for Educators",
         "frozen": "Anna va Elza bilan kod yozing",
         "gumball": "Gumball Play Lab",
+        "hero": "Minecraft: Hero's Journey",
         "hourofcode": "Klassik labirint",
         "iceage": "Ice Age Play Lab",
         "infinity": "Disney Cheksiz O‘yin laboratoriyasi",
@@ -41,14 +33,15 @@
         "minecraft": "Minecraft Hour of Code Designer",
         "oceans": "AI for Oceans",
         "playlab": "Play Lab - O‘yin laboratoriyasi",
-        "sports": "Code your own sports game",
         "starwars": "Star Wars: Building a Galaxy With Code (Javascript)",
         "starwarsblocks": "Star Wars: Building a Galaxy With Code (Blockly)",
         "text-compression": "Matnni Zichlash",
         "andrea-test": "andrea-test",
         "ai-unit-pilot": "ai-unit-pilot",
+        "valentine": "valentin",
         "netsim": "netsim",
         "allthethingscourse": "Barcha narsalar kursi",
+        "halloween": "Xellouin",
         "step": "qadam",
         "coursee-ramp": "coursee-ramp",
         "csf-2021-pilot": "Kompyuter fanlari asoslari 2019-2020 (Pilot)",
@@ -56,7 +49,8 @@
         "soccer": "futbol",
         "hello-world-space": "Salom Dunyo: Kosmik",
         "hello-world-soccer": "Salom Dunyo: Futbol",
-        "playground": "o'yin maydonchasi"
+        "playground": "o'yin maydonchasi",
+        "design-process": "The Design Process"
       }
     }
   }
