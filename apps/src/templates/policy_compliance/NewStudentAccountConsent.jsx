@@ -2,15 +2,23 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
 import * as color from '../../util/color';
+import cookies from 'js-cookie';
 
 function permissionGrantedMessage(date) {
+  // Get the current locale.
+  const locale = cookies.get('language_') || 'en-US';
+  const dateOptions = {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  };
   const grantedDateString = i18n.newStudentAccountConsentValidPermissionGranted(
     {
-      date: date.toLocaleString(),
+      date: date.toLocaleDateString(locale, {...dateOptions}),
     }
   );
   return (
-    <div style={styles.container}>
+    <div id="permission_granted_container" style={styles.container}>
       <h2 style={styles.header}>
         {i18n.newStudentAccountConsentValidHeader()}
       </h2>
@@ -28,7 +36,7 @@ function permissionGrantedMessage(date) {
 
 function expiredTokenMessage() {
   return (
-    <div style={styles.container}>
+    <div id="expired_token_container" style={styles.container}>
       <h2 style={styles.header}>
         {i18n.newStudentAccountConsentExpiredHeader()}
       </h2>
@@ -49,7 +57,7 @@ export default function NewStudentAccountConsent(props) {
 
 NewStudentAccountConsent.propTypes = {
   permissionGranted: PropTypes.bool,
-  permissionGrantedDate: PropTypes.object,
+  permissionGrantedDate: PropTypes.instanceOf(Date),
 };
 
 const styles = {
