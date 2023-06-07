@@ -479,14 +479,20 @@ class UnitGroup < ApplicationRecord
   end
 
   # @param family_name [String] The family name for a course family.
-  # @return [UnitGroup] Returns the latest stable version in a course family.
-  def self.latest_stable_version(family_name)
+  # @param locale [String] User or request locale. Optional.
+  # @return [UnitGroup] Returns the latest stable version in a course family supported in the given language.
+  def self.latest_stable_version(family_name, locale: 'en-us')
     return nil if family_name.blank?
 
-    all_courses.select do |course|
+    stable_course_versions = all_courses.select do |course|
       course.family_name == family_name &&
         course.published_state == Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
-    end.max_by(&:version_year)
+    end.sort_by(&:version_year).reverse
+
+    locale_str = locale&.to_s
+    stable_course_versions.find do |cv|
+      cv.default_unit_group_units.all? {|unit_group_unit| Unit.find(unit_group_unit.script_id).supported_locales&.include?(locale_str) || locale_str&.start_with?('en')}
+    end
   end
 
   # @param family_name [String] The family name for a course family.
