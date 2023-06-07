@@ -115,6 +115,10 @@ export function isStorageAvailable(type) {
   }
 }
 
+/**
+ * Get the current browser and, if specified, the current browser version.
+ * Returns the user agent string if the browser is unknown.
+ */
 export function getBrowserName(includeVersion = false) {
   if (isChrome()) {
     return 'Chrome' + (includeVersion ? ` ${chromeVersion()}` : '');
@@ -132,5 +136,5 @@ export function getBrowserName(includeVersion = false) {
     return 'Safari' + (includeVersion ? ` ${safariVersion()}` : '');
   }
 
-  return 'Unknown';
+  return navigator.userAgent;
 }

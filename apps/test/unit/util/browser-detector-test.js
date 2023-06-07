@@ -173,4 +173,12 @@ describe('Browser Detector', () => {
       expect(getBrowserName(true)).to.equal('Firefox 70');
     });
   });
+
+  describe('Unknown browser', () => {
+    it('Returns the user agent string if browser is unknown', () => {
+      const unknownBrowser = 'unknown browser';
+      userAgentStub.value(unknownBrowser);
+      expect(getBrowserName(false)).to.equal(unknownBrowser);
+    });
+  });
 });
