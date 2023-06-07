@@ -140,7 +140,7 @@ input[type=submit] {
   background-color: $brand_secondary_default;
   border: 2px solid $brand_secondary_default;
   border-radius: $border-radius;
-  padding: .625rem 2rem;
+  padding: .625rem 1rem;
   margin: 0.5rem 0;
   font-size: 1rem;
   font-family: 'Gotham 5r', sans-serif;
@@ -148,6 +148,10 @@ input[type=submit] {
   text-decoration: none;
   text-align: center;
   transition: all ease-in-out .2s;
+
+  @media screen and (max-width: $width-sm) {
+    font-size: 0.875rem;
+  }
 
   &:hover {
     color: white;
@@ -225,7 +229,7 @@ ul {
       padding-left: 0 !important;
       text-indent: 0 !important;
       display: flex;
-      width: 48%;
+      width: 47%;
       margin: 1.5rem 0;
       gap: 1rem;
 
@@ -238,7 +242,7 @@ ul {
       }
 
       i {
-        font-size: 2rem;
+        font-size: 1.875rem;
       }
 
       h3 {
@@ -484,7 +488,7 @@ details {
   }
 
   summary {
-    @include heading-sm;
+    @include heading-xs;
     display: flex;
     justify-content: space-between;
     align-items: end;
@@ -536,7 +540,7 @@ form {
   input, select {
     display: block;
     width: 100%;
-    margin: .25rem auto 1rem;
+    margin: .25rem auto 1.5rem;
     padding: 0.5rem;
     border: 1px solid;
     border-radius: $border-radius;
