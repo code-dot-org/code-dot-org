@@ -559,7 +559,7 @@ form {
 .action-block__wrapper {
   margin-top: 2rem;
   display: grid;
-  grid-gap: 1rem;
+  grid-gap: 1.25rem;
 
   @media screen and (min-width: $width-sm) {
     grid-template-columns: repeat(2, 1fr);
