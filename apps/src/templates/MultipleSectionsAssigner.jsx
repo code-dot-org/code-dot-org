@@ -255,6 +255,7 @@ const styles = {
   grid: {
     display: 'grid',
     gridTemplateColumns: '33% 33% 34%',
+    marginBottom: 10,
   },
   functionSelector: {
     display: 'flex',
