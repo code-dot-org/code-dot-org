@@ -24,7 +24,7 @@ module InternationalOptInPeople
     maldives: ["Women in Tech Maldives"],
     mexico: ["Cuantrix"],
     mongolia: ["Codercub"],
-    new_zealand: ["Pam Fergusson Charitable Trust T/A OMGTech!"],
+    new_zealand: ["OMGTech!"],
     paraguay: ["Paraguay Educa"],
     portugal: ["DRE - Direção Regional de Educação (Madeira)"],
     slovakia: ["Accenture / Informatika 2.0"],
