@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": "csc-bookcovers",
-    "serialized_at": "2023-06-05 16:20:43 UTC",
+    "serialized_at": "2023-06-06 21:17:31 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1146,6 +1146,28 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_bookcovers_project_summary"
+        ],
+        "lesson.key": "Code Your Own Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csc-bookcovers-2023",
+        "activity_section.key": "d8f8bba0-ad64-49c2-ada5-b8bf1337264c"
+      },
+      "level_keys": [
+        "csc_bookcovers_project_summary"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 9,
+      "activity_section_position": 9,
+      "assessment": false,
+      "properties": {
         "level_keys": [
           "csc_bookcovers_project_final"
         ],
@@ -1163,31 +1185,6 @@
       },
       "level_keys": [
         "csc_bookcovers_project_final"
-      ]
-    },
-    {
-      "chapter": 20,
-      "position": 9,
-      "activity_section_position": 9,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "csc_bookcovers_project_template"
-        ],
-        "progression": "Skill Building"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csc_bookcovers_project_template"
-        ],
-        "lesson.key": "Code Your Own Book Cover ",
-        "lesson_group.key": "",
-        "script.name": "csc-bookcovers-2023",
-        "activity_section.key": "d8f8bba0-ad64-49c2-ada5-b8bf1337264c"
-      },
-      "level_keys": [
-        "csc_bookcovers_project_template"
       ]
     },
     {
@@ -1435,9 +1432,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "csc_bookcovers_project_final",
+        "level.key": "csc_bookcovers_project_summary",
         "script_level.level_keys": [
-          "csc_bookcovers_project_final"
+          "csc_bookcovers_project_summary"
         ],
         "lesson.key": "Code Your Own Book Cover ",
         "lesson_group.key": "",
@@ -1447,9 +1444,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "csc_bookcovers_project_template",
+        "level.key": "csc_bookcovers_project_final",
         "script_level.level_keys": [
-          "csc_bookcovers_project_template"
+          "csc_bookcovers_project_final"
         ],
         "lesson.key": "Code Your Own Book Cover ",
         "lesson_group.key": "",
