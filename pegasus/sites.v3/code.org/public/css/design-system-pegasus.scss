@@ -26,6 +26,10 @@ section.bg-secondary { background-color: $brand_secondary_light; }
 section.bg-primary-light {
   background-color: rgba($brand_primary_light, .5);
 
+  p {
+    @include strong;
+  }
+
   a { color: $neutral_dark !important;
     &:hover { color: $brand_secondary_dark !important; }
     &.link-button { color: $neutral_white !important; }
@@ -192,19 +196,6 @@ a.link-button {
     position: relative;
     z-index: 1;
   }
-
-  img {
-    height: 100%;
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 0;
-
-    @media screen and (max-width: $width-md) {
-      display: none;
-    }
-  }
-
 }
 
 // Unordered lists
@@ -663,6 +654,10 @@ form {
 
   .text-wrapper {
     padding: 1rem 1.5rem;
+  }
+
+  h3 {
+    @include heading-sm;
   }
 
   figure.video-responsive {

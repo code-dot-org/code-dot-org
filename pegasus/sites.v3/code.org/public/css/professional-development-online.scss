@@ -15,6 +15,11 @@
   }
 
   img {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 0;
 
     @media screen and (min-width: 1619px) and (max-width: $width-xxl) {
       right: 18%;
