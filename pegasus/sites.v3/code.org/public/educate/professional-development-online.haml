@@ -45,7 +45,7 @@ theme: responsive_full_width
               %p=hoc_s(:self_paced_pl_intro_list_desc_03)
         %a.link-button{href: "#modules"} Explore modules
       %figure.col-50
-        %img{src: "/images/self-paced-pl-teacher-student-top.png", alt: "", style: "width: 100%; margin-top: 2.5em;"}
+        %img{src: "/images/self-paced-pl-teacher-student-top.png", alt: "", style: "width: 100%; margin-top: 2.5rem;"}
     .clear
 
 %section.bg-primary-light
@@ -65,23 +65,25 @@ theme: responsive_full_width
       %li=hoc_s(:self_paced_pl_modules_list_02)
       %li=hoc_s(:self_paced_pl_modules_list_03)
     .action-block__wrapper.action-block__wrapper--three-col
-      .action-block.action-block--one-col
-        %p.overline=hoc_s(:module_grade_k_5)
-        %h3=hoc_s(:module_label_teaching_csf)
-        %img{src: "/images/self-paced-pl-tile-csf.png", alt: "", style: "width: 100%"}
-        %p
-          %strong=hoc_s(:module_label_curriculum)
-          =hoc_s(:curriculum_name_csf_02)
-        %p
-          %strong=hoc_s(:module_label_duration)
-          =hoc_s(:module_duration_8_hrs)
-        %p
-          %strong=hoc_s(:module_label_prerequisites)
-          =hoc_s(:module_prerequisites_none)
-        %a.link-button{href: CDO.studio_url("/s/k5-onlinepd-2022"), aria:{label: hoc_s(:aria_label_call_to_action_teaching_csf)}}
-          =hoc_s(:call_to_action_start_pl)
-        %a.link-button.secondary{href: "/csf", aria:{label: hoc_s(:aria_label_call_to_action_curriculum_csf)}}
-          =hoc_s(:call_to_action_explore_curriculum)
+      .action-block.action-block--one-col.flex-space-between
+        .content-wrapper
+          %p.overline=hoc_s(:module_grade_k_5)
+          %h3=hoc_s(:module_label_teaching_csf)
+          %img{src: "/images/self-paced-pl-tile-csf.png", alt: "", style: "width: 100%"}
+          %p
+            %strong=hoc_s(:module_label_curriculum)
+            =hoc_s(:curriculum_name_csf_02)
+          %p
+            %strong=hoc_s(:module_label_duration)
+            =hoc_s(:module_duration_8_hrs)
+          %p
+            %strong=hoc_s(:module_label_prerequisites)
+            =hoc_s(:module_prerequisites_none)
+        .content-footer
+          %a.link-button{href: CDO.studio_url("/s/k5-onlinepd-2022"), aria:{label: hoc_s(:aria_label_call_to_action_teaching_csf)}}
+            =hoc_s(:call_to_action_start_pl)
+          %a.link-button.secondary{href: "/csf", aria:{label: hoc_s(:aria_label_call_to_action_curriculum_csf)}}
+            =hoc_s(:call_to_action_explore_curriculum)
       .action-block.action-block--one-col.flex-space-between
         .content-wrapper
           %p.overline=hoc_s(:module_grade_6_10)
@@ -139,23 +141,25 @@ theme: responsive_full_width
             =hoc_s(:call_to_action_start_pl)
           %a.link-button.secondary{href: CDO.studio_url("/s/aiml-2022?viewAs=Instructor"), aria:{label: hoc_s(:aria_label_call_to_action_curriculum_ai)}}
             =hoc_s(:call_to_action_explore_curriculum)
-      .action-block.action-block--one-col
-        %p.overline=hoc_s(:module_grade_6_10)
-        %h3=hoc_s(:module_label_teaching_maker_cp)
-        %img{src: "/images/self-paced-pl-tile-maker-cp.png", alt: "", style: "width: 100%"}
-        %p
-          %strong=hoc_s(:module_label_curriculum)
-          =hoc_s(:curriculum_name_maker_cp)
-        %p
-          %strong=hoc_s(:module_label_duration)
-          =hoc_s(:module_duration_3_hrs)
-        %p
-          %strong=hoc_s(:module_label_prerequisites)
-          =hoc_s(:module_prerequisites_maker_cp)
-        %a.link-button{href: CDO.studio_url("/courses/self-paced-pl-physical-computing"), aria:{label: hoc_s(:aria_label_call_to_action_teaching_maker_cp)}}
-          =hoc_s(:call_to_action_start_pl)
-        %a.link-button.secondary{href: CDO.studio_url("/s/devices-2022?viewAs=Instructor"), aria:{label: hoc_s(:aria_label_call_to_action_curriculum_maker_cp)}}
-          =hoc_s(:call_to_action_explore_curriculum)
+      .action-block.action-block--one-col.flex-space-between
+        .content-wrapper
+          %p.overline=hoc_s(:module_grade_6_10)
+          %h3=hoc_s(:module_label_teaching_maker_cp)
+          %img{src: "/images/self-paced-pl-tile-maker-cp.png", alt: "", style: "width: 100%"}
+          %p
+            %strong=hoc_s(:module_label_curriculum)
+            =hoc_s(:curriculum_name_maker_cp)
+          %p
+            %strong=hoc_s(:module_label_duration)
+            =hoc_s(:module_duration_3_hrs)
+          %p
+            %strong=hoc_s(:module_label_prerequisites)
+            =hoc_s(:module_prerequisites_maker_cp)
+        .content-footer
+          %a.link-button{href: CDO.studio_url("/courses/self-paced-pl-physical-computing"), aria:{label: hoc_s(:aria_label_call_to_action_teaching_maker_cp)}}
+            =hoc_s(:call_to_action_start_pl)
+          %a.link-button.secondary{href: CDO.studio_url("/s/devices-2022?viewAs=Instructor"), aria:{label: hoc_s(:aria_label_call_to_action_curriculum_maker_cp)}}
+            =hoc_s(:call_to_action_explore_curriculum)
       .action-block.action-block--one-col.flex-space-between
         .content-wrapper
           %p.overline=hoc_s(:module_grade_6_10)
@@ -178,7 +182,7 @@ theme: responsive_full_width
 
 %section.bg-neutral-light
   .wrapper
-    %div.col-50{style: "margin-bottom: 1em;"}
+    %div.col-50{style: "margin-bottom: 1rem;"}
       %h2=hoc_s(:self_paced_pl_facilitator_heading)
       %h3.heading-sm=hoc_s(:self_paced_pl_facilitator_subheading)
       %p.body-two

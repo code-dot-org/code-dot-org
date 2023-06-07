@@ -7,7 +7,11 @@
 .hero-banner-basic {
 
   .text-wrapper {
-    width: 60%;
+    width: 55%;
+
+    @media screen and (max-width: $width-md) {
+      width: 65%;
+    }
 
     @media screen and (max-width: $width-sm) {
       width: 100%;
