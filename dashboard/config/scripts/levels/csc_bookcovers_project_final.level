@@ -1,6 +1,5 @@
 <GamelabJr>
   <config><![CDATA[{
-  "published": true,
   "game_id": 64,
   "created_at": "2023-06-01T21:15:26.000Z",
   "level_num": "custom",
@@ -49,10 +48,11 @@
     "standalone_app_name": "spritelab",
     "encrypted_examples": "pevRPGaduCSlImVAlrq4OVNCHdKIo6lr4B/+mPuZ/VfOjB0IFn9yyVbvQbN9\nzvWQj5hT8+BMDppr8p7IPUligQ==\n",
     "short_instructions": "Add the finishing touches to your final project! ",
-    "preload_asset_list": null,
-    "video_key": "upload_sprites_backgrounds"
+    "video_key": "upload_sprites_backgrounds",
+    "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2023-06-01T21:15:26.694+00:00\",\"changed\":[\"cloned from \\\"csc_landmarks_finalproject_2023\\\"\"],\"cloned_from\":\"csc_landmarks_finalproject_2023\"},{\"changed_at\":\"2023-06-02 20:43:25 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"instructions_icon\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-06-02 20:57:13 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-06-02 20:57:50 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"block_pools\",\"helper_libraries\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-06-02 20:58:33 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-06-02 21:36:32 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"hide_share_and_remix\",\"project_template_level_name\",\"start_animations\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-06-02 21:37:04 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"never_autoplay_video\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-06-02 21:39:43 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2023-06-01T21:15:26.694+00:00\",\"changed\":[\"cloned from \\\"csc_landmarks_finalproject_2023\\\"\"],\"cloned_from\":\"csc_landmarks_finalproject_2023\"},{\"changed_at\":\"2023-06-02 20:43:25 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"instructions_icon\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-06-02 20:57:13 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-06-02 20:57:50 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"block_pools\",\"helper_libraries\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-06-02 20:58:33 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-06-02 21:36:32 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"hide_share_and_remix\",\"project_template_level_name\",\"start_animations\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-06-02 21:37:04 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"never_autoplay_video\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-06-02 21:39:43 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-06-06 21:06:09 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-06-06 21:06:54 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-06-06 21:07:20 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -1506,33 +1506,25 @@
         <block type="storylab_setHeading" editable="false">
           <value name="HEADING">
             <block type="text">
-              <field name="TEXT"/>
+              <field name="TEXT">Book Title</field>
             </block>
           </value>
         </block>
         <block type="storylab_setSubheading" editable="false">
           <value name="SUBHEADING">
             <block type="text">
-              <field name="TEXT"/>
+              <field name="TEXT">Author</field>
             </block>
           </value>
         </block>
         <block type="gamelab_setBackgroundImageAs">
-          <field name="IMG">"usa_grey"</field>
+          <field name="IMG">"gradient"</field>
         </block>
         <block type="gamelab_makeNewSpriteAnon">
-          <field name="ANIMATION_NAME">"location_pin_a"</field>
+          <field name="ANIMATION_NAME">"blue_shirt_hand_up2"</field>
           <value name="LOCATION">
             <block type="gamelab_location_picker">
               <field name="LOCATION">{"x":347,"y":141}</field>
-            </block>
-          </value>
-        </block>
-        <block type="gamelab_spriteSay">
-          <field name="SPEECH">Hello!</field>
-          <value name="SPRITE">
-            <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"green_shirt_wave2"</field>
             </block>
           </value>
         </block>
@@ -1540,12 +1532,28 @@
           <field name="PROPERTY">"scale"</field>
           <value name="SPRITE">
             <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"location_pin_a"</field>
+              <field name="ANIMATION">"blue_shirt_hand_up2"</field>
             </block>
           </value>
           <value name="VAL">
             <block type="math_number">
               <field name="NUM">50</field>
+            </block>
+          </value>
+        </block>
+        <block type="gamelab_spriteClicked">
+          <field name="CONDITION">"when"</field>
+          <value name="SPRITE">
+            <block type="gamelab_allSpritesWithAnimation">
+              <field name="ANIMATION">"blue_shirt_hand_up2"</field>
+            </block>
+          </value>
+        </block>
+        <block type="gamelab_spriteSay">
+          <field name="SPEECH">Hello!</field>
+          <value name="SPRITE">
+            <block type="gamelab_allSpritesWithAnimation">
+              <field name="ANIMATION">"blue_shirt_hand_up2"</field>
             </block>
           </value>
         </block>
@@ -1555,13 +1563,18 @@
         <block type="gamelab_addBehaviorSimple">
           <value name="SPRITE">
             <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"green_shirt_wave2"</field>
+              <field name="ANIMATION">"blue_shirt_hand_up2"</field>
+            </block>
+          </value>
+          <value name="BEHAVIOR">
+            <block type="gamelab_behaviorPicker">
+              <field name="BEHAVIOR">fluttering</field>
             </block>
           </value>
         </block>
         <block type="gamelab_makeBurst">
           <field name="EFFECT">"burst"</field>
-          <field name="ANIMATION_NAME">"green_shirt_wave2"</field>
+          <field name="ANIMATION_NAME">"blue_shirt_hand_up2"</field>
           <value name="NUM">
             <block type="math_number">
               <field name="NUM">3</field>
