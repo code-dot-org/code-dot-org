@@ -96,6 +96,10 @@ class User < ApplicationRecord
   #   gender_student_input: The original string input by the user during account creation.
   #     The normalized single-character gender value is stored in the gender column.
   #   us_state: A 2 letter code United States state code the user has given us.
+  #   country_code: The country the user was in when they told us their
+  #   us_state.
+  #   cpa_compliance: The state of a user's compliance with the CPA.
+  #   cpa_compliance_date: The date the user became compliant with the CPA.
   serialized_attrs %w(
     ops_first_name
     ops_last_name
@@ -126,6 +130,8 @@ class User < ApplicationRecord
     gender_student_input
     gender_teacher_input
     gender_third_party_input
+    cpa_compliance
+    cpa_compliance_date
     us_state
     country_code
   )
@@ -2648,5 +2654,11 @@ class User < ApplicationRecord
     unless US_STATE_DROPDOWN_OPTIONS.include?(us_state)
       errors.add(:us_state, :invalid)
     end
+  end
+
+  # Values for the `cpa_compliance` attribute
+  module CpaCompliance
+    # The student's account has been approved by their parent.
+    PERMISSION_GRANTED = 'g'.freeze
   end
 end
