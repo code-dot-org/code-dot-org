@@ -22,8 +22,15 @@ body {
 // Use these classes to change a section's background color
 section.bg-neutral-light { background-color: $neutral_light; }
 section.bg-neutral-dark { background-color: $neutral_dark; }
-section.bg-primary-light { background-color: rgba($brand_primary_light, .5); }
 section.bg-secondary { background-color: $brand_secondary_light; }
+section.bg-primary-light {
+  background-color: rgba($brand_primary_light, .5);
+
+  a { color: $neutral_dark !important;
+    &:hover { color: $brand_secondary_dark !important; }
+    &.link-button { color: $neutral_white !important; }
+  }
+}
 
 // Centers a block-level element
 .centered { text-align: center !important; }
@@ -35,6 +42,12 @@ section.bg-secondary { background-color: $brand_secondary_light; }
 .no-padding-bottom { padding-bottom: 0 !important;}
 
 // FontAwesome icon defaults
+// Sets fixed height on icon container to maintain consistent
+// spacing when icons have varying widths and heights
+i.fa-fw {
+  line-height: 1.25em;
+}
+
 .icon::before {
   display: inline-block;
   text-rendering: auto;
@@ -68,6 +81,15 @@ div.divider {
     border-top: 1px solid $neutral_dark60;
     margin: 0;
     width: 100%;
+  }
+}
+
+// Lines (<hr>)
+hr {
+  border-top: 1px solid $neutral_dark20;
+
+  &.dark {
+    border-top: 1px solid $neutral_dark60;
   }
 }
 
@@ -210,6 +232,7 @@ ul {
       display: flex;
       width: 48%;
       margin: 1.5em 0;
+      gap: 1em;
 
       @media screen and (max-width: $width-sm) {
         width: 100%;
@@ -219,14 +242,8 @@ ul {
         content: none;
       }
 
-      div > i {
-        width: 40px;
-        text-align: center;
-      }
-
       i {
-        font-size: 2.25em;
-        margin: 2px 16px 0 0;
+        font-size: 2em;
       }
 
       h3 {
@@ -328,8 +345,6 @@ ul {
 
       i {
         font-size: 1.25em;
-        margin: 3px 0 0;
-        vertical-align: text-bottom;
 
         &:before {
           color: $brand_secondary_default;
@@ -347,6 +362,31 @@ ul {
         i:before {
           color: $brand_secondary_dark;
         }
+      }
+    }
+  }
+
+  // Lists that show supporters or other text content in a table format
+  &.supporters-list {
+    margin: 3em auto;
+    display: grid;
+    justify-items: center;
+    gap: 1.5em;
+
+    @media screen and (min-width: $width-sm) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media screen and (min-width: $width-md) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    li {
+      all: unset;
+      text-align: center;
+
+      &:before {
+        content: "";
       }
     }
   }
@@ -618,10 +658,70 @@ form {
   }
 }
 
+// Carousels
+// Uses the carouFredSel jQuery plugin: https://github.com/nzy/carouFredSel
+.carousel-wrapper {
+  margin: 2em 0 0;
+
+  @media screen and (max-width: $width-sm) {
+    padding-bottom: 1em;
+  }
+
+  // Set a min-height inline on the .carousel div
+  // inside .carousel-wrapper to account for varying
+  // quote lengths and prevent vertical height changes
+  .carousel {
+    overflow: hidden;
+
+    @media screen and (max-width: $width-md) {
+      height: unset !important;
+      overflow: unset;
+    }
+  }
+
+  // The plugin we're using disappears when <html dir="rtl">
+  // - updating the inset value fixes it; it does remove the swiping
+  // animation between slides on desktop, but keeps the content
+  .slides.rtl {
+    inset: 0 !important;
+  }
+
+  p {
+    font-family: $barlowSemiCondensed-medium, sans-serif;
+  }
+
+  .pagination {
+    margin: 1em 0 0 0;
+
+    @media screen and (max-width: $width-sm) {
+      margin-top: 3em;
+    }
+
+    &.left-align {
+      text-align: left;
+
+      @media screen and (max-width: $width-md) {
+        text-align: center;
+      }
+
+      a:first-child {
+        margin-left: 0;
+      }
+    }
+
+    a{
+      background: $brand_primary_light;
+
+      &.selected {
+        background: $brand_primary_default;
+      }
+    }
+  }
+}
+
 // Quotes carousel
 // See code.org/educate/professional-learning/middle-high
 // and /views/pl_middle_high_carousel.haml for an example
-// – uses the carouFredSel jQuery plugin: https://github.com/nzy/carouFredSel
 .quotes-wrapper {
 
   img {
@@ -639,24 +739,6 @@ form {
   }
 
   .carousel-wrapper {
-    font-family: $barlowSemiCondensed-medium, sans-serif;
-    margin: 2em 0 0;
-
-    @media screen and (max-width: $width-sm) {
-      padding-bottom: 1em;
-    }
-
-    // Set a min-height inline on the .carousel div
-    // inside .carousel-wrapper to account for varying
-    // quote lengths and prevent vertical height changes
-    .carousel {
-      overflow: hidden;
-
-      @media screen and (max-width: $width-md) {
-        height: unset !important;
-        overflow: unset;
-      }
-    }
 
     .with-image {
       display: flex;
@@ -684,7 +766,6 @@ form {
     }
 
     p {
-      font-family: $barlowSemiCondensed-medium, sans-serif;
       font-size: 1.25em;
 
       &.quote-text {
@@ -712,26 +793,59 @@ form {
       color: $brand_accent_default;
       margin: 0 2px;
     }
+  }
+}
 
-    .pagination {
-      text-align: left;
-      margin: 1em 0 0 0;
+// Photo slideshow carousel
+// See code.org/educate/professional-learning/middle-high
+// and /views/pl_middle_high_carousel.haml for an example
+.photo-carousel-wrapper {
+
+  .with-image {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5em;
+
+    @media screen and (max-width: $width-md) {
+      gap: 3em;
+    }
+
+    @media screen and (max-width: $width-sm) {
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1em;
+    }
+
+    img {
+      width: 450px;
+      height: auto;
+      border-radius: 1em;
+
+      @media screen and (max-width: $width-md) {
+        width: 300px;
+      }
 
       @media screen and (max-width: $width-sm) {
-        margin-top: 3em;
+        width: 100%;
       }
+    }
+  }
 
-      a{
-        background: $brand_primary_light;
+  p {
+    font-size: 1.5em;
 
-        &:first-child {
-          margin-left: 0;
-        }
+    @media screen and (max-width: $width-md) {
+      font-size: 1.25em;
+      margin-bottom: 1em;
+    }
+  }
 
-        &.selected {
-          background: $brand_primary_default;
-        }
-      }
+  .pagination {
+    margin-top: 2em;
+
+    @media screen and (max-width: $width-md) {
+      margin-top: 3em;
     }
   }
 }
@@ -780,7 +894,7 @@ form {
   .wrapper{
     display: flex;
     justify-content: space-between;
-    gap: 2em;
+    gap: 1em;
   }
 
   i {

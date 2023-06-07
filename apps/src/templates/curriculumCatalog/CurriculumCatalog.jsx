@@ -1,13 +1,21 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useCallback} from 'react';
 import PropTypes from 'prop-types';
+
 import {curriculumDataShape} from './curriculumCatalogShapes';
 import i18n from '@cdo/locale';
 import style from '../../../style/code-studio/curriculum_catalog_container.module.scss';
-import {queryParams} from '../../code-studio/utils';
+import {queryParams, updateQueryParam} from '../../code-studio/utils';
 import HeaderBanner from '../HeaderBanner';
 import CourseCatalogBannerBackground from '../../../static/curriculum_catalog/course-catalog-banner-illustration-01.png';
 import CourseCatalogIllustration01 from '../../../static/curriculum_catalog/course-catalog-illustration-01.png';
-import {Heading6} from '@cdo/apps/componentLibrary/typography';
+import CourseCatalogNoSearchResultPenguin from '../../../static/curriculum_catalog/course-catalog-no-search-result-penguin.png';
+
+import Button from '@cdo/apps/templates/Button';
+import {
+  Heading5,
+  Heading6,
+  BodyOneText,
+} from '@cdo/apps/componentLibrary/typography';
 import CheckboxDropdown from '../CheckboxDropdown';
 import CurriculumCatalogCard from '@cdo/apps/templates/curriculumCatalog/CurriculumCatalogCard';
 import {
@@ -64,8 +72,7 @@ const getValidParamValues = (filterKey, paramValues) => {
 };
 
 // Returns initial filter states based on URL parameters (returns empty filters if
-// no relevant parameters in the URL). The filter params are of the form:
-// "filter_name:checked_value_1,checked_value_2,etc."
+// no relevant parameters in the URL).
 const getInitialFilterStates = () => {
   const filterTypeKeys = Object.keys(filterTypes);
   const urlParams = queryParams();
@@ -166,80 +173,56 @@ const CurriculumCatalog = ({curriculaData, isEnglish}) => {
     setFilteredCurricula(newFilteredCurricula);
   }, [curriculaData, appliedFilters]);
 
+  // Handles updating the given filter and the URL parameters.
+  const handleUpdateFilter = (filterKey, values) => {
+    let newFilters = {...appliedFilters};
+    newFilters[filterKey] = values;
+    setAppliedFilters(newFilters);
+
+    const valuesParam = values.length > 0 ? values : undefined;
+    updateQueryParam(filterKey, valuesParam, true);
+  };
+
   // Selects the given value in the given filter.
   const handleSelect = (event, filterKey) => {
     const value = event.target.value;
     const isChecked = event.target.checked;
 
-    let newFilters = {...appliedFilters};
+    let updatedFilters;
     if (isChecked) {
-      //Add checked item into applied filters
-      newFilters[filterKey] = [...appliedFilters[filterKey], value];
+      // Add checked item into applied filters
+      updatedFilters = [...appliedFilters[filterKey], value];
     } else {
-      //Remove unchecked item from applied filters
-      newFilters[filterKey] = appliedFilters[filterKey].filter(
-        item => item !== value
-      );
+      // Remove unchecked item from applied filters
+      updatedFilters = appliedFilters[filterKey].filter(item => item !== value);
     }
-    setAppliedFilters(newFilters);
+    handleUpdateFilter(filterKey, updatedFilters);
   };
 
   // Selects all options within the given filter.
   const handleSelectAllOfFilter = filterKey => {
-    let newFilters = {...appliedFilters};
-    newFilters[filterKey] = Object.keys(filterTypes[filterKey].options);
-    setAppliedFilters(newFilters);
+    handleUpdateFilter(filterKey, Object.keys(filterTypes[filterKey].options));
   };
 
   // Clears all filter selections.
-  const handleClear = () => {
+  const handleClear = useCallback(() => {
     setAppliedFilters(getEmptyFilters());
-  };
+    Object.keys(filterTypes).forEach(filterKey =>
+      updateQueryParam(filterKey, undefined, false)
+    );
+  }, []);
 
   // Clears selections within the given filter.
   const handleClearAllOfFilter = filterKey => {
-    let newFilters = {...appliedFilters};
-    newFilters[filterKey] = [];
-    setAppliedFilters(newFilters);
+    handleUpdateFilter(filterKey, []);
   };
 
-  return (
-    <>
-      <HeaderBanner
-        headingText={i18n.curriculumCatalogHeaderTitle()}
-        subHeadingText={i18n.curriculumCatalogHeaderSubtitle()}
-        short={false}
-        backgroundUrl={CourseCatalogBannerBackground}
-        imageUrl={CourseCatalogIllustration01}
-      />
-      <div className={style.catalogFiltersContainer}>
-        <Heading6 className={style.catalogFiltersRowLabel}>
-          {i18n.filterBy()}
-        </Heading6>
-        {Object.keys(filterTypes).map(filterKey => (
-          <CheckboxDropdown
-            key={filterKey}
-            name={filterKey}
-            label={filterTypes[filterKey].label}
-            allOptions={filterTypes[filterKey].options}
-            checkedOptions={appliedFilters[filterKey]}
-            onChange={e => handleSelect(e, filterKey)}
-            handleSelectAll={() => handleSelectAllOfFilter(filterKey)}
-            handleClearAll={() => handleClearAllOfFilter(filterKey)}
-          />
-        ))}
-        <button
-          id="clear-filters"
-          type="button"
-          className={style.catalogClearFiltersButton}
-          onClick={handleClear}
-        >
-          {i18n.clearFilters()}
-        </button>
-      </div>
-      <div className={style.catalogContentContainer}>
-        <div className={style.catalogContent}>
-          {/*TODO [MEG]: calculate and pass in duration and translated from backend */}
+  // Renders search results based on the applied filters (or shows the No matching curriculums
+  // message if no results).
+  const renderSearchResults = () => {
+    if (filteredCurricula.length > 0) {
+      return (
+        <div className={style.catalogContentCards}>
           {filteredCurricula
             .filter(
               curriculum =>
@@ -271,6 +254,63 @@ const CurriculumCatalog = ({curriculaData, isEnglish}) => {
               )
             )}
         </div>
+      );
+    } else {
+      return (
+        <div className={style.catalogContentNoResults}>
+          <img
+            className={style.noResultsImage}
+            src={CourseCatalogNoSearchResultPenguin}
+            alt=""
+          />
+          <Heading5 className={style.noResultsHeading}>
+            {i18n.noCurriculumSearchResultsHeader()}
+          </Heading5>
+          <BodyOneText className={style.noResultsBody}>
+            {i18n.noCurriculumSearchResultsBody()}
+          </BodyOneText>
+        </div>
+      );
+    }
+  };
+
+  return (
+    <>
+      <HeaderBanner
+        headingText={i18n.curriculumCatalogHeaderTitle()}
+        subHeadingText={i18n.curriculumCatalogHeaderSubtitle()}
+        short={false}
+        backgroundUrl={CourseCatalogBannerBackground}
+        imageUrl={CourseCatalogIllustration01}
+      />
+      <div className={style.catalogFiltersContainer}>
+        <Heading6 className={style.catalogFiltersRowLabel}>
+          {i18n.filterBy()}
+        </Heading6>
+        {Object.keys(filterTypes).map(filterKey => (
+          <CheckboxDropdown
+            key={filterKey}
+            name={filterKey}
+            label={filterTypes[filterKey].label}
+            allOptions={filterTypes[filterKey].options}
+            checkedOptions={appliedFilters[filterKey]}
+            onChange={e => handleSelect(e, filterKey)}
+            handleSelectAll={() => handleSelectAllOfFilter(filterKey)}
+            handleClearAll={() => handleClearAllOfFilter(filterKey)}
+          />
+        ))}
+        <Button
+          id="clear-filters"
+          className={style.catalogClearFiltersButton}
+          type="button"
+          onClick={handleClear}
+          text={i18n.clearFilters()}
+          styleAsText
+          color={Button.ButtonColor.brandSecondaryDefault}
+        />
+      </div>
+      <div className={style.catalogContentContainer}>
+        {renderSearchResults()}
       </div>
     </>
   );

@@ -317,10 +317,10 @@ class Projects
   end
 
   # Find the encrypted channel token for most recent project of the given level type.
-  def most_recent(key)
+  def most_recent(key, include_hidden = false)
     row = @table.where(storage_id: @storage_id).exclude(state: 'deleted').order(Sequel.desc(:updated_at)).find do |i|
       parsed = JSON.parse(i[:value])
-      !parsed['hidden'] && !parsed['frozen'] && parsed['level'].split('/').last == key
+      (include_hidden || !parsed['hidden']) && !parsed['frozen'] && parsed['level'].split('/').last == key
     rescue
       # Malformed channel, or missing level.
     end
@@ -483,11 +483,14 @@ class Projects
     true
   end
 
-  # valid thumbnail URLs should be of the format:
+  # valid thumbnail URLs are typically of the format:
   # /v3/files/<channel_id>/.metadata/thumbnail.png
   # I observed thumbnail URLs of remixed projects having having the channel ID of the parent project,
-  # so we assert on the start/end of the URL
+  # so we assert on the start/end of the URL.
+  # We also use placeholder thumbnail images in a couple of labs (dance, flappy),
+  # so accepting those as valid as well
   def valid_thumbnail_url?(thumbnail_url)
-    thumbnail_url.start_with?('/v3/files/') && thumbnail_url.end_with?('.metadata/thumbnail.png')
+    (thumbnail_url.start_with?('/v3/files/') && thumbnail_url.end_with?('.metadata/thumbnail.png')) ||
+      thumbnail_url.start_with?('/blockly/media')
   end
 end

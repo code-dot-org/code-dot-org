@@ -93,6 +93,9 @@ class User < ApplicationRecord
   #     of the data transfer agreement string the user to agreed to, for a given
   #     data_transfer_agreement_source.  This value should be bumped each time
   #     the corresponding user-facing string is updated.
+  #   gender_student_input: The original string input by the user during account creation.
+  #     The normalized single-character gender value is stored in the gender column.
+  #   us_state: A 2 letter code United States state code the user has given us.
   serialized_attrs %w(
     ops_first_name
     ops_last_name
@@ -120,6 +123,11 @@ class User < ApplicationRecord
     section_attempts_last_reset
     share_teacher_email_regional_partner_opt_in
     last_verified_captcha_at
+    gender_student_input
+    gender_teacher_input
+    gender_third_party_input
+    us_state
+    country_code
   )
 
   attr_accessor(
@@ -138,7 +146,7 @@ class User < ApplicationRecord
     :share_teacher_email_reg_partner_opt_in_radio_choice,
     :data_transfer_agreement_required,
     :raw_token,
-    :child_users
+    :child_users,
   )
 
   # Include default devise modules. Others available are:
@@ -249,6 +257,19 @@ class User < ApplicationRecord
   before_validation on: :create, if: -> {gender.present?} do
     self.gender = Policies::Gender.normalize gender
   end
+
+  validate :validate_us_state, on: :create
+
+  before_validation on: [:create, :update], if: -> {gender_teacher_input.present? && will_save_change_to_attribute?('properties')} do
+    self.gender = Policies::Gender.normalize gender_teacher_input
+  end
+
+  before_validation on: [:create, :update], if: -> {gender_student_input.present? && will_save_change_to_attribute?('properties')} do
+    gender_student_input.strip!
+    self.gender = Policies::Gender.normalize gender_student_input
+  end
+
+  validates :gender_student_input, length: {maximum: 50}
 
   def save_email_preference
     if teacher?
@@ -744,9 +765,9 @@ class User < ApplicationRecord
     omniauth_user = find_by_credential(type: auth.provider, id: auth.uid)
 
     unless omniauth_user
-      omniauth_user = create do |user|
-        initialize_new_oauth_user(user, auth, params)
-      end
+      omniauth_user = create
+      initialize_new_oauth_user(omniauth_user, auth, params)
+      omniauth_user.save
       SignUpTracking.log_sign_up_result(omniauth_user, session)
     end
 
@@ -790,6 +811,8 @@ class User < ApplicationRecord
       user.birthday = nil
       user.age = user_age
     end
+
+    user.gender_third_party_input = auth.info.gender
     user.gender = Policies::Gender.normalize auth.info.gender
   end
 
@@ -2021,6 +2044,7 @@ class User < ApplicationRecord
       hashed_email: hashed_email,
       user_type: user_type,
       gender: gender,
+      gender_teacher_input: gender_teacher_input,
       birthday: birthday,
       secret_words: secret_words,
       secret_picture_name: secret_picture&.name,
@@ -2586,5 +2610,43 @@ class User < ApplicationRecord
   private def validate_parent_email
     errors.add(:parent_email) unless parent_email.nil? ||
       Cdo::EmailValidator.email_address?(parent_email)
+  end
+
+  US_STATE_DROPDOWN_OPTIONS = {
+    '??' => I18n.t('signup_form.us_state_dropdown_options.other'),
+    'AL' => 'Alabama', 'AK' => 'Alaska', 'AZ' => 'Arizona', 'AR' => 'Arkansas',
+    'CA' => 'California', 'CO' => 'Colorado', 'CT' => 'Connecticut',
+    'DE' => 'Delaware', 'FL' => 'Florida', 'GA' => 'Georgia', 'HI' => 'Hawaii',
+    'ID' => 'Idaho', 'IL' => 'Illinois', 'IN' => 'Indiana', 'IA' => 'Iowa',
+    'KS' => 'Kansas', 'KY' => 'Kentucky', 'LA' => 'Louisiana', 'ME' => 'Maine',
+    'MD' => 'Maryland', 'MA' => 'Massachusetts', 'MI' => 'Michigan',
+    'MN' => 'Minnesota', 'MS' => 'Mississippi', 'MO' => 'Missouri',
+    'MT' => 'Montana', 'NE' => 'Nebraska', 'NV' => 'Nevada',
+    'NH' => 'New Hampshire', 'NJ' => 'New Jersey', 'NM' => 'New Mexico',
+    'NY' => 'New York', 'NC' => 'North Carolina', 'ND' => 'North Dakota',
+    'OH' => 'Ohio', 'OK' => 'Oklahoma', 'OR' => 'Oregon',
+    'PA' => 'Pennsylvania', 'RI' => 'Rhode Island', 'SC' => 'South Carolina',
+    'SD' => 'South Dakota', 'TN' => 'Tennessee', 'TX' => 'Texas',
+    'UT' => 'Utah', 'VT' => 'Vermont', 'VA' => 'Virginia', 'WA' => 'Washington',
+    'DC' => 'Washington D.C.', 'WV' => 'West Virginia', 'WI' => 'Wisconsin',
+    'WY' => 'Wyoming'
+  }
+
+  # Verifies that the serialized attribute "us_state" is a 2 character string
+  # representing a US State or "??" which represents a "N/A" kind of response.
+  private def validate_us_state
+    # tracking a user's US State is currently limited to students.
+    return unless user_type == TYPE_STUDENT
+    # us_state is only a required field if the User lives in the US.
+    return unless %w[US RD].include? country_code
+    # us_state must be selected.
+    if us_state.blank?
+      errors.add(:us_state, :blank)
+      return
+    end
+    # Report an error if an invalid value was submitted (probably tampering).
+    unless US_STATE_DROPDOWN_OPTIONS.include?(us_state)
+      errors.add(:us_state, :invalid)
+    end
   end
 end

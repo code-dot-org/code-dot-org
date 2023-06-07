@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import {concat, intersection} from 'lodash';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import Button from '@cdo/apps/templates/Button';
 import i18n from '@cdo/locale';
@@ -9,9 +10,10 @@ import {
   translatedCourseOfferingSchoolSubjects,
   translatedCourseOfferingDurations,
   subjectsAndTopicsOrder,
+  translatedLabels,
 } from '@cdo/apps/templates/teacherDashboard/CourseOfferingHelpers';
-import {concat, intersection} from 'lodash';
 import style from './curriculum_catalog_card.module.scss';
+import CardLabels from '@cdo/apps/templates/curriculumCatalog/CardLabels';
 
 const CurriculumCatalogCard = ({
   courseDisplayName,
@@ -43,11 +45,7 @@ const CurriculumCatalogCard = ({
     subjectsAndTopics={intersection(
       subjectsAndTopicsOrder,
       concat(subjects, topics)
-    )?.map(
-      subject_or_topic_key =>
-        translatedCourseOfferingSchoolSubjects[subject_or_topic_key] ||
-        translatedCourseOfferingCsTopics[subject_or_topic_key]
-    )}
+    )?.map(subject_or_topic_key => translatedLabels[subject_or_topic_key])}
     quickViewButtonDescription={i18n.quickViewDescription({
       course_name: courseDisplayName,
     })}
@@ -56,7 +54,7 @@ const CurriculumCatalogCard = ({
     isTranslated={isTranslated}
     translationIconTitle={i18n.courseInYourLanguage()}
     isEnglish={isEnglish}
-    pathToCourse={pathToCourse}
+    pathToCourse={pathToCourse + '?viewAs=Instructor'}
   />
 );
 
@@ -106,12 +104,8 @@ const CustomizableCurriculumCatalogCard = ({
     <div className={style.curriculumInfoContainer}>
       <div className={style.labelsAndTranslatabilityContainer}>
         <div className={style.labelsContainer}>
-          {subjectsAndTopics.length > 0 && <div>{subjectsAndTopics[0]}</div>}
-          {subjectsAndTopics.length > 1 && (
-            <div>{`+${subjectsAndTopics.length - 1}`}</div>
-          )}
+          <CardLabels subjectsAndTopics={subjectsAndTopics} />
         </div>
-        {/*TODO [MEG]: Ensure this icon matches spec when we update FontAwesome */}
         {isTranslated && (
           <FontAwesome
             icon="language"
@@ -126,8 +120,7 @@ const CustomizableCurriculumCatalogCard = ({
         <p>{gradeRange}</p>
       </div>
       <div className={style.iconWithDescription}>
-        {/*TODO [MEG]: Update this to be clock fa-solid when we update FontAwesome */}
-        <FontAwesome icon="clock-o" />
+        <FontAwesome icon="clock" className="fa-solid" />
         <p>{duration}</p>
       </div>
       <div
