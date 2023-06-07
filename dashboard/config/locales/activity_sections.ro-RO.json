@@ -8117,6 +8117,7 @@
         },
         "43fde334-6c07-4b1b-b23d-4b67f5fbfbc0": {
           "name": "Încheiere",
+          "description": "**Colectare:** Roagă elevii să trimită prototipurile lor și să trimită aplicațiile lor în App Lab. \n\n**Reflectare:** Roagă elevii să completeze un sondaj rapid cu 5 întrebări în Studio Cod. Vei putea să vizualizezi rezultatele anonime în tabloul de bord al profesorului. ",
           "progression_name": "Reflecţie"
         },
         "b46cfe31-9b5e-4820-b368-fc8a4fa139a7": {
@@ -8335,7 +8336,8 @@
           ]
         },
         "7799c3eb-e76a-465b-9f24-69d6c04a01c7": {
-          "name": "Reflecţie"
+          "name": "Reflecţie",
+          "description": "**Studio Cod:** Invită elevii să răspundă la 5 întrebări de sondaj rapid la începutul acestei unități despre inteligența artificială și învățarea automată. După ce cel puțin 5 elevi au completat sondajul, vei putea vizualiza rezultatele anonimizate în Tabloul de Bord al Profesorului. Unele dintre aceste întrebări vor fi adresate din nou la sfârșitul primului proiect, ceea ce poate fi util pentru a vedea evoluția elevilor și schimbările de atitudine pe parcursul unității."
         },
         "b5acd50c-8f0e-4c22-8918-0e4801b137e1": {
           "tips": [
@@ -8853,6 +8855,9 @@
           "name": "Reflecţie",
           "progression_name": "Reflecţie"
         },
+        "56a94d0e-564a-472e-9008-1438acf4966d": {
+          "progression_name": "Schimbă"
+        },
         "90bc9191-8e68-41bd-b8e9-8291930dca38": {
           "progression_name": "Evenimente"
         },
@@ -9242,6 +9247,9 @@
           "name": "Reflecţie",
           "progression_name": "Reflecţie"
         },
+        "c1741e76-fbd0-48fa-85d3-50beacd5a130": {
+          "progression_name": "Schimbă"
+        },
         "de9506b3-18cc-45c8-a490-9f9b49505977": {
           "progression_name": "Evenimente"
         },
@@ -9407,6 +9415,9 @@
         "4a3c9ed6-af53-4747-9298-b104980a8961": {
           "name": "Reflecţie",
           "progression_name": "Reflecţie"
+        },
+        "acb37390-01f3-460c-a88c-24c6379925a1": {
+          "progression_name": "Schimbă"
         },
         "14876891-4b0e-4960-878d-f5c7b5771261": {
           "progression_name": "Evenimente"
@@ -13545,7 +13556,8 @@
           ]
         },
         "d26ab8fe-dc83-4704-8aba-bd0cdbdd80a4": {
-          "name": "Reflecţie"
+          "name": "Reflecţie",
+          "description": "**Studio Cod:** Invită elevii să răspundă la 5 întrebări de sondaj rapid la începutul acestei unități despre inteligența artificială și învățarea automată. După ce cel puțin 5 elevi au completat sondajul, vei putea vizualiza rezultatele anonimizate în Tabloul de Bord al Profesorului. Unele dintre aceste întrebări vor fi adresate din nou la sfârșitul primului proiect, ceea ce poate fi util pentru a vedea evoluția elevilor și schimbările de atitudine pe parcursul unității."
         },
         "8bdf1f4e-1c20-42bd-a5d5-7217dfa0bd4f": {
           "tips": [
@@ -14594,6 +14606,9 @@
           "tips": [
             null
           ]
+        },
+        "aa167cb8-d7fb-4c0f-8a8a-55ee234635da": {
+          "progression_name": "Schimbă"
         },
         "d0e85c72-53c1-4429-91ab-3d160fc10b20": {
           "tips": [

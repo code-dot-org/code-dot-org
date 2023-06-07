@@ -1101,7 +1101,7 @@
   "goToUnit": "Ir a la Unidad",
   "grade": "Grado",
   "gradeLevel": "Grado {number}",
-  "gradeRange": "Grados: {youngest_grade}-{oldest_grade}",
+  "gradeRange": "{numGrades, plural, one {Grado: {youngestGrade}!} other {Grados: {youngestGrade}-{oldestGrade}}}",
   "greaterThan": "Mayor que",
   "greaterThanOrEqualTo": "Mayor o igual que",
   "groups": "Grupos",

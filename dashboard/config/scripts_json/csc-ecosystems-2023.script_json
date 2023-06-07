@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "csc-ecosystems",
-    "serialized_at": "2023-06-05 23:00:57 UTC",
+    "serialized_at": "2023-06-06 20:32:30 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -62,7 +62,7 @@
       "relative_position": 2,
       "properties": {
         "overview": "In this **skill-building** lesson, students will read about and then program three different solutions to the problem of overfishing.\n\nThis lesson starts where the previous lesson left off, with the model of an unbalanced aquatic ecosystem. First, students will modify the behavior of the boat so it can only move within a specified “fishing zone”. Second, students will program a new event to specify a “fishing season” and a “no fishing season”. Third, students will learn how to use a variable to keep track of the number of fish the boat has removed. The lesson ends with a Check For Understanding level to make sure students learned the three solutions to overfishing.\n",
-        "preparation": "- Play through the levels and review the lesson slides.\n- Decide on pacing between student work time and whole group instruction.\n- Read the provided article on [Understanding Overfishing](https://www.seafoodwatch.org/seafood-basics/sustainable-solutions/avoid-overfishing).",
+        "preparation": "- Play through the levels and review the lesson slides.\n- Decide on pacing between student work time and whole group instruction.\n- Read the provided article on [Understanding Overfishing](https://www.seafoodwatch.org/seafood-basics/sustainable-solutions/avoid-overfishing). Scaffold as needed to meet the needs of your students. \n- Consider assigning students the recommended preparation [(link)](https://levelbuilder-studio.code.org/s/csc-ecosystems-2023/lessons/2#activity-4110188).\n- Consider these related extensions options [(link)](https://levelbuilder-studio.code.org/s/csc-ecosystems-2023/lessons/2#activity-4110189).",
         "purpose": "Students will continue to learn about balanced and unbalanced ecosystems. Using a scientific article about overfishing as a foundation, students will develop a rich understanding of the connections between organisms in an ecosystem. Ultimately, students will have the opportunity to apply what they have learned by modeling a local ecosystem. "
       },
       "seeding_key": {
@@ -605,7 +605,7 @@
       "key": "128e04b7-6b97-4066-bd42-cd4b83e55b42",
       "position": 1,
       "properties": {
-        "description": "This module is a great introduction to computer science through the lens of science. Here are a few options to continue learning more about the CS concepts introduced in this module. \n"
+        "description": "This module is a great introduction to computer science through the lens of science. Here are a few options to continue learning more about the CS concepts introduced in this module. We recommend pursuing these extensions after completing Lesson 3 in this module. \n"
       },
       "seeding_key": {
         "activity_section.key": "128e04b7-6b97-4066-bd42-cd4b83e55b42",
@@ -1529,7 +1529,7 @@
       "chapter": 20,
       "position": 9,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": true,
       "properties": {
         "level_keys": [
           "csc_ecosystems_matching_cfu"

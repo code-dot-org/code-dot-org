@@ -7,7 +7,23 @@
           "description": "Editor HTML/CSS basato sul web.",
           "categories": {
             "html_tags": {
-              "name": "Tag HTML"
+              "name": "Tag HTML",
+              "expressions": {
+                "style": {
+                  "examples": {
+                    "Style": {
+                      "name": "Stile"
+                    }
+                  }
+                },
+                "title": {
+                  "examples": {
+                    "Title": {
+                      "name": "Titolo"
+                    }
+                  }
+                }
+              }
             },
             "css_properties": {
               "name": "Proprietà CSS"
@@ -656,9 +672,24 @@
             "control": {
               "name": "Controlli",
               "expressions": {
+                "clearInterval": {
+                  "palette_params": {
+                    "interval": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "clearTimeout": {
+                  "palette_params": {
+                    "timeout": {
+                      "type": "number"
+                    }
+                  }
+                },
                 "setInterval": {
                   "palette_params": {
                     "ms": {
+                      "type": "number",
                       "description": "Il numero di millisecondi tra ogni esecuzione della funzione."
                     }
                   }
@@ -666,6 +697,7 @@
                 "setTimeout": {
                   "palette_params": {
                     "ms": {
+                      "type": "number",
                       "description": "Il numero di millisecondi di attesa prima di eseguire la funzione."
                     }
                   }
@@ -675,6 +707,34 @@
             "math": {
               "name": "Matematica",
               "expressions": {
+                "mathAbs": {
+                  "palette_params": {
+                    "x": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "mathMax": {
+                  "palette_params": {
+                    "n1, n2,..., nX": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "mathMin": {
+                  "palette_params": {
+                    "n1, n2,..., nX": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "mathRound": {
+                  "palette_params": {
+                    "x": {
+                      "type": "number"
+                    }
+                  }
+                },
                 "mathSqrt": {
                   "palette_params": {
                     "x": {
@@ -695,9 +755,11 @@
                 "randomNumber": {
                   "palette_params": {
                     "min": {
+                      "type": "number",
                       "description": "Il più piccolo numero restituito"
                     },
                     "max": {
+                      "type": "number",
                       "description": "Il più grande numero restituito"
                     }
                   }
@@ -705,9 +767,11 @@
                 "randomNumber_min_max": {
                   "palette_params": {
                     "min": {
+                      "type": "number",
                       "description": "Il più piccolo numero restituito"
                     },
                     "max": {
+                      "type": "number",
                       "description": "Il più grande numero restituito"
                     }
                   }
@@ -736,6 +800,16 @@
                 },
                 "length": {
                   "return_value": "La lunghezza della corda"
+                },
+                "substring": {
+                  "palette_params": {
+                    "start": {
+                      "type": "number"
+                    },
+                    "end": {
+                      "type": "number"
+                    }
+                  }
                 }
               }
             },
@@ -752,7 +826,73 @@
               "name": "Controlli UI",
               "expressions": {
                 "button": {
-                  "short_description": "Crea un pulsante sullo schermo che mostra il testo fornito e a cui fa riferimento l'id dato nella posizione predefinita (0,0)."
+                  "content": "Crea un pulsante a schermo che mostri il _testo_ fornito e riferito dal dato _id_ alla posizione predefinita (0,0).\n\nMolte app utilizzano pulsanti per consentire all'utente di avviare qualche azione dell'app. Dev'essere creato un gestore di eventi per ogni tipo di interazione dell'utente, con il pulsante che utilizza [`onEvent()`(#fff176)](/docs/applab/onEvent/) e l'_id_.",
+                  "examples": {
+                    "Example: Click Me Button": {
+                      "name": "Esempio: Pulsante Cliccami"
+                    },
+                    "Example: Simple Turtle Control 1": {
+                      "name": "Esempio: Controllo Semplice Tartaruga 1",
+                      "description": "Sposta la tartaruga in avanti, a ogni click del pulsante."
+                    },
+                    "Example: Simple Turtle Control 2": {
+                      "name": "Esempio: Controllo Semplice Tartaruga 2",
+                      "description": "Sposta la tartaruga in avanti o all'indietro, a seconda del pulsante cliccato."
+                    }
+                  },
+                  "palette_params": {
+                    "id": {
+                      "description": "L'identificatore univoco per il pulsante. L'id è utilizzato per fare riferimento al pulsante nei gestori di eventi o altre funzioni di modifica degli elementi dell'UI. Deve iniziare per una lettera, non contenere spazi e può contenere lettere, cifre, - e \\_. "
+                    },
+                    "text": {
+                      "description": "Il testo mostrato nel pulsante. "
+                    }
+                  },
+                  "return_value": "Nessun valore restituito. Modifica soltanto la schermata.",
+                  "short_description": "Crea un pulsante sullo schermo che mostra il testo fornito e a cui fa riferimento l'id dato nella posizione predefinita (0,0).",
+                  "tips": "-   Se è presente un altro elemento dell'UI alla posizione (0,0), il pulsante è posizionato alla posizione disponibile successiva, a destra o sotto.\n-   Esistono varie funzioni di modifica dell'elemento dell'UI disponibili: [`setText()`(#fff176)](/docs/applab/setText/), [`showElement()`(#fff176)](/docs/applab/showElement/), [`hideElement()`(#fff176)](/docs/applab/hideElement/), [`deleteElement()`(#fff176)](/docs/applab/deleteElement/), [`setPosition()`(#fff176)](/docs/applab/setPosition/), [`setSize()`(#fff176)](/docs/applab/setSize/). \n-   Esistono varie funzioni di richiesta degli elementi dell'UI disponibili: [`getText()`(#fff176)](/docs/applab/getText/), [`getXPosition()`(#fff176)](/docs/applab/getXPosition/), [`getYPosition()`(#fff176)](/docs/applab/getYPosition/).\n-   I pulsanti possono anche essere creati e inizializzati in Modalità Design."
+                },
+                "checkbox": {
+                  "content": "Crea una casella di controllo sulla schermata con il valore booleano iniziale _spuntato_ e riferito dal dato _id_ alla posizione predefinita (0,0).\n\nAlcune app richiedono che l'utente spunti una casella se acconsentono a qualcosa, come un'affermazione sulla privacy di un'app.",
+                  "examples": {
+                    "Example: Privacy Statement": {
+                      "name": "Esempio: Informativa sulla Privacy"
+                    },
+                    "Example: Checkbox Click Event": {
+                      "name": "Esempio: Evento di Click della Casella",
+                      "description": "Recupera e mostra il valore di una casella di controllo."
+                    }
+                  },
+                  "palette_params": {
+                    "id": {
+                      "description": "L'identificativo unico per l'elemento della schermata. Deve iniziare per una letter, non contenere spazi e può contenere lettere, cifre, - e \\_. |"
+                    },
+                    "checked": {
+                      "description": "Se la casella di controllo è inizialmente selezionata."
+                    }
+                  },
+                  "return_value": "Nessun valore restituito. Modifica soltanto la schermata.",
+                  "short_description": "Crea un casella di controllo sulla schermata con il valore booleano iniziale spuntato e riferito dall'id dato alla posizione predefinita (0,0)."
+                },
+                "deleteElement": {
+                  "examples": {
+                    "Delete on Click": {
+                      "name": "Elimina al Click"
+                    },
+                    "Squash the ant swarm!": {
+                      "name": "Schiaccia lo sciame di formiche!"
+                    }
+                  }
+                },
+                "dropdown": {
+                  "return_value": "Nessun valore restituito. Modifica soltanto la schermata."
+                },
+                "getChecked": {
+                  "examples": {
+                    "Example: Checkbox Click Event": {
+                      "name": "Esempio: Evento di Click della Casella"
+                    }
+                  }
                 },
                 "getProperty": {
                   "palette_params": {
@@ -767,6 +907,9 @@
                 "hideElement": {
                   "content": "## hideElement(id)\n\nNasconde l'elemento con l'id fornito in modo che non venga visualizzato sullo schermo.\n\nGli elementi dell'interfaccia utente posizionati sullo schermo non sono statici. La tua app a volte deve spostarli, ridimensionarli, nasconderli o mostrarli. Tutti gli elementi dell'interfaccia utente (button(), textInput(), textLabel(), dropDown(), checkBox(), radioButton(), image()) possono essere nascosti.",
                   "short_description": "hideElement(id)\nNasconde l'elemento con l'id fornito in modo che non venga visualizzato sullo schermo."
+                },
+                "image": {
+                  "return_value": "Nessun valore restituito. Modifica soltanto la schermata."
                 },
                 "onEvent": {
                   "examples": {
@@ -812,6 +955,9 @@
                     }
                   }
                 },
+                "radioButton": {
+                  "return_value": "Nessun valore restituito. Modifica soltanto la schermata."
+                },
                 "rgb": {
                   "palette_params": {
                     "r": {
@@ -828,6 +974,38 @@
                     }
                   }
                 },
+                "setChecked": {
+                  "palette_params": {
+                    "id": {
+                      "description": "L'identificativo unico per l'elemento della schermata. Deve iniziare per una letter, non contenere spazi e può contenere lettere, cifre, - e \\_. |"
+                    }
+                  },
+                  "return_value": "Nessun valore restituito. Modifica soltanto la schermata."
+                },
+                "setNumber": {
+                  "palette_params": {
+                    "number": {
+                      "type": "number"
+                    }
+                  },
+                  "return_value": "Nessun valore restituito. Modifica soltanto la schermata."
+                },
+                "setPosition": {
+                  "palette_params": {
+                    "x": {
+                      "type": "number"
+                    },
+                    "y": {
+                      "type": "number"
+                    },
+                    "width": {
+                      "type": "number"
+                    },
+                    "height": {
+                      "type": "number"
+                    }
+                  }
+                },
                 "setProperty": {
                   "palette_params": {
                     "id": {
@@ -841,13 +1019,31 @@
                   "short_description": "Imposta una proprietà su un nuovo valore per l'elemento specificato."
                 },
                 "setScreen": {
+                  "return_value": "Nessun valore restituito. Modifica soltanto la schermata.",
                   "short_description": "Imposta lo schermo sullo screenID specificato."
+                },
+                "setSize": {
+                  "palette_params": {
+                    "height": {
+                      "type": "number"
+                    },
+                    "width": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "setText": {
+                  "return_value": "Nessun valore restituito. Modifica soltanto la schermata."
                 },
                 "showElement": {
                   "short_description": "Mostra l'elemento con l'id fornito."
                 },
+                "textInput": {
+                  "return_value": "Nessun valore restituito. Modifica soltanto la schermata."
+                },
                 "textLabel": {
                   "content": "Crea un'etichetta di testo sullo schermo che mostra il _testo_ fornito e referenziato dal _id_ specificato nella posizione predefinita (0,0).\n\nA volte le tue app avranno bisogno di titoli su uno schermo o di parole accanto ad altri elementi dell'interfaccia utente come pulsanti di opzione, caselle di controllo, input di testo ed elenchi a discesa. Se desideri che l'etichetta di testo attivi anche gli eventi con un elemento dell'interfaccia utente diverso, puoi fare riferimento a quell'id utilizzando il terzo parametro opzionale _forID_.",
+                  "return_value": "Nessun valore restituito. Modifica soltanto la schermata.",
                   "short_description": "Crea un'etichetta di testo sullo schermo che mostra il testo fornito e a cui fa riferimento l'id dato nella posizione predefinita (0,0)."
                 }
               }
@@ -857,10 +1053,28 @@
               "expressions": {
                 "circle": {
                   "palette_params": {
+                    "x": {
+                      "type": "number"
+                    },
+                    "y": {
+                      "type": "number"
+                    },
                     "radius": {
+                      "type": "number",
                       "description": "Il raggio del cerchio, in pixel."
                     }
                   }
+                },
+                "createCanvas": {
+                  "palette_params": {
+                    "[width]": {
+                      "type": "number"
+                    },
+                    "[height]": {
+                      "type": "number"
+                    }
+                  },
+                  "return_value": "Nessun valore restituito. Modifica soltanto la schermata."
                 },
                 "drawImage": {
                   "palette_params": {
@@ -868,10 +1082,18 @@
                       "description": "La posizione x in pixel dell'angolo superiore sinistro dell'immagine da disegnare."
                     },
                     "x": {
+                      "type": "number",
                       "description": "La posizione x in pixel dell'angolo superiore sinistro dell'immagine da disegnare."
                     },
                     "y": {
+                      "type": "number",
                       "description": "La posizione y in pixel dell'angolo superiore sinistro dell'immagine da disegnare."
+                    },
+                    "[width]": {
+                      "type": "number"
+                    },
+                    "[height]": {
+                      "type": "number"
                     }
                   }
                 },
@@ -881,9 +1103,11 @@
                       "type": "oggetto"
                     },
                     "x": {
+                      "type": "number",
                       "description": "La posizione x in pixel a partire dall'angolo superiore sinistro dell'immagine."
                     },
                     "y": {
+                      "type": "number",
                       "description": "La posizione y in pixel a partire dall'angolo superiore sinistro dell'immagine."
                     }
                   },
@@ -895,9 +1119,11 @@
                       "type": "oggetto"
                     },
                     "x": {
+                      "type": "number",
                       "description": "La posizione x in pixel a partire dall'angolo superiore sinistro dell'immagine."
                     },
                     "y": {
+                      "type": "number",
                       "description": "La posizione y in pixel a partire dall'angolo superiore sinistro dell'immagine."
                     }
                   }
@@ -908,9 +1134,11 @@
                       "type": "oggetto"
                     },
                     "x": {
+                      "type": "number",
                       "description": "La posizione x in pixel a partire dall'angolo superiore sinistro dell'immagine."
                     },
                     "y": {
+                      "type": "number",
                       "description": "La posizione y in pixel a partire dall'angolo superiore sinistro dell'immagine."
                     }
                   }
@@ -918,15 +1146,19 @@
                 "getImageData": {
                   "palette_params": {
                     "x": {
+                      "type": "number",
                       "description": "La posizione x in pixel per iniziare l'acquisizione."
                     },
                     "y": {
+                      "type": "number",
                       "description": "La posizione y in pixel per iniziare l'acquisizione."
                     },
                     "width": {
+                      "type": "number",
                       "description": "La larghezza del rettangolo di delimitazione per acquisire i dati dell'immagine."
                     },
                     "height": {
+                      "type": "number",
                       "description": "L'altezza del rettangolo di delimitazione per acquisire i dati dell'immagine."
                     }
                   }
@@ -937,10 +1169,28 @@
                       "type": "oggetto"
                     },
                     "x": {
+                      "type": "number",
                       "description": "La posizione x in pixel a partire dall'angolo superiore sinistro dell'immagine."
                     },
                     "y": {
+                      "type": "number",
                       "description": "La posizione y in pixel a partire dall'angolo superiore sinistro dell'immagine."
+                    }
+                  }
+                },
+                "line": {
+                  "palette_params": {
+                    "x1": {
+                      "type": "number"
+                    },
+                    "y1": {
+                      "type": "number"
+                    },
+                    "x2": {
+                      "type": "number"
+                    },
+                    "y2": {
+                      "type": "number"
                     }
                   }
                 },
@@ -950,9 +1200,11 @@
                       "type": "oggetto"
                     },
                     "x": {
+                      "type": "number",
                       "description": "La posizione x in pixel a partire dall'angolo in alto a sinistra dell'immagine per posizionare i dati sulla tela."
                     },
                     "y": {
+                      "type": "number",
                       "description": "La posizione y in pixel a partire dall'angolo in alto a sinistra dell'immagine per posizionare i dati sulla tela."
                     }
                   }
@@ -960,15 +1212,19 @@
                 "rect": {
                   "palette_params": {
                     "x": {
+                      "type": "number",
                       "description": "La posizione x in pixel dell'angolo superiore sinistro del rettangolo."
                     },
                     "y": {
+                      "type": "number",
                       "description": "La posizione y in pixel dell'angolo superiore sinistro del rettangolo."
                     },
                     "width": {
+                      "type": "number",
                       "description": "La larghezza orizzontale in pixel del rettangolo."
                     },
                     "height": {
+                      "type": "number",
                       "description": "L'altezza verticale in pixel del rettangolo."
                     }
                   }
@@ -979,12 +1235,15 @@
                       "type": "oggetto"
                     },
                     "x": {
+                      "type": "number",
                       "description": "La posizione x in pixel a partire dall'angolo superiore sinistro dell'immagine."
                     },
                     "y": {
+                      "type": "number",
                       "description": "La posizione y in pixel a partire dall'angolo superiore sinistro dell'immagine."
                     },
                     "alphaValue": {
+                      "type": "number",
                       "description": "La quantità di alfa (opacità) (da 0 a 255) da impostare nel pixel."
                     }
                   },
@@ -996,12 +1255,15 @@
                       "type": "oggetto"
                     },
                     "x": {
+                      "type": "number",
                       "description": "La posizione x in pixel a partire dall'angolo superiore sinistro dell'immagine."
                     },
                     "y": {
+                      "type": "number",
                       "description": "La posizione y in pixel a partire dall'angolo superiore sinistro dell'immagine."
                     },
                     "blueValue": {
+                      "type": "number",
                       "description": "La quantità di blu (da 0 a 255) da impostare nel pixel."
                     }
                   },
@@ -1020,12 +1282,15 @@
                       "type": "oggetto"
                     },
                     "x": {
+                      "type": "number",
                       "description": "La posizione x in pixel a partire dall'angolo superiore sinistro dell'immagine."
                     },
                     "y": {
+                      "type": "number",
                       "description": "La posizione y in pixel a partire dall'angolo superiore sinistro dell'immagine."
                     },
                     "greenValue": {
+                      "type": "number",
                       "description": "La quantità di verde (da 0 a 255) da impostare nel pixel."
                     }
                   },
@@ -1037,21 +1302,27 @@
                       "type": "oggetto"
                     },
                     "x": {
+                      "type": "number",
                       "description": "La posizione x in pixel a partire dall'angolo superiore sinistro dell'immagine."
                     },
                     "y": {
+                      "type": "number",
                       "description": "La posizione y in pixel a partire dall'angolo superiore sinistro dell'immagine."
                     },
                     "red": {
+                      "type": "number",
                       "description": "La quantità di rosso (da 0 a 255) da impostare nel pixel."
                     },
                     "green": {
+                      "type": "number",
                       "description": "La quantità di verde (da 0 a 255) da impostare nel pixel."
                     },
                     "blue": {
+                      "type": "number",
                       "description": "La quantità di blu (da 0 a 255) da impostare nel pixel."
                     },
                     "alpha": {
+                      "type": "number",
                       "description": "Facoltativo. La quantità di opacità (da 0 a 255) da impostare nel pixel. Il valore predefinito è 255 (opacità completa)."
                     }
                   }
@@ -1062,12 +1333,15 @@
                       "type": "oggetto"
                     },
                     "x": {
+                      "type": "number",
                       "description": "La posizione x in pixel a partire dall'angolo superiore sinistro dell'immagine."
                     },
                     "y": {
+                      "type": "number",
                       "description": "La posizione y in pixel a partire dall'angolo superiore sinistro dell'immagine."
                     },
                     "redValue": {
+                      "type": "number",
                       "description": "La quantità di rosso (da 0 a 255) da impostare nel pixel."
                     }
                   },
@@ -1077,6 +1351,13 @@
                   "palette_params": {
                     "color": {
                       "type": "Stringa"
+                    }
+                  }
+                },
+                "setStrokeWidth": {
+                  "palette_params": {
+                    "width": {
+                      "type": "number"
                     }
                   }
                 }
@@ -1208,7 +1489,32 @@
               "name": "Tartaruga",
               "expressions": {
                 "arcLeft": {
+                  "palette_params": {
+                    "angle": {
+                      "type": "number"
+                    },
+                    "radius": {
+                      "type": "number"
+                    }
+                  },
                   "short_description": "Sposta la tartaruga in avanti e verso sinistra in un arco circolare e liscio."
+                },
+                "arcRight": {
+                  "palette_params": {
+                    "angle": {
+                      "type": "number"
+                    },
+                    "radius": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "dot": {
+                  "palette_params": {
+                    "radius": {
+                      "type": "number"
+                    }
+                  }
                 },
                 "getX": {
                   "short_description": "Ottiene la coordinata x corrente in pixel della tartaruga."
@@ -1222,20 +1528,40 @@
                 "move": {
                   "palette_params": {
                     "x": {
+                      "type": "number",
                       "description": "Il numero di pixel per spostare la tartaruga verso destra."
                     },
                     "y": {
+                      "type": "number",
                       "description": "Il numero di pixel per spostare la tartaruga verso il basso."
                     }
                   }
                 },
                 "moveBackward": {
+                  "palette_params": {
+                    "pixels": {
+                      "type": "number"
+                    }
+                  },
                   "short_description": "Sposta la tartaruga indietro di un determinato numero di pixel dalla direzione corrente."
                 },
                 "moveForward": {
+                  "palette_params": {
+                    "pixels": {
+                      "type": "number"
+                    }
+                  },
                   "short_description": "Sposta la tartaruga in avanti di un determinato numero di pixel nella direzione corrente."
                 },
                 "moveTo": {
+                  "palette_params": {
+                    "x": {
+                      "type": "number"
+                    },
+                    "y": {
+                      "type": "number"
+                    }
+                  },
                   "short_description": "Sposta la tartaruga in una posizione specifica (x, y) sullo schermo."
                 },
                 "penColor": {
@@ -1253,6 +1579,15 @@
                   "palette_params": {
                     "r": {
                       "type": "Numero"
+                    },
+                    "g": {
+                      "type": "number"
+                    },
+                    "b": {
+                      "type": "number"
+                    },
+                    "a": {
+                      "type": "number"
                     }
                   },
                   "short_description": "Utilizzando i valori RGBA, imposta il colore della penna usata dalla tartaruga per disegnare linee e punti."
@@ -1261,21 +1596,46 @@
                   "short_description": "Prende la penna in modo che la tartaruga non tracci una linea mentre si muove."
                 },
                 "penWidth": {
+                  "palette_params": {
+                    "width": {
+                      "type": "number"
+                    }
+                  },
                   "short_description": "Imposta la larghezza della linea in pixel che la tartaruga traccia dietro di sé mentre si muove."
                 },
                 "show": {
                   "short_description": "Rende visibile la tartaruga nella sua posizione attuale."
                 },
                 "speed": {
+                  "palette_params": {
+                    "value": {
+                      "type": "number"
+                    }
+                  },
                   "short_description": "Imposta la velocità di esecuzione dell'app, che include la velocità della tartaruga."
                 },
                 "turnLeft": {
+                  "palette_params": {
+                    "angle": {
+                      "type": "number"
+                    }
+                  },
                   "short_description": "Ruota la tartaruga a sinistra dell'angolo specificato. La posizione della tartaruga rimane la stessa."
                 },
                 "turnRight": {
+                  "palette_params": {
+                    "angle": {
+                      "type": "number"
+                    }
+                  },
                   "short_description": "Ruota la tartaruga verso destra dell'angolo specificato. La posizione della tartaruga rimane la stessa."
                 },
                 "turnTo": {
+                  "palette_params": {
+                    "angle": {
+                      "type": "number"
+                    }
+                  },
                   "short_description": "Cambia la direzione della tartaruga in base a un angolo specifico. 0 è in alto, 90 è a destra, 180 è in basso e 270 è a sinistra."
                 }
               }
@@ -1283,9 +1643,17 @@
             "control": {
               "name": "Controlli",
               "expressions": {
+                "clearInterval": {
+                  "palette_params": {
+                    "interval": {
+                      "type": "number"
+                    }
+                  }
+                },
                 "clearTimeout": {
                   "palette_params": {
                     "timeout": {
+                      "type": "number",
                       "description": "Il valore restituito dalla funzione setTimeout per annullare."
                     }
                   }
@@ -1293,6 +1661,7 @@
                 "setInterval": {
                   "palette_params": {
                     "ms": {
+                      "type": "number",
                       "description": "Il numero di millisecondi tra ogni esecuzione della funzione."
                     }
                   }
@@ -1300,6 +1669,7 @@
                 "setTimeout": {
                   "palette_params": {
                     "ms": {
+                      "type": "number",
                       "description": "Il numero di millisecondi di attesa prima di eseguire la funzione."
                     }
                   }
@@ -1326,6 +1696,27 @@
             "math": {
               "name": "Matematica",
               "expressions": {
+                "mathAbs": {
+                  "palette_params": {
+                    "x": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "mathMax": {
+                  "palette_params": {
+                    "n1, n2,..., nX": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "mathMin": {
+                  "palette_params": {
+                    "n1, n2,..., nX": {
+                      "type": "number"
+                    }
+                  }
+                },
                 "mathPow": {
                   "palette_params": {
                     "x": {
@@ -1333,6 +1724,13 @@
                     },
                     "y": {
                       "type": "Numero"
+                    }
+                  }
+                },
+                "mathRound": {
+                  "palette_params": {
+                    "x": {
+                      "type": "number"
                     }
                   }
                 },
@@ -1356,9 +1754,11 @@
                 "randomNumber_min_max": {
                   "palette_params": {
                     "min": {
+                      "type": "number",
                       "description": "Il più piccolo numero restituito"
                     },
                     "max": {
+                      "type": "number",
                       "description": "Il più grande numero restituito"
                     }
                   }
@@ -1366,9 +1766,11 @@
                 "randomNumber": {
                   "palette_params": {
                     "min": {
+                      "type": "number",
                       "description": "Il più piccolo numero restituito"
                     },
                     "max": {
+                      "type": "number",
                       "description": "Il più grande numero restituito"
                     }
                   }
@@ -1378,6 +1780,13 @@
             "variables": {
               "name": "Variabili",
               "expressions": {
+                "declareAssign_object": {
+                  "examples": {
+                    "Choose Your Own Adventure": {
+                      "name": "Scegli La Tua Avventura"
+                    }
+                  }
+                },
                 "declareAssign_list_123": {
                   "short_description": "Dichiarare e assegnare un array a una variabile"
                 },
@@ -1392,6 +1801,16 @@
                   "palette_params": {
                     "searchValue": {
                       "description": "La stringa da cercare."
+                    }
+                  }
+                },
+                "substring": {
+                  "palette_params": {
+                    "start": {
+                      "type": "number"
+                    },
+                    "end": {
+                      "type": "number"
                     }
                   }
                 },
@@ -1410,8 +1829,22 @@
                     }
                   }
                 },
+                "insertItem": {
+                  "palette_params": {
+                    "index": {
+                      "type": "number"
+                    }
+                  }
+                },
                 "length": {
                   "return_value": "La lunghezza della corda"
+                },
+                "removeItem": {
+                  "palette_params": {
+                    "index": {
+                      "type": "number"
+                    }
+                  }
                 }
               }
             },
@@ -1436,6 +1869,20 @@
             "maker": {
               "name": "Autore",
               "expressions": {
+                "createButton": {
+                  "palette_params": {
+                    "Pin": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "createLed": {
+                  "palette_params": {
+                    "Pin": {
+                      "type": "number"
+                    }
+                  }
+                },
                 "pinMode": {
                   "palette_params": {
                     "pin": {
@@ -1454,10 +1901,25 @@
                 "isPressed": {
                   "return_value": "Booleano"
                 },
+                "buzzer.frequency": {
+                  "palette_params": {
+                    "frequency": {
+                      "type": "number"
+                    },
+                    "duration": {
+                      "type": "number"
+                    }
+                  }
+                },
                 "buzzer.note": {
                   "examples": {
                     "Circuit Piano ": {
                       "name": "Circuit Piano "
+                    }
+                  },
+                  "palette_params": {
+                    "duration": {
+                      "type": "number"
                     }
                   }
                 },
@@ -1479,6 +1941,54 @@
                   "palette_params": {
                     "tempo": {
                       "type": "Numero"
+                    }
+                  }
+                },
+                "blink": {
+                  "palette_params": {
+                    "interval": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "color": {
+                  "palette_params": {
+                    "red": {
+                      "type": "number"
+                    },
+                    "green": {
+                      "type": "number"
+                    },
+                    "blue": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "intensity": {
+                  "palette_params": {
+                    "brightness": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "pulse": {
+                  "palette_params": {
+                    "interval": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "led.blink": {
+                  "palette_params": {
+                    "interval": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "led.pulse": {
+                  "palette_params": {
+                    "interval": {
+                      "type": "number"
                     }
                   }
                 },

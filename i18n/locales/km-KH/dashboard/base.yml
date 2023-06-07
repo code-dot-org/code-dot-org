@@ -355,7 +355,9 @@ km:
       iceage: 'Ice Age'
       infinity: 'អនន្ត'
       minecraft_adventurer: 'Minecraft Adventurer'
+      minecraft_designer: 'ម៉ាញក្រាស់'
       playlab_k1: 'បន្ទប់លេង (សម្រាប់អ្នកដែលទើបរៀនអាន)'
+      poetry: 'កំណាព្យ'
       spritelab: 'Sprite Lab'
       starwarsblocks: 'Star Wars (ប្លុក)'
       starwarsblocks_hour: 'Star Wars (ប្លុក)'
@@ -485,6 +487,8 @@ km:
     notes: 'គ្មាន​វីដេអូ​ទេ? មើល​កំណត់​ចំណាំ។'
     autoplay_option: 'ចាក់​វីដេអូ​ដោយ​ស្វ័យប្រវត្តិ'
     download: 'ទាញយក​វីដេអូ '
+    show_notes: 'បង្ហាញកំណត់ចំណាំ'
+    show_video: 'បង្ហាញកំណត់ចំណាំ'
     label: 'វីដេអូ'
   compatibility:
     upgrade:
@@ -512,6 +516,8 @@ km:
   upsell:
     applab:
       title: 'មន្ទីរពិសោធន៍កម្មវិធី​'
+    aquatic:
+      title: "ម៉ាញក្រាស់"
     dance-2019:
       title: 'Dance Party'
     dance:
@@ -522,11 +528,16 @@ km:
     gamelab:
       title: "មន្ទីរពិសោធន៍ ល្បែង"
     hero:
+      title: "ម៉ាញក្រាស់"
       body: "Minecraft បានត្រលប់មកវិញក្នុងកម្មវិធី Hour of Code ជាមួយសកម្មភាពថ្មី‌! ដំណើរផ្សងព្រេងរបស់ Minecraft ជាមួយការសរសេរកូដ។"
     hoc-encryption:
       title: "ការអ៉ីនគ្រីបធម្មតា"
     hoc:
       body: 'សាក​ល្បង​ផ្នែក​មូលដ្ឋាន​នៃ​វិទ្យាសាស្ត្រ​កុំព្យូទ័រ។ មនុស្ស​ជា​ច្រើន​លាន​នាក់​បាន​សាកល្បង​រួច​ហើយ។'
+    minecraft:
+      title: "ម៉ាញក្រាស់"
+    minecraft2016:
+      title: "ម៉ាញក្រាស់"
     widgets:
       audience: "អាយុ 14 ឆ្នាំឡើង"
     unplugged_conditionals:
@@ -622,6 +633,9 @@ km:
       email_opt_in:
         opt_in_yes: 'យល់ព្រម'
         opt_in_no: 'ទេ'
+  course_offering:
+    headers:
+      minecraft: 'ម៉ាញក្រាស់'
   cookie_banner:
     accept: 'ខ្ញុំ​យល់​ព្រម'
   page_not_found_title: "រកទំព័រពុំឃើញ"
