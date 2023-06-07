@@ -31,10 +31,16 @@
   "starwarsblocks": "Chiến tranh giữa các vì sao: Xây dựng thiên hà bằng mã lệnh (Blockly)",
   "text-compression": "Nén văn bản",
   "csa-self-paced-pl": "Sử dụng Code.org cho KHMT A Bài mở đầu Giáo viên",
+  "ai-ethics": "Hoạt động Đạo đức trí tuệ nhân tạo",
+  "counting-csc": "Hoạt động Đếm",
+  "explore-data-1": "Hoạt động Dữ liệu",
   "outbreak-csc": "Dịch bệnh bùng phát",
+  "spelling-bee": "Hoạt động Chính tả",
   "poem-art": "Tranh thơ ca",
+  "poetry": "Lập trình bằng bài thơ",
   "hello-world-animals": "Xin chào Thế giới: Động vật",
   "hello-world-food": "Xin chào Thế giới: Đồ ăn",
+  "hello-world-retro": "Xin chào cả thế giới: Cổ điển",
   "edit-code": "Hiệu chỉnh mã",
   "tesstest921": "tesstest921",
   "poetry-hoc3": "poetry-hoc3",
@@ -53,5 +59,6 @@
   "hello-world-space": "Xin chào Thế giới: vũ trụ",
   "hello-world-soccer": "Hello World: Bóng đá",
   "playground": "sân chơi",
-  "design-process": "Quy trình thiết kế"
+  "design-process": "Quy trình thiết kế",
+  "web-development": "Phát triển web"
 }

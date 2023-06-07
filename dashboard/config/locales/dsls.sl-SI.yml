@@ -1916,7 +1916,8 @@ sl-SI:
         - {}
         - {}
         questions:
-        - {}
+        - text: Bodite pozorni na spodnjo kodo. Če bi koda tekla do konca (in ignorirala
+            morebitne napake), koliko kosov zaklada bi Laurel zbrala?
       grade2_multi_collector_A_predict1_2018:
         answers:
         - {}
@@ -1946,23 +1947,33 @@ sl-SI:
         - {}
         - {}
         - {}
-        - {}
+        - text: Umetnik bo narisal pentagon
+          feedback: Nepravilno. Umetnik nariše kvadrat.
         questions:
         - {}
       courseC_multi_harvester_loops11_predict1_2021:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: '4'
+          feedback: Nepravilno. Kmet bo zbral 4 buče v vsaki od 3 zank. 4-krat 3 je
+            12!
+        - text: '12'
+          correct: true
+          feedback: Pravilno!
+        - text: '15'
+          feedback: Nepravilno. Kmet bo zbral 4 buče v vsaki od 3 zank. 4-krat 3 je
+            12!
+        - text: '20 '
+          feedback: Nepravilno. Kmet bo zbral 4 buče v vsaki od 3 zank. 4-krat 3 je
+            12!
         questions:
-        - {}
+        - text: Bodite pozorni na spodnjo kodo. Koliko buč bo kmet zbral, ko kliknete
+            »Zaženi«?
       courseC_multi_maze_debugging8_predict1_2021:
         answers:
         - {}
         - {}
         - {}
-        - {}
+        - text: Scrat se ne bo premaknil iz prvega bloka.
         questions:
         - {}
       courseC_multi_maze_programming8_predict1_2021:
@@ -1970,7 +1981,7 @@ sl-SI:
         - {}
         - {}
         - {}
-        - {}
+        - text: Ptica se bo zaletela v steno.
         questions:
         - {}
       courseC_multi_starWars_predict1_2021:
@@ -1978,7 +1989,7 @@ sl-SI:
         - {}
         - {}
         - {}
-        - {}
+        - text: BB-8 se bo premaknil samo 3 korake.
         questions:
         - {}
       courseC_multi_starWars_predict2_2021:
@@ -1986,7 +1997,7 @@ sl-SI:
         - {}
         - {}
         - {}
-        - {}
+        - text: BB-8 se bo po prvi zanki obrnil v napačno smer.
         questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1_2021:
@@ -2179,7 +2190,7 @@ sl-SI:
         - {}
         - {}
         - {}
-        - {}
+        - text: Laurel bo z uporabo te kode zbrala 1 kos zaklada.
         questions:
         - {}
       CSD Games Properties multi predict_2021:
@@ -8960,7 +8971,8 @@ sl-SI:
         - {}
         - {}
         - {}
-        - {}
+        - text: Umetnik bo narisal pentagon
+          feedback: Nepravilno. Umetnik nariše kvadrat.
         questions:
         - {}
       courseC_multi_harvester_loops11_predict12022:
@@ -8973,12 +8985,12 @@ sl-SI:
         - {}
       courseC_multi_maze_debugging8_predict12022:
         answers:
-        - feedback: Nepravilno. Scrat ne bo dosegel želoda, ker se obrne v napačno
+        - feedback: Nepravilno. Scrat ne bo dosegel želoda, ker se obrne na napačno
             smer.
         - feedback: Pravilno! Scrat se obrne v napačno smer in ne bo dosegel želoda.
-        - feedback: Nepravilno. Scrat ne bo dosegel želoda, ker se obrne v napačno
+        - feedback: Nepravilno. Scrat ne bo dosegel želoda, ker se obrne na napačno
             smer.
-        - {}
+        - text: Scrat se ne bo premaknil iz prvega bloka.
         questions:
         - {}
       courseC_multi_maze_programming8_predict12022:
@@ -8986,7 +8998,7 @@ sl-SI:
         - {}
         - {}
         - {}
-        - {}
+        - text: Ptica se bo zaletela v steno.
         questions:
         - {}
       courseC_multi_starWars_predict12022:
@@ -8994,7 +9006,7 @@ sl-SI:
         - {}
         - {}
         - {}
-        - {}
+        - text: BB-8 se bo premaknil samo 3 korake.
         questions:
         - {}
       courseC_multi_starWars_predict22022:
@@ -9002,7 +9014,7 @@ sl-SI:
         - {}
         - {}
         - {}
-        - {}
+        - text: BB-8 se bo po prvi zanki obrnil v napačno smer.
         questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict12022:
@@ -9195,7 +9207,7 @@ sl-SI:
         - {}
         - {}
         - {}
-        - {}
+        - text: Laurel bo z uporabo te kode zbrala 1 kos zaklada.
         questions:
         - {}
       Begin planning your project_2018_2019:
@@ -9323,3 +9335,12 @@ sl-SI:
         - {}
         questions:
         - {}
+      BigEvent-Unplugged_2021:
+        markdown: |
+          # Veliki dogodek
+
+          V računalništvu so dogodki dejanja, ki jih računalnik spremlja. V tej lekciji se boste odzvali drugače, odvisno od tega, kateri gumb pritisnete.
+      courseF_EOC_samples_2021:
+        description: Začeli boste svoj končni projekt. Preden začnete, preživite nekaj
+          časa gledal na primer projektov.
+        display_name: Projekt ob koncu tečaja

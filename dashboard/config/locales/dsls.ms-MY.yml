@@ -6712,7 +6712,7 @@ ms-MY:
           correct: true
         - correct: true
         questions:
-        - {}
+        - text: Pembangunan Web
       csd-post-survey-2019-I like cs:
         answers:
         - correct: true
@@ -10852,6 +10852,57 @@ ms-MY:
         - {}
       csp_unit_assessment_overview:
         content1: penerangan di sini
+        teacher_markdown: |-
+          ### PERHATIAN: Apakah penilaian ini dan bukan
+
+          * Penilaian ini **direka bentuk mengikut "gaya" AP** penilaian pelbagai pilihan.
+
+          * Ini bermakna soalan **tidak** khusus mengenai pelajaran yang diliputi sebelum titik ini. Sebaliknya, soalan berkaitan dengan objektif pembelajaran AP asas yang secara teorinya telah ditangani.
+
+          * Ini **bermakna** pelajar mungkin perlu melakukan beberapa ekstrapolasi daripada apa yang telah mereka pelajari untuk menjawab soalan.
+
+          * Ini **bermakna** soalan mungkin "susah", terutamanya untuk pendedahan kali pertama.
+
+          Jadi secara keseluruhan, **GUNAKAN DENGAN CERMAT**
+
+          * Gunakan pertimbangan anda tentang kepentingan yang perlu dilampirkan pada penilaian ini.
+          * Anda tidak perlu menggunakan penilaian ini untuk menilai pelajar, atau...
+               * Anda boleh menilai pelajar dengan cara yang berbeza daripada hanya mengambil % betul.
+
+          * Pastikan anda menggunakan cara yang akan mengekalkan semangat kelas dari segi penyiasatan pengetahuan.
+          * Jika anda gugup bahawa pelajar akan berkecil hati, maka mungkin rangka semula penilaian ini sebagai peluang untuk menyiasat -- biarkan pelajar mencuba soalan, kemudian pergi menyelidik jawapannya, dan ubah apa yang mereka silap, atau bina set mereka sendiri soalan.
+
+
+          ---
+
+          #### F.A.Q. -- Cara menyediakan, mentadbir dan menyemak penilaian
+
+          Sila lihat larian kami **[F.A.Q. dokumen di sini](https://docs.google.com/document/d/1zEpD1PFt6ec2S8ourxuMH0HD6tiyRvqAGUKKGDCOt-qs/edit#heading=h.kewgp6z8qdde)** yang mengandungi:
+
+          * tangkapan skrin tentang cara menyediakan, mentadbir dan menyemak penilaian
+          * menangani isu/masalah biasa
+
+
+          #### Ringkasan pantas tentang cara melihat / menyemak jawapan pelajar
+
+          1. Pergi ke [Papan Pemuka Guru] anda(https://code.org/teacher-dashboard#/)
+          2. Pilih bahagian Prinsip CS anda
+          3. Anda akan melihat beberapa tab ungu termasuk Respons Teks, Penilaian, dsb.
+          4. Klik **Penilaian/Tinjauan**
+          5. Daripada menu lungsur pemilih kursus, **pilih unit yang terdapat penilaian ini (cth. Unit 1: Internet)**
+          6. Bagi semua pelajar yang telah *menyerahkan* penilaian mereka, anda akan melihat dua jadual:
+              * Jadual pertama ialah paparan ringkasan yang meringkaskan peratusan yang betul daripada semua pelajar yang menyerahkan, termasuk cap masa yang mereka serahkan pada
+              * Jadual kedua ialah senarai lengkap bagi setiap jawapan bagi setiap soalan yang dikemukakan oleh setiap pelajar
+
+               Di atas kedua-dua jadual ini terdapat butang **Muat turun (atau eksport) sebagai csv** - membolehkan anda memproses jawapan dalam hamparan (disyorkan).
+
+          7. Jika anda perlu membenarkan pelajar MENYAHSERAHKAN ujian mereka, arahkan pelajar untuk menavigasi ke halaman terakhir ujian dan tekan "Nyahserahkan."
+
+          **NOTA tentang NYAHSERAH:**
+
+          Anda harus membuat peraturan yang jelas dengan pelajar anda tentang membatalkan penyerahan ujian. Pelajar mungkin berpendapat ini adalah cara yang baik untuk menukar jawapan selepas ujian tamat (iaitu menipu) tetapi anda akan melihat cap masa apabila pelajar menyerahkan ujian.
+
+          Adalah dicadangkan bahawa anda hanya menetapkan bahawa anda tidak akan mempertimbangkan untuk memberi markah atau menggred sebarang ujian selepas masa tertentu. Jika ia tidak diserahkan sebelum tarikh akhir yang ditetapkan, ia seperti anda tidak menerimanya.
       curriculum-how-challenging:
         answers:
         - correct: true
@@ -12475,3 +12526,290 @@ ms-MY:
         questions:
         - text: Perhatikan dengan teliti kod di bawah. Apakah yang akan berlaku selepas
             anda mengklik "Jalankan"?
+      OPD-K5 Outline:
+        markdown: |-
+          # Bermula > Rangka Kursus
+
+          Kursus ini dibahagikan kepada sebelas peringkat, dan setiap peringkat terdiri daripada "tahap" atau "teka-teki." Berikut ialah gambaran keseluruhan tentang perkara yang akan anda pelajari jika anda melengkapkan keseluruhan kursus:
+
+          ## Peringkat 1: Bermula (10-30 minit)
+
+          Dengan melengkapkan Peringkat 1, anda akan:
+
+          - Semak butiran kursus
+          - Berlatih menggunakan Code.org sebagai platform pembelajaran
+          - Rancang penyertaan anda dalam kursus ini
+
+          ## Peringkat 2: Asas Sains Komputer (10-30 minit)
+
+          Dengan melengkapkan Peringkat 2, anda akan:
+
+          - Takrifkan sains komputer dan semak perbendaharaan kata utama
+          - Mengenal pasti faedah pengajaran dan pembelajaran sains komputer
+          - Bezakan antara "pengekodan" dan "sains komputer"
+          - Terangkan faedah memulakan kod menggunakan pengaturcaraan visual
+
+          ## Peringkat 3: Memandang Ke Hadapan (10 minit)
+
+          Dengan melengkapkan Peringkat 3, anda akan:
+
+          - Bersedia untuk "menguasai asas" sains komputer dengan menyemak perkara seterusnya dalam kursus
+
+          ## Peringkat 4: Menguasai Asas: Urutan (10-30 minit)
+
+          Dengan melengkapkan Peringkat 4, anda akan:
+
+          - Tentukan "program" dan "algoritma"
+          - Gunakan enjin pengaturcaraan visual Code.org untuk menulis atur cara mudah
+          - Refleksi aplikasi bilik darjah
+
+          ## Peringkat 5: Menguasai Asas: Gelung (20-45 minit)
+
+          Dengan melengkapkan Peringkat 5, anda akan:
+
+          - Tentukan "gelung" dan terangkan kepentingannya
+          - Amalkan pengekodan gelung mudah
+          - Refleksi aplikasi bilik darjah
+
+          ## Peringkat 6: Menguasai Asas: Bersyarat (20-45 minit)
+
+          Dengan melengkapkan Peringkat 6, anda akan:
+
+          - Tentukan "syarat" dan terangkan kepentingannya
+          - Amalkan pengekodan syarat mudah
+          - Refleksi aplikasi bilik darjah
+
+          ## Peringkat 7: Menguasai Asas: Fungsi (20-45 minit)
+
+          Dengan melengkapkan Peringkat 7, anda akan:
+
+          - Tentukan "fungsi" dan terangkan kepentingannya
+          - Amalkan pengekodan fungsi mudah
+          - Refleksi aplikasi bilik darjah
+
+          ## Peringkat 8: Menguasai Asas: Acara (30-60 minit)
+
+          Dengan melengkapkan Peringkat 8, anda akan:
+
+          - Tentukan "peristiwa" dan terangkan kepentingannya
+          - Berlatih pengekodan acara mudah
+          - Refleksi aplikasi bilik darjah
+
+          ## Peringkat 9: Amalan Terbaik untuk Mengajar Sains Komputer (30-60 minit)
+
+          Dengan melengkapkan Peringkat 9, anda akan:
+
+          - Semak amalan terbaik untuk mengajar sains komputer
+
+          ## Peringkat 10: Perancangan (30-60 minit)
+
+          Dengan melengkapkan Peringkat 10, anda akan:
+
+          - Teroka sumber Code.org, termasuk papan pemuka guru
+          - Rancang bagaimana anda boleh mengintegrasikan sains komputer ke dalam amalan anda
+
+          ## Peringkat 11: Langkah Seterusnya (10-30 minit)
+
+          Dengan melengkapkan Peringkat 11, anda akan
+
+          - Refleksi pembelajaran anda
+          - Rancang langkah seterusnya yang boleh anda ambil untuk meneruskan pembelajaran anda
+          - Berhubung dengan komuniti global rakan pendidik yang berminat dalam pendidikan sains komputer
+          - Kongsi pengambilan dan maklum balas anda tentang kursus ini
+
+          > **Nota**: Masa yang dicadangkan disertakan untuk membantu anda merancang pembelajaran anda. Sila ambil perhatian bahawa anda mungkin ingin meluangkan lebih atau kurang masa pada peringkat tertentu, bergantung pada pengetahuan, minat dan kapasiti terdahulu anda. Perlu diingat bahawa kursus ini sepenuhnya mengikut kendiri; anda sentiasa boleh meninggalkan kursus dan kembali atau melawat semula mana-mana peringkat atau peringkat pada bila-bila masa.
+      OPD-K5 Outline_dani:
+        markdown: |-
+          # Bermula > Rangka Kursus
+
+          Kursus ini dibahagikan kepada sebelas peringkat, dan setiap peringkat terdiri daripada "tahap" atau "teka-teki." Berikut ialah gambaran keseluruhan tentang perkara yang akan anda pelajari jika anda melengkapkan keseluruhan kursus:
+
+          ## Peringkat 1: Bermula (10-30 minit)
+
+          Dengan melengkapkan Peringkat 1, anda akan:
+
+          - Semak butiran kursus
+          - Berlatih menggunakan Code.org sebagai platform pembelajaran
+          - Rancang penyertaan anda dalam kursus ini
+
+          ## Peringkat 2: Asas Sains Komputer (10-30 minit)
+
+          Dengan melengkapkan Peringkat 2, anda akan:
+
+          - Takrifkan sains komputer dan semak perbendaharaan kata utama
+          - Mengenal pasti faedah pengajaran dan pembelajaran sains komputer
+          - Bezakan antara "pengekodan" dan "sains komputer"
+          - Terangkan faedah memulakan kod menggunakan pengaturcaraan visual
+
+          ## Peringkat 3: Memandang Ke Hadapan (10 minit)
+
+          Dengan melengkapkan Peringkat 3, anda akan:
+
+          - Bersedia untuk "menguasai asas" sains komputer dengan menyemak perkara seterusnya dalam kursus
+
+          ## Peringkat 4: Menguasai Asas: Urutan (10-30 minit)
+
+          Dengan melengkapkan Peringkat 4, anda akan:
+
+          - Tentukan "program" dan "algoritma"
+          - Gunakan enjin pengaturcaraan visual Code.org untuk menulis atur cara mudah
+          - Refleksi aplikasi bilik darjah
+
+          ## Peringkat 5: Menguasai Asas: Gelung (20-45 minit)
+
+          Dengan melengkapkan Peringkat 5, anda akan:
+
+          - Tentukan "gelung" dan terangkan kepentingannya
+          - Amalkan pengekodan gelung mudah
+          - Refleksi aplikasi bilik darjah
+
+          ## Peringkat 6: Menguasai Asas: Bersyarat (20-45 minit)
+
+          Dengan melengkapkan Peringkat 6, anda akan:
+
+          - Tentukan "syarat" dan terangkan kepentingannya
+          - Amalkan pengekodan syarat mudah
+          - Refleksi aplikasi bilik darjah
+
+          ## Peringkat 7: Menguasai Asas: Fungsi (20-45 minit)
+
+          Dengan melengkapkan Peringkat 7, anda akan:
+
+          - Tentukan "fungsi" dan terangkan kepentingannya
+          - Amalkan pengekodan fungsi mudah
+          - Refleksi aplikasi bilik darjah
+
+          ## Peringkat 8: Menguasai Asas: Acara (30-60 minit)
+
+          Dengan melengkapkan Peringkat 8, anda akan:
+
+          - Tentukan "peristiwa" dan terangkan kepentingannya
+          - Berlatih pengekodan acara mudah
+          - Refleksi aplikasi bilik darjah
+
+          ## Peringkat 9: Amalan Terbaik untuk Mengajar Sains Komputer (30-60 minit)
+
+          Dengan melengkapkan Peringkat 9, anda akan:
+
+          - Semak amalan terbaik untuk mengajar sains komputer
+
+          ## Peringkat 10: Perancangan (30-60 minit)
+
+          Dengan melengkapkan Peringkat 10, anda akan:
+
+          - Teroka sumber Code.org, termasuk papan pemuka guru
+          - Rancang bagaimana anda boleh mengintegrasikan sains komputer ke dalam amalan anda
+
+          ## Peringkat 11: Langkah Seterusnya (10-30 minit)
+
+          Dengan melengkapkan Peringkat 11, anda akan
+
+          - Refleksi pembelajaran anda
+          - Rancang langkah seterusnya yang boleh anda ambil untuk meneruskan pembelajaran anda
+          - Berhubung dengan komuniti global rakan pendidik yang berminat dalam pendidikan sains komputer
+          - Kongsi pengambilan dan maklum balas anda tentang kursus ini
+
+          > **Nota**: Masa yang dicadangkan disertakan untuk membantu anda merancang pembelajaran anda. Sila ambil perhatian bahawa anda mungkin ingin meluangkan lebih atau kurang masa pada peringkat tertentu, bergantung pada pengetahuan, minat dan kapasiti terdahulu anda. Perlu diingat bahawa kursus ini sepenuhnya mengikut kendiri; anda sentiasa boleh meninggalkan kursus dan kembali atau melawat semula mana-mana peringkat atau peringkat pada bila-bila masa.
+      OPD-K5 Stage9Go:
+        markdown: |-
+          # Perancangan > Semakan
+
+          <img src="https://images.code.org/34e1d20a6ae73e28c6c88c5981fd6be6-image-1434411459379.JPG" width="450px">
+
+          Pada peringkat ini, anda sepatutnya mempunyai:
+
+          - Menyemak Papan Pemuka Guru dan sumber lain di Code.org
+          - Dirancang untuk bagaimana anda boleh mengintegrasikan sains komputer ke dalam amalan anda
+
+          Pada Peringkat 11, peringkat akhir kami, anda akan melakukannya
+
+          - Refleksi pembelajaran anda
+          - Rancang langkah seterusnya yang boleh anda ambil untuk meneruskan pembelajaran anda
+          - Berhubung dengan komuniti global rakan pendidik yang berminat dalam pendidikan sains komputer
+      OPD-K5 Stage9Go_dani:
+        markdown: |-
+          # Perancangan > Semakan
+
+          <img src="https://images.code.org/34e1d20a6ae73e28c6c88c5981fd6be6-image-1434411459379.JPG" width="450px">
+
+          Pada peringkat ini, anda sepatutnya mempunyai:
+
+          - Menyemak Papan Pemuka Guru dan sumber lain di Code.org
+          - Dirancang untuk bagaimana anda boleh mengintegrasikan sains komputer ke dalam amalan anda
+
+          Pada Peringkat 11, peringkat akhir kami, anda akan melakukannya
+
+          - Refleksi pembelajaran anda
+          - Rancang langkah seterusnya yang boleh anda ambil untuk meneruskan pembelajaran anda
+          - Berhubung dengan komuniti global rakan pendidik yang berminat dalam pendidikan sains komputer
+      OPD-K5 Stage9Start:
+        markdown: |-
+          # Perancangan > Meneroka Sumber Guru
+
+          Sepanjang Peringkat 4-8, anda telah melihat beberapa sumber pembelajaran "cabut plag" dan dalam talian yang tersedia untuk CS Fundamentals, kerana ia sejajar dengan konsep sains komputer yang anda pelajari.
+
+          Memandangkan anda mempunyai sedikit pemahaman tentang cara membuat kod, serta cara mengajar sains komputer, tiba masanya untuk mula merancang arahan anda. Pada peringkat ini, kami akan melawat kawasan lain pada platform Code.org dan **[Papan Pemuka Guru](http://studio.code.org/)**.
+
+          Dengan melengkapkan Peringkat 10, anda akan:
+
+          - Teroka sumber yang tersedia untuk guru
+          - Terokai Code.org **[Papan Pemuka Guru](http://studio.code.org/)**
+          - Rancang bagaimana anda boleh mengintegrasikan sains komputer ke dalam amalan anda
+
+          ***
+
+          Tangkapan skrin Papan Pemuka Guru ada di bawah. Anda perlu melog masuk ke akaun guru Code.org anda untuk melihatnya -- sebaik sahaja anda log masuk, ia mestilah skrin lalai yang anda lihat di tapak web Code.org. Jika anda tidak mempunyai akaun guru, anda boleh **[mendaftar untuk akaun di sini](https://studio.code.org/users/sign_up)**.
+
+          ![](https://images.code.org/d6345709495f764a71d9cb0994dbd7e4-image-1549064603589.png)
+      OPD-K5 Stage9Start_copy:
+        markdown: |-
+          # Meneroka Sumber Guru
+
+          Sudah tiba masanya untuk mula merancang arahan anda. Pada peringkat ini, kami akan melawat kawasan lain pada platform Code.org dan **<a href="http://studio.code.org/" target="blank" rel="noopener noreferrer">Guru Papan pemuka</a>**.
+
+          Tangkapan skrin Papan Pemuka Guru ada di bawah. Anda perlu log masuk ke akaun guru Code.org anda untuk melihatnya. Sebaik sahaja anda log masuk, ia mestilah skrin lalai yang anda lihat di tapak web Code.org. Jika anda tidak mempunyai akaun guru, anda boleh **<a href="https://studio.code.org/users/sign_up" target="blank" rel="noopener noreferrer">mendaftar untuk akaun di sini< /a>**.
+
+          <a href="http://studio.code.org/" target="blank" rel="noopener noreferrer">![](https://images.code.org/d6345709495f764a71d9cb0994dbd7e4-image-1549064603589.png) </a>
+      OPD-K5 Stage9Start_dani:
+        markdown: |-
+          # Perancangan > Meneroka Sumber Guru
+
+          Sepanjang Peringkat 4-8, anda telah melihat beberapa sumber pembelajaran "cabut plag" dan dalam talian yang tersedia untuk CS Fundamentals, kerana ia sejajar dengan konsep sains komputer yang anda pelajari.
+
+          Memandangkan anda mempunyai sedikit pemahaman tentang cara membuat kod, serta cara mengajar sains komputer, tiba masanya untuk mula merancang arahan anda. Pada peringkat ini, kami akan melawat kawasan lain pada platform Code.org dan **[Papan Pemuka Guru](http://studio.code.org/)**.
+
+          Dengan melengkapkan Peringkat 10, anda akan:
+
+          - Teroka sumber yang tersedia untuk guru
+          - Terokai Code.org **[Papan Pemuka Guru](http://studio.code.org/)**
+          - Rancang bagaimana anda boleh mengintegrasikan sains komputer ke dalam amalan anda
+
+          ***
+
+          Tangkapan skrin Papan Pemuka Guru ada di bawah. Anda perlu log masuk ke akaun guru Code.org anda untuk melihatnya – sebaik sahaja anda log masuk, skrin lalai akan kelihatan seperti yang anda lihat di tapak web Code.org. Jika anda tidak mempunyai akaun guru, anda boleh **[mendaftar untuk akaun di sini](https://studio.code.org/users/sign_up)**.
+
+          ![](https://images.code.org/d6345709495f764a71d9cb0994dbd7e4-image-1549064603589.png)
+      csd-post-survey-2018-markdown-with-link-to-survey:
+        teacher_markdown: |-
+          **Sila minta pelajar anda melengkapkan tinjauan ini!!!**
+
+          * Anda boleh melihat hasil tinjauan awanama dalam papan pemuka guru anda
+          * Hasilnya adalah penting untuk kami (code.org) untuk mengekalkan kursus kami dan membuat penambahbaikan.
+          * Akan ada tinjauan guru juga, di mana anda boleh memberikan input anda sendiri, yang akan dimaklumkan melalui e-mel.
+
+          **Catatan:**
+
+          * Butang pada halaman ini mengubah hala ke [studio.code.org/s/csp-post-survey](https://studio.code.org/s/csp-post-survey)
+          * Jika anda lebih suka, anda boleh menetapkan "Tinjauan Pasca Kursus Pelajar" sebagai unit semasa untuk bahagian anda daripada menu lungsur turun dalam papan pemuka guru.
+      csd-post-survey-2018-markdown-with-link-to-survey_v2:
+        teacher_markdown: |-
+          **Sila minta pelajar anda melengkapkan tinjauan ini!!!**
+
+          * Hasilnya adalah penting untuk kami (code.org) untuk mengekalkan kursus kami dan membuat penambahbaikan.
+          * Akan ada tinjauan guru juga, di mana anda boleh memberikan input anda sendiri, yang akan dimaklumkan melalui e-mel.
+
+          **Untuk melihat keputusan** -- tinjauan selepas kursus adalah sedikit berbeza. Tinjauan yang tinggal dalam unit kursusnya sendiri, dan halaman ini hanya memautkannya.
+
+          * Untuk melihat hasil tinjauan awanama dalam papan pemuka guru anda, anda perlu (1) melihat tinjauan/penilaian, dan kemudian (2) pilih unit tinjauan selepas kursus sebagai unit yang anda mahu lihat.
+
+          * **Lagi Arahan untuk melihat hasil tinjauan pasca kursus**: [[google doc](https://docs.google.com/document/d/1EQfPy0D6lSWA3s3d2hkgVLSRn1vrjLLXaZBSz3-E9aw)] [[pdf](https:// docs.google.com/document/d/1EQfPy0D6lSWA3s3d2hkgVLSRn1vrjLLXaZBSz3-E9aw/export?format=pdf)]

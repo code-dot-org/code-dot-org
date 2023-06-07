@@ -9195,3 +9195,11 @@ pl:
         ey-ecosystems:
           name: ey-ecosystems
           title: EY Ecosystems (zapowiedź)
+        self-paced-pl-csp1-2023:
+          name: self-paced-pl-csp1-2023
+        self-paced-pl-csp2-2023:
+          name: self-paced-pl-csp2-2023
+        self-paced-pl-csp3-2023:
+          name: self-paced-pl-csp3-2023
+        self-paced-pl-csp4-2023:
+          name: self-paced-pl-csp4-2023

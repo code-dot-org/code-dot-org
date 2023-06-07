@@ -9870,6 +9870,7 @@
         },
         "43fde334-6c07-4b1b-b23d-4b67f5fbfbc0": {
           "name": "Tổng kết",
+          "description": "**Thu bài:** Yêu cầu học sinh gửi nguyên mẫu và nộp ứng dụng của mình trong App Lab.\n\n**Suy ngẫm:** Yêu cầu học sinh hoàn thành bản khảo sát nhanh gồm 5 câu hỏi trong Code Studio. Bạn có thể xem kết quả ẩn danh trong Trang tổng quan dành cho giáo viên.",
           "progression_name": "Suy nghĩ"
         },
         "b46cfe31-9b5e-4820-b368-fc8a4fa139a7": {
@@ -10152,6 +10153,7 @@
         },
         "7799c3eb-e76a-465b-9f24-69d6c04a01c7": {
           "name": "Suy nghĩ",
+          "description": "**Code Studio:** Yêu cầu học sinh trả lời 5 câu hỏi khảo sát nhanh ở đầu bài học này về Trí tuệ nhân tạo và Máy học. Sau khi có ít nhất 5 học sinh hoàn thành bài khảo sát, bạn sẽ có thể xem kết quả ẩn danh trong Trang tổng quan dành cho giáo viên. Một số câu hỏi tại đây sẽ được hỏi lại vào cuối dự án đầu tiên, điều này có thể hữu ích trong việc quan sát sự phát triển và thay đổi thái độ của học sinh trong suốt bài học.",
           "progression_name": "Khảo sát đăng ký"
         },
         "b5acd50c-8f0e-4c22-8918-0e4801b137e1": {
@@ -18670,6 +18672,7 @@
         },
         "d26ab8fe-dc83-4704-8aba-bd0cdbdd80a4": {
           "name": "Suy nghĩ",
+          "description": "**Code Studio:** Yêu cầu học sinh trả lời 5 câu hỏi khảo sát nhanh ở đầu bài học này về Trí tuệ nhân tạo và Máy học. Sau khi có ít nhất 5 học sinh hoàn thành bài khảo sát, bạn sẽ có thể xem kết quả ẩn danh trong Trang tổng quan dành cho giáo viên. Một số câu hỏi tại đây sẽ được hỏi lại vào cuối dự án đầu tiên, điều này có thể hữu ích trong việc quan sát sự phát triển và thay đổi thái độ của học sinh trong suốt bài học.",
           "progression_name": "Khảo sát đăng ký"
         },
         "8bdf1f4e-1c20-42bd-a5d5-7217dfa0bd4f": {
