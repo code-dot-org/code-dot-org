@@ -11,7 +11,7 @@ import responsive, {
   setResponsiveSize,
   ResponsiveSize,
 } from '@cdo/apps/code-studio/responsiveRedux';
-import {restoreRedux} from '@cdo/apps/redux';
+import {restoreRedux, stubRedux} from '@cdo/apps/redux';
 import CurriculumCatalog from '@cdo/apps/templates/curriculumCatalog/CurriculumCatalog';
 import {
   allCurricula,
@@ -39,6 +39,7 @@ describe('CurriculumCatalog', () => {
   let replaceStateOrig = window.history.replaceState;
 
   beforeEach(() => {
+    stubRedux();
     store = configureStore({reducer: {responsive, teacherSections}});
     store.dispatch(setResponsiveSize(ResponsiveSize.lg));
     store.dispatch(setSections(sections));

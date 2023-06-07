@@ -11,7 +11,7 @@ import {
 import {sections} from '../studioHomepages/fakeSectionUtils';
 import {Provider} from 'react-redux';
 import {configureStore} from '@reduxjs/toolkit';
-import {restoreRedux} from '@cdo/apps/redux';
+import {restoreRedux, stubRedux} from '@cdo/apps/redux';
 import teacherSections, {
   setSections,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
@@ -46,6 +46,7 @@ describe('CurriculumCatalogCard', () => {
     );
 
   beforeEach(() => {
+    stubRedux();
     store = configureStore({reducer: {teacherSections}});
     store.dispatch(setSections(sections));
     defaultProps = {
