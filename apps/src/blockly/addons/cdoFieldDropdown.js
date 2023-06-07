@@ -90,7 +90,16 @@ export default class CdoFieldDropdown extends GoogleBlockly.FieldDropdown {
     // See CDO implementation at https://github.com/code-dot-org/blockly/blob/main/core/ui/fields/field_dropdown.js#L305
     this.config = element.getAttribute('config');
     if (this.config) {
-      this.menuGenerator_ = this.getUpdatedOptionsFromConfig(this.config);
+      // If `menuGenerator_` is an array, it is an array of options with
+      // each option represented by an array containing 2 elements -
+      // a human-readable string and a language-neutral string. For example,
+      // [['first item', 'ITEM1'], ['second item', 'ITEM2'], ['third item', 'ITEM3']].
+      // Options are included in the block definition.
+      const existingOptionsMap = arrayToMap(this.menuGenerator_);
+      this.menuGenerator_ = getUpdatedOptionsFromConfig(
+        this.config,
+        existingOptionsMap
+      );
     }
     // Call super so value is set.
     super.fromXml(element);
@@ -109,54 +118,57 @@ export default class CdoFieldDropdown extends GoogleBlockly.FieldDropdown {
     super.toXml(element);
     return element;
   }
+}
 
-  /**
-   * Converts language-neutral string to humnan-readable string.
-   */
-  toHumanReadableString(text) {
-    return text.replace(/['"]+/g, '').toLowerCase();
-  }
+/**
+ * Converts language-neutral string to humnan-readable string.
+ */
+function toHumanReadableString(text) {
+  return text.replace(/['"]+/g, '').toLowerCase();
+}
 
-  /**
-   * Updates field options based on `config` attribute of field
-   * @param config attribute of field
-   * @return Array of option arrays
-   */
-  getUpdatedOptionsFromConfig(config) {
-    // If `menuGenerator_` is an array, it is an array of options with
-    // each option represented by an array containing 2 elements -
-    // a human-readable string and a language-neutral string. For example,
-    // [['first item', 'ITEM1'], ['second item', 'ITEM2'], ['third item', 'ITEM3']].
-    // Options are included in the block definition.
-    const originalOptionsMap = Array.isArray(this.menuGenerator_)
-      ? this.menuGenerator_.reduce((optionsMap, curr) => {
-          optionsMap[curr[1]] = curr[0];
-          return optionsMap;
-        }, {})
-      : {};
+/**
+ * Converts an array of option arrays to a map of options
+ * For example the array [['first item', 'ITEM1'], ['second item', 'ITEM2']]
+ * would be converted to {'first item': 'ITEM1', 'second item': 'ITEM2'}
+ * @param optionsArray  field
+ * @return map of options
+ */
+export function arrayToMap(optionsArray) {
+  return Array.isArray(optionsArray)
+    ? optionsArray.reduce((optionsMap, curr) => {
+        optionsMap[curr[1]] = curr[0];
+        return optionsMap;
+      }, {})
+    : {};
+}
 
-    const numberList = printerStyleNumberRangeToList(config);
-    // If numberList is assigned a non-empty array, it contains a list of numbers.
-    // Convert this list to a string of dropdown options separated by commas and assign to options.
-    // Otherwise, assign options to config string.
-    // Note that `config` is either a printer-style number range or a string of options separated
-    // by commas, but not both. For example, a `config` like "1,6-9, &quot;SLOTH&quot;"
-    // would NOT be supported.
-    let options =
-      numberList.length > 0 ? numberListToString(numberList) : config;
-    options = options.split(',').map(val => {
-      val = val.trim();
-      // If val is one of the options in this.menuGenerator_,
-      // human-readable string is displayed.
-      if (originalOptionsMap[val]) {
-        return [originalOptionsMap[val], val];
-      } else {
-        // Remove quotes and display option with lowercase characters.
-        // For example, "GIRAFFE" would be transformed to giraffe.
-        const humanReadableVal = this.toHumanReadableString(val);
-        return [humanReadableVal, val];
-      }
-    });
-    return options;
-  }
+/**
+ * Updates field options based on `config` attribute of field
+ * @param config attribute of field
+ * @return Array of option arrays
+ */
+export function getUpdatedOptionsFromConfig(config, existingOptionsMap) {
+  const numberList = printerStyleNumberRangeToList(config);
+  // If numberList is assigned a non-empty array, it contains a list of numbers.
+  // Convert this list to a string of dropdown options separated by commas and assign to options.
+  // Otherwise, assign options to config string.
+  // Note that `config` is either a printer-style number range or a string of options separated
+  // by commas, but not both. For example, a `config` like "1,6-9, &quot;SLOTH&quot;"
+  // would NOT be supported.
+  let options = numberList.length > 0 ? numberListToString(numberList) : config;
+  options = options.split(',').map(val => {
+    val = val.trim();
+    // If val is one of the options in this.menuGenerator_,
+    // human-readable string is displayed.
+    if (existingOptionsMap[val]) {
+      return [existingOptionsMap[val], val];
+    } else {
+      // Remove quotes and display option with lowercase characters.
+      // For example, "GIRAFFE" would be transformed to giraffe.
+      const humanReadableVal = toHumanReadableString(val);
+      return [humanReadableVal, val];
+    }
+  });
+  return options;
 }
