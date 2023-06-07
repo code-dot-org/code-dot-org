@@ -652,11 +652,7 @@ class UnconnectedMusicView extends React.Component {
           moduleStyles.instructionsArea,
           position === InstructionsPositions.TOP
             ? moduleStyles.instructionsTop
-            : moduleStyles.instructionsSide,
-          position === InstructionsPositions.LEFT &&
-            moduleStyles.instructionsLeft,
-          position === InstructionsPositions.RIGHT &&
-            moduleStyles.instructionsRight
+            : moduleStyles.instructionsSide
         )}
       >
         <Instructions
@@ -709,7 +705,7 @@ class UnconnectedMusicView extends React.Component {
           togglePlaying={this.togglePlaying}
           playTrigger={this.playTrigger}
         />
-        <div id="music-lab-container" className={moduleStyles.container}>
+        <div id="music-lab" className={moduleStyles.musicLab}>
           {showInstructions &&
             instructionsPosition === InstructionsPositions.TOP &&
             this.renderInstructions(InstructionsPositions.TOP)}
