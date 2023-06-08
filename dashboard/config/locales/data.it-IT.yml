@@ -853,7 +853,7 @@ it:
         csd_applab_designmode: 'Alla scoperta dell''informatica: Sviluppo App - Modalità
           Interfaccia'
         csd_pair_programming: Programmazione in coppia
-        csd_gamelab_functions: Chiamare e Definire Funzioni
+        csd_gamelab_functions: Richiamare e definire funzioni
         csd_applab_parameters: Funzioni con parametri
         csd_applab_loops: Loop in Sviluppo App
         csd_problem_solving_process: Il processo di risoluzione dei problemi
@@ -908,7 +908,7 @@ it:
           Mejia'
         csf21pilot_events: 'Laboratorio dei personaggi: personaggi in azione'
         csf21pilot_prompts: 'Laboratorio dei personaggi:  testo  e richieste all''utente'
-        csd_ml_intro_to_ai_lab: Lezione 6
+        csd_ml_intro_to_ai_lab: Introduzione al Laboratorio IA
         csd_ml_import_model: Importazione di un modello AI
         csf_lots_of_sprites: 'Sprite Lab: Un sacco di sprite'
         playlab_2021: Introduzione al Laboratorio
@@ -919,10 +919,10 @@ it:
         PL-Video-21: Benvenuto nella sezione Professional Learning di Code.org!
         csp_tutorial_datavis1: Visualizzatore di dati in App Lab - Parte 1
         csp_tutorial_datavis2: Visualizzatore di dati in App Lab - Parte 2
-        csd_ml_intro_ai_lab_july2021: Lezione 6
-        csd_ml_training_testing_ai_lan: Formazione e test in AI Lab
-        csd_ml_model_cards_july2021: Schede modello in AI Lab
-        csd_ml_numerical_ai_lab: Dati numerici in AI Lab
+        csd_ml_intro_ai_lab_july2021: Introduzione al Laboratorio IA
+        csd_ml_training_testing_ai_lan: Addestramento e verifica in Laboratorio IA
+        csd_ml_model_cards_july2021: Schede modello in Laboratorio IA
+        csd_ml_numerical_ai_lab: Dati numerici in Laboratorio IA
         Gettting_Started_Progress: Progresso, feedback e valutazione
         Gettting_Started_ClassSection: Creazione di una sezione di classe
         Gettting_Started_StudentExperience: L'esperienza degli studenti
@@ -1094,6 +1094,7 @@ it:
         csa_sorting_algorithms: 'CSA: algoritmi di ordinamento'
         star_quilts_intro_to_artist: 'Star Quilts: Introduzione all''artista'
         upload_sprites_backgrounds: Caricamento di sprite e sfondi personalizzati
+        PL_CSD_EquityBlindSpotsvid: Pregiudizi e Responsabilità
     callout:
       text:
         drag_blocks: Prendi qui a sinistra il blocco "vai avanti" ed attaccalo sotto

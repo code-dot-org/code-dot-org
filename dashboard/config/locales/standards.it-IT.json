@@ -9010,6 +9010,33 @@
         },
         "6.b": {
           "description": "Seleziona e utilizza le applicazioni in modo efficace e produttivo."
+        },
+        "AAP-2.N.1": {
+          "description": "La tabella di riferimento dell'esame fornisce le operazioni essenziali sugli elenchi, tra cui: ●       accedere a un elemento per indice ●       aList[i] accede all'elemento di un elenco all'indice i. Il primo elemento di aList è all'indice 1 ed è acceduto tramite la notazione aList[1]. ●       assegnare il valore di un elemento di un elenco a una variabile x di aList ← [i] assegna il valore di aList[i] alla variabile x. ●       assegnare un valore a un elemento di un elenco aList[i] ← x assegna il valore di x ad aList[i]."
+        },
+        "AAP-3.A.5": {
+          "description": "La tabella di riferimento dell'esame fornisce procName (arg1, arg2, ...) come un metodo per chiamare PROCEDURE procName(parameter1, parameter2, ...), con zero o più argomenti; arg1 è assegnato a parameter1, arg2 a parameter2, e così via."
+        },
+        "AAP-3.A.8": {
+          "description": "La tabella di riferimento dell'esame fornisce result ß procName(arg1, arg2, …) da assegnare affinché risulti il \"valore della procedura\" restituito chiamando PROCEDURE procName(parameter1, parameter2, …)"
+        },
+        "AAP-3.C.2": {
+          "description": "La tabella di riferimento dell'esame fornisce PROCEDURE procName(parameter1, parameter2, ...){ <block of statements> RETURN(expression)}, utilizzato per definire una procedura che richiede zero o più argomenti. La procedura contiene blocchi di istruzioni e restituisce il valore dell'espressione. La dichiarazione RETURN potrebbe apparire in qualsiasi punto nella procedura e causa la restituzione immediata dalla procedura, all'istruzione di chiamata."
+        },
+        "CRD-1.C.1": {
+          "description": "I team collaborativi efficienti praticano le abilità interpersonali, incluse ma non limitate a:\n●       comunicazione\n●       costruzione del consenso\n●       risoluzione dei conflitti\n●       negoziazione"
+        },
+        "CRD-2.E.2": {
+          "description": "Esistono svariati processi di sviluppo. Le seguenti fasi sono comunemente utilizzate sviluppando un programma:\n●       Investigazione e riflessione\n●       Progettazione\n●       Prototipazione\n●       Test"
+        },
+        "CRD-2.F.7": {
+          "description": "La fase di progettazione di un programma potrebbe includere:\n●        Brainstorming\n●        Pianificazione e Storyboarding\n●        Organizzazione del programma in moduli e componenti funzionali\n●        Creazione di diagrammi che rappresentano la disposizione dell'interfaccia utente\n● "
+        },
+        "5.W.9.b": {
+          "description": "Applica gli Standard di lettura della quinta elementare ai testi informativi (es., \"Spiega come un autore utilizza motivazioni e prove per supportare punti particolari in un testo, identificando quali motivazioni e prove supportano quali punti\")."
+        },
+        "MOD-3.C.4": {
+          "description": "Dichiarare i riferimenti di tipo T, quando S è una sottoclasse di T, è utile nelle seguenti dichiarazioni: • Formal method parameters • arrays — T[] var ArrayList<T> var"
         }
       }
     }

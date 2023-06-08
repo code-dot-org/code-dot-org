@@ -5,12 +5,20 @@ import {Provider} from 'react-redux';
 import {getStore} from '@cdo/apps/redux';
 import LabContainer from '@cdo/apps/code-studio/components/LabContainer';
 import MusicLabView from '@cdo/apps/music/views/MusicView';
+import ProjectContainer from '@cdo/apps/labs/projects/ProjectContainer';
+import {logError} from '@cdo/apps/music/utils/MusicMetrics';
 
 $(document).ready(function () {
   ReactDOM.render(
     <Provider store={getStore()}>
-      <LabContainer>
-        <MusicLabView />
+      <LabContainer
+        onError={(error, componentStack) =>
+          logError({error: error.toString(), componentStack})
+        }
+      >
+        <ProjectContainer>
+          <MusicLabView />
+        </ProjectContainer>
       </LabContainer>
     </Provider>,
     document.getElementById('musiclab-container')

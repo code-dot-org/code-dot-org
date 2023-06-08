@@ -2203,7 +2203,7 @@
           "description": "Naposledy sme sa si prezerali aplikácie a hry vytvorené pomocou Sprite Labu. Dnes začneme tým, že si napíšeme vlastný kód a vytvoríme jednoduché animácie so sprajtmi (postavami)."
         },
         "a4ff84ba-5105-458a-a950-ca4fdbc3d23b": {
-          "name": "Vytváranie postáv",
+          "name": "Vytváranie sprajtov",
           "tips": [
             "V úlohách s predpoveďou majú žiaci za úlohu prezrieť si hotový program a odpovedať na otázku, ktorá sa ho týka. Otázku musia zodpovedať ešte predtým, ako stlačia tlačidlo Spustiť. Hoci je možné využiť tieto otázky ako formu hodnotenia, myslite na to, že často sa nachádzajú na začiatku lekcie, aby sa žiaci nad novými vecami začali zamýšľať ešte skôr, než sa naučia, ako v skutočnosti fungujú. "
           ],
@@ -5898,6 +5898,9 @@
           "tips": [
             "Táto lekcia sa môže javiť pomerne odlišná od ostatných vecí, s ktorými ste sa v tomto kurze doteraz stretli. Pred jej začatím sa možno budete chcieť oboznámiť s niektorými novinkami, ktoré sa v úrovniach objavujú. Kód, ktorý žiaci vytvoria v jednej úrovni, sa automaticky prenáša do ostatných úrovní, čo im umožňuje postupne budovať svoj projekt a stavať na nových vedomostiach. Upozorňujeme, že v týchto úrovniach sa nekontroluje správnosť kódu, aby mohli žiaci prichádzať s kreatívnymi riešeniami zadaní. Povzbuďte žiakov, aby sami vyhodnotili, kedy považujú úlohu za splnenú."
           ]
+        },
+        "5bee125c-0e5e-46a8-b72b-fdc8a71f5161": {
+          "progression_name": "Mini-projekt: Samolepka Art"
         },
         "c5f36648-ac0d-405f-af7a-3020ebdce7f3": {
           "progression_name": "Voľná hra"
@@ -12726,7 +12729,7 @@
         },
         "68ce1dca-d2a0-42e0-a8fb-3a7a86d1f977": {
           "name": "Denník",
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ukážte:** Trieda chce vytvoriť aplikáciu na odporúčanie kníh pre nových žiakov. Aplikácia položí niekoľko otázok a na základe odpovedí odporučí knihu, ktorú čítali ostatní ľudia v triede.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Spýtajte sa:** _Akú otázku by podľa vás mali položiť, aby dokázali odporučiť knihu?_\n\nNechajte žiakov, aby si samostatne zapísali poznámky do zápisníka, a potom sa o svoje odpovede podelili so susedom. Požiadajte žiakov, aby sa podelili s celou triedou, a odpovede zapisujte na tabuľu."
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ukážte:** Trieda chce vytvoriť aplikáciu na odporúčanie kníh pre nových žiakov. Aplikácia položí niekoľko otázok a na základe odpovedí odporučí knihu, ktorú čítali ostatní žiaci v triede.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Spýtajte sa:** _Akú otázku by podľa vás mali položiť, aby dokázali odporučiť knihu?_\n\nNechajte žiakov, aby si samostatne zapísali poznámky do zápisníka, a potom sa o svoje odpovede podelili so susedom. Požiadajte žiakov, aby sa podelili s celou triedou, a odpovede zapisujte na tabuľu."
         },
         "6c23639c-c2e1-4038-98ed-69ffddb36d6f": {
           "description": " **Cieľ diskusie:** Žiaci môžu navrhnúť, aby sa trieda opýtala na iné knihy, ktoré žiaci predtým čítali, alebo na typy kníh, ktoré ľudia radi čítajú. Môžu tiež navrhnúť otázky na základe záujmu alebo koníčkov. Požiadajte žiakov, aby vysvetlili svoje otázky, a snažte sa zachytiť odpovede, pri ktorých sa žiaci snažia nájsť súvislosť medzi odpoveďami a odporúčaním knihy. Napríklad niekto, kto sa zaujíma o mágiu, môže s väčšou pravdepodobnosťou čítať fantasy knihy – to je príklad, pri ktorom môže byť zber údajov užitočný pri zisťovaní, či tento vzťah bude pravdivý."
@@ -12767,7 +12770,7 @@
           ]
         },
         "45b24d06-7aa1-450d-ac8d-0342ebf3dd8f": {
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Spýtajte sa:** _Z prieskumu v aplikácii chýbajú dve otázky:_\n\n-   _Aký typ sendviča je tvoj najobľúbenejší?_\n-   _Aký deň máš najradšej?_\n\nPrečo si myslíte, že sa tieto otázky nedostali do modelu?\n\n**Cieľ diskusie:** Veďte žiakov k záveru, že tieto otázky pravdepodobne nemali v údajoch silné vzťahy alebo neviedli k presnému modelu. Žiaci môžu vysloviť hypotézu, že je to preto, lebo otázky sa nezdali byť súvisiace s knihami, ale bez toho, aby sme videli skutočné údaje, to nikdy nebudeme vedieť naisto. "
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Spýtajte sa:** _Z prieskumu v aplikácii chýbajú dve otázky:_\n\n-   _Aký typ sendviča je tvoj najobľúbenejší?_\n-   _Aký deň máš najradšej?_\n\nPrečo sa podľa vás tieto otázky nedostali do modelu?\n\n**Cieľ diskusie:** Veďte žiakov k záveru, že tieto otázky pravdepodobne nemali v údajoch silné vzťahy alebo neviedli k presnému modelu. Žiaci môžu vysloviť hypotézu, že je to preto, lebo otázky sa nezdali byť súvisiace s knihami, ale bez toho, aby sme videli skutočné údaje, to nikdy nebudeme vedieť naisto. "
         },
         "427554af-e9e9-4a2e-8eb7-3980df29c940": {
           "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Spýtajte sa:** _Táto trieda zvažovala, že sa v prieskume opýta na pohlavie, aby pomohla odporučiť knihu, ale rozhodla sa, že to neurobí._\n\n_Myslíte si, že je na škodu zahrnúť do prieskumu otázku o pohlaví? Prečo alebo prečo nie?_\n\n**Cieľ diskusie:** Toto je príležitosť preskúmať, ako by sa demografické znaky, ako napríklad pohlavie, rasa alebo vek, mali alebo nemali používať v modeloch strojového učenia. Niektorí žiaci si môžu myslieť, že zahrnúť pohlavie do prieskumu je neškodné, pretože môže mať silný vzťah k určitým typom kníh. Iní žiaci môžu upozorniť na to, že informácie o pohlaví môžu viesť k stereotypom, alebo že nemusí byť dostatok údajov na to, aby sa do prieskumu zahrnulo pohlavie, najmä v prípade nebinárnych osôb.\n\nVeďte žiakov k tomu, aby zvážili, či sa im zdá, že je to najlepší typ otázky vzhľadom na to, že sa trieda snaží predpovedať odporúčanie knihy. Nechajte triedu zvážiť, či rod považuje za nevyhnutnú otázku, alebo či aj iné otázky povedú k presným odporúčaniam. V tomto smere je otázka o pohlaví podobná predchádzajúcim dvom otázkam o tom, ktorý sendvič máte radi alebo aký máte deň: ostatné otázky sú pravdepodobne lepšími predpovednými ukazovateľmi toho, aký typ knihy si môžete chcieť prečítať.",
@@ -12808,7 +12811,7 @@
           ]
         },
         "aef97aca-4210-40f0-9cd3-58fe0a1d1a8f": {
-          "description": "**Úrovne výberu:** Po vytvorení aplikácie na odporúčanie kníh si žiaci môžu vybrať z niekoľkých vzorových aktivít a pokračovať vo vylepšovaní svojej aplikácie. Na každej úrovni sa používa tá istá aplikácia, ktorú už vytvorili, ako predloha, ktorú môžu doplniť. Žiaci si môžu vybrať, koľko týchto úrovní chcú absolvovať – každá z nich im umožní pokračovať v prispôsobovaní a zlepšovaní svojej aplikácie.",
+          "description": "**Voliteľné úrovne:** Po vytvorení aplikácie na odporúčanie kníh si žiaci môžu vybrať z niekoľkých vzorových aktivít a pokračovať vo vylepšovaní svojej aplikácie. Na každej úrovni sa používa tá istá aplikácia, ktorú už vytvorili, ako predloha, ktorú môžu doplniť. Žiaci si môžu vybrať, koľko týchto úrovní chcú absolvovať – každá z nich im umožní pokračovať v prispôsobovaní a zlepšovaní svojej aplikácie.",
           "tips": [
             "**Výber úrovne cvičení žiakmi:** Ak si žiaci sami zvolia úroveň cvičení, je to jeden zo spôsobov diferenciácie vyučovania so žiakmi. Ak sa chcete dozvedieť viac o tom, ako tieto úrovne podporujú diferenciáciu, ako aj o ďalších stratégiách, môžete si prečítať príručku [Objavujeme informatiku: Sprievodca diferenciáciou](https://docs.google.com/document/d/15Y6Mo3fMUtHq16SSskABgcYE-5xfk-Ewv0z_o4uaLdI/preview)."
           ],
@@ -12981,7 +12984,7 @@
         },
         "bf7d70a4-6c11-4059-b69f-7b3a7d157c91": {
           "name": "Zápisník",
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Úvaha:** _Prečo je karta modelu užitočná pri vytváraní modelu v AI Labe? Ako je karta modelu užitočná pri vytváraní aplikácie v App Labe?_\n\nŽiaci môžu odpovedať na túto otázku v sprievodcovi aktivitou alebo ju môžete použiť ako záverečnú úlohu."
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Úvaha:** _Prečo je karta modelu užitočná pri vytváraní modelu v AI Labe? Prečo je karta modelu užitočná pri vytváraní aplikácie v App Labe?_\n\nŽiaci môžu odpovedať na túto otázku v sprievodcovi aktivitou alebo ju môžete použiť ako záverečnú úlohu."
         },
         "0d058bc4-3155-48a3-9a43-bdcd6a701268": {
           "description": "**Cieľ diskusie:** Žiaci môžu vyjadriť podobné myšlienky ako v úvodnom videu - že karta modelu pomáha zdokumentovať rozhodnutia a zabezpečiť prehľadnosť a že ju možno použiť v App Labe na doplnenie návrhu – ale ich odpovede by mali byť viac podložené ich skúsenosťami z tejto lekcie, najmä po výbere vlastného označenia a trénovaní vlastného modelu."
@@ -13087,7 +13090,7 @@
           "progression_name": "Hodnotenie"
         },
         "5d073f6e-68fe-48f5-9bf0-7c59870722e5": {
-          "description": "**Úrovne výberu:** Po vytvorení aplikácie na odporúčanie domácich zvierat si žiaci môžu vybrať z niekoľkých vzorových aktivít a pokračovať vo vylepšovaní svojej aplikácie. Na každej úrovni sa používa tá istá aplikácia, ktorú už vytvorili, ako predloha, ktorú môžu doplniť. Žiaci si môžu vybrať, koľko týchto úrovní chcú absolvovať – každá z nich im umožní pokračovať v prispôsobovaní a zlepšovaní svojej aplikácie.",
+          "description": "**Voliteľné úrovne:** Po vytvorení aplikácie na odporúčanie domácich zvierat si žiaci môžu vybrať z niekoľkých vzorových aktivít a pokračovať vo vylepšovaní svojej aplikácie. Na každej úrovni sa používa tá istá aplikácia, ktorú už vytvorili, ako predloha, ktorú môžu doplniť. Žiaci si môžu vybrať, koľko týchto úrovní chcú absolvovať – každá z nich im umožní pokračovať v prispôsobovaní a zlepšovaní svojej aplikácie.",
           "tips": [
             "**Déjà vu?** Žiaci si môžu všimnúť, že úrovne výberu v tejto lekcii vyzerajú povedome – sú to tie isté úrovne, z ktorých si žiaci mohli vybrať v lekcii 7. Je to zámerné, pretože to dáva žiakom možnosť naučiť sa iný kód, ako sa naučili predtým. Žiakov, ktorí už preskúmali jednotlivé možnosti, povzbuďte, aby svoje vedomosti využili v tejto novej aplikácii."
           ]
@@ -13217,7 +13220,7 @@
           "description": "Oba tieto systémy nám pomáhajú pri rozhodovaní, ale rôznymi spôsobmi. Petrin systém sa podobá na typ odporúčaní, ktoré sme videli doteraz, pretože zjednodušuje údaje len na dve kategórie. Michaelin systém je trochu odlišný, na vytvorenie odporúčania používa rozsah hodnôt – ide o tzv. číselné údaje. Dnes sa naučíme, ako v AI Labe používať číselné údaje na vytváranie nových druhov odporúčaní a predpovedí."
         },
         "0683df4b-d5ec-467a-b920-1e506b860bc1": {
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Otázka dňa:** Ako môžeme použiť AI Lab na predpovedanie číselných údajov?"
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Otázka dňa:** Ako môžeme pomocou AI Labu predpovedať číselné údaje?"
         },
         "6c4e8786-af12-443f-9947-0cbb7d52f4de": {
           "name": "Kategorické a číselné",
@@ -13245,11 +13248,11 @@
           ]
         },
         "29f0024c-c9fe-43a7-b1d1-f3696a2ff683": {
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Diskutujte:**\n\n-   _Ak je v parku malý počet antilop, aký to má vplyv na to, koľko levov by mohlo byť v parku?_\n-   _Ak je v parku veľký počet antilop, aký to má vplyv na to, koľko levov by mohlo byť v parku?_\n-   _Prečo si myslíte, že je to tak?_\n\n**Cieľ diskusie:** Žiaci by si mali všimnúť, že čím menej je antilop, tým menej je levov a naopak. Môžu si myslieť, že to súvisí so vzťahmi medzi predátorom a korisťou – levy jedia antilopy, takže ak je menej antilop, je menej levov. Žiaci by si mali svoje odpovede zaznamenať do sprievodcu aktivitou, a to aj v prípade, že o odpovediach diskutovali spoločne v triede."
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Diskutujte:**\n\n-   _Ak je v parku málo antilop, aký to má vplyv na počet levov v parku?_\n-   _Ak je v parku veľa antilop, aký to má vplyv na počet levov v parku?_\n-   _Prečo si myslíte, že je to tak?_\n\n**Cieľ diskusie:** Žiaci by si mali všimnúť, že čím menej je antilop, tým menej je levov a naopak. Môžu si myslieť, že to súvisí so vzťahmi medzi lovcom a korisťou – levy jedia antilopy, takže ak je menej antilop, je menej levov. Žiaci by si mali svoje odpovede zaznamenať do sprievodcu aktivitou, a to aj v prípade, že o odpovediach diskutovali spoločne v triede."
         },
         "59d0c95a-0335-4da7-979e-9cc93829b878": {
           "name": "Vlastnosť 2: Ľudia",
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Urobte toto**: Nechajte žiakov kliknúť na stĺpec Ľudia. Tento stĺpec uvádza, koľko ľudí bolo v daný deň videných v parku. Nechajte žiakov najprv odpovedať na otázky v sprievodcovi aktivitou a až potom diskutujte v skupine.\n\n**Monitorujte:** Skontrolujte, ako sa žiakom darí, a pomôžte im interpretovať grafy. Povzbuďte žiakov, aby používali začiatočné vety typu: „Keď je počet ľudí..., potom je počet levov...“.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Diskutujte:**\n\n-   _Ak je v parku malý počet ľudí, aký to má vplyv na to, koľko levov môže byť v parku?_\n-   _Ak je v parku veľký počet ľudí, aký to má vplyv na to, koľko levov môže byť v parku?_\n-   _Prečo si myslíte, že je to tak?_",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Urobte toto**: Nechajte žiakov kliknúť na stĺpec Ľudia. Tento stĺpec uvádza, koľko ľudí bolo v daný deň videných v parku. Nechajte žiakov najprv odpovedať na otázky v sprievodcovi aktivitou a až potom diskutujte v skupine.\n\n**Monitorujte:** Skontrolujte, ako sa žiakom darí, a pomôžte im interpretovať grafy. Povzbuďte žiakov, aby používali začiatočné vety typu: „Keď je počet ľudí..., potom je počet levov...“.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Diskutujte:**\n\n-   _Ak je v parku málo ľudí, aký to má vplyv na počet levov v parku?_\n-   _Ak je v parku veľa ľudí, aký to má vplyv na počet levov v parku?_\n-   _Prečo si myslíte, že je to tak?_",
           "tips": [
             "**Asociácie:** Graf antilop predstavuje pozitívnu asociáciu a graf ľudí predstavuje negatívnu asociáciu, ktoré sú súčasťou matematických noriem [Common Core pre 8. ročník](http://www.corestandards.org/Math/Content/8/SP/A/1/). Žiaci nemusia poznať tieto pojmy, aby dokázali úspešne zvládnuť tento tematický celok, preto neodporúčame používať túto slovnú zásobu, pokiaľ priamo nepodporuje ich štúdium na iných hodinách."
           ]
@@ -13345,7 +13348,7 @@
           "description": "**Monitorujte:** Sledujte žiakov pri vytváraní tejto aplikácie. Žiaci nebudú môcť aplikáciu otestovať, kým nebude úplne dokončená, čo môže byť pre niektorých žiakov problém. Tu je niekoľko vecí, na ktoré si treba dávať pozor počas práce žiakov:\n\n-   **Úroveň 3:** Žiaci si precvičujú odstraňovanie predvolených prvkov, ktoré sa generujú pri prvom importovaní modelu. Ide o krok, ktorý bude dôležitý, keď budú žiaci v rámci neskorších projektov vytvárať vlastné aplikácie.\n-   **Úroveň 4 a 5:** Žiaci iba aktualizujú kód svojej aplikácie, aby použili nové prvky návrhu pre vlastnosti Počet áut a Počasie. Môžu použiť pomôcky v rámci pokynov k úrovni, ktoré im poradia, čo majú v jednotlivých krokoch urobiť.\n-   **Úroveň 6:** Žiaci aktualizujú návrh aj kód svojej aplikácie na zber údajov pre vlastnosť Teplota. Pomôžte žiakom sledovať nový textový vstupný prvok, ktorý pridali na obrazovku teploty, a uistite sa, že ID prvku sa zhoduje s tým, ktoré použili v bloku [\\`getText\\`(#fff176)](/docs/applab/getText/) svojho kódu.\n-   **Úroveň 7:** Žiaci aktualizujú návrh aj kód svojej aplikácie na zber údajov pre vlastnosť Denný čas. Pridanie prvku návrhu a aktualizácia kódu je podobná ako na poslednej úrovni, ale tento krok má pridanú požiadavku použiť kartu modelu na kontrolu možných hodnôt pre túto kategorickú funkciu. Žiaci sa môžu dopustiť pravopisných chýb alebo chýb v písaní veľkých písmen, ktoré môžu ovplyvniť ich kód – nabádajte žiakov, aby si dávali veľký pozor na presnú zhodu možností v rozbaľovacom zozname s kartou modelu.\n-   **Úroveň 8:** Žiaci majú možnosť spustiť svoju aplikáciu a overiť, či funguje. Na tejto úrovni budú musieť žiaci vykonať zmeny v kóde len v prípade, že ich program nefunguje. V opačnom prípade, ak aplikácia funguje správne, môžu žiaci pokračovať na ďalšiu úroveň."
         },
         "244ecc30-2351-4ebd-9596-220197f275fc": {
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Úrovne výberu:** Po vytvorení aplikácie výstražného systému pre vodičov si žiaci môžu vybrať z niekoľkých vzorových aktivít a pokračovať vo vylepšovaní svojej aplikácie. Na každej úrovni sa používa tá istá aplikácia, ktorú už vytvorili, ako predloha, ktorú môžu doplniť. Žiaci si môžu vybrať, koľko týchto úrovní chcú absolvovať – každá z nich im umožní pokračovať v prispôsobovaní a zlepšovaní svojej aplikácie.",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Voliteľné úrovne:** Po vytvorení aplikácie výstražného systému pre vodičov si žiaci môžu vybrať z niekoľkých vzorových aktivít a pokračovať vo vylepšovaní svojej aplikácie. Na každej úrovni sa používa tá istá aplikácia, ktorú už vytvorili, ako predloha, ktorú môžu doplniť. Žiaci si môžu vybrať, koľko týchto úrovní chcú absolvovať – každá z nich im umožní pokračovať v prispôsobovaní a zlepšovaní svojej aplikácie.",
           "tips": [
             "\\*\\* Opakované úrovne:\\*\\* Možnosti v tejto úrovni sú totožné s možnosťami v poslednej lekcii. Je to zámerné, aby mali žiaci viacero príležitostí naučiť sa nové návrhové triky alebo bloky kódu, prípadne pokračovať v precvičovaní nových blokov, ktoré sa naučili v minulej lekcii. Povzbuďte žiakov, aby si pre dnešnú aplikáciu vybrali novú úlohu, ktorá sa líši od tých, ktoré si vybrali včera."
           ]
@@ -13365,7 +13368,7 @@
         },
         "e1dd79db-f57a-47b1-a3f8-7a23780991dd": {
           "name": "Denník",
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Diskutujte**: Aké príklady umelej inteligencie ste videli buď v reálnom živote, alebo vo fikcii, napríklad vo filmoch, hudbe alebo televízii?\n\nPožiadajte žiakov, aby si svoje odpovede zapísali do svojich zápisníkov a potom sa o ne podelili so susedom. Pred diskusiou v celej skupine prejdite na ďalšiu úlohu.\n\n**Diskutujte:** _Spomeniete si na prípady, keď boli tieto príklady použité na dobré veci? Viete si spomenúť na prípady, keď boli tieto príklady použité na zlé veci, aj keď neúmyselne? Existujú veci, ktoré by sme mohli považovať za „správne“ alebo „nesprávne“?_\n\nPožiadajte žiakov, aby sa najprv zamysleli samostatne, potom diskutovali so susedom a až potom požiadajte žiakov, aby sa podelili ako celá skupina. Požiadajte žiakov, aby sa podelili o príklad, ktorý im napadol, a potom o situáciu, ktorá by sa dala využiť na dobré alebo zlé."
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Diskutujte**: Aké príklady umelej inteligencie ste videli buď v reálnom živote, alebo vo fikcii, napríklad vo filmoch, hudbe alebo televízii?\n\nPožiadajte žiakov, aby si svoje odpovede zapísali do svojich zápisníkov a potom sa o ne podelili so susedom. Pred diskusiou v celej skupine prejdite na ďalšiu úlohu.\n\n**Diskutujte:** _Spomeniete si na prípady, keď boli tieto príklady použité na dobré veci? Viete si spomenúť na prípady, keď boli tieto príklady použité na zlé veci, aj keď neúmyselne? Sú veci, ktoré robia a ktoré by sme mohli považovať za „dobré“ alebo „zlé“?_\n\nPožiadajte žiakov, aby sa najprv zamysleli samostatne, potom diskutovali so susedom a až potom požiadajte žiakov, aby sa podelili ako celá skupina. Požiadajte žiakov, aby sa podelili o príklad, ktorý im napadol, a potom o situáciu, ktorá by sa dala využiť na dobré alebo zlé."
         },
         "f273893d-db33-4c30-b8de-5dc29b35aaf9": {
           "description": " **Cieľ diskusie**: Táto úloha je zámerne otvorená a nejasne definuje „dobré“, „zlé“, „správne“ a „nesprávne“. Dajte žiakom priestor, aby preskúmali, ako by opísali technológiu umelej inteligencie, a našli príklady „dobrého“ alebo „zlého“. Snažte sa, aby sa v triede ozvali rôzne hlasy. Keď budú žiaci pripravení, prejdite na ďalšiu snímku a na zhrnutie diskusie použite poznámky uvedené nižšie."
@@ -13553,7 +13556,7 @@
           "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ukážte:** Zobrazte popis Hawainej aplikácie zo včerajšieho dňa, Odporúčanie krúžkov."
         },
         "80cc0bfa-cd6b-41d0-8cc0-30f1e2481f36": {
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Spýtajte sa**: Tím sa rozhodol pre aplikáciu Odporúčanie krúžkov. Ďalším krokom je zhromaždiť údaje, ktoré potrebujú na vytvorenie svojho modelu. Plánujú uskutočniť rozhovory s rôznymi ľuďmi, aby určili, aký krúžok by ich aplikácia mala odporúčať. Na aké otázky by sa podľa vás mali pýtať, aby im pomohli odporučiť krúžok, do ktorého sa majú pridať?"
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Spýtajte sa**: Tím sa rozhodol pre aplikáciu Odporúčanie krúžkov. Ďalším krokom je zhromaždiť údaje, ktoré potrebujú na vytvorenie svojho modelu. Plánujú uskutočniť rozhovory s rôznymi ľuďmi, aby určili, aký krúžok by ich aplikácia mala odporúčať. Čo by sa podľa vás mali spýtať, aby im dokázali odporučiť krúžok, na ktorý sa majú zapísať?"
         },
         "b2b9b186-1a5e-455f-8427-4f8b3d03aeaf": {
           "description": "**Cieľ diskusie:** Odpovede budú rôzne, ale môžu zahŕňať:\n\n-   demografické informácie, ako sú vek alebo pohlavie;\n-   záujmy alebo koníčky, napríklad či uprednostňujú určitý šport;\n-   mediálne preferencie, napríklad aké knihy, filmy alebo hudbu má niekto rád;\n-   typ osobnosti, napríklad introvert alebo extrovert alebo typy nálad."
@@ -13684,7 +13687,7 @@
           "progression_name": "AI Lab a Kimine údaje"
         },
         "2d686046-4503-4aa6-8d46-0183bce166bc": {
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Urobte toto:** Postupujte podľa pokynov v každej fáze v AI Labe. Počas tejto úrovne sú vašimi cieľmi:\n\n-   vytrénovať model s presnosťou aspoň 70 %, ktorý používa najmenšie množstvo vlastností;\n-   vyplniť kartu modelu a uložiť svoj model."
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Urobte toto:** Postupujte podľa pokynov v každej fáze v AI Labe. Počas tejto úrovne sú vašimi cieľmi:\n\n-   vytrénovať model s presnosťou aspoň 70 %, ktorý používa čo najmenej vlastností;\n-   vyplniť kartu modelu a uložiť svoj model."
         },
         "1529ffea-c11c-46ac-85e1-1a6a1fb19386": {
           "description": "**Monitorujte:** Sledujte žiakov pri práci v AI Labe. Zamerajte sa na to, ako žiaci vyberajú vlastnosti, a uistite sa, že vyvažujú presnosť a jednoduchosť. Povzbudzujte žiakov, aby skúšali viacero vlastností a aby kládli otázky, ktoré majú zmysel v kontexte toho, že majú odporúčaný krúžok."
@@ -13764,7 +13767,7 @@
         },
         "d50a69ad-81f7-449a-ab1a-241f95e80193": {
           "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Nechajte žiakov prihlásiť sa do Code Studia a otvoriť prvú úroveň tejto lekcie. Žiaci uvidia niekoľko množín údajov, z ktorých si môžu vybrať.",
-          "progression_name": "Množiny údajov klubov"
+          "progression_name": "Množiny údajov krúžkov"
         },
         "b02b37d8-bb6d-4c8b-88c5-9121a5de7212": {
           "description": "**Ukážte:** Ukážte žiakom snímku vysvetľujúcu prvú časť dnešnej úlohy – Kim, Nicovi, Isaacovi a Zoey sa nedarí vytrénovať presné modely a trieda im musí pomôcť vyriešiť tento problém. Žiaci preskúmajú výsledky každého žiaka a pokúsia sa opísať, čo je príčinou problému, a navrhnúť odporúčanie, ako ho vyriešiť alebo ako sa mu nabudúce vyhnúť."
@@ -18024,7 +18027,7 @@
           "description": "**Urobte toto:** Pomocou úvodných snímok k lekcii alebo tohto [vzorového projektu](https://studio.code.org/projects/spritelab/i1-YKJAmtlLMi54FJRIVNnWR_yLy-xRpmUAKcIAlaa0/view) ukážte žiakom animáciu mravca a vážky.\n\n**Diskusia:** _Ako by ste opísali túto scénu so sprajtmi?\nAk by ste chceli, aby pre vás niekto túto scénu vytvoril na počítači, aké inštrukcie by potreboval?_\n\n**Cieľ diskusie:** Žiaci by mali byť schopní identifikovať oba sprajty v tomto projekte, opísať ich správanie (pohyby) a všimnúť si aj pozadie.\nNechajte žiakom čas na to, aby prišli s nápadmi. Ak si nie sú istí, čo majú povedať, vysvetlite im, že od nich očakávate iba opis toho, čo vidia.\n\nPotom ukáže samotný kód k projektu a vyzvite žiakov, aby sa pokúsili prečítať si ho.\n\n**Reflexia:** V čom sú si naše inštrukcie s týmto kódom podobné? Aké sú medzi nimi rozdiely?"
         },
         "d0b548d1-7ce0-46f1-98c6-2f83efb996c7": {
-          "name": "Vytváranie postáv",
+          "name": "Vytváranie sprajtov",
           "description": "#### Predpoveď (3 minúty)\n\n**Urobte toto:** Dajte žiakom za úlohu prečítať poskytnutý kód a skúsiť predpovedať, čo sa stane. Po stlačení tlačidla Spustiť dajte žiakom čas na to, aby sa zamysleli nad čímkoľvek, čo ich zaujalo alebo prekvapilo.",
           "tips": [
             "V úlohách s predpoveďou majú žiaci za úlohu prezrieť si hotový program a odpovedať na otázku, ktorá sa ho týka. Otázku musia zodpovedať ešte predtým, ako stlačia tlačidlo Spustiť. Hoci je možné využiť tieto otázky ako formu hodnotenia, myslite na to, že často sa nachádzajú na začiatku lekcie, aby sa žiaci nad novými vecami začali zamýšľať ešte skôr, než sa naučia, ako v skutočnosti fungujú. "
@@ -21185,7 +21188,7 @@
           "description": "**Urobte toto:** Pomocou úvodných snímok k lekcii alebo tohto [vzorového projektu](https://studio.code.org/projects/spritelab/i1-YKJAmtlLMi54FJRIVNnWR_yLy-xRpmUAKcIAlaa0/view) ukážte žiakom animáciu mravca a vážky.\n\n**Diskusia:** _Ako by ste opísali túto scénu so sprajtmi?\nAk by ste chceli, aby pre vás niekto túto scénu vytvoril na počítači, aké inštrukcie by potreboval?_\n\n**Cieľ diskusie:** Žiaci by mali byť schopní identifikovať oba sprajty v tomto projekte, opísať ich správanie (pohyby) a všimnúť si aj pozadie.\nNechajte žiakom čas na to, aby prišli s nápadmi. Ak si nie sú istí, čo majú povedať, vysvetlite im, že od nich očakávate iba opis toho, čo vidia.\n\nPotom ukáže samotný kód k projektu a vyzvite žiakov, aby sa pokúsili prečítať si ho.\n\n**Reflexia:** V čom sú si naše inštrukcie s týmto kódom podobné? Aké sú medzi nimi rozdiely?"
         },
         "ff19466f-a215-4f8f-b83a-4a289e985f0f": {
-          "name": "Vytváranie postáv",
+          "name": "Vytváranie sprajtov",
           "description": "#### Predpoveď (3 minúty)\n\n**Urobte toto:** Dajte žiakom za úlohu prečítať poskytnutý kód a skúsiť predpovedať, čo sa stane. Po stlačení tlačidla Spustiť dajte žiakom čas na to, aby sa zamysleli nad čímkoľvek, čo ich zaujalo alebo prekvapilo.",
           "tips": [
             "V úlohách s predpoveďou majú žiaci za úlohu prezrieť si hotový program a odpovedať na otázku, ktorá sa ho týka. Otázku musia zodpovedať ešte predtým, ako stlačia tlačidlo Spustiť. Hoci je možné využiť tieto otázky ako formu hodnotenia, myslite na to, že často sa nachádzajú na začiatku lekcie, aby sa žiaci nad novými vecami začali zamýšľať ešte skôr, než sa naučia, ako v skutočnosti fungujú. "
@@ -23611,7 +23614,7 @@
         },
         "181e84e3-430b-4c20-9e48-fffad8c5bab2": {
           "name": "Denník",
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ukážte:** Trieda chce vytvoriť aplikáciu na odporúčanie kníh pre nových žiakov. Aplikácia položí niekoľko otázok a na základe odpovedí odporučí knihu, ktorú čítali ostatní ľudia v triede.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Spýtajte sa:** _Akú otázku by podľa vás mali položiť, aby dokázali odporučiť knihu?_\n\nNechajte žiakov, aby si samostatne zapísali poznámky do zápisníka, a potom sa o svoje odpovede podelili so susedom. Požiadajte žiakov, aby sa podelili s celou triedou, a odpovede zapisujte na tabuľu."
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ukážte:** Trieda chce vytvoriť aplikáciu na odporúčanie kníh pre nových žiakov. Aplikácia položí niekoľko otázok a na základe odpovedí odporučí knihu, ktorú čítali ostatní žiaci v triede.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Spýtajte sa:** _Akú otázku by podľa vás mali položiť, aby dokázali odporučiť knihu?_\n\nNechajte žiakov, aby si samostatne zapísali poznámky do zápisníka, a potom sa o svoje odpovede podelili so susedom. Požiadajte žiakov, aby sa podelili s celou triedou, a odpovede zapisujte na tabuľu."
         },
         "eaac2119-56ff-4c15-ad0e-06acce32c228": {
           "description": " **Cieľ diskusie:** Žiaci môžu navrhnúť, aby sa trieda opýtala na iné knihy, ktoré žiaci predtým čítali, alebo na typy kníh, ktoré ľudia radi čítajú. Môžu tiež navrhnúť otázky na základe záujmu alebo koníčkov. Požiadajte žiakov, aby vysvetlili svoje otázky, a snažte sa zachytiť odpovede, pri ktorých sa žiaci snažia nájsť súvislosť medzi odpoveďami a odporúčaním knihy. Napríklad niekto, kto sa zaujíma o mágiu, môže s väčšou pravdepodobnosťou čítať fantasy knihy – to je príklad, pri ktorom môže byť zber údajov užitočný pri zisťovaní, či tento vzťah bude pravdivý."
@@ -23652,7 +23655,7 @@
           ]
         },
         "0de901b0-640e-45fe-9a9f-4277864af5cc": {
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Spýtajte sa:** _Z prieskumu v aplikácii chýbajú dve otázky:_\n\n-   _Aký typ sendviča je tvoj najobľúbenejší?_\n-   _Aký deň máš najradšej?_\n\nPrečo si myslíte, že sa tieto otázky nedostali do modelu?\n\n**Cieľ diskusie:** Veďte žiakov k záveru, že tieto otázky pravdepodobne nemali v údajoch silné vzťahy alebo neviedli k presnému modelu. Žiaci môžu vysloviť hypotézu, že je to preto, lebo otázky sa nezdali byť súvisiace s knihami, ale bez toho, aby sme videli skutočné údaje, to nikdy nebudeme vedieť naisto. "
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Spýtajte sa:** _Z prieskumu v aplikácii chýbajú dve otázky:_\n\n-   _Aký typ sendviča je tvoj najobľúbenejší?_\n-   _Aký deň máš najradšej?_\n\nPrečo sa podľa vás tieto otázky nedostali do modelu?\n\n**Cieľ diskusie:** Veďte žiakov k záveru, že tieto otázky pravdepodobne nemali v údajoch silné vzťahy alebo neviedli k presnému modelu. Žiaci môžu vysloviť hypotézu, že je to preto, lebo otázky sa nezdali byť súvisiace s knihami, ale bez toho, aby sme videli skutočné údaje, to nikdy nebudeme vedieť naisto. "
         },
         "0d89923e-93b3-4a03-b79e-b262c4a71f72": {
           "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Spýtajte sa:** _Táto trieda zvažovala, že sa v prieskume opýta na pohlavie, aby pomohla odporučiť knihu, ale rozhodla sa, že to neurobí._\n\n_Myslíte si, že je na škodu zahrnúť do prieskumu otázku o pohlaví? Prečo alebo prečo nie?_\n\n**Cieľ diskusie:** Toto je príležitosť preskúmať, ako by sa demografické znaky, ako napríklad pohlavie, rasa alebo vek, mali alebo nemali používať v modeloch strojového učenia. Niektorí žiaci si môžu myslieť, že zahrnúť pohlavie do prieskumu je neškodné, pretože môže mať silný vzťah k určitým typom kníh. Iní žiaci môžu upozorniť na to, že informácie o pohlaví môžu viesť k stereotypom, alebo že nemusí byť dostatok údajov na to, aby sa do prieskumu zahrnulo pohlavie, najmä v prípade nebinárnych osôb.\n\nVeďte žiakov k tomu, aby zvážili, či sa im zdá, že je to najlepší typ otázky vzhľadom na to, že sa trieda snaží predpovedať odporúčanie knihy. Nechajte triedu zvážiť, či rod považuje za nevyhnutnú otázku, alebo či aj iné otázky povedú k presným odporúčaniam. V tomto smere je otázka o pohlaví podobná predchádzajúcim dvom otázkam o tom, ktorý sendvič máte radi alebo aký máte deň: ostatné otázky sú pravdepodobne lepšími predpovednými ukazovateľmi toho, aký typ knihy si môžete chcieť prečítať.",
@@ -23687,7 +23690,7 @@
           ]
         },
         "35bd3261-9e58-490f-a4f7-6f6188cf278e": {
-          "description": "**Úrovne výberu:** Po vytvorení aplikácie na odporúčanie kníh si žiaci môžu vybrať z niekoľkých vzorových aktivít a pokračovať vo vylepšovaní svojej aplikácie. Na každej úrovni sa používa tá istá aplikácia, ktorú už vytvorili, ako predloha, ktorú môžu doplniť. Žiaci si môžu vybrať, koľko týchto úrovní chcú absolvovať – každá z nich im umožní pokračovať v prispôsobovaní a zlepšovaní svojej aplikácie.",
+          "description": "**Voliteľné úrovne:** Po vytvorení aplikácie na odporúčanie kníh si žiaci môžu vybrať z niekoľkých vzorových aktivít a pokračovať vo vylepšovaní svojej aplikácie. Na každej úrovni sa používa tá istá aplikácia, ktorú už vytvorili, ako predloha, ktorú môžu doplniť. Žiaci si môžu vybrať, koľko týchto úrovní chcú absolvovať – každá z nich im umožní pokračovať v prispôsobovaní a zlepšovaní svojej aplikácie.",
           "tips": [
             "**Výber úrovne cvičení žiakmi:** Ak si žiaci sami zvolia úroveň cvičení, je to jeden zo spôsobov diferenciácie vyučovania so žiakmi. Ak sa chcete dozvedieť viac o tom, ako tieto úrovne podporujú diferenciáciu, ako aj o ďalších stratégiách, môžete si prečítať príručku [Objavujeme informatiku: Sprievodca diferenciáciou](https://docs.google.com/document/d/15Y6Mo3fMUtHq16SSskABgcYE-5xfk-Ewv0z_o4uaLdI/preview)."
           ],
@@ -23862,7 +23865,7 @@
         },
         "fab00d1e-0bf0-4f6c-866f-388441b6505d": {
           "name": "Zápisník",
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Úvaha:** _Prečo je karta modelu užitočná pri vytváraní modelu v AI Labe? Ako je karta modelu užitočná pri vytváraní aplikácie v App Labe?_\n\nŽiaci môžu odpovedať na túto otázku v sprievodcovi aktivitou alebo ju môžete použiť ako záverečnú úlohu."
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Úvaha:** _Prečo je karta modelu užitočná pri vytváraní modelu v AI Labe? Prečo je karta modelu užitočná pri vytváraní aplikácie v App Labe?_\n\nŽiaci môžu odpovedať na túto otázku v sprievodcovi aktivitou alebo ju môžete použiť ako záverečnú úlohu."
         },
         "c1f63e3b-ea15-475e-bb1e-d8ee0d402c63": {
           "description": "**Cieľ diskusie:** Žiaci môžu vyjadriť podobné myšlienky ako v úvodnom videu - že karta modelu pomáha zdokumentovať rozhodnutia a zabezpečiť prehľadnosť a že ju možno použiť v App Labe na doplnenie návrhu – ale ich odpovede by mali byť viac podložené ich skúsenosťami z tejto lekcie, najmä po výbere vlastného označenia a trénovaní vlastného modelu."
@@ -23968,7 +23971,7 @@
           "progression_name": "Hodnotenie"
         },
         "8ded89d7-85cd-4bba-883e-7c4981ce3078": {
-          "description": "**Úrovne výberu:** Po vytvorení aplikácie na odporúčanie domácich zvierat si žiaci môžu vybrať z niekoľkých vzorových aktivít a pokračovať vo vylepšovaní svojej aplikácie. Na každej úrovni sa používa tá istá aplikácia, ktorú už vytvorili, ako predloha, ktorú môžu doplniť. Žiaci si môžu vybrať, koľko týchto úrovní chcú absolvovať – každá z nich im umožní pokračovať v prispôsobovaní a zlepšovaní svojej aplikácie.",
+          "description": "**Voliteľné úrovne:** Po vytvorení aplikácie na odporúčanie domácich zvierat si žiaci môžu vybrať z niekoľkých vzorových aktivít a pokračovať vo vylepšovaní svojej aplikácie. Na každej úrovni sa používa tá istá aplikácia, ktorú už vytvorili, ako predloha, ktorú môžu doplniť. Žiaci si môžu vybrať, koľko týchto úrovní chcú absolvovať – každá z nich im umožní pokračovať v prispôsobovaní a zlepšovaní svojej aplikácie.",
           "tips": [
             "**Déjà vu?** Žiaci si môžu všimnúť, že úrovne výberu v tejto lekcii vyzerajú povedome – sú to tie isté úrovne, z ktorých si žiaci mohli vybrať v lekcii 7. Je to zámerné, pretože to dáva žiakom možnosť naučiť sa iný kód, ako sa naučili predtým. Žiakov, ktorí už preskúmali jednotlivé možnosti, povzbuďte, aby svoje vedomosti využili v tejto novej aplikácii."
           ]
@@ -24110,7 +24113,7 @@
           "description": "Oba tieto systémy nám pomáhajú pri rozhodovaní, ale rôznymi spôsobmi. Petrin systém sa podobá na typ odporúčaní, ktoré sme videli doteraz, pretože zjednodušuje údaje len na dve kategórie. Michaelin systém je trochu odlišný, na vytvorenie odporúčania používa rozsah hodnôt – ide o tzv. číselné údaje. Dnes sa naučíme, ako v AI Labe používať číselné údaje na vytváranie nových druhov odporúčaní a predpovedí."
         },
         "533e250e-c476-4984-aebc-a39eee5f217f": {
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Otázka dňa:** Ako môžeme použiť AI Lab na predpovedanie číselných údajov?"
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Otázka dňa:** Ako môžeme pomocou AI Labu predpovedať číselné údaje?"
         },
         "ad4af062-015a-4af2-b8a6-54148ece9e91": {
           "name": "Kategorické a číselné",
@@ -24138,11 +24141,11 @@
           ]
         },
         "7b869fc5-7ea0-4fb1-b595-6fc677f59c7e": {
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Diskutujte:**\n\n-   _Ak je v parku malý počet antilop, aký to má vplyv na to, koľko levov by mohlo byť v parku?_\n-   _Ak je v parku veľký počet antilop, aký to má vplyv na to, koľko levov by mohlo byť v parku?_\n-   _Prečo si myslíte, že je to tak?_\n\n**Cieľ diskusie:** Žiaci by si mali všimnúť, že čím menej je antilop, tým menej je levov a naopak. Môžu si myslieť, že to súvisí so vzťahmi medzi predátorom a korisťou – levy jedia antilopy, takže ak je menej antilop, je menej levov. Žiaci by si mali svoje odpovede zaznamenať do sprievodcu aktivitou, a to aj v prípade, že o odpovediach diskutovali spoločne v triede."
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Diskutujte:**\n\n-   _Ak je v parku málo antilop, aký to má vplyv na počet levov v parku?_\n-   _Ak je v parku veľa antilop, aký to má vplyv na počet levov v parku?_\n-   _Prečo si myslíte, že je to tak?_\n\n**Cieľ diskusie:** Žiaci by si mali všimnúť, že čím menej je antilop, tým menej je levov a naopak. Môžu si myslieť, že to súvisí so vzťahmi medzi lovcom a korisťou – levy jedia antilopy, takže ak je menej antilop, je menej levov. Žiaci by si mali svoje odpovede zaznamenať do sprievodcu aktivitou, a to aj v prípade, že o odpovediach diskutovali spoločne v triede."
         },
         "5b59847e-71f7-481a-a5ca-aa9ec4511289": {
           "name": "Vlastnosť 2: Ľudia",
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Urobte toto**: Nechajte žiakov kliknúť na stĺpec Ľudia. Tento stĺpec uvádza, koľko ľudí bolo v daný deň videných v parku. Nechajte žiakov najprv odpovedať na otázky v sprievodcovi aktivitou a až potom diskutujte v skupine.\n\n**Monitorujte:** Skontrolujte, ako sa žiakom darí, a pomôžte im interpretovať grafy. Povzbuďte žiakov, aby používali začiatočné vety typu: „Keď je počet ľudí..., potom je počet levov...“.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Diskutujte:**\n\n-   _Ak je v parku malý počet ľudí, aký to má vplyv na to, koľko levov môže byť v parku?_\n-   _Ak je v parku veľký počet ľudí, aký to má vplyv na to, koľko levov môže byť v parku?_\n-   _Prečo si myslíte, že je to tak?_",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Urobte toto**: Nechajte žiakov kliknúť na stĺpec Ľudia. Tento stĺpec uvádza, koľko ľudí bolo v daný deň videných v parku. Nechajte žiakov najprv odpovedať na otázky v sprievodcovi aktivitou a až potom diskutujte v skupine.\n\n**Monitorujte:** Skontrolujte, ako sa žiakom darí, a pomôžte im interpretovať grafy. Povzbuďte žiakov, aby používali začiatočné vety typu: „Keď je počet ľudí..., potom je počet levov...“.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Diskutujte:**\n\n-   _Ak je v parku málo ľudí, aký to má vplyv na počet levov v parku?_\n-   _Ak je v parku veľa ľudí, aký to má vplyv na počet levov v parku?_\n-   _Prečo si myslíte, že je to tak?_",
           "tips": [
             "**Asociácie:** Graf antilop predstavuje pozitívnu asociáciu a graf ľudí predstavuje negatívnu asociáciu, ktoré sú súčasťou matematických noriem [Common Core pre 8. ročník](http://www.corestandards.org/Math/Content/8/SP/A/1/). Žiaci nemusia poznať tieto pojmy, aby dokázali úspešne zvládnuť tento tematický celok, preto neodporúčame používať túto slovnú zásobu, pokiaľ priamo nepodporuje ich štúdium na iných hodinách."
           ]
@@ -24238,7 +24241,7 @@
           "description": "**Monitorujte:** Sledujte žiakov pri vytváraní tejto aplikácie. Žiaci nebudú môcť aplikáciu otestovať, kým nebude úplne dokončená, čo môže byť pre niektorých žiakov problém. Tu je niekoľko vecí, na ktoré si treba dávať pozor počas práce žiakov:\n\n-   **Úroveň 3:** Žiaci si precvičujú odstraňovanie predvolených prvkov, ktoré sa generujú pri prvom importovaní modelu. Ide o krok, ktorý bude dôležitý, keď budú žiaci v rámci neskorších projektov vytvárať vlastné aplikácie.\n-   **Úroveň 4 a 5:** Žiaci iba aktualizujú kód svojej aplikácie, aby použili nové prvky návrhu pre vlastnosti Počet áut a Počasie. Môžu použiť pomôcky v rámci pokynov k úrovni, ktoré im poradia, čo majú v jednotlivých krokoch urobiť.\n-   **Úroveň 6:** Žiaci aktualizujú návrh aj kód svojej aplikácie na zber údajov pre vlastnosť Teplota. Pomôžte žiakom sledovať nový textový vstupný prvok, ktorý pridali na obrazovku teploty, a uistite sa, že ID prvku sa zhoduje s tým, ktoré použili v bloku [\\`getText\\`(#fff176)](/docs/applab/getText/) svojho kódu.\n-   **Úroveň 7:** Žiaci aktualizujú návrh aj kód svojej aplikácie na zber údajov pre vlastnosť Denný čas. Pridanie prvku návrhu a aktualizácia kódu je podobná ako na poslednej úrovni, ale tento krok má pridanú požiadavku použiť kartu modelu na kontrolu možných hodnôt pre túto kategorickú funkciu. Žiaci sa môžu dopustiť pravopisných chýb alebo chýb v písaní veľkých písmen, ktoré môžu ovplyvniť ich kód – nabádajte žiakov, aby si dávali veľký pozor na presnú zhodu možností v rozbaľovacom zozname s kartou modelu.\n-   **Úroveň 8:** Žiaci majú možnosť spustiť svoju aplikáciu a overiť, či funguje. Na tejto úrovni budú musieť žiaci vykonať zmeny v kóde len v prípade, že ich program nefunguje. V opačnom prípade, ak aplikácia funguje správne, môžu žiaci pokračovať na ďalšiu úroveň."
         },
         "4e10be5f-60ad-4bae-913d-7a157e519447": {
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Úrovne výberu:** Po vytvorení aplikácie výstražného systému pre vodičov si žiaci môžu vybrať z niekoľkých vzorových aktivít a pokračovať vo vylepšovaní svojej aplikácie. Na každej úrovni sa používa tá istá aplikácia, ktorú už vytvorili, ako predloha, ktorú môžu doplniť. Žiaci si môžu vybrať, koľko týchto úrovní chcú absolvovať – každá z nich im umožní pokračovať v prispôsobovaní a zlepšovaní svojej aplikácie.",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Voliteľné úrovne:** Po vytvorení aplikácie výstražného systému pre vodičov si žiaci môžu vybrať z niekoľkých vzorových aktivít a pokračovať vo vylepšovaní svojej aplikácie. Na každej úrovni sa používa tá istá aplikácia, ktorú už vytvorili, ako predloha, ktorú môžu doplniť. Žiaci si môžu vybrať, koľko týchto úrovní chcú absolvovať – každá z nich im umožní pokračovať v prispôsobovaní a zlepšovaní svojej aplikácie.",
           "tips": [
             "\\*\\* Opakované úrovne:\\*\\* Možnosti v tejto úrovni sú totožné s možnosťami v poslednej lekcii. Je to zámerné, aby mali žiaci viacero príležitostí naučiť sa nové návrhové triky alebo bloky kódu, prípadne pokračovať v precvičovaní nových blokov, ktoré sa naučili v minulej lekcii. Povzbuďte žiakov, aby si pre dnešnú aplikáciu vybrali novú úlohu, ktorá sa líši od tých, ktoré si vybrali včera."
           ]
@@ -24261,7 +24264,7 @@
         },
         "edd27907-d992-46f6-a9d6-71f7cb7098b9": {
           "name": "Denník",
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Diskutujte**: Aké príklady umelej inteligencie ste videli buď v reálnom živote, alebo vo fikcii, napríklad vo filmoch, hudbe alebo televízii?\n\nPožiadajte žiakov, aby si svoje odpovede zapísali do svojich zápisníkov a potom sa o ne podelili so susedom. Pred diskusiou v celej skupine prejdite na ďalšiu úlohu.\n\n**Diskutujte:** _Spomeniete si na prípady, keď boli tieto príklady použité na dobré veci? Viete si spomenúť na prípady, keď boli tieto príklady použité na zlé veci, aj keď neúmyselne? Existujú veci, ktoré by sme mohli považovať za „správne“ alebo „nesprávne“?_\n\nPožiadajte žiakov, aby sa najprv zamysleli samostatne, potom diskutovali so susedom a až potom požiadajte žiakov, aby sa podelili ako celá skupina. Požiadajte žiakov, aby sa podelili o príklad, ktorý im napadol, a potom o situáciu, ktorá by sa dala využiť na dobré alebo zlé."
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Diskutujte**: Aké príklady umelej inteligencie ste videli buď v reálnom živote, alebo vo fikcii, napríklad vo filmoch, hudbe alebo televízii?\n\nPožiadajte žiakov, aby si svoje odpovede zapísali do svojich zápisníkov a potom sa o ne podelili so susedom. Pred diskusiou v celej skupine prejdite na ďalšiu úlohu.\n\n**Diskutujte:** _Spomeniete si na prípady, keď boli tieto príklady použité na dobré veci? Viete si spomenúť na prípady, keď boli tieto príklady použité na zlé veci, aj keď neúmyselne? Sú veci, ktoré robia a ktoré by sme mohli považovať za „dobré“ alebo „zlé“?_\n\nPožiadajte žiakov, aby sa najprv zamysleli samostatne, potom diskutovali so susedom a až potom požiadajte žiakov, aby sa podelili ako celá skupina. Požiadajte žiakov, aby sa podelili o príklad, ktorý im napadol, a potom o situáciu, ktorá by sa dala využiť na dobré alebo zlé."
         },
         "c6738321-64d3-42be-8afa-b08fcceb97b5": {
           "description": " **Cieľ diskusie**: Táto úloha je zámerne otvorená a nejasne definuje „dobré“, „zlé“, „správne“ a „nesprávne“. Dajte žiakom priestor, aby preskúmali, ako by opísali technológiu umelej inteligencie, a našli príklady „dobrého“ alebo „zlého“. Snažte sa, aby sa v triede ozvali rôzne hlasy. Keď budú žiaci pripravení, prejdite na ďalšiu snímku a na zhrnutie diskusie použite poznámky uvedené nižšie."
@@ -24465,7 +24468,7 @@
           "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ukážte:** Zobrazte popis Hawainej aplikácie zo včerajšieho dňa, Odporúčanie krúžkov."
         },
         "3999f216-0132-4c0e-b31d-55267548d882": {
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Spýtajte sa**: Tím sa rozhodol pre aplikáciu Odporúčanie krúžkov. Ďalším krokom je zhromaždiť údaje, ktoré potrebujú na vytvorenie svojho modelu. Plánujú uskutočniť rozhovory s rôznymi ľuďmi, aby určili, aký krúžok by ich aplikácia mala odporúčať. Na aké otázky by sa podľa vás mali pýtať, aby im pomohli odporučiť krúžok, do ktorého sa majú pridať?"
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Spýtajte sa**: Tím sa rozhodol pre aplikáciu Odporúčanie krúžkov. Ďalším krokom je zhromaždiť údaje, ktoré potrebujú na vytvorenie svojho modelu. Plánujú uskutočniť rozhovory s rôznymi ľuďmi, aby určili, aký krúžok by ich aplikácia mala odporúčať. Čo by sa podľa vás mali spýtať, aby im dokázali odporučiť krúžok, na ktorý sa majú zapísať?"
         },
         "7f27fb72-fe6d-43c7-bc1c-0b47430a197a": {
           "description": "**Cieľ diskusie:** Odpovede budú rôzne, ale môžu zahŕňať:\n\n-   demografické informácie, ako sú vek alebo pohlavie;\n-   záujmy alebo koníčky, napríklad či uprednostňujú určitý šport;\n-   mediálne preferencie, napríklad aké knihy, filmy alebo hudbu má niekto rád;\n-   typ osobnosti, napríklad introvert alebo extrovert alebo typy nálad."
@@ -24597,7 +24600,7 @@
           "progression_name": "AI Lab a Kimine údaje"
         },
         "6b8f47ab-3e64-41b6-ac05-2712618d76ee": {
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Urobte toto:** Postupujte podľa pokynov v každej fáze v AI Labe. Počas tejto úrovne sú vašimi cieľmi:\n\n-   vytrénovať model s presnosťou aspoň 70 %, ktorý používa najmenšie množstvo vlastností;\n-   vyplniť kartu modelu a uložiť svoj model."
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Urobte toto:** Postupujte podľa pokynov v každej fáze v AI Labe. Počas tejto úrovne sú vašimi cieľmi:\n\n-   vytrénovať model s presnosťou aspoň 70 %, ktorý používa čo najmenej vlastností;\n-   vyplniť kartu modelu a uložiť svoj model."
         },
         "bcf207e9-e1f0-45d9-aff0-40db5a335dfe": {
           "description": "**Monitorujte:** Sledujte žiakov pri práci v AI Labe. Zamerajte sa na to, ako žiaci vyberajú vlastnosti, a uistite sa, že vyvažujú presnosť a jednoduchosť. Povzbudzujte žiakov, aby skúšali viacero vlastností a aby kládli otázky, ktoré majú zmysel v kontexte toho, že majú odporúčaný krúžok."
@@ -24680,7 +24683,7 @@
         },
         "8bc19694-99fb-4360-a3ac-2f7b9ff83365": {
           "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Nechajte žiakov prihlásiť sa do Code Studia a otvoriť prvú úroveň tejto lekcie. Žiaci uvidia niekoľko množín údajov, z ktorých si môžu vybrať.",
-          "progression_name": "Množiny údajov klubov"
+          "progression_name": "Množiny údajov krúžkov"
         },
         "600cac90-5755-4740-b0ae-900931998fa5": {
           "description": "**Rozdajte:** Rozdajte sprievodcu aktivitou [r problems_with_models_-_activity_guide/aiml/2021]. Žiaci sem zaznamenajú údaje zo svojho skúmania."

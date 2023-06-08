@@ -69,6 +69,7 @@ cs:
   unsubmit: Neodesláno
   previous_page: Předchozí stránka
   next_page: Další strana
+  next_level: Další úroveň
   next_resource: Další zdroj
   done_with_module: Tenhle výukový modul mám splněný
   cancel: "Zrušit"
@@ -456,7 +457,7 @@ cs:
     confirm:
       remove: 'Jsi si jist/á, že chceš odstranit tohoto učitele?'
     students:
-      dashboard: 'Přejít na přehled učitele'
+      dashboard: 'Přejít na učitelský ovládací panel'
     user_not_found: 'Učitel nebyl nalezen.'
     student_teacher_disassociated: 'Opustili jste sekci %{section_code} učitele %{teacher_name}.'
     panel:
@@ -852,7 +853,7 @@ cs:
     wrong_body: "Děkujeme vám za odeslání odpovědí."
     correct_title: "Děkuji"
     correct_body: "Děkujeme vám za odeslání odpovědí."
-    hide_survey_last_answer: "Tento průzkum je anonymní. Pro souhrné informace o výsledcích navštiv prosím nástěnku tvého učitele. Výsledky budou zobrazené pouze při účasti pěti žáků."
+    hide_survey_last_answer: "Tento průzkum je anonymní. Pro souhrné informace o výsledcích navštivte prosím učitelský ovládací panel. Výsledky budou zobrazeny pouze při účasti alespoň pěti žáků."
     survey_submission_thankyou: "Děkujeme Vám za podání tohoto průzkumu! Průzkum byl vyprázdněn tak, aby Vaše odpovědi byly anonymní. Pamatujte, že Váš učitel i tak uvidí odpovědi celé Vaší třídy, ale bez uvedení jmen."
   level_group-submittable:
     wrong_title: "Děkuji"

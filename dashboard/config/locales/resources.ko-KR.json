@@ -286,6 +286,7 @@
           "type": "워크 시트"
         },
         "dance_party_unplugged/coursed/2022": {
+          "name": "댄스 파티: 언플러그드",
           "type": "자료"
         },
         "open-ended_programming_levels_2/coursed/2022": {
@@ -4444,6 +4445,7 @@
           "type": "워크 시트"
         },
         "dance_party_unplugged/coursed/2021": {
+          "name": "댄스 파티: 언플러그드",
           "url": "https://studio.code.org/s/dance-unplugged/lessons/1",
           "type": "자료"
         },
@@ -4742,6 +4744,7 @@
           "type": "자료"
         },
         "follow_the_algorithm/coursee/2021": {
+          "name": "알고리즘 따르기",
           "url": "https://docs.google.com/presentation/d/16r9HpwQodVnmSfRlfJmOfZajqE66YlZz0aG60CFsVMk/template/preview",
           "type": "슬라이드"
         },

@@ -292,7 +292,8 @@
           "99": "99",
           "You won!": "Ти виграв!",
           "The number was": "Було загадане число",
-          "No more tries!": "Спроби скінчилися!"
+          "No more tries!": "Спроби скінчилися!",
+          "?": "?"
         },
         "CSD U1 processing guess_2022": {
           "1": "1",
@@ -380,7 +381,8 @@
           "99": "99",
           "You won!": "Ти виграв!",
           "The number was": "Було загадане число",
-          "No more tries!": "Спроби скінчилися!"
+          "No more tries!": "Спроби скінчилися!",
+          "?": "?"
         },
         "CSD U1 processing live_2021": {
           "bear": "Ведмідь",
@@ -1751,6 +1753,33 @@
         },
         "CSDU6 Circuit Playground Test_2222": {
           "Success!": "Успіху!"
+        },
+        "CSD U6 - Screen Outputs - ChalB_2222": {
+          "?": "?"
+        },
+        "CSD U6 emotion machine example": {
+          "?": "?"
+        },
+        "CSD U6 emotion machine example_2018": {
+          "?": "?"
+        },
+        "CSD U6 emotion machine example_2019": {
+          "?": "?"
+        },
+        "CSD U6 emotion machine example_2021": {
+          "?": "?"
+        },
+        "CSD U6 emoji race demo": {
+          "Emoji Race": "Перегони емодзі"
+        },
+        "CSD U6 emoji race demo_2018": {
+          "Emoji Race": "Перегони емодзі"
+        },
+        "CSD U6 emoji race demo_2019": {
+          "Emoji Race": "Перегони емодзі"
+        },
+        "CSD U6 emoji race demo_2021": {
+          "Emoji Race": "Перегони емодзі"
         }
       }
     }

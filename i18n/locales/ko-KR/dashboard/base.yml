@@ -69,6 +69,7 @@ ko:
   unsubmit: 제출 취소
   previous_page: 이전 페이지
   next_page: 다음 페이지
+  next_level: 다음 레벨
   next_resource: 다음 자료
   done_with_module: 이 학습 모듈로 완료
   cancel: "취소"
@@ -619,7 +620,7 @@ ko:
     direction: '시작 안내(학년 기준)'
   video:
     tab: '소개 동영상.'
-    notes: '소개 프레젠테이션.'
+    notes: '영상 대본 보기'
     notes_coming_soon: '참고 동영상 준비중'
     autoplay_option: '비디오 자동 실행'
     download: '동영상 다운로드'

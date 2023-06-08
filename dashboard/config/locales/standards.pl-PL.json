@@ -2058,22 +2058,22 @@
           "description": "Oceń źródło, odróżniając fakt od opinii."
         },
         "D4.1.K-2": {
-          "description": "Skonstruuj argument z powodów."
+          "description": "Skonstruuj argument z uzasadnieniem."
         },
         "D4.6.K-2": {
-          "description": "Zidentyfikuj i wyjaśnij szereg lokalnych, regionalnych i globalnych problemów oraz sposoby, w jakie ludzie próbują rozwiązać te problemy."
+          "description": "Zidentyfikuj i wyjaśnij lokalne, regionalne i globalne problemy oraz sposoby, w jakie ludzie próbują rozwiązać te problemy."
         },
         "D4.2.K-2": {
-          "description": "Konstruuj wyjaśnienia, używając prawidłowej sekwencji i odpowiednich informacji."
+          "description": "Formułuj wyjaśnienia, używając prawidłowej sekwencji i odpowiednich informacji."
         },
         "D4.7.K-2": {
           "description": "Określ sposoby podejmowania działań, które pomogą rozwiązać problemy lokalne, regionalne i globalne."
         },
         "D4.3.K-2": {
-          "description": "Przedstaw podsumowanie argumentu za pomocą technologii drukowanych, ustnych i cyfrowych."
+          "description": "Przedstaw podsumowanie argumentów za pomocą technologii drukowanych, ustnych i cyfrowych."
         },
         "D4.8.K-2": {
-          "description": "Używaj procedur słuchania, budowania konsensusu i głosowania, aby podejmować decyzje i podejmować działania w swoich klasach."
+          "description": "Używaj procedur słuchania, budowania konsensusu i głosowania, aby podejmować decyzje i działania w swoich klasach."
         },
         "D4.4.K-2": {
           "description": "Zadawaj i odpowiadaj na pytania dotyczące argumentów. "
@@ -2091,10 +2091,10 @@
           "description": "Określ rodzaje źródeł, które będą pomocne w odpowiadaniu na fascynujące i wspierające pytania, biorąc pod uwagę różne opinie ludzi na temat odpowiedzi na pytania."
         },
         "D1.2.3-5": {
-          "description": "Zidentyfikuj koncepcje dyscyplinarne i pomysły związane z przekonującym pytaniem, które są otwarte na różne interpretacje."
+          "description": "Zidentyfikuj koncepcje dyscyplinarne i idee związane z nieodpartym pytaniem, które są otwarte na różne interpretacje."
         },
         "D1.4.3-5": {
-          "description": "Wyjaśnij, w jaki sposób dodatkowe pytania pomagają odpowiedzieć na ważne pytania w zapytaniu."
+          "description": "Wyjaśnij, w jaki sposób pytania pomocnicze pomagają odpowiedzieć na istotne pytania w dochodzeniu."
         },
         "D2.Civ.1.3-5": {
           "description": "Rozróżnij obowiązki i uprawnienia urzędników państwowych na różnych szczeblach i gałęziach rządu oraz w różnych czasach i miejscach. "
@@ -2106,7 +2106,7 @@
           "description": "Porównaj procedury podejmowania decyzji w różnych środowiskach, w tym w klasie, szkole, rządzie i/lub społeczeństwie."
         },
         "D2.Civ.2.3-5": {
-          "description": "Wyjaśnij, w jaki sposób demokracja opiera się na odpowiedzialnym udziale ludzi, i wyciągnij implikacje dla tego, w jaki sposób jednostki powinny uczestniczyć."
+          "description": "Wyjaśnij, w jaki sposób demokracja opiera się na odpowiedzialnym udziale ludzi, i wyciągnij stąd wnioski, w jaki sposób jednostki powinny uczestniczyć."
         },
         "D2.Civ.8.3-5": {
           "description": "Zidentyfikuj podstawowe cnoty obywatelskie i zasady demokratyczne, które kierują rządem, społeczeństwem i społecznościami."
@@ -2130,7 +2130,7 @@
           "description": "Zidentyfikuj przekonania, doświadczenia, perspektywy i wartości, które leżą u podstaw ich własnych i innych punktów widzenia na kwestie obywatelskie."
         },
         "D2.Civ.14.3-5": {
-          "description": "Zilustrować historyczne i współczesne sposoby zmiany społeczeństwa."
+          "description": "Zilustruj historyczne i współczesne przemiany społeczeństwa."
         },
         "D2.Civ.5.3-5": {
           "description": "Wyjaśnij pochodzenie, funkcje i strukturę różnych systemów rządowych, w tym tych stworzonych przez konstytucje USA i stanowe."
@@ -2139,7 +2139,7 @@
           "description": "Opisz sposoby, w jakie ludzie czerpią korzyści i są kwestionowani przez współpracę, w tym za pośrednictwem rządu, miejsc pracy, organizacji wolontariackich i rodzin."
         },
         "D2.Eco.1.3-5": {
-          "description": "Porównaj korzyści i koszty poszczególnych wyborów."
+          "description": "Porównaj korzyści i koszty indywidualnych wyborów."
         },
         "D2.Eco.3.3-5": {
           "description": "Zidentyfikuj przykłady różnorodności zasobów (kapitał ludzki, kapitał fizyczny i zasoby naturalne), które są wykorzystywane do produkcji towarów i usług."
@@ -2325,7 +2325,7 @@
           "description": "Oceniać konkretne przepisy i przepisy (zarówno rzeczywiste, jak i proponowane) jako środki rozwiązywania problemów publicznych."
         },
         "D2.Civ.13.6-8": {
-          "description": "Analizuj cele, wdrażanie i konsekwencje polityk publicznych w wielu ustawieniach"
+          "description": "Analizuj cele, wdrażanie i konsekwencje polityk publicznych w wielu sytuacjach."
         },
         "D2.Civ.14.6-8": {
           "description": "Porównaj historyczne i współczesne sposoby zmiany społeczeństw i promowania dobra wspólnego."
@@ -2346,13 +2346,13 @@
           "description": "Opisz rolę organizacji politycznych, obywatelskich i gospodarczych w kształtowaniu życia ludzi."
         },
         "D2.Civ.7.6-8": {
-          "description": "Zastosuj cnoty obywatelskie i zasady demokratyczne w środowisku szkolnym i społecznym."
+          "description": "Zastosuj cnoty obywatelskie i zasady demokracji w środowisku szkolnym i lokalnym."
         },
         "D2.Civ.8.6-8": {
           "description": "Analizuj idee i zasady zawarte w dokumentach założycielskich Stanów Zjednoczonych i wyjaśnij, w jaki sposób wpływają one na system społeczny i polityczny."
         },
         "D2.Civ.9.6-8": {
-          "description": "Porównaj procesy deliberatywne stosowane przez wiele różnych grup w różnych ustawieniach"
+          "description": "Porównaj procesy deliberatywne stosowane przez różne grupy w różnych ustawieniach"
         },
         "D2.Eco.1.6-8": {
           "description": "Wyjaśnij, w jaki sposób decyzje ekonomiczne wpływają na dobrobyt jednostek, przedsiębiorstw i społeczeństwa"
@@ -2361,7 +2361,7 @@
           "description": " Wyjaśnij wpływ zmian stóp procentowych na pożyczanie i inwestowanie."
         },
         "D2.Eco.11.6-8": {
-          "description": "Wykorzystaj odpowiednie dane do oceny stanu zatrudnienia, bezrobocia, inflacji, całkowitej produkcji, dochodów i wzrostu gospodarczego w gospodarce."
+          "description": "Wykorzystaj odpowiednie dane do oceny stanu zatrudnienia, bezrobocia, inflacji, całkowitej produkcji, dochodów i ekonomicznego wzrostu w gospodarce."
         },
         "D2.Eco.12.6-8": {
           "description": "Wyjaśnij, w jaki sposób inflacja, deflacja i bezrobocie wpływają na różne grupy."
