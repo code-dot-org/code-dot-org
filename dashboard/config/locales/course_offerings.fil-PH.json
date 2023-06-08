@@ -2,14 +2,7 @@
   "fil-PH": {
     "data": {
       "course_offerings": {
-        "coursea": "Kursong A",
-        "courseb": "Kursong B",
-        "coursec": "Kursong C",
-        "coursed": "Kursong D",
-        "coursee": "Kursong E",
-        "coursef": "Kursong F",
-        "express": "Mabilis na Kurso",
-        "pre-express": "Hindi Marunong Magbasa Express",
+        "coursed": "Mga Pundamental sa CS: Kursong D",
         "csd": "Mga Natuklasan sa Computer Science",
         "csp": "AP® na mga Prinsipyo ng Computer Science",
         "20-hour": "Pinabilis na Panimulang Kurso sa CS na Kurso",
@@ -19,13 +12,13 @@
         "applab-intro": "Panimula sa App Lab",
         "aquatic": "Minecraft: Paglalakbay sa Aquatic",
         "artist": "Artista",
-        "basketball": "Gumawa ng isang basketbol na laro",
         "course1": "Kurso 1",
         "course2": "Kursong 2",
         "course3": "Kursong 3",
         "course4": "Kursong 4",
         "frozen": "Mag-code kasama sina Anna at Elsa",
         "gumball": "Gumball na Play Lab",
+        "hero": "Minecraft: Ang Paglalakbay ng Bayani",
         "hourofcode": "Klasiko na Maze",
         "iceage": "Ice Age na Play Lab",
         "infinity": "Disney Infinity na Play Lab",
@@ -34,11 +27,17 @@
         "oceans": "AI para sa mga Karagatan  ",
         "outbreak": "Simulator ng Pagsiklab",
         "playlab": "Play Lab",
-        "sports": "Mag-code ng sarili mong laro sa palakasan",
+        "sports": "I-code ang Sarili Mong Laro sa Isport",
         "text-compression": "Compression ng Text",
         "csa-self-paced-pl": "Paggamit sa Code.org para sa CSA na Mga Pilot na Guro",
+        "ai-ethics": "Aktibidad sa Etika ng AI",
+        "counting-csc": "Aktibidad sa Pagbibilang",
+        "explore-data-1": "Aktibidad ng Data",
         "outbreak-csc": "Pagsiklab",
+        "spelling-bee": "Aktibidad sa Pagbaybay",
         "poem-art": "Sining ng Tula",
+        "poetry": "Coding gamit ang Tula",
+        "hello-world-retro": "Hello World: Retro",
         "poetry-hoc3": "poetry-hoc3",
         "csa-u8-dev": "csa-u8-dev",
         "valentine": "valentine",
@@ -50,7 +49,9 @@
         "soccer": "soccer",
         "hello-world-space": "Hello World: Puwang",
         "hello-world-soccer": "Hello World: Putbol",
-        "playground": "playground"
+        "playground": "playground",
+        "design-process": "Ang Proseso ng Pag-Disenyo",
+        "web-development": "Pagbuo ng Web"
       }
     }
   }

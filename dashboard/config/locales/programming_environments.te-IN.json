@@ -8,6 +8,20 @@
             "game_lab": {
               "name": "గేమ్ ల్యాబ్",
               "expressions": {
+                "mouseIsOver": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "స్ప్రైట్"
+                    }
+                  }
+                },
+                "mousePressedOver": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "స్ప్రైట్"
+                    }
+                  }
+                },
                 "mouseWentDown": {
                   "examples": {
                     "Black and White": {
@@ -42,7 +56,30 @@
               }
             },
             "groups": {
-              "name": "గుంపులు"
+              "name": "గుంపులు",
+              "expressions": {
+                "add": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "స్ప్రైట్"
+                    }
+                  }
+                },
+                "contains": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "స్ప్రైట్"
+                    }
+                  }
+                },
+                "remove": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "స్ప్రైట్"
+                    }
+                  }
+                }
+              }
             },
             "drawing": {
               "name": "డ్రాయింగ్",

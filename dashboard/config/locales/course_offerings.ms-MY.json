@@ -2,13 +2,6 @@
   "ms-MY": {
     "data": {
       "course_offerings": {
-        "coursea": "Kursus A",
-        "courseb": "Kursus B",
-        "coursec": "Kursus C",
-        "coursed": "Kursus D",
-        "coursee": "Kursus E",
-        "coursef": "Kursus F",
-        "express": "Kursus Ekspres",
         "20-hour": "Pengenalan Dipercepatkan kepada Kursus CS",
         "flappy": "Kod Flappy",
         "jigsaw": "Gergaji jig",
@@ -23,16 +16,23 @@
         "dance-extras-2019": "Teruskan Menari (2019)",
         "dance-extras": "Teruskan Menari (2018)",
         "frozen": "Kod dengan Anna dan Elsa",
+        "hero": "Minecraft: Hero's Journey",
         "hourofcode": "Pagar Sesat Klasik",
         "mc": "Jam Kod Minecraft",
         "oceans": "Kecerdasan Buatan (AI) untuk Lautan",
         "outbreak": "Simulator Wabak",
         "playlab": "Main Makmal",
-        "sports": "Mengekod permainan sukan anda sendiri",
+        "sports": "Mengekod Permainan Sukan Anda Sendiri",
         "text-compression": "Pemampatan Teks",
         "csa-self-paced-pl": "Menavigasi Code.org untuk Guru Perintis CSA",
+        "ai-ethics": "Aktiviti Etika AI",
+        "counting-csc": "Aktiviti Mengira",
+        "explore-data-1": "Aktiviti Data",
         "outbreak-csc": "Wabak",
+        "spelling-bee": "Aktiviti Ejaan",
         "poem-art": "Seni Puisi",
+        "poetry": "Pengekodan dengan Puisi",
+        "hello-world-retro": "Hello World: Retro",
         "edit-code": "Mengedit kod",
         "tesstest921": "tesstest921",
         "poetry-hoc3": "puisi-hoc3",
@@ -45,7 +45,9 @@
         "soccer": "bola sepak",
         "hello-world-space": "Helo Dunia: Ruang",
         "hello-world-soccer": "Helo Dunia: Bola Sepak",
-        "playground": "taman permainan"
+        "playground": "taman permainan",
+        "design-process": "Proses Reka Bentuk",
+        "web-development": "Pembangunan Web"
       }
     }
   }

@@ -400,6 +400,7 @@
   "signingInWordPic1": "1. Idi na [{joinLink}]({joinLink}) ILI idi na [www.code.org]({codeOrgLink}), klikni na dugme 'Prijava' i unesi kod odjeljenja {sectionCode} u okvir.",
   "signingInWordPic2": "2. Kliknu na njihovo ime.",
   "signingInWord3": "3. Upišite njihove tajne riječi , a zatim kliknite \"Prijava\".",
+  "slowLoading": "Ovo traje dulje nego inače...",
   "softwareEngineer": "Programski inžinjer",
   "standards": "Standardi",
   "standardsAndFramework": "Nastavni planovi i resursi",

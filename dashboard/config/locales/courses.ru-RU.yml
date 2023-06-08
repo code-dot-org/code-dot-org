@@ -152,6 +152,8 @@ ru:
           title: Исследование учебной программы по Открытиям в Информатике
         self-paced-pl-csd-2023:
           title: self-paced-pl-csd-2021
+        self-paced-pl-csp-2023:
+          title: self-paced-pl-csp-2021
     resources:
       curriculum/csd/2020:
         name: Учебная программа
@@ -165,6 +167,8 @@ ru:
         name: Учебная программа
       teacher_forum/csd/2019:
         name: Форум учителей
+      getting_started_with_csd/csd/2021:
+        name: Начало работы с «Открытия в информатике»
       curriculum/csd/2018:
         name: Учебная программа
       teacher_forum_6/csd/2018:

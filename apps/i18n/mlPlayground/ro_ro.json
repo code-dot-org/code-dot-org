@@ -298,6 +298,13 @@
         }
       }
     },
+    "zoo": {
+      "fields": {
+        "Aquatic": {
+          "id": "Acvatic"
+        }
+      }
+    },
     "poke_toy": {
       "fields": {
         "avocado": {
