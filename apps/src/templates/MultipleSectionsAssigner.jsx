@@ -12,6 +12,7 @@ import {
   unassignSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {updateHiddenScript} from '@cdo/apps/code-studio/hiddenLessonRedux';
+import CloseOnEscape from '@cdo/apps/javalab/components/CloseOnEscape';
 
 const MultipleSectionsAssigner = ({
   courseId,
@@ -161,65 +162,67 @@ const MultipleSectionsAssigner = ({
   return (
     <>
       <div style={styles.modalBackdrop} />
-      <FocusTrap>
-        <div style={styles.modal}>
-          <div
-            style={styles.header}
-            className="uitest-confirm-assignment-dialog"
-          >
-            {i18n.chooseSectionsPrompt({assignmentName})}
+      <CloseOnEscape handleClose={onClose}>
+        <FocusTrap>
+          <div style={styles.modal}>
+            <div
+              style={styles.header}
+              className="uitest-confirm-assignment-dialog"
+            >
+              {i18n.chooseSectionsPrompt({assignmentName})}
+            </div>
+            <div style={styles.content}>{i18n.chooseSectionsDirections()}</div>
+            <div
+              style={styles.header}
+              className="uitest-confirm-assignment-dialog"
+            >
+              {i18n.yourSectionsList()}
+            </div>
+            <hr />
+            <div style={styles.grid}>
+              {sections &&
+                sections.map(
+                  section =>
+                    isAssignableToSection(section.participantType) && (
+                      <TeacherSectionOption
+                        key={section.id}
+                        section={section}
+                        isChecked={
+                          !!currentSectionsAssigned.some(
+                            s => s.code === section.code
+                          )
+                        }
+                        assignedSections={currentSectionsAssigned}
+                        onChange={() => handleChangedCheckbox(section)} // this function should update the state of multiple section assigner
+                        editedValue={section.isAssigned}
+                      />
+                    )
+                )}
+            </div>
+            <a
+              style={styles.selectAllSectionsLabel}
+              onClick={selectAllHandler}
+              className="select-all-sections"
+            >
+              Select All
+            </a>
+            <div style={{textAlign: 'right'}}>
+              <Button
+                text={i18n.dialogCancel()}
+                onClick={onClose}
+                color={Button.ButtonColor.gray}
+              />
+              <Button
+                id="confirm-assign"
+                text={i18n.confirmAssignment()}
+                style={{marginLeft: 5}}
+                onClick={reassignSections}
+                color={Button.ButtonColor.orange}
+              />
+            </div>
           </div>
-          <div style={styles.content}>{i18n.chooseSectionsDirections()}</div>
-          <div
-            style={styles.header}
-            className="uitest-confirm-assignment-dialog"
-          >
-            {i18n.yourSectionsList()}
-          </div>
-          <hr />
-          <div style={styles.grid}>
-            {sections &&
-              sections.map(
-                section =>
-                  isAssignableToSection(section.participantType) && (
-                    <TeacherSectionOption
-                      key={section.id}
-                      section={section}
-                      isChecked={
-                        !!currentSectionsAssigned.some(
-                          s => s.code === section.code
-                        )
-                      }
-                      assignedSections={currentSectionsAssigned}
-                      onChange={() => handleChangedCheckbox(section)} // this function should update the state of multiple section assigner
-                      editedValue={section.isAssigned}
-                    />
-                  )
-              )}
-          </div>
-          <a
-            style={styles.selectAllSectionsLabel}
-            onClick={selectAllHandler}
-            className="select-all-sections"
-          >
-            Select All
-          </a>
-          <div style={{textAlign: 'right'}}>
-            <Button
-              text={i18n.dialogCancel()}
-              onClick={onClose}
-              color={Button.ButtonColor.gray}
-            />
-            <Button
-              id="confirm-assign"
-              text={i18n.confirmAssignment()}
-              style={{marginLeft: 5}}
-              onClick={reassignSections}
-              color={Button.ButtonColor.orange}
-            />
-          </div>
-        </div>
-      </FocusTrap>
+        </FocusTrap>
+      </CloseOnEscape>
     </>
   );
 };
