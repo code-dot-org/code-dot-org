@@ -1,10 +1,5 @@
 @import "color.scss";
 
-/* stylelint-disable */
-// checkbox active background color
-$light_primary_500: #0093A4;
-/* stylelint-enable */
-
 button.dropdownButton {
   color: $neutral_dark;
   background-color: $neutral_light;
@@ -97,8 +92,16 @@ form.dropDownMenuContainer {
 
     &:has(label:active) {
       background-color: $light_primary_500;
-      label span {
-        color: $neutral_white;
+      label {
+        span {
+          color: $neutral_white;
+        }
+
+        input[type="checkbox"]:checked + i::before, input[type="checkbox"] + i::before {
+          background-color: $neutral_white;
+          border-color: $neutral_white;
+          color: $light_primary_500;
+        }
       }
     }
   }
