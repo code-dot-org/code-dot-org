@@ -32,8 +32,8 @@ class VideosController < ApplicationController
     @video = Video.new(video_params.merge(download: "https://videos.code.org/#{filename}"))
 
     if @video.locale != I18n.default_locale.to_s && !Video.exists?(key: @video.key, locale: I18n.default_locale.to_s)
-        raise 'Non-English videos must be associated with an English video of the same key'
-      end
+      raise 'Non-English videos must be associated with an English video of the same key'
+    end
 
     if @video.save
       merge_and_write

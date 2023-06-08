@@ -116,8 +116,8 @@ module Foorm
       # Third, check that the user hasn't submitted this survey,
       # unless the survey allows multiple submissions or allows signed out submissions
       if !(form_data.allow_multiple_submissions || form_data.allow_signed_out) && response_exists?(key_params)
-          return render json: {}, status: :no_content
-        end
+        return render json: {}, status: :no_content
+      end
 
       # Fourth, check we can find the Foorm configuration.
       form_questions = ::Foorm::Form.get_questions_for_name_and_version(
