@@ -1381,17 +1381,6 @@ export function isAddingSection(state) {
 }
 
 /**
- * Ask whether the user is currently editing an existing section using the
- * Edit Section dialog.
- */
-export function isEditingSection(state) {
-  return (
-    !!(state.sectionBeingEdited && state.sectionBeingEdited.id >= 0) &&
-    state.showSectionEditDialog
-  );
-}
-
-/**
  * @param {object} state - state.teacherSections in redux tree
  * Extract a list of name/id for each section
  */
