@@ -12,23 +12,22 @@ $light_primary_700: #008291;
 
 .label {
   i {
-    width: 24px;
-    height: 24px;
+    width: 20px;
+    height: 20px;
     vertical-align: bottom;
 
     &::before {
       display: inline-block;
       content: ' ';
-      width: 20px;
-      height: 20px;
-      line-height: 20px;
+      font-size: 11px;
+      width: 16px;
+      height: 16px;
+      line-height: 16px;
       text-align: center;
       border: 2px solid $neutral_dark;
       border-radius: 4px;
     }
   }
-
-
 
   input[type="checkbox"] {
     position: absolute;
