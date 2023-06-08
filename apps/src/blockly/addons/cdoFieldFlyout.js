@@ -35,12 +35,9 @@ export default class CdoFieldFlyout extends GoogleBlockly.Field {
   }
 
   initView() {
+    // We can separate out the arrow from this field and use a button/icon elsewhere.
     this.createTextElement_();
     this.textContent_.nodeValue = this.foldoutText_;
-    var a = Blockly.utils.dom.createSvgElement('tspan', {}, null);
-    this.arrow_ = document.createTextNode('\u25b8');
-    a.appendChild(this.arrow_);
-    this.textElement_.insertBefore(a, this.textContent_);
     this.workspace_ = this.getSourceBlock().workspace;
     this.flyout_ = new CdoBlockFlyout({
       ...Blockly.getMainWorkspace().options,
@@ -56,6 +53,7 @@ export default class CdoFieldFlyout extends GoogleBlockly.Field {
   }
 
   showEditor_() {
+    // We may not need this.
     this.setFlyoutVisible(!this.isFlyoutVisible());
   }
 
@@ -85,9 +83,7 @@ export default class CdoFieldFlyout extends GoogleBlockly.Field {
   setFlyoutVisible(isVisible) {
     this.flyout_.targetWorkspace_ ||
       (this.flyout_.init(this.workspace_), this.flyout_.svgGroup);
-    isVisible
-      ? ((this.arrow_.nodeValue = '\u25be'), this.flyout_.show(this.getValue()))
-      : ((this.arrow_.nodeValue = '\u25b8'), this.flyout_.hide());
+    isVisible ? this.flyout_.show(this.getValue()) : this.flyout_.hide();
     this.forceRerender();
   }
 
