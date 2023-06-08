@@ -23,6 +23,9 @@
 // - 0.5rem = 8px margin >>> gets value from root 16px
 // - 0.5em = font-size / 2 >>> gets value from h1 3rem (48px) / 2 = 24px margin
 
+// Read more about rem vs em:
+// https://www.digitalocean.com/community/tutorials/css-rem-vs-em-units
+
 // line-height uses unitless numbers
 // - this multiplies the line-height by the element's font-size
 // and is the preferred way to set line-height according to Mozilla
