@@ -3,6 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import {connect} from 'react-redux';
+import PanelContainer from './PanelContainer';
 import Instructions from './Instructions';
 import Controls from './Controls';
 import Timeline from './Timeline';
@@ -109,6 +110,7 @@ class UnconnectedMusicView extends React.Component {
     clearPlaybackEvents: PropTypes.func,
     addPlaybackEvents: PropTypes.func,
     currentlyPlayingBlockIds: PropTypes.array,
+    isHeadersShowing: PropTypes.bool,
     sendSuccessReport: PropTypes.func,
     currentScriptId: PropTypes.number,
     setProjectUpdatedSaving: PropTypes.func,
@@ -655,15 +657,17 @@ class UnconnectedMusicView extends React.Component {
             : moduleStyles.instructionsSide
         )}
       >
-        <Instructions
-          progressionStep={this.progressManager.getProgressionStep()}
-          currentLevelIndex={this.props.currentLevelIndex}
-          levelCount={this.props.levelCount}
-          onNextPanel={this.onNextPanel}
-          baseUrl={baseUrl}
-          vertical={position !== InstructionsPositions.TOP}
-          right={position === InstructionsPositions.RIGHT}
-        />
+        <PanelContainer id="instructions-panel" headerText="Instructions">
+          <Instructions
+            progressionStep={this.progressManager.getProgressionStep()}
+            currentLevelIndex={this.props.currentLevelIndex}
+            levelCount={this.props.levelCount}
+            onNextPanel={this.onNextPanel}
+            baseUrl={baseUrl}
+            vertical={position !== InstructionsPositions.TOP}
+            right={position === InstructionsPositions.RIGHT}
+          />
+        </PanelContainer>
       </div>
     );
   }
@@ -677,18 +681,31 @@ class UnconnectedMusicView extends React.Component {
           timelineAtTop ? moduleStyles.playAreaTop : moduleStyles.playAreaBottom
         )}
       >
-        <Controls
-          setPlaying={this.setPlaying}
-          playTrigger={this.playTrigger}
-          top={this.props.timelineAtTop}
-          instructionsAvailable={!!this.progressManager}
-          toggleInstructions={() => this.toggleInstructions(false)}
-          instructionsOnRight={false}
-          hasTrigger={this.musicBlocklyWorkspace.hasTrigger.bind(
-            this.musicBlocklyWorkspace
-          )}
-        />
-        <Timeline />
+        <div id="controls-area" className={moduleStyles.controlsArea}>
+          <PanelContainer id="controls-panel" headerText="Controls">
+            <Controls
+              setPlaying={this.setPlaying}
+              playTrigger={this.playTrigger}
+              top={this.props.timelineAtTop}
+              instructionsAvailable={!!this.progressManager}
+              toggleInstructions={() => this.toggleInstructions(false)}
+              instructionsOnRight={false}
+              hasTrigger={this.musicBlocklyWorkspace.hasTrigger.bind(
+                this.musicBlocklyWorkspace
+              )}
+            />
+          </PanelContainer>
+        </div>
+
+        <div id="timeline-area" className={moduleStyles.timelineArea}>
+          <PanelContainer
+            id="timeline-panel"
+            width="calc(100% - 220px)"
+            headerText="Timeline"
+          >
+            <Timeline />
+          </PanelContainer>
+        </div>
       </div>
     );
   }
@@ -722,14 +739,23 @@ class UnconnectedMusicView extends React.Component {
               this.renderInstructions(InstructionsPositions.LEFT)}
 
             <div id="blockly-area" className={moduleStyles.blocklyArea}>
-              <div className={moduleStyles.topButtonsContainer}>
+              <div
+                id="top-buttons-container"
+                className={classNames(
+                  moduleStyles.topButtonsContainer,
+                  this.props.isHeadersShowing &&
+                    moduleStyles.topButtonsContainerWithHeaders
+                )}
+              >
                 <TopButtons
                   clearCode={this.clearCode}
                   uploadSound={file => this.soundUploader.uploadSound(file)}
                   canShowSaveStatus={this.hasNoProgressHeader()}
                 />
               </div>
-              <div id="blockly-div" />
+              <PanelContainer id="workspace-panel" headerText="Workspace">
+                <div id="blockly-div" />
+              </PanelContainer>
             </div>
 
             {showInstructions &&
@@ -790,6 +816,8 @@ const MusicView = connect(
     instructionsPosition: state.music.instructionsPosition,
     currentScriptId: state.progress.scriptId,
     currentlyPlayingBlockIds: getCurrentlyPlayingBlockIds(state),
+
+    isHeadersShowing: state.music.isHeadersShowing,
   }),
   dispatch => ({
     setIsPlaying: isPlaying => dispatch(setIsPlaying(isPlaying)),

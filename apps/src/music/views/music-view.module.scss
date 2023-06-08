@@ -32,6 +32,10 @@ $default-spacing: 2px;
     top: 5px;
     right: 5px;
     z-index: 10;
+
+    &.topButtonsContainerWithHeaders {
+      top: 31px;
+    }
   }
 }
 
@@ -42,6 +46,16 @@ $default-spacing: 2px;
   display: flex;
   flex-direction: row;
   gap: $default-spacing;
+
+  .controlsArea {
+    width: 220px;
+    height: 100%;
+  }
+
+  .timelineArea {
+    width: calc(100% - 220px);
+    height: 100%;
+  }
 }
 
 .instructionsArea {
