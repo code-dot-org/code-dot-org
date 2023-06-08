@@ -9837,6 +9837,7 @@
         },
         "43fde334-6c07-4b1b-b23d-4b67f5fbfbc0": {
           "name": "Penggulungan",
+          "description": "**Kumpul:** Minta pelajar menyerahkan prototaip mereka dan menyerahkan apl mereka dalam Makmal Apl.\n\n**Refleksi:** Minta pelajar melengkapkan tinjauan 5 soalan pantas dalam Code Studio. Anda akan dapat melihat hasil awanama dalam papan pemuka guru.",
           "progression_name": "Refleksi"
         },
         "b46cfe31-9b5e-4820-b368-fc8a4fa139a7": {
@@ -10118,6 +10119,7 @@
         },
         "7799c3eb-e76a-465b-9f24-69d6c04a01c7": {
           "name": "Refleksi",
+          "description": "**Code Studio:** Minta pelajar menjawab 5 soalan tinjauan pantas pada permulaan unit ini tentang AI dan Pembelajaran Mesin. Setelah sekurang-kurangnya 5 pelajar melengkapkan tinjauan, anda akan dapat melihat hasil tanpa nama dalam Papan Pemuka Guru. Beberapa soalan ini akan ditanya semula pada akhir projek pertama, yang boleh membantu dalam melihat pertumbuhan pelajar dan perubahan sikap di seluruh unit.",
           "progression_name": "Kaji Selidik Daftar Masuk"
         },
         "b5acd50c-8f0e-4c22-8918-0e4801b137e1": {
@@ -18605,6 +18607,7 @@
         },
         "d26ab8fe-dc83-4704-8aba-bd0cdbdd80a4": {
           "name": "Refleksi",
+          "description": "**Code Studio:** Minta pelajar menjawab 5 soalan tinjauan pantas pada permulaan unit ini tentang AI dan Pembelajaran Mesin. Setelah sekurang-kurangnya 5 pelajar melengkapkan tinjauan, anda akan dapat melihat hasil tanpa nama dalam Papan Pemuka Guru. Beberapa soalan ini akan ditanya semula pada akhir projek pertama, yang boleh membantu dalam melihat pertumbuhan pelajar dan perubahan sikap di seluruh unit.",
           "progression_name": "Kaji Selidik Daftar Masuk"
         },
         "8bdf1f4e-1c20-42bd-a5d5-7217dfa0bd4f": {

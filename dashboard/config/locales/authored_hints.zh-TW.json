@@ -4939,7 +4939,7 @@
         "courseC_starWars_loops8": {
           "course_starWars_loops8_a": "嘗試把問題分成幾個小部分來解決。慢慢來。多嘗試幾次也沒問題！",
           "course_starWars_loops8_b": "將此問題的前半部分視為階梯問題。你之前是如何解決的？",
-          "course_starWars_loops8_c": "看一下這條路徑。\n\n![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)"
+          "course_starWars_loops8_c": "看一下這條路徑。\n\n[][0]"
         },
         "courseC_starWars_loops8_2018": {
           "course_starWars_loops8_a": "嘗試把問題分成幾個小部分來解決。慢慢來。多嘗試幾次也沒問題！",
@@ -5631,7 +5631,7 @@
           "courseD_bee_conditionals4_hintVid1": "不知道怎麼開始？看看這個影片！",
           "courseD_bee_conditionals4_a": "即使你可以看清楚整個路徑，你還是可以把每格當作有雲朵的方式來處理。",
           "courseD_bee_conditionals4_b": "在迴圈中使用「if」語句檢查每個空間的花蜜。",
-          "courseD_bee_conditionals4_c": "使用 <xml><block type=\"maze_untilBlocked\"/></xml> 積木，你應該向前移動並檢查花朵。如果有花朵，蜜蜂應該怎麼做？",
+          "courseD_bee_conditionals4_c": "使用 [blockly block][0] 積木，你應該向前移動並檢查花朵。如果有花朵，蜜蜂應該怎麼做？",
           "courseD_bee_conditionals4_hintVid2": "觀看影片以幫你完成關卡。"
         },
         "courseD_bee_conditionals4_2018": {
@@ -7093,8 +7093,8 @@
         },
         "courseE_artist_functions2": {
           "courseD_artist_functions2_b": "編寫的函式不應包含整個程式，而是只要包含繪製邊長為 100 像素正方形的動作。",
-          "courseD_artist_functions2_c": "在`當運行時`積木下使用綠色的`繪製正方形`積木來「呼叫」你的函式。不這麼做的話，在函式中的程式積木將無法執行。\n\n<xml><block type=\"procedures_callnoreturn\" limit=\"2\"><mutation name=\"draw a square\"/></block></xml>",
-          "courseD_artist_functions2_a": "你的程式應該如下：\n\n-   使用函式\n-   向前移動 100 + 75 像素\n-   使用函式"
+          "courseD_artist_functions2_c": "在`當運行時`積木下使用綠色的`繪製正方形`積木來「呼叫」你的函式。不這麼做的話，在函式中的程式積木將無法執行。\n\n[blockly block][0]",
+          "courseD_artist_functions2_a": "你的程式應該如下：\n\n- 使用函式\n- 向前移動 100 + 75 像素\n- 使用函式"
         },
         "courseE_artist_functions2_2018": {
           "courseD_artist_functions2_b": "這個函式不應包含整個程式，而是包含繪製邊長 100 個像素的正方形部分。",

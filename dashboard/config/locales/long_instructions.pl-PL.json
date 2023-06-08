@@ -3899,7 +3899,8 @@
         "poetry_modal_function_editor": "Jest to poziom Poezji, który obejmuje automatycznie wypełnioną kategorię `PROCEDURES` i używa modalnego edytora funkcji.",
         "poetry_no_modal_function_editor": "Jest to poziom poezji, który obejmuje automatycznie wypełnianą kategorię `PROCEDURES` i brak edytora funkcji modalnych.",
         "CSA U1L4-L1 Contained_2022": "Jak myślisz, co robi ten program?",
-        "U2L5 CSP CFU subgroups2022": "## DNS i skalowalność\n\nWłasnymi słowami wyjaśnij następujące kwestie dotyczące Domain Name System\n\n-   Jaki problem rozwiązuje DNS?\n-   W jaki sposób DNS pomaga skalować globalną sieć, aby miliardy użytkowników mogły uzyskać dostęp do miliardów stron internetowych?"
+        "U2L5 CSP CFU subgroups2022": "## DNS i skalowalność\n\nWłasnymi słowami wyjaśnij następujące kwestie dotyczące Domain Name System\n\n-   Jaki problem rozwiązuje DNS?\n-   W jaki sposób DNS pomaga skalować globalną sieć, aby miliardy użytkowników mogły uzyskać dostęp do miliardów stron internetowych?",
+        "test-nonretriable-freeresponse-standalone": "## Redundancja\n\nJakie są zalety budowania redundancji w sieci? Jakie są potencjalne problemy związane z budowaniem redundancji?"
       }
     }
   }
