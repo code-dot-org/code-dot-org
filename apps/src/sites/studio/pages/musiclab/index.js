@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 import {getStore} from '@cdo/apps/redux';
 import MusicLabView from '@cdo/apps/music/views/MusicView';
+import ProjectContainer from '@cdo/apps/labs/projects/ProjectContainer';
 import ErrorBoundary from '@cdo/apps/code-studio/components/ErrorBoundary';
 import {logError} from '@cdo/apps/music/utils/MusicMetrics';
 import {ErrorFallbackPage} from '@cdo/apps/code-studio/components/LabContainer';
@@ -20,7 +21,9 @@ $(document).ready(function () {
       }
     >
       <Provider store={getStore()}>
-        <MusicLabView channelId={channelId} inIncubator={true} />
+        <ProjectContainer channelId={channelId}>
+          <MusicLabView channelId={channelId} inIncubator={true} />
+        </ProjectContainer>
       </Provider>
     </ErrorBoundary>,
     document.getElementById('musiclab-container')
