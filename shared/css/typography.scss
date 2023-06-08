@@ -12,6 +12,24 @@
 // v 1.0.1
 // ----------------------------------------
 
+// Values
+// font-size uses rem
+// - works when the root font-size is 100% which uses the
+// browser default font-size of 16px (3rem = 16 x 3 = 48px)
+
+// margin uses em
+// - sets the margin relative to the parent element rather than the root
+// example:
+// - 0.5rem = 8px margin >>> gets value from root 16px
+// - 0.5em = font-size / 2 >>> gets value from h1 3rem (48px) / 2 = 24px margin
+
+// line-height uses unitless numbers
+// - this multiplies the line-height by the element's font-size
+// and is the preferred way to set line-height according to Mozilla
+// https://developer.mozilla.org/en-US/docs/Web/CSS/line-height
+
+// ----------------------------------------
+
 // Heading styles
 // Heading mixins are used to maintain accessible heading hierarchy
 // when design calls for a different style (semantic h3, h5 styling).
