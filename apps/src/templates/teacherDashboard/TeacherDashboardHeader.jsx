@@ -7,7 +7,6 @@ import {switchToSection, recordSwitchToSection} from './sectionHelpers';
 import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
 import SmallChevronLink from '../SmallChevronLink';
-import {ReloadAfterEditSectionDialog} from './EditSectionDialog';
 import {
   beginEditingSection,
   getAssignmentName,
@@ -140,7 +139,6 @@ class TeacherDashboardHeader extends React.Component {
             </div>
           </div>
         </div>
-        <ReloadAfterEditSectionDialog />
       </div>
     );
   }

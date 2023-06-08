@@ -29,8 +29,7 @@ const redirectToNewSectionPage = (participantType, loginType) => {
 };
 
 /**
- * UI for a teacher to add a new class section.  For editing a section see
- * EditSectionDialog.
+ * UI for a teacher to add a new class section.
  */
 const AddSectionDialog = ({
   isOpen,
