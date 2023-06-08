@@ -11,8 +11,6 @@ export default {
 //
 // This is needed to fix children type error (passing string instead of React.ReactNode type)
 // eslint-disable-next-line
-const Template = args => <Checkbox {...args} />;
-
 const MultipleTemplate = (args = []) => (
   <>
     {args.components?.map(componentArg => (
