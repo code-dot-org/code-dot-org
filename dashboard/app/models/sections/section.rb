@@ -285,14 +285,14 @@ class Section < ApplicationRecord
     # OAUTH login section (Google Classroom / clever).
     # added_by is passed only from the sections_students_controller, used by teachers to
     # manager their rosters.
-    unless added_by&.id == user_id || (LOGIN_TYPES_OAUTH.include? login_type)
-      return ADD_STUDENT_RESTRICTED if restrict_section == true && (!follower || follower.deleted?)
+    if !(added_by&.id == user_id || (LOGIN_TYPES_OAUTH.include? login_type)) && (restrict_section == true && (!follower || follower.deleted?))
+      return ADD_STUDENT_RESTRICTED
     end
 
     # Unless the sections login type is Google or Clever
-    unless externally_rostered?
+    if !externally_rostered? && (students.distinct(&:id).size >= @@section_capacity)
       # Return a full section error if the section is already at capacity.
-      return ADD_STUDENT_FULL if students.distinct(&:id).size >= @@section_capacity
+      return ADD_STUDENT_FULL
     end
 
     follower = Follower.with_deleted.find_by(section: self, student_user: student)
@@ -324,12 +324,10 @@ class Section < ApplicationRecord
       end
     end
 
-    if options[:notify]
-      # Though in theory required, we are missing an email address for many teachers.
-      if user && user.email.present?
+    # Though in theory required, we are missing an email address for many teachers.
+if options[:notify] && (user && user.email.present?)
         FollowerMailer.student_disassociated_notify_teacher(teacher, student).deliver_now
       end
-    end
   end
 
   # Figures out the default script for this section. If the section is assigned to
