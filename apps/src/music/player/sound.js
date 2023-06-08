@@ -13,11 +13,11 @@ var audioIdUpto = 0;
 
 var audioSystem = null;
 
-export function InitSound(desiredSounds) {
+export function InitSound(desiredSounds, bpm) {
   // regular web version.
   baseSoundUrl = 'https://curriculum.code.org/media/musiclab/';
   restrictedSoundUrlPath = '/restricted/musiclab/';
-  audioSystem = new WebAudio();
+  audioSystem = new WebAudio(bpm);
 
   LoadSounds(desiredSounds);
 }

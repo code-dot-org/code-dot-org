@@ -39,7 +39,7 @@ export default class SamplePlayer {
     this.groupPath = '';
   }
 
-  initialize(library: MusicLibrary) {
+  initialize(library: MusicLibrary, bpm: number) {
     const soundList = library.groups
       .map(group => {
         return group.folders.map(folder => {
@@ -58,7 +58,7 @@ export default class SamplePlayer {
         });
       })
       .flat(2);
-    soundApi.InitSound(soundList);
+    soundApi.InitSound(soundList, bpm);
 
     this.groupPath = library.groups[0].path;
 
