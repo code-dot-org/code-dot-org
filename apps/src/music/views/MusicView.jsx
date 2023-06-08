@@ -50,7 +50,11 @@ import {
   ProgressLevelType,
   getProgressLevelType,
 } from '@cdo/apps/code-studio/progressRedux';
-import {setIsLoading, setIsPageError} from '@cdo/apps/labs/labRedux';
+import {
+  setIsLoading,
+  setIsPageError,
+  setLabReadyForReload,
+} from '@cdo/apps/labs/labRedux';
 import Simple2Sequencer from '../player/sequencer/Simple2Sequencer';
 import MusicPlayerStubSequencer from '../player/sequencer/MusicPlayerStubSequencer';
 import {BlockMode} from '../constants';
@@ -60,7 +64,6 @@ import {
   setProjectUpdatedError,
   setProjectUpdatedSaving,
 } from '../../code-studio/projectRedux';
-import {ProjectManagerEvent} from '../../labs/projects/ProjectManager';
 import {logError} from '../utils/MusicMetrics';
 
 /**
@@ -74,7 +77,6 @@ class UnconnectedMusicView extends React.Component {
   static propTypes = {
     progressLevelType: PropTypes.string,
     appConfig: PropTypes.object,
-    channelId: PropTypes.string,
 
     /**
      * True if Music Lab is being presented from the Incubator page (i.e. under /projectbeats),
@@ -88,7 +90,6 @@ class UnconnectedMusicView extends React.Component {
     currentLevelId: PropTypes.string,
     levelCount: PropTypes.number,
     levelDataPath: PropTypes.string,
-    isLabLoading: PropTypes.bool,
     userId: PropTypes.number,
     userType: PropTypes.string,
     signInState: PropTypes.oneOf(Object.values(SignInState)),
@@ -116,6 +117,9 @@ class UnconnectedMusicView extends React.Component {
     setIsLoading: PropTypes.func,
     setIsPageError: PropTypes.func,
     setLevelCount: PropTypes.func,
+    source: PropTypes.object,
+    labReadyForReload: PropTypes.bool,
+    setLabReadyForReload: PropTypes.func,
   };
 
   constructor(props) {
@@ -143,6 +147,7 @@ class UnconnectedMusicView extends React.Component {
 
     this.state = {
       showingVideo: true,
+      changingPanels: false,
     };
 
     // Music Lab currently does not support share and remix
@@ -150,10 +155,6 @@ class UnconnectedMusicView extends React.Component {
   }
 
   componentDidMount() {
-    const initialLevelIndex = this.props.currentLevelIndex;
-
-    this.props.setIsLoading(true);
-
     this.analyticsReporter.startSession().then(() => {
       this.analyticsReporter.setUserProperties(
         this.props.userId,
@@ -166,13 +167,6 @@ class UnconnectedMusicView extends React.Component {
     // correct approach.
     window.addEventListener('beforeunload', event => {
       this.analyticsReporter.endSession();
-      // Force a save before the page unloads, if there are unsaved changes.
-      // If we need to force a save, prevent navigation so we can save first.
-      if (this.musicBlocklyWorkspace.hasUnsavedChanges()) {
-        this.musicBlocklyWorkspace.saveCode(true);
-        event.preventDefault();
-        event.returnValue = '';
-      }
     });
 
     const musicValidator = new MusicValidator(
@@ -212,53 +206,14 @@ class UnconnectedMusicView extends React.Component {
 
         this.setAllowedSoundsForProgress();
 
-        this.musicBlocklyWorkspace
-          .init(
-            document.getElementById('blockly-div'),
-            this.onBlockSpaceChange,
-            this.player,
-            this.getStartSources(),
-            this.progressManager?.getCurrentStepDetails().toolbox,
-            this.props.currentLevelId,
-            this.props.currentScriptId,
-            this.props.channelId
-          )
-          .then(() => {
-            this.musicBlocklyWorkspace.addSaveEventListener(
-              ProjectManagerEvent.SaveStart,
-              () => {
-                this.props.setProjectUpdatedSaving();
-              }
-            );
-            this.musicBlocklyWorkspace.addSaveEventListener(
-              ProjectManagerEvent.SaveSuccess,
-              status => {
-                this.props.setProjectUpdatedAt(status.updatedAt);
-              }
-            );
-            this.musicBlocklyWorkspace.addSaveEventListener(
-              ProjectManagerEvent.SaveNoop,
-              status => {
-                this.props.setProjectUpdatedAt(status.updatedAt);
-              }
-            );
-            this.musicBlocklyWorkspace.addSaveEventListener(
-              ProjectManagerEvent.SaveFail,
-              () => {
-                this.props.setProjectUpdatedError();
-              }
-            );
-            this.player.initialize(this.library);
-            setInterval(this.updateTimer, 1000 / 30);
-
-            // If the level changed while we were loading, then hand off
-            // to handlePanelChange to load that new level.
-            if (this.props.currentLevelIndex !== initialLevelIndex) {
-              this.handlePanelChange();
-            } else {
-              this.props.setIsLoading(false);
-            }
-          });
+        this.musicBlocklyWorkspace.init(
+          document.getElementById('blockly-div'),
+          this.onBlockSpaceChange,
+          this.player,
+          this.progressManager?.getCurrentStepDetails().toolbox
+        );
+        this.player.initialize(this.library);
+        setInterval(this.updateTimer, 1000 / 30);
       })
       .catch(error => {
         this.onError(error);
@@ -296,6 +251,20 @@ class UnconnectedMusicView extends React.Component {
       JSON.stringify(this.props.currentlyPlayingBlockIds)
     ) {
       this.updateHighlightedBlocks();
+    }
+    // If we just finished loading the lab, then we need to update the
+    // sources in musicBlocklyWorkspace.
+    if (
+      !prevProps.labReadyForReload &&
+      this.props.labReadyForReload &&
+      (this.getStartSources() || this.props.source)
+    ) {
+      let codeToLoad = this.getStartSources();
+      if (this.props.source && this.props.source.source) {
+        codeToLoad = JSON.parse(this.props.source.source);
+      }
+      this.musicBlocklyWorkspace.loadCode(codeToLoad);
+      this.props.setLabReadyForReload(false);
     }
   }
 
@@ -380,24 +349,26 @@ class UnconnectedMusicView extends React.Component {
     }
   };
 
-  // When the external system lets us know that the user changed level.
+  // When the external system lets us know that the user changed level,
+  // we need to update our progress manager to reflect that.
   goToPanel = () => {
     this.progressManager?.goToStep(this.props.currentLevelIndex);
 
-    // If we are already loading, then the existing execution of handlePanelChange
+    // If we are already changing panels, then the existing execution of handlePanelChange
     // will detect the change in active level and start loading again.
-    if (!this.props.isLabLoading) {
+    if (!this.state.changingPanels) {
       this.handlePanelChange();
     }
   };
 
-  // Handle a change in panel, including loading necessary data.
+  // Handle a change in panel for progress and toolbox.
   // Also handles a change in the active level index during this load.
   handlePanelChange = async () => {
+    this.setState({changingPanels: true});
+
     let currentLevelIndexLoading;
 
     this.stopSong();
-    this.props.setIsLoading(true);
 
     do {
       currentLevelIndexLoading = this.props.currentLevelIndex;
@@ -406,17 +377,9 @@ class UnconnectedMusicView extends React.Component {
 
       this.setToolboxForProgress();
       this.setAllowedSoundsForProgress();
-
-      if (this.props.currentLevelId) {
-        // Change levels for the projects system. Only do this if we have a level.
-        await this.musicBlocklyWorkspace.changeLevels(
-          this.getStartSources(),
-          this.props.currentLevelId,
-          this.props.currentScriptId
-        );
-      }
     } while (currentLevelIndexLoading !== this.props.currentLevelIndex);
-    this.props.setIsLoading(false);
+
+    this.setState({changingPanels: false});
   };
 
   setToolboxForProgress = () => {
@@ -479,7 +442,7 @@ class UnconnectedMusicView extends React.Component {
   };
 
   clearCode = () => {
-    this.musicBlocklyWorkspace.setStartSources(this.getStartSources());
+    this.musicBlocklyWorkspace.loadCode(this.getStartSources());
 
     this.setPlaying(false);
   };
@@ -791,8 +754,6 @@ const MusicView = connect(
     // The URL path for retrieving level_data from the server.
     levelDataPath: getLevelDataPath(state),
 
-    isLabLoading: state.lab?.isLoading,
-
     userId: state.currentUser.userId,
     userType: state.currentUser.userType,
     signInState: state.currentUser.signInState,
@@ -804,6 +765,8 @@ const MusicView = connect(
     instructionsPosition: state.music.instructionsPosition,
     currentScriptId: state.progress.scriptId,
     currentlyPlayingBlockIds: getCurrentlyPlayingBlockIds(state),
+    source: state.lab.source,
+    labReadyForReload: state.lab.labReadyForReload,
   }),
   dispatch => ({
     setIsPlaying: isPlaying => dispatch(setIsPlaying(isPlaying)),
@@ -828,6 +791,8 @@ const MusicView = connect(
     setProjectUpdatedError: () => dispatch(setProjectUpdatedError()),
     setIsLoading: isLoading => dispatch(setIsLoading(isLoading)),
     setIsPageError: isPageError => dispatch(setIsPageError(isPageError)),
+    setLabReadyForReload: labReadyForReload =>
+      dispatch(setLabReadyForReload(labReadyForReload)),
   })
 )(UnconnectedMusicView);
 
