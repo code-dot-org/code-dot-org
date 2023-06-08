@@ -10,6 +10,7 @@ export interface SampleEvent {
   sampleId: string;
   triggered: boolean;
   effects?: Effects;
+  lengthSeconds?: number;
 }
 
 interface PlayingSample {
@@ -42,12 +43,18 @@ export default class SamplePlayer {
     const soundList = library.groups
       .map(group => {
         return group.folders.map(folder => {
-          return folder.sounds.map(sound => {
-            return {
-              path: group.path + '/' + folder.path + '/' + sound.src,
-              restricted: sound.restricted,
-            };
-          });
+          return folder.sounds
+            .map(sound => {
+              // Skip loading sequenced sounds; these are generated at runtime
+              // and made up of individual instrument samples.
+              if (!sound.sequence) {
+                return {
+                  path: group.path + '/' + folder.path + '/' + sound.src,
+                  restricted: sound.restricted,
+                };
+              }
+            })
+            .filter(sound => sound !== undefined);
         });
       })
       .flat(2);
@@ -169,7 +176,8 @@ export default class SamplePlayer {
           eventStart,
           null,
           false,
-          sampleEvent.effects
+          sampleEvent.effects,
+          sampleEvent.lengthSeconds
         );
 
         this.playingSamples.push({
