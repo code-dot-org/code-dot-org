@@ -8,7 +8,7 @@ import * as channelsApi from './channelsApi';
 import * as projectsApi from './projectsApi';
 
 export interface ChannelsStore {
-  load: (key: string) => Promise<Response>;
+  load: (key: string) => Promise<Channel>;
 
   loadForLevel: (levelId: number, scriptId?: number) => Promise<Response>;
 
@@ -23,7 +23,7 @@ export class LocalChannelsStore implements ChannelsStore {
 
   load(key: string) {
     this.localStorageKey = key;
-    return Promise.resolve(new Response('{}'));
+    return Promise.resolve({} as unknown as Channel);
   }
 
   // We don't support changing keys for local storage, so we just return the

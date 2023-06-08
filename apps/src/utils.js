@@ -764,7 +764,7 @@ export function navigateToHref(href) {
  * {a: 1} -> '?a=1'
  * {a: 1, b: 'c'} -> '?a=1&b=c'
  *
- * @param {Object} params Object to stringify.
+ * @param {Object|undefined} params Object to stringify.
  */
 export function stringifyQueryParams(params) {
   if (!params) {

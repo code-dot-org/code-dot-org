@@ -21,6 +21,14 @@ export type DefaultChannel = Pick<Channel, 'name'>;
 // We will eventually make this a union type to include other source types.
 export type Source = BlocklySource;
 
+// Currently only the source field is supported. Some labs will need other
+// fields (animations, html, etc.)
+export type SourceResponse = {
+  // Stringified source code. Some labs (ex. Javalab) store multiple files
+  // as nested JSON which we'll need to support eventually.
+  source: string;
+};
+
 export interface SourceUpdateOptions {
   currentVersion: string;
   replace: boolean;
@@ -31,6 +39,10 @@ export interface SourceUpdateOptions {
 export interface Project {
   source: Source;
   channel: Channel;
+}
+
+export interface NewProject extends Omit<Project, 'source'> {
+  source: Source | undefined;
 }
 
 export interface BlocklySource {

@@ -39,7 +39,7 @@ import {logError, logWarning} from '../utils/MusicMetrics';
  * workspace view, execute code, and save/load projects.
  */
 export default class MusicBlocklyWorkspace {
-  constructor() {
+  constructor(onError) {
     this.codeHooks = {};
     this.compiledEvents = null;
     this.triggerIdToStartType = {};
@@ -49,6 +49,7 @@ export default class MusicBlocklyWorkspace {
     this.levelChangeManager = new LevelChangeManager(
       this.resetProject.bind(this)
     );
+    this.onError = onError;
   }
 
   triggerIdToEvent = id => `triggeredAtButton-${id}`;
@@ -419,24 +420,17 @@ export default class MusicBlocklyWorkspace {
 
   // Loads sources using the project manager.  Falls back to the provided default sources.
   async loadSources(startSources) {
-    const projectResponse = await this.projectManager.load();
-    if (!projectResponse.ok) {
-      if (projectResponse.status === 404) {
-        // This is expected if the user has never saved before.
+    try {
+      const {source, channel} = await this.projectManager.load();
+      this.channel = channel;
+      if (source) {
+        Blockly.serialization.workspaces.load(source, this.workspace);
+      } else {
         this.setStartSources(startSources);
       }
-
-      // TODO: Error handling
+    } catch (error) {
+      this.onError(error);
       return;
-    }
-
-    const {source, channel} = await projectResponse.json();
-    this.channel = channel;
-    if (source && source.source) {
-      const existingCodeJson = JSON.parse(source.source);
-      Blockly.serialization.workspaces.load(existingCodeJson, this.workspace);
-    } else {
-      this.setStartSources(startSources);
     }
   }
 

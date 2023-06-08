@@ -12,7 +12,8 @@
  */
 import {SourcesStore} from './SourcesStore';
 import {ChannelsStore} from './ChannelsStore';
-import {Project} from '../types';
+import {NewProject, Project, Source} from '../types';
+import MetricsReporter from '@cdo/apps/lib/metrics/MetricsReporter';
 
 export enum ProjectManagerEvent {
   SaveStart,
@@ -54,32 +55,31 @@ export default class ProjectManager {
     this.channelsStore = channelsStore;
   }
 
-  // Load the project from the sources and channels store.
-  async load(): Promise<Response> {
+  // Load the project from the sources and channels store. Throws if there are any errors.
+  async load(): Promise<NewProject> {
     if (this.destroyed) {
-      return this.getNoopResponse();
-    }
-    const sourceResponse = await this.sourcesStore.load(this.channelId);
-    // If sourceResponse is not ok, we still want to load the channel. Source can
-    // return not found if the project is new.
-    let source = {};
-    if (sourceResponse.ok) {
-      source = await sourceResponse.json();
-      this.lastSource = JSON.stringify(source);
+      throw new Error('Project Manager destroyed');
     }
 
-    const channelResponse = await this.channelsStore.load(this.channelId);
-    if (!channelResponse.ok) {
-      return channelResponse;
+    let source: Source | undefined;
+    try {
+      const sourceResponse = await this.sourcesStore.load(this.channelId);
+      const sourceString = sourceResponse.source;
+      this.lastSource = sourceString;
+      source = JSON.parse(sourceString);
+    } catch (error) {
+      // If sourceResponse is a 404 (not found), we still want to load the channel.
+      // Source can return not found if the project is new. Throw if not a 404.
+      if (!(error as Error).message.includes('404')) {
+        throw error;
+      }
     }
 
-    const channel = await channelResponse.json();
-    this.lastChannel = JSON.stringify(channel);
-    const project = {source, channel};
-    const blob = new Blob([JSON.stringify(project)], {
-      type: 'application/json',
-    });
-    return new Response(blob);
+    const channel = await this.channelsStore.load(this.channelId);
+    return {
+      source,
+      channel,
+    };
   }
 
   hasUnsavedChanges(): boolean {
@@ -103,18 +103,18 @@ export default class ProjectManager {
    * @returns a promise that resolves to a Response. If the save is successful, the response
    * will be empty, otherwise it will contain failure information.
    */
-  async save(project: Project, forceSave = false) {
+  async save(project: Project, forceSave = false): Promise<void> {
     if (this.destroyed) {
       // If we have already been destroyed, don't attempt to save.
       this.resetSaveState();
-      return this.getNoopResponseAndSendSaveNoopEvent();
+      this.sendSaveNoopEvent();
     }
     this.projectToSave = project;
     if (!this.canSave(forceSave)) {
       if (!this.saveQueued) {
         this.enqueueSave();
       }
-      return this.getNoopResponseAndSendSaveNoopEvent();
+      this.sendSaveNoopEvent();
     } else {
       this.saveHelper();
     }
@@ -132,9 +132,10 @@ export default class ProjectManager {
    * @returns a Response. If the save is successful, the response will be empty,
    * otherwise it will contain failure or no-op information.
    */
-  private async saveHelper(): Promise<Response> {
+  private async saveHelper(): Promise<void> {
     if (!this.projectToSave) {
-      return this.getNoopResponseAndSendSaveNoopEvent();
+      this.sendSaveNoopEvent();
+      return;
     }
     this.resetSaveState();
     this.saveInProgress = true;
@@ -145,21 +146,16 @@ export default class ProjectManager {
     // If neither source nor channel has actually changed, no need to save again.
     if (!sourceChanged && !channelChanged) {
       this.saveInProgress = false;
-      return this.getNoopResponseAndSendSaveNoopEvent();
+      this.sendSaveNoopEvent();
+      return;
     }
     // Only save the source if it has changed.
     if (sourceChanged) {
-      const sourceResponse = await this.sourcesStore.save(
-        this.channelId,
-        this.projectToSave.source
-      );
-      if (!sourceResponse.ok) {
-        this.saveInProgress = false;
-        this.executeListeners(ProjectManagerEvent.SaveFail, sourceResponse);
-
-        // TODO: Should we wrap this response in some way?
-        // Maybe add a more specific statusText to the response?
-        return sourceResponse;
+      try {
+        await this.sourcesStore.save(this.channelId, this.projectToSave.source);
+      } catch (error) {
+        this.onSaveFail('Error saving sources', error as Error);
+        return;
       }
       this.lastSource = JSON.stringify(this.projectToSave.source);
     }
@@ -167,16 +163,14 @@ export default class ProjectManager {
     // Always save the channel--either the channel has changed and/or the source changed.
     // Even if only the source changed, we still update the channel to modify the last
     // updated time.
-    const channelResponse = await this.channelsStore.save(
-      this.projectToSave.channel
-    );
-    if (!channelResponse.ok) {
-      this.saveInProgress = false;
-      this.executeListeners(ProjectManagerEvent.SaveFail, channelResponse);
-
-      // TODO: Should we wrap this response in some way?
-      // Maybe add a more specific statusText to the response?
-      return channelResponse;
+    let channelResponse;
+    try {
+      channelResponse = await this.channelsStore.save(
+        this.projectToSave.channel
+      );
+    } catch (error) {
+      this.onSaveFail('Error saving channel', error as Error);
+      return;
     }
     this.lastChannel = JSON.stringify(this.projectToSave.channel);
 
@@ -188,7 +182,12 @@ export default class ProjectManager {
       ProjectManagerEvent.SaveSuccess,
       this.lastSaveResponse
     );
-    return new Response();
+  }
+
+  private onSaveFail(errorMessage: string, error: Error) {
+    this.saveInProgress = false;
+    this.logError(errorMessage, error);
+    this.executeListeners(ProjectManagerEvent.SaveFail, error);
   }
 
   private canSave(forceSave: boolean): boolean {
@@ -227,14 +226,8 @@ export default class ProjectManager {
     this.eventListeners[type]?.forEach(listener => listener(payload));
   }
 
-  private getNoopResponse() {
-    return new Response(null, {status: 304});
-  }
-
-  private getNoopResponseAndSendSaveNoopEvent() {
-    const noopResponse = this.getNoopResponse();
+  private sendSaveNoopEvent() {
     this.executeListeners(ProjectManagerEvent.SaveNoop, this.lastSaveResponse);
-    return noopResponse;
   }
 
   private sourceChanged(): boolean {
@@ -257,5 +250,13 @@ export default class ProjectManager {
       this.currentTimeoutId = undefined;
     }
     this.saveQueued = false;
+  }
+
+  private logError(errorMessage: string, error: Error): void {
+    MetricsReporter.logError({
+      channelId: this.channelId,
+      errorMessage,
+      error: error.toString(),
+    });
   }
 }
