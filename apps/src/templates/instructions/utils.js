@@ -115,6 +115,14 @@ function removeCommentNodes(root) {
  */
 export function convertXmlToBlockly(xmlContainer, isRtl) {
   const xmls = xmlContainer.getElementsByTagName('xml');
+  console.log('convertXmlToBlockly - xmlContainer', xmlContainer);
+  // remove divs and spans with style.display = 'inline-block';
+  const blockSpaceContainers = xmlContainer.getElementsByClassName(
+    'block-space-container'
+  );
+  for (let i = blockSpaceContainers.length - 1; i >= 0; i--) {
+    blockSpaceContainers[i].remove();
+  }
 
   Array.prototype.forEach.call(xmls, function (xml) {
     // Skip conversion if XML already has a blockspace
@@ -135,6 +143,7 @@ export function convertXmlToBlockly(xmlContainer, isRtl) {
 
     // create a container and insert the blockspace into it
     const blockSpaceContainer = document.createElement(inline ? 'span' : 'div');
+    blockSpaceContainer.classList.add('block-space-container');
     if (inline) {
       // SVGs don't play nicely if they're rendered into purely inline elements,
       // so if our container is a span it should be inline-block
