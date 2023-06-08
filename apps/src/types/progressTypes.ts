@@ -60,6 +60,13 @@ export interface Level {
   url: string;
 }
 
+export interface LevelWithProgress extends Level {
+  status: string;
+  paired?: boolean;
+  isLocked?: boolean;
+  isCurrentLevel?: boolean;
+}
+
 export interface UnitProgress {
   lastTimestamp: number | undefined;
   locked: boolean;
@@ -67,18 +74,18 @@ export interface UnitProgress {
   paired: boolean;
   result: number;
   status: string;
-  teacherFeedbackReviewState: keyof typeof ReviewStates | undefined; // TODO: is this a string?
+  teacherFeedbackReviewState: keyof typeof ReviewStates | undefined;
   timeSpent: number | undefined;
 }
 
 export interface PeerReviewLessonInfo {
   name: string;
   lesson_group_display_name: string;
-  levels: PeerReveiwLevelInfo[];
+  levels: PeerReviewLevelInfo[];
   lockable: boolean;
 }
 
-export interface PeerReveiwLevelInfo {
+export interface PeerReviewLevelInfo {
   id: number;
   kind: string;
   title: string;
@@ -86,6 +93,7 @@ export interface PeerReveiwLevelInfo {
   name: string;
   icon: string;
   locked: boolean;
+  status?: string;
 }
 
 export interface PeerReviewSummary {
@@ -124,3 +132,8 @@ export interface InitProgressPayload {
 
 // LevelResults is a map of levelId -> TestResult. TestResult is a number.
 export type LevelResults = {[key: number]: number};
+
+export const ViewType = {
+  Participant: 'Participant',
+  Instructor: 'Instructor',
+};

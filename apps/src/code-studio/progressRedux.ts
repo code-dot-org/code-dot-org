@@ -1,3 +1,5 @@
+import $ from 'jquery';
+import _ from 'lodash';
 import {
   Lesson,
   LessonGroup,
@@ -7,16 +9,27 @@ import {
   PUZZLE_PAGE_NONE,
   InitProgressPayload,
   LevelResults,
-  PeerReveiwLevelInfo,
+  ViewType,
+  PeerReviewLevelInfo,
 } from '@cdo/apps/types/progressTypes';
-import {PayloadAction, createSlice} from '@reduxjs/toolkit';
-import _ from 'lodash';
 import {
-  processedLevel,
+  AnyAction,
+  PayloadAction,
+  ThunkAction,
+  ThunkDispatch,
+  createAction,
+  createSlice,
+} from '@reduxjs/toolkit';
+import {
   processServerStudentProgress,
   getLevelResult,
 } from '@cdo/apps/templates/progress/progressHelpers';
-import {mergeActivityResult, activityCssClass} from './activityUtils';
+import {mergeActivityResult} from './activityUtils';
+import {SET_VIEW_TYPE} from './viewAsRedux';
+import {setVerified} from '@cdo/apps/code-studio/verifiedInstructorRedux';
+import {authorizeLockable} from './lessonLockRedux';
+import {updateBrowserForLevelNavigation} from './browserNavigation';
+import {TestResults} from '@cdo/apps/constants';
 
 interface ProgressState {
   currentLevelId: string | null;
@@ -173,7 +186,7 @@ const progressSlice = createSlice({
     },
     mergePeerReviewProgress(
       state,
-      action: PayloadAction<PeerReveiwLevelInfo[]>
+      action: PayloadAction<PeerReviewLevelInfo[]>
     ) {
       if (state.peerReviewLessonInfo) {
         state.peerReviewLessonInfo = {
@@ -230,11 +243,206 @@ const progressSlice = createSlice({
     },
     setScriptCompleted(state) {
       state.unitCompleted = true;
-    }
+    },
+    setLessonExtrasEnabled(state, action: PayloadAction<boolean>) {
+      state.lessonExtrasEnabled = action.payload;
+    },
+  },
+  extraReducers: builder => {
+    builder.addCase(
+      setViewType,
+      (state, action: PayloadAction<keyof typeof ViewType>) => {
+        state.isSummaryView =
+          action.payload === ViewType.Participant &&
+          state.studentDefaultsSummaryView;
+      }
+    );
   },
 });
 
+// Thunks
+type ProgressThunkAction = ThunkAction<
+  void,
+  {progress: ProgressState},
+  undefined,
+  AnyAction
+>;
+
+export const queryUserProgress =
+  (userId: string): ProgressThunkAction =>
+  (dispatch, getState) => {
+    const state = getState().progress;
+    return userProgressFromServer(state, dispatch, userId);
+  };
+
+// The user has navigated to a new level in the current lesson,
+// so we should update the browser and also set this as the new
+// current level.
+export function navigateToLevelId(levelId: string): ProgressThunkAction {
+  return (dispatch, getState) => {
+    const state = getState().progress;
+    if (!state.currentLessonId) {
+      return;
+    }
+    const newLevel = getLevelById(
+      state.lessons,
+      state.currentLessonId,
+      levelId
+    );
+    if (!newLevel) {
+      return;
+    }
+
+    updateBrowserForLevelNavigation(state, newLevel.url, levelId);
+    dispatch(setCurrentLevelId(levelId));
+  };
+}
+
+// // The user has successfully completed the level and the page
+// // will not be reloading.
+export function sendSuccessReport(appType: string): ProgressThunkAction {
+  return (dispatch, getState) => {
+    const state = getState().progress;
+    const levelId = state.currentLevelId;
+    if (!state.currentLessonId || !levelId) {
+      return;
+    }
+    const currentLevel = getLevelById(
+      state.lessons,
+      state.currentLessonId,
+      levelId
+    );
+    if (!currentLevel) {
+      return;
+    }
+    const scriptLevelId = currentLevel.id;
+
+    // The server does not appear to use the user ID parameter,
+    // so just pass 0, like some other milestone posts do.
+    const userId = 0;
+
+    // An ideal score.
+    const idealPassResult = TestResults.ALL_PASS;
+
+    const data = {
+      app: appType,
+      result: true,
+      testResult: idealPassResult,
+    };
+
+    fetch(`/milestone/${userId}/${scriptLevelId}/${levelId}`, {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    }).then(response => {
+      if (response.ok && levelId !== null) {
+        // Update the progress store by merging in this
+        // particular result immediately.
+        dispatch(mergeResults({[levelId]: idealPassResult}));
+      }
+    });
+  };
+}
+
 // Helpers
+// TODO: When we convert viewAsRedux to redux-toolkit, we should use createAction there instead.
+const setViewType = createAction<keyof typeof ViewType>(SET_VIEW_TYPE);
+
+/**
+ * Requests user progress from the server and dispatches other redux actions
+ * based on the server's response data.
+ */
+const userProgressFromServer = (
+  state: ProgressState,
+  dispatch: ThunkDispatch<{progress: ProgressState}, undefined, AnyAction>,
+  userId: string | null = null
+) => {
+  if (!state.scriptName) {
+    const message = `Could not request progress for user ID ${userId} from server: scriptName must be present in progress redux.`;
+    throw new Error(message);
+  }
+
+  // If we have a userId, we can clear any progress in redux and request all progress
+  // from the server.
+  if (userId) {
+    dispatch(clearResults());
+  }
+
+  return $.ajax({
+    url: `/api/user_progress/${state.scriptName}`,
+    method: 'GET',
+    data: {user_id: userId},
+  }).done(data => {
+    if (!data || _.isEmpty(data)) {
+      return;
+    }
+
+    if (data.isVerifiedInstructor) {
+      dispatch(setVerified());
+    }
+
+    // We are on an overview page if currentLevelId is undefined.
+    const onOverviewPage = !state.currentLevelId;
+    // Show lesson plan links and other teacher info if instructor and on unit overview page.
+    if (
+      (data.isInstructor || data.teacherViewingStudent) &&
+      !data.deeperLearningCourse &&
+      onOverviewPage
+    ) {
+      // Default to summary view if teacher is viewing their student, otherwise default to detail view.
+      dispatch(setIsSummaryView(data.teacherViewingStudent));
+    }
+
+    if (data.focusAreaLessonIds) {
+      dispatch(
+        updateFocusArea(data.changeFocusAreaPath, data.focusAreaLessonIds)
+      );
+    }
+
+    dispatch(authorizeLockable(data.lockableAuthorized));
+
+    if (data.completed) {
+      dispatch(setScriptCompleted());
+    }
+
+    // Merge progress from server
+    if (data.progress) {
+      dispatch(setScriptProgress(data.progress));
+
+      // Note that we set the full progress object above in redux but also set
+      // a map containing just level results. This is the legacy code path and
+      // the goal is to eventually update all code paths to use unitProgress
+      // instead of levelResults.
+      const levelResults = _.mapValues(data.progress, getLevelResult);
+      dispatch(mergeResults(levelResults));
+
+      if (data.peerReviewsPerformed) {
+        dispatch(mergePeerReviewProgress(data.peerReviewsPerformed));
+      }
+
+      if (data.current_lesson) {
+        dispatch(setCurrentLessonId(data.current_lesson));
+      }
+    }
+  });
+};
+
+/**
+ * Given an array of lessons, a lesson ID, and a level ID, returns
+ * the requested level.
+ */
+function getLevelById(
+  lessons: Lesson[] | null,
+  lessonId: number,
+  levelId: string
+) {
+  const lesson = lessons?.find(lesson => lesson.id === lessonId);
+  if (lesson) {
+    return lesson.levels.find(level => level.ids.find(id => id === levelId));
+  }
+}
 
 /**
  * Does some processing of our passed in lesson, namely
@@ -258,4 +466,31 @@ export function processedLessons(lessons: Lesson[], isPlc: boolean) {
   });
 }
 
+export const {
+  initProgress,
+  setCurrentLevelId,
+  setScriptProgress,
+  clearResults,
+  useDbProgress,
+  mergeResults,
+  overwriteResults,
+  mergePeerReviewProgress,
+  updateFocusArea,
+  disablePostMilestone,
+  setIsAge13Required,
+  setIsSummaryView,
+  setIsMiniView,
+  setStudentDefaultsSummaryView,
+  setCurrentLessonId,
+  setScriptCompleted,
+  setLessonExtrasEnabled,
+} = progressSlice.actions;
+
 export default progressSlice.reducer;
+
+// export private function(s) to expose to unit testing
+export const __testonly__ = IN_UNIT_TEST
+  ? {
+      userProgressFromServer,
+    }
+  : {};
