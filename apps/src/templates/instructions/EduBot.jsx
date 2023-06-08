@@ -1,4 +1,5 @@
 import styles from '@chatscope/chat-ui-kit-styles/dist/default/styles.min.css';
+import './eduBotStyles.css';
 
 import React from 'react';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
@@ -66,12 +67,13 @@ class EduBot extends React.Component {
     this.setState({
       madLibVariables: this.extractMadLibVariables(value),
       promptTemplate: value,
+      finalPrompt: value,
     });
   };
 
   formatForOpenAI = messages => {
-    const {promptTemplate} = this.state;
-    let payload = [{content: promptTemplate, role: 'system'}];
+    const {finalPrompt} = this.state;
+    let payload = [{content: finalPrompt, role: 'system'}];
     messages.forEach(message => {
       payload.push({content: message.text, role: message.sender});
     });
@@ -114,19 +116,20 @@ class EduBot extends React.Component {
     );
   };
 
-  injectPromptConfiguration = () => {
+  injectPromptConfiguration = ev => {
+    ev.preventDefault();
     const {promptTemplate, madLibValues} = this.state;
     let prompt = promptTemplate;
     Object.keys(madLibValues).forEach(key => {
       prompt = prompt.replace(`[${key}]`, madLibValues[key]);
     });
-    this.setState({promptTemplate: prompt});
+    this.setState({finalPrompt: prompt});
   };
 
   startConversation = () => {
-    const {promptTemplate} = this.state;
+    const {finalPrompt} = this.state;
     this.setState({savingPrompt: true, error: null});
-    openaiCompletion([{content: promptTemplate, role: 'system'}]).done(
+    openaiCompletion([{content: finalPrompt, role: 'system'}]).done(
       ({content, role}) => {
         this.setState({
           conversation: [{sender: role, text: content}],
@@ -162,8 +165,20 @@ class EduBot extends React.Component {
       case EDIT_MODE.TEACHER:
         return (
           <div>
-            <span>{`Customize your system prompt using the fields below. To give students a choice
-            from multiple options, separate each option with a comma (e.g. "George Washington, Thomas Jefferson, John Adams"). Please include only one set of choices in your prompt.`}</span>
+            <span>
+              <b>Instructions:</b>
+              <ul>
+                <li>
+                  Customize the provided system prompt using the fields below.
+                </li>
+                <li>
+                  To give students a choice from multiple options, separate each
+                  option with a delimiter like a comma (e.g. George Washington,
+                  Thomas Jefferson, John Adams).
+                </li>
+                <li>Please include only one set of choices in your prompt.</li>
+              </ul>
+            </span>
             <form onSubmit={this.handleSubmit}>
               {madLibVariables.map((variable, index) => {
                 // Convert variable name to sentence case
@@ -182,9 +197,16 @@ class EduBot extends React.Component {
                   </div>
                 );
               })}
+              <button
+                onClick={this.injectPromptConfiguration}
+                style={{fontSize: '14px'}}
+              >
+                Preview Prompt
+              </button>
             </form>
-            <button onClick={this.injectPromptConfiguration}>Preview</button>
-            <span>{this.state.promptTemplate}</span>
+            <span>
+              <i>{this.state.finalPrompt}</i>
+            </span>
           </div>
         );
       case EDIT_MODE.LEVELBUILDER:
@@ -201,7 +223,12 @@ class EduBot extends React.Component {
                 if (containsSquareBrackets) {
                   this.updateMadLibSystemPrompt(value);
                 } else {
-                  this.setState({promptTemplate: value});
+                  this.setState({
+                    promptTemplate: value,
+                    finalPrompt: value,
+                    madLibVariables: this.extractMadLibVariables(value),
+                    conversation: [],
+                  });
                 }
               }}
             />
@@ -211,9 +238,7 @@ class EduBot extends React.Component {
   };
 
   render() {
-    const {isOpen, conversation, madLibVariables, promptTemplate} = this.state;
-    console.log('promptTemplate: ', promptTemplate);
-    console.log('madLibVariables: ', madLibVariables);
+    const {isOpen, conversation, madLibVariables, finalPrompt} = this.state;
     if (!isOpen) {
       return (
         <Button
@@ -236,8 +261,8 @@ class EduBot extends React.Component {
         id="edubot"
         style={{
           position: 'fixed',
-          height: '400px',
-          width: '600px',
+          height: '600px',
+          width: '800px',
           bottom: 0,
           right: 0,
           zIndex: 1000,
@@ -255,33 +280,39 @@ class EduBot extends React.Component {
                   }}
                 >
                   <ChatButton
-                    icon={<FontAwesome icon="gear" />}
+                    icon={<FontAwesome icon="edit" />}
                     onClick={() =>
                       this.setState({editMode: EDIT_MODE.LEVELBUILDER})
                     }
                     labelPosition="left"
                   >
-                    Specify Prompt
+                    Edit Prompt{' '}
                   </ChatButton>
                   {madLibVariables.length > 0 && (
                     <ChatButton
-                      icon={<FontAwesome icon="edit" />}
+                      icon={<FontAwesome icon="gear" />}
                       onClick={() =>
                         this.setState({editMode: EDIT_MODE.TEACHER})
                       }
                       labelPosition="left"
                     >
-                      Customize
+                      Configure{' '}
                     </ChatButton>
                   )}
                   <ChatButton
                     icon={<FontAwesome icon="trash" />}
                     onClick={() => this.setState({conversation: []})}
-                  />
+                    labelPosition="left"
+                  >
+                    Clear History{' '}
+                  </ChatButton>
                   <ChatButton
                     icon={<FontAwesome icon="caret-down" />}
                     onClick={() => this.setState({isOpen: false})}
-                  />
+                    labelPosition="left"
+                  >
+                    Close{' '}
+                  </ChatButton>
                 </div>
               </ConversationHeader.Actions>
             </ConversationHeader>
@@ -335,6 +366,7 @@ class EduBot extends React.Component {
           </ChatContainer>
         </MainContainer>
         <Modal
+          id="edu-bot-modal"
           show={[EDIT_MODE.LEVELBUILDER, EDIT_MODE.TEACHER].includes(
             this.state.editMode
           )}
@@ -343,13 +375,11 @@ class EduBot extends React.Component {
           <Modal.Header closeButton>
             <Modal.Title>
               {this.state.editMode === EDIT_MODE.LEVELBUILDER
-                ? 'Configure EduBot'
-                : 'Customize Prompt'}
+                ? 'From Code.org Team'
+                : 'Configure System Prompt'}
             </Modal.Title>
           </Modal.Header>
-          <Modal.Body style={{marginLeft: '-110px'}}>
-            {this.renderModalBody()}
-          </Modal.Body>
+          <Modal.Body>{this.renderModalBody()}</Modal.Body>
           <Modal.Footer>
             {this.state.savingPrompt ? (
               <Loader />
@@ -357,13 +387,23 @@ class EduBot extends React.Component {
               <ChatButton
                 disabled={
                   EDIT_MODE.TEACHER === this.state.editMode &&
-                  /\[.*?\]/.test(promptTemplate)
+                  /\[.*?\]/.test(finalPrompt)
                 }
                 onClick={() => {
+                  console.log(
+                    'this.state.promptTemplate',
+                    this.state.promptTemplate
+                  );
+                  console.log('this.state.finalPrompt', this.state.finalPrompt);
+                  console.log(
+                    'this.state.madLibVariables',
+                    this.state.madLibVariables
+                  );
                   if (EDIT_MODE.LEVELBUILDER === this.state.editMode) {
                     if (madLibVariables.length === 0) {
                       this.startConversation();
                     } else {
+                      this.setState({conversation: [], madLibValues: {}});
                       this.closeModal();
                     }
                   } else if (EDIT_MODE.TEACHER === this.state.editMode) {
