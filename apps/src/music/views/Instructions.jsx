@@ -11,6 +11,7 @@ import {useSelector} from 'react-redux';
  */
 const Instructions = ({
   progressionStep,
+  showProgressionStep,
   currentLevelIndex,
   levelCount,
   onNextPanel,
@@ -63,7 +64,9 @@ const Instructions = ({
         />
       )}
       <div className={moduleStyles.bottom}>
-        <div className={moduleStyles.progressText}>{progressText}</div>
+        {showProgressionStep && (
+          <div className={moduleStyles.progressText}>{progressText}</div>
+        )}
         <div>
           {progressState.satisfied && (
             <button
@@ -86,6 +89,7 @@ const Instructions = ({
 
 Instructions.propTypes = {
   progressionStep: PropTypes.object,
+  showProgressionStep: PropTypes.bool,
   currentLevelIndex: PropTypes.number,
   levelCount: PropTypes.number,
   message: PropTypes.string,
