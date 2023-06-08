@@ -13,8 +13,37 @@ export default {
 // eslint-disable-next-line
 const Template = args => <Checkbox {...args} />;
 
-export const DefaultCheckbox = Template.bind({});
+const MultipleTemplate = (args = []) => (
+  <>
+    {args.components?.map(componentArg => (
+      <Checkbox key={componentArg.name} {...componentArg} />
+    ))}
+  </>
+);
+
+export const DefaultCheckbox = MultipleTemplate.bind({});
 DefaultCheckbox.args = {
-  name: 'test',
-  label: 'label',
+  components: [
+    {name: 'test', label: 'Label'},
+    {
+      name: 'test-checked',
+      label: 'Label Checked',
+      checked: true,
+      onChange: () => {},
+    },
+  ],
+};
+
+export const DisabledCheckbox = MultipleTemplate.bind({});
+DisabledCheckbox.args = {
+  components: [
+    {name: 'test-disabled', label: 'Label', disabled: true},
+    {
+      name: 'test-disabled-checked',
+      label: 'Label Checked',
+      disabled: true,
+      checked: true,
+      onChange: () => {},
+    },
+  ],
 };

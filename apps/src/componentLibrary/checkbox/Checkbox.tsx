@@ -9,6 +9,7 @@ interface CheckboxProps {
   name: string;
   value?: string;
   label?: string;
+  disabled?: boolean;
 }
 
 const Checkbox: React.FunctionComponent<CheckboxProps> = ({
@@ -17,6 +18,7 @@ const Checkbox: React.FunctionComponent<CheckboxProps> = ({
   onChange,
   name,
   value,
+  disabled = false,
 }) => {
   return (
     <label className={moduleStyles.label}>
@@ -25,6 +27,7 @@ const Checkbox: React.FunctionComponent<CheckboxProps> = ({
         name={name}
         value={value}
         checked={checked}
+        disabled={disabled}
         onChange={onChange}
       />
       <i className="fa fa-solid" />
