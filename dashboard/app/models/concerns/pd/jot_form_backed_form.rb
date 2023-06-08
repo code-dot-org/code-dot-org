@@ -117,9 +117,9 @@ module Pd
           questions = get_questions(form_id, force_sync: true)
           questions_details = use_names_for_question_ids? ? JSON.parse(questions.questions) : nil
           # Make sure that there is a unique, non-nil name for each question.
-if questions_details && (questions_details.pluck("name").compact.uniq.size != questions_details.size)
-              raise "Not all questions for form #{form_id} have unique names."
-            end
+          if questions_details && (questions_details.pluck("name").compact.uniq.size != questions_details.size)
+            raise "Not all questions for form #{form_id} have unique names."
+          end
 
           last_known_submission_id = questions.last_submission_id
           last_processed_submission_id = last_known_submission_id

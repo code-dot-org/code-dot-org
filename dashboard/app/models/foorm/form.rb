@@ -73,8 +73,8 @@ class Foorm::Form < ApplicationRecord
     parsed_questions = JSON.parse(questions)
 
     if !parsed_questions['published'].nil? && (published != parsed_questions['published'])
-        errors.add(:questions, 'Mismatch between published state in questions and published state in model')
-      end
+      errors.add(:questions, 'Mismatch between published state in questions and published state in model')
+    end
   end
 
   def write_form_to_file
