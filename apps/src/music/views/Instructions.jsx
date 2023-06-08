@@ -162,8 +162,10 @@ const InstructionsPanel = ({
           vertical && moduleStyles.textVertical
         )}
       >
-        <SafeMarkdown markdown={panel.text} />
-        <SafeMarkdown markdown={message} className={moduleStyles.message} />
+        {panel.text && <SafeMarkdown markdown={panel.text} />}
+        {message && (
+          <SafeMarkdown markdown={message} className={moduleStyles.message} />
+        )}
       </div>
     </div>
   );

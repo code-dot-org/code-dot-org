@@ -347,7 +347,7 @@ class UnconnectedMusicView extends React.Component {
   };
 
   hasNoProgressHeader = () => {
-    return this.isStandaloneLevel() || this.props.inIncubator;
+    return this.isStandaloneLevel() || !!this.props.inIncubator;
   };
 
   getIsPlaying = () => {
