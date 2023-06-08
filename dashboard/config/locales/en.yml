@@ -286,6 +286,9 @@ en:
   parent_mailer:
     student_associated_subject: 'Login information for Code.org'
     parent_email_added_subject: 'Welcome to Code.org!'
+    parent_permission_request_subject: "Parental consent needed for your child's access to Code.org"
+    parent_permission_reminder_subject: "Reminder, parental consent needed for your child's access to Code.org"
+    parent_permission_confirmation_subject: "Thank you for approving your child's access to Code.org!"
   teacher_mailer:
     new_teacher_subject: 'Welcome to Code.org!'
     delete_teacher_subject: 'Code.org notification: Your account has been deleted'
