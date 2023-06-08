@@ -115,7 +115,6 @@ function removeCommentNodes(root) {
  */
 export function convertXmlToBlockly(xmlContainer, isRtl) {
   const xmls = xmlContainer.getElementsByTagName('xml');
-  console.log('convertXmlToBlockly - xmlContainer', xmlContainer);
   // remove divs and spans with style.display = 'inline-block';
   const blockSpaceContainers = xmlContainer.getElementsByClassName(
     'block-space-container'
