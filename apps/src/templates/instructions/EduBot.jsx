@@ -25,6 +25,8 @@ const SAMPLE_PROMPT =
   'You are a chatbot for a middle school classroom where they can chat with a historical figure. You must answer only questions about the formation of America and the founding fathers. You will act as George Washington; every question you answer must be from his perspective. Wait for the student to ask a question before responding.';
 const MAD_LIBS_SAMPLE_PROMPT =
   'You are a chatbot for a [grade level] school classroom where they can chat with a historical figure from the list below. The user will give you a name of a historical figure. You will be acting as that historical figure and every question you answer must be from their perspective. Do not answer any questions that are not about the historical figure’s life, the historical figure’s career, the historical figure’s interests, things the historical figure may have liked, the historical figure’s ideas, and any possible feelings the historical figure may have felt about things. When you respond to the user, act as the historical figure they specified. Do not answer any questions about a historical figure not on the following list: [historical figures].';
+const TWO_VARIABLES_PROMPT =
+  'You are a chatbot for a [grade level] classroom where they can chat with a literary figure. You will be acting as [person] and every question you answer must be from this perspective. Give brief answers in the voice of [person]. Begin by introducing yourself.';
 
 // TODO: Seems like we don't have support for enums?
 const EDIT_MODE = {
@@ -57,7 +59,11 @@ class EduBot extends React.Component {
   extractMadLibVariables = string => {
     const matches = string.match(/\[(.*?)\]/g);
     if (matches) {
-      return matches.map(match => match.match(/\[(.*?)\]/)[1]);
+      const sanitizedMatches = matches.map(
+        match => match.match(/\[(.*?)\]/)[1]
+      );
+      const uniqueMatches = new Set(sanitizedMatches);
+      return [...uniqueMatches];
     }
     return [];
   };
@@ -121,7 +127,7 @@ class EduBot extends React.Component {
     const {promptTemplate, madLibValues} = this.state;
     let prompt = promptTemplate;
     Object.keys(madLibValues).forEach(key => {
-      prompt = prompt.replace(`[${key}]`, madLibValues[key]);
+      prompt = prompt.replaceAll(`[${key}]`, madLibValues[key]);
     });
     this.setState({finalPrompt: prompt});
   };
