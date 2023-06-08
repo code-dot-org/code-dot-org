@@ -37,7 +37,7 @@ class ManageLinkedAccounts extends React.Component {
     isGoogleClassroomStudent: PropTypes.bool.isRequired,
     isCleverStudent: PropTypes.bool.isRequired,
     userAge: PropTypes.number,
-    usIp: PropTypes.bool,
+    userStateCode: PropTypes.string,
   };
 
   cannotDisconnectGoogle = authOption => {
@@ -163,7 +163,7 @@ class ManageLinkedAccounts extends React.Component {
                   }
                   error={option.error}
                   userAge={this.props.userAge}
-                  usIp={this.props.usIp}
+                  userStateCode={this.props.userStateCode}
                 />
               );
             })}
@@ -182,7 +182,7 @@ export default connect(state => ({
   isGoogleClassroomStudent: state.manageLinkedAccounts.isGoogleClassroomStudent,
   isCleverStudent: state.manageLinkedAccounts.isCleverStudent,
   userAge: getScriptData('edit').userAge,
-  usIp: getScriptData('edit').usIp,
+  userStateCode: getScriptData('edit').userStateCode,
 }))(ManageLinkedAccounts);
 
 class OauthConnection extends React.Component {
@@ -194,7 +194,7 @@ class OauthConnection extends React.Component {
     disconnectDisabledStatus: PropTypes.string,
     error: PropTypes.string,
     userAge: PropTypes.number,
-    usIp: PropTypes.bool,
+    userStateCode: PropTypes.string,
   };
 
   getDisconnectDisabledTooltip = () => {
@@ -208,14 +208,14 @@ class OauthConnection extends React.Component {
     }
   };
 
-  shouldDisableConnectButton = (userAge, usIp) => {
+  shouldDisableConnectButton = (userAge, userStateCode) => {
     // Clever is a special case where the school district owns/manages the data.
     if (this.props.credentialType === OAuthProviders.clever) {
       return false;
     }
     return !!(
       window.CPA_EXPERIENCE &&
-      this.props.usIp &&
+      this.props.userStateCode === 'CO' &&
       this.props.userAge < 13
     );
   };
