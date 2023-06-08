@@ -2,7 +2,7 @@
  * Installs some default block stubs for use in tests
  * @param blockly
  */
-exports.installTestBlocks = function (blockly) {
+export const installTestBlocks = function (blockly) {
   blockly.Blocks.empty_block = {
     init: function () {},
   };
