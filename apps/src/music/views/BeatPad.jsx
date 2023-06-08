@@ -37,7 +37,7 @@ const BeatPad = ({triggers, playTrigger, onClose, isPlaying, hasTrigger}) => {
             label={triggers[j].buttonLabel}
             onClick={() => playTrigger(triggers[j].id)}
             key={triggers[j].id}
-            colorClassName={classNames(/*isPlaying && */ enabledClasses[j])}
+            colorClassName={enabledClasses[j]}
             isSelected={triggers[j].id === selectedTriggerId}
             disabled={!isPlaying}
           />
