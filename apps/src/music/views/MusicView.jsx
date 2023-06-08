@@ -42,14 +42,14 @@ import {
   setLevelCount,
 } from '../redux/musicRedux';
 import KeyHandler from './KeyHandler';
+import {sendSuccessReport} from '@cdo/apps/code-studio/progressRedux';
 import {
   levelsForLessonId,
   navigateToLevelId,
-  sendSuccessReport,
   getLevelDataPath,
   ProgressLevelType,
   getProgressLevelType,
-} from '@cdo/apps/code-studio/progressRedux';
+} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {setIsLoading, setIsPageError} from '@cdo/apps/labs/labRedux';
 import Simple2Sequencer from '../player/sequencer/Simple2Sequencer';
 import MusicPlayerStubSequencer from '../player/sequencer/MusicPlayerStubSequencer';
