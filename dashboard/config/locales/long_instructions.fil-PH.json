@@ -1554,7 +1554,8 @@
         "ramp_artist_loops5_2021": "Tiyak na pinapadali ng mga loop ang pagsulat ng code!\n\nGumamit ng mga loop upang iguhit ang hagdanan na ito.\n\n-   Ang bawat hagdanan ay 50 pixels ang haba at 50 pixels ang taas\n-   Kakailanganin mong lumiko ng 90 degrees sa bawat direksiyon",
         "ramp_artist_loops6_2021": "Mas malaki ang hagdan na ito, ngunit kailangan nito ang parehong halaga ng code gaya ng huling palaisipan!\n\nAyusin ang loop na ito upang makumpleto ang palaisipan.",
         "ramp_artist_loops8_2021": "**Hamon:** Maghanap ng pattern at gawing mas maikli ang code na ito gamit ang mga loop.",
-        "ramp_artist_loops9_2021": "Lutasin ang palaisipang ito sa pamamagitan ng pagguhit ng parisukat na may 200 pixel na gilid."
+        "ramp_artist_loops9_2021": "Lutasin ang palaisipang ito sa pamamagitan ng pagguhit ng parisukat na may 200 pixel na gilid.",
+        "PDK5 Strategies O": "Ang pagtuturo ba ng _computer science_ ay iba kaysa sa pagtuturo ng ibang mga paksa tulad ng matematika o pagbabasa? Basahin ang listahang ito ng mga diskarte at magkomento sa ibaba sa ilan sa mga pagkakaiba na sa tingin mo ay makakaharap mo kapag nagtuturo ng computer science kumpara sa iba pang mga paksa.\n\n[Ang worksheet na ito](http://code.org/curriculum/docs/k-5/ClassroomStrategies.pdf) ay available din sa Dashboard ng Guro sa tile na \"Mga Lesson Plan at Mapagkukunan.\"\n\n![image](//code.org/images/strategiesforteachingcs.png)\n\n</br>"
       }
     }
   }

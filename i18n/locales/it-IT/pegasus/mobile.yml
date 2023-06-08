@@ -529,6 +529,7 @@
   video_title_chris_bosh: "Chris Bosh a proposito dell'Informatica"
   video_title_my_name_is_aracely: "Mi chiamo Aracely"
   video_title_change_face_of_cs: "Cambia la faccia di Computer Science"
+  video_title_latam_hoc: "Ciò Che Manca Nelle Nostre Scuole"
   video_1min: "1 min"
   video_2min: "2 min"
   video_3min: "3 min"
@@ -1824,6 +1825,7 @@
   ai_ibm_machine_learning_for_kids: 'IBM: Machine Learning per bambini'
   ai_ecs: 'ECS: Intelligenza artificiale (AI)'
   ai_ecs_description: "Una nuova unità di curriculum alternativa per il curriculum Exploring Computer Science (ECS)."
+  ai_aiedu_intro: 'aiEDU: Introduzione all''Intelligenza Artificiale'
   ai_aiedu_intro_description: "Intro to AI è un curriculum gratuito, innovativo e culturalmente rilevante in cui gli studenti sviluppano conoscenze concettuali su cos'è l'IA e come viene utilizzata nel mondo reale."
   ai_elements: "Elementi di AI"
   ai_elements_description: "Una serie di corsi online gratuiti creati da Reaktor e dall'Università di Helsinki."
@@ -1851,5 +1853,7 @@
   try_it_yourself: "Mettiti alla prova!"
   try_an_activity: "Prova un'attività"
   see_more_activities: "Prova altre attività"
+  hoc2022_nasa_webb_alt_text: "Illustrazione del telescopio James Webb della NASA"
   hoc2022_nasa_banner_heading: "Unitevi alla NASA per uno speciale Ora del Codice sull'informatica nello spazio!"
   hoc2022_nasa_banner_description: "In anteprima alle 10AM ET del 5 dicembre sul canale YouTube di NASA STEM."
+  hoc2022_nasa_banner_heading_posthoc: "Dai un'occhiata alla funzionalità dell'Ora di Codice speciale della NASA, sull'informatica nello spazio!"

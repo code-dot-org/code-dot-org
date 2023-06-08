@@ -10414,7 +10414,7 @@ en:
           title: Simulating a Marine Ecosystem (2023)
           description_audience: ''
           description_short: ''
-          description: "##Suggested Pre-Work for this Module\n \n**Science:** Students will simulate a marine life ecosystem in Lessons 1 and 2. To build familiarity with this ecosystem, we recommend this [Ocean Animals Video](https://www.youtube.com/watch?v=8adtdg0N2-g) (9:42 minutes). \n\nIn Lesson 2, students will engage in whole-group discussions about an ecosystem. Here is a list of resources to help students prepare: [Extended Connections](https://docs.google.com/document/d/1lWch89nzkrm9ipM7cPD4P-XFh1b_uScQaf3BJwq2OtU/edit#). \n\n**Computer Science:** In this module, students will learn new coding concepts that might be difficult for new-to-computer science students. If students are not familiar with Code.org’s Sprite Lab we recommend trying [Swimming Fish with Sprite Lab](https://studio.code.org/s/coursee-2022/lessons/3) (55 minutes) for a basic introduction to the tool. \n\nThis module also uses an advanced CS concept called conditional statements. Students learn this concept in a scaffolded way, but some students may benefit from first engaging in this introduction to conditionals unplugged activity: [Conditionals with Cards](https://studio.code.org/s/coursed-2022/lessons/12) (50 minutes).\n"
+          description: "##Suggested Pre-Work for this Module\n \n**Science:** Students will simulate a marine life ecosystem in Lessons 1 and 2. To build familiarity with this ecosystem, we recommend this [Ocean Animals Video](https://www.youtube.com/watch?v=8adtdg0N2-g) (9:42 minutes). \n\nIn Lesson 2, students will code several sustainable fishing practices. These are a few readings to build some background knowledge and deepen connections to the real world: [Understanding Overfishing](https://www.seafoodwatch.org/seafood-basics/sustainable-solutions/avoid-overfishing) (Monterey Bay Aquarium article), or [Mw,kwa Talks to the Loon](https://books.google.com/books/about/Mw_kwa_Talks_to_the_Loon.html?id=ZtJfkFFPTzIC) (Children's book).\n\n**Computer Science:** In this module, students will learn new coding concepts that might be difficult for new-to-computer science students. If students are not familiar with Code.org’s Sprite Lab we recommend trying [Swimming Fish with Sprite Lab](https://studio.code.org/s/coursee-2022/lessons/3) (55 minutes) for a basic introduction to the tool. \n\nThis module also uses an advanced CS concept called conditional statements. Students learn this concept in a scaffolded way, but some students may benefit from first engaging in this introduction to conditionals unplugged activity: [Conditionals with Cards](https://studio.code.org/s/coursed-2022/lessons/12) (50 minutes).\n"
           student_description: ''
         csc-adaptations-2023:
           lessons:
@@ -12229,6 +12229,25 @@ en:
               display_name: 'Chapter 2: Computer Vision'
           name: csa-software-engineering
           title: Software Engineering & Computer Vision
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csa-frq-practice:
+          lessons:
+            lesson-1:
+              name: Frog Simultation
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Methods and Control Structures
+            lessonGroup-3:
+              display_name: Classes
+            lessonGroup-4:
+              display_name: Arrays / ArrayLists
+            lessonGroup-5:
+              display_name: 2D Arrays
+          name: csa-frq-practice
+          title: CSA FRQ Practice
           description_audience: ''
           description_short: ''
           description: ''
