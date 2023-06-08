@@ -29,6 +29,10 @@ $light_primary_700: #008291;
     }
   }
 
+  span {
+    margin-left: 8px;
+  }
+
   input[type="checkbox"] {
     position: absolute;
     opacity: 0;
@@ -39,12 +43,24 @@ $light_primary_700: #008291;
         outline-offset: 2px;
         border-radius: 4px;
       }
+      &:indeterminate + i::before {
+        color: $neutral_white;
+        background: $light_primary_500;
+        border: 2px solid $light_primary_500;
+      }
     }
 
     &:checked + i::before {
       content: "\f00c";
       color: $neutral_white;
       background: $light_primary_500;
+      border: 2px solid $light_primary_500;
+      border-radius: 4px;
+    }
+
+    &:indeterminate + i::before {
+      content: "\e404";
+      color: $neutral_dark;
       border: 2px solid $light_primary_500;
       border-radius: 4px;
     }
@@ -60,7 +76,9 @@ $light_primary_700: #008291;
     }
 
     input[type="checkbox"] {
-      &:checked + i::before {
+      &:checked + i::before,
+      &:indeterminate + i::before {
+        color: $neutral_white;
         background: $light_primary_700;
         border-color: $light_primary_700;
       }
@@ -76,7 +94,9 @@ $light_primary_700: #008291;
     }
 
     input[type="checkbox"] {
-      &:checked + i::before {
+      &:checked + i::before,
+      &:indeterminate + i::before {
+        color: $neutral_white;
         background: $light_primary_700;
         border-color: $light_primary_500;
       }
@@ -93,7 +113,8 @@ $light_primary_700: #008291;
     }
 
     input[type="checkbox"] {
-      &:checked + i::before {
+      &:checked + i::before,
+      &:indeterminate + i::before {
         background: $neutral_dark20;
         color: $neutral_white;
       }
@@ -105,15 +126,11 @@ $light_primary_700: #008291;
         background: $neutral_white;
       }
 
-      input[type="checkbox"]:checked + i::before {
+      input[type="checkbox"]:checked + i::before,
+      input[type="checkbox"]:indeterminate + i::before {
         background: $neutral_dark20;
         border-color: $neutral_dark20;
       }
     }
-  }
-
-
-  span {
-    margin-left: 8px;
   }
 }
