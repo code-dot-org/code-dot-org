@@ -9916,6 +9916,7 @@
         },
         "43fde334-6c07-4b1b-b23d-4b67f5fbfbc0": {
           "name": "Zusammenfassung",
+          "description": "**Sammeln:** Lassen Sie die SchülerInnen ihre Prototypen und ihre Apps in App Lab einreichen. \n\n**Reflektieren:** Lassen Sie die Schüler eine kurze Umfrage mit fünf Fragen in Code Studio ausfüllen. Sie sehen die anonymisierten Ergebnisse im Lehrer-Dashboard.",
           "progression_name": "Reflexion"
         },
         "b46cfe31-9b5e-4820-b368-fc8a4fa139a7": {
@@ -10201,6 +10202,7 @@
         },
         "7799c3eb-e76a-465b-9f24-69d6c04a01c7": {
           "name": "Reflexion",
+          "description": "\\*\\*Code Studio: \\*\\* Lassen Sie die SchülerInnen zu Beginn dieser Stunde in einer Umfrage fünf kurze Fragen zur KI und zum maschinellem Lernen beantworten. Sobald mindestens fünf SchülerInnen die Umfrage ausgefüllt haben, können Sie die anonymisierten Ergebnisse im Lehrer-Dashboard einsehen. Einige dieser Fragen werden am Ende des ersten Projekts erneut gestellt. Das zeigt Ihnen, wie sich die SchülerInnen entwickelt haben und wie sich ihre Einstllungen im Verlaufe des Unterrichts verändert haben.",
           "progression_name": "Check-In-Befragung"
         },
         "b5acd50c-8f0e-4c22-8918-0e4801b137e1": {
@@ -20166,6 +20168,7 @@
         },
         "d26ab8fe-dc83-4704-8aba-bd0cdbdd80a4": {
           "name": "Reflexion",
+          "description": "\\*\\*Code Studio: \\*\\* Lassen Sie die SchülerInnen zu Beginn dieser Stunde in einer Umfrage fünf kurze Fragen zur KI und zum maschinellem Lernen beantworten. Sobald mindestens fünf SchülerInnen die Umfrage ausgefüllt haben, können Sie die anonymisierten Ergebnisse im Lehrer-Dashboard einsehen. Einige dieser Fragen werden am Ende des ersten Projekts erneut gestellt. Das zeigt Ihnen, wie sich die SchülerInnen entwickelt haben und wie sich ihre Einstllungen im Verlaufe des Unterrichts verändert haben.",
           "progression_name": "Check-In-Befragung"
         },
         "8bdf1f4e-1c20-42bd-a5d5-7217dfa0bd4f": {

@@ -4513,8 +4513,8 @@ ro-RO:
             `move forward by`, iar artistul va desena un triunghi cu laturile de 50
             de pixeli.
         questions:
-        - text: Variabila `length` este setată la 50 și este folosită în blocul `move
-            forward by`, iar artistul va desena un triunghi cu laturile de 50 de pixeli.
+        - text: Am setat variabila `length` la 50. Ce se va întâmpla atunci când veți
+            face clic pe „Rulează”?
       courseF_multi_bee_for3_predict1_2021:
         answers:
         - text: Albinuța se va deplasa înainte și va strânge tot nectarul din fiecare
@@ -4539,8 +4539,10 @@ ro-RO:
         questions:
         - text: Citiți codul care urmează. Ce se va întâmpla atunci când veți face
             clic pe „Rulează”?
-        markdown: Ah!  Folosirea buclelor `for` face ca acest puzzle să fie mult mai
-          ușor!
+        markdown: |+
+          Ah!  Folosirea buclelor `for` face ca acest puzzle să fie mult mai ușor!
+
+
       courseF_sprites_predict_multi:
         answers:
         - text: Ambele avioane se vor deplasa un spațiu de-a lungul grilei, apoi se
@@ -7108,7 +7110,7 @@ ro-RO:
           correct: true
         - correct: true
         questions:
-        - {}
+        - text: Dezvoltare Web
       csd-post-survey-2019-I like cs:
         answers:
         - correct: true
@@ -11248,6 +11250,52 @@ ro-RO:
         - {}
       csp_unit_assessment_overview:
         content1: descrierea aici
+        teacher_markdown: "### ATENȚIE: Ce este și ce nu este această evaluare \n*
+          Această evaluare este **concepută să fie în \"stilul\" evaluărilor cu alegere
+          multiplă de la AP**. \n* Asta înseamnă că întrebările **nu** se referă în
+          mod specific la lecțiile parcurse înainte de acest punct. Mai degrabă, întrebările
+          se referă la obiectivele de învățare AP de bază care au fost teoretic abordate.
+          \n* Aceasta **înseamnă** că elevii ar putea fi nevoiți să facă unele extrapolări
+          din ceea ce au învățat pentru a răspunde la întrebări. \n* Aceasta **înseamnă**
+          că întrebările ar putea fi \"dificile\", în special pentru cei care se expun
+          pentru prima dată. \nDeci, în general, **utilizează cu prudență**. \n* Folosește-ți
+          judecata în ceea ce privește miza pe care să o atașezi acestei evaluări.
+          \n* Nu trebuie să folosești această evaluare pentru a evalua elevii sau...
+          \n* Poți evalua elevii într-un mod diferit de simpla luare a procentului
+          de corectitudine. \n* Asigură-te că o utilizezi într-un mod care va menține
+          spiritul clasei în ceea ce privește investigarea cunoștințelor. \n* Dacă
+          ești neliniștit că elevii se vor descuraja, atunci poate că ar trebui să
+          reformulezi această evaluare ca pe o oportunitate de a investiga - lasă
+          elevii să încerce întrebările, apoi să cerceteze răspunsurile și să schimbe
+          ceea ce au greșit sau să dezvolte propriul set de întrebări.--- \n\n####
+          F.A.Q. -- Cum se pregătesc, se administrează și se revizuiesc evaluările
+          \nTe rugăm să consulți documentul nostru în curs de desfășurare **[F.A.Q.
+          aici](https://docs.google.com/document/d/1zEpD1PFt6ec2S8ourxuMH0HD6tiyRvqAGUKGDCOt-qs/edit#heading=h.kewgp6z8qdde)**
+          care conține: \n* capturi de ecran privind modul de pregătire, administrare
+          și revizuire a evaluărilor \n* abordează aspecte/probleme comune \n####
+          Rezumat rapid al modului de vizualizare / revizuire a răspunsurilor elevilor
+          \n1. Mergi la [Teacher Dashboard](https://code.org/teacher-dashboard#/)
+          \n2. Selectează secțiunea CS Principles \n3. Vei vedea o serie de file mov,
+          inclusiv Răspunsuri text, Evaluări etc. \n4. Dă clic pe **Assessments/Surveys**
+          \n5. Din meniul derulant de selectare a cursului, **selectează unitatea
+          în care a apărut această evaluare (de exemplu, Unitatea 1: The Internet)**
+          \n6. Pentru toți studenții care și-au *prezentat* evaluarea, vei vedea două
+          tabele: \n* Primul tabel este o vizualizare sumară care rezumă procentul
+          de corectitudine al tuturor elevilor care au trimis evaluarea, inclusiv
+          data și ora la care au trimis-o\n* Al doilea tabel este o listă completă
+          a fiecărui răspuns la fiecare întrebare trimisă de fiecare elev \nDeasupra
+          acestor două tabele se află un buton **Download (sau export) as csv** -
+          care vă permite să procesați răspunsurile într-o foaie de calcul (recomandat).
+          \n7. Dacă este necesar să permiți unui elev să își ANULEZE testul, îndrumă
+          elevul să navigheze până la ultima pagină a testului și să apese \"Unsubmit\"
+          (Anulare). \n\n**NOTĂ cu privire la ANULARE:** \nAr trebui să stabilești
+          reguli clare cu elevii tăi în ceea ce privește anularea unui test. Elevii
+          ar putea crede că aceasta este o modalitate bună de a schimba un răspuns
+          după ce testul s-a terminat (adică de a trișa), dar vei vedea o marcă de
+          timp cu privire la momentul în care elevul a trimis testul. \nSe sugerează
+          să stabilești pur și simplu că nu vei lua în considerare să notezi sau să
+          evaluezi niciun test după o anumită oră. Dacă nu a fost trimis înainte de
+          termenul specificat, este ca și cum nu l-ai fi primit."
       curriculum-how-challenging:
         answers:
         - correct: true
@@ -12876,3 +12924,200 @@ ro-RO:
         questions:
         - text: Uitați-vă cu atenție la codul care urmează. Ce se va întâmpla după
             ce veți face clic pe „Rulează”?
+      OPD-K5 Outline:
+        markdown: "# Noțiuni introductive > Schița cursului \n\nCursul este împărțit
+          în unsprezece etape, iar fiecare etapă este alcătuită din \"niveluri\" sau
+          \"puzzle-uri\". Iată o prezentare generală a ceea ce veți învăța dacă veți
+          finaliza întregul curs: \n\n## Etapa 1: Noțiuni introductive (10-30 minute)\n\nPrin
+          parcurgerea Etapei 1, vei: \n- Trece în revistă detaliile cursului \n- Exersa
+          utilizarea Code.org ca platformă de învățare \n- Planifica participarea
+          la acest curs \n\n## Etapa 2: Noțiuni de Bază de Informatică (10-30 minute)
+          \n\nPrin finalizarea Etapei 2, vei: \n\n- Defini informatica și revizui
+          vocabularul cheie \n- Identifica beneficiile predării și învățării informaticii
+          \n- Face diferența între \"codare\" și \"informatică\" \n- Explicați beneficiile
+          de a începe să codificați folosind programarea vizuală \n\n## Etapa 3: Privind
+          înainte (10 minute)\n\nPrin finalizarea Etapei 3: \n\n- Te vei pregăti să
+          \"stăpânești elementele de bază\" ale informaticii, trecând în revistă ceea
+          ce urmează în cadrul cursului\n\n## Etapa 4:  Stăpânirea Cunoștințelor de
+          bază: Secvențierea (10-30 de minute)\n\nPrin completarea Etapei 4, vei:\n\n-
+          Defini„programul” și „algoritmul”\n- Utiliza motorul de programare vizuală
+          al Code.org pentru scrierea de programe simple\n- Reflecta asupra aplicațiilor
+          în clasă\n\n## Etapa 5:  Stăpânirea noțiunilor de bază: Bucle (20-45 minute)\n\nPrin
+          finalizarea Etapei 5, vei:\n\n- Defini \"buclele\" și explica  importanța
+          lor \n- Exersa codificarea unor bucle simple \n- Reflecta asupra aplicațiilor
+          din clasă \n\n## Etapa 6: Stăpânirea noțiunilor de bază: Condiționale (20-45
+          minute)\n \nPrin finalizarea Etapei 6, vei: \n\n- Defini \"condiționalele\"
+          și veți explica importanța lor \n- Exersa codificarea unor condiționale
+          simple \n- Reflecta asupra aplicațiilor din clasă \n\n## Etapa 7: Stăpânirea
+          noțiunilor de bază: Funcții (20-45 minute)\n\n Prin finalizarea Etapei 7,
+          vei: \n\n- Defini \"funcții\" și veți explica importanța lor - Veți exersa
+          codificarea unor funcții simple \n- Reflecta asupra aplicațiilor din clasă
+          \n\n## Etapa 8: Stăpânirea noțiunilor de bază: Evenimente (30-60 minute)
+          \n\nPrin finalizarea Etapei 8, vei:\n \n- Defini \"evenimente\" și explica
+          importanța lor \n- Exersa codificarea unor evenimente simple \n- Reflecta
+          asupra aplicațiilor din clasă \n\n## Etapa 9: Cele mai bune practici pentru
+          predarea informaticii (30-60 minute)\n\nPrin finalizarea Etapei 9, vei:\n
+          \ \n-Trece în revistă cele mai bune practici pentru predarea informaticii
+          \n\n## Etapa 10: Planificarea (30-60 minute)\n\nPrin parcurgerea Etapei
+          10, vei:\n \n- Explora resursele Code.org, inclusiv tabloul de bord pentru
+          profesori \n- Planifica modul în care ați putea integra știința calculatoarelor
+          în practica dumneavoastră\n\n## Etapa 11: Următorii pași (10-30 minute)\n
+          \nPrin finalizarea Etapei 11, vei:\n \n- Reflecta asupra învățării tale\n-
+          Planifica următorii pași pe care îi poți face pentru a-ți continua învățarea
+          \n- Te vei conecta cu o comunitate globală de colegi educatori interesați
+          de educația în domeniul informaticii\n- Împărtăși concluziile și feedback-ul
+          tău despre acest curs \n\n**Notă**: Orele sugerate sunt furnizate mai sus
+          pentru a te ajuta să îți planifici predarea. Te rugăm să reții că este posibil
+          să dorești să petreci mai mult sau mai puțin timp într-o anumită etapă,
+          în funcție de cunoștințele tale anterioare, de interesul și de capacitatea
+          ta. Reține că acest curs se desfășoară în întregime în ritm propriu; poți
+          oricând să părăsești cursul și să revi sau să revezi orice etapă sau nivel
+          în orice moment.\n\n\n"
+      OPD-K5 Outline_dani:
+        markdown: "# Noțiuni introductive > Schița cursului \n\nCursul este împărțit
+          în unsprezece etape, iar fiecare etapă este alcătuită din \"niveluri\" sau
+          \"puzzle-uri\". Iată o prezentare generală a ceea ce veți învăța dacă veți
+          finaliza întregul curs: \n\n## Etapa 1: Noțiuni introductive (10-30 minute)\n\nPrin
+          parcurgerea Etapei 1, vei: \n- Trece în revistă detaliile cursului \n- Exersa
+          utilizarea Code.org ca platformă de învățare \n- Planifica participarea
+          la acest curs \n\n## Etapa 2: Noțiuni de Bază de Informatică (10-30 minute)
+          \n\nPrin finalizarea Etapei 2, vei: \n\n- Defini informatica și revizui
+          vocabularul cheie \n- Identifica beneficiile predării și învățării informaticii
+          \n- Face diferența între \"codare\" și \"informatică\" \n- Explicați beneficiile
+          de a începe să codificați folosind programarea vizuală \n\n## Etapa 3: Privind
+          înainte (10 minute)\n\nPrin finalizarea Etapei 3: \n\n- Te vei pregăti să
+          \"stăpânești elementele de bază\" ale informaticii, trecând în revistă ceea
+          ce urmează în cadrul cursului\n\n## Etapa 4:  Stăpânirea Cunoștințelor de
+          bază: Secvențierea (10-30 de minute)\n\nPrin completarea Etapei 4, vei:\n\n-
+          Defini„programul” și „algoritmul”\n- Utiliza motorul de programare vizuală
+          al Code.org pentru scrierea de programe simple\n- Reflecta asupra aplicațiilor
+          în clasă\n\n## Etapa 5:  Stăpânirea noțiunilor de bază: Bucle (20-45 minute)\n\nPrin
+          finalizarea Etapei 5, vei:\n\n- Defini \"buclele\" și explica  importanța
+          lor \n- Exersa codificarea unor bucle simple \n- Reflecta asupra aplicațiilor
+          din clasă \n\n## Etapa 6: Stăpânirea noțiunilor de bază: Condiționale (20-45
+          minute)\n \nPrin finalizarea Etapei 6, vei: \n\n- Defini \"condiționalele\"
+          și veți explica importanța lor \n- Exersa codificarea unor condiționale
+          simple \n- Reflecta asupra aplicațiilor din clasă \n\n## Etapa 7: Stăpânirea
+          noțiunilor de bază: Funcții (20-45 minute)\n\n Prin finalizarea Etapei 7,
+          vei: \n\n- Defini \"funcții\" și veți explica importanța lor - Veți exersa
+          codificarea unor funcții simple \n- Reflecta asupra aplicațiilor din clasă
+          \n\n## Etapa 8: Stăpânirea noțiunilor de bază: Evenimente (30-60 minute)
+          \n\nPrin finalizarea Etapei 8, vei:\n \n- Defini \"evenimente\" și explica
+          importanța lor \n- Exersa codificarea unor evenimente simple \n- Reflecta
+          asupra aplicațiilor din clasă \n\n## Etapa 9: Cele mai bune practici pentru
+          predarea informaticii (30-60 minute)\n\nPrin finalizarea Etapei 9, vei:\n
+          \ \n-Trece în revistă cele mai bune practici pentru predarea informaticii
+          \n\n## Etapa 10: Planificarea (30-60 minute)\n\nPrin parcurgerea Etapei
+          10, vei:\n \n- Explora resursele Code.org, inclusiv tabloul de bord pentru
+          profesori \n- Planifica modul în care ați putea integra știința calculatoarelor
+          în practica dumneavoastră\n\n## Etapa 11: Următorii pași (10-30 minute)\n
+          \nPrin finalizarea Etapei 11, vei:\n \n- Reflecta asupra învățării tale\n-
+          Planifica următorii pași pe care îi poți face pentru a-ți continua învățarea
+          \n- Te vei conecta cu o comunitate globală de colegi educatori interesați
+          de educația în domeniul informaticii\n- Împărtăși concluziile și feedback-ul
+          tău despre acest curs \n\n**Notă**: Orele sugerate sunt furnizate mai sus
+          pentru a te ajuta să îți planifici predarea. Te rugăm să reții că este posibil
+          să dorești să petreci mai mult sau mai puțin timp într-o anumită etapă,
+          în funcție de cunoștințele tale anterioare, de interesul și de capacitatea
+          ta. Reține că acest curs se desfășoară în întregime în ritm propriu; poți
+          oricând să părăsești cursul și să revi sau să revezi orice etapă sau nivel
+          în orice moment.\n\n\n"
+      OPD-K5 Stage9Go:
+        markdown: |-
+          # Planificare > Revizie
+
+          <img src="https://images.code.org/34e1d20a6ae73e28c6c88c5981fd6be6-image-1434411459379.JPG" width="450px">
+
+          În această etapă, tu trebuie să fi:
+
+          - Revizuit Tabloul de Bord al Profesorului și alte resurse pe Code.org
+          - Planificat modul în care ai putea integra știința informaticii în practica ta
+
+          În Etapa 11, etapa noastră finală, vei
+
+          - Reflecta asupra predării tale
+          - Plănifica următoarele măsuri pe care le poți lua să continui predarea ta
+          - Conecta cu o comunitate globală de educatori interesați în studiul științei informaticii
+      OPD-K5 Stage9Go_dani:
+        markdown: |-
+          # Planificare > Revizie
+
+          <img src="https://images.code.org/34e1d20a6ae73e28c6c88c5981fd6be6-image-1434411459379.JPG" width="450px">
+
+          În această etapă, tu trebuie să fi:
+
+          - Revizuit Tabloul de Bord al Profesorului și alte resurse pe Code.org
+          - Planificat modul în care ai putea integra știința informaticii în practica ta
+
+          În Etapa 11, etapa noastră finală, vei
+
+          - Reflecta asupra predării tale
+          - Plănifica următoarele măsuri pe care le poți lua să continui predarea ta
+          - Conecta cu o comunitate globală de educatori interesați în studiul științei informaticii
+      OPD-K5 Stage9Start:
+        markdown: "# Planificare > Explorarea resurselor pentru profesori Pe parcursul
+          Etapelor 4-8, ai aruncat o privire asupra unora dintre resursele de învățare
+          \"unplugged\" și online disponibile pentru CS Fundamentals, deoarece acestea
+          se aliniau cu conceptele de informatică pe care le predai. \n\nAcum, că
+          ai o oarecare înțelegere asupra modului de codificare, precum și asupra
+          modului de predare a informaticii, este timpul să începi să îți planifici
+          instruirea. În această etapă, vom face un tur al altor zone ale platformei
+          Code.org și ale **[Teacher Dashboard](http://studio.code.org/)**.\n\nPrin
+          finalizarea Etapei 10, vei: \n- Explora resursele disponibile pentru profesori
+          \n- Explora Code.org **[Teacher Dashboard](http://studio.code.org/)** \n-
+          Planifica modul în care ai putea integra informatica în practica ta\n\n***\n\n
+          O captură de ecran a Tabloului de bord pentru profesori este prezentată
+          mai jos. Va trebui să te conectezi la contul tău de profesor Code.org pentru
+          a-l vedea - odată ce te-ai conectat, acesta ar trebui să fie ecranul implicit
+          pe care îl vezi pe site-ul Code.org. \nDacă nu ai un cont de profesor, poți
+          **[să te înscrii pentru unul aici](https://studio.code.org/users/sign_up)**.\n\n![](https://images.code.org/d6345709495f764a71d9cb0994dbd7e4-image-1549064603589.png)"
+      OPD-K5 Stage9Start_copy:
+        markdown: |-
+          # Explorarea Resurselor Profesorului
+
+          Este timpul să începi planificarea instrucției tale. În această etapă, vom face turul altor zone ale platformei Code.org și a **<a href="http://studio.code.org/" target="blank" rel="noopener noreferrer">Tabloului de Bord al Profesorului</a>**.
+
+          O captură de ecran a Tabloului de Bord al Profesorului se află mai jos. Va trebui să te autentifici în contul tău de profesor pe Code.org pentru a-l vedea. Odată autentificat, acesta trebuie să fie ecranul implicit pe care îl vezi pe site-ul Code.org. Dacă nu ai un cont de profesor, poți **<a href="https://studio.code.org/users/sign_up" target="blank" rel="noopener noreferrer">să îți înregistrezi unul aici</a>**.
+
+          <a href="http://studio.code.org/" target="blank" rel="noopener noreferrer">![](https://images.code.org/d6345709495f764a71d9cb0994dbd7e4-image-1549064603589.png)</a>
+      OPD-K5 Stage9Start_dani:
+        markdown: "# Planificare > Explorarea Resurselor pentru Profesori\n\nDe-a
+          lungul Etapelor 4-8, ai aruncat o privire asupra unora dintre resursele
+          de învățare \"deconectate\" și online disponibile pentru Elementele Fundamentale
+          ale Informaticii, deoarece acestea se aliniau cu conceptele de informatică
+          pe care le învățați. \n\nAcum, că ai o oarecare înțelegere asupra modului
+          de codificare, precum și asupra modului de predare a informaticii, este
+          timpul să începi să îți planifici instruirea. În această etapă, vom face
+          un tur al altor zone ale platformei Code.org și ale **[Teacher Dashboard](http://studio.code.org/)**.
+          \n\nPrin finalizarea Etapei 10, vei:\n\n- Explora resursele disponibile
+          pentru profesori\n- Explora Code.org **[Teacher Dashboard](http://studio.code.org/)**.\n-
+          Planifica modul în care ai putea integra știința informaticii în practica
+          ta\n\n***\nO captură de ecran a Tabloului de Bord al Profesorului se află
+          mai jos. Va trebui să te autentifici în contul tău de profesor pe Code.org
+          pentru a-l vedea. Odată autentificat, acesta trebuie să fie ecranul implicit
+          pe care îl vezi pe site-ul Code.org. Dacă nu ai un cont de profesor, poți
+          *[să îți înregistrezi unul aici](https://studio.code.org/users/sign_up)**.\n\n![](https://images.code.org/d6345709495f764a71d9cb0994dbd7e4-image-1549064603589.png)\n"
+      csd-post-survey-2018-markdown-with-link-to-survey:
+        teacher_markdown: |-
+          **Vă rugăm să le cereți elevilor dv. să completeze acest sondaj!!!**
+
+          * Puteți vedea rezultatele anonimizate ale sondajului în tabloul de bord al profesorului dvs.
+          * Rezultatele sunt vitale pentru noi (code.org) pentru a susține cursurile noastre și pentru a face îmbunătățiri.
+          * Va exista și un sondaj pentru profesori, în care vă puteți oferi propria contribuție, despre care veți fi anunțat prin e-mail.
+
+          **Notă:**
+
+          * Butonul de pe această pagină redirecționează către [studio.code.org/s/csp-post-survey](https://studio.code.org/s/csp-post-survey)
+          * Dacă preferați, puteți seta "Student Post-Course Survey" ca unitate curentă pentru secțiunea dvs. din meniul derulant din tabloul de bord al profesorului.
+      csd-post-survey-2018-markdown-with-link-to-survey_v2:
+        teacher_markdown: |-
+          **Vă rugăm să le cereți elevilor dv. să completeze acest sondaj!!!**
+
+          * Rezultatele sunt vitale pentru noi (code.org) pentru a susține cursurile noastre și pentru a face îmbunătățiri.
+          * Va exista și un sondaj pentru profesori, în care vă puteți oferi propria contribuție, despre care veți fi anunțat prin e-mail.
+
+          **Pentru a vizualiza rezultatele** - sondajul de după curs este puțin diferit. Sondajul care se află în propria unitate a cursului, iar această pagină face pur și simplu legătura cu el.
+
+          * Pentru a vizualiza rezultatele anonime ale sondajului în tabloul de bord al profesorului, trebuie să (1) vizualizați sondaj/evaluări și apoi (2) selectați unitatea de sondaj post-curs ca unitate pe care doriți să o vizualizați.
+
+          * Mai multe informații pentru vizualizarea rezultatelor post-curs **: [[google doc](https://docs.google.com/document/d/1EQfPy0D6lSWA3s3d2hkgVLSRn1vrjLLXaZBSz3-E9aw)] [[pdf](https://docs.google.com/document/d/1EQfPy0D6lSWA3s3d2hkgVLSRn1vrjLLXaZBSz3-E9aw/export?format=pdf)]
