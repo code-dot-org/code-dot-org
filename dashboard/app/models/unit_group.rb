@@ -490,8 +490,10 @@ class UnitGroup < ApplicationRecord
     end.sort_by(&:version_year).reverse
 
     locale_str = locale&.to_s
+    return stable_course_versions.first if locale_str&.start_with?('en')
+
     stable_course_versions.find do |cv|
-      cv.default_unit_group_units.all? {|unit_group_unit| Unit.find(unit_group_unit.script_id).supported_locales&.include?(locale_str) || locale_str&.start_with?('en')}
+      cv.default_unit_group_units.all? {|unit_group_unit| Unit.find(unit_group_unit.script_id).supported_locales&.include?(locale_str)}
     end
   end
 

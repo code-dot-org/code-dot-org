@@ -965,19 +965,42 @@ class UnitGroupTest < ActiveSupport::TestCase
   class LatestVersionTests < ActiveSupport::TestCase
     setup do
       File.stubs(:write)
+
       @csp_2017 = create(:unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
+      @csp1_2017 = create(:script, name: 'csp1-2017', supported_locales: ['ab-cd', 'ef-gh'])
+      @csp2_2017 = create(:script, name: 'csp2-2017', supported_locales: ['ab-cd', 'ef-gh'])
+      create :unit_group_unit, unit_group: @csp_2017, script: @csp1_2017, position: 1
+      create :unit_group_unit, unit_group: @csp_2017, script: @csp2_2017, position: 1
+
       @csp_2018 = create(:unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
+      @csp1_2018 = create(:script, name: 'csp1-2018', supported_locales: ['ab-cd', 'ef-gh'])
+      @csp2_2018 = create(:script, name: 'csp2-2018', supported_locales: ['ab-cd'])
+      create :unit_group_unit, unit_group: @csp_2018, script: @csp1_2018, position: 1
+      create :unit_group_unit, unit_group: @csp_2018, script: @csp2_2018, position: 1
+
       create(:unit_group, name: 'csp-2019', family_name: 'csp', version_year: '2019', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview)
+
       @student = create :student
     end
 
-    test 'latest_stable_version returns nil if course family does not exist' do
-      assert_nil UnitGroup.latest_stable_version('fake-family')
+    test 'self.latest_stable_version returns nil if course family does not exist' do
+      assert_nil UnitGroup.latest_stable_version('fake-family', locale: 'ab-cd')
     end
 
-    test 'latest_stable_version returns latest course version' do
-      latest_version = UnitGroup.latest_stable_version('csp')
-      assert_equal @csp_2018, latest_version
+    test 'self.latest_stable_version is nil if no unit versions in family are stable in locale' do
+      assert_nil UnitGroup.latest_stable_version('csp', locale: 'ar-SA')
+    end
+
+    test 'self.latest_stable_version returns most recent course version if in English' do
+      assert_equal @csp_2018, UnitGroup.latest_stable_version('csp', locale: 'en-us')
+    end
+
+    test 'self.latest_stable_version returns course version where each unit is supported in user locale' do
+      assert_equal @csp_2017, UnitGroup.latest_stable_version('csp', locale: 'ef-gh')
+    end
+
+    test 'self.latest_stable_version returns most recent course version where each unit is supported in user locale' do
+      assert_equal @csp_2018, UnitGroup.latest_stable_version('csp', locale: 'ab-cd')
     end
 
     test 'latest_assigned_version returns latest version in family assigned to student' do
