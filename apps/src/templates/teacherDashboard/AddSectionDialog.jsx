@@ -4,7 +4,6 @@ import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 import BaseDialog from '../BaseDialog';
 import LoginTypePicker from './LoginTypePicker';
-import EditSectionForm from './EditSectionForm';
 import PadAndCenter from './PadAndCenter';
 import {sectionShape} from './shapes';
 import {
@@ -34,7 +33,6 @@ const redirectToNewSectionPage = (participantType, loginType) => {
  * EditSectionDialog.
  */
 const AddSectionDialog = ({
-  userId,
   isOpen,
   section,
   beginImportRosterFlow,
@@ -59,10 +57,9 @@ const AddSectionDialog = ({
 
   const {loginType, participantType} = section || {};
   const title = i18n.newSectionUpdated();
-  const testingUserId = -1;
 
   const onParticipantTypeSelection = participantType => {
-    if (participantType !== 'student' && userId % 10 !== testingUserId) {
+    if (participantType !== 'student') {
       redirectToNewSectionPage(participantType, SectionLoginType.email);
     }
     setParticipantType(participantType);
@@ -71,7 +68,6 @@ const AddSectionDialog = ({
   const onLoginTypeSelection = loginType => {
     // Oauth section types should use the roster dialog, not the section setup page
     if (
-      userId % 10 !== testingUserId &&
       [
         SectionLoginType.picture,
         SectionLoginType.word,
@@ -112,10 +108,9 @@ const AddSectionDialog = ({
         />
       );
     }
-    return <EditSectionForm title={title} isNewSection={true} />;
   };
 
-  if (participantType && loginType && userId % 10 !== testingUserId) {
+  if (participantType && loginType) {
     return null;
   } else {
     return (
@@ -133,7 +128,6 @@ const AddSectionDialog = ({
 };
 
 AddSectionDialog.propTypes = {
-  userId: PropTypes.number,
   // Provided by Redux
   isOpen: PropTypes.bool.isRequired,
   section: sectionShape,
