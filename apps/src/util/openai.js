@@ -8,8 +8,8 @@ export const openaiCompletion = messages => {
     data: JSON.stringify({messages}),
     contentType: 'application/json',
     headers: {
-      'X-CSRF-Token': appOptions.authenticityToken
+      'X-CSRF-Token': appOptions.authenticityToken,
     },
-    dataType: 'json'
+    dataType: 'json',
   });
 };
