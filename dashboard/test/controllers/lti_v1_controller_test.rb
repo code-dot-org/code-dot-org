@@ -25,6 +25,11 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     assert_response :redirect
   end
 
+  test "given a valid client_id via POST, return redirect" do
+    post "/lti/v1/login", params: {client_id: @integration.client_id, iss: @integration.issuer}
+    assert_response :redirect
+  end
+
   test "given a valid platform_id, return redirect" do
     get "/lti/v1/login/#{@integration.platform_id}", params: {}
     assert_response :redirect
@@ -38,8 +43,17 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     assert_equal cookies[:nonce].length, 10
   end
 
-  test "given a valid client_id via POST, return redirect" do
-    post "/lti/v1/login", params: {client_id: @integration.client_id, iss: @integration.issuer}
-    assert_response :redirect
+  test "given valid parameters, redirect URL should have valid auth request params" do
+    login_hint = "hint"
+    get "/lti/v1/login", params: {client_id: @integration.client_id, iss: @integration.issuer, login_hint: login_hint}
+    parsed_url = Rack::Utils.parse_query(@response.redirect_url.split("?")[1]).symbolize_keys
+    assert_equal parsed_url[:scope], "openid"
+    assert_equal parsed_url[:response_type], "id_token"
+    assert_equal parsed_url[:client_id], @integration.client_id
+    assert_equal parsed_url[:response_mode], "form_post"
+    assert_equal parsed_url[:prompt], "none"
+    assert_equal parsed_url[:login_hint], login_hint
+    assert_not_nil parsed_url[:state]
+    assert_not_nil parsed_url[:nonce]
   end
 end
