@@ -279,10 +279,12 @@ export default class Simple2Sequencer extends Sequencer {
   }
 
   private getCommonEventFields() {
+    const effects = this.getCurrentEffects();
     return {
       triggered: this.inTrigger,
       when: this.getCurrentMeasure(),
-      effects: {...this.getCurrentEffects()} || undefined,
+      // Snapshot the current value of effects
+      effects: effects ? {...effects} : undefined,
       skipContext: this.getCurrentSkipContext(),
     };
   }
