@@ -58,6 +58,7 @@ export interface Level {
   position: number;
   title: number;
   url: string;
+  status?: string;
 }
 
 export interface LevelWithProgress extends Level {
