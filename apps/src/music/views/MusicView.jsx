@@ -66,6 +66,7 @@ import {
   setProjectUpdatedSaving,
 } from '../../code-studio/projectRedux';
 import {logError} from '../utils/MusicMetrics';
+import musicI18n from '../locale';
 
 /**
  * Top-level container for Music Lab. Manages all views on the page as well as the
@@ -626,7 +627,10 @@ class UnconnectedMusicView extends React.Component {
             : moduleStyles.instructionsSide
         )}
       >
-        <PanelContainer id="instructions-panel" headerText="Instructions">
+        <PanelContainer
+          id="instructions-panel"
+          headerText={musicI18n.panelHeaderInstructions()}
+        >
           <Instructions
             progressionStep={this.progressManager.getProgressionStep()}
             showProgressionStep={!this.hasLevels()}
@@ -652,7 +656,10 @@ class UnconnectedMusicView extends React.Component {
         )}
       >
         <div id="controls-area" className={moduleStyles.controlsArea}>
-          <PanelContainer id="controls-panel" headerText="Controls">
+          <PanelContainer
+            id="controls-panel"
+            headerText={musicI18n.panelHeaderControls()}
+          >
             <Controls
               setPlaying={this.setPlaying}
               playTrigger={this.playTrigger}
@@ -671,7 +678,7 @@ class UnconnectedMusicView extends React.Component {
           <PanelContainer
             id="timeline-panel"
             width="calc(100% - 220px)"
-            headerText="Timeline"
+            headerText={musicI18n.panelHeaderTimeline()}
           >
             <Timeline />
           </PanelContainer>
@@ -723,7 +730,10 @@ class UnconnectedMusicView extends React.Component {
                   canShowSaveStatus={this.hasNoProgressHeader()}
                 />
               </div>
-              <PanelContainer id="workspace-panel" headerText="Workspace">
+              <PanelContainer
+                id="workspace-panel"
+                headerText={musicI18n.panelHeaderWorkspace()}
+              >
                 <div id="blockly-div" />
               </PanelContainer>
             </div>
