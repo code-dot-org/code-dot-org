@@ -5,7 +5,6 @@ import {expect} from '../../../util/reconfiguredChai';
 import {UnconnectedAddSectionDialog as AddSectionDialog} from '@cdo/apps/templates/teacherDashboard/AddSectionDialog';
 import _ from 'lodash';
 import * as utils from '@cdo/apps/utils';
-import experiments from '@cdo/apps/util/experiments';
 
 describe('AddSectionDialog', () => {
   let defaultProps,
@@ -23,6 +22,7 @@ describe('AddSectionDialog', () => {
     handleCancel = sinon.spy();
     defaultProps = {
       isOpen: false,
+      userId: -1,
       section: {
         id: 1,
         name: '',
@@ -102,19 +102,14 @@ describe('AddSectionDialog', () => {
     expect(wrapper.find('Connect(EditSectionForm)').length).to.equal(1);
   });
 
-  describe('with sectionSetupRefresh experiment', () => {
+  describe('sectionSetupRefresh', () => {
     let navigateToHrefSpy;
 
     beforeEach(() => {
       navigateToHrefSpy = sinon.spy(utils, 'navigateToHref');
-      sinon
-        .stub(experiments, 'isEnabled')
-        .withArgs('sectionSetupRefresh')
-        .returns(true);
     });
 
     afterEach(() => {
-      experiments.isEnabled.restore();
       navigateToHrefSpy.restore();
     });
 
@@ -123,6 +118,7 @@ describe('AddSectionDialog', () => {
       const wrapper = shallow(
         <AddSectionDialog
           {...defaultProps}
+          userId={90}
           section={newSection}
           availableParticipantTypes={['student', 'teacher', 'facilitator']}
         />
@@ -143,6 +139,7 @@ describe('AddSectionDialog', () => {
       const wrapper = shallow(
         <AddSectionDialog
           {...defaultProps}
+          userId={90}
           section={sectionWithParticipantType}
           availableParticipantTypes={['student', 'teacher', 'facilitator']}
         />

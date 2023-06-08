@@ -52,6 +52,7 @@ import {ToolboxType, Themes, Renderers} from './constants';
 import {FUNCTION_BLOCK} from './addons/functionBlocks.js';
 import {FUNCTION_BLOCK_NO_FRAME} from './addons/functionBlocksNoFrame.js';
 import {flyoutCategory as functionsFlyoutCategory} from './addons/functionEditor.js';
+import CdoBlockSerializer from './addons/cdoBlockSerializer.js';
 
 const options = {
   contextMenu: true,
@@ -275,6 +276,12 @@ function initializeBlocklyWrapper(blocklyInstance) {
     blocklyWrapper.blockly_.registry.Type.CONNECTION_CHECKER,
     'cdo_connection_checker',
     CdoConnectionChecker,
+    true /* opt_allowOverrides */
+  );
+  blocklyWrapper.blockly_.serialization.registry.unregister('blocks');
+  blocklyWrapper.blockly_.serialization.registry.register(
+    'blocks',
+    new CdoBlockSerializer(),
     true /* opt_allowOverrides */
   );
 
@@ -527,7 +534,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
       container.style.display = 'inline-block';
       container.appendChild(svg);
       svg.appendChild(workspace.createDom());
-      Blockly.Xml.domToBlockSpace(workspace, xml);
+      Blockly.cdoUtils.loadBlocksToWorkspace(workspace, xml);
 
       // Loop through all the parent blocks and remove vertical translation value
       // This makes the output more condensed and readable, while preserving
@@ -577,6 +584,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
       },
       renderer: opt_options.renderer || Renderers.DEFAULT,
       comments: false,
+      media: '/blockly/media/google_blockly',
     };
     // CDO Blockly takes assetUrl as an inject option, and it's used throughout
     // apps, so we should also set it here.

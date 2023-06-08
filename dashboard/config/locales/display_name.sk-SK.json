@@ -586,7 +586,7 @@
         "courseF_events_time": "Udalosti podmienené časom",
         "courseF_sprites_behaviors": "Správanie postáv",
         "courseF_sprites_freeplay_blank": "Prázdne",
-        "courseF_sprites_make": "Vytváranie postáv",
+        "courseF_sprites_make": "Vytváranie sprajtov",
         "courseF_sprites_moreSprites": "Umiestňovanie postáv",
         "courseF_sprites_positioning": "Umiestňovanie postáv",
         "courseF_text_choice_conversation": "Rozprávame pomocou textu",
@@ -1082,7 +1082,7 @@
         "courseF_sprites_freeplay_blank_-2022-2": "Prázdne",
         "courseF_sprites_freeplay_food_-2022-2": "Veselé jedlo",
         "courseF_sprites_freeplay_space_-2022-2": "Let vesmírom",
-        "courseF_sprites_make_-2022-2": "Vytváranie postáv",
+        "courseF_sprites_make_-2022-2": "Vytváranie sprajtov",
         "courseF_sprites_moreSprites_-2022-2": "Umiestňovanie postáv",
         "courseF_sprites_positioning_-2022-2": "Umiestňovanie postáv",
         "courseF_sprites_properties_-2022-2": "Vlastnosti sprajtov",
@@ -1473,7 +1473,8 @@
         "ml-models in applab-choice intended warnings": "Pridanie zamýšľaného použitia",
         "ml-models in applab-choice intended warnings_2022": "Pridanie zamýšľaného použitia",
         "ml-models in applab-choice predict typos": "Ladenie: Obrazovky predpovede",
-        "ml-models in applab-choice predict typos_2022": "Ladenie: Obrazovky predpovede"
+        "ml-models in applab-choice predict typos_2022": "Ladenie: Obrazovky predpovede",
+        "courseD_artist_nestedLoops32022": "okná"
       }
     }
   }

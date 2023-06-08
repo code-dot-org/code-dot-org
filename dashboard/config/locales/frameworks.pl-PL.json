@@ -22,6 +22,15 @@
         },
         "iste": {
           "name": "Standardy ISTE dla uczniów"
+        },
+        "c3ss": {
+          "name": "C3 Standardy badań społecznych"
+        },
+        "csa": {
+          "name": "Ramy koncepcyjne CSA"
+        },
+        "ai4k12-2021": {
+          "name": "AI4K12 Krajowe Wytyczne 2021"
         }
       }
     }

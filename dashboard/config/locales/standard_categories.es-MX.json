@@ -9,7 +9,7 @@
           "description": "Sistemas de computación"
         },
         "DA": {
-          "description": "Datos y Análisis"
+          "description": "Datos y análisis"
         },
         "NI": {
           "description": "Redes e Internet"
@@ -27,10 +27,10 @@
           "description": "Explique cómo los recursos informáticos pueden proteger y utilizarse indebidamente."
         },
         "CD": {
-          "description": "Ordenadores y Dispositivos de Comunicación"
+          "description": "Computadoras y dispositivos de comunicación"
         },
         "CI": {
-          "description": "Impactos Sociales, Globales y Éticos"
+          "description": "Impactos comunitarios, globales y éticos"
         },
         "CL": {
           "description": "Colaboración"
@@ -48,7 +48,7 @@
           "description": "Lectura informativa"
         },
         "RL": {
-          "description": "Leyendo Literatura"
+          "description": "Lectura de literatura"
         },
         "SL": {
           "description": "Hablar y escuchar"
@@ -78,10 +78,10 @@
           "description": "Prácticas matemáticas"
         },
         "NBT": {
-          "description": "Números y Operaciones en Base Diez"
+          "description": "Número Y Operaciones En Base Diez"
         },
         "OA": {
-          "description": "Operaciones y Pensamiento Algebraico"
+          "description": "Operaciones y pensamiento algebraico"
         },
         "BI-3": {
           "description": "Las computadoras pueden aprender de los datos"
@@ -358,6 +358,378 @@
         },
         "3-C-ii": {
           "description": "Conjuntos de datos - grandes conjuntos de datos"
+        },
+        "IC": {
+          "description": "Hacer inferencias y justificar conclusiones"
+        },
+        "IOC-1": {
+          "description": "Si bien los programas suelen estar diseñados para lograr un propósito específico, pueden tener consecuencias no deseadas"
+        },
+        "IOC-1.A": {
+          "description": "Explicar las implicaciones éticas y sociales de los sistemas informáticos"
+        },
+        "IOC-1.B": {
+          "description": "Explicar los riesgos para la privacidad derivados de la recopilación y almacenamiento de datos personales en sistemas informáticos."
+        },
+        "D1": {
+          "description": "Desarrollo de preguntas y planeación de inqueries"
+        },
+        "D3.Sources": {
+          "description": "Recopilación y Evaluación de Fuentes"
+        },
+        "D3.Claims": {
+          "description": "Desarrollo de Reclamaciones y Uso de Evidencias"
+        },
+        "D4.Conclusions": {
+          "description": "Comunicar y criticar las conclusiones"
+        },
+        "D4.Action": {
+          "description": "Tomar medidas informadas"
+        },
+        "D2.Civ": {
+          "description": "Civismo"
+        },
+        "D2.Eco": {
+          "description": "Economía"
+        },
+        "RF": {
+          "description": "Habilidades Fundacionales de Lectura"
+        },
+        "RH": {
+          "description": "Leyendo Historia/Estudios Sociales"
+        },
+        "RST": {
+          "description": "Ciencia de la lectura/técnica"
+        },
+        "WHST": {
+          "description": "Escritura HS/S/T"
+        },
+        "ESS": {
+          "description": "Ciencias de la Tierra y el Espacio"
+        },
+        "LS": {
+          "description": "Ciencias de la vida"
+        },
+        "PS": {
+          "description": "Ciencias Físicas"
+        },
+        "ESS1": {
+          "description": "El lugar de la Tierra en el Universo"
+        },
+        "ESS2": {
+          "description": "Sistemas de la Tierra"
+        },
+        "ESS3": {
+          "description": "Tierra y Actividad Humana"
+        },
+        "LS1": {
+          "description": "De las moléculas a los organismos: estructuras y procesos"
+        },
+        "LS2": {
+          "description": "Ecosistemas: Interacciones, Energía y Dinámica"
+        },
+        "LS3": {
+          "description": "Herencia: Herencia y Variación de Rasgos"
+        },
+        "LS4": {
+          "description": "Evolución Biológica: Unidad y Diversidad"
+        },
+        "PS1": {
+          "description": "La materia y sus interacciones"
+        },
+        "PS2": {
+          "description": "Movimiento y Estabilidad: Fuerzas e Interacciones"
+        },
+        "PS3": {
+          "description": "Energía"
+        },
+        "PS4": {
+          "description": "Las ondas y sus aplicaciones en las tecnologías en la transferencia de información"
+        },
+        "MOD-1": {
+          "description": "Algunos objetos o conceptos se representan con tanta frecuencia que los programadores pueden aprovechar el código existente que ya ha sido probado, lo que les permite escribir soluciones más rápidamente y con un mayor grado de confianza"
+        },
+        "MOD-2": {
+          "description": "Los programadores utilizan código para representar un objeto físico o concepto no físico, real o imaginario, definiendo una clase basada en los attirbutes y/o comportamientos del objeto o concepto"
+        },
+        "MOD-3": {
+          "description": "Cuando las clases múltiples contienen atributos y comportamientos comunes, los programadores crean una nueva clase que contiene los atributos compartidos y los comportamientos que forman una jeraquía. Las modificaciones realizadas en el nivel más alto de la jerarquía se aplican a las subclases."
+        },
+        "VAR-1": {
+          "description": "Para encontrar soluciones específicas a problemas generalizables, los programadores incluyen variables en su código para que el mismo algoritmo se ejecute usando diferentes valores de entrada"
+        },
+        "VAR-2": {
+          "description": "Para administrar grandes cantidades de datos o relaciones complejas en los datos, los programadores escriben código que agrupa los datos en una sola estructura de datos sin crear variables individuales para cada valor."
+        },
+        "CON-1": {
+          "description": "La forma en que las variables y los operadores se secuencian y combinan en una expresión determina el resultado calculado."
+        },
+        "CON-2": {
+          "description": "Los programadores incorporan iteración y selección en el código como una forma de proporcionar instrucciones para que la computadora procese cada uno de los muchos valores de entrada posibles"
+        },
+        "MOD-1.A": {
+          "description": "Llame a los métodos de clase System para generar salida a la consola."
+        },
+        "MOD-1.B": {
+          "description": "Explicar la relación entre una clase y un objeto."
+        },
+        "MOD-1.C": {
+          "description": "Identificar, usando su firma, al constructor correcto que se llama."
+        },
+        "MOD-1.D": {
+          "description": "Para crear objeto: a. Crear objetos llamando a constructores sin parámetros. b. Crear objetos llamando a constructores con parámetros."
+        },
+        "MOD-1.E": {
+          "description": "Llame a métodos de vacío no estáticos sin parámetros."
+        },
+        "MOD-1.F": {
+          "description": "Llamar a métodos de vacío no estáticos con parámetros"
+        },
+        "MOD-1.G": {
+          "description": "Llamar a métodos no estáticos no vacíos con o sin parámetros"
+        },
+        "MOD-1.H": {
+          "description": "Llamar a métodos estáticos."
+        },
+        "MOD-2.A": {
+          "description": "Designe restricciones de acceso y visibilidad a clases, datos, constructores y métodos."
+        },
+        "MOD-2.B": {
+          "description": "Defina variables de instancia para que los atributos se inicialicen a través de los constructores de una clase."
+        },
+        "MOD-2.C": {
+          "description": "Desribe la funcionalidad y uso del código de programa a través de comentarios."
+        },
+        "MOD-2.D": {
+          "description": "Definir comportamientos de un objeto a través de métodos no vacíos sin prámetros escritos en una clase."
+        },
+        "MOD-2.E": {
+          "description": "Definir comportamientos de un objeto a través de métodos void con o sin parámetros escritos en una clase."
+        },
+        "MOD-2.F": {
+          "description": "Definir comportamientos de un objeto a través de métodos no nulos con parámetros escritos en una clase."
+        },
+        "MOD-2.G": {
+          "description": "Definir comportamientos de una clase a través de métodos estáticos."
+        },
+        "MOD-2.H": {
+          "description": "Define las variables estáticas que pertenecen a la clase."
+        },
+        "MOD-3.A": {
+          "description": "Designar visibilidad privada de variables de instancia para encapsular los atributos de un objeto."
+        },
+        "MOD-3.B": {
+          "description": "Crear una relación de herencia de una subclase a la superclase."
+        },
+        "MOD-3.C": {
+          "description": "Definir variables de referencia de una superclase a asignar a un objeto de una subclase en la misma jerarquía."
+        },
+        "MOD-3.D": {
+          "description": "Métodos de llamada en una relación de herencia."
+        },
+        "MOD-3.E": {
+          "description": "Llamar a los métodos de clase Object a través de la herencia."
+        },
+        "VAR-1.A": {
+          "description": "Crear literales de cadena"
+        },
+        "VAR-1.B": {
+          "description": "Identificar la categoría de tipo de datos más apropiada para una especificación particular"
+        },
+        "VAR-1.C": {
+          "description": "Declarar variables de los tipos correctos para representar datos primitivos"
+        },
+        "VAR-1.D": {
+          "description": "Definir variables de los tipos correctos para representar datos de referencia."
+        },
+        "VAR-1.E": {
+          "description": "Para la clase String: a. Crear objetos String. b. Llamar a los métodos String."
+        },
+        "VAR-1.F": {
+          "description": "Para clases envolvedora: a. Crear objetos Integer. b. Llamar a métodos Integer. c. Crear objetos Double. d. Llamar métodos Double."
+        },
+        "VAR-1.G": {
+          "description": "Explicar dónde se pueden usar las variables en el código del programa."
+        },
+        "VAR-1.H": {
+          "description": "Evaluar expresiones de referencia de objeto que utilizan la palabra clave this."
+        },
+        "VAR-2.A": {
+          "description": "Representar colecciones de datos de referencia primitivos o de objetos relacionados utilizando objetos de matriz unidimensionales (1D)."
+        },
+        "VAR-2.B": {
+          "description": "Atravesa los elementos en una matriz 1D."
+        },
+        "VAR-2.C": {
+          "description": "Atravesa los elementos en un objeto de matriz 1D usando un bucle for mejorado."
+        },
+        "VAR-2.D": {
+          "description": "Representar colecciones de datos de referencia de objetos relacionados usando objetos ArrayList."
+        },
+        "VAR-2.E": {
+          "description": "Para objetos ArrayList: • Traverse usando un bucle for o while. • Traverse usando un bucle for mejorado."
+        },
+        "VAR-2.F": {
+          "description": "Representar colecciones de datos de referencia primitivos o de objetos relacionados utilizando objetos de matriz bidimensionales (2D)."
+        },
+        "VAR-2.G": {
+          "description": "Para objetos de matriz 2D: • Traverse usando bucles anidado para. • Traverse usando bucles mejorados anidados para."
+        },
+        "CON-1.A": {
+          "description": "Evaluar expresiones aritméticas en un código de programa"
+        },
+        "CON-1.B": {
+          "description": "Evaluar lo que se almacena en una variable como resultado de una expresión con una instrucción de asignación"
+        },
+        "CON-1.C": {
+          "description": "Evaluar expresiones aritméticas que utilizan casting."
+        },
+        "CON-1.D": {
+          "description": "Evaluar expresiones que utilizan los métodos de clase Math."
+        },
+        "CON-1.E": {
+          "description": "Evaluar expresiones booleanas que utilizan operadores relacionales en el código del programa."
+        },
+        "CON-1.F": {
+          "description": "Evaluar expresiones booleanas compoudn en el código del programa."
+        },
+        "CON-1.G": {
+          "description": "Compara y contrasta expresiones booleanas equivalentes."
+        },
+        "CON-1.H": {
+          "description": "Compare referencias a objetos usando expresiones booleanas en el código del programa."
+        },
+        "CON-2.A": {
+          "description": "Representar procesos lógicos de ramificación mediante el uso de sentencias condicionales."
+        },
+        "CON-2.B": {
+          "description": "Representar procesos lógicos de ramificación mediante el uso de sentencias condicionales anidadas."
+        },
+        "CON-2.C": {
+          "description": "Representar procesos iterativos usando un mieloop."
+        },
+        "CON-2.D": {
+          "description": "Para algoritmos en el contexto de una especificación particular que no requiere el uso de travesales: • Identificar algoritmos estándar. • Modificar algoritmos estándar. • Desarrollar un algoritmo."
+        },
+        "CON-2.E": {
+          "description": "Representan procesos iterativos usando un bucle for."
+        },
+        "CON-2.F": {
+          "description": "Para algoritmos en el contexto de una especificación particular que involucra objetos String • Identificar algoritmos estándar. • Modificar algoritmos estándar. • Desarrollar un algoritmo."
+        },
+        "CON-2.G": {
+          "description": "Representar procesos iterativos anidados"
+        },
+        "CON-2.H": {
+          "description": "Recuentos de ejecución de sentencias de cómputos y comparación informal en tiempo de ejecución de sentencias iterativas."
+        },
+        "CON-2.I": {
+          "description": "Para algoritmos en el contexto de una especificación particular que requiere el uso de travesales de matriz: • Identificar algoritmos estándar. • Modificar algoritmos estándar. • Desarrollar un algoritmo."
+        },
+        "CON-2.J": {
+          "description": "Para algoritmos en el contexto de una especificación particular que requiera el uso de traversales ArrayList: • Identificar algoritmos estándar. • Modificar algoritmos estándar. • Desarrollar un algoritmo."
+        },
+        "CON-2.K": {
+          "description": "Aplicar algoritmos de búsqueda secuencial/lineal para buscar información específica en objetos array o ArrayList."
+        },
+        "CON-2.L": {
+          "description": "Aplicar algoritmos de selección y de inserción para ordenar los elementos de los objetos array o ArrayList."
+        },
+        "CON-2.M": {
+          "description": "Recuentos de ejecución de estados de cómputos y comparación informal de tiempo de ejecución de algoritmos de clasificación."
+        },
+        "CON-2.N": {
+          "description": "Para Algoritmos en el contexto de una especificación particular que requiere el uso de transversales de matriz 2D: • Identificar algoritmos estándar. • Modificar algoritmos estándar. • Desarrollar un algoritmo."
+        },
+        "CON-2.O": {
+          "description": "Determinar el resultado de ejecutar métodos recursivos."
+        },
+        "CON-2.P": {
+          "description": "Aplique algoritmos de búsqueda recursiva a la información de los objetos String, 1D array o ArrayList."
+        },
+        "CON-2.Q": {
+          "description": "Aplicar algoritmos recursivos para ordenar elementos de objetos array o ArrayList."
+        },
+        "APR": {
+          "description": "Aritmética con polinomios y expresiones racionales"
+        },
+        "BF": {
+          "description": "Funciones de construcción"
+        },
+        "CC": {
+          "description": "Conteo y cardenalidad"
+        },
+        "CED": {
+          "description": "Creación de ecuaciones"
+        },
+        "CN": {
+          "description": "El sistema de números complejos"
+        },
+        "CO": {
+          "description": "Congruencia"
+        },
+        "CP": {
+          "description": "Probabilidad condicional y las reglas de probabilidad"
+        },
+        "EE": {
+          "description": "Expresiones y ecuaciones"
+        },
+        "GMD": {
+          "description": "Medición Geométrica Y Dimensión"
+        },
+        "GPE": {
+          "description": "Expresar propiedades geométricas con ecuaciones"
+        },
+        "ID": {
+          "description": "Interpretación de datos categóricos y cuantitativos"
+        },
+        "IF": {
+          "description": "Funciones de interpretación"
+        },
+        "LE": {
+          "description": "Modelos Lineales, Cuadráticos y Exponenciales ★"
+        },
+        "MG": {
+          "description": "Modelado con geometría"
+        },
+        "NF": {
+          "description": "Número y Operaciones — Fracciones"
+        },
+        "NS": {
+          "description": "El Sistema de Números"
+        },
+        "Q": {
+          "description": "Cantidades"
+        },
+        "REI": {
+          "description": "Razonamiento con ecuaciones y desigualdades"
+        },
+        "RN": {
+          "description": "El sistema de números reales"
+        },
+        "RP": {
+          "description": "Relaciones y relaciones proporcionales"
+        },
+        "SP": {
+          "description": "Estadística y Probabilidad"
+        },
+        "SRT": {
+          "description": "Similaridad, triángulos rectos y trigonometría"
+        },
+        "SSE": {
+          "description": "Ver estructura en expresiones"
+        },
+        "TF": {
+          "description": "Funciones trigonométricas"
+        },
+        "VM": {
+          "description": "Cantidades vectoriales y matriciales"
+        },
+        "3": {
+          "description": "Los estudiantes aplican herramientas digitales para recopilar, evaluar y usar la información."
+        },
+        "5": {
+          "description": "Los estudiantes entienden cuestiones humanas, culturales y sociales relacionadas con la tecnología y practican comportamientos legales y éticos."
         }
       }
     }

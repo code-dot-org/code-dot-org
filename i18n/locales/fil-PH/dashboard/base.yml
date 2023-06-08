@@ -378,6 +378,7 @@ fil:
       help_us: "Tulungan Kami"
       teach: "Magturo"
       about: "Tungkol sa"
+      incubator: "Incubator"
       legal: "Pagkapribado at Legal"
       legal_privacy: "Patakaran sa Pagkapribado"
       legal_cookie_notice: "Paunawa ng Cookie"
@@ -914,6 +915,7 @@ fil:
           age: 'Pakitukoy ang edad'
           abuse_type: 'Pakisagot kung paano ang nilalamang ito ay lumabag sa mga Palatuntunan'
           abuse_detail: 'Pakibigay ang mga detalye tungkol sa nilalaman na iyong ni-report'
+          captcha: 'Mangyaring punan ang CAPTCHA upang iulat ang nilalamang ito.'
         abusive_url: 'Ang URL ng nilalaman ay kasalukuyang ni-report'
         abuse_type:
           question: 'Paano lumabag sa mga %{link_start}Palatuntunan%{link_end} ang nilalaman na ito?'

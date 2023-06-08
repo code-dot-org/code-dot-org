@@ -43,7 +43,7 @@ class GamelabJr < Gamelab
   end
 
   def self.standalone_app_names
-    [['Sprite Lab', 'spritelab'], ['Story', 'story'], ['Science', 'science'], ['Adaptations', 'adaptations']]
+    [['Sprite Lab', 'spritelab'], ['Story', 'story'], ['Science', 'science'], ['Adaptations', 'adaptations'], ['Ecosystems', 'ecosystems']]
   end
 
   def standalone_app_name_or_default

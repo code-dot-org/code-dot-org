@@ -83,6 +83,7 @@ en:
   unsubmit: Unsubmit
   previous_page: Previous page
   next_page: Next page
+  next_level: Next level
   next_resource: Next resource
   done_with_module: Done with this Learning Module
   cancel: "Cancel"
@@ -885,6 +886,8 @@ en:
     submit-incomplete-body: "You left some questions incomplete.  You cannot edit your assessment after submitting it.  Are you sure?"
     submit-complete-title: "Submit your assessment"
     submit-complete-body: "You cannot edit your assessment after submitting it.  Are you sure?"
+  level_summary:
+    correct_answer: "Correct Answer"
   match:
     wrong_title: "Incorrect solution"
     wrong_body: "The solution you've entered is not correct.  Please try again!"

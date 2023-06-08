@@ -242,13 +242,16 @@
           "MC_HOC_2017_08_RY_1": "ایجنٹ آتش فشاں مادے پر منڈلا سکتا ہے، لیکن اسٹیو اور ایلیکس ایسا نہیں کر سکتے!"
         },
         "Overworld Move to Sheep": {
-          "craft_drag_block_callout": "ایک \"آگے بڑھیں\" بلاک کو گھسیٹ کر لائیں اور اسے دوسرے بلاک کے نیچے لگائیں۔"
+          "craft_drag_block_callout": "ایک \"آگے بڑھیں\" بلاک کو گھسیٹ کر لائیں اور اسے دوسرے بلاک کے نیچے لگائیں۔",
+          "craft_run_button_callout": "اپنے پروگرام کی کوشش کرنے کے لئے “چلائیں” مارو"
         },
         "Overworld Move to Sheep_2019": {
-          "craft_drag_block_callout": "ایک \"آگے بڑھیں\" بلاک کو گھسیٹ کر لائیں اور اسے دوسرے بلاک کے نیچے لگائیں۔"
+          "craft_drag_block_callout": "ایک \"آگے بڑھیں\" بلاک کو گھسیٹ کر لائیں اور اسے دوسرے بلاک کے نیچے لگائیں۔",
+          "craft_run_button_callout": "اپنے پروگرام کی کوشش کرنے کے لئے “چلائیں” مارو"
         },
         "Overworld Move to Sheep_2020": {
-          "craft_drag_block_callout": "ایک \"آگے بڑھیں\" بلاک کو گھسیٹ کر لائیں اور اسے دوسرے بلاک کے نیچے لگائیں۔"
+          "craft_drag_block_callout": "ایک \"آگے بڑھیں\" بلاک کو گھسیٹ کر لائیں اور اسے دوسرے بلاک کے نیچے لگائیں۔",
+          "craft_run_button_callout": "اپنے پروگرام کی کوشش کرنے کے لئے “چلائیں” مارو"
         },
         "Overworld Move to Sheep_2021": {
           "craft_drag_block_callout": "ایک \"آگے بڑھیں\" بلاک کو گھسیٹ کر لائیں اور اسے دوسرے بلاک کے نیچے لگائیں۔",
@@ -475,7 +478,8 @@
           "MC_HOC_2017_08_RY_1": "ایجنٹ آتش فشاں مادے پر منڈلا سکتا ہے، لیکن اسٹیو اور ایلیکس ایسا نہیں کر سکتے!"
         },
         "Overworld Move to Sheep2022": {
-          "craft_drag_block_callout": "ایک \"آگے بڑھیں\" بلاک کو گھسیٹ کر لائیں اور اسے دوسرے بلاک کے نیچے لگائیں۔"
+          "craft_drag_block_callout": "ایک \"آگے بڑھیں\" بلاک کو گھسیٹ کر لائیں اور اسے دوسرے بلاک کے نیچے لگائیں۔",
+          "craft_run_button_callout": "اپنے پروگرام کی کوشش کرنے کے لئے “چلائیں” مارو"
         },
         "courseC_starWars_loops22022": {
           "courseC_starWars_loops2": "اس پزل میں آپ کے پاس صرف ایک بلاک دستیاب ہے۔"
@@ -1024,6 +1028,153 @@
         },
         "express_maze_debugging9_2021": {
           "express_maze_debugging9_2019_1": "ٹول باکس سے اپنے ورک اسپیس میں بلاکس کو ڈریگ کریں."
+        },
+        "Course 4 Artist 4": {
+          "repeat_full_circle": "زومبی ایک مکمل دائرے بنانے کے لئے منتقل کرنے کے لئے ہے اوقات کی تعداد میں درج کریں"
+        },
+        "Course 4 Artist 7": {
+          "repeat_blocks": "“دہرائیں” بلاک کا استعمال کریں اور اسے ورک اسپیس میں بلاکس کے ارد گرد لپیٹ دیں"
+        },
+        "Course 4 Artist For Loops 4": {
+          "place_counter_variable": "اس بلاک کے اندر اپنے انسداد متغیر گھسیٹیں"
+        },
+        "Course 4 Artist Vars 1": {
+          "repeat_blocks": "“دہرائیں” بلاک کا استعمال کریں اور اسے ورک اسپیس میں بلاکس کے ارد گرد لپیٹ دیں"
+        },
+        "Course 4 Artist Vars 12": {
+          "set_length": "اس بلاک کو “لمبائی” کو درست قدر پر متعین کرنے کے لیے استعمال کریں۔"
+        },
+        "Course 4 Artist Vars 2": {
+          "set_length": "اس بلاک کو “لمبائی” کو درست قدر پر متعین کرنے کے لیے استعمال کریں۔"
+        },
+        "Course 4 Artist Vars 6": {
+          "degrees_per_side": "ڈگری میں ہر زاویہ کا سائز حاصل کرنے کے لیے فریقوں کی تعداد سے 360 تقسیم کریں۔"
+        },
+        "Course 4 Bee Params 2": {
+          "edit_get_nectar": "فنکشن میں ترمیم کرنے اور اس سمت کو تبدیل کرنے کے لئے اس بٹن کا استعمال کریں جو مکھی امرت حاصل کرنے کے لئے بدل جائے گی."
+        },
+        "Course 4 Maze 4": {
+          "repeat": "حکموں کو دہرانے کے لئے لوپ کے اندر بلاکس رکھو"
+        },
+        "Course 4 Play Lab Params 3": {
+          "edit_function": "اپنی تقریب میں ترمیم کرنے کے لئے یہاں کلک کریں."
+        },
+        "Course 4 Play Lab Params 6": {
+          "edit_add_parameter": "اپنی فنکشن میں پیرامیٹر شامل کرنے کے لئے ترمیم کریں پر کلک کریں"
+        },
+        "Course 4 Play Lab Vars 1": {
+          "arrows_move_actor": "اداکار منتقل کرنے کے لئے تیر کا استعمال کریں"
+        },
+        "Infinity_move_collide": {
+          "Infinity_move_collide_callout": "جب یہ واقعہ ہوتا ہے تو آواز چلائیں."
+        },
+        "Infinity_move_directions": {
+          "Infinity_move_directions_callout": "کون سا بلاک Baymax اپ تیر دبایا جاتا ہے جب منتقل کر دے گا؟",
+          "Infinity_move_directions_callout_arrow": "نقصان پہنچانا کرنے کے لئے ان تیر کا استعمال"
+        },
+        "Infinity_move_right": {
+          "Infinity_move_right_runbutton": "یہاں اقدام بلاک شامل کریں"
+        },
+        "Infinity_repeat": {
+          "Infinity_repeat_callout": "یہاں کے اندر بلاکس منتقل کریں"
+        },
+        "NEW Course 4 Artist Functions 7": {
+          "edit_function": "اپنی تقریب میں ترمیم کرنے کے لئے یہاں کلک کریں."
+        },
+        "NEW Course 4 Artist Functions 8": {
+          "edit_function": "اپنی تقریب میں ترمیم کرنے کے لئے یہاں کلک کریں."
+        },
+        "NEW Course 4 Artist Params 10": {
+          "create_function": "“افعال” فلائی آؤٹ کھولنے کے لئے یہاں کلک کریں، پھر “ایک فنکشن بنائیں” کے بٹن پر کلک کریں."
+        },
+        "NEW Course 4 Artist Params 9": {
+          "edit_add_parameter": "اپنی فنکشن میں پیرامیٹر شامل کرنے کے لئے ترمیم کریں پر کلک کریں",
+          "add_and_drag_parameter": "یہاں اپنے پیرامیٹر کے نام پر لکھیں، شامل کریں پر کلک کریں، اور پھر اسے اپنی فنکشن تعریف میں گھسیٹیں"
+        },
+        "NEW Course 4 Artist Vars 6": {
+          "place_length_variable": "سوال کے نشانات کو تبدیل کرنے کے لئے لمبائی متغیر کو یہاں گھسیٹیں"
+        },
+        "NEW Course 4 Bee For Loops 5": {
+          "actions_category": "آلے کے باکس کو ایک نیا نظر مل گیا! “اعمال” کے بلاکس اب یہاں موجود ہیں."
+        },
+        "New Frozen Project": {
+          "snowflake_dropdown": "مختلف snowflakes کے پیدا کرنے کے لئے اس ڈراپ ڈاؤن کا استعمال کریں!"
+        },
+        "Overworld Chop Trees": {
+          "craft_callout_preplaced": "ہم نے آپ کو شروع کرنے کے لئے یہاں کچھ بلاکس ڈال دیا ہے"
+        },
+        "Overworld Chop Trees2022": {
+          "craft_callout_preplaced": "ہم نے آپ کو شروع کرنے کے لئے یہاں کچھ بلاکس ڈال دیا ہے"
+        },
+        "Overworld Chop Trees_2019": {
+          "craft_callout_preplaced": "ہم نے آپ کو شروع کرنے کے لئے یہاں کچھ بلاکس ڈال دیا ہے"
+        },
+        "Overworld Chop Trees_2020": {
+          "craft_callout_preplaced": "ہم نے آپ کو شروع کرنے کے لئے یہاں کچھ بلاکس ڈال دیا ہے"
+        },
+        "Overworld House Frame Chosen": {
+          "craft_callout_preplaced_house": "یہ کوڈ آپ کے گھر کی تعمیر شروع کر دے گا. کیا آپ اسے ختم کر سکتے ہیں؟"
+        },
+        "Overworld House Frame Chosen2022": {
+          "craft_callout_preplaced_house": "یہ کوڈ آپ کے گھر کی تعمیر شروع کر دے گا. کیا آپ اسے ختم کر سکتے ہیں؟"
+        },
+        "Overworld House Frame Chosen_2019": {
+          "craft_callout_preplaced_house": "یہ کوڈ آپ کے گھر کی تعمیر شروع کر دے گا. کیا آپ اسے ختم کر سکتے ہیں؟"
+        },
+        "Overworld House Frame Chosen_2020": {
+          "craft_callout_preplaced_house": "یہ کوڈ آپ کے گھر کی تعمیر شروع کر دے گا. کیا آپ اسے ختم کر سکتے ہیں؟"
+        },
+        "Overworld Place Wall": {
+          "craft_inside_repeat": "یہاں بلاکس رکھ کر اعمال کو دہرائیں"
+        },
+        "Overworld Place Wall2022": {
+          "craft_inside_repeat": "یہاں بلاکس رکھ کر اعمال کو دہرائیں"
+        },
+        "Overworld Place Wall_2019": {
+          "craft_inside_repeat": "یہاں بلاکس رکھ کر اعمال کو دہرائیں"
+        },
+        "Overworld Place Wall_2020": {
+          "craft_inside_repeat": "یہاں بلاکس رکھ کر اعمال کو دہرائیں"
+        },
+        "Underground Avoiding Lava": {
+          "craft_callout_moveforward": "یہ کوڈ لاوا کی جانچ پڑتال کرے گا، کیا آپ آگے بڑھنے کے لئے ایک کمانڈ شامل کر سکتے ہیں؟"
+        },
+        "Underground Avoiding Lava2022": {
+          "craft_callout_moveforward": "یہ کوڈ لاوا کی جانچ پڑتال کرے گا، کیا آپ آگے بڑھنے کے لئے ایک کمانڈ شامل کر سکتے ہیں؟"
+        },
+        "Underground Avoiding Lava_2019": {
+          "craft_callout_moveforward": "یہ کوڈ لاوا کی جانچ پڑتال کرے گا، کیا آپ آگے بڑھنے کے لئے ایک کمانڈ شامل کر سکتے ہیں؟"
+        },
+        "Underground Avoiding Lava_2020": {
+          "craft_callout_moveforward": "یہ کوڈ لاوا کی جانچ پڑتال کرے گا، کیا آپ آگے بڑھنے کے لئے ایک کمانڈ شامل کر سکتے ہیں؟"
+        },
+        "Underground Iron": {
+          "craft_what_is_iron": "یہ لوہا میرا!"
+        },
+        "Underground Iron2022": {
+          "craft_what_is_iron": "یہ لوہا میرا!"
+        },
+        "Underground Iron_2019": {
+          "craft_what_is_iron": "یہ لوہا میرا!"
+        },
+        "Underground Iron_2020": {
+          "craft_what_is_iron": "یہ لوہا میرا!"
+        },
+        "Underground Iron_2021": {
+          "craft_what_is_iron": "یہ لوہا میرا!"
+        },
+        "frozen cross": {
+          "repeat_blocks_1": "(1) اس بلاک کا استعمال کریں اور اسے ورکشاپ میں سرمئی بلاکس کے ارد گرد ڈال دیں",
+          "repeat_blocks_2": "(2) یہاں “دہرائیں” بلاک کو منتقل کریں، اور سرمئی بلاکس کو اندر رکھیں"
+        },
+        "frozen cross rotate": {
+          "replace_questions_degree": "تبدیل کرنے کے لئے ڈراپ ڈاؤن کا استعمال کریں “???” ایک عدد کے ساتھ"
+        },
+        "frozen freeplay": {
+          "snowflake_dropdown": "مختلف snowflakes کے پیدا کرنے کے لئے اس ڈراپ ڈاؤن کا استعمال کریں!"
+        },
+        "frozen square snowflake": {
+          "replace_questions": "تبدیل کرنے کے لئے ڈراپ ڈاؤن کا استعمال کریں “???” ایک عدد کے ساتھ"
         }
       }
     }

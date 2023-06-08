@@ -144,6 +144,7 @@ module Dashboard
       emulate-print-media.js
       jquery.handsontable.full.js
       video-js/*.css
+      font-awesome.css
     )
 
     # Support including code from directories outside of the normal Rails directory

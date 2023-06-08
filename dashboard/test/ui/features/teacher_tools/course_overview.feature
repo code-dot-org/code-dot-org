@@ -13,13 +13,17 @@ Feature: CourseOverview
     And I am on "http://studio.code.org/courses/csp-2019"
     And I wait to see ".uitest-CourseScript"
 
+  @skip
+  # TODO TEACH-509: Reenable with new section setup flow
   Scenario: Viewing course overview as a student in a section
     Given I create an authorized teacher-associated student named "Ron"
     Then I sign in as "Teacher_Ron" and go home
     And I click selector ".ui-test-section-dropdown" once I see it
     And I click selector ".edit-section-details-link"
-    And I wait until element "#uitest-assignment-family" is visible
-    And I select the "Computer Science Principles" option in dropdown "uitest-assignment-family"
+    And I press the first "input[name='grades[]']" element
+    And I wait until element "button:contains(High School)" is visible
+    And I click selector "button:contains(High School)"
+    And I press the first "input[name='Computer Science Principles']" element
     And I wait until element "#assignment-version-year" is visible
     And I press "assignment-version-year"
     And I click selector ".assignment-version-title:contains('19-'20)" once I see it

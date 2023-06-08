@@ -34,6 +34,10 @@
                 },
                 "playSound": {
                   "short_description": "מנגן קובץ שמע MP3 מתוך כתובת URL שצוינה."
+                },
+                "showMobileControls": {
+                  "content": "משנה את הפקדים הניידים הנראים מתחת למרחב המשחק.",
+                  "short_description": "משנה את הפקדים הניידים הנראים מתחת למרחב המשחק."
                 }
               }
             },
@@ -46,6 +50,12 @@
                       "name": "ספירלה"
                     }
                   }
+                },
+                "sprite.height": {
+                  "return_value": "גובה ספרייט."
+                },
+                "sprite.width": {
+                  "return_value": "רוחבו של ספרייט."
                 }
               }
             },
@@ -101,6 +111,24 @@
                 }
               }
             },
+            "control": {
+              "expressions": {
+                "setInterval": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "מספר אלפיות השנייה בין כל ביצוע של הפונקציה."
+                    }
+                  }
+                },
+                "setTimeout": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "מספר אלפיות השנייה להמתין לפני ביצוע הפונקציה."
+                    }
+                  }
+                }
+              }
+            },
             "math": {
               "name": "מתמטיקה",
               "expressions": {
@@ -131,6 +159,23 @@
               "expressions": {
                 "assign_x": {
                   "short_description": "מקצה ערך למשתנה קיים. לדוגמא: x=0;"
+                },
+                "includes": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "המחרוזת לחיפוש."
+                    }
+                  }
+                },
+                "indexOf": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "המחרוזת לחיפוש."
+                    }
+                  }
+                },
+                "length": {
+                  "return_value": "אורכו של המחרוזת"
                 }
               }
             },
@@ -145,6 +190,9 @@
           "categories": {
             "ui_controls": {
               "expressions": {
+                "button": {
+                  "short_description": "יוצר כפתור על המסך המציג את הטקסט שסופק והפניה על ידי מזהה נתון במיקום ברירת המחדל (0,0)."
+                },
                 "onEvent": {
                   "palette_params": {
                     "callback": {
@@ -154,22 +202,72 @@
                 },
                 "playSound": {
                   "short_description": "מנגן קובץ שמע MP3 מתוך כתובת URL שצוינה."
+                },
+                "setProperty": {
+                  "palette_params": {
+                    "property": {
+                      "description": "המאפיין לשנות."
+                    }
+                  },
+                  "short_description": "מגדיר מאפיין לערך חדש עבור הרכיב שצוין."
+                },
+                "setScreen": {
+                  "short_description": "מגדיר את המסך ל- ScreenID הנתון."
+                },
+                "showElement": {
+                  "short_description": "מציג את הרכיב עם המזהה המסופק."
+                },
+                "textLabel": {
+                  "short_description": "יוצר תווית טקסט על המסך המציג את הטקסט שסופק והפניה על ידי מזהה נתון במיקום ברירת המחדל (0,0)."
                 }
               }
             },
             "canvas": {
               "expressions": {
+                "circle": {
+                  "palette_params": {
+                    "radius": {
+                      "description": "רדיוס המעגל, בפיקסלים."
+                    }
+                  }
+                },
+                "drawImage": {
+                  "palette_params": {
+                    "id": {
+                      "description": "מיקום x בפיקסלים של הפינה השמאלית העליונה של התמונה לציור."
+                    },
+                    "x": {
+                      "description": "מיקום x בפיקסלים של הפינה השמאלית העליונה של התמונה לציור."
+                    },
+                    "y": {
+                      "description": "מיקום y בפיקסלים של הפינה השמאלית העליונה של התמונה לצייר."
+                    }
+                  }
+                },
                 "getAlpha": {
                   "palette_params": {
                     "imageData": {
                       "type": "אובייקט"
+                    },
+                    "x": {
+                      "description": "מיקום x בפיקסלים החל מהפינה השמאלית העליונה של התמונה."
+                    },
+                    "y": {
+                      "description": "מיקום y בפיקסלים החל מהפינה השמאלית העליונה של התמונה."
                     }
-                  }
+                  },
+                  "short_description": "החזרת כמות האלפא (אטימות) (הנעה בין 0 ל- 255) בצבע הפיקסל הממוקם במיקום הנתון x ו- y בנתוני התמונה הנתונים."
                 },
                 "getBlue": {
                   "palette_params": {
                     "imageData": {
                       "type": "אובייקט"
+                    },
+                    "x": {
+                      "description": "מיקום x בפיקסלים החל מהפינה השמאלית העליונה של התמונה."
+                    },
+                    "y": {
+                      "description": "מיקום y בפיקסלים החל מהפינה השמאלית העליונה של התמונה."
                     }
                   }
                 },
@@ -177,6 +275,28 @@
                   "palette_params": {
                     "imageData": {
                       "type": "אובייקט"
+                    },
+                    "x": {
+                      "description": "מיקום x בפיקסלים החל מהפינה השמאלית העליונה של התמונה."
+                    },
+                    "y": {
+                      "description": "מיקום y בפיקסלים החל מהפינה השמאלית העליונה של התמונה."
+                    }
+                  }
+                },
+                "getImageData": {
+                  "palette_params": {
+                    "x": {
+                      "description": "מיקום x בפיקסלים כדי להתחיל את הלכידה."
+                    },
+                    "y": {
+                      "description": "מיקום y בפיקסלים כדי להתחיל את הלכידה."
+                    },
+                    "width": {
+                      "description": "רוחב המלבן התוחם ללכידת נתוני התמונה."
+                    },
+                    "height": {
+                      "description": "גובה המלבן התוחם ללכידת נתוני התמונה."
                     }
                   }
                 },
@@ -184,6 +304,12 @@
                   "palette_params": {
                     "imageData": {
                       "type": "אובייקט"
+                    },
+                    "x": {
+                      "description": "מיקום x בפיקסלים החל מהפינה השמאלית העליונה של התמונה."
+                    },
+                    "y": {
+                      "description": "מיקום y בפיקסלים החל מהפינה השמאלית העליונה של התמונה."
                     }
                   }
                 },
@@ -191,6 +317,28 @@
                   "palette_params": {
                     "imageData": {
                       "type": "אובייקט"
+                    },
+                    "x": {
+                      "description": "מיקום x בפיקסלים החל מהפינה השמאלית העליונה של התמונה כדי למקם את הנתונים על בד הציור."
+                    },
+                    "y": {
+                      "description": "מיקום y בפיקסלים החל מהפינה השמאלית העליונה של התמונה כדי למקם את הנתונים על בד הציור."
+                    }
+                  }
+                },
+                "rect": {
+                  "palette_params": {
+                    "x": {
+                      "description": "מיקום x בפיקסלים של הפינה השמאלית העליונה של המלבן."
+                    },
+                    "y": {
+                      "description": "מיקום y בפיקסלים של הפינה השמאלית העליונה של המלבן."
+                    },
+                    "width": {
+                      "description": "הרוחב האופקי בפיקסלים של המלבן."
+                    },
+                    "height": {
+                      "description": "הגובה האנכי בפיקסלים של המלבן."
                     }
                   }
                 },
@@ -198,27 +346,75 @@
                   "palette_params": {
                     "imageData": {
                       "type": "אובייקט"
+                    },
+                    "x": {
+                      "description": "מיקום x בפיקסלים החל מהפינה השמאלית העליונה של התמונה."
+                    },
+                    "y": {
+                      "description": "מיקום y בפיקסלים החל מהפינה השמאלית העליונה של התמונה."
+                    },
+                    "alphaValue": {
+                      "description": "כמות האלפא (אטימות) (מ- 0 עד 255) להגדרה בפיקסל."
                     }
-                  }
+                  },
+                  "short_description": "קובע את כמות האלפא (אטימות) (בטווח שבין 0 ל- 255) בצבע הפיקסל הממוקם במיקום x ו- y הנתון בנתוני התמונה שנמסרו."
                 },
                 "setBlue": {
                   "palette_params": {
                     "imageData": {
                       "type": "אובייקט"
+                    },
+                    "x": {
+                      "description": "מיקום x בפיקסלים החל מהפינה השמאלית העליונה של התמונה."
+                    },
+                    "y": {
+                      "description": "מיקום y בפיקסלים החל מהפינה השמאלית העליונה של התמונה."
+                    },
+                    "blueValue": {
+                      "description": "כמות הכחול (מ- 0 עד 255) להגדרה בפיקסל."
                     }
-                  }
+                  },
+                  "short_description": "קובע את כמות הכחול (החל מ- 0 עד 255) בצבע הפיקסל הממוקם במיקום הנתון x ו- y בנתוני התמונה הנתונים לסכום הקלט של BlueVaLue."
                 },
                 "setGreen": {
                   "palette_params": {
                     "imageData": {
                       "type": "אובייקט"
+                    },
+                    "x": {
+                      "description": "מיקום x בפיקסלים החל מהפינה השמאלית העליונה של התמונה."
+                    },
+                    "y": {
+                      "description": "מיקום y בפיקסלים החל מהפינה השמאלית העליונה של התמונה."
+                    },
+                    "greenValue": {
+                      "description": "כמות הירוק (מ- 0 עד 255) להגדרה בפיקסל."
                     }
-                  }
+                  },
+                  "short_description": "קובע את כמות הירוק (החל מ- 0 עד 255) בצבע הפיקסל הממוקם במיקום x ו- y הנתון בנתוני התמונה הנתונים לסכום הקלט GreenValue."
                 },
                 "setRGB": {
                   "palette_params": {
                     "imageData": {
                       "type": "אובייקט"
+                    },
+                    "x": {
+                      "description": "מיקום x בפיקסלים החל מהפינה השמאלית העליונה של התמונה."
+                    },
+                    "y": {
+                      "description": "מיקום y בפיקסלים החל מהפינה השמאלית העליונה של התמונה."
+                    },
+                    "red": {
+                      "description": "כמות אדום (מ 0 עד 255) כדי להגדיר בפיקסל."
+                    },
+                    "green": {
+                      "description": "כמות הירוק (מ- 0 עד 255) להגדרה בפיקסל."
+                    },
+                    "blue": {
+                      "description": "כמות הכחול (מ- 0 עד 255) להגדרה בפיקסל."
+                    },
+                    "alpha": {
+                      "description": "אופציונלי. כמות האטימות (מ- 0 עד 255) להגדרה בפיקסלים. ברירת המחדל היא 255 (אטימות מלאה)."
                     }
                   }
                 },
@@ -226,12 +422,23 @@
                   "palette_params": {
                     "imageData": {
                       "type": "אובייקט"
+                    },
+                    "x": {
+                      "description": "מיקום x בפיקסלים החל מהפינה השמאלית העליונה של התמונה."
+                    },
+                    "y": {
+                      "description": "מיקום y בפיקסלים החל מהפינה השמאלית העליונה של התמונה."
+                    },
+                    "redValue": {
+                      "description": "כמות אדום (מ 0 עד 255) כדי להגדיר בפיקסל."
                     }
-                  }
+                  },
+                  "short_description": "קובע את כמות הצבע האדום (החל מ- 0 עד 255) בצבע הפיקסל הממוקם במיקום x ו- y הנתון בנתוני התמונה הנתונים לסכום הקלט RedValue."
                 }
               }
             },
             "data": {
+              "name": "נתונים",
               "expressions": {
                 "createRecord": {
                   "palette_params": {
@@ -256,8 +463,18 @@
                 },
                 "drawChartFromRecords": {
                   "palette_params": {
+                    "tableName": {
+                      "description": "השם של הטבלה כדי לאחזר רשומות מ."
+                    },
                     "options": {
                       "type": "אובייקט"
+                    }
+                  }
+                },
+                "getKeyValue": {
+                  "palette_params": {
+                    "key": {
+                      "description": "שם המפתח שיש לאחזר."
                     }
                   }
                 },
@@ -268,10 +485,38 @@
                     }
                   }
                 },
+                "getUserId": {
+                  "short_description": "מקבל מזהה ייחודי עבור המשתמש הנוכחי של יישום זה."
+                },
+                "onRecordEvent": {
+                  "palette_params": {
+                    "table": {
+                      "description": "שם הטבלה שעליה חל מטפל אירוע זה."
+                    }
+                  }
+                },
                 "readRecords": {
                   "palette_params": {
                     "terms": {
                       "type": "אובייקט"
+                    }
+                  }
+                },
+                "setKeyValue": {
+                  "palette_params": {
+                    "key": {
+                      "description": "שם המפתח שיש לאחסן."
+                    },
+                    "value": {
+                      "description": "הנתונים שיש לאחסן."
+                    }
+                  },
+                  "short_description": "מאחסן זוג מפתח/ערך באחסון הנתונים של מפתח/ערך של App Lab, וקורא לפונקציית ההתקשרות כאשר הפעולה מסתיימת."
+                },
+                "startWebRequest": {
+                  "palette_params": {
+                    "url": {
+                      "description": "כתובת האינטרנט של שירות המחזיר נתונים."
                     }
                   }
                 },
@@ -284,8 +529,94 @@
                 }
               }
             },
+            "turtle": {
+              "expressions": {
+                "arcLeft": {
+                  "short_description": "מזיז את הצב קדימה ומשמאל בקשת חלקה ומעגלית."
+                },
+                "getX": {
+                  "short_description": "מקבל את הקואורדינטות x הנוכחיות בפיקסלים של הצב."
+                },
+                "getY": {
+                  "short_description": "מקבל את הקואורדינטות y הנוכחיות בפיקסלים של הצב."
+                },
+                "hide": {
+                  "short_description": "הופך את הצב לבלתי נראה במיקומו הנוכחי."
+                },
+                "move": {
+                  "palette_params": {
+                    "x": {
+                      "description": "מספר הפיקסלים להזזת הצב ימינה."
+                    },
+                    "y": {
+                      "description": "מספר הפיקסלים כדי להזיז את הצב למטה."
+                    }
+                  }
+                },
+                "moveBackward": {
+                  "short_description": "מזיז את הצב אחורה מספר נתון של פיקסלים מהכיוון הנוכחי."
+                },
+                "moveForward": {
+                  "short_description": "מזיז את הצב קדימה למספר נתון של פיקסלים בכיוון הנוכחי."
+                },
+                "moveTo": {
+                  "short_description": "מזיז את הצב למיקום מסוים (x, y) על המסך."
+                },
+                "penColor": {
+                  "short_description": "קובע את צבע העט המשמש את הצב לציור קווים ונקודות."
+                },
+                "penDown": {
+                  "short_description": "מוריד את העט כך שהצב מצייר קו מאחוריו כשהוא זז."
+                },
+                "penRGB": {
+                  "short_description": "באמצעות ערכי RGBA, קובע את צבע העט המשמש את הצב לציור קווים ונקודות."
+                },
+                "penUp": {
+                  "short_description": "מרים את העט כך הצב לא לצייר קו כפי שהוא נע."
+                },
+                "penWidth": {
+                  "short_description": "קובע את רוחב הקו בפיקסלים שהצב מצייר מאחוריו כשהוא זז."
+                },
+                "show": {
+                  "short_description": "הופך את הצב לגלוי במיקומו הנוכחי."
+                },
+                "speed": {
+                  "short_description": "קובע את המהירות לביצוע האפליקציה, הכוללת את מהירות הצב."
+                },
+                "turnLeft": {
+                  "short_description": "מסובב את הצב שמאלה בזווית שצוינה. המיקום של הצב נשאר זהה."
+                },
+                "turnRight": {
+                  "short_description": "מסובב את הצב ימינה בזווית שצוינה. המיקום של הצב נשאר זהה."
+                },
+                "turnTo": {
+                  "short_description": "משנה את כיוון הצב לזווית מסוימת. 0 הוא למעלה, 90 הוא ימין, 180 הוא למטה, ו 270 הוא שמאל."
+                }
+              }
+            },
             "control": {
               "expressions": {
+                "clearTimeout": {
+                  "palette_params": {
+                    "timeout": {
+                      "description": "הערך המוחזר על-ידי הפונקציה setTimeout לביטול."
+                    }
+                  }
+                },
+                "setInterval": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "מספר אלפיות השנייה בין כל ביצוע של הפונקציה."
+                    }
+                  }
+                },
+                "setTimeout": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "מספר אלפיות השנייה להמתין לפני ביצוע הפונקציה."
+                    }
+                  }
+                },
                 "timedLoop": {
                   "palette_params": {
                     "callback": {
@@ -323,8 +654,28 @@
             "variables": {
               "name": "משתנים",
               "expressions": {
+                "declareAssign_list_123": {
+                  "short_description": "להכריז ולהקצות מערך למשתנה"
+                },
+                "includes": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "המחרוזת לחיפוש."
+                    }
+                  }
+                },
+                "indexOf": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "המחרוזת לחיפוש."
+                    }
+                  }
+                },
                 "addPair": {
                   "return_value": "כלום"
+                },
+                "length": {
+                  "return_value": "אורכו של המחרוזת"
                 }
               }
             },

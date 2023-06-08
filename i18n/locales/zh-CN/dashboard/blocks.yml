@@ -2575,6 +2575,21 @@ zh-CN:
           DIR:
             right: 右 ↻
             left: 左 ↺
+      ecosystems_int10:
+        text: "{VALUE}"
+        options:
+          VALUE:
+            '0': '0'
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       storylab_setForegroundEffect2:
         text: 制作{EFFECT}效果
         options:

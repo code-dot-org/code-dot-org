@@ -5833,7 +5833,7 @@ fr-FR:
             immédiatement après le précédent bloc, de sorte que les deux comportements
             se produiront en même temps.
         questions:
-        - text: Lis le code, puis fais une prévision.
+        - text: 'Lis le code, puis fais une prévision. '
       courseF_labels_predict_multi:
         answers:
         - text: "« Une pizza, ça arrive tout de suite ! »"
@@ -5872,21 +5872,21 @@ fr-FR:
       courseF_multi_bee_for3_predict1_2021:
         answers:
         - text: 'L''abeille avancera et récoltera tout le nectar de chaque fleur. '
-          feedback: Incorrect. La boucle `pour` laissera l'abeille récolter la bonne
+          feedback: Incorrect. La boucle « pour » laissera l'abeille récolter la bonne
             quantité de nectar, mais elle n'est configurée que pour atteindre 4 fleurs.
         - text: L'abeille avancera et récoltera tout le nectar de chaque fleur, sauf
             une.
           correct: true
           feedback: Correct !
         - text: 'L''abeille avancera et récoltera un nectar de chaque fleur. '
-          feedback: Incorrect. La boucle `pour` laissera l'abeille récolter la bonne
+          feedback: Incorrect. La boucle « pour » laissera l'abeille récolter la bonne
             quantité de nectar, mais elle n'est configurée que pour atteindre 4 fleurs.
         - text: 'L''abeille avancera et récoltera un nectar des fleurs numéro 1 et
             4. '
-          feedback: Incorrect. La boucle `pour` laissera l'abeille récolter la bonne
+          feedback: Incorrect. La boucle « pour » laissera l'abeille récolter la bonne
             quantité de nectar, mais elle n'est configurée que pour atteindre 4 fleurs.
-        markdown: Ah ! L'utilisation de boucles « pour » rend ce casse-tête beaucoup
-          plus simple !
+        markdown: Ah ! Utiliser des boucles « pour » rend ce casse-tête beaucoup plus
+          simple !
         questions:
         - text: Lis le code ci-dessous. Que va-t-il se passer quand tu cliques su
             « Démarrer » ?
@@ -5917,7 +5917,7 @@ fr-FR:
           correct: true
           feedback: 'Correct ! Ce que tu saisis est utilisé à la place du bloc nom. '
         - text: Le sprite changera de taille.
-          feedback: 'Incorrect. Le texte est imprimé sur l''écran. '
+          feedback: 'Incorrect. Le texte sera imprimé à l''écran. '
         - text: 'L''ordinateur posera une autre question. '
           feedback: 'Incorrect. Une seule question est posée, dès le début du programme. '
         questions:
@@ -5988,16 +5988,16 @@ fr-FR:
         - text: Laurel ramassera 4 pièces de trésor avec ce code.
           feedback: Incorrect. Laurel essaie de ramasser des diamants où il n'y en
             a pas et cela provoque une erreur.
-        - text: Incorrect. Laurel va essayer de ramasser du trésor là où il n'y en
-            a pas, ce qui provoquera une erreur.
+        - text: Laurel va essayer de ramasser du trésor là où il n'y en a pas, ce
+            qui va provoquer une erreur.
           correct: true
           feedback: Correct !
         - text: Laurel ramassera tout le trésor.
-          feedback: Incorrect. Laurel va essayer de ramasser du trésor là où il n'y
-            en a pas, ce qui provoquera une erreur.
+          feedback: Incorrect. Laurel essaie de ramasser des diamants où il n'y en
+            a pas et cela provoque une erreur.
         - text: 'Laurel ramassera 1 pièce de trésor en utilisant ce code. '
-          feedback: Incorrect. Laurel va essayer de ramasser du trésor là où il n'y
-            en a pas, ce qui provoquera une erreur.
+          feedback: Incorrect. Laurel essaie de ramasser des diamants où il n'y en
+            a pas et cela provoque une erreur.
         questions:
         - text: Regarde attentivement ce code. Que penses-tu qu'il va se passer lorsqu'on
             exécute le programme ?
@@ -11168,7 +11168,7 @@ fr-FR:
           correct: true
         - correct: true
         questions:
-        - {}
+        - text: Développement Web
       csd-post-survey-2019-I like cs:
         answers:
         - correct: true
@@ -16998,3 +16998,26 @@ fr-FR:
       csf_digital_trails2022:
         markdown: "# Suis les Traces Numériques\n\n## Quelles informations est-il
           sûr d'avoir dans son empreinte numérique ? \n"
+      Test Contained Retriable Multi:
+        answers:
+        - text: '0'
+        - text: '1'
+        - text: '2'
+          correct: true
+        - text: '4'
+        questions:
+        - {}
+      test-single-multi-standalone-retriable:
+        answers:
+        - text: Rien ne se passera.
+          feedback: Incorrect. Le virevoltant se mettra à rouler.
+        - text: Le virevoltant va voleter vers le haut de l'écran.
+          feedback: Incorrect. Le virevoltant se mettra à rouler.
+        - text: Le virevoltant se mettra à rouler.
+          correct: true
+          feedback: Correct !
+        - text: Le virevoltant va clignoter.
+          feedback: Incorrect. Le virevoltant se mettra à rouler.
+        questions:
+        - text: Regarde de près le code ci-dessous. Que va-t-il se passer lorsqu'on
+            clique sur « Démarrer » ?

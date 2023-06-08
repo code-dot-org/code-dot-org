@@ -131,6 +131,7 @@ vi:
           student_description: Khóa học 20-giờ sẽ giới thiệu mục đích ngành khoa học
             máy tính và các khái niệm lập trình. Khóa học được soạn cho các lớp K-8,
             tuy nhiên nó khá thú vị để tìm hiểu ở tất cả các lứa tuổi.
+          name: 20 giờ
         edit-code:
           title: Hiệu chỉnh mã
           description: Hiệu chỉnh mã
@@ -347,8 +348,12 @@ vi:
             câu hỏi.
         CSDU1-Draft:
           description_short: Giải quyết vấn đề
+        CSDU2-Draft:
+          description_short: Phát triển web
         CSDU5-Draft:
           description_short: Dữ liệu
+        CSDU6-Draft:
+          description_short: Makerlab
         CSF_Secret_Sample_Story:
           description_audience: 8-18 tuổi+
         MikeTest:
@@ -396,6 +401,7 @@ vi:
             content:
               display_name: Nội dung
         csp1-support:
+          title: Bài 1 Khóa học chuyên môn trực tuyến
           lesson_groups:
             required:
               display_name: Tổng quan
@@ -522,6 +528,8 @@ vi:
           lesson_groups:
             cspSurvey:
               display_name: Khảo sát
+        csd2-old:
+          description_short: Phát triển web
         coursea-2017:
           title: Khóa học A
           assignment_family_title: Khóa học A
@@ -2582,10 +2590,152 @@ vi:
           lesson_groups:
             lessonGroup-4:
               display_name: Khảo sát
+          title: Trí tuệ nhân tạo và Máy học
         self-paced-pl-csd1-2021:
           lesson_groups:
             lessonGroup-2:
               display_name: Chào mừng bạn
+            lessonGroup-3:
+              display_name: Điều hướng trên Code.org
+            lessonGroup-5:
+              display_name: Chuẩn bị dạy khóa học Khám phá KHMT
+          title: 'Học phần 1: Chào mừng '
+          description: |-
+            Học phần này là phần giới thiệu ngắn về cả Code.org và khóa học chuyên môn này.
+
+            **Bạn sẽ:**
+
+            -   Được giới thiệu về Code.org và khóa học Khám phá KHMT.
+            -   Tìm hiểu cách tham gia khóa học chuyên môn này.
+
+            **Thời gian đề xuất:** 10 phút
+          student_description: |-
+            Học phần này là phần giới thiệu ngắn về cả Code.org và khóa học chuyên môn này.
+
+            **Bạn sẽ:**
+
+            -   Được giới thiệu về Code.org và khóa học Khám phá KHMT.
+            -   Tìm hiểu cách tham gia khóa học chuyên môn này.
+
+            **Thời gian đề xuất:** 10 phút
+        self-paced-pl-csd2-2021:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Điều hướng trên Code.org
+          title: 'Học phần 2: Điều hướng trên Code.org'
+          description: |-
+            Học phần này được thiết kế để giúp bạn làm quen với các công cụ sẽ sử dụng để hỗ trợ trong quá trình học tập của học sinh khi dạy khóa học Khám phá KHMT.
+
+            **Bạn sẽ:**
+
+            -   Điều hướng trên trang web Code.org và các công cụ dành cho giáo viên.
+            -   Thiết lập nhóm đào tạo
+            -   Tìm và sử dụng giáo án khóa học và tài liệu hỗ trợ giáo viên.
+            -   Tìm hiểu cách tiếp cận dịch vụ hỗ trợ trong khi dạy khóa học.
+
+            **Thời gian đề xuất:** 60 phút
+          student_description: |-
+            Học phần này được thiết kế để giúp bạn làm quen với các công cụ sẽ sử dụng để hỗ trợ trong quá trình học tập của học sinh khi dạy khóa học Khám phá KHMT.
+
+            **Bạn sẽ:**
+
+            -   Điều hướng trên trang web Code.org và các công cụ dành cho giáo viên.
+            -   Thiết lập nhóm đào tạo
+            -   Tìm và sử dụng giáo án khóa học và tài liệu hỗ trợ giáo viên.
+            -   Tìm hiểu cách tiếp cận dịch vụ hỗ trợ trong khi dạy khóa học.
+
+            **Thời gian đề xuất:** 60 phút
+        self-paced-pl-csd3-2021:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tổng quan về khóa học Khám phá KHMT
+          title: 'Học phần 3: Tổng quan về khóa học Khám phá KHMT'
+          description: |-
+            Học phần này sẽ cung cấp cho bạn thông tin tổng quan về khóa học Khám phá KHMT với trọng tâm là các khái niệm mà học sinh sẽ học cũng như các công cụ mà học sinh sẽ sử dụng trong suốt khóa học. Tham gia vào học phần này sẽ giúp bạn quyết định về phương pháp chọn nội dung khóa học sẽ thực hiện trong lớp học của mình.
+
+            **Bạn sẽ:**
+
+            -   Hiểu sâu hơn về chương trình đào tạo Khám phá KHMT.
+            -   Làm quen với môi trường lập trình dùng trong khóa học Khám phá KHMT.
+            -   Quyết định sẽ dạy bài học nào của khóa học Khám phá KHMT trong lớp.
+
+            **Thời gian đề xuất:** 60 phút
+          student_description: |-
+            Học phần này sẽ cung cấp cho bạn thông tin tổng quan về khóa học Khám phá KHMT với trọng tâm là các khái niệm mà học sinh sẽ học cũng như các công cụ mà học sinh sẽ sử dụng trong suốt khóa học. Tham gia vào học phần này sẽ giúp bạn quyết định về phương pháp chọn nội dung khóa học sẽ thực hiện trong lớp học của mình.
+
+            **Bạn sẽ:**
+
+            -   Hiểu sâu hơn về chương trình đào tạo Khám phá KHMT.
+            -   Làm quen với môi trường lập trình dùng trong khóa học Khám phá KHMT.
+            -   Quyết định sẽ dạy bài học nào của khóa học Khám phá KHMT trong lớp.
+
+            **Thời gian đề xuất:** 60 phút
+        self-paced-pl-csd4-2021:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Dạy và học khóa học Khám phá KHMT
+          title: 'Học phần 4: Dạy và học khóa học Khám phá KHMT'
+          description: |-
+            Trong học phần này, bạn sẽ được giới thiệu về các phương pháp thực hành KHMT đích thực mà học sinh sẽ vận dụng trong suốt khóa học Khám phá KHMT. Những phương pháp này bao gồm gỡ lỗi, sử dụng tài nguyên và lập trình theo cặp. Bạn cũng sẽ khám phá vai trò của giáo viên trong lớp học Khám phá KHMT và lập kế hoạch phương pháp hỗ trợ học sinh trong quá trình dạy học.
+
+            **Bạn sẽ:**
+
+            -   Cân nhắc vai trò của giáo viên trong lớp học Khám phá KHMT.
+            -   Tìm hiểu các hoạt động KHMT đích thực mà học sinh sẽ phát triển trong suốt khóa học Khám phá KHMT.
+            -   Lập kế hoạch phương pháp hỗ trợ học sinh học tập thông qua sự phân hóa, đánh giá liên tục và thúc đẩy văn hóa hòa nhập.
+
+            **Thời gian đề xuất:** 50 phút
+          student_description: |-
+            Trong học phần này, bạn sẽ được giới thiệu về các phương pháp thực hành KHMT đích thực mà học sinh sẽ vận dụng trong suốt khóa học Khám phá KHMT. Những phương pháp này bao gồm gỡ lỗi, sử dụng tài nguyên và lập trình theo cặp. Bạn cũng sẽ khám phá vai trò của giáo viên trong lớp học Khám phá KHMT và lập kế hoạch phương pháp hỗ trợ học sinh trong quá trình dạy học.
+
+            **Bạn sẽ:**
+
+            -   Cân nhắc vai trò của giáo viên trong lớp học Khám phá KHMT.
+            -   Tìm hiểu các hoạt động KHMT đích thực mà học sinh sẽ phát triển trong suốt khóa học Khám phá KHMT.
+            -   Lập kế hoạch phương pháp hỗ trợ học sinh học tập thông qua sự phân hóa, đánh giá liên tục và thúc đẩy văn hóa hòa nhập.
+
+            **Thời gian đề xuất:** 50 phút
+        self-paced-pl-csd5-2021:
+          title: Giảng dạy về trí tuệ nhân tạo và máy học
+          description: |-
+            Học phần học tập chuyên môn này được thiết kế để giúp bạn chuẩn bị dạy bài học về AI và Máy học của Code.org.
+
+            **Trong học phần học tập chuyên môn này, bạn sẽ:**
+
+            -   Được giới thiệu về trí tuệ nhân tạo và máy học.
+            -   Thực hành các khái niệm chính trong bài học.
+            -   Tương tác với AI Lab và App Lab.
+            -   Khám phá các dự án cuối chương.
+            -   Cùng học sinh lập kế hoạch triển khai bài học.
+
+            **Thời gian đề xuất:** 120 phút
+          student_description: |-
+            Học phần học tập chuyên môn này được thiết kế để giúp bạn chuẩn bị dạy bài học về AI và Máy học của Code.org.
+
+            **Trong học phần học tập chuyên môn này, bạn sẽ:**
+
+            -   Được giới thiệu về trí tuệ nhân tạo và máy học.
+            -   Huấn luyện mô hình máy học bằng AI Lab.
+            -   Tương tác với các ứng dụng máy học.
+            -   Xem xét ý nghĩa thực tiễn của AI và máy học.
+            -   Khám phá các dự án cuối chương.
+
+            **Thời gian đề xuất:** 120 phút
+        self-paced-pl-csd6-2021:
+          description: |-
+            Học phần học tập chuyên môn này được thiết kế để giúp bạn chuẩn bị dạy bài học về AI và Máy học của Code.org.
+
+            **Trong học phần học tập chuyên môn này, bạn sẽ:**
+
+            -   Được giới thiệu về trí tuệ nhân tạo và máy học.
+            -   Huấn luyện mô hình máy học bằng AI Lab.
+            -   Tương tác với các ứng dụng máy học.
+            -   Xem xét ý nghĩa thực tiễn của AI và máy học.
+            -   Khám phá các dự án cuối chương.
+
+            **Thời gian đề xuất:** 120 phút
+        self-paced-pl-csp2-2021:
+          title: 'Học phần 2: Điều hướng trên Code.org'
         outbreak-module:
           name: mô-đun-dịch-bệnh-bùng-phát
           title: Dịch bệnh bùng phát
@@ -2636,6 +2786,9 @@ vi:
         hello-world-draft:
           title: '"Xin chào thế giới!"'
         csa-self-paced-pl:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Điều hướng trên Code.org
           title: Sử dụng Code.org cho KHMT A Bài mở đầu Giáo viên
           description: |-
             Học phần này được thiết kế để hướng dẫn bạn sử dụng các công cụ hỗ trợ cho quá trình học tập của học sinh trong khi giảng dạy KHMT A.
@@ -2715,6 +2868,8 @@ vi:
           name: tesstest921
         hello-world-animals:
           title: 'Xin chào Thế giới: Động vật'
+        hello-world-retro:
+          title: 'Xin chào cả thế giới: Cổ điển'
         hello-world-batman:
           title: Xin chào cả thế giới
         csa4-exemplars:
@@ -2727,6 +2882,9 @@ vi:
               display_name: Nội dung
             lessonGroup-2:
               display_name: Nội dung
+        ai-ethics:
+          title: Quy tắc đạo đức trí tuệ nhân tạo
+          description_audience: lớp 6-12
         csc-things:
           name: csc-things
           title: Kết nối KHMT Trút bỏ ý tưởng
@@ -2800,13 +2958,18 @@ vi:
             lessonGroup-5:
               display_name: Hộp cát
         ai-ethics-2021:
+          title: Quy tắc đạo đức trí tuệ nhân tạo
           description_audience: Từ lớp 6-12
         poem-art-2021:
           title: Tranh thơ ca
+        poetry-2021:
+          title: Lập trình bằng bài thơ
         hello-world-food-2021:
           title: 'Xin chào Thế giới: Đồ ăn'
         hello-world-animals-2021:
           title: 'Xin chào Thế giới: Động vật'
+        hello-world-retro-2021:
+          title: 'Xin chào cả thế giới: Cổ điển'
         explore-data-1-2021:
           title: Trực quan hóa dữ liệu
         counting-csc-2021:
@@ -3107,6 +3270,8 @@ vi:
           lesson_groups:
             lessonGroup-2:
               display_name: Nội dung
+        self-paced-pl-csa2-2022:
+          title: 'Học phần 2: Điều hướng trên Code.org'
         csa7-pilot-extra:
           lesson_groups:
             lessonGroup-2:
@@ -3244,6 +3409,9 @@ vi:
             \  Tương tác với ứng dụng The Maker.\n-   Khám phá các dự án cuối bài
             học.\n\n**Thời gian đề xuất:** 90 phút"
         vpl-csd7-ci-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Giảng dạy về trí tuệ nhân tạo và máy học
           title: 'Học phần 7: Chuẩn bị giảng dạy về AI và máy học'
           description: "Học phần đào tạo chuyên môn này được thiết kế để giúp bạn
             chuẩn bị giảng dạy học phần AI và máy học của Code.org. \n\n**Trong học
@@ -3318,10 +3486,133 @@ vi:
           lesson_groups:
             lessonGroup-2:
               display_name: Chào mừng bạn
+          title: 'Học phần 1: Chào mừng '
+          description: |-
+            Học phần này là phần giới thiệu ngắn về cả Code.org và khóa học chuyên môn này.
+
+            **Bạn sẽ:**
+
+            -   Được giới thiệu về Code.org và khóa học Khám phá KHMT.
+            -   Tìm hiểu cách tham gia khóa học chuyên môn này.
+
+            **Thời gian đề xuất:** 10 phút
+          student_description: |-
+            Học phần này là phần giới thiệu ngắn về cả Code.org và khóa học chuyên môn này.
+
+            **Bạn sẽ:**
+
+            -   Được giới thiệu về Code.org và khóa học Khám phá KHMT.
+            -   Tìm hiểu cách tham gia khóa học chuyên môn này.
+
+            **Thời gian đề xuất:** 10 phút
+        self-paced-pl-csd2-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Điều hướng trên Code.org
+          title: 'Học phần 2: Điều hướng trên Code.org'
+          description: |-
+            Học phần này được thiết kế để giúp bạn làm quen với các công cụ sẽ sử dụng để hỗ trợ trong quá trình học tập của học sinh khi dạy khóa học Khám phá KHMT.
+
+            **Bạn sẽ:**
+
+            -   Điều hướng trên trang web Code.org và các công cụ dành cho giáo viên.
+            -   Thiết lập nhóm đào tạo
+            -   Tìm và sử dụng giáo án khóa học và tài liệu hỗ trợ giáo viên.
+            -   Tìm hiểu cách tiếp cận dịch vụ hỗ trợ trong khi dạy khóa học.
+
+            **Thời gian đề xuất:** 60 phút
+          student_description: |-
+            Học phần này được thiết kế để giúp bạn làm quen với các công cụ sẽ sử dụng để hỗ trợ trong quá trình học tập của học sinh khi dạy khóa học Khám phá KHMT.
+
+            **Bạn sẽ:**
+
+            -   Điều hướng trên trang web Code.org và các công cụ dành cho giáo viên.
+            -   Thiết lập nhóm đào tạo
+            -   Tìm và sử dụng giáo án khóa học và tài liệu hỗ trợ giáo viên.
+            -   Tìm hiểu cách tiếp cận dịch vụ hỗ trợ trong khi dạy khóa học.
+
+            **Thời gian đề xuất:** 60 phút
+        self-paced-pl-csd3-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tổng quan về khóa học Khám phá KHMT
+          title: 'Học phần 3: Tổng quan về khóa học Khám phá KHMT'
+          description: |-
+            Học phần này sẽ cung cấp cho bạn thông tin tổng quan về khóa học Khám phá KHMT với trọng tâm là các khái niệm mà học sinh sẽ học cũng như các công cụ mà học sinh sẽ sử dụng trong suốt khóa học. Tham gia vào học phần này sẽ giúp bạn quyết định về phương pháp chọn nội dung khóa học sẽ thực hiện trong lớp học của mình.
+
+            **Bạn sẽ:**
+
+            -   Hiểu sâu hơn về chương trình đào tạo Khám phá KHMT.
+            -   Làm quen với môi trường lập trình dùng trong khóa học Khám phá KHMT.
+            -   Quyết định sẽ dạy bài học nào của khóa học Khám phá KHMT trong lớp.
+
+            **Thời gian đề xuất:** 60 phút
+          student_description: |-
+            Học phần này sẽ cung cấp cho bạn thông tin tổng quan về khóa học Khám phá KHMT với trọng tâm là các khái niệm mà học sinh sẽ học cũng như các công cụ mà học sinh sẽ sử dụng trong suốt khóa học. Tham gia vào học phần này sẽ giúp bạn quyết định về phương pháp chọn nội dung khóa học sẽ thực hiện trong lớp học của mình.
+
+            **Bạn sẽ:**
+
+            -   Hiểu sâu hơn về chương trình đào tạo Khám phá KHMT.
+            -   Làm quen với môi trường lập trình dùng trong khóa học Khám phá KHMT.
+            -   Quyết định sẽ dạy bài học nào của khóa học Khám phá KHMT trong lớp.
+
+            **Thời gian đề xuất:** 60 phút
+        self-paced-pl-csd4-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Dạy và học khóa học Khám phá KHMT
+          title: 'Học phần 4: Dạy và học khóa học Khám phá KHMT'
+          description: |-
+            Trong học phần này, bạn sẽ được giới thiệu về các phương pháp thực hành KHMT đích thực mà học sinh sẽ vận dụng trong suốt khóa học Khám phá KHMT. Những phương pháp này bao gồm gỡ lỗi, sử dụng tài nguyên và lập trình theo cặp. Bạn cũng sẽ khám phá vai trò của giáo viên trong lớp học Khám phá KHMT và lập kế hoạch phương pháp hỗ trợ học sinh trong quá trình dạy học.
+
+            **Bạn sẽ:**
+
+            -   Cân nhắc vai trò của giáo viên trong lớp học Khám phá KHMT.
+            -   Tìm hiểu các hoạt động KHMT đích thực mà học sinh sẽ phát triển trong suốt khóa học Khám phá KHMT.
+            -   Lập kế hoạch phương pháp hỗ trợ học sinh học tập thông qua sự phân hóa, đánh giá liên tục và thúc đẩy văn hóa hòa nhập.
+
+            **Thời gian đề xuất:** 50 phút
+          student_description: |-
+            Trong học phần này, bạn sẽ được giới thiệu về các phương pháp thực hành KHMT đích thực mà học sinh sẽ vận dụng trong suốt khóa học Khám phá KHMT. Những phương pháp này bao gồm gỡ lỗi, sử dụng tài nguyên và lập trình theo cặp. Bạn cũng sẽ khám phá vai trò của giáo viên trong lớp học Khám phá KHMT và lập kế hoạch phương pháp hỗ trợ học sinh trong quá trình dạy học.
+
+            **Bạn sẽ:**
+
+            -   Cân nhắc vai trò của giáo viên trong lớp học Khám phá KHMT.
+            -   Tìm hiểu các hoạt động KHMT đích thực mà học sinh sẽ phát triển trong suốt khóa học Khám phá KHMT.
+            -   Lập kế hoạch phương pháp hỗ trợ học sinh học tập thông qua sự phân hóa, đánh giá liên tục và thúc đẩy văn hóa hòa nhập.
+
+            **Thời gian đề xuất:** 50 phút
+        self-paced-pl-csp2-2022:
+          title: 'Học phần 2: Điều hướng trên Code.org'
         vpl-csd1-ayw-pilot-2022:
           lessons:
             lesson-6:
               name: Phần mở rộng sửa lỗi không đồng bộ
+        self-paced-pl-csd5-2022:
+          description: |-
+            Học phần học tập chuyên môn này được thiết kế để giúp bạn chuẩn bị dạy bài học về AI và Máy học của Code.org.
+
+            **Trong học phần học tập chuyên môn này, bạn sẽ:**
+
+            -   Được giới thiệu về trí tuệ nhân tạo và máy học.
+            -   Thực hành các khái niệm chính trong bài học.
+            -   Tương tác với AI Lab và App Lab.
+            -   Khám phá các dự án cuối chương.
+            -   Cùng học sinh lập kế hoạch triển khai bài học.
+
+            **Thời gian đề xuất:** 120 phút
+          student_description: |-
+            Học phần học tập chuyên môn này được thiết kế để giúp bạn chuẩn bị dạy bài học về AI và Máy học của Code.org.
+
+            **Trong học phần học tập chuyên môn này, bạn sẽ:**
+
+            -   Được giới thiệu về trí tuệ nhân tạo và máy học.
+            -   Thực hành các khái niệm chính trong bài học.
+            -   Tương tác với AI Lab và App Lab.
+            -   Khám phá các dự án cuối chương.
+            -   Cùng học sinh lập kế hoạch triển khai bài học.
+
+            **Thời gian đề xuất:** 120 phút
         vpl-csd2-ayw-pilot-2022:
           lessons:
             lesson-6:
@@ -3487,6 +3778,8 @@ vi:
           lesson_groups:
             lessonGroup-2:
               display_name: Khảo sát sau khoá học
+        self-paced-pl-csa2-2023:
+          title: 'Học phần 2: Điều hướng trên Code.org'
         angelina-playground:
           lessons:
             lesson-5:
@@ -3511,6 +3804,8 @@ vi:
             lessonGroup-2:
               display_name: Chương 1
           title: Giải quyết vấn đề
+        testing-focus-on-creativity2:
+          title: Phát triển web
         pre-express-2023:
           lesson_groups:
             csf_sequencing:
@@ -3804,10 +4099,133 @@ vi:
           lesson_groups:
             lessonGroup-5:
               display_name: Khảo sát
+        ai-temp:
+          title: Cách thức hoạt động của AI
         self-paced-pl-csd1-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: Chào mừng bạn
+          title: 'Học phần 1: Chào mừng '
+          description: |-
+            Học phần này là phần giới thiệu ngắn về cả Code.org và khóa học chuyên môn này.
+
+            **Bạn sẽ:**
+
+            -   Được giới thiệu về Code.org và khóa học Khám phá KHMT.
+            -   Tìm hiểu cách tham gia khóa học chuyên môn này.
+
+            **Thời gian đề xuất:** 10 phút
+          student_description: |-
+            Học phần này là phần giới thiệu ngắn về cả Code.org và khóa học chuyên môn này.
+
+            **Bạn sẽ:**
+
+            -   Được giới thiệu về Code.org và khóa học Khám phá KHMT.
+            -   Tìm hiểu cách tham gia khóa học chuyên môn này.
+
+            **Thời gian đề xuất:** 10 phút
+        self-paced-pl-csd2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Điều hướng trên Code.org
+          title: 'Học phần 2: Điều hướng trên Code.org'
+          description: |-
+            Học phần này được thiết kế để giúp bạn làm quen với các công cụ sẽ sử dụng để hỗ trợ trong quá trình học tập của học sinh khi dạy khóa học Khám phá KHMT.
+
+            **Bạn sẽ:**
+
+            -   Điều hướng trên trang web Code.org và các công cụ dành cho giáo viên.
+            -   Thiết lập nhóm đào tạo
+            -   Tìm và sử dụng giáo án khóa học và tài liệu hỗ trợ giáo viên.
+            -   Tìm hiểu cách tiếp cận dịch vụ hỗ trợ trong khi dạy khóa học.
+
+            **Thời gian đề xuất:** 60 phút
+          student_description: |-
+            Học phần này được thiết kế để giúp bạn làm quen với các công cụ sẽ sử dụng để hỗ trợ trong quá trình học tập của học sinh khi dạy khóa học Khám phá KHMT.
+
+            **Bạn sẽ:**
+
+            -   Điều hướng trên trang web Code.org và các công cụ dành cho giáo viên.
+            -   Thiết lập nhóm đào tạo
+            -   Tìm và sử dụng giáo án khóa học và tài liệu hỗ trợ giáo viên.
+            -   Tìm hiểu cách tiếp cận dịch vụ hỗ trợ trong khi dạy khóa học.
+
+            **Thời gian đề xuất:** 60 phút
+        self-paced-pl-csd3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tổng quan về khóa học Khám phá KHMT
+          title: 'Học phần 3: Tổng quan về khóa học Khám phá KHMT'
+          description: |-
+            Học phần này sẽ cung cấp cho bạn thông tin tổng quan về khóa học Khám phá KHMT với trọng tâm là các khái niệm mà học sinh sẽ học cũng như các công cụ mà học sinh sẽ sử dụng trong suốt khóa học. Tham gia vào học phần này sẽ giúp bạn quyết định về phương pháp chọn nội dung khóa học sẽ thực hiện trong lớp học của mình.
+
+            **Bạn sẽ:**
+
+            -   Hiểu sâu hơn về chương trình đào tạo Khám phá KHMT.
+            -   Làm quen với môi trường lập trình dùng trong khóa học Khám phá KHMT.
+            -   Quyết định sẽ dạy bài học nào của khóa học Khám phá KHMT trong lớp.
+
+            **Thời gian đề xuất:** 60 phút
+          student_description: |-
+            Học phần này sẽ cung cấp cho bạn thông tin tổng quan về khóa học Khám phá KHMT với trọng tâm là các khái niệm mà học sinh sẽ học cũng như các công cụ mà học sinh sẽ sử dụng trong suốt khóa học. Tham gia vào học phần này sẽ giúp bạn quyết định về phương pháp chọn nội dung khóa học sẽ thực hiện trong lớp học của mình.
+
+            **Bạn sẽ:**
+
+            -   Hiểu sâu hơn về chương trình đào tạo Khám phá KHMT.
+            -   Làm quen với môi trường lập trình dùng trong khóa học Khám phá KHMT.
+            -   Quyết định sẽ dạy bài học nào của khóa học Khám phá KHMT trong lớp.
+
+            **Thời gian đề xuất:** 60 phút
+        self-paced-pl-csd4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Dạy và học khóa học Khám phá KHMT
+          title: 'Học phần 4: Dạy và học khóa học Khám phá KHMT'
+          description: |-
+            Trong học phần này, bạn sẽ được giới thiệu về các phương pháp thực hành KHMT đích thực mà học sinh sẽ vận dụng trong suốt khóa học Khám phá KHMT. Những phương pháp này bao gồm gỡ lỗi, sử dụng tài nguyên và lập trình theo cặp. Bạn cũng sẽ khám phá vai trò của giáo viên trong lớp học Khám phá KHMT và lập kế hoạch phương pháp hỗ trợ học sinh trong quá trình dạy học.
+
+            **Bạn sẽ:**
+
+            -   Cân nhắc vai trò của giáo viên trong lớp học Khám phá KHMT.
+            -   Tìm hiểu các hoạt động KHMT đích thực mà học sinh sẽ phát triển trong suốt khóa học Khám phá KHMT.
+            -   Lập kế hoạch phương pháp hỗ trợ học sinh học tập thông qua sự phân hóa, đánh giá liên tục và thúc đẩy văn hóa hòa nhập.
+
+            **Thời gian đề xuất:** 50 phút
+          student_description: |-
+            Trong học phần này, bạn sẽ được giới thiệu về các phương pháp thực hành KHMT đích thực mà học sinh sẽ vận dụng trong suốt khóa học Khám phá KHMT. Những phương pháp này bao gồm gỡ lỗi, sử dụng tài nguyên và lập trình theo cặp. Bạn cũng sẽ khám phá vai trò của giáo viên trong lớp học Khám phá KHMT và lập kế hoạch phương pháp hỗ trợ học sinh trong quá trình dạy học.
+
+            **Bạn sẽ:**
+
+            -   Cân nhắc vai trò của giáo viên trong lớp học Khám phá KHMT.
+            -   Tìm hiểu các hoạt động KHMT đích thực mà học sinh sẽ phát triển trong suốt khóa học Khám phá KHMT.
+            -   Lập kế hoạch phương pháp hỗ trợ học sinh học tập thông qua sự phân hóa, đánh giá liên tục và thúc đẩy văn hóa hòa nhập.
+
+            **Thời gian đề xuất:** 50 phút
+        self-paced-pl-csd5-2023:
+          description: |-
+            Học phần học tập chuyên môn này được thiết kế để giúp bạn chuẩn bị dạy bài học về AI và Máy học của Code.org.
+
+            **Trong học phần học tập chuyên môn này, bạn sẽ:**
+
+            -   Được giới thiệu về trí tuệ nhân tạo và máy học.
+            -   Thực hành các khái niệm chính trong bài học.
+            -   Tương tác với AI Lab và App Lab.
+            -   Khám phá các dự án cuối chương.
+            -   Cùng học sinh lập kế hoạch triển khai bài học.
+
+            **Thời gian đề xuất:** 120 phút
+          student_description: |-
+            Học phần học tập chuyên môn này được thiết kế để giúp bạn chuẩn bị dạy bài học về AI và Máy học của Code.org.
+
+            **Trong học phần học tập chuyên môn này, bạn sẽ:**
+
+            -   Được giới thiệu về trí tuệ nhân tạo và máy học.
+            -   Thực hành các khái niệm chính trong bài học.
+            -   Tương tác với AI Lab và App Lab.
+            -   Khám phá các dự án cuối chương.
+            -   Cùng học sinh lập kế hoạch triển khai bài học.
+
+            **Thời gian đề xuất:** 120 phút
         pl-csd-summer-day1:
           lessons:
             lesson-3:
@@ -3820,6 +4238,28 @@ vi:
           lessons:
             lesson-12:
               name: Tổng kết
+        virtual-pl-csd-summer-day1:
+          lessons:
+            lesson-1:
+              name: Giới thiệu
+            lesson-12:
+              name: Tổng kết
+        virtual-pl-csd-summer-day2:
+          lessons:
+            lesson-10:
+              name: Tổng kết
+        virtual-pl-csd-summer-day3:
+          lessons:
+            lesson-12:
+              name: Tổng kết
+        virtual-pl-csd-summer-day4:
+          lessons:
+            lesson-13:
+              name: Tổng kết
+        virtual-pl-csd-summer-day5:
+          lessons:
+            lesson-3:
+              name: Đánh giá
         csd-post-survey-2023:
           title: Khảo sát sau khoá học
         focus-on-data-post-survey-2023:
@@ -3834,3 +4274,19 @@ vi:
           title: Khảo sát sau khoá học
         focus-on-creativity-post-survey-2023:
           title: Khảo sát sau khoá học
+        coursef-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Công dân số
+            lessonGroup-3:
+              display_name: Nhân vật
+            lessonGroup-4:
+              display_name: Các biến
+            lessonGroup-6:
+              display_name: Dự án tổng kết khóa học
+          description_audience: 'Độ tuổi: 9-13'
+          description_short: Tìm hiểu tất cả các khái niệm trong bài học Nguyên tắc
+            cơ bản của khoa học máy tính và sáng tạo tác phẩm cũng như câu chuyện
+            và game của riêng bạn.
+        self-paced-pl-csp2-2023:
+          title: 'Học phần 2: Điều hướng trên Code.org'

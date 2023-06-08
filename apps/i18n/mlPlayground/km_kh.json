@@ -2,7 +2,7 @@
   "navigateForward": "បន្ត",
   "navigateBack": "ត្រលប់ក្រោយ",
   "tryAgain": "ព្យាយាម​ម្ដង​ទៀត",
-  "navigateDone": "បញ្ចប់",
+  "navigateDone": "បញ្ចប់ ",
   "saveProgress": "រក្សា​ទុក",
   "correctAnswer": "ត្រឹម​ត្រូវ",
   "incorrectAnswer": "មិន​ត្រឹមត្រូវ",
@@ -110,6 +110,13 @@
         },
         "Name": {
           "id": "ឈ្មោះ"
+        }
+      }
+    },
+    "songs": {
+      "fields": {
+        "Artist": {
+          "id": "សិល្បករ"
         }
       }
     },

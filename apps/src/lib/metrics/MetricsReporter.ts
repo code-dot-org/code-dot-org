@@ -1,7 +1,6 @@
+import {isDevelopmentEnvironment} from '@cdo/apps/utils';
+import DashboardMetricsApi from './DashboardMetricsApi';
 import {MetricsApi} from './MetricsApi';
-
-const isDevelopmentEnvironment =
-  require('../../utils').isDevelopmentEnvironment;
 
 /**
  * If we receive an unauthorized response from the server, this may
@@ -26,8 +25,6 @@ type LogLevel = 'INFO' | 'WARNING' | 'SEVERE';
  * For legacy client-side reporting see {@link firehose} for AWS
  * Firehose reporting and {@link logToCloud} for New Relic reporting.
  */
-// TODO: This class will be used once more functionality is implemented.
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 class MetricsReporter {
   private lastCheckCanReportTime: number;
 
@@ -58,7 +55,7 @@ class MetricsReporter {
     }
   }
 
-  private log(level: LogLevel, message: string | object) {
+  private async log(level: LogLevel, message: string | object) {
     const payload = {
       level,
       message,
@@ -70,7 +67,8 @@ class MetricsReporter {
       return;
     }
 
-    this.metricsApi.sendLogs([payload]).then(response => {
+    try {
+      const response = await this.metricsApi.sendLogs([payload]);
       if (!response.ok) {
         this.fallbackLog(payload);
       }
@@ -80,7 +78,9 @@ class MetricsReporter {
         // We will check again after a time period of CHECK_CAN_REPORT_INTERVAL
         this.setReportingDisabled();
       }
-    });
+    } catch (error) {
+      console.error(error);
+    }
   }
 
   private getDeviceInfo(): object {
@@ -116,3 +116,5 @@ class MetricsReporter {
     );
   }
 }
+
+export default new MetricsReporter(new DashboardMetricsApi());

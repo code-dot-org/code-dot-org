@@ -319,6 +319,7 @@ Dashboard::Application.routes.draw do
         post 'clone'
         post 'update_start_code'
         post 'update_exemplar_code'
+        get 'level_data'
       end
     end
 
@@ -470,6 +471,9 @@ Dashboard::Application.routes.draw do
             get 'page/:puzzle_page', to: 'script_levels#show', as: 'puzzle_page', format: false
             # /s/xxx/lessons/yyy/levels/zzz/sublevel/sss
             get 'sublevel/:sublevel_position', to: 'script_levels#show', as: 'sublevel', format: false
+            # Get the level data via JSON.
+            # /s/xxx/lessons/yyy/levels/zzz/level_data
+            get 'level_data', to: 'script_levels#level_data'
           end
         end
         resources :script_levels, only: [:show], path: "/levels", format: false do
@@ -936,6 +940,8 @@ Dashboard::Application.routes.draw do
     get '/dashboardapi/v1/schools/:id/afe_high_needs', to: 'api/v1/schools#afe_high_needs', defaults: {format: 'json'}
     get '/dashboardapi/v1/schools/:school_district_id/:school_type', to: 'api/v1/schools#index', defaults: {format: 'json'}
     get '/dashboardapi/v1/schools/:id', to: 'api/v1/schools#show', defaults: {format: 'json'}
+
+    post '/dashboardapi/v1/users/:user_id/verify_captcha', to: 'api/v1/users#verify_captcha'
 
     # Routes used by census
     post '/dashboardapi/v1/census/:form_version', to: 'api/v1/census/census#create', defaults: {format: 'json'}

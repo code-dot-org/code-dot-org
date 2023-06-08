@@ -97,10 +97,14 @@
           "text": "ტექსტი"
         },
         "CSD U1 processing live_2021": {
-          "walking": "სიარული"
+          "walking": "სიარული",
+          "bear": "დათვი",
+          "rat": "ვირთხა"
         },
         "CSD U1 processing live_2022": {
-          "walking": "სიარული"
+          "walking": "სიარული",
+          "bear": "დათვი",
+          "rat": "ვირთხა"
         },
         "CSD U1 processing npark_2021": {
           "Sorry!": "ბოდიში!"
@@ -155,14 +159,16 @@
           "white": "თეთრი",
           "pink": "ვარდისფერი",
           "green": "მწვანე",
-          "black": "შავი"
+          "black": "შავი",
+          "purple": "მეწამული"
         },
         "CSD U1 storage outfit_2022": {
           "Clear": "გასუფთავება",
           "white": "თეთრი",
           "pink": "ვარდისფერი",
           "green": "მწვანე",
-          "black": "შავი"
+          "black": "შავი",
+          "purple": "მეწამული"
         },
         "CSD U2 RGB intro": {
           "2": "2",
@@ -253,7 +259,8 @@
           "right": "მარჯვნივ",
           "red": "წითელი",
           "yellow": "ყვითელი",
-          "green": "მწვანე"
+          "green": "მწვანე",
+          "purple": "მეწამული"
         },
         "CSD U6 - Combine Inputs - CA_2022": {
           "fast": "ჩქარი",
@@ -332,7 +339,8 @@
           "F": "ე",
           "G": "ვ",
           "A": "ა",
-          "B": "ბ"
+          "B": "ბ",
+          "Note:": "შენიშვნა:"
         },
         "CSD U6 - Music - SB1_2222": {
           "C": "გ",
@@ -475,7 +483,8 @@
           "low": "დაბალი"
         },
         "CSD U6 - Sensors - SB2_2222": {
-          "Update": "განახლება"
+          "Update": "განახლება",
+          "value": "ღირებულება"
         },
         "CSD U6 Driver pt 2": {
           "You did it!": "გამოგივიდათ!"
@@ -538,16 +547,20 @@
           "Success!": "წარმატება!"
         },
         "CSD U6 analog light": {
-          "Update": "განახლება"
+          "Update": "განახლება",
+          "value": "ღირებულება"
         },
         "CSD U6 analog light_2018": {
-          "Update": "განახლება"
+          "Update": "განახლება",
+          "value": "ღირებულება"
         },
         "CSD U6 analog light_2019": {
-          "Update": "განახლება"
+          "Update": "განახლება",
+          "value": "ღირებულება"
         },
         "CSD U6 analog light_2021": {
-          "Update": "განახლება"
+          "Update": "განახლება",
+          "value": "ღირებულება"
         },
         "CSD U6 array piano": {
           "C": "გ",
@@ -923,19 +936,22 @@
           "About": "გაიცანით",
           "I don't know": "არ ვიცი",
           "When?": "როდის?",
-          "About Us": "ჩვენ შესახებ"
+          "About Us": "ჩვენ შესახებ",
+          "Why?": "რატომ?"
         },
         "CSDU4 Decision App Demo_2018": {
           "About": "გაიცანით",
           "I don't know": "არ ვიცი",
           "When?": "როდის?",
-          "About Us": "ჩვენ შესახებ"
+          "About Us": "ჩვენ შესახებ",
+          "Why?": "რატომ?"
         },
         "CSDU4 Decision App Demo_2019": {
           "About": "გაიცანით",
           "I don't know": "არ ვიცი",
           "When?": "როდის?",
-          "About Us": "ჩვენ შესახებ"
+          "About Us": "ჩვენ შესახებ",
+          "Why?": "რატომ?"
         },
         "CSDU4 Functionality visible": {
           "Hide": "დამალვა",
@@ -963,19 +979,22 @@
           "About": "გაიცანით",
           "Submit": "გაგზავნა",
           "When?": "როდის?",
-          "About Us": "ჩვენ შესახებ"
+          "About Us": "ჩვენ შესახებ",
+          "Why?": "რატომ?"
         },
         "CSDU4 Quiz App Demo_2018": {
           "About": "გაიცანით",
           "Submit": "გაგზავნა",
           "When?": "როდის?",
-          "About Us": "ჩვენ შესახებ"
+          "About Us": "ჩვენ შესახებ",
+          "Why?": "რატომ?"
         },
         "CSDU4 Quiz App Demo_2019": {
           "About": "გაიცანით",
           "Submit": "გაგზავნა",
           "When?": "როდის?",
-          "About Us": "ჩვენ შესახებ"
+          "About Us": "ჩვენ შესახებ",
+          "Why?": "რატომ?"
         },
         "CSDU6 - UI and Inputs - getNumber": {
           "+": "+",
@@ -1300,6 +1319,57 @@
           "snow": "თოვლი",
           "cloudy": "ღრუბლიანი",
           "night": "ღამე"
+        },
+        "CSD U6 - Combine Inputs - PracD_2222": {
+          "quiet": "მშვიდი"
+        },
+        "CSD U6 - Sensors - SB1_2222": {
+          "value": "ღირებულება"
+        },
+        "CSD U6 - Sensors - SB3_2222": {
+          "value": "ღირებულება"
+        },
+        "CSD U6 - Sensors - SB4.1_2222": {
+          "value": "ღირებულება"
+        },
+        "CSD U6 - Sensors - SB4_2222": {
+          "value": "ღირებულება"
+        },
+        "CSD U6 analog change": {
+          "value": "ღირებულება"
+        },
+        "CSD U6 analog change_2018": {
+          "value": "ღირებულება"
+        },
+        "CSD U6 analog change_2019": {
+          "value": "ღირებულება"
+        },
+        "CSD U6 analog change_2021": {
+          "value": "ღირებულება"
+        },
+        "CSD U6 analog data": {
+          "value": "ღირებულება"
+        },
+        "CSD U6 analog data_2018": {
+          "value": "ღირებულება"
+        },
+        "CSD U6 analog data_2019": {
+          "value": "ღირებულება"
+        },
+        "CSD U6 analog data_2021": {
+          "value": "ღირებულება"
+        },
+        "CSD U6 analog sound": {
+          "value": "ღირებულება"
+        },
+        "CSD U6 analog sound_2018": {
+          "value": "ღირებულება"
+        },
+        "CSD U6 analog sound_2019": {
+          "value": "ღირებულება"
+        },
+        "CSD U6 analog sound_2021": {
+          "value": "ღირებულება"
         }
       }
     }

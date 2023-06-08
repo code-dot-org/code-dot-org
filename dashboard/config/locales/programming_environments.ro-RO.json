@@ -41,6 +41,10 @@
                 },
                 "playSound": {
                   "short_description": "Redă fişierul audio MP3 din link-ul specificat."
+                },
+                "showMobileControls": {
+                  "content": "Modifică comenzile mobile vizibile sub spațiul de joc.",
+                  "short_description": "Modifică comenzile mobile vizibile sub spațiul de joc."
                 }
               }
             },
@@ -53,6 +57,12 @@
                       "name": "Spirală"
                     }
                   }
+                },
+                "sprite.height": {
+                  "return_value": "Înălțimea sprite."
+                },
+                "sprite.width": {
+                  "return_value": "Lățimea sprite."
                 }
               }
             },
@@ -109,7 +119,23 @@
               }
             },
             "control": {
-              "name": "Control"
+              "name": "Control",
+              "expressions": {
+                "setInterval": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "Numărul de milisecunde între fiecare execuție a funcției."
+                    }
+                  }
+                },
+                "setTimeout": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "Numărul de milisecunde de așteptat înainte de a executa funcția."
+                    }
+                  }
+                }
+              }
             },
             "math": {
               "name": "Matematică",
@@ -144,6 +170,23 @@
                 },
                 "declareAssign_x": {
                   "short_description": "Declara si atribuie o valoare initiala unei variabile."
+                },
+                "includes": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "Șirul de căutat."
+                    }
+                  }
+                },
+                "indexOf": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "Șirul de căutat."
+                    }
+                  }
+                },
+                "length": {
+                  "return_value": "Lungimea șirului"
                 }
               }
             },
@@ -159,6 +202,9 @@
             "ui_controls": {
               "name": "controale UI",
               "expressions": {
+                "button": {
+                  "short_description": "Creează un buton pe ecran afișând textul furnizat și referit de id-ul dat la locația implicită (0,0)."
+                },
                 "onEvent": {
                   "examples": {
                     "Shrink and Grow": {
@@ -173,23 +219,73 @@
                 },
                 "playSound": {
                   "short_description": "Redă fişierul audio MP3 din link-ul specificat."
+                },
+                "setProperty": {
+                  "palette_params": {
+                    "property": {
+                      "description": "Proprietatea de a schimba."
+                    }
+                  },
+                  "short_description": "Setează o proprietate la o valoare nouă pentru elementul specificat."
+                },
+                "setScreen": {
+                  "short_description": "Setează ecranul la ID-ul de ecran dat."
+                },
+                "showElement": {
+                  "short_description": "Afișează elementul cu id-ul furnizat."
+                },
+                "textLabel": {
+                  "short_description": "Creează o etichetă text pe ecran afișând textul furnizat și referit de id-ul dat la locația implicită (0,0)."
                 }
               }
             },
             "canvas": {
               "name": "Canvas",
               "expressions": {
+                "circle": {
+                  "palette_params": {
+                    "radius": {
+                      "description": "Raza cercului, în pixeli."
+                    }
+                  }
+                },
+                "drawImage": {
+                  "palette_params": {
+                    "id": {
+                      "description": "Poziția x în pixeli din colțul din stânga sus al imaginii de desenat."
+                    },
+                    "x": {
+                      "description": "Poziția x în pixeli din colțul din stânga sus al imaginii de desenat."
+                    },
+                    "y": {
+                      "description": "Poziția y în pixeli din colțul din stânga sus al imaginii de desenat."
+                    }
+                  }
+                },
                 "getAlpha": {
                   "palette_params": {
                     "imageData": {
                       "type": "obiect"
+                    },
+                    "x": {
+                      "description": "Poziția x în pixeli începând din colțul din stânga sus al imaginii."
+                    },
+                    "y": {
+                      "description": "Poziția y în pixeli începând din colțul din stânga sus al imaginii."
                     }
-                  }
+                  },
+                  "short_description": "Returnează cantitatea de alfa (opacitate) (variind de la 0 la 255) în culoarea pixelului situat la poziția x și y dată în datele de imagine date."
                 },
                 "getBlue": {
                   "palette_params": {
                     "imageData": {
                       "type": "obiect"
+                    },
+                    "x": {
+                      "description": "Poziția x în pixeli începând din colțul din stânga sus al imaginii."
+                    },
+                    "y": {
+                      "description": "Poziția y în pixeli începând din colțul din stânga sus al imaginii."
                     }
                   }
                 },
@@ -197,6 +293,28 @@
                   "palette_params": {
                     "imageData": {
                       "type": "obiect"
+                    },
+                    "x": {
+                      "description": "Poziția x în pixeli începând din colțul din stânga sus al imaginii."
+                    },
+                    "y": {
+                      "description": "Poziția y în pixeli începând din colțul din stânga sus al imaginii."
+                    }
+                  }
+                },
+                "getImageData": {
+                  "palette_params": {
+                    "x": {
+                      "description": "Poziția x în pixeli pentru a începe captura."
+                    },
+                    "y": {
+                      "description": "Poziția y în pixeli pentru a începe captura."
+                    },
+                    "width": {
+                      "description": "Lățimea dreptunghiului de încadrare pentru a captura datele imaginii."
+                    },
+                    "height": {
+                      "description": "Înălțimea dreptunghiului de încadrare pentru a captura datele imaginii."
                     }
                   }
                 },
@@ -204,6 +322,12 @@
                   "palette_params": {
                     "imageData": {
                       "type": "obiect"
+                    },
+                    "x": {
+                      "description": "Poziția x în pixeli începând din colțul din stânga sus al imaginii."
+                    },
+                    "y": {
+                      "description": "Poziția y în pixeli începând din colțul din stânga sus al imaginii."
                     }
                   }
                 },
@@ -211,6 +335,28 @@
                   "palette_params": {
                     "imageData": {
                       "type": "obiect"
+                    },
+                    "x": {
+                      "description": "Poziția x în pixeli pornind de la colțul din stânga sus al imaginii pentru a plasa datele pe canevasul."
+                    },
+                    "y": {
+                      "description": "Poziția y în pixeli pornind de la colțul din stânga sus al imaginii pentru a plasa datele pe pânză."
+                    }
+                  }
+                },
+                "rect": {
+                  "palette_params": {
+                    "x": {
+                      "description": "Poziția x în pixeli din colțul din stânga sus al dreptunghiului."
+                    },
+                    "y": {
+                      "description": "Poziția y în pixeli din colțul din stânga sus al dreptunghiului."
+                    },
+                    "width": {
+                      "description": "Lățimea orizontală în pixeli a dreptunghiului."
+                    },
+                    "height": {
+                      "description": "Înălţimea verticală în pixeli a dreptunghiului."
                     }
                   }
                 },
@@ -218,27 +364,75 @@
                   "palette_params": {
                     "imageData": {
                       "type": "obiect"
+                    },
+                    "x": {
+                      "description": "Poziția x în pixeli începând din colțul din stânga sus al imaginii."
+                    },
+                    "y": {
+                      "description": "Poziția y în pixeli începând din colțul din stânga sus al imaginii."
+                    },
+                    "alphaValue": {
+                      "description": "Cantitatea de alfa (opacitate) (de la 0 la 255) pentru a seta în pixel."
                     }
-                  }
+                  },
+                  "short_description": "Setează cantitatea de alfa (opacitate) (variind de la 0 la 255) în culoarea pixelului situat la poziţia x şi y dată în datele de imagine date."
                 },
                 "setBlue": {
                   "palette_params": {
                     "imageData": {
                       "type": "obiect"
+                    },
+                    "x": {
+                      "description": "Poziția x în pixeli începând din colțul din stânga sus al imaginii."
+                    },
+                    "y": {
+                      "description": "Poziția y în pixeli începând din colțul din stânga sus al imaginii."
+                    },
+                    "blueValue": {
+                      "description": "Cantitatea de albastru (de la 0 la 255) pentru a seta în pixel."
                     }
-                  }
+                  },
+                  "short_description": "Setează cantitatea de albastru (variind de la 0 la 255) în culoarea pixelului situat la poziția dată x și y în datele de imagine date la cantitatea de intrare BlueValue."
                 },
                 "setGreen": {
                   "palette_params": {
                     "imageData": {
                       "type": "obiect"
+                    },
+                    "x": {
+                      "description": "Poziția x în pixeli începând din colțul din stânga sus al imaginii."
+                    },
+                    "y": {
+                      "description": "Poziția y în pixeli începând din colțul din stânga sus al imaginii."
+                    },
+                    "greenValue": {
+                      "description": "Cantitatea de verde (de la 0 la 255) pentru a seta în pixel."
                     }
-                  }
+                  },
+                  "short_description": "Setează cantitatea de verde (variind de la 0 la 255) în culoarea pixelului situat în poziţia x şi y dată în datele de imagine date la valoarea de intrare GreenValue."
                 },
                 "setRGB": {
                   "palette_params": {
                     "imageData": {
                       "type": "obiect"
+                    },
+                    "x": {
+                      "description": "Poziția x în pixeli începând din colțul din stânga sus al imaginii."
+                    },
+                    "y": {
+                      "description": "Poziția y în pixeli începând din colțul din stânga sus al imaginii."
+                    },
+                    "red": {
+                      "description": "Cantitatea de roșu (de la 0 la 255) pentru a seta în pixel."
+                    },
+                    "green": {
+                      "description": "Cantitatea de verde (de la 0 la 255) pentru a seta în pixel."
+                    },
+                    "blue": {
+                      "description": "Cantitatea de albastru (de la 0 la 255) pentru a seta în pixel."
+                    },
+                    "alpha": {
+                      "description": "Opțional. Cantitatea de opacitate (de la 0 la 255) pentru a seta în pixel. Valori implicite la 255 (opacitate completă)."
                     }
                   }
                 },
@@ -246,8 +440,18 @@
                   "palette_params": {
                     "imageData": {
                       "type": "obiect"
+                    },
+                    "x": {
+                      "description": "Poziția x în pixeli începând din colțul din stânga sus al imaginii."
+                    },
+                    "y": {
+                      "description": "Poziția y în pixeli începând din colțul din stânga sus al imaginii."
+                    },
+                    "redValue": {
+                      "description": "Cantitatea de roșu (de la 0 la 255) pentru a seta în pixel."
                     }
-                  }
+                  },
+                  "short_description": "Setează cantitatea de roșu (variind de la 0 la 255) în culoarea pixelului situat la poziția dată x și y în datele date de imagine la cantitatea de intrare RedValue."
                 }
               }
             },
@@ -277,8 +481,18 @@
                 },
                 "drawChartFromRecords": {
                   "palette_params": {
+                    "tableName": {
+                      "description": "Numele tabelului pentru a prelua înregistrările de la."
+                    },
                     "options": {
                       "type": "obiect"
+                    }
+                  }
+                },
+                "getKeyValue": {
+                  "palette_params": {
+                    "key": {
+                      "description": "Numele cheii care trebuie recuperată."
                     }
                   }
                 },
@@ -289,10 +503,38 @@
                     }
                   }
                 },
+                "getUserId": {
+                  "short_description": "Obține un identificator unic pentru utilizatorul curent al acestei aplicații."
+                },
+                "onRecordEvent": {
+                  "palette_params": {
+                    "table": {
+                      "description": "Numele tabelului la care se aplică acest handler de eveniment."
+                    }
+                  }
+                },
                 "readRecords": {
                   "palette_params": {
                     "terms": {
                       "type": "obiect"
+                    }
+                  }
+                },
+                "setKeyValue": {
+                  "palette_params": {
+                    "key": {
+                      "description": "Numele cheii care trebuie stocată."
+                    },
+                    "value": {
+                      "description": "Datele care trebuie stocate."
+                    }
+                  },
+                  "short_description": "Stochează o pereche de chei/valori în stocarea datelor de cheie/valoare a App Lab și apelează funcția de apel invers când acțiunea este terminată."
+                },
+                "startWebRequest": {
+                  "palette_params": {
+                    "url": {
+                      "description": "Adresa web a unui serviciu care returnează date."
                     }
                   }
                 },
@@ -306,11 +548,95 @@
               }
             },
             "turtle": {
-              "name": "Broască țestoasă"
+              "name": "Broască țestoasă",
+              "expressions": {
+                "arcLeft": {
+                  "short_description": "Mută broasca țestoasă înainte și spre stânga într-un arc neted, circular."
+                },
+                "getX": {
+                  "short_description": "Obține coordonata x curentă în pixeli ai broaștei țestoase."
+                },
+                "getY": {
+                  "short_description": "Obține coordonata y curentă în pixeli ai broaștei țestoase."
+                },
+                "hide": {
+                  "short_description": "Face broasca țestoasă invizibilă în locația sa actuală."
+                },
+                "move": {
+                  "palette_params": {
+                    "x": {
+                      "description": "Numărul de pixeli pentru a muta broasca testoasa dreapta."
+                    },
+                    "y": {
+                      "description": "Numărul de pixeli pentru a muta broasca testoasa în jos."
+                    }
+                  }
+                },
+                "moveBackward": {
+                  "short_description": "Mută broasca țestoasă înapoi cu un anumit număr de pixeli din direcția curentă."
+                },
+                "moveForward": {
+                  "short_description": "Mută broasca țestoasă înainte un anumit număr de pixeli în direcția curentă."
+                },
+                "moveTo": {
+                  "short_description": "Mută broasca țestoasă într-o poziție specifică (x, y) de pe ecran."
+                },
+                "penColor": {
+                  "short_description": "Setează culoarea stiloului folosit de broască țestoasă pentru desenarea liniilor și punctelor."
+                },
+                "penDown": {
+                  "short_description": "Pune stiloul în jos, astfel încât broasca țestoasă trage o linie în spatele lui în timp ce se mișcă."
+                },
+                "penRGB": {
+                  "short_description": "Folosind valorile RGBA, setează culoarea stiloului folosit de broască țestoasă pentru desenarea liniilor și punctelor."
+                },
+                "penUp": {
+                  "short_description": "Alege stiloul în sus, astfel încât broasca țestoasă să nu tragă o linie în timp ce se mișcă."
+                },
+                "penWidth": {
+                  "short_description": "Setează lățimea liniei în pixeli pe care broasca țestoasă o trage în spatele ei în timp ce se mișcă."
+                },
+                "show": {
+                  "short_description": "Face broasca țestoasă vizibilă în locația sa actuală."
+                },
+                "speed": {
+                  "short_description": "Setează viteza pentru execuția aplicației, care include viteza țestoasei."
+                },
+                "turnLeft": {
+                  "short_description": "Rotește broasca țestoasă lăsată de unghiul specificat. Poziția țestoasei rămâne aceeași."
+                },
+                "turnRight": {
+                  "short_description": "Rotește broasca țestoasă chiar de unghiul specificat. Poziția țestoasei rămâne aceeași."
+                },
+                "turnTo": {
+                  "short_description": "Schimbă direcția țestoasei la un anumit unghi. 0 este în sus, 90 este dreapta, 180 este în jos și 270 este lăsat."
+                }
+              }
             },
             "control": {
               "name": "Control",
               "expressions": {
+                "clearTimeout": {
+                  "palette_params": {
+                    "timeout": {
+                      "description": "Valoarea returnată de funcția setTimeout pentru a anula."
+                    }
+                  }
+                },
+                "setInterval": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "Numărul de milisecunde între fiecare execuție a funcției."
+                    }
+                  }
+                },
+                "setTimeout": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "Numărul de milisecunde de așteptat înainte de a executa funcția."
+                    }
+                  }
+                },
                 "timedLoop": {
                   "palette_params": {
                     "callback": {
@@ -351,8 +677,28 @@
                 "declareAssign_x": {
                   "short_description": "Declara si atribuie o valoare initiala unei variabile."
                 },
+                "declareAssign_list_123": {
+                  "short_description": "Declarați și atribuiți o matrice unei variabile"
+                },
+                "includes": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "Șirul de căutat."
+                    }
+                  }
+                },
+                "indexOf": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "Șirul de căutat."
+                    }
+                  }
+                },
                 "addPair": {
                   "return_value": "Nici unul"
+                },
+                "length": {
+                  "return_value": "Lungimea șirului"
                 }
               }
             },

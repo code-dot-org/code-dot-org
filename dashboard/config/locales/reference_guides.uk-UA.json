@@ -5,8 +5,11 @@
         "csd-2022/accelerometer-events": {
           "display_name": "Події акселерометра"
         },
+        "csd-2022/accuracy-in-ai-lab": {
+          "display_name": "Точність в AI Lab"
+        },
         "csd-2022/app-lab": {
-          "display_name": "App Lab"
+          "display_name": "Програмна Лабораторія"
         },
         "csd-2022/applab-overview": {
           "display_name": "Огляд"
@@ -19,6 +22,9 @@
         },
         "csd-2022/classes": {
           "display_name": "Класи"
+        },
+        "csd-2022/color-lights": {
+          "display_name": "Кольорове світло"
         },
         "csd-2022/css-overview": {
           "display_name": "Огляд"
@@ -101,8 +107,14 @@
         "csd-2022/problem-solving-process-general": {
           "display_name": "Процес вирішення проблем"
         },
+        "csd-2022/selecting-features": {
+          "display_name": "Вибір ознак"
+        },
         "csd-2022/sprites": {
           "display_name": "Спрайти"
+        },
+        "csd-2022/taking-input-with-getproperty": {
+          "display_name": "Отримання вхідних даних за допомогою getProperty"
         },
         "csd-2022/the-counter-pattern": {
           "display_name": "Лічильник шаблону"
@@ -110,11 +122,17 @@
         "csd-2022/the-counter-pattern-2": {
           "display_name": "Лічильник шаблону"
         },
+        "csd-2022/using-data-with-categorical-features": {
+          "display_name": "Використання даних з категоріальними ознаками"
+        },
         "csd-2022/variables": {
           "display_name": "Змінні"
         },
         "csd-2022/velocity": {
           "display_name": "Швидкість"
+        },
+        "csd-2022/web-lab": {
+          "display_name": "Веб-лабораторія"
         }
       }
     }

@@ -3,6 +3,7 @@ import React from 'react';
 import {expect} from '../../../../util/reconfiguredChai';
 import {shallow} from 'enzyme';
 import sinon from 'sinon';
+/* eslint-disable no-restricted-imports */
 import {
   Radio,
   Checkbox,
@@ -10,6 +11,7 @@ import {
   FormGroup,
   HelpBlock,
 } from 'react-bootstrap';
+/* eslint-enable no-restricted-imports */
 
 describe('ButtonList', () => {
   describe('With type: radio', () => {

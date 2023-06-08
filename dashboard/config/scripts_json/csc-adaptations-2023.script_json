@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "csc-adaptations",
-    "serialized_at": "2023-04-28 23:23:46 UTC",
+    "serialized_at": "2023-06-01 18:59:40 UTC",
     "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -81,7 +81,7 @@
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
-        "overview": "In this CS and science-integrated lesson, students will learn how to edit animal behaviors in code. First, students will make a prediction about a fox’s mystery behavior. Then, in the following levels they will use the “edit” button to debug different animal behaviors, including speed, direction, and rotation style. Finally, students will use their new skills to code a unique tropical bird mating dance! \n\nAt the end of class, students will share out their custom projects with their classmates. Students will have a chance to reflect on what they have learned about behaviors in code and animal behaviors in real life. \n",
+        "overview": "In this CS and science-integrated lesson, students will learn how to edit animal behaviors in code. First, students will make a prediction about a fox’s mystery behavior. Then, in the following levels they will use the “edit” button to debug different animal behaviors, including speed, direction, and rotation style. Finally, students will choose an environmental change scenario and use their own creative code to model a new & unique animal adaptation! \n\nAt the end of class, students will share out their custom projects with their classmates. Students will have a chance to reflect on what they have learned about behaviors in code and animal behaviors in real life. \n",
         "preparation": "- Review and complete the online tutorial yourself.\n- Determine in advance which levels might be more challenging for students.\n- Review slides and decide on pacing between student work time and whole group instruction.\n\n#####Optional\n- Prerequisite: \n   - Complete [Animal Adaptations: Lesson 1 & 2](https://studio.code.org/s/csc-adaptations-2023/lessons/1/levels/1)\n   - Complete [Hello World](https://studio.code.org/s/hello-world-food-2021/lessons/1)\n   - Complete [CSF: Course F, Sprites in Action](https://studio.code.org/s/coursef/lessons/4/levels/1)\n",
         "purpose": "Today, you will make predictions about mystery behaviors and debug animal behaviors that aren’t working right. Then, you’ll use your skills to code a unique tropical bird mating dance! "
       },

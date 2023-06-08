@@ -485,6 +485,9 @@
         "8ad0974f-b2ad-4632-bfe5-8c8760cd2e45": {
           "description": "Expliqueu que, en informàtica, un “codi” és un conjunt d’instruccions que pot entendre un ordinador. Digueu-los que avui practicaran la “codificació”, la “programació” i la “depuració”.\n\nDefiniu:\n\n-   **Codificar** significa escriure codi, o un conjunt d’instruccions per un ordinador.\n-   **Programar** és similar: vol dir escriure codi o instruccions. Avui, programareu amb blocs a l’ordinador (si feu servir un tutorial en línia) o amb paper i llapis (si feu servir una activitat sense connexió).\n-   **Depurar** significa revisar el codi per trobar-hi errors i provar de solucionar-los.\n\nPregunteu als alumnes què els agradaria fer després d’acabar la secundària. Feu que aixequin la mà si creuen que aquesta opció requerirà que facin servir un ordinador. Tots haurien d’aixecar la mà, perquè els ordinadors estan per tot arreu: als mòbils, als cotxes, fins i tot als microones i rentavaixelles!\n\nPregunteu als alumnes quants instituts creuen que hi ha als Estats Units. La resposta és que uns 100.000. Ara, demaneu-los que esbrinin quants d’aquests centres fan l’assignatura d’informàtica. La resposta és menys d’un de cada quatre. Això vol dir que menys del 25% de la població d’Estats Units té l’oportunitat d’aprendre informàtica a l’escola.\n\nPregunteu: com creieu que això afecta a la capacitat dels joves per aconseguir la seva feina ideal o per accedir a la universitat a la qual volen anar, si tenen molt poca o cap experiència fent servir els ordinadors? Aquest problema no el trobem només als Estats Units, sinó arreu del món.\n\nExpliqueu que hi ha alumnes d’arreu del món que, igual que ells, estan fent l’Hora del Codi per conscienciar sobre aquesta injustícia, és a dir, la manca d’accés a la formació en informàtica. La vostra classe hi participarà no només per aprendre els fonaments de la ciència de la computació i divertir-se una estona, sinó també per posicionar-se i alçar la veu sobre com d’important és que tothom pugui aprendre informàtica."
         },
+        "0e395269-9740-4229-a7ac-b18b9f4eced9": {
+          "name": "Gumball Joc Lab"
+        },
         "eea63453-59c2-4c48-8d04-d6612d379584": {
           "tips": [
             "Abans de demanar als alumnes que facin el tutorial, cal que el feu vosaltres mateixos. Així, sabreu què podeu esperar i podreu decidir si voleu que els alumnes triïn el tutorial que vulguin, o si preferiu assignar tutorials concrets segons les necessitats del grup."
@@ -875,6 +878,9 @@
         "bdbf2184-a699-461e-b766-8b3e35e1a5e8": {
           "name": "Introducció",
           "progression_name": "Introducció al Laboratori d'Aplicacions - Vídeo"
+        },
+        "430134f0-2f85-4888-abd3-f55fbf0753da": {
+          "name": "Introducció a App Lab"
         },
         "11f7be58-02e1-4667-84e4-6310924c189d": {
           "progression_name": "Configurar propietats"
@@ -6593,6 +6599,7 @@
           ]
         },
         "f71ff33f-68b6-4385-940d-3532a4eae4f2": {
+          "name": "El procés de resolució de problemes",
           "tips": [
             null
           ]
@@ -10317,6 +10324,7 @@
           ]
         },
         "73c2cb42-e6a3-4317-8aab-7196411578ab": {
+          "name": "Targetes de model en AI Lab",
           "tips": [
             null
           ]
@@ -10532,6 +10540,7 @@
           ]
         },
         "08020742-2f96-4a09-8d5a-c3034a4b8962": {
+          "name": "Enquesta",
           "progression_name": "L'enquesta de la Kim"
         },
         "218c7165-58fd-4f8f-b70d-52d564cb22a6": {
@@ -10717,6 +10726,9 @@
         "ac9962af-c594-428a-8aca-016b794e0c00": {
           "progression_name": "Introducció als sprites"
         },
+        "9950874e-2903-4dd5-993b-756daf5d7e7d": {
+          "progression_name": "La pestanya Animació"
+        },
         "b3155f3f-f1d8-49d2-8fb9-32f7caf2de13": {
           "progression_name": "Afegir imatges"
         },
@@ -10780,6 +10792,9 @@
         "a781606d-23c1-42ae-a33d-ce9cfffe22b1": {
           "name": "Reflexió",
           "progression_name": "Reflexió"
+        },
+        "128361aa-1832-4581-a686-26ec8d72bc30": {
+          "progression_name": "Velocitat"
         },
         "c67c09eb-f947-4b9e-93df-740612cef3dc": {
           "progression_name": "Desplaçador lateral"
@@ -10935,6 +10950,9 @@
         "6038ca77-b7b2-4328-bbd8-e3e6380019e3": {
           "name": "Reflexió",
           "progression_name": "Reflexió"
+        },
+        "1fa3a144-768b-4b54-adff-9f74f35e5212": {
+          "progression_name": "Introducció a les matrius"
         },
         "40f60514-4454-4dca-9379-ca334ad7efbb": {
           "progression_name": "LED de colors"
@@ -11276,6 +11294,9 @@
         "af8ecf2c-ca6a-4d48-a1be-783adf975f27": {
           "progression_name": "Pràctica"
         },
+        "42a28a6d-b136-4659-bdbd-5caed86947d3": {
+          "progression_name": "Utilitzant el bloc de repetició"
+        },
         "93ea2ce1-2886-47f0-a9cc-702b4c5969ce": {
           "progression_name": "Pràctica"
         },
@@ -11378,6 +11399,9 @@
         "3d19ddeb-ca0c-4e1e-9af0-cd5cc2a5eabe": {
           "progression_name": "Pràctica"
         },
+        "1509114f-e57a-4100-b4ec-665739adf403": {
+          "progression_name": "Utilitzant el bloc de repetició"
+        },
         "f86d1539-d7e0-4872-997d-5064553f90ca": {
           "progression_name": "Pràctica"
         },
@@ -11462,6 +11486,9 @@
         },
         "e2314a32-dd2f-4699-9f77-a5398fd0a9f2": {
           "progression_name": "Pràctica"
+        },
+        "f0c21fc1-b243-411a-b177-99f07b95acf3": {
+          "progression_name": "Utilitzant el bloc de repetició"
         },
         "e49641c5-0812-46d3-9bae-93e4c933e04e": {
           "progression_name": "Pràctica"
@@ -12207,6 +12234,9 @@
         "5136ca8d-00e2-4fa2-8563-f2edd7bc46d6": {
           "progression_name": "Introducció als sprites"
         },
+        "fe842642-97e4-423d-af5a-a5ffc35984b4": {
+          "progression_name": "La pestanya Animació"
+        },
         "aae905a1-38d5-48ad-aed9-4de0921bd1ec": {
           "progression_name": "Afegir imatges"
         },
@@ -12273,6 +12303,9 @@
         "b1d59b54-0412-42c6-8aaa-38c2894d6cdd": {
           "name": "Reflexió",
           "progression_name": "Reflexió"
+        },
+        "1c09bf04-72d5-4d17-8e27-cbc096099cb0": {
+          "progression_name": "Velocitat"
         },
         "d763a5fd-9781-4a36-89f5-6afd6bd25929": {
           "progression_name": "Desplaçador lateral"
@@ -12424,6 +12457,9 @@
         "742c3f07-5b58-48b1-a4df-8180d29ed609": {
           "name": "Reflexió",
           "progression_name": "Reflexió"
+        },
+        "234a8b22-6373-4b94-a9f1-07e51eb0de2b": {
+          "progression_name": "Introducció a les matrius"
         },
         "59c0b21c-f9c3-4499-86d7-417078468706": {
           "progression_name": "LED de colors"
@@ -12817,6 +12853,9 @@
         "e9c923af-0bf2-42f6-8330-02d063158fa5": {
           "progression_name": "Introducció als sprites"
         },
+        "aef969c1-d9bd-43d4-aa4a-2c88df5c1908": {
+          "progression_name": "La pestanya Animació"
+        },
         "1893f672-0984-4956-a657-90f4a8a4ecb2": {
           "progression_name": "Afegir imatges"
         },
@@ -12904,6 +12943,9 @@
         "f72b823d-ca51-4ed1-8d06-1ccf7f0960d6": {
           "name": "Reflexió",
           "progression_name": "Reflexió"
+        },
+        "4b4b246a-5a4e-40b0-9a98-f5bcd0b96d0c": {
+          "progression_name": "Velocitat"
         },
         "1cbdcce5-22a2-48dd-a2cd-28086ca9579b": {
           "progression_name": "Desplaçador lateral"
@@ -13077,6 +13119,9 @@
         "5436a65c-d0a9-4c88-a666-97fd1238f2f3": {
           "name": "Reflexió",
           "progression_name": "Reflexió"
+        },
+        "9a7b01c8-b4f1-453e-9213-e46b4c42f10d": {
+          "progression_name": "Introducció a les matrius"
         },
         "e3a8bbf5-73fe-4f87-bdf9-7a39bc16d6d2": {
           "progression_name": "LED de colors"
@@ -18725,6 +18770,7 @@
           ]
         },
         "30e5080a-05d0-4193-82e4-f7c81f1adb5c": {
+          "name": "Targetes de model en AI Lab",
           "tips": [
             null
           ]
@@ -18928,6 +18974,7 @@
           ]
         },
         "bb917641-be8e-41f9-8ba5-bad758aeb8d5": {
+          "name": "Enquesta",
           "progression_name": "L'enquesta de la Kim"
         },
         "9f17132f-2c2e-4f16-bead-88b852b9e33f": {
@@ -19851,7 +19898,8 @@
         "528b9a48-dd5d-4f52-b455-be650f9ed180": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Introducció a les matrius"
         },
         "624b7f1b-43ad-451a-80bb-86622fe827e6": {
           "progression_name": "LED de colors"
@@ -21485,6 +21533,7 @@
           ]
         },
         "23f003b6-2c1b-4e88-a343-f77714a50d89": {
+          "name": "El procés de resolució de problemes",
           "tips": [
             null
           ]
@@ -22652,6 +22701,9 @@
         "4a6e59ba-cdbe-4532-9b2e-d878f550ad8e": {
           "progression_name": "Pràctica"
         },
+        "d40ac398-4f8b-4652-8ec0-503d206ccd17": {
+          "progression_name": "Utilitzant el bloc de repetició"
+        },
         "b2a36927-a878-4885-b769-ee48fec75770": {
           "progression_name": "Pràctica"
         },
@@ -22757,6 +22809,9 @@
         },
         "dbe9dad9-78fd-4f1c-8778-79bec55d6fc1": {
           "progression_name": "Pràctica"
+        },
+        "e2a14e5d-ab2d-41ae-ab3f-133d89bc51f1": {
+          "progression_name": "Utilitzant el bloc de repetició"
         },
         "94134ae8-5a03-4079-a051-0538b5db4a77": {
           "progression_name": "Pràctica"
@@ -23334,6 +23389,9 @@
         },
         "a42584dc-7fb5-4988-97da-96177da8a05b": {
           "progression_name": "Pràctica"
+        },
+        "d3456f8d-c77d-4ac0-bc57-d6b0f7adee00": {
+          "progression_name": "Utilitzant el bloc de repetició"
         },
         "f7863404-2557-401b-9c80-dd660b885dad": {
           "progression_name": "Pràctica"
