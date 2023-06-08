@@ -212,12 +212,10 @@ class ApplicationController < ActionController::Base
       response[:share_failure] = response_for_share_failure(options[:share_failure])
     end
 
-    if HintViewRequest.enabled?
-      if script_level && current_user
+    if HintViewRequest.enabled? && (script_level && current_user)
         response[:hint_view_requests] = HintViewRequest.milestone_response(script_level.script, level, current_user)
         response[:hint_view_request_url] = hint_view_requests_path
       end
-    end
 
     if PuzzleRating.enabled?
       response[:puzzle_ratings_enabled] = script_level && PuzzleRating.can_rate?(script_level.script, level, current_user)
