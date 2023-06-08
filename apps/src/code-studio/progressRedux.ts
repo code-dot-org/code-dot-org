@@ -17,7 +17,6 @@ import {
   PayloadAction,
   ThunkAction,
   ThunkDispatch,
-  createAction,
   createSlice,
 } from '@reduxjs/toolkit';
 import {
