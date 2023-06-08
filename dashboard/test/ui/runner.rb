@@ -701,7 +701,7 @@ def cucumber_arguments_for_browser(browser, options)
   arguments += skip_tag('@pegasus_db_access') unless options.pegasus_db_access
   arguments += skip_tag('@dashboard_db_access') unless options.dashboard_db_access
   arguments += skip_tag('@rails_env_test') unless env.test?
-  arguments += skip_tag('@no_mac') if (options.local && OS.mac?) || browser['platformName'].starts_with?('macOS')
+  arguments += skip_tag('@no_mac') if (options.local && OS.mac?) || browser['platformName'].start_with?('macOS')
   # @snickellLOOK INTO THIS BEFORE CONSIDERING MERGING:
   # this parallels logic in application_controller.rb require_levelbuilder_mode_or_test_env
   # except that that method ALSO checks Rails.application.config.levelbuilder_mode
