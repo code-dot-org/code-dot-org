@@ -40,15 +40,17 @@ class I18nSync
 
   def run
     if @options[:interactive]
-      # force switch to the staging branch before sync-in as it contains the most relevant English content
+      # download and distribute translations from the previous sync
+      return_to_staging_branch
+      sync_down if should_i "sync down"
+      sync_out(true) if should_i "sync out"
+      CreateI18nPullRequests.down_and_out if @options[:with_pull_request] && should_i("create the down & out PR")
+
+      # force switch to the staging branch to collect and upload the most relevant English content
       return_to_staging_branch(force: true)
       sync_in if should_i "sync in"
       sync_up if should_i "sync up"
       CreateI18nPullRequests.in_and_up if @options[:with_pull_request] && should_i("create the in & up PR")
-      sync_down if should_i "sync down"
-      sync_out(true) if should_i "sync out"
-      CreateI18nPullRequests.down_and_out if @options[:with_pull_request] && should_i("create the down & out PR")
-      return_to_staging_branch
     elsif @options[:command]
       case @options[:command]
       when 'in'
