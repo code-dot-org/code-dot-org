@@ -29,7 +29,7 @@ export const Triggers: Trigger[] = [
     dropdownLabel: '4',
     buttonLabel: '4',
     keyboardKey: '4',
-  }
+  },
 ];
 
 export const BlockMode = {
