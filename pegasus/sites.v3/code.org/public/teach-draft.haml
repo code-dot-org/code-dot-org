@@ -6,6 +6,47 @@ theme: responsive_full_width
 %link{href: '/css/generated/design-system-pegasus.css', rel: 'stylesheet'}
 %link{href: "/css/generated/teach-styles.css", rel: "stylesheet"}
 
-%section
+%section.top
   .wrapper
-    %h1 Teach computer science and ignite possibilities
+    .text-wrapper.col-50
+      %h1 Teach computer science & ignite possibilities
+      %p Tap into your students' full potential with Code.org's free Computer Science (CS) curriculum.
+      %p.body-two Join the global community of over 2 million educators empowering the next generation of innovators, problem solvers, and digital citizens! Code.org supports teachers the whole way with professional learning, comprehensive curricula, and support when you need it.
+      %a{href: CDO.studio_url("/users/sign_up"), class: "link-button"} Sign up for free
+    %figure.col-45{style: "float: right"}
+      %img.rounded-corners{src: "/images/teach-page-top.png", alt: "", style: "position: relative; width: 100%;"}
+    .clear
+
+%section.why-teach-cs
+  .wrapper
+    %h2 Why teach computer science with Code.org?
+    %div.grid-container
+      %div.flex-container
+        %figure
+          %img{src: "/images/teach-page-why-cs-01.png", alt: ""}
+        .text-wrapper
+          %h3.heading-sm Build foundational CS skills
+          %p Like reading, writing, or math, computer science is foundational to other pursuits. It teaches problem solving and critical thinking, and  enables students to actively participate in an increasingly digital society.
+      %div.flex-container
+        %figure
+          %img{src: "/images/teach-page-why-cs-02.png", alt: ""}
+        .text-wrapper
+          %h3.heading-sm Leverage comprehensive teaching resources
+          %p In-depth lesson plans and flexible professional learning options ensure teachers with diverse backgrounds can successfully teach computer science.
+      %div.flex-container
+        %figure
+          %img{src: "/images/teach-page-why-cs-03.png", alt: ""}
+        .text-wrapper
+          %h3.heading-sm Unlock pathways for all students
+          %p Computing occupations are the largest, fastest-growing, and best-paying sector of all new wages in the U.S.
+      %div.flex-container
+        %figure
+          %img{src: "/images/teach-page-why-cs-04.png", alt: ""}
+        .text-wrapper
+          %h3.heading-sm Understand a world changed by AI
+          %p Teach students how AI works and how to use it safely. Our Professional Learning encourages curiosity and confidence with this evolving technology.
+          %a{href: "/ai"} Explore AI resources
+    %hr.dark
+    %h4 Start teaching computer science with Code.org today!
+    %a.link-button{href: CDO.studio_url("/catalog")} Explore the Curriculum Catalog
+

@@ -2,3 +2,43 @@
 // — supplemental to shared/css/design-system-pegasus.scss
 
 @import 'color', 'font', 'typography', 'breakpoints', 'barlow-semi-condensed-font';
+
+section.top {
+
+  img {
+    box-shadow: 8px 8px 0 $brand_primary_light;
+  }
+}
+
+section.why-teach-cs {
+  text-align: center;
+
+  .grid-container {
+    text-align: left;
+    margin-top: 5rem;
+    display: grid;
+    gap: 6rem;
+
+    @media screen and (min-width: $width-sm) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .flex-container {
+      gap: 2rem;
+    }
+
+    img {
+      width: 8em;
+      height: 8em;
+      border-radius: 50%;
+    }
+  }
+
+  p {
+    @include body-two;
+  }
+
+  hr {
+    margin: 5rem 0;
+  }
+}

@@ -84,6 +84,10 @@ div.divider {
   }
 }
 
+img.rounded-corners {
+  border-radius: $border-radius;
+}
+
 // Lines (<hr>)
 hr {
   border-top: 1px solid $neutral_dark20;
