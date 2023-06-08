@@ -30,7 +30,7 @@ DefaultCheckbox.args = {
       onChange: () => {},
     },
     {
-      name: 'test-checked',
+      name: 'test-indeterminate',
       label: 'Label Indeterminate',
       indeterminate: true,
       onChange: () => {},
@@ -50,7 +50,7 @@ DisabledCheckbox.args = {
       onChange: () => {},
     },
     {
-      name: 'test-checked',
+      name: 'test-disabled-indeterminate',
       label: 'Label Indeterminate',
       indeterminate: true,
       disabled: true,
