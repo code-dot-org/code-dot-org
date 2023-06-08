@@ -249,15 +249,14 @@ const progressSlice = createSlice({
       state.lessonExtrasEnabled = action.payload;
     },
   },
-  extraReducers: builder => {
-    builder.addCase(
-      setViewType,
-      (state, action: PayloadAction<keyof typeof ViewType>) => {
-        state.isSummaryView =
-          action.payload === ViewType.Participant &&
-          state.studentDefaultsSummaryView;
-      }
-    );
+  extraReducers: {
+    // TODO: When we convert viewAsRedux to redux-toolkit, we will need to use createAction there instead
+    // of referencing the string here.
+    [SET_VIEW_TYPE]: (state, action: {viewType: keyof typeof ViewType}) => {
+      state.isSummaryView =
+        action.viewType === ViewType.Participant &&
+        state.studentDefaultsSummaryView;
+    },
   },
 });
 
@@ -348,8 +347,6 @@ export function sendSuccessReport(appType: string): ProgressThunkAction {
 }
 
 // Helpers
-// TODO: When we convert viewAsRedux to redux-toolkit, we should use createAction there instead.
-const setViewType = createAction<keyof typeof ViewType>(SET_VIEW_TYPE);
 
 /**
  * Requests user progress from the server and dispatches other redux actions
