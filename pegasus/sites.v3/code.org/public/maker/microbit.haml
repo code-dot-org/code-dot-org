@@ -1,5 +1,5 @@
 ---
-title: The BBC micro:bit | Code.org
+title: The BBC micro:bit
 theme: responsive_full_width
 ---
 
@@ -20,7 +20,7 @@ theme: responsive_full_width
   .wrapper
     %h1 The BBC micro:bit
     %p.heading-sm.no-margin-bottom The BBC micro:bit is a pocket-sized computer that introduces you to how software and hardware work together.
-    %div.col-50{style: "float: left; margin-top: 3em"}
+    %div.col-50{style: "float: left; margin-top: 2em"}
       %figure.video-responsive{style: "max-width: unset"}
         %div
           %iframe{src: "https://www.youtube-nocookie.com/embed/u2u7UJSRuko", allowFullScreen: 'true', frameborder: '0', title: "Introduction to the BBC micro:bit"}
@@ -84,4 +84,4 @@ theme: responsive_full_width
   .wrapper
     %h2 Curriculum using the micro:bit
     %p Code.org has partnered with the Micro:bit Educational Foundation to offer teachers several resources on using the BBC micro:bit device.
-    = view :maker_curriculum_microbit, explore_unit_link: CDO.studio_url("/s/microbit-2023?viewAs=Instructor"), extension_lessons_link: "/maker/csf-microbit"
+    = view :maker_curriculum_microbit, explore_unit_link: CDO.studio_url("/s/microbit-2023?viewAs=Instructor"), extension_lessons_link: "/maker/csf-microbit", self_paced_pl_link: CDO.studio_url("/courses/self-paced-pl-microbit-2023")

@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React, {useContext, useEffect, useState} from 'react';
 import classNames from 'classnames';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import moduleStyles from './instructions.module.scss';
 import {AnalyticsContext} from '../context';
 import {useSelector} from 'react-redux';
@@ -9,8 +10,9 @@ import {useSelector} from 'react-redux';
  * Renders the Music Lab instructions component.
  */
 const Instructions = ({
-  progression,
+  progressionStep,
   currentLevelIndex,
+  levelCount,
   onNextPanel,
   baseUrl,
   vertical,
@@ -21,9 +23,7 @@ const Instructions = ({
   const currentPanel = currentLevelIndex;
 
   const getNextPanel = () => {
-    return currentPanel + 1 < progression.steps.length
-      ? currentPanel + 1
-      : null;
+    return currentPanel + 1 < levelCount ? currentPanel + 1 : null;
   };
 
   const imageClicked = () => {
@@ -38,8 +38,8 @@ const Instructions = ({
 
   const nextPanel = getNextPanel();
 
-  const progressText = progression
-    ? `${currentPanel + 1}/${progression.steps.length}`
+  const progressText = progressionStep
+    ? `${currentPanel + 1}/${levelCount}`
     : '';
 
   return (
@@ -50,13 +50,13 @@ const Instructions = ({
         vertical && moduleStyles.vertical
       )}
     >
-      {progression && (
+      {progressionStep && (
         <InstructionsPanel
-          panel={progression.steps[currentPanel]}
+          panel={progressionStep}
           message={progressState.message}
           vertical={vertical}
           baseUrl={baseUrl}
-          path={progression.path}
+          path={''}
           imageClicked={imageClicked}
           right={right}
           showBigImage={showBigImage}
@@ -85,8 +85,9 @@ const Instructions = ({
 };
 
 Instructions.propTypes = {
-  progression: PropTypes.object,
+  progressionStep: PropTypes.object,
   currentLevelIndex: PropTypes.number,
+  levelCount: PropTypes.number,
   message: PropTypes.string,
   onNextPanel: PropTypes.func,
   baseUrl: PropTypes.string.isRequired,
@@ -157,8 +158,8 @@ const InstructionsPanel = ({
           vertical && moduleStyles.textVertical
         )}
       >
-        {panel.text}
-        <div className={moduleStyles.message}>{message}</div>
+        <SafeMarkdown markdown={panel.text} />
+        <SafeMarkdown markdown={message} className={moduleStyles.message} />
       </div>
     </div>
   );

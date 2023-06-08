@@ -1,0 +1,6 @@
+name 'aiml-intro-pulse-survey-q2_csd-vpl-23'
+question 'What prior experiences have you had with AI and Machine Learning?'
+right 'This is the first I am learning about AI and Machine Learning'
+right 'I have done smaller AI activities (for example: an hour of code), but this is my first longer class'
+right 'I have already taken classes or done longer online tutorials on AI and Machine Learning'
+allow_multiple_attempts true

@@ -243,6 +243,9 @@ function initializeBlocklyWrapper(blocklyInstance) {
     blocklyWrapper.Block.prototype.getTitleValue;
 
   blocklyWrapper.cdoUtils = {
+    loadBlocksToWorkspace(blockSpace, xml) {
+      return Blockly.Xml.domToBlockSpace(blockSpace, xml);
+    },
     blockLimitExceeded: function (blockType) {
       const blockLimits = Blockly.mainBlockSpace.blockSpaceEditor.blockLimits;
       return blockLimits.blockLimitExceeded && blockLimits.blockLimitExceeded();
@@ -307,6 +310,12 @@ function initializeBlocklyWrapper(blocklyInstance) {
         color,
         transformTextSetLabel
       );
+    },
+    injectCss(document) {
+      return Blockly.Css.inject(document);
+    },
+    resizeSvg(blockSpace) {
+      return blockSpace.blockSpaceEditor.svgResize();
     },
   };
   return blocklyWrapper;
