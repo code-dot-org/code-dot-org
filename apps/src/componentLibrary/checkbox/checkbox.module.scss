@@ -31,7 +31,6 @@ $light_primary_700: #008291;
 
   input[type="checkbox"] {
     position: absolute;
-    left: 0;
     opacity: 0;
 
     &:focus {
@@ -80,6 +79,35 @@ $light_primary_700: #008291;
       &:checked + i::before {
         background: $light_primary_700;
         border-color: $light_primary_500;
+      }
+    }
+  }
+
+  &:has(input[type="checkbox"]:disabled) {
+    span {
+      color: $neutral_dark20;
+    }
+
+    i::before {
+      border-color: $neutral_dark20;
+    }
+
+    input[type="checkbox"] {
+      &:checked + i::before {
+        background: $neutral_dark20;
+        color: $neutral_white;
+      }
+    }
+
+    &:hover {
+      cursor: not-allowed;
+      i::before {
+        background: $neutral_white;
+      }
+
+      input[type="checkbox"]:checked + i::before {
+        background: $neutral_dark20;
+        border-color: $neutral_dark20;
       }
     }
   }
