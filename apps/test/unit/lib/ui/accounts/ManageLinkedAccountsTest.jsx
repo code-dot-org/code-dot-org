@@ -276,6 +276,15 @@ describe('ManageLinkedAccounts', () => {
       expect(googleConnectButton).to.not.have.attr('disabled');
       expect(googleConnectButton).to.not.be.disabled();
     });
+
+    it('Does not disable the Clever connect button', () => {
+      const wrapper = mount(
+        <ManageLinkedAccounts {...DEFAULT_PROPS} userAge={12} usIp={true} />
+      );
+      const cleverConnectButton = wrapper.find('BootstrapButton').at(2);
+      expect(cleverConnectButton).to.not.have.attr('disabled');
+      expect(cleverConnectButton).to.not.be.disabled();
+    });
   });
 
   describe('in the Maker App', () => {

@@ -209,7 +209,15 @@ class OauthConnection extends React.Component {
   };
 
   shouldDisableConnectButton = (userAge, usIp) => {
-    return !!(window.CPA_EXPERIENCE && usIp && userAge < 13);
+    // Clever is a special case where the school district owns/manages the data.
+    if (this.props.credentialType === OAuthProviders.clever) {
+      return false;
+    }
+    return !!(
+      window.CPA_EXPERIENCE &&
+      this.props.usIp &&
+      this.props.userAge < 13
+    );
   };
 
   render() {
@@ -220,8 +228,6 @@ class OauthConnection extends React.Component {
       id,
       email,
       error,
-      userAge,
-      usIp,
     } = this.props;
     // if given an email, we are already connected to this provider and should
     // present the option to disconnect. Otherwise, we should present the
@@ -274,8 +280,7 @@ class OauthConnection extends React.Component {
                 text={buttonText}
                 disabled={
                   !!disconnectDisabledMessage ||
-                  (!isConnected &&
-                    this.shouldDisableConnectButton(userAge, usIp))
+                  (!isConnected && this.shouldDisableConnectButton())
                 }
               />
               <RailsAuthenticityToken />
