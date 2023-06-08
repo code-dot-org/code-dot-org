@@ -1,7 +1,6 @@
 import React from 'react';
 import {render, screen, fireEvent} from '@testing-library/react';
 import {Provider} from 'react-redux';
-import {configureStore} from '@reduxjs/toolkit';
 import {assert, expect} from '../../../util/reconfiguredChai';
 import {
   setWindowLocation,
@@ -11,7 +10,12 @@ import responsive, {
   setResponsiveSize,
   ResponsiveSize,
 } from '@cdo/apps/code-studio/responsiveRedux';
-import {restoreRedux, stubRedux} from '@cdo/apps/redux';
+import {
+  getStore,
+  registerReducers,
+  restoreRedux,
+  stubRedux,
+} from '@cdo/apps/redux';
 import CurriculumCatalog from '@cdo/apps/templates/curriculumCatalog/CurriculumCatalog';
 import {
   allCurricula,
@@ -40,7 +44,8 @@ describe('CurriculumCatalog', () => {
 
   beforeEach(() => {
     stubRedux();
-    store = configureStore({reducer: {responsive, teacherSections}});
+    registerReducers({responsive, teacherSections});
+    store = getStore();
     store.dispatch(setResponsiveSize(ResponsiveSize.lg));
     store.dispatch(setSections(sections));
 
