@@ -141,6 +141,7 @@ const progressSlice = createSlice({
       state.scriptDisplayName = action.payload.scriptDisplayName;
       state.unitTitle = action.payload.unitTitle;
       state.unitDescription = action.payload.unitDescription;
+      state.unitStudentDescription = action.payload.unitStudentDescription;
       state.courseId = action.payload.courseId;
       state.courseVersionId = action.payload.courseVersionId;
       state.currentLessonId = currentLessonId;
