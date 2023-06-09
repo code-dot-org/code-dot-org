@@ -3,6 +3,12 @@ import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
 import * as color from '../../util/color';
 import cookies from 'js-cookie';
+import {
+  Heading1,
+  BodyOneText,
+  EmText,
+  StrongText,
+} from '@cdo/apps/componentLibrary/typography';
 
 function permissionGrantedMessage(date) {
   // Get the current locale.
@@ -19,17 +25,19 @@ function permissionGrantedMessage(date) {
   );
   return (
     <div id="permission_granted_container" style={styles.container}>
-      <h2 style={styles.header}>
+      <Heading1 visualAppearance="heading-lg">
         {i18n.newStudentAccountConsentValidHeader()}
-      </h2>
-      <p>
-        <strong>{i18n.newStudentAccountConsentValidPermission()} </strong>
+      </Heading1>
+      <BodyOneText>
+        <StrongText>
+          {i18n.newStudentAccountConsentValidPermission()}{' '}
+        </StrongText>
         <span style={styles.grantDate}>{grantedDateString}</span>
-      </p>
-      <p>{i18n.newStudentAccountConsentValidMessage()}</p>
-      <p>
-        <em>{i18n.newStudentAccountConsentEmailUnknown()}</em>
-      </p>
+      </BodyOneText>
+      <BodyOneText>{i18n.newStudentAccountConsentValidMessage()}</BodyOneText>
+      <BodyOneText>
+        <EmText>{i18n.newStudentAccountConsentEmailUnknown()}</EmText>
+      </BodyOneText>
     </div>
   );
 }
@@ -37,13 +45,13 @@ function permissionGrantedMessage(date) {
 function expiredTokenMessage() {
   return (
     <div id="expired_token_container" style={styles.container}>
-      <h2 style={styles.header}>
+      <Heading1 visualAppearance="heading-lg">
         {i18n.newStudentAccountConsentExpiredHeader()}
-      </h2>
-      <p>{i18n.newStudentAccountConsentExpiredMessage()}</p>
-      <p>
-        <em>{i18n.newStudentAccountConsentEmailUnknown()}</em>
-      </p>
+      </Heading1>
+      <BodyOneText>{i18n.newStudentAccountConsentExpiredMessage()}</BodyOneText>
+      <BodyOneText>
+        <EmText>{i18n.newStudentAccountConsentEmailUnknown()}</EmText>
+      </BodyOneText>
     </div>
   );
 }
@@ -70,9 +78,6 @@ const styles = {
     marginTop: 10,
     maxWidth: 700,
     padding: 20,
-  },
-  header: {
-    marginBottom: '10px',
   },
   grantDate: {
     color: color.bright_green,
