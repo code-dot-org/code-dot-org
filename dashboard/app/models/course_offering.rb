@@ -221,14 +221,8 @@ class CourseOffering < ApplicationRecord
   end
 
   def recommended?(locale_code = 'en-us')
-    locale_str = locale_code&.to_s
-    return true if locale_str&.start_with?('en')
-
-    if latest_published_version.content_root_type == 'Unit'
-      Unit.latest_stable_version(latest_published_version.content_root.family_name, locale: locale_code)&.version_year == latest_published_version&.version_year
-    else
-      UnitGroup.latest_stable_version(latest_published_version.content_root.family_name, locale: locale_code)&.version_year == latest_published_version&.version_year
-    end
+    return false if latest_published_version.nil?
+    latest_published_version.recommended?(locale_code)
   end
 
   def summarize_for_edit
