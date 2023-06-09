@@ -9,20 +9,14 @@ $light_primary_700: #008291;
 
 /* stylelint-enable */
 
-
+// Checkbox common styles
 .label {
   i {
-    width: 20px;
-    height: 20px;
     vertical-align: bottom;
 
     &::before {
       display: inline-block;
       content: ' ';
-      font-size: 11px;
-      width: 16px;
-      height: 16px;
-      line-height: 16px;
       text-align: center;
       border: 2px solid $neutral_dark;
       border-radius: 4px;
@@ -36,19 +30,6 @@ $light_primary_700: #008291;
   input[type="checkbox"] {
     position: absolute;
     opacity: 0;
-
-    &:focus {
-      + i::before {
-        outline: 2px solid $brand_primary_light;
-        outline-offset: 2px;
-        border-radius: 4px;
-      }
-      &:indeterminate + i::before {
-        color: $neutral_white;
-        background: $light_primary_500;
-        border: 2px solid $light_primary_500;
-      }
-    }
 
     &:checked + i::before {
       content: "\f00c";
@@ -64,8 +45,23 @@ $light_primary_700: #008291;
       border: 2px solid $light_primary_500;
       border-radius: 4px;
     }
+
+    // Focus styles
+    &:focus {
+      + i::before {
+        outline: 2px solid $brand_primary_light;
+        outline-offset: 2px;
+        border-radius: 4px;
+      }
+      &:indeterminate + i::before {
+        color: $neutral_white;
+        background: $light_primary_500;
+        border: 2px solid $light_primary_500;
+      }
+    }
   }
 
+  // Hover styles
   &:hover {
     cursor: pointer;
 
@@ -85,6 +81,7 @@ $light_primary_700: #008291;
     }
   }
 
+  // Pressed styles
   &:active {
     i {
       &::before {
@@ -132,5 +129,65 @@ $light_primary_700: #008291;
         border-color: $neutral_dark20;
       }
     }
+  }
+}
+
+// Sizes
+.label-xs {
+  i {
+    width: 16px;
+    height: 16px;
+  }
+
+  i::before {
+    font-size: 8px;
+    width: 12px;
+    height: 12px;
+    line-height: 12px;
+  }
+
+}
+
+.label-s {
+  i {
+    width: 18px;
+    height: 18px;
+  }
+
+  i::before {
+    font-size: 9.5px;
+    width: 14px;
+    height: 14px;
+    line-height: 14px;
+  }
+
+}
+
+.label-m {
+  i {
+    width: 20px;
+    height: 20px;
+  }
+
+  i::before {
+    font-size: 11px;
+    width: 16px;
+    height: 16px;
+    line-height: 16px;
+  }
+
+}
+
+.label-l {
+  i {
+    width: 24px;
+    height: 24px;
+  }
+
+  i::before {
+    font-size: 13px;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
   }
 }
