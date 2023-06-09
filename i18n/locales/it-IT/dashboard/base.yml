@@ -866,6 +866,8 @@ it:
     submit-incomplete-body: "Non hai risposto a tutte le domande. Non è possibile modificare le tue risposte dopo averle inviate.  Sei sicuro di volerle inviare?"
     submit-complete-title: "Invia le tue risposte"
     submit-complete-body: "Non puoi modificare la tue risposte dopo averle inviate.  Sei sicuro?"
+  level_summary:
+    correct_answer: "Risposta Corretta"
   match:
     wrong_title: "Riprova!"
     wrong_body: "La risposta che hai scelto non è corretta.  Per favore riprova!"

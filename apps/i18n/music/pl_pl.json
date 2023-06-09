@@ -39,6 +39,8 @@
   "blockly_fieldRestOneMeasure": "1 rytm",
   "blockly_fieldRestMeasures": "{num} rytmów",
   "blockly_fieldTriggerStartImmediately": "natychmiast",
+  "blockly_fieldTriggerStartNextBeat": "w następnym rytmie",
+  "blockly_fieldTriggerStartNextMeasure": "w następnym takcie",
   "blockly_functionNamePlaceholder": "moja funkcja",
   "blockly_toolboxCategoryEffects": "Efekty",
   "blockly_toolboxCategoryEvents": "Zdarzenia",

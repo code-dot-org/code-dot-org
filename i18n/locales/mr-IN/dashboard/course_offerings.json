@@ -22,8 +22,14 @@
   "starwarsblocks": "स्टार वॉर्स: कोड वापरून आकाशगंगा तयार करणे (ब्लॉकली)",
   "text-compression": "टेक्स्ट कॉम्प्रेशन ",
   "csa-self-paced-pl": "CSA पायलट शिक्षकांसाठी Code.org नेव्हिगेट करणे",
+  "ai-ethics": "AI आचारसंहिता उपक्रम ",
+  "counting-csc": "मोजणी उपक्रम ",
+  "explore-data-1": "डेटा उपक्रम ",
   "outbreak-csc": "उद्रेक",
+  "spelling-bee": "शब्दलेखन उपक्रम ",
   "poem-art": "कविता कला ",
+  "poetry": "कवितेसह कोडींग",
+  "hello-world-retro": "हॅलो वर्ल्ड: रेट्रो",
   "poetry-hoc3": "कविता-hoc3",
   "csa-u8-dev": "csa-u8-dev",
   "outbreakmodule": "आऊटब्रेक मोड्यूल ",
@@ -36,5 +42,6 @@
   "hello-world-space": "हॅलो वर्ल्ड: जागा",
   "hello-world-soccer": "हॅलो वर्ल्ड: फुटबॉल",
   "playground": "खेळाचे मैदान",
-  "design-process": "डिझाईन प्रक्रिया"
+  "design-process": "डिझाईन प्रक्रिया",
+  "web-development": "वेब डेव्हलपमेंट"
 }

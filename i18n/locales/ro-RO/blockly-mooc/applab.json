@@ -18,6 +18,7 @@
   "designToolboxHeader": "Cutie de instrumente de proiectare",
   "designWorkspaceDescription": "Faceți clic pe un element sau alegeți-l din meniul derulant de mai jos pentru a-i edita proprietățile. Creați cod în Evenimente.",
   "designWorkspaceHeader": "Spaţiu de lucru: ",
+  "designElementPhotoSelectClickName": "Schimbă",
   "designElementPhotoSelectClickDescription": "Declanșat când este selectată o fotografie.",
   "downloadMakerAppFor": "Descarcă Code.org Maker App pentru {OS} ({installerVersion})",
   "dropletBlock_appendItem_description": "Adăugați elementul la sfârșitul matricei.",
