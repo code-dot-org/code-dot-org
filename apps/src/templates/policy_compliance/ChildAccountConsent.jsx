@@ -18,25 +18,21 @@ function permissionGrantedMessage(date) {
     month: 'long',
     day: 'numeric',
   };
-  const grantedDateString = i18n.newStudentAccountConsentValidPermissionGranted(
-    {
-      date: date.toLocaleDateString(locale, {...dateOptions}),
-    }
-  );
+  const grantedDateString = i18n.childAccountConsentValidPermissionGranted({
+    date: date.toLocaleDateString(locale, {...dateOptions}),
+  });
   return (
     <div id="permission_granted_container" style={styles.container}>
       <Heading1 visualAppearance="heading-lg">
-        {i18n.newStudentAccountConsentValidHeader()}
+        {i18n.childAccountConsentValidHeader()}
       </Heading1>
       <BodyOneText>
-        <StrongText>
-          {i18n.newStudentAccountConsentValidPermission()}{' '}
-        </StrongText>
+        <StrongText>{i18n.childAccountConsentValidPermission()} </StrongText>
         <span style={styles.grantDate}>{grantedDateString}</span>
       </BodyOneText>
-      <BodyOneText>{i18n.newStudentAccountConsentValidMessage()}</BodyOneText>
+      <BodyOneText>{i18n.childAccountConsentValidMessage()}</BodyOneText>
       <BodyOneText>
-        <EmText>{i18n.newStudentAccountConsentEmailUnknown()}</EmText>
+        <EmText>{i18n.childAccountConsentEmailUnknown()}</EmText>
       </BodyOneText>
     </div>
   );
@@ -46,11 +42,11 @@ function expiredTokenMessage() {
   return (
     <div id="expired_token_container" style={styles.container}>
       <Heading1 visualAppearance="heading-lg">
-        {i18n.newStudentAccountConsentExpiredHeader()}
+        {i18n.childAccountConsentExpiredHeader()}
       </Heading1>
-      <BodyOneText>{i18n.newStudentAccountConsentExpiredMessage()}</BodyOneText>
+      <BodyOneText>{i18n.childAccountConsentExpiredMessage()}</BodyOneText>
       <BodyOneText>
-        <EmText>{i18n.newStudentAccountConsentEmailUnknown()}</EmText>
+        <EmText>{i18n.childAccountConsentEmailUnknown()}</EmText>
       </BodyOneText>
     </div>
   );
