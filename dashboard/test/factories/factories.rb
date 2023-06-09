@@ -692,6 +692,11 @@ FactoryBot.define do
     level_num {'custom'}
   end
 
+  factory :music, parent: :level, class: Music do
+    game {Game.music}
+    level_num {'custom'}
+  end
+
   factory :multi, parent: :level, class: Multi do
     game {create(:game, app: "multi")}
     transient do
