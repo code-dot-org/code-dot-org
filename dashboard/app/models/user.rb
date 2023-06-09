@@ -97,9 +97,11 @@ class User < ApplicationRecord
   #     The normalized single-character gender value is stored in the gender column.
   #   us_state: A 2 letter code United States state code the user has given us.
   #   country_code: The country the user was in when they told us their
-  #   us_state.
-  #   child_account_compliance_state: The state of a user's compliance with the CPA.
-  #   child_account_compliance_state_last_updated: The date the user became compliant with the CPA.
+  #     us_state.
+  #   child_account_compliance_state: The state of a user's compliance with our
+  #     child account policy.
+  #   child_account_compliance_state_last_updated: The date the user became
+  #     compliant with our child account policy.
   serialized_attrs %w(
     ops_first_name
     ops_last_name
