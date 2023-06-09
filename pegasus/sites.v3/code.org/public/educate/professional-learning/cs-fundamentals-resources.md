@@ -27,7 +27,6 @@ In-person instruction from an experienced computer science facilitator, includin
 **All costs are covered by Code.org**<br />
 You’ll also receive (at no cost to you):
 
-+ Printed curriculum guide
 + Certificate of completion (which could count for PD credit)
 + Classroom supplies for the unplugged lessons
 + Fun Code.org swag
@@ -55,7 +54,6 @@ In-person instruction including an intro to computer science, pedagogy, overview
 **All costs are covered by Code.org**
 There is no charge for these workshops and attending teachers will also receive (at no cost):
 
-- Printed curriculum guide
 - Classroom supplies for the unplugged lessons
 - Certificate of completion (which could count for PD credit)
 - Fun Code.org swag
@@ -77,7 +75,7 @@ But now our elementary schools can, at no cost, with the help of Code.org. [Lear
 
 Code.org is looking to [partner with school districts](/educate/k5-district-partnership) to prepare a Facilitator (chosen by the district) to deliver one-day, in-person workshops to district elementary school teachers to teach computer science in a format that's fun and accessible. 
 
-If accepted, Code.org would cover all costs of training the Facilitator, and would provide, free of charge, the Code Studio curriculum, supplies needed to host the workshops, including take home materials for attending teachers such as a printed curriculum guide, classroom supplies to teach the unplugged activities and fun Code.org swag.
+If accepted, Code.org would cover all costs of training the Facilitator, and would provide, free of charge, the Code Studio curriculum, supplies needed to host the workshops, including take home materials for attending teachers, classroom supplies to teach the unplugged activities and fun Code.org swag.
 
 In return, the district would be responsible for identifying a member of the district staff to facilitate the Code Studio professional development workshops and prepare district teachers to offer the Code Studio curriculum broadly within grades K-5.
 
@@ -105,7 +103,6 @@ In-person instruction from an experienced computer science facilitator, includin
 **All costs are covered by Code.org**<br />
 You’ll also receive (at no cost to you):
 
-+ Printed curriculum guide
 + Certificate of completion (which could count for PD credit)
 + Classroom supplies for the unplugged lessons
 + Fun Code.org swag
