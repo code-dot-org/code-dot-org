@@ -2632,6 +2632,27 @@ class User < ApplicationRecord
     'WY' => 'Wyoming'
   }
 
+  # Returns a query for all the accounts which have expired according to the
+  # our Child Account Policy.
+  def self.expired_child_accounts
+    where_child_account_past_expiration_date.
+      where_child_account_does_not_have_parent_permission.
+      where_child_account_policy_applies_to_us_state
+  end
+
+  def self.where_child_account_policy_applies_to_us_state
+    states = ['CO']
+    where("JSON_EXTRACT(properties, '$.us_state') IN (?)", states)
+  end
+
+  def self.where_child_account_does_not_have_parent_permission
+    # DAYNE TODO replace 'g' with ChildAccountCompliance::PERMISSION_GRANTED
+    where("JSON_EXTRACT(properties, '$.child_account_compliance_state') != ?", 'g')
+  end
+
+  def self.where_child_account_past_expiration_date(expiration_date = 7.days.ago)
+    where('created_at < ?', expiration_date)
+  end
   # Verifies that the serialized attribute "us_state" is a 2 character string
   # representing a US State or "??" which represents a "N/A" kind of response.
   private def validate_us_state
