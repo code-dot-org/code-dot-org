@@ -485,8 +485,7 @@ class UnitGroup < ApplicationRecord
     return nil if family_name.blank?
 
     stable_course_versions = all_courses.select do |course|
-      course.family_name == family_name &&
-        course.published_state == Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+      course.family_name == family_name && course.launched? && !course.default_unit_group_units.empty?
     end.sort_by(&:version_year).reverse
 
     locale_str = locale&.to_s
