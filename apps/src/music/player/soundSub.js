@@ -6,7 +6,11 @@ var audioContext = null;
 
 var soundEffects = null;
 
-// var soundSourceIdUpto = 0;
+// Length of time to fade out a sound, if trimming to a specific duration
+const RELEASE_DURATION_SECONDS = 0.1;
+// Time constant used to compute the release rate; at each time constant
+// interval the sound will decay exponentially.
+const RELEASE_TIME_CONSTANT = 0.075;
 
 function createAudioContext(desiredSampleRate) {
   var AudioCtor = window.AudioContext || window.webkitAudioContext;
@@ -108,23 +112,38 @@ WebAudio.prototype.PlaySoundByBuffer = function (
   when,
   loop,
   effects,
-  callback
+  callback,
+  duration
 ) {
-  var source = audioContext.createBufferSource(); // creates a sound source
+  const source = audioContext.createBufferSource(); // creates a sound source
   source.buffer = audioBuffer; // tell the source which sound to play
+  let currentNode = source;
+
+  if (duration) {
+    // If playing for a specific duration, apply a small fadeout to the sound
+    // to prevent clicks and pops
+    const gainNode = audioContext.createGain();
+    gainNode.gain.setTargetAtTime(
+      0,
+      when + duration - RELEASE_DURATION_SECONDS,
+      RELEASE_TIME_CONSTANT
+    );
+    source.connect(gainNode);
+    currentNode = gainNode;
+  }
 
   if (effects) {
     // Insert sound effects, which will connect to the output.
-    soundEffects.insertEffects(effects, source);
+    soundEffects.insertEffects(effects, currentNode);
   } else {
     // No sound effects, so we will connect directly to the output.
-    source.connect(audioContext.destination);
+    currentNode.connect(audioContext.destination);
   }
   source.onended = callback.bind(this, id);
 
   source.loop = loop;
 
-  source.start(when); // play the source now
+  source.start(when, 0, duration); // play the source now
 
   if (['suspended', 'interrupted'].includes(source.context.state)) {
     source.context.resume();
