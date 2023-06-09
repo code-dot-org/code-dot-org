@@ -145,15 +145,17 @@ class CourseVersionTest < ActiveSupport::TestCase
     refute unit_group.course_version.recommended?
   end
 
-  test "recommended? is true if its the only course version in the course offering" do
-    script = create :script, family_name: 'ss', version_year: '2050', is_course: true, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+  test "recommended? is true if it has only one course version in the course offering and its supported in user locale" do
+    script = create :script, family_name: 'ss', version_year: '2050', is_course: true, supported_locales: ['fake-locale'], published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
     CourseOffering.add_course_offering(script)
 
     unit_group = create :unit_group, family_name: 'ug', version_year: '2050', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+    unit_group_unit = create(:script, name: 'ug-2050', supported_locales: ['fake-locale'])
+    create :unit_group_unit, unit_group: unit_group, script: unit_group_unit, position: 1
     CourseOffering.add_course_offering(unit_group)
 
-    assert script.course_version.recommended?
-    assert unit_group.course_version.recommended?
+    assert script.course_version.recommended?('fake-locale')
+    assert unit_group.course_version.recommended?('fake-locale')
   end
 
   test "recommended? is true if its the latest stable version of unit in the family" do
