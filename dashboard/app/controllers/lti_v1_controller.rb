@@ -1,13 +1,28 @@
+require "base64"
+
 class LtiV1Controller < ApplicationController
-  # Don't require an authenticity token because LTI Platforms POST to this controller.
+  # Don't require an authenticity token because LTI Platforms POST to this
+  # controller.
   skip_before_action :verify_authenticity_token
 
   # [GET/POST] /lti/v1/login(/:platform_id)
+  #
+  # Most LTI Platforms should send a client_id as part of the login request.
+  # However, it is not required per the LTI 1.3 spec. In these cases, we can
+  # supply clients with a unique login URL, so we can identify the caller's
+  # identity. The requst will always contain the iss param, as required by the
+  # LTI 1.3 standard
+  # https://www.imsglobal.org/spec/security/v1p0/#step-1-third-party-initiated-login
   def login
+    # First check if the request contains a client_id
     if params[:client_id]
       query_params = {client_id: params[:client_id], issuer: params[:iss]}
+
+    # If no client_id, check URL path param for unique platform_id
     elsif params[:platform_id]
       query_params = {platform_id: params[:platform_id]}
+
+    # If neither exist, return unauthorized
     else
       return unauthorized_status
     end
@@ -22,7 +37,7 @@ class LtiV1Controller < ApplicationController
       client_id: lti_integration[:client_id],
       redirect_uri: CDO.studio_url('/lti/v1/authenticate', CDO.default_scheme),
       login_hint:  params[:login_hint],
-      lti_message_hint: params[:lti_message_hint].to_s, # TODO: is this needed? Canvas sends it, what happens if we don't send it back? What about other LTI Platforms?
+      lti_message_hint: params[:lti_message_hint].to_s, # Required by Canvas
       state: create_and_set_state,
       response_mode: 'form_post',
       nonce: create_and_set_nonce,
