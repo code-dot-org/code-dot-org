@@ -289,6 +289,8 @@ it:
               display_name: Contenuto
             practice:
               display_name: Pratiche d'insegnante
+        CSDU1-Draft:
+          description_short: Risoluzione dei Problemi
         CSDU5-Draft:
           description_short: Dati
         CSF_Secret_Sample_Story:
@@ -3658,10 +3660,12 @@ it:
               display_name: Capitolo 1
             lessonGroup-3:
               display_name: Capitolo 2
+          title: Risoluzione dei Problemi
         testing-focus-on-creativity1:
           lesson_groups:
             lessonGroup-2:
               display_name: Capitolo 1
+          title: Risoluzione dei Problemi
         testing-focus-on-creativity2:
           lesson_groups:
             lessonGroup-2:

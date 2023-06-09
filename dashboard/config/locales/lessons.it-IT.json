@@ -21,7 +21,8 @@
         "poem-art-2021/Poem Art": {
           "name": "L'arte della poesia",
           "overview": "In questa lezione integrata di informatica interdisciplinare ed ELA, gli studenti creeranno animazioni per la poesia, per illustrarne lo stato d'animo. Gli studenti leggeranno e capiranno lo stato d'animo della poesia. Troveranno gli effetti corrispondenti e le immagini per contribuire a illustrarne lo stato d'animo. Infine, gli studenti useranno gli eventi (codici) per mostrare un cambiamento nello stato d'animo, oppure per creare animazioni per l'introduzione di nuove immagini in una poesia. \n\nQuesta lezione può essere completata come una lezione indipendente di 1 ora. C'è anche la possibilità di usarla come prima lezione del modulo costituito da tante lezioni, chiamato [Programmare con la poesia](http://studio.code.org/s/poetry-2021).",
-          "preparation": "-   Rivedi e completa il tutorial online da solo: [Poem Art](http://studio.code.org/s/poem-art).\n\n-   Assicurati di provare le attività prima di chiedere ai tuoi studenti di completarle.\n\n-   Controlla la tua tecnologia e decidi se hai bisogno di risolvere qualcosa in anticipo.\n\n-   Alcuni livelli richiedono un suono per essere giocati. Distribuisci le cuffie in anticipo. \n\n-   [Opzionale] 2 foglietti adesivi per studente per la valutazione."
+          "preparation": "-   Rivedi e completa il tutorial online da solo: [Poem Art](http://studio.code.org/s/poem-art).\n\n-   Assicurati di provare le attività prima di chiedere ai tuoi studenti di completarle.\n\n-   Controlla la tua tecnologia e decidi se hai bisogno di risolvere qualcosa in anticipo.\n\n-   Alcuni livelli richiedono un suono per essere giocati. Distribuisci le cuffie in anticipo. \n\n-   [Opzionale] 2 foglietti adesivi per studente per la valutazione.",
+          "student_overview": "La poesia è creare arte con le parole. Aggiungi degli effetti visivi e delle immagini alla tua poesia animata. "
         },
         "flappy/Flappy Code": {
           "name": "Flappy",
@@ -34,7 +35,8 @@
           "name": "Ciao mondo - Calcio",
           "overview": "In questa sessione, gli studenti impareranno le base dell'informatica programmando nel Laboratorio dei personaggi, uno strumento che si può usare per creare divertenti progetti d'immaginazione. Gli studenti impareranno a creare e animare i personaggi e a renderli interattivi usando gli eventi. \n\nCi sono molte versioni di questa lezione. Ogni versione insegna gli stessi concetti, ma presenta diverse immagini per attrarre studenti diversi. Per maggiori informazioni, visita  [Hello World landing page.](https://code.org/helloworld)",
           "preparation": "-   Allenati con gli esercizi per trovare le potenziali aree problematiche per la tua lezione.\n-   Usa le risorse in [CS Connections](https://code.org/educate/csc) per creare un piano e imparare di più sull'informatica dopo un tutorial iniziale.",
-          "purpose": "Questa lezione ha lo scopo di preparare gli studenti per creare semplici progetti di programmazione nel Laboratorio dei personaggi. Con questa abilità, gli studenti sarebbero quindi in grado di creare progetti su qualsiasi argomento, tra cui un altro argomento scolastico o qualcosa di personalmente pertinente. Visita [CS Connections](https://code.org/educate/csc) per avere idee su come integrare l'informatica in altre tematiche."
+          "purpose": "Questa lezione ha lo scopo di preparare gli studenti per creare semplici progetti di programmazione nel Laboratorio dei personaggi. Con questa abilità, gli studenti sarebbero quindi in grado di creare progetti su qualsiasi argomento, tra cui un altro argomento scolastico o qualcosa di personalmente pertinente. Visita [CS Connections](https://code.org/educate/csc) per avere idee su come integrare l'informatica in altre tematiche.",
+          "student_overview": "In questa lezione, imparerai le basi di informatica, programmando nello Sprite Lab. Lo Sprite Lab è uno strumento utilizzabile per creare progetti fantasiosi e divertenti. Imparerai a creare e animare gli sprite e a renderli interattivi utilizzando gli eventi."
         },
         "hourofcode/Maze": {
           "name": "Labirinto: Sequenze e Cicli",
@@ -58,7 +60,8 @@
           "name": "Ciao mondo - Emoji",
           "overview": "In questa sessione, gli studenti impareranno le base dell'informatica programmando nel Laboratorio dei personaggi, uno strumento che si può usare per creare divertenti progetti d'immaginazione. Gli studenti impareranno a creare e animare i personaggi e a renderli interattivi usando gli eventi. \n\nCi sono molte versioni di questa lezione. Ogni versione insegna gli stessi concetti, ma presenta diverse immagini per attrarre studenti diversi. Per maggiori informazioni, visita  [Hello World landing page.](https://code.org/helloworld)",
           "preparation": "-   Allenati con gli esercizi per trovare le potenziali aree problematiche per la tua lezione.\n-   Usa le risorse in [CS Connections](https://code.org/educate/csc) per creare un piano e imparare di più sull'informatica dopo un tutorial iniziale.",
-          "purpose": "Questa lezione ha lo scopo di preparare gli studenti per creare semplici progetti di programmazione nel Laboratorio dei personaggi. Con questa abilità, gli studenti sarebbero quindi in grado di creare progetti su qualsiasi argomento, tra cui un altro argomento scolastico o qualcosa di personalmente pertinente. Visita [CS Connections](https://code.org/educate/csc) per avere idee su come integrare l'informatica in altre tematiche."
+          "purpose": "Questa lezione ha lo scopo di preparare gli studenti per creare semplici progetti di programmazione nel Laboratorio dei personaggi. Con questa abilità, gli studenti sarebbero quindi in grado di creare progetti su qualsiasi argomento, tra cui un altro argomento scolastico o qualcosa di personalmente pertinente. Visita [CS Connections](https://code.org/educate/csc) per avere idee su come integrare l'informatica in altre tematiche.",
+          "student_overview": "In questa lezione, imparerai le basi di informatica, programmando nello Sprite Lab. Lo Sprite Lab è uno strumento utilizzabile per creare progetti fantasiosi e divertenti. Imparerai a creare e animare gli sprite e a renderli interattivi utilizzando gli eventi."
         },
         "artist/Artist": {
           "name": "Artista",
@@ -81,7 +84,8 @@
           "name": "Ciao mondo - Cibo",
           "overview": "In questa sessione, gli studenti impareranno le base dell'informatica programmando nel Laboratorio dei personaggi, uno strumento che si può usare per creare divertenti progetti d'immaginazione. Gli studenti impareranno a creare e animare i personaggi e a renderli interattivi usando gli eventi. \n\nCi sono molte versioni di questa lezione. Ogni versione insegna gli stessi concetti, ma presenta diverse immagini per attrarre studenti diversi. Per maggiori informazioni, visita  [Hello World landing page.](https://code.org/helloworld)",
           "preparation": "-   Allenati con gli esercizi per trovare le potenziali aree problematiche per la tua lezione.\n-   Usa le risorse in [CS Connections](https://code.org/educate/csc) per creare un piano e imparare di più sull'informatica dopo un tutorial iniziale.",
-          "purpose": "Questa lezione ha lo scopo di preparare gli studenti per creare semplici progetti di programmazione nel Laboratorio dei personaggi. Con questa abilità, gli studenti sarebbero quindi in grado di creare progetti su qualsiasi argomento, tra cui un altro argomento scolastico o qualcosa di personalmente pertinente. Visita [CS Connections](https://code.org/educate/csc) per avere idee su come integrare l'informatica in altre tematiche."
+          "purpose": "Questa lezione ha lo scopo di preparare gli studenti per creare semplici progetti di programmazione nel Laboratorio dei personaggi. Con questa abilità, gli studenti sarebbero quindi in grado di creare progetti su qualsiasi argomento, tra cui un altro argomento scolastico o qualcosa di personalmente pertinente. Visita [CS Connections](https://code.org/educate/csc) per avere idee su come integrare l'informatica in altre tematiche.",
+          "student_overview": "In questa lezione, imparerai le basi di informatica, programmando nello Sprite Lab. Lo Sprite Lab è uno strumento utilizzabile per creare progetti fantasiosi e divertenti. Imparerai a creare e animare gli sprite e a renderli interattivi utilizzando gli eventi."
         },
         "aquatic/Aquatic": {
           "name": "Minecraft: Viaggio Acquatico",
@@ -98,13 +102,15 @@
           "name": "Ciao mondo - Spazio",
           "overview": "In questa sessione, gli studenti impareranno le base dell'informatica programmando nel Laboratorio dei personaggi, uno strumento che si può usare per creare divertenti progetti d'immaginazione. Gli studenti impareranno a creare e animare i personaggi e a renderli interattivi usando gli eventi. \n\nCi sono molte versioni di questa lezione. Ogni versione insegna gli stessi concetti, ma presenta diverse immagini per attrarre studenti diversi. Per maggiori informazioni, visita  [Hello World landing page.](https://code.org/helloworld)",
           "preparation": "-   Allenati con gli esercizi per trovare le potenziali aree problematiche per la tua lezione.\n-   Usa le risorse in [CS Connections](https://code.org/educate/csc) per creare un piano e imparare di più sull'informatica dopo un tutorial iniziale.",
-          "purpose": "Questa lezione ha lo scopo di preparare gli studenti per creare semplici progetti di programmazione nel Laboratorio dei personaggi. Con questa abilità, gli studenti sarebbero quindi in grado di creare progetti su qualsiasi argomento, tra cui un altro argomento scolastico o qualcosa di personalmente pertinente. Visita [CS Connections](https://code.org/educate/csc) per avere idee su come integrare l'informatica in altre tematiche."
+          "purpose": "Questa lezione ha lo scopo di preparare gli studenti per creare semplici progetti di programmazione nel Laboratorio dei personaggi. Con questa abilità, gli studenti sarebbero quindi in grado di creare progetti su qualsiasi argomento, tra cui un altro argomento scolastico o qualcosa di personalmente pertinente. Visita [CS Connections](https://code.org/educate/csc) per avere idee su come integrare l'informatica in altre tematiche.",
+          "student_overview": "In questa lezione, imparerai le basi di informatica, programmando nello Sprite Lab. Lo Sprite Lab è uno strumento utilizzabile per creare progetti fantasiosi e divertenti. Imparerai a creare e animare gli sprite e a renderli interattivi utilizzando gli eventi."
         },
         "hello-world-animals-2021/Hello World": {
           "name": "Ciao mondo - Animali",
           "overview": "In questa sessione, gli studenti impareranno le base dell'informatica programmando nel Laboratorio dei personaggi, uno strumento che si può usare per creare divertenti progetti d'immaginazione. Gli studenti impareranno a creare e animare i personaggi e a renderli interattivi usando gli eventi. \n\nCi sono molte versioni di questa lezione. Ogni versione insegna gli stessi concetti, ma presenta diverse immagini per attrarre studenti diversi. Per maggiori informazioni, visita  [Hello World landing page.](https://code.org/helloworld)",
           "preparation": "-   Allenati con gli esercizi per trovare le potenziali aree problematiche per la tua lezione.\n-   Usa le risorse in [CS Connections](https://code.org/educate/csc) per creare un piano e imparare di più sull'informatica dopo un tutorial iniziale.",
-          "purpose": "Questa lezione ha lo scopo di preparare gli studenti per creare semplici progetti di programmazione nel Laboratorio dei personaggi. Con questa abilità, gli studenti sarebbero quindi in grado di creare progetti su qualsiasi argomento, tra cui un altro argomento scolastico o qualcosa di personalmente pertinente. Visita [CS Connections](https://code.org/educate/csc) per avere idee su come integrare l'informatica in altre tematiche."
+          "purpose": "Questa lezione ha lo scopo di preparare gli studenti per creare semplici progetti di programmazione nel Laboratorio dei personaggi. Con questa abilità, gli studenti sarebbero quindi in grado di creare progetti su qualsiasi argomento, tra cui un altro argomento scolastico o qualcosa di personalmente pertinente. Visita [CS Connections](https://code.org/educate/csc) per avere idee su come integrare l'informatica in altre tematiche.",
+          "student_overview": "In questa lezione, imparerai le basi di informatica, programmando nello Sprite Lab. Lo Sprite Lab è uno strumento utilizzabile per creare progetti fantasiosi e divertenti. Imparerai a creare e animare gli sprite e a renderli interattivi utilizzando gli eventi."
         },
         "starwars/Hour of Code 2015": {
           "name": "Guerre Stellari: Costruisci una galassia con il codice ( JavaScript)",
@@ -134,7 +140,8 @@
           "name": "Ciao mondo - Retrò",
           "overview": "In questa sessione, gli studenti impareranno le base dell'informatica programmando nel Laboratorio dei personaggi, uno strumento che si può usare per creare divertenti progetti d'immaginazione. Gli studenti impareranno a creare e animare i personaggi e a renderli interattivi usando gli eventi. \n\nCi sono molte versioni di questa lezione. Ogni versione insegna gli stessi concetti, ma presenta diverse immagini per attrarre studenti diversi. Per maggiori informazioni, visita  [Hello World landing page.](https://code.org/helloworld)",
           "preparation": "-   Allenati con gli esercizi per trovare le potenziali aree problematiche per la tua lezione.\n-   Usa le risorse in [CS Connections](https://code.org/educate/csc) per creare un piano e imparare di più sull'informatica dopo un tutorial iniziale.",
-          "purpose": "Questa lezione ha lo scopo di preparare gli studenti per creare semplici progetti di programmazione nel Laboratorio dei personaggi. Con questa abilità, gli studenti sarebbero quindi in grado di creare progetti su qualsiasi argomento, tra cui un altro argomento scolastico o qualcosa di personalmente pertinente. Visita [CS Connections](https://code.org/educate/csc) per avere idee su come integrare l'informatica in altre tematiche."
+          "purpose": "Questa lezione ha lo scopo di preparare gli studenti per creare semplici progetti di programmazione nel Laboratorio dei personaggi. Con questa abilità, gli studenti sarebbero quindi in grado di creare progetti su qualsiasi argomento, tra cui un altro argomento scolastico o qualcosa di personalmente pertinente. Visita [CS Connections](https://code.org/educate/csc) per avere idee su come integrare l'informatica in altre tematiche.",
+          "student_overview": "In questa lezione, imparerai le basi di informatica, programmando nello Sprite Lab. Lo Sprite Lab è uno strumento utilizzabile per creare progetti fantasiosi e divertenti. Imparerai a creare e animare gli sprite e a renderli interattivi utilizzando gli eventi."
         },
         "starwarsblocks/Hour of Code 2015": {
           "purpose": "Questa lezione introduce i concetti fondamentali dell'informatica della codifica e della programmazione, inclusi il sequenziamento e gli eventi. La versione JavaScript del tutorial consente inoltre agli alunni di sperimentare la digitazione del codice.",
@@ -225,8 +232,23 @@
         "k5-onlinepd-2019/Next steps": {
           "name": "Passi successivi"
         },
+        "vigenere/Vigenere": {
+          "name": "Vigenere"
+        },
         "poetry-hoc3/lesson-1": {
           "name": "Studio dello stato d'animo"
+        },
+        "applab-2hour/Digital Design": {
+          "name": "Design Digitale"
+        },
+        "applab-2hour/Event Driven Programming": {
+          "name": "Programmazione Basata sugli Eventi"
+        },
+        "applab-2hour/Basic App Functionality": {
+          "name": "Funzionalità Essenziali dell'App"
+        },
+        "applab-2hour/Getters and Setters": {
+          "name": "Getters and Setters"
         },
         "K5-OnlinePD/Getting Started": {
           "name": "Introduzione"
@@ -291,6 +313,15 @@
         "netsim/Internet Simulator Freeplay": {
           "name": "Simulatore Internet Freeplay"
         },
+        "applab-1hour/Room Escape": {
+          "name": "Escape Room"
+        },
+        "gamelab/Start and End Screens": {
+          "name": "Schermate Iniziali e Finali"
+        },
+        "gamelab/Start and End Screens2": {
+          "name": "Schermate Iniziali e Finali 2"
+        },
         "kodea-pd-2021/Getting Started": {
           "name": "Introduzione"
         },
@@ -323,6 +354,9 @@
         },
         "kodea-pd-2021/Next Steps": {
           "name": "Passi successivi"
+        },
+        "k1hoc2017/Collector Hour of Code 2017": {
+          "name": "Ora di Codice per Collezionisti 2017"
         },
         "frequency_analysis/Frequency Analysis": {
           "name": "Analisi di Frequenza"
@@ -486,6 +520,9 @@
           "preparation": "-   Stampa la guida alla pianificazione o distribuisci una copia digitale a ogni alunno. Esaminala in anticipo nel caso in cui desideri apportare modifiche per adattarlo alla tua classe.\n\n-   Esamina in anticipo le opzioni del livello 3 per familiarizzare con il flusso che gli alunni dovranno seguire.\n\n-   Questa lezione può essere estesa su più giornate, tienine conto nella pianificazione.",
           "purpose": "Questa lezione non introduce nuove abilità o concetti, ma offre invece agli alunni l'opportunità di mettere in pratica,  in modo creativo, ciò che hanno imparato.",
           "student_overview": "Metti in pratica le tue nuove competenze con variabili, in uno dei tre progetti a senza limiti di tempo."
+        },
+        "coursef-2022/[New] Mini-Project: Collector Game": {
+          "name": "Mini Progetto: Gioco di Raccolta"
         },
         "coursef-2022/Simulating Experiments": {
           "name": "Simulazione di esperimenti",
@@ -1227,6 +1264,7 @@
           "student_overview": "\\*\\*Domanda del giorno: come possiamo mantenere segreti i dati e proteggerli da un uso improprio? \\*\\*\n\nIn questa lezione, esplorerai diversi livelli di sicurezza, esaminerai l'importanza della privacy e imparerai a crittografare i dati!"
         },
         "csd5-2022/Create a Representation": {
+          "name": "Progetto - Creare una Rappresentazione",
           "assessment_opportunities": "Usa i Criteri di valutazione del progetto allegati a questa lezione per valutare la padronanza degli obiettivi di apprendimento di questo capitolo da parte degli studenti.",
           "overview": "\\*\\*Domanda del giorno: come posso rappresentare dati complessi usando sistemi binari? \\*\\*\n\nIn questa lezione gli studenti progettano una struttura per rappresentare il loro giorno perfetto utilizzando i sistemi di rappresentazione binaria che hanno appreso in questo capitolo. Gli studenti scriveranno prima una breve descrizione della loro giornata perfetta e poi la esamineranno con un partner per identificare i dati chiave che ritengono possano essere acquisiti da un computer. Durante la lezione, gli studenti decideranno come interpretare una scheda perforata di byte di dati per rappresentare tali dati. Gli studenti useranno quindi i formati ASCII, numeri binari e immagini che hanno imparato per rappresentare i loro giorni perfetti. Gli studenti si scambiano quindi le schede perforate e cercano di decodificare com'è la giornata perfetta dell'altro studente. La lezione termina con una riflessione.",
           "student_overview": "\\*\\*Domanda del giorno: come posso rappresentare informazioni complesse usando sistemi binari? \\*\\*\n\nIn questa lezione, scoprirai come usare i formati ASCII, binari e di immagine per rappresentare il tuo giorno perfetto!"
@@ -2655,6 +2693,9 @@
         "csd6-2018/The Program Design Process": {
           "name": "Il processo di progettazione del programma"
         },
+        "csd6-2018/Project: Make a Game": {
+          "name": "Progetto - Creare un Gioco"
+        },
         "csd6-2018/Arrays and Color LEDs": {
           "name": "Matrici e LED a colori"
         },
@@ -2672,6 +2713,9 @@
         },
         "csd6-2018/Circuits and Physical Prototypes": {
           "name": "Circuiti e prototipi fisici"
+        },
+        "csd6-2018/Project: Prototype an Innovation": {
+          "name": "Progetto: Prototipare un'Innovazione"
         },
         "csd6-2018/CS Discoveries Post-Course Survey": {
           "name": "Sondaggio Post-corso di Alla Scoperta dell'Informatica"
@@ -2697,6 +2741,9 @@
         "csd5-2018/Combining Representations": {
           "name": "Combinazione di rappresentazioni"
         },
+        "csd5-2018/Project - Create a Representation": {
+          "name": "Progetto - Creare una Rappresentazione"
+        },
         "csd5-2018/Problem Solving and Data": {
           "name": "Risoluzione dei problemi e dati"
         },
@@ -2715,11 +2762,20 @@
         "csd5-2018/Automating Data Decisions": {
           "name": "Automatizzare decisioni basate sui dati"
         },
+        "csd5-2018/Project - Solve a Data Problem": {
+          "name": "Progetto - Risolvere un Problema di Dati"
+        },
         "csd5-2018/CS Discoveries Post-Course Survey": {
           "name": "Sondaggio Post-corso di Alla Scoperta dell'Informatica"
         },
+        "csd4-2018/Analysis of Design": {
+          "name": "Analisi del Design"
+        },
         "csd4-2018/Understanding Your User": {
           "name": "Comprendere il tuo utente"
+        },
+        "csd4-2018/User-Centered Design Micro Activity": {
+          "name": "Micro-Attività di Design Incentrata sull'Utente"
         },
         "csd4-2018/User Interfaces": {
           "name": "Interfaccia Utente (UI)"
@@ -2745,8 +2801,17 @@
         "csd4-2018/Prototype Testing": {
           "name": "Collaudo di un prototipo"
         },
+        "csd4-2018/Digital Design": {
+          "name": "Design Digitale"
+        },
+        "csd4-2018/Linking Screens": {
+          "name": "Collegare le Schermate"
+        },
         "csd4-2018/Testing the App": {
           "name": "Verifica l'app"
+        },
+        "csd4-2018/Improving and Iterating": {
+          "name": "Migliorare e Iterare"
         },
         "csd4-2018/Project - App Presentation": {
           "name": "Progetto - Presentazione dell'app"
@@ -2756,6 +2821,9 @@
         },
         "csd2-2018/Exploring Websites": {
           "name": "Esplorando siti web"
+        },
+        "csd2-2018/Websites for Expression ": {
+          "name": "Siti Web per Esprimersi "
         },
         "csd2-2018/Intro to HTML": {
           "name": "Introduzione all'HTML"
@@ -2769,11 +2837,29 @@
         "csd2-2018/Lists": {
           "name": "Liste"
         },
+        "csd2-2018/Intellectual Property and Images": {
+          "name": "Proprietà Intellettuale e Immagini"
+        },
+        "csd2-2018/Clean Code and Debugging": {
+          "name": "Codice Pulito e Debug"
+        },
+        "csd2-2018/Project - Multi-Page Websites": {
+          "name": "Progetto - Siti Web Multipagina"
+        },
         "csd2-2018/Styling Text with CSS": {
           "name": "Definire lo stile del testo con i CSS"
         },
         "csd2-2018/Styling Elements with CSS": {
           "name": "Elementi di stile con CSS"
+        },
+        "csd2-2018/Sources and Search Engines": {
+          "name": "Fonti e Motori di Ricerca"
+        },
+        "csd2-2018/RGB Colors and Classes": {
+          "name": "Colori RGB e Classi"
+        },
+        "csd2-2018/Project - Personal Portfolio Website": {
+          "name": "Progetto - Sito Web del Portfolio Personale"
         },
         "csd2-2018/CS Discoveries Post-Course Survey": {
           "name": "Sondaggio Post-corso di Alla Scoperta dell'Informatica"
@@ -2795,6 +2881,9 @@
         },
         "csd1-2018/Processing": {
           "name": "Elaborazione"
+        },
+        "csd1-2018/Apps and Storage": {
+          "name": "App e Archiviazione"
         },
         "csd1-2018/Project - Propose an App": {
           "name": "Progetto - Proponi un'app"
@@ -2967,6 +3056,9 @@
         "coursef-2019/Internet": {
           "name": "Internet"
         },
+        "coursef-2019/Editing Behaviors": {
+          "name": "Comportamenti nello Sprite Lab"
+        },
         "coursef-2019/Virtual Pet": {
           "name": "Un animale domestico virtuale con il Laboratorio dei personaggi"
         },
@@ -2981,6 +3073,9 @@
         },
         "coursef-2019/End of Course Project": {
           "name": "Progetto di fine corso"
+        },
+        "coursee-2019/Sequencing in the Maze": {
+          "name": "Sequenziamento nel Labirinto"
         },
         "coursee-2019/Programming and Loops with the Artist": {
           "name": "Disegnare con i cicli"
@@ -3002,6 +3097,9 @@
         },
         "coursee-2019/Private and Personal Information": {
           "name": "Dati personali e altri dati"
+        },
+        "coursee-2019/About Me": {
+          "name": "Chi Sono con lo Sprite Lab"
         },
         "coursee-2019/Access Ability": {
           "name": "Progettare per l'accessibilità"
@@ -3104,6 +3202,9 @@
         },
         "express-2019/Alien Dance Party with Sprite Lab": {
           "name": "Discoteca Aliena"
+        },
+        "express-2019/Editing Behaviors": {
+          "name": "Comportamenti nello Sprite Lab"
         },
         "express-2019/Virtual Pet with Sprite Lab": {
           "name": "Un animale domestico virtuale con il Laboratorio dei personaggi"
@@ -3285,6 +3386,9 @@
         "csd6-2019/The Program Design Process": {
           "name": "Il processo di progettazione del programma"
         },
+        "csd6-2019/Project: Make a Game": {
+          "name": "Progetto - Creare un Gioco"
+        },
         "csd6-2019/Arrays and Color LEDs": {
           "name": "Matrici e LED a colori"
         },
@@ -3303,8 +3407,17 @@
         "csd6-2019/Circuits and Physical Prototypes": {
           "name": "Circuiti e prototipi fisici"
         },
+        "csd6-2019/Project: Prototype an Innovation": {
+          "name": "Progetto: Prototipare un'Innovazione"
+        },
+        "csd4-2019/Analysis of Design": {
+          "name": "Analisi del Design"
+        },
         "csd4-2019/Understanding Your User": {
           "name": "Comprendere il tuo utente"
+        },
+        "csd4-2019/User-Centered Design Micro Activity": {
+          "name": "Micro-Attività di Design Incentrata sull'Utente"
         },
         "csd4-2019/User Interfaces": {
           "name": "Interfaccia Utente (UI)"
@@ -3330,8 +3443,17 @@
         "csd4-2019/Prototype Testing": {
           "name": "Collaudo di un prototipo"
         },
+        "csd4-2019/Digital Design": {
+          "name": "Design Digitale"
+        },
+        "csd4-2019/Linking Screens": {
+          "name": "Collegare le Schermate"
+        },
         "csd4-2019/Testing the App": {
           "name": "Verifica l'app"
+        },
+        "csd4-2019/Improving and Iterating": {
+          "name": "Migliorare e Iterare"
         },
         "csd4-2019/Project - App Presentation": {
           "name": "Progetto - Presentazione dell'app"
@@ -3357,6 +3479,9 @@
         "csd5-2019/Combining Representations": {
           "name": "Combinazione di rappresentazioni"
         },
+        "csd5-2019/Project - Create a Representation": {
+          "name": "Progetto - Creare una Rappresentazione"
+        },
         "csd5-2019/Problem Solving and Data": {
           "name": "Risoluzione dei problemi e dati"
         },
@@ -3374,6 +3499,9 @@
         },
         "csd5-2019/Automating Data Decisions": {
           "name": "Automatizzare decisioni basate sui dati"
+        },
+        "csd5-2019/Project - Solve a Data Problem": {
+          "name": "Progetto - Risolvere un Problema di Dati"
         },
         "csd1-2019/Intro to Problem Solving": {
           "name": "Introduzione alla risoluzione di problemi"
@@ -3393,11 +3521,17 @@
         "csd1-2019/Processing": {
           "name": "Elaborazione"
         },
+        "csd1-2019/Apps and Storage": {
+          "name": "App e Archiviazione"
+        },
         "csd1-2019/Project - Propose an App": {
           "name": "Progetto - Proponi un'app"
         },
         "csd2-2019/Exploring Websites": {
           "name": "Esplorando siti web"
+        },
+        "csd2-2019/Websites for Expression ": {
+          "name": "Siti Web per Esprimersi "
         },
         "csd2-2019/Intro to HTML": {
           "name": "Introduzione all'HTML"
@@ -3411,11 +3545,29 @@
         "csd2-2019/Lists": {
           "name": "Liste"
         },
+        "csd2-2019/Intellectual Property and Images": {
+          "name": "Proprietà Intellettuale e Immagini"
+        },
+        "csd2-2019/Clean Code and Debugging": {
+          "name": "Codice Pulito e Debug"
+        },
+        "csd2-2019/Project - Multi-Page Websites": {
+          "name": "Progetto - Siti Web Multipagina"
+        },
         "csd2-2019/Styling Text with CSS": {
           "name": "Definire lo stile del testo con i CSS"
         },
         "csd2-2019/Styling Elements with CSS": {
           "name": "Elementi di stile con CSS"
+        },
+        "csd2-2019/Sources and Search Engines": {
+          "name": "Fonti e Motori di Ricerca"
+        },
+        "csd2-2019/RGB Colors and Classes": {
+          "name": "Colori RGB e Classi"
+        },
+        "csd2-2019/Project - Personal Portfolio Website": {
+          "name": "Progetto - Sito Web del Portfolio Personale"
         },
         "coursef-2017/Programming: My Robotic Friends": {
           "name": "I miei amici robotici"
@@ -3984,6 +4136,9 @@
         "csd6-2017/The Program Design Process_": {
           "name": "Il processo di progettazione del programma"
         },
+        "csd6-2017/Project: Make a Game__": {
+          "name": "Progetto - Creare un Gioco"
+        },
         "csd6-2017/Arrays and Color LEDs__": {
           "name": "Matrici e LED a colori"
         },
@@ -4002,8 +4157,14 @@
         "csd6-2017/Circuits and Physical Prototypes_": {
           "name": "Circuiti e prototipi fisici"
         },
+        "csd6-2017/Project: Prototype an Innovation_": {
+          "name": "Progetto: Prototipare un'Innovazione"
+        },
         "csd2-2017/Exploring Websites": {
           "name": "Esplorando siti web"
+        },
+        "csd2-2017/Websites for Expression ": {
+          "name": "Siti Web per Esprimersi "
         },
         "csd2-2017/Intro to HTML": {
           "name": "Introduzione all'HTML"
@@ -4017,11 +4178,29 @@
         "csd2-2017/Lists": {
           "name": "Liste"
         },
+        "csd2-2017/Intellectual Property and Images": {
+          "name": "Proprietà Intellettuale e Immagini"
+        },
+        "csd2-2017/Clean Code and Debugging": {
+          "name": "Codice Pulito e Debug"
+        },
+        "csd2-2017/Project - Multi-Page Websites": {
+          "name": "Progetto - Siti Web Multipagina"
+        },
         "csd2-2017/Styling Text with CSS": {
           "name": "Definire lo stile del testo con i CSS"
         },
         "csd2-2017/Styling Elements with CSS": {
           "name": "Elementi di stile con CSS"
+        },
+        "csd2-2017/Sources and Search Engines": {
+          "name": "Fonti e Motori di Ricerca"
+        },
+        "csd2-2017/RGB Colors and Classes": {
+          "name": "Colori RGB e Classi"
+        },
+        "csd2-2017/Project - Personal Portfolio Website": {
+          "name": "Progetto - Sito Web del Portfolio Personale"
         },
         "csd1-2017/Intro to Problem Solving": {
           "name": "Introduzione alla risoluzione di problemi"
@@ -4071,6 +4250,9 @@
         "csd5-2017/Combining Representations": {
           "name": "Combinazione di rappresentazioni"
         },
+        "csd5-2017/Project - Create a Representation": {
+          "name": "Progetto - Creare una Rappresentazione"
+        },
         "csd5-2017/Problem Solving and Data": {
           "name": "Risoluzione dei problemi e dati"
         },
@@ -4089,8 +4271,17 @@
         "csd5-2017/Automating Data Decisions": {
           "name": "Automatizzare decisioni basate sui dati"
         },
+        "csd5-2017/Project - Solve a Data Problem": {
+          "name": "Progetto - Risolvere un Problema di Dati"
+        },
+        "csd4-2017/Analysis of Design": {
+          "name": "Analisi del Design"
+        },
         "csd4-2017/Understanding Your User": {
           "name": "Comprendere il tuo utente"
+        },
+        "csd4-2017/User-Centered Design Micro Activity": {
+          "name": "Micro-Attività di Design Incentrata sull'Utente"
         },
         "csd4-2017/User Interfaces": {
           "name": "Interfaccia Utente (UI)"
@@ -4116,11 +4307,26 @@
         "csd4-2017/Prototype Testing": {
           "name": "Collaudo di un prototipo"
         },
+        "csd4-2017/Digital Design": {
+          "name": "Design Digitale"
+        },
+        "csd4-2017/Linking Screens": {
+          "name": "Collegare le Schermate"
+        },
         "csd4-2017/Testing the App": {
           "name": "Verifica l'app"
         },
+        "csd4-2017/Improving and Iterating": {
+          "name": "Migliorare e Iterare"
+        },
         "csd4-2017/Project - App Presentation": {
           "name": "Progetto - Presentazione dell'app"
+        },
+        "deepdive-debugging/Debugging for AB Educators": {
+          "name": "Debug per Educatori AB"
+        },
+        "deepdive-debugging/Debugging for CDEF Educators": {
+          "name": "Debug per Educatori CDEF"
         },
         "pixelation/Black & White Pixelation Tutorial": {
           "name": "Pixellazione Bianco e Nero Tutorial"
@@ -4440,6 +4646,8 @@
         "jigsaw/Jigsaw": {
           "name": "Puzzle",
           "overview": "Questa lezione darà agli alunni un'idea di cosa aspettarsi quando si recheranno nell'aula computer. Inizia con una breve discussione che li introduca alle buone norme comportamentali dell'aula computer, quindi passeranno all'utilizzo di un computer per completare gli esercizi online.",
+          "preparation": "-   Consulta il sito web dii [Common Sense Education](https://www.commonsense.org/education/digital-citizenship) per ulteriori contenuti sulla sicurezza online.",
+          "purpose": "L'obiettivo principale di questa lezione è introdurre gli alunni ai computer. Coprendo le funzionalità informatiche più basilari, come cliccare, trascinare e rilasciare, creiamo un campo di gioco più equo nella classe, per i rompicapi futuri. Questa lezione, inoltre, fornisce un'ottima opportunità per introdurre la terminologia sul hardware essenziale del computer, tra cui, potenzialmente, \"mouse\", \"trackpad\" o \"schermo touch\", a seconda dei dispositivi.",
           "student_overview": "Clicca e trascina per completare l'esercizio"
         },
         "allthethings/Jigsaw": {
@@ -4469,8 +4677,20 @@
         "allthethings/Multi": {
           "name": "Risposte Multiple"
         },
+        "allthethings/Multi2": {
+          "name": "Multi2"
+        },
         "allthethings/Match": {
           "name": "Corrispondenze"
+        },
+        "allthethings/TextMatch": {
+          "name": "TextMatch"
+        },
+        "allthethings/CSinA": {
+          "name": "CSinA"
+        },
+        "allthethings/Netsim": {
+          "name": "Netsim"
         },
         "allthethings/Odometer": {
           "name": "Contachilometri"
@@ -4487,14 +4707,35 @@
         "allthethings/Gamelab": {
           "name": "Sviluppo Giochi"
         },
+        "allthethings/Online PD": {
+          "name": "Online PD"
+        },
+        "allthethings/Markdown Details": {
+          "name": "Dettagli di Markdown"
+        },
         "allthethings/Studio": {
           "name": "Studio"
+        },
+        "allthethings/Multi page assessment": {
+          "name": "Valutazione multipagina"
+        },
+        "allthethings/Star wars": {
+          "name": "Guerre stellari"
         },
         "allthethings/Minecraft": {
           "name": "Minecraft"
         },
+        "allthethings/Rich long assessment": {
+          "name": "Valutazione lunga e completa"
+        },
         "allthethings/Free Response": {
           "name": "Risposta libera"
+        },
+        "allthethings/Sample PLC Assessment": {
+          "name": "Esempio di Valutazione PLC"
+        },
+        "allthethings/Swapped Levels": {
+          "name": "Livelli Scambiati"
         },
         "allthethings/Anonymous student survey": {
           "name": "Sondaggio anonimo dello studente"
@@ -4505,8 +4746,35 @@
         "allthethings/Web Lab": {
           "name": "Sviluppo Web"
         },
+        "allthethings/Single page assessment": {
+          "name": "Valutazione a Pagina Singola"
+        },
+        "allthethings/Standalone video": {
+          "name": "Video indipendente"
+        },
+        "allthethings/Curriculum Reference": {
+          "name": "Riferimento del Piano di Studi"
+        },
         "allthethings/Sprite Lab": {
           "name": "Laboratorio dei Personaggi"
+        },
+        "allthethings/Dance Lab": {
+          "name": "Laboratorio di Danza"
+        },
+        "allthethings/Mini Rubric": {
+          "name": "Mini Rubrica"
+        },
+        "allthethings/Externals Optionally Displayed as Unplugged": {
+          "name": "Esterni Visualizzati Facoltativamente come Unplugged"
+        },
+        "allthethings/Bubble Choice": {
+          "name": "Scelta a Bolle"
+        },
+        "allthethings/Contained Levels": {
+          "name": "Livelli Contenuti"
+        },
+        "allthethings/ML Fish": {
+          "name": "ML Fish"
         },
         "allthethings/AI Lab": {
           "name": "Laboratorio IA"
@@ -6467,6 +6735,9 @@
         "pre-express-2020/Sequencing with Scrat": {
           "name": "Sequenze di istruzioni con Scrat"
         },
+        "pre-express-2020/Programming in with Angry Birds": {
+          "name": "Programmare con Angry Birds"
+        },
         "pre-express-2020/Programming with Rey and BB-8": {
           "name": "Programmare con Rey e BB-8"
         },
@@ -6518,6 +6789,9 @@
         "express-2020/Snowflakes with Anna and Elsa": {
           "name": "Cicli annidati con Frozen"
         },
+        "express-2020/Looking Ahead with Minecraft ": {
+          "name": "Uno Sguardo in Avanti con Minecraft "
+        },
         "express-2020/If/Else with Bee": {
           "name": "Istruzioni condizionali con l'ape"
         },
@@ -6562,6 +6836,9 @@
         },
         "express-2020/Alien Dance Party": {
           "name": "Discoteca Aliena"
+        },
+        "express-2020/Behaviors in Sprite Lab": {
+          "name": "Comportamenti nello Sprite Lab"
         },
         "express-2020/Virtual Pet with Sprite Lab": {
           "name": "Un animale domestico virtuale con il Laboratorio dei personaggi"
@@ -6716,6 +6993,9 @@
         "coursec-2020/End of Course Project: Create a Play Lab Game": {
           "name": "Progetto di fine corso"
         },
+        "coursee-2020/Sequencing in the Maze": {
+          "name": "Sequenziamento nel Labirinto"
+        },
         "coursee-2020/Programming and Loops with the Artist": {
           "name": "Disegnare con i cicli"
         },
@@ -6736,6 +7016,9 @@
         },
         "coursee-2020/Private and Personal Information": {
           "name": "Dati personali e altri dati"
+        },
+        "coursee-2020/About Me": {
+          "name": "Chi Sono con lo Sprite Lab"
         },
         "coursee-2020/Digital Sharing": {
           "name": "Condivisione digitale"
@@ -6850,6 +7133,9 @@
         },
         "coursef-2020/For Loops in Artist": {
           "name": "Cicli con contatore con l'artista"
+        },
+        "coursef-2020/Editing Behaviors": {
+          "name": "Comportamenti nello Sprite Lab"
         },
         "coursef-2020/Virtual Pet": {
           "name": "Un animale domestico virtuale con il Laboratorio dei personaggi"

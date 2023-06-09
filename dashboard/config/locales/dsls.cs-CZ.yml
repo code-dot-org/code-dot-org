@@ -11032,6 +11032,47 @@ cs-CZ:
         - {}
       csp_unit_assessment_overview:
         content1: sem uveďte popis
+        teacher_markdown: "### POZOR: Čím toto hodnocení je a čím není\n\n* Toto hodnocení
+          je **navrženo ve „stylu“ hodnocení s výběrem z více možností AP**.\n\n*
+          To znamená, že otázky **nejsou** výlučně jen o lekcích probraných do tohoto
+          bodu.  Otázky se spíše týkají souvisejících cílů výuky AP, které byly probírány
+          teoreticky.\n\n* To **znamená,** že k zodpovězení otázek budou možná studenti
+          muset provést určitou extrapolaci oproti tomu, co se naučili.\n\n* To **znamená,**
+          že otázky mohou být „těžké“, zejména napoprvé.\n\nTakže, **POUŽÍVEJTE S
+          ROZVAHOU**\n\n* Používejte vlastní soudnost, když budete rozhodovat o tom,
+          co bude na tomto hodnocení záviset.\n\t* K oznámkování studentů nemusíte
+          používat toto hodnocení, nebo...\n    * Můžete studenty známkovat i jinak
+          než prostě jen uvážením procenta správných odpovědí.\n\n* Zajistěte, abyste
+          to používali tak, aby byl ve třídě zachován duch bádání ve znalostech.\n\t*
+          Jestliže máte strach, že to bude studenty odrazovat, pak byste možná měli
+          tento úkol restylizovat jako příležitost k prošetření -- nechejte studenty
+          pokusit se zodpovědět otázky, pak jděte prozkoumat odpovědi a změňte, co
+          je špatně, nebo vyviňte jejich vlastní sadu otázek.\n\n\n---\n\n#### Často
+          kladené dotazy. -- Jak připravovat, spravovat a revidovat hodnocení\n\nViz
+          prosím náš průběžný **[dokument „Často kladené dotazy“ zde,](https://docs.google.com/document/d/1zEpD1PFt6ec2S8ourxuMH0HD6tiyRvqAGUKGDCOt-qs/edit#heading=h.kewgp6z8qdde)**
+          který obsahuje:\n\n* snímky obrazovek o tom, jak připravovat, spravovat
+          a revidovat hodnocení\n* řeší běžné problémy / úkoly\n\n\n#### Rychlé shrnutí
+          způsobu, jak zobrazit a revidovat odpovědi studentů\n\n1. Přejděte na svůj
+          [Učitelský ovládací panel](https://code.org/teacher-dashboard#/)\n2. Vyberte
+          svou část „Principy počítačových věd“\n3. Uvidíte určitý počet purpurových
+          karet jako například „Textové odpovědi“, „Hodnocení“, atd.\n4. Klikněte
+          na **Hodnocení / průzkumy**\n5. Z rozbalovací nabídky výběru kurzu **vyberte
+          jednotku, v které se toto hodnocení vyskytovalo (např. Jednotka 1: Internet)**\n6.
+          U všech studentů, kteří podali své hodnocení, se Vám zobrazí dvě tabulky:\n
+          \  * První tabulka představuje shrnutí procent správných odpovědí ode všech
+          studentů, kteří podali, včetně časové známky času, kdy podali\n   * Druhá
+          tabulka představuje obsáhlý seznam obsahující každou odpověď na každou otázku
+          zodpovězenou každým studentem\n\n    Nad oběma těmito tabulkami je tlačítko
+          **Stáhnout (nebo exportovat) jako csv** — to Vám umožňuje zpracovávat odpovědi
+          v tabulkovém editoru (doporučeno).\n\n7. Jestliže potřebujete umožníte nějakému
+          studentovu VZÍT ZPĚT PODÁNÍ svého testu, naveďte studenta, aby přešel na
+          poslední stránku testu a stiskl „Vzít zpět podání“.\n\n**POZNÁMKA o VZETÍ
+          PODÁNÍ ZPĚT:** \n\nSe svými studenty si musíte dohodnout jasná pravidla
+          vzetí zpět podaného testu. Studenti to možná budou považovat za dobrý způsob,
+          jak změnit odpověď po skončení testu (tj. podvádět), avšak Vy uvidíte časovou
+          známku toho, kdy student test podal.  \n\nNavrhujeme Vám uvážit zavedení,
+          že po uplynutí určité doby nebudete známkovat žádný test.  Pokud nebyl podán
+          před uplynutím stanovené doby, je to, jako byste jej vůbec neobdrželi."
       curriculum-how-challenging:
         answers:
         - correct: true
@@ -12597,3 +12638,282 @@ cs-CZ:
           feedback: Nesprávně. Stepní běžec se začne převalovat
         questions:
         - text: Podívej se pozorně na kód níže. Co se stane poté, co zmáčkneš "Spustit"?
+      OPD-K5 Outline:
+        markdown: |
+          # Začínáme > Přehled kurzu
+
+          Kurz je rozdělen na jedenáct fází a každá fáze se skládá z „úrovní“ neboli „hlavolamů“. Tady je přehled toho, co se naučíte, když absolvujete celý kurz:
+
+          ## Fáze 1: Začínáme (10-30 minut)
+
+          Při výkonu Fáze 1 budete:
+
+          - Revidovat podrobnosti kurzu
+          - Při procvičování používat Code.org jako výukovou platformu
+          - Plánovat svou účast na tomto kurzu
+
+          ## Fáze 2: Základy počítačových věd (10-30 minut)
+
+          Při výkonu Fáze 2 budete:
+
+          - Vymezovat počítačovou vědu a revidovat klíčový slovník
+          - Identifikovat přínosy výuky a učení počítačové vědy
+          - Dělat rozdíl mezi „programováním“ a „počítačovou vědou“
+          - Vysvětlovat, jaké přínosy má začínat programovat pomocí vizuálního programování
+
+          ## Fáze 3: Hledět vpřed (10 minut)
+
+          Při výkonu Fáze 3 budete:
+
+          - Připravovat se na „zvládnutí základů“ počítačových věd revizí toho, co dalšího dělat v kurzu
+
+          ## Fáze 4: Zvládnutí základů: Sekvenování (10-30 minut)
+
+          Při výkonu Fáze 4 budete:
+
+          - Vymezovat „program“ a „algoritmus“
+          - Používat vizuální programovací nástroj Code.org k psaní jednoduchých programů
+          - Zamýšlet se nad aplikací ve třídě
+
+          ## Fáze 5: Zvládnutí základů: Cykly (20-45 minut)
+
+          Při výkonu Fáze 5 budete:
+
+          - Vymezovat „cykly“ a vysvětlovat jejich význam
+          - Procvičovat programování jednoduchých cyklů
+          - Zamýšlet se nad aplikací ve třídě
+
+          ## Fáze 6: Zvládnutí základů: Podmíněné příkazy (20-45 minut)
+
+          Při výkonu Fáze 6 budete:
+
+          - Vymezovat „podmíněné příkazy“ a vysvětlovat jejich význam
+          - Procvičovat programování jednoduchých podmíněných příkazů
+          - Zamýšlet se nad aplikací ve třídě
+
+          ## Fáze 7: Zvládnutí základů: Funkce (20-45 minut)
+
+          Při výkonu Fáze 7 budete:
+
+          - Vymezovat „funkce“ a vysvětlovat jejich význam
+          - Procvičovat programování jednoduchých funkcí
+          - Zamýšlet se nad aplikací ve třídě
+
+          ## Fáze 8: Zvládnutí základů: Události (30-60 minut)
+
+          Při výkonu Fáze 8 budete:
+
+          - Vymezovat „události“ a vysvětlovat jejich význam
+          - Procvičovat programování jednoduchých událostí
+          - Zamýšlet se nad aplikací ve třídě
+
+          ## Fáze 9: Nejlepší praktiky při výuce počítačových věd (30-60 minut)
+
+          Při výkonu Fáze 9 budete:
+
+          - Revidovat nejlepší praktiky při výuce počítačových věd
+
+          ## Fáze 10: Plánování (30-60 minut)
+
+          Při výkonu Fáze 10 budete:
+
+          - Prozkoumávat prostředky Code.org včetně učitelského ovládacího panelu
+          - Plánovat, jak byste mohli integrovat počítačovou vědu do své praxe
+
+          ## Fáze 11: Další kroky (10-30 minut)
+
+          Při výkonu Fáze 11 budete
+
+          - Zamýšlet se nad svým učením
+          - Plánovat další kroky, které můžete učinit, abyste mohli pokračovat ve výuce
+          - Spojíte se s globální komunitou spoluvzdělavatelů majících zájem o vzdělávání v počítačových vědách
+          - Sdílet, co jste se naučili, a zpětnou vazbu o tomto kurzu
+
+          > **Poznámka**: Výše jsou uvedeny doporučené doby, které Vám pomohou naplánovat výuku. Uvědomte si prosím, že byste mohli chtít strávit na dané fázi více nebo méně času podle toho, na jaké úrovni znalostí, zájmu a schopností jste začínali. Pamatujte, že tento kurz máte absolvovat vlastním tempem; kdykoli můžete od kurzu odejít a vrátit se nebo kdykoli navštívit kteroukoli jinou fázi nebo úroveň.
+      OPD-K5 Outline_dani:
+        markdown: |
+          # Začínáme > Přehled kurzu
+
+          Kurz je rozdělen na jedenáct fází a každá fáze se skládá z „úrovní“ neboli „hlavolamů“. Tady je přehled toho, co se naučíte, když absolvujete celý kurz:
+
+          ## Fáze 1: Začínáme (10-30 minut)
+
+          Při výkonu Fáze 1 budete:
+
+          - Revidovat podrobnosti kurzu
+          - Při procvičování používat Code.org jako výukovou platformu
+          - Plánovat svou účast na tomto kurzu
+
+          ## Fáze 2: Základy počítačových věd (10-30 minut)
+
+          Při výkonu Fáze 2 budete:
+
+          - Vymezovat počítačovou vědu a revidovat klíčový slovník
+          - Identifikovat přínosy výuky a učení počítačové vědy
+          - Dělat rozdíl mezi „programováním“ a „počítačovou vědou“
+          - Vysvětlovat, jaké přínosy má začínat programovat pomocí vizuálního programování
+
+          ## Fáze 3: Hledět vpřed (10 minut)
+
+          Při výkonu Fáze 3 budete:
+
+          - Připravovat se na „zvládnutí základů“ počítačových věd revizí toho, co dalšího dělat v kurzu
+
+          ## Fáze 4: Zvládnutí základů: Sekvenování (10-30 minut)
+
+          Při výkonu Fáze 4 budete:
+
+          - Vymezovat „program“ a „algoritmus“
+          - Používat vizuální programovací nástroj Code.org k psaní jednoduchých programů
+          - Zamýšlet se nad aplikací ve třídě
+
+          ## Fáze 5: Zvládnutí základů: Cykly (20-45 minut)
+
+          Při výkonu Fáze 5 budete:
+
+          - Vymezovat „cykly“ a vysvětlovat jejich význam
+          - Procvičovat programování jednoduchých cyklů
+          - Zamýšlet se nad aplikací ve třídě
+
+          ## Fáze 6: Zvládnutí základů: Podmíněné příkazy (20-45 minut)
+
+          Při výkonu Fáze 6 budete:
+
+          - Vymezovat „podmíněné příkazy“ a vysvětlovat jejich význam
+          - Procvičovat programování jednoduchých podmíněných příkazů
+          - Zamýšlet se nad aplikací ve třídě
+
+          ## Fáze 7: Zvládnutí základů: Funkce (20-45 minut)
+
+          Při výkonu Fáze 7 budete:
+
+          - Vymezovat „funkce“ a vysvětlovat jejich význam
+          - Procvičovat programování jednoduchých funkcí
+          - Zamýšlet se nad aplikací ve třídě
+
+          ## Fáze 8: Zvládnutí základů: Události (30-60 minut)
+
+          Při výkonu Fáze 8 budete:
+
+          - Vymezovat „události“ a vysvětlovat jejich význam
+          - Procvičovat programování jednoduchých událostí
+          - Zamýšlet se nad aplikací ve třídě
+
+          ## Fáze 9: Nejlepší praktiky při výuce počítačových věd (30-60 minut)
+
+          Při výkonu Fáze 9 budete:
+
+          - Revidovat nejlepší praktiky při výuce počítačových věd
+
+          ## Fáze 10: Plánování (30-60 minut)
+
+          Při výkonu Fáze 10 budete:
+
+          - Prozkoumávat prostředky Code.org včetně učitelského ovládacího panelu
+          - Plánovat, jak byste mohli integrovat počítačovou vědu do své praxe
+
+          ## Fáze 11: Další kroky (10-30 minut)
+
+          Při výkonu Fáze 11 budete
+
+          - Zamýšlet se nad svým učením
+          - Plánovat další kroky, které můžete učinit, abyste mohli pokračovat ve výuce
+          - Spojíte se s globální komunitou spoluvzdělavatelů majících zájem o vzdělávání v počítačových vědách
+          - Sdílet, co jste se naučili, a zpětnou vazbu o tomto kurzu
+
+          > **Poznámka**: Výše jsou uvedeny doporučené doby, které Vám pomohou naplánovat výuku. Uvědomte si prosím, že byste mohli chtít strávit na dané fázi více nebo méně času podle toho, na jaké úrovni znalostí, zájmu a schopností jste začínali. Pamatujte, že tento kurz máte absolvovat vlastním tempem; kdykoli můžete od kurzu odejít a vrátit se nebo kdykoli navštívit kteroukoli jinou fázi nebo úroveň.
+      OPD-K5 Stage9Go:
+        markdown: |-
+          # Plánování > Revize
+
+          <img src="https://images.code.org/34e1d20a6ae73e28c6c88c5981fd6be6-image-1434411459379.JPG" width="450px">
+
+          V této fázi byste měli:
+
+          - Revidovat učitelský panel a jiné prostředky na Code.org
+          - Plánovat, jak byste mohli integrovat počítačovou vědu do své praxe
+
+          Ve fázi 11, tedy v naší konečné fázi, budete
+
+          - Zamýšlet se nad svým učením
+          - Plánovat své další kroky, které můžete učinit, abyste mohli pokračovat ve svém učení
+          - Spojíte se s globální komunitou svých spoluvzdělavatelů zajímajících se o vzdělávání v počítačových vědách
+      OPD-K5 Stage9Go_dani:
+        markdown: |-
+          # Plánování > Revize
+
+          <img src="https://images.code.org/34e1d20a6ae73e28c6c88c5981fd6be6-image-1434411459379.JPG" width="450px">
+
+          V této fázi byste měli:
+
+          - Revidovat učitelský panel a jiné prostředky na Code.org
+          - Plánovat, jak byste mohli integrovat počítačovou vědu do své praxe
+
+          Ve fázi 11, tedy v naší konečné fázi, budete
+
+          - Zamýšlet se nad svým učením
+          - Plánovat své další kroky, které můžete učinit, abyste mohli pokračovat ve svém učení
+          - Spojíte se s globální komunitou svých spoluvzdělavatelů zajímajících se o vzdělávání v počítačových vědách
+      OPD-K5 Stage9Start:
+        markdown: "# Plánování > Zkoumání učitelských prostředků\n\nVe fázích 4-8
+          jste se podívali na některé „vypnuté“ a online výukové prostředky dostupné
+          pro základy počítačových věd, protože ty se týkají koncepcí počítačových
+          věd, které jste probírali. \n\nTeď, když už trochu chápete, jak programovat
+          a také jak učit počítačovou vědu, je čas začít plánovat Vaši výuku. V této
+          fázi se podíváme do jiných oblastí platformy Code.org a na **[Učitelský
+          ovládací panel](http://studio.code.org/)**. \n\nPři výkonu Fáze 10 budete:\n\n-
+          Zkoumat prostředky dostupné učitelům\n- Zkoumat **[Učitelský ovládací panel](http://studio.code.org/)**
+          Code.org\n- Plánovat, jak byste mohli integrovat počítačovou vědu do své
+          praxe\n\n***\n\nNíže je uveden snímek obrazovky Učitelského ovládacího panelu.
+          Abyste si jej mohli zobrazit, budete se muset přihlásit ke svému učitelskému
+          účtu u Code.org — až budete přihlášeni, měl by být onou implicitní obrazovkou,
+          která se Vám bude zobrazovat na webu Code.org. Jestliže učitelský účet nemáte,
+          můžete, můžete **[si jej založit registrací zde](https://studio.code.org/users/sign_up)**.\n\n![](https://images.code.org/d6345709495f764a71d9cb0994dbd7e4-image-1549064603589.png)"
+      OPD-K5 Stage9Start_copy:
+        markdown: |-
+          # Zkoumání prostředků pro učitele
+
+          Je čas začít plánovat Vaši výuku. V této fázi se podíváme do jiných oblastí platformy Code.org a na **<a href="http://studio.code.org/" target="blank" rel="noopener noreferrer">Učitelský ovládací panel</a>**.
+
+          Níže je uveden snímek obrazovky Učitelského ovládacího panelu. Abyste si jej mohli zobrazit, budete se muset přihlásit ke svému učitelskému účtu u Code.org. Až budete přihlášeni, měl by být onou implicitní obrazovkou, která se Vám bude zobrazovat na webu Code.org. Jestliže učitelský účet nemáte, můžete **<a href="https://studio.code.org/users/sign_up" target="blank" rel="noopener noreferrer">si jej založit registrací zde</a>**.
+
+          <a href="http://studio.code.org/" target="blank" rel="noopener noreferrer">![](https://images.code.org/d6345709495f764a71d9cb0994dbd7e4-image-1549064603589.png)</a>
+      OPD-K5 Stage9Start_dani:
+        markdown: "# Plánování > Zkoumání prostředků pro učitele\n\nV průběhu fází
+          4-8 jste se podívali na některé „vypnuté“ a online výukové prostředky dostupné
+          pro Základy počítačových věd, protože ty byly napojeny na koncepce počítačové
+          vědy, které jste se učili. \n\nTeď, když už trochu chápete, jak programovat
+          a také jak učit počítačovou vědu, je čas začít plánovat Vaši výuku. V této
+          fázi budete procházet jiné oblasti platformy Code.org a **[Učitelský ovládací
+          panel](http://studio.code.org/)**. \n\nPři výkonu Fáze 10 budete:\n\n- Zkoumat
+          prostředky dostupné učitelům\n- Zkoumat Code.org **[Učitelský ovládací panel](http://studio.code.org/)**\n-
+          Plánovat, jak byste mohli integrovat počítačovou vědu do své praxe\n\n***\n\nNíže
+          je uveden snímek obrazovky Učitelského ovládacího panelu. Aby se Vám zobrazoval,
+          budete se muset přihlásit ke svému učitelskému účtu na Code.org – až budete
+          přihlášeni, měl by být onou implicitní obrazovkou, která se Vám bude zobrazovat
+          na webu Code.org. Jestliže učitelský účet nemáte, můžete si **[jej založit
+          registrací zde](https://studio.code.org/users/sign_up)**.\n\n![](https://images.code.org/d6345709495f764a71d9cb0994dbd7e4-image-1549064603589.png)\n"
+      csd-post-survey-2018-markdown-with-link-to-survey:
+        teacher_markdown: |-
+          **Dejte prosím svým studentům vyplnit tento průzkum!!!**
+
+          * Na svém učitelském ovládacím panelu si můžete zobrazit anonymní výsledky průzkumu
+          * Výsledky jsou pro nás (code.org) životně důležité, abychom mohli provádět údržbu našich kurzů a dělat vylepšení.
+          * Bude také učitelský průzkum, kde budete moci poskytovat vlastní vstupy, a o kterém budete vyrozuměni e-mailem.
+
+          **Poznámka:**
+
+          * Tlačítko na této stránce přesměrovává na stránku [studio.code.org/s/csp-post-survey](https://studio.code.org/s/csp-post-survey)
+          * Jestli chcete, můžete nastavit „Studentský pokurzový průzkum“ jako aktuální jednotku v rozbalovací nabídce na učitelském ovládacím panelu.
+      csd-post-survey-2018-markdown-with-link-to-survey_v2:
+        teacher_markdown: "**Dejte prosím svým studentům vyplnit tento průzkum!!!**\n\n*
+          Výsledky jsou pro nás (code.org) životně důležité, abychom mohli provádět
+          údržbu našich kurzů a dělat vylepšení.\n* Bude také učitelský průzkum, kde
+          budete moci poskytovat vlastní vstupy, a o kterém budete vyrozuměni e-mailem.\n\n**Zobrazit
+          výsledky** -- průzkum po kurzu je poněkud odlišný. Průzkum žije ve své vlastní
+          jednotce kurzu a tato stránka na něj prostě odkazuje.\n\n* Chcete-li si
+          na svém učitelském ovládacím panelu zobrazit anonymizované výsledky průzkumu,
+          musíte (1) zobrazit průzkum / hodnocení a poté (2) vybrat jednotku pokurzového
+          průzkumu jakožto jednotku, kterou chcete zobrazit.  \n\n* **Další pokyny
+          k zobrazení výsledků průzkumu po kurzu**: [[google doc](https://docs.google.com/document/d/1EQfPy0D6lSWA3s3d2hkgVLSRn1vrjLLXaZBSz3-E9aw)]
+          [[pdf](https://docs.google.com/document/d/1EQfPy0D6lSWA3s3d2hkgVLSRn1vrjLLXaZBSz3-E9aw/export?format=pdf)]"
