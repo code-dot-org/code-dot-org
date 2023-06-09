@@ -80,12 +80,21 @@ export function PlaySound(
   when = 0,
   onStop = () => {},
   loop = false,
-  effects = false
+  effects = false,
+  duration = undefined
 ) {
   for (var i = 0; i < soundList.length; i++) {
     if (soundList[i].path === name) {
       // Always provide a groupTag.  If one wasn't provided, just use the sound name as the group name.
-      return PlaySoundByIndex(i, groupTag || name, when, loop, effects, onStop);
+      return PlaySoundByIndex(
+        i,
+        groupTag || name,
+        when,
+        loop,
+        effects,
+        onStop,
+        duration
+      );
     }
   }
 }
@@ -96,7 +105,8 @@ function PlaySoundByIndex(
   when,
   loop,
   effects,
-  onStop
+  onStop,
+  duration
 ) {
   if (!audioSoundBuffers[audioBufferIndex]) {
     return;
@@ -127,7 +137,8 @@ function PlaySoundByIndex(
       if (onStop) {
         onStop();
       }
-    }
+    },
+    duration
   );
 
   tagGroup.sources.push({source: source, id: audioIdUpto});
