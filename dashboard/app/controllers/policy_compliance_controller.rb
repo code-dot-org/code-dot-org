@@ -10,9 +10,8 @@ class PolicyComplianceController < ApplicationController
   #  * The child lives in Colorado.
   def child_account_consent
     @permission_granted = false
-    token = request.params[:token]
-    return render status: :bad_request if token.blank?
     #Get parent permission request
+    token = params.require(:token)
     permission_request = ParentalPermissionRequest.find_by(uuid: token)
     return render status: :bad_request if permission_request.nil?
     #Get User

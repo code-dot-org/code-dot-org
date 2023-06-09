@@ -76,6 +76,6 @@ const styles = {
     padding: 20,
   },
   grantDate: {
-    color: color.bright_green,
+    color: color.realgreen,
   },
 };
