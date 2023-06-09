@@ -114,7 +114,6 @@ function removeCommentNodes(root) {
  * @param {Boolean} isRtl True if we are displaying in RTL
  */
 export function convertXmlToBlockly(xmlContainer, isRtl) {
-  const xmls = xmlContainer.getElementsByTagName('xml');
   // Remove any divs and/or spans with class name 'block-space-container'.
   const blockSpaceContainers = xmlContainer.getElementsByClassName(
     'block-space-container'
@@ -123,6 +122,7 @@ export function convertXmlToBlockly(xmlContainer, isRtl) {
     blockSpaceContainers[i].remove();
   }
 
+  const xmls = xmlContainer.getElementsByTagName('xml');
   Array.prototype.forEach.call(xmls, function (xml) {
     // Skip conversion if XML already has a blockspace
     if (xml.getElementsByTagName('svg').length) {
