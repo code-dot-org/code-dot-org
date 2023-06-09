@@ -1,14 +1,5 @@
 @import "color";
 
-/* stylelint-disable */
-
-// checkbox checked color
-$light_primary_500: #0093A4;
-// Checkbox checked hover color
-$light_primary_700: #008291;
-
-/* stylelint-enable */
-
 // Checkbox common styles
 .label {
   i {
@@ -100,6 +91,7 @@ $light_primary_700: #008291;
     }
   }
 
+  // Disabled styles
   &:has(input[type="checkbox"]:disabled) {
     span {
       color: $neutral_dark20;
