@@ -1087,7 +1087,7 @@ class UnitTest < ActiveSupport::TestCase
       summary = s.summarize_course_versions(create(:teacher))
       assert_equal ["foo-2016", "foo-2017", "foo-2018"], summary.values.map {|h| h[:name]}
       assert_equal [true, true, false], summary.values.map {|h| h[:is_stable]}
-      assert_equal [false, true, false], summary.values.map {|h| h[:is_recommended]}
+      assert_equal [false, false, true], summary.values.map {|h| h[:is_recommended]}
     end
   end
 
@@ -1115,8 +1115,8 @@ class UnitTest < ActiveSupport::TestCase
 
     [foo17, foo18, foo19].each do |s|
       summary = s.summarize_course_versions(create(:student))
-      assert_equal ["foo-2017"], summary.values.map {|h| h[:name]}
-      assert_equal [true], summary.values.map {|h| h[:is_stable]}
+      assert_equal ["foo-2018"], summary.values.map {|h| h[:name]}
+      assert_equal [false], summary.values.map {|h| h[:is_stable]}
       assert_equal [true], summary.values.map {|h| h[:is_recommended]}
     end
   end
@@ -1140,7 +1140,7 @@ class UnitTest < ActiveSupport::TestCase
     CourseOffering.add_course_offering(foo19)
 
     course_versions = foo17.summarize[:course_versions]
-    assert_equal 0, course_versions.keys.length
+    assert_equal 1, course_versions.keys.length
 
     course_versions = foo17.summarize(true, teacher)[:course_versions]
     assert_equal 2, course_versions.keys.length
