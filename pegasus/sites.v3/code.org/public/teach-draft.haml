@@ -6,6 +6,11 @@ theme: responsive_full_width
 %link{href: '/css/generated/design-system-pegasus.css', rel: 'stylesheet'}
 %link{href: "/css/generated/teach-styles.css", rel: "stylesheet"}
 
+-# FontAwesome icons
+- icon_party_horn = "fa-solid fa-party-horn"
+- icon_lightbulb_on = "fa-solid fa-lightbulb-on"
+- icon_link = "fa-solid fa-link"
+
 %section.top
   .wrapper
     .text-wrapper.col-50
@@ -17,7 +22,7 @@ theme: responsive_full_width
       %img.rounded-corners{src: "/images/teach-page-top.png", alt: "", style: "position: relative; width: 100%;"}
     .clear
 
-%section.why-teach-cs
+%section.why-teach-cs.bg-neutral-light
   .wrapper
     %h2 Why teach computer science with Code.org?
     %div.grid-container
@@ -49,4 +54,49 @@ theme: responsive_full_width
     %hr.dark
     %h4 Start teaching computer science with Code.org today!
     %a.link-button{href: CDO.studio_url("/catalog")} Explore the Curriculum Catalog
+
+%section.quote.bg-neutral-dark
+  .wrapper
+    %div.quotes-wrapper
+      %p.quote-text When you utilize Code.org's curriculum, you have everything there for you. It has the questions that you need to ask your students. It has the lessons that you need to teach and it gives you guidance on how to do it. So if you come in without any experience in computer science, it's there for you. If you have experience with computer science and teaching it before, it's going to give you a new way of approaching how to teach your students.
+      %p.no-margin-bottom Kevin Barry <span>•</span> CS Discoveries Teacher
+
+%section.free-curriculum
+  .wrapper
+    %h2 Free, engaging curriculum
+    %p We want you to bring Computer Science to your school without worrying about the cost. That's why we have committed to our curriculum offerings being free forever!
+    %div.flex-container.justify-space-between.wrap
+      %ul.icon-bullet-list.full-width.col-60
+        %li
+          %div
+            %i{class: "#{icon_party_horn}"}
+          .text-wrapper
+            %h3 Engaging curriculum for every grade level
+            %p.no-margin-bottom  Free, flexible, and fun curriculum with offerings in over 67 languages.
+        %li
+          %div
+            %i{class: "#{icon_lightbulb_on}"}
+          .text-wrapper
+            %h3 Adaptable, innovative curriculum
+            %p.no-margin-bottom Code.org offers everything from full-year curricula to single-unit activities. Plus, we update our curricula annually to support best practices and areas of focus, and create new offerings that teach current in-demand topics.
+        %li.no-margin-bottom
+          %div
+            %i{class: "#{icon_link}"}
+          .text-wrapper
+            %h3 Structured curriculum mapped to national standards
+            %p.no-margin-bottom Each curriculum is mapped to at least one set of national standards, including CSTA, Next Generation Science Standards, and Common Core.
+      %figure.rounded-corners.col-33{style: "float: right"}
+    .clear
+    %hr.dark
+    %h4 Explore our curriculum offerings for different grade levels:
+    %div.flex-container.justify-center.wrap{style: "gap: 1rem"}
+      %a.link-button{href: CDO.studio_url("/catalog?grade=grade_1&grade=grade_2&grade=grade_3&grade=grade_4&grade=grade_5&grade=kindergarten")}
+        Elementary School
+      %a.link-button{href: CDO.studio_url("/catalog?grade=grade_6&grade=grade_7&grade=grade_8")}
+        Middle School
+      %a.link-button{href: CDO.studio_url("/catalog?grade=grade_10&grade=grade_11&grade=grade_12&grade=grade_9")}
+        High School
+
+
+
 

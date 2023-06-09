@@ -60,6 +60,7 @@ i.fa-fw {
   display: flex;
 
   &.justify-space-between { justify-content: space-between }
+  &.justify-center { justify-content: center }
   &.align-items-center { align-items: center; }
   &.align-items-start { align-items: flex-start; }
   &.wrap { flex-wrap: wrap; }
@@ -91,13 +92,14 @@ div.divider {
   }
 }
 
-img.rounded-corners {
+.rounded-corners {
   border-radius: $border-radius;
 }
 
 // Lines (<hr>)
 hr {
   border-top: 1px solid $neutral_dark20;
+  margin: 3rem 0;
 
   &.dark {
     border-top: 1px solid $neutral_dark60;
