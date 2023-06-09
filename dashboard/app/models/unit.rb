@@ -728,9 +728,9 @@ class Unit < ApplicationRecord
     supported_stable_units = unit_versions.select do |unit|
       is_supported = unit.supported_locales&.include?(locale_str) || locale_str&.start_with?('en')
       if version_year
-        unit.stable? && is_supported && unit.version_year == version_year
+        unit.launched? && is_supported && unit.version_year == version_year
       else
-        unit.stable? && is_supported
+        unit.launched? && is_supported
       end
     end
 
