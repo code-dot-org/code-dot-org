@@ -161,11 +161,12 @@ const MultipleSectionsAssigner = ({
 
   return (
     <>
-      <div style={styles.modalBackdrop} />
+      <div style={styles.modalBackdrop} tabIndex="-1" />
       <CloseOnEscape handleClose={onClose}>
         <FocusTrap>
-          <div tabIndex={0} style={styles.modal}>
+          <div aria-modal role="dialog" style={styles.modal}>
             <div
+              tabIndex="0"
               style={styles.header}
               className="uitest-confirm-assignment-dialog"
             >
