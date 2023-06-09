@@ -161,7 +161,7 @@ const MultipleSectionsAssigner = ({
 
   return (
     <>
-      <div style={styles.modalBackdrop} tabIndex="-1" />
+      <div style={styles.modalBackdrop} />
       <CloseOnEscape handleClose={onClose}>
         <FocusTrap>
           <div aria-modal role="dialog" style={styles.modal}>
