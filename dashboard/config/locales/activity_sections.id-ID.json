@@ -9853,6 +9853,7 @@
         },
         "43fde334-6c07-4b1b-b23d-4b67f5fbfbc0": {
           "name": "Penutupan",
+          "description": "**Kumpulkan:** Mita siswa untuk mengirimkan prototipe dan aplikasinya di App Lab.\n\n**Refleksi:** Minta siswa untuk menyelesaikan survei 5 pertanyaan di Code Studio. Anda dapat melihat hasilnya yang dianonimkan pada dasbor guru.",
           "progression_name": "Bayangan"
         },
         "b46cfe31-9b5e-4820-b368-fc8a4fa139a7": {
@@ -10138,6 +10139,7 @@
         },
         "7799c3eb-e76a-465b-9f24-69d6c04a01c7": {
           "name": "Bayangan",
+          "description": "**Code Studio:** Minta siswa untuk menjawab 5 pertanyaan survei cepat pada awal unit ini tentang AI dan Machine Learning. Setelah setidaknya 5 orang siswa mengisi  survei Anda akan bisa  melihat hasilnya yang dianonimkan pada  Dasbor Guru. Sejumlah pertanyaan iniakan  ditanyakan kembali pada  akhir  proyek pertama, yang bisa  berguna dalam melihat perkembangan dan perubahan sikap siswa  di seluruh  unit.",
           "progression_name": "Survei Tengah Semester"
         },
         "b5acd50c-8f0e-4c22-8918-0e4801b137e1": {
@@ -18985,6 +18987,7 @@
         },
         "d26ab8fe-dc83-4704-8aba-bd0cdbdd80a4": {
           "name": "Bayangan",
+          "description": "**Code Studio:** Minta siswa untuk menjawab 5 pertanyaan survei cepat pada awal unit ini tentang AI dan Machine Learning. Setelah setidaknya 5 orang siswa mengisi  survei Anda akan bisa  melihat hasilnya yang dianonimkan pada  Dasbor Guru. Sejumlah pertanyaan iniakan  ditanyakan kembali pada  akhir  proyek pertama, yang bisa  berguna dalam melihat perkembangan dan perubahan sikap siswa  di seluruh  unit.",
           "progression_name": "Survei Tengah Semester"
         },
         "8bdf1f4e-1c20-42bd-a5d5-7217dfa0bd4f": {

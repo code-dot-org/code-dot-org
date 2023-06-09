@@ -98,6 +98,20 @@ class CourseOffering < ApplicationRecord
     latest_published_version.content_root.link
   end
 
+  def course_id
+    return unless latest_published_version&.content_root_type == 'UnitGroup'
+    latest_published_version.content_root.id
+  end
+
+  def script_id
+    return unless latest_published_version&.content_root_type == 'Unit'
+    latest_published_version.content_root.id
+  end
+
+  def standalone_unit?
+    latest_published_version&.content_root_type == 'Unit'
+  end
+
   def self.should_cache?
     Unit.should_cache?
   end
@@ -254,6 +268,11 @@ class CourseOffering < ApplicationRecord
       school_subject: school_subject,
       device_compatibility: device_compatibility,
       course_version_path: path_to_latest_published_version,
+      course_version_id: latest_published_version&.id,
+      course_id: course_id,
+      course_offering_id: id,
+      script_id: script_id,
+      is_standalone_unit: standalone_unit?,
       is_recommended: recommended?(locale_code)
     }
   end

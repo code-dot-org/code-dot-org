@@ -280,6 +280,16 @@
   ai_resources_desc_03: "Supports integration of Artificial Intelligence knowledge throughout K-12. Offer free professional development, webinars, conference presentations, and peer-to-peer learning opportunities."
   ai_resources_btn_aria_label_03: "Explore the AI for Teachers website"
 
+  ai_vid_intro_caption: "Introducing How AI Works"
+  ai_vid_chatbots_caption: "How Chatbots and Large Language Models Work"
+  ai_vid_creativity_caption: "Does AI Have Creativity and Imagination?"
+  ai_vid_mlintro_caption: "What is Machine Learning?"
+  ai_vid_trainingdata_caption: "Training Data & Bias"
+  ai_vid_neuralnetworks_caption: "Neural Networks"
+  ai_vid_computervision_caption: "Computer Vision"
+  ai_vid_ethics1_caption: "Ethics & AI: Equal Access and Algorithmic Bias"
+  ai_vid_ethics2_caption: "Ethics & AI: Privacy and the Future of Work"
+
   self_paced_pl_hero_heading: "Self-Paced Professional Learning For Educators"
   self_paced_pl_hero_desc: "Professional learning offerings to support teachers in every stage of their computer science teaching journey."
   self_paced_pl_intro_heading: "Professional learning on your timeline"
@@ -312,6 +322,17 @@
 
   tenth_anniversary_homepage_blurb: "Code.org is 10 years old!"
   tenth_anniversary_homepage_link: "Check out the impact we've had."
+  tenth_anniversary_top_heading: "Code.org celebrates 10 years!"
+  tenth_anniversary_top_desc: "We're celebrating a decade of empowering students to explore computer science."
+  tenth_anniversary_timeline_heading: "A decade of milestones"
+  tenth_anniversary_timeline_scroll: "Scroll for more!"
+  tenth_anniversary_celebrate_heading: "Celebrate with us"
+  tenth_anniversary_began_video_heading: "See where it all began"
+  tenth_anniversary_began_video_title: "What Most Schools Don't Teach"
+  tenth_anniversary_testimonials_heading: "What people are saying"
+  tenth_anniversary_testimonials_01: "I had a high school student come up to me four years after I had her as an 8th grade middle schooler and she was excited that she was going to study computer science in college. As a middle schooler she was exposed to something new, and that planted a seed for her college years."
+  tenth_anniversary_testimonials_02: "I joined Hour of Code in your inaugural year and have been with you all the way! It has inspired me to seek out additional coding opportunities for my students. Thanks for all you have done to get kids engaged and excited about computer science! We wouldn't be where we are without you!"
+  tenth_anniversary_testimonials_03: "I owe Code.org so much. I'm the teacher I am today because of the tools you provide for educators like me. I've been using Code.org since 2013 and I've been a facilitator since 2019. Thanks for making me look good for these many years, Code.org. I really appreciate it."
 
   farsi_page_top_heading: "Code.org in Farsi"
   farsi_page_top_heading_02: "Talent is everywhere, but opportunity is not. Code.org in Farsi opens a door to an opportunity that would otherwise be closed."
@@ -359,9 +380,9 @@
   farsi_page_founders_slide_06: "In 2013, Hadi and Ali launched the education nonprofit Code.org, which Hadi continues to lead as CEO. Since its inception, Code.org has started a massive movement to teach computer science and coding to K-12 students globally. It is also the largest provider of computer  science curricula in the world, with over 80 million student users in 180 countries."
   farsi_page_support_heading: "Your Support and Your Voice"
   farsi_page_support_heading_02: "Thank you for your interest in Code.org in Farsi."
-  farsi_page_support_get_updates: "Sign up below to learn more about this specific project and get updated on its staged release dates."
+  farsi_page_support_get_updates: "[Sign up](%{form_url}) to learn more about this specific project and get updated on its staged release dates."
   farsi_page_support_contact_us: "If you'd like to support this initiative or learn more, please [contact us](%{contact_link}) or donate below."
-  farsi_page_compliance_heading: "Compliance In Support Of Farsi Translations."
+  farsi_page_compliance_heading: "Compliance In Support Of Farsi Translations"
   farsi_page_compliance_desc: "As a U.S. nonprofit, Code.org is subject to laws regarding sanctions with Iran. After consulting with U.S. legal counsel experienced in the Iranian Sanctions and Translations Regulations (ITSR), Code.org believes that it may fund, prepare, and distribute the Farsi Translations of CS Curriculum in the United States and elsewhere around the world, including within Iran. The ITSR provides an exemption for “information and informational materials” (the IIM Exemption) and Code.org believes that this exemption will fully shield its funding, preparation, and distribution of the Farsi Translations and thus enable its Farsi Translations effort to proceed in full compliance with U.S. economic sanctions requirements."
 
   hoc_live: 'Hour of Code Live'
