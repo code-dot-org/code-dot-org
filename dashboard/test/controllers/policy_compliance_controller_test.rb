@@ -14,30 +14,35 @@ class PolicyComplianceControllerTest < ActionDispatch::IntegrationTest
     assert_response :bad_request
   end
 
-  test "given valid token, updates user" do
+  test "given valid token, updates user and sends email" do
     permission = create :parental_permission_request
     user = permission.user
-    get '/policy_compliance/child_account_consent', params:
-      {
-        token: permission.uuid
-      }
+    assert_emails 1 do
+      get '/policy_compliance/child_account_consent', params:
+        {
+          token: permission.uuid
+        }
+    end
     user.reload
     assert_response :ok
     assert_equal User::ChildAccountCompliance::PERMISSION_GRANTED, user.child_account_compliance_state
     assert_not_empty user.child_account_compliance_state_last_updated
   end
 
-  test "making the same request twice is ok" do
+  test "making the same request twice is ok and email is sent once" do
+    # We want to make sure an email isn't sent every time the URL is visited.
     permission = create :parental_permission_request
-    get '/policy_compliance/child_account_consent', params:
-      {
-        token: permission.uuid
-      }
-    assert_response :ok
-    get '/policy_compliance/child_account_consent', params:
-      {
-        token: permission.uuid
-      }
-    assert_response :ok
+    assert_emails 1 do
+      get '/policy_compliance/child_account_consent', params:
+        {
+          token: permission.uuid
+        }
+      assert_response :ok
+      get '/policy_compliance/child_account_consent', params:
+        {
+          token: permission.uuid
+        }
+      assert_response :ok
+    end
   end
 end

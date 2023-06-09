@@ -16,6 +16,8 @@ class PolicyComplianceController < ApplicationController
       user.child_account_compliance_state = User::ChildAccountCompliance::PERMISSION_GRANTED
       user.child_account_compliance_state_last_updated = DateTime.now.new_offset(0)
       user.save!
+      parent_email = permission_request.parent_email
+      ParentMailer.parent_permission_confirmation(parent_email).deliver_now
     end
     @permission_granted = true
     @permission_granted_date = user.child_account_compliance_state_last_updated
