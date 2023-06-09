@@ -708,36 +708,52 @@ class UnitGroupTest < ActiveSupport::TestCase
 
   test 'summarize_course_versions' do
     csp_2017 = create(:unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
+    csp1_2017 = create(:script, name: 'csp1-2017')
+    create :unit_group_unit, unit_group: csp_2017, script: csp1_2017, position: 1
     CourseOffering.add_course_offering(csp_2017)
     csp_2018 = create(:unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
+    csp1_2018 = create(:script, name: 'csp1-2018')
+    create :unit_group_unit, unit_group: csp_2018, script: csp1_2018, position: 1
     CourseOffering.add_course_offering(csp_2018)
     csp_2019 = create(:unit_group, name: 'csp-2019', family_name: 'csp', version_year: '2019', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview)
+    csp1_2019 = create(:script, name: 'csp1-2019')
+    create :unit_group_unit, unit_group: csp_2019, script: csp1_2019, position: 1
     CourseOffering.add_course_offering(csp_2019)
     csp_2020 = create(:unit_group, name: 'csp-2020', family_name: 'csp', version_year: '2020', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta)
+    csp1_2020 = create(:script, name: 'csp1-2020')
+    create :unit_group_unit, unit_group: csp_2020, script: csp1_2020, position: 1
     CourseOffering.add_course_offering(csp_2020)
 
     [csp_2017, csp_2018, csp_2019, csp_2020].each do |c|
       summary = c.summarize_course_versions(create(:teacher))
       assert_equal ["Computer Science Principles ('17-'18)", "Computer Science Principles ('18-'19)", "Computer Science Principles ('19-'20)"], summary.values.map {|h| h[:name]}
       assert_equal [true, true, false], summary.values.map {|h| h[:is_stable]}
-      assert_equal [false, true, false], summary.values.map {|h| h[:is_recommended]}
+      assert_equal [false, false, true], summary.values.map {|h| h[:is_recommended]}
     end
   end
 
   test 'summarize_course_versions for student' do
     csp_2017 = create(:unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
+    csp1_2017 = create(:script, name: 'csp1-2017')
+    create :unit_group_unit, unit_group: csp_2017, script: csp1_2017, position: 1
     CourseOffering.add_course_offering(csp_2017)
     csp_2018 = create(:unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
+    csp1_2018 = create(:script, name: 'csp1-2018')
+    create :unit_group_unit, unit_group: csp_2018, script: csp1_2018, position: 1
     CourseOffering.add_course_offering(csp_2018)
     csp_2019 = create(:unit_group, name: 'csp-2019', family_name: 'csp', version_year: '2019', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview)
+    csp1_2019 = create(:script, name: 'csp1-2019')
+    create :unit_group_unit, unit_group: csp_2019, script: csp1_2019, position: 1
     CourseOffering.add_course_offering(csp_2019)
     csp_2020 = create(:unit_group, name: 'csp-2020', family_name: 'csp', version_year: '2020', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta)
+    csp1_2020 = create(:script, name: 'csp1-2020')
+    create :unit_group_unit, unit_group: csp_2020, script: csp1_2020, position: 1
     CourseOffering.add_course_offering(csp_2020)
 
     [csp_2017, csp_2018, csp_2019, csp_2020].each do |c|
       summary = c.summarize_course_versions(create(:student))
-      assert_equal ["Computer Science Principles ('18-'19)"], summary.values.map {|h| h[:name]}
-      assert_equal [true], summary.values.map {|h| h[:is_stable]}
+      assert_equal ["Computer Science Principles ('19-'20)"], summary.values.map {|h| h[:name]}
+      assert_equal [false], summary.values.map {|h| h[:is_stable]}
       assert_equal [true], summary.values.map {|h| h[:is_recommended]}
     end
   end
@@ -901,12 +917,16 @@ class UnitGroupTest < ActiveSupport::TestCase
       @csp1_2017 = create(:script, name: 'csp1-2017')
       create :unit_group_unit, unit_group: @csp_2017, script: @csp1_2017, position: 1
       @csp_2018 = create(:unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
+      @csp1_2018 = create(:script, name: 'csp1-2018')
+      create :unit_group_unit, unit_group: @csp_2018, script: @csp1_2018, position: 1
       create(:unit_group, name: 'csp-2019', family_name: 'csp', version_year: '2019')
 
       @pl_csp_2017 = create(:unit_group, name: 'pl-csp-2017', family_name: 'pl-csp', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.plc_reviewer, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator)
       @pl_csp1_2017 = create(:script, name: 'pl-csp1-2017')
       create :unit_group_unit, unit_group: @pl_csp_2017, script: @pl_csp1_2017, position: 1
       @pl_csp_2018 = create(:unit_group, name: 'pl-csp-2018', family_name: 'pl-csp', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.plc_reviewer, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator)
+      @pl_csp1_2018 = create(:script, name: 'pl-csp1-2018')
+      create :unit_group_unit, unit_group: @pl_csp_2018, script: @pl_csp1_2018, position: 1
       @pl_csp_2019 = create(:unit_group, name: 'pl-csp-2019', family_name: 'pl-csp', version_year: '2019', instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.plc_reviewer, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator)
     end
 
@@ -988,7 +1008,7 @@ class UnitGroupTest < ActiveSupport::TestCase
     end
 
     test 'self.latest_stable_version is nil if no unit versions in family are stable in locale' do
-      assert_nil UnitGroup.latest_stable_version('csp', locale: 'ar-SA')
+      assert_nil UnitGroup.latest_stable_version('csp', locale: 'zz-ZZ')
     end
 
     test 'self.latest_stable_version returns most recent course version if in English' do
@@ -1001,6 +1021,14 @@ class UnitGroupTest < ActiveSupport::TestCase
 
     test 'self.latest_stable_version returns most recent course version where each unit is supported in user locale' do
       assert_equal @csp_2018, UnitGroup.latest_stable_version('csp', locale: 'ab-cd')
+    end
+
+    test 'self.latest_stable_version returns most recent course version where each unit is supported in user locale even in preview' do
+      csp_2020 = create(:unit_group, name: 'csp-2020', family_name: 'csp', version_year: '2020', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview)
+      csp1_2020 = create(:script, name: 'csp1-2020', supported_locales: ['ab-cd'])
+      create :unit_group_unit, unit_group: csp_2020, script: csp1_2020, position: 1
+
+      assert_equal csp_2020, UnitGroup.latest_stable_version('csp', locale: 'ab-cd')
     end
 
     test 'latest_assigned_version returns latest version in family assigned to student' do
