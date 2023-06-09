@@ -34,7 +34,9 @@ export default function LockoutPanel(props) {
 
     const field = document.getElementById('parent-email');
     field.value = props.pendingEmail;
-    this.submit();
+
+    const form = document.getElementById('lockout-panel-form');
+    form.submit();
   };
 
   // Get the current locale.
@@ -58,6 +60,9 @@ export default function LockoutPanel(props) {
   });
   const pendingPromptParts = pendingPrompt.split('{pendingEmail}');
 
+  const csrfToken = document.querySelector('meta[name="csrf-token"]')
+    .attributes['content'].value;
+
   return (
     <div style={styles.container} className="lockout-panel">
       {/* Header image: Depends of if permission request is sent. */}
@@ -78,7 +83,8 @@ export default function LockoutPanel(props) {
       </h2>
 
       {/* This form will post a permission request for the student.*/}
-      <form action={props.apiURL} method="post">
+      <form id="lockout-panel-form" action={props.apiURL} method="post">
+        <input type="hidden" value={csrfToken} name="authenticity_token" />
         {/* The top prompt, which depends on whether or not a request is pending. */}
         {props.pendingEmail && (
           <p>
@@ -151,6 +157,7 @@ export default function LockoutPanel(props) {
                 onInput={onEmailUpdate}
                 onBlur={onEmailUpdate}
                 defaultValue={props.pendingEmail}
+                name="parent-email"
                 id="parent-email"
               />
 

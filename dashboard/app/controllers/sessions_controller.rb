@@ -56,6 +56,27 @@ class SessionsController < Devise::SessionsController
     render layout: false
   end
 
+  # GET /lockout
+  # This page is for accounts that are locked until parental permission compliance.
+  def lockout
+    # Basic defaults. If the @pending_email is empty, the request was never sent
+    @pending_email = ""
+    @request_date = DateTime.now
+
+    # Determine the deletion date as the creation time of the account + 7 days
+    @delete_date = current_user.created_at + (3600 * 24 * 7)
+
+    # Find any existing permission request for this user
+    # Students might have issued a few requests. We render the latest one.
+    permission_request = ParentalPermissionRequest.where(user: current_user).order(updated_at: :desc).limit(1).first
+
+    # If it exists, set the appropriate fields before rendering the lockout UI
+    if permission_request
+      @pending_email = permission_request.parent_email
+      @request_date = permission_request.updated_at
+    end
+  end
+
   # Override default Devise sign_out path method
   private def after_sign_out_path_for(resource_or_scope)
     user = resource_or_scope && send(:"current_#{resource_or_scope}")

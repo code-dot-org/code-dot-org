@@ -1061,5 +1061,7 @@ Dashboard::Application.routes.draw do
     # Policy Compliance
     get '/policy_compliance/child_account_consent/', to:
       'policy_compliance#child_account_consent'
+    post '/policy_compliance/child_account_consent/', to:
+      'policy_compliance#child_account_consent_request'
   end
 end
