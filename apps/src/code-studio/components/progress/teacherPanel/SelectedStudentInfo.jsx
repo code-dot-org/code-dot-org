@@ -166,7 +166,6 @@ export default class SelectedStudentInfo extends React.Component {
                   : i18n.notApplicable()}
               </div>
               <Button
-                __useDeprecatedTag
                 text={i18n.unsubmit()}
                 color="blue"
                 onClick={() => this.onUnsubmit(levelWithProgress.userLevelId)}

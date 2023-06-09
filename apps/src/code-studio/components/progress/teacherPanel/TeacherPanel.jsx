@@ -185,7 +185,6 @@ class TeacherPanel extends React.Component {
             <div style={styles.exampleSolutions}>
               {exampleSolutions.map((example, index) => (
                 <Button
-                  __useDeprecatedTag
                   key={index}
                   text={i18n.exampleSolution({number: index + 1})}
                   color="blue"
