@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "csa-frq-practice",
-    "serialized_at": "2023-06-07 16:26:25 UTC",
+    "serialized_at": "2023-06-08 14:35:45 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -84,6 +84,66 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa-frq-practice"
       }
+    },
+    {
+      "key": "lesson-3",
+      "name": "APCalendar",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-frq-practice"
+      }
+    },
+    {
+      "key": "lesson-4",
+      "name": "StepTracker",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-frq-practice"
+      }
+    },
+    {
+      "key": "lesson-2",
+      "name": "Delimiters",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa-frq-practice"
+      }
+    },
+    {
+      "key": "lesson-5",
+      "name": "LightBoard",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa-frq-practice"
+      }
     }
   ],
   "lesson_activities": [
@@ -98,6 +158,18 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa-frq-practice"
       }
+    },
+    {
+      "key": "ded68669-cc9d-4cd2-876c-8abf4d08e967",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ded68669-cc9d-4cd2-876c-8abf4d08e967",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa-frq-practice"
+      }
     }
   ],
   "activity_sections": [
@@ -110,13 +182,54 @@
         "activity_section.key": "e91fc144-6d02-449a-8534-359308756dbb",
         "lesson_activity.key": "5c4b3688-4cd6-42f3-ac64-a3018ce5b523"
       }
+    },
+    {
+      "key": "391e42e0-c73e-40d6-b76c-20d7a41c3d06",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "391e42e0-c73e-40d6-b76c-20d7a41c3d06",
+        "lesson_activity.key": "ded68669-cc9d-4cd2-876c-8abf4d08e967"
+      }
     }
   ],
   "script_levels": [
-
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csa-frq-extra-practice-2019"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa-frq-practice",
+        "activity_section.key": "391e42e0-c73e-40d6-b76c-20d7a41c3d06"
+      },
+      "level_keys": [
+        "csa-frq-extra-practice-2019"
+      ]
+    }
   ],
   "levels_script_levels": [
-
+    {
+      "seeding_key": {
+        "level.key": "csa-frq-extra-practice-2019",
+        "script_level.level_keys": [
+          "csa-frq-extra-practice-2019"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa-frq-practice",
+        "activity_section.key": "391e42e0-c73e-40d6-b76c-20d7a41c3d06"
+      }
+    }
   ],
   "resources": [
 
