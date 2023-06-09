@@ -25,13 +25,15 @@ export function convertXmlToJson(xml) {
 
   const stateToLoad = Blockly.serialization.workspaces.save(tempWorkspace);
 
-  // Create a map of ids (key) and block serializations (value).
-  const blockIdMap = stateToLoad.blocks.blocks.reduce(
-    (map, blockJson) => map.set(blockJson.id, blockJson),
-    new Map()
-  );
+  if (xmlBlocks.length && stateToLoad.blocks) {
+    // Create a map of ids (key) and block serializations (value).
+    const blockIdMap = stateToLoad.blocks.blocks.reduce(
+      (map, blockJson) => map.set(blockJson.id, blockJson),
+      new Map()
+    );
 
-  addPositionsToState(xmlBlocks, blockIdMap);
+    addPositionsToState(xmlBlocks, blockIdMap);
+  }
   tempWorkspace.dispose();
   return stateToLoad;
 }
@@ -41,7 +43,7 @@ export function convertXmlToJson(xml) {
  * @param {Array<Object>} xmlBlocks - an array of "block" objects containing a block and x/y coordinates
  * @param {Map<String, Object>} blockIdMap - a map of ids (keys) and serialized blocks (values)
  */
-function addPositionsToState(xmlBlocks, blockIdMap) {
+export function addPositionsToState(xmlBlocks, blockIdMap) {
   xmlBlocks.forEach(xmlBlock => {
     const blockJson = blockIdMap.get(xmlBlock.blockly_block.id);
     if (blockJson) {
@@ -108,7 +110,7 @@ function positionBlockWithCursor(block, cursor) {
  * @param {number} cursor.x - an x-coordinate for moving a block
  * @param {number} cursor.y - a y-coordinate for moving a block
  */
-function getNewLocation(block, cursor) {
+export function getNewLocation(block, cursor) {
   const blockHasFrameSvg = !!block.functionalSvg_ || !!block.unusedSvg_;
   const blockTopPadding = blockHasFrameSvg ? SVG_FRAME_TOP_PADDING : 0;
   const blockSidePadding = blockHasFrameSvg ? SVG_FRAME_SIDE_PADDING : 0;
@@ -125,7 +127,7 @@ function getNewLocation(block, cursor) {
  * @param {Blockly.Block} block - the block that was just moved
  * @return {number} - the distance to move the cursor down in preparation for the next move
  */
-function getCursorYAdjustment(block) {
+export function getCursorYAdjustment(block) {
   const blockHeight = block.getHeightWidth().height;
   const blockHasFrameSvg = !!block.functionalSvg_ || !!block.unusedSvg_;
   const blockVerticalPadding =
@@ -138,7 +140,7 @@ function getCursorYAdjustment(block) {
  * @param {Blockly.Block} block - the block being considered
  * @return {boolean} - true if the block is at the top corner of the workspace
  */
-function isBlockLocationUnset(block) {
+export function isBlockLocationUnset(block) {
   const workspace = block.workspace;
   const isRTL = workspace.RTL;
   const {viewWidth = 0} = workspace.getMetrics();

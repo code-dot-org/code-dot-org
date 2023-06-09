@@ -581,7 +581,7 @@
         },
         "Overworld Move to Sheep_2021": {
           "craft_run_button_callout": "Натисни \"Запустити\", щоб випробувати програму",
-          "craft_drag_block_callout": "Перетягни блок \"рух вперед\" та прикріпи його під іншим блоком"
+          "craft_drag_block_callout": "Перетягни блок 'рухатися вперед' та прикріпи його під іншим блоком"
         },
         "Overworld Place Wall_2021": {
           "craft_inside_repeat": "Повторюй дії, розміщуючи тут блоки"
@@ -1559,6 +1559,12 @@
         },
         "express_maze_debugging9_2021": {
           "express_maze_debugging9_2019_1": "Перетягни блоки зі скриньки інструментів у робочу зону."
+        },
+        "CSD U3 Random add_2021": {
+          "CSD_U3_butterfly": "Уважно подивися на цей код."
+        },
+        "CSD U3 Random add_2022": {
+          "CSD_U3_butterfly": "Уважно подивися на цей код."
         }
       }
     }

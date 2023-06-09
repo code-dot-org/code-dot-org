@@ -589,7 +589,14 @@
         "ml-use model card-choice4": "Aggiungi un pulsante che consenta agli utenti di visitare una pagina web sull'adozione di animali domestici",
         "ml-use model card-choice4_2022": "Aggiungi un pulsante che consenta agli utenti di visitare una pagina web sull'adozione di animali domestici",
         "ml-use model card-choice5": "Usa il blocco `playSpeech()` per leggere il testo ad alta voce",
-        "ml-use model card-choice5_2022": "Usa il blocco `playSpeech()` per leggere il testo ad alta voce"
+        "ml-use model card-choice5_2022": "Usa il blocco `playSpeech()` per leggere il testo ad alta voce",
+        "CSD U6 - Board Outputs - ChalF_2222": "Crea un prototipo di un'app che possa essere utilizzata in un contesto musicale",
+        "courseD_artist_nestedLoops32022": "Utilizza le tue nuove abilità per disegnare rapidamente l'ultima riga di finestre per questo edificio.",
+        "courseD_artist_nestedLoops52022": "Utilizza ciò che hai imparato per creare questi cerchi.",
+        "courseD_artist_nestedLoops72022": "Utilizza ciò che hai imparato per disegnare questi quadrati.",
+        "courseD_artist_nestedLoops82022": "Utilizza ciò che hai appreso per disegnare questi esagoni.",
+        "courseD_artist_nestedLoops9_predict12022": "Quale disegno sarà creato da questo programma, al click di \"Esegui\"?",
+        "ramp_artist_loops62022": "Correggi il ciclo in questa scalinata per completare il rompicapo."
       }
     }
   }

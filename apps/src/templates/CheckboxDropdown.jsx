@@ -9,6 +9,7 @@ import FontAwesome from './FontAwesome';
 import i18n from '@cdo/locale';
 
 import style from './checkbox-dropdown.module.scss';
+import Checkbox from '@cdo/apps/componentLibrary/checkbox';
 
 const CheckboxDropdown = ({
   name,
@@ -19,21 +20,13 @@ const CheckboxDropdown = ({
   handleSelectAll,
   handleClearAll,
 }) => {
-  const onSelectAll = useCallback(
-    e => {
-      e?.preventDefault();
-      handleSelectAll(name);
-    },
-    [name, handleSelectAll]
-  );
+  const onSelectAll = useCallback(() => {
+    handleSelectAll(name);
+  }, [name, handleSelectAll]);
 
-  const onClearAll = useCallback(
-    e => {
-      e?.preventDefault();
-      handleClearAll(name);
-    },
-    [name, handleClearAll]
-  );
+  const onClearAll = useCallback(() => {
+    handleClearAll(name);
+  }, [name, handleClearAll]);
 
   return (
     <div id={`${name}-dropdown`} className="dropdown">
@@ -63,19 +56,13 @@ const CheckboxDropdown = ({
         <ul className={style.dropdownCheckboxUL}>
           {Object.keys(allOptions).map(optionKey => (
             <li key={optionKey} className="checkbox form-group">
-              <label>
-                <input
-                  type="checkbox"
-                  name={optionKey}
-                  value={optionKey}
-                  checked={checkedOptions.includes(optionKey)}
-                  onChange={onChange}
-                />
-                <i className="fa fa-solid" />
-                <Typography semanticTag="span" visualAppearance="body-one">
-                  {allOptions[optionKey]}
-                </Typography>
-              </label>
+              <Checkbox
+                checked={checkedOptions.includes(optionKey)}
+                onChange={onChange}
+                name={optionKey}
+                value={optionKey}
+                label={allOptions[optionKey]}
+              />
             </li>
           ))}
           <div className={style.bottomButtonsContainer}>

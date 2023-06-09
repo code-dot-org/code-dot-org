@@ -203,6 +203,7 @@ Then /^I see "([.#])([^"]*)"$/ do |selector_symbol, name|
 end
 
 When /^I wait until (?:element )?"([^"]*)" (?:has|contains) text "([^"]*)"$/ do |selector, text|
+  wait_for_jquery
   wait_until {@browser.execute_script("return $(#{selector.dump}).text();").include? text}
 end
 

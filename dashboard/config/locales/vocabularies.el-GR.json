@@ -267,6 +267,9 @@
         "machine_learning/oceans/unversioned": {
           "word": "Εκμάθηση μηχανής"
         },
+        "algorithm/coursed/2022": {
+          "word": "Αλγόριθμος"
+        },
         "program/coursed/2022": {
           "word": "Πρόγραμμα",
           "definition": "Ένας αλγόριθμος που έχει κωδικοποιηθεί σε κάτι που μπορεί να λειτουργήσει με μια μηχανή."
@@ -287,6 +290,9 @@
         },
         "conditionals/coursed/2022": {
           "word": "Συνθήκες"
+        },
+        "algorithm/coursef/2022": {
+          "word": "Αλγόριθμος"
         },
         "behavior/coursef/2022": {
           "word": "Συμπεριφορά"
@@ -333,6 +339,9 @@
         "define/coursee/2022": {
           "word": "Όρισε"
         },
+        "algorithm/courseb/2022": {
+          "word": "Αλγόριθμος"
+        },
         "debugging/courseb/2022": {
           "word": "Εντοπισμός σφαλμάτων"
         },
@@ -349,6 +358,9 @@
         "event/courseb/2022": {
           "word": "Εκδήλωση",
           "definition": "Μια ενέργεια που προκαλεί κάτι να συμβεί."
+        },
+        "algorithm/express/2022": {
+          "word": "Αλγόριθμος"
         },
         "debugging/express/2022": {
           "word": "Εντοπισμός σφαλμάτων"
@@ -385,6 +397,9 @@
         "drop/pre-express/2022": {
           "word": "Πέσιμο"
         },
+        "algorithm/pre-express/2022": {
+          "word": "Αλγόριθμος"
+        },
         "debugging/pre-express/2022": {
           "word": "Εντοπισμός σφαλμάτων"
         },
@@ -398,6 +413,9 @@
         "event/pre-express/2022": {
           "word": "Εκδήλωση",
           "definition": "Μια ενέργεια που προκαλεί κάτι να συμβεί."
+        },
+        "algorithm/coursea/2022": {
+          "word": "Αλγόριθμος"
         },
         "debugging/coursea/2022": {
           "word": "Εντοπισμός σφαλμάτων"
@@ -415,6 +433,9 @@
         "event/coursea/2022": {
           "word": "Εκδήλωση",
           "definition": "Μια ενέργεια που προκαλεί κάτι να συμβεί."
+        },
+        "algorithm/coursec/2022": {
+          "word": "Αλγόριθμος"
         },
         "debugging/coursec/2022": {
           "word": "Εντοπισμός σφαλμάτων"
@@ -487,6 +508,9 @@
           "word": "",
           "definition": ""
         },
+        "algorithm/coursef/2021": {
+          "word": "Αλγόριθμος"
+        },
         "behavior/coursef/2021": {
           "word": "Συμπεριφορά"
         },
@@ -517,6 +541,9 @@
         "define/coursef/2021": {
           "word": "Όρισε"
         },
+        "algorithm/courseb/2021": {
+          "word": "Αλγόριθμος"
+        },
         "debugging/courseb/2021": {
           "word": "Εντοπισμός σφαλμάτων"
         },
@@ -533,6 +560,9 @@
         "event/courseb/2021": {
           "word": "Εκδήλωση",
           "definition": "Μια ενέργεια που προκαλεί κάτι να συμβεί."
+        },
+        "algorithm/coursea/2021": {
+          "word": "Αλγόριθμος"
         },
         "debugging/coursea/2021": {
           "word": "Εντοπισμός σφαλμάτων"
@@ -551,6 +581,9 @@
           "word": "Εκδήλωση",
           "definition": "Μια ενέργεια που προκαλεί κάτι να συμβεί."
         },
+        "algorithm/coursec/2021": {
+          "word": "Αλγόριθμος"
+        },
         "debugging/coursec/2021": {
           "word": "Εντοπισμός σφαλμάτων"
         },
@@ -567,6 +600,9 @@
         },
         "binary/coursec/2021": {
           "word": "Δυαδικό"
+        },
+        "algorithm/coursed/2021": {
+          "word": "Αλγόριθμος"
         },
         "program/coursed/2021": {
           "word": "Πρόγραμμα",
@@ -588,6 +624,9 @@
         },
         "conditionals/coursed/2021": {
           "word": "Συνθήκες"
+        },
+        "algorithm/express/2021": {
+          "word": "Αλγόριθμος"
         },
         "debugging/express/2021": {
           "word": "Εντοπισμός σφαλμάτων"
@@ -623,6 +662,9 @@
         },
         "drop/pre-express/2021": {
           "word": "Πέσιμο"
+        },
+        "algorithm/pre-express/2021": {
+          "word": "Αλγόριθμος"
         },
         "debugging/pre-express/2021": {
           "word": "Εντοπισμός σφαλμάτων"
