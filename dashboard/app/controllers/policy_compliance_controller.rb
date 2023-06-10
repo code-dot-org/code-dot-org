@@ -44,11 +44,6 @@ class PolicyComplianceController < ApplicationController
       created_at: date.midnight..date.end_of_day
     ).limit(3).count
 
-    # If we already sent too many today, just bail and return whence we came
-    if permission_requests >= 3
-      redirect_back fallback_location: '/lockout' and return
-    end
-
     # Create a ParentalPermissionRequest token for user and parent email
     # When the student 'updates' the parental email, we actually just create a
     # new request row.
@@ -56,6 +51,22 @@ class PolicyComplianceController < ApplicationController
       user: current_user,
       parent_email: params[:"parent-email"]
     )
+
+    # If we are making a new request but already sent too many today,
+    # just bail and return whence we came
+    if !permission_request.persisted? && permission_requests >= 3
+      redirect_back fallback_location: '/lockout' and return
+    end
+
+    # If this is not a new row, we are resending the email
+    if permission_request.persisted?
+      permission_request.resends_sent += 1
+    end
+
+    # Do not send more than three emails to the same email
+    if permission_request.resends_sent >= 3
+      redirect_back fallback_location: '/lockout' and return
+    end
 
     # Save (will reassign the updated_at date)
     permission_request.save!
