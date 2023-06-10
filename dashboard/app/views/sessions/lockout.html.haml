@@ -1,4 +1,4 @@
-#lockout-container{:"data-request-date" => (DateTime.now - 6).iso8601, :"data-delete-date" => (DateTime.now + 2).iso8601, :"data-pending-email" => "", :"data-api-url" => "/permissions"}
+#lockout-container{:data => {request_date: (DateTime.now - 6).iso8601, delete_date: (DateTime.now + 2).iso8601, pending_email: "", api_url: "/permissions"}}
 
 - content_for(:head) do
   %script{src: webpack_asset_path('js/sessions/lockout.js')}
