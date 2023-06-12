@@ -4974,3 +4974,9 @@ pt:
           description_short: Aprenda todos os conceitos Fundamentais da Ciência da Computação e crie sua própria arte, história ou jogo.
         self-paced-pl-csp2-2023:
           title: 'Módulo 2: Navegação no Code.org'
+        csa-frq-practice:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Classes
+            lessonGroup-5:
+              display_name: Vetores 2D
