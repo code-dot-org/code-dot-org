@@ -8,7 +8,6 @@ version          '0.2.555'
 
 depends 'apt'
 depends 'build-essential'
-depends 'yarn'
 
 depends 'cdo-cloudwatch-agent'
 depends 'cdo-repository'
