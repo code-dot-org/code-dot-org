@@ -357,6 +357,10 @@
           "word": "Shartli bayonotlar",
           "definition": "Faqat ma'lum shartlar to'g'ri bo'lganda ishlaydigan bayonotlar."
         },
+        "pseudocode/coursed/2022": {
+          "word": "psevdokod",
+          "definition": "Algoritmdagi qadamlarning oddiy til tavsifi"
+        },
         "condition/coursed/2022": {
           "word": "Shart",
           "definition": "Dastur biror narsa amalga oshirishdan oldin uning to'g'riligini tekshiradi."
@@ -378,7 +382,8 @@
           "definition": "Ob'ektni, jumladan, dasturiy ta'minot va apparatni ishlatadigan kishi."
         },
         "algorithm/coursef/2022": {
-          "word": "Algoritm"
+          "word": "Algoritm",
+          "definition": "Vazifani bajarish uchun qadamlar ro'yxati."
         },
         "behavior/coursef/2022": {
           "word": "Harakatlar/O‘zini tutish",
@@ -397,11 +402,12 @@
           "definition": "Dasturda ishlatilgan biror ma'lumot yoki qiymat uchun nom."
         },
         "prompt/coursef/2022": {
-          "word": "Tezkor",
-          "definition": "Kompyuter ekranida foydalanuvchi kiritishni kutayotgan xabar."
+          "word": "Tez",
+          "definition": "Kompyuter ekranidagi foydalanuvchidan kirishni kutadigan xabar."
         },
         "input/coursef/2022": {
-          "word": "Kiritish"
+          "word": "Kiritish",
+          "definition": "Kompyuterlar foydalanuvchilardan oladigan ma'lumot."
         },
         "models_and_simulations/coursef/2022": {
           "word": "Modellar va simulyatsiyalar",
@@ -637,6 +643,10 @@
           "word": "Funksiya",
           "definition": "Siz osongina qayta-qayta chaqirishingiz mumkin bo‘lgan kod parchasi."
         },
+        "prompt/express/2022": {
+          "word": "tezkor",
+          "definition": "Kompyuter ekranidagi foydalanuvchidan kirishni kutadigan xabar."
+        },
         "variable/express/2022": {
           "word": "O‘zgaruvchi",
           "definition": "Dasturda ishlatilgan biror ma'lumot yoki qiymat uchun nom."
@@ -805,6 +815,9 @@
           "word": "Hodisa",
           "definition": "Biror narsa sodir bo‘lishiga olib keladigan harakat."
         },
+        "data/coursec/2022": {
+          "word": "Maʼlumotlar"
+        },
         "binary/coursec/2022": {
           "word": "Binarli",
           "definition": "Faqat ikki xil qiymatdan foydalangan holda ma'lumotni tasvirlash usuli."
@@ -854,7 +867,8 @@
           "definition": "adabiy, badiiy yoki musiqiy materiallarni chop etish, nashr etish, ijro etish, videoga tushirish yoki yozib olish va boshqalarga ham shu imkoniyatlarni beradigan eksklyuziv qonuniy huquq."
         },
         "user/csd/2022": {
-          "word": "Foydalanuvchi"
+          "word": "Foydalanuvchi",
+          "definition": "Ob'ektni, shu jumladan dasturiy ta'minot va apparatni ishlatadigan kishi."
         },
         "user_interface/csd/2022": {
           "word": "UI - Foydalanuvchi interfeysi"
@@ -891,10 +905,12 @@
           "definition": "Ekrandagi grafika; joylashuv, harakat va tashqi ko‘rinish kabi xususiyatlarga ega bo‘ladi."
         },
         "user/coursef/2021": {
-          "word": "Foydalanuvchi"
+          "word": "Foydalanuvchi",
+          "definition": "Ob'ektni, shu jumladan dasturiy ta'minot va apparatni ishlatadigan kishi."
         },
         "algorithm/coursef/2021": {
-          "word": "Algoritm"
+          "word": "Algoritm",
+          "definition": "Vazifani bajarish uchun qadamlar ro'yxati."
         },
         "behavior/coursef/2021": {
           "word": "Harakatlar/O‘zini tutish",
@@ -912,8 +928,13 @@
           "word": "O‘zgaruvchi",
           "definition": "Dasturda ishlatilgan biror ma'lumot yoki qiymat uchun nom."
         },
+        "prompt/coursef/2021": {
+          "word": "Tez",
+          "definition": "Kompyuter ekranidagi foydalanuvchidan kirishni kutadigan xabar."
+        },
         "input/coursef/2021": {
-          "word": "Kiritish"
+          "word": "Kiritish",
+          "definition": "Kompyuterlar foydalanuvchilardan oladigan ma'lumot."
         },
         "loop/coursef/2021": {
           "word": "Sikl",
@@ -1174,6 +1195,10 @@
           "word": "Shartli bayonotlar",
           "definition": "Faqat ma'lum shartlar to'g'ri bo'lganda ishlaydigan bayonotlar."
         },
+        "pseudocode/coursed/2021": {
+          "word": "psevdokod",
+          "definition": "Algoritmdagi qadamlarning oddiy til tavsifi"
+        },
         "condition/coursed/2021": {
           "word": "Shart",
           "definition": "Dastur biror narsa amalga oshirishdan oldin uning to'g'riligini tekshiradi."
@@ -1222,6 +1247,9 @@
           "word": "Hodisa",
           "definition": "Biror narsa sodir bo‘lishiga olib keladigan harakat."
         },
+        "code/express/2021": {
+          "definition": "kod yozish yoki kompyuter uchun ko'rsatmalar yozish uchun."
+        },
         "loop/express/2021": {
           "word": "Sikl",
           "definition": "Biror narsani qayta-qayta bajarish."
@@ -1253,6 +1281,10 @@
         "function/express/2021": {
           "word": "Funksiya",
           "definition": "Siz osongina qayta-qayta chaqirishingiz mumkin bo‘lgan kod parchasi."
+        },
+        "prompt/express/2021": {
+          "word": "tezkor",
+          "definition": "Kompyuter ekranidagi foydalanuvchidan kirishni kutadigan xabar."
         },
         "variable/express/2021": {
           "word": "O‘zgaruvchi",
@@ -1330,6 +1362,10 @@
           "word": "Hodisa",
           "definition": "Biror narsa sodir bo‘lishiga olib keladigan harakat."
         },
+        "algorithm/coursee/2021": {
+          "word": "algoritm",
+          "definition": "Vazifani tugatish uchun qadamlar ro'yxati"
+        },
         "behavior/coursee/2021": {
           "word": "Harakatlar/O‘zini tutish",
           "definition": "Sprayt to‘xtash buyrug‘i berilmaguncha qiladigan amal. "
@@ -1394,7 +1430,8 @@
           "word": "Etika"
         },
         "user/csd/2021": {
-          "word": "Foydalanuvchi"
+          "word": "Foydalanuvchi",
+          "definition": "Ob'ektni, shu jumladan dasturiy ta'minot va apparatni ishlatadigan kishi."
         },
         "user_interface/csd/2021": {
           "word": "UI - Foydalanuvchi interfeysi"

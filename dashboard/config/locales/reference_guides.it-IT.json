@@ -3,10 +3,16 @@
     "data": {
       "reference_guides": {
         "csd-2022/accelerometer-events": {
-          "display_name": "Eventi Accelerometro"
+          "display_name": "Eventi dell'accelerometro"
+        },
+        "csd-2022/accuracy-in-ai-lab": {
+          "display_name": "L'accuratezza e il Laboratorio IA"
         },
         "csd-2022/ai-lab": {
-          "display_name": "Laboratorio di Intelligenza Artificiale"
+          "display_name": "Laboratorio IA"
+        },
+        "csd-2022/animation-tab": {
+          "display_name": "Scheda Animazione"
         },
         "csd-2022/app-lab": {
           "display_name": "Sviluppo App"
@@ -15,16 +21,37 @@
           "display_name": "Panoramica"
         },
         "csd-2022/arrays": {
-          "display_name": "Insiemi"
+          "display_name": "Matrici (arrays)"
+        },
+        "csd-2022/board-events": {
+          "display_name": "Eventi della scheda"
         },
         "csd-2022/body-styling": {
           "display_name": "Stile del corpo del testo (=body)"
+        },
+        "csd-2022/booleans-and-comparison-operators": {
+          "display_name": "Condizioni logiche (o espressioni booleane) e operatori di confronto"
+        },
+        "csd-2022/changing-screens": {
+          "display_name": "Modificare le schermate"
+        },
+        "csd-2022/changing-sensor-scale": {
+          "display_name": "Modificare la scala del sensore"
+        },
+        "csd-2022/circuit-playground": {
+          "display_name": "Panoramica del Circuit Playground"
         },
         "csd-2022/classes": {
           "display_name": "Classi"
         },
         "csd-2022/collision-detection": {
           "display_name": "Rilevamento delle collisioni"
+        },
+        "csd-2022/color-lights": {
+          "display_name": "Luci colorate"
+        },
+        "csd-2022/creating-a-survey": {
+          "display_name": "Creazione di un sondaggio"
         },
         "csd-2022/creative-commons-search": {
           "display_name": "Creative Commons Search"
@@ -36,7 +63,13 @@
           "display_name": "Panoramica"
         },
         "csd-2022/design-mode": {
-          "display_name": "Design Mode"
+          "display_name": "Modalità interfaccia"
+        },
+        "csd-2022/design-mode-elements": {
+          "display_name": "Elementi della \"Modalità Interfaccia\""
+        },
+        "csd-2022/designing-screens-with-code": {
+          "display_name": "Progettare schermate in modalità codice"
         },
         "csd-2022/drawing-shapes": {
           "display_name": "Disegnare Forme"
@@ -68,11 +101,26 @@
         "csd-2022/html-tags": {
           "display_name": "Tag HTML"
         },
+        "csd-2022/if-else-statements": {
+          "display_name": "Dichiarazioni se/altrimenti"
+        },
+        "csd-2022/if-statements": {
+          "display_name": "Istruzioni condizionali"
+        },
+        "csd-2022/if-statements-2": {
+          "display_name": "Istruzioni condizionali"
+        },
         "csd-2022/images-in-html": {
           "display_name": "Immagini in HTML"
         },
+        "csd-2022/importing-a-model-in-app-lab": {
+          "display_name": "Importazione di un modello in Sviluppo App"
+        },
+        "csd-2022/importing-screens": {
+          "display_name": "Importare le schermate"
+        },
         "csd-2022/introduction-to-ai-lab": {
-          "display_name": "Lezione 6"
+          "display_name": "Introduzione al Laboratorio IA"
         },
         "csd-2022/javascript": {
           "display_name": "JavaScript"
@@ -92,8 +140,17 @@
         "csd-2022/maker-toolkit-overview": {
           "display_name": "Panoramica"
         },
+        "csd-2022/model-cards-in-ai-lab": {
+          "display_name": "Schede modello in Laboratorio IA"
+        },
+        "csd-2022/modifying-arrays": {
+          "display_name": "Modifica delle matrici (array)"
+        },
+        "csd-2022/multi-screen-apps": {
+          "display_name": "App multischermo"
+        },
         "csd-2022/naming-variables": {
-          "display_name": "Nominare le Variabili"
+          "display_name": "Denominazione delle variabili"
         },
         "csd-2022/other": {
           "display_name": "Altro"
@@ -116,8 +173,20 @@
         "csd-2022/random-numbers": {
           "display_name": "Numeri Casuali"
         },
+        "csd-2022/responding-to-user-input": {
+          "display_name": "Reazione all'input dell'utente"
+        },
+        "csd-2022/selecting-a-label": {
+          "display_name": "Selezione di un'etichetta"
+        },
+        "csd-2022/selecting-features": {
+          "display_name": "Selezione delle caratteristiche"
+        },
         "csd-2022/shapes-and-parameters": {
           "display_name": "Forme e Parametri"
+        },
+        "csd-2022/sprite-interactions": {
+          "display_name": "Interazioni tra personaggi"
         },
         "csd-2022/sprite-properties": {
           "display_name": "Proprietà del personaggio"
@@ -128,17 +197,38 @@
         "csd-2022/style-sheets": {
           "display_name": "Fogli di stile"
         },
+        "csd-2022/taking-input-with-getproperty": {
+          "display_name": "Accettare la ricezione degli input con getProperty"
+        },
         "csd-2022/text-properties": {
           "display_name": "Proprietà del testo"
         },
+        "csd-2022/the-accelerometer": {
+          "display_name": "L'accelerometro"
+        },
+        "csd-2022/the-counter-pattern": {
+          "display_name": "Lo schema a contatore"
+        },
+        "csd-2022/the-counter-pattern-2": {
+          "display_name": "Lo schema a contatore"
+        },
         "csd-2022/the-draw-loop": {
-          "display_name": "Il disegno ciclico"
+          "display_name": "La funzione ciclica `draw()`"
+        },
+        "csd-2022/using-data-with-categorical-features": {
+          "display_name": "Utilizzo di dati con caratteristiche categoriali"
+        },
+        "csd-2022/using-data-with-numerical-features": {
+          "display_name": "Utilizzo di dati con caratteristiche numeriche"
         },
         "csd-2022/variables": {
           "display_name": "Variabili"
         },
         "csd-2022/velocity": {
           "display_name": "Velocità"
+        },
+        "csd-2022/velocity-and-the-counter-pattern": {
+          "display_name": "Velocità e Schema di Conteggio"
         },
         "csd-2022/web-lab": {
           "display_name": "Sviluppo Web"

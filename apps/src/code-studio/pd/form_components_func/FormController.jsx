@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, {useState, useEffect, useCallback, useMemo} from 'react';
 import $ from 'jquery';
-import {Button, Alert, FormGroup} from 'react-bootstrap';
+import {Button, Alert, FormGroup} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import {Pagination} from '@react-bootstrap/pagination';
 import {isEqual, omit} from 'lodash';
 import i18n from '@cdo/locale';
@@ -100,6 +100,8 @@ const FormController = props => {
   const [saving, setSaving] = useState(false);
   const [savedData, setSavedData] = useState(getInitialData());
   const [showSavedMessage, setShowSavedMessage] = useState(false);
+  const [showApplicationClosedMessage, setShowApplicationClosedMessage] =
+    useState(regionalPartner?.are_apps_closed);
   const [errors, setErrors] = useState([]);
   const previousErrors = usePrevious(errors);
   const [hasUserChangedData, setHasUserChangedData] = useState(
@@ -123,6 +125,15 @@ const FormController = props => {
     onSetPageInternal(initialPage);
   }, [onInitialize, onSetPageInternal, initialPage]);
 
+  // on matching to an RP with apps closed
+  useEffect(() => {
+    if (regionalPartner?.are_apps_closed) {
+      setShowApplicationClosedMessage(true);
+      scrollToTop();
+      return;
+    }
+  }, [regionalPartner]);
+
   useEffect(() => {
     if (
       !isEqual(
@@ -136,6 +147,7 @@ const FormController = props => {
     }
   }, [autoComputedFields, data, savedData]);
 
+  // on exiting application with unsaved data
   useEffect(() => {
     const showWarningOnExit =
       warnOnExit && !submitting && !saving && hasUserChangedData;
@@ -416,7 +428,11 @@ const FormController = props => {
    */
   const handleSubmit = event => {
     event.preventDefault();
-    if (validateOnSubmitOnly) {
+    if (regionalPartner?.are_apps_closed) {
+      setShowApplicationClosedMessage(true);
+      scrollToTop();
+      return;
+    } else if (validateOnSubmitOnly) {
       setTriedToSubmit(true);
       let invalidPages = validateForm();
 
@@ -601,6 +617,24 @@ const FormController = props => {
   /**
    * @returns {Element|false}
    */
+  const renderApplicationClosedMessage = () =>
+    showApplicationClosedMessage && (
+      <Alert
+        key={3}
+        onDismiss={() => setShowApplicationClosedMessage(false)}
+        bsStyle="danger"
+      >
+        <p>
+          Applications are closed for this region. Join{' '}
+          <a href="https://code.org/about/hear-from-us">our email list</a> to
+          find out when applications open next year.
+        </p>
+      </Alert>
+    );
+
+  /**
+   * @returns {Element|false}
+   */
   const renderDataWasLoadedMessage = () =>
     showDataWasLoadedMessage && (
       <Alert
@@ -705,6 +739,7 @@ const FormController = props => {
     <form onSubmit={handleSubmit}>
       {renderErrorFeedback()}
       {renderDataWasLoadedMessage()}
+      {renderApplicationClosedMessage()}
       {renderMessageOnSave()}
       {renderCurrentPage()}
       {renderControlButtons()}

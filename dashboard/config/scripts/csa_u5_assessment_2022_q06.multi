@@ -9,3 +9,5 @@ wrong '`System.out.print(arr[3][0] + arr[3][1] + arr[3][2]);`'
 markdown <<MARKDOWN
 Assume that a two-dimensional (2D) array `arr` of `String` objects with 3 rows and 4 columns has been properly declared and initialized. Which of the following can be used to print the elements in the fourth column of `arr`?
 MARKDOWN
+
+allow_multiple_attempts true

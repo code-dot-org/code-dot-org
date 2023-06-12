@@ -97,6 +97,7 @@ es-MX:
           description_short: Este curso de 20 horas los principales conceptos de informática y programación en cursos 2-4.
           description_audience: De 10 a 18 años
           student_description: Este curso de 20 horas introduce el núcleo de la informática y conceptos de programación. El curso está diseñado para su uso en aulas para los grados K-8, pero es divertido aprender en todas las edades.
+          name: 20 horas
         edit-code:
           title: Editar el código
           description: Editar el código
@@ -779,7 +780,7 @@ es-MX:
               display_name: Prácticas de Profesor
           student_description: Lo utilizaremos durante la TeacherCon para entregar ayudas y materiales para las sesiones
         gradeKinder:
-          title: Jardín de infancia
+          title: Kindergarten
           description: Guion de Planificación para CSF 2.0
           description_short: Guion de Planificación para CSF 2.0
           description_audience: Edades de 5 a 18 años
@@ -2691,6 +2692,7 @@ es-MX:
               display_name: Proyecto
         pluralsight:
           title: Obtener acceso a Pluralsight One
+          name: visión-plural
         express-2018-vn:
           title: CSF Express 2018 para Vietnam
           description_short: Giới thiệu Khoa học máy tính cơ bản cho học sinh Việt Nam.
@@ -6099,7 +6101,7 @@ es-MX:
           lesson_groups:
             lessonGroup-2:
               display_name: Preparación para Enseñar la Unidad 1
-          title: autodidáctico-pl-csd5
+          title: Enseñanza de IA y aprendizaje automático
           description: "Este módulo está diseñado para ayudarte a preparar la enseñanza de unidades específicas dentro del curso Descubrimientos de la Informática.  Empieza seleccionando la unidad que planeas enseñar primero. Puedes volver a esta sección de la formación a lo largo del curso escolar mientras te preparas para enseñar nuevas unidades del curso. No es necesario completar este contenido en orden. Para obtener orientación sobre la mejor manera de implementar Descubrimientos de la Informática con los estudiantes, consulta la [Guía de Implementación de Descubrimientos de la Informática][0].\n\n**Durante cada unidad en Descubrimientos de las Ciencias de la Computación, tendrá la oportunidad de:**\n\n-   Prepararte para enseñar la primera semana del contenido de la unidad \n-   Practicar los conceptos clave incluidos en la unidad \n-   Participar en el trabajo de ejemplo de los estudiantes \n-   Explorar los proyectos de fin de capítulo \n\n**Tiempo sugerido:** 2 horas"
           student_description: "Este módulo está diseñado para ayudarte a preparar la enseñanza de unidades específicas dentro del curso Descubrimientos de la Informática.  Empieza seleccionando la unidad que planeas enseñar primero. Puedes volver a esta sección de la formación a lo largo del curso escolar mientras te preparas para enseñar nuevas unidades del curso. No es necesario completar este contenido en orden. Para obtener orientación sobre la mejor manera de implementar Descubrimientos de la Informática con los estudiantes, consulta la [Guía de Implementación de Descubrimientos de la Informática][0].\n\n**Durante cada unidad en Descubrimientos de las Ciencias de la Computación, tendrá la oportunidad de:**\n\n-   Prepararte para enseñar la primera semana del contenido de la unidad \n-   Practicar los conceptos clave incluidos en la unidad \n-   Participar en el trabajo de ejemplo de los estudiantes \n-   Explorar los proyectos de fin de capítulo \n\n**Tiempo sugerido:** 2 horas"
         vpl-csa-2022:
@@ -6481,8 +6483,10 @@ es-MX:
               display_name: "¡Demuestra lo que sabes!"
             lessonGroup-4:
               display_name: Encuesta
+            lessonGroup-5:
+              display_name: Lecciones alternativas
           title: Buscando y Ordenando
-          description: "En esta unidad, los estudiantes aplican algoritmos de búsqueda y ordenación para trabajar con listas de datos primitivos y de objetos almacenados en arrays 1D y 2D y `ArrayList`s. Los estudiantes analizan la eficiencia de los algoritmos de búsqueda y ordenación y amplían los algoritmos estándar que han desarrollado a lo largo del curso para resolver problemas más complejos. A lo largo de la unidad, los estudiantes aplican sus conocimientos y habilidades de programación para desarrollar un juego que incorpora el diseño orientado a objetos y la eficiencia. Los estudiantes concluyen la unidad y el curso considerando la privacidad y seguridad de sus programas y usuarios.\n\n### Controles de progreso personal del Aula AP\n\nPara asignar preguntas del Banco de Preguntas de AP Classroom que se ajusten a esta unidad, cree un cuestionario personalizado en AP Classroom buscando en el Banco de Preguntas los enunciados de Conocimientos Esenciales en la página [\\*\\*Estándares\\*\\*](https://studio.code.org/s/csa8-pilot-facilitator/standards) de la unidad. Puede encontrar instrucciones y vídeos de demostración para hacerlo en [\\*\\*AP Central\\*\\*](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nLas siguientes comprobaciones de progreso personal en el Aula AP pueden asignarse durante la semana de \"Demuestra lo que sabes\":\n\n-   Control de Progreso Personal 10\n\n**_Nota:_** Algunos de los objetivos de aprendizaje y de los conocimientos esenciales que aparecen en los controles de progreso personal sugeridos se tratan en unidades posteriores.\\_"
+          description: "En esta unidad, los estudiantes aplican algoritmos de búsqueda y ordenación para trabajar con listas de datos primitivos y de objetos almacenados en arrays 1D y 2D y `ArrayList`s. Los estudiantes analizan la eficiencia de los algoritmos de búsqueda y ordenación y amplían los algoritmos estándar que han desarrollado a lo largo del curso para resolver problemas más complejos. A lo largo de la unidad, los estudiantes aplican sus conocimientos y habilidades de programación para desarrollar un juego que incorpora el diseño orientado a objetos y la eficiencia. Los estudiantes concluyen la unidad y el curso considerando la privacidad y seguridad de sus programas y usuarios.\n\n### Controles de progreso personal del Aula AP\n\nPara asignar preguntas del Banco de Preguntas de AP Classroom que se ajusten a esta unidad, cree un cuestionario personalizado en AP Classroom buscando en el Banco de Preguntas los enunciados de Conocimientos Esenciales en la página [\\*\\*Estándares\\*\\*](https://studio.code.org/form/teacher_end_of_unit_survey?survey_data%5Bunit_number%5D=8) de la unidad. Puede encontrar instrucciones y vídeos de demostración para hacerlo en [**AP Central**][1].\n\nLas siguientes comprobaciones de progreso personal en el Aula AP pueden asignarse durante la semana de \"Demuestra lo que sabes\":\n\n-   Control de Progreso Personal 10\n\n**_Nota:_** Algunos de los objetivos de aprendizaje y de los conocimientos esenciales que aparecen en los controles de progreso personal sugeridos se tratan en unidades posteriores.\\_"
           student_description: En esta unidad, ampliarás los algoritmos que has aprendido para explorar enfoques comunes de búsqueda y ordenación de arrays 1D y 2D y `ArrayList`s. En el proceso, analizarás y compararás las eficiencias de estos algoritmos utilizando recuentos de ejecución de sentencias y desarrollarás aún más los conocimientos de resolución de problemas para descomponer problemas complejos. A lo largo de la unidad, aplicas tus conocimientos de programación e ingeniería de software para planificar y desarrollar un proyecto de codificación creativo utilizando la consola que incorpora diseño orientado a objetos, estructuras de datos y pensamiento algorítmico. Con los conocimientos y habilidades adquiridos a lo largo del año, analizas la privacidad y la seguridad de los programas y los usuarios.
         vpl-csd3-ayw-pilot-2022:
           lessons:
@@ -7115,6 +7119,8 @@ es-MX:
               display_name: 'Capítulo 1: Creación de páginas Web'
             lessonGroup-3:
               display_name: 'Capítulo 2: Sitios Web Multipágina'
+            lessonGroup-4:
+              display_name: Encuesta
           title: Desarrollo Web
           student_description: En la Unidad 2, aprenderás cómo crear y compartir el contenido en tus propias páginas web. Después de decidir qué contenido deseas compartir con los demás, aprenderás a estructurar y diseñar tus páginas mediante HTML y CSS. También practicarás valiosas habilidades de programación, como depurar y comentar. Al final de la unidad, tendrás un sitio web personal que podrás publicar en Internet.
         interactive-games-animations-2023:
@@ -7123,6 +7129,8 @@ es-MX:
               display_name: 'Capítulo 1: Imágenes y animaciones'
             lessonGroup-3:
               display_name: 'Capítulo 2: Desarrollo de juegos'
+            lessonGroup-4:
+              display_name: Encuesta
           title: Animaciones Interactivas y Juegos
           student_description: " En la Unidad 3, desarrollarás tu experiencia de programación a medida que programes animaciones, arte interactivo y juegos en el Laboratorio de juegos. La unidad comienza con formas simples y, a partir de los mismos conceptos de programación y el proceso de diseño que usan los científicos informáticos a diario, añade juegos más sofisticados basados en sprites. En el proyecto final, desarrollarás un programa personalizado e interactivo."
         design-process-2023:
@@ -7131,6 +7139,8 @@ es-MX:
               display_name: 'Capítulo 1: Diseño orientado al usuario'
             lessonGroup-3:
               display_name: 'Capítulo 2: Prototipos de aplicaciones'
+            lessonGroup-4:
+              display_name: Encuesta
           student_description: La Unidad 4 introduce los impactos sociales más amplios que tiene la computación. A través de una serie de desafíos de diseño, aprenderás a comprender mejor las necesidades de los demás mientras desarrollas una solución a un problema. La segunda mitad de la unidad consiste en un proyecto de equipo iterativo, durante el cual los equipos tienen la oportunidad de identificar una necesidad que les importa, crear prototipos de soluciones tanto en papel como en el Laboratorio de aplicaciones, y probar soluciones con usuarios reales para obtener comentarios y seguir adelante.
         data-society-2023:
           lesson_groups:
@@ -7138,6 +7148,8 @@ es-MX:
               display_name: 'Capítulo 1: Representación de la información'
             lessonGroup-3:
               display_name: 'Capítulo 2: Resolución de problemas en los datos'
+            lessonGroup-4:
+              display_name: Encuesta
           title: Datos y Sociedad
           description_short: Aprende cómo las personas usan las computadoras para resolver problemas de datos.
           student_description: La Unidad 5 trata sobre la importancia de los datos a la hora de resolver problemas y resalta cómo las computadoras pueden ayudar en este proceso. El primer capítulo explora los diferentes sistemas utilizados para representar información en una computadora, y los desafíos y concesiones planteados al usarlos. En el segundo capítulo, aprenderá cómo se utilizan las colecciones de datos para resolver problemas y cómo las computadoras ayudan a automatizar los pasos de este proceso. Al final del capítulo, se considera cómo se puede aplicar el proceso de resolución de problemas de datos a un área de tu elección.
@@ -7149,6 +7161,8 @@ es-MX:
               display_name: Capítulo 1
             lessonGroup-4:
               display_name: Capítulo 2
+            lessonGroup-5:
+              display_name: Encuesta
           title: Inteligencia Artificial y Aprendizaje Automático
           student_description: La Unidad 7 es una introducción práctica al desarrollo de un modelo de aprendizaje automático con datos tabulares. Explorarás cómo los ordenadores aprenden de los datos para tomar decisiones, y luego desarrollarás tus propios proyectos de aprendizaje automático en torno a datos del mundo real. La unidad culmina con el diseño de tu propia aplicación de aprendizaje automático para resolver un problema de relevancia personal.
         focus-on-creativity1-2023:
@@ -7369,6 +7383,8 @@ es-MX:
           lesson_groups:
             lessonGroup-3:
               display_name: Entradas y salidas
+            lessonGroup-5:
+              display_name: Encuesta
         vpl-csd-ci-1:
           lesson_groups:
             lessonGroup-2:
@@ -7407,7 +7423,7 @@ es-MX:
         vpl-csd-ci-7:
           lesson_groups:
             lessonGroup-2:
-              display_name: autodidáctico-pl-csd5
+              display_name: Enseñanza de IA y aprendizaje automático
           title: 'Módulo 7: Preparación para la Enseñanza de la Inteligencia Artificial y el Aprendizaje Automático'
           description: "Este módulo de aprendizaje profesional está diseñado para ayudarte en la enseñanza de la unidad de la Inteligencia Artificial y el Aprendizaje Automático de Code.org. \n\n**En este módulo de aprendizaje profesional, podrás:**\n\n-   Obtener una introducción a la Inteligencia Artificial y el Aprendizaje Automático.\n-   Practicar los conceptos clave incluidos en la unidad.\n-   Interactuar con el Laboratorio de IA y el Laboratorio de Apps.\n-   Explorar los proyectos de fin de capítulo.\n-   Hacer un plan aplicar la unidad con tus estudiantes.\n\n**Tiempo sugerido:** 120 minutos"
           student_description: "Este módulo de aprendizaje profesional está diseñado para ayudarte en la enseñanza de la unidad de la Inteligencia Artificial y el Aprendizaje Automático de Code.org. \n\n**En este módulo de aprendizaje profesional, podrás:**\n\n-   Obtener una introducción a la Inteligencia Artificial y el Aprendizaje Automático.\n-   Practicar los conceptos clave incluidos en la unidad.\n-   Interactuar con el Laboratorio de IA y el Laboratorio de Apps.\n-   Explorar los proyectos de fin de capítulo.\n-   Hacer un plan aplicar la unidad con tus estudiantes.\n\n**Tiempo sugerido:** 120 minutos"
@@ -7417,6 +7433,8 @@ es-MX:
               display_name: 'Capítulo 1: Entradas y Salidas'
             lessonGroup-4:
               display_name: 'Capítulo 2: Desarrollo de prototipos físicos'
+            lessonGroup-5:
+              display_name: Encuesta
           student_description: Esta unidad explora el papel de las plataformas de hardware en la informática y cómo los diferentes sensores pueden proporcionar una entrada y salida más eficaz que el tradicional teclado, ratón y monitor. Utilizando el Laboratorio de Aplicaciones y el Circuit Playground de Adafruit, desarrollarás programas que utilizan las mismas entradas y salidas de hardware que se ven en los dispositivos inteligentes, observando cómo un simple prototipo aproximado puede conducir a un producto terminado. La unidad concluye con un reto de diseño para utilizar el Circuit Playground como base para una innovación de su propio diseño.
         focus-on-creativity4b-2023:
           lesson_groups:
@@ -7430,6 +7448,8 @@ es-MX:
           lesson_groups:
             lessonGroup-3:
               display_name: Entradas y salidas
+        ai-temp:
+          title: Cómo funciona la Inteligencia Artificial
         focus-on-coding4b-2023:
           lesson_groups:
             lessonGroup-3:
@@ -7438,3 +7458,211 @@ es-MX:
           lesson_groups:
             lessonGroup-3:
               display_name: Entradas y salidas
+        self-paced-pl-csd1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Bienvenidos
+          title: 'Módulo 1: Bienvenida '
+          description: "Este módulo es una breve introducción tanto a Code.org como a este curso de aprendizaje profesional. \n\n**Usted podrá:**\n\n-   Obtener una introducción a Code.org y Descubrimientos de la Informática.\n-   Aprender como participar en este curso de aprendizaje profesional.\n\n**Tiempo sugerido:** 10 minutos"
+          student_description: "Este módulo es una breve introducción tanto a Code.org como a este curso de aprendizaje profesional. \n\n**Usted podrá:**\n\n-   Obtener una introducción a Code.org y Descubrimientos de la Informática.\n-   Aprender como participar en este curso de aprendizaje profesional.\n\n**Tiempo sugerido:** 10 minutos"
+        self-paced-pl-csd2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Navegando por Code.org
+          title: 'Módulo 2: Navegando por Code.org'
+          description: "Este módulo está diseñado para orientarte sobre las herramientas que utilizarás para apoyar el aprendizaje de los estudiantes mientras enseñas Descubrimientos de la Informática. \n\n**Usted podrá:**\n\n-   Navegar por el sitio web de Code.org y las herramientas para profesores.\n-   Configurar una sección del aula\n-   Localizar y utilizar los planes de lecciones del curso y los recursos para el profesor. \n-   Aprenderás cómo acceder a la ayuda mientras enseñas el curso.\n\n**Tiempo sugerido:** 60 minutos"
+          student_description: "Este módulo está diseñado para orientarte sobre las herramientas que utilizarás para apoyar el aprendizaje de los estudiantes mientras enseñas Descubrimientos de la Informática. \n\n**Usted podrá:**\n\n-   Navegar por el sitio web de Code.org y las herramientas para profesores.\n-   Configurar una sección del aula\n-   Localizar y utilizar los planes de lecciones del curso y los recursos para el profesor. \n-   Aprenderás cómo acceder a la ayuda mientras enseñas el curso.\n\n**Tiempo sugerido:** 60 minutos"
+        self-paced-pl-csd3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Resumen de Descubrimientos de las Ciencias de la Computación
+          title: 'Módulo 3: Descubrimientos de las Ciencias de la Computación'
+          description: "Este módulo te proporcionará una visión general del curso Descubrimientos de Informática con énfasis en los conceptos que los estudiantes aprenderán y las herramientas que utilizarán a lo largo del curso. Participar en este módulo te ayudará a tomar decisiones sobre cómo seleccionar el contenido del curso que implementarás en tu aula. \n\n**Usted Podrá:**\n\n-   Obtener una comprensión de alto nivel del plan de estudios de Descubrimientos de Informática.\n-   Familiarizarte con los entornos de programación utilizados en Descubrimientos de Informática.\n-   Decidir qué unidades de Descubrimientos de Informática enseñarás en tu clase.\n\n**Tiempo sugerido:** 60 minutos"
+          student_description: "Este módulo te proporcionará una visión general del curso Descubrimientos de Informática con énfasis en los conceptos que los estudiantes aprenderán y las herramientas que utilizarán a lo largo del curso. Participar en este módulo te ayudará a tomar decisiones sobre cómo seleccionar el contenido del curso que implementarás en tu aula. \n\n**Usted Podrá:**\n\n-   Obtener una comprensión de alto nivel del plan de estudios de Descubrimientos de Informática.\n-   Familiarizarte con los entornos de programación utilizados en Descubrimientos de Informática.\n-   Decidir qué unidades de Descubrimientos de Informática enseñarás en tu clase.\n\n**Tiempo sugerido:** 60 minutos"
+        self-paced-pl-csd4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Enseñanza y aprendizaje en Descubrimientos de las Ciencias de la Computación
+          title: 'Módulo 4: Enseñanza y aprendizaje en Descubrimientos de las Ciencias de la Computación'
+          description: "En este módulo, se presentarán prácticas auténticas de Informática que los estudiantes realizarán a lo largo del curso Descubrimientos de la Informática. Estas prácticas incluyen la depuración, el uso de recursos y la programación en parejas. También explorarás el papel del profesor dentro de un aula de Descubrimientos de la Informática y harás un plan para apoyar el aprendizaje de los alumnos mientras enseñas el curso.\n\n\\*\\*Usted Podrá: \\*\\*\n\n-   Considerar el papel del profesor en un aula de Descubrimientos de la Informática. \n-   Aprenderás sobre las prácticas auténticas de Informática que los estudiantes desarrollarán a lo largo del curso Descubrimientos de la Informática.\n-   Hacer un plan de cómo apoyar el aprendizaje de los alumnos a través de la diferenciación, la evaluación continua, y la promoción de una cultura de inclusión. \n\n**Tiempo sugerido:** 50 minutos"
+          student_description: "En este módulo, se presentarán prácticas auténticas de Informática que los estudiantes realizarán a lo largo del curso Descubrimientos de la Informática. Estas prácticas incluyen la depuración, el uso de recursos y la programación en parejas. También explorarás el papel del profesor dentro de un aula de Descubrimientos de la Informática y harás un plan para apoyar el aprendizaje de los alumnos mientras enseñas el curso.\n\n\\*\\*Usted Podrá: \\*\\*\n\n-   Considerar el papel del profesor en un aula de Descubrimientos de la Informática. \n-   Aprenderás sobre las prácticas auténticas de Informática que los estudiantes desarrollarán a lo largo del curso Descubrimientos de la Informática.\n-   Hacer un plan de cómo apoyar el aprendizaje de los alumnos a través de la diferenciación, la evaluación continua, y la promoción de una cultura de inclusión. \n\n**Tiempo sugerido:** 50 minutos"
+        self-paced-pl-csd5-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Preparación para Enseñar la Unidad 1
+          title: Enseñanza de IA y aprendizaje automático
+          description: "Este módulo está diseñado para ayudarte a preparar la enseñanza de unidades específicas dentro del curso Descubrimientos de la Informática.  Empieza seleccionando la unidad que planeas enseñar primero. Puedes volver a esta sección de la formación a lo largo del curso escolar mientras te preparas para enseñar nuevas unidades del curso. No es necesario completar este contenido en orden. Para obtener orientación sobre la mejor manera de implementar Descubrimientos de la Informática con los estudiantes, consulta la [Guía de Implementación de Descubrimientos de la Informática][0].\n\n**Durante cada unidad en Descubrimientos de las Ciencias de la Computación, tendrá la oportunidad de:**\n\n-   Prepararte para enseñar la primera semana del contenido de la unidad \n-   Practicar los conceptos clave incluidos en la unidad \n-   Participar en el trabajo de ejemplo de los estudiantes \n-   Explorar los proyectos de fin de capítulo \n\n**Tiempo sugerido:** 2 horas"
+          student_description: "Este módulo está diseñado para ayudarte a preparar la enseñanza de unidades específicas dentro del curso Descubrimientos de la Informática.  Empieza seleccionando la unidad que planeas enseñar primero. Puedes volver a esta sección de la formación a lo largo del curso escolar mientras te preparas para enseñar nuevas unidades del curso. No es necesario completar este contenido en orden. Para obtener orientación sobre la mejor manera de implementar Descubrimientos de la Informática con los estudiantes, consulta la [Guía de Implementación de Descubrimientos de la Informática][0].\n\n**Durante cada unidad en Descubrimientos de las Ciencias de la Computación, tendrá la oportunidad de:**\n\n-   Prepararte para enseñar la primera semana del contenido de la unidad \n-   Practicar los conceptos clave incluidos en la unidad \n-   Participar en el trabajo de ejemplo de los estudiantes \n-   Explorar los proyectos de fin de capítulo \n\n**Tiempo sugerido:** 2 horas"
+        pl-csd-summer-day1:
+          lessons:
+            lesson-3:
+              name: Introducción
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Día 1
+          title: Día 1
+        pl-csd-summer-day2:
+          lessons:
+            lesson-10:
+              name: Actividad de cierre
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Día 2
+          title: Día 2
+        pl-csd-summer-day3:
+          lessons:
+            lesson-10:
+              name: 'Actividad de cierre '
+            lesson-11:
+              name: Día 3 Conclusión
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Día 3
+          title: Día 3
+        pl-csd-summer-day4:
+          lessons:
+            lesson-12:
+              name: Actividad de cierre
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Día 4
+          title: Día 4
+        virtual-pl-csd-summer-day1:
+          lessons:
+            lesson-1:
+              name: Introducción
+            lesson-12:
+              name: Actividad de cierre
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Síncronos Parte 1
+            lessonGroup-3:
+              display_name: Asíncronos Parte 1
+            lessonGroup-4:
+              display_name: Síncronos Parte 2
+            lessonGroup-5:
+              display_name: Asíncronos Parte 2
+          title: Día 1
+        virtual-pl-csd-summer-day2:
+          lessons:
+            lesson-10:
+              name: Actividad de cierre
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Síncronos Parte 1
+            lessonGroup-3:
+              display_name: Asíncronos Parte 1
+            lessonGroup-4:
+              display_name: Síncronos Parte 2
+            lessonGroup-5:
+              display_name: Asíncronos Parte 2
+          title: Día 2
+        virtual-pl-csd-summer-day3:
+          lessons:
+            lesson-12:
+              name: Actividad de cierre
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Síncronos Parte 1
+            lessonGroup-3:
+              display_name: Asíncronos Parte 1
+            lessonGroup-4:
+              display_name: Síncronos Parte 2
+            lessonGroup-5:
+              display_name: Asíncronos Parte 2
+          title: Día 3
+        virtual-pl-csd-summer-day4:
+          lessons:
+            lesson-13:
+              name: Actividad de cierre
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Síncronos Parte 1
+            lessonGroup-3:
+              display_name: Asíncronos Parte 1
+            lessonGroup-4:
+              display_name: Síncronos Parte 2
+            lessonGroup-5:
+              display_name: Asíncronos Parte 2
+          title: Día 4
+        virtual-pl-csd-summer-day5:
+          lessons:
+            lesson-3:
+              name: Evaluación
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Síncronos Parte 1
+            lessonGroup-3:
+              display_name: Asíncronos Parte 1
+            lessonGroup-4:
+              display_name: Síncronos Parte 2
+          title: Día 5
+        self-paced-pl-microbit2:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Preparación para enseñar a crear aplicaciones para dispositivos con micro:bits
+          title: Preparación para enseñar a crear aplicaciones para dispositivos con micro:bits
+          description: "**Usted:**\n\n-   Obtendrá una introducción a la creación de aplicaciones para dispositivos.\n-   Configurará su micro:bit. \n-   Practicará conceptos clave de la unidad.\n-   Revisará los proyectos de fin de capítulo.\n-   Considerará el rol del profesor en una clase de ciencias de la computación.\n\n**Tiempo sugerido:** 100 minutos"
+          student_description: "**Usted:**\n\n-   Obtendrá una introducción a la creación de aplicaciones para dispositivos.\n-   Configurará su micro:bit. \n-   Practicará conceptos clave de la unidad.\n-   Revisará los proyectos de fin de capítulo.\n-   Considerará el rol del profesor en una clase de ciencias de la computación.\n\n**Tiempo sugerido:** 100 minutos"
+        csd-post-survey-2023:
+          title: Encuesta de final de curso
+          description: Esta unidad contiene la encuesta fin de curso de Descubrimientos CS. Esta unidad puede ser asignada después de que los estudiantes completen su unidad final en Descubrimientos CS.
+        focus-on-data-post-survey-2023:
+          title: Encuesta de final de curso
+          description: Esta unidad contiene la encuesta fin de curso de Descubrimientos CS. Esta unidad puede ser asignada después de que los estudiantes completen su unidad final en Descubrimientos CS.
+        focus-on-impact-in-society-post-survey-2023:
+          title: Encuesta de final de curso
+          description: Esta unidad contiene la encuesta fin de curso de Descubrimientos CS. Esta unidad puede ser asignada después de que los estudiantes completen su unidad final en Descubrimientos CS.
+        focus-on-coding-post-survey-2023:
+          title: Encuesta de final de curso
+          description: Esta unidad contiene la encuesta fin de curso de Descubrimientos CS. Esta unidad puede ser asignada después de que los estudiantes completen su unidad final en Descubrimientos CS.
+        focus-on-design-with-purpose-post-survey-2023:
+          title: Encuesta de final de curso
+          description: Esta unidad contiene la encuesta fin de curso de Descubrimientos CS. Esta unidad puede ser asignada después de que los estudiantes completen su unidad final en Descubrimientos CS.
+        focus-on-hardware-post-survey-2023:
+          title: Encuesta de final de curso
+          description: Esta unidad contiene la encuesta fin de curso de Descubrimientos CS. Esta unidad puede ser asignada después de que los estudiantes completen su unidad final en Descubrimientos CS.
+        focus-on-creativity-post-survey-2023:
+          title: Encuesta de final de curso
+          description: Esta unidad contiene la encuesta fin de curso de Descubrimientos CS. Esta unidad puede ser asignada después de que los estudiantes completen su unidad final en Descubrimientos CS.
+        coursef-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ciudadanía digital
+            lessonGroup-3:
+              display_name: Sprites
+            lessonGroup-4:
+              display_name: Variables
+            lessonGroup-5:
+              display_name: Datos y Simulaciones
+            lessonGroup-6:
+              display_name: Proyecto de fin de curso
+          description_audience: De 9 a 13 años
+          description_short: Aprende todos los conceptos de Fundamentos de Ciencias de la Computación y crea tu propio arte, historia o juego.
+          description: Hemos creado el curso F para alumnos de quinto curso. El curso comienza analizando cómo los usuarios eligen las aplicaciones que utilizan. A continuación, los alumnos aprenden a crear una serie de aplicaciones de Laboratorio de Sprite que también ofrecen opciones al usuario. En las últimas lecciones del curso, los estudiantes aprenderán sobre las variables en una serie de contextos. A lo largo de este curso, los estudiantes tienen mayor autonomía y más opciones. Al final del curso, los estudiantes habrán creado proyectos interactivos para compartir con sus amigos y familiares.
+          student_description: Aprende a programar con sprites y variables, así como a debatir el impacto social de la informática e Internet. Al final de este curso, diseña y crea un proyecto que puedas compartir con tus amigos y familiares.
+        self-paced-pl-csp2-2023:
+          title: 'Módulo 2: Navegando por Code.org'
+        self-paced-pl-csp4-2023:
+          description: |-
+            En este módulo, conocerás las auténticas prácticas de informática que los estudiantes llevarán a cabo a lo largo del curso de Principios de Informática. Estas prácticas incluyen la depuración, el uso de recursos y la programación en parejas. También explorarás el papel del profesor dentro de un aula de Principios de Informática y harás un plan de cómo apoyar el aprendizaje de los alumnos mientras enseñas el curso.
+
+            **Tendrás que**:
+
+            -   Considerar el papel del profesor en un aula de Principios de Informática.
+            -   Aprender sobre las auténticas prácticas de Informática que los estudiantes desarrollarán a lo largo del curso de Principios de Informática.
+            -   Elaborar un plan para apoyar el aprendizaje de los estudiantes a través de la diferenciación, la evaluación continua y la promoción en una cultura de inclusión.
+            -   Aprender sobre las oportunidades para conectar con la comunidad Informática en general.
+
+            **Tiempo sugerido**: 70 minutos
+          student_description: |-
+            En este módulo, conocerás las auténticas prácticas de informática que los estudiantes llevarán a cabo a lo largo del curso de Principios de Informática. Estas prácticas incluyen la depuración, el uso de recursos y la programación en parejas. También explorarás el papel del profesor dentro de un aula de Principios de Informática y harás un plan de cómo apoyar el aprendizaje de los alumnos mientras enseñas el curso.
+
+            **Tendrás que**:
+
+            -   Considerar el papel del profesor en un aula de Principios de Informática.
+            -   Aprender sobre las auténticas prácticas de Informática que los estudiantes desarrollarán a lo largo del curso de Principios de Informática.
+            -   Elaborar un plan para apoyar el aprendizaje de los estudiantes a través de la diferenciación, la evaluación continua y la promoción en una cultura de inclusión.
+            -   Aprender sobre las oportunidades para conectar con la comunidad Informática en general.
+
+            **Tiempo sugerido**: 70 minutos

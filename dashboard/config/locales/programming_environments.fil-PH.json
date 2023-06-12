@@ -39,6 +39,20 @@
                     }
                   }
                 },
+                "mouseIsOver": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Sprite"
+                    }
+                  }
+                },
+                "mousePressedOver": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Sprite"
+                    }
+                  }
+                },
                 "mouseWentDown": {
                   "examples": {
                     "Black and White": {
@@ -231,6 +245,20 @@
             "groups": {
               "name": "Grupo",
               "expressions": {
+                "add": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Sprite"
+                    }
+                  }
+                },
+                "contains": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Sprite"
+                    }
+                  }
+                },
                 "get": {
                   "palette_params": {
                     "i": {
@@ -245,6 +273,13 @@
                     },
                     "y": {
                       "type": "Bilang"
+                    }
+                  }
+                },
+                "remove": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Sprite"
                     }
                   }
                 },
@@ -710,6 +745,11 @@
                   }
                 },
                 "onEvent": {
+                  "examples": {
+                    "Shrink and Grow": {
+                      "name": "Lumiit at Lumaki"
+                    }
+                  },
                   "palette_params": {
                     "type": {
                       "type": "String"

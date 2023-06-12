@@ -69,6 +69,7 @@ tr:
   unsubmit: Gönderini gerial
   previous_page: Önceki Sayfa
   next_page: Sonraki Sayfa
+  next_level: Sonraki Seviye
   next_resource: Sonraki Kaynak
   done_with_module: Bu Öğrenme Modülü tamamlandı
   cancel: İptal
@@ -214,8 +215,6 @@ tr:
       izin verecek bir formda saklanmıyor. Öğrenciler şifrelerini tekrar almak dışında
       asla Code.org'dan elektronik posta almazlar. Daha fazla bilgi için [Güvenlik
       politikamıza](http://code.org/privacy) bakınız.
-    additional_information: Giriş işleminize devam edebilmek için ek bilgilere ihtiyaç
-      duymaktayız.
     user_type_button: Hesap Türünü Güncelle
     user_type_label: Hesap Türü
     user_type_student: öğrenci

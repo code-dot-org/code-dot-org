@@ -69,6 +69,7 @@ de:
   unsubmit: Zurücknehmen
   previous_page: Vorherige Seite
   next_page: Nächste Seite
+  next_level: Nächstes Level
   next_resource: Nächste Ressource
   done_with_module: Mit dieser Lerneinheit abgeschlossen
   cancel: "Abbrechen"
@@ -172,7 +173,6 @@ de:
     data_collection_us: "Mir ist bekannt, dass Code.org eine in den USA ansässige gemeinnützige Website ist und dass die Gesetze zur Datenerfassung in den USA von den Gesetzen in meinem Land abweichen können."
     visit_privacy: 'Lesen Sie die [Datenschutzerklärung](%{privacy_url}) von Code.org, um mehr zu erfahren.'
     student_terms_markdown: "E-Mail-Adressen werden nicht in einer Form gespeichert, die es uns ermöglicht, mit den Studenten in Kontakt zu treten. Schüler werden niemals E-Mails von Code.org erhalten, außer zur Wiederherstellung des Passworts. Weitere Informationen finden Sie in unserer [Datenschutzerklärung] (http://code.org/privacy)."
-    additional_information: "Wir benötigen noch ein paar weitere Informationen, um mit deiner Anmeldung fortzufahren."
     user_type_button: "Kontoart aktualisieren"
     user_type_label: "Kontentyp"
     user_type_student: "Schüler"
@@ -1210,11 +1210,23 @@ de:
   courses_category: 'Vollständige Kurse'
   course_offering:
     headers:
+      favorites: 'Favoriten'
+      labs_and_skills: 'Labore und Fähigkeiten'
       minecraft: 'Minecraft'
       hello_world: 'Hallo Welt'
+      popular_media: 'Populäre Medien'
       sports: 'Sport'
+      express: 'Expres'
       csf: 'Einführung in Informatik und Programmieren'
       csc: 'CS Connections'
+      year_long: 'Jahr lang'
+      csa_labs: 'CSA Labs'
+      self_paced: 'Im eigenen Tempo'
+      teacher_led: 'Von Lehrern geleitet'
+      collections: 'Sammlungen'
+      workshops_k5: 'K-5-Workshops'
+      summer_workshops_612: '6-12 Sommerworkshops'
+      virtual_academic_year_workshops_612: '6—12 Workshops für das virtuelle akademische Jahr'
   cookie_banner:
     message: 'Indem Sie unsere Website weiter benutzen oder auf "Ich stimme zu" klicken, stimmen Sie der Speicherung von Cookies auf Ihrem Computer oder Gerät zu.'
     more_information: "Siehe Datenschutzerklärung von Code.org."

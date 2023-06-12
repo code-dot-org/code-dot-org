@@ -15,7 +15,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
 
      ```sh
      ruby --version  # --> ruby 2.7.5
-     node --version  # --> v14.17.1
+     node --version  # --> v18.16.0
      yarn --version  # --> 1.22.5
      ```
 
@@ -181,18 +181,7 @@ Setup steps for macOS:
 
     3. Running `nvm alias default $(cat ./.nvmrc)` will set your default node version for future shells.
 
-    4. For Apple Silicon (M1) systems, Node 14 is not available. We can temporarily switch to an x86_64 shell to install Node 14, which will then be available from our normal arm64 shell.
-
-       ```sh
-       arch -arch x86_64 zsh
-       # You are now in a new shell, run `arch` to confirm
-       nvm install # or `nvm install 14.17.1`
-       exit
-       # You are now back in the original shell, run `arch` to confirm
-       nvm use && nvm alias default $(cat ./.nvmrc)
-       ```
-
-1. Install **yarn** via `npm install -g yarn@1.22.5`
+1. Install **yarn** via `npm install -g yarn@1.22.19`
 
 1. Install **OpenSSL**
     1. Run `brew install openssl`
@@ -226,7 +215,7 @@ Note: Virtual Machine Users should check the [Alternative note](#alternative-use
         ```
 1. Install Node and Nodejs
     1. Install the latest version of [Node Version Manager (nvm)](https://github.com/nvm-sh/nvm)
-    1. `nvm install v14.17.1 && nvm alias default 14.17.1` Install nodejs v14.17.1  
+    1. `nvm install v18.16.0 && nvm alias default 18.16.0` Install nodejs v18.16.0
     1. `node --version` Double check the version of node you are using. If it is wrong, then try restarting your terminal.
 1. Ensure rbenv and ruby-build are properly installed
     1. run `rbenv init` and follow the instructions.
@@ -570,3 +559,5 @@ While it's possible to run the server locally without these, we've found the fol
 - Storage: The repository takes up 20GB
 
 [ubuntu-iso-url]: http://releases.ubuntu.com/bionic/ubuntu-18.04.5-desktop-amd64.iso
+
+🥑

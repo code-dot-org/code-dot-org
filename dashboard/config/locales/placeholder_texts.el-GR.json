@@ -231,7 +231,8 @@
           "ed076287532e86365e841e92bfc50d8c": "Γεια σου Κόσμε!"
         },
         "courseF_apps_aquarium": {
-          "83e4a96aed96436c621b9809e258b309": "ψάρι"
+          "83e4a96aed96436c621b9809e258b309": "ψάρι",
+          "8a52e7a8d3b4c955d6f7927c6ba3fe72": "πλάσματα"
         },
         "courseF_apps_collector": {
           "e8a10c04d72b2f135dabe360c4bdd534": "Κέρδισες!"
@@ -278,10 +279,12 @@
           "ed076287532e86365e841e92bfc50d8c": "Γεια σου Κόσμε!"
         },
         "courseF_apps_aquarium2022": {
-          "83e4a96aed96436c621b9809e258b309": "ψάρι"
+          "83e4a96aed96436c621b9809e258b309": "ψάρι",
+          "8a52e7a8d3b4c955d6f7927c6ba3fe72": "πλάσματα"
         },
         "courseF_apps_aquarium_-2022-2": {
-          "83e4a96aed96436c621b9809e258b309": "ψάρι"
+          "83e4a96aed96436c621b9809e258b309": "ψάρι",
+          "8a52e7a8d3b4c955d6f7927c6ba3fe72": "πλάσματα"
         },
         "courseF_apps_collector2022": {
           "e8a10c04d72b2f135dabe360c4bdd534": "Κέρδισες!"
@@ -303,6 +306,21 @@
         },
         "helloworld_retro_freeplay": {
           "6cd3556deb0da54bca060b4c39479839": "Γεια σου, κόσμε!"
+        },
+        "courseF_apps_chatbot": {
+          "1f258d88a70309efc1435ef5daa277a0": "Ευχαριστώ για την κουβέντα μαζί μου σήμερα!"
+        },
+        "courseF_apps_chatbot2022": {
+          "1f258d88a70309efc1435ef5daa277a0": "Ευχαριστώ για την κουβέντα μαζί μου σήμερα!"
+        },
+        "courseF_apps_chatbot_-2022-2": {
+          "1f258d88a70309efc1435ef5daa277a0": "Ευχαριστώ για την κουβέντα μαζί μου σήμερα!"
+        },
+        "courseF_editable_chatbot": {
+          "1f258d88a70309efc1435ef5daa277a0": "Ευχαριστώ για την κουβέντα μαζί μου σήμερα!"
+        },
+        "courseF_editable_chatbot_-2022-2": {
+          "1f258d88a70309efc1435ef5daa277a0": "Ευχαριστώ για την κουβέντα μαζί μου σήμερα!"
         }
       }
     }

@@ -5,7 +5,7 @@ el:
       AmysBlocks_spriteSayVar:
         text: "{SPRITE}πες{TEXT1}"
       BadGuys_makeNewBadGuysSprite:
-        text: δημιουργία νέων {ANIMATION_NAME} Σπράιτ σε {LOCATION}
+        text: δημιουργία νέου {ANIMATION_NAME} χαρακτήρα σε {LOCATION}
       BadGuys_setSizeAll_dropdown:
         options:
           SIZE:
@@ -364,6 +364,7 @@ el:
             '"right"': δεξιά στήλη
             '"x"': χιαστί
             '"plus"': συν
+            '"spiral"': σπιράλ
             '"random"': τυχαίο
       Dancelab_makeAnonymousDanceSprite:
         text: φτιάξει ένα καινούριο {COSTUME} σε {LOCATION}
@@ -493,6 +494,7 @@ el:
             '"right"': δεξιά στήλη
             '"x"': χιαστί
             '"plus"': συν
+            '"spiral"': σπιράλ
             '"random"': τυχαίο
       Dancelab_mixColors:
         text: ανακάτεψε {COLOR1} και {COLOR2}
@@ -1223,9 +1225,11 @@ el:
       gamelab_makeBurst:
         options:
           EFFECT:
+            '"burst"': εκρήγνυται
             '"rain"': βροχή
+            '"spiral"': σπιράλ
       gamelab_makeNewSpriteAnon:
-        text: δημιουργία νέων {ANIMATION_NAME} Σπράιτ σε {LOCATION}
+        text: δημιουργία νέου {ANIMATION_NAME} χαρακτήρα σε {LOCATION}
       gamelab_makeNewSpriteGroup:
         options:
           FORMAT:
@@ -1284,16 +1288,22 @@ el:
           SOUND:
             "'sound://category_app/app_button_1.mp3'": κουμπί
             "'sound://category_collect/clicky_crunch.mp3'": τρίξιμο
+            "'sound://category_pop/bubble_pop_cluster_1.mp3'": φυσαλλίδα
             "'sound://category_animals/bear.mp3'": Αρκούδα
             "'sound://category_animals/cat.mp3'": γάτα
             "'sound://category_animals/cow.mp3'": αγελάδα
             "'sound://category_animals/pig.mp3'": γουρούνι
             "'sound://category_animals/sheep.mp3'": πρόβατο
+            "'sound://category_animals/goat.mp3'": γίδα
             "'sound://category_animals/chicken.mp3'": κοτόπουλο
+            "'sound://category_animals/rooster.mp3'": κόκορας
             "'sound://category_animals/elephant.mp3'": ελέφαντας
             "'sound://category_animals/dolphin.mp3'": δελφίνι
+            "'sound://category_animals/chick.mp3'": νεοσσός
             "'sound://category_animals/dog.mp3'": σκύλος
             "'sound://category_animals/tiger.mp3'": τίγρης
+            "'sound://category_instrumental/harpe_pluck_1.mp3'": άρπα
+            "'sound://category_retro/retro_game_ui_select_6.mp3'": επιλέξτε
             "'sound://category_digital/jump_7.mp3'": πήδα
       gamelab_playSoundOptionsSoccer:
         text: παίξεΉχο {SOUND}
@@ -1365,9 +1375,13 @@ el:
             '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': έρημος
             '"https://studio.code.org/blockly/media/skins/studio/background_space.png"': γαλαξίας
             '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': πλέγμα
+            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': λιβάδι
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': ουράνιο
               τόξο
+            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': σκηνή
             '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': αστέρια
+            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': μετρό
+            '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': υπόγεια
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': υποβρύχια
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': χειμώνας
             undefined: Καμία
@@ -1381,7 +1395,7 @@ el:
             '75': μεσαία
             '100': large
       gamelab_setProp:
-        text: "΄όρισε {SPRITE} {PROPERTY} σε {VAL}"
+        text: όρισε {SPRITE} {PROPERTY} σε {VAL}
         options:
           PROPERTY:
             '"scale"': μέγεθος
@@ -1741,6 +1755,10 @@ el:
         options:
           BG:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': πόλη
+            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': λιβάδι
+            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': σκηνή
+            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': μετρό
+            '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': υπόγεια
       Mikelab_setProp:
         options:
           PROPERTY:
@@ -1857,27 +1875,42 @@ el:
       Poetry_addFrame:
         options:
           BRUSH:
+            '"brick"': τούβλο
+            '"fire"': φωτιά
+            '"flowers"': λουλουδιών
             '"hearts"': καρδιές
             '"iceCream"': Παγωτό
+            '"leaves"': φύλλα
             '"rainbow"': ουράνιο τόξο
             '"stars"': αστέρια
+            '"waves"': κύματα
       Poetry_makeBurst:
         options:
           EFFECT:
+            '"burst"': εκρήγνυται
             '"rain"': βροχή
+            '"spiral"': σπιράλ
       Poetry_makeNewSpriteAnon:
-        text: δημιουργία νέων {ANIMATION_NAME} Σπράιτ σε {LOCATION}
+        text: δημιουργία νέου {ANIMATION_NAME} χαρακτήρα σε {LOCATION}
       Poetry_playMusic:
         options:
           SOUND:
+            '"sound://category_nature/steady_campfire_loop.mp3"': πυρός προσκόπων
+            '"sound://category_nature/forest_woodland_ambience_2.mp3"': δάσους
             '"sound://category_nature/summer_night_loop.mp3"': νύχτα
+            '"sound://category_background/ocean_waves.mp3"': ωκεανός
+            '"sound://category_background/rainforest_ambient_sound.mp3"': τροπικό
+              δάσος
+            '"sound://category_background/wavering_wind.mp3"': υπνηλία
             '"sound://category_loops/stabilizing_breath_loop1.mp3"': αργή
       Poetry_playSound:
         text: παίξεΉχο {SOUND}
         options:
           SOUND:
             '"sound://category_bell/long_bell_notification.mp3"': καμπάνα
+            '"sound://category_pop/bubble_pop_cluster_2.mp3"': φυσαλλίδα
             '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': πήδα
+            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': ανοιχτόχρωμος
       Poetry_playSoundOptionsSpace:
         text: παίξεΉχο {SOUND}
         options:
@@ -1909,7 +1942,9 @@ el:
             '"stars"': Αστέρια
             '"squiggles"': Μουτζούρες
           PALETTE:
+            '"ocean"': ωκεανός
             '"rainbow"': ουράνιο τόξο
+            '"spring"': άνοιξη
             '"winter"': χειμώνας
       Poetry_setBackgroundImageAs:
         text: Ορισμός φόντου σε {IMG}
@@ -2159,6 +2194,20 @@ el:
           DIR:
             right: δεξιά ↻
             left: αριστερά ↺
+      ecosystems_int10:
+        options:
+          VALUE:
+            '0': '0'
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       storylab_setForegroundEffect2:
         options:
           EFFECT:

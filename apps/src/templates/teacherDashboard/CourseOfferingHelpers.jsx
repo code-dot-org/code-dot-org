@@ -7,15 +7,12 @@ export const translatedCourseOfferingCsTopics = {
   artificial_intelligence: i18n.courseOfferingCsTopicAI(),
   cybersecurity: i18n.courseOfferingCsTopicCybersecurity(),
   data: i18n.courseOfferingCsTopicData(),
+  digital_literacy: i18n.courseOfferingCsTopicDigitalLiteracy(),
   games_and_animations: i18n.courseOfferingCsTopicGamesAndAnimations(),
   internet: i18n.courseOfferingCsTopicInternet(),
   physical_computing: i18n.courseOfferingCsTopicPhysicalComputing(),
   web_design: i18n.courseOfferingCsTopicWebDesign(),
   programming: i18n.courseOfferingCsTopicProgramming(),
-};
-
-export const translatedInterdisciplinary = {
-  interdisciplinary: i18n.courseOfferingInterdisciplinary(),
 };
 
 // Same list as CourseOfferingSchoolSubjects in sharedCourseConstants but with translated strings
@@ -24,6 +21,15 @@ export const translatedCourseOfferingSchoolSubjects = {
   science: i18n.courseOfferingSchoolSubjectScience(),
   english_language_arts: i18n.courseOfferingSchoolSubjectEnglishLanguageArts(),
   history: i18n.courseOfferingSchoolSubjectHistory(),
+};
+
+export const translatedLabels = {
+  ...translatedCourseOfferingCsTopics,
+  ...translatedCourseOfferingSchoolSubjects,
+};
+
+export const translatedInterdisciplinary = {
+  interdisciplinary: i18n.courseOfferingInterdisciplinary(),
 };
 
 // Same list as DeviceTypes in sharedCourseConstants but with translated strings
@@ -67,11 +73,28 @@ export const translatedGradeLevels = {
   grade_12: i18n.gradeLevel({number: 12}),
 };
 
+export const gradeLevelsMap = {
+  kindergarten: 'K',
+  grade_1: '1',
+  grade_2: '2',
+  grade_3: '3',
+  grade_4: '4',
+  grade_5: '5',
+  grade_6: '6',
+  grade_7: '7',
+  grade_8: '8',
+  grade_9: '9',
+  grade_10: '10',
+  grade_11: '11',
+  grade_12: '12',
+};
+
 export const subjectsAndTopicsOrder = [
   'math',
   'science',
   'english_language_arts',
   'history',
+  'digital_literacy',
   'artificial_intelligence',
   'web_design',
   'cybersecurity',

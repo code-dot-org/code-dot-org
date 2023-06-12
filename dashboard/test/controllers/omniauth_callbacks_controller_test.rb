@@ -174,6 +174,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_equal User::TYPE_STUDENT, user.user_type
     assert_equal "21+", user.age
     assert_equal 'm', user.gender
+    assert_equal 'M', user.gender_third_party_input
     assert_equal user.id, signed_in_user_id
   end
 

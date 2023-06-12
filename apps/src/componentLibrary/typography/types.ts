@@ -10,7 +10,8 @@ type SemanticTag =
   | 'p'
   | 'strong'
   | 'em'
-  | 'figcaption';
+  | 'figcaption'
+  | 'span';
 
 type VisualAppearance =
   | 'heading-xxl'

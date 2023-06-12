@@ -1,13 +1,10 @@
 ---
-title: Learn about Artificial Intelligence (AI) | Code.org
+title: Learn about Artificial Intelligence (AI)
 theme: responsive_full_width
 ---
 
 %link{href: '/css/generated/design-system-pegasus.css', rel: 'stylesheet'}
 %link{href: "/css/generated/ai-styles.css", rel: "stylesheet"}
-
--# Import FontAwesome Pro
-%script{src: "https://kit.fontawesome.com/ea2d9d4413.js", crossorigin: "anonymous"}
 
 -# FontAwesome icons
 - icon_sparkles = "fa-solid fa-sparkles"
@@ -24,9 +21,10 @@ theme: responsive_full_width
       %h1{style: "color: white"}=hoc_s(:ai_hero_heading)
       %p{style: "color: white"}=hoc_s(:ai_hero_desc)
       - if !!DCDO.get('teach-ai-launch-2023', false)
-        %a.link-button{href: "#teach-ai-callout"}
-          %i{class: "#{icon_megaphone}", style: "margin-right: 6px"}
-          =hoc_s(:call_to_action_special_announcement)
+        %a.link-button.has-icon{href: "#teach-ai-callout"}
+          %div.flex-wrapper
+            %i{class: "#{icon_megaphone}"}
+            =hoc_s(:call_to_action_special_announcement)
     %figure.col-33{style: "float: right"}
       %img.fade-in-out{src: "/images/banners/ai-bot-wizard.svg", alt: "", style: "z-index: 10"}
       %img{src: "/images/banners/ai-bot-default.svg", alt: "", style: "position: relative;"}
@@ -149,6 +147,8 @@ theme: responsive_full_width
     %p=hoc_s(:ai_video_series_desc)
     .video-series
       = view :ai_vid_intro
+      = view :ai_vid_chatbots
+      = view :ai_vid_creativity
       = view :ai_vid_mlintro
       = view :ai_vid_trainingdata
       = view :ai_vid_neuralnetworks

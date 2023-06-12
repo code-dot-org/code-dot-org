@@ -799,6 +799,10 @@ class Level < ApplicationRecord
     }
   end
 
+  def project_type
+    return game&.app
+  end
+
   # Returns the level name, removing the name_suffix first (if present), and
   # also removing any additional suffixes of the format "_NNNN" which might
   # represent a version year.

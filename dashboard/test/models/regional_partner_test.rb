@@ -215,6 +215,38 @@ class RegionalPartnerTest < ActiveSupport::TestCase
     assert_nil regional_partner.contact_email_with_backup
   end
 
+  test 'are_apps_closed returns false if RP app closed date is not specified' do
+    Timecop.freeze do
+      regional_partner = create :regional_partner
+      regional_partner.update!(apps_close_date_teacher: nil)
+      refute regional_partner.are_apps_closed
+    end
+  end
+
+  test 'are_apps_closed returns false if RP app closed date is after current date' do
+    Timecop.freeze do
+      regional_partner = create :regional_partner
+      regional_partner.update!(apps_close_date_teacher: (Date.current + 1.day).strftime("%Y-%m-%d"))
+      refute regional_partner.are_apps_closed
+    end
+  end
+
+  test 'are_apps_closed returns false if RP app closed date is on current date' do
+    Timecop.freeze do
+      regional_partner = create :regional_partner
+      regional_partner.update!(apps_close_date_teacher: (Date.current).strftime("%Y-%m-%d"))
+      refute regional_partner.are_apps_closed
+    end
+  end
+
+  test 'are_apps_closed returns true if RP app closed date is before current date' do
+    Timecop.freeze do
+      regional_partner = create :regional_partner
+      regional_partner.update!(apps_close_date_teacher: (Date.current - 1.day).strftime("%Y-%m-%d"))
+      assert regional_partner.are_apps_closed
+    end
+  end
+
   test 'principal_approval must be valid' do
     regional_partner = build :regional_partner, applications_principal_approval: 'Invalid principal_approval'
     refute regional_partner.valid?

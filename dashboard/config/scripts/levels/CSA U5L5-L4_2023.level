@@ -14,16 +14,17 @@
         "tabOrder": 0
       }
     },
+    "project_template_level_name": "CSA U5L5-Enhanced For Loops PBT_2023",
     "encrypted_examples": [
 
     ],
-    "project_template_level_name": "CSA U5L5-Enhanced For Loops PBT_2023"
+    "teacher_markdown": "Since we changed the inner `for` loop from an enhanced `for` loop to a regular one, we are now able to update the values within the array. In this case, the function will take the value at each element and multiply it by two."
   },
   "game_id": 68,
   "published": true,
   "created_at": "2023-03-27T23:57:16.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2023-03-27T23:57:16.576+00:00\",\"changed\":[\"cloned from \\\"CSA U5L5-L3_2023\\\"\"],\"cloned_from\":\"CSA U5L5-L3_2023\"},{\"changed_at\":\"2023-03-27 23:57:18 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-21 23:44:54 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-03-27T23:57:16.576+00:00\",\"changed\":[\"cloned from \\\"CSA U5L5-L3_2023\\\"\"],\"cloned_from\":\"CSA U5L5-L3_2023\"},{\"changed_at\":\"2023-03-27 23:57:18 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-21 23:44:54 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-29 02:09:03 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

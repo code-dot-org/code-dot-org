@@ -14,3 +14,4 @@ answer 'defines the type of value to receive when a method or constructor is cal
 
 question 'argument'
 answer 'the specific value provided when a method or constructor is called'
+allow_multiple_attempts true

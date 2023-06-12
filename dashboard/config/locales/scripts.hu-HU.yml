@@ -135,6 +135,7 @@ hu:
           student_description: Ez a 20 órás kurzus bemutatja a  számítástechnika és
             programozás alap fogalmait. A kurzus általános iskolásoknak lett kitalálva,
             de mindenki számára jó időtöltés lehet.
+          name: 20 órás
         edit-code:
           title: Kód szerkesztése
           description: Kód szerkesztése
@@ -3437,12 +3438,30 @@ hu:
               display_name: '1.  fejezet: A probléma-megoldási folyamat'
             lessonGroup-3:
               display_name: '2.  fejezet: Számítógépek és problémamegoldás'
+        web-development-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Kérdőív
+        interactive-games-animations-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Kérdőív
+        design-process-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Kérdőív
+        data-society-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Kérdőív
         aiml-2023:
           lesson_groups:
             lessonGroup-3:
               display_name: 1.  fejezet
             lessonGroup-4:
               display_name: 2.  fejezet
+            lessonGroup-5:
+              display_name: Kérdőív
         focus-on-creativity1-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3481,3 +3500,51 @@ hu:
               display_name: 1.  fejezet
             lessonGroup-4:
               display_name: 2.  fejezet
+        microbit-2023:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Kérdőív
+        devices-2023:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Kérdőív
+        ai-temp:
+          title: Hogyan működik az MI?
+        pl-csd-summer-day1:
+          lessons:
+            lesson-3:
+              name: Bevezető
+        virtual-pl-csd-summer-day1:
+          lessons:
+            lesson-1:
+              name: Bevezető
+        virtual-pl-csd-summer-day5:
+          lessons:
+            lesson-3:
+              name: Értékelés
+        csd-post-survey-2023:
+          title: Tanfomlyam Utáni Felmérés
+        focus-on-data-post-survey-2023:
+          title: Tanfomlyam Utáni Felmérés
+        focus-on-impact-in-society-post-survey-2023:
+          title: Tanfomlyam Utáni Felmérés
+        focus-on-coding-post-survey-2023:
+          title: Tanfomlyam Utáni Felmérés
+        focus-on-design-with-purpose-post-survey-2023:
+          title: Tanfomlyam Utáni Felmérés
+        focus-on-hardware-post-survey-2023:
+          title: Tanfomlyam Utáni Felmérés
+        focus-on-creativity-post-survey-2023:
+          title: Tanfomlyam Utáni Felmérés
+        coursef-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitális állampolgárság
+            lessonGroup-3:
+              display_name: sprite-ok
+            lessonGroup-4:
+              display_name: változók
+            lessonGroup-6:
+              display_name: Kurzus Projekt vége
+          description_short: Ismerje meg a Computer Science Fundamentals összes koncepcióját,
+            és hozzon létre saját művészetét, történetét vagy

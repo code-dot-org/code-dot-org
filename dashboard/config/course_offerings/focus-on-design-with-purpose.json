@@ -1,14 +1,14 @@
 {
   "key": "focus-on-design-with-purpose",
-  "display_name": "focus-on-design-with-purpose",
+  "display_name": "Focus on Design with Purpose",
   "category": "other",
   "is_featured": false,
   "assignable": true,
-  "curriculum_type": null,
+  "curriculum_type": "Course",
   "marketing_initiative": null,
   "grade_levels": "6,7,8,9,10,11,12",
-  "header": null,
-  "image": null,
+  "header": "collections",
+  "image": "https://images.code.org/3f978500b75787a94105d629930b0222-DesignWithPurpose.png",
   "cs_topic": "art_and_design,app_design,web_design",
   "school_subject": null,
   "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"incompatible\",\"mobile\":\"incompatible\",\"no_device\":\"incompatible\"}"

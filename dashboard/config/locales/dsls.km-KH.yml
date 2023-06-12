@@ -10328,3 +10328,20 @@ km-KH:
         - {}
         questions:
         - {}
+      Test Contained Retriable Multi:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      test-single-multi-standalone-retriable:
+        answers:
+        - {}
+        - {}
+        - feedback: ត្រឹមត្រូវ!
+        - {}
+        questions:
+        - text: ក្រឡេកមើលឲ្យជិតទៅនឹងកូដខាងក្រោម។ តើវានឹងមានអ្វីកើតឡើងបន្ទាប់ពីអ្នកចុចសញ្ញា
+            "រត់"?

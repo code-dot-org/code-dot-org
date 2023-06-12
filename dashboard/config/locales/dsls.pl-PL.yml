@@ -13978,7 +13978,7 @@ pl-PL:
 '
           feedback: Niepoprawnie. Tekst jest wydrukowany na ekranie.
         - text: Komputer zada inne pytanie.
-          feedback: Niepoprawnie. Zadawane jest tylko jedno pytanie, wtedy, gdy program
+          feedback: Niepoprawnie. Zadawane jest tylko jedno pytanie wtedy, gdy program
             rozpoczyna działanie.
         questions:
         - text: 'Ten program pozwala ci odpowiedzieć na pytanie poprzez wpisanie przy
@@ -14090,3 +14090,34 @@ pl-PL:
         questions:
         - text: Spójrz uważnie na ten kod. Jak sądzisz, co się stanie, gdy program
             działa?
+      Test Contained Retriable Multi:
+        answers:
+        - text: '0'
+          feedback: Nie, to jest 1 - 1.
+        - text: '1'
+          feedback: Nie, to jest 1 * 1.
+        - text: '2'
+          correct: true
+          feedback: Tak, jesteś geniuszem
+        - text: '4'
+          feedback: Nie, to nie jest nawet blisko.
+        content1: Oto kilka informacji.
+        markdown: 'Test **zaznacz** _tutaj_
+
+'
+        questions:
+        - text: Ile jest 1 + 1?
+        title: Zawiera wiele
+      test-single-multi-standalone-retriable:
+        answers:
+        - text: Nic się nie wydarzy.
+          feedback: Niepoprawnie. Roślina biegacz zacznie się toczyć.
+        - text: Roślina biegacz będzie dryfować do górnej części ekranu.
+          feedback: Niepoprawnie. Roślina biegacz zacznie się toczyć.
+        - text: Roślina biegacz zacznie się toczyć.
+          correct: true
+          feedback: Poprawnie!
+        - text: Roślina biegacz będzie mrugać.
+          feedback: Niepoprawnie. Roślina biegacz zacznie się toczyć.
+        questions:
+        - text: Spójrz uważnie na kod poniżej. Co się stanie, gdy klikniesz "Uruchom"?

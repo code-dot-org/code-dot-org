@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-04-25 21:24:19 UTC",
+    "serialized_at": "2023-05-17 22:47:35 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -6208,16 +6208,6 @@
       }
     },
     {
-      "name": "CSP Curriculum Guide",
-      "url": "https://docs.google.com/document/d/1s5w7_UnVIGHOdkqCtK2O78rQ7JJFAWlOeZkZNsCovOY/preview",
-      "key": "csp_curriculum_guide",
-      "properties": {
-      },
-      "seeding_key": {
-        "resource.key": "csp_curriculum_guide"
-      }
-    },
-    {
       "name": "CSP Debugging Guide",
       "url": "https://docs.google.com/document/d/175I17p2cSfL0q7Uuvw2yBsb1eogbu_gVvV_AIfG8AnA/edit?usp=sharing",
       "key": "csp_debugging_guide",
@@ -6947,12 +6937,6 @@
     {
       "seeding_key": {
         "resource.key": "course_vocabulary",
-        "script.name": "csp4-2023"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "csp_curriculum_guide",
         "script.name": "csp4-2023"
       }
     },

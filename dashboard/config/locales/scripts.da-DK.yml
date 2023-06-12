@@ -1262,3 +1262,19 @@ da:
               display_name: Funktioner
             csf_nested_loops:
               display_name: Betingelser
+        pl-csd-summer-day1:
+          lessons:
+            lesson-3:
+              name: Introduktion
+        virtual-pl-csd-summer-day1:
+          lessons:
+            lesson-1:
+              name: Introduktion
+        coursef-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digital statsborgerskab
+            lessonGroup-3:
+              display_name: figure
+            lessonGroup-4:
+              display_name: Variabler

@@ -1020,7 +1020,10 @@ NetSimRouterNode.prototype.acceptConnection = function (otherNode, onComplete) {
         addressesSoFar[this.getAddress()] = true;
         addressesSoFar[this.getAutoDnsAddress()] = true;
         var addressCollision = connections.some(function (wire) {
-          var collides = addressesSoFar.hasOwnProperty(wire.localAddress);
+          var collides = Object.prototype.hasOwnProperty.call(
+            addressesSoFar,
+            wire.localAddress
+          );
           addressesSoFar[wire.localAddress] = true;
           return collides;
         });

@@ -40,8 +40,9 @@ const OVERWRITE_RESULTS = 'progress/OVERWRITE_RESULTS';
 const PEER_REVIEW_ID = -1;
 
 const initialState = {
-  // These first fields never change after initialization
   currentLevelId: null,
+
+  // These first fields never change after initialization
   currentLessonId: null,
   deeperLearningCourse: null,
   // used on multi-page assessments
@@ -84,15 +85,63 @@ const initialState = {
 /**
  * Thunks
  */
+
+// The user has navigated to a new level in the current lesson,
+// so we should update the browser and also set this as the new
+// current level.
 export function navigateToLevelId(levelId) {
   return (dispatch, getState) => {
     const state = getState().progress;
-    const newLevel = state.lessons[0].levels.find(level =>
-      level.ids.find(id => id === levelId)
+    const newLevel = getLevelById(
+      state.lessons,
+      state.currentLessonId,
+      levelId
     );
 
     updateBrowserForLevelNavigation(state, newLevel.url, levelId);
     dispatch(setCurrentLevelId(levelId));
+  };
+}
+
+// The user has successfully completed the level and the page
+// will not be reloading.
+export function sendSuccessReport(appType) {
+  return (dispatch, getState) => {
+    const state = getState().progress;
+    const levelId = state.currentLevelId;
+    const currentLevel = getLevelById(
+      state.lessons,
+      state.currentLessonId,
+      levelId
+    );
+    const scriptLevelId = currentLevel.id;
+
+    // The server does not appear to use the user ID parameter,
+    // so just pass 0, like some other milestone posts do.
+    const userId = 0;
+
+    // An ideal score.
+    const idealPassResult = TestResults.ALL_PASS;
+
+    const data = {
+      app: appType,
+      result: true,
+      testResult: idealPassResult,
+    };
+
+    fetch(`/milestone/${userId}/${scriptLevelId}/${levelId}`, {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    }).then(response => {
+      if (response.ok) {
+        // Update the progress store by merging in this
+        // particular result immediately.
+        dispatch(mergeResults({[levelId]: idealPassResult}));
+      }
+    });
   };
 }
 
@@ -109,7 +158,7 @@ export default function reducer(state = initialState, action) {
     // extract fields we care about from action
     return {
       ...state,
-      currentLevelId: action.currentLevelId,
+      currentLevelId: state.currentLevelId || action.currentLevelId,
       deeperLearningCourse: action.deeperLearningCourse,
       saveAnswersBeforeNavigation: action.saveAnswersBeforeNavigation,
       lessons: processedLessons(lessons, action.deeperLearningCourse),
@@ -410,6 +459,16 @@ const userProgressFromServer = (state, dispatch, userId = null) => {
   });
 };
 
+/**
+ * Given an array of lessons, a lesson ID, and a level ID, returns
+ * the requested level.
+ */
+function getLevelById(lessons, lessonId, levelId) {
+  return lessons
+    .find(lesson => lesson.id === lessonId)
+    .levels.find(level => level.ids.find(id => id === levelId));
+}
+
 // Action creators
 export const initProgress = ({
   currentLevelId,
@@ -588,6 +647,48 @@ const peerReviewLevels = state =>
     status: level.status || LevelStatus.not_tried,
     levelNumber: index + 1,
   }));
+
+/**
+ * Returns whether we appear to be in a script level or a standalone level.
+ * A script level is identified because it has lessons.
+ * A standalone level doesn't have lessons, but it does have a level ID.
+ */
+export const ProgressLevelType = {
+  SCRIPT_LEVEL: 'script_level',
+  LEVEL: 'level',
+};
+
+export const getProgressLevelType = state => {
+  if (state.progress.lessons) {
+    return ProgressLevelType.SCRIPT_LEVEL;
+  } else if (state.progress.currentLevelId) {
+    return ProgressLevelType.LEVEL;
+  } else {
+    return undefined;
+  }
+};
+
+/**
+ * Returns the dashboard URL path to retrieve the level_data for a script
+ * level (if we have lessons) or a level (if we don't have lessons).
+ */
+export const getLevelDataPath = state => {
+  if (state.progress.lessons) {
+    const scriptName = state.progress.scriptName;
+    const lessonPosition = state.progress.lessons?.find(
+      lesson => lesson.id === state.progress.currentLessonId
+    ).relative_position;
+    const levelNumber =
+      levelsForLessonId(
+        state.progress,
+        state.progress.currentLessonId
+      ).findIndex(level => level.isCurrentLevel) + 1;
+    return `/s/${scriptName}/lessons/${lessonPosition}/levels/${levelNumber}/level_data`;
+  } else {
+    const levelId = state.progress.currentLevelId;
+    return `/levels/${levelId}/level_data`;
+  }
+};
 
 /**
  * The level object passed down to use via the server (and stored in lesson.lessons.levels)

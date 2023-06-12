@@ -4,7 +4,8 @@ import React, {Component} from 'react';
 import Notification, {NotificationType} from '@cdo/apps/templates/Notification';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import {putRecord} from '../lib/util/firehose';
-import TeacherInfoBanner from './TeacherInfoBanner';
+import color from '../util/color';
+import Button from './Button';
 
 export default class DonorTeacherBanner extends Component {
   static propTypes = {
@@ -120,21 +121,33 @@ export default class DonorTeacherBanner extends Component {
 
   renderDonorForm() {
     return (
-      <TeacherInfoBanner
-        header="Free resources from Amazon for your classroom"
-        primaryButton={{
-          onClick: this.handleSubmit,
-          text: 'Submit',
-          disabled: this.state.participate === undefined,
-        }}
-        secondaryButton={{
-          isHidden: !this.props.showPegasusLink,
-          href: pegasus('/amazon-future-engineer'),
-          text: 'Learn more',
-        }}
-      >
-        {this.renderBannerContent()}
-      </TeacherInfoBanner>
+      <div style={styles.main}>
+        <div style={styles.message}>
+          <h2 style={styles.heading}>
+            {'Free resources from Amazon for your classroom'}
+          </h2>
+          {this.renderBannerContent()}
+          <div style={styles.buttonArea}>
+            <Button
+              onClick={this.handleSubmit}
+              style={styles.button}
+              color={Button.ButtonColor.brandSecondaryDefault}
+              text={'Submit'}
+              disabled={this.state.participate === undefined}
+            />
+            {this.props.showPegasusLink && (
+              <Button
+                __useDeprecatedTag
+                href={pegasus('/amazon-future-engineer')}
+                style={styles.secondaryButton}
+                color={Button.ButtonColor.white}
+                text={'Learn more'}
+              />
+            )}
+          </div>
+        </div>
+        <div style={styles.clear} />
+      </div>
     );
   }
 
@@ -179,6 +192,10 @@ export default class DonorTeacherBanner extends Component {
 const styles = {
   paragraph: {
     marginBottom: 10,
+    fontSize: 14,
+    fontFamily: 'Gotham 4r',
+    lineHeight: '22px',
+    color: color.neutral_dark,
   },
   label: {
     fontFamily: '"Gotham 4r", sans-serif',
@@ -188,5 +205,61 @@ const styles = {
     verticalAlign: 'top',
     marginRight: 10,
     cursor: 'pointer',
+  },
+  buttonArea: {
+    display: 'flex',
+  },
+  heading: {
+    marginTop: 16,
+    marginBottom: 16,
+    fontSize: 24,
+    lineHeight: '26px',
+    fontFamily: 'Gotham 4r',
+    color: color.neutral_dark,
+  },
+  button: {
+    marginLeft: 7,
+    marginRight: 7,
+    fontFamily: '"Gotham 5r", sans-serif',
+    lineHeight: '30px',
+    borderWidth: 2,
+    borderStyle: 'solid',
+    borderColor: Button.ButtonColor.brandSecondaryDefault,
+  },
+  secondaryButton: {
+    marginLeft: 7,
+    marginRight: 7,
+    marginTop: 5,
+    boxShadow: 'none',
+    fontFamily: '"Gotham 5r", sans-serif',
+    color: color.neutral_dark,
+    lineHeight: '30px',
+    borderWidth: 2,
+    borderStyle: 'solid',
+    borderColor: color.neutral_dark,
+  },
+  clear: {
+    clear: 'both',
+  },
+  header: {
+    marginTop: 10,
+    marginBottom: 5,
+    marginLeft: 20,
+    marginRight: 20,
+  },
+  main: {
+    borderWidth: 1,
+    borderStyle: 'solid',
+    borderColor: color.teal,
+    minHeight: 72,
+    backgroundColor: color.white,
+    overflowWrap: 'break-word',
+  },
+  message: {
+    marginTop: 0,
+    marginBottom: 20,
+    marginLeft: 20,
+    marginRight: 20,
+    fontSize: 14,
   },
 };

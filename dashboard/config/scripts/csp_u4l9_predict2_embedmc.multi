@@ -6,3 +6,5 @@ wrong 'Line 2'
 wrong 'Line 23'
 wrong 'Lines 6, 12, and 19'
 right 'Lines 23-29'
+
+allow_multiple_attempts true

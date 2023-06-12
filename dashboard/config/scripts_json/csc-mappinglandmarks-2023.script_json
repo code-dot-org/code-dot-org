@@ -5,13 +5,14 @@
     "login_required": false,
     "properties": {
       "curriculum_umbrella": "CSC",
+      "hideable_lessons": true,
       "is_course": true,
       "is_migrated": true,
       "version_year": "2023"
     },
     "new_name": null,
     "family_name": "csc-mappinglandmarks",
-    "serialized_at": "2023-04-12 19:30:43 UTC",
+    "serialized_at": "2023-05-30 23:22:04 UTC",
     "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -43,7 +44,7 @@
       "relative_position": 1,
       "properties": {
         "overview": "In this **skill-building** lesson, students will learn to create and animate sprites on a map. \n\nThis lesson serves two main purposes: (1) to offer an example of an interactive Tour Guide app and (2) to introduce students to coding in Sprite Lab. Sprite Lab is an open-ended coding environment that uses block-based code. Students will learn the basics of Sprite Lab throughout this lesson to plan and build their Tour Guide app in the following lessons. \n\nIn this integrated lesson, students learn social studies concepts by creating a map with code. To begin, students will examine several examples of maps and discuss what features make up the map. In the wrap-up, students will discuss the role of a map maker. \n",
-        "preparation": "- Review and complete the online tutorial yourself.\n- Review slides and decide on pacing between student work time and whole group instruction.\n- Prepare sticky notes or scratch paper for each student in the wrap-up discussion.\n- Check your technology and decide if you need to troubleshoot anything in advance.\n\n#####Optional:\n- [Optional] Review this [Helpful Hints](https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview) slideshow. \n- [Optional] Review this [teacher’s guide to debugging](https://code.org/curriculum/docs/k-5/DebuggingTeacher.pdf) to be prepared to help students find and fix errors in their code. \n- [Optional] Pair Programming - Decide if you want students to engage in pair programming. Watch this [video](https://youtu.be/sxToW3ixrwo) and visit this [Support](https://support.code.org/hc/en-us/articles/115002122788-How-does-pair-programming-on-Code-org-work-) page for more information about pair programming.\n- [Optional] Custom Sprite Uploads - Though this will be introduced in later lessons, you can choose to teach students how to upload their own sprite costumes and backgrounds with this video. \n",
+        "preparation": "- Review and complete the online tutorial yourself.\n- Review slides and decide on pacing between student work time and whole group instruction.\n- Prepare sticky notes or scratch paper for each student in the wrap-up discussion.\n- Check your technology and decide if you need to troubleshoot anything in advance.\n\n#####Optional:\n- [Optional] Review this [Helpful Hints](https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview) slideshow. \n- [Optional] Review this [teacher’s guide to debugging](https://code.org/curriculum/docs/k-5/DebuggingTeacher.pdf) to be prepared to help students find and fix errors in their code. \n- [Optional] Pair Programming - Decide if you want students to engage in pair programming. Watch this [video](https://youtu.be/sxToW3ixrwo) and visit this [Support](https://support.code.org/hc/en-us/articles/115002122788-How-does-pair-programming-on-Code-org-work-) page for more information about pair programming.\n- [Optional] Custom Sprite Uploads - Though this will be introduced in later lessons, you can choose to teach students how to upload their own sprite costumes and backgrounds with this [video](https://youtu.be/CHipUGfL_0M). \n",
         "purpose": "Students create a tour guide app in an interactive learning experience that integrates multiple subject areas. By combining computer science concepts with geography content, the lesson aims to help students develop a deeper understanding of both subjects and see their connections. This lesson is meant to allow students to apply their coding skills in a real-world context by creating a tour guide app that highlights important landmarks, cultural events, and historical sites in a particular geographic location.",
         "student_overview": "In this lesson, you will explore maps! Maps help you figure out where to go. They also tell stories about the people who make up a place. \n\nWith code, you will animate sprites on a map to create a Tour Guide app."
       },
@@ -2079,87 +2080,121 @@
   ],
   "objectives": [
     {
-      "key": "080a5204-8346-4ff4-9203-b779c67be2bc",
+      "key": "1a27b887-2aa2-4f1b-8137-85395c9d1db8",
       "properties": {
-        "description": "Students will learn the basics of Sprite Lab by creating multiple sprites, changing their location, setting their size property, making the sprite “speak,” assigning a behavior, and using the `when touches` event to make their program interactive."
-      },
-      "seeding_key": {
-        "lesson.key": "US Landmarks",
-        "objective.key": "080a5204-8346-4ff4-9203-b779c67be2bc"
-      }
-    },
-    {
-      "key": "4cd30fb3-8178-41f4-91b4-88fca7538c9e",
-      "properties": {
-        "description": "Students will use cardinal directions to navigate a map."
-      },
-      "seeding_key": {
-        "lesson.key": "US Landmarks",
-        "objective.key": "4cd30fb3-8178-41f4-91b4-88fca7538c9e"
-      }
-    },
-    {
-      "key": "b3fc8e73-7d09-48b5-820c-2cc6c3674637",
-      "properties": {
-        "description": "Students will write a plan for their digital mapping landmarks project."
+        "description": "Reflect on the role of a map maker to develop a deeper appreciation for the purpose and value of maps as tools for understanding the world around them."
       },
       "seeding_key": {
         "lesson.key": "Local Landmarks - Unplugged Project Planning",
-        "objective.key": "b3fc8e73-7d09-48b5-820c-2cc6c3674637"
+        "objective.key": "1a27b887-2aa2-4f1b-8137-85395c9d1db8"
       }
     },
     {
-      "key": "b40d5d58-f5eb-4a1a-8cbd-2c203dabc03a",
+      "key": "2a8ffef0-4b21-4dad-99b2-2cd1e48dbcbb",
       "properties": {
-        "description": "Use strategies for an effective presentation. "
+        "description": "Identify ways in which maps can vary based on the mapmaker's decisions."
+      },
+      "seeding_key": {
+        "lesson.key": "Local Landmarks - Coding Your Project",
+        "objective.key": "2a8ffef0-4b21-4dad-99b2-2cd1e48dbcbb"
+      }
+    },
+    {
+      "key": "46412626-979f-4311-a180-f4e43809b4db",
+      "properties": {
+        "description": "Demonstrate geographic knowledge, coding skills and creativity by coding an interactive map with personally relevant and important landmarks. "
+      },
+      "seeding_key": {
+        "lesson.key": "Local Landmarks - Coding Your Project",
+        "objective.key": "46412626-979f-4311-a180-f4e43809b4db"
+      }
+    },
+    {
+      "key": "80a85b7e-ae26-4786-98ed-9632de96ea24",
+      "properties": {
+        "description": "Given a series of maps showing different components, students will analyze and compare the different purposes of each map. "
+      },
+      "seeding_key": {
+        "lesson.key": "US Landmarks",
+        "objective.key": "80a85b7e-ae26-4786-98ed-9632de96ea24"
+      }
+    },
+    {
+      "key": "829ee795-fac0-4509-8b25-cd11f443e52e",
+      "properties": {
+        "description": "Practice effective presentation strategies when showcasing the tour guide app to peers, including clear communication of implemented features, the purpose, and the significance of the project. "
       },
       "seeding_key": {
         "lesson.key": "Project Share Out",
-        "objective.key": "b40d5d58-f5eb-4a1a-8cbd-2c203dabc03a"
+        "objective.key": "829ee795-fac0-4509-8b25-cd11f443e52e"
       }
     },
     {
-      "key": "cab7afb5-f6c7-49f0-b52d-e63dafc3af4a",
+      "key": "84fb7001-86ee-4932-8d58-b6122037e146",
       "properties": {
-        "description": "Students will use maps and other simple geographic models to identify cultural and environmental characteristics of places."
+        "description": "Learn the basics of Sprite Lab by creating multiple sprites, changing their location, setting their size property, making the sprite “speak,” assigning a behavior, and using the when touches event to make their program interactive."
+      },
+      "seeding_key": {
+        "lesson.key": "US Landmarks",
+        "objective.key": "84fb7001-86ee-4932-8d58-b6122037e146"
+      }
+    },
+    {
+      "key": "ac701f5c-93be-48e3-b614-d5be26d5b11d",
+      "properties": {
+        "description": "Reflect on the coding process of creating a digital map, highlighting successes, challenges, and lessons learned."
+      },
+      "seeding_key": {
+        "lesson.key": "Project Share Out",
+        "objective.key": "ac701f5c-93be-48e3-b614-d5be26d5b11d"
+      }
+    },
+    {
+      "key": "ade6631d-16d1-43dd-a955-09eba7039e81",
+      "properties": {
+        "description": "Write thoughtful observations and provide constructive evaluations of peer projects, offering feedback and suggestions for improvement. "
+      },
+      "seeding_key": {
+        "lesson.key": "Project Share Out",
+        "objective.key": "ade6631d-16d1-43dd-a955-09eba7039e81"
+      }
+    },
+    {
+      "key": "f625be86-4b66-4421-8a7c-f724fd230eb5",
+      "properties": {
+        "description": "Incorporate text explanations within the interactive map to communicate the significance of landmarks."
+      },
+      "seeding_key": {
+        "lesson.key": "Local Landmarks - Coding Your Project",
+        "objective.key": "f625be86-4b66-4421-8a7c-f724fd230eb5"
+      }
+    },
+    {
+      "key": "fdb3a900-9efd-4710-8096-6108ed735cb6",
+      "properties": {
+        "description": "Use decomposition by breaking down their digital mapping landmarks project into smaller tasks as they plan their map project."
       },
       "seeding_key": {
         "lesson.key": "Local Landmarks - Unplugged Project Planning",
-        "objective.key": "cab7afb5-f6c7-49f0-b52d-e63dafc3af4a"
-      }
-    },
-    {
-      "key": "d01d5982-2f53-4d84-a553-63093a58c8ac",
-      "properties": {
-        "description": "Understand the power of using code to make a map interactive"
-      },
-      "seeding_key": {
-        "lesson.key": "Project Share Out",
-        "objective.key": "d01d5982-2f53-4d84-a553-63093a58c8ac"
-      }
-    },
-    {
-      "key": "e97f5b17-1c05-4ad3-8a3d-b84b85e4df1a",
-      "properties": {
-        "description": "Students will create a digital map of an area with key landmarks. "
-      },
-      "seeding_key": {
-        "lesson.key": "Local Landmarks - Coding Your Project",
-        "objective.key": "e97f5b17-1c05-4ad3-8a3d-b84b85e4df1a"
-      }
-    },
-    {
-      "key": "f908e942-e501-4ad4-8946-36c717955216",
-      "properties": {
-        "description": "Students will use text to explain the importance and/or significance of landmarks in the area. "
-      },
-      "seeding_key": {
-        "lesson.key": "Local Landmarks - Coding Your Project",
-        "objective.key": "f908e942-e501-4ad4-8946-36c717955216"
+        "objective.key": "fdb3a900-9efd-4710-8096-6108ed735cb6"
       }
     }
   ],
   "lessons_standards": [
+    {
+      "seeding_key": {
+        "lesson.key": "Local Landmarks - Coding Your Project",
+        "framework.shortcode": "c3ss",
+        "standard.shortcode": "D2.Geo.1.3-5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Local Landmarks - Coding Your Project",
+        "framework.shortcode": "c3ss",
+        "standard.shortcode": "D2.Geo.2.3-5"
+      }
+    },
     {
       "seeding_key": {
         "lesson.key": "Local Landmarks - Coding Your Project",
@@ -2198,6 +2233,27 @@
     {
       "seeding_key": {
         "lesson.key": "Local Landmarks - Unplugged Project Planning",
+        "framework.shortcode": "c3ss",
+        "standard.shortcode": "D2.Geo.1.3-5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Local Landmarks - Unplugged Project Planning",
+        "framework.shortcode": "c3ss",
+        "standard.shortcode": "D2.Geo.3.3-5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Local Landmarks - Unplugged Project Planning",
+        "framework.shortcode": "c3ss",
+        "standard.shortcode": "D4.2.3-5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Local Landmarks - Unplugged Project Planning",
         "framework.shortcode": "csta",
         "standard.shortcode": "1A-AP-11"
       }
@@ -2219,6 +2275,27 @@
     {
       "seeding_key": {
         "lesson.key": "Project Share Out",
+        "framework.shortcode": "c3ss",
+        "standard.shortcode": "D2.Geo.1.3-5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project Share Out",
+        "framework.shortcode": "c3ss",
+        "standard.shortcode": "D2.Geo.2.3-5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project Share Out",
+        "framework.shortcode": "c3ss",
+        "standard.shortcode": "D4.2.3-5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project Share Out",
         "framework.shortcode": "csta",
         "standard.shortcode": "1B-AP-16"
       }
@@ -2235,6 +2312,34 @@
         "lesson.key": "Project Share Out",
         "framework.shortcode": "csta",
         "standard.shortcode": "1B-IC-20"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "US Landmarks",
+        "framework.shortcode": "c3ss",
+        "standard.shortcode": "D2.Geo.2.3-5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "US Landmarks",
+        "framework.shortcode": "c3ss",
+        "standard.shortcode": "D2.Geo.3.3-5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "US Landmarks",
+        "framework.shortcode": "c3ss",
+        "standard.shortcode": "D2.Geo.5.3-5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "US Landmarks",
+        "framework.shortcode": "c3ss",
+        "standard.shortcode": "D2.His.2.3-5"
       }
     },
     {

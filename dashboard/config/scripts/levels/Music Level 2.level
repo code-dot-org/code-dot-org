@@ -3,7 +3,41 @@
   "properties": {
     "encrypted": "false",
     "preload_asset_list": null,
-    "background": "music-black"
+    "background": "music-black",
+    "level_data": {
+      "text": "Second, please play three sounds at the same time.",
+      "toolbox": {
+        "Play": ["play_sound_at_current_location_simple2"],
+        "Control": ["play_sounds_together"]
+      },
+      "sounds": {
+        "beats": ["cafe_beat", "reggaeton_beat"],
+        "leads": ["lucky_guitar", "picked_guitar"]
+      },
+      "validations": [
+        {
+          "conditions": ["played_three_sounds_together", "used_together_block"],
+          "message": "Nice work.",
+          "next": "true"
+        },
+        {
+          "conditions": ["played_two_sounds_together"],
+          "message": "It's good that you played two sounds, but you need to play another one."
+        },
+        {
+          "conditions": ["played_one_sound"],
+          "message": "It's good that you played one sound, but you need to play two more."
+        },
+        {"message": "Please play three sounds together."}
+      ],
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [{"type": "when_run_simple2", "x": 35, "y": 35}]
+        },
+        "variables": [{"name": "currentTime"}, {"name": "i"}]
+      }
+    }
   },
   "game_id": 70,
   "published": true,

@@ -3441,7 +3441,7 @@
         "courseD_bee_nestedLoops2_2021": "Tym raze, pomóż pszczołom zebrać cały nektar używając jak najmniejszej liczby bloków.",
         "courseD_bee_nestedLoops2_predict1_2021": "Tym raze, pomóż pszczołom zebrać cały nektar używając jak najmniejszej liczby bloków.",
         "courseD_bee_nestedLoops7_2021": "Wyzwanie: Wymyśl jak zebrać cały nektar, używając tylko tych bloków, które są dostępne.",
-        "courseD_bee_nestedLoops8_2021": "Zbierz cały nektar z każdego kwiatka i zrób miód na plastrze miodu. \r \r Użyj zagnieżdżonej pętli. ",
+        "courseD_bee_nestedLoops8_2021": "Zbierz cały nektar z każdego kwiatka i zrób miód na plastrze miodu. \\\r \\\r Użyj zagnieżdżonej pętli. ",
         "courseD_bee_nestedLoops9_2021": "Zrób cały miód.",
         "courseD_bee_nestedLoops9_predict2_2021": "Zrób cały miód.",
         "courseD_collector_nested_loops_challenge2_2021": "Pomóż poszukiwaczowi zebrać przynajmniej dwa stosy skarbu z wykorzystaniem jedynie bloków znajdujących się w przyborniku. Można zebrać wszystkie 4.",
@@ -3705,7 +3705,7 @@
         "courseF_sprites_freeplay_air": "Teraz twoja kolej na utworzenie tego, co tylko zechcesz!",
         "courseF_sprites_freeplay_animals": "Teraz Twoja kolej na utworzenie tego, co tylko zechcesz!",
         "courseF_sprites_freeplay_aquatic": "Teraz twoja kolej na utworzenie tego, co tylko zechcesz!",
-        "courseF_sprites_freeplay_blank": "Teraz twoja kolej na utworzenie tego, co chcesz!",
+        "courseF_sprites_freeplay_blank": "Teraz Twoja kolej na utworzenie tego, co tylko zechcesz!",
         "courseF_sprites_freeplay_food": "Teraz Twoja kolej na utworzenie tego, co tylko zechcesz!",
         "courseF_sprites_freeplay_space": "Teraz Twoja kolej na utworzenie tego, co tylko zechcesz!",
         "courseF_sprites_positioning": "Wybierz nowe miejsce dla swojego duszka na ekranie.",
@@ -3734,7 +3734,7 @@
         "courseF_text_choice_events": "Dodaj blok zdarzenia, aby test został wydrukowany poprawnie.",
         "courseF_text_choice_freeplay": "Utwórz swój własny program używając tekstu, podpowiedzi i zmiennych!",
         "courseF_text_choice_interview": "Napraw błąd, aby można było poprawnie wydrukować tekst.",
-        "courseF_text_choice_multiprompt": "Napraw błąd tak, aby można było wydrukować poprawnie.",
+        "courseF_text_choice_multiprompt": "Napraw błąd, aby można było poprawnie wydrukować tekst.",
         "courseF_text_choice_title": "Dodaj ważny tekst do swojego programu przy pomocy ekranu tytułowego, a potem ukryj ekran tytułowy z użyciem zdarzenia.",
         "courseF_text_concat": "Połącz tekst przechowywany w zmiennych z innym tekstem.",
         "courseF_text_events": "Użyj zdarzeń, aby sprawić, by tekst pojawiał się na ekranie w czasie.",
@@ -4472,7 +4472,8 @@
         "helloworld_food_sizes_soccer-2022": "Nauczmy się zmieniać rozmiar duszków.",
         "helloworld_food_sizes_space-2022": "Nauczmy się zmieniać rozmiar duszków.",
         "helloworld_food_sounds_soccer-2022": "Nauczmy się, jak odtwarzać dźwięki.",
-        "helloworld_food_sounds_space-2022": "Nauczmy się, jak odtwarzać dźwięki."
+        "helloworld_food_sounds_space-2022": "Nauczmy się, jak odtwarzać dźwięki.",
+        "PS predictive Applab level test retriable": "Oto kilka instrukcji."
       }
     }
   }
