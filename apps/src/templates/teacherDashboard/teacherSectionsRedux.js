@@ -18,7 +18,6 @@ const USER_EDITABLE_SECTION_PROPS = [
   'loginType',
   'lessonExtras',
   'pairingAllowed',
-  'participantType',
   'ttsAutoplayEnabled',
   'participantType',
   'courseId',

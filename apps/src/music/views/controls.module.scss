@@ -5,12 +5,15 @@
 
 .controlsContainer {
   display: flex;
-  justify-content: center;
   background-color: $neutral_dark90;
   z-index: 70;
   border-radius: $default-border-radius;
-  margin: $default-spacing 0;
   position: relative;
+  padding: 10px;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .section {
@@ -18,26 +21,30 @@
   text-align: center;
   align-items: center;
   justify-content: center;
-
-  &Side {
-    flex: 0;
-  }
-
-  &Center {
-    flex: 1;
-  }
+  margin-bottom: 10px;
 }
 
 .controlButton {
   text-align: center;
   color: $neutral_light;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  border: initial;
+  margin: 0;
+
+  &:active {
+    border: initial !important;
+  }
 
   &Run {
     display: flex;
     align-items: center;
-    background-color: $brand_secondary_default;
     font-size: 14px;
     padding: 5px 10px;
+    background-color: #fca401;
+    border-radius: 8px;
+    height: 38px;
 
     .text {
       padding-left: 10px;
