@@ -364,6 +364,81 @@
           "rubric_performance_level_2": "Ogni pulsante utilizza sia i blocchi del LED che del cicalino, ma i parametri potrebbero non corrispondere alla descrizione corretta (ad esempio: hanno tutti la stessa durata)",
           "rubric_performance_level_3": "In alcuni pulsanti mancano interi blocchi del LED o del cicalino",
           "rubric_performance_level_4": "Non sono stati aggiunti ulteriori blocchi del LED o del cicalino al programma"
+        },
+        "CSD U2 HTML Adding Paragraphs pt 2_2019": {
+          "rubric_key_concept": "Utilizza HTML per creare una pagina web che includa titoli, paragrafi, elenchi e immagini gerarchici; comprende l'esigenze della precisione, utilizzando i linguaggi informatici e l'utilizzo della sintassi appropriata.",
+          "rubric_performance_level_1": "Tutti i testi sono contenuti nei tag dei paragrafi. Esistono almeno due paragrafi creati tramite l'utilizzo appropriato dei tag del paragrafo.",
+          "rubric_performance_level_2": "Almeno parte del testo è stata separata in un paragrafo tramite l'utilizzo appropriato dei tag del paragrafo.",
+          "rubric_performance_level_3": "Esiste almeno un tag del paragrafo nel testo, ma potrebbe non essere utilizzato propriamente (es. tag di chiusura mancante, paragrafi creati all'esterno dell'elemento del corpo).",
+          "rubric_performance_level_4": "Non è presente alcun tag del paragrafo nel testo."
+        },
+        "CSD U2 HTML Adding Paragraphs pt 2_2021": {
+          "rubric_key_concept": "Utilizza HTML per creare una pagina web che includa titoli, paragrafi, elenchi e immagini gerarchici; comprende l'esigenze della precisione, utilizzando i linguaggi informatici e l'utilizzo della sintassi appropriata.",
+          "rubric_performance_level_1": "Tutti i testi sono contenuti nei tag dei paragrafi. Esistono almeno due paragrafi creati tramite l'utilizzo appropriato dei tag del paragrafo.",
+          "rubric_performance_level_2": "Almeno parte del testo è stata separata in un paragrafo tramite l'utilizzo appropriato dei tag del paragrafo.",
+          "rubric_performance_level_3": "Esiste almeno un tag del paragrafo nel testo, ma potrebbe non essere utilizzato propriamente (es. tag di chiusura mancante, paragrafi creati all'esterno dell'elemento del corpo).",
+          "rubric_performance_level_4": "Non è presente alcun tag del paragrafo nel testo."
+        },
+        "CSD U2 HTML Adding Paragraphs pt 2_2022": {
+          "rubric_key_concept": "Utilizza HTML per creare una pagina web che includa titoli, paragrafi, elenchi e immagini gerarchici; comprende l'esigenze della precisione, utilizzando i linguaggi informatici e l'utilizzo della sintassi appropriata.",
+          "rubric_performance_level_1": "Tutti i testi sono contenuti nei tag dei paragrafi. Esistono almeno due paragrafi creati tramite l'utilizzo appropriato dei tag del paragrafo.",
+          "rubric_performance_level_2": "Almeno parte del testo è stata separata in un paragrafo tramite l'utilizzo appropriato dei tag del paragrafo.",
+          "rubric_performance_level_3": "Esiste almeno un tag del paragrafo nel testo, ma potrebbe non essere utilizzato propriamente (es. tag di chiusura mancante, paragrafi creati all'esterno dell'elemento del corpo).",
+          "rubric_performance_level_4": "Non è presente alcun tag del paragrafo nel testo."
+        },
+        "CSD U2 Heading Test_2018": {
+          "rubric_key_concept": "Utilizza HTML per creare una pagina web che includa titoli, paragrafi, elenchi e immagini gerarchici.\n\nComprende l'esigenze della precisione, utilizzando i linguaggi informatici e l'utilizzo della sintassi appropriata.",
+          "rubric_performance_level_1": "Tutti i contenuti sono nei tag, utilizzano i tag del paragrafo e titoli di dimensioni multiple in un modo logicamente consistente.",
+          "rubric_performance_level_3": "Gran parte dei contenuti sono tra tag. Almeno un tag d'intestazione è utilizzato.",
+          "rubric_performance_level_4": "Quasi nessun contenuto è contenuto nei tag."
+        },
+        "CSD U2 Heading Test_2019": {
+          "rubric_key_concept": "Utilizza HTML per creare una pagina web che includa titoli, paragrafi, elenchi e immagini gerarchici.\n\nComprende l'esigenze della precisione, utilizzando i linguaggi informatici e l'utilizzo della sintassi appropriata.",
+          "rubric_performance_level_1": "Tutti i contenuti sono nei tag, utilizzano i tag del paragrafo e titoli di dimensioni multiple in un modo logicamente consistente.",
+          "rubric_performance_level_2": "Tutti i contenuti sono contenuti nei tag, utilizzano paragrafi e tag d'intestazione in modo ragionevole.",
+          "rubric_performance_level_3": "Gran parte dei contenuti sono tra tag. Almeno un tag d'intestazione è utilizzato.",
+          "rubric_performance_level_4": "Quasi nessun contenuto è contenuto nei tag."
+        },
+        "CSD U2 Heading Test_2021": {
+          "rubric_key_concept": "Utilizza HTML per creare una pagina web che includa titoli, paragrafi, elenchi e immagini gerarchici.\n\nComprende l'esigenze della precisione, utilizzando i linguaggi informatici e l'utilizzo della sintassi appropriata.",
+          "rubric_performance_level_1": "Tutti i contenuti sono nei tag, utilizzano i tag del paragrafo e titoli di dimensioni multiple in un modo logicamente consistente.",
+          "rubric_performance_level_2": "Tutti i contenuti sono contenuti nei tag, utilizzano paragrafi e tag d'intestazione in modo ragionevole.",
+          "rubric_performance_level_3": "Gran parte dei contenuti sono tra tag. Almeno un tag d'intestazione è utilizzato.",
+          "rubric_performance_level_4": "Quasi nessun contenuto è contenuto nei tag."
+        },
+        "CSD U2 Heading Test_2022": {
+          "rubric_key_concept": "Utilizza HTML per creare una pagina web che includa titoli, paragrafi, elenchi e immagini gerarchici.\n\nComprende l'esigenze della precisione, utilizzando i linguaggi informatici e l'utilizzo della sintassi appropriata.",
+          "rubric_performance_level_1": "Tutti i contenuti sono nei tag, utilizzano i tag del paragrafo e titoli di dimensioni multiple in un modo logicamente consistente.",
+          "rubric_performance_level_2": "Tutti i contenuti sono contenuti nei tag, utilizzano paragrafi e tag d'intestazione in modo ragionevole.",
+          "rubric_performance_level_3": "Gran parte dei contenuti sono tra tag. Almeno un tag d'intestazione è utilizzato.",
+          "rubric_performance_level_4": "Quasi nessun contenuto è contenuto nei tag."
+        },
+        "CSD U3 Random Debug Cloud_2018_2019": {
+          "rubric_key_concept": "Utilizza gli argomenti per modificare il modo in cui un metodo o comando è eseguito. "
+        },
+        "CSD U3 Sprites scene sprites_2019": {
+          "rubric_key_concept": "Crea e modifica gli oggetti (sprite) per gestire la complessità degli elementi su schermo. Utilizza la notazione a punti per ottenere e impostare le proprietà dello sprite.",
+          "rubric_performance_level_1": "Almeno uno sprite viene creato, riceve un'animazione, è ridimensionato a una buona dimensione e disegnato sullo schermo. La variabile dello sprite ha un nome ragionevole. `drawSprites` è chiamata dopo che tutte le proprietà dello sprite sono state aggiornate.",
+          "rubric_performance_level_2": "Almeno uno sprite viene chiamato, riceve un'animazione ed è disegnato sullo schermo. La variabile dello sprite è stata rinominata.",
+          "rubric_performance_level_3": "Almeno uno sprite viene creato e disegnato sullo schermo. Potrebbero verificarsi dei problemi con l'animazione o conflitti dall'utilizzo del nome della stessa variabile per più sprite.",
+          "rubric_performance_level_4": "Nessuno sprite viene creato."
+        },
+        "CSD U3 Variables random with assignment_2019": {
+          "rubric_performance_level_1": "La variabile eyeSize è utilizzata così che i due occhi abbiano le stesse dimensioni casuali come istruito, senza altra modifica imprevista.",
+          "rubric_performance_level_2": "La variabile eyeSize è utilizzata così che i due occhi abbiano le stesse dimensioni casuali, ma altre modifiche al codice potrebbero aver introdotto comportamenti imprevisti.",
+          "rubric_performance_level_4": "Non sono state apportate modifiche al codice, o le modifiche non sembrano correlate alla variabile eyeSize, o la variabile è utilizzata in modo da impedire l'esecuzione del programma."
+        },
+        "CSD U3 abstraction velocityX control_2019": {
+          "rubric_performance_level_1": "La pressione singola del tasto freccia destro fa nuotare il pesce verso il lato destro dello schermo, si gira e nuota verso il lato sinistro dello schermo, quindi si ferma. Non ci sono blocchi aggiuntivi nel programma e lo schema del contatore non è utilizzato.",
+          "rubric_performance_level_2": "La pressione singola del tasto freccia destro fa nuotare il pesce verso il lato destro dello schermo. Lo schema del contatore non è utilizzato.",
+          "rubric_performance_level_3": "La pressione singola del tasto freccia destro fa nuotare il pesce verso qualche lato per lo schermo.",
+          "rubric_performance_level_4": "La pressione singola del tasto freccia destro non causa movimento o il movimento si ferma appena il tasto viene rilasciato."
+        },
+        "CSD U3 collisions flyman make it your own_2019": {
+          "rubric_performance_level_1": "Il personaggio del giocatore è incapace di spostarsi attraverso l'ostacolo, la moneta non appare mai oltre l'ostacolo e le dimensioni e la forma del collisore innesca le collisioni in tempi ragionevoli. Esiste almeno una nuova interazione dello sprite, di scelta dello studente.",
+          "rubric_performance_level_2": "Il personaggio del giocatore è incapace di spostarsi attraverso l'ostacolo, la moneta non appare mai oltre l'ostacolo.",
+          "rubric_performance_level_3": "Il personaggio del giocatore interagisce con l'ostacolo in qualche modo, ma potrebbero verificarsi problemi: il giocatore potrebbe spostare l'ostacolo o la moneta potrebbe talvolta apparire oltre l'ostacolo.",
+          "rubric_performance_level_4": "Non ci sono interazioni tra il personaggio del giocatore e l'ostacolo."
         }
       }
     }
