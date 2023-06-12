@@ -6,7 +6,7 @@ right 'Statement I is true, and statement II is false.'
 wrong 'Statement I is false, and statement II is true.'
 wrong 'Statements I and II are both false.'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 teacher_markdown <<MARKDOWN
 Statement I is true because, after each iteration of the outside loop, one more element from the unsorted part of the array is inserted into its proper place in the sorted part of the array. After ***k*** iterations of the outside loop, the first ***k*** elements of the array will be sorted.

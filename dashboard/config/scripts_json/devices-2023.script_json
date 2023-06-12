@@ -13,13 +13,14 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "version_year": "2023",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": "devices",
-    "serialized_at": "2023-04-20 18:31:44 UTC",
-    "published_state": "beta",
+    "serialized_at": "2023-05-17 16:28:39 UTC",
+    "published_state": "preview",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
@@ -66,6 +67,18 @@
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-4",
+        "script.name": "devices-2023"
+      }
+    },
+    {
+      "key": "lessonGroup-5",
+      "user_facing": true,
+      "position": 4,
+      "properties": {
+        "display_name": "Survey"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "devices-2023"
       }
     }
@@ -429,7 +442,6 @@
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this final project for the course, students team to develop and test a prototype for an innovative computing device based on the Circuit Playground. Using the inputs and outputs available on the board, groups will create programs that allow for interesting and unique user interactions. ",
         "preparation": "* Collect materials for physical prototyping, eg.\n\t* Cardboard\n\t* Scissors\n\t* Tape\n\t* Glue\n\t* Foil\n* Print a copy of the project guide for each pair of students\n* Print a copy of the peer review sheet for each student\n* Print a copy of the rubric for each student\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-prototype-an-innovation-physical-computing-lesson-18/36218) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
-        "purpose": "This lesson is the culmination of Unit 6 and provides students an opportunity to build a Maker Toolkit project of their own from the ground up. This project is an opportunity to showcase technical skills, but they will also need to demonstrate collaboration, constructive peer feedback, and iterative problem solving as they encounter obstacles along the way. This project should be student-directed whenever possible, and provide an empowering and memorable conclusion to the final unit of CS Discoveries.",
         "student_overview": "In this final project, you will be challenged to develop and test a prototype for a device that interacts with the physical world through various types of input and output and allows for interesting and unique user interactions. "
       },
       "seeding_key": {
@@ -450,6 +462,21 @@
       "seeding_key": {
         "lesson.key": "Post-Project Test",
         "lesson_group.key": "lessonGroup-4",
+        "script.name": "devices-2023"
+      }
+    },
+    {
+      "key": "Post-Course Survey",
+      "name": "Post-Course Survey",
+      "absolute_position": 21,
+      "lockable": true,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Post-Course Survey",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "devices-2023"
       }
     }
@@ -1347,6 +1374,19 @@
       }
     },
     {
+      "key": "43d951cc-c923-472f-b381-62fce4c24835",
+      "position": 6,
+      "properties": {
+        "name": "After the Lesson"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "43d951cc-c923-472f-b381-62fce4c24835",
+        "lesson.key": "Project - Prototype an Innovation",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "devices-2023"
+      }
+    },
+    {
       "key": "5f887873-cdfc-4b2a-9fdd-8f4aa9c1ac45",
       "position": 1,
       "properties": {
@@ -1356,6 +1396,18 @@
         "lesson_activity.key": "5f887873-cdfc-4b2a-9fdd-8f4aa9c1ac45",
         "lesson.key": "Post-Project Test",
         "lesson_group.key": "lessonGroup-4",
+        "script.name": "devices-2023"
+      }
+    },
+    {
+      "key": "720b9a5f-6202-499f-adae-6ddef6425470",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "720b9a5f-6202-499f-adae-6ddef6425470",
+        "lesson.key": "Post-Course Survey",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "devices-2023"
       }
     }
@@ -1527,7 +1579,7 @@
       "key": "cc3ad02e-2b24-4d87-a57d-a75f0092cb68",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** What's an example of a problem you've had to solve recently?\n\n**Circulate & Distribute:** Have students share their thoughts with a neighbor. Listen for examples that may be worth using as examples throughout the lesson.\n\nAs students share, distribute a copy of the [r _warm_up_word_search/csd6/2023] to each student, face down. Make sure students don't start the word search ahead of time."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** What's an example of a problem you've had to solve recently?\n\n**Circulate & Distribute:** Have students share their thoughts with a neighbor. Listen for examples that may be worth using as examples throughout the lesson.\n\nAs students share, distribute a copy of the [r _warm_up_word_search/csd/2023] to each student, face down. Make sure students don't start the word search ahead of time."
       },
       "seeding_key": {
         "activity_section.key": "cc3ad02e-2b24-4d87-a57d-a75f0092cb68",
@@ -1595,7 +1647,7 @@
       "key": "07c33129-6ddf-4b3d-8213-4693c00f7c43",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show students the [r the_problem_solving_process/csd6/2023] video in the slides.\n\n**Questions to Consider with Video:**\n* What are the 4 steps to the Problem-Solving Process?",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show students the [r the_problem_solving_process/csd/2023] video in the slides.\n\n**Questions to Consider with Video:**\n* What are the 4 steps to the Problem-Solving Process?",
         "duration": "5",
         "name": "The Problem Solving Process",
         "tips": [
@@ -1697,7 +1749,7 @@
       "key": "2dca2f1d-c627-4299-a6b3-0b9e5514ee44",
       "position": 2,
       "properties": {
-        "description": "**Group:** Put students in pairs.\n\n**Distribute:** Pass out a copy of the [r app_design_for_users/csd6/2023] activity guide to each student. \n\n",
+        "description": "**Group:** Put students in pairs.\n\n**Distribute:** Pass out a copy of the [r app_design_for_users/csd/2023] activity guide to each student. \n\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -1796,7 +1848,7 @@
       "key": "2c30a03b-14a7-4b2e-8fd1-fa33c6bfa4a0",
       "position": 8,
       "properties": {
-        "description": "**Overview:** Have students flip to the back of their activity guide and read the overview of the next part of the activity. Students will choose a user to create a basic physical design for, following the Problem-Solving Process. Students can sketch their design on pen and paper, or use the provided Google Slides template to create their design. These designs are meant to be sketches - students will not have enough time to \"perfect\" their designs.\n\n**Distribute:** Pass out copies of the [r problem_solving_and_design/csd6/2023] resource. Students can use this when preparing their design, and it can be a reference throughout the unit.\n\n**Circulate:** Monitor students as they complete this activity, ensuring that students are creating designs that match the needs of the user they chose. Monitor student conversations as well to make sure both voices are being heard during discussions and decisions. Students will be working in pairs throughout the unit, so it can be good to intervene early to reinforce good collaboration habits.\n\n**(Optional) Share Out:** Depending on how much time is left in class, allow students to trade with other groups and share their designs. Encourage students to share with another group who picked the same user so they can see similarities and differences in their designs.\n\n",
+        "description": "**Overview:** Have students flip to the back of their activity guide and read the overview of the next part of the activity. Students will choose a user to create a basic physical design for, following the Problem-Solving Process. Students can sketch their design on pen and paper, or use the provided Google Slides template to create their design. These designs are meant to be sketches - students will not have enough time to \"perfect\" their designs.\n\n**Distribute:** Pass out copies of the [r problem_solving_and_design/csd/2023] resource. Students can use this when preparing their design, and it can be a reference throughout the unit.\n\n**Circulate:** Monitor students as they complete this activity, ensuring that students are creating designs that match the needs of the user they chose. Monitor student conversations as well to make sure both voices are being heard during discussions and decisions. Students will be working in pairs throughout the unit, so it can be good to intervene early to reinforce good collaboration habits.\n\n**(Optional) Share Out:** Depending on how much time is left in class, allow students to trade with other groups and share their designs. Encourage students to share with another group who picked the same user so they can see similarities and differences in their designs.\n\n",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -5041,6 +5093,30 @@
       }
     },
     {
+      "key": "e7d7086f-50f1-4c1f-b7bb-690abddc4caf",
+      "position": 1,
+      "properties": {
+        "description": "**Post-Project tests** are included at the end of every unit. These include several multiple choice and matching questions as well as open ended reflections on the final project of the unit. These tests are aligned to the [learning framework](https://docs.google.com/document/d/1zA0qPfzSRZd8lQeJ5kmTNJVnTwrBgMyCKzt0nhC8oBg/edit) of each unit and are designed to assess parts of the framework that may not have been covered by the project rubrics. To holistically assess the learning objectives of the unit, the post-project test should be paired with the end-of-unit project which is the primary student assessment in each unit.\n\n**Unlocking The Tests:** This test is locked and hidden from student view by default.  In order for students to see and take this test, you'll need to unlock it by clicking the \"Lock Settings\" button and following the instructions that appear. [Click here for more information about unlocking and admistering assessments](https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys)",
+        "name": "Post-Project Test"
+      },
+      "seeding_key": {
+        "activity_section.key": "e7d7086f-50f1-4c1f-b7bb-690abddc4caf",
+        "lesson_activity.key": "43d951cc-c923-472f-b381-62fce4c24835"
+      }
+    },
+    {
+      "key": "f58a2c15-7216-4713-9b11-ef86b065e672",
+      "position": 2,
+      "properties": {
+        "description": "Have students take the end-of-course survey. See the [Post-Course Survey Instructions](https://docs.google.com/document/d/1gb5gLQAIQyMc_o4RP7zParEvpyO9kfAYp7cGnYyvZLw/edit#) for more information about the End-of-Course survey and how to assign and see the results. ",
+        "name": "Post-Course Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "f58a2c15-7216-4713-9b11-ef86b065e672",
+        "lesson_activity.key": "43d951cc-c923-472f-b381-62fce4c24835"
+      }
+    },
+    {
       "key": "c3d5026f-c0a0-4543-aff8-898424ed055f",
       "position": 1,
       "properties": {
@@ -5048,6 +5124,17 @@
       "seeding_key": {
         "activity_section.key": "c3d5026f-c0a0-4543-aff8-898424ed055f",
         "lesson_activity.key": "5f887873-cdfc-4b2a-9fdd-8f4aa9c1ac45"
+      }
+    },
+    {
+      "key": "ad86b03c-fdfb-415c-93b8-0a9e0e1ca4df",
+      "position": 1,
+      "properties": {
+        "progression_name": "Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "ad86b03c-fdfb-415c-93b8-0a9e0e1ca4df",
+        "lesson_activity.key": "720b9a5f-6202-499f-adae-6ddef6425470"
       }
     }
   ],
@@ -9000,6 +9087,31 @@
       "level_keys": [
         "CSD Physical Computing Post-Project Test_2023"
       ]
+    },
+    {
+      "chapter": 159,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "csd-post-survey-levelgroup_2023"
+        ],
+        "progression": "Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csd-post-survey-levelgroup_2023"
+        ],
+        "lesson.key": "Post-Course Survey",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "devices-2023",
+        "activity_section.key": "ad86b03c-fdfb-415c-93b8-0a9e0e1ca4df"
+      },
+      "level_keys": [
+        "csd-post-survey-levelgroup_2023"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -10898,6 +11010,18 @@
         "script.name": "devices-2023",
         "activity_section.key": "c3d5026f-c0a0-4543-aff8-898424ed055f"
       }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csd-post-survey-levelgroup_2023",
+        "script_level.level_keys": [
+          "csd-post-survey-levelgroup_2023"
+        ],
+        "lesson.key": "Post-Course Survey",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "devices-2023",
+        "activity_section.key": "ad86b03c-fdfb-415c-93b8-0a9e0e1ca4df"
+      }
     }
   ],
   "resources": [
@@ -11139,6 +11263,36 @@
       }
     },
     {
+      "name": "CSD Guide to Assessment ",
+      "url": "https://docs.google.com/document/d/1IO5XgPW_Apil_Uziq5hAMCBgilm8txZ3sp8atxiKiLU/view",
+      "key": "csd_guide_to_assessment",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csd_guide_to_assessment"
+      }
+    },
+    {
+      "name": "CSD Guide to Code.org Values and Philosophy",
+      "url": "https://docs.google.com/document/d/1Ql3w7D_cWFZVPzRA-2yjuxjCaRP-lneiRGZPpmg81tc/view",
+      "key": "csd_guide_to_code_org_values_and_philosophy",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csd_guide_to_code_org_values_and_philosophy"
+      }
+    },
+    {
+      "name": "CSD Guide to Curriculum Videos ",
+      "url": "https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view",
+      "key": "csd_guide_to_curriculum_videos",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csd_guide_to_curriculum_videos"
+      }
+    },
+    {
       "name": "CSD Guide to Debugging",
       "url": "https://docs.google.com/document/d/145lvpomqz0tUuzXLbkAFgP9zMDpECMwFYiEIG1_hQFg/view\t",
       "key": "csd_guide_to_debugging",
@@ -11156,6 +11310,16 @@
       },
       "seeding_key": {
         "resource.key": "csd_guide_to_differentiation"
+      }
+    },
+    {
+      "name": "CSD Guide to Teaching and Learning Strategies ",
+      "url": "https://docs.google.com/document/d/1Cg5iTwERoX25Y2DdLNmrPCbVB2d9FPGfUMUvcnVoN8Q/view",
+      "key": "csd_guide_to_teaching_and_learning_strategies",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csd_guide_to_teaching_and_learning_strategies"
       }
     },
     {
@@ -11620,6 +11784,26 @@
       },
       "seeding_key": {
         "resource.key": "problem_solving_and_design"
+      }
+    },
+    {
+      "name": "Problem Solving Process with Design",
+      "url": "https://docs.google.com/document/d/1qgiwCyO7948qPSWbTvYmR7DjH0nkh8HpfxP1HxubDis/view",
+      "key": "problem_solving_process_with_design",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "problem_solving_process_with_design"
+      }
+    },
+    {
+      "name": "Problem Solving Process with Programming",
+      "url": "https://docs.google.com/document/d/1q10YfeMqY95SAq0VAB3wnLPK2aDuJEoD2j82n-i183Y/view",
+      "key": "problem_solving_process_with_programming",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "problem_solving_process_with_programming"
       }
     },
     {
@@ -12502,6 +12686,24 @@
     },
     {
       "seeding_key": {
+        "resource.key": "csd_guide_to_assessment",
+        "script.name": "devices-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_guide_to_code_org_values_and_philosophy",
+        "script.name": "devices-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_guide_to_curriculum_videos",
+        "script.name": "devices-2023"
+      }
+    },
+    {
+      "seeding_key": {
         "resource.key": "csd_guide_to_debugging",
         "script.name": "devices-2023"
       }
@@ -12509,6 +12711,12 @@
     {
       "seeding_key": {
         "resource.key": "csd_guide_to_differentiation",
+        "script.name": "devices-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_guide_to_teaching_and_learning_strategies",
         "script.name": "devices-2023"
       }
     },
@@ -12533,6 +12741,18 @@
     {
       "seeding_key": {
         "resource.key": "csd_programming_levels_guide",
+        "script.name": "devices-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "problem_solving_process_with_design",
+        "script.name": "devices-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "problem_solving_process_with_programming",
         "script.name": "devices-2023"
       }
     },

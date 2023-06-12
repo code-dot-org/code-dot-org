@@ -1,4 +1,3 @@
-/* global ace */
 import {getAllAvailableDropletBlocks} from '../dropletUtils';
 var annotationList = require('./annotationList');
 

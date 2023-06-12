@@ -856,6 +856,7 @@ export const convertStudentServerData = (studentData, loginType, sectionId) => {
       email: student.email,
       age: student.age || '',
       gender: student.gender || '',
+      genderTeacherInput: student.gender_teacher_input || '',
       secretWords: student.secret_words,
       secretPicturePath: student.secret_picture_path,
       loginType: loginType,
@@ -886,6 +887,7 @@ const updateStudentOnServer = (updatedStudentInfo, sectionId, onComplete) => {
       name: updatedStudentInfo.name,
       age: updatedStudentInfo.age,
       gender: updatedStudentInfo.gender,
+      gender_teacher_input: updatedStudentInfo.genderTeacherInput,
       sharing_disabled: updatedStudentInfo.sharingDisabled,
     },
   };
@@ -913,6 +915,7 @@ const addStudentOnServer = (updatedStudentsInfo, sectionId, onComplete) => {
       name: updatedStudentsInfo[i].name,
       age: updatedStudentsInfo[i].age,
       gender: updatedStudentsInfo[i].gender,
+      gender_teacher_input: updatedStudentsInfo[i].genderTeacherInput,
       sharing_disabled: updatedStudentsInfo[i].sharingDisabled,
     };
   }

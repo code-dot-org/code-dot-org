@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
+/* eslint-disable no-restricted-imports */
 import {
   Row,
   Col,
@@ -11,6 +12,7 @@ import {
   InputGroup,
   Table,
 } from 'react-bootstrap';
+/* eslint-enable no-restricted-imports */
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import $ from 'jquery';
 import {
@@ -972,7 +974,7 @@ export class DetailViewContents extends React.Component {
   };
 
   render() {
-    if (this.state.hasOwnProperty('deleted')) {
+    if (Object.prototype.hasOwnProperty.call(this.state, 'deleted')) {
       const message = this.state.deleted
         ? 'This application has been deleted.'
         : 'This application could not be deleted.';

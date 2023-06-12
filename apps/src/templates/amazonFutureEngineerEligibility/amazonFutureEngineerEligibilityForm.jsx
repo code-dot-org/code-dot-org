@@ -1,7 +1,7 @@
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import PropTypes from 'prop-types';
 import React from 'react';
-import {Button, Checkbox} from 'react-bootstrap';
+import {Button, Checkbox} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import _ from 'lodash';
 import ValidationStep, {Status} from '@cdo/apps/lib/ui/ValidationStep';
 import SchoolAutocompleteDropdownWithLabel from '@cdo/apps/templates/census2017/SchoolAutocompleteDropdownWithLabel';
@@ -163,7 +163,7 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
   };
 
   checkValidationState = elementId => {
-    return this.state.errors.hasOwnProperty(elementId);
+    return Object.prototype.hasOwnProperty.call(this.state.errors, elementId);
   };
 
   validateRequiredFields = () => {
@@ -232,7 +232,7 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
             onChange={this.handleChange}
             defaultValue={this.props.email}
             validationState={
-              this.state.errors.hasOwnProperty('email')
+              Object.prototype.hasOwnProperty.call(this.state.errors, 'email')
                 ? VALIDATION_STATE_ERROR
                 : null
             }
@@ -254,7 +254,10 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
             required={true}
             onChange={this.handleChange}
             validationState={
-              this.state.errors.hasOwnProperty('firstName')
+              Object.prototype.hasOwnProperty.call(
+                this.state.errors,
+                'firstName'
+              )
                 ? VALIDATION_STATE_ERROR
                 : null
             }
@@ -266,7 +269,10 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
             required={true}
             onChange={this.handleChange}
             validationState={
-              this.state.errors.hasOwnProperty('lastName')
+              Object.prototype.hasOwnProperty.call(
+                this.state.errors,
+                'lastName'
+              )
                 ? VALIDATION_STATE_ERROR
                 : null
             }
@@ -311,7 +317,10 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
                 onChange={this.handleChange}
                 value={this.state.consentCSTA}
                 validationState={
-                  this.state.errors.hasOwnProperty('consentCSTA')
+                  Object.prototype.hasOwnProperty.call(
+                    this.state.errors,
+                    'consentCSTA'
+                  )
                     ? VALIDATION_STATE_ERROR
                     : null
                 }
@@ -366,7 +375,10 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
             onChange={this.handleChange}
             value={this.state.consentAFE}
             validationState={
-              this.state.errors.hasOwnProperty('consentAFE')
+              Object.prototype.hasOwnProperty.call(
+                this.state.errors,
+                'consentAFE'
+              )
                 ? VALIDATION_STATE_ERROR
                 : null
             }

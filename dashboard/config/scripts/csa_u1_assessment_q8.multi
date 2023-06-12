@@ -19,3 +19,5 @@ markdown <<MARKDOWN
 The constructor call `Painter jes = new Painter (4, 2, “North”, 3)` has four actual parameters. The values are assigned when the actual values are passed to the constructor method. Which constructor signature correctly uses the actual parameters provided above?
 
 MARKDOWN
+
+allow_multiple_attempts true

@@ -1,5 +1,3 @@
-/* global dashboard */
-
 var api = require('./apiJavascript.js');
 import color from '@cdo/apps/util/color';
 var consoleApi = require('@cdo/apps/consoleApi');

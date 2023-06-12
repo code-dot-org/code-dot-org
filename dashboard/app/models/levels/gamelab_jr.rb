@@ -43,11 +43,15 @@ class GamelabJr < Gamelab
   end
 
   def self.standalone_app_names
-    [['Sprite Lab', 'spritelab'], ['Story', 'story'], ['Science', 'science']]
+    [['Sprite Lab', 'spritelab'], ['Story', 'story'], ['Science', 'science'], ['Adaptations', 'adaptations'], ['Ecosystems', 'ecosystems']]
   end
 
   def standalone_app_name_or_default
     return standalone_app_name || 'spritelab'
+  end
+
+  def project_type
+    return standalone_app_name_or_default
   end
 
   def self.create_from_level_builder(params, level_params)

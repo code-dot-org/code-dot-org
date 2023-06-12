@@ -60,12 +60,13 @@ export function updateBrowserForLevelNavigation(
 // If we are on a new level without doing a page reload, then we should set the title
 // to match what levels_helper.rb's level_title function would have done.
 export function setWindowTitle(progressStoreState, newLevelId) {
-  const numLessons = progressStoreState.lessons[0].num_script_lessons;
-  const lessonName = progressStoreState.lessons[0].name;
+  const lesson = progressStoreState.lessons.find(
+    lesson => lesson.id === progressStoreState.currentLessonId
+  );
+  const numLessons = lesson.num_script_lessons;
+  const lessonName = lesson.name;
   const lessonIndex =
-    progressStoreState.lessons[0].levels.findIndex(
-      level => level.activeId === newLevelId
-    ) + 1;
+    lesson.levels.findIndex(level => level.activeId === newLevelId) + 1;
   const scriptDisplayName = progressStoreState.scriptDisplayName;
 
   document.title =

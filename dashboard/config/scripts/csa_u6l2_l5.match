@@ -14,3 +14,4 @@ answer 'converts a primitive int into a reference type'
 
 question 'Double'
 answer 'converts a primitive double into a reference type'
+allow_multiple_attempts true

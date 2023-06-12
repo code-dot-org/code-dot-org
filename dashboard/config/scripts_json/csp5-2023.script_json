@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-04-25 21:53:10 UTC",
+    "serialized_at": "2023-05-19 23:53:05 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -3243,7 +3243,7 @@
     },
     {
       "name": "Big, Open, and Crowdsourced Data",
-      "url": "https://docs.google.com/document/d/11MgQaSrHA9FgQuXpasyEuO5zSDVLxiCZFU6uoz5Hy6A/edit",
+      "url": "https://docs.google.com/document/d/1DJxtNtB0awN2wuhdz37rutG28ahCP7l5n-s3ZQH1tPU/edit?usp=share_link",
       "key": "big_open_and_crowdsourced_data",
       "properties": {
         "audience": "Student",
@@ -3267,17 +3267,7 @@
       }
     },
     {
-      "name": "CSP Curriculum Guide",
-      "url": "https://docs.google.com/document/d/1s5w7_UnVIGHOdkqCtK2O78rQ7JJFAWlOeZkZNsCovOY/preview",
-      "key": "csp_curriculum_guide",
-      "properties": {
-      },
-      "seeding_key": {
-        "resource.key": "csp_curriculum_guide"
-      }
-    },
-    {
-      "name": "CSP Unit 5 - Lesson 2 - Learning from Data",
+      "name": "CSP Unit 5 - Lesson 1 - Learning from Data",
       "url": "https://docs.google.com/presentation/d/1X9KdBT0PzWgwTBdh5-35-8Bkwm1HyuFwdf6TFYcmZSo/copy",
       "key": "csp_data_-_lesson_2_-_learning_from_data",
       "properties": {
@@ -3291,7 +3281,7 @@
     },
     {
       "name": "CSP Project Guide - Tell a Data Story",
-      "url": "https://docs.google.com/document/d/1my-xp5mA5le05dcPp7kVawrK0-68flRifUZcqCRjltA/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1Gd54qfWdvVWNeAIrT5tk6I1C2z6esnelvmfbt7VP5Io/edit?usp=sharing",
       "key": "csp_u9_project_guide_-_tell_a_data_story",
       "properties": {
         "audience": "Student",
@@ -3303,7 +3293,7 @@
       }
     },
     {
-      "name": "CSP Unit 5 - Lesson 3 - Exploring One Column",
+      "name": "CSP Unit 5 - Lesson 2 - Exploring One Column",
       "url": "https://docs.google.com/presentation/d/1jrF77jto1ZR_XWchlm0DHNxLygkx5L-FQQlqr9VYTU8/copy",
       "key": "csp_unit_5_-_lesson_3_-_exploring_one_column",
       "properties": {
@@ -3316,7 +3306,7 @@
       }
     },
     {
-      "name": "CSP Unit 5 - Lesson 4 - Filtering and Cleaning Data",
+      "name": "CSP Unit 5 - Lesson 3 - Filtering and Cleaning Data",
       "url": "https://docs.google.com/presentation/d/1ZA_vZPjoF1TbWAq0k-_VkIIP3M8WNdTyGWMeAAx0YhI/copy",
       "key": "csp_unit_5_-_lesson_4_-_filtering_and_cleaning_data",
       "properties": {
@@ -3329,7 +3319,7 @@
       }
     },
     {
-      "name": "CSP Unit 5 - Lesson 5 - Exploring Two Columns",
+      "name": "CSP Unit 5 - Lesson 4 - Exploring Two Columns",
       "url": "https://docs.google.com/presentation/d/14G7ptwES6IcNnpXccTD-09noprIzbdnXuYM3aVEeFJE/copy",
       "key": "csp_unit_5_-_lesson_5_-_exploring_two_columns",
       "properties": {
@@ -3342,7 +3332,7 @@
       }
     },
     {
-      "name": "CSP Unit 5 - Lesson 6 - Big, Open, and Crowdsourced Data",
+      "name": "CSP Unit 5 - Lesson 5 - Big, Open, and Crowdsourced Data",
       "url": "https://docs.google.com/presentation/d/1VIGRaI9M3G4HXKyPQOOvxucg5q5C4tLaVSxClSvC6Ng/copy",
       "key": "csp_unit_5_-_lesson_6_-_big_open_and_crowdsourced_data",
       "properties": {
@@ -3355,7 +3345,7 @@
       }
     },
     {
-      "name": "CSP Unit 5 - Lesson 7 - Machine Learning",
+      "name": "CSP Unit 5 - Lesson 6 - Machine Learning",
       "url": "https://docs.google.com/presentation/d/1R0cyJ3KIqc0-joNe2yHOkrhC1UZrDU3OsJN9ctp885k/copy",
       "key": "csp_unit_5_-_lesson_7_-_machine_learning",
       "properties": {
@@ -3368,7 +3358,7 @@
       }
     },
     {
-      "name": "CSP Unit 5 - Lesson 8 - Algorithmic Bias",
+      "name": "CSP Unit 5 - Lesson 7 - Algorithmic Bias",
       "url": "https://docs.google.com/presentation/d/1ySR0KHBdwpQIugYalf5NRnlGvI9YMeAEgvKmZtw8jcs/copy",
       "key": "csp_unit_5_-_lesson_8_-_algorithmic_bias",
       "properties": {
@@ -3421,7 +3411,7 @@
     },
     {
       "name": "Exploring One Column",
-      "url": "https://docs.google.com/document/d/11X6ythWM_CSVlE0XrqrMAfHK63QMS8VCysCUiuIfQjw/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1PxBRHtxwaV4IbHBJFW7IuIN-Ib0T0LybcjcwywJrLMg/edit?usp=share_link",
       "key": "exploring_one_column",
       "properties": {
         "audience": "Student",
@@ -3433,8 +3423,8 @@
       }
     },
     {
-      "name": "Exploring One Column Unit 9 Lesson 2",
-      "url": "https://docs.google.com/document/d/1R6cgFwz6_DRDelbKlX86-frQp2sCijUB4nOY3yTJRh8/edit?usp=sharing",
+      "name": "Exploring One Column Data Unit Lesson 2",
+      "url": "https://docs.google.com/document/d/18R1_o4q_rIFAF2ezisd7dLXmhzXzgH-uwRmMDGDfZ_M/edit?usp=share_link",
       "key": "exploring_one_column_unit_9_lesson_2",
       "properties": {
         "audience": "Verified Teacher",
@@ -3446,7 +3436,7 @@
     },
     {
       "name": "Exploring Two Columns",
-      "url": "https://docs.google.com/document/d/12GkfXmELZiGPppfigSKRlgbPuizaYpXniW0lAFu8A08/edit",
+      "url": "https://docs.google.com/document/d/1bx5l_6deyM76RRQ7xkApdrh1S6zchLXnmvHCj7P1bec/edit?usp=share_link",
       "key": "exploring_two_columns",
       "properties": {
         "audience": "Student",
@@ -3458,8 +3448,8 @@
       }
     },
     {
-      "name": "Filtering Data Unit 9 Lesson 3",
-      "url": "https://docs.google.com/document/d/1AVWPKZcB_FqB0O_MtH6URDPAqnbcdTElmV9V1UJIH38/edit?usp=sharing",
+      "name": "Filtering Data",
+      "url": "https://docs.google.com/document/d/1-ScflXgT5Ddpv_n0g1cDcteeh_m1RoWD05q6bzjuBy8/edit?usp=share_link",
       "key": "filtering_data_unit_9_lesson_3",
       "properties": {
         "audience": "Student",
@@ -3471,8 +3461,8 @@
       }
     },
     {
-      "name": "Filtering Data Unit 9 Lesson 3",
-      "url": "https://docs.google.com/document/d/1gjb51mzUUjIgCPsT95wueh3jhikVl0KsSgKUjhKNgqs/edit?usp=sharing",
+      "name": "Filtering Data Unit 5 Lesson 3",
+      "url": "https://docs.google.com/document/d/1DscK4qaePaidXoauiDeL_xsuxKRUYiEAiupt2zLpGzg/edit?usp=share_link",
       "key": "filtering_data_unit_9_lesson_3_1",
       "properties": {
         "audience": "Verified Teacher",
@@ -3496,7 +3486,7 @@
     },
     {
       "name": "Learning From Data",
-      "url": "https://docs.google.com/document/d/11uJjxHRdQwKq0gWJuFEhvPKNCt0_Vw8r62jFlXrj0Ww/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1XmPQtBbdYesA4Kfz3Qzzhgwu3qB-8xU7bLbi1yP8zzs/edit?usp=share_link",
       "key": "learning_from_data",
       "properties": {
         "audience": "Student",
@@ -3556,8 +3546,8 @@
       }
     },
     {
-      "name": "U9 Sample Project 1",
-      "url": "https://docs.google.com/document/d/1sRBpINFb-LXLUKRBdAyRYzHAIAGxW2T3c3Jh8_1ly9c/edit?usp=sharing",
+      "name": "Sample Project 1",
+      "url": "https://docs.google.com/document/d/1r_-1U8TV95S-__S9DvBQyF6F_EJMspPG1ck7b3uiHqY/edit?usp=share_link",
       "key": "u9_sample_project_1",
       "properties": {
         "audience": "Verified Teacher",
@@ -3568,8 +3558,8 @@
       }
     },
     {
-      "name": "U9 Sample Project 2",
-      "url": "https://docs.google.com/document/d/1VJciLn-zKfugkaSoZzQ9RaLWlxZhRoiiyJ_lAnVY_ZA/edit?usp=sharing",
+      "name": "Sample Project 2",
+      "url": "https://docs.google.com/document/d/1hoPYZpnvyVc3jFRfw4FzqdSWD7D9QPTL4ExlRVyiTXE/edit?usp=share_link",
       "key": "u9_sample_project_2",
       "properties": {
         "audience": "Verified Teacher",
@@ -3580,8 +3570,8 @@
       }
     },
     {
-      "name": "U9 Sample Project 3",
-      "url": "https://docs.google.com/document/d/1_oqPyq9STepDcw3qpnPWIUB8yyJj-BExpcDc_SASTIw/edit?usp=sharing",
+      "name": "Sample Project 3",
+      "url": "https://docs.google.com/document/d/1X1bALdCTPoJs_omsP_s-XlG-VCdbu747lCXb5F4FfRw/edit?usp=share_link",
       "key": "u9_sample_project_3",
       "properties": {
         "audience": "Verified Teacher",
@@ -3592,8 +3582,8 @@
       }
     },
     {
-      "name": "U9 Sample Project 4",
-      "url": "https://docs.google.com/document/d/1G2o02v6KN17mvjf_vNu1vbF__N07gAtYcv0aQoLtPug/edit?usp=sharing",
+      "name": "Sample Project 4",
+      "url": "https://docs.google.com/document/d/1l2Dfp_vKhxHautFPxc0N2NAC4tzZg35VvcELvcPNvYI/edit?usp=share_link",
       "key": "u9_sample_project_4",
       "properties": {
         "audience": "Verified Teacher",
@@ -3796,12 +3786,6 @@
     {
       "seeding_key": {
         "resource.key": "course_vocabulary",
-        "script.name": "csp5-2023"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "csp_curriculum_guide",
         "script.name": "csp5-2023"
       }
     },

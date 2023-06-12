@@ -10,25 +10,28 @@ export abstract class Validator {
   abstract clear(): void;
 }
 
-// A validation inside the progression.
+export interface Progression {
+  path: string;
+  steps: ProgressionStep[];
+}
+
+// A validation inside the progression step.
 interface Validation {
   conditions: string[];
   message: string;
   next: boolean;
 }
 
-// The definition of the progression.
-interface Progression {
-  steps: {
-    text: string;
-    toolbox: {
-      [key: string]: string;
-    };
-    sounds: {
-      [key: string]: string;
-    };
-    validations: Validation[];
-  }[];
+// The definition of a progression step.
+export interface ProgressionStep {
+  text: string;
+  toolbox: {
+    [key: string]: string;
+  };
+  sounds: {
+    [key: string]: string;
+  };
+  validations: Validation[];
 }
 
 // The current progress state.
@@ -45,28 +48,31 @@ export const initialProgressState: ProgressState = {
 };
 
 export default class ProgressManager {
-  private progression: Progression;
+  private progressionStep: ProgressionStep | undefined;
   private validator: Validator;
   private onProgressChange: () => void;
   private currentProgressState: ProgressState;
 
   constructor(
-    progression: Progression,
     initialStep: number | undefined,
     validator: Validator,
     onProgressChange: () => void
   ) {
-    this.progression = progression;
+    this.progressionStep = undefined;
     this.validator = validator;
     this.onProgressChange = onProgressChange;
     this.currentProgressState = initialProgressState;
-    if (initialStep) {
+    if (initialStep !== undefined) {
       this.currentProgressState.step = initialStep;
     }
   }
 
-  getProgression(): Progression {
-    return this.progression;
+  setProgressionStep(progressionStep: ProgressionStep) {
+    this.progressionStep = progressionStep;
+  }
+
+  getProgressionStep(): ProgressionStep | undefined {
+    return this.progressionStep;
   }
 
   getCurrentState(): ProgressState {
@@ -74,12 +80,11 @@ export default class ProgressManager {
   }
 
   getCurrentStepDetails() {
-    return this.progression.steps[this.currentProgressState.step];
+    return this.progressionStep;
   }
 
   updateProgress(): void {
-    const validations =
-      this.progression.steps[this.currentProgressState.step].validations;
+    const validations = this.progressionStep?.validations;
 
     if (!validations) {
       return;
@@ -103,9 +108,11 @@ export default class ProgressManager {
         // Ask the lab-specific validator if this validation's
         // conditions are met.
         if (this.validator.conditionsMet(validation.conditions)) {
-          this.currentProgressState.satisfied = validation.next;
-          this.currentProgressState.message = validation.message;
-          this.onProgressChange();
+          if (!this.currentProgressState.satisfied) {
+            this.currentProgressState.satisfied = validation.next;
+            this.currentProgressState.message = validation.message;
+            this.onProgressChange();
+          }
           return;
         }
       } else {

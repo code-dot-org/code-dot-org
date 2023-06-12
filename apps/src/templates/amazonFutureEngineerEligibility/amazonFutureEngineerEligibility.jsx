@@ -1,7 +1,7 @@
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import React from 'react';
 import PropTypes from 'prop-types';
-import {FormGroup, Button} from 'react-bootstrap';
+import {FormGroup, Button} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import FieldGroup from '../../code-studio/pd/form_components/FieldGroup';
 import color from '@cdo/apps/util/color';
 import SchoolAutocompleteDropdownWithLabel from '@cdo/apps/templates/census2017/SchoolAutocompleteDropdownWithLabel';
@@ -262,7 +262,10 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
                 required={true}
                 onChange={this.updateFormData}
                 validationState={
-                  this.state.errors.hasOwnProperty('email')
+                  Object.prototype.hasOwnProperty.call(
+                    this.state.errors,
+                    'email'
+                  )
                     ? VALIDATION_STATE_ERROR
                     : null
                 }
@@ -272,7 +275,10 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
                 setField={this.handleSchoolDropdownChange}
                 showRequiredIndicator={true}
                 value={formData.schoolId}
-                showErrorMsg={this.state.errors.hasOwnProperty('schoolId')}
+                showErrorMsg={Object.prototype.hasOwnProperty.call(
+                  this.state.errors,
+                  'schoolId'
+                )}
                 style={styles.schoolInput}
               />
               <Button

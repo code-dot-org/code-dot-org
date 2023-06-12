@@ -1,5 +1,3 @@
-/* global Blockly, droplet */
-
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -1247,7 +1245,7 @@ StudioApp.prototype.initReadonly = function (options) {
  */
 StudioApp.prototype.loadBlocks = function (blocksXml) {
   var xml = parseXmlElement(blocksXml);
-  Blockly.Xml.domToBlockSpace(Blockly.mainBlockSpace, xml);
+  Blockly.cdoUtils.loadBlocksToWorkspace(Blockly.mainBlockSpace, xml);
 };
 
 /**

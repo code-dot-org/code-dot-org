@@ -151,6 +151,7 @@ class RosterDialog extends React.Component {
     classrooms: PropTypes.arrayOf(classroomShape),
     loadError: loadErrorShape,
     rosterProvider: PropTypes.oneOf(Object.keys(OAuthSectionTypes)),
+    userId: PropTypes.number,
   };
 
   state = {selectedId: null};
@@ -163,9 +164,49 @@ class RosterDialog extends React.Component {
       classrooms.find(classroom => {
         return classroom.id === this.state.selectedId;
       }).name;
-
     this.props.handleImport(this.state.selectedId, selectedName);
     this.setState({selectedId: null});
+  };
+
+  // create new function for redirect to NewEditPage
+  redirectToEditSectionPage = sectionId => {
+    const redirectUrl = '/sections/' + sectionId + '/edit';
+    window.location.href = redirectUrl;
+  };
+
+  // Creates the section and redirects to the edit page
+  handleRedirect = () => {
+    this.recordSectionSetupExitEvent(COMPLETED_EVENT);
+    const classrooms = this.props.classrooms;
+    const courseName =
+      classrooms &&
+      classrooms.find(classroom => {
+        return classroom.id === this.state.selectedId;
+      }).name;
+
+    const importSectionUrl =
+      this.props.rosterProvider === OAuthSectionTypes.google_classroom
+        ? '/dashboardapi/import_google_classroom'
+        : '/dashboardapi/import_clever_classroom';
+    const courseId = this.state.selectedId;
+
+    return new Promise((resolve, reject) => {
+      $.getJSON(importSectionUrl, {
+        courseId,
+        courseName,
+      })
+        .done(resolve)
+        .fail(jqxhr =>
+          reject(
+            new Error(`
+            url: ${importSectionUrl}
+            status: ${jqxhr.status}
+            statusText: ${jqxhr.statusText}
+            responseText: ${jqxhr.responseText}
+          `)
+          )
+        );
+    }).then(newSection => this.redirectToEditSectionPage(newSection.id));
   };
 
   cancel = () => {
@@ -199,6 +240,8 @@ class RosterDialog extends React.Component {
         loginType = locale.loginTypeClever();
         break;
     }
+
+    const testingUserId = -1;
 
     return (
       <BaseDialog
@@ -235,19 +278,36 @@ class RosterDialog extends React.Component {
           >
             {locale.dialogCancel()}
           </button>
-          <button
-            id="import-button"
-            type="button"
-            onClick={this.importClassroom}
-            style={Object.assign(
-              {},
-              styles.buttonPrimary,
-              !this.state.selectedId && {opacity: 0.5}
-            )}
-            disabled={!this.state.selectedId}
-          >
-            {locale.chooseSection()}
-          </button>
+          {this.props.userId % 10 !== testingUserId && (
+            <button
+              id="import-button-and-redirect"
+              type="button"
+              onClick={this.handleRedirect}
+              style={Object.assign(
+                {},
+                styles.buttonPrimary,
+                !this.state.selectedId && {opacity: 0.5}
+              )}
+              disabled={!this.state.selectedId}
+            >
+              {locale.chooseSection()}
+            </button>
+          )}
+          {this.props.userId % 10 === testingUserId && (
+            <button
+              id="import-button"
+              type="button"
+              onClick={this.importClassroom}
+              style={Object.assign(
+                {},
+                styles.buttonPrimary,
+                !this.state.selectedId && {opacity: 0.5}
+              )}
+              disabled={!this.state.selectedId}
+            >
+              {locale.chooseSection()}
+            </button>
+          )}
         </div>
       </BaseDialog>
     );

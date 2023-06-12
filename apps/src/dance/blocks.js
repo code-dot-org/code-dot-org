@@ -72,7 +72,7 @@ const customInputTypes = {
   limitedColourPicker: {
     addInput(blockly, block, inputConfig, currentInputRow) {
       const options = {
-        colours: limitedColours,
+        colourOptions: limitedColours,
         columns: 3,
       };
       currentInputRow

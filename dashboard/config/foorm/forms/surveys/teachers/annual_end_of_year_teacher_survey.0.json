@@ -420,7 +420,7 @@
         {
           "type": "radiogroup",
           "name": "cs_plans_next_sy_reasons_not_sure",
-          "visibleIf": "{cs_plans_next_sy} = 'Not sure'",
+          "visibleIf": "{cs_plans_next_sy} = 'not_sure'",
           "title": "Please select the reasons why you don't know if you will teach computer science next school year.",
           "choices": [
             {
@@ -893,7 +893,7 @@
         {
           "type": "radiogroup",
           "name": "pd_type_preference",
-          "visibleIf": "{pd_interest} < 5",
+          "visibleIf": "{pd_interest} > 3",
           "title": "When thinking about engaging in computer science professional development, what would would you prefer?",
           "choices": [
             {
@@ -926,7 +926,7 @@
             },
             {
               "value": "pd_barriers_ce_credits",
-              "text": "The program that does not award Continued Education credit"
+              "text": "The program does not award Continued Education credit"
             },
             {
               "value": "pd_barriers_certification",
