@@ -316,7 +316,7 @@ class Deliverer
     name = address[:name].to_s.strip
     return email if name.empty?
 
-    name = "\"#{name.tr('"', '\"').tr("'", "\'")}\"" if /[;,\"\'\(\)]/.match?(name)
+    name = "\"#{name.tr('"', '\"').tr("'", "'")}\"" if /[;,\"\'\(\)]/.match?(name)
     "#{name} <#{email}>".strip
   end
 

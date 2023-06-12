@@ -16,7 +16,7 @@ def check_pidfile(pidfile, tries)
     rescue Errno::ESRCH # Invalid pid
       File.delete(pidfile)
       exists = false
-    rescue ::Exception   # for example on EPERM (process exists but does not belong to us)
+    rescue Exception   # for example on EPERM (process exists but does not belong to us)
       exists = true
       raise
     end

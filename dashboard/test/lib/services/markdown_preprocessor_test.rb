@@ -206,8 +206,8 @@ class Services::MarkdownPreprocessorTest < ActiveSupport::TestCase
 
       It has:
 
-      1. A list with <span class=\"vocab\" title=\"The first of the vocabulary entries.\">First Vocabulary</span> a definition
-      2. A **formatted <span class=\"vocab\" title=\"The second of the vocabulary entries.\">Second Vocabulary</span> definition**
+      1. A list with <span class="vocab" title="The first of the vocabulary entries.">First Vocabulary</span> a definition
+      2. A **formatted <span class="vocab" title="The second of the vocabulary entries.">Second Vocabulary</span> definition**
 
       We also demonstrate that the markdown preprocessor we have doesn't
       respect markdown, and will replace stuff that actual markdown would leave
@@ -215,7 +215,7 @@ class Services::MarkdownPreprocessorTest < ActiveSupport::TestCase
 
       ```
       like code blocks
-      <span class=\"vocab\" title=\"The first of the vocabulary entries.\">First Vocabulary</span>
+      <span class="vocab" title="The first of the vocabulary entries.">First Vocabulary</span>
       ```
     MARKDOWN
 

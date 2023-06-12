@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class Api::V1::Pd::TeacherAttendanceReportControllerTest < ::ActionController::TestCase
+class Api::V1::Pd::TeacherAttendanceReportControllerTest < ActionController::TestCase
   freeze_time
 
   EXPECTED_COMMON_FIELDS = %w(

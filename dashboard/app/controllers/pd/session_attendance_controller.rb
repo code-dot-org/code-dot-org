@@ -82,7 +82,7 @@ class Pd::SessionAttendanceController < ApplicationController
   private def render_own_workshop
     attend_url = CDO.code_org_url "/pd/#{@session.code}", CDO.default_scheme
 
-    flash[:notice] = "You can't attend this workshop because you organized it. "\
+    flash[:notice] = "You can't attend this workshop because you organized it. " \
       "If your attendees go to the link #{attend_url} they will see a success message here."
 
     redirect_to CDO.studio_url('/', CDO.default_scheme)

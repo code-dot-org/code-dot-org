@@ -68,7 +68,7 @@ module Cdo
         # Skip update if either the exact or wildcard fetch-ref already exists in the config.
         ref_exists = [
           "config --get remote.#{remote}.fetch '^\\+refs/heads/#{branch}:refs/remotes/#{remote}/#{branch}$'",
-          "config --get remote.#{remote}.fetch '^\\+refs/heads/\*:refs/remotes/#{remote}/\*$'"
+          "config --get remote.#{remote}.fetch '^\\+refs/heads/*:refs/remotes/#{remote}/*$'"
         ].any? do |cmd|
           git(cmd, cwd: cwd, returns: [0, 1]).exitstatus == 0
         end

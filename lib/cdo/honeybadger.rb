@@ -15,10 +15,10 @@ module Honeybadger
 
     Dir.chdir(dashboard_dir) do
       system(
-        'bundle exec honeybadger deploy '\
-          "--environment=#{environment} "\
-          "--revision=#{revision} "\
-          "--user=#{environment} "\
+        'bundle exec honeybadger deploy ' \
+          "--environment=#{environment} " \
+          "--revision=#{revision} " \
+          "--user=#{environment} " \
           "--api-key=#{CDO.dashboard_honeybadger_api_key}"
       )
     end

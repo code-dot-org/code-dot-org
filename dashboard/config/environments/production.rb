@@ -65,7 +65,7 @@ Dashboard::Application.configure do
   # config.autoflush_log = false
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
-  config.log_formatter = ::Logger::Formatter.new
+  config.log_formatter = Logger::Formatter.new
 
   # Log condensed lines to syslog for centralized logging.
   config.lograge.enabled = true

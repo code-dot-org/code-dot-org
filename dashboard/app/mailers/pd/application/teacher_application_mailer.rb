@@ -64,8 +64,8 @@ module Pd::Application
       mail(
         to: @application.formatted_principal_email,
         reply_to: @application.formatted_partner_contact_email,
-        subject: "Action Needed: #{@application.applicant_full_name} has applied to" \
-            " #{@application.effective_regional_partner_name}'s Professional Learning Program!"
+        subject: "Action Needed: #{@application.applicant_full_name} has applied to " \
+            "#{@application.effective_regional_partner_name}'s Professional Learning Program!"
       )
     end
 

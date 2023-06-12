@@ -1,5 +1,5 @@
 require 'test_helper'
-class Pd::WorkshopEnrollmentControllerTest < ::ActionController::TestCase
+class Pd::WorkshopEnrollmentControllerTest < ActionController::TestCase
   freeze_time
 
   self.use_transactional_test_case = true
