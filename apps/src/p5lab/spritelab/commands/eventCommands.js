@@ -23,6 +23,7 @@ export const commands = {
   },
 
   keyPressed(condition, key, callback) {
+    console.log('keyPressed', key);
     if (condition === 'when' || condition === 'while') {
       this.addEvent(condition + 'press', {key: key}, callback);
     }
@@ -37,6 +38,7 @@ export const commands = {
   },
 
   spriteClicked(condition, spriteArg, callback) {
+    console.log('spriteclicked');
     if (condition === 'when' || condition === 'while') {
       this.addEvent(condition + 'click', {sprite: spriteArg}, callback);
     }
@@ -48,6 +50,7 @@ export const commands = {
 
   whenSpriteCreated(spriteArg, callback) {
     if (spriteArg) {
+      console.log('whenSpriteCreated');
       this.addEvent('whenSpriteCreated', spriteArg, callback);
     }
   },

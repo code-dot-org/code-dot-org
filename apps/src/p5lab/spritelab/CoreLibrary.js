@@ -400,6 +400,7 @@ export default class CoreLibrary {
    * @returns {Number} A unique id to reference the sprite.
    */
   addSprite(opts) {
+    console.log('addSprite');
     if (this.reachedSpriteMax()) {
       return;
     } else if (this.reachedSpriteWarningThreshold()) {
@@ -549,10 +550,14 @@ export default class CoreLibrary {
   }
 
   runSpriteCreatedEvents(newSprite) {
+    console.log('depend on inputEvent');
+    console.log('this.inputEvents', this.inputEvents);
     const matchingInputEvents = this.inputEvents.filter(inputEvent => {
       if (inputEvent.type === 'whenSpriteCreated') {
         const inputEventName = inputEvent.args.name;
         const inputEventCostume = inputEvent.args.costume;
+        console.log(inputEventName);
+        console.log(inputEventCostume);
         if (inputEventName !== undefined && inputEventName === newSprite.name) {
           return true;
         } else if (
