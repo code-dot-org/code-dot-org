@@ -681,6 +681,8 @@ sl:
       robotics:
         kodable: Kodable
         other: Drugi
+      workshop_course:
+        other: Drugi
       email_opt_in:
         opt_in_yes: Da
         opt_in_no: Ne

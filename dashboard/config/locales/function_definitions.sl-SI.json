@@ -1648,7 +1648,11 @@
           "draw flame": {
             "parameters": {
               "x": "x"
-            }
+            },
+            "name": "nariši plamen"
+          },
+          "draw fire": {
+            "name": "nariši plamen"
           }
         },
         "courseC_data wizard_2021": {
@@ -2471,6 +2475,11 @@
         "courseB_artist_loops_challenge2_2021": {
           "potential solution": {
             "name": "mogoča rešitev"
+          }
+        },
+        "courseC_artist_prog4_2021": {
+          "booster": {
+            "name": "ojačevalnik"
           }
         }
       }
