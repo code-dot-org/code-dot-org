@@ -9203,3 +9203,7 @@ pl:
           name: self-paced-pl-csp3-2023
         self-paced-pl-csp4-2023:
           name: self-paced-pl-csp4-2023
+        csa-frq-practice:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Klasy
