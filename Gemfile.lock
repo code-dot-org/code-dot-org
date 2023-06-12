@@ -621,13 +621,14 @@ GEM
       webfinger (>= 1.0.1)
     orm_adapter (0.5.0)
     os (1.1.4)
-    parallel (1.12.1)
+    parallel (1.23.0)
     parallel_tests (2.27.0)
       parallel
     paranoia (2.5.3)
       activerecord (>= 5.1, < 7.1)
-    parser (3.1.2.0)
+    parser (3.2.2.3)
       ast (~> 2.4.1)
+      racc
     pdf-reader (2.9.2)
       Ascii85 (~> 1.0)
       afm (~> 0.2.1)
@@ -701,7 +702,7 @@ GEM
       method_source
       rake (>= 12.2)
       thor (~> 1.0)
-    rainbow (3.0.0)
+    rainbow (3.1.1)
     raindrops (0.20.0)
     rake (12.3.3)
     rambling-trie (2.2.1)
@@ -712,7 +713,7 @@ GEM
       json
     redcarpet (3.3.4)
     redis (3.3.3)
-    regexp_parser (2.4.0)
+    regexp_parser (2.8.1)
     representable (3.2.0)
       declarative (< 0.1.0)
       trailblazer-option (>= 0.1.1, < 0.2.0)
@@ -747,17 +748,18 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.5.0)
     rspec-support (3.5.0)
-    rubocop (1.28.0)
+    rubocop (1.52.1)
+      json (~> 2.3)
       parallel (~> 1.10)
-      parser (>= 3.1.0.0)
+      parser (>= 3.2.2.3)
       rainbow (>= 2.2.2, < 4.0)
       regexp_parser (>= 1.8, < 3.0)
-      rexml
-      rubocop-ast (>= 1.17.0, < 2.0)
+      rexml (>= 3.2.5, < 4.0)
+      rubocop-ast (>= 1.28.0, < 2.0)
       ruby-progressbar (~> 1.7)
-      unicode-display_width (>= 1.4.0, < 3.0)
-    rubocop-ast (1.17.0)
-      parser (>= 3.1.1.0)
+      unicode-display_width (>= 2.4.0, < 3.0)
+    rubocop-ast (1.29.0)
+      parser (>= 3.2.1.0)
     rubocop-performance (1.13.3)
       rubocop (>= 1.7.0, < 2.0)
       rubocop-ast (>= 0.4.0)
@@ -769,7 +771,7 @@ GEM
       rubocop (>= 1.0.0)
     ruby-openid (2.7.0)
     ruby-prof (0.15.9)
-    ruby-progressbar (1.11.0)
+    ruby-progressbar (1.13.0)
     ruby-rc4 (0.1.5)
     ruby2_keywords (0.0.5)
     ruby_parser (3.18.1)
@@ -858,7 +860,7 @@ GEM
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.7.2)
-    unicode-display_width (2.1.0)
+    unicode-display_width (2.4.2)
     unicode_utils (1.4.0)
     user_agent_parser (2.3.0)
     validate_email (0.1.6)
@@ -1037,7 +1039,7 @@ DEPENDENCIES
   rinku
   rmagick (~> 4.2.5)
   rspec
-  rubocop (= 1.28)
+  rubocop (~> 1.28)
   rubocop-performance
   rubocop-rails
   rubocop-rails-accessibility
