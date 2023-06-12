@@ -1,5 +1,56 @@
 @import "color";
 
 .label {
-  display: initial;
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 25px;
+
+  input[type="checkbox"] {
+    display: none;
+  }
+
+  .switch {
+    width: 48px;
+    height: 24px;
+    cursor: pointer;
+    background-color: #ccc;
+    border-radius: 100px;
+    transition: background-color 0.2s ease;
+
+    &::before {
+      //position: absolute;
+      content: "";
+      //left: 2px;
+      //top: 2px;
+      width: 20px;
+      height: 20px;
+      background-color: #aaa;
+      border-radius: 50%;
+      transition: transform 0.3s ease;
+    }
+
+    &::after {
+      content: '\f00d';
+      //position: absolute;
+      //top: 2px;
+      //right: 2px;
+    }
+  }
+
+  input[type="checkbox"]:checked + .switch {
+    background-color: #369;
+  
+    &::before {
+      transform: translateX(25px);
+      //right: 2px;
+      //top: 2px;
+      background-color: #69c;
+    }
+    &::after {
+      content: '\f00c';
+      //position: absolute;
+      //left: 2px;
+    }
+  }
 }

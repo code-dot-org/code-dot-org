@@ -36,7 +36,8 @@ const Toggle: React.FunctionComponent<ToggleProps> = ({
         onChange={onChange}
         disabled={disabled}
       />
-      <i className="fa fa-solid" />
+      {/*<span className={moduleStyles.switch}/>*/}
+      <i className={classnames('fa', 'fa-solid', moduleStyles.switch)} />
       {label && (
         //   TODO: [DES-296] Once new Typography is ready, implement different label sizes
         <Typography semanticTag="span" visualAppearance="body-one">
