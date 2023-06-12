@@ -202,8 +202,8 @@ module Cdo
 
         return task if completed_successfully?
 
-        raise StandardError.new("Timeout after waiting #{attempts * delay} seconds or Replication Task" \
-          " #{@arn} did not complete successfully.  Task Status - #{status}"
+        raise StandardError.new("Timeout after waiting #{attempts * delay} seconds or Replication Task " \
+          "#{@arn} did not complete successfully.  Task Status - #{status}"
         )
       end
 

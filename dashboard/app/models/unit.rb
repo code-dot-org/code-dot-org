@@ -1586,7 +1586,7 @@ class Unit < ApplicationRecord
   end
 
   def unit_without_lesson_plans?
-    lessons.select(&:has_lesson_plan).empty?
+    lessons.none?(&:has_lesson_plan)
   end
 
   def summarize_for_rollup(user = nil)

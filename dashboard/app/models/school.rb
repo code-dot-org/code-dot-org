@@ -537,15 +537,15 @@ class School < ApplicationRecord
     ensure
       future_tense_dry_run = is_dry_run ? ' to be' : ''
       summary_message =
-        "School seeding: done processing #{filename}.\n"\
-        "#{new_schools.length} new schools#{future_tense_dry_run} added.\n"\
-        "#{updated_schools} schools#{future_tense_dry_run} updated.\n"\
-        "#{unchanged_schools} schools#{future_tense_dry_run} unchanged (apart from specified ignored attributes).\n"\
-        "#{duplicate_schools.length} duplicate schools#{future_tense_dry_run} skipped.\n"\
+        "School seeding: done processing #{filename}.\n" \
+        "#{new_schools.length} new schools#{future_tense_dry_run} added.\n" \
+        "#{updated_schools} schools#{future_tense_dry_run} updated.\n" \
+        "#{unchanged_schools} schools#{future_tense_dry_run} unchanged (apart from specified ignored attributes).\n" \
+        "#{duplicate_schools.length} duplicate schools#{future_tense_dry_run} skipped.\n" \
 
       if updated_schools_attribute_frequency.any?
         summary_message <<
-          "Among updated schools, these attributes #{is_dry_run ? 'will be' : 'were'} updated:\n"\
+          "Among updated schools, these attributes #{is_dry_run ? 'will be' : 'were'} updated:\n" \
           "#{updated_schools_attribute_frequency.sort_by {|_, v| v}.
             reverse.
             map {|attribute, frequency| attribute + ': ' + frequency.to_s}.join("\n")}\n"
@@ -555,13 +555,13 @@ class School < ApplicationRecord
       if is_dry_run
         if new_schools.any?
           summary_message <<
-            "Schools#{future_tense_dry_run} added:\n"\
+            "Schools#{future_tense_dry_run} added:\n" \
             "#{pretty_print_school_list(new_schools)}\n"
         end
 
         if duplicate_schools.any?
           summary_message <<
-            "Duplicate schools#{future_tense_dry_run} skipped:\n"\
+            "Duplicate schools#{future_tense_dry_run} skipped:\n" \
             "#{pretty_print_school_list(duplicate_schools)}"
         end
       end

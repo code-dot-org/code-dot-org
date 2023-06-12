@@ -150,11 +150,11 @@ module GitHub
     end
 
     if attempt_count >= 30
-      raise ArgumentError.new("PR\##{pr_number} mergeability check timed out")
+      raise ArgumentError.new("PR##{pr_number} mergeability check timed out")
     elsif pr['merged']
-      raise ArgumentError.new("PR\##{pr_number} is already merged")
+      raise ArgumentError.new("PR##{pr_number} is already merged")
     elsif !pr['mergeable']
-      raise ArgumentError.new("PR\##{pr_number} is not mergeable")
+      raise ArgumentError.new("PR##{pr_number} is not mergeable")
     end
     response = Octokit.merge_pull_request(REPO, pr_number, commit_message)
     response['merged']
@@ -239,7 +239,7 @@ module GitHub
   # @param title [String] The title of the candidate pull request.
   # @raise [RuntimeError] If the environment is not development.
   def self.open_pull_request_in_browser(base:, head:, title:)
-    open_url "https://github.com/#{REPO}/compare/#{base}...#{head}"\
+    open_url "https://github.com/#{REPO}/compare/#{base}...#{head}" \
       "?expand=1&title=#{CGI.escape title}"
   end
 

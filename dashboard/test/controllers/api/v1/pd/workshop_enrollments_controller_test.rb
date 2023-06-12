@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ::ActionController::TestCase
+class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ActionController::TestCase
   setup do
     @organizer = create :workshop_organizer
     @program_manager = create :program_manager

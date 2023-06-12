@@ -130,9 +130,9 @@ class UserPermissionGranteeTest < ActiveSupport::TestCase
     ChatClient.
       expects(:message).
       with('infra-security',
-        "Granting UserPermission: environment: #{rack_env}, "\
-        "user ID: #{teacher.id}, "\
-        "email: #{teacher.email}, "\
+        "Granting UserPermission: environment: #{rack_env}, " \
+        "user ID: #{teacher.id}, " \
+        "email: #{teacher.email}, " \
         "permission: ADMIN",
         color: 'yellow'
       ).
@@ -148,9 +148,9 @@ class UserPermissionGranteeTest < ActiveSupport::TestCase
     ChatClient.
       expects(:message).
       with('infra-security',
-        "Revoking UserPermission: environment: #{rack_env}, "\
-        "user ID: #{admin_user.id}, "\
-        "email: #{admin_user.email}, "\
+        "Revoking UserPermission: environment: #{rack_env}, " \
+        "user ID: #{admin_user.id}, " \
+        "email: #{admin_user.email}, " \
         "permission: ADMIN",
         color: 'yellow'
       ).

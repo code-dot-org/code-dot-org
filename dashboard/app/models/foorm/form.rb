@@ -119,8 +119,8 @@ class Foorm::Form < ApplicationRecord
             question_name: element["name"]
           ).first
           unless library_question
-            raise InvalidFoormConfigurationError, "cannot find library item with library name #{element['library_name']},"\
-                                        " version: #{element['library_version']} and question name #{element['name']}."
+            raise InvalidFoormConfigurationError, "cannot find library item with library name #{element['library_name']}, " \
+                                        "version: #{element['library_version']} and question name #{element['name']}."
           end
           JSON.parse(library_question.question)
         else

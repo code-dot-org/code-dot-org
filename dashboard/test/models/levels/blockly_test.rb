@@ -579,9 +579,9 @@ class BlocklyTest < ActiveSupport::TestCase
     test_locale = :"es-MX"
     level_name = 'test_localize_authored_hints_with_embedded_behavior_block'
     hint = <<~HINT
-      oración de muestra: <xml><block type=\"gamelab_addBehaviorSimple\" uservisible=\"false\"><value name=\"SPRITE\"><block type=\"gamelab_getAllSprites\"></block></value><value name=\"BEHAVIOR\"><block type=\"gamelab_behavior_get\"><mutation></mutation><title name=\"VAR\">wandering</title></block></value></block></xml>.
+      oración de muestra: <xml><block type="gamelab_addBehaviorSimple" uservisible="false"><value name="SPRITE"><block type="gamelab_getAllSprites"></block></value><value name="BEHAVIOR"><block type="gamelab_behavior_get"><mutation></mutation><title name="VAR">wandering</title></block></value></block></xml>.
 
-      El <xml><block type=\"sprite_parameter_get\"><title name=\"VAR\">this sprite</title></block></xml> bloque
+      El <xml><block type="sprite_parameter_get"><title name="VAR">this sprite</title></block></xml> bloque
       This block is found in the **Behaviors** category of the toolbox.
     HINT
 

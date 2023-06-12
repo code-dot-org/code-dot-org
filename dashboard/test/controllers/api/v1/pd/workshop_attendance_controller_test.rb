@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class Api::V1::Pd::WorkshopAttendanceControllerTest < ::ActionDispatch::IntegrationTest
+class Api::V1::Pd::WorkshopAttendanceControllerTest < ActionDispatch::IntegrationTest
   freeze_time
 
   self.use_transactional_test_case = true

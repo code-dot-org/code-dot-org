@@ -59,8 +59,8 @@ module RakeUtils
         # Alert the relevant room that the service may be hung...
         ChatClient.log "Could not stop #{id} after #{retry_count + 1} attempts"
         # ...but we're trying one last time and going into a wait loop, so it can be stopped manually
-        ChatClient.log "Calling 'sudo service #{id} stop'. If #{id} does not stop shortly you will need to "\
-          "log into the server and manually stop the process. The build will resume automatically "\
+        ChatClient.log "Calling 'sudo service #{id} stop'. If #{id} does not stop shortly you will need to " \
+          "log into the server and manually stop the process. The build will resume automatically " \
           "once the #{id} has stopped."
         stop_service(id)
       end

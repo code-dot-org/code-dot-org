@@ -422,8 +422,8 @@ module Services
         # this method will be able to import the resources the next time the
         # seed process runs.
         if resources_data.count > 0
-          puts "WARNING: unable to import resources into script #{seed_context.script.name} "\
-            "because course version is missing. This is only to be expected if "\
+          puts "WARNING: unable to import resources into script #{seed_context.script.name} " \
+            "because course version is missing. This is only to be expected if " \
             "the script is being seeded for the first time."
         end
         return []
@@ -530,8 +530,8 @@ module Services
         # this method will be able to import vocabulary the next time the
         # seed process runs.
         if vocabularies_data.count > 0
-          puts "WARNING: unable to import vocabulary into script #{seed_context.script.name} "\
-            "because course version is missing. This is only to be expected if "\
+          puts "WARNING: unable to import vocabulary into script #{seed_context.script.name} " \
+            "because course version is missing. This is only to be expected if " \
             "the script is being seeded for the first time."
         end
         return []

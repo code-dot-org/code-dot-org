@@ -437,8 +437,8 @@ class Level < ApplicationRecord
 
   def reject_illegal_chars
     if name&.match /[^A-Za-z0-9 !"&'()+,\-.:=?_|]/
-      msg = "\"#{name}\" may only contain letters, numbers, spaces, "\
-      "and the following characters: !\"&'()+,\-.:=?_|"
+      msg = "\"#{name}\" may only contain letters, numbers, spaces, " \
+      "and the following characters: !\"&'()+,-.:=?_|"
       errors.add(:name, msg)
     end
   end
@@ -744,7 +744,7 @@ class Level < ApplicationRecord
   # hint_prompt_enabled for the sake of the level editing experience if any of
   # the scripts associated with the level are hint_prompt_enabled.
   def hint_prompt_enabled?
-    script_levels.map(&:script).select(&:hint_prompt_enabled?).any?
+    script_levels.map(&:script).any?(&:hint_prompt_enabled?)
   end
 
   # Define search filter fields

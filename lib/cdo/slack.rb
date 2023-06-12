@@ -120,7 +120,7 @@ class Slack
   # NOTE: This function utilizes an incoming webhook, not the Slack token
   def self.message(text, params={})
     return false unless CDO.slack_endpoint
-    params[:channel] = "\##{Slack::CHANNEL_MAP[params[:channel]] || params[:channel]}"
+    params[:channel] = "##{Slack::CHANNEL_MAP[params[:channel]] || params[:channel]}"
     slackified_text = slackify text
 
     payload =
