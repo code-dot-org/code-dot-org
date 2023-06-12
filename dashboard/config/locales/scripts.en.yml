@@ -10567,6 +10567,8 @@ en:
           student_description: Learn computer science by trying the lessons below at your own pace! Learn to create computer programs, develop problem-solving skills, and work through fun challenges! Make games and creative projects to share with friends, family, and teachers.
           description_short: 'An introduction to computer science: combines the best of our elementary school curriculum for older students.'
           description_audience: 'Ages: 9-18'
+          lessons: {}
+          name: express-2023
         coursea-2023:
           lesson_groups:
             csf_digcit:
@@ -10584,6 +10586,8 @@ en:
           student_description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
           description_short: An introduction to computer science for pre-readers.
           description_audience: 'Ages: 4-7'
+          lessons: {}
+          name: coursea-2023
         courseb-2023:
           lesson_groups:
             csf_digcit:
@@ -10603,6 +10607,8 @@ en:
           student_description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
           description_short: An introduction to computer science for pre-readers. Similar to Course A, but with added concept depth.
           description_audience: 'Ages: 5-8'
+          lessons: {}
+          name: courseb-2023
         coursec-2023:
           lesson_groups:
             csf_digcit:
@@ -10622,6 +10628,8 @@ en:
           student_description: Create programs with sequencing, loops, and events. Translate your initials into binary, investigate different problem-solving techniques, and learn how to respond to cyberbullying. At the end of the course, create your very own game or story you can share!
           description_short: Learn the basics of computer science and create your own art, stories, and games.
           description_audience: 'Ages: 6-10'
+          lessons: {}
+          name: coursec-2023
         coursed-2023:
           lesson_groups:
             lessonGroup-6:
@@ -10641,6 +10649,8 @@ en:
           student_description: Learn about loops, conditionals, and events. Beyond coding, learn about digital citizenship.
           description_short: Learn about conditional statements. Create your own art, games, and even a dance party.
           description_audience: 'Ages: 7-11'
+          lessons: {}
+          name: coursed-2023
         coursee-2023:
           lesson_groups:
             csf_digcit:
@@ -10662,6 +10672,8 @@ en:
           student_description: Start coding with algorithms, events, loops, conditionals, and functions! By the end of this course, design and create a game or drawing that you can share with your friends and family.
           description_short: Learn the basics of sprites, nested loops, and functions.
           description_audience: 'Ages: 8-12'
+          lessons: {}
+          name: coursee-2023
         problem-solving-computing-2023:
           lessons: {}
           lesson_groups:
@@ -12233,3 +12245,59 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+        csa-frq-practice:
+          lessons:
+            lesson-1:
+              name: Frog Simultation
+            lesson-2:
+              name: Delimiters
+            lesson-3:
+              name: APCalendar
+            lesson-4:
+              name: StepTracker
+            lesson-5:
+              name: LightBoard
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Methods and Control Structures
+            lessonGroup-3:
+              display_name: Classes
+            lessonGroup-4:
+              display_name: Arrays / ArrayLists
+            lessonGroup-5:
+              display_name: 2D Arrays
+          name: csa-frq-practice
+          title: CSA FRQ Practice 2019
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        hoc-amazon-poc:
+          lessons:
+            lesson-1:
+              name: Hour of Code Progression
+            lesson-2:
+              name: Hour of Career Exploration Progression
+          lesson_groups: {}
+          name: hoc-amazon-poc
+          title: Hour of Code (PoC)
+          description_audience: ''
+          description_short: ''
+          description: |-
+            Proof-of-concept for HoC progression with Amazon Career Tours included.
+
+            First "lesson" is the HoC progression ([like what we typically have here](https://levelbuilder-studio.code.org/s/hello-world-space-2022))
+
+            Second "lesson" is the "post-roll" where students can continue into the "Hour of Career" if they want
+          student_description: ''
+        musiclab-2023:
+          lessons:
+            lesson-1:
+              name: Music Lab
+          lesson_groups: {}
+          name: musiclab-2023
+          title: Music Lab
+          description_audience: ''
+          description_short: Code your own version of a song to share or perform!
+          description: Code your own version of a song to share or perform!
+          student_description: Code your own version of a song to share or perform!
