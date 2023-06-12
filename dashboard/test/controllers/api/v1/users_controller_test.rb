@@ -24,7 +24,7 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
 
   test 'a post request to using_text_mode updates using_text_mode' do
     sign_in(@user)
-    assert !@user.using_text_mode
+    assert_not @user.using_text_mode
     post :post_using_text_mode, params: {user_id: 'me', using_text_mode: 'true'}
     assert_response :success
     response = JSON.parse(@response.body)
@@ -57,7 +57,7 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
 
   test 'a post request to mute_music updates mute_music' do
     sign_in(@user)
-    assert !@user.mute_music
+    assert_not @user.mute_music
     post :post_mute_music, params: {user_id: 'me', mute_music: 'true'}
     assert_response :success
     response = JSON.parse(@response.body)
@@ -90,7 +90,7 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
 
   test 'a post request to display_theme updates display_theme' do
     sign_in(@user)
-    assert !@user.display_theme
+    assert_not @user.display_theme
     post :update_display_theme, params: {user_id: 'me', display_theme: 'dark'}
     assert_response :success
     response = JSON.parse(@response.body)

@@ -3673,7 +3673,7 @@ class UserTest < ActiveSupport::TestCase
   test 'new users require a password if no authentication provided' do
     assert_raises(ActiveRecord::RecordInvalid) do
       user = create :user, password: nil
-      assert !user.errors[:password].empty?
+      assert_not user.errors[:password].empty?
     end
   end
 

@@ -16,14 +16,14 @@ class CurriculumCourseTest < Minitest::Test
       assert(@course.valid_lesson_directory_name('1'))
       assert(@course.valid_lesson_directory_name('6-2'))
       assert(@course.valid_lesson_directory_name('.go_ahead_process_me'))
-      assert(!@course.valid_lesson_directory_name('.'))
-      assert(!@course.valid_lesson_directory_name('..'))
-      assert(!@course.valid_lesson_directory_name('_dont_parse_me'))
+      assert_not(@course.valid_lesson_directory_name('.'))
+      assert_not(@course.valid_lesson_directory_name('..'))
+      assert_not(@course.valid_lesson_directory_name('_dont_parse_me'))
     end
 
     it 'should verify directory existence' do
       assert(@course.valid_lesson_directory?('1')) # exists for course1
-      assert(!@course.valid_lesson_directory?('999')) # does not
+      assert_not(@course.valid_lesson_directory?('999')) # does not
     end
 
     it 'should get empty array for units when no units' do
@@ -48,7 +48,7 @@ class CurriculumCourseTest < Minitest::Test
 
       it 'should recognize that it has units' do
         assert(@course_with_units.has_units?)
-        assert(!@course_without_units.has_units?)
+        assert_not(@course_without_units.has_units?)
       end
 
       it 'should get lesson numbers when there are unit numbers' do
@@ -60,11 +60,11 @@ class CurriculumCourseTest < Minitest::Test
 
       it 'should determine whether lessons are in unit' do
         assert(@course_with_units.lesson_in_unit?('3-5', '3'))
-        assert(!@course_with_units.lesson_in_unit?('3-5', '4'))
+        assert_not(@course_with_units.lesson_in_unit?('3-5', '4'))
       end
 
       it 'should get all lessons' do
-        assert(!@course_with_units.get_lessons.empty?)
+        assert_not(@course_with_units.get_lessons.empty?)
         assert(@course_with_units.get_lessons.first.is_a?(CurriculumCourse::Lesson))
       end
     end
