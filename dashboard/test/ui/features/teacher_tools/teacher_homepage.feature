@@ -31,8 +31,6 @@ Feature: Using the teacher homepage sections feature
     When I create a new student section and go home
     Then the student section table should have 2 rows
 
-  @skip
-  # TODO TEACH-509: Reenable with new section setup flow
   @no_firefox @no_safari
   Scenario: Navigate to course and unit pages
     # No sections, ensure that levels load correctly after navigating from MiniView
@@ -109,8 +107,6 @@ Feature: Using the teacher homepage sections feature
     And I wait until element "#script-title" is visible
     And element ".uitest-sectionselect" has value ""
 
-  @skip
-  # TODO TEACH-509: Reenable with new section setup flow
   Scenario: Assign hidden unit to section
     Given I am on "http://studio.code.org/home"
     And I create a new "High School" student section with course "Computer Science Principles", version "'17-'18" and unit "CSP Unit 1 - The Internet ('17-'18)"
@@ -137,6 +133,7 @@ Feature: Using the teacher homepage sections feature
     And I wait until element "#uitest-secondary-assignment" is visible
     And I select the "CSP Unit 2 - Digital Information ('17-'18)" option in dropdown "uitest-secondary-assignment"
     And I press the first "#uitest-save-section-changes" element
+    And I wait until element "#classroom-sections" is visible 
 
     # TODO: TEACH-537 If we add in this confirmation dialogue later, uncomment this test
     # Then I wait to see a dialog containing text "unit is currently hidden"
@@ -159,12 +156,10 @@ Feature: Using the teacher homepage sections feature
     Then the student section table should have 1 rows
     And the section table row at index 0 has secondary assignment path "/s/csp1-2017"
 
-  @skip
-  # TODO TEACH-509: Reenable with new section setup flow
   Scenario: Assign a CSF course with multiple versions
     Given I am on "http://studio.code.org/home"
     When I see the section set up box
-    And I create a new "Elementary School" student section with course "Course A", version "2017"
+    And I create a new "Elementary School" student section with course "CS Fundamentals: Course A", version "2017"
     Then the student section table should have 1 rows
     And the section table row at index 0 has primary assignment path "/s/coursea-2017"
 
@@ -178,8 +173,6 @@ Feature: Using the teacher homepage sections feature
     And I wait until element "#classroom-sections" is visible
     And the section table row at index 0 has primary assignment path "/s/coursea-2019"
 
-  @skip
-  # TODO TEACH-509: Reenable with new section setup flow
   Scenario: Navigate to course pages with course versions enabled
     Given I am on "http://studio.code.org/home"
     When I see the section set up box

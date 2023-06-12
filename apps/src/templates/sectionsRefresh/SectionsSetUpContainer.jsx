@@ -164,8 +164,11 @@ export default function SectionsSetUpContainer({
       return;
     }
 
+    // Checking that the csrf-token exists since it is disabled on test
     const csrfToken = document.querySelector('meta[name="csrf-token"]')
-      .attributes['content'].value;
+      ? document.querySelector('meta[name="csrf-token"]').attributes['content']
+          .value
+      : null;
 
     const computedGrades =
       participantType === 'teacher' ? ['pl'] : section.grade;
