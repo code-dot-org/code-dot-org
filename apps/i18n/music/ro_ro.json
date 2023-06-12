@@ -57,5 +57,7 @@
   "share": "Distribuie",
   "shareComingSoon": "Partajarea este în construcție. Reveniți în curând.",
   "startOver": "Începe din nou",
-  "upload": "Încarcă"
+  "upload": "Încarcă",
+  "panelHeaderInstructions": "Instrucţiuni",
+  "panelHeaderWorkspace": "Spaţiu de lucru: "
 }
