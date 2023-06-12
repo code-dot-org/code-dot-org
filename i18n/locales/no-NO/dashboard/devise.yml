@@ -50,9 +50,6 @@
       expired: "har utgått, vennligst søk om en ny"
       not_found: "ikke funnet"
       not_locked: "var ikke låst"
-      not_saved:
-        one: "1 feil forhindret denne %{resource} fra å bli reddet:"
-        other: "%{count} feil forhindret denne %{resource} fra å bli reddet:"
     invitations:
       send_instructions: 'En invitasjon e-post er sendt til %{email}.'
       invitation_token_invalid: 'Invitasjonstegnet gitt er ikke gyldig!'

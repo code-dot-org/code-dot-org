@@ -1,1 +1,15 @@
-{}
+{
+  "selectDataset": "Seleziona il set di dati che desideri utilizzare.",
+  "uploadedDataset": "Hai appena caricato un set di dati.",
+  "selectedDataset": "Hai appena selezionato un set di dati.",
+  "dataDisplayLabel": "Scegli una colonna per fare una previsione.",
+  "dataDisplayFeatures": "Scegli una o più colonne come input per aiutare a fare la previsione.",
+  "selectedFeatureNumerical": "Hai appena selezionato una funzione numerica.",
+  "selectedFeatureCategorical": "Hai appena selezionato una funzionalità categoriale.",
+  "trainModel": "Il tuo modello è in fase di addestramento.",
+  "generateResults": "Il tuo modello è in fase di test.",
+  "results": "Rivedi i risultati.",
+  "resultsDetails": "Vengono visualizzati i dettagli dei risultati.",
+  "saveModel": "Salva il modello addestrato per utilizzarlo in App Lab.",
+  "modelSummary": "Hai addestrato e salvato con successo il tuo modello. Rivedi i dettagli del tuo modello e fai clic su Fine per utilizzare il tuo modello addestrato in App Lab."
+}

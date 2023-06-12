@@ -236,7 +236,7 @@ class CourseTypesTests < ActiveSupport::TestCase
 
   test 'get_family_courses should return nil if there is no family name' do
     unit_without_family_name = create :script, name: 'no-family-name'
-    assert_equal unit_without_family_name.get_family_courses, nil
+    assert_nil unit_without_family_name.get_family_courses
   end
 
   # (Dani) Commenting out while we turn the validation off to update the audience on some courses

@@ -274,7 +274,7 @@ fr:
         desc: Dans cette leçon, tu découvriras les boucles!
       courseB_unplugged_MRF:
         title: Activité Déconnectée
-        desc: Dans cette leçon, tu "programmeras" tes amis!
+        desc: Dans cette leçon, tu « programmeras » tes amis!
       courseB_unplugged_loopyMRF:
         title: Activité Déconnectée
         desc: Tout comme dans « Mes Amis Robotisés », tu vas « programmer » tes amis
@@ -349,7 +349,7 @@ fr:
           un ensemble de commandes prédéfinies pour diriger leurs camarades dans la
           reproduction d’un dessin.
       courseD_unplugged_relayProgramming:
-        title: Programmation de relais
+        title: Programmation en relais
         desc: Les élèves effectuent une course de relais, où ils traversent rapidement
           le jardin pour aller écrire un algorithme, basé sur une image de « Programmation
           sur Papier Millimétré». Ils ne peuvent écrire qu’une seule instruction à
@@ -456,7 +456,7 @@ fr:
         desc: Aujourd'hui, tu apprendras ce qu’il faut faire si quelqu'un devient
           méchant en ligne.
       Conditionals_2018:
-        title: Formules conditionnelles
+        title: Instructions conditionnelles
         desc: Pour mieux comprendre les déclarations conditionnelles, les élèves jouent
           à un jeu de cartes et créent des règles comme « Si je tire une carte rouge,
           je gagne un point », et « Si je tire une carte noire, tu gagnes un point
@@ -508,7 +508,7 @@ fr:
           être encouragés à respecter les droits des artistes, qui constituent un
           élément important de leur citoyenneté numérique.
       RelayProgramming_2018:
-        title: Programmation de relais
+        title: Programmation en relais
         desc: Cette activité débutera par une brève leçon sur le débogage et la persévérance,
           puis passera rapidement à une course contre la montre, pendant laquelle
           les élèves formeront des équipes et travailleront ensemble à la rédaction
@@ -523,7 +523,7 @@ fr:
         title: 'traduction manquante : en-US.data.unplugged.courseB_unplugged_loopyMRF_2018.title'
         desc: 'traduction manquante : en-US.data.unplugged.courseB_unplugged_loopyMRF_2018.desc'
       Conditionals_2019:
-        title: Formules conditionnelles
+        title: Instructions conditionnelles
         desc: Pour mieux comprendre les déclarations conditionnelles, les élèves jouent
           à un jeu de cartes et créent des règles comme « Si je tire une carte rouge,
           je gagne un point », et « Si je tire une carte noire, tu gagnes un point
@@ -543,7 +543,7 @@ fr:
           un ensemble de commandes prédéfinies pour diriger leurs camarades dans la
           reproduction d’un dessin.
       RelayProgramming_2018_2019:
-        title: Programmation de relais
+        title: Programmation en relais
         desc: Cette activité débutera par une brève leçon sur le débogage et la persévérance,
           puis passera rapidement à une course contre la montre, pendant laquelle
           les élèves formeront des équipes et travailleront ensemble à la rédaction
@@ -644,7 +644,7 @@ fr:
         title: Se représenter les Données
         desc: Dans cette leçon, les élèves collecteront des données à partir d’un
           projet du Labo du Jeu ou d’un scénario réel, et les utiliseront pour faire
-          des prédictions.
+          des prévisions.
       courseE_unplugged_accessAbility_2019:
         title: 'Capacité d''Accès
 
@@ -666,7 +666,7 @@ fr:
         desc: '_Note de Josh : contrairement à la première leçon, j’ai formaté celle-ci,
           simplement, comme une leçon débranchée typique.'
       timeforcs_demo_conditionals:
-        title: Formules conditionnelles
+        title: Instructions conditionnelles
         desc: Pour mieux comprendre les déclarations conditionnelles, les élèves jouent
           à un jeu de cartes et créent des règles comme « Si je tire une carte rouge,
           je gagne un point », et « Si je tire une carte noire, tu gagnes un point

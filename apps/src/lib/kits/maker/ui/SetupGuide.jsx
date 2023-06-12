@@ -1,28 +1,31 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import experiments from '@cdo/apps/util/experiments';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import SetupInstructions from '@cdo/apps/lib/kits/maker/ui/SetupInstructions';
+import Notification, {NotificationType} from '@cdo/apps/templates/Notification';
+import {isCodeOrgBrowser, getChromeVersion} from '../util/browserChecks';
 import applabI18n from '@cdo/applab/locale';
+import i18n from '@cdo/locale';
+import {MAKER_DEPRECATION_SUPPORT_URL} from '../util/makerConstants';
 
 const style = {
   twoColumns: {
     display: 'flex',
     flexDirection: 'row',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
   },
   descriptionFlexCard: {
-    width: '45%'
+    width: '45%',
   },
   circuitPlaygroundImg: {
     float: 'right',
     margin: '0 0 15px 10px',
-    borderRadius: '50%'
+    borderRadius: '50%',
   },
   microbitImg: {
     float: 'right',
-    margin: '0 0 15px 10px'
-  }
+    margin: '0 0 15px 10px',
+  },
 };
 
 export default class SetupGuide extends React.Component {
@@ -36,28 +39,59 @@ export default class SetupGuide extends React.Component {
           imgSrc: '/blockly/media/maker/microbit-drawing-green.png',
           description: applabI18n.makerSetupMicrobitDescription(),
           imgStyle: style.microbitImg,
-          alt: applabI18n.makerSetupMicrobitImageAltText()
+          alt: applabI18n.makerSetupMicrobitImageAltText(),
         };
       case 'circuitPlayground':
         return {
           id: 'circuit-playground-description',
           title: applabI18n.makerSetupCircuitPlaygroundTitle(),
-          href:
-            'https://learn.adafruit.com/introducing-circuit-playground/overview',
+          href: 'https://learn.adafruit.com/introducing-circuit-playground/overview',
           imgSrc: '/blockly/media/maker/circuit-playground-x-1.png',
           description: applabI18n.makerSetupCircuitPlaygroundDescription(),
           imgStyle: style.circuitPlaygroundImg,
-          alt: applabI18n.makerSetupCircuitPlaygroundImageAltText()
+          alt: applabI18n.makerSetupCircuitPlaygroundImageAltText(),
+        };
+      case 'general':
+        return {
+          id: 'general-description',
+          title: applabI18n.makerSetupGeneralTitle(),
+          description: applabI18n.makerSetupGeneralDescription(),
         };
     }
   };
+
   render() {
     // Experiment 'microbit', displays Circuit Playground and Micro:Bit descriptions.
-    let isMicrobit = experiments.isEnabled('microbit');
+    const chromeVersion = getChromeVersion();
+
     return (
       <div>
+        {isCodeOrgBrowser() && (
+          <Notification
+            type={NotificationType.warning}
+            notice={i18n.makerSetupDeprecationWarningAppTitle()}
+            details={i18n.makerSetupDeprecationWarningAppDetails()}
+            detailsLinkText={i18n.makerDeprecationWarningLinkText()}
+            detailsLink={MAKER_DEPRECATION_SUPPORT_URL}
+            dismissible
+          />
+        )}
+        {chromeVersion && chromeVersion <= 90 && (
+          <Notification
+            type={NotificationType.warning}
+            notice={i18n.makerSetupDeprecationWarningOldChromeTitle()}
+            details={i18n.makerSetupDeprecationWarningOldChromeDetails()}
+            detailsLinkText={i18n.makerDeprecationWarningLinkText()}
+            detailsLink={MAKER_DEPRECATION_SUPPORT_URL}
+            dismissible
+          />
+        )}
         <h1>{applabI18n.makerSetupPageTitle()}</h1>
-        {isMicrobit ? (
+
+        <div>
+          <div style={style.oneColumn}>
+            <HeaderCard {...this.setupGuideContent('general')} />
+          </div>
           <div style={style.twoColumns}>
             <DescriptionCard
               {...this.setupGuideContent('circuitPlayground')}
@@ -68,9 +102,8 @@ export default class SetupGuide extends React.Component {
               divStyle={style.descriptionFlexCard}
             />
           </div>
-        ) : (
-          <DescriptionCard {...this.setupGuideContent('circuitPlayground')} />
-        )}
+        </div>
+
         <div id="setup-status-mount">
           <SetupInstructions />
         </div>
@@ -107,5 +140,22 @@ DescriptionCard.propTypes = {
   imgStyle: PropTypes.object,
   description: PropTypes.string.isRequired,
   divStyle: PropTypes.object,
-  alt: PropTypes.string.isRequired
+  alt: PropTypes.string.isRequired,
+};
+
+function HeaderCard(props) {
+  return (
+    <div id={props.id} style={props.divStyle}>
+      <h2>{props.title}</h2>
+      <div className="description-content">
+        <SafeMarkdown markdown={props.description} />
+      </div>
+    </div>
+  );
+}
+HeaderCard.propTypes = {
+  id: PropTypes.string,
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  divStyle: PropTypes.object,
 };

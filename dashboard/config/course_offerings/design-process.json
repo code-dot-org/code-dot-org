@@ -1,0 +1,15 @@
+{
+  "key": "design-process",
+  "display_name": "The Design Process",
+  "category": "other",
+  "is_featured": false,
+  "assignable": true,
+  "curriculum_type": "Standalone Unit",
+  "marketing_initiative": null,
+  "grade_levels": "6,7,8,9,10,11,12",
+  "header": "teacher_led",
+  "image": "https://images.code.org/8dabad09a9e6629d9a6f967b0954ee93-CSD Standalone.png",
+  "cs_topic": "art_and_design,app_design",
+  "school_subject": null,
+  "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"incompatible\",\"mobile\":\"incompatible\",\"no_device\":\"incompatible\"}"
+}

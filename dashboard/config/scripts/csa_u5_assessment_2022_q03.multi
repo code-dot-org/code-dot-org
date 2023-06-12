@@ -18,7 +18,7 @@ public static void printArray(int[][] arr) {
 Consider the following code segment.
 
 ```
-int[][] arr = {{5, 4} {3, 2}, {1, 0}};
+int[][] arr = {{5, 4}, {3, 2}, {1, 0}};
 printArray(arr);
 ```
 
@@ -57,3 +57,5 @@ for (int[] j : arr) {
 }
 ```
 MARKDOWN
+
+allow_multiple_attempts true

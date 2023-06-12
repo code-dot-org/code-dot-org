@@ -1186,6 +1186,19 @@ nl:
             '"x"': x
             '"y"': y
             '"z"': z
+      gamelab_layoutSprites:
+        text: "{GROUP} indelen als een {FORMAT}"
+        options:
+          FORMAT:
+            '"border"': grens
+            '"circle"': cirkel
+            '"grid"': raster
+            '"top"': bovenste rij
+            '"row"': rij
+            '"bottom"': onderste rij
+            '"left"': linkerkolom
+            '"column"': kolom
+            '"right"': rechterkolom
       gamelab_locationAt:
         text: 'locatie x: {X} y: {Y}'
       gamelab_locationModifier:
@@ -1210,6 +1223,18 @@ nl:
             '"rain"': regen
       gamelab_makeNewSpriteAnon:
         text: nieuwe {ANIMATION_NAME} sprite maken op {LOCATION}
+      gamelab_makeNewSpriteGroup:
+        options:
+          FORMAT:
+            '"border"': grens
+            '"circle"': cirkel
+            '"grid"': raster
+            '"top"': bovenste rij
+            '"row"': rij
+            '"bottom"': onderste rij
+            '"left"': linkerkolom
+            '"column"': kolom
+            '"right"': rechterkolom
       gamelab_makeNumSprites:
         text: maak {NUM} nieuwe {ANIMATION_NAME} sprites
       gamelab_makeProjectile:
@@ -1542,6 +1567,10 @@ nl:
         text: x coördinaat van {SPRITE}
       gamelab_yLocationOf:
         text: y coordinaat van {SPRITE}
+      KatiesBlocks_glideTo:
+        text: "{SPRITE} glijdt naar {LOCATION}"
+      KatiesBlocks_tumbling:
+        text: tuimelen
       Mikelab_addBehaviorSimple:
         text: sprite {SPRITE} begint {BEHAVIOR}
       Mikelab_addTrainingData:
@@ -2043,8 +2072,6 @@ nl:
         text: Draai linksom
       RyanLab_turnRight:
         text: Draai rechtsom
-      SpriteLab2Beta_spriteSay:
-        text: sprite {SPRITE} zeggen {TEXT} voor {SECONDS} seconden
       Vector_createSpriteWith:
         text: |-
           maak sprite
@@ -2093,6 +2120,8 @@ nl:
             '0.25': few
       aalab_spriteSayChoices:
         text: "{SPRITE} zegt {SPEECH}"
+      adaptations_startFollowing:
+        text: "{SPRITE} begint {TARGET} te volgen"
       binary_drawBin:
         text: draw binary {BIN}
       binary_drawBinScreen:
@@ -2234,6 +2263,20 @@ nl:
           DIR:
             right: rechtsom ↻
             left: linksom ↺
+      ecosystems_int10:
+        options:
+          VALUE:
+            '0': '0'
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       storylab_setForegroundEffect2:
         text: Effect {EFFECT} uitvoeren
         options:
@@ -2244,5 +2287,3 @@ nl:
             '"rain"': regen
             '"starburst"': Sterrenvorming
             '"twinkling"': Fonkeling
-      validation_validatedBackground:
-        text: set achtergrond naar {IMG}

@@ -195,8 +195,8 @@ begin
 
     slice_count += 1
   end
-rescue Exception => e
+rescue Exception => exception
   puts "EXCEPTION: #{user_id_script_id}..."
-  raise e
+  raise exception
 end
 puts 'FINISHED DB WRITES.'

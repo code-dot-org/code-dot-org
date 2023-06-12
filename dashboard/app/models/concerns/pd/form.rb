@@ -67,7 +67,7 @@ module Pd::Form
     # its owner has been deleted.
     return if owner_deleted?
 
-    hash = sanitize_and_trim_form_data_hash
+    hash = sanitized_and_trimmed_form_data_hash
 
     # No validation is required if an application is still in progress
     # Check that status is defined because not all forms have status
@@ -92,7 +92,7 @@ module Pd::Form
   end
 
   def validate_with(options)
-    hash = sanitize_and_trim_form_data_hash
+    hash = sanitized_and_trimmed_form_data_hash
 
     hash_with_options = hash.select do |key, _|
       options.key? key
@@ -126,23 +126,21 @@ module Pd::Form
       form_data ? JSON.parse(form_data) : {}
   end
 
-  def sanitize_form_data_hash
+  def sanitized_form_data_hash
     @sanitized_form_data_hash ||=
       form_data_hash.transform_keys {|key| key.underscore.to_sym}
   end
 
-  def sanitize_and_trim_form_data_hash
+  def sanitized_and_trimmed_form_data_hash
     # empty fields may come about when the user selects then unselects an
     # option. They should be treated as if they do not exist
     @sanitized_and_trimmed_form_data_hash ||=
-      sanitize_form_data_hash.reject do |_, value|
-        value.blank?
-      end
+      sanitized_form_data_hash.compact_blank
   end
 
   def public_sanitized_form_data_hash
     @public_sanitized_form_data_hash ||=
-      sanitize_form_data_hash.select {|key| self.class.public_fields.include? key}
+      sanitized_form_data_hash.select {|key| self.class.public_fields.include? key}
   end
 
   def form_data=(json)

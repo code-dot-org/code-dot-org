@@ -6,10 +6,57 @@
           "name": "تاقیگەی یاری",
           "categories": {
             "game_lab": {
-              "name": "تاقیگەی یاری"
+              "name": "تاقیگەی یاری",
+              "expressions": {
+                "mouseWentDown": {
+                  "examples": {
+                    "Black and White": {
+                      "name": "ڕەش و سپی"
+                    }
+                  }
+                }
+              }
+            },
+            "sprites": {
+              "expressions": {
+                "getSpeed": {
+                  "examples": {
+                    "Spiral": {
+                      "name": "لوولپێچی"
+                    }
+                  }
+                }
+              }
             },
             "groups": {
-              "name": "کۆمەڵەکان"
+              "name": "کۆمەڵەکان",
+              "expressions": {
+                "setColorEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "ڕەنگ"
+                    }
+                  }
+                },
+                "setTintEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "ڕەنگ"
+                    }
+                  }
+                }
+              }
+            },
+            "drawing": {
+              "expressions": {
+                "shape": {
+                  "examples": {
+                    "Star": {
+                      "name": "ئەستێرە"
+                    }
+                  }
+                }
+              }
             },
             "math": {
               "name": "بیرکاری"
@@ -25,6 +72,39 @@
         "applab": {
           "name": "تاقیگەی ئاپ",
           "categories": {
+            "ui_controls": {
+              "expressions": {
+                "onEvent": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "فرمان"
+                    }
+                  }
+                }
+              }
+            },
+            "data": {
+              "expressions": {
+                "getPrediction": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "فرمان"
+                    }
+                  }
+                }
+              }
+            },
+            "control": {
+              "expressions": {
+                "timedLoop": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "فرمان"
+                    }
+                  }
+                }
+              }
+            },
             "math": {
               "name": "بیرکاری"
             },

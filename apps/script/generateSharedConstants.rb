@@ -54,9 +54,9 @@ end
 # Generate a set of JS objects from their ruby equivalents
 # It calls #generate_constants for each supplied const name. See above for more options
 # @param [Array] shared_const_names
-def generate_multiple_constants(shared_const_names, *options)
+def generate_multiple_constants(shared_const_names, **options)
   shared_const_names.map do |shared_const_name|
-    generate_constants shared_const_name, *options
+    generate_constants(shared_const_name, **options)
   end.join("\n\n")
 end
 
@@ -89,6 +89,7 @@ def main
     CONDITIONALLY_PUBLISHABLE_PROJECT_TYPES
     ABUSE_CONSTANTS
     ERROR_SEVERITY_LEVELS
+    RESTRICTED_PUBLISH_PROJECT_TYPES
   )
 
   generate_shared_js_file(shared_content, "#{REPO_DIR}/apps/src/util/sharedConstants.js")
@@ -105,6 +106,13 @@ def main
       INSTRUCTOR_AUDIENCE
       CURRICULUM_UMBRELLA
       COURSE_OFFERING_CATEGORIES
+      COURSE_OFFERING_CURRICULUM_TYPES
+      COURSE_OFFERING_HEADERS
+      COURSE_OFFERING_MARKETING_INITIATIVES
+      COURSE_OFFERING_CS_TOPICS
+      COURSE_OFFERING_SCHOOL_SUBJECTS
+      DEVICE_TYPES
+      DEVICE_COMPATIBILITY_LEVELS
       PARTICIPANT_AUDIENCES_BY_TYPE
     ),
       source_module: Curriculum::SharedCourseConstants, transform_keys: false
@@ -153,7 +161,17 @@ def main
 
   generate_shared_js_file(
     generate_multiple_constants(
-      %w(PRINCIPAL_APPROVAL_STATE YEAR SECTION_HEADERS PAGE_LABELS VALID_SCORES LABEL_OVERRIDES TEXT_FIELDS MULTI_ANSWER_QUESTION_FIELDS SCOREABLE_QUESTIONS),
+      %w(
+        PRINCIPAL_APPROVAL_STATE
+        SEND_ADMIN_APPROVAL_EMAIL_STATUSES
+        YEAR SECTION_HEADERS
+        PAGE_LABELS
+        VALID_SCORES
+        LABEL_OVERRIDES
+        TEXT_FIELDS
+        MULTI_ANSWER_QUESTION_FIELDS
+        SCOREABLE_QUESTIONS
+      ),
       source_module: Pd::TeacherApplicationConstants,
       transform_keys: true
     ),
@@ -167,15 +185,6 @@ def main
       transform_keys: true
     ),
     "#{REPO_DIR}/apps/src/generated/pd/principalApprovalApplicationConstants.js"
-  )
-
-  generate_shared_js_file(
-    generate_multiple_constants(
-      %w(TEACHER_SEAT_ACCEPTANCE_OPTIONS TEXT_FIELDS),
-      source_module: Pd::Teachercon1819RegistrationConstants,
-      transform_keys: true
-    ),
-    "#{REPO_DIR}/apps/src/generated/pd/teachercon1819RegistrationConstants.js"
   )
 
   generate_shared_js_file(

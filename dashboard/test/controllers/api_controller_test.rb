@@ -1134,7 +1134,7 @@ class ApiControllerTest < ActionController::TestCase
     level1a = create :maze, name: 'maze 1'
     level1b = create :maze, name: 'maze 1 new'
     level_source = create :level_source, level: level1a, data: 'level source'
-    create :script_level, script: script, lesson: lesson, levels: [level1a, level1b], properties: {'maze 1': {'active': false}}
+    create :script_level, script: script, lesson: lesson, levels: [level1a, level1b], properties: {'maze 1': {active: false}}
     create :user_level, user: @student_1, script: script, level: level1a, level_source: level_source
 
     get :user_app_options, params: {
@@ -1150,7 +1150,7 @@ class ApiControllerTest < ActionController::TestCase
   test "should get progress for section with section script" do
     Unit.stubs(:should_cache?).returns true
 
-    assert_queries 7 do
+    assert_queries 5 do
       get :section_progress, params: {section_id: @flappy_section.id}
     end
     assert_response :success

@@ -4668,7 +4668,7 @@ es-MX:
 
           Mira este video para comprender cómo funciona la programación en pareja y escucha directamente de los estudiantes cómo mejora su aprendizaje.
 
-          [![](https://images.code.org/2c721ff31fbd06f527d99965d3460fa8-image-1571172758005.52.13 PM.png)](https://www.youtube.com/watch?v=vgkahOzFH2Q)
+          [![](https://images.code.org/2c721ff31fbd06f527d99965d3460fa8-image-1571172758005.52.13 PM.png)](https://www.youtube.com/watch?v=fpOpnQ60Mso&ab_channel=Code.org)
 
           [¿No puedes ver el video? Haz clic aquí](http://videos.code.org/2014/C1-pair-programming.mp4)
           <br/><br/>
@@ -4676,7 +4676,7 @@ es-MX:
 
           [![](https://images.code.org/01da36dbe56da7986c3652991d4828e8-image-1571172869229.54.16 PM.png)](https://www.youtube.com/watch?v=sxToW3ixrwo)
 
-          [¿No puedes ver el video? Haz clic aquí (https://videos.code.org/levelbuilder/06pairprogramming_small-mp4.mp4)
+          [¿No puedes ver el video? Haz clic aquí](https://videos.code.org/levelbuilder/06pairprogramming_small-mp4.mp4)
           <br/>
 
 
@@ -4696,7 +4696,7 @@ es-MX:
           target=\"blank\">gran conocimiento de los beneficios de la programación
           en parejas</a>. \n\nPuedes ver este vídeo para entender cómo funciona la
           programación por parejas y escuchar directamente a los alumnos cómo mejora
-          su aprendizaje.\n\n<a href=\"https://www.youtube.com/watch?v=vgkahOzFH2Q\"
+          su aprendizaje.\n\n<a href=\"https://www.youtube.com/watch?v=fpOpnQ60Mso&ab_channel=Code.org\"
           target=\"blank\">![](https://images.code.org/2c721ff31fbd06f527d99965d3460fa8-image-1571172758005.52.13
           PM.png)</a>\n\n[¿No puedes ver el vídeo? Haz clic aquí](http://videos.code.org/2014/C1-pair-programming.mp4)\n<br/><br/>\nLa
           programación en parejas no sólo es beneficiosa para los alumnos, sino que
@@ -5549,15 +5549,15 @@ es-MX:
           que ves en el sitio web de Code.org. Si no tienes una cuenta de profesor,
           puedes** [registrarte para obtener una aquí](https://studio.code.org/users/sign_up)**.\n\n![](https://images.code.org/d6345709495f764a71d9cb0994dbd7e4-image-1549064603589.png)\n"
       OPD-K5 Stage9Start_copy:
-        markdown: "# Conociendo los recursos del profesor\n\nEs el momento de empezar
-          a planificar tu enseñanza. En esta etapa, recorreremos otras áreas de la
-          plataforma Code.org y el **.<a href=\"http://studio.code.org/\" target=\"blank\">Panel
-          del Profesor</a>**. \n\nA continuación se muestra una captura de pantalla
-          del panel de control del profesor. Tendrás que acceder a tu cuenta de profesor
-          de Code.org para poder verlo. Una vez que hayas iniciado la sesión, debería
-          aparecer la pantalla que ves por defecto  en el sitio web de Code.org. Si
-          no tienes una cuenta de profesor, puedes **<a href=\"https://studio.code.org/users/sign_up\"
-          target=\"blank\">registrarte para crear una aquí</a>**.\n\n<a href=\"http://studio.code.org/\"
+        markdown: "# Explorar los recursos del docente\n\nEs hora de comenzar a planificar
+          tus instrucciones. En esta etapa, recorreremos otras áreas de la plataforma
+          de Code.org y el **<a href=\"http://studio.code.org/\" target=\"blank\">Panel
+          del docente</a>**. \n\nA continuación se muestra una captura de pantalla
+          del Panel del docente. Deberás iniciar sesión en tu cuenta de docente de
+          Code.org para poder verla. Una vez que hayas iniciado sesión, debería ser
+          la pantalla predeterminada lo que se ve en el sitio web de Code.org. Si
+          no tienes una cuenta de docente, puedes **<a href=\"https://studio.code.org/users/sign_up\"
+          target=\"blank\">registrarte para obtener una aquí</a>**.\n\n<a href=\"http://studio.code.org/\"
           target=\"blank\">![](https://images.code.org/d6345709495f764a71d9cb0994dbd7e4-image-1549064603589.png)</a>\n"
       OPD-K5 Using CS:
         markdown: "# Planificación > Preparación para una lección de Code Studio\n\nEchemos
@@ -10935,7 +10935,7 @@ es-MX:
 
           Mira este video para comprender cómo funciona la programación en pareja y escucha directamente de los estudiantes cómo mejora su aprendizaje.
 
-          [![](https://images.code.org/2c721ff31fbd06f527d99965d3460fa8-image-1571172758005.52.13 PM.png)](https://www.youtube.com/watch?v=vgkahOzFH2Q)
+          [![](https://images.code.org/2c721ff31fbd06f527d99965d3460fa8-image-1571172758005.52.13 PM.png)](https://www.youtube.com/watch?v=fpOpnQ60Mso&ab_channel=Code.org)
 
           [¿No puedes ver el video? Haz clic aquí](http://videos.code.org/2014/C1-pair-programming.mp4)
           <br/><br/>
@@ -10943,7 +10943,7 @@ es-MX:
 
           [![](https://images.code.org/01da36dbe56da7986c3652991d4828e8-image-1571172869229.54.16 PM.png)](https://www.youtube.com/watch?v=sxToW3ixrwo)
 
-          [¿No puedes ver el video? Haz clic aquí (https://videos.code.org/levelbuilder/06pairprogramming_small-mp4.mp4)
+          [¿No puedes ver el video? Haz clic aquí](https://videos.code.org/levelbuilder/06pairprogramming_small-mp4.mp4)
           <br/>
 
 
@@ -12060,10 +12060,11 @@ es-MX:
       courseE_swim_fish_behavior_predict1_2021:
         answers:
         - text: No sucederá nada.
+          correct: true
           feedback: Incorrecto. El pez dorado comenzará a dar vueltas
         - text: La planta rodadora flotará hasta la parte superior de la pantalla
           feedback: Incorrecto. El pez dorado comenzará a dar vueltas
-        - text: La planta rodadora comenzará a caer
+        - text: " La planta rodadora comenzará a rodar"
           correct: true
           feedback: "¡Correcto!"
         - text: La planta rodadora se encenderá y apagará.
@@ -12738,7 +12739,7 @@ es-MX:
       CSD User Centered Design Post-Project Test_2021:
         title: 'Diseño Centrado en el Usuario: Prueba Fin de Proyecto'
       CSD Web Development Post-Project Test_pilot_2021:
-        title: Prueba Final del Proyecto Desarrollo Web
+        title: Prueba Final del Proyecto de Desarrollo Web
       CSD games cake challenge choice_2021:
         display_name: Desafíos
         description: "\nHaz el Tuyo \nAcabas de ver el plan de otra persona para la
@@ -15490,9 +15491,9 @@ es-MX:
         description: Prueba estos nuevos bloques y desafíos con la entrada del mouse.
         display_name: Desafíos del Mouse
       CSD web mouse practice choice_2022:
-        description: Practica la entrada de teclado y el uso del bloque if/else con
-          estas actividades.
         display_name: Entrada de Mouse y Práctica de If/else
+        description: Practica la introducción de datos con el teclado y el uso de
+          sentencias condicionales con estas actividades.
       CSD web movement challenge choice_2022:
         description: Añade más cosas a tu escena de peces o crea algo nuevo.
         display_name: Desafíos de Movimiento de Sprite
@@ -16935,7 +16936,7 @@ es-MX:
         - text: No estoy seguro de qué es esto
           correct: true
         questions:
-        - text: Programación Informática
+        - text: Programación de Ordenadores
       csd-post-survey-2018-topic-robotics:
         answers:
         - text: Sí
@@ -17335,7 +17336,7 @@ es-MX:
       csd-post-survey-unit4-preamble:
         content1: descripción aquí
         markdown: |
-          # Unidad 4: El proceso de Diseño
+          # Unidad 4: El Proceso de Diseño
 
           ![](https://images.code.org/d3c87c83a8c190d86951169c5b9b6c6d-image-1526918019889.png)
       csd-post-survey-unit5-preamble:
@@ -17752,7 +17753,7 @@ es-MX:
           correct: true
         - text: Ligeramente en desacuerdo
           correct: true
-        - text: Desacuerdo
+        - text: En desacuerdo
           correct: true
         - text: Totalmente en desacuerdo
           correct: true
@@ -17914,7 +17915,7 @@ es-MX:
           correct: true
         - text: Ligeramente en desacuerdo
           correct: true
-        - text: Desacuerdo
+        - text: En desacuerdo
           correct: true
         - text: Totalmente en desacuerdo
           correct: true
@@ -18562,7 +18563,7 @@ es-MX:
           correct: true
         - text: Ligeramente en desacuerdo
           correct: true
-        - text: Desacuerdo
+        - text: En desacuerdo
           correct: true
         - text: Totalmente en desacuerdo
           correct: true
@@ -19372,7 +19373,7 @@ es-MX:
           correct: true
         - text: Ligeramente en desacuerdo
           correct: true
-        - text: Desacuerdo
+        - text: En desacuerdo
           correct: true
         - text: Totalmente en desacuerdo
           correct: true
@@ -20182,7 +20183,7 @@ es-MX:
           correct: true
         - text: Ligeramente en desacuerdo
           correct: true
-        - text: Desacuerdo
+        - text: En desacuerdo
           correct: true
         - text: Totalmente en desacuerdo
           correct: true
@@ -20992,12 +20993,12 @@ es-MX:
           correct: true
         - text: Ligeramente en desacuerdo
           correct: true
-        - text: Desacuerdo
+        - text: En desacuerdo
           correct: true
         - text: Totalmente en desacuerdo
           correct: true
         questions:
-        - text: Quiero estudiar más clases de informática en el futuro.
+        - text: Quiero tomar más clases de informática en el futuro.
       csd-pulse-check-survey-1-q5 U4Ch1_2022:
         answers:
         - text: Totalmente de acuerdo
@@ -21249,7 +21250,7 @@ es-MX:
         - text: Totalmente en desacuerdo
           correct: true
         questions:
-        - text: Quiero estudiar más clases de informática en el futuro.
+        - text: Quiero tomar más clases de informática en el futuro.
       csd-pulse-check-survey-1-q5 U6Ch1:
         answers:
         - text: Totalmente de acuerdo
@@ -23844,52 +23845,50 @@ es-MX:
           de que se suponía que habías terminado.  \n\n    ![](https://images.code.org/ab068a26c8a230a0180f6f9c5c8d45bf-image-1463600680236.png)\n\n##
           ¡Buena suerte!\n"
         teacher_markdown: "### PRECAUCIÓN: Qué es y qué no es esta evaluación\n\n*
-          Esta evaluación está **diseñada para ser del \"estilo\" de las evaluaciones
-          de opción múltiple de AP**.\n\n* Eso significa que las preguntas **no**
-          son específicamente sobre las lecciones cubiertas antes de este punto.  Más
-          bien, las preguntas se relacionan con los objetivos de aprendizaje AP subyacentes
-          que se han abordado teóricamente.\n\n* Eso **significa** que los alumnos
-          pueden tener que hacer alguna extrapolación de lo que han aprendido para
-          responder a las preguntas.\n\n* Eso **significa** que las preguntas pueden
-          ser \"difíciles\", especialmente para la primera exposición.\n\nAsí que,
-          en general, **UTILIZAR CON PRECAUCIÓN**\n\n* Utiliza tu criterio sobre lo
-          que está en juego en esta evaluación.\n\t* No tienes que usar esta evaluación
-          para calificar a los alumnos, o...\n    * Puedes calificar a los alumnos
-          de una manera diferente a la de simplemente contabilizar el % correcto.\n\n*
-          Asegúrate de utilizarla de manera que mantenga el espíritu de la clase en
-          cuanto a la investigación de conocimientos.\n\t* Si te preocupa que los
-          alumnos se desanimen, quizá puedas replantear esta evaluación como una oportunidad
-          para investigar: deja que los alumnos prueben las preguntas y que luego
-          investiguen las respuestas y cambien lo que han hecho mal, o que desarrollen
+          Esta evaluación está **diseñada para tener el “estilo” de las evaluaciones
+          de opción múltiple AP**.\n\n* Eso significa que las preguntas **no son**
+          específicamente sobre lecciones cubiertas antes de este punto. Más bien,
+          las preguntas se relacionan con los objetivos de aprendizaje de AP subyacentes
+          que teóricamente se han abordado.\n\n* **significa** que los estudiantes
+          podrían necesitar hacer alguna extrapolación de lo que han aprendido para
+          responder a las preguntas.\n\n* **significa** que las preguntas pueden ser
+          “duras”, especialmente para la primera exposición.\n\nAsí que en general,
+          **USE CON Precaución**\n\n* Usa tu juicio sobre qué apuestas adjuntar a
+          esta evaluación.\n\t* No es necesario utilizar esta evaluación para calificar
+          a los alumnos, o...\n    * Se puede calificar a los alumnos de una manera
+          diferente a simplemente tomar el % correcto.\n\n* Asegúrate de utilizarlo
+          de tal forma que mantenga el espíritu de la clase en términos de investigación
+          del conocimiento.\n\t* Si estás nervioso de que los estudiantes se desanimen,
+          entonces tal vez volver a enmarcar esta evaluación como una opprotunidad
+          para investigar, dejar que los estudiantes prueben las preguntas, luego
+          vayan a investigar las respuestas y cambien lo que se equivocaron, o desarrollen
           su propio conjunto de preguntas.\n\n\n---\n\n#### F.A.Q. -- Cómo preparar,
-          administrar y revisar las evaluaciones\n\nPor favor, consulta nuestro documento
-          **[F.A.Q. aquí](https://docs.google.com/document/d/1zEpD1PFt6ec2S8ourxuMH0HD6tiyRvqAGUKGDCOt-qs/edit#heading=h.kewgp6z8qdde)**
-          que contiene:\n\n* capturas de pantalla sobre cómo preparar, administrar
-          y revisar las evaluaciones\n* aborda cuestiones/problemas comunes\n\n\n####
-          Resumen rápido de cómo ver/revisar las respuestas de los alumnos\n\n1. Accede
-          a tu [Tablero de Control del Profesor](https://code.org/teacher-dashboard#/)\n2.
-          Selecciona tu sección de Principios de Informática\n3. Verás una serie de
-          pestañas de color púrpura que incluyen Respuestas de texto, Evaluaciones,
-          etc.\n4. Pulsa en **Evaluaciones/Estudios**.\n5. En el desplegable del selector
-          de curso, **selecciona la unidad en la que apareció esta evaluación (por
-          ejemplo, Unidad 1: Internet)**.\n6. Para todos los estudiantes que han *presentado*
-          su evaluación, verás dos tablas:\n   * La primera tabla es un resumen de
-          los porcentajes de corrección de todos los estudiantes que han enviado su
-          evaluación, incluyendo la fecha y hora en que la han enviado.\n   * La segunda
-          tabla es una lista completa de las respuestas a las preguntas enviadas por
-          cada estudiante\n\n    Encima de ambas tablas hay un botón de **Descargar
-          (o exportar) como csv**, que permite procesar las respuestas en una hoja
-          de cálculo (recomendado).\n\n7. Si necesitas permitirle a un alumno ANULAR
-          EL ENVÍO de su prueba, indícale que navegue hasta la última página de la
-          prueba y pulse \"ANULAR EL ENVÍO\".\n\n**NOTA sobre CANCELACIÓN DE ENVÍO:**
-          \n\nDebes establecer normas claras con tus alumnos sobre la anulación de
-          la presentación de un examen. Los alumnos pueden pensar que es una buena
-          manera de cambiar una respuesta después de que el examen haya terminado
-          (es decir, hacer trampa), pero verás una marca con la hora de cuando el
-          alumno envió el examen.  \n\nSe sugiere que simplemente establezcas que
-          no vas a considerar calificar o corregir ningún examen después de una hora
-          determinada.  Si no se presentó antes de la fecha límite especificada, es
-          como si no lo hubieras recibido.\n"
+          administrar y revisar evaluaciones\n\nPor favor vea nuestro funcionamiento
+          ** [F.A.Q. documento aquí] (https://docs.google.com/document/d/1zEpD1PFt6ec2S8ourxuMH0HD6tiyRvqAGUKGDCOt-qs/edit#heading=h.kewgp6z8qdde)
+          ** que contiene:\n\n* capturas de pantalla sobre cómo preparar, administrar
+          y revisar evaluaciones\n* aborda problemas comunes\n\n\n### # Resumen rápido
+          de cómo ver/ revisar las respuestas de los estudiantes\n\n1. Vaya a su [Tablero
+          de profesores] (https://code.org/teacher-dashboard#/)\n2. Selecciona tus
+          Principios CS sección\n3. Verás una serie de pestañas moradas que incluyen
+          respuestas de texto, evaluaciones, etc.\n4. Haga clic en **Evaluaciones/Encuestas**\n5.
+          En el menú desplegable del selector de cursos, **seleccione la unidad en
+          la que apareció esta evaluación (por ejemplo, Unidad 1: Internet) **\n6.
+          Para todos los alumnos que hayan *presentado* su evaluación, verás dos tablas:\n
+          \  * La primera tabla es una vista resumida que resume el porcentaje correcto
+          de todos los alumnos que presentaron, incluyendo la marca de tiempo que
+          lo presentaron \n   * La segunda tabla es una lista completa de cada respuesta
+          a cada pregunta enviada por cada alumno\n\n    Encima de ambas tablas hay
+          un botón **Descargar (o exportar) como csv** - lo que le permite procesar
+          las respuestas en un hoja de cálculo ( recomendado).\n\n7. Si necesitas
+          permitir que un estudiante NO ENVIE su prueba, dirígelo a que navegue hasta
+          la última página de la prueba y presione “Dejar de enviar”.\n\n**NOTA sobre
+          NO PRESENTAR: ** \n\nDebe haber reglas claras con tus alumnos sobre no enviar
+          una prueba. Los estudiantes podrían pensar que esta es una buena manera
+          de cambiar una respuesta después de que termine la prueba (es decir, hacer
+          trampa) pero verás una marca de tiempo de cuándo el estudiante envió la
+          prueba.  \n\nSe sugiere que simplemente establezca que no considerará anotar
+          o calificar ninguna prueba después de un tiempo determinado. Si no se presentó
+          antes de la fecha límite especificada, es como si no la recibieras.\n"
       curriculum-how-challenging:
         answers:
         - text: muy fácil.
@@ -25379,21 +25378,18 @@ es-MX:
       courseC_multi_maze_debugging8_predict12022:
         answers:
         - text: Scrat llegará a la bellota. No hay errores en el código.
-          feedback: Incorrecto. Primero, Scrat gira en la dirección equivocada, luego
-            Scrat no avanza las veces suficientes para alcanzar la bellota.
+          feedback: Incorrecto. Scrat no llegará a la bellota porque gira hacia el
+            lado equivocado.
         - text: Scrat no llegará a la bellota porque gira en la dirección equivocada.
           correct: true
-          feedback: "¡Correcto! Primero, Scrat gira en la dirección equivocada, luego
-            Scrat no avanza las veces suficientes para alcanzar la bellota."
+          feedback: "¡Correcto! Scrat gira en la dirección equivocada y no alcanzará
+            la bellota."
         - text: Scrat no llegará a la bellota porque no hay suficientes bloques de
             "avanzar".
-          correct: true
-          feedback: "¡Correcto! Primero, Scrat gira en la dirección equivocada, luego
-            Scrat no avanza las veces suficientes para alcanzar la bellota."
+          feedback: Incorrecto. Scrat no llegará a la bellota porque gira hacia el
+            lado equivocado.
         - text: Scrat no se moverá del primer bloque.
-          feedback: Hay dos errores en este código. En primer lugar, Scrat gira en
-            la dirección equivocada y a continuación, Scrat no se mueve hacia adelante
-            suficientes veces para llegar a la bellota.
+          feedback: Scrat no llegará a la bellota porque gira en la dirección equivocada.
         questions:
         - text: Busca errores en este código. ¿Llegará Scrat a la bellota o hay algún
             problema?
@@ -25692,7 +25688,7 @@ es-MX:
           feedback: Incorrecto. La planta rodadora comenzará a dar vueltas
         - text: La planta rodadora flotará hasta la parte superior de la pantalla
           feedback: Incorrecto. La planta rodadora comenzará a dar vueltas
-        - text: " La planta rodadora comenzará a dar vueltas"
+        - text: " La planta rodadora comenzará a rodar"
           correct: true
           feedback: "¡Correcto!"
         - text: La planta rodadora se encenderá y apagará.
@@ -26104,8 +26100,7 @@ es-MX:
           Una vez que hayas decidido un tipo de juego con tu compañero, rellena la Guía de Proyecto con los fondos, variables, sprites y funciones que necesitarás para hacer el juego. Pasarás los siguientes niveles creando tu juego.
       CSD U3 - Interactive Card - ExampleChoice_2022:
         description: En los próximos niveles, completarás tu propia tarjeta interactiva.
-          Aquí tienes algunos ejemplos para darte algunas ideas. No olvides mirar
-          el código para ver cómo funcionan.
+          Aquí tienes algunos ejemplos para darte algunas ideas.
         display_name: Tu Tarjeta Interactiva
       Student End of Unit Survey - Intro+TeacherMD_csd2-2022:
         teacher_markdown: |
@@ -26527,3 +26522,35 @@ es-MX:
 
           Esta es una segunda muestra de un texto de instrucciones que está almacenado en un archivo .external.  Aquí hay un poco de texto extra para que podamos obtener un poco de ajuste de líneas cuando veamos esto en nuestro LevelGroup que utilizará esto para mostrar algunas instrucciones entre los niveles regulares incrustados.
 
+      Test Contained Retriable Multi:
+        answers:
+        - text: '0'
+          feedback: No, eso es 1 - 1.
+        - text: '1'
+          feedback: No, eso es 1 x 1.
+        - text: '2'
+          correct: true
+          feedback: "¡Sí, eres un genio!"
+        - text: '4'
+          feedback: No, eso no es ni de lejos.
+        content1: Aquí hay algo de información.
+        markdown: 'Prueba **markdown** _aquí_
+
+'
+        questions:
+        - text: "¿Cuánto es 1 + 1?"
+        title: Contenido Multi
+      test-single-multi-standalone-retriable:
+        answers:
+        - text: No sucederá nada.
+          feedback: Incorrecto. La planta rodadora comenzará a dar vueltas
+        - text: La planta rodadora flotará hasta la parte superior de la pantalla
+          feedback: Incorrecto. La planta rodadora comenzará a dar vueltas
+        - text: " La planta rodadora comenzará a rodar"
+          correct: true
+          feedback: "¡Correcto!"
+        - text: La planta rodadora se encenderá y apagará.
+          feedback: Incorrecto. La planta rodadora comenzará a dar vueltas
+        questions:
+        - text: Mira el siguiente código con atención. ¿Qué sucederá cuando hagas
+            clic en "Ejecutar"?

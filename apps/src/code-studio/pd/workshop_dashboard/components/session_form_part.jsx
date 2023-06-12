@@ -6,7 +6,7 @@ import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
 import moment from 'moment';
-import {Row, Col, Button, FormGroup, HelpBlock} from 'react-bootstrap';
+import {Row, Col, Button, FormGroup, HelpBlock} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import TimeSelect from './time_select';
 import DatePicker from './date_picker';
 import {DATE_FORMAT, TIME_FORMAT} from '../workshopConstants';
@@ -19,13 +19,13 @@ export default class SessionFormPart extends React.Component {
     session: PropTypes.shape({
       date: PropTypes.string,
       startTime: PropTypes.string,
-      endTime: PropTypes.string
+      endTime: PropTypes.string,
     }).isRequired,
     onAdd: PropTypes.func,
     onRemove: PropTypes.func,
     shouldValidate: PropTypes.bool,
     readOnly: PropTypes.bool,
-    onChange: PropTypes.func.isRequired
+    onChange: PropTypes.func.isRequired,
   };
 
   handleDateChange = date => {

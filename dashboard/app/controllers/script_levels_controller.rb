@@ -131,7 +131,7 @@ class ScriptLevelsController < ApplicationController
       return
     end
 
-    if request.path != (canonical_path = build_script_level_path(@script_level, @extra_params))
+    if request.path != (canonical_path = build_script_level_path(@script_level, @extra_params)) && params[:view] != 'summary'
       canonical_path << "?#{request.query_string}" unless request.query_string.empty?
       redirect_to canonical_path, status: :moved_permanently
       return
@@ -144,6 +144,19 @@ class ScriptLevelsController < ApplicationController
 
     @level = select_level
     return if redirect_under_13_without_tos_teacher(@level)
+
+    # TODO: If this adds too much to the load time in prod, move it to an API.
+    if current_user&.teacher?
+      @responses = []
+      # We use this for the level summary entry point, so on contained levels
+      # what we actually care about are responses to the contained level.
+      level = @level.contained_levels.any? ? @level.contained_levels.first : @level
+
+      # TODO: Change/remove this check as we add support for more level types.
+      if level.is_a?(FreeResponse) || level.is_a?(Multi)
+        @responses = UserLevel.where(level: level, user: @section&.students)
+      end
+    end
 
     @body_classes = @level.properties['background']
 
@@ -160,6 +173,21 @@ class ScriptLevelsController < ApplicationController
     else
       script.get_script_level_by_id(params[:id])
     end
+  end
+
+  # Get a JSON summary of a level's information, used in modern labs that don't
+  # reload the page between level views.  Note that this can be cached for a relatively
+  # long amount of time, including by the CDN, and does not vary per user.
+  def level_data
+    authorize! :read, ScriptLevel
+
+    @script = ScriptLevelsController.get_script(request)
+    @script_level = ScriptLevelsController.get_script_level(@script, params)
+    raise ActiveRecord::RecordNotFound unless @script_level
+
+    @level = @script_level.level
+
+    render json: {level_data: @level.properties["level_data"]}
   end
 
   # Get a list of hidden lessons for the current users section
@@ -300,13 +328,11 @@ class ScriptLevelsController < ApplicationController
     script
   end
 
-  private
-
-  def next_script_level
+  private def next_script_level
     user_or_session_level || @script.starting_level
   end
 
-  def user_or_session_level
+  private def user_or_session_level
     if current_user
       current_user.next_unpassed_visible_progression_level(@script)
     else
@@ -315,14 +341,14 @@ class ScriptLevelsController < ApplicationController
   end
 
   # Attempts to find the next unpassed level for this session and script
-  def find_next_level_for_session(script)
+  private def find_next_level_for_session(script)
     script.script_levels.detect do |sl|
       sl.valid_progression_level? &&
           (client_state.level_progress(sl) < Activity::MINIMUM_PASS_RESULT)
     end
   end
 
-  def load_level_source
+  private def load_level_source
     if params[:solution] && @ideal_level_source = @level.ideal_level_source
       # load the solution for teachers clicking "See the Solution"
       authorize! :view_level_solutions, @script
@@ -364,7 +390,7 @@ class ScriptLevelsController < ApplicationController
   # Sets @user to the user object corresponding to the 'user_id' request
   # param if the current_user is allowed to view the page as the requested
   # user. This method should only be called when current_user is present.
-  def load_user
+  private def load_user
     return if params[:user_id].blank?
 
     # Grab bubble choice level that will be shown (if any),
@@ -383,7 +409,7 @@ class ScriptLevelsController < ApplicationController
     end
   end
 
-  def load_section
+  private def load_section
     if params[:section_id] && params[:section_id] != "undefined"
       section = Section.find(params[:section_id])
 
@@ -396,12 +422,12 @@ class ScriptLevelsController < ApplicationController
     end
   end
 
-  def select_bubble_choice_level
+  private def select_bubble_choice_level
     return unless @script_level.bubble_choice? && params[:sublevel_position]
     @script_level.level.sublevel_at(params[:sublevel_position].to_i - 1)
   end
 
-  def select_level
+  private def select_level
     # If a BubbleChoice level's sublevel has been requested, return it.
     bubble_choice_level = select_bubble_choice_level
     return bubble_choice_level if bubble_choice_level
@@ -442,7 +468,7 @@ class ScriptLevelsController < ApplicationController
     oldest_active
   end
 
-  def present_level
+  private def present_level
     # All database look-ups should have already been cached by Unit::unit_cache_from_db
     @game = @level.game
     @lesson ||= @script_level.lesson
@@ -458,7 +484,9 @@ class ScriptLevelsController < ApplicationController
     end
 
     if @level.try(:peer_reviewable?)
-      @peer_reviews = PeerReview.where(level: @level, submitter: current_user).where.not(data: nil, reviewer: nil)
+      @peer_reviews = PeerReview.where(
+        level: @level, submitter: current_user
+      ).where.not(data: nil).where.not(reviewer: nil)
     end
 
     @callback = milestone_script_level_url(
@@ -496,6 +524,7 @@ class ScriptLevelsController < ApplicationController
 
     view_options(
       full_width: true,
+      no_footer: @game&.no_footer?,
       small_footer: @game&.uses_small_footer? || @level&.enable_scrolling?,
       has_i18n: @game.has_i18n?,
       is_challenge_level: @script_level.challenge,
@@ -518,21 +547,24 @@ class ScriptLevelsController < ApplicationController
       success: milestone_response(script_level: @script_level, level: @level, solved?: true),
       failure: milestone_response(script_level: @script_level, level: @level, solved?: false)
     }
+
+    @next_level_link = @script_level.next_level_or_redirect_path_for_user(current_user)
+
     render 'levels/show', formats: [:html]
   end
 
   # Don't try to generate the CSRF token for forms on this page because it's cached.
-  def protect_against_forgery?
+  private def protect_against_forgery?
     return false
   end
 
-  def set_redirect_override
+  private def set_redirect_override
     if params[:script_id] && params[:no_redirect]
       VersionRedirectOverrider.set_unit_redirect_override(session, params[:script_id])
     end
   end
 
-  def redirect_script(script, locale)
+  private def redirect_script(script, locale)
     return nil unless script
 
     # Redirect the user to the latest assigned script in this family, or to the latest stable script in this family if

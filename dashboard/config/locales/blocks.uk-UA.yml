@@ -47,7 +47,7 @@ uk:
             MOVES.ClapHigh: Плескання вгорі
             MOVES.Dab: Деб
             MOVES.DoubleJam: Подвійний вниз
-            MOVES.Drop: Дроп
+            MOVES.Drop: Відпустити
             MOVES.Floss: Флосс
             MOVES.Fresh: Фреш
             MOVES.Clown: Гангнам
@@ -59,7 +59,7 @@ uk:
             MOVES.ClapHigh: Плескання вгорі
             MOVES.Dab: Деб
             MOVES.DoubleJam: Подвійний вниз
-            MOVES.Drop: Дроп
+            MOVES.Drop: Відпустити
             MOVES.Floss: Флосс
             MOVES.Fresh: Фреш
             MOVES.Clown: Гангнам
@@ -104,7 +104,7 @@ uk:
             MOVES.ClapHigh: Плескання вгорі
             MOVES.Dab: Деб
             MOVES.DoubleJam: Подвійний вниз
-            MOVES.Drop: Дроп
+            MOVES.Drop: Відпустити
             MOVES.Floss: Флосс
             MOVES.Fresh: Фреш
             MOVES.Clown: Гангнам
@@ -122,7 +122,7 @@ uk:
             MOVES.ClapHigh: Плескання вгорі
             MOVES.Dab: Деб
             MOVES.DoubleJam: Подвійний вниз
-            MOVES.Drop: Дроп
+            MOVES.Drop: Відпустити
             MOVES.Floss: Флосс
             MOVES.Fresh: Фреш
             MOVES.Clown: Гангнам
@@ -189,7 +189,7 @@ uk:
             MOVES.Dab: Деб
             MOVES.XFever: Диско
             MOVES.DoubleJam: Подвійний вниз
-            MOVES.Drop: Дроп
+            MOVES.Drop: Відпустити
             MOVES.Floss: Флосс
             MOVES.Fresh: Фреш
             MOVES.Clown: Гангнам
@@ -217,7 +217,7 @@ uk:
             MOVES.Dab: Деб
             MOVES.XFever: Диско
             MOVES.DoubleJam: Подвійний вниз
-            MOVES.Drop: Дроп
+            MOVES.Drop: Відпустити
             MOVES.Floss: Флосс
             MOVES.Fresh: Фреш
             MOVES.Clown: Гангнам
@@ -279,7 +279,7 @@ uk:
             MOVES.Clown: Гангнам
             MOVES.Dab: Деб
             MOVES.DoubleJam: Подвійний вниз
-            MOVES.Drop: Дроп
+            MOVES.Drop: Відпустити
             MOVES.Floss: Флосс
             MOVES.Fresh: Фреш
             MOVES.Roll: Хвиля
@@ -1064,12 +1064,17 @@ uk:
       gamelab_collectibleBehaviors:
         options:
           BEHAVIOR:
+            new Behavior(spinning_right, []): обертання праворуч
+            new Behavior(spinning_left, []): обертання ліворуч
             new Behavior(fluttering, []): пурхання
+            new Behavior(jittering, []): тремтіння
             new Behavior(wobbling, []): хитання
             new Behavior(wandering, []): бродіння
             new Behavior(patrolling, []): патрулювання
-            new Behavior(moving_west_and_looping, []): рух на захід і циклічно
-            new Behavior(moving_east_and_looping, []): рух на схід і циклічно
+            new Behavior(moving_west_and_looping, []): рух на захід у циклі
+            new Behavior(moving_east_and_looping, []): рух на схід у циклі
+            new Behavior(moving_north_and_looping, []): рух на північ у циклі
+            new Behavior(moving_south_and_looping, []): рух на південь у циклі
       gamelab_comment:
         text: 'коментар: {COMMENT}'
       gamelab_costumeImage:
@@ -1218,6 +1223,19 @@ uk:
             '"x"': x
             '"y"': у
             '"z"': z
+      gamelab_layoutSprites:
+        text: розмістити {GROUP} у формі {FORMAT}
+        options:
+          FORMAT:
+            '"border"': рамка
+            '"circle"': коло
+            '"grid"': сітка
+            '"top"': верхня шеренга
+            '"row"': клас
+            '"bottom"': нижня шеренга
+            '"left"': ліва колона
+            '"column"': колона
+            '"right"': права колона
       gamelab_locationAt:
         text: 'місце розташування x: {X} Y: {Y}'
       gamelab_locationModifier:
@@ -1241,6 +1259,18 @@ uk:
             '"rain"': дощ
       gamelab_makeNewSpriteAnon:
         text: створити новий спрайт {ANIMATION_NAME} у {LOCATION}
+      gamelab_makeNewSpriteGroup:
+        options:
+          FORMAT:
+            '"border"': рамка
+            '"circle"': коло
+            '"grid"': сітка
+            '"top"': верхня шеренга
+            '"row"': клас
+            '"bottom"': нижня шеренга
+            '"left"': ліва колона
+            '"column"': колона
+            '"right"': права колона
       gamelab_makeNumSprites:
         text: створити {NUM} нових {ANIMATION_NAME} спрайтів
       gamelab_makeProjectile:
@@ -1267,9 +1297,9 @@ uk:
       gamelab_moveBackward:
         text: перемістити {SPRITE} на {DISTANCE} пікселів назад
       gamelab_moveForward:
-        text: переміститись на {SPRITE} {DISTANCE} пікселі вперед
+        text: перемістити {SPRITE} на {DISTANCE} пікселі вперед
       gamelab_moveInDirection:
-        text: переміститись на {SPRITE} {DISTANCE} пікселів {DIRECTION}
+        text: перемістити {SPRITE} {DISTANCE} на пікселів {DIRECTION}
         options:
           DIRECTION:
             '"North"': Північ
@@ -1277,7 +1307,7 @@ uk:
             '"South"': Південь
             '"West"': Захід
       gamelab_moveToward:
-        text: переміститись на {SPRITE} пікселів {DISTANCE} до {TARGET}
+        text: перемістити {SPRITE} на пікселів {DISTANCE} до {TARGET}
       gamelab_newSpritePointer:
         text: "{SPRITE}"
       gamelab_objectSpritePointer:
@@ -1349,7 +1379,7 @@ uk:
             '"South"': Південь
             '"West"': Захід
       gamelab_printText:
-        text: друк {TEXT}
+        text: друкувати {TEXT}
       gamelab_randColor:
         text: випадковий колір
       gamelab_randomColor:
@@ -1357,9 +1387,9 @@ uk:
       gamelab_randomLocation:
         text: випадкове розташування
       gamelab_removeAllBehaviors:
-        text: "{SPRITE} все зупиняє"
+        text: "{SPRITE} припиняє все"
       gamelab_removeBehaviorSimple:
-        text: Спрайт {SPRITE} Зупиняється {BEHAVIOR}
+        text: спрайт {SPRITE} припиняє {BEHAVIOR}
       gamelab_removeTint:
         text: зняти колір з {THIS}
       gamelab_repeatForever:
@@ -1444,7 +1474,7 @@ uk:
             '7': швидко
             '9': extra fast
       gamelab_setTint:
-        text: змінити колір {THIS} до {COLOR}
+        text: змінити колір {THIS} на {COLOR}
       gamelab_setupSim:
         text: |-
           моделювання установки з
@@ -1460,8 +1490,14 @@ uk:
           CONDITION:
             '"when"': коли
             '"while"': поки
+      gamelab_stopAvoiding:
+        text: "{SPRITE} припиняє уникати інших спрайтів"
       gamelab_stopCollectingData:
         text: припинити збір даних
+      gamelab_stopFollowing:
+        text: "{SPRITE} припиняє рухатись за іншими спрайтами"
+      gamelab_stopGliding:
+        text: "{SPRITE} припиняє ковзання"
       gamelab_subjectSpritePointer:
         text: "{SPRITE}"
       gamelab_textJoin:
@@ -1471,7 +1507,7 @@ uk:
       gamelab_tumbling:
         text: спотикатись
       gamelab_turn:
-        text: повернути на {SPRITE} {DIRECTION} {N} градусів
+        text: повернути {SPRITE} {DIRECTION} на  {N} градусів
         options:
           DIRECTION:
             '"right"': праворуч
@@ -1536,6 +1572,8 @@ uk:
         text: x координата {SPRITE}
       gamelab_yLocationOf:
         text: y координата {SPRITE}
+      KatiesBlocks_tumbling:
+        text: спотикатись
       Mikelab_addBehaviorSimple:
         text: спрайт {SPRITE} починає {BEHAVIOR}
       Mikelab_addTrainingData:
@@ -1668,7 +1706,7 @@ uk:
             '"y"': позиція по осі y
             '"direction"': напрямок руху
       Mikelab_groupSetTint:
-        text: змінити колір {SELECT} {COSTUME} до {COLOR}
+        text: змінити колір {SELECT} {COSTUME} на {COLOR}
         options:
           SELECT:
             '"all"': усі
@@ -1701,7 +1739,7 @@ uk:
             MOVES.Clown: Гангнам
             MOVES.Dab: Деб
             MOVES.DoubleJam: Подвійний вниз
-            MOVES.Drop: Дроп
+            MOVES.Drop: Відпустити
             MOVES.Floss: Флосс
             MOVES.Fresh: Фреш
             MOVES.Roll: Хвиля
@@ -1745,7 +1783,7 @@ uk:
       Mikelab_randomColor:
         text: випадковий колір
       Mikelab_removeBehaviorSimple:
-        text: Спрайт {SPRITE} Зупиняється {BEHAVIOR}
+        text: спрайт {SPRITE} припиняє {BEHAVIOR}
       Mikelab_repeatUntilComplete:
         text: повторювати завжди
       Mikelab_sendBad:
@@ -1968,7 +2006,10 @@ uk:
           BEHAVIOR:
             '"fluttering"': пурхання
             '"growing"': ріст
+            '"jittering"': тремтіння
             '"shrinking"': стиснення
+            '"spinning_left"': обертання ліворуч
+            '"spinning_right"': обертання праворуч
             '"swimming_left_and_right"': плавання
             '"wandering"': бродіння
             '"wobbling"': хитання
@@ -1977,7 +2018,10 @@ uk:
           BEHAVIOR:
             '"fluttering"': пурхання
             '"growing"': ріст
+            '"jittering"': тремтіння
             '"shrinking"': стиснення
+            '"spinning_left"': обертання ліворуч
+            '"spinning_right"': обертання праворуч
             '"swimming_left_and_right"': плавання
             '"wandering"': бродіння
             '"wobbling"': хитання
@@ -2010,8 +2054,6 @@ uk:
         text: повернути ліворуч
       RyanLab_turnRight:
         text: повернути праворуч
-      SpriteLab2Beta_spriteSay:
-        text: Спрайт {SPRITE} Сказати {TEXT} Для {SECONDS} Секунд
       Vector_createSpriteWith:
         text: |-
           створіть спрайт
@@ -2058,6 +2100,20 @@ uk:
             '0.75': most
             '0.5': half of
             '0.25': few
+      adaptations_adaptationBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): обертання праворуч
+            new Behavior(spinning_left, []): обертання ліворуч
+            new Behavior(fluttering, []): пурхання
+            new Behavior(jittering, []): тремтіння
+            new Behavior(wobbling, []): хитання
+            new Behavior(wandering, []): бродіння
+            new Behavior(patrolling, []): патрулювання
+      adaptations_toggleBehaviorSimple:
+        options:
+          TOGGLE:
+            '"stops"': припиняє
       binary_drawBin:
         text: малювати двійково {BIN}
       binary_drawBinScreen:
@@ -2200,6 +2256,20 @@ uk:
           DIR:
             right: праворуч ↻
             left: ліворуч ↺
+      ecosystems_int10:
+        options:
+          VALUE:
+            '0': '0'
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       storylab_setForegroundEffect2:
         options:
           EFFECT:
@@ -2212,5 +2282,3 @@ uk:
         text: встановити заголовок {HEADING}
       storylab_setSubheading:
         text: встановити підзаголовок {SUBHEADING}
-      validation_validatedBackground:
-        text: встановити фон {IMG}

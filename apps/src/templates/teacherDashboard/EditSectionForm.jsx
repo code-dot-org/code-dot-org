@@ -16,19 +16,20 @@ import {
   cancelEditingSection,
   reloadAfterEditingSection,
   assignedUnitLessonExtrasAvailable,
-  assignedUnitRequiresVerifiedInstructor
+  assignedUnitRequiresVerifiedInstructor,
 } from './teacherSectionsRedux';
 import {
   isScriptHiddenForSection,
-  updateHiddenScript
+  updateHiddenScript,
 } from '@cdo/apps/code-studio/hiddenLessonRedux';
 import ConfirmHiddenAssignment from '../courseOverview/ConfirmHiddenAssignment';
 import {
   SectionLoginType,
-  StudentGradeLevels
+  StudentGradeLevels,
 } from '@cdo/apps/util/sharedConstants';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import {ParticipantAudience} from '../../generated/curriculum/sharedCourseConstants';
 import GetVerifiedBanner from './GetVerifiedBanner';
 
@@ -47,6 +48,8 @@ class EditSectionForm extends Component {
     //Comes from redux
     initialUnitId: PropTypes.number,
     initialCourseId: PropTypes.number,
+    initialCourseOfferingId: PropTypes.number,
+    initialCourseVersionId: PropTypes.number,
     courseOfferings: PropTypes.objectOf(assignmentCourseOfferingShape)
       .isRequired,
     section: sectionShape.isRequired,
@@ -62,11 +65,11 @@ class EditSectionForm extends Component {
     localeCode: PropTypes.string,
     assignedUnitRequiresVerifiedInstructor: PropTypes.bool,
     isVerifiedInstructor: PropTypes.bool,
-    showLockSectionField: PropTypes.bool // DCDO Flag - show/hide Lock Section field
+    showLockSectionField: PropTypes.bool, // DCDO Flag - show/hide Lock Section field
   };
 
   state = {
-    showHiddenUnitWarning: false
+    showHiddenUnitWarning: false,
   };
 
   onCloseClick = () => {
@@ -119,8 +122,8 @@ class EditSectionForm extends Component {
         event: ttsAutoplayEnabled ? 'turn_on' : 'turn_off',
         script_id: this.props.section.unitId,
         data_json: JSON.stringify({
-          section_id: this.props.section.id
-        })
+          section_id: this.props.section.id,
+        }),
       },
       {useProgressScriptId: false, includeUserId: true}
     );
@@ -133,8 +136,8 @@ class EditSectionForm extends Component {
         study_group: 'display_lock_section',
         event: restrictSection ? 'turn_on' : 'turn_off',
         data_json: JSON.stringify({
-          section_id: this.props.section.id
-        })
+          section_id: this.props.section.id,
+        }),
       },
       {useProgressScriptId: false, includeUserId: true}
     );
@@ -142,22 +145,62 @@ class EditSectionForm extends Component {
 
   // valid event names: 'Section Setup Complete', 'Section Setup Cancelled'.
   recordSectionSetupExitEvent = eventName => {
-    const {section, courseOfferings, isNewSection} = this.props;
-
-    const course = courseOfferings.hasOwnProperty(section.courseOfferingId)
+    const {
+      section,
+      courseOfferings,
+      isNewSection,
+      initialUnitId,
+      initialCourseOfferingId,
+      initialCourseVersionId,
+    } = this.props;
+    const versionYear = section.courseOfferingId
+      ? courseOfferings[section.courseOfferingId].course_versions[
+          section.courseVersionId
+        ].key
+      : null;
+    const initialVersionYear = initialCourseOfferingId
+      ? courseOfferings[initialCourseOfferingId].course_versions[
+          initialCourseVersionId
+        ].key
+      : null;
+    const course = Object.prototype.hasOwnProperty.call(
+      courseOfferings,
+      section.courseOfferingId
+    )
       ? courseOfferings[section.courseOfferingId]
       : null;
     const courseName = course ? course.display_name : null;
     const courseId = course ? course.id : null;
-
     if (isNewSection) {
       analyticsReporter.sendEvent(eventName, {
+        sectionUnitId: section.unitId,
         sectionCurriculumLocalizedName: courseName,
-        sectionCurriculum: courseId,
-        sectionGrade: section.grade,
+        sectionCurriculum: courseId, //this is course Offering id
+        sectionCurriculumVersionYear: versionYear,
+        sectionGrade: section.grades ? section.grades[0] : null,
         sectionLockSelection: section.restrictSection,
         sectionName: section.name,
-        sectionPairProgramSelection: section.pairingAllowed
+        sectionPairProgramSelection: section.pairingAllowed,
+      });
+    }
+    if (
+      eventName === COMPLETED_EVENT &&
+      ((section.courseOfferingId &&
+        section.courseOfferingId !== initialCourseOfferingId) ||
+        (section.unitId && section.unitId !== initialUnitId))
+    ) {
+      analyticsReporter.sendEvent(EVENTS.CURRICULUM_ASSIGNED, {
+        sectionName: section.name,
+        sectionId: section.id,
+        sectionLoginType: section.loginType,
+        previousUnitId: initialUnitId,
+        previousCourseId: initialCourseOfferingId,
+        previousCourseVersionId: initialCourseVersionId,
+        previousVersionYear: initialVersionYear,
+        newUnitId: section.unitId,
+        newCourseId: section.courseOfferingId,
+        newCourseVersionId: section.courseVersionId,
+        newVersionYear: versionYear,
       });
     }
   };
@@ -177,7 +220,7 @@ class EditSectionForm extends Component {
       localeCode,
       isNewSection,
       showLockSectionField,
-      isVerifiedInstructor // DCDO Flag - show/hide Lock Section field
+      isVerifiedInstructor, // DCDO Flag - show/hide Lock Section field
     } = this.props;
 
     const courseDisplayName = section.courseOfferingId
@@ -191,26 +234,26 @@ class EditSectionForm extends Component {
     **/
     const changeableLoginTypes = [
       SectionLoginType.word,
-      SectionLoginType.picture
+      SectionLoginType.picture,
     ];
 
     let sectionLoginTypeTransforms = {};
     sectionLoginTypeTransforms[SectionLoginType.email] = [
-      SectionLoginType.email
+      SectionLoginType.email,
     ];
     sectionLoginTypeTransforms[SectionLoginType.picture] = [
       SectionLoginType.word,
-      SectionLoginType.picture
+      SectionLoginType.picture,
     ];
     sectionLoginTypeTransforms[SectionLoginType.word] = [
       SectionLoginType.word,
-      SectionLoginType.picture
+      SectionLoginType.picture,
     ];
     sectionLoginTypeTransforms[SectionLoginType.clever] = [
-      SectionLoginType.clever
+      SectionLoginType.clever,
     ];
     sectionLoginTypeTransforms[SectionLoginType.google_classroom] = [
-      SectionLoginType.google_classroom
+      SectionLoginType.google_classroom,
     ];
 
     const validLoginTypes = sectionLoginTypeTransforms[section.loginType];
@@ -232,8 +275,8 @@ class EditSectionForm extends Component {
           />
           {section.participantType === ParticipantAudience.student && (
             <GradeField
-              value={section.grade || ''}
-              onChange={grade => editSectionProperties({grade})}
+              value={section.grades ? section.grades[0] : ''}
+              onChange={grade => editSectionProperties({grades: [grade]})}
               disabled={isSaveInProgress}
             />
           )}
@@ -327,7 +370,7 @@ class EditSectionForm extends Component {
 const FieldProps = {
   value: PropTypes.any,
   onChange: PropTypes.func.isRequired,
-  disabled: PropTypes.bool
+  disabled: PropTypes.bool,
 };
 
 const SectionNameField = ({value, onChange, disabled}) => (
@@ -349,7 +392,7 @@ SectionNameField.propTypes = FieldProps;
 const GradeField = ({value, onChange, disabled}) => {
   const gradeOptions = [''].concat(StudentGradeLevels).map(grade => ({
     value: grade,
-    text: grade === 'Other' ? 'Other/Mixed' : grade
+    text: grade === 'Other' ? 'Other/Mixed' : grade,
   }));
   return (
     <div>
@@ -376,14 +419,14 @@ const LoginTypeField = ({value, onChange, validLoginTypes, disabled}) => {
     [SectionLoginType.word]: i18n.loginTypeWord(),
     [SectionLoginType.email]: i18n.loginTypePersonal(),
     [SectionLoginType.google_classroom]: i18n.loginTypeGoogleClassroom(),
-    [SectionLoginType.clever]: i18n.loginTypeClever()
+    [SectionLoginType.clever]: i18n.loginTypeClever(),
   };
   const descriptionByLoginType = {
     [SectionLoginType.picture]: i18n.editSectionLoginTypePicDesc(),
     [SectionLoginType.word]: i18n.editSectionLoginTypeWordDesc(),
     [SectionLoginType.email]: i18n.editSectionLoginTypeEmailDesc(),
     [SectionLoginType.google_classroom]: i18n.editSectionLoginTypeGoogleDesc(),
-    [SectionLoginType.clever]: i18n.editSectionLoginTypeCleverDesc()
+    [SectionLoginType.clever]: i18n.editSectionLoginTypeCleverDesc(),
   };
 
   return (
@@ -406,7 +449,7 @@ const LoginTypeField = ({value, onChange, validLoginTypes, disabled}) => {
 };
 LoginTypeField.propTypes = {
   ...FieldProps,
-  validLoginTypes: PropTypes.arrayOf(PropTypes.string).isRequired
+  validLoginTypes: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 
 const AssignmentField = ({
@@ -414,7 +457,7 @@ const AssignmentField = ({
   onChange,
   courseOfferings,
   disabled,
-  isNewSection
+  isNewSection,
 }) => (
   <div>
     <FieldName>{i18n.course()}</FieldName>
@@ -443,7 +486,7 @@ AssignmentField.propTypes = {
   onChange: PropTypes.func.isRequired,
   courseOfferings: PropTypes.objectOf(assignmentCourseOfferingShape).isRequired,
   disabled: PropTypes.bool,
-  isNewSection: PropTypes.bool
+  isNewSection: PropTypes.bool,
 };
 
 const LessonExtrasField = ({value, onChange, disabled}) => (
@@ -545,7 +588,7 @@ const TtsAutoplayField = ({value, onChange, disabled, isEnglish}) => (
 );
 TtsAutoplayField.propTypes = {
   ...FieldProps,
-  isEnglish: PropTypes.bool.isRequired
+  isEnglish: PropTypes.bool.isRequired,
 };
 
 const FieldName = props => (
@@ -553,7 +596,7 @@ const FieldName = props => (
     style={{
       ...h3Style,
       marginTop: 20,
-      marginBottom: 0
+      marginBottom: 0,
     }}
     {...props}
   />
@@ -562,7 +605,7 @@ const FieldName = props => (
 const FieldDescription = props => (
   <div
     style={{
-      marginBottom: 5
+      marginBottom: 5,
     }}
     {...props}
   />
@@ -585,6 +628,8 @@ YesNoDropdown.propTypes = FieldProps;
 let defaultPropsFromState = state => ({
   initialCourseId: state.teacherSections.initialCourseId,
   initialUnitId: state.teacherSections.initialUnitId,
+  initialCourseOfferingId: state.teacherSections.initialCourseOfferingId,
+  initialCourseVersionId: state.teacherSections.initialCourseVersionId,
   courseOfferings: state.teacherSections.courseOfferings,
   section: state.teacherSections.sectionBeingEdited,
   isSaveInProgress: state.teacherSections.saveInProgress,
@@ -593,46 +638,39 @@ let defaultPropsFromState = state => ({
   assignedUnitName: assignedUnitName(state),
   assignedUnitTextToSpeechEnabled: assignedUnitTextToSpeechEnabled(state),
   localeCode: state.locales.localeCode,
-  assignedUnitRequiresVerifiedInstructor: assignedUnitRequiresVerifiedInstructor(
-    state
-  ),
+  assignedUnitRequiresVerifiedInstructor:
+    assignedUnitRequiresVerifiedInstructor(state),
   isVerifiedInstructor: state.verifiedInstructor.isVerified,
 
   // DCDO Flag - show/hide Lock Section field
-  showLockSectionField: state.teacherSections.showLockSectionField
+  showLockSectionField: state.teacherSections.showLockSectionField,
 });
 
 export const UnconnectedEditSectionForm = EditSectionForm;
 
-export const ReloadAfterEditSectionForm = connect(
-  defaultPropsFromState,
-  {
-    editSectionProperties,
-    updateHiddenScript,
-    handleSave: reloadAfterEditingSection,
-    handleClose: cancelEditingSection
-  }
-)(EditSectionForm);
+export const ReloadAfterEditSectionForm = connect(defaultPropsFromState, {
+  editSectionProperties,
+  updateHiddenScript,
+  handleSave: reloadAfterEditingSection,
+  handleClose: cancelEditingSection,
+})(EditSectionForm);
 
-export default connect(
-  defaultPropsFromState,
-  {
-    editSectionProperties,
-    updateHiddenScript,
-    handleSave: finishEditingSection,
-    handleClose: cancelEditingSection
-  }
-)(EditSectionForm);
+export default connect(defaultPropsFromState, {
+  editSectionProperties,
+  updateHiddenScript,
+  handleSave: finishEditingSection,
+  handleClose: cancelEditingSection,
+})(EditSectionForm);
 
 const style = {
   root: {
     width: styleConstants['content-width'],
     height: '80vh',
     left: 20,
-    right: 20
+    right: 20,
   },
   dropdown: {
-    padding: '0.3em'
+    padding: '0.3em',
   },
   sectionNameInput: {
     // Full-width, large happy text, lots of space.
@@ -640,12 +678,12 @@ const style = {
     width: '98%',
     boxSizing: 'border-box',
     fontSize: 'large',
-    padding: '0.5em'
+    padding: '0.5em',
   },
   scroll: {
     position: 'absolute',
     top: 80,
     overflowY: 'scroll',
-    height: 'calc(80vh - 200px)'
-  }
+    height: 'calc(80vh - 200px)',
+  },
 };

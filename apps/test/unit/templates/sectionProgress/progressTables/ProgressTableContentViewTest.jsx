@@ -9,11 +9,11 @@ import {
   fakeLevel,
   fakeLessonWithLevels,
   fakeStudents,
-  fakeStudentLevelProgress
+  fakeStudentLevelProgress,
 } from '@cdo/apps/templates/progress/progressTestHelpers';
 import {
   fakeRowsForStudents,
-  fakeDetailRowsForStudent
+  fakeDetailRowsForStudent,
 } from '@cdo/apps/templates/sectionProgress/sectionProgressTestHelpers';
 import sinon from 'sinon';
 import {allowConsoleWarnings} from '../../../../util/testUtils';
@@ -23,7 +23,7 @@ const LESSON_1 = fakeLessonWithLevels({position: 1});
 const LESSON_2 = fakeLessonWithLevels({position: 2}, 3);
 const LESSON_3 = fakeLessonWithLevels({
   position: 3,
-  levels: [fakeLevel({isUnplugged: true})]
+  levels: [fakeLevel({isUnplugged: true})],
 });
 const LESSON_4 = fakeLessonWithLevels({position: 4, levels: []});
 const LESSONS = [LESSON_1, LESSON_2, LESSON_3, LESSON_4];
@@ -39,7 +39,7 @@ const DEFAULT_PROPS = {
     id: 1,
     name: 'csd1-2020',
     title: 'CSD Unit 1 - Problem Solving and Computing (20-21)',
-    lessons: LESSONS
+    lessons: LESSONS,
   },
   lessonOfInterest: 1,
   levelProgressByStudent: fakeStudentLevelProgress(LESSON_1.levels, STUDENTS),
@@ -49,7 +49,7 @@ const DEFAULT_PROPS = {
   extraHeaderFormatters: [],
   needsGutter: false,
   onScroll: () => {},
-  includeHeaderArrows: false
+  includeHeaderArrows: false,
 };
 
 const setUp = (overrideProps = {}) => {
@@ -100,10 +100,7 @@ describe('ProgressTableContentView', () => {
   it('calls onClickLesson with lesson position when a lesson number is clicked', () => {
     const onClickSpy = sinon.spy();
     const wrapper = setUp({onClickLesson: onClickSpy});
-    wrapper
-      .find(ProgressTableLessonNumber)
-      .at(0)
-      .simulate('click');
+    wrapper.find(ProgressTableLessonNumber).at(0).simulate('click');
     expect(onClickSpy).to.have.been.called;
   });
 

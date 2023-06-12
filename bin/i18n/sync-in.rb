@@ -29,6 +29,7 @@ def sync_in
   puts "Copying source files"
   I18nScriptUtils.run_bash_script "bin/i18n-codeorg/in.sh"
   localize_external_sources
+  localize_course_resources
   redact_level_content
   redact_block_content
   redact_docs
@@ -36,9 +37,9 @@ def sync_in
   redact_labs_content
   localize_markdown_content
   puts "Sync in completed successfully"
-rescue => e
-  puts "Sync in failed from the error: #{e}"
-  raise e
+rescue => exception
+  puts "Sync in failed from the error: #{exception}"
+  raise exception
 end
 
 # Takes strings describing and naming Framework, StandardCategory, and Standard
@@ -82,9 +83,7 @@ def localize_standards
 
   # Then, for each framework, generate a file for it.
   frameworks.keys.each do |framework|
-    File.open(File.join(standards_content_path, "#{framework}.json"), "w") do |file|
-      file.write(JSON.pretty_generate(frameworks[framework]))
-    end
+    File.write(File.join(standards_content_path, "#{framework}.json"), JSON.pretty_generate(frameworks[framework]))
   end
 end
 
@@ -174,9 +173,7 @@ def localize_docs
     end
     # Generate a file containing the string of each Programming Environment.
     FileUtils.mkdir_p(File.dirname(docs_content_file))
-    File.open(docs_content_file, "w") do |file|
-      file.write(JSON.pretty_generate(programming_env_docs.compact))
-    end
+    File.write(docs_content_file, JSON.pretty_generate(programming_env_docs.compact))
   end
 end
 
@@ -185,7 +182,14 @@ def localize_external_sources
   puts "Preparing external sources"
   external_sources_dir = File.join(I18N_SOURCE_DIR, "external-sources")
 
-  # ml-playground files
+  # ml-playground (AI Lab) files
+
+  # Get the display names of the datasets stored in the dataset manifest file.
+  # manifest = File.join(external_sources_dir, 'ml-playground', 'datasets-manifest.json')
+  manifest = "apps/node_modules/@code-dot-org/ml-playground/public/datasets-manifest.json"
+  manifest_datasets = JSON.parse(File.read(manifest))['datasets']
+  dataset_names = manifest_datasets.map {|dataset| [dataset['id'], dataset['name']]}.to_h
+
   # These are overwritten in this format so the properties that use
   # arrays have unique identifiers for translation.
   dataset_files = File.join(external_sources_dir, 'ml-playground', 'datasets', '*')
@@ -213,10 +217,10 @@ def localize_external_sources
         }
       }
     }
+    dataset_name = dataset_names[original_dataset['name']]
+    final_dataset["name"] = dataset_name if dataset_name
 
-    File.open(dataset_file, "w") do |f|
-      f.write(JSON.pretty_generate(final_dataset))
-    end
+    File.write(dataset_file, JSON.pretty_generate(final_dataset))
   end
 end
 
@@ -232,10 +236,11 @@ end
 def get_i18n_strings(level)
   i18n_strings = {}
 
-  if level.is_a?(DSLDefined)
+  case level
+  when DSLDefined
     text = level.dsl_text
     i18n_strings["dsls"] = level.class.dsl_class.parse(text, '')[1] if text
-  elsif level.is_a?(Level)
+  when Level
     %w(
       display_name
       bubble_choice_description
@@ -466,9 +471,7 @@ def localize_project_content(variable_strings, parameter_strings)
     end
     project_strings.delete_if {|_, value| value.blank?}
 
-    File.open(project_content_file, "w") do |file|
-      file.write(JSON.pretty_generate(project_strings))
-    end
+    File.write(project_content_file, JSON.pretty_generate(project_strings))
   end
 end
 
@@ -554,6 +557,40 @@ def write_to_yml(type, strings)
   end
 end
 
+# Merging dashboard/config/courses/*.course with courses.yml
+# These files contain resources used by UnitGroup (used in the landing pages of full courses).
+# https://studio.code.org/courses/csd-2021
+# All other resources used in Unit come from scrip_json files (used in the landing pages for each Unit).
+# https://studio.code.org/s/csd1-2021
+def localize_course_resources
+  puts "Preparing course resources"
+
+  # Currently, csd is the only fully translatable course that has resources in this directory
+  translatable_courses = %w(csd)
+  resources = {}
+  Dir.glob(File.join('dashboard', 'config', 'courses', '*.course')).each do |file|
+    course_json = JSON.parse(File.read(file))
+    course_properties = course_json['properties']
+    next unless translatable_courses.include?(course_properties['family_name'])
+
+    course_resources = course_json['resources']
+    next if course_resources.empty?
+    course_resources.each do |resource|
+      # resoruce.rb uses Services::GloballyUniqueIdentifiers.build_resource_key to create resource keys as follow
+      # resource.key / resource.course_version.course_offering.key / resource.course_version.key
+      # resource_key is used to localize the resources.
+      resource_key = [resource['key'], course_properties['family_name'], course_properties['version_year']].join('/')
+      resources.store(resource_key, {'name' => resource['name'], 'url' => resource['url']})
+    end
+  end
+  courses_source = File.join(I18N_SOURCE_DIR, 'dashboard', 'courses.yml')
+  courses_yaml = YAML.load_file(courses_source)
+  courses_data = courses_yaml['en']['data']
+  # Merging resources if courses already contain resources
+  courses_data['resources'] ? courses_data['resources'].merge!(resources) : courses_data.store('resources', resources)
+  File.write(courses_source, I18nScriptUtils.to_crowdin_yaml(courses_yaml))
+end
+
 # Pull in various fields for custom blocks from .json files and save them to
 # blocks.en.yml.
 def localize_block_content
@@ -582,9 +619,7 @@ def localize_block_content
     blocks[name]['options'] = args_with_options unless args_with_options.empty?
   end
 
-  File.open("dashboard/config/locales/blocks.en.yml", "w+") do |f|
-    f.write(I18nScriptUtils.to_crowdin_yaml({"en" => {"data" => {"blocks" => blocks}}}))
-  end
+  File.write("dashboard/config/locales/blocks.en.yml", I18nScriptUtils.to_crowdin_yaml({"en" => {"data" => {"blocks" => blocks}}}))
 end
 
 def localize_animation_library
@@ -604,9 +639,7 @@ def localize_shared_functions
   shared_functions.sort.each do |func|
     hash[func] = func
   end
-  File.open("i18n/locales/source/dashboard/shared_functions.yml", "w+") do |f|
-    f.write(I18nScriptUtils.to_crowdin_yaml({"en" => {"data" => {"shared_functions" => hash}}}))
-  end
+  File.write("i18n/locales/source/dashboard/shared_functions.yml", I18nScriptUtils.to_crowdin_yaml({"en" => {"data" => {"shared_functions" => hash}}}))
 end
 
 # Aggregate every CourseOffering record's `key` as the translation key, and
@@ -622,9 +655,7 @@ def localize_course_offerings
 end
 
 def write_dashboard_json(location, hash)
-  File.open(File.join(I18N_SOURCE_DIR, "dashboard/#{location}.json"), "w+") do |f|
-    f.write(JSON.pretty_generate(hash))
-  end
+  File.write(File.join(I18N_SOURCE_DIR, "dashboard/#{location}.json"), JSON.pretty_generate(hash))
 end
 
 def select_redactable(i18n_strings)
@@ -663,15 +694,11 @@ def redact_level_file(source_path)
 
   backup_path = source_path.sub("source", "original")
   FileUtils.mkdir_p File.dirname(backup_path)
-  File.open(backup_path, "w") do |file|
-    file.write(JSON.pretty_generate(redactable_data))
-  end
+  File.write(backup_path, JSON.pretty_generate(redactable_data))
 
   redacted_data = RedactRestoreUtils.redact_data(redactable_data, ['blockly'])
 
-  File.open(source_path, 'w') do |source_file|
-    source_file.write(JSON.pretty_generate(source_data.deep_merge(redacted_data)))
-  end
+  File.write(source_path, JSON.pretty_generate(source_data.deep_merge(redacted_data)))
 end
 
 def redact_docs
@@ -748,7 +775,6 @@ end
 
 def localize_markdown_content
   markdown_files_to_localize = %w[
-    ai.md.partial
     athome.md.partial
     break.md.partial
     coldplay.md.partial

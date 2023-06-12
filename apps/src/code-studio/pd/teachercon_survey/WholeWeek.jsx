@@ -1,5 +1,5 @@
 import React from 'react';
-import {FormGroup, Row, Col} from 'react-bootstrap';
+import {FormGroup, Row, Col} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import FormComponent from '../form_components/FormComponent';
 import QuestionsTable from '../form_components/QuestionsTable';
 
@@ -50,7 +50,7 @@ const LABELS = {
   otherFeedbackWholeWeek:
     'Is there anything else you’d like to tell us about your experience this week?',
   givePermissionToQuote:
-    'I give Code.org permission to quote my written feedback from today for use on social media, promotional materials, and other communications. (We love sharing what our teachers think about us!)'
+    'I give Code.org permission to quote my written feedback from today for use on social media, promotional materials, and other communications. (We love sharing what our teachers think about us!)',
 };
 
 export default class WholeWeek extends FormComponent {
@@ -66,13 +66,13 @@ export default class WholeWeek extends FormComponent {
           label: this.labelFor('receivedClearCommunication'),
           name: 'receivedClearCommunication',
           required: true,
-          type: 'radio'
+          type: 'radio',
         })}
         {this.buildFieldGroup({
           componentClass: 'textarea',
           label: this.labelFor('venueFeedback'),
           name: 'venueFeedback',
-          required: true
+          required: true,
         })}
 
         <h4>Please rate your level of agreement with each statement below.</h4>
@@ -95,11 +95,11 @@ export default class WholeWeek extends FormComponent {
             'partOfCommunity',
             'allStudentsShouldTake',
             'wouldRecommend',
-            'bestPdEver'
+            'bestPdEver',
           ].map(key => ({
             label: this.labelFor(key),
             name: key,
-            required: true
+            required: true,
           }))}
         />
 
@@ -107,13 +107,13 @@ export default class WholeWeek extends FormComponent {
           'howMuchParticipated',
           'howOftenLostTrackOfTime',
           'howExcitedBefore',
-          'howHappyAfter'
+          'howHappyAfter',
         ].map(key =>
           this.buildButtonsFromOptions({
             label: this.labelFor(key),
             name: key,
             required: true,
-            type: 'radio'
+            type: 'radio',
           })
         )}
 
@@ -121,13 +121,13 @@ export default class WholeWeek extends FormComponent {
           'facilitatorsDidWell',
           'facilitatorsCouldImprove',
           'likedMost',
-          'wouldChange'
+          'wouldChange',
         ].map(key =>
           this.buildFieldGroup({
             componentClass: 'textarea',
             label: this.labelFor(key),
             name: key,
-            required: true
+            required: true,
           })
         )}
 
@@ -135,14 +135,14 @@ export default class WholeWeek extends FormComponent {
           componentClass: 'textarea',
           label: this.labelFor('otherFeedbackWholeWeek'),
           name: 'otherFeedbackWholeWeek',
-          required: false
+          required: false,
         })}
 
         {this.buildButtonsFromOptions({
           label: this.labelFor('givePermissionToQuote'),
           name: 'givePermissionToQuote',
           required: true,
-          type: 'radio'
+          type: 'radio',
         })}
 
         <p>
@@ -178,7 +178,7 @@ export default class WholeWeek extends FormComponent {
               label: '',
               name: 'instructionFocus',
               required: false,
-              type: 'radio'
+              type: 'radio',
             })}
           </Col>
         </Row>
@@ -211,7 +211,7 @@ export default class WholeWeek extends FormComponent {
               label: '',
               name: 'teacherResponsibility',
               required: false,
-              type: 'radio'
+              type: 'radio',
             })}
           </Col>
         </Row>
@@ -241,7 +241,7 @@ export default class WholeWeek extends FormComponent {
               label: '',
               name: 'teacherTime',
               required: false,
-              type: 'radio'
+              type: 'radio',
             })}
           </Col>
         </Row>
@@ -253,5 +253,5 @@ export default class WholeWeek extends FormComponent {
 WholeWeek.associatedFields = Object.keys(LABELS).concat([
   'instructionFocus',
   'teacherResponsibility',
-  'teacherTime'
+  'teacherTime',
 ]);

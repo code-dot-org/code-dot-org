@@ -37,14 +37,14 @@ MONITORING_GROUPS = {
   'csc' => ['CSC Curriculum'],
   'csf' => ['CSF Curriculum'],
   'cspalooza' => ['CSP Curriculum'],
-  'facilitator-things' => ['Facilitators', 'PNP Andrea'],
+  'edpop' => ['Ed POP Tickets'],
   'hour-of-code' => ['Hour of Code'],
   'infrastructure' => ['Infrastructure'],
   'international' => ['International Partnerships', 'International'],
-  'marketing' => ['Media'],
+  'marketing' => ['Marketing'],
   'platform-team' => ['Platform Team'],
-  'programsnpartners_theluau' => ['Programs (PNP) Team'],
-  'reaching-out' => ['Adoption and Outreach Team', 'Ed Programs', 'EdPop Alicia', 'EdPop Dana', 'EdPop Danielle', 'EdPop Desiree', 'EdPop Kristyn', 'EdPop Tawny', 'PLC Teachers'],
+  'programsnpartners_theluau' => ['Programs Team'],
+  'reaching-out' => ['Adoption and Outreach Team', 'Ed Programs', 'Professional Learning'],
   'student-learning' => ['Student Learning'],
   'teacher-tools' => ['Teacher Tools']
 }
@@ -58,23 +58,16 @@ GROUP_FILTERS = {
   'CSD Curriculum' => '83142177',
   'CSF Curriculum' => '278602768',
   'CSP Curriculum' => '45749787',
-  'Ed Programs' => '9638169070477',
-  'EdPop Alicia' => '9638169070477',
-  'EdPop Dana' => '9638169070477',
-  'EdPop Danielle' => '9638169070477',
-  'EdPop Desiree' => '9638169070477',
-  'EdPop Kristyn' => '9638169070477',
-  'EdPop Tawny' => '9638169070477',
-  'Facilitators' => '9638169070477',
+  'Ed Programs' => '14650984488333',
+  'Ed POP Tickets' => '9638169070477',
   'Hour of Code' => '9690110143757',
   'Infrastructure' => '9811556471309',
-  'International' => '360086130812',
+  'International' => '14740813928845',
   'International Partnerships' => '360086130812',
-  'Media' => '47756566',
+  'Marketing' => '47756566',
   'Platform Team' => '360086130792',
-  'PLC Teachers' => '9638169070477',
-  'PNP Andrea' => '1900013935647',
-  'Programs (PNP) Team' => '8163316698253',
+  'Professional Learning' => '13462346662541',
+  'Programs Team' => '8163316698253',
   'Student Learning' => '9612070142733',
   'Teacher Tools' => '360082967212'
 }
@@ -266,4 +259,3 @@ end
 #
 #
 get_tickets_by_group
-get_tickets_by_user

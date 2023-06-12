@@ -283,14 +283,14 @@
           "8a52e7a8d3b4c955d6f7927c6ba3fe72": "yaratık",
           "795f3202b17cb6bc3d4b771d8c6c9eaf": "diğer",
           "f655df68ec33643278de7e69794e8d76": "Sanal Akvaryum",
-          "a1a2a07348784279a1e7a6f46dc7e353": "Ne katacaksınız?",
+          "a1a2a07348784279a1e7a6f46dc7e353": "Ne ekleyeceksiniz?",
           "0d3e73168beb875063ea0f0302fe32bd": "Hangi balık?",
           "caaf8264ca397dba2d35ef902bbbd953": "Hangi yaratık?",
           "78574118d153534fd0925a2f5ca25e79": "Hangi şey?"
         },
         "courseF_apps_collector": {
           "e8a10c04d72b2f135dabe360c4bdd534": "Kazandın!",
-          "077449fb290b51b9d70c9f2f3d3213bc": " saniye",
+          "077449fb290b51b9d70c9f2f3d3213bc": " saniyeler",
           "490082498449bd20ff0199737dfa4916": "Oyun türünü seçin:",
           "41f2b2212de0105c2a942ebb4a44e449": "Büyük Toplayıcı Oyunu!"
         },
@@ -647,7 +647,7 @@
         },
         "courseF_apps_aquarium2022": {
           "f655df68ec33643278de7e69794e8d76": "Sanal Akvaryum",
-          "a1a2a07348784279a1e7a6f46dc7e353": "Ne katacaksınız?",
+          "a1a2a07348784279a1e7a6f46dc7e353": "Ne ekleyeceksiniz?",
           "83e4a96aed96436c621b9809e258b309": "balık",
           "8a52e7a8d3b4c955d6f7927c6ba3fe72": "yaratık",
           "795f3202b17cb6bc3d4b771d8c6c9eaf": "diğer",
@@ -657,7 +657,7 @@
         },
         "courseF_apps_aquarium_-2022-2": {
           "f655df68ec33643278de7e69794e8d76": "Sanal Akvaryum",
-          "a1a2a07348784279a1e7a6f46dc7e353": "Ne katacaksınız?",
+          "a1a2a07348784279a1e7a6f46dc7e353": "Ne ekleyeceksiniz?",
           "83e4a96aed96436c621b9809e258b309": "balık",
           "8a52e7a8d3b4c955d6f7927c6ba3fe72": "yaratık",
           "795f3202b17cb6bc3d4b771d8c6c9eaf": "diğer",
@@ -699,13 +699,13 @@
         },
         "courseF_apps_collector2022": {
           "e8a10c04d72b2f135dabe360c4bdd534": "Kazandın!",
-          "077449fb290b51b9d70c9f2f3d3213bc": " saniye",
+          "077449fb290b51b9d70c9f2f3d3213bc": " saniyeler",
           "490082498449bd20ff0199737dfa4916": "Oyun türünü seçin:",
           "41f2b2212de0105c2a942ebb4a44e449": "Büyük Toplayıcı Oyunu!"
         },
         "courseF_apps_collector_-2022-2": {
           "e8a10c04d72b2f135dabe360c4bdd534": "Kazandın!",
-          "077449fb290b51b9d70c9f2f3d3213bc": " saniye",
+          "077449fb290b51b9d70c9f2f3d3213bc": " saniyeler",
           "490082498449bd20ff0199737dfa4916": "Oyun türünü seçin:",
           "41f2b2212de0105c2a942ebb4a44e449": "Büyük Toplayıcı Oyunu!"
         },

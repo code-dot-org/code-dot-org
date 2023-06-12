@@ -371,7 +371,9 @@
         "courseE_aboutme_1_2021": {
           "b63151482630edd1589a9ac24d107c49": "Este sou eu, Rikki! Eu gosto de programar, passear com a Thuy e tomar sorvete!",
           "810896b14fc6615f0c76628b9b6a727e": "Essa é minha melhor amiga Thuy! Ela é muito boa em esportes!",
-          "6f97975a0bda0c9219915161149cbb26": "Esse é o meu computador! Eu programo nele TODO o tempo!"
+          "6f97975a0bda0c9219915161149cbb26": "Esse é o meu computador! Eu programo nele TODO o tempo!",
+          "8e985f60f328934accd78e7649584840": "Sorvete é minha guloseima favorita!",
+          "31ba97bb501bb1f5b448221be09bad32": "Esse é o meu corgi, Lollipop! Eu deveria ensiná-la a programar!"
         },
         "courseE_aboutme_3_2021": {
           "ed076287532e86365e841e92bfc50d8c": "Olá, mundo!"
@@ -386,7 +388,12 @@
         "courseF_apps_aquarium": {
           "83e4a96aed96436c621b9809e258b309": "peixe",
           "795f3202b17cb6bc3d4b771d8c6c9eaf": "outro",
-          "8a52e7a8d3b4c955d6f7927c6ba3fe72": "criatura"
+          "8a52e7a8d3b4c955d6f7927c6ba3fe72": "criatura",
+          "f655df68ec33643278de7e69794e8d76": "Aquário virtual",
+          "a1a2a07348784279a1e7a6f46dc7e353": "O que você vai acrescentar?",
+          "0d3e73168beb875063ea0f0302fe32bd": "Qual peixe?",
+          "caaf8264ca397dba2d35ef902bbbd953": "Qual criatura?",
+          "78574118d153534fd0925a2f5ca25e79": "Qual coisa?"
         },
         "courseF_apps_chatbot": {
           "13e575be866ecf5ac3dcbf61ab2048d7": "Quantos anos você tem?",
@@ -396,11 +403,14 @@
           "05584ab56b744b51cd8c4a6e8b3a08ee": "Digite a sua idade:",
           "6dfcc5e477ebd3e2c893b3fc86b2eb93": "anos também!",
           "605f302ebc9f7fbacba60b15f551a633": "Qual é a sua cor preferida?",
-          "91c4549fe2a5e9325c8f8d51afbb751b": "Digite a sua cor favorita:"
+          "91c4549fe2a5e9325c8f8d51afbb751b": "Digite a sua cor favorita:",
+          "1f258d88a70309efc1435ef5daa277a0": "Obrigado por conversar comigo hoje!"
         },
         "courseF_apps_collector": {
           "e8a10c04d72b2f135dabe360c4bdd534": "Você venceu!",
-          "077449fb290b51b9d70c9f2f3d3213bc": " segundos"
+          "077449fb290b51b9d70c9f2f3d3213bc": " segundos",
+          "490082498449bd20ff0199737dfa4916": "Selecione o tipo de jogo:",
+          "41f2b2212de0105c2a942ebb4a44e449": "O grande jogo de colecionador!"
         },
         "courseF_editable_chatbot": {
           "13e575be866ecf5ac3dcbf61ab2048d7": "Quantos anos você tem?",
@@ -411,7 +421,8 @@
           "6dfcc5e477ebd3e2c893b3fc86b2eb93": "anos também!",
           "605f302ebc9f7fbacba60b15f551a633": "Qual é a sua cor preferida?",
           "91c4549fe2a5e9325c8f8d51afbb751b": "Digite a sua cor favorita:",
-          "e243ac4e74cc5a76adbecf3b4daa1906": "minha pergunta"
+          "e243ac4e74cc5a76adbecf3b4daa1906": "minha pergunta",
+          "1f258d88a70309efc1435ef5daa277a0": "Obrigado por conversar comigo hoje!"
         },
         "courseF_variables_predict": {
           "f6429fe0f1a76611670df7e1234af936": "Qual é o seu nome?"
@@ -422,7 +433,15 @@
           "e243ac4e74cc5a76adbecf3b4daa1906": "minha pergunta"
         },
         "courseF_apps_madlib": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "minha pergunta"
+          "e243ac4e74cc5a76adbecf3b4daa1906": "minha pergunta",
+          "f6175c6f0b0bcfff0256286315f0eb7b": "Jogos de festa",
+          "bf08dd3d1961874f13e77c936aad27e5": "Uma história de espaço em branco",
+          "514b8d5320196898a9ced3efe0d4c802": "Insira um adjetivo:",
+          "88794317e8c695bbc7bc7d2f35792c7f": "Insira um objeto:",
+          "2f6e9ffcbb531b9f8983aef3ae4242ac": "Insira uma parte do corpo:",
+          "e522ee28f39133b45497637539ff429b": "Insira um número:",
+          "7c9fbd20ed3a7bcfad08351050ffe0ff": " jogos.",
+          "5306eed2fd2c43fe033efd6016c0c38b": "- corrida de pernas!"
         },
         "courseF_editable_card": {
           "ff4d94eeb46da1dbec33fa9cfc2749ee": "Quem está fazendo aniversário?",
@@ -430,7 +449,15 @@
           "e243ac4e74cc5a76adbecf3b4daa1906": "minha pergunta"
         },
         "courseF_editable_madlib": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "minha pergunta"
+          "e243ac4e74cc5a76adbecf3b4daa1906": "minha pergunta",
+          "f6175c6f0b0bcfff0256286315f0eb7b": "Jogos de festa",
+          "bf08dd3d1961874f13e77c936aad27e5": "Uma história de espaço em branco",
+          "514b8d5320196898a9ced3efe0d4c802": "Insira um adjetivo:",
+          "88794317e8c695bbc7bc7d2f35792c7f": "Insira um objeto:",
+          "2f6e9ffcbb531b9f8983aef3ae4242ac": "Insira uma parte do corpo:",
+          "e522ee28f39133b45497637539ff429b": "Insira um número:",
+          "7c9fbd20ed3a7bcfad08351050ffe0ff": " jogos.",
+          "5306eed2fd2c43fe033efd6016c0c38b": "- corrida de pernas!"
         },
         "courseF_text_answer": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "minha pergunta"
@@ -442,7 +469,9 @@
           "e243ac4e74cc5a76adbecf3b4daa1906": "minha pergunta"
         },
         "courseF_text_choice_events": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "minha pergunta"
+          "e243ac4e74cc5a76adbecf3b4daa1906": "minha pergunta",
+          "c529a06c3f8518b63ff6dfac482b335c": "Dê um nome a este planeta:",
+          "44506356d48394cd903b579df9de9117": ", terráqueo!"
         },
         "courseF_text_choice_freeplay": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "minha pergunta"
@@ -466,19 +495,23 @@
           "e243ac4e74cc5a76adbecf3b4daa1906": "minha pergunta"
         },
         "courseF_variables_card_finish": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "minha pergunta"
+          "e243ac4e74cc5a76adbecf3b4daa1906": "minha pergunta",
+          "464a456e0747ec9b09fc9afc6fbd13ed": "o que você quer para o seu aniversário?"
         },
         "courseF_variables_chatbot": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "minha pergunta"
         },
         "courseF_variables_chatbot_finish": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "minha pergunta"
+          "e243ac4e74cc5a76adbecf3b4daa1906": "minha pergunta",
+          "46463b2e9f71f2f15b7238f56f09ba30": "O fim",
+          "c757766b0a7e2017c79e1c94f60e44f7": "Obrigado por conversar!"
         },
         "courseF_variables_madlib": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "minha pergunta"
         },
         "courseF_variables_madlib_finish": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "minha pergunta"
+          "e243ac4e74cc5a76adbecf3b4daa1906": "minha pergunta",
+          "50d489a15105b987ec6d4410900c95dd": "Insira uma palavra de ação:"
         },
         "helloworld_animals_freeplay": {
           "6cd3556deb0da54bca060b4c39479839": "Olá, mundo!"
@@ -551,12 +584,22 @@
         "courseF_apps_aquarium2022": {
           "83e4a96aed96436c621b9809e258b309": "peixe",
           "8a52e7a8d3b4c955d6f7927c6ba3fe72": "criatura",
-          "795f3202b17cb6bc3d4b771d8c6c9eaf": "outro"
+          "795f3202b17cb6bc3d4b771d8c6c9eaf": "outro",
+          "f655df68ec33643278de7e69794e8d76": "Aquário virtual",
+          "a1a2a07348784279a1e7a6f46dc7e353": "O que você vai acrescentar?",
+          "0d3e73168beb875063ea0f0302fe32bd": "Qual peixe?",
+          "caaf8264ca397dba2d35ef902bbbd953": "Qual criatura?",
+          "78574118d153534fd0925a2f5ca25e79": "Qual coisa?"
         },
         "courseF_apps_aquarium_-2022-2": {
           "83e4a96aed96436c621b9809e258b309": "peixe",
           "8a52e7a8d3b4c955d6f7927c6ba3fe72": "criatura",
-          "795f3202b17cb6bc3d4b771d8c6c9eaf": "outro"
+          "795f3202b17cb6bc3d4b771d8c6c9eaf": "outro",
+          "f655df68ec33643278de7e69794e8d76": "Aquário virtual",
+          "a1a2a07348784279a1e7a6f46dc7e353": "O que você vai acrescentar?",
+          "0d3e73168beb875063ea0f0302fe32bd": "Qual peixe?",
+          "caaf8264ca397dba2d35ef902bbbd953": "Qual criatura?",
+          "78574118d153534fd0925a2f5ca25e79": "Qual coisa?"
         },
         "courseF_apps_card2022": {
           "ff4d94eeb46da1dbec33fa9cfc2749ee": "Quem está fazendo aniversário?",
@@ -576,7 +619,8 @@
           "6dfcc5e477ebd3e2c893b3fc86b2eb93": "anos também!",
           "605f302ebc9f7fbacba60b15f551a633": "Qual é a sua cor preferida?",
           "91c4549fe2a5e9325c8f8d51afbb751b": "Digite a sua cor favorita:",
-          "ae096fbf24d913754b01a1601672bf62": "também!"
+          "ae096fbf24d913754b01a1601672bf62": "também!",
+          "1f258d88a70309efc1435ef5daa277a0": "Obrigado por conversar comigo hoje!"
         },
         "courseF_apps_chatbot_-2022-2": {
           "a72e7c5c68af0546e963e510297f5233": "Olá, eu sou o X-9! Qual o seu nome?",
@@ -586,21 +630,42 @@
           "6dfcc5e477ebd3e2c893b3fc86b2eb93": "anos também!",
           "605f302ebc9f7fbacba60b15f551a633": "Qual é a sua cor preferida?",
           "91c4549fe2a5e9325c8f8d51afbb751b": "Digite a sua cor favorita:",
-          "ae096fbf24d913754b01a1601672bf62": "também!"
+          "ae096fbf24d913754b01a1601672bf62": "também!",
+          "1f258d88a70309efc1435ef5daa277a0": "Obrigado por conversar comigo hoje!"
         },
         "courseF_apps_collector2022": {
           "e8a10c04d72b2f135dabe360c4bdd534": "Você venceu!",
-          "077449fb290b51b9d70c9f2f3d3213bc": " segundos"
+          "077449fb290b51b9d70c9f2f3d3213bc": " segundos",
+          "490082498449bd20ff0199737dfa4916": "Selecione o tipo de jogo:",
+          "41f2b2212de0105c2a942ebb4a44e449": "O grande jogo de colecionador!"
         },
         "courseF_apps_collector_-2022-2": {
           "e8a10c04d72b2f135dabe360c4bdd534": "Você venceu!",
-          "077449fb290b51b9d70c9f2f3d3213bc": " segundos"
+          "077449fb290b51b9d70c9f2f3d3213bc": " segundos",
+          "490082498449bd20ff0199737dfa4916": "Selecione o tipo de jogo:",
+          "41f2b2212de0105c2a942ebb4a44e449": "O grande jogo de colecionador!"
         },
         "courseF_apps_madlib2022": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "minha pergunta"
+          "e243ac4e74cc5a76adbecf3b4daa1906": "minha pergunta",
+          "f6175c6f0b0bcfff0256286315f0eb7b": "Jogos de festa",
+          "bf08dd3d1961874f13e77c936aad27e5": "Uma história de espaço em branco",
+          "514b8d5320196898a9ced3efe0d4c802": "Insira um adjetivo:",
+          "88794317e8c695bbc7bc7d2f35792c7f": "Insira um objeto:",
+          "2f6e9ffcbb531b9f8983aef3ae4242ac": "Insira uma parte do corpo:",
+          "e522ee28f39133b45497637539ff429b": "Insira um número:",
+          "7c9fbd20ed3a7bcfad08351050ffe0ff": " jogos.",
+          "5306eed2fd2c43fe033efd6016c0c38b": "- corrida de pernas!"
         },
         "courseF_apps_madlib_-2022-2": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "minha pergunta"
+          "e243ac4e74cc5a76adbecf3b4daa1906": "minha pergunta",
+          "f6175c6f0b0bcfff0256286315f0eb7b": "Jogos de festa",
+          "bf08dd3d1961874f13e77c936aad27e5": "Uma história de espaço em branco",
+          "514b8d5320196898a9ced3efe0d4c802": "Insira um adjetivo:",
+          "88794317e8c695bbc7bc7d2f35792c7f": "Insira um objeto:",
+          "2f6e9ffcbb531b9f8983aef3ae4242ac": "Insira uma parte do corpo:",
+          "e522ee28f39133b45497637539ff429b": "Insira um número:",
+          "7c9fbd20ed3a7bcfad08351050ffe0ff": " jogos.",
+          "5306eed2fd2c43fe033efd6016c0c38b": "- corrida de pernas!"
         },
         "courseF_editable_card_-2022-2": {
           "ff4d94eeb46da1dbec33fa9cfc2749ee": "Quem está fazendo aniversário?",
@@ -616,10 +681,19 @@
           "605f302ebc9f7fbacba60b15f551a633": "Qual é a sua cor preferida?",
           "91c4549fe2a5e9325c8f8d51afbb751b": "Digite a sua cor favorita:",
           "ae096fbf24d913754b01a1601672bf62": "também!",
-          "e243ac4e74cc5a76adbecf3b4daa1906": "minha pergunta"
+          "e243ac4e74cc5a76adbecf3b4daa1906": "minha pergunta",
+          "1f258d88a70309efc1435ef5daa277a0": "Obrigado por conversar comigo hoje!"
         },
         "courseF_editable_madlib_-2022-2": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "minha pergunta"
+          "e243ac4e74cc5a76adbecf3b4daa1906": "minha pergunta",
+          "f6175c6f0b0bcfff0256286315f0eb7b": "Jogos de festa",
+          "bf08dd3d1961874f13e77c936aad27e5": "Uma história de espaço em branco",
+          "514b8d5320196898a9ced3efe0d4c802": "Insira um adjetivo:",
+          "88794317e8c695bbc7bc7d2f35792c7f": "Insira um objeto:",
+          "2f6e9ffcbb531b9f8983aef3ae4242ac": "Insira uma parte do corpo:",
+          "e522ee28f39133b45497637539ff429b": "Insira um número:",
+          "7c9fbd20ed3a7bcfad08351050ffe0ff": " jogos.",
+          "5306eed2fd2c43fe033efd6016c0c38b": "- corrida de pernas!"
         },
         "courseF_text_answer_-2022-2": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "minha pergunta"
@@ -631,7 +705,9 @@
           "e243ac4e74cc5a76adbecf3b4daa1906": "minha pergunta"
         },
         "courseF_text_choice_events_-2022-2": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "minha pergunta"
+          "e243ac4e74cc5a76adbecf3b4daa1906": "minha pergunta",
+          "c529a06c3f8518b63ff6dfac482b335c": "Dê um nome a este planeta:",
+          "44506356d48394cd903b579df9de9117": ", terráqueo!"
         },
         "courseF_text_choice_freeplay_-2022-2": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "minha pergunta"
@@ -655,25 +731,107 @@
           "e243ac4e74cc5a76adbecf3b4daa1906": "minha pergunta"
         },
         "courseF_variables_card_finish_-2022-2": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "minha pergunta"
+          "e243ac4e74cc5a76adbecf3b4daa1906": "minha pergunta",
+          "464a456e0747ec9b09fc9afc6fbd13ed": "o que você quer para o seu aniversário?"
         },
         "courseF_variables_chatbot_-2022-2": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "minha pergunta"
         },
         "courseF_variables_chatbot_finish_-2022-2": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "minha pergunta"
+          "e243ac4e74cc5a76adbecf3b4daa1906": "minha pergunta",
+          "46463b2e9f71f2f15b7238f56f09ba30": "O fim",
+          "c757766b0a7e2017c79e1c94f60e44f7": "Obrigado por conversar!"
         },
         "courseF_variables_madlib_-2022-2": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "minha pergunta"
         },
         "courseF_variables_madlib_finish_-2022-2": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "minha pergunta"
+          "e243ac4e74cc5a76adbecf3b4daa1906": "minha pergunta",
+          "50d489a15105b987ec6d4410900c95dd": "Insira uma palavra de ação:"
         },
         "courseF_variables_predict_-2022-2": {
           "f6429fe0f1a76611670df7e1234af936": "Qual é o seu nome?"
         },
         "coursee_helloworld_freeplay": {
           "6cd3556deb0da54bca060b4c39479839": "Olá, mundo!"
+        },
+        "courseC19_playLab_sample1_2021": {
+          "5cec903c4d41c49412a70a94d54999ee": "Você pode escrever alguma coisa.",
+          "3e11a2dc6edb909c47778bed75a81769": "Texto aqui"
+        },
+        "CourseF_Project_SpriteLab_2021": {
+          "6e41661ddc1edd50b00b7c607cdcec1a": "escolha 1",
+          "7fec9998c3e5a11f435dc6f2f8e399db": "escolha 2",
+          "c3787b1ed128fdeec3ad638c8ba547d3": "escolha 3"
+        },
+        "CourseF_Project_SpriteLab_chatbot_examples_-2022-2": {
+          "6e41661ddc1edd50b00b7c607cdcec1a": "escolha 1",
+          "7fec9998c3e5a11f435dc6f2f8e399db": "escolha 2",
+          "c3787b1ed128fdeec3ad638c8ba547d3": "escolha 3"
+        },
+        "CourseF_Project_SpriteLab_cupcake_examples_-2022-2": {
+          "6e41661ddc1edd50b00b7c607cdcec1a": "escolha 1",
+          "7fec9998c3e5a11f435dc6f2f8e399db": "escolha 2",
+          "c3787b1ed128fdeec3ad638c8ba547d3": "escolha 3"
+        },
+        "CourseF_Project_SpriteLab_cupcake_examples_2021": {
+          "6e41661ddc1edd50b00b7c607cdcec1a": "escolha 1",
+          "7fec9998c3e5a11f435dc6f2f8e399db": "escolha 2",
+          "c3787b1ed128fdeec3ad638c8ba547d3": "escolha 3"
+        },
+        "CourseF_Project_SpriteLab_examples_-2022-2": {
+          "6e41661ddc1edd50b00b7c607cdcec1a": "escolha 1",
+          "7fec9998c3e5a11f435dc6f2f8e399db": "escolha 2",
+          "c3787b1ed128fdeec3ad638c8ba547d3": "escolha 3"
+        },
+        "CourseF_Project_SpriteLab_examples_2021": {
+          "8e7d34ed67fe4ec0910cefee2f5059cd": "Dançarina do Céu",
+          "78d989e01047ba7043a38650d695abaa": "Selecionar jogador",
+          "6e41661ddc1edd50b00b7c607cdcec1a": "escolha 1",
+          "7fec9998c3e5a11f435dc6f2f8e399db": "escolha 2",
+          "c3787b1ed128fdeec3ad638c8ba547d3": "escolha 3"
+        },
+        "courseC19_playLab_EOC5_2021": {
+          "5cec903c4d41c49412a70a94d54999ee": "Você pode escrever alguma coisa.",
+          "3e11a2dc6edb909c47778bed75a81769": "Texto aqui"
+        },
+        "courseC19_playLab_EOC6_2021": {
+          "5cec903c4d41c49412a70a94d54999ee": "Você pode escrever alguma coisa.",
+          "3e11a2dc6edb909c47778bed75a81769": "Texto aqui"
+        },
+        "courseC19_playLab_sample22022": {
+          "83db90f8846d091d3532256816f105d9": "Essa é a Neila.",
+          "0192cdc04916ec27aa11738bb6e48d6e": "Neila está tentando proteger sua casa do robô espacial.",
+          "df8312187449c70820d7c58229a6b17e": "O robô espacial está assustando as outras criaturas.",
+          "c084e152431f9116b9fdb3f7d465f13d": "Neila quer ajudar o robô espacial a aprender a ser gentil.",
+          "b2f02bf648ce32c4362afe1578d41f70": "Funcionou! Neila mostrou ao robô espacial o poder da gentileza.",
+          "2a28483f9f4f9ee44cec653a445d4c82": "As outras criaturas não têm mais medo!"
+        },
+        "courseC19_playLab_sample2_2021": {
+          "83db90f8846d091d3532256816f105d9": "Essa é a Neila.",
+          "0192cdc04916ec27aa11738bb6e48d6e": "Neila está tentando proteger sua casa do robô espacial.",
+          "df8312187449c70820d7c58229a6b17e": "O robô espacial está assustando as outras criaturas.",
+          "c084e152431f9116b9fdb3f7d465f13d": "Neila quer ajudar o robô espacial a aprender a ser gentil.",
+          "b2f02bf648ce32c4362afe1578d41f70": "Funcionou! Neila mostrou ao robô espacial o poder da gentileza.",
+          "2a28483f9f4f9ee44cec653a445d4c82": "As outras criaturas não têm mais medo!",
+          "5cec903c4d41c49412a70a94d54999ee": "Você pode escrever alguma coisa.",
+          "3e11a2dc6edb909c47778bed75a81769": "Texto aqui"
+        },
+        "courseF_label_predict": {
+          "f15045cb7e57652546d4a0b2c695356f": "O que você vai comer?",
+          "937dc37c06cc5d89a7096eb048b73590": " chegando agora mesmo!"
+        },
+        "courseF_label_predict_-2022-2": {
+          "f15045cb7e57652546d4a0b2c695356f": "O que você vai comer?",
+          "937dc37c06cc5d89a7096eb048b73590": " chegando agora mesmo!"
+        },
+        "courseF_text_choice_interview": {
+          "34088af1fb721900963462375b3bbe23": "o robô!",
+          "5bd698afd23bccde289bb0b4aa72a518": "Dê um nome ao robô."
+        },
+        "courseF_text_choice_interview_-2022-2": {
+          "34088af1fb721900963462375b3bbe23": "o robô!",
+          "5bd698afd23bccde289bb0b4aa72a518": "Dê um nome ao robô."
         }
       }
     }

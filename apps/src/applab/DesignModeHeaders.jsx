@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import applabMsg from '@cdo/applab/locale';
 import msg from '@cdo/locale';
+import styleConstants from '@cdo/apps/styleConstants';
 import commonStyles from '../commonStyles';
 import color from '../util/color';
 import PaneHeader, {PaneButton, PaneSection} from '../templates/PaneHeader';
@@ -18,7 +19,7 @@ export default class DesignModeHeaders extends React.Component {
     isRtl: PropTypes.bool.isRequired,
     isRunning: PropTypes.bool.isRequired,
     showMakerToggle: PropTypes.bool.isRequired,
-    autogenerateML: PropTypes.func
+    autogenerateML: PropTypes.func,
   };
 
   onToggleToolbox = () => this.props.onToggleToolbox();
@@ -27,15 +28,20 @@ export default class DesignModeHeaders extends React.Component {
     const style = {
       display: 'inline-block',
       position: 'absolute',
+      padding: 0,
+      margin: 0,
       top: 0,
       left: 8,
-      lineHeight: '30px',
+      border: 'none',
+      boxShadow: 'none',
+      backgroundColor: 'transparent',
+      lineHeight: styleConstants['workspace-headers-height'] + 'px',
       fontSize: 18,
       cursor: 'pointer',
-      color: this.props.isRunning ? color.dark_charcoal : color.lighter_purple,
+      color: color.neutral_white,
       ':hover': {
-        color: color.white
-      }
+        color: color.neutral_dark20,
+      },
     };
 
     if (collapse) {
@@ -47,20 +53,26 @@ export default class DesignModeHeaders extends React.Component {
 
   hideToolboxIcon() {
     return (
-      <i
+      <button
+        className="hide-toolbox-icon"
+        type="button"
         style={[commonStyles.hidden, this.chevronStyle(true)]}
-        className="hide-toolbox-icon fa fa-chevron-circle-right"
         onClick={this.onToggleToolbox}
-      />
+      >
+        <i className="fa fa-chevron-circle-right" />
+      </button>
     );
   }
 
   showToolboxIcon() {
     return (
-      <i
+      <button
+        type="button"
         style={[commonStyles.hidden, this.chevronStyle(false)]}
-        className="show-toolbox-icon fa fa-chevron-circle-right"
-      />
+        className="show-toolbox-icon"
+      >
+        <i className="fa fa-chevron-circle-right" />
+      </button>
     );
   }
 
@@ -71,33 +83,33 @@ export default class DesignModeHeaders extends React.Component {
         justifyContent: 'space-between',
         width: 270,
         borderRight: '1px solid gray',
-        float: 'left'
+        float: 'left',
       },
       showToolboxHeader: {
         float: 'left',
         display: this.props.isToolboxVisible ? 'none' : 'flex',
         justifyContent: 'space-between',
-        paddingLeft: 10
+        paddingLeft: 10,
       },
       showToolboxClickable: {
         marginLeft: 18,
         ':hover': {
-          color: color.white
-        }
+          color: color.white,
+        },
       },
       iconContainer: {
         float: 'right',
         marginRight: 10,
         marginLeft: 10,
-        height: '100%'
+        height: '100%',
       },
       assetsIcon: {
         fontSize: 18,
-        verticalAlign: 'middle'
+        verticalAlign: 'middle',
       },
       runningVersionHistoryButton: {
-        color: color.dark_charcoal
-      }
+        color: color.dark_charcoal,
+      },
     };
 
     const hasFocus = !this.props.isRunning;

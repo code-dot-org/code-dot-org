@@ -72,7 +72,7 @@
         },
         "code/flappy/unversioned": {
           "word": "koduj",
-          "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
+          "definition": "(v) napisać kod lub instrukcje dla komputera."
         },
         "debugging/flappy/unversioned": {
           "word": "Debugowanie",
@@ -871,8 +871,7 @@
           "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
         },
         "parameter/csd/2022": {
-          "word": "Parametr",
-          "definition": "Dodatkowa informacja podana do funkcji, aby dostosować ją do konkretnej potrzeby"
+          "word": "Parametr"
         },
         "variable/csd/2022": {
           "word": "Zmienna",

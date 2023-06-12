@@ -12,7 +12,7 @@ export default function ReferenceGuideEditor(props) {
     referenceGuide: initialReferenceGuide,
     referenceGuides,
     updateUrl,
-    editAllUrl
+    editAllUrl,
   } = props;
   const [referenceGuide, setReferenceGuide] = useState(initialReferenceGuide);
   const [isSaving, setIsSaving] = useState(false);
@@ -28,9 +28,9 @@ export default function ReferenceGuideEditor(props) {
       method: 'PUT',
       headers: {
         'content-type': 'application/json',
-        'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
+        'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content'),
       },
-      body: JSON.stringify(referenceGuide)
+      body: JSON.stringify(referenceGuide),
     })
       .then(response => response.json())
       .then(json => {
@@ -88,7 +88,7 @@ export default function ReferenceGuideEditor(props) {
             const value = e.target.value === 'null' ? null : e.target.value;
             setReferenceGuide({
               ...referenceGuide,
-              parent_reference_guide_key: value
+              parent_reference_guide_key: value,
             });
           }}
         >
@@ -127,12 +127,12 @@ const referenceGuideShape = PropTypes.shape({
   course_version_name: PropTypes.string,
   parent_reference_guide_key: PropTypes.string,
   display_name: PropTypes.string,
-  content: PropTypes.string
+  content: PropTypes.string,
 });
 
 ReferenceGuideEditor.propTypes = {
   referenceGuide: referenceGuideShape.isRequired,
   referenceGuides: PropTypes.arrayOf(referenceGuideShape).isRequired,
   updateUrl: PropTypes.string.isRequired,
-  editAllUrl: PropTypes.string.isRequired
+  editAllUrl: PropTypes.string.isRequired,
 };

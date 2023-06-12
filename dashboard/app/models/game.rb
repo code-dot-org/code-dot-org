@@ -58,6 +58,7 @@ class Game < ApplicationRecord
   AILAB = 'ailab'.freeze
   JAVALAB = 'javalab'.freeze
   POETRY = 'poetry'.freeze
+  MUSIC = 'music'.freeze
 
   def self.bounce
     @@game_bounce ||= find_by_name("Bounce")
@@ -179,6 +180,10 @@ class Game < ApplicationRecord
     @@game_poetry ||= find_by_name('Poetry')
   end
 
+  def self.music
+    @@game_music ||= find_by_name('Music')
+  end
+
   def unplugged?
     app == UNPLUG
   end
@@ -228,6 +233,10 @@ class Game < ApplicationRecord
     [NETSIM, APPLAB, TEXT_COMPRESSION, GAMELAB, WEBLAB, DANCE, FISH, AILAB, JAVALAB].include? app
   end
 
+  def no_footer?
+    [MUSIC].include? app
+  end
+
   # True if the app takes responsibility for showing footer info
   def owns_footer_for_share?
     [APPLAB, WEBLAB].include? app
@@ -246,7 +255,7 @@ class Game < ApplicationRecord
   end
 
   def channel_backed?
-    [APPLAB, GAMELAB, WEBLAB, PIXELATION, SPRITELAB, JAVALAB, POETRY].include? app
+    [APPLAB, GAMELAB, WEBLAB, PIXELATION, SPRITELAB, JAVALAB, POETRY, MUSIC].include? app
   end
 
   # Format: name:app:intro_video
@@ -323,6 +332,7 @@ class Game < ApplicationRecord
     Ailab:ailab
     Javalab:javalab
     Poetry:poetry
+    Music:music
   )
 
   def self.setup

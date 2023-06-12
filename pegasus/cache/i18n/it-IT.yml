@@ -712,6 +712,7 @@ it-IT:
   video_title_chris_bosh: Chris Bosh a proposito dell'Informatica
   video_title_my_name_is_aracely: Mi chiamo Aracely
   video_title_change_face_of_cs: Cambia la faccia di Computer Science
+  video_title_latam_hoc: Ciò Che Manca Nelle Nostre Scuole
   video_1min: 1 min
   video_2min: 2 min
   video_3min: 3 min
@@ -771,7 +772,7 @@ it-IT:
   volunteer_engineer_submission_field_company: Società (o università)
   volunteer_engineer_submission_field_company_placeholder: Società (o università)
   volunteer_engineer_submission_field_experience_level: Livello di esperienza
-  volunteer_engineer_submission_field_location: Luogo
+  volunteer_engineer_submission_field_location: Posizione
   volunteer_engineer_submission_field_location_desc: Se si immette l'indirizzo esatto
     non lo condivideremo ma mostraremo solo una puntina sulla mappa.
   volunteer_engineer_submission_field_location_placeholder: CAP, città e nazione o
@@ -2369,10 +2370,10 @@ it-IT:
   header_tutorials: Corsi
   header_screen_reader_hamburger: Menu
   header_screen_reader_help: Menu Aiuto
-  app_lab_documentation: Documentazione dell'App Lab
-  app_lab_tutorials: Tutorial dell'App Lab
-  game_lab_documentation: Documentazione del Game Lab
-  game_lab_tutorials: Tutorial del Game Lab
+  app_lab_documentation: Documentazione di Sviluppo app
+  app_lab_tutorials: Tutorial di Sviluppo app
+  game_lab_documentation: Documentazione di Sviluppo Giochi
+  game_lab_tutorials: Tutorial di Sviluppo Giochi
   sprite_lab_documentation: Documentazione Sviluppo App
   sprite_lab_tutorials: Esercitazioni Sviluppo App
   header_documentation: Documentazione
@@ -2798,7 +2799,7 @@ it-IT:
     un problema nel mondo con la potenza dell'IA.
   ai_activity: Attività
   ai_description: Descrizione
-  ai_seeing_ai: Vedere l'IA
+  ai_seeing_ai: Vedere con l'IA
   ai_seeing_ai_description: Un'app gratuita che racconta il mondo che ti circonda
     in una varietà di lingue.
   ai_quick_draw: Veloce, disegna!
@@ -2827,6 +2828,7 @@ it-IT:
   ai_ecs: 'ECS: Intelligenza artificiale (AI)'
   ai_ecs_description: Una nuova unità di curriculum alternativa per il curriculum
     Exploring Computer Science (ECS).
+  ai_aiedu_intro: 'aiEDU: Introduzione all''Intelligenza Artificiale'
   ai_aiedu_intro_description: Intro to AI è un curriculum gratuito, innovativo e culturalmente
     rilevante in cui gli studenti sviluppano conoscenze concettuali su cos'è l'IA
     e come viene utilizzata nel mondo reale.
@@ -2866,7 +2868,10 @@ it-IT:
   try_it_yourself: Mettiti alla prova!
   try_an_activity: Prova un'attività
   see_more_activities: Prova altre attività
+  hoc2022_nasa_webb_alt_text: Illustrazione del telescopio James Webb della NASA
   hoc2022_nasa_banner_heading: Unitevi alla NASA per uno speciale Ora del Codice sull'informatica
     nello spazio!
   hoc2022_nasa_banner_description: In anteprima alle 10AM ET del 5 dicembre sul canale
     YouTube di NASA STEM.
+  hoc2022_nasa_banner_heading_posthoc: Dai un'occhiata alla funzionalità dell'Ora
+    di Codice speciale della NASA, sull'informatica nello spazio!

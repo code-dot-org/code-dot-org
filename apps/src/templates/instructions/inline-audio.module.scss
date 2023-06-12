@@ -8,13 +8,58 @@
   display: flex;
 
   .iconWrapper {
-    background-color: $lightest_purple;
+    background-color: $neutral_white;
+    color: $neutral_dark;
+    border: 2px solid $neutral_dark;
     cursor: pointer;
     float: left;
-    border: none;
     outline: none;
     width: 33px;
     box-sizing: border-box;
+
+    &Volume {
+      border-right: none;
+    }
+    &VolumeRounded {
+      border-right: 0;
+      border-radius: 4px 0 0 4px;
+    }
+
+    &PlayPause {
+      border-radius: 0 4px 4px 0;
+      border-left: none;
+    }
+
+    .buttonImg {
+      opacity: 1;
+      float: left;
+      padding-right: 8px;
+      padding-left: 8px;
+      color: $neutral_dark;
+
+      &Volume {
+        padding-left: 6px;
+      }
+    }
+  }
+
+  &:hover,
+  &:focus {
+    .iconWrapper {
+      background-color: $brand_primary_default;
+      border-color: $brand_primary_default;
+
+      i {
+        color: $neutral_white;
+      }
+    }
+  }
+}
+
+.inlineAudioButtonLegacy {
+  .iconWrapper {
+    background-color: $lightest_purple;
+    border-color: $lightest_purple;
 
     &Volume {
       border-radius: 4px 0 0 4px;
@@ -25,10 +70,6 @@
     }
 
     .buttonImg {
-      opacity: 1;
-      float: left;
-      padding-right: 8px;
-      padding-left: 8px;
       color: $dark_charcoal;
     }
   }

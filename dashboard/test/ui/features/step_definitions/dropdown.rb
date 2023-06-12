@@ -5,8 +5,8 @@ end
 And /^I press dropdown number (\d+)$/ do |n|
   dropdown_class = google_blockly? ? 'blocklyDropdownText' : 'blocklyText'
   text = @browser.find_elements(:class, dropdown_class)[n.to_i]
-  if @browser.browser == :Safari
-    # Safari has an issue detecting SVG elements as interactive.
+  if @browser.browser == :safari && !@browser.capabilities['mobile']
+    # Desktop (but not mobile) Safari has an issue detecting SVG elements as interactive.
     # Click mouse in element location using Actions API as a workaround.
     @browser.action.move_to(text).click.perform
   else
@@ -15,9 +15,10 @@ And /^I press dropdown number (\d+)$/ do |n|
 end
 
 Then /^the dropdown is (.*)$/ do |visibility|
-  if visibility == "visible"
+  case visibility
+  when "visible"
     expected = 'block'
-  elsif visibility == "hidden"
+  when "hidden"
     expected = 'none'
   else
     raise "unexpected visibility"

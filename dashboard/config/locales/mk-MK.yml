@@ -81,4 +81,7 @@ mk:
       subjects:
         cs: Компјутерски науки
         math: Математика
+  course_offering:
+    headers:
+      csf: Основи на CS
   copy: копирај

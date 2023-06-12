@@ -50,6 +50,9 @@
           },
           "jump to middle": {
             "name": "ortaya tullan"
+          },
+          "draw cord": {
+            "name": "draw cord"
           }
         },
         "2-3 Artist Debugging 5": {
@@ -3280,6 +3283,12 @@
         "course3_bee_functions_challenge4": {
           "move and check": {
             "name": "hərəkət et və yoxla"
+          },
+          "check nectar or honey": {
+            "name": "nektar və ya bal yoxlayın"
+          },
+          "row of nectar": {
+            "name": "nektar sırası"
           }
         },
         "course3_playLab_challenge1": {
@@ -3559,21 +3568,33 @@
         "courseF_bee_conditionals2": {
           "move and check": {
             "name": "hərəkət et və yoxla"
+          },
+          "check nectar or honey": {
+            "name": "nektar və ya bal yoxlayın"
           }
         },
         "courseF_bee_functions4": {
           "move and check": {
             "name": "hərəkət et və yoxla"
+          },
+          "check nectar or honey": {
+            "name": "nektar və ya bal yoxlayın"
           }
         },
         "courseF_bee_functions5a": {
           "move and check": {
             "name": "hərəkət et və yoxla"
+          },
+          "check nectar or honey": {
+            "name": "nektar və ya bal yoxlayın"
           }
         },
         "courseF_bee_functions_challenge2": {
           "move and check": {
             "name": "hərəkət et və yoxla"
+          },
+          "check nectar or honey": {
+            "name": "nektar və ya bal yoxlayın"
           }
         },
         "New Minecraft Hero Project": {
@@ -4236,6 +4257,37 @@
           },
           "draw 5 hexagons": {
             "name": "5 altıbucaqlı çək"
+          }
+        },
+        "2-3 Bee Functions 4": {
+          "move and get nectar": {
+            "name": "hərəkət et və nektar al"
+          }
+        },
+        "course3_bee_functions_challenge3": {
+          "check nectar or honey": {
+            "name": "nektar və ya bal yoxlayın"
+          },
+          "row of nectar": {
+            "name": "nektar sırası"
+          }
+        },
+        "courseE_bee_functions4": {
+          "move and get nectar": {
+            "name": "hərəkət et və nektar al"
+          }
+        },
+        "courseF_bee_functions3a": {
+          "check nectar or honey": {
+            "name": "nektar və ya bal yoxlayın"
+          }
+        },
+        "courseF_bee_functions_challenge1": {
+          "row of nectar": {
+            "name": "nektar sırası"
+          },
+          "check nectar or honey": {
+            "name": "nektar və ya bal yoxlayın"
           }
         }
       }

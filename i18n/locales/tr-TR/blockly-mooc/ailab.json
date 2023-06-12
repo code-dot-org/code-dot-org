@@ -5,5 +5,11 @@
   "dataDisplayLabel": "Tahmin etmek için bir sütun seçin.",
   "dataDisplayFeatures": "Tahminin yapılmasına yardımcı olması için girdi olarak bir veya daha fazla sütun seçin.",
   "selectedFeatureNumerical": "Az önce sayısal bir özellik seçtiniz.",
-  "selectedFeatureCategorical": "Az önce kategorik bir özellik seçtiniz."
+  "selectedFeatureCategorical": "Az önce kategorik bir özellik seçtiniz.",
+  "trainModel": "Modeliniz eğitiliyor.",
+  "generateResults": "Modeliniz test ediliyor.",
+  "results": "Sonuçları gözden geçirin.",
+  "resultsDetails": "Sonuçların detayları gösteriliyor.",
+  "saveModel": "Eğitilen modeli Uygulama Laboratuvarı'nda kullanmak üzere kaydedin.",
+  "modelSummary": "Modelinizi başarıyla eğittiniz ve kaydettiniz.  Model ayrıntılarınızı gözden geçirin ve eğitilmiş modelinizi Uygulama Laboratuvarı'nda kullanmak için Bitir'e tıklayın."
 }

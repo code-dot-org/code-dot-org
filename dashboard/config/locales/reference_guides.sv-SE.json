@@ -62,6 +62,9 @@
         "csd-2022/variables": {
           "display_name": "variabler"
         },
+        "csd-2022/web-lab": {
+          "display_name": "Web Lab"
+        },
         "csd-2022/which-type-of-chart": {
           "content": "![](https://curriculum.code.org/media/uploads/Screenshot-2020-02-27-at-10.56.17-PM.png)"
         }

@@ -642,29 +642,29 @@ es-ES:
           de manera diferente dependiendo cuál botón esta presionado.\n"
       Building a UI with Design Mode:
         markdown: |
-          # Bienvenidos al modo de diseño de Laboratorio de aplicaciones
-          En Laboratorio de aplicaciones, el "Modo de diseño" te permite arrastrar y soltar elementos de la interfaz de usuario en la aplicación.
+          # Bienvenido al Modo Diseño de Laboratorio de Aplicaciones
+          En Laboratorio de Aplicaciones "Modo de Diseño" te permite arrastrar y soltar elementos de interfaz de usuario en la aplicación.
 
           ### Vocabulario
-          **Interfaz de usuario (IU)**: La "Interfaz de usuario" o **IU** de una aplicación se refiere a cómo una persona (usuario) interactúa con la computadora o la aplicación. Existen patrones comunes para las interfaces de usuario que probablemente conozcas solo por experiencia:
+          **Interfaz de Usuario (UI)** - La "Interfaz de Usuario" o **UI** de una aplicación se refiere a cómo una persona (usuario) interactúa con el ordenador o la aplicación.  Hay patrones comunes a las interfaces de usuario que probablemente conozcas por experiencia:
 
-          * **Elementos u objetos de IU**, como botones, imágenes, cuadros de texto, menús desplegables, pantallas, etc.
-          * **Eventos o controles de IU**, como *hacer clic*, *desplazarse*, *mover mouse*, *tipear tecla de teclado*, etc.
+          * **Elementos UI** u objetos, como botones, imágenes, cajas de texto, menús desplegables, pantallas y demás.
+          * **Eventos UI** o controles, como *click*, *scroll*, *mover ratón*, *teclear*, etc.
 
-          Laboratorio de aplicaciones te permite agregar fácilmente elementos de IU a tu aplicación y luego agregar código para responder cuando un usuario interactúa con esos elementos. Es una especie de proceso de dos pasos, pero aprenderemos todo al respecto en esta lección.
+          Laboratorio de Aplicaciones te permite añadir fácilmente elementos de interfaz de usuario a tu aplicación, y luego añadir código para responder cuando un usuario interactúa con esos elementos.  Es un proceso de dos pasos, pero lo aprenderemos todo en esta lección.
 
-          Para comenzar, solo veamos el Modo de diseño y agreguemos un solo elemento de interfaz de usuario (un botón) a nuestra aplicación. Agregaremos código más adelante.
+          Para empezar, veamos el Modo Diseño y añadamos un único elemento de interfaz de usuario (un botón) a nuestra aplicación.  Añadiremos código más adelante.
 
           <div style="column-count: 4; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 3; width: 100%">
 
           <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">1.</span>
-          Verás un nuevo conjunto de interruptores sobre el área de la aplicación que te permite alternar entre "Modo de diseño" y "Modo de código".</p>
+          Verás un nuevo conjunto de botones sobre el área de la aplicación que te permiten alternar entre el "Modo Diseño" y el "Modo Código".</p>
 
-          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">2.</span>Agregar un elemento es tan fácil como arrastrarlo y soltarlo en la aplicación donde lo deseed. Una vez que está en la pantalla de la aplicación, puedes cambiar su posición, cambiar su tamaño y cambiar muchas otras propiedades al respecto. </p>
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">2.</span>Añadir un elemento es tan fácil como arrastrarlo y soltarlo en la aplicación donde quieras. Una vez en la pantalla de la aplicación, puedes cambiar su posición, su tamaño y muchas otras propiedades. </p>
 
-          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">3.</span>La pestaña <em>Propiedades</em> muestra todo lo que puedes cambiar sobre el aspecto de un elemento de la interfaz de usuario.</p>
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">3.</span>La <em>Pestaña</em> de Propiedades te muestra todo lo que puedes cambiar sobre el aspecto de un elemento de la interfaz de usuario.</p>
 
-          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">4.</span>La <strong>ID del elemento</strong> es importante, porque es cómo refieres al elemento en tu código. Discutiremos las ID de elementos más adelante.</p>
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">4.</span>El <strong>ID del elemento</strong> es importante porque es la forma de referirse al elemento en el código. Hablaremos de los ID de los elementos más adelante.</p>
           </div>
 
           ![](https://images.code.org/01a31ac3be66deb6d01a92a1edfffd21-image-1476726587662.png)
@@ -672,19 +672,19 @@ es-ES:
 
           <div style="column-count: 2; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 3; width: 66%; float: right">
 
-          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">5.</span>Puedes hacer que el texto que ve el usuario en el texto del botón sea lo que quieras.</p>
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">5.</span>Puedes hacer que el texto que el usuario vea en el botón sea el que tú quieras.</p>
 
-          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">6.</span><strong>Nota:</strong>Desplázate hacia abajo para ver otras propiedades, porque un elemento de la interfaz de usuario podría estar "oculto".</p>
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">6.</span><strong>Nota:</strong> Desplázate hacia abajo para ver otras propiedades de un elemento de interfaz de usuario que podría estar "oculto" más abajo.</p>
           </div>
 
           <div style="clear: both"></div>
           <hr>
 
-          **¡Ahora inténtalo tú!**
+          **¡Ahora inténtalo!**
         teacher_markdown: |
-          ###Primero Diseña
+          ### Primero el diseño
 
-          Algunos estudiantes pueden tener la tentación de comenzar a jugar en el Modo Código desde el principio, pero para esta lección nos centraremos únicamente en bosquejar una Interfaz de Usuario. Hágales saber a los estudiantes que llegarán al código pronto. Estos primeros niveles permitirán a los estudiantes construir una pantalla de su propio diseño utilizando todos los elementos disponibles en App Lab sin preocuparse por la aplicación en si que están creando.
+          Algunos alumnos pueden tener la tentación de empezar a trabajar con el Modo Código desde el principio, pero en esta lección nos vamos a centrar únicamente en la creación de una Interfaz de Usuario. Diles que pronto llegarán al código. Estos primeros niveles permitirán a los estudiantes construir una pantalla de su propio diseño utilizando todos los elementos disponibles en el Laboratorio de Aplicaciones sin preocuparse por la aplicación real que están creando.
       CSD - Getters and Setters:
         markdown: |
           # Getters y Setters
@@ -3376,35 +3376,35 @@ es-ES:
           *\"rgb(255,0,0)\"*\n\n<img src=\"https://images.code.org/43291bf1c067145771bf88a147d74d26-image-1480538343306.png\"
           style=\"display: block; margin: auto\">\n"
       Choosing Good IDs:
-        markdown: "# Elegir buenas identificaciones\n\n**Las buenas ID** son ** significativas
-          y descriptivas**.\n\nAl igual que deseas buenos nombres para las funciones,
-          querrás una identificación para describir el propósito previsto del elemento.\n\nPor
-          ejemplo, si tiene muchos botones en tu programa, querrás dar a cada uno
-          una identificación que describa lo que hace el botón.\n\nEntonces, en lugar
-          de esto:\n \n * `botón1` y` botón2`\n\nPuedes crear identificaciones que
-          transmitan no solo que se trata de un botón, sino para qué deseas que se
-          use el botón, como:\n\n * `BotónInicio` y `BotónGuardar` o\n * `InicioBotón`
-          y `GuardarBotón` o\n * `BtnInicio` y `BtnGuardar`\n * ¡Tú decides!\n\n<img
-          src = \"https://images.code.org/b33be9ee1521f2aa80fedcf22c929d44-image-1476910499958.png\"
-          style = \"display: block; margin: auto;\">\n\n# Reglas sobre ID\nAl hacer
-          identificaciones descriptivas y significativas, **hay algunas reglas sobre
-          identificaciones** que necesita saber. ID ...\n\n* distinguen entre mayúsculas
-          y minúsculas.\n* no pueden contener espacios.\n* * deben * comenzar con
-          una letra (A-Z o a-z) y pueden estar seguidas por cualquier número de dígitos
-          y letras.\n* pueden contener guiones (\"-\"), guiones bajos (\"_\"), dos
-          puntos (\":\") o puntos (\".\").\n\n**¿Distingue entre mayúsculas y minúsculas?**\n\nEsto
-          significa que hay una diferencia entre `BotónInicio` y `botónInicio` (observa
-          la B mayúscula en el primero).\n\nEstas diferencias parecen molestas al
-          principio, pero te acostumbras a ellas y realmente aprecias el hecho de
-          que la computadora requiera tanta precisión.\n\nExisten algunos estilos
-          comunes para usar mayúsculas y deletrear ID de varias palabras:\n\n* **\"Camelcase\"**:
-          `unNombreCamelcasePodríaLucirAsí`\n* **Guiones bajos**: `Algunas_Personas_Prefieren_Usar_Guiones_Bajos_Para_Separar_Palabras`\n*
-          **guiones**: `Otras_Prefieren_Guiones_O_Rayas'\n\nLo que elijas depende
-          de ti. Es tu estilo. Simplemente ayuda a ser consistente.\n\n\n\n\n"
-        teacher_markdown: |-
-          #### Desarrollando Buenos Habitos de Programacion
+        markdown: "# Eligiendo buenos IDs\n\n**Los buenos ID** son **significativos
+          y descriptivos**.\n\nAl igual que quieres buenos nombres para las funciones,
+          querrás un ID que describa el propósito del elemento.  \n\nPor ejemplo,
+          si tienes muchos botones en tu programa, querrás dar a cada uno un ID que
+          describa lo que hace el botón. \n\nAsí, en lugar de esto:\n \n * `botón1`
+          y `botón2`\n\nPodrías hacer IDs que transmitan no sólo que es un botón sino
+          para qué pretendes que se use el botón, como:\n\n * `inicioBotón` y `guardarBotón`
+          o\n * `botónInicio` y `botónGuardar` o\n * `inicioBtn` y `guardarBtn`.\n
+          * ¡depende de ti!\n\n<img src=\"https://images.code.org/b33be9ee1521f2aa80fedcf22c929d44-image-1476910499958.png\"
+          style=\"display: block; margin: auto;\">\n\n# Reglas sobre IDs\nAl hacer
+          IDs descriptivos y significativos hay **algunas reglas sobre IDs** que necesitas
+          saber.  Los IDs...\n\n* distinguen entre mayúsculas y minúsculas.\n* No
+          pueden contener espacios.\n* Deben empezar por una letra (A-Z o a-z) y pueden
+          ir seguidos de cualquier número de dígitos y letras.\n* Pueden contener
+          guiones (\"-\"), guiones bajos (\"_\"), dos puntos (\":\") o puntos (\".\").\n\n**¿Se
+          distingue entre mayúsculas y minúsculas?\n\nEsto significa que hay una diferencia
+          entre `BotónInicio` y `botónInicio` (fíjate en la B mayúscula del primero).\n\nEstas
+          diferencias parecen molestas al principio, pero uno se acostumbra y aprecia
+          el hecho de que el ordenador exija tanta precisión.\n\nHay algunos estilos
+          comunes para escribir en mayúsculas y minúsculas los ID de varias palabras:\n\n*
+          **\"Camelcase \"** -- \"unNombreCamelcasePuedeSerAsí\".\n* **Guiones bajos**
+          -- \"A_algunas_personas_les_gusta_usar_guiones_bajos_para_separar_palabras\".\n*
+          **Guiones** -- \"A-otros-les-gusta-usar-divisiones-o-guiones\".\n\nLo que
+          elijas depende de ti.  Es tu estilo.  Sólo ayuda a ser coherente.\n\n\n\n\n"
+        teacher_markdown: |+
+          #### Desarrollar Buenos Hábitos de Programación
 
-          Seguir convenciones de nomenclatura claras y consistentes es un hábito importante a desarrollar, pero los beneficios rara vez son inmediatamente obvios para los estudiantes. Realmente vale la pena a largo plazo ser riguroso en bien nombrados ID, particularmente porque le ayudara a mantener la cordura cuando llegue el momento de leer los programas de sus estudiantes, pero también simplificará el proceso de combinar la pantalla de cada estudiante en un aplicación de todo el equipo.
+          Seguir unas convenciones de nomenclatura claras y consistentes es un hábito importante que hay que desarrollar, pero los beneficios rara vez son percibidos inmediatamente por los alumnos. Realmente vale la pena a largo plazo ser riguroso con los ID bien nombrados, sobre todo porque te permitirá mejorar tu propio entendimiento cuando llegue el momento de leer los programas de tus alumnos, pero también simplificará el proceso de combinar la pantalla de cada alumno en una aplicación de equipo completa.
+
       Dance_Party_extras_intro:
         markdown: "# ¡Sigamos bailando!\n\nPara la parte 2, vas a crear tu propio
           proyecto. Aquí no hay desafíos, sino muchos proyectos que muestran diferentes
@@ -4016,26 +4016,25 @@ es-ES:
           Para simplificar el proceso de creación de prototipos, los equipos pueden pensar en cada tarjeta que crearon en el Prototipo en Papel como una pantalla separada en la repetición de su aplicación en el Laboratorio de Aplicaciones. En realidad, las pantallas que son muy similares, a menudo se pueden desarrollar como una sola pantalla con contenido que cambia en función de la intervención del usuario. En la próxima lección los alumnos verán algunos ejemplos de cómo podría funcionar eso, pero no se espera que incorporen ese tipo de funcionalidad en este proyecto.
       New Challenge Introduction:
         content1: descripción aquí
-        markdown: "### Nuevo desafío: descifrar un cifrado de sustitución aleatoria...
-          con un nuevo widget\n\n¿Qué pasaría si, en lugar de desplazar todo el alfabeto,
-          asignamos a cada letra del alfabeto otra letra al azar? Esto se llama cifrado
-          de sustitución aleatoria.**\n\n![](https://images.code.org/7837e7fef2f38659f4bf51a29b6dc4d3-image-1473863470440.gif)\n\nAhora,
-          en lugar de codificar el mensaje secreto con un desplazamiento alfabético
-          simple, verás mensajes codificados con **sustitución aleatoria**.\n\n\nEsto
+        markdown: "### Nuevo Desafío: Descifrar un Cifrado de Sustitución Aleatoria...
+          con un nuevo widget\n\n¿Qué pasaría si en lugar de desplazar todo el alfabeto,
+          mapeáramos cada letra del alfabeto a una letra diferente aleatoria del alfabeto?
+          Esto se llama **cifrado de sustitución aleatoria.**\n\n![](https://images.code.org/7837e7fef2f38659f4bf51a29b6dc4d3-image-1473863470440.gif)\n\nAhora,
+          en lugar de codificar el mensaje secreto con un simple desplazamiento alfabético,
+          te enfrentarás a mensajes codificados con **sustitución aleatoria**.  \n\n\n\nEsto
           es mucho más difícil de descifrar y requiere una herramienta más sofisticada,
-          así que...\n\nCuando hagas clic en continuar, verás una **versión nueva
-          y más sofisticada de la herramienta de cifrado** que te muestra muchas cosas
-          diferentes.\n\n¡Pero lo que hace es un misterio!\n\n### Tu tarea:\n\n *
-          Descubrir qué está pasando en esta nueva versión de la herramienta\n * ¿Qué
-          información te presenta?\n * Descubrir qué te permite hacer la herramienta\n
-          * Como siempre: no puedes adivinar. Así que haz clic en las cosas e investiga.\n
-          * Si lo descubres, es posible que puedas descifrar un mensaje codificado
-          con sustitución aleatoria.\n \n### Te damos una pista\n\n* ¿Sabías que la
-          letra **E** es la más utilizada en el idioma inglés?\n\n### Volver a reunirse
-          y debatir\nDespués de jugar un tiempo con la herramienta, debes reunirte
-          con alguien (un compañero, un grupo pequeño o toda la clase) para conversar
-          sobre lo que encontraste y verificar que conoces lo que está sucediendo
-          y las diversas formas en que puedes usar la herramienta.\n\n\n"
+          así que...\n\nCuando hagas clic en continuar, verás una **nueva y más sofisticada
+          versión de la herramienta de encriptación** que te muestra un montón de
+          cosas diferentes.\n\nPero lo que hace es un poco misterioso.  \n\n### Tu
+          Tarea:\n\n * Averiguar qué está pasando en esta nueva versión de la herramienta.\n
+          * ¿Qué información se te presenta?\n * Averigua qué te permite hacer la
+          herramienta\n * Como siempre: no puedes romperla.  Así que haz clic en las
+          cosas, curiosea.\n * Si lo averiguas podrías ser capaz de descifrar un mensaje
+          codificado con sustitución aleatoria.\n \n### Pista\n\n* ¿Sabías que **E**
+          es la letra más común usada en inglés?\n\n### Convocatoria y Debate\n Después
+          de un rato jugando, deberías reunirte con alguien -compañero, pequeño grupo,
+          toda la clase- para comentar lo que has descubierto y verificar que sabes
+          lo que ocurre y las distintas formas en que puedes utilizar la herramienta.\n\n\n"
       OPD-K5 About:
         markdown: |
           # Primeros pasos: sobre este curso
@@ -6111,9 +6110,9 @@ es-ES:
           ¡Es hora de presentar tus proyectos! Tu profesor te dará más detalles sobre cómo vas a presentar tu trabajo a tus compañeros.
       Responding to User Input:
         markdown: |+
-          # Responder a la entrada del usuario
+          # Respondiendo a la Entrada del Usuario
 
-          El Modo de diseño hace que sea muy fácil diseñar la interfaz de usuario para su aplicación, pero necesitaremos sumergirnos en el Modo de código para que realmente responda a los usuarios.
+          El Modo Diseño hace que sea muy fácil diseñar la interfaz de usuario para su aplicación, pero necesitaremos sumergirnos en el Modo de código para que realmente responda a los usuarios.
 
           En Laboratorio de juegos, el bucle Dibujar solo ejecutaba código constantemente, usando condicionales para verificar las interacciones del usuario. Laboratorio de aplicaciones, por otro lado, espera responder a ciertos **eventos** que ocurren en un programa. Es la forma en que Laboratorio de aplicaciones dice "¡Oye! ¡Algo sucedió!". Esto significa que no es necesario que se ejecute ningún código cuando no interactúas directamente con una aplicación, y tu código puede responder a cada uno de estos eventos a medida que ocurren.
 
@@ -6145,7 +6144,7 @@ es-ES:
 
           ### Cambio de pantallas con un "clic"
 
-          En la programación dirigida por eventos, es importante comprender que:
+          En la programación dirigida a eventos, es importante comprender que:
 
           * **Los usuarios activan eventos**: los eventos ocurren cuando los usuarios hacen clic en un botón, tocan la pantalla, mueven el mouse, escriben una tecla en el teclado, etc.
           * **Código de activación de eventos**: cuando se produce un evento o se "dispara", se puede utilizar para activar una función de JavaScript en particular.
@@ -11005,8 +11004,8 @@ es-ES:
           feedback: Incorrecto. Laurel trata de recoger el tesoro donde no lo hay,
             y esto provoca un error.
         questions:
-        - text: Observa este código con atención. ¿Qué crees que ocurrirá cuando se
-            ejecute el programa?
+        - text: Observa este código cuidadosamente. ¿Qué crees que ocurrirá cuando
+            ejecutes el programa?
       CourseF_outbreak_story:
         content1: descripción aquí
         markdown: "El Brote: Codifica tu Propia Simulación\n\n## ¡Bienvenido a Monster
@@ -15403,9 +15402,9 @@ es-ES:
         description: Prueba estos nuevos bloques y desafíos con la entrada del ratón.
         display_name: Desafíos del Ratón
       CSD web mouse practice choice_2022:
-        description: Practica la entrada de teclado y el uso del bloque if/else con
-          estas actividades.
         display_name: Entrada de Ratón y Práctica de If/else
+        description: Practica la introducción de datos con el teclado y el uso de
+          sentencias condicionales con estas actividades.
       CSD web movement challenge choice_2022:
         description: Añade más a tu escena de peces o crea algo nuevo.
         display_name: Desafíos de Movimiento de Sprite
@@ -16845,7 +16844,7 @@ es-ES:
         - text: No estoy seguro de qué es esto
           correct: true
         questions:
-        - text: Programación Informática
+        - text: Programación de Ordenadores
       csd-post-survey-2018-topic-robotics:
         answers:
         - text: Sí
@@ -17245,7 +17244,7 @@ es-ES:
       csd-post-survey-unit4-preamble:
         content1: descripción aquí
         markdown: |
-          # Unidad 4: El proceso de Diseño
+          # Unidad 4: El Proceso de Diseño
 
           ![](https://images.code.org/d3c87c83a8c190d86951169c5b9b6c6d-image-1526918019889.png)
       csd-post-survey-unit5-preamble:
@@ -25286,21 +25285,18 @@ es-ES:
       courseC_multi_maze_debugging8_predict12022:
         answers:
         - text: Scrat llegará a la bellota. No hay errores en el código.
-          feedback: Incorrecto. Primero, Scrat gira en la dirección equivocada, luego
-            Scrat no avanza las veces suficientes para alcanzar la bellota.
+          feedback: Incorrecto. Scrat no llegará a la bellota porque gira hacia el
+            lado equivocado.
         - text: Scrat no llegará a la bellota porque gira en sentido equivocado.
           correct: true
-          feedback: "¡Correcto! Primero, Scrat gira en la dirección equivocada, luego
-            Scrat no avanza las veces suficientes para alcanzar la bellota."
+          feedback: "¡Correcto! Scrat gira en la dirección equivocada y no alcanzará
+            la bellota."
         - text: Scrat no llegará a la bellota porque no hay suficientes bloques de
             "avance".
-          correct: true
-          feedback: "¡Correcto! Primero, Scrat gira en la dirección equivocada, luego
-            Scrat no avanza las veces suficientes para alcanzar la bellota."
+          feedback: Incorrecto. Scrat no llegará a la bellota porque gira hacia el
+            lado equivocado.
         - text: Scrat no se moverá del primer bloque.
-          feedback: Hay dos errores en este código. En primer lugar, Scrat gira en
-            la dirección equivocada y a continuación, Scrat no se mueve hacia adelante
-            suficientes veces para llegar a la bellota.
+          feedback: Scrat no llegará a la bellota porque gira en sentido equivocado.
         questions:
         - text: Busca errores en este código. ¿Llegará Scrat a la bellota o hay algún
             problema?
@@ -25929,8 +25925,7 @@ es-ES:
           Una vez que hayas decidido un tipo de juego con tu compañero, rellena la Guía de Proyecto con los fondos, variables, sprites y funciones que necesitarás para hacer el juego. Pasarás los siguientes niveles creando tu juego.
       CSD U3 - Interactive Card - ExampleChoice_2022:
         description: En los próximos niveles, completarás tu propia tarjeta interactiva.
-          Aquí tienes algunos ejemplos para darte algunas ideas. No olvides mirar
-          el código para ver cómo funcionan.
+          Aquí tienes algunos ejemplos para darte algunas ideas.
         display_name: Tu Tarjeta Interactiva
       Student End of Unit Survey - Intro+TeacherMD_csd2-2022:
         teacher_markdown: |
@@ -26436,3 +26431,35 @@ es-ES:
 
           Esta es una segunda muestra de un texto de instrucciones que está almacenado en un archivo .external.  Aquí hay un poco de texto extra para que podamos obtener un poco de ajuste de líneas cuando veamos esto en nuestro LevelGroup que utilizará esto para mostrar algunas instrucciones entre los niveles regulares incrustados.
 
+      Test Contained Retriable Multi:
+        answers:
+        - text: '0'
+          feedback: No, eso es 1 - 1.
+        - text: '1'
+          feedback: No, eso es 1 x 1.
+        - text: '2'
+          correct: true
+          feedback: "¡Sí, eres un genio!"
+        - text: '4'
+          feedback: No, eso no es ni de lejos.
+        content1: Aquí hay algo de información.
+        markdown: 'Prueba **markdown** _aquí_
+
+'
+        questions:
+        - text: "¿Cuánto es 1 + 1?"
+        title: Contenido Multi
+      test-single-multi-standalone-retriable:
+        answers:
+        - text: No sucederá nada.
+          feedback: Incorrecto. La planta rodadora comenzará a dar vueltas
+        - text: La planta rodadora flotará hasta la parte superior de la pantalla
+          feedback: Incorrecto. La planta rodadora comenzará a dar vueltas
+        - text: La planta rodadora comenzará a caer
+          correct: true
+          feedback: "¡Correcto!"
+        - text: La planta rodadora se encenderá y apagará.
+          feedback: Incorrecto. La planta rodadora comenzará a dar vueltas
+        questions:
+        - text: Mira el siguiente código con atención. ¿Qué sucederá cuando hagas
+            clic en "Ejecutar"?

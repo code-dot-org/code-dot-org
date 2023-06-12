@@ -1149,6 +1149,19 @@ ga:
             '"x"': x
             '"y"': 'y'
             '"z"': z
+      gamelab_layoutSprites:
+        text: leag gach {GROUP} amach {FORMAT}
+        options:
+          FORMAT:
+            '"border"': ar an imeall
+            '"circle"': i gciorcal
+            '"grid"': i ngreille
+            '"top"': ina líne ag an mbarr
+            '"row"': ina ró
+            '"bottom"': ina líne ag an mbun
+            '"left"': i gcolún ar chlé
+            '"column"': ina gcolún
+            '"right"': i gcolún ar dheis
       gamelab_locationAt:
         text: 'ionad x: {X} y: {Y}'
       gamelab_locationMouse:
@@ -1163,6 +1176,18 @@ ga:
             '"rain"': báisteach
       gamelab_makeNewSpriteAnon:
         text: déan sprid nua {ANIMATION_NAME} {LOCATION}
+      gamelab_makeNewSpriteGroup:
+        options:
+          FORMAT:
+            '"border"': ar an imeall
+            '"circle"': i gciorcal
+            '"grid"': i ngreille
+            '"top"': ina líne ag an mbarr
+            '"row"': ina ró
+            '"bottom"': ina líne ag an mbun
+            '"left"': i gcolún ar chlé
+            '"column"': ina gcolún
+            '"right"': i gcolún ar dheis
       gamelab_makeProjectile:
         options:
           DIRECTION:
@@ -1356,6 +1381,8 @@ ga:
         text: comhordanáid x de {SPRITE}
       gamelab_yLocationOf:
         text: comhordanáid y de {SPRITE}
+      KatiesBlocks_tumbling:
+        text: rothlam
       Mikelab_addBehaviorSimple:
         text: nuair a thosaíonn {SPRITE} {BEHAVIOR}
       Mikelab_addTrainingData:
@@ -1738,6 +1765,13 @@ ga:
             '0.75': most
             '0.5': half of
             '0.25': few
+      adaptations_adaptationBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): casadh ar deiseal
+            new Behavior(jittering, []): crith
+            new Behavior(wandering, []): fánaíocht
+            new Behavior(patrolling, []): patrólú
       binary_drawPixelHere:
         options:
           VAL:
@@ -1855,6 +1889,20 @@ ga:
           DIR:
             right: ar deiseal ↻
             left: ar tuathal ↺
+      ecosystems_int10:
+        options:
+          VALUE:
+            '0': '0'
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       storylab_setForegroundEffect2:
         options:
           EFFECT:
@@ -1863,5 +1911,3 @@ ga:
             '"hearts"': croíthe
             '"rain"': báisteach
             '"starburst"': Pléascadh Réaltaí
-      validation_validatedBackground:
-        text: 'socraigh an cúlra: {IMG}'

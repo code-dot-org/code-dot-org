@@ -399,9 +399,9 @@ fr:
       'Video: Code Your Own Flappy Game': 'Vidéo : Code ton propre jeu Flappy'
       'Video: Conditional Statements': 'Vidéo : Instructions conditionnelles'
       'Video: Conditionals': 'Vidéo : Instructions conditionnelles'
-      'Video: Conditionals: If Statements': 'Vidéo : Formules conditionnelles : Les
-        indications « Si »'
-      'Video: Conditionals: If and If/Else Statements': 'Vidéo : Formules conditionnelles :
+      'Video: Conditionals: If Statements': 'Vidéo : Instructions conditionnelles :
+        Les indications « Si »'
+      'Video: Conditionals: If and If/Else Statements': 'Vidéo : Instructions conditionnelles :
         Indications « Si » et « Si/Sinon »'
       'Video: Dance Party Events': 'Vidéo : Événements – Soirée Dansante'
       'Video: Dance Party Measures': 'Vidéo : Mesures – Soirée Dansante'
@@ -422,7 +422,8 @@ fr:
       'Video: For Loops': 'Video: Les Boucles « Pour »'
       'Video: Functions': 'Vidéo: Les Fonctions'
       'Video: Getting Loopy': 'Vidéo : Affaire bouclée'
-      'Video: Happy Maps - Unplugged Activity': 'Vidéo : Happy Maps - Activité déconnectée'
+      'Video: Happy Maps - Unplugged Activity': 'Vidéo : Cartes Joyeuses - Activité
+        déconnectée'
       'Video: Harvesting with Conditionals': 'Vidéo : Récolter avec les Conditions'
       'Video: How to Create a Simple Function': 'Vidéo : Comment créer une fonction
         simple'
@@ -503,7 +504,7 @@ fr:
       'Video: While Loops with the Farmer': " Vidéo : Les Boucles Tant Que avec la
         Fermière"
       'Video: Wrap-up': 'Vidéo : Conclusion '
-      Warm Up: Warm-up (Séance d’échauffement)
+      Warm Up: Séance d’échauffement
       Website Project: Projet de site Web
       Welcome to Monster Town: Bienvenue à Monstreville
       Where'd They Go?: Is sont passés où ?

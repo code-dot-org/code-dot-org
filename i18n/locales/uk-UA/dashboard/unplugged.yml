@@ -275,6 +275,8 @@ uk:
         desc: Учні створюють браслети як двійкове представлення перших літер свого імені. Учні дізнаються, що дані можна представляти та зберігати більш, ніж одним способом.
       MoveItMoveIt_2018:
         title: Рухайся, рухайся
+      courseE_unplugged_CnC_2018:
+        title: Обмін та поширення онлайн
       RelayProgramming_2018:
         title: Естафетне програмування
       courseB_unplugged_MRF_2019:
@@ -309,10 +311,12 @@ uk:
         title: Двійкові зображення
         desc: Хоча багато людей сприймає двійкову систему строго як одиниці та нулі, наші попередні вправи продемонстрували, що різноманітну інформацію можна представити різними варіантами двійкового подання. У цій вправі ми просунемося далі, показавши, як комп'ютер може зберігати складніші дані (зображення та кольори) також у двійковому форматі.
       courseE_unplugged_privateInformation_2019:
-        title: Приватна та Особиста інформація
+        title: Приватна та особиста інформація
       SongwritingParameters_2019:
         title: 'переклад відсутній: en-US.data.unplugged.SongwritingParameters_2018.title'
         desc: 'переклад відсутній: en-US.data.unplugged.SongwritingParameters_2018.desc'
+      courseE_unplugged_CnC_2019:
+        title: Обмін та поширення онлайн
       Internet_2019:
         title: 'переклад відсутній: en-US.data.unplugged.Internet_2018.title'
         desc: 'переклад відсутній: en-US.data.unplugged.Internet_2018.desc'

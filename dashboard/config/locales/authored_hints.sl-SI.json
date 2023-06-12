@@ -317,7 +317,7 @@
           "courseD_bee_conditionals_challenge1_b": "V tej uganki bi lahko vsak prostor imel rožo, satovje ali nič. To pomeni, da lahko ponovite svoj pogoj 'če/drugače' na vsakem kvadratku."
         },
         "course2_bee_conditionals_challenge2": {
-          "courseD_bee_conditionals_challenge1_b": "Tako kot bloki \"če v cvetu\", bo tudi koda znotraj \"dokler nektar > 0\" delovala le, če je čebelica na cvetu. Glavne razlike so v tem, da se koda v notranjosti ponavlja, dokler ne zmanjka nektarja. Poskusite ta vzorec:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "Tako kot bloki \"če v cvetu\", bo tudi koda znotraj \"dokler nektar > 0\" delovala le, če je čebelica na cvetu. Glavne razlike so v tem, da se koda v notranjosti ponavlja, dokler ne zmanjka nektarja. Poskusite ta vzorec:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "course2_collector_loops_challenge2": {
           "courseC_maze_loops_challenge2_a": "Izvirna koda bi delovala odlično - če bi bil v vsakem kupu samo en kos zaklada!",
@@ -347,7 +347,7 @@
           "courseE_artist_functions_challenge1_a": "Če pokličeš funkcijo še enkrat, lahko narišeš isti vzorec v preostalem kotu. Lahko dodaš tudi \"Skoči do\" drugih pozicij ali spremeniš vse, kar želiš!"
         },
         "course3_collector_debugging_challenge2": {
-          "courseD_collector_debugging_challenge2_a": "Začni tako, da se osredotočiš na zbiranje DVA dragulja iz vsakega od prvih dveh kupov.\n\n![](<https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04 AM copy.png>)\nUporabi te bloke.\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n  </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title name=\"DIR\">moveForward</title>\n                  </block>\n                  \n \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n    <title name=\"TIMES\">2</title>\n  </block>\n\n</xml>"
+          "courseD_collector_debugging_challenge2_a": "Začni tako, da se osredotočiš na zbiranje DVA dragulja iz vsakega od prvih dveh kupov.\n\n![](<https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04 AM copy.png>)\nUporabi te bloke.\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n  </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title name=\"DIR\">moveForward</title>\n                  </block>\n                  \n \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n    <title name=\"TIMES\">2</title>\n  </block>\n\n\n\n</xml>"
         },
         "course3_farmer_condLoops_challenge1": {
           "courseD_farmer_condLoops_challenge1_a": "Gumb \"Zaženi\" ti lahko zelo pomaga v tem izzivu."
@@ -779,6 +779,196 @@
         },
         "courseB_maze_seq_challenge2_2021": {
           "courseB_maze_seq_challenge2_a": "Dodaj ali odstrani bloke, da rešiš ta nivo."
+        },
+        "courseC_PlayLab_eventsA_embed2022": {
+          "courseC_PlayLab_eventsA_a": "Uporabi smerne tipke za premikanje pingvina. Za dokončanje te ravni ti ni treba napisati nobene kode."
+        },
+        "courseC_PlayLab_eventsA_embed_2019": {
+          "courseC_PlayLab_eventsA_a": "Uporabi smerne tipke za premikanje pingvina. Za dokončanje te ravni ti ni treba napisati nobene kode."
+        },
+        "courseC_PlayLab_eventsA_embed_2020": {
+          "courseC_PlayLab_eventsA_a": "Uporabi smerne tipke za premikanje pingvina. Za dokončanje te ravni ti ni treba napisati nobene kode."
+        },
+        "courseC_PlayLab_eventsA_embed_2021": {
+          "courseC_PlayLab_eventsA_a": "Uporabi smerne tipke za premikanje pingvina. Za dokončanje te ravni ti ni treba napisati nobene kode."
+        },
+        "courseC_PlayLab_eventsFP2022": {
+          "idea1": "_Potrebuješ idejo?_\n\n**Kdo je tam?** Liki naj se prikažejo z naključnimi sličicami, tako da nihče ne bo vedel, kdo se bo pojavil naslednji.",
+          "idea2": "\\_Potrebuješ idejo? \\_\n\n**Gremo na pustolovščino** - Spremeni ozadje, nato pa naj liki govorijo o tem, kje so zdaj.\n\n<img src= \"https://images.code.org/a7f740d73074deb128cdc2826abda9e6-image-1563576781779.gif\" style=\"width: 200px\">"
+        },
+        "courseC_PlayLab_eventsFP_2019": {
+          "idea1": "_Potrebuješ idejo?_\n\n**Kdo je tam?** Liki naj se prikažejo z naključnimi sličicami, tako da nihče ne bo vedel, kdo se bo pojavil naslednji.",
+          "idea2": "\\_Potrebuješ idejo? \\_\n\n**Gremo na pustolovščino** - Spremeni ozadje, nato pa naj liki govorijo o tem, kje so zdaj.\n\n<img src= \"https://images.code.org/a7f740d73074deb128cdc2826abda9e6-image-1563576781779.gif\" style=\"width: 200px\">"
+        },
+        "courseC_PlayLab_eventsFP_2020": {
+          "idea1": "_Potrebuješ idejo?_\n\n**Kdo je tam?** Liki naj se prikažejo z naključnimi sličicami, tako da nihče ne bo vedel, kdo se bo pojavil naslednji.",
+          "idea2": "\\_Potrebuješ idejo? \\_\n\n**Gremo na pustolovščino** - Spremeni ozadje, nato pa naj liki govorijo o tem, kje so zdaj.\n\n<img src= \"https://images.code.org/a7f740d73074deb128cdc2826abda9e6-image-1563576781779.gif\" style=\"width: 200px\">"
+        },
+        "courseC_PlayLab_eventsFP_2021": {
+          "idea1": "_Potrebuješ idejo?_\n\n**Kdo je tam?** Liki naj se prikažejo z naključnimi sličicami, tako da nihče ne bo vedel, kdo se bo pojavil naslednji.",
+          "idea2": "\\_Potrebuješ idejo? \\_\n\n**Gremo na pustolovščino** - Spremeni ozadje, nato pa naj liki govorijo o tem, kje so zdaj.\n\n<img src= \"https://images.code.org/a7f740d73074deb128cdc2826abda9e6-image-1563576781779.gif\" style=\"width: 200px\">",
+          "idea3": "\\_Potrebujete idejo? \\_\n\n**Pinball** - Naredite en znak premakniti s smernimi tipkami (uporabite »ko gor puščico«, `ko dol puščica` bloki), nato pa igrajo naključne zvoke, ko trči z drugimi znaki na zaslonu."
+        },
+        "courseC_artist_loops1b2022": {
+          "courseC_artist_loops1b_a": "To je prvi blok, ki ga boš potreboval:\n\n<xml>\n  <block type=\"draw_turn_by_constant_dropdown\">\n    <title name=\"DIR\">???</title>\n    <title name=\"VALUE\" config=\"45,60,90,120,180\">???</title>\n  </block>\n</xml>\n\nIzbereš lahko levo ali desno in poljubno število stopinj."
+        },
+        "courseC_artist_loops1b_2019": {
+          "courseC_artist_loops1b_a": "To je prvi blok, ki ga boš potreboval:\n\n<xml>\n  <block type=\"draw_turn_by_constant_dropdown\">\n    <title name=\"DIR\">???</title>\n    <title name=\"VALUE\" config=\"45,60,90,120,180\">???</title>\n  </block>\n</xml>\n\nIzbereš lahko levo ali desno in poljubno število stopinj."
+        },
+        "courseC_artist_loops1b_2020": {
+          "courseC_artist_loops1b_a": "To je prvi blok, ki ga boš potreboval:\n\n<xml>\n  <block type=\"draw_turn_by_constant_dropdown\">\n    <title name=\"DIR\">???</title>\n    <title name=\"VALUE\" config=\"45,60,90,120,180\">???</title>\n  </block>\n</xml>\n\nIzbereš lahko levo ali desno in poljubno število stopinj."
+        },
+        "courseC_artist_loops1b_2021": {
+          "courseC_artist_loops1b_a": "To je prvi blok, ki ga boš potreboval:\n\n<xml>\n  <block type=\"draw_turn_by_constant_dropdown\">\n    <title name=\"DIR\">???</title>\n    <title name=\"VALUE\" config=\"45,60,90,120,180\">???</title>\n  </block>\n</xml>\n\nIzbereš lahko levo ali desno in poljubno število stopinj."
+        },
+        "courseC_artist_loops7a2022": {
+          "courseC_artist_loops7a_a": "Cel krog ima 360°. Pomnoži stopinje v tvojem obratu s številom ponovitev. Je produkt enak 360°?\nPreveri predlagane zasuke, da vidiš, če deluje.\n\nNekaj primerov za začetek:\n– poskusi se 6-krat zavrteti za 60°\n– poskusi se 8-krat zavrteti za 45°\n– poskusi se 12-krat zavrteti za 30°."
+        },
+        "courseC_harvester_loops_challenge1a": {
+          "courseC_harvester_loops_challenge1_c": "Najboljši način za zbiranje koruze v sredini uporablja delček \"ponovi\" znotraj drugega delčka \"ponovi\"."
+        },
+        "courseC_harvester_loops_challenge1a2022": {
+          "courseC_harvester_loops_challenge1_c": "Najboljši način za zbiranje koruze v sredini uporablja delček \"ponovi\" znotraj drugega delčka \"ponovi\"."
+        },
+        "courseC_harvester_loops_challenge1a_2019": {
+          "courseC_harvester_loops_challenge1_c": "Najboljši način za zbiranje koruze v sredini uporablja delček \"ponovi\" znotraj drugega delčka \"ponovi\"."
+        },
+        "courseC_harvester_loops_challenge1a_2020": {
+          "courseC_harvester_loops_challenge1_c": "Najboljši način za zbiranje koruze v sredini uporablja delček \"ponovi\" znotraj drugega delčka \"ponovi\"."
+        },
+        "courseC_harvester_loops_challenge1a_2021": {
+          "courseC_harvester_loops_challenge1_c": "Najboljši način za zbiranje koruze v sredini uporablja delček \"ponovi\" znotraj drugega delčka \"ponovi\".",
+          "courseC_harvester_loops_challenge1_a": "To je preveč težko brez zank!",
+          "courseC_harvester_loops_challenge1_b": "Lahko ponoviš \"Premakni se naprej\" in \"Poberi koruzo\" tolikokrat, kot moraš, nato \"Obrni desno\" na vsakem vogalu"
+        },
+        "courseC19_playLab_EOC1_2021": {
+          "courseE_playLab_scaffold1_a": "`Nastavi igralec 1 na??? sliko` blok se lahko uporablja za dodajanje igralca na oder.",
+          "courseE_playLab_scaffold1_b": "Postavite blok »nastavi igralca« pod \\`Ob zagonu', da se bo vaš igralec pojavil na začetku programa.",
+          "courseE_playLab_scaffold1_c": "Uporabite \\`Nastavi??? ozadje, da izberete ozadje za vašo sceno."
+        },
+        "courseC19_playLab_EOC22022": {
+          "playlab_up": "Da premaknete igralce navzgor, lahko povežete naslednje bloke:\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">up</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">1</title>\n      </block>\n    </next>\n  </block>\n  </xml>",
+          "playlab_down": "Da premaknete igralce navzdol, lahko povežete naslednje bloke:\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">down</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">4</title>\n      </block>\n    </next>\n  </block>\n  </xml>",
+          "playlab_left": "Da premaknete igralce levo, lahko povežete naslednje bloke:\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">left</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">8</title>\n      </block>\n    </next>\n  </block>\n  </xml>",
+          "playlab_right": "Da premaknete igralce desno, lahko povežete naslednje bloke:\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">right</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">2</title>\n      </block>\n    </next>\n  </block>\n  </xml> "
+        },
+        "courseC19_playLab_EOC2_2021": {
+          "courseE_playLab_scaffold1_b": "Morali bi imeti štiri bloke dogodkov »ko puščica«, s smerjo za premikanje pod vsakim.",
+          "playlab_up": "Da premaknete igralce navzgor, lahko povežete naslednje bloke:\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">up</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">1</title>\n      </block>\n    </next>\n  </block>\n  </xml>",
+          "playlab_down": "Da premaknete igralce navzdol, lahko povežete naslednje bloke:\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">down</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">4</title>\n      </block>\n    </next>\n  </block>\n  </xml>",
+          "playlab_left": "Da premaknete igralce levo, lahko povežete naslednje bloke:\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">left</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">8</title>\n      </block>\n    </next>\n  </block>\n  </xml>",
+          "playlab_right": "Da premaknete igralce desno, lahko povežete naslednje bloke:\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">right</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">2</title>\n      </block>\n    </next>\n  </block>\n  </xml> ",
+          "courseE_playLab_scaffold1_c": "Ko končate, bi morali imeti možnost, da premaknete vašega junaka s puščicami!"
+        },
+        "courseC19_playLab_EOC4_2021": {
+          "courseE_playLab_scaffold4_a": "Za dodajanje točke uporabite »Dodaj točko« in »odstrani točko«, da jo odštejemo."
+        },
+        "courseC_PlayLab_events1_2021": {
+          "courseC_PlayLab_events1_a": "Pritrdi ta blok na 'Ob zagonu' blok.\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</xml>"
+        },
+        "courseC_PlayLab_events2_2021": {
+          "courseC_PlayLab_events2_a": "Pritrdi ta blok na 'Ob zagonu' blok.\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</xml>",
+          "courseC_PlayLab_events2_b": "Uporabite spustni meni v drugem bloku `actor __ say`, da spremenite, kateri igralec govori."
+        },
+        "courseC_PlayLab_events3_2021": {
+          "courseC_PlayLab_events3_a": "Za rešitev te uganke morate Jorgea premakniti v desno za približno 25 slikovnih pik.",
+          "courseC_PlayLab_events3_b": "Ali je v orodjarni blok, ki izgleda, kot da bi premaknil igralca?",
+          "courseC_PlayLab_events3_c": "Pritrdi ta blok na 'Ob zagonu' blok.\n\n<xml>\n<block type=\"studio_moveDistance\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"DIR\">2</title>\n    <title name=\"DISTANCE\">25</title>\n  </block>\n</xml>"
+        },
+        "courseC_PlayLab_events4_2021": {
+          "courseC_PlayLab_events4_b": "Ko kliknete gumb »Zaženi«, mora Jorge premakniti desno **100** slikovnih pik, da doseže Olive the Cat.",
+          "courseC_PlayLab_events4_a": "Za rešitev te uganke boste morali priložiti blok `igralec __ say` na dogodek »ko se igralec dotakne«."
+        },
+        "courseC_PlayLab_events5_2021": {
+          "courseC_PlayLab_events5_a": "Če želite poiskati besedilo »Kaj je novega?«, boste morali klikniti spustni meni v bloku »Actor say\\`",
+          "courseC_PlayLab_events5_b": "Kliknite na Octavia, ko zaženete program, da preverite, ali deluje!"
+        },
+        "courseC_PlayLab_events6_2021": {
+          "courseC_PlayLab_events6_a": "Vsak zeleni blok »ko puščica« mora imeti eno dejanje pod njim.",
+          "courseC_PlayLab_events6_b": "Uporabite spustni meni na bloku `premakni igralec 1`, da spremenite smer, v katero smer se premika Waddles.",
+          "courseC_PlayLab_events6_c": "Ko končate, bi morali imeti možnost, da premaknete Waddlesa okrog s puščicami na vašem računalniku!"
+        },
+        "courseC_PlayLab_events7_2021": {
+          "courseC_PlayLab_events7_a": "Uporabite tako `move igralec 2 up 400 pixels` blok in `premakniti igralec 2 navzdol 400 slikovnih pik »blok znotraj`ponovite večno« zanko rešiti to uganko. ",
+          "courseC_PlayLab_events7_b": "Zanke »ponovite večno« ni treba povezati z nobenim drugim blokom dogodkov, temveč bo delovala sama."
+        },
+        "courseC_PlayLab_events8_2021": {
+          "courseC_PlayLab_events8_a": "Bloke boste morali povezati z blokom »ko se igralec dotakne«, da se to zgodi pravilno.",
+          "courseC_PlayLab_events8_b": "Bloki »igralec reči« in »predvajaj zvok« v orodjarni naj vam pomagajo!"
+        },
+        "courseC_PlayLab_events9_2021": {
+          "courseC_PlayLab_events9_a": "Blok »dodaj točkp« vam bo pomagal rešiti to uganko.",
+          "courseC_PlayLab_events9_b": "Prepričajte se, da vaš novi blok »ko se igralec dotakne« pravi igralec **1** in igralec **3**.",
+          "courseC_PlayLab_events9_c": "V vašem delovnem prostoru imate lahko več dogodkov, ko se igralec dotakne hkrati, zato vam prvega ni treba izbrisati!"
+        },
+        "courseC_PlayLab_eventsA_2021": {
+          "courseC_PlayLab_eventsA_a": "Uporabite »nastavi ozadje« blok in `nastavi igralec na ____ hitrosti` blok rešiti to nalogo.",
+          "courseC_PlayLab_eventsA_b": "Za rešitev te naloge boste morali posebej povleči dogodek »Ob zagonu« v delovni prostor."
+        },
+        "courseC_PlayLab_events_challenge1_2021": {
+          "courseC_PlayLab_events_challenge_a": "Lahko uporabiš ta blok, da premakneš igralce na različne lokacije znotraj igrišča.\n\n<xml> <block type=\"studio_setSpritePosition\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">12</title>\n  </block></xml>",
+          "courseC_PlayLab_events_challenge_b": "Poskusite uporabiti `nastavi igralec 1 v srednji levi položaj`, ko se dotakne katerega koli od drugih akterjev. To bo ponastavilo igro, da bo igralec lahko še naprej poskušal!",
+          "courseC_PlayLab_events_challenge_c": "Spremeni hitrost različnih igralcev, da narediš igro lažjo ali težjo.\n\n<xml>  <block type=\"studio_setSpriteSpeed\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Studio.SpriteSpeed.FAST</title>\n  </block></xml>"
+        },
+        "courseC_flappy_events2_2021": {
+          "courseC_flappy_events2_a": "Blok, ki ga morate dodati, se imenuje »nastavi hitrost«. ",
+          "courseC_flappy_events2_b": "Povežite blok »nastavi hitrost« na blok »ob zagonu«, da rešite to uganko."
+        },
+        "courseC_flappy_events3_2021": {
+          "courseC_flappy_events3_a": "Če nekaj ne deluje pravilno, se prepričajte, da so vaši bloki povezani s pravilnimi dogodki v delovnem prostoru."
+        },
+        "courseC_flappy_events4_2021": {
+          "courseC_flappy_events4_a": "Povežite blok »končaj igro«, da »ko udarite v oviro«, da rešite to uganko."
+        },
+        "courseC_flappy_events5_2021": {
+          "courseC_flappy_events5_a": "Boste morali uporabiti `dodaj točke` blok prenesti to raven."
+        },
+        "courseC_flappy_events6_2021": {
+          "courseC_flappy_events6_a": "Poskusite povezati blok `plahutaj ____ znesk` z dogodkom »ob kliku«."
+        },
+        "courseC_flappy_events7_2021": {
+          "courseC_flappy_events7_a": "Ozadje lahko spremenite z blokom `nastavljena scena`. "
+        },
+        "courseC_flappy_events8_2021": {
+          "courseC_flappy_events8_a": "Poskusite povezati drugi blok `dodaj sceno` pod dogodkom `Ko mimo ovira`, da preneseš to raven."
+        },
+        "courseC_flappy_events9_2021": {
+          "courseC_flappy_events9_a": "Povežite `set score 0` blok na `ko zadeti ovira` dogodek prenesti to raven."
+        },
+        "courseC_harvester_loops1_2021": {
+          "courseC_harvester_loops1_a": "Ko ste se premaknili na bučo, uporabite <xml><block type=\"harvester_pumpkin\"/></xml> , da jo poberete.",
+          "courseC_harvester_loops1_b": "Z zanko z blokom <xml><block type=\"harvester_pumpkin\"/></xml> lahko izberete več kot eno bučo s polja."
+        },
+        "courseC_harvester_loops2_2021": {
+          "courseC_harvester_loops2_a": "Če se zataknete, poskusite napisati korake na papirju in poiskati ponavljajoče se vzorce.",
+          "courseC_harvester_loops2_b": "Potrebovali boste eno `ponovitev` zanko za drugo.",
+          "courseC_harvester_loops2_c": "Ena zanka bo ponovila ukaz »premakni se naprej«, druga pa bo ponovila ukaz `poberi buče`."
+        },
+        "courseC_harvester_loops3_2021": {
+          "courseC_harvester_loops3_a": "Ne bojte se narediti napake! Poskusite dodati bloke in zagnati kodo, da vidite, kaj se bo zgodilo, tudi če še ne mislite, da ste rešili nalogo.",
+          "courseC_harvester_loops3_b": "Za prve buče lahko uporabite kodo, ki je zelo podobna zadnji uganki. V katero smer se morate nato obrniti?",
+          "courseC_harvester_loops3_c": "Če želite uporabiti manj kode, lahko postavite eno `ponovitev` zanko znotraj druge zanke! \\\\To se imenuje \\*\\* ugnezdena zanka\\*\\*."
+        },
+        "courseC_harvester_loops4_2021": {
+          "courseC_harvester_loops4_a": "Uporabite nov `poberi koruzo` blok za zbiranje koruze.",
+          "courseC_harvester_loops4_b": "V kodi lahko uporabite več zank, nekaj za pobiranje koruze in nekaj za pobiranje buč.",
+          "courseC_harvester_loops4_c": "Če želite poenostaviti kodo, lahko dejansko dal eno zanko znotraj druge! To se imenuje \\*\\* ugnezdena zanka\\*\\*."
+        },
+        "courseC_harvester_loops5_2021": {
+          "courseC_harvester_loops5_a": "Če se zataknete, poskusite napisati korake na papirju in poiskati ponavljajoče se vzorce.",
+          "courseC_harvester_loops5_b": "Ali je ta stopnišče videti znano iz drugih ugank? Premiki morajo biti podobni, samo ne pozabite zbrati pridelkov na poti."
+        },
+        "courseC_harvester_loops6_2021": {
+          "courseC_harvester_loops6_a": "Ne pozabite, da lahko v eno ponovljeno zanko postavite več blokov.",
+          "courseC_harvester_loops6_b": "Ne pozabite obrniti na koncu vrstice koruze."
+        },
+        "courseC_harvester_loops7_2021": {
+          "courseC_harvester_loops7_a": "To uganko lahko rešite na dva načina, bodisi najprej dobite koruzo ali buče.",
+          "courseC_harvester_loops7_b": "Za rešitev te uganke boste potrebovali več zank »ponovitev«."
+        },
+        "courseC_harvester_loops8_2021": {
+          "courseC_harvester_loops8_a": "Ali je ta stopnišče videti znano iz drugih ugank? Premiki morajo biti podobni, samo ne pozabite zbrati pridelkov na poti.",
+          "courseC_harvester_loops8_b": "Če želite poenostaviti kodo, lahko dejansko date eno zanko znotraj druge! To se imenuje \\*\\* ugnezdena zanka\\*\\*."
         }
       }
     }

@@ -279,13 +279,13 @@
           "snowflake_dropdown": "다른 모양의 눈송이를 만들기 위해서 사용해 보세요."
         },
         "Overworld Chop Trees": {
-          "craft_callout_preplaced": "여러분이 시작할 수 있게 여기에 블록을 몇 개 놓아두었어요"
+          "craft_callout_preplaced": "여러분이 시작할 수 있도록 여기에 블록을 몇 개 놓아뒀어요"
         },
         "Overworld Chop Trees_2019": {
-          "craft_callout_preplaced": "여러분이 시작할 수 있게 여기에 블록을 몇 개 놓아두었어요"
+          "craft_callout_preplaced": "여러분이 시작할 수 있도록 여기에 블록을 몇 개 놓아뒀어요"
         },
         "Overworld Chop Trees_2020": {
-          "craft_callout_preplaced": "여러분이 시작할 수 있게 여기에 블록을 몇 개 놓아두었어요"
+          "craft_callout_preplaced": "여러분이 시작할 수 있도록 여기에 블록을 몇 개 놓아뒀어요"
         },
         "Overworld House Frame Chosen": {
           "craft_callout_preplaced_house": "이 코드는 집짓기를 시작합니다. 끝낼 수 있나요?"
@@ -298,24 +298,24 @@
         },
         "Overworld Move to Sheep": {
           "craft_run_button_callout": "\"실행하기\"를 눌러 프로그램을 실행시켜보세요",
-          "craft_drag_block_callout": "\"앞으로 이동\" 블록을 드래그하여 다른 블록 아래에 끼우세요."
+          "craft_drag_block_callout": "'앞으로 이동' 블록을 드래그해 다른 블록 아래에 끼우세요"
         },
         "Overworld Move to Sheep_2019": {
           "craft_run_button_callout": "\"실행하기\"를 눌러 프로그램을 실행시켜보세요",
-          "craft_drag_block_callout": "\"앞으로 이동\" 블록을 드래그하여 다른 블록 아래에 끼우세요."
+          "craft_drag_block_callout": "'앞으로 이동' 블록을 드래그해 다른 블록 아래에 끼우세요"
         },
         "Overworld Move to Sheep_2020": {
           "craft_run_button_callout": "\"실행하기\"를 눌러 프로그램을 실행시켜보세요",
-          "craft_drag_block_callout": "\"앞으로 이동\" 블록을 드래그하여 다른 블록 아래에 끼우세요."
+          "craft_drag_block_callout": "'앞으로 이동' 블록을 드래그해 다른 블록 아래에 끼우세요"
         },
         "Overworld Place Wall": {
-          "craft_inside_repeat": "블록들을 이곳에 놓아서 행동을 반복하세요"
+          "craft_inside_repeat": "블록들을 이곳에 놓아서 작업을 반복하세요"
         },
         "Overworld Place Wall_2019": {
-          "craft_inside_repeat": "블록들을 이곳에 놓아서 행동을 반복하세요"
+          "craft_inside_repeat": "블록들을 이곳에 놓아서 작업을 반복하세요"
         },
         "Overworld Place Wall_2020": {
-          "craft_inside_repeat": "블록들을 이곳에 놓아서 행동을 반복하세요"
+          "craft_inside_repeat": "블록들을 이곳에 놓아서 작업을 반복하세요"
         },
         "Underground Avoiding Lava": {
           "craft_callout_moveforward": "이 코드는 용암을 확인합니다. 앞으로 이동하기 명령을 추가할 수 있나요?"
@@ -394,7 +394,7 @@
           "replace_questions": "\"???\" 부분에 수를 입력하면 됩니다."
         },
         "MC HOC 2016 Level 2-2": {
-          "craft2_run_button_callout": "준비 되었을 때 \"실행\" 버튼을 눌러 프로그램을 실행해 보세요."
+          "craft2_run_button_callout": "준비가 됐다면, '실행' 버튼을 눌러 프로그램을 실행해 보세요."
         },
         "courseA_maze_seq1": {
           "courseA_maze_seq1_1": "힌트가 필요하면 전구를 클릭하세요!"
@@ -1369,7 +1369,7 @@
           "AppLabHoCFinal11": "이제 설계 모드에 있습니다."
         },
         "MC HOC 2016 New Walk": {
-          "MC_HOC_2016_New_Walk_callout2": "\"실행\" 버튼을 눌러 이동을 시작하세요."
+          "MC_HOC_2016_New_Walk_callout2": "'실행' 버튼을 눌러 이동을 시작하세요."
         },
         "CourseD_Dance_2020_01_2021": {
           "dance_callout_01": "여기에서 댄서 유형을 선택하세요!"
@@ -1413,17 +1413,17 @@
           "MC_HOC_2017_08_RY_1": "에이전트는 용암 위를 호버링할 수 있지만 스티브와 알렉스를 그럴 수 없어요! "
         },
         "Overworld Chop Trees_2021": {
-          "craft_callout_preplaced": "여러분이 시작할 수 있게 여기에 블록을 몇 개 놓아두었어요"
+          "craft_callout_preplaced": "여러분이 시작할 수 있도록 여기에 블록을 몇 개 놓아뒀어요"
         },
         "Overworld House Frame Chosen_2021": {
           "craft_callout_preplaced_house": "이 코드는 집짓기를 시작합니다. 끝낼 수 있나요?"
         },
         "Overworld Move to Sheep_2021": {
           "craft_run_button_callout": "\"실행하기\"를 눌러 프로그램을 실행시켜보세요",
-          "craft_drag_block_callout": "\"앞으로 이동\" 블록을 드래그하여 다른 블록 아래에 끼우세요."
+          "craft_drag_block_callout": "'앞으로 이동' 블록을 드래그해 다른 블록 아래에 끼우세요"
         },
         "Overworld Place Wall_2021": {
-          "craft_inside_repeat": "블록들을 이곳에 놓아서 행동을 반복하세요"
+          "craft_inside_repeat": "블록들을 이곳에 놓아서 작업을 반복하세요"
         },
         "Underground Avoiding Lava_2021": {
           "craft_callout_moveforward": "이 코드는 용암을 확인합니다. 앞으로 이동하기 명령을 추가할 수 있나요?"
@@ -2105,17 +2105,17 @@
           "MC_HOC_2017_08_RY_1": "에이전트는 용암 위를 호버링할 수 있지만 스티브와 알렉스를 그럴 수 없어요! "
         },
         "Overworld Chop Trees2022": {
-          "craft_callout_preplaced": "여러분이 시작할 수 있게 여기에 블록을 몇 개 놓아두었어요"
+          "craft_callout_preplaced": "여러분이 시작할 수 있도록 여기에 블록을 몇 개 놓아뒀어요"
         },
         "Overworld House Frame Chosen2022": {
           "craft_callout_preplaced_house": "이 코드는 집짓기를 시작합니다. 끝낼 수 있나요?"
         },
         "Overworld Move to Sheep2022": {
           "craft_run_button_callout": "\"실행하기\"를 눌러 프로그램을 실행시켜보세요",
-          "craft_drag_block_callout": "\"앞으로 이동\" 블록을 드래그하여 다른 블록 아래에 끼우세요."
+          "craft_drag_block_callout": "'앞으로 이동' 블록을 드래그해 다른 블록 아래에 끼우세요"
         },
         "Overworld Place Wall2022": {
-          "craft_inside_repeat": "블록들을 이곳에 놓아서 행동을 반복하세요"
+          "craft_inside_repeat": "블록들을 이곳에 놓아서 작업을 반복하세요"
         },
         "Underground Avoiding Lava2022": {
           "craft_callout_moveforward": "이 코드는 용암을 확인합니다. 앞으로 이동하기 명령을 추가할 수 있나요?"
@@ -2535,6 +2535,84 @@
         },
         "helloworld_food_click_space-2022": {
           "hw_Run": "먼저 여기를 클릭하세요!"
+        },
+        "CSD U6 - Combine Inputs - PracD_2222": {
+          "CSD U6L9.7 - if-statement": "여기에 if 문을 추가하세요"
+        },
+        "CSD U6 - If Variables - A_2222": {
+          "U6L6.4 - If": "여기에 if 문을 추가하세요"
+        },
+        "ml-customize apps-choice3": {
+          "CSD_AI_L10_predict": "여기 안에 if 문을 추가하세요"
+        },
+        "ml-customize apps-choice3_2022": {
+          "CSD_AI_L10_predict": "여기 안에 if 문을 추가하세요"
+        },
+        "ml-customize apps-choice5": {
+          "CSD_AI_L11_top": "블록을 이 줄 위에 놓으세요"
+        },
+        "ml-customize apps-choice5_2022": {
+          "CSD_AI_L11_top": "블록을 이 줄 위에 놓으세요"
+        },
+        "ml-intro app lab-book recommender 5C-2021": {
+          "CSD_AI_L7_event": "플레이사운드 블록을 여기에 추가하세요."
+        },
+        "ml-intro app lab-book recommender 5C_2022": {
+          "CSD_AI_L7_event": "플레이사운드 블록을 여기에 추가하세요."
+        },
+        "ml-intro app lab-book recommender 5E-2021": {
+          "CSD_AI_L7_top": "블록을 이 줄 위에 놓으세요"
+        },
+        "ml-intro app lab-book recommender 5E_2022": {
+          "CSD_AI_L7_top": "블록을 이 줄 위에 놓으세요"
+        },
+        "ml-models in applab-screens-1-2021": {
+          "CSD_AI_L10_ifstatement": "여기 안에 if 문을 추가하세요"
+        },
+        "ml-models in applab-screens-1_2022": {
+          "CSD_AI_L10_ifstatement": "여기 안에 if 문을 추가하세요"
+        },
+        "ml-models in applab-screens-3-2021": {
+          "CSD_AI_L7_ifstatement": "여기에 if 문을 추가하세요"
+        },
+        "ml-models in applab-screens-3_2022": {
+          "CSD_AI_L7_ifstatement": "여기에 if 문을 추가하세요"
+        },
+        "ml-use model card-choice3": {
+          "CSD_AI_L10_predict": "여기 안에 if 문을 추가하세요"
+        },
+        "ml-use model card-choice3_2022": {
+          "CSD_AI_L10_predict": "여기 안에 if 문을 추가하세요"
+        },
+        "ml-use model card-choice5": {
+          "CSD_AI_L11_top": "블록을 이 줄 위에 놓으세요"
+        },
+        "ml-use model card-choice5_2022": {
+          "CSD_AI_L11_top": "블록을 이 줄 위에 놓으세요"
+        },
+        "ml-use model card-example3C-2021": {
+          "CSD_AI_L11_temp": "이것은 온도 특징입니다."
+        },
+        "ml-use model card-example3C_2022": {
+          "CSD_AI_L11_temp": "이것은 온도 특징입니다."
+        },
+        "ml-use model card-example3D-2021": {
+          "CSD_AI_L11_time": "이것은 시간 특징입니다."
+        },
+        "ml-use model card-example3D_2022": {
+          "CSD_AI_L11_time": "이것은 시간 특징입니다."
+        },
+        "ml-use model card-example3_EditB-2021": {
+          "CSD_AI_L11_cars": "이것은 자동차 수 특징입니다"
+        },
+        "ml-use model card-example3_EditB_2022": {
+          "CSD_AI_L11_cars": "이것은 자동차 수 특징입니다"
+        },
+        "ml-use model card-example3_EditC-2021": {
+          "CSD_AI_L11_weather": "이것은 날씨 특징입니다."
+        },
+        "ml-use model card-example3_EditC_2022": {
+          "CSD_AI_L11_weather": "이것은 날씨 특징입니다."
         }
       }
     }

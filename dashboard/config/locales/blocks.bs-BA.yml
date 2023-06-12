@@ -983,10 +983,27 @@ bs:
             '"x"': x
             '"y"': y
             '"z"': z
+      gamelab_layoutSprites:
+        text: postavka {GROUP} kao {FORMAT}
+        options:
+          FORMAT:
+            '"border"': ivica
+            '"circle"': krug
+            '"grid"': mreža
+            '"row"': red
+            '"column"': kolona
       gamelab_makeBurst:
         options:
           EFFECT:
             '"rain"': kiša
+      gamelab_makeNewSpriteGroup:
+        options:
+          FORMAT:
+            '"border"': ivica
+            '"circle"': krug
+            '"grid"': mreža
+            '"row"': red
+            '"column"': kolona
       gamelab_makeProjectile:
         options:
           DIRECTION:
@@ -1354,6 +1371,20 @@ bs:
         options:
           DIR:
             left: lijevo ↺
+      ecosystems_int10:
+        options:
+          VALUE:
+            '0': '0'
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       storylab_setForegroundEffect2:
         options:
           EFFECT:

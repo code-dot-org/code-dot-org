@@ -3063,7 +3063,8 @@ he-IL:
         - text: ירוק
           correct: true
         - correct: true
-        - correct: true
+        - text: צהוב
+          correct: true
         - correct: true
         - text: אדום
           correct: true
@@ -9980,19 +9981,12 @@ he-IL:
         answers:
         - text: סקראט יגיע לבלוט. הקוד נקי וללא באגים.
           correct: true
-          feedback: טעות. תחילה, סקראט פונה לכיוון הלא נכון ואחר כך סקראט לא מתקדם
-            מספיק צעדים קדימה כדי להגיע לבלוט.
         - text: סקראט לא יגיע לבלוט כי הוא פונה לכיוון הלא נכון
           correct: true
-          feedback: נכון! תחילה סקראט פונה לכיוון הלא נכון, אחר כך סקראט לא מתקדם
-            קדימה מספיק צעדים כדי להגיע לבלוט.
         - text: לסקראט עדיין חסרים עוד בלוקים של "לזוז קדימה" ולכן הוא לא יגיע לבלוט.
           correct: true
-          feedback: נכון! תחילה סקראט פונה לכיוון הלא נכון, אחר כך סקראט לא מתקדם
-            קדימה מספיק צעדים כדי להגיע לבלוט.
         - correct: true
-          feedback: בקוד הזה יש שני באגים. תחילה סקראט פונה לכיוון הלא נכון, אחר כך
-            סקראט לא מתקדם קדימה מספיק צעדים כדי להגיע לבלוט.
+          feedback: סקראט לא יגיע לבלוט כי הוא פונה לכיוון הלא נכון
         questions:
         - text: האם יש באגים בקוד הזה. האם סקראט יגיע בהצלחה לבלוט, או שיש בעיה בקוד?
       courseC_multi_maze_programming8_predict12022:
@@ -10242,6 +10236,26 @@ he-IL:
       express_EOC2022:
         display_name: פרויקט סיום קורס
       grade2_multi_collector_A_predict12022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      Test Contained Retriable Multi:
+        answers:
+        - text: '0'
+          correct: true
+        - text: '1'
+          correct: true
+        - text: '2'
+          correct: true
+        - text: '4'
+          correct: true
+        questions:
+        - {}
+      test-single-multi-standalone-retriable:
         answers:
         - correct: true
         - correct: true

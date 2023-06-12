@@ -28,7 +28,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-10-10 13:30:53 UTC",
+    "serialized_at": "2023-02-22 18:13:46 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -264,9 +264,9 @@
       "has_lesson_plan": true,
       "relative_position": 11,
       "properties": {
-        "overview": "**What story or message do I want to convey about my data?**\n\nFor this project, students use the skills they have developed throughout this unit to analyze data from a text file for a topic they are interested in or meaningful to them. Students use the data they chose in a previous lesson to identify the patterns and message they want to convey visually using The Theater. After brainstorming and planning, students develop their programs.",
+        "overview": "**What story or message do I want to convey about my data?**\n\nFor this project, students use the skills they have developed throughout this unit to analyze data from a text file for a topic they are interested in or that is meaningful to them. Students use the data they chose in a previous lesson to identify the patterns and message they want to convey visually using The Theater. After brainstorming and planning, students develop their programs.",
         "preparation": "* Print copies of the Abstract Data Art Project Planning Guide (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-4-abstract-data-art-project/36361/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
-        "student_overview": "**What story or message do I want to convey about my data?**\n\nFor this project, you use the skills you have developed throughout this unit to analyze data from a text file for a topic that you are interested in or meaningful to you. You use the data you chose in a previous lesson to identify the patterns and message you want to convey visually using The Theater. After brainstorming and planning, you develop your program."
+        "student_overview": "**What story or message do I want to convey about my data?**\n\nFor this project, you use the skills you have developed throughout this unit to analyze data from a text file for a topic that you are interested in or that is meaningful to you. You use the data you chose in a previous lesson to identify the patterns and message you want to convey visually using The Theater. After brainstorming and planning, you develop your program."
       },
       "seeding_key": {
         "lesson.key": "lesson-13",

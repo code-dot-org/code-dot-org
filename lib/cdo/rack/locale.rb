@@ -22,10 +22,8 @@ module Rack
       end
     end
 
-    private
-
     # http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.4
-    def accept_locale(env)
+    private def accept_locale(env)
       accept_langs = env["HTTP_ACCEPT_LANGUAGE"]
       return if accept_langs.nil?
 
@@ -34,9 +32,9 @@ module Rack
         l.split(';q=')
       end
 
-      lang = languages_and_qvalues.sort_by do |(_locale, qvalue)|
+      lang = languages_and_qvalues.max_by do |(_locale, qvalue)|
         qvalue.to_f
-      end.last.first
+      end.first
 
       lang == '*' ? nil : lang
     end

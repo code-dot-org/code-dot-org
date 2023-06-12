@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import {Tab, Tabs} from 'react-bootstrap';
+import {Tab, Tabs} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import ChoiceResponses from '../../components/survey_results/choice_responses';
 import SurveyRollupTable from '../../components/survey_results/survey_rollup_table';
 import TextResponses from '../../components/survey_results/text_responses';
@@ -13,7 +13,7 @@ export default class Results extends React.Component {
     sessions: PropTypes.arrayOf(PropTypes.string).isRequired,
     courseName: PropTypes.string,
     workshopRollups: PropTypes.object,
-    facilitatorRollups: PropTypes.object
+    facilitatorRollups: PropTypes.object,
   };
 
   /**
@@ -95,9 +95,9 @@ export default class Results extends React.Component {
       <Tab
         eventKey={i + 1}
         key={i}
-        title={`${session} (${this.props.thisWorkshop[session][
-          'response_count'
-        ] || 0})`}
+        title={`${session} (${
+          this.props.thisWorkshop[session]['response_count'] || 0
+        })`}
       >
         <br />
         {this.renderResultsForSession(session)}

@@ -30,7 +30,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-09-28 14:31:53 UTC",
+    "serialized_at": "2023-01-13 23:48:32 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2621,6 +2621,18 @@
       }
     },
     {
+      "name": "KEY - Unreasonable Time",
+      "url": "https://docs.google.com/document/d/1wn2Z0k76KdotURzPG69GeYFzWvpMq1qiWUSlKfeDOfQ/edit?usp=sharing",
+      "key": "key_-_unreasonable_time",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "key_-_unreasonable_time"
+      }
+    },
+    {
       "name": "Teacher Forum",
       "url": "https://forum.code.org/c/csp/curriculum/392",
       "key": "teacher_forum",
@@ -2705,6 +2717,12 @@
       "seeding_key": {
         "lesson.key": "Unreasonable Time",
         "resource.key": "csp_unit_6_-_algorithms"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Unreasonable Time",
+        "resource.key": "key_-_unreasonable_time"
       }
     },
     {

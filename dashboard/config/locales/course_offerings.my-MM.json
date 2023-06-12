@@ -3,8 +3,10 @@
     "data": {
       "course_offerings": {
         "flappy": "ဖလပ်ပီ ကုပ်",
+        "hero": "Minecraft: လူစွမ်းကောင်း၏ ခရီးစဉ်",
         "hourofcode": "ဂန္တဝင် ဝင်္ကပါ",
-        "mc": "Minecraft Hour of Code"
+        "mc": "Minecraft Hour of Code",
+        "soccer": "ဘောလုံး"
       }
     }
   }

@@ -2,15 +2,16 @@
   "script": {
     "name": "self-paced-pl-csa3-2023",
     "wrapup_video_id": null,
-    "login_required": false,
+    "login_required": true,
     "properties": {
       "curriculum_umbrella": "CSA Self Paced PL",
       "is_migrated": true,
-      "student_detail_progress_view": true
+      "student_detail_progress_view": true,
+      "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-10-21 19:01:56 UTC",
+    "serialized_at": "2023-03-20 22:06:59 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -38,7 +39,7 @@
       "name": "Introduction to Java Lab",
       "absolute_position": 1,
       "lockable": false,
-      "has_lesson_plan": true,
+      "has_lesson_plan": false,
       "relative_position": 1,
       "properties": {
         "overview": "**You will:**\n\n* Create a new file in the Java Lab IDE\n* Name Java files using conventions for naming\n* Learn the basics of Java syntax\n* Print information to the console\n\n**Estimated time:** 60 minutes"
@@ -54,10 +55,10 @@
       "name": "Variables in Java",
       "absolute_position": 2,
       "lockable": false,
-      "has_lesson_plan": true,
+      "has_lesson_plan": false,
       "relative_position": 2,
       "properties": {
-        "overview": "**You will:**\n\n* Describe the different primitive data types covered in the AP subset\n* Declare and initialize variables\n* Use the assignment operator and compound assignment operators\n* Use variables in arithmetic operations\n* Print variables and text to the console\n\n**Estimated time:** 90 minutes",
+        "overview": "**You will:**\n\n* Describe the different primitive data types covered in the AP subset\n* Declare and initialize variables\n* Use the assignment operator and compound assignment operators\n* Use variables in arithmetic operations\n* Print variables and text to the console\n\n**Estimated time:** 60 minutes",
         "student_overview": "**You will:**\n\n* Describe the different primitive data types covered in the AP subset\n* Declare and initialize variables\n* Use the assignment operator and compound assignment operators\n* Use variables in arithmetic operations\n* Print variables and text to the console\n\n**Estimated time:** 90 minutes"
       },
       "seeding_key": {
@@ -71,7 +72,7 @@
       "name": "If statements in Java",
       "absolute_position": 3,
       "lockable": false,
-      "has_lesson_plan": true,
+      "has_lesson_plan": false,
       "relative_position": 3,
       "properties": {
         "overview": "**You will:**\n\n* Evaluate boolean expressions\n* Write and read if, if-else, if-else-if-else statements\n* Describe the difference between the assignment operator and the comparison operator\n\n**Estimated time:** 90 minutes",
@@ -88,10 +89,10 @@
       "name": "Loops in Java",
       "absolute_position": 4,
       "lockable": false,
-      "has_lesson_plan": true,
+      "has_lesson_plan": false,
       "relative_position": 4,
       "properties": {
-        "overview": "**You will:**\n\n* Read, write, and debug for loops in Java\n\n**Estimated time:** 90 minutes",
+        "overview": "**You will:**\n\n* Read, write, and debug for loops in Java\n\n**Estimated time:** 60 minutes",
         "student_overview": "**You will:**\n\n* Read, write, and debug for loops in Java\n\n**Estimated time:** 90 minutes"
       },
       "seeding_key": {
@@ -105,11 +106,11 @@
       "name": "Arrays in Java",
       "absolute_position": 5,
       "lockable": false,
-      "has_lesson_plan": true,
+      "has_lesson_plan": false,
       "relative_position": 5,
       "properties": {
-        "overview": "**You will:**\n\n* Declare and initialize a 1D array of primitive data types\n* Access and modify elements in an array\n* Traverse an array\n\n**Estimated time:** 120 minutes",
-        "student_overview": "**You will:**\n\n* Declare and initialize a 1D array of primitive data types\n* Access and modify elements in an array\n* Traverse an array\n\n**Estimated time:** 120 minutes"
+        "overview": "**You will:**\n\n* Declare and initialize a 1D array of primitive data types\n* Access and modify elements in an array\n* Traverse an array\n\n**Estimated time:** 90 minutes",
+        "student_overview": "**You will:**\n\n* Declare and initialize a 1D array of primitive data types\n* Access and modify elements in an array\n* Traverse an array\n\n**Estimated time:** 90 minutes"
       },
       "seeding_key": {
         "lesson.key": "Arrays in Java",
@@ -458,6 +459,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Introduction to Module 3_2023"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -480,6 +484,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-java-lab-intro-video_2023"
+        ],
         "progression": "Introduction to Java Lab"
       },
       "bonus": false,
@@ -502,6 +509,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-java-lab-intro-main-method-video_2023"
+        ],
         "progression": "Introduction to Java Lab"
       },
       "bonus": false,
@@ -524,6 +534,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Intro to Java Lab - debugging 1_2023"
+        ],
         "progression": "Introduction to Java Lab"
       },
       "bonus": false,
@@ -546,6 +559,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-printing-in-java-video_2023"
+        ],
         "progression": "Printing to the console"
       },
       "bonus": false,
@@ -568,6 +584,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Intro to Java Lab - System_2023"
+        ],
         "progression": "Printing to the console"
       },
       "bonus": false,
@@ -590,6 +609,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-how-to-debug-using-the-console-video_2023"
+        ],
         "progression": "Debugging"
       },
       "bonus": false,
@@ -612,6 +634,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSAPL3-1-SyntaxDebugging1_2023"
+        ],
         "progression": "Debugging"
       },
       "bonus": false,
@@ -634,6 +659,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSAPL3-1-SyntaxDebugging2_2023"
+        ],
         "progression": "Debugging"
       },
       "bonus": false,
@@ -656,6 +684,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSAPL3-1-SyntaxDebugging3_2023"
+        ],
         "progression": "Debugging"
       },
       "bonus": false,
@@ -678,6 +709,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-Vocab-lesson-1-matching_2023"
+        ],
         "progression": "Vocabulary"
       },
       "bonus": false,
@@ -700,6 +734,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-Intro-to-Lesson-2_2023"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -722,6 +759,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-L2-variables-video_2023"
+        ],
         "progression": "Introduction to variables"
       },
       "bonus": false,
@@ -744,6 +784,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-data-types-matching_2023"
+        ],
         "progression": "Introduction to variables"
       },
       "bonus": false,
@@ -766,6 +809,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-variables-practice-1_2023"
+        ],
         "progression": "Introduction to variables"
       },
       "bonus": false,
@@ -788,6 +834,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-variables-practice-2_2023"
+        ],
         "progression": "Introduction to variables"
       },
       "bonus": false,
@@ -810,6 +859,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-updating-variables-math-map_2023"
+        ],
         "progression": "Updating variables"
       },
       "bonus": false,
@@ -832,6 +884,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-modifying-variables-mc_2023"
+        ],
         "progression": "Updating variables"
       },
       "bonus": false,
@@ -854,6 +909,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-variables-practice-3_2023"
+        ],
         "progression": "Updating variables"
       },
       "bonus": false,
@@ -876,6 +934,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-updating-variables-strings-map_2023"
+        ],
         "progression": "Updating variables"
       },
       "bonus": false,
@@ -898,6 +959,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-modify-variables-practice-1_2023"
+        ],
         "progression": "Updating variables"
       },
       "bonus": false,
@@ -920,6 +984,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-compound-assignment-map_2023"
+        ],
         "progression": "Compound assignment operators"
       },
       "bonus": false,
@@ -942,6 +1009,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-compound-assignment-mc_2023"
+        ],
         "progression": "Compound assignment operators"
       },
       "bonus": false,
@@ -964,6 +1034,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-increment-op-map_2023"
+        ],
         "progression": "Compound assignment operators"
       },
       "bonus": false,
@@ -986,6 +1059,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-variables-increment-practice-1_2023"
+        ],
         "progression": "Compound assignment operators"
       },
       "bonus": false,
@@ -1008,6 +1084,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-increment-mc_2023"
+        ],
         "progression": "Compound assignment operators"
       },
       "bonus": false,
@@ -1030,6 +1109,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-Vocab-lesson-2-matching_2023"
+        ],
         "progression": "Vocabulary"
       },
       "bonus": false,
@@ -1052,6 +1134,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-L3-Overview_2023"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -1074,6 +1159,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-L3-boolean-expressions-map_2023"
+        ],
         "progression": "Boolean expressions"
       },
       "bonus": false,
@@ -1096,6 +1184,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-L3-boolean-matching_2023"
+        ],
         "progression": "Boolean expressions"
       },
       "bonus": false,
@@ -1118,6 +1209,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-L3-if-statements-video_2023"
+        ],
         "progression": "If statements"
       },
       "bonus": false,
@@ -1140,6 +1234,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-L3-if-statement-practice-1_2023"
+        ],
         "progression": "If statements"
       },
       "bonus": false,
@@ -1162,6 +1259,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-L3-if-statements-other-languages_2023"
+        ],
         "progression": "If statements"
       },
       "bonus": false,
@@ -1184,6 +1284,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-L3-variables-predict-1_2023"
+        ],
         "progression": "If statements"
       },
       "bonus": false,
@@ -1206,6 +1309,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-L3-variables-practice-2_2023"
+        ],
         "progression": "If statements"
       },
       "bonus": false,
@@ -1228,6 +1334,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-L3-if-statements-mc_2023"
+        ],
         "progression": "If statements"
       },
       "bonus": false,
@@ -1250,6 +1359,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-L3-if-else-statements-video_2023"
+        ],
         "progression": "If-else statements"
       },
       "bonus": false,
@@ -1272,6 +1384,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-L3-if-else-practice-.5_2023"
+        ],
         "progression": "If-else statements"
       },
       "bonus": false,
@@ -1294,6 +1409,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-L3-if-else-practice-1_2023"
+        ],
         "progression": "If-else statements"
       },
       "bonus": false,
@@ -1316,6 +1434,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-L3-if-else-statements-mc_2023"
+        ],
         "progression": "If-else statements"
       },
       "bonus": false,
@@ -1338,6 +1459,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-L3-else-if-statements-video_2023"
+        ],
         "progression": "Else-if statements"
       },
       "bonus": false,
@@ -1360,6 +1484,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-L3-else-if-practice-1_2023"
+        ],
         "progression": "Else-if statements"
       },
       "bonus": false,
@@ -1382,6 +1509,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-L3-else-if-practice-2_2023"
+        ],
         "progression": "Else-if statements"
       },
       "bonus": false,
@@ -1404,6 +1534,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-L3-matching_2023"
+        ],
         "progression": "Vocabulary"
       },
       "bonus": false,
@@ -1426,6 +1559,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-L4-Overview_2023"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -1448,6 +1584,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-L4-for-loops-video_2023"
+        ],
         "progression": "For loops"
       },
       "bonus": false,
@@ -1470,6 +1609,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-L4-for-loops-matching_2023"
+        ],
         "progression": "For loops"
       },
       "bonus": false,
@@ -1492,6 +1634,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-L4-for-loop-practice-1_2023"
+        ],
         "progression": "For loops"
       },
       "bonus": false,
@@ -1514,6 +1659,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-L4-for-loop-practice-2_2023"
+        ],
         "progression": "For loops"
       },
       "bonus": false,
@@ -1536,6 +1684,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-L4-for-loop-practice-3_2023"
+        ],
         "progression": "For loops"
       },
       "bonus": false,
@@ -1558,6 +1709,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-L4-for-loop-practice-4_2023"
+        ],
         "progression": "For loops"
       },
       "bonus": false,
@@ -1580,6 +1734,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-L4-for-loop-practice-5_2023"
+        ],
         "progression": "For loops"
       },
       "bonus": false,
@@ -1602,6 +1759,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-L4-for-loop-practice-6_2023"
+        ],
         "progression": "For loops"
       },
       "bonus": false,
@@ -1624,6 +1784,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-L5-Overview_2023"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -1646,6 +1809,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-L5-array-video-1_2023"
+        ],
         "progression": "Declaring and initializing arrays"
       },
       "bonus": false,
@@ -1668,6 +1834,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-L5-array-video-2_2023"
+        ],
         "progression": "Declaring and initializing arrays"
       },
       "bonus": false,
@@ -1690,6 +1859,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-L5-declaring-arrays-mc_2023"
+        ],
         "progression": "Declaring and initializing arrays"
       },
       "bonus": false,
@@ -1712,6 +1884,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-L5-indices-map_2023"
+        ],
         "progression": "Declaring and initializing arrays"
       },
       "bonus": false,
@@ -1734,6 +1909,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-L5-length-of-array-mc_2023"
+        ],
         "progression": "Declaring and initializing arrays"
       },
       "bonus": false,
@@ -1756,6 +1934,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-L5-accessing-mutating-mc_2023"
+        ],
         "progression": "Declaring and initializing arrays"
       },
       "bonus": false,
@@ -1778,6 +1959,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-L5-accessing-mutating-map_2023"
+        ],
         "progression": "Accessing and updating elements in an array"
       },
       "bonus": false,
@@ -1800,6 +1984,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-L5-acessing-mutating-practice-1_2023"
+        ],
         "progression": "Accessing and updating elements in an array"
       },
       "bonus": false,
@@ -1822,6 +2009,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-L5-acessing-mutating-practice-2_2023"
+        ],
         "progression": "Accessing and updating elements in an array"
       },
       "bonus": false,
@@ -1844,6 +2034,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-L5-array-traverse-video-1_2023"
+        ],
         "progression": "Traversing arrays"
       },
       "bonus": false,
@@ -1866,6 +2059,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-L5-traversing-mc_2023"
+        ],
         "progression": "Traversing arrays"
       },
       "bonus": false,
@@ -1888,6 +2084,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-L5-traverse-practice-1_2023"
+        ],
         "progression": "Traversing arrays"
       },
       "bonus": false,
@@ -1910,6 +2109,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-L5-traverse-practice-3_2023"
+        ],
         "progression": "Traversing arrays"
       },
       "bonus": false,
@@ -1932,6 +2134,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-L5-traverse-practice-2_2023"
+        ],
         "progression": "Traversing arrays"
       },
       "bonus": false,
@@ -1954,6 +2159,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-L5-acessing-mutating-practice-3_2023"
+        ],
         "progression": "Traversing arrays"
       },
       "bonus": false,
@@ -1976,6 +2184,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-Vocab-lesson-5-matching_2023"
+        ],
         "progression": "Vocabulary"
       },
       "bonus": false,
@@ -1998,6 +2209,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-Navigation-Mod3_2023"
+        ],
         "progression": "Wrap up"
       },
       "bonus": false,

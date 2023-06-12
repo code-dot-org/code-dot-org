@@ -1,4 +1,5 @@
 import React from 'react';
+import {LOCAL_STORAGE, REMOTE_STORAGE} from '../music/constants';
 
 const baseUrl = window.location.origin + '/musiclab';
 
@@ -7,9 +8,15 @@ const optionsList = [
     name: 'blocks',
     type: 'radio',
     values: [
-      {value: 'advanced', description: 'The default set of advanced blocks.'},
-      {value: 'simple', description: 'A simple set of blocks.'}
-    ]
+      {value: 'simple', description: 'A simple set of blocks.'},
+      {
+        value: 'simple2',
+        description:
+          'A simple set of blocks, with together/sequential and functions.',
+      },
+      {value: 'advanced', description: 'An advanced set of blocks.'},
+      {value: 'tracks', description: 'A tracks-based model set of blocks.'},
+    ],
   },
   {
     name: 'instructions-position',
@@ -17,22 +24,75 @@ const optionsList = [
     values: [
       {value: 'top', description: 'Instructions begin at the top.'},
       {value: 'left', description: 'Instructions begin on the left.'},
-      {value: 'right', description: 'Instructions begin on the right.'}
-    ]
+      {value: 'right', description: 'Instructions begin on the right.'},
+    ],
+  },
+  {
+    name: 'local-library',
+    type: 'radio',
+    values: [
+      {value: 'false', description: 'Use online library file.'},
+      {value: 'true', description: 'Use local library file.'},
+    ],
   },
   {
     name: 'library',
     type: 'string',
-    description: 'Use a specific music library file.'
+    description: 'Use a specific music library file.',
   },
   {
     name: 'show-upload',
     type: 'radio',
     values: [
       {value: 'false', description: "Don't show upload option."},
-      {value: 'true', description: 'Show upload option.'}
-    ]
-  }
+      {value: 'true', description: 'Show upload option.'},
+    ],
+  },
+  {
+    name: 'show-instructions',
+    type: 'radio',
+    values: [
+      {value: 'false', description: "Don't show instructions."},
+      {value: 'true', description: 'Show instructions.'},
+    ],
+  },
+  {
+    name: 'show-video',
+    type: 'radio',
+    values: [
+      {value: 'false', description: "Don't show video."},
+      {value: 'true', description: 'Show video.'},
+    ],
+  },
+  {
+    name: 'load-progression',
+    type: 'radio',
+    values: [
+      {value: 'false', description: "Don't load a progression."},
+      {value: 'true', description: 'Load a progression'},
+    ],
+  },
+  {
+    name: 'local-progression',
+    type: 'radio',
+    values: [
+      {value: 'false', description: 'Use online progression file.'},
+      {value: 'true', description: 'Use local progression file.'},
+    ],
+  },
+  {
+    name: 'progression',
+    type: 'string',
+    description: 'Use a specific progression file.',
+  },
+  {
+    name: 'storage-type',
+    type: 'radio',
+    values: [
+      {value: LOCAL_STORAGE, description: 'Save to local storage.'},
+      {value: REMOTE_STORAGE, description: 'Save to remote storage (default).'},
+    ],
+  },
 ];
 
 export default class MusicMenu extends React.Component {
@@ -41,7 +101,7 @@ export default class MusicMenu extends React.Component {
 
     this.state = {
       checked: {},
-      values: {}
+      values: {},
     };
   }
 
@@ -121,7 +181,7 @@ export default class MusicMenu extends React.Component {
           fontSize: 18,
           lineHeight: 1.5,
           margin: '20px 0',
-          userSelect: 'all'
+          userSelect: 'all',
         }}
       >
         {baseUrl}?

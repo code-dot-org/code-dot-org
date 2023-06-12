@@ -240,7 +240,7 @@ class RegistrationsControllerTest < ActionController::TestCase
       assert_redirected_to '/'
 
       assert_equal 'A name', assigns(:user).name
-      assert_equal 'F', assigns(:user).gender
+      assert_equal 'f', assigns(:user).gender
       assert_equal Date.today - 13.years, assigns(:user).birthday
       assert_equal AuthenticationOption::EMAIL, assigns(:user).primary_contact_info.credential_type
       assert_equal User::TYPE_STUDENT, assigns(:user).user_type
@@ -263,7 +263,7 @@ class RegistrationsControllerTest < ActionController::TestCase
       assert_redirected_to '/'
 
       assert_equal 'A name', assigns(:user).name
-      assert_equal 'F', assigns(:user).gender
+      assert_equal 'f', assigns(:user).gender
       assert_equal Date.today - 13.years, assigns(:user).birthday
       assert_equal AuthenticationOption::EMAIL, assigns(:user).primary_contact_info.credential_type
       assert_equal User::TYPE_STUDENT, assigns(:user).user_type
@@ -359,7 +359,7 @@ class RegistrationsControllerTest < ActionController::TestCase
       post :create, params: {user: teacher_params}
       mail = ActionMailer::Base.deliveries.first
       assert_equal I18n.t('teacher_mailer.new_teacher_subject', locale: 'es-MX'), mail.subject
-      assert_match /Hola/, mail.body.to_s
+      assert_match(/Hola/, mail.body.to_s)
     end
   end
 
@@ -555,5 +555,30 @@ class RegistrationsControllerTest < ActionController::TestCase
     assert_response :success
     assert_select "a[href=?]", "/users/sign_in?user_return_to=%2Fusers%2Fedit"
     assert_select "a[href=?]", "/users/sign_up?user_return_to=%2Fusers%2Fedit"
+  end
+
+  test "the us_state and country_code attributes can be set and updated" do
+    user = create :student, us_state: "CO", country_code: "US"
+    assert_equal "CO", user.us_state
+    assert_equal "US", user.country_code
+    sign_in user
+
+    put :update, params: {user: {us_state: "??", country_code: "PR"}}
+    user.reload
+    assert_response :redirect
+    assert_equal "??", user.us_state
+    assert_equal "PR", user.country_code
+  end
+
+  test "student-entered gender is saved and properly sets the normalized gender value" do
+    student = create :student, gender_student_input: "female"
+    assert_equal "female", student.gender_student_input
+    assert_equal "f", student.gender
+    sign_in student
+
+    put :update, params: {user: {gender_student_input: "male"}}
+    student.reload
+    assert_equal "male", student.gender_student_input
+    assert_equal "m", student.gender
   end
 end

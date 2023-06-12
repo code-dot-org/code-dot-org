@@ -149,6 +149,9 @@
         "virtual_lesson_modifications/coursed/2022": {
           "name": "Изменения виртуального урока"
         },
+        "extension_lessons_micro_bit/coursed/2022": {
+          "type": "Ресурс"
+        },
         "password_power-up_if_then_scenarios/coursed/2022": {
           "name": "Повышение надежности пароля: Сценарии Если...То...",
           "url": "https://docs.google.com/document/d/1JeZtFU6hMFTYITAAPaA_CRmOVknvkcKZQszL6u7DRG4/edit",
@@ -374,6 +377,9 @@
         "virtual_lesson_modifications/coursef/2022": {
           "name": "Изменения виртуального урока"
         },
+        "extension_lessons_micro_bit/coursef/2022": {
+          "type": "Ресурс"
+        },
         "the_power_of_words_lesson_quiz/coursef/2022": {
           "name": "Сила слов: Контрольная работа к уроку",
           "url": "https://docs.google.com/forms/d/1OKy2U3F37NSgCBUez9XMi0UJtlHKPXIe_rxy0l_KEOg/copy",
@@ -403,10 +409,12 @@
           "type": "Слайды"
         },
         "exploring_apps/coursef/2022": {
+          "name": "Изучение приложений",
           "url": "https://docs.google.com/document/d/1CMFO9cWrBa0E97raNZnEXHC5e2WHrprMokSW5jmJzDs/template/preview",
           "type": "Ресурс"
         },
         "exploring_apps_1/coursef/2022": {
+          "name": "Изучение приложений",
           "url": "https://docs.google.com/document/d/1Vjn1DhjZm17C-Hde97yDHyeFxMzdPlR6Q-rESZgHw2s/template/preview",
           "type": "Ключ к Ответу"
         },
@@ -421,9 +429,11 @@
           "type": "Слайды"
         },
         "blank_space_stories/coursef/2022": {
+          "name": "Истории о пустом пространстве",
           "url": "https://docs.google.com/document/d/1fJNyI0WQTi-Q-XMZDn9sIgD_o6KjGHwZesQRa93ko5E/template/preview"
         },
         "blank_space_stories_1/coursef/2022": {
+          "name": "Истории о пустом пространстве",
           "url": "https://docs.google.com/document/d/1mXI-U7ve1JjDchlyhjD53pkdSXKqeMemb7upFGareV4/template/preview",
           "type": "Ключ к Ответу"
         },
@@ -447,6 +457,7 @@
           "url": "https://docs.google.com/document/d/1FZAVAVabeADxUlDZACeZojuPK1gBN7g0_UfYfvxzah4/template/preview"
         },
         "running_simulations/coursef/2022": {
+          "name": "Моделирование бега",
           "url": "https://docs.google.com/document/d/1sgUd9UcthM3M-A1EKX1m3AwsgLrivx0jF0i-e_79kk8/edit",
           "type": "Рабочий лист"
         },
@@ -538,6 +549,9 @@
         "virtual_lesson_modifications/coursee/2022": {
           "name": "Изменения виртуального урока"
         },
+        "extension_lessons_micro_bit/coursee/2022": {
+          "type": "Ресурс"
+        },
         "be_a_super_digital_citizen_lesson_slides/coursee/2022": {
           "name": "Быть Цифровым супергражданином",
           "url": "https://docs.google.com/presentation/d/1RSug3cMAa8L0oSCC2H7__NnAayjLdktVPWl_H5vArHM/edit"
@@ -553,7 +567,8 @@
         },
         "private_and_personal_information_lesson_quiz/coursee/2022": {
           "name": "Личная конфиденциальная информация и информация о себе: Контрольная работа к уроку",
-          "url": "https://docs.google.com/forms/d/1iXNQu1c_I19GGasTbz95xGmIBLz3YokGSErREzTukpQ/copy"
+          "url": "https://docs.google.com/forms/d/1iXNQu1c_I19GGasTbz95xGmIBLz3YokGSErREzTukpQ/copy",
+          "type": "Форма"
         },
         "private_and_personal_information_lesson_quiz_1/coursee/2022": {
           "name": "Личная конфиденциальная информация и информация о себе: Контрольная работа к уроку",
@@ -574,7 +589,8 @@
         },
         "swimming_fish_teacher_sandbox/coursee/2022": {
           "name": "«Песочница для учителя» — Плавающая рыбка",
-          "url": "https://studio.code.org/levels/18623"
+          "url": "https://studio.code.org/levels/18623",
+          "type": "Уровень программирования"
         },
         "csf_-_course_e_-_slides_2022-2023_1/coursee/2022": {
           "type": "Слайды"
@@ -951,6 +967,7 @@
           "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
         },
         "text_and_prompts/express/2022": {
+          "name": "Текст и подсказки",
           "url": "https://docs.google.com/presentation/d/1ImZg6MHmaj5ouvrYdgsungbeLXRDAu106-NXOroJg14/template/preview",
           "type": "Слайды"
         },
@@ -1261,6 +1278,9 @@
         "virtual_lesson_modifications/coursec/2022": {
           "name": "Изменения виртуального урока",
           "url": "https://docs.google.com/document/d/1p71nZ3SqyNNVIJtQwPA_LTdcnL9RDsxIo5mQe9Gd-hQ/view"
+        },
+        "extension_lessons_micro_bit/coursec/2022": {
+          "type": "Ресурс"
         },
         "putting_a_stop_to_online_meanness_lesson_slides/coursec/2022": {
           "name": "Стоп грубости в Интернете: Слайды урока",
@@ -3059,10 +3079,12 @@
           "type": "Ресурс"
         },
         "exploring_apps/coursef/2021": {
+          "name": "Изучение приложений",
           "url": "https://docs.google.com/document/d/1CMFO9cWrBa0E97raNZnEXHC5e2WHrprMokSW5jmJzDs/template/preview",
           "type": "Ресурс"
         },
         "exploring_apps_1/coursef/2021": {
+          "name": "Изучение приложений",
           "url": "https://docs.google.com/document/d/1Vjn1DhjZm17C-Hde97yDHyeFxMzdPlR6Q-rESZgHw2s/template/preview",
           "type": "Ключ к Ответу"
         },
@@ -3117,10 +3139,12 @@
           "type": "Раздаточный материал"
         },
         "blank_space_stories/coursef/2021": {
+          "name": "Истории о пустом пространстве",
           "url": "https://docs.google.com/document/d/1mXI-U7ve1JjDchlyhjD53pkdSXKqeMemb7upFGareV4/template/preview",
           "type": "Ключ к Ответу"
         },
         "blank_space_stories_-_worksheet/coursef/2021": {
+          "name": "Истории о пустом пространстве",
           "url": "https://docs.google.com/document/d/1fJNyI0WQTi-Q-XMZDn9sIgD_o6KjGHwZesQRa93ko5E/template/preview"
         },
         "variables_blank_space_stories/coursef/2021": {
@@ -3129,6 +3153,7 @@
           "type": "Слайды"
         },
         "text_and_prompts/coursef/2021": {
+          "name": "Текст и подсказки",
           "url": "https://docs.google.com/presentation/d/1ImZg6MHmaj5ouvrYdgsungbeLXRDAu106-NXOroJg14/template/preview",
           "type": "Слайды"
         },
@@ -3173,7 +3198,8 @@
         },
         "flf-assessment-teacher-key/coursef/2021": {
           "name": "Игры с циклами со счетчиками: ключ для оценивания",
-          "url": "https://docs.google.com/document/d/11nIyoZ8jLVO-US-b0P8B-kisfFGdTwY6xjKhbTi-gGI/edit"
+          "url": "https://docs.google.com/document/d/11nIyoZ8jLVO-US-b0P8B-kisfFGdTwY6xjKhbTi-gGI/edit",
+          "type": "Ключ для учителя"
         },
         "lesson-in-action-for-loop-fun/coursef/2021": {
           "name": "Игры с циклами",
@@ -3191,6 +3217,7 @@
           "type": "Манипулятивы (подручные средства)"
         },
         "running-simulations/coursef/2021": {
+          "name": "Моделирование бега",
           "url": "https://docs.google.com/document/d/1sgUd9UcthM3M-A1EKX1m3AwsgLrivx0jF0i-e_79kk8/edit",
           "type": "Рабочий лист"
         },
@@ -4296,6 +4323,7 @@
           "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
         },
         "text_and_prompts/express/2021": {
+          "name": "Текст и подсказки",
           "url": "https://docs.google.com/presentation/d/1ImZg6MHmaj5ouvrYdgsungbeLXRDAu106-NXOroJg14/template/preview",
           "type": "Слайды"
         },
@@ -4423,6 +4451,7 @@
           "type": "Ресурс"
         },
         "follow_the_algorithm/coursee/2021": {
+          "name": "Следуйте алгоритму",
           "url": "https://docs.google.com/presentation/d/16r9HpwQodVnmSfRlfJmOfZajqE66YlZz0aG60CFsVMk/template/preview",
           "type": "Слайды"
         },
@@ -4433,7 +4462,8 @@
         },
         "swimming-fish-teacher-sandbox/coursee/2021": {
           "name": "«Песочница для учителя» — Плавающая рыбка",
-          "url": "https://studio.code.org/levels/18623"
+          "url": "https://studio.code.org/levels/18623",
+          "type": "Уровень программирования"
         },
         "be_a_super_digital_citizen_lesson_slides/coursee/2021": {
           "name": "Быть Цифровым супергражданином",
@@ -4450,7 +4480,8 @@
         },
         "private-and-personal-information-lesson-quiz/coursee/2021": {
           "name": "Личная конфиденциальная информация и информация о себе: Контрольная работа к уроку",
-          "url": "https://docs.google.com/forms/d/1iXNQu1c_I19GGasTbz95xGmIBLz3YokGSErREzTukpQ/copy"
+          "url": "https://docs.google.com/forms/d/1iXNQu1c_I19GGasTbz95xGmIBLz3YokGSErREzTukpQ/copy",
+          "type": "Форма"
         },
         "private-and-personal-information-lesson-quiz-answer-key/coursee/2021": {
           "name": "Личная конфиденциальная информация и информация о себе: Контрольная работа к уроку",

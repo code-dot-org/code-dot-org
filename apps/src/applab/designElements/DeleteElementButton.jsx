@@ -11,11 +11,11 @@ import style from './delete-element-button.module.scss';
 class DeleteElementButton extends React.Component {
   static propTypes = {
     shouldConfirm: PropTypes.bool.isRequired,
-    handleDelete: PropTypes.func.isRequired
+    handleDelete: PropTypes.func.isRequired,
   };
 
   state = {
-    confirming: false
+    confirming: false,
   };
 
   handleDeleteInternal = event => {

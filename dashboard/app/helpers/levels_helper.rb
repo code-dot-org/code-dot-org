@@ -413,6 +413,7 @@ module LevelsHelper
     use_weblab = @level.game == Game.weblab
     use_phaser = @level.game == Game.craft
     use_javalab = @level.is_a?(Javalab)
+    use_ailab = @level.is_a?(Ailab)
     use_blockly = !use_droplet && !use_netsim && !use_weblab && !use_javalab
     use_p5 = @level.is_a?(Gamelab)
     hide_source = app_options[:hideSource]
@@ -426,6 +427,7 @@ module LevelsHelper
         use_javalab: use_javalab,
         use_gamelab: use_gamelab,
         use_weblab: use_weblab,
+        use_ailab: use_ailab,
         use_phaser: use_phaser,
         use_p5: use_p5,
         hide_source: hide_source,
@@ -757,7 +759,11 @@ module LevelsHelper
       nonGlobal: true,
     }
     app = level.game.app
+    # We can safely treat this string as HTML-safe because it's constructed
+    # from levelbuilder-provided data, not user- or translator-provided.
+    # rubocop:disable Rails/OutputSafety
     blocks = content_tag(:xml, level.blocks_to_embed(level.properties[block_type]).html_safe)
+    # rubocop:enable Rails/OutputSafety
 
     unless @blockly_loaded
       @blockly_loaded = true
@@ -803,7 +809,11 @@ module LevelsHelper
     return match_answer_as_iframe(path, width) if File.extname(path) == '.level'
 
     @@markdown_renderer ||= Redcarpet::Markdown.new(Redcarpet::Render::Inline.new(filter_html: true))
+    # We can safely treat this string as HTML-safe because the markdown
+    # renderer is configured to filter out any non-markdown-standard HTML.
+    # rubocop:disable Rails/OutputSafety
     @@markdown_renderer.render(text).html_safe
+    # rubocop:enable Rails/OutputSafety
   end
 
   def level_title
@@ -939,34 +949,41 @@ module LevelsHelper
   # redirect.
   # @return [boolean] whether a (privacy) redirect happens.
   def redirect_under_13_without_tos_teacher(level)
+    error_message = under_13_without_tos_teacher?(level)
+    return false unless error_message
+
+    if error_message == I18n.t("errors.messages.too_young")
+      FirehoseClient.instance.put_record(
+        :analysis,
+        {
+          study: "redirect_under_13",
+          event: "student_with_no_teacher_redirected",
+          user_id: current_user.id,
+          data_json: {
+            game: level.game.name
+          }.to_json
+        }
+      )
+    end
+    redirect_to '/', flash: {alert: error_message}
+    return true
+  end
+
+  def under_13_without_tos_teacher?(level)
     # Note that Game.applab includes both App Lab and Maker Toolkit.
     return false unless level.game == Game.applab || level.game == Game.gamelab || level.game == Game.weblab
 
     if current_user&.under_13? && current_user.terms_version.nil?
       if current_user.teachers.any?
-        error_message = I18n.t("errors.messages.teacher_must_accept_terms")
+        return I18n.t("errors.messages.teacher_must_accept_terms")
       else
-        error_message = I18n.t("errors.messages.too_young")
-        FirehoseClient.instance.put_record(
-          :analysis,
-          {
-            study: "redirect_under_13",
-            event: "student_with_no_teacher_redirected",
-            user_id: current_user.id,
-            data_json: {
-              game: level.game.name
-            }.to_json
-          }
-        )
+        return I18n.t("errors.messages.too_young")
       end
-      redirect_to '/', flash: {alert: error_message}
-      return true
     end
 
     pairings.each do |paired_user|
       if paired_user.under_13? && paired_user.terms_version.nil?
-        redirect_to '/', flash: {alert: I18n.t("errors.messages.pair_programmer")}
-        return true
+        return I18n.t("errors.messages.pair_programmer")
       end
     end
 

@@ -12,6 +12,7 @@
       }
     ],
     "returnType": "Location",
-    "orderPrecedence": 0
+    "orderPrecedence": 0,
+    "style": "location_blocks"
   }
 }

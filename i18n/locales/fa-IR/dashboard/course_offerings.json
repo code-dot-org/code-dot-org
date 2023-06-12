@@ -20,11 +20,13 @@
   "iceage": "آزمایشگاه بازی عصر یخبندان",
   "infinity": "آزمایشگاه بازی بی نهایت دیزنی",
   "playlab": "آزمایشگاه بازی",
+  "sports": "بازی ورزشی خود را کدنویسی کنید",
   "csa-pilot-facilitator": "تسهیل‌کننده ارشد CSA",
   "poembot-hoc": "poembot-hoc",
   "ai-ethics": "فعالیت اخلاقی هوش مصنوعی",
   "counting-csc": "فعالیت شمارش",
   "explore-data-1": "فعالیت مربوط به داده‌ها",
+  "outbreak-csc": "شیوع",
   "spelling-bee": "فعالیت هجی کردن",
   "poetry": "ماژول شاعری",
   "k5-onlinepd": "آموزش اصول علوم کامپیوتر",
@@ -257,5 +259,6 @@
   "hello-world-space": "hello-world-space",
   "hello-world-soccer": "سلام دنیا: فوتبال",
   "playground": "زمين بازي",
-  "devices": "دستگاه ها"
+  "devices": "دستگاه ها",
+  "vpl-csd-summer-ci": "بررسی دوره آموزشی \"کشفیات علوم کامپیوتر\""
 }

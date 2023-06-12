@@ -80,6 +80,18 @@
       "syntax": "`public int size()`",
       "external_link": null,
       "return_value": null
+    },
+    {
+      "name": "set",
+      "position": 6,
+      "key": "set",
+      "overload_of": null,
+      "content": "Replaces the element at the specified position in the list with the specified element and returns the element previously at the specified position.",
+      "parameters": "[{\"name\":\"index\",\"type\":\"int\",\"required\":true,\"description\":\"the index of the element to replace\"},{\"name\":\"element\",\"type\":\"E\",\"required\":true,\"description\":\"the element to be stored at the specified position\"}]",
+      "examples": "[]",
+      "syntax": "`public E set(int index, E element)`",
+      "external_link": null,
+      "return_value": null
     }
   ]
 }

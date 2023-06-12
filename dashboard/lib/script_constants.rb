@@ -17,6 +17,16 @@ module ScriptConstants
   CSP17_UNIT2_NAME = 'csp2-2017'.freeze
   CSP17_UNIT3_NAME = 'csp3-2017'.freeze
 
+  # CSF family names
+  COURSEA = 'coursea'.freeze
+  COURSEB = 'courseb'.freeze
+  COURSEC = 'coursec'.freeze
+  COURSED = 'coursed'.freeze
+  COURSEE = 'coursee'.freeze
+  COURSEF = 'coursef'.freeze
+  EXPRESS = 'express'.freeze
+  PREEXPRESS = 'pre-express'.freeze
+
   # The order here matters. The first category a script appears under will be
   # the category it belongs to in course dropdowns. The order of scripts within
   # a category will be the order in which they appear in the dropdown, and the
@@ -226,18 +236,9 @@ module ScriptConstants
 
   DEFAULT_VERSION_YEAR = '2017'
 
-  # An allowlist of all family names for scripts.
-  FAMILY_NAMES = [
-    # CSF
-    COURSEA = 'coursea'.freeze,
-    COURSEB = 'courseb'.freeze,
-    COURSEC = 'coursec'.freeze,
-    COURSED = 'coursed'.freeze,
-    COURSEE = 'coursee'.freeze,
-    COURSEF = 'coursef'.freeze,
-    EXPRESS = 'express'.freeze,
-    PREEXPRESS = 'pre-express'.freeze,
-
+  # An allowlist of all family names which are not course offerings.
+  # This list is deprecated. Do not add to this list.
+  DEPRECATED_FAMILY_NAMES = [
     # CSP
     CSP1 = 'csp1'.freeze,
     CSP2 = 'csp2'.freeze,
@@ -260,15 +261,6 @@ module ScriptConstants
     CSD4 = "csd4".freeze,
     CSD5 = "csd5".freeze,
     CSD6 = "csd6".freeze,
-
-    # AIML
-    AIML = "aiml".freeze,
-
-    # Testing
-    #
-    # note that this constant is hard to rename from 'script' to 'unit' because
-    # doing so causes the course version to change, causing seeding to fail.
-    TEST = 'ui-test-versioned-script'.freeze
   ].freeze
 
   def self.unit_in_category?(category, script)

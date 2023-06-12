@@ -17256,6 +17256,55 @@ de-DE:
         - {}
       csp_unit_assessment_overview:
         content1: hier die Beschreibung
+        teacher_markdown: "### ACHTUNG: Was dieser Test ist und was er nicht ist\n\n*
+          Dieser Test ist **im Stil der AP** als Multiple-Choice-Tests konzipiert.\n\n*
+          Das bedeutet, dass sich die Fragen **nicht** speziell auf den Unterricht
+          beziehen, der vor diesem Punkt behandelt wurde.  Vielmehr beziehen sich
+          die Fragen auf die zugrundeliegenden AP-Lernziele, die theoretisch behandelt
+          wurden.\n\n* Es **bedeutet**, dass die Schüler möglicherweise etwas von
+          dem, was sie gelernt haben, extrapolieren müssen, um die Fragen zu beantworten.\n\n*
+          Es **bedeutet**, dass die Fragen \"schwer\" sein können, insbesondere für
+          diejenigen, die sich zum ersten Mal damit beschäftigen.\n\nInsgesamt gilt
+          also: **Mit Vorsicht verwenden**\n\n* Entscheiden Sie selbst, welchen Stellenwert
+          Sie dieser Bewertung beimessen wollen.\n\t* Sie müssen diese Bewertung nicht
+          verwenden, um die Schüler zu benoten, oder...\n    * Sie können die Schüler
+          auf andere Weise benoten als nur durch die Angabe der richtigen Prozentzahl.\n\n*
+          Stellen Sie sicher, dass Sie die Bewertung so einsetzen, dass der Geist
+          des Unterrichts als Erforschung von Wissen erhalten bleibt.\n\t* Wenn Sie
+          befürchten, dass die Schüler entmutigt werden, sollten Sie die Bewertung
+          als Gelegenheit zum Nachforschen nutzen. Lassen Sie die Schüler die Fragen
+          ausprobieren, dann die Antworten recherchieren und ändern, was sie falsch
+          gemacht haben, oder eigene Fragen entwickeln.\n\n\n---\n\n#### F.A.Q. --
+          Vorbereitugen, Durchführung und Überprüfung der Tests\n\nBitte sehen Sie
+          sich unser laufendes **[F.A.Q. Dokument hier](https://docs.google.com/document/d/1zEpD1PFt6ec2S8ourxuMH0HD6tiyRvqAGUKGDCOt-qs/edit#heading=h.kewgp6z8qdde)**
+          an, das Folgendes enthält:\n\n* Screenshots zur Vorbereitung, Verwaltung
+          und Überprüfung von Bewertungen\n* Anworten zu häufig auftretenden Fragen/Problemen\n\n\n####
+          Kurze zusammenfassende Ansicht der Antworten der Schüler und Überprüfung\n\n1.
+          Gehen Sie zu Ihrem [Lehrer-Dashboard](https://code.org/teacher-dashboard#/)\n2.
+          Wählen Sie Ihren Abschnitt Grundsätze der Informatik\n3. Sie sehen eine
+          Reihe von lilafarbenen Registerkarten, darunter Text-Antworten, Bewertungen
+          usw.\n4. Klicken Sie auf **Bewertungen/Umfragen**.\n5. Wählen Sie im Dropdown-Menü
+          der Kursauswahl **die Einheit aus, in der diese Bewertung erschienen ist
+          (z. B. Stunde 1: Das Internet)**.\n6. Die SchülerInnen, die eine Bewertung
+          *abgegeben* haben, werden in zwei Tabellen angezeigt:\n   * Die erste Tabelle
+          ist eine zusammenfassende Ansicht des Prozentanteils der richtigen Bewertungen
+          aller bewertenden SchülerInnen, einschließlich des Zeitstempels, an dem
+          die Bewertung abgegeben wurde, aufgeführt ist.\n   * Die zweite Tabelle
+          ist eine umfassende Liste aller Antworten auf die einzelnen Fragen, die
+          von den einzelnen SchülerInnen eingereicht wurden.\n\n    Über diesen beiden
+          Tabellen befindet sich eine Schaltfläche **Herunterladen (oder Exportieren)
+          als csv** - damit können Sie die Antworten in einer Tabellenkalkulation
+          bearbeiten (empfohlen).\n\n7. Wenn Sie den SchülerInnen erlauben möchten,
+          einen Test ZU SENDEN, weisen Sie ihn an, zur letzten Seite des Tests zu
+          navigieren und dort auf \"SENDEN\" zu klicken.\n\n**HINWEIS zu ERNEUT SENDEN:**
+          \n\nSie sollten mit Ihren SchülerInnen klare Regeln für das Zurücknehmen
+          bzw. erneute Senden eines Tests aufstellen. Die SchülerInnen denken möglicherweise,
+          sie könnten eine Antwort zu ändern, nachdem der Test vorbei ist (d. h. schummeln).
+          Beim Senden wird jedoch immer ein Zeitstempel hinzugefügt, wann die SchülerInnen
+          den Test abgesendet haben.  \n\nWir empfehlen Ihnen, einfach festzulegen,
+          dass Sie Tests, die nach einer bestimmten Zeit eingereicht wurden, nicht
+          mehr bewerten oder benoten.  Wenn der Test nicht vor der angegebenen Frist
+          gesendet wurde, ist es so, als hätten Sie ihn nicht erhalten.\n\n\n\n"
       curriculum-how-challenging:
         answers:
         - correct: true
@@ -18205,25 +18254,22 @@ de-DE:
         answers:
         - text: Scrat wird die Eichel erreichen. Es gibt keine Fehler in diesem Code.
           correct: true
-          feedback: Falsch. Zunächst dreht sich Scrat in die falsche Richtung. Anschließend
-            bewegt sich Scrat nicht oft genug vorwärts, um die Eichel zu erreichen.
+          feedback: Nein. Scrat wird die Eichel nicht erreichen, da er sich in die
+            falsche Richtung dreht.
         - text: Scrat wird die Eichel nicht erreichen, da er sich in die falsche Richtung
             dreht.
           correct: true
-          feedback: Richtig! Zunächst dreht sich Scrat in die falsche Richtung. Anschließend
-            bewegt sich Scrat nicht oft genug vorwärts, um die Eichel zu erreichen.
         - text: Scrat wird die Eichel nicht erreichen, da es nicht genug 'vorwärts
             bewegen' Blöcke gibt.
           correct: true
-          feedback: Richtig! Zunächst dreht sich Scrat in die falsche Richtung. Anschließend
-            bewegt sich Scrat nicht oft genug vorwärts, um die Eichel zu erreichen.
+          feedback: Nein. Scrat wird die Eichel nicht erreichen, da er sich in die
+            falsche Richtung dreht.
         - text: 'Scrat bewegt sich nicht vom ersten Block weg.
 
 '
           correct: true
-          feedback: In diesem Code befinden sich zwei Fehler. Zunächst dreht sich
-            Scrat in die falsche Richtung. Anschließend bewegt sich Scrat nicht oft
-            genug vorwärts, um die Eichel zu erreichen.
+          feedback: Scrat wird die Eichel nicht erreichen, da er sich in die falsche
+            Richtung dreht.
         questions:
         - text: Suche nach Fehlern in diesem Code. Wird Scrat die Eichel erreichen
             oder gibt es ein Problem?
@@ -18488,15 +18534,23 @@ de-DE:
             klickst?
       courseD_multi_maze_until10_predict22022:
         answers:
-        - correct: true
+        - text: Der Zombie wird den richtigen Weg gehen und am Ende für immer hin
+            und her gehen.
+          correct: true
           feedback: Richtig!
         - text: Der Zombie wird es bis zur Sonnenblume schaffen.
           correct: true
+          feedback: Falsch. Der Zombie wird den richtigen Weg gehen und am Ende für
+            immer hin und her gehen.
         - text: Der Zombie wird auf dem ersten Weg nach rechts abbiegen und endlos
             im Kreis herumlaufen.
           correct: true
+          feedback: Falsch. Der Zombie wird den richtigen Weg gehen und am Ende für
+            immer hin und her gehen.
         - text: Der Zombie bleibt am Ende des Weges vor ihm stecken.
           correct: true
+          feedback: In diesem Code wird der Zombie den richtigen Weg gehen und am
+            Ende für immer hin und her gehen.
         questions:
         - text: Schau dir den nachfolgenden Code genau an. Was passiert, wenn du auf
             "Ausführen" klickst?
@@ -18754,20 +18808,45 @@ de-DE:
         display_name: Text und Eingabeaufforderungen üben
       courseF_variables2_predict2_multi2022_-2022-2:
         answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
+        - text: Der Hase wird „5" sagen.
+          correct: true
+          feedback: Richtig! Die Zahl 5 wird in der Variablen gespeichert und dann
+            erneut verwendet, wenn das Sprite spricht.
+        - text: Der Hasen-Sprite sagt, welche Zahl auch immer eingegeben wurde.
+          correct: true
+          feedback: Falsch. In diesem Programm gibt es keine Eingabe. Die Nummer ist
+            direkt im Code festgelegt.
+        - text: Der Hase wird „zähle“ sagen.
+          correct: true
+          feedback: Falsch. `count` ist eine Variable. Wenn dieser Block ausgeführt
+            wird, erhält er die Nummer, die gespeichert ist. Der Hase wird „5" sagen.
+        - text: Nichts wird passieren, weil `count` keine Zahl ist.
+          correct: true
+          feedback: Richtig! Die Zahl 5 wird in der Variablen gespeichert und dann
+            erneut verwendet, wenn das Sprite spricht.
         questions:
-        - {}
+        - text: 'Mache eine Vorhersage: Was wird der Hase sagen?'
       courseF_variables2_predict_multi2022_2022_pilot_-2022-2:
         answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
+        - text: Das Programm zeigt die eingegebene Zahl an.
+          correct: true
+          feedback: Falsch. Die Zahl wird in der Variablen gespeichert und verwendet,
+            um Möhren Sprites zu erstellen.
+        - text: Der Hasen-Sprite sagt, welche Zahl auch immer eingegeben wurde.
+          correct: true
+          feedback: Falsch. Die Zahl wird in der Variablen gespeichert und verwendet,
+            um Möhren Sprites zu erstellen.
+        - text: Das Programm wird so viele neue Möhrensprites machen.
+          correct: true
+          feedback: Richtig! Die Anzahl der erstellten Sprites ist die in der Variablen
+            gespeicherte Zahl.
+        - text: Nichts wird passieren, weil `count` keine Zahl ist.
+          correct: true
+          feedback: Falsch. Die Zahl wird in der Variablen gespeichert und verwendet,
+            um Möhren Sprites zu erstellen.
         questions:
-        - {}
+        - text: 'Mach eine Vorhersage: Was passiert, nachdem Du eine Zahl in das Eingabefeld
+            eingegeben hast?'
       courseF_variables_predict_multi2022_2022_pilot_-2022-2:
         answers:
         - text: Das Programm wird "Hallo Name!" ausgeben
@@ -18889,3 +18968,73 @@ de-DE:
         questions:
         - text: Sieh dir diesen Code genau an. Was wird deiner Meinung nach passieren,
             wenn das Programm läuft?
+      Test Contained Retriable Multi:
+        answers:
+        - text: '0'
+          correct: true
+        - text: '1'
+          correct: true
+        - text: '2'
+          correct: true
+        - text: '4'
+          correct: true
+        questions:
+        - {}
+      test-single-multi-standalone-retriable:
+        answers:
+        - text: Nichts wird passieren.
+          correct: true
+          feedback: Falsch. Das Unkraut wird sich in Bewegung setzen
+        - text: Das Unkraut wird an den oberen Rand des Bildschirms schweben
+          correct: true
+          feedback: Falsch. Das Unkraut wird sich in Bewegung setzen
+        - text: Das Unkraut wird sich in Bewegung setzen
+          correct: true
+          feedback: Richtig!
+        - text: Das Unkraut blinkt an und aus.
+          correct: true
+          feedback: Falsch. Das Unkraut wird sich in Bewegung setzen
+        questions:
+        - text: Schau dir den Code unten genau an. Was passiert, wenn du auf "Ausführen"
+            klickst?
+      OPD-K5 Stage9Start_dani:
+        markdown: " # Planung > Ressourcen für LehrerInnen erforschen\n\nIn den Stufen
+          4-8 haben Sie sich \"ohne Geräte\" und oder mit online verfügbaren Lernressourcen
+          mit den Grundlagen der Informatik den entsprechenden Konzepten beschäftigt.
+          \n\nSie wissen jetzt, wie man programmiert und wie man Informatik unterrichtet.
+          Jetzt befassen wir uns mit der Unterrichtsplanung. In dieser Phase werden
+          wir andere Bereiche der Code.org-Plattform und das **[Teacher Dashboard](http://studio.code.org/)**
+          nutzen. \n\nAktivitäten der Stufe 10:\n\n– Erkunden der Ressourcen für LehrerInnen.\n–
+          Das Code.org **[Teacher Dashboard](http://studio.code.org/)**.\n– Planen
+          der Integration von Informatik in Ihren Unterricht.\n\n***\n\nHier sehen
+          Sie einen Screenshot des Lehrer-Dashboarda. Melden Sie sich bei Ihrem LehrerInnen-Konto
+          von Code.org an, um es aufzurufen. Es ist der Standardbildschirm der Code.org
+          Website, den Sie sehen, nachdem Sie sich angemeldet haben. Wenn Sie noch
+          kein LehrerInnen-Konto haben, können Sie sich **[hier](https://studio.code.org/users/sign_up)**
+          anmelden.\n\n![](https://images.code.org/d6345709495f764a71d9cb0994dbd7e4-image-1549064603589.png)"
+      csd-post-survey-2018-markdown-with-link-to-survey:
+        teacher_markdown: |
+          **Bitten Sie Ihre SchülerInnen, diese Umfrage zu beantworten!!! **
+
+          * Sie können sich die anonymisierten Ergebnisse der Umfrage in Ihrem Lehrer-Dashboard ansehen.
+          * Die Ergebnisse der Umfrage sind für uns (code.org) von entscheidender Bedeutung und tragen dazu bei, dass wir die Kurse fortführen und verbessern können.
+          * Es wird auch eine Befragung der LehrerInnen durchgeführt, die Sie beantworten und uns senden können. Wir informieren Sie per E-Mail über die Umfrage.
+
+          **Hinweis: **
+
+          * Die Schaltfläche auf dieser Seite leitet Sie weiter zu [studio.code.org/s/csp-post-survey] (https://studio.code.org/s/csp-post-survey).
+          * Wenn Sie möchten, können Sie im Dropdown-Menü im Lehrer-Dashboard „Umfrage von SchülerInnen nach dem Kurs“ als aktuelle Einheit für Ihren Abschnitt festlegen.
+      csd-post-survey-2018-markdown-with-link-to-survey_v2:
+        teacher_markdown: "**Bitten Sie Ihre SchülerInnen, diese Umfrage zu beantworten!!!
+          **\n\n* Sie können sich die anonymisierten Ergebnisse der Umfrage in Ihrem
+          Lehrer-Dashboard ansehen.\n* Die Ergebnisse der Umfrage sind für uns (code.org)
+          von entscheidender Bedeutung und tragen dazu bei, dass wir die Kurse fortführen
+          und verbessern können.\n\n**Zur Ansicht der Ergebnisse** -- die Umfrage
+          nach dem Kurs ist ein wenig anders. Die Umfrage befindet sich in einer eigenen
+          Einheit des Kurses, und ist mit dieser Seite verlinkt.\n\n* Zur Ansicht
+          der anonymisierten Ergebnisse der Umfrage in Ihrem Lehrer-Dashboard klicken
+          Sie auf (1) Umfrage/Bewertungen anzeigen und wählen Sie dann aus (2) die
+          Einheit der Umfrage nach dem Kurs als die Einheit aus, die Sie anzeigen
+          möchten.  \n\n* **Weitere Informationen zur Anzeige der Ergebnisse der Umfrage
+          nach dem Kurs**: [[google doc](https://docs.google.com/document/d/1EQfPy0D6lSWA3s3d2hkgVLSRn1vrjLLXaZBSz3-E9aw)]
+          [[pdf](https://docs.google.com/document/d/1EQfPy0D6lSWA3s3d2hkgVLSRn1vrjLLXaZBSz3-E9aw/export?format=pdf)]\n\n\n\n\n"

@@ -1,27 +1,35 @@
 name 'cspu5_assess2_oldEnough'
-encrypted 'XBx9fHIVls954dzuDmqnrHPIWTy6C848VKnUcaO4Chqf0XoJLXQJRtPLNgiV
-cthRL9pPxDcmgQrAnvrzOq9dUunyXaCVnm5gC0tiQJsjOGchNR2ma5fvCgaQ
-vhjw4ha/nKwMCpohELd99cVuUD8Y6Blnvm+PCLrN1GeJtCxGMJyvPo6zEUp7
-lCNHoeNQVLCZl/GGGX9HRvDuBGGauL6aRPGbMMerBOjr4dnKyQV01l7i2p1w
-BbDwV9SJrKEbh3X22SH4yzWeF+9iZegcEBRevyLhUeYZPDdKp8M342Xr895A
-n6BUjuxeTRCw4jiB3LdmdGQwLYulD/ln/4ULL8CVYrduCwdRZZDvvP5fcVWP
-DVjAu8V1wygkIkmw6AiQNWL0xMIM3jB0oMsDM3XRmuWkp3z05zFVD4QbQlDt
-k+nTBZbbhzkaxTklJ4+WXLtrHAKfT0G4AaJJ+cgVGGEGIhsTEU0sdd20gfzo
-pL6Tz4MYjX8Ooo4gpVsen5QsNtV94ssimsKU4SmS640Rxg5R34X4o46YXZP3
-/lPfVYvJSpcGlDfZQJl0kMLWVvXHC4noCqPpkXseOxfDZY/yVkCG8hRIMaaq
-X1a1/lbEY0Ae0A42gOPQ5DpyZqZ2gyXHGauHxPdsvqXCRjT/8Lc5pZbuTDox
-q8hAdnEvD4Ll2RbaE9mfydddtkCAlZaiR6CBrNTMpQhRp2Hskq5VvHlz1lHO
-c1b/9K9L1H8osb76HKRSPVv/ldTYbf//B0OZNnpNQQM9QDTstoB1ATchGs9Y
-rrpdFLxlfP3vKxsNmr3z9zC7eTOzyoi1WVQ58FRMMJx2XetdFaXdfCbvIFj1
-xxbrDRCiu+bBaRxKjtMh/xJEZ9rwbY+Dk/v8oPjxg0Kb9nGvSSIavUfbdNzq
-bqwPgj9E8Bzrl4XTQnZsl11cHIRtyXdr7v5e1e2CruUFTuD24HqWkOsSDrTw
-l0d9oCIKWadYH64op0uDldY/iZg/MbOBmzKEMIuGHLEb+JJYykdxi3G+j/FT
-y2hoiO+a0YvIp2xIrRHLDikfeoYXmT1e0yMJnoDJ2q+APL4q7dj7XJTSwNVO
-mD13xMjSV/oNYVpr8PYwNa7nnPiZsuU3N31YYEro2btWVZMjLK1JlDX4GyQP
-0Cnj2Grd1XXntZiqYS2hMJqG380xKgAksxLgIp9Z4URzZH7tSn5lipqVPWBx
-OSchlY0iNNlCosFpP1UUX35goMSKY6sN8Igc3yTznoEGDlRSPLQDRe3Qh+31
-kpp1h+qfIqLztzZnfg0J6HAJEozMFWCvVWFEf+TdzKot3TqJeGgnF6lwMjli
-Ep1/j9vIzmcGOvo90mzD1eJ7J2bzp03QCQAO63asxCYWZw2R9TWxFsTRlt1w
-h5na7ILqv+RuuyuhO6XyPuNiOHgWe7/5dKCYt7Qea2qWpfUoYbZrPPLhgoNd
-4tWa1onM+tPKwHrpfyhlzA1eEq0SWs7iVrcOALIYUnsExsLPAGeHkg==
-'
+wrong '35'
+wrong 'true'
+wrong 'false'
+wrong 'You are not old enough to be President.'
+right 'You are old enough to be President!'
+
+markdown <<MARKDOWN
+What is the expected output of the given pseudo code segment?  A reference for the pseudo code can be found immediately below the question
+
+    age <- 35
+    IF (age < 35)
+    {
+        DISPLAY ("You are not old enough to be President.")
+    } 
+    ELSE 
+    {
+        DISPLAY ("You are old enough to be President!")
+    }
+
+<img src="https://images.code.org/dcb91471aad876e5ed307b66648c2f1e-image-1475996573144.png" style="width:700px;">
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+**Content: Unit 5 Lesson 8**
+
+Going through the code line by line:
+
+* A variable "age" is set to 35
+* Going into the IF statement, it checks if age is less than 35. 35 is equal to 35 and NOT less than it so the condition is false.
+* Therefore, since age is not less than 35, the program executes the code that is in the else statement.
+* The program displays "You are old enough to be President!"
+MARKDOWN
+
+allow_multiple_attempts true

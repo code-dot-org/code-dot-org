@@ -6,15 +6,62 @@
           "name": "បន្ទប់វេប"
         },
         "gamelab": {
+          "name": "មន្ទីរពិសោធន៍ ល្បែង",
           "categories": {
+            "game_lab": {
+              "name": "មន្ទីរពិសោធន៍ ល្បែង",
+              "expressions": {
+                "playSound": {
+                  "short_description": "ចាក់ឯកសារសំឡេង MP3 ពី URL ដែលបានបញ្ជាក់។"
+                }
+              }
+            },
             "groups": {
-              "name": "ក្រុម"
+              "name": "ក្រុម",
+              "expressions": {
+                "setColorEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "ពណ៌"
+                    }
+                  }
+                },
+                "setTintEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "ពណ៌"
+                    }
+                  }
+                }
+              }
             },
             "drawing": {
               "name": "គំនូរ"
             },
             "math": {
-              "name": "គណិត​វិទ្យា"
+              "name": "គណិត​វិទ្យា",
+              "expressions": {
+                "randomNumber": {
+                  "palette_params": {
+                    "min": {
+                      "description": "លេខអប្បបរមាត្រូវបានត្រឡប់មកវិញ"
+                    },
+                    "max": {
+                      "description": "លេខអតិបរមាត្រូវបានត្រឡប់មកវិញ"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "min": {
+                      "description": "លេខអប្បបរមាត្រូវបានត្រឡប់មកវិញ"
+                    },
+                    "max": {
+                      "description": "លេខអតិបរមាត្រូវបានត្រឡប់មកវិញ"
+                    }
+                  }
+                }
+              }
             },
             "variables": {
               "name": "អ​ថេរ"
@@ -25,12 +72,76 @@
           }
         },
         "applab": {
+          "name": "មន្ទីរពិសោធន៍កម្មវិធី​",
           "categories": {
+            "ui_controls": {
+              "expressions": {
+                "onEvent": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "អនុគមន៍"
+                    }
+                  }
+                },
+                "playSound": {
+                  "short_description": "ចាក់ឯកសារសំឡេង MP3 ពី URL ដែលបានបញ្ជាក់។"
+                }
+              }
+            },
+            "data": {
+              "expressions": {
+                "getPrediction": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "អនុគមន៍"
+                    }
+                  }
+                }
+              }
+            },
+            "control": {
+              "expressions": {
+                "timedLoop": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "អនុគមន៍"
+                    }
+                  }
+                }
+              }
+            },
             "math": {
-              "name": "គណិត​វិទ្យា"
+              "name": "គណិត​វិទ្យា",
+              "expressions": {
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "min": {
+                      "description": "លេខអប្បបរមាត្រូវបានត្រឡប់មកវិញ"
+                    },
+                    "max": {
+                      "description": "លេខអតិបរមាត្រូវបានត្រឡប់មកវិញ"
+                    }
+                  }
+                },
+                "randomNumber": {
+                  "palette_params": {
+                    "min": {
+                      "description": "លេខអប្បបរមាត្រូវបានត្រឡប់មកវិញ"
+                    },
+                    "max": {
+                      "description": "លេខអតិបរមាត្រូវបានត្រឡប់មកវិញ"
+                    }
+                  }
+                }
+              }
             },
             "variables": {
-              "name": "អ​ថេរ"
+              "name": "អ​ថេរ",
+              "expressions": {
+                "addPair": {
+                  "return_value": "គ្មាន"
+                }
+              }
             },
             "functions": {
               "name": "អនុ​គមន៍"

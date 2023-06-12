@@ -210,6 +210,9 @@ sv:
           description: Alla typer av nivå för UI-tester
           description_short: Alla typer av nivå för UI-tester
           student_description: Alla typer av nivå för UI-tester
+          lessons:
+            lesson-49:
+              name: Musik
         algebraPD2b:
           title: Datavetenskap i Algebra PD
         asUnplugged:
@@ -1995,24 +1998,45 @@ sv:
           lesson_groups:
             lessonGroup-2:
               display_name: Innehåll
+        csa3-2023:
+          lessons:
+            lesson-3:
+              name: "'För' loopar"
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+        csa4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+        csa5-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+        csa6-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+        csa7-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+        csa8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
         csd1-2023:
           lesson_groups:
             lessonGroup-2:
-              display_name: Kapitel 1
+              display_name: 'Kapitel 1: Problemlösnings-processen'
             lessonGroup-3:
-              display_name: Kapitel 2
+              display_name: 'Kapitel 2: Datorer och Problemlösning'
         csd3-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kapitel 1: Bilder och Animationer'
             lessonGroup-3:
               display_name: 'Kapitel 2: Bygga Spel'
-        csd6-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Kapitel 1
-            lessonGroup-3:
-              display_name: Kapitel 2
         csd7-2023:
           lesson_groups:
             lessonGroup-2:
@@ -2032,12 +2056,216 @@ sv:
         csp5-2023:
           lesson_groups:
             csp_lists:
-              display_name: Listor
+              display_name: Data
             csp_loops:
               display_name: loopar
             csp_project:
+              display_name: Projekt
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Listor
+            lessonGroup-3:
+              display_name: loopar
+            lessonGroup-5:
               display_name: Projekt
         csp7-2023:
           lesson_groups:
             csp_libraries:
               display_name: Bibliotek
+        angelina-playground:
+          lessons:
+            lesson-5:
+              name: Bedömningar
+        tess-testing-problem-solving-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kapitel 1
+            lessonGroup-3:
+              display_name: Kapitel 2
+        testing-focus-on-creativity1:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kapitel 1
+        pre-express-2023:
+          lesson_groups:
+            csf_loops:
+              display_name: loopar
+            csf_events:
+              display_name: Händelser
+        express-2023:
+          lesson_groups:
+            lessonGroup-9:
+              display_name: Händelser
+            csf_loops:
+              display_name: loopar
+            csf_conditionals:
+              display_name: Villkor
+            csf_functions:
+              display_name: funktioner
+            csf_variables:
+              display_name: variabler
+            csf_for_loops:
+              display_name: "'För' loopar"
+        coursea-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalt medborgarskap
+            csf_loops:
+              display_name: loopar
+            csf_events:
+              display_name: Händelser
+        courseb-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalt medborgarskap
+            csf_loops:
+              display_name: loopar
+            csf_events:
+              display_name: Händelser
+        coursec-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalt medborgarskap
+            csf_loops:
+              display_name: loopar
+            csf_events:
+              display_name: Händelser
+            csf_data:
+              display_name: Data
+        coursed-2023:
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Digitalt medborgarskap
+            csf_events:
+              display_name: Händelser
+            csf_loops:
+              display_name: loopar
+            csf_conditionals:
+              display_name: Villkor
+        coursee-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalt medborgarskap
+            ramp_up:
+              display_name: Kapslade slingor(loopar)
+            csf_functions:
+              display_name: funktioner
+            csf_nested_loops:
+              display_name: Villkor
+        problem-solving-computing-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitel 1: Problemlösnings-processen'
+            lessonGroup-3:
+              display_name: 'Kapitel 2: Datorer och Problemlösning'
+        interactive-games-animations-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitel 1: Bilder och Animationer'
+            lessonGroup-3:
+              display_name: 'Kapitel 2: Bygga Spel'
+        aiml-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Kapitel 1
+            lessonGroup-4:
+              display_name: Kapitel 2
+        focus-on-creativity1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitel 1: Problemlösnings-processen'
+        focus-on-creativity3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitel 1: Bilder och Animationer'
+            lessonGroup-3:
+              display_name: 'Kapitel 2: Bygga Spel'
+        focus-on-hardware1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitel 1: Problemlösnings-processen'
+            lessonGroup-3:
+              display_name: 'Kapitel 2: Datorer och Problemlösning'
+        focus-on-data1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitel 1: Problemlösnings-processen'
+        focus-on-data3-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Kapitel 1
+            lessonGroup-4:
+              display_name: Kapitel 2
+        focus-on-design-with-purpose1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitel 1: Problemlösnings-processen'
+        focus-on-coding1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitel 1: Problemlösnings-processen'
+        focus-on-coding3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitel 1: Bilder och Animationer'
+            lessonGroup-3:
+              display_name: 'Kapitel 2: Bygga Spel'
+        focus-on-impact-in-society1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitel 1: Problemlösnings-processen'
+        focus-on-impact-in-society4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kapitel 1
+            lessonGroup-4:
+              display_name: Kapitel 2
+        ai-temp:
+          title: Hur AI fungerar
+        self-paced-pl-csd1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Välkommen
+        pl-csd-summer-day1:
+          lessons:
+            lesson-3:
+              name: Introduktion
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Dag 1
+          title: Dag 1
+        pl-csd-summer-day2:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Dag 2
+          title: Dag 2
+        pl-csd-summer-day3:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Dag 3
+          title: Dag 3
+        pl-csd-summer-day4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Dag 4
+          title: Dag 4
+        virtual-pl-csd-summer-day1:
+          lessons:
+            lesson-1:
+              name: Introduktion
+          title: Dag 1
+        virtual-pl-csd-summer-day2:
+          title: Dag 2
+        virtual-pl-csd-summer-day3:
+          title: Dag 3
+        virtual-pl-csd-summer-day4:
+          title: Dag 4
+        virtual-pl-csd-summer-day5:
+          title: Dag 5
+        coursef-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitalt medborgarskap
+            lessonGroup-4:
+              display_name: variabler

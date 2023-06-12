@@ -200,7 +200,7 @@ class FollowersControllerTest < ActionController::TestCase
     assert_redirected_to '/'
 
     assert_equal 'A name', assigns(:user).name
-    assert_equal 'F', assigns(:user).gender
+    assert_equal 'f', assigns(:user).gender
     assert_equal Time.zone.now.to_date - 13.years, assigns(:user).birthday
     assert_equal AuthenticationOption::EMAIL, assigns(:user).primary_contact_info.credential_type
     assert_equal User::TYPE_STUDENT, assigns(:user).user_type
@@ -224,7 +224,7 @@ class FollowersControllerTest < ActionController::TestCase
       assert_redirected_to '/'
 
       assert_equal 'A name', assigns(:user).name
-      assert_equal 'F', assigns(:user).gender
+      assert_equal 'f', assigns(:user).gender
       assert_equal Date.today - 13.years, assigns(:user).birthday
       assert_equal AuthenticationOption::EMAIL, assigns(:user).primary_contact_info.credential_type
       assert_equal User::TYPE_STUDENT, assigns(:user).user_type
@@ -249,7 +249,7 @@ class FollowersControllerTest < ActionController::TestCase
       assert_redirected_to '/'
 
       assert_equal 'A name', assigns(:user).name
-      assert_equal 'F', assigns(:user).gender
+      assert_equal 'f', assigns(:user).gender
       assert_equal Date.today - 11.years, assigns(:user).birthday
       assert_equal AuthenticationOption::EMAIL, assigns(:user).primary_contact_info.credential_type
       assert_equal '', assigns(:user).email
@@ -382,7 +382,7 @@ class FollowersControllerTest < ActionController::TestCase
       post :student_register, params: {section_code: 'INVALID'}
       @new_student.reload
     end
-    assert_equal true, @new_student.display_captcha?
+    assert_equal true, @new_student.display_join_section_captcha?
   end
 
   # Enable reCAPTCHA gem in test env for just this unit test.

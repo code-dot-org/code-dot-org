@@ -3,7 +3,7 @@ import $ from 'jquery';
 import {
   sources as sourcesApi,
   channels as channelsApi,
-  assets as assetsApi
+  assets as assetsApi,
 } from '../../clientApi';
 import * as importFuncs from '../import';
 
@@ -13,13 +13,13 @@ const IMPORT = {
   PROJECT: {
     START_FETCHING: 'screens/importProject/START_FETCHING',
     FAILED_FETCHING: 'screens/importProject/FAILED_FETCHING',
-    FINISHED_FETCHING: 'screens/importProject/FINISHED_FETCHING'
+    FINISHED_FETCHING: 'screens/importProject/FINISHED_FETCHING',
   },
   SCREENS: {
     START_IMPORTING: 'screens/importScreens/START_IMPORTING',
     FAILED_IMPORTING: 'screens/importScreens/FAILED_IMPORTING',
-    FINISHED_IMPORTING: 'screens/importScreens/FINISHED_IMPORTING'
-  }
+    FINISHED_IMPORTING: 'screens/importScreens/FINISHED_IMPORTING',
+  },
 };
 
 var ImportProjectState = Immutable.Record({
@@ -28,13 +28,13 @@ var ImportProjectState = Immutable.Record({
   fetchedProject: null,
   importableProject: null,
   isImportingProject: false,
-  errorImportingProject: false
+  errorImportingProject: false,
 });
 
 const ScreenState = Immutable.Record({
   currentScreenId: null,
   isImportingScreen: false,
-  importProject: undefined
+  importProject: undefined,
 });
 
 const initialState = new ScreenState();
@@ -63,7 +63,7 @@ function importReducer(state = new ImportProjectState(), action) {
         state
           .merge({
             isFetchingProject: false,
-            errorFetchingProject: null
+            errorFetchingProject: null,
           })
           // use set instead of merge to keep it as a plain js object.
           .set('fetchedProject', action.project)
@@ -75,7 +75,7 @@ function importReducer(state = new ImportProjectState(), action) {
     case IMPORT.PROJECT.FAILED_FETCHING:
       return state.merge({
         isFetchingProject: false,
-        errorFetchingProject: true
+        errorFetchingProject: true,
       });
     case IMPORT.SCREENS.START_IMPORTING:
       return state.set('isImportingProject', true);
@@ -84,14 +84,14 @@ function importReducer(state = new ImportProjectState(), action) {
     case IMPORT.SCREENS.FAILED_IMPORTING:
       return state.merge({
         isImportingProject: false,
-        errorImportingProject: true
+        errorImportingProject: true,
       });
     default:
       return state;
   }
 }
 
-export default function(state = initialState, action) {
+export default function (state = initialState, action) {
   state = screensReducer(state, action);
   return state.set('importProject', importReducer(state.importProject, action));
 }
@@ -105,7 +105,7 @@ export default function(state = initialState, action) {
  */
 export const changeScreen = screenId => ({
   type: CHANGE_SCREEN,
-  screenId
+  screenId,
 });
 
 /**
@@ -115,7 +115,7 @@ export const changeScreen = screenId => ({
  */
 export const toggleImportScreen = importing => ({
   type: TOGGLE_IMPORT_SCREEN,
-  importing
+  importing,
 });
 
 function getProjectIdFromUrl(url) {
@@ -142,8 +142,8 @@ export function fetchProject(url) {
             channel,
             sources,
             assets,
-            existingAssets
-          }
+            existingAssets,
+          },
         });
       }
     };

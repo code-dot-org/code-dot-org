@@ -864,6 +864,29 @@ dv:
             '"v"': v
             '"w"': w
             '"z"': z
+      gamelab_layoutSprites:
+        text: "{FORMAT} އަށް {GROUP} ލޭއައުޓްކޮށްލާ"
+        options:
+          FORMAT:
+            '"border"': ބޯޑަރު
+            '"circle"': ސަރކަލް (ވަށްބުރު)
+            '"top"': މަތީ ރޯ
+            '"row"': ރޯ
+            '"bottom"': ތިރީ ރޯ
+            '"left"': ވާތު ކޮލަމް
+            '"column"': ކޮލަމް
+            '"right"': ކަނާތު ކޮލަމް
+      gamelab_makeNewSpriteGroup:
+        options:
+          FORMAT:
+            '"border"': ބޯޑަރު
+            '"circle"': ސަރކަލް (ވަށްބުރު)
+            '"top"': މަތީ ރޯ
+            '"row"': ރޯ
+            '"bottom"': ތިރީ ރޯ
+            '"left"': ވާތު ކޮލަމް
+            '"column"': ކޮލަމް
+            '"right"': ކަނާތު ކޮލަމް
       gamelab_setBackground:
         text: "{COLOR} އަށް ބެކްގްރައުންޑް ކުލަ ސެޓް ކުރަން"
       gamelab_setProp:
@@ -1027,6 +1050,20 @@ dv:
             '"w"': w
             '"s"': s
             '"d"': d
+      ecosystems_int10:
+        options:
+          VALUE:
+            '0': 0 (ސުމެއް)
+            '1': '1'
+            '2': 2 (ދޭއް)
+            '3': 3 (ތިނެއް)
+            '4': 4 (ހަތަރެއް)
+            '5': 5 (ފަހެއް)
+            '6': 6 (ހައެއް)
+            '7': 7 (ހަތެއް)
+            '8': 8 (އަށެއް)
+            '9': 9 (ނުވައެއް)
+            '10': 10 (ދިހައެއް)
       storylab_setForegroundEffect2:
         options:
           EFFECT:

@@ -53,13 +53,25 @@
           "rubric_key_concept": "İnformasiyaları saxlamaq və yeniləmək üçün dəyişənlərdən istifadə et."
         },
         "CSD U3 debug_2019": {
-          "rubric_performance_level_3": "Hərəkət etdirilən kvadrat bənövşəyidir və çevrənin qarşısında yaranır."
+          "rubric_performance_level_3": "Hərəkət etdirilən kvadrat bənövşəyidir və çevrənin qarşısında yaranır.",
+          "rubric_key_concept": "Obyektin ölçüsünü və üst-üstə düşməsini nəzərə alaraq elementləri ekranda yerləşdirmək üçün koordinat sistemindən istifadə edin.",
+          "rubric_performance_level_1": "Proqram rəsm nümunədəki ilə eynidir və yeddi kod sətirində yer alır.",
+          "rubric_performance_level_2": "Proqram rəsm əsasən rəsmlə eynidır, lakin bəzi kiçik yerləşdirmə səhvləri ola bilər və əlavə kod xətləri ola bilər.",
+          "rubric_performance_level_4": "Şəkil ya eynidir, ya da hər hansı bir dəyişiklik tapşırıqla əlaqəli görünmür."
         },
         "CSD U3 debug_2021": {
-          "rubric_performance_level_3": "Hərəkət etdirilən kvadrat bənövşəyidir və çevrənin qarşısında yaranır."
+          "rubric_performance_level_3": "Hərəkət etdirilən kvadrat bənövşəyidir və çevrənin qarşısında yaranır.",
+          "rubric_key_concept": "Obyektin ölçüsünü və üst-üstə düşməsini nəzərə alaraq elementləri ekranda yerləşdirmək üçün koordinat sistemindən istifadə edin.",
+          "rubric_performance_level_1": "Proqram rəsm nümunədəki ilə eynidir və yeddi kod sətirində yer alır.",
+          "rubric_performance_level_2": "Proqram rəsm əsasən rəsmlə eynidır, lakin bəzi kiçik yerləşdirmə səhvləri ola bilər və əlavə kod xətləri ola bilər.",
+          "rubric_performance_level_4": "Şəkil ya eynidir, ya da hər hansı bir dəyişiklik tapşırıqla əlaqəli görünmür."
         },
         "CSD U3 debug_2022": {
-          "rubric_performance_level_3": "Hərəkət etdirilən kvadrat bənövşəyidir və çevrənin qarşısında yaranır."
+          "rubric_performance_level_3": "Hərəkət etdirilən kvadrat bənövşəyidir və çevrənin qarşısında yaranır.",
+          "rubric_key_concept": "Obyektin ölçüsünü və üst-üstə düşməsini nəzərə alaraq elementləri ekranda yerləşdirmək üçün koordinat sistemindən istifadə edin.",
+          "rubric_performance_level_1": "Proqram rəsm nümunədəki ilə eynidir və yeddi kod sətirində yer alır.",
+          "rubric_performance_level_2": "Proqram rəsm əsasən rəsmlə eynidır, lakin bəzi kiçik yerləşdirmə səhvləri ola bilər və əlavə kod xətləri ola bilər.",
+          "rubric_performance_level_4": "Şəkil ya eynidir, ya da hər hansı bir dəyişiklik tapşırıqla əlaqəli görünmür."
         },
         "CSD Web CSS Assessment_2021": {
           "rubric_performance_level_2": "Paraqraflar yeni rəng və ya ölçüdür.",
@@ -68,6 +80,27 @@
         "CSD Web CSS Assessment_2022": {
           "rubric_performance_level_2": "Paraqraflar yeni rəng və ya ölçüdür.",
           "rubric_performance_level_3": "Paraqrafların üslub cədvəlində xüsusi qaydaları var və rəng və ya ölçü xassəsindən istifadə edilir, lakin mətnin rəng və ya ölçüsünü dəyişməyən kifayət qədər səhvlər var. Üslub cədvəlini veb səhifə ilə əlaqələndirməyə çalışan HTML kodu var."
+        },
+        "CSD U2 HTML Adding Paragraphs pt 2_2019": {
+          "rubric_performance_level_4": "Mətndə heç bir paraqraf etiketi yoxdur."
+        },
+        "CSD U2 HTML Adding Paragraphs pt 2_2021": {
+          "rubric_performance_level_4": "Mətndə heç bir paraqraf etiketi yoxdur."
+        },
+        "CSD U2 HTML Adding Paragraphs pt 2_2022": {
+          "rubric_performance_level_4": "Mətndə heç bir paraqraf etiketi yoxdur."
+        },
+        "CSD U2 Image Tag 2_2019": {
+          "rubric_performance_level_2": "Şəkil düzgün şəkildə göstərilir."
+        },
+        "CSD U2 text style h3_2019": {
+          "rubric_key_concept": "CSS istifadə edərək veb səhifədə formatlaşdırma tətbiq edin"
+        },
+        "CSD U2 text style h3_2021": {
+          "rubric_key_concept": "CSS istifadə edərək veb səhifədə formatlaşdırma tətbiq edin"
+        },
+        "CSD U2 text style h3_2022": {
+          "rubric_key_concept": "CSS istifadə edərək veb səhifədə formatlaşdırma tətbiq edin"
         }
       }
     }

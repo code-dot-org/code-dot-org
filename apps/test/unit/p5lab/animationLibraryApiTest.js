@@ -5,7 +5,7 @@ import {
   buildAnimationMetadata,
   buildMap,
   generateAnimationMetadataForFile,
-  generateLevelAnimationsManifest
+  generateLevelAnimationsManifest,
 } from '@cdo/apps/assetManagement/animationLibraryApi';
 import testAnimationLibrary from './testAnimationLibrary.json';
 
@@ -18,13 +18,13 @@ describe('animationLibraryApi', () => {
         'https://studio.code.org/api/v1/animation-library/spritelab/wAQoTe9lNAp19q.JxOmT6hRtv1GceGwp/category_animals/bear.png',
       frameSize: {
         x: 254,
-        y: 333
+        y: 333,
       },
       frameCount: 1,
       looping: true,
       frameDelay: 2,
       version: 'wAQoTe9lNAp19q.JxOmT6hRtv1GceGwp',
-      categories: ['animals']
+      categories: ['animals'],
     },
     {
       name: 'bee',
@@ -32,27 +32,27 @@ describe('animationLibraryApi', () => {
         'https://studio.code.org/api/v1/animation-library/spritelab/b2QZ1J9ww5XYdjExrVb7lWgP2q6Gfx1C/category_animals/bee.png',
       frameSize: {
         x: 62,
-        y: 50
+        y: 50,
       },
       frameCount: 1,
       looping: true,
       frameDelay: 2,
       version: 'b2QZ1J9ww5XYdjExrVb7lWgP2q6Gfx1C',
-      categories: ['animals']
-    }
+      categories: ['animals'],
+    },
   ];
 
   const fileObject = {
     json: {
       key: 'testAlpha.json',
-      last_modified: '12152021'
+      last_modified: '12152021',
     },
     png: {
       key: 'testAlpha.png',
       last_modified: '12152021',
       version: '123',
-      source_size: 456
-    }
+      source_size: 456,
+    },
   };
 
   const testAlphaMetadata = {
@@ -62,7 +62,7 @@ describe('animationLibraryApi', () => {
     looping: true,
     frameDelay: 2,
     aliases: ['fruit'],
-    categories: []
+    categories: [],
   };
 
   const animationLibrary = testAnimationLibrary;
@@ -77,7 +77,7 @@ describe('animationLibraryApi', () => {
       .returns(
         Promise.resolve({
           ok: true,
-          json: () => JSON.stringify(animationLibrary)
+          json: () => JSON.stringify(animationLibrary),
         })
       );
 
@@ -87,7 +87,7 @@ describe('animationLibraryApi', () => {
       .returns(
         Promise.resolve({
           ok: true,
-          json: () => animationFiles
+          json: () => animationFiles,
         })
       );
 
@@ -95,7 +95,7 @@ describe('animationLibraryApi', () => {
     fetchSpy.withArgs('/api/v1/animation-library/testAlpha.json').returns(
       Promise.resolve({
         ok: true,
-        json: () => testAlphaMetadata
+        json: () => testAlphaMetadata,
       })
     );
   });
@@ -131,9 +131,7 @@ describe('animationLibraryApi', () => {
         expect(firstSpriteProps)
           .to.have.property('sourceUrl')
           .that.has.string('https://studio.code.org');
-        expect(firstSpriteProps)
-          .to.have.property('name')
-          .that.equals('bear');
+        expect(firstSpriteProps).to.have.property('name').that.equals('bear');
         expect(Object.keys(firstSpriteProps)).to.have.length(8);
       });
     });
@@ -162,7 +160,7 @@ describe('animationLibraryApi', () => {
           Promise.resolve({
             ok: false,
             status: '000',
-            statusText: 'Test error message'
+            statusText: 'Test error message',
           })
         );
 
@@ -196,7 +194,7 @@ describe('animationLibraryApi', () => {
           'sourceUrl',
           'sourceSize',
           'aliases',
-          'categories'
+          'categories',
         ];
         expect(metadataKeys.length).to.equal(expectedKeys.length);
         expectedKeys.forEach(key => {
@@ -227,12 +225,12 @@ describe('animationLibraryApi', () => {
     const animationMetadata = {
       beta: {
         fruit: ['apple', 'kiwi'],
-        juicy: ['banana', 'blueberry', 'apple']
+        juicy: ['banana', 'blueberry', 'apple'],
       },
       alpha: {
         fruit: ['apple', 'banana', 'kiwi'],
-        delicious: ['banana', 'blueberry', 'apple']
-      }
+        delicious: ['banana', 'blueberry', 'apple'],
+      },
     };
     const getStandardizedContent = metadata => metadata.fruit;
     const normalizingFunction = item => item.replace('a', 'b');

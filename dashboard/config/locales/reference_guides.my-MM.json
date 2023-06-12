@@ -7,6 +7,9 @@
         },
         "csd-2022/variables": {
           "display_name": "Variables"
+        },
+        "csd-2022/web-lab": {
+          "display_name": "Web Lab"
         }
       }
     }

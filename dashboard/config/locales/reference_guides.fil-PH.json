@@ -17,6 +17,9 @@
         "csd-2022/board-events": {
           "display_name": "Mga Pangyayari sa Board"
         },
+        "csd-2022/circuit-playground": {
+          "display_name": "Pangkalahatang-ideya ng Circuit Playground"
+        },
         "csd-2022/classes": {
           "display_name": "Mga Klase"
         },
@@ -50,6 +53,9 @@
         "csd-2022/images-in-html": {
           "display_name": "Mga Larawan sa HTML"
         },
+        "csd-2022/introduction-to-ai-lab": {
+          "display_name": "Introduksiyon sa AI Lab"
+        },
         "csd-2022/javascript": {
           "display_name": "JavaScript"
         },
@@ -77,11 +83,14 @@
         "csd-2022/patterns-overview": {
           "display_name": "Buod"
         },
-        "csd-2022/physical-input": {
-          "display_name": "Pisikal na Input"
-        },
         "csd-2022/playing-notes": {
           "display_name": "Mga Tala ng Laro"
+        },
+        "csd-2022/problem-solving-process": {
+          "display_name": "Ang Proseso ng Pagtuklas ng Problema"
+        },
+        "csd-2022/problem-solving-process-general": {
+          "display_name": "Ang Proseso ng Pagtuklas ng Problema"
         },
         "csd-2022/sprites": {
           "display_name": "Mga Sprites"
@@ -97,6 +106,9 @@
         },
         "csd-2022/velocity-and-the-counter-pattern": {
           "display_name": "Bilis at ang Counter Pattern"
+        },
+        "csd-2022/web-lab": {
+          "display_name": "Web Lab"
         },
         "csd-2022/which-type-of-chart": {
           "content": "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"

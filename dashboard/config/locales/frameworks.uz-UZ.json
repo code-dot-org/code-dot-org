@@ -13,6 +13,24 @@
         },
         "iste": {
           "name": "Talabalar uchun ISTE Standartlari"
+        },
+        "csta": {
+          "name": "CSTA K-12 kompyuter fanlari standartlari (2017)"
+        },
+        "csp2021": {
+          "name": "CSP kontseptual doirasi"
+        },
+        "c3ss": {
+          "name": "C3 Ijtimoiy tadqiqotlar standartlari"
+        },
+        "ngss": {
+          "name": "Keyingi avlod fan standartlari"
+        },
+        "csa": {
+          "name": "CSA kontseptual doirasi"
+        },
+        "ai4k12-2021": {
+          "name": "AI4K12 milliy ko'rsatmalari 2021"
         }
       }
     }

@@ -848,31 +848,31 @@
         },
         "MC_HOC_2017_10_RETRY": {
           "fix long path": {
-            "name": "fijar camino largo"
+            "name": "arreglar camino largo"
           },
           "fix short path": {
-            "name": "fijar camino corto"
+            "name": "arreglar camino corto"
           }
         },
         "MC_HOC_2017_10_RETRY_2019": {
           "fix long path": {
-            "name": "fijar camino largo"
+            "name": "arreglar camino largo"
           },
           "fix short path": {
-            "name": "fijar camino corto"
+            "name": "arreglar camino corto"
           }
         },
         "MC_HOC_2017_10_RETRY_2020": {
           "fix long path": {
-            "name": "fijar camino largo"
+            "name": "arreglar camino largo"
           },
           "fix short path": {
-            "name": "fijar camino corto"
+            "name": "arreglar camino corto"
           }
         },
         "MC_HOC_2017_Ali": {
           "build short bridge": {
-            "name": "construir puente pequeño"
+            "name": "construir puente corto"
           },
           "build long bridge": {
             "name": "construir puente largo"
@@ -880,7 +880,7 @@
         },
         "MC_HOC_2017_Ali_2019": {
           "build short bridge": {
-            "name": "construir puente pequeño"
+            "name": "construir puente corto"
           },
           "build long bridge": {
             "name": "construir puente largo"
@@ -888,7 +888,7 @@
         },
         "MC_HOC_2017_Ali_2020": {
           "build short bridge": {
-            "name": "construir puente pequeño"
+            "name": "construir puente corto"
           },
           "build long bridge": {
             "name": "construir puente largo"
@@ -1080,13 +1080,13 @@
           },
           "draw a circle": {
             "name": "dibujar un círculo",
-            "description": "Dibuja un circulo especificando su radio",
+            "description": "dibuja un círculo con un radio determinado",
             "parameters": {
               "radius": "radio"
             }
           },
           "draw a pinwheel": {
-            "name": "dibujar un molinete",
+            "name": "dibuja un molinete",
             "parameters": {
               "length": "longitud",
               "repeat": "repetir",
@@ -1100,7 +1100,7 @@
             }
           },
           "draw a shape": {
-            "name": "dibujar una forma",
+            "name": "dibuja una figura",
             "parameters": {
               "length": "longitud",
               "sides": "lados"
@@ -1221,7 +1221,7 @@
         "NEW Course 4 Play Lab Params 11": {
           "jump": {
             "name": "salta",
-            "description": "funcion de salto parametros de altura y actor ",
+            "description": "bloque de función de salto con parámetro de altura y actor",
             "parameters": {
               "height": "altura",
               "actor": "actor"
@@ -1247,13 +1247,13 @@
           },
           "draw a circle": {
             "name": "dibujar un círculo",
-            "description": "Dibuja un circulo especificando su radio",
+            "description": "dibuja un círculo con un radio determinado",
             "parameters": {
               "radius": "radio"
             }
           },
           "draw a pinwheel": {
-            "name": "dibujar un molinete",
+            "name": "dibuja un molinete",
             "parameters": {
               "length": "longitud",
               "repeat": "repetir",
@@ -1267,7 +1267,7 @@
             }
           },
           "draw a shape": {
-            "name": "dibujar una forma",
+            "name": "dibuja una figura",
             "parameters": {
               "length": "longitud",
               "sides": "lados"
@@ -1297,7 +1297,7 @@
         "New Play Lab Project": {
           "jump": {
             "name": "salta",
-            "description": "funcion de salto parametros de altura y actor ",
+            "description": "bloque de función de salto con parámetro de altura y actor",
             "parameters": {
               "height": "altura",
               "actor": "actor"
@@ -1341,7 +1341,7 @@
         },
         "Standalone_Artist_8": {
           "draw a shape": {
-            "name": "dibujar una forma"
+            "name": "dibuja una figura"
           }
         },
         "Standalone_Artist_9": {
@@ -3442,13 +3442,13 @@
           },
           "draw a circle": {
             "name": "dibujar un círculo",
-            "description": "Dibuja un circulo especificando su radio",
+            "description": "dibuja un círculo con un radio determinado",
             "parameters": {
               "radius": "radio"
             }
           },
           "draw a pinwheel": {
-            "name": "dibujar un molinete",
+            "name": "dibuja un molinete",
             "parameters": {
               "length": "longitud",
               "repeat": "repetir",
@@ -3462,7 +3462,7 @@
             }
           },
           "draw a shape": {
-            "name": "dibujar una forma",
+            "name": "dibuja una figura",
             "parameters": {
               "length": "longitud",
               "sides": "lados"
@@ -3898,13 +3898,13 @@
           },
           "draw a circle": {
             "name": "dibujar un círculo",
-            "description": "Dibuja un circulo especificando su radio",
+            "description": "dibuja un círculo con un radio determinado",
             "parameters": {
               "radius": "radio"
             }
           },
           "draw a pinwheel": {
-            "name": "dibujar un molinete",
+            "name": "dibuja un molinete",
             "parameters": {
               "sides": "lados",
               "length": "longitud",
@@ -3918,7 +3918,7 @@
             }
           },
           "draw a shape": {
-            "name": "dibujar una forma",
+            "name": "dibuja una figura",
             "parameters": {
               "sides": "lados",
               "length": "longitud"
@@ -3953,13 +3953,13 @@
           },
           "draw a circle": {
             "name": "dibujar un círculo",
-            "description": "Dibuja un circulo especificando su radio",
+            "description": "dibuja un círculo con un radio determinado",
             "parameters": {
               "radius": "radio"
             }
           },
           "draw a pinwheel": {
-            "name": "dibujar un molinete",
+            "name": "dibuja un molinete",
             "parameters": {
               "sides": "lados",
               "length": "longitud",
@@ -3973,7 +3973,7 @@
             }
           },
           "draw a shape": {
-            "name": "dibujar una forma",
+            "name": "dibuja una figura",
             "parameters": {
               "sides": "lados",
               "length": "longitud"
@@ -4016,13 +4016,13 @@
           },
           "draw a circle": {
             "name": "dibujar un círculo",
-            "description": "Dibuja un circulo especificando su radio",
+            "description": "dibuja un círculo con un radio determinado",
             "parameters": {
               "radius": "radio"
             }
           },
           "draw a pinwheel": {
-            "name": "dibujar un molinete",
+            "name": "dibuja un molinete",
             "parameters": {
               "sides": "lados",
               "length": "longitud",
@@ -4036,7 +4036,7 @@
             }
           },
           "draw a shape": {
-            "name": "dibujar una forma",
+            "name": "dibuja una figura",
             "parameters": {
               "sides": "lados",
               "length": "longitud"
@@ -4066,13 +4066,13 @@
           },
           "draw a circle": {
             "name": "dibujar un círculo",
-            "description": "Dibuja un circulo especificando su radio",
+            "description": "dibuja un círculo con un radio determinado",
             "parameters": {
               "radius": "radio"
             }
           },
           "draw a pinwheel": {
-            "name": "dibujar un molinete",
+            "name": "dibuja un molinete",
             "parameters": {
               "sides": "lados",
               "length": "longitud",
@@ -4086,7 +4086,7 @@
             }
           },
           "draw a shape": {
-            "name": "dibujar una forma",
+            "name": "dibuja una figura",
             "parameters": {
               "sides": "lados",
               "length": "longitud"
@@ -4117,15 +4117,15 @@
         },
         "MC_HOC_2017_10_RETRY_2021": {
           "fix long path": {
-            "name": "fijar camino largo"
+            "name": "arreglar camino largo"
           },
           "fix short path": {
-            "name": "fijar camino corto"
+            "name": "arreglar camino corto"
           }
         },
         "MC_HOC_2017_Ali_2021": {
           "build short bridge": {
-            "name": "construir puente pequeño"
+            "name": "construir puente corto"
           },
           "build long bridge": {
             "name": "construir puente largo"
@@ -4422,13 +4422,13 @@
           },
           "draw a circle": {
             "name": "dibujar un círculo",
-            "description": "Dibuja un circulo especificando su radio",
+            "description": "dibuja un círculo con un radio determinado",
             "parameters": {
               "radius": "radio"
             }
           },
           "draw a pinwheel": {
-            "name": "dibujar un molinete",
+            "name": "dibuja un molinete",
             "parameters": {
               "sides": "lados",
               "length": "longitud",
@@ -4442,7 +4442,7 @@
             }
           },
           "draw a shape": {
-            "name": "dibujar una forma",
+            "name": "dibuja una figura",
             "parameters": {
               "sides": "lados",
               "length": "longitud"
@@ -4509,7 +4509,7 @@
         },
         "Auto Open Function Editor": {
           "draw a shape": {
-            "name": "dibujar una forma",
+            "name": "dibuja una figura",
             "parameters": {
               "sides": "lados",
               "length": "longitud"
@@ -4552,13 +4552,13 @@
           },
           "draw a circle": {
             "name": "dibujar un círculo",
-            "description": "Dibuja un circulo especificando su radio",
+            "description": "dibuja un círculo con un radio determinado",
             "parameters": {
               "radius": "radio"
             }
           },
           "draw a pinwheel": {
-            "name": "dibujar un molinete",
+            "name": "dibuja un molinete",
             "parameters": {
               "sides": "lados",
               "length": "longitud",
@@ -4572,7 +4572,7 @@
             }
           },
           "draw a shape": {
-            "name": "dibujar una forma",
+            "name": "dibuja una figura",
             "parameters": {
               "sides": "lados",
               "length": "longitud"
@@ -4603,13 +4603,13 @@
           },
           "draw a circle": {
             "name": "dibujar un círculo",
-            "description": "Dibuja un circulo especificando su radio",
+            "description": "dibuja un círculo con un radio determinado",
             "parameters": {
               "radius": "radio"
             }
           },
           "draw a pinwheel": {
-            "name": "dibujar un molinete",
+            "name": "dibuja un molinete",
             "parameters": {
               "sides": "lados",
               "length": "longitud",
@@ -4623,7 +4623,7 @@
             }
           },
           "draw a shape": {
-            "name": "dibujar una forma",
+            "name": "dibuja una figura",
             "parameters": {
               "sides": "lados",
               "length": "longitud"
@@ -4653,13 +4653,13 @@
           },
           "draw a circle": {
             "name": "dibujar un círculo",
-            "description": "Dibuja un circulo especificando su radio",
+            "description": "dibuja un círculo con un radio determinado",
             "parameters": {
               "radius": "radio"
             }
           },
           "draw a pinwheel": {
-            "name": "dibujar un molinete",
+            "name": "dibuja un molinete",
             "parameters": {
               "sides": "lados",
               "length": "longitud",
@@ -4673,7 +4673,7 @@
             }
           },
           "draw a shape": {
-            "name": "dibujar una forma",
+            "name": "dibuja una figura",
             "parameters": {
               "sides": "lados",
               "length": "longitud"
@@ -4714,15 +4714,15 @@
         },
         "MC_HOC_2017_10_RETRY2022": {
           "fix long path": {
-            "name": "fijar camino largo"
+            "name": "arreglar camino largo"
           },
           "fix short path": {
-            "name": "fijar camino corto"
+            "name": "arreglar camino corto"
           }
         },
         "MC_HOC_2017_Ali2022": {
           "build short bridge": {
-            "name": "construir puente pequeño"
+            "name": "construir puente corto"
           },
           "build long bridge": {
             "name": "construir puente largo"
