@@ -40,7 +40,7 @@
     // Focus styles
     &:focus {
       + i::before {
-        outline: 2px solid $brand_primary_light;
+        outline: 2px solid $light_primary_500;
         outline-offset: 2px;
         border-radius: 4px;
       }
