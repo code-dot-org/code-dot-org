@@ -2457,6 +2457,8 @@ hu:
             '8': '8'
             '9': '9'
             '10': '10'
+      storylab_printText:
+        text: 'írd ki ezt: {TEXT}'
       storylab_setForegroundEffect2:
         text: készítsen {EFFECT} effektet
         options:
