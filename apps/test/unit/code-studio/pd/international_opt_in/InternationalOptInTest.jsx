@@ -6,17 +6,11 @@ import InternationalOptIn from '@cdo/apps/code-studio/pd/international_opt_in/In
 describe('InternationalOptInTest', () => {
   const defaultProps = {
     options: {
-      gender: ['gender'],
       schoolCountry: ['schoolCountry', 'Colombia'],
-      ages: ['age'],
-      subjects: ['subject'],
-      resources: ['resource'],
-      robotics: ['robotics'],
       workshopCourse: ['workshopCourse'],
       emailOptIn: ['emailOptIn'],
       legalOptIn: ['legalOptIn'],
       workshopOrganizer: ['workshopOrganizer'],
-      workshopFacilitator: ['workshopFacilitator'],
       colombianSchoolData: {
         department: {
           municipality: {
@@ -32,25 +26,18 @@ describe('InternationalOptInTest', () => {
       firstNamePreferred: 'Preferred First Name',
       lastName: 'Last Name',
       email: 'Email',
-      emailAlternate: 'Alternate Email',
-      gender: 'Gender Identity',
       school: 'School',
       schoolCity: 'School City',
       schoolCityDistrict: 'School City/District',
       schoolCountry: 'School Country',
       schoolDepartmentRegion: 'School Department/Region',
       schoolName: 'School Name',
-      ages: 'Which age(s) do you teach this year?',
-      subjects: 'Which subject(s) do you teach this year?',
-      resources: 'Which of the following CS education resources do you use?',
-      robotics: 'Which of the following robotics resources do you use?',
       workshopOrganizer: 'Workshop Organizer',
-      workshopFacilitator: 'Workshop Facilitator',
       workshopCourse: 'Workshop Course',
       emailOptIn:
         'Can we email you about Code.org’s international program, updates to our courses, or other computer science news?',
       legalOptIn:
-        'By submitting this form, you are agreeing to allow Code.org to share information on how you use Code.org and the Professional Learning resources with the Code.org International Partner(s) in your country, school district, and facilitators. We will share your contact information, which courses/units you are using and aggregate data about your classes with these partners. This includes the number of students in your classes, the demographic breakdown of your classroom, and the name of your school ...',
+        'By submitting this form, you are agreeing to allow Code.org to share information on how you use Code.org and the Professional Learning resources with the Code.org International Partner(s) in your country. We will share with these partners your contact information (such as name and email address), the information you provide about your school, which courses/units you are using, and aggregate data about these courses (such as the number of students using each course). We will not share any information about individual students with our partners: all student information will be de-identified and aggregated. Our International Partners and facilitators are contractually obliged to treat this information with the same level of confidentiality as Code.org.',
       colombianSchoolCity: 'School City',
       colombianChileanSchoolDepartment: 'School Department',
       colombianSchoolMunicipality: 'School Municipality',
@@ -66,14 +53,14 @@ describe('InternationalOptInTest', () => {
       const inputIds = ['schoolName', 'schoolCity'];
 
       inputIds.forEach(id => {
-        const node = wrapper.find('input#' + id);
+        const node = wrapper.find(`input#${id}`);
         expect(node.prop('disabled')).to.be.true;
       });
 
       wrapper.setState({data: {schoolCountry: 'selected country'}});
 
       inputIds.forEach(id => {
-        const node = wrapper.find('input#' + id);
+        const node = wrapper.find(`input#${id}`);
         expect(node.prop('disabled')).to.be.false;
       });
     });

@@ -1,7 +1,6 @@
 import React from 'react';
 import {render, screen, fireEvent} from '@testing-library/react';
 import {Provider} from 'react-redux';
-import {configureStore} from '@reduxjs/toolkit';
 import {assert, expect} from '../../../util/reconfiguredChai';
 import {
   setWindowLocation,
@@ -11,6 +10,12 @@ import responsive, {
   setResponsiveSize,
   ResponsiveSize,
 } from '@cdo/apps/code-studio/responsiveRedux';
+import {
+  getStore,
+  registerReducers,
+  restoreRedux,
+  stubRedux,
+} from '@cdo/apps/redux';
 import CurriculumCatalog from '@cdo/apps/templates/curriculumCatalog/CurriculumCatalog';
 import {
   allCurricula,
@@ -25,6 +30,10 @@ import {
   noGradesCurriculum,
   noPathCurriculum,
 } from './CurriculumCatalogTestHelper';
+import teacherSections, {
+  setSections,
+} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {sections} from '../studioHomepages/fakeSectionUtils';
 
 describe('CurriculumCatalog', () => {
   const defaultProps = {curriculaData: allCurricula, isEnglish: false};
@@ -34,8 +43,11 @@ describe('CurriculumCatalog', () => {
   let replaceStateOrig = window.history.replaceState;
 
   beforeEach(() => {
-    store = configureStore({reducer: {responsive}});
+    stubRedux();
+    registerReducers({responsive, teacherSections});
+    store = getStore();
     store.dispatch(setResponsiveSize(ResponsiveSize.lg));
+    store.dispatch(setSections(sections));
 
     replacedLocation = undefined;
     window.history.replaceState = (_, __, newLocation) => {
@@ -44,6 +56,7 @@ describe('CurriculumCatalog', () => {
   });
 
   afterEach(() => {
+    restoreRedux();
     resetWindowLocation();
     window.history.replaceState = replaceStateOrig;
   });

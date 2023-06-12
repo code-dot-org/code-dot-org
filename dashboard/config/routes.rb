@@ -1052,5 +1052,9 @@ Dashboard::Application.routes.draw do
     post '/browser_events/put_logs', to: 'browser_events#put_logs'
 
     get '/get_token', to: 'authenticity_token#get_token'
+
+    # Policy Compliance
+    get '/policy_compliance/child_account_consent/', to:
+      'policy_compliance#child_account_consent'
   end
 end
