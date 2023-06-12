@@ -13,8 +13,6 @@ Feature: CourseOverview
     And I am on "http://studio.code.org/courses/csp-2019"
     And I wait to see ".uitest-CourseScript"
 
-  @skip
-  # TODO TEACH-509: Reenable with new section setup flow
   Scenario: Viewing course overview as a student in a section
     Given I create an authorized teacher-associated student named "Ron"
     Then I sign in as "Teacher_Ron" and go home
