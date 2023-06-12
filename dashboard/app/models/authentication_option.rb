@@ -108,7 +108,7 @@ class AuthenticationOption < ApplicationRecord
   end
 
   def fill_authentication_id
-    self.authentication_id = hashed_email if EMAIL == credential_type
+    self.authentication_id = hashed_email if credential_type == EMAIL
   end
 
   def set_primary_contact_info

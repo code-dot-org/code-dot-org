@@ -80,7 +80,7 @@ class BubbleChoice < DSLDefined
   # @return [Hash]
   def summarize(script_level: nil, user: nil, should_localize: false)
     ActiveRecord::Base.connected_to(role: :reading) do
-      user_id = user ? user.id : nil
+      user_id = user&.id
       summary = {
         id: id.to_s,
         display_name: display_name,
