@@ -597,7 +597,7 @@ class Lesson < ApplicationRecord
 
   def next_level_number_for_lesson_extras(user)
     next_level = next_level_for_lesson_extras(user)
-    next_level ? next_level.lesson.relative_position : nil
+    next_level&.lesson&.relative_position
   end
 
   # Updates this lesson's lesson_activities to match the activities represented

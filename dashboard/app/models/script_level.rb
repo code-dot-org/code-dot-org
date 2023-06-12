@@ -208,7 +208,7 @@ class ScriptLevel < ApplicationRecord
 
   # Returns the next valid progression level, or nil if no such level exists
   def next_progression_level(user=nil)
-    next_level ? next_level.or_next_progression_level(user) : nil
+    next_level&.or_next_progression_level(user)
   end
 
   # Returns the first level in the sequence starting with this one that is a

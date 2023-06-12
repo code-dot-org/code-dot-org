@@ -7,7 +7,7 @@ class Api::V1::Pd::WorkshopEnrollmentSerializer < ActiveModel::Serializer
 
   def user_id
     user = object.resolve_user
-    user ? user.id : nil
+    user&.id
   end
 
   def application_id

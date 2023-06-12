@@ -17,7 +17,7 @@ module Rack
 
     def initialize(app)
       super(
-          app,
+        app,
           xpath: %w(img script embed iframe).map {|x| "//#{x}[@src[starts-with(.,'http://')]]"}.join(' | ')
       ) do |nodes, env|
         nodes.each do |node|

@@ -990,7 +990,7 @@ class FilesApi < Sinatra::Base
     s3_prefix = "#{METADATA_PATH}/#{filename}"
     file = get_file('files', encrypted_channel_id, s3_prefix)
 
-    if THUMBNAIL_FILENAME == filename
+    if filename == THUMBNAIL_FILENAME
       project = Projects.new(get_storage_id)
       project_type = project.project_type_from_channel_id(encrypted_channel_id)
       if moderate_type?(project_type) && moderate_channel?(encrypted_channel_id)

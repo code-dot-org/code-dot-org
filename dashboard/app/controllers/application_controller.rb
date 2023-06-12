@@ -52,7 +52,7 @@ class ApplicationController < ActionController::Base
     # if params['dbg'] is 'off'.
     def configure_web_console
       if params[:dbg]
-        cookies[:dbg] = (params[:dbg] != 'off') ? 'on' : nil
+        cookies[:dbg] = (params[:dbg] == 'off') ? nil : 'on'
       end
       @use_web_console = cookies[:dbg]
     end
