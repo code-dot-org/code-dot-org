@@ -164,8 +164,14 @@ export default function SectionsSetUpContainer({
       return;
     }
 
+    // Checking that the csrf-token exists since it is disabled on test
     const csrfToken = document.querySelector('meta[name="csrf-token"]')
-      .attributes['content'].value;
+      ? document.querySelector('meta[name="csrf-token"]').attributes['content']
+          .value
+      : null;
+
+    const computedGrades =
+      participantType === 'teacher' ? ['pl'] : section.grade;
 
     const section_data = {
       login_type: loginType,
@@ -178,7 +184,7 @@ export default function SectionsSetUpContainer({
       pairing_allowed: section.pairingAllowed,
       tts_autoplay_enabled: section.ttsAutoplayEnabled,
       sharing_disabled: section.sharingDisabled,
-      grades: section.grade,
+      grades: computedGrades,
       ...section,
     };
 
@@ -255,6 +261,7 @@ export default function SectionsSetUpContainer({
       />
 
       <CurriculumQuickAssign
+        id="uitest-curriculum-quick-assign"
         isNewSection={isNewSection}
         updateSection={(key, val) => updateSection(0, key, val)}
         sectionCourse={sections[0].course}
@@ -308,6 +315,7 @@ export default function SectionsSetUpContainer({
         )}
         <Button
           className={moduleStyles.buttonRight}
+          id="uitest-save-section-changes"
           text={
             isSaveInProgress
               ? i18n.saving()

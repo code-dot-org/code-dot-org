@@ -465,29 +465,20 @@ class Projects
     'unknown'
   end
 
-  # Temporarily logging rather than erroring in order
-  # to confirm that only valid thumbnail URLs are present in existing projects.
-  # DCDO flag in place to choose when to enable/disable logging (off by default).
   def validate_thumbnail_url(channel_id, thumbnail_url)
     return true unless thumbnail_url
-
-    if !valid_thumbnail_url?(thumbnail_url) && DCDO.get('log_thumbnail_url_validation', false)
-      # raise ValidationError
-      Honeybadger.notify(
-        error_class: 'Project::ValidationError',
-        error_message: 'A project was saved with an unexpected thumbnail URL.',
-        context: {channel_id: channel_id, thumbnail_url: thumbnail_url}
-      )
-    end
-
+    raise ValidationError unless valid_thumbnail_url?(thumbnail_url)
     true
   end
 
-  # valid thumbnail URLs should be of the format:
+  # valid thumbnail URLs are typically of the format:
   # /v3/files/<channel_id>/.metadata/thumbnail.png
   # I observed thumbnail URLs of remixed projects having having the channel ID of the parent project,
-  # so we assert on the start/end of the URL
+  # so we assert on the start/end of the URL.
+  # We also use placeholder thumbnail images in a couple of labs (dance, flappy),
+  # so accepting those as valid as well
   def valid_thumbnail_url?(thumbnail_url)
-    thumbnail_url.start_with?('/v3/files/') && thumbnail_url.end_with?('.metadata/thumbnail.png')
+    (thumbnail_url.start_with?('/v3/files/') && thumbnail_url.end_with?('.metadata/thumbnail.png')) ||
+      thumbnail_url.start_with?('/blockly/media')
   end
 end

@@ -4,6 +4,7 @@ import {Triggers} from '../constants';
 import {AnalyticsContext} from '../context';
 import {
   advanceInstructionsPosition,
+  toggleHeaders,
   toggleBeatPad,
   toggleInstructions,
   toggleTimelinePosition,
@@ -62,6 +63,10 @@ const KeyHandler: React.FunctionComponent<KeyHandlerProps> = ({
       if (event.key === 'n') {
         reportKeyPress('advance-instructions-position');
         dispatch(advanceInstructionsPosition());
+      }
+      if (event.key === 'h') {
+        reportKeyPress('toggle-headers');
+        dispatch(toggleHeaders());
       }
       if (event.key === 'b') {
         reportKeyPress('toggle-beat-pad');
