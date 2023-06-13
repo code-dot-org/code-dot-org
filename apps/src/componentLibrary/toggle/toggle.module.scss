@@ -45,23 +45,16 @@
           color: $neutral_white;
           box-sizing: border-box;
         }
+
         &::before {
           content: "\f00c";
           background-color: $light_primary_500;
         }
+
         &::after {
           content: "\f00d";
           background-color: $neutral_dark50;
           text-align: right;
-        }
-
-        &-disabled {
-          background-color: #ddd;
-          cursor: not-allowed;
-          &:before {
-            background-color: #ddd;
-            cursor: not-allowed;
-          }
         }
       }
 
@@ -90,6 +83,24 @@
       span {
         right: 0;
         left: 50%;
+      }
+    }
+
+    //hover styles
+    //&:hover {
+    //}
+    //active styles
+
+    //focus styles
+
+    //disabled styles
+    input[type="checkbox"]:disabled +.switch {
+      background-color: #ddd;
+      cursor: not-allowed;
+
+      &:before {
+        background-color: #ddd;
+        cursor: not-allowed;
       }
     }
   }
