@@ -1,25 +1,21 @@
-@import "color.scss", "font.scss", "breakpoints.scss";
+@import "color", "font", "breakpoints", "typography";
 
 .maker-skinny-banner {
   box-sizing: content-box;
   height: 130px;
   overflow: hidden;
-  padding: 0 0 0 1em;
+  padding: 0 0 0 1rem;
   background: #00736E;
   position: relative;
 
   @media screen and (max-width: $width-md) {
-    padding: 0 1.5em;
+    padding: 0 1rem;
   }
 
   @media screen and (max-width: $width-sm) {
-    height: 270px;
-    padding: 1.5em 1.15em 0;
-    margin: 3em auto 0;
-  }
-
-  @media screen and (max-width: $width-xs) {
-    height: 260px;
+    height: auto;
+    padding: 1rem 2rem;
+    margin: 3rem auto 0;
   }
 
   a:hover,
@@ -40,12 +36,13 @@
     @media screen and (max-width: $width-md) {
       width: 72%;
       margin: 0;
+      padding: 0.5rem 0;
     }
 
     @media screen and (max-width: $width-sm) {
       justify-content: center;
       width: 100%;
-      margin-top: -1em;
+      margin-top: -1rem;
     }
   }
 
@@ -69,6 +66,7 @@
     @media screen and (max-width: $width-md) {
       position: absolute;
       z-index: 0;
+      bottom: 0;
       right: 0;
     }
 
@@ -79,11 +77,10 @@
 
   .text-wrapper {
     color: white;
-    width: 385px;
     text-align: center;
 
     @media screen and (max-width: $width-md) {
-      margin: 0 0 -0.5em;
+      margin: 0 0 -0.5rem;
       text-align: left;
     }
 
@@ -92,34 +89,25 @@
     }
 
     h1 {
-      font-family: $gotham-bold;
-      font-size: 1.5em;
+      @include heading-sm;
       color: $white;
       margin: 0 auto 4px;
-
-      @media screen and (max-width: $width-sm) {
-        font-size: 1.45em;
-      }
     }
 
     p {
-      font-family: $gotham-regular;
-      font-size: 1.15em;
+      @include body-two;
       margin-bottom: 0;
       color: $white;
-
-      @media screen and (max-width: $width-sm) {
-        font-size: 1em;
-      }
     }
   }
 
   button {
     background: #4E1598;
     border-color: #4E1598;
+    margin: 0;
 
     @media screen and (max-width: $width-sm) {
-      margin-top: 1em;
+      margin-top: 1rem;
     }
   }
 }
