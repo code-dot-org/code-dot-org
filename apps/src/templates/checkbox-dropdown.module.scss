@@ -7,13 +7,15 @@ button.dropdownButton {
   border-radius: 4px;
   padding: 8px 16px;
   box-shadow: none;
+  display: flex;
+  align-items: baseline;
 
   &:hover {
     background-color: $neutral_dark10;
   }
 
   &:focus {
-    outline: 2px solid $brand_primary_light;
+    outline: 2px solid $light_primary_500;
     outline-offset: 2px;
   }
 
@@ -63,6 +65,9 @@ form.dropDownMenuContainer {
 
       span {
         margin: 0;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
       }
     }
 
