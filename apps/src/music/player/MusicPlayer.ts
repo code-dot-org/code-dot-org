@@ -2,29 +2,35 @@ import {ChordEvent, ChordEventValue} from './interfaces/ChordEvent';
 import {PatternEvent, PatternEventValue} from './interfaces/PatternEvent';
 import {PlaybackEvent} from './interfaces/PlaybackEvent';
 import {SoundEvent} from './interfaces/SoundEvent';
-import MusicLibrary, {SoundFolder} from './MusicLibrary';
+import MusicLibrary, {SampleSequence, SoundFolder} from './MusicLibrary';
 import SamplePlayer, {SampleEvent} from './SamplePlayer';
 import {generateNotesFromChord, ChordNote} from '../utils/Chords';
+import {logWarning} from '../utils/MusicMetrics';
+import {getTranposedNote, Key} from '../utils/Notes';
+import {Effects} from './interfaces/Effects';
 
 // Using require() to import JS in TS files
 const soundApi = require('./sound');
 const constants = require('../constants');
 
-// Default to 4/4 time
+// Default to 4/4 time, 120 BPM, C Major
 const BEATS_PER_MEASURE = 4;
 const DEFAULT_BPM = 120;
+const DEFAULT_KEY = Key.C;
 
 /**
  * Main music player component which maintains the list of playback events and
  * uses a {@link SamplePlayer} to play sounds.
  */
 export default class MusicPlayer {
-  private bpm: number;
+  private readonly bpm: number;
+  private readonly key: Key;
   private samplePlayer: SamplePlayer;
   private library: MusicLibrary | null;
 
-  constructor(bpm: number = DEFAULT_BPM) {
+  constructor(bpm: number = DEFAULT_BPM, key: Key = DEFAULT_KEY) {
     this.bpm = bpm;
+    this.key = key;
     this.samplePlayer = new SamplePlayer();
     this.library = null;
   }
@@ -173,12 +179,32 @@ export default class MusicPlayer {
   }
 
   private convertEventToSamples(event: PlaybackEvent): SampleEvent[] {
+    if (this.library === null) {
+      logWarning('Music Player not initialized');
+      return [];
+    }
+
     if (event.skipContext?.skipSound) {
       return [];
     }
 
     if (event.type === 'sound') {
       const soundEvent = event as SoundEvent;
+      const soundData = this.library.getSoundForId(soundEvent.id);
+      if (!soundData) {
+        logWarning('No sound for ID: ' + soundEvent.id);
+        return [];
+      }
+
+      if (soundData.sequence) {
+        return this.getSamplesForSequence(
+          soundData.sequence,
+          event.when,
+          event.triggered,
+          event.effects
+        );
+      }
+
       return [
         {
           sampleId: soundEvent.id,
@@ -233,11 +259,7 @@ export default class MusicPlayer {
 
     generatedNotes.forEach(note => {
       const sampleId = this.getSampleForNote(note.note, instrument);
-      if (sampleId === null) {
-        console.warn(
-          `No sound for note value ${note} on instrument ${instrument}`
-        );
-      } else {
+      if (sampleId !== null) {
         const noteWhen = chordEvent.when + (note.tick - 1) / 16;
 
         results.push({
@@ -253,7 +275,6 @@ export default class MusicPlayer {
 
   private getSampleForNote(note: number, instrument: string): string | null {
     if (this.library === null) {
-      console.warn('Music Player not initialized');
       return null;
     }
 
@@ -261,18 +282,44 @@ export default class MusicPlayer {
       this.library.getFolderForPath(instrument);
 
     if (folder === null) {
-      console.warn(`No instrument ${instrument}`);
+      logWarning(`No instrument ${instrument}`);
       return null;
     }
 
     const sound = folder.sounds.find(sound => sound.note === note) || null;
     if (sound === null) {
-      console.warn(
-        `No sound for note value ${note} on instrument ${instrument}`
-      );
+      logWarning(`No sound for note value ${note} on instrument ${instrument}`);
       return null;
     }
 
     return `${instrument}/${sound.src}`;
+  }
+
+  private getSamplesForSequence(
+    sequence: SampleSequence,
+    eventStart: number,
+    triggered: boolean,
+    effects?: Effects
+  ): SampleEvent[] {
+    const {instrument, events} = sequence;
+    const samples: SampleEvent[] = [];
+
+    events.forEach(event => {
+      const tranposedNote = getTranposedNote(this.key, event.noteOffset);
+      const sampleId = this.getSampleForNote(tranposedNote, instrument);
+      if (sampleId !== null) {
+        const eventWhen = eventStart + (event.position - 1) / 16;
+        const lengthSeconds = (event.length / 16) * this.secondsPerMeasure();
+        samples.push({
+          sampleId,
+          offsetSeconds: this.convertPlayheadPositionToSeconds(eventWhen),
+          lengthSeconds,
+          triggered,
+          effects,
+        });
+      }
+    });
+
+    return samples;
   }
 }

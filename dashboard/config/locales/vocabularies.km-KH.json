@@ -2,20 +2,59 @@
   "km-KH": {
     "data": {
       "vocabularies": {
+        "debugging/minecraft/unversioned": {
+          "word": "ការបំបាត់កំហុស (Debugging)"
+        },
+        "debugging/hero/unversioned": {
+          "word": "ការបំបាត់កំហុស (Debugging)"
+        },
         "function/hero/unversioned": {
           "word": "អនុគមន៍"
         },
         "code/poem-art/2021": {
           "word": "កូដ"
         },
+        "debugging/flappy/unversioned": {
+          "word": "ការបំបាត់កំហុស (Debugging)"
+        },
+        "debugging/hourofcode/unversioned": {
+          "word": "ការបំបាត់កំហុស (Debugging)"
+        },
+        "debugging/frozen/unversioned": {
+          "word": "ការបំបាត់កំហុស (Debugging)"
+        },
+        "debugging/iceage/unversioned": {
+          "word": "ការបំបាត់កំហុស (Debugging)"
+        },
         "code/artist/unversioned": {
           "word": "កូដ"
+        },
+        "debugging/artist/unversioned": {
+          "word": "ការបំបាត់កំហុស (Debugging)"
+        },
+        "debugging/gumball/unversioned": {
+          "word": "ការបំបាត់កំហុស (Debugging)"
         },
         "conditionals/aquatic/unversioned": {
           "word": "លក្ខខណ្ឌ"
         },
+        "debugging/aquatic/unversioned": {
+          "word": "ការបំបាត់កំហុស (Debugging)"
+        },
         "loops/aquatic/unversioned": {
           "word": "រង្វិល​ជុំ"
+        },
+        "debugging/starwars/unversioned": {
+          "word": "ការបំបាត់កំហុស (Debugging)"
+        },
+        "debugging/mc/unversioned": {
+          "word": "ការបំបាត់កំហុស (Debugging)"
+        },
+        "debugging/playlab/unversioned": {
+          "word": "ការបំបាត់កំហុស (Debugging)"
+        },
+        "debugging/starwarsblocks/unversioned": {
+          "word": "ការបំបាត់កំហុស (Debugging)"
         },
         "event/outbreak/unversioned": {
           "word": "",
@@ -27,6 +66,18 @@
         },
         "code/sports/unversioned": {
           "word": "កូដ"
+        },
+        "debugging/sports/unversioned": {
+          "word": "ការបំបាត់កំហុស (Debugging)"
+        },
+        "debugging/infinity/unversioned": {
+          "word": "ការបំបាត់កំហុស (Debugging)"
+        },
+        "debugging/basketball/unversioned": {
+          "word": "ការបំបាត់កំហុស (Debugging)"
+        },
+        "debugging/coursed/2022": {
+          "word": "ការបំបាត់កំហុស (Debugging)"
         },
         "conditionals/coursed/2022": {
           "word": "លក្ខខណ្ឌ"
@@ -53,10 +104,19 @@
           "word": "លក្ខខណ្ឌ"
         },
         "copyright/coursee/2022": {
-          "word": "រក្សាសិទ្ធដោយ"
+          "word": "រក្សាសិទ្ធ"
         },
         "define/coursee/2022": {
           "word": "កំណត់"
+        },
+        "debugging/courseb/2022": {
+          "word": "ការបំបាត់កំហុស (Debugging)"
+        },
+        "debugging/express/2022": {
+          "word": "ការបំបាត់កំហុស (Debugging)"
+        },
+        "sequencing/express/2022": {
+          "word": "លំដាប់"
         },
         "behavior/express/2022": {
           "word": "ឥរិយាបទ"
@@ -73,8 +133,23 @@
         "define/express/2022": {
           "word": "កំណត់"
         },
+        "debugging/pre-express/2022": {
+          "word": "ការបំបាត់កំហុស (Debugging)"
+        },
+        "debugging/coursea/2022": {
+          "word": "ការបំបាត់កំហុស (Debugging)"
+        },
+        "debugging/coursec/2022": {
+          "word": "ការបំបាត់កំហុស (Debugging)"
+        },
+        "sequencing/coursec/2022": {
+          "word": "លំដាប់"
+        },
         "input/csd/2022": {
           "word": "ធាតុបញ្ចូល"
+        },
+        "debugging/csd/2022": {
+          "word": "ការបំបាត់កំហុស (Debugging)"
         },
         "variable/csd/2022": {
           "word": "អថេរ"
@@ -86,7 +161,7 @@
           "word": "អនុគមន៍"
         },
         "copyright/csd/2022": {
-          "word": "រក្សាសិទ្ធដោយ"
+          "word": "រក្សាសិទ្ធ"
         },
         "code/poem-art/unversioned": {
           "word": "កូដ",
@@ -120,8 +195,29 @@
         "define/coursef/2021": {
           "word": "កំណត់"
         },
+        "debugging/courseb/2021": {
+          "word": "ការបំបាត់កំហុស (Debugging)"
+        },
+        "debugging/coursea/2021": {
+          "word": "ការបំបាត់កំហុស (Debugging)"
+        },
+        "debugging/coursec/2021": {
+          "word": "ការបំបាត់កំហុស (Debugging)"
+        },
+        "sequencing/coursec/2021": {
+          "word": "លំដាប់"
+        },
+        "debugging/coursed/2021": {
+          "word": "ការបំបាត់កំហុស (Debugging)"
+        },
         "conditionals/coursed/2021": {
           "word": "លក្ខខណ្ឌ"
+        },
+        "debugging/express/2021": {
+          "word": "ការបំបាត់កំហុស (Debugging)"
+        },
+        "sequencing/express/2021": {
+          "word": "លំដាប់"
         },
         "behavior/express/2021": {
           "word": "ឥរិយាបទ"
@@ -138,11 +234,14 @@
         "define/express/2021": {
           "word": "កំណត់"
         },
+        "debugging/pre-express/2021": {
+          "word": "ការបំបាត់កំហុស (Debugging)"
+        },
         "behavior/coursee/2021": {
           "word": "ឥរិយាបទ"
         },
         "copyright/coursee/2021": {
-          "word": "រក្សាសិទ្ធដោយ"
+          "word": "រក្សាសិទ្ធ"
         },
         "function/coursee/2021": {
           "word": "អនុគមន៍"
@@ -152,6 +251,9 @@
         },
         "define/coursee/2021": {
           "word": "កំណត់"
+        },
+        "debugging/csd/2021": {
+          "word": "ការបំបាត់កំហុស (Debugging)"
         },
         "variable/csd/2021": {
           "word": "អថេរ"
@@ -166,7 +268,7 @@
           "word": "ធាតុបញ្ចូល"
         },
         "copyright/csd/2021": {
-          "word": "រក្សាសិទ្ធដោយ"
+          "word": "រក្សាសិទ្ធ"
         }
       }
     }

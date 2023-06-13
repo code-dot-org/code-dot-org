@@ -152,12 +152,17 @@
           }
         },
         "applab": {
-          "name": "App Lab",
+          "name": "Програмна Лабораторія",
           "description": "App Lab - це середовище програмування для створення простих додатків. Розробляйте програму, програмуйте її блоками чи JavaScript, а тоді поділіться нею з іншими.",
           "categories": {
             "ui_controls": {
               "expressions": {
                 "onEvent": {
+                  "examples": {
+                    "Shrink and Grow": {
+                      "name": "Зменшуйся та збільшуйся"
+                    }
+                  },
                   "palette_params": {
                     "callback": {
                       "type": "Функція"
@@ -349,6 +354,9 @@
             },
             "advanced": {
               "name": "Розширені"
+            },
+            "circuit": {
+              "name": "Контур"
             }
           }
         },

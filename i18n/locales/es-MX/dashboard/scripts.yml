@@ -97,6 +97,7 @@ es-MX:
           description_short: Este curso de 20 horas los principales conceptos de informática y programación en cursos 2-4.
           description_audience: De 10 a 18 años
           student_description: Este curso de 20 horas introduce el núcleo de la informática y conceptos de programación. El curso está diseñado para su uso en aulas para los grados K-8, pero es divertido aprender en todas las edades.
+          name: 20 horas
         edit-code:
           title: Editar el código
           description: Editar el código
@@ -779,7 +780,7 @@ es-MX:
               display_name: Prácticas de Profesor
           student_description: Lo utilizaremos durante la TeacherCon para entregar ayudas y materiales para las sesiones
         gradeKinder:
-          title: Jardín de infancia
+          title: Kindergarten
           description: Guion de Planificación para CSF 2.0
           description_short: Guion de Planificación para CSF 2.0
           description_audience: Edades de 5 a 18 años
@@ -6100,7 +6101,7 @@ es-MX:
           lesson_groups:
             lessonGroup-2:
               display_name: Preparación para Enseñar la Unidad 1
-          title: autodidáctico-pl-csd5
+          title: Enseñanza de IA y aprendizaje automático
           description: "Este módulo está diseñado para ayudarte a preparar la enseñanza de unidades específicas dentro del curso Descubrimientos de la Informática.  Empieza seleccionando la unidad que planeas enseñar primero. Puedes volver a esta sección de la formación a lo largo del curso escolar mientras te preparas para enseñar nuevas unidades del curso. No es necesario completar este contenido en orden. Para obtener orientación sobre la mejor manera de implementar Descubrimientos de la Informática con los estudiantes, consulta la [Guía de Implementación de Descubrimientos de la Informática][0].\n\n**Durante cada unidad en Descubrimientos de las Ciencias de la Computación, tendrá la oportunidad de:**\n\n-   Prepararte para enseñar la primera semana del contenido de la unidad \n-   Practicar los conceptos clave incluidos en la unidad \n-   Participar en el trabajo de ejemplo de los estudiantes \n-   Explorar los proyectos de fin de capítulo \n\n**Tiempo sugerido:** 2 horas"
           student_description: "Este módulo está diseñado para ayudarte a preparar la enseñanza de unidades específicas dentro del curso Descubrimientos de la Informática.  Empieza seleccionando la unidad que planeas enseñar primero. Puedes volver a esta sección de la formación a lo largo del curso escolar mientras te preparas para enseñar nuevas unidades del curso. No es necesario completar este contenido en orden. Para obtener orientación sobre la mejor manera de implementar Descubrimientos de la Informática con los estudiantes, consulta la [Guía de Implementación de Descubrimientos de la Informática][0].\n\n**Durante cada unidad en Descubrimientos de las Ciencias de la Computación, tendrá la oportunidad de:**\n\n-   Prepararte para enseñar la primera semana del contenido de la unidad \n-   Practicar los conceptos clave incluidos en la unidad \n-   Participar en el trabajo de ejemplo de los estudiantes \n-   Explorar los proyectos de fin de capítulo \n\n**Tiempo sugerido:** 2 horas"
         vpl-csa-2022:
@@ -7422,7 +7423,7 @@ es-MX:
         vpl-csd-ci-7:
           lesson_groups:
             lessonGroup-2:
-              display_name: autodidáctico-pl-csd5
+              display_name: Enseñanza de IA y aprendizaje automático
           title: 'Módulo 7: Preparación para la Enseñanza de la Inteligencia Artificial y el Aprendizaje Automático'
           description: "Este módulo de aprendizaje profesional está diseñado para ayudarte en la enseñanza de la unidad de la Inteligencia Artificial y el Aprendizaje Automático de Code.org. \n\n**En este módulo de aprendizaje profesional, podrás:**\n\n-   Obtener una introducción a la Inteligencia Artificial y el Aprendizaje Automático.\n-   Practicar los conceptos clave incluidos en la unidad.\n-   Interactuar con el Laboratorio de IA y el Laboratorio de Apps.\n-   Explorar los proyectos de fin de capítulo.\n-   Hacer un plan aplicar la unidad con tus estudiantes.\n\n**Tiempo sugerido:** 120 minutos"
           student_description: "Este módulo de aprendizaje profesional está diseñado para ayudarte en la enseñanza de la unidad de la Inteligencia Artificial y el Aprendizaje Automático de Code.org. \n\n**En este módulo de aprendizaje profesional, podrás:**\n\n-   Obtener una introducción a la Inteligencia Artificial y el Aprendizaje Automático.\n-   Practicar los conceptos clave incluidos en la unidad.\n-   Interactuar con el Laboratorio de IA y el Laboratorio de Apps.\n-   Explorar los proyectos de fin de capítulo.\n-   Hacer un plan aplicar la unidad con tus estudiantes.\n\n**Tiempo sugerido:** 120 minutos"
@@ -7447,6 +7448,8 @@ es-MX:
           lesson_groups:
             lessonGroup-3:
               display_name: Entradas y salidas
+        ai-temp:
+          title: Cómo funciona la Inteligencia Artificial
         focus-on-coding4b-2023:
           lesson_groups:
             lessonGroup-3:
@@ -7487,7 +7490,7 @@ es-MX:
           lesson_groups:
             lessonGroup-2:
               display_name: Preparación para Enseñar la Unidad 1
-          title: autodidáctico-pl-csd5
+          title: Enseñanza de IA y aprendizaje automático
           description: "Este módulo está diseñado para ayudarte a preparar la enseñanza de unidades específicas dentro del curso Descubrimientos de la Informática.  Empieza seleccionando la unidad que planeas enseñar primero. Puedes volver a esta sección de la formación a lo largo del curso escolar mientras te preparas para enseñar nuevas unidades del curso. No es necesario completar este contenido en orden. Para obtener orientación sobre la mejor manera de implementar Descubrimientos de la Informática con los estudiantes, consulta la [Guía de Implementación de Descubrimientos de la Informática][0].\n\n**Durante cada unidad en Descubrimientos de las Ciencias de la Computación, tendrá la oportunidad de:**\n\n-   Prepararte para enseñar la primera semana del contenido de la unidad \n-   Practicar los conceptos clave incluidos en la unidad \n-   Participar en el trabajo de ejemplo de los estudiantes \n-   Explorar los proyectos de fin de capítulo \n\n**Tiempo sugerido:** 2 horas"
           student_description: "Este módulo está diseñado para ayudarte a preparar la enseñanza de unidades específicas dentro del curso Descubrimientos de la Informática.  Empieza seleccionando la unidad que planeas enseñar primero. Puedes volver a esta sección de la formación a lo largo del curso escolar mientras te preparas para enseñar nuevas unidades del curso. No es necesario completar este contenido en orden. Para obtener orientación sobre la mejor manera de implementar Descubrimientos de la Informática con los estudiantes, consulta la [Guía de Implementación de Descubrimientos de la Informática][0].\n\n**Durante cada unidad en Descubrimientos de las Ciencias de la Computación, tendrá la oportunidad de:**\n\n-   Prepararte para enseñar la primera semana del contenido de la unidad \n-   Practicar los conceptos clave incluidos en la unidad \n-   Participar en el trabajo de ejemplo de los estudiantes \n-   Explorar los proyectos de fin de capítulo \n\n**Tiempo sugerido:** 2 horas"
         pl-csd-summer-day1:
@@ -7638,3 +7641,28 @@ es-MX:
           description_short: Aprende todos los conceptos de Fundamentos de Ciencias de la Computación y crea tu propio arte, historia o juego.
           description: Hemos creado el curso F para alumnos de quinto curso. El curso comienza analizando cómo los usuarios eligen las aplicaciones que utilizan. A continuación, los alumnos aprenden a crear una serie de aplicaciones de Laboratorio de Sprite que también ofrecen opciones al usuario. En las últimas lecciones del curso, los estudiantes aprenderán sobre las variables en una serie de contextos. A lo largo de este curso, los estudiantes tienen mayor autonomía y más opciones. Al final del curso, los estudiantes habrán creado proyectos interactivos para compartir con sus amigos y familiares.
           student_description: Aprende a programar con sprites y variables, así como a debatir el impacto social de la informática e Internet. Al final de este curso, diseña y crea un proyecto que puedas compartir con tus amigos y familiares.
+        self-paced-pl-csp2-2023:
+          title: 'Módulo 2: Navegando por Code.org'
+        self-paced-pl-csp4-2023:
+          description: |-
+            En este módulo, conocerás las auténticas prácticas de informática que los estudiantes llevarán a cabo a lo largo del curso de Principios de Informática. Estas prácticas incluyen la depuración, el uso de recursos y la programación en parejas. También explorarás el papel del profesor dentro de un aula de Principios de Informática y harás un plan de cómo apoyar el aprendizaje de los alumnos mientras enseñas el curso.
+
+            **Tendrás que**:
+
+            -   Considerar el papel del profesor en un aula de Principios de Informática.
+            -   Aprender sobre las auténticas prácticas de Informática que los estudiantes desarrollarán a lo largo del curso de Principios de Informática.
+            -   Elaborar un plan para apoyar el aprendizaje de los estudiantes a través de la diferenciación, la evaluación continua y la promoción en una cultura de inclusión.
+            -   Aprender sobre las oportunidades para conectar con la comunidad Informática en general.
+
+            **Tiempo sugerido**: 70 minutos
+          student_description: |-
+            En este módulo, conocerás las auténticas prácticas de informática que los estudiantes llevarán a cabo a lo largo del curso de Principios de Informática. Estas prácticas incluyen la depuración, el uso de recursos y la programación en parejas. También explorarás el papel del profesor dentro de un aula de Principios de Informática y harás un plan de cómo apoyar el aprendizaje de los alumnos mientras enseñas el curso.
+
+            **Tendrás que**:
+
+            -   Considerar el papel del profesor en un aula de Principios de Informática.
+            -   Aprender sobre las auténticas prácticas de Informática que los estudiantes desarrollarán a lo largo del curso de Principios de Informática.
+            -   Elaborar un plan para apoyar el aprendizaje de los estudiantes a través de la diferenciación, la evaluación continua y la promoción en una cultura de inclusión.
+            -   Aprender sobre las oportunidades para conectar con la comunidad Informática en general.
+
+            **Tiempo sugerido**: 70 minutos

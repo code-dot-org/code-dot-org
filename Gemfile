@@ -106,10 +106,10 @@ group :development, :test do
   gem 'net-http-persistent'
   gem 'rinku'
   gem 'rspec'
-  gem 'selenium-webdriver', '~> 4.2.0' # 4.x is required for Ruby 3 support; <4.3 required for Http:Persistent to not be deprecated yet
+  gem 'selenium-webdriver', '~> 4.0'
   gem 'spring', '~> 3.1.1'
   gem 'spring-commands-testunit'
-  gem 'webdrivers', '~> 4.7' # 4.7 required for selenium 4.x
+  gem 'webdrivers', '~> 5.2'
 
   # For pegasus PDF generation / merging testing.
   gem 'parallel_tests'
@@ -204,7 +204,10 @@ gem 'mini_racer', group: [:staging, :test, :production, :levelbuilder]
 
 gem 'jwt' # single signon for zendesk
 
-gem 'twilio-ruby' # SMS API for send-to-phone feature
+# SMS API for send-to-phone feature; 6.0 includes some breaking changes which
+# we'll need to prepare for:
+# https://github.com/twilio/twilio-ruby/blob/6.0.0/UPGRADE.md#2023-05-03-5xx-to-6xx
+gem 'twilio-ruby', '< 6.0'
 
 gem 'sequel', '~> 5.29'
 gem 'user_agent_parser'

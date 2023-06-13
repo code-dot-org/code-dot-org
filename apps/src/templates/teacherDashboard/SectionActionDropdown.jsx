@@ -107,12 +107,12 @@ class SectionActionDropdown extends Component {
 
   render() {
     const {sectionData, userId} = this.props;
-    const testingUserId = 0;
+    const testingUserId = -1;
 
     return (
       <span>
         <QuickActionsCell type={'header'}>
-          {userId % 10 === testingUserId && (
+          {userId % 10 !== testingUserId && (
             <PopUpMenu.Item
               href={this.editRedirectUrl(sectionData.id)}
               className="edit-section-details-link"
@@ -120,7 +120,7 @@ class SectionActionDropdown extends Component {
               {i18n.editSectionDetails()}
             </PopUpMenu.Item>
           )}
-          {userId % 10 !== testingUserId && (
+          {userId % 10 === testingUserId && (
             <PopUpMenu.Item
               onClick={this.onClickEditPopUp}
               className="edit-section-details-link"

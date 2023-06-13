@@ -174,6 +174,12 @@ describe('entry tests', () => {
         },
         {
           expand: true,
+          cwd: 'node_modules/blockly/media',
+          src: ['**'],
+          dest: 'build/package/media/google_blockly',
+        },
+        {
+          expand: true,
           cwd: 'node_modules/@code-dot-org/craft/dist/assets',
           src: ['**'],
           dest: 'build/package/media/skins/craft',
@@ -595,6 +601,8 @@ describe('entry tests', () => {
       './src/sites/studio/pages/lessons/student_lesson_plan.js',
     'musiclab/index': './src/sites/studio/pages/musiclab/index.js',
     'musiclab/menu': './src/sites/studio/pages/musiclab/menu.js',
+    'policy_compliance/child_account_consent':
+      './src/sites/studio/pages/policy_compliance/child_account_consent.js',
     'print_certificates/batch':
       './src/sites/studio/pages/print_certificates/batch.js',
     'programming_classes/show':

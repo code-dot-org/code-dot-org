@@ -7,6 +7,7 @@ import TimelineElement from './TimelineElement';
  * Renders timeline events for the simple2 model.
  */
 const TimelineSimple2Events = ({
+  paddingOffset,
   barWidth,
   eventVerticalSpace,
   getEventHeight,
@@ -80,8 +81,8 @@ const TimelineSimple2Events = ({
   }
 
   return (
-    <div style={{position: 'relative'}}>
-      <div style={{position: 'absolute'}}>
+    <div id="timeline-events">
+      <div id="timeline-events-funtion-extents">
         {uniqueFunctionExtents.map((uniqueFunction, index) => (
           <div
             key={index}
@@ -89,11 +90,12 @@ const TimelineSimple2Events = ({
               position: 'absolute',
               backgroundColor: 'rgba(255 255 255 / 0.12)',
               borderRadius: 8,
-              left: (uniqueFunction.positionLeft - 1) * barWidth,
+              left:
+                paddingOffset + (uniqueFunction.positionLeft - 1) * barWidth,
               width:
                 (uniqueFunction.positionRight - uniqueFunction.positionLeft) *
                 barWidth,
-              top: 20 + uniqueFunction.positionTop,
+              top: 32 + uniqueFunction.positionTop,
               height:
                 uniqueFunction.positionBottom - uniqueFunction.positionTop - 3,
             }}
@@ -102,7 +104,7 @@ const TimelineSimple2Events = ({
           </div>
         ))}
       </div>
-      <div style={{position: 'absolute'}}>
+      <div id="timeline-events-sound-events">
         {soundEvents.map((eventData, index) => (
           <TimelineElement
             key={index}
@@ -114,12 +116,12 @@ const TimelineSimple2Events = ({
               1
             }
             top={
-              20 +
+              32 +
               getVerticalOffsetForEventId(
                 eventData.functionContext.name + ' ' + eventData.id
               )
             }
-            left={barWidth * (eventData.when - 1)}
+            left={paddingOffset + barWidth * (eventData.when - 1)}
             when={eventData.when}
             skipContext={eventData.skipContext}
           />
@@ -130,6 +132,7 @@ const TimelineSimple2Events = ({
 };
 
 TimelineSimple2Events.propTypes = {
+  paddingOffset: PropTypes.number.isRequired,
   barWidth: PropTypes.number.isRequired,
   eventVerticalSpace: PropTypes.number.isRequired,
   getEventHeight: PropTypes.func.isRequired,

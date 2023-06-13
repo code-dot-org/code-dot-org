@@ -527,6 +527,15 @@
         "9183e5a7-1776-4ffb-a65b-730edea18bc3": {
           "description": "Uczyć się planować z wyprzedzeniem na potrzeby bieżącego zadania."
         },
+        "0265cc40-2950-42f3-a457-7b967fa9c0d9": {
+          "description": "Wyjaśnij różnicę między danymi prywatnymi a danymi osobowymi."
+        },
+        "16baead5-8507-4681-94b1-0314783a5418": {
+          "description": "Wyjaśnij, dlaczego udostępnianie prywatnych informacji online jest ryzykowne."
+        },
+        "d4c584f8-36e7-471a-9b83-713ca5e4711a": {
+          "description": "Zidentyfikuj powody, dla których ludzie dzielą się informacjami o sobie w Internecie."
+        },
         "6f3e5897-b529-4f7a-a41f-83c11f7f03c5": {
           "description": "Twórz nowe kształty i przypisz im kostiumy i zachowania."
         },
@@ -538,6 +547,12 @@
         },
         "884d4f4c-abd4-493c-8029-cde7399519f4": {
           "description": "Stwórz interaktywną animację za pomocą duszków i zdarzeń."
+        },
+        "41232751-173e-4eaa-9bc4-bb5b65957d03": {
+          "description": "Wybierz, jakie informacje o sobie można bezpiecznie udostępniać online."
+        },
+        "6a824aaa-b3b2-4c7f-b2f9-daed0835a2c5": {
+          "description": "Utwórz interaktywny program komputerowy, który wyraża, kim są za pomocą tekstu i niestandardowych obrazów."
         },
         "62ffafea-c5f4-4942-b283-9462c41d52cd": {
           "description": "Identyfikuj korzyści używania struktury pętli zamiast powtarzania ręcznego."
@@ -601,6 +616,15 @@
         },
         "b92ee5de-79d3-4fd6-8bf6-e86e3dad779a": {
           "description": "Używać określonych wcześniej funkcji do realizacji zwykle powtarzanych zadań."
+        },
+        "5fb6d430-a2bf-4d0b-b128-5592afc2d856": {
+          "description": "Ulepsz istniejący projekt aplikacji, odpowiadając na potrzeby użytkowników w zakresie dostępności."
+        },
+        "bb1f6fd9-3327-411d-b91e-d3b4e756fff3": {
+          "description": "Wyjaśnij, dlaczego dostępność jest ważną częścią projektowania aplikacji dla użytkowników."
+        },
+        "fcecef31-84d0-4df2-80cd-f8641b06c24f": {
+          "description": "Opisz wpływ aplikacji mobilnych na współczesny świat."
         },
         "2c0ee6b8-608a-47b6-9093-dbab81b92cbf": {
           "description": "Rozumieć własne prawa dotyczące materiałów, które utworzyli"
@@ -2093,6 +2117,9 @@
         "9ea5d8fd-1b7d-4655-b4b1-75fd09545838": {
           "description": "Dzielić się kreatywnym rekwizytem z innymi uczniami."
         },
+        "a937dee9-2cd3-4978-8f88-09f8af577395": {
+          "description": "zacząć nawiązywać połączenia o nowym sposobie pisania programów"
+        },
         "88e512c1-9ce0-4aaf-9dab-e0f2716c73ae": {
           "description": "Definiować \"duszka\" jako postać lub obiekt na ekranie, który można przemieszczać i zmieniać."
         },
@@ -2101,6 +2128,24 @@
         },
         "57a5eb7e-bd65-420e-b1b5-65a796565f9b": {
           "description": "Identyfikować działania, które nawiązują do zdarzeń wejściowych."
+        },
+        "ce28bc63-1bc8-4239-985b-43ff3a8b98ea": {
+          "description": "Utwórz interaktywną animację za pomocą duszków, zachowań i zdarzeń."
+        },
+        "33b4a09f-5e7c-4e05-84e6-414b2424ef68": {
+          "description": "Zidentyfikuj powody, dla których ludzie dzielą się informacjami o sobie w Internecie."
+        },
+        "c89aa3e0-f0ba-4188-b2b3-39731a6d0fac": {
+          "description": "Wyjaśnij różnicę między danymi prywatnymi a danymi osobowymi."
+        },
+        "ffeaa29c-8d0a-47c0-be5b-275f8a01e138": {
+          "description": "Wyjaśnij, dlaczego udostępnianie prywatnych informacji online jest ryzykowne."
+        },
+        "c217a50f-4aa2-4eb7-998d-7d06b38bdd93": {
+          "description": "Wybierz, jakie informacje o sobie można bezpiecznie udostępniać online."
+        },
+        "3ab2d965-5fe5-4a1e-b745-8118e6815776": {
+          "description": "Utwórz interaktywny program komputerowy, który wyraża, kim są za pomocą tekstu i niestandardowych obrazów."
         },
         "0ab15cd0-3d1b-48a6-8a93-53c87d679c05": {
           "description": "Interpretować etyczne udostępnianie materiałów chronionych prawem autorskim w przeciwieństwie do sytuacji, gdy udostępnianie nie jest etyczne."
@@ -2170,6 +2215,15 @@
         },
         "cff52f84-5090-495e-a37b-02cf8b666ad6": {
           "description": "Używać określonych wcześniej funkcji do realizacji zwykle powtarzanych zadań."
+        },
+        "87094122-056f-4fa4-83b7-e3d6abb52e67": {
+          "description": "Opisz wpływ aplikacji mobilnych na współczesny świat."
+        },
+        "b672db1b-ee05-44b3-9f82-73b1b1f94e1a": {
+          "description": "Wyjaśnij, dlaczego dostępność jest ważną częścią projektowania aplikacji dla użytkowników."
+        },
+        "3a5ae2ad-5774-4da7-b4e4-4e0aaeb02cbe": {
+          "description": "Ulepsz istniejący projekt aplikacji, odpowiadając na potrzeby użytkowników w zakresie dostępności."
         },
         "cc7b3a7a-21b5-4450-9b38-e85bb5c378bc": {
           "description": "Uczyć się planować z wyprzedzeniem na potrzeby bieżącego zadania."

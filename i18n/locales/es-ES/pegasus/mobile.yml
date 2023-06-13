@@ -562,7 +562,7 @@
   volunteer_engineer_submission_field_email_desc: "Tu dirección de correo electrónico nunca será compartida, pero te enviaremos solicitudes enviadas por docentes."
   volunteer_engineer_submission_field_email_placeholder: "Dirección de correo electrónico"
   volunteer_engineer_submission_field_email_preference: "¿Podemos enviarle por correo electrónico las actualizaciones a nuestros cursos, oportunidades locales u otras noticias de informática?"
-  volunteer_engineer_submission_field_email_preference_privacy: "(Vea nuestra politica de privacidad)"
+  volunteer_engineer_submission_field_email_preference_privacy: "(Consulta nuestra política de privacidad)"
   volunteer_engineer_submission_field_email_preference_yes: 'Sí'
   volunteer_engineer_submission_field_email_preference_no: 'No'
   volunteer_engineer_submission_final_paragraph: "Se mostrará tu ubicación en el mapa local de docentes para que puedan contactarlo para oportunidades de voluntariado en la Hora de Code. Tu dirección exacta y correo electrónico NUNCA serán compartidos. Pero la información adicional (incluyendo tu ubicación aproximada) será visible públicamente por docentes locales."
