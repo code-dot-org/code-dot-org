@@ -2048,6 +2048,7 @@ class User < ApplicationRecord
       id: id,
       name: name,
       username: username,
+      family_name: DCDO.get('family-name-features', false) ? properties&.dig('family_name') : nil,
       email: email,
       hashed_email: hashed_email,
       user_type: user_type,

@@ -3690,6 +3690,7 @@ class UserTest < ActiveSupport::TestCase
         id: @student.id,
         name: @student.name,
         username: @student.username,
+        family_name: nil,
         email: @student.email,
         hashed_email: @student.hashed_email,
         user_type: @student.user_type,
