@@ -115,12 +115,9 @@ function removeCommentNodes(root) {
  */
 export function convertXmlToBlockly(xmlContainer, isRtl) {
   // Remove any divs and/or spans with class name 'block-space-container'.
-  const blockSpaceContainers = xmlContainer.getElementsByClassName(
-    'block-space-container'
-  );
-  for (let i = blockSpaceContainers.length - 1; i >= 0; i--) {
-    blockSpaceContainers[i].remove();
-  }
+  Array.from(
+    xmlContainer.getElementsByClassName('block-space-container')
+  ).forEach(container => container.remove());
 
   const xmls = xmlContainer.getElementsByTagName('xml');
   Array.prototype.forEach.call(xmls, function (xml) {
