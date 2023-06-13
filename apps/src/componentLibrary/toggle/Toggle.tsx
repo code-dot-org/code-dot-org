@@ -26,18 +26,29 @@ const Toggle: React.FunctionComponent<ToggleProps> = ({
 }) => {
   return (
     <label
-      className={classnames(moduleStyles.label, moduleStyles[`label-${size}`])}
+      className={classnames(
+        moduleStyles.toggle,
+        moduleStyles[`toggle-${size}`],
+        position === 'right' && moduleStyles['toggle-right']
+      )}
     >
-      <input
-        type="checkbox"
-        name={name}
-        value={value}
-        checked={checked}
-        onChange={onChange}
-        disabled={disabled}
-      />
+      <div>
+        <input
+          type="checkbox"
+          name={name}
+          value={value}
+          checked={checked}
+          onChange={onChange}
+          disabled={disabled}
+        />
+        <span className={moduleStyles.switch}>
+          <i className={classnames('fa', 'fa-solid')} />
+          <span />
+        </span>
+      </div>
+
       {/*<span className={moduleStyles.switch}/>*/}
-      <i className={classnames('fa', 'fa-solid', moduleStyles.switch)} />
+      {/*<i className={classnames('fa', 'fa-solid', moduleStyles.switch)} />*/}
       {label && (
         //   TODO: [DES-296] Once new Typography is ready, implement different label sizes
         <Typography semanticTag="span" visualAppearance="body-one">

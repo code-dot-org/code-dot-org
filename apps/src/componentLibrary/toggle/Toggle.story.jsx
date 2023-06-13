@@ -21,18 +21,18 @@ const MultipleTemplate = (args = []) => (
 export const DefaultToggle = MultipleTemplate.bind({});
 DefaultToggle.args = {
   components: [
-    {name: 'test-left', label: 'label left'},
-    {name: 'test-right', label: 'label right', position: 'right'},
+    {name: 'test-left', label: 'Toggle left'},
+    {name: 'test-right', label: 'Toggle right', position: 'right'},
   ],
 };
 
 export const DisabledToggle = MultipleTemplate.bind({});
 DisabledToggle.args = {
   components: [
-    {name: 'test-disabled', label: 'Label', disabled: true},
+    {name: 'test-disabled', label: 'Disabled toggle', disabled: true},
     {
       name: 'test-disabled-checked',
-      label: 'Label checked',
+      label: 'Disabled checked toggle',
       checked: true,
       disabled: true,
     },
