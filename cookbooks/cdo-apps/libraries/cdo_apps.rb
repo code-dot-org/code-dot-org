@@ -68,7 +68,7 @@ module CdoApps
     # Define an execute resource for restarting (or starting) the entire
     # SystemD service, which can be invoked by other Chef resources
     execute "restart #{app_name} service" do
-      command "systemctl restart #{app_name}"
+      command "systemctl daemon-reload && systemctl restart #{app_name}"
 
       # Don't run by default; rely on notifications.
       action :nothing
