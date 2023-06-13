@@ -123,10 +123,12 @@
   div input[type="checkbox"]:active:not(:disabled) + .switch i {
     &::before {
       border-color: $light_primary_500;
+      background: $light_primary_700;
     }
 
     &::after {
       border-color: $light_gray_500;
+      background: $light_gray_700;
     }
   }
 
