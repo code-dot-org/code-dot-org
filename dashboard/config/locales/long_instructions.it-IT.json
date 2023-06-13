@@ -5901,7 +5901,19 @@
         "courseE_aboutme_32022": " _\"Parla di te, e assicurati che sia SICURO!\"_\n\nUtilzza un blocco evento `when clicked` con un blocco `say` per far condividere, al tuo sprite, delle informazioni sicure su di te, al click del tuo sprite! \n\n#### Esempi di informazioni SICURE e NON\n\n| SICURE              | NON SICURE                 |\n| ------------------- | -------------------------- |\n| nome                | nome e cognome             |\n| oggetti preferiti   | indirizzo di casa          |\n| opinioni rispettose | numero di telefono o email |",
         "courseE_aboutme_42022": " _\"Aggiungi altri sprite al tuo poster! Non dimenticare di dargli dei costumi!\"_\n\nAggiungi **almeno due** sprite in più al tuo poster. Dai a ogni sprite un costume e una posizione differenti!",
         "courseE_aboutme_52022": " _\"Di di più su di te al mondo, tramite i tuoi nuovi sprite!\"_\n\nFai dire al tuo sprite qualcosa di differente su di te, quando ognuno di essi è cliccato. Assicurati che qualsiasi cosa tu condivida sia SICURA!",
-        "ramp_artist_loops62022": "Questa scalinata è molto più grande, ma richiede la stessa quantità di codice del rompicapo precedente!\n\nCorreggi questo ciclo per completare il rompicapo."
+        "ramp_artist_loops62022": "Questa scalinata è molto più grande, ma richiede la stessa quantità di codice del rompicapo precedente!\n\nCorreggi questo ciclo per completare il rompicapo.",
+        "CSD U1 Test Collaborate FR": "Pensa a un momento in cui tu e il tuo partner siete stati in disaccordo su qualcosa. Come hai risolto tale disaccordo?",
+        "CSD U1 Test Collaborate FR_2021": "Pensa a un momento in cui tu e il tuo partner siete stati in disaccordo su qualcosa. Come hai risolto tale disaccordo?",
+        "CSD U1 Test Collaborate FR_2022": "Pensa a un momento in cui tu e il tuo partner siete stati in disaccordo su qualcosa. Come hai risolto tale disaccordo?",
+        "CSD U1 Test Feedback FR": "Pensa a un feedback che hai ricevuto ma che NON hai utilizzato per migliorare la tua app. Perché hai scelto di non utilizzare tale feedback?",
+        "CSD U1 Test Feedback FR_2021": "Pensa a un feedback che hai ricevuto ma che NON hai utilizzato per migliorare la tua app. Perché hai scelto di non utilizzare tale feedback?",
+        "CSD U1 Test Feedback FR_2022": "Pensa a un feedback che hai ricevuto ma che NON hai utilizzato per migliorare la tua app. Perché hai scelto di non utilizzare tale feedback?",
+        "CSD U1 Test Iteration FR": "Pensa a un modo in cui l'idea della tua app è cambiata, mentre lavoravi al tuo progetto. Qual è stata la modifica, e perché l'hai effettuata?",
+        "CSD U1 Test Iteration FR_2021": "Pensa a un modo in cui l'idea della tua app è cambiata, mentre lavoravi al tuo progetto. Qual è stata la modifica, e perché l'hai effettuata?",
+        "CSD U1 Test Iteration FR_2022": "Pensa a un modo in cui l'idea della tua app è cambiata, mentre lavoravi al tuo progetto. Qual è stata la modifica, e perché l'hai effettuata?",
+        "CSD U1 Test storage FR": "Pensa a un tipo di informazioni che la tua app ha utilizzato, ma che, in seguito, NON ha memorizzato. Perché hai scelto di non memorizzare tale informazione?",
+        "CSD U1 Test storage FR_2021": "Pensa a un tipo di informazioni che la tua app ha utilizzato, ma che, in seguito, NON ha memorizzato. Perché hai scelto di non memorizzare tale informazione?",
+        "CSD U1 Test storage FR_2022": "Pensa a un tipo di informazioni che la tua app ha utilizzato, ma che, in seguito, NON ha memorizzato. Perché hai scelto di non memorizzare tale informazione?"
       }
     }
   }

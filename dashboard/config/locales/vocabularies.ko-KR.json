@@ -20,7 +20,7 @@
         },
         "debugging/minecraft/unversioned": {
           "word": "디버깅",
-          "definition": "알고리즘이나 프로그램에서 문제를 찾아 고침"
+          "definition": "알고리즘이나 프로그램에서 문제를 찾아 고치기"
         },
         "event/minecraft/unversioned": {
           "word": "이벤트 ",
@@ -35,19 +35,20 @@
           "definition": "기계가 실행할 수 있는 무언가로 코딩된 알고리즘"
         },
         "code/hero/unversioned": {
-          "definition": "(동사) 코드 작성, 컴퓨터에게 내릴 지시사항 작성."
+          "word": "코드",
+          "definition": "(동사) 코드를 짜다, 컴퓨터에게 내릴 지시 사항을 만들다"
         },
         "debugging/hero/unversioned": {
           "word": "디버깅",
-          "definition": "알고리즘이나 프로그램에서 문제를 찾아 고침"
+          "definition": "알고리즘이나 프로그램에서 문제를 찾아 고치기"
         },
         "function/hero/unversioned": {
           "word": "함수",
-          "definition": "쉽게 계속 다시 호출할 수 있는 코드 부분."
+          "definition": "손쉽게 계속해서 다시 호출할 수 있는 코드 조각"
         },
         "program/hero/unversioned": {
           "word": "프로그램 ",
-          "definition": "머신이 실행할 수 있는 무언가로 코딩된 알고리즘."
+          "definition": "기계가 실행할 수 있는 무언가로 코딩된 알고리즘"
         },
         "code/poem-art/2021": {
           "word": "코드",
@@ -149,27 +150,28 @@
           "definition": "머신이 실행할 수 있는 무언가로 코딩된 알고리즘."
         },
         "code/aquatic/unversioned": {
-          "definition": "(동사) 코드 작성, 컴퓨터에게 내릴 지시사항 작성."
+          "word": "코드",
+          "definition": "(동사) 코드를 짜다, 컴퓨터에게 내릴 지시 사항을 만들다"
         },
         "condition/aquatic/unversioned": {
           "word": "조건",
-          "definition": "동작을 실행하기 전 그것이 참인지 여부를 보기 위해 프로그램이 확인하는 것. "
+          "definition": "작업 실행 전 그것이 참인지 프로그램이 확인하는 것"
         },
         "conditionals/aquatic/unversioned": {
-          "word": "조건",
-          "definition": "일정 조건이 참일 때만 실행하는 구문."
+          "word": "조건문",
+          "definition": "특정 조건이 참일 때만 실행되는 구문"
         },
         "debugging/aquatic/unversioned": {
           "word": "디버깅",
-          "definition": "알고리즘이나 프로그램에서 문제를 찾아 고침"
+          "definition": "알고리즘이나 프로그램에서 문제를 찾아 고치기"
         },
         "loops/aquatic/unversioned": {
-          "word": "반복",
+          "word": "루프",
           "definition": "계속해서 무언가를 반복하도록 하는 작업"
         },
         "program/aquatic/unversioned": {
           "word": "프로그램 ",
-          "definition": "머신이 실행할 수 있는 무언가로 코딩된 알고리즘."
+          "definition": "기계가 실행할 수 있는 무언가로 코딩된 알고리즘"
         },
         "caesar_cipher_/hoc-encryption/unversioned": {
           "word": "시저 암호 ",

@@ -6973,3 +6973,7 @@ id:
             dan buat seni, cerita atau permainan anda sendiri.
         self-paced-pl-csp2-2023:
           title: 'Modul 2: Menavigasi Code.org'
+        csa-frq-practice:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Kelas

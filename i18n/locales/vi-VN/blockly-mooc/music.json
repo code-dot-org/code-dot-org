@@ -56,5 +56,7 @@
   "share": "Chia sẻ",
   "shareComingSoon": "Chia sẻ đang được xây dựng. Kiểm tra lại sớm.",
   "startOver": "Bắt đầu lại",
-  "upload": "Tải lên"
+  "upload": "Tải lên",
+  "panelHeaderInstructions": "Hướng dẫn",
+  "panelHeaderWorkspace": "Không gian làm việc"
 }

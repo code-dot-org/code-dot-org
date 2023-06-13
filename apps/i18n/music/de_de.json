@@ -57,5 +57,7 @@
   "share": "Teilen",
   "shareComingSoon": "Sharing ist im Aufbau. Schauen Sie bald wieder vorbei.",
   "startOver": "Neu starten",
-  "upload": "Hochladen"
+  "upload": "Hochladen",
+  "panelHeaderInstructions": "Anweisungen",
+  "panelHeaderWorkspace": "Arbeitsbereich: "
 }
