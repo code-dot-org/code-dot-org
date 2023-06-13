@@ -42,9 +42,9 @@ DisabledToggle.args = {
 export const SizesOfToggle = MultipleTemplate.bind({});
 SizesOfToggle.args = {
   components: [
-    {name: 'test-xs', label: 'Label', size: 'xs'},
-    {name: 'test-s', label: 'Label', size: 's'},
-    {name: 'test-m', label: 'Label', size: 'm'},
-    {name: 'test-l', label: 'Label', size: 'l'},
+    {name: 'test-xs', label: 'Label - XS', size: 'xs'},
+    {name: 'test-s', label: 'Label - S', size: 's'},
+    {name: 'test-m', label: 'Label - M', size: 'm'},
+    {name: 'test-l', label: 'Label - L', size: 'l'},
   ],
 };

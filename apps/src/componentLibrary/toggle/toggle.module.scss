@@ -147,8 +147,39 @@
   }
 }
 
-//.toggle-l {
-//}
+.toggle-l {
+  gap: 8px;
+
+  div {
+    width: 56px;
+    height: 28px;
+
+    .switch {
+      i {
+        &::before,
+        &::after {
+          height: 28px;
+          padding: 2px;
+          line-height: 19px;
+          font-size: 19px;
+        }
+
+        &::before {
+          padding-left: 4px;
+        }
+
+        &::after {
+          padding-right: 4px;
+        }
+      }
+      span {
+        width: 24px;
+        margin: 2px;
+      }
+    }
+  }
+}
+
 .toggle-m {
   gap: 8px;
 
@@ -174,13 +205,79 @@
           padding-right: 4px;
         }
       }
+
+      span {
+        width: 20px;
+        margin: 2px;
+      }
     }
   }
 }
-//.toggle-s {
-//}
-//.toggle-xs {
-//}
+
+.toggle-s {
+  gap: 8px;
+
+  div {
+    width: 44px;
+    height: 22px;
+
+    .switch {
+      i {
+        &::before,
+        &::after {
+          height: 22px;
+          padding: 2px;
+          line-height: 14px;
+          font-size: 14px;
+        }
+
+        &::before {
+          padding-left: 4px;
+        }
+
+        &::after {
+          padding-right: 4px;
+        }
+      }
+      span {
+        width: 18px;
+        margin: 2px;
+      }
+    }
+  }
+}
+.toggle-xs {
+  gap: 8px;
+
+  div {
+    width: 40px;
+    height: 20px;
+
+    .switch {
+      i {
+        &::before,
+        &::after {
+          height: 20px;
+          padding: 2px;
+          line-height: 13px;
+          font-size: 13px;
+        }
+
+        &::before {
+          padding-left: 4px;
+        }
+
+        &::after {
+          padding-right: 4px;
+        }
+      }
+      span {
+        width: 16px;
+        margin: 2px;
+      }
+    }
+  }
+}
 
 .toggle-right {
   :nth-child(1) {
