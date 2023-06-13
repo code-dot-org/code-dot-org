@@ -13,11 +13,12 @@
   position: fixed;
   top: 10%;
   left: 50%;
+  transform: translateX(-50%);
   z-index: 1050;
-  width: 560px;
-  margin-left: -280px;
+  width: 70%;
+  max-width: 600px;
   background-color: #fff;
   border: 1px solid rgba(0 0 0 / 0.3);
-  overflow: visible;
+  border-radius: 4px;
   padding: 15px;
 };
