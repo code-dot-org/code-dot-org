@@ -7,8 +7,8 @@ After=network.target
 # and our own existing configuration at
 # https://github.com/code-dot-org/code-dot-org/blob/e38737f7befb317871dbf18f46c8f65b3dc282ab/cookbooks/cdo-apps/templates/default/puma.sh.erb
 [Service]
-Type=notify
-WatchdogSec=10
+Type=simple
+
 User=<%= @user %>
 WorkingDirectory=<%= @app_root %>
 
