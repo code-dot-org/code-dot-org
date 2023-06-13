@@ -4,17 +4,21 @@
   display: flex;
   flex-direction: row;
 
+  > span {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+  }
+
   div {
     display: inline-block;
     position: relative;
     vertical-align: middle;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
     text-align: left;
 
     input[type="checkbox"] {
-      display: none;
+      position: absolute;
+      opacity: 0;
     }
 
     .switch {
@@ -42,18 +46,22 @@
           display: block;
           float: left;
           width: 50%;
+          border: 2px solid transparent;
+          border-radius: 100px;
           color: $neutral_white;
           box-sizing: border-box;
         }
 
+        // Checked styles
         &::before {
           content: "\f00c";
           background-color: $light_primary_500;
         }
 
+        // Unchecked styles
         &::after {
           content: "\f00d";
-          background-color: $neutral_dark50;
+          background-color: $light_gray_500;
           text-align: right;
         }
       }
@@ -85,22 +93,55 @@
         left: 50%;
       }
     }
+  }
 
-    //hover styles
-    //&:hover {
-    //}
-    //active styles
+  // Hover styles
+  &:hover {
+    div {
+      .switch {
+        i {
+          &::before {
+            background-color: $light_primary_700;
+          }
 
-    //focus styles
+          &::after {
+            background-color: $light_gray_700;
+          }
+        }
+      }
+    }
+  }
 
-    //disabled styles
-    input[type="checkbox"]:disabled +.switch {
-      background-color: #ddd;
-      cursor: not-allowed;
+  // Focus styles
+  div input[type="checkbox"]:focus + .switch{
+    outline: 2px solid $light_primary_500;
+    outline-offset: 2px;
+  }
 
-      &:before {
-        background-color: #ddd;
+  // Pressed styles
+  &:active div input[type="checkbox"]:not(:disabled) + .switch i,
+  div input[type="checkbox"]:active:not(:disabled) + .switch i {
+    &::before {
+      border-color: $light_primary_500;
+    }
+
+    &::after {
+      border-color: $light_gray_500;
+    }
+  }
+
+  //disabled styles
+  &:has(input[type="checkbox"]:disabled) {
+    cursor: default;
+    > span {
+      color: $light_gray_200;
+    }
+    > div {
+      .switch, .switch i  {
         cursor: not-allowed;
+        &::before, &::after {
+          background-color: $light_gray_200;
+        }
       }
     }
   }
@@ -121,7 +162,7 @@
         &::after {
           height: 24px;
           padding: 2px;
-          line-height: 20px;
+          line-height: 16px;
           font-size: 16px;
         }
 
