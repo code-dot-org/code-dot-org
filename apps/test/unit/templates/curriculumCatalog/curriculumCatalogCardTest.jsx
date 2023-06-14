@@ -53,7 +53,6 @@ describe('CurriculumCatalogCard', () => {
     stubRedux();
     registerReducers({teacherSections});
     store = getStore();
-    store.dispatch(setSections(sections));
     defaultProps = {
       courseDisplayName: 'AI for Oceans',
       duration: 'quarter',
@@ -251,7 +250,8 @@ describe('CurriculumCatalogCard', () => {
     });
   });
 
-  it('clicking Assign button shows sections', () => {
+  it('clicking Assign button as a user with sections shows sections', () => {
+    store.dispatch(setSections(sections));
     renderCurriculumCard();
 
     const assignButton = screen.getByRole('button', {

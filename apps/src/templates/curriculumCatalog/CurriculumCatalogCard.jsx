@@ -107,6 +107,16 @@ const CustomizableCurriculumCatalogCard = ({
 }) => {
   const [isAssignDialogOpen, setIsAssignDialogOpen] = useState(false);
 
+  const renderAssignDialog = () => (
+    <MultipleSectionsAssigner
+      assignmentName={courseDisplayName}
+      onClose={() => setIsAssignDialogOpen(false)}
+      sections={sectionsForDropdown}
+      participantAudience="student"
+      {...props}
+    />
+  );
+
   return (
     <div>
       <div
@@ -168,15 +178,7 @@ const CustomizableCurriculumCatalogCard = ({
           </div>
         </div>
       </div>
-      {isAssignDialogOpen && (
-        <MultipleSectionsAssigner
-          assignmentName={courseDisplayName}
-          onClose={() => setIsAssignDialogOpen(false)}
-          sections={sectionsForDropdown}
-          participantAudience="student"
-          {...props}
-        />
-      )}
+      {isAssignDialogOpen && renderAssignDialog()}
     </div>
   );
 };
