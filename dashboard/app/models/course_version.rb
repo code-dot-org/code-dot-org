@@ -149,7 +149,7 @@ class CourseVersion < ApplicationRecord
     return true if course_offering.course_versions.length == 1
 
     family_name = course_offering.key
-    latest_stable_version = content_root_type == 'UnitGroup' ? UnitGroup.latest_stable_version(family_name) : Unit.latest_stable_version(family_name, locale: locale_code)
+    latest_stable_version = content_root_type == 'UnitGroup' ? UnitGroup.latest_stable_version(family_name, locale: locale_code) : Unit.latest_stable_version(family_name, locale: locale_code)
 
     latest_stable_version == content_root
   end
