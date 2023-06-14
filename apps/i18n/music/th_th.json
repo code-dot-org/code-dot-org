@@ -53,5 +53,7 @@
   "share": "แบ่งปัน",
   "shareComingSoon": "การแบ่งปันอยู่ระหว่างการก่อสร้างกลับมาตรวจสอบเร็ว ๆ นี้",
   "startOver": "เริ่มใหม่",
-  "upload": "อัปโหลด"
+  "upload": "อัปโหลด",
+  "panelHeaderInstructions": "คำแนะนำ",
+  "panelHeaderWorkspace": "พื้นที่ทำงาน"
 }
