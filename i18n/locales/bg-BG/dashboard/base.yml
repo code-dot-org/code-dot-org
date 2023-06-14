@@ -60,6 +60,7 @@ bg:
         reset_password_token: "Връзката за нулиране на праолата, който сте последвали"
         error:
           future: не може да бъде в бъдещето
+        us_state: 'Регион'
   beta: "бета"
   hello: "Здравей, свят"
   welcome_back: "Добре дошли отново, %{name}"
@@ -200,6 +201,7 @@ bg:
     parent_account_checkbox: "Аз съм родител/настойник записващ се от името на детето ми"
     parent_account_email_progress_permission: "Можем ли да ви изпращаме имейл с периодични актуализации за напредъка и проектите на вашето дете, както и актуализации за техния курс и компютърни науки? [(Вижте нашата декларацията ни за поверителност)](%{privacy_policy_url})"
     parent_account_email_label: "Имейл на родителя/настойника"
+    us_state: 'Регион'
   school_info:
     title: 'Информацшя за училището (по избор)'
     school_country: 'Училищен район'
@@ -1109,6 +1111,7 @@ bg:
         na: 'Не е приложимо'
       workshop_course:
         csp: '"15-" 16 CS принципи'
+        other: 'Друго'
         not_applicable: "Не е приложимо"
       email_opt_in:
         opt_in_yes: 'Да'

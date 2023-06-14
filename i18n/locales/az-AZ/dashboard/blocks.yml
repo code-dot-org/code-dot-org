@@ -2462,6 +2462,8 @@ az:
             '10': '10'
       storylab_clearHeadings:
         text: başlıqları təmizlə
+      storylab_printText:
+        text: çap et
       storylab_setForegroundEffect2:
         text: "{EFFECT} effekti elə"
         options:

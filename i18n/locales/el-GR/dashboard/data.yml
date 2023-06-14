@@ -261,7 +261,7 @@ el:
         maze_intro: Πρόλογος λαβυρίνθου
         artist_intro: Πρόλογος καλλιτέχνη
         farmer_intro: Εισαγωγή αγρότη
-        flappy_intro: '"Φτερογούλης" - Εισαγωγικές έννοιες'
+        flappy_intro: '"Flappy" - Εισαγωγικές έννοιες'
         loop_times: Πλακίδιο Επανάλαβε για
         loop_until: Πλακίδιο Επανάλαβε μέχρι
         if: Πλακίδιο Εάν
@@ -322,7 +322,7 @@ el:
         C3_bee_functions: Λειτουργίες μέλισσας
         C3_bee_conditionals: Συνθήκες της Μέλισσας
         C3_maze_conditionals: Συνθήκες λαβυρίνθου
-        C3_artist_nested_loops: Φωλιασμένες Επαναλήψεις
+        C3_artist_nested_loops: Εμφωλευμένοι Βρόχοι
         C3_farmer_while: Βρόχοι με «Όσο»
         C3_bee_nested_loops: Φωλιασμένες Επαναλήψεις
         C3_bee_debugging: Εκσφαλμάτωση της Μέλισσας
@@ -369,7 +369,7 @@ el:
         CSF_Super_Digital_Citizen: Σούπερ Ψηφιακός Πολίτης
         CSF_stevie_big_project: Ο Στίβι και το Μεγάλο Πρότζεκτ
         CSF_unspotted_bugs: Μη εντοπισμένα bugs
-        CSF_zuck_loops_short: Επανάληψη Βρόγχων
+        CSF_zuck_loops_short: Επανάληψη βρόχων
         frozen_intro: Εισαγωγή στην Ώρα του Κώδικα
         frozen_loops: Εισαγωγή στους Βρόχους (Επαναλήψεις)
         frozen_functions: Εισαγωγή στις Συναρτήσεις
@@ -487,7 +487,7 @@ el:
         CSF_bb8_skinOverview_K-1: BB-8
         CSF_bb8_loops_C-F: Βρόχους με BB-8
         CSF_harvester_skinOverview_K-1: Ο Θεριστής
-        CSF_harvester_loops_K1: Βρόχοι στη Θεριστική Μηχανή
+        CSF_harvester_loops_K1: Βρόχοι με τον Θεριστή
         CSF_scrat_loops_K1: Βρόχοι στην Εποχή των Παγετώνων
         CSF_scrat_loops_CF: Βρόχοι στην Εποχή των Παγετώνων
         CSF_if_allskins: Το Τουβλάκι Αν
@@ -694,7 +694,7 @@ el:
         csa_for_loops: 'CSA: Για βρόχους'
         csa_enhanced_for_loops: 'CSA: Βελτιωμένη για βρόχους'
         csa_modifying_values_in_a_1d_array: 'CSA: Τροποποίηση τιμών σε μια συστοιχία 1D'
-        csa_nested_loops: 'CSA: Ένθετους βρόχους'
+        csa_nested_loops: 'CSA: Εμφωλευμένοι Βρόχοι'
         csa_one_dimensional_arrays: 'CSA: Μονοδιάστατες (1D) συστοιχίες'
         csa_polymorphism: 'CSA: Πολυμορφισμός'
         csa_casting: 'CSA: Χύτευση'

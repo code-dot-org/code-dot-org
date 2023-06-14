@@ -56,6 +56,7 @@ pl:
         reset_password_token: Link do resetowania hasła, z którego skorzystałeś
         error:
           future: nie może być w przyszłości
+        us_state: Stan
   beta: beta
   hello: Witaj świecie
   welcome_back: Witaj z powrotem, %{name}
@@ -255,6 +256,7 @@ pl:
       Ci e-mailem informacje o postępach i projektach Twojego dziecka, a także o jego
       kursie i informatyce? [(Zobacz naszą Politykę prywatności)] (%{privacy_policy_url})
     parent_account_email_label: Adres e-mail rodzica/opiekuna
+    us_state: Stan
   school_info:
     title: Informacja o Szkole (opcjonalne)
     school_country: Kraj szkoły
@@ -1497,6 +1499,7 @@ pl:
         csf_express: Podstawy informatyki (Wstępne ekspresowe lub ekspresowe)
         csd: Odkrycia informatyki
         csp: Podstawy Informatyki
+        other: Inni/inne
         not_applicable: Nie dotyczy
       email_opt_in:
         opt_in_yes: Tak
