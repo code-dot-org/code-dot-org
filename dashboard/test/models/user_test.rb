@@ -4769,6 +4769,38 @@ class UserTest < ActiveSupport::TestCase
     assert_equal 1, user.properties['section_attempts']
   end
 
+  test 'family name is added to summarize' do
+    user = create :user
+    family_name = 'TestFamilyName'
+    user.properties = {family_name: family_name}
+
+    DCDO.stubs(:get).with('family-name-features', false).returns(true)
+
+    assert_equal(
+      {
+        id: user.id,
+        name: user.name,
+        username: user.username,
+        family_name: family_name,
+        email: user.email,
+        hashed_email: user.hashed_email,
+        user_type: user.user_type,
+        gender: user.gender,
+        gender_teacher_input: nil,
+        birthday: user.birthday,
+        secret_words: user.secret_words,
+        secret_picture_name: user.secret_picture.name,
+        secret_picture_path: user.secret_picture.path,
+        location: "/v2/users/#{user.id}",
+        age: user.age,
+        sharing_disabled: false,
+        has_ever_signed_in: user.has_ever_signed_in?
+      },
+      user.summarize
+    )
+    DCDO.unstub(:get)
+  end
+
   test 'school_info_school returns the school associated with the user' do
     school = create :school
     school_info = create :school_info, school: school
