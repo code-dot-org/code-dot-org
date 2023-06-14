@@ -2648,6 +2648,8 @@ es-MX:
             '10': '10'
       storylab_clearHeadings:
         text: eliminar títulos
+      storylab_printText:
+        text: imprimir {TEXT}
       storylab_setForegroundEffect2:
         text: hacer efecto de {EFFECT}
         options:

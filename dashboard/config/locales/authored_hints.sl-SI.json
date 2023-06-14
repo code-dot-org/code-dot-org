@@ -419,7 +419,7 @@
           "courseC_maze_loops_challenge2_b": "Uporabi zanke, da ti ne zmanjka bloka Dobi!"
         },
         "courseC_collector_loops_challenge2_2021": {
-          "courseC_maze_loops_challenge2_b": "Uporabi zanke, da ti ne zmanjka bloka Dobi!"
+          "courseC_maze_loops_challenge2_b": "Uporabi zanke, da ti ne zmanjka bloka Poberi!"
         },
         "courseC_harvester_loops_challenge2": {
           "courseC_harvester_loops_challenge2_a": "Eden od načinov za rešitev te naloge je cik-cak. Drug način je spirala! Obstaja veliko različnih rešitev. Bodi vztrajen/-na!",
@@ -464,7 +464,10 @@
           "courseC_maze_programming6_a": "Obstajata dva načina kako rešiti nalogo!"
         },
         "courseC_maze_programming6_2021": {
-          "courseC_maze_programming6_a": "Obstajata dva načina kako rešiti nalogo!"
+          "courseC_maze_programming6_a": "Obstajata dva načina kako rešiti nalogo!",
+          "courseC_maze_programming6_b": "Sledite prstu od ptice do prašiča, katere korake ste naredili?",
+          "courseC_maze_programming6_c": "Ne pozabite, da se morate najprej obrniti, saj je ptica obrnjena proti steni.",
+          "courseC_maze_programming6_d": "Si zgubljen/-a? Poglej to pot!"
         },
         "courseC_video_angles": {
           "courseD_scrat_programming6_a": "Obstajata dva načina kako rešiti nalogo!"
@@ -969,6 +972,229 @@
         "courseC_harvester_loops8_2021": {
           "courseC_harvester_loops8_a": "Ali je ta stopnišče videti znano iz drugih ugank? Premiki morajo biti podobni, samo ne pozabite zbrati pridelkov na poti.",
           "courseC_harvester_loops8_b": "Če želite poenostaviti kodo, lahko dejansko date eno zanko znotraj druge! To se imenuje \\*\\* ugnezdena zanka\\*\\*."
+        },
+        "courseC_artist_loops1a_2021": {
+          "courseC_artist_loops1a_a": "To je prvi blok, ki ga potrebujete: \n\n<xml>\n  <block type=\"jump_to\">\n    <title name=\"VALUE\">13</title>\n  </block>\n</xml>",
+          "courseC_artist_loops1a_b": "Uporabi ta blok, da narišeš nalepko:\n\n<xml>\n<block type=\"sticker\">\n    <title name=\"VALUE\">Bird</title>\n  </block>\n</xml>"
+        },
+        "courseC_artist_loops2a_2021": {
+          "courseC_artist_loops2a_a": "Znotraj zanke boste želeli skočiti na sredino, nato pa obrniti, nato pa narisati nalepko.",
+          "courseC_artist_loops2a_b": "Kliknite na številko na vrhu zanke `ponovitev`, da spremenite, kolikokrat se ponovi."
+        },
+        "courseC_artist_loops3a_2021": {
+          "courseC_artist_loops3a_a": "Želeli boste dodati samo en blok znotraj zanke, po prvi nalepki.",
+          "courseC_artist_loops3a_b": "Vaš program bi moral izgledati takole!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">???</title>\n        <statement name=\"DO\">\n          <block type=\"jump_to\">\n            <title name=\"VALUE\">13</title>\n            <next>\n              <block type=\"draw_turn_by_constant_dropdown\">\n                <title name=\"DIR\">???</title>\n                <title name=\"VALUE\" config=\"1,2,5,10,12,20,30,45,60,90,120,180\">???</title>\n                <next>\n                  <block type=\"sticker\">\n                    <title name=\"VALUE\">Cat</title>\n                    <next>\n                      <block type=\"sticker\">\n                        <title name=\"VALUE\">Dog</title>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>\n\nUporabite lahko vse nalepke, ki so vam všeč!"
+        },
+        "courseC_artist_loops4a_2021": {
+          "courseC_artist_loops4a_a": "uporabite ta blok za skok naprej:\n\n<xml>\n<block type=\"jump_by_constant\">\n    <title name=\"DIR\">jumpForward</title>\n    <title name=\"VALUE\">???</title>\n  </block>\n</xml>\n\nNe pozabite spremeniti, kako daleč!",
+          "courseC_artist_loops4a_b": "Koda bi morala izgledati takole:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">???</title>\n        <statement name=\"DO\">\n          <block type=\"jump_to\">\n            <title name=\"VALUE\">13</title>\n            <next>\n              <block type=\"draw_turn_by_constant_dropdown\">\n                <title name=\"DIR\">???</title>\n                <title name=\"VALUE\" config=\"1,2,5,10,12,20,30,45,60,90,120,180\">???</title>\n                <next>\n                  <block type=\"sticker\">\n                    <title name=\"VALUE\">Cat</title>\n                    <next>\n                      <block type=\"jump_by_constant\">\n                        <title name=\"DIR\">jumpForward</title>\n                        <title name=\"VALUE\">???</title>\n                        <next>\n                          <block type=\"sticker\">\n                            <title name=\"VALUE\">Dog</title>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseC_artist_loops5b_2021": {
+          "courseC_artist_loops5b_a": "S tem blokom nastavite vzorec svojih črt:\n\n<xml>\n<block type=\"draw_line_style_pattern\">\n    <title name=\"VALUE\">DEFAULT</title>\n  </block>\n</xml>",
+          "courseC_artist_loops5b_b": "Če želite narediti dizajn, kot je zgoraj, se boste želeli premakniti nazaj enak znesek, kot ga premikate naprej.",
+          "courseC_artist_loops5b_c": "Koda bi morala izgledati takole:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"draw_line_style_pattern\">\n        <title name=\"VALUE\">rainbowLine</title>\n        <next>\n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">4</title>\n            <statement name=\"DO\">\n              <block type=\"jump_to\">\n                <title name=\"VALUE\">13</title>\n                <next>\n                  <block type=\"draw_move_by_constant\">\n                    <title name=\"DIR\">moveForward</title>\n                    <title name=\"VALUE\">???</title>\n                    <next>\n                      <block type=\"draw_move_by_constant\">\n                        <title name=\"DIR\">moveBackward</title>\n                        <title name=\"VALUE\">???</title>\n                        <next>\n                          <block type=\"draw_turn_by_constant_dropdown\">\n                            <title name=\"DIR\">???</title>\n                            <title name=\"VALUE\" config=\"1,2,5,10,12,20,30,45,60,90,120,180\">???</title>\n                            <next>\n                              <block type=\"sticker\">\n                                <title name=\"VALUE\">Cat</title>\n                                <next>\n                                  <block type=\"jump_by_constant\">\n                                    <title name=\"DIR\">jumpForward</title>\n                                    <title name=\"VALUE\">???</title>\n                                    <next>\n                                      <block type=\"sticker\">\n                                        <title name=\"VALUE\">Dog</title>\n                                      </block>\n                                    </next>\n                                  </block>\n                                </next>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseC_artist_loops6a_2021": {
+          "courseC_artist_loops6a_a": "Če želite narediti zasnovo, kot je zgornja, skočite naprej manj kot 75 slikovnih pik med vsako nalepko."
+        },
+        "courseC_artist_loops7a_2021": {
+          "courseC_artist_loops7a_a": "Krog ima 360 stopinj. Pomnožite stopinje v vrsti, kolikokrat ponovite. Ali je enako 360?\nPreverite predlagane rotacije, da vidite, da to deluje!"
+        },
+        "courseC_artist_prog2_2021": {
+          "courseC_artist_prog2_a": "*\"Če uporabite blok <xml><block type=\"draw_move_by_constant\"><title name=\"DIR\">moveForward</title><title name=\"VALUE\">100</title></block></xml> , bom narisal črto. »*",
+          "courseC_artist_prog2_b": "Imate težave pri obračanju? Uporabite blok 'obrni se desno za 0 stopinj'."
+        },
+        "courseC_artist_prog3_2021": {
+          "courseC_artist_prog3_a": "Če želite ustvariti to okno, samo narišite kvadrat s stranicami 100 slikovnih pik.\n\n-   premaknite se naprej\n-   zavijte\n-   premaknite se naprej\n-   obrnite\n-   premaknite se naprej\n-   zavijte\n-   premaknite se naprej",
+          "courseC_artist_prog3_b": "Želite narediti krajšo kodo? Poskusite uporabiti zanko v tej nalogi."
+        },
+        "courseC_artist_prog4_2021": {
+          "courseC_artist_prog4_a": "Če želite končati raketo, samo narišite trikotnik na vrhu!",
+          "courseC_artist_prog4_b": "Uporabite lahko spustni meni na blokih »orbni«, da vidite, kateri kot potrebujete!",
+          "courseC_artist_prog4_c": "Če želite narisati trikotnik, se boste želeli:\n\n-   premakniti naprej\n-   zavijte levo 120 stopinj\n-   premaknite se naprej\n-   zavijte levo 120 stopinj\n-   premaknite se naprej"
+        },
+        "courseC_artist_prog5_2021": {
+          "courseC_artist_prog5_a": "Počasi premakni drsnik navzdol, da lahko zaženete kodo vrstico za vrstico, da vidite, kje gre stvari narobe.",
+          "courseC_artist_prog5_b": "Ne bojte se narediti napake! Poskusite dodati bloke in zagnati kodo, da vidite, kaj se bo zgodilo, tudi če še ne mislite, da ste rešili nalogo.",
+          "courseC_artist_prog5_c": "Uporabite lahko spustne menije v blokih, da spremenite, kaj počnejo!",
+          "courseC_artist_prog5_d": "Vsak obrat mora biti 90 stopinj v desno."
+        },
+        "courseC_artist_prog6_2021": {
+          "courseC_artist_prog6_a": "Umetnik je že obrnjen v pravo smer, da nariše svojo prvo črto.",
+          "courseC_artist_prog6_b": "Ta diamant je res samo kvadrat, ki stoji na robu.",
+          "courseC_artist_prog6_c": "Ker je ta diamant tudi kvadrat, se prepričajte, da zavrtite 90 stopinj na vogalih."
+        },
+        "courseC_artist_prog7_2021": {
+          "courseC_artist_prog7_a": "Vsak kot je 45 ali 90 stopinj.",
+          "courseC_artist_prog7_b": "-   Ali vse deluje po prvem koraku?\n-   Ali še vedno deluje po drugem?\n-   Kje gre narobe?",
+          "courseC_artist_prog7_c": "Uporabite lahko spustni meni na zavojih blokov, da vidite, kateri kot potrebujete!",
+          "courseC_artist_prog7_d": "Želeli boste:\n\n-   korak naprej\n-   zavijemo desno 45 stopinj\n-   korak naprej\n-   zavijemo desno 90 stopinj\n-   korak naprej\n-   zavijemo desno 45 stopinj\n\nPonovite ta vzorec 2-krat!",
+          "courseC_artist_prog7_e": "Ne bojte se narediti napake! Poskusite dodati bloke in zagnati kodo, da vidite, kaj se bo zgodilo, tudi če še ne mislite, da ste rešili nalogo."
+        },
+        "courseC_artist_prog_challenge1_2021": {
+          "courseC_artist_prog_challenge1_a": "To lahko narišete kot pravokotnik s črto na sredini ali dvema različnima kvadratoma!"
+        },
+        "courseC_artist_prog_challenge2a_2021": {
+          "courseC_artist_prog_challenge2_a": "Ko narišete prvo črto, zavijte levo, preden narišete drugo črto.",
+          "courseC_artist_prog_challenge2_b": "Ko narišete drugo črto, zavijte desno, preden potegnete tretjo črto."
+        },
+        "courseC_collector_prog1_2021": {
+          "courseC_collector_prog1_a": "Ko stojite na prostoru z zakladom, uporabite blok <xml><block type=\"collector_collect\"/></xml> , da ga poberete.",
+          "courseC_collector_prog1_b": "Najbolj enostavna rešitev bi bila, da se premaknete naprej enkrat, nato poberete zaklad."
+        },
+        "courseC_collector_prog2_2021": {
+          "courseC_collector_prog2_a": "Lahko uporabite štiri <xml><block type=\"maze_move\"><title name=\"DIR\">moveForward</title></block></xml> bloke ali uporabite <xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> blok, da bi vaš program krajši.",
+          "courseC_collector_prog2_b": "Ne bojte se narediti napake! Poskusite dodati bloke in zagnati kodo, da vidite, kaj se bo zgodilo, tudi če še ne mislite, da ste rešili nalogo."
+        },
+        "courseC_collector_prog3_2021": {
+          "courseC_collector_prog3_a": "Program bo zagnal samo bloke, ki so povezani z blokom <xml><block type=\"when_run\"/></xml> .",
+          "courseC_collector_prog3_b": "Poskusite uporabiti gumb »Korak«, da zaženete kodo eno vrstico naenkrat. Ali vidite, kje gre koda narobe?",
+          "courseC_collector_prog3_c": "Če imate težave pri reševanju te naloge, poskusite napisati poteze na kos papirja."
+        },
+        "courseC_collector_prog4_2021": {
+          "courseC_collector_prog4_a": "Če se zataknete, poskusite zapisati korake na kos papirja.",
+          "courseC_collector_prog4_b": "Ne bojte se narediti napake! Poskusite dodati bloke in zagnati kodo, da vidite, kaj se bo zgodilo, tudi če še ne mislite, da ste rešili nalogo.",
+          "courseC_collector_prog4_c": "Poskusite to možnost za pot."
+        },
+        "courseC_collector_prog5_2021": {
+          "courseC_collector_prog5_a": "»Ali deluje na prvem koraku?\nAli deluje na drugem koraku? \nKje gredo stvari narobe?",
+          "courseC_collector_prog5_b": "Če ste odpravili eno napako in program še vedno ne deluje, uporabite zgornje korake, da poiščete več napak.",
+          "courseC_collector_prog5_c": "Če se zataknete, poskusite zapisati korake na kos papirja.",
+          "courseC_collector_prog5_d": "Sledite poti, da zberete zaklad."
+        },
+        "courseC_collector_prog6_2021": {
+          "courseC_collector_prog6_a": "Ali lahko ugotovite, kaj gre narobe?  \n\nPoskusite uporabiti gumb »Korak«, da poiščete napake, tako da zaženete kodo vrstico za vrstico.",
+          "courseC_collector_prog6_b": "Sledite poti, da zberete zaklad."
+        },
+        "courseC_collector_prog7_2021": {
+          "courseC_collector_prog7_a": "V delovnem prostoru je že veliko odlične kode. Za rešitev te naloge vam ni treba izbrisati ničesar.  ",
+          "courseC_collector_prog7_b": "Ne vidite bloka, ki ga potrebujete, da se pustolovec premika v pravo smer? Povlecite enega iz orodjarne.",
+          "courseC_collector_prog7_c": "Imate težave najti pravo pot, da zberete vse zaklad? Preizkusite to pot!"
+        },
+        "courseC_collector_prog_challenge1_2021": {
+          "courseC_collector_prog_challenge1_a": "Lahko uporabiš več ukazov \"Poberi\", da zbereš več diamantov."
+        },
+        "courseC_collector_prog_challenge2_2021": {
+          "courseC_collector_prog_challenge1_a": "V vsakem prostoru lahko uporabite več kot en blok »zbrati«.",
+          "courseC_collector_prog_challenge1_b": "Ste se izgubili? Poskusite to pot, da rešite nalogo!"
+        },
+        "courseC_maze_debugging1_2021": {
+          "courseC_maze_debugging1_a": "-   Ali vse deluje po prvem koraku?\n-   Ali še vedno deluje po drugem?\n-   Kje gre narobe?",
+          "courseC_maze_debugging1_b": "Za dokončanje te naloge morate dodati 1 blok."
+        },
+        "courseC_maze_debugging2_2021": {
+          "courseC_maze_debugging2_a": "V delovnem prostoru je veliko dragocene kode. Ne je samo izbrisati vse in začeti znova!",
+          "courseC_maze_debugging2_b": "-   Ali vse deluje po prvem koraku?\n-   Ali še vedno deluje po drugem?\n-   Kje gre narobe?",
+          "courseC_maze_debugging2_c": "Ne morete ugotoviti, kaj je narobe? Poskusite zagnati kodo nekajkrat, da vidite, kaj se zgodi."
+        },
+        "courseC_maze_debugging3_2021": {
+          "courseC_maze_debugging3_a": "Če želite izbrisati blok s sredine kode, povlecite vse bloke v drug del delovnega prostora.\n\nPovlecite blok, ki ga želite izbrisati, nazaj v orodjarni.\n\nKončno, daj svoje druge bloke nazaj, kamor pripadajo.\n\n![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)",
+          "courseC_maze_debugging3_b": "Ne morete ugotoviti, kaj je narobe? Poskusite zagnati kodo nekajkrat, da vidite, kaj se zgodi."
+        },
+        "courseC_maze_debugging4_2021": {
+          "courseC_maze_debugging4_a": "Uporabite gumb »Korak«, da greš čez vso kodo blok za blokom. Ali vam to pomaga najti blok, kjer gredo stvari narobe?",
+          "courseC_maze_debugging4_b": "Eden od zavojev povzroči, da gre Scrat v napačno smer. Ali lahko ugotovite, kateri?"
+        },
+        "courseC_maze_debugging5_2021": {
+          "courseC_maze_debugging5_a": "Obstaja veliko koristnih blokov v delovnem prostoru že. Ne izbrišite jih vseh! \n\nUporabite gumb »Korak«, da greste skozi in ugotovite, kje gre koda narobe.",
+          "courseC_maze_debugging5_c": "Smer obračanja lahko spremenite s klikom na spustni meni.",
+          "courseC_maze_debugging5_b": "Poskusite povedati, kaj naj Scrat počne na glas. Ali je enako kot koda v delovnem prostoru? Kaj gre narobe?"
+        },
+        "courseC_maze_debugging6_2021": {
+          "courseC_maze_debugging6_a": "-   Kaj naj bi naredil Scrat?\n-   Kaj počne Scrat?\n-   Kaj vam to pove?",
+          "courseC_maze_debugging6_b": "Ko najdete in odpravite prvo napako, znova pojdite skozi postopek odpravljanja napak in poiščite drugo.\n\nPonovite postopek, dokler program ne deluje!"
+        },
+        "courseC_maze_debugging7_2021": {
+          "courseC_maze_debugging7_a": "-   Ali vse deluje po prvem koraku?\n-   Ali še vedno deluje po drugem?\n-   Kje gre narobe?",
+          "courseC_maze_debugging7_b": "Ne pozabite uporabiti gumba »Korak« za zagon programa vrstico za vrstico!",
+          "courseC_maze_debugging7_c": "Ko najdete in odpravite prvo napako, znova pojdite skozi postopek odpravljanja napak in poiščite drugo.\n\nPonovite postopek, dokler program ne deluje!"
+        },
+        "courseC_maze_debugging_challenge1_2021": {
+          "courseC_maze_debugging_challenge1_a": "Levo ali desno? To je odvisno od vas!",
+          "courseC_maze_debugging_challenge1_b": "Scratova pot je oblika pravokotnika! Vsakič se mora obrniti na enak način.",
+          "courseC_maze_debugging_challenge1_c": "Če se zataknete, lahko vedno začnete znova in poiščete nov način!"
+        },
+        "courseC_maze_debugging_challenge2_2021": {
+          "courseC_maze_debugging_challenge2_b": "Če se zataknete, poskusite odpraviti napake kode. Kje gre narobe?",
+          "courseC_maze_debugging_challenge2_c": "Obstajata dve različni poti, ki jima lahko slediš samo s premikom naprej, in le v štirih zavojih. Če najdeš način, kako uporabiti blok 'Ponovi' je možnih poti še več!"
+        },
+        "courseC_maze_loops_challenge1a_2021": {
+          "courseC_maze_loops_challenge1_a": "Razmisli o tej poti kot o dveh različnih delih. Vsak ima vzorec, ki ga lahko ponovite.",
+          "courseC_maze_loops_challenge1_b": "Se spomnite, kako uporabljati zanke za ponovitev vzorca stopnišča?"
+        },
+        "courseC_maze_programming1_2021": {
+          "courseC_maze_programming1_0": "Prepričajte se, da so vsi bloki popolnoma skupaj, nato znova kliknite« Zaženi«."
+        },
+        "courseC_maze_programming2_2021": {
+          "courseC_maze_programming2_a": "Za uporabo bloka <xml><block type=\"maze_moveForward\"/></xml>, ga povleci iz orodjarne in ga priprni <xml><block type=\"when_run\"/></xml> bloku",
+          "courseC_maze_programming2_b": "Prepričajte se, da so vsi bloki popolnoma skupaj, nato znova kliknite« Zaženi«."
+        },
+        "courseC_maze_programming3_2021": {
+          "courseC_maze_programming3_a": "Najprej poskusite zagnati kodo, da vidite, kje gre narobe.",
+          "courseC_maze_programming3_b": "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nČe želite izbrisati blok iz sredine vaše kode, povlecite vse bloke v drug del delovnega prostora.\n\nPovlecite blok, ki ga želite izbrisati, nazaj v orodjarno.\n\nKončno postavite svoje druge bloke nazaj, kamor spadajo."
+        },
+        "courseC_maze_programming4_2021": {
+          "courseC_maze_programming4_a": "Ne pozabite, da se obračate z vidika ptice. Če zavijete desno, se bo ptica usmerila navzdol.",
+          "courseC_maze_programming4_b": "Če želite slediti poti:\n\n-   premaknite se naprej\n-   zavijte v eno smer\n-   premaknite se naprej\n-   zavijte nazaj v drugo smer\n-   premaknite se naprej"
+        },
+        "courseC_maze_programming5_2021": {
+          "courseC_maze_programming5_a": "Poskusite uporabiti gumb »Korak«, da zaženete kodo vrstico za vrstico. Ali lahko ugotovite, kaj je vaša naslednja poteza?",
+          "courseC_maze_programming5_b": "Ptica bo morala narediti en obrat za dokončanje te naloge. Ali lahko ugotovite, v katero smer se mora obrniti?",
+          "courseC_maze_programming5_c": "Rešitev bo imela dva bloka »premakni se naprej`, obrat in še dva bloka`premakni se naprej\\`."
+        },
+        "courseC_maze_programming7_2021": {
+          "courseC_maze_programming7_a": "Ne pozabite uporabiti gumba »Korak«, da greste skozi kodo blok za blokom in poiščete napake.",
+          "courseC_maze_programming7_b": "Če imate težave pri reševanju te naloge, poskusite napisati poteze na kos papirja."
+        },
+        "courseC_maze_programming8_2021": {
+          "courseC_maze_programming8_a": "Ne pozabite, da lahko uporabite gumb »Korak«, da pregledate kodo blok za blokom, če se zatakne.",
+          "courseC_maze_programming8_b": "Ne bojte se narediti napake! Poskusite dodati bloke in zagnati kodo, da vidite, kaj se bo zgodilo, tudi če še ne mislite, da ste rešili nalogo."
+        },
+        "courseC_maze_programming_challenge1_2021": {
+          "courseC_maze_programming_challenge1_a": "Obstaja veliko načinov, kako priti do prašiča. S prstom poiščite pot in jo nato programirajte!"
+        },
+        "courseC_maze_programming_challenge2_2021": {
+          "courseC_maze_programming_challenge2_a": "Če uporabiš ukaz \"Premakni se nazaj\" potem bodi zelo previden, da sem obrnjen v pravo smer!",
+          "courseC_maze_programming_challenge2_b": "Najkrajša rešitev je dolga samo 5 blokov, ampak uporabi blok 'Ponovi'"
+        },
+        "courseC_starWars_loops10_2021": {
+          "courseC_starWars_loops10_a": "Ali ta vzorec ni videti kot ogromen niz stopnic? Poglejte, ali lahko uporabite tisto, kar ste se naučili iz prejšnjih ugank, da naredite vse zavoje.",
+          "courseC_starWars_loops10_b": "Če želite uporabiti manj kode, lahko postavite eno `ponovitev` zanko znotraj druge zanke! \\\nTo se imenuje \\*\\* ugnezdena zanka\\*\\*.",
+          "courseC_starWars_loops10_c": "Ne bojte se narediti napake! Zaženite kodo, da vidite, kaj se zgodi, tudi če še niste rešili naloge."
+        },
+        "courseC_starWars_loops1_2021": {
+          "courseC_starWars_loops1_a": "Ko se BB-8 premakne čez odpadno železje, ga samodejno pobere.",
+          "courseC_starWars_loops1_b": "Ne bojte se narediti napake! Zaženite kodo, da vidite, kaj se zgodi, tudi če še niste rešili naloge.",
+          "courseC_starWars_loops1_c": "Petkrat se morate `premakniti naprej`, da rešite to nalogo."
+        },
+        "courseC_starWars_loops2_2021": {
+          "courseC_starWars_loops2_a": "Če želite ponoviti kodo, povlecite zanko `ponovitev`, nato pa v njej postavite blok, ki ga želite."
+        },
+        "courseC_starWars_loops4_2021": {
+          "courseC_starWars_loops4_c": "S klikom na majhno puščico poleg »levo« na zavoju boste lahko spremenili v »desno«.",
+          "courseC_starWars_loops4_a": "Uporabite dva bloka »ponovite«.",
+          "courseC_starWars_loops4_b": "Vsaka zanka »ponovitve« bo imela v sebi samo en ukaz: »premakni naprej«."
+        },
+        "courseC_starWars_loops5_2021": {
+          "courseC_starWars_loops5_a": "Najboljša rešitev uporablja en »premik naprej\"nato zavoj, nato zanko."
+        },
+        "courseC_starWars_loops6_2021": {
+          "courseC_starWars_loops6_a": "Poskusite napisati vse poteze na kos papirja in poiščite vzorec.",
+          "courseC_starWars_loops6_b": "Če želite uporabiti manj kode, lahko postavite eno `ponovitev` zanko znotraj druge zanke! \\\nTo se imenuje \\*\\* ugnezdena zanka\\*\\*."
+        },
+        "courseC_starWars_loops7_2021": {
+          "courseC_starWars_loops7_a": "Ta vzorec izgleda težje, kot je! Začnite s preprostim korakom stopnic. Ali to zajema vse odpadne kovine?",
+          "courseC_starWars_loops7_b": "Če imate težave s to nalogo, poskusite napisati vse poteze na kos papirja in poiščite vzorec.",
+          "courseC_starWars_loops7_c": "Ne bojte se narediti napake! Zaženite kodo, da vidite, kaj se zgodi, tudi če še niste rešili naloge."
+        },
+        "courseC_starWars_loops8_2021": {
+          "course_starWars_loops8_a": "Poskusite razmišljati o tej težavi v majhnih delih. Vzemite si čas. Ni vam treba rešiti ob prvem poskusu!",
+          "course_starWars_loops8_b": "Pomislite na prvo polovico tega problema kot na stopnico. Kako ste to rešili prej?",
+          "course_starWars_loops8_c": "Oglejte si to pot.\n\n![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)"
+        },
+        "courseC_starWars_loops9_2021": {
+          "course_starWars_loops9_b": "V zanko »ponovite« lahko postavite več kot en blok.",
+          "course_starWars_loops9_c": "Za rešitev te uganke vam ni treba zaviti levo. Vsi tvoji obrati so lahko v desno.\n\n![](https://images.code.org/3dd00d424aa4112934053548b48bbb69-image-1510198997590.40.57.png)"
         }
       }
     }
