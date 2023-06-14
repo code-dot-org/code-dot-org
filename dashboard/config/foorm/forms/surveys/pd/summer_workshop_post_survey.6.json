@@ -365,7 +365,7 @@
             {
               "type": "checkbox",
               "name": "csd_which_units",
-              "title": "Which units of CS Discoveries do you plan to teach in the 2022-2023 school year? ",
+              "title": "Which units of CS Discoveries do you plan to teach in the 2023-2024 school year? ",
               "description": "Check all that apply",
               "choices": [
                 {
