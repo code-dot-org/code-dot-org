@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": "csc-bookcovers",
-    "serialized_at": "2023-06-08 22:19:43 UTC",
+    "serialized_at": "2023-06-13 23:02:36 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -42,7 +42,6 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
-        "assessment_opportunities": "Test test test",
         "overview": "In this CS and ELA integrated lesson for new coders, students will learn to code a digital book cover. First, they will look at existing book covers and discuss what graphic design choices were made. Next, students will look at an digital book cover example before creating several of their own. Students will learn to select sprites to represent the characters in a book and to use events to make the characters speak. \n",
         "preparation": "- Play through the levels and review the lesson slides.",
         "student_overview": "In this lesson, you will learn how to code a digital book cover. First, you will select the background and characters. Then, you will learn how to program the characters talk when clicked. By the end of the lesson, you will have coded several examples of interactive book covers."
@@ -61,6 +60,7 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
+        "overview": "In this lesson, students will plan their own interactive book cover. Students will begin by brainstorming books they have enjoyed and select one to design a book cover for. Students should imagine they are recommending the book to someone else and piquing their interest in reading it. Students will introduce two main characters and write a summary of the story. Then they will receive feedback from a peer to ensure they are ready for the next lesson. In the Lesson 3, students will code their own interactive digital book cover."
       },
       "seeding_key": {
         "lesson.key": "lesson-4",
@@ -279,10 +279,35 @@
       "key": "14261673-40d9-43b0-a880-afccbf72cdaa",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n**Do This**: This slide provides an opportunity to front-load some of the computer science vocabulary used in the upcoming activity. The terms will be introduced in context throughout the coding levels as well.\n\n**Vocabulary:**\n- **Code** - (v) to write instructions for a computer.\n- **Sprite** - A graphic on the screen with a location, size, and appearance.\n- **Event** - An action that causes something to happen.\n- **Program** - A series of steps that have been coded into something that can be run by a machine."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n**Do This**: This slide provides an opportunity to front-load some of the computer science vocabulary used in the upcoming activity. The terms will be introduced in context throughout the coding levels as well.\n\n**Vocabulary:**\n- **Code** - (v) to write instructions for a computer.\n- **Sprite** - A graphic on the screen with a location, size, and appearance.\n- **Event** - An action that causes something to happen.\n"
       },
       "seeding_key": {
         "activity_section.key": "14261673-40d9-43b0-a880-afccbf72cdaa",
+        "lesson_activity.key": "08b3acc1-c672-4012-9d5c-78f4d99eb6b3"
+      }
+    },
+    {
+      "key": "28a9512c-ce7b-4943-b742-f67cc8966854",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Matching Game” slide\n\n**Do This**: Give students 1 minute to look at the slide and decide which sprite matches the main character of each book. When students have their individual ideas ready, have them share with a partner or small group ***how*** they made their decisions. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Matching Game 2” slide\n\n**Do This:** Give students another minute to decide which background matches the book's setting. When students have their own ideas ready, have them share **how** they made their decision. ",
+        "duration": "5",
+        "name": "Matching Game"
+      },
+      "seeding_key": {
+        "activity_section.key": "28a9512c-ce7b-4943-b742-f67cc8966854",
+        "lesson_activity.key": "08b3acc1-c672-4012-9d5c-78f4d99eb6b3"
+      }
+    },
+    {
+      "key": "83403ff1-26f9-41e1-a6bd-5fb193e1fb01",
+      "position": 5,
+      "properties": {
+        "description": "Great! You're starting to see the connection between the book and the digital book cover coded in Sprite Lab. You will use sprites to represent the main characters and you will choose a background that matches the setting of the story. ",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "83403ff1-26f9-41e1-a6bd-5fb193e1fb01",
         "lesson_activity.key": "08b3acc1-c672-4012-9d5c-78f4d99eb6b3"
       }
     },
