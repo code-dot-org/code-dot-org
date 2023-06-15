@@ -4,7 +4,7 @@ import i18n from '@cdo/locale';
 import Button from '@cdo/apps/templates/Button';
 import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
 import Typography from '@cdo/apps/componentLibrary/typography';
-import style from './no_sections_to_assign_dialogues.module.scss';
+import style from './no_sections_to_assign_dialog.module.scss';
 
 export const SignInToAssignSectionsDialog = ({onClose}) => (
   <NoSectionsToAssignBaseDialog
