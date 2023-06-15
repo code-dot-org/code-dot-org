@@ -1519,7 +1519,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'send localized password reset email for student' do
-    test_locale = :"te-ST"
+    test_locale = :'te-ST'
     translated_subject = 'subject in te-ST'
     translated_hello = 'hello in te-ST'
     custom_i18n = {
@@ -3365,7 +3365,7 @@ class UserTest < ActiveSupport::TestCase
 
   class RecentCoursesAndScripts < ActiveSupport::TestCase
     setup do
-      test_locale = :"te-ST"
+      test_locale = :'te-ST'
       I18n.locale = test_locale
       custom_i18n = {
         'data' => {

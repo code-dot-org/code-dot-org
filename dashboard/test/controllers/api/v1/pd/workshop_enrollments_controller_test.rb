@@ -270,7 +270,7 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ::ActionController::TestC
       role: "Counselor",
       grades_teaching: ["Kindergarten", "Grade 1", "Grade 2"],
       attended_csf_intro_workshop: "No",
-      csf_course_experience: {"Course A": "none", "Course B": "a few lessons", "Course E": "most lessons"},
+      csf_course_experience: {'Course A': "none", 'Course B': "a few lessons", 'Course E': "most lessons"},
       csf_courses_planned: ["Course E", "Course F"],
       csf_intro_intent: "No",
       years_teaching: "30",

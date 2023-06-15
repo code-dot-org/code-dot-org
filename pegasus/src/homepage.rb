@@ -217,7 +217,7 @@ class Homepage
   def self.get_actions(request)
     # Show a Latin American specific video to users browsing in Spanish or
     # Portuguese to promote LATAM HOC.
-    latam_language_codes = [:"es-MX", :"es-ES", :"pt-BR", :"pt-PT"]
+    latam_language_codes = [:'es-MX', :'es-ES', :'pt-BR', :'pt-PT']
 
     if latam_language_codes.include?(I18n.locale)
       youtube_id = "EGgdCryC8Uo"
