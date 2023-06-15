@@ -6,10 +6,10 @@ import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
 
 export const SignInToAssignSectionsDialog = ({onClose}) => (
   <NoSectionsToAssignBaseDialog
-    headerText={'Sign in or create account to create curriculum'}
-    helpText={'You need to be signed in and have class sections'}
+    headerText={i18n.signInToAssign()}
+    helpText={i18n.signInToAssignHelpText()}
     onClose={onClose}
-    buttonText={'Sign in or create account'}
+    buttonText={i18n.signInOrCreateAccount()}
     href={`/users/sign_in?user_return_to=${location.pathname}`}
   />
 );

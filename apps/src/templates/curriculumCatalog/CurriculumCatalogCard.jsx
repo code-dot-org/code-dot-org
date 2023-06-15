@@ -22,7 +22,7 @@ import {
   unassignSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shapes';
-import {SignInToAssignSectionsDialog} from '@cdo/apps/templates/NoSectionsToAssignDialog';
+import {SignInToAssignSectionsDialog} from '@cdo/apps/templates/curriculumCatalog/noSectionsToAssignDialogues';
 
 const CurriculumCatalogCard = ({
   courseDisplayName,
