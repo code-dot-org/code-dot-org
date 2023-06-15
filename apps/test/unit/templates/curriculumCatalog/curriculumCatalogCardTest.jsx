@@ -60,6 +60,7 @@ describe('CurriculumCatalogCard', () => {
       isEnglish: true,
       pathToCourse: '/s/course',
       scriptId: 1,
+      isSignedOut: true,
     };
   });
 
