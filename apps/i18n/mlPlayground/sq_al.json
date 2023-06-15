@@ -10,6 +10,7 @@
   "columnInspectorDescription": "Përshkrimi",
   "columnDetailsMinimumValue": "minimum",
   "columnDetailsMaximumValue": "Maksimum",
+  "uniqueOptionsWarningNotice": "Shënim",
   "datasets": {
     "medical_priority": {
       "fields": {
@@ -22,6 +23,9 @@
       "fields": {
         "day": {
           "id": "ditë"
+        },
+        "shoe": {
+          "id": "mbath"
         }
       }
     },
@@ -30,8 +34,17 @@
         "onion": {
           "id": "qepë"
         },
+        "avocado": {
+          "id": "avokado"
+        },
         "corn": {
           "id": "misër"
+        },
+        "beans": {
+          "id": "fasule"
+        },
+        "lime": {
+          "id": "gëlqere"
         }
       }
     },
@@ -44,6 +57,18 @@
     },
     "poutine_toy": {
       "fields": {
+        "mushrooms": {
+          "id": "kërpudha"
+        },
+        "lobster": {
+          "id": "karavidhe"
+        },
+        "bacon": {
+          "id": "proshutë"
+        },
+        "cheese": {
+          "id": "djathë"
+        },
         "meat": {
           "id": "mish"
         }
@@ -53,6 +78,12 @@
       "fields": {
         "color": {
           "id": "ngjyra"
+        },
+        "music": {
+          "id": "muzikë"
+        },
+        "food": {
+          "id": "ushqim"
         }
       }
     },
@@ -70,6 +101,16 @@
         }
       }
     },
+    "raspado_toy": {
+      "fields": {
+        "strawberry": {
+          "id": "luleshtrydhe"
+        },
+        "lime": {
+          "id": "gëlqere"
+        }
+      }
+    },
     "shapes_v2_toy": {
       "fields": {
         "size": {
@@ -79,8 +120,23 @@
     },
     "salad_toy": {
       "fields": {
+        "tomato": {
+          "id": "domate"
+        },
+        "avocado": {
+          "id": "avokado"
+        },
         "chicken": {
           "id": "pulë"
+        },
+        "fruit": {
+          "id": "frutë"
+        },
+        "beans": {
+          "id": "fasule"
+        },
+        "cheese": {
+          "id": "djathë"
         }
       }
     },
@@ -96,8 +152,14 @@
     },
     "student_alcohol_consumption": {
       "fields": {
+        "school": {
+          "id": "shkollë"
+        },
         "age": {
           "id": "mosha"
+        },
+        "health": {
+          "id": "dolli"
         }
       }
     },
@@ -106,8 +168,14 @@
         "chicken": {
           "id": "pulë"
         },
+        "lamb": {
+          "id": "qengji"
+        },
         "onion": {
           "id": "qepë"
+        },
+        "cheese": {
+          "id": "djathë"
         }
       }
     },
@@ -149,6 +217,18 @@
       "fields": {
         "people": {
           "id": "njerëzit"
+        },
+        "rhino": {
+          "id": "rinoceront"
+        },
+        "elephant": {
+          "id": "elefant"
+        },
+        "alligator": {
+          "id": "aligator"
+        },
+        "trees": {
+          "id": "pemë"
         }
       }
     },
@@ -161,8 +241,14 @@
     },
     "poke_toy": {
       "fields": {
+        "avocado": {
+          "id": "avokado"
+        },
         "onion": {
           "id": "qepë"
+        },
+        "ginger": {
+          "id": "xhenxhefil"
         }
       }
     },

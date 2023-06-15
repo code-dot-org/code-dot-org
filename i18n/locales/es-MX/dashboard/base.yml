@@ -60,6 +60,7 @@ es-MX:
         reset_password_token: "El enlace para restablecer la contraseña que has seguido"
         error:
           future: no puede ser en el futuro
+        us_state: 'Estado/provincia'
   beta: "beta"
   hello: "Hola, mundo"
   welcome_back: "Bienvenido, %{name}"
@@ -69,6 +70,7 @@ es-MX:
   unsubmit: NO enviado
   previous_page: Página anterior
   next_page: Página siguiente
+  next_level: Siguiente nivel
   next_resource: Siguiente recurso
   done_with_module: Hecho con este Módulo de Aprendizaje
   cancel: "Cancelar"
@@ -172,7 +174,6 @@ es-MX:
     data_collection_us: "Entiendo que Code.org es un sitio web sin fines de lucro con sede en los Estados Unidos y que las leyes que rigen la recopilación de datos en los Estados Unidos pueden diferir de las leyes de mi país."
     visit_privacy: 'Consulte la [política de privacidad](%{privacy_url}) de Code.org para obtener más información.'
     student_terms_markdown: "Las direcciones de correo electrónico no se almacenan de forma que nos permitan ponernos en contacto con los estudiantes. Los estudiantes nunca recibirán correos electrónicos de Code.org, excepto en caso de que necesiten recuperar la contraseña. Consulta nuestra [política de privacidad](http://code.org/privacy) para obtener más información."
-    additional_information: "Necesitamos más información para continuar con tu registro."
     user_type_button: "Actualizar el tipo de cuenta"
     user_type_label: "Tipo de cuenta"
     user_type_student: "Estudiante"
@@ -200,6 +201,7 @@ es-MX:
     parent_account_checkbox: "Soy padre o tutor registrándose en lugar de mi hijo"
     parent_account_email_progress_permission: "¿Podemos enviarle emails con para contarle sobre el rendimiento y los proyectos de su hijo? Tambien mandaremos informacion sobre los cursos de ciencias computacionales [(Mira nuestra política de privacidad)](%{privacy_policy_url})"
     parent_account_email_label: "Correo electrónico del padre o tutor"
+    us_state: 'Estado/provincia'
   school_info:
     title: 'Información de la escuela (opcional)'
     school_country: 'País en el que está la escuela'
@@ -1114,6 +1116,7 @@ es-MX:
         csf_express: 'Fundamentos de Ciencias de la Computación (Pre-Express o Express)'
         csd: 'Descubrimientos de Ciencias de la Computación'
         csp: 'Principios de Ciencias de la Computación'
+        other: 'Otro'
         not_applicable: "No Aplicable"
       email_opt_in:
         opt_in_yes: 'Sí'
@@ -1187,4 +1190,6 @@ es-MX:
     image_file_format_width: "Ancho: 1 byte"
     image_file_format_height: "Altura: 1 byte"
     image_file_format_bits_per_pixel: "Bits por Pixel: 1 byte"
+    image_width: "Ancho de imagen"
+    image_height: "Altura de la imagen"
     binary: "Binario"

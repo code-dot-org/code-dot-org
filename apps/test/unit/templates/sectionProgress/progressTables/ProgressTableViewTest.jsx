@@ -5,7 +5,7 @@ import {Provider} from 'react-redux';
 import {expect} from '../../../../util/reconfiguredChai';
 import {mount} from 'enzyme';
 import ProgressTableView, {
-  UnconnectedProgressTableView
+  UnconnectedProgressTableView,
 } from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableView';
 import ProgressTableStudentList from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableStudentList';
 import ProgressTableContentView from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableContentView';
@@ -23,11 +23,12 @@ import unitSelection from '@cdo/apps/redux/unitSelectionRedux';
 import {unitTestExports} from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableLessonNumber';
 import * as Sticky from 'reactabular-sticky';
 import locales from '@cdo/apps/redux/localesRedux';
+import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 import {
   fakeLessonWithLevels,
   fakeStudents,
   fakeScriptData,
-  fakeProgressTableReduxInitialState
+  fakeProgressTableReduxInitialState,
 } from '@cdo/apps/templates/progress/progressTestHelpers';
 import * as progressTableHelpers from '@cdo/apps/templates/sectionProgress/progressTables/progressTableHelpers';
 
@@ -50,7 +51,8 @@ const setUp = (currentView = ViewType.SUMMARY, overrideState = {}) => {
       teacherSections,
       sectionProgress,
       unitSelection,
-      locales
+      locales,
+      isRtl,
     }),
     _.merge({}, initialState, overrideState)
   );
@@ -148,7 +150,7 @@ describe('ProgressTableView', () => {
       getSummaryCellFormattersStub.returns([
         () => <div />, // main cell formatter
         timeSpentFormatterStub,
-        lastUpdatedFormatterStub
+        lastUpdatedFormatterStub,
       ]);
 
       const container = setUp(ViewType.SUMMARY)
@@ -218,7 +220,7 @@ describe('ProgressTableView', () => {
       getDetailCellFormattersStub.returns([
         () => <div />, // main cell formatter
         timeSpentFormatterStub,
-        lastUpdatedFormatterStub
+        lastUpdatedFormatterStub,
       ]);
 
       const container = setUp(ViewType.DETAIL)

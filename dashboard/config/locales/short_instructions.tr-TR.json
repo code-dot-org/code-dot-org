@@ -2899,7 +2899,7 @@
         "scrat 17": "Tamam, alıştırma için bunu tekrar yapalım - bu çok farklı değil, ama duvara dikkat et!",
         "scrat 18": "\"If-else\" blokları bir koşulu kontrol eder ve sonra bir şey VEYA başka bir şey yapar.  Beni meşe palamuduna götürmek için bu yeni bloğu kullanmayı dene.",
         "scrat 19": "Eğer/değilse bloğu ile bir uygulama daha. İlk denemende doğru yapabilir misin?",
-        "scrat 20": "Bu bulmacayı çözmem için 3 blok daha ekleyebilir misin? Eğer doğru yaparsan, kıvrımlı bir yolu uzunluğu ne olursa olsun yürüyebilirim. Acele et! Buzlar Eriyor!",
+        "scrat 20": "Daha karmaşık bir labirenti çözmeme yardımcı olması için sadece 3 blok ekleyebilir misin? Eğer doğru yaparsan, uzunluğu ne olursa olsun her virajlı yolu yürüyebilirim. Acele et! Buzlar eriyor!",
         "Dance Party 1-validated": "Uzaylıya tıkladığınızda sizce ne olacak?",
         "Dance Party 2": "Uzaylının dolaşmaya başlamasını sağlamak için '_başlar_' bloğunun içindeki davranışı değiştirin.",
         "Dance Party 3": "'Uzaylı2' olarak adlandırılan yeni bir hareketli nesne oluşturun, daha sonra tıklandığında farklı bir dans hareketi yaptırın.  ",
@@ -4460,7 +4460,8 @@
         "courseF_variables2_change_-2022-2": "Bir değişkenin değerini zaman içinde değiştiren bir program oluşturun. Karakterin değiştiğinde yeni değeri söylemesini sağlayın.",
         "courseF_variables2_click_-2022-2": "Bir hareketli nesne (karakter) her tıklandığında bir değişkenin değerini değiştirin. Karakterin, her değiştiğinde yeni değeri söylemesini sağlar.",
         "courseF_variables2_set_-2022-2": "Herhangi bir sayıya bir değişken ayarlayın ve karakterinizin kayıtlı sayıyı söylemesini sağlayın.",
-        "New Basketball Project": "Kendi Basketbol oyununuzu oluşturun. Tüm kuralları değiştirebilirsiniz. İşiniz bittiğinde, arkadaşlarınızın oyununuzu telefonlarında denemelerine izin vermek için Paylaş'a tıklayın."
+        "New Basketball Project": "Kendi Basketbol oyununuzu oluşturun. Tüm kuralları değiştirebilirsiniz. İşiniz bittiğinde, arkadaşlarınızın oyununuzu telefonlarında denemelerine izin vermek için Paylaş'a tıklayın.",
+        "courseD_artist_nestedLoops102022": "Önceki derste (Ders 6: Döngülerle Çizim) bir kareyi nasıl kodlayacağınızı öğrendiniz. Bu sefer 7 tane yapıp üst üste dizeceksin.\n\n-   Her karenin bir kenar uzunluğu 50 pikseldir.\n-   Her kare bir öncekinin bittiği yerden sadece 50 piksel başlar."
       }
     }
   }

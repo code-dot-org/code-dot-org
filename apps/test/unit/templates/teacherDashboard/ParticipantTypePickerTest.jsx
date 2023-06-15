@@ -14,7 +14,7 @@ describe('ParticipantTypePicker', () => {
       title: 'Create a new section',
       setParticipantType,
       handleCancel,
-      availableParticipantTypes: ['student']
+      availableParticipantTypes: ['student'],
     };
   });
 

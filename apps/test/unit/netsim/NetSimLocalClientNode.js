@@ -102,7 +102,7 @@ describe('NetSimLocalClientNode', function () {
       // should be complete!
       testLocalNode.shard_.wireTable.fullCacheUpdate_([
         localWireRow,
-        remoteWireRow
+        remoteWireRow,
       ]);
       testLocalNode.onWireTableChange_();
       assert.deepEqual(testLocalNode.myRemoteClient, testRemoteNode);
@@ -132,7 +132,7 @@ describe('NetSimLocalClientNode', function () {
 
       testLocalNode.shard_.wireTable.fullCacheUpdate_([
         localWireRow,
-        remoteWireRow
+        remoteWireRow,
       ]);
       testLocalNode.onWireTableChange_();
       var newLocalWireRow = testLocalNode.getOutgoingWire().buildRow();
@@ -147,7 +147,7 @@ describe('NetSimLocalClientNode', function () {
       testLocalNode.shard_.wireTable.fullCacheUpdate_([
         localWireRow,
         remoteWireRow,
-        thirdWireRow
+        thirdWireRow,
       ]);
       testLocalNode.onWireTableChange_();
       assert.isNull(testLocalNode.getOutgoingWire());
@@ -214,7 +214,7 @@ describe('NetSimLocalClientNode', function () {
       '0001100110',
       '00111000',
       '1000010100',
-      '1110100110'
+      '1110100110',
     ];
 
     it('fails with error when not connected', function () {

@@ -6,3 +6,4 @@ wrong 'Increasing the size of each sample square, thus decreasing the number of 
 right 'Decreasing the size of each sample square, thus increasing the number of samples taken.'
 wrong 'Using fewer bits to represent the image.'
 wrong 'Using decimal numbers to represent each pixel.'
+allow_multiple_attempts true

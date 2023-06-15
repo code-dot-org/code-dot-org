@@ -10,7 +10,7 @@ import {hideShareDialog} from './shareDialogRedux';
 class ShareDisallowedDialog extends Component {
   static propTypes = {
     isOpen: PropTypes.bool.isRequired,
-    hideShareDialog: PropTypes.func.isRequired
+    hideShareDialog: PropTypes.func.isRequired,
   };
   render() {
     return (
@@ -47,11 +47,11 @@ class ShareDisallowedDialog extends Component {
 const styles = {
   container: {
     margin: 20,
-    color: color.charcoal
+    color: color.charcoal,
   },
   heading: {
     fontSize: 16,
-    fontFamily: "'Gotham 5r', sans-serif"
+    fontFamily: "'Gotham 5r', sans-serif",
   },
   middle: {
     marginTop: 20,
@@ -64,19 +64,19 @@ const styles = {
     borderLeftWidth: 0,
     borderStyle: 'solid',
     borderColor: color.lighter_gray,
-    display: 'flex'
+    display: 'flex',
   },
   bottom: {
     display: 'flex',
-    justifyContent: 'space-between'
-  }
+    justifyContent: 'space-between',
+  },
 };
 
 export const UnconnectedShareDisallowedDialog = ShareDisallowedDialog;
 
 export default connect(
   state => ({
-    isOpen: state.shareDialog.isOpen
+    isOpen: state.shareDialog.isOpen,
   }),
   {hideShareDialog}
 )(ShareDisallowedDialog);

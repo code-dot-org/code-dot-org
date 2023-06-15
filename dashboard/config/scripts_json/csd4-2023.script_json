@@ -5,16 +5,20 @@
     "login_required": true,
     "properties": {
       "curriculum_umbrella": "CSD",
+      "has_verified_resources": true,
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
       "is_migrated": true,
       "project_sharing": true,
+      "show_calendar": true,
       "student_detail_progress_view": true,
-      "version_year": "2023"
+      "tts": true,
+      "version_year": "2023",
+      "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-04-06 23:37:42 UTC",
+    "serialized_at": "2023-05-17 16:42:55 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1908,7 +1912,7 @@
       "key": "d29b9554-5efb-4071-b8c4-bab2a3decabe",
       "position": 1,
       "properties": {
-        "description": "**Video:** Show students the [r the_design_thinking_process/csd4/2023] video in the slides. Stop the video after Step 5 (around 3:10).\n\n",
+        "description": "**Video:** Show students the [r the_design_thinking_process/csd/2023] video in the slides. Stop the video after Step 5 (around 3:10).\n\n",
         "name": "Introduce Design Thinking\r",
         "tips": [
           {
@@ -4100,7 +4104,7 @@
       "key": "90c03622-4771-4660-8c57-c38aa3e03cdd",
       "position": 1,
       "properties": {
-        "description": "**Distribute:** Give each team one copy of the Paper Prototype User Testing Activity Guide. Also give each team a copy of the User Test Cases Activity Guide - one copy for each user the team plans to test with.\n\n\n\n#### Paper Prototype User Testing\n\n**Overview:** Read through the (1) Overview section of the activity guide together. This gives an overview of today’s activity.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r what_s_for_lunch_testing/csd4/2023] video in the slides. This gives a model for what the testing process should look like.",
+        "description": "**Distribute:** Give each team one copy of the Paper Prototype User Testing Activity Guide. Also give each team a copy of the User Test Cases Activity Guide - one copy for each user the team plans to test with.\n\n\n\n#### Paper Prototype User Testing\n\n**Overview:** Read through the (1) Overview section of the activity guide together. This gives an overview of today’s activity.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r what_s_for_lunch_testing/csd/2023] video in the slides. This gives a model for what the testing process should look like.",
         "name": "Preparing for Testing\r",
         "tips": [
           {
@@ -4283,7 +4287,7 @@
       "key": "072b8b4e-3063-4d54-aeab-bd0d22f0b11b",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r intro_to_design_mode/csd4/2023] video in the slides. This video introduces the design mode interface that students will use for the rest of the unit. Today’s lesson focuses just on the drag-and-drop design elements; the Events in AppLab lesson focuses on the coding elements\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r intro_to_design_mode/csd/2023] video in the slides. This video introduces the design mode interface that students will use for the rest of the unit. Today’s lesson focuses just on the drag-and-drop design elements; the Events in AppLab lesson focuses on the coding elements\n",
         "progression_name": "Video: Intro to Design Mode",
         "tips": [
           {
@@ -4676,7 +4680,7 @@
       "key": "a825d3ec-41aa-46d7-a8b1-ae7cf48017db",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r events_in_app_lab_1/csd4/2023] video in the slides.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r events_in_app_lab_1/csd/2023] video in the slides.\n",
         "progression_name": "Video: Events in App Lab",
         "tips": [
           {
@@ -6995,46 +6999,46 @@
   "resources": [
     {
       "name": "All Code",
-      "url": "/s/csd7-2023/code",
-      "key": "all_code",
+      "url": "/s/csd4-2023/code",
+      "key": "all_code_6",
       "properties": {
         "is_rollup": true
       },
       "seeding_key": {
-        "resource.key": "all_code"
+        "resource.key": "all_code_6"
       }
     },
     {
       "name": "All Resources",
-      "url": "/s/csd1-2023/resources",
-      "key": "all_resources",
+      "url": "/s/csd4-2023/resources",
+      "key": "all_resources_7",
       "properties": {
         "is_rollup": true
       },
       "seeding_key": {
-        "resource.key": "all_resources"
+        "resource.key": "all_resources_7"
       }
     },
     {
       "name": "All Standards",
-      "url": "/s/csd1-2023/standards",
-      "key": "all_standards",
+      "url": "/s/csd4-2023/standards",
+      "key": "all_standards_7",
       "properties": {
         "is_rollup": true
       },
       "seeding_key": {
-        "resource.key": "all_standards"
+        "resource.key": "all_standards_7"
       }
     },
     {
       "name": "All Vocabulary",
-      "url": "/s/csd1-2023/vocab",
-      "key": "all_vocabulary",
+      "url": "/s/csd4-2023/vocab",
+      "key": "all_vocabulary_7",
       "properties": {
         "is_rollup": true
       },
       "seeding_key": {
-        "resource.key": "all_vocabulary"
+        "resource.key": "all_vocabulary_7"
       }
     },
     {
@@ -7198,13 +7202,25 @@
       }
     },
     {
-      "name": "CSD Curriculum Guide",
-      "url": "https://docs.google.com/document/d/1lTLydMBm2M5a5tq_35m-qj8Gat79WUYBWfpB3ikQyuY/view",
-      "key": "csd_curriculum_guide",
+      "name": "CSD Guide to Assessment",
+      "url": "https://docs.google.com/document/d/1IO5XgPW_Apil_Uziq5hAMCBgilm8txZ3sp8atxiKiLU/view",
+      "key": "csd_guide_to_assessment_4",
       "properties": {
+        "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "csd_curriculum_guide"
+        "resource.key": "csd_guide_to_assessment_4"
+      }
+    },
+    {
+      "name": "CSD Guide to Curriculum Videos",
+      "url": "https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view",
+      "key": "csd_guide_to_curriculum_videos_4",
+      "properties": {
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "csd_guide_to_curriculum_videos_4"
       }
     },
     {
@@ -7212,29 +7228,43 @@
       "url": "https://docs.google.com/document/d/145lvpomqz0tUuzXLbkAFgP9zMDpECMwFYiEIG1_hQFg/view",
       "key": "csd_guide_to_debugging",
       "properties": {
+        "include_in_pdf": true
       },
       "seeding_key": {
         "resource.key": "csd_guide_to_debugging"
       }
     },
     {
-      "name": "CSD Implementation Guide",
-      "url": "https://docs.google.com/document/d/1sM_1Oxb7TGp5gSfuMjs0X0_Tko9tm8QJ4N6L26NI_iE/view",
-      "key": "csd_implementation_guide",
+      "name": "CSD Guide to Differentiation",
+      "url": "https://docs.google.com/document/d/10u5N7zCf52IZiSf4drQplEz3d3zS1iqWpegbBMDm0RQ/view",
+      "key": "csd_guide_to_differentiation_3",
       "properties": {
+        "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "csd_implementation_guide"
+        "resource.key": "csd_guide_to_differentiation_3"
       }
     },
     {
-      "name": "CSD Learning Frameworks",
-      "url": "https://docs.google.com/document/d/1WlmAr6CeU4NAQhPAa0YAO-ujVTls_12fOP3lbc2SLxo/view",
-      "key": "csd_learning_frameworks",
+      "name": "CSD Guide to Teaching and Learning Strategies",
+      "url": "https://docs.google.com/document/d/1Cg5iTwERoX25Y2DdLNmrPCbVB2d9FPGfUMUvcnVoN8Q/view",
+      "key": "csd_guide_to_teaching_and_learning_strategies_4",
       "properties": {
+        "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "csd_learning_frameworks"
+        "resource.key": "csd_guide_to_teaching_and_learning_strategies_4"
+      }
+    },
+    {
+      "name": "CSD Guide to Using Resources",
+      "url": "https://docs.google.com/document/d/1NYJMHZYnAZYNctehlQOImSstsu48sRGOMbi4It4ZjkI/view",
+      "key": "csd_guide_to_using_resources_5",
+      "properties": {
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "csd_guide_to_using_resources_5"
       }
     },
     {
@@ -7337,11 +7367,11 @@
     },
     {
       "name": "Events in App Lab",
-      "url": "https://docs.google.com/presentation/d/1jYIPe_TXe63sjGUzED8sUyzWXWGJHrA-GQzXe7_tmHU/template/preview",
+      "url": "https://youtu.be/npa2r4t6y2A",
       "key": "events_in_app_lab",
       "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
+        "audience": "Student",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "events_in_app_lab"
@@ -8006,6 +8036,17 @@
       },
       "seeding_key": {
         "resource.key": "the_design_thinking_process"
+      }
+    },
+    {
+      "name": "The Problem Solving Process with Design",
+      "url": "https://docs.google.com/document/d/1qgiwCyO7948qPSWbTvYmR7DjH0nkh8HpfxP1HxubDis/view",
+      "key": "the_problem_solving_process_3",
+      "properties": {
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "the_problem_solving_process_3"
       }
     },
     {
@@ -8810,36 +8851,41 @@
         "resource.key": "user_testing_user_"
       }
     }
-
   ],
   "scripts_resources": [
     {
       "seeding_key": {
-        "resource.key": "all_code",
+        "resource.key": "all_code_6",
         "script.name": "csd4-2023"
       }
     },
     {
       "seeding_key": {
-        "resource.key": "all_resources",
+        "resource.key": "all_resources_7",
         "script.name": "csd4-2023"
       }
     },
     {
       "seeding_key": {
-        "resource.key": "all_standards",
+        "resource.key": "all_standards_7",
         "script.name": "csd4-2023"
       }
     },
     {
       "seeding_key": {
-        "resource.key": "all_vocabulary",
+        "resource.key": "all_vocabulary_7",
         "script.name": "csd4-2023"
       }
     },
     {
       "seeding_key": {
-        "resource.key": "csd_curriculum_guide",
+        "resource.key": "csd_guide_to_assessment_4",
+        "script.name": "csd4-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_guide_to_curriculum_videos_4",
         "script.name": "csd4-2023"
       }
     },
@@ -8851,13 +8897,19 @@
     },
     {
       "seeding_key": {
-        "resource.key": "csd_implementation_guide",
+        "resource.key": "csd_guide_to_differentiation_3",
         "script.name": "csd4-2023"
       }
     },
     {
       "seeding_key": {
-        "resource.key": "csd_learning_frameworks",
+        "resource.key": "csd_guide_to_teaching_and_learning_strategies_4",
+        "script.name": "csd4-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_guide_to_using_resources_5",
         "script.name": "csd4-2023"
       }
     },
@@ -8866,8 +8918,13 @@
         "resource.key": "teacher_forum",
         "script.name": "csd4-2023"
       }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "the_problem_solving_process_3",
+        "script.name": "csd4-2023"
+      }
     }
-
   ],
   "scripts_student_resources": [
 
@@ -8943,7 +9000,6 @@
         "vocabulary.key": "user_interface"
       }
     }
-
   ],
   "lessons_vocabularies": [
     {
@@ -8994,7 +9050,6 @@
         "vocabulary.key": "user_interface"
       }
     }
-
   ],
   "lessons_programming_expressions": [
     {

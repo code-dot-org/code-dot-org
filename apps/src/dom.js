@@ -83,7 +83,7 @@ var addEvent = function (
         'pointermove',
         'MSPointerMove',
         'pointerup',
-        'MSPointerUp'
+        'MSPointerUp',
       ];
       if (IEEvents.includes(touchEvent)) {
         unbindEvent('click');
@@ -126,23 +126,23 @@ var TOUCH_MAP = {
   click: {
     standard: 'touchstart',
     ie10: 'MSPointerDown',
-    ie11: 'pointerdown'
+    ie11: 'pointerdown',
   },
   mousedown: {
     standard: 'touchstart',
     ie10: 'MSPointerDown',
-    ie11: 'pointerdown'
+    ie11: 'pointerdown',
   },
   mouseup: {
     standard: 'touchend',
     ie10: 'MSPointerUp',
-    ie11: 'pointerup'
+    ie11: 'pointerup',
   },
   mousemove: {
     standard: 'touchmove',
     ie10: 'MSPointerMove',
-    ie11: 'pointermove'
-  }
+    ie11: 'pointermove',
+  },
 };
 exports.TOUCH_MAP = TOUCH_MAP;
 

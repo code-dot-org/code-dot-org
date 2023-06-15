@@ -1,5 +1,3 @@
-/* global dashboard */
-
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
@@ -36,7 +34,7 @@ function recordShare(type) {
       study_group: 'v1',
       event: 'project-share',
       project_id: dashboard.project && dashboard.project.getCurrentId(),
-      data_string: type
+      data_string: type,
     },
     {includeUserId: true}
   );
@@ -89,7 +87,7 @@ class ShareAllowedDialog extends React.Component {
     hideBackdrop: BaseDialog.propTypes.hideBackdrop,
     canShareSocial: PropTypes.bool.isRequired,
     userSharingDisabled: PropTypes.bool,
-    inRestrictedShareMode: PropTypes.bool
+    inRestrictedShareMode: PropTypes.bool,
   };
 
   state = {
@@ -100,7 +98,7 @@ class ShareAllowedDialog extends React.Component {
     isTwitterAvailable: false,
     isFacebookAvailable: false,
     replayVideoUnavailable: false,
-    hasBeenCopied: false
+    hasBeenCopied: false,
   };
 
   componentDidMount() {
@@ -127,7 +125,7 @@ class ShareAllowedDialog extends React.Component {
 
   replayVideoNotFound = () => {
     this.setState({
-      replayVideoUnavailable: true
+      replayVideoUnavailable: true,
     });
   };
 
@@ -139,14 +137,14 @@ class ShareAllowedDialog extends React.Component {
     recordShare('close');
     this.props.onClose();
     this.setState({
-      replayVideoUnavailable: false
+      replayVideoUnavailable: false,
     });
   };
 
   showSendToPhone = event => {
     this.setState({
       showSendToPhone: true,
-      showAdvancedOptions: false
+      showAdvancedOptions: false,
     });
     event.preventDefault();
   };
@@ -159,7 +157,7 @@ class ShareAllowedDialog extends React.Component {
   showAdvancedOptions = () => {
     this.setState({
       showSendToPhone: false,
-      showAdvancedOptions: true
+      showAdvancedOptions: true,
     });
   };
 
@@ -194,7 +192,7 @@ class ShareAllowedDialog extends React.Component {
       isUnpublishPending,
       onClickPopup,
       exportApp,
-      channelId
+      channelId,
     } = this.props;
 
     // inRestrictedShareMode overrides canPublish and canShareSocial
@@ -239,7 +237,7 @@ class ShareAllowedDialog extends React.Component {
         iframeHeight: applabConstants.APP_HEIGHT + 140,
         // Extra 32 pixels added to account for phone frame
         // Extra 40 pixels added to account for left and right padding divs (20 px each side)
-        iframeWidth: applabConstants.APP_WIDTH + 32 + 40
+        iframeWidth: applabConstants.APP_WIDTH + 32 + 40,
       };
     } else if (appType === 'gamelab') {
       embedOptions = {
@@ -247,7 +245,7 @@ class ShareAllowedDialog extends React.Component {
         // #visualizationColumn.wireframeShare css
         iframeHeight: p5labConstants.APP_HEIGHT + 357,
         // Extra 40 pixels added to account for left and right padding divs (20 px each side)
-        iframeWidth: p5labConstants.APP_WIDTH + 40
+        iframeWidth: p5labConstants.APP_WIDTH + 40,
       };
     }
 
@@ -291,8 +289,8 @@ class ShareAllowedDialog extends React.Component {
                       contact_us: i18n.contactUs({
                         url: `https://support.code.org/hc/en-us/requests/new?&description=${encodeURIComponent(
                           `Abuse error for project at url: ${shareUrl}`
-                        )}`
-                      })
+                        )}`,
+                      }),
                     }}
                     className="alert-error"
                     style={styles.abuseStyle}
@@ -308,14 +306,13 @@ class ShareAllowedDialog extends React.Component {
                   </div>
                   <div>
                     <Button
-                      type="primary"
                       color={Button.ButtonColor.brandSecondaryDefault}
                       id="sharing-dialog-copy-button"
                       icon="clipboard"
                       style={{
                         ...styles.button,
                         ...styles.copyButton,
-                        ...(this.state.hasBeenCopied && styles.copyButtonLight)
+                        ...(this.state.hasBeenCopied && styles.copyButtonLight),
                       }}
                       onClick={wrapShareClick(this.copy, 'copy')}
                       text={i18n.copyLinkToProject()}
@@ -483,22 +480,22 @@ class ShareAllowedDialog extends React.Component {
 const styles = {
   modal: {
     width: 720,
-    marginLeft: -360
+    marginLeft: -360,
   },
   abuseStyle: {
     border: '1px solid',
     borderRadius: 10,
     padding: 10,
-    marginBottom: 20
+    marginBottom: 20,
   },
   abuseTextStyle: {
     color: '#b94a48',
-    fontSize: 14
+    fontSize: 14,
   },
   shareWarning: {
     color: color.red,
     fontSize: 13,
-    fontWeight: 'bold'
+    fontWeight: 'bold',
   },
   button: {
     // TODO: [Phase 2] Remove this once we have a new updated button component
@@ -508,9 +505,11 @@ const styles = {
     paddingBottom: 12.5,
     paddingLeft: 10,
     paddingRight: 10,
-    margin: 0,
+    marginTop: 0,
     marginRight: 8,
-    verticalAlign: 'top'
+    marginBottom: 0,
+    marginLeft: 0,
+    verticalAlign: 'top',
   },
   buttonDisabled: {
     height: 45,
@@ -519,18 +518,20 @@ const styles = {
     paddingBottom: 12.5,
     paddingLeft: 10,
     paddingRight: 5,
-    margin: 0,
+    marginTop: 0,
     marginRight: 8,
-    verticalAlign: 'top'
+    marginBottom: 0,
+    marginLeft: 0,
+    verticalAlign: 'top',
   },
   copyButton: {
     paddingTop: 12.5,
     paddingBottom: 12.5,
     margin: 0,
-    fontSize: 'large'
+    fontSize: 'large',
   },
   copyButtonLight: {
-    backgroundColor: color.light_purple
+    backgroundColor: color.light_purple,
   },
   thumbnail: {
     float: 'left',
@@ -541,7 +542,7 @@ const styles = {
     borderRadius: 2,
     border: '1px solid rgb(187,187,187)',
     backgroundColor: color.white,
-    position: 'relative'
+    position: 'relative',
   },
   thumbnailImg: {
     position: 'absolute',
@@ -551,15 +552,15 @@ const styles = {
     height: 'auto',
     transform: 'translate(-50%,-50%)',
     msTransform: 'translate(-50%,-50%)',
-    WebkitTransform: 'translate(-50%,-50%)'
+    WebkitTransform: 'translate(-50%,-50%)',
   },
   thumbnailWarning: {
     fontSize: 12,
-    fontFamily: "'Gotham 7r', sans-serif"
+    fontFamily: "'Gotham 7r', sans-serif",
   },
   sendToPhoneContainer: {
     width: '100%',
-    marginTop: 15
+    marginTop: 15,
   },
   sendToPhoneButton: {
     margin: 0,
@@ -567,23 +568,23 @@ const styles = {
     fontSize: 'large',
     padding: '0 16px',
     paddingRight: 6,
-    height: 45
+    height: 45,
   },
   sendToPhoneSpan: {
     padding: 0,
     paddingLeft: 10,
-    verticalAlign: 'text-top'
+    verticalAlign: 'text-top',
   },
   sendToPhoneLeft: {
     float: 'left',
     width: '70%',
     paddingRight: 20,
-    boxSizing: 'border-box'
+    boxSizing: 'border-box',
   },
   sendToPhoneRight: {
     float: 'right',
-    width: '30%'
-  }
+    width: '30%',
+  },
 };
 
 export const UnconnectedShareAllowedDialog = ShareAllowedDialog;
@@ -593,7 +594,7 @@ export default connect(
     exportApp: state.pageConstants.exportApp,
     isOpen: state.shareDialog.isOpen,
     isUnpublishPending: state.shareDialog.isUnpublishPending,
-    inRestrictedShareMode: state.project.inRestrictedShareMode
+    inRestrictedShareMode: state.project.inRestrictedShareMode,
   }),
   dispatch => ({
     onClose: () => dispatch(hideShareDialog()),
@@ -603,6 +604,6 @@ export default connect(
     },
     onUnpublish(projectId) {
       dispatch(unpublishProject(projectId));
-    }
+    },
   })
 )(ShareAllowedDialog);

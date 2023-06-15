@@ -4,14 +4,16 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "curriculum_umbrella": "CSC",
+      "hideable_lessons": true,
       "is_course": true,
       "is_migrated": true,
       "version_year": "2023"
     },
     "new_name": null,
     "family_name": "csc-timecapsule",
-    "serialized_at": "2023-04-03 20:37:49 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2023-05-06 20:48:32 UTC",
+    "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
@@ -43,6 +45,7 @@
       "properties": {
         "overview": "In Lesson 1, students will use computer science to bring a digital time capsule to life! Students will learn the basics of Sprite Lab by coding the mood and imagery of a short poem written about a specific, important moment in time. Students will have various examples of time capsule poems to choose from, ranging from 1905-2023. Students will practice using code blocks to set a background, set text effects, create sprites with behaviors, play sounds, and trigger events to occur during certain lines of the text.",
         "preparation": "- Play through the levels and review the lesson slides\n- Identify levels where your students will require additional support\n- Read through the debugging tips\n- Some levels require sound to play. Hand out headphones ahead of time. ",
+        "purpose": "This lesson provides an engaging and interactive learning experience that integrates social studies learning standards with computer science objectives. By combining these two content standards, the lesson aims to help students develop a deeper understanding of both subjects and to see the connections between them.",
         "student_overview": "In this lesson you will be introduced to various examples of time capsules. Your job is to learn the basics of coding on Sprite Lab so that you can bring these poems to life with color, sounds, animation and music! Imagine you are telling someone 50 years from now about life right now. Maybe you will share about the first Electric Vehicles or the first song to reach 1 billion views on YouTube. By choosing backgrounds, text effects, sprites, and sounds you can add details that create a powerful time capsule for someone in the future. "
       },
       "seeding_key": {
@@ -97,7 +100,8 @@
       "relative_position": 4,
       "properties": {
         "overview": "In this final lesson, students will share their apps with one another.  First they will copy and paste their app links into a new tab. Then students will walk around and run each other’s time capsule stories. Finally, the whole class will have a discussion on the importance of curation and how to decide what elements to keep in retelling history.",
-        "preparation": "- Have student handouts and projects pulled up from the previous class\n- Hand out a stack of Post It notes (or the [Gallery Walk Sticky Notes](https://docs.google.com/document/d/16OGg95k4WsOrusXBO-jjTBFMstI2Att8j6ggZCgpvls/template/preview)) to each student \n"
+        "preparation": "- Have student handouts and projects pulled up from the previous class\n- Hand out a stack of Post It notes (or the [Gallery Walk Sticky Notes](https://docs.google.com/document/d/16OGg95k4WsOrusXBO-jjTBFMstI2Att8j6ggZCgpvls/template/preview)) to each student \n",
+        "purpose": "This lesson provides students with an opportunity to showcase their learning and to receive feedback from their peers. By sharing their time capsule apps, students can see how their classmates approached the same task and can learn from each other's successes and challenges."
       },
       "seeding_key": {
         "lesson.key": "Sharing My Time Capsule (pilot)",
@@ -2091,6 +2095,27 @@
     {
       "seeding_key": {
         "lesson.key": "Coding My Time Capsule (pilot)",
+        "framework.shortcode": "c3ss",
+        "standard.shortcode": "D2.His.4.3-5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Coding My Time Capsule (pilot)",
+        "framework.shortcode": "c3ss",
+        "standard.shortcode": "D2.His.6.3-5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Coding My Time Capsule (pilot)",
+        "framework.shortcode": "c3ss",
+        "standard.shortcode": "D4.3.3-5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Coding My Time Capsule (pilot)",
         "framework.shortcode": "ccela",
         "standard.shortcode": "4.L.3"
       }
@@ -2161,6 +2186,34 @@
     {
       "seeding_key": {
         "lesson.key": "My Time Capsule Story (pilot)",
+        "framework.shortcode": "c3ss",
+        "standard.shortcode": "D2.His.2.3-5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "My Time Capsule Story (pilot)",
+        "framework.shortcode": "c3ss",
+        "standard.shortcode": "D2.His.5.3-5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "My Time Capsule Story (pilot)",
+        "framework.shortcode": "c3ss",
+        "standard.shortcode": "D2.His.6.3-5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "My Time Capsule Story (pilot)",
+        "framework.shortcode": "c3ss",
+        "standard.shortcode": "D2.His.9.3-5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "My Time Capsule Story (pilot)",
         "framework.shortcode": "ccela",
         "standard.shortcode": "11-12.RL.4"
       }
@@ -2225,7 +2278,35 @@
       "seeding_key": {
         "lesson.key": "Sharing My Time Capsule (pilot)",
         "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sharing My Time Capsule (pilot)",
+        "framework.shortcode": "csta",
         "standard.shortcode": "3A-AP-23"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Time Capsule Introduction (pilot)",
+        "framework.shortcode": "c3ss",
+        "standard.shortcode": "D2.His.2.3-5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Time Capsule Introduction (pilot)",
+        "framework.shortcode": "c3ss",
+        "standard.shortcode": "D2.His.5.3-5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Time Capsule Introduction (pilot)",
+        "framework.shortcode": "c3ss",
+        "standard.shortcode": "D2.His.6.3-5"
       }
     },
     {

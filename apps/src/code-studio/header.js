@@ -1,11 +1,9 @@
-/* globals dashboard */
-
 import $ from 'jquery';
 import {
   showProjectHeader,
   showMinimalProjectHeader,
   showProjectBackedHeader,
-  showLevelBuilderSaveButton
+  showLevelBuilderSaveButton,
 } from './headerRedux';
 import {
   setProjectUpdatedError,
@@ -13,7 +11,7 @@ import {
   showProjectUpdatedAt,
   setProjectUpdatedAt,
   refreshProjectName,
-  setShowTryAgainDialog
+  setShowTryAgainDialog,
 } from './projectRedux';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -23,7 +21,7 @@ import progress from './progress';
 import {getStore} from '../redux';
 import {
   setUserSignedIn,
-  setInitialData
+  setInitialData,
 } from '@cdo/apps/templates/currentUserRedux';
 import {setVerified} from '@cdo/apps/code-studio/verifiedInstructorRedux';
 import logToCloud from '../logToCloud';
@@ -31,6 +29,8 @@ import logToCloud from '../logToCloud';
 import {PUZZLE_PAGE_NONE} from '@cdo/apps/templates/progress/progressTypes';
 import HeaderMiddle from '@cdo/apps/code-studio/components/header/HeaderMiddle';
 import SignInCalloutWrapper from './components/header/SignInCalloutWrapper';
+import {setupNavigationHandler} from './browserNavigation';
+import {setCurrentLevelId} from './progressRedux';
 
 /**
  * Dynamic header generation and event bindings for header actions.
@@ -104,18 +104,20 @@ header.build = function (
     currentPageNumber
   );
 
+  // Set up a navigation handler, in case we contain levels that don't
+  // require a page reload when switching between them.
+  setupNavigationHandler(lessonData);
+
   // Hold off on rendering HeaderMiddle.  This will allow the "app load"
   // to potentially begin before we first render HeaderMiddle, giving HeaderMiddle
   // the opportunity to wait until the app is loaded before rendering.
-  const store = getStore();
   $(document).ready(function () {
     ReactDOM.render(
-      <Provider store={store}>
+      <Provider store={getStore()}>
         <HeaderMiddle
           scriptNameData={scriptNameData}
           lessonData={lessonData}
           scriptData={scriptData}
-          currentLevelId={currentLevelId}
         />
       </Provider>,
       document.querySelector('.header_level')
@@ -131,9 +133,14 @@ header.build = function (
   });
 };
 
-header.buildProjectInfoOnly = function () {
+header.buildProjectInfoOnly = function (currentLevelId) {
+  const store = getStore();
+
+  // Store the current level ID in the progressRedux store.
+  store.dispatch(setCurrentLevelId(currentLevelId));
+
   ReactDOM.render(
-    <Provider store={getStore()}>
+    <Provider store={store}>
       <HeaderMiddle projectInfoOnly={true} />
     </Provider>,
     document.querySelector('.header_level')
@@ -160,7 +167,7 @@ header.buildUserMenu = function () {
     const showCreateMenu = $('.create_menu').length > 0;
 
     fetch(`/dashboardapi/user_menu?showCreateMenu=${showCreateMenu}`, {
-      credentials: 'same-origin'
+      credentials: 'same-origin',
     })
       .then(response => response.text())
       .then(data => $('#sign_in_or_user').html(data))
@@ -203,7 +210,7 @@ setupReduxSubscribers(getStore());
 
 function setUpGlobalData(store) {
   fetch('/api/v1/users/current', {
-    credentials: 'same-origin'
+    credentials: 'same-origin',
   })
     .then(response => response.json())
     .then(data => {

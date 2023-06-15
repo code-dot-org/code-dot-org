@@ -2,7 +2,7 @@ import $ from 'jquery';
 import React from 'react';
 import PropTypes from 'prop-types';
 import moment from 'moment';
-import {Button} from 'react-bootstrap';
+import {Button} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import ConfirmationDialog from '../components/confirmation_dialog';
 import WorkshopPanel from './WorkshopPanel';
 
@@ -17,12 +17,12 @@ export default class IntroPanel extends React.Component {
     sessions: PropTypes.array,
     isAccountRequiredForAttendance: PropTypes.bool,
     isWorkshopAdmin: PropTypes.bool,
-    loadWorkshop: PropTypes.func.isRequired
+    loadWorkshop: PropTypes.func.isRequired,
   };
 
   state = {
     pendingAdminAction: null,
-    showStartWorkshopConfirmation: false
+    showStartWorkshopConfirmation: false,
   };
 
   componentWillUnmount() {
@@ -45,7 +45,7 @@ export default class IntroPanel extends React.Component {
     this.adminActionRequest = $.ajax({
       method: 'POST',
       url: `/api/v1/pd/workshops/${workshopId}/${action}`,
-      dataType: 'json'
+      dataType: 'json',
     })
       .done(loadWorkshop)
       .fail(data => {
@@ -74,7 +74,7 @@ export default class IntroPanel extends React.Component {
     this.startRequest = $.ajax({
       method: 'POST',
       url: `/api/v1/pd/workshops/${workshopId}/start`,
-      dataType: 'json'
+      dataType: 'json',
     })
       .done(() => {
         this.setState({showStartWorkshopConfirmation: false});
@@ -145,7 +145,7 @@ export default class IntroPanel extends React.Component {
       workshopState,
       sessions,
       isAccountRequiredForAttendance,
-      isWorkshopAdmin
+      isWorkshopAdmin,
     } = this.props;
     const header = (
       <div>

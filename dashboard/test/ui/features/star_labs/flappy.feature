@@ -1,5 +1,3 @@
-# Skip on IE due to exception on Javascript click or drag functions
-@no_ie
 Feature: Flappy puzzles can be solved
 
 Scenario: Solving puzzle 1

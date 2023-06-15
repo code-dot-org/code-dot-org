@@ -1916,7 +1916,8 @@ sl-SI:
         - {}
         - {}
         questions:
-        - {}
+        - text: Bodite pozorni na spodnjo kodo. Če bi koda tekla do konca (in ignorirala
+            morebitne napake), koliko kosov zaklada bi Laurel zbrala?
       grade2_multi_collector_A_predict1_2018:
         answers:
         - {}
@@ -1943,52 +1944,98 @@ sl-SI:
         - {}
       courseC_multi_artist_prog6_predict1_2021:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Umetnik bo narisal trikotnik s tremi enakimi stranicami.
+          feedback: Nepravilno. Umetnik nariše kvadrat.
+        - text: Umetnik bo narisal eno črto.
+          feedback: Nepravilno. Umetnik nariše kvadrat.
+        - text: Umetnik bo narisal kvadrat.
+          correct: true
+          feedback: Pravilno!
+        - text: Umetnik bo narisal pentagon
+          feedback: Nepravilno. Umetnik nariše kvadrat.
         questions:
-        - {}
+        - text: Pazljivo poglejte spodnjo kodo. Kaj se bo zgodilo, ko kliknete« Zaženi
+            »?
       courseC_multi_harvester_loops11_predict1_2021:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: '4'
+          feedback: Nepravilno. Kmet bo zbral 4 buče v vsaki od 3 zank. 4-krat 3 je
+            12!
+        - text: '12'
+          correct: true
+          feedback: Pravilno!
+        - text: '15'
+          feedback: Nepravilno. Kmet bo zbral 4 buče v vsaki od 3 zank. 4-krat 3 je
+            12!
+        - text: '20 '
+          feedback: Nepravilno. Kmet bo zbral 4 buče v vsaki od 3 zank. 4-krat 3 je
+            12!
         questions:
-        - {}
+        - text: Bodite pozorni na spodnjo kodo. Koliko buč bo kmet zbral, ko kliknete
+            »Zaženi«?
       courseC_multi_maze_debugging8_predict1_2021:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Scrat bo dosegel želod. V kodi ni napak.
+          feedback: Nepravilno. Najprej Scrat obrne napačno smer, nato se Scrat ne
+            premakne dovolj časa naprej, da bi dosegel želod.
+        - text: Scrat ne bo dosegel želoda, ker se obrne na napačno smer.
+          correct: true
+          feedback: Pravilno! Najprej se Scrat obrne v napačno smer, nato se Scrat
+            ne premakne dovolj časa naprej, da bi dosegel želod.
+        - text: Scrat ne bo dosegel želoda, ker ni dovolj blokov `premakni se naprej'.
+          correct: true
+          feedback: Pravilno! Najprej se Scrat obrne v napačno smer, nato se Scrat
+            ne premakne dovolj časa naprej, da bi dosegel želod.
+        - text: Scrat se ne bo premaknil iz prvega bloka.
+          feedback: V tej kodi sta dve hrošča. Najprej se Scrat obrne napačno smer,
+            nato se Scrat ne premakne dovolj naprej, da bi dosegel želod.
         questions:
-        - {}
+        - text: Poiščite napake v tej kodi. Bo Scrat dosegel želod ali obstaja težava?
       courseC_multi_maze_programming8_predict1_2021:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Ptica bo končala pot en korak stran od prašiča.
+          feedback: Nepravilno. Ta koda pripelje ptico točno k prašiču.
+        - text: Ptica bo prišla do prašiča.
+          correct: true
+          feedback: Pravilno!
+        - text: Ptica bo naletela na TNT.
+          feedback: Nepravilno. Ta koda pripelje ptico točno k prašiču.
+        - text: Ptica se bo zaletela v steno.
+          feedback: Nepravilno. Ta koda pripelje ptico točno k prašiču.
         questions:
-        - {}
+        - text: Zelo natančno preberite spodnjo kodo. Kaj se bo zgodilo, ko kliknete«
+            Zaženi »?
       courseC_multi_starWars_predict1_2021:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: BB-8 se ne bo premaknil.
+          feedback: Nepravilno. Ponovljeni blok bo BB-8 premaknil naprej 5-krat.
+        - text: BB-8 se bo premaknil samo en prostor
+          feedback: Nepravilno. Ponovljeni blok bo BB-8 premaknil naprej 5-krat.
+        - text: BB-8 se bo premaknil 5-krat in dobil vse odpadne kovine
+          correct: true
+          feedback: Pravilno!
+        - text: BB-8 se bo premaknil samo 3 korake.
+          feedback: Nepravilno. Ponovljeni blok bo BB-8 premaknil naprej 5-krat.
         questions:
-        - {}
+        - text: Kaj menite, da se bo zgodilo, ko kliknete« Zaženi »?
       courseC_multi_starWars_predict2_2021:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: BB-8 bo v prvi zanki potoval predaleč.
+          feedback: Nepravilno. Prva zanka omogoča, da se BB-8 premakne naprej 2 prostora,
+            čeprav se mora premakniti naprej za 3 prostore.
+        - text: BB-8 ne bo potoval dovolj daleč v prvi zanki, da bi dobili vse odpadne
+            kovine.
+          correct: true
+          feedback: Pravilno!
+        - text: BB-8 bo zbral vse odpadne kovine brez težav.
+          feedback: Nepravilno. Prva zanka omogoča, da se BB-8 premakne naprej 2 prostora,
+            čeprav se mora premakniti naprej za 3 prostore.
+        - text: BB-8 se bo po prvi zanki obrnil v napačno smer.
+          feedback: Nepravilno. Prva zanka omogoča, da se BB-8 premakne naprej 2 prostora,
+            čeprav se mora premakniti naprej za 3 prostore.
         questions:
-        - {}
+        - text: Pazljivo poglejte spodnjo kodo. Kaj se bo zgodilo, ko kliknete« Zaženi
+            »?
       courseD_multi_artist_nestedLoops9_predict1_2021:
         answers:
         - text: A
@@ -2176,12 +2223,22 @@ sl-SI:
         - {}
       grade2_multi_collector_A_predict1_2021:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Laurel bo z uporabo te kode zbrala 4 koščke zaklada.
+          feedback: Nepravilno. Laurel poskuša zbrati zaklad, kjer ga ni, in povzroča
+            napako.
+        - text: Laurel bo poskušala zbrati zaklad, kjer ni nobenega in to povzroči
+            napako.
+          correct: true
+          feedback: Pravilno!
+        - text: Pomagajte Laurel zbrati ves zaklad.
+          feedback: Nepravilno. Laurel poskuša zbrati zaklad, kjer ga ni, in povzroča
+            napako.
+        - text: Laurel bo z uporabo te kode zbrala 1 kos zaklada.
+          feedback: Laurel bo poskušala zbrati zaklad, kjer ni nobenega in to povzroči
+            napako.
         questions:
-        - {}
+        - text: Pazljivo si oglejte to kodo. Kaj mislite, da se bo zgodilo, ko se
+            program zažene?
       CSD Games Properties multi predict_2021:
         answers:
         - {}
@@ -2368,7 +2425,7 @@ sl-SI:
         - {}
         - {}
         questions:
-        - {}
+        - text: Vnos
         - {}
         - {}
         - {}
@@ -2379,7 +2436,7 @@ sl-SI:
         - {}
         - {}
         questions:
-        - {}
+        - text: Vnos
         - {}
         - {}
         - {}
@@ -2390,7 +2447,7 @@ sl-SI:
         - {}
         - {}
         questions:
-        - {}
+        - text: Vnos
         - {}
         - {}
         - {}
@@ -8960,7 +9017,8 @@ sl-SI:
         - {}
         - {}
         - {}
-        - {}
+        - text: Umetnik bo narisal pentagon
+          feedback: Nepravilno. Umetnik nariše kvadrat.
         questions:
         - {}
       courseC_multi_harvester_loops11_predict12022:
@@ -8973,10 +9031,12 @@ sl-SI:
         - {}
       courseC_multi_maze_debugging8_predict12022:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - feedback: Nepravilno. Scrat ne bo dosegel želoda, ker se obrne na napačno
+            smer.
+        - feedback: Pravilno! Scrat se obrne v napačno smer in ne bo dosegel želoda.
+        - feedback: Nepravilno. Scrat ne bo dosegel želoda, ker se obrne na napačno
+            smer.
+        - text: Scrat se ne bo premaknil iz prvega bloka.
         questions:
         - {}
       courseC_multi_maze_programming8_predict12022:
@@ -8984,7 +9044,7 @@ sl-SI:
         - {}
         - {}
         - {}
-        - {}
+        - text: Ptica se bo zaletela v steno.
         questions:
         - {}
       courseC_multi_starWars_predict12022:
@@ -8992,7 +9052,7 @@ sl-SI:
         - {}
         - {}
         - {}
-        - {}
+        - text: BB-8 se bo premaknil samo 3 korake.
         questions:
         - {}
       courseC_multi_starWars_predict22022:
@@ -9000,7 +9060,7 @@ sl-SI:
         - {}
         - {}
         - {}
-        - {}
+        - text: BB-8 se bo po prvi zanki obrnil v napačno smer.
         questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict12022:
@@ -9193,6 +9253,216 @@ sl-SI:
         - {}
         - {}
         - {}
+        - text: Laurel bo z uporabo te kode zbrala 1 kos zaklada.
+        questions:
+        - {}
+      Begin planning your project_2018_2019:
+        markdown: |+
+          # Primeri projekta
+
+          Začel boš svoj končni projekt. Preden začneš, si vzamei nekaj časa in si oglej primere projektov.
+
+          | Lačna veverica | Alien Story |
+          |---|---|
+          | [! [Lačna veverica (Play Lab)] (https://images.code.org/3fda61d18026d6661dccf4b09baea111-image-1565115158327.PNG »Lačna veverica (Play Lab«)] (https://studio.code.org/projects/playlab/HN1zAX4Om6zdsxVsBBug9Y8mlzKSWUAXhjzRl-64YRs/view) | [! [Alien Story (Play Lab)] (https://images.code.org/0bd5ed3674ac9fe3304e27e68974c35f-image-1565115240833.PNG »Alien Story (Play Lab«)] (https://studio.code.org/projects/playlab/I_8rcKtpLFRAn8flROC15Oc-KnDu-bkKBnSORoIDs0o/view) |
+          | Poskusite dodati zvoke tej igri! | Poskusite dodati še en prizor tej zgodbi! |
+
+      Begin planning your project_2018_2019_2020:
+        markdown: |+
+          # Primeri projekta
+
+          Začel boš svoj končni projekt. Preden začneš, si vzamei nekaj časa in si oglej primere projektov.
+
+          | Lačna veverica | Alien Story |
+          |---|---|
+          | [! [Lačna veverica (Play Lab)] (https://images.code.org/3fda61d18026d6661dccf4b09baea111-image-1565115158327.PNG »Lačna veverica (Play Lab«)] (https://studio.code.org/projects/playlab/HN1zAX4Om6zdsxVsBBug9Y8mlzKSWUAXhjzRl-64YRs/view) | [! [Alien Story (Play Lab)] (https://images.code.org/0bd5ed3674ac9fe3304e27e68974c35f-image-1565115240833.PNG »Alien Story (Play Lab«)] (https://studio.code.org/projects/playlab/I_8rcKtpLFRAn8flROC15Oc-KnDu-bkKBnSORoIDs0o/view) |
+          | Poskusite dodati zvoke tej igri! | Poskusite dodati še en prizor tej zgodbi! |
+
+      BinaryBracelets-Unplugged:
+        markdown: |+
+          # Binarne zapestnice
+
+          Ustvarite zapestnico, na kateri bo tvoje ime v sistemu, ki ga razumejo računalniki!
+
+
+      BinaryBracelets-Unplugged2022:
+        markdown: |+
+          # Binarne zapestnice
+
+          Ustvarite zapestnico, na kateri bo tvoje ime v sistemu, ki ga razumejo računalniki!
+
+
+      BinaryBracelets-Unplugged_2020:
+        markdown: |+
+          # Binarne zapestnice
+
+          Ustvarite zapestnico, na kateri bo tvoje ime v sistemu, ki ga razumejo računalniki!
+
+
+      BinaryBracelets-Unplugged_2021:
+        markdown: |+
+          # Binarne zapestnice
+
+          Ustvarite zapestnico, na kateri bo tvoje ime v sistemu, ki ga razumejo računalniki!
+
+
+      MyLoopyRoboticFriends-Unplugged:
+        markdown: |
+          # Moji zankasti robotski prijatelji
+
+          Naredite svoje programe krajše z uporabo zank!
+      MyLoopyRoboticFriends-Unplugged2022:
+        markdown: |
+          # Moji zankasti robotski prijatelji
+
+          Naredite svoje programe krajše z uporabo zank!
+      MyLoopyRoboticFriends-Unplugged_2020:
+        markdown: |
+          # Moji zankasti robotski prijatelji
+
+          Naredite svoje programe krajše z uporabo zank!
+      MyLoopyRoboticFriends-Unplugged_2021:
+        markdown: |
+          # Moji zankasti robotski prijatelji
+
+          Naredite svoje programe krajše z uporabo zank!
+      MyRoboticFriends-Unplugged:
+        markdown: |-
+          # Moji robotski prijatelji
+
+          Naučite se programirati s pisanjem kode za svoje prijatelje!
+      MyRoboticFriends-Unplugged2022:
+        markdown: |-
+          # Moji robotski prijatelji
+
+          Naučite se programirati s pisanjem kode za svoje prijatelje!
+      MyRoboticFriends-Unplugged_2020:
+        markdown: |-
+          # Moji robotski prijatelji
+
+          Naučite se programirati s pisanjem kode za svoje prijatelje!
+      MyRoboticFriends-Unplugged_2021:
+        markdown: |-
+          # Moji robotski prijatelji
+
+          Naučite se programirati s pisanjem kode za svoje prijatelje!
+      PicturingData-Unplugged:
+        markdown: |
+          # Slikovni podatki
+
+          Uporabi Play Lab projekt za zbiranje podatkov in napovedovanje.
+
+          ! [] (https://images.code.org/606a78c09a01133a1bbc1aa9c76f3320-image-1557334268558.png)
+      PicturingData-Unplugged_2020:
+        markdown: |
+          # Slikovni podatki
+
+          Uporabi Play Lab projekt za zbiranje podatkov in napovedovanje.
+
+          ! [] (https://images.code.org/606a78c09a01133a1bbc1aa9c76f3320-image-1557334268558.png)
+      PowerfulPasswords-Unplugged:
+        markdown: |-
+          # Mo(go)čna gesla
+
+          Razišči, zakaj ljudje uporabljajo gesla, nauči se prednosti uporabe gesel in odkrij strategije za ustvarjanje in ohranjanje močnih in varnih gesel.
+      Test Contained Retriable Multi:
+        answers:
+        - {}
+        - {}
+        - {}
         - {}
         questions:
         - {}
+      test-single-multi-standalone-retriable:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      BigEvent-Unplugged_2021:
+        markdown: |
+          # Veliki dogodek
+
+          V računalništvu so dogodki dejanja, ki jih računalnik spremlja. V tej lekciji se boste odzvali drugače, odvisno od tega, kateri gumb pritisnete.
+      courseF_EOC_samples_2021:
+        description: Začeli boste svoj končni projekt. Preden začnete, preživite nekaj
+          časa gledal na primer projektov.
+        display_name: Projekt ob koncu tečaja
+      csf_password_power-up:
+        markdown: |
+          # Vklopite geslo
+
+          ## Nasveti za geslo:
+
+          * Začnite z nepozabno **frazo**.
+          * Samo vaši starši** lahko poznati vaše geslo.
+          * Nikoli ne uporabljajte nobenih **zasebnih** podatkov o identiteti v svojem geslu.
+          * Ustvarite gesla z vsaj **osem** znaki.
+          * Uporabite črke, številke in simbole **** v svojem geslu.
+
+          ! [] (https://images.code.org/bfa69295fbf33c77ecdeb79b5498d8f7-image-1584751340896.png)
+      csf_password_power-up2022:
+        markdown: |
+          # Vklopite geslo
+
+          ## Nasveti za geslo:
+
+          * Začnite z nepozabno **frazo**.
+          * Samo vaši starši** lahko poznati vaše geslo.
+          * Nikoli ne uporabljajte nobenih **zasebnih** podatkov o identiteti v svojem geslu.
+          * Ustvarite gesla z vsaj **osem** znaki.
+          * Uporabite črke, številke in simbole **** v svojem geslu.
+
+          ! [] (https://images.code.org/bfa69295fbf33c77ecdeb79b5498d8f7-image-1584751340896.png)
+      csf_password_power-up_2021:
+        markdown: |
+          # Vklopite geslo
+
+          ## Nasveti za geslo:
+
+          * Začnite z nepozabno **frazo**.
+          * Samo vaši starši** lahko poznati vaše geslo.
+          * Nikoli ne uporabljajte nobenih **zasebnih** podatkov o identiteti v svojem geslu.
+          * Ustvarite gesla z vsaj **osem** znaki.
+          * Uporabite črke, številke in simbole **** v svojem geslu.
+
+          ! [] (https://images.code.org/bfa69295fbf33c77ecdeb79b5498d8f7-image-1584751340896.png)
+      csf_putting_a_stop_to_online_meanness:
+        markdown: |
+          # STOP Nesramnosti
+
+          ## Kaj morate storiti, če je nekdo zloben do vas na spletu?
+
+          * **S**topi stran.
+          * **T** o povej zaupanja vredni odrasli osebi.
+          * **O**K strani vnajprej.
+          * **P**remor si vzemi in razmišljaj na spletu.
+
+          ! [] (https://images.code.org/f3e4987a130b27f7b589d7829b753aac-image-1584750971069.png)
+      csf_putting_a_stop_to_online_meanness2022:
+        markdown: |
+          # STOP Nesramnosti
+
+          ## Kaj morate storiti, če je nekdo zloben do vas na spletu?
+
+          * **S**topi stran.
+          * **T** o povej zaupanja vredni odrasli osebi.
+          * **O**K strani vnajprej.
+          * **P**remor si vzemi in razmišljaj na spletu.
+
+          ! [] (https://images.code.org/f3e4987a130b27f7b589d7829b753aac-image-1584750971069.png)
+      csf_putting_a_stop_to_online_meanness_2021:
+        content1: opis tukaj
+        markdown: |
+          # STOP Nesramnosti
+
+          ## Kaj morate storiti, če je nekdo zloben do vas na spletu?
+
+          * **S**topi stran.
+          * **T** o povej zaupanja vredni odrasli osebi.
+          * **O**K strani vnajprej.
+          * **P**remor si vzemi in razmišljaj na spletu.
+
+          ! [] (https://images.code.org/f3e4987a130b27f7b589d7829b753aac-image-1584750971069.png)

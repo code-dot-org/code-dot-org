@@ -1,6 +1,6 @@
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import React from 'react';
-import {Button} from 'react-bootstrap';
+import {Button} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import {studio, pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import color from '@cdo/apps/util/color';
 
@@ -15,7 +15,7 @@ export default class AmazonFutureEngineerAccountConfirmation extends React.Compo
     firehoseClient.putRecord(
       {
         study: 'amazon-future-engineer-eligibility',
-        event: 'sign_up_button_press'
+        event: 'sign_up_button_press',
       },
       {callback: () => (window.location = SIGN_UP_URL)}
     );
@@ -27,7 +27,7 @@ export default class AmazonFutureEngineerAccountConfirmation extends React.Compo
     firehoseClient.putRecord(
       {
         study: 'amazon-future-engineer-eligibility',
-        event: 'sign_in_button_press'
+        event: 'sign_in_button_press',
       },
       {callback: () => (window.location = SIGN_IN_URL)}
     );
@@ -64,13 +64,13 @@ export default class AmazonFutureEngineerAccountConfirmation extends React.Compo
 const styles = {
   button: {
     backgroundColor: color.orange,
-    color: color.white
+    color: color.white,
   },
   header: {
     marginTop: '10px',
-    marginBottom: '10px'
+    marginBottom: '10px',
   },
   body: {
-    marginBottom: '10px'
-  }
+    marginBottom: '10px',
+  },
 };

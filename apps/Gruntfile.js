@@ -31,7 +31,7 @@ module.exports = function (grunt) {
     const loadContext = isDirectory
       ? `let testsContext = require.context(${JSON.stringify(
           path.resolve(process.env.mocha_entry)
-        )}, true, /\\.jsx?$/);`
+        )}, true, /\\.[j|t]sx?$/);`
       : '';
     const runTests = isDirectory
       ? 'testsContext.keys().forEach(testsContext);'
@@ -93,7 +93,7 @@ describe('entry tests', () => {
     'poetry',
     'studio',
     'turtle',
-    'weblab'
+    'weblab',
   ];
 
   if (SINGLE_APP && ALL_APPS.indexOf(SINGLE_APP) === -1) {
@@ -103,9 +103,8 @@ describe('entry tests', () => {
   var appsToBuild = SINGLE_APP ? [SINGLE_APP] : ALL_APPS;
 
   var ace_suffix = envConstants.DEV ? '' : '-min';
-  var piskelRoot = String(
-    child_process.execSync('`npm bin`/piskel-root')
-  ).replace(/\s+$/g, '');
+  var piskelRootStdout = child_process.execSync('npx piskel-root');
+  var piskelRoot = String(piskelRootStdout).replace(/\s+$/g, '');
   var PISKEL_DEVELOPMENT_MODE = grunt.option('piskel-dev');
   if (PISKEL_DEVELOPMENT_MODE) {
     var localNodeModulesRoot = String(
@@ -154,9 +153,9 @@ describe('entry tests', () => {
           expand: true,
           cwd: 'src/',
           src: ['**/*.js', '**/*.jsx'],
-          dest: 'build/js'
-        }
-      ]
+          dest: 'build/js',
+        },
+      ],
     },
     static: {
       files: [
@@ -164,32 +163,38 @@ describe('entry tests', () => {
           expand: true,
           cwd: 'static/',
           src: ['**'],
-          dest: 'build/package/media'
+          dest: 'build/package/media',
         },
         {
           expand: true,
           cwd: 'lib/blockly/media',
           src: ['**'],
           //TODO: Would be preferrable to separate Blockly media.
-          dest: 'build/package/media'
+          dest: 'build/package/media',
+        },
+        {
+          expand: true,
+          cwd: 'node_modules/blockly/media',
+          src: ['**'],
+          dest: 'build/package/media/google_blockly',
         },
         {
           expand: true,
           cwd: 'node_modules/@code-dot-org/craft/dist/assets',
           src: ['**'],
-          dest: 'build/package/media/skins/craft'
+          dest: 'build/package/media/skins/craft',
         },
         {
           expand: true,
           cwd: 'node_modules/@code-dot-org/ml-activities/dist/assets',
           src: ['**'],
-          dest: 'build/package/media/skins/fish'
+          dest: 'build/package/media/skins/fish',
         },
         {
           expand: true,
           cwd: 'node_modules/@code-dot-org/ml-playground/dist/assets',
           src: ['**'],
-          dest: 'build/package/media/skins/ailab'
+          dest: 'build/package/media/skins/ailab',
         },
 
         // We have to do some weird stuff to get our fallback video player working.
@@ -205,9 +210,9 @@ describe('entry tests', () => {
           expand: true,
           cwd: './node_modules/video.js/dist',
           src: ['**'],
-          dest: 'build/package/video-js'
-        }
-      ]
+          dest: 'build/package/video-js',
+        },
+      ],
     },
     lib: {
       files: [
@@ -223,7 +228,7 @@ describe('entry tests', () => {
               '$1/blockly_locale.js'
             );
             return path.join(dest, outputPath);
-          }
+          },
         },
         // minifying ace code requires some advanced configuration:
         // https://github.com/ajaxorg/ace/blob/b808ac14ec6d6afa74b36ff5c03452a2832b32a4/Makefile.dryice.js#L620-L638
@@ -234,7 +239,7 @@ describe('entry tests', () => {
           expand: true,
           cwd: 'lib/ace/src' + ace_suffix + '-noconflict/',
           src: ['**/*.js'],
-          dest: 'build/package/js/ace/'
+          dest: 'build/package/js/ace/',
         },
         // Pull p5.js and p5.play.js into the package from our forks. These are
         // needed by the gamelab exporter code in production and development.
@@ -242,13 +247,13 @@ describe('entry tests', () => {
           expand: true,
           cwd: './node_modules/@code-dot-org/p5/lib',
           src: ['p5.js'],
-          dest: 'build/package/js/p5play/'
+          dest: 'build/package/js/p5play/',
         },
         {
           expand: true,
           cwd: './node_modules/@code-dot-org/p5.play/lib',
           src: ['p5.play.js'],
-          dest: 'build/package/js/p5play/'
+          dest: 'build/package/js/p5play/',
         },
         // Piskel must not be minified or digested in order to work properly.
         {
@@ -258,45 +263,45 @@ describe('entry tests', () => {
           // If we provide it as a relative path, that does not happen
           cwd: './' + path.relative(process.cwd(), piskelRoot),
           src: ['**'],
-          dest: 'build/package/js/piskel/'
+          dest: 'build/package/js/piskel/',
         },
         {
           expand: true,
           cwd: 'lib/droplet',
           src: ['droplet-full*.js'],
-          dest: 'build/minifiable-lib/droplet/'
+          dest: 'build/minifiable-lib/droplet/',
         },
         {
           expand: true,
           cwd: 'lib/droplet',
           src: ['droplet.min.css'],
-          dest: 'build/package/css/droplet/'
+          dest: 'build/package/css/droplet/',
         },
         {
           expand: true,
           cwd: 'lib/tooltipster',
           src: ['*.js'],
-          dest: 'build/minifiable-lib/tooltipster/'
+          dest: 'build/minifiable-lib/tooltipster/',
         },
         {
           expand: true,
           cwd: 'lib/phaser',
           src: ['*.js'],
-          dest: 'build/minifiable-lib/phaser/'
+          dest: 'build/minifiable-lib/phaser/',
         },
         {
           expand: true,
           cwd: 'lib/tooltipster',
           src: ['tooltipster.min.css'],
-          dest: 'build/package/css/tooltipster/'
+          dest: 'build/package/css/tooltipster/',
         },
         {
           expand: true,
           cwd: 'lib/fileupload',
           src: ['*.js'],
-          dest: 'build/minifiable-lib/fileupload/'
-        }
-      ]
+          dest: 'build/minifiable-lib/fileupload/',
+        },
+      ],
     },
     unhash: {
       files: [
@@ -310,24 +315,17 @@ describe('entry tests', () => {
             'applab-apiwp*.js',
             'applab-apiwp*.min.js',
             'gamelab-apiwp*.js',
-            'gamelab-apiwp*.min.js'
+            'gamelab-apiwp*.min.js',
           ],
           dest: 'build/package/js',
           // e.g. webpack-runtimewp0123456789aabbccddee.min.js --> webpack-runtime.min.js
           rename: function (dest, src) {
             var outputFile = src.replace(/wp[0-9a-f]{20}/, '');
             return path.join(dest, outputFile);
-          }
-        }
-      ]
-    }
-  };
-
-  config.ts = {
-    default: {
-      tsconfig: './tsconfig.json',
-      src: ['./src/**/*.ts', './src/**/*.tsx']
-    }
+          },
+        },
+      ],
+    },
   };
 
   config.sass = {
@@ -338,18 +336,18 @@ describe('entry tests', () => {
         outputStyle: 'expanded',
         includePaths: ['node_modules', '../shared/css/'],
         implementation: sass,
-        quietDeps: true
+        quietDeps: true,
       },
       files: _.fromPairs(
         [
           ['build/package/css/common.css', 'style/common.scss'],
           [
             'build/package/css/code-studio.css',
-            'style/code-studio/code-studio.scss'
+            'style/code-studio/code-studio.scss',
           ],
           [
             'build/package/css/certificates.css',
-            'style/curriculum/certificates.scss'
+            'style/curriculum/certificates.scss',
           ],
           ['build/package/css/courses.css', 'style/curriculum/courses.scss'],
           ['build/package/css/scripts.css', 'style/curriculum/scripts.scss'],
@@ -359,48 +357,48 @@ describe('entry tests', () => {
           ['build/package/css/rollups.css', 'style/curriculum/rollups.scss'],
           [
             'build/package/css/curriculum_table_styling.css',
-            'style/curriculum/curriculum_table_styling.scss'
+            'style/curriculum/curriculum_table_styling.scss',
           ],
           [
             'build/package/css/curriculum_navigation.css',
-            'style/curriculum/navigation.scss'
+            'style/curriculum/navigation.scss',
           ],
           [
             'build/package/css/levelbuilder.css',
-            'style/code-studio/levelbuilder.scss'
+            'style/code-studio/levelbuilder.scss',
           ],
           [
             'build/package/css/leveltype_widget.css',
-            'style/code-studio/leveltype_widget.scss'
+            'style/code-studio/leveltype_widget.scss',
           ],
           ['build/package/css/plc.css', 'style/code-studio/plc.scss'],
           ['build/package/css/pd.css', 'style/code-studio/pd.scss'],
           ['build/package/css/petition.css', 'style/code-studio/petition.scss'],
           [
             'build/package/css/publicKeyCryptography.css',
-            'style/publicKeyCryptography/publicKeyCryptography.scss'
+            'style/publicKeyCryptography/publicKeyCryptography.scss',
           ],
           [
             'build/package/css/foorm_editor.css',
-            'style/code-studio/foorm_editor.scss'
-          ]
+            'style/code-studio/foorm_editor.scss',
+          ],
         ].concat(
           appsToBuild.map(function (app) {
             return [
               'build/package/css/' + app + '.css', // dst
-              'style/' + app + '/style.scss' // src
+              'style/' + app + '/style.scss', // src
             ];
           })
         )
-      )
-    }
+      ),
+    },
   };
 
   // Takes a key-value .json file and runs it through MessageFormat to create a localized .js file.
   config.messages = {
     all: {
       options: {
-        dest: 'build/locales'
+        dest: 'build/locales',
       },
       files: [
         {
@@ -414,29 +412,29 @@ describe('entry tests', () => {
           },
           expand: true,
           src: ['i18n/**/*.json'],
-          dest: 'build/locales'
-        }
-      ]
-    }
+          dest: 'build/locales',
+        },
+      ],
+    },
   };
 
   config.ejs = {
     all: {
       srcBase: 'src',
-      destBase: 'build/js'
-    }
+      destBase: 'build/js',
+    },
   };
 
   var OUTPUT_DIR = 'build/package/js/';
   config.exec = {
     convertScssVars: './script/convert-scss-variables.js',
-    generateSharedConstants: 'bundle exec ./script/generateSharedConstants.rb'
+    generateSharedConstants: 'bundle exec ./script/generateSharedConstants.rb',
   };
 
   var junitReporterBaseConfig = {
     outputDir: envConstants.CIRCLECI
       ? `${envConstants.CIRCLE_TEST_REPORTS}/apps`
-      : ''
+      : '',
   };
 
   // Workaround for https://github.com/ryanclark/karma-webpack/issues/498.
@@ -459,31 +457,31 @@ describe('entry tests', () => {
           pattern: 'test/audio/**/*',
           watched: false,
           included: false,
-          nocache: true
+          nocache: true,
         },
         {
           pattern: 'test/integration/**/*',
           watched: false,
           included: false,
-          nocache: true
+          nocache: true,
         },
         {
           pattern: 'test/storybook/**/*',
           watched: false,
           included: false,
-          nocache: true
+          nocache: true,
         },
         {
           pattern: 'test/unit/**/*',
           watched: false,
           included: false,
-          nocache: true
+          nocache: true,
         },
         {
           pattern: 'test/util/**/*',
           watched: false,
           included: false,
-          nocache: true
+          nocache: true,
         },
         {pattern: 'lib/**/*', watched: false, included: false, nocache: true},
         {pattern: 'build/**/*', watched: false, included: false, nocache: true},
@@ -491,14 +489,14 @@ describe('entry tests', () => {
           pattern: 'static/**/*',
           watched: false,
           included: false,
-          nocache: true
+          nocache: true,
         },
         {
           pattern: `${webpackOutputPath}/**/*`,
           watched: false,
           included: false,
-          nocache: true
-        }
+          nocache: true,
+        },
       ],
       proxies: {
         // configure karma server to serve files from the source tree for
@@ -511,58 +509,58 @@ describe('entry tests', () => {
 
         // requests to the webpack output public path should be served from the
         // webpack output path where bundled assets are written
-        [webpackOutputPublicPath]: '/absolute/' + webpackOutputPath + '/'
+        [webpackOutputPublicPath]: '/absolute/' + webpackOutputPath + '/',
       },
 
       webpack: {
         output: {
           path: webpackOutputPath,
-          publicPath: webpackOutputPublicPath
-        }
+          publicPath: webpackOutputPublicPath,
+        },
       },
       client: {
         mocha: {
           timeout: 14000,
-          grep: grunt.option('grep')
-        }
-      }
+          grep: grunt.option('grep'),
+        },
+      },
     },
     unit: {
       coverageIstanbulReporter: {
-        dir: 'coverage/unit'
+        dir: 'coverage/unit',
       },
       junitReporter: Object.assign({}, junitReporterBaseConfig, {
-        outputFile: 'unit.xml'
+        outputFile: 'unit.xml',
       }),
-      files: [{src: ['test/unit-tests.js'], watched: false}]
+      files: [{src: ['test/unit-tests.js'], watched: false}],
     },
     integration: {
       coverageIstanbulReporter: {
-        dir: 'coverage/integration'
+        dir: 'coverage/integration',
       },
       junitReporter: Object.assign({}, junitReporterBaseConfig, {
-        outputFile: 'integration.xml'
+        outputFile: 'integration.xml',
       }),
-      files: [{src: ['test/integration-tests.js'], watched: false}]
+      files: [{src: ['test/integration-tests.js'], watched: false}],
     },
     storybook: {
       coverageIstanbulReporter: {
-        dir: 'coverage/storybook'
+        dir: 'coverage/storybook',
       },
       junitReporter: Object.assign({}, junitReporterBaseConfig, {
-        outputFile: 'storybook.xml'
+        outputFile: 'storybook.xml',
       }),
-      files: [{src: ['test/storybook-tests.js'], watched: false}]
+      files: [{src: ['test/storybook-tests.js'], watched: false}],
     },
     entry: {
       coverageIstanbulReporter: {
-        dir: 'coverage/entry'
+        dir: 'coverage/entry',
       },
       files: [{src: ['test/entry-tests.js'], watched: false}],
       preprocessors: {
-        'test/entry-tests.js': ['webpack', 'sourcemap']
-      }
-    }
+        'test/entry-tests.js': ['webpack', 'sourcemap'],
+      },
+    },
   };
 
   config.clean = {
@@ -572,8 +570,8 @@ describe('entry tests', () => {
     // on our persistent test server unless we clean them up.
     unitTest: {
       options: {force: true},
-      src: [webpackOutputBasePath + '*']
-    }
+      src: [webpackOutputBasePath + '*'],
+    },
   };
 
   var appsEntries = _.fromPairs(
@@ -603,6 +601,8 @@ describe('entry tests', () => {
       './src/sites/studio/pages/lessons/student_lesson_plan.js',
     'musiclab/index': './src/sites/studio/pages/musiclab/index.js',
     'musiclab/menu': './src/sites/studio/pages/musiclab/menu.js',
+    'policy_compliance/child_account_consent':
+      './src/sites/studio/pages/policy_compliance/child_account_consent.js',
     'print_certificates/batch':
       './src/sites/studio/pages/print_certificates/batch.js',
     'programming_classes/show':
@@ -659,6 +659,7 @@ describe('entry tests', () => {
     'levels/_match': './src/sites/studio/pages/levels/_match.js',
     'levels/_multi': './src/sites/studio/pages/levels/_multi.js',
     'levels/_pixelation': './src/sites/studio/pages/levels/_pixelation.js',
+    'levels/_single_multi': './src/sites/studio/pages/levels/_single_multi.js',
     'levels/_standalone_video':
       './src/sites/studio/pages/levels/_standalone_video.js',
     'levels/_summary': './src/sites/studio/pages/levels/_summary.js',
@@ -694,7 +695,7 @@ describe('entry tests', () => {
       './src/sites/studio/pages/teacher_feedbacks/index.js',
     'vocabularies/edit': './src/sites/studio/pages/vocabularies/edit.js',
     'weblab_host/network_check':
-      './src/sites/studio/pages/weblab_host/network_check.js'
+      './src/sites/studio/pages/weblab_host/network_check.js',
   };
 
   var internalEntries = {
@@ -769,6 +770,7 @@ describe('entry tests', () => {
     'programming_expressions/index':
       './src/sites/studio/pages/programming_expressions/index.js',
     'sections/new': './src/sites/studio/pages/sections/new.js',
+    'sections/edit': './src/sites/studio/pages/sections/edit.js',
     'scripts/edit': './src/sites/studio/pages/scripts/edit.js',
     'scripts/new': './src/sites/studio/pages/scripts/new.js',
     'shared/_check_admin': './src/sites/studio/pages/shared/_check_admin.js',
@@ -783,7 +785,7 @@ describe('entry tests', () => {
     'sprite_management/release_default_sprites_to_production':
       './src/sites/studio/pages/sprite_management/release_default_sprites_to_production.js',
     'sprite_management/select_start_animations':
-      './src/sites/studio/pages/sprite_management/select_start_animations.js'
+      './src/sites/studio/pages/sprite_management/select_start_animations.js',
   };
 
   var pegasusEntries = {
@@ -826,7 +828,7 @@ describe('entry tests', () => {
       './src/sites/hourofcode.com/pages/views/hoc_events_map.js',
 
     // shared between code.org and hourofcode.com
-    tutorialExplorer: './src/tutorialExplorer/tutorialExplorer.js'
+    tutorialExplorer: './src/tutorialExplorer/tutorialExplorer.js',
   };
 
   var professionalDevelopmentEntries = {
@@ -873,13 +875,13 @@ describe('entry tests', () => {
     'foorm/libraries/editor':
       './src/sites/studio/pages/foorm/libraries/editor.js',
     'foorm/simple_survey_forms/show':
-      './src/sites/studio/pages/foorm/simple_survey_forms/show.js'
+      './src/sites/studio/pages/foorm/simple_survey_forms/show.js',
   };
 
   // Entries which are shared between dashboard and pegasus, which are included
   // by haml partials in the shared/haml/ directory.
   const sharedEntries = {
-    cookieBanner: './src/cookieBanner/cookieBanner.js'
+    cookieBanner: './src/cookieBanner/cookieBanner.js',
   };
 
   var otherEntries = {
@@ -901,7 +903,7 @@ describe('entry tests', () => {
     'gamelab-api': './src/p5lab/gamelab/api-entry.js',
 
     regionalPartnerMiniContact:
-      './src/regionalPartnerMiniContact/regionalPartnerMiniContact'
+      './src/regionalPartnerMiniContact/regionalPartnerMiniContact',
   };
 
   // Create a config for each of our bundles
@@ -939,8 +941,8 @@ describe('entry tests', () => {
           // jquery object, which will always be available when we are depending
           // on qtip.  Tests skip this 'external' configuration and load the
           // npm-provided copy of qtip2.
-          qtip2: 'var $'
-        }
+          qtip2: 'var $',
+        },
       ],
       mode: minify ? 'production' : 'development',
       optimization: {
@@ -956,10 +958,10 @@ describe('entry tests', () => {
               // Handle Safari 10.x issues: [See FND-2108 / FND-2109]
               // Can remove when we can safely drop support for older iPad/iOS.
               mangle: {
-                safari10: true
-              }
-            }
-          })
+                safari10: true,
+              },
+            },
+          }),
         ],
 
         // We use a single, named runtimeChunk in order to be able to load
@@ -981,7 +983,7 @@ describe('entry tests', () => {
         // In the future, if we can limit ourselves to one webpack entry point
         // per page, we could consider removing the runtimeChunk config.
         runtimeChunk: {
-          name: 'webpack-runtime'
+          name: 'webpack-runtime',
         },
         splitChunks: {
           // Override the default limit of 3 concurrent downloads on page load,
@@ -995,7 +997,7 @@ describe('entry tests', () => {
               minChunks: 2,
               chunks: chunk => {
                 return _.keys(appsEntries).includes(chunk.name);
-              }
+              },
             },
             // Pull any module shared by 2+ codeStudioEntries into the
             // "code-studio-common" chunk.
@@ -1006,7 +1008,7 @@ describe('entry tests', () => {
                 const chunkNames = Object.keys(codeStudioEntries);
                 return chunkNames.includes(chunk.name);
               },
-              priority: 10
+              priority: 10,
             },
             // With just the cacheGroups listed above, we end up with many
             // duplicate modules between the "common" and "code-studio-common"
@@ -1039,7 +1041,7 @@ describe('entry tests', () => {
                 );
                 return chunkNames.includes(chunk.name);
               },
-              priority: 20
+              priority: 20,
             },
             vendors: {
               name: 'vendors',
@@ -1066,13 +1068,13 @@ describe('entry tests', () => {
                   'radium',
                   'react',
                   'react-dom',
-                  'wgxpath'
+                  'wgxpath',
                 ].some(libName =>
                   new RegExp(`/apps/node_modules/${libName}/`).test(
                     module.resource
                   )
                 );
-              }
+              },
             },
             p5lab: {
               name: 'p5-dependencies',
@@ -1080,22 +1082,22 @@ describe('entry tests', () => {
               minChunks: 2,
               chunks: chunk =>
                 ['spritelab', 'gamelab', 'dance'].includes(chunk.name),
-              test: module => /p5/.test(module.resource)
-            }
-          }
-        }
+              test: module => /p5/.test(module.resource),
+            },
+          },
+        },
       },
       plugins: [
         ...(process.env.ANALYZE_BUNDLE
           ? [
               new BundleAnalyzerPlugin({
                 analyzerMode: 'static',
-                excludeAssets: [...Object.keys(internalEntries)]
-              })
+                excludeAssets: [...Object.keys(internalEntries)],
+              }),
             ]
           : []),
         new StatsWriterPlugin({
-          fields: ['assetsByChunkName', 'assets']
+          fields: ['assetsByChunkName', 'assets'],
         }),
         // The [contenthash] placeholder generates a 32-character hash when
         // used within the copy plugin.
@@ -1108,12 +1110,12 @@ describe('entry tests', () => {
             {
               from: 'build/locales',
               to: '[path][name][ext]',
-              toType: 'template'
+              toType: 'template',
             },
             minify && {
               from: 'build/locales',
               to: '[path][name]wp[contenthash][ext]',
-              toType: 'template'
+              toType: 'template',
             },
             // Libraries in this directory are assumed to have .js and .min.js
             // copies of each source file. In development mode, copy only foo.js.
@@ -1131,14 +1133,14 @@ describe('entry tests', () => {
               to: minify ? '[path][name]wp[contenthash].js' : '[path][name].js',
               toType: 'template',
               globOptions: {
-                ignore: minify ? [] : ['*.min.js']
-              }
-            }
-          ].filter(entry => !!entry)
+                ignore: minify ? [] : ['*.min.js'],
+              },
+            },
+          ].filter(entry => !!entry),
         }),
         // Unit tests require certain unminified files to have been built.
         new UnminifiedWebpackPlugin({
-          include: [/^webpack-runtime/, /^applab-api/, /^gamelab-api/]
+          include: [/^webpack-runtime/, /^applab-api/, /^gamelab-api/],
         }),
         new WebpackManifestPlugin({
           basePath: 'js/',
@@ -1153,44 +1155,44 @@ describe('entry tests', () => {
                 .replace(/\.min/, '');
             }
             return file;
-          }
-        })
+          },
+        }),
       ],
       minify: minify,
       watch: watch,
       watchNotify: grunt.option('watch-notify'),
-      piskelDevMode: PISKEL_DEVELOPMENT_MODE
+      piskelDevMode: PISKEL_DEVELOPMENT_MODE,
     });
   }
 
   config.webpack = {
     build: createConfig({
       minify: false,
-      watch: false
+      watch: false,
     }),
 
     buildOffline: offlineWebpackConfig,
 
     uglify: createConfig({
       minify: true,
-      watch: false
+      watch: false,
     }),
 
     watch: createConfig({
       minify: false,
-      watch: true
-    })
+      watch: true,
+    }),
   };
 
   config['webpack-dev-server'] = {
     watch: {
       webpack: createConfig({
         minify: false,
-        watch: false
+        watch: false,
       }),
       keepAlive: true,
       proxy: {
-        '**': 'http://localhost:3000'
+        '**': 'http://localhost:3000',
       },
       publicPath: '/assets/js/',
       hot: true,
@@ -1200,9 +1202,9 @@ describe('entry tests', () => {
       watchOptions: {
         aggregateTimeout: 1000,
         poll: 1000,
-        ignored: /^node_modules\/[^@].*/
-      }
-    }
+        ignored: /^node_modules\/[^@].*/,
+      },
+    },
   };
 
   config.uglify = {
@@ -1211,11 +1213,11 @@ describe('entry tests', () => {
         ['p5play/p5.play.js', 'p5play/p5.js'].map(function (src) {
           return [
             'build/package/js/' + src.replace(/\.js$/, '.min.js'), // dst
-            'build/package/js/' + src // src
+            'build/package/js/' + src, // src
           ];
         })
-      )
-    }
+      ),
+    },
   };
 
   config.watch = {
@@ -1226,33 +1228,33 @@ describe('entry tests', () => {
       options: {
         interval: DEV_WATCH_INTERVAL,
         livereload: envConstants.AUTO_RELOAD,
-        interrupt: true
-      }
+        interrupt: true,
+      },
     },
     content: {
       files: ['static/**/*'],
       tasks: ['newer:copy', 'notify:content'],
       options: {
         interval: DEV_WATCH_INTERVAL,
-        livereload: envConstants.AUTO_RELOAD
-      }
+        livereload: envConstants.AUTO_RELOAD,
+      },
     },
     vendor_js: {
       files: ['lib/**/*.js'],
       tasks: ['newer:copy:lib', 'notify:vendor_js'],
       options: {
         interval: DEV_WATCH_INTERVAL,
-        livereload: envConstants.AUTO_RELOAD
-      }
+        livereload: envConstants.AUTO_RELOAD,
+      },
     },
     messages: {
       files: ['i18n/**/*.json'],
       tasks: ['messages', 'notify:messages'],
       options: {
         interval: DEV_WATCH_INTERVAL,
-        livereload: envConstants.AUTO_RELOAD
-      }
-    }
+        livereload: envConstants.AUTO_RELOAD,
+      },
+    },
   };
 
   (config.concurrent = {
@@ -1260,13 +1262,12 @@ describe('entry tests', () => {
     watch: {
       tasks: [
         'watch',
-        'ts',
-        envConstants.HOT ? 'webpack-dev-server:watch' : 'webpack:watch'
+        envConstants.HOT ? 'webpack-dev-server:watch' : 'webpack:watch',
       ],
       options: {
-        logConcurrentOutput: true
-      }
-    }
+        logConcurrentOutput: true,
+      },
+    },
   }),
     (config.notify = {
       'js-build': {options: {message: 'JS build completed.'}},
@@ -1274,14 +1275,14 @@ describe('entry tests', () => {
       content: {options: {message: 'Content build completed.'}},
       ejs: {options: {message: 'EJS build completed.'}},
       messages: {options: {message: 'i18n messages build completed.'}},
-      vendor_js: {options: {message: 'vendor JS copy done.'}}
+      vendor_js: {options: {message: 'vendor JS copy done.'}},
     });
 
   grunt.initConfig(config);
 
   // Autoload grunt tasks
   require('load-grunt-tasks')(grunt, {
-    pattern: ['grunt-*', '!grunt-lib-contrib']
+    pattern: ['grunt-*', '!grunt-lib-contrib'],
   });
 
   grunt.loadTasks('tasks');
@@ -1330,7 +1331,7 @@ describe('entry tests', () => {
     'newer:copy:src',
     'newer:copy:lib',
     'locales',
-    'ejs'
+    'ejs',
   ]);
 
   grunt.registerTask('check-entry-points', function () {
@@ -1347,7 +1348,7 @@ describe('entry tests', () => {
         [
           chalk.green(`[${stats.passed} passed]`),
           stats.silenced && chalk.yellow(`[${stats.silenced} silenced]`),
-          stats.failed && chalk.red(`[${stats.failed} failed]`)
+          stats.failed && chalk.red(`[${stats.failed} failed]`),
         ]
           .filter(f => f)
           .join(' ')
@@ -1371,14 +1372,14 @@ describe('entry tests', () => {
     }
     child_process.execSync('mkdir -p ./build/package/firebase');
     child_process.execSync(
-      '`npm bin`/firebase-bolt < ./firebase/rules.bolt > ./build/package/firebase/rules.json'
+      'npx firebase-bolt < ./firebase/rules.bolt > ./build/package/firebase/rules.json'
     );
   });
 
   grunt.registerTask('postbuild', [
     'newer:copy:static',
     'newer:sass',
-    'compile-firebase-rules'
+    'compile-firebase-rules',
   ]);
 
   grunt.registerTask('build', [
@@ -1390,7 +1391,7 @@ describe('entry tests', () => {
     'webpack:buildOffline',
     'notify:js-build',
     'postbuild',
-    envConstants.DEV ? 'noop' : 'newer:copy:unhash'
+    envConstants.DEV ? 'noop' : 'newer:copy:unhash',
   ]);
 
   // Builds the Service Worker used for the Code.org offline experience.
@@ -1402,14 +1403,14 @@ describe('entry tests', () => {
     'newer:messages',
     'exec:convertScssVars',
     'exec:generateSharedConstants',
-    'newer:copy:static'
+    'newer:copy:static',
   ]);
 
   grunt.registerTask('dev', [
     'prebuild',
     'newer:sass',
     'concurrent:watch',
-    'postbuild'
+    'postbuild',
   ]);
 
   grunt.registerTask('unitTest', [
@@ -1417,7 +1418,7 @@ describe('entry tests', () => {
     'exec:convertScssVars',
     'exec:generateSharedConstants',
     'karma:unit',
-    'clean:unitTest'
+    'clean:unitTest',
   ]);
 
   grunt.registerTask('storybookTest', ['karma:storybook']);

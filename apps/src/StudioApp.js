@@ -1,5 +1,3 @@
-/* global Blockly, droplet */
-
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -44,12 +42,13 @@ import {
   TestResults,
   TOOLBOX_EDIT_MODE,
   NOTIFICATION_ALERT_TYPE,
-  START_BLOCKS
+  START_BLOCKS,
 } from './constants';
+import {Renderers} from '@cdo/apps/blockly/constants';
 import {assets as assetsApi} from './clientApi';
 import {
   configCircuitPlayground,
-  configMicrobit
+  configMicrobit,
 } from './lib/kits/maker/dropletConfig';
 import {getStore} from './redux';
 import {getValidatedResult, initializeContainedLevel} from './containedLevels';
@@ -58,7 +57,7 @@ import {parseElement as parseXmlElement} from './xml';
 import {setIsRunning, setIsEditWhileRun, setStepSpeed} from './redux/runState';
 import {
   getIdleTimeSinceLastReport,
-  resetIdleTime
+  resetIdleTime,
 } from './redux/studioAppActivity';
 import {isEditWhileRun} from './lib/tools/jsdebugger/redux';
 import {setPageConstants} from './redux/pageConstants';
@@ -68,17 +67,17 @@ import {
   setAchievements,
   setBlockLimit,
   setFeedbackData,
-  showFeedback
+  showFeedback,
 } from './redux/feedback';
 import experiments from '@cdo/apps/util/experiments';
 import {
   determineInstructionsConstants,
   setInstructionsConstants,
-  setFeedback
+  setFeedback,
 } from './redux/instructions';
 import {
   setUserRoleInCourse,
-  CourseRoles
+  CourseRoles,
 } from '@cdo/apps/templates/currentUserRedux';
 import {addCallouts} from '@cdo/apps/code-studio/callouts';
 import {queryParams} from '@cdo/apps/code-studio/utils';
@@ -293,7 +292,7 @@ function showWarnings(config) {
     isOwner: project.isOwner(),
     hasDataAPIs: config.shareWarningInfo.hasDataAPIs,
     onWarningsComplete: config.shareWarningInfo.onWarningsComplete,
-    onTooYoung: config.shareWarningInfo.onTooYoung
+    onTooYoung: config.shareWarningInfo.onTooYoung,
   });
 }
 
@@ -329,7 +328,7 @@ StudioApp.prototype.init = function (config) {
         <InstructionsDialog
           title={msg.puzzleTitle({
             stage_total: config.level.lesson_total,
-            puzzle_number: config.level.puzzle_number
+            puzzle_number: config.level.puzzle_number,
           })}
         />
       </Provider>,
@@ -359,7 +358,7 @@ StudioApp.prototype.init = function (config) {
       noHowItWorks: config.noHowItWorks,
       isLegacyShare: config.isLegacyShare,
       legacyShareStyle: config.legacyShareStyle,
-      wireframeShare: config.wireframeShare
+      wireframeShare: config.wireframeShare,
     });
   }
 
@@ -371,7 +370,7 @@ StudioApp.prototype.init = function (config) {
       noHowItWorks: config.noHowItWorks,
       isLegacyShare: config.isLegacyShare,
       legacyShareStyle: config.legacyShareStyle,
-      wireframeShare: config.wireframeShare
+      wireframeShare: config.wireframeShare,
     });
   }
 
@@ -380,7 +379,7 @@ StudioApp.prototype.init = function (config) {
       makeUrl: config.makeUrl,
       makeString: config.makeString,
       makeImage: config.makeImage,
-      makeYourOwn: config.makeYourOwn
+      makeYourOwn: config.makeYourOwn,
     });
   }
 
@@ -546,7 +545,7 @@ StudioApp.prototype.init = function (config) {
           onConfirm: null,
           onCancel: function () {
             Blockly.contractEditor.hideIfOpen();
-          }
+          },
         });
 
         // return true to indicate to blockly-core that we'll own closing the
@@ -659,10 +658,10 @@ StudioApp.prototype.initProjectTemplateWorkspaceIconCallout = function () {
             qtip_config: {
               position: {
                 my: 'top center',
-                at: 'bottom center'
-              }
-            }
-          }
+                at: 'bottom center',
+              },
+            },
+          },
         ]);
       });
     }, 0);
@@ -709,7 +708,7 @@ StudioApp.prototype.getVersionHistoryHandler = function (config) {
     var dialog = this.createModalDialog({
       contentDiv: contentDiv,
       defaultBtnSelector: 'again-button',
-      id: 'showVersionsModal'
+      id: 'showVersionsModal',
     });
     ReactDOM.render(
       React.createElement(VersionHistory, {
@@ -717,7 +716,7 @@ StudioApp.prototype.getVersionHistoryHandler = function (config) {
         isProjectTemplateLevel: !!config.level.projectTemplateLevelName,
         useFilesApi: !!config.useFilesApi,
         selectedVersion: queryParams('version'),
-        isReadOnly: !!config.readonlyWorkspace
+        isReadOnly: !!config.readonlyWorkspace,
       }),
       contentDiv
     );
@@ -908,8 +907,8 @@ StudioApp.prototype.handleSharing_ = function (options) {
       data: {
         makeUrl: options.makeUrl,
         makeString: options.makeString,
-        makeImage: options.makeImage
-      }
+        makeImage: options.makeImage,
+      },
     });
     if (this.noPadding) {
       upSale.style.marginLeft = '10px';
@@ -917,7 +916,7 @@ StudioApp.prototype.handleSharing_ = function (options) {
     belowVisualization.appendChild(upSale);
   } else if (typeof options.makeYourOwn === 'undefined') {
     upSale.innerHTML = require('./templates/learn.html.ejs')({
-      assetUrl: this.assetUrl
+      assetUrl: this.assetUrl,
     });
     belowVisualization.appendChild(upSale);
   }
@@ -929,40 +928,40 @@ export function makeFooterMenuItems() {
       key: 'try-hoc',
       text: msg.tryHourOfCode(),
       link: 'https://code.org/learn',
-      newWindow: true
+      newWindow: true,
     },
     {
       key: 'how-it-works',
       text: msg.howItWorks(),
       link: project.getProjectUrl('/edit'),
-      newWindow: false
+      newWindow: false,
     },
     {
       key: 'report-abuse',
       text: msg.reportAbuse(),
       link: '/report_abuse',
-      newWindow: true
+      newWindow: true,
     },
     {
       text: msg.copyright(),
       link: 'javascript:void(0)',
-      copyright: true
+      copyright: true,
     },
     {
       text: msg.tos(),
       link: 'https://code.org/tos',
-      newWindow: true
+      newWindow: true,
     },
     {
       text: msg.privacyPolicy(),
       link: 'https://code.org/privacy',
-      newWindow: true
+      newWindow: true,
     },
     {
       text: msg.cookieNotice(),
       link: 'https://code.org/cookies',
-      newWindow: true
-    }
+      newWindow: true,
+    },
   ];
 
   //Removes 'Try-HOC' from only gamelab footer menu
@@ -994,12 +993,12 @@ StudioApp.prototype.renderShareFooter_ = function (container) {
     baseMoreMenuString: msg.builtOnCodeStudio(),
     baseStyle: {
       paddingLeft: 0,
-      width: $('#visualization').width()
+      width: $('#visualization').width(),
     },
     className: 'dark',
     menuItems: makeFooterMenuItems(),
     phoneFooter: true,
-    channel: project.getCurrentId()
+    channel: project.getCurrentId(),
   };
 
   ReactDOM.render(<SmallFooter {...reactProps} />, footerDiv);
@@ -1209,14 +1208,14 @@ StudioApp.prototype.inject = function (div, options) {
     rtl: options.isBlocklyRtl, // Set to false for RTL
     toolbox: document.getElementById('toolbox'),
     trashcan: true,
-    customSimpleDialog: this.feedback_.showSimpleDialog.bind(this.feedback_)
+    customSimpleDialog: this.feedback_.showSimpleDialog.bind(this.feedback_),
   };
 
   // Allows Google Blockly labs to use the Zelos or legacy Geras renderer instead of the default Thrasos.
   if (experiments.isEnabled('zelos')) {
-    options.renderer = 'cdo_renderer_zelos';
+    options.renderer = Renderers.ZELOS;
   } else if (experiments.isEnabled('geras')) {
-    options.renderer = 'cdo_renderer';
+    options.renderer = Renderers.GERAS;
   }
   Blockly.inject(div, utils.extend(defaults, options), Sounds.getSingleton());
 };
@@ -1235,7 +1234,7 @@ StudioApp.prototype.initReadonly = function (options) {
     assetUrl: this.assetUrl,
     readOnly: true,
     rtl: getStore().getState().isRtl,
-    scrollbars: false
+    scrollbars: false,
   });
   this.loadBlocks(options.blocks);
 };
@@ -1246,7 +1245,7 @@ StudioApp.prototype.initReadonly = function (options) {
  */
 StudioApp.prototype.loadBlocks = function (blocksXml) {
   var xml = parseXmlElement(blocksXml);
-  Blockly.Xml.domToBlockSpace(Blockly.mainBlockSpace, xml);
+  Blockly.cdoUtils.loadBlocksToWorkspace(Blockly.mainBlockSpace, xml);
 };
 
 /**
@@ -1388,7 +1387,7 @@ function resizePinnedBelowVisualizationArea() {
     'gameButtons',
     'gameButtonExtras',
     'song-selector-wrapper',
-    'poemSelector'
+    'poemSelector',
   ];
   possibleElementsAbove.forEach(id => {
     let element = document.getElementById(id);
@@ -1620,7 +1619,7 @@ StudioApp.prototype.displayFeedback = function (options) {
       maze: true,
       studio: true,
       flappy: true,
-      bounce: true
+      bounce: true,
     };
     const hasNewFinishDialog = newFinishDialogApps[this.config.app];
 
@@ -1631,7 +1630,7 @@ StudioApp.prototype.displayFeedback = function (options) {
       );
       const studentCode = {
         message: generatedCodeProperties.shortMessage,
-        code: generatedCodeProperties.code
+        code: generatedCodeProperties.code,
       };
       const canShare = !this.disableSocialShare && !options.disableSocialShare;
       store.dispatch(
@@ -1641,7 +1640,7 @@ StudioApp.prototype.displayFeedback = function (options) {
           blocksUsed: this.feedback_.getNumCountableBlocks(),
           displayFunometer: response && response.puzzle_ratings_enabled,
           studentCode,
-          feedbackImage: canShare && feedbackImage
+          feedbackImage: canShare && feedbackImage,
         })
       );
       store.dispatch(setAchievements(getAchievements(store.getState())));
@@ -1759,7 +1758,7 @@ StudioApp.prototype.report = function (options) {
     timeSinceLastMilestone:
       currentTime - this.milestoneStartTime - idleTimeSinceLastReport,
     attempt: this.attempts,
-    lines: this.feedback_.getNumBlocksUsed()
+    lines: this.feedback_.getNumBlocksUsed(),
   });
 
   // After we log the reported time we should update the start time of the milestone
@@ -1806,7 +1805,7 @@ StudioApp.prototype.silentlyReport = function (level = this.config.level.id) {
   var options = {
     app: getStore().getState().pageConstants.appType,
     level: level,
-    skipSuccessCallback: true
+    skipSuccessCallback: true,
   };
 
   // Some DB-backed levels (such as craft) only save the user's code when the user
@@ -1918,7 +1917,7 @@ StudioApp.prototype.fixViewportForSmallScreens_ = function (viewport, config) {
     'initial-scale=' + scale,
     'minimum-scale=' + scale,
     'target-densityDpi=device-dpi',
-    'viewport-fit=cover'
+    'viewport-fit=cover',
   ];
   viewport.setAttribute('content', content.join(', '));
 };
@@ -1943,7 +1942,7 @@ StudioApp.prototype.fixViewportForSpecificWidthForSmallScreens_ = function (
     'maximum-scale=' + scale,
     'minimum-scale=' + scale,
     'target-densityDpi=device-dpi',
-    'user-scalable=no'
+    'user-scalable=no',
   ];
   viewport.setAttribute('content', content.join(', '));
 };
@@ -2063,7 +2062,7 @@ StudioApp.prototype.skipLevel = function () {
       } else {
         throw new Error('No next level url available to skip to');
       }
-    }
+    },
   });
 };
 
@@ -2082,7 +2081,7 @@ StudioApp.prototype.configureDom = function (config) {
   var clickWrapper = config.runButtonClickWrapper || runButtonClickWrapper;
   var throttledRunClick = _.debounce(clickWrapper.bind(null, runClick), 250, {
     leading: true,
-    trailing: false
+    trailing: false,
   });
   if (runButton && resetButton) {
     dom.addClickTouchEvent(runButton, _.bind(throttledRunClick, this));
@@ -2210,7 +2209,7 @@ StudioApp.prototype.handleHideSource_ = function (options) {
             React.createElement(WireframeButtons, {
               channelId: project.getCurrentId(),
               appType: project.getStandaloneApp(),
-              isLegacyShare: !!options.isLegacyShare
+              isLegacyShare: !!options.isLegacyShare,
             }),
             div
           );
@@ -2263,7 +2262,7 @@ StudioApp.prototype.loadLibraryBlocks = function (config) {
     config.dropletConfig.additionalPredefValues.push(library.name);
     config.level.projectLibraries.push({
       name: library.name,
-      code: createLibraryClosure(library)
+      code: createLibraryClosure(library),
     });
     // TODO: add category management for libraries (blocked on spec)
     // config.dropletConfig.categories['libraryName'] = {
@@ -2364,7 +2363,7 @@ StudioApp.prototype.handleEditCode_ = function (config) {
         ? false
         : config.level.textModeAtStart === false
         ? config.usingTextModePref
-        : !!config.level.textModeAtStart
+        : !!config.level.textModeAtStart,
   });
   this.setupChangeHandlers();
 
@@ -2411,7 +2410,7 @@ StudioApp.prototype.handleEditCode_ = function (config) {
   // we set aceEditor.completers manually
   aceEditor.completers = [
     langTools.snippetCompleter,
-    langTools.keyWordCompleter
+    langTools.keyWordCompleter,
   ];
   // make setCompleters fail so that attempts to use it result in clear failure
   // instead of just silently not working
@@ -2438,7 +2437,7 @@ StudioApp.prototype.handleEditCode_ = function (config) {
 
   this.editor.aceEditor.setOptions({
     enableBasicAutocompletion: true,
-    enableLiveAutocompletion: true
+    enableLiveAutocompletion: true,
   });
 
   this.dropletTooltipManager = new DropletTooltipManager(
@@ -2564,7 +2563,7 @@ StudioApp.prototype.handleEditCode_ = function (config) {
         var range = this.editor.aceEditor.find(options.codeString, {
           caseSensitive: true,
           range: null,
-          preventScroll: true
+          preventScroll: true,
         });
         if (range) {
           var lineIndex = range.start.row;
@@ -2671,8 +2670,8 @@ StudioApp.prototype.enableBreakpoints = function () {
             scriptId: this.config.scriptId,
             scriptName: this.config.scriptName,
             studentUserId: queryParams('user_id'),
-            url: window.location.toString()
-          })
+            url: window.location.toString(),
+          }),
         },
         {includeUserId: true}
       );
@@ -2759,7 +2758,7 @@ StudioApp.prototype.openFunctionDefinition_ = function (config) {
       examplesCollapse: config.level.examplesCollapse,
       examplesHighlight: config.level.examplesHighlight,
       definitionCollapse: config.level.definitionCollapse,
-      definitionHighlight: config.level.definitionHighlight
+      definitionHighlight: config.level.definitionHighlight,
     });
   } else {
     Blockly.functionEditor.autoOpenFunction(
@@ -2839,7 +2838,7 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
     valueTypeTabShapeMap: utils.valueOr(config.valueTypeTabShapeMap, {}),
     typeHints: utils.valueOr(config.level.showTypeHints, false),
     isBlocklyRtl:
-      getStore().getState().isRtl && config.levelGameName !== 'Jigsaw' // disable RTL for blockly on jigsaw
+      getStore().getState().isRtl && config.levelGameName !== 'Jigsaw', // disable RTL for blockly on jigsaw
   };
 
   // Never show unused blocks in edit mode. Procedure autopopulate should always
@@ -2856,7 +2855,7 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
     'trashcan',
     'varsInGlobals',
     'grayOutUndeletableBlocks',
-    'disableParamEditing'
+    'disableParamEditing',
   ].forEach(function (prop) {
     if (config[prop] !== undefined) {
       options[prop] = config[prop];
@@ -3030,7 +3029,7 @@ StudioApp.prototype.getUnfilledFunctionalBlockError = function (topLevelType) {
 
   if (unfilled.type === topLevelType) {
     return msg.emptyTopLevelBlock({
-      topLevelBlockName: unfilled.getFieldValue()
+      topLevelBlockName: unfilled.getFieldValue(),
     });
   }
 
@@ -3162,7 +3161,7 @@ StudioApp.prototype.displayWorkspaceAlert = function (
         this.closeAlert(container[0]);
       },
       isBlockly: this.usingBlockly_,
-      displayBottom: bottom
+      displayBottom: bottom,
     },
     alertContents
   );
@@ -3186,7 +3185,7 @@ StudioApp.prototype.displayPlayspaceAlert = function (type, alertContents) {
       right: 0,
       top: 0,
       zIndex: 1000,
-      transform: 'scale(1.0)'
+      transform: 'scale(1.0)',
     });
     parent.append(container);
   }
@@ -3194,7 +3193,7 @@ StudioApp.prototype.displayPlayspaceAlert = function (type, alertContents) {
 
   let alertProps = {
     onClose: () => this.closeAlert(renderElement),
-    type: type
+    type: type,
   };
 
   if (type === NOTIFICATION_ALERT_TYPE) {
@@ -3229,8 +3228,8 @@ StudioApp.prototype.alertIfAbusiveProject = function () {
           contact_us: msg.contactUs({
             url: `https://support.code.org/hc/en-us/requests/new?&description=${encodeURIComponent(
               `Abuse error for project at url: ${window.location.toString()}`
-            )}`
-          })
+            )}`,
+          }),
         }}
       />
     );
@@ -3251,8 +3250,8 @@ StudioApp.prototype.alertIfProfaneOrPrivacyViolatingProject = function () {
           contact_us: msg.contactUs({
             url: `https://support.code.org/hc/en-us/requests/new?&description=${encodeURIComponent(
               `Abuse error for project at url: ${window.location.toString()}`
-            )}`
-          })
+            )}`,
+          }),
         }}
       />
     );
@@ -3409,7 +3408,7 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
       serverScriptId: config.serverScriptId,
       serverLevelId: config.serverLevelId,
       serverProjectLevelId: config.serverProjectLevelId,
-      codeOwnersName: config.codeOwnersName
+      codeOwnersName: config.codeOwnersName,
     },
     appSpecificConstants
   );
@@ -3441,7 +3440,7 @@ StudioApp.prototype.showRateLimitAlert = function () {
   logToCloud.addPageAction(logToCloud.PageAction.FirebaseRateLimitExceeded, {
     isEditing: project.isEditing(),
     isOwner: project.isOwner(),
-    share: !!this.share
+    share: !!this.share,
   });
 };
 

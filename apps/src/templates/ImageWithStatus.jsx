@@ -11,7 +11,7 @@ import React, {Component} from 'react';
 export const STATUS = {
   LOADING: 'loading',
   LOADED: 'loaded',
-  ERROR: 'error'
+  ERROR: 'error',
 };
 
 export class ImageWithStatus extends Component {
@@ -19,7 +19,7 @@ export class ImageWithStatus extends Component {
     src: PropTypes.string.isRequired,
     width: PropTypes.number.isRequired,
     height: PropTypes.number,
-    wrapperStyle: PropTypes.object
+    wrapperStyle: PropTypes.object,
   };
 
   constructor(props) {
@@ -29,7 +29,7 @@ export class ImageWithStatus extends Component {
     this.handleImageError = this.handleImageError.bind(this);
 
     this.state = {
-      imageStatus: STATUS.LOADING
+      imageStatus: STATUS.LOADING,
     };
   }
 

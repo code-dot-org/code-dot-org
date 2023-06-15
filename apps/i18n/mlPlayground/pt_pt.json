@@ -13,6 +13,7 @@
   "columnDetailsMaximumValue": "máx",
   "dataCardLastUpdated": "Última atualização",
   "predictButton": "Previsão",
+  "uniqueOptionsWarningNotice": "Nota",
   "datasets": {
     "medical_priority": {
       "fields": {
@@ -62,6 +63,9 @@
     },
     "poutine_toy": {
       "fields": {
+        "mushrooms": {
+          "id": "cogumelos"
+        },
         "lobster": {
           "id": "lagosta"
         },
@@ -80,6 +84,9 @@
       "fields": {
         "color": {
           "id": "cor"
+        },
+        "music": {
+          "id": "música"
         },
         "food": {
           "id": "comida"
@@ -195,6 +202,9 @@
       "fields": {
         "Internet": {
           "id": "Internet"
+        },
+        "Writing": {
+          "id": "Escrevendo"
         }
       }
     },
@@ -226,11 +236,17 @@
         "people": {
           "id": "pessoas"
         },
+        "rhino": {
+          "id": "rinoceronte"
+        },
         "elephant": {
           "id": "elefante"
         },
         "alligator": {
           "id": "jacaré"
+        },
+        "trees": {
+          "id": "árvores"
         }
       },
       "name": "Safári"
@@ -278,6 +294,9 @@
         },
         "Internet": {
           "id": "Internet"
+        },
+        "Writing": {
+          "id": "Escrevendo"
         },
         "Achievements": {
           "id": "Conquistas"

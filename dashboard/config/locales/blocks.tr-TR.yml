@@ -1341,6 +1341,7 @@ tr:
       gamelab_makeNewSpriteAnon:
         text: " {LOCATION} de yeni hareket yap {ANIMATION_NAME} "
       gamelab_makeNewSpriteGroup:
+        text: "{N} yeni {GROUP}'ı {FORMAT} içinde yap"
         options:
           FORMAT:
             '"border"': sınır
@@ -2749,6 +2750,10 @@ tr:
           DIR:
             right: sağa ↻
             left: sola ↺
+      ecosystems_catchMe:
+        text: yakala {THIS}
+      ecosystems_eat:
+        text: ye {THIS}
       ecosystems_goldilocks:
         text: |2-
            eğer {CONDITION}{SPRITE}
@@ -2758,8 +2763,25 @@ tr:
             '"too much"': çok fazla
             '"just right"': sadece doğru
             '"too little"': çok az
+      ecosystems_int10:
+        text: "{VALUE}"
+        options:
+          VALUE:
+            '0': '0'
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       storylab_clearHeadings:
         text: başlıkları temizle
+      storylab_printText:
+        text: "{TEXT} yazdır"
       storylab_setForegroundEffect2:
         text: "{EFFECT} efekti yap"
         options:

@@ -14064,10 +14064,13 @@ tr-TR:
       courseC_multi_maze_debugging8_predict12022:
         answers:
         - text: Scrat, palamuda ulaşacak. Kodda hata yok.
+          feedback: Yanlış. Scrat meşe palamuduna ulaşamayacak çünkü yanlış yöne dönüyor.
         - text: Scrat, palamuda ulaşmayacak çünkü yanlış yöne dönüyor.
           correct: true
+          feedback: Doğru! Scrat yanlış yöne döner ve meşe palamuduna ulaşamaz.
         - text: Scrat palamuda ulaşmayacak çünkü yeteri kadar "ileri hareket" bloğu
             yok.
+          feedback: Yanlış. Scrat meşe palamuduna ulaşamayacak çünkü yanlış yöne dönüyor.
         - text: Scrat, birinci bloktan hareket etmeyecek.
           feedback: Scrat, palamuda ulaşmayacak çünkü yanlış yöne dönüyor.
         questions:
@@ -14658,3 +14661,25 @@ tr-TR:
           olduğu kadar çok tamamla. Olay ve hareeketli nesne gruplarıyla alıştırma
           yapmaya devam et!
         display_name: Çok sayıda Hareketli Nesne Alıştırmaları
+      Test Contained Retriable Multi:
+        answers:
+        - text: '0'
+        - text: '1'
+        - text: '2'
+          correct: true
+        - text: '4'
+        questions:
+        - {}
+      test-single-multi-standalone-retriable:
+        answers:
+        - text: Hiçbir şey olmayacak.
+          feedback: Yanlış. Kuru ot yuvarlanmaya başlayacak
+        - text: Kuru ot ekranın üst kısmına doğru kayacak
+          feedback: Yanlış. Kuru ot yuvarlanmaya başlayacak
+        - text: Kuru ot yuvarlanmaya başlayacak
+          correct: true
+          feedback: Doğru!
+        - text: Kuru ot göz kırpacak.
+          feedback: Yanlış. Kuru ot yuvarlanmaya başlayacak
+        questions:
+        - text: Aşağıdaki kodu iyice inceleyin. "Çalıştır"a bastıktan sonra ne olacak?

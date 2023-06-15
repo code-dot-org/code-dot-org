@@ -380,6 +380,21 @@
         "fcc0109d-8a25-4194-8a5c-69985bac106c": {
           "description": "Tekrar alanlarını bularak ve bunları döngüsel yapılara taşıyarak mevcut kodu iyileştirin"
         },
+        "c2ec43ae-26ae-48df-8657-373765b01821": {
+          "description": "Döngülerde tekrarlanması gereken komutlar ile kendi başına kullanılması gereken komutlar arasında ayrım yapın."
+        },
+        "f9dc8f2c-6f5a-4854-b0bb-296d0ca89233": {
+          "description": "Manuel tekrarlama yerine bir döngü yapısı kullanmanın faydalarını tanımlayın."
+        },
+        "64421cd8-645b-40d1-b071-4f4238065252": {
+          "description": "Karmaşık görevleri tekrarlanabilir daha küçük bölümlere ayırın."
+        },
+        "ddac6ae3-6abe-444e-af05-8a6b2a5eec65": {
+          "description": "Tekrarlanan büyük kalıpları daha küçük tekrarlanan kalıplardan yapılmış olarak tanıyın."
+        },
+        "f466b8aa-18bf-460d-9780-1abcb7f32589": {
+          "description": "Manuel tekrarlama yerine bir döngü yapısı kullanmanın faydalarını tanımlayın."
+        },
         "1368d16e-4e0d-4b76-8473-2765f5379362": {
           "description": "Ölçütlere göre bir koşulun karşılanıp karşılanmadığını belirleyin."
         },
@@ -551,8 +566,17 @@
         "6a824aaa-b3b2-4c7f-b2f9-daed0835a2c5": {
           "description": "Metin ve özel görüntülerle kim olduklarını ifade eden etkileşimli bir bilgisayar programı oluşturun."
         },
+        "62ffafea-c5f4-4942-b283-9462c41d52cd": {
+          "description": "Manuel tekrarlama yerine bir döngü yapısı kullanmanın faydalarını tanımlayın."
+        },
+        "68b90262-3e0e-4c90-9888-21796cd30869": {
+          "description": "Döngülerde tekrarlanması gereken komutlar ile kendi başına kullanılması gereken komutlar arasında ayrım yapın."
+        },
         "3fac17b3-f27c-4f5c-98f1-a43e3e18d4e0": {
           "description": "Bir eylemin kaç kez tekrarlanması gerektiğini sayın ve bunu bir döngü olarak gösterin."
+        },
+        "81e6c614-6b5d-43db-8178-3adf983eb5b6": {
+          "description": "Karmaşık görevleri tekrarlanabilir daha küçük bölümlere ayırın."
         },
         "e4a76fad-2750-4f3b-8138-0e0a932b5e2b": {
           "description": "Basit şekilleri, iç içe geçmiş döngüler ile karmaşık tasarımlarla birleştirme."
@@ -689,6 +713,12 @@
         "be1a4163-770d-4fbd-85a1-4c18198d5c94": {
           "description": "Belirli bir görev için bir dizi komutu döngüye sokan bir program oluşturun."
         },
+        "dbb376e1-41ba-4f5f-8125-30a2de24cead": {
+          "description": "Manuel tekrarlama yerine bir döngü yapısı kullanmanın faydalarını tanımlayın."
+        },
+        "36786d0a-ce44-48d7-b557-a7e44c32c28d": {
+          "description": "Manuel tekrarlama yerine bir döngü yapısı kullanmanın faydalarını tanımlayın."
+        },
         "6baba9ab-130e-4a58-bf30-7cee60bacb18": {
           "description": "Uzun bir talimat dizisini mümkün olan en küçük yinelenebilir diziye bölün."
         },
@@ -805,6 +835,24 @@
         },
         "8a54dbc1-2cc5-4fbe-a69d-1fcdeb521415": {
           "description": "Uzun bir talimat dizisini tekrarlanabilir en büyük diziye ayırın."
+        },
+        "d1a8cfa4-2a01-4cd1-bf6b-7bdb85dfbba2": {
+          "description": "Manuel tekrarlama yerine bir döngü yapısı kullanmanın faydalarını tanımlayın."
+        },
+        "19f2a21b-7cd6-49c1-b058-a71afadfbf0f": {
+          "description": "Manuel tekrarlama yerine bir döngü yapısı kullanmanın faydalarını tanımlayın."
+        },
+        "bbb2787f-1faa-4193-93ec-e2e5ff8de139": {
+          "description": "Döngülerde tekrarlanması gereken komutlar ile kendi başına kullanılması gereken komutlar arasında ayrım yapın."
+        },
+        "64f8b4e0-c197-41bc-9e3d-b957587027d9": {
+          "description": "Tekrarlanan büyük kalıpları daha küçük tekrarlanan kalıplardan yapılmış olarak tanıyın."
+        },
+        "a3d9c13d-e5d1-4c96-8605-b6c6968e446a": {
+          "description": "Manuel tekrarlama yerine bir döngü yapısı kullanmanın faydalarını tanımlayın."
+        },
+        "f875fba7-8b45-4faa-b661-24d7eae983b5": {
+          "description": "Karmaşık görevleri tekrarlanabilir daha küçük bölümlere ayırın."
         },
         "2dc48a33-af54-4ea5-b2a5-4b8c16018529": {
           "description": "Bir döngü ve iç içe geçmiş bir döngü kullanmanın arasındaki farkı tanımlayın."
@@ -950,6 +998,9 @@
         "65939b9f-ba0f-4834-8f54-24419c9391e5": {
           "description": "Tekrar alanlarını bularak ve bunları döngüsel yapılara taşıyarak mevcut kodu iyileştirin"
         },
+        "3a06cce8-584a-431c-8cca-05ad9b0df32d": {
+          "description": "Manuel tekrarlama yerine bir döngü yapısı kullanmanın faydalarını tanımlayın."
+        },
         "d7a5432f-6854-483b-8a5b-fcb1844dd603": {
           "description": "Uzun bir talimat dizisini mümkün olan en küçük yinelenebilir diziye bölün."
         },
@@ -1049,6 +1100,9 @@
         "95c27888-7fcc-4606-8647-b8d7aca4841c": {
           "description": "Uzun bir talimat dizisini mümkün olan en küçük yinelenebilir diziye bölün."
         },
+        "afb9f46f-81f6-4f0a-a017-4e9c5fd5c7f6": {
+          "description": "Manuel tekrarlama yerine bir döngü yapısı kullanmanın faydalarını tanımlayın."
+        },
         "03eb830d-5a23-4897-b23b-067e5eb0180f": {
           "description": "Bir şekli en büyük tekrarlanabilir dizisine ayrıştırın."
         },
@@ -1136,6 +1190,9 @@
         "b2de5b75-e224-4eee-aa3a-ab51792f3dea": {
           "description": "Uzun bir talimat dizisini tekrarlanabilir en büyük diziye ayırın."
         },
+        "be258fd0-4790-440a-99ef-bb20ce2d3c8b": {
+          "description": "Manuel tekrarlama yerine bir döngü yapısı kullanmanın faydalarını tanımlayın."
+        },
         "2998b3d3-4953-4cbf-94f2-004630893e21": {
           "description": "Eylemleri taşımak ve gerçekleştirmek için sıralı ve döngülü komutların bir kombinasyonunu kullanın."
         },
@@ -1144,6 +1201,12 @@
         },
         "5b7b74bc-4f78-4c98-b221-5233324b086e": {
           "description": "Belirli bir görev için tek bir komutu döngüye sokan bir program yazın."
+        },
+        "cf1d581f-7554-4432-a92e-3e5f57f9144e": {
+          "description": "Döngülerde tekrarlanması gereken komutlar ile kendi başına kullanılması gereken komutlar arasında ayrım yapın."
+        },
+        "dda209ff-ec81-4914-93c0-2716153efce4": {
+          "description": "Manuel tekrarlama yerine bir döngü yapısı kullanmanın faydalarını tanımlayın."
         },
         "05615b7c-1833-4ca9-96a8-45812c1e8a4a": {
           "description": "Önceden tanımlanmış eylemleri ve olaya dayalı olanları ayırt etme alıştırması yapın."
@@ -1271,6 +1334,12 @@
         "a1e3a5d5-d609-4c1f-a4ef-6000a4335957": {
           "description": "Kullanıcı girişine yanıt veren etkileşimli bir bilgisayar programı oluşturun."
         },
+        "0272de44-fd6e-4cc0-a5f1-b4f21a96d21b": {
+          "description": "Manuel tekrarlama yerine bir döngü yapısı kullanmanın faydalarını tanımlayın."
+        },
+        "5936ef50-add4-4fbb-a911-224d5c1e9fcc": {
+          "description": "Döngülerde tekrarlanması gereken komutlar ile kendi başına kullanılması gereken komutlar arasında ayrım yapın."
+        },
         "8cba8ac9-820e-48fd-b726-f7926ecf3348": {
           "description": "Değerleri mevcut değişkenlere atama."
         },
@@ -1279,6 +1348,15 @@
         },
         "ab00e2d4-a6f0-4bdf-80fd-3d1d63a4b80f": {
           "description": "Bir döngü içerisindeki değerleri değiştirmek için değişkenleri kullanma."
+        },
+        "dd570e3f-8340-4838-8ba1-de856546f834": {
+          "description": "Karmaşık görevleri tekrarlanabilir daha küçük bölümlere ayırın."
+        },
+        "12412b47-e83e-43a9-ad42-e98cba364913": {
+          "description": "Tekrarlanan büyük kalıpları daha küçük tekrarlanan kalıplardan yapılmış olarak tanıyın."
+        },
+        "931f4770-e471-4bf8-a79a-b9a7c9d14890": {
+          "description": "Manuel tekrarlama yerine bir döngü yapısı kullanmanın faydalarını tanımlayın."
         },
         "059b2997-3d05-4186-8450-066fceeb8c5b": {
           "description": "Çalışma zamanı sırasında miktarları değiştirmek için değişkenleri kullanabilecekleri alanları tanımlama. "
@@ -1613,6 +1691,9 @@
         "bf154cd9-0914-43c2-b895-030de92d1427": {
           "description": "Manuel tekrarlama yerine bir döngü yapısı kullanmanın faydalarını tanımlayın."
         },
+        "b27f9553-dc95-452c-a4ee-dc69db0fc913": {
+          "description": "Döngülerde tekrarlanması gereken komutlar ile kendi başına kullanılması gereken komutlar arasında ayrım yapın."
+        },
         "74ce2354-89e9-4396-8cf5-5f9a43e02bd4": {
           "description": "Bir eğitmen tarafından verilen komutları tekrarlama."
         },
@@ -1847,11 +1928,29 @@
         "50bc6662-3d3d-4bc6-ac09-8c2d2961bed2": {
           "description": "Kod ile dans animasyonları oluşturma"
         },
+        "f66d5b0d-f5b6-441f-b3c0-c24a7a857912": {
+          "description": "Manuel tekrarlama yerine bir döngü yapısı kullanmanın faydalarını tanımlayın."
+        },
         "d41cb934-ead6-42d0-a3c6-3a692fa53626": {
           "description": "Uzun bir talimat dizisini tekrarlanabilir en büyük diziye ayırın."
         },
         "19dc83bf-d44c-4e6b-a7ac-c11ada6cb656": {
           "description": "Bir labirentin sonuna ulaşmak için sıralı ve döngülü komutların bir kombinasyonunu kullanın."
+        },
+        "7304a528-6a3a-4670-9e66-1438d26c3fc2": {
+          "description": "Manuel tekrarlama yerine bir döngü yapısı kullanmanın faydalarını tanımlayın."
+        },
+        "32250c07-4872-43ce-9968-33e17f779cf3": {
+          "description": "Döngülerde tekrarlanması gereken komutlar ile kendi başına kullanılması gereken komutlar arasında ayrım yapın."
+        },
+        "06be5715-7c67-4b13-816d-acb7253a13b2": {
+          "description": "Karmaşık görevleri tekrarlanabilir daha küçük bölümlere ayırın."
+        },
+        "b884b12d-1247-42f3-a907-652dd25566f2": {
+          "description": "Tekrarlanan büyük kalıpları daha küçük tekrarlanan kalıplardan yapılmış olarak tanıyın."
+        },
+        "aca03fc9-6f07-4b4a-9b83-26e9ff32ce1f": {
+          "description": "Manuel tekrarlama yerine bir döngü yapısı kullanmanın faydalarını tanımlayın."
         },
         "f35a3857-a630-4783-98c3-c0e6304af48f": {
           "description": "Hem döngüleri hem de iç içe geçmiş döngüleri kullanarak kodu en büyük tekrarlanabilir sıralara ayırın."
@@ -1991,6 +2090,9 @@
         "b6f41a7c-0967-4986-b7b6-910819b28396": {
           "description": "Tekrar alanlarını bularak ve bunları döngüsel yapılara taşıyarak mevcut kodu iyileştirin"
         },
+        "442a1fcc-3ffc-4e3a-9c55-9cfd94d281e1": {
+          "description": "Manuel tekrarlama yerine bir döngü yapısı kullanmanın faydalarını tanımlayın."
+        },
         "8fef5927-aacf-4340-b4c3-d221ebe3f13a": {
           "description": "Uzun bir talimat dizisini mümkün olan en küçük yinelenebilir diziye bölün."
         },
@@ -2066,11 +2168,20 @@
         "0709575a-e9e6-4856-a4f4-02b290f86975": {
           "description": "Oluşturdukları malzemelere ilişkin kendi haklarını anlama"
         },
+        "5d061773-3d1d-4dc1-866b-66a878b9b5e4": {
+          "description": "Manuel tekrarlama yerine bir döngü yapısı kullanmanın faydalarını tanımlayın."
+        },
+        "c94bf0ed-de3d-428d-b6af-f3d9283d6b81": {
+          "description": "Döngülerde tekrarlanması gereken komutlar ile kendi başına kullanılması gereken komutlar arasında ayrım yapın."
+        },
         "70f5581b-eb40-4ba7-9a34-3eb09e0f5ea8": {
           "description": "Basit şekilleri, iç içe geçmiş döngüler ile karmaşık tasarımlarla birleştirme."
         },
         "da653a73-7c1c-4402-ab24-e14e4adf72d1": {
           "description": "Bir eylemin kaç kez tekrarlanması gerektiğini sayın ve bunu bir döngü olarak gösterin."
+        },
+        "5b77c883-5479-4cfe-a31a-605957dd083d": {
+          "description": "Karmaşık görevleri tekrarlanabilir daha küçük bölümlere ayırın."
         },
         "6174da85-eb3a-4c0e-925d-360b04604fdb": {
           "description": "Bir döngü ve iç içe geçmiş döngüye ne zaman ihtiyaç duyulduğunu veya döngüye ne zaman ihtiyaç duyulmadığını açıklama."

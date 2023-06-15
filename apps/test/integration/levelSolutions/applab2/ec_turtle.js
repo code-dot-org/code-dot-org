@@ -8,7 +8,7 @@ module.exports = {
   app: 'applab',
   skinId: 'applab',
   levelDefinition: Object.assign({}, levels.ec_simple, {
-    showTurtleBeforeRun: true
+    showTurtleBeforeRun: true,
   }),
   tests: [
     {
@@ -38,8 +38,8 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
 
     {
@@ -76,8 +76,8 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
-    }
-  ]
+        testResult: TestResults.FREE_PLAY,
+      },
+    },
+  ],
 };

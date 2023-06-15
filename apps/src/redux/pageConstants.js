@@ -84,11 +84,12 @@ var ALLOWED_KEYS = new Set([
   'aiEnabled',
   'aiModelId',
   'aiModelName',
-  'isCurriculumLevel'
+  'isCurriculumLevel',
+  'recaptchaSiteKey',
 ]);
 
 const initialState = {
-  assetUrl() {}
+  assetUrl() {},
 };
 
 export default function reducer(state = initialState, action) {
@@ -135,6 +136,6 @@ export default function reducer(state = initialState, action) {
 export function setPageConstants(props) {
   return {
     type: SET_PAGE_CONSTANTS,
-    props: props
+    props: props,
   };
 }

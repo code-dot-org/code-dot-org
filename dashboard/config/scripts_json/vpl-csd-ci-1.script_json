@@ -7,11 +7,12 @@
       "curriculum_umbrella": "CSD Self Paced PL",
       "has_verified_resources": true,
       "is_migrated": true,
-      "student_detail_progress_view": true
+      "student_detail_progress_view": true,
+      "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-03-31 22:54:30 UTC",
+    "serialized_at": "2023-04-26 08:05:53 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -233,6 +234,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-ModuleOverview-U1_2023"
+        ],
         "progression": "Unit Overview"
       },
       "bonus": false,
@@ -255,6 +259,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-pilot-S22-CI-Unit_Overview_U1L2_2023"
+        ],
         "progression": "Unit Overview"
       },
       "bonus": false,
@@ -277,6 +284,34 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CI-LessonTypes-U1-2023"
+        ],
+        "progression": "Unit Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CI-LessonTypes-U1-2023"
+        ],
+        "lesson.key": "Introduction to Problem Solving and Computing",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd-ci-1",
+        "activity_section.key": "02cecee6-72d4-4e3a-9b9c-4f3815cd663f"
+      },
+      "level_keys": [
+        "VPL-CI-LessonTypes-U1-2023"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-pilot-S22-CI-Unit_PSP-U1L3_2023"
+        ],
         "progression": "Unit Overview"
       },
       "bonus": false,
@@ -294,11 +329,14 @@
       ]
     },
     {
-      "chapter": 4,
+      "chapter": 5,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-pilot-S22-CI-Unit_PSP-U1L3-alternate lessons_2023"
+        ],
         "progression": "Chapter 1 Overview"
       },
       "bonus": false,
@@ -316,11 +354,14 @@
       ]
     },
     {
-      "chapter": 5,
+      "chapter": 6,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD Problem Solving Process Video_2023"
+        ],
         "progression": "The Problem Solving Process"
       },
       "bonus": false,
@@ -338,11 +379,14 @@
       ]
     },
     {
-      "chapter": 6,
+      "chapter": 7,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-pilot-S22-CI-Unit_PSP-U1L3-Chapter1PSP_2023"
+        ],
         "progression": "The Problem Solving Process"
       },
       "bonus": false,
@@ -360,11 +404,14 @@
       ]
     },
     {
-      "chapter": 7,
+      "chapter": 8,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod1-lesson3-animals_2023"
+        ],
         "progression": "The Problem Solving Process"
       },
       "bonus": false,
@@ -382,11 +429,14 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 9,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-pilot-S22-CI-Unit_PSP-U1L3-Chapter1PSP-practice_2023"
+        ],
         "progression": "The Problem Solving Process"
       },
       "bonus": false,
@@ -404,11 +454,14 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 10,
       "position": 6,
       "activity_section_position": 5,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-PSP-C4U_2023"
+        ],
         "progression": "The Problem Solving Process"
       },
       "bonus": false,
@@ -426,11 +479,14 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 11,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-pilot-S22-2-week1-U1L5_2023"
+        ],
         "progression": "Chapter 2 overview"
       },
       "bonus": false,
@@ -448,11 +504,14 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 12,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD What Makes a Computer a Computer Video_2023"
+        ],
         "progression": "Introduction to computing"
       },
       "bonus": false,
@@ -470,11 +529,14 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 13,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-pilot-S22-mod1-IOSP-Overview_2023"
+        ],
         "progression": "Introduction to computing"
       },
       "bonus": false,
@@ -492,11 +554,15 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 14,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U1 processing bday_2023"
+        ],
         "progression": "Explore processing and storage"
       },
       "bonus": false,
@@ -514,11 +580,15 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 15,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U1 storage outfit_2023"
+        ],
         "progression": "Explore processing and storage"
       },
       "bonus": false,
@@ -536,11 +606,14 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 16,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U1 storage video_2023"
+        ],
         "progression": "Explore processing and storage"
       },
       "bonus": false,
@@ -558,11 +631,14 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 17,
       "position": 7,
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U1 IOSP match_2023"
+        ],
         "progression": "Explore processing and storage"
       },
       "bonus": false,
@@ -580,11 +656,14 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 18,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-Cahpter2-ProjectOverview-mod1_2023"
+        ],
         "progression": "Sample projects"
       },
       "bonus": false,
@@ -602,11 +681,14 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 19,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "-VPL-CSD-PILOT-summer22-navigation_2023"
+        ],
         "progression": "Wrap up"
       },
       "bonus": false,
@@ -642,6 +724,18 @@
         "level.key": "VPL-CSD-pilot-S22-CI-Unit_Overview_U1L2_2023",
         "script_level.level_keys": [
           "VPL-CSD-pilot-S22-CI-Unit_Overview_U1L2_2023"
+        ],
+        "lesson.key": "Introduction to Problem Solving and Computing",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd-ci-1",
+        "activity_section.key": "02cecee6-72d4-4e3a-9b9c-4f3815cd663f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CI-LessonTypes-U1-2023",
+        "script_level.level_keys": [
+          "VPL-CI-LessonTypes-U1-2023"
         ],
         "lesson.key": "Introduction to Problem Solving and Computing",
         "lesson_group.key": "lessonGroup-2",

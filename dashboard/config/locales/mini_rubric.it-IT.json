@@ -3,7 +3,7 @@
     "data": {
       "mini_rubric": {
         "allthethings-mini-rubric-gamelab": {
-          "rubric_key_concept": "Concetto Chiave"
+          "rubric_key_concept": "Concetto chiave"
         },
         "CSD U2 Image assessment_2021": {
           "rubric_performance_level_1": "L'immagine viene visualizzata correttamente e un attributo `alt` fornisce una descrizione di prova ragionevole dell'immagine. Nessun codice non necessario è incluso nel tag `img`. L'attribuzione è accurata e l'immagine è denominata in modo appropriato."
@@ -17,6 +17,428 @@
         },
         "CSD U2 classes summer_2019": {
           "rubric_key_concept": "Crea classi che possono essere referenziate e modificate come gruppo."
+        },
+        "CSD U4 - Design Mode Project_2019": {
+          "rubric_key_concept": "Crea un prototipo digitale per la schermata di un'applicazione.",
+          "rubric_performance_level_1": "Il prototipo digitale è una buona riproduzione del prototipo su carta, con solo alcune incongruenze molto lievi.",
+          "rubric_performance_level_2": "La maggior parte degli elementi del prototipo su carta è stata ricreata nel prototipo digitale, ma potrebbero esserci delle incongruenze nella disposizione, nelle dimensioni o alcuni elementi minori mancanti. Le incongruenze non influirebbero sulla funzionalità del prototipo.",
+          "rubric_performance_level_3": "Alcuni elementi del prototipo su carta sono stati ricreati nel prototipo digitale, ma ci sono abbastanza incongruenze da influire sulla funzionalità del prototipo.",
+          "rubric_performance_level_4": "Non ci sono elementi nel prototipo digitale o gli elementi non sono coerenti con il prototipo su carta."
+        },
+        "CSD U4 - Design Mode Project_2021": {
+          "rubric_key_concept": "Crea un prototipo digitale per la schermata di un'applicazione.",
+          "rubric_performance_level_1": "Il prototipo digitale è una buona riproduzione del prototipo su carta, con solo alcune incongruenze molto lievi.",
+          "rubric_performance_level_2": "La maggior parte degli elementi del prototipo su carta è stata ricreata nel prototipo digitale, ma potrebbero esserci delle incongruenze nella disposizione, nelle dimensioni o alcuni elementi minori mancanti. Le incongruenze non influirebbero sulla funzionalità del prototipo.",
+          "rubric_performance_level_3": "Alcuni elementi del prototipo su carta sono stati ricreati nel prototipo digitale, ma ci sono abbastanza incongruenze da influire sulla funzionalità del prototipo.",
+          "rubric_performance_level_4": "Non ci sono elementi nel prototipo digitale o gli elementi non sono coerenti con il prototipo su carta."
+        },
+        "CSD U4 - Design Mode Project_2022": {
+          "rubric_key_concept": "Crea un prototipo digitale per la schermata di un'applicazione.",
+          "rubric_performance_level_1": "Il prototipo digitale è una buona riproduzione del prototipo su carta, con solo alcune incongruenze molto lievi.",
+          "rubric_performance_level_2": "La maggior parte degli elementi del prototipo su carta è stata ricreata nel prototipo digitale, ma potrebbero esserci delle incongruenze nella disposizione, nelle dimensioni o alcuni elementi minori mancanti. Le incongruenze non influirebbero sulla funzionalità del prototipo.",
+          "rubric_performance_level_3": "Alcuni elementi del prototipo su carta sono stati ricreati nel prototipo digitale, ma ci sono abbastanza incongruenze da influire sulla funzionalità del prototipo.",
+          "rubric_performance_level_4": "Non ci sono elementi nel prototipo digitale o gli elementi non sono coerenti con il prototipo su carta."
+        },
+        "CSDU4 Project Events_2019": {
+          "rubric_key_concept": "integrare tutti i componenti del lavoro collaborativo in un artefatto finale di natura computazionale.",
+          "rubric_performance_level_1": "Tutte le schermate di ogni membro del gruppo di lavoro sono incluse nel progetto e ogni pulsante rimanda alla schermata appropriata.",
+          "rubric_performance_level_2": "Tutte le schermate di ogni membro del gruppo di lavoro sono incluse nel progetto e la maggior parte dei pulsanti rimanda alla schermata appropriata, ma potrebbero esserci errori minori che impediscono il funzionamento di tutti i pulsanti.",
+          "rubric_performance_level_3": "Le schermate di più membri del gruppo di lavoro sono state incorporate nel progetto e almeno un pulsante rimanda a un'altra schermata.",
+          "rubric_performance_level_4": "Nessun pulsante si collega ad altre schermate del progetto."
+        },
+        "CSDU4 Project Events_2021": {
+          "rubric_key_concept": "integrare tutti i componenti del lavoro collaborativo in un artefatto finale di natura computazionale.",
+          "rubric_performance_level_1": "Tutte le schermate di ogni membro del gruppo di lavoro sono incluse nel progetto e ogni pulsante rimanda alla schermata appropriata.",
+          "rubric_performance_level_2": "Tutte le schermate di ogni membro del gruppo di lavoro sono incluse nel progetto e la maggior parte dei pulsanti rimanda alla schermata appropriata, ma potrebbero esserci errori minori che impediscono il funzionamento di tutti i pulsanti.",
+          "rubric_performance_level_3": "Le schermate di più membri del gruppo di lavoro sono state incorporate nel progetto e almeno un pulsante rimanda a un'altra schermata.",
+          "rubric_performance_level_4": "Nessun pulsante si collega ad altre schermate del progetto."
+        },
+        "CSDU4 Project Events_2022": {
+          "rubric_key_concept": "integrare tutti i componenti del lavoro collaborativo in un artefatto finale di natura computazionale.",
+          "rubric_performance_level_1": "Tutte le schermate di ogni membro del gruppo di lavoro sono incluse nel progetto e ogni pulsante rimanda alla schermata appropriata.",
+          "rubric_performance_level_2": "Tutte le schermate di ogni membro del gruppo di lavoro sono incluse nel progetto e la maggior parte dei pulsanti rimanda alla schermata appropriata, ma potrebbero esserci errori minori che impediscono il funzionamento di tutti i pulsanti.",
+          "rubric_performance_level_3": "Le schermate di più membri del gruppo di lavoro sono state incorporate nel progetto e almeno un pulsante rimanda a un'altra schermata.",
+          "rubric_performance_level_4": "Nessun pulsante si collega ad altre schermate del progetto."
+        },
+        "U4 Model Design 7_2019": {
+          "rubric_key_concept": "Seleziona l'elemento di input appropriato per un determinato tipo di dati.",
+          "rubric_performance_level_1": "Tutti gli elementi indicati sono inclusi nella schermata e le loro proprietà sono state impostate in modo tale che la schermata sia molto simile all'immagine di esempio.",
+          "rubric_performance_level_2": "Quasi tutti gli elementi indicati sono inclusi sulla schermata, inclusi almeno un elemento di testo, un pulsante, un input di testo, un'immagine e una casella di controllo che non erano presenti nel progetto iniziale.",
+          "rubric_performance_level_3": "Alcuni degli elementi indicati sono inclusi nella schermata, tra cui almeno un elemento di testo e un pulsante che non erano presenti nel progetto iniziale.",
+          "rubric_performance_level_4": "Pochissimi degli elementi indicati sono inclusi nella schermata."
+        },
+        "U4 Model Design 7_2021": {
+          "rubric_key_concept": "Seleziona l'elemento di input appropriato per un determinato tipo di dati.",
+          "rubric_performance_level_1": "Tutti gli elementi indicati sono inclusi nella schermata e le loro proprietà sono state impostate in modo tale che la schermata sia molto simile all'immagine di esempio.",
+          "rubric_performance_level_2": "Quasi tutti gli elementi indicati sono inclusi sulla schermata, inclusi almeno un elemento di testo, un pulsante, un input di testo, un'immagine e una casella di controllo che non erano presenti nel progetto iniziale.",
+          "rubric_performance_level_3": "Alcuni degli elementi indicati sono inclusi nella schermata, tra cui almeno un elemento di testo e un pulsante che non erano presenti nel progetto iniziale.",
+          "rubric_performance_level_4": "Pochissimi degli elementi indicati sono inclusi nella schermata."
+        },
+        "U4 Model Design 7_2022": {
+          "rubric_key_concept": "Seleziona l'elemento di input appropriato per un determinato tipo di dati.",
+          "rubric_performance_level_1": "Tutti gli elementi indicati sono inclusi nella schermata e le loro proprietà sono state impostate in modo tale che la schermata sia molto simile all'immagine di esempio.",
+          "rubric_performance_level_2": "Quasi tutti gli elementi indicati sono inclusi sulla schermata, inclusi almeno un elemento di testo, un pulsante, un input di testo, un'immagine e una casella di controllo che non erano presenti nel progetto iniziale.",
+          "rubric_performance_level_3": "Alcuni degli elementi indicati sono inclusi nella schermata, tra cui almeno un elemento di testo e un pulsante che non erano presenti nel progetto iniziale.",
+          "rubric_performance_level_4": "Pochissimi degli elementi indicati sono inclusi nella schermata."
+        },
+        "U4 Model Program 5_2019": {
+          "rubric_key_concept": "creare un evento che rileva e risponde in base ai dati di ingresso dell'utente",
+          "rubric_performance_level_1": "Ogni pulsante rimanda alla schermata corretta del prototipo.",
+          "rubric_performance_level_2": "Diversi pulsanti del prototipo rimandano alla schermata appropriata.",
+          "rubric_performance_level_3": "C'è almeno un evento nel prototipo che può essere attivato per produrre una sorta di risposta.",
+          "rubric_performance_level_4": "Non ci sono eventi nel prototipo."
+        },
+        "U4 Model Program 5_2021": {
+          "rubric_key_concept": "creare un evento che rileva e risponde in base ai dati di ingresso dell'utente",
+          "rubric_performance_level_1": "Ogni pulsante rimanda alla schermata corretta del prototipo.",
+          "rubric_performance_level_2": "Diversi pulsanti del prototipo rimandano alla schermata appropriata.",
+          "rubric_performance_level_3": "C'è almeno un evento nel prototipo che può essere attivato per produrre una sorta di risposta.",
+          "rubric_performance_level_4": "Non ci sono eventi nel prototipo."
+        },
+        "U4 Model Program 5_2022": {
+          "rubric_key_concept": "creare un evento che rileva e risponde in base ai dati di ingresso dell'utente",
+          "rubric_performance_level_1": "Ogni pulsante rimanda alla schermata corretta del prototipo.",
+          "rubric_performance_level_2": "Diversi pulsanti del prototipo rimandano alla schermata appropriata.",
+          "rubric_performance_level_3": "C'è almeno un evento nel prototipo che può essere attivato per produrre una sorta di risposta.",
+          "rubric_performance_level_4": "Non ci sono eventi nel prototipo."
+        },
+        "CDU U6 Playground Sound Board_2019": {
+          "rubric_key_concept": "Crea e modifica le matrici, sviluppa software per controllare vari dispositivi fisici.",
+          "rubric_performance_level_1": "Il programma funziona come descritto, con almeno quattro eventi della scheda che attivano ciascuno una serie diversa di note. ",
+          "rubric_performance_level_2": "Il programma riproduce una serie di note quando viene attivato da un particolare evento della scheda, ma potrebbero esserci errori nel codice che ne impediscono il funzionamento esattamente come descritto.",
+          "rubric_performance_level_3": "Nel programma è presente un codice che può generare una serie di note sul cicalino, ma il codice non può essere attivato da un evento sulla scheda, oppure errori significativi nel codice impediscono la riproduzione delle note.",
+          "rubric_performance_level_4": "Nel programma non ci sono sequenze di note o non esiste alcun codice per produrre l'uscita del segnale acustico."
+        },
+        "CDU U6 Playground Sound Board_2021": {
+          "rubric_key_concept": "Crea e modifica le matrici, sviluppa software per controllare vari dispositivi fisici.",
+          "rubric_performance_level_1": "Il programma funziona come descritto, con almeno quattro eventi della scheda che attivano ciascuno una serie diversa di note. ",
+          "rubric_performance_level_2": "Il programma riproduce una serie di note quando viene attivato da un particolare evento della scheda, ma potrebbero esserci errori nel codice che ne impediscono il funzionamento esattamente come descritto.",
+          "rubric_performance_level_3": "Nel programma è presente un codice che può generare una serie di note sul cicalino, ma il codice non può essere attivato da un evento sulla scheda, oppure errori significativi nel codice impediscono la riproduzione delle note.",
+          "rubric_performance_level_4": "Nel programma non ci sono sequenze di note o non esiste alcun codice per produrre l'uscita del segnale acustico."
+        },
+        "CSD U6 LED all_2019": {
+          "rubric_key_concept": "Sviluppa software per controllare un svariata gamma di dispositivi fisici.",
+          "rubric_performance_level_1": "Il programma funziona come descritto nelle istruzioni, con i pulsanti che attivano il LED per accendersi, lampeggiare, lampeggiare o spegnersi. Non esiste un codice non necessario.",
+          "rubric_performance_level_2": "I pulsanti di accensione e spegnimento del programma funzionano entrambi, ma potrebbe esserci del codice non necessario che non influisce sulla funzionalità di questi due pulsanti.",
+          "rubric_performance_level_3": "Almeno uno dei pulsanti diversi dal pulsante «on» funziona, oppure i blocchi corretti per controllare il LED sono inclusi nel programma, ma non vengono attivati correttamente da un evento.",
+          "rubric_performance_level_4": "Nessun pulsante diverso dal pulsante «on» funziona e non esiste alcun codice che possa essere utilizzato per controllare il LED."
+        },
+        "CSD U6 LED all_2021": {
+          "rubric_key_concept": "Sviluppa software per controllare un svariata gamma di dispositivi fisici.",
+          "rubric_performance_level_1": "Il programma funziona come descritto nelle istruzioni, con i pulsanti che attivano il LED per accendersi, lampeggiare, lampeggiare o spegnersi. Non esiste un codice non necessario.",
+          "rubric_performance_level_2": "I pulsanti di accensione e spegnimento del programma funzionano entrambi, ma potrebbe esserci del codice non necessario che non influisce sulla funzionalità di questi due pulsanti.",
+          "rubric_performance_level_3": "Almeno uno dei pulsanti diversi dal pulsante «on» funziona, oppure i blocchi corretti per controllare il LED sono inclusi nel programma, ma non vengono attivati correttamente da un evento.",
+          "rubric_performance_level_4": "Nessun pulsante diverso dal pulsante «on» funziona e non esiste alcun codice che possa essere utilizzato per controllare il LED."
+        },
+        "CSD U6 analog rgb 3_2019": {
+          "rubric_key_concept": "Sviluppa un programma che risponda a diversi tipi di input hardware, inclusi quelli che l'utente controlla o non controlla attivamente. Ora puoi capire la necessità di vari tipi di ingressi (input), sia analogici che digitali: rappresenta i valori di tali ingressi in vari modi.",
+          "rubric_performance_level_1": "Il programma visualizza un'ampia gamma di colori in risposta alle variazioni di luce, temperatura e suono. Nel programma non è presente alcun codice non necessario.",
+          "rubric_performance_level_2": "Il programma rileva le variazioni di luce, temperatura e suoni e cambia visibilmente il colore in risposta ad almeno uno di questi sensori.",
+          "rubric_performance_level_3": "Il programma cambia colore e utilizza almeno dei tre sensori analogici per rilevare i cambiamenti nell'ambiente.",
+          "rubric_performance_level_4": "Il programma utilizza i sensori analogici o non cambia affatto i colori."
+        },
+        "CSD U6 analog rgb 3_2021": {
+          "rubric_key_concept": "Sviluppa un programma che risponda a diversi tipi di input hardware, inclusi quelli che l'utente controlla o non controlla attivamente. Ora puoi capire la necessità di vari tipi di ingressi (input), sia analogici che digitali: rappresenta i valori di tali ingressi in vari modi.",
+          "rubric_performance_level_1": "Il programma visualizza un'ampia gamma di colori in risposta alle variazioni di luce, temperatura e suono. Nel programma non è presente alcun codice non necessario.",
+          "rubric_performance_level_2": "Il programma rileva le variazioni di luce, temperatura e suoni e cambia visibilmente il colore in risposta ad almeno uno di questi sensori.",
+          "rubric_performance_level_3": "Il programma cambia colore e utilizza almeno dei tre sensori analogici per rilevare i cambiamenti nell'ambiente.",
+          "rubric_performance_level_4": "Il programma utilizza i sensori analogici o non cambia affatto i colori."
+        },
+        "CSD U6 circuit smart bike blinker buttons_2019": {
+          "rubric_key_concept": "Connetti, risolvi i problemi ed esegui il debugging di dispositivi esterni e sistemi di elaborazione integrati.",
+          "rubric_performance_level_1": "Il programma funziona come descritto, con il LED esterno sinistro che lampeggia quando si preme il pulsante sinistro e il LED esterno destro lampeggia quando si preme il pulsante destro.",
+          "rubric_performance_level_2": "Un LED esterno reagisce quando viene premuto un pulsante nel \"Circuit Playground\", ma potrebbe non funzionare esattamente come descritto.",
+          "rubric_performance_level_3": "Il LED esterno è collegato fisicamente al Circuit Playground ed esiste un codice per controllarlo dal programma, ma degli errori impediscono che risponda correttamente alla scheda.",
+          "rubric_performance_level_4": "Non è presente alcun LED esterno collegato alla scheda o non esiste un codice che consenta al programma di controllare il LED."
+        },
+        "CSD U6 circuit smart bike blinker buttons_2021": {
+          "rubric_key_concept": "Connetti, risolvi i problemi ed esegui il debugging di dispositivi esterni e sistemi di elaborazione integrati.",
+          "rubric_performance_level_1": "Il programma funziona come descritto, con il LED esterno sinistro che lampeggia quando si preme il pulsante sinistro e il LED esterno destro lampeggia quando si preme il pulsante destro.",
+          "rubric_performance_level_2": "Un LED esterno reagisce quando viene premuto un pulsante nel \"Circuit Playground\", ma potrebbe non funzionare esattamente come descritto.",
+          "rubric_performance_level_3": "Il LED esterno è collegato fisicamente al Circuit Playground ed esiste un codice per controllarlo dal programma, ma degli errori impediscono che risponda correttamente alla scheda.",
+          "rubric_performance_level_4": "Non è presente alcun LED esterno collegato alla scheda o non esiste un codice che consenta al programma di controllare il LED."
+        },
+        "CSD U6 circuit smart bike final_2019": {
+          "rubric_key_concept": "Sviluppa un prototipo fisico interattivo che integri hardware e software, inclusi circuiti semplici.  ",
+          "rubric_performance_level_1": "Il programma funziona come descritto, con un pulsante esterno che controlla il cicalino e due LED esterni controllati dai pulsanti sinistro e destro. I LED colorati si accendono al buio.",
+          "rubric_performance_level_2": "Il programma funziona generalmente come descritto, con un pulsante esterno che attiva la risposta dalla scheda e LED esterni controllati dall'interazione della scheda.",
+          "rubric_performance_level_3": "Il programma incorpora alcuni elementi della progettazione, incluso almeno un elemento esterno che è collegato alla scheda con un circuito e reagisce o attiva una reazione dalla scheda.",
+          "rubric_performance_level_4": "Il programma non incorpora elementi esterni o gli elementi esterni non possono interagire con la scheda."
+        },
+        "CSD U6 circuit smart bike final_2021": {
+          "rubric_key_concept": "Sviluppa un prototipo fisico interattivo che integri hardware e software, inclusi circuiti semplici.  ",
+          "rubric_performance_level_1": "Il programma funziona come descritto, con un pulsante esterno che controlla il cicalino e due LED esterni controllati dai pulsanti sinistro e destro. I LED colorati si accendono al buio.",
+          "rubric_performance_level_2": "Il programma funziona generalmente come descritto, con un pulsante esterno che attiva la risposta dalla scheda e LED esterni controllati dall'interazione della scheda.",
+          "rubric_performance_level_3": "Il programma incorpora alcuni elementi della progettazione, incluso almeno un elemento esterno che è collegato alla scheda con un circuito e reagisce o attiva una reazione dalla scheda.",
+          "rubric_performance_level_4": "Il programma non incorpora elementi esterni o gli elementi esterni non possono interagire con la scheda."
+        },
+        "CSD U6 create LED app 2_2019": {
+          "rubric_key_concept": "Sviluppa software per controllare un svariata gamma di dispositivi fisici.",
+          "rubric_performance_level_1": "Il programma consente all'utente di controllare il LED in diversi modi e tutti gli elementi interattivi sembrano funzionare come previsto.",
+          "rubric_performance_level_2": "Il programma consente all'utente di controllare il LED, ma potrebbero esserci errori minori negli elementi interattivi dell'app.",
+          "rubric_performance_level_3": "Il programma ha un codice correlato al LED, ma ci sono errori significativi che impediscono all'utente di controllare il LED come previsto.",
+          "rubric_performance_level_4": "Nell'app non esiste alcun codice relativo al controllo del LED."
+        },
+        "CSD U6 create LED app 2_2021": {
+          "rubric_key_concept": "Sviluppa software per controllare un svariata gamma di dispositivi fisici.",
+          "rubric_performance_level_1": "Il programma consente all'utente di controllare il LED in diversi modi e tutti gli elementi interattivi sembrano funzionare come previsto.",
+          "rubric_performance_level_2": "Il programma consente all'utente di controllare il LED, ma potrebbero esserci errori minori negli elementi interattivi dell'app.",
+          "rubric_performance_level_3": "Il programma ha un codice correlato al LED, ma ci sono errori significativi che impediscono all'utente di controllare il LED come previsto.",
+          "rubric_performance_level_4": "Nell'app non esiste alcun codice relativo al controllo del LED."
+        },
+        "CSD U6 emotion machine 4_2019": {
+          "rubric_key_concept": "Usa i gestori di eventi per rispondere all'interazione dell'utente e usa le impostazioni per manipolare le proprietà degli elementi di un sistema.",
+          "rubric_performance_level_1": "Il programma dispone di tre pulsanti con le etichette corrette e, quando si fa clic su un pulsante, vengono visualizzate correttamente l'icona e la descrizione correlate all'emozione. ",
+          "rubric_performance_level_2": "Il programma dispone di tre pulsanti e reagisce in qualche modo a ogni clic del pulsante, ma la risposta potrebbe non essere esattamente quella descritta nelle istruzioni.",
+          "rubric_performance_level_3": "Almeno un pulsante che non sia il pulsante «Happy» reagisce al clic in un qualche modo.",
+          "rubric_performance_level_4": "Nessun pulsante diverso dal pulsante «Happy» risponde al clic."
+        },
+        "CSD U6 emotion machine 4_2021": {
+          "rubric_key_concept": "Usa i gestori di eventi per rispondere all'interazione dell'utente e usa le impostazioni per manipolare le proprietà degli elementi di un sistema.",
+          "rubric_performance_level_1": "Il programma dispone di tre pulsanti con le etichette corrette e, quando si fa clic su un pulsante, vengono visualizzate correttamente l'icona e la descrizione correlate all'emozione. ",
+          "rubric_performance_level_2": "Il programma dispone di tre pulsanti e reagisce in qualche modo a ogni clic del pulsante, ma la risposta potrebbe non essere esattamente quella descritta nelle istruzioni.",
+          "rubric_performance_level_3": "Almeno un pulsante che non sia il pulsante «Happy» reagisce al clic in un qualche modo.",
+          "rubric_performance_level_4": "Nessun pulsante diverso dal pulsante «Happy» risponde al clic."
+        },
+        "CSD U6 for loop led color_2019": {
+          "rubric_key_concept": "utilizzare un ciclo con contatore per iterare su una matrice"
+        },
+        "CSD U6 for loop led color_2021": {
+          "rubric_key_concept": "utilizzare un ciclo con contatore per iterare su una matrice"
+        },
+        "CSD U6 for loop led personalize_2019": {
+          "rubric_key_concept": "utilizzare un ciclo con contatore per iterare su una matrice",
+          "rubric_performance_level_1": "Tutti e cinque i pulsanti funzionano come descritto utilizzando i cicli con contatore e i cicli utilizzano la lunghezza della matrice come condizione di uscita, senza errori o codice non necessario.",
+          "rubric_performance_level_2": "I pulsanti di accensione e spegnimento funzionano come descritto utilizzando i loop con contatore e non ci sono errori nel codice.",
+          "rubric_performance_level_3": "I cicli con contatore vengono utilizzati per accendere e spegnere i LED, ma potrebbero esserci degli errori che impediscono ai pulsanti di funzionare come descritto.",
+          "rubric_performance_level_4": "Non ci sono cicli con contatore nel codice."
+        },
+        "CSD U6 for loop led personalize_2021": {
+          "rubric_key_concept": "utilizzare un ciclo con contatore per iterare su una matrice",
+          "rubric_performance_level_1": "Tutti e cinque i pulsanti funzionano come descritto utilizzando i cicli con contatore e i cicli utilizzano la lunghezza della matrice come condizione di uscita, senza errori o codice non necessario.",
+          "rubric_performance_level_2": "I pulsanti di accensione e spegnimento funzionano come descritto utilizzando i loop con contatore e non ci sono errori nel codice.",
+          "rubric_performance_level_3": "I cicli con contatore vengono utilizzati per accendere e spegnere i LED, ma potrebbero esserci degli errori che impediscono ai pulsanti di funzionare come descritto.",
+          "rubric_performance_level_4": "Non ci sono cicli con contatore nel codice."
+        },
+        "CSD U6 getProperty buzzer_2019": {
+          "rubric_key_concept": "Usa Utilizza i metodi di accesso (getters) degli attributi di una classe per accedere e manipolare le proprietà degli elementi di un sistema.",
+          "rubric_performance_level_1": "Il programma funziona come descritto, utilizzando il valore del menu a discesa per modificare la durata del cicalino.",
+          "rubric_performance_level_2": "Il programma utilizza il valore del menu a discesa, ma potrebbero esserci errori minori che impediscono al programma di funzionare esattamente come descritto.",
+          "rubric_performance_level_3": "Il programma include il codice per ottenere il valore del menu a discesa, ma gravi errori nel codice ne impediscono il corretto funzionamento.",
+          "rubric_performance_level_4": "Il programma non accede al valore del menu a discesa."
+        },
+        "CSD U6 getProperty buzzer_2021": {
+          "rubric_key_concept": "Usa Utilizza i metodi di accesso (getters) degli attributi di una classe per accedere e manipolare le proprietà degli elementi di un sistema.",
+          "rubric_performance_level_1": "Il programma funziona come descritto, utilizzando il valore del menu a discesa per modificare la durata del cicalino.",
+          "rubric_performance_level_2": "Il programma utilizza il valore del menu a discesa, ma potrebbero esserci errori minori che impediscono al programma di funzionare esattamente come descritto.",
+          "rubric_performance_level_3": "Il programma include il codice per ottenere il valore del menu a discesa, ma gravi errori nel codice ne impediscono il corretto funzionamento.",
+          "rubric_performance_level_4": "Il programma non accede al valore del menu a discesa."
+        },
+        "CSD U6 goalie_2019": {
+          "rubric_key_concept": "Utilizza i metodi di accesso (getters) e di modifica (setters) degli attributi di una classe per manipolare le proprietà.",
+          "rubric_performance_level_1": "Quando il programma viene eseguito, la palla si sposta in modo graduale a sinistra dello schermo a una velocità ragionevole.",
+          "rubric_performance_level_2": "Quando il programma viene eseguito, la palla si muove sullo schermo.",
+          "rubric_performance_level_3": "Il programma accedeva alla posizione attuale della palla e l'ha utilizzata per aggiornare la proprietà «x» della palla, ma errori nel programma impediscono alla palla di muoversi sullo schermo.",
+          "rubric_performance_level_4": "La posizione attuale della palla non viene utilizzata per aggiornare la sua proprietà «x»."
+        },
+        "CSD U6 goalie_2021": {
+          "rubric_key_concept": "Utilizza i metodi di accesso (getters) e di modifica (setters) degli attributi di una classe per manipolare le proprietà.",
+          "rubric_performance_level_1": "Quando il programma viene eseguito, la palla si sposta in modo graduale a sinistra dello schermo a una velocità ragionevole.",
+          "rubric_performance_level_2": "Quando il programma viene eseguito, la palla si muove sullo schermo.",
+          "rubric_performance_level_3": "Il programma accedeva alla posizione attuale della palla e l'ha utilizzata per aggiornare la proprietà «x» della palla, ma errori nel programma impediscono alla palla di muoversi sullo schermo.",
+          "rubric_performance_level_4": "La posizione attuale della palla non viene utilizzata per aggiornare la sua proprietà «x»."
+        },
+        "CSD U6 light pattern off_2019": {
+          "rubric_key_concept": "Accedi agli elementi delle matrici e sviluppa software per controllare una varietà di dispositivi fisici. ",
+          "rubric_performance_level_1": "Il programma funziona come descritto, ha tre pulsanti, due dei quali accendono i LED a colori secondo uno schema distintivo e uno dei quali spegne i LED a colori. Nel programma non è presente alcun codice non necessario.",
+          "rubric_performance_level_2": "Il programma funziona generalmente come descritto, ha tre pulsanti, due dei quali accendono le luci secondo uno schema distintivo, e una funzione che spegne i LED a colori. Potrebbero esserci errori minori nel programma.",
+          "rubric_performance_level_3": "Nel programma è presente un codice che accende e spegne i LED, ma potrebbero esserci errori importanti che impediscono il corretto funzionamento del programma.",
+          "rubric_performance_level_4": "Non esiste codice nuovo che accenda e spenga i LED."
+        },
+        "CSD U6 light pattern off_2021": {
+          "rubric_key_concept": "Accedi agli elementi delle matrici e sviluppa software per controllare una varietà di dispositivi fisici. ",
+          "rubric_performance_level_1": "Il programma funziona come descritto, ha tre pulsanti, due dei quali accendono i LED a colori secondo uno schema distintivo e uno dei quali spegne i LED a colori. Nel programma non è presente alcun codice non necessario.",
+          "rubric_performance_level_2": "Il programma funziona generalmente come descritto, ha tre pulsanti, due dei quali accendono le luci secondo uno schema distintivo, e una funzione che spegne i LED a colori. Potrebbero esserci errori minori nel programma.",
+          "rubric_performance_level_3": "Nel programma è presente un codice che accende e spegne i LED, ma potrebbero esserci errori importanti che impediscono il corretto funzionamento del programma.",
+          "rubric_performance_level_4": "Non esiste codice nuovo che accenda e spenga i LED."
+        },
+        "CSD U6 params starchaser 5_2019": {
+          "rubric_performance_level_1": "Il programma funziona come descritto e include tutte le funzioni con parametri come descritto nelle istruzioni.(`moveStar`, `loopStar`, and `checkStar`)",
+          "rubric_performance_level_2": "Il programma include più funzioni con parametri e generalmente funziona come descritto, ma può includere errori minori che influiscono sull'esperienza di gioco.",
+          "rubric_performance_level_3": "Il programma include almeno una funzione con parametri, ma potrebbero esserci gravi errori nel codice che impediscono il corretto funzionamento del gioco.",
+          "rubric_performance_level_4": "Il programma non include alcuna funzione con parametri."
+        },
+        "CSD U6 params starchaser 5_2021": {
+          "rubric_performance_level_1": "Il programma funziona come descritto e include tutte le funzioni con parametri come descritto nelle istruzioni.(`moveStar`, `loopStar`, and `checkStar`)",
+          "rubric_performance_level_2": "Il programma include più funzioni con parametri e generalmente funziona come descritto, ma può includere errori minori che influiscono sull'esperienza di gioco.",
+          "rubric_performance_level_3": "Il programma include almeno una funzione con parametri, ma potrebbero esserci gravi errori nel codice che impediscono il corretto funzionamento del gioco.",
+          "rubric_performance_level_4": "Il programma non include alcuna funzione con parametri."
+        },
+        "CSD U6 setProperty hidden 2_2019": {
+          "rubric_key_concept": "Usa i gestori di eventi per rispondere all'interazione con l'utente",
+          "rubric_performance_level_1": "Quando viene premuto il pulsante `StopAlarmButton`, il testo di stato diventa «OFF» e il pulsante scompare. Non è presente alcun codice aggiuntivo nel programma.",
+          "rubric_performance_level_2": "Quando viene premuto il pulsante `stopAlarmButton`, il programma reagisce in qualche modo, ma non necessariamente come descritto nelle istruzioni, oppure potrebbe esserci un codice non necessario attivato dall'evento.",
+          "rubric_performance_level_3": "È stato creato un secondo evento, ma potrebbe non essere attivato al momento opportuno o il programma potrebbe aver creato eventi non necessari.",
+          "rubric_performance_level_4": "Non sono stati creati nuovi eventi."
+        },
+        "CSD U6 setProperty hidden 2_2021": {
+          "rubric_key_concept": "Usa i gestori di eventi per rispondere all'interazione con l'utente",
+          "rubric_performance_level_1": "Quando viene premuto il pulsante `StopAlarmButton`, il testo di stato diventa «OFF» e il pulsante scompare. Non è presente alcun codice aggiuntivo nel programma.",
+          "rubric_performance_level_2": "Quando viene premuto il pulsante `stopAlarmButton`, il programma reagisce in qualche modo, ma non necessariamente come descritto nelle istruzioni, oppure potrebbe esserci un codice non necessario attivato dall'evento.",
+          "rubric_performance_level_3": "È stato creato un secondo evento, ma potrebbe non essere attivato al momento opportuno o il programma potrebbe aver creato eventi non necessari.",
+          "rubric_performance_level_4": "Non sono stati creati nuovi eventi."
+        },
+        "CSD U6 setProperty xy_2019": {
+          "rubric_key_concept": "Utilizza i metodi di modifica (setter) degli attributi di una classe per modificare le proprietà degli elementi di un sistema.",
+          "rubric_performance_level_1": "Il rettangolo rosso è nella posizione corretta e nessun altro rettangolo è stato spostato. Il programma utilizza solo due blocchi.",
+          "rubric_performance_level_2": "Il rettangolo rosso è stato spostato, ma potrebbe non essere nella posizione corretta o potrebbero esserci blocchi di codice aggiuntivi. Gli altri rettangoli si trovano nella loro posizione originale.",
+          "rubric_performance_level_3": "Alcuni rettangoli sono stati spostati, ma l'immagine non somiglia a quella dell'esempio.",
+          "rubric_performance_level_4": "I rettangoli non sono stati spostati."
+        },
+        "CSD U6 setProperty xy_2021": {
+          "rubric_key_concept": "Utilizza i metodi di modifica (setter) degli attributi di una classe per modificare le proprietà degli elementi di un sistema.",
+          "rubric_performance_level_1": "Il rettangolo rosso è nella posizione corretta e nessun altro rettangolo è stato spostato. Il programma utilizza solo due blocchi.",
+          "rubric_performance_level_2": "Il rettangolo rosso è stato spostato, ma potrebbe non essere nella posizione corretta o potrebbero esserci blocchi di codice aggiuntivi. Gli altri rettangoli si trovano nella loro posizione originale.",
+          "rubric_performance_level_3": "Alcuni rettangoli sono stati spostati, ma l'immagine non somiglia a quella dell'esempio.",
+          "rubric_performance_level_4": "I rettangoli non sono stati spostati."
+        },
+        "CSD U6 tugowar buzzer_2019": {
+          "rubric_key_concept": "Sviluppa un programma che risponda a una varietà di ingressi hardware (input), crea e utilizza una funzione che utilizza parametri per generalizzare il comportamento. ",
+          "rubric_performance_level_1": "Il programma risponde ai pulsanti sinistro e destro e utilizza più funzioni con parametri come descritto nella guida al progetto.",
+          "rubric_performance_level_2": "Il programma risponde ad almeno un ingresso (input) hardware e utilizza almeno una funzione con parametri come descritto nella guida del progetto.",
+          "rubric_performance_level_3": "Il programma risponde agli ingrssi (input) hardware e utilizza una funzione con un parametro, ma potrebbero esserci errori che ne impediscono il funzionamento come descritto.",
+          "rubric_performance_level_4": "Il programma non utilizza ingressi (input) hardware o non include una funzione con parametri."
+        },
+        "CSD U6 tugowar buzzer_2021": {
+          "rubric_key_concept": "Sviluppa un programma che risponda a una varietà di ingressi hardware (input), crea e utilizza una funzione che utilizza parametri per generalizzare il comportamento. ",
+          "rubric_performance_level_1": "Il programma risponde ai pulsanti sinistro e destro e utilizza più funzioni con parametri come descritto nella guida al progetto.",
+          "rubric_performance_level_2": "Il programma risponde ad almeno un ingresso (input) hardware e utilizza almeno una funzione con parametri come descritto nella guida del progetto.",
+          "rubric_performance_level_3": "Il programma risponde agli ingrssi (input) hardware e utilizza una funzione con un parametro, ma potrebbero esserci errori che ne impediscono il funzionamento come descritto.",
+          "rubric_performance_level_4": "Il programma non utilizza ingressi (input) hardware o non include una funzione con parametri."
+        },
+        "CSDU6 - LED toggle buttonL up_2019": {
+          "rubric_key_concept": "Sviluppa un programma che risponda adiversi tipi di input hardware.",
+          "rubric_performance_level_1": "Il programma funziona come descritto, con il LED che si accende quando l'utente preme il pulsante e si spegne di nuovo quando l'utente rilascia il pulsante. Non esiste un codice non necessario.",
+          "rubric_performance_level_2": "Il programma utilizza un gestore di eventi per rilevare il rilascio del pulsante, ma potrebbe non rispondere come descritto o potrebbe essere incluso del codice non necessario nel programma.",
+          "rubric_performance_level_3": "Il programma utilizza un gestore di eventi della scheda, ma ci sono errori abbastanza significativi a causa dei quali il programma non è in grado di rilevare il rilascio del pulsante.",
+          "rubric_performance_level_4": "Il programma non utilizza un gestore di eventi della scheda."
+        },
+        "CSDU6 - LED toggle buttonL up_2021": {
+          "rubric_key_concept": "Sviluppa un programma che risponda adiversi tipi di input hardware.",
+          "rubric_performance_level_1": "Il programma funziona come descritto, con il LED che si accende quando l'utente preme il pulsante e si spegne di nuovo quando l'utente rilascia il pulsante. Non esiste un codice non necessario.",
+          "rubric_performance_level_2": "Il programma utilizza un gestore di eventi per rilevare il rilascio del pulsante, ma potrebbe non rispondere come descritto o potrebbe essere incluso del codice non necessario nel programma.",
+          "rubric_performance_level_3": "Il programma utilizza un gestore di eventi della scheda, ma ci sono errori abbastanza significativi a causa dei quali il programma non è in grado di rilevare il rilascio del pulsante.",
+          "rubric_performance_level_4": "Il programma non utilizza un gestore di eventi della scheda."
+        },
+        "CSDU6 arrays select variable_2019": {
+          "rubric_key_concept": "Accedere a un elemento in una matrice.",
+          "rubric_performance_level_1": "Il programma visualizza in modo casuale una combinazione di colori e icone corrispondente, come descritto nelle istruzioni. È possibile accedere agli elementi della matrice utilizzando la variabile `myIndex` e nel programma non è presente alcun codice non necessario.",
+          "rubric_performance_level_2": "Il programma visualizza in modo casuale una combinazione di colori e icone. È possibile accedere agli elementi della \"matrice\" utilizzando la variabile «myIndex», anche se potrebbero esserci errori minori che impediscono al programma di funzionare esattamente come descritto.",
+          "rubric_performance_level_3": "La \"notazione con gli indici\" viene utilizzata per specificare gli elementi di una matrice di numeri cui accedere, sebbene nel programma possano esserci errori importanti che ne impediscono il corretto funzionamento.",
+          "rubric_performance_level_4": "La notazione con gli indici non viene utilizzata."
+        },
+        "CSDU6 arrays select variable_2021": {
+          "rubric_key_concept": "Accedere a un elemento in una matrice.",
+          "rubric_performance_level_1": "Il programma visualizza in modo casuale una combinazione di colori e icone corrispondente, come descritto nelle istruzioni. È possibile accedere agli elementi della matrice utilizzando la variabile `myIndex` e nel programma non è presente alcun codice non necessario.",
+          "rubric_performance_level_2": "Il programma visualizza in modo casuale una combinazione di colori e icone. È possibile accedere agli elementi della \"matrice\" utilizzando la variabile «myIndex», anche se potrebbero esserci errori minori che impediscono al programma di funzionare esattamente come descritto.",
+          "rubric_performance_level_3": "La \"notazione con gli indici\" viene utilizzata per specificare gli elementi di una matrice di numeri cui accedere, sebbene nel programma possano esserci errori importanti che ne impediscono il corretto funzionamento.",
+          "rubric_performance_level_4": "La notazione con gli indici non viene utilizzata."
+        },
+        "CSDU6 making new arrays_2019": {
+          "rubric_key_concept": "Crea e modifica le matrici.",
+          "rubric_performance_level_1": "Una nuova matrice viene creata e memorizzata in una variabile e gli elementi della matrice sono accessibili in modo casuale per essere riprodotti quando si preme il pulsante destro.",
+          "rubric_performance_level_2": "Viene creata una nuova matrice e memorizzata in una variabile, ma potrebbero esserci errori non correlati che impediscono la riproduzione di una nota quando si preme il pulsante destro.",
+          "rubric_performance_level_3": "Viene creata una nuova matrice, ma non è memorizzata in un elemento oppure è vuota, quindi il programma non può funzionare come descritto.",
+          "rubric_performance_level_4": "Nel programma non ci sono matrici."
+        },
+        "CSDU6 making new arrays_2021": {
+          "rubric_key_concept": "Crea e modifica le matrici.",
+          "rubric_performance_level_1": "Una nuova matrice viene creata e memorizzata in una variabile e gli elementi della matrice sono accessibili in modo casuale per essere riprodotti quando si preme il pulsante destro.",
+          "rubric_performance_level_2": "Viene creata una nuova matrice e memorizzata in una variabile, ma potrebbero esserci errori non correlati che impediscono la riproduzione di una nota quando si preme il pulsante destro.",
+          "rubric_performance_level_3": "Viene creata una nuova matrice, ma non è memorizzata in un elemento oppure è vuota, quindi il programma non può funzionare come descritto.",
+          "rubric_performance_level_4": "Nel programma non ci sono matrici."
+        },
+        "CSD U6 - Board Outputs - A_2222": {
+          "rubric_key_concept": "Rispondi all'input dell'utente usando il LED e il cicalino del Circuit Playground",
+          "rubric_performance_level_1": "Ogni pulsante corrisponde correttamente alla descrizione della sua emozione, utilizzando sia i blocchi del LED che del cicalino in ogni pulsante.\n",
+          "rubric_performance_level_2": "Ogni pulsante utilizza sia i blocchi del LED che del cicalino, ma i parametri potrebbero non corrispondere alla descrizione corretta (ad esempio: hanno tutti la stessa durata)",
+          "rubric_performance_level_3": "In alcuni pulsanti mancano interi blocchi del LED o del cicalino",
+          "rubric_performance_level_4": "Non sono stati aggiunti ulteriori blocchi del LED o del cicalino al programma"
+        },
+        "CSD U2 HTML Adding Paragraphs pt 2_2019": {
+          "rubric_key_concept": "Utilizza HTML per creare una pagina web che includa titoli, paragrafi, elenchi e immagini gerarchici; comprende l'esigenze della precisione, utilizzando i linguaggi informatici e l'utilizzo della sintassi appropriata.",
+          "rubric_performance_level_1": "Tutti i testi sono contenuti nei tag dei paragrafi. Esistono almeno due paragrafi creati tramite l'utilizzo appropriato dei tag del paragrafo.",
+          "rubric_performance_level_2": "Almeno parte del testo è stata separata in un paragrafo tramite l'utilizzo appropriato dei tag del paragrafo.",
+          "rubric_performance_level_3": "Esiste almeno un tag del paragrafo nel testo, ma potrebbe non essere utilizzato propriamente (es. tag di chiusura mancante, paragrafi creati all'esterno dell'elemento del corpo).",
+          "rubric_performance_level_4": "Non è presente alcun tag del paragrafo nel testo."
+        },
+        "CSD U2 HTML Adding Paragraphs pt 2_2021": {
+          "rubric_key_concept": "Utilizza HTML per creare una pagina web che includa titoli, paragrafi, elenchi e immagini gerarchici; comprende l'esigenze della precisione, utilizzando i linguaggi informatici e l'utilizzo della sintassi appropriata.",
+          "rubric_performance_level_1": "Tutti i testi sono contenuti nei tag dei paragrafi. Esistono almeno due paragrafi creati tramite l'utilizzo appropriato dei tag del paragrafo.",
+          "rubric_performance_level_2": "Almeno parte del testo è stata separata in un paragrafo tramite l'utilizzo appropriato dei tag del paragrafo.",
+          "rubric_performance_level_3": "Esiste almeno un tag del paragrafo nel testo, ma potrebbe non essere utilizzato propriamente (es. tag di chiusura mancante, paragrafi creati all'esterno dell'elemento del corpo).",
+          "rubric_performance_level_4": "Non è presente alcun tag del paragrafo nel testo."
+        },
+        "CSD U2 HTML Adding Paragraphs pt 2_2022": {
+          "rubric_key_concept": "Utilizza HTML per creare una pagina web che includa titoli, paragrafi, elenchi e immagini gerarchici; comprende l'esigenze della precisione, utilizzando i linguaggi informatici e l'utilizzo della sintassi appropriata.",
+          "rubric_performance_level_1": "Tutti i testi sono contenuti nei tag dei paragrafi. Esistono almeno due paragrafi creati tramite l'utilizzo appropriato dei tag del paragrafo.",
+          "rubric_performance_level_2": "Almeno parte del testo è stata separata in un paragrafo tramite l'utilizzo appropriato dei tag del paragrafo.",
+          "rubric_performance_level_3": "Esiste almeno un tag del paragrafo nel testo, ma potrebbe non essere utilizzato propriamente (es. tag di chiusura mancante, paragrafi creati all'esterno dell'elemento del corpo).",
+          "rubric_performance_level_4": "Non è presente alcun tag del paragrafo nel testo."
+        },
+        "CSD U2 Heading Test_2018": {
+          "rubric_key_concept": "Utilizza HTML per creare una pagina web che includa titoli, paragrafi, elenchi e immagini gerarchici.\n\nComprende l'esigenze della precisione, utilizzando i linguaggi informatici e l'utilizzo della sintassi appropriata.",
+          "rubric_performance_level_1": "Tutti i contenuti sono nei tag, utilizzano i tag del paragrafo e titoli di dimensioni multiple in un modo logicamente consistente.",
+          "rubric_performance_level_3": "Gran parte dei contenuti sono tra tag. Almeno un tag d'intestazione è utilizzato.",
+          "rubric_performance_level_4": "Quasi nessun contenuto è contenuto nei tag."
+        },
+        "CSD U2 Heading Test_2019": {
+          "rubric_key_concept": "Utilizza HTML per creare una pagina web che includa titoli, paragrafi, elenchi e immagini gerarchici.\n\nComprende l'esigenze della precisione, utilizzando i linguaggi informatici e l'utilizzo della sintassi appropriata.",
+          "rubric_performance_level_1": "Tutti i contenuti sono nei tag, utilizzano i tag del paragrafo e titoli di dimensioni multiple in un modo logicamente consistente.",
+          "rubric_performance_level_2": "Tutti i contenuti sono contenuti nei tag, utilizzano paragrafi e tag d'intestazione in modo ragionevole.",
+          "rubric_performance_level_3": "Gran parte dei contenuti sono tra tag. Almeno un tag d'intestazione è utilizzato.",
+          "rubric_performance_level_4": "Quasi nessun contenuto è contenuto nei tag."
+        },
+        "CSD U2 Heading Test_2021": {
+          "rubric_key_concept": "Utilizza HTML per creare una pagina web che includa titoli, paragrafi, elenchi e immagini gerarchici.\n\nComprende l'esigenze della precisione, utilizzando i linguaggi informatici e l'utilizzo della sintassi appropriata.",
+          "rubric_performance_level_1": "Tutti i contenuti sono nei tag, utilizzano i tag del paragrafo e titoli di dimensioni multiple in un modo logicamente consistente.",
+          "rubric_performance_level_2": "Tutti i contenuti sono contenuti nei tag, utilizzano paragrafi e tag d'intestazione in modo ragionevole.",
+          "rubric_performance_level_3": "Gran parte dei contenuti sono tra tag. Almeno un tag d'intestazione è utilizzato.",
+          "rubric_performance_level_4": "Quasi nessun contenuto è contenuto nei tag."
+        },
+        "CSD U2 Heading Test_2022": {
+          "rubric_key_concept": "Utilizza HTML per creare una pagina web che includa titoli, paragrafi, elenchi e immagini gerarchici.\n\nComprende l'esigenze della precisione, utilizzando i linguaggi informatici e l'utilizzo della sintassi appropriata.",
+          "rubric_performance_level_1": "Tutti i contenuti sono nei tag, utilizzano i tag del paragrafo e titoli di dimensioni multiple in un modo logicamente consistente.",
+          "rubric_performance_level_2": "Tutti i contenuti sono contenuti nei tag, utilizzano paragrafi e tag d'intestazione in modo ragionevole.",
+          "rubric_performance_level_3": "Gran parte dei contenuti sono tra tag. Almeno un tag d'intestazione è utilizzato.",
+          "rubric_performance_level_4": "Quasi nessun contenuto è contenuto nei tag."
+        },
+        "CSD U3 Random Debug Cloud_2018_2019": {
+          "rubric_key_concept": "Utilizza gli argomenti per modificare il modo in cui un metodo o comando è eseguito. "
+        },
+        "CSD U3 Sprites scene sprites_2019": {
+          "rubric_key_concept": "Crea e modifica gli oggetti (sprite) per gestire la complessità degli elementi su schermo. Utilizza la notazione a punti per ottenere e impostare le proprietà dello sprite.",
+          "rubric_performance_level_1": "Almeno uno sprite viene creato, riceve un'animazione, è ridimensionato a una buona dimensione e disegnato sullo schermo. La variabile dello sprite ha un nome ragionevole. `drawSprites` è chiamata dopo che tutte le proprietà dello sprite sono state aggiornate.",
+          "rubric_performance_level_2": "Almeno uno sprite viene chiamato, riceve un'animazione ed è disegnato sullo schermo. La variabile dello sprite è stata rinominata.",
+          "rubric_performance_level_3": "Almeno uno sprite viene creato e disegnato sullo schermo. Potrebbero verificarsi dei problemi con l'animazione o conflitti dall'utilizzo del nome della stessa variabile per più sprite.",
+          "rubric_performance_level_4": "Nessuno sprite viene creato."
+        },
+        "CSD U3 Variables random with assignment_2019": {
+          "rubric_performance_level_1": "La variabile eyeSize è utilizzata così che i due occhi abbiano le stesse dimensioni casuali come istruito, senza altra modifica imprevista.",
+          "rubric_performance_level_2": "La variabile eyeSize è utilizzata così che i due occhi abbiano le stesse dimensioni casuali, ma altre modifiche al codice potrebbero aver introdotto comportamenti imprevisti.",
+          "rubric_performance_level_4": "Non sono state apportate modifiche al codice, o le modifiche non sembrano correlate alla variabile eyeSize, o la variabile è utilizzata in modo da impedire l'esecuzione del programma."
+        },
+        "CSD U3 abstraction velocityX control_2019": {
+          "rubric_performance_level_1": "La pressione singola del tasto freccia destro fa nuotare il pesce verso il lato destro dello schermo, si gira e nuota verso il lato sinistro dello schermo, quindi si ferma. Non ci sono blocchi aggiuntivi nel programma e lo schema del contatore non è utilizzato.",
+          "rubric_performance_level_2": "La pressione singola del tasto freccia destro fa nuotare il pesce verso il lato destro dello schermo. Lo schema del contatore non è utilizzato.",
+          "rubric_performance_level_3": "La pressione singola del tasto freccia destro fa nuotare il pesce verso qualche lato per lo schermo.",
+          "rubric_performance_level_4": "La pressione singola del tasto freccia destro non causa movimento o il movimento si ferma appena il tasto viene rilasciato."
+        },
+        "CSD U3 collisions flyman make it your own_2019": {
+          "rubric_performance_level_1": "Il personaggio del giocatore è incapace di spostarsi attraverso l'ostacolo, la moneta non appare mai oltre l'ostacolo e le dimensioni e la forma del collisore innesca le collisioni in tempi ragionevoli. Esiste almeno una nuova interazione dello sprite, di scelta dello studente.",
+          "rubric_performance_level_2": "Il personaggio del giocatore è incapace di spostarsi attraverso l'ostacolo, la moneta non appare mai oltre l'ostacolo.",
+          "rubric_performance_level_3": "Il personaggio del giocatore interagisce con l'ostacolo in qualche modo, ma potrebbero verificarsi problemi: il giocatore potrebbe spostare l'ostacolo o la moneta potrebbe talvolta apparire oltre l'ostacolo.",
+          "rubric_performance_level_4": "Non ci sono interazioni tra il personaggio del giocatore e l'ostacolo."
         }
       }
     }

@@ -1,5 +1,5 @@
 // Redux store for state that relates to the Java Lab console.
-import { PayloadAction, createSlice } from "@reduxjs/toolkit";
+import {PayloadAction, createSlice} from '@reduxjs/toolkit';
 
 interface ConsoleLog {
   type: 'input' | 'output' | 'newline' | 'markdown';
@@ -15,7 +15,7 @@ interface JavalabConsoleState {
 const initialState: JavalabConsoleState = {
   consoleLogs: [],
   isPhotoPrompterOpen: false,
-  photoPrompterPromptText: ''
+  photoPrompterPromptText: '',
 };
 
 const javalabConsoleSlice = createSlice({
@@ -44,8 +44,8 @@ const javalabConsoleSlice = createSlice({
     closePhotoPrompter(state) {
       state.isPhotoPrompterOpen = false;
       state.photoPrompterPromptText = '';
-    }
-  }
+    },
+  },
 });
 
 export const {
@@ -55,7 +55,7 @@ export const {
   appendMarkdownLog,
   clearConsoleLogs,
   openPhotoPrompter,
-  closePhotoPrompter
+  closePhotoPrompter,
 } = javalabConsoleSlice.actions;
 
 export default javalabConsoleSlice.reducer;

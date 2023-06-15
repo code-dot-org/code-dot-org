@@ -13,7 +13,7 @@ describe('Congrats', () => {
   const initialCertificateImageUrl = '/images/placeholder-hoc-image.jpg';
   const defaultProps = {
     language: 'en',
-    initialCertificateImageUrl
+    initialCertificateImageUrl,
   };
 
   userTypes.forEach(userType => {

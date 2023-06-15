@@ -1,5 +1,6 @@
-import {BlocklyVersion} from '@cdo/apps/constants';
+import {BlocklyVersion} from '@cdo/apps/blockly/constants';
 import {CLAMPED_NUMBER_REGEX} from './constants';
+import {APP_HEIGHT} from '@cdo/apps/p5lab/constants';
 
 const INFINITE_LOOP_TRAP =
   '  executionInfo.checkTimeout(); if (executionInfo.isTerminated()){return;}\n';
@@ -24,7 +25,7 @@ const BlocklyWrapper = function (blocklyInstance) {
     Object.defineProperty(this, propertyName, {
       get: function () {
         return this.blockly_[propertyName];
-      }
+      },
     });
     this.wrapSettableProperty = function (propertyName) {
       Object.defineProperty(this, propertyName, {
@@ -33,7 +34,7 @@ const BlocklyWrapper = function (blocklyInstance) {
         },
         set: function (newValue) {
           this.blockly_[propertyName] = newValue;
-        }
+        },
       });
     };
   };
@@ -242,6 +243,9 @@ function initializeBlocklyWrapper(blocklyInstance) {
     blocklyWrapper.Block.prototype.getTitleValue;
 
   blocklyWrapper.cdoUtils = {
+    loadBlocksToWorkspace(blockSpace, xml) {
+      return Blockly.Xml.domToBlockSpace(blockSpace, xml);
+    },
     blockLimitExceeded: function (blockType) {
       const blockLimits = Blockly.mainBlockSpace.blockSpaceEditor.blockLimits;
       return blockLimits.blockLimitExceeded && blockLimits.blockLimitExceeded();
@@ -274,7 +278,45 @@ function initializeBlocklyWrapper(blocklyInstance) {
     },
     getCode: function (workspace) {
       return Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(workspace));
-    }
+    },
+    soundField: function (onClick) {
+      return new Blockly.FieldDropdown([['Choose', 'Choose']], onClick);
+    },
+    locationField: function (
+      icon,
+      onClick,
+      block,
+      inputConfig,
+      currentInputRow
+    ) {
+      const fieldRow = currentInputRow.getFieldRow();
+      const fieldLabel = fieldRow[fieldRow.length - 1];
+      const transformTextSetLabel = value => {
+        if (value) {
+          try {
+            const loc = JSON.parse(value);
+            fieldLabel.setValue(
+              `${inputConfig.label}(${loc.x}, ${APP_HEIGHT - loc.y})`
+            );
+          } catch (e) {
+            // Just ignore bad values
+          }
+        }
+      };
+      const color = block.getHexColour();
+      return new Blockly.FieldButton(
+        icon,
+        onClick,
+        color,
+        transformTextSetLabel
+      );
+    },
+    injectCss(document) {
+      return Blockly.Css.inject(document);
+    },
+    resizeSvg(blockSpace) {
+      return blockSpace.blockSpaceEditor.svgResize();
+    },
   };
   return blocklyWrapper;
 }

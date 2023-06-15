@@ -24,7 +24,7 @@ class PaneHeader extends React.Component {
     isOldPurpleColor: PropTypes.bool,
     teacherOnly: PropTypes.bool,
     isMinecraft: PropTypes.bool,
-    className: PropTypes.string
+    className: PropTypes.string,
   };
 
   render() {
@@ -80,7 +80,7 @@ export const PaneSection = Radium(
   class extends React.Component {
     static propTypes = {
       style: PropTypes.object,
-      className: PropTypes.string
+      className: PropTypes.string,
     };
 
     render() {
@@ -118,7 +118,7 @@ export const PaneButton = Radium(function (props) {
     onClick,
     id,
     style,
-    className
+    className,
   } = props;
 
   const buttonLabel = isPressed ? pressedLabel : label;
@@ -221,7 +221,7 @@ PaneButton.propTypes = {
   isMinecraft: PropTypes.bool,
   id: PropTypes.string,
   style: PropTypes.object,
-  ariaLabel: PropTypes.string
+  ariaLabel: PropTypes.string,
 };
 
 // Continuing to wrap with radium because some usage of this component may depend on it.

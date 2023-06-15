@@ -806,7 +806,7 @@ describe('DataConverters', function () {
         '00000000',
         '11111111',
         '000000000',
-        '111111111'
+        '111111111',
       ].map(binaryToBase64);
       var i, j;
 

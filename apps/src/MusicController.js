@@ -141,7 +141,7 @@ function buildTrackData(trackDefinitions, assetUrl) {
       volume: utils.valueOr(trackDef.volume, 1),
       sound: null,
       isLoaded: false,
-      group: trackDef.group
+      group: trackDef.group,
     };
   });
 }

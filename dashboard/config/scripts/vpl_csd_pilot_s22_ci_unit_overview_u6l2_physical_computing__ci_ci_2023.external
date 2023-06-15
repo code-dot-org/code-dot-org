@@ -28,7 +28,7 @@ markdown <<MARKDOWN
  <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
     <p>
 
-##### **YES**, you will need a class set of micro:bits to teach the Creating Apps with Devices unit. 
+##### **YES**, you will need a class set of micro:bits to teach the Creating Apps with Devices unit. The second half of the unit also uses external components such as LEDs and Alligator Clips.
 
 ##### **<a href="https://code.org/maker/microbit" target="blank" rel="noopener noreferrer" >Click here</a> to learn more about purchasing the micro:bit.**
 </p></div>
@@ -40,7 +40,7 @@ markdown <<MARKDOWN
  <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
     <p>
 
-##### **YES**, you will need a desktop or laptop computer with a mouse (or touchpad) and keyboard. Only Chromebooks v90 and above are supported. Tablets and mobile devices are NOT supported. 
+##### **YES**, you will need a desktop or laptop computer with a mouse (or touchpad) and keyboard, and Google Chrome or Microsoft Edge installed. Chromebooks are also supported, but only Chromebooks v90 and above. Tablets and mobile devices are NOT supported. 
 
 ##### **<a href="https://support.code.org/hc/en-us/articles/202591743-Technical-requirements-for-Code-org#:~:text=We%20recommend%20at%20least%20a,and%20Intro%20to%20App%20Lab." target="blank" rel="noopener noreferrer" >Click here</a> to learn more about technical requirements for Code.org.**
 </p></div>
@@ -61,7 +61,7 @@ markdown <<MARKDOWN
  <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
     <p>
 
-##### The Creating Apps with Devices unit was written using both the K-12 Framework for Computer Science and the **2017 CSTA standards** as guidance. Currently, every lesson maps to the relevant 2017 CSTA standards. The summary of of all CSTA 2017 mappings can be found at <a href="https://studio.code.org/s/devices-2022/standards" target="blank" rel="noopener noreferrer">https://studio.code.org/s/devices-2023/standards</a>. 
+##### The Creating Apps with Devices unit was written using both the K-12 Framework for Computer Science and the **2017 CSTA standards** as guidance. Currently, every lesson maps to the relevant 2017 CSTA standards. The summary of of all CSTA 2017 mappings can be found at <a href="https://studio.code.org/s/csd6b-2023/standards" target="blank" rel="noopener noreferrer">https://studio.code.org/s/csd6b-2023/standards</a>. 
 </p></div>
 </details>
 
@@ -71,7 +71,7 @@ markdown <<MARKDOWN
     <p>
 
 #### **Time needed to teach this unit:** 6 weeks 
-##### The recommended time is based on 225 instructional minutes per week. Visit the <a href="https://studio.code.org/s/devices-2023" target="blank" rel="noopener noreferrer">Unit Overview Page</a> and use the unit calendar to adjust the instructional minutes to reflect the time you have with your students each week. 
+##### The recommended time is based on 225 instructional minutes per week. Visit the <a href="https://studio.code.org/s/csd6b-2023" target="blank" rel="noopener noreferrer">Unit Overview Page</a> and use the unit calendar to adjust the instructional minutes to reflect the time you have with your students each week. 
 
 </p></div>
 </details>

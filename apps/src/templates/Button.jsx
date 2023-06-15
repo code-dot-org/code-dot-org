@@ -13,7 +13,7 @@ import moduleStyles from './button.module.scss';
 // Note: Keep these constants in sync with button.module.scss.
 const Phase1ButtonColor = {
   brandSecondaryDefault: 'brandSecondaryDefault',
-  neutralDark: 'neutralDark'
+  neutralDark: 'neutralDark',
 };
 
 const ButtonColor = {
@@ -25,32 +25,33 @@ const ButtonColor = {
   white: 'white',
   red: 'red',
   green: 'green',
-  purple: 'purple'
+  purple: 'purple',
 };
 
 const ButtonSize = {
   default: 'default',
   large: 'large',
   narrow: 'narrow',
-  small: 'small'
+  small: 'small',
 };
 
 const ButtonHeight = {
   default: 34,
   large: 40,
   narrow: 40,
-  small: 20
+  small: 20,
 };
 
 class Button extends React.Component {
   static propTypes = {
+    type: PropTypes.oneOf(['button', 'submit', 'reset']),
     className: PropTypes.string,
     href: PropTypes.string,
     text: PropTypes.string,
     value: PropTypes.oneOfType([
       PropTypes.string,
       PropTypes.number,
-      PropTypes.bool
+      PropTypes.bool,
     ]),
     children: PropTypes.node,
     size: PropTypes.oneOf(Object.keys(ButtonSize)),
@@ -70,7 +71,7 @@ class Button extends React.Component {
     pendingText: PropTypes.string,
     useDefaultLineHeight: PropTypes.bool,
     __useDeprecatedTag: PropTypes.bool,
-    'aria-label': PropTypes.string
+    'aria-label': PropTypes.string,
   };
 
   onKeyDown = event => {
@@ -84,6 +85,7 @@ class Button extends React.Component {
 
   render() {
     const {
+      type,
       color = ButtonColor.orange,
       size = ButtonSize.default,
       href,
@@ -104,7 +106,7 @@ class Button extends React.Component {
       value,
       useDefaultLineHeight,
       __useDeprecatedTag,
-      'aria-label': ariaLabel
+      'aria-label': ariaLabel,
     } = this.props;
 
     if (!href && !onClick) {
@@ -137,7 +139,7 @@ class Button extends React.Component {
     const sizeClassNames = __useDeprecatedTag
       ? [
           moduleStyles[size],
-          Phase1ButtonColor[color] ? moduleStyles.phase1Updated : ''
+          Phase1ButtonColor[color] ? moduleStyles.phase1Updated : '',
         ]
       : [moduleStyles[size], !useDefaultLineHeight && moduleStyles.updated];
 
@@ -154,7 +156,9 @@ class Button extends React.Component {
         this.props.className,
         moduleStyles.main,
         moduleStyles.textButton,
-        'button-active-no-border'
+        'button-active-no-border',
+        color === ButtonColor.brandSecondaryDefault &&
+          moduleStyles.rebrandedTextButton
       );
     } else {
       className = classNames(
@@ -165,8 +169,11 @@ class Button extends React.Component {
       );
     }
 
+    const buttonProps = Tag === 'button' ? {type} : {};
+
     return (
       <Tag
+        {...buttonProps}
         className={className}
         style={{...buttonStyle}}
         href={disabled ? '#' : href}

@@ -1883,6 +1883,7 @@
           "name": "Introducere"
         },
         "2143fa63-5aea-47af-8684-29aa626fd1d7": {
+          "name": "Privind înainte cu Minecraft",
           "description": "#### Puzzle-uri onlineAceastă lecție va fi o adevărată plăcere pentru elevi. Este probabil ca majoritatea elevilor dumneavoastră să fi auzit de _Minecraft_, dar faceți o scurtă prezentare pentru cei care nu știu despre ce este vorba._Minecraft_ este un joc cu cuburi. Puteți juca rolul lui _Alex_ sau al lui _Steve_ în timp ce străbateți labirinturi. Va trebui să evitați lava, să culegeți obiecte și să explorați o lume alcătuită din cuburi.Rezolvați unul dintre puzzle-uri (vă recomandăm puzzle-ul 11.) După ce s-a răspuns la toate întrebările, rugați elevii să treacă la calculatoare și lăsați-i să înceapă programarea în perechi."
         },
         "4d4e1c44-ff30-4ba6-bdcc-67dc52d3c85a": {
@@ -1907,6 +1908,7 @@
           "name": "Previzualizarea puzzle-urilor online"
         },
         "a4ab31f7-6915-461a-b307-aad86879a097": {
+          "name": "Dacă/Altfel cu albine",
           "description": "Aceste puzzle-uri pot duce la întrebări, așa că puneți-i pe elevi să lucreze în perechi sau aplicați regula „Întreabă trei înainte de a mă întreba pe mine” (cereți elevilor să ceară ajutorul altor trei colegi înainte de a se adresa profesorului). Acest lucru va declanșa discuții prin care fiecare elev va înțelege mai bine despre ce este vorba."
         },
         "dd2b73eb-51cd-4d7e-81f8-5ed2d57b72dd": {
@@ -1949,6 +1951,9 @@
         "cefe1ce5-6a04-45e4-8805-e5b94fff2197": {
           "name": "Introducere",
           "description": "În această lecție, elevii vor crea bucle care sunt executate doar „until” (până când) o condiție este adevărată. Ajutați-i pe elevi să înțeleagă cum funcționează acestea, organizând activități de grup și punându-i să efectueze o acțiune „until” (până când) o anumită condiție este adevărată. De exemplu: puneți elevii să-și atingă nasul „until” (până când) le spuneți să se oprească."
+        },
+        "88a4ca9a-f917-418e-8c1c-2cc4ac814afd": {
+          "name": "Până la bucle în labirint"
         },
         "0664bded-dced-45bc-954d-8bc7d7734235": {
           "progression_name": "Provocare"
@@ -2023,6 +2028,9 @@
         },
         "a4614b34-d679-47a0-b4b3-36a360f0336d": {
           "name": "Prezentând Laboratorul de Desen"
+        },
+        "6e47923a-1f07-4c2d-a55a-c45a35a823e9": {
+          "name": "Explorarea aplicațiilor"
         },
         "a596d7dd-5533-4dea-b9f7-7dca09bafb6e": {
           "tips": [
@@ -2158,6 +2166,9 @@
         "384bc094-bdd1-4218-83e6-361c012c6c89": {
           "description": "La sfârșitul lecției precedente, am analizat asemănările dintre poveștile cu spații necompletate și aplicațiile care solicită utilizatorului să introducă date.Atunci când un mesaj de pe ecranul computerului vă cere să introduceți date, acesta se numește prompt.Atunci când un utilizator tastează informații într-un prompt, este ca și cum computerul stochează informațiile într-un container.Eticheta variabilei ne spune la ce fel de informații să ne așteptăm.Astăzi vom învăța codul pentru a crea un prompt în Laboratorul cu sprites."
         },
+        "14e9da9c-a429-47db-b4bd-c07d5dc4401f": {
+          "name": "Text și Prompts"
+        },
         "71f32e49-99e7-46d2-9a4d-a6b0b07d5a17": {
           "tips": [
             "La fel ca atunci când elevii scriu sau comunică verbal, în această activitate este important să se stabilească așteptările cu privire la utilizarea adecvată a cuvintelor. Elevii trebuie să înțeleagă că sunt responsabili pentru codul pe care îl scriu, precum și pentru orice fragment de text care apare pe ecran. Textul nu trebuie să conțină cuvinte jignitoare și trebuie să fie sigur. Elevii pot exersa și modalități în care să evite să partajeze date personale în programele pe care le creează, mai ales dacă doresc să le partajeze și cu alții.Rețineți că orice informație tastată în subiectul Laboratorul cu sprites nu este salvată pe termen lung. Cuvintele și mesajele tastate de utilizatorii acestor aplicații dispar după ce aplicația este resetată."
@@ -2289,7 +2300,8 @@
         "12dc3a29-9b6a-448a-91d7-c795731e097b": {
           "tips": [
             "Blocurile de evenimente din această lecție sunt mai avansate decât cele folosite de elevi până acum în cadrul cursului. Asigurați-vă că elevii știu că pot extinde blocurile de evenimente verzi prin apăsarea butonului +. Elevii lucrează astăzi cu mai mulți sprites. În mod normal, comenzile din Laboratorul cu sprites afectează toți sprites care poartă același costum. Cu blocurile din interiorul blocului de evenimente, fiecare acțiune asociată va afecta doar sprites care au fost implicate în acel eveniment."
-          ]
+          ],
+          "progression_name": "Video: Simulator de focar: Introducere"
         },
         "9456da46-d269-42c3-ab51-42e617b07542": {
           "progression_name": "Învață din Simulări"
@@ -2706,6 +2718,9 @@
           "tips": [
             "Aceste exerciții pot fi făcute și sub forma unei discuții în clasă, înainte de lecția despre drepturile de autor. Scrieți povestea sau scheciul pe tablă, pe măsură ce elevii vin cu idei noi."
           ]
+        },
+        "90986348-020e-4b00-b92f-ba4160018feb": {
+          "name": "Partajare digitală"
         },
         "3f9da29a-6132-4d1b-937a-5732b48eeb94": {
           "description": "_Aceasta nu este partajare, ci realizarea de noi copii!_",
@@ -3234,6 +3249,7 @@
           "description": "Alegeți un puzzle din etapa online corespunzătoare. Vă recomandăm puzzle-ul cu numărul 7. Cereți-le elevilor să discute pe marginea unui model care, în opinia lor, o va face pe _Aventuriera Laurel_ să strângă toată comoara. Rugați-i pe elevi să vă transmită rezultatele. Vedeți câți elevi au răspuns la fel!"
         },
         "8c9b5729-021b-4d95-b232-e523b7956513": {
+          "name": "Colectarea comoara cu Laurel",
           "description": "_Aventuriera Laurel_ încearcă să strângă cât mai multe comori. Cereți-le elevilor să parcurgă puzzle-ul și să strângă tot ce pot. La unele niveluri trebuie să strângă doar o singură bucată de comoară, în timp ce la altele trebuie să strângă toată comoara. Fiți atenți la instrucțiuni ca să știți ce trebuie să faceți!"
         },
         "fd0ab898-850a-45a0-be4f-1e223b482dce": {
@@ -3251,6 +3267,7 @@
           "description": "Arătați-le elevilor unul sau ambele clipuri video de mai jos ca introducere pentru unghiuri:**\\*Prezentarea Artistului** (1,5 minute)**\\*Întoarceri și unghiuri (2 minute)Folosiți \\*_\\\\_fișa elevului** pentru a le arăta elevilor unghiurile interioare față de cele exterioare pentru diferite forme. Acest document poate fi folosit ca material de lucru sau puteți alege să îl imprimați ca poster, ca elevii să-l aibă la dispoziție pentru a-l consulta.**Discutați** formele din document - triunghiul și pătratul.-   _Cum ați putea programa un calculator pentru a desena această formă?_-   _În ce ordine trebuie să fie instrucțiunile?_Spuneți-le elevilor că în aceste puzzle-uri vor deplasa un personaj care lasă o urmă peste tot pe unde trece. Elevii vor scrie un cod care va face ca personajul să deseneze diverse forme, inclusiv un pătrat."
         },
         "a87f5d31-b7cb-48e5-b7c7-06f8a43e329f": {
+          "name": "Crearea artei cu cod",
           "description": "În acest set de puzzle-uri, artistul nu va mai fi limitat la unghiuri de 90 de grade. Faptul că au la dispoziție raportoare fizice va fi util pentru elevi, care vor vizualiza mai ușor unghiurile de care au nevoie. În caz contrar, în această etapă sunt furnizate imagini ale unghiurilor, pe măsură ce elevul selectează unghiul pe care îl va folosi. (Notă: alegerea unghiurilor este limitată la două în meniul derulant, ceea ce reduce numărul de opțiuni pe care elevii trebuie să le parcurgă).Înainte de a-i trimite pe elevi la calculatoare pentru a lucra la puzzle-uri, este binevenită o scurtă prezentare a modului de utilizare a instrumentelor din acest nivel. Recomandăm puzzle-ul nr. 5 pentru a demonstra cum se utilizează raportorul online."
         },
         "3c6953b2-ead1-488b-b460-2735304f527f": {
@@ -3295,6 +3312,9 @@
         "c5b1c51f-e863-4951-9163-1777993f687b": {
           "name": "Reflecţie",
           "description": "Dacă elevii scriu despre ceea ce au învățat, de ce este util și ce simt în legătură cu acest lucru, puteți contribui la consolidarea cunoștințelor pe care le-au obținut astăzi și pregăti o foaie de recapitulare pe care să o consulte pe viitor.**Prompturi:**-   Despre ce a fost lecția de astăzi?-   Ce părere ai despre lecția de astăzi?-   Cum te-ai simțit când ai creat o scenă mai creativă?-   A fost dificil să termini o lecție în care noțiunile de „bine” și „rău” nu erau clar diferențiate?"
+        },
+        "3c242de5-2944-4439-a772-10f0e2bfd48a": {
+          "name": "Explorarea aplicațiilor"
         },
         "84be2102-875d-40ee-af17-903a1eb15736": {
           "name": "Reflecţie",
@@ -3453,6 +3473,7 @@
           "description": "Elevii au lucrat suficient cu bucle până acum. În funcție de ceea ce credeți că ar putea fi benefic pentru elevi, vă recomandăm:-   Creați un dans, incluzând pași repetați în bucle.-   Rezolvați cu toată clasa un puzzle din ultima lecție, „Bucle cu Rey și BB-8”.-   Recapitulați modul de utilizare al Artistului, rezolvând un puzzle din „Creați opere de artă cu ajutorul codului”.-   Previzualizați un puzzle din această lecție.Cu toate aceste opțiuni se vor recapitula fie buclele, fie Artistul, ceea ce vă va ajuta să îi pregătiți pe elevi pentru distracția cu puzzle-urile online!"
         },
         "ca09b8e6-6cc8-4fc5-a47e-3126629b1002": {
+          "name": "Autocolant Art cu bucle",
           "description": "Încurajați creativitatea în timpul acestei activități! Instrucțiunile oferă exemple, dar elevii pot face experimente cu diferite autocolante sau tipuri de desene. Chiar și soluțiile-exemplu pe care le oferim nu sunt _singurele_ soluții!",
           "tips": [
             "Este posibil ca această lecție să fie foarte diferită de ceea ce s-a întâmplat mai devreme în cadrul cursului. Aceste niveluri includ unele caracteristici noi pe care vă recomandăm să le explorați înainte de a începe. Codul pe care elevii dumneavoastră îl scriu la unul dintre niveluri se va transfera automat la celelalte niveluri. Acest lucru le permite să construiască treptat și să-și revizuiască ideile pe măsură ce învață. Rețineți că aceste niveluri nu sunt verificate din punctul de vedere al corectitudinii, pentru a le da elevilor ocazia de a fi creativi. Lăsați elevii să stabilească singuri când au finalizat fiecare sarcină."
@@ -3509,6 +3530,7 @@
           "description": "Adunați elevii și rugați doi voluntari să meargă drept într-o anumită direcție în clasă. Dacă întâlnesc un scaun care nu este la locul lui, trebuie să treacă peste el. Dacă ajung la un perete, trebuie să se așeze.După ce toți elevii s-au așezat, întrebați-i cum ar programa un robot pentru a reacționa la un perete sau la un scaun. Reamintiți-le elevilor că nu pot spune pur și simplu „Treci peste scaun” decât dacă știți că există un scaun și că nu veți ști întotdeauna că există un scaun. Ar putea fi util să transpuneți sarcina în instrucțiuni precum-   cât există o cale de urmat      -   mergi înainte    -   dacă există un scaun, treci peste el-   stai jos.Spuneți-le elevilor că vor folosi relațiile de condiționalitate în timpul acestei lecții. Dați definiția:-   **Condiției**: Un enunț care este verificat de un program pentru a vedea dacă este adevărat sau fals. Dacă este adevărat, se întreprinde o acțiune. În caz contrar, acțiunea este ignorată.- **Relațiilor de condiționalitate**: enunțuri care se execută numai în anumite condiții.Deschideți o discuție despre situațiile în care ați putea folosi un asemenea tip de relație de condiționalitate în codul vostru."
         },
         "83daad31-f1c9-4d21-897b-a291d39f55df": {
+          "name": "Privind înainte cu Minecraft",
           "description": "#### Puzzle-uri onlineAceastă lecție va fi o adevărată plăcere pentru elevi. Este probabil ca majoritatea elevilor dumneavoastră să fi auzit de _Minecraft_, dar faceți o scurtă prezentare pentru cei care nu știu despre ce este vorba._Minecraft_ este un joc cu cuburi. Puteți juca rolul lui _Alex_ sau al lui _Steve_ în timp ce străbateți labirinturi. Va trebui să evitați lava, să culegeți obiecte și să explorați o lume alcătuită din cuburi.Rezolvați unul dintre puzzle-uri (vă recomandăm puzzle-ul 11.) După ce s-a răspuns la toate întrebările, rugați elevii să treacă la calculatoare și lăsați-i să înceapă programarea în perechi."
         },
         "47b5c27a-db1c-4abd-a3c9-4d90561d7d79": {
@@ -3529,6 +3551,7 @@
           "description": "Acum vom folosi relațiile de condiționalitate cu albinuța Code.org, pentru a o ajuta să treacă de niște nori misterioși. Nu știm dacă florile au nectar sau nu, așa că va trebui să folosim relațiile de condiționalitate pentru a ne asigura că vom colecta nectarul dacă este acolo, dar și că nu vom încerca să colectăm nectar de la o floare care nu are nectar.Scoateți un puzzle din această lecție, vă recomandăm puzzle-ul nr. 9.-   Întrebați clasa ce ar trebui să facă albina când ajunge la nor.-   Albina ar trebui să folosească o relație de condiționalitate pentru a verifica dacă există o floare sau un fagure de miere.-   Utilizați „if at flower / else block” (dacă la floare/altfel blochează). Întrebați clasa ce ar trebui să facă albina dacă există o floare. Dacă nu există o floare, va exista un fagure de miere. Ce ar trebui să facă albina în acest caz?    -   Albina ar trebui să „get nectar” (să obțină nectar) dacă există o floare și să „make honey” (să facă miere) dacă există un fagure de miere.Completați restul codului și apăsați „Rulează”. Discutați cu clasa pentru a afla de ce a funcționat."
         },
         "13e970f9-2c63-49d0-9995-322afdd7f201": {
+          "name": "Dacă/Altfel cu albine",
           "description": "Aceste puzzle-uri pot duce la întrebări, așa că puneți-i pe elevi să lucreze în perechi sau aplicați regula „Întreabă trei înainte de a mă întreba pe mine” (cereți elevilor să ceară ajutorul altor trei colegi înainte de a se adresa profesorului). Acest lucru va declanșa discuții prin care fiecare elev va înțelege mai bine despre ce este vorba."
         },
         "acb76386-861e-420e-affd-2f61655a5423": {
@@ -3587,6 +3610,7 @@
           "description": "#### Previzualizarea puzzle-urilor onlineScoateți un puzzle din puzzle-urile de astăzi de la Code Studio. Vă recomandăm Puzzle-ul nr. 4.-   Întrebați-i pe elevi ce ar trebui să repete pasărea pentru a ajunge la porc.    -   Pasărea trebuie să repete „mergi înainte”, „întoarce-te la dreapta”, „mergi înainte” și apoi „întoarce-te la stânga”.-   Întrebați-i pe elevi ce pot folosi pentru a repeta acest cod.    -   Pasărea trebuie să repete acest tipar _până când_ ajunge la porc.Completați restul codului folosind bucla „repeat until” și apăsați „Rulează”. Discutați cu clasa motivul pentru care această comandă a funcționat."
         },
         "db031fa5-7047-46ee-8ccf-49a1f15c696a": {
+          "name": "Până la bucle în labirint",
           "description": "Asocierea de concepte nu este ușoară, dar acest set de lecții îi va ajuta pe elevi să întrevadă posibilitățile infinite ale programării atunci când se folosesc relațiile de condiționalitate. Dacă elevii întâmpină dificultăți în a înțelege asemănările sau diferențele dintre buclele „while” și „until”, rugați-i să încerce să se gândească la modul în care ar folosi afirmații similare în viața reală."
         },
         "04c4d948-2e60-4a38-8c5b-9bf7280d029f": {
@@ -3601,6 +3625,7 @@
           "description": "Elevii nu ar trebui să aibă nevoie de o introducere prea complexă pentru conceptele de astăzi, deoarece au exersat în lecția anterioară. Dar le puteți spune povestea culegătorului.Culegătorul încearcă să recolteze culturi precum dovleci, salată și porumb. Cu toate acestea, fermierul a uitat unde a plantat aceste culturi, așa că trebuie să verifice fiecare plantă înainte de recoltare."
         },
         "88047116-9c78-4003-99fe-cd24ceb91b93": {
+          "name": "Recoltarea cu condiționări",
           "description": "Elevii vor continua să lucreze cu instrucțiuni if / else, bucle while și bucle until. Aceste puzzle-uri sunt puțin mai dificile, așa că încurajați-i să lucreze la ele până când vor putea descrie ce trebuie să se întâmple pentru fiecare program."
         },
         "7d64d5dc-765d-4bb4-8664-5d6b8a3ddc1f": {
@@ -3680,6 +3705,7 @@
           "description": "Atunci când un mesaj de pe ecranul computerului vă cere să introduceți date, acesta se numește prompt.Atunci când un utilizator tastează informații într-un prompt, este ca și cum computerul stochează informațiile într-un container.Eticheta variabilei ne spune la ce fel de informații să ne așteptăm.Astăzi vom învăța codul pentru a crea un prompt în Laboratorul cu sprites."
         },
         "c69862bf-8fe7-4a68-bb37-ff81924f4bf5": {
+          "name": "Text și Prompts",
           "description": "#### Predicție (5 minute)**Faceți acest lucru:** Cereți-le elevilor să citească codul furnizat și să facă o predicție cu privire la ce se va întâmpla. După ce ați apăsat „Rulare”, acordați-le timp elevilor să reflecteze cu privire la orice lucru pe care l-au considerat interesant sau care i-a surprins."
         },
         "30ab0425-1627-48c1-96fe-419887aa0ae7": {
@@ -3752,6 +3778,7 @@
           "description": "Această serie este puțin diferită față de ceea ce au făcut elevii în trecut. Acum, în loc să atribuiți pur și simplu o valoare unei variabile și să rulați codul, va trebui să îi ajutați pe elevi să vadă cum poate fi modificată o variabilă în timpul rulării programului.**Afișați** Arătați-le elevilor zona de joacă a unuia dintre puzzle-urile recente.![](https://images.code.org/a79f4f074b2018d6e17e38c99539cd69-mapcopy.png)Sunt mai multe aspecte de analizat aici, așa că acordați-le elevilor posibilitatea de a face o analiză critică a acesteia înainte de a continua.**Reflectați/Lucrați în perechi:**  _Ce tipare observați în acest puzzle? Care sunt diferențele dintre straturile de flori în formă de fagure de la începutul, mijlocul și sfârșitul traseului albinei?_**Partajați:** Lăsați elevii să-și partajeze ideile.**Discutați:**_Care sunt modalitățile prin care am putea programa o soluție a acestui puzzle? Cum putem folosi o variabilă pentru ca o buclă să facă aceasta în locul nostru?_"
         },
         "aed9e7b5-5f28-4fef-81d9-35d67a89ce96": {
+          "name": "Variabile cu albina",
           "description": "Pentru acest set de puzzle-uri este nevoie de abilități dezvoltate de gândire computațională. Dacă vedeți că elevii se blochează, ajutați-i să descompună puzzle-urile în părțile componente:-   Cum ar arăta puzzle-ul dacă toate florile/fagurii ar avea aceeași cantitate de nectar/miere?-   Cum puteți folosi o variabilă pentru a obține cantitățile dorite?"
         },
         "a615a593-2c9c-4eaf-af4d-e20ec484ef9c": {
@@ -4670,6 +4697,7 @@
           "name": "Previzualizarea puzzle-urilor online împreună cu toți elevii"
         },
         "2780e63f-ba52-459a-9176-4208568b6163": {
+          "name": "Colectarea comoara cu Laurel",
           "description": "_Aventuriera Laurel_ încearcă să strângă cât mai multe comori. Cereți-le elevilor să parcurgă puzzle-ul și să strângă tot ce pot. La unele niveluri trebuie să strângă doar o singură bucată de comoară, în timp ce la altele trebuie să strângă toată comoara. Fiți atenți la instrucțiuni ca să știți ce trebuie să faceți!"
         },
         "eddda354-d5be-46f5-96fb-453befa94962": {
@@ -4689,6 +4717,9 @@
         },
         "9f1508f1-3a4b-42fb-82fb-d31a0aad9576": {
           "name": "Introducere"
+        },
+        "285edd36-99af-46e6-ba3a-91300c2ef572": {
+          "name": "Crearea artei cu cod"
         },
         "12b5328f-3f65-46e2-b3e7-9426b47e1f31": {
           "tips": [
@@ -4716,6 +4747,9 @@
         },
         "129d2408-3ca5-4a8e-90b1-f5ad3d0e6c48": {
           "name": "Introducere"
+        },
+        "3ff8ec4d-fe12-413a-975d-69e143845e37": {
+          "name": "Prietenii mei Robotici Loopy"
         },
         "b1974523-e458-4364-aeb2-80f00e6de4bd": {
           "tips": [
@@ -4797,10 +4831,14 @@
           "name": "Introducere"
         },
         "f5af8f45-b9fa-46f2-8006-05af25fe0b04": {
+          "name": "Autocolant Art cu bucle",
           "description": "Încurajați creativitatea în timpul acestei activități! Instrucțiunile oferă exemple, dar elevii pot face experimente cu diferite autocolante sau tipuri de desene. Chiar și soluțiile-exemplu pe care le oferim nu sunt _singurele_ soluții!",
           "tips": [
             "Este posibil ca această lecție să fie foarte diferită de ceea ce s-a întâmplat mai devreme în cadrul cursului. Aceste niveluri includ unele caracteristici noi pe care vă recomandăm să le explorați înainte de a începe. Codul pe care elevii dumneavoastră îl scriu la unul dintre niveluri se va transfera automat la celelalte niveluri. Acest lucru le permite să construiască treptat și să-și revizuiască ideile pe măsură ce învață. Rețineți că aceste niveluri nu sunt verificate din punctul de vedere al corectitudinii, pentru a le da elevilor ocazia de a fi creativi. Lăsați elevii să stabilească singuri când au finalizat fiecare sarcină."
           ]
+        },
+        "5bee125c-0e5e-46a8-b72b-fdc8a71f5161": {
+          "progression_name": "Mini-proiect: Autocolant Art"
         },
         "c5f36648-ac0d-405f-af7a-3020ebdce7f3": {
           "progression_name": "Joc la liber"
@@ -4913,6 +4951,10 @@
         },
         "d7a9e0cd-a7e6-46de-910f-3f0e1216f055": {
           "name": "Introducere"
+        },
+        "7416084b-fb76-4855-aabe-eeaf20181d79": {
+          "name": "Fotografierea datelor",
+          "progression_name": "Fotografierea datelor"
         },
         "4a782ed3-3443-4139-a1bd-88f562c4386e": {
           "tips": [
@@ -8075,6 +8117,7 @@
         },
         "43fde334-6c07-4b1b-b23d-4b67f5fbfbc0": {
           "name": "Încheiere",
+          "description": "**Colectare:** Roagă elevii să trimită prototipurile lor și să trimită aplicațiile lor în App Lab. \n\n**Reflectare:** Roagă elevii să completeze un sondaj rapid cu 5 întrebări în Studio Cod. Vei putea să vizualizezi rezultatele anonime în tabloul de bord al profesorului. ",
           "progression_name": "Reflecţie"
         },
         "b46cfe31-9b5e-4820-b368-fc8a4fa139a7": {
@@ -8293,7 +8336,8 @@
           ]
         },
         "7799c3eb-e76a-465b-9f24-69d6c04a01c7": {
-          "name": "Reflecţie"
+          "name": "Reflecţie",
+          "description": "**Studio Cod:** Invită elevii să răspundă la 5 întrebări de sondaj rapid la începutul acestei unități despre inteligența artificială și învățarea automată. După ce cel puțin 5 elevi au completat sondajul, vei putea vizualiza rezultatele anonimizate în Tabloul de Bord al Profesorului. Unele dintre aceste întrebări vor fi adresate din nou la sfârșitul primului proiect, ceea ce poate fi util pentru a vedea evoluția elevilor și schimbările de atitudine pe parcursul unității."
         },
         "b5acd50c-8f0e-4c22-8918-0e4801b137e1": {
           "tips": [
@@ -8501,6 +8545,7 @@
           ]
         },
         "73c2cb42-e6a3-4317-8aab-7196411578ab": {
+          "name": "Carduri model în AI Lab",
           "tips": [
             null
           ]
@@ -8809,6 +8854,9 @@
         "d6ed872d-76c1-4f17-a785-1279a9ad0a59": {
           "name": "Reflecţie",
           "progression_name": "Reflecţie"
+        },
+        "56a94d0e-564a-472e-9008-1438acf4966d": {
+          "progression_name": "Schimbă"
         },
         "90bc9191-8e68-41bd-b8e9-8291930dca38": {
           "progression_name": "Evenimente"
@@ -9199,6 +9247,9 @@
           "name": "Reflecţie",
           "progression_name": "Reflecţie"
         },
+        "c1741e76-fbd0-48fa-85d3-50beacd5a130": {
+          "progression_name": "Schimbă"
+        },
         "de9506b3-18cc-45c8-a490-9f9b49505977": {
           "progression_name": "Evenimente"
         },
@@ -9364,6 +9415,9 @@
         "4a3c9ed6-af53-4747-9298-b104980a8961": {
           "name": "Reflecţie",
           "progression_name": "Reflecţie"
+        },
+        "acb37390-01f3-460c-a88c-24c6379925a1": {
+          "progression_name": "Schimbă"
         },
         "14876891-4b0e-4960-878d-f5c7b5771261": {
           "progression_name": "Evenimente"
@@ -9565,6 +9619,7 @@
           "description": "În curând vom învăța să scriem coduri și să realizăm propriile noastre proiecte în Laboratorul cu sprites. Vom începe prin a explora ceea ce este posibil. Astăzi tu ești utilizatorul! Sarcina ta este să te joci și să folosești exemple de programe pe care le vei găsi pe site-ul Code.org. Pentru fiecare program pe care-l încerci, vei descrie costumele pentru sprites pe care le vezi și toate alegerile pe care le poți face în calitate de utilizator."
         },
         "e9148961-d1ba-4ce8-b9f6-79d0603b3122": {
+          "name": "Explorarea aplicațiilor",
           "description": "_Explorați cel puțin 3 programe Laboratorul cu sprites pe Code.org. Pentru fiecare program, veți enumera sprites pe care le vedeți și veți descrie alegerile pe care le-ați făcut în calitate de utilizator._**Faceți acest lucru:**- Puneți la dispoziția fiecărui elev (sau a fiecărui grup) o copie fizică sau digitală a fișei de lucru **Explorarea aplicațiilor**.- Spuneți-le elevilor să acceseze nivelul 2 din Code Studio (Explorare: Exemple de aplicații).- Luați în considerare prezentarea unei aplicații în fața clasei, ca un model, înainte de a le cere elevilor să îndeplinească activitatea în mod independent.",
           "tips": [
             "Dacă este prima dată când elevii folosesc Code.org, acordați-le timp suplimentar pentru a-i ajuta să înțeleagă cum să navigheze pe site și să se conecteze la conturile lor."
@@ -9761,6 +9816,7 @@
           "description": "La sfârșitul lecției precedente, am analizat asemănările dintre poveștile cu spații necompletate și aplicațiile care solicită utilizatorului să introducă date.Atunci când un mesaj de pe ecranul computerului vă cere să introduceți date, acesta se numește prompt.Atunci când un utilizator tastează informații într-un prompt, este ca și cum computerul stochează informațiile într-un container.Eticheta variabilei ne spune la ce fel de informații să ne așteptăm.Astăzi vom învăța codul pentru a crea un prompt în Laboratorul cu sprites."
         },
         "05818b32-90cc-466a-b952-8fcf048e4e5c": {
+          "name": "Text și Prompts",
           "description": "#### Predicție (5 minute)**Faceți acest lucru:** Cereți-le elevilor să citească codul furnizat și să facă o predicție cu privire la ce se va întâmpla. După ce ați apăsat „Rulare”, acordați-le timp elevilor să reflecteze cu privire la orice lucru pe care l-au considerat interesant sau care i-a surprins."
         },
         "aae21e24-4a0c-4d8c-aec0-67554766b38f": {
@@ -9848,6 +9904,9 @@
           "name": "Introducere",
           "description": "Recapitulați pe scurt cu clasa ce sunt **buclele** și de ce le folosim.-   _Ce fac buclele?_    -   Buclele repetă un set de comenzi.-   _Cum folosim buclele?_    -   Folosim buclele pentru a crea un model format din acțiuni repetate.Spuneți-le elevilor că urmează să facă ceva foarte interesant: vor folosi bucle în interiorul buclelor. Cereți-le elevilor să prezică care sunt lucrurile pentru care vor folosi o buclă în interiorul unei alte bucle._Dacă o buclă repetă un tipar, atunci redarea unei bucle în buclă va repeta un tipar cu tipare!_Elevii nu trebuie să înțeleagă acest lucru imediat, așa că nu ezitați să treceți la puzzle-urile online chiar dacă elevii par încă puțin confuzi."
         },
+        "f5e9f7d1-a504-4581-bf6a-a44a5a62cd20": {
+          "name": "Programarea cu albina"
+        },
         "6cef858a-437c-47a3-9c8a-1229f634948a": {
           "tips": [
             "Această lecție poate fi dificilă. Luați în considerare utilizarea „programării în perechi”, pentru ca elevii să poată colabora și să se sprijine reciproc."
@@ -9862,6 +9921,7 @@
           "description": "Această serie este puțin diferită față de ceea ce au făcut elevii în trecut. Acum, în loc să atribuiți pur și simplu o valoare unei variabile și să rulați codul, va trebui să îi ajutați pe elevi să vadă cum poate fi modificată o variabilă în timpul rulării programului.**Afișați** Arătați-le elevilor zona de joacă a unuia dintre puzzle-urile recente.![](https://images.code.org/ae28833eda4cf32f7ef284c9b27e41d3-image-1615819139100.png)Sunt mai multe aspecte de analizat aici, așa că acordați-le elevilor posibilitatea de a face o analiză critică a acesteia înainte de a continua.**Reflectați/Lucrați în perechi:**  _Ce tipare observați în acest puzzle? Care sunt diferențele dintre straturile de flori în formă de fagure de la începutul, mijlocul și sfârșitul traseului albinei?_**Partajați:** Lăsați elevii să-și partajeze ideile.**Discutați:**_Care sunt modalitățile prin care am putea programa o soluție a acestui puzzle? Cum putem folosi o variabilă pentru ca o buclă să facă aceasta în locul nostru?_"
         },
         "aa24a7a8-7cec-408b-b980-89e9c457605a": {
+          "name": "Variabile cu albina",
           "description": "Pentru acest set de puzzle-uri este nevoie de abilități dezvoltate de gândire computațională. Dacă vedeți că elevii se blochează, ajutați-i să descompună puzzle-urile în părțile componente:-   Cum ar arăta puzzle-ul dacă toate florile/fagurii ar avea aceeași cantitate de nectar/miere?-   Cum puteți folosi o variabilă pentru a obține cantitățile dorite?"
         },
         "a3b35da9-5d20-4f58-998a-e5395fc7e23f": {
@@ -9945,6 +10005,9 @@
           "name": "Introducere",
           "description": "Desenați pe o tablă care poate fi văzută de întreaga clasă (sau folosiți un proiector pentru a prezenta) unul dintre desenele finale din puzzle-urile Code Studio asociate cu această lecție. Vă recomandăm una dintre următoarele opțiuni:![](https://cdo-curriculum.s3.amazonaws.com/media/uploads/F.11hint.png)Întrebați elevii cum ar putea un computer să deseneze desenul pe care l-ați prezentat.După câteva predicții, răspundeți: _cu bucle for, desigur!_.Spuneți-le elevilor că în curând vor învăța cum să creeze aceste desene folosind bucle for și variabile."
         },
+        "b838a926-533f-414b-86f6-17f8ea078fad": {
+          "name": "Pentru bucle cu artist"
+        },
         "2faabfda-d8cb-4b9d-b49c-2e79c30f7507": {
           "progression_name": "Joc la liber"
         },
@@ -9999,14 +10062,17 @@
           "description": "_Astăzi, vom face ca un loc precum Orașul Monștrilor să prindă viață scriind un cod. În această simulare, vei folosi sprite-uri (personaje) pentru a reprezenta diferiții monștri. Aceste personaje vor avea costume diferite pentru a ne spune lucruri precum dacă sunt bolnavi sau sănătoși. De asemenea, vei folosi comportamente pentru a-i face pe monștri să se miște. În cele din urmă, vei folosi evenimente pentru a schimba costumul unui personaj atunci când două personaje ating ecranul. Aceasta va reprezenta un monstru care transmite virusul altuia. Vei face predicții despre ceea ce se va întâmpla cu vecinii din Orașul Monștrilor și îi vei ajuta să se însănătoșească din nou!_"
         },
         "76fe757f-0aa5-4dc0-9864-861f6023828e": {
+          "description": "\\*\\* Faceți acest lucru: \\*\\* Afișați videoclipul „Outbreak Simulator: Introducere”.",
           "tips": [
             "Blocurile de evenimente din această lecție sunt mai avansate decât cele folosite de elevi până acum în cadrul cursului. Asigurați-vă că elevii știu că pot extinde blocurile de evenimente verzi prin apăsarea butonului +. Elevii lucrează astăzi cu mai mulți sprites. În mod normal, comenzile din Laboratorul cu sprites afectează toți sprites care poartă același costum. Cu blocurile din interiorul blocului de evenimente, fiecare acțiune asociată va afecta doar sprites care au fost implicate în acel eveniment."
-          ]
+          ],
+          "progression_name": "Video: Simulator de focar: Introducere"
         },
         "1b81351d-aade-4896-8957-e06fdd93edfa": {
           "description": "**Faceți acest lucru:** Așezați elevii la computerele lor și rugați-i să înceapă să urmeze instrucțiunile pentru fiecare nivel din secțiunea de dezvoltare a abilităților. Dacă elevii termină această secțiune mai devreme, ei pot continua să experimenteze cu codul lor la nivelul 6 până când clasa este gata să meargă mai departe."
         },
         "6a891356-b6da-4faa-bb30-f79f23f2bbcb": {
+          "description": "\\*\\* Faceți acest lucru: \\*\\* Aduceți clasa înapoi pentru a citi _Outbreak: Thinking Like a Scientist._ De asemenea, puteți afișa următorul videoclip în Nivelul 8.",
           "progression_name": "Învață din Simulări"
         },
         "c7a4861c-a0ff-4ea3-819c-0aecb4d880a0": {
@@ -11157,6 +11223,7 @@
           "description": "Alegeți un puzzle din etapa online corespunzătoare. Vă recomandăm puzzle-ul cu numărul 7. Cereți-le elevilor să discute pe marginea unui model care, în opinia lor, o va face pe _Aventuriera Laurel_ să strângă toată comoara. Rugați-i pe elevi să vă transmită rezultatele. Vedeți câți elevi au răspuns la fel!"
         },
         "e2aaa332-2426-4380-b14b-cd681477be54": {
+          "name": "Colectarea comoara cu Laurel",
           "description": "_Aventuriera Laurel_ încearcă să strângă cât mai multe comori. Cereți-le elevilor să parcurgă puzzle-ul și să strângă tot ce pot. La unele niveluri trebuie să strângă doar o singură bucată de comoară, în timp ce la altele trebuie să strângă toată comoara. Fiți atenți la instrucțiuni ca să știți ce trebuie să faceți!"
         },
         "e7869029-e0e5-4e0d-a6a8-b73fc0b01246": {
@@ -11174,6 +11241,7 @@
           "description": "Arătați-le elevilor unul sau ambele clipuri video de mai jos în care sunt prezentate unghiurile:**\\*Prezentarea Artistului** - clip video pentru elevi (1,5 minute)**\\*Întoarceri și unghiuri - clip video pentru elevi (2 minute)Folosiți \\*_\\\\_manualul elevului** pentru a le arăta elevilor unghiurile interioare și exterioare, utilizate pentru diferite forme. Acest document poate fi folosit ca material de lucru sau puteți alege să îl imprimați ca poster, pe care elevii să-l utilizeze ca element de referință.**Discutați** despre pătrat și triunghi, așa cum sunt prezentate în document.-   _Cum ați putea programa un calculator să deseneze această formă?_-   _În ce ordine ar trebui puse instrucțiunile?_Spuneți-le elevilor că în aceste puzzle-uri vor deplasa un personaj care lasă o urmă peste tot pe unde trece. Elevii vor scrie un cod care va face ca personajul să deseneze diverse forme, inclusiv un pătrat."
         },
         "3861a12f-7e0f-43bf-8d29-1d526a2c90b2": {
+          "name": "Crearea artei cu cod",
           "description": "În acest set de puzzle-uri, artistul nu va mai fi limitat la unghiuri de 90 de grade. Faptul că au la dispoziție raportoare fizice va fi util pentru elevi, care vor vizualiza mai ușor unghiurile de care au nevoie. În caz contrar, în această etapă sunt furnizate imagini ale unghiurilor, pe măsură ce elevul selectează unghiul pe care îl va folosi. (Notă: alegerea unghiurilor este limitată la două în meniul derulant, ceea ce reduce numărul de opțiuni pe care elevii trebuie să le parcurgă).Înainte de a-i trimite pe elevi la calculatoare pentru a lucra la puzzle-uri, este binevenită o scurtă prezentare a modului de utilizare a instrumentelor din acest nivel. Recomandăm puzzle-ul nr. 5 pentru a demonstra cum se utilizează raportorul online."
         },
         "16e320f6-0c67-4992-87a4-0ae6396a1080": {
@@ -11198,6 +11266,9 @@
         "359899f5-314a-401a-a75f-1b0cd32829d8": {
           "name": "Prietenii mei roboții - Recapitulare",
           "description": "**Obiectiv:** În cadrul acestei recapitulări, elevii își vor aminti cât de intense sunt programele pentru activitatea „Prietenii mei roboții”.**Afișați:** Afișați **\\*Cheia simbolurilor** pe care am folosit-o în „Prietenii mei roboții”. Pentru fiecare dintre cele patru simboluri, rugați elevii să vă arate cum arată un robot care urmează instrucțiunile respective.\\<img alt=”” src=”<https://curriculum.code.org/media/uploads/Screenshot-2018-03-13-19.49.03.png”> style=”max-width: 300px;”>**Exemplificați:** Alături de toți elevii din clasă, scoateți un puzzle ușor din **\\*Idei de stivuire a paharelor** și programați împreună pentru a vă reaminti regulile și terminologia.În continuare, scoateți un puzzle care este puțin mai dificil, dar care necesită mulți pași, cum este cel de mai jos.\\<img alt=”” src=”<https://curriculum.code.org/media/uploads/Screenshot-2018-03-14-18.17.12.png”> style=”max-width: 300px;”>**Voluntariat:**Rugați un voluntar (sau un grup de voluntari) să ajute la programarea acestuia pe tablă. Dacă vor respecta cu strictețe regula „fără alte simboluri decât cele incluse în cheia simbolurilor”, această operațiune va dura ceva timp!**Afișați:** Acum afișați această imagine:\\<img src=”<https://curriculum.code.org/media/uploads/Screenshot-2018-03-14-17.59.02.png”> style=”max-width: 300px;”>Care este reacția clasei?\\*\\*Subiect: \\*\\* Elevii trebuie să aibă posibilitatea de a se gândi la modalități mai scurte de a transmite codul pe care urmează să îl creeze. (Această parte poate fi omisă dacă elevii dvs. încep să spună lucruri precum: „Mergi înainte de 6 ori”, deoarece aceasta va conduce la o discuție despre cum putem indica „de șase ori” cu ajutorul simbolurilor).După ce elevii au înțeles ideea de „repetare” a codului, predați-le vocabularul aferent. Nu uitați să le spuneți că de multe ori termenii „a repeta ceva” și „a face ceva în buclă” sunt utilizați interșanjabil."
+        },
+        "8896c62b-c73c-43f8-89c3-3def6c89d7bf": {
+          "name": "Prietenii mei Robotici Loopy"
         },
         "76533bba-6245-4429-b8ef-a406d2dd250b": {
           "description": "#### Introducere și exemplificare**Pregătire: \\*\\* Puneți la dispoziția grupurilor stive de pahare sau trapeze de hârtie.**Afișați:\\*\\* Afișați programul uneia dintre stivele de pahare realizate anterior sau folosiți-l pe cel de mai jos.![Soluția cu 3 pahare](https://curriculum.code.org/media/uploads/image_xmBkoQZa.png)**Reflectați:** Cereți elevilor să reflecteze în liniște cu privire la locul din program în care pot găsi un model de instrucțiuni care se repetă neîntrerupt (o repetiție după alta).**Grupați în perechi:** Întoarceți-vă către un coleg și partajați cu acesta unul dintre modelele repetitive pe care le-ați găsit.**Partajați:** Rugați câțiva elevi să partajeze modelele pe care le-au identificat. Încercați să evidențiați diferite abordări pentru gruparea modelelor. Pentru fiecare model, cereți-le elevilor să identifice de câte ori se repetă modelul.**Exemplificați:** Folosind unul dintre modelele care se repetă identificate de către elevi, arătați-le cum să încercuiască instrucțiunea sau modelul care se repetă, scrieți numărul de bucle lângă cerc, apoi ștergeți restul săgeților.![cod în buclă](https://curriculum.code.org/media/uploads/codeloop_EVpjnMz.png)Repetați până când întregul program este scurtat, apoi rescrieți programul într-un mod în care elevii să poată vedea cât de simple sunt instrucțiunile rezultate."
@@ -11286,6 +11357,7 @@
           "description": "Elevii au lucrat suficient cu bucle până acum. În funcție de ceea ce credeți că ar putea fi benefic pentru elevi, vă recomandăm:-   Creați un nou dans cu bucle, la fel ca în „Cum e să ai mintea creață”.-   Rezolvați cu toată clasa un puzzle din ultima lecție, „Bucle cu Rey și BB-8”.-   Recapitulați modul de utilizare al Artistului, rezolvând un puzzle din „Programare în Artist”.-   Previzualizați un puzzle din această lecție.În toate aceste opțiuni se vor recapitula fie buclele, fie Artistul, ceea ce vă va ajuta să îi pregătiți pe elevi pentru distracția cu puzzle-urile online!"
         },
         "8966320f-572a-4c6c-afc5-6b3e8240e250": {
+          "name": "Autocolant Art cu bucle",
           "description": "Încurajați creativitatea în timpul acestei activități! Instrucțiunile oferă exemple, dar elevii pot face experimente cu diferite autocolante sau tipuri de desene. Chiar și soluțiile-exemplu pe care le oferim nu sunt _singurele_ soluții!",
           "tips": [
             "Este posibil ca această lecție să fie foarte diferită de ceea ce s-a întâmplat mai devreme în cadrul cursului. Aceste niveluri includ unele caracteristici noi pe care vă recomandăm să le explorați înainte de a începe. Codul pe care elevii dumneavoastră îl scriu la unul dintre niveluri se va transfera automat la celelalte niveluri. Acest lucru le permite să construiască treptat și să-și revizuiască ideile pe măsură ce învață. Rețineți că aceste niveluri nu sunt verificate din punctul de vedere al corectitudinii, pentru a le da elevilor ocazia de a fi creativi. Lăsați elevii să stabilească singuri când au finalizat fiecare sarcină."
@@ -11415,6 +11487,10 @@
         },
         "b4d7372a-86cd-4d90-855d-0c241617237f": {
           "description": "_Aceste însemnări ne ajută să ținem evidența răspunsurilor date, ceea ce este foarte bine, dar avem nevoie de timp pentru a le număra și a afla care opțiune a fost aleasă de către cei mai mulți sau de către cei mai puțini elevi. Imaginați-vă cum ar fi dacă cineva ne-ar arăta însemnările pentru toată școală. Am avea nevoie de foarte mult timp pentru a le număra!_"
+        },
+        "7a3d8d3f-1c95-475e-b752-5df39bf0f024": {
+          "name": "Fotografierea datelor",
+          "progression_name": "Fotografierea datelor"
         },
         "f0e7a0a5-69e8-44a7-a74a-e7bab3f36647": {
           "description": "**Distribuiți**: Înmânați **\\*fișa de lucru** împreună cu pixuri și creioane de colorat. Îndrumați elevii către Code Studio sau proiectați nivelul pe tablă.",
@@ -11898,6 +11974,7 @@
           "description": "Adunați elevii și rugați doi voluntari să meargă drept într-o anumită direcție în clasă. Dacă întâlnesc un scaun care nu este la locul lui, trebuie să treacă peste el. Dacă ajung la un perete, trebuie să se așeze.După ce toți elevii s-au așezat, întrebați-i cum ar programa un robot pentru a reacționa la un perete sau la un scaun. Reamintiți-le elevilor că nu pot spune pur și simplu „Treci peste scaun” decât dacă știți că există un scaun și că nu veți ști întotdeauna că există un scaun. Ar putea fi util să transpuneți sarcina în instrucțiuni precum-   cât există o cale de urmat      -   mergi înainte    -   dacă există un scaun, treci peste el-   stai jos.Spuneți-le elevilor că vor folosi relațiile de condiționalitate în timpul acestei lecții. Dați definiția:-   **Condiției**: Un enunț care este verificat de un program pentru a vedea dacă este adevărat sau fals. Dacă este adevărat, se întreprinde o acțiune. În caz contrar, acțiunea este ignorată.- **Relațiilor de condiționalitate**: enunțuri care se execută numai în anumite condiții.Deschideți o discuție despre situațiile în care ați putea folosi un asemenea tip de relație de condiționalitate în codul vostru."
         },
         "2f024770-481d-43dc-aa55-7133819f6663": {
+          "name": "Privind înainte cu Minecraft",
           "description": "#### Puzzle-uri onlineAceastă lecție va fi o adevărată plăcere pentru elevi. Este probabil ca majoritatea elevilor dumneavoastră să fi auzit de _Minecraft_, dar faceți o scurtă prezentare pentru cei care nu știu despre ce este vorba._Minecraft_ este un joc cu cuburi. Puteți juca rolul lui _Alex_ sau al lui _Steve_ în timp ce străbateți labirinturi. Va trebui să evitați lava, să culegeți obiecte și să explorați o lume alcătuită din cuburi.Rezolvați unul dintre puzzle-uri (vă recomandăm puzzle-ul 11.) După ce s-a răspuns la toate întrebările, rugați elevii să treacă la calculatoare și lăsați-i să înceapă programarea în perechi."
         },
         "16432484-49b1-47dc-bbd9-60f67bacc790": {
@@ -11922,6 +11999,7 @@
           "description": "Scoateți un puzzle din această lecție, vă recomandăm puzzle-ul nr. 9.-   Întrebați clasa ce ar trebui să facă albina când ajunge la nor.-   Albina ar trebui să folosească o relație de condiționalitate pentru a verifica dacă există o floare sau un fagure de miere.-   Utilizați „if at flower / else block” (dacă la floare/altfel blochează). Întrebați clasa ce ar trebui să facă albina dacă există o floare. Dacă nu există o floare, va exista un fagure de miere. Ce ar trebui să facă albina în acest caz?    -   Albina ar trebui să „get nectar” (să obțină nectar) dacă există o floare și să „make honey” (să facă miere) dacă există un fagure de miere.Completați restul codului și apăsați „Rulează”. Discutați cu clasa pentru a afla de ce a funcționat."
         },
         "7f949bd4-c8d6-42b7-a6b2-a835a8a63e41": {
+          "name": "Dacă/Altfel cu albine",
           "description": "Aceste puzzle-uri pot duce la întrebări, așa că puneți-i pe elevi să lucreze în perechi sau aplicați regula „Întreabă trei înainte de a mă întreba pe mine” (cereți elevilor să ceară ajutorul altor trei colegi înainte de a se adresa profesorului). Acest lucru va declanșa discuții prin care fiecare elev va înțelege mai bine despre ce este vorba."
         },
         "8a1d519d-3579-40dd-8c62-77a2d4abc8ea": {
@@ -11967,6 +12045,7 @@
           "description": "#### Previzualizarea puzzle-urilor onlineScoateți un puzzle din puzzle-urile de astăzi de la Code Studio. Vă recomandăm Puzzle-ul nr. 4.-   Întrebați-i pe elevi ce ar trebui să repete pasărea pentru a ajunge la porc.    -   Pasărea trebuie să repete „mergi înainte”, „întoarce-te la dreapta”, „mergi înainte” și apoi „întoarce-te la stânga”.-   Întrebați-i pe elevi ce pot folosi pentru a repeta acest cod.    -   Pasărea trebuie să repete acest tipar _până când_ ajunge la porc.Completați restul codului folosind bucla „repeat until” și apăsați „Rulează”. Discutați cu clasa motivul pentru care această comandă a funcționat."
         },
         "743e2b7a-0738-44b2-afb4-44a8f1e3edab": {
+          "name": "Până la bucle în labirint",
           "description": "#### Puzzle-uri onlineAsocierea de concepte nu este ușoară, dar acest set de lecții îi va ajuta pe elevi să întrevadă posibilitățile infinite ale programării atunci când se folosesc relațiile de condiționalitate. Dacă elevii întâmpină dificultăți în a înțelege asemănările sau diferențele dintre buclele „while” și „until”, rugați-i să încerce să se gândească la modul în care ar folosi enunțuri similare în viața reală."
         },
         "31e87218-76f2-4e0c-9689-9203f3f2bc83": {
@@ -12066,6 +12145,7 @@
           "description": "Alegeți un puzzle din etapa online corespunzătoare. Vă recomandăm puzzle-ul cu numărul 7. Cereți-le elevilor să discute pe marginea unui model care, în opinia lor, o va face pe _Aventuriera Laurel_ să strângă toată comoara. Rugați-i pe elevi să vă transmită rezultatele. Vedeți câți elevi au răspuns la fel!"
         },
         "44711c15-152c-4e84-9eca-d87c42edd4a8": {
+          "name": "Colectarea comoara cu Laurel",
           "description": "_Aventuriera Laurel_ încearcă să strângă cât mai multe comori. Cereți-le elevilor să parcurgă puzzle-ul și să strângă tot ce pot. La unele niveluri trebuie să strângă doar o singură bucată de comoară, în timp ce la altele trebuie să strângă toată comoara. Fiți atenți la instrucțiuni ca să știți ce trebuie să faceți!"
         },
         "18bc2d27-442d-405b-aafc-c5f9e0c767ca": {
@@ -12083,6 +12163,7 @@
           "description": "Arătați-le elevilor unul sau ambele clipuri video de mai jos ca introducere pentru unghiuri:**\\*Prezentarea Artistului** (1,5 minute)**\\*Întoarceri și unghiuri (2 minute)Folosiți \\*_\\\\_fișa elevului** pentru a le arăta elevilor unghiurile interioare față de cele exterioare pentru diferite forme. Acest document poate fi folosit ca material de lucru sau puteți alege să îl imprimați ca poster, ca elevii să-l aibă la dispoziție pentru a-l consulta.**Discutați** formele din document - triunghiul și pătratul.-   _Cum ați putea programa un calculator pentru a desena această formă?_-   _În ce ordine trebuie să fie instrucțiunile?_Spuneți-le elevilor că în aceste puzzle-uri vor deplasa un personaj care lasă o urmă peste tot pe unde trece. Elevii vor scrie un cod care va face ca personajul să deseneze diverse forme, inclusiv un pătrat."
         },
         "9594ae73-93bc-4660-aa85-9346451fdf4a": {
+          "name": "Crearea artei cu cod",
           "description": "În acest set de puzzle-uri, artistul nu va mai fi limitat la unghiuri de 90 de grade. Faptul că au la dispoziție raportoare fizice va fi util pentru elevi, care vor vizualiza mai ușor unghiurile de care au nevoie. În caz contrar, în această etapă sunt furnizate imagini ale unghiurilor, pe măsură ce elevul selectează unghiul pe care îl va folosi. (Notă: alegerea unghiurilor este limitată la două în meniul derulant, ceea ce reduce numărul de opțiuni pe care elevii trebuie să le parcurgă).Înainte de a-i trimite pe elevi la calculatoare pentru a lucra la puzzle-uri, este binevenită o scurtă prezentare a modului de utilizare a instrumentelor din acest nivel. Recomandăm puzzle-ul nr. 5 pentru a demonstra cum se utilizează raportorul online."
         },
         "91b196fb-aecb-44e0-ac99-e74dfa8e586d": {
@@ -12311,6 +12392,7 @@
           "description": "Elevii au lucrat suficient cu bucle până acum. În funcție de ceea ce credeți că ar putea fi benefic pentru elevi, vă recomandăm:-   Creați un dans, incluzând pași repetați în bucle.-   Rezolvați cu toată clasa un puzzle din ultima lecție, „Bucle cu Rey și BB-8”.-   Recapitulați modul de utilizare al Artistului, rezolvând un puzzle din „Creați opere de artă cu ajutorul codului”.-   Previzualizați un puzzle din această lecție.Cu toate aceste opțiuni se vor recapitula fie buclele, fie Artistul, ceea ce vă va ajuta să îi pregătiți pe elevi pentru distracția cu puzzle-urile online!"
         },
         "049d42a9-4582-4ba6-8083-2605a7584613": {
+          "name": "Autocolant Art cu bucle",
           "description": "Încurajați creativitatea în timpul acestei activități! Instrucțiunile oferă exemple, dar elevii pot face experimente cu diferite autocolante sau tipuri de desene. Chiar și soluțiile-exemplu pe care le oferim nu sunt _singurele_ soluții!",
           "tips": [
             "Este posibil ca această lecție să fie foarte diferită de ceea ce s-a întâmplat mai devreme în cadrul cursului. Aceste niveluri includ unele caracteristici noi pe care vă recomandăm să le explorați înainte de a începe. Codul pe care elevii dumneavoastră îl scriu la unul dintre niveluri se va transfera automat la celelalte niveluri. Acest lucru le permite să construiască treptat și să-și revizuiască ideile pe măsură ce învață. Rețineți că aceste niveluri nu sunt verificate din punctul de vedere al corectitudinii, pentru a le da elevilor ocazia de a fi creativi. Lăsați elevii să stabilească singuri când au finalizat fiecare sarcină."
@@ -12367,6 +12449,7 @@
           "description": "Adunați elevii și rugați doi voluntari să meargă drept într-o anumită direcție în clasă. Dacă întâlnesc un scaun care nu este la locul lui, trebuie să treacă peste el. Dacă ajung la un perete, trebuie să se așeze.După ce toți elevii s-au așezat, întrebați-i cum ar programa un robot pentru a reacționa la un perete sau la un scaun. Reamintiți-le elevilor că nu pot spune pur și simplu „Treci peste scaun” decât dacă știți că există un scaun și că nu veți ști întotdeauna că există un scaun. Ar putea fi util să transpuneți sarcina în instrucțiuni precum-   cât există o cale de urmat      -   mergi înainte    -   dacă există un scaun, treci peste el-   stai jos.Spuneți-le elevilor că vor folosi relațiile de condiționalitate în timpul acestei lecții. Dați definiția:-   **Condiției**: Un enunț care este verificat de un program pentru a vedea dacă este adevărat sau fals. Dacă este adevărat, se întreprinde o acțiune. În caz contrar, acțiunea este ignorată.- **Relațiilor de condiționalitate**: enunțuri care se execută numai în anumite condiții.Deschideți o discuție despre situațiile în care ați putea folosi un asemenea tip de relație de condiționalitate în codul vostru."
         },
         "db402396-6473-4942-a3b9-e3833beb0cd8": {
+          "name": "Privind înainte cu Minecraft",
           "description": "#### Puzzle-uri onlineAceastă lecție va fi o adevărată plăcere pentru elevi. Este probabil ca majoritatea elevilor dumneavoastră să fi auzit de _Minecraft_, dar faceți o scurtă prezentare pentru cei care nu știu despre ce este vorba._Minecraft_ este un joc cu cuburi. Puteți juca rolul lui _Alex_ sau al lui _Steve_ în timp ce străbateți labirinturi. Va trebui să evitați lava, să culegeți obiecte și să explorați o lume alcătuită din cuburi.Rezolvați unul dintre puzzle-uri (vă recomandăm puzzle-ul 11.) După ce s-a răspuns la toate întrebările, rugați elevii să treacă la calculatoare și lăsați-i să înceapă programarea în perechi."
         },
         "3ab2228f-c257-4ffd-bcc0-1e5b29118ccf": {
@@ -12387,6 +12470,7 @@
           "description": "Acum vom folosi relațiile de condiționalitate cu albinuța Code.org, pentru a o ajuta să treacă de niște nori misterioși. Nu știm dacă florile au nectar sau nu, așa că va trebui să folosim relațiile de condiționalitate pentru a ne asigura că vom colecta nectarul dacă este acolo, dar și că nu vom încerca să colectăm nectar de la o floare care nu are nectar.Scoateți un puzzle din această lecție, vă recomandăm puzzle-ul nr. 9.-   Întrebați clasa ce ar trebui să facă albina când ajunge la nor.-   Albina ar trebui să folosească o relație de condiționalitate pentru a verifica dacă există o floare sau un fagure de miere.-   Utilizați „if at flower / else block” (dacă la floare/altfel blochează). Întrebați clasa ce ar trebui să facă albina dacă există o floare. Dacă nu există o floare, va exista un fagure de miere. Ce ar trebui să facă albina în acest caz?    -   Albina ar trebui să „get nectar” (să obțină nectar) dacă există o floare și să „make honey” (să facă miere) dacă există un fagure de miere.Completați restul codului și apăsați „Rulează”. Discutați cu clasa pentru a afla de ce a funcționat."
         },
         "22580642-ad9a-48f6-9ad6-8693e42ed9d3": {
+          "name": "Dacă/Altfel cu albine",
           "description": "Aceste puzzle-uri pot duce la întrebări, așa că puneți-i pe elevi să lucreze în perechi sau aplicați regula „Întreabă trei înainte de a mă întreba pe mine” (cereți elevilor să ceară ajutorul altor trei colegi înainte de a se adresa profesorului). Acest lucru va declanșa discuții prin care fiecare elev va înțelege mai bine despre ce este vorba."
         },
         "cd33cbb5-8d96-4173-a790-5f3c59c5afff": {
@@ -12446,6 +12530,7 @@
           "description": "#### Previzualizarea puzzle-urilor onlineScoateți un puzzle din puzzle-urile de astăzi de la Code Studio. Vă recomandăm Puzzle-ul nr. 4.-   Întrebați-i pe elevi ce ar trebui să repete pasărea pentru a ajunge la porc.    -   Pasărea trebuie să repete „mergi înainte”, „întoarce-te la dreapta”, „mergi înainte” și apoi „întoarce-te la stânga”.-   Întrebați-i pe elevi ce pot folosi pentru a repeta acest cod.    -   Pasărea trebuie să repete acest tipar _până când_ ajunge la porc.Completați restul codului folosind bucla „repeat until” și apăsați „Rulează”. Discutați cu clasa motivul pentru care această comandă a funcționat."
         },
         "3fabd283-0831-412f-8a9f-76e9bf96206f": {
+          "name": "Până la bucle în labirint",
           "description": "Asocierea de concepte nu este ușoară, dar acest set de lecții îi va ajuta pe elevi să întrevadă posibilitățile infinite ale programării atunci când se folosesc relațiile de condiționalitate. Dacă elevii întâmpină dificultăți în a înțelege asemănările sau diferențele dintre buclele „while” și „until”, rugați-i să încerce să se gândească la modul în care ar folosi afirmații similare în viața reală."
         },
         "db38efa3-e075-41c0-ba59-0e9426393b52": {
@@ -12460,6 +12545,7 @@
           "description": "Elevii nu ar trebui să aibă nevoie de o introducere prea complexă pentru conceptele de astăzi, deoarece au exersat în lecția anterioară. Dar le puteți spune povestea culegătorului.Culegătorul încearcă să recolteze culturi precum dovleci, salată și porumb. Cu toate acestea, fermierul a uitat unde a plantat aceste culturi, așa că trebuie să verifice fiecare plantă înainte de recoltare."
         },
         "26679730-3364-4598-abd8-b07e9d9f9ad9": {
+          "name": "Recoltarea cu condiționări",
           "description": "Elevii vor continua să lucreze cu instrucțiuni if / else, bucle while și bucle until. Aceste puzzle-uri sunt puțin mai dificile, așa că încurajați-i să lucreze la ele până când vor putea descrie ce trebuie să se întâmple pentru fiecare program."
         },
         "f6fcf627-61b6-45f8-ac6b-602a11fb434a": {
@@ -12539,6 +12625,7 @@
           "description": "Atunci când un mesaj de pe ecranul computerului vă cere să introduceți date, acesta se numește prompt.Atunci când un utilizator tastează informații într-un prompt, este ca și cum computerul stochează informațiile într-un container.Eticheta variabilei ne spune la ce fel de informații să ne așteptăm.Astăzi vom învăța codul pentru a crea un prompt în Laboratorul cu sprites."
         },
         "e7833677-6e13-40dc-9e36-56388378828d": {
+          "name": "Text și Prompts",
           "description": "#### Predicție (5 minute)**Faceți acest lucru:** Cereți-le elevilor să citească codul furnizat și să facă o predicție cu privire la ce se va întâmpla. După ce ați apăsat „Rulare”, acordați-le timp elevilor să reflecteze cu privire la orice lucru pe care l-au considerat interesant sau care i-a surprins."
         },
         "79cc55bf-53a8-463c-b4dc-86cc8651587a": {
@@ -12584,6 +12671,7 @@
           "description": "Această serie este puțin diferită față de ceea ce au făcut elevii în trecut. Acum, în loc să atribuiți pur și simplu o valoare unei variabile și să rulați codul, va trebui să îi ajutați pe elevi să vadă cum poate fi modificată o variabilă în timpul rulării programului.**Afișați** Arătați-le elevilor zona de joacă a unuia dintre puzzle-urile recente.![](https://images.code.org/a79f4f074b2018d6e17e38c99539cd69-mapcopy.png)Sunt mai multe aspecte de analizat aici, așa că acordați-le elevilor posibilitatea de a face o analiză critică a acesteia înainte de a continua.**Reflectați/Lucrați în perechi:**  _Ce tipare observați în acest puzzle? Care sunt diferențele dintre straturile de flori în formă de fagure de la începutul, mijlocul și sfârșitul traseului albinei?_**Partajați:** Lăsați elevii să-și partajeze ideile.**Discutați:**_Care sunt modalitățile prin care am putea programa o soluție a acestui puzzle? Cum putem folosi o variabilă pentru ca o buclă să facă aceasta în locul nostru?_"
         },
         "60fb6e02-bbf3-49df-ab58-79496259ada1": {
+          "name": "Variabile cu albina",
           "description": "Pentru acest set de puzzle-uri este nevoie de abilități dezvoltate de gândire computațională. Dacă vedeți că elevii se blochează, ajutați-i să descompună puzzle-urile în părțile componente:-   Cum ar arăta puzzle-ul dacă toate florile/fagurii ar avea aceeași cantitate de nectar/miere?-   Cum puteți folosi o variabilă pentru a obține cantitățile dorite?"
         },
         "40a52b8d-4101-4d39-a124-460b6553eea6": {
@@ -13116,6 +13204,9 @@
             "Aceste exerciții pot fi făcute și sub forma unei discuții în clasă, înainte de lecția despre drepturile de autor. Scrieți povestea sau scheciul pe tablă, pe măsură ce elevii vin cu idei noi."
           ]
         },
+        "bba24018-1d90-4a18-b596-eaab2e50567e": {
+          "name": "Partajare digitală"
+        },
         "a0c0c4ee-7e5a-4f4f-a085-49ea2a791169": {
           "description": "#### Partajare etică**Activitate:** Cereți-le elevilor să se ridice în picioare. Începeți să citiți lista de modalități de creare de conținut de mai jos. Spuneți-le elevilor să se așeze imediat ce pot răspunde „Da” la una dintre întrebări.-   _Ați făcut vreodată o filmare video (cu o cameră foto, telefon, iPad sau calculator) și l-ați trimis unui membru al familiei sau l-ați postat online?_-   _Ați făcut o fotografie și ați trimis-o unui membru al familiei sau ați postat-o pe internet?_-   _Ați conceput o creație artistică pe care ați partajat-o cu familia și prietenii?_-   _Ai compus un cântecel pentru a vă face prietenii să râdă? Sau un cântecel trist pentru a-i face să plângă?_-   _Ați scris o poezie pentru mama sau tata, de ziua lor?_Continuați să puneți întrebări similare până când toată clasa stă jos.**Discutați:**-   _Cum v-ați simțit când ați produs ceva creativ?_-   _Cum v-ați simțit când ați partajat creația cu alte persoane?_-   _Cum vă simțiți atunci când vedeți sau ascultați creațiile altora?_Încurajați toate răspunsurile.Ajutați-i pe elevi să simtă bucuria de a crea ceva. Această activitate poate fi dificilă, dar aduce extrem de multă bucurie și satisfacție. Este amuzant să partajăm ceea ce creăm, iar aceasta ne poate încuraja să dăm dovadă de și mai multă creativitate și să creăm opere de artă în continuare. Pe măsură ce creștem, avem din ce în ce mai multe oportunități de a partaja creațiile și de a explora mediile și arta pe care au creat-o alți oameni. Trebuie să ne asigurăm că dăm dovadă întotdeauna de corectitudine atunci când folosim arta și creațiile altora.**Spuneți:** Amintiți-vă că drepturile de autor protejează toate tipurile de creații, astfel încât artiștii/creatorii să poată fi plătiți pentru efortul depus. Aici sunt include lucrările literare originale (povestiri), operele de artă, fotografiile, materialele audio, imaginile, muzica, versurile cântecelor, chiar și mâzgălelile desenate pe șervețel la prânz. Nu contează dacă au fost create de un artist celebru sau de voi. Atunci când creați o lucrare originală, voi decideți cine poate:*-   \\_să realizeze copii ale acesteia*-   _să distribuie copiiale acesteia_-   _să expună sau să intepreteze lucrarea în public_-   _să creeze lucrări derivate (de exemplu, ecranizarea unei cărți)_Aceste drepturi sunt acordate artiștilor și creatorilor pentru a-i încuraja să creeze și alte opere.***Reflectați:** Invitați-i pe elevi să se gândească la momentul în care s-au așezat pentru prima dată atunci când le-ați pus întrebări despre creațiile artistice. Informați-i că au creat o lucrare originală care este protejată din punct de vedere legal. Felicitări!\\*\\*Lucrați în perechi: \\*\\*-   \\_Cum puteți ști dacă o creație este protejată de drepturi de autor?*-   *Cercul © înseamnă copyright și indică existența drepturilor de autor, dar protecția drepturilor de autor există chiar și fără acest simbol. Creatorii sunt proprietarii operelor lor, cu excepția cazului în care o vând altcuiva.-   \\_Unde ai văzut simbolul copyright-ului?*-   *În cărți, în filme, pe imagini, postere etc.**Partajați:** Încurajați-i pe elevi să partajeze răspunsurile lor cu restul clasei.**Demonstrați:** Arătați-le elevilor cum să deseneze un simbol al drepturilor de autor și să scrie anul lângă el. Atunci când creați ceva, creația voastră este automat protejată de drepturile de autor, chiar și fără simbolul de copyright.**Discutați:**-   \\_Cum vă simțiți când partajați lucrurile cu altcineva?*-   _Cum vă simțiți când cineva vă ia lucrurile și le partajează cu alții fără permisiunea voastră?_Aceleași principii de respect și corectitudine se aplică atunci când partajăm online munca noastră sau a altcuiva.\\_"
         },
@@ -13465,7 +13556,8 @@
           ]
         },
         "d26ab8fe-dc83-4704-8aba-bd0cdbdd80a4": {
-          "name": "Reflecţie"
+          "name": "Reflecţie",
+          "description": "**Studio Cod:** Invită elevii să răspundă la 5 întrebări de sondaj rapid la începutul acestei unități despre inteligența artificială și învățarea automată. După ce cel puțin 5 elevi au completat sondajul, vei putea vizualiza rezultatele anonimizate în Tabloul de Bord al Profesorului. Unele dintre aceste întrebări vor fi adresate din nou la sfârșitul primului proiect, ceea ce poate fi util pentru a vedea evoluția elevilor și schimbările de atitudine pe parcursul unității."
         },
         "8bdf1f4e-1c20-42bd-a5d5-7217dfa0bd4f": {
           "tips": [
@@ -13648,6 +13740,7 @@
           ]
         },
         "30e5080a-05d0-4193-82e4-f7c81f1adb5c": {
+          "name": "Carduri model în AI Lab",
           "tips": [
             null
           ]
@@ -14513,6 +14606,9 @@
           "tips": [
             null
           ]
+        },
+        "aa167cb8-d7fb-4c0f-8a8a-55ee234635da": {
+          "progression_name": "Schimbă"
         },
         "d0e85c72-53c1-4429-91ab-3d160fc10b20": {
           "tips": [

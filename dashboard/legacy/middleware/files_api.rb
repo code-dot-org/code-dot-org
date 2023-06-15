@@ -401,7 +401,7 @@ class FilesApi < Sinatra::Base
 
     # sources only supports one file (main.json) and we checked max_file_size above,
     # so there's no need to check if we've exceeded the max total app size for the sources bucket.
-    unless 'sources' == endpoint
+    unless endpoint == 'sources'
       app_size = buckets.app_size(encrypted_channel_id)
       quota_exceeded(endpoint, encrypted_channel_id) unless app_size + body.length < max_app_size
       quota_crossed_half_used(endpoint, encrypted_channel_id) if quota_crossed_half_used?(app_size, body.length)
@@ -415,8 +415,10 @@ class FilesApi < Sinatra::Base
     if endpoint == 'libraries' && file_type != '.java'
       begin
         share_failure = ShareFiltering.find_failure(body, request.locale)
-      rescue OpenURI::HTTPError => exception
-        return file_too_large(endpoint) if exception.message == "414 Request-URI Too Large"
+      rescue StandardError => exception
+        return file_too_large(endpoint) if exception.message == "Profanity check failed: text is too long"
+        details = exception.message.empty? ? nil : exception.message
+        return json_bad_request(details)
       end
       # TODO(JillianK): we are temporarily ignoring address share failures because our address detection is very broken.
       # Once we have a better geocoding solution in H1, we should start filtering for addresses again.
@@ -425,7 +427,7 @@ class FilesApi < Sinatra::Base
     end
 
     # Don't allow project to be saved if it contains non-UTF-8 characters (causing error / project to not load when opened).
-    if 'sources' == endpoint
+    if endpoint == 'sources'
       body_json = JSON.parse(body)
       source = body_json["source"]
       html = body_json["html"]

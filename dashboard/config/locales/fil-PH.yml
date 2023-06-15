@@ -61,6 +61,7 @@ fil:
         reset_password_token: Ang sinunod mong link ng pag-reset ng password
         error:
           future: hindi maaari sa hinaharap
+        us_state: Estado
   beta: beta
   hello: Mabuhay!
   welcome_back: Maligayang pagbabalik, %{name}
@@ -229,8 +230,6 @@ fil:
       ay hinding-hindi makakatanggap ng mga emails mula sa Code.org maliban na lang
       sa password recovery. Tingnan ang aming [patakaran sa privacy](http://code.org/privacy)
       para sa karagdagan impormasyon.
-    additional_information: Kailangan namin ng karagdagang impormasyon para maituloy
-      ang pag-sign up sa iyo.
     user_type_button: I-update ang Uri ng Account
     user_type_label: Uri ng Account
     user_type_student: Estudyante
@@ -269,6 +268,7 @@ fil:
       tungkol sa kurso nila at computer science? [(Tingnan ang aming patakaran sa
       pagkapribado)](%{privacy_policy_url})
     parent_account_email_label: Email ng Magulang/Tagapangalaga
+    us_state: Estado
   school_info:
     title: Impormasyon ng Paaralan (opsyonal)
     school_country: Bansa ng Paaralan
@@ -464,6 +464,7 @@ fil:
       help_us: Tulungan Kami
       teach: Magturo
       about: Tungkol sa
+      incubator: Incubator
       legal: Pagkapribado at Legal
       legal_privacy: Patakaran sa Pagkapribado
       legal_cookie_notice: Paunawa ng Cookie
@@ -1209,6 +1210,7 @@ fil:
           age: Pakitukoy ang edad
           abuse_type: Pakisagot kung paano ang nilalamang ito ay lumabag sa mga Palatuntunan
           abuse_detail: Pakibigay ang mga detalye tungkol sa nilalaman na iyong ni-report
+          captcha: Mangyaring punan ang CAPTCHA upang iulat ang nilalamang ito.
         abusive_url: Ang URL ng nilalaman ay kasalukuyang ni-report
         abuse_type:
           question: Paano lumabag sa mga %{link_start}Palatuntunan%{link_end} ang
@@ -1452,6 +1454,7 @@ fil:
         csf_express: Mga Pundamental ng CS (Pre-Express o Express)
         csd: CS Discoveries
         csp: Mga Prinsipyo ng CS
+        other: Iba
         not_applicable: Hindi angkop
       email_opt_in:
         opt_in_yes: Oo

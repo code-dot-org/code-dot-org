@@ -10,7 +10,8 @@ theme: responsive
 
 - نوصي باتصال إنترنت بسرعة 15 ميجابايت / ثانية على الأقل في مدرستك.
 - أصغر حجم شاشة ندعمه هو 1024 × 728 بكسل.
-- ستحتاج إلى كمبيوتر مكتبي أو كمبيوتر محمول مزود بفأرة (أو لوحة اللمس) ولوحة مفاتيح لدوراتنا التدريبية على مستوى المدرسة الإعدادية والثانوية: اكتشافات علوم الكمبيوتر ومبادئ علوم الكمبيوتر ومقدمة إلى App Lab. معظم الأجهزة اللوحية والأجهزة المحمولة غير مدعومة لهذه الدورات التدريبية. انظر "تفاصيل دعم الأجهزة المحمولة والأجهزة اللوحية" أدناه للتعرف على الاستثناءات الخاصة بالأجهزة.
+- You will need a desktop or laptop computer (Chromebooks are included) with a mouse (or touchpad) and keyboard for our middle and high school-level courses: CS Discoveries, CS Principles, and Intro to App Lab. “See Minimum Supported Browsers and Platforms” below.
+- Most tablets (such as an iPad) and mobile devices are not supported for these courses. انظر "تفاصيل دعم الأجهزة المحمولة والأجهزة اللوحية" أدناه للتعرف على الاستثناءات الخاصة بالأجهزة.
 - جميع المحتويات الأخرى، مثل دورات رياض الأطفال-الصف الخامس (أساسيات علوم الكمبيوتر) وأنشطة ساعة البرمجة متوافقة مع أجهزة iPad وأجهزة Chromebook بالإضافة إلى جميع الأجهزة اللوحية والكمبيوتر المحمول أو أجهزة الكمبيوتر المكتبية الحديثة الأخرى.
 - هل تبحث عن تفاصيل دعم الجهاز المحمول؟ اقرأ ما يلي.
 
@@ -82,12 +83,12 @@ theme: responsive
 
 ## تفاصيل دعم الهاتف المحمول والكمبيوتر اللوحي
 
-لا تتوافق جميع دورات استكشافات علوم الكمبيوتر ومباديء علوم الكمبيوتر ومقدمة إلى App Lab مع الأجهزة اللوحية أو الأجهزة المحمولة - يلزم وجود لوحة مفاتيح وفأرة كاملة (أو لوحة اللمس، مثل أجهزة MacBooks). معظم الأجهزة اللوحية غير مدعومة، مع الاستثناءات التالية:
+All CS Discoveries, CS Principles, CS A, and Intro to App Lab courses are not compatible with tablets or mobile devices - a full keyboard and mouse (or touchpad) are required. معظم الأجهزة اللوحية غير مدعومة، مع الاستثناءات التالية:
 
 - جهاز Microsoft Surface Pro مع لوحة مفاتيح خارجية
 - جهاز iPad يعمل بنظام iPadOS 13.4 أو أحدث مع لوحة مفاتيح خارجية وفأرة خارجية أو لوحة لمس
 
-جميع المحتويات الأخرى، مثل دورات رياض الأطفال-الصف الخامس (أساسيات علوم الكمبيوتر) وأنشطة ساعة البرمجة متوافقة مع أجهزة iPad وأجهزة Chromebook بالإضافة إلى جميع الأجهزة اللوحية والكمبيوتر المحمول أو أجهزة الكمبيوتر المكتبية الحديثة الأخرى.
+All other content, such as K-5 courses (Computer Science Fundamentals) and Hour of Code activities are compatible on iPads and other modern tablets and laptop or desktop computers.
 
 ### الهواتف المحمولة
 

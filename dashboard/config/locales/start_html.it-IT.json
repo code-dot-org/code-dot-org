@@ -167,7 +167,24 @@
           "18": "18",
           "19": "19",
           "20": "20",
-          "21": "21"
+          "21": "21",
+          "Choose your Birthday!": "Scegli la tua data di nascita!",
+          "Find out if it's your birthday!": "Scopri se è il tuo compleanno!",
+          "January": "Gennaio",
+          "February": "Febbraio",
+          "March": "Marzo",
+          "April": "Aprile",
+          "May": "Maggio",
+          "June": "Giugno",
+          "July": "Luglio",
+          "August": "Agosto",
+          "September": "Settembre",
+          "October": "Ottobre",
+          "November": "Novembre",
+          "December": "Dicembre",
+          "It's your birthday!": "È il tuo compleanno!",
+          "It's not your birthday yet this year!": "Non è ancora il tuo compleanno quest'anno!",
+          "It was already your birthday this year!!": "Quest'anno è già passato il tuo compleanno!"
         },
         "CSD U1 processing bday_2022": {
           "1": "1",
@@ -190,7 +207,24 @@
           "18": "18",
           "19": "19",
           "20": "20",
-          "21": "21"
+          "21": "21",
+          "Choose your Birthday!": "Scegli la tua data di nascita!",
+          "Find out if it's your birthday!": "Scopri se è il tuo compleanno!",
+          "January": "Gennaio",
+          "February": "Febbraio",
+          "March": "Marzo",
+          "April": "Aprile",
+          "May": "Maggio",
+          "June": "Giugno",
+          "July": "Luglio",
+          "August": "Agosto",
+          "September": "Settembre",
+          "October": "Ottobre",
+          "November": "Novembre",
+          "December": "Dicembre",
+          "It's your birthday!": "È il tuo compleanno!",
+          "It's not your birthday yet this year!": "Non è ancora il tuo compleanno quest'anno!",
+          "It was already your birthday this year!!": "Quest'anno è già passato il tuo compleanno!"
         },
         "CSD U1 processing fastest_2021": {
           "s": "s",
@@ -296,7 +330,9 @@
           "No more tries!": "Tentativi terminati!",
           "I'm thinking of a number from 1 to 100.": "Sto pensando a un numero da 1 a 100.",
           "You haven't guessed yet.": "Ancora non hai indovinato.",
-          "Your guess:": "La tua ipotesi:"
+          "Your guess:": "La tua ipotesi:",
+          "90": "90",
+          "100": "100"
         },
         "CSD U1 processing guess_2022": {
           "?": "?",
@@ -386,7 +422,9 @@
           "No more tries!": "Tentativi terminati!",
           "I'm thinking of a number from 1 to 100.": "Sto pensando a un numero da 1 a 100.",
           "You haven't guessed yet.": "Ancora non hai indovinato.",
-          "Your guess:": "La tua ipotesi:"
+          "Your guess:": "La tua ipotesi:",
+          "90": "90",
+          "100": "100"
         },
         "CSD U1 processing live_2021": {
           "walking": "camminare",
@@ -411,7 +449,9 @@
           "What animals are you okay with?": "Insieme a quali animali stai bene?",
           "home cooked meals": "cibo fatto in casa",
           "trying new restaurants": "esplorare nuovi ristoranti",
-          "my regular restaurants": "il mio solito ristorante"
+          "my regular restaurants": "il mio solito ristorante",
+          "Start!": "Inizia!",
+          "Next Question": "Domanda successiva"
         },
         "CSD U1 processing live_2022": {
           "walking": "camminare",
@@ -436,15 +476,65 @@
           "What animals are you okay with?": "Insieme a quali animali stai bene?",
           "home cooked meals": "cibo fatto in casa",
           "trying new restaurants": "esplorare nuovi ristoranti",
-          "my regular restaurants": "il mio solito ristorante"
+          "my regular restaurants": "il mio solito ristorante",
+          "Start!": "Inizia!",
+          "Next Question": "Domanda successiva"
         },
         "CSD U1 processing npark_2021": {
           "Correct!": "Corretto!",
-          "Sorry!": "Mi dispiace!"
+          "Sorry!": "Mi dispiace!",
+          "National Park Quiz": "Quiz sul parco nazionale",
+          "Start!": "Inizia!",
+          "What was the first national park?": "Qual è stato il primo parco nazionale?",
+          "Yosemite": "Yosemite",
+          "Yellowstone": "Yellowstone",
+          "Acadia": "Acadia",
+          "Great Smoky Mountains": "Great Smoky Mountains",
+          "Which is the largest national park?": "Qual è il parco nazionale più grande?",
+          "Wrangell-St. Elias": "Wrangell-St. Elias",
+          "Death Valley": "Death Valley",
+          "Denali": "Denali",
+          "Which national park gets the most visitors?": "Quale parco nazionale riceve il maggior numero di visitatori?",
+          "Grand Canyon": "Grand Canyon",
+          "Which national park has the largest tree in the world?": "Quale parco nazionale ha l'albero più grande del mondo?",
+          "Sequoia": "Sequoia",
+          "Redwood": "Redwood",
+          "Shenandoah": "Shenandoah",
+          "Olympic": "Olympic",
+          "Yellowstone was the first National Park, created by President Ulysses S. Grant in 1872": "Yellowstone è stato il primo parco nazionale, creato dal presidente Ulysses S. Grant nel 1872",
+          "Next Question": "Domanda successiva",
+          "Wrangell-St. Elias is the largest national park, even bigger than many countries!": "Wrangell-St. Elias è il parco nazionale più grande, persino più grande di molti paesi!",
+          "Great Smoky Mountains is the most visited, with more than 11 million visitors every year.": "Le Great Smoky Mountains sono le più visitate, con oltre 11 milioni di visitatori ogni anno.",
+          "Sequoia is home to the biggest tree in the world, the General Sherman Tree.": "Il Sequoia National Park ospita l'albero più grande del mondo, il \"Generale Sherman\".",
+          "Play Again": "Gioca di nuovo"
         },
         "CSD U1 processing npark_2022": {
           "Correct!": "Corretto!",
-          "Sorry!": "Mi dispiace!"
+          "Sorry!": "Mi dispiace!",
+          "National Park Quiz": "Quiz sul parco nazionale",
+          "Start!": "Inizia!",
+          "What was the first national park?": "Qual è stato il primo parco nazionale?",
+          "Yosemite": "Yosemite",
+          "Yellowstone": "Yellowstone",
+          "Acadia": "Acadia",
+          "Great Smoky Mountains": "Great Smoky Mountains",
+          "Which is the largest national park?": "Qual è il parco nazionale più grande?",
+          "Wrangell-St. Elias": "Wrangell-St. Elias",
+          "Death Valley": "Death Valley",
+          "Denali": "Denali",
+          "Which national park gets the most visitors?": "Quale parco nazionale riceve il maggior numero di visitatori?",
+          "Grand Canyon": "Grand Canyon",
+          "Which national park has the largest tree in the world?": "Quale parco nazionale ha l'albero più grande del mondo?",
+          "Sequoia": "Sequoia",
+          "Redwood": "Redwood",
+          "Shenandoah": "Shenandoah",
+          "Olympic": "Olympic",
+          "Yellowstone was the first National Park, created by President Ulysses S. Grant in 1872": "Yellowstone è stato il primo parco nazionale, creato dal presidente Ulysses S. Grant nel 1872",
+          "Next Question": "Domanda successiva",
+          "Wrangell-St. Elias is the largest national park, even bigger than many countries!": "Wrangell-St. Elias è il parco nazionale più grande, persino più grande di molti paesi!",
+          "Great Smoky Mountains is the most visited, with more than 11 million visitors every year.": "Le Great Smoky Mountains sono le più visitate, con oltre 11 milioni di visitatori ogni anno.",
+          "Sequoia is home to the biggest tree in the world, the General Sherman Tree.": "Il Sequoia National Park ospita l'albero più grande del mondo, il \"Generale Sherman\".",
+          "Play Again": "Gioca di nuovo"
         },
         "CSD U1 processing writers_2021": {
           "1": "1",
@@ -467,7 +557,62 @@
           "18": "18",
           "19": "19",
           "20": "20",
-          "21": "21"
+          "21": "21",
+          "Enter your Birthday!": "Inserisci la tua data di nascita!",
+          "Find a writer!": "Trova uno scrittore!",
+          "January": "Gennaio",
+          "February": "Febbraio",
+          "March": "Marzo",
+          "April": "Aprile",
+          "May": "Maggio",
+          "June": "Giugno",
+          "July": "Luglio",
+          "August": "Agosto",
+          "September": "Settembre",
+          "October": "Ottobre",
+          "November": "Novembre",
+          "December": "Dicembre",
+          "1998": "1998",
+          "1999": "1999",
+          "2000": "2000",
+          "2001": "2001",
+          "2002": "2002",
+          "2003": "2003",
+          "2004": "2004",
+          "2005": "2005",
+          "2006": "2006",
+          "2007": "2007",
+          "2008": "2008",
+          "2009": "2009",
+          "2010": "2010",
+          "2011": "2011",
+          "2012": "2012",
+          "2013": "2013",
+          "2014": "2014",
+          "2015": "2015",
+          "Anchee Min": "Anchee Min",
+          "image by Slowking4, GFDL 1.2": "immagine di Slowking4, GFDL 1.2",
+          "You were born on a": "Sei nato in",
+          "Monday": "Lunedì",
+          "just like": "proprio come",
+          "N. Scott Momaday": "N. Scott Momaday",
+          "public domain image": "immagine di pubblico dominio",
+          "Tuesday": "Martedì",
+          "Toni Morrison": "Toni Morrison",
+          "image by John Mathew Smith, CC-BY-SA 2.0": "immagine di John Mathew Smith, CC-BY-SA 2.0",
+          "Wednesday": "Mercoledì",
+          "Khaled Hosseini": "Khaled Hosseini",
+          "Public Domain Image": "Immagine di pubblico dominio",
+          "Thursday": "Giovedì",
+          "Langston Hughes": "Langston Hughes",
+          "Public Domain": "Dominio pubblico",
+          "Friday": "Venerdì",
+          "Margaret Atwood": "Margaret Atwood",
+          "image by Vanwaffle, CC BY-SA 3.0": "immagine di Vanwaffle, CC BY-SA 3.0",
+          "Saturday": "Sabato",
+          "Gabriel Garcia Marquez": "Gabriel García Márquez",
+          "image by Jose Lara, CC-BY-SA": "foto di Jose Lara, CC-BY-SA",
+          "Sunday": "Domenica"
         },
         "CSD U1 processing writers_2022": {
           "1": "1",
@@ -490,7 +635,62 @@
           "18": "18",
           "19": "19",
           "20": "20",
-          "21": "21"
+          "21": "21",
+          "Enter your Birthday!": "Inserisci la tua data di nascita!",
+          "Find a writer!": "Trova uno scrittore!",
+          "January": "Gennaio",
+          "February": "Febbraio",
+          "March": "Marzo",
+          "April": "Aprile",
+          "May": "Maggio",
+          "June": "Giugno",
+          "July": "Luglio",
+          "August": "Agosto",
+          "September": "Settembre",
+          "October": "Ottobre",
+          "November": "Novembre",
+          "December": "Dicembre",
+          "1998": "1998",
+          "1999": "1999",
+          "2000": "2000",
+          "2001": "2001",
+          "2002": "2002",
+          "2003": "2003",
+          "2004": "2004",
+          "2005": "2005",
+          "2006": "2006",
+          "2007": "2007",
+          "2008": "2008",
+          "2009": "2009",
+          "2010": "2010",
+          "2011": "2011",
+          "2012": "2012",
+          "2013": "2013",
+          "2014": "2014",
+          "2015": "2015",
+          "Anchee Min": "Anchee Min",
+          "image by Slowking4, GFDL 1.2": "immagine di Slowking4, GFDL 1.2",
+          "You were born on a": "Sei nato in",
+          "Monday": "Lunedì",
+          "just like": "proprio come",
+          "N. Scott Momaday": "N. Scott Momaday",
+          "public domain image": "immagine di pubblico dominio",
+          "Tuesday": "Martedì",
+          "Toni Morrison": "Toni Morrison",
+          "image by John Mathew Smith, CC-BY-SA 2.0": "immagine di John Mathew Smith, CC-BY-SA 2.0",
+          "Wednesday": "Mercoledì",
+          "Khaled Hosseini": "Khaled Hosseini",
+          "Public Domain Image": "Immagine di pubblico dominio",
+          "Thursday": "Giovedì",
+          "Langston Hughes": "Langston Hughes",
+          "Public Domain": "Dominio pubblico",
+          "Friday": "Venerdì",
+          "Margaret Atwood": "Margaret Atwood",
+          "image by Vanwaffle, CC BY-SA 3.0": "immagine di Vanwaffle, CC BY-SA 3.0",
+          "Saturday": "Sabato",
+          "Gabriel Garcia Marquez": "Gabriel García Márquez",
+          "image by Jose Lara, CC-BY-SA": "foto di Jose Lara, CC-BY-SA",
+          "Sunday": "Domenica"
         },
         "CSD U1 storage friends_2021": {
           "Back": "Indietro",
@@ -524,7 +724,10 @@
           "Tangled": "Rapunzel",
           "What are you in the mood for?": "Quale genere ti ispira?",
           "Choose a Kids Movie: Great for Babysitters!": "Scegli un film per bambini: un babysitter perfetto!",
-          "Do you want an animated movie?": "Vuoi un film d'animazione?"
+          "Do you want an animated movie?": "Vuoi un film d'animazione?",
+          "Comedy": "Commedia",
+          "Musical": "Musical",
+          "Action": "Azione"
         },
         "CSD U1 storage movies_2022": {
           "Star Wars": "Guerre Stellari",
@@ -542,7 +745,10 @@
           "Tangled": "Rapunzel",
           "What are you in the mood for?": "Quale genere ti ispira?",
           "Choose a Kids Movie: Great for Babysitters!": "Scegli un film per bambini: un babysitter perfetto!",
-          "Do you want an animated movie?": "Vuoi un film d'animazione?"
+          "Do you want an animated movie?": "Vuoi un film d'animazione?",
+          "Comedy": "Commedia",
+          "Musical": "Musical",
+          "Action": "Azione"
         },
         "CSD U1 storage outfit_2021": {
           "Clear": "Cancella",
@@ -558,7 +764,8 @@
           "Winter": "Inverno",
           "What season is it?": "Che stagione è?",
           "Cloudy": "Nuvoloso",
-          "Generate Outfit!": "Genera abbigliamento!"
+          "Generate Outfit!": "Genera abbigliamento!",
+          "What is the weather like today?": "Com'è il meteo oggi?"
         },
         "CSD U1 storage outfit_2022": {
           "Clear": "Cancella",
@@ -574,7 +781,8 @@
           "Winter": "Inverno",
           "What season is it?": "Che stagione è?",
           "Cloudy": "Nuvoloso",
-          "Generate Outfit!": "Genera abbigliamento!"
+          "Generate Outfit!": "Genera abbigliamento!",
+          "What is the weather like today?": "Com'è il meteo oggi?"
         },
         "CSD U2 RGB intro": {
           "1": "1",
@@ -624,46 +832,109 @@
           "0": "0"
         },
         "CSD U6 - Board Inputs - SB1_2222": {
-          "Success!": "Fatto!"
+          "Success!": "Fatto!",
+          "Board Not Detected!": "Scheda non rilevata!",
+          "Try the following:": "Prova le seguenti soluzioni:",
+          "Refresh this page and try again": "Aggiorna la pagina e riprova",
+          "Plug the board into a different USB": "Collega la scheda a una porta USB diversa",
+          "Visit studio.code.org/maker/setup": "Visita studio.code.org/maker/setup"
         },
         "CSD U6 - Board Inputs - SB2_2222": {
-          "Success!": "Fatto!"
+          "Success!": "Fatto!",
+          "Board Not Detected!": "Scheda non rilevata!",
+          "Try the following:": "Prova le seguenti soluzioni:",
+          "Refresh this page and try again": "Aggiorna la pagina e riprova",
+          "Plug the board into a different USB": "Collega la scheda a una porta USB diversa",
+          "Visit studio.code.org/maker/setup": "Visita studio.code.org/maker/setup"
         },
         "CSD U6 - Board Inputs - SB3_2222": {
-          "Success!": "Fatto!"
+          "Success!": "Fatto!",
+          "Board Not Detected!": "Scheda non rilevata!",
+          "Try the following:": "Prova le seguenti soluzioni:",
+          "Refresh this page and try again": "Aggiorna la pagina e riprova",
+          "Plug the board into a different USB": "Collega la scheda a una porta USB diversa",
+          "Visit studio.code.org/maker/setup": "Visita studio.code.org/maker/setup"
         },
         "CSD U6 - Board Outputs - A_2222": {
-          "Happy": "Felice"
+          "Happy": "Felice",
+          "My Personal Monster": "Il mio mostro personale",
+          "Nervous": "Nervoso",
+          "Sleepy": "Sonnolento",
+          "Decorate your Circuit Playground to look like your own personal monster, then use the buttons below to give it different emotions!": "Decora il tuo Circuit Playground in modo che assomigli al tuo mostro personale, quindi usa i pulsanti qui sotto affinché provi emozioni diverse!"
         },
         "CSD U6 - Board Outputs - P_2222": {
-          "Success!": "Fatto!"
+          "Success!": "Fatto!",
+          "Click Me": "Cliccami",
+          "Board Not Detected!": "Scheda non rilevata!",
+          "Try the following:": "Prova le seguenti soluzioni:",
+          "Refresh this page and try again": "Aggiorna la pagina e riprova",
+          "Plug the board into a different USB": "Collega la scheda a una porta USB diversa",
+          "Visit studio.code.org/maker/setup": "Visita studio.code.org/maker/setup"
         },
         "CSD U6 - Board Outputs - SB1_2222": {
-          "Success!": "Fatto!"
+          "Success!": "Fatto!",
+          "ON": "ON",
+          "OFF": "OFF",
+          "Board Not Detected!": "Scheda non rilevata!",
+          "Try the following:": "Prova le seguenti soluzioni:",
+          "Refresh this page and try again": "Aggiorna la pagina e riprova",
+          "Plug the board into a different USB": "Collega la scheda a una porta USB diversa",
+          "Visit studio.code.org/maker/setup": "Visita studio.code.org/maker/setup"
         },
         "CSD U6 - Board Outputs - SB2_2222": {
-          "Success!": "Fatto!"
+          "Success!": "Fatto!",
+          "change the light": "cambia la luce",
+          "Board Not Detected!": "Scheda non rilevata!",
+          "Try the following:": "Prova le seguenti soluzioni:",
+          "Refresh this page and try again": "Aggiorna la pagina e riprova",
+          "Plug the board into a different USB": "Collega la scheda a una porta USB diversa",
+          "Visit studio.code.org/maker/setup": "Visita studio.code.org/maker/setup"
         },
         "CSD U6 - Board Outputs - SB4_2222": {
-          "Fish": "Pesce"
+          "Fish": "Pesce",
+          "Dog": "Cane",
+          "Cat": "Gatto",
+          "Which type of animal makes the best pet?": "Che tipo di animale è il miglior animale domestico?",
+          "Lizard": "Lucertola"
         },
         "CSD U6 - Board Outputs - Setup_2222": {
-          "Success!": "Fatto!"
+          "Success!": "Fatto!",
+          "Board Not Detected!": "Scheda non rilevata!",
+          "Try the following:": "Prova le seguenti soluzioni:",
+          "Refresh this page and try again": "Aggiorna la pagina e riprova",
+          "Plug the board into a different USB": "Collega la scheda a una porta USB diversa",
+          "Visit studio.code.org/maker/setup": "Visita studio.code.org/maker/setup"
         },
         "CSD U6 - Color LEDs - ChalD_2222": {
           "North": "Nord",
           "South": "Sud",
           "East": "Est",
-          "West": "Ovest"
+          "West": "Ovest",
+          "Off": "Off"
         },
         "CSD U6 - Color LEDs - PracA_2222": {
-          "Success!": "Fatto!"
+          "Success!": "Fatto!",
+          "Board Not Detected!": "Scheda non rilevata!",
+          "Try the following:": "Prova le seguenti soluzioni:",
+          "Refresh this page and try again": "Aggiorna la pagina e riprova",
+          "Plug the board into a different USB": "Collega la scheda a una porta USB diversa",
+          "Visit studio.code.org/maker/setup": "Visita studio.code.org/maker/setup"
         },
         "CSD U6 - Color LEDs - SB2_2222": {
-          "Success!": "Fatto!"
+          "Success!": "Fatto!",
+          "Board Not Detected!": "Scheda non rilevata!",
+          "Try the following:": "Prova le seguenti soluzioni:",
+          "Refresh this page and try again": "Aggiorna la pagina e riprova",
+          "Plug the board into a different USB": "Collega la scheda a una porta USB diversa",
+          "Visit studio.code.org/maker/setup": "Visita studio.code.org/maker/setup"
         },
         "CSD U6 - Color LEDs - SB3_2222": {
-          "Success!": "Fatto!"
+          "Success!": "Fatto!",
+          "Board Not Detected!": "Scheda non rilevata!",
+          "Try the following:": "Prova le seguenti soluzioni:",
+          "Refresh this page and try again": "Aggiorna la pagina e riprova",
+          "Plug the board into a different USB": "Collega la scheda a una porta USB diversa",
+          "Visit studio.code.org/maker/setup": "Visita studio.code.org/maker/setup"
         },
         "CSD U6 - Color LEDs - SB4_2222": {
           "Medium": "Medio"
@@ -761,7 +1032,8 @@
           "F": "F",
           "G": "G",
           "A": "A",
-          "B": "B"
+          "B": "B",
+          "Note:": "Nota:"
         },
         "CSD U6 - Music - SB1_2222": {
           "C": "C",
@@ -791,60 +1063,140 @@
           "B": "B"
         },
         "CSD U6 - Music - SB4_2222": {
-          "Success!": "Fatto!"
+          "Success!": "Fatto!",
+          "Board Not Detected!": "Scheda non rilevata!",
+          "Try the following:": "Prova le seguenti soluzioni:",
+          "Refresh this page and try again": "Aggiorna la pagina e riprova",
+          "Plug the board into a different USB": "Collega la scheda a una porta USB diversa",
+          "Visit studio.code.org/maker/setup": "Visita studio.code.org/maker/setup"
         },
         "CSD U6 - Physical Input - A_2222": {
           "1": "1",
           "2": "2"
         },
         "CSD U6 - Physical Input - ChalA_2222": {
-          "Success!": "Fatto!"
+          "Success!": "Fatto!",
+          "Board Not Detected!": "Scheda non rilevata!",
+          "Try the following:": "Prova le seguenti soluzioni:",
+          "Refresh this page and try again": "Aggiorna la pagina e riprova",
+          "Plug the board into a different USB": "Collega la scheda a una porta USB diversa",
+          "Visit studio.code.org/maker/setup": "Visita studio.code.org/maker/setup"
         },
         "CSD U6 - Physical Input - ChalB_2222": {
-          "Success!": "Fatto!"
+          "Success!": "Fatto!",
+          "Board Not Detected!": "Scheda non rilevata!",
+          "Try the following:": "Prova le seguenti soluzioni:",
+          "Refresh this page and try again": "Aggiorna la pagina e riprova",
+          "Plug the board into a different USB": "Collega la scheda a una porta USB diversa",
+          "Visit studio.code.org/maker/setup": "Visita studio.code.org/maker/setup"
         },
         "CSD U6 - Physical Input - ChalC_2222": {
-          "Success!": "Fatto!"
+          "Success!": "Fatto!",
+          "Board Not Detected!": "Scheda non rilevata!",
+          "Try the following:": "Prova le seguenti soluzioni:",
+          "Refresh this page and try again": "Aggiorna la pagina e riprova",
+          "Plug the board into a different USB": "Collega la scheda a una porta USB diversa",
+          "Visit studio.code.org/maker/setup": "Visita studio.code.org/maker/setup"
         },
         "CSD U6 - Physical Input - PA_2222": {
           "Score": "Punteggio",
           "0": "0"
         },
         "CSD U6 - Physical Input - PC_2222": {
-          "Success!": "Fatto!"
+          "Success!": "Fatto!",
+          "Board Not Detected!": "Scheda non rilevata!",
+          "Try the following:": "Prova le seguenti soluzioni:",
+          "Refresh this page and try again": "Aggiorna la pagina e riprova",
+          "Plug the board into a different USB": "Collega la scheda a una porta USB diversa",
+          "Visit studio.code.org/maker/setup": "Visita studio.code.org/maker/setup"
         },
         "CSD U6 - Physical Input - PD_2222": {
-          "Success!": "Fatto!"
+          "Success!": "Fatto!",
+          "Board Not Detected!": "Scheda non rilevata!",
+          "Try the following:": "Prova le seguenti soluzioni:",
+          "Refresh this page and try again": "Aggiorna la pagina e riprova",
+          "Plug the board into a different USB": "Collega la scheda a una porta USB diversa",
+          "Visit studio.code.org/maker/setup": "Visita studio.code.org/maker/setup"
         },
         "CSD U6 - Physical Input - SB1_2222": {
-          "Success!": "Fatto!"
+          "Success!": "Fatto!",
+          "Board Not Detected!": "Scheda non rilevata!",
+          "Try the following:": "Prova le seguenti soluzioni:",
+          "Refresh this page and try again": "Aggiorna la pagina e riprova",
+          "Plug the board into a different USB": "Collega la scheda a una porta USB diversa",
+          "Visit studio.code.org/maker/setup": "Visita studio.code.org/maker/setup"
         },
         "CSD U6 - Physical Output - ChalA_2222": {
-          "Success!": "Fatto!"
+          "Success!": "Fatto!",
+          "Board Not Detected!": "Scheda non rilevata!",
+          "Try the following:": "Prova le seguenti soluzioni:",
+          "Refresh this page and try again": "Aggiorna la pagina e riprova",
+          "Plug the board into a different USB": "Collega la scheda a una porta USB diversa",
+          "Visit studio.code.org/maker/setup": "Visita studio.code.org/maker/setup"
         },
         "CSD U6 - Physical Output - ChalB_2222": {
-          "Success!": "Fatto!"
+          "Success!": "Fatto!",
+          "Board Not Detected!": "Scheda non rilevata!",
+          "Try the following:": "Prova le seguenti soluzioni:",
+          "Refresh this page and try again": "Aggiorna la pagina e riprova",
+          "Plug the board into a different USB": "Collega la scheda a una porta USB diversa",
+          "Visit studio.code.org/maker/setup": "Visita studio.code.org/maker/setup"
         },
         "CSD U6 - Physical Output - ChalC_2222": {
-          "Success!": "Fatto!"
+          "Success!": "Fatto!",
+          "Board Not Detected!": "Scheda non rilevata!",
+          "Try the following:": "Prova le seguenti soluzioni:",
+          "Refresh this page and try again": "Aggiorna la pagina e riprova",
+          "Plug the board into a different USB": "Collega la scheda a una porta USB diversa",
+          "Visit studio.code.org/maker/setup": "Visita studio.code.org/maker/setup"
         },
         "CSD U6 - Physical Output - PB_2222": {
-          "Success!": "Fatto!"
+          "Success!": "Fatto!",
+          "Board Not Detected!": "Scheda non rilevata!",
+          "Try the following:": "Prova le seguenti soluzioni:",
+          "Refresh this page and try again": "Aggiorna la pagina e riprova",
+          "Plug the board into a different USB": "Collega la scheda a una porta USB diversa",
+          "Visit studio.code.org/maker/setup": "Visita studio.code.org/maker/setup"
         },
         "CSD U6 - Physical Output - PC_2222": {
-          "Success!": "Fatto!"
+          "Success!": "Fatto!",
+          "Board Not Detected!": "Scheda non rilevata!",
+          "Try the following:": "Prova le seguenti soluzioni:",
+          "Refresh this page and try again": "Aggiorna la pagina e riprova",
+          "Plug the board into a different USB": "Collega la scheda a una porta USB diversa",
+          "Visit studio.code.org/maker/setup": "Visita studio.code.org/maker/setup"
         },
         "CSD U6 - Physical Output - P_2222": {
-          "Success!": "Fatto!"
+          "Success!": "Fatto!",
+          "Board Not Detected!": "Scheda non rilevata!",
+          "Try the following:": "Prova le seguenti soluzioni:",
+          "Refresh this page and try again": "Aggiorna la pagina e riprova",
+          "Plug the board into a different USB": "Collega la scheda a una porta USB diversa",
+          "Visit studio.code.org/maker/setup": "Visita studio.code.org/maker/setup"
         },
         "CSD U6 - Physical Output - SB1_2222": {
-          "Success!": "Fatto!"
+          "Success!": "Fatto!",
+          "Board Not Detected!": "Scheda non rilevata!",
+          "Try the following:": "Prova le seguenti soluzioni:",
+          "Refresh this page and try again": "Aggiorna la pagina e riprova",
+          "Plug the board into a different USB": "Collega la scheda a una porta USB diversa",
+          "Visit studio.code.org/maker/setup": "Visita studio.code.org/maker/setup"
         },
         "CSD U6 - Physical Output - SB2.2_2222": {
-          "Success!": "Fatto!"
+          "Success!": "Fatto!",
+          "Board Not Detected!": "Scheda non rilevata!",
+          "Try the following:": "Prova le seguenti soluzioni:",
+          "Refresh this page and try again": "Aggiorna la pagina e riprova",
+          "Plug the board into a different USB": "Collega la scheda a una porta USB diversa",
+          "Visit studio.code.org/maker/setup": "Visita studio.code.org/maker/setup"
         },
         "CSD U6 - Physical Output - SB2_2222": {
-          "Success!": "Fatto!"
+          "Success!": "Fatto!",
+          "Board Not Detected!": "Scheda non rilevata!",
+          "Try the following:": "Prova le seguenti soluzioni:",
+          "Refresh this page and try again": "Aggiorna la pagina e riprova",
+          "Plug the board into a different USB": "Collega la scheda a una porta USB diversa",
+          "Visit studio.code.org/maker/setup": "Visita studio.code.org/maker/setup"
         },
         "CSD U6 - Screen Inputs - A_2222": {
           "Name:": "Nome:"
@@ -877,7 +1229,9 @@
           "?": "?"
         },
         "CSD U6 - Screen Outputs - P_2222": {
-          "title": "titolo"
+          "title": "titolo",
+          "You've always wondered what your cat is saying when it meows in the middle of the night. Now you can finally know!": "Ti sei sempre chiesto cosa dice il tuo gatto quando miagola nel cuore della notte. Finalmente puoi saperlo!",
+          "Button": "Pulsante"
         },
         "CSD U6 - Screen Outputs - PracA_2222": {
           "White": "Bianco",
@@ -907,7 +1261,8 @@
           "low": "bassa"
         },
         "CSD U6 - Sensors - SB2_2222": {
-          "Update": "Aggiorna"
+          "Update": "Aggiorna",
+          "value": "valore"
         },
         "CSD U6 Driver pt 2": {
           "You did it!": "Ce l'hai fatta!"
@@ -946,16 +1301,40 @@
           "on": "acceso"
         },
         "CSD U6 LED toggle": {
-          "Success!": "Fatto!"
+          "Success!": "Fatto!",
+          "change the light": "cambia la luce",
+          "Board Not Detected!": "Scheda non rilevata!",
+          "Try the following:": "Prova le seguenti soluzioni:",
+          "Refresh this page and try again": "Aggiorna la pagina e riprova",
+          "Plug the board into a different USB": "Collega la scheda a una porta USB diversa",
+          "Visit studio.code.org/maker/setup": "Visita studio.code.org/maker/setup"
         },
         "CSD U6 LED toggle_2018": {
-          "Success!": "Fatto!"
+          "Success!": "Fatto!",
+          "change the light": "cambia la luce",
+          "Board Not Detected!": "Scheda non rilevata!",
+          "Try the following:": "Prova le seguenti soluzioni:",
+          "Refresh this page and try again": "Aggiorna la pagina e riprova",
+          "Plug the board into a different USB": "Collega la scheda a una porta USB diversa",
+          "Visit studio.code.org/maker/setup": "Visita studio.code.org/maker/setup"
         },
         "CSD U6 LED toggle_2019": {
-          "Success!": "Fatto!"
+          "Success!": "Fatto!",
+          "change the light": "cambia la luce",
+          "Board Not Detected!": "Scheda non rilevata!",
+          "Try the following:": "Prova le seguenti soluzioni:",
+          "Refresh this page and try again": "Aggiorna la pagina e riprova",
+          "Plug the board into a different USB": "Collega la scheda a una porta USB diversa",
+          "Visit studio.code.org/maker/setup": "Visita studio.code.org/maker/setup"
         },
         "CSD U6 LED toggle_2021": {
-          "Success!": "Fatto!"
+          "Success!": "Fatto!",
+          "change the light": "cambia la luce",
+          "Board Not Detected!": "Scheda non rilevata!",
+          "Try the following:": "Prova le seguenti soluzioni:",
+          "Refresh this page and try again": "Aggiorna la pagina e riprova",
+          "Plug the board into a different USB": "Collega la scheda a una porta USB diversa",
+          "Visit studio.code.org/maker/setup": "Visita studio.code.org/maker/setup"
         },
         "CSD U6 Pedometer": {
           "0": "0"
@@ -970,28 +1349,60 @@
           "0": "0"
         },
         "CSD U6 add LED button": {
-          "Success!": "Fatto!"
+          "Success!": "Fatto!",
+          "ON": "ON",
+          "OFF": "OFF",
+          "Board Not Detected!": "Scheda non rilevata!",
+          "Try the following:": "Prova le seguenti soluzioni:",
+          "Refresh this page and try again": "Aggiorna la pagina e riprova",
+          "Plug the board into a different USB": "Collega la scheda a una porta USB diversa",
+          "Visit studio.code.org/maker/setup": "Visita studio.code.org/maker/setup"
         },
         "CSD U6 add LED button_2018": {
-          "Success!": "Fatto!"
+          "Success!": "Fatto!",
+          "ON": "ON",
+          "OFF": "OFF",
+          "Board Not Detected!": "Scheda non rilevata!",
+          "Try the following:": "Prova le seguenti soluzioni:",
+          "Refresh this page and try again": "Aggiorna la pagina e riprova",
+          "Plug the board into a different USB": "Collega la scheda a una porta USB diversa",
+          "Visit studio.code.org/maker/setup": "Visita studio.code.org/maker/setup"
         },
         "CSD U6 add LED button_2019": {
-          "Success!": "Fatto!"
+          "Success!": "Fatto!",
+          "ON": "ON",
+          "OFF": "OFF",
+          "Board Not Detected!": "Scheda non rilevata!",
+          "Try the following:": "Prova le seguenti soluzioni:",
+          "Refresh this page and try again": "Aggiorna la pagina e riprova",
+          "Plug the board into a different USB": "Collega la scheda a una porta USB diversa",
+          "Visit studio.code.org/maker/setup": "Visita studio.code.org/maker/setup"
         },
         "CSD U6 add LED button_2021": {
-          "Success!": "Fatto!"
+          "Success!": "Fatto!",
+          "ON": "ON",
+          "OFF": "OFF",
+          "Board Not Detected!": "Scheda non rilevata!",
+          "Try the following:": "Prova le seguenti soluzioni:",
+          "Refresh this page and try again": "Aggiorna la pagina e riprova",
+          "Plug the board into a different USB": "Collega la scheda a una porta USB diversa",
+          "Visit studio.code.org/maker/setup": "Visita studio.code.org/maker/setup"
         },
         "CSD U6 analog light": {
-          "Update": "Aggiorna"
+          "Update": "Aggiorna",
+          "value": "valore"
         },
         "CSD U6 analog light_2018": {
-          "Update": "Aggiorna"
+          "Update": "Aggiorna",
+          "value": "valore"
         },
         "CSD U6 analog light_2019": {
-          "Update": "Aggiorna"
+          "Update": "Aggiorna",
+          "value": "valore"
         },
         "CSD U6 analog light_2021": {
-          "Update": "Aggiorna"
+          "Update": "Aggiorna",
+          "value": "valore"
         },
         "CSD U6 array piano": {
           "C": "C",
@@ -1266,16 +1677,40 @@
           "0": "0"
         },
         "CSD U6 predict LED button": {
-          "Success!": "Fatto!"
+          "Success!": "Fatto!",
+          "Click Me": "Cliccami",
+          "Board Not Detected!": "Scheda non rilevata!",
+          "Try the following:": "Prova le seguenti soluzioni:",
+          "Refresh this page and try again": "Aggiorna la pagina e riprova",
+          "Plug the board into a different USB": "Collega la scheda a una porta USB diversa",
+          "Visit studio.code.org/maker/setup": "Visita studio.code.org/maker/setup"
         },
         "CSD U6 predict LED button_2018": {
-          "Success!": "Fatto!"
+          "Success!": "Fatto!",
+          "Click Me": "Cliccami",
+          "Board Not Detected!": "Scheda non rilevata!",
+          "Try the following:": "Prova le seguenti soluzioni:",
+          "Refresh this page and try again": "Aggiorna la pagina e riprova",
+          "Plug the board into a different USB": "Collega la scheda a una porta USB diversa",
+          "Visit studio.code.org/maker/setup": "Visita studio.code.org/maker/setup"
         },
         "CSD U6 predict LED button_2019": {
-          "Success!": "Fatto!"
+          "Success!": "Fatto!",
+          "Click Me": "Cliccami",
+          "Board Not Detected!": "Scheda non rilevata!",
+          "Try the following:": "Prova le seguenti soluzioni:",
+          "Refresh this page and try again": "Aggiorna la pagina e riprova",
+          "Plug the board into a different USB": "Collega la scheda a una porta USB diversa",
+          "Visit studio.code.org/maker/setup": "Visita studio.code.org/maker/setup"
         },
         "CSD U6 predict LED button_2021": {
-          "Success!": "Fatto!"
+          "Success!": "Fatto!",
+          "Click Me": "Cliccami",
+          "Board Not Detected!": "Scheda non rilevata!",
+          "Try the following:": "Prova le seguenti soluzioni:",
+          "Refresh this page and try again": "Aggiorna la pagina e riprova",
+          "Plug the board into a different USB": "Collega la scheda a una porta USB diversa",
+          "Visit studio.code.org/maker/setup": "Visita studio.code.org/maker/setup"
         },
         "CSD U6 sensor experiment embedded": {
           "text": "testo",
@@ -1298,16 +1733,24 @@
           "low": "bassa"
         },
         "CSD U6 setProperty predict app": {
-          "title": "titolo"
+          "title": "titolo",
+          "You've always wondered what your cat is saying when it meows in the middle of the night. Now you can finally know!": "Ti sei sempre chiesto cosa dice il tuo gatto quando miagola nel cuore della notte. Finalmente puoi saperlo!",
+          "Button": "Pulsante"
         },
         "CSD U6 setProperty predict app_2018": {
-          "title": "titolo"
+          "title": "titolo",
+          "You've always wondered what your cat is saying when it meows in the middle of the night. Now you can finally know!": "Ti sei sempre chiesto cosa dice il tuo gatto quando miagola nel cuore della notte. Finalmente puoi saperlo!",
+          "Button": "Pulsante"
         },
         "CSD U6 setProperty predict app_2019": {
-          "title": "titolo"
+          "title": "titolo",
+          "You've always wondered what your cat is saying when it meows in the middle of the night. Now you can finally know!": "Ti sei sempre chiesto cosa dice il tuo gatto quando miagola nel cuore della notte. Finalmente puoi saperlo!",
+          "Button": "Pulsante"
         },
         "CSD U6 setProperty predict app_2021": {
-          "title": "titolo"
+          "title": "titolo",
+          "You've always wondered what your cat is saying when it meows in the middle of the night. Now you can finally know!": "Ti sei sempre chiesto cosa dice il tuo gatto quando miagola nel cuore della notte. Finalmente puoi saperlo!",
+          "Button": "Pulsante"
         },
         "CSD U6 slider intro": {
           "short": "brevemente",
@@ -1338,16 +1781,40 @@
           "Game Over": "Fine del gioco"
         },
         "CSD U6 test LED": {
-          "Success!": "Fatto!"
+          "Success!": "Fatto!",
+          "Plug in your Circuit Playground and click \"Run\"": "Collega il tuo Circuit Playground e fai clic su «Esegui»",
+          "Board Not Detected!": "Scheda non rilevata!",
+          "Try the following:": "Prova le seguenti soluzioni:",
+          "Refresh this page and try again": "Aggiorna la pagina e riprova",
+          "Plug the board into a different USB": "Collega la scheda a una porta USB diversa",
+          "Visit studio.code.org/maker/setup": "Visita studio.code.org/maker/setup"
         },
         "CSD U6 test LED_2018": {
-          "Success!": "Fatto!"
+          "Success!": "Fatto!",
+          "Plug in your Circuit Playground and click \"Run\"": "Collega il tuo Circuit Playground e fai clic su «Esegui»",
+          "Board Not Detected!": "Scheda non rilevata!",
+          "Try the following:": "Prova le seguenti soluzioni:",
+          "Refresh this page and try again": "Aggiorna la pagina e riprova",
+          "Plug the board into a different USB": "Collega la scheda a una porta USB diversa",
+          "Visit studio.code.org/maker/setup": "Visita studio.code.org/maker/setup"
         },
         "CSD U6 test LED_2019": {
-          "Success!": "Fatto!"
+          "Success!": "Fatto!",
+          "Plug in your Circuit Playground and click \"Run\"": "Collega il tuo Circuit Playground e fai clic su «Esegui»",
+          "Board Not Detected!": "Scheda non rilevata!",
+          "Try the following:": "Prova le seguenti soluzioni:",
+          "Refresh this page and try again": "Aggiorna la pagina e riprova",
+          "Plug the board into a different USB": "Collega la scheda a una porta USB diversa",
+          "Visit studio.code.org/maker/setup": "Visita studio.code.org/maker/setup"
         },
         "CSD U6 test LED_2021": {
-          "Success!": "Fatto!"
+          "Success!": "Fatto!",
+          "Plug in your Circuit Playground and click \"Run\"": "Collega il tuo Circuit Playground e fai clic su «Esegui»",
+          "Board Not Detected!": "Scheda non rilevata!",
+          "Try the following:": "Prova le seguenti soluzioni:",
+          "Refresh this page and try again": "Aggiorna la pagina e riprova",
+          "Plug the board into a different USB": "Collega la scheda a una porta USB diversa",
+          "Visit studio.code.org/maker/setup": "Visita studio.code.org/maker/setup"
         },
         "CSDU4 Connecting Screens": {
           "Red": "Rossi",
@@ -1370,7 +1837,9 @@
           "Blue": "Blu",
           "Yes": "Sì",
           "No": "No",
-          "Save": "Salva"
+          "Save": "Salva",
+          "User Profile": "Profilo utente",
+          "How it works": "Come funziona"
         },
         "CSDU4 Crowdsource App Demo_2018": {
           "About": "Informazioni",
@@ -1383,7 +1852,9 @@
           "Blue": "Blu",
           "Yes": "Sì",
           "No": "No",
-          "Save": "Salva"
+          "Save": "Salva",
+          "User Profile": "Profilo utente",
+          "How it works": "Come funziona"
         },
         "CSDU4 Crowdsource App Demo_2019": {
           "About": "Informazioni",
@@ -1396,28 +1867,33 @@
           "Blue": "Blu",
           "Yes": "Sì",
           "No": "No",
-          "Save": "Salva"
+          "Save": "Salva",
+          "User Profile": "Profilo utente",
+          "How it works": "Come funziona"
         },
         "CSDU4 Decision App Demo": {
           "About": "Informazioni",
           "Why?": "Perchè?",
           "I don't know": "Non lo so",
           "When?": "Quando?",
-          "About Us": "Chi siamo"
+          "About Us": "Chi siamo",
+          "How it works": "Come funziona"
         },
         "CSDU4 Decision App Demo_2018": {
           "About": "Informazioni",
           "Why?": "Perchè?",
           "I don't know": "Non lo so",
           "When?": "Quando?",
-          "About Us": "Chi siamo"
+          "About Us": "Chi siamo",
+          "How it works": "Come funziona"
         },
         "CSDU4 Decision App Demo_2019": {
           "About": "Informazioni",
           "Why?": "Perchè?",
           "I don't know": "Non lo so",
           "When?": "Quando?",
-          "About Us": "Chi siamo"
+          "About Us": "Chi siamo",
+          "How it works": "Come funziona"
         },
         "CSDU4 Functionality visible": {
           "Hide": "Nascondi",
@@ -1427,19 +1903,22 @@
           "About": "Informazioni",
           "About Us": "Chi siamo",
           "Done": "Fatto",
-          "Cancel": "Annulla"
+          "Cancel": "Annulla",
+          "How it works": "Come funziona"
         },
         "CSDU4 List App Demo_2018": {
           "About": "Informazioni",
           "About Us": "Chi siamo",
           "Done": "Fatto",
-          "Cancel": "Annulla"
+          "Cancel": "Annulla",
+          "How it works": "Come funziona"
         },
         "CSDU4 List App Demo_2019": {
           "About": "Informazioni",
           "About Us": "Chi siamo",
           "Done": "Fatto",
-          "Cancel": "Annulla"
+          "Cancel": "Annulla",
+          "How it works": "Come funziona"
         },
         "CSDU4 Quiz App Demo": {
           "About": "Informazioni",
@@ -1447,7 +1926,10 @@
           "Why?": "Perchè?",
           "When?": "Quando?",
           "About Us": "Chi siamo",
-          "Correct!": "Corretto!"
+          "Correct!": "Corretto!",
+          "Next Question": "Domanda successiva",
+          "How it works": "Come funziona",
+          "Take a Quiz": "Fai un quiz"
         },
         "CSDU4 Quiz App Demo_2018": {
           "About": "Informazioni",
@@ -1455,7 +1937,10 @@
           "Why?": "Perchè?",
           "When?": "Quando?",
           "About Us": "Chi siamo",
-          "Correct!": "Corretto!"
+          "Correct!": "Corretto!",
+          "Next Question": "Domanda successiva",
+          "How it works": "Come funziona",
+          "Take a Quiz": "Fai un quiz"
         },
         "CSDU4 Quiz App Demo_2019": {
           "About": "Informazioni",
@@ -1463,7 +1948,10 @@
           "Why?": "Perchè?",
           "When?": "Quando?",
           "About Us": "Chi siamo",
-          "Correct!": "Corretto!"
+          "Correct!": "Corretto!",
+          "Next Question": "Domanda successiva",
+          "How it works": "Come funziona",
+          "Take a Quiz": "Fai un quiz"
         },
         "CSDU6 - UI and Inputs - getNumber": {
           "+": "+",
@@ -1474,19 +1962,49 @@
           "Back": "Indietro"
         },
         "CSDU6 Circuit Playground Test": {
-          "Success!": "Fatto!"
+          "Success!": "Fatto!",
+          "Plug in your Circuit Playground and click \"Run\"": "Collega il tuo Circuit Playground e fai clic su «Esegui»",
+          "Board Not Detected!": "Scheda non rilevata!",
+          "Try the following:": "Prova le seguenti soluzioni:",
+          "Refresh this page and try again": "Aggiorna la pagina e riprova",
+          "Plug the board into a different USB": "Collega la scheda a una porta USB diversa",
+          "Visit studio.code.org/maker/setup": "Visita studio.code.org/maker/setup"
         },
         "CSDU6 Circuit Playground Test_2018": {
-          "Success!": "Fatto!"
+          "Success!": "Fatto!",
+          "Plug in your Circuit Playground and click \"Run\"": "Collega il tuo Circuit Playground e fai clic su «Esegui»",
+          "Board Not Detected!": "Scheda non rilevata!",
+          "Try the following:": "Prova le seguenti soluzioni:",
+          "Refresh this page and try again": "Aggiorna la pagina e riprova",
+          "Plug the board into a different USB": "Collega la scheda a una porta USB diversa",
+          "Visit studio.code.org/maker/setup": "Visita studio.code.org/maker/setup"
         },
         "CSDU6 Circuit Playground Test_2019": {
-          "Success!": "Fatto!"
+          "Success!": "Fatto!",
+          "Plug in your Circuit Playground and click \"Run\"": "Collega il tuo Circuit Playground e fai clic su «Esegui»",
+          "Board Not Detected!": "Scheda non rilevata!",
+          "Try the following:": "Prova le seguenti soluzioni:",
+          "Refresh this page and try again": "Aggiorna la pagina e riprova",
+          "Plug the board into a different USB": "Collega la scheda a una porta USB diversa",
+          "Visit studio.code.org/maker/setup": "Visita studio.code.org/maker/setup"
         },
         "CSDU6 Circuit Playground Test_2021": {
-          "Success!": "Fatto!"
+          "Success!": "Fatto!",
+          "Plug in your Circuit Playground and click \"Run\"": "Collega il tuo Circuit Playground e fai clic su «Esegui»",
+          "Board Not Detected!": "Scheda non rilevata!",
+          "Try the following:": "Prova le seguenti soluzioni:",
+          "Refresh this page and try again": "Aggiorna la pagina e riprova",
+          "Plug the board into a different USB": "Collega la scheda a una porta USB diversa",
+          "Visit studio.code.org/maker/setup": "Visita studio.code.org/maker/setup"
         },
         "CSDU6 Circuit Playground Test_2222": {
-          "Success!": "Fatto!"
+          "Success!": "Fatto!",
+          "Plug in your Circuit Playground and click \"Run\"": "Collega il tuo Circuit Playground e fai clic su «Esegui»",
+          "Board Not Detected!": "Scheda non rilevata!",
+          "Try the following:": "Prova le seguenti soluzioni:",
+          "Refresh this page and try again": "Aggiorna la pagina e riprova",
+          "Plug the board into a different USB": "Collega la scheda a una porta USB diversa",
+          "Visit studio.code.org/maker/setup": "Visita studio.code.org/maker/setup"
         },
         "CSDU6 circuit playground piano": {
           "C": "C",
@@ -1561,56 +2079,145 @@
           "B": "B"
         },
         "allthethings design mode elements": {
-          "text": "testo"
+          "text": "testo",
+          "Button": "Pulsante"
         },
         "csa widget test2": {
           "8": "8"
         },
         "csd u5 recommender sample": {
           "Start": "Inizia",
-          "flying": "volo"
+          "flying": "volo",
+          "Where should you go on vacation?": "Dove dovresti andare in vacanza?",
+          "What is your favorite food?": "Qual è il tuo cibo preferito?",
+          "What is the best superpower?": "Qual è il tuo superpotere preferito?",
+          "invisibility": "invisibilità",
+          "super strength": "forza sovrumana",
+          "teleport": "teletrasporto",
+          "Which animal do you like the best?": "Qual è il tuo animale preferito?",
+          "You should go to the beach!": "Dovresti andare al mare!",
+          "You should go to an amusement park!": "Dovresti andare in un parco di divertimenti!",
+          "You should go to a national park!": "Dovresti andare in un parco nazionale!",
+          "You should go to a big city!": "Dovresti andare in una grande città!"
         },
         "csd u5 recommender sample_2019": {
           "Start": "Inizia",
-          "flying": "volo"
+          "flying": "volo",
+          "Where should you go on vacation?": "Dove dovresti andare in vacanza?",
+          "What is your favorite food?": "Qual è il tuo cibo preferito?",
+          "What is the best superpower?": "Qual è il tuo superpotere preferito?",
+          "invisibility": "invisibilità",
+          "super strength": "forza sovrumana",
+          "teleport": "teletrasporto",
+          "Which animal do you like the best?": "Qual è il tuo animale preferito?",
+          "You should go to the beach!": "Dovresti andare al mare!",
+          "You should go to an amusement park!": "Dovresti andare in un parco di divertimenti!",
+          "You should go to a national park!": "Dovresti andare in un parco nazionale!",
+          "You should go to a big city!": "Dovresti andare in una grande città!"
         },
         "csd u5 recommender sample_2021": {
           "Start": "Inizia",
-          "flying": "volo"
+          "flying": "volo",
+          "Where should you go on vacation?": "Dove dovresti andare in vacanza?",
+          "What is your favorite food?": "Qual è il tuo cibo preferito?",
+          "What is the best superpower?": "Qual è il tuo superpotere preferito?",
+          "invisibility": "invisibilità",
+          "super strength": "forza sovrumana",
+          "teleport": "teletrasporto",
+          "Which animal do you like the best?": "Qual è il tuo animale preferito?",
+          "You should go to the beach!": "Dovresti andare al mare!",
+          "You should go to an amusement park!": "Dovresti andare in un parco di divertimenti!",
+          "You should go to a national park!": "Dovresti andare in un parco nazionale!",
+          "You should go to a big city!": "Dovresti andare in una grande città!"
         },
         "csd u5 recommender sample_2022": {
           "Start": "Inizia",
-          "flying": "volo"
+          "flying": "volo",
+          "Where should you go on vacation?": "Dove dovresti andare in vacanza?",
+          "What is your favorite food?": "Qual è il tuo cibo preferito?",
+          "What is the best superpower?": "Qual è il tuo superpotere preferito?",
+          "invisibility": "invisibilità",
+          "super strength": "forza sovrumana",
+          "teleport": "teletrasporto",
+          "Which animal do you like the best?": "Qual è il tuo animale preferito?",
+          "You should go to the beach!": "Dovresti andare al mare!",
+          "You should go to an amusement park!": "Dovresti andare in un parco di divertimenti!",
+          "You should go to a national park!": "Dovresti andare in un parco nazionale!",
+          "You should go to a big city!": "Dovresti andare in una grande città!"
         },
         "csd-apps for good-2": {
           "Next": "Seguente",
-          "Home": "Home"
+          "Home": "Home",
+          "Water Conservation Tips": "Suggerimenti per la conservazione dell'acqua",
+          "It's important that we all do our part to use less water. Click through this app for tips for conservation ideas. ": "È importante che ognuno di noi faccia la nostra parte per utilizzare meno acqua. Fai clic su questa app per suggerimenti di idee sulla conservazione dell'acqua. ",
+          "English": "Inglese",
+          "Spanish": "Spagnolo",
+          "Instead of buying disposable water bottles, use a refillable bottle. One use water bottles fill our land fills and trap valuable water.": "Invece di acquistare bottiglie d'acqua usa e getta, usa una borraccia ricaricabile. Le bottiglie d'acqua usa e getta riempiono i nostri terreni e intrappolano l'acqua preziosa.",
+          "Choose the correct water bottle. Then click the faucet to fill. ": "Scegli la bottiglia d'acqua corretta. Quindi fai clic sul rubinetto per riempirla. ",
+          "Another way to conserve water is to take shorter showers. Try setting a timer to five minutes!": "Un altro modo per risparmiare acqua è fare docce più brevi. Prova a impostare un timer su cinque minuti!",
+          "Click on the timer": "Fai clic sul timer"
         },
         "csd-apps for good-2_2022": {
           "Next": "Seguente",
-          "Home": "Home"
+          "Home": "Home",
+          "Water Conservation Tips": "Suggerimenti per la conservazione dell'acqua",
+          "It's important that we all do our part to use less water. Click through this app for tips for conservation ideas. ": "È importante che ognuno di noi faccia la nostra parte per utilizzare meno acqua. Fai clic su questa app per suggerimenti di idee sulla conservazione dell'acqua. ",
+          "English": "Inglese",
+          "Spanish": "Spagnolo",
+          "Instead of buying disposable water bottles, use a refillable bottle. One use water bottles fill our land fills and trap valuable water.": "Invece di acquistare bottiglie d'acqua usa e getta, usa una borraccia ricaricabile. Le bottiglie d'acqua usa e getta riempiono i nostri terreni e intrappolano l'acqua preziosa.",
+          "Choose the correct water bottle. Then click the faucet to fill. ": "Scegli la bottiglia d'acqua corretta. Quindi fai clic sul rubinetto per riempirla. ",
+          "Another way to conserve water is to take shorter showers. Try setting a timer to five minutes!": "Un altro modo per risparmiare acqua è fare docce più brevi. Prova a impostare un timer su cinque minuti!",
+          "Click on the timer": "Fai clic sul timer"
         },
         "csd-apps for good-3": {
           "1": "1",
           "2": "2",
           "3": "3",
           "4": "4",
-          "???": "???"
+          "???": "???",
+          "4-Square = 4 Times the Fun": "4-Square = 4 volte più divertente",
+          "Have you wanted to learn how to play the fun, social game of 4-square, but didn't know where to start? This is the app for you! ": "Volevi imparare a giocare al divertente gioco di società 4-square, ma non sapevi da dove cominciare? Questa è l'app che fa per te! ",
+          "More Info": "Maggiori informazioni",
+          "How many players do you need to play 4-Square? Click to find out!": "Quanti giocatori ti servono per giocare a 4-Square? Clicca per scoprirlo!",
+          "Start Again": "Ricomincia",
+          "To play 4-square, each player stands near one of the four marked boxes on the ground. The boxes are ordered from 1 to 4, with one being the \"top\" box. The player in the 1 box starts play by bouncing the ball in their square and then slapping or hitting the ball into another square. The ball must not touch the original players box again after the initial bounce. If the ball bounces in a player's square, they must then hit the ball into another square before the ball bounces again. They may only hit the ball once. But what if it hits the line, you might ask? There are many different rules on what to do if the ball hits the line - you must agree with your friends if the lines are in or out. If you hit the ball out of bounds or it bounces twice in your square you are out. Everyone moves to the next highest box available (the goal is to stay in the first box as long as possible). If you are out, you go to the back of the line and a new player takes the empty spot in box 4. ": "Per giocare a 4-square, ogni giocatore si trova vicino a una delle quattro caselle segnate sul terreno. Le caselle vengono ordinate da 1 a 4, di cui una è la «casella principale». Il giocatore nella casella 1 inizia il gioco facendo rimbalzare la palla nel proprio quadrato e poi schiaffeggiando o colpendo la palla in un'altra casella. La palla non deve toccare nuovamente la casella originale del giocatore dopo il rimbalzo iniziale. Se la palla rimbalza nella casella di un giocatore, deve poi colpire la palla in un'altra casella prima che la palla rimbalzi di nuovo. Possono colpire la palla solo una volta. Ma se arrivasse al limite, potresti chiedere? Esistono molte regole diverse su cosa fare se la palla colpisce la linea: devi concordare con i tuoi amici se le linee sono dentro o fuori. Se colpisci la palla fuori dai limiti o questa rimbalza due volte nella tua casella, sei fuori. Tutti passano alla casella successiva più alta disponibile (l'obiettivo è rimanere nella prima casella il più a lungo possibile). Se sei fuori, vai in fondo alla linea e un nuovo giocatore occupa il posto vuoto nella casella 4. "
         },
         "csd-apps for good-3_2022": {
           "1": "1",
           "2": "2",
           "3": "3",
           "4": "4",
-          "???": "???"
+          "???": "???",
+          "4-Square = 4 Times the Fun": "4-Square = 4 volte più divertente",
+          "Have you wanted to learn how to play the fun, social game of 4-square, but didn't know where to start? This is the app for you! ": "Volevi imparare a giocare al divertente gioco di società 4-square, ma non sapevi da dove cominciare? Questa è l'app che fa per te! ",
+          "More Info": "Maggiori informazioni",
+          "How many players do you need to play 4-Square? Click to find out!": "Quanti giocatori ti servono per giocare a 4-Square? Clicca per scoprirlo!",
+          "Start Again": "Ricomincia",
+          "To play 4-square, each player stands near one of the four marked boxes on the ground. The boxes are ordered from 1 to 4, with one being the \"top\" box. The player in the 1 box starts play by bouncing the ball in their square and then slapping or hitting the ball into another square. The ball must not touch the original players box again after the initial bounce. If the ball bounces in a player's square, they must then hit the ball into another square before the ball bounces again. They may only hit the ball once. But what if it hits the line, you might ask? There are many different rules on what to do if the ball hits the line - you must agree with your friends if the lines are in or out. If you hit the ball out of bounds or it bounces twice in your square you are out. Everyone moves to the next highest box available (the goal is to stay in the first box as long as possible). If you are out, you go to the back of the line and a new player takes the empty spot in box 4. ": "Per giocare a 4-square, ogni giocatore si trova vicino a una delle quattro caselle segnate sul terreno. Le caselle vengono ordinate da 1 a 4, di cui una è la «casella principale». Il giocatore nella casella 1 inizia il gioco facendo rimbalzare la palla nel proprio quadrato e poi schiaffeggiando o colpendo la palla in un'altra casella. La palla non deve toccare nuovamente la casella originale del giocatore dopo il rimbalzo iniziale. Se la palla rimbalza nella casella di un giocatore, deve poi colpire la palla in un'altra casella prima che la palla rimbalzi di nuovo. Possono colpire la palla solo una volta. Ma se arrivasse al limite, potresti chiedere? Esistono molte regole diverse su cosa fare se la palla colpisce la linea: devi concordare con i tuoi amici se le linee sono dentro o fuori. Se colpisci la palla fuori dai limiti o questa rimbalza due volte nella tua casella, sei fuori. Tutti passano alla casella successiva più alta disponibile (l'obiettivo è rimanere nella prima casella il più a lungo possibile). Se sei fuori, vai in fondo alla linea e un nuovo giocatore occupa il posto vuoto nella casella 4. "
         },
         "csd-explore ui-2": {
           "Next": "Seguente",
-          "Home": "Home"
+          "Home": "Home",
+          "Water Conservation Tips": "Suggerimenti per la conservazione dell'acqua",
+          "It's important that we all do our part to use less water. Click through this app for tips for conservation ideas. ": "È importante che ognuno di noi faccia la nostra parte per utilizzare meno acqua. Fai clic su questa app per suggerimenti di idee sulla conservazione dell'acqua. ",
+          "English": "Inglese",
+          "Spanish": "Spagnolo",
+          "Instead of buying disposable water bottles, use a refillable bottle. One use water bottles fill our land fills and trap valuable water.": "Invece di acquistare bottiglie d'acqua usa e getta, usa una borraccia ricaricabile. Le bottiglie d'acqua usa e getta riempiono i nostri terreni e intrappolano l'acqua preziosa.",
+          "Choose the correct water bottle. Then click the faucet to fill. ": "Scegli la bottiglia d'acqua corretta. Quindi fai clic sul rubinetto per riempirla. ",
+          "Another way to conserve water is to take shorter showers. Try setting a timer to five minutes!": "Un altro modo per risparmiare acqua è fare docce più brevi. Prova a impostare un timer su cinque minuti!",
+          "Click on the timer": "Fai clic sul timer"
         },
         "csd-explore ui-2_2022": {
           "Next": "Seguente",
-          "Home": "Home"
+          "Home": "Home",
+          "Water Conservation Tips": "Suggerimenti per la conservazione dell'acqua",
+          "It's important that we all do our part to use less water. Click through this app for tips for conservation ideas. ": "È importante che ognuno di noi faccia la nostra parte per utilizzare meno acqua. Fai clic su questa app per suggerimenti di idee sulla conservazione dell'acqua. ",
+          "English": "Inglese",
+          "Spanish": "Spagnolo",
+          "Instead of buying disposable water bottles, use a refillable bottle. One use water bottles fill our land fills and trap valuable water.": "Invece di acquistare bottiglie d'acqua usa e getta, usa una borraccia ricaricabile. Le bottiglie d'acqua usa e getta riempiono i nostri terreni e intrappolano l'acqua preziosa.",
+          "Choose the correct water bottle. Then click the faucet to fill. ": "Scegli la bottiglia d'acqua corretta. Quindi fai clic sul rubinetto per riempirla. ",
+          "Another way to conserve water is to take shorter showers. Try setting a timer to five minutes!": "Un altro modo per risparmiare acqua è fare docce più brevi. Prova a impostare un timer su cinque minuti!",
+          "Click on the timer": "Fai clic sul timer"
         },
         "csd-explore ui-3": {
           "1": "1",
@@ -1633,7 +2240,24 @@
           "18": "18",
           "19": "19",
           "20": "20",
-          "21": "21"
+          "21": "21",
+          "Choose your Birthday!": "Scegli la tua data di nascita!",
+          "Find out if it's your birthday!": "Scopri se è il tuo compleanno!",
+          "January": "Gennaio",
+          "February": "Febbraio",
+          "March": "Marzo",
+          "April": "Aprile",
+          "May": "Maggio",
+          "June": "Giugno",
+          "July": "Luglio",
+          "August": "Agosto",
+          "September": "Settembre",
+          "October": "Ottobre",
+          "November": "Novembre",
+          "December": "Dicembre",
+          "It's your birthday!": "È il tuo compleanno!",
+          "It's not your birthday yet this year!": "Non è ancora il tuo compleanno quest'anno!",
+          "It was already your birthday this year!!": "Quest'anno è già passato il tuo compleanno!"
         },
         "csd-explore ui-3_2022": {
           "1": "1",
@@ -1656,15 +2280,80 @@
           "18": "18",
           "19": "19",
           "20": "20",
-          "21": "21"
+          "21": "21",
+          "Choose your Birthday!": "Scegli la tua data di nascita!",
+          "Find out if it's your birthday!": "Scopri se è il tuo compleanno!",
+          "January": "Gennaio",
+          "February": "Febbraio",
+          "March": "Marzo",
+          "April": "Aprile",
+          "May": "Maggio",
+          "June": "Giugno",
+          "July": "Luglio",
+          "August": "Agosto",
+          "September": "Settembre",
+          "October": "Ottobre",
+          "November": "Novembre",
+          "December": "Dicembre",
+          "It's your birthday!": "È il tuo compleanno!",
+          "It's not your birthday yet this year!": "Non è ancora il tuo compleanno quest'anno!",
+          "It was already your birthday this year!!": "Quest'anno è già passato il tuo compleanno!"
         },
         "csd-explore ui-4": {
           "Correct!": "Corretto!",
-          "Sorry!": "Mi dispiace!"
+          "Sorry!": "Mi dispiace!",
+          "National Park Quiz": "Quiz sul parco nazionale",
+          "Start!": "Inizia!",
+          "What was the first national park?": "Qual è stato il primo parco nazionale?",
+          "Yosemite": "Yosemite",
+          "Yellowstone": "Yellowstone",
+          "Acadia": "Acadia",
+          "Great Smoky Mountains": "Great Smoky Mountains",
+          "Which is the largest national park?": "Qual è il parco nazionale più grande?",
+          "Wrangell-St. Elias": "Wrangell-St. Elias",
+          "Death Valley": "Death Valley",
+          "Denali": "Denali",
+          "Which national park gets the most visitors?": "Quale parco nazionale riceve il maggior numero di visitatori?",
+          "Grand Canyon": "Grand Canyon",
+          "Which national park has the largest tree in the world?": "Quale parco nazionale ha l'albero più grande del mondo?",
+          "Sequoia": "Sequoia",
+          "Redwood": "Redwood",
+          "Shenandoah": "Shenandoah",
+          "Olympic": "Olympic",
+          "Yellowstone was the first National Park, created by President Ulysses S. Grant in 1872": "Yellowstone è stato il primo parco nazionale, creato dal presidente Ulysses S. Grant nel 1872",
+          "Next Question": "Domanda successiva",
+          "Wrangell-St. Elias is the largest national park, even bigger than many countries!": "Wrangell-St. Elias è il parco nazionale più grande, persino più grande di molti paesi!",
+          "Great Smoky Mountains is the most visited, with more than 11 million visitors every year.": "Le Great Smoky Mountains sono le più visitate, con oltre 11 milioni di visitatori ogni anno.",
+          "Sequoia is home to the biggest tree in the world, the General Sherman Tree.": "Il Sequoia National Park ospita l'albero più grande del mondo, il \"Generale Sherman\".",
+          "Play Again": "Gioca di nuovo"
         },
         "csd-explore ui-4_2022": {
           "Correct!": "Corretto!",
-          "Sorry!": "Mi dispiace!"
+          "Sorry!": "Mi dispiace!",
+          "National Park Quiz": "Quiz sul parco nazionale",
+          "Start!": "Inizia!",
+          "What was the first national park?": "Qual è stato il primo parco nazionale?",
+          "Yosemite": "Yosemite",
+          "Yellowstone": "Yellowstone",
+          "Acadia": "Acadia",
+          "Great Smoky Mountains": "Great Smoky Mountains",
+          "Which is the largest national park?": "Qual è il parco nazionale più grande?",
+          "Wrangell-St. Elias": "Wrangell-St. Elias",
+          "Death Valley": "Death Valley",
+          "Denali": "Denali",
+          "Which national park gets the most visitors?": "Quale parco nazionale riceve il maggior numero di visitatori?",
+          "Grand Canyon": "Grand Canyon",
+          "Which national park has the largest tree in the world?": "Quale parco nazionale ha l'albero più grande del mondo?",
+          "Sequoia": "Sequoia",
+          "Redwood": "Redwood",
+          "Shenandoah": "Shenandoah",
+          "Olympic": "Olympic",
+          "Yellowstone was the first National Park, created by President Ulysses S. Grant in 1872": "Yellowstone è stato il primo parco nazionale, creato dal presidente Ulysses S. Grant nel 1872",
+          "Next Question": "Domanda successiva",
+          "Wrangell-St. Elias is the largest national park, even bigger than many countries!": "Wrangell-St. Elias è il parco nazionale più grande, persino più grande di molti paesi!",
+          "Great Smoky Mountains is the most visited, with more than 11 million visitors every year.": "Le Great Smoky Mountains sono le più visitate, con oltre 11 milioni di visitatori ogni anno.",
+          "Sequoia is home to the biggest tree in the world, the General Sherman Tree.": "Il Sequoia National Park ospita l'albero più grande del mondo, il \"Generale Sherman\".",
+          "Play Again": "Gioca di nuovo"
         },
         "csd-explore ui-5": {
           "1": "1",
@@ -1687,7 +2376,62 @@
           "18": "18",
           "19": "19",
           "20": "20",
-          "21": "21"
+          "21": "21",
+          "Enter your Birthday!": "Inserisci la tua data di nascita!",
+          "Find a writer!": "Trova uno scrittore!",
+          "January": "Gennaio",
+          "February": "Febbraio",
+          "March": "Marzo",
+          "April": "Aprile",
+          "May": "Maggio",
+          "June": "Giugno",
+          "July": "Luglio",
+          "August": "Agosto",
+          "September": "Settembre",
+          "October": "Ottobre",
+          "November": "Novembre",
+          "December": "Dicembre",
+          "1998": "1998",
+          "1999": "1999",
+          "2000": "2000",
+          "2001": "2001",
+          "2002": "2002",
+          "2003": "2003",
+          "2004": "2004",
+          "2005": "2005",
+          "2006": "2006",
+          "2007": "2007",
+          "2008": "2008",
+          "2009": "2009",
+          "2010": "2010",
+          "2011": "2011",
+          "2012": "2012",
+          "2013": "2013",
+          "2014": "2014",
+          "2015": "2015",
+          "Anchee Min": "Anchee Min",
+          "image by Slowking4, GFDL 1.2": "immagine di Slowking4, GFDL 1.2",
+          "You were born on a": "Sei nato in",
+          "Monday": "Lunedì",
+          "just like": "proprio come",
+          "N. Scott Momaday": "N. Scott Momaday",
+          "public domain image": "immagine di pubblico dominio",
+          "Tuesday": "Martedì",
+          "Toni Morrison": "Toni Morrison",
+          "image by John Mathew Smith, CC-BY-SA 2.0": "immagine di John Mathew Smith, CC-BY-SA 2.0",
+          "Wednesday": "Mercoledì",
+          "Khaled Hosseini": "Khaled Hosseini",
+          "Public Domain Image": "Immagine di pubblico dominio",
+          "Thursday": "Giovedì",
+          "Langston Hughes": "Langston Hughes",
+          "Public Domain": "Dominio pubblico",
+          "Friday": "Venerdì",
+          "Margaret Atwood": "Margaret Atwood",
+          "image by Vanwaffle, CC BY-SA 3.0": "immagine di Vanwaffle, CC BY-SA 3.0",
+          "Saturday": "Sabato",
+          "Gabriel Garcia Marquez": "Gabriel García Márquez",
+          "image by Jose Lara, CC-BY-SA": "foto di Jose Lara, CC-BY-SA",
+          "Sunday": "Domenica"
         },
         "csd-explore ui-5_2022": {
           "1": "1",
@@ -1710,21 +2454,94 @@
           "18": "18",
           "19": "19",
           "20": "20",
-          "21": "21"
+          "21": "21",
+          "Enter your Birthday!": "Inserisci la tua data di nascita!",
+          "Find a writer!": "Trova uno scrittore!",
+          "January": "Gennaio",
+          "February": "Febbraio",
+          "March": "Marzo",
+          "April": "Aprile",
+          "May": "Maggio",
+          "June": "Giugno",
+          "July": "Luglio",
+          "August": "Agosto",
+          "September": "Settembre",
+          "October": "Ottobre",
+          "November": "Novembre",
+          "December": "Dicembre",
+          "1998": "1998",
+          "1999": "1999",
+          "2000": "2000",
+          "2001": "2001",
+          "2002": "2002",
+          "2003": "2003",
+          "2004": "2004",
+          "2005": "2005",
+          "2006": "2006",
+          "2007": "2007",
+          "2008": "2008",
+          "2009": "2009",
+          "2010": "2010",
+          "2011": "2011",
+          "2012": "2012",
+          "2013": "2013",
+          "2014": "2014",
+          "2015": "2015",
+          "Anchee Min": "Anchee Min",
+          "image by Slowking4, GFDL 1.2": "immagine di Slowking4, GFDL 1.2",
+          "You were born on a": "Sei nato in",
+          "Monday": "Lunedì",
+          "just like": "proprio come",
+          "N. Scott Momaday": "N. Scott Momaday",
+          "public domain image": "immagine di pubblico dominio",
+          "Tuesday": "Martedì",
+          "Toni Morrison": "Toni Morrison",
+          "image by John Mathew Smith, CC-BY-SA 2.0": "immagine di John Mathew Smith, CC-BY-SA 2.0",
+          "Wednesday": "Mercoledì",
+          "Khaled Hosseini": "Khaled Hosseini",
+          "Public Domain Image": "Immagine di pubblico dominio",
+          "Thursday": "Giovedì",
+          "Langston Hughes": "Langston Hughes",
+          "Public Domain": "Dominio pubblico",
+          "Friday": "Venerdì",
+          "Margaret Atwood": "Margaret Atwood",
+          "image by Vanwaffle, CC BY-SA 3.0": "immagine di Vanwaffle, CC BY-SA 3.0",
+          "Saturday": "Sabato",
+          "Gabriel Garcia Marquez": "Gabriel García Márquez",
+          "image by Jose Lara, CC-BY-SA": "foto di Jose Lara, CC-BY-SA",
+          "Sunday": "Domenica"
         },
         "csd-explore ui-6": {
-          "Next": "Seguente"
+          "Next": "Seguente",
+          "Mad Libs!": "Mad Libs!",
+          "Learning to Drive": "Imparare a guidare",
+          "Plural Noun": "Sostantivo plurale",
+          "Noun": "Sostantivo",
+          "Song": "Brano",
+          "Verb": "Verbo",
+          "Play again": "Gioca di nuovo"
         },
         "csd-explore ui-6_2022": {
-          "Next": "Seguente"
+          "Next": "Seguente",
+          "Mad Libs!": "Mad Libs!",
+          "Learning to Drive": "Imparare a guidare",
+          "Plural Noun": "Sostantivo plurale",
+          "Noun": "Sostantivo",
+          "Song": "Brano",
+          "Verb": "Verbo",
+          "Play again": "Gioca di nuovo"
         },
         "ml-L2 supervised - green glass door-2021": {
           "Accepted": "Accettato",
-          "Rejected": "Rifiutato"
+          "Rejected": "Rifiutato",
+          "Green Glass Door": "Porta in vetro verde",
+          "In this game, we're trying to learn what words are allowed through the Green Glass Door.": "In questo gioco, stiamo cercando di capire a quali parole è consentite di attraversare la Porta a vetri verde."
         },
         "ml-L2 supervised - green glass door_2022": {
           "Accepted": "Accettato",
-          "Rejected": "Rifiutato"
+          "Rejected": "Rifiutato",
+          "Green Glass Door": "Porta in vetro verde",
+          "In this game, we're trying to learn what words are allowed through the Green Glass Door.": "In questo gioco, stiamo cercando di capire a quali parole è consentite di attraversare la Porta a vetri verde."
         },
         "ml-L2 unsupervised - 1-2021": {
           "Next": "Seguente"
@@ -1735,12 +2552,28 @@
         "ml-customize-raspado-2021": {
           "yes": "sì",
           "no": "no",
-          "Predict": "Predict"
+          "Predict": "Predict",
+          "strawberry:": "fragola:",
+          "mango:": "mango:",
+          "vanilla:": "Vanilla",
+          "lime:": "lime:",
+          "chili en polbo:": "peperoncino in polvere:",
+          "coconut:": "cocco:",
+          "Raspado Recommender": "Suggeritore di Raspado",
+          "preference": "preferenza"
         },
         "ml-customize-raspado_2022": {
           "yes": "sì",
           "no": "no",
-          "Predict": "Predict"
+          "Predict": "Predict",
+          "strawberry:": "fragola:",
+          "mango:": "mango:",
+          "vanilla:": "Vanilla",
+          "lime:": "lime:",
+          "chili en polbo:": "peperoncino in polvere:",
+          "coconut:": "cocco:",
+          "Raspado Recommender": "Suggeritore di Raspado",
+          "preference": "preferenza"
         },
         "ml-intro ai lab- fruit veggie widget": {
           "Continue": "Prosegui",
@@ -1752,83 +2585,113 @@
         },
         "ml-intro app lab-book recommender demo-2021": {
           "Silly": "Sciocco",
-          "Predict": "Predict"
+          "Predict": "Predict",
+          "Cat": "Gatto"
         },
         "ml-intro app lab-book recommender demo_2022": {
           "Silly": "Sciocco",
-          "Predict": "Predict"
+          "Predict": "Predict",
+          "Cat": "Gatto"
         },
         "ml-model card-medical app v2 2021-2": {
           "W": "O",
           "A": "A",
           "yes": "sì",
           "no": "no",
-          "head": "testa"
+          "head": "testa",
+          "Over 60": "Oltre 60",
+          "18-34": "18-34",
+          "Under 18": "Minori di 18 anni",
+          "35-60": "35-60",
+          "Gender?": "Sesso?",
+          "male": "maschio",
+          "female": "femmina",
+          "nonbinary (identifies outside gender binary)": "non binario (identifica chi non si identifica all'interno del cosiddetto binarismo di genere)"
         },
         "ml-model card-medical app v2 2021-2_2022": {
           "W": "O",
           "A": "A",
           "yes": "sì",
           "no": "no",
-          "head": "testa"
+          "head": "testa",
+          "Over 60": "Oltre 60",
+          "18-34": "18-34",
+          "Under 18": "Minori di 18 anni",
+          "35-60": "35-60",
+          "Gender?": "Sesso?",
+          "male": "maschio",
+          "female": "femmina",
+          "nonbinary (identifies outside gender binary)": "non binario (identifica chi non si identifica all'interno del cosiddetto binarismo di genere)"
         },
         "ml-model cards-book recommender model card": {
           "Silly": "Sciocco",
-          "Predict": "Predict"
+          "Predict": "Predict",
+          "Cat": "Gatto"
         },
         "ml-model cards-book recommender model card_2022": {
           "Silly": "Sciocco",
-          "Predict": "Predict"
+          "Predict": "Predict",
+          "Cat": "Gatto"
         },
         "ml-models in applab-choice if quotes": {
           "3": "3",
           "2": "2",
           "1": "1",
-          "Predict": "Predict"
+          "Predict": "Predict",
+          "4+": "4+"
         },
         "ml-models in applab-choice if quotes_2022": {
           "3": "3",
           "2": "2",
           "1": "1",
-          "Predict": "Predict"
+          "Predict": "Predict",
+          "4+": "4+"
         },
         "ml-models in applab-choice if wrong place": {
           "3": "3",
           "2": "2",
           "1": "1",
-          "Predict": "Predict"
+          "Predict": "Predict",
+          "4+": "4+"
         },
         "ml-models in applab-choice if wrong place_2022": {
           "3": "3",
           "2": "2",
           "1": "1",
-          "Predict": "Predict"
+          "Predict": "Predict",
+          "4+": "4+"
         },
         "ml-models in applab-choice intended warnings": {
           "3": "3",
           "2": "2",
           "1": "1",
           "Predict": "Predict",
-          "Back": "Indietro"
+          "Back": "Indietro",
+          "4+": "4+",
+          "Intended Uses": "Utilizzi previsti"
         },
         "ml-models in applab-choice intended warnings_2022": {
           "3": "3",
           "2": "2",
           "1": "1",
           "Predict": "Predict",
-          "Back": "Indietro"
+          "Back": "Indietro",
+          "4+": "4+",
+          "Intended Uses": "Utilizzi previsti"
         },
         "ml-models in applab-choice predict typos": {
           "3": "3",
           "2": "2",
           "1": "1",
-          "Predict": "Predict"
+          "Predict": "Predict",
+          "4+": "4+"
         },
         "ml-models in applab-choice predict typos_2022": {
           "3": "3",
           "2": "2",
           "1": "1",
-          "Predict": "Predict"
+          "Predict": "Predict",
+          "4+": "4+"
         },
         "ml-models in applab-zoo assessment": {
           "Yes": "Sì",
@@ -1845,18 +2708,22 @@
         "ml-models in applab-zoo model embed": {
           "Yes": "Sì",
           "No": "No",
-          "Predict": "Predict"
+          "Predict": "Predict",
+          "Intended Uses": "Utilizzi previsti"
         },
         "ml-models in applab-zoo model embed_2022": {
           "Yes": "Sì",
           "No": "No",
-          "Predict": "Predict"
+          "Predict": "Predict",
+          "Intended Uses": "Utilizzi previsti"
         },
         "ml-models-shoes decision tree-2021": {
-          "Sports": "Sport"
+          "Sports": "Sport",
+          "Improved Shoe Recommender": "Selezionatore di scarpe migliorato"
         },
         "ml-models-shoes decision tree_2022": {
-          "Sports": "Sport"
+          "Sports": "Sport",
+          "Improved Shoe Recommender": "Selezionatore di scarpe migliorato"
         },
         "ml-use model card-example3A-2021": {
           "rain": "pioggia",
@@ -1864,7 +2731,15 @@
           "cloudy": "nuvoloso",
           "night": "notte",
           "dusk": "Crepuscolo",
-          "Predict": "Predict"
+          "Predict": "Predict",
+          "Weather:": "Meteo:",
+          "foggy": "nebbiosa",
+          "sunny": "soleggiata",
+          "Time Of Day:": "Ora del giorno:",
+          "daylight": "luce del giorno",
+          "Temperature:": "Temperatura:",
+          "Driver Alert System": "Sistema di avviso al conducente",
+          "Get Started": "Inizia"
         },
         "ml-use model card-example3A_2022": {
           "rain": "pioggia",
@@ -1872,7 +2747,15 @@
           "cloudy": "nuvoloso",
           "night": "notte",
           "dusk": "Crepuscolo",
-          "Predict": "Predict"
+          "Predict": "Predict",
+          "Weather:": "Meteo:",
+          "foggy": "nebbiosa",
+          "sunny": "soleggiata",
+          "Time Of Day:": "Ora del giorno:",
+          "daylight": "luce del giorno",
+          "Temperature:": "Temperatura:",
+          "Driver Alert System": "Sistema di avviso al conducente",
+          "Get Started": "Inizia"
         },
         "CSD U1 processing countries_2021": {
           "have more than a billion people?": "ha più di un miliardo di persone?",
@@ -1898,6 +2781,201 @@
           "Red Button!": "Pulsante Rosso!",
           "Click me!": "Cliccami!",
           "I'm a button!": "Sono un pulsante!"
+        },
+        "csd-apps for good-1": {
+          "Do More Durham": "Fai di più per Durham",
+          "Get involved in Durham's garden spaces. You can grow your own food and contribute to Durham's healthy lifestyle. ": "Lasciati coinvolgere negli spazi del giardino di Durham. Puoi coltivare il tuo cibo e contribuire allo stile di vita sano di Durham. ",
+          "Seeds": "Semi",
+          "Briggs Avenue Community Garden": "Orto comunitario di Briggs Avenue",
+          "Like the outdoors? You can help clean up our parks or guide others on hikes. Whatever your interests, there's a way to get involved. ": "Ti piace la vita all'aria aperta? Puoi dare una mano a ripulire i nostri parchi o guidare gli altri nelle escursioni. Qualunque sia il tuo interesse, c'è un modo per partecipare. ",
+          "Eno River Association": "Associazione Eno River",
+          "Durham Central Park": "Parco centrale di Durham"
+        },
+        "csd-apps for good-1_2022": {
+          "Do More Durham": "Fai di più per Durham",
+          "Get involved in Durham's garden spaces. You can grow your own food and contribute to Durham's healthy lifestyle. ": "Lasciati coinvolgere negli spazi del giardino di Durham. Puoi coltivare il tuo cibo e contribuire allo stile di vita sano di Durham. ",
+          "Seeds": "Semi",
+          "Briggs Avenue Community Garden": "Orto comunitario di Briggs Avenue",
+          "Like the outdoors? You can help clean up our parks or guide others on hikes. Whatever your interests, there's a way to get involved. ": "Ti piace la vita all'aria aperta? Puoi dare una mano a ripulire i nostri parchi o guidare gli altri nelle escursioni. Qualunque sia il tuo interesse, c'è un modo per partecipare. ",
+          "Eno River Association": "Associazione Eno River",
+          "Durham Central Park": "Parco centrale di Durham"
+        },
+        "csd-explore ui-1": {
+          "Chinese": "Cinese",
+          "Italian": "Italiano",
+          "Breakfast": "Colazione",
+          "Type of Restaurant": "Tipo di ristorante",
+          "Dollars per person": "Dollari a persona",
+          "Where Should I Eat?": "Dove devo mangiare?",
+          "$15": "$15"
+        },
+        "csd-explore ui-1_2022": {
+          "Chinese": "Cinese",
+          "Italian": "Italiano",
+          "Breakfast": "Colazione",
+          "Type of Restaurant": "Tipo di ristorante",
+          "Dollars per person": "Dollari a persona",
+          "Where Should I Eat?": "Dove devo mangiare?",
+          "$15": "$15"
+        },
+        "CSD U6 emoji race demo": {
+          "Emoji Race": "Gara degli Emoji"
+        },
+        "CSD U6 emoji race demo_2018": {
+          "Emoji Race": "Gara degli Emoji"
+        },
+        "CSD U6 emoji race demo_2019": {
+          "Emoji Race": "Gara degli Emoji"
+        },
+        "CSD U6 emoji race demo_2021": {
+          "Emoji Race": "Gara degli Emoji"
+        },
+        "AppLab Intro 7 - onEvent twoButtons": {
+          "On": "On",
+          "Off": "Off"
+        },
+        "CSD U6 - Board Outputs - P2_2222": {
+          "Low": "Basso",
+          "Mid": "Medio",
+          "High": "Alto"
+        },
+        "CSD U6 - Board Outputs - PracA_2222": {
+          "On": "On",
+          "Off": "Off"
+        },
+        "CSD U6 - Board Outputs - PracB_2222": {
+          "Click the mouse to make it squeak!": "Fai clic sul topo per farlo squittire!"
+        },
+        "CSD U6 - Board Outputs - PracC_2222": {
+          "Light Off": "Luce spenta",
+          "Light On": "Luce accesa"
+        },
+        "CSD U6 - Board Outputs - SB3_2222": {
+          "Short": "Breve",
+          "Long": "Lungo"
+        },
+        "CSD U6 - Color LEDs - PracC_2222": {
+          "ON": "ON",
+          "OFF": "OFF"
+        },
+        "CSD U6 - Combine Inputs - P_2222": {
+          "Off": "Off"
+        },
+        "CSD U6 - Combine Inputs - SB1_2222": {
+          "Off": "Off"
+        },
+        "CSD U6 - Physical Output - PA_2222": {
+          "On": "On",
+          "Off": "Off"
+        },
+        "CSD U6 - Screen Outputs - ChalA_2222": {
+          "OFF": "OFF"
+        },
+        "CSD U6 - Sensors - SB1_2222": {
+          "value": "valore"
+        },
+        "CSD U6 - Sensors - SB3_2222": {
+          "value": "valore"
+        },
+        "CSD U6 - Sensors - SB4.1_2222": {
+          "value": "valore"
+        },
+        "CSD U6 - Sensors - SB4_2222": {
+          "value": "valore"
+        },
+        "CSD U6 analog change": {
+          "value": "valore"
+        },
+        "CSD U6 analog change_2018": {
+          "value": "valore"
+        },
+        "CSD U6 analog change_2019": {
+          "value": "valore"
+        },
+        "CSD U6 analog change_2021": {
+          "value": "valore"
+        },
+        "CSD U6 analog data": {
+          "value": "valore"
+        },
+        "CSD U6 analog data_2018": {
+          "value": "valore"
+        },
+        "CSD U6 analog data_2019": {
+          "value": "valore"
+        },
+        "CSD U6 analog data_2021": {
+          "value": "valore"
+        },
+        "CSD U6 analog sound": {
+          "value": "valore"
+        },
+        "CSD U6 analog sound_2018": {
+          "value": "valore"
+        },
+        "CSD U6 analog sound_2019": {
+          "value": "valore"
+        },
+        "CSD U6 analog sound_2021": {
+          "value": "valore"
+        },
+        "CSD U6 setProperty hidden": {
+          "OFF": "OFF"
+        },
+        "CSD U6 setProperty hidden 2": {
+          "OFF": "OFF"
+        },
+        "CSD U6 setProperty hidden 2_2018": {
+          "OFF": "OFF"
+        },
+        "CSD U6 setProperty hidden 2_2019": {
+          "OFF": "OFF"
+        },
+        "CSD U6 setProperty hidden 2_2021": {
+          "OFF": "OFF"
+        },
+        "CSD U6 setProperty hidden_2018": {
+          "OFF": "OFF"
+        },
+        "CSD U6 setProperty hidden_2019": {
+          "OFF": "OFF"
+        },
+        "CSD U6 setProperty hidden_2021": {
+          "OFF": "OFF"
+        },
+        "CSDU6 - UI and Inputs - setText": {
+          "OFF": "OFF"
+        },
+        "CSD U6 - Board Outputs - PracD_2222": {
+          "100": "100",
+          "200": "200",
+          "300": "300",
+          "400": "400",
+          "900": "900",
+          "800": "800",
+          "700": "700",
+          "500": "500",
+          "600": "600"
+        },
+        "CSD U6 - Board Outputs - PracE_2222": {
+          "4 Seconds": "4 secondi",
+          "2 Seconds": "2 secondi",
+          "1 Second": "1 secondo",
+          "Half a Second": "Mezzo secondo",
+          "Quarter of a Second": "Un quarto di secondo",
+          "100 Milliseconds": "100 millisecondi"
+        },
+        "ml-models-shoes points-2021": {
+          "Ultimate Shoe Recommender": "Suggeritore di scarpe definitivo"
+        },
+        "ml-models-shoes points_2022": {
+          "Ultimate Shoe Recommender": "Suggeritore di scarpe definitivo"
+        },
+        "ml-models-shoes random-2021": {
+          "Shoe Recommender": "Suggeritore di scarpe"
+        },
+        "ml-models-shoes random_2022": {
+          "Shoe Recommender": "Suggeritore di scarpe"
         }
       }
     }

@@ -1,2 +1,12 @@
 {
+  "it-IT": {
+    "data": {
+      "dynamic_instructions": {
+        "ml-intro ai lab-shapes v1": {
+          "selectedFeatureCategorical": "Quando si seleziona una colonna, nel pannello di destra vengono visualizzate informazioni aggiuntive. Questo può aiutarti a decidere se si tratta di una caratteristica utile per prevedere la tua etichetta. Per ulteriori informazioni, consulta la sezione Guida e suggerimenti di queste istruzioni.\n\n**Fai questo: ** decidi se desideri utilizzare questa colonna come caratteristica. In tal caso, premi il pulsante «Aggiungi caratteristica». In caso contrario, seleziona una nuova colonna da esplorare. Ripeti l'operazione finché non avrai scelto diverse colonne da utilizzare per la caratteristica.",
+          "results": "In questa schermata, puoi vedere quanto sia accurato Bot IA confrontando le sue previsioni con i dati di test di cui conosciamo già le risposte. \n\n**Fai questo: ** Continua ad allenare il tuo modello fino a ottenere un'accuratezza che sia almeno del 100%"
+        }
+      }
+    }
+  }
 }

@@ -1709,6 +1709,10 @@ fi:
           lessons:
             lesson-3:
               name: Silmukat
+        csa8-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Kysely
         csd1-2023:
           lesson_groups:
             lessonGroup-2:
@@ -1845,24 +1849,38 @@ fi:
               display_name: 'Luku 1: Ongelmanratkaisu prosessi'
             lessonGroup-3:
               display_name: 'Luku 2: Tietokoneet ja ongelmanratkaisu'
+        web-development-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Kysely
         interactive-games-animations-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Luku 1: Kuvia ja animaatioita'
             lessonGroup-3:
               display_name: 'Luku 2: Pelien rakentaminen'
+            lessonGroup-4:
+              display_name: Kysely
         design-process-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Luku 1: Käyttäjäkeskeinen suunnittelu'
             lessonGroup-3:
               display_name: 'Luku 2: Apsin prototypointi'
+            lessonGroup-4:
+              display_name: Kysely
         data-society-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Luku 1: Tiedon esittäminen'
             lessonGroup-3:
               display_name: 'Luku 2: Tieto-ongelmien ratkaisu'
+            lessonGroup-4:
+              display_name: Kysely
+        aiml-2023:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Kysely
         focus-on-creativity1-2023:
           lesson_groups:
             lessonGroup-2:
@@ -1955,7 +1973,27 @@ fi:
           lesson_groups:
             lessonGroup-3:
               display_name: 'Luku 2: Laitteiston syöte'
+        microbit-2023:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Kysely
         devices-2023:
           lesson_groups:
             lessonGroup-4:
               display_name: 'Luku 2: Laitteiston syöte'
+            lessonGroup-5:
+              display_name: Kysely
+        pl-csd-summer-day1:
+          lessons:
+            lesson-3:
+              name: Johdanto
+        virtual-pl-csd-summer-day1:
+          lessons:
+            lesson-1:
+              name: Johdanto
+        coursef-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitaalinen kansalaisuus
+            lessonGroup-4:
+              display_name: Muuttujat

@@ -66,7 +66,7 @@ markdown <<MARKDOWN
     <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
     <p>
 
-#### The **battery socket** allows you to power your micro:bit from the battery pack instead of a computer. This is really useful if you want to take the micro:bit outside, wear it or play games with it. It can run for a long time using just two AAA batteries.
+#### The **battery socket** allows you to power your micro:bit from the battery pack instead of a computer. App Lab requires the micro:bit to be plugged into the computer the entire time. After completing this unit, if you decide to continue and use a different programming environment (like Microsoft MakeCode or Circuit Python), then the battery pack can be used to take programs on the go.
 
 </p></div>
 </details>

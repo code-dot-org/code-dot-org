@@ -14,29 +14,29 @@ describe('CodeReviewGroupsDataApi', () => {
           unassigned: true,
           members: [
             {follower_id: 1, name: 'student1'},
-            {follower_id: 2, name: 'student2'}
-          ]
+            {follower_id: 2, name: 'student2'},
+          ],
         },
         {
           id: 1,
           name: 'group1',
-          members: [{follower_id: 3, name: 'student3'}]
-        }
-      ]
+          members: [{follower_id: 3, name: 'student3'}],
+        },
+      ],
     };
     clientGroupsList = [
       {
         unassigned: true,
         members: [
           {followerId: 1, name: 'student1'},
-          {followerId: 2, name: 'student2'}
-        ]
+          {followerId: 2, name: 'student2'},
+        ],
       },
       {
         id: 1,
         name: 'group1',
-        members: [{followerId: 3, name: 'student3'}]
-      }
+        members: [{followerId: 3, name: 'student3'}],
+      },
     ];
 
     postJSON = sinon.stub();
@@ -55,7 +55,7 @@ describe('CodeReviewGroupsDataApi', () => {
     getJSON.returns({
       then: callback => {
         convertedResponse = callback(serverGroupsResponse);
-      }
+      },
     });
     api.getCodeReviewGroups();
 

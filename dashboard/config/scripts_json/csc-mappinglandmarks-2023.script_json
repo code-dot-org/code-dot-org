@@ -4,14 +4,16 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "curriculum_umbrella": "CSC",
+      "hideable_lessons": true,
       "is_course": true,
       "is_migrated": true,
       "version_year": "2023"
     },
     "new_name": null,
     "family_name": "csc-mappinglandmarks",
-    "serialized_at": "2023-04-03 20:21:50 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2023-05-30 23:22:04 UTC",
+    "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
@@ -42,7 +44,8 @@
       "relative_position": 1,
       "properties": {
         "overview": "In this **skill-building** lesson, students will learn to create and animate sprites on a map. \n\nThis lesson serves two main purposes: (1) to offer an example of an interactive Tour Guide app and (2) to introduce students to coding in Sprite Lab. Sprite Lab is an open-ended coding environment that uses block-based code. Students will learn the basics of Sprite Lab throughout this lesson to plan and build their Tour Guide app in the following lessons. \n\nIn this integrated lesson, students learn social studies concepts by creating a map with code. To begin, students will examine several examples of maps and discuss what features make up the map. In the wrap-up, students will discuss the role of a map maker. \n",
-        "preparation": "- Review and complete the online tutorial yourself.\n- Review slides and decide on pacing between student work time and whole group instruction.\n- Prepare sticky notes or scratch paper for each student in the wrap-up discussion.\n- Check your technology and decide if you need to troubleshoot anything in advance.\n\n#####Optional:\n- [Optional] Review this [Helpful Hints](https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview) slideshow. \n- [Optional] Review this [teacher’s guide to debugging](https://code.org/curriculum/docs/k-5/DebuggingTeacher.pdf) to be prepared to help students find and fix errors in their code. \n- [Optional] Pair Programming - Decide if you want students to engage in pair programming. Watch this [video](https://youtu.be/sxToW3ixrwo) and visit this [Support](https://support.code.org/hc/en-us/articles/115002122788-How-does-pair-programming-on-Code-org-work-) page for more information about pair programming.\n- [Optional] Custom Sprite Uploads - Though this will be introduced in later lessons, you can choose to teach students how to upload their own sprite costumes and backgrounds with this video. \n",
+        "preparation": "- Review and complete the online tutorial yourself.\n- Review slides and decide on pacing between student work time and whole group instruction.\n- Prepare sticky notes or scratch paper for each student in the wrap-up discussion.\n- Check your technology and decide if you need to troubleshoot anything in advance.\n\n#####Optional:\n- [Optional] Review this [Helpful Hints](https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview) slideshow. \n- [Optional] Review this [teacher’s guide to debugging](https://code.org/curriculum/docs/k-5/DebuggingTeacher.pdf) to be prepared to help students find and fix errors in their code. \n- [Optional] Pair Programming - Decide if you want students to engage in pair programming. Watch this [video](https://youtu.be/sxToW3ixrwo) and visit this [Support](https://support.code.org/hc/en-us/articles/115002122788-How-does-pair-programming-on-Code-org-work-) page for more information about pair programming.\n- [Optional] Custom Sprite Uploads - Though this will be introduced in later lessons, you can choose to teach students how to upload their own sprite costumes and backgrounds with this [video](https://youtu.be/CHipUGfL_0M). \n",
+        "purpose": "Students create a tour guide app in an interactive learning experience that integrates multiple subject areas. By combining computer science concepts with geography content, the lesson aims to help students develop a deeper understanding of both subjects and see their connections. This lesson is meant to allow students to apply their coding skills in a real-world context by creating a tour guide app that highlights important landmarks, cultural events, and historical sites in a particular geographic location.",
         "student_overview": "In this lesson, you will explore maps! Maps help you figure out where to go. They also tell stories about the people who make up a place. \n\nWith code, you will animate sprites on a map to create a Tour Guide app."
       },
       "seeding_key": {
@@ -61,6 +64,7 @@
       "properties": {
         "overview": "In this **unplugged** lesson, students will create a project plan for their tour guide app. Creating a plan is an important first step before starting to code. Educators are encouraged to customize this project to fit within the context of topics or standards currently being taught.  See below for suggestions.  \n\n**Suggestions:**\n- Students can map a local area such as their home, classroom, or school. \n- Students can create a tour of a state they are studying in class. \n- The instructor can link the mapping project to another area of study or research, like Ancient civilizations. \n",
         "preparation": "* Choose a focus for student mapping landmarks projects.\n* Print an [Activity Guide](https://docs.google.com/document/d/1t_-cd-f6EhhUbblu8nSGRajStY9FVwLnKn1Bj90GL3Q/template/preview) for each student\n* Review [Activity Guide - Teacher Key](https://docs.google.com/document/d/1fD9jkEkts5gtYN76P0I-1FGcEPi1q97Cuk0hBy18KvQ/template/preview)",
+        "purpose": "The purpose of this lesson is to provide a structured and thoughtful approach to the design and development of each student's app. By using an activity guide to plan their app, students can explore and organize their ideas, make informed decisions about what information to include, and prepare themselves for the coding phase of the project.",
         "student_overview": "In this lesson, you will make a plan for your mapping landmarks project. Planning what you will code before jumping in is always good practice. \n"
       },
       "seeding_key": {
@@ -79,6 +83,7 @@
       "properties": {
         "overview": "In this lesson, students use their project plans from the previous class to create their interactive map. Students may be at varying stages of their plan. This lesson begins with a Check-in to see whether some students may need some extra time planning. \n\nOnce students move to computers, they will follow a level progression that walks them through the process of setting a background, creating a tour guide, making it say “Welcome,” making it move, and adding at least 2 landmarks that trigger the tour guide to say something when touched. Note that this is a project progression, meaning student code will follow them from one level to the next. Encourage students to press “Run” on each level to save their code before progressing to the next level.\n\nThe lesson ends in a quick gallery walk in preparation of the next lesson, where students share their projects with the class. ",
         "preparation": "- Review and complete the online tutorial yourself.\n- Prepare to return student handouts from the previous lesson. \n- Consider strategies of support for students that may not feel confident or ready to start their creative project. \n- [Optional] Code your own map as an exemplar for students\n\n",
+        "purpose": "This lesson aims to provide a rich and engaging learning experience that combines computer science and geography and helps students develop a range of skills and competencies that are relevant in today's world. By coding their own tour guide app, students can explore a particular location's geographic features, cultural events, and historical sites. They can express their understanding and appreciation of this location through code and technology. The lesson also emphasizes the importance of planning, problem-solving, and self-expression in coding.",
         "student_overview": "Now it’s time to create your map with a tour guide who visits each landmark. You will follow the plan you designed last class. Follow the directions in each level carefully. In this project, your code will follow you from level to level. "
       },
       "seeding_key": {
@@ -97,6 +102,7 @@
       "properties": {
         "overview": "This is the final lesson in this module and is meant to celebrate all the hard work so far. Students will complete a personal reflection on their final project. Then, the whole class will present their project to their peers. Before the presentations begin, you will discuss tips for an effective presentation, including audience expectations.",
         "preparation": "- Print a [Landmarks Map Reflection & Observation](https://docs.google.com/document/d/1OxwZCmnJYKVUQIIsXqTkbbivvG_iXHVDL4FgR8j9V4E/template/preview) handout for each student.",
+        "purpose": "This lesson allows students to share their tour guide app with their peers for feedback. This provides an opportunity for students to receive constructive criticism, reflect on their work, and make improvements to their projects. By sharing their app with their peers, students can receive feedback on their work and learn from the successes and challenges of their classmates.",
         "student_overview": "In this last lesson, you will have the chance to present your project to the rest of your class! First, you will take some time to reflect on your hard work in programming your digital landmark mark map. Then you will discuss some presentation tips and show off your hard work! "
       },
       "seeding_key": {
@@ -363,9 +369,9 @@
       "key": "95866eea-2687-48a3-a7b4-1f2bac608159",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** \"Welcome to Sprite Lab\" Slide",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show \"Mapmakers\" video",
         "duration": "25",
-        "name": "Code a map"
+        "name": "Code a Map"
       },
       "seeding_key": {
         "activity_section.key": "95866eea-2687-48a3-a7b4-1f2bac608159",
@@ -377,6 +383,7 @@
       "position": 2,
       "properties": {
         "description": "Computer science can make maps interactive!  Today, we’ll use Sprite Lab to learn the basics of coding. You will create a virtual tour guide with code to make your map come to life. Remember to read the instructions carefully and have fun. ",
+        "progression_name": "Mapmakers Video",
         "remarks": true
       },
       "seeding_key": {
@@ -538,7 +545,7 @@
       "key": "08c3aee3-4bcb-4109-a638-e552fa4ea1d4",
       "position": 3,
       "properties": {
-        "description": "**Dot This:** Before you give students their graphic organizer, instruct them to take a piece of paper for the next activity. Allow students to write their name and their map’s location on their paper. If students need help thinking of a map location, they can think-pair-share with their partners. "
+        "description": "**Do This:** Before you give students their graphic organizer, instruct them to take a piece of paper for the next activity. Allow students to write their name and their map’s location on their paper. If students need help thinking of a map location, they can think-pair-share with their partners. "
       },
       "seeding_key": {
         "activity_section.key": "08c3aee3-4bcb-4109-a638-e552fa4ea1d4",
@@ -595,7 +602,7 @@
       "key": "23c87c16-112f-48d3-bd8a-daf1d43c2fae",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Give students 2-3 minutes to independently start a list of landmarks on their own.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** \"GoGoMo\" Slide"
+        "description": "**Do This:** Give students 2-3 minutes to independently start a list of landmarks on their own.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** \"GoGoMo\" Slide"
       },
       "seeding_key": {
         "activity_section.key": "23c87c16-112f-48d3-bd8a-daf1d43c2fae",
@@ -618,7 +625,7 @@
       "key": "1e2b528a-53ec-4b1e-903d-f5a11b655d45",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:**  Guide students on who they should pair up with first. Then set a timer or play the music on the slide by clicking on the speaker graphic near the slide title."
+        "description": "**Do This:**  Guide students on who they should pair up with first. Then set a timer or play the music on the slide by clicking on the speaker graphic near the slide title."
       },
       "seeding_key": {
         "activity_section.key": "1e2b528a-53ec-4b1e-903d-f5a11b655d45",
@@ -643,7 +650,7 @@
       "key": "8d57510b-9d48-4ff4-b3fe-024c9e7d48cb",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** \"Project Planning\" Slide\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the [Activity Guide](https://docs.google.com/document/d/1vRR0wk6Gma_uwKLAvXnHsB775bnWOaKtkJZQtKuzeWA/edit?usp=sharing). "
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** \"Project Planning\" Slide\n\n**Distribute:** Give each student a copy of the [Activity Guide](https://docs.google.com/document/d/1vRR0wk6Gma_uwKLAvXnHsB775bnWOaKtkJZQtKuzeWA/edit?usp=sharing). "
       },
       "seeding_key": {
         "activity_section.key": "8d57510b-9d48-4ff4-b3fe-024c9e7d48cb",
@@ -666,7 +673,7 @@
       "key": "7536275f-c301-4001-b8e0-94aa1f3ef6fc",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Circulate the classroom to support students and narrate ideas aloud as you see them develop. ",
+        "description": "**Do This:** Circulate the classroom to support students and narrate ideas aloud as you see them develop. ",
         "tips": [
           {
             "type": "teachingTip",
@@ -709,7 +716,7 @@
       "key": "cb6f50e7-196f-4f13-b051-cae1bf20541d",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show \"Acting Tour Guides\" Slide",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show \"Tour Guide Practice\" Slide",
         "name": "Tour Guide Practice"
       },
       "seeding_key": {
@@ -721,7 +728,7 @@
       "key": "3a644e46-6f06-41c1-af33-328fdcd31f49",
       "position": 2,
       "properties": {
-        "description": "Let’s practice being the tour guide of our maps to a friend. In this next activity, you’ll find a partner and take turns acting out what your program will do. \n\nFor example, if I have a map of Arizona and one of my landmarks is the Grand Canyon, I might say to my partner, “Welcome to my tour of the state of Arizona. This is the Grand Canyon. The Hopi Indians led the Spanish explorers to the Grand Canyon in the 1540s.” \n\nThen I will continue explaining the rest of my landmarks. \n\nAsk your partner for feedback. What did your partner like about your tour? Does your partner have any ideas of what could change? \n\nIf you have time, answer some of the questions on the board: \n- What is different about your maps? \n- Does your map include any opinions? \n\n\n",
+        "description": "Let’s practice being the tour guide of our maps to a friend. In this next activity, you’ll find a partner and take turns acting out what your program will do. \n\nFor example, if I have a map of Arizona and one of my landmarks is the Grand Canyon, I might say to my partner, “Welcome to my tour of the state of Arizona. This is the Grand Canyon. The Hopi Indians led the Spanish explorers to the Grand Canyon in the 1540s.” \n\nThen I will continue explaining the rest of my landmarks. \n\nAsk your partner for feedback. What did your partner like about your tour? Does your partner have any ideas of what could change? \n\n\n",
         "remarks": true
       },
       "seeding_key": {
@@ -741,8 +748,19 @@
       }
     },
     {
-      "key": "0dcfe98e-7b4c-4f8b-8ff6-23cf26060c23",
+      "key": "f5745ebd-7214-4ebc-9d66-6c8e1eeba2bd",
       "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show \"Discussion\" Slide\n\n**Do This:** If you have time, answer some of the questions on the board: \n- What is different about your maps? \n- Does your map include any opinions? \n\n**Discussion Goal:** Students should be able to compare and contrast their maps with each other. They should understand that even if they both make a map of the same region, they might choose to highlight different landmarks or have their tour guide say something different about the landmarks. "
+      },
+      "seeding_key": {
+        "activity_section.key": "f5745ebd-7214-4ebc-9d66-6c8e1eeba2bd",
+        "lesson_activity.key": "8e70c6b9-5326-4d17-a491-ece94bcbd540"
+      }
+    },
+    {
+      "key": "0dcfe98e-7b4c-4f8b-8ff6-23cf26060c23",
+      "position": 5,
       "properties": {
         "description": "Great work today, coders! Next time, we’ll use the plans we created today to start coding our interactive maps! \n\n",
         "remarks": true
@@ -756,7 +774,7 @@
       "key": "2653bd3b-c45a-4b37-8c4c-539f5f753c6a",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** \"Check In\" Slide",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show \"Check In\" Slide",
         "duration": "5",
         "name": "Check In"
       },
@@ -787,7 +805,7 @@
       "key": "6f9028e9-b332-442e-aa41-bb849d96241a",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** \"Debugging Strategies\" Slide\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** What do we do if we have a bug or a challenge in our code?\n\n**Discussion Goal:** Discussing how to face challenges, normalizes the struggle students will encounter when working on a new, creative project. Students will create/review a list of strategies to try when they are feeling stuck."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show \"Debugging Strategies\" Slide\n\n**Discuss:** What do we do if we have a bug or a challenge in our code?\n\n**Discussion Goal:** Discussing how to face challenges, normalizes the struggle students will encounter when working on a new, creative project. Students will create/review a list of strategies to try when they are feeling stuck."
       },
       "seeding_key": {
         "activity_section.key": "6f9028e9-b332-442e-aa41-bb849d96241a",
@@ -810,7 +828,7 @@
       "key": "39209eb8-f15b-43af-a55f-3fb99c7fe4b8",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** \"Level 1-6\" Slide\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Return student’s Mapmakers Planning handout if they were collected in the previous lesson.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show \"Level 1-6\" Slide\n\n**Distribute:** Return student’s Mapmakers Planning handout if they were collected in the previous lesson.",
         "duration": "10",
         "name": "Map Set Up",
         "progression_name": "Skill Building"
@@ -846,9 +864,9 @@
       "key": "0704b38e-a65a-4dff-9840-26f5b831a040",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** \"Stop, Show, & Support\" Slide",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show \"Stop, Show, and Support\" Slide",
         "duration": "15",
-        "name": "Stop, Show, & Support"
+        "name": "Stop, Show, and Support"
       },
       "seeding_key": {
         "activity_section.key": "0704b38e-a65a-4dff-9840-26f5b831a040",
@@ -864,7 +882,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Consider how the pacing will work best for your class. The ‘stop, show & support’ potion of this activity may be better later in the progression for some groups. It may also be abbreviated to an even shorter brain break and quick opportunity to see their peer’s progress. \n"
+            "markdown": "Consider what pacing will work best for your class. The ‘stop, show, and support’ portion of this activity may work better later in the progression for some classes. It may also be abbreviated to an even shorter brain break and quick opportunity for students to see their peer’s progress. \n"
           }
         ]
       },
@@ -877,7 +895,7 @@
       "key": "ae2b6186-d102-41ee-9377-5cb1f9a72c2b",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Guide students to pair up."
+        "description": "**Do This:** Guide students to pair up."
       },
       "seeding_key": {
         "activity_section.key": "ae2b6186-d102-41ee-9377-5cb1f9a72c2b",
@@ -900,7 +918,7 @@
       "key": "61029c87-095e-46cf-8cd6-f6f4d8146372",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** \"Level 7\" Slide\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students return to their own project and resume the progression.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show \"Level 7\" Slide\n\n**Do This:** Have students return to their own project and resume the progression.",
         "duration": "10",
         "name": "Landmarks & Events",
         "progression_name": "Landmarks & Events"
@@ -953,7 +971,8 @@
       "key": "a11385f8-ce3b-4f98-a384-0e5240709c67",
       "position": 2,
       "properties": {
-        "description": "Now that we all have a digital map of landmarks, let’s move around to see a few other projects. While looking at your classmate’s projects, look for projects that use the same landmarks as you chose. Also, watch for inspiration, you might find something you would like to add to your own project in the next lesson. \n\nWhile you are walking around, think about these questions: \n\n- What landmarks did you see that are different from your own?\n- Did anyone choose the same landmarks as you?\n- Can you find something great you would like to add to your own project?\n"
+        "description": "Now that we all have a digital map of landmarks, let’s move around to see a few other projects. While looking at your classmate’s projects, look for projects that use the same landmarks as you chose. Also, watch for inspiration, you might find something you would like to add to your own project in the next lesson. \n\nWhile you are walking around, think about these questions: \n\n- What landmarks did you see that are different from your own?\n- Did anyone choose the same landmarks as you?\n- Can you find something great you would like to add to your own project?\n",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "a11385f8-ce3b-4f98-a384-0e5240709c67",
@@ -964,11 +983,11 @@
       "key": "20203952-8328-46fe-b9d0-0cf4461bc06d",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Guide students to move around the room to view their peer's projects. ",
+        "description": "**Do This:** Guide students to move around the room to view their peer's projects. Next lesson, students will have a more formal presentation session. Use this time to have students practice showing curiosity and respect for their peer's projects.",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "The more structured a gallery walk is, the more effective they are in keeping students’ focus on exploring peer projects. You may want to consider a strategy similar to musical chairs where students move while the music plays and stop at the nearest computer when it stops. Another helpful way to ensure focus is to encourage a share out after the gallery walk or have students leave a comment on a sticky note or scrap paper for the projects they look at. \n\n"
+            "markdown": "The more structured a gallery walk is, the more effective it will be at keeping students focused on exploring their peers' projects. \n\nYou may want to consider a strategy similar to musical chairs, where students move while the music plays and stop at the nearest computer when the music stops. Another way to ensure that students stay focused is to encourage them to share out after the gallery walk. You may also want to have students leave a comment on a sticky note or scrap paper on each project during their gallery walk. \n\n"
           }
         ]
       },
@@ -981,7 +1000,7 @@
       "key": "e2aedfe4-331c-4ac2-bb34-3b220ecffd1e",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show \"Reflect\" Slide\n\n**Distribute:** Give each student a copy of the Local Landmarks Map Reflection handout.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show \"Reflect\" Slide\n\n**Distribute:** Give each student a copy of the Local Landmarks Map Reflection [handout](https://docs.google.com/document/d/1OxwZCmnJYKVUQIIsXqTkbbivvG_iXHVDL4FgR8j9V4E/template/preview).\n",
         "name": "Reflect"
       },
       "seeding_key": {
@@ -993,7 +1012,7 @@
       "key": "d153b90a-01a7-4016-85a3-228f256aa567",
       "position": 2,
       "properties": {
-        "description": "Reflecting on your hard work means taking some time to think about the things you did, how you did them, and how you can do better next time. It's like taking a break to look back and see what you've accomplished.\n\nReflecting on your hard work is important because it helps you learn and grow. When you reflect on what you've done, you can see what worked well and what didn't, and that helps you figure out how to do things better next time. It's like learning from your mistakes and successes so you can do even better in the future.\n\nWhen you reflect on your hard work, you also feel good about what you've accomplished. It’s great to give yourself a pat on the back and say, \"good job!\" You’ve done so much! \n\nTake a few minutes to complete your Reflection sheet. \n",
+        "description": "Reflecting on your hard work means taking some time to think about the things you did, how you did them, and how you can do better next time. It's like taking a break to look back and see what you've accomplished.\n\nReflecting on your hard work is important because it helps you learn and grow. When you reflect on what you've done, you can see what worked well and what didn't. That helps you figure out how to do things better next time. \n\nWhen you reflect on your hard work, you also feel good about what you've accomplished. It’s great to give yourself a pat on the back and say, \"good job!\" You’ve done so much! \n\nTake a few minutes to complete your Reflection sheet. \n",
         "remarks": true
       },
       "seeding_key": {
@@ -1005,7 +1024,7 @@
       "key": "1a3034dc-2527-4810-be65-79be6f8deb47",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Give students time to complete the reflection.",
+        "description": "**Do This:** Give students time to complete the reflection.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1022,7 +1041,7 @@
       "key": "66f09c0e-cef1-4baa-b000-532f81154bad",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** \"Presentations\" Slide\n\n**Discuss:** What are the aspects of an effective presentation?\n\n**Discussion Goal:** Students will feel prepared and confident to stand in front of the class to present their project.  Identify the tips listed on the slide: \n1) Be prepared: Is your code complete?  Is your project ready?\n2) Explain everything: Be very descriptive in explaining how the code works, your design choices, and the challenges you faced.\n3) Ask for questions & comments: Allow your audience to participate in your presentations.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** \"Presentations\" Slide\n\n**Discuss:** What are the aspects of an effective presentation?\n\n**Discussion Goal:** Students will feel prepared and confident to stand in front of the class to present their project.  Identify the tips listed on the slide: \n1) **Be prepared:** Is your code complete?  Is your project ready?\n2) **Explain everything:** Be very descriptive in explaining how the code works, your design choices, and the challenges you faced.\n3) **Ask for questions & comments:** Allow the audience to participate in your presentation.\n",
         "duration": "25",
         "name": "Presentations"
       },
@@ -1035,7 +1054,7 @@
       "key": "b2104fca-cf61-4d8a-bbc8-75fc7b365095",
       "position": 2,
       "properties": {
-        "description": "A good audience member is someone who is respectful, attentive, and supportive of the people presenting in front of them. This means that they pay attention to what's happening, don't talk or make distracting noises, and show their appreciation by clapping or saying encouraging things at the right times. This helps them feel appreciated and encouraged to keep sharing their projects and creativity with others.\n\nRemember, it will be your turn to come up and present, too. Let’s treat each other the way we would want to be treated. \n",
+        "description": "A good audience member is someone who is respectful, attentive, and supportive of the people presenting in front of them. This means that they pay attention to what's happening and show their appreciation by clapping or saying encouraging things at the right times. They make sure not to talk or make distracting noises during the presentation.\n\nThis helps presenters feel appreciated and encouraged to keep sharing their projects and creativity with others.\n\nRemember, it will be your turn to come up and present, too. Let’s treat each other the way we would want to be treated. \n",
         "remarks": true
       },
       "seeding_key": {
@@ -1058,7 +1077,7 @@
       "key": "aee24841-bfb4-4a4a-96e4-f837fee6db9e",
       "position": 4,
       "properties": {
-        "description": "Let’s record our observations of our first presentation. Start by writing the presenter’s name and one of the landmarks they programmed on their map. In the third box, write a ‘Glow,’ an example of something the programmer did very well (for example creative costumes, unique landmark choice, accurate mapping, unique guide choice, detailed text to explain the landmark, etc). Then add a ‘Grow’ for this programmer (for example, location of landmarks, shorter text, drawing a unique landmark costume, etc)\n\n",
+        "description": "Let’s record our observations of the first presentation. \n\nStart by writing the presenter’s name and one of the landmarks they programmed on their map. \n\nIn the third box, write a ‘Glow,’ an example of something the programmer did very well (for example creative costumes, unique landmark choice, accurate mapping, unique guide choice, detailed text to explain the landmark, etc). \n\nThen add a ‘Grow’ for this programmer (for example, location of landmarks, shorter text, drawing a unique landmark costume, etc)\n",
         "remarks": true,
         "tips": [
           {
@@ -1111,7 +1130,7 @@
       "key": "d314c5fa-5b56-4dee-a76c-9a87a007a1b9",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Facilitate a full group or small groups share out. "
+        "description": "**Do This:** Facilitate a full group or small groups share out. "
       },
       "seeding_key": {
         "activity_section.key": "d314c5fa-5b56-4dee-a76c-9a87a007a1b9",
@@ -1151,7 +1170,7 @@
         "lesson.key": "US Landmarks",
         "lesson_group.key": "",
         "script.name": "csc-mappinglandmarks-2023",
-        "activity_section.key": "9be4c5f8-a1a1-4c86-a0c3-e8e7c94a833b"
+        "activity_section.key": "8bcb0fbe-c14b-4fd7-887a-519d7523a6d6"
       },
       "level_keys": [
         "CourseF_video_introSpriteLab_2023"
@@ -1593,7 +1612,7 @@
         "lesson.key": "US Landmarks",
         "lesson_group.key": "",
         "script.name": "csc-mappinglandmarks-2023",
-        "activity_section.key": "9be4c5f8-a1a1-4c86-a0c3-e8e7c94a833b"
+        "activity_section.key": "8bcb0fbe-c14b-4fd7-887a-519d7523a6d6"
       }
     },
     {
@@ -2061,77 +2080,121 @@
   ],
   "objectives": [
     {
-      "key": "080a5204-8346-4ff4-9203-b779c67be2bc",
+      "key": "1a27b887-2aa2-4f1b-8137-85395c9d1db8",
       "properties": {
-        "description": "Students will learn the basics of Sprite Lab by creating multiple sprites, changing their location, setting their size property, making the sprite “speak,” assigning a behavior, and using the `when touches` event to make their program interactive."
-      },
-      "seeding_key": {
-        "lesson.key": "US Landmarks",
-        "objective.key": "080a5204-8346-4ff4-9203-b779c67be2bc"
-      }
-    },
-    {
-      "key": "4cd30fb3-8178-41f4-91b4-88fca7538c9e",
-      "properties": {
-        "description": "Students will use cardinal directions to navigate a map."
-      },
-      "seeding_key": {
-        "lesson.key": "US Landmarks",
-        "objective.key": "4cd30fb3-8178-41f4-91b4-88fca7538c9e"
-      }
-    },
-    {
-      "key": "b3fc8e73-7d09-48b5-820c-2cc6c3674637",
-      "properties": {
-        "description": "Students will write a plan for their digital mapping landmarks project."
+        "description": "Reflect on the role of a map maker to develop a deeper appreciation for the purpose and value of maps as tools for understanding the world around them."
       },
       "seeding_key": {
         "lesson.key": "Local Landmarks - Unplugged Project Planning",
-        "objective.key": "b3fc8e73-7d09-48b5-820c-2cc6c3674637"
+        "objective.key": "1a27b887-2aa2-4f1b-8137-85395c9d1db8"
       }
     },
     {
-      "key": "b40d5d58-f5eb-4a1a-8cbd-2c203dabc03a",
+      "key": "2a8ffef0-4b21-4dad-99b2-2cd1e48dbcbb",
       "properties": {
-        "description": "Students will use strategies for an effective presentation. "
+        "description": "Identify ways in which maps can vary based on the mapmaker's decisions."
+      },
+      "seeding_key": {
+        "lesson.key": "Local Landmarks - Coding Your Project",
+        "objective.key": "2a8ffef0-4b21-4dad-99b2-2cd1e48dbcbb"
+      }
+    },
+    {
+      "key": "46412626-979f-4311-a180-f4e43809b4db",
+      "properties": {
+        "description": "Demonstrate geographic knowledge, coding skills and creativity by coding an interactive map with personally relevant and important landmarks. "
+      },
+      "seeding_key": {
+        "lesson.key": "Local Landmarks - Coding Your Project",
+        "objective.key": "46412626-979f-4311-a180-f4e43809b4db"
+      }
+    },
+    {
+      "key": "80a85b7e-ae26-4786-98ed-9632de96ea24",
+      "properties": {
+        "description": "Given a series of maps showing different components, students will analyze and compare the different purposes of each map. "
+      },
+      "seeding_key": {
+        "lesson.key": "US Landmarks",
+        "objective.key": "80a85b7e-ae26-4786-98ed-9632de96ea24"
+      }
+    },
+    {
+      "key": "829ee795-fac0-4509-8b25-cd11f443e52e",
+      "properties": {
+        "description": "Practice effective presentation strategies when showcasing the tour guide app to peers, including clear communication of implemented features, the purpose, and the significance of the project. "
       },
       "seeding_key": {
         "lesson.key": "Project Share Out",
-        "objective.key": "b40d5d58-f5eb-4a1a-8cbd-2c203dabc03a"
+        "objective.key": "829ee795-fac0-4509-8b25-cd11f443e52e"
       }
     },
     {
-      "key": "cab7afb5-f6c7-49f0-b52d-e63dafc3af4a",
+      "key": "84fb7001-86ee-4932-8d58-b6122037e146",
       "properties": {
-        "description": "Students will use maps and other simple geographic models to identify cultural and environmental characteristics of places."
+        "description": "Learn the basics of Sprite Lab by creating multiple sprites, changing their location, setting their size property, making the sprite “speak,” assigning a behavior, and using the when touches event to make their program interactive."
+      },
+      "seeding_key": {
+        "lesson.key": "US Landmarks",
+        "objective.key": "84fb7001-86ee-4932-8d58-b6122037e146"
+      }
+    },
+    {
+      "key": "ac701f5c-93be-48e3-b614-d5be26d5b11d",
+      "properties": {
+        "description": "Reflect on the coding process of creating a digital map, highlighting successes, challenges, and lessons learned."
+      },
+      "seeding_key": {
+        "lesson.key": "Project Share Out",
+        "objective.key": "ac701f5c-93be-48e3-b614-d5be26d5b11d"
+      }
+    },
+    {
+      "key": "ade6631d-16d1-43dd-a955-09eba7039e81",
+      "properties": {
+        "description": "Write thoughtful observations and provide constructive evaluations of peer projects, offering feedback and suggestions for improvement. "
+      },
+      "seeding_key": {
+        "lesson.key": "Project Share Out",
+        "objective.key": "ade6631d-16d1-43dd-a955-09eba7039e81"
+      }
+    },
+    {
+      "key": "f625be86-4b66-4421-8a7c-f724fd230eb5",
+      "properties": {
+        "description": "Incorporate text explanations within the interactive map to communicate the significance of landmarks."
+      },
+      "seeding_key": {
+        "lesson.key": "Local Landmarks - Coding Your Project",
+        "objective.key": "f625be86-4b66-4421-8a7c-f724fd230eb5"
+      }
+    },
+    {
+      "key": "fdb3a900-9efd-4710-8096-6108ed735cb6",
+      "properties": {
+        "description": "Use decomposition by breaking down their digital mapping landmarks project into smaller tasks as they plan their map project."
       },
       "seeding_key": {
         "lesson.key": "Local Landmarks - Unplugged Project Planning",
-        "objective.key": "cab7afb5-f6c7-49f0-b52d-e63dafc3af4a"
-      }
-    },
-    {
-      "key": "e97f5b17-1c05-4ad3-8a3d-b84b85e4df1a",
-      "properties": {
-        "description": "Students will create a digital map of an area with key landmarks. "
-      },
-      "seeding_key": {
-        "lesson.key": "Local Landmarks - Coding Your Project",
-        "objective.key": "e97f5b17-1c05-4ad3-8a3d-b84b85e4df1a"
-      }
-    },
-    {
-      "key": "f908e942-e501-4ad4-8946-36c717955216",
-      "properties": {
-        "description": "Students will use text to explain the importance and/or significance of landmarks in the area. "
-      },
-      "seeding_key": {
-        "lesson.key": "Local Landmarks - Coding Your Project",
-        "objective.key": "f908e942-e501-4ad4-8946-36c717955216"
+        "objective.key": "fdb3a900-9efd-4710-8096-6108ed735cb6"
       }
     }
   ],
   "lessons_standards": [
+    {
+      "seeding_key": {
+        "lesson.key": "Local Landmarks - Coding Your Project",
+        "framework.shortcode": "c3ss",
+        "standard.shortcode": "D2.Geo.1.3-5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Local Landmarks - Coding Your Project",
+        "framework.shortcode": "c3ss",
+        "standard.shortcode": "D2.Geo.2.3-5"
+      }
+    },
     {
       "seeding_key": {
         "lesson.key": "Local Landmarks - Coding Your Project",
@@ -2170,6 +2233,27 @@
     {
       "seeding_key": {
         "lesson.key": "Local Landmarks - Unplugged Project Planning",
+        "framework.shortcode": "c3ss",
+        "standard.shortcode": "D2.Geo.1.3-5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Local Landmarks - Unplugged Project Planning",
+        "framework.shortcode": "c3ss",
+        "standard.shortcode": "D2.Geo.3.3-5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Local Landmarks - Unplugged Project Planning",
+        "framework.shortcode": "c3ss",
+        "standard.shortcode": "D4.2.3-5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Local Landmarks - Unplugged Project Planning",
         "framework.shortcode": "csta",
         "standard.shortcode": "1A-AP-11"
       }
@@ -2191,6 +2275,27 @@
     {
       "seeding_key": {
         "lesson.key": "Project Share Out",
+        "framework.shortcode": "c3ss",
+        "standard.shortcode": "D2.Geo.1.3-5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project Share Out",
+        "framework.shortcode": "c3ss",
+        "standard.shortcode": "D2.Geo.2.3-5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project Share Out",
+        "framework.shortcode": "c3ss",
+        "standard.shortcode": "D4.2.3-5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project Share Out",
         "framework.shortcode": "csta",
         "standard.shortcode": "1B-AP-16"
       }
@@ -2199,7 +2304,42 @@
       "seeding_key": {
         "lesson.key": "Project Share Out",
         "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project Share Out",
+        "framework.shortcode": "csta",
         "standard.shortcode": "1B-IC-20"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "US Landmarks",
+        "framework.shortcode": "c3ss",
+        "standard.shortcode": "D2.Geo.2.3-5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "US Landmarks",
+        "framework.shortcode": "c3ss",
+        "standard.shortcode": "D2.Geo.3.3-5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "US Landmarks",
+        "framework.shortcode": "c3ss",
+        "standard.shortcode": "D2.Geo.5.3-5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "US Landmarks",
+        "framework.shortcode": "c3ss",
+        "standard.shortcode": "D2.His.2.3-5"
       }
     },
     {

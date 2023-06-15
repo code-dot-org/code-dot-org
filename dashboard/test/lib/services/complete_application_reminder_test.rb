@@ -1,13 +1,13 @@
 require 'test_helper'
 
 class Services::CompleteApplicationReminderTest < ActiveSupport::TestCase
-  setup do
+  setup_all do
     Pd::Application::TeacherApplication.any_instance.stubs(:deliver_email)
   end
 
   test 'send_complete_application_reminders!' do
     # The expected behavior of this method is to find applications needing incomplete reminder
-    # emails and queue up the emails to be sent at the appropriate times.  It runs on a cronjob.
+    # emails and send the emails to be sent at the appropriate times.  It runs on a cronjob.
     # Here, we walk through the typical flow for an application and verify that emails are queued
     # at the appropriate moments.
     #
@@ -57,7 +57,7 @@ class Services::CompleteApplicationReminderTest < ActiveSupport::TestCase
 
   test 'send_complete_application_reminders! takes into account user updates' do
     # Here, we walk through a flow for an application where a teacher is frequently
-    # updating and saving their application and verify that emails are queued
+    # updating and saving their application and verify that emails are sent
     # at the appropriate moments.
     #
     Timecop.freeze do
@@ -110,6 +110,37 @@ class Services::CompleteApplicationReminderTest < ActiveSupport::TestCase
       Services::CompleteApplicationReminder.send_complete_application_reminders!
       assert_equal 1, application.emails.where.not(sent_at: nil).where(email_type: 'complete_application_initial_reminder').count
       assert_equal 1, application.emails.where.not(sent_at: nil).where(email_type: 'complete_application_final_reminder').count
+    end
+  end
+
+  test 'both reminders omit applications without an email' do
+    Timecop.freeze do
+      teacher_without_email = create :teacher, :with_school_info, :demigrated
+      teacher_without_email.update_attribute(:email, '')
+      teacher_without_email.update_attribute(:hashed_email, '')
+      application_hash_without_email = build :pd_teacher_application_hash, alternate_email: ''
+      application_without_email = create :pd_teacher_application,
+                                         status: 'incomplete',
+                                         user: teacher_without_email,
+                                         form_data: application_hash_without_email.to_json
+
+      application_with_email = create :pd_teacher_application, status: 'incomplete'
+
+      # two applications were created
+      assert Pd::Application::TeacherApplication.exists?(id: application_without_email.id)
+      assert Pd::Application::TeacherApplication.exists?(id: application_with_email.id)
+
+      # At 7 days, the only application that gets the first reminder is the application with an email
+      Timecop.travel 7.days
+      applications_needing_initial_reminder = Services::CompleteApplicationReminder.applications_needing_initial_reminder
+      assert applications_needing_initial_reminder.include?(application_with_email)
+      refute applications_needing_initial_reminder.include?(teacher_without_email)
+
+      # At 14 days, the only application that gets the second reminder is the application with an email
+      Timecop.travel 7.days
+      applications_needing_final_reminder = Services::CompleteApplicationReminder.applications_needing_final_reminder
+      assert applications_needing_final_reminder.include?(application_with_email)
+      refute applications_needing_final_reminder.include?(teacher_without_email)
     end
   end
 end

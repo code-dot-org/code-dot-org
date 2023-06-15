@@ -1,9 +1,5 @@
 <Dancelab>
   <config><![CDATA[{
-  "game_id": 63,
-  "created_at": "2023-03-14T20:37:46.000Z",
-  "level_num": "custom",
-  "user_id": 182,
   "properties": {
     "skin": "dance",
     "helper_libraries": [
@@ -54,12 +50,12 @@
     "short_instructions": "Be creative with these new blocks!",
     "encrypted": "false",
     "mini_rubric": "false",
-    "callout_json": "[\r\n {\r\n  \"localization_key\": \"new_block_3\",\r\n  \"callout_text\": \"New block!\",\r\n  \"element_id\": \".svgFlyoutGroup [block-id=\\\"7\\\"]\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n },\r\n {\r\n  \"localization_key\": \"new_block_4\",\r\n  \"callout_text\": \"New block!\",\r\n  \"element_id\": \".svgFlyoutGroup [block-id=\\\"6\\\"]\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"new_block_3\",\r\n  \"callout_text\": \"New block!\",\r\n  \"element_id\": \".blocklyFlyout [data-id=\\\"7\\\"]\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n },\r\n {\r\n  \"localization_key\": \"new_block_4\",\r\n  \"callout_text\": \"New block!\",\r\n  \"element_id\": \".blocklyFlyout [data-id=\\\"6\\\"]\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "soft_buttons": [
       "leftButton",
       "rightButton",
-      "downButton",
-      "upButton"
+      "upButton",
+      "downButton"
     ],
     "tts_long_instructions_override": "This new block is a special kind of event that is triggered over and over.\r\n\r\nBy placing the other new blocks in your toolbox inside the repeat block you can repeatedly change dancers' properties over time. Be creative and have fun!\r\n\r\nWhen you are done press the Finish button.",
     "encrypted_examples": "JvP/SPnQLQqzQaGthfRPamHPy/sowsfXbxG/Q1PDmSsoAbWoKPnvISrKuLnu\nkcV1Y2Sx57zq4DXl8ve1IA/DgC8wdkcch5Y4suhIkerLp8eUwv3aSiQaS/du\nN8wnH4BZCgO8xziLpPLL5eYqgO8v7A==\n",
@@ -67,9 +63,13 @@
     "validation_enabled": "false",
     "hide_pause_button": "false"
   },
+  "game_id": 63,
   "published": true,
+  "created_at": "2023-03-14T20:37:46.000Z",
+  "level_num": "custom",
+  "user_id": 182,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-03-14T20:37:46.090+00:00\",\"changed\":[\"cloned from \\\"CourseD_Dance_2020_092022\\\"\"],\"cloned_from\":\"CourseD_Dance_2020_092022\"}]",
+  "audit_log": "[{\"changed_at\":\"2023-03-14T20:37:46.090+00:00\",\"changed\":[\"cloned from \\\"CourseD_Dance_2020_092022\\\"\"],\"cloned_from\":\"CourseD_Dance_2020_092022\"},{\"changed_at\":\"2023-04-19 13:22:42 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"callout_json\",\"soft_buttons\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 1,
     "repeat_loops": 1,
@@ -144,12 +144,12 @@
           <title name="MOVE">"rand"</title>
           <title name="DIR">-1</title>
         </block>
-        <block type="Dancelab_changePropEachBy">
+        <block type="Dancelab_changePropEachBy" id="6">
           <title name="GROUP" config="sprites, &quot;BEAR&quot;, &quot;CAT&quot;, &quot;DOG&quot;, &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;ROBOT&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;, &quot;SLOTH&quot;">sprites</title>
           <title name="PROPERTY">"scale"</title>
           <title name="VAL">10</title>
         </block>
-        <block type="Dancelab_setPropRandomEach">
+        <block type="Dancelab_setPropRandomEach" id="7">
           <title name="GROUP" config="sprites, &quot;BEAR&quot;, &quot;CAT&quot;, &quot;DOG&quot;, &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;ROBOT&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;, &quot;SLOTH&quot;">sprites</title>
           <title name="PROPERTY">"scale"</title>
         </block>

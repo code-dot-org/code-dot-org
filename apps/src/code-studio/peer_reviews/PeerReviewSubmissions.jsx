@@ -1,5 +1,5 @@
 import React from 'react';
-import {Button, FormControl} from 'react-bootstrap';
+import {Button, FormControl} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import PropTypes from 'prop-types';
 import _ from 'lodash';
 import Spinner from '../pd/components/spinner';
@@ -10,7 +10,7 @@ import $ from 'jquery';
 class PeerReviewSubmissions extends React.Component {
   static propTypes = {
     courseList: PropTypes.arrayOf(PropTypes.array).isRequired,
-    courseUnitMap: PropTypes.object.isRequired
+    courseUnitMap: PropTypes.object.isRequired,
   };
 
   constructor(props) {
@@ -23,8 +23,8 @@ class PeerReviewSubmissions extends React.Component {
       plcCourseUnitId: '',
       pagination: {
         current_page: 1,
-        total_pages: 1
-      }
+        total_pages: 1,
+      },
     };
 
     // Autobind and debounce getFilteredResults
@@ -104,12 +104,12 @@ class PeerReviewSubmissions extends React.Component {
       }&plc_course_id=${plcCourseId || ''}&plc_course_unit_id=${
         plcCourseUnitId || ''
       }&page=${pageNumber || 1}&per=30`,
-      dataType: 'json'
+      dataType: 'json',
     }).done(data => {
       this.setState({
         submissions: data.submissions,
         pagination: data.pagination,
-        loading: false
+        loading: false,
       });
 
       // REACT <16 WORKAROUND
@@ -140,7 +140,7 @@ class PeerReviewSubmissions extends React.Component {
           style={{
             marginLeft: '10px',
             marginBottom: '0px',
-            verticalAlign: 'middle'
+            verticalAlign: 'middle',
           }}
           componentClass="select"
           placeholder="Filter by course"
@@ -161,7 +161,7 @@ class PeerReviewSubmissions extends React.Component {
           style={{
             marginLeft: '10px',
             marginBottom: '0px',
-            verticalAlign: 'middle'
+            verticalAlign: 'middle',
           }}
           componentClass="select"
           placeholder="Filter by course unit"
@@ -187,7 +187,7 @@ class PeerReviewSubmissions extends React.Component {
             float: 'right',
             marginTop: '0px',
             marginBottom: '10px',
-            verticalAlign: 'middle'
+            verticalAlign: 'middle',
           }}
           disabled={!this.state.plcCourseUnitId}
           onClick={this.handleDownloadCsvClick}

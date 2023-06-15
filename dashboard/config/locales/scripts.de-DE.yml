@@ -158,6 +158,7 @@ de:
             Programmierkonzepte aus den Kursen 2-4. Der Kurs eignet sich für Kinder
             und Jugendliche zwischen 10 und 18 Jahren. Unsere Kurse 2-4 vermitteln
             umfassendere Kenntnisse!
+          name: 20 Stunden
         edit-code:
           title: Code bearbeiten
           description: Code bearbeiten
@@ -5695,6 +5696,7 @@ de:
           lesson_groups:
             lessonGroup-4:
               display_name: Umfrage
+          title: "  KI  und maschinelles Lernen"
         kodea-pd-2021:
           description: Lernen Sie mit diesem kostenlosen Online-Kurs zum Selbststudium,
             wie man Informatik mit Hilfe von „Grundlagen der Informatik“ von Code.org
@@ -5728,7 +5730,126 @@ de:
           lesson_groups:
             lessonGroup-2:
               display_name: Willkommen
+            lessonGroup-3:
+              display_name: Navigieren in Code.org
+            lessonGroup-5:
+              display_name: Vorbereitung auf den Unterricht von CS Discoveries
           title: 'Modul 1: Willkommen'
+          description: "Dieses Modul ist eine kurze Einführung sowohl in Code.org
+            als auch in diesen professionellen Lernkurs. \n\n\\*\\*Aktivitäten des
+            Moduls: \\*\\*\n\n– Einführung in Code.org und CS Discoveries teil.\n–
+            Sie erfahren, wie Sie an diesem professionellen Lernkurs teilnehmen können.\n\n\\*\\*Geschätzte
+            Dauer: \\*\\* 10 Minuten"
+          student_description: "Dieses Modul ist eine kurze Einführung sowohl in Code.org
+            als auch in diesen professionellen Lernkurs. \n\n\\*\\*Aktivitäten des
+            Moduls: \\*\\*\n\n– Einführung in Code.org und CS Discoveries teil.\n–
+            Sie erfahren, wie Sie an diesem professionellen Lernkurs teilnehmen können.\n\n\\*\\*Geschätzte
+            Dauer: \\*\\* 10 Minuten"
+        self-paced-pl-csd2-2021:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Navigieren in Code.org
+          title: 'Modul 2: Navigieren in Code.org'
+          description: |-
+            Dieses Modul soll Ihnen Orientierung geben, wie Sie die Werkzeuge nutzen und im Kurs Informatik-Entdeckungen verwenden, um die SchülerInnen im Unterricht zu unterstützen
+
+            **Aktivtäten:**
+
+            –   Navigieren auf der Website Code.org und in den Werkzeugen für Lehrer.
+            –   Einrichtung eines Klassenzimmers.
+            –   Finden und Verwenden der Unterrichtspläne und Ressource für Lehrer.
+
+            **Geschätzte Dauer:** 60 Minuten
+          student_description: |-
+            Dieses Modul soll Ihnen Orientierung geben, wie Sie die Werkzeuge nutzen und im Kurs Informatik-Entdeckungen verwenden, um die SchülerInnen im Unterricht zu unterstützen
+
+            **Aktivtäten:**
+
+            –   Navigieren auf der Website Code.org und in den Werkzeugen für Lehrer.
+            –   Einrichtung eines Klassenzimmers.
+            –   Finden und Verwenden der Unterrichtspläne und Ressource für Lehrer.
+
+            **Geschätzte Dauer:** 60 Minuten
+        self-paced-pl-csd3-2021:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Überblick über CS Discoveries
+          title: 'Modul 3: Überblick über CS Discoveries'
+          description: "Dieses Modul gibt Ihnen einen Überblick über den Kurs CS Discoveries,
+            wobei der Schwerpunkt auf den Konzepten liegt, die die Schüler lernen,
+            und den Tools, die die Schüler während des gesamten Kurses verwenden werden.
+            Die Teilnahme an diesem Modul hilft Ihnen dabei, Entscheidungen über die
+            Auswahl der Kursinhalte zu treffen, die Sie in Ihrem Unterricht implementieren
+            werden. \n\n\\*\\*Aktivitäten des Moduls: \\*\\*\n\n– Umfassender Überblick
+            über den Lehrplan von CS Discoveries.\n– Sie machen Sie sich mit den Programmierumgebungen
+            vertraut, die in CS Discoveries verwendet werden.\n– Sie können auswählen,
+            welche Einheiten von CS Discoveries Sie in Ihrer Klasse unterrichten möchten.\n\n\\*\\*Geschätzte
+            Dauer: \\*\\* 60 Minuten"
+          student_description: "Dieses Modul gibt Ihnen einen Überblick über den Kurs
+            CS Discoveries, wobei der Schwerpunkt auf den Konzepten liegt, die die
+            Schüler lernen, und den Tools, die die Schüler während des gesamten Kurses
+            verwenden werden. Die Teilnahme an diesem Modul hilft Ihnen dabei, Entscheidungen
+            über die Auswahl der Kursinhalte zu treffen, die Sie in Ihrem Unterricht
+            implementieren werden. \n\n\\*\\*Aktivitäten des Moduls: \\*\\*\n\n– Umfassender
+            Überblick über den Lehrplan von CS Discoveries.\n– Sie machen Sie sich
+            mit den Programmierumgebungen vertraut, die in CS Discoveries verwendet
+            werden.\n– Sie können auswählen, welche Einheiten von CS Discoveries Sie
+            in Ihrer Klasse unterrichten möchten.\n\n\\*\\*Geschätzte Dauer: \\*\\*
+            60 Minuten"
+        self-paced-pl-csd4-2021:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Lehren und lernen im Kurs CS Discoveries
+          title: 'Modul 4: Lehren und lernen in CS Discoveries'
+          description: "In diesem Modul lernen Sie authentische CS-Übungen für die
+            SchülerInnen im Kurs Entdeckungen kennen. Zu diesen Übungen gehören das
+            Debuggen, die Verwendung von Ressourcen und die Paarprogrammierung. Sie
+            befassen sich außerdem mit der Rolle des Lehrers in einem CS Discoverie-Klassenzimmer
+            und erstellen einen Plan, wie Sie die Schüler beim Unterrichten des Kurses
+            beim Lernen unterstützen. \n\n\\*\\*Aktivitäten des Moduls: \\*\\*\n\n—
+            Diskussion über die Rolle von LehrerInnen im CS Discoveries-Klassenzimmer.
+            \n— Authentische CS-Praktiken, die die SchülerInnen im Laufe des Kurses
+            CS Discoveries entwickeln werden.\n— Erstellen eines Plans zur Differenzierung,
+            kontinuierlichen Bewertung und Förderung einer Kultur der Inklusion. \n\n\\*\\*Geschätzte
+            Dauer: \\*\\* 50 Minuten"
+          student_description: "In diesem Modul lernen Sie authentische CS-Übungen
+            für die SchülerInnen im Kurs Entdeckungen kennen. Zu diesen Übungen gehören
+            das Debuggen, die Verwendung von Ressourcen und die Paarprogrammierung.
+            Sie befassen sich außerdem mit der Rolle des Lehrers in einem CS Discoverie-Klassenzimmer
+            und erstellen einen Plan, wie Sie die Schüler beim Unterrichten des Kurses
+            beim Lernen unterstützen. \n\n\\*\\*Aktivitäten des Moduls: \\*\\*\n\n—
+            Diskussion über die Rolle von LehrerInnen im CS Discoveries-Klassenzimmer.
+            \n— Authentische CS-Praktiken, die die SchülerInnen im Laufe des Kurses
+            CS Discoveries entwickeln werden.\n— Erstellen eines Plans zur Differenzierung,
+            kontinuierlichen Bewertung und Förderung einer Kultur der Inklusion. \n\n\\*\\*Geschätzte
+            Dauer: \\*\\* 50 Minuten"
+        self-paced-pl-csd5-2021:
+          title: Unterrichten von KI und maschinellem Lernen
+          description: "In diesem professionellen Lernmodul bereiten Sie sich auf
+            den Unterricht der Code.org-Stunde \"KI und maschinelles Lernen\" vor.
+            \n\n**Aktivitäten dieses professionellen Lernmoduls:**\n\n– Einführung
+            in die künstliche Intelligenz und maschinelles Lernen.\n– Üben der wichtigsten
+            Konzepte der Einheit.\n– Beschäftigung mit AI Lab und App Lab.\n– Erkunden
+            der Projekte am Ende des Kapitels.\n\n**Geschätzte Dauer:** 120 Minuten"
+          student_description: "In diesem professionellen Lernmodul bereiten Sie sich
+            auf den Unterricht der Code.org-Stunde \"KI und maschinelles Lernen\"
+            vor. \n\n**Aktivitäten dieses professionellen Lernmoduls:**\n\n– Einführung
+            in die künstliche Intelligenz und maschinelles Lernen.\n– Trainieren eines
+            Modells des maschinellen Lernens mithilfe von AI Lab.\n– Beschäftigung
+            mit Apps des maschinellen Lernens.\n– Aspekte der Auswirkungen von KI
+            und maschinellem Lernen auf die Realität\n– Erkunden der Projekte am Ende
+            des Kapitels.\n\n**Geschätzte Dauer:** 120 Minuten"
+        self-paced-pl-csd6-2021:
+          description: "In diesem professionellen Lernmodul bereiten Sie sich auf
+            den Unterricht der Code.org-Stunde \"KI und maschinelles Lernen\" vor.
+            \n\n**Aktivitäten dieses professionellen Lernmoduls:**\n\n– Einführung
+            in die künstliche Intelligenz und maschinelles Lernen.\n– Trainieren eines
+            Modells des maschinellen Lernens mithilfe von AI Lab.\n– Beschäftigung
+            mit Apps des maschinellen Lernens.\n– Aspekte der Auswirkungen von KI
+            und maschinellem Lernen auf die Realität\n– Erkunden der Projekte am Ende
+            des Kapitels.\n\n**Geschätzte Dauer:** 120 Minuten"
+        self-paced-pl-csp2-2021:
+          title: 'Modul 2: Navigieren in Code.org'
         outbreak-module:
           name: modul-ausbruch
           title: Ausbruch
@@ -5808,6 +5929,9 @@ de:
         hello-world-draft:
           title: '"Hallo, Welt!"'
         csa-self-paced-pl:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Navigieren in Code.org
           title: Navigieren in Code.org für Lehrer von CSA Pilot
           description: "Dieses Modul soll Ihnen Orientierung geben, wie Sie die Werkzeuge
             nutzen, im die Schüler im CSA-Unterricht zu unterstützen. \n\n**Sie lernen
@@ -5880,6 +6004,8 @@ de:
               display_name: Demos und Ressourcen
         hello-world-emoji:
           title: 'Hallo Welt: Emoji'
+        hello-world-retro:
+          title: 'Hallo Welt: Retro'
         hello-world-batman:
           title: Hallo Welt
         csa4-exemplars:
@@ -5892,6 +6018,9 @@ de:
               display_name: Inhalt
             lessonGroup-2:
               display_name: Inhalt
+        ai-ethics:
+          title: Unser KI-Ethikkodex
+          description_audience: 6.  bis 12. Klasse
         csc-things:
           name: csc-things
           title: 'CSC Brain Dump '
@@ -5967,11 +6096,16 @@ de:
             lessonGroup-5:
               display_name: Sandbox
         ai-ethics-2021:
+          title: Unser KI-Ethikkodex
           description_audience: Klassen 6-12
         poem-art-2021:
           title: Dichtkunst
+        poetry-2021:
+          title: Code ist Poesie
         hello-world-emoji-2021:
           title: 'Hallo Welt: Emoji'
+        hello-world-retro-2021:
+          title: 'Hallo Welt: Retro'
         explore-data-1-2021:
           title: Datenvisualisierung
         counting-csc-2021:
@@ -6299,6 +6433,8 @@ de:
           lesson_groups:
             lessonGroup-2:
               display_name: Inhalt
+        self-paced-pl-csa2-2022:
+          title: 'Modul 2: Navigieren in Code.org'
         csa7-pilot-extra:
           lesson_groups:
             lessonGroup-2:
@@ -6436,6 +6572,9 @@ de:
             mit der Hersteller-App.\n– Erkunden der Projekte am Ende des Kapitels.\n\n**Geschätzte
             Dauer:** 90 Minuten"
         vpl-csd7-ci-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Unterrichten von KI und maschinellem Lernen
           title: 'Modul 7: Vorbereitung auf den Unterricht KI und maschinelles Lernen'
           description: "In diesem professionellen Lernmodul bereiten Sie sich auf
             den Unterricht der Code.org-Stunde \"KI und maschinelles Lernen\" vor.
@@ -6571,6 +6710,96 @@ de:
             lessonGroup-2:
               display_name: Willkommen
           title: 'Modul 1: Willkommen'
+          description: "Dieses Modul ist eine kurze Einführung sowohl in Code.org
+            als auch in diesen professionellen Lernkurs. \n\n\\*\\*Aktivitäten des
+            Moduls: \\*\\*\n\n– Einführung in Code.org und CS Discoveries teil.\n–
+            Sie erfahren, wie Sie an diesem professionellen Lernkurs teilnehmen können.\n\n\\*\\*Geschätzte
+            Dauer: \\*\\* 10 Minuten"
+          student_description: "Dieses Modul ist eine kurze Einführung sowohl in Code.org
+            als auch in diesen professionellen Lernkurs. \n\n\\*\\*Aktivitäten des
+            Moduls: \\*\\*\n\n– Einführung in Code.org und CS Discoveries teil.\n–
+            Sie erfahren, wie Sie an diesem professionellen Lernkurs teilnehmen können.\n\n\\*\\*Geschätzte
+            Dauer: \\*\\* 10 Minuten"
+        self-paced-pl-csd2-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Navigieren in Code.org
+          title: 'Modul 2: Navigieren in Code.org'
+          description: |-
+            Dieses Modul soll Ihnen Orientierung geben, wie Sie die Werkzeuge nutzen und im Kurs Informatik-Entdeckungen verwenden, um die SchülerInnen im Unterricht zu unterstützen
+
+            **Aktivtäten:**
+
+            –   Navigieren auf der Website Code.org und in den Werkzeugen für Lehrer.
+            –   Einrichtung eines Klassenzimmers.
+            –   Finden und Verwenden der Unterrichtspläne und Ressource für Lehrer.
+
+            **Geschätzte Dauer:** 60 Minuten
+          student_description: |-
+            Dieses Modul soll Ihnen Orientierung geben, wie Sie die Werkzeuge nutzen und im Kurs Informatik-Entdeckungen verwenden, um die SchülerInnen im Unterricht zu unterstützen
+
+            **Aktivtäten:**
+
+            –   Navigieren auf der Website Code.org und in den Werkzeugen für Lehrer.
+            –   Einrichtung eines Klassenzimmers.
+            –   Finden und Verwenden der Unterrichtspläne und Ressource für Lehrer.
+
+            **Geschätzte Dauer:** 60 Minuten
+        self-paced-pl-csd3-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Überblick über CS Discoveries
+          title: 'Modul 3: Überblick über CS Discoveries'
+          description: "Dieses Modul gibt Ihnen einen Überblick über den Kurs CS Discoveries,
+            wobei der Schwerpunkt auf den Konzepten liegt, die die Schüler lernen,
+            und den Tools, die die Schüler während des gesamten Kurses verwenden werden.
+            Die Teilnahme an diesem Modul hilft Ihnen dabei, Entscheidungen über die
+            Auswahl der Kursinhalte zu treffen, die Sie in Ihrem Unterricht implementieren
+            werden. \n\n\\*\\*Aktivitäten des Moduls: \\*\\*\n\n– Umfassender Überblick
+            über den Lehrplan von CS Discoveries.\n– Sie machen Sie sich mit den Programmierumgebungen
+            vertraut, die in CS Discoveries verwendet werden.\n– Sie können auswählen,
+            welche Einheiten von CS Discoveries Sie in Ihrer Klasse unterrichten möchten.\n\n\\*\\*Geschätzte
+            Dauer: \\*\\* 60 Minuten"
+          student_description: "Dieses Modul gibt Ihnen einen Überblick über den Kurs
+            CS Discoveries, wobei der Schwerpunkt auf den Konzepten liegt, die die
+            Schüler lernen, und den Tools, die die Schüler während des gesamten Kurses
+            verwenden werden. Die Teilnahme an diesem Modul hilft Ihnen dabei, Entscheidungen
+            über die Auswahl der Kursinhalte zu treffen, die Sie in Ihrem Unterricht
+            implementieren werden. \n\n\\*\\*Aktivitäten des Moduls: \\*\\*\n\n– Umfassender
+            Überblick über den Lehrplan von CS Discoveries.\n– Sie machen Sie sich
+            mit den Programmierumgebungen vertraut, die in CS Discoveries verwendet
+            werden.\n– Sie können auswählen, welche Einheiten von CS Discoveries Sie
+            in Ihrer Klasse unterrichten möchten.\n\n\\*\\*Geschätzte Dauer: \\*\\*
+            60 Minuten"
+        self-paced-pl-csd4-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Lehren und lernen im Kurs CS Discoveries
+          title: 'Modul 4: Lehren und lernen in CS Discoveries'
+          description: "In diesem Modul lernen Sie authentische CS-Übungen für die
+            SchülerInnen im Kurs Entdeckungen kennen. Zu diesen Übungen gehören das
+            Debuggen, die Verwendung von Ressourcen und die Paarprogrammierung. Sie
+            befassen sich außerdem mit der Rolle des Lehrers in einem CS Discoverie-Klassenzimmer
+            und erstellen einen Plan, wie Sie die Schüler beim Unterrichten des Kurses
+            beim Lernen unterstützen. \n\n\\*\\*Aktivitäten des Moduls: \\*\\*\n\n—
+            Diskussion über die Rolle von LehrerInnen im CS Discoveries-Klassenzimmer.
+            \n— Authentische CS-Praktiken, die die SchülerInnen im Laufe des Kurses
+            CS Discoveries entwickeln werden.\n— Erstellen eines Plans zur Differenzierung,
+            kontinuierlichen Bewertung und Förderung einer Kultur der Inklusion. \n\n\\*\\*Geschätzte
+            Dauer: \\*\\* 50 Minuten"
+          student_description: "In diesem Modul lernen Sie authentische CS-Übungen
+            für die SchülerInnen im Kurs Entdeckungen kennen. Zu diesen Übungen gehören
+            das Debuggen, die Verwendung von Ressourcen und die Paarprogrammierung.
+            Sie befassen sich außerdem mit der Rolle des Lehrers in einem CS Discoverie-Klassenzimmer
+            und erstellen einen Plan, wie Sie die Schüler beim Unterrichten des Kurses
+            beim Lernen unterstützen. \n\n\\*\\*Aktivitäten des Moduls: \\*\\*\n\n—
+            Diskussion über die Rolle von LehrerInnen im CS Discoveries-Klassenzimmer.
+            \n— Authentische CS-Praktiken, die die SchülerInnen im Laufe des Kurses
+            CS Discoveries entwickeln werden.\n— Erstellen eines Plans zur Differenzierung,
+            kontinuierlichen Bewertung und Förderung einer Kultur der Inklusion. \n\n\\*\\*Geschätzte
+            Dauer: \\*\\* 50 Minuten"
+        self-paced-pl-csp2-2022:
+          title: 'Modul 2: Navigieren in Code.org'
         dlp-csp-mod1-2022:
           title: Grundsätze der Informatik - Vertieftes Lernen Modul 1
         vpl-csd1-ayw-pilot-2022:
@@ -6579,6 +6808,18 @@ de:
               name: Asynchrone Debugging-Erweiterung
         self-paced-pl-csd5-2022:
           title: Unterrichten von KI und maschinellem Lernen
+          description: "In diesem professionellen Lernmodul bereiten Sie sich auf
+            den Unterricht der Code.org-Stunde \"KI und maschinelles Lernen\" vor.
+            \n\n**Aktivitäten dieses professionellen Lernmoduls:**\n\n– Einführung
+            in die künstliche Intelligenz und maschinelles Lernen.\n– Üben der wichtigsten
+            Konzepte der Einheit.\n– Beschäftigung mit AI Lab und App Lab.\n– Erkunden
+            der Projekte am Ende des Kapitels.\n\n**Geschätzte Dauer:** 120 Minuten"
+          student_description: "In diesem professionellen Lernmodul bereiten Sie sich
+            auf den Unterricht der Code.org-Stunde \"KI und maschinelles Lernen\"
+            vor. \n\n**Aktivitäten dieses professionellen Lernmoduls:**\n\n– Einführung
+            in die künstliche Intelligenz und maschinelles Lernen.\n– Üben der wichtigsten
+            Konzepte der Einheit.\n– Beschäftigung mit AI Lab und App Lab.\n– Erkunden
+            der Projekte am Ende des Kapitels.\n\n**Geschätzte Dauer:** 120 Minuten"
         vpl-csd2-ayw-pilot-2022:
           lessons:
             lesson-6:
@@ -6674,6 +6915,23 @@ de:
             lessonGroup-2:
               display_name: Inhalt
             lessonGroup-4:
+              display_name: Alternate Lessons (alternative Lerneinheiten)
+        csa7-2023:
+          lessons:
+            lesson-6:
+              name: Geistiges Eigentum
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Inhalt
+            lessonGroup-5:
+              display_name: Alternate Lessons (alternative Lerneinheiten)
+        csa8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Inhalt
+            lessonGroup-4:
+              display_name: Umfrage
+            lessonGroup-5:
               display_name: Alternate Lessons (alternative Lerneinheiten)
         hello-world-space-2022:
           title: 'Hello World: Weltraum'
@@ -6842,6 +7100,8 @@ de:
               display_name: "(Post-Course Survey) Überprüfung nach dem Kurs"
         csp-post-survey-2023:
           title: Befragung zu „Grundsätze der Informatik“ nach dem Kurs
+        self-paced-pl-csa2-2023:
+          title: 'Modul 2: Navigieren in Code.org'
         angelina-playground:
           lessons:
             lesson-5:
@@ -7044,6 +7304,9 @@ de:
             lessonGroup-3:
               display_name: 'Kapitel 2: Computer und Problemlösung'
         web-development-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Umfrage
           title: Webentwicklung
           student_description: In Lerneinheit 2 lernen Sie, wie Sie Inhalte auf Ihren
             eigenen Webseiten erstellen und veröffentlichen können. Nachdem Sie entschieden
@@ -7057,6 +7320,8 @@ de:
               display_name: 'Kapitel 1: Bilder und Animationen'
             lessonGroup-3:
               display_name: 'Kapitel 2: Erstellen von Spielen'
+            lessonGroup-4:
+              display_name: Umfrage
           student_description: In Lerneinheit 3 arbeiten Sie bei der Programmierung
             von Animationen, interaktiver Kunst und Spielen im Game Lab mit Ihrer
             Programmiererfahrung. Die Lerneinheit beginnt mit einfachen Formen und
@@ -7070,6 +7335,8 @@ de:
               display_name: 'Kapitel 1: Benutzerzentriertes Design'
             lessonGroup-3:
               display_name: 'Kapitel 2: App Prototyping'
+            lessonGroup-4:
+              display_name: Umfrage
           student_description: Die Lerneinheit 4 stellt die breiteren sozialen Auswirkungen
             der Informatik vor. Anhand einer Reihe von Design-Aufgaben lernen Sie,
             wie Sie die Bedürfnisse anderer besser verstehen und gleichzeitig eine
@@ -7085,6 +7352,8 @@ de:
               display_name: 'Kapitel 1: Darstellung von Informationen'
             lessonGroup-3:
               display_name: 'Kapitel 2: Datenprobleme lösen'
+            lessonGroup-4:
+              display_name: Umfrage
           description_short: Erfahren Sie, wie Menschen Computer verwenden, um Datenprobleme
             zu lösen.
           student_description: Lerneinheit 5 befasst sich mit der Bedeutung von Daten
@@ -7104,6 +7373,8 @@ de:
               display_name: Kapitel 1
             lessonGroup-4:
               display_name: Kapitel 2
+            lessonGroup-5:
+              display_name: Umfrage
         focus-on-creativity1-2023:
           lesson_groups:
             lessonGroup-2:
@@ -7321,6 +7592,8 @@ de:
           lesson_groups:
             lessonGroup-3:
               display_name: Ein- und Ausgaben
+            lessonGroup-5:
+              display_name: Umfrage
         vpl-csd-ci-1:
           title: 'Modul 1: Vorbereitung auf den Unterricht Problemlösung und Informatik'
           description: "In diesem professionellen Lernmodul bereiten Sie sich auf
@@ -7397,6 +7670,9 @@ de:
             der Stunde.\n– Erkunden der Projekte am Ende des Kapitels.\n\n**Geschätzte
             Dauer:** 90 Minuten"
         vpl-csd-ci-7:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Unterrichten von KI und maschinellem Lernen
           title: 'Modul 7: Vorbereitung auf den Unterricht KI und maschinelles Lernen'
           description: "In diesem professionellen Lernmodul bereiten Sie sich auf
             den Unterricht der Code.org-Stunde \"KI und maschinelles Lernen\" vor.
@@ -7414,6 +7690,8 @@ de:
           lesson_groups:
             lessonGroup-4:
               display_name: 'Chapter 2: Aufbau von physischen Prototypen'
+            lessonGroup-5:
+              display_name: Umfrage
         focus-on-creativity4b-2023:
           lesson_groups:
             lessonGroup-3:
@@ -7426,6 +7704,8 @@ de:
           lesson_groups:
             lessonGroup-3:
               display_name: Ein- und Ausgaben
+        ai-temp:
+          title: So funktioniert KI
         focus-on-coding4b-2023:
           lesson_groups:
             lessonGroup-3:
@@ -7434,3 +7714,198 @@ de:
           lesson_groups:
             lessonGroup-3:
               display_name: Ein- und Ausgaben
+        self-paced-pl-csd1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Willkommen
+          title: 'Modul 1: Willkommen'
+          description: "Dieses Modul ist eine kurze Einführung sowohl in Code.org
+            als auch in diesen professionellen Lernkurs. \n\n\\*\\*Aktivitäten des
+            Moduls: \\*\\*\n\n– Einführung in Code.org und CS Discoveries teil.\n–
+            Sie erfahren, wie Sie an diesem professionellen Lernkurs teilnehmen können.\n\n\\*\\*Geschätzte
+            Dauer: \\*\\* 10 Minuten"
+          student_description: "Dieses Modul ist eine kurze Einführung sowohl in Code.org
+            als auch in diesen professionellen Lernkurs. \n\n\\*\\*Aktivitäten des
+            Moduls: \\*\\*\n\n– Einführung in Code.org und CS Discoveries teil.\n–
+            Sie erfahren, wie Sie an diesem professionellen Lernkurs teilnehmen können.\n\n\\*\\*Geschätzte
+            Dauer: \\*\\* 10 Minuten"
+        self-paced-pl-csd2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Navigieren in Code.org
+          title: 'Modul 2: Navigieren in Code.org'
+          description: |-
+            Dieses Modul soll Ihnen Orientierung geben, wie Sie die Werkzeuge nutzen und im Kurs Informatik-Entdeckungen verwenden, um die SchülerInnen im Unterricht zu unterstützen
+
+            **Aktivtäten:**
+
+            –   Navigieren auf der Website Code.org und in den Werkzeugen für Lehrer.
+            –   Einrichtung eines Klassenzimmers.
+            –   Finden und Verwenden der Unterrichtspläne und Ressource für Lehrer.
+
+            **Geschätzte Dauer:** 60 Minuten
+          student_description: |-
+            Dieses Modul soll Ihnen Orientierung geben, wie Sie die Werkzeuge nutzen und im Kurs Informatik-Entdeckungen verwenden, um die SchülerInnen im Unterricht zu unterstützen
+
+            **Aktivtäten:**
+
+            –   Navigieren auf der Website Code.org und in den Werkzeugen für Lehrer.
+            –   Einrichtung eines Klassenzimmers.
+            –   Finden und Verwenden der Unterrichtspläne und Ressource für Lehrer.
+
+            **Geschätzte Dauer:** 60 Minuten
+        self-paced-pl-csd3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Überblick über CS Discoveries
+          title: 'Modul 3: Überblick über CS Discoveries'
+          description: "Dieses Modul gibt Ihnen einen Überblick über den Kurs CS Discoveries,
+            wobei der Schwerpunkt auf den Konzepten liegt, die die Schüler lernen,
+            und den Tools, die die Schüler während des gesamten Kurses verwenden werden.
+            Die Teilnahme an diesem Modul hilft Ihnen dabei, Entscheidungen über die
+            Auswahl der Kursinhalte zu treffen, die Sie in Ihrem Unterricht implementieren
+            werden. \n\n\\*\\*Aktivitäten des Moduls: \\*\\*\n\n– Umfassender Überblick
+            über den Lehrplan von CS Discoveries.\n– Sie machen Sie sich mit den Programmierumgebungen
+            vertraut, die in CS Discoveries verwendet werden.\n– Sie können auswählen,
+            welche Einheiten von CS Discoveries Sie in Ihrer Klasse unterrichten möchten.\n\n\\*\\*Geschätzte
+            Dauer: \\*\\* 60 Minuten"
+          student_description: "Dieses Modul gibt Ihnen einen Überblick über den Kurs
+            CS Discoveries, wobei der Schwerpunkt auf den Konzepten liegt, die die
+            Schüler lernen, und den Tools, die die Schüler während des gesamten Kurses
+            verwenden werden. Die Teilnahme an diesem Modul hilft Ihnen dabei, Entscheidungen
+            über die Auswahl der Kursinhalte zu treffen, die Sie in Ihrem Unterricht
+            implementieren werden. \n\n\\*\\*Aktivitäten des Moduls: \\*\\*\n\n– Umfassender
+            Überblick über den Lehrplan von CS Discoveries.\n– Sie machen Sie sich
+            mit den Programmierumgebungen vertraut, die in CS Discoveries verwendet
+            werden.\n– Sie können auswählen, welche Einheiten von CS Discoveries Sie
+            in Ihrer Klasse unterrichten möchten.\n\n\\*\\*Geschätzte Dauer: \\*\\*
+            60 Minuten"
+        self-paced-pl-csd4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Lehren und lernen im Kurs CS Discoveries
+          title: 'Modul 4: Lehren und lernen in CS Discoveries'
+          description: "In diesem Modul lernen Sie authentische CS-Übungen für die
+            SchülerInnen im Kurs Entdeckungen kennen. Zu diesen Übungen gehören das
+            Debuggen, die Verwendung von Ressourcen und die Paarprogrammierung. Sie
+            befassen sich außerdem mit der Rolle des Lehrers in einem CS Discoverie-Klassenzimmer
+            und erstellen einen Plan, wie Sie die Schüler beim Unterrichten des Kurses
+            beim Lernen unterstützen. \n\n\\*\\*Aktivitäten des Moduls: \\*\\*\n\n—
+            Diskussion über die Rolle von LehrerInnen im CS Discoveries-Klassenzimmer.
+            \n— Authentische CS-Praktiken, die die SchülerInnen im Laufe des Kurses
+            CS Discoveries entwickeln werden.\n— Erstellen eines Plans zur Differenzierung,
+            kontinuierlichen Bewertung und Förderung einer Kultur der Inklusion. \n\n\\*\\*Geschätzte
+            Dauer: \\*\\* 50 Minuten"
+          student_description: "In diesem Modul lernen Sie authentische CS-Übungen
+            für die SchülerInnen im Kurs Entdeckungen kennen. Zu diesen Übungen gehören
+            das Debuggen, die Verwendung von Ressourcen und die Paarprogrammierung.
+            Sie befassen sich außerdem mit der Rolle des Lehrers in einem CS Discoverie-Klassenzimmer
+            und erstellen einen Plan, wie Sie die Schüler beim Unterrichten des Kurses
+            beim Lernen unterstützen. \n\n\\*\\*Aktivitäten des Moduls: \\*\\*\n\n—
+            Diskussion über die Rolle von LehrerInnen im CS Discoveries-Klassenzimmer.
+            \n— Authentische CS-Praktiken, die die SchülerInnen im Laufe des Kurses
+            CS Discoveries entwickeln werden.\n— Erstellen eines Plans zur Differenzierung,
+            kontinuierlichen Bewertung und Förderung einer Kultur der Inklusion. \n\n\\*\\*Geschätzte
+            Dauer: \\*\\* 50 Minuten"
+        self-paced-pl-csd5-2023:
+          title: Unterrichten von KI und maschinellem Lernen
+          description: "In diesem professionellen Lernmodul bereiten Sie sich auf
+            den Unterricht der Code.org-Stunde \"KI und maschinelles Lernen\" vor.
+            \n\n**Aktivitäten dieses professionellen Lernmoduls:**\n\n– Einführung
+            in die künstliche Intelligenz und maschinelles Lernen.\n– Üben der wichtigsten
+            Konzepte der Einheit.\n– Beschäftigung mit AI Lab und App Lab.\n– Erkunden
+            der Projekte am Ende des Kapitels.\n\n**Geschätzte Dauer:** 120 Minuten"
+          student_description: "In diesem professionellen Lernmodul bereiten Sie sich
+            auf den Unterricht der Code.org-Stunde \"KI und maschinelles Lernen\"
+            vor. \n\n**Aktivitäten dieses professionellen Lernmoduls:**\n\n– Einführung
+            in die künstliche Intelligenz und maschinelles Lernen.\n– Üben der wichtigsten
+            Konzepte der Einheit.\n– Beschäftigung mit AI Lab und App Lab.\n– Erkunden
+            der Projekte am Ende des Kapitels.\n\n**Geschätzte Dauer:** 120 Minuten"
+        pl-csd-summer-day1:
+          lessons:
+            lesson-3:
+              name: Einführung
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tag 1
+          title: Tag 1
+        pl-csd-summer-day2:
+          lessons:
+            lesson-10:
+              name: Zusammenfassung
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tag 2
+          title: Tag 2
+        pl-csd-summer-day3:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tag 3
+          title: Tag 3
+        pl-csd-summer-day4:
+          lessons:
+            lesson-12:
+              name: Zusammenfassung
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tag 4
+          title: Tag 4
+        virtual-pl-csd-summer-day1:
+          lessons:
+            lesson-1:
+              name: Einführung
+            lesson-12:
+              name: Zusammenfassung
+          title: Tag 1
+        virtual-pl-csd-summer-day2:
+          lessons:
+            lesson-10:
+              name: Zusammenfassung
+          title: Tag 2
+        virtual-pl-csd-summer-day3:
+          lessons:
+            lesson-12:
+              name: Zusammenfassung
+          title: Tag 3
+        virtual-pl-csd-summer-day4:
+          lessons:
+            lesson-13:
+              name: Zusammenfassung
+          title: Tag 4
+        virtual-pl-csd-summer-day5:
+          lessons:
+            lesson-3:
+              name: Prüfung
+        csd-post-survey-2023:
+          title: "(Post-Course Survey) Überprüfung nach dem Kurs"
+        focus-on-data-post-survey-2023:
+          title: "(Post-Course Survey) Überprüfung nach dem Kurs"
+        focus-on-impact-in-society-post-survey-2023:
+          title: "(Post-Course Survey) Überprüfung nach dem Kurs"
+        focus-on-coding-post-survey-2023:
+          title: "(Post-Course Survey) Überprüfung nach dem Kurs"
+        focus-on-design-with-purpose-post-survey-2023:
+          title: "(Post-Course Survey) Überprüfung nach dem Kurs"
+        focus-on-hardware-post-survey-2023:
+          title: "(Post-Course Survey) Überprüfung nach dem Kurs"
+        focus-on-creativity-post-survey-2023:
+          title: "(Post-Course Survey) Überprüfung nach dem Kurs"
+        coursef-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitalen Staatsbürgerschaft
+            lessonGroup-3:
+              display_name: Sprites
+            lessonGroup-4:
+              display_name: Variablen
+            lessonGroup-6:
+              display_name: Projekt am Ende des Kurses
+          description_audience: 'Alter: 9-13'
+          description_short: Lernen Sie alle Konzepte in den Grundlagen der Informatik
+            und erstellen Sie Ihre eigene Zeichnung, Geschichte oder Ihr eigenes Spiel.
+        self-paced-pl-csp2-2023:
+          title: 'Modul 2: Navigieren in Code.org'
+        csa-frq-practice:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Klassen

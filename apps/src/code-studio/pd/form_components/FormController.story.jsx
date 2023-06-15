@@ -1,5 +1,5 @@
 import React from 'react';
-import {FormGroup} from 'react-bootstrap';
+import {FormGroup} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import FormComponent from './FormComponent';
 import FormController from './FormController';
 import reactBootstrapStoryDecorator from '../reactBootstrapStoryDecorator';
@@ -13,7 +13,7 @@ class TestPageOne extends FormComponent {
         {this.buildButtonsFromOptions({
           name: 'one',
           label: 'Input One',
-          type: 'check'
+          type: 'check',
         })}
       </FormGroup>
     );
@@ -30,7 +30,7 @@ class TestPageTwo extends FormComponent {
         {this.buildButtonsFromOptions({
           name: 'two',
           label: 'Input Two',
-          type: 'radio'
+          type: 'radio',
         })}
       </FormGroup>
     );
@@ -46,7 +46,7 @@ class TestPageThree extends FormComponent {
         <h4>Page Three</h4>
         {this.buildSelectFieldGroupFromOptions({
           name: 'three',
-          label: 'Input Three'
+          label: 'Input Three',
         })}
       </FormGroup>
     );
@@ -63,7 +63,7 @@ class TestPageFour extends FormComponent {
         {this.buildFieldGroup({
           name: 'four',
           label: 'Input Four',
-          type: 'text'
+          type: 'text',
         })}
       </FormGroup>
     );
@@ -97,7 +97,7 @@ class TestController extends FormController {
 const OPTIONS = {
   one: ['First', 'Second', 'Third'],
   two: ['Fourth', 'Fifth', 'Sixth'],
-  three: ['Seventh', 'Eighth', 'Ninth']
+  three: ['Seventh', 'Eighth', 'Ninth'],
 };
 
 export default storybook => {
@@ -110,42 +110,42 @@ export default storybook => {
         story: () => (
           <TestPageOne
             options={{
-              one: OPTIONS.one
+              one: OPTIONS.one,
             }}
             onChange={action('onChange')}
             errors={[]}
             errorMessages={{}}
             data={{}}
           />
-        )
+        ),
       },
       {
         name: 'simple form with generated check buttons',
         story: () => (
           <TestPageTwo
             options={{
-              two: OPTIONS.two
+              two: OPTIONS.two,
             }}
             onChange={action('onChange')}
             errors={[]}
             errorMessages={{}}
             data={{}}
           />
-        )
+        ),
       },
       {
         name: 'simple form with generated select dropdown',
         story: () => (
           <TestPageThree
             options={{
-              three: OPTIONS.three
+              three: OPTIONS.three,
             }}
             onChange={action('onChange')}
             errors={[]}
             errorMessages={{}}
             data={{}}
           />
-        )
+        ),
       },
       {
         name: 'simple form with generated text input',
@@ -157,8 +157,8 @@ export default storybook => {
             errorMessages={{}}
             data={{}}
           />
-        )
-      }
+        ),
+      },
     ]);
 
   storybook
@@ -174,7 +174,7 @@ export default storybook => {
             options={OPTIONS}
             requiredFields={[]}
           />
-        )
-      }
+        ),
+      },
     ]);
 };

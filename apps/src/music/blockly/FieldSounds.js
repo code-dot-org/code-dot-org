@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import SoundsPanel from '../views/SoundsPanel';
 import GoogleBlockly from 'blockly/core';
 import experiments from '@cdo/apps/util/experiments';
+import color from '@cdo/apps/util/color';
 
 const FIELD_HEIGHT = 20;
 const FIELD_PADDING = 2;
@@ -45,7 +46,7 @@ class FieldSounds extends GoogleBlockly.Field {
     this.backgroundElement = GoogleBlockly.utils.dom.createSvgElement(
       'g',
       {
-        transform: 'translate(1,1)'
+        transform: 'translate(1,1)',
       },
       this.fieldGroup_
     );
@@ -59,7 +60,7 @@ class FieldSounds extends GoogleBlockly.Field {
     }
     if (this.textElement_) {
       if (experiments.isEnabled('zelos')) {
-        this.textElement_.style.fill = 'white';
+        this.textElement_.style.fill = color.neutral_light;
       }
     }
   }
@@ -86,9 +87,9 @@ class FieldSounds extends GoogleBlockly.Field {
 
     this.renderContent();
 
-    this.newDiv_.style.color = 'white';
+    this.newDiv_.style.color = color.neutral_light;
     this.newDiv_.style.width = '300px';
-    this.newDiv_.style.backgroundColor = 'black';
+    this.newDiv_.style.backgroundColor = color.dark_black;
     this.newDiv_.style.padding = '5px';
     this.newDiv_.style.cursor = 'pointer';
 
@@ -151,11 +152,11 @@ class FieldSounds extends GoogleBlockly.Field {
 
     // Create the text element so we can measure it.
     const textElement = GoogleBlockly.utils.dom.createSvgElement('text', {
-      fill: 'white',
+      fill: color.neutral_light,
       x: 25,
       y: 16,
       width: 100,
-      height: 20
+      height: 20,
     });
 
     // Attach the actual text.
@@ -181,12 +182,12 @@ class FieldSounds extends GoogleBlockly.Field {
     GoogleBlockly.utils.dom.createSvgElement(
       'rect',
       {
-        fill: '#3f444b',
+        fill: color.neutral_dark90,
         x: 1,
         y: 1,
         width: this.currentFieldWidth,
         height: FIELD_HEIGHT,
-        rx: 3
+        rx: 3,
       },
       this.backgroundElement
     );
@@ -202,7 +203,7 @@ class FieldSounds extends GoogleBlockly.Field {
         x: 6,
         y: 3,
         width: 15,
-        href: `/blockly/media/music/icon-${soundType}.png`
+        href: `/blockly/media/music/icon-${soundType}.png`,
       },
       this.backgroundElement
     );

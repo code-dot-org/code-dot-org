@@ -1241,7 +1241,7 @@
   "printReportWindowTitle": "\nRipoti o Fuafaatatau mo le {sectionName}",
   "privacyDocExplanation": "E lelei ona faaali lenei tusi i ou matua ina ia latou silafia le Code.org, ave iai faamaumauga o le sign-in, ina ia mafai e latou ona vaai ma iloilo aiaiga faaletulafono i mataupu faalilolilo e tupito i tamaiti aoga",
   "privacyHeading": "Tusi mo Matua ma Mataupu Faalilolilo e Tupito i Tamaiti Aoga",
-  "privacyLinkToPolicy": "O e saili se tusi e uiga i aiaiga faaletulafono i mataupu faalilolilo a le Code.org mo aiga? [Vaai iinei} {privacyPolicyLink}",
+  "privacyLinkToPolicy": "O e saili se tusi e uiga i aiaiga faaletulafono i mataupu faalilolilo a le Code.org mo aiga? [Vaai iinei]({privacyPolicyLink})",
   "professionalLearning": "Aoaoga Faafaiaoga",
   "professionalLearningDescription": "O a matou aoaoga faafaiaoga e maualuga lava ma e faasauni ai oe mo leisi au vasega komepiuta",
   "programmingEnvironmentDocumentation": "{programmingEnvironmentTitle} Tusitusiga",

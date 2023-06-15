@@ -131,6 +131,7 @@ uz:
           student_description: Ushbu 20 soatlik kurs 2-4 kurslarda o‘tiladigan asosiy
             kompyuter fanlari va dasturlash tushunchalarini qamrab oladi. Kurs 10-18
             yoshlilar uchun mo'ljallangan. To‘liq tajriba uchun 2-4 kurslarni o‘ting!
+          name: 20 soat
         events:
           title: Hodisalar
           description: Hodisalar
@@ -188,6 +189,8 @@ uz:
             and decrypting messages using a Vigenere Cipher.
           student_description: Use the Vigenere Cipher Widget to explore encrypting
             and decrypting messages using a Vigenere Cipher.
+        cspunit4draft:
+          description_short: Maʼlumotlar
         Special Fun:
           description_audience: 'Yosh: 10-18'
         SpecialSeries:
@@ -352,6 +355,8 @@ uz:
               display_name: Kontent
             practice:
               display_name: Teaching Practices
+        CSDU5-Draft:
+          description_short: Maʼlumotlar
         CSF_Secret_Sample_Story:
           description_audience: 'Yosh: 8-18+'
         MikeTest:
@@ -1319,6 +1324,7 @@ uz:
             Minecraft bo‘yicha kod bilan sayohat.
           student_description: Minecraft Dasturlash soatiga yangi mashg‘ulotlar bilan
             qaytdi! Minecraft bo‘yicha kod bilan sayohat.
+          name: qahramon
         applab-intro-staging:
           title: Intro to App Lab Staging
         csp-explore-2017:
@@ -2256,6 +2262,7 @@ uz:
           description: Do‘stlaringiz bilan ulashish uchun o‘z Raqs bazmingizni dasturlang!
           student_description: Do‘stlaringiz bilan ulashish uchun o‘z Raqs bazmingizni
             dasturlang!
+          name: raqsga tushish
         frozen-2018-test-b:
           title: New Frozen Script
         aquatic:
@@ -2268,6 +2275,7 @@ uz:
           student_description: Minecraft is back with a brand new activity! Use your
             creativity and problem solving skills to explore and build underwater
             worlds with code.
+          name: suvli
         sconyers:
           title: Tracey's Playground
         dance-draft:
@@ -2306,6 +2314,8 @@ uz:
               display_name: Ramp-Up
             csf_variables:
               display_name: O‘zgaruvchilar
+            csf_data:
+              display_name: Maʼlumotlar
             csf_for_loops:
               display_name: For sikllari
             csf_internet:
@@ -2460,6 +2470,8 @@ uz:
               display_name: Sikllar
             csf_events:
               display_name: Hodisalar
+            csf_data:
+              display_name: Maʼlumotlar
             end_of_course_project:
               display_name: End of Course Project
           student_description: Create programs with sequencing, loops, and events.
@@ -3535,6 +3547,8 @@ uz:
               display_name: Sikllar
             csf_events:
               display_name: Hodisalar
+            csf_data:
+              display_name: Maʼlumotlar
             end_of_course_project:
               display_name: End of Course Project
           student_description: Create programs with sequencing, loops, and events.
@@ -3612,6 +3626,8 @@ uz:
               display_name: Raqamli Fuqarolik
             csf_variables:
               display_name: O‘zgaruvchilar
+            csf_data:
+              display_name: Maʼlumotlar
             csf_for_loops:
               display_name: For sikllari
             csf_sprites:
@@ -4279,6 +4295,8 @@ uz:
               display_name: Sikllar
             csf_events:
               display_name: Hodisalar
+            csf_data:
+              display_name: Maʼlumotlar
             end_of_course_project:
               display_name: End of Course Project
           name: coursec-2021
@@ -4864,6 +4882,8 @@ uz:
               display_name: Sikllar
             csf_events:
               display_name: Hodisalar
+            csf_data:
+              display_name: Maʼlumotlar
             end_of_course_project:
               display_name: End of Course Project
           student_description: Create programs with sequencing, loops, and events.
@@ -5184,6 +5204,8 @@ uz:
               display_name: Survey
         csa1-2023:
           lessons:
+            lesson-2:
+              name: Java laboratoriyasi
             lesson-6:
               name: Sikllar
           lesson_groups:
@@ -5200,6 +5222,8 @@ uz:
               display_name: Kontent
         csa3-2023:
           lessons:
+            lesson-1:
+              name: Bir o'lchovli (1D) massivlar
             lesson-3:
               name: For sikllari
           lesson_groups:
@@ -5217,6 +5241,19 @@ uz:
           lesson_groups:
             lessonGroup-2:
               display_name: Kontent
+        csa7-2023:
+          lessons:
+            lesson-6:
+              name: Intellectual Property
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kontent
+        csa8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kontent
+            lessonGroup-4:
+              display_name: Survey
         hello-world-space-2022:
           title: 'Salom Dunyo: Kosmik'
         hello-world-soccer-2022:
@@ -5314,6 +5351,8 @@ uz:
               display_name: Loyiha
         csp5-2023:
           lesson_groups:
+            csp_lists:
+              display_name: Maʼlumotlar
             csp_loops:
               display_name: Sikllar
             csp_project:
@@ -5475,6 +5514,8 @@ uz:
               display_name: Sikllar
             csf_events:
               display_name: Hodisalar
+            csf_data:
+              display_name: Maʼlumotlar
             end_of_course_project:
               display_name: End of Course Project
           student_description: Create programs with sequencing, loops, and events.
@@ -5526,6 +5567,9 @@ uz:
             lessonGroup-3:
               display_name: 'Chapter 2: Computers and Problem Solving'
         web-development-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Survey
           student_description: 'Unit 2 bo‘limida siz o‘zingizning veb-sahifalaringizda
             kontentni yaratish va almashishni o‘rganasiz. Dunyo bilan qanday tarkibni
             baham ko‘rishni xohlaganingizdan so‘ng, siz HTML va CSSdan foydalangan
@@ -5537,6 +5581,8 @@ uz:
               display_name: 'Chapter 1: Images and Animations'
             lessonGroup-3:
               display_name: 'Chapter 2: Building Games'
+            lessonGroup-4:
+              display_name: Survey
           student_description: Unit 3 bo'limida siz Game Labda animatsiyalar, interaktiv
             san'at va o‘yinlarni dasturlashtirasiz. Oddiy shakllardan boshlang va
             kompyuter olimlari har kuni foydalanadigan dizayn dasturlari bilan bir
@@ -5549,6 +5595,8 @@ uz:
               display_name: 'Chapter 1: User Centered Design'
             lessonGroup-3:
               display_name: 'Chapter 2: App Prototyping'
+            lessonGroup-4:
+              display_name: Survey
           student_description: Unit 4 introduces the broader social impacts of computing.
             Through a series of design challenges, you will learn how to better understand
             the needs of others while developing a solution to a problem. The second
@@ -5562,6 +5610,8 @@ uz:
               display_name: 'Chapter 1: Representing Information'
             lessonGroup-3:
               display_name: 'Chapter 2: Solving Data Problems'
+            lessonGroup-4:
+              display_name: Survey
           description_short: Learn how people use computers to solve data problems.
           student_description: 5-bo‘lim ma'lumotlarning muammolarni hal qilishdagi
             ahamiyati haqida va bu jarayonda kompyuterlarning qanday yordam berishini
@@ -5577,6 +5627,8 @@ uz:
           lesson_groups:
             lessonGroup-2:
               display_name: Intro to App Lab
+            lessonGroup-5:
+              display_name: Survey
         focus-on-creativity1-2023:
           lesson_groups:
             lessonGroup-2:
@@ -5774,10 +5826,14 @@ uz:
           lesson_groups:
             lessonGroup-3:
               display_name: Inputs and Outputs
+            lessonGroup-5:
+              display_name: Survey
         devices-2023:
           lesson_groups:
             lessonGroup-4:
               display_name: 'Chapter 2: Building Physical Prototypes'
+            lessonGroup-5:
+              display_name: Survey
         focus-on-creativity4b-2023:
           lesson_groups:
             lessonGroup-3:
@@ -5790,6 +5846,8 @@ uz:
           lesson_groups:
             lessonGroup-3:
               display_name: Inputs and Outputs
+        ai-temp:
+          title: SI (AI) qanday ishlaydi
         focus-on-coding4b-2023:
           lesson_groups:
             lessonGroup-3:
@@ -5798,3 +5856,93 @@ uz:
           lesson_groups:
             lessonGroup-3:
               display_name: Inputs and Outputs
+        self-paced-pl-csd1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Xush kelibsiz
+        pl-csd-summer-day1:
+          lessons:
+            lesson-3:
+              name: Kirish
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 1-kun
+          title: 1-kun
+        pl-csd-summer-day2:
+          lessons:
+            lesson-10:
+              name: Wrap Up
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 2-kun
+          title: 2-kun
+        pl-csd-summer-day3:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 3-kun
+          title: 3-kun
+        pl-csd-summer-day4:
+          lessons:
+            lesson-12:
+              name: Wrap Up
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 4-kun
+          title: 4-kun
+        virtual-pl-csd-summer-day1:
+          lessons:
+            lesson-1:
+              name: Kirish
+            lesson-12:
+              name: Wrap Up
+          title: 1-kun
+        virtual-pl-csd-summer-day2:
+          lessons:
+            lesson-10:
+              name: Wrap Up
+          title: 2-kun
+        virtual-pl-csd-summer-day3:
+          lessons:
+            lesson-12:
+              name: Wrap Up
+          title: 3-kun
+        virtual-pl-csd-summer-day4:
+          lessons:
+            lesson-13:
+              name: Wrap Up
+          title: 4-kun
+        virtual-pl-csd-summer-day5:
+          lessons:
+            lesson-3:
+              name: Baholash
+        csd-post-survey-2023:
+          title: Post-Course Survey
+        focus-on-data-post-survey-2023:
+          title: Post-Course Survey
+        focus-on-impact-in-society-post-survey-2023:
+          title: Post-Course Survey
+        focus-on-coding-post-survey-2023:
+          title: Post-Course Survey
+        focus-on-design-with-purpose-post-survey-2023:
+          title: Post-Course Survey
+        focus-on-hardware-post-survey-2023:
+          title: Post-Course Survey
+        focus-on-creativity-post-survey-2023:
+          title: Post-Course Survey
+        coursef-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Raqamli Fuqarolik
+            lessonGroup-3:
+              display_name: Spraytlar
+            lessonGroup-4:
+              display_name: O‘zgaruvchilar
+            lessonGroup-6:
+              display_name: End of Course Project
+          description_audience: 'Yosh: 9-13'
+          description_short: Informatika asoslari kursidan barcha tushunchalarni o'rganing
+            va o'z san'at asari, hikoya yoki o'yiningizni yarating.
+        csa-frq-practice:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Sinflar

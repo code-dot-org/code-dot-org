@@ -1,9 +1,5 @@
 <Applab>
   <config><![CDATA[{
-  "game_id": 41,
-  "created_at": "2023-04-11T01:42:49.000Z",
-  "level_num": "custom",
-  "user_id": 1,
   "properties": {
     "skin": "applab",
     "code_functions": {
@@ -32,7 +28,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "long_instructions": "# Sliders\r\n\r\nLet's explore how to combine slider inputs with the LED outputs!\r\n\r\n# Do This\r\n\r\n1. Using the `column` variable as a model, create a `row` variable that gets the value from the rowSlider design element.\r\n\t- Use a [`var x = __`(#BB77C7)](/docs/applab/declareAssign_x/) and [`getProperty()`(#fff176)](/docs/applab/getProperty/) block to get the value from the slider\r\n2. Modify the lines of code that lights up a row of LEDs so that it uses the `row` variable rather than the default row of 0\r\n\r\nRun your code! You can use the sliders to change which rows and columns are lit up, creating different crosses on the ledScreen.",
+    "long_instructions": "# Sliders\r\n\r\nStudents will explore how to combine slider inputs with the LED outputs!\r\n\r\n# Do This\r\n\r\n1. Using the `column` variable as a model, create a `row` variable that gets the value from the rowSlider design element.\r\n\t- Use a [`var x = __`(#BB77C7)](/docs/applab/declareAssign_x/) and [`getProperty()`(#fff176)](/docs/applab/getProperty/) block to get the value from the slider\r\n2. Modify the lines of code that lights up a row of LEDs so that it uses the `row` variable rather than the default row of 0\r\n\r\nRun your code! You can use the sliders to change which rows and columns are lit up, creating different crosses on the ledScreen.",
     "instructions_important": "false",
     "submittable": "false",
     "start_blocks": "onBoardEvent(buttonA, \"down\", function() {\r\n  var column = getProperty(\"columnSlider\", \"value\");\r\n  ledScreen.on(column, 0);\r\n  ledScreen.on(column, 1);\r\n  ledScreen.on(column, 2);\r\n  ledScreen.on(column, 3);\r\n  ledScreen.on(column, 4);\r\n  \r\n  //1) Create your row variable here\r\n  \r\n  //2) Update each line of the code below to use the row variable instead of the default value of 0\r\n  ledScreen.on(0, 0);\r\n  ledScreen.on(1, 0);\r\n  ledScreen.on(2, 0);\r\n  ledScreen.on(3, 0);\r\n  ledScreen.on(4, 0);\r\n});\r\nonBoardEvent(buttonB, \"down\", function() {\r\n  ledScreen.clear();\r\n});\r\n\r\n",
@@ -93,9 +89,13 @@
     ],
     "preload_asset_list": null
   },
+  "game_id": 41,
   "published": true,
+  "created_at": "2023-04-11T01:42:49.000Z",
+  "level_num": "custom",
+  "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-04-11T01:42:49.305+00:00\",\"changed\":[\"cloned from \\\"VPL-CSD-CI-U6MB-Combine Inputs-Sliders\\\"\"],\"cloned_from\":\"VPL-CSD-CI-U6MB-Combine Inputs-Sliders\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-04-11T01:42:49.305+00:00\",\"changed\":[\"cloned from \\\"VPL-CSD-CI-U6MB-Combine Inputs-Sliders\\\"\"],\"cloned_from\":\"VPL-CSD-CI-U6MB-Combine Inputs-Sliders\"},{\"changed_at\":\"2023-04-11 21:09:03 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

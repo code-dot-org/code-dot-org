@@ -1,4 +1,3 @@
-/* global p5 */
 import sinon from 'sinon';
 import {expect} from '../../../util/reconfiguredChai';
 import CoreLibrary from '@cdo/apps/p5lab/spritelab/CoreLibrary';
@@ -113,11 +112,11 @@ describe('Behavior Commands', () => {
       actionCommands.addTarget.apply(coreLibrary, [
         {name: 'subject'},
         'target',
-        'follow'
+        'follow',
       ]);
 
       behaviorCommands.followingTargetsFunc.apply(coreLibrary)({
-        name: 'subject'
+        name: 'subject',
       });
       expect(
         spriteCommands.getProp.apply(coreLibrary, [{name: 'subject'}, 'x'])
@@ -130,7 +129,7 @@ describe('Behavior Commands', () => {
     it('does not move if there are no targets', () => {
       coreLibrary.addSprite({name: 'subject', location: {x: 200, y: 200}});
       behaviorCommands.followingTargetsFunc.apply(coreLibrary)({
-        name: 'subject'
+        name: 'subject',
       });
 
       expect(
@@ -152,11 +151,11 @@ describe('Behavior Commands', () => {
       actionCommands.addTarget.apply(coreLibrary, [
         {name: 'subject'},
         'target',
-        'avoid'
+        'avoid',
       ]);
 
       behaviorCommands.avoidingTargetsFunc.apply(coreLibrary)({
-        name: 'subject'
+        name: 'subject',
       });
       expect(
         spriteCommands.getProp.apply(coreLibrary, [{name: 'subject'}, 'x'])
@@ -169,7 +168,7 @@ describe('Behavior Commands', () => {
     it('does not move if there are no targets', () => {
       coreLibrary.addSprite({name: 'subject', location: {x: 200, y: 200}});
       behaviorCommands.avoidingTargetsFunc.apply(coreLibrary)({
-        name: 'subject'
+        name: 'subject',
       });
 
       expect(
@@ -188,11 +187,11 @@ describe('Behavior Commands', () => {
       actionCommands.addTarget.apply(coreLibrary, [
         {name: 'subject'},
         'target',
-        'avoid'
+        'avoid',
       ]);
 
       behaviorCommands.avoidingTargetsFunc.apply(coreLibrary)({
-        name: 'subject'
+        name: 'subject',
       });
       expect(
         spriteCommands.getProp.apply(coreLibrary, [{name: 'subject'}, 'x'])

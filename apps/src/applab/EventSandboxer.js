@@ -94,7 +94,7 @@ EventSandboxer.prototype.sandboxEvent = function (event) {
     'repeat',
     'shiftKey',
     'type',
-    'which'
+    'which',
   ].forEach(function (prop) {
     if (typeof event[prop] !== 'undefined') {
       newEvent[prop] = event[prop];
@@ -108,7 +108,7 @@ EventSandboxer.prototype.sandboxEvent = function (event) {
   const touchEvents = {
     touchstart: 'mousedown',
     touchmove: 'mousemove',
-    touchend: 'mouseup'
+    touchend: 'mouseup',
   };
 
   if (touchEvents[event.type]) {
@@ -174,7 +174,7 @@ EventSandboxer.prototype.sandboxEvent = function (event) {
     'currentTarget',
     'relatedTarget',
     'target',
-    'toElement'
+    'toElement',
   ].forEach(function (prop) {
     if (event[prop]) {
       newEvent[prop + 'Id'] = event[prop].id;

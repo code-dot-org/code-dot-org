@@ -1,7 +1,7 @@
 import {WorkshopManagement} from '@cdo/apps/code-studio/pd/workshop_dashboard/components/workshop_management';
 import {WorkshopTypes} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 import ConfirmationDialog from '@cdo/apps/code-studio/pd/components/confirmation_dialog';
-import {Button} from 'react-bootstrap';
+import {Button} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {expect} from 'chai';
 import {shallow} from 'enzyme';
@@ -9,7 +9,7 @@ import sinon from 'sinon';
 import Permission, {
   Organizer,
   ProgramManager,
-  Facilitator
+  Facilitator,
 } from '@cdo/apps/code-studio/pd/workshop_dashboard/permission';
 
 const defaultProps = {
@@ -17,19 +17,19 @@ const defaultProps = {
   course: 'CS Principles',
   workshopId: 123,
   viewUrl: 'viewUrl',
-  date: '2017-07-01'
+  date: '2017-07-01',
 };
 
 describe('WorkshopManagement', () => {
   const fakeRouter = {
     createHref() {},
-    push() {}
+    push() {},
   };
   const context = {
-    router: fakeRouter
+    router: fakeRouter,
   };
   const mockClickEvent = {
-    preventDefault() {}
+    preventDefault() {},
   };
 
   let mockRouter;
@@ -74,7 +74,7 @@ describe('WorkshopManagement', () => {
     it('uses foorm results for 5-day summer workshop past May 2020', () => {
       const surveyUrl = getSurveyUrlForProps({
         date: '2020-06-01',
-        subject: '5-day Summer'
+        subject: '5-day Summer',
       });
       expect(surveyUrl).to.eql('/workshop_daily_survey_results/123');
     });
@@ -82,7 +82,7 @@ describe('WorkshopManagement', () => {
     it('uses foorm results for Intro workshop past May 2020', () => {
       const surveyUrl = getSurveyUrlForProps({
         date: '2020-05-08',
-        subject: 'Intro'
+        subject: 'Intro',
       });
       expect(surveyUrl).to.eql('/workshop_daily_survey_results/123');
     });
@@ -90,7 +90,7 @@ describe('WorkshopManagement', () => {
     it('uses daily results for academic year workshop past August 2018', () => {
       const surveyUrl = getSurveyUrlForProps({
         date: '2018-09-01',
-        subject: 'Academic Year Workshop 1'
+        subject: 'Academic Year Workshop 1',
       });
       expect(surveyUrl).to.eql('/daily_survey_results/123');
     });
@@ -98,7 +98,7 @@ describe('WorkshopManagement', () => {
     it('uses survey results for academic year workshop before August 2018', () => {
       const surveyUrl = getSurveyUrlForProps({
         date: '2018-07-01',
-        subject: 'Academic Year Workshop 1'
+        subject: 'Academic Year Workshop 1',
       });
       expect(surveyUrl).to.eql(null);
     });
@@ -106,7 +106,7 @@ describe('WorkshopManagement', () => {
     it('uses daily results for local summer in 2018', () => {
       const surveyUrl = getSurveyUrlForProps({
         date: '2018-07-01',
-        subject: WorkshopTypes.local_summer
+        subject: WorkshopTypes.local_summer,
       });
       expect(surveyUrl).to.eql('/daily_survey_results/123');
     });
@@ -114,14 +114,14 @@ describe('WorkshopManagement', () => {
     it('uses daily results for teachercon in 2018', () => {
       const surveyUrl = getSurveyUrlForProps({
         date: '2018-07-01',
-        subject: WorkshopTypes.teachercon
+        subject: WorkshopTypes.teachercon,
       });
       expect(surveyUrl).to.eql('/daily_survey_results/123');
     });
 
     it('uses local summer results for local summer in 2017', () => {
       const surveyUrl = getSurveyUrlForProps({
-        subject: WorkshopTypes.local_summer
+        subject: WorkshopTypes.local_summer,
       });
       expect(surveyUrl).to.eql('/local_summer_workshop_survey_results/123');
     });
@@ -135,7 +135,7 @@ describe('WorkshopManagement', () => {
     it('uses organizer results for program managers', () => {
       const programManagerPermission = new Permission([ProgramManager]);
       const surveyUrl = getSurveyUrlForProps({
-        permission: programManagerPermission
+        permission: programManagerPermission,
       });
       expect(surveyUrl).to.eql(null);
     });
@@ -238,7 +238,7 @@ describe('WorkshopManagement', () => {
         .atLeast(1);
 
       workshopManagement = shallow(<WorkshopManagement {...defaultProps} />, {
-        context
+        context,
       });
     });
 

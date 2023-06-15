@@ -22,25 +22,25 @@ describe('ProgrammingClassEditor', () => {
       tips: 'some tips on how to use this class',
       examples: [{name: 'example 1'}],
       fields: [{name: 'fields 1'}],
-      methods: [{key: 'method1', name: 'method 1'}]
+      methods: [{key: 'method1', name: 'method 1'}],
     };
     defaultProps = {
       initialProgrammingClass,
       environmentCategories: [
         {key: 'circuit', name: 'Circuit'},
         {key: 'variables', name: 'Variables'},
-        {key: 'canvas', name: 'Canvas'}
+        {key: 'canvas', name: 'Canvas'},
       ],
       videoOptions: [
         {
           key: 'video1',
-          name: 'Video 1'
+          name: 'Video 1',
         },
         {
           key: 'video2',
-          name: 'Video 2'
-        }
-      ]
+          name: 'Video 2',
+        },
+      ],
     };
     fetchSpy = sinon.stub(window, 'fetch');
   });
@@ -168,7 +168,7 @@ describe('ProgrammingClassEditor', () => {
         'tips',
         'examples',
         'fields',
-        'methods'
+        'methods',
       ].sort()
     );
     expect(fetchCallBody.name).to.equal('Painter');

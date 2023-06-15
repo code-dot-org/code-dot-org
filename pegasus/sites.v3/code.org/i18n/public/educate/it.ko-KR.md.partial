@@ -10,7 +10,8 @@ theme: responsive
 
 - 최소 15 MB/초 속도의 인터넷 연결을 추천합니다.
 - 지원되는 최소 화면 크기는 1024 x 728 px입니다.
-- 중학교 및 고등학교 수준의 과정: CS 발견 및 CS 원리, 앱 랩 소개를 위해 마우스(또는 터치패드) 와 키보드가 포함된 데스크톱 또는 노트북이 있어야 합니다. 대부분의 태블릿 및 모바일 기기는 이 과정 수강용으로 지원되지 않습니다. 기기별 예외사항은 아래 "모바일 및 태블릿 지원 세부사항"을 참조하세요.
+- You will need a desktop or laptop computer (Chromebooks are included) with a mouse (or touchpad) and keyboard for our middle and high school-level courses: CS Discoveries, CS Principles, and Intro to App Lab. “See Minimum Supported Browsers and Platforms” below.
+- Most tablets (such as an iPad) and mobile devices are not supported for these courses. 기기별 예외사항은 아래 "모바일 및 태블릿 지원 세부사항"을 참조하세요.
 - K-5 과정 (컴퓨터 과학 기초) 및 아워오브코드 활동은 모든 기타 현대식 태블릿 및 노트북 또는 데스크톱 컴퓨터외에 iPad 및 Chromebook에서 호환됩니다.
 - 모바일 기기 지원 세부사항을 찾고 계세요? 아래를 읽어 보세요.
 
@@ -82,12 +83,12 @@ theme: responsive
 
 ## 모바일 및 태블릿 지원 세부사항
 
-모든 CS 발견, CS 원리 및 앱 랩 소개 과정은 태블릿 또는 모바일 기기와는 호환되지 않습니다. 키보드와 마우스(또는 터치패드, MacBooks의 터치패드와 같은)가 있어야 합니다. 대부분의 태블릿은 지원되지 않지만 다음의 예외가 있습니다:
+All CS Discoveries, CS Principles, CS A, and Intro to App Lab courses are not compatible with tablets or mobile devices - a full keyboard and mouse (or touchpad) are required. 대부분의 태블릿은 지원되지 않지만 다음의 예외가 있습니다:
 
 - 외부 키보드가 있는 Microsoft Surface Pro
 - iPadOS 13.4 이상에서 실행되는 iPad와 외부 키보드 및 외부 마우스 또는 터치패드
 
-K-5 과정 (컴퓨터 과학 기초) 및 아워오브코드 활동은 모든 기타 현대식 태블릿 및 노트북 또는 데스크톱 컴퓨터외에 iPad 및 Chromebook에서 호환됩니다.
+All other content, such as K-5 courses (Computer Science Fundamentals) and Hour of Code activities are compatible on iPads and other modern tablets and laptop or desktop computers.
 
 ### 휴대폰
 

@@ -7,9 +7,8 @@ import moduleStyles from './controls.module.scss';
 import BeatPad from './BeatPad';
 import {AnalyticsContext} from '../context';
 import {useDispatch, useSelector} from 'react-redux';
-import {hideBeatPad, showBeatPad, toggleBeatPad} from '../redux/musicRedux';
-
-const documentationUrl = '/docs/ide/projectbeats';
+import {hideBeatPad, showBeatPad} from '../redux/musicRedux';
+import commonI18n from '@cdo/locale';
 
 /**
  * Renders the playback controls bar, including the play/pause button, show/hide beat pad button,
@@ -21,7 +20,8 @@ const Controls = ({
   top,
   instructionsAvailable,
   toggleInstructions,
-  instructionsOnRight
+  instructionsOnRight,
+  hasTrigger,
 }) => {
   const isPlaying = useSelector(state => state.music.isPlaying);
   const isBeatPadShowing = useSelector(state => state.music.isBeatPadShowing);
@@ -37,82 +37,43 @@ const Controls = ({
 
   const renderBeatPad = () => {
     return (
-      <div
-        style={{
-          position: 'absolute',
-          [top ? 'bottom' : 'top']: -175,
-          [instructionsOnRight ? 'left' : 'right']: 10
+      <BeatPad
+        triggers={Triggers}
+        playTrigger={playTrigger}
+        onClose={() => {
+          dispatch(hideBeatPad());
+          analyticsReporter.onButtonClicked('show-hide-beatpad', {
+            showing: false,
+          });
         }}
-      >
-        <BeatPad
-          triggers={Triggers}
-          playTrigger={playTrigger}
-          onClose={() => {
-            dispatch(hideBeatPad());
-            analyticsReporter.onButtonClicked('show-hide-beatpad', {
-              showing: false
-            });
-          }}
-          isPlaying={isPlaying}
-        />
-      </div>
+        hasTrigger={hasTrigger}
+        isPlaying={isPlaying}
+      />
     );
   };
 
-  const renderIconButton = (icon, onClick) => (
-    <div className={classNames(moduleStyles.controlButtons, moduleStyles.side)}>
-      <FontAwesome
-        icon={icon}
-        className={moduleStyles.iconButton}
-        onClick={onClick}
-      />
-    </div>
-  );
-
-  const beatPadIconSection = renderIconButton('th', () => {
-    analyticsReporter.onButtonClicked('show-hide-beatpad', {
-      showing: !isBeatPadShowing
-    });
-    dispatch(toggleBeatPad());
-  });
-  const infoIconSection = instructionsAvailable
-    ? renderIconButton('info-circle', toggleInstructions)
-    : null;
-
-  const [leftIcon, rightIcon] = instructionsOnRight
-    ? [beatPadIconSection, infoIconSection]
-    : [infoIconSection, beatPadIconSection];
-
   return (
     <div id="controls" className={moduleStyles.controlsContainer}>
-      {isBeatPadShowing && renderBeatPad()}
-      {leftIcon}
-      <div
-        className={classNames(moduleStyles.controlButtons, moduleStyles.center)}
-      >
-        <FontAwesome
-          icon={isPlaying ? 'stop-circle' : 'play-circle'}
+      <div id="controls-section" className={moduleStyles.section}>
+        <button
+          id="run-button"
+          className={classNames(
+            moduleStyles.controlButton,
+            moduleStyles.controlButtonRun
+          )}
           onClick={() => setPlaying(!isPlaying)}
-          className={moduleStyles.iconButton}
-        />
-      </div>
-      <div
-        className={classNames(moduleStyles.controlButtons, moduleStyles.side)}
-      >
-        <a href={documentationUrl} target="_blank" rel="noopener noreferrer">
+          type="button"
+        >
           <FontAwesome
-            icon={'question-circle-o'}
-            onClick={() => {
-              analyticsReporter.onButtonClicked('documentation-link');
-            }}
-            className={classNames(
-              moduleStyles.iconButton,
-              moduleStyles.iconButtonLink
-            )}
+            icon={isPlaying ? 'stop' : 'play'}
+            className={moduleStyles.playStopIcon}
           />
-        </a>
+          <div className={moduleStyles.text}>
+            {isPlaying ? commonI18n.stop() : commonI18n.runProgram()}
+          </div>
+        </button>
       </div>
-      {rightIcon}
+      {isBeatPadShowing && renderBeatPad()}
     </div>
   );
 };
@@ -123,7 +84,8 @@ Controls.propTypes = {
   top: PropTypes.bool.isRequired,
   instructionsAvailable: PropTypes.bool.isRequired,
   toggleInstructions: PropTypes.func.isRequired,
-  instructionsOnRight: PropTypes.bool.isRequired
+  instructionsOnRight: PropTypes.bool.isRequired,
+  hasTrigger: PropTypes.func.isRequired,
 };
 
 export default Controls;

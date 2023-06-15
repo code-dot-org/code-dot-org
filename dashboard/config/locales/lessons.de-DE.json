@@ -148,6 +148,7 @@
           "student_overview": "Am Ende des Tutorials haben die Schülerinnen und Schüler Zeit, ein begonnenes Projekt zu einer „Wähle Dein eigenes Abenteuer“, „Grußkarte“ oder ein „Persönlichkeitsquiz“-App zu erweitern. Sie können auch mit der Erstellung neuer Projekte weitermachen, die auf der Seite code.org/applab vorgestellt werden. \n\nViel Spaß bei deiner Hour of Code mit App Lab! "
         },
         "hello-world-retro-2021/Hello World": {
+          "name": "Hallo Welt: Retro",
           "overview": "In dieser Stunde lernen die Schüler die Grundlagen der Informatik, indem sie in Sprite Lab programmieren. Sprite Lab ist ein Tool, mit dem die Schüler fantasievolle und lustige Projekte erstellen können. Die Schüler lernen, Sprites zu erstellen und zu animieren und sie mithilfe von Ereignissen interaktiv zu gestalten. \n\nEs gibt mehrere Versionen dieser Stunde. Jede Version lehrt dieselben Konzepte, bietet aber unterschiedliche Bilder, um verschiedene Schüler anzusprechen. Weitere Informationen finden Sie auf der [Hello World Landing Page](https://code.org/helloworld).",
           "preparation": "-   Spielen Sie die Rätsel, um potenzielle Problembereiche für Ihre Klasse zu finden.\n-   Erstellen Sie nach der Einführung mit den Ressourcen unter [CS Connections](https://code.org/educate/csc) einen Plan für weitere Informatikstunden.",
           "purpose": "Diese Stunde soll die Schüler befähigen, einfache Programmierprojekte in Sprite Lab zu erstellen. Mit diesen Fähigkeiten können die Schüler Projekte zu jedem Thema erstellen z. B. zu einem anderen Unterrichtsthema oder einem persönlichen Thema. Unter [CS Connections](https://code.org/educate/csc) finden Sie Ideen, wie Sie die Informatik in andere Fächer integrieren können."
@@ -528,12 +529,14 @@
           "student_overview": "Erstelle ein interaktives virtuelles Haustier, das so aussieht und sich so verhält, wie du es möchtest! Erwecke dein Haustier zum Leben!"
         },
         "coursef-2022/Blank Space Stories": {
+          "name": "Geschichten aus dem leeren Weltraum",
           "overview": "In dieser Stunde zum **Kontext** lernen die SchülerInnen anhand von Lückentexten (ähnlich wie bei Mad Libs®), wie Computer die Eingaben eines Benutzers aufnehmen und speichern, um sie dann später bei der Ausführung eines Programms zu verwenden. ",
           "preparation": "Halten Sie 6 Umschläge (auch geeignet: Papier oder Karteikarten, in der Hälfte gefaltet) bereit. \n\n-   Beschriften Sie die Vorderseite jedes Umschlags mit Großbuchstaben: Gegenstand, Flüssigkeit, Zahl, Adjektiv, Körperteil, Zahl\n\n-   Drucken Sie Kopien des **\\*Arbeitsblatts** der SchülerInnen aus (oder stellen Sie die digitale Version in Ihr LMS).",
           "purpose": "Diese Stunde bietet einen allgemeinen Kontext, der für das Verständnis der Funktionsweise von Variablen hilfreich ist, wenn die SchülerInnen zum Programmieren zurückkehren.",
           "student_overview": "Bei dieser Aktivität arbeitet ihr mit Lückentext-Stories (ähnlich wie bei Mad Libs®), um zu verstehen, wie Computer die Eingaben eines Benutzers aufnehmen und speichern, um sie dann später bei der Ausführung eines Programms zu verwenden. "
         },
         "coursef-2022/Text and Prompts": {
+          "name": "Text und Eingabeaufforderungen",
           "overview": "In dieser Stunde zum **Aufbau von Fähigkeiten** üben die SchülerInnen mit Variablen in Sprite Lab. ",
           "preparation": "Spielen Sie die Levels und sehen Sie sich die Unterrichtsfolien an.",
           "purpose": "Variablen werden in diesem Kurs zum Speichern und Ändern von Daten verwendet. Zu diesem Zeitpunkt werden die SchülerInnen lediglich Werte speichern und abrufen, ohne sie zu verändern. In späteren Unterrichtsstunden werden die SchülerInnen numerische Werte speichern und sie im Laufe der Zeit verändern, um z. B. den Punktestand eines Spielers in einem Spiel nachzuverfolgen.",
@@ -623,6 +626,7 @@
           "student_overview": "Mehr geschachtelte Schleifen! Dieses Mal können Sie mit geschachtelten Schleifen eine atemberaubende Zeichnung erstellen."
         },
         "coursee-2022/Mini-Project: Design a Snowflake": {
+          "name": "Mini-Projekt: Entwerfe eine Schneeflocke",
           "overview": "Mit dem Wissen, wie man Schleifen aufschichten kann, können die SchülerInnen so viele schöne Dinge kreieren. Diese Lektion führt sie durch eine Reihe von Übungen, um ihnen zu helfen, ihre eigenen professionelle Bilder mit Annas und Elsas ausgezeichneten Eislaufkünsten zu erstellen!",
           "preparation": "-   Spielen Sie die Rätsel durch, um mögliche Problembereiche für Ihre Klasse zu finden. - Stellen Sie sicher, dass jeder SchülerInnen ein Reflexionstagebuch hat.",
           "purpose": "In dieser Lektion wenden die SchülerInnen ihre Kenntnisse über verschachtelte Schleifen an, um Bilder zu erstellen, die sie gerne weitergeben möchten.",
@@ -734,17 +738,21 @@
         },
         "courseb-2022/Loops with Harvester": {
           "name": "Schleifen mit der Erntearbeiterin",
+          "overview": "In dieser Lektion zum Aufbau von Fähigkeiten helfen die Schüler der Erntemaschine mithilfe von Schleifen beim Sammeln von Feldfrüchten.",
           "preparation": "-   Spielen Sie die Rätsel durch, um mögliche Problembereiche für Ihre Klasse zu finden.\n-   Gehen Sie die \\*_\\\\_CS Fundamentals Main Activity Tips\n-   Lesson Recommendations\\*\\* durch.\n-   Stellen Sie sicher, dass jeder SchülerInnen ein Reflexionstagebuch hat.\n-   (Optional) Wählen Sie ein paar Rätsel aus, die Sie mit Ihrer Klasse in der Gruppe bearbeiten.\n-   (Optional) Falls noch nicht geschehen, drucken Sie Blöcke aus **\\*Manipulatives** aus und schneiden Sie sie aus, um sich auf eine der Überbrückungsaktivitäten in dieser Lektion vorzubereiten.",
           "purpose": "In dieser Lektion lernen die SchülerInnen mehr über Schleifen und wie man sie in Blockly-Code implementiert. Die Verwendung von Schleifen ist eine wichtige Fähigkeit beim Programmieren, da die manuelle Wiederholung von Befehlen mühsam und ineffizient ist. Mit den Code.org-Puzzles lernen die SchülerInnen, Anweisungen zu bestehenden Schleifen hinzuzufügen, wiederholten Code in Schleifen zu sammeln und Muster zu erkennen, die in Schleifen ausgeführt werden müssen.",
           "student_overview": "Hilf der Erntearbeiterin, mit Hilfe von Schleifen noch mehr einzusammeln!"
         },
         "courseb-2022/Loops with Laurel": {
           "name": "Schleifen mit Laurel",
+          "overview": "In dieser Lektion zum Aufbau von Fähigkeiten lernen die Schüler weiter das Konzept von Loops. Hier nutzt Laurel die Abenteurerin Schleifen, um Schätze in offenen Höhlenräumen zu sammeln. ",
           "preparation": "-   Spielen Sie die Rätsel durch, um mögliche Problembereiche für Ihre Klasse zu finden.\n-   (Optional) Wählen Sie ein paar Rätsel aus, die Sie mit Ihrer Klasse in der Gruppe bearbeiten.\n-   Überprüfen Sie die **\\*CS Fundamentals Main Activity Tips - Lesson Recommendations**\n-   Stellen Sie sicher, dass jeder SchülerInnen ein Reflexionstagebuch hat.",
-          "purpose": "In dieser Lektion können die SchülerInnen den Umgang mit Schleifen üben und werden ermutigt, mehrere Blöcke in eine \"Wiederholung\" zu setzen, um so viele Schätze wie möglich zu sammeln."
+          "purpose": "In dieser Lektion können die SchülerInnen den Umgang mit Schleifen üben und werden ermutigt, mehrere Blöcke in eine \"Wiederholung\" zu setzen, um so viele Schätze wie möglich zu sammeln.",
+          "student_overview": "Programmiere Laurel der Abenteurerin, in einer offenen Höhle Schätze zu sammeln."
         },
         "courseb-2022/Drawing Gardens with Loops": {
           "name": "Gärten mit Schleifen zeichnen",
+          "overview": "In dieser Lektion zum Aufbau von Fähigkeiten lernen die Schüler, Bilder zu zeichnen, indem sie einfache Sequenzen von Anweisungen wiederholen. Hier verwenden die Schüler Schleifen, um Muster zu erstellen. ",
           "preparation": "-   Spielen Sie die Rätsel vor der Stunde durch, um mögliche Problembereiche für Ihre Klasse zu finden.\n-   Gehen Sie die **\\*CS Fundamentals Main Activity Tips - Lesson Recommendations** durch.\n-   Stellen Sie sicher, dass jeder SchülerInnen ein Reflexionstagebuch hat.",
           "purpose": "Diese Lektion bietet eine andere Perspektive darauf, wie Schleifen in der Programmierung Dinge erzeugen können. Die SchülerInnen testen ihre Fähigkeiten zum kritischen Denken, indem sie den gegebenen Code auswerten und bestimmen, was hinzugefügt werden muss, um das Rätsel zu lösen. Die SchülerInnen können hier auch über die Ineffizienz des Programmierens ohne Schleifen nachdenken, da das Programm ohne die Hilfe von \"Wiederholungsschleifen\" viele Blöcke benötigen würde.",
           "student_overview": "Verwenden Sie Muster und Schleifen, um die Bilder fertigzustellen."
@@ -758,10 +766,14 @@
         },
         "courseb-2022/The Big Event Jr": {
           "name": "Das große Ereignis",
+          "overview": "In dieser Lektion, die den Kontext einstellt, erlebt die Klasse das Konzept von Ereignissen anhand eines Spiels, in dem sie sich bewegen oder schreien, wenn Sie Tasten auf einer riesigen Fernbedienung drücken.",
           "preparation": "-   Bereiten Sie das Projekt **\\*Controller Image** vor.\n-   Drucken Sie eine **\\*Bewertung** pro SchülerInnen aus.\n-   Stellen Sie sicher, dass jeder SchülerInnen ein Reflexionstagebuch hat.",
-          "purpose": "Heute werden die SchülerInnen lernen, Ereignisse von Handlungen zu unterscheiden. Die SchülerInnen werden sehen, wie Aktivitäten unterbrochen werden, indem ein \"Knopf\" auf einer Papierfernbedienung gedrückt wird. Auf dieses Ereignis wird die Klasse mit einer bestimmten Aktion reagieren. Ereignisse werden in der Programmierung häufig verwendet und sollten nach dieser Lektion leicht zu erkennen sein."
+          "purpose": "Heute werden die SchülerInnen lernen, Ereignisse von Handlungen zu unterscheiden. Die SchülerInnen werden sehen, wie Aktivitäten unterbrochen werden, indem ein \"Knopf\" auf einer Papierfernbedienung gedrückt wird. Auf dieses Ereignis wird die Klasse mit einer bestimmten Aktion reagieren. Ereignisse werden in der Programmierung häufig verwendet und sollten nach dieser Lektion leicht zu erkennen sein.",
+          "student_overview": "Bewege dich oder schreie, wenn dein Lehrer die Tasten auf einer riesigen Fernbedienung drückt."
         },
         "courseb-2022/Mini-Project: A Royal Battle with Events": {
+          "name": "Mini-Projekt: Eine königliche Schlacht mit Ereignissen",
+          "overview": "In diesem **Mini-Projekt** haben die Schüler die Möglichkeit, die Events im Play Lab zu nutzen und all ihre erlernten Programmierkenntnisse anzuwenden, um ein animiertes Spiel zu erstellen. ",
           "preparation": "-   Spielen Sie die Rätsel durch, um mögliche Problembereiche für Ihre Klasse zu finden.\n-   (Optional) Wählen Sie ein paar Rätsel aus, die Sie in der Gruppe mit Ihrer Klasse bearbeiten.\n-   Gehen Sie die **\\*CS-Grundlagen Hauptaktivitätstipps - Lektionsempfehlungen** durch.\n-   Stellen Sie sicher, dass jeder SchülerInnen ein Reflexionstagebuch hat.",
           "purpose": "In dieser Online-Aktivität lernen die SchülerInnen, wie man Ereignisse in Play Lab verwendet. Sie beginnen damit, dass sie dem Ritter beibringen, sich zu bewegen, wenn eine Pfeiltaste gedrückt wird, und haben dann die Möglichkeit, die restlichen Fähigkeiten, die sie in diesem Kurs gelernt haben, einschließlich Sequenz und Schleifenbildung, als Teil des abschließenden Freeplay-Puzzles zu präsentieren.",
           "student_overview": "Verwenden Sie Ereignisse, um eine Geschichte oder ein interaktives Spiel zu erstellen."
@@ -844,6 +856,7 @@
           "student_overview": "Hilf BB-8 durch Labyrinthe mit Schleifen! "
         },
         "express-2022/Mini-Project: Sticker Art": {
+          "name": "Mini-Projekt: Sticker Art",
           "overview": "Beobachten Sie, wie sich die SchülerInnen sichtlich freuen, wenn sie mit einer kleinen Anzahl von Bausteinen und digitalen Stickern ihre eigenen wunderschönen Designs entwerfen! Diese Lektion baut auf dem Verständnis von Schleifen aus früheren Lektionen auf und gibt den SchülerInnen die Chance, wirklich kreativ zu sein. Diese Aktivität ist fantastisch, um Artefakte für Portfolios oder Eltern-/Lehrerabende herzustellen.",
           "preparation": "-   Üben Sie, Ihr eigenes Design zu entwerfen. Notieren Sie sich, inwiefern sich diese Stufen von allen vorherigen unterscheiden. - Stellen Sie sicher, dass jeder SchülerInnen ein Reflexionsjournal hat.",
           "purpose": "In dieser Reihe wird die Kraft von Schleifen mit kreativen und persönlichen Designs hervorgehoben. In dieser projektbasierten Sequenz können die Teilnehmer auf ihrer eigenen Arbeit aufbauen und erstaunliche Artefakte schaffen.",
@@ -926,12 +939,14 @@
           "student_overview": "Mit Funktionen komplexe Zeichnungen leichter erstellen!"
         },
         "express-2022/Text and Prompts": {
+          "name": "Text und Eingabeaufforderungen",
           "overview": "In dieser Stunde zum **Aufbau von Fähigkeiten** üben die SchülerInnen mit Variablen in Sprite Lab. ",
           "preparation": "Spielen Sie die Levels und sehen Sie sich die Unterrichtsfolien an.",
           "purpose": "Variablen werden in diesem Kurs zum Speichern und Ändern von Daten verwendet. Zu diesem Zeitpunkt werden die SchülerInnen lediglich Werte speichern und abrufen, ohne sie zu verändern. In späteren Unterrichtsstunden werden die SchülerInnen numerische Werte speichern und sie im Laufe der Zeit verändern, um z. B. den Punktestand eines Spielers in einem Spiel nachzuverfolgen.",
           "student_overview": "In dieser Stunde übt ihr die Verwendung von Variablen in Sprite Lab."
         },
         "express-2022/Using Variables with the Artist": {
+          "name": "Variablen mit dem Künstler verwenden",
           "overview": "In dieser Stunde beschäftigen sich die SchülerInnen mit der Erstellung sich wiederholender Designs unter Verwendung von Variablen in der Artist-Umgebung. Die SchülerInnen lernen, wie Variablen verwendet werden können, um Code leichter zu schreiben und leichter zu lesen. Nach den Aufgaben unter Anleitung erreichen die SchülerInnen ein Level der freie Gestaltung, wo sie zeigen können, was sie gelernt haben, und ihre eigenen Designs erstellen.",
           "preparation": "-   Spielen Sie die Rätsel durch, um mögliche Problembereiche für Ihre Klasse zu finden. - Stellen Sie sicher, dass jeder SchülerInnen ein Reflexionsjournal hat.",
           "purpose": "Variablen sind im Wesentlichen Platzhalter für Werte, die zum Zeitpunkt der Ausführung Ihres Programms noch unbekannt sind, oder für Werte, die sich während der Ausführung eines Programms ändern können. Sie sind für die Erstellung von dynamischem Code von entscheidender Bedeutung, da sie es ermöglichen, dass sich Ihr Programm auf der Grundlage einer beliebigen Anzahl von potenziellen Änderungen ändert und wächst. In dieser Phase wird die Verwendung von Variablen vertieft, wobei die grundlegendsten Möglichkeiten zum Festlegen und Verwenden von Variablen genutzt werden.",
@@ -1034,6 +1049,7 @@
         },
         "pre-express-2022/A Royal Battle with Events": {
           "name": "Royal Battle mit Ereignissen",
+          "overview": "In diesem **Mini-Projekt** haben die Schüler die Möglichkeit, die Events im Play Lab zu nutzen und all ihre erlernten Programmierkenntnisse anzuwenden, um ein animiertes Spiel zu erstellen. ",
           "preparation": "-   Spielen Sie die Rätsel durch, um mögliche Problembereiche für Ihre Klasse zu finden. - (Optional) Wählen Sie ein paar Rätsel aus, die Sie in der Gruppe mit Ihrer Klasse bearbeiten. - Stellen Sie sicher, dass jeder SchülerInnen ein Reflexionsjournal hat.",
           "purpose": "In dieser Online-Aktivität lernen die SchülerInnen, wie man Ereignisse in Play Lab verwendet. Sie beginnen damit, dass sie dem Ritter beibringen, sich zu bewegen, wenn eine Pfeiltaste gedrückt wird, und haben dann die Möglichkeit, die restlichen Fähigkeiten, die sie in diesem Kurs gelernt haben, einschließlich Sequenz und Schleifenbildung, als Teil des abschließenden Freeplay-Puzzles zu präsentieren.",
           "student_overview": "Verwenden Sie Ereignisse, um eine Geschichte oder ein interaktives Spiel zu erstellen."
@@ -1110,11 +1126,13 @@
         },
         "coursea-2022/The Big Event Jr": {
           "name": "Das große Ereignis",
+          "overview": "In dieser Lektion, die den Kontext einstellt, erlebt die Klasse das Konzept von Ereignissen anhand eines Spiels, in dem sie sich bewegen oder schreien, wenn Sie Tasten auf einer riesigen Fernbedienung drücken.",
           "preparation": "-   Bereiten Sie die Projektion von **Das Bild des Kontrolleurs** vor. - Drucken Sie eine **Bewertung** pro SchülerInnen aus. - Stellen Sie sicher, dass jeder SchülerInnen ein Reflexionsjournal hat.",
           "purpose": "Heute werden die SchülerInnen lernen, Ereignisse von Handlungen zu unterscheiden. Die SchülerInnen werden sehen, wie Aktivitäten unterbrochen werden, indem ein \"Knopf\" auf einer Papierfernbedienung gedrückt wird. Auf dieses Ereignis wird die Klasse mit einer bestimmten Aktion reagieren. Ereignisse werden in der Programmierung häufig verwendet und sollten nach dieser Lektion leicht zu erkennen sein.",
           "student_overview": "Bewegen Sie sich und schreien Sie, wenn Ihre LehrerInnen Knöpfe auf einer riesigen Fernbedienung drücken."
         },
         "coursea-2022/Mini-Project: On the Move with Play Lab": {
+          "name": "Mini-Projekt: Unterwegs mit Play Lab",
           "overview": "In dieser Online-Aktivität haben die SchülerInnen die Möglichkeit, die Verwendung von Ereignissen im Play Lab zu erlernen und alle bisher gelernten Programmierkenntnissen anzuwenden, um ein animiertes Spiel zu erstellen. Es ist die richtige Gelegenheit, kreativ zu werden und in Play Lab eine Geschichte zu erstellen!",
           "preparation": "-   Spielen Sie die Rätsel durch, um mögliche Problembereiche für Ihre Klasse zu finden. - (Optional) Wählen Sie ein paar Rätsel aus, die Sie in der Gruppe mit Ihrer Klasse bearbeiten. - Gehen Sie die **CSF-Unterrichtsempfehlungen** durch. - Stellen Sie sicher, dass jeder SchülerInnen ein Reflexionstagebuch hat.",
           "purpose": "Die SchülerInnen werden heute im Play Lab ihr Verständnis von Ereignissen weiter ausbauen. Ereignisse sind in den meisten Computerprogrammen sehr häufig. In dieser Aktivität verwenden die SchülerInnen Ereignisse, um eine Figur auf dem Bildschirm zu bewegen, Geräusche zu machen und Hintergründe auf der Grundlage von benutzergesteuerten Ereignissen zu ändern.",
@@ -1183,6 +1201,7 @@
           "student_overview": "Lasst uns Schleifen verwenden, um der Erntearbeiterin beim Einsammeln des Gemüses zu helfen!"
         },
         "coursec-2022/Mini-Project: Sticker Art": {
+          "name": "Mini-Projekt: Sticker Art",
           "overview": "Diese **Miniprojekt**-Lektion baut auf dem Verständnis von Schleifen aus den vorherigen Lektionen auf. Die SchülerInnen werden mit dem Künstler einzigartige Kunstwerke schaffen.",
           "purpose": "In dieser Reihe wird die Kraft von Schleifen mit kreativen und persönlichen Designs hervorgehoben. In dieser projektbasierten Sequenz können die Teilnehmer auf ihrer eigenen Arbeit aufbauen und erstaunliche Artefakte schaffen.",
           "student_overview": "In dieser Lektion machen es Schleifen einfach, mit Artist noch coolere Bilder zu machen!"
@@ -1200,6 +1219,7 @@
           "student_overview": "Erstellen Sie Ihr eigenes Flappy Bird-Spiel ganz nach Belieben und teilen Sie es dann mit Ihren Freunden!"
         },
         "coursec-2022/Mini-Project: Chase Game": {
+          "name": "Mini-Projekt: Chase Game",
           "overview": "In dieser Online-Aktivität haben die SchülerInnen die Möglichkeit, die Verwendung von Ereignissen im Play Lab zu erlernen und alle gelernten Codierkenntnisse anzuwenden, um ein animiertes Spiel zu erstellen. Es ist an der Zeit, kreativ zu werden und im Play Lab ein Spiel zu erstellen!",
           "purpose": "Hier werden die SchülerInnen ihr Verständnis von Ereignissen mithilfe von Play Lab weiter ausbauen. Die SchülerInnen verwenden Ereignisse, um Figuren auf dem Bildschirm zu bewegen, Geräusche zu machen und Hintergründe auf der Grundlage von Benutzereingaben zu ändern. Am Ende der Rätselsequenz haben die SchülerInnen die Möglichkeit, ihre Projekte vorzustellen.",
           "student_overview": "Es ist an der Zeit, kreativ zu werden und ein Spiel in Play Lab zu entwickeln!"
@@ -4273,12 +4293,14 @@
           "student_overview": "Bullying ist niemals erlaubt. In dieser Stunde lernst du, was du im Internet sagen darfst und was nicht."
         },
         "coursef-2021/lesson-9": {
+          "name": "Geschichten aus dem leeren Weltraum",
           "overview": "In dieser Stunde zum **Kontext** lernen die SchülerInnen anhand von Lückentexten (ähnlich wie bei Mad Libs®), wie Computer die Eingaben eines Benutzers aufnehmen und speichern, um sie dann später bei der Ausführung eines Programms zu verwenden. ",
           "preparation": "Halten Sie 6 Umschläge (auch geeignet: Papier oder Karteikarten, in der Hälfte gefaltet) bereit. \n\n-   Beschriften Sie die Vorderseite jedes Umschlags mit Großbuchstaben: Gegenstand, Flüssigkeit, Zahl, Adjektiv, Körperteil, Zahl\n\n-   Drucken Sie Kopien des **\\*Arbeitsblatts** der SchülerInnen aus (oder stellen Sie die digitale Version in Ihr LMS).",
           "purpose": "Diese Stunde bietet einen allgemeinen Kontext, der für das Verständnis der Funktionsweise von Variablen hilfreich ist, wenn die SchülerInnen zum Programmieren zurückkehren.",
           "student_overview": "Bei dieser Aktivität arbeitet ihr mit Lückentext-Stories (ähnlich wie bei Mad Libs®), um zu verstehen, wie Computer die Eingaben eines Benutzers aufnehmen und speichern, um sie dann später bei der Ausführung eines Programms zu verwenden. "
         },
         "coursef-2021/lesson-10": {
+          "name": "Text und Eingabeaufforderungen",
           "overview": "In dieser Stunde zum **Aufbau von Fähigkeiten** üben die SchülerInnen mit Variablen in Sprite Lab. ",
           "preparation": "Spielen Sie die Levels und sehen Sie sich die Unterrichtsfolien an.",
           "purpose": "Variablen werden in diesem Kurs zum Speichern und Ändern von Daten verwendet. Zu diesem Zeitpunkt werden die SchülerInnen lediglich Werte speichern und abrufen, ohne sie zu verändern. In späteren Unterrichtsstunden werden die SchülerInnen numerische Werte speichern und sie im Laufe der Zeit verändern, um z. B. den Punktestand eines Spielers in einem Spiel nachzuverfolgen.",
@@ -4299,6 +4321,7 @@
           "student_overview": "In dieser Stunde machen es Schleifen einfach, mit Artist noch coolere Bilder zu machen!"
         },
         "coursef-2021/Variables that Change in Artist": {
+          "name": "Variablen mit dem Künstler verwenden",
           "overview": "In dieser Stunde beschäftigen sich die SchülerInnen mit der Erstellung sich wiederholender Designs unter Verwendung von Variablen in der Artist-Umgebung. Die SchülerInnen lernen, wie Variablen verwendet werden können, um Code leichter zu schreiben und leichter zu lesen. Nach den Aufgaben unter Anleitung erreichen die SchülerInnen ein Level der freie Gestaltung, wo sie zeigen können, was sie gelernt haben, und ihre eigenen Designs erstellen.",
           "preparation": "-   Spielen Sie die Rätselh, um mögliche Problembereiche für Ihre Klasse zu finden. - Stellen Sie sicher, dass alle SchülerInnen ein Reflexionstagebuch haben.",
           "purpose": "Variablen sind im Wesentlichen Platzhalter für Werte, die zum Zeitpunkt der Ausführung Ihres Programms noch unbekannt sind, oder für Werte, die sich während der Ausführung eines Programms ändern können. Sie sind für die Erstellung von dynamischem Code von entscheidender Bedeutung, da sie es ermöglichen, dass sich Ihr Programm auf der Grundlage einer beliebigen Anzahl von potenziellen Änderungen ändert und wächst. In dieser Phase wird die Verwendung von Variablen vertieft, wobei die grundlegendsten Möglichkeiten zum Festlegen und Verwenden von Variablen genutzt werden.",
@@ -4415,17 +4438,21 @@
         },
         "courseb-2021/Loops in Harvester": {
           "name": "Schleifen mit der Erntearbeiterin",
+          "overview": "In dieser Lektion zum Aufbau von Fähigkeiten helfen die Schüler der Erntemaschine mithilfe von Schleifen beim Sammeln von Feldfrüchten.",
           "preparation": "-   Spielen Sie die Rätsel durch, um mögliche Problembereiche für Ihre Klasse zu finden.\n-   Gehen Sie die \\*_\\\\_CS Fundamentals Main Activity Tips\n-   Lesson Recommendations\\*\\* durch.\n-   Stellen Sie sicher, dass jeder SchülerInnen ein Reflexionstagebuch hat.\n-   (Optional) Wählen Sie ein paar Rätsel aus, die Sie mit Ihrer Klasse in der Gruppe bearbeiten.\n-   (Optional) Falls noch nicht geschehen, drucken Sie Blöcke aus **\\*Manipulatives** aus und schneiden Sie sie aus, um sich auf eine der Überbrückungsaktivitäten in dieser Lektion vorzubereiten.",
           "purpose": "In dieser Lektion lernen die SchülerInnen mehr über Schleifen und wie man sie in Blockly-Code implementiert. Die Verwendung von Schleifen ist eine wichtige Fähigkeit beim Programmieren, da die manuelle Wiederholung von Befehlen mühsam und ineffizient ist. Mit den Code.org-Puzzles lernen die SchülerInnen, Anweisungen zu bestehenden Schleifen hinzuzufügen, wiederholten Code in Schleifen zu sammeln und Muster zu erkennen, die in Schleifen ausgeführt werden müssen.",
           "student_overview": "Hilf der Erntearbeiterin, mit Hilfe von Schleifen noch mehr einzusammeln!"
         },
         "courseb-2021/Loops in Collector": {
           "name": "Schleifen mit Laurel",
+          "overview": "In dieser Lektion zum Aufbau von Fähigkeiten lernen die Schüler weiter das Konzept von Loops. Hier nutzt Laurel die Abenteurerin Schleifen, um Schätze in offenen Höhlenräumen zu sammeln. ",
           "preparation": "-   Spielen Sie die Rätsel durch, um mögliche Problembereiche für Ihre Klasse zu finden.\n-   (Optional) Wählen Sie ein paar Rätsel aus, die Sie mit Ihrer Klasse in der Gruppe bearbeiten.\n-   Überprüfen Sie die **\\*CS Fundamentals Main Activity Tips - Lesson Recommendations**\n-   Stellen Sie sicher, dass jeder SchülerInnen ein Reflexionstagebuch hat.",
-          "purpose": "In dieser Lektion können die SchülerInnen den Umgang mit Schleifen üben und werden ermutigt, mehrere Blöcke in eine \"Wiederholung\" zu setzen, um so viele Schätze wie möglich zu sammeln."
+          "purpose": "In dieser Lektion können die SchülerInnen den Umgang mit Schleifen üben und werden ermutigt, mehrere Blöcke in eine \"Wiederholung\" zu setzen, um so viele Schätze wie möglich zu sammeln.",
+          "student_overview": "Programmiere Laurel der Abenteurerin, in einer offenen Höhle Schätze zu sammeln."
         },
         "courseb-2021/Loops in Artist": {
           "name": "Gärten mit Schleifen zeichnen",
+          "overview": "In dieser Lektion zum Aufbau von Fähigkeiten lernen die Schüler, Bilder zu zeichnen, indem sie einfache Sequenzen von Anweisungen wiederholen. Hier verwenden die Schüler Schleifen, um Muster zu erstellen. ",
           "preparation": "-   Spielen Sie die Rätsel vor der Stunde durch, um mögliche Problembereiche für Ihre Klasse zu finden.\n-   Gehen Sie die **\\*CS Fundamentals Main Activity Tips - Lesson Recommendations** durch.\n-   Stellen Sie sicher, dass jeder SchülerInnen ein Reflexionstagebuch hat.",
           "purpose": "Diese Lektion bietet eine andere Perspektive darauf, wie Schleifen in der Programmierung Dinge erzeugen können. Die SchülerInnen testen ihre Fähigkeiten zum kritischen Denken, indem sie den gegebenen Code auswerten und bestimmen, was hinzugefügt werden muss, um das Rätsel zu lösen. Die SchülerInnen können hier auch über die Ineffizienz des Programmierens ohne Schleifen nachdenken, da das Programm ohne die Hilfe von \"Wiederholungsschleifen\" viele Blöcke benötigen würde.",
           "student_overview": "Verwenden Sie Muster und Schleifen, um die Bilder fertigzustellen."
@@ -4439,10 +4466,14 @@
         },
         "courseb-2021/Events: The Big Event": {
           "name": "Das große Ereignis",
+          "overview": "In dieser Lektion, die den Kontext einstellt, erlebt die Klasse das Konzept von Ereignissen anhand eines Spiels, in dem sie sich bewegen oder schreien, wenn Sie Tasten auf einer riesigen Fernbedienung drücken.",
           "preparation": "-   Bereiten Sie das Projekt **\\*Controller Image** vor.\n-   Drucken Sie eine **\\*Bewertung** pro SchülerInnen aus.\n-   Stellen Sie sicher, dass jeder SchülerInnen ein Reflexionstagebuch hat.",
-          "purpose": "Heute werden die SchülerInnen lernen, Ereignisse von Handlungen zu unterscheiden. Die SchülerInnen werden sehen, wie Aktivitäten unterbrochen werden, indem ein \"Knopf\" auf einer Papierfernbedienung gedrückt wird. Auf dieses Ereignis wird die Klasse mit einer bestimmten Aktion reagieren. Ereignisse werden in der Programmierung häufig verwendet und sollten nach dieser Lektion leicht zu erkennen sein."
+          "purpose": "Heute werden die SchülerInnen lernen, Ereignisse von Handlungen zu unterscheiden. Die SchülerInnen werden sehen, wie Aktivitäten unterbrochen werden, indem ein \"Knopf\" auf einer Papierfernbedienung gedrückt wird. Auf dieses Ereignis wird die Klasse mit einer bestimmten Aktion reagieren. Ereignisse werden in der Programmierung häufig verwendet und sollten nach dieser Lektion leicht zu erkennen sein.",
+          "student_overview": "Bewege dich oder schreie, wenn dein Lehrer die Tasten auf einer riesigen Fernbedienung drückt."
         },
         "courseb-2021/Events in Play Lab": {
+          "name": "Mini-Projekt: Eine königliche Schlacht mit Ereignissen",
+          "overview": "In diesem **Mini-Projekt** haben die Schüler die Möglichkeit, die Events im Play Lab zu nutzen und all ihre erlernten Programmierkenntnisse anzuwenden, um ein animiertes Spiel zu erstellen. ",
           "preparation": "-   Spielen Sie die Rätsel durch, um mögliche Problembereiche für Ihre Klasse zu finden.\n-   (Optional) Wählen Sie ein paar Rätsel aus, die Sie in der Gruppe mit Ihrer Klasse bearbeiten.\n-   Gehen Sie die **\\*CS-Grundlagen Hauptaktivitätstipps - Lektionsempfehlungen** durch.\n-   Stellen Sie sicher, dass jeder SchülerInnen ein Reflexionstagebuch hat.",
           "purpose": "In dieser Online-Aktivität lernen die SchülerInnen, wie man Ereignisse in Play Lab verwendet. Sie beginnen damit, dass sie dem Ritter beibringen, sich zu bewegen, wenn eine Pfeiltaste gedrückt wird, und haben dann die Möglichkeit, die restlichen Fähigkeiten, die sie in diesem Kurs gelernt haben, einschließlich Sequenz und Schleifenbildung, als Teil des abschließenden Freeplay-Puzzles zu präsentieren.",
           "student_overview": "Verwenden Sie Ereignisse, um eine Geschichte oder ein interaktives Spiel zu erstellen."
@@ -4526,11 +4557,13 @@
         },
         "coursea-2021/Events: The Big Event": {
           "name": "Das große Ereignis",
+          "overview": "In dieser Lektion, die den Kontext einstellt, erlebt die Klasse das Konzept von Ereignissen anhand eines Spiels, in dem sie sich bewegen oder schreien, wenn Sie Tasten auf einer riesigen Fernbedienung drücken.",
           "preparation": "-   Bereiten Sie die Projektion von **Das Bild des Kontrolleurs** vor. - Drucken Sie eine **Bewertung** pro SchülerInnen aus. - Stellen Sie sicher, dass jeder SchülerInnen ein Reflexionsjournal hat.",
           "purpose": "Heute werden die SchülerInnen lernen, Ereignisse von Handlungen zu unterscheiden. Die SchülerInnen werden sehen, wie Aktivitäten unterbrochen werden, indem ein \"Knopf\" auf einer Papierfernbedienung gedrückt wird. Auf dieses Ereignis wird die Klasse mit einer bestimmten Aktion reagieren. Ereignisse werden in der Programmierung häufig verwendet und sollten nach dieser Lektion leicht zu erkennen sein.",
           "student_overview": "Bewegen Sie sich und schreien Sie, wenn Ihre LehrerInnen Knöpfe auf einer riesigen Fernbedienung drücken."
         },
         "coursea-2021/Events in Play Lab": {
+          "name": "Mini-Projekt: Unterwegs mit Play Lab",
           "overview": "In dieser Online-Aktivität haben die SchülerInnen die Möglichkeit, die Verwendung von Ereignissen im Play Lab zu erlernen und alle bisher gelernten Programmierkenntnissen anzuwenden, um ein animiertes Spiel zu erstellen. Es ist die richtige Gelegenheit, kreativ zu werden und in Play Lab eine Geschichte zu erstellen!",
           "preparation": "-   Spielen Sie die Rätsel durch, um mögliche Problembereiche für Ihre Klasse zu finden. - (Optional) Wählen Sie ein paar Rätsel aus, die Sie in der Gruppe mit Ihrer Klasse bearbeiten. - Gehen Sie die **CSF-Unterrichtsempfehlungen** durch. - Stellen Sie sicher, dass jeder SchülerInnen ein Reflexionstagebuch hat.",
           "purpose": "Die SchülerInnen werden heute im Play Lab ihr Verständnis von Ereignissen weiter ausbauen. Ereignisse sind in den meisten Computerprogrammen sehr häufig. In dieser Aktivität verwenden die SchülerInnen Ereignisse, um eine Figur auf dem Bildschirm zu bewegen, Geräusche zu machen und Hintergründe auf der Grundlage von benutzergesteuerten Ereignissen zu ändern.",
@@ -4607,6 +4640,7 @@
           "student_overview": "Lasst uns Schleifen verwenden, um der Erntearbeiterin beim Einsammeln des Gemüses zu helfen!"
         },
         "coursec-2021/Sticker Art with Loops": {
+          "name": "Mini-Projekt: Sticker Art",
           "overview": "Diese **Miniprojekt**-Lektion baut auf dem Verständnis von Schleifen aus den vorherigen Lektionen auf. Die SchülerInnen werden mit dem Künstler einzigartige Kunstwerke schaffen.",
           "preparation": "-   Üben Sie, Ihr eigenes Design zu entwerfen. Notieren Sie, inwiefern sich diese Stufen von allen vorherigen unterscheiden. - Achten Sie darauf, dass jeder SchülerInnen ein Reflexionstagebuch führt.",
           "purpose": "In dieser Reihe wird die Kraft von Schleifen mit kreativen und persönlichen Designs hervorgehoben. In dieser projektbasierten Sequenz können die Teilnehmer auf ihrer eigenen Arbeit aufbauen und erstaunliche Artefakte schaffen.",
@@ -4627,6 +4661,7 @@
           "student_overview": "Erstellen Sie Ihr eigenes Flappy Bird-Spiel ganz nach Belieben und teilen Sie es dann mit Ihren Freunden!"
         },
         "coursec-2021/Events in Play Lab": {
+          "name": "Mini-Projekt: Chase Game",
           "overview": "In dieser Online-Aktivität haben die SchülerInnen die Möglichkeit, die Verwendung von Ereignissen im Play Lab zu erlernen und alle gelernten Codierkenntnisse anzuwenden, um ein animiertes Spiel zu erstellen. Es ist an der Zeit, kreativ zu werden und im Play Lab ein Spiel zu erstellen!",
           "preparation": "-   Spielen Sie die Rätselh, um mögliche Problembereiche für Ihre Klasse zu finden. - Stellen Sie sicher, dass alle SchülerInnen ein Reflexionstagebuch haben.",
           "purpose": "Hier werden die SchülerInnen ihr Verständnis von Ereignissen mithilfe von Play Lab weiter ausbauen. Die SchülerInnen verwenden Ereignisse, um Figuren auf dem Bildschirm zu bewegen, Geräusche zu machen und Hintergründe auf der Grundlage von Benutzereingaben zu ändern. Am Ende der Rätselsequenz haben die SchülerInnen die Möglichkeit, ihre Projekte vorzustellen.",
@@ -4843,6 +4878,7 @@
           "student_overview": "Hilf BB-8 durch Labyrinthe mit Schleifen! "
         },
         "express-2021/Sticker Art with Loops": {
+          "name": "Mini-Projekt: Sticker Art",
           "overview": "Beobachten Sie, wie sich die SchülerInnen sichtlich freuen, wenn sie mit einer kleinen Anzahl von Bausteinen und digitalen Stickern ihre eigenen wunderschönen Designs entwerfen! Diese Lektion baut auf dem Verständnis von Schleifen aus früheren Lektionen auf und gibt den SchülerInnen die Chance, wirklich kreativ zu sein. Diese Aktivität ist fantastisch, um Artefakte für Portfolios oder Eltern-/Lehrerabende herzustellen.",
           "preparation": "-   Üben Sie, Ihr eigenes Design zu entwerfen. Notieren Sie sich, inwiefern sich diese Stufen von allen vorherigen unterscheiden. - Stellen Sie sicher, dass jeder SchülerInnen ein Reflexionsjournal hat.",
           "purpose": "In dieser Reihe wird die Kraft von Schleifen mit kreativen und persönlichen Designs hervorgehoben. In dieser projektbasierten Sequenz können die Teilnehmer auf ihrer eigenen Arbeit aufbauen und erstaunliche Artefakte schaffen.",
@@ -4926,12 +4962,14 @@
           "student_overview": "Funktionen werden Ihnen viel Arbeit ersparen, wenn Sie dem Farmer bei der Ernte helfen!"
         },
         "express-2021/lesson-4": {
+          "name": "Text und Eingabeaufforderungen",
           "overview": "In dieser Stunde zum **Aufbau von Fähigkeiten** üben die SchülerInnen mit Variablen in Sprite Lab. ",
           "preparation": "Spielen Sie die Levels und sehen Sie sich die Unterrichtsfolien an.",
           "purpose": "Variablen werden in diesem Kurs zum Speichern und Ändern von Daten verwendet. Zu diesem Zeitpunkt werden die SchülerInnen lediglich Werte speichern und abrufen, ohne sie zu verändern. In späteren Unterrichtsstunden werden die SchülerInnen numerische Werte speichern und sie im Laufe der Zeit verändern, um z. B. den Punktestand eines Spielers in einem Spiel nachzuverfolgen.",
           "student_overview": "In dieser Stunde übt ihr die Verwendung von Variablen in Sprite Lab."
         },
         "express-2021/Variables with Artist": {
+          "name": "Variablen mit dem Künstler verwenden",
           "overview": "In dieser Stunde beschäftigen sich die SchülerInnen mit der Erstellung sich wiederholender Designs unter Verwendung von Variablen in der Artist-Umgebung. Die SchülerInnen lernen, wie Variablen verwendet werden können, um Code leichter zu schreiben und leichter zu lesen. Nach den Aufgaben unter Anleitung erreichen die SchülerInnen ein Level der freie Gestaltung, wo sie zeigen können, was sie gelernt haben, und ihre eigenen Designs erstellen.",
           "preparation": "-   Spielen Sie die Rätsel durch, um mögliche Problembereiche für Ihre Klasse zu finden. - Stellen Sie sicher, dass jeder SchülerInnen ein Reflexionsjournal hat.",
           "purpose": "Variablen sind im Wesentlichen Platzhalter für Werte, die zum Zeitpunkt der Ausführung Ihres Programms noch unbekannt sind, oder für Werte, die sich während der Ausführung eines Programms ändern können. Sie sind für die Erstellung von dynamischem Code von entscheidender Bedeutung, da sie es ermöglichen, dass sich Ihr Programm auf der Grundlage einer beliebigen Anzahl von potenziellen Änderungen ändert und wächst. In dieser Phase wird die Verwendung von Variablen vertieft, wobei die grundlegendsten Möglichkeiten zum Festlegen und Verwenden von Variablen genutzt werden.",
@@ -5034,11 +5072,13 @@
         },
         "pre-express-2021/A Royal Battle with Events": {
           "name": "Royal Battle mit Ereignissen",
+          "overview": "In diesem **Mini-Projekt** haben die Schüler die Möglichkeit, die Events im Play Lab zu nutzen und all ihre erlernten Programmierkenntnisse anzuwenden, um ein animiertes Spiel zu erstellen. ",
           "preparation": "-   Spielen Sie die Rätsel durch, um mögliche Problembereiche für Ihre Klasse zu finden. - (Optional) Wählen Sie ein paar Rätsel aus, die Sie in der Gruppe mit Ihrer Klasse bearbeiten. - Stellen Sie sicher, dass jeder SchülerInnen ein Reflexionsjournal hat.",
           "purpose": "In dieser Online-Aktivität lernen die SchülerInnen, wie man Ereignisse in Play Lab verwendet. Sie beginnen damit, dass sie dem Ritter beibringen, sich zu bewegen, wenn eine Pfeiltaste gedrückt wird, und haben dann die Möglichkeit, die restlichen Fähigkeiten, die sie in diesem Kurs gelernt haben, einschließlich Sequenz und Schleifenbildung, als Teil des abschließenden Freeplay-Puzzles zu präsentieren.",
           "student_overview": "Verwenden Sie Ereignisse, um eine Geschichte oder ein interaktives Spiel zu erstellen."
         },
         "coursee-2021/Simon Says": {
+          "name": "Folgen Sie dem Algorithmus",
           "overview": "In dieser Lektion spielen die SchülerInnen ein Spiel, das sie zum Nachdenken darüber anregen soll, wie Befehle gegeben werden müssen, um das richtige Ergebnis zu erzielen. Auf diese Weise können sie in den kommenden Lektionen leichter zu Sprite Lab übergehen.",
           "preparation": "-   Spielen Sie die Rätselh, um mögliche Problembereiche für Ihre Klasse zu finden. - Stellen Sie sicher, dass alle SchülerInnen ein Reflexionstagebuch haben.",
           "purpose": "Diese Lektion soll die SchülerInnen darauf vorbereiten, über eines der wichtigsten Programmierkonzepte in Sprite Lab nachzudenken: Verhalten.",
@@ -5101,6 +5141,7 @@
           "student_overview": "Mehr geschachtelte Schleifen! Dieses Mal können Sie mit geschachtelten Schleifen eine atemberaubende Zeichnung erstellen."
         },
         "coursee-2021/Nested Loops in Frozen": {
+          "name": "Mini-Projekt: Entwerfe eine Schneeflocke",
           "overview": "Mit dem Wissen, wie man Schleifen aufschichten kann, können die SchülerInnen so viele schöne Dinge kreieren. Diese Lektion führt sie durch eine Reihe von Übungen, um ihnen zu helfen, ihre eigenen professionelle Bilder mit Annas und Elsas ausgezeichneten Eislaufkünsten zu erstellen!",
           "preparation": "-   Spielen Sie die Rätsel durch, um mögliche Problembereiche für Ihre Klasse zu finden. - Stellen Sie sicher, dass jeder SchülerInnen ein Reflexionstagebuch hat.",
           "purpose": "In dieser Lektion wenden die SchülerInnen ihre Kenntnisse über verschachtelte Schleifen an, um Bilder zu erstellen, die sie gerne weitergeben möchten.",

@@ -208,6 +208,9 @@ Resources:
             Action: logs:*
             Resource: !Sub 'arn:aws:logs:${AWS::Region}:${AWS::AccountId}:log-group:/admin/*'
       ManagedPolicyArns: [!Ref DevPermissions]
+      Tags:
+        - Key: sqlworkbench-team
+          Value: codedotorg
   DataAnalystRole:
     Type: AWS::IAM::Role
     Properties:
@@ -230,7 +233,7 @@ Resources:
         - arn:aws:iam::aws:policy/AmazonRedshiftQueryEditorV2FullAccess
       Tags:
         - Key: sqlworkbench-team
-          Value: red-team
+          Value: codedotorg
 
   DataAnalystPolicy:
     Type: AWS::IAM::ManagedPolicy
@@ -310,6 +313,8 @@ Resources:
               - 'redshift:DescribeClusterDbRevisions'
               - 'redshift:DescribeClusterSnapshots'
               - 'redshift:DescribeClusterSubnetGroups'
+              - 'redshift:ViewQueriesInConsole'
+              - 'redshift:ViewQueriesFromConsole'
               - 'events:ListRules'
             Resource: '*'
 
@@ -339,6 +344,9 @@ Resources:
       ManagedPolicyArns:
         - !Ref ContributorS3Policy
         - !Ref ContributorSecretsPolicy
+      Tags:
+        - Key: sqlworkbench-team
+          Value: codedotorg
 
   GoogleContributorIDs:
     Type: AWS::SSM::Parameter

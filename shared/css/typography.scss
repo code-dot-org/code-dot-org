@@ -1,4 +1,4 @@
-@import 'color', 'font', 'barlow-semi-condensed-font';
+@import "color", "font", "barlow-semi-condensed-font";
 
 // This stylesheet can be imported to maintain typographic
 // consistency across Dashboard and Pegasus sites.
@@ -7,6 +7,29 @@
 
 // We're using mixins to style semantic tags and also creating
 // identical classes for potential use on other elements if needed.
+
+// ----------------------------------------
+// v 1.0.1
+// ----------------------------------------
+
+// Values
+// font-size uses rem
+// - works when the root font-size is 100% which uses the
+// browser default font-size of 16px (3rem = 16 x 3 = 48px)
+
+// margin uses em
+// - sets the margin relative to the parent element rather than the root
+// example:
+// - 0.5rem = 8px margin >>> gets value from root 16px
+// - 0.5em = font-size / 2 >>> gets value from h1 3rem (48px) / 2 = 24px margin
+
+// Read more about rem vs em:
+// https://www.digitalocean.com/community/tutorials/css-rem-vs-em-units
+
+// line-height uses unitless numbers
+// - this multiplies the line-height by the element's font-size
+// and is the preferred way to set line-height according to Mozilla
+// https://developer.mozilla.org/en-US/docs/Web/CSS/line-height
 
 // ----------------------------------------
 
@@ -19,6 +42,7 @@
 // - example: h3.heading-sm
 
 // Use @include [mixin-name] in stylesheets for widespread use.
+
 /* — example: all h3s in a ul need to look like h5s
     ul.icon-list {
       h3 { @include heading-sm }
@@ -34,37 +58,37 @@
 @mixin heading-xxl {
   @include heading-common;
   font-family: $barlowSemiCondensed-semibold;
-  font-size: 3em;
+  font-size: 3rem;
 }
 
 @mixin heading-xl {
   @include heading-common;
   font-family: $barlowSemiCondensed-semibold;
-  font-size: 2.125em;
+  font-size: 2.125rem;
 }
 
 @mixin heading-lg {
   @include heading-common;
   font-family: $barlowSemiCondensed-semibold;
-  font-size: 1.75em;
+  font-size: 1.75rem;
 }
 
 @mixin heading-md {
   @include heading-common;
-  font-family: $barlowSemiCondensed-semibold;
-  font-size: 1.5em;
+  font-family: $barlowSemiCondensed-medium;
+  font-size: 1.5rem;
 }
 
 @mixin heading-sm {
   @include heading-common;
   font-family: $gotham-bold, sans-serif;
-  font-size: 1.25em;
+  font-size: 1.25rem;
 }
 
 @mixin heading-xs {
   @include heading-common;
   font-family: $gotham-bold, sans-serif;
-  font-size: 1em;
+  font-size: 1rem;
 }
 
 // Paragraph styles
@@ -77,21 +101,21 @@
 @mixin body-one {
   @include paragraph-common;
   font-family: $gotham-regular, sans-serif;
-  font-size: 1em;
+  font-size: 1rem;
 }
 
 @mixin body-two {
   @include paragraph-common;
   font-family: $gotham-regular, sans-serif;
-  font-size: .875em;
+  font-size: 0.875rem;
 }
 
 @mixin overline {
   @include paragraph-common;
   font-family: $gotham-bold, sans-serif;
-  font-size: .75em;
+  font-size: 0.75rem;
   text-transform: uppercase;
-  letter-spacing: .5px;
+  letter-spacing: 0.5px;
 }
 
 @mixin strong {
@@ -105,34 +129,46 @@
 // Caption styles
 @mixin figcaption {
   font-family: $gotham-bold, sans-serif;
-  font-size: .875em;
-  margin: .5em 0 1em;
+  font-size: 0.875rem;
+  margin: 0.5em 0 1em;
   line-height: 1.2;
 }
 
 // ----------------------------------------
 
 // Headings
-h1, .heading-xxl { @include heading-xxl }
-h2, .heading-xl { @include heading-xl }
-h3, .heading-lg { @include heading-lg }
-h4, .heading-md { @include heading-md }
-h5, .heading-sm { @include heading-sm }
-h6, .heading-xs { @include heading-xs }
+h1,
+.heading-xxl { @include heading-xxl; }
+h2,
+.heading-xl { @include heading-xl; }
+h3,
+.heading-lg { @include heading-lg; }
+h4,
+.heading-md { @include heading-md; }
+h5,
+.heading-sm { @include heading-sm; }
+h6,
+.heading-xs { @include heading-xs; }
 
 // Paragraphs
 // Use on default paragraphs
-p, .body-one { @include body-one }
+p,
+.body-one { @include body-one; }
 // Use on course block descriptions or anywhere
 // else that needs smaller paragraph text
-p.body-two, .body-two { @include body-two }
+p.body-two,
+.body-two { @include body-two; }
 // Use on small uppercase labels or descriptions
-p.overline, .overline { @include overline }
+p.overline,
+.overline { @include overline; }
 // Use in paragraphs to bold text
-strong, .strong { @include strong }
+strong,
+.strong { @include strong; }
 // Use in paragraphs to italicize text
-em, .em { @include em }
+em,
+.em { @include em; }
 
 // Captions
 // Use on figcaption elements that accompany images or videos
-figcaption, .figcaption { @include figcaption }
+figcaption,
+.figcaption { @include figcaption; }

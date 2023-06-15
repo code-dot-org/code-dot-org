@@ -5,36 +5,146 @@
         "CSD U1 IO Pet Chooser 2_2021": {
           "Yes": "Так",
           "No": "Ні",
-          "cute": "милий"
+          "cute": "милий",
+          "The Ultimate": "Ідеальний",
+          "Pet Chooser!": "підбір улюбленця!",
+          "Click here to start!": "Натисніть тут, щоб почати!",
+          "Do you like going outside?": "Ти любиш виходити на вулицю?",
+          "Are you allergic to pet fur?": "Маєш алергію на шерсть домашніх тварин?",
+          "Should your pet be cute or creepy?": "Твій домашній улюбленець повинен бути милим чи дивним?",
+          "creepy": "Дивний",
+          "Would you rather go with the crowd or be different?": "Ти хочеш бути таким як всі чи вирізнятися з натовпу?",
+          "Crowd": "Як всі",
+          "Different": "Вирізнятися",
+          "How cute should the pet be?": "Наскільки милим має бути домашній улюбленець?",
+          "Very Cute": "Дуже милий",
+          "Medium Cute": "Досить милий",
+          "Should the pet be noisy?": "Чи має домашній улюбленець шуміти?",
+          "Do you want to play with the pet?": "Чи хочеш ти гратися з домашнім улюбленцем?",
+          "Get a goat!": "Заведи козу!",
+          "Find it!": "Знайти!",
+          "Get a dog!": "Заведи собаку!",
+          "Get a hamster!": "Заведи хом'яка!",
+          "Get a rat!": "Заведи щура!",
+          "Get a tarantula!": "Заведи тарантула!",
+          "Get a scorpion!": "Заведи скорпіона!",
+          "Get a parrot!": "Заведи папугу!",
+          "Get a bettafish!": "Заведи бійцівську рибку!",
+          "Closest pet shop:": "Найближчий зоомагазин:",
+          "Downtown Pets and More": "Downtown Pets and More",
+          "1584 Maple St": "1584 Мейпл Стріт",
+          "Open Now!": "Працює зараз!"
         },
         "CSD U1 IO Pet Chooser 2_2022": {
           "Yes": "Так",
           "No": "Ні",
-          "cute": "милий"
+          "cute": "милий",
+          "The Ultimate": "Ідеальний",
+          "Pet Chooser!": "підбір улюбленця!",
+          "Click here to start!": "Натисніть тут, щоб почати!",
+          "Do you like going outside?": "Ти любиш виходити на вулицю?",
+          "Are you allergic to pet fur?": "Маєш алергію на шерсть домашніх тварин?",
+          "Should your pet be cute or creepy?": "Твій домашній улюбленець повинен бути милим чи дивним?",
+          "creepy": "Дивний",
+          "Would you rather go with the crowd or be different?": "Ти хочеш бути таким як всі чи вирізнятися з натовпу?",
+          "Crowd": "Як всі",
+          "Different": "Вирізнятися",
+          "How cute should the pet be?": "Наскільки милим має бути домашній улюбленець?",
+          "Very Cute": "Дуже милий",
+          "Medium Cute": "Досить милий",
+          "Should the pet be noisy?": "Чи має домашній улюбленець шуміти?",
+          "Do you want to play with the pet?": "Чи хочеш ти гратися з домашнім улюбленцем?",
+          "Get a goat!": "Заведи козу!",
+          "Find it!": "Знайти!",
+          "Get a dog!": "Заведи собаку!",
+          "Get a hamster!": "Заведи хом'яка!",
+          "Get a rat!": "Заведи щура!",
+          "Get a tarantula!": "Заведи тарантула!",
+          "Get a scorpion!": "Заведи скорпіона!",
+          "Get a parrot!": "Заведи папугу!",
+          "Get a bettafish!": "Заведи бійцівську рибку!",
+          "Closest pet shop:": "Найближчий зоомагазин:",
+          "Downtown Pets and More": "Downtown Pets and More",
+          "1584 Maple St": "1584 Мейпл Стріт",
+          "Open Now!": "Працює зараз!"
         },
         "CSD U1 IO Pet Chooser_2021": {
           "Yes": "Так",
           "No": "Ні",
-          "cute": "милий"
+          "cute": "милий",
+          "The Ultimate": "Ідеальний",
+          "Pet Chooser!": "підбір улюбленця!",
+          "Click here to start!": "Натисніть тут, щоб почати!",
+          "Do you like going outside?": "Ти любиш виходити на вулицю?",
+          "Are you allergic to pet fur?": "Маєш алергію на шерсть домашніх тварин?",
+          "Should your pet be cute or creepy?": "Твій домашній улюбленець повинен бути милим чи дивним?",
+          "creepy": "Дивний",
+          "Would you rather go with the crowd or be different?": "Ти хочеш бути таким як всі чи вирізнятися з натовпу?",
+          "Crowd": "Як всі",
+          "Different": "Вирізнятися",
+          "How cute should the pet be?": "Наскільки милим має бути домашній улюбленець?",
+          "Very Cute": "Дуже милий",
+          "Medium Cute": "Досить милий",
+          "Should the pet be noisy?": "Чи має домашній улюбленець шуміти?",
+          "Do you want to play with the pet?": "Чи хочеш ти гратися з домашнім улюбленцем?",
+          "Get a goat!": "Заведи козу!",
+          "Get a dog!": "Заведи собаку!",
+          "Get a hamster!": "Заведи хом'яка!",
+          "Get a rat!": "Заведи щура!",
+          "Get a tarantula!": "Заведи тарантула!",
+          "Get a scorpion!": "Заведи скорпіона!",
+          "Get a parrot!": "Заведи папугу!",
+          "Get a bettafish!": "Заведи бійцівську рибку!"
         },
         "CSD U1 IO Pet Chooser_2022": {
           "Yes": "Так",
           "No": "Ні",
-          "cute": "милий"
+          "cute": "милий",
+          "The Ultimate": "Ідеальний",
+          "Pet Chooser!": "підбір улюбленця!",
+          "Click here to start!": "Натисніть тут, щоб почати!",
+          "Do you like going outside?": "Ти любиш виходити на вулицю?",
+          "Are you allergic to pet fur?": "Маєш алергію на шерсть домашніх тварин?",
+          "Should your pet be cute or creepy?": "Твій домашній улюбленець повинен бути милим чи дивним?",
+          "creepy": "Дивний",
+          "Would you rather go with the crowd or be different?": "Ти хочеш бути таким як всі чи вирізнятися з натовпу?",
+          "Crowd": "Як всі",
+          "Different": "Вирізнятися",
+          "How cute should the pet be?": "Наскільки милим має бути домашній улюбленець?",
+          "Very Cute": "Дуже милий",
+          "Medium Cute": "Досить милий",
+          "Should the pet be noisy?": "Чи має домашній улюбленець шуміти?",
+          "Do you want to play with the pet?": "Чи хочеш ти гратися з домашнім улюбленцем?",
+          "Get a goat!": "Заведи козу!",
+          "Get a dog!": "Заведи собаку!",
+          "Get a hamster!": "Заведи хом'яка!",
+          "Get a rat!": "Заведи щура!",
+          "Get a tarantula!": "Заведи тарантула!",
+          "Get a scorpion!": "Заведи скорпіона!",
+          "Get a parrot!": "Заведи папугу!",
+          "Get a bettafish!": "Заведи бійцівську рибку!"
         },
         "CSD U1 IO Story_2021": {
           "Name": "Ім’я",
           "Color": "Колір",
           "Food": "Їжа",
           "City": "Місто",
-          "text": "текст"
+          "text": "текст",
+          "Fill in the blanks to create a custom story!": "Заповніть пропуски, щоб створити власну історію!",
+          "Emotion": "Емоція",
+          "Make a Sci-Fi Story!": "Створити науково-фантастичну історію!",
+          "Make a Western Story!": "Створити історію у стилі вестерн!"
         },
         "CSD U1 IO Story_2022": {
           "Name": "Ім’я",
           "Color": "Колір",
           "Food": "Їжа",
           "City": "Місто",
-          "text": "текст"
+          "text": "текст",
+          "Fill in the blanks to create a custom story!": "Заповніть пропуски, щоб створити власну історію!",
+          "Emotion": "Емоція",
+          "Make a Sci-Fi Story!": "Створити науково-фантастичну історію!",
+          "Make a Western Story!": "Створити історію у стилі вестерн!"
         },
         "CSD U1 processing bday_2021": {
           "1": "1",
@@ -56,7 +166,24 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "20": "20",
+          "Choose your Birthday!": "Обери свій День народження!",
+          "Find out if it's your birthday!": "Дізнайся, чи сьогодні твій День народження!",
+          "January": "Січень",
+          "February": "Лютий",
+          "March": "Березень",
+          "April": "Квітень",
+          "May": "Травень",
+          "June": "Червень",
+          "July": "Липень",
+          "August": "Серпень",
+          "September": "Вересень",
+          "October": "Жовтень",
+          "November": "Листопад",
+          "December": "Грудень",
+          "It's your birthday!": "Сьогодні ваш День народження!",
+          "It's not your birthday yet this year!": "Ваш День народження цього року ще не наступив!",
+          "It was already your birthday this year!!": "Цього року у вас вже був День народження!!!"
         },
         "CSD U1 processing bday_2022": {
           "1": "1",
@@ -78,17 +205,40 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "20": "20",
+          "Choose your Birthday!": "Обери свій День народження!",
+          "Find out if it's your birthday!": "Дізнайся, чи сьогодні твій День народження!",
+          "January": "Січень",
+          "February": "Лютий",
+          "March": "Березень",
+          "April": "Квітень",
+          "May": "Травень",
+          "June": "Червень",
+          "July": "Липень",
+          "August": "Серпень",
+          "September": "Вересень",
+          "October": "Жовтень",
+          "November": "Листопад",
+          "December": "Грудень",
+          "It's your birthday!": "Сьогодні ваш День народження!",
+          "It's not your birthday yet this year!": "Ваш День народження цього року ще не наступив!",
+          "It was already your birthday this year!!": "Цього року у вас вже був День народження!!!"
         },
         "CSD U1 processing fastest_2021": {
           "s": "s",
           "k": "k",
-          "0": "0"
+          "0": "0",
+          "Which finger is the FASTEST?": "Який палець НАЙШВИДШИЙ?",
+          "Put one finger on the 's' key and the other on the 'k' key. Then click as fast as you can.": "Поставте один палець на клавішу «s», а інший — на клавішу «k». Натискайте клавіші максимально швидко.",
+          "It's a tie!": "Нічия!"
         },
         "CSD U1 processing fastest_2022": {
           "s": "s",
           "k": "k",
-          "0": "0"
+          "0": "0",
+          "Which finger is the FASTEST?": "Який палець НАЙШВИДШИЙ?",
+          "Put one finger on the 's' key and the other on the 'k' key. Then click as fast as you can.": "Поставте один палець на клавішу «s», а інший — на клавішу «k». Натискайте клавіші максимально швидко.",
+          "It's a tie!": "Нічия!"
         },
         "CSD U1 processing guess_2021": {
           "1": "1",
@@ -111,7 +261,73 @@
           "18": "18",
           "19": "19",
           "20": "20",
-          "text": "текст"
+          "text": "текст",
+          "I'm thinking of a number from 1 to 100.": "Я думаю про число від 1 до 100.",
+          "Can you guess it?": "Зможеш його вгадати?",
+          "You haven't guessed yet.": "Не вгадав.",
+          "Your guess:": "Твоє число:",
+          "You only have 5 tries.": "У тебе є лише 5 спроб.",
+          "41": "41",
+          "42": "42",
+          "43": "43",
+          "44": "44",
+          "45": "45",
+          "46": "46",
+          "47": "47",
+          "48": "48",
+          "49": "49",
+          "50": "50",
+          "51": "51",
+          "52": "52",
+          "53": "53",
+          "54": "54",
+          "55": "55",
+          "56": "56",
+          "57": "57",
+          "58": "58",
+          "59": "59",
+          "60": "60",
+          "61": "61",
+          "62": "62",
+          "63": "63",
+          "64": "64",
+          "65": "65",
+          "66": "66",
+          "67": "67",
+          "68": "68",
+          "69": "69",
+          "70": "70",
+          "71": "71",
+          "72": "72",
+          "73": "73",
+          "74": "74",
+          "75": "75",
+          "76": "76",
+          "77": "77",
+          "78": "78",
+          "79": "79",
+          "80": "80",
+          "81": "81",
+          "83": "83",
+          "84": "84",
+          "85": "85",
+          "86": "86",
+          "87": "87",
+          "88": "88",
+          "89": "89",
+          "91": "91",
+          "92": "92",
+          "93": "93",
+          "94": "94",
+          "95": "95",
+          "96": "96",
+          "97": "97",
+          "98": "98",
+          "99": "99",
+          "You won!": "Ти виграв!",
+          "The number was": "Було загадане число",
+          "No more tries!": "Спроби скінчилися!",
+          "?": "?"
         },
         "CSD U1 processing guess_2022": {
           "1": "1",
@@ -134,21 +350,179 @@
           "18": "18",
           "19": "19",
           "20": "20",
-          "text": "текст"
+          "text": "текст",
+          "I'm thinking of a number from 1 to 100.": "Я думаю про число від 1 до 100.",
+          "Can you guess it?": "Зможеш його вгадати?",
+          "You haven't guessed yet.": "Не вгадав.",
+          "Your guess:": "Твоє число:",
+          "You only have 5 tries.": "У тебе є лише 5 спроб.",
+          "41": "41",
+          "42": "42",
+          "43": "43",
+          "44": "44",
+          "45": "45",
+          "46": "46",
+          "47": "47",
+          "48": "48",
+          "49": "49",
+          "50": "50",
+          "51": "51",
+          "52": "52",
+          "53": "53",
+          "54": "54",
+          "55": "55",
+          "56": "56",
+          "57": "57",
+          "58": "58",
+          "59": "59",
+          "60": "60",
+          "61": "61",
+          "62": "62",
+          "63": "63",
+          "64": "64",
+          "65": "65",
+          "66": "66",
+          "67": "67",
+          "68": "68",
+          "69": "69",
+          "70": "70",
+          "71": "71",
+          "72": "72",
+          "73": "73",
+          "74": "74",
+          "75": "75",
+          "76": "76",
+          "77": "77",
+          "78": "78",
+          "79": "79",
+          "80": "80",
+          "81": "81",
+          "83": "83",
+          "84": "84",
+          "85": "85",
+          "86": "86",
+          "87": "87",
+          "88": "88",
+          "89": "89",
+          "91": "91",
+          "92": "92",
+          "93": "93",
+          "94": "94",
+          "95": "95",
+          "96": "96",
+          "97": "97",
+          "98": "98",
+          "99": "99",
+          "You won!": "Ти виграв!",
+          "The number was": "Було загадане число",
+          "No more tries!": "Спроби скінчилися!",
+          "?": "?"
         },
         "CSD U1 processing live_2021": {
           "bear": "Ведмідь",
-          "rat": "пацюк"
+          "rat": "пацюк",
+          "Where should you live?": "Де вам краще жити?",
+          "Answer the questions for advice on where to live. ": "Дайте відповідь на питання, щоб отримати пораду, де жити. ",
+          "You should live in a big city.": "Вам краще жити у великому місті.",
+          "What do you like to do for fun?": "Як ви любите розважатися?",
+          "visit museums": "відвідувати музеї",
+          "cookout with friends": "пікніки з друзями",
+          "go to sports games": "ходити на спортивні заходи",
+          "go camping": "ходити в походи",
+          "How do you like to get around?": "Як ви любите пересуватися?",
+          "biking": "велосипедом",
+          "public transit": "громадським транспортом",
+          "drive": "за кермом",
+          "What animals are you okay with?": "До яких тварин ви ставитеся спокійно?",
+          "racoon": "єнот",
+          "coyote": "койот",
+          "What food do you like?": "Яка їжа вам подобається?",
+          "home cooked meals": "домашня їжа",
+          "trying new restaurants": "їжа в нових ресторанах",
+          "my regular restaurants": "їжа в моїх звичних ресторанах",
+          "delivery/takeout": "їжа на виніс/з доставкою",
+          "Start!": "Почали!",
+          "Next Question": "Наступне питання."
         },
         "CSD U1 processing live_2022": {
           "bear": "Ведмідь",
-          "rat": "пацюк"
+          "rat": "пацюк",
+          "Where should you live?": "Де вам краще жити?",
+          "Answer the questions for advice on where to live. ": "Дайте відповідь на питання, щоб отримати пораду, де жити. ",
+          "You should live in a big city.": "Вам краще жити у великому місті.",
+          "What do you like to do for fun?": "Як ви любите розважатися?",
+          "visit museums": "відвідувати музеї",
+          "cookout with friends": "пікніки з друзями",
+          "go to sports games": "ходити на спортивні заходи",
+          "go camping": "ходити в походи",
+          "How do you like to get around?": "Як ви любите пересуватися?",
+          "biking": "велосипедом",
+          "public transit": "громадським транспортом",
+          "drive": "за кермом",
+          "What animals are you okay with?": "До яких тварин ви ставитеся спокійно?",
+          "racoon": "єнот",
+          "coyote": "койот",
+          "What food do you like?": "Яка їжа вам подобається?",
+          "home cooked meals": "домашня їжа",
+          "trying new restaurants": "їжа в нових ресторанах",
+          "my regular restaurants": "їжа в моїх звичних ресторанах",
+          "delivery/takeout": "їжа на виніс/з доставкою",
+          "Start!": "Почали!",
+          "Next Question": "Наступне питання."
         },
         "CSD U1 processing npark_2021": {
-          "Sorry!": "Вибачте!"
+          "Sorry!": "Вибачте!",
+          "National Park Quiz": "Вікторина \"Національні парки\"",
+          "Start!": "Почали!",
+          "What was the first national park?": "Назвіть перший національний парк.",
+          "Yosemite": "Йосеміті",
+          "Yellowstone": "Йеллоустоун",
+          "Acadia": "Акадія",
+          "Great Smoky Mountains": " Грейт Смокі Маунтінс",
+          "Which is the largest national park?": "Який найбільший національний парк?",
+          "Wrangell-St. Elias": "Врангель-Сент-Еліас",
+          "Death Valley": "Долина Смерті",
+          "Denali": "Деналі",
+          "Which national park gets the most visitors?": "Який національний парк має найбільше відвідувачів?",
+          "Grand Canyon": "Великий Каньйон",
+          "Which national park has the largest tree in the world?": "У якому національному парку розташоване найбільше дерево у світі?",
+          "Sequoia": "Секвойя",
+          "Redwood": "Редвуд",
+          "Shenandoah": "Шенандоа",
+          "Olympic": "Олімпійський",
+          "Yellowstone was the first National Park, created by President Ulysses S. Grant in 1872": "Йеллоустоун був першим національним парком, створеним президентом Улісом С. Грантом у 1872 році",
+          "Next Question": "Наступне питання.",
+          "Wrangell-St. Elias is the largest national park, even bigger than many countries!": "Врангель-Сент-Еліас - найбільший національний парк, навіть більший за багато країн!",
+          "Great Smoky Mountains is the most visited, with more than 11 million visitors every year.": "Найбільш відвідуваним є парк \"Грейт-Смокі-Маунтінс\", який щороку відвідують понад 11 мільйонів туристів.",
+          "Sequoia is home to the biggest tree in the world, the General Sherman Tree.": "Секвойя є домом для найбільшого дерева у світі - Дерева Генерала Шермана.",
+          "Play Again": "Зіграти ще раз"
         },
         "CSD U1 processing npark_2022": {
-          "Sorry!": "Вибачте!"
+          "Sorry!": "Вибачте!",
+          "National Park Quiz": "Вікторина \"Національні парки\"",
+          "Start!": "Почали!",
+          "What was the first national park?": "Назвіть перший національний парк.",
+          "Yosemite": "Йосеміті",
+          "Yellowstone": "Йеллоустоун",
+          "Acadia": "Акадія",
+          "Great Smoky Mountains": " Грейт Смокі Маунтінс",
+          "Which is the largest national park?": "Який найбільший національний парк?",
+          "Wrangell-St. Elias": "Врангель-Сент-Еліас",
+          "Death Valley": "Долина Смерті",
+          "Denali": "Деналі",
+          "Which national park gets the most visitors?": "Який національний парк має найбільше відвідувачів?",
+          "Grand Canyon": "Великий Каньйон",
+          "Which national park has the largest tree in the world?": "У якому національному парку розташоване найбільше дерево у світі?",
+          "Sequoia": "Секвойя",
+          "Redwood": "Редвуд",
+          "Shenandoah": "Шенандоа",
+          "Olympic": "Олімпійський",
+          "Yellowstone was the first National Park, created by President Ulysses S. Grant in 1872": "Йеллоустоун був першим національним парком, створеним президентом Улісом С. Грантом у 1872 році",
+          "Next Question": "Наступне питання.",
+          "Wrangell-St. Elias is the largest national park, even bigger than many countries!": "Врангель-Сент-Еліас - найбільший національний парк, навіть більший за багато країн!",
+          "Great Smoky Mountains is the most visited, with more than 11 million visitors every year.": "Найбільш відвідуваним є парк \"Грейт-Смокі-Маунтінс\", який щороку відвідують понад 11 мільйонів туристів.",
+          "Sequoia is home to the biggest tree in the world, the General Sherman Tree.": "Секвойя є домом для найбільшого дерева у світі - Дерева Генерала Шермана.",
+          "Play Again": "Зіграти ще раз"
         },
         "CSD U1 processing writers_2021": {
           "1": "1",
@@ -170,7 +544,62 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "20": "20",
+          "Enter your Birthday!": "Введіть дату свого Дня народження!",
+          "Find a writer!": "Знайдіть письменника!",
+          "January": "Січень",
+          "February": "Лютий",
+          "March": "Березень",
+          "April": "Квітень",
+          "May": "Травень",
+          "June": "Червень",
+          "July": "Липень",
+          "August": "Серпень",
+          "September": "Вересень",
+          "October": "Жовтень",
+          "November": "Листопад",
+          "December": "Грудень",
+          "1998": "1998",
+          "1999": "1999",
+          "2000": "2000",
+          "2001": "2001",
+          "2002": "2002",
+          "2003": "2003",
+          "2004": "2004",
+          "2005": "2005",
+          "2006": "2006",
+          "2007": "2007",
+          "2008": "2008",
+          "2009": "2009",
+          "2010": "2010",
+          "2011": "2011",
+          "2012": "2012",
+          "2013": "2013",
+          "2014": "2014",
+          "2015": "2015",
+          "Anchee Min": "Анчі Мін",
+          "image by Slowking4, GFDL 1.2": "автор Slowking4, GFDL 1.2",
+          "You were born on a": "Ви народилися у",
+          "Monday": "Понеділок",
+          "just like": "в один день з",
+          "N. Scott Momaday": "Наварре Скотт Момадей ",
+          "public domain image": "зображення з відкритих джерел",
+          "Tuesday": "Вівторок",
+          "Toni Morrison": "Тоні Моррісон",
+          "image by John Mathew Smith, CC-BY-SA 2.0": "автор фото Джон Метью Сміт, CC-BY-SA 2.0",
+          "Wednesday": "Середа",
+          "Khaled Hosseini": "Халід Госсейні",
+          "Public Domain Image": "Зображення з відкритих джерел",
+          "Thursday": "Четвер",
+          "Langston Hughes": "Ленгстон Г'юз",
+          "Public Domain": "З відкритих джерел",
+          "Friday": "П'ятниця",
+          "Margaret Atwood": "Маргарет Етвуд",
+          "image by Vanwaffle, CC BY-SA 3.0": "автор фото Vanwaffle, CC BY-SA 3.0",
+          "Saturday": "Субота",
+          "Gabriel Garcia Marquez": "Габріель Гарсія Маркес",
+          "image by Jose Lara, CC-BY-SA": "автор Хосе Лара, CC-BY-SA",
+          "Sunday": "Неділя"
         },
         "CSD U1 processing writers_2022": {
           "1": "1",
@@ -192,39 +621,146 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "20": "20",
+          "Enter your Birthday!": "Введіть дату свого Дня народження!",
+          "Find a writer!": "Знайдіть письменника!",
+          "January": "Січень",
+          "February": "Лютий",
+          "March": "Березень",
+          "April": "Квітень",
+          "May": "Травень",
+          "June": "Червень",
+          "July": "Липень",
+          "August": "Серпень",
+          "September": "Вересень",
+          "October": "Жовтень",
+          "November": "Листопад",
+          "December": "Грудень",
+          "1998": "1998",
+          "1999": "1999",
+          "2000": "2000",
+          "2001": "2001",
+          "2002": "2002",
+          "2003": "2003",
+          "2004": "2004",
+          "2005": "2005",
+          "2006": "2006",
+          "2007": "2007",
+          "2008": "2008",
+          "2009": "2009",
+          "2010": "2010",
+          "2011": "2011",
+          "2012": "2012",
+          "2013": "2013",
+          "2014": "2014",
+          "2015": "2015",
+          "Anchee Min": "Анчі Мін",
+          "image by Slowking4, GFDL 1.2": "автор Slowking4, GFDL 1.2",
+          "You were born on a": "Ви народилися у",
+          "Monday": "Понеділок",
+          "just like": "в один день з",
+          "N. Scott Momaday": "Наварре Скотт Момадей ",
+          "public domain image": "зображення з відкритих джерел",
+          "Tuesday": "Вівторок",
+          "Toni Morrison": "Тоні Моррісон",
+          "image by John Mathew Smith, CC-BY-SA 2.0": "автор фото Джон Метью Сміт, CC-BY-SA 2.0",
+          "Wednesday": "Середа",
+          "Khaled Hosseini": "Халід Госсейні",
+          "Public Domain Image": "Зображення з відкритих джерел",
+          "Thursday": "Четвер",
+          "Langston Hughes": "Ленгстон Г'юз",
+          "Public Domain": "З відкритих джерел",
+          "Friday": "П'ятниця",
+          "Margaret Atwood": "Маргарет Етвуд",
+          "image by Vanwaffle, CC BY-SA 3.0": "автор фото Vanwaffle, CC BY-SA 3.0",
+          "Saturday": "Субота",
+          "Gabriel Garcia Marquez": "Габріель Гарсія Маркес",
+          "image by Jose Lara, CC-BY-SA": "автор Хосе Лара, CC-BY-SA",
+          "Sunday": "Неділя"
         },
         "CSD U1 storage friends_2021": {
-          "Back": "Назад"
+          "Back": "Назад",
+          "Friend List": "Список друзів",
+          "Friend Requests": "Запити на дружбу",
+          "Find Friends": "Знайти друзів",
+          "Friend Finder": "Помічник у пошуку друзів",
+          "Friends": "Друзі"
         },
         "CSD U1 storage friends_2022": {
-          "Back": "Назад"
+          "Back": "Назад",
+          "Friend List": "Список друзів",
+          "Friend Requests": "Запити на дружбу",
+          "Find Friends": "Знайти друзів",
+          "Friend Finder": "Помічник у пошуку друзів",
+          "Friends": "Друзі"
         },
         "CSD U1 storage movies_2021": {
           "Star Wars": "Зоряні війни",
           "Yes": "Так",
           "No": "Ні",
-          "text": "текст"
+          "text": "текст",
+          "-- Select a movie --": "-- Оберіть фільм --",
+          "Harry Potter": "Гаррі Поттер",
+          "The LEGO Movie": "Lego Фільм",
+          "Tangled": "Заплутана історія",
+          "My Neighbor Totoro": "Мій сусід Тоторо",
+          "Select your favorite movie": "Оберіть свій улюблений фільм",
+          "What Should I Watch?": "Що краще подивитися?",
+          "What are you in the mood for?": "Який жанр вам сьогодні до вподоби?",
+          "Choose a Kids Movie: Great for Babysitters!": "Оберіть дитячий фільм: чудово підійде для няні!",
+          "Do you want an animated movie?": "Шукаєте мультфільм?",
+          "You wanted to watch a:": "Ви хотіли подивитися:",
+          "Based on your preferences, we think you should watch:": "На основі ваших уподобань, ми вважаємо, що вам варто подивитися:"
         },
         "CSD U1 storage movies_2022": {
           "Star Wars": "Зоряні війни",
           "Yes": "Так",
           "No": "Ні",
-          "text": "текст"
+          "text": "текст",
+          "-- Select a movie --": "-- Оберіть фільм --",
+          "Harry Potter": "Гаррі Поттер",
+          "The LEGO Movie": "Lego Фільм",
+          "Tangled": "Заплутана історія",
+          "My Neighbor Totoro": "Мій сусід Тоторо",
+          "Select your favorite movie": "Оберіть свій улюблений фільм",
+          "What Should I Watch?": "Що краще подивитися?",
+          "What are you in the mood for?": "Який жанр вам сьогодні до вподоби?",
+          "Choose a Kids Movie: Great for Babysitters!": "Оберіть дитячий фільм: чудово підійде для няні!",
+          "Do you want an animated movie?": "Шукаєте мультфільм?",
+          "You wanted to watch a:": "Ви хотіли подивитися:",
+          "Based on your preferences, we think you should watch:": "На основі ваших уподобань, ми вважаємо, що вам варто подивитися:"
         },
         "CSD U1 storage outfit_2021": {
           "white": "білий",
           "pink": "рожевий",
           "green": "зелений",
           "black": "чорний",
-          "purple": "фіолетовий"
+          "purple": "фіолетовий",
+          "Spring": "Весна",
+          "Summer": "Літо",
+          "Autumn": "Осінь",
+          "Winter": "Зима",
+          "What season is it?": "Який зараз сезон?",
+          "Cloudy": "Хмарно",
+          "Generate Outfit!": "Сформувати вбрання!",
+          "Outfit Picker": "Помічник з вибору одягу",
+          "Clear": "Очистити"
         },
         "CSD U1 storage outfit_2022": {
           "white": "білий",
           "pink": "рожевий",
           "green": "зелений",
           "black": "чорний",
-          "purple": "фіолетовий"
+          "purple": "фіолетовий",
+          "Spring": "Весна",
+          "Summer": "Літо",
+          "Autumn": "Осінь",
+          "Winter": "Зима",
+          "What season is it?": "Який зараз сезон?",
+          "Cloudy": "Хмарно",
+          "Generate Outfit!": "Сформувати вбрання!",
+          "Outfit Picker": "Помічник з вибору одягу",
+          "Clear": "Очистити"
         },
         "CSD U2 RGB intro": {
           "1": "1",
@@ -810,7 +1346,9 @@
           "Blue": "Синя",
           "Yes": "Так",
           "No": "Ні",
-          "Save": "Зберегти"
+          "Save": "Зберегти",
+          "User Profile": "Профіль користувача",
+          "User": "Користувач"
         },
         "CSDU4 Crowdsource App Demo_2018": {
           "About": "Про нас",
@@ -822,7 +1360,9 @@
           "Blue": "Синя",
           "Yes": "Так",
           "No": "Ні",
-          "Save": "Зберегти"
+          "Save": "Зберегти",
+          "User Profile": "Профіль користувача",
+          "User": "Користувач"
         },
         "CSDU4 Crowdsource App Demo_2019": {
           "About": "Про нас",
@@ -834,25 +1374,30 @@
           "Blue": "Синя",
           "Yes": "Так",
           "No": "Ні",
-          "Save": "Зберегти"
+          "Save": "Зберегти",
+          "User Profile": "Профіль користувача",
+          "User": "Користувач"
         },
         "CSDU4 Decision App Demo": {
           "About": "Про нас",
           "I don't know": "Не знаю",
           "When?": "Коли?",
-          "About Us": "Про нас"
+          "About Us": "Про нас",
+          "Why?": "Чому?"
         },
         "CSDU4 Decision App Demo_2018": {
           "About": "Про нас",
           "I don't know": "Не знаю",
           "When?": "Коли?",
-          "About Us": "Про нас"
+          "About Us": "Про нас",
+          "Why?": "Чому?"
         },
         "CSDU4 Decision App Demo_2019": {
           "About": "Про нас",
           "I don't know": "Не знаю",
           "When?": "Коли?",
-          "About Us": "Про нас"
+          "About Us": "Про нас",
+          "Why?": "Чому?"
         },
         "CSDU4 Functionality visible": {
           "Hide": "Приховати",
@@ -880,19 +1425,25 @@
           "About": "Про нас",
           "Submit": "Надіслати",
           "When?": "Коли?",
-          "About Us": "Про нас"
+          "About Us": "Про нас",
+          "Why?": "Чому?",
+          "Next Question": "Наступне питання."
         },
         "CSDU4 Quiz App Demo_2018": {
           "About": "Про нас",
           "Submit": "Надіслати",
           "When?": "Коли?",
-          "About Us": "Про нас"
+          "About Us": "Про нас",
+          "Why?": "Чому?",
+          "Next Question": "Наступне питання."
         },
         "CSDU4 Quiz App Demo_2019": {
           "About": "Про нас",
           "Submit": "Надіслати",
           "When?": "Коли?",
-          "About Us": "Про нас"
+          "About Us": "Про нас",
+          "Why?": "Чому?",
+          "Next Question": "Наступне питання."
         },
         "CSDU6 - UI and Inputs - getNumber": {
           "+": "+",
@@ -980,44 +1531,132 @@
           "8": "8"
         },
         "csd u5 recommender sample": {
-          "Start": "Початок"
+          "Start": "Початок",
+          "Where should you go on vacation?": "Куди поїхати у відпустку?",
+          "What is your favorite food?": "Яка ваша улюблена їжа?",
+          "What is the best superpower?": "Яка найкраща суперсила?",
+          "invisibility": "невидимість",
+          "super strength": "надміцність",
+          "teleport": "телепортація",
+          "Which animal do you like the best?": "Яка тварина вам подобається найбільше?",
+          "You should go to the beach!": "Вам слід їхати на пляж!",
+          "You should go to an amusement park!": "Вам слід піти в парк розваг!",
+          "You should go to a national park!": "Вам краще поїхати в національний парк!",
+          "You should go to a big city!": "Вам варто поїхати у велике місто!"
         },
         "csd u5 recommender sample_2019": {
-          "Start": "Початок"
+          "Start": "Початок",
+          "Where should you go on vacation?": "Куди поїхати у відпустку?",
+          "What is your favorite food?": "Яка ваша улюблена їжа?",
+          "What is the best superpower?": "Яка найкраща суперсила?",
+          "invisibility": "невидимість",
+          "super strength": "надміцність",
+          "teleport": "телепортація",
+          "Which animal do you like the best?": "Яка тварина вам подобається найбільше?",
+          "You should go to the beach!": "Вам слід їхати на пляж!",
+          "You should go to an amusement park!": "Вам слід піти в парк розваг!",
+          "You should go to a national park!": "Вам краще поїхати в національний парк!",
+          "You should go to a big city!": "Вам варто поїхати у велике місто!"
         },
         "csd u5 recommender sample_2021": {
-          "Start": "Початок"
+          "Start": "Початок",
+          "Where should you go on vacation?": "Куди поїхати у відпустку?",
+          "What is your favorite food?": "Яка ваша улюблена їжа?",
+          "What is the best superpower?": "Яка найкраща суперсила?",
+          "invisibility": "невидимість",
+          "super strength": "надміцність",
+          "teleport": "телепортація",
+          "Which animal do you like the best?": "Яка тварина вам подобається найбільше?",
+          "You should go to the beach!": "Вам слід їхати на пляж!",
+          "You should go to an amusement park!": "Вам слід піти в парк розваг!",
+          "You should go to a national park!": "Вам краще поїхати в національний парк!",
+          "You should go to a big city!": "Вам варто поїхати у велике місто!"
         },
         "csd u5 recommender sample_2022": {
-          "Start": "Початок"
+          "Start": "Початок",
+          "Where should you go on vacation?": "Куди поїхати у відпустку?",
+          "What is your favorite food?": "Яка ваша улюблена їжа?",
+          "What is the best superpower?": "Яка найкраща суперсила?",
+          "invisibility": "невидимість",
+          "super strength": "надміцність",
+          "teleport": "телепортація",
+          "Which animal do you like the best?": "Яка тварина вам подобається найбільше?",
+          "You should go to the beach!": "Вам слід їхати на пляж!",
+          "You should go to an amusement park!": "Вам слід піти в парк розваг!",
+          "You should go to a national park!": "Вам краще поїхати в національний парк!",
+          "You should go to a big city!": "Вам варто поїхати у велике місто!"
         },
         "csd-apps for good-2": {
           "Next": "Далі",
-          "Home": "Головна"
+          "Home": "Головна",
+          "Water Conservation Tips": "Поради щодо економії води",
+          "It's important that we all do our part to use less water. Click through this app for tips for conservation ideas. ": "Важливо, щоб ми всі робили свій внесок у те, щоб використовувати менше води. Клацніть на цей застосунок, щоб отримати поради щодо ідей для збереження води. ",
+          "English": "Англійська",
+          "Spanish": "Іспанська",
+          "Instead of buying disposable water bottles, use a refillable bottle. One use water bottles fill our land fills and trap valuable water.": "Замість того, щоб купувати одноразові пляшки для води, використовуйте багаторазові. Одноразові пляшки з-під води заповнюють наші звалища і затримують цінну воду.",
+          "Choose the correct water bottle. Then click the faucet to fill. ": "Оберіть правильну пляшку з водою. Потім натисніть кран, щоб наповнити. ",
+          "Another way to conserve water is to take shorter showers. Try setting a timer to five minutes!": "Ще один спосіб заощадити воду - приймати коротший душ. Спробуйте встановити таймер на п'ять хвилин!",
+          "Click on the timer": "Клацніть по таймеру"
         },
         "csd-apps for good-2_2022": {
           "Next": "Далі",
-          "Home": "Головна"
+          "Home": "Головна",
+          "Water Conservation Tips": "Поради щодо економії води",
+          "It's important that we all do our part to use less water. Click through this app for tips for conservation ideas. ": "Важливо, щоб ми всі робили свій внесок у те, щоб використовувати менше води. Клацніть на цей застосунок, щоб отримати поради щодо ідей для збереження води. ",
+          "English": "Англійська",
+          "Spanish": "Іспанська",
+          "Instead of buying disposable water bottles, use a refillable bottle. One use water bottles fill our land fills and trap valuable water.": "Замість того, щоб купувати одноразові пляшки для води, використовуйте багаторазові. Одноразові пляшки з-під води заповнюють наші звалища і затримують цінну воду.",
+          "Choose the correct water bottle. Then click the faucet to fill. ": "Оберіть правильну пляшку з водою. Потім натисніть кран, щоб наповнити. ",
+          "Another way to conserve water is to take shorter showers. Try setting a timer to five minutes!": "Ще один спосіб заощадити воду - приймати коротший душ. Спробуйте встановити таймер на п'ять хвилин!",
+          "Click on the timer": "Клацніть по таймеру"
         },
         "csd-apps for good-3": {
           "1": "1",
           "2": "2",
           "3": "3",
-          "4": "4"
+          "4": "4",
+          "4-Square = 4 Times the Fun": "Квадрат = в 4 рази веселіше",
+          "Have you wanted to learn how to play the fun, social game of 4-square, but didn't know where to start? This is the app for you! ": "Ви давно хотіли навчитися грати в веселу, соціальну гру \"Квадрат\", але не знали, з чого почати? Цей застосунок для вас! ",
+          "More Info": "Більше інформації",
+          "How many players do you need to play 4-Square? Click to find out!": "Скільки гравців потрібно для гри у Квадрат? Клацніть, щоб дізнатися!",
+          "Start Again": "Почати заново",
+          "To play 4-square, each player stands near one of the four marked boxes on the ground. The boxes are ordered from 1 to 4, with one being the \"top\" box. The player in the 1 box starts play by bouncing the ball in their square and then slapping or hitting the ball into another square. The ball must not touch the original players box again after the initial bounce. If the ball bounces in a player's square, they must then hit the ball into another square before the ball bounces again. They may only hit the ball once. But what if it hits the line, you might ask? There are many different rules on what to do if the ball hits the line - you must agree with your friends if the lines are in or out. If you hit the ball out of bounds or it bounces twice in your square you are out. Everyone moves to the next highest box available (the goal is to stay in the first box as long as possible). If you are out, you go to the back of the line and a new player takes the empty spot in box 4. ": "Для гри у Квадрат кожен гравець стає біля одного з чотирьох позначених на землі квадратів. Квадрати пронумеровані від 1 до 4, причому один з них є \"верхнім\". Гравець у 1--му квадраті починає гру, відбиваючи м'яч у своєму квадраті, а потім рукою або ногою переводить м'яч в інший квадрат. Після першого відскоку м'яч не повинен знову торкатися початкового квадрата гравця. Якщо м'яч відскочив у квадрат гравця, він повинен відбити м'яч в інший квадрат до того, як м'яч відскочить знову. Вдарити по м'ячу можна лише один раз. Але що робити, якщо м'яч потрапляє у лінію, запитаєте ви. Існує багато різних правил щодо того, що робити, якщо м'яч потрапляє у лінію - ви повинні домовитися з друзями про те, чи є це аутом. Якщо ви влучили м'ячем за лінію або він двічі відскочив у вашому квадраті, ви виходите з гри. Кожен переходить до наступного за висотою квадрата (мета - залишатися в першому квадраті якомога довше). Якщо ви вибули, ви стаєте в кінець черги, а новий гравець займає вільне місце у квадраті 4. "
         },
         "csd-apps for good-3_2022": {
           "1": "1",
           "2": "2",
           "3": "3",
-          "4": "4"
+          "4": "4",
+          "4-Square = 4 Times the Fun": "Квадрат = в 4 рази веселіше",
+          "Have you wanted to learn how to play the fun, social game of 4-square, but didn't know where to start? This is the app for you! ": "Ви давно хотіли навчитися грати в веселу, соціальну гру \"Квадрат\", але не знали, з чого почати? Цей застосунок для вас! ",
+          "More Info": "Більше інформації",
+          "How many players do you need to play 4-Square? Click to find out!": "Скільки гравців потрібно для гри у Квадрат? Клацніть, щоб дізнатися!",
+          "Start Again": "Почати заново",
+          "To play 4-square, each player stands near one of the four marked boxes on the ground. The boxes are ordered from 1 to 4, with one being the \"top\" box. The player in the 1 box starts play by bouncing the ball in their square and then slapping or hitting the ball into another square. The ball must not touch the original players box again after the initial bounce. If the ball bounces in a player's square, they must then hit the ball into another square before the ball bounces again. They may only hit the ball once. But what if it hits the line, you might ask? There are many different rules on what to do if the ball hits the line - you must agree with your friends if the lines are in or out. If you hit the ball out of bounds or it bounces twice in your square you are out. Everyone moves to the next highest box available (the goal is to stay in the first box as long as possible). If you are out, you go to the back of the line and a new player takes the empty spot in box 4. ": "Для гри у Квадрат кожен гравець стає біля одного з чотирьох позначених на землі квадратів. Квадрати пронумеровані від 1 до 4, причому один з них є \"верхнім\". Гравець у 1--му квадраті починає гру, відбиваючи м'яч у своєму квадраті, а потім рукою або ногою переводить м'яч в інший квадрат. Після першого відскоку м'яч не повинен знову торкатися початкового квадрата гравця. Якщо м'яч відскочив у квадрат гравця, він повинен відбити м'яч в інший квадрат до того, як м'яч відскочить знову. Вдарити по м'ячу можна лише один раз. Але що робити, якщо м'яч потрапляє у лінію, запитаєте ви. Існує багато різних правил щодо того, що робити, якщо м'яч потрапляє у лінію - ви повинні домовитися з друзями про те, чи є це аутом. Якщо ви влучили м'ячем за лінію або він двічі відскочив у вашому квадраті, ви виходите з гри. Кожен переходить до наступного за висотою квадрата (мета - залишатися в першому квадраті якомога довше). Якщо ви вибули, ви стаєте в кінець черги, а новий гравець займає вільне місце у квадраті 4. "
         },
         "csd-explore ui-2": {
           "Next": "Далі",
-          "Home": "Головна"
+          "Home": "Головна",
+          "Water Conservation Tips": "Поради щодо економії води",
+          "It's important that we all do our part to use less water. Click through this app for tips for conservation ideas. ": "Важливо, щоб ми всі робили свій внесок у те, щоб використовувати менше води. Клацніть на цей застосунок, щоб отримати поради щодо ідей для збереження води. ",
+          "English": "Англійська",
+          "Spanish": "Іспанська",
+          "Instead of buying disposable water bottles, use a refillable bottle. One use water bottles fill our land fills and trap valuable water.": "Замість того, щоб купувати одноразові пляшки для води, використовуйте багаторазові. Одноразові пляшки з-під води заповнюють наші звалища і затримують цінну воду.",
+          "Choose the correct water bottle. Then click the faucet to fill. ": "Оберіть правильну пляшку з водою. Потім натисніть кран, щоб наповнити. ",
+          "Another way to conserve water is to take shorter showers. Try setting a timer to five minutes!": "Ще один спосіб заощадити воду - приймати коротший душ. Спробуйте встановити таймер на п'ять хвилин!",
+          "Click on the timer": "Клацніть по таймеру"
         },
         "csd-explore ui-2_2022": {
           "Next": "Далі",
-          "Home": "Головна"
+          "Home": "Головна",
+          "Water Conservation Tips": "Поради щодо економії води",
+          "It's important that we all do our part to use less water. Click through this app for tips for conservation ideas. ": "Важливо, щоб ми всі робили свій внесок у те, щоб використовувати менше води. Клацніть на цей застосунок, щоб отримати поради щодо ідей для збереження води. ",
+          "English": "Англійська",
+          "Spanish": "Іспанська",
+          "Instead of buying disposable water bottles, use a refillable bottle. One use water bottles fill our land fills and trap valuable water.": "Замість того, щоб купувати одноразові пляшки для води, використовуйте багаторазові. Одноразові пляшки з-під води заповнюють наші звалища і затримують цінну воду.",
+          "Choose the correct water bottle. Then click the faucet to fill. ": "Оберіть правильну пляшку з водою. Потім натисніть кран, щоб наповнити. ",
+          "Another way to conserve water is to take shorter showers. Try setting a timer to five minutes!": "Ще один спосіб заощадити воду - приймати коротший душ. Спробуйте встановити таймер на п'ять хвилин!",
+          "Click on the timer": "Клацніть по таймеру"
         },
         "csd-explore ui-3": {
           "1": "1",
@@ -1039,7 +1678,24 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "20": "20",
+          "Choose your Birthday!": "Обери свій День народження!",
+          "Find out if it's your birthday!": "Дізнайся, чи сьогодні твій День народження!",
+          "January": "Січень",
+          "February": "Лютий",
+          "March": "Березень",
+          "April": "Квітень",
+          "May": "Травень",
+          "June": "Червень",
+          "July": "Липень",
+          "August": "Серпень",
+          "September": "Вересень",
+          "October": "Жовтень",
+          "November": "Листопад",
+          "December": "Грудень",
+          "It's your birthday!": "Сьогодні ваш День народження!",
+          "It's not your birthday yet this year!": "Ваш День народження цього року ще не наступив!",
+          "It was already your birthday this year!!": "Цього року у вас вже був День народження!!!"
         },
         "csd-explore ui-3_2022": {
           "1": "1",
@@ -1061,13 +1717,78 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "20": "20",
+          "Choose your Birthday!": "Обери свій День народження!",
+          "Find out if it's your birthday!": "Дізнайся, чи сьогодні твій День народження!",
+          "January": "Січень",
+          "February": "Лютий",
+          "March": "Березень",
+          "April": "Квітень",
+          "May": "Травень",
+          "June": "Червень",
+          "July": "Липень",
+          "August": "Серпень",
+          "September": "Вересень",
+          "October": "Жовтень",
+          "November": "Листопад",
+          "December": "Грудень",
+          "It's your birthday!": "Сьогодні ваш День народження!",
+          "It's not your birthday yet this year!": "Ваш День народження цього року ще не наступив!",
+          "It was already your birthday this year!!": "Цього року у вас вже був День народження!!!"
         },
         "csd-explore ui-4": {
-          "Sorry!": "Вибачте!"
+          "Sorry!": "Вибачте!",
+          "National Park Quiz": "Вікторина \"Національні парки\"",
+          "Start!": "Почали!",
+          "What was the first national park?": "Назвіть перший національний парк.",
+          "Yosemite": "Йосеміті",
+          "Yellowstone": "Йеллоустоун",
+          "Acadia": "Акадія",
+          "Great Smoky Mountains": " Грейт Смокі Маунтінс",
+          "Which is the largest national park?": "Який найбільший національний парк?",
+          "Wrangell-St. Elias": "Врангель-Сент-Еліас",
+          "Death Valley": "Долина Смерті",
+          "Denali": "Деналі",
+          "Which national park gets the most visitors?": "Який національний парк має найбільше відвідувачів?",
+          "Grand Canyon": "Великий Каньйон",
+          "Which national park has the largest tree in the world?": "У якому національному парку розташоване найбільше дерево у світі?",
+          "Sequoia": "Секвойя",
+          "Redwood": "Редвуд",
+          "Shenandoah": "Шенандоа",
+          "Olympic": "Олімпійський",
+          "Yellowstone was the first National Park, created by President Ulysses S. Grant in 1872": "Йеллоустоун був першим національним парком, створеним президентом Улісом С. Грантом у 1872 році",
+          "Next Question": "Наступне питання.",
+          "Wrangell-St. Elias is the largest national park, even bigger than many countries!": "Врангель-Сент-Еліас - найбільший національний парк, навіть більший за багато країн!",
+          "Great Smoky Mountains is the most visited, with more than 11 million visitors every year.": "Найбільш відвідуваним є парк \"Грейт-Смокі-Маунтінс\", який щороку відвідують понад 11 мільйонів туристів.",
+          "Sequoia is home to the biggest tree in the world, the General Sherman Tree.": "Секвойя є домом для найбільшого дерева у світі - Дерева Генерала Шермана.",
+          "Play Again": "Зіграти ще раз"
         },
         "csd-explore ui-4_2022": {
-          "Sorry!": "Вибачте!"
+          "Sorry!": "Вибачте!",
+          "National Park Quiz": "Вікторина \"Національні парки\"",
+          "Start!": "Почали!",
+          "What was the first national park?": "Назвіть перший національний парк.",
+          "Yosemite": "Йосеміті",
+          "Yellowstone": "Йеллоустоун",
+          "Acadia": "Акадія",
+          "Great Smoky Mountains": " Грейт Смокі Маунтінс",
+          "Which is the largest national park?": "Який найбільший національний парк?",
+          "Wrangell-St. Elias": "Врангель-Сент-Еліас",
+          "Death Valley": "Долина Смерті",
+          "Denali": "Деналі",
+          "Which national park gets the most visitors?": "Який національний парк має найбільше відвідувачів?",
+          "Grand Canyon": "Великий Каньйон",
+          "Which national park has the largest tree in the world?": "У якому національному парку розташоване найбільше дерево у світі?",
+          "Sequoia": "Секвойя",
+          "Redwood": "Редвуд",
+          "Shenandoah": "Шенандоа",
+          "Olympic": "Олімпійський",
+          "Yellowstone was the first National Park, created by President Ulysses S. Grant in 1872": "Йеллоустоун був першим національним парком, створеним президентом Улісом С. Грантом у 1872 році",
+          "Next Question": "Наступне питання.",
+          "Wrangell-St. Elias is the largest national park, even bigger than many countries!": "Врангель-Сент-Еліас - найбільший національний парк, навіть більший за багато країн!",
+          "Great Smoky Mountains is the most visited, with more than 11 million visitors every year.": "Найбільш відвідуваним є парк \"Грейт-Смокі-Маунтінс\", який щороку відвідують понад 11 мільйонів туристів.",
+          "Sequoia is home to the biggest tree in the world, the General Sherman Tree.": "Секвойя є домом для найбільшого дерева у світі - Дерева Генерала Шермана.",
+          "Play Again": "Зіграти ще раз"
         },
         "csd-explore ui-5": {
           "1": "1",
@@ -1089,7 +1810,62 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "20": "20",
+          "Enter your Birthday!": "Введіть дату свого Дня народження!",
+          "Find a writer!": "Знайдіть письменника!",
+          "January": "Січень",
+          "February": "Лютий",
+          "March": "Березень",
+          "April": "Квітень",
+          "May": "Травень",
+          "June": "Червень",
+          "July": "Липень",
+          "August": "Серпень",
+          "September": "Вересень",
+          "October": "Жовтень",
+          "November": "Листопад",
+          "December": "Грудень",
+          "1998": "1998",
+          "1999": "1999",
+          "2000": "2000",
+          "2001": "2001",
+          "2002": "2002",
+          "2003": "2003",
+          "2004": "2004",
+          "2005": "2005",
+          "2006": "2006",
+          "2007": "2007",
+          "2008": "2008",
+          "2009": "2009",
+          "2010": "2010",
+          "2011": "2011",
+          "2012": "2012",
+          "2013": "2013",
+          "2014": "2014",
+          "2015": "2015",
+          "Anchee Min": "Анчі Мін",
+          "image by Slowking4, GFDL 1.2": "автор Slowking4, GFDL 1.2",
+          "You were born on a": "Ви народилися у",
+          "Monday": "Понеділок",
+          "just like": "в один день з",
+          "N. Scott Momaday": "Наварре Скотт Момадей ",
+          "public domain image": "зображення з відкритих джерел",
+          "Tuesday": "Вівторок",
+          "Toni Morrison": "Тоні Моррісон",
+          "image by John Mathew Smith, CC-BY-SA 2.0": "автор фото Джон Метью Сміт, CC-BY-SA 2.0",
+          "Wednesday": "Середа",
+          "Khaled Hosseini": "Халід Госсейні",
+          "Public Domain Image": "Зображення з відкритих джерел",
+          "Thursday": "Четвер",
+          "Langston Hughes": "Ленгстон Г'юз",
+          "Public Domain": "З відкритих джерел",
+          "Friday": "П'ятниця",
+          "Margaret Atwood": "Маргарет Етвуд",
+          "image by Vanwaffle, CC BY-SA 3.0": "автор фото Vanwaffle, CC BY-SA 3.0",
+          "Saturday": "Субота",
+          "Gabriel Garcia Marquez": "Габріель Гарсія Маркес",
+          "image by Jose Lara, CC-BY-SA": "автор Хосе Лара, CC-BY-SA",
+          "Sunday": "Неділя"
         },
         "csd-explore ui-5_2022": {
           "1": "1",
@@ -1111,13 +1887,82 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "20": "20",
+          "Enter your Birthday!": "Введіть дату свого Дня народження!",
+          "Find a writer!": "Знайдіть письменника!",
+          "January": "Січень",
+          "February": "Лютий",
+          "March": "Березень",
+          "April": "Квітень",
+          "May": "Травень",
+          "June": "Червень",
+          "July": "Липень",
+          "August": "Серпень",
+          "September": "Вересень",
+          "October": "Жовтень",
+          "November": "Листопад",
+          "December": "Грудень",
+          "1998": "1998",
+          "1999": "1999",
+          "2000": "2000",
+          "2001": "2001",
+          "2002": "2002",
+          "2003": "2003",
+          "2004": "2004",
+          "2005": "2005",
+          "2006": "2006",
+          "2007": "2007",
+          "2008": "2008",
+          "2009": "2009",
+          "2010": "2010",
+          "2011": "2011",
+          "2012": "2012",
+          "2013": "2013",
+          "2014": "2014",
+          "2015": "2015",
+          "Anchee Min": "Анчі Мін",
+          "image by Slowking4, GFDL 1.2": "автор Slowking4, GFDL 1.2",
+          "You were born on a": "Ви народилися у",
+          "Monday": "Понеділок",
+          "just like": "в один день з",
+          "N. Scott Momaday": "Наварре Скотт Момадей ",
+          "public domain image": "зображення з відкритих джерел",
+          "Tuesday": "Вівторок",
+          "Toni Morrison": "Тоні Моррісон",
+          "image by John Mathew Smith, CC-BY-SA 2.0": "автор фото Джон Метью Сміт, CC-BY-SA 2.0",
+          "Wednesday": "Середа",
+          "Khaled Hosseini": "Халід Госсейні",
+          "Public Domain Image": "Зображення з відкритих джерел",
+          "Thursday": "Четвер",
+          "Langston Hughes": "Ленгстон Г'юз",
+          "Public Domain": "З відкритих джерел",
+          "Friday": "П'ятниця",
+          "Margaret Atwood": "Маргарет Етвуд",
+          "image by Vanwaffle, CC BY-SA 3.0": "автор фото Vanwaffle, CC BY-SA 3.0",
+          "Saturday": "Субота",
+          "Gabriel Garcia Marquez": "Габріель Гарсія Маркес",
+          "image by Jose Lara, CC-BY-SA": "автор Хосе Лара, CC-BY-SA",
+          "Sunday": "Неділя"
         },
         "csd-explore ui-6": {
-          "Next": "Далі"
+          "Next": "Далі",
+          "Mad Libs!": "Гра \"Mad Libs\"!",
+          "Learning to Drive": "Вчимося водити автомобіль",
+          "Plural Noun": "Іменник у множині",
+          "Noun": "Іменник",
+          "Song": "Пісня",
+          "Verb": "Дієслово",
+          "Play again": "Грати знову"
         },
         "csd-explore ui-6_2022": {
-          "Next": "Далі"
+          "Next": "Далі",
+          "Mad Libs!": "Гра \"Mad Libs\"!",
+          "Learning to Drive": "Вчимося водити автомобіль",
+          "Plural Noun": "Іменник у множині",
+          "Noun": "Іменник",
+          "Song": "Пісня",
+          "Verb": "Дієслово",
+          "Play again": "Грати знову"
         },
         "ml-L2 supervised - green glass door-2021": {
           "Accepted": "Прийнято",
@@ -1240,6 +2085,230 @@
           "snow": "сніг",
           "cloudy": "хмарно",
           "night": "ніч"
+        },
+        "CSD U1 processing countries_2021": {
+          "How Many Countries...": "Скільки країн...",
+          "are bigger than Alaska?": "більші за Аляску?",
+          "have no land borders?": "не мають сухопутних кордонів?",
+          "are decreasing population?": "з населенням, що скорочується?",
+          "are land locked?": "не мають виходу до моря?",
+          "have won the World Cup?": "вигравали Чемпіонат світу?",
+          "have more than a billion people?": "мають населення понад мільярд людей?",
+          "have sent people to space?": "відправляли людей у космос?"
+        },
+        "CSD U1 processing countries_2022": {
+          "How Many Countries...": "Скільки країн...",
+          "are bigger than Alaska?": "більші за Аляску?",
+          "have no land borders?": "не мають сухопутних кордонів?",
+          "are decreasing population?": "з населенням, що скорочується?",
+          "are land locked?": "не мають виходу до моря?",
+          "have won the World Cup?": "вигравали Чемпіонат світу?",
+          "have more than a billion people?": "мають населення понад мільярд людей?",
+          "have sent people to space?": "відправляли людей у космос?"
+        },
+        "CSD U6 - Board Inputs - SB1_2222": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 - Board Inputs - SB2_2222": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 - Board Inputs - SB3_2222": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 - Board Outputs - P_2222": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 - Board Outputs - SB1_2222": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 - Board Outputs - SB2_2222": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 - Board Outputs - Setup_2222": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 - Color LEDs - PracA_2222": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 - Color LEDs - SB2_2222": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 - Color LEDs - SB3_2222": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 - Music - SB4_2222": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 - Physical Input - ChalA_2222": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 - Physical Input - ChalB_2222": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 - Physical Input - ChalC_2222": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 - Physical Input - PC_2222": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 - Physical Input - PD_2222": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 - Physical Input - SB1_2222": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 - Physical Output - ChalA_2222": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 - Physical Output - ChalB_2222": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 - Physical Output - ChalC_2222": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 - Physical Output - PB_2222": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 - Physical Output - PC_2222": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 - Physical Output - P_2222": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 - Physical Output - SB1_2222": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 - Physical Output - SB2.2_2222": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 - Physical Output - SB2_2222": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 LED toggle": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 LED toggle_2018": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 LED toggle_2019": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 LED toggle_2021": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 add LED button": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 add LED button_2018": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 add LED button_2019": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 add LED button_2021": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 predict LED button": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 predict LED button_2018": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 predict LED button_2019": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 predict LED button_2021": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 test LED": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 test LED_2018": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 test LED_2019": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 test LED_2021": {
+          "Success!": "Успіху!"
+        },
+        "CSDU6 Circuit Playground Test": {
+          "Success!": "Успіху!"
+        },
+        "CSDU6 Circuit Playground Test_2018": {
+          "Success!": "Успіху!"
+        },
+        "CSDU6 Circuit Playground Test_2019": {
+          "Success!": "Успіху!"
+        },
+        "CSDU6 Circuit Playground Test_2021": {
+          "Success!": "Успіху!"
+        },
+        "CSDU6 Circuit Playground Test_2222": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 - Screen Outputs - ChalB_2222": {
+          "?": "?"
+        },
+        "CSD U6 emotion machine example": {
+          "?": "?"
+        },
+        "CSD U6 emotion machine example_2018": {
+          "?": "?"
+        },
+        "CSD U6 emotion machine example_2019": {
+          "?": "?"
+        },
+        "CSD U6 emotion machine example_2021": {
+          "?": "?"
+        },
+        "CSD U6 emoji race demo": {
+          "Emoji Race": "Перегони емодзі"
+        },
+        "CSD U6 emoji race demo_2018": {
+          "Emoji Race": "Перегони емодзі"
+        },
+        "CSD U6 emoji race demo_2019": {
+          "Emoji Race": "Перегони емодзі"
+        },
+        "CSD U6 emoji race demo_2021": {
+          "Emoji Race": "Перегони емодзі"
+        },
+        "csd-apps for good-1": {
+          "Do More Durham": "Більше Дарема",
+          "Get involved in Durham's garden spaces. You can grow your own food and contribute to Durham's healthy lifestyle. ": "Долучайтеся до садівництва в Даремі. Ви можете вирощувати власну їжу та сприяти здоровому способу життя в Даремі. ",
+          "Seeds": "Насіння",
+          "Briggs Avenue Community Garden": "Громадський сад на Бріггс-авеню",
+          "Like the outdoors? You can help clean up our parks or guide others on hikes. Whatever your interests, there's a way to get involved. ": "Любите природу? Ви можете допомогти прибирати наші парки або супроводжувати інших у походах. Якими б не були ваші інтереси, ви завжди знайдете спосіб долучитися. ",
+          "Eno River Association": "Асоціація річки Ено",
+          "Durham Central Park": "Центральний парк Дарема"
+        },
+        "csd-apps for good-1_2022": {
+          "Do More Durham": "Більше Дарема",
+          "Get involved in Durham's garden spaces. You can grow your own food and contribute to Durham's healthy lifestyle. ": "Долучайтеся до садівництва в Даремі. Ви можете вирощувати власну їжу та сприяти здоровому способу життя в Даремі. ",
+          "Seeds": "Насіння",
+          "Briggs Avenue Community Garden": "Громадський сад на Бріггс-авеню",
+          "Like the outdoors? You can help clean up our parks or guide others on hikes. Whatever your interests, there's a way to get involved. ": "Любите природу? Ви можете допомогти прибирати наші парки або супроводжувати інших у походах. Якими б не були ваші інтереси, ви завжди знайдете спосіб долучитися. ",
+          "Eno River Association": "Асоціація річки Ено",
+          "Durham Central Park": "Центральний парк Дарема"
+        },
+        "csd-explore ui-1": {
+          "Chinese": "Китайська",
+          "Italian": "Італійська",
+          "Breakfast": "Сніданок",
+          "Type of Restaurant": "Тип ресторану",
+          "Dollars per person": "Сума у доларах на людину",
+          "Where Should I Eat?": "Де поїсти?",
+          "$15": " 15 доларів"
+        },
+        "csd-explore ui-1_2022": {
+          "Chinese": "Китайська",
+          "Italian": "Італійська",
+          "Breakfast": "Сніданок",
+          "Type of Restaurant": "Тип ресторану",
+          "Dollars per person": "Сума у доларах на людину",
+          "Where Should I Eat?": "Де поїсти?",
+          "$15": " 15 доларів"
         }
       }
     }

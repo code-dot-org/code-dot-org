@@ -6,23 +6,23 @@ import {
   stubRedux,
   restoreRedux,
   getStore,
-  registerReducers
+  registerReducers,
 } from '@cdo/apps/redux';
 import reducers, {
   initActivities,
-  initLevelSearching
+  initLevelSearching,
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
 import createResourcesReducer, {
-  initResources
+  initResources,
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/resourcesEditorRedux';
 import vocabulariesEditor, {
-  initVocabularies
+  initVocabularies,
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/vocabulariesEditorRedux';
 import programmingExpressionsEditor, {
-  initProgrammingExpressions
+  initProgrammingExpressions,
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/programmingExpressionsEditorRedux';
 import createStandardsReducer, {
-  initStandards
+  initStandards,
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/standardsEditorRedux';
 import {sampleActivities, searchOptions} from './activitiesTestData';
 import resourceTestData from './resourceTestData';
@@ -47,7 +47,7 @@ describe('LessonEditor', () => {
       vocabularies: vocabulariesEditor,
       programmingExpressions: programmingExpressionsEditor,
       standards: createStandardsReducer('standard'),
-      opportunityStandards: createStandardsReducer('opportunityStandard')
+      opportunityStandards: createStandardsReducer('opportunityStandard'),
     });
 
     store = getStore();
@@ -55,7 +55,7 @@ describe('LessonEditor', () => {
     store.dispatch(
       initLevelSearching({
         searchOptions: searchOptions,
-        programmingEnvironments: []
+        programmingEnvironments: [],
       })
     );
     store.dispatch(initResources(resourceTestData));
@@ -69,7 +69,7 @@ describe('LessonEditor', () => {
         allowMajorCurriculumChanges: true,
         courseVersionId: 1,
         unitPath: '/s/my-script/',
-        isProfessionalLearningCourse: false
+        isProfessionalLearningCourse: false,
       },
       initialLessonData: {
         id: 1,
@@ -86,8 +86,8 @@ describe('LessonEditor', () => {
         announcements: [],
         assessmentOpportunities: 'Assessment Opportunities',
         lessonPath: '/lessons/1',
-        frameworks: []
-      }
+        frameworks: [],
+      },
     };
   });
 
@@ -157,8 +157,8 @@ describe('LessonEditor', () => {
         preparation: '',
         announcements: [],
         assessmentOpportunities: '',
-        courseVersionId: 1
-      }
+        courseVersionId: 1,
+      },
     });
     expect(wrapper.contains('Survey Name'), 'Lesson Name').to.be.true;
     expect(wrapper.contains('Survey Overview'), 'Lesson Overview').to.be.true;
@@ -166,7 +166,7 @@ describe('LessonEditor', () => {
       .be.true;
     expect(wrapper.find('Connect(ActivitiesEditor)').length).to.equal(1);
     expect(wrapper.find('TextareaWithMarkdownPreview').length).to.equal(2);
-    expect(wrapper.find('input').length).to.equal(7);
+    expect(wrapper.find('input').length).to.equal(8);
     expect(wrapper.find('select').length).to.equal(1);
     expect(wrapper.find('AnnouncementsEditor').length).to.equal(0);
     expect(wrapper.find('CollapsibleEditorSection').length).to.equal(3);
@@ -212,7 +212,7 @@ describe('LessonEditor', () => {
     server.respondWith('PUT', `/lessons/1`, [
       200,
       {'Content-Type': 'application/json'},
-      JSON.stringify(returnData)
+      JSON.stringify(returnData),
     ]);
 
     const saveBar = wrapper.find('SaveBar');
@@ -250,7 +250,7 @@ describe('LessonEditor', () => {
     server.respondWith('PUT', `/lessons/1`, [
       404,
       {'Content-Type': 'application/json'},
-      returnData
+      returnData,
     ]);
 
     const saveBar = wrapper.find('SaveBar');
@@ -286,7 +286,7 @@ describe('LessonEditor', () => {
     server.respondWith('PUT', `/lessons/1`, [
       200,
       {'Content-Type': 'application/json'},
-      JSON.stringify(returnData)
+      JSON.stringify(returnData),
     ]);
 
     const saveBar = wrapper.find('SaveBar');
@@ -317,7 +317,7 @@ describe('LessonEditor', () => {
     server.respondWith('PUT', `/lessons/1`, [
       200,
       {'Content-Type': 'application/json'},
-      JSON.stringify(returnData)
+      JSON.stringify(returnData),
     ]);
 
     const saveBar = wrapper.find('SaveBar');
@@ -349,7 +349,7 @@ describe('LessonEditor', () => {
     server.respondWith('PUT', `/lessons/1`, [
       404,
       {'Content-Type': 'application/json'},
-      returnData
+      returnData,
     ]);
 
     const saveBar = wrapper.find('SaveBar');

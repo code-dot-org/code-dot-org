@@ -3,12 +3,12 @@ import React from 'react';
 import * as utils from '../../../utils';
 import WorkshopTableLoader from '../workshop_dashboard/components/workshop_table_loader';
 import {workshopShape} from '../workshop_dashboard/types.js';
-import {Table, Button, Modal} from 'react-bootstrap';
+import {Table, Button, Modal} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import ReactTooltip from 'react-tooltip';
 import moment from 'moment';
 import {
   DATE_FORMAT,
-  TIME_FORMAT
+  TIME_FORMAT,
 } from '../workshop_dashboard/workshopConstants';
 
 class EnrolledWorkshops extends React.Component {
@@ -26,12 +26,12 @@ class EnrolledWorkshops extends React.Component {
 
 class EnrolledWorkshopsTable extends React.Component {
   static propTypes = {
-    workshops: PropTypes.arrayOf(workshopShape)
+    workshops: PropTypes.arrayOf(workshopShape),
   };
 
   state = {
     showCancelModal: false,
-    enrollmentCodeToCancel: undefined
+    enrollmentCodeToCancel: undefined,
   };
 
   cancelEnrollment = event => {
@@ -41,14 +41,14 @@ class EnrolledWorkshopsTable extends React.Component {
   dismissCancelModal = event => {
     this.setState({
       showCancelModal: false,
-      enrollmentCodeToCancel: undefined
+      enrollmentCodeToCancel: undefined,
     });
   };
 
   showCancelModal = enrollmentCode => {
     this.setState({
       showCancelModal: true,
-      enrollmentCodeToCancel: enrollmentCode
+      enrollmentCodeToCancel: enrollmentCode,
     });
   };
 
@@ -218,8 +218,8 @@ class EnrolledWorkshopsTable extends React.Component {
 
 const styles = {
   button: {
-    width: '100%'
-  }
+    width: '100%',
+  },
 };
 
 export {EnrolledWorkshops, EnrolledWorkshopsTable};

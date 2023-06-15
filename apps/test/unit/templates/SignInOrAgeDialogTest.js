@@ -13,12 +13,12 @@ describe('SignInOrAgeDialog', () => {
   const defaultProps = {
     age13Required: true,
     signedIn: false,
-    storage: new FakeStorage()
+    storage: new FakeStorage(),
   };
 
   before(() => {
     replaceOnWindow('dashboard', {
-      rack_env: 'unit_test'
+      rack_env: 'unit_test',
     });
   });
 
@@ -57,7 +57,7 @@ describe('SignInOrAgeDialog', () => {
     const wrapper = shallow(<SignInOrAgeDialog {...defaultProps} />);
     const instance = wrapper.instance();
     instance.ageDropdown = {
-      getValue: () => '12'
+      getValue: () => '12',
     };
     assert.equal(wrapper.state().tooYoung, false);
     instance.onClickAgeOk();
@@ -96,7 +96,7 @@ describe('SignInOrAgeDialog', () => {
       const wrapper = shallow(<SignInOrAgeDialog {...defaultProps} />);
       const instance = wrapper.instance();
       instance.ageDropdown = {
-        getValue: () => '13'
+        getValue: () => '13',
       };
       wrapper.find('Button').at(1).simulate('click');
       assert(setItemSpy.calledOnce);
@@ -105,7 +105,7 @@ describe('SignInOrAgeDialog', () => {
       assert(
         cookies.remove.calledWith(environmentSpecificCookieName('storage_id'), {
           path: '/',
-          domain: '.code.org'
+          domain: '.code.org',
         })
       );
       setItemSpy.restore();
@@ -115,7 +115,7 @@ describe('SignInOrAgeDialog', () => {
       const wrapper = shallow(<SignInOrAgeDialog {...defaultProps} />);
       const instance = wrapper.instance();
       instance.ageDropdown = {
-        getValue: () => '13'
+        getValue: () => '13',
       };
       instance.onClickAgeOk();
       assert.equal(utils.reload.called, false);

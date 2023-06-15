@@ -46,7 +46,7 @@ import JavaScriptModeErrorHandler from '../JavaScriptModeErrorHandler';
 import {
   getContainedLevelResultInfo,
   postContainedLevelAttempt,
-  runAfterPostContainedLevel
+  runAfterPostContainedLevel,
 } from '../containedLevels';
 import {getStore} from '../redux';
 import Sounds from '../Sounds';
@@ -58,7 +58,7 @@ import {getRandomDonorTwitter} from '../util/twitterHelper';
 import {muteCookieWithLevel} from '../util/muteCookieHelpers';
 import {
   showArrowButtons,
-  dismissSwipeOverlay
+  dismissSwipeOverlay,
 } from '@cdo/apps/templates/arrowDisplayRedux';
 
 // tests don't have svgelement
@@ -89,20 +89,20 @@ Studio.btnState = {};
 
 const ButtonState = {
   UP: 0,
-  DOWN: 1
+  DOWN: 1,
 };
 
 const ArrowIds = {
   LEFT: 'leftButton',
   UP: 'upButton',
   RIGHT: 'rightButton',
-  DOWN: 'downButton'
+  DOWN: 'downButton',
 };
 
 Studio.GameStates = {
   WAITING: 0,
   ACTIVE: 1,
-  OVER: 2
+  OVER: 2,
 };
 
 const DRAG_DISTANCE_TO_MOVE_RATIO = 25;
@@ -121,7 +121,7 @@ const PUBLISHABLE_SKINS = [
   'studio',
   'iceage',
   'infinity',
-  'hoc2015'
+  'hoc2015',
 ];
 
 //TODO: Make configurable.
@@ -142,13 +142,13 @@ var AUTO_HANDLER_MAP = {
   whenGetAllCharacters: 'whenGetAllItems',
   whenTouchGoal: 'whenTouchGoal',
   whenTouchAllGoals: 'whenTouchAllGoals',
-  whenScore1000: 'whenScore1000'
+  whenScore1000: 'whenScore1000',
 };
 
 // Default Scalings
 Studio.scale = {
   snapRadius: 1,
-  stepSpeed: 33
+  stepSpeed: 33,
 };
 
 var TITLE_SCREEN_TIMEOUT = 5000;
@@ -182,7 +182,7 @@ var MIN_TIME_BETWEEN_PROJECTILES = 500; // time in ms
 
 var twitterOptions = {
   text: studioMsg.shareStudioTwitterDonor({donor: getRandomDonorTwitter()}),
-  hashtag: 'StudioCode'
+  hashtag: 'StudioCode',
 };
 
 /** @type {JsInterpreterLogger} */
@@ -198,7 +198,7 @@ const DEFAULT_MAP = [
   [16, 0, 0, 16, 0, 0, 16, 0],
   [0, 0, 0, 0, 0, 0, 0, 0],
   [16, 0, 0, 16, 0, 0, 16, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0]
+  [0, 0, 0, 0, 0, 0, 0, 0],
 ];
 
 const REMIX_PROPS = [
@@ -206,14 +206,14 @@ const REMIX_PROPS = [
     defaultValues: {
       map: DEFAULT_MAP,
       firstSpriteIndex: 1,
-      spritesHiddenToStart: true
+      spritesHiddenToStart: true,
     },
     generateBlocks: args => {
       const blocks = [];
       let spriteIndex = 1;
       const getDefaultSpriteLocation = () => ({
         x: ((spriteIndex - 1) % 3) * 3,
-        y: parseInt((spriteIndex - 1) / 3) * 2
+        y: parseInt((spriteIndex - 1) / 3) * 2,
       });
       for (let y = 0; y < Studio.ROWS; y++) {
         for (let x = 0; x < Studio.COLS; x++) {
@@ -233,15 +233,15 @@ const REMIX_PROPS = [
                           ? cell.sprite
                           : spriteIndex + (level.firstSpriteIndex || 0)
                       ]
-                    }"`
+                    }"`,
                   },
                   values: {
                     SPRITE: {
                       type: 'math_number',
                       titleName: 'NUM',
-                      titleValue: spriteIndex
-                    }
-                  }
+                      titleValue: spriteIndex,
+                    },
+                  },
                 })
               );
             }
@@ -255,23 +255,23 @@ const REMIX_PROPS = [
                     SPRITE: {
                       type: 'math_number',
                       titleName: 'NUM',
-                      titleValue: spriteIndex
+                      titleValue: spriteIndex,
                     },
                     XPOS: {
                       type: 'math_number',
                       titleName: 'NUM',
                       titleValue:
                         x * Studio.SQUARE_SIZE +
-                        Studio.sprite[spriteIndex - 1].width / 2
+                        Studio.sprite[spriteIndex - 1].width / 2,
                     },
                     YPOS: {
                       type: 'math_number',
                       titleName: 'NUM',
                       titleValue:
                         y * Studio.SQUARE_SIZE +
-                        Studio.sprite[spriteIndex - 1].height / 2
-                    }
-                  }
+                        Studio.sprite[spriteIndex - 1].height / 2,
+                    },
+                  },
                 })
               );
             }
@@ -285,14 +285,14 @@ const REMIX_PROPS = [
                     SPRITE: {
                       type: 'math_number',
                       titleName: 'NUM',
-                      titleValue: spriteIndex
+                      titleValue: spriteIndex,
                     },
                     VALUE: {
                       type: 'math_number',
                       titleName: 'NUM',
-                      titleValue: cell.speed
-                    }
-                  }
+                      titleValue: cell.speed,
+                    },
+                  },
                 })
               );
             }
@@ -306,14 +306,14 @@ const REMIX_PROPS = [
                     SPRITE: {
                       type: 'math_number',
                       titleName: 'NUM',
-                      titleValue: spriteIndex
+                      titleValue: spriteIndex,
                     },
                     VALUE: {
                       type: 'math_number',
                       titleName: 'NUM',
-                      titleValue: cell.size
-                    }
-                  }
+                      titleValue: cell.size,
+                    },
+                  },
                 })
               );
             }
@@ -322,8 +322,8 @@ const REMIX_PROPS = [
                 blockAsXmlNode('studio_setSpriteEmotion', {
                   titles: {
                     SPRITE: spriteIndex,
-                    VALUE: cell.emotion
-                  }
+                    VALUE: cell.emotion,
+                  },
                 })
               );
             }
@@ -337,14 +337,14 @@ const REMIX_PROPS = [
                   XPOS: {
                     type: 'math_number',
                     titleName: 'NUM',
-                    titleValue: x * Studio.SQUARE_SIZE
+                    titleValue: x * Studio.SQUARE_SIZE,
                   },
                   YPOS: {
                     type: 'math_number',
                     titleName: 'NUM',
-                    titleValue: y * Studio.SQUARE_SIZE
-                  }
-                }
+                    titleValue: y * Studio.SQUARE_SIZE,
+                  },
+                },
               })
             );
           }
@@ -352,22 +352,22 @@ const REMIX_PROPS = [
       }
 
       return blocks;
-    }
+    },
   },
   {
     defaultValues: {
-      allowSpritesOutsidePlayspace: false
+      allowSpritesOutsidePlayspace: false,
     },
     generateBlocks: args => {
       return [
         blockAsXmlNode('studio_allowSpritesOutsidePlayspace', {
           titles: {
-            VALUE: 'true'
-          }
-        })
+            VALUE: 'true',
+          },
+        }),
       ];
-    }
-  }
+    },
+  },
 ];
 
 Studio.loadLevel = function () {
@@ -420,7 +420,7 @@ Studio.loadLevel = function () {
       break;
     case 'Ninja Cat':
       Studio.customLogic = new BigGameLogic(Studio, {
-        staticPlayer: true
+        staticPlayer: true,
       });
   }
   blocks.registerCustomGameLogic(Studio.customLogic);
@@ -496,7 +496,7 @@ function reorderedStartAvatars(avatarList, firstSpriteIndex) {
   firstSpriteIndex = firstSpriteIndex || 0;
   return _.flattenDeep([
     avatarList.slice(firstSpriteIndex),
-    avatarList.slice(0, firstSpriteIndex)
+    avatarList.slice(0, firstSpriteIndex),
   ]);
 }
 
@@ -556,7 +556,7 @@ var drawMap = function () {
       origin: 0,
       firstLabel: 100,
       lastLabel: 300,
-      increment: 100
+      increment: 100,
     });
   }
 
@@ -927,7 +927,7 @@ var getNextPosition = function (i, modifyQueues) {
   }
   return {
     x: Studio.sprite[i].x + delta.x,
-    y: Studio.sprite[i].y + delta.y
+    y: Studio.sprite[i].y + delta.y,
   };
 };
 
@@ -1061,7 +1061,7 @@ var setSvgText = (Studio.setSvgText = function (opts) {
         if (wordIndex === words.length) {
           return {
             height: opts.fullHeight - (opts.maxLines - line) * opts.lineHeight,
-            width: width
+            width: width,
           };
         }
 
@@ -1088,7 +1088,7 @@ var setSvgText = (Studio.setSvgText = function (opts) {
     } else {
       return {
         height: opts.fullHeight,
-        width: width
+        width: width,
       };
     }
   }
@@ -1128,7 +1128,7 @@ function callHandler(name, allowQueueExtension, extraArgs = []) {
     if (moveDir) {
       Studio.queueCmd(null, 'move', {
         spriteIndex: Studio.protagonistSpriteIndex || 0,
-        dir: moveDir
+        dir: moveDir,
       });
     }
   }
@@ -1225,7 +1225,7 @@ function sortDrawOrder() {
       y:
         Studio.items[i].y +
         Studio.items[i].height / 2 +
-        Studio.items[i].renderOffset.y
+        Studio.items[i].renderOffset.y,
     };
     drawArray.push(drawItem);
 
@@ -1246,7 +1246,7 @@ function sortDrawOrder() {
 
     drawItem = {
       element: document.getElementById('explosion' + i),
-      y: y
+      y: y,
     };
     if (drawItem.element) {
       drawArray.push(drawItem);
@@ -1254,7 +1254,7 @@ function sortDrawOrder() {
 
     drawItem = {
       element: sprite.getElement(),
-      y: y
+      y: y,
     };
     if (drawItem.element) {
       drawArray.push(drawItem);
@@ -1262,7 +1262,7 @@ function sortDrawOrder() {
 
     drawItem = {
       element: sprite.getLegacyElement(),
-      y: y
+      y: y,
     };
     if (drawItem.element) {
       drawArray.push(drawItem);
@@ -1275,7 +1275,7 @@ function sortDrawOrder() {
   for (i = 0; i < Studio.tiles.length; i++) {
     drawArray.push({
       element: document.getElementById('tile_' + i),
-      y: Studio.tiles[i].bottomY
+      y: Studio.tiles[i].bottomY,
     });
   }
 
@@ -1284,7 +1284,7 @@ function sortDrawOrder() {
   Studio.allGoals_().forEach(function (goal) {
     drawArray.push({
       element: goal.marker,
-      y: goal.y + goalHeight
+      y: goal.y + goalHeight,
     });
   });
 
@@ -2061,7 +2061,7 @@ Studio.initSprites = function () {
         Studio.spriteGoals_.push({
           x: col * Studio.SQUARE_SIZE,
           y: row * Studio.SQUARE_SIZE,
-          finished: false
+          finished: false,
         });
       } else if (Studio.map[row][col].getTileType() & SquareType.SPRITESTART) {
         let cell = Studio.map[row][col].serialize();
@@ -2078,7 +2078,7 @@ Studio.initSprites = function () {
         }
         Studio.spriteStart_[Studio.spriteCount] = Object.assign({}, cell, {
           x: col * Studio.SQUARE_SIZE,
-          y: row * Studio.SQUARE_SIZE
+          y: row * Studio.SQUARE_SIZE,
         });
         Studio.spriteCount++;
       }
@@ -2246,7 +2246,7 @@ Studio.init = function (config) {
       sound = sound.toLowerCase();
       skin.soundFiles[sound] = [
         skin.assetUrl(sound + '.mp3'),
-        skin.assetUrl(sound + '.ogg')
+        skin.assetUrl(sound + '.ogg'),
       ];
       studioApp().loadAudio(skin.soundFiles[sound], sound);
     });
@@ -2389,7 +2389,7 @@ Studio.init = function (config) {
   // Override Page constants
   const appSpecificConstants = {
     hideCoordinateOverlay:
-      !level.toolbox || !level.toolbox.match(/studio_setSpriteXY/)
+      !level.toolbox || !level.toolbox.match(/studio_setSpriteXY/),
   };
 
   // for hoc2015x, we only have permission to show the Rey avatar for approved
@@ -2529,7 +2529,7 @@ Studio.prepareForRemix = function () {
   cleanBlocks(blocksDom);
 
   Blockly.mainBlockSpace.clear();
-  Blockly.Xml.domToBlockSpace(Blockly.mainBlockSpace, blocksDom);
+  Blockly.cdoUtils.loadBlocksToWorkspace(Blockly.mainBlockSpace, blocksDom);
   return Promise.resolve();
 };
 
@@ -2763,7 +2763,7 @@ Studio.reset = function (first) {
     removedItems: {},
     createdItems: {},
     hasSetEmotion: false,
-    hasThrownProjectile: false
+    hasThrownProjectile: false,
   };
 
   // Reset goal successState:
@@ -2790,7 +2790,7 @@ Studio.reset = function (first) {
 
   var renderOffset = {
     x: 0,
-    y: 0
+    y: 0,
   };
   if (skin.gridAlignedMovement) {
     renderOffset.x = skin.gridSpriteRenderOffsetX || 0;
@@ -2817,7 +2817,7 @@ Studio.reset = function (first) {
       // tickCount of last time sprite moved,
       lastMove: Infinity,
       // overridden as soon as we call setSprite
-      visible: !level.spritesHiddenToStart
+      visible: !level.spritesHiddenToStart,
     });
     Studio.lastMoveSingleDir = spriteStart.direction;
 
@@ -2826,7 +2826,7 @@ Studio.reset = function (first) {
     var opts = {
       spriteIndex: i,
       value: Studio.startAvatars[sprite],
-      forceHidden: level.spritesHiddenToStart
+      forceHidden: level.spritesHiddenToStart,
     };
     Studio.setSprite(opts);
     Studio.displaySprite(i);
@@ -2954,17 +2954,17 @@ Studio.getStudioExampleFailure = function (exampleBlock) {
     );
 
     var defCode = Blockly.Generator.blockSpaceToCode('JavaScript', [
-      'functional_definition'
+      'functional_definition',
     ]);
     var exampleCode = Blockly.Generator.blocksToCode('JavaScript', [
-      exampleBlock
+      exampleBlock,
     ]);
     if (exampleCode) {
       var resultBoolean = CustomMarshalingInterpreter.evalWith(
         defCode + '; return' + exampleCode,
         {
           Studio: api,
-          Globals: Studio.Globals
+          Globals: Studio.Globals,
         },
         {legacy: true}
       );
@@ -3063,16 +3063,16 @@ Studio.displayFeedback = function () {
     {
       continueText: level.freePlay ? commonMsg.nextPuzzle : function () {},
       reinfFeedbackMsg: studioMsg.reinfFeedbackMsg,
-      sharingText: studioMsg.shareGame
+      sharingText: studioMsg.shareGame,
     },
     level.appStringsFunctions
   );
   var appStrings = {
     continueText: stringFunctions.continueText(),
     reinfFeedbackMsg: stringFunctions.reinfFeedbackMsg({
-      backButton: tryAgainText
+      backButton: tryAgainText,
     }),
-    sharingText: stringFunctions.sharingText()
+    sharingText: stringFunctions.sharingText(),
   };
 
   if (!Studio.waitingForReport) {
@@ -3099,7 +3099,7 @@ Studio.displayFeedback = function () {
       message: Studio.message,
       appStrings: appStrings,
       // Currently only true for Artist levels
-      enablePrinting: level.enablePrinting
+      enablePrinting: level.enablePrinting,
     });
   }
 };
@@ -3130,7 +3130,7 @@ var registerEventHandler = function (handlers, name, func) {
   handlers.push({
     name: name,
     func: func,
-    cmdQueue: []
+    cmdQueue: [],
   });
 };
 
@@ -3352,7 +3352,7 @@ var defineProcedures = function (blockType) {
       code,
       {
         Studio: api,
-        Globals: Studio.Globals
+        Globals: Studio.Globals,
       },
       {legacy: true}
     );
@@ -3419,7 +3419,7 @@ Studio.checkExamples_ = function () {
     outcome.result = ResultType.FAILURE;
     outcome.testResults = TestResults.EXAMPLE_FAILED;
     outcome.message = commonMsg.emptyExampleBlockErrorMsg({
-      functionName: exampleless
+      functionName: exampleless,
     });
     return outcome;
   }
@@ -3444,7 +3444,7 @@ Studio.checkExamples_ = function () {
     outcome.result = false;
     outcome.testResults = TestResults.EXAMPLE_FAILED;
     outcome.message = commonMsg.exampleErrorMessage({
-      functionName: failingBlockName
+      functionName: failingBlockName,
     });
   }
 
@@ -3461,7 +3461,7 @@ Studio.checkForEditCodePreExecutionFailure = function () {
     Studio.result = false;
     Studio.testResults = TestResults.EXTRA_FUNCTION_FAIL;
     Studio.message = studioMsg.extraFunction({
-      funcName: funcName + '()'
+      funcName: funcName + '()',
     });
     Studio.preExecutionFailure = true;
     return true;
@@ -3472,7 +3472,7 @@ Studio.checkForEditCodePreExecutionFailure = function () {
     Studio.result = false;
     Studio.testResults = TestResults.LOCAL_FUNCTION_FAIL;
     Studio.message = studioMsg.localFunction({
-      funcName: funcName + '()'
+      funcName: funcName + '()',
     });
     Studio.preExecutionFailure = true;
     return true;
@@ -3657,7 +3657,7 @@ Studio.execute = function () {
   if (level.editCode) {
     var codeWhenRun = studioApp().getCode();
     Studio.JSInterpreter = new JSInterpreter({
-      studioApp: studioApp()
+      studioApp: studioApp(),
     });
     Studio.JSInterpreter.onExecutionError.register(handleExecutionError);
     if (consoleLogger) {
@@ -3667,7 +3667,7 @@ Studio.execute = function () {
       code: codeWhenRun,
       blocks: dropletConfig.blocks,
       blockFilter: level.executePaletteApisOnly && level.codeFunctions,
-      enableEvents: true
+      enableEvents: true,
     });
     if (!Studio.JSInterpreter.initialized()) {
       return;
@@ -3691,7 +3691,7 @@ Studio.execute = function () {
       const code = [
         'procedures_defreturn',
         'procedures_defnoreturn',
-        'functional_definition'
+        'functional_definition',
       ]
         .map(generator)
         .join(';');
@@ -3712,7 +3712,7 @@ Studio.execute = function () {
               return hook.func() || {};
             },
             set: () => {},
-            configurable: true
+            configurable: true,
           });
         } else {
           registerEventHandler(handlers, hook.name, hook.func);
@@ -3782,7 +3782,7 @@ Studio.sendPuzzleReport = function (onComplete = Studio.onReportComplete) {
     Studio.testResults = level.freePlay
       ? TestResults.FREE_PLAY
       : studioApp().getTestResults(levelComplete, {
-          executionError: Studio.executionError
+          executionError: Studio.executionError,
         });
   }
 
@@ -3824,7 +3824,7 @@ Studio.sendPuzzleReport = function (onComplete = Studio.onReportComplete) {
       testResult: Studio.testResults,
       program: encodeURIComponent(program),
       image: Studio.encodedFeedbackImage,
-      onComplete: onComplete
+      onComplete: onComplete,
     });
   };
 
@@ -3841,7 +3841,7 @@ Studio.sendPuzzleReport = function (onComplete = Studio.onReportComplete) {
         );
 
         sendReport();
-      }
+      },
     });
   }
 };
@@ -4113,7 +4113,7 @@ Studio.createLevelItems = function (svg) {
           );
           var itemOptions = Object.assign({}, classOptions, {
             x: Studio.HALF_SQUARE + Studio.SQUARE_SIZE * col,
-            y: Studio.HALF_SQUARE + Studio.SQUARE_SIZE * row
+            y: Studio.HALF_SQUARE + Studio.SQUARE_SIZE * row,
           });
           var item = new Item(itemOptions);
 
@@ -4346,7 +4346,7 @@ Studio.calculateBubblePosition = function (
     onRight,
     tipOffset,
     xSpeech,
-    ySpeech
+    ySpeech,
   };
 };
 
@@ -4356,7 +4356,7 @@ Studio.displayScore = function () {
     score.textContent = Studio.scoreText;
   } else {
     score.textContent = studioMsg.scoreText({
-      playerScore: Studio.playerScore
+      playerScore: Studio.playerScore,
     });
   }
   score.setAttribute('visibility', 'visible');
@@ -4576,7 +4576,7 @@ Studio.queueCmd = function (id, name, opts) {
   var cmd = {
     id: id,
     name: name,
-    opts: opts
+    opts: opts,
   };
   if (studioApp().isUsingBlockly() && Studio.currentCmdQueue) {
     if (Studio.currentEventParams) {
@@ -4750,35 +4750,35 @@ Studio.callCmd = function (cmd) {
       studioApp().highlight(cmd.id);
       Studio.moveSingle({
         spriteIndex: Studio.protagonistSpriteIndex || 0,
-        dir: Direction.EAST
+        dir: Direction.EAST,
       });
       break;
     case 'moveLeft':
       studioApp().highlight(cmd.id);
       Studio.moveSingle({
         spriteIndex: Studio.protagonistSpriteIndex || 0,
-        dir: Direction.WEST
+        dir: Direction.WEST,
       });
       break;
     case 'moveUp':
       studioApp().highlight(cmd.id);
       Studio.moveSingle({
         spriteIndex: Studio.protagonistSpriteIndex || 0,
-        dir: Direction.NORTH
+        dir: Direction.NORTH,
       });
       break;
     case 'moveDown':
       studioApp().highlight(cmd.id);
       Studio.moveSingle({
         spriteIndex: Studio.protagonistSpriteIndex || 0,
-        dir: Direction.SOUTH
+        dir: Direction.SOUTH,
       });
       break;
     case 'moveForward':
       studioApp().highlight(cmd.id);
       Studio.moveSingle({
         spriteIndex: Studio.protagonistSpriteIndex || 0,
-        dir: Studio.lastMoveSingleDir
+        dir: Studio.lastMoveSingleDir,
       });
       break;
     case 'moveBackward':
@@ -4786,21 +4786,21 @@ Studio.callCmd = function (cmd) {
       Studio.moveSingle({
         spriteIndex: Studio.protagonistSpriteIndex || 0,
         dir: Studio.lastMoveSingleDir,
-        backward: true
+        backward: true,
       });
       break;
     case 'turnRight':
       studioApp().highlight(cmd.id);
       Studio.turnSingle({
         spriteIndex: Studio.protagonistSpriteIndex || 0,
-        dir: turnRight90(Studio.lastMoveSingleDir)
+        dir: turnRight90(Studio.lastMoveSingleDir),
       });
       break;
     case 'turnLeft':
       studioApp().highlight(cmd.id);
       Studio.turnSingle({
         spriteIndex: Studio.protagonistSpriteIndex || 0,
-        dir: turnLeft90(Studio.lastMoveSingleDir)
+        dir: turnLeft90(Studio.lastMoveSingleDir),
       });
       break;
     case 'moveDistance':
@@ -4958,7 +4958,7 @@ Studio.playSound = function (opts) {
   var skinSoundMetadata = utils.valueOr(skin.soundMetadata, []);
   var playbackOptions = Object.assign(
     {
-      volume: 1.0
+      volume: 1.0,
     },
     _.find(skinSoundMetadata, function (metadata) {
       return metadata.name.toLowerCase().trim() === soundVal;
@@ -5003,7 +5003,7 @@ Studio.getItemOptionsForItemClass = function (itemClass) {
     spritesCounterclockwise: classProperties.spritesCounterclockwise,
     renderOffset: utils.valueOr(classProperties.renderOffset, {x: 0, y: 0}),
     renderScale: utils.valueOr(classProperties.scale, 1),
-    animationFrameDuration: classProperties.animationFrameDuration
+    animationFrameDuration: classProperties.animationFrameDuration,
   };
 };
 
@@ -5034,7 +5034,7 @@ Studio.addItem = function (opts) {
     Direction.NORTHEAST,
     Direction.SOUTHEAST,
     Direction.SOUTHWEST,
-    Direction.NORTHWEST
+    Direction.NORTHWEST,
   ];
 
   // Create stationary, grid-aligned items when skin.gridAlignedMovement,
@@ -5076,7 +5076,7 @@ Studio.addItem = function (opts) {
     {
       x: pos.x,
       y: pos.y,
-      dir: dir
+      dir: dir,
     }
   );
   var item = new Item(itemOptions);
@@ -5254,7 +5254,7 @@ Studio.vanishActor = function (opts) {
   var centerPos = sprite.getCurrentDrawPosition();
   var topLeftPos = {
     x: centerPos.x - sprite.width / 2,
-    y: centerPos.y - sprite.height / 2
+    y: centerPos.y - sprite.height / 2,
   };
 
   explosion.setAttribute('height', sprite.height);
@@ -5275,7 +5275,7 @@ Studio.vanishActor = function (opts) {
   } else {
     Studio.setSprite({
       spriteIndex: spriteIndex,
-      value: 'hidden'
+      value: 'hidden',
     });
   }
 
@@ -5293,7 +5293,7 @@ Studio.vanishActor = function (opts) {
         // hide the sprite
         Studio.setSprite({
           spriteIndex: spriteIndex,
-          value: 'hidden'
+          value: 'hidden',
         });
         // restore the normal opacity
         sprite.setOpacity(1);
@@ -5343,7 +5343,7 @@ Studio.setSpriteSpeed = function (opts) {
 var DROID_SPEEDS = {
   slow: constants.SpriteSpeed.SLOW,
   normal: constants.SpriteSpeed.NORMAL,
-  fast: constants.SpriteSpeed.VERY_FAST
+  fast: constants.SpriteSpeed.VERY_FAST,
 };
 
 Studio.setDroidSpeed = function (opts) {
@@ -5398,7 +5398,7 @@ Studio.setSpriteSize = function (opts) {
     // call setSprite with existing index/value now that we changed the size
     Studio.setSprite({
       spriteIndex: opts.spriteIndex,
-      value: curSpriteValue
+      value: curSpriteValue,
     });
 
     if (sprite.bubbleVisible) {
@@ -5936,7 +5936,7 @@ Studio.showTitleScreen = function (opts) {
       topMargin: TITLE_SCREEN_TEXT_TOP_MARGIN,
       sideMargin: TITLE_SCREEN_TEXT_SIDE_MARGIN,
       maxLines: TITLE_SCREEN_TEXT_MAX_LINES,
-      fullHeight: TITLE_SCREEN_TEXT_HEIGHT
+      fullHeight: TITLE_SCREEN_TEXT_HEIGHT,
     };
     var tsTextHeight = setSvgText(svgTextOpts).height;
     tsTextRect.setAttribute('height', tsTextHeight);
@@ -5994,12 +5994,12 @@ Studio.queueCallback = function (callback, args) {
       arguments: intArgs /* this just needs to be an array of the same size */,
       // give this node an end so that the interpreter doesn't treat it
       // like polyfill code and do weird weird scray terrible things.
-      end: 1
+      end: 1,
     },
     doneCallee_: true,
     func_: callback,
     arguments_: intArgs,
-    n_: intArgs.length
+    n_: intArgs.length,
   };
 
   registerEventHandler(Studio.eventHandlers, handlerName, () => {
@@ -6034,7 +6034,7 @@ Studio.askForInput = function (question, callback) {
     top: 0,
     left: 0,
     width: '400px',
-    height: '400px'
+    height: '400px',
   });
   viz.appendChild(target);
   studioApp().resizeVisualization();
@@ -6145,7 +6145,7 @@ var createSpeechBubble = function (spriteIndex, text) {
     fullHeight:
       maxLines * SPEECH_BUBBLE_LINE_HEIGHT +
       2 * SPEECH_BUBBLE_PADDING +
-      2 * SPEECH_BUBBLE_TOP_MARGIN
+      2 * SPEECH_BUBBLE_TOP_MARGIN,
   };
   var bblSize = setSvgText(svgTextOpts);
   var speechBubblePath = document.getElementById(
@@ -6216,7 +6216,7 @@ Studio.throwProjectile = function (options) {
     spriteX: sourceSprite.x,
     spriteY: sourceSprite.y,
     spriteHeight: sourceSprite.projectileSpriteHeight || sourceSprite.height,
-    spriteWidth: sourceSprite.projectileSpriteWidth || sourceSprite.width
+    spriteWidth: sourceSprite.projectileSpriteWidth || sourceSprite.width,
   };
 
   var projectile = new Projectile(projectileOptions);
@@ -6404,7 +6404,7 @@ Studio.setSpritePosition = function (opts) {
   // Don't reset collisions inside stop() if we're in the same position
   Studio.stop({
     spriteIndex: opts.spriteIndex,
-    dontResetCollisions: samePosition
+    dontResetCollisions: samePosition,
   });
   sprite.displayX = sprite.x = opts.x;
   sprite.displayY = sprite.y = opts.y;
@@ -6424,7 +6424,7 @@ Studio.setSpriteXY = function (opts) {
   // Don't reset collisions inside stop() if we're in the same position
   Studio.stop({
     spriteIndex: opts.spriteIndex,
-    dontResetCollisions: samePosition
+    dontResetCollisions: samePosition,
   });
   sprite.displayX = sprite.x = x;
   sprite.displayY = sprite.y = y;
@@ -6491,7 +6491,7 @@ Studio.addGoal = function (opts) {
   if (opts.value) {
     var sprite = {
       width: utils.valueOr(skin.goalSpriteWidth, Studio.MARKER_WIDTH),
-      height: utils.valueOr(skin.goalSpriteHeight, Studio.MARKER_HEIGHT)
+      height: utils.valueOr(skin.goalSpriteHeight, Studio.MARKER_HEIGHT),
     };
     // fill in .x and .y from the constants.Position value in opts.value
     opts.x = utils.xFromPosition(opts.value, Studio.MAZE_WIDTH, sprite.width);
@@ -6501,7 +6501,7 @@ Studio.addGoal = function (opts) {
   var goal = {
     finished: false,
     x: opts.x,
-    y: opts.y
+    y: opts.y,
   };
 
   Studio.createGoalElements(Studio.allGoals_().length, goal);
@@ -6535,14 +6535,14 @@ Studio.getPlayspaceBoundaries = function (sprite) {
       left:
         0 -
         (sprite.width - skin.wallCollisionRectWidth) / 2 -
-        skin.wallCollisionRectOffsetX
+        skin.wallCollisionRectOffsetX,
     };
   } else {
     boundaries = {
       top: 0,
       right: Studio.MAZE_WIDTH - sprite.width,
       bottom: Studio.MAZE_HEIGHT - sprite.height,
-      left: 0
+      left: 0,
     };
   }
 

@@ -1,11 +1,11 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import {Radio, ControlLabel, FormGroup, Table} from 'react-bootstrap';
+import {Radio, ControlLabel, FormGroup, Table} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 
 const questionPropType = PropTypes.shape({
   label: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
-  required: PropTypes.bool
+  required: PropTypes.bool,
 });
 
 class QuestionRow extends React.Component {
@@ -29,7 +29,7 @@ class QuestionRow extends React.Component {
     const value = event.target.value;
     this.props.onChange &&
       this.props.onChange({
-        [this.props.question.name]: value
+        [this.props.question.name]: value,
       });
   }
 
@@ -78,7 +78,7 @@ QuestionRow.propTypes = {
   errors: PropTypes.arrayOf(PropTypes.string),
   onChange: PropTypes.func,
   options: PropTypes.arrayOf(PropTypes.string).isRequired,
-  question: questionPropType
+  question: questionPropType,
 };
 
 export default class QuestionsTable extends React.Component {
@@ -88,12 +88,12 @@ export default class QuestionsTable extends React.Component {
     const thStyle = {
       width: `${100 / columns}%`,
       backgroundColor: '#00b2c0',
-      color: 'white'
+      color: 'white',
     };
 
     const labelThStyle = {
       ...thStyle,
-      width: `${(this.props.labelSpan * 100) / columns}%`
+      width: `${(this.props.labelSpan * 100) / columns}%`,
     };
 
     return (
@@ -135,9 +135,9 @@ QuestionsTable.propTypes = {
   onChange: PropTypes.func,
   options: PropTypes.arrayOf(PropTypes.string).isRequired,
   questions: PropTypes.arrayOf(questionPropType).isRequired,
-  label: PropTypes.string
+  label: PropTypes.string,
 };
 
 QuestionsTable.defaultProps = {
-  labelSpan: 1
+  labelSpan: 1,
 };

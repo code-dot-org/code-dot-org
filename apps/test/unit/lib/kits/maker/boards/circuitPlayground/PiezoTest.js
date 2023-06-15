@@ -17,7 +17,7 @@ describe('Piezo', function () {
 
   it('is a johnny-five Piezo component', function () {
     const piezo = new Piezo({
-      controller: makeStubPiezoController()
+      controller: makeStubPiezoController(),
     });
     expect(piezo).to.be.an.instanceOf(five.Piezo);
   });
@@ -29,7 +29,7 @@ describe('Piezo', function () {
       beforeEach(function () {
         sinon.stub(five.Piezo.prototype, 'play');
         piezo = new Piezo({
-          controller: makeStubPiezoController()
+          controller: makeStubPiezoController(),
         });
       });
 
@@ -41,13 +41,13 @@ describe('Piezo', function () {
         const song = [
           ['C4', 1 / 2],
           ['D4', 1 / 2],
-          ['E4', 1]
+          ['E4', 1],
         ];
         const tempo = 100;
         piezo[methodUnderTest](song, tempo);
         expect(five.Piezo.prototype.play).to.have.been.calledWith({
           song,
-          tempo
+          tempo,
         });
       });
 
@@ -59,9 +59,9 @@ describe('Piezo', function () {
           song: [
             ['C4', 1 / 4],
             ['D4', 1 / 4],
-            ['E4', 1 / 4]
+            ['E4', 1 / 4],
           ],
-          tempo
+          tempo,
         });
       });
 
@@ -69,12 +69,12 @@ describe('Piezo', function () {
         const song = [
           ['C4', 1 / 2],
           ['D4', 1 / 2],
-          ['E4', 1]
+          ['E4', 1],
         ];
         piezo[methodUnderTest](song);
         expect(five.Piezo.prototype.play).to.have.been.calledWith({
           song,
-          tempo: 120
+          tempo: 120,
         });
       });
     });
@@ -182,10 +182,10 @@ describe('Piezo', function () {
 function makeStubPiezoController() {
   return {
     frequency: {
-      value: sinon.spy()
+      value: sinon.spy(),
     },
     noTone: {
-      value: sinon.spy()
-    }
+      value: sinon.spy(),
+    },
   };
 }

@@ -126,7 +126,12 @@ class PeerReview < ApplicationRecord
   end
 
   def localized_status_description
+    # We can safely treat this string as HTML-safe because rendering an i18n
+    # string with the `markdown: true` option automatically filters out any
+    # non-markdown-standard HTML.
+    # rubocop:disable Rails/OutputSafety
     I18n.t("peer_review.#{status}.description_markdown", markdown: true).html_safe if status
+    # rubocop:enable Rails/OutputSafety
   end
 
   def self.create_for_submission(user_level, level_source_id)

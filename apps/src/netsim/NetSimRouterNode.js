@@ -375,7 +375,7 @@ NetSimRouterNode.prototype.buildRow = function () {
     memory: serializeNumber(this.memory),
     dnsMode: this.dnsMode,
     dnsNodeID: this.dnsNodeID,
-    randomDropChance: this.randomDropChance
+    randomDropChance: this.randomDropChance,
   });
 };
 
@@ -555,7 +555,7 @@ NetSimRouterNode.prototype.addMessageToSchedule_ = function (
     message: queuedMessage,
     completionTime: completionTime,
     expirationTime: this.simulationTime_ + PACKET_MAX_LIFETIME_MS,
-    beingRouted: false
+    beingRouted: false,
   });
 };
 
@@ -616,12 +616,12 @@ NetSimRouterNode.prototype.tickAutoDns_ = function () {
 NetSimRouterNode.prototype.getDisplayName = function () {
   if (NetSimGlobals.getLevelConfig().broadcastMode) {
     return i18n.roomNumberX({
-      x: this.getRouterNumber()
+      x: this.getRouterNumber(),
     });
   }
 
   return i18n.routerNumberX({
-    x: this.getRouterNumber()
+    x: this.getRouterNumber(),
   });
 };
 
@@ -732,12 +732,12 @@ NetSimRouterNode.prototype.getStatus = function () {
   if (connectionCount === 0) {
     if (levelConfig.broadcastMode) {
       return i18n.roomStatusNoConnections({
-        maximumClients: this.maxClientConnections_
+        maximumClients: this.maxClientConnections_,
       });
     }
 
     return i18n.routerStatusNoConnections({
-      maximumClients: this.maxClientConnections_
+      maximumClients: this.maxClientConnections_,
     });
   }
 
@@ -745,25 +745,25 @@ NetSimRouterNode.prototype.getStatus = function () {
   if (connectionCount >= this.maxClientConnections_) {
     if (levelConfig.broadcastMode) {
       return i18n.roomStatusFull({
-        connectedClients: connectedNodeNames
+        connectedClients: connectedNodeNames,
       });
     }
 
     return i18n.routerStatusFull({
-      connectedClients: connectedNodeNames
+      connectedClients: connectedNodeNames,
     });
   }
 
   if (levelConfig.broadcastMode) {
     return i18n.roomStatus({
       connectedClients: connectedNodeNames,
-      remainingSpace: this.maxClientConnections_ - connectionCount
+      remainingSpace: this.maxClientConnections_ - connectionCount,
     });
   }
 
   return i18n.routerStatus({
     connectedClients: connectedNodeNames,
-    remainingSpace: this.maxClientConnections_ - connectionCount
+    remainingSpace: this.maxClientConnections_ - connectionCount,
   });
 };
 
@@ -1020,7 +1020,10 @@ NetSimRouterNode.prototype.acceptConnection = function (otherNode, onComplete) {
         addressesSoFar[this.getAddress()] = true;
         addressesSoFar[this.getAutoDnsAddress()] = true;
         var addressCollision = connections.some(function (wire) {
-          var collides = addressesSoFar.hasOwnProperty(wire.localAddress);
+          var collides = Object.prototype.hasOwnProperty.call(
+            addressesSoFar,
+            wire.localAddress
+          );
           addressesSoFar[wire.localAddress] = true;
           return collides;
         });
@@ -1144,7 +1147,7 @@ NetSimRouterNode.prototype.getAddressTable = function () {
         hostname: row.localHostname,
         address: row.localAddress,
         isLocal: row.localNodeID === this.simulateForSender_,
-        isDnsNode: row.localNodeID === this.dnsNodeID
+        isDnsNode: row.localNodeID === this.dnsNodeID,
       };
     }.bind(this)
   );
@@ -1155,7 +1158,7 @@ NetSimRouterNode.prototype.getAddressTable = function () {
       hostname: AUTO_DNS_HOSTNAME,
       address: this.getAutoDnsAddress(),
       isLocal: false,
-      isDnsNode: true
+      isDnsNode: true,
     });
   }
 
@@ -1730,7 +1733,7 @@ NetSimRouterNode.prototype.forwardMessageToNodeIDs_ = function (
       fromNodeID: this.entityID,
       toNodeID: nodeID,
       simulatedBy: nodeID,
-      payload: message.payload
+      payload: message.payload,
     };
   }, this);
 
@@ -1813,7 +1816,7 @@ NetSimRouterNode.prototype.forwardMessageToRecipient_ = function (
       simulatedBy: simulatingNodeID,
       payload: message.payload,
       extraHopsRemaining: Math.max(0, message.extraHopsRemaining - 1),
-      visitedNodeIDs: message.visitedNodeIDs.concat(this.entityID)
+      visitedNodeIDs: message.visitedNodeIDs.concat(this.entityID),
     },
     function (err, result) {
       this.log(
@@ -2029,7 +2032,7 @@ NetSimRouterNode.prototype.generateDnsResponse_ = function (
     fromAddress: this.getAutoDnsAddress(),
     toAddress: fromAddress,
     packetIndex: 1,
-    packetCount: 1
+    packetCount: 1,
   };
 
   responseBinary = packet.encoder.concatenateBinary(
@@ -2043,7 +2046,7 @@ NetSimRouterNode.prototype.generateDnsResponse_ = function (
       fromNodeID: autoDnsNodeID,
       toNodeID: routerNodeID,
       simulatedBy: message.simulatedBy,
-      payload: responseBinary
+      payload: responseBinary,
     },
     onComplete
   );

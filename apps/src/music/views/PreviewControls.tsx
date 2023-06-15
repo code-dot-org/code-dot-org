@@ -23,14 +23,18 @@ interface ClearButtonProps {
 
 const ClearButton: React.FunctionComponent<ClearButtonProps> = ({
   onClickClear,
-  cancelPreviews
+  cancelPreviews,
 }) => {
   const onClick = useCallback(() => {
     cancelPreviews();
     onClickClear();
   }, [cancelPreviews, onClickClear]);
   return (
-    <button className={moduleStyles.buttonContainer} onClick={onClick}>
+    <button
+      className={moduleStyles.buttonContainer}
+      onClick={onClick}
+      type="button"
+    >
       <FontAwesome icon={'trash-o'} className={moduleStyles.previewButton} />
     </button>
   );
@@ -43,12 +47,13 @@ interface PreviewButtonProps {
 
 const PreviewButton: React.FunctionComponent<PreviewButtonProps> = ({
   enabled,
-  playPreview
+  playPreview,
 }) => {
   return (
     <button
       className={moduleStyles.buttonContainer}
       onClick={enabled ? playPreview : undefined}
+      type="button"
     >
       <FontAwesome
         icon={'play-circle'}

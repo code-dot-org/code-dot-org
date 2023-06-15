@@ -13,7 +13,7 @@ export default class UserPreferences extends Record({userId: 'me'}) {
   setUsingTextMode(usingTextMode, context = {}) {
     return $.post(`/api/v1/users/${this.userId}/using_text_mode`, {
       ...context,
-      using_text_mode: usingTextMode
+      using_text_mode: usingTextMode,
     });
   }
 
@@ -29,7 +29,7 @@ export default class UserPreferences extends Record({userId: 'me'}) {
    */
   setDisplayTheme(displayTheme) {
     return $.post(`/api/v1/users/${this.userId}/display_theme`, {
-      display_theme: displayTheme
+      display_theme: displayTheme,
     });
   }
 
@@ -45,7 +45,7 @@ export default class UserPreferences extends Record({userId: 'me'}) {
    */
   setMuteMusic(muteMusic) {
     return $.post(`/api/v1/users/${this.userId}/mute_music`, {
-      mute_music: muteMusic
+      mute_music: muteMusic,
     });
   }
 

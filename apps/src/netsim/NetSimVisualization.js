@@ -47,7 +47,7 @@ var NetSimVisualization = (module.exports = function (rootDiv, runLoop) {
   // Immediately, drop our SVG canvas and basic groups into the DOM
   this.rootDiv_.html(
     visualizationMarkup({
-      showBackground: SHOW_BACKGROUND
+      showBackground: SHOW_BACKGROUND,
     })
   );
 
@@ -520,7 +520,7 @@ NetSimVisualization.prototype.generateBroadcastModeConnections_ = function () {
           nodeB: this.getElementByEntityID(
             NetSimVizSimulationNode,
             nodeRows[to].id
-          )
+          ),
         });
       }
     }

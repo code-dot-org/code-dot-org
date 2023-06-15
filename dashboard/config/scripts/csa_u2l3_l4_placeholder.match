@@ -9,3 +9,4 @@ question 'call by value'
 answer 'copy the value of actual parameter to formal parameter'
 question 'new keyword'
 answer 'used to create an object'
+allow_multiple_attempts true

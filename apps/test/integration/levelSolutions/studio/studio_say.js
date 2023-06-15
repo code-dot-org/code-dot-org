@@ -16,13 +16,13 @@ var levelDef = {
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 16, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0]
+    [0, 0, 0, 0, 0, 0, 0, 0],
   ],
   timeoutFailureTick: 200,
   freePlay: true,
   edgeCollisions: true,
   allowSpritesOutsidePlayspace: false,
-  spritesHiddenToStart: true
+  spritesHiddenToStart: true,
 };
 
 module.exports = {
@@ -65,8 +65,8 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
     {
       description: 'saySprite with non-visible actor',
@@ -95,8 +95,8 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
     {
       description: 'saySprite after vanishing actor',
@@ -136,8 +136,8 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
-    }
-  ]
+        testResult: TestResults.FREE_PLAY,
+      },
+    },
+  ],
 };

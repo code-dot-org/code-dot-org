@@ -1,7 +1,7 @@
 var actions = require('@cdo/apps/p5lab/actions');
 var {
   clearConsole,
-  addConsoleMessage
+  addConsoleMessage,
 } = require('@cdo/apps/p5lab/redux/textConsole');
 var createStore = require('../../util/redux').createStore;
 var combineReducers = require('redux').combineReducers;
@@ -54,7 +54,7 @@ describe('gamelabReducer', function () {
       store.dispatch(addConsoleMessage(secondMessage));
       expect(store.getState().textConsole).to.deep.equal([
         initialMessage,
-        secondMessage
+        secondMessage,
       ]);
     });
 
@@ -95,7 +95,7 @@ describe('gamelabReducer', function () {
       );
       store.dispatch(
         setPageConstants({
-          assetUrl: newAssetUrlFunction
+          assetUrl: newAssetUrlFunction,
         })
       );
       expect(store.getState().pageConstants.assetUrl).to.equal(
@@ -107,7 +107,7 @@ describe('gamelabReducer', function () {
       expect(initialState.pageConstants.isEmbedView).to.be.undefined;
       store.dispatch(
         setPageConstants({
-          isEmbedView: false
+          isEmbedView: false,
         })
       );
       expect(store.getState().pageConstants.isEmbedView).to.be.false;
@@ -117,7 +117,7 @@ describe('gamelabReducer', function () {
       expect(initialState.pageConstants.isShareView).to.be.undefined;
       store.dispatch(
         setPageConstants({
-          isShareView: true
+          isShareView: true,
         })
       );
       expect(store.getState().pageConstants.isShareView).to.be.true;
@@ -127,7 +127,7 @@ describe('gamelabReducer', function () {
       expect(function () {
         store.dispatch(
           setPageConstants({
-            theAnswer: 42
+            theAnswer: 42,
           })
         );
       }).to.throw(

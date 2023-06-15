@@ -17,7 +17,7 @@ const INCLUDE_LARGE_STORIES = false;
 
 class _TableWrapper extends React.Component {
   static propTypes = {
-    currentView: PropTypes.oneOf(Object.values(ViewType))
+    currentView: PropTypes.oneOf(Object.values(ViewType)),
   };
   render() {
     return (
@@ -27,7 +27,7 @@ class _TableWrapper extends React.Component {
           marginLeft: 80,
           width: 970,
           display: 'block',
-          backgroundColor: '#ffffff'
+          backgroundColor: '#ffffff',
         }}
       >
         <SectionProgressToggle />
@@ -38,7 +38,7 @@ class _TableWrapper extends React.Component {
 }
 
 const TableWrapper = connect(state => ({
-  currentView: state.sectionProgress.currentView
+  currentView: state.sectionProgress.currentView,
 }))(_TableWrapper);
 
 function buildSmallStories() {
@@ -56,7 +56,7 @@ function buildSmallStories() {
             <TableWrapper />
           </Provider>
         );
-      }
+      },
     },
     {
       name: `Small section, large script`,
@@ -67,8 +67,8 @@ function buildSmallStories() {
             <TableWrapper />
           </Provider>
         );
-      }
-    }
+      },
+    },
   ];
 }
 
@@ -83,7 +83,7 @@ function buildLargeStories() {
             <TableWrapper />
           </Provider>
         );
-      }
+      },
     },
     {
       name: `Medium section, large script`,
@@ -94,7 +94,7 @@ function buildLargeStories() {
             <TableWrapper />
           </Provider>
         );
-      }
+      },
     },
     {
       name: `Large section, small script`,
@@ -105,7 +105,7 @@ function buildLargeStories() {
             <TableWrapper />
           </Provider>
         );
-      }
+      },
     },
     {
       name: `Large section, large script`,
@@ -116,8 +116,8 @@ function buildLargeStories() {
             <TableWrapper />
           </Provider>
         );
-      }
-    }
+      },
+    },
   ];
 }
 

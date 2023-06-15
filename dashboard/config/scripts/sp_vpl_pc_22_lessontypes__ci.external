@@ -5,6 +5,12 @@ description 'description here'
 markdown <<MARKDOWN
 # Unit Structure
 
+<div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
+
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; ">
+The Creating Apps with Devices unit is divided into <strong>two chapters.</strong> Each chapter includes several small projects and activities that provide an opportunity for students to practice new skills. If you are short on time, you may choose to complete only the first chapter of the unit.
+</p></div>
+
 ## Introduction to App Lab
 
 ##### The Creating Apps for Devices unit begins with a lesson on App Lab to get your students familiar with the tool they will use this unit. If your students are already familiar with App Lab, you may decide to skip this lesson. <a href="https://support.code.org/hc/en-us/articles/115001479372-How-can-I-hide-certain-units-or-lessons-from-my-students" target="blank" rel="noopener noreferrer">Click here</a> to learn more about skipping this lesson, allowing your classes to start right away with Chapter 1: Inputs and Outputs.
@@ -12,10 +18,8 @@ markdown <<MARKDOWN
 
 ## Chapters
 
-##### The Creating Apps with Devices unit is divided into **two chapters.** Each chapter includes several small projects and activities that provide an opportunity for students to practice new skills. If you are short on time, you may choose to complete only the first chapter of the unit.
-
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">🔎 Chapter 1: Inputs and Outputs</summary>
+    <summary style="font-size: 1.5em; font-weight: bold;">📘  Chapter 1: Inputs and Outputs</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
     <p>
 
@@ -26,7 +30,7 @@ markdown <<MARKDOWN
 </details>
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">🔎 Chapter 2: Building Physical Prototypes</summary>
+    <summary style="font-size: 1.5em; font-weight: bold;">📗 Chapter 2: Building Physical Prototypes</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
     <p>
 
@@ -41,7 +45,7 @@ markdown <<MARKDOWN
 ### Lesson components 
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">🔎 Warm up</summary>
+    <summary style="font-size: 1.5em; font-weight: bold;">🙋‍♀️ Warm up</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
     <p>
 
@@ -51,7 +55,7 @@ markdown <<MARKDOWN
 </details>
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">🔎 Activity</summary>
+    <summary style="font-size: 1.5em; font-weight: bold;">💃 Activity</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
     <p>
 
@@ -61,7 +65,7 @@ markdown <<MARKDOWN
 </details>
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">🔎 Wrap up</summary>
+    <summary style="font-size: 1.5em; font-weight: bold;">🏁 Wrap up</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
     <p>
 
@@ -73,7 +77,7 @@ markdown <<MARKDOWN
 ### Lesson types
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">🔎 Programming lessons</summary>
+    <summary style="font-size: 1.5em; font-weight: bold;">💻 Programming lessons</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
     <p>
 
@@ -82,7 +86,7 @@ markdown <<MARKDOWN
 </details>
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">🔎 Non-programming lessons</summary>
+    <summary style="font-size: 1.5em; font-weight: bold;">✍🏽 Non-programming lessons</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
     <p>
 
@@ -92,7 +96,7 @@ markdown <<MARKDOWN
 </details>
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">🔎 Project lessons</summary>
+    <summary style="font-size: 1.5em; font-weight: bold;">👩‍💻 Project lessons</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
     <p>
 

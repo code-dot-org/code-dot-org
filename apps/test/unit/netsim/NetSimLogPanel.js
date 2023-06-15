@@ -48,7 +48,7 @@ describe('NetSimLogPanel', function () {
     beforeEach(function () {
       panel = new NetSimLogPanel(rootDiv, {
         packetSpec: NetSimGlobals.getLevelConfig().clientInitialPacketHeader,
-        maximumLogPackets: 10
+        maximumLogPackets: 10,
       });
 
       panel.setEncodings([EncodingType.ASCII]);
@@ -78,7 +78,7 @@ describe('NetSimLogPanel', function () {
         EncodingType.DECIMAL,
         EncodingType.HEXADECIMAL,
         EncodingType.BINARY,
-        EncodingType.A_AND_B
+        EncodingType.A_AND_B,
       ]);
 
       assert.equal(1, scrollArea.find('.packet:first tr.ascii').length);

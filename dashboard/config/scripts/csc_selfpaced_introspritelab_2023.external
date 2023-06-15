@@ -5,19 +5,12 @@ description 'description here'
 markdown <<MARKDOWN
 # Introducing Sprite Lab
 
-##### Sprite Lab is one learning tool students will use with
-
-* ##### Coding with Poetry
-* ##### Coding Interactive Maps
-* ##### Coding Time Capsules
-* ##### Modeling Animal Adaptations
-
-##### ...and more!
+##### Sprite Lab is a learning tool that allows students to learn about sprites, sprite behaviors, and events.  A sprite is an image or character in your coding program.  An event in computer science is an action that causes something to happen.
 
 ## You will:
 
 * ##### Watch a video that introduces Sprite Lab to students.
-* ##### Practice working in Sprite Lab as you preview CS Connections lessons.
+* ##### Practice working in Sprite Lab to learn about sprites and events.
 
 ### **Suggested time:** 5 minutes
 

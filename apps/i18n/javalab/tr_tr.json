@@ -3,6 +3,7 @@
   "addAComment": "Bir yorum ekle",
   "addACommentToReview": "İncelemeye yorum ekleme",
   "authorizerNearLimit": "Son bir saat içinde kodunuzu çok fazla çalıştırdınız. Hesabınız kalıcı olarak kilitlenmeden önce {attemptsLeft} deneme hakkınız kaldı ve Java kodunu çalıştıramayacaksınız. Tekrar denemeden önce lütfen 15 dakika bekleyin.",
+  "authorizerNearLimitTemporary": "Kodunuzu son olarak çok fazla çalıştırdınız {lockoutPeriod}. Var {attemptsLeft} denemeler kaldı. Kendiniz ve öğrencileriniz için çok daha yüksek bir kotaya erişmek için doğrulanmış bir öğretmen olun.\n[Nasıl doğrulanmış öğretmen olunur] hakkında daha fazla bilgi edinin (https://support.code.org/hc/en-us/articles/115001550131-How-to-Become-a-Verified-Teacher).\n[Öğretmen doğrulaması için neden gerekli olduğunu] öğrenin (https://support.code.org/hc/en-us/articles/6104078305549-Teacher-Verification-and-CSA).\n",
   "authorizerTokenUsed": "Zaten kodunuzu çalıştırmış olan bir belirteci yeniden kullanmaya çalışıyorsunuz. Tekrar denemeden önce lütfen güvenli bir ağda olup olmadığınızı kontrol edin. Bu mesajın hatalı olduğunu düşünüyorsanız, support@code.org ile iletişime geçin.",
   "authorLabel": "yazar",
   "allFilesCompile": "Tüm Dosyalar Derlensin!",
@@ -121,6 +122,7 @@
   "onlyVisibleToYou": "öğretmen yorumları sadece size görünür",
   "openedDate": "açılma tarihi: {date}",
   "programCompleted": "Program tamamlandı.",
+  "programEndedUnexpectedly": "Programınız beklenmedik bir şekilde durdu. Programınızı çalıştırma kapasitesinin dışında olabiliriz, veya ağ sorunları yaşıyor olabilirsiniz. Lütfen ağ bağlantınızı kontrol edin ve tekrar deneyin.",
   "programStopped": "Program durdu.",
   "refresh": "Yenile",
   "rename": "Yeniden adlandır",
@@ -154,6 +156,8 @@
   "unknownError": "Hata. Bizim tarafımızda bir hata ile karşılaştık. Programınızı tekrar çalıştırmayı deneyin. Bu hata devam ederse, support@code.org adresinden bize ulaşın. Mesajınızı {connectionId} bağlantı kimliğini eklediğinizden emin olun.\n{type}",
   "unsupportedMiniAppMessage": "Düzey türü uyuşmazlığı: {miniAppType} projeleri, {miniAppType} dışı düzeyde desteklenmez.",
   "userBlocked": "Kodunuzu çok fazla çalıştırdınız ve hesabınız kilitlendi. Hesabınızın kilidini açmak için support@code.org ile iletişime geçin.",
+  "userBlockedTemporary": "Java kodunu kaç kez çalıştırabileceğiniz sınırına ulaştınız 24 saatler. Kendiniz ve öğrencileriniz için çok daha yüksek bir kotaya erişmek için doğrulanmış bir öğretmen olun.\n[Nasıl doğrulanmış öğretmen olunur] hakkında daha fazla bilgi edinin (https://support.code.org/hc/en-us/articles/115001550131-How-to-Become-a-Verified-Teacher).\n[Öğretmen doğrulamasının neden gerekli olduğunu] öğrenin (https://support.code.org/hc/en-us/articles/6104078305549-Teacher-Verification-and-CSA).\nBu mesajın hatalı olduğunu düşünüyorsanız, support@code.org ile iletişime geçin.",
+  "waitingForServer": "Bir cevap bekliyorum...",
   "youHaveProjectsToReview": "Gözden geçirilecek projeleriniz var...",
   "yourPeer": "akranın"
 }

@@ -395,7 +395,7 @@ it:
             '"CAT"': gatto
             '"DOG"': cane
             '"DUCK"': un'anatra
-            '"FROG"': Ranocchio
+            '"FROG"': ranocchio
             '"MOOSE"': tutte le alci
             '"PINEAPPLE"': Ananas
             '"ROBOT"': robot
@@ -424,7 +424,7 @@ it:
             '"CAT"': gatto
             '"DOG"': cane
             '"DUCK"': un'anatra
-            '"FROG"': Ranocchio
+            '"FROG"': ranocchio
             '"MOOSE"': tutte le alci
             '"PINEAPPLE"': Ananas
             '"ROBOT"': robot
@@ -2507,6 +2507,23 @@ it:
           DIR:
             right: destra ↻
             left: sinistra ↺
+      ecosystems_int10:
+        text: "{VALUE}"
+        options:
+          VALUE:
+            '0': '0'
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+      storylab_printText:
+        text: scrivi {TEXT}
       storylab_setForegroundEffect2:
         text: crea effetto {EFFECT}
         options:

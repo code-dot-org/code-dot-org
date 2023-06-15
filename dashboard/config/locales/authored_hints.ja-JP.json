@@ -5254,10 +5254,10 @@
           "courseD_artist_nestedLoopsFP_c": "くりかえしの入れ子を使って、一辺が50ピクセルの五角形を48度まがりながら15個かきます。"
         },
         "courseD_artist_nestedLoops_challenge1": {
-          "courseD_artist_nestedLoops_challenge1_a": "はじめに線の色を青にして、一辺が50ピクセルの八角形をかいたら、45度まがります。",
-          "courseD_artist_nestedLoops_challenge1_b": "次に線の色を緑にして、50ピクセル前にすすむと、120度左にまがるを 使って 三角形をかきます。",
+          "courseD_artist_nestedLoops_challenge1_a": "はじめに線の色を青にして、一辺が50ピクセル、左に45度まがって八角形を作成します。",
+          "courseD_artist_nestedLoops_challenge1_b": "次に線の色を緑にして、一辺が50ピクセル、左に120度まがるを 使って 三角形を作成します。",
           "courseD_artist_nestedLoops_challenge1_c": "２つ図形を かいたら、50ピクセル前に ジャンプしてから、90度まがります。",
-          "courseD_artist_nestedLoops_challenge1_d": "それをくりかえしの中に入れて、4回くりかえすようにすれば かんせいです。"
+          "courseD_artist_nestedLoops_challenge1_d": "最後に4回くりかえしを使って完成させてください。"
         },
         "courseD_artist_nestedLoops_challenge1_2018": {
           "courseD_artist_nestedLoops_challenge1_a": "はじめに線の色を青にして、一辺が50ピクセルの八角形をかいたら、45度まがります。",
@@ -5279,7 +5279,7 @@
         },
         "courseD_artist_nestedLoops_challenge2": {
           "courseD_artist_nestedLoops_challenge2_a": "正八角形をかくには、45度まがるを８回行います。",
-          "courseD_artist_nestedLoops_challenge2_b": "正方形をかくには、90度まがるを4回行います。"
+          "courseD_artist_nestedLoops_challenge2_b": "六角形をかくには、60度まがるを6回行います。\n正方形をかくには、90度まがるを4回行います。"
         },
         "courseD_artist_nestedLoops_challenge2_2018": {
           "courseD_artist_nestedLoops_challenge2_a": "正八角形をかくには、45度まがるを８回行います。",
@@ -9241,35 +9241,35 @@
           "courseB_maze_seq4_b": "<xml><block type=\"maze_moveEast\"/></xml> をひっつけます。"
         },
         "courseB_maze_seq5_2021": {
-          "courseB_maze_seq5_a": "わからなくなったら、行きかたを紙に書いてみよう。",
+          "courseB_maze_seq5_a": "わからなくなったら、紙にすすみかたを書いてみよう。",
           "courseB_maze_seq5_b": "行きかたは、2つあるよ。",
           "courseB_maze_seq5_c": "わからない？あかいせん の とおりに いってみよう。"
         },
         "courseB_maze_seq6_2021": {
           "courseB_maze_seq6_a": "つかうのは、3ブロックです。",
-          "courseB_maze_seq6_b": "わからないときは、よこに行くの と 上下に行くのを べつべつに考えてみよう。",
+          "courseB_maze_seq6_b": "わからないときは、よこに行くほうほう と 上下に行くほうほうを べつべつに考えてみよう。",
           "courseB_maze_seq5_c": "行きかたは、2つあるよ。",
           "courseB_maze_seq5_d": "わからない？あかいせん の とおりに いってみよう。"
         },
         "courseB_maze_seq7_2021": {
           "courseB_maze_seq7_a": "スクラットをドングリのほうに うごかすために 一つブロックを ひっつけよう。",
-          "courseB_maze_seq7_b": "トリさんがブタのところに行くには、なにが たりないのか みるために プログラムを 実行 (じっこう) してみよう。",
+          "courseB_maze_seq7_b": "一どプログラムを実行（じっこう）してみて、どこにうごくか見てみよう。",
           "courseB_maze_seq7_c": "わからない？あかいせん の とおりに いってみよう。"
         },
         "courseB_maze_seq8_2021": {
-          "courseB_maze_seq8_a": "ブタのところに行けるまで、1つずつブロックをひっつけましょう。",
+          "courseB_maze_seq8_a": "ドングリのところに行けるまで、1つずつブロックをひっつけましょう。",
           "courseB_maze_seq8_b": "ドングリにいく ほうほうは、いくつか あります。",
           "courseB_maze_seq8_c": "わからない？こんなふうに行ってみよう！"
         },
         "courseB_maze_seq9_2021": {
-          "courseB_maze_seq9_a": "すべてのステップを紙に書いてみよう。",
+          "courseB_maze_seq9_a": "行きかたを紙に書いてみよう。",
           "courseB_maze_seq9_b": "1つずつブロックをひっつけて、テストしながら プログラムを かんせいさせよう。",
           "courseB_maze_seq9_c": "行きかたは、2つあるよ。",
-          "courseB_maze_seq9_d": "わからない？赤い線にそって行ってみよう。"
+          "courseB_maze_seq9_d": "わからない？あかいせん の とおりに いってみよう。"
         },
         "courseB_maze_seq_challenge1_2021": {
           "courseB_maze_seq_challenge1_a": "さいたんルートじゃなくてもいいよ。",
-          "courseB_maze_seq_challenge1_b": "さいしょのブロックは、<xml><block type=\"maze_moveWest\"/></xml>。"
+          "courseB_maze_seq_challenge1_b": "さいしょのブロックは、<xml><block type=\"maze_moveWest\"/></xml>"
         },
         "courseB_maze_seq_challenge2_2021": {
           "courseB_maze_seq_challenge2_a": "ブロックを ついか したり、けしたりする ひつようは ありません。",

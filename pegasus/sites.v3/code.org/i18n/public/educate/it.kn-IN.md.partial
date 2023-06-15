@@ -10,7 +10,8 @@ theme: responsive
 
 - ನಿಮ್ಮ ಶಾಲೆಗೆ ಕನಿಷ್ಠ 15 MBit/sec ಇಂಟರ್ನೆಟ್ ಸಂಪರ್ಕವನ್ನು ನಾವು ಶಿಫಾರಸು ಮಾಡುತ್ತೇವೆ.
 - ನಾವು ಬೆಂಬಲಿಸುವ ಚಿಕ್ಕ ಪರದೆಯ ಗಾತ್ರ 1024 x 728 px ಆಗಿದೆ.
-- ನಮ್ಮ ಮಧ್ಯಮ ಮತ್ತು ಪ್ರೌಢಶಾಲಾ ಹಂತದ ಕೋರ್ಸ್‌ಗಳಿಗಾಗಿ ನಿಮಗೆ ಮೌಸ್ (ಅಥವಾ ಟಚ್‌ಪ್ಯಾಡ್) ಮತ್ತು ಕೀಬೋರ್ಡ್‌ನೊಂದಿಗೆ ಡೆಸ್ಕ್‌ಟಾಪ್ ಅಥವಾ ಲ್ಯಾಪ್‌ಟಾಪ್ ಕಂಪ್ಯೂಟರ್ ಅಗತ್ಯವಿದೆ: CS ಡಿಸ್ಕವರಿಗಳು, CS ತತ್ವಗಳು ಮತ್ತು ಅಪ್ಲಿಕೇಶನ್ ಲ್ಯಾಬ್‌ಗೆ ಪರಿಚಯ. ಈ ಕೋರ್ಸ್‌ಗಳಿಗೆ ಹೆಚ್ಚಿನ ಟ್ಯಾಬ್ಲೆಟ್‌ಗಳು ಮತ್ತು ಮೊಬೈಲ್ ಸಾಧನಗಳು ಬೆಂಬಲಿತವಾಗಿಲ್ಲ. ಸಾಧನ-ನಿರ್ದಿಷ್ಟ ವಿನಾಯಿತಿಗಳಿಗಾಗಿ ಕೆಳಗಿನ "ಮೊಬೈಲ್ ಮತ್ತು ಟ್ಯಾಬ್ಲೆಟ್ ಬೆಂಬಲ ವಿವರಗಳು" ನೋಡಿ.
+- You will need a desktop or laptop computer (Chromebooks are included) with a mouse (or touchpad) and keyboard for our middle and high school-level courses: CS Discoveries, CS Principles, and Intro to App Lab. “See Minimum Supported Browsers and Platforms” below.
+- Most tablets (such as an iPad) and mobile devices are not supported for these courses. ಸಾಧನ-ನಿರ್ದಿಷ್ಟ ವಿನಾಯಿತಿಗಳಿಗಾಗಿ ಕೆಳಗಿನ "ಮೊಬೈಲ್ ಮತ್ತು ಟ್ಯಾಬ್ಲೆಟ್ ಬೆಂಬಲ ವಿವರಗಳು" ನೋಡಿ.
 - ಎಲ್ಲಾ ಇತರ ವಿಷಯಗಳು, ಉದಾಹರಣೆಗೆ K-5 ಕೋರ್ಸ್‌ಗಳು (ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್ ಫಂಡಮೆಂಟಲ್ಸ್) ಮತ್ತು ಅವರ್ ಆಫ್ ಕೋಡ್ ಚಟುವಟಿಕೆಗಳು ಎಲ್ಲಾ ಇತರ ಆಧುನಿಕ ಟ್ಯಾಬ್ಲೆಟ್‌ಗಳು ಮತ್ತು ಲ್ಯಾಪ್‌ಟಾಪ್ ಅಥವಾ ಡೆಸ್ಕ್‌ಟಾಪ್ ಕಂಪ್ಯೂಟರ್‌ಗಳ ಜೊತೆಗೆ iPad ಗಳು ಮತ್ತು Chromebook ಗಳಲ್ಲಿ ಹೊಂದಿಕೊಳ್ಳುತ್ತವೆ.
 - ಮೊಬೈಲ್ ಸಾಧನ ಬೆಂಬಲ ವಿವರಗಳಿಗಾಗಿ ಹುಡುಕುತ್ತಿರುವಿರಾ? ಈ ಕೆಳಗೆ ಓದಿ.
 
@@ -82,12 +83,12 @@ theme: responsive
 
 ## ಮೊಬೈಲ್ ಮತ್ತು ಟ್ಯಾಬ್ಲೆಟ್ ಬೆಂಬಲ ವಿವರಗಳು
 
-ಎಲ್ಲಾ CS ಡಿಸ್ಕವರಿಗಳು, CS ತತ್ವಗಳು ಮತ್ತು ಅಪ್ಲಿಕೇಶನ್ ಲ್ಯಾಬ್ ಕೋರ್ಸ್‌ಗಳಿಗೆ ಪರಿಚಯವು ಟ್ಯಾಬ್ಲೆಟ್‌ಗಳು ಅಥವಾ ಮೊಬೈಲ್ ಸಾಧನಗಳೊಂದಿಗೆ ಹೊಂದಿಕೆಯಾಗುವುದಿಲ್ಲ - ಸಂಪೂರ್ಣ ಕೀಬೋರ್ಡ್ ಮತ್ತು ಮೌಸ್ (ಅಥವಾ ಮ್ಯಾಕ್‌ಬುಕ್ಸ್‌ನಲ್ಲಿರುವಂತೆ ಟಚ್‌ಪ್ಯಾಡ್) ಅಗತ್ಯವಿದೆ. ಕೆಳಗಿನ ವಿನಾಯಿತಿಗಳೊಂದಿಗೆ ಹೆಚ್ಚಿನ ಟ್ಯಾಬ್ಲೆಟ್‌ಗಳು ಬೆಂಬಲಿತವಾಗಿಲ್ಲ:
+All CS Discoveries, CS Principles, CS A, and Intro to App Lab courses are not compatible with tablets or mobile devices - a full keyboard and mouse (or touchpad) are required. ಕೆಳಗಿನ ವಿನಾಯಿತಿಗಳೊಂದಿಗೆ ಹೆಚ್ಚಿನ ಟ್ಯಾಬ್ಲೆಟ್‌ಗಳು ಬೆಂಬಲಿತವಾಗಿಲ್ಲ:
 
 - ಬಾಹ್ಯ ಕೀಬೋರ್ಡ್‌ನೊಂದಿಗೆ ಮೈಕ್ರೋಸಾಫ್ಟ್ ಸರ್ಫೇಸ್ ಪ್ರೊ
 - iPad ಚಾಲನೆಯಲ್ಲಿರುವ iPadOS 13.4 ಅಥವಾ ನಂತರದ ಕೀಬೋರ್ಡ್ ಮತ್ತು ಬಾಹ್ಯ ಮೌಸ್ ಅಥವಾ ಟಚ್‌ಪ್ಯಾಡ್‌ನೊಂದಿಗೆ
 
-ಎಲ್ಲಾ ಇತರ ವಿಷಯಗಳು, ಉದಾಹರಣೆಗೆ K-5 ಕೋರ್ಸ್‌ಗಳು (ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್ ಫಂಡಮೆಂಟಲ್ಸ್) ಮತ್ತು ಅವರ್ ಆಫ್ ಕೋಡ್ ಚಟುವಟಿಕೆಗಳು ಎಲ್ಲಾ ಇತರ ಆಧುನಿಕ ಟ್ಯಾಬ್ಲೆಟ್‌ಗಳು ಮತ್ತು ಲ್ಯಾಪ್‌ಟಾಪ್ ಅಥವಾ ಡೆಸ್ಕ್‌ಟಾಪ್ ಕಂಪ್ಯೂಟರ್‌ಗಳ ಜೊತೆಗೆ iPad ಗಳು ಮತ್ತು Chromebook ಗಳಲ್ಲಿ ಹೊಂದಿಕೊಳ್ಳುತ್ತವೆ.
+All other content, such as K-5 courses (Computer Science Fundamentals) and Hour of Code activities are compatible on iPads and other modern tablets and laptop or desktop computers.
 
 ### ಮೊಬೈಲ್ ಫೋನ್
 

@@ -120,8 +120,13 @@ When /^I switch tabs$/ do
   @browser.switch_to.window(@browser.window_handles.detect {|handle| handle != tab})
 end
 
-When /^I switch to the first iframe$/ do
+When /^I switch to the first iframe( once it exists)?$/ do |wait|
   $default_window = @browser.window_handle
+  if wait
+    wait_short_until do
+      @browser.find_elements(tag_name: 'iframe').any?
+    end
+  end
   @browser.switch_to.frame @browser.find_element(tag_name: 'iframe')
 end
 
@@ -140,19 +145,19 @@ When /^I close the instructions overlay if it exists$/ do
 end
 
 When /^I wait for the page to fully load$/ do
-  steps <<-STEPS
+  steps <<-GHERKIN
     When I wait to see "#runButton"
     And I wait to see ".header_user"
     And I close the instructions overlay if it exists
-  STEPS
+  GHERKIN
 end
 
 When /^I close the dialog$/ do
   # Add a wait to closing dialog because it's sometimes animated, now.
-  steps <<-STEPS
+  steps <<-GHERKIN
     When I press "x-close"
     And I wait for 0.75 seconds
-  STEPS
+  GHERKIN
 end
 
 When /^I wait until "([^"]*)" in localStorage equals "([^"]*)"$/ do |key, value|
@@ -160,16 +165,16 @@ When /^I wait until "([^"]*)" in localStorage equals "([^"]*)"$/ do |key, value|
 end
 
 And /^I add another version to the project$/ do
-  steps <<-STEPS
+  steps <<-GHERKIN
     And I add code "// comment A" to ace editor
     And I wait until element "#resetButton" is visible
     And I press "resetButton"
     And I click selector "#runButton" once I see it
-  STEPS
+  GHERKIN
 end
 
 When /^I reset the puzzle to the starting version$/ do
-  steps <<-STEPS
+  steps <<-GHERKIN
     Then I click selector "#versions-header"
     And I wait to see a dialog titled "Version History"
     And I see "#showVersionsModal"
@@ -183,7 +188,7 @@ When /^I reset the puzzle to the starting version$/ do
     And I click selector "#start-over-button"
     And I wait until element "#showVersionsModal" is gone
     And I wait for 3 seconds
-  STEPS
+  GHERKIN
 end
 
 When /^I reset the puzzle$/ do
@@ -198,13 +203,14 @@ Then /^I see "([.#])([^"]*)"$/ do |selector_symbol, name|
 end
 
 When /^I wait until (?:element )?"([^"]*)" (?:has|contains) text "([^"]*)"$/ do |selector, text|
+  wait_for_jquery
   wait_until {@browser.execute_script("return $(#{selector.dump}).text();").include? text}
 end
 
 When /^I wait until (?:element )?"([^"]*)" does not (?:have|contain) text "([^"]*)"$/ do |selector, text|
   wait_short_until do
     element_text = @browser.execute_script("return $(#{selector.dump}).text();")
-    !element_text.include? text
+    element_text.exclude?(text)
   end
 end
 
@@ -299,15 +305,13 @@ When /^I wait for (\d+(?:\.\d*)?) seconds?$/ do |seconds|
   sleep seconds.to_f
 end
 
-When /^I rotate to landscape$/ do
+When /^I rotate to (landscape|portrait)$/ do |orientation|
   if ENV['BS_ROTATABLE'] == "true"
-    @browser.rotate(:landscape)
-  end
-end
-
-When /^I rotate to portrait$/ do
-  if ENV['BS_ROTATABLE'] == "true"
-    @browser.rotate(:portrait)
+    $http_client.call(
+      :post,
+      "/wd/hub/session/#{@browser.session_id}/orientation",
+      {orientation: orientation.upcase}
+    )
   end
 end
 
@@ -503,7 +507,7 @@ When /^I click selector "([^"]*)" if I see it$/ do |selector|
     @browser.execute_script("return $(\"#{selector}:visible\").length != 0;")
   end
   @browser.execute_script("$(\"#{selector}:visible\")[0].click();")
-rescue Selenium::WebDriver::Error::TimeOutError
+rescue Selenium::WebDriver::Error::TimeoutError
   # Element never appeared, ignore it
 end
 
@@ -554,7 +558,7 @@ When /^I type "([^"]*)" into "([^"]*)" if I see it$/ do |input_text, selector|
     @browser.execute_script("return $(\"#{selector}:visible\").length != 0;")
   end
   type_into_selector("\"#{input_text}\"", selector)
-rescue Selenium::WebDriver::Error::TimeOutError
+rescue Selenium::WebDriver::Error::TimeoutError
   # Element never appeared, ignore it
 end
 
@@ -787,11 +791,11 @@ Then /^element "([^"]*)" is (not )?displayed$/ do |selector, negation|
 end
 
 And(/^I select age (\d+) in the age dialog/) do |age|
-  steps %Q{
+  steps <<~GHERKIN
     And element ".age-dialog" is visible
     And I select the "#{age}" option in dropdown "uitest-age-selector"
     And I click selector "#uitest-submit-age"
-  }
+  GHERKIN
 end
 
 And(/^I do not see "([^"]*)" option in the dropdown "([^"]*)"/) do |option, selector|
@@ -930,7 +934,7 @@ end
 def wait_for_jquery
   wait_until do
     @browser.execute_script("return (typeof jQuery !== 'undefined');")
-  rescue Selenium::WebDriver::Error::ScriptTimeOutError
+  rescue Selenium::WebDriver::Error::ScriptTimeoutError
     puts "execute_script timed out after 30 seconds, likely because this is \
 Safari and the browser was still on about:blank when wait_for_jquery \
 was called. Ignoring this error and continuing to wait..."
@@ -1014,24 +1018,24 @@ Then /^the overview page contains ([\d]+) assign (?:button|buttons)$/ do |expect
 end
 
 And /^I dismiss the language selector$/ do
-  steps %Q{
+  steps <<~GHERKIN
     And I click selector ".close" if I see it
     And I wait until I don't see selector ".close"
-  }
+  GHERKIN
 end
 
 And /^I dismiss the login reminder$/ do
-  steps %Q{
+  steps <<~GHERKIN
     And I click selector ".modal-backdrop" if I see it
     And I wait until I don't see selector ".uitest-login-callout"
-  }
+  GHERKIN
 end
 
 And /^I dismiss the teacher panel$/ do
-  steps %Q{
+  steps <<~GHERKIN
     And I click selector ".teacher-panel > .hide-handle > .fa-chevron-right"
     And I wait until I see selector ".teacher-panel > .show-handle > .fa-chevron-left"
-  }
+  GHERKIN
 end
 
 # Call `execute_async_script` on the provided `js` code.
@@ -1087,13 +1091,13 @@ def browser_request(url:, method: 'GET', headers: {}, body: nil, code: 200, trie
 end
 
 And(/^I submit this level$/) do
-  steps %Q{
+  steps <<~GHERKIN
     And I press "runButton"
     And I wait to see "#submitButton"
     And I press "submitButton"
     And I wait to see ".modal"
     And I press "confirm-button" to load a new page
-  }
+  GHERKIN
 end
 
 And(/^I wait until I am on the join page$/) do
@@ -1145,11 +1149,17 @@ def convert_keys(keys)
   keys.chars.map {|k| k == "\n" ? :enter : k}
 end
 
-# Known issue: IE does not register the key presses in this step.
-# Add @no_ie tag to your scenario to skip IE when using this step.
 And(/^I press keys "([^"]*)" for element "([^"]*)"$/) do |key, selector|
   element = @browser.find_element(:css, selector)
   press_keys(element, key)
+end
+
+And(/^I wait until element "([^"]*)" has the value "([^"]*)"$/) do |selector, value|
+  element = @browser.find_element(:css, selector)
+  wait_short_until do
+    element_text = element.attribute("value")
+    element_text.include? value
+  end
 end
 
 When /^I press keys "([^"]*)"$/ do |keys|
@@ -1162,8 +1172,6 @@ When /^I clear the text from element "([^"]*)"$/ do |selector|
 end
 
 # Press backspace repeatedly to clear an element.  Handy for React.
-# Known issue: IE does not register the key presses in this step.
-# Add @no_ie tag to your scenario to skip IE when using this step.
 When /^I press backspace to clear element "([^"]*)"$/ do |selector|
   element = @browser.find_element(:css, selector)
   press_keys(element, ":backspace") while @browser.execute_script("return $('#{selector}').val()") != ""
@@ -1302,10 +1310,10 @@ Then /^"([^"]*)" contains the saved text$/ do |css|
 end
 
 When /^I switch to text mode$/ do
-  steps <<-STEPS
+  steps <<-GHERKIN
     When I press "show-code-header"
     And I wait to see Droplet text mode
-  STEPS
+  GHERKIN
 end
 
 When /^I wait for the dialog to close$/ do
@@ -1340,7 +1348,7 @@ Then /^current URL is different from the last saved URL$/ do
 end
 
 Then /^I navigate to the saved URL$/ do
-  steps %Q{Then I am on "#{saved_url}"}
+  steps "Then I am on \"#{saved_url}\""
 end
 
 channel_id = nil
@@ -1349,9 +1357,7 @@ Then /^I save the channel id$/ do
 end
 
 And /^I type the saved channel id into element "([^"]*)"/ do |selector|
-  individual_steps %Q{
-    And I press keys "#{channel_id}" for element "#{selector}"
-  }
+  individual_steps "And I press keys \"#{channel_id}\" for element \"#{selector}\""
 end
 
 Then /^page text does (not )?contain "([^"]*)"$/ do |negation, text|
@@ -1380,7 +1386,7 @@ When /^I set up code review for teacher "([^"]*)" with (\d+(?:\.\d*)?) students 
     add_students_to_group_step_list.push("And I add the first student to the first code review group")
   end
 
-  steps %Q{
+  steps <<~GHERKIN
     Given I create a teacher named "#{teacher_name}"
     And I give user "#{teacher_name}" authorized teacher permission
     And I create a new student section assigned to "ui-test-csa-family-script"
@@ -1395,11 +1401,11 @@ When /^I set up code review for teacher "([^"]*)" with (\d+(?:\.\d*)?) students 
     #{add_students_to_group_step_list.join("\n")}
     And I click selector ".uitest-base-dialog-confirm"
     And I click selector ".toggle-input"
-  }
+  GHERKIN
 end
 
 When /^I create a student named "([^"]*)" in a CSA section$/ do |student_name|
-  steps %Q{
+  steps <<~GHERKIN
     Given I create a teacher named "Dumbledore"
     And I give user "Dumbledore" authorized teacher permission
     And I create a new student section assigned to "ui-test-csa-family-script"
@@ -1408,7 +1414,7 @@ When /^I create a student named "([^"]*)" in a CSA section$/ do |student_name|
     And I save the section id from row 0 of the section table
     Given I create a student named "#{student_name}"
     And I join the section
-  }
+  GHERKIN
 end
 
 And(/^I navigate to the pegasus certificate share page$/) do

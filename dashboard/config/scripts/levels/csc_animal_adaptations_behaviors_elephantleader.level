@@ -8,7 +8,8 @@
       "adaptations"
     ],
     "helper_libraries": [
-      "NativeSpriteLab"
+      "NativeSpriteLab",
+      "zCriterionValidationLibrary"
     ],
     "use_default_sprites": "false",
     "hide_animation_mode": "true",
@@ -35,9 +36,8 @@
     "start_animations": "{\"orderedKeys\":[\"15fdc7ec-4be6-497f-9827-e31011834dee\",\"5123f99d-4a2d-4179-a2c1-0947b8d03813\"],\"propsByKey\":{\"5123f99d-4a2d-4179-a2c1-0947b8d03813\":{\"name\":\"cuteanimals_elephant\",\"categories\":[\"animals\"],\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-09-02 18:05:39 UTC\",\"pngLastModified\":\"2021-09-02 21:51:20 UTC\",\"version\":\"Gz9t8swbHghLbRfrPSiLFDLz5SLYoxBn\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/Gz9t8swbHghLbRfrPSiLFDLz5SLYoxBn/category_animals/cuteanimals_elephant.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"15fdc7ec-4be6-497f-9827-e31011834dee\":{\"name\":\"elephant_1\",\"categories\":[\"animals\"],\"frameCount\":1,\"frameSize\":{\"x\":398,\"y\":323},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-01-19 23:46:55 UTC\",\"pngLastModified\":\"2021-01-19 23:46:55 UTC\",\"version\":\"sYt9h2Jn6zT5Af7RVVwfIzBcBW.9ZaqU\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/sYt9h2Jn6zT5Af7RVVwfIzBcBW.9ZaqU/category_animals/elephant_1.png\",\"sourceSize\":{\"x\":398,\"y\":323}}}}\r\n\r\n",
     "hide_custom_blocks": "true",
     "short_instructions": "Follow the leader. Code the same behavior for many sprites with different costumes.",
-    "validation_code": "if (World.frameCount > 100) {\r\n  var star1rotation = getProp({costume: \"star1\"}, \"rotation\");\r\n  var star2rotation = getProp({costume: \"star2\"}, \"rotation\");\r\n  if (star1rotation != 0 && star1rotation == star2rotation) {\r\n    levelSuccess(0);\r\n  } else {\r\n    levelSuccess(3);\r\n  }\r\n}\r\n",
-    "authored_hints": "[]",
-    "long_instructions": "##Follow the Leader\r\n**Some groups of animals follow their leader to stay safe.**\r\n\r\nCan you code the young elephants to follow their older leader?\r\n\r\n- Find the `sprite begins traveling`(#5ED5DD) line of code.\r\n\r\n- Replace the `elephant sprite`(#F79EA5) block with the `all sprites`(#F79EA5) block\r\n",
+    "authored_hints": "[{\"hint_class\":null,\"hint_markdown\":\"Is the <code style=\\\"color:black; background-color:#6AF36C\\\">travel</code> behavior beginning for <code style=\\\"color:black; background-color:#F79EA5\\\">all sprites</code>?\",\"hint_id\":\"All Sprites\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/89f6fc7477934344f8584a5f4dae1e64/csc_animal_adaptations_behaviors_elephantleader.mp3\"}]",
+    "long_instructions": "##Follow the Leader\r\n**Some groups of animals follow their leader to stay safe. Can you change the code so the young elephants follow their older leader?**\r\n\r\n- First, look in the workspace to find the <code style=\"color:black; background-color:#5ED5DD\">sprite begins traveling</code> line of code.\r\n\r\n- Notice that this behavior is assigned only to the leader elephant sprite, but ALL the young elephants should follow the leader. \r\n\r\n- Replace the <code style=\"color:black; background-color:#F79EA5\">elephant sprite</code> block with the <code style=\"color:black; background-color:#F79EA5\">all sprites</code> block so sprites with all costumes begin traveling together.\r\n\r\n\r\n<img src=\"https://images.code.org/dbb25258fad60c43991391f43d861e35-image-1681483653015.gif\" style=\"width: 30%; float: center; padding-top: 10px\">\r\n",
     "auto_run_setup": "DRAW_LOOP",
     "encrypted": "false",
     "mini_rubric": "false",
@@ -51,21 +51,84 @@
     "instructions_icon": "bear",
     "standalone_app_name": "spritelab",
     "encrypted_examples": "vKZZ2dbKmpOzsrtbwxSR/X310mG6M44rfoPz96Z85j/buXAlbeALGSRUGeVo\n2WSRDWXswsV9GeBy6vxO17TBDQ==\n",
+    "validation_code": "if (World.frameCount == 1) {\r\n  setFailTime(150); // Frames to wait before failing student\r\n  setDelayTime(90); // Frames to wait after success before stopping program\r\n\r\n  addCriteria(function() {\r\n    return minimumSprites(1); // Check whether or not the student created a sprite.\r\n  }, \"noSprites\");  // Failure message: \"You need to make a sprite.\"\r\n  \r\n  addCriteria(function() { //verify that sprites have a behavior\r\n    for(var i = 0; i < spriteIds.length; i++) {\r\n      var sprite = spriteIds[i];\r\n      if (getBehaviorsForSpriteId(sprite).length === 0)\r\n          return false;\r\n    }\r\n    return true;\r\n  }, \"cscAdaptationsAllSpritesTravel\");\r\n}\r\ngetHelperVars();\r\n// drawHandsOnUnclickedSprites(); //uncomment on levels where the user needs to click sprites to advance\r\ncheck();\r\n\r\n",
     "preload_asset_list": null
   },
-  "game_id": 64,
-  "published": true,
-  "created_at": "2023-03-28T20:48:40.000Z",
   "level_num": "custom",
+  "game_id": 64,
+  "created_at": "2023-03-28T20:48:40.000Z",
   "user_id": 831,
+  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-03-28T20:48:40.697+00:00\",\"changed\":[\"cloned from \\\"csc_animal_adaptations_behaviors_edit2\\\"\"],\"cloned_from\":\"csc_animal_adaptations_behaviors_edit2\"},{\"changed_at\":\"2023-03-28 21:11:43 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"long_instructions\",\"instructions_icon\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-28 21:14:14 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-28 21:15:56 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-28 21:17:24 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-28 21:17:56 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"disable_param_editing\",\"mini_toolbox\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-28 21:19:03 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-28 21:21:23 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-28 21:22:37 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-28 22:16:41 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-28 22:17:15 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-28 22:18:08 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-28 22:18:48 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"authored_hints\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-28 22:31:54 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-29 15:43:21 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"short_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-04-03 14:39:17 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-04-10 18:57:04 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"hide_share_and_remix\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2023-03-28T20:48:40.697+00:00\",\"changed\":[\"cloned from \\\"csc_animal_adaptations_behaviors_edit2\\\"\"],\"cloned_from\":\"csc_animal_adaptations_behaviors_edit2\"},{\"changed_at\":\"2023-03-28 21:11:43 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"long_instructions\",\"instructions_icon\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-28 21:14:14 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-28 21:15:56 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-28 21:17:24 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-28 21:17:56 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"disable_param_editing\",\"mini_toolbox\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-28 21:19:03 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-28 21:21:23 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-28 21:22:37 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-28 22:16:41 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-28 22:17:15 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-28 22:18:08 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-28 22:18:48 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"authored_hints\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-28 22:31:54 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-29 15:43:21 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"short_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-04-03 14:39:17 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-04-10 18:57:04 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"hide_share_and_remix\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-04-13 21:34:59 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-04-13 21:37:41 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-04-13 21:38:31 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-04-13 21:40:08 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-04-13 22:47:40 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-04-13 23:30:59 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-04-14 14:43:57 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-04-14 14:44:25 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-04-14 14:50:12 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-04-14 14:53:48 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-04-14 14:56:42 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-04-14 14:59:22 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-04-14 15:00:56 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-04-14 15:02:51 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-04-14 15:07:00 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-04-14 15:07:45 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-04-14 21:04:00 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"authored_hints\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-04-14 23:41:22 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-04-18 00:35:17 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-04-18 23:31:00 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-04-18 23:38:11 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-04-18 23:38:33 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-04-28 19:54:20 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"helper_libraries\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18974,\"changed_by_email\":\"joshedel94+levelbuilder@gmail.com\"},{\"changed_at\":\"2023-04-28 19:55:27 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"validation_code\"],\"changed_by_id\":18974,\"changed_by_email\":\"joshedel94+levelbuilder@gmail.com\"},{\"changed_at\":\"2023-04-28 19:56:43 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"validation_code\"],\"changed_by_id\":18974,\"changed_by_email\":\"joshedel94+levelbuilder@gmail.com\"},{\"changed_at\":\"2023-04-28 20:00:45 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"validation_code\"],\"changed_by_id\":18974,\"changed_by_email\":\"joshedel94+levelbuilder@gmail.com\"},{\"changed_at\":\"2023-04-28 20:02:26 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"validation_code\"],\"changed_by_id\":18974,\"changed_by_email\":\"joshedel94+levelbuilder@gmail.com\"},{\"changed_at\":\"2023-04-28 20:05:35 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"validation_code\"],\"changed_by_id\":18974,\"changed_by_email\":\"joshedel94+levelbuilder@gmail.com\"},{\"changed_at\":\"2023-05-02 22:00:02 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
   <blocks>
     <start_blocks>
       <xml>
+        <block type="when_run" deletable="false" movable="false" editable="false">
+          <next>
+            <block type="gamelab_setBackground" can_disconnect_from_parent="false">
+              <value name="COLOR">
+                <block type="colour_picker" can_disconnect_from_parent="false">
+                  <field name="COLOUR">#cc9933</field>
+                </block>
+              </value>
+              <next>
+                <block type="gamelab_makeNumSprites" can_disconnect_from_parent="false">
+                  <field name="ANIMATION_NAME">"cuteanimals_elephant"</field>
+                  <value name="NUM">
+                    <block type="math_number" can_disconnect_from_parent="false">
+                      <field name="NUM">10</field>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="gamelab_setProp" can_disconnect_from_parent="false">
+                      <field name="PROPERTY">"scale"</field>
+                      <value name="SPRITE">
+                        <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
+                          <field name="ANIMATION">"cuteanimals_elephant"</field>
+                        </block>
+                      </value>
+                      <value name="VAL">
+                        <block type="math_number" can_disconnect_from_parent="false">
+                          <field name="NUM">75</field>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="gamelab_makeNewSpriteAnon" can_disconnect_from_parent="false">
+                          <field name="ANIMATION_NAME">"elephant_1"</field>
+                          <value name="LOCATION">
+                            <block type="gamelab_location_picker" can_disconnect_from_parent="false">
+                              <field name="LOCATION">{"x":200,"y":200}</field>
+                            </block>
+                          </value>
+                          <next>
+                            <block type="adaptations_toggleBehaviorSimple" can_disconnect_from_parent="false">
+                              <field name="TOGGLE">"begins"</field>
+                              <value name="SPRITE">
+                                <block type="gamelab_allSpritesWithAnimation">
+                                  <field name="ANIMATION">"elephant_1"</field>
+                                </block>
+                              </value>
+                              <value name="BEHAVIOR">
+                                <block type="gamelab_behavior_get" editable="false" can_disconnect_from_parent="false">
+                                  <mutation/>
+                                  <field name="VAR" id="swimming left and right">traveling</field>
+                                </block>
+                              </value>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
         <block type="behavior_definition" editable="false" uservisible="false">
           <mutation>
             <arg name="this sprite" type="Sprite"/>
@@ -188,68 +251,6 @@
               </next>
             </block>
           </statement>
-        </block>
-        <block type="when_run">
-          <next>
-            <block type="gamelab_setBackground">
-              <value name="COLOR">
-                <block type="colour_picker">
-                  <field name="COLOUR">#cc9933</field>
-                </block>
-              </value>
-              <next>
-                <block type="gamelab_makeNumSprites">
-                  <field name="ANIMATION_NAME">"cuteanimals_elephant"</field>
-                  <value name="NUM">
-                    <block type="math_number">
-                      <field name="NUM">10</field>
-                    </block>
-                  </value>
-                  <next>
-                    <block type="gamelab_setProp">
-                      <field name="PROPERTY">"scale"</field>
-                      <value name="SPRITE">
-                        <block type="gamelab_allSpritesWithAnimation">
-                          <field name="ANIMATION">"cuteanimals_elephant"</field>
-                        </block>
-                      </value>
-                      <value name="VAL">
-                        <block type="math_number">
-                          <field name="NUM">75</field>
-                        </block>
-                      </value>
-                      <next>
-                        <block type="gamelab_makeNewSpriteAnon">
-                          <field name="ANIMATION_NAME">"elephant_1"</field>
-                          <value name="LOCATION">
-                            <block type="gamelab_location_picker">
-                              <field name="LOCATION">{"x":200,"y":200}</field>
-                            </block>
-                          </value>
-                          <next>
-                            <block type="adaptations_toggleBehaviorSimple">
-                              <field name="TOGGLE">"begins"</field>
-                              <value name="SPRITE">
-                                <block type="gamelab_allSpritesWithAnimation">
-                                  <field name="ANIMATION">"elephant_1"</field>
-                                </block>
-                              </value>
-                              <value name="BEHAVIOR">
-                                <block type="gamelab_behavior_get">
-                                  <mutation/>
-                                  <field name="VAR" id="swimming left and right">traveling</field>
-                                </block>
-                              </value>
-                            </block>
-                          </next>
-                        </block>
-                      </next>
-                    </block>
-                  </next>
-                </block>
-              </next>
-            </block>
-          </next>
         </block>
         <block type="behavior_definition" editable="false" uservisible="false">
           <mutation>
@@ -732,7 +733,7 @@
       <xml>
         <block type="gamelab_setBackground">
           <value name="COLOR">
-            <block type="colour_picker">
+            <block type="colour_picker" can_disconnect_from_parent="false">
               <field name="COLOUR">#cc9933</field>
             </block>
           </value>
@@ -740,7 +741,7 @@
         <block type="gamelab_makeNewSpriteAnon">
           <field name="ANIMATION_NAME">"elephant_1"</field>
           <value name="LOCATION">
-            <block type="gamelab_location_picker">
+            <block type="gamelab_location_picker" can_disconnect_from_parent="false">
               <field name="LOCATION">undefined</field>
             </block>
           </value>
@@ -748,7 +749,7 @@
         <block type="gamelab_makeNumSprites">
           <field name="ANIMATION_NAME">"cuteanimals_elephant"</field>
           <value name="NUM">
-            <block type="math_number">
+            <block type="math_number" can_disconnect_from_parent="false">
               <field name="NUM">10</field>
             </block>
           </value>
@@ -756,12 +757,12 @@
         <block type="gamelab_setProp">
           <field name="PROPERTY">"scale"</field>
           <value name="SPRITE">
-            <block type="gamelab_allSpritesWithAnimation">
+            <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
               <field name="ANIMATION">"cuteanimals_elephant"</field>
             </block>
           </value>
           <value name="VAL">
-            <block type="math_number">
+            <block type="math_number" can_disconnect_from_parent="false">
               <field name="NUM">75</field>
             </block>
           </value>
@@ -774,7 +775,7 @@
             </block>
           </value>
           <value name="BEHAVIOR">
-            <block type="gamelab_behavior_get">
+            <block type="gamelab_behavior_get" can_disconnect_from_parent="false">
               <mutation/>
               <field name="VAR" id="swimming left and right">traveling</field>
             </block>

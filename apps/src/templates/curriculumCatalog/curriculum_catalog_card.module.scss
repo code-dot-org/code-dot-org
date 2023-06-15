@@ -1,3 +1,4 @@
+@use "sass:math";
 @import "phase1-design-system";
 
 $border-radius: 4px;
@@ -18,11 +19,11 @@ $container-width: 309px;
 }
 
 .curriculumCatalogCardContainer_english {
-  height: 24em;
+  height: 25em;
 }
 
 .curriculumCatalogCardContainer_notEnglish {
-  height: 26em;
+  height: 28em;
 }
 
 .curriculumInfoContainer {
@@ -38,72 +39,138 @@ $container-width: 309px;
     color: $neutral_dark80;
   }
 
-  button {
-    margin: 0;
-  }
-
   h4 {
     margin-bottom: 0.75em;
     color: $neutral_dark;
+
+    // Shows max two lines before truncating with ellipsis
+    // See https://css-tricks.com/line-clampin/
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
   }
 }
 
-.tagsAndTranslatabilityContainer {
+.labelsAndTranslatabilityContainer {
   display: flex;
+  column-gap: 0.25em;
   justify-content: space-between;
+  margin-bottom: 0.5em;
+  height: 1.5em;
 
   i {
-    margin-left: auto;
     font-size: 1.5em;
+  }
+}
+
+.labelsContainer {
+  display: flex;
+  column-gap: 0.5em;
+
+  > div {
+    // font styles
+    font-size: 0.75em;
+    line-height: 0.875em;
+    letter-spacing: 0.04em;
+    font-family: $gotham-bold, sans-serif;
+    text-transform: uppercase;
+    color: $neutral-dark;
+
+    // label styles
+    padding: 0.6em 0.75em 0 0.75em;
+    background-color: $brand_primary_light;
+    border-radius: 1em;
+
+    // ellipsis overflow
+    max-width: 15em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.labelTooltip {
+  opacity: 1;
+  margin-bottom: 0.75em;
+  pointer-events: none;
+
+  :global(.tooltip-inner) { /* stylelint-disable-line selector-pseudo-class-no-unknown */
+    border-radius: 5px;
+    color: #fff;
+    background-color: #222;
+
+    p {
+      color: #fff;
+      margin: 0;
+    }
+  }
+
+  :global(.tooltip-arrow) { /* stylelint-disable-line selector-pseudo-class-no-unknown */
+    left: 50%;
+    bottom: 0;
+    border: 15px solid transparent;
+    border-top: 15px solid #222;
+    transform: translate(-50%, calc(100% - 8px));
   }
 }
 
 .iconWithDescription {
   display: flex;
-  margin: 0 0 0.5em 0;
   align-items: center;
+  column-gap: 0.5em;
+  margin: 0 0 0.5em 0;
 
-  .iconWithDescriptionText {
+  > p {
     font-size: 0.875em;
-    margin: 0 0 0 0.5em;
+    margin: 0;
     color: $neutral_dark;
   }
-}
 
-.overline {
-  color: $brand_primary_default;
-  margin-bottom: 0.5em;
-  font-size: 0.75em;
-  font-family: $gotham-bold;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+  i {
+    font-size: 0.875em;
+  }
 }
 
 .buttonsContainer {
   display: flex;
   flex-wrap: wrap;
   margin-top: auto;
+
+  button,
+  a,
+  a:link,
+  a:visited {
+    margin: 0;
+    height: 40px;
+    font-size: 1em;
+    line-height: 36.5px;
+  }
 }
 
 .buttonsContainer_notEnglish {
   flex-direction: column-reverse;
   row-gap: 1em;
 
-  button {
+  button,
+  a,
+  a:link,
+  a:visited {
     width: 100%;
-    height: 34px;
-    font-size: 1em;
+    display: flex;
+    justify-content: center;
   }
 }
 
 .buttonsContainer_english {
   justify-content: space-between;
 
-  button {
+  button,
+  a,
+  a:link,
+  a:visited {
     // width calculated to ensure space between buttons is 12px
     // (totalContainerWidth - 2*padding - minimumSpaceBetweenButtons) / 2
-    width: ($container-width - (2 * 16) - 12) / 2;
-    height: 40px;
-    font-size: 1em;
+    width: math.div($container-width - (2 * 16) - 12, 2);
   }
 }

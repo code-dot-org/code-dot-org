@@ -47,8 +47,6 @@ $selectUserTypeButtonBackgroundColorSelected: #00adbc;
 $selectUserTypeButtonTextColorSelected: #fff;
 
 @import "bootstrap";
-// Font-awesome 4.6.3
-@import "font-awesome";
 
 p,pre,span {
   @include selectable;
@@ -73,7 +71,8 @@ body.oceans-blue {
 }
 
 body.music-black {
-  background-color: $music_black;
+  background-color: $dark_black;
+  overscroll-behavior: none;
 }
 
 h1 {
@@ -220,19 +219,19 @@ img.video_thumbnail {
     text-overflow: ellipsis;
   }
 
-  @media screen and (min-width: 971px) {
+  @media screen and (min-width: 1011px) {
     .show_on_tablet {
       display: none;
     }
   }
 
-  @media screen and (max-width: 970px) {
+  @media screen and (max-width: 1010px) {
     .hide_on_tablet {
       display: none;
     }
   }
 
-  @media screen and (max-width: 1100px) {
+  @media screen and (max-width: 1120px) {
     .create_menu {
       display: none !important;
     }
@@ -319,6 +318,7 @@ img.video_thumbnail {
       margin-top: 2px;
       font-size: 12px;
       display: inline-block;
+      border-radius: 4px;
     }
   }
 
@@ -421,6 +421,21 @@ img.video_thumbnail {
   .children {
     margin-top: 16px;
   }
+}
+
+/* When we are using a dark theme in Google Blockly, we want the main Blockly area (inside #codeWorkspace)
+ * to have a 1px separation between it and the PaneHeader above it.
+*  */
+#codeWorkspace > .cdomoderndark-theme,
+#codeWorkspace > .cdohighcontrastdark-theme,
+#codeWorkspace > .cdoprotanopiadark-theme,
+#codeWorkspace > .cdodeuteranopiadark-theme,
+#codeWorkspace > .cdotritanopiadark-theme {
+  /* A small separation. */
+  margin-top: 1px;
+
+  /* Override the height in Google Blockly's .injectionDiv */
+  height: calc(100% - 1px);
 }
 
 .bannerContentContainer {
@@ -1535,12 +1550,12 @@ a.download-video {
   cursor: pointer;
   width: 40px;
   height: 34px;
-  font-size: 36px;
+  font-size: 28px;
   background-color: $neutral_white;
   color: $neutral_dark;
   border: 2px solid $neutral_dark;
   padding: 0;
-  line-height: 40px;
+  line-height: 36px;
 
   &:hover {
     background: $neutral_dark20;
@@ -3462,8 +3477,10 @@ code {
       padding: 20px;
       color: $white;
 
-      h1 {
+      h2 {
         color: $white;
+        font-size: 26px;
+        margin-bottom: 20px;
       }
 
       .subtext {
@@ -3485,7 +3502,7 @@ code {
         width: 100%;
 
         li {
-          font-size: 14px;
+          font-size: 16px;
         }
 
         .dots {
@@ -3507,6 +3524,18 @@ code {
 
     #noanswer {
       cursor: pointer;
+      border: none;
+      box-shadow: none;
+      font-family: $gotham-bold;
+      font-size: 100%;
+      color: $brand_secondary_default;
+      text-decoration: underline;
+      background-color: transparent;
+    }
+
+    #noanswer:hover {
+      color: $brand_secondary_dark;
+      text-decoration: underline;
     }
   }
 }

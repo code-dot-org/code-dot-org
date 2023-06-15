@@ -2646,6 +2646,139 @@
         },
         "helloworld_food_click_space-2022": {
           "hw_Run": "Per prima cosa clicca qui!"
+        },
+        "CSD U3 Random add_2021": {
+          "CSD_U3_butterfly": "Leggi attentamente il programma."
+        },
+        "CSD U3 Random add_2022": {
+          "CSD_U3_butterfly": "Leggi attentamente il programma."
+        },
+        "CSD U3 platform background1": {
+          "CSD_U3_L16_S3_C1": "la funzione che disegna lo sfondo",
+          "CSD_U3_L16_S3_C2": "il codice che richiama la funzione",
+          "CSD_U3_L16_S3_C3": "Cambia questa funzione."
+        },
+        "CSD U3 platform background1_2018": {
+          "CSD_U3_L16_S3_C1": "la funzione che disegna lo sfondo",
+          "CSD_U3_L16_S3_C2": "il codice che richiama la funzione",
+          "CSD_U3_L16_S3_C3": "Cambia questa funzione."
+        },
+        "CSD U3 platform background1_2019": {
+          "CSD_U3_L16_S3_C1": "la funzione che disegna lo sfondo",
+          "CSD_U3_L16_S3_C2": "il codice che richiama la funzione",
+          "CSD_U3_L16_S3_C3": "Cambia questa funzione."
+        },
+        "CSD U3 platform background1_2021": {
+          "CSD_U3_L16_S3_C1": "la funzione che disegna lo sfondo",
+          "CSD_U3_L16_S3_C2": "il codice che richiama la funzione",
+          "CSD_U3_L16_S3_C3": "Cambia questa funzione."
+        },
+        "CSD U3 platform background1_2022": {
+          "CSD_U3_L16_S3_C1": "la funzione che disegna lo sfondo",
+          "CSD_U3_L16_S3_C2": "il codice che richiama la funzione",
+          "CSD_U3_L16_S3_C3": "Cambia questa funzione."
+        },
+        "CSD U6 light show": {
+          "CSDUDL03P09": "Cosa fa questa riga di codice?"
+        },
+        "CSD U6 light show_2018": {
+          "CSDUDL03P09": "Cosa fa questa riga di codice?"
+        },
+        "CSD U6 light show_2019": {
+          "CSDUDL03P09": "Cosa fa questa riga di codice?"
+        },
+        "CSD U6 light show_2021": {
+          "CSDUDL03P09": "Cosa fa questa riga di codice?"
+        },
+        "CSD U6 tugowar variables 1": {
+          "CSD_U6_startGame": "Definisci startGame qui"
+        },
+        "CSD U6 tugowar variables 1_2018": {
+          "CSD_U6_startGame": "Definisci startGame qui"
+        },
+        "CSD U6 tugowar variables 1_2019": {
+          "CSD_U6_startGame": "Definisci startGame qui"
+        },
+        "CSD U6 tugowar variables 1_2021": {
+          "CSD_U6_startGame": "Definisci startGame qui"
+        },
+        "CSD U6 - Combine Inputs - PracD_2222": {
+          "CSD U6L9.7 - if-statement": "Aggiungi qui la tua istruzione condizionale `if`"
+        },
+        "CSD U6 - If Variables - A_2222": {
+          "U6L6.4 - If": "Aggiungi qui la tua istruzione condizionale `if`"
+        },
+        "ml-customize apps-choice3": {
+          "CSD_AI_L10_predict": "Aggiungi qui dentro la tua istruzione condizionale `if`"
+        },
+        "ml-customize apps-choice3_2022": {
+          "CSD_AI_L10_predict": "Aggiungi qui dentro la tua istruzione condizionale `if`"
+        },
+        "ml-customize apps-choice5": {
+          "CSD_AI_L11_top": "Metti il blocco sopra questa riga"
+        },
+        "ml-customize apps-choice5_2022": {
+          "CSD_AI_L11_top": "Metti il blocco sopra questa riga"
+        },
+        "ml-intro app lab-book recommender 5C-2021": {
+          "CSD_AI_L7_event": "Aggiungi qui il blocco PlaySound"
+        },
+        "ml-intro app lab-book recommender 5C_2022": {
+          "CSD_AI_L7_event": "Aggiungi qui il blocco PlaySound"
+        },
+        "ml-intro app lab-book recommender 5E-2021": {
+          "CSD_AI_L7_top": "Metti il blocco sopra questa riga"
+        },
+        "ml-intro app lab-book recommender 5E_2022": {
+          "CSD_AI_L7_top": "Metti il blocco sopra questa riga"
+        },
+        "ml-models in applab-screens-1-2021": {
+          "CSD_AI_L10_ifstatement": "Aggiungi qui dentro la tua istruzione condizionale `if`"
+        },
+        "ml-models in applab-screens-1_2022": {
+          "CSD_AI_L10_ifstatement": "Aggiungi qui dentro la tua istruzione condizionale `if`"
+        },
+        "ml-models in applab-screens-3-2021": {
+          "CSD_AI_L7_ifstatement": "Aggiungi qui la tua istruzione condizionale `if`"
+        },
+        "ml-models in applab-screens-3_2022": {
+          "CSD_AI_L7_ifstatement": "Aggiungi qui la tua istruzione condizionale `if`"
+        },
+        "ml-use model card-choice3": {
+          "CSD_AI_L10_predict": "Aggiungi qui dentro la tua istruzione condizionale `if`"
+        },
+        "ml-use model card-choice3_2022": {
+          "CSD_AI_L10_predict": "Aggiungi qui dentro la tua istruzione condizionale `if`"
+        },
+        "ml-use model card-choice5": {
+          "CSD_AI_L11_top": "Metti il blocco sopra questa riga"
+        },
+        "ml-use model card-choice5_2022": {
+          "CSD_AI_L11_top": "Metti il blocco sopra questa riga"
+        },
+        "ml-use model card-example3C-2021": {
+          "CSD_AI_L11_temp": "Questa è la caratteristica \"temperatura\""
+        },
+        "ml-use model card-example3C_2022": {
+          "CSD_AI_L11_temp": "Questa è la caratteristica \"temperatura\""
+        },
+        "ml-use model card-example3D-2021": {
+          "CSD_AI_L11_time": "Questa è la caratteristica \"Ora del giorno\""
+        },
+        "ml-use model card-example3D_2022": {
+          "CSD_AI_L11_time": "Questa è la caratteristica \"Ora del giorno\""
+        },
+        "ml-use model card-example3_EditB-2021": {
+          "CSD_AI_L11_cars": "Questa è la caratteristica Numero di auto"
+        },
+        "ml-use model card-example3_EditB_2022": {
+          "CSD_AI_L11_cars": "Questa è la caratteristica Numero di auto"
+        },
+        "ml-use model card-example3_EditC-2021": {
+          "CSD_AI_L11_weather": "Questa è la caratteristica meteo"
+        },
+        "ml-use model card-example3_EditC_2022": {
+          "CSD_AI_L11_weather": "Questa è la caratteristica meteo"
         }
       }
     }

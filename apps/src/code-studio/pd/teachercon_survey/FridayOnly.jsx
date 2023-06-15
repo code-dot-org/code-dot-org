@@ -1,5 +1,5 @@
 import React from 'react';
-import {FormGroup} from 'react-bootstrap';
+import {FormGroup} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import FormComponent from '../form_components/FormComponent';
 import VariableFormGroup from '../workshop_survey/VariableFormGroup';
 import QuestionsTable from '../form_components/QuestionsTable';
@@ -35,7 +35,8 @@ const LABELS = {
     'Is there anything else you’d like to tell us about your experience today?',
   whoFacilitated: 'Who facilitated your workshop today? (check at least one)',
   thingsFacilitatorDidWell: 'What were two things {value} did well?',
-  thingsFacilitatorCouldImprove: 'What were two things {value} could do better?'
+  thingsFacilitatorCouldImprove:
+    'What were two things {value} could do better?',
 };
 
 export default class FridayOnly extends FormComponent {
@@ -51,7 +52,7 @@ export default class FridayOnly extends FormComponent {
           label: this.labelFor('personalLearningNeedsMet'),
           name: 'personalLearningNeedsMet',
           required: true,
-          type: 'radio'
+          type: 'radio',
         })}
         {this.props.data.personalLearningNeedsMet &&
           ['Strongly Disagree', 'Disagree', 'Slightly Disagree'].includes(
@@ -61,7 +62,7 @@ export default class FridayOnly extends FormComponent {
             componentClass: 'textarea',
             label: this.labelFor('howCouldImprove'),
             name: 'howCouldImprove',
-            required: true
+            required: true,
           })}
 
         <h4>Please rate your level of agreement with each statement below.</h4>
@@ -81,11 +82,11 @@ export default class FridayOnly extends FormComponent {
             'feelConfidentCanHelpStudents',
             'havePlan',
             'feelComfortableLeading',
-            'haveLessAnxiety'
+            'haveLessAnxiety',
           ].map(key => ({
             label: this.labelFor(key),
             name: key,
-            required: true
+            required: true,
           }))}
         />
 
@@ -101,14 +102,14 @@ export default class FridayOnly extends FormComponent {
               label: this.labelFor('thingsFacilitatorDidWell'),
               name: 'thingsFacilitatorDidWell',
               type: 'free_response',
-              required: true
+              required: true,
             },
             {
               label: this.labelFor('thingsFacilitatorCouldImprove'),
               name: 'thingsFacilitatorCouldImprove',
               type: 'free_response',
-              required: true
-            }
+              required: true,
+            },
           ]}
         />
 
@@ -116,18 +117,18 @@ export default class FridayOnly extends FormComponent {
           componentClass: 'textarea',
           label: this.labelFor('whatHelpedMost'),
           name: 'whatHelpedMost',
-          required: true
+          required: true,
         })}
         {this.buildFieldGroup({
           componentClass: 'textarea',
           label: this.labelFor('whatDetracted'),
           name: 'whatDetracted',
-          required: true
+          required: true,
         })}
         {this.buildFieldGroup({
           componentClass: 'textarea',
           label: this.labelFor('otherFeedbackFridayOnly'),
-          name: 'otherFeedbackFridayOnly'
+          name: 'otherFeedbackFridayOnly',
         })}
       </FormGroup>
     );

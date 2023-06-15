@@ -84,6 +84,10 @@ markdown <<MARKDOWN
 
 #### The LED is probably the simplest form of output available and the micro:bit has a display of 25 red LEDs for you to program. The LEDs are arranged in a 5x5 grid allowing it to disiplay patterns, images, letters, or numbers. 
 
+#### **Light Sensor**
+
+#### The LED Screen also contains a light sensor, which can detect how bright or how dim the environment is. This sensor is a form of input that gives a range of values from 0 (very dark) to 255 (very bright).
+
 </p></div>
 </details>
 

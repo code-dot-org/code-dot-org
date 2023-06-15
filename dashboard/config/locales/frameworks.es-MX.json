@@ -3,7 +3,7 @@
     "data": {
       "frameworks": {
         "csta": {
-          "name": "Estándares de Ciencias de la Computación K-12 de la CSTA (2017)"
+          "name": "Estándares de Ciencias de la Computación CSTA K-12 (2017)"
         },
         "csp2021": {
           "name": "Marco Conceptual de CSP"
@@ -25,6 +25,12 @@
         },
         "iste": {
           "name": "Estándares ISTE para estudiantes"
+        },
+        "c3ss": {
+          "name": "C3 Estándares de Estudios Sociales"
+        },
+        "csa": {
+          "name": "Marco Conceptual CSA"
         }
       }
     }

@@ -43,7 +43,7 @@ var SpellingControls = function (props) {
 };
 
 SpellingControls.propTypes = {
-  searchWord: PropTypes.string.isRequired
+  searchWord: PropTypes.string.isRequired,
 };
 
 module.exports = SpellingControls;

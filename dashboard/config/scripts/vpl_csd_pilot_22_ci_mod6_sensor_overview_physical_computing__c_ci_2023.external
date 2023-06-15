@@ -18,7 +18,7 @@ markdown <<MARKDOWN
 
 ## Creating LED Circuits
 
-##### One of the simplest circuits that you can make with your micro:bit is to add an LED. To create this circuit you'll need a numbered pin, two wires, an LED, and a ground pin.
+##### One of the simplest circuits that you can make with your micro:bit is to add an LED. To create this circuit you'll need a numbered pin, two wires, an LED, and a ground pin (as well as a level programmed to light up the LED).
 
 ##### **1)** Make sure your micro:bit is<img src="https://images.code.org/be63617cd479aabe4351a8d07abe1d00-microbit-led.png" alt="image of circuit playground with extrnal LED" style="float: right; height: 250px; margin-left:10px; margin-right:10px; margin-bottom:10px; border-radius:20px;"> unplugged from the computer. This helps make sure there isn't any accidental electricity that can damage your board.
 
@@ -26,7 +26,6 @@ markdown <<MARKDOWN
 
 ##### **3)** Attach a wire so one end is connected to the GND pad on the micro:bit, and the other end is connected to the negative end of an LED.
 
-<div style="clear:both">
 
 ## LED Debugging
 

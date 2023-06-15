@@ -18,7 +18,7 @@ describe('FoormLibraryEditorManager', () => {
     server.respondWith('GET', /foorm\/libraries\/[0-9]+\/question_names/, [
       200,
       {'Content-Type': 'application/json'},
-      JSON.stringify([{id: 2, name: 'a_library_question_name', type: 'radio'}])
+      JSON.stringify([{id: 2, name: 'a_library_question_name', type: 'radio'}]),
     ]);
 
     defaultProps = {
@@ -35,7 +35,7 @@ describe('FoormLibraryEditorManager', () => {
       setHasJSONError: () => {},
       setHasLintError: () => {},
       setLastSavedQuestions: () => {},
-      setLibraryData: () => {}
+      setLibraryData: () => {},
     };
 
     wrapper = shallow(<FoormLibraryEditorManager {...defaultProps} />);
@@ -48,13 +48,13 @@ describe('FoormLibraryEditorManager', () => {
   const sampleExistingLibraryQuestionData = {
     question: {},
     name: 'sample_library_question_name',
-    id: 0
+    id: 0,
   };
 
   const sampleExistingLibraryData = {
     name: 'sample_library_name',
     version: 0,
-    id: 1
+    id: 1,
   };
 
   it('keeps library question choice disabled and editor hidden on load', () => {
@@ -75,8 +75,8 @@ describe('FoormLibraryEditorManager', () => {
     wrapper.setProps({
       libraryId: sampleExistingLibraryData.id,
       fetchableLibraryQuestionsForCurrentLibrary: [
-        sampleExistingLibraryQuestionData
-      ]
+        sampleExistingLibraryQuestionData,
+      ],
     });
 
     assert.isFalse(
@@ -88,7 +88,7 @@ describe('FoormLibraryEditorManager', () => {
     server.respondWith('GET', '/foorm/library_questions/0', [
       200,
       {'Content-Type': 'application/json'},
-      JSON.stringify(sampleExistingLibraryQuestionData)
+      JSON.stringify(sampleExistingLibraryQuestionData),
     ]);
 
     assert.equal(wrapper.find(FoormEntityEditor).length, 0);

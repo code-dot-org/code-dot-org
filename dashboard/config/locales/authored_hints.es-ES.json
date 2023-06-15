@@ -8672,31 +8672,31 @@
           "grade5_artist_variables_triangles1_c": "Dentro de tu bucle, tendrás que avanzar 50 píxeles, luego girar a la izquierda 120 grados."
         },
         "iceage_click_hello": {
-          "iceage_click_hello_a": "Añade un bloque 'actor 1 dice' o más al evento 'al hacer click' para completar este desafío."
+          "iceage_click_hello_a": "Añade un bloque 'actor 1 dice' o más al evento 'al pulsar' para completar este rompecabezas."
         },
         "iceage_free_play": {
           "iceage_free_play_a": "¿Puedes hacer que Sid y Manny tengan una lucha de cristales de hielo?  ",
           "iceage_free_play_b": "Haz que Granny persiga a Diego. Termina el juego como una victoria si lo atrapa.",
-          "iceage_free_play_c": "¿Puedes hacer que Sid lance copos de nieve a Diego y que Diego se haga más grande cada vez que recibe uno? Termina el juego como una victoria si Diego recibe 5 golpes."
+          "iceage_free_play_c": "¿Puedes hacer que Sid lance copos de nieve a Diego y que Diego aumente de tamaño cada vez que uno le dé?  Termina el juego como una victoria si Diego es golpeado 5 veces."
         },
         "iceage_hello1": {
-          "iceage_hello1_a": "Sólo necesitas agregar un bloque para resolver este desafío. Arrastra el bloque `decir` desde la barra de herramientas y conéctalo al bloque de evento `cuando ejecuta` que ya se encuentra en el área de trabajo. Luego, escribe \"¡Hola!\" dentro."
+          "iceage_hello1_a": "Sólo tienes que añadir un bloque para resolver este rompecabezas.  Arrastra el bloque `decir` desde la barra de herramientas y conéctalo al bloque de eventos `al ejecutar` que ya está en el área de trabajo. A continuación, escribe \"¡Hola! dentro."
         },
         "iceage_hello2": {
-          "iceage_hello2_a": "Para resolver este desafío, necesitarás que Sid diga algo único usando el bloque 'actor 1 dice'. Necesitarás que Manny diga algo con el bloque 'actor 2 dice'. "
+          "iceage_hello2_a": "Para resolver este rompecabezas, tendrás que hacer que Sid diga algo utilizando el bloque \"actor 1 dice\".  También tendrás que hacer que Manny diga algo con el bloque \"actor 2 dice\". "
         },
         "iceage_move_events": {
-          "iceage_move_events_a": "Cada uno de los eventos 'cuando\\_\\_\\_flecha' necesita tener un comando 'mover actor 1' diferente conectado a él para resolver este desafío. "
+          "iceage_move_events_a": "Cada uno de los eventos 'cuando\\_\\_\\_flecha' necesita tener un comando 'mover actor 1' diferente conectado a él para resolver este rompecabezas. "
         },
         "iceage_move_to_actor": {
-          "iceage_move_to_actor_a": "En este desafío, puedes mover a Diego hacia abajo 200 pixeles o mover a Manny arriba 200 pixeles.",
-          "iceage_move_to_actor_b": "Conecta el bloque 'reproducir\\_\\_\\_sonido' al evento 'cuando el actor 1 toque al 2' para terminar este reto."
+          "iceage_move_to_actor_a": "Para este rompecabezas, puedes mover a Diego 200 píxeles hacia abajo, o mover a Manny 200 píxeles hacia arriba.",
+          "iceage_move_to_actor_b": "Conecta el bloque `reproduce ___ sonido` al evento `cuando el actor 1 toca al actor 2` para terminar este desafío."
         },
         "iceage_move_to_flag": {
-          "iceage_hello3_a": "Utiliza el bloque de 'mover el actor 1 a la derecha por 200 píxeles' para resolver este desafío."
+          "iceage_hello3_a": "Utiliza el bloque `mover actor 1 a la derecha 200 píxeles` para resolver este rompecabezas."
         },
         "iceage_repeat": {
-          "iceage_repeat_a": "Usa los bloques 'mover actor 1 a la izquierda' y 'mover actor 1 a la derecha' para resolver este desafío."
+          "iceage_repeat_a": "Usa los bloques 'mover actor 1 a la izquierda' y 'mover actor 1 a la derecha' para resolver este rompecabezas."
         },
         "iceage_sound_and_points": {
           "iceage_sound_and_points_a": "Necesitas dos bloques debajo del evento 'cuando actor 1 toca actor 2'.",
@@ -8704,11 +8704,11 @@
         },
         "iceage_throw_hearts": {
           "iceage_throw_hearts_a": "¿Cuándo deseas lanzar corazones a la abuela?  ¿Cuando se presiona una flecha? ¿Al hacer clic en Sid?  ¿Al hacer clic en abuela?  ¡La elección es tuya!",
-          "iceage_throw_hearts_b": "Para que la abuela sea feliz cuando reciba un corazón, necesitas conectar el bloque 'establecer humor de actor 2 a feliz' debajo del evento 'cuando actor 2 toca el proyectil'."
+          "iceage_throw_hearts_b": "Para que la abuela sea feliz cuando reciba un corazón, necesitas conectar el bloque 'configurar humor de actor 2 a feliz' debajo del evento 'cuando actor 2 toca el proyectil'."
         },
         "iceage_warn_ice_age": {
-          "iceage_warn_ice_age_a": "Solo deberías tener que añadir dos bloques para llevar este desafío a donde debe estar. ",
-          "iceage_warn_ice_age_b": "Añade los dos nuevos bloques debajo del evento 'al ejecutar' para que ocurran inmediatamente después de que se inicie el programa."
+          "iceage_warn_ice_age_a": "Sólo deberías tener que añadir dos bloques para colocar este rompecabezas donde debe estar. ",
+          "iceage_warn_ice_age_b": "Añade los dos nuevos bloques debajo del evento `al ejecutar` para que ocurran inmediatamente después del inicio del programa."
         },
         "courseC_video_angles": {
           "courseD_scrat_programming6_a": "¡Hay dos formas de resolver este desafío!",
@@ -9650,11 +9650,11 @@
           "courseC_collector_prog7_c": "¿Tienes problemas para ver una ruta para recoger todo el tesoro? ¡Prueba este camino!"
         },
         "courseC_collector_prog_challenge1_2021": {
-          "courseC_collector_prog_challenge1_a": "Puedes usar el bloque \"obtener\" muchas veces para conseguir el tesoro extra."
+          "courseC_collector_prog_challenge1_a": "Puedes usar el bloque `collect` muchas veces para recoger el tesoro extra."
         },
         "courseC_collector_prog_challenge2_2021": {
-          "courseC_collector_prog_challenge1_a": "Puedes utilizar más de un bloque `obtener` en cada espacio.",
-          "courseC_collector_prog_challenge1_b": "¿Te has perdido?  ¡Prueba este camino para resolver el rompecabezas!"
+          "courseC_collector_prog_challenge1_a": "Puedes usar más de un bloque `recolectar` en cada espacio.",
+          "courseC_collector_prog_challenge1_b": "¿Perdiste tu camino? ¡Prueba este camino para resolver el desafío!"
         },
         "courseC_flappy_events1_2021": {
           "courseC_flappy_events1_a": "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
@@ -9737,11 +9737,11 @@
         "courseC_maze_debugging2_2021": {
           "courseC_maze_debugging2_a": "Hay un montón de código valioso en el espacio de trabajo. ¡No lo elimines todo y comiences de nuevo!",
           "courseC_maze_debugging2_b": "-   ¿Funciona todo después del primer paso?\n-   ¿Funciona después del segundo?\n-   ¿Cuándo deja de funcionar?",
-          "courseC_maze_debugging2_c": "¿No puedes averiguar qué es lo que está mal? Intenta ejecutar el código un par de veces para ver qué ocurre."
+          "courseC_maze_debugging2_c": "¿No puede descubrir qué pasa? Intenta ejecutar el código un par de veces para ver qué pasa."
         },
         "courseC_maze_debugging3_2021": {
           "courseC_maze_debugging3_a": "Para eliminar un bloque del medio de tu programa, pon todos los bloques a otro lugar del espacio de trabajo.\n\nArrastra el bloque que deseas eliminar a la caja de herramientas.\n\nFinalmente, vuelve a poner el resto de los bloques a donde tienen que estar.\n\n![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)",
-          "courseC_maze_debugging3_b": "¿No puedes averiguar qué es lo que está mal? Intenta ejecutar el código un par de veces para ver qué ocurre."
+          "courseC_maze_debugging3_b": "¿No puede descubrir qué pasa? Intenta ejecutar el código un par de veces para ver qué pasa."
         },
         "courseC_maze_debugging4_2021": {
           "courseC_maze_debugging4_a": "Usa el botón \"Paso\" para ejecutar las instrucciones de una en una. ¿Te ayuda ésto a encontrar la línea donde las cosas van mal?",
@@ -9749,7 +9749,7 @@
         },
         "courseC_maze_debugging5_2021": {
           "courseC_maze_debugging5_a": "Hay muchos bloques útiles en el área de trabajo. ¡No los borres todos!\n\nUsa el botón \"Paso\" para recorrer el código y averiguar donde el programa deja de funcionar.",
-          "courseC_maze_debugging5_c": "Puedes cambiar la dirección del bloque de giro haciendo clic en el desplegable.",
+          "courseC_maze_debugging5_c": "Puedes cambiar la dirección del bloque de turno haciendo clic en el menú desplegable.",
           "courseC_maze_debugging5_b": "Intenta decir lo que Scrat debería hacer en voz alta. ¿Es lo mismo que el código en el área de trabajo? ¿Dónde falla?"
         },
         "courseC_maze_debugging6_2021": {
@@ -9795,7 +9795,7 @@
           "courseC_maze_programming5_c": "La solución tendrá dos bloques \"avanzar\", un giro, y dos bloques más \"avanzar\"."
         },
         "courseC_maze_programming6_2021": {
-          "courseC_maze_programming6_a": "¡Hay dos maneras de resolver este rompecabezas!",
+          "courseC_maze_programming6_a": "¡Hay dos formas de resolver este desafío!",
           "courseC_maze_programming6_b": "Sigue con el dedo el camino del pájaro al cerdo, ¿qué pasos has dado?",
           "courseC_maze_programming6_c": "Recuerda que debes girar primero, ya que el pájaro empieza mirando a una pared.",
           "courseC_maze_programming6_d": "¿Atascado? ¡Mira este camino!"
@@ -9809,11 +9809,11 @@
           "courseC_maze_programming8_b": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees que aún no has resuelto el puzle."
         },
         "courseC_maze_programming_challenge1_2021": {
-          "courseC_maze_programming_challenge1_a": "Hay muchas maneras de llegar al cerdo. ¡Usa tu dedo para encontrar un camino y luego prográmalo!"
+          "courseC_maze_programming_challenge1_a": "Hay muchas maneras de llegar al cerdo. ¡Usa tu dedo para encontrar un camino y luego programarlo!"
         },
         "courseC_maze_programming_challenge2_2021": {
           "courseC_maze_programming_challenge2_a": "_\"Si me envías hacia atrás, ¡ten mucho cuidado de que gire en la dirección correcta!\"_",
-          "courseC_maze_programming_challenge2_b": "La solución más corta utiliza sólo 5 bloques, pero utiliza este bloque:\n\n<xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>"
+          "courseC_maze_programming_challenge2_b": "La solución más corta usa solo 5 bloques, pero usa este bloque:\n<xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>"
         },
         "courseC_starWars_loops10_2021": {
           "courseC_starWars_loops10_a": "¿Este patrón no te parece una escalera gigante? Intenta usar lo que aprendiste de los puzles anteriores para lograr todos los giros.",
@@ -10014,7 +10014,7 @@
         "courseD_bee_nestedLoops7_2021": {
           "courseD_bee_nestedLoops7_a": "Necesitarás repetir `recoger néctar` dentro de otro 'repetir' que también tenga el bloque `avanzar` dentro.",
           "courseD_bee_nestedLoops7_b": "Tendrás que usar los tres bloques de `repetir` disponibles para resolver este desafío.",
-          "courseD_bee_nestedLoops7_c": "Anida tus tres bloques así:\n\n-   repetir 4 \n    -   repetir 3 \n        -   repetir 12 \n            -   recoger néctar \n        -   avanzar\n    -   girar a la derecha"
+          "courseD_bee_nestedLoops7_c": "Anida tus bloques en tres niveles, de esta forma:\n\n- repite 4\n   - repite 3\n      - repite 12\n          - obtener néctar\n      - avanza\n   - girar a la derecha\n\n"
         },
         "courseD_bounce_events10s_2021": {
           "courseD_bounce_events10s_a": "Deberías tener estos dos eventos en tu código:\n\n<xml><block type=\"bounce_whenBallInGoal\" deletable=\"false\"><next><block type=\"bounce_playSound\"><title name=\"SOUND\">swish</title><next><block type=\"bounce_incrementPlayerScore\"></block></next></block></next></block><block type=\"bounce_whenBallMissesPaddle\" deletable=\"false\"><next><block type=\"bounce_playSound\"><title name=\"SOUND\">whistle</title><next><block type=\"bounce_incrementOpponentScore\"></block></next></block></next></block></xml>"
@@ -10444,11 +10444,11 @@
         "courseF_bee_for10_2021": {
           "courseF_bee_for10_a": "¿Puedes encontrar un patrón entre el número de pasos que necesitas tomar y el numero de néctares a recolectar?",
           "courseF_bee_for10_b": "El primer conjunto de flores tiene un total de **14 flores**. Para llegar al primer conjunto, la abeja debe volar **7 cuadros** (o 14 cuadros divididos por 2). ¿Cuántas flores hay en el siguiente conjunto y cuántos cuadros tendrá que viajar la abeja para llegar ahí?",
-          "courseF_bee_for10_c": "En el desafío, el primer conjunto de flores tiene **14 flores**, el segundo, **10**; el tercero, **6**, y el cuarto, **2**. \n\nEn este dibujo, ten en cuenta que hay **7** cuadrados rojos, **5** cuadrados naranjas, **3** cuadrados verdes y **1** bloque azul.\n\n![](<https://images.code.org/602ce14659299af6a59a79ebd0bdb9d4-image-1493221855089.6.11 Hint Drawing.png>)\n\n¿Cómo se relacionan los números?",
+          "courseF_bee_for10_c": "En el rompecabezas, el primer conjunto de flores tiene **14** flores, el segundo conjunto tiene **10** flores, el tercer conjunto tiene **6** flores y el cuarto conjunto tiene **2** flores.\n\nEn este dibujo, observa que hay **7** cuadrados rojos, **5** cuadrados naranjas, **3** cuadrados verdes y **1** bloque azul. \n\n![](https://images.code.org/602ce14659299af6a59a79ebd0bdb9d4-image-1493221855089.6.11 Hint Drawing.png)\n\n¿Cómo se relacionan los números?",
           "courseF_bee_for10_d": "Necesitas 2 repeticiones, y una usará un bloque matemático."
         },
         "courseF_bee_for11_2021": {
-          "courseF_bee_for11_a": "¿Cuánto menos es 12 que 15?\\\n¿Cuánto menos es 9 que 12?\n\n¿Ves un patrón'?"
+          "courseF_bee_for11_a": "¿Cuánto menos es 12 que 15?  \n¿Cuánto menos es 9 que 12?\n\n¿Ves un patrón?"
         },
         "courseF_bee_for1_2021": {
           "courseF_bee_for1_b": "Necesitas dos bloques en tu bucle 'repetir' para recoger todo el néctar."
@@ -10480,7 +10480,7 @@
         "courseF_bee_for8_2021": {
           "courseF_bee_for8_a": "Si tu bucle está contando hacia arriba, el incremento se agrega a tu variable de contador cada vez.\n\n¿Qué necesitas añadir a cada número para obtener la próxima cantidad de néctar?",
           "courseF_bee_for8_b": "En este puzle, tendrás que moverte en un patrón de escaleras para llegar a las flores.",
-          "courseF_bee_for8_c": "Tu bucle contará _de 3 a 15_ con algún incremento. ¿Cuál es?"
+          "courseF_bee_for8_c": "Tu bucle contará *de 3 a 15* con algún incremento. ¿Qué es?"
         },
         "courseF_bee_for9_2021": {
           "courseF_bee_for9_a": "Intenta hacer algunos cálculos con la variable contador.\n\n¿Qué tienes que hacerle al contador en cada flor para alcanzar la cantidad de néctar que necesitas recolectar?",
@@ -10506,10 +10506,10 @@
           "step3": "Haz que todos los sprites comiencen a deambular con esto:  <xml><block type=\"gamelab_addBehaviorSimple\" uservisible=\"false\"><value name=\"SPRITE\"><block type=\"gamelab_getAllSprites\"></block></value><value name=\"BEHAVIOR\"><block type=\"gamelab_behavior_get\"><mutation></mutation><title name=\"VAR\">wandering</title></block></value></block></xml>.\n\nEste bloque se encuentra en la categoría **Comportamientos** de la caja de herramientas."
         },
         "CourseF_outbreak2": {
-          "hint1": "Haz clic en el botón `+` del bloque de sucesos. Rellena el espacio vacío del bloque de `cambio de vestuario` con el bloque de `sujeto` que se encuentra en su interior.\n\n<xml><block type=\"gamelab_checkTouching\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE1\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><value name=\"SPRITE2\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick\"</title><value name=\"THIS\"><block type=\"gamelab_subjectSpritePointer\"></block></value></block></next></block></xml>"
+          "hint1": "Haz clic en el botón `+` del bloque de sucesos. Rellena el espacio vacío del bloque de `cambio de disfraz` con el bloque de `sujeto` que se encuentra en su interior.\n\n<xml><block type=\"gamelab_checkTouching\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE1\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><value name=\"SPRITE2\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick\"</title><value name=\"THIS\"><block type=\"gamelab_subjectSpritePointer\"></block></value></block></next></block></xml>"
         },
         "CourseF_outbreak3": {
-          "hint1": "Para dar a los monstruos mascarillas, utiliza el bloque `cambio de traje` con un suceso `cuando se hace clic`:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title></block></next></block></xml>\n\n¡Asegúrate de arrastrar también el pequeño bloque rojo `clic`!.",
+          "hint1": "Para dar a los monstruos mascarillas, utiliza el bloque `cambio de disfraz` con un evento `al pulsar`:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title></block></next></block></xml>\n\n¡Asegúrate de arrastrar también el pequeño bloque rojo `pulsado`!.",
           "hint2": "El nuevo código para este nivel debería ser así:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title><value name=\"THIS\"><block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick_mask\"</title><value name=\"THIS\"><block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block></xml>"
         },
         "CourseF_outbreak4": {
@@ -10636,7 +10636,7 @@
           "courseF_bee_variables_4_2021_1": "En lugar de añadir 1 a la variable, añade 2 cada vez."
         },
         "courseF_events_choice_pufferfish": {
-          "changeProp": "También necesitarás este bloque:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"creature_18_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">5</title>\n        </block>\n      </value>\n    </block></xml>"
+          "changeProp": "También necesitarás este bloque:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"escala\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"criatura_18_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">5</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "courseF_events_key": {
           "changePropBlock": "También necesitarás este bloque:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"creature_10_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">???</title>\n        </block>\n      </value>\n    </block>\n    </xml>"
@@ -10645,7 +10645,7 @@
           "behavior_list": "Pruebe a utilizar comportamientos como \"moverse hacia el este y hacer un bucle\", \"girar a la derecha\" y \"deambular\"."
         },
         "courseF_text_choice_multiprompt": {
-          "when_answered_var": "Intente cambiar la etiqueta de la variable en el bloque \"cuando responda\". Debido a que hay múltiples preguntas, utilice la etiqueta de la _última_ pregunta que será respondida.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n      <value name=\"VAR\">\n        <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n          <title name=\"VAR\">???</title>\n        </block>\n      </value>\n    </block></xml>"
+          "when_answered_var": "Intente cambiar la etiqueta de la variable en el bloque \"cuando responda\". Debido a que hay múltiples solicitudes, utilice la etiqueta de la *última* solicitud que será respondida.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n      <value name=\"VAR\">\n        <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n          <title name=\"VAR\">???</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "courseF_variables_card_finish": {
           "card_idea1": "Puedes añadir un segundo (o tercer o cuarto) aviso conectando un nuevo bloque de aviso con una variable diferente a tu primer evento `cuando responda`.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">nombre</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setPrompt\">\n        <value name=\"QUESTION\">\n          <block type=\"text\" can_disconnect_from_parent=\"false\">\n            <title name=\"TEXT\">¿qué quieres para tu cumpleaños?</title>\n          </block>\n        </value>\n        <value name=\"VAR\">\n          <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n            <title name=\"VAR\">regalo</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>",
@@ -10664,15 +10664,15 @@
           "card_idea3": "Puedes hacer que tu programa sea interactivo haciendo que ocurran otras cosas cuando el usuario pulse una tecla o después de que haya pasado un tiempo determinado.\n\n<xml><block type=\"gamelab_keyPressed\">\n    <title name=\"CONDITION\">\"cuando\"</title>\n    <title name=\"KEY\">\"arriba\"</title>\n    <next>\n      <block type=\"gamelab_changePropBy\">\n        <title name=\"PROPERTY\">\"escala\"</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"robot_02_1\"</title>\n          </block>\n        </value>\n        <value name=\"VAL\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">10</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
         },
         "iceage_move_events_dani": {
-          "iceage_move_events_a": "Cada uno de los eventos 'cuando\\_\\_\\_flecha' necesita tener un comando 'mover actor 1' diferente conectado a él para resolver este desafío. "
+          "iceage_move_events_a": "Cada uno de los eventos 'cuando\\_\\_\\_flecha' necesita tener un comando 'mover actor 1' diferente conectado a él para resolver este rompecabezas. "
         },
         "iceage_sound_and_points_dani": {
           "iceage_sound_and_points_a": "Necesitas dos bloques debajo del evento 'cuando actor 1 toca actor 2'.",
           "iceage_sound_and_points_b": "Necesitas los bloques `anotar un punto` y `reproducir \\_\\_\\_\\_ sonido\\` para pasar este nivel."
         },
         "iceage_warn_ice_age_dani": {
-          "iceage_warn_ice_age_a": "Solo deberías tener que añadir dos bloques para llevar este desafío a donde debe estar. ",
-          "iceage_warn_ice_age_b": "Añade los dos nuevos bloques debajo del evento 'al ejecutar' para que ocurran inmediatamente después de que se inicie el programa."
+          "iceage_warn_ice_age_a": "Sólo deberías tener que añadir dos bloques para colocar este rompecabezas donde debe estar. ",
+          "iceage_warn_ice_age_b": "Añade los dos nuevos bloques debajo del evento `al ejecutar` para que ocurran inmediatamente después del inicio del programa."
         },
         "helloworld_animals_backgrounds": {
           "hello_world_background": "Puedes cambiar el fondo conectando un bloque `configurar fondo` bajo un bloque de evento `al pulsar`:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"cuteanimals_hippo\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"gradient_30\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
@@ -10936,10 +10936,10 @@
           "step3": "Haz que todos los sprites comiencen a deambular con esto:  <xml><block type=\"gamelab_addBehaviorSimple\" uservisible=\"false\"><value name=\"SPRITE\"><block type=\"gamelab_getAllSprites\"></block></value><value name=\"BEHAVIOR\"><block type=\"gamelab_behavior_get\"><mutation></mutation><title name=\"VAR\">wandering</title></block></value></block></xml>.\n\nEste bloque se encuentra en la categoría **Comportamientos** de la caja de herramientas."
         },
         "CourseF_outbreak2_-2022-2": {
-          "hint1": "Haz clic en el botón `+` del bloque de sucesos. Rellena el espacio vacío del bloque de `cambio de vestuario` con el bloque de `sujeto` que se encuentra en su interior.\n\n<xml><block type=\"gamelab_checkTouching\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE1\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><value name=\"SPRITE2\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick\"</title><value name=\"THIS\"><block type=\"gamelab_subjectSpritePointer\"></block></value></block></next></block></xml>"
+          "hint1": "Haz clic en el botón `+` del bloque de sucesos. Rellena el espacio vacío del bloque de `cambio de disfraz` con el bloque de `sujeto` que se encuentra en su interior.\n\n<xml><block type=\"gamelab_checkTouching\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE1\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><value name=\"SPRITE2\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick\"</title><value name=\"THIS\"><block type=\"gamelab_subjectSpritePointer\"></block></value></block></next></block></xml>"
         },
         "CourseF_outbreak3_-2022-2": {
-          "hint1": "Para dar a los monstruos mascarillas, utiliza el bloque `cambio de traje` con un suceso `cuando se hace clic`:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title></block></next></block></xml>\n\n¡Asegúrate de arrastrar también el pequeño bloque rojo `clic`!.",
+          "hint1": "Para dar a los monstruos mascarillas, utiliza el bloque `cambio de disfraz` con un evento `al pulsar`:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title></block></next></block></xml>\n\n¡Asegúrate de arrastrar también el pequeño bloque rojo `pulsado`!.",
           "hint2": "El nuevo código para este nivel debería ser así:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title><value name=\"THIS\"><block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick_mask\"</title><value name=\"THIS\"><block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block></xml>"
         },
         "CourseF_outbreak4_-2022-2": {

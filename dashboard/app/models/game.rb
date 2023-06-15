@@ -255,7 +255,7 @@ class Game < ApplicationRecord
   end
 
   def channel_backed?
-    [APPLAB, GAMELAB, WEBLAB, PIXELATION, SPRITELAB, JAVALAB, POETRY].include? app
+    [APPLAB, GAMELAB, WEBLAB, PIXELATION, SPRITELAB, JAVALAB, POETRY, MUSIC].include? app
   end
 
   # Format: name:app:intro_video

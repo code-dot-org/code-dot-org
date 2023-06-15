@@ -8,7 +8,7 @@ function update(blockSpace, container, editor) {
     // catch and ignore all errors.
     var xml = Blockly.Xml.textToDom(editor.getValue());
     blockSpace.clear();
-    Blockly.Xml.domToBlockSpace(blockSpace, xml);
+    Blockly.cdoUtils.loadBlocksToWorkspace(blockSpace, xml);
   } catch (e) {
     return;
   }
@@ -17,21 +17,18 @@ function update(blockSpace, container, editor) {
   var metrics = blockSpace.getMetrics();
   var height = metrics.contentHeight + metrics.contentTop;
   container.style.height = height + 'px';
-  blockSpace.blockSpaceEditor.svgResize();
+  Blockly.cdoUtils.resizeSvg(blockSpace);
 }
 
 module.exports = function (editor, container) {
   var xml = Blockly.Xml.textToDom(editor.getValue() || '<xml></xml>');
   var blockSpace = Blockly.BlockSpace.createReadOnlyBlockSpace(container, xml, {
-    noScrolling: true
+    noScrolling: true,
   });
 
   editor.on('update', function () {
     update(blockSpace, container, editor);
   });
 
-  // need to update twice initially to counter Blockly's weird sizing
-  // requirements
-  update(blockSpace, container, editor);
   update(blockSpace, container, editor);
 };

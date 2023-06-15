@@ -1915,6 +1915,14 @@ sv:
           lesson_groups:
             lessonGroup-2:
               display_name: Innehåll
+        csa7-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+        csa8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
         csd1-2023:
           lesson_groups:
             lessonGroup-2:
@@ -2111,3 +2119,55 @@ sv:
               display_name: Kapitel 1
             lessonGroup-4:
               display_name: Kapitel 2
+        ai-temp:
+          title: Hur AI fungerar
+        self-paced-pl-csd1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Välkommen
+        pl-csd-summer-day1:
+          lessons:
+            lesson-3:
+              name: Introduktion
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Dag 1
+          title: Dag 1
+        pl-csd-summer-day2:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Dag 2
+          title: Dag 2
+        pl-csd-summer-day3:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Dag 3
+          title: Dag 3
+        pl-csd-summer-day4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Dag 4
+          title: Dag 4
+        virtual-pl-csd-summer-day1:
+          lessons:
+            lesson-1:
+              name: Introduktion
+          title: Dag 1
+        virtual-pl-csd-summer-day2:
+          title: Dag 2
+        virtual-pl-csd-summer-day3:
+          title: Dag 3
+        virtual-pl-csd-summer-day4:
+          title: Dag 4
+        virtual-pl-csd-summer-day5:
+          title: Dag 5
+        coursef-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitalt medborgarskap
+            lessonGroup-4:
+              display_name: variabler
+        csa-frq-practice:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Klasser

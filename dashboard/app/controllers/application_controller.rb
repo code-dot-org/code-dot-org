@@ -136,6 +136,8 @@ class ApplicationController < ActionController::Base
     :password_confirmation,
     :locale,
     :gender,
+    :gender_student_input,
+    :gender_teacher_input,
     :login,
     :remember_me,
     :age,
@@ -151,7 +153,9 @@ class ApplicationController < ActionController::Base
     :parent_email_preference_opt_in_required,
     :parent_email_preference_opt_in,
     :parent_email_preference_email,
-    school_info_attributes: SCHOOL_INFO_ATTRIBUTES,
+    :us_state,
+    :country_code,
+    {school_info_attributes: SCHOOL_INFO_ATTRIBUTES},
   ]
 
   PERMITTED_USER_FIELDS.concat(UI_TEST_ATTRIBUTES) if rack_env?(:test, :development)

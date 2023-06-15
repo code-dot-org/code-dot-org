@@ -3,11 +3,11 @@ import {
   stubRedux,
   restoreRedux,
   registerReducers,
-  getStore
+  getStore,
 } from '@cdo/apps/redux';
 import javalabEditor, {
   initialState,
-  sourceTextUpdated
+  sourceTextUpdated,
 } from '@cdo/apps/javalab/redux/editorRedux';
 
 describe('javalabRedux', () => {

@@ -1,14 +1,10 @@
 <Applab>
   <config><![CDATA[{
-  "game_id": 41,
-  "created_at": "2023-04-11T01:43:10.000Z",
-  "level_num": "custom",
-  "user_id": 1,
   "properties": {
     "skin": "applab",
     "edit_code": true,
     "embed": "true",
-    "long_instructions": "# Sensor Experiment\r\n\r\nRun the program and experiment with your board. Try interacting with your board in many different ways to figure out what each sensor might be. As you experiment with each sensor, discuss with a neighbor:\r\n\r\n* What does this sensor measure?\r\n* What is its maximum value?\r\n* What is its minimum value?",
+    "long_instructions": "# Sensor Experiment\r\n\r\nRun the program and experiment with your board. Try interacting with your board in many different ways to figure out what each sensor might be. As you experiment with each sensor, think about the following:\r\n\r\n* What does this sensor measure?\r\n* What is its maximum value?\r\n* What is its minimum value?",
     "instructions_important": "false",
     "display_name": "Sensor Experiment",
     "submittable": "false",
@@ -58,11 +54,18 @@
     "validation_enabled": "false",
     "ai_enabled": "false",
     "teacher_markdown": "This level takes advantage of two sensors on the micro:bit - a light sensor and a temperature sensor. Micro:bit V2 also have a sound sensor, but these levels focus on the sensors shared between the V1 and V2 versions of the micro:bit.\r\n\r\nEncourage students to relate the sensors to their own senses and interact with the micro:bit that way - for example, what happens when we show or hide things from the device?\r\n\r\nThrough experimentation, students should notice that the light sensor minimum value is 0 and the maximum value is 255. Students may also notice that one sensor (temperature) doesn't seem to change very much.",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ]
   },
+  "game_id": 41,
   "published": true,
+  "created_at": "2023-04-11T01:43:10.000Z",
+  "level_num": "custom",
+  "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-04-11T01:43:10.035+00:00\",\"changed\":[\"cloned from \\\"VPL-CSD-CI-U6MB-Sensors-Play\\\"\"],\"cloned_from\":\"VPL-CSD-CI-U6MB-Sensors-Play\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-04-11T01:43:10.035+00:00\",\"changed\":[\"cloned from \\\"VPL-CSD-CI-U6MB-Sensors-Play\\\"\"],\"cloned_from\":\"VPL-CSD-CI-U6MB-Sensors-Play\"},{\"changed_at\":\"2023-04-11 21:15:17 +0000\",\"changed\":[\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

@@ -1,14 +1,10 @@
 <Applab>
   <config><![CDATA[{
-  "game_id": 41,
-  "created_at": "2023-04-11T01:43:10.000Z",
-  "level_num": "custom",
-  "user_id": 568,
   "properties": {
     "skin": "applab",
     "edit_code": true,
     "contained_level_names": [
-      "CSD U6 airplane predict markdown_2023"
+      "VPL-CSD-PILOT-S22-CI-CSD U6b airplane predict markdo_-ci"
     ],
     "embed": "false",
     "instructions_important": "false",
@@ -59,11 +55,18 @@
     "libraries_enabled": "false",
     "ai_enabled": "false",
     "teacher_markdown": "The accelerometer has two properties: the `roll` and `pitch`. The `roll` corresponds to tilting left and right, and `pitch` corresponds to tilting forwards and backwards. Students should notice this if they're holding their micro:bit level to the ground with the USB cable pointing away from them. Students may also experiment with moving their micro:bit in the physical space - moving it up and down or left and right - but this doesn't affect the accelerometer. Only rotating and tilting the micro:bit will change the roll and pitch.",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ]
   },
+  "game_id": 41,
   "published": true,
+  "created_at": "2023-04-11T01:43:10.000Z",
+  "level_num": "custom",
+  "user_id": 568,
   "notes": "Markdown in contained level.",
-  "audit_log": "[{\"changed_at\":\"2023-04-11T01:43:10.226+00:00\",\"changed\":[\"cloned from \\\"VPL-CSD-CI-U6MB-Accelerometer-Predict\\\"\"],\"cloned_from\":\"VPL-CSD-CI-U6MB-Accelerometer-Predict\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-04-11T01:43:10.226+00:00\",\"changed\":[\"cloned from \\\"VPL-CSD-CI-U6MB-Accelerometer-Predict\\\"\"],\"cloned_from\":\"VPL-CSD-CI-U6MB-Accelerometer-Predict\"},{\"changed_at\":\"2023-04-11 19:01:37 +0000\",\"changed\":[\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-04-11 19:05:11 +0000\",\"changed\":[\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

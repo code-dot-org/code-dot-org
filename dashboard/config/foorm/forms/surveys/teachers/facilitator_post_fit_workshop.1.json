@@ -63,7 +63,7 @@
         {
           "type": "html",
           "name": "OverallFeedback",
-          "html": "<p><h2>Feedback on the Overall Event</h2><p>Consider your experience over the course of the entire FiT Workshop, from the Kickoff call on February 23 through Meeting 4 during the week of April 17, and including all asynchronous work.</p>"
+          "html": "<p><h2>Feedback on the FiT Onboarding Process</h2><p>Consider your experience over the course of the entire FiT Workshop, from the Kickoff call on February 23 through Meeting 4 during the week of April 17, and including all asynchronous work.</p>"
         },
         {
           "type": "comment",
@@ -129,35 +129,35 @@
           "rows": [
             {
               "value": "communication",
-              "text": "Overall communication from code.org."
+              "text": "Overall communication from Code.org"
             },
             {
               "value": "welcome_kit",
-              "text": "Welcome kit."
+              "text": "Welcome kit"
             },
             {
               "value": "scheduling_cohort_sessions",
-              "text": "Scheduling of cohort sessions."
+              "text": "Scheduling of cohort sessions"
             },
             {
               "value": "asynchronous_work",
-              "text": "Asynchronous work."
+              "text": "Asynchronous work"
             },
             {
               "value": "synchronous_sessions",
-              "text": "Synchronous sessions."
+              "text": "Synchronous sessions"
             },
             {
               "value": "responsiveness",
-              "text": "Responsiveness of the code.org team to your questions or concerns."
+              "text": "Responsiveness of the Code.org team to your questions or concerns"
             },
             {
               "value": "resources",
-              "text": "Resources for leading workshops."
+              "text": "Resources for leading workshops"
             },
             {
               "value": "overall_onboarding_process",
-              "text": "Overall facilitator onboarding process."
+              "text": "Overall facilitator onboarding process"
             }
           ]
         }
@@ -214,7 +214,7 @@
         {
           "type": "html",
           "name": "question1",
-          "html": "<h4><b>For the following items, please assess your facilitation knowledge and skills along a scale from “Not true of me now” to “very true of me now.”</b></h4><p><br>\n<b>1-2 Not true of me now</b> - need more development, not well prepared<br>\n <br>\n<b>3-5 Somewhat true of me now</b> - in process developing, somewhat prepared <br>\n<br>\n<b>6-7 Very true of me now</b> - current strengths, well prepared<br>\n<br>\n<b>N/A</b> - respond N/A if you think the skill or knowledge is unnecessary or irrelevant for facilitating {course} workshops</p>"
+          "html": "<h4><b>For the following items, please assess your facilitation knowledge and skills along a scale from “Not true of me now” to “Very true of me now.”</b></h4><p><br>\n<b>1-2 Not true of me now</b> - need more development, not well prepared<br>\n <br>\n<b>3-5 Somewhat true of me now</b> - in process developing, somewhat prepared <br>\n<br>\n<b>6-7 Very true of me now</b> - current strengths, well prepared<br>\n<br>\n<b>N/A</b> - respond N/A if you think the skill or knowledge is unnecessary or irrelevant for facilitating {course} workshops</p>"
         },
         {
           "type": "matrix",
@@ -574,7 +574,7 @@
         {
           "type": "comment",
           "name": "other_comments",
-          "title": "If there is anything you would like us to know, please use this space to share. Note: The survey results are anonymized. If you need specific support, please reach out to us using facilitators@.code.org"
+          "title": "If there is anything you would like us to know, please use this space to share. Note: The survey results are anonymized. If you need specific support, please reach out to us using facilitators@code.org"
         },
         {
           "type": "library_item",

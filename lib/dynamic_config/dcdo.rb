@@ -46,7 +46,8 @@ class DCDOBase < DynamicConfigBase
       'csa-skinny-banner': DCDO.get('csa-skinny-banner', false),
       'webserial-on-chromeos': DCDO.get('webserial-on-chromeos', true),
       'csta-form-extension': DCDO.get('csta-form-extension', false),
-      'pl-launch-hero-banner': DCDO.get('pl-launch-hero-banner', false)
+      'pl-launch-hero-banner': DCDO.get('pl-launch-hero-banner', false),
+      'teach-ai-launch-2023': DCDO.get('teach-ai-launch-2023', false)
     }
   end
 end

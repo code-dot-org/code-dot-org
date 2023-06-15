@@ -7,11 +7,12 @@
       "curriculum_umbrella": "CSD Self Paced PL",
       "has_verified_resources": true,
       "is_migrated": true,
-      "student_detail_progress_view": true
+      "student_detail_progress_view": true,
+      "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-04-06 00:17:41 UTC",
+    "serialized_at": "2023-04-26 08:07:44 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -55,7 +56,7 @@
       "name": "Create a scene",
       "absolute_position": 2,
       "lockable": false,
-      "has_lesson_plan": false,
+      "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
         "overview": "**You will:**\n\n* Use the coordinate grid in Game Lab to draw colorful shapes.\n* Customize shapes by adjusting multiple parameters. \n* Use variables to store information that is used multiple times in a program.\n\n**Suggested time:** 40 minutes\n",
@@ -459,6 +460,31 @@
       "assessment": false,
       "properties": {
         "level_keys": [
+          "VPL-CI-LessonTypes-U3-2023"
+        ],
+        "progression": "Unit Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CI-LessonTypes-U3-2023"
+        ],
+        "lesson.key": "Introduction to Interactive Animations and Games",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd-ci-3",
+        "activity_section.key": "778add97-7bd8-4bc1-a156-f01b2d35428b"
+      },
+      "level_keys": [
+        "VPL-CI-LessonTypes-U3-2023"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
           "VPL-CSD-pilot-S22-CI-Unit_PSP-U3L3_2023"
         ],
         "progression": "Unit Overview"
@@ -478,8 +504,8 @@
       ]
     },
     {
-      "chapter": 4,
-      "position": 4,
+      "chapter": 5,
+      "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -503,8 +529,8 @@
       ]
     },
     {
-      "chapter": 5,
-      "position": 5,
+      "chapter": 6,
+      "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -528,7 +554,7 @@
       ]
     },
     {
-      "chapter": 6,
+      "chapter": 7,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -553,7 +579,7 @@
       ]
     },
     {
-      "chapter": 7,
+      "chapter": 8,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -578,7 +604,7 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 9,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -603,11 +629,12 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 10,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "VPL-CSD-PILOT-S22-CI-CSD U3 Drawing Squares to Corners_2023"
         ],
@@ -628,7 +655,7 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 11,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -653,11 +680,12 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 12,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "VPL-CSD-PILOT-S22-CI-CSD U3 sequence_2023"
         ],
@@ -678,7 +706,7 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 13,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -703,11 +731,12 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 14,
       "position": 8,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "VPL-CSD-PILOT-S22-CI-CSD U3 Random Taller Rectangle_2023"
         ],
@@ -728,11 +757,12 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 15,
       "position": 9,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "VPL-CSD-PILOT-S22-CI-CSD U3 Random Debug Grass_2023"
         ],
@@ -753,7 +783,7 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 16,
       "position": 10,
       "activity_section_position": 4,
       "assessment": true,
@@ -778,7 +808,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 17,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -803,11 +833,12 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 18,
       "position": 12,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "VPL-CSD-PILOT-S22-CI-CSD U3 Variables Draw Poppy_2023"
         ],
@@ -828,7 +859,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 19,
       "position": 13,
       "activity_section_position": 3,
       "assessment": false,
@@ -853,7 +884,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 20,
       "position": 14,
       "activity_section_position": 4,
       "assessment": true,
@@ -878,11 +909,12 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 21,
       "position": 15,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "VPL-CSD-PILOT-S22-CI-CSD U3 Variables random with assignment_2023"
         ],
@@ -903,7 +935,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 22,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -928,11 +960,12 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 23,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "VPL-CSD-PILOT-S22-CI-CSD U3 Sprites Exploration_2023"
         ],
@@ -953,7 +986,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 24,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -978,11 +1011,12 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 25,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "VPL-CSD-PILOT-S22-CI-2-CSD U3 Sprites intro sprites_2023"
         ],
@@ -1003,7 +1037,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 26,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -1028,11 +1062,12 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 27,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "VPL-CSD-PILOT-S22-CI-2-CSD U3 Sprites sequencing_2023"
         ],
@@ -1053,7 +1088,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 28,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -1078,7 +1113,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 29,
       "position": 8,
       "activity_section_position": 4,
       "assessment": true,
@@ -1103,11 +1138,12 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 30,
       "position": 9,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "VPL-CSD-PILOT-S22-CI-CSD Games properties xy_2023"
         ],
@@ -1128,7 +1164,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 31,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -1153,11 +1189,12 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 32,
       "position": 11,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "VPL-CSD-PILOT-S22-CI-CSD U3 Draw Loop Plugged orange and green_2023"
         ],
@@ -1178,11 +1215,12 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 33,
       "position": 12,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "VPL-CSD-PILOT-S22-CI-CSD U3 dancing alien_2023"
         ],
@@ -1203,7 +1241,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 34,
       "position": 13,
       "activity_section_position": 4,
       "assessment": false,
@@ -1228,7 +1266,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 35,
       "position": 14,
       "activity_section_position": 1,
       "assessment": false,
@@ -1253,11 +1291,12 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 36,
       "position": 15,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "VPL-CSD-PILOT-S22-CI-2-CSD U3 Sprite Movement Right_2023"
         ],
@@ -1278,7 +1317,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 37,
       "position": 16,
       "activity_section_position": 3,
       "assessment": false,
@@ -1303,11 +1342,12 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 38,
       "position": 17,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "VPL-CSD-PILOT-S22-CI-mod3-counterPattern-overview_2023"
         ],
@@ -1328,7 +1368,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 39,
       "position": 18,
       "activity_section_position": 5,
       "assessment": true,
@@ -1353,7 +1393,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 40,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1378,7 +1418,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 41,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -1403,7 +1443,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 42,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -1428,7 +1468,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 43,
       "position": 4,
       "activity_section_position": 3,
       "assessment": true,
@@ -1453,7 +1493,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 44,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -1478,11 +1518,12 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 45,
       "position": 6,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "VPL-CSD-PILOT-S22-CI-CSD U3 Conditionals Apple 2_2023"
         ],
@@ -1503,7 +1544,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 46,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -1528,7 +1569,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 47,
       "position": 8,
       "activity_section_position": 2,
       "assessment": false,
@@ -1553,7 +1594,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 48,
       "position": 9,
       "activity_section_position": 3,
       "assessment": false,
@@ -1578,7 +1619,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 49,
       "position": 10,
       "activity_section_position": 4,
       "assessment": true,
@@ -1603,7 +1644,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 50,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -1628,7 +1669,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 51,
       "position": 12,
       "activity_section_position": 2,
       "assessment": false,
@@ -1653,11 +1694,12 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 52,
       "position": 13,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "VPL-CSD-PILOT-S22-CI-CSD U3 abstraction velocityX_2023"
         ],
@@ -1678,11 +1720,12 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 53,
       "position": 14,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "VPL-CSD-PILOT-S22-CI-CSD U3 collisions isTouching intro_2023"
         ],
@@ -1703,7 +1746,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 54,
       "position": 15,
       "activity_section_position": 5,
       "assessment": true,
@@ -1728,7 +1771,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 55,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1753,11 +1796,14 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 56,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-Summer-CI-CSD U3-Mini-ProjectsOverview_2023"
+        ],
         "progression": "Unit Projects"
       },
       "bonus": false,
@@ -1775,7 +1821,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 57,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -1800,7 +1846,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 58,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -1825,7 +1871,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 59,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -1868,6 +1914,18 @@
         "level.key": "VPL-CSD-pilot-S22-CI-Unit_Overview_U3L2_2023",
         "script_level.level_keys": [
           "VPL-CSD-pilot-S22-CI-Unit_Overview_U3L2_2023"
+        ],
+        "lesson.key": "Introduction to Interactive Animations and Games",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd-ci-3",
+        "activity_section.key": "778add97-7bd8-4bc1-a156-f01b2d35428b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CI-LessonTypes-U3-2023",
+        "script_level.level_keys": [
+          "VPL-CI-LessonTypes-U3-2023"
         ],
         "lesson.key": "Introduction to Interactive Animations and Games",
         "lesson_group.key": "lessonGroup-2",

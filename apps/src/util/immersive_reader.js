@@ -15,7 +15,7 @@ function getTokenAndSubdomainAsync() {
         } else {
           resolve(data);
         }
-      }
+      },
     });
   });
 }
@@ -37,9 +37,9 @@ export default function handleLaunchImmersiveReader(locale, title, text) {
         chunks: [
           {
             content: sanitizeText(text),
-            lang: locale
-          }
-        ]
+            lang: locale,
+          },
+        ],
       };
       launchAsync(token, subdomain, data, {uiZIndex: 2113});
     })

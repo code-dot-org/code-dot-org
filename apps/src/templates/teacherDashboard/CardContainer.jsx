@@ -6,13 +6,13 @@ const style = {
   width: styleConstants['content-width'],
   display: 'flex',
   flexWrap: 'wrap',
-  justifyContent: 'space-between'
+  justifyContent: 'space-between',
 };
 
 /** Uses flexbox to arrange content cards into nice rows with wrapping. */
 export default class CardContainer extends Component {
   static propTypes = {
-    children: PropTypes.any
+    children: PropTypes.any,
   };
 
   render() {

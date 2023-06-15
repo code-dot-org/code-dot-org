@@ -5,7 +5,7 @@ import {UnconnectedMultipleSectionsAssigner as MultipleSectionsAssigner} from '@
 import {fakeTeacherSectionsForDropdown} from '@cdo/apps/templates/teacherDashboard/sectionAssignmentTestHelper';
 import {
   assignToSection,
-  unassignSection
+  unassignSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {updateHiddenScript} from '@cdo/apps/code-studio/hiddenLessonRedux';
 import sinon from 'sinon';
@@ -23,7 +23,7 @@ describe('MultipleSectionsAssigner', () => {
     unassignSection: unassignSection,
     assignToSection: assignToSection,
     updateHiddenScript: updateHiddenScript,
-    participantAudience: 'student'
+    participantAudience: 'student',
   };
   const setUp = (overrideProps = {}) => {
     const props = {...defaultProps, ...overrideProps};
@@ -35,7 +35,7 @@ describe('MultipleSectionsAssigner', () => {
       isOnCoursePage: false,
       courseId: assignedCourseANDUnitSection.courseId,
       isStandAloneUnit: false,
-      scriptId: assignedCourseANDUnitSection.unitId
+      scriptId: assignedCourseANDUnitSection.unitId,
     });
 
     // Checks that an assigned section is checked
@@ -66,7 +66,7 @@ describe('MultipleSectionsAssigner', () => {
       isOnCoursePage: true,
       courseId: assignedCourseANDUnitSection.courseId,
       isStandAloneUnit: false,
-      scriptId: assignedCourseANDUnitSection.unitId
+      scriptId: assignedCourseANDUnitSection.unitId,
     });
 
     // Checks that an assigned section is checked
@@ -116,7 +116,7 @@ describe('MultipleSectionsAssigner', () => {
       courseId: assigedStandaloneUnitSection.courseId,
       isStandAloneUnit: true,
       scriptId: assigedStandaloneUnitSection.unitId,
-      courseVersionId: assigedStandaloneUnitSection.courseVersionId
+      courseVersionId: assigedStandaloneUnitSection.courseVersionId,
     });
 
     // Checks that an assigned section is checked
@@ -140,40 +140,71 @@ describe('MultipleSectionsAssigner', () => {
     ).to.be.false;
   });
 
-  // this feels like a spot check - should we check another version where the participant audience is 'teacher'?
-  it('renders all assignable sections for the course', () => {
+  it('renders all student sections for a student course', () => {
     const wrapper = setUp({
       isOnCoursePage: true,
       courseId: assignedCourseANDUnitSection.courseId,
       isStandAloneUnit: false,
       scriptId: assignedCourseANDUnitSection.unitId,
       courseOfferingId: assignedCourseANDUnitSection.courseOfferingId,
-      courseVersionId: assignedCourseANDUnitSection.courseVersionId
+      courseVersionId: assignedCourseANDUnitSection.courseVersionId,
     });
 
-    // Check that courses 1-6 have TeacherOptions and course 7 does not.
-    for (let i = 0; i < wrapper.instance().props.sections.length; i++) {
-      wrapper.instance().props.sections[i].participantType ===
-      wrapper.instance().props.participantAudience
-        ? expect(
-            wrapper
-              .find('TeacherSectionOption')
-              .filterWhere(
-                n =>
-                  n.props().section.id ===
-                  wrapper.instance().props.sections[i].id
-              )
-          ).to.exist
-        : expect(
-            wrapper
-              .find('TeacherSectionOption')
-              .filterWhere(
-                n =>
-                  n.props().section.id ===
-                  wrapper.instance().props.sections[i].id
-              )
-          ).to.have.lengthOf(0);
-    }
+    const assignableSections = fakeTeacherSectionsForDropdown.filter(
+      section => section.participantType === 'student'
+    );
+    assignableSections.forEach(section => {
+      expect(
+        wrapper
+          .find('TeacherSectionOption')
+          .filterWhere(option => option.props().section.id === section.id)
+      ).to.exist;
+    });
+
+    const notAssignableSections = fakeTeacherSectionsForDropdown.filter(
+      section => section.participantType === 'teacher'
+    );
+    notAssignableSections.forEach(section => {
+      expect(
+        wrapper
+          .find('TeacherSectionOption')
+          .filterWhere(option => option.props().section.id === section.id)
+      ).to.have.lengthOf(0);
+    });
+  });
+
+  it('renders all teacher sections for a teacher course', () => {
+    const wrapper = setUp({
+      isOnCoursePage: true,
+      courseId: assignedCourseANDUnitSection.courseId,
+      isStandAloneUnit: false,
+      scriptId: assignedCourseANDUnitSection.unitId,
+      courseOfferingId: assignedCourseANDUnitSection.courseOfferingId,
+      courseVersionId: assignedCourseANDUnitSection.courseVersionId,
+      participantAudience: 'teacher',
+    });
+
+    const assignableSections = fakeTeacherSectionsForDropdown.filter(
+      section => section.participantType === 'teacher'
+    );
+    assignableSections.forEach(section => {
+      expect(
+        wrapper
+          .find('TeacherSectionOption')
+          .filterWhere(option => option.props().section.id === section.id)
+      ).to.exist;
+    });
+
+    const notAssignableSections = fakeTeacherSectionsForDropdown.filter(
+      section => section.participantType === 'student'
+    );
+    notAssignableSections.forEach(section => {
+      expect(
+        wrapper
+          .find('TeacherSectionOption')
+          .filterWhere(option => option.props().section.id === section.id)
+      ).to.have.lengthOf(0);
+    });
   });
 
   it('unassigns a unit but keeps the course assignment on the UNIT landing page of a non-standalone course when checkbox is unchecked', () => {
@@ -188,7 +219,7 @@ describe('MultipleSectionsAssigner', () => {
       assignToSection,
       reassignConfirm,
       courseOfferingId: assignedCourseANDUnitSection.courseOfferingId,
-      courseVersionId: assignedCourseANDUnitSection.courseVersionId
+      courseVersionId: assignedCourseANDUnitSection.courseVersionId,
     });
 
     wrapper
@@ -235,7 +266,7 @@ describe('MultipleSectionsAssigner', () => {
       reassignConfirm,
       updateHiddenScript,
       courseOfferingId: assigedStandaloneUnitSection.courseOfferingId,
-      courseVersionId: assigedStandaloneUnitSection.courseVersionId
+      courseVersionId: assigedStandaloneUnitSection.courseVersionId,
     });
 
     wrapper
@@ -277,7 +308,7 @@ describe('MultipleSectionsAssigner', () => {
       unassignSection,
       reassignConfirm,
       courseOfferingId: assigedStandaloneUnitSection.courseOfferingId,
-      courseVersionId: assigedStandaloneUnitSection.courseVersionId
+      courseVersionId: assigedStandaloneUnitSection.courseVersionId,
     });
 
     wrapper
@@ -321,7 +352,7 @@ describe('MultipleSectionsAssigner', () => {
       assignToSection,
       updateHiddenScript,
       courseOfferingId: assignedCourseANDUnitSection.courseOfferingId,
-      courseVersionId: assignedCourseANDUnitSection.courseVersionId
+      courseVersionId: assignedCourseANDUnitSection.courseVersionId,
     });
 
     wrapper
@@ -364,7 +395,7 @@ describe('MultipleSectionsAssigner', () => {
       unassignSection,
       reassignConfirm,
       courseOfferingId: assignedCourseANDUnitSection.courseOfferingId,
-      courseVersionId: assignedCourseANDUnitSection.courseVersionId
+      courseVersionId: assignedCourseANDUnitSection.courseVersionId,
     });
 
     wrapper
@@ -407,7 +438,7 @@ describe('MultipleSectionsAssigner', () => {
       assignToSection,
       reassignConfirm,
       courseOfferingId: assignedCourseANDUnitSection.courseOfferingId,
-      courseVersionId: assignedCourseANDUnitSection.courseVersionId
+      courseVersionId: assignedCourseANDUnitSection.courseVersionId,
     });
 
     wrapper
@@ -442,7 +473,7 @@ describe('MultipleSectionsAssigner', () => {
       isOnCoursePage: false,
       courseId: assignedCourseANDUnitSection.courseId,
       isStandAloneUnit: false,
-      scriptId: assignedCourseANDUnitSection.unitId
+      scriptId: assignedCourseANDUnitSection.unitId,
     });
 
     wrapper.find('.select-all-sections').simulate('click');

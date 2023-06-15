@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import $ from 'jquery';
-import {Button, Alert, FormGroup} from 'react-bootstrap';
+import {Button, Alert, FormGroup} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import {Pagination} from '@react-bootstrap/pagination';
 import i18n from '@cdo/locale';
 
@@ -31,7 +31,7 @@ export default class FormController extends React.Component {
       errorHeader: null,
       globalError: false,
       currentPage: 0,
-      submitting: false
+      submitting: false,
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -86,7 +86,7 @@ export default class FormController extends React.Component {
     if (newErrors || newPage) {
       $('html, body').animate(
         {
-          scrollTop: 0
+          scrollTop: 0,
         },
         200
       );
@@ -132,7 +132,7 @@ export default class FormController extends React.Component {
     const data = Object.assign({}, this.state.data, newState);
     this.setState({
       data,
-      errors
+      errors,
     });
 
     this.saveToSessionStorage({data});
@@ -153,9 +153,9 @@ export default class FormController extends React.Component {
       const mergedData = {
         ...{
           currentPage: this.state.currentPage,
-          data: this.state.data
+          data: this.state.data,
         },
-        ...newState
+        ...newState,
       };
       sessionStorage.setItem(
         this.constructor.sessionStorageKey,
@@ -171,7 +171,7 @@ export default class FormController extends React.Component {
    */
   serializeFormData() {
     return {
-      form_data: this.state.data
+      form_data: this.state.data,
     };
   }
 
@@ -214,7 +214,7 @@ export default class FormController extends React.Component {
       errors: [],
       errorHeader: null,
       globalError: false,
-      submitting: true
+      submitting: true,
     });
 
     $.ajax({
@@ -222,7 +222,7 @@ export default class FormController extends React.Component {
       url: this.props.apiEndpoint,
       contentType: 'application/json',
       dataType: 'json',
-      data: JSON.stringify(this.serializeFormData())
+      data: JSON.stringify(this.serializeFormData()),
     })
       .done(data => {
         sessionStorage.removeItem(this.constructor.sessionStorageKey);
@@ -238,25 +238,25 @@ export default class FormController extends React.Component {
             this.setState({
               errors: data.responseJSON.errors.form_data,
               errorHeader: data.responseJSON.general_error,
-              globalError: true
+              globalError: true,
             });
           } else {
             // if the failure was a result of an invalid form, highlight the errors
             // and display the generic error header
             this.setState({
               errors: data.responseJSON.errors.form_data,
-              errorHeader: i18n.formErrorsBelow()
+              errorHeader: i18n.formErrorsBelow(),
             });
           }
         } else {
           // Otherwise, something unknown went wrong on the server
           this.setState({
             globalError: true,
-            errorHeader: i18n.formServerError()
+            errorHeader: i18n.formServerError(),
           });
         }
         this.setState({
-          submitting: false
+          submitting: false,
         });
       });
 
@@ -320,7 +320,7 @@ export default class FormController extends React.Component {
       onChange: this.handleChange,
       errors: this.state.errors,
       errorMessages: this.state.errorMessages,
-      data: this.state.data
+      data: this.state.data,
     };
   }
 
@@ -382,8 +382,8 @@ export default class FormController extends React.Component {
     this.setState({
       data: {
         ...this.state.data,
-        ...pageData
-      }
+        ...pageData,
+      },
     });
 
     const pageRequiredFields = pageFields.filter(f =>
@@ -398,7 +398,7 @@ export default class FormController extends React.Component {
         errorMessages: formatErrors,
         errorHeader:
           'Please fill out all required fields. You must completely fill out this section before moving \
-          on to the next section or going back to edit a previous section.'
+          on to the next section or going back to edit a previous section.',
       });
 
       return false;
@@ -440,7 +440,7 @@ export default class FormController extends React.Component {
     const currentPageValid = this.validateCurrentPageRequiredFields();
     if (currentPageValid) {
       this.setState({
-        currentPage: newPage
+        currentPage: newPage,
       });
 
       this.saveToSessionStorage({currentPage: newPage});
@@ -527,16 +527,16 @@ export default class FormController extends React.Component {
 const styles = {
   pageButtons: {
     verticalAlign: 'middle',
-    margin: '0 10px'
-  }
+    margin: '0 10px',
+  },
 };
 
 FormController.propTypes = {
   apiEndpoint: PropTypes.string.isRequired,
   options: PropTypes.object.isRequired,
-  requiredFields: PropTypes.arrayOf(PropTypes.string).isRequired
+  requiredFields: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 
 FormController.defaultProps = {
-  requiredFields: []
+  requiredFields: [],
 };

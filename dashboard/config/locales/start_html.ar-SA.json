@@ -139,10 +139,14 @@
           "text": "النص"
         },
         "CSD U1 processing live_2021": {
-          "bear": "دب"
+          "bear": "دب",
+          "walking": "مشي",
+          "rat": "جرذ"
         },
         "CSD U1 processing live_2022": {
-          "bear": "دب"
+          "bear": "دب",
+          "walking": "مشي",
+          "rat": "جرذ"
         },
         "CSD U1 processing npark_2021": {
           "Correct!": "صحيح!",
@@ -218,13 +222,17 @@
           "Clear": "مسح",
           "pink": "وردي",
           "green": "أخضر",
-          "black": "أسود"
+          "black": "أسود",
+          "white": "أبيض",
+          "purple": "أرجواني"
         },
         "CSD U1 storage outfit_2022": {
           "Clear": "مسح",
           "pink": "وردي",
           "green": "أخضر",
-          "black": "أسود"
+          "black": "أسود",
+          "white": "أبيض",
+          "purple": "أرجواني"
         },
         "CSD U2 RGB intro": {
           "1": "1",
@@ -320,7 +328,8 @@
           "right": "اليمين",
           "red": "أحمر",
           "yellow": "أصفر",
-          "green": "أخضر"
+          "green": "أخضر",
+          "purple": "أرجواني"
         },
         "CSD U6 - Combine Inputs - CA_2022": {
           "on": "على",
@@ -400,7 +409,8 @@
           "F": "هـ\n",
           "G": "و",
           "A": "A",
-          "B": "ب\n"
+          "B": "ب\n",
+          "Note:": "ملاحظة:"
         },
         "CSD U6 - Music - SB1_2222": {
           "C": "ج\n",
@@ -507,10 +517,12 @@
           "Welcome": "مرحبًا"
         },
         "CSD U6 - Screen Inputs - SB2.1_2022": {
-          "black": "أسود"
+          "black": "أسود",
+          "white": "أبيض"
         },
         "CSD U6 - Screen Inputs - SB2.2_2022": {
-          "black": "أسود"
+          "black": "أسود",
+          "white": "أبيض"
         },
         "CSD U6 - Screen Outputs - ChalB_2222": {
           "Happy": "سعيد",
@@ -547,7 +559,8 @@
           "low": "منخفض"
         },
         "CSD U6 - Sensors - SB2_2222": {
-          "Update": "تحديث"
+          "Update": "تحديث",
+          "value": "القيمة"
         },
         "CSD U6 Driver pt 2": {
           "You did it!": "لقد فعلتها!"
@@ -622,16 +635,20 @@
           "Success!": "نجحت!"
         },
         "CSD U6 analog light": {
-          "Update": "تحديث"
+          "Update": "تحديث",
+          "value": "القيمة"
         },
         "CSD U6 analog light_2018": {
-          "Update": "تحديث"
+          "Update": "تحديث",
+          "value": "القيمة"
         },
         "CSD U6 analog light_2019": {
-          "Update": "تحديث"
+          "Update": "تحديث",
+          "value": "القيمة"
         },
         "CSD U6 analog light_2021": {
-          "Update": "تحديث"
+          "Update": "تحديث",
+          "value": "القيمة"
         },
         "CSD U6 array piano": {
           "C": "ج\n",
@@ -1474,6 +1491,57 @@
           "cloudy": "غائم",
           "night": "ليل",
           "dusk": "الغسق"
+        },
+        "CSD U6 - Combine Inputs - PracD_2222": {
+          "quiet": "هادئ"
+        },
+        "CSD U6 - Sensors - SB1_2222": {
+          "value": "القيمة"
+        },
+        "CSD U6 - Sensors - SB3_2222": {
+          "value": "القيمة"
+        },
+        "CSD U6 - Sensors - SB4.1_2222": {
+          "value": "القيمة"
+        },
+        "CSD U6 - Sensors - SB4_2222": {
+          "value": "القيمة"
+        },
+        "CSD U6 analog change": {
+          "value": "القيمة"
+        },
+        "CSD U6 analog change_2018": {
+          "value": "القيمة"
+        },
+        "CSD U6 analog change_2019": {
+          "value": "القيمة"
+        },
+        "CSD U6 analog change_2021": {
+          "value": "القيمة"
+        },
+        "CSD U6 analog data": {
+          "value": "القيمة"
+        },
+        "CSD U6 analog data_2018": {
+          "value": "القيمة"
+        },
+        "CSD U6 analog data_2019": {
+          "value": "القيمة"
+        },
+        "CSD U6 analog data_2021": {
+          "value": "القيمة"
+        },
+        "CSD U6 analog sound": {
+          "value": "القيمة"
+        },
+        "CSD U6 analog sound_2018": {
+          "value": "القيمة"
+        },
+        "CSD U6 analog sound_2019": {
+          "value": "القيمة"
+        },
+        "CSD U6 analog sound_2021": {
+          "value": "القيمة"
         }
       }
     }

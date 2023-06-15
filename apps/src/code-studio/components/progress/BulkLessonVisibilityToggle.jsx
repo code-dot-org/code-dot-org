@@ -53,11 +53,11 @@ BulkLessonVisibilityToggle.propTypes = {
 
   // redux provided
   sectionId: PropTypes.number.isRequired,
-  unitName: PropTypes.string.isRequired
+  unitName: PropTypes.string.isRequired,
 };
 
 export const UnconnectedBulkLessonVisibilityToggle = BulkLessonVisibilityToggle;
 export default connect(state => ({
   sectionId: state.teacherSections.selectedSectionId,
-  unitName: state.progress.scriptName
+  unitName: state.progress.scriptName,
 }))(BulkLessonVisibilityToggle);

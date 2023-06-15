@@ -23,7 +23,7 @@ class SecretsConfigTest < Minitest::Test
     file.write yml_erb
     file.close
     config.load_configuration(file.path)
-    config.freeze
+    config.freeze_config
   end
 
   def stub_secret(str)
