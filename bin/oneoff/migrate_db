@@ -54,7 +54,7 @@ def main
   puts 'Endpoints updated. Press enter to stop applications [begin live-site downtime]...'
   gets
 
-  fanout 'sudo service dashboard stop; sudo service pegasus stop'
+  fanout 'sudo systemctl stop dashboard; sudo systemctl stop pegasus'
 
   # 3. Promote the new DB instance to master.
   puts "Promoting new DB instance to master..."
