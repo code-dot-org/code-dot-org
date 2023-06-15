@@ -1,0 +1,117 @@
+@import "color";
+
+.radioButton {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+
+  input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+  }
+
+  i {
+    position: relative;
+    box-sizing: border-box;
+    margin: 2px;
+    font-size: unset;
+    line-height: unset;
+    border: 2px solid $neutral_dark;
+    background: $neutral_white;
+
+    &::after {
+      content: '';
+
+      background: $light_primary_500;
+      position: absolute;
+      border-radius: 50%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+  }
+
+  input[type="radio"]:checked + i {
+    border-color: $light_primary_500;
+
+    &::after {
+      opacity: 1;
+    }
+  }
+
+  span {
+    margin: 0;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+
+  // Hover styles
+  &:hover input[type="radio"]:not(:disabled) {
+      + i {
+        background: $light_primary_100;
+      }
+    &:checked + i {
+      border-color: $light_primary_700;
+      background: $neutral_white;
+
+      &::after {
+        background: $light_primary_700;
+      }
+    }
+  }
+
+  // Focus styles
+  input[type="radio"]:focus + i {
+    outline: 2px solid $light_primary_500;
+    outline-offset: 2px;
+  }
+
+  // Pressed styles
+  input[type="radio"]:active:not(:disabled) {
+    + i {
+      background: $light_primary_100;
+      border-color: $light_primary_500;
+    }
+    &:checked + i {
+      background: $light_primary_100;
+      border-color: $light_primary_700;
+
+      &::after {
+        background: $light_primary_700;
+      }
+    }
+  }
+
+  // Disabled styles
+  input[type="radio"]:disabled {
+    + i {
+      border-color: $neutral_dark20;
+
+      &::after {
+        background: $neutral_dark20;
+      }
+    }
+
+    +span {
+      color: $neutral_dark20;
+    }
+  }
+
+}
+
+.radioButton-m {
+  height: 24px;
+
+  i {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+
+    &::after {
+      width: 8px;
+      height: 8px;
+    }
+  }
+}
