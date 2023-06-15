@@ -1298,7 +1298,7 @@ class LessonTest < ActiveSupport::TestCase
 
     test "get_localized_property can retrieve translations" do
       lesson = create(:lesson, overview: "This is the english overview")
-      test_locale = :"te-ST"
+      test_locale = :'te-ST'
       custom_i18n = {
         "data" => {
           "lessons" => {

@@ -76,7 +76,7 @@ class AwsS3IntegrationTest < Minitest::Test
     parsed_url = URI.parse(presigned_url)
     body = 'Testing S3 presigned upload'
     Net::HTTP.start(parsed_url.host) do |http|
-      http.send_request("PUT", parsed_url.request_uri, body, {"content-type": ""})
+      http.send_request("PUT", parsed_url.request_uri, body, {'content-type': ""})
     end
 
     downloaded = AWS::S3.download_from_bucket(TEST_BUCKET, key)
