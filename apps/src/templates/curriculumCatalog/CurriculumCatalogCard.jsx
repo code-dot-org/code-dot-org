@@ -22,6 +22,7 @@ import {
   unassignSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shapes';
+import {SignInToAssignSectionsDialog} from '@cdo/apps/templates/NoSectionsToAssignDialog';
 
 const CurriculumCatalogCard = ({
   courseDisplayName,
@@ -103,19 +104,31 @@ const CustomizableCurriculumCatalogCard = ({
   isEnglish,
   pathToCourse,
   sectionsForDropdown,
+  isTeacher,
+  isSignedOut,
   ...props
 }) => {
   const [isAssignDialogOpen, setIsAssignDialogOpen] = useState(false);
 
-  const renderAssignDialog = () => (
-    <MultipleSectionsAssigner
-      assignmentName={courseDisplayName}
-      onClose={() => setIsAssignDialogOpen(false)}
-      sections={sectionsForDropdown}
-      participantAudience="student"
-      {...props}
-    />
-  );
+  const renderAssignDialog = () => {
+    if (isSignedOut) {
+      return (
+        <SignInToAssignSectionsDialog
+          onClose={() => setIsAssignDialogOpen(false)}
+        />
+      );
+    } else if (isTeacher && sectionsForDropdown) {
+      return (
+        <MultipleSectionsAssigner
+          assignmentName={courseDisplayName}
+          onClose={() => setIsAssignDialogOpen(false)}
+          sections={sectionsForDropdown}
+          participantAudience="student"
+          {...props}
+        />
+      );
+    }
+  };
 
   return (
     <div>

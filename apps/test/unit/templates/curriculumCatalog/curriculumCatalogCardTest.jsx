@@ -251,9 +251,13 @@ describe('CurriculumCatalogCard', () => {
     });
   });
 
-  it('clicking Assign button as a user with sections shows sections', () => {
+  it('clicking Assign button as a teacher with sections shows sections', () => {
     store.dispatch(setSections(sections));
-    renderCurriculumCard();
+    renderCurriculumCard({
+      ...defaultProps,
+      isSignedOut: false,
+      isTeacher: true,
+    });
 
     const assignButton = screen.getByRole('button', {
       name: new RegExp(
@@ -266,5 +270,18 @@ describe('CurriculumCatalogCard', () => {
     );
     fireEvent.click(assignButton);
     sections.forEach(section => screen.getByText(section.name));
+  });
+
+  it('clicking Assign button as a signed out user shows dialog to sign in', () => {
+    renderCurriculumCard();
+
+    const assignButton = screen.getByRole('button', {
+      name: new RegExp(
+        `Assign ${defaultProps.courseDisplayName} to your classroom`
+      ),
+    });
+
+    fireEvent.click(assignButton);
+    screen.getByText('Sign in or create account');
   });
 });
