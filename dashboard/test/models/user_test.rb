@@ -2359,6 +2359,24 @@ class UserTest < ActiveSupport::TestCase
     assert_nil user.parent_email
   end
 
+  test 'upgrade_to_teacher given valid params should delete family_name property' do
+    DCDO.stubs(:get).with('family-name-features', false).returns(true)
+
+    family_name = 'TestFamName'
+    user = User.create(@good_data)
+    user.properties = {family_name: family_name}
+    user.save!
+
+    assert_equal family_name, user.properties['family_name']
+
+    assert user.upgrade_to_teacher('example@email.com', email_preference_params)
+
+    user.reload
+    assert_nil user.properties['family_name']
+
+    DCDO.unstub(:get)
+  end
+
   def assert_parent_email_params_equals_email_preference(parent_email_params, email_preference)
     assert_equal parent_email_params[:parent_email_preference_email], email_preference.email
     assert_equal parent_email_params[:parent_email_preference_opt_in].casecmp?('yes'), email_preference.opt_in

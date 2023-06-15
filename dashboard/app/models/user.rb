@@ -1040,6 +1040,14 @@ class User < ApplicationRecord
         new_attributes[:email] = email
       end
       update!(new_attributes)
+
+      # Remove family name, in case it was set on the student account.
+      if DCDO.get('family-name-features', false)
+        properties['family_name'] = nil
+        save!
+      end
+
+      self
     end
   rescue
     false # Relevant errors are set on the user model, so we rescue and return false here.
