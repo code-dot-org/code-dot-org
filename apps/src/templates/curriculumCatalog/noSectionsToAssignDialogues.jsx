@@ -3,6 +3,8 @@ import React from 'react';
 import i18n from '@cdo/locale';
 import Button from '@cdo/apps/templates/Button';
 import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
+import Typography from '@cdo/apps/componentLibrary/typography';
+import style from './no_sections_to_assign_dialogues.module.scss';
 
 export const SignInToAssignSectionsDialog = ({onClose}) => (
   <NoSectionsToAssignBaseDialog
@@ -26,23 +28,29 @@ const NoSectionsToAssignBaseDialog = ({
   href,
 }) => {
   return (
-    <AccessibleDialog onClose={onClose}>
-      <div tabIndex="0">{headerText}</div>
+    <AccessibleDialog onClose={onClose} className={style.dialogueContainer}>
+      <Typography semanticTag="h3" tabIndex="0">
+        {headerText}
+      </Typography>
       <hr />
-      <div>{helpText}</div>
-      <hr />
-      <div>
-        <Button
-          text={i18n.dialogCancel()}
-          onClick={onClose}
-          color={Button.ButtonColor.white}
-        />
-        <Button
-          __useDeprecatedTag
-          href={href}
-          text={buttonText}
-          color={Button.ButtonColor.gray}
-        />
+      <Typography semanticTag="span" visualAppearance="body-one">
+        {helpText}
+      </Typography>
+      <div className={style.lowerContainer}>
+        <hr />
+        <div className={style.buttonContainer}>
+          <Button
+            text={i18n.dialogCancel()}
+            onClick={onClose}
+            color={Button.ButtonColor.neutralDark}
+          />
+          <Button
+            __useDeprecatedTag
+            href={href}
+            text={buttonText}
+            color={Button.ButtonColor.brandSecondaryDefault}
+          />
+        </div>
       </div>
     </AccessibleDialog>
   );
