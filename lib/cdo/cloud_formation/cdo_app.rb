@@ -51,7 +51,7 @@ module Cdo::CloudFormation
     def initialize(**options)
       options[:stack_name]  ||= CDO.stack_name
       options[:filename]    ||= 'cloud_formation_stack.yml.erb'
-      super(options)
+      super(**options)
       options = @options = OpenStruct.new(options)
 
       # Various option defaults.
