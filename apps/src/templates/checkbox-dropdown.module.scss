@@ -65,9 +65,8 @@ form.dropDownMenuContainer {
 
       span {
         margin: 0;
+        user-select: none;
         -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
       }
     }
 
@@ -94,8 +93,8 @@ form.dropDownMenuContainer {
       }
     }
 
-
-    &:has(label:active) {
+    &:has(label:active),
+    &:has(input[type="checkbox"]:active) {
       background-color: $light_primary_500;
       label {
         span {
