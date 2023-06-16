@@ -323,6 +323,10 @@ export default class MusicBlocklyWorkspace {
     }
   }
 
+  hasTrigger(id) {
+    return !!this.codeHooks[this.triggerIdToEvent(id)];
+  }
+
   /**
    * Given the exact current playback position, get the start position of the trigger,
    * adjusted based on when the trigger should play (immediately, next beat, or next measure).
