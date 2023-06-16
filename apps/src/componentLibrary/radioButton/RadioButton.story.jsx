@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useCallback} from 'react';
 import RadioButton from './index';
 
 export default {
@@ -11,18 +11,40 @@ export default {
 //
 // This is needed to fix children type error (passing string instead of React.ReactNode type)
 // eslint-disable-next-line
-const MultipleTemplate = (args = []) => (
-  <>
-    {args.components?.map(componentArg => (
-      <RadioButton key={componentArg.name} {...componentArg} />
-    ))}
-  </>
-);
+const MultipleTemplate = (args = []) => {
+  const componentArgs = args.components || [];
+  const initialValues = componentArgs.reduce((acc = {}, componentArg) => {
+    acc[componentArg.name] = false;
+    return acc;
+  });
+  const [values, setValue] = useState(initialValues || {});
+
+  const onChange = useCallback(
+    e => {
+      const {name} = e.target;
+      console.log('clicked', name);
+      setValue({...initialValues, [name]: true});
+    },
+    [setValue, initialValues]
+  );
+  return (
+    <>
+      {args.components?.map(componentArg => (
+        <RadioButton
+          key={componentArg.name}
+          {...componentArg}
+          checked={values[componentArg.name]}
+          onChange={onChange}
+        />
+      ))}
+    </>
+  );
+};
 export const DefaultRadioButton = MultipleTemplate.bind({});
 DefaultRadioButton.args = {
   components: [
-    {name: 'test-left', label: 'RadioButton left'},
-    {name: 'test-right', label: 'RadioButton right', position: 'right'},
+    {name: 'radio1', label: 'RadioButton 1'},
+    {name: 'radio2', label: 'RadioButton 2'},
   ],
 };
 

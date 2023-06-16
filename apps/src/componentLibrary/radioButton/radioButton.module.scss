@@ -69,17 +69,20 @@
   }
 
   // Pressed styles
-  input[type="radio"]:active:not(:disabled) {
-    + i {
+  &:active:has(input[type="radio"]:not(:disabled)),
+  &:has(input[type="radio"]:active:not(:disabled)){
+    i {
       background: $light_primary_100;
       border-color: $light_primary_500;
     }
-    &:checked + i {
-      background: $light_primary_100;
-      border-color: $light_primary_700;
+    &:has(input[type="radio"]:checked) {
+      i {
+        background: $light_primary_100;
+        border-color: $light_primary_700;
 
-      &::after {
-        background: $light_primary_700;
+        &::after {
+          background: $light_primary_700;
+        }
       }
     }
   }
