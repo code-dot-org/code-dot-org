@@ -16,5 +16,7 @@
   "feedback": "Visszajelzés",
   "share": "Megosztás",
   "startOver": "Újrakezdés",
-  "upload": "Feltöltés"
+  "upload": "Feltöltés",
+  "panelHeaderInstructions": "Utasítások",
+  "panelHeaderWorkspace": "Munkaterület: "
 }
