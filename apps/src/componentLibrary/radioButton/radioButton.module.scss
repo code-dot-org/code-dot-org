@@ -17,6 +17,7 @@
     font-size: unset;
     line-height: unset;
     border: 2px solid $neutral_dark;
+    border-radius: 50%;
     background: $neutral_white;
 
     &::after {
@@ -102,17 +103,59 @@
 
 }
 
+// Sizes
+.radioButton-l {
+  height: 28px;
+
+  i {
+    height: 24px;
+    width: 24px;
+
+    &::after {
+      width: 9.33px;
+      height: 9.33px;
+    }
+  }
+}
+
 .radioButton-m {
   height: 24px;
 
   i {
     height: 20px;
     width: 20px;
-    border-radius: 50%;
 
     &::after {
       width: 8px;
       height: 8px;
+    }
+  }
+}
+
+.radioButton-s {
+  height: 22px;
+
+  i {
+    height: 18px;
+    width: 18px;
+
+    &::after {
+      width: 7.33px;
+      height: 7.33px;
+    }
+  }
+}
+
+.radioButton-xs {
+  height: 20px;
+
+  i {
+    height: 16px;
+    width: 16px;
+
+    &::after {
+      width: 6.67px;
+      height: 6.67px;
     }
   }
 }
