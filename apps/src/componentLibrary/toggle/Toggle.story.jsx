@@ -2,7 +2,7 @@ import React from 'react';
 import Toggle from './index';
 
 export default {
-  title: 'Toggle Component',
+  title: 'DesignSystem/Toggle Component',
   component: Toggle,
 };
 
