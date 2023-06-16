@@ -121,6 +121,7 @@ class UnconnectedMusicView extends React.Component {
     source: PropTypes.object,
     labReadyForReload: PropTypes.bool,
     setLabReadyForReload: PropTypes.func,
+    startingPlayheadPosition: PropTypes.number,
   };
 
   constructor(props) {
@@ -571,10 +572,13 @@ class UnconnectedMusicView extends React.Component {
     this.executeCompiledSong();
     this.musicBlocklyWorkspace.saveCode(true);
 
-    this.player.playSong(this.sequencer.getPlaybackEvents());
+    this.player.playSong(
+      this.sequencer.getPlaybackEvents(),
+      this.props.startingPlayheadPosition
+    );
 
     this.props.setIsPlaying(true);
-    this.props.setCurrentPlayheadPosition(1);
+    this.props.setCurrentPlayheadPosition(this.props.startingPlayheadPosition);
     this.props.clearSelectedBlockId();
   };
 
@@ -585,7 +589,7 @@ class UnconnectedMusicView extends React.Component {
     this.executeCompiledSong();
 
     this.props.setIsPlaying(false);
-    this.props.setCurrentPlayheadPosition(0);
+    this.props.setCurrentPlayheadPosition(this.props.startingPlayheadPosition);
   };
 
   onFeedbackClicked = () => {
@@ -793,6 +797,7 @@ const MusicView = connect(
     currentlyPlayingBlockIds: getCurrentlyPlayingBlockIds(state),
     source: state.lab.source,
     labReadyForReload: state.lab.labReadyForReload,
+    startingPlayheadPosition: state.music.startingPlayheadPosition,
   }),
   dispatch => ({
     setIsPlaying: isPlaying => dispatch(setIsPlaying(isPlaying)),

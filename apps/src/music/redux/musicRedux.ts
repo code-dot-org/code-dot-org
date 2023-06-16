@@ -1,4 +1,5 @@
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
+import {MIN_NUM_MEASURES} from '../constants';
 import {PlaybackEvent} from '../player/interfaces/PlaybackEvent';
 import {initialProgressState, ProgressState} from '../progress/ProgressManager';
 
@@ -49,6 +50,8 @@ interface MusicState {
   // move this into a more generic, high-level, lab-agnostic
   // reducer.
   currentProgressState: ProgressState;
+  /** The 1-based playhead position to start playback from, scaled to measures */
+  startingPlayheadPosition: number;
 }
 
 const initialState: MusicState = {
@@ -64,6 +67,7 @@ const initialState: MusicState = {
   lastMeasure: 0,
   levelCount: undefined,
   currentProgressState: {...initialProgressState},
+  startingPlayheadPosition: 1,
 };
 
 const musicSlice = createSlice({
@@ -153,6 +157,21 @@ const musicSlice = createSlice({
     setLevelCount: (state, action: PayloadAction<number>) => {
       state.levelCount = action.payload;
     },
+    setStartPlayheadPosition: (state, action: PayloadAction<number>) => {
+      state.startingPlayheadPosition = action.payload;
+    },
+    moveStartPlayheadPositionForward: state => {
+      state.startingPlayheadPosition = Math.min(
+        state.startingPlayheadPosition + 1,
+        Math.max(state.lastMeasure, MIN_NUM_MEASURES)
+      );
+    },
+    moveStartPlayheadPositionBackward: state => {
+      state.startingPlayheadPosition = Math.max(
+        1,
+        state.startingPlayheadPosition - 1
+      );
+    },
   },
 });
 
@@ -203,4 +222,7 @@ export const {
   clearPlaybackEvents,
   addPlaybackEvents,
   setLevelCount,
+  setStartPlayheadPosition,
+  moveStartPlayheadPositionForward,
+  moveStartPlayheadPositionBackward,
 } = musicSlice.actions;

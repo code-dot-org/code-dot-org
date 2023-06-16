@@ -1,6 +1,6 @@
-@import "color.scss";
-@import "./theme/tokens-dark";
-@import "./music-view.module.scss";
+@import 'color.scss';
+@import './theme/tokens-dark';
+@import './music-view.module.scss';
 
 .container {
   background-color: $neutral_dark90;
@@ -30,13 +30,10 @@
 }
 
 .triggersContainer {
-  width: 200px;
+  width: 100%;
   display: flex;
   flex-direction: row;
-  padding-right: 20px;
-  right: 0;
-  top: 3px;
-  height: 35px;
+  justify-content: space-between;
 }
 
 .triggerButtonRow {
@@ -77,7 +74,7 @@ $hover-opacity: 0.5;
   height: 32px;
   line-height: 32px;
   flex: 1;
-  margin-right: 10px;
+  margin: 2px;
   border-width: 3px;
 
   &.greenTrigger {

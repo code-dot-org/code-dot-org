@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import React, {useEffect, useContext} from 'react';
+import React, {useEffect, useContext, useCallback} from 'react';
 import classNames from 'classnames';
 import FontAwesome from '../../templates/FontAwesome';
 import {Triggers} from '@cdo/apps/music/constants';
@@ -7,7 +7,12 @@ import moduleStyles from './controls.module.scss';
 import BeatPad from './BeatPad';
 import {AnalyticsContext} from '../context';
 import {useDispatch, useSelector} from 'react-redux';
-import {hideBeatPad, showBeatPad} from '../redux/musicRedux';
+import {
+  hideBeatPad,
+  moveStartPlayheadPositionBackward,
+  moveStartPlayheadPositionForward,
+  showBeatPad,
+} from '../redux/musicRedux';
 import commonI18n from '@cdo/locale';
 
 /**
@@ -52,6 +57,21 @@ const Controls = ({
     );
   };
 
+  const onClickSkip = useCallback(
+    forward => {
+      if (isPlaying) {
+        return;
+      }
+
+      if (forward) {
+        dispatch(moveStartPlayheadPositionForward());
+      } else {
+        dispatch(moveStartPlayheadPositionBackward());
+      }
+    },
+    [dispatch, isPlaying]
+  );
+
   return (
     <div id="controls" className={moduleStyles.controlsContainer}>
       <div id="controls-section" className={moduleStyles.section}>
@@ -64,13 +84,32 @@ const Controls = ({
           onClick={() => setPlaying(!isPlaying)}
           type="button"
         >
-          <FontAwesome
-            icon={isPlaying ? 'stop' : 'play'}
-            className={moduleStyles.playStopIcon}
-          />
+          <FontAwesome icon={isPlaying ? 'stop' : 'play'} />
           <div className={moduleStyles.text}>
             {isPlaying ? commonI18n.stop() : commonI18n.runProgram()}
           </div>
+        </button>
+        <button
+          id="skip-back-button"
+          className={classNames(
+            moduleStyles.controlButton,
+            moduleStyles.controlButtonSkip
+          )}
+          onClick={() => onClickSkip(false)}
+          type="button"
+        >
+          <FontAwesome icon={'step-backward'} />
+        </button>
+        <button
+          id="skip-forward-button"
+          className={classNames(
+            moduleStyles.controlButton,
+            moduleStyles.controlButtonSkip
+          )}
+          onClick={() => onClickSkip(true)}
+          type="button"
+        >
+          <FontAwesome icon={'step-forward'} />
         </button>
       </div>
       {isBeatPadShowing && renderBeatPad()}
