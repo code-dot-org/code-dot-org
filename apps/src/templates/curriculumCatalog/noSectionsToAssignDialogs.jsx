@@ -6,17 +6,15 @@ import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
 import Typography from '@cdo/apps/componentLibrary/typography';
 import style from './no_sections_to_assign_dialog.module.scss';
 
-const signInURL = `/users/sign_in?user_return_to=${location.pathname}`;
-const upgradeAccountArticleURL =
-  'https://support.code.org/hc/en-us/articles/360023222371-How-can-I-change-my-account-type-from-student-to-teacher-or-vice-versa';
-
 export const SignInToAssignSectionsDialog = ({onClose}) => (
   <NoSectionsToAssignBaseDialog
     headerText={i18n.signInToAssign()}
     helpText={i18n.signInToAssignHelpText()}
     onClose={onClose}
     buttonText={i18n.signInOrCreateAccount()}
-    href={signInURL}
+    href={`/users/sign_in?user_return_to=${
+      location.pathname + location.search
+    }`}
   />
 );
 
@@ -31,7 +29,9 @@ export const UpgradeAccountToAssignSectionsDialog = ({onClose}) => (
     helpText={i18n.upgradeAccountToAssignHelpText()}
     onClose={onClose}
     buttonText={i18n.upgradeAccountToAssignButtonText()}
-    href={upgradeAccountArticleURL}
+    href={
+      'https://support.code.org/hc/en-us/articles/360023222371-How-can-I-change-my-account-type-from-student-to-teacher-or-vice-versa'
+    }
   />
 );
 
