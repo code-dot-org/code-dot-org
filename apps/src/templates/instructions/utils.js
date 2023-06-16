@@ -115,7 +115,7 @@ function removeCommentNodes(root) {
  */
 export function convertXmlToBlockly(xmlContainer, isRtl) {
   // blockSpaceContainers are elements (div or span) that contain read-only block spaces
-  // We add the class name 'block-space-container' to these elements when they are created
+  // We add the class name 'readonly-block-space-container' to these elements when they are created
   // so that they can be easily removed  to prevent the duplication of blocks when toggling
   // between long/short instructions or when the blocks are rendered in the levelbuilder
   // edit mode.
