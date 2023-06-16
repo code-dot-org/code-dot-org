@@ -120,7 +120,7 @@ export function convertXmlToBlockly(xmlContainer, isRtl) {
   // between long/short instructions or when the blocks are rendered in the levelbuilder
   // edit mode.
   Array.from(
-    xmlContainer.getElementsByClassName('block-space-container')
+    xmlContainer.getElementsByClassName('readonly-block-space-container')
   ).forEach(container => container.remove());
 
   const xmls = xmlContainer.getElementsByTagName('xml');
@@ -143,7 +143,7 @@ export function convertXmlToBlockly(xmlContainer, isRtl) {
 
     // create a container and insert the blockspace into it
     const blockSpaceContainer = document.createElement(inline ? 'span' : 'div');
-    blockSpaceContainer.classList.add('block-space-container');
+    blockSpaceContainer.classList.add('readonly-block-space-container');
     if (inline) {
       // SVGs don't play nicely if they're rendered into purely inline elements,
       // so if our container is a span it should be inline-block
