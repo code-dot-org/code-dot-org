@@ -64,7 +64,7 @@ class SessionsController < Devise::SessionsController
     @request_date = DateTime.now
 
     # Determine the deletion date as the creation time of the account + 7 days
-    @delete_date = current_user.created_at + (3600 * 24 * 7)
+    @delete_date = current_user.created_at.since(7.days)
 
     # Find any existing permission request for this user
     # Students might have issued a few requests. We render the latest one.
