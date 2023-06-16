@@ -213,7 +213,7 @@ class CourseOfferingTest < ActiveSupport::TestCase
     assert course_offering.valid?
   end
 
-  test "latest_published_version returns most recent published course version with unit group" do
+  test "latest_published_version returns most recent published course version with unit group if no locale specified" do
     offering = create :course_offering, :with_unit_groups
 
     most_recent_version = offering.course_versions[2]
@@ -235,7 +235,7 @@ class CourseOfferingTest < ActiveSupport::TestCase
     assert_equal offering.latest_published_version, most_recent_published_version
   end
 
-  test "latest_published_version returns most recent published course version with unit" do
+  test "latest_published_version returns most recent published course version with unit if no locale specified" do
     offering = create :course_offering, :with_units
 
     most_recent_version = offering.course_versions[1]
@@ -255,6 +255,109 @@ class CourseOfferingTest < ActiveSupport::TestCase
     stable_version.content_root.update!(published_state: 'stable')
 
     assert_equal offering.latest_published_version, most_recent_published_version
+  end
+
+  test "latest_published_version returns most recent published course version with unit group if locale in English" do
+    ug_2050 = create :unit_group, family_name: 'ug', version_year: '2050', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+    ug_2050_unit = create(:script, name: 'ug1-2050', supported_locales: ['fake-locale'])
+    create :unit_group_unit, unit_group: ug_2050, script: ug_2050_unit, position: 1
+    CourseOffering.add_course_offering(ug_2050)
+
+    ug_2051 = create :unit_group, family_name: 'ug', version_year: '2051', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+    ug_2051_unit = create(:script, name: 'ug1-2051', supported_locales: [])
+    create :unit_group_unit, unit_group: ug_2051, script: ug_2051_unit, position: 1
+    offering = CourseOffering.add_course_offering(ug_2051)
+
+    assert_equal offering.latest_published_version(locale_code: 'en-us'), ug_2051.course_version
+  end
+
+  test "latest_published_version returns most recent published course version with unit if locale in English" do
+    script = create :script, family_name: 'ss', version_year: '2050', is_course: true, supported_locales: ['fake-locale'], published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+    CourseOffering.add_course_offering(script)
+    script2 = create :script, family_name: 'ss', version_year: '2051', is_course: true, supported_locales: [], published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+    offering = CourseOffering.add_course_offering(script2)
+
+    assert_equal offering.latest_published_version(locale_code: 'en-us'), script2.course_version
+  end
+
+  test "latest_published_version returns most recent published course version with unit group if no stable versions" do
+    ug_2050 = create :unit_group, family_name: 'ug', version_year: '2050', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview
+    ug_2050_unit = create(:script, name: 'ug1-2050', supported_locales: ['fake-locale'])
+    create :unit_group_unit, unit_group: ug_2050, script: ug_2050_unit, position: 1
+    CourseOffering.add_course_offering(ug_2050)
+
+    ug_2051 = create :unit_group, family_name: 'ug', version_year: '2051', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview
+    ug_2051_unit = create(:script, name: 'ug1-2051', supported_locales: [''])
+    create :unit_group_unit, unit_group: ug_2051, script: ug_2051_unit, position: 1
+    offering = CourseOffering.add_course_offering(ug_2051)
+
+    assert_equal offering.latest_published_version(locale_code: 'fake-locale'), ug_2051.course_version
+  end
+
+  test "latest_published_version returns most recent published course version with unit if no stable versions" do
+    script = create :script, family_name: 'ss', version_year: '2050', is_course: true, supported_locales: ['fake-locale'], published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview
+    CourseOffering.add_course_offering(script)
+    script2 = create :script, family_name: 'ss', version_year: '2051', is_course: true, supported_locales: [], published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview
+    offering = CourseOffering.add_course_offering(script2)
+
+    assert_equal offering.latest_published_version(locale_code: 'fake-locale'), script2.course_version
+  end
+
+  test "latest_published_version returns most recent published course version with unit group if given locale not supported" do
+    ug_2050 = create :unit_group, family_name: 'ug', version_year: '2050', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+    ug_2050_unit = create(:script, name: 'ug1-2050', supported_locales: ['fake-locale'])
+    create :unit_group_unit, unit_group: ug_2050, script: ug_2050_unit, position: 1
+    CourseOffering.add_course_offering(ug_2050)
+
+    ug_2051 = create :unit_group, family_name: 'ug', version_year: '2051', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+    ug_2051_unit = create(:script, name: 'ug1-2051', supported_locales: ['fake-locale'])
+    create :unit_group_unit, unit_group: ug_2051, script: ug_2051_unit, position: 1
+    offering = CourseOffering.add_course_offering(ug_2051)
+
+    assert_equal offering.latest_published_version(locale_code: 'invalid-locale'), ug_2051.course_version
+  end
+
+  test "latest_published_version returns most recent published course version with unit if given locale not supported" do
+    script = create :script, family_name: 'ss', version_year: '2050', is_course: true, supported_locales: ['fake-locale'], published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+    CourseOffering.add_course_offering(script)
+    script2 = create :script, family_name: 'ss', version_year: '2051', is_course: true, supported_locales: ['fake-locale'], published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+    offering = CourseOffering.add_course_offering(script2)
+
+    assert_equal offering.latest_published_version(locale_code: 'invalid-locale'), script2.course_version
+  end
+
+  test "latest_published_version returns latest stable course version with stable unit group if given locale supported" do
+    ug_2050 = create :unit_group, family_name: 'ug', version_year: '2050', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+    ug_2050_unit = create(:script, name: 'ug1-2050', supported_locales: ['fake-locale', 'second-fake-locale'])
+    create :unit_group_unit, unit_group: ug_2050, script: ug_2050_unit, position: 1
+    CourseOffering.add_course_offering(ug_2050)
+
+    ug_2051 = create :unit_group, family_name: 'ug', version_year: '2051', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+    ug_2051_unit = create(:script, name: 'ug1-2051', supported_locales: ['fake-locale'])
+    create :unit_group_unit, unit_group: ug_2051, script: ug_2051_unit, position: 1
+    CourseOffering.add_course_offering(ug_2051)
+
+    ug_2052 = create :unit_group, family_name: 'ug', version_year: '2052', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview
+    ug_2052_unit = create(:script, name: 'ug1-2052', supported_locales: ['fake-locale'])
+    create :unit_group_unit, unit_group: ug_2052, script: ug_2052_unit, position: 1
+    offering = CourseOffering.add_course_offering(ug_2052)
+
+    assert_equal offering.latest_published_version(locale_code: 'fake-locale'), ug_2051.course_version
+    assert_equal offering.latest_published_version(locale_code: 'second-fake-locale'), ug_2050.course_version
+    assert_equal offering.latest_published_version(locale_code: 'invalid-locale'), ug_2052.course_version
+  end
+
+  test "latest_published_version returns latest stable course version with stable unit if given locale supported" do
+    script = create :script, family_name: 'ss', version_year: '2050', is_course: true, supported_locales: ['fake-locale', 'second-fake-locale'], published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+    CourseOffering.add_course_offering(script)
+    script2 = create :script, family_name: 'ss', version_year: '2051', is_course: true, supported_locales: ['fake-locale'], published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+    CourseOffering.add_course_offering(script2)
+    script3 = create :script, family_name: 'ss', version_year: '2052', is_course: true, supported_locales: ['fake-locale'], published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview
+    offering = CourseOffering.add_course_offering(script3)
+
+    assert_equal offering.latest_published_version(locale_code: 'fake-locale'), script2.course_version
+    assert_equal offering.latest_published_version(locale_code: 'second-fake-locale'), script.course_version
+    assert_equal offering.latest_published_version(locale_code: 'invalid-locale'), script3.course_version
   end
 
   test 'any_version_is_assignable_pilot? is true if user has pilot access to any course versions' do
