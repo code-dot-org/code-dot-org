@@ -4950,3 +4950,7 @@ ja:
           description_short: コンピューター サイエンス入門のすべての概念を学び、独自のアート、ストーリー、ゲームを作成しましょう。
         self-paced-pl-csp2-2023:
           title: モジュール2：Code. orgの操作方法
+        csa-frq-practice:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: クラス

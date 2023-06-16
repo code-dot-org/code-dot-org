@@ -7993,3 +7993,9 @@ fr:
             -   Découvrez les opportunités d'entrer en contact avec l'ensemble de la communauté CS.
 
             **Durée suggérée** : 70 minutes
+        csa-frq-practice:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Classes
+            lessonGroup-5:
+              display_name: Tableaux 2D

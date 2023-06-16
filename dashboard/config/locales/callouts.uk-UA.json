@@ -581,7 +581,7 @@
         },
         "Overworld Move to Sheep_2021": {
           "craft_run_button_callout": "Натисни \"Запустити\", щоб випробувати програму",
-          "craft_drag_block_callout": "Перетягни блок 'рухатися вперед' та прикріпи його під іншим блоком"
+          "craft_drag_block_callout": "Перетягни блок \"рух вперед\" та прикріпи його під іншим блоком"
         },
         "Overworld Place Wall_2021": {
           "craft_inside_repeat": "Повторюй дії, розміщуючи тут блоки"

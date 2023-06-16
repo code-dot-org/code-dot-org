@@ -55,5 +55,7 @@
   "feedback": "Σχόλια",
   "share": "Μοιράσου",
   "shareComingSoon": "Το μοίρασμα είναι υπό κατασκευή. Ξαναπάρε σύντομα.",
-  "startOver": "Ξεκινήστε από την αρχή"
+  "startOver": "Ξεκινήστε από την αρχή",
+  "panelHeaderInstructions": "Οδηγίες",
+  "panelHeaderWorkspace": "Χώρος εργασίας: "
 }
