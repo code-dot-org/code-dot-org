@@ -15,6 +15,7 @@ import reducer, {
   setStudentDefaultsSummaryView,
   setCurrentLessonId,
   setLessonExtrasEnabled,
+  processedLessons,
   __testonly__,
 } from '@cdo/apps/code-studio/progressRedux';
 import {
@@ -23,7 +24,6 @@ import {
   levelsForLessonId,
   progressionsFromLevels,
   groupedLessons,
-  processedLessons,
   lessonExtrasUrl,
   __testonly__ as __testonly__selectors,
 } from '@cdo/apps/code-studio/progressReduxSelectors';
