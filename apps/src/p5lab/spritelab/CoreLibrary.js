@@ -549,21 +549,14 @@ export default class CoreLibrary {
   }
 
   runSpriteCreatedEvents(newSprite) {
-    const matchingInputEvents = this.inputEvents.filter(inputEvent => {
-      if (inputEvent.type === 'whenSpriteCreated') {
-        const inputEventName = inputEvent.args.name;
-        const inputEventCostume = inputEvent.args.costume;
-        if (inputEventName !== undefined && inputEventName === newSprite.name) {
-          return true;
-        } else if (
-          inputEventCostume === newSprite.getAnimationLabel() ||
-          inputEventCostume === 'all'
-        ) {
-          return true;
-        }
-      }
-      return false;
-    });
+    const matchingInputEvents = this.inputEvents.filter(
+      inputEvent =>
+        inputEvent.type === 'whenSpriteCreated' &&
+        ((inputEvent.args.name !== undefined &&
+          inputEvent.args.name === newSprite.name) ||
+          inputEvent.args.costume === newSprite.getAnimationLabel() ||
+          inputEvent.args.costume === 'all')
+    );
     matchingInputEvents.forEach(inputEvent => {
       this.eventLog.push(`spriteCreated: ${newSprite.id}`);
       inputEvent.callback({newSprite: newSprite.id});
