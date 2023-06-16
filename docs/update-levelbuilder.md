@@ -82,10 +82,10 @@ Getting an error like:
 
 ```
 RAILS_ENV=levelbuilder RACK_ENV=levelbuilder bundle exec rake assets:precompile
-sudo systemctl start levelbuilder
+sudo service levelbuilder start
 master failed to start, check stderr log for details
 rake aborted!
-'sudo systemctl start levelbuilder' returned 1
+'sudo service levelbuilder start' returned 1
 /home/ubuntu/levelbuilder/lib/cdo/rake_utils.rb:33:in `system'
 ```
 
