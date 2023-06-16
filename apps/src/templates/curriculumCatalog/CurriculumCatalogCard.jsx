@@ -107,7 +107,7 @@ const CustomizableCurriculumCatalogCard = ({
   quickViewButtonText,
   isEnglish,
   pathToCourse,
-  sectionsForDropdown,
+  sectionsForDropdown = [],
   isTeacher,
   isSignedOut,
   ...props
@@ -121,7 +121,7 @@ const CustomizableCurriculumCatalogCard = ({
           onClose={() => setIsAssignDialogOpen(false)}
         />
       );
-    } else if (isTeacher && sectionsForDropdown) {
+    } else if (isTeacher && sectionsForDropdown.length > 0) {
       return (
         <MultipleSectionsAssigner
           assignmentName={courseDisplayName}

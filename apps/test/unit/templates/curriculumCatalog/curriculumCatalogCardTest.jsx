@@ -272,6 +272,42 @@ describe('CurriculumCatalogCard', () => {
     sections.forEach(section => screen.getByText(section.name));
   });
 
+  it('clicking Assign button as a teacher without sections shows dialog to create section', () => {
+    renderCurriculumCard({
+      ...defaultProps,
+      isSignedOut: false,
+      isTeacher: true,
+    });
+
+    const assignButton = screen.getByRole('button', {
+      name: new RegExp(
+        `Assign ${defaultProps.courseDisplayName} to your classroom`
+      ),
+    });
+
+    fireEvent.click(assignButton);
+    screen.getByRole('heading', {
+      name: 'Create class section to assign curriculum',
+    });
+  });
+
+  it('clicking Assign button as a student shows dialog to upgrade account', () => {
+    renderCurriculumCard({
+      ...defaultProps,
+      isSignedOut: false,
+      isTeacher: false,
+    });
+
+    const assignButton = screen.getByRole('button', {
+      name: new RegExp(
+        `Assign ${defaultProps.courseDisplayName} to your classroom`
+      ),
+    });
+
+    fireEvent.click(assignButton);
+    screen.getByRole('heading', {name: 'Use a teacher account to assign'});
+  });
+
   it('clicking Assign button as a signed out user shows dialog to sign in', () => {
     renderCurriculumCard();
 
@@ -282,6 +318,8 @@ describe('CurriculumCatalogCard', () => {
     });
 
     fireEvent.click(assignButton);
-    screen.getByText('Sign in or create account');
+    screen.getByRole('heading', {
+      name: 'Sign in or create account to assign curriculum',
+    });
   });
 });

@@ -68,7 +68,7 @@ const NoSectionsToAssignBaseDialog = ({
   }
 
   // the Button component adds 'noopener noreferrer' if opening in a new tab
-  const targetValue = openInNewTab ? '_blank' : undefined;
+  const targetValue = openInNewTab ? '_blank' : null;
 
   return (
     <AccessibleDialog onClose={onClose} className={style.dialogContainer}>
