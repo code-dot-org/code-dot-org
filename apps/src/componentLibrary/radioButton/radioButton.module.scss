@@ -21,7 +21,6 @@
 
     &::after {
       content: '';
-
       background: $light_primary_500;
       position: absolute;
       border-radius: 50%;
@@ -85,8 +84,10 @@
   }
 
   // Disabled styles
-  input[type="radio"]:disabled {
-    + i {
+  &:has(input[type="radio"]:disabled) {
+    cursor: not-allowed;
+
+    i {
       border-color: $neutral_dark20;
 
       &::after {
@@ -94,7 +95,7 @@
       }
     }
 
-    +span {
+    span {
       color: $neutral_dark20;
     }
   }
