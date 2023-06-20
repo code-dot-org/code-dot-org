@@ -25,20 +25,18 @@ module PardotHelpers
     begin
       tries += 1
       yield
-    rescue *retriable_errors => e
+    rescue *retriable_errors => exception
       if tries < max_tries
         sleep([2**tries, max_sleep_seconds].min)
         retry
       end
-      raise e
+      raise exception
     end
   end
 
   def log(s)
     CDO.log.info s
   end
-
-  private
 
   PRIVATE_KEY = CDO.pardot_private_key
   PARDOT_BUSINESS_ID = '0Uv5b0000004CHbCAM'
@@ -50,7 +48,7 @@ module PardotHelpers
   # Authenticates and requests an access token
   # https://help.salesforce.com/articleView?id=sf.remoteaccess_oauth_jwt_flow.htm
   # https://thespotforpardot.com/2021/02/02/pardot-api-and-getting-ready-with-salesforce-sso-users-part-3b-connecting-to-pardot-api-from-code/
-  def request_api_access_token
+  private def request_api_access_token
     # build token payload
     payload = {
       # connected app client id
@@ -92,7 +90,7 @@ module PardotHelpers
   #
   # @param url [String] URL to post to
   # @return [Nokogiri::XML, nil] XML response from Pardot
-  def post_with_auth_retry(url)
+  private def post_with_auth_retry(url)
     post_request_with_auth(url)
   rescue InvalidApiKeyException
     # The API key might have been expired, try again with a new API key
@@ -104,7 +102,7 @@ module PardotHelpers
   #
   # @param url [String] URL to post to. The URL should not contain auth params.
   # @return [Nokogiri::XML] XML response from Pardot
-  def post_request_with_auth(url)
+  private def post_request_with_auth(url)
     request_api_access_token if @@access_token.nil?
     post_request(url)
   end
@@ -114,7 +112,7 @@ module PardotHelpers
   # @param url [String] URL to post to
   # @param params [Hash] hash of POST params (may be empty hash or contain API and user keys)
   # @return [Nokogiri::XML, nil] XML response from Pardot
-  def post_request(url)
+  private def post_request(url)
     uri = URI(url)
     headers = {
       'Authorization' => 'Bearer ' + @@access_token,
@@ -145,7 +143,7 @@ module PardotHelpers
   # http://developer.pardot.com/kb/error-codes-messages/
   #
   # @param doc [Nokogiri::XML] XML response from Pardot
-  def raise_if_response_error(doc)
+  private def raise_if_response_error(doc)
     status = get_response_status doc
     return if status == STATUS_OK
 
@@ -154,7 +152,7 @@ module PardotHelpers
     raise "Error in Pardot response: code #{error_code}, #{error_text}"
   end
 
-  def get_response_status(doc)
+  private def get_response_status(doc)
     doc.xpath('/rsp/@stat').text
   end
 end

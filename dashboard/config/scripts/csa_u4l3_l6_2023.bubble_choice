@@ -1,6 +1,6 @@
 name 'CSA U4L3-L6_2023'
-display_name 'level display_name here'
-description 'level description here'
+display_name 'Practice: Using Math.abs()'
+description 'Absolute values can help us find differences between two values or to clean up data. Use the `Math.abs()` method to create programs for some common scenarios!'
 
 sublevels
 level 'CSA U4L3-L6a_2023'

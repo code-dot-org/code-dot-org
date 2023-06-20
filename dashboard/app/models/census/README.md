@@ -15,28 +15,6 @@ The different forms are:
 
 Each census submission can be associated with one or more school infos. That mapping lives in `census_submission_school_infos`. As of March 2018 we only ever have a single school info associated with a submission. We chose to allow for multiple school infos per submission in anticipation of a feature that would allow administrators or partners the ability to submit data for multiple schools simultaneously. That feature was deprioritized and has not yet been built.
 
-## College Board data about which schools offer AP Computer Science
-
-This data is stored in `ap_cs_offerings` and is imported from S3 as part of database seeding.
-
-The `ap_school_codes` table is used to map between NCES school ids and college board school codes.
-
-[bin/oneoff/census/ap_data](https://github.com/code-dot-org/code-dot-org/tree/staging/bin/oneoff/census/ap-data) has several scripts that were used to work with the AP data.
-
-## International Baccalaureate data about which schools teach IB Computer Science
-
-This data is stored in the `ib_cs_offerings` table.
-
-The `ib_school_codes` table is used to map between NCES school ids and International Baccalaureate school codes.
-
-[bin/oneoff/census/ib_data](https://github.com/code-dot-org/code-dot-org/tree/staging/bin/oneoff/census/ib-data) has scripts that were used to work with the IB data.
-
-## State-level course data
-
-We get data from some states that list which schools teach which Computer Science classes. This data is stored in the `state_cs_offerings` table.
-
-[bin/oneoff/census/state_data](https://github.com/code-dot-org/code-dot-org/tree/staging/bin/oneoff/census/state-data) has scripts that were used to work with state data.
-
 # Summarization
 
 Each school may have multiple data points for the same school year. All of that data is aggregated into a simple summary that says if we believe the school teaches/taught Computer Science in a given year. The possible values are:
@@ -84,7 +62,7 @@ The census_submissions table is replicated into Redshift via [dms task](https://
 
 # Historic Notes
 
-Before 2022, census summaries were computed via a nightly [cron job](https://github.com/code-dot-org/code-dot-org/blob/80777d646a9351de59404fbd173c67799c43dbda/bin/cron/update_census_mapbox) by an algorithm maintained by the engineering team.
+Before 2022, census summaries were computed via a nightly [cron job](https://github.com/code-dot-org/code-dot-org/blob/80777d646a9351de59404fbd173c67799c43dbda/bin/cron/update_census_mapbox) by an algorithm maintained by the engineering team. Inputs to this algorithm were stored in the ap_cs_offerings, ap_school_codes, ib_cs_offerings, ib_school_codes and state_cs_offerings tables. 
 
 Originally, the Hour of Code and /yourschool census form submissions were written to the Pegasus `forms` table. That data was migrated into `census_submissions` and the mapping between the original `forms` row and the `census_submissions` row is stored in `census_submission_form_maps`. The old Pegasus form handlers are [here](https://github.com/code-dot-org/code-dot-org/blob/staging/pegasus/forms/census.rb) and [here](https://github.com/code-dot-org/code-dot-org/blob/staging/pegasus/forms/hoc_census.rb) and the script used to migrate the data is [here](https://github.com/code-dot-org/code-dot-org/blob/staging/bin/oneoff/move_census_data.rb). 
 

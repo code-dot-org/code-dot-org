@@ -285,6 +285,7 @@
           "type": "Arbeitsblatt"
         },
         "dance_party_unplugged/coursed/2022": {
+          "name": "Tanzparty: Unplugged",
           "type": "Ressource"
         },
         "open-ended_programming_levels_2/coursed/2022": {
@@ -428,9 +429,11 @@
           "type": "Folien"
         },
         "blank_space_stories/coursef/2022": {
+          "name": "Geschichten aus dem leeren Weltraum",
           "url": "https://docs.google.com/document/d/1fJNyI0WQTi-Q-XMZDn9sIgD_o6KjGHwZesQRa93ko5E/template/preview"
         },
         "blank_space_stories_1/coursef/2022": {
+          "name": "Geschichten aus dem leeren Weltraum",
           "url": "https://docs.google.com/document/d/1mXI-U7ve1JjDchlyhjD53pkdSXKqeMemb7upFGareV4/template/preview",
           "type": "Antwortschlüssel"
         },
@@ -945,6 +948,7 @@
           "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
         },
         "text_and_prompts/express/2022": {
+          "name": "Text und Eingabeaufforderungen",
           "url": "https://docs.google.com/presentation/d/1ImZg6MHmaj5ouvrYdgsungbeLXRDAu106-NXOroJg14/template/preview",
           "type": "Folien"
         },
@@ -2534,15 +2538,18 @@
           "type": "Ressource"
         },
         "introduction_to_ai_lab/csd/2022": {
+          "name": "Einführung in das KI-Spielelabor",
           "type": "Folien"
         },
         "introduction_to_ai_lab_1/csd/2022": {
+          "name": "Einführung in das KI-Spielelabor",
           "type": "Video"
         },
         "selecting_features/csd/2022": {
           "type": "Ressource"
         },
         "training_and_testing_in_ai_lab/csd/2022": {
+          "name": "Training und Testen im KI-Labor",
           "type": "Video"
         },
         "using_data_with_categorical_features/csd/2022": {
@@ -2566,6 +2573,7 @@
           "type": "Antwortschlüssel"
         },
         "model_cards_in_ai_lab/csd/2022": {
+          "name": "Modellkarten im KI Labor",
           "type": "Video"
         },
         "saving_models_in_ai_lab/csd/2022": {
@@ -2596,9 +2604,14 @@
           "type": "Antwortschlüssel"
         },
         "numerical_data_in_ai_lab/csd/2022": {
+          "name": "Numerische Daten im KI-Labor",
           "type": "Folien"
         },
+        "numerical_data_in_ai_lab_1/csd/2022": {
+          "name": "Numerische Daten im KI-Labor"
+        },
         "numerical_data_in_ai_lab_2/csd/2022": {
+          "name": "Numerische Daten im KI-Labor",
           "type": "Video"
         },
         "using_data_with_numerical_features/csd/2022": {
@@ -3217,10 +3230,12 @@
           "type": "Handout"
         },
         "blank_space_stories/coursef/2021": {
+          "name": "Geschichten aus dem leeren Weltraum",
           "url": "https://docs.google.com/document/d/1mXI-U7ve1JjDchlyhjD53pkdSXKqeMemb7upFGareV4/template/preview",
           "type": "Antwortschlüssel"
         },
         "blank_space_stories_-_worksheet/coursef/2021": {
+          "name": "Geschichten aus dem leeren Weltraum",
           "url": "https://docs.google.com/document/d/1fJNyI0WQTi-Q-XMZDn9sIgD_o6KjGHwZesQRa93ko5E/template/preview"
         },
         "variables_blank_space_stories/coursef/2021": {
@@ -3229,6 +3244,7 @@
           "type": "Folien"
         },
         "text_and_prompts/coursef/2021": {
+          "name": "Text und Eingabeaufforderungen",
           "url": "https://docs.google.com/presentation/d/1ImZg6MHmaj5ouvrYdgsungbeLXRDAu106-NXOroJg14/template/preview",
           "type": "Folien"
         },
@@ -4227,6 +4243,7 @@
           "type": "Arbeitsblatt"
         },
         "dance_party_unplugged/coursed/2021": {
+          "name": "Tanzparty: Unplugged",
           "url": "https://studio.code.org/s/dance-unplugged/lessons/1",
           "type": "Ressource"
         },
@@ -4397,6 +4414,7 @@
           "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
         },
         "text_and_prompts/express/2021": {
+          "name": "Text und Eingabeaufforderungen",
           "url": "https://docs.google.com/presentation/d/1ImZg6MHmaj5ouvrYdgsungbeLXRDAu106-NXOroJg14/template/preview",
           "type": "Folien"
         },
@@ -4524,6 +4542,7 @@
           "type": "Ressource"
         },
         "follow_the_algorithm/coursee/2021": {
+          "name": "Folgen Sie dem Algorithmus",
           "url": "https://docs.google.com/presentation/d/16r9HpwQodVnmSfRlfJmOfZajqE66YlZz0aG60CFsVMk/template/preview",
           "type": "Folien"
         },
@@ -4707,12 +4726,15 @@
           "type": "Ressource"
         },
         "introduction_to_ai_lab/csd/2021": {
+          "name": "Einführung in das KI-Spielelabor",
           "type": "Folien"
         },
         "introduction_to_ai_lab_1/csd/2021": {
+          "name": "Einführung in das KI-Spielelabor",
           "type": "Video"
         },
         "training_and_testing_in_ai_lab/csd/2021": {
+          "name": "Training und Testen im KI-Labor",
           "type": "Video"
         },
         "_key_training_a_model_in_ai_lab/csd/2021": {
@@ -4742,6 +4764,7 @@
           "type": "Folien"
         },
         "model_cards_in_ai_lab/csd/2021": {
+          "name": "Modellkarten im KI Labor",
           "type": "Video"
         },
         "saving_models_in_ai_lab/csd/2021": {
@@ -4769,9 +4792,14 @@
           "type": "Antwortschlüssel"
         },
         "numerical_data_in_ai_lab/csd/2021": {
+          "name": "Numerische Daten im KI-Labor",
           "type": "Folien"
         },
+        "numerical_data_in_ai_lab_1/csd/2021": {
+          "name": "Numerische Daten im KI-Labor"
+        },
         "numerical_data_in_ai_lab_2/csd/2021": {
+          "name": "Numerische Daten im KI-Labor",
           "type": "Video"
         },
         "_key_-_numerical_data_in_ai_lab/csd/2021": {

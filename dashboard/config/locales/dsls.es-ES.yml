@@ -682,9 +682,9 @@ es-ES:
 
           **¡Ahora inténtalo!**
         teacher_markdown: |
-          ###Primero Diseña
+          ### Primero el diseño
 
-          Algunos estudiantes pueden tener la tentación de comenzar a jugar en el Modo Código desde el principio, pero para esta lección nos centraremos únicamente en bosquejar una Interfaz de Usuario. Hágales saber a los estudiantes que llegarán al código pronto. Estos primeros niveles permitirán a los estudiantes construir una pantalla de su propio diseño utilizando todos los elementos disponibles en App Lab sin preocuparse por la aplicación en si que están creando.
+          Algunos alumnos pueden tener la tentación de empezar a trabajar con el Modo Código desde el principio, pero en esta lección nos vamos a centrar únicamente en la creación de una Interfaz de Usuario. Diles que pronto llegarán al código. Estos primeros niveles permitirán a los estudiantes construir una pantalla de su propio diseño utilizando todos los elementos disponibles en el Laboratorio de Aplicaciones sin preocuparse por la aplicación real que están creando.
       CSD - Getters and Setters:
         markdown: |
           # Getters y Setters
@@ -3376,35 +3376,35 @@ es-ES:
           *\"rgb(255,0,0)\"*\n\n<img src=\"https://images.code.org/43291bf1c067145771bf88a147d74d26-image-1480538343306.png\"
           style=\"display: block; margin: auto\">\n"
       Choosing Good IDs:
-        markdown: "# Elegir buenas identificaciones\n\n**Las buenas ID** son ** significativas
-          y descriptivas**.\n\nAl igual que deseas buenos nombres para las funciones,
-          querrás una identificación para describir el propósito previsto del elemento.\n\nPor
-          ejemplo, si tiene muchos botones en tu programa, querrás dar a cada uno
-          una identificación que describa lo que hace el botón.\n\nEntonces, en lugar
-          de esto:\n \n * `botón1` y` botón2`\n\nPuedes crear identificaciones que
-          transmitan no solo que se trata de un botón, sino para qué deseas que se
-          use el botón, como:\n\n * `BotónInicio` y `BotónGuardar` o\n * `InicioBotón`
-          y `GuardarBotón` o\n * `BtnInicio` y `BtnGuardar`\n * ¡Tú decides!\n\n<img
-          src = \"https://images.code.org/b33be9ee1521f2aa80fedcf22c929d44-image-1476910499958.png\"
-          style = \"display: block; margin: auto;\">\n\n# Reglas sobre ID\nAl hacer
-          identificaciones descriptivas y significativas, **hay algunas reglas sobre
-          identificaciones** que necesita saber. ID ...\n\n* distinguen entre mayúsculas
-          y minúsculas.\n* no pueden contener espacios.\n* * deben * comenzar con
-          una letra (A-Z o a-z) y pueden estar seguidas por cualquier número de dígitos
-          y letras.\n* pueden contener guiones (\"-\"), guiones bajos (\"_\"), dos
-          puntos (\":\") o puntos (\".\").\n\n**¿Distingue entre mayúsculas y minúsculas?**\n\nEsto
-          significa que hay una diferencia entre `BotónInicio` y `botónInicio` (observa
-          la B mayúscula en el primero).\n\nEstas diferencias parecen molestas al
-          principio, pero te acostumbras a ellas y realmente aprecias el hecho de
-          que la computadora requiera tanta precisión.\n\nExisten algunos estilos
-          comunes para usar mayúsculas y deletrear ID de varias palabras:\n\n* **\"Camelcase\"**:
-          `unNombreCamelcasePodríaLucirAsí`\n* **Guiones bajos**: `Algunas_Personas_Prefieren_Usar_Guiones_Bajos_Para_Separar_Palabras`\n*
-          **guiones**: `Otras_Prefieren_Guiones_O_Rayas'\n\nLo que elijas depende
-          de ti. Es tu estilo. Simplemente ayuda a ser consistente.\n\n\n\n\n"
-        teacher_markdown: |-
-          #### Desarrollando Buenos Habitos de Programacion
+        markdown: "# Eligiendo buenos IDs\n\n**Los buenos ID** son **significativos
+          y descriptivos**.\n\nAl igual que quieres buenos nombres para las funciones,
+          querrás un ID que describa el propósito del elemento.  \n\nPor ejemplo,
+          si tienes muchos botones en tu programa, querrás dar a cada uno un ID que
+          describa lo que hace el botón. \n\nAsí, en lugar de esto:\n \n * `botón1`
+          y `botón2`\n\nPodrías hacer IDs que transmitan no sólo que es un botón sino
+          para qué pretendes que se use el botón, como:\n\n * `inicioBotón` y `guardarBotón`
+          o\n * `botónInicio` y `botónGuardar` o\n * `inicioBtn` y `guardarBtn`.\n
+          * ¡depende de ti!\n\n<img src=\"https://images.code.org/b33be9ee1521f2aa80fedcf22c929d44-image-1476910499958.png\"
+          style=\"display: block; margin: auto;\">\n\n# Reglas sobre IDs\nAl hacer
+          IDs descriptivos y significativos hay **algunas reglas sobre IDs** que necesitas
+          saber.  Los IDs...\n\n* distinguen entre mayúsculas y minúsculas.\n* No
+          pueden contener espacios.\n* Deben empezar por una letra (A-Z o a-z) y pueden
+          ir seguidos de cualquier número de dígitos y letras.\n* Pueden contener
+          guiones (\"-\"), guiones bajos (\"_\"), dos puntos (\":\") o puntos (\".\").\n\n**¿Se
+          distingue entre mayúsculas y minúsculas?\n\nEsto significa que hay una diferencia
+          entre `BotónInicio` y `botónInicio` (fíjate en la B mayúscula del primero).\n\nEstas
+          diferencias parecen molestas al principio, pero uno se acostumbra y aprecia
+          el hecho de que el ordenador exija tanta precisión.\n\nHay algunos estilos
+          comunes para escribir en mayúsculas y minúsculas los ID de varias palabras:\n\n*
+          **\"Camelcase \"** -- \"unNombreCamelcasePuedeSerAsí\".\n* **Guiones bajos**
+          -- \"A_algunas_personas_les_gusta_usar_guiones_bajos_para_separar_palabras\".\n*
+          **Guiones** -- \"A-otros-les-gusta-usar-divisiones-o-guiones\".\n\nLo que
+          elijas depende de ti.  Es tu estilo.  Sólo ayuda a ser coherente.\n\n\n\n\n"
+        teacher_markdown: |+
+          #### Desarrollar Buenos Hábitos de Programación
 
-          Seguir convenciones de nomenclatura claras y consistentes es un hábito importante a desarrollar, pero los beneficios rara vez son inmediatamente obvios para los estudiantes. Realmente vale la pena a largo plazo ser riguroso en bien nombrados ID, particularmente porque le ayudara a mantener la cordura cuando llegue el momento de leer los programas de sus estudiantes, pero también simplificará el proceso de combinar la pantalla de cada estudiante en un aplicación de todo el equipo.
+          Seguir unas convenciones de nomenclatura claras y consistentes es un hábito importante que hay que desarrollar, pero los beneficios rara vez son percibidos inmediatamente por los alumnos. Realmente vale la pena a largo plazo ser riguroso con los ID bien nombrados, sobre todo porque te permitirá mejorar tu propio entendimiento cuando llegue el momento de leer los programas de tus alumnos, pero también simplificará el proceso de combinar la pantalla de cada alumno en una aplicación de equipo completa.
+
       Dance_Party_extras_intro:
         markdown: "# ¡Sigamos bailando!\n\nPara la parte 2, vas a crear tu propio
           proyecto. Aquí no hay desafíos, sino muchos proyectos que muestran diferentes
@@ -4016,26 +4016,25 @@ es-ES:
           Para simplificar el proceso de creación de prototipos, los equipos pueden pensar en cada tarjeta que crearon en el Prototipo en Papel como una pantalla separada en la repetición de su aplicación en el Laboratorio de Aplicaciones. En realidad, las pantallas que son muy similares, a menudo se pueden desarrollar como una sola pantalla con contenido que cambia en función de la intervención del usuario. En la próxima lección los alumnos verán algunos ejemplos de cómo podría funcionar eso, pero no se espera que incorporen ese tipo de funcionalidad en este proyecto.
       New Challenge Introduction:
         content1: descripción aquí
-        markdown: "### Nuevo desafío: descifrar un cifrado de sustitución aleatoria...
-          con un nuevo widget\n\n¿Qué pasaría si, en lugar de desplazar todo el alfabeto,
-          asignamos a cada letra del alfabeto otra letra al azar? Esto se llama cifrado
-          de sustitución aleatoria.**\n\n![](https://images.code.org/7837e7fef2f38659f4bf51a29b6dc4d3-image-1473863470440.gif)\n\nAhora,
-          en lugar de codificar el mensaje secreto con un desplazamiento alfabético
-          simple, verás mensajes codificados con **sustitución aleatoria**.\n\n\nEsto
+        markdown: "### Nuevo Desafío: Descifrar un Cifrado de Sustitución Aleatoria...
+          con un nuevo widget\n\n¿Qué pasaría si en lugar de desplazar todo el alfabeto,
+          mapeáramos cada letra del alfabeto a una letra diferente aleatoria del alfabeto?
+          Esto se llama **cifrado de sustitución aleatoria.**\n\n![](https://images.code.org/7837e7fef2f38659f4bf51a29b6dc4d3-image-1473863470440.gif)\n\nAhora,
+          en lugar de codificar el mensaje secreto con un simple desplazamiento alfabético,
+          te enfrentarás a mensajes codificados con **sustitución aleatoria**.  \n\n\n\nEsto
           es mucho más difícil de descifrar y requiere una herramienta más sofisticada,
-          así que...\n\nCuando hagas clic en continuar, verás una **versión nueva
-          y más sofisticada de la herramienta de cifrado** que te muestra muchas cosas
-          diferentes.\n\n¡Pero lo que hace es un misterio!\n\n### Tu tarea:\n\n *
-          Descubrir qué está pasando en esta nueva versión de la herramienta\n * ¿Qué
-          información te presenta?\n * Descubrir qué te permite hacer la herramienta\n
-          * Como siempre: no puedes adivinar. Así que haz clic en las cosas e investiga.\n
-          * Si lo descubres, es posible que puedas descifrar un mensaje codificado
-          con sustitución aleatoria.\n \n### Te damos una pista\n\n* ¿Sabías que la
-          letra **E** es la más utilizada en el idioma inglés?\n\n### Volver a reunirse
-          y debatir\nDespués de jugar un tiempo con la herramienta, debes reunirte
-          con alguien (un compañero, un grupo pequeño o toda la clase) para conversar
-          sobre lo que encontraste y verificar que conoces lo que está sucediendo
-          y las diversas formas en que puedes usar la herramienta.\n\n\n"
+          así que...\n\nCuando hagas clic en continuar, verás una **nueva y más sofisticada
+          versión de la herramienta de encriptación** que te muestra un montón de
+          cosas diferentes.\n\nPero lo que hace es un poco misterioso.  \n\n### Tu
+          Tarea:\n\n * Averiguar qué está pasando en esta nueva versión de la herramienta.\n
+          * ¿Qué información se te presenta?\n * Averigua qué te permite hacer la
+          herramienta\n * Como siempre: no puedes romperla.  Así que haz clic en las
+          cosas, curiosea.\n * Si lo averiguas podrías ser capaz de descifrar un mensaje
+          codificado con sustitución aleatoria.\n \n### Pista\n\n* ¿Sabías que **E**
+          es la letra más común usada en inglés?\n\n### Convocatoria y Debate\n Después
+          de un rato jugando, deberías reunirte con alguien -compañero, pequeño grupo,
+          toda la clase- para comentar lo que has descubierto y verificar que sabes
+          lo que ocurre y las distintas formas en que puedes utilizar la herramienta.\n\n\n"
       OPD-K5 About:
         markdown: |
           # Primeros pasos: sobre este curso
@@ -6111,9 +6110,9 @@ es-ES:
           ¡Es hora de presentar tus proyectos! Tu profesor te dará más detalles sobre cómo vas a presentar tu trabajo a tus compañeros.
       Responding to User Input:
         markdown: |+
-          # Responder a la entrada del usuario
+          # Respondiendo a la Entrada del Usuario
 
-          El Modo de diseño hace que sea muy fácil diseñar la interfaz de usuario para su aplicación, pero necesitaremos sumergirnos en el Modo de código para que realmente responda a los usuarios.
+          El Modo Diseño hace que sea muy fácil diseñar la interfaz de usuario para su aplicación, pero necesitaremos sumergirnos en el Modo de código para que realmente responda a los usuarios.
 
           En Laboratorio de juegos, el bucle Dibujar solo ejecutaba código constantemente, usando condicionales para verificar las interacciones del usuario. Laboratorio de aplicaciones, por otro lado, espera responder a ciertos **eventos** que ocurren en un programa. Es la forma en que Laboratorio de aplicaciones dice "¡Oye! ¡Algo sucedió!". Esto significa que no es necesario que se ejecute ningún código cuando no interactúas directamente con una aplicación, y tu código puede responder a cada uno de estos eventos a medida que ocurren.
 
@@ -6145,7 +6144,7 @@ es-ES:
 
           ### Cambio de pantallas con un "clic"
 
-          En la programación dirigida por eventos, es importante comprender que:
+          En la programación dirigida a eventos, es importante comprender que:
 
           * **Los usuarios activan eventos**: los eventos ocurren cuando los usuarios hacen clic en un botón, tocan la pantalla, mueven el mouse, escriben una tecla en el teclado, etc.
           * **Código de activación de eventos**: cuando se produce un evento o se "dispara", se puede utilizar para activar una función de JavaScript en particular.
@@ -11005,8 +11004,8 @@ es-ES:
           feedback: Incorrecto. Laurel trata de recoger el tesoro donde no lo hay,
             y esto provoca un error.
         questions:
-        - text: Observa este código con atención. ¿Qué crees que ocurrirá cuando se
-            ejecute el programa?
+        - text: Observa este código cuidadosamente. ¿Qué crees que ocurrirá cuando
+            ejecutes el programa?
       CourseF_outbreak_story:
         content1: descripción aquí
         markdown: "El Brote: Codifica tu Propia Simulación\n\n## ¡Bienvenido a Monster
@@ -16845,7 +16844,7 @@ es-ES:
         - text: No estoy seguro de qué es esto
           correct: true
         questions:
-        - text: Programación Informática
+        - text: Programación de Ordenadores
       csd-post-survey-2018-topic-robotics:
         answers:
         - text: Sí
@@ -17245,7 +17244,7 @@ es-ES:
       csd-post-survey-unit4-preamble:
         content1: descripción aquí
         markdown: |
-          # Unidad 4: El proceso de Diseño
+          # Unidad 4: El Proceso de Diseño
 
           ![](https://images.code.org/d3c87c83a8c190d86951169c5b9b6c6d-image-1526918019889.png)
       csd-post-survey-unit5-preamble:
@@ -26432,3 +26431,35 @@ es-ES:
 
           Esta es una segunda muestra de un texto de instrucciones que está almacenado en un archivo .external.  Aquí hay un poco de texto extra para que podamos obtener un poco de ajuste de líneas cuando veamos esto en nuestro LevelGroup que utilizará esto para mostrar algunas instrucciones entre los niveles regulares incrustados.
 
+      Test Contained Retriable Multi:
+        answers:
+        - text: '0'
+          feedback: No, eso es 1 - 1.
+        - text: '1'
+          feedback: No, eso es 1 x 1.
+        - text: '2'
+          correct: true
+          feedback: "¡Sí, eres un genio!"
+        - text: '4'
+          feedback: No, eso no es ni de lejos.
+        content1: Aquí hay algo de información.
+        markdown: 'Prueba **markdown** _aquí_
+
+'
+        questions:
+        - text: "¿Cuánto es 1 + 1?"
+        title: Contenido Multi
+      test-single-multi-standalone-retriable:
+        answers:
+        - text: No sucederá nada.
+          feedback: Incorrecto. La planta rodadora comenzará a dar vueltas
+        - text: La planta rodadora flotará hasta la parte superior de la pantalla
+          feedback: Incorrecto. La planta rodadora comenzará a dar vueltas
+        - text: La planta rodadora comenzará a caer
+          correct: true
+          feedback: "¡Correcto!"
+        - text: La planta rodadora se encenderá y apagará.
+          feedback: Incorrecto. La planta rodadora comenzará a dar vueltas
+        questions:
+        - text: Mira el siguiente código con atención. ¿Qué sucederá cuando hagas
+            clic en "Ejecutar"?

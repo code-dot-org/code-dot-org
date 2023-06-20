@@ -1186,6 +1186,15 @@ ta:
             '"x"': x
             '"y"': y
             '"z"': z
+      gamelab_layoutSprites:
+        text: "{FORMAT} ஆக {GROUP}-ஐ தளவமைக்கவும்"
+        options:
+          FORMAT:
+            '"border"': பார்டர்
+            '"circle"': வட்டம்
+            '"grid"': கிரிட்
+            '"row"': வரிசை
+            '"column"': பத்தி
       gamelab_locationAt:
         text: 'இடம் x: {X} y: {Y}'
       gamelab_locationModifier:
@@ -1212,6 +1221,14 @@ ta:
             '"spiral"': சுருள்
       gamelab_makeNewSpriteAnon:
         text: புதியதாக்கு {ANIMATION_NAME}ஸ்பிரைட் மணிக்கு {LOCATION}
+      gamelab_makeNewSpriteGroup:
+        options:
+          FORMAT:
+            '"border"': பார்டர்
+            '"circle"': வட்டம்
+            '"grid"': கிரிட்
+            '"row"': வரிசை
+            '"column"': பத்தி
       gamelab_makeNumSprites:
         text: புதிய {ANIMATION_NAME}உருவங்களை உருவாக்குங்கள் {NUM}
       gamelab_makeProjectile:
@@ -1622,6 +1639,10 @@ ta:
         text: x ஒருங்கிணைப்பு {SPRITE}
       gamelab_yLocationOf:
         text: y ஒருங்கிணைப்பு {SPRITE}
+      KatiesBlocks_glideTo:
+        text: "{SPRITE} சறுக்கி {LOCATION}"
+      KatiesBlocks_tumbling:
+        text: உருளும்
       Mikelab_addBehaviorSimple:
         text: ஸ்பிரைட்{SPRITE}தொடக்கம்{BEHAVIOR}
       Mikelab_addTrainingData:
@@ -2209,6 +2230,18 @@ ta:
             '0.25': few
       aalab_spriteSayChoices:
         text: "{SPRITE} சொல் {SPEECH}"
+      adaptations_adaptationBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): வலதுபுறம் சுழல்கிறது
+            new Behavior(spinning_left, []): இடதுபுறமாக சுழல்கிறது
+            new Behavior(fluttering, []): படபடக்கும்
+            new Behavior(jittering, []): நடுக்கம்
+            new Behavior(wobbling, []): தள்ளாட்டம்
+            new Behavior(wandering, []): அலைந்து திரிதல்
+            new Behavior(patrolling, []): ரோந்து
+      adaptations_startFollowing:
+        text: "{SPRITE}தொடர்ந்து தொடங்குகிறது{TARGET}"
       binary_move:
         options:
           DIR:
@@ -2279,6 +2312,22 @@ ta:
           DIR:
             right: சரி ↻
             left: இடது  ↺
+      ecosystems_int10:
+        options:
+          VALUE:
+            '0': '0'
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+      storylab_printText:
+        text: அச்சு {TEXT}
       storylab_setForegroundEffect2:
         text: விளைவு {EFFECT}செய்ய
         options:
@@ -2292,5 +2341,3 @@ ta:
         text: தலைப்பு அமைக்கவும் {HEADING}
       storylab_setSubheading:
         text: துணைத்தலைப்பு அமைக்கவும் {SUBHEADING}
-      validation_validatedBackground:
-        text: பின்னணி அமைக்க {IMG}

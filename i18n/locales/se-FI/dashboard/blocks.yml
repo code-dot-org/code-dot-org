@@ -1026,6 +1026,19 @@ se:
             '"v"': v
             '"w"': w
             '"z"': z
+      gamelab_layoutSprites:
+        text: layouta {GROUP} dákkár {FORMAT}:an
+        options:
+          FORMAT:
+            '"border"': ravda
+            '"circle"': jorba
+            '"grid"': ruhtu
+            '"top"': bajimus ráidu
+            '"row"': ráidu
+            '"bottom"': vuolimus ráidu
+            '"left"': gurut kolonna
+            '"column"': kolonna
+            '"right"': olgeš kolonna
       gamelab_locationAt:
         text: 'sadji x: {X} y: {Y}'
       gamelab_locationModifier:
@@ -1043,6 +1056,18 @@ se:
         text: "{LOCATION}"
       gamelab_makeNewSpriteAnon:
         text: ráhkat ođđa {ANIMATION_NAME} sprite dán {LOCATION}
+      gamelab_makeNewSpriteGroup:
+        options:
+          FORMAT:
+            '"border"': ravda
+            '"circle"': jorba
+            '"grid"': ruhtu
+            '"top"': bajimus ráidu
+            '"row"': ráidu
+            '"bottom"': vuolimus ráidu
+            '"left"': gurut kolonna
+            '"column"': kolonna
+            '"right"': olgeš kolonna
       gamelab_makeNumSprites:
         text: ráhkat{NUM} ođđa {ANIMATION_NAME} sprite:id
       gamelab_mirrorSprite:
@@ -1202,6 +1227,8 @@ se:
         text: x koordináhta {SPRITE}
       gamelab_yLocationOf:
         text: y koordináhta {SPRITE}
+      KatiesBlocks_tumbling:
+        text: fierrat
       Mikelab_addBehaviorSimple:
         text: sprite {SPRITE} álgá {BEHAVIOR}
       Mikelab_addTrainingData:
@@ -1477,8 +1504,6 @@ se:
             '13': '13'
             '14': '14'
             '15': '15'
-      SpriteLab2Beta_spriteSay:
-        text: sprite {SPRITE} dadjá {TEXT} {SECONDS} sekunddaid
       Vector_createSpriteWith:
         text: |-
           ráhkat sprite
@@ -1633,6 +1658,22 @@ se:
           DIR:
             right: olgeš ↻
             left: gurut ↺
+      ecosystems_int10:
+        options:
+          VALUE:
+            '0': '0'
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+      storylab_printText:
+        text: čálit {TEXT}
       storylab_setForegroundEffect2:
         options:
           EFFECT:
@@ -1640,5 +1681,3 @@ se:
             '"confetti"': Konfetti
             '"hearts"': váimmut
             '"starburst"': Starburst
-      validation_validatedBackground:
-        text: bija duogábeali dása {IMG}

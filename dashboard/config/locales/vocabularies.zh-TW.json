@@ -386,6 +386,10 @@
           "word": "條件判斷（Conditionals）",
           "definition": " 僅可在某些條件下執行的陳述句。"
         },
+        "pseudocode/coursed/2022": {
+          "word": "偽代碼",
+          "definition": "演算法中步驟的簡單語言描述"
+        },
         "condition/coursed/2022": {
           "word": "條件（Condition）",
           "definition": "程式允許某個動作前會檢查條件，確認條件是否為真（true）。"
@@ -394,8 +398,21 @@
           "word": "「當」迴圈（While Loop）",
           "definition": "符合某個條件時會繼續重複的迴圈。"
         },
+        "until/coursed/2022": {
+          "word": "直到",
+          "definition": "一個命令，告訴你只做一些事情，直到某些事情變成真實的地步。"
+        },
+        "sprite/coursef/2022": {
+          "word": "雪碧",
+          "definition": "螢幕上具有位置、大小和外觀的圖形。"
+        },
+        "user/coursef/2022": {
+          "word": "使用者",
+          "definition": "使用物件的人員，包括軟體和硬體。"
+        },
         "algorithm/coursef/2022": {
-          "word": "演算法（Algorithm）"
+          "word": "演算法（Algorithm）",
+          "definition": "完成工作的步驟清單。"
         },
         "behavior/coursef/2022": {
           "word": "行為"
@@ -412,8 +429,13 @@
           "word": "變數",
           "definition": "放置可變更資訊的佔位符。"
         },
+        "prompt/coursef/2022": {
+          "word": "提示",
+          "definition": "電腦螢幕上的訊息，等待來自使用者的輸入。"
+        },
         "input/coursef/2022": {
-          "word": "輸入"
+          "word": "輸入",
+          "definition": "電腦從使用者取得的資訊。"
         },
         "models_and_simulations/coursef/2022": {
           "word": "模型和模擬",
@@ -476,7 +498,12 @@
           "definition": "試著去做某件事"
         },
         "behavior/coursee/2022": {
-          "word": "行為"
+          "word": "行為",
+          "definition": "一個精靈持續執行，直到它被告知停止的動作。"
+        },
+        "sprite/coursee/2022": {
+          "word": "雪碧",
+          "definition": "螢幕上具有位置、大小和外觀的圖形。"
         },
         "loop/coursee/2022": {
           "word": "迴圈",
@@ -501,7 +528,8 @@
           "definition": "符合某個條件時會繼續重複的迴圈。"
         },
         "copyright/coursee/2022": {
-          "word": "版權所有"
+          "word": "版權所有",
+          "definition": "印刷、出版、表演、拍攝或錄製文學、藝術或音樂材料的專屬法律權利，並授權他人這樣做"
         },
         "define/coursee/2022": {
           "word": "定義",
@@ -596,14 +624,20 @@
           "definition": "製作程式的藝術。"
         },
         "behavior/express/2022": {
-          "word": "行為"
+          "word": "行為",
+          "definition": "一個精靈持續執行，直到它被告知停止的動作。"
+        },
+        "sprite/express/2022": {
+          "word": "雪碧",
+          "definition": "螢幕上具有位置、大小和外觀的圖形。"
         },
         "event/express/2022": {
           "word": "事件（Event）",
           "definition": "導致某些事情發生的操作。"
         },
         "code/express/2022": {
-          "word": "代碼"
+          "word": "代碼",
+          "definition": "編寫代碼，或為計算機編寫指令。"
         },
         "loop/express/2022": {
           "word": "迴圈",
@@ -629,9 +663,17 @@
           "word": "「當」迴圈（While Loop）",
           "definition": "符合某個條件時會繼續重複的迴圈。"
         },
+        "until/express/2022": {
+          "word": "直到",
+          "definition": "一個命令，告訴你只做一些事情，直到某些事情變成真實的地步。"
+        },
         "function/express/2022": {
           "word": "函式",
           "definition": "你可輕鬆不斷呼叫的程式碼。"
+        },
+        "prompt/express/2022": {
+          "word": "提示",
+          "definition": "電腦螢幕上的訊息，等待來自使用者的輸入。"
         },
         "variable/express/2022": {
           "word": "變數",
@@ -825,6 +867,9 @@
           "word": "變數",
           "definition": "放置可變更資訊的佔位符。"
         },
+        "sprite/csd/2022": {
+          "word": "雪碧"
+        },
         "condition/csd/2022": {
           "word": "條件（Condition）"
         },
@@ -841,7 +886,12 @@
           "word": "數位足跡"
         },
         "copyright/csd/2022": {
-          "word": "版權所有"
+          "word": "版權所有",
+          "definition": "印刷、出版、表演、拍攝或錄製文學、藝術或音樂材料的專屬法律權利，並授權他人這樣做"
+        },
+        "user/csd/2022": {
+          "word": "使用者",
+          "definition": "使用物件的人員，包括軟體和硬體。"
         },
         "user_interface/csd/2022": {
           "word": "使用者介面"
@@ -873,11 +923,21 @@
           "word": "詩歌行",
           "definition": "（詩歌）- 一篇詩歌的組成部分，採用單行格式，在右側結束。 "
         },
+        "sprite/coursef/2021": {
+          "word": "雪碧",
+          "definition": "螢幕上具有位置、大小和外觀的圖形。"
+        },
+        "user/coursef/2021": {
+          "word": "使用者",
+          "definition": "使用物件的人員，包括軟體和硬體。"
+        },
         "algorithm/coursef/2021": {
-          "word": "演算法（Algorithm）"
+          "word": "演算法（Algorithm）",
+          "definition": "完成工作的步驟清單。"
         },
         "behavior/coursef/2021": {
-          "word": "行為"
+          "word": "行為",
+          "definition": "一個精靈持續執行，直到它被告知停止的動作。"
         },
         "program/coursef/2021": {
           "word": "程式",
@@ -891,8 +951,13 @@
           "word": "變數",
           "definition": "放置可變更資訊的佔位符。"
         },
+        "prompt/coursef/2021": {
+          "word": "提示",
+          "definition": "電腦螢幕上的訊息，等待來自使用者的輸入。"
+        },
         "input/coursef/2021": {
-          "word": "輸入"
+          "word": "輸入",
+          "definition": "電腦從使用者取得的資訊。"
         },
         "loop/coursef/2021": {
           "word": "迴圈",
@@ -1158,6 +1223,10 @@
           "word": "條件判斷（Conditionals）",
           "definition": " 僅可在某些條件下執行的陳述句。"
         },
+        "pseudocode/coursed/2021": {
+          "word": "偽代碼",
+          "definition": "演算法中步驟的簡單語言描述"
+        },
         "condition/coursed/2021": {
           "word": "條件（Condition）",
           "definition": "程式允許某個動作前會檢查條件，確認條件是否為真（true）。"
@@ -1165,6 +1234,10 @@
         "while_loop/coursed/2021": {
           "word": "「當」迴圈（While Loop）",
           "definition": "符合某個條件時會繼續重複的迴圈。"
+        },
+        "until/coursed/2021": {
+          "word": "直到",
+          "definition": "一個命令，告訴你只做一些事情，直到某些事情變成真實的地步。"
         },
         "algorithm/express/2021": {
           "word": "演算法（Algorithm）",
@@ -1191,14 +1264,20 @@
           "definition": "製作程式的藝術。"
         },
         "behavior/express/2021": {
-          "word": "行為"
+          "word": "行為",
+          "definition": "一個精靈持續執行，直到它被告知停止的動作。"
+        },
+        "sprite/express/2021": {
+          "word": "雪碧",
+          "definition": "螢幕上具有位置、大小和外觀的圖形。"
         },
         "event/express/2021": {
           "word": "事件（Event）",
           "definition": "導致某些事情發生的操作。"
         },
         "code/express/2021": {
-          "word": "代碼"
+          "word": "代碼",
+          "definition": "編寫代碼，或為計算機編寫指令。"
         },
         "loop/express/2021": {
           "word": "迴圈",
@@ -1224,9 +1303,17 @@
           "word": "「當」迴圈（While Loop）",
           "definition": "符合某個條件時會繼續重複的迴圈。"
         },
+        "until/express/2021": {
+          "word": "直到",
+          "definition": "一個命令，告訴你只做一些事情，直到某些事情變成真實的地步。"
+        },
         "function/express/2021": {
           "word": "函式",
           "definition": "你可輕鬆不斷呼叫的程式碼。"
+        },
+        "prompt/express/2021": {
+          "word": "提示",
+          "definition": "電腦螢幕上的訊息，等待來自使用者的輸入。"
         },
         "variable/express/2021": {
           "word": "變數",
@@ -1304,15 +1391,25 @@
           "word": "事件（Event）",
           "definition": "導致某些事情發生的操作。"
         },
+        "algorithm/coursee/2021": {
+          "word": "演算法",
+          "definition": "完成任務的步驟列表"
+        },
         "behavior/coursee/2021": {
-          "word": "行為"
+          "word": "行為",
+          "definition": "一個精靈持續執行，直到它被告知停止的動作。"
+        },
+        "sprite/coursee/2021": {
+          "word": "雪碧",
+          "definition": "螢幕上具有位置、大小和外觀的圖形。"
         },
         "event/coursee/2021": {
           "word": "事件（Event）",
           "definition": "導致某些事情發生的操作。"
         },
         "copyright/coursee/2021": {
-          "word": "版權所有"
+          "word": "版權所有",
+          "definition": "印刷、出版、表演、拍攝或錄製文學、藝術或音樂材料的專屬法律權利，並授權他人這樣做"
         },
         "loop/coursee/2021": {
           "word": "迴圈",
@@ -1361,6 +1458,10 @@
         "ethics/csd/2021": {
           "word": "倫理"
         },
+        "user/csd/2021": {
+          "word": "使用者",
+          "definition": "使用物件的人員，包括軟體和硬體。"
+        },
         "user_interface/csd/2021": {
           "word": "使用者介面"
         },
@@ -1384,6 +1485,9 @@
           "word": "變數",
           "definition": "放置可變更資訊的佔位符。"
         },
+        "sprite/csd/2021": {
+          "word": "雪碧"
+        },
         "condition/csd/2021": {
           "word": "條件（Condition）"
         },
@@ -1406,7 +1510,8 @@
           "word": "數位足跡"
         },
         "copyright/csd/2021": {
-          "word": "版權所有"
+          "word": "版權所有",
+          "definition": "印刷、出版、表演、拍攝或錄製文學、藝術或音樂材料的專屬法律權利，並授權他人這樣做"
         }
       }
     }

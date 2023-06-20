@@ -48,9 +48,7 @@ class Plc::UserCourseEnrollmentsController < ApplicationController
     redirect_to action: :new, notice: notice_string
   end
 
-  private
-
-  def listify_first_ten(user_list)
+  private def listify_first_ten(user_list)
     result = ': '
     if user_list.length > 10
       result = '. The first 10 are: '
@@ -60,12 +58,12 @@ class Plc::UserCourseEnrollmentsController < ApplicationController
     result
   end
 
-  def listify(user_list)
+  private def listify(user_list)
     user_list.map {|user| "<li>#{user}</li>"}.join
   end
 
   # Never trust parameters from the scary internet, only allow the white list through.
-  def user_course_enrollment_params
+  private def user_course_enrollment_params
     params.permit(:user_emails, :plc_course_id, :course)
   end
 end

@@ -5,7 +5,7 @@ import dataStyles from './data-styles.module.scss';
 class EditLink extends React.Component {
   static propTypes = {
     name: PropTypes.string.isRequired,
-    onClick: PropTypes.func.isRequired
+    onClick: PropTypes.func.isRequired,
   };
 
   render() {

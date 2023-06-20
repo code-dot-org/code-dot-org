@@ -12,7 +12,8 @@ const EVENTS = {
   TEACHER_LOGIN_EVENT: 'Teacher Login',
 
   // Course/Unit info
-  COURSE_OVERVIEW_PAGE_VISITED_EVENT: 'Course Overview Page Visited',
+  COURSE_OVERVIEW_PAGE_VISITED_BY_TEACHER_EVENT:
+    'Course Overview Page Visited By Teacher',
   UNIT_OVERVIEW_PAGE_VISITED_BY_TEACHER_EVENT:
     'Unit Overview Page Visited By Teacher',
   TRY_NOW_BUTTON_CLICK_EVENT: 'Try Now Button Clicked',
@@ -25,7 +26,7 @@ const EVENTS = {
   WORKSHOP_ENROLLMENT_COMPLETED_EVENT: 'Workshop Enrollment Completed',
 
   // PD Application flow
-  TEACHER_APP_STARTED_EVENT: '6-12 Teacher Application Started',
+  TEACHER_APP_VISITED_EVENT: '6-12 Teacher Application Visited',
   PAGE_CHANGED_EVENT: 'Page Changed',
   PROGRAM_PICKED_EVENT: 'Professional Learning Program Picked',
   SCHOOL_ID_CHANGED_EVENT: 'School ID Changed',
@@ -38,8 +39,10 @@ const EVENTS = {
 
   // Marketing site pages
   TEACH_PAGE_VISITED_EVENT: 'Teach Page Visited',
+  ADMIN_INTEREST_FORM_SUBMIT_EVENT: 'Administrator Interest Form Submitted',
 
   // Sections
+  COMPLETED_EVENT: 'Section Setup Completed',
   CURRICULUM_ASSIGNED: 'Section Curriculum Assigned',
   PROGRESS_VIEWED: 'Section Progress Viewed',
   PROGRESS_TOGGLE: 'Section Progress Toggled',
@@ -49,7 +52,15 @@ const EVENTS = {
   // Levels
   FEEDBACK_SUBMITTED: 'Level Feedback Submitted',
   RUBRIC_LEVEL_VIEWED_EVENT: 'Rubric Level Viewed',
-  TEACHER_VIEWING_STUDENT_WORK: 'Teacher Viewing Student Work'
+  TEACHER_VIEWING_STUDENT_WORK: 'Teacher Viewing Student Work',
+  SUMMARY_PAGE_LOADED: 'Summary Page Loaded',
+  SUMMARY_PAGE_NEXT_LEVEL_CLICKED: 'Summary Page Next Level Clicked',
+  SUMMARY_PAGE_BACK_TO_LEVEL_CLICKED: 'Summary Page Back To Level Clicked',
+
+  // Maker setup
+  MAKER_SETUP_PAGE_BOARD_TYPE_EVENT: 'Board Type On Maker Setup Page',
+  MAKER_SETUP_PAGE_MB_VERSION_EVENT: 'Microbit Version',
+  MAKER_SETUP_PAGE_MB_UPDATE_ERROR_EVENT: 'Microbit Software Update Error',
 };
 
 export {EVENTS};

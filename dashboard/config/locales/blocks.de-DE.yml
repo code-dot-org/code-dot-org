@@ -1253,6 +1253,19 @@ de:
             '"x"': x
             '"y"': y
             '"z"': z
+      gamelab_layoutSprites:
+        text: Layout {GROUP} als ein {FORMAT}
+        options:
+          FORMAT:
+            '"border"': Grenze
+            '"circle"': Kreis
+            '"grid"': Raster
+            '"top"': obere Reihe
+            '"row"': Zeile
+            '"bottom"': untere Reihe
+            '"left"': linke Spalte
+            '"column"': Spalte
+            '"right"': rechte Spalte
       gamelab_locationAt:
         text: 'Position x: {X} y: {Y}'
       gamelab_locationModifier:
@@ -1279,6 +1292,18 @@ de:
             '"spiral"': Spirale
       gamelab_makeNewSpriteAnon:
         text: erstelle neuen {ANIMATION_NAME} Sprite in {LOCATION}
+      gamelab_makeNewSpriteGroup:
+        options:
+          FORMAT:
+            '"border"': Grenze
+            '"circle"': Kreis
+            '"grid"': Raster
+            '"top"': obere Reihe
+            '"row"': Zeile
+            '"bottom"': untere Reihe
+            '"left"': linke Spalte
+            '"column"': Spalte
+            '"right"': rechte Spalte
       gamelab_makeNumSprites:
         text: erzeuge {NUM} neue {ANIMATION_NAME} Sprites
       gamelab_makeProjectile:
@@ -1678,6 +1703,10 @@ de:
         text: x Koordinate von {SPRITE}
       gamelab_yLocationOf:
         text: y Koordinate von {SPRITE}
+      KatiesBlocks_glideTo:
+        text: "{SPRITE} gleite zu {LOCATION}"
+      KatiesBlocks_tumbling:
+        text: hingefallen
       Mikelab_addBehaviorSimple:
         text: "{SPRITE} beginnt {BEHAVIOR}"
       Mikelab_addTrainingData:
@@ -2301,8 +2330,6 @@ de:
         text: nach links drehen
       RyanLab_turnRight:
         text: nach rechts drehen
-      SpriteLab2Beta_spriteSay:
-        text: Sprite {SPRITE} sagt {TEXT} für {SECONDS} Sekunden
       Vector_createSpriteWith:
         text: |-
           erzeuge Sprite
@@ -2424,6 +2451,18 @@ de:
             '"quarantining"': sich bei Krankheit in Quarantäne zu begeben
             '"avoiding"': sich sozial distanzieren
             '"none"': stillhalten
+      adaptations_adaptationBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): nach rechts drehen
+            new Behavior(spinning_left, []): nach links drehen
+            new Behavior(fluttering, []): flattern
+            new Behavior(jittering, []): zittern
+            new Behavior(wobbling, []): wackelnd
+            new Behavior(wandering, []): wandern
+            new Behavior(patrolling, []): patroullieren
+      adaptations_startFollowing:
+        text: "{SPRITE} beginnt, {TARGET} zu folgen"
       binary_drawBin:
         text: zeichne Binärwert {BIN}
       binary_drawBinScreen:
@@ -2566,6 +2605,22 @@ de:
           DIR:
             right: rechts ↻
             left: links ↺
+      ecosystems_int10:
+        options:
+          VALUE:
+            '0': '0'
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+      storylab_printText:
+        text: drucke {TEXT}
       storylab_setForegroundEffect2:
         text: führe {EFFECT} aus
         options:
@@ -2580,5 +2635,3 @@ de:
         text: Überschrift festlegen {HEADING}
       storylab_setSubheading:
         text: Unterüberschrift festlegen {SUBHEADING}
-      validation_validatedBackground:
-        text: setze Hintergund auf {IMG}

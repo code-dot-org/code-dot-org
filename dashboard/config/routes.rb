@@ -38,7 +38,8 @@ Dashboard::Application.routes.draw do
     get "/congrats", to: "congrats#index"
 
     get "/incubator", to: "incubator#index"
-    get "/musiclab", to: "musiclab#index"
+    get "/musiclab", to: redirect("/projectbeats", status: 302)
+    get "/projectbeats", to: "musiclab#index"
     get "/musiclab/menu", to: "musiclab#menu"
     get "/musiclab/analytics_key", to: "musiclab#get_analytics_key"
 
@@ -52,7 +53,6 @@ Dashboard::Application.routes.draw do
     resources :videos do
       collection do
         get 'test'
-        get 'embed/:key', to: 'videos#embed', as: 'embed'
       end
     end
 
@@ -105,8 +105,10 @@ Dashboard::Application.routes.draw do
     get 'docs/*path', to: 'curriculum_proxy#get_doc'
     get 'curriculum/*path', to: 'curriculum_proxy#get_curriculum'
 
+    get '/catalog', to: 'curriculum_catalog#index'
+
     # User-facing section routes
-    resources :sections, only: [:show, :new] do
+    resources :sections, only: [:show, :new, :edit] do
       member do
         post 'log_in'
       end
@@ -206,7 +208,6 @@ Dashboard::Application.routes.draw do
       passwords: 'passwords'
     }
     get 'discourse/sso' => 'discourse_sso#sso'
-    post '/auth/lti', to: 'lti_provider#sso'
 
     root to: "home#index"
     get '/home_insert', to: 'home#home_insert'
@@ -267,6 +268,10 @@ Dashboard::Application.routes.draw do
       end
     end
 
+    # Get or create a project for the given level_id. Optionally, the request
+    # can include script_id to get or create a project for the level and script.
+    get "projects(/script/:script_id)/level/:level_id", to: 'projects#get_or_create_for_level'
+
     post '/locale', to: 'home#set_locale', as: 'locale'
 
     # quick links for cartoon network arabic
@@ -314,6 +319,7 @@ Dashboard::Application.routes.draw do
         post 'clone'
         post 'update_start_code'
         post 'update_exemplar_code'
+        get 'level_data'
       end
     end
 
@@ -465,7 +471,18 @@ Dashboard::Application.routes.draw do
             get 'page/:puzzle_page', to: 'script_levels#show', as: 'puzzle_page', format: false
             # /s/xxx/lessons/yyy/levels/zzz/sublevel/sss
             get 'sublevel/:sublevel_position', to: 'script_levels#show', as: 'sublevel', format: false
+            # Get the level data via JSON.
+            # /s/xxx/lessons/yyy/levels/zzz/level_data
+            get 'level_data', to: 'script_levels#level_data'
           end
+        end
+        resources :script_levels, only: [:show], path: "/levels", format: false do
+          # This route is defined in a separate resources, below the one above,
+          # because of how our assert_routing tests and Rails routing
+          # precedence work with multiple routes that point to the same action,
+          # with only a static path (no dynamic parts like 'path/:id').
+          # /s/xxx/lessons/yyy/levels/zzz/summary
+          get 'summary', on: :member, to: 'script_levels#show', as: 'summary', format: false, defaults: {view: 'summary'}
         end
       end
 
@@ -728,8 +745,7 @@ Dashboard::Application.routes.draw do
       get 'workshop_post_survey', to: 'workshop_daily_survey#new_post_foorm'
       post 'workshop_survey/submit', to: 'workshop_daily_survey#submit_general'
       get 'workshop_survey/post/:enrollment_code', to: 'workshop_daily_survey#new_post', as: 'new_workshop_survey'
-      get 'workshop_survey/facilitators/:session_id(/:facilitator_index)', to: 'workshop_daily_survey#new_facilitator'
-      post 'workshop_survey/facilitators/submit', to: 'workshop_daily_survey#submit_facilitator'
+      get 'workshop_survey/facilitator_post_foorm', to: 'workshop_daily_survey#new_facilitator_post_foorm'
       get 'workshop_survey/csf/post101(/:enrollment_code)', to: 'workshop_daily_survey#new_csf_post101'
       get 'workshop_survey/csf/pre201', to: 'workshop_daily_survey#new_csf_pre201'
       get 'workshop_survey/csf/post201(/:enrollment_code)', to: 'workshop_daily_survey#new_csf_post201'
@@ -761,9 +777,7 @@ Dashboard::Application.routes.draw do
       delete 'fit_weekend_registration/:application_guid', to: 'fit_weekend_registration#destroy'
 
       get 'workshops/:workshop_id/enroll', action: 'new', controller: 'workshop_enrollment'
-      post 'workshops/:workshop_id/enroll', action: 'create', controller: 'workshop_enrollment'
       get 'workshop_enrollment/:code', action: 'show', controller: 'workshop_enrollment'
-      get 'workshop_enrollment/:code/thanks', action: 'thanks', controller: 'workshop_enrollment'
       get 'workshop_enrollment/:code/cancel', action: 'cancel', controller: 'workshop_enrollment'
 
       get 'pre_workshop_survey/:enrollment_code', action: 'new', controller: 'pre_workshop_survey', as: 'new_pre_workshop_survey'
@@ -927,6 +941,8 @@ Dashboard::Application.routes.draw do
     get '/dashboardapi/v1/schools/:school_district_id/:school_type', to: 'api/v1/schools#index', defaults: {format: 'json'}
     get '/dashboardapi/v1/schools/:id', to: 'api/v1/schools#show', defaults: {format: 'json'}
 
+    post '/dashboardapi/v1/users/:user_id/verify_captcha', to: 'api/v1/users#verify_captcha'
+
     # Routes used by census
     post '/dashboardapi/v1/census/:form_version', to: 'api/v1/census/census#create', defaults: {format: 'json'}
 
@@ -1032,5 +1048,13 @@ Dashboard::Application.routes.draw do
     # Adds the experiment cookie in the User's browser which allows them to experience offline features
     get '/offline/join_pilot', action: :set_offline_cookie, controller: :offline
     get '/offline-files.json', action: :offline_files, controller: :offline
+
+    post '/browser_events/put_logs', to: 'browser_events#put_logs'
+
+    get '/get_token', to: 'authenticity_token#get_token'
+
+    # Policy Compliance
+    get '/policy_compliance/child_account_consent/', to:
+      'policy_compliance#child_account_consent'
   end
 end

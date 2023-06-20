@@ -1,8 +1,9 @@
 {
   "pages": {
     "/projects": "coldplay",
-    "/certificates": "hoc-more"
-  },  
+    "/certificates": "hoc-more",
+    "/courses": "ai-launch-2023"
+  },
   "banners": {
     "csleadersprize": {
       "image": "/images/marketing/csleadersprize-dash.png",
@@ -31,9 +32,9 @@
     "superhero": {
       "image": "/images/marketing/superhero_teacherdash.png",
       "title": "Help your students become superheroes!",
-      "body": "Add to your teaching toolbox with Code.org’s Professional Learning Program. More than 90% of attendees would recommend our program to another teacher!",
+      "body": "Join our highly supportive Professional Learning Program for middle and high school educators.",
       "buttonText": "Learn More",
-      "buttonUrl": "https://code.org/educate/professional-learning/",
+      "buttonUrl": "https://code.org/educate/professional-learning/middle-high",
       "buttonId": "superhero-pl-details"
     },
     "csjourneys": {
@@ -142,6 +143,14 @@
       "buttonText": "Try it",
       "buttonUrl": "https://code.org/coldplay",
       "buttonId": "coldplay"
+    },
+    "ai-launch-2023": {
+      "image": "/shared/images/announcement/announcement_special_ai-launch_2023.png",
+      "title": "AI education for the world ",
+      "body": "See how we're planning to bring AI education to students around the world.",
+      "buttonText": "Learn more",
+      "buttonUrl": "https://code.org/ai",
+      "buttonId": "ai-launch-2023"
     }
   }
 }

@@ -369,6 +369,7 @@ pt:
             '"right"': coluna da direita
             '"x"': linhas cruzadas
             '"plus"': mais
+            '"spiral"': espiral
             '"random"': aleatório
       Dancelab_makeAnonymousDanceSprite:
         text: fazer um(a) novo(a) {COSTUME} em {LOCATION}
@@ -498,6 +499,7 @@ pt:
             '"right"': coluna da direita
             '"x"': linhas cruzadas
             '"plus"': mais
+            '"spiral"': espiral
             '"random"': aleatório
       Dancelab_mixColors:
         text: Mesclar {COLOR1} e {COLOR2}
@@ -1213,6 +1215,19 @@ pt:
             '"x"': x
             '"y"': y
             '"z"': z
+      gamelab_layoutSprites:
+        text: layout {GROUP} como um {FORMAT}
+        options:
+          FORMAT:
+            '"border"': borda
+            '"circle"': círculo
+            '"grid"': grade
+            '"top"': linha superior
+            '"row"': linha
+            '"bottom"': linha inferior
+            '"left"': coluna esquerda
+            '"column"': coluna
+            '"right"': coluna da direita
       gamelab_locationAt:
         text: 'localização x: {X} y: {Y}'
       gamelab_locationModifier:
@@ -1236,8 +1251,21 @@ pt:
             '"burst"': explosão
             '"pop"': estalo
             '"rain"': chuva
+            '"spiral"': espiral
       gamelab_makeNewSpriteAnon:
         text: criar novo {ANIMATION_NAME} elemento em {LOCATION}
+      gamelab_makeNewSpriteGroup:
+        options:
+          FORMAT:
+            '"border"': borda
+            '"circle"': círculo
+            '"grid"': grade
+            '"top"': linha superior
+            '"row"': linha
+            '"bottom"': linha inferior
+            '"left"': coluna esquerda
+            '"column"': coluna
+            '"right"': coluna da direita
       gamelab_makeNumSprites:
         text: criar {NUM} novas {ANIMATION_NAME} fadas
       gamelab_makeProjectile:
@@ -1315,6 +1343,7 @@ pt:
             "'sound://category_nature/thunderstorm_1.mp3'": trovoada
             "'sound://category_animals/chick.mp3'": pintinho
             "'sound://category_animals/dog.mp3'": cão
+            "'sound://category_animals/tiger.mp3'": tigre
             "'sound://category_collect/trill_stings.mp3'": vibrar
             "'sound://category_instrumental/harpe_pluck_1.mp3'": Harpa
             "'sound://category_tap/vibrant_positive_tap_1.mp3'": toque
@@ -1332,6 +1361,10 @@ pt:
             "'sound://category_digital/jump_7.mp3'": saltar
       gamelab_playSoundOptionsSoccer:
         text: reproduzir som {SOUND}
+        options:
+          SOUND:
+            "'sound://category_sports/Airhorn_SFX.mp3'": buzina
+            "'sound://category_sports/One_Whistle_SFX.mp3'": apito
       gamelab_playSoundOptionsSpace:
         text: reproduzir som {SOUND}
       gamelab_playSpeech:
@@ -1592,6 +1625,10 @@ pt:
         text: coordenada x do {SPRITE}
       gamelab_yLocationOf:
         text: coordenada y do {SPRITE}
+      KatiesBlocks_glideTo:
+        text: "{SPRITE} deslizar para {LOCATION}"
+      KatiesBlocks_tumbling:
+        text: em queda
       Mikelab_addBehaviorSimple:
         text: sprite {SPRITE} começa a {BEHAVIOR}
       Mikelab_addTrainingData:
@@ -1959,6 +1996,7 @@ pt:
             '"burst"': explosão
             '"pop"': estalo
             '"rain"': chuva
+            '"spiral"': espiral
       Poetry_makeNewSpriteAnon:
         text: criar novo {ANIMATION_NAME} elemento em {LOCATION}
       Poetry_makeNumSprites:
@@ -1975,7 +2013,10 @@ pt:
             '"sound://category_loops/red_flag_loop1.mp3"': Missão
             '"sound://category_nature/summer_night_loop.mp3"': noite
             '"sound://category_background/ocean_waves.mp3"': oceano
+            '"sound://category_background/rainforest_ambient_sound.mp3"': floresta
+              tropical
             '"sound://category_background/repitition.mp3"': Equitação
+            '"sound://category_background/wavering_wind.mp3"': sonolenta
             '"sound://category_loops/stabilizing_breath_loop1.mp3"': Lento
       Poetry_playSound:
         text: reproduzir som {SOUND}
@@ -2143,8 +2184,6 @@ pt:
         text: virar à esquerda
       RyanLab_turnRight:
         text: virar à direita
-      SpriteLab2Beta_spriteSay:
-        text: elemento {SPRITE} diz {TEXT} por {SECONDS} segundos
       Vector_createSpriteWith:
         text: |-
           criar um personagem
@@ -2218,6 +2257,18 @@ pt:
             '"congregating"': congregando
             '"avoiding"': distanciamento social
             '"none"': ficar parado
+      adaptations_adaptationBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): girando para a direita
+            new Behavior(spinning_left, []): girando para a esquerda
+            new Behavior(fluttering, []): tremulando
+            new Behavior(jittering, []): tremendo
+            new Behavior(wobbling, []): balançando
+            new Behavior(wandering, []): vagando
+            new Behavior(patrolling, []): patrulhando
+      adaptations_startFollowing:
+        text: "{SPRITE} começa a seguir {TARGET}"
       binary_drawBin:
         text: desenhar o binário {BIN}
       binary_drawBinScreen:
@@ -2360,6 +2411,22 @@ pt:
           DIR:
             right: à direita ↻
             left: à esquerda ↺
+      ecosystems_int10:
+        options:
+          VALUE:
+            '0': '0'
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+      storylab_printText:
+        text: imprimir {TEXT}
       storylab_setForegroundEffect2:
         text: criar efeito {EFFECT} efeito
         options:
@@ -2370,7 +2437,3 @@ pt:
             '"rain"': chuva
             '"starburst"': Starburst
             '"twinkling"': Cintilante
-      validation_validatedBackground:
-        text: definir plano de fundo para {IMG}
-      validation_validatedSound:
-        text: Reproduzir som {SOUND}

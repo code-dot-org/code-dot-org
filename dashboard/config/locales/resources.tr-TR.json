@@ -117,18 +117,35 @@
           "url": "https://youtu.be/x2mRoFNm22g",
           "type": "Video"
         },
+        "2022_change_log/coursed/2022": {
+          "name": "2022 Değişiklik Günlüğü",
+          "url": "https://docs.google.com/document/d/1sX7-ByjcMmuYt8EvJdA9ON2sOYEWn0Cuzifbsyc8bUc/preview"
+        },
+        "all_resources/coursed/2022": {
+          "name": "Tüm Kaynaklar",
+          "url": "/s/kursd-2022/kaynaklar"
+        },
+        "all_standards/coursed/2022": {
+          "name": "Tüm Standartlar",
+          "url": "/s/kursd-2022/standartlar"
+        },
+        "all_vocabulary/coursed/2022": {
+          "name": "Tüm Kelimeler",
+          "url": "/s/kursd-2022/sözcük"
+        },
         "common_core_and_ngss_guidance/coursed/2022": {
           "name": "Ortak Çekirdek ve NGSS Rehberliği",
           "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.sw3rfp1nfbrp",
           "type": "Kaynak"
         },
         "cross-curricular_extension_activities/coursed/2022": {
-          "name": "Müfredat Çapraz Uzatma Etkinlikleri",
+          "name": "Müfredatlar Arası Uzatma Faaliyetleri",
           "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview",
           "type": "Kaynak"
         },
         "curriculum_guide/coursed/2022": {
-          "name": "Mufredat Rehberi"
+          "name": "Mufredat Rehberi",
+          "url": "https://docs.google.com/document/d/12j5IkeGEWeAmWnZY9krbNSo8oKOKT5nIQGUH5J7Si80/preview"
         },
         "debugging_guide/coursed/2022": {
           "name": "Hata Ayıklama Kılavuzu",
@@ -151,9 +168,12 @@
           "type": "Kaynak"
         },
         "virtual_lesson_modifications/coursed/2022": {
-          "name": "Sanal Ders Değişiklikleri"
+          "name": "Sanal Ders Değişiklikleri",
+          "url": "https://docs.google.com/document/d/1X139Yy8C3WPxE3g1j2LlE89hzeREex8QVPzKITDSuF4/view"
         },
         "extension_lessons_micro_bit/coursed/2022": {
+          "name": "micro:bit ile Uzatma Dersleri",
+          "url": "https://code.org/maker/csf-microbit",
           "type": "Kaynak"
         },
         "password_power-up_if_then_scenarios/coursed/2022": {
@@ -192,6 +212,8 @@
           "type": "Cevap Anahtarı"
         },
         "csf_-_course_d_-_slides_2022-2023/coursed/2022": {
+          "name": "CSF- Kurs D - Slaytlar 2022-2023",
+          "url": "https://docs.google.com/presentation/d/1QZjvTpft-xc7uU-rccLHsA2D-YFD8LgONjXwAjJ4nCQ/template/preview",
           "type": "Slaytlar"
         },
         "graph_paper_programming/coursed/2022": {
@@ -276,10 +298,11 @@
         },
         "open-ended_programming_levels_1/coursed/2022": {
           "name": "Açık uçlu Programlama Düzeyleri",
+          "url": "https://docs.google.com/document/d/14qVMrzEOkq7m0gRjtYI8Erb1nGbx_XCz4TSm_d_xCls/view",
           "type": "Cevap Anahtarı"
         },
         "sample_level_solutions/coursed/2022": {
-          "name": "Açık uçlu Programlama Düzeyleri",
+          "name": "Örnek Seviye Çözümleri",
           "url": "https://docs.google.com/document/d/14qVMrzEOkq7m0gRjtYI8Erb1nGbx_XCz4TSm_d_xCls/view",
           "type": "Cevap Anahtarı"
         },
@@ -290,6 +313,7 @@
         },
         "dance_party_unplugged/coursed/2022": {
           "name": "Dans Partisi: Bağlantısız",
+          "url": "https://curriculum.code.org/hoc/unplugged/4/",
           "type": "Kaynak"
         },
         "open-ended_programming_levels_2/coursed/2022": {
@@ -341,18 +365,32 @@
           "url": "https://docs.google.com/document/d/1REjnJsmhZTmUsH5ulglEse4wpmF41zOk08ctqLShUgI/edit?usp=sharing",
           "type": "Proje Kılavuzu"
         },
+        "2022_change_log/coursef/2022": {
+          "name": "2022 Değişiklik Günlüğü",
+          "url": "https://docs.google.com/document/d/1sX7-ByjcMmuYt8EvJdA9ON2sOYEWn0Cuzifbsyc8bUc/preview"
+        },
+        "all_resources/coursef/2022": {
+          "url": "/s/kursf-2022/kaynaklar"
+        },
+        "all_standards/coursef/2022": {
+          "url": "/s/kursf-2022/standartlar"
+        },
+        "all_vocabulary/coursef/2022": {
+          "url": "/s/kursf-2022/sözcük"
+        },
         "common_core_and_ngss_guidance/coursef/2022": {
           "name": "Ortak Çekirdek ve NGSS Rehberliği",
           "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.8jtw7rltkhe3",
           "type": "Kaynak"
         },
         "cross-curricular_extension_activities/coursef/2022": {
-          "name": "Müfredat Çapraz Uzatma Etkinlikleri",
+          "name": "Müfredatlar Arası Uzatma Faaliyetleri",
           "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview",
           "type": "Kaynak"
         },
         "curriculum_guide/coursef/2022": {
           "name": "Mufredat Rehberi",
+          "url": "https://docs.google.com/document/d/12j5IkeGEWeAmWnZY9krbNSo8oKOKT5nIQGUH5J7Si80/preview",
           "type": "Kaynak"
         },
         "debugging_guide/coursef/2022": {
@@ -366,10 +404,11 @@
           "type": "Kaynak"
         },
         "lesson_type_guide/coursef/2022": {
-          "name": "Ders Türü Kılavuzu"
+          "name": "Ders Türü Kılavuzu",
+          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/preview"
         },
         "sprite_lab_documentation/coursef/2022": {
-          "name": "Peri Laboratuvar Belgelendirmesi",
+          "name": "Sprite Lab Dökümanları",
           "url": "https://studio.code.org/docs/spritelab/",
           "type": "Kaynak"
         },
@@ -379,9 +418,12 @@
           "type": "Kaynak"
         },
         "virtual_lesson_modifications/coursef/2022": {
-          "name": "Sanal Ders Değişiklikleri"
+          "name": "Sanal Ders Değişiklikleri",
+          "url": "https://docs.google.com/document/d/10v_thWkO0aJNWsCFtv_bpVbiIy-meYs_vbUiHi-ZCH0/preview"
         },
         "extension_lessons_micro_bit/coursef/2022": {
+          "name": "micro:bit ile Uzatma Dersleri",
+          "url": "https://code.org/maker/csf-microbit",
           "type": "Kaynak"
         },
         "the_power_of_words_lesson_quiz/coursef/2022": {
@@ -410,6 +452,8 @@
           "type": "Çalışma Kağıdı"
         },
         "csf_-_course_f_-_slides_2022-2023/coursef/2022": {
+          "name": "CSF- Kurs F - Slaytlar 2022-2023",
+          "url": "https://docs.google.com/presentation/d/1MMT5npnQb5bWPmUGia4YT_mYMiFczu1HbL-KCShsxYU/template/preview",
           "type": "Slaytlar"
         },
         "exploring_apps/coursef/2022": {
@@ -507,10 +551,25 @@
         },
         "cs_fundamentals_final_project/coursef/2022": {
           "name": "CS Fundamentals Final Projesi",
+          "url": "https://docs.google.com/document/d/1xt4PzGNhs-qJo-ZuRWmsoX4VpCLsk4NIqv38ThewhGo/edit",
           "type": "Değerlendirme Tablosu"
         },
         "final_project_design_1/coursef/2022": {
-          "name": "Kurs Projesi Kılavuzunun Sonu"
+          "name": "Kurs Projesi Kılavuzunun Sonu",
+          "url": "https://docs.google.com/document/d/1PWOfzIXpcN3tF32T28fVAMFykNePli7IEBHBK9u7NXQ/edit"
+        },
+        "2022_change_log/coursee/2022": {
+          "name": "2022 Değişiklik Günlüğü",
+          "url": "https://docs.google.com/document/d/1sX7-ByjcMmuYt8EvJdA9ON2sOYEWn0Cuzifbsyc8bUc/preview"
+        },
+        "all_resources/coursee/2022": {
+          "url": "/s/kurse-2022/kaynaklar"
+        },
+        "all_standards/coursee/2022": {
+          "url": "/s/kurse-2022/standartlar"
+        },
+        "all_vocabulary/coursee/2022": {
+          "url": "/s/kurse-2022/sözcük"
         },
         "common_core_and_ngss_guidance/coursee/2022": {
           "name": "Ortak Çekirdek ve NGSS Rehberliği",
@@ -518,12 +577,13 @@
           "type": "Kaynak"
         },
         "cross-curricular_extension_activities/coursee/2022": {
-          "name": "Müfredat Çapraz Uzatma Etkinlikleri",
+          "name": "Müfredatlar Arası Uzatma Faaliyetleri",
           "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview",
           "type": "Kaynak"
         },
         "curriculum_guide/coursee/2022": {
-          "name": "Mufredat Rehberi"
+          "name": "Mufredat Rehberi",
+          "url": "https://docs.google.com/document/d/12j5IkeGEWeAmWnZY9krbNSo8oKOKT5nIQGUH5J7Si80/preview"
         },
         "debugging_guide/coursee/2022": {
           "name": "Hata Ayıklama Kılavuzu",
@@ -541,7 +601,7 @@
           "type": "Kaynak"
         },
         "sprite_lab_documentation/coursee/2022": {
-          "name": "Peri Laboratuvar Belgelendirmesi",
+          "name": "Sprite Lab Dökümanları",
           "url": "https://studio.code.org/docs/spritelab/",
           "type": "Kaynak"
         },
@@ -551,9 +611,12 @@
           "type": "Kaynak"
         },
         "virtual_lesson_modifications/coursee/2022": {
-          "name": "Sanal Ders Değişiklikleri"
+          "name": "Sanal Ders Değişiklikleri",
+          "url": "https://docs.google.com/document/d/1WDr-KRGUThXMzL1ppDIkbueQrJfF0lwrwFhEsO6ET5s/view"
         },
         "extension_lessons_micro_bit/coursee/2022": {
+          "name": "micro:bit ile Uzatma Dersleri",
+          "url": "https://code.org/maker/csf-microbit",
           "type": "Kaynak"
         },
         "be_a_super_digital_citizen_lesson_slides/coursee/2022": {
@@ -590,6 +653,8 @@
           "type": "Öğrenci Videosu"
         },
         "csf_-_course_e_-_slides_2022-2023/coursee/2022": {
+          "name": "CSF- Kurs E - Slaytlar 2022-2023",
+          "url": "https://docs.google.com/presentation/d/1Zt7oK0fuOR8XyKsCjWos3jfifO1uD0KFZfK8cbJulH8/template/preview",
           "type": "Slaytlar"
         },
         "swimming_fish_teacher_sandbox/coursee/2022": {
@@ -598,6 +663,8 @@
           "type": "Programlama Seviyesi"
         },
         "csf_-_course_e_-_slides_2022-2023_1/coursee/2022": {
+          "name": "CSF- Kurs E - Slaytlar 2022-2023",
+          "url": "https://docs.google.com/presentation/d/1Zt7oK0fuOR8XyKsCjWos3jfifO1uD0KFZfK8cbJulH8/template/preview",
           "type": "Slaytlar"
         },
         "about_me_planning_guide/coursee/2022": {
@@ -656,7 +723,7 @@
           "type": "Kaynak"
         },
         "digital_sharing_ethics_video_/coursee/2022": {
-          "name": "Dijital Paylaşım Etik (Video)",
+          "name": "Dijital Paylaşım Etiği (Video)",
           "url": "https://www.youtube.com/watch?v=o_oDsBeBxko",
           "type": "Video"
         },
@@ -667,10 +734,25 @@
         },
         "cs_fundamentals_final_project/coursee/2022": {
           "name": "CS Fundamentals Final Projesi",
+          "url": "https://docs.google.com/document/d/10G5rzAr3L3atKbp5JPIX9VyYIPhRwwxpCkzhIVlyHag/edit",
           "type": "Değerlendirme Tablosu"
         },
         "end_of_course_project_guide/coursee/2022": {
-          "name": "Kurs Projesi Kılavuzunun Sonu"
+          "name": "Kurs Projesi Kılavuzunun Sonu",
+          "url": "https://docs.google.com/document/d/1vNbI3RosjA5K2nQRoCTYGFmVReUvdubavvObCIljxuU/edit"
+        },
+        "2022_change_log/courseb/2022": {
+          "name": "2022 Değişiklik Günlüğü",
+          "url": "https://docs.google.com/document/d/1sX7-ByjcMmuYt8EvJdA9ON2sOYEWn0Cuzifbsyc8bUc/preview"
+        },
+        "all_resources/courseb/2022": {
+          "url": "/s/kursb-2022/kaynaklar"
+        },
+        "all_standards/courseb/2022": {
+          "url": "/s/kursb-2022/standartlar"
+        },
+        "all_vocabulary/courseb/2022": {
+          "url": "/s/kursb-2022/sözcük"
         },
         "common_core_and_ngss_guidance/courseb/2022": {
           "name": "Ortak Çekirdek ve NGSS Rehberliği",
@@ -678,12 +760,13 @@
           "type": "Kaynak"
         },
         "cross-curricular_extension_activities/courseb/2022": {
-          "name": "Müfredat Çapraz Uzatma Etkinlikleri",
+          "name": "Müfredatlar Arası Uzatma Faaliyetleri",
           "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview",
           "type": "Kaynak"
         },
         "curriculum_guide/courseb/2022": {
-          "name": "Mufredat Rehberi"
+          "name": "Mufredat Rehberi",
+          "url": "https://docs.google.com/document/d/12j5IkeGEWeAmWnZY9krbNSo8oKOKT5nIQGUH5J7Si80/preview"
         },
         "debugging_guide/courseb/2022": {
           "name": "Hata Ayıklama Kılavuzu",
@@ -706,7 +789,8 @@
           "type": "Kaynak"
         },
         "virtual_lesson_modifications/courseb/2022": {
-          "name": "Sanal Ders Değişiklikleri"
+          "name": "Sanal Ders Değişiklikleri",
+          "url": "https://docs.google.com/document/d/1lB1bXzIatKSSWLDLsLnRPXgoKR7Q-YzDQ1ClM0OcurU/view"
         },
         "digital_trails_animal_tracks/courseb/2022": {
           "name": "Dijital İzler: Hayvan İzleri",
@@ -729,7 +813,7 @@
           "type": "Sunum Destesi"
         },
         "feeling_faces_emotion_image/courseb/2022": {
-          "name": "Hissediyorum Yüzler Duygu Görüntüsü",
+          "name": "Duygu Yüzleri Duygu Görüntüsü",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
           "type": "Kaynak"
         },
@@ -768,7 +852,8 @@
           "type": "Duygu Resimleri"
         },
         "how_to_make_a_class_section_on_code_org/courseb/2022": {
-          "name": "Code.org'da bir Sınıf Bölümü Nasıl Yapılır"
+          "name": "Code.org'da bir Sınıf Bölümü Nasıl Yapılır",
+          "url": "https://youtu.be/4Wugxc80fNU"
         },
         "pair_programming/courseb/2022": {
           "name": "Eşli Programlama",
@@ -781,7 +866,7 @@
           "type": "Yönergeler"
         },
         "wiggles_-_gonoodle/courseb/2022": {
-          "name": "Wiggles - Goodle",
+          "name": "Wiggles - GoNoodle",
           "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
           "type": "Video"
         },
@@ -801,12 +886,12 @@
           "type": "Yönergeler"
         },
         "stevie_and_the_big_project/courseb/2022": {
-          "name": "Stevie ve büyük proje",
+          "name": "Stevie ve Büyük Proje",
           "url": "https://drive.google.com/file/d/0B-uvt08wYSQqTUFzaGxKSk45QkU/view",
           "type": "Kaynak"
         },
         "unspotted_bugs/courseb/2022": {
-          "name": "Bulunamamış hatalar",
+          "name": "Fark Edilmeyen Hatalar",
           "url": "https://youtu.be/rah3DYlp5nQ",
           "type": "Video"
         },
@@ -874,6 +959,15 @@
           "url": "https://docs.google.com/document/d/1ex5R2X4uELzPuOpFMwENg01MHAMmF5g_/edit?usp=share_link&ouid=109161598002566703443&rtpof=true&sd=true",
           "type": "Cevap Anahtarı"
         },
+        "all_resources/express/2022": {
+          "url": "/s/express-2022/kaynaklar"
+        },
+        "all_standards/express/2022": {
+          "url": "/s/express-2022/standartlar"
+        },
+        "all_vocabulary/express/2022": {
+          "url": "/s/express-2022/sözcük"
+        },
         "debugging_guide/express/2022": {
           "name": "Hata Ayıklama Kılavuzu",
           "url": "https://docs.google.com/document/d/1z2FgBWwUq6vxwWbnbiQC0EaEKxwgAqBdtTZzVi98xHA/preview"
@@ -913,7 +1007,7 @@
           "type": "Çalışma Kağıdı"
         },
         "sprite_lab_documentation/express/2022": {
-          "name": "Peri Laboratuvar Belgelendirmesi",
+          "name": "Sprite Lab Dökümanları",
           "url": "https://studio.code.org/docs/spritelab/",
           "type": "Kaynak"
         },
@@ -974,6 +1068,15 @@
           "url": "https://docs.google.com/document/d/1k_TQ5juruh79PiqGE4t1j9X3siaBRNFaKxODsytTj64/edit?usp=sharing",
           "type": "Proje Kılavuzu"
         },
+        "all_resources/pre-express/2022": {
+          "url": "/s/pre-express-2022/kaynaklar"
+        },
+        "all_standards/pre-express/2022": {
+          "url": "/s/pre-express-2022/standartlar"
+        },
+        "all_vocabulary/pre-express/2022": {
+          "url": "/s/pre-express-2022/sözcük"
+        },
         "debugging_guide/pre-express/2022": {
           "name": "Hata Ayıklama Kılavuzu",
           "url": "https://docs.google.com/document/d/1z2FgBWwUq6vxwWbnbiQC0EaEKxwgAqBdtTZzVi98xHA/preview"
@@ -1013,18 +1116,32 @@
           "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
           "type": "Video"
         },
+        "2022_change_log/coursea/2022": {
+          "name": "2022 Değişiklik Günlüğü",
+          "url": "https://docs.google.com/document/d/1sX7-ByjcMmuYt8EvJdA9ON2sOYEWn0Cuzifbsyc8bUc/preview"
+        },
+        "all_resources/coursea/2022": {
+          "url": "/s/kursa-2022/resources"
+        },
+        "all_standards/coursea/2022": {
+          "url": "/s/kursa-2022/standards"
+        },
+        "all_vocabulary/coursea/2022": {
+          "url": "/s/kursa-2022/vocab"
+        },
         "common_core_and_ngss_guidance/coursea/2022": {
           "name": "Ortak Çekirdek ve NGSS Rehberliği",
           "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.vq4s1h2aaxxy",
           "type": "Kaynak"
         },
         "cross-curricular_extension_activities/coursea/2022": {
-          "name": "Müfredat Çapraz Uzatma Etkinlikleri",
+          "name": "Müfredatlar Arası Uzatma Faaliyetleri",
           "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview",
           "type": "Kaynak"
         },
         "curriculum_guide/coursea/2022": {
-          "name": "Mufredat Rehberi"
+          "name": "Mufredat Rehberi",
+          "url": "https://docs.google.com/document/d/12j5IkeGEWeAmWnZY9krbNSo8oKOKT5nIQGUH5J7Si80/preview"
         },
         "debugging_guide/coursea/2022": {
           "name": "Hata Ayıklama Kılavuzu",
@@ -1047,7 +1164,8 @@
           "type": "Kaynak"
         },
         "virtual_lesson_modifications/coursea/2022": {
-          "name": "Sanal Ders Değişiklikleri"
+          "name": "Sanal Ders Değişiklikleri",
+          "url": "https://docs.google.com/document/d/1yaXgv2_aX3vMhK1HAZbaSu1Cg3yKD4HgfqRu4_pGtYY/view"
         },
         "safety_in_my_online_neighborhood_lesson_slides/coursea/2022": {
           "name": "Çevrimiçi Mahallemde Güvenlik: Ders Slaytları",
@@ -1085,7 +1203,7 @@
           "type": "Öğrenci Videosu"
         },
         "wiggles-go_noodle/coursea/2022": {
-          "name": "Wiggles-Go Erişte",
+          "name": "Wiggles-Go Noodle",
           "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
           "type": "Video"
         },
@@ -1120,7 +1238,7 @@
           "type": "Yönergeler"
         },
         "wiggles_-_gonoodle/coursea/2022": {
-          "name": "Wiggles - Goodle",
+          "name": "Wiggles - GoNoodle",
           "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
           "type": "Video"
         },
@@ -1130,7 +1248,7 @@
           "type": "Video"
         },
         "feeling_faces_emotion_image/coursea/2022": {
-          "name": "Hissediyorum Yüzler Duygu Görüntüsü",
+          "name": "Duygu Yüzleri Duygu Görüntüsü",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
           "type": "Kaynak"
         },
@@ -1203,18 +1321,32 @@
           "url": "https://docs.google.com/document/d/1PpohIDmip6AJCb49kpIdQQRyfDbOgyTt/edit?usp=share_link&ouid=109161598002566703443&rtpof=true&sd=true",
           "type": "Cevap Anahtarı"
         },
+        "2022_change_log/coursec/2022": {
+          "name": "2022 Değişiklik Günlüğü",
+          "url": "https://docs.google.com/document/d/1sX7-ByjcMmuYt8EvJdA9ON2sOYEWn0Cuzifbsyc8bUc/preview"
+        },
+        "all_resources/coursec/2022": {
+          "url": "/s/kursc-2022/resources"
+        },
+        "all_standards/coursec/2022": {
+          "url": "/s/kursc-2022/standards"
+        },
+        "all_vocabulary/coursec/2022": {
+          "url": "/s/coursec-2022/vocab"
+        },
         "common_core_and_ngss_guidance/coursec/2022": {
           "name": "Ortak Çekirdek ve NGSS Rehberliği",
           "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.a5iytir4b96q",
           "type": "Kaynak"
         },
         "cross-curricular_extension_activities/coursec/2022": {
-          "name": "Müfredat Çapraz Uzatma Etkinlikleri",
+          "name": "Müfredatlar Arası Uzatma Faaliyetleri",
           "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview",
           "type": "Kaynak"
         },
         "curriculum_guide/coursec/2022": {
-          "name": "Mufredat Rehberi"
+          "name": "Mufredat Rehberi",
+          "url": "https://docs.google.com/document/d/12j5IkeGEWeAmWnZY9krbNSo8oKOKT5nIQGUH5J7Si80/preview"
         },
         "debugging_guide_1/coursec/2022": {
           "name": "Hata Ayıklama Kılavuzu",
@@ -1237,9 +1369,12 @@
           "type": "Kaynak"
         },
         "virtual_lesson_modifications/coursec/2022": {
-          "name": "Sanal Ders Değişiklikleri"
+          "name": "Sanal Ders Değişiklikleri",
+          "url": "https://docs.google.com/document/d/1p71nZ3SqyNNVIJtQwPA_LTdcnL9RDsxIo5mQe9Gd-hQ/view"
         },
         "extension_lessons_micro_bit/coursec/2022": {
+          "name": "micro:bit ile Uzatma Dersleri",
+          "url": "https://code.org/maker/csf-microbit",
           "type": "Kaynak"
         },
         "putting_a_stop_to_online_meanness_lesson_slides/coursec/2022": {
@@ -1253,30 +1388,32 @@
           "type": "Öğrenci Notu"
         },
         "csf_-_course_c_-_slides_2022-2023/coursec/2022": {
+          "name": "CSF- Kurs C - Slaytlar 2022-2023",
+          "url": "https://docs.google.com/presentation/d/1gBtG-smXiAPsk5LJhkVsoX795WN18AZFRdml5uJynug/template/preview",
           "type": "Slaytlar"
         },
         "my_robotic_friends/coursec/2022": {
-          "name": "Robot dostlarım",
+          "name": "Robotik Arkadaşlarım",
           "url": "https://docs.google.com/document/d/1jGz8znfkzhgZ3RNd7Kg1AnDZ2LZ7vjf7VujzPz_84b4/edit",
           "type": "Bardak Aralıklandırma"
         },
         "my_robotic_friends_1/coursec/2022": {
-          "name": "Robot dostlarım",
+          "name": "Robotik Arkadaşlarım",
           "url": "https://docs.google.com/document/d/1D8W0FETv5OBGj-Fl8gJGHruSvbAhoEtCs6SZxSkKOSc/edit",
           "type": "Sembol Anahtarı"
         },
         "my_robotic_friends_2/coursec/2022": {
-          "name": "Robot dostlarım",
+          "name": "Robotik Arkadaşlarım",
           "url": "https://youtu.be/xaW3PAzHxCU",
           "type": "Bağlantısız Video"
         },
         "my_robotic_friends_3/coursec/2022": {
-          "name": "Robot dostlarım",
+          "name": "Robotik Arkadaşlarım",
           "url": "https://docs.google.com/document/d/1cq6CvIuCrpS9MfRySO1070uXZ238OuXcqou1mfjV7BM/edit",
           "type": "Bardak Dizme Fikirleri"
         },
         "my_robotic_friends_4/coursec/2022": {
-          "name": "Robot dostlarım",
+          "name": "Robotik Arkadaşlarım",
           "url": "https://docs.google.com/document/d/1go_BJorY8OzmqWyB5z8_FY7bbPCWg1ZBxfjewU0nMmA/edit",
           "type": "Kağıt Yamuk Şablonu"
         },
@@ -1340,17 +1477,18 @@
           "type": "Değerlendirme Cevap Anahtarı"
         },
         "the_big_event_course_c_/coursec/2022": {
-          "name": "Büyük Olay (Kurs C)",
+          "name": "Büyük Etkinlik (Kurs C)",
           "url": "https://docs.google.com/document/d/1WlrJ6FKqrcvuyDWADnJiGpOo7rfolKcT5QH4W4uEptQ/edit",
           "type": "Olay Kontrolörü"
         },
         "level_solutions/coursec/2022": {
-          "name": "Açık uçlu Programlama Düzeyleri",
+          "name": "Örnek Seviye Çözümleri",
           "url": "https://docs.google.com/document/d/1cJ_FIgqGEt1OikBc53bEJGhFFOLrppJ2pRWAw-bmV0k/view",
           "type": "Cevap Anahtarı"
         },
         "open-ended_programming_levels/coursec/2022": {
           "name": "Açık uçlu Programlama Düzeyleri",
+          "url": "https://docs.google.com/document/d/1cJ_FIgqGEt1OikBc53bEJGhFFOLrppJ2pRWAw-bmV0k/view",
           "type": "Cevap Anahtarı"
         },
         "pause_and_think_online/coursec/2022": {
@@ -1364,7 +1502,7 @@
           "type": "Cevap Anahtarı"
         },
         "graphing_data_from_play_lab/coursec/2022": {
-          "name": "Play Lab'dan Veri Graflama",
+          "name": "Play Lab'den Verileri Grafikleştirme",
           "url": "https://docs.google.com/document/d/1H-kMSdLj4xTrEQPmS0ukyol73heln0F_/edit?usp=share_link&ouid=109161598002566703443&rtpof=true&sd=true",
           "type": "Çalışma Kağıdı"
         },
@@ -1571,8 +1709,18 @@
           "name": "Proje - Bir Öneri Yapın",
           "type": "Slaytlar"
         },
+        "all_resources_5/csd/2022": {
+          "url": "/s/csd1-2022/kaynaklar"
+        },
+        "all_standards_5/csd/2022": {
+          "url": "/s/csd1-2022/standartlar"
+        },
+        "all_vocabulary_5/csd/2022": {
+          "url": "/s/csd1-2022/kelimeler"
+        },
         "intro_to_problem_solving/csd/2022": {
           "name": "Problem çözme tanıtımı",
+          "url": "https://docs.google.com/presentation/d/1zpwDZmqxT8pW9ZxUBfQ3rZhWvjANQPbrz4XE18reP-8/template/preview",
           "type": "Slaytlar"
         },
         "problem_solving_process/csd/2022": {
@@ -1590,6 +1738,7 @@
         },
         "the_problem_solving_process_1/csd/2022": {
           "name": "Problem çözme süreci",
+          "url": "https://docs.google.com/presentation/d/1vCSb1Q5LCJsoDf9xg2hI7rwKvVot0yX6oEAhT2UQHKY/template/preview",
           "type": "Slaytlar"
         },
         "solving_problems/csd/2022": {
@@ -1597,6 +1746,7 @@
         },
         "exploring_problem_solving/csd/2022": {
           "name": "Problem çözmeyi keşfetme",
+          "url": "https://docs.google.com/presentation/d/1_-cc28V0UGo-lNB9yJRPvGlHwdMSnYpcoi9lwJVkHEc/template/preview",
           "type": "Slaytlar"
         },
         "what_is_a_computer/csd/2022": {
@@ -1606,6 +1756,7 @@
           "name": "Bilgisayar nedir?"
         },
         "what_is_a_computer_1/csd/2022": {
+          "url": "https://docs.google.com/presentation/d/1v8ErjlG4MLpdwJ-paeJ1PJlUMY3nXL8RfoBK_DczJ-M/template/preview",
           "type": "Slaytlar"
         },
         "input_and_output/csd/2022": {
@@ -3137,7 +3288,7 @@
           "type": "Kaynak"
         },
         "cross-curricular_extension_activities_1/coursef/2021": {
-          "name": "Müfredat Çapraz Uzatma Etkinlikleri",
+          "name": "Müfredatlar Arası Uzatma Faaliyetleri",
           "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview",
           "type": "Kaynak"
         },
@@ -3167,7 +3318,7 @@
           "type": "Kaynak"
         },
         "sprite_lab_documentation_1/coursef/2021": {
-          "name": "Peri Laboratuvar Belgelendirmesi",
+          "name": "Sprite Lab Dökümanları",
           "url": "https://studio.code.org/docs/spritelab/",
           "type": "Kaynak"
         },
@@ -3207,7 +3358,7 @@
           "type": "Slaytlar"
         },
         "sprite_lab_documentation/coursef/2021": {
-          "name": "Peri Laboratuvar Belgelendirmesi",
+          "name": "Sprite Lab Dökümanları",
           "url": "https://studio.code.org/docs/spritelab/",
           "type": "Kaynak"
         },
@@ -3395,7 +3546,7 @@
           "type": "Kaynak"
         },
         "cross-curricular_extension_activities/courseb/2021": {
-          "name": "Müfredat Çapraz Uzatma Etkinlikleri",
+          "name": "Müfredatlar Arası Uzatma Faaliyetleri",
           "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview",
           "type": "Kaynak"
         },
@@ -3455,7 +3606,7 @@
           "type": "Sunum Destesi"
         },
         "feeling_faces_emotion_image/courseb/2021": {
-          "name": "Hissediyorum Yüzler Duygu Görüntüsü",
+          "name": "Duygu Yüzleri Duygu Görüntüsü",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
           "type": "Kaynak"
         },
@@ -3508,7 +3659,7 @@
           "type": "Öğrenci Videosu"
         },
         "wiggles_-_gonoodle/courseb/2021": {
-          "name": "Wiggles - Goodle",
+          "name": "Wiggles - GoNoodle",
           "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
           "type": "Video"
         },
@@ -3528,12 +3679,12 @@
           "type": "Yönergeler"
         },
         "stevie_and_the_big_project/courseb/2021": {
-          "name": "Stevie ve büyük proje",
+          "name": "Stevie ve Büyük Proje",
           "url": "https://drive.google.com/file/d/0B-uvt08wYSQqTUFzaGxKSk45QkU/view",
           "type": "Kaynak"
         },
         "unspotted_bugs/courseb/2021": {
-          "name": "Bulunamamış hatalar",
+          "name": "Tespit Edilmemiş Hatalar",
           "url": "https://youtu.be/rah3DYlp5nQ",
           "type": "Video"
         },
@@ -3618,7 +3769,7 @@
           "type": "Kaynak"
         },
         "cross-curricular_extension_activities/coursea/2021": {
-          "name": "Müfredat Çapraz Uzatma Etkinlikleri",
+          "name": "Müfredatlar Arası Uzatma Faaliyetleri",
           "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview",
           "type": "Kaynak"
         },
@@ -3693,7 +3844,7 @@
           "type": "Öğrenci Videosu"
         },
         "wiggles-go_noodle/coursea/2021": {
-          "name": "Wiggles-Go Erişte",
+          "name": "Wiggles-Go Noodle",
           "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
           "type": "Video"
         },
@@ -3733,7 +3884,7 @@
           "type": "Yönergeler"
         },
         "wiggles_-_gonoodle/coursea/2021": {
-          "name": "Wiggles - Goodle",
+          "name": "Wiggles - GoNoodle",
           "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
           "type": "Video"
         },
@@ -3743,7 +3894,7 @@
           "type": "Video"
         },
         "feeling_faces_emotion_image/coursea/2021": {
-          "name": "Hissediyorum Yüzler Duygu Görüntüsü",
+          "name": "Duygu Yüzleri Duygu Görüntüsü",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
           "type": "Kaynak"
         },
@@ -3753,7 +3904,7 @@
           "type": "Kaynak"
         },
         "feeling_faces_emotion_image_1/coursea/2021": {
-          "name": "Hissediyorum Yüzler Duygu Görüntüsü",
+          "name": "Duygu Yüzleri Duygu Görüntüsü",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
           "type": "Kaynak"
         },
@@ -3783,7 +3934,7 @@
           "type": "Kaynak"
         },
         "feeling_faces_emotion_image_2/coursea/2021": {
-          "name": "Hissediyorum Yüzler Duygu Görüntüsü",
+          "name": "Duygu Yüzleri Duygu Görüntüsü",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
           "type": "Kaynak"
         },
@@ -3798,7 +3949,7 @@
           "type": "Kaynak"
         },
         "feeling_faces_emotion_image_3/coursea/2021": {
-          "name": "Hissediyorum Yüzler Duygu Görüntüsü",
+          "name": "Duygu Yüzleri Duygu Görüntüsü",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
           "type": "Kaynak"
         },
@@ -3867,7 +4018,7 @@
           "type": "Kaynak"
         },
         "cross-curricular_extension_activities/coursec/2021": {
-          "name": "Müfredat Çapraz Uzatma Etkinlikleri",
+          "name": "Müfredatlar Arası Uzatma Faaliyetleri",
           "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview",
           "type": "Kaynak"
         },
@@ -3912,32 +4063,32 @@
           "type": "Sunum Destesi"
         },
         "putting-a-stop-to-online-meanness-stop-online-meanness/coursec/2021": {
-          "name": "Çevrimiçi Ortalama Durdurmak: Online Ortalama Durdur",
+          "name": "Çevrimiçi anlamsızlığı DURDURMAK: Çevrimiçi anlamsızlığı DURDURUN",
           "url": "https://docs.google.com/document/d/1gXXWbEocNfvw4fWdo7nQJ0r2FjoNeyElr8IcANUqLlo/edit?usp=sharing",
           "type": "Öğrenci Notu"
         },
         "csf-mrf-cup-spacing/coursec/2021": {
-          "name": "Robot dostlarım",
+          "name": "Robotik Arkadaşlarım",
           "url": "https://docs.google.com/document/d/1jGz8znfkzhgZ3RNd7Kg1AnDZ2LZ7vjf7VujzPz_84b4/edit",
           "type": "Bardak Aralıklandırma"
         },
         "csf-mrf-cup-stacking-ideas/coursec/2021": {
-          "name": "Robot dostlarım",
+          "name": "Robotik Arkadaşlarım",
           "url": "https://docs.google.com/document/d/1cq6CvIuCrpS9MfRySO1070uXZ238OuXcqou1mfjV7BM/edit",
           "type": "Bardak Dizme Fikirleri"
         },
         "csf-mrf-paper-trapezoid-template/coursec/2021": {
-          "name": "Robot dostlarım",
+          "name": "Robotik Arkadaşlarım",
           "url": "https://docs.google.com/document/d/1go_BJorY8OzmqWyB5z8_FY7bbPCWg1ZBxfjewU0nMmA/edit",
           "type": "Kağıt Yamuk Şablonu"
         },
         "csf-mrf-symbol-key/coursec/2021": {
-          "name": "Robot dostlarım",
+          "name": "Robotik Arkadaşlarım",
           "url": "https://docs.google.com/document/d/1D8W0FETv5OBGj-Fl8gJGHruSvbAhoEtCs6SZxSkKOSc/edit",
           "type": "Sembol Anahtarı"
         },
         "unplugged-video-robotic-friends/coursec/2021": {
-          "name": "Robot dostlarım",
+          "name": "Robot Arkadaşlarım",
           "url": "https://youtu.be/xaW3PAzHxCU",
           "type": "Bağlantısız Video"
         },
@@ -3986,7 +4137,7 @@
           "type": "Öğrenci Videosu"
         },
         "feeling_faces_emotion_image/coursec/2021": {
-          "name": "Hissediyorum Yüzler Duygu Görüntüsü",
+          "name": "Duygu Yüzleri Duygu Görüntüsü",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs",
           "type": "Kaynak"
         },
@@ -4001,7 +4152,7 @@
           "type": "Değerlendirme"
         },
         "the_big_event_course_c_/coursec/2021": {
-          "name": "Büyük Olay (Kurs C)",
+          "name": "Büyük Etkinlik (Kurs C)",
           "url": "https://docs.google.com/document/d/1WlrJ6FKqrcvuyDWADnJiGpOo7rfolKcT5QH4W4uEptQ/edit",
           "type": "Olay Kontrolörü"
         },
@@ -4011,7 +4162,7 @@
           "type": "Bağlantısız Video"
         },
         "open-ended_programming_levels/coursec/2021": {
-          "name": "Açık uçlu Programlama Düzeyleri",
+          "name": "Örnek Seviye Çözümleri",
           "url": "https://docs.google.com/document/d/1cJ_FIgqGEt1OikBc53bEJGhFFOLrppJ2pRWAw-bmV0k/view",
           "type": "Cevap Anahtarı"
         },
@@ -4026,7 +4177,7 @@
           "type": "Cevap Anahtarı"
         },
         "right-app-scenarios/coursec/2021": {
-          "name": "Play Lab'dan Veri Graflama",
+          "name": "Play Lab'den Verileri Grafikleştirme",
           "url": "https://docs.google.com/document/d/1H-kMSdLj4xTrEQPmS0ukyol73heln0F_/edit?usp=share_link&ouid=109161598002566703443&rtpof=true&sd=true",
           "type": "Çalışma Kağıdı"
         },
@@ -4086,7 +4237,7 @@
           "type": "Kaynak"
         },
         "cross-curricular_extension_activities/coursed/2021": {
-          "name": "Müfredat Çapraz Uzatma Etkinlikleri",
+          "name": "Müfredatlar Arası Uzatma Faaliyetleri",
           "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview",
           "type": "Kaynak"
         },
@@ -4245,7 +4396,7 @@
           "type": "Video"
         },
         "open-ended_programming_levels_1/coursed/2021": {
-          "name": "Açık uçlu Programlama Düzeyleri",
+          "name": "Örnek Seviye Çözümleri",
           "url": "https://docs.google.com/document/d/14qVMrzEOkq7m0gRjtYI8Erb1nGbx_XCz4TSm_d_xCls/view",
           "type": "Cevap Anahtarı"
         },
@@ -4362,7 +4513,7 @@
           "type": "Çalışma Kağıdı"
         },
         "sprite_lab_documentation/express/2021": {
-          "name": "Peri Laboratuvar Belgelendirmesi",
+          "name": "Sprite Lab Dökümanları",
           "url": "https://studio.code.org/docs/spritelab/",
           "type": "Kaynak"
         },
@@ -4376,7 +4527,7 @@
           "type": "Slaytlar"
         },
         "sprite_lab_documentation_1/express/2021": {
-          "name": "Peri Laboratuvar Belgelendirmesi",
+          "name": "Sprite Lab Dökümanları",
           "url": "https://studio.code.org/docs/spritelab/",
           "type": "Kaynak"
         },
@@ -4514,7 +4665,7 @@
           "type": "Kaynak"
         },
         "cross-curricular_extension_activities/coursee/2021": {
-          "name": "Müfredat Çapraz Uzatma Etkinlikleri",
+          "name": "Müfredatlar Arası Uzatma Faaliyetleri",
           "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview",
           "type": "Kaynak"
         },
@@ -4544,7 +4695,7 @@
           "type": "Kaynak"
         },
         "sprite_lab_documentation_1/coursee/2021": {
-          "name": "Peri Laboratuvar Belgelendirmesi",
+          "name": "Sprite Lab Dökümanları",
           "url": "https://studio.code.org/docs/spritelab/"
         },
         "teacher_forum_1/coursee/2021": {
@@ -4558,11 +4709,12 @@
           "type": "Kaynak"
         },
         "follow_the_algorithm/coursee/2021": {
+          "name": "Algoritmayı Takip Edin",
           "url": "https://docs.google.com/presentation/d/16r9HpwQodVnmSfRlfJmOfZajqE66YlZz0aG60CFsVMk/template/preview",
           "type": "Slaytlar"
         },
         "sprite_lab_documentation/coursee/2021": {
-          "name": "Peri Laboratuvar Belgelendirmesi",
+          "name": "Sprite Lab Dökümanları",
           "url": "https://studio.code.org/docs/spritelab/",
           "type": "Kaynak"
         },
@@ -4620,7 +4772,7 @@
           "type": "Kaynak"
         },
         "digital-sharing-video/coursee/2021": {
-          "name": "Dijital Paylaşım Etik (Video)",
+          "name": "Dijital Paylaşım Etiği (Video)",
           "url": "https://www.youtube.com/watch?v=o_oDsBeBxko",
           "type": "Video"
         },

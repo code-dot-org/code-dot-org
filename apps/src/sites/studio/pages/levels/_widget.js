@@ -1,18 +1,18 @@
 /**
  * @file JavaScript loaded in all Widget-type levels.
  */
-/* global appOptions */
+
 import $ from 'jquery';
 import React from 'react';
 import {
   showDialog,
-  processResults
+  processResults,
 } from '@cdo/apps/code-studio/levels/dialogHelper';
 import {registerGetResult} from '@cdo/apps/code-studio/levels/codeStudioLevels';
 import {setupApp} from '@cdo/apps/code-studio/initApp/loadApp';
 import {
   LegacyStartOverDialog,
-  LegacyInstructionsDialog
+  LegacyInstructionsDialog,
 } from '@cdo/apps/lib/ui/LegacyDialogContents';
 import {reportTeacherReviewingStudentNonLabLevel} from '@cdo/apps/lib/util/analyticsUtils';
 import i18n from '@cdo/locale';
@@ -22,7 +22,7 @@ export function showInstructionsDialog() {
     <LegacyInstructionsDialog
       title={i18n.puzzleTitle({
         stage_total: appOptions.level.lesson_total,
-        puzzle_number: appOptions.level.puzzle_number
+        puzzle_number: appOptions.level.puzzle_number,
       })}
       markdown={appOptions.level.longInstructions}
     />
@@ -48,11 +48,11 @@ window.dashboard.widget = {
   showStartOverDialog: callback =>
     showDialog(<LegacyStartOverDialog />, callback),
   // used by frequency, vigenere, and pixelation widgets
-  processResults: processResults
+  processResults: processResults,
 };
 
 // On load (note - widget-specific setup may happen before this!)
-$(document).ready(function() {
+$(document).ready(function () {
   $('#bubble').click(showInstructionsDialog);
 
   reportTeacherReviewingStudentNonLabLevel();

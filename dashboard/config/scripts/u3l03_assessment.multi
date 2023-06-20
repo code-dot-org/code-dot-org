@@ -1,19 +1,21 @@
 name 'U3L03 Assessment'
-encrypted 'BwjXxHvCUoheGIsFX+DIkqsr4Si/b9uQtMIudhj4tF1c1i9DB3AsbQ25uqme
-LOBZ4wLQXANoB9y87Lls2ZlwX/TdTkavzv+B4JI/+iSYNyRlfeuyGYMyQ6t7
-i2GOQ2dfpcQLpR9taDstwepWA52zVsUlH2x8B5ks5l/4H7GB4tyIswSI+zB8
-HpKEjBeb07VKTNexvvFDLo5cirMeVZJa3BDuj7P864CL78vHIpT30aDx+pSR
-QxiVJrlXjge4EiEywojnst2ctf8rbPcuochGyeHqVt9rKC0RDHWAMGOPalSy
-au7EUtNQUmBhdy1ZY73HnZoXMzaWMu5js9v4u+qU9f/Y2flLCaoM56Sj7DKa
-11VGdoEjiRQv9Nm4ns2r83qGRhZvCu3BP8SlfXn4kFU/DJb8S99/vtS91xTS
-+v2Caa6ohsykYRT9hY6kouZGfzACc8uUlfxAb4zxrkRUaubZEUKzo5o35a2I
-5KOI9UW2ZmDoeePKUVpU1FX1ukbRlY80KD9CNyV7yUub7sWSzyOVfNh+NCqW
-AngtDfXYYfBlIuOC6IfaMOtqugR/bLexKQfwQ7sqpZPhsMsZ4P+SRqTCx7CB
-sGjhWwOxFFqBsPuQQz4ATsV0SJ+CzPsGgLffXsKXqFpQ1U9X2pXmKO+Q0CJE
-P94iCOFl/kx1NUYg1BVVjj2L47qTAhDbzZ3NQdcuOOfnFQEzwppudyaxTORH
-AcaIGzzPQUJ/fztfdxOeNmPONs1uF7JoxyiAwp31N/4HCMzakGPvnALkGaPr
-/9lsVPCqPvEU79Xfcs8ZVLktJCiAGC0i+f9E3y6fgffmf1tRNcH5DPeKbg4M
-X0pmTrU20FsxHujPCEIbUx2dPNQ9j75uWfZ1XivVMmqs7YoFasLQBjACSk+K
-jLH26jLsEWghGyUVvr/GNDf41zTYTvBUTeEAt+z7Zstaa77gukGQh0MIvuhn
-3sYQsnzx/n23sQrymjd+cQ==
-'
+title 'Multiple Choice: False Statements about Functions'
+
+question 'Which of the following is NOT a true statement about functions?'
+
+wrong 'Functions are reusable programming abstractions.'
+wrong 'Functions help reduce the complexity of writing and maintaining programs.'
+wrong 'Functions help break a problem into logical chunks.'
+wrong 'Once defined, a function can be called many times from different parts of a program.'
+right 'Functions cannot make calls to other functions written by the same programmer.'
+
+markdown <<MARKDOWN
+
+MARKDOWN
+teacher_markdown <<MARKDOWN
+Correct answer:
+
+* Functions cannot make calls to other functions written by the same programmer.
+MARKDOWN
+
+allow_multiple_attempts true

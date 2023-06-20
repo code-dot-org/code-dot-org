@@ -2088,6 +2088,18 @@
               "length": "довжина",
               "sides": "сторони"
             }
+          },
+          "small flower": {
+            "name": "невелика квітка"
+          },
+          "LOGIC FLOWERS2": {
+            "name": "ЛОГІЧНІ КВІТИ2"
+          },
+          "LOGIC FLOWER": {
+            "name": "ЛОГІЧНА КВІТКА"
+          },
+          "LOGIC FLOWERS": {
+            "name": "ЛОГІЧНІ КВІТИ"
           }
         },
         "Course F: Artist Project_Flowers_examples_2021": {
@@ -2283,7 +2295,11 @@
           "draw flame": {
             "parameters": {
               "x": "x"
-            }
+            },
+            "name": "намалювати полум'я"
+          },
+          "draw fire": {
+            "name": "намалювати пожежу"
           }
         },
         "courseC_data wizard_2021": {
@@ -2294,11 +2310,20 @@
         "courseE_artist_functions10_2021": {
           "do something": {
             "name": "щось зробити"
+          },
+          "draw hexagon": {
+            "name": "намалюй шестикутник"
+          },
+          "draw line of hexagons": {
+            "name": "намалюй лінію шестикутника"
           }
         },
         "courseE_artist_functions2_2021": {
           "draw a square": {
             "name": "намалювати квадрат"
+          },
+          "draw ear stems": {
+            "name": "намалювати стебла колосків"
           }
         },
         "courseE_artist_functions2_dani": {
@@ -2335,6 +2360,9 @@
           },
           "draw square": {
             "name": "намалюйте квадрат"
+          },
+          "staggered squares": {
+            "name": "квадрати, розташовані в шаховому порядку"
           }
         },
         "courseE_artist_functions8a_2021": {
@@ -2365,6 +2393,9 @@
           },
           "do something": {
             "name": "щось зробити"
+          },
+          "staggered squares": {
+            "name": "квадрати, розташовані в шаховому порядку"
           }
         },
         "courseE_artist_functions9_2021": {
@@ -2373,6 +2404,9 @@
           },
           "draw triangle": {
             "name": "намалювати трикутник"
+          },
+          "draw line of triangles": {
+            "name": "намалюй лінію трикутників"
           }
         },
         "courseE_artist_functionsProj_2021": {
@@ -2381,16 +2415,31 @@
           },
           "draw square": {
             "name": "намалюйте квадрат"
+          },
+          "draw hexagon": {
+            "name": "намалюй шестикутник"
+          },
+          "draw line of hexagons": {
+            "name": "намалюй лінію шестикутника"
+          },
+          "staggered squares": {
+            "name": "квадрати, розташовані в шаховому порядку"
           }
         },
         "courseE_artist_functions_challenge1_2021": {
           "do something": {
             "name": "щось зробити"
+          },
+          "my design": {
+            "name": "мій дизайн"
           }
         },
         "courseE_artist_functions_challenge2_2021": {
           "do something": {
             "name": "щось зробити"
+          },
+          "my design": {
+            "name": "мій дизайн"
           }
         },
         "courseE_artist_functions_predict1_2021": {
@@ -2406,6 +2455,12 @@
         "courseE_artist_functions_predict2_2021": {
           "do something": {
             "name": "щось зробити"
+          },
+          "draw line of polygons": {
+            "name": "намалюй лінію багатокутника"
+          },
+          "draw polygon": {
+            "name": "намалюйте багатокутник"
           }
         },
         "courseE_farmer_functions10a1_2021": {
@@ -2414,6 +2469,12 @@
           },
           "get all pumpkins": {
             "name": "отримати всі гарбузи"
+          },
+          "check square for corn": {
+            "name": "перевір квадрат для кукурудзи"
+          },
+          "pumpkin square": {
+            "name": "квадрат гарбуза"
           }
         },
         "courseE_farmer_functions11_predict_2021": {
@@ -2422,16 +2483,37 @@
           },
           "get all pumpkins": {
             "name": "отримати всі гарбузи"
+          },
+          "pumpkin square": {
+            "name": "квадрат гарбуза"
+          },
+          "check square for corn": {
+            "name": "перевір квадрат для кукурудзи"
+          },
+          "get produce": {
+            "name": "отримай врожай"
           }
         },
         "courseE_farmer_functions13_2021": {
           "pick along path": {
             "name": "підібрати по шляху"
+          },
+          "check for corn": {
+            "name": "перевір кукурудзу"
+          },
+          "corn rectangle": {
+            "name": "прямокутник кукурудзи"
+          },
+          "lettuce stairs": {
+            "name": "сходи з салату"
           }
         },
         "courseE_farmer_functions2ba_2021": {
           "get all pumpkins": {
             "name": "отримати всі гарбузи"
+          },
+          "check square for corn": {
+            "name": "перевір квадрат для кукурудзи"
           }
         },
         "courseE_farmer_functions3c1_2021": {
@@ -2440,11 +2522,17 @@
           },
           "get all pumpkins": {
             "name": "отримати всі гарбузи"
+          },
+          "check square for corn": {
+            "name": "перевір квадрат для кукурудзи"
           }
         },
         "courseE_farmer_functions3c_2021": {
           "get all pumpkins": {
             "name": "отримати всі гарбузи"
+          },
+          "check square for corn": {
+            "name": "перевір квадрат для кукурудзи"
           }
         },
         "courseE_farmer_functions7a1_2021": {
@@ -3173,6 +3261,18 @@
               "length": "довжина",
               "sides": "сторони"
             }
+          },
+          "small flower": {
+            "name": "невелика квітка"
+          },
+          "LOGIC FLOWERS2": {
+            "name": "ЛОГІЧНІ КВІТИ2"
+          },
+          "LOGIC FLOWER": {
+            "name": "ЛОГІЧНА КВІТКА"
+          },
+          "LOGIC FLOWERS": {
+            "name": "ЛОГІЧНІ КВІТИ"
           }
         },
         "CourseD_EOC_artist2022": {
@@ -3485,6 +3585,46 @@
         "courseF_apps_collector_-2022-2": {
           "end game": {
             "name": "завершити гру"
+          }
+        },
+        "courseC_artist_prog4_2021": {
+          "booster": {
+            "name": "бустер"
+          }
+        },
+        "courseE_artist_functions7_2021": {
+          "draw a window": {
+            "name": "намалюй вікно"
+          }
+        },
+        "courseE_farmer_functions1a_2021": {
+          "check square for corn": {
+            "name": "перевір квадрат для кукурудзи"
+          }
+        },
+        "courseE_farmer_functions2b_2021": {
+          "check square for corn": {
+            "name": "перевір квадрат для кукурудзи"
+          }
+        },
+        "CourseF_app_computer": {
+          "reset game": {
+            "name": "скидання гри"
+          }
+        },
+        "CourseF_app_computer2022": {
+          "reset game": {
+            "name": "скидання гри"
+          }
+        },
+        "CourseF_app_computer_-2022-2": {
+          "reset game": {
+            "name": "скидання гри"
+          }
+        },
+        "courseF_bee_for_challenge1_2021": {
+          "move and get nectar with counter": {
+            "name": "рухайся та отримуй нектар за допомогою лічильника"
           }
         }
       }

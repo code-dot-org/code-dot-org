@@ -140,11 +140,13 @@
         },
         "CSD U1 processing live_2021": {
           "walking": "走路",
-          "bear": "熊仔"
+          "bear": "熊仔",
+          "rat": "老鼠"
         },
         "CSD U1 processing live_2022": {
           "walking": "走路",
-          "bear": "熊仔"
+          "bear": "熊仔",
+          "rat": "老鼠"
         },
         "CSD U1 processing npark_2021": {
           "Correct!": "正確！",
@@ -221,14 +223,16 @@
           "pink": "粉紅色",
           "green": "綠",
           "black": "黑",
-          "purple": "紫色"
+          "purple": "紫色",
+          "white": "白色"
         },
         "CSD U1 storage outfit_2022": {
           "Clear": "清除",
           "pink": "粉紅色",
           "green": "綠",
           "black": "黑",
-          "purple": "紫色"
+          "purple": "紫色",
+          "white": "白色"
         },
         "CSD U2 RGB intro": {
           "1": "1",
@@ -352,7 +356,8 @@
           "orange": "橙色"
         },
         "CSD U6 - Combine Inputs - PracD_2222": {
-          "Test": "測試"
+          "Test": "測試",
+          "quiet": "安靜"
         },
         "CSD U6 - Combine Inputs - SB2_2222": {
           "short": "短",
@@ -516,10 +521,12 @@
           "Welcome": "歡迎"
         },
         "CSD U6 - Screen Inputs - SB2.1_2022": {
-          "black": "黑"
+          "black": "黑",
+          "white": "白色"
         },
         "CSD U6 - Screen Inputs - SB2.2_2022": {
-          "black": "黑"
+          "black": "黑",
+          "white": "白色"
         },
         "CSD U6 - Screen Outputs - ChalB_2222": {
           "Happy": "快樂的",
@@ -556,7 +563,8 @@
           "low": "低"
         },
         "CSD U6 - Sensors - SB2_2222": {
-          "Update": "更新"
+          "Update": "更新",
+          "value": "值"
         },
         "CSD U6 Driver pt 2": {
           "You did it!": "你做到了！"
@@ -631,16 +639,20 @@
           "Success!": "成功！"
         },
         "CSD U6 analog light": {
-          "Update": "更新"
+          "Update": "更新",
+          "value": "值"
         },
         "CSD U6 analog light_2018": {
-          "Update": "更新"
+          "Update": "更新",
+          "value": "值"
         },
         "CSD U6 analog light_2019": {
-          "Update": "更新"
+          "Update": "更新",
+          "value": "值"
         },
         "CSD U6 analog light_2021": {
-          "Update": "更新"
+          "Update": "更新",
+          "value": "值"
         },
         "CSD U6 array piano": {
           "C": "C",
@@ -1006,7 +1018,8 @@
           "Blue": "藍",
           "Yes": "是",
           "No": "否",
-          "Save": "儲存"
+          "Save": "儲存",
+          "User": "使用者"
         },
         "CSDU4 Crowdsource App Demo_2018": {
           "About": "關於",
@@ -1018,7 +1031,8 @@
           "Blue": "藍",
           "Yes": "是",
           "No": "否",
-          "Save": "儲存"
+          "Save": "儲存",
+          "User": "使用者"
         },
         "CSDU4 Crowdsource App Demo_2019": {
           "About": "關於",
@@ -1030,7 +1044,8 @@
           "Blue": "藍",
           "Yes": "是",
           "No": "否",
-          "Save": "儲存"
+          "Save": "儲存",
+          "User": "使用者"
         },
         "CSDU4 Decision App Demo": {
           "About": "關於",
@@ -1518,6 +1533,54 @@
           "night": "夜晚",
           "dusk": "黃昏",
           "Predict": "預測"
+        },
+        "CSD U6 - Sensors - SB1_2222": {
+          "value": "值"
+        },
+        "CSD U6 - Sensors - SB3_2222": {
+          "value": "值"
+        },
+        "CSD U6 - Sensors - SB4.1_2222": {
+          "value": "值"
+        },
+        "CSD U6 - Sensors - SB4_2222": {
+          "value": "值"
+        },
+        "CSD U6 analog change": {
+          "value": "值"
+        },
+        "CSD U6 analog change_2018": {
+          "value": "值"
+        },
+        "CSD U6 analog change_2019": {
+          "value": "值"
+        },
+        "CSD U6 analog change_2021": {
+          "value": "值"
+        },
+        "CSD U6 analog data": {
+          "value": "值"
+        },
+        "CSD U6 analog data_2018": {
+          "value": "值"
+        },
+        "CSD U6 analog data_2019": {
+          "value": "值"
+        },
+        "CSD U6 analog data_2021": {
+          "value": "值"
+        },
+        "CSD U6 analog sound": {
+          "value": "值"
+        },
+        "CSD U6 analog sound_2018": {
+          "value": "值"
+        },
+        "CSD U6 analog sound_2019": {
+          "value": "值"
+        },
+        "CSD U6 analog sound_2021": {
+          "value": "值"
         }
       }
     }

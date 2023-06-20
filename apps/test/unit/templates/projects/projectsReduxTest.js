@@ -4,7 +4,7 @@ import {
   stubRedux,
   restoreRedux,
   registerReducers,
-  getStore
+  getStore,
 } from '@cdo/apps/redux';
 import projects, {
   setPersonalProjectsList,
@@ -18,7 +18,7 @@ import projects, {
   saveSuccess,
   saveFailure,
   unsetNameFailure,
-  unpublishProjectLibrary
+  unpublishProjectLibrary,
 } from '@cdo/apps/templates/projects/projectsRedux';
 import {stubFakePersonalProjectData} from '@cdo/apps/templates/projects/generateFakeProjects';
 import LibraryClientApi from '@cdo/apps/code-studio/components/libraries/LibraryClientApi';
@@ -40,11 +40,11 @@ describe('projectsRedux', () => {
   describe('updatePersonalProjectData', () => {
     const personalProjects = [
       {channel: 'abc123', name: 'first project'},
-      {channel: 'def456', name: 'second project'}
+      {channel: 'def456', name: 'second project'},
     ];
     const updatedProject = {
       channel: 'def456',
-      name: 'second project (edited)'
+      name: 'second project (edited)',
     };
 
     const action = setPersonalProjectsList(personalProjects);
@@ -67,7 +67,7 @@ describe('projectsRedux', () => {
       const action = setPersonalProjectsList(stubFakePersonalProjectData);
       const nextState = projects(initialState, action);
       const nextAction = publishSuccess('2016-11-30T23:59:59.999-08:00', {
-        channel: 'abcd2'
+        channel: 'abcd2',
       });
       const nextNextState = projects(nextState, nextAction);
       assert.equal(
@@ -299,7 +299,7 @@ describe('projectsRedux', () => {
       registerReducers({projects});
       store = getStore();
       libraryApiStub = sinon.createStubInstance(LibraryClientApi, {
-        unpublish: sinon.stub()
+        unpublish: sinon.stub(),
       });
     });
 
@@ -312,7 +312,7 @@ describe('projectsRedux', () => {
       server.respondWith('GET', `/v3/channels/${projectId}`, [
         status,
         {'Content-Type': 'application/json'},
-        JSON.stringify([])
+        JSON.stringify([]),
       ]);
     };
 

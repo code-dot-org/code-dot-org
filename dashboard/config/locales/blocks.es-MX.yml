@@ -2,8 +2,10 @@
 es-MX:
   data:
     blocks:
-      AmysBlocks_moving_with_arrow_keys:
-        text: moviendo NESW con las teclas de flecha
+      AmysBlocks_addTarget:
+        text: "{TARGET} {OPT} {SPRITE} "
+      AmysBlocks_playerBehaviors:
+        text: "{BEHAVIOR}"
       AmysBlocks_setPromptWithChoices:
         text: solicitar usuario {QUESTION} para la variable {VAR} opciones {A}{B}{C}
       AmysBlocks_spriteSayVar:
@@ -1058,6 +1060,8 @@ es-MX:
         text: evitando objetivos
       gamelab_beginCollectingData:
         text: empieza recopilación de datos {BREAK} valor {VALUE} con etiqueta {LABEL}
+      gamelab_behaviorPicker:
+        text: "{BEHAVIOR}"
       gamelab_bounceOff:
         text: "{SPRITE} rebota {TARGET}"
       gamelab_changePropBy:
@@ -1256,6 +1260,19 @@ es-MX:
             '"z"': z
       gamelab_layoutGrid:
         text: diseño de sprites como una cuadrícula
+      gamelab_layoutSprites:
+        text: diseño {GROUP} como un {FORMAT}
+        options:
+          FORMAT:
+            '"border"': orilla
+            '"circle"': círculo
+            '"grid"': cuadrícula
+            '"top"': fila superior
+            '"row"': renglon
+            '"bottom"': fila inferior
+            '"left"': columna izquierda
+            '"column"': columna
+            '"right"': columna derecha
       gamelab_locationAt:
         text: 'ubicación x: {X} y: {Y}'
       gamelab_locationModifier:
@@ -1282,6 +1299,18 @@ es-MX:
             '"spiral"': espiral
       gamelab_makeNewSpriteAnon:
         text: crear un nuevo sprite {ANIMATION_NAME} en {LOCATION}
+      gamelab_makeNewSpriteGroup:
+        options:
+          FORMAT:
+            '"border"': orilla
+            '"circle"': círculo
+            '"grid"': cuadrícula
+            '"top"': fila superior
+            '"row"': renglon
+            '"bottom"': fila inferior
+            '"left"': columna izquierda
+            '"column"': columna
+            '"right"': columna derecha
       gamelab_makeNumSprites:
         text: hacer {NUM} nuevos {ANIMATION_NAME} sprites
       gamelab_makeProjectile:
@@ -1622,7 +1651,7 @@ es-MX:
       gamelab_textVariableJoin:
         text: "{VAR}{TEXT2}"
       gamelab_tumbling:
-        text: cayendo
+        text: rodando
       gamelab_turn:
         text: "{SPRITE} gira {DIRECTION} {N} grados"
         options:
@@ -1702,6 +1731,10 @@ es-MX:
         text: coordenada x de {SPRITE}
       gamelab_yLocationOf:
         text: coordenada y de {SPRITE}
+      KatiesBlocks_glideTo:
+        text: "{SPRITE} vuela a {LOCATION}"
+      KatiesBlocks_tumbling:
+        text: rodando
       Mikelab_addBehaviorSimple:
         text: sprite {SPRITE} comienza {BEHAVIOR}
       Mikelab_addTrainingData:
@@ -2371,8 +2404,6 @@ es-MX:
         text: girar a la izquierda
       RyanLab_turnRight:
         text: girar a la derecha
-      SpriteLab2Beta_spriteSay:
-        text: sprite {SPRITE} decir {TEXT} durante {SECONDS} segundos
       Vector_createSpriteWith:
         text: |-
           crear sprite
@@ -2491,6 +2522,25 @@ es-MX:
             '"quarantining"': cuarentena cuando enferma
             '"avoiding"': distanciamiento social
             '"none"': quedarse quieto
+      adaptations_adaptationBehaviors:
+        text: "{BEHAVIOR}"
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): girando a la derecha
+            new Behavior(spinning_left, []): girando a la izquierda
+            new Behavior(fluttering, []): revoloteando
+            new Behavior(jittering, []): temblando
+            new Behavior(wobbling, []): tambaleándose
+            new Behavior(wandering, []): deambulando
+            new Behavior(patrolling, []): patrullando
+      adaptations_startFollowing:
+        text: "{SPRITE} empieza seguimiento {TARGET}"
+      adaptations_toggleBehaviorSimple:
+        text: sprite {SPRITE} {TOGGLE} {BEHAVIOR}
+        options:
+          TOGGLE:
+            '"begins"': comienza
+            '"stops"': para
       binary_drawBin:
         text: dibujar binario {BIN}
       binary_drawBinScreen:
@@ -2633,8 +2683,25 @@ es-MX:
           DIR:
             right: derecha ↻
             left: izquierda ↺
+      ecosystems_int10:
+        text: "{VALUE}"
+        options:
+          VALUE:
+            '0': '0'
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       storylab_clearHeadings:
         text: eliminar títulos
+      storylab_printText:
+        text: imprimir {TEXT}
       storylab_setForegroundEffect2:
         text: hacer efecto de {EFFECT}
         options:
@@ -2651,7 +2718,3 @@ es-MX:
         text: solicitar usuario {QUESTION} para la variable {VAR} con opciones {A}
       storylab_setSubheading:
         text: definir subencabezado {SUBHEADING}
-      validation_validatedBackground:
-        text: establecer fondo a {IMG}
-      validation_validatedSound:
-        text: ReproducirSonido {SOUND}

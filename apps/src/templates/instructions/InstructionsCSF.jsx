@@ -20,8 +20,8 @@ const RESIZER_HEIGHT = styleConstants['resize-bar-width'];
 const craftStyles = {
   body: {
     // $below-header-background from craft/style.scss
-    backgroundColor: '#646464'
-  }
+    backgroundColor: '#646464',
+  },
 };
 
 /**
@@ -56,7 +56,7 @@ class InstructionsCSF extends React.Component {
         hintId: PropTypes.string.isRequired,
         markdown: PropTypes.string.isRequired,
         block: PropTypes.object, // XML
-        video: PropTypes.string
+        video: PropTypes.string,
       })
     ).isRequired,
     collapsed: PropTypes.bool.isRequired,
@@ -66,17 +66,17 @@ class InstructionsCSF extends React.Component {
 
     feedback: PropTypes.shape({
       message: PropTypes.string.isRequired,
-      isFailure: PropTypes.bool
+      isFailure: PropTypes.bool,
     }),
 
     height: PropTypes.number.isRequired,
     maxHeight: PropTypes.number.isRequired,
     setInstructionsRenderedHeight: PropTypes.func.isRequired,
-    setInstructionsRef: PropTypes.func
+    setInstructionsRef: PropTypes.func,
   };
 
   static defaultProps = {
-    noVisualization: false
+    noVisualization: false,
   };
 
   constructor(props) {
@@ -88,7 +88,7 @@ class InstructionsCSF extends React.Component {
       leftColWidth: 0,
       leftColHeight: 0,
       promptForHint: false,
-      displayScrollButtons: true
+      displayScrollButtons: true,
     };
 
     this.debouncedAdjustRenderedHeight = debounce(
@@ -132,7 +132,7 @@ class InstructionsCSF extends React.Component {
     const gotNewFeedback = !this.props.feedback && nextProps.feedback;
     if (gotNewFeedback) {
       this.setState({
-        promptForHint: false
+        promptForHint: false,
       });
       if (nextProps.collapsed) {
         this.props.handleClickCollapser();
@@ -154,7 +154,7 @@ class InstructionsCSF extends React.Component {
       // see comment above
       // eslint-disable-next-line react/no-did-update-set-state
       this.setState({
-        displayScrollButtons: canScroll
+        displayScrollButtons: canScroll,
       });
     }
   }
@@ -218,7 +218,7 @@ class InstructionsCSF extends React.Component {
 
   dismissHintPrompt = () => {
     this.setState({
-      promptForHint: false
+      promptForHint: false,
     });
   };
 
@@ -248,7 +248,7 @@ class InstructionsCSF extends React.Component {
 
   requestHint = () => {
     this.setState({
-      promptForHint: true
+      promptForHint: true,
     });
     this.props.collapsed && this.props.handleClickCollapser();
   };
@@ -280,7 +280,7 @@ class InstructionsCSF extends React.Component {
   }
 
   setInstructionsRef(instructions) {
-    this.instructions = instructions?.getWrappedInstance().instructions;
+    this.instructions = instructions?.instructions;
 
     // TopInstructions, our parent, needs a ref to the body of the instructions
     // to determine its height.
@@ -293,18 +293,18 @@ class InstructionsCSF extends React.Component {
     const mainStyle = {
       ...styles.main,
       ...{
-        height: this.props.height - HEADER_HEIGHT
+        height: this.props.height - HEADER_HEIGHT,
       },
       ...(this.props.noVisualization && styles.noViz),
-      ...(this.props.overlayVisible && styles.withOverlay)
+      ...(this.props.overlayVisible && styles.withOverlay),
     };
 
     const threeColumnsStyles = {
       container: {
         ...styles.body,
-        ...(this.props.isMinecraft && craftStyles.body)
+        ...(this.props.isMinecraft && craftStyles.body),
       },
-      left: this.props.isRtl ? styles.leftColRtl : styles.leftCol
+      left: this.props.isRtl ? styles.leftColRtl : styles.leftCol,
     };
 
     const hasShortAndLongInstructions = this.hasShortAndLongInstructions();
@@ -354,34 +354,34 @@ const styles = {
   main: {
     position: 'relative',
     top: 0,
-    right: 0
+    right: 0,
     // left handled by media queries for .editor-column
   },
   withOverlay: {
-    zIndex: OVERLAY_Z_INDEX + 1
+    zIndex: OVERLAY_Z_INDEX + 1,
   },
   noViz: {
     left: 0,
     right: 0,
     marginRight: 0,
-    marginLeft: 0
+    marginLeft: 0,
   },
   body: {
     backgroundColor: '#ddd',
-    width: '100%'
+    width: '100%',
   },
   leftCol: {
     position: 'absolute',
     bottom: RESIZER_HEIGHT,
     left: 0,
-    marginLeft: 0
+    marginLeft: 0,
   },
   leftColRtl: {
     position: 'absolute',
     bottom: RESIZER_HEIGHT,
     right: 0,
-    marginRight: 0
-  }
+    marginRight: 0,
+  },
 };
 
 export default connect(
@@ -400,19 +400,19 @@ export default connect(
         state.instructions.maxNeededHeight
       ),
       shortInstructions: state.instructions.shortInstructions,
-      longInstructions: state.instructions.longInstructions
+      longInstructions: state.instructions.longInstructions,
     };
   },
   function propsFromDispatch(dispatch) {
     return {
-      hideOverlay: function() {
+      hideOverlay: function () {
         dispatch(instructions.hideOverlay());
       },
       setInstructionsRenderedHeight(height) {
         dispatch(instructions.setInstructionsRenderedHeight(height));
-      }
+      },
     };
   },
   null,
-  {withRef: true}
+  {forwardRef: true}
 )(InstructionsCSF);

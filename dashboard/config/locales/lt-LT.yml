@@ -32,6 +32,7 @@ lt:
         edit_header: Keisti paskyros duomenis
         error:
           future: negali būti ateitis
+        us_state: Valstija
   beta: beta
   hello: Sveikas, pasauli
   welcome_back: Sveiki sugrįžę, %{name}
@@ -125,7 +126,6 @@ lt:
       nuo jūsų šalies įstatymų.
     visit_privacy: Apsilankykite „Code.org“ [Privatumo politika](%{privacy_url}),
       kad sužinotumėte išsamiau.
-    additional_information: Mums reikia papildomos informacijos, kad galėtum prisiregistruoti.
     user_type_label: Paskyros tipas
     user_type_student: Mokinys
     user_type_teacher: Mokytojas
@@ -136,6 +136,7 @@ lt:
     email_preference_no: Ne
     share_teacher_email_reg_partner_preference_yes: Taip
     share_teacher_email_reg_partner_preference_no: Ne
+    us_state: Valstija
   school_info:
     title: Mokyklos informacija (neprivaloma)
     select_school_type: Mokyklos tipas
@@ -750,9 +751,15 @@ lt:
         other: Kita
       robotics:
         other: Kita
+      workshop_course:
+        other: Kita
       email_opt_in:
         opt_in_yes: Taip
         opt_in_no: Ne
+  course_offering:
+    headers:
+      minecraft: Minecraft
+      sports: Sportas
   cookie_banner:
     accept: Sutinku
   page_not_found_title: Puslapis nerastas

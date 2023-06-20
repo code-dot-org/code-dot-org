@@ -1,9 +1,5 @@
 <FreeResponse>
   <config><![CDATA[{
-  "game_id": 52,
-  "created_at": "2022-10-21T19:01:04.000Z",
-  "level_num": "custom",
-  "user_id": 9271,
   "properties": {
     "encrypted": "false",
     "title": "Predict the Output",
@@ -14,8 +10,13 @@
     "optional": "false",
     "skip_dialog": true,
     "skip_sound": true,
-    "name_suffix": "_2023"
+    "name_suffix": "_2023",
+    "allow_multiple_attempts": "false"
   },
+  "level_num": "custom",
+  "game_id": 52,
+  "created_at": "2022-10-21T19:01:04.000Z",
+  "user_id": 9271,
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-10-21T19:01:04.614+00:00\",\"changed\":[\"cloned from \\\"SP-VPL-CSA-22-mod3-variables-practice-1-Predict\\\"\"],\"cloned_from\":\"SP-VPL-CSA-22-mod3-variables-practice-1-Predict\"}]",
   "level_concept_difficulty": {

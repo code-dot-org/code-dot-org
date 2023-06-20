@@ -4,343 +4,343 @@
       "vocabularies": {
         "code/dance-extras/unversioned": {
           "word": "",
-          "definition": ""
+          "definition": "(v) برای نوشتن کد، یا نوشتن دستورالعمل برای کامپیوتر."
         },
         "event/dance-extras/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "رویداد",
+          "definition": "عملی که باعث می‌شود اتفاقی بیفتد."
         },
         "program/dance-extras/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "برنامه",
+          "definition": "الگوریتمی که در چیزی کدگذاری شده است که می‌تواند توسط یک ماشین اجرا شود.\n"
         },
         "code/minecraft/unversioned": {
           "word": "",
-          "definition": ""
+          "definition": "(v) برای نوشتن کد، یا نوشتن دستورالعمل برای کامپیوتر."
         },
         "debugging/minecraft/unversioned": {
           "word": "اشکال‌زدایی",
-          "definition": ""
+          "definition": "پیدا کردن و رفع مشکلات در الگوریتم یا برنامه."
         },
         "event/minecraft/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "رویداد",
+          "definition": "عملی که باعث می‌شود اتفاقی بیفتد."
         },
         "loop/minecraft/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "حلفه",
+          "definition": "عمل انجام مکرر کاری."
         },
         "program/minecraft/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "برنامه",
+          "definition": "الگوریتمی که در چیزی کدگذاری شده است که می‌تواند توسط یک ماشین اجرا شود.\n"
         },
         "code/hero/unversioned": {
           "word": "",
-          "definition": ""
+          "definition": "(v) برای نوشتن کد، یا نوشتن دستورالعمل برای کامپیوتر."
         },
         "debugging/hero/unversioned": {
           "word": "اشکال‌زدایی",
-          "definition": ""
+          "definition": "پیدا کردن و رفع مشکلات در الگوریتم یا برنامه."
         },
         "function/hero/unversioned": {
           "word": "تابع",
-          "definition": ""
+          "definition": "قطعه کدی که به راحتی می‌توانید بارها و بارها آن را فراخوانی کنید."
         },
         "program/hero/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "برنامه",
+          "definition": "الگوریتمی که در چیزی کدگذاری شده است که می‌تواند توسط یک ماشین اجرا شود.\n"
         },
         "code/poem-art/2021": {
           "word": "کد",
-          "definition": ""
+          "definition": "(v) برای نوشتن دستورالعمل برای کامپیوتر."
         },
         "event/poem-art/2021": {
-          "word": "",
-          "definition": ""
+          "word": "رویداد",
+          "definition": "عملی که باعث می‌شود اتفاقی بیفتد."
         },
         "line/poem-art/2021": {
-          "word": "",
-          "definition": ""
+          "word": "سطر",
+          "definition": "(شعر) - بخش فرعی از شعری که در یک ردیف تنظیم شده است که در حاشیه سمت راست به پایان می‌رسد."
         },
         "mood/poem-art/2021": {
-          "word": "",
-          "definition": ""
+          "word": "حال‌وهوا",
+          "definition": "بیان احساس، جو یا احساس در هنر یا نوشته‌ها."
         },
         "program/poem-art/2021": {
-          "word": "",
-          "definition": ""
+          "word": "برنامه",
+          "definition": "مجموعه‌ای از مراحل که در چیزی کدگذاری شده‌اند که می‌توانند توسط ماشین اجرا شوند."
         },
         "code/flappy/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "کد",
+          "definition": "(v) برای نوشتن کد، یا نوشتن دستورالعمل برای کامپیوتر."
         },
         "debugging/flappy/unversioned": {
           "word": "اشکال‌زدایی",
-          "definition": ""
+          "definition": "پیدا کردن و رفع مشکلات در الگوریتم یا برنامه."
         },
         "program/flappy/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "برنامه",
+          "definition": "الگوریتمی که در چیزی کدگذاری شده است که می‌تواند توسط یک ماشین اجرا شود.\n"
         },
         "code/hourofcode/unversioned": {
           "word": "",
-          "definition": ""
+          "definition": "(v) برای نوشتن کد، یا نوشتن دستورالعمل برای کامپیوتر."
         },
         "debugging/hourofcode/unversioned": {
           "word": "اشکال‌زدایی",
-          "definition": ""
+          "definition": "پیدا کردن و رفع مشکلات در الگوریتم یا برنامه."
         },
         "program/hourofcode/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "برنامه",
+          "definition": "الگوریتمی که در چیزی کدگذاری شده است که می‌تواند توسط یک ماشین اجرا شود.\n"
         },
         "code/frozen/unversioned": {
           "word": "",
-          "definition": ""
+          "definition": "(v) برای نوشتن کد، یا نوشتن دستورالعمل برای کامپیوتر."
         },
         "debugging/frozen/unversioned": {
           "word": "اشکال‌زدایی",
-          "definition": ""
+          "definition": "پیدا کردن و رفع مشکلات در الگوریتم یا برنامه."
         },
         "program/frozen/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "برنامه",
+          "definition": "الگوریتمی که در چیزی کدگذاری شده است که می‌تواند توسط یک ماشین اجرا شود.\n"
         },
         "code/iceage/unversioned": {
           "word": "",
-          "definition": ""
+          "definition": "(v) برای نوشتن کد، یا نوشتن دستورالعمل برای کامپیوتر."
         },
         "debugging/iceage/unversioned": {
           "word": "اشکال‌زدایی",
-          "definition": ""
+          "definition": "پیدا کردن و رفع مشکلات در الگوریتم یا برنامه."
         },
         "program/iceage/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "برنامه",
+          "definition": "الگوریتمی که در چیزی کدگذاری شده است که می‌تواند توسط یک ماشین اجرا شود.\n"
         },
         "code/artist/unversioned": {
           "word": "کد",
-          "definition": ""
+          "definition": "(v) برای نوشتن کد، یا نوشتن دستورالعمل برای کامپیوتر."
         },
         "debugging/artist/unversioned": {
           "word": "اشکال‌زدایی",
-          "definition": ""
+          "definition": "پیدا کردن و رفع مشکلات در الگوریتم یا برنامه."
         },
         "program/artist/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "برنامه",
+          "definition": "الگوریتمی که در چیزی کدگذاری شده است که می‌تواند توسط یک ماشین اجرا شود.\n"
         },
         "code/gumball/unversioned": {
           "word": "",
-          "definition": ""
+          "definition": "(v) برای نوشتن کد، یا نوشتن دستورالعمل برای کامپیوتر."
         },
         "debugging/gumball/unversioned": {
           "word": "اشکال‌زدایی",
-          "definition": ""
+          "definition": "پیدا کردن و رفع مشکلات در الگوریتم یا برنامه."
         },
         "program/gumball/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "برنامه",
+          "definition": "الگوریتمی که در چیزی کدگذاری شده است که می‌تواند توسط یک ماشین اجرا شود.\n"
         },
         "code/dance/unversioned": {
           "word": "",
-          "definition": ""
+          "definition": "(v) برای نوشتن کد، یا نوشتن دستورالعمل برای کامپیوتر."
         },
         "event/dance/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "رویداد",
+          "definition": "عملی که باعث می‌شود اتفاقی بیفتد."
         },
         "program/dance/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "برنامه",
+          "definition": "الگوریتمی که در چیزی کدگذاری شده است که می‌تواند توسط یک ماشین اجرا شود.\n"
         },
         "code/aquatic/unversioned": {
           "word": "",
-          "definition": ""
+          "definition": "(v) برای نوشتن کد، یا نوشتن دستورالعمل برای کامپیوتر."
         },
         "condition/aquatic/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "شرط",
+          "definition": "چیزی که برنامه قبل از اجازه دادن به عملی، صحت آن را بررسی می‌کند."
         },
         "conditionals/aquatic/unversioned": {
           "word": "شرطی ها",
-          "definition": ""
+          "definition": "عباراتی که فقط تحت شرایط خاصی اجرا می‌شوند."
         },
         "debugging/aquatic/unversioned": {
           "word": "اشکال‌زدایی",
-          "definition": ""
+          "definition": "پیدا کردن و رفع مشکلات در الگوریتم یا برنامه."
         },
         "loops/aquatic/unversioned": {
           "word": "حلقه‌ها",
-          "definition": ""
+          "definition": "عمل انجام مکرر کاری."
         },
         "program/aquatic/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "برنامه",
+          "definition": "الگوریتمی که در چیزی کدگذاری شده است که می‌تواند توسط یک ماشین اجرا شود.\n"
         },
         "caesar_cipher_/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "رمز سزار",
+          "definition": "تکنیک رمزنگاری که حروف الفبا را با تعدادی کاراکتر جابجا می‌کند"
         },
         "cipher/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "رمز",
+          "definition": "اصطلاح کلی برای یک تکنیک (یا الگوریتم) که رمزگذاری را انجام می‌دهد"
         },
         "cracking_encryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "کشف رمز",
+          "definition": "وقتی سعی می‌کنید پیام مخفی را بدون دانستن تمام مشخصات رمز رمزگشایی کنید، یعنی دارید «کشف رمز» می‌کنید."
         },
         "decryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "رمزگشایی",
+          "definition": "فرآیندی که رمزگذاری را معکوس می‌کند، پیام مخفی دریافت می‌کند و متن ساده اصلی را بازتولید می‌کند"
         },
         "encryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "رمزنگاری",
+          "definition": "فرایندی برای رمزگذاری پیام‌ها جهت مخفی نگه داشتن آنهاست، بنابراین فقط اشخاص «مجاز» قادر به خواندن آن هستند."
         },
         "random_substitution_cipher/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "رمز جایگزینی تصادفی",
+          "definition": "یک تکنیک رمزگذاری که هر حرف از الفبا را به حروف دیگری از الفبا که به‌طور تصادفی انتخاب شده‌اند تغییر می‌دهد."
         },
         "code/starwars/unversioned": {
           "word": "",
-          "definition": ""
+          "definition": "(v) برای نوشتن کد، یا نوشتن دستورالعمل برای کامپیوتر."
         },
         "debugging/starwars/unversioned": {
           "word": "اشکال‌زدایی",
-          "definition": ""
+          "definition": "پیدا کردن و رفع مشکلات در الگوریتم یا برنامه."
         },
         "program/starwars/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "برنامه",
+          "definition": "الگوریتمی که در چیزی کدگذاری شده است که می‌تواند توسط یک ماشین اجرا شود.\n"
         },
         "code/mc/unversioned": {
           "word": "",
-          "definition": ""
+          "definition": "(v) برای نوشتن کد، یا نوشتن دستورالعمل برای کامپیوتر."
         },
         "debugging/mc/unversioned": {
           "word": "اشکال‌زدایی",
-          "definition": ""
+          "definition": "پیدا کردن و رفع مشکلات در الگوریتم یا برنامه."
         },
         "program/mc/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "برنامه",
+          "definition": "الگوریتمی که در چیزی کدگذاری شده است که می‌تواند توسط یک ماشین اجرا شود.\n"
         },
         "code/playlab/unversioned": {
           "word": "",
-          "definition": ""
+          "definition": "(v) برای نوشتن کد، یا نوشتن دستورالعمل برای کامپیوتر."
         },
         "debugging/playlab/unversioned": {
           "word": "اشکال‌زدایی",
-          "definition": ""
+          "definition": "پیدا کردن و رفع مشکلات در الگوریتم یا برنامه."
         },
         "program/playlab/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "برنامه",
+          "definition": "الگوریتمی که در چیزی کدگذاری شده است که می‌تواند توسط یک ماشین اجرا شود.\n"
         },
         "code/starwarsblocks/unversioned": {
           "word": "",
-          "definition": ""
+          "definition": "(v) برای نوشتن کد، یا نوشتن دستورالعمل برای کامپیوتر."
         },
         "debugging/starwarsblocks/unversioned": {
           "word": "اشکال‌زدایی",
-          "definition": ""
+          "definition": "پیدا کردن و رفع مشکلات در الگوریتم یا برنامه."
         },
         "program/starwarsblocks/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "برنامه",
+          "definition": "الگوریتمی که در چیزی کدگذاری شده است که می‌تواند توسط یک ماشین اجرا شود.\n"
         },
         "lossless_compression/text-compression/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "فشرده‌سازی بدون اتلاف",
+          "definition": "یک الگوریتم فشرده‌سازی داده که اجازه می‌دهد داده‌های اصلی به طور کامل از داده‌های فشرده بازسازی شوند. بیشتر برای فشرده‌سازی متن استفاده می‌شود (به عنوان مثال فشرده‌سازی zip)"
         },
         "event/outbreak/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "رویداد",
+          "definition": "عملی که باعث می‌شود اتفاقی بیفتد."
         },
         "models_and_simulations/outbreak/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "مدل‌ها و شبیه سازی‌ها",
+          "definition": "برنامه‌ای که ویژگی‌های مهم یک رویداد واقعی را تکرار یا تقلید می‌کند تا رفتار آن را بدون صرف هزینه، زمان یا خطر اجرای آزمایش در واقعیت بررسی کند."
         },
         "code/sports/unversioned": {
           "word": "کد",
-          "definition": ""
+          "definition": "(v) برای نوشتن کد، یا نوشتن دستورالعمل برای کامپیوتر."
         },
         "debugging/sports/unversioned": {
           "word": "اشکال‌زدایی",
-          "definition": ""
+          "definition": "پیدا کردن و رفع مشکلات در الگوریتم یا برنامه."
         },
         "event/sports/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "رویداد",
+          "definition": "عملی که باعث می‌شود اتفاقی بیفتد."
         },
         "program/sports/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "برنامه",
+          "definition": "الگوریتمی که در چیزی کدگذاری شده است که می‌تواند توسط یک ماشین اجرا شود.\n"
         },
         "code/infinity/unversioned": {
           "word": "",
-          "definition": ""
+          "definition": "(v) برای نوشتن کد، یا نوشتن دستورالعمل برای کامپیوتر."
         },
         "debugging/infinity/unversioned": {
           "word": "اشکال‌زدایی",
-          "definition": ""
+          "definition": "پیدا کردن و رفع مشکلات در الگوریتم یا برنامه."
         },
         "program/infinity/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "برنامه",
+          "definition": "الگوریتمی که در چیزی کدگذاری شده است که می‌تواند توسط یک ماشین اجرا شود.\n"
         },
         "code/basketball/unversioned": {
           "word": "",
-          "definition": ""
+          "definition": "(v) برای نوشتن کد، یا نوشتن دستورالعمل برای کامپیوتر."
         },
         "debugging/basketball/unversioned": {
           "word": "اشکال‌زدایی",
-          "definition": ""
+          "definition": "پیدا کردن و رفع مشکلات در الگوریتم یا برنامه."
         },
         "event/basketball/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "رویداد",
+          "definition": "عملی که باعث می‌شود اتفاقی بیفتد."
         },
         "program/basketball/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "برنامه",
+          "definition": "الگوریتمی که در چیزی کدگذاری شده است که می‌تواند توسط یک ماشین اجرا شود.\n"
         },
         "code/dance-extras-2019/unversioned": {
           "word": "",
-          "definition": ""
+          "definition": "(v) برای نوشتن کد، یا نوشتن دستورالعمل برای کامپیوتر."
         },
         "event/dance-extras-2019/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "رویداد",
+          "definition": "عملی که باعث می‌شود اتفاقی بیفتد."
         },
         "program/dance-extras-2019/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "برنامه",
+          "definition": "الگوریتمی که در چیزی کدگذاری شده است که می‌تواند توسط یک ماشین اجرا شود.\n"
         },
         "code/dance-2019/unversioned": {
           "word": "",
-          "definition": ""
+          "definition": "(v) برای نوشتن کد، یا نوشتن دستورالعمل برای کامپیوتر."
         },
         "event/dance-2019/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "رویداد",
+          "definition": "عملی که باعث می‌شود اتفاقی بیفتد."
         },
         "program/dance-2019/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "برنامه",
+          "definition": "الگوریتمی که در چیزی کدگذاری شده است که می‌تواند توسط یک ماشین اجرا شود.\n"
         },
         "machine_learning/oceans/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "یادگیری ماشینی",
+          "definition": "چگونه کامپیوترها الگوها را تشخیص می‌دهند و بدون برنامه‌ریزی صریح تصمیم می‌گیرند"
         },
         "algorithm/coursed/2022": {
           "word": "الگوریتم ",
           "definition": "فهرستی از مراحل جهت تکمیل یک کار"
         },
         "program/coursed/2022": {
-          "word": "",
-          "definition": ""
+          "word": "برنامه",
+          "definition": "الگوریتمی که در چیزی کدگذاری شده است که می‌تواند توسط یک ماشین اجرا شود.\n"
         },
         "bug/coursed/2022": {
           "word": "باگ",
@@ -348,11 +348,11 @@
         },
         "debugging/coursed/2022": {
           "word": "اشکال‌زدایی",
-          "definition": ""
+          "definition": "پیدا کردن و رفع مشکلات در الگوریتم یا برنامه."
         },
         "loop/coursed/2022": {
-          "word": "",
-          "definition": ""
+          "word": "حلفه",
+          "definition": "عمل انجام مکرر کاری."
         },
         "programming/coursed/2022": {
           "word": "برنامه نویسی",
@@ -367,12 +367,12 @@
           "definition": "بار و بارها تلاش کنید، حتی زمانی که کاری بسیار سخت باشد."
         },
         "event/coursed/2022": {
-          "word": "",
-          "definition": ""
+          "word": "رویداد",
+          "definition": "عملی که باعث می‌شود اتفاقی بیفتد."
         },
         "code/coursed/2022": {
           "word": "",
-          "definition": ""
+          "definition": "(v) برای نوشتن کد، یا نوشتن دستورالعمل برای کامپیوتر."
         },
         "repeat/coursed/2022": {
           "word": "تکرار",
@@ -384,15 +384,15 @@
         },
         "conditionals/coursed/2022": {
           "word": "شرطی ها",
-          "definition": ""
+          "definition": "عباراتی که فقط تحت شرایط خاصی اجرا می‌شوند."
         },
         "pseudocode/coursed/2022": {
           "word": "کد ساختگی",
           "definition": "شرح مراحل در الگوریتم به زبان ساده"
         },
         "condition/coursed/2022": {
-          "word": "",
-          "definition": ""
+          "word": "شرط",
+          "definition": "چیزی که برنامه قبل از اجازه دادن به عملی، صحت آن را بررسی می‌کند."
         },
         "while_loop/coursed/2022": {
           "word": "حلقه While",
@@ -419,12 +419,12 @@
           "definition": ""
         },
         "program/coursef/2022": {
-          "word": "",
-          "definition": ""
+          "word": "برنامه",
+          "definition": "الگوریتمی که در چیزی کدگذاری شده است که می‌تواند توسط یک ماشین اجرا شود.\n"
         },
         "event/coursef/2022": {
-          "word": "",
-          "definition": ""
+          "word": "رویداد",
+          "definition": "عملی که باعث می‌شود اتفاقی بیفتد."
         },
         "variable/coursef/2022": {
           "word": "متغیر",
@@ -439,12 +439,12 @@
           "definition": "اطلاعاتی که کامپیوترها از کاربران دریافت می‌کنند."
         },
         "models_and_simulations/coursef/2022": {
-          "word": "",
-          "definition": ""
+          "word": "مدل‌ها و شبیه سازی‌ها",
+          "definition": "برنامه‌ای که ویژگی‌های مهم یک رویداد واقعی را تکرار یا تقلید می‌کند تا رفتار آن را بدون صرف هزینه، زمان یا خطر اجرای آزمایش در واقعیت بررسی کند."
         },
         "machine_learning/coursef/2022": {
-          "word": "",
-          "definition": ""
+          "word": "یادگیری ماشینی",
+          "definition": "چگونه کامپیوترها الگوها را تشخیص می‌دهند و بدون برنامه‌ریزی صریح تصمیم می‌گیرند"
         },
         "dns/coursef/2022": {
           "word": "DNS",
@@ -507,8 +507,8 @@
           "definition": "یک تصویر گرافیکی روی صفحه نمایش با مکان، اندازه و ظاهر."
         },
         "loop/coursee/2022": {
-          "word": "",
-          "definition": ""
+          "word": "حلفه",
+          "definition": "عمل انجام مکرر کاری."
         },
         "repeat/coursee/2022": {
           "word": "تکرار",
@@ -527,12 +527,12 @@
           "definition": ""
         },
         "condition/coursee/2022": {
-          "word": "",
+          "word": "شرط",
           "definition": ""
         },
         "conditionals/coursee/2022": {
           "word": "شرطی ها",
-          "definition": ""
+          "definition": "عباراتی که فقط تحت شرایط خاصی اجرا می‌شوند."
         },
         "while_loop/coursee/2022": {
           "word": "حلقه While",
@@ -568,7 +568,7 @@
         },
         "debugging/courseb/2022": {
           "word": "اشکال‌زدایی",
-          "definition": ""
+          "definition": "پیدا کردن و رفع مشکلات در الگوریتم یا برنامه."
         },
         "click/courseb/2022": {
           "word": "کلیک کنید",
@@ -587,8 +587,8 @@
           "definition": "دکمه ماوس را رها کنید تا آیتمی که کشیده بودید، رها شود."
         },
         "program/courseb/2022": {
-          "word": "",
-          "definition": ""
+          "word": "برنامه",
+          "definition": "الگوریتمی که در چیزی کدگذاری شده است که می‌تواند توسط یک ماشین اجرا شود.\n"
         },
         "programming/courseb/2022": {
           "word": "برنامه نویسی",
@@ -599,16 +599,16 @@
           "definition": "بار و بارها تلاش کنید، حتی زمانی که کاری بسیار سخت باشد."
         },
         "loop/courseb/2022": {
-          "word": "",
-          "definition": ""
+          "word": "حلفه",
+          "definition": "عمل انجام مکرر کاری."
         },
         "repeat/courseb/2022": {
           "word": "تکرار",
           "definition": "کاری را مجددا انجام دادن"
         },
         "event/courseb/2022": {
-          "word": "",
-          "definition": ""
+          "word": "رویداد",
+          "definition": "عملی که باعث می‌شود اتفاقی بیفتد."
         },
         "algorithm/express/2022": {
           "word": "الگوریتم ",
@@ -620,15 +620,15 @@
         },
         "debugging/express/2022": {
           "word": "اشکال‌زدایی",
-          "definition": ""
+          "definition": "پیدا کردن و رفع مشکلات در الگوریتم یا برنامه."
         },
         "sequencing/express/2022": {
           "word": "دنباله",
           "definition": "قرار دادن دستورات به ترتیب صحیح تا کامپیوترها بتوانند دستورات را بخوانند."
         },
         "program/express/2022": {
-          "word": "",
-          "definition": ""
+          "word": "برنامه",
+          "definition": "الگوریتمی که در چیزی کدگذاری شده است که می‌تواند توسط یک ماشین اجرا شود.\n"
         },
         "programming/express/2022": {
           "word": "برنامه نویسی",
@@ -643,16 +643,16 @@
           "definition": "یک تصویر گرافیکی روی صفحه نمایش با مکان، اندازه و ظاهر."
         },
         "event/express/2022": {
-          "word": "",
-          "definition": ""
+          "word": "رویداد",
+          "definition": "عملی که باعث می‌شود اتفاقی بیفتد."
         },
         "code/express/2022": {
           "word": "",
           "definition": "باید کد یا دستورالعملی برای کامپیوتر‌، بنویسید."
         },
         "loop/express/2022": {
-          "word": "",
-          "definition": ""
+          "word": "حلفه",
+          "definition": "عمل انجام مکرر کاری."
         },
         "repeat/express/2022": {
           "word": "تکرار",
@@ -663,12 +663,12 @@
           "definition": "یک دستورالعمل برای کامپیوتر، بسیاری از دستورات در کنار هم، الگوریتم‌ها و برنامه‌های کامپیوتری را می‌سازند."
         },
         "condition/express/2022": {
-          "word": "",
-          "definition": ""
+          "word": "شرط",
+          "definition": "چیزی که برنامه قبل از اجازه دادن به عملی، صحت آن را بررسی می‌کند."
         },
         "conditionals/express/2022": {
           "word": "شرطی ها",
-          "definition": ""
+          "definition": "عباراتی که فقط تحت شرایط خاصی اجرا می‌شوند."
         },
         "while_loop/express/2022": {
           "word": "حلقه While",
@@ -680,7 +680,7 @@
         },
         "function/express/2022": {
           "word": "تابع",
-          "definition": ""
+          "definition": "قطعه کدی که به راحتی می‌توانید بارها و بارها آن را فراخوانی کنید."
         },
         "prompt/express/2022": {
           "word": "انگیزش",
@@ -736,11 +736,11 @@
         },
         "debugging/pre-express/2022": {
           "word": "اشکال‌زدایی",
-          "definition": ""
+          "definition": "پیدا کردن و رفع مشکلات در الگوریتم یا برنامه."
         },
         "program/pre-express/2022": {
-          "word": "",
-          "definition": ""
+          "word": "برنامه",
+          "definition": "الگوریتمی که در چیزی کدگذاری شده است که می‌تواند توسط یک ماشین اجرا شود.\n"
         },
         "programming/pre-express/2022": {
           "word": "برنامه نویسی",
@@ -751,16 +751,16 @@
           "definition": "بار و بارها تلاش کنید، حتی زمانی که کاری بسیار سخت باشد."
         },
         "loop/pre-express/2022": {
-          "word": "",
-          "definition": ""
+          "word": "حلفه",
+          "definition": "عمل انجام مکرر کاری."
         },
         "repeat/pre-express/2022": {
           "word": "تکرار",
           "definition": "کاری را مجددا انجام دادن"
         },
         "event/pre-express/2022": {
-          "word": "",
-          "definition": ""
+          "word": "رویداد",
+          "definition": "عملی که باعث می‌شود اتفاقی بیفتد."
         },
         "algorithm/coursea/2022": {
           "word": "الگوریتم ",
@@ -768,11 +768,11 @@
         },
         "debugging/coursea/2022": {
           "word": "اشکال‌زدایی",
-          "definition": ""
+          "definition": "پیدا کردن و رفع مشکلات در الگوریتم یا برنامه."
         },
         "program/coursea/2022": {
-          "word": "",
-          "definition": ""
+          "word": "برنامه",
+          "definition": "الگوریتمی که در چیزی کدگذاری شده است که می‌تواند توسط یک ماشین اجرا شود.\n"
         },
         "click/coursea/2022": {
           "word": "کلیک کنید",
@@ -799,16 +799,16 @@
           "definition": "هنر ایجاد یک برنامه"
         },
         "loop/coursea/2022": {
-          "word": "",
-          "definition": ""
+          "word": "حلفه",
+          "definition": "عمل انجام مکرر کاری."
         },
         "repeat/coursea/2022": {
           "word": "تکرار",
           "definition": "کاری را مجددا انجام دادن"
         },
         "event/coursea/2022": {
-          "word": "",
-          "definition": ""
+          "word": "رویداد",
+          "definition": "عملی که باعث می‌شود اتفاقی بیفتد."
         },
         "algorithm/coursec/2022": {
           "word": "الگوریتم ",
@@ -820,11 +820,11 @@
         },
         "debugging/coursec/2022": {
           "word": "اشکال‌زدایی",
-          "definition": ""
+          "definition": "پیدا کردن و رفع مشکلات در الگوریتم یا برنامه."
         },
         "program/coursec/2022": {
-          "word": "",
-          "definition": ""
+          "word": "برنامه",
+          "definition": "الگوریتمی که در چیزی کدگذاری شده است که می‌تواند توسط یک ماشین اجرا شود.\n"
         },
         "sequencing/coursec/2022": {
           "word": "دنباله",
@@ -843,16 +843,16 @@
           "definition": ""
         },
         "loop/coursec/2022": {
-          "word": "",
-          "definition": ""
+          "word": "حلفه",
+          "definition": "عمل انجام مکرر کاری."
         },
         "repeat/coursec/2022": {
           "word": "تکرار",
           "definition": "کاری را مجددا انجام دادن"
         },
         "event/coursec/2022": {
-          "word": "",
-          "definition": ""
+          "word": "رویداد",
+          "definition": "عملی که باعث می‌شود اتفاقی بیفتد."
         },
         "data/coursec/2022": {
           "word": "داده‌ها",
@@ -863,7 +863,7 @@
           "definition": ""
         },
         "binary/coursec/2022": {
-          "word": "",
+          "word": "دو دویی",
           "definition": "راهی برای نمایش اطلاعات، تنها با استفاده از دو گزینه وجود دارد."
         },
         "decode/csd/2022": {
@@ -924,11 +924,11 @@
         },
         "debugging/csd/2022": {
           "word": "اشکال‌زدایی",
-          "definition": ""
+          "definition": "پیدا کردن و رفع مشکلات در الگوریتم یا برنامه."
         },
         "program/csd/2022": {
-          "word": "",
-          "definition": ""
+          "word": "برنامه",
+          "definition": "الگوریتمی که در چیزی کدگذاری شده است که می‌تواند توسط یک ماشین اجرا شود.\n"
         },
         "parameter/csd/2022": {
           "word": "",
@@ -955,7 +955,7 @@
           "definition": ""
         },
         "condition/csd/2022": {
-          "word": "",
+          "word": "شرط",
           "definition": ""
         },
         "conditionals/csd/2022": {
@@ -1059,8 +1059,8 @@
           "definition": ""
         },
         "machine_learning/csd/2022": {
-          "word": "",
-          "definition": ""
+          "word": "یادگیری ماشینی",
+          "definition": "چگونه کامپیوترها الگوها را تشخیص می‌دهند و بدون برنامه‌ریزی صریح تصمیم می‌گیرند"
         },
         "features/csd/2022": {
           "word": "",
@@ -1108,23 +1108,23 @@
         },
         "code/poem-art/unversioned": {
           "word": "کد",
-          "definition": ""
+          "definition": "(v) برای نوشتن دستورالعمل برای کامپیوتر."
         },
         "event/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "رویداد",
+          "definition": "عملی که باعث می‌شود اتفاقی بیفتد."
         },
         "program/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "برنامه",
+          "definition": "مجموعه‌ای از مراحل که در چیزی کدگذاری شده‌اند که می‌توانند توسط ماشین اجرا شوند."
         },
         "mood/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "حال‌وهوا",
+          "definition": "بیان احساس، جو یا احساس در هنر یا نوشته‌ها."
         },
         "line/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "سطر",
+          "definition": "(شعر) - بخش فرعی از شعری که در یک ردیف تنظیم شده است که در حاشیه سمت راست به پایان می‌رسد."
         },
         "sprite/coursef/2021": {
           "word": "اسپرایت",
@@ -1655,8 +1655,8 @@
           "definition": "تلاش کنید کاری انجام دهید"
         },
         "machine_learning/csd/2021": {
-          "word": "",
-          "definition": ""
+          "word": "یادگیری ماشینی",
+          "definition": "چگونه کامپیوترها الگوها را تشخیص می‌دهند و بدون برنامه‌ریزی صریح تصمیم می‌گیرند"
         },
         "features/csd/2021": {
           "word": "",
@@ -1792,11 +1792,11 @@
         },
         "debugging/csd/2021": {
           "word": "اشکال‌زدایی",
-          "definition": ""
+          "definition": "پیدا کردن و رفع مشکلات در الگوریتم یا برنامه."
         },
         "program/csd/2021": {
-          "word": "",
-          "definition": ""
+          "word": "برنامه",
+          "definition": "الگوریتمی که در چیزی کدگذاری شده است که می‌تواند توسط یک ماشین اجرا شود.\n"
         },
         "variable/csd/2021": {
           "word": "متغیر",
@@ -1815,7 +1815,7 @@
           "definition": ""
         },
         "condition/csd/2021": {
-          "word": "",
+          "word": "شرط",
           "definition": ""
         },
         "conditionals/csd/2021": {

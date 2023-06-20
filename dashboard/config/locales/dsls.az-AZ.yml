@@ -7723,7 +7723,7 @@ az-AZ:
         - text: Xeyr
         - text: Bunun nə olduğuna əmin deyiləm
         questions:
-        - text: Oyun inkişafı
+        - text: Oyun tərtibatı
       csd-post-survey-2018-topic-hardware:
         answers:
         - text: Bəli
@@ -13404,3 +13404,23 @@ az-AZ:
         markdown: "### Kompüter elmində keçmişiniz"
       csp-pre-survey-2017 preamble 5 demographics_2022:
         markdown: "### Kompüter elmində keçmişiniz"
+      Test Contained Retriable Multi:
+        answers:
+        - text: '0'
+        - {}
+        - text: '2'
+        - text: '4'
+        questions:
+        - {}
+      test-single-multi-standalone-retriable:
+        answers:
+        - text: 'Heç nə baş verməyəcək. '
+          feedback: Yanlış. Çöp otu yuvarlanmağa başlayacaq
+        - text: Tumbleweed ekranın yuxarı hissəsinə üzəcəkdir
+          feedback: Yanlış. Çöp otu yuvarlanmağa başlayacaq
+        - text: Çöp otu yuvarlanmağa başlayacaq
+          feedback: Düzgün!
+        - text: Çöp otu yanıb sönəcək.
+          feedback: Yanlış. Çöp otu yuvarlanmağa başlayacaq
+        questions:
+        - {}

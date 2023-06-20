@@ -12,8 +12,8 @@ const CSV_LOGIN_INFO_HEADERS = [
   {label: i18n.loginExportHeader_studentName(), key: 'studentName'},
   {
     label: i18n.loginExportHeader_studentLoginSecret(),
-    key: 'studentLoginSecret'
-  }
+    key: 'studentLoginSecret',
+  },
 ];
 
 export default class LoginExport extends Component {
@@ -21,7 +21,7 @@ export default class LoginExport extends Component {
     sectionCode: PropTypes.string.isRequired,
     sectionName: PropTypes.string.isRequired,
     sectionLoginType: PropTypes.string.isRequired,
-    students: PropTypes.array.isRequired
+    students: PropTypes.array.isRequired,
   };
 
   generateLogins() {
@@ -30,7 +30,7 @@ export default class LoginExport extends Component {
 
     if (students) {
       students.forEach(student => {
-        if (student.name !== '') {
+        if (student.name !== '' && student.userType !== 'teacher') {
           logins.push({
             sectionCode: this.props.sectionCode,
             sectionName: this.props.sectionName,
@@ -39,7 +39,7 @@ export default class LoginExport extends Component {
             studentLoginSecret:
               this.props.sectionLoginType === SectionLoginType.word
                 ? student.secretWords
-                : pegasus(`/images/${student.secretPicturePath}`)
+                : pegasus(`/images/${student.secretPicturePath}`),
           });
         }
       });

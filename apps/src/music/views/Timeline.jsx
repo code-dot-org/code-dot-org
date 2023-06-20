@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import React from 'react';
 import moduleStyles from './timeline.module.scss';
 import classNames from 'classnames';
@@ -7,16 +6,30 @@ import TimelineTrackEvents from './TimelineTrackEvents';
 import TimelineSimple2Events from './TimelineSimple2Events';
 import {getBlockMode} from '../appConfig';
 import {BlockMode} from '../constants';
+import {useDispatch, useSelector} from 'react-redux';
+import {clearSelectedBlockId} from '../redux/musicRedux';
 
 const barWidth = 60;
-const numMeasures = 30;
+const minNumMeasures = 30;
 // Leave some vertical space between each event block.
 const eventVerticalSpace = 2;
+// A little room on the left.
+const paddingOffset = 10;
 
 /**
  * Renders the music playback timeline.
  */
-const Timeline = ({isPlaying, currentPlayheadPosition}) => {
+const Timeline = () => {
+  const isPlaying = useSelector(state => state.music.isPlaying);
+  const dispatch = useDispatch();
+  const currentPlayheadPosition = useSelector(
+    state => state.music.currentPlayheadPosition
+  );
+  const measuresToDisplay = Math.max(
+    minNumMeasures,
+    useSelector(state => state.music.lastMeasure)
+  );
+
   const getEventHeight = (numUniqueRows, availableHeight = 110) => {
     // While we might not actually have this many rows to show,
     // we will limit each row's height to the size that would allow
@@ -40,68 +53,87 @@ const Timeline = ({isPlaying, currentPlayheadPosition}) => {
     : null;
 
   const timelineElementProps = {
-    currentPlayheadPosition,
+    paddingOffset,
     barWidth,
     eventVerticalSpace,
-    getEventHeight
+    getEventHeight,
   };
 
-  // Generate an array containing measure numbers from 1..numMeasures.
-  const arrayOfMeasures = Array.from({length: numMeasures}, (_, i) => i + 1);
+  // Generate an array containing measure numbers from 1..measuresToDisplay.
+  const arrayOfMeasures = Array.from(
+    {length: measuresToDisplay},
+    (_, i) => i + 1
+  );
 
   return (
-    <div id="timeline" className={moduleStyles.wrapper}>
-      <div className={moduleStyles.container}>
-        <div className={moduleStyles.fullWidthOverlay}>
-          {arrayOfMeasures.map((measure, index) => {
-            return (
-              <div
-                key={index}
-                className={moduleStyles.barLineContainer}
-                style={{left: index * barWidth}}
-              >
-                <div
-                  className={classNames(
-                    moduleStyles.barLine,
-                    measure === Math.floor(currentPlayheadPosition) &&
-                      moduleStyles.barLineCurrent
-                  )}
-                />
-                <div className={moduleStyles.barNumber}>{measure}</div>
-              </div>
-            );
-          })}
-        </div>
-
-        <div className={moduleStyles.soundsArea}>
-          {getBlockMode() === BlockMode.TRACKS ? (
-            <TimelineTrackEvents {...timelineElementProps} />
-          ) : getBlockMode() === BlockMode.SIMPLE2 ? (
-            <TimelineSimple2Events {...timelineElementProps} />
-          ) : (
-            <TimelineSampleEvents {...timelineElementProps} />
-          )}
-        </div>
-
-        <div className={moduleStyles.fullWidthOverlay}>
-          {playHeadOffsetInPixels !== null && (
+    <div
+      id="timeline"
+      className={moduleStyles.timeline}
+      onClick={() => dispatch(clearSelectedBlockId())}
+    >
+      <div
+        id="timeline-measures-background"
+        className={classNames(
+          moduleStyles.measuresBackground,
+          moduleStyles.fullWidthOverlay
+        )}
+        style={{width: paddingOffset + measuresToDisplay * barWidth}}
+      >
+        &nbsp;
+      </div>
+      <div id="timeline-measures" className={moduleStyles.fullWidthOverlay}>
+        {arrayOfMeasures.map((measure, index) => {
+          return (
             <div
-              className={moduleStyles.playhead}
-              style={{left: playHeadOffsetInPixels}}
+              key={index}
+              className={moduleStyles.barLineContainer}
+              style={{left: paddingOffset + index * barWidth}}
             >
-              &nbsp;
+              <div
+                className={classNames(
+                  moduleStyles.barNumber,
+                  measure === Math.floor(currentPlayheadPosition) &&
+                    moduleStyles.barNumberCurrent
+                )}
+              >
+                {measure}
+              </div>
+              <div
+                className={classNames(
+                  moduleStyles.barLine,
+                  measure === Math.floor(currentPlayheadPosition) &&
+                    moduleStyles.barLineCurrent
+                )}
+              />
             </div>
-          )}
-        </div>
+          );
+        })}
+      </div>
+
+      <div id="timeline-soundsarea" className={moduleStyles.soundsArea}>
+        {getBlockMode() === BlockMode.TRACKS ? (
+          <TimelineTrackEvents {...timelineElementProps} />
+        ) : getBlockMode() === BlockMode.SIMPLE2 ? (
+          <TimelineSimple2Events {...timelineElementProps} />
+        ) : (
+          <TimelineSampleEvents {...timelineElementProps} />
+        )}
+      </div>
+
+      <div id="timeline-playhead" className={moduleStyles.fullWidthOverlay}>
+        {playHeadOffsetInPixels !== null && (
+          <div
+            className={moduleStyles.playhead}
+            style={{left: paddingOffset + playHeadOffsetInPixels}}
+          >
+            &nbsp;
+          </div>
+        )}
       </div>
     </div>
   );
 };
 
-Timeline.propTypes = {
-  isPlaying: PropTypes.bool.isRequired,
-  currentPlayheadPosition: PropTypes.number.isRequired,
-  sounds: PropTypes.array
-};
+Timeline.propTypes = {};
 
 export default Timeline;

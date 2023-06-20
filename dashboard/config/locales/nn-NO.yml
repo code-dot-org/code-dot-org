@@ -56,6 +56,7 @@ nn:
         reset_password_token: Passordlenka for nullstilling du har fulgt
         error:
           future: kan ikkje vere i framtida
+        us_state: Fylke
   beta: beta
   hello: Hallo, verda
   welcome_back: Velkommen attende, %{name}
@@ -200,8 +201,6 @@ nn:
       løyve til å kontakte elevane. Elevane vil aldri få epost fra Code.org, unntatt
       ved passordgjenoppretting. Se våre [retningslinjer for personvern] (http://code.org/privacy)
       for meir informasjon.
-    additional_information: Vi treng nokre tilleggsopplysingar for å fortsette registreringa
-      di.
     user_type_button: Oppdater kontotype
     user_type_label: Kontotype
     user_type_student: Elev
@@ -218,6 +217,7 @@ nn:
     share_teacher_email_reg_partner_preference_yes: Ja
     share_teacher_email_reg_partner_preference_no: Nei
     share_teacher_email_reg_partner_preference_required: Du må gi ein e-postpreferanse.
+    us_state: Fylke
   school_info:
     title: Informasjon til skulen (valfritt)
     school_country: Landet til skulen
@@ -1249,6 +1249,7 @@ nn:
         csf_express: CS Fundamentals (Pre-ekspresskurs og ekspresskurs)
         csd: Oppdagingar i informatikk
         csp: Prinsipp i datavitskap
+        other: Anna
       email_opt_in:
         opt_in_yes: Ja
         opt_in_no: Nei
@@ -1282,6 +1283,11 @@ nn:
         dine](%{user_registration}) for å legge til epostadresse før du fullfører
         dette skjemaet.
   courses_category: Alle kurs
+  course_offering:
+    headers:
+      minecraft: Minecraft
+      sports: Sport
+      csf: Grunnleggande informatikk
   cookie_banner:
     message: Ved å fortsatt bruke nettstaden vår eller ved å klikke på "Eg godtar",
       godtar du lagring av informasjonskapslar på datamaskina eller eininga di.

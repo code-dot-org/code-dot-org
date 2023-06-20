@@ -1230,6 +1230,19 @@ cs:
             '"x"': x
             '"y"': 'y'
             '"z"': z
+      gamelab_layoutSprites:
+        text: uspořádat {GROUP} jako {FORMAT}
+        options:
+          FORMAT:
+            '"border"': hranice
+            '"circle"': kruh
+            '"grid"': mřížka
+            '"top"': horní řádek
+            '"row"': řádek
+            '"bottom"': dolní řádek
+            '"left"': levý sloupec
+            '"column"': sloupec
+            '"right"': pravý sloupec
       gamelab_locationAt:
         text: 'umístění x: {X} Y: {Y}'
       gamelab_locationModifier:
@@ -1256,6 +1269,18 @@ cs:
             '"spiral"': spirála
       gamelab_makeNewSpriteAnon:
         text: vytvoř novou postavu {ANIMATION_NAME} na {LOCATION}
+      gamelab_makeNewSpriteGroup:
+        options:
+          FORMAT:
+            '"border"': hranice
+            '"circle"': kruh
+            '"grid"': mřížka
+            '"top"': horní řádek
+            '"row"': řádek
+            '"bottom"': dolní řádek
+            '"left"': levý sloupec
+            '"column"': sloupec
+            '"right"': pravý sloupec
       gamelab_makeNumSprites:
         text: vytvoř {NUM} nových {ANIMATION_NAME} postav
       gamelab_makeProjectile:
@@ -1643,6 +1668,10 @@ cs:
         text: x souřadnice {SPRITE}
       gamelab_yLocationOf:
         text: y souřadnice {SPRITE}
+      KatiesBlocks_glideTo:
+        text: "{SPRITE} klouže na {LOCATION}"
+      KatiesBlocks_tumbling:
+        text: cvičení
       Mikelab_addBehaviorSimple:
         text: sprajt {SPRITE} začne {BEHAVIOR}
       Mikelab_addTrainingData:
@@ -2243,8 +2272,6 @@ cs:
         text: otoč se vlevo
       RyanLab_turnRight:
         text: otoč se vpravo
-      SpriteLab2Beta_spriteSay:
-        text: Sprite {SPRITE} Říct {TEXT} Pro {SECONDS} Sekund
       Vector_createSpriteWith:
         text: |-
           vytvoř postavu
@@ -2293,6 +2320,18 @@ cs:
             '0.25': few
       aalab_spriteSayChoices:
         text: "{SPRITE} říká {SPEECH}"
+      adaptations_adaptationBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): otáčení doprava
+            new Behavior(spinning_left, []): otáčení doleva
+            new Behavior(fluttering, []): třepotání
+            new Behavior(jittering, []): komíhání
+            new Behavior(wobbling, []): kymácení
+            new Behavior(wandering, []): potulování se
+            new Behavior(patrolling, []): patrolování
+      adaptations_startFollowing:
+        text: "{SPRITE} začne sledovat cíl {TARGET}"
       binary_drawBin:
         text: nakreslit binární {BIN}
       binary_drawBinScreen:
@@ -2434,6 +2473,22 @@ cs:
           DIR:
             right: vpravo ↻
             left: vlevo ↺
+      ecosystems_int10:
+        options:
+          VALUE:
+            '0': '0'
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+      storylab_printText:
+        text: vypiš {TEXT}
       storylab_setForegroundEffect2:
         text: proveď efekt {EFFECT}
         options:
@@ -2448,5 +2503,3 @@ cs:
         text: nastavit nadpis {HEADING}
       storylab_setSubheading:
         text: nastavit nadpis nižší úrovně {SUBHEADING}
-      validation_validatedBackground:
-        text: nastav pozadí na {IMG}

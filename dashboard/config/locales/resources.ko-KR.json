@@ -286,6 +286,7 @@
           "type": "워크 시트"
         },
         "dance_party_unplugged/coursed/2022": {
+          "name": "댄스 파티: 언플러그드",
           "type": "자료"
         },
         "open-ended_programming_levels_2/coursed/2022": {
@@ -712,7 +713,7 @@
           "type": "학생 유인물"
         },
         "digital_trails_digital_trail_squares/courseb/2022": {
-          "name": "디지털 흔적: 디지털 흔적 사각형",
+          "name": "디지털 흔적: 디지털 흔적 6컷만화",
           "url": "https://docs.google.com/document/d/1Ild_AQ98V1kXXvc-ncnC1cTNnIQrZUG_QS-ZiEi4EY8/edit",
           "type": "학생 유인물"
         },
@@ -722,8 +723,9 @@
           "type": "레슨 동영상"
         },
         "digital_trails_lesson_slides/courseb/2022": {
-          "name": "디지털 흔적: 레슨 슬라이드",
-          "url": "https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit"
+          "name": "디지털 흔적: 교육용 PPT",
+          "url": "https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit",
+          "type": "슬라이드 모음"
         },
         "feeling_faces_emotion_image/courseb/2022": {
           "name": "감정 얼굴- 이모션 이미지",
@@ -1047,7 +1049,7 @@
           "name": "가상 레슨 수정"
         },
         "safety_in_my_online_neighborhood_lesson_slides/coursea/2022": {
-          "name": "내 온라인 이웃에서 안전: 레슨 슬라이드",
+          "name": "내 온라인 이웃에서 안전: 강의 슬라이드",
           "url": "https://docs.google.com/presentation/d/1VFaxU6S0hsDgyCtaPhVFf9xpign__BXdvT0ypQq1gBs/edit"
         },
         "safety_in_my_online_neighborhood_my_online_neighborhood/coursea/2022": {
@@ -1061,9 +1063,9 @@
           "type": "학생 유인물"
         },
         "safety_in_my_online_neighborhood_safety_it_rules_/coursea/2022": {
-          "name": "내 온라인 이웃에서 안전: 안전: 규칙!",
+          "name": "내 온라인 이웃에서 안전: 안전, 규칙!",
           "url": "https://docs.google.com/document/d/1_fc870l0ndjhUMazjwLSaJOx9lIMsvbd3BYYEtLykIY/edit",
-          "type": "시 포스터"
+          "type": "포스터"
         },
         "20_20_20_rule/coursea/2022": {
           "name": "20/20/20 규칙",
@@ -1240,11 +1242,11 @@
           "type": "자료"
         },
         "putting_a_stop_to_online_meanness_lesson_slides/coursec/2022": {
-          "name": "온라인 상에서 나쁜 행동을 멈추게 함(STOP): 레슨 슬라이드 ",
+          "name": "온라인에서의 비열한 행동을 멈추게 하기: 레슨 자료",
           "url": "https://docs.google.com/presentation/d/1IXZ_WSxUuenF42ZzWk5pXTD8-Yy8P4nV2ihHd5-FotY/edit"
         },
         "putting_a_stop_to_online_meanness_stop_online_meanness/coursec/2022": {
-          "name": "온라인 상에서 나쁜 행동을 멈추게 함(STOP): 온라인에서 나쁜 행동 멈춤 (STOP)",
+          "name": "온라인에서의 비열한 행동을 멈추게 하기: 온라인에서 나쁜 행동 멈춤",
           "url": "https://docs.google.com/document/d/1gXXWbEocNfvw4fWdo7nQJ0r2FjoNeyElr8IcANUqLlo/edit?usp=sharing",
           "type": "학생 유인물"
         },
@@ -2500,10 +2502,12 @@
         },
         "introduction_to_machine_learning/csd/2022": {
           "name": "머신 러닝 소개",
+          "url": "https://docs.google.com/presentation/d/1uT4weLbovBliCfxnkCERfjXWlWWRAYiJQ7brwfYP22U/template/preview",
           "type": "슬라이드"
         },
         "types_of_machine_learning/csd/2022": {
           "name": "머신 러닝 유형",
+          "url": "https://docs.google.com/presentation/d/1FwOsAQW3y0eQ7NwdUitWwXbj74egitdSdrHGnSxXuOg/template/preview",
           "type": "슬라이드"
         },
         "types_of_machine_learning_1/csd/2022": {
@@ -2517,6 +2521,7 @@
         },
         "innovations_in_ai/csd/2022": {
           "name": "AI의 혁신",
+          "url": "https://docs.google.com/presentation/d/1JqvABbuAj3LiCxZQw91KuesvIxlJdXxU5iOabI-FjrM/template/preview",
           "type": "슬라이드"
         },
         "innovations_in_ai_-_activity_guide/csd/2022": {
@@ -2539,10 +2544,12 @@
         },
         "finding_patterns_in_data/csd/2022": {
           "name": "데이터에서 패턴 찾기",
+          "url": "https://www.youtube.com/watch?v=edFO0bdpoHY",
           "type": "비디오"
         },
         "patterns_in_data/csd/2022": {
           "name": "데이터에서의 패턴",
+          "url": "https://docs.google.com/presentation/d/1FabWi7tB1SI-YjqiPPfgU3Yljb3lJpoD1mFRmzUJiI8/template/preview",
           "type": "슬라이드"
         },
         "patterns_in_data_1/csd/2022": {
@@ -2565,6 +2572,7 @@
         },
         "classification_models_1/csd/2022": {
           "name": "분류 모델",
+          "url": "https://docs.google.com/presentation/d/1f5PG9ASPlRlXNM7gBMOribyQaYpVAaVW9EXWjtrqk1c/template/preview",
           "type": "슬라이드"
         },
         "fruit_veggie_cards/csd/2022": {
@@ -2584,10 +2592,12 @@
         },
         "introduction_to_ai_lab/csd/2022": {
           "name": "AI 연구실 소개",
+          "url": "https://docs.google.com/presentation/d/1lxgUDjozD9CF0Nv5n9sWmdguEp3lFX9k90cN-NGQnms/template/preview",
           "type": "슬라이드"
         },
         "introduction_to_ai_lab_1/csd/2022": {
           "name": "AI 연구실 소개",
+          "url": "https://www.youtube.com/watch?v=bGJ05vdI3xA",
           "type": "비디오"
         },
         "selecting_features/csd/2022": {
@@ -2601,6 +2611,7 @@
         },
         "training_and_testing_in_ai_lab/csd/2022": {
           "name": "AI 랩 교육 및 테스팅",
+          "url": "https://www.youtube.com/watch?v=HcCtdaiMWPQ",
           "type": "비디오"
         },
         "using_data_with_categorical_features/csd/2022": {
@@ -2615,6 +2626,7 @@
         },
         "importing_models_in_app_lab/csd/2022": {
           "name": "App Lab에서 모델 가져오기",
+          "url": "https://docs.google.com/presentation/d/1gkngAaMoJdp-8q2S9zomxHukJcdChkxtC38EA4dWvc0/template/preview",
           "type": "슬라이드"
         },
         "ai_training_data_bias/csd/2022": {
@@ -2624,10 +2636,12 @@
         },
         "model_cards/csd/2022": {
           "name": "모델 카드",
+          "url": "https://docs.google.com/presentation/d/1gA1VmDOMUzEwsrPLOwZQm6wN3a1uUQozRDuPCTqQFhA/template/preview",
           "type": "슬라이드"
         },
         "model_cards_1/csd/2022": {
-          "name": "모델 카드"
+          "name": "모델 카드",
+          "url": "https://docs.google.com/document/d/1I_y5dKeUe-84ao5B5yKqnMXVskx96h-H4TijVqiPs3A/view"
         },
         "_key_zoo_models/csd/2022": {
           "name": "[KEY] 동물원 모델",
@@ -2636,10 +2650,12 @@
         },
         "model_cards_in_ai_lab/csd/2022": {
           "name": "AI 랩 모델 카드",
+          "url": "https://www.youtube.com/watch?v=tz_ptkv0NxA",
           "type": "비디오"
         },
         "saving_models_in_ai_lab/csd/2022": {
           "name": "AI Lab에 모델 저장",
+          "url": "https://docs.google.com/presentation/d/1M9dxiG9GmZfoYxe2QYE7nQs3vs9T1knh0qxA9tOTtf8/template/preview",
           "type": "슬라이드"
         },
         "selecting_a_label/csd/2022": {
@@ -2658,9 +2674,12 @@
         },
         "model_cards_in_app_lab/csd/2022": {
           "name": "App Lab 모델 카드",
+          "url": "https://docs.google.com/presentation/d/1q_9LV_tmFEEqwCMuMo77heheFEyhATwMWYyVg6tn2HE/template/preview",
           "type": "슬라이드"
         },
         "printable_model_cards/csd/2022": {
+          "name": "인쇄 가능한 모델 카드",
+          "url": "https://docs.google.com/presentation/d/1e9SanMqNO12cpQoNlMYLxC4F35qhkJ20hVnZ_-E2TbM/edit",
           "type": "자료"
         },
         "_key_numerical_accuracy/csd/2022": {
@@ -2679,6 +2698,7 @@
         },
         "numerical_models/csd/2022": {
           "name": "수치 모델",
+          "url": "https://docs.google.com/presentation/d/1lKn_IQjmALHkAS7B1iJzFfg5DXIexbgJQOhjJ2F0wpM/template/preview",
           "type": "슬라이드"
         },
         "zombie_prediction/csd/2022": {
@@ -2691,12 +2711,14 @@
           "type": "답안지"
         },
         "numerical_data_in_ai_lab/csd/2022": {
+          "url": "https://docs.google.com/presentation/d/1lDwfSAfjllPGMuJgo7bJmrJWSUJsidsTLw4Tz67zfyQ/template/preview",
           "type": "슬라이드"
         },
         "numerical_data_in_ai_lab_1/csd/2022": {
           "url": "https://docs.google.com/document/d/1moMxuz91OA5THt6SxJm0AGyJKG69r1oz2FzeJ_NWeww/edit#"
         },
         "numerical_data_in_ai_lab_2/csd/2022": {
+          "url": "https://www.youtube.com/watch?v=a4JH1D_D7s4",
           "type": "비디오"
         },
         "using_data_with_numerical_features/csd/2022": {
@@ -2706,10 +2728,12 @@
         },
         "customizing_apps/csd/2022": {
           "name": "앱 커스터마이징",
+          "url": "https://docs.google.com/presentation/d/1EaYhIdYec-meNd2rrDnqrM76CYxNU54WDghIb0PCLks/template/preview",
           "type": "슬라이드"
         },
         "ai_code_of_ethics/csd/2022": {
           "name": "AI 윤리 강령",
+          "url": "https://docs.google.com/presentation/d/1jpT_cSs45ZwAz7NMYTn6vhefu3ImndFWfGubS_5wkGw/template/preview",
           "type": "슬라이드"
         },
         "ai_ethics_research_areas/csd/2022": {
@@ -2742,6 +2766,7 @@
         },
         "make_a_machine_learning_app/csd/2022": {
           "name": "머신 러닝 앱 만들기",
+          "url": "https://docs.google.com/presentation/d/1SDcwI7zrjM9G6H8ncufxiJXBZoozWk7SwvKl_GOMle4/template/preview",
           "type": "슬라이드"
         },
         "5_why_s_-_activity_guide/csd/2022": {
@@ -2754,6 +2779,7 @@
         },
         "issue_statements/csd/2022": {
           "name": "문제 설명문",
+          "url": "https://docs.google.com/presentation/d/11vB9jz1WAIcz2NFEJNMrl5IT87DfVfEPWgTxHG2_7Z4/template/preview",
           "type": "슬라이드"
         },
         "creating_a_survey/csd/2022": {
@@ -2763,6 +2789,7 @@
         },
         "survey_planning/csd/2022": {
           "name": "설문조사 계획",
+          "url": "https://docs.google.com/presentation/d/1OOvhcw8TjjItSk8j40LauRLaKicLb2uNb-OCSs6fyX4/template/preview",
           "type": "슬라이드"
         },
         "survey_planning_-_activity_guide/csd/2022": {
@@ -2774,10 +2801,13 @@
           "url": "https://docs.google.com/forms/d/1E4sGp03dDW6TYVh1G6zlNITuuSaLFGlMox2E0Iiczzo/copy"
         },
         "creating_a_survey_in_google_forms/csd/2022": {
+          "name": "설문조사를 구글 양식으로 만들기",
+          "url": "https://www.youtube.com/watch?v=Ot6eXUYb3P0",
           "type": "비디오"
         },
         "cleaning_survey_data/csd/2022": {
           "name": "설문조사 데이터 정리",
+          "url": "https://www.youtube.com/watch?v=NBTYgU71Jgw",
           "type": "비디오"
         },
         "isaac_s_survey_data_-_student_resource/csd/2022": {
@@ -2790,14 +2820,17 @@
         },
         "survey_data_in_ai_lab/csd/2022": {
           "name": "AI Lab의 설문조사 데이터",
+          "url": "https://docs.google.com/presentation/d/1DhTshRLCTnVkQHEkpThwedSXL5NEXKtjwATlQIJk33w/template/preview",
           "type": "슬라이드"
         },
         "view_and_download_survey_data/csd/2022": {
           "name": "설문조사 데이터 보기 및 다운로드",
+          "url": "https://www.youtube.com/watch?v=orn4dpcIiCk",
           "type": "비디오"
         },
         "troubleshooting_models/csd/2022": {
           "name": "문제 해결 모델",
+          "url": "https://docs.google.com/presentation/d/1LUkDD4PMefznEJh27EZruk6V8343JrYBpMZ3ThjmcLA/template/preview",
           "type": "슬라이드"
         },
         "troubleshooting_models_-_activity_guide/csd/2022": {
@@ -2806,6 +2839,7 @@
         },
         "creating_an_app/csd/2022": {
           "name": "앱 만들기",
+          "url": "https://docs.google.com/presentation/d/1D6EZitkNOVznhERKFHT1uD0DCVa8aOvengtVf2C2LDQ/template/preview",
           "type": "슬라이드"
         },
         "_template_5_why_s/csd/2022": {
@@ -2815,6 +2849,7 @@
         },
         "design_an_ai_app/csd/2022": {
           "name": "AI 앱 설계",
+          "url": "https://docs.google.com/presentation/d/1VOiSzm2soXCy2PhOHfgxiuqmwtKJJrxGQ6xhJlwPfCY/template/preview",
           "type": "슬라이드"
         },
         "design_an_ai_app_-_project_guide/csd/2022": {
@@ -4410,6 +4445,7 @@
           "type": "워크 시트"
         },
         "dance_party_unplugged/coursed/2021": {
+          "name": "댄스 파티: 언플러그드",
           "url": "https://studio.code.org/s/dance-unplugged/lessons/1",
           "type": "자료"
         },
@@ -4708,6 +4744,7 @@
           "type": "자료"
         },
         "follow_the_algorithm/coursee/2021": {
+          "name": "알고리즘 따르기",
           "url": "https://docs.google.com/presentation/d/16r9HpwQodVnmSfRlfJmOfZajqE66YlZz0aG60CFsVMk/template/preview",
           "type": "슬라이드"
         },

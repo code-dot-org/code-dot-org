@@ -48,6 +48,7 @@
   thank_you_: "ಧನ್ಯವಾದಗಳು!"
   congratulations: "ಅಭಿನಂದನೆಗಳು!"
   get_a_certificate_of_achievement: "ಸಾಧನೆಯ ಪ್ರಮಾಣಪತ್ರವನ್ನು ಪಡೆಯಿರಿ"
+  view_course: "ಕೋರ್ಸ್‌ ವೀಕ್ಷಿಸಿ"
   third_party_gradelevel_kto8: "ಗ್ರೇಡ್‌ ಕೆ-8"
   third_party_gradelevel_kto2: "ಗ್ರೇಡ್‌ ಕೆ-2"
   third_party_gradelevel_2to8: "ಗ್ರೇಡ್‌ 2-8"
@@ -124,6 +125,7 @@
   studiobar_frozen_body: "ಆನಾ ಮತ್ತು ಎಲ್ಸಾಸಹಿತ ವಿಂಟರ್ ವಂಡರ್‌ಲ್ಯಾಂಡ್‌ ರಚಿಸಿ"
   homepage_slot_text_hoc: "ಕೋಡ್ ಗಂಟೆ"
   homepage_slot_text_frozen: "ಆನಾ ಮತ್ತು ಎಲ್ಸಾ ಜೊತೆಗೆ ಫ್ರೋಜನ್"
+  homepage_slot_text_teacher: "ಶಿಕ್ಷಕರ ಡ್ಯಾಶ್‌ಬೋರ್ಡ್‌"
   homepage_slot_text_flappy: "ಫ್ಲಾಪಿ ಕೋಡ್"
   homepage_action_text_sign_up: "ಸೈನ್ ಅಪ್ ಮಾಡಿ"
   homepage_action_text_try_it: "ಇದನ್ನು ಪ್ರಯತ್ನಿಸಿ"
@@ -133,6 +135,7 @@
   homepage_slot_text_blurb_hoc_2022: "ಅನ್ವೇಷಿಸಿ, ಪ್ಲೇ ಮಾಡಿ, ರಚಿಸಿ!"
   homepage_slot_text_link_hoc: "ಅವರ್ ಆಫ್ ಕೋಡ್ ಅನ್ನು ಪ್ರಯತ್ನಿಸಿ"
   homepage_slot_text_title_students: "ವಿದ್ಯಾರ್ಥಿಗಳು"
+  homepage_slot_text_link_elementary: "ಪ್ರಾಥಮಿಕ ಶಾಲೆ\n"
   homepage_slot_text_link_middle: "ಮಧ್ಯಮ ಶಾಲೆ"
   homepage_slot_text_link_high: "ಹೈಸ್ಕೂಲ್"
   homepage_slot_text_link_thebadguys: "ಬ್ಯಾಡ್ ಗೈಸ್ ಜೊತೆ ಕೋಡ್"
@@ -255,6 +258,7 @@
   dashboard_landing_view_progress: "%{biggest_section}ಗಾಗಿ ಪ್ರಗತಿಯನ್ನು ವೀಕ್ಷಿಸಿ"
   dashboard_landing_available_title: "ಲಭ್ಯವಿರುವ ಶಿಕ್ಷಣ"
   dashboard_landing_available_courses: "ನಿಮಗೆ ಮತ್ತು ನಿಮ್ಮ ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ಪ್ರಸ್ತುತ ಲಭ್ಯವಿರುವ ಕೋರ್ಸ್ಗಳು ಇಲ್ಲಿವೆ."
+  dashboard_landing_teacher_forum: "ವೃತ್ತಿಪರ ಕಲಿಕಾ ಸಮುದಾಯಕ್ಕೆ ಸೇರಿ."
   dashboard_course_ecs: "ಕಂಪ್ಯೂಟರ್ ವಿಜ್ಞಾನ ಎಕ್ಸ್ಪ್ಲೋರಿಂಗ್"
   dashboard_landing_loading: "ಲೋಡ್ ಮಾಡಲಾಗುತ್ತಿದೆ..."
   dashboard_action_cancel: "ರದ್ದುಮಾಡಿ"
@@ -263,10 +267,13 @@
   dashboard_action_delete_no: 'ಇಲ್ಲ'
   dashboard_action_confirm: "ಅಳಿಸಿ?"
   dashboard_action_done: "ಮುಗಿದಿದೆ"
+  dashboard_assessments_none: "ಹೆಚ್ಚಿನ ಶಿಕ್ಷಕರು ತಮ್ಮ ವಿದ್ಯಾರ್ಥಿಗಳ ಪ್ರಗತಿಯನ್ನು “ಪ್ರಗತಿ ವೀಕ್ಷಿಸಿ” ಟ್ಯಾಬ್ ಬಳಸಿ ಅಳೆಯುತ್ತಾರೆ. ನಿಮ್ಮ ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ಹೆಚ್ಚುವರಿ ಮೌಲ್ಯಮಾಪನಗಳನ್ನು ನೀಡುವಲ್ಲಿ ನೀವು ಆಸಕ್ತಿ ಹೊಂದಿದ್ದರೆ, ಪಾಠ ಯೋಜನೆಗಳಲ್ಲಿ ಶಿಫಾರಸು ಮಾಡಲಾದ ಪ್ರಶ್ನೆಗಳು ಮತ್ತು ವಲಯಗಳನ್ನು ನೀವು ಕಾಣಬಹುದು. ಇವುಗಳನ್ನು Code.org ನ ಹೊರಗೆ ಮಾಡಲಾಗುತ್ತದೆ."
   dashboard_navigation_home_page: "ಶಿಕ್ಷಕರ ಮುಖಪುಟದಲ್ಲಿ"
+  dashboard_navigation_section_teacher_progress: "ನಿಮ್ಮ ಕೋರ್ಸ್ ಪ್ರಗತಿ"
   dashboard_navigation_section_community: "ಬೆಂಬಲ"
   dashboard_navigation_add_students: "ವಿದ್ಯಾರ್ಥಿಗಳನ್ನು ಸೇರಿಸಿ"
   dashboard_navigation_manage_students: "ವಿದ್ಯಾರ್ಥಿಗಳನ್ನು ನಿರ್ವಹಿಸಿ"
+  dashboard_navigation_lesson_plans_resources: "ಪಠ್ಯಕ್ರಮದ ಮಾನದಂಡಗಳು"
   dashboard_navigation_section: 'ವಿಭಾಗ: %{section_name}'
   dashboard_navigation_student: 'ವಿದ್ಯಾರ್ಥಿ: %{student_name}'
   dashboard_progress_not_started: "ಆರಂಭಿಸಿಲ್ಲ"
@@ -275,12 +282,15 @@
   dashboard_progress_completed_perfect: "ಪೂರ್ಣಗೊಂಡಿದೆ, ಪರಿಪೂರ್ಣವಾಗಿದೆ"
   dashboard_progress_furthest_level_attempted: "ಹೆಚ್ಚಿನ ಮಟ್ಟದ ಪ್ರಯತ್ನ"
   dashboard_progress_submitted: "ಸಲ್ಲಿಸಲಾಗಿದೆ"
+  dashboard_progress_pair_programming: "ಜೋಡಿ ಪ್ರೋಗ್ರಾಮಿಂಗ್"
   dashboard_sections_new_section: "ಹೊಸ ವಿಭಾಗ"
   dashboard_sections_jumbotron_instruction: "ಹೊಸ ವಿಭಾಗಗಳನ್ನು ರಚಿಸಿ ಮತ್ತು ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ಸೇರಿಸಿ. ವಿಭಾಗಗಳು ವಿದ್ಯಾರ್ಥಿಗಳನ್ನು ಸಣ್ಣ ಗುಂಪುಗಳಾಗಿ ಸಂಘಟಿಸಲು ನಿಮಗೆ ಸಹಾಯ ಮಾಡುತ್ತವೆ, ಆದ್ದರಿಂದ ನೀವು ಅವರ ಪ್ರಗತಿಯನ್ನು ಟ್ರ್ಯಾಕ್ ಮಾಡಬಹುದು ಮತ್ತು ಅವರ ಖಾತೆಗಳನ್ನು ನಿರ್ವಹಿಸಬಹುದು."
   dashboard_sections_table_section: "ವಿಭಾಗ"
   dashboard_sections_table_secret: "ಲಾಗಿನ್ ಕೌಟುಂಬಿಕತೆ"
   dashboard_sections_table_grade: "ಗ್ರೇಡ್"
   dashboard_sections_table_course: "ಕೋರ್ಸ್"
+  dashboard_sections_table_pairing_allowed: "ಜೋಡಿ ಪ್ರೋಗ್ರಾಮಿಂಗ್"
+  dashboard_sections_table_stage_extras: "ಹಂತ ಎಕ್ಸ್‌ಟ್ರಾ"
   dashboard_sections_table_students: "ವಿದ್ಯಾರ್ಥಿಗಳು"
   dashboard_sections_table_code: "ವಿಭಾಗ ಕೋಡ್"
   dashboard_sections_name: 'ವಿಭಾಗ ಹೆಸರು:'
@@ -291,6 +301,10 @@
   dashboard_sections_print_secrets: "ನಂತರ ನೀವು ನಿಮ್ಮ ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ಪ್ರತ್ಯೇಕವಾಗಿ ವಿತರಿಸಲು ಖಾತೆ ಮಾಹಿತಿಯನ್ನು ಹೊಂದಿರುವ ಕಾರ್ಡ್ಗಳ ಹಾಳೆಯನ್ನು ಮುದ್ರಿಸಬಹುದು."
   dashboard_sections_switch_section: 'ಸ್ವಿಚ್ ವಿಭಾಗ:'
   dashboard_sections_close: "ಮುಚ್ಚಿ"
+  dashboard_sections_one_per_teacher: "ಪ್ರತಿ ಶಿಕ್ಷಕರಿಗೆ ಒಂದು ವಿಭಾಗದಲ್ಲಿ ಮಾತ್ರ ವಿದ್ಯಾರ್ಥಿಗಳು ಇರಬಹುದು. ನಿಮ್ಮ ವಿದ್ಯಾರ್ಥಿಗಳನ್ನು ಈ ಹೊಸ ವಿಭಾಗಕ್ಕೆ ಸೇರಿಸಲಾಗುತ್ತದೆ ಮತ್ತು ಅವರ ಹಳೆಯ ವಿಭಾಗವನ್ನು ಬಿಡಲಾಗುತ್ತದೆ."
+  dashboard_sections_other_section: "ಇತರ ಶಿಕ್ಷಕರು"
+  dashboard_sections_assign_hoc_script_msg: "ನಮ್ಮ ಸೈಟ್ ಅವರ್ ಆಫ್ ಕೋಡ್‌ಗೆ ಸ್ವೀಕರಿಸುವ ದಟ್ಟಣೆಯ ಪ್ರಮಾಣದಿಂದಾಗಿ ಡಿಸೆಂಬರ್ 3 - 11 ರಿಂದ ಈ ಕೋರ್ಸ್‌ನಲ್ಲಿ ಪ್ರಗತಿಯನ್ನು ಉಳಿಸಲು ನಮಗೆ ಸಾಧ್ಯವಾಗುವುದಿಲ್ಲ ಎಂಬುದನ್ನು ದಯವಿಟ್ಟು ಗಮನಿಸಿ. ಈ ಟ್ಯುಟೋರಿಯಲ್‌ನಲ್ಲಿ ಉಳಿದೆಲ್ಲವೂ ನಿರೀಕ್ಷೆಯಂತೆ ಕಾರ್ಯನಿರ್ವಹಿಸುತ್ತಿರುತ್ತದೆ. ನೀವು ಇನ್ನೂ ಕೋರ್ಸ್ ಅನ್ನು ನಿಯೋಜಿಸಬಹುದು ಮತ್ತು ಭಾಗವಹಿಸುವ ಎಲ್ಲಾ ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ಪ್ರಮಾಣಪತ್ರಗಳನ್ನು ನೀಡಬಹುದು. (ಹೆಚ್ಚಿನ ಶಿಕ್ಷಕರು <a href='%{certificate_url}'>ಇವುಗಳನ್ನು ಮುಂಚಿತವಾಗಿ ಮುದ್ರಿಸುತ್ತಾರೆ</a>.) ನಾವು ವರ್ಷದ ಪ್ರತಿ ಪರ್ಯಾಯ ವಾರದಲ್ಲೂ ವಿದ್ಯಾರ್ಥಿಗಳ ಪ್ರಗತಿಯನ್ನು ಉಳಿಸುತ್ತೇವೆ ಮತ್ತು ವರದಿ ಮಾಡುತ್ತೇವೆ."
+  dashboard_error_other_section: "ನಿಮ್ಮ ಸ್ವಂತ ವಿಭಾಗಗಳ ನಡುವೆ ನೀವು ವಿದ್ಯಾರ್ಥಿಗಳನ್ನು ಬದಲಿಸುತ್ತಿದ್ದರೆ, ಡ್ರಾಪ್‌ಡೌನ್‌ನಿಂದ ನಿಮ್ಮ ವಿಭಾಗವನ್ನು ಆಯ್ಕೆ ಮಾಡಿ. ನಿಮ್ಮ ವಿದ್ಯಾರ್ಥಿಗಳನ್ನು ಬೇರೆ ಶಿಕ್ಷಕರ ವಿಭಾಗಕ್ಕೆ ಸ್ಥಳಾಂತರಿಸಲು 'ಇತರೆ ವಿಭಾಗ' ಮಾತ್ರ ಆಯ್ಕೆಮಾಡಿ."
   dashboard_students_add_multiple: 'ನಿಮ್ಮ ವಿದ್ಯಾರ್ಥಿಗಳ ಹೆಸರುಗಳನ್ನು ಪ್ರತಿ ಸಾಲಿಗೆ ಒಂದರಂತೆ ಟೈಪ್ ಮಾಡಿ ಅಥವಾ ಅಂಟಿಸಿ:'
   dashboard_students_new_section: "ನೀವು ಹೊಸ ವಿಭಾಗವನ್ನು ರಚಿಸಿದ್ದೀರಿ! ಈಗ ಬಳಸಿ ನಿಮ್ಮ ವಿದ್ಯಾರ್ಥಿಗಳನ್ನು ಸೇರಿಸಿ <b>ವಿದ್ಯಾರ್ಥಿ ಸೇರಿಸಿ</b> ಮತ್ತು <b>ಅನೇಕ ವಿದ್ಯಾರ್ಥಿಗಳನ್ನು ಸೇರಿಸಿ</b> ಮೇಲಿನ ಗುಂಡಿಗಳು."
   dashboard_students_name: 'ಹೆಸರು: '
@@ -314,6 +328,7 @@
   dashboard_pre-express: 'ಪ್ರೀ-ರೀಡರ್ ಎಕ್ಸ್‌ಪ್ರೆಸ್ ಕೋರ್ಸ್:'
   dashboard_curriculum_overview: "ಕೆ 5 ಪಠ್ಯಕ್ರಮ ಅವಲೋಕನ"
   dashboard_overview: "ಮುನ್ನೋಟ"
+  dashboard_sequence: "ಅನುಕ್ರಮ"
   dashboard_framework: "ಚೌಕಟ್ಟು"
   dashboard_standards: "ಮಾನದಂಡಗಳು"
   dashboard_implementation_guide: "ಅನುಷ್ಠಾನ ಮಾರ್ಗದರ್ಶಿ"
@@ -349,7 +364,9 @@
   codeintl_name: "ಕ್ಲಾಸಿಕ್‌ ಮೇಝ್‌"
   blockly_name: "ಬ್ಲಾಕಿಲಿ"
   hourofcode_name: "ಕ್ಲಾಸಿಕ್‌ ಮೇಝ್‌"
+  playlab_name: "ಲ್ಯಾಬ್ ಪ್ಲೇ ಮಾಡಿ"
   infinity_name: "ಇನ್‌ಫಿನಿಟಿ ಪ್ಲೇ ಲ್ಯಾಬ್"
+  artist_name: "ಆರ್ಟಿಸ್ಟ್"
   coursea-draft_name: ಕೋರ್ಸ್‌ ಎ
   coursea_name: "ಕೋರ್ಸ್‌ ಎ"
   courseb-draft_name: ಕೋರ್ಸ್‌ ಬಿ
@@ -379,6 +396,8 @@
   minecraft_name: "ಮೈನ್‌ಕ್ರಾಫ್ಟ್"
   starwarsblocks_name: "ಸ್ಟಾರ್ ವಾರ್ಸ್‌ (ಬ್ಲಾಕ್‌ಗಳು)"
   hoc-encryption_name: ಸರಳ ಎನ್‌ಕ್ರಿಪ್ಷನ್
+  applab_name: "ಅಪ್ಲಿಕೇಶನ್ ಲ್ಯಾಬ್"
+  gamelab_name: "ಗೇಮ್ ಲ್ಯಾಬ್"
   basketball_name: "ಬಾಸ್ಕೆಟ್‌ಬಾಲ್‌ ಗೇಮ್‌ ಮಾಡಿ"
   applab_gradelevel: "ವಯಸ್ಸು 13+"
   codeorg_gradelevel: "ವಯಸ್ಸು 4-104"
@@ -539,6 +558,7 @@
   header_teach: "ಬೋಧಿಸಿ"
   header_help_us: "ಸಹಾಯ ಮಾಡಿ"
   header_about: "ಬಗ್ಗೆ"
+  header_teacher_community: "ಶಿಕ್ಷಕ ಸಮುದಾಯ"
   header_report_bug: "ತೊಂದರೆ ವರದಿ ಮಾಡು"
   header_legal_privacy: "ಗೌಪ್ಯತಾ ನೀತಿ"
   header_legal_tos: "ಸೇವೆಯ ಷರತ್ತುಗಳು"
@@ -550,6 +570,8 @@
   user_header_logout: "ಸೈನ್ ಔಟ್"
   user_header_signin: "ಸೈನ್ ಇನ್"
   user_header_artist: 'ಆರ್ಟಿಸ್ಟ್'
+  user_header_gamelab: "ಗೇಮ್ ಲ್ಯಾಬ್"
+  user_header_playlab: "ಲ್ಯಾಬ್ ಪ್ಲೇ ಮಾಡಿ"
   user_header_dance: "ಡ್ಯಾನ್ಸ್ ಪಾರ್ಟಿ"
   user_header_minecraft: "ಮೈನ್‌ಕ್ರಾಫ್ಟ್"
   user_header_flappy: "ಫ್ಲಾಪಿ"
@@ -657,6 +679,7 @@
   footer_partners: "ಪಾಲುದಾರರು"
   footer_support: "ಬೆಂಬಲ"
   footer_terms: "ನಿಯಮಗಳು"
+  ai_for_oceans: "ಎಐ ಫಾರ್ ಓಶಿಯನ್ಸ್"
   ai_for_oceans_lesson_plan: "ಪಠ್ಯ ಯೋಜನೆ"
   ai_for_oceans_tile_description: "ಕಸವನ್ನು ಗುರುತಿಸಲು ತರಬೇತಿ ನೀಡುವ ಮೂಲಕ ಸಮುದ್ರವನ್ನು ಸ್ವಚ್ಛಗೊಳಿಸಲು ಎಐಗೆ ಸಹಾಯ ಮಾಡಿ! ತರಬೇತಿ ಡೇಟಾ ಮತ್ತು ಬಯಾಸ್ ಬಗ್ಗೆ ಮತ್ತು ವಿಶ್ವದ ಸಮಸ್ಯೆಗಳನ್ನು ಎಐ ಹೇಗೆ ಪರಿಹರಿಸಬಹುದು ಎಂಬ ಬಗ್ಗೆ ಕಲಿಯಿರಿ. ನೋಡಿ"
   how_ai_works: "ಎಐ ಹೇಗೆ ಕೆಲಸ ಮಾಡುತ್ತದೆ"

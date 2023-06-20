@@ -60,6 +60,7 @@ az:
         reset_password_token: "İzlədiyiniz parolun sıfırlanması bağlantısı"
         error:
           future: gələcəkdə ola bilməz
+        us_state: 'dövlət'
   beta: "beta versiya"
   hello: "Salam, dünya"
   welcome_back: "Bir daha xoş gəldiniz, %{name}"
@@ -172,7 +173,6 @@ az:
     data_collection_us: "Code.org-un ABŞ-da mənfəət gətirməyən bir veb sayt olduğunu və ABŞ-da məlumat toplanmasını tənzimləyən qanunların ölkəmdəki qanunlardan fərqli ola biləcəyini başa düşürəm."
     visit_privacy: 'Daha çox məlumat üçün Code.org-un [Məxfilik Siyasəti] (%{privacy_url}) səhifəsini ziyarət edin.'
     student_terms_markdown: "Elektron poçt ünvanları bizim şagirdlərlə əlaqə saxlamağımız üçün götürülməyib. Şagirdlər Code.ord-dan şifrə bərpasından başqa hallarda elektron poçt əldə etməyəcəklər. Daha çox məlumat üçün gizlilik politikamıza(http://code.org/privacy) baxın."
-    additional_information: "Qeydiyyatı davam etdirmək üçün bəzi əlavə məlumatlara ehtiyacımız var."
     user_type_button: "Hesab növünü yeniləyin"
     user_type_label: "Hesab Növü"
     user_type_student: "şagird"
@@ -200,6 +200,7 @@ az:
     parent_account_checkbox: "Mən övladımın adından qeydiyyatdan keçən valideyn/qəyyumam."
     parent_account_email_progress_permission: "Övladınızın tərəqqisi və layihələri haqqında hər hansı bir yeniləmə, kursları və kompüter elmləri ilə bağlı yenilikləri sizə göndərə bilərikmi? [(Məxfilik siyasətimizə baxın)] (%{privacy_policy_url})"
     parent_account_email_label: "Valideyn /Qəyyum E-poçtu"
+    us_state: 'dövlət'
   school_info:
     title: 'Təhsil müəssisəsi haqqında məlumat (istəyə görə)'
     school_country: 'Məktəb Ölkəsi'
@@ -1184,6 +1185,7 @@ az:
         csf_express: 'CS (Əvvəldən ifadə etmək və ya ifadə etmək)'
         csd: 'Kompüter Elmləri kəşfləri'
         csp: 'Kompüter Elmləri prinsipləri'
+        other: 'Digər'
         not_applicable: "Tətbiq olunmağa uyğun deyil"
       email_opt_in:
         opt_in_yes: 'Bəli'
@@ -1205,6 +1207,13 @@ az:
     no_teacher_email:
       body_markdown: 'Sizin hesabınızın email adressi yoxdur. Zəhmət olmasa bu formu bitirməmişdən əvvəl email adressinizi əlavə etmək üçün [hesab tənzimləmələrinə daxil olun] %{user_registration}'
   courses_category: 'Tam Kurslar'
+  course_offering:
+    headers:
+      minecraft: 'Minecraft'
+      hello_world: 'Salam Dünya'
+      sports: 'İdman'
+      csf: 'Kompüter Elmlərinin əsasları'
+      csc: "CS Əlaqələri\n"
   cookie_banner:
     message: 'Saytımıza baxmağa davam edərək və ya "Razıyam" düyməsini basaraq, kompüterinizdə və ya cihazınızda Cookies saxlanmasını qəbul etmiş olursunuz.'
     more_information: "\"Code.org\"un məxfilik siyasətini nəzərdən keçirin."

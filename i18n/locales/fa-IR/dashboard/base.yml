@@ -60,6 +60,7 @@ fa:
         reset_password_token: "پیوند بازنشانی رمز عبوری که دنبال کرده اید"
         error:
           future: نمیتوان در آینده بود
+        us_state: 'وضعیت'
   beta: "بتا"
   hello: "سلام دنیا"
   welcome_back: "%{name}، خوش آمدید"
@@ -69,6 +70,7 @@ fa:
   unsubmit: ثبت نشده
   previous_page: صفحه‌ی قبل
   next_page: صفحه بعد
+  next_level: سطح بعدی
   next_resource: منبع بعدی
   done_with_module: با این ماژول آموزشی تمام شد
   cancel: "لغو"
@@ -172,7 +174,6 @@ fa:
     data_collection_us: "من متوجهم که Code.org یک وب سایت غیرانتفاعی مستقر در ایالات متحده است و قوانین مربوط به جمع‌آوری داده ها در ایالات متحده ممکن است با همان قوانین در کشور من متفاوت باشد."
     visit_privacy: 'برای کسب اطلاعات بیشتر، [خط‌مشی حفظ حریم خصوصی] (%{privacy_url}) Code.org را ببینید.'
     student_terms_markdown: "آدرس‌های ایمیل در فرمی ذخیره نمی‌شوند که به ما امکان تماس با دانشجویان را بدهد. دانش آموزان هرگز ایمیلی از Code.org دریافت نخواهند کرد مگر برای بازیابی رمز عبور. برای اطلاعات بیشتر به [خط‌مشی حفظ حریم خصوصی] ما (http://code.org/privacy) مراجعه کنید."
-    additional_information: "ما به اطلاعات بیشتری برای ادامه ثبت نام شما احتیاج داریم."
     user_type_button: "بروزرسانی نوع حساب کاربری"
     user_type_label: "نوع حساب کاربری"
     user_type_student: "دانش آموز"
@@ -200,6 +201,7 @@ fa:
     parent_account_checkbox: "من یک پدر/مادر/سرپرست هستم که از طرف فرزندم ثبت نام می کنم"
     parent_account_email_progress_permission: "آیا می‌توانیم به‌روزرسانی‌های گاه به گاه در مورد پیشرفت‌ها و پروژه‌های فرزندتان و به‌روزرسانی‌هایی درباره دوره و علوم رایانه‌اش را به شما ایمیل کنیم؟ [(به خط مشی حفظ حریم خصوصی ما مراجعه کنید)](%{privacy_policy_url})"
     parent_account_email_label: "ایمیل والدین/سرپرست"
+    us_state: 'وضعیت'
   school_info:
     title: 'اطلاعات مدرسه (اختیاری)'
     school_country: 'کشور مدرسه'
@@ -388,7 +390,7 @@ fa:
       team: 'تیم'
       driver: 'راننده'
       navigator: 'شریک'
-      create: 'ایجاد'
+      create: 'ایجاد کردن'
       algebra_game: 'جبر'
       applab: 'آزمایشگاه نرم افزار'
       artist: 'هنرمند'
@@ -1083,6 +1085,7 @@ fa:
         csf_express: 'علوم کامپیوتر مقدماتی (پیش از اکسپرس یا اکسپرس)'
         csd: 'کشفیات علوم کامپیوتر'
         csp: 'اصول علوم کامپیوتر'
+        other: 'دیگر'
         not_applicable: "نامرتبط"
       email_opt_in:
         opt_in_yes: 'بله'
@@ -1104,6 +1107,12 @@ fa:
     no_teacher_email:
       body_markdown: 'حساب کاربری شما آدرس ایمیلی ندارد. لطفاً برای افزودن آدرسی ایمیل پیش از تکمیل این فرم [تنظیمات حساب کاربری خود را ببینید.](%{user_registration})'
   courses_category: 'تمام دوره‌ها'
+  course_offering:
+    headers:
+      minecraft: 'ماینکرفت'
+      sports: 'ورزش'
+      csf: 'مبانی cs'
+      csc: 'اتصالهای cs'
   cookie_banner:
     message: 'درصورت ادامه‌ی استفاده از سایت ما و یا با کلیک بر روی "من موافقم"، موافقت خود را با ذخیره‌ی کوکی‌ها بر روی کامپیوتر و یا دستگاه خود اعلام کرده‌اید.'
     more_information: "سیاست حریم خصوصی Code.org را مشاهده کنید."
@@ -1153,5 +1162,6 @@ fa:
     image_width: "عرض تصویر"
     image_height: "ارتفاع تصویر"
     bits_per_pixel_header: "بیت در هر پیکسل"
+    binary: "دو دویی"
     hexadecimal: "سیستم شانزده شانزدهی"
     pixel_format_header: "قالب پیکسل"

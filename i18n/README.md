@@ -24,7 +24,7 @@ This is because translation strings come from unstruted sources and our Markdown
 renderer will remove any potentially-dangerous HTML.
 You can render a string as Markdown by passing `markdown: true` or `markdown: :inline`
 to the `I18n.t` method. With `markdown: true` option, Markdown will handle its own
-block-level elements like paragraphs and lists, while the `markdown: inline` option
+block-level elements like paragraphs and lists, while the `markdown: :inline` option
 will produce content suitable for embedding inside an existing block-level element.
 
 ### Pegasus
@@ -48,7 +48,7 @@ will produce content suitable for embedding inside an existing block-level eleme
     `staging/pegasus/cache/i18n/en-US.yml`
 
 ### Apps
-
+For `.json` files we use [MessageFormat](http://messageformat.github.io/messageformat/guide/) to enable formatting options such as Variables and Plurals.
 -   Make changes in `code-dot-org/apps/i18n/<app>/en_us.json`
 -   If you are creating a new app:
     -   Add the strings in a new file in `code-dot-org/apps/i18n/<new

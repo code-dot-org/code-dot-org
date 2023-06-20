@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 
 export default class PrintReportButton extends Component {
   static propTypes = {
-    onClick: PropTypes.func.isRequired
+    onClick: PropTypes.func.isRequired,
   };
 
   render() {
@@ -29,6 +29,6 @@ export default class PrintReportButton extends Component {
 
 const styles = {
   button: {
-    margin: '20px 0px'
-  }
+    margin: '20px 0px',
+  },
 };

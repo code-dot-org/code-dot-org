@@ -90,12 +90,13 @@ class Api::V1::SectionsStudentsController < Api::V1::JSONApiController
           name: student["name"],
           age: student["age"],
           gender: student["gender"],
+          gender_teacher_input: student["gender_teacher_input"],
           sharing_disabled: !!student["sharing_disabled"],
         )
         @section.add_student(new_student, current_user)
         new_students.push(new_student.summarize)
-      rescue ActiveRecord::RecordInvalid => e
-        errors << e.message
+      rescue ActiveRecord::RecordInvalid => exception
+        errors << exception.message
       end
       raise ActiveRecord::Rollback if errors.any?
     end
@@ -126,6 +127,7 @@ class Api::V1::SectionsStudentsController < Api::V1::JSONApiController
     params.require(:student).permit(
       :age,
       :gender,
+      :gender_teacher_input,
       :name,
       :sharing_disabled,
       :password,

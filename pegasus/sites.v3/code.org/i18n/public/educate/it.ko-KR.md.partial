@@ -10,7 +10,8 @@ theme: responsive
 
 - 최소 15 MB/초 속도의 인터넷 연결을 추천합니다.
 - 지원되는 최소 화면 크기는 1024 x 728 px입니다.
-- 중학교 및 고등학교 수준의 과정: CS 발견 및 CS 원리, 앱 랩 소개를 위해 마우스(또는 터치패드) 와 키보드가 포함된 데스크톱 또는 노트북이 있어야 합니다. 대부분의 태블릿 및 모바일 기기는 이 과정 수강용으로 지원되지 않습니다. 기기별 예외사항은 아래 "모바일 및 태블릿 지원 세부사항"을 참조하세요.
+- You will need a desktop or laptop computer (Chromebooks are included) with a mouse (or touchpad) and keyboard for our middle and high school-level courses: CS Discoveries, CS Principles, and Intro to App Lab. “See Minimum Supported Browsers and Platforms” below.
+- Most tablets (such as an iPad) and mobile devices are not supported for these courses. 기기별 예외사항은 아래 "모바일 및 태블릿 지원 세부사항"을 참조하세요.
 - K-5 과정 (컴퓨터 과학 기초) 및 아워오브코드 활동은 모든 기타 현대식 태블릿 및 노트북 또는 데스크톱 컴퓨터외에 iPad 및 Chromebook에서 호환됩니다.
 - 모바일 기기 지원 세부사항을 찾고 계세요? 아래를 읽어 보세요.
 
@@ -82,12 +83,12 @@ theme: responsive
 
 ## 모바일 및 태블릿 지원 세부사항
 
-모든 CS 발견, CS 원리 및 앱 랩 소개 과정은 태블릿 또는 모바일 기기와는 호환되지 않습니다. 키보드와 마우스(또는 터치패드, MacBooks의 터치패드와 같은)가 있어야 합니다. 대부분의 태블릿은 지원되지 않지만 다음의 예외가 있습니다:
+All CS Discoveries, CS Principles, CS A, and Intro to App Lab courses are not compatible with tablets or mobile devices - a full keyboard and mouse (or touchpad) are required. 대부분의 태블릿은 지원되지 않지만 다음의 예외가 있습니다:
 
 - 외부 키보드가 있는 Microsoft Surface Pro
 - iPadOS 13.4 이상에서 실행되는 iPad와 외부 키보드 및 외부 마우스 또는 터치패드
 
-K-5 과정 (컴퓨터 과학 기초) 및 아워오브코드 활동은 모든 기타 현대식 태블릿 및 노트북 또는 데스크톱 컴퓨터외에 iPad 및 Chromebook에서 호환됩니다.
+All other content, such as K-5 courses (Computer Science Fundamentals) and Hour of Code activities are compatible on iPads and other modern tablets and laptop or desktop computers.
 
 ### 휴대폰
 
@@ -101,15 +102,25 @@ K-5 과정 (컴퓨터 과학 기초) 및 아워오브코드 활동은 모든 기
 
 Code.org의 온라인 과정을 시작하기 전, 아래 동영상의 재생 여부를 테스트하여 그대로 진행해도 되는지 확인합니다.
 
-<iframe style="margin: 10px;" width="350" height="195" src="https://studio.code.org/videos/embed/artist_intro?width=350&height=195" frameborder="0" allowfullscreen data-ot-ignore></iframe>
 
-이것은 커리큘럼 전체에서 사용하는 플레이어입니다. 이 플레이어는 유튜브를 통해 동영상을 보여주려고 하며, 유튜브가 차단된 경우, 그에 "대비한" 플레이어를 사용하여 Code.org 동영상을 보여줍니다.
+<!--
+The following HTML is a copy of video_with_fallback.haml. once this file can be converted to 
+.md.erb without breaking i18n sync, this file should include that partial instead.
+-->
+<figure style="width:100%; height: 100%; margin: 0 auto;">
+  <div class="videodiv" style="position:relative;">
+    <img style="display:block; width:100%; height:auto" src="/images/16x9.png">
+    <div class="insert_video_player" data-video-code="ws8rmHcqXeM" data-download-path="//videos.code.org/new/5-artist-intro.mp4"></div>
+  </div>
+</figure>
+
+This is the player used throughout the curriculum. It will try to show the video through YouTube and, if YouTube is blocked, show the Code.org hosted video using our "fallback" player instead.
 
 ### 동영상이 재생되지 않나요?
 
-동영상이 재생되지 않으면 support@code.org로 이메일을 보낼 수 있습니다.
+If video does not work, you can email us at support@code.org.
 
-하지만, 동영상없이 계속 튜토리얼을 이용할 수 있습니다.
+However, you can still use our tutorials without video.
 
 1. 모든 동영상을 [함께 다운로드할 수 있도록 제작했습니다](https://www.dropbox.com/sh/aax85b3850olxcx/mso9d17QtH). 학교의 대역폭이 낮으면, 교사가 동영상을 다운로드 받아 학생들에게 공유된 화면으로 보여주길 권합니다.
 2. 튜토리얼에 통합되어 있으며, 각 동영상마다 녹색 다운로드 링크 아이콘 <img src="/images/green-download.png" width=25 height=25 /> 을 추가하여 학생들이 개별 튜토리얼 동영상을 다운로드할 수 있게 했습니다.
@@ -119,8 +130,8 @@ Code.org의 온라인 과정을 시작하기 전, 아래 동영상의 재생 여
 
 ## Google Apps/G-Suite 사용자를 위한 특별 설정
 
-G-suite 관리자이면, 유튜브를 위한 어떤 제약 설정이 있는지 확인해 보십시오. "엄격한 유튜브 접근 제한" 설정을 명시했거나 또는 '이 동영상은 이용이 제한됩니다'라고 기술된 메시지가 있다면, 저희 채널을 승인된 채널 목록에 추가할 수 있습니다. 저희 채널을 승인 목록에 추가하는 방법에 대해서는 Google의 [이 가이드](https://support.google.com/a/answer/6245597) 를 참조하세요. 다른 설정에 대해 더 자세히 알아보고 어느 설정이 학급에 가장 좋은지 결정하기 위한 경우에도 [이 가이드](https://support.google.com/a/answer/6212415?hl=en) 를 참조할 수 있습니다.
+If you're a G-suite administrator, be sure to check what your restriction settings are for YouTube. If you have specified the "Strict Restricted YouTube Access" setting or if you see messages stating 'this video has been restricted', you can add our channel to the approved list of channels. See [this guide](https://support.google.com/a/answer/6245597) from Google to learn about how to add our channel to the approved list. You can also see [this guide](https://support.google.com/a/answer/6212415?hl=en) to learn more about different settings and which is best for your classroom.
 
 ## 여전히 해결되지 않은 문제가 있나요?
 
-저희가 도와드리겠습니다. support@code.org로 이메일을 보내주세요!
+We'll help you out - just email us at support@code.org!

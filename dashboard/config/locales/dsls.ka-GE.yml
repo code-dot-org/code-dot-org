@@ -3280,8 +3280,8 @@ ka-GE:
         answers:
         - text: ძაღლი
         - text: პინგვინი
-        - {}
-        - {}
+        - text: ბაყაყი
+        - text: ჟირაფი
         - {}
         questions:
         - {}
@@ -3289,8 +3289,8 @@ ka-GE:
         answers:
         - text: ძაღლი
         - text: პინგვინი
-        - {}
-        - {}
+        - text: ბაყაყი
+        - text: ჟირაფი
         - {}
         questions:
         - {}
@@ -3298,8 +3298,8 @@ ka-GE:
         answers:
         - text: ძაღლი
         - text: პინგვინი
-        - {}
-        - {}
+        - text: ბაყაყი
+        - text: ჟირაფი
         - {}
         questions:
         - {}
@@ -3307,8 +3307,8 @@ ka-GE:
         answers:
         - text: ძაღლი
         - text: პინგვინი
-        - {}
-        - {}
+        - text: ბაყაყი
+        - text: ჟირაფი
         - {}
         questions:
         - {}
@@ -3316,8 +3316,8 @@ ka-GE:
         answers:
         - text: ძაღლი
         - text: პინგვინი
-        - {}
-        - {}
+        - text: ბაყაყი
+        - text: ჟირაფი
         - {}
         questions:
         - {}
@@ -3325,8 +3325,8 @@ ka-GE:
         answers:
         - text: ძაღლი
         - text: პინგვინი
-        - {}
-        - {}
+        - text: ბაყაყი
+        - text: ჟირაფი
         - {}
         questions:
         - {}
@@ -4362,7 +4362,7 @@ ka-GE:
         - text: არა
         - {}
         questions:
-        - {}
+        - text: ვებ დეველოპმენტი
       csd-post-survey-2019-I like cs:
         answers:
         - {}
@@ -7467,7 +7467,7 @@ ka-GE:
         - {}
         - {}
         - {}
-        - {}
+        - text: მასწავლებელი
         - {}
         - {}
         - {}
@@ -9447,6 +9447,22 @@ ka-GE:
         description: მალე თქვენს ბოლო პროექტს დაიწყებთ. სანამ დაიწყებთ, დაათვალიერეთ
           პროექტების ნიმუშები.
       grade2_multi_collector_A_predict12022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      Test Contained Retriable Multi:
+        answers:
+        - text: '0'
+        - {}
+        - text: '2'
+        - text: '4'
+        questions:
+        - {}
+      test-single-multi-standalone-retriable:
         answers:
         - {}
         - {}

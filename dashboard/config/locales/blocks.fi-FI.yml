@@ -1137,6 +1137,19 @@ fi:
             '"w"': w
             '"x"': x
             '"z"': z
+      gamelab_layoutSprites:
+        text: asettelu {GROUP} kuin {FORMAT}
+        options:
+          FORMAT:
+            '"border"': raja
+            '"circle"': ympyrä
+            '"grid"': ruudukko
+            '"top"': ylärivi
+            '"row"': rivi
+            '"bottom"': alarivi
+            '"left"': vasen sarake
+            '"column"': sarake
+            '"right"': oikea sarake
       gamelab_locationAt:
         text: 'sijainti x: {X} y: {Y}'
       gamelab_locationModifier:
@@ -1158,6 +1171,18 @@ fi:
             '"rain"': sade
       gamelab_makeNewSpriteAnon:
         text: tee uusi {ANIMATION_NAME} sprite sijaintiin {LOCATION}
+      gamelab_makeNewSpriteGroup:
+        options:
+          FORMAT:
+            '"border"': raja
+            '"circle"': ympyrä
+            '"grid"': ruudukko
+            '"top"': ylärivi
+            '"row"': rivi
+            '"bottom"': alarivi
+            '"left"': vasen sarake
+            '"column"': sarake
+            '"right"': oikea sarake
       gamelab_makeProjectile:
         options:
           DIRECTION:
@@ -1745,8 +1770,6 @@ fi:
         text: käänny vasempaan
       RyanLab_turnRight:
         text: käänny oikeaan
-      SpriteLab2Beta_spriteSay:
-        text: sprite {SPRITE} sanoo {TEXT} {SECONDS} sekuntia
       Vector_createSpriteWith:
         text: |-
           luoda sprite
@@ -1934,6 +1957,22 @@ fi:
           DIR:
             right: oikea ↻
             left: vasen ↺
+      ecosystems_int10:
+        options:
+          VALUE:
+            '0': '0'
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+      storylab_printText:
+        text: tulosta {TEXT}
       storylab_setForegroundEffect2:
         options:
           EFFECT:
@@ -1942,5 +1981,3 @@ fi:
             '"hearts"': sydämet
             '"rain"': sade
             '"starburst"': Tähtisäteet
-      validation_validatedBackground:
-        text: aseta tausta {IMG}

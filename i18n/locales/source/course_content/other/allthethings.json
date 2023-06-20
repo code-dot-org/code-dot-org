@@ -299,6 +299,37 @@
       "teacher_markdown": "The answer gets at the difference between defining a function's parameters and calling that function.  Since `randomNumber` returns a value (a number) it can be used in places where you would otherwise provide a numeric value.\n\nFor example, you don't define a function with a numeric parameter.  This doesn't make sense:\n\n`function drawShape(50){ ... }` <-- don't do this.\n\nInstead you *define* the function with a named parameter like so:\n\n`function drawShape(size){ ... }`  \n\nand then *call* it, supplying a value for that parameter like so:\n\n`drawShape(50);` \n\nIn the case of this question we're using randomNumber in place of that value for the function *call*.\n\n`drawShape( randomNumber(25,75) );`\n\n"
     }
   },
+  "https://studio.code.org/s/allthethings/lessons/9/levels/5": {
+    "dsls": {
+      "answers": [
+        {
+          "text": "Nothing will happen.",
+          "correct": false,
+          "feedback": "Incorrect. The tumbleweed will begin tumbling."
+        },
+        {
+          "text": "The tumbleweed will float to the top of the screen.",
+          "correct": false,
+          "feedback": "Incorrect. The tumbleweed will begin tumbling."
+        },
+        {
+          "text": "The tumbleweed will begin tumbling.",
+          "correct": true,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "The tumbleweed will blink on and off.",
+          "correct": false,
+          "feedback": "Incorrect. The tumbleweed will begin tumbling."
+        }
+      ],
+      "questions": [
+        {
+          "text": "Look closely at the code below. What will happen after you click \"Run\"?"
+        }
+      ]
+    }
+  },
   "https://studio.code.org/s/allthethings/lessons/10/levels/1": {
     "dsls": {
       "answers": [
@@ -1137,6 +1168,15 @@
   "https://studio.code.org/s/allthethings/lessons/27/levels/1": {
     "long_instructions": "In this module, you learned about how information gets shuttled from place-to-place on the internet, and the major steps along the way.  **Write a lesson plan for your students about how packets are constructed.**\n\n### How this task is reviewed\n\nThis task is peer-reviewed by 2 peers, using the following rubric:\n\n-   Lesson includes lecture\n-   Lesson includes activity on network simulator",
     "title": "Submit a Lesson Plan: Routing and Packets"
+  },
+  "https://studio.code.org/s/allthethings/lessons/27/levels/2": {
+    "long_instructions": "## DNS and Scalability\n\nIn your own words explain the following about the Domain Name System\n\n-   What problem does the DNS solve?\n-   How does the DNS help the world wide web scale so that billions of users can access billions of web pages?"
+  },
+  "https://studio.code.org/s/allthethings/lessons/27/levels/3": {
+    "long_instructions": "What do you think this program does?"
+  },
+  "https://studio.code.org/s/allthethings/lessons/27/levels/4": {
+    "long_instructions": "## Redundancy\n\nWhat are the benefits of building redundancy into a network? What are the potential issues with building redundancy?"
   },
   "https://studio.code.org/s/allthethings/lessons/28/levels/1": {
     "dsls": {
@@ -2776,6 +2816,54 @@
     "dsls": {
       "markdown": "# The Future of Big Data\n\n[![](https://images.code.org/ff14c09d2036ff65be8af3dd63d2da24-image-1571251950161.52.16 AM.png)](https://www.youtube.com/watch?v=l_a0ecZ2Oe0)\n\n[Source](http://www.fwthinking.com/video/clips/future-big-data-video/)\n\n\n\n\n"
     }
+  },
+  "https://studio.code.org/s/allthethings/lessons/41/levels/9": {
+    "short_instructions": "Here are some instructions. ",
+    "teacher_markdown": "Teacher Markdown for the original level",
+    "contained levels": [
+      {
+        "long_instructions": "My free response markdown instructions"
+      }
+    ]
+  },
+  "https://studio.code.org/s/allthethings/lessons/41/levels/10": {
+    "teacher_markdown": "Teacher markdown for the original level",
+    "contained levels": [
+      {
+        "dsls": {
+          "answers": [
+            {
+              "text": "0",
+              "correct": false,
+              "feedback": "No, that is 1 - 1."
+            },
+            {
+              "text": "1",
+              "correct": false,
+              "feedback": "No, that is 1 * 1."
+            },
+            {
+              "text": "2",
+              "correct": true,
+              "feedback": "Yes, you are a genius!"
+            },
+            {
+              "text": "4",
+              "correct": false,
+              "feedback": "No, that is not even close."
+            }
+          ],
+          "content1": "Here is some information.",
+          "markdown": "Test **markdown** _here_\n",
+          "questions": [
+            {
+              "text": "What is 1 + 1?"
+            }
+          ],
+          "title": "Contained Multi"
+        }
+      }
+    ]
   },
   "https://studio.code.org/s/allthethings/lessons/43/levels/1": {
     "short_instructions": "Here are some short instructions for this test AI Lab level.",

@@ -1928,7 +1928,7 @@
         "courseC_starWars_loops8": {
           "course_starWars_loops8_a": "ಈ ಸಮಸ್ಯೆಯ ಬಗ್ಗೆ ಸಣ್ಣ ಭಾಗಗಳಲ್ಲಿ ಯೋಚಿಸಲು ಪ್ರಯತ್ನಿಸಿ. ಸಮಯ ತೆಗೆದುಕೊಳ್ಳಿ. ಮೊದಲ ಪ್ರಯತ್ನದಲ್ಲೇ ಇದನ್ನು ನೀವು ಪರಿಹಾರ ಮಾಡಬೇಕಿಲ್ಲ!",
           "course_starWars_loops8_b": "ಮೊದಲಾರ್ಧದ ಸಮಸ್ಯೆ ಸ್ಟೇರ್ ಸ್ಟೆಪ್ ಸಮಸ್ಯೆಯ ಬಗ್ಗೆ ಯೋಚಿಸಿ.ಇದಕ್ಕೂ ಮೊದಲು ನೀವು ಇದನ್ನು ಹೇಗೆ ಪರಿಹರಿಸಿದಿರಿ?",
-          "course_starWars_loops8_c": "ಈ ಪಾಥ್ ಅನ್ನು ನೋಡಿ.\n\n![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)"
+          "course_starWars_loops8_c": "ಈ ಪಾಥ್ ಅನ್ನು ನೋಡಿ.\n\n[][0]"
         },
         "courseC_starWars_loops8_2018": {
           "course_starWars_loops8_a": "ಈ ಸಮಸ್ಯೆಯ ಬಗ್ಗೆ ಸಣ್ಣ ಭಾಗಗಳಲ್ಲಿ ಯೋಚಿಸಲು ಪ್ರಯತ್ನಿಸಿ. ಸಮಯ ತೆಗೆದುಕೊಳ್ಳಿ. ಮೊದಲ ಪ್ರಯತ್ನದಲ್ಲೇ ಇದನ್ನು ನೀವು ಪರಿಹಾರ ಮಾಡಬೇಕಿಲ್ಲ!",
@@ -2783,7 +2783,7 @@
           "hw_retro_changePropBy": "ಪದೇ ಪದೇ (ಈವೆಂಟ್‌ಗಳ ಜೊತೆಗೆ) ಸ್ಪ್ರೈಟ್‌ ಗಾತ್ರವನ್ನು ನೀವು ಬದಲಿಸಲು ಬಯಸಿದರೆ, ಈ ಬ್ಲಾಕ್ ಬಳಸಿ:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"retrocreature_11_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "poetry_hoc_addSprites": {
-          "location_hint": "ಪ್ರತಿ ಸ್ಪ್ರೈಟ್‌ಗೆ ಒಂದು **ಸ್ಥಳ** ಇರುತ್ತದೆ. ಈ ಬ್ಲಾಕ್‌ನಲ್ಲಿ ಪಿನ್ ಕ್ಲಿಕ್ ಮಾಡುವ ಮೂಲಕ ನೀವು ಸ್ಥಳವನ್ನು ನಿಗದಿಸಬಹುದು: \n\n<xml><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"twinkling_star\"</title><title name=\"LOCATION\">{\"x\":200,\"y\":225}</title></block></xml>\n\n-   ಸ್ಥಳ ಬ್ಲಾಕ್‌ನಲ್ಲಿ ![](<https://images.code.org/e9531e292b034feef0f176d4f97ac47f-image-1634932451913.54.05 PM.png>) ಪಿನ್ ಕ್ಲಿಕ್ ಮಾಡಿ, ನಂತರ ಸ್ಕ್ರೀನ್‌ನ ಮೇಲೆ ನಿಮ್ಮ ಸ್ಪ್ರೈಟ್‌ಗೆ ಹೊಸ ಸ್ಥಾನವನ್ನು ಆಯ್ಕೆ ಮಾಡಿ.\n-   ನಿಮ್ಮ ಕೋಡ್ ಪೂರ್ತಿಗೊಂಡಾಗ \"ರನ್\" ಬಟನ್ ಅನ್ನು ಒತ್ತಿ.",
+          "location_hint": "ಪ್ರತಿ ಸ್ಪ್ರೈಟ್‌ಗೆ ಒಂದು **ಸ್ಥಳ** ಇರುತ್ತದೆ. ಈ ಬ್ಲಾಕ್‌ನಲ್ಲಿ ಪಿನ್ ಕ್ಲಿಕ್ ಮಾಡುವ ಮೂಲಕ ನೀವು ಸ್ಥಳವನ್ನು ನಿಗದಿಸಬಹುದು: \n\n<xml><block xmlns=\"https://developers.google.com/blockly/xml\" type=\"Poetry_makeNewSpriteAnon\" id=\"1XbbmW9TqiPQBwSeRYvO\">\n  <field name=\"ANIMATION_NAME\">\"twinkling star\"</field>\n  <field name=\"LOCATION\">{\"x\":200,\"y\":200}</field>\n</block></xml>\n\n-   ಸ್ಥಳ ಬ್ಲಾಕ್‌ನಲ್ಲಿ ![](<https://images.code.org/e9531e292b034feef0f176d4f97ac47f-image-1634932451913.54.05 PM.png>) ಪಿನ್ ಕ್ಲಿಕ್ ಮಾಡಿ, ನಂತರ ಸ್ಕ್ರೀನ್‌ನ ಮೇಲೆ ನಿಮ್ಮ ಸ್ಪ್ರೈಟ್‌ಗೆ ಹೊಸ ಸ್ಥಾನವನ್ನು ಆಯ್ಕೆ ಮಾಡಿ.\n-   ನಿಮ್ಮ ಕೋಡ್ ಪೂರ್ತಿಗೊಂಡಾಗ \"ರನ್\" ಬಟನ್ ಅನ್ನು ಒತ್ತಿ.",
           "remove_hint": "ಕೆಲವು ಸಾಲು ಸಂಖ್ಯೆಯಲ್ಲಿ ಸ್ಪ್ರೈಟ್ ಅನ್ನು ನೀವು ತೆಗೆದುಹಾಕಬಹುದು. ಅದರ ಸ್ಥಳದಲ್ಲಿ ಹೊಸ ಸ್ಪ್ರೈಟ್ ಅನ್ನು ನೀವು ಸೇರಿಸಬಹುದು: \n\n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">3</title><next><block type=\"Poetry_destroy\"><title name=\"ANIMATION_NAME\">\"twinkling_star\"</title><next><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"night_moon\"</title><title name=\"LOCATION\">{\"x\":200,\"y\":225}</title></block></next></block></next></block></xml>"
         },
         "poetry_hoc_backgroundEffects": {
@@ -2849,7 +2849,7 @@
         },
         "iceage_warn_ice_age": {
           "iceage_warn_ice_age_a": "ಈ ಒಗಟು ಎಲ್ಲಿ ಇರಬೇಕೋ ಅಲ್ಲಿ ಪಡೆಯಲು ನೀವು ಎರಡು ಬ್ಲಾಕ್‌ಗಳನ್ನು ಮಾತ್ರ ಸೇರಿಸಬೇಕು.",
-          "iceage_warn_ice_age_b": "ಪ್ರೋಗ್ರಾಂ ಪ್ರಾರಂಭವಾದ ತಕ್ಷಣ ಸಂಭವಿಸುವಂತೆ ಮಾಡಲು \\`ವೆನ್ ರನ್' ಈವೆಂಟ್‌ನ ಕೆಳಗೆ ಎರಡೂ ಹೊಸ ಬ್ಲಾಕ್‌ಗಳನ್ನು ಸೇರಿಸಿ."
+          "iceage_warn_ice_age_b": "ಪ್ರೋಗ್ರಾಂ ಪ್ರಾರಂಭವಾದ ತಕ್ಷಣ ಸಂಭವಿಸುವಂತೆ ಮಾಡಲು `ವೆನ್ ರನ್' ಈವೆಂಟ್‌ನ ಕೆಳಗೆ ಎರಡೂ ಹೊಸ ಬ್ಲಾಕ್‌ಗಳನ್ನು ಸೇರಿಸಿ."
         },
         "iceage_warn_ice_age_dani": {
           "iceage_warn_ice_age_a": "ಈ ಒಗಟು ಎಲ್ಲಿ ಇರಬೇಕೋ ಅಲ್ಲಿ ಪಡೆಯಲು ನೀವು ಎರಡು ಬ್ಲಾಕ್‌ಗಳನ್ನು ಮಾತ್ರ ಸೇರಿಸಬೇಕು.",

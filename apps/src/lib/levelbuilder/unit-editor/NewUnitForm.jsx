@@ -60,7 +60,6 @@ export default function NewUnitForm(props) {
           <option key={'single-unit'} value={'true'}>
             {'Single Unit'}
           </option>
-          ))}
         </select>
         <HelpTip>
           <p>
@@ -166,18 +165,18 @@ export default function NewUnitForm(props) {
 NewUnitForm.propTypes = {
   families: PropTypes.arrayOf(PropTypes.string).isRequired,
   versionYearOptions: PropTypes.arrayOf(PropTypes.string).isRequired,
-  familiesCourseTypes: PropTypes.object.isRequired
+  familiesCourseTypes: PropTypes.object.isRequired,
 };
 
 const styles = {
   dropdown: {
-    margin: '0 6px'
+    margin: '0 6px',
   },
   buttonStyle: {
     marginLeft: 0,
     marginTop: 10,
-    marginBottom: 20
-  }
+    marginBottom: 20,
+  },
 };
 
 function SavingDetailsAndButton() {

@@ -1457,6 +1457,75 @@
         "courseF_bee_functions_challenge1": {
           "courseF_bee_functions_challenge1_1": "Milyen kódot kell beírnod ebbe a függvénybe?",
           "courseF_bee_functions_challenge1_2": "Az \"nektár vagy méz ellenőrzése” függvényt felhasználhatod, ha átszerkeszted kicsit, hogy képes legyen több mézet is készíteni."
+        },
+        "Course 4 Play Lab Params 2": {
+          "Course_4 _Play_Lab_Params_2_1": "Kattints a \"szerkesztés” gombra a függvény frissítéséhez, hogy a magasság paramétert használja."
+        },
+        "Course 4 Artist Functions challenge": {
+          "Course_4_Artist_Functions_challenge_1": "Figyeld meg, hogy a blokkokat kategóriákba rendeztük a könnyebb áttekinthetőség kedvéért. Kattints ide, és minden blokkot megtalálsz, amire csak szükséged lesz."
+        },
+        "NEW Course 4 Artist Functions 3": {
+          "NEW_Course_4_Artist_Functions_3_1": "Kattints ide az új függvény szerkesztéséhez, ami egy négyzetet készít!"
+        },
+        "course3_artist_functions_challenge1": {
+          "courseE_artist_functions_challenge1_callout1": "Folytasd ezt a programot úgy, hogy az aljához további kódokat adsz!",
+          "courseE_artist_functions_challenge1_callout2": "Ha nem tetszik ez a minta, változtass rajta, amit csak akarsz!"
+        },
+        "course3_artist_functions_challenge2": {
+          "courseE_artist_functions_challenge2_callout1": "Folytasd ezt a programot úgy, hogy az aljához további kódokat adsz!",
+          "courseE_artist_functions_challenge2_callout2": "Ha nem tetszik ez a minta, változtass rajta, amit csak akarsz!"
+        },
+        "course4_artist_functions_challenge2": {
+          "courseE_artist_functions_challenge2_callout1": "Folytasd ezt a programot úgy, hogy az aljához további kódokat adsz!",
+          "courseE_artist_functions_challenge2_callout2": "Ha nem tetszik ez a minta, változtass rajta, amit csak akarsz!"
+        },
+        "courseE_artist_functions_challenge1": {
+          "courseE_artist_functions_challenge1_callout1": "Folytasd ezt a programot úgy, hogy az aljához további kódokat adsz!",
+          "courseE_artist_functions_challenge1_callout2": "Ha nem tetszik ez a minta, változtass rajta, amit csak akarsz!"
+        },
+        "courseE_artist_functions_challenge12022": {
+          "courseE_artist_functions_challenge1_callout1": "Folytasd ezt a programot úgy, hogy az aljához további kódokat adsz!",
+          "courseE_artist_functions_challenge1_callout2": "Ha nem tetszik ez a minta, változtass rajta, amit csak akarsz!"
+        },
+        "courseE_artist_functions_challenge1_2018": {
+          "courseE_artist_functions_challenge1_callout1": "Folytasd ezt a programot úgy, hogy az aljához további kódokat adsz!",
+          "courseE_artist_functions_challenge1_callout2": "Ha nem tetszik ez a minta, változtass rajta, amit csak akarsz!"
+        },
+        "courseE_artist_functions_challenge1_2019": {
+          "courseE_artist_functions_challenge1_callout1": "Folytasd ezt a programot úgy, hogy az aljához további kódokat adsz!",
+          "courseE_artist_functions_challenge1_callout2": "Ha nem tetszik ez a minta, változtass rajta, amit csak akarsz!"
+        },
+        "courseE_artist_functions_challenge1_2020": {
+          "courseE_artist_functions_challenge1_callout1": "Folytasd ezt a programot úgy, hogy az aljához további kódokat adsz!",
+          "courseE_artist_functions_challenge1_callout2": "Ha nem tetszik ez a minta, változtass rajta, amit csak akarsz!"
+        },
+        "courseE_artist_functions_challenge1_2021": {
+          "courseE_artist_functions_challenge1_callout1": "Folytasd ezt a programot úgy, hogy az aljához további kódokat adsz!",
+          "courseE_artist_functions_challenge1_callout2": "Ha nem tetszik ez a minta, változtass rajta, amit csak akarsz!"
+        },
+        "courseE_artist_functions_challenge2": {
+          "courseE_artist_functions_challenge2_callout1": "Folytasd ezt a programot úgy, hogy az aljához további kódokat adsz!",
+          "courseE_artist_functions_challenge2_callout2": "Ha nem tetszik ez a minta, változtass rajta, amit csak akarsz!"
+        },
+        "courseE_artist_functions_challenge22022": {
+          "courseE_artist_functions_challenge2_callout1": "Folytasd ezt a programot úgy, hogy az aljához további kódokat adsz!",
+          "courseE_artist_functions_challenge2_callout2": "Ha nem tetszik ez a minta, változtass rajta, amit csak akarsz!"
+        },
+        "courseE_artist_functions_challenge2_2018": {
+          "courseE_artist_functions_challenge2_callout1": "Folytasd ezt a programot úgy, hogy az aljához további kódokat adsz!",
+          "courseE_artist_functions_challenge2_callout2": "Ha nem tetszik ez a minta, változtass rajta, amit csak akarsz!"
+        },
+        "courseE_artist_functions_challenge2_2019": {
+          "courseE_artist_functions_challenge2_callout1": "Folytasd ezt a programot úgy, hogy az aljához további kódokat adsz!",
+          "courseE_artist_functions_challenge2_callout2": "Ha nem tetszik ez a minta, változtass rajta, amit csak akarsz!"
+        },
+        "courseE_artist_functions_challenge2_2020": {
+          "courseE_artist_functions_challenge2_callout1": "Folytasd ezt a programot úgy, hogy az aljához további kódokat adsz!",
+          "courseE_artist_functions_challenge2_callout2": "Ha nem tetszik ez a minta, változtass rajta, amit csak akarsz!"
+        },
+        "courseE_artist_functions_challenge2_2021": {
+          "courseE_artist_functions_challenge2_callout1": "Folytasd ezt a programot úgy, hogy az aljához további kódokat adsz!",
+          "courseE_artist_functions_challenge2_callout2": "Ha nem tetszik ez a minta, változtass rajta, amit csak akarsz!"
         }
       }
     }

@@ -2203,7 +2203,7 @@
           "description": "Naposledy sme sa si prezerali aplikácie a hry vytvorené pomocou Sprite Labu. Dnes začneme tým, že si napíšeme vlastný kód a vytvoríme jednoduché animácie so sprajtmi (postavami)."
         },
         "a4ff84ba-5105-458a-a950-ca4fdbc3d23b": {
-          "name": "Vytváranie postáv",
+          "name": "Vytváranie sprajtov",
           "tips": [
             "V úlohách s predpoveďou majú žiaci za úlohu prezrieť si hotový program a odpovedať na otázku, ktorá sa ho týka. Otázku musia zodpovedať ešte predtým, ako stlačia tlačidlo Spustiť. Hoci je možné využiť tieto otázky ako formu hodnotenia, myslite na to, že často sa nachádzajú na začiatku lekcie, aby sa žiaci nad novými vecami začali zamýšľať ešte skôr, než sa naučia, ako v skutočnosti fungujú. "
           ],
@@ -5899,6 +5899,9 @@
             "Táto lekcia sa môže javiť pomerne odlišná od ostatných vecí, s ktorými ste sa v tomto kurze doteraz stretli. Pred jej začatím sa možno budete chcieť oboznámiť s niektorými novinkami, ktoré sa v úrovniach objavujú. Kód, ktorý žiaci vytvoria v jednej úrovni, sa automaticky prenáša do ostatných úrovní, čo im umožňuje postupne budovať svoj projekt a stavať na nových vedomostiach. Upozorňujeme, že v týchto úrovniach sa nekontroluje správnosť kódu, aby mohli žiaci prichádzať s kreatívnymi riešeniami zadaní. Povzbuďte žiakov, aby sami vyhodnotili, kedy považujú úlohu za splnenú."
           ]
         },
+        "5bee125c-0e5e-46a8-b72b-fdc8a71f5161": {
+          "progression_name": "Mini-projekt: Samolepka Art"
+        },
         "c5f36648-ac0d-405f-af7a-3020ebdce7f3": {
           "progression_name": "Voľná hra"
         },
@@ -7147,7 +7150,7 @@
         },
         "562abbaf-9fb5-42a3-8451-6dd77ea03954": {
           "name": "Analýza aplikácie (Výber oblečenia)",
-          "description": "**Zapíšte si do denníka**: Otvorte si Code Studio a pozrite si v rozhraní aplikáciu Výber oblečenia. Skúste v aplikácii identifikovať jeden vstup, jeden výstup a jeden typ spracúvania? Predstavte si, že túto aplikáciu používate každý deň. Aké informácie by ste chceli, aby si táto aplikácia pamätala?"
+          "description": "**Zapíšte si do denníka**: Otvorte si Code Studio a pozrite si v rozhraní aplikáciu Výber oblečenia. Skúste v aplikácii identifikovať jeden vstup, jeden výstup a jeden typ spracúvania. Predstavte si, že túto aplikáciu používate každý deň. Aké informácie by ste chceli, aby si táto aplikácia pamätala?"
         },
         "f4a0fbbd-2d29-4de8-b325-f08c12c9abcf": {
           "description": "**Monitorovanie:** Prvá časť tejto reflexie je určená na to, aby si žiaci zopakovali, čo už vedia o vstupoch, výstupoch a spracúvaní. Kým sa zamýšľajú nad vašimi otázkami, kontrolujte ich odpovede, aby ste sa uistili, či rozumejú tomu, ako sa v aplikácii využívajú vstupy, výstupy a spracúvanie.",
@@ -7712,13 +7715,13 @@
           "description": "Keď sa žiaci rozdelia do skupín, povedzte im, aby si otvorili sprievodcu aktivitou a pustili sa do riešenia prvej úlohy. Budú hľadať riešenie bludiska, ktoré pozostáva z viacerých krokov.\n\n**Monitorovanie:** Prechádzajte sa po triede a pozorujte, ako žiaci pristupujú k riešeniu úlohy. Dozrite na to, aby si skupiny navzájom nepomáhali. Motivujte žiakov k tomu, aby sa zamysleli nad tým, ako by im s riešením úlohy pomohlo, keby si najprv spravili plán.\n\nKeď už všetky skupiny skončili, opäť sa obráťte na celú triedu. Povedzte žiakom, aby prešli na poslednú stránku v sprievodcovi aktivitou. Tam nájdu tabuľku, kde môžu zaznamenať, ako sa im úloha riešila. Zapíšu do tabuľky, ktoré časti riešenia tohto problému zodpovedajú jednotlivým krokom v postupe riešenia problémov.\n\n**Diskutujte:** V krátkosti so žiakmi prediskutujte, ktoré časti aktivity podľa nich zodpovedajú jednotlivým krokom v postupe riešenia problémov. V nasledujúcom zozname nájdete myšlienky, ktoré môžete spomenúť, keď sa už žiaci podelili o svoje myšlienky.\n\n-   **Definuj**: Tento problém bol už na začiatku veľmi dobre definovaný. Niektoré problémy však nebudú.\n-   **Priprav**: Ak si v rámci tímu vytvoríte plán (napríklad si bludisko rozdelíte alebo jednoducho budete veľmi systematicky hľadať správnu cestu), táto úloha bude oveľa jednoduchšia, než keby ste ju skúšali riešiť náhodne.\n-   **Vyskúšaj**: S uskutočnením plánu nám pomáha trpezlivosť a vytrvalosť.\n-   **Vyhodnoť**: Ak pôvodný plán nefunguje, môžeme ho prehodnotiť a vytvoriť si nový."
         },
         "17231576-3b84-462b-9c92-9d8c57e00dac": {
-          "description": "#### Štafetové preteky s partnermi",
+          "description": "#### Štafetové preteky dvojíc",
           "tips": [
             "**Využívanie postupu riešenia problémov:** Táto úloha je náročná najmä vtedy, ak si nedostatočne dobre zadefinujú problém. Ak sa na problém pozrú len tak, ich úlohou je náhodne hádať a kontrolovať, ako sa dajú hráči spojiť do tímov, kým nenájdu rýchle riešenie. Je však oveľa jednoduchšie, ak najprv vymyslia všeobecné stratégie (napríklad pošlú rýchlych ľudí dozadu a pomalých spoja do dvojíc).\n\nToto nie je jediný možný prístup k danému problému, takže by ste ho takto žiakom určite nemali prezentovať. Práve naopak, motivujte žiakov k tomu, aby sa spolu zamysleli nad tým, aké podmienky musia byť splnené na konci úlohy a či by im s tým nemohli pomôcť aj iné prístupy.\n\n**Kreslenie obrázkov:** Žiakom sa pravdepodobne bude lepšie dariť, keď si budú skúšať rôzne riešenia. Môžete žiakom povedať, aby na vymýšľanie nápadov využívali svoje denníky alebo škrabací papier.\n\n**Rozšírenie problému:** Ak jedna skupina skončí výrazne skôr než ostatné, môžete im dať čistý papier a dať im za úlohu vyriešiť problém znova, no rýchlejšie. Minimálny čas na riešenie je 42 minút, a ak ho už vaši žiaci dosiahli, dajte im za úlohu vysvetliť, ako vedia, že ich čas je najrýchlejší."
           ]
         },
         "435f7195-6fcf-4a7a-ac71-2d51b81af6e4": {
-          "description": "Prejdite s triedou na úlohu Štafetové preteky s partnermi. Žiaci môžu stále pracovať v skupinách, no nemali by sa o svoje riešenia deliť s inými skupinami.\n\n. **Monitorovanie:** Tak ako predtým, prechádzajte sa po triede a pozorujte, aké typy stratégií jednotlivé skupiny využívajú. Ak sa niektorá skupina zasekne, pripomeňte jej členom, aby využívali kroky z postupu riešenia problémov.\n\nKeď už skupiny vyriešili úlohu, povedzte žiakom, aby prešli na poslednú stránku v sprievodcovi aktivitou. Tam si zapíšu, ako pri riešení tejto úlohy využívali postup riešenia problémov.\n\n**Diskutujte:** V krátkosti so žiakmi prediskutujte, ktoré časti aktivity podľa nich zodpovedajú jednotlivým krokom v postupe riešenia problémov. V nasledujúcom zozname nájdete myšlienky, ktoré môžete spomenúť, keď sa už žiaci podelili o svoje myšlienky.\n\n-   **Definuj**: Na prvý pohľad sa zdá, že problém spočíva v tom, ako dosiahnuť, aby sa tím pohyboval rýchlo. Ak sa namiesto zameriate na to, ako dosiahnuť, aby rýchli ľudia bežali viackrát alebo ako spojiť pomalých ľudí do dvojíc, aby nezdržiavali ostatných, úloha sa dá vyriešiť oveľa rýchlejšie.\n-   **Priprav**: Spýtajte sa žiakov, aké typy stratégií zvažovali pred tým, než začali skúšať riešenia.\n-   **Vyskúšaj**: Rovnako ako pri predchádzajúcej úlohe, s uskutočnením plánu nám pomáha trpezlivosť a vytrvalosť.\n-   **Vyhodnoť**: Ak úvodné stratégie nefungujú, skupiny ich môžu prehodnotiť a skúsiť štruktúrovanejší prístup. "
+          "description": "Prejdite s triedou na úlohu Štafetové preteky dvojíc. Žiaci môžu stále pracovať v skupinách, no nemali by sa o svoje riešenia deliť s inými skupinami.\n\n. **Monitorovanie:** Tak ako predtým, prechádzajte sa po triede a pozorujte, aké typy stratégií jednotlivé skupiny využívajú. Ak sa niektorá skupina zasekne, pripomeňte jej členom, aby využívali kroky z postupu riešenia problémov.\n\nKeď už skupiny vyriešili úlohu, povedzte žiakom, aby prešli na poslednú stránku v sprievodcovi aktivitou. Tam si zapíšu, ako pri riešení tejto úlohy využívali postup riešenia problémov.\n\n**Diskutujte:** V krátkosti so žiakmi prediskutujte, ktoré časti aktivity podľa nich zodpovedajú jednotlivým krokom v postupe riešenia problémov. V nasledujúcom zozname nájdete myšlienky, ktoré môžete spomenúť, keď sa už žiaci podelili o svoje myšlienky.\n\n-   **Definuj**: Na prvý pohľad sa zdá, že problém spočíva v tom, ako dosiahnuť, aby sa tím pohyboval rýchlo. Ak sa namiesto zameriate na to, ako dosiahnuť, aby rýchli ľudia bežali viackrát alebo ako spojiť pomalých ľudí do dvojíc, aby nezdržiavali ostatných, úloha sa dá vyriešiť oveľa rýchlejšie.\n-   **Priprav**: Spýtajte sa žiakov, aké typy stratégií zvažovali pred tým, než začali skúšať riešenia.\n-   **Vyskúšaj**: Rovnako ako pri predchádzajúcej úlohe, s uskutočnením plánu nám pomáha trpezlivosť a vytrvalosť.\n-   **Vyhodnoť**: Ak úvodné stratégie nefungujú, skupiny ich môžu prehodnotiť a skúsiť štruktúrovanejší prístup. "
         },
         "e037d704-595f-4ac5-9136-57c0cefd2a19": {
           "description": "#### Vytvárame hru",
@@ -8212,7 +8215,7 @@
           "description": "Doteraz sme mohli ovládať len polohu a animáciu nášho sprajtu, ale dnes sa naučíme, ako meniť ďalšie vlastnosti sprajtu, aby sme mohli vytvárať ešte lepšie programy."
         },
         "430ce76b-c12b-45ff-8ef7-37ce4833bf2f": {
-          "description": "**Otázka dňa: Ako môžeme použiť vlastnosti Spartu na zmenu jeho vzhľadu na obrazovke?**"
+          "description": "**Otázka dňa: Ako môžeme zmeniť vzhľad sprajtu na obrazovke pomocou jeho vlastností?**"
         },
         "a748f14d-ac72-4518-affc-f8afdbd5f545": {
           "description": "**Premostenie:** Požiadajte žiakov, aby si otvorili Code Studio.",
@@ -8625,7 +8628,7 @@
         },
         "217f0a53-2dbd-4305-8f50-4728d7679aee": {
           "name": "Prijímanie vstupov",
-          "description": "**Diskutujte:** Všetky programy, ktoré ste doteraz napísali, bežia bez akéhokoľvek vstupu od používateľa. Ako by mohlo pridanie interakcie používateľa zvýšiť užitočnosť, efektívnosť alebo zábavnosť vašich programov? Ako by mohol používateľ poskytnúť vstup do vášho programu?",
+          "description": "**Diskutujte:** Všetky programy, ktoré sme doteraz napísali, bežia bez akéhokoľvek vstupu od používateľa. Ako by mohlo pridanie interakcie používateľa zvýšiť užitočnosť, efektívnosť alebo zábavnosť našich programov? Ako by mohol používateľ poskytnúť vstup do nášho programu?",
           "tips": [
             "Cieľom nie je podrobne sa zaoberať technickými špecifikami toho, ako môžu programy prijímať vstupy (k tomu sa žiaci dostanú v online časti lekcie), ale skôr primäť žiakov k tomu, aby premýšľali o tom, ako by vstupy používateľov mohli zmeniť programy, ktoré vytvorili. Vyzvite žiakov, aby si spomenuli na prvú lekciu a na rôzne počítačové vstupy a výstupy, ktoré vtedy skúmali. Ktoré vstupy by boli najužitočnejšie pre typy programov, ktoré vytvárali?"
           ]
@@ -10036,7 +10039,7 @@
           "description": "**Kľúčové pojmy:**\n\n-   **Autorské právo** – výhradné zákonné právo tlačiť, publikovať, prezentovať, filmovať alebo nahrávať literárne, umelecké alebo hudobné materiály a dávať iným ľuďom súhlas na vykonávanie týchto aktivít"
         },
         "4ae8e813-121c-462b-9fa2-28f74b510443": {
-          "description": "**Denník:** Zamyslite sa nad niektorými z fotiek, kresieb a textov, ktoré ste v minulosti vytvorili, alebo aj nad webovou stránkou, ktorú v rámci tohto kurzu vytvoríte. Bez hasne uvedenej licencie sa na všetky tieto veci vzťahuje reštriktívne autorské právu. Ktorú licenciu Creative Commons by ste radšej použili namiesto neho a prečo?",
+          "description": "**Denník:** Zamyslite sa nad niektorými z fotiek, kresieb a textov, ktoré ste v minulosti vytvorili, alebo aj nad webovou stránkou, ktorú v rámci tohto kurzu vytvoríte. Bez jasne uvedenej licencie sa na všetky tieto veci vzťahuje reštriktívne autorské právo. Ktorú licenciu Creative Commons by ste radšej použili namiesto neho a prečo?",
           "tips": [
             "Keď žiaci diskutujú o výhodách a nevýhodách jednotlivých typov licencií, uistite sa, či si uvedomujú, že účelom autorských práv je ochraňovať práva autorov obsahu, ako sú oni. Medzi tieto práva patrí napríklad právo byť označený za autora, keď je tvorba niekde vystavená, či rozhodnúť, kto môže tvorbu využívať a zarábať na nej."
           ]
@@ -10303,7 +10306,7 @@
           "description": "Kým si žiaci navzájom ohodnotia prácu, každý žiak by mal v hornej časti sprievodcu vyplniť, k čomu by sa im spätná väzba zišla najviac."
         },
         "65f20593-180e-4ad7-a3d2-5c724d83874b": {
-          "name": "Sekcia kontroly",
+          "name": "Sekcia pre hodnotiteľa",
           "description": "Keď si žiaci vymenia sprievodcov, vyhodnotia, do akej miery projekty splnili kritériá uvedené v hodnotiacej tabuľke. Motivujte žiakov k tomu, aby v projekte spolužiaka hľadali dôkazy o tom, že ich spolužiak sa naučil niečo nové, a zároveň poskytli návrhy, ako by sa dali projekty ešte zlepšiť. Môže byť potrebné, aby ste žiakom pomáhali poskytovať si navzájom konštruktívnu spätnú väzbu."
         },
         "9f41899b-b6c3-4bac-8af2-1a55ec025c8a": {
@@ -10617,7 +10620,7 @@
           ]
         },
         "e606f957-ebab-4068-a970-13e92348b567": {
-          "name": "Opíšte svoje štýly značiek a tried",
+          "name": "Opíšte štýly svojich značiek a tried",
           "description": "Žiaci by sa mali rozhodnúť, aký štýl by mali jednotlivé prvky mať. Pri rozhodovaní môže byť užitočné, ak sa spoločne opäť pozrú na svoje náčrty."
         },
         "b0d8887e-1215-4d4c-bd00-11c38292299e": {
@@ -10746,7 +10749,7 @@
         },
         "a9973ce5-b568-40cf-a914-1c9a19a363f4": {
           "name": "3 zamyslenia do denníka",
-          "description": "**Povedzte:**\n\n-   Na aké **3** časti svojho webu ste najviac hrdí?\n-   Aké **2** veci ste sa naučili pri práci na tomto webe?\n-   Na Akú **1** vec by ste chceli počuť názor niekoho iného?"
+          "description": "**Povedzte:**\n\n-   Na aké **3** časti svojho webu ste najviac hrdí?\n-   Aké **2** veci ste sa naučili pri práci na tomto webe?\n-   Na akú **1** vec by ste chceli počuť názor niekoho iného?"
         },
         "fadca378-b100-4e90-ae45-93478408690d": {
           "description": "**Diskutujte:** Umožnite žiakom, aby sa o svoje odpovede podelili s triedou.",
@@ -12201,7 +12204,7 @@
           ]
         },
         "40a13955-52e9-4e0a-89ee-3d575f49a396": {
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ukážte:** Keď žiaci dospejú do poslednej fázy, nechajte ich stlačiť bielu ikonu Informácie vpravo hore. Zobrazia sa tak vlastnosti, na základe ktorých A.I. Bot prijíma rozhodnutia. V tomto príklade sa A.I. Bot naučil, že pri rozhodovaní je najdôležitejšia farba a najmenej dôležité sú oči.\n\nPožiadajte žiakov, aby si najdôležitejšie a najmenej dôležité vlastnosti zapísali do sprievodcu aktivitou.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Diskutujte:** _Ktoré vlastnosti boli podľa A.I. Bota najdôležitejšie? Sú to funkcie, ktoré ste očakávali?_"
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ukážte:** Keď žiaci dospejú do poslednej fázy, nechajte ich stlačiť bielu ikonu Informácie vpravo hore. Zobrazia sa tak vlastnosti, na základe ktorých A.I. Bot prijíma rozhodnutia. V tomto príklade sa A.I. Bot naučil, že pri rozhodovaní je najdôležitejšia farba a najmenej dôležité sú oči.\n\nPožiadajte žiakov, aby si najdôležitejšie a najmenej dôležité vlastnosti zapísali do sprievodcu aktivitou.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Diskutujte:** _Ktoré vlastnosti boli podľa A.I. Bota najdôležitejšie? Sú to vlastnosti, ktoré ste očakávali?_"
         },
         "be01f760-a2cb-42f9-bce1-9069ceabb0fb": {
           "description": "**Cieľ diskusie:** Žiaci môžu zistiť, že A.I. Bot považuje niektoré vlastnosti za dôležité, hoci v skutočnosti s ich slovom vôbec nesúvisia. Napríklad si myslia, že ústa ryby sú dôležité, keď sa snažia určiť, či je ryba červená. Žiaci si to môžu overiť tak, že budú hľadať v rybách vzory, ktoré A.I. Bot akceptoval – možno všetky ich vzorové ryby mali náhodou rovnaký typ úst a A.I. Bot to mylne považoval za dôležité."
@@ -12242,7 +12245,7 @@
           "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Spýtajte sa:** _Čo nové ste sa dnes dozvedeli o strojovom učení? Akú novú otázku máte o strojovom učení?_\n\nPožiadajte žiakov, aby si vybrali jednu z nich a podelili sa s vami o ňu pri odchode z triedy alebo aby svoje odpovede napísali na lístok, ktorý môžete vystaviť v triede. Ak je to možné, sledujte tieto body počas celého tematického celku a vráťte sa k nim na ďalších hodinách, keď sa nimi budete zaoberať."
         },
         "7077c8e1-5038-47f2-b105-0382592d319d": {
-          "name": "Zapíšte si do zápisníka",
+          "name": "Zapíšte si do denníka",
           "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Spýtajte sa:** _Premýšľajte o zručnosti, ktorú bežne používate, napríklad rozprávanie, zaväzovanie topánok, varenie alebo hranie hier. Ako ste sa túto zručnosť naučili?_\n\nDajte žiakom minútu alebo dve na napísanie odpovedí a potom požiadajte dobrovoľníkov, aby sa o svoje nápady podelili s triedou. Kým budú žiaci hovoriť, zapisujte na tabuľu témy, ktoré sa objavia."
         },
         "9c2d4592-3cae-43c0-aa8a-55be8e4ac0f6": {
@@ -12319,13 +12322,13 @@
           "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Diskutujte:** _V čom spočíva riešenie – ktoré slová sú prijaté alebo odmietnuté? Ako ste na to prišli?_"
         },
         "daa2f24d-7ca5-40f9-9208-fee586489a6d": {
-          "description": "**Cieľ diskusie:** Toto by mal byť vzrušujúci moment, pretože žiaci sa konečne podelia o tajomstvo fungovania hry. Požiadajte niekoľko žiakov, aby sa podelili o to, ako prišli na toto riešenie. Zamerajte sa na odpovede, ktoré zdôrazňujú, ako hľadali podobnosti v jednotlivých skupinách (napríklad si všimli zdvojené písmená) a rozdiely medzi skupinami. Vyzdvihnite, ako im sprievodca pomohol pri spozorovaní vzoru – bez ich príkladov by bolo oveľa ťažšie určiť vzor.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Slovná zásoba:** Tieto slová sú rozložené na dvoch snímkach. Použite vizualizácie na pomoc pri vysvetľovaní jednotlivých pojmov, keď si žiaci zaznamenajú slovnú zásobu do svojich zápisníkov.\n\n-   **Učenie pod dohľadom** – keď človek trénuje model, aby sa učil pomocou príkladov\n-   **Označenie** – výstup, ktorý sa snažíte pomocou modelu rozhodnúť alebo predpovedať\n-   **Trénovanie** – zadávanie príkladov modelu, aby sa mohol učiť"
+          "description": "**Cieľ diskusie:** Toto by mal byť vzrušujúci moment, pretože žiaci sa konečne podelia o tajomstvo fungovania hry. Požiadajte niekoľko žiakov, aby sa podelili o to, ako prišli na toto riešenie. Zamerajte sa na odpovede, ktoré zdôrazňujú, ako hľadali podobnosti v jednotlivých skupinách (napríklad si všimli zdvojené písmená) a rozdiely medzi skupinami. Vyzdvihnite, ako im sprievodca pomohol pri spozorovaní vzoru – bez ich príkladov by bolo oveľa ťažšie určiť vzor.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Slovná zásoba:** Tieto slová sú rozložené na dvoch snímkach. Použite vizualizácie na pomoc pri vysvetľovaní jednotlivých pojmov, keď si žiaci zaznamenajú slovnú zásobu do svojich zápisníkov.\n\n-   **Učenie pod dohľadom** – keď človek trénuje model, aby sa učil pomocou príkladov\n-   **Označenie** – výstup, ktorý sa snažíte pomocou modelu vybrať alebo predpovedať\n-   **Trénovanie** – zadávanie príkladov modelu, aby sa mohol učiť"
         },
         "f2d14022-a9ac-4c4f-893c-dd33f02ba13d": {
           "description": "Táto aktivita je príkladom **učenia pod dohľadom**, pri ktorom sa učíme niečo nové na základe príkladov. Sprievodca nám pomáhal **učiť sa** tým, že nám poskytoval **označenia** pre každé zo slov – buď prijať, alebo odmietnuť. Po prezretí dostatočného množstva príkladov môžeme sami začať objavovať vzor. Je to podobné činnosti, ktorú sme robili včera, alebo keď ste požiadaní, aby ste na obrázku identifikovali pouličné svetlá alebo značky STOP – pomáhame trénovať auto bez vodiča poskytovaním ďalších údajov."
         },
         "398f460c-f111-48f6-8547-35880c41fcc5": {
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Diskutujte:** _Ktoré príklady z úvodnej úlohy sa učia pod dohľadom?_"
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Diskutujte:** _Ktoré príklady z rozcvičky predstavujú učenie pod dohľadom?_"
         },
         "2fcd9185-8253-4466-83bc-4cf8c9f17791": {
           "description": "**Cieľ diskusie:** Nechajte žiakov premýšľať o príkladoch, o ktorých sa rozprávali počas úvodnej úlohy, a pokúste sa určiť, ktoré z nich sú učením pod dohľadom. Pomôžte žiakom pochopiť, že kľúčovým rozdielom je, že učenie sa deje na základe príkladov od niekoho, kto počas učenia pomáha alebo usmerňuje."
@@ -12443,11 +12446,11 @@
           "description": "Nezabúdajte, že model strojového učenia je len počítačový program navrhnutý tak, aby prijímal rozhodnutia. V tejto lekcii sa pozrieme na niekoľko aplikácií a pokúsime sa pochopiť model, ktorý používajú na rozhodovanie. Niektoré z týchto aplikácií môžu robiť rozhodnutia veľmi šikovným a sofistikovaným spôsobom – a iné... nie až tak veľmi."
         },
         "0b081169-4f8b-4728-9db6-87a78e119299": {
-          "name": "Program na odporúčanie topánok",
+          "name": "Odporúčanie topánok",
           "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Nechajte žiakov prihlásiť sa do prvej úrovne štúdie Code Studiu. Táto úroveň obsahuje základný program, ktorý pomáha žiakom rozhodnúť sa, aké topánky si majú obuť. Nechajte žiakov niekoľkokrát spustiť program."
         },
         "762241ac-ebe7-4bd6-91cd-8276112be7ed": {
-          "progression_name": "Program na odporúčanie topánok"
+          "progression_name": "Odporúčanie topánok"
         },
         "7badf325-3e2a-4c2b-8e11-15074b7ddff4": {
           "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Diskutujte:** _Je tento program nápomocný pri výbere obuvi? Prečo áno alebo prečo nie?_\n\nNechajte žiakov krátko diskutovať s partnerom a potom sa o tom porozprávajte spoločne v triede."
@@ -12465,14 +12468,14 @@
           "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Diskutujte:** _Ako by sa dal tento model vylepšiť, aby robil lepšie rozhodnutia?_\n\n **Cieľ diskusie:** Veďte žiakov k záveru, že táto aplikácia by sa dala zlepšiť, keby využívala vstupy používateľov a kládla otázky, ktoré by jej pomohli pri rozhodovaní. Pokúste sa nadviazať na diskusiu z úvodu a na to, ako sa aplikácie môžu zle rozhodovať, keď nemajú spoľahlivé príklady od svojich používateľov. Pomôže to prepojiť sa s ďalšou aplikáciou, ktorú si žiaci pozrú."
         },
         "b3571a02-811f-41e6-8ced-0bc6aa980366": {
-          "name": "Vylepšený program na odporúčanie topánok",
+          "name": "Lepšie odporúčanie topánok",
           "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>**Code Studio:** Nechajte žiakov prejsť na ďalšiu úroveň v Code Studiu, kde sa nachádza ďalšia aplikácia na odporúčanie topánok. Táto sa pred odporúčaním pýta na niekoľko otázok. Nechajte žiakov spustiť aplikáciu niekoľkokrát a pokúsiť sa určiť, ako tento model vytvára svoju predpoveď."
         },
         "7a7b201b-88d5-425a-91a8-75ee0a1ca4fe": {
-          "progression_name": "Vylepšený program na odporúčanie topánok"
+          "progression_name": "Lepšie odporúčanie topánok"
         },
         "5435fe69-c67a-4a16-9094-afbedf4d767d": {
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Diskutujte:** \\_Ako si podľa vás tento program rozhoduje? Je viac alebo menej nápomocný pri rozhodovaní o obuvi ako predchádzajúci program?\n\nNechajte žiakov krátko diskutovať s partnerom a potom sa o tom porozprávajte spoločne v triede."
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Diskutujte:** \\_Ako sa podľa vás tento program rozhoduje? Je viac alebo menej nápomocný pri rozhodovaní o obuvi ako predchádzajúci program?\n\nNechajte žiakov krátko diskutovať s partnerom a potom sa o tom porozprávajte spoločne v triede."
         },
         "1dec4c49-b4a5-4be1-8ce7-a4f989e47bfd": {
           "description": " **Cieľ diskusie:** Žiaci si môžu uvedomiť, že určité odpovede môžu získať len na základe určitých rozhodnutí, a môžu intuitívne opísať určitý druh „toku“ cez program, ktorý vedie k určitým rozhodnutiam. Môžu tiež spochybniť alebo kritizovať rozhodnutia, ktoré stoja za výberom niektorých topánok. K tomuto bodu je dobré sa vrátiť v neskoršej diskusii.\n\nKeď žiaci zamerajú svoju pozornosť na rozvetvenú štruktúru tejto aplikácie, ukážte žiakom nasledujúcu snímku, ktorá zobrazuje strom, ktorý aplikácia používa na vytváranie svojich odporúčaní."
@@ -12501,13 +12504,13 @@
           ]
         },
         "0d780edd-d106-44ab-89f8-9a0fb1829f37": {
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Diskutujte:** _Vychádzajúc z trendov zo všetkých piatich otázok, aké topánky môžeme odporučiť na základe vzorov v údajoch?_\n\n**Cieľ diskusie:** Žiaci by mali skombinovať niekoľko trendov dohromady, aby mohli odporučiť topánky. Napríklad, ak niekto povie, že bude tráviť čas v interiéri, pri slnečnom počasí, v ponožkách: potom môžeme tejto osobe odporučiť tenisky. Nechajte viacerých žiakov, aby sa podelili a pokúsili sa vypočuť odporúčania pre jednotlivé typy topánok. Ak je to možné, zapíšte niektoré z odpovedí na tabuľu, aby ste ich mohli použiť na ďalšej úrovni.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Slovná zásoba:** Zobrazte snímku, aby ste žiakom pripomenuli nasledujúce definície\n\n-   **Vlastnosť:** vstupy, ktoré model používa na rozhodovanie\n-   **Označenie:** výstup, ktorý sa snažíte pomocou modelu rozhodnúť alebo predpovedať\n\nZdôraznite, že v týchto údajoch sú jednotlivé otázky prvkami, ktoré sa používajú na predpovedanie toho, aký typ obuvi sa má odporučiť, čo je označenie.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ukážte:** Ukážte žiakom opis aplikácie, na ktorú sa práve chystajú pozrieť a ktorá používa zobrazené údaje na svoje odporúčania. Zdôraznite, že táto aplikácia má novú časť o údajoch, ktoré použila na vytvorenie svojho modelu."
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Diskutujte:** _Vychádzajúc z trendov zo všetkých piatich otázok, aké topánky môžeme odporučiť na základe vzorov v údajoch?_\n\n**Cieľ diskusie:** Žiaci by mali skombinovať niekoľko trendov dohromady, aby mohli odporučiť topánky. Napríklad, ak niekto povie, že bude tráviť čas v interiéri, pri slnečnom počasí, v ponožkách: potom môžeme tejto osobe odporučiť tenisky. Nechajte viacerých žiakov, aby sa podelili a pokúsili sa vypočuť odporúčania pre jednotlivé typy topánok. Ak je to možné, zapíšte niektoré z odpovedí na tabuľu, aby ste ich mohli použiť na ďalšej úrovni.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Slovná zásoba:** Zobrazte snímku, aby ste žiakom pripomenuli nasledujúce definície\n\n-   **Vlastnosť:** vstupy, ktoré model používa na rozhodovanie\n-   **Označenie:** výstup, ktorý sa snažíte pomocou modelu vybrať alebo predpovedať\n\nZdôraznite, že v týchto údajoch sú jednotlivé otázky prvkami, ktoré sa používajú na predpovedanie toho, aký typ obuvi sa má odporučiť, čo je označenie.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ukážte:** Ukážte žiakom opis aplikácie, na ktorú sa práve chystajú pozrieť a ktorá používa zobrazené údaje na svoje odporúčania. Zdôraznite, že táto aplikácia má novú časť o údajoch, ktoré použila na vytvorenie svojho modelu."
         },
         "5fba57ba-f6e9-4938-92ac-90be12ad8bff": {
           "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Nechajte žiakov prejsť na ďalšiu úroveň v Code Studiu, kde je táto aplikácia k dispozícii na testovanie. Požiadajte žiakov, aby odpovedali na otázky a zistili, či odporúčania zodpovedajú tomu, čo videli v údajoch."
         },
         "e6d37fb6-ef08-4670-b775-de22e104185d": {
-          "progression_name": "Záverečný program na odporúčanie topánok"
+          "progression_name": "Najlepšie odporúčanie topánok"
         },
         "02f2f328-1222-417f-b940-25fea69d3802": {
           "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ukážte:** Prejdite na ďalšiu snímku, na ktorej je zobrazená šípka spájajúca spôsob, akým sa z údajov stáva model. Po zobrazení tejto snímky prejdite na poznámky pod ňou."
@@ -12644,14 +12647,14 @@
           "description": "Táto aktivita ukazuje, ako sa pridaním niekoľkých ďalších vlastností a niekoľkých ďalších potravín k našim údajom stáva vytváranie rovnakých typov modelov ako včera oveľa zložitejším. Niekedy sa tento proces môže stať neúnosným, keď sa snažíme sledovať všetky naše údaje a všetky naše vlastnosti. Dnes sa dozvieme, ako nám tento proces môžu uľahčiť počítače pomocou nového nástroja s názvom AI Lab."
         },
         "23b2d877-b29f-4149-bf87-51a2eadc0e3b": {
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Otázka dňa:** Ako môžete použiť AI Lab na vytvorenie presného modelu strojového učenia?"
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Otázka dňa:** Ako môžeme pomocou AI Labu vytvoriť presný model strojového učenia?"
         },
         "72104e9d-9e83-4499-b7bc-4d8f201d2917": {
           "name": "Rozpoznávanie tvarov",
           "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ukážte:** Zobrazte snímku s mriežkou 100 obrázkov."
         },
         "57a618c6-c8f2-4e89-9bef-386134a5255a": {
-          "description": "**Diskutujte:** _Precvičíme si používanie AI Labu na klasifikáciu tvarov. Aké funkcie môžeme podľa vás na základe týchto obrázkov použiť v AI Labe na trénovanie modelu strojového učenia?_"
+          "description": "**Diskutujte:** _Precvičíme si používanie AI Labu na klasifikáciu tvarov. Aké vlastnosti môžeme použiť v AI Labe na trénovanie modelu strojového učenia na základe týchto obrázkov?_"
         },
         "c2178072-8473-424d-9ac8-8b3073511bde": {
           "description": "**Cieľ diskusie:** Podporte žiakov, aby si všimli rôzne vlastnosti tvarov. Niektoré z nich môžu byť geometrické, napríklad počet strán alebo rozmery uhlov. Taktiež ich naveďte na to, aby identifikovali vizuálne vlastnosti, ktoré by mohol rozpoznať model strojového učenia, ako je farba okraja alebo farba výplne."
@@ -12684,7 +12687,7 @@
           ]
         },
         "a6d9e4f7-ba7c-4f4e-99f7-23b8df11b952": {
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ukážte:** Zobrazte nasledujúcu snímku, na ktorej je obrázok tvaru, ktorý AI Bot identifikoval nesprávne, a obrázok mriežky tvarov, ktorá bola použitá na trénovanie AI Bota.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Diskutujte:** \\_Keď sa pozriete na tréningové údaje, prečo si podľa vás AI Bot myslel, že tento malý hnedý tvar s červeným okrajom je trojuholník?\n\n**Cieľ diskusie:** Nabádajte žiakov, aby sa odvolávali na trénovacie údaje a hľadali vzory pri každom z týchto prvkov jednotlivo. Napríklad: \n\n-   väčšina malých tvarov v trénovacích údajoch boli trojuholníky s veľmi malým počtom štvorcov\n-   väčšina tvarov s červeným obrysom v trénovacích údajoch boli trojuholníky s veľmi malým počtom štvorcov\n-   v trénovacích údajoch nie je veľa hnedých štvorcov\n\nAk si žiaci tieto vzory explicitne nevšimnú, nevadí – tieto pozorovania môžete zhrnúť v poznámkach nižšie."
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ukážte:** Zobrazte nasledujúcu snímku, na ktorej je obrázok tvaru, ktorý AI Bot identifikoval nesprávne, a obrázok mriežky tvarov, ktorá bola použitá na trénovanie AI Bota.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Diskutujte:** \\_Keď sa pozriete na trénovacie údaje, prečo si podľa vás AI Bot myslel, že tento malý hnedý tvar s červeným okrajom je trojuholník?\n\n**Cieľ diskusie:** Nabádajte žiakov, aby sa odvolávali na trénovacie údaje a hľadali vzory pri každom z týchto prvkov jednotlivo. Napríklad: \n\n-   väčšina malých tvarov v trénovacích údajoch boli trojuholníky s veľmi malým počtom štvorcov\n-   väčšina tvarov s červeným obrysom v trénovacích údajoch boli trojuholníky s veľmi malým počtom štvorcov\n-   v trénovacích údajoch nie je veľa hnedých štvorcov\n\nAk si žiaci tieto vzory explicitne nevšimnú, nevadí – tieto pozorovania môžete zhrnúť v poznámkach nižšie."
         },
         "b5645cc1-4604-47ab-9af3-c7bf9f1f57d9": {
           "description": "V tomto príklade si AI Bot myslel, že tento malý hnedý štvorec s červeným okrajom je trojuholník. Ak sa pozrieme na zvyšok tréningových údajov, vidíme, že veľa malých tvarov sú trojuholníky, veľa trojuholníkov má červené okraje a málo štvorcov je hnedých. Vzhľadom na všetky tieto dodatočné vlastnosti sa AI Bot pomýlil a myslel si, že tieto ďalšie vzory sú dôležitejšie ako počet strán. Preto je dôležité používať len údaje so silným vzťahom k vášmu modelu a nezahŕňať ďalšie vlastnosti, ktoré nemajú silný vzťah."
@@ -12726,7 +12729,7 @@
         },
         "68ce1dca-d2a0-42e0-a8fb-3a7a86d1f977": {
           "name": "Denník",
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ukážte:** Trieda chce vytvoriť aplikáciu na odporúčanie kníh pre nových žiakov. Aplikácia položí niekoľko otázok a na základe odpovedí odporučí knihu, ktorú čítali ostatní ľudia v triede.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Spýtajte sa:** _Akú otázku by podľa vás mali položiť, aby dokázali odporučiť knihu?_\n\nNechajte žiakov, aby si samostatne zapísali poznámky do zápisníka, a potom sa o svoje odpovede podelili so susedom. Požiadajte žiakov, aby sa podelili s celou triedou, a odpovede zapisujte na tabuľu."
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ukážte:** Trieda chce vytvoriť aplikáciu na odporúčanie kníh pre nových žiakov. Aplikácia položí niekoľko otázok a na základe odpovedí odporučí knihu, ktorú čítali ostatní žiaci v triede.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Spýtajte sa:** _Akú otázku by podľa vás mali položiť, aby dokázali odporučiť knihu?_\n\nNechajte žiakov, aby si samostatne zapísali poznámky do zápisníka, a potom sa o svoje odpovede podelili so susedom. Požiadajte žiakov, aby sa podelili s celou triedou, a odpovede zapisujte na tabuľu."
         },
         "6c23639c-c2e1-4038-98ed-69ffddb36d6f": {
           "description": " **Cieľ diskusie:** Žiaci môžu navrhnúť, aby sa trieda opýtala na iné knihy, ktoré žiaci predtým čítali, alebo na typy kníh, ktoré ľudia radi čítajú. Môžu tiež navrhnúť otázky na základe záujmu alebo koníčkov. Požiadajte žiakov, aby vysvetlili svoje otázky, a snažte sa zachytiť odpovede, pri ktorých sa žiaci snažia nájsť súvislosť medzi odpoveďami a odporúčaním knihy. Napríklad niekto, kto sa zaujíma o mágiu, môže s väčšou pravdepodobnosťou čítať fantasy knihy – to je príklad, pri ktorom môže byť zber údajov užitočný pri zisťovaní, či tento vzťah bude pravdivý."
@@ -12767,7 +12770,7 @@
           ]
         },
         "45b24d06-7aa1-450d-ac8d-0342ebf3dd8f": {
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Spýtajte sa:** _Z prieskumu v aplikácii chýbajú dve otázky:_\n\n-   _Aký typ sendviča je tvoj najobľúbenejší?_\n-   _Aký deň máš najradšej?_\n\nPrečo si myslíte, že sa tieto otázky nedostali do modelu?\n\n**Cieľ diskusie:** Veďte žiakov k záveru, že tieto otázky pravdepodobne nemali v údajoch silné vzťahy alebo neviedli k presnému modelu. Žiaci môžu vysloviť hypotézu, že je to preto, lebo otázky sa nezdali byť súvisiace s knihami, ale bez toho, aby sme videli skutočné údaje, to nikdy nebudeme vedieť naisto. "
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Spýtajte sa:** _Z prieskumu v aplikácii chýbajú dve otázky:_\n\n-   _Aký typ sendviča je tvoj najobľúbenejší?_\n-   _Aký deň máš najradšej?_\n\nPrečo sa podľa vás tieto otázky nedostali do modelu?\n\n**Cieľ diskusie:** Veďte žiakov k záveru, že tieto otázky pravdepodobne nemali v údajoch silné vzťahy alebo neviedli k presnému modelu. Žiaci môžu vysloviť hypotézu, že je to preto, lebo otázky sa nezdali byť súvisiace s knihami, ale bez toho, aby sme videli skutočné údaje, to nikdy nebudeme vedieť naisto. "
         },
         "427554af-e9e9-4a2e-8eb7-3980df29c940": {
           "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Spýtajte sa:** _Táto trieda zvažovala, že sa v prieskume opýta na pohlavie, aby pomohla odporučiť knihu, ale rozhodla sa, že to neurobí._\n\n_Myslíte si, že je na škodu zahrnúť do prieskumu otázku o pohlaví? Prečo alebo prečo nie?_\n\n**Cieľ diskusie:** Toto je príležitosť preskúmať, ako by sa demografické znaky, ako napríklad pohlavie, rasa alebo vek, mali alebo nemali používať v modeloch strojového učenia. Niektorí žiaci si môžu myslieť, že zahrnúť pohlavie do prieskumu je neškodné, pretože môže mať silný vzťah k určitým typom kníh. Iní žiaci môžu upozorniť na to, že informácie o pohlaví môžu viesť k stereotypom, alebo že nemusí byť dostatok údajov na to, aby sa do prieskumu zahrnulo pohlavie, najmä v prípade nebinárnych osôb.\n\nVeďte žiakov k tomu, aby zvážili, či sa im zdá, že je to najlepší typ otázky vzhľadom na to, že sa trieda snaží predpovedať odporúčanie knihy. Nechajte triedu zvážiť, či rod považuje za nevyhnutnú otázku, alebo či aj iné otázky povedú k presným odporúčaniam. V tomto smere je otázka o pohlaví podobná predchádzajúcim dvom otázkam o tom, ktorý sendvič máte radi alebo aký máte deň: ostatné otázky sú pravdepodobne lepšími predpovednými ukazovateľmi toho, aký typ knihy si môžete chcieť prečítať.",
@@ -12808,7 +12811,7 @@
           ]
         },
         "aef97aca-4210-40f0-9cd3-58fe0a1d1a8f": {
-          "description": "**Úrovne výberu:** Po vytvorení aplikácie na odporúčanie kníh si žiaci môžu vybrať z niekoľkých vzorových aktivít a pokračovať vo vylepšovaní svojej aplikácie. Na každej úrovni sa používa tá istá aplikácia, ktorú už vytvorili, ako predloha, ktorú môžu doplniť. Žiaci si môžu vybrať, koľko týchto úrovní chcú absolvovať – každá z nich im umožní pokračovať v prispôsobovaní a zlepšovaní svojej aplikácie.",
+          "description": "**Voliteľné úrovne:** Po vytvorení aplikácie na odporúčanie kníh si žiaci môžu vybrať z niekoľkých vzorových aktivít a pokračovať vo vylepšovaní svojej aplikácie. Na každej úrovni sa používa tá istá aplikácia, ktorú už vytvorili, ako predloha, ktorú môžu doplniť. Žiaci si môžu vybrať, koľko týchto úrovní chcú absolvovať – každá z nich im umožní pokračovať v prispôsobovaní a zlepšovaní svojej aplikácie.",
           "tips": [
             "**Výber úrovne cvičení žiakmi:** Ak si žiaci sami zvolia úroveň cvičení, je to jeden zo spôsobov diferenciácie vyučovania so žiakmi. Ak sa chcete dozvedieť viac o tom, ako tieto úrovne podporujú diferenciáciu, ako aj o ďalších stratégiách, môžete si prečítať príručku [Objavujeme informatiku: Sprievodca diferenciáciou](https://docs.google.com/document/d/15Y6Mo3fMUtHq16SSskABgcYE-5xfk-Ewv0z_o4uaLdI/preview)."
           ],
@@ -12940,6 +12943,7 @@
           "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Otázka dňa:** Ako môžem používať karty modelov na zdokumentovanie svojich rozhodnutí pri trénovaní modelu strojového učenia?"
         },
         "73c2cb42-e6a3-4317-8aab-7196411578ab": {
+          "name": "Modelové karty v AI Lab",
           "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Ukážte žiakom video [r model_cards_in_ai_lab/csd/2022] video, ktoré sumarizuje karty modelov, ktoré žiaci videli včera, a ukazuje, ako sa dajú uložiť v AI Labe.",
           "tips": [
             "**Čierne skrinky**: V tomto videu sa hovorí o tom, že modely umelej inteligencie sa niekedy označujú ako „čierne skrinky“ a že môže byť ťažké odhaliť, ako model funguje po jeho vytrénovaní. Príklady tohto možno vidieť v novinárskej sérii [ProPublica Breaking the Black Box](https://www.propublica.org/article/breaking-the-black-box-when-algorithms-decide-what-you-pay). Ide o 4-dielny seriál, ktorý obsahuje krátke videá a ďalšie zdroje o rôznych výskumoch algoritmov strojového učenia. Jedno z videí o tvorbe cien upozorňuje na to, že online produkty môžu mať rôzne ceny v závislosti od PSČ používateľa, čo je bežný problém zahŕňajúci skreslenie v modeloch strojového učenia, kde sa PSČ môže používať ako zástupný údaj pre rasu alebo sociálno-ekonomický status.\n\nTieto videá nie sú určené na použitie na vyučovaní, ale môžete sa rozhodnúť zdieľať niektoré z týchto videí so žiakmi a pokračovať v rozhovoroch o skreslení v strojovom učení a potrebe dosiahnuť transparentnosť prostredníctvom kariet modelov."
@@ -12980,7 +12984,7 @@
         },
         "bf7d70a4-6c11-4059-b69f-7b3a7d157c91": {
           "name": "Zápisník",
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Úvaha:** _Prečo je karta modelu užitočná pri vytváraní modelu v AI Labe? Ako je karta modelu užitočná pri vytváraní aplikácie v App Labe?_\n\nŽiaci môžu odpovedať na túto otázku v sprievodcovi aktivitou alebo ju môžete použiť ako záverečnú úlohu."
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Úvaha:** _Prečo je karta modelu užitočná pri vytváraní modelu v AI Labe? Prečo je karta modelu užitočná pri vytváraní aplikácie v App Labe?_\n\nŽiaci môžu odpovedať na túto otázku v sprievodcovi aktivitou alebo ju môžete použiť ako záverečnú úlohu."
         },
         "0d058bc4-3155-48a3-9a43-bdcd6a701268": {
           "description": "**Cieľ diskusie:** Žiaci môžu vyjadriť podobné myšlienky ako v úvodnom videu - že karta modelu pomáha zdokumentovať rozhodnutia a zabezpečiť prehľadnosť a že ju možno použiť v App Labe na doplnenie návrhu – ale ich odpovede by mali byť viac podložené ich skúsenosťami z tejto lekcie, najmä po výbere vlastného označenia a trénovaní vlastného modelu."
@@ -13086,7 +13090,7 @@
           "progression_name": "Hodnotenie"
         },
         "5d073f6e-68fe-48f5-9bf0-7c59870722e5": {
-          "description": "**Úrovne výberu:** Po vytvorení aplikácie na odporúčanie domácich zvierat si žiaci môžu vybrať z niekoľkých vzorových aktivít a pokračovať vo vylepšovaní svojej aplikácie. Na každej úrovni sa používa tá istá aplikácia, ktorú už vytvorili, ako predloha, ktorú môžu doplniť. Žiaci si môžu vybrať, koľko týchto úrovní chcú absolvovať – každá z nich im umožní pokračovať v prispôsobovaní a zlepšovaní svojej aplikácie.",
+          "description": "**Voliteľné úrovne:** Po vytvorení aplikácie na odporúčanie domácich zvierat si žiaci môžu vybrať z niekoľkých vzorových aktivít a pokračovať vo vylepšovaní svojej aplikácie. Na každej úrovni sa používa tá istá aplikácia, ktorú už vytvorili, ako predloha, ktorú môžu doplniť. Žiaci si môžu vybrať, koľko týchto úrovní chcú absolvovať – každá z nich im umožní pokračovať v prispôsobovaní a zlepšovaní svojej aplikácie.",
           "tips": [
             "**Déjà vu?** Žiaci si môžu všimnúť, že úrovne výberu v tejto lekcii vyzerajú povedome – sú to tie isté úrovne, z ktorých si žiaci mohli vybrať v lekcii 7. Je to zámerné, pretože to dáva žiakom možnosť naučiť sa iný kód, ako sa naučili predtým. Žiakov, ktorí už preskúmali jednotlivé možnosti, povzbuďte, aby svoje vedomosti využili v tejto novej aplikácii."
           ]
@@ -13216,7 +13220,7 @@
           "description": "Oba tieto systémy nám pomáhajú pri rozhodovaní, ale rôznymi spôsobmi. Petrin systém sa podobá na typ odporúčaní, ktoré sme videli doteraz, pretože zjednodušuje údaje len na dve kategórie. Michaelin systém je trochu odlišný, na vytvorenie odporúčania používa rozsah hodnôt – ide o tzv. číselné údaje. Dnes sa naučíme, ako v AI Labe používať číselné údaje na vytváranie nových druhov odporúčaní a predpovedí."
         },
         "0683df4b-d5ec-467a-b920-1e506b860bc1": {
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Otázka dňa:** Ako môžeme použiť AI Lab na predpovedanie číselných údajov?"
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Otázka dňa:** Ako môžeme pomocou AI Labu predpovedať číselné údaje?"
         },
         "6c4e8786-af12-443f-9947-0cbb7d52f4de": {
           "name": "Kategorické a číselné",
@@ -13244,11 +13248,11 @@
           ]
         },
         "29f0024c-c9fe-43a7-b1d1-f3696a2ff683": {
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Diskutujte:**\n\n-   _Ak je v parku malý počet antilop, aký to má vplyv na to, koľko levov by mohlo byť v parku?_\n-   _Ak je v parku veľký počet antilop, aký to má vplyv na to, koľko levov by mohlo byť v parku?_\n-   _Prečo si myslíte, že je to tak?_\n\n**Cieľ diskusie:** Žiaci by si mali všimnúť, že čím menej je antilop, tým menej je levov a naopak. Môžu si myslieť, že to súvisí so vzťahmi medzi predátorom a korisťou – levy jedia antilopy, takže ak je menej antilop, je menej levov. Žiaci by si mali svoje odpovede zaznamenať do sprievodcu aktivitou, a to aj v prípade, že o odpovediach diskutovali spoločne v triede."
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Diskutujte:**\n\n-   _Ak je v parku málo antilop, aký to má vplyv na počet levov v parku?_\n-   _Ak je v parku veľa antilop, aký to má vplyv na počet levov v parku?_\n-   _Prečo si myslíte, že je to tak?_\n\n**Cieľ diskusie:** Žiaci by si mali všimnúť, že čím menej je antilop, tým menej je levov a naopak. Môžu si myslieť, že to súvisí so vzťahmi medzi lovcom a korisťou – levy jedia antilopy, takže ak je menej antilop, je menej levov. Žiaci by si mali svoje odpovede zaznamenať do sprievodcu aktivitou, a to aj v prípade, že o odpovediach diskutovali spoločne v triede."
         },
         "59d0c95a-0335-4da7-979e-9cc93829b878": {
           "name": "Vlastnosť 2: Ľudia",
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Urobte toto**: Nechajte žiakov kliknúť na stĺpec Ľudia. Tento stĺpec uvádza, koľko ľudí bolo v daný deň videných v parku. Nechajte žiakov najprv odpovedať na otázky v sprievodcovi aktivitou a až potom diskutujte v skupine.\n\n**Monitorujte:** Skontrolujte, ako sa žiakom darí, a pomôžte im interpretovať grafy. Povzbuďte žiakov, aby používali začiatočné vety typu: „Keď je počet ľudí..., potom je počet levov...“.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Diskutujte:**\n\n-   _Ak je v parku malý počet ľudí, aký to má vplyv na to, koľko levov môže byť v parku?_\n-   _Ak je v parku veľký počet ľudí, aký to má vplyv na to, koľko levov môže byť v parku?_\n-   _Prečo si myslíte, že je to tak?_",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Urobte toto**: Nechajte žiakov kliknúť na stĺpec Ľudia. Tento stĺpec uvádza, koľko ľudí bolo v daný deň videných v parku. Nechajte žiakov najprv odpovedať na otázky v sprievodcovi aktivitou a až potom diskutujte v skupine.\n\n**Monitorujte:** Skontrolujte, ako sa žiakom darí, a pomôžte im interpretovať grafy. Povzbuďte žiakov, aby používali začiatočné vety typu: „Keď je počet ľudí..., potom je počet levov...“.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Diskutujte:**\n\n-   _Ak je v parku málo ľudí, aký to má vplyv na počet levov v parku?_\n-   _Ak je v parku veľa ľudí, aký to má vplyv na počet levov v parku?_\n-   _Prečo si myslíte, že je to tak?_",
           "tips": [
             "**Asociácie:** Graf antilop predstavuje pozitívnu asociáciu a graf ľudí predstavuje negatívnu asociáciu, ktoré sú súčasťou matematických noriem [Common Core pre 8. ročník](http://www.corestandards.org/Math/Content/8/SP/A/1/). Žiaci nemusia poznať tieto pojmy, aby dokázali úspešne zvládnuť tento tematický celok, preto neodporúčame používať túto slovnú zásobu, pokiaľ priamo nepodporuje ich štúdium na iných hodinách."
           ]
@@ -13312,7 +13316,7 @@
           "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Otázka dňa:** Ako môžem prispôsobiť kód aplikácie strojového učenia?"
         },
         "0328060d-b869-4515-9ff9-999120b9874d": {
-          "name": "Výstražný systém pre rodičov",
+          "name": "Výstražný systém pre vodičov",
           "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Požiadajte žiakov, aby sa prihlásili do Code Studia a otvorili 1. úroveň. V tejto aplikácii sa im zobrazí podobný program na odporúčanie ľadových džúsov ako v úvodnej úlohe – otázky sú však rozdelené na 2 obrazovky namiesto jednej.\n\n**Monitorujte:** Sledujte žiakov, ako postupujú podľa pokynov na tejto obrazovke. Môžu kliknúť na obrázky v rámci pokynov k danej úrovni, aby získali užitočné informácie. Toto je prvýkrát, čo žiaci upravujú vopred vygenerovaný kód pre modely, preto sa pred pokračovaním uistite, že žiaci chápu, ako dokončiť túto úroveň."
         },
         "4322eab8-e9e7-4df5-a2bd-076c47737f1c": {
@@ -13328,7 +13332,7 @@
           "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Nechajte žiakov prejsť na ďalšiu úroveň v Code Studiu. V týchto ďalších úrovniach žiaci prispôsobia aplikáciu tak, aby každá otázka bola na samostatnej obrazovke, čo umožňuje pridať viac informácií pre používateľa. Keď žiaci dokončia jednotlivé úrovne, naučia sa, ako aktualizovať svoj kód tak, aby používal vlastné prvky návrhu namiesto tých, ktoré boli vygenerované v predvolenom nastavení."
         },
         "0b4727eb-166b-41a1-91e1-43614e88e44c": {
-          "progression_name": "Výstražný systém pre rodičov"
+          "progression_name": "Výstražný systém pre vodičov"
         },
         "569ced3c-98f2-41a2-8197-683ad54af8bf": {
           "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Diskutujte:**\n\n-   _Koľko vlastností má táto aplikácia? Aké to sú?_\n-   _Aké je označenie tejto aplikácie? Aké sú možné výstupy?_"
@@ -13338,13 +13342,13 @@
         },
         "01d4dc18-6d92-4c65-990e-5e5d9a209ff7": {
           "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Nechajte žiakov prejsť niekoľko ďalších úrovní v Code Studiu, kde budú znovu vytvárať túto aplikáciu.",
-          "progression_name": "Výstražný systém pre rodičov"
+          "progression_name": "Výstražný systém pre vodičov"
         },
         "03cc43b5-c22f-442c-b4f4-4c7c088dc954": {
           "description": "**Monitorujte:** Sledujte žiakov pri vytváraní tejto aplikácie. Žiaci nebudú môcť aplikáciu otestovať, kým nebude úplne dokončená, čo môže byť pre niektorých žiakov problém. Tu je niekoľko vecí, na ktoré si treba dávať pozor počas práce žiakov:\n\n-   **Úroveň 3:** Žiaci si precvičujú odstraňovanie predvolených prvkov, ktoré sa generujú pri prvom importovaní modelu. Ide o krok, ktorý bude dôležitý, keď budú žiaci v rámci neskorších projektov vytvárať vlastné aplikácie.\n-   **Úroveň 4 a 5:** Žiaci iba aktualizujú kód svojej aplikácie, aby použili nové prvky návrhu pre vlastnosti Počet áut a Počasie. Môžu použiť pomôcky v rámci pokynov k úrovni, ktoré im poradia, čo majú v jednotlivých krokoch urobiť.\n-   **Úroveň 6:** Žiaci aktualizujú návrh aj kód svojej aplikácie na zber údajov pre vlastnosť Teplota. Pomôžte žiakom sledovať nový textový vstupný prvok, ktorý pridali na obrazovku teploty, a uistite sa, že ID prvku sa zhoduje s tým, ktoré použili v bloku [\\`getText\\`(#fff176)](/docs/applab/getText/) svojho kódu.\n-   **Úroveň 7:** Žiaci aktualizujú návrh aj kód svojej aplikácie na zber údajov pre vlastnosť Denný čas. Pridanie prvku návrhu a aktualizácia kódu je podobná ako na poslednej úrovni, ale tento krok má pridanú požiadavku použiť kartu modelu na kontrolu možných hodnôt pre túto kategorickú funkciu. Žiaci sa môžu dopustiť pravopisných chýb alebo chýb v písaní veľkých písmen, ktoré môžu ovplyvniť ich kód – nabádajte žiakov, aby si dávali veľký pozor na presnú zhodu možností v rozbaľovacom zozname s kartou modelu.\n-   **Úroveň 8:** Žiaci majú možnosť spustiť svoju aplikáciu a overiť, či funguje. Na tejto úrovni budú musieť žiaci vykonať zmeny v kóde len v prípade, že ich program nefunguje. V opačnom prípade, ak aplikácia funguje správne, môžu žiaci pokračovať na ďalšiu úroveň."
         },
         "244ecc30-2351-4ebd-9596-220197f275fc": {
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Úrovne výberu:** Po vytvorení aplikácie výstražného systému pre vodičov si žiaci môžu vybrať z niekoľkých vzorových aktivít a pokračovať vo vylepšovaní svojej aplikácie. Na každej úrovni sa používa tá istá aplikácia, ktorú už vytvorili, ako predloha, ktorú môžu doplniť. Žiaci si môžu vybrať, koľko týchto úrovní chcú absolvovať – každá z nich im umožní pokračovať v prispôsobovaní a zlepšovaní svojej aplikácie.",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Voliteľné úrovne:** Po vytvorení aplikácie výstražného systému pre vodičov si žiaci môžu vybrať z niekoľkých vzorových aktivít a pokračovať vo vylepšovaní svojej aplikácie. Na každej úrovni sa používa tá istá aplikácia, ktorú už vytvorili, ako predloha, ktorú môžu doplniť. Žiaci si môžu vybrať, koľko týchto úrovní chcú absolvovať – každá z nich im umožní pokračovať v prispôsobovaní a zlepšovaní svojej aplikácie.",
           "tips": [
             "\\*\\* Opakované úrovne:\\*\\* Možnosti v tejto úrovni sú totožné s možnosťami v poslednej lekcii. Je to zámerné, aby mali žiaci viacero príležitostí naučiť sa nové návrhové triky alebo bloky kódu, prípadne pokračovať v precvičovaní nových blokov, ktoré sa naučili v minulej lekcii. Povzbuďte žiakov, aby si pre dnešnú aplikáciu vybrali novú úlohu, ktorá sa líši od tých, ktoré si vybrali včera."
           ]
@@ -13354,7 +13358,7 @@
         },
         "2d0bad6d-f5d4-4d3d-91f2-7e0b359e80b4": {
           "name": "Denník",
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Spýtajte sa:** _Aká je jedna z výhod rozloženia vlastností na viacerých obrazovkách v aplikácii? Aká je jedna nevýhoda rozmiestnenia vlastností na viacerých obrazovkách aplikácie?_"
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Spýtajte sa:** _Aká je jedna z výhod rozmiestnenia vlastností na viacerých obrazovkách aplikácie? Aká je jedna z nevýhod rozmiestnenia vlastností na viacerých obrazovkách aplikácie?_"
         },
         "1a985175-0813-453b-bb83-2c483b00e986": {
           "description": "**Cieľ diskusie:** Odpovede žiakov sa môžu líšiť, ale niektoré príklady sú:"
@@ -13364,7 +13368,7 @@
         },
         "e1dd79db-f57a-47b1-a3f8-7a23780991dd": {
           "name": "Denník",
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Diskutujte**: Aké príklady umelej inteligencie ste videli buď v reálnom živote, alebo vo fikcii, napríklad vo filmoch, hudbe alebo televízii?\n\nPožiadajte žiakov, aby si svoje odpovede zapísali do svojich zápisníkov a potom sa o ne podelili so susedom. Pred diskusiou v celej skupine prejdite na ďalšiu úlohu.\n\n**Diskutujte:** _Spomeniete si na prípady, keď boli tieto príklady použité na dobré veci? Viete si spomenúť na prípady, keď boli tieto príklady použité na zlé veci, aj keď neúmyselne? Existujú veci, ktoré by sme mohli považovať za „správne“ alebo „nesprávne“?_\n\nPožiadajte žiakov, aby sa najprv zamysleli samostatne, potom diskutovali so susedom a až potom požiadajte žiakov, aby sa podelili ako celá skupina. Požiadajte žiakov, aby sa podelili o príklad, ktorý im napadol, a potom o situáciu, ktorá by sa dala využiť na dobré alebo zlé."
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Diskutujte**: Aké príklady umelej inteligencie ste videli buď v reálnom živote, alebo vo fikcii, napríklad vo filmoch, hudbe alebo televízii?\n\nPožiadajte žiakov, aby si svoje odpovede zapísali do svojich zápisníkov a potom sa o ne podelili so susedom. Pred diskusiou v celej skupine prejdite na ďalšiu úlohu.\n\n**Diskutujte:** _Spomeniete si na prípady, keď boli tieto príklady použité na dobré veci? Viete si spomenúť na prípady, keď boli tieto príklady použité na zlé veci, aj keď neúmyselne? Sú veci, ktoré robia a ktoré by sme mohli považovať za „dobré“ alebo „zlé“?_\n\nPožiadajte žiakov, aby sa najprv zamysleli samostatne, potom diskutovali so susedom a až potom požiadajte žiakov, aby sa podelili ako celá skupina. Požiadajte žiakov, aby sa podelili o príklad, ktorý im napadol, a potom o situáciu, ktorá by sa dala využiť na dobré alebo zlé."
         },
         "f273893d-db33-4c30-b8de-5dc29b35aaf9": {
           "description": " **Cieľ diskusie**: Táto úloha je zámerne otvorená a nejasne definuje „dobré“, „zlé“, „správne“ a „nesprávne“. Dajte žiakom priestor, aby preskúmali, ako by opísali technológiu umelej inteligencie, a našli príklady „dobrého“ alebo „zlého“. Snažte sa, aby sa v triede ozvali rôzne hlasy. Keď budú žiaci pripravení, prejdite na ďalšiu snímku a na zhrnutie diskusie použite poznámky uvedené nižšie."
@@ -13538,7 +13542,7 @@
           ]
         },
         "e77939dd-5b4c-421e-a24c-43b0c5146bed": {
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ukážte:** Na ďalších piatich snímkach sú zobrazené návrhy tímu ďalších žiakov. Ako trieda diskutujte o tom, či aplikácia využíva údaje na rozhodovanie. Ak áno, aké údaje by potrebovala?\n\n**Cieľ diskusie:** Hoci všetky tieto aplikácie riešia základný problém izolácie, nie všetky z nich by boli dobrou aplikáciou na strojové učenie. Tu sú niektoré z očakávaných bodov diskusie:\n\n-   Aplikácie Nica, Isaaca a Hawa vyžadujú, aby používateľ odpovedal na otázky, aby dostal odporúčanie. Všetky tieto tri aplikácie by mohli využívať strojové učenie.\n-   Aplikácia Kim vyžaduje od používateľov interakciu, ale na rozhodovanie nepoužíva žiadne ich údaje. Toto nie je dobrá aplikácia na strojové učenie.\n-   Aplikácia Zoey môže vyžadovať nejaké údaje na vytvorenie aplikácie a generovanie nápadov, ale po jej použití nevyžaduje od používateľa žiadne informácie. To znamená, že na tvorbu by nebolo potrebné strojové učenie."
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ukážte:** Na ďalších piatich snímkach sú zobrazené návrhy tímu ďalších žiakov. Ako trieda diskutujte o tom, či aplikácia využíva údaje na rozhodovanie. Ak áno, aké údaje by potrebovala?\n\n**Cieľ diskusie:** Hoci všetky tieto aplikácie riešia základný problém izolácie, nie všetky z nich by boli dobrou aplikáciou na strojové učenie. Tu sú niektoré z očakávaných bodov diskusie:\n\n-   Aplikácie Nica, Isaaca a Hawy vyžadujú, aby používateľ odpovedal na otázky, aby dostal odporúčanie. Všetky tieto tri aplikácie by mohli využívať strojové učenie.\n-   Aplikácia Kim vyžaduje od používateľov interakciu, ale na rozhodovanie nepoužíva žiadne ich údaje. Toto nie je dobrá aplikácia na strojové učenie.\n-   Aplikácia Zoey môže vyžadovať nejaké údaje na vytvorenie aplikácie a generovanie nápadov, ale po jej použití nevyžaduje od používateľa žiadne informácie. To znamená, že na tvorbu by nebolo potrebné strojové učenie."
         },
         "6ce16574-18c2-4d89-abe6-500a674e4d91": {
           "description": "Pri vytváraní vlastných aplikácií je dôležité poznať problém, ktorý sa snažíme riešiť, a je dôležité vedieť, že riešenie, ktoré navrhujeme, si skutočne vyžaduje strojové učenie. Uvidíme, ktorú z týchto aplikácií sa tím rozhodne vytvoriť, a zajtra im pomôžeme naplánovať, ako by mali zhromažďovať údaje."
@@ -13549,10 +13553,10 @@
         },
         "2a14fe82-0d13-48fd-a475-8071db9d484f": {
           "name": "Denník",
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ukážte:** Zobrazte popis Hawaovej aplikácie zo včerajšieho dňa, Odporúčanie krúžkov."
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ukážte:** Zobrazte popis Hawainej aplikácie zo včerajšieho dňa, Odporúčanie krúžkov."
         },
         "80cc0bfa-cd6b-41d0-8cc0-30f1e2481f36": {
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Spýtajte sa**: Tím sa rozhodol pre aplikáciu Odporúčanie krúžkov. Ďalším krokom je zhromaždiť údaje, ktoré potrebujú na vytvorenie svojho modelu. Plánujú uskutočniť rozhovory s rôznymi ľuďmi, aby určili, aký krúžok by ich aplikácia mala odporúčať. Na aké otázky by sa podľa vás mali pýtať, aby im pomohli odporučiť krúžok, do ktorého sa majú pridať?"
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Spýtajte sa**: Tím sa rozhodol pre aplikáciu Odporúčanie krúžkov. Ďalším krokom je zhromaždiť údaje, ktoré potrebujú na vytvorenie svojho modelu. Plánujú uskutočniť rozhovory s rôznymi ľuďmi, aby určili, aký krúžok by ich aplikácia mala odporúčať. Čo by sa podľa vás mali spýtať, aby im dokázali odporučiť krúžok, na ktorý sa majú zapísať?"
         },
         "b2b9b186-1a5e-455f-8427-4f8b3d03aeaf": {
           "description": "**Cieľ diskusie:** Odpovede budú rôzne, ale môžu zahŕňať:\n\n-   demografické informácie, ako sú vek alebo pohlavie;\n-   záujmy alebo koníčky, napríklad či uprednostňujú určitý šport;\n-   mediálne preferencie, napríklad aké knihy, filmy alebo hudbu má niekto rád;\n-   typ osobnosti, napríklad introvert alebo extrovert alebo typy nálad."
@@ -13683,7 +13687,7 @@
           "progression_name": "AI Lab a Kimine údaje"
         },
         "2d686046-4503-4aa6-8d46-0183bce166bc": {
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Urobte toto:** Postupujte podľa pokynov v každej fáze v AI Labe. Počas tejto úrovne sú vašimi cieľmi:\n\n-   vytrénovať model s presnosťou aspoň 70 %, ktorý používa najmenšie množstvo vlastností;\n-   vyplniť kartu modelu a uložiť svoj model."
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Urobte toto:** Postupujte podľa pokynov v každej fáze v AI Labe. Počas tejto úrovne sú vašimi cieľmi:\n\n-   vytrénovať model s presnosťou aspoň 70 %, ktorý používa čo najmenej vlastností;\n-   vyplniť kartu modelu a uložiť svoj model."
         },
         "1529ffea-c11c-46ac-85e1-1a6a1fb19386": {
           "description": "**Monitorujte:** Sledujte žiakov pri práci v AI Labe. Zamerajte sa na to, ako žiaci vyberajú vlastnosti, a uistite sa, že vyvažujú presnosť a jednoduchosť. Povzbudzujte žiakov, aby skúšali viacero vlastností a aby kládli otázky, ktoré majú zmysel v kontexte toho, že majú odporúčaný krúžok."
@@ -13763,7 +13767,7 @@
         },
         "d50a69ad-81f7-449a-ab1a-241f95e80193": {
           "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Nechajte žiakov prihlásiť sa do Code Studia a otvoriť prvú úroveň tejto lekcie. Žiaci uvidia niekoľko množín údajov, z ktorých si môžu vybrať.",
-          "progression_name": "Množiny údajov klubov"
+          "progression_name": "Množiny údajov krúžkov"
         },
         "b02b37d8-bb6d-4c8b-88c5-9121a5de7212": {
           "description": "**Ukážte:** Ukážte žiakom snímku vysvetľujúcu prvú časť dnešnej úlohy – Kim, Nicovi, Isaacovi a Zoey sa nedarí vytrénovať presné modely a trieda im musí pomôcť vyriešiť tento problém. Žiaci preskúmajú výsledky každého žiaka a pokúsia sa opísať, čo je príčinou problému, a navrhnúť odporúčanie, ako ho vyriešiť alebo ako sa mu nabudúce vyhnúť."
@@ -18023,7 +18027,7 @@
           "description": "**Urobte toto:** Pomocou úvodných snímok k lekcii alebo tohto [vzorového projektu](https://studio.code.org/projects/spritelab/i1-YKJAmtlLMi54FJRIVNnWR_yLy-xRpmUAKcIAlaa0/view) ukážte žiakom animáciu mravca a vážky.\n\n**Diskusia:** _Ako by ste opísali túto scénu so sprajtmi?\nAk by ste chceli, aby pre vás niekto túto scénu vytvoril na počítači, aké inštrukcie by potreboval?_\n\n**Cieľ diskusie:** Žiaci by mali byť schopní identifikovať oba sprajty v tomto projekte, opísať ich správanie (pohyby) a všimnúť si aj pozadie.\nNechajte žiakom čas na to, aby prišli s nápadmi. Ak si nie sú istí, čo majú povedať, vysvetlite im, že od nich očakávate iba opis toho, čo vidia.\n\nPotom ukáže samotný kód k projektu a vyzvite žiakov, aby sa pokúsili prečítať si ho.\n\n**Reflexia:** V čom sú si naše inštrukcie s týmto kódom podobné? Aké sú medzi nimi rozdiely?"
         },
         "d0b548d1-7ce0-46f1-98c6-2f83efb996c7": {
-          "name": "Vytváranie postáv",
+          "name": "Vytváranie sprajtov",
           "description": "#### Predpoveď (3 minúty)\n\n**Urobte toto:** Dajte žiakom za úlohu prečítať poskytnutý kód a skúsiť predpovedať, čo sa stane. Po stlačení tlačidla Spustiť dajte žiakom čas na to, aby sa zamysleli nad čímkoľvek, čo ich zaujalo alebo prekvapilo.",
           "tips": [
             "V úlohách s predpoveďou majú žiaci za úlohu prezrieť si hotový program a odpovedať na otázku, ktorá sa ho týka. Otázku musia zodpovedať ešte predtým, ako stlačia tlačidlo Spustiť. Hoci je možné využiť tieto otázky ako formu hodnotenia, myslite na to, že často sa nachádzajú na začiatku lekcie, aby sa žiaci nad novými vecami začali zamýšľať ešte skôr, než sa naučia, ako v skutočnosti fungujú. "
@@ -21184,7 +21188,7 @@
           "description": "**Urobte toto:** Pomocou úvodných snímok k lekcii alebo tohto [vzorového projektu](https://studio.code.org/projects/spritelab/i1-YKJAmtlLMi54FJRIVNnWR_yLy-xRpmUAKcIAlaa0/view) ukážte žiakom animáciu mravca a vážky.\n\n**Diskusia:** _Ako by ste opísali túto scénu so sprajtmi?\nAk by ste chceli, aby pre vás niekto túto scénu vytvoril na počítači, aké inštrukcie by potreboval?_\n\n**Cieľ diskusie:** Žiaci by mali byť schopní identifikovať oba sprajty v tomto projekte, opísať ich správanie (pohyby) a všimnúť si aj pozadie.\nNechajte žiakom čas na to, aby prišli s nápadmi. Ak si nie sú istí, čo majú povedať, vysvetlite im, že od nich očakávate iba opis toho, čo vidia.\n\nPotom ukáže samotný kód k projektu a vyzvite žiakov, aby sa pokúsili prečítať si ho.\n\n**Reflexia:** V čom sú si naše inštrukcie s týmto kódom podobné? Aké sú medzi nimi rozdiely?"
         },
         "ff19466f-a215-4f8f-b83a-4a289e985f0f": {
-          "name": "Vytváranie postáv",
+          "name": "Vytváranie sprajtov",
           "description": "#### Predpoveď (3 minúty)\n\n**Urobte toto:** Dajte žiakom za úlohu prečítať poskytnutý kód a skúsiť predpovedať, čo sa stane. Po stlačení tlačidla Spustiť dajte žiakom čas na to, aby sa zamysleli nad čímkoľvek, čo ich zaujalo alebo prekvapilo.",
           "tips": [
             "V úlohách s predpoveďou majú žiaci za úlohu prezrieť si hotový program a odpovedať na otázku, ktorá sa ho týka. Otázku musia zodpovedať ešte predtým, ako stlačia tlačidlo Spustiť. Hoci je možné využiť tieto otázky ako formu hodnotenia, myslite na to, že často sa nachádzajú na začiatku lekcie, aby sa žiaci nad novými vecami začali zamýšľať ešte skôr, než sa naučia, ako v skutočnosti fungujú. "
@@ -23064,7 +23068,7 @@
           ]
         },
         "934516f6-ebfb-4b43-908d-b48ddd2cd306": {
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ukážte:** Keď žiaci dospejú do poslednej fázy, nechajte ich stlačiť bielu ikonu Informácie vpravo hore. Zobrazia sa tak vlastnosti, na základe ktorých A.I. Bot prijíma rozhodnutia. V tomto príklade sa A.I. Bot naučil, že pri rozhodovaní je najdôležitejšia farba a najmenej dôležité sú oči.\n\nPožiadajte žiakov, aby si najdôležitejšie a najmenej dôležité vlastnosti zapísali do sprievodcu aktivitou.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Diskutujte:** _Ktoré vlastnosti boli podľa A.I. Bota najdôležitejšie? Sú to funkcie, ktoré ste očakávali?_"
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ukážte:** Keď žiaci dospejú do poslednej fázy, nechajte ich stlačiť bielu ikonu Informácie vpravo hore. Zobrazia sa tak vlastnosti, na základe ktorých A.I. Bot prijíma rozhodnutia. V tomto príklade sa A.I. Bot naučil, že pri rozhodovaní je najdôležitejšia farba a najmenej dôležité sú oči.\n\nPožiadajte žiakov, aby si najdôležitejšie a najmenej dôležité vlastnosti zapísali do sprievodcu aktivitou.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Diskutujte:** _Ktoré vlastnosti boli podľa A.I. Bota najdôležitejšie? Sú to vlastnosti, ktoré ste očakávali?_"
         },
         "9c6b41ce-5bd9-49f9-ab4d-7912732b19b1": {
           "description": "**Cieľ diskusie:** Žiaci môžu zistiť, že A.I. Bot považuje niektoré vlastnosti za dôležité, hoci v skutočnosti s ich slovom vôbec nesúvisia. Napríklad si myslia, že ústa ryby sú dôležité, keď sa snažia určiť, či je ryba červená. Žiaci si to môžu overiť tak, že budú hľadať v rybách vzory, ktoré A.I. Bot akceptoval – možno všetky ich vzorové ryby mali náhodou rovnaký typ úst a A.I. Bot to mylne považoval za dôležité."
@@ -23108,7 +23112,7 @@
           "description": "Našli ste preklep? Boli niektoré pokyny nejasné? Máte návrh, ako zlepšiť chod tejto lekcie? **Radi si ich vypočujeme!** Použite odkazy nižšie a poskytnite nám spätnú väzbu k tejto lekcii.\n\n-   [\\*\\*Nahlásiť preklep / chybu / nejasné pokyny\\*\\*](https://support.code.org/hc/en-us/requests/new?description=Typo%20in%20AI%20Unit%20lesson%201%20studio.code.org/s/aiml-2021/lessons/1)\n-   [\\*\\*Všeobecná spätná väzba k lekcii\\*\\*](https://docs.google.com/forms/d/e/1FAIpQLSfb7oK-vvnMV2nRlN7h_xp8-P-KGuBxb8iOhmqDrUwZkNBdWg/viewform?usp=sf_link)"
         },
         "2ec7a348-a9d4-4ce7-942e-98fc411303bd": {
-          "name": "Zapíšte si do zápisníka",
+          "name": "Zapíšte si do denníka",
           "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Spýtajte sa:** _Premýšľajte o zručnosti, ktorú bežne používate, napríklad rozprávanie, zaväzovanie topánok, varenie alebo hranie hier. Ako ste sa túto zručnosť naučili?_\n\nDajte žiakom minútu alebo dve na napísanie odpovedí a potom požiadajte dobrovoľníkov, aby sa o svoje nápady podelili s triedou. Kým budú žiaci hovoriť, zapisujte na tabuľu témy, ktoré sa objavia."
         },
         "f895faf7-ea01-42c7-a485-35e30336038d": {
@@ -23183,13 +23187,13 @@
           "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Diskutujte:** _V čom spočíva riešenie – ktoré slová sú prijaté alebo odmietnuté? Ako ste na to prišli?_"
         },
         "9e8d0b7f-66d6-4b52-abe4-682a6e17ac35": {
-          "description": "**Cieľ diskusie:** Toto by mal byť vzrušujúci moment, pretože žiaci sa konečne podelia o tajomstvo fungovania hry. Požiadajte niekoľko žiakov, aby sa podelili o to, ako prišli na toto riešenie. Zamerajte sa na odpovede, ktoré zdôrazňujú, ako hľadali podobnosti v jednotlivých skupinách (napríklad si všimli zdvojené písmená) a rozdiely medzi skupinami. Vyzdvihnite, ako im sprievodca pomohol pri spozorovaní vzoru – bez ich príkladov by bolo oveľa ťažšie určiť vzor.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Slovná zásoba:** Tieto slová sú rozložené na dvoch snímkach. Použite vizualizácie na pomoc pri vysvetľovaní jednotlivých pojmov, keď si žiaci zaznamenajú slovnú zásobu do svojich zápisníkov.\n\n-   **Učenie pod dohľadom** – keď človek trénuje model, aby sa učil pomocou príkladov\n-   **Označenie** – výstup, ktorý sa snažíte pomocou modelu rozhodnúť alebo predpovedať\n-   **Trénovanie** – zadávanie príkladov modelu, aby sa mohol učiť"
+          "description": "**Cieľ diskusie:** Toto by mal byť vzrušujúci moment, pretože žiaci sa konečne podelia o tajomstvo fungovania hry. Požiadajte niekoľko žiakov, aby sa podelili o to, ako prišli na toto riešenie. Zamerajte sa na odpovede, ktoré zdôrazňujú, ako hľadali podobnosti v jednotlivých skupinách (napríklad si všimli zdvojené písmená) a rozdiely medzi skupinami. Vyzdvihnite, ako im sprievodca pomohol pri spozorovaní vzoru – bez ich príkladov by bolo oveľa ťažšie určiť vzor.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Slovná zásoba:** Tieto slová sú rozložené na dvoch snímkach. Použite vizualizácie na pomoc pri vysvetľovaní jednotlivých pojmov, keď si žiaci zaznamenajú slovnú zásobu do svojich zápisníkov.\n\n-   **Učenie pod dohľadom** – keď človek trénuje model, aby sa učil pomocou príkladov\n-   **Označenie** – výstup, ktorý sa snažíte pomocou modelu vybrať alebo predpovedať\n-   **Trénovanie** – zadávanie príkladov modelu, aby sa mohol učiť"
         },
         "c4cb7cda-8d7e-494b-be3e-4b4b14aa87cf": {
           "description": "Táto aktivita je príkladom **učenia pod dohľadom**, pri ktorom sa učíme niečo nové na základe príkladov. Sprievodca nám pomáhal **učiť sa** tým, že nám poskytoval **označenia** pre každé zo slov – buď prijať, alebo odmietnuť. Po prezretí dostatočného množstva príkladov môžeme sami začať objavovať vzor. Je to podobné činnosti, ktorú sme robili včera, alebo keď ste požiadaní, aby ste na obrázku identifikovali pouličné svetlá alebo značky STOP – pomáhame trénovať auto bez vodiča poskytovaním ďalších údajov."
         },
         "89452c96-e749-4f2c-8f81-868c959341a5": {
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Diskutujte:** _Ktoré príklady z úvodnej úlohy sa učia pod dohľadom?_"
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Diskutujte:** _Ktoré príklady z rozcvičky predstavujú učenie pod dohľadom?_"
         },
         "af25476d-f9d5-43d4-a923-bf30e0c8d091": {
           "description": "**Cieľ diskusie:** Nechajte žiakov premýšľať o príkladoch, o ktorých sa rozprávali počas úvodnej úlohy, a pokúste sa určiť, ktoré z nich sú učením pod dohľadom. Pomôžte žiakom pochopiť, že kľúčovým rozdielom je, že učenie sa deje na základe príkladov od niekoho, kto počas učenia pomáha alebo usmerňuje."
@@ -23313,11 +23317,11 @@
           "description": "Nezabúdajte, že model strojového učenia je len počítačový program navrhnutý tak, aby prijímal rozhodnutia. V tejto lekcii sa pozrieme na niekoľko aplikácií a pokúsime sa pochopiť model, ktorý používajú na rozhodovanie. Niektoré z týchto aplikácií môžu robiť rozhodnutia veľmi šikovným a sofistikovaným spôsobom – a iné... nie až tak veľmi."
         },
         "09d3ff6d-f87e-4309-b138-3ef66e33eab5": {
-          "name": "Program na odporúčanie topánok",
+          "name": "Odporúčanie topánok",
           "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Nechajte žiakov prihlásiť sa do prvej úrovne štúdie Code Studiu. Táto úroveň obsahuje základný program, ktorý pomáha žiakom rozhodnúť sa, aké topánky si majú obuť. Nechajte žiakov niekoľkokrát spustiť program."
         },
         "bf65cfae-cdec-4456-8acf-d475d2835417": {
-          "progression_name": "Program na odporúčanie topánok"
+          "progression_name": "Odporúčanie topánok"
         },
         "f71cc8ff-3bce-4e58-9b98-4cac65249332": {
           "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Diskutujte:** _Je tento program nápomocný pri výbere obuvi? Prečo áno alebo prečo nie?_\n\nNechajte žiakov krátko diskutovať s partnerom a potom sa o tom porozprávajte spoločne v triede."
@@ -23335,14 +23339,14 @@
           "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Diskutujte:** _Ako by sa dal tento model vylepšiť, aby robil lepšie rozhodnutia?_\n\n **Cieľ diskusie:** Veďte žiakov k záveru, že táto aplikácia by sa dala zlepšiť, keby využívala vstupy používateľov a kládla otázky, ktoré by jej pomohli pri rozhodovaní. Pokúste sa nadviazať na diskusiu z úvodu a na to, ako sa aplikácie môžu zle rozhodovať, keď nemajú spoľahlivé príklady od svojich používateľov. Pomôže to prepojiť sa s ďalšou aplikáciou, ktorú si žiaci pozrú."
         },
         "4e1f64ea-a1bd-4509-b618-84f364384c9a": {
-          "name": "Vylepšený program na odporúčanie topánok",
+          "name": "Lepšie odporúčanie topánok",
           "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>**Code Studio:** Nechajte žiakov prejsť na ďalšiu úroveň v Code Studiu, kde sa nachádza ďalšia aplikácia na odporúčanie topánok. Táto sa pred odporúčaním pýta na niekoľko otázok. Nechajte žiakov spustiť aplikáciu niekoľkokrát a pokúsiť sa určiť, ako tento model vytvára svoju predpoveď."
         },
         "e2df5e33-a11a-4ad5-9607-4a67f1b95608": {
-          "progression_name": "Vylepšený program na odporúčanie topánok"
+          "progression_name": "Lepšie odporúčanie topánok"
         },
         "7ee8faff-e0ee-4890-8f5c-73c61a2b73cd": {
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Diskutujte:** \\_Ako si podľa vás tento program rozhoduje? Je viac alebo menej nápomocný pri rozhodovaní o obuvi ako predchádzajúci program?\n\nNechajte žiakov krátko diskutovať s partnerom a potom sa o tom porozprávajte spoločne v triede."
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Diskutujte:** \\_Ako sa podľa vás tento program rozhoduje? Je viac alebo menej nápomocný pri rozhodovaní o obuvi ako predchádzajúci program?\n\nNechajte žiakov krátko diskutovať s partnerom a potom sa o tom porozprávajte spoločne v triede."
         },
         "81ec8cdb-c620-4b8b-b64e-0a0c9e18e2df": {
           "description": " **Cieľ diskusie:** Žiaci si môžu uvedomiť, že určité odpovede môžu získať len na základe určitých rozhodnutí, a môžu intuitívne opísať určitý druh „toku“ cez program, ktorý vedie k určitým rozhodnutiam. Môžu tiež spochybniť alebo kritizovať rozhodnutia, ktoré stoja za výberom niektorých topánok. K tomuto bodu je dobré sa vrátiť v neskoršej diskusii.\n\nKeď žiaci zamerajú svoju pozornosť na rozvetvenú štruktúru tejto aplikácie, ukážte žiakom nasledujúcu snímku, ktorá zobrazuje strom, ktorý aplikácia používa na vytváranie svojich odporúčaní."
@@ -23371,13 +23375,13 @@
           ]
         },
         "49b921a4-3f3d-4d7b-87d8-aea89350e4f7": {
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Diskutujte:** _Vychádzajúc z trendov zo všetkých piatich otázok, aké topánky môžeme odporučiť na základe vzorov v údajoch?_\n\n**Cieľ diskusie:** Žiaci by mali skombinovať niekoľko trendov dohromady, aby mohli odporučiť topánky. Napríklad, ak niekto povie, že bude tráviť čas v interiéri, pri slnečnom počasí, v ponožkách: potom môžeme tejto osobe odporučiť tenisky. Nechajte viacerých žiakov, aby sa podelili a pokúsili sa vypočuť odporúčania pre jednotlivé typy topánok. Ak je to možné, zapíšte niektoré z odpovedí na tabuľu, aby ste ich mohli použiť na ďalšej úrovni.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Slovná zásoba:** Zobrazte snímku, aby ste žiakom pripomenuli nasledujúce definície\n\n-   **Vlastnosť:** vstupy, ktoré model používa na rozhodovanie\n-   **Označenie:** výstup, ktorý sa snažíte pomocou modelu rozhodnúť alebo predpovedať\n\nZdôraznite, že v týchto údajoch sú jednotlivé otázky prvkami, ktoré sa používajú na predpovedanie toho, aký typ obuvi sa má odporučiť, čo je označenie.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ukážte:** Ukážte žiakom opis aplikácie, na ktorú sa práve chystajú pozrieť a ktorá používa zobrazené údaje na svoje odporúčania. Zdôraznite, že táto aplikácia má novú časť o údajoch, ktoré použila na vytvorenie svojho modelu."
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Diskutujte:** _Vychádzajúc z trendov zo všetkých piatich otázok, aké topánky môžeme odporučiť na základe vzorov v údajoch?_\n\n**Cieľ diskusie:** Žiaci by mali skombinovať niekoľko trendov dohromady, aby mohli odporučiť topánky. Napríklad, ak niekto povie, že bude tráviť čas v interiéri, pri slnečnom počasí, v ponožkách: potom môžeme tejto osobe odporučiť tenisky. Nechajte viacerých žiakov, aby sa podelili a pokúsili sa vypočuť odporúčania pre jednotlivé typy topánok. Ak je to možné, zapíšte niektoré z odpovedí na tabuľu, aby ste ich mohli použiť na ďalšej úrovni.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Slovná zásoba:** Zobrazte snímku, aby ste žiakom pripomenuli nasledujúce definície\n\n-   **Vlastnosť:** vstupy, ktoré model používa na rozhodovanie\n-   **Označenie:** výstup, ktorý sa snažíte pomocou modelu vybrať alebo predpovedať\n\nZdôraznite, že v týchto údajoch sú jednotlivé otázky prvkami, ktoré sa používajú na predpovedanie toho, aký typ obuvi sa má odporučiť, čo je označenie.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ukážte:** Ukážte žiakom opis aplikácie, na ktorú sa práve chystajú pozrieť a ktorá používa zobrazené údaje na svoje odporúčania. Zdôraznite, že táto aplikácia má novú časť o údajoch, ktoré použila na vytvorenie svojho modelu."
         },
         "c1dedeb4-ba09-40dc-a24c-fad4faf24a48": {
           "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Nechajte žiakov prejsť na ďalšiu úroveň v Code Studiu, kde je táto aplikácia k dispozícii na testovanie. Požiadajte žiakov, aby odpovedali na otázky a zistili, či odporúčania zodpovedajú tomu, čo videli v údajoch."
         },
         "a5c8ac6d-bf15-4ce6-ae63-cc39ad9d23e4": {
-          "progression_name": "Záverečný program na odporúčanie topánok"
+          "progression_name": "Najlepšie odporúčanie topánok"
         },
         "b35f8725-c2aa-4492-a29b-41731868a450": {
           "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ukážte:** Prejdite na ďalšiu snímku, na ktorej je zobrazená šípka spájajúca spôsob, akým sa z údajov stáva model. Po zobrazení tejto snímky prejdite na poznámky pod ňou."
@@ -23521,14 +23525,14 @@
           "description": "Táto aktivita ukazuje, ako sa pridaním niekoľkých ďalších vlastností a niekoľkých ďalších potravín k našim údajom stáva vytváranie rovnakých typov modelov ako včera oveľa zložitejším. Niekedy sa tento proces môže stať neúnosným, keď sa snažíme sledovať všetky naše údaje a všetky naše vlastnosti. Dnes sa dozvieme, ako nám tento proces môžu uľahčiť počítače pomocou nového nástroja s názvom AI Lab."
         },
         "72015c7d-3320-40ae-9164-45c649d80bb7": {
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Otázka dňa:** Ako môžete použiť AI Lab na vytvorenie presného modelu strojového učenia?"
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Otázka dňa:** Ako môžeme pomocou AI Labu vytvoriť presný model strojového učenia?"
         },
         "3b4dcf97-2764-4939-af16-c39d10ab214f": {
           "name": "Rozpoznávanie tvarov",
           "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ukážte:** Zobrazte snímku s mriežkou 100 obrázkov."
         },
         "c5f0aff3-ef3e-4b65-9af8-c78a53fcbe28": {
-          "description": "**Diskutujte:** _Precvičíme si používanie AI Labu na klasifikáciu tvarov. Aké funkcie môžeme podľa vás na základe týchto obrázkov použiť v AI Labe na trénovanie modelu strojového učenia?_"
+          "description": "**Diskutujte:** _Precvičíme si používanie AI Labu na klasifikáciu tvarov. Aké vlastnosti môžeme použiť v AI Labe na trénovanie modelu strojového učenia na základe týchto obrázkov?_"
         },
         "b7632d63-3d5c-47e4-9ce3-a665f9be7142": {
           "description": "**Cieľ diskusie:** Podporte žiakov, aby si všimli rôzne vlastnosti tvarov. Niektoré z nich môžu byť geometrické, napríklad počet strán alebo rozmery uhlov. Taktiež ich naveďte na to, aby identifikovali vizuálne vlastnosti, ktoré by mohol rozpoznať model strojového učenia, ako je farba okraja alebo farba výplne."
@@ -23565,7 +23569,7 @@
           ]
         },
         "eb5c6666-0263-47a6-a846-becfeed7028b": {
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ukážte:** Zobrazte nasledujúcu snímku, na ktorej je obrázok tvaru, ktorý AI Bot identifikoval nesprávne, a obrázok mriežky tvarov, ktorá bola použitá na trénovanie AI Bota.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Diskutujte:** \\_Keď sa pozriete na tréningové údaje, prečo si podľa vás AI Bot myslel, že tento malý hnedý tvar s červeným okrajom je trojuholník?\n\n**Cieľ diskusie:** Nabádajte žiakov, aby sa odvolávali na trénovacie údaje a hľadali vzory pri každom z týchto prvkov jednotlivo. Napríklad: \n\n-   väčšina malých tvarov v trénovacích údajoch boli trojuholníky s veľmi malým počtom štvorcov\n-   väčšina tvarov s červeným obrysom v trénovacích údajoch boli trojuholníky s veľmi malým počtom štvorcov\n-   v trénovacích údajoch nie je veľa hnedých štvorcov\n\nAk si žiaci tieto vzory explicitne nevšimnú, nevadí – tieto pozorovania môžete zhrnúť v poznámkach nižšie."
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ukážte:** Zobrazte nasledujúcu snímku, na ktorej je obrázok tvaru, ktorý AI Bot identifikoval nesprávne, a obrázok mriežky tvarov, ktorá bola použitá na trénovanie AI Bota.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Diskutujte:** \\_Keď sa pozriete na trénovacie údaje, prečo si podľa vás AI Bot myslel, že tento malý hnedý tvar s červeným okrajom je trojuholník?\n\n**Cieľ diskusie:** Nabádajte žiakov, aby sa odvolávali na trénovacie údaje a hľadali vzory pri každom z týchto prvkov jednotlivo. Napríklad: \n\n-   väčšina malých tvarov v trénovacích údajoch boli trojuholníky s veľmi malým počtom štvorcov\n-   väčšina tvarov s červeným obrysom v trénovacích údajoch boli trojuholníky s veľmi malým počtom štvorcov\n-   v trénovacích údajoch nie je veľa hnedých štvorcov\n\nAk si žiaci tieto vzory explicitne nevšimnú, nevadí – tieto pozorovania môžete zhrnúť v poznámkach nižšie."
         },
         "9656015e-1693-4f84-8655-bc287e06812a": {
           "description": "V tomto príklade si AI Bot myslel, že tento malý hnedý štvorec s červeným okrajom je trojuholník. Ak sa pozrieme na zvyšok tréningových údajov, vidíme, že veľa malých tvarov sú trojuholníky, veľa trojuholníkov má červené okraje a málo štvorcov je hnedých. Vzhľadom na všetky tieto dodatočné vlastnosti sa AI Bot pomýlil a myslel si, že tieto ďalšie vzory sú dôležitejšie ako počet strán. Preto je dôležité používať len údaje so silným vzťahom k vášmu modelu a nezahŕňať ďalšie vlastnosti, ktoré nemajú silný vzťah."
@@ -23610,7 +23614,7 @@
         },
         "181e84e3-430b-4c20-9e48-fffad8c5bab2": {
           "name": "Denník",
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ukážte:** Trieda chce vytvoriť aplikáciu na odporúčanie kníh pre nových žiakov. Aplikácia položí niekoľko otázok a na základe odpovedí odporučí knihu, ktorú čítali ostatní ľudia v triede.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Spýtajte sa:** _Akú otázku by podľa vás mali položiť, aby dokázali odporučiť knihu?_\n\nNechajte žiakov, aby si samostatne zapísali poznámky do zápisníka, a potom sa o svoje odpovede podelili so susedom. Požiadajte žiakov, aby sa podelili s celou triedou, a odpovede zapisujte na tabuľu."
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ukážte:** Trieda chce vytvoriť aplikáciu na odporúčanie kníh pre nových žiakov. Aplikácia položí niekoľko otázok a na základe odpovedí odporučí knihu, ktorú čítali ostatní žiaci v triede.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Spýtajte sa:** _Akú otázku by podľa vás mali položiť, aby dokázali odporučiť knihu?_\n\nNechajte žiakov, aby si samostatne zapísali poznámky do zápisníka, a potom sa o svoje odpovede podelili so susedom. Požiadajte žiakov, aby sa podelili s celou triedou, a odpovede zapisujte na tabuľu."
         },
         "eaac2119-56ff-4c15-ad0e-06acce32c228": {
           "description": " **Cieľ diskusie:** Žiaci môžu navrhnúť, aby sa trieda opýtala na iné knihy, ktoré žiaci predtým čítali, alebo na typy kníh, ktoré ľudia radi čítajú. Môžu tiež navrhnúť otázky na základe záujmu alebo koníčkov. Požiadajte žiakov, aby vysvetlili svoje otázky, a snažte sa zachytiť odpovede, pri ktorých sa žiaci snažia nájsť súvislosť medzi odpoveďami a odporúčaním knihy. Napríklad niekto, kto sa zaujíma o mágiu, môže s väčšou pravdepodobnosťou čítať fantasy knihy – to je príklad, pri ktorom môže byť zber údajov užitočný pri zisťovaní, či tento vzťah bude pravdivý."
@@ -23651,7 +23655,7 @@
           ]
         },
         "0de901b0-640e-45fe-9a9f-4277864af5cc": {
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Spýtajte sa:** _Z prieskumu v aplikácii chýbajú dve otázky:_\n\n-   _Aký typ sendviča je tvoj najobľúbenejší?_\n-   _Aký deň máš najradšej?_\n\nPrečo si myslíte, že sa tieto otázky nedostali do modelu?\n\n**Cieľ diskusie:** Veďte žiakov k záveru, že tieto otázky pravdepodobne nemali v údajoch silné vzťahy alebo neviedli k presnému modelu. Žiaci môžu vysloviť hypotézu, že je to preto, lebo otázky sa nezdali byť súvisiace s knihami, ale bez toho, aby sme videli skutočné údaje, to nikdy nebudeme vedieť naisto. "
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Spýtajte sa:** _Z prieskumu v aplikácii chýbajú dve otázky:_\n\n-   _Aký typ sendviča je tvoj najobľúbenejší?_\n-   _Aký deň máš najradšej?_\n\nPrečo sa podľa vás tieto otázky nedostali do modelu?\n\n**Cieľ diskusie:** Veďte žiakov k záveru, že tieto otázky pravdepodobne nemali v údajoch silné vzťahy alebo neviedli k presnému modelu. Žiaci môžu vysloviť hypotézu, že je to preto, lebo otázky sa nezdali byť súvisiace s knihami, ale bez toho, aby sme videli skutočné údaje, to nikdy nebudeme vedieť naisto. "
         },
         "0d89923e-93b3-4a03-b79e-b262c4a71f72": {
           "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Spýtajte sa:** _Táto trieda zvažovala, že sa v prieskume opýta na pohlavie, aby pomohla odporučiť knihu, ale rozhodla sa, že to neurobí._\n\n_Myslíte si, že je na škodu zahrnúť do prieskumu otázku o pohlaví? Prečo alebo prečo nie?_\n\n**Cieľ diskusie:** Toto je príležitosť preskúmať, ako by sa demografické znaky, ako napríklad pohlavie, rasa alebo vek, mali alebo nemali používať v modeloch strojového učenia. Niektorí žiaci si môžu myslieť, že zahrnúť pohlavie do prieskumu je neškodné, pretože môže mať silný vzťah k určitým typom kníh. Iní žiaci môžu upozorniť na to, že informácie o pohlaví môžu viesť k stereotypom, alebo že nemusí byť dostatok údajov na to, aby sa do prieskumu zahrnulo pohlavie, najmä v prípade nebinárnych osôb.\n\nVeďte žiakov k tomu, aby zvážili, či sa im zdá, že je to najlepší typ otázky vzhľadom na to, že sa trieda snaží predpovedať odporúčanie knihy. Nechajte triedu zvážiť, či rod považuje za nevyhnutnú otázku, alebo či aj iné otázky povedú k presným odporúčaniam. V tomto smere je otázka o pohlaví podobná predchádzajúcim dvom otázkam o tom, ktorý sendvič máte radi alebo aký máte deň: ostatné otázky sú pravdepodobne lepšími predpovednými ukazovateľmi toho, aký typ knihy si môžete chcieť prečítať.",
@@ -23686,7 +23690,7 @@
           ]
         },
         "35bd3261-9e58-490f-a4f7-6f6188cf278e": {
-          "description": "**Úrovne výberu:** Po vytvorení aplikácie na odporúčanie kníh si žiaci môžu vybrať z niekoľkých vzorových aktivít a pokračovať vo vylepšovaní svojej aplikácie. Na každej úrovni sa používa tá istá aplikácia, ktorú už vytvorili, ako predloha, ktorú môžu doplniť. Žiaci si môžu vybrať, koľko týchto úrovní chcú absolvovať – každá z nich im umožní pokračovať v prispôsobovaní a zlepšovaní svojej aplikácie.",
+          "description": "**Voliteľné úrovne:** Po vytvorení aplikácie na odporúčanie kníh si žiaci môžu vybrať z niekoľkých vzorových aktivít a pokračovať vo vylepšovaní svojej aplikácie. Na každej úrovni sa používa tá istá aplikácia, ktorú už vytvorili, ako predloha, ktorú môžu doplniť. Žiaci si môžu vybrať, koľko týchto úrovní chcú absolvovať – každá z nich im umožní pokračovať v prispôsobovaní a zlepšovaní svojej aplikácie.",
           "tips": [
             "**Výber úrovne cvičení žiakmi:** Ak si žiaci sami zvolia úroveň cvičení, je to jeden zo spôsobov diferenciácie vyučovania so žiakmi. Ak sa chcete dozvedieť viac o tom, ako tieto úrovne podporujú diferenciáciu, ako aj o ďalších stratégiách, môžete si prečítať príručku [Objavujeme informatiku: Sprievodca diferenciáciou](https://docs.google.com/document/d/15Y6Mo3fMUtHq16SSskABgcYE-5xfk-Ewv0z_o4uaLdI/preview)."
           ],
@@ -23823,6 +23827,7 @@
           "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Otázka dňa:** Ako môžem používať karty modelov na zdokumentovanie svojich rozhodnutí pri trénovaní modelu strojového učenia?"
         },
         "30e5080a-05d0-4193-82e4-f7c81f1adb5c": {
+          "name": "Modelové karty v AI Lab",
           "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Ukážte žiakom video [r model_cards_in_ai_lab/csd/2021] video, ktoré sumarizuje karty modelov, ktoré žiaci videli včera, a ukazuje, ako sa dajú uložiť v AI Labe.",
           "tips": [
             "**Čierne skrinky**: V tomto videu sa hovorí o tom, že modely umelej inteligencie sa niekedy označujú ako „čierne skrinky“ a že môže byť ťažké odhaliť, ako model funguje po jeho vytrénovaní. Príklady tohto možno vidieť v novinárskej sérii [ProPublica Breaking the Black Box](https://www.propublica.org/article/breaking-the-black-box-when-algorithms-decide-what-you-pay). Ide o 4-dielny seriál, ktorý obsahuje krátke videá a ďalšie zdroje o rôznych výskumoch algoritmov strojového učenia. Jedno z videí o tvorbe cien upozorňuje na to, že online produkty môžu mať rôzne ceny v závislosti od PSČ používateľa, čo je bežný problém zahŕňajúci skreslenie v modeloch strojového učenia, kde sa PSČ môže používať ako zástupný údaj pre rasu alebo sociálno-ekonomický status.\n\nTieto videá nie sú určené na použitie na vyučovaní, ale môžete sa rozhodnúť zdieľať niektoré z týchto videí so žiakmi a pokračovať v rozhovoroch o skreslení v strojovom učení a potrebe dosiahnuť transparentnosť prostredníctvom kariet modelov."
@@ -23860,7 +23865,7 @@
         },
         "fab00d1e-0bf0-4f6c-866f-388441b6505d": {
           "name": "Zápisník",
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Úvaha:** _Prečo je karta modelu užitočná pri vytváraní modelu v AI Labe? Ako je karta modelu užitočná pri vytváraní aplikácie v App Labe?_\n\nŽiaci môžu odpovedať na túto otázku v sprievodcovi aktivitou alebo ju môžete použiť ako záverečnú úlohu."
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Úvaha:** _Prečo je karta modelu užitočná pri vytváraní modelu v AI Labe? Prečo je karta modelu užitočná pri vytváraní aplikácie v App Labe?_\n\nŽiaci môžu odpovedať na túto otázku v sprievodcovi aktivitou alebo ju môžete použiť ako záverečnú úlohu."
         },
         "c1f63e3b-ea15-475e-bb1e-d8ee0d402c63": {
           "description": "**Cieľ diskusie:** Žiaci môžu vyjadriť podobné myšlienky ako v úvodnom videu - že karta modelu pomáha zdokumentovať rozhodnutia a zabezpečiť prehľadnosť a že ju možno použiť v App Labe na doplnenie návrhu – ale ich odpovede by mali byť viac podložené ich skúsenosťami z tejto lekcie, najmä po výbere vlastného označenia a trénovaní vlastného modelu."
@@ -23966,7 +23971,7 @@
           "progression_name": "Hodnotenie"
         },
         "8ded89d7-85cd-4bba-883e-7c4981ce3078": {
-          "description": "**Úrovne výberu:** Po vytvorení aplikácie na odporúčanie domácich zvierat si žiaci môžu vybrať z niekoľkých vzorových aktivít a pokračovať vo vylepšovaní svojej aplikácie. Na každej úrovni sa používa tá istá aplikácia, ktorú už vytvorili, ako predloha, ktorú môžu doplniť. Žiaci si môžu vybrať, koľko týchto úrovní chcú absolvovať – každá z nich im umožní pokračovať v prispôsobovaní a zlepšovaní svojej aplikácie.",
+          "description": "**Voliteľné úrovne:** Po vytvorení aplikácie na odporúčanie domácich zvierat si žiaci môžu vybrať z niekoľkých vzorových aktivít a pokračovať vo vylepšovaní svojej aplikácie. Na každej úrovni sa používa tá istá aplikácia, ktorú už vytvorili, ako predloha, ktorú môžu doplniť. Žiaci si môžu vybrať, koľko týchto úrovní chcú absolvovať – každá z nich im umožní pokračovať v prispôsobovaní a zlepšovaní svojej aplikácie.",
           "tips": [
             "**Déjà vu?** Žiaci si môžu všimnúť, že úrovne výberu v tejto lekcii vyzerajú povedome – sú to tie isté úrovne, z ktorých si žiaci mohli vybrať v lekcii 7. Je to zámerné, pretože to dáva žiakom možnosť naučiť sa iný kód, ako sa naučili predtým. Žiakov, ktorí už preskúmali jednotlivé možnosti, povzbuďte, aby svoje vedomosti využili v tejto novej aplikácii."
           ]
@@ -24108,7 +24113,7 @@
           "description": "Oba tieto systémy nám pomáhajú pri rozhodovaní, ale rôznymi spôsobmi. Petrin systém sa podobá na typ odporúčaní, ktoré sme videli doteraz, pretože zjednodušuje údaje len na dve kategórie. Michaelin systém je trochu odlišný, na vytvorenie odporúčania používa rozsah hodnôt – ide o tzv. číselné údaje. Dnes sa naučíme, ako v AI Labe používať číselné údaje na vytváranie nových druhov odporúčaní a predpovedí."
         },
         "533e250e-c476-4984-aebc-a39eee5f217f": {
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Otázka dňa:** Ako môžeme použiť AI Lab na predpovedanie číselných údajov?"
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Otázka dňa:** Ako môžeme pomocou AI Labu predpovedať číselné údaje?"
         },
         "ad4af062-015a-4af2-b8a6-54148ece9e91": {
           "name": "Kategorické a číselné",
@@ -24136,11 +24141,11 @@
           ]
         },
         "7b869fc5-7ea0-4fb1-b595-6fc677f59c7e": {
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Diskutujte:**\n\n-   _Ak je v parku malý počet antilop, aký to má vplyv na to, koľko levov by mohlo byť v parku?_\n-   _Ak je v parku veľký počet antilop, aký to má vplyv na to, koľko levov by mohlo byť v parku?_\n-   _Prečo si myslíte, že je to tak?_\n\n**Cieľ diskusie:** Žiaci by si mali všimnúť, že čím menej je antilop, tým menej je levov a naopak. Môžu si myslieť, že to súvisí so vzťahmi medzi predátorom a korisťou – levy jedia antilopy, takže ak je menej antilop, je menej levov. Žiaci by si mali svoje odpovede zaznamenať do sprievodcu aktivitou, a to aj v prípade, že o odpovediach diskutovali spoločne v triede."
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Diskutujte:**\n\n-   _Ak je v parku málo antilop, aký to má vplyv na počet levov v parku?_\n-   _Ak je v parku veľa antilop, aký to má vplyv na počet levov v parku?_\n-   _Prečo si myslíte, že je to tak?_\n\n**Cieľ diskusie:** Žiaci by si mali všimnúť, že čím menej je antilop, tým menej je levov a naopak. Môžu si myslieť, že to súvisí so vzťahmi medzi lovcom a korisťou – levy jedia antilopy, takže ak je menej antilop, je menej levov. Žiaci by si mali svoje odpovede zaznamenať do sprievodcu aktivitou, a to aj v prípade, že o odpovediach diskutovali spoločne v triede."
         },
         "5b59847e-71f7-481a-a5ca-aa9ec4511289": {
           "name": "Vlastnosť 2: Ľudia",
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Urobte toto**: Nechajte žiakov kliknúť na stĺpec Ľudia. Tento stĺpec uvádza, koľko ľudí bolo v daný deň videných v parku. Nechajte žiakov najprv odpovedať na otázky v sprievodcovi aktivitou a až potom diskutujte v skupine.\n\n**Monitorujte:** Skontrolujte, ako sa žiakom darí, a pomôžte im interpretovať grafy. Povzbuďte žiakov, aby používali začiatočné vety typu: „Keď je počet ľudí..., potom je počet levov...“.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Diskutujte:**\n\n-   _Ak je v parku malý počet ľudí, aký to má vplyv na to, koľko levov môže byť v parku?_\n-   _Ak je v parku veľký počet ľudí, aký to má vplyv na to, koľko levov môže byť v parku?_\n-   _Prečo si myslíte, že je to tak?_",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Urobte toto**: Nechajte žiakov kliknúť na stĺpec Ľudia. Tento stĺpec uvádza, koľko ľudí bolo v daný deň videných v parku. Nechajte žiakov najprv odpovedať na otázky v sprievodcovi aktivitou a až potom diskutujte v skupine.\n\n**Monitorujte:** Skontrolujte, ako sa žiakom darí, a pomôžte im interpretovať grafy. Povzbuďte žiakov, aby používali začiatočné vety typu: „Keď je počet ľudí..., potom je počet levov...“.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Diskutujte:**\n\n-   _Ak je v parku málo ľudí, aký to má vplyv na počet levov v parku?_\n-   _Ak je v parku veľa ľudí, aký to má vplyv na počet levov v parku?_\n-   _Prečo si myslíte, že je to tak?_",
           "tips": [
             "**Asociácie:** Graf antilop predstavuje pozitívnu asociáciu a graf ľudí predstavuje negatívnu asociáciu, ktoré sú súčasťou matematických noriem [Common Core pre 8. ročník](http://www.corestandards.org/Math/Content/8/SP/A/1/). Žiaci nemusia poznať tieto pojmy, aby dokázali úspešne zvládnuť tento tematický celok, preto neodporúčame používať túto slovnú zásobu, pokiaľ priamo nepodporuje ich štúdium na iných hodinách."
           ]
@@ -24236,7 +24241,7 @@
           "description": "**Monitorujte:** Sledujte žiakov pri vytváraní tejto aplikácie. Žiaci nebudú môcť aplikáciu otestovať, kým nebude úplne dokončená, čo môže byť pre niektorých žiakov problém. Tu je niekoľko vecí, na ktoré si treba dávať pozor počas práce žiakov:\n\n-   **Úroveň 3:** Žiaci si precvičujú odstraňovanie predvolených prvkov, ktoré sa generujú pri prvom importovaní modelu. Ide o krok, ktorý bude dôležitý, keď budú žiaci v rámci neskorších projektov vytvárať vlastné aplikácie.\n-   **Úroveň 4 a 5:** Žiaci iba aktualizujú kód svojej aplikácie, aby použili nové prvky návrhu pre vlastnosti Počet áut a Počasie. Môžu použiť pomôcky v rámci pokynov k úrovni, ktoré im poradia, čo majú v jednotlivých krokoch urobiť.\n-   **Úroveň 6:** Žiaci aktualizujú návrh aj kód svojej aplikácie na zber údajov pre vlastnosť Teplota. Pomôžte žiakom sledovať nový textový vstupný prvok, ktorý pridali na obrazovku teploty, a uistite sa, že ID prvku sa zhoduje s tým, ktoré použili v bloku [\\`getText\\`(#fff176)](/docs/applab/getText/) svojho kódu.\n-   **Úroveň 7:** Žiaci aktualizujú návrh aj kód svojej aplikácie na zber údajov pre vlastnosť Denný čas. Pridanie prvku návrhu a aktualizácia kódu je podobná ako na poslednej úrovni, ale tento krok má pridanú požiadavku použiť kartu modelu na kontrolu možných hodnôt pre túto kategorickú funkciu. Žiaci sa môžu dopustiť pravopisných chýb alebo chýb v písaní veľkých písmen, ktoré môžu ovplyvniť ich kód – nabádajte žiakov, aby si dávali veľký pozor na presnú zhodu možností v rozbaľovacom zozname s kartou modelu.\n-   **Úroveň 8:** Žiaci majú možnosť spustiť svoju aplikáciu a overiť, či funguje. Na tejto úrovni budú musieť žiaci vykonať zmeny v kóde len v prípade, že ich program nefunguje. V opačnom prípade, ak aplikácia funguje správne, môžu žiaci pokračovať na ďalšiu úroveň."
         },
         "4e10be5f-60ad-4bae-913d-7a157e519447": {
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Úrovne výberu:** Po vytvorení aplikácie výstražného systému pre vodičov si žiaci môžu vybrať z niekoľkých vzorových aktivít a pokračovať vo vylepšovaní svojej aplikácie. Na každej úrovni sa používa tá istá aplikácia, ktorú už vytvorili, ako predloha, ktorú môžu doplniť. Žiaci si môžu vybrať, koľko týchto úrovní chcú absolvovať – každá z nich im umožní pokračovať v prispôsobovaní a zlepšovaní svojej aplikácie.",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Voliteľné úrovne:** Po vytvorení aplikácie výstražného systému pre vodičov si žiaci môžu vybrať z niekoľkých vzorových aktivít a pokračovať vo vylepšovaní svojej aplikácie. Na každej úrovni sa používa tá istá aplikácia, ktorú už vytvorili, ako predloha, ktorú môžu doplniť. Žiaci si môžu vybrať, koľko týchto úrovní chcú absolvovať – každá z nich im umožní pokračovať v prispôsobovaní a zlepšovaní svojej aplikácie.",
           "tips": [
             "\\*\\* Opakované úrovne:\\*\\* Možnosti v tejto úrovni sú totožné s možnosťami v poslednej lekcii. Je to zámerné, aby mali žiaci viacero príležitostí naučiť sa nové návrhové triky alebo bloky kódu, prípadne pokračovať v precvičovaní nových blokov, ktoré sa naučili v minulej lekcii. Povzbuďte žiakov, aby si pre dnešnú aplikáciu vybrali novú úlohu, ktorá sa líši od tých, ktoré si vybrali včera."
           ]
@@ -24246,7 +24251,7 @@
         },
         "85a0ec6f-c1c7-46f6-8e4f-f805984133dc": {
           "name": "Denník",
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Spýtajte sa:** _Aká je jedna z výhod rozloženia vlastností na viacerých obrazovkách v aplikácii? Aká je jedna nevýhoda rozmiestnenia vlastností na viacerých obrazovkách aplikácie?_"
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Spýtajte sa:** _Aká je jedna z výhod rozmiestnenia vlastností na viacerých obrazovkách aplikácie? Aká je jedna z nevýhod rozmiestnenia vlastností na viacerých obrazovkách aplikácie?_"
         },
         "49fc416e-7900-4a52-a3ae-623144d42f0a": {
           "description": "**Cieľ diskusie:** Odpovede žiakov sa môžu líšiť, ale niektoré príklady sú:"
@@ -24259,7 +24264,7 @@
         },
         "edd27907-d992-46f6-a9d6-71f7cb7098b9": {
           "name": "Denník",
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Diskutujte**: Aké príklady umelej inteligencie ste videli buď v reálnom živote, alebo vo fikcii, napríklad vo filmoch, hudbe alebo televízii?\n\nPožiadajte žiakov, aby si svoje odpovede zapísali do svojich zápisníkov a potom sa o ne podelili so susedom. Pred diskusiou v celej skupine prejdite na ďalšiu úlohu.\n\n**Diskutujte:** _Spomeniete si na prípady, keď boli tieto príklady použité na dobré veci? Viete si spomenúť na prípady, keď boli tieto príklady použité na zlé veci, aj keď neúmyselne? Existujú veci, ktoré by sme mohli považovať za „správne“ alebo „nesprávne“?_\n\nPožiadajte žiakov, aby sa najprv zamysleli samostatne, potom diskutovali so susedom a až potom požiadajte žiakov, aby sa podelili ako celá skupina. Požiadajte žiakov, aby sa podelili o príklad, ktorý im napadol, a potom o situáciu, ktorá by sa dala využiť na dobré alebo zlé."
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Diskutujte**: Aké príklady umelej inteligencie ste videli buď v reálnom živote, alebo vo fikcii, napríklad vo filmoch, hudbe alebo televízii?\n\nPožiadajte žiakov, aby si svoje odpovede zapísali do svojich zápisníkov a potom sa o ne podelili so susedom. Pred diskusiou v celej skupine prejdite na ďalšiu úlohu.\n\n**Diskutujte:** _Spomeniete si na prípady, keď boli tieto príklady použité na dobré veci? Viete si spomenúť na prípady, keď boli tieto príklady použité na zlé veci, aj keď neúmyselne? Sú veci, ktoré robia a ktoré by sme mohli považovať za „dobré“ alebo „zlé“?_\n\nPožiadajte žiakov, aby sa najprv zamysleli samostatne, potom diskutovali so susedom a až potom požiadajte žiakov, aby sa podelili ako celá skupina. Požiadajte žiakov, aby sa podelili o príklad, ktorý im napadol, a potom o situáciu, ktorá by sa dala využiť na dobré alebo zlé."
         },
         "c6738321-64d3-42be-8afa-b08fcceb97b5": {
           "description": " **Cieľ diskusie**: Táto úloha je zámerne otvorená a nejasne definuje „dobré“, „zlé“, „správne“ a „nesprávne“. Dajte žiakom priestor, aby preskúmali, ako by opísali technológiu umelej inteligencie, a našli príklady „dobrého“ alebo „zlého“. Snažte sa, aby sa v triede ozvali rôzne hlasy. Keď budú žiaci pripravení, prejdite na ďalšiu snímku a na zhrnutie diskusie použite poznámky uvedené nižšie."
@@ -24446,7 +24451,7 @@
           ]
         },
         "2b19be1a-ae3b-486c-9feb-936fcb959c7f": {
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ukážte:** Na ďalších piatich snímkach sú zobrazené návrhy tímu ďalších žiakov. Ako trieda diskutujte o tom, či aplikácia využíva údaje na rozhodovanie. Ak áno, aké údaje by potrebovala?\n\n**Cieľ diskusie:** Hoci všetky tieto aplikácie riešia základný problém izolácie, nie všetky z nich by boli dobrou aplikáciou na strojové učenie. Tu sú niektoré z očakávaných bodov diskusie:\n\n-   Aplikácie Nica, Isaaca a Hawa vyžadujú, aby používateľ odpovedal na otázky, aby dostal odporúčanie. Všetky tieto tri aplikácie by mohli využívať strojové učenie.\n-   Aplikácia Kim vyžaduje od používateľov interakciu, ale na rozhodovanie nepoužíva žiadne ich údaje. Toto nie je dobrá aplikácia na strojové učenie.\n-   Aplikácia Zoey môže vyžadovať nejaké údaje na vytvorenie aplikácie a generovanie nápadov, ale po jej použití nevyžaduje od používateľa žiadne informácie. To znamená, že na tvorbu by nebolo potrebné strojové učenie."
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ukážte:** Na ďalších piatich snímkach sú zobrazené návrhy tímu ďalších žiakov. Ako trieda diskutujte o tom, či aplikácia využíva údaje na rozhodovanie. Ak áno, aké údaje by potrebovala?\n\n**Cieľ diskusie:** Hoci všetky tieto aplikácie riešia základný problém izolácie, nie všetky z nich by boli dobrou aplikáciou na strojové učenie. Tu sú niektoré z očakávaných bodov diskusie:\n\n-   Aplikácie Nica, Isaaca a Hawy vyžadujú, aby používateľ odpovedal na otázky, aby dostal odporúčanie. Všetky tieto tri aplikácie by mohli využívať strojové učenie.\n-   Aplikácia Kim vyžaduje od používateľov interakciu, ale na rozhodovanie nepoužíva žiadne ich údaje. Toto nie je dobrá aplikácia na strojové učenie.\n-   Aplikácia Zoey môže vyžadovať nejaké údaje na vytvorenie aplikácie a generovanie nápadov, ale po jej použití nevyžaduje od používateľa žiadne informácie. To znamená, že na tvorbu by nebolo potrebné strojové učenie."
         },
         "2c8d4f36-d325-4e23-8477-8f3b79d1582a": {
           "description": "Pri vytváraní vlastných aplikácií je dôležité poznať problém, ktorý sa snažíme riešiť, a je dôležité vedieť, že riešenie, ktoré navrhujeme, si skutočne vyžaduje strojové učenie. Uvidíme, ktorú z týchto aplikácií sa tím rozhodne vytvoriť, a zajtra im pomôžeme naplánovať, ako by mali zhromažďovať údaje."
@@ -24460,10 +24465,10 @@
         },
         "d87d6a30-1929-4ec3-baae-5b3457330c9c": {
           "name": "Denník",
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ukážte:** Zobrazte popis Hawaovej aplikácie zo včerajšieho dňa, Odporúčanie krúžkov."
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ukážte:** Zobrazte popis Hawainej aplikácie zo včerajšieho dňa, Odporúčanie krúžkov."
         },
         "3999f216-0132-4c0e-b31d-55267548d882": {
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Spýtajte sa**: Tím sa rozhodol pre aplikáciu Odporúčanie krúžkov. Ďalším krokom je zhromaždiť údaje, ktoré potrebujú na vytvorenie svojho modelu. Plánujú uskutočniť rozhovory s rôznymi ľuďmi, aby určili, aký krúžok by ich aplikácia mala odporúčať. Na aké otázky by sa podľa vás mali pýtať, aby im pomohli odporučiť krúžok, do ktorého sa majú pridať?"
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Spýtajte sa**: Tím sa rozhodol pre aplikáciu Odporúčanie krúžkov. Ďalším krokom je zhromaždiť údaje, ktoré potrebujú na vytvorenie svojho modelu. Plánujú uskutočniť rozhovory s rôznymi ľuďmi, aby určili, aký krúžok by ich aplikácia mala odporúčať. Čo by sa podľa vás mali spýtať, aby im dokázali odporučiť krúžok, na ktorý sa majú zapísať?"
         },
         "7f27fb72-fe6d-43c7-bc1c-0b47430a197a": {
           "description": "**Cieľ diskusie:** Odpovede budú rôzne, ale môžu zahŕňať:\n\n-   demografické informácie, ako sú vek alebo pohlavie;\n-   záujmy alebo koníčky, napríklad či uprednostňujú určitý šport;\n-   mediálne preferencie, napríklad aké knihy, filmy alebo hudbu má niekto rád;\n-   typ osobnosti, napríklad introvert alebo extrovert alebo typy nálad."
@@ -24595,7 +24600,7 @@
           "progression_name": "AI Lab a Kimine údaje"
         },
         "6b8f47ab-3e64-41b6-ac05-2712618d76ee": {
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Urobte toto:** Postupujte podľa pokynov v každej fáze v AI Labe. Počas tejto úrovne sú vašimi cieľmi:\n\n-   vytrénovať model s presnosťou aspoň 70 %, ktorý používa najmenšie množstvo vlastností;\n-   vyplniť kartu modelu a uložiť svoj model."
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Urobte toto:** Postupujte podľa pokynov v každej fáze v AI Labe. Počas tejto úrovne sú vašimi cieľmi:\n\n-   vytrénovať model s presnosťou aspoň 70 %, ktorý používa čo najmenej vlastností;\n-   vyplniť kartu modelu a uložiť svoj model."
         },
         "bcf207e9-e1f0-45d9-aff0-40db5a335dfe": {
           "description": "**Monitorujte:** Sledujte žiakov pri práci v AI Labe. Zamerajte sa na to, ako žiaci vyberajú vlastnosti, a uistite sa, že vyvažujú presnosť a jednoduchosť. Povzbudzujte žiakov, aby skúšali viacero vlastností a aby kládli otázky, ktoré majú zmysel v kontexte toho, že majú odporúčaný krúžok."
@@ -24678,7 +24683,7 @@
         },
         "8bc19694-99fb-4360-a3ac-2f7b9ff83365": {
           "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Nechajte žiakov prihlásiť sa do Code Studia a otvoriť prvú úroveň tejto lekcie. Žiaci uvidia niekoľko množín údajov, z ktorých si môžu vybrať.",
-          "progression_name": "Množiny údajov klubov"
+          "progression_name": "Množiny údajov krúžkov"
         },
         "600cac90-5755-4740-b0ae-900931998fa5": {
           "description": "**Rozdajte:** Rozdajte sprievodcu aktivitou [r problems_with_models_-_activity_guide/aiml/2021]. Žiaci sem zaznamenajú údaje zo svojho skúmania."
@@ -26973,7 +26978,7 @@
           "description": "Doteraz sme mohli ovládať len polohu a animáciu nášho sprajtu, ale dnes sa naučíme, ako meniť ďalšie vlastnosti sprajtu, aby sme mohli vytvárať ešte lepšie programy."
         },
         "eba90858-374c-49fd-8bf7-391446b7b506": {
-          "description": "**Otázka dňa: Ako môžeme použiť vlastnosti Spartu na zmenu jeho vzhľadu na obrazovke?**"
+          "description": "**Otázka dňa: Ako môžeme zmeniť vzhľad sprajtu na obrazovke pomocou jeho vlastností?**"
         },
         "903979dd-20fe-4394-8663-c67a84bcd0d7": {
           "description": "**Skupiny:** Rozdeľte žiakov do dvojíc. \n\n**Premostenie:** Požiadajte žiakov, aby otvorili Code Studio."
@@ -27379,7 +27384,7 @@
         },
         "0ee8704d-9ad3-4a31-816f-555813322a78": {
           "name": "Prijímanie vstupov",
-          "description": "**Diskutujte:** Všetky programy, ktoré ste doteraz napísali, bežia bez akéhokoľvek vstupu od používateľa. Ako by mohlo pridanie interakcie používateľa zvýšiť užitočnosť, efektívnosť alebo zábavnosť vašich programov? Ako by mohol používateľ poskytnúť vstup do vášho programu?",
+          "description": "**Diskutujte:** Všetky programy, ktoré sme doteraz napísali, bežia bez akéhokoľvek vstupu od používateľa. Ako by mohlo pridanie interakcie používateľa zvýšiť užitočnosť, efektívnosť alebo zábavnosť našich programov? Ako by mohol používateľ poskytnúť vstup do nášho programu?",
           "tips": [
             "Cieľom nie je podrobne sa zaoberať technickými špecifikami toho, ako môžu programy prijímať vstupy (k tomu sa žiaci dostanú v online časti lekcie), ale skôr primäť žiakov k tomu, aby premýšľali o tom, ako by vstupy používateľov mohli zmeniť programy, ktoré vytvorili. Vyzvite žiakov, aby si spomenuli na prvú lekciu a na rôzne počítačové vstupy a výstupy, ktoré vtedy skúmali. Ktoré vstupy by boli najužitočnejšie pre typy programov, ktoré vytvárali?"
           ]
@@ -28709,7 +28714,7 @@
         },
         "49fca890-c067-42b3-9982-6a30352b21d3": {
           "name": "Analýza aplikácie (Výber oblečenia)",
-          "description": "**Zapíšte si do denníka**: Otvorte si Code Studio a pozrite si v rozhraní aplikáciu Výber oblečenia. Skúste v aplikácii identifikovať jeden vstup, jeden výstup a jeden typ spracúvania? Predstavte si, že túto aplikáciu používate každý deň. Aké informácie by ste chceli, aby si táto aplikácia pamätala?"
+          "description": "**Zapíšte si do denníka**: Otvorte si Code Studio a pozrite si v rozhraní aplikáciu Výber oblečenia. Skúste v aplikácii identifikovať jeden vstup, jeden výstup a jeden typ spracúvania. Predstavte si, že túto aplikáciu používate každý deň. Aké informácie by ste chceli, aby si táto aplikácia pamätala?"
         },
         "071466cb-7d6b-4e91-93bb-261e508f89dc": {
           "description": "**Monitorovanie:** Prvá časť tejto reflexie je určená na to, aby si žiaci zopakovali, čo už vedia o vstupoch, výstupoch a spracúvaní. Kým sa zamýšľajú nad vašimi otázkami, kontrolujte ich odpovede, aby ste sa uistili, či rozumejú tomu, ako sa v aplikácii využívajú vstupy, výstupy a spracúvanie.",
@@ -29284,13 +29289,13 @@
           "description": "Keď sa žiaci rozdelia do skupín, povedzte im, aby si otvorili sprievodcu aktivitou a pustili sa do riešenia prvej úlohy. Budú hľadať riešenie bludiska, ktoré pozostáva z viacerých krokov.\n\n**Monitorovanie:** Prechádzajte sa po triede a pozorujte, ako žiaci pristupujú k riešeniu úlohy. Dozrite na to, aby si skupiny navzájom nepomáhali. Motivujte žiakov k tomu, aby sa zamysleli nad tým, ako by im s riešením úlohy pomohlo, keby si najprv spravili plán.\n\nKeď už všetky skupiny skončili, opäť sa obráťte na celú triedu. Povedzte žiakom, aby prešli na poslednú stránku v sprievodcovi aktivitou. Tam nájdu tabuľku, kde môžu zaznamenať, ako sa im úloha riešila. Zapíšu do tabuľky, ktoré časti riešenia tohto problému zodpovedajú jednotlivým krokom v postupe riešenia problémov.\n\n**Diskutujte:** V krátkosti so žiakmi prediskutujte, ktoré časti aktivity podľa nich zodpovedajú jednotlivým krokom v postupe riešenia problémov. V nasledujúcom zozname nájdete myšlienky, ktoré môžete spomenúť, keď sa už žiaci podelili o svoje myšlienky.\n\n-   **Definuj**: Tento problém bol už na začiatku veľmi dobre definovaný. Niektoré problémy však nebudú.\n-   **Priprav**: Ak si v rámci tímu vytvoríte plán (napríklad si bludisko rozdelíte alebo jednoducho budete veľmi systematicky hľadať správnu cestu), táto úloha bude oveľa jednoduchšia, než keby ste ju skúšali riešiť náhodne.\n-   **Vyskúšaj**: S uskutočnením plánu nám pomáha trpezlivosť a vytrvalosť.\n-   **Vyhodnoť**: Ak pôvodný plán nefunguje, môžeme ho prehodnotiť a vytvoriť si nový."
         },
         "59cd3f12-f9b1-4cbd-bf6b-3507adc264bc": {
-          "description": "#### Štafetové preteky s partnermi",
+          "description": "#### Štafetové preteky dvojíc",
           "tips": [
             "**Využívanie postupu riešenia problémov:** Táto úloha je náročná najmä vtedy, ak si nedostatočne dobre zadefinujú problém. Ak sa na problém pozrú len tak, ich úlohou je náhodne hádať a kontrolovať, ako sa dajú hráči spojiť do tímov, kým nenájdu rýchle riešenie. Je však oveľa jednoduchšie, ak najprv vymyslia všeobecné stratégie (napríklad pošlú rýchlych ľudí dozadu a pomalých spoja do dvojíc).\n\nToto nie je jediný možný prístup k danému problému, takže by ste ho takto žiakom určite nemali prezentovať. Práve naopak, motivujte žiakov k tomu, aby sa spolu zamysleli nad tým, aké podmienky musia byť splnené na konci úlohy a či by im s tým nemohli pomôcť aj iné prístupy.\n\n**Kreslenie obrázkov:** Žiakom sa pravdepodobne bude lepšie dariť, keď si budú skúšať rôzne riešenia. Môžete žiakom povedať, aby na vymýšľanie nápadov využívali svoje denníky alebo škrabací papier.\n\n**Rozšírenie problému:** Ak jedna skupina skončí výrazne skôr než ostatné, môžete im dať čistý papier a dať im za úlohu vyriešiť problém znova, no rýchlejšie. Minimálny čas na riešenie je 42 minút, a ak ho už vaši žiaci dosiahli, dajte im za úlohu vysvetliť, ako vedia, že ich čas je najrýchlejší."
           ]
         },
         "6f32d83e-49ad-486b-affb-8be6f7c7c9f4": {
-          "description": "Prejdite s triedou na úlohu Štafetové preteky s partnermi. Žiaci môžu stále pracovať v skupinách, no nemali by sa o svoje riešenia deliť s inými skupinami.\n\n. **Monitorovanie:** Tak ako predtým, prechádzajte sa po triede a pozorujte, aké typy stratégií jednotlivé skupiny využívajú. Ak sa niektorá skupina zasekne, pripomeňte jej členom, aby využívali kroky z postupu riešenia problémov.\n\nKeď už skupiny vyriešili úlohu, povedzte žiakom, aby prešli na poslednú stránku v sprievodcovi aktivitou. Tam si zapíšu, ako pri riešení tejto úlohy využívali postup riešenia problémov.\n\n**Diskutujte:** V krátkosti so žiakmi prediskutujte, ktoré časti aktivity podľa nich zodpovedajú jednotlivým krokom v postupe riešenia problémov. V nasledujúcom zozname nájdete myšlienky, ktoré môžete spomenúť, keď sa už žiaci podelili o svoje myšlienky.\n\n-   **Definuj**: Na prvý pohľad sa zdá, že problém spočíva v tom, ako dosiahnuť, aby sa tím pohyboval rýchlo. Ak sa namiesto zameriate na to, ako dosiahnuť, aby rýchli ľudia bežali viackrát alebo ako spojiť pomalých ľudí do dvojíc, aby nezdržiavali ostatných, úloha sa dá vyriešiť oveľa rýchlejšie.\n-   **Priprav**: Spýtajte sa žiakov, aké typy stratégií zvažovali pred tým, než začali skúšať riešenia.\n-   **Vyskúšaj**: Rovnako ako pri predchádzajúcej úlohe, s uskutočnením plánu nám pomáha trpezlivosť a vytrvalosť.\n-   **Vyhodnoť**: Ak úvodné stratégie nefungujú, skupiny ich môžu prehodnotiť a skúsiť štruktúrovanejší prístup. "
+          "description": "Prejdite s triedou na úlohu Štafetové preteky dvojíc. Žiaci môžu stále pracovať v skupinách, no nemali by sa o svoje riešenia deliť s inými skupinami.\n\n. **Monitorovanie:** Tak ako predtým, prechádzajte sa po triede a pozorujte, aké typy stratégií jednotlivé skupiny využívajú. Ak sa niektorá skupina zasekne, pripomeňte jej členom, aby využívali kroky z postupu riešenia problémov.\n\nKeď už skupiny vyriešili úlohu, povedzte žiakom, aby prešli na poslednú stránku v sprievodcovi aktivitou. Tam si zapíšu, ako pri riešení tejto úlohy využívali postup riešenia problémov.\n\n**Diskutujte:** V krátkosti so žiakmi prediskutujte, ktoré časti aktivity podľa nich zodpovedajú jednotlivým krokom v postupe riešenia problémov. V nasledujúcom zozname nájdete myšlienky, ktoré môžete spomenúť, keď sa už žiaci podelili o svoje myšlienky.\n\n-   **Definuj**: Na prvý pohľad sa zdá, že problém spočíva v tom, ako dosiahnuť, aby sa tím pohyboval rýchlo. Ak sa namiesto zameriate na to, ako dosiahnuť, aby rýchli ľudia bežali viackrát alebo ako spojiť pomalých ľudí do dvojíc, aby nezdržiavali ostatných, úloha sa dá vyriešiť oveľa rýchlejšie.\n-   **Priprav**: Spýtajte sa žiakov, aké typy stratégií zvažovali pred tým, než začali skúšať riešenia.\n-   **Vyskúšaj**: Rovnako ako pri predchádzajúcej úlohe, s uskutočnením plánu nám pomáha trpezlivosť a vytrvalosť.\n-   **Vyhodnoť**: Ak úvodné stratégie nefungujú, skupiny ich môžu prehodnotiť a skúsiť štruktúrovanejší prístup. "
         },
         "ed9353fe-9f41-42ef-9c2e-2e07231422ab": {
           "description": "#### Vytvárame hru",
@@ -29933,7 +29938,7 @@
           "description": "**Kľúčové pojmy:**\n\n-   **Autorské právo** – výhradné zákonné právo tlačiť, publikovať, prezentovať, filmovať alebo nahrávať literárne, umelecké alebo hudobné materiály a dávať iným ľuďom súhlas na vykonávanie týchto aktivít"
         },
         "6ff6d697-74a4-41a2-91a3-4ef817ceff84": {
-          "description": "**Denník:** Zamyslite sa nad niektorými z fotiek, kresieb a textov, ktoré ste v minulosti vytvorili, alebo aj nad webovou stránkou, ktorú v rámci tohto kurzu vytvoríte. Bez hasne uvedenej licencie sa na všetky tieto veci vzťahuje reštriktívne autorské právu. Ktorú licenciu Creative Commons by ste radšej použili namiesto neho a prečo?",
+          "description": "**Denník:** Zamyslite sa nad niektorými z fotiek, kresieb a textov, ktoré ste v minulosti vytvorili, alebo aj nad webovou stránkou, ktorú v rámci tohto kurzu vytvoríte. Bez jasne uvedenej licencie sa na všetky tieto veci vzťahuje reštriktívne autorské právo. Ktorú licenciu Creative Commons by ste radšej použili namiesto neho a prečo?",
           "tips": [
             "Keď žiaci diskutujú o výhodách a nevýhodách jednotlivých typov licencií, uistite sa, či si uvedomujú, že účelom autorských práv je ochraňovať práva autorov obsahu, ako sú oni. Medzi tieto práva patrí napríklad právo byť označený za autora, keď je tvorba niekde vystavená, či rozhodnúť, kto môže tvorbu využívať a zarábať na nej."
           ]
@@ -30211,7 +30216,7 @@
           "description": "Kým si žiaci navzájom ohodnotia prácu, každý žiak by mal v hornej časti sprievodcu vyplniť, k čomu by sa im spätná väzba zišla najviac."
         },
         "4c77683d-f5ce-4793-a6b2-7b99901aaa77": {
-          "name": "Sekcia kontroly",
+          "name": "Sekcia pre hodnotiteľa",
           "description": "Keď si žiaci vymenia sprievodcov, vyhodnotia, do akej miery projekty splnili kritériá uvedené v hodnotiacej tabuľke. Motivujte žiakov k tomu, aby v projekte spolužiaka hľadali dôkazy o tom, že ich spolužiak sa naučil niečo nové, a zároveň poskytli návrhy, ako by sa dali projekty ešte zlepšiť. Môže byť potrebné, aby ste žiakom pomáhali poskytovať si navzájom konštruktívnu spätnú väzbu."
         },
         "0792fa5e-646b-4a0f-b83d-19d7683ecaed": {
@@ -30538,7 +30543,7 @@
           ]
         },
         "1dde8dc9-5478-4477-9e8d-0e4ce134c5a5": {
-          "name": "Opíšte svoje štýly značiek a tried",
+          "name": "Opíšte štýly svojich značiek a tried",
           "description": "Žiaci by sa mali rozhodnúť, aký štýl by mali jednotlivé prvky mať. Pri rozhodovaní môže byť užitočné, ak sa spoločne opäť pozrú na svoje náčrty."
         },
         "7719e9d6-bd0d-4266-b2ad-1a38ef6f4ca8": {
@@ -30671,7 +30676,7 @@
         },
         "01c5f83f-7728-465f-b43d-1a5c9f05f982": {
           "name": "3 zamyslenia do denníka",
-          "description": "**Povedzte:**\n\n-   Na aké **3** časti svojho webu ste najviac hrdí?\n-   Aké **2** veci ste sa naučili pri práci na tomto webe?\n-   Na Akú **1** vec by ste chceli počuť názor niekoho iného?"
+          "description": "**Povedzte:**\n\n-   Na aké **3** časti svojho webu ste najviac hrdí?\n-   Aké **2** veci ste sa naučili pri práci na tomto webe?\n-   Na akú **1** vec by ste chceli počuť názor niekoho iného?"
         },
         "35722166-2159-4038-8c7e-7a6cc0580812": {
           "description": "**Diskutujte:** Umožnite žiakom, aby sa o svoje odpovede podelili s triedou.",

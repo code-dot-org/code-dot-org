@@ -4,7 +4,7 @@ import {matchDataForSingleStudent} from './assessmentsTestHelpers';
 
 export default {
   title: 'MatchByStudentTable',
-  component: MatchByStudentTable
+  component: MatchByStudentTable,
 };
 
 //
@@ -20,5 +20,5 @@ const Template = args => <MatchByStudentTable {...args} />;
 export const Default = Template.bind({});
 Default.args = {
   questionAnswerData: matchDataForSingleStudent,
-  studentAnswerData: {responses: [0, 1]}
+  studentAnswerData: {responses: [0, 1]},
 };

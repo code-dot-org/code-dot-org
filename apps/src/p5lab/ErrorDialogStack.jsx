@@ -22,7 +22,7 @@ class ErrorDialogStack extends React.Component {
     dismissError: PropTypes.func.isRequired,
     deleteAnimation: PropTypes.func,
     animationList: PropTypes.object,
-    isSpriteLab: PropTypes.bool.isRequired
+    isSpriteLab: PropTypes.bool.isRequired,
   };
 
   handleDeleteChoice(key) {
@@ -35,8 +35,8 @@ class ErrorDialogStack extends React.Component {
         project_id: getCurrentId(),
         data_json: JSON.stringify({
           version: this.props.animationList.propsByKey[key].version,
-          animationName: this.props.animationList.propsByKey[key].name
-        })
+          animationName: this.props.animationList.propsByKey[key].name,
+        }),
       },
       {includeUserId: true}
     );
@@ -54,8 +54,8 @@ class ErrorDialogStack extends React.Component {
         project_id: getCurrentId(),
         data_json: JSON.stringify({
           version: this.props.animationList.propsByKey[key].version,
-          animationName: this.props.animationList.propsByKey[key].name
-        })
+          animationName: this.props.animationList.propsByKey[key].name,
+        }),
       },
       {includeUserId: true}
     );
@@ -124,17 +124,17 @@ export default connect(
     return {
       errors: state.errorDialogStack,
       animationList: state.animationList,
-      isSpriteLab: state.pageConstants.isBlockly
+      isSpriteLab: state.pageConstants.isBlockly,
     };
   },
   function propsFromDispatch(dispatch) {
     return {
-      dismissError: function() {
+      dismissError: function () {
         dispatch(actions.dismissError());
       },
-      deleteAnimation: function(key, isSpriteLab) {
+      deleteAnimation: function (key, isSpriteLab) {
         dispatch(animationActions.deleteAnimation(key, isSpriteLab));
-      }
+      },
     };
   }
 )(ErrorDialogStack);

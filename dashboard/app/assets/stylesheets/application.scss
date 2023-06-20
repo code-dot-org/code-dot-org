@@ -47,8 +47,6 @@ $selectUserTypeButtonBackgroundColorSelected: #00adbc;
 $selectUserTypeButtonTextColorSelected: #fff;
 
 @import "bootstrap";
-// Font-awesome 4.6.3
-@import "font-awesome";
 
 p,pre,span {
   @include selectable;
@@ -73,7 +71,8 @@ body.oceans-blue {
 }
 
 body.music-black {
-  background-color: $music_black;
+  background-color: $dark_black;
+  overscroll-behavior: none;
 }
 
 h1 {
@@ -220,19 +219,19 @@ img.video_thumbnail {
     text-overflow: ellipsis;
   }
 
-  @media screen and (min-width: 971px) {
+  @media screen and (min-width: 1011px) {
     .show_on_tablet {
       display: none;
     }
   }
 
-  @media screen and (max-width: 970px) {
+  @media screen and (max-width: 1010px) {
     .hide_on_tablet {
       display: none;
     }
   }
 
-  @media screen and (max-width: 1100px) {
+  @media screen and (max-width: 1120px) {
     .create_menu {
       display: none !important;
     }
@@ -319,6 +318,7 @@ img.video_thumbnail {
       margin-top: 2px;
       font-size: 12px;
       display: inline-block;
+      border-radius: 4px;
     }
   }
 
@@ -421,6 +421,21 @@ img.video_thumbnail {
   .children {
     margin-top: 16px;
   }
+}
+
+/* When we are using a dark theme in Google Blockly, we want the main Blockly area (inside #codeWorkspace)
+ * to have a 1px separation between it and the PaneHeader above it.
+*  */
+#codeWorkspace > .cdomoderndark-theme,
+#codeWorkspace > .cdohighcontrastdark-theme,
+#codeWorkspace > .cdoprotanopiadark-theme,
+#codeWorkspace > .cdodeuteranopiadark-theme,
+#codeWorkspace > .cdotritanopiadark-theme {
+  /* A small separation. */
+  margin-top: 1px;
+
+  /* Override the height in Google Blockly's .injectionDiv */
+  height: calc(100% - 1px);
 }
 
 .bannerContentContainer {
@@ -716,6 +731,12 @@ $small-footer-standard-width: 400px;
   }
 }
 
+/* Override footer position on some pages, but not published project views */
+#page-small-footer .small-footer-base {
+  position: fixed;
+}
+
+
 #copyright-scroll-area {
   overflow-y: auto;
   padding: 0.8em;
@@ -869,7 +890,6 @@ $default-modal-width: 640px;
   }
 
   a:hover:not(.btn) {
-    color: $red;
     background-color: $white;
   }
 
@@ -984,6 +1004,7 @@ $default-modal-width: 640px;
 
 .video-modal {
   z-index: 10000;
+  overflow: visible;
 
   .ui-tabs {
     height: 100%;
@@ -1303,9 +1324,9 @@ body.iframe_embed_app_and_code {
 
 .reference_area {
   margin-top: 20px;
+  color: $neutral_dark;
 
   .help_title {
-    color: $dark_charcoal;
     font-family: $gotham-extra-bold;
     font-weight: normal;
     font-size: 17.5px;
@@ -1319,11 +1340,13 @@ body.iframe_embed_app_and_code {
 
   .video_link {
     display: inline-block;
-    margin: 6px;
-  }
+    margin: 6px 0;
+    color: $brand_secondary_default;
+    text-decoration: underline;
 
-  .video_name {
-    text-align: center;
+    &:hover {
+      color: $brand_secondary_dark;
+    }
   }
 
   .help_subtitle {
@@ -1365,12 +1388,22 @@ body.iframe_embed_app_and_code {
     li {
       border-top-right-radius: 4px;
       border-top-left-radius: 4px;
+      border: 0;
+      background: transparent;
+      margin-bottom: 2px;
 
       a {
-        background: $dark_color;
-        color: $white;
+        background: $brand_secondary_default;
+        border: 2px solid $brand_secondary_default;
+        border-radius: 6px;
+        color: $neutral_white;
+        font-family: $gotham-bold;
+        cursor: pointer !important;
+
         &:hover {
-          color: $green;
+          background-color: $brand_secondary_dark;
+          border-color: $brand_secondary_dark;
+          color: $neutral_white;
         }
         &:focus {
           outline: 0;
@@ -1384,10 +1417,13 @@ body.iframe_embed_app_and_code {
 
     li.ui-state-active {
       a {
-        background: $white;
-        color: $orange;
+        background: $neutral_white;
+        color: $neutral_dark;
+        border: 2px solid $neutral_dark;
+
         &:hover {
-          color: $orange;
+          color: $neutral_dark;
+          background-color: $neutral_dark20;
         }
       }
     }
@@ -1475,7 +1511,7 @@ body.iframe_embed_app_and_code {
 .qtip-content {
   font-size: 20px;
   line-height: 28px;
-  color: $purple;
+  color: $neutral_dark;
   font-family: $gotham-bold;
   font-weight: normal;
   padding-right: 25px;
@@ -1513,10 +1549,18 @@ a.download-video {
   z-index: 1;
   cursor: pointer;
   width: 40px;
-  height: 36px;
+  height: 34px;
+  font-size: 28px;
+  background-color: $neutral_white;
+  color: $neutral_dark;
+  border: 2px solid $neutral_dark;
+  padding: 0;
+  line-height: 36px;
+
   &:hover {
-    background: none;
+    background: $neutral_dark20;
   }
+
   img {
     width: 40px;
     height: 41px;
@@ -2924,6 +2968,10 @@ $modal-no-icon-gap: 22px;
   p, pre {
     line-height: 27px;
     font-size: 24px;
+    color: $neutral_dark;
+  }
+
+  pre {
     color: $purple;
   }
 
@@ -2988,7 +3036,6 @@ $modal-no-icon-gap: 22px;
   .lines-of-code-message {
     font-size: 20px;
     line-height: normal;
-    color: $charcoal;
     margin: 0 0 8px 0;
   }
 
@@ -3007,6 +3054,11 @@ $modal-no-icon-gap: 22px;
 .dialog-title {
   font-family: $gotham-extra-bold;
   font-weight: normal;
+}
+
+h5.dialog-title {
+  // TODO: [Phase 2] Remove when new typography will be done and used or replace with 1.25em
+  font-size: 20px;
 }
 
 #ok-button {
@@ -3425,8 +3477,10 @@ code {
       padding: 20px;
       color: $white;
 
-      h1 {
+      h2 {
         color: $white;
+        font-size: 26px;
+        margin-bottom: 20px;
       }
 
       .subtext {
@@ -3448,7 +3502,7 @@ code {
         width: 100%;
 
         li {
-          font-size: 14px;
+          font-size: 16px;
         }
 
         .dots {
@@ -3470,6 +3524,18 @@ code {
 
     #noanswer {
       cursor: pointer;
+      border: none;
+      box-shadow: none;
+      font-family: $gotham-bold;
+      font-size: 100%;
+      color: $brand_secondary_default;
+      text-decoration: underline;
+      background-color: transparent;
+    }
+
+    #noanswer:hover {
+      color: $brand_secondary_dark;
+      text-decoration: underline;
     }
   }
 }
@@ -3794,28 +3860,48 @@ html[dir=rtl] {
 
 .immersive-reader-button {
   /* !important is used to override the default styling from the Microsoft immersive-reader-sdk */
-  background-color: $lightest_purple !important;
+  background-color: $neutral_white !important;
   float: right;
+  border: 2px solid $neutral_dark;
   margin-top: 1px !important;
-  height: 16px !important;
-  padding: 8px !important;
-  border-radius: 4px !important;
+  margin-right: 2px;
+  height: 16px;
+  padding: 6px !important;
 
   html[dir=rtl] & {
     float: left;
   }
 
   &:hover {
-    background-color: $cyan !important;
-    border-radius: 4px !important;
+    background-color: $brand_primary_default !important;
+    border-color: $brand_primary_default;
 
     /* The TTS buttons overlap this button, so make this button's z-index higher as a temp fix */
     position: relative;
     z-index: 1000;
+
+    img {
+      // paint native Microsoft icon full black and set it's color to $neutral_white
+      filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(111deg) brightness(101%) contrast(100%);
+    }
   }
 
   img {
-    filter: grayscale(1);
+    // paint native Microsoft icon full black and set it's color to $neutral_dark
+    filter: brightness(0) saturate(100%) invert(15%) sepia(31%) saturate(359%) hue-rotate(169deg) brightness(94%) contrast(91%);
+  }
+}
+
+.immersive-reader-button-legacy-styles {
+  /* !important is used to override the default styling from the Microsoft immersive-reader-sdk */
+  background-color: $lightest_purple !important;
+  border-color: $lightest_purple;
+
+  &:hover {
+    background-color: $cyan !important;
+    border-radius: 4px !important;
+
+    /* The TTS buttons overlap this button, so make this button's z-index higher as a temp fix */
   }
 }
 

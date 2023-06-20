@@ -1,10 +1,10 @@
 {
   "catActions": "Műveletek",
-  "catControl": "hurkok",
+  "catControl": "Ciklusok",
   "catEvents": "Események",
   "catLogic": "Logika",
   "catMath": "Matematika",
-  "catProcedures": "funkciók",
+  "catProcedures": "Függvények",
   "catText": "szöveg",
   "catVariables": "változók",
   "confirmClearTable": "Tényleg törli az összes adatot a táblázatból? Ezt a műveletet nem vonhatja vissza.",

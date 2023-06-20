@@ -13,7 +13,7 @@ export default class HiddenUploader extends React.Component {
     allowedExtensions: PropTypes.string,
     onUploadStart: PropTypes.func.isRequired,
     onUploadDone: PropTypes.func.isRequired,
-    onUploadError: PropTypes.func
+    onUploadError: PropTypes.func,
   };
 
   componentDidMount() {
@@ -25,7 +25,7 @@ export default class HiddenUploader extends React.Component {
       // prevent fileupload from replacing the input DOM element, which
       // React does not like
       replaceFileInput: false,
-      add: function(e, data) {
+      add: function (e, data) {
         // onUploadStart method must call data.submit()
         props.onUploadStart(data);
         const audioFileName = data.files[0].name.includes('mp3')
@@ -37,20 +37,20 @@ export default class HiddenUploader extends React.Component {
               study: 'sound-dialog-2',
               study_group: 'library-file',
               event: 'upload-file',
-              data_json: audioFileName
+              data_json: audioFileName,
             },
             {includeUserId: true}
           );
         }
       },
-      done: function(e, data) {
+      done: function (e, data) {
         props.onUploadDone(data.result);
       },
-      error: function(e, data) {
+      error: function (e, data) {
         if (props.onUploadError) {
           props.onUploadError(e.status);
         }
-      }
+      },
     });
   }
 

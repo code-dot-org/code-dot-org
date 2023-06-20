@@ -372,6 +372,7 @@ uz:
             '"right"': o‘ng ustun
             '"x"': xoch-xoch
             '"plus"': plus
+            '"spiral"': burama
             '"random"': tasodifiy
       Dancelab_makeAnonymousDanceSprite:
         text: yangi {COSTUME} ni {LOCATION} da yaratish
@@ -501,6 +502,7 @@ uz:
             '"right"': o‘ng ustun
             '"x"': xoch-xoch
             '"plus"': plus
+            '"spiral"': burama
             '"random"': tasodifiy
       Dancelab_mixColors:
         text: " {COLOR1} bilan {COLOR2} ni aralashtirish"
@@ -1207,6 +1209,19 @@ uz:
             '"x"': x
             '"y"': y
             '"z"': z
+      gamelab_layoutSprites:
+        text: "{GROUP}  {FORMAT} sifatida tartiblash"
+        options:
+          FORMAT:
+            '"border"': chegara
+            '"circle"': aylana
+            '"grid"': panjara
+            '"top"': tepa satr
+            '"row"': satr
+            '"bottom"': past satr
+            '"left"': chap ustun
+            '"column"': ustun
+            '"right"': o‘ng ustun
       gamelab_locationAt:
         text: " x: {X} y: {Y} lokatsiya"
       gamelab_locationModifier:
@@ -1226,9 +1241,23 @@ uz:
       gamelab_makeBurst:
         options:
           EFFECT:
+            '"burst"': portlash
             '"rain"': yomg‘ir
+            '"spiral"': burama
       gamelab_makeNewSpriteAnon:
         text: " {LOCATION} da yangi {ANIMATION_NAME} sprayt yaratish"
+      gamelab_makeNewSpriteGroup:
+        options:
+          FORMAT:
+            '"border"': chegara
+            '"circle"': aylana
+            '"grid"': panjara
+            '"top"': tepa satr
+            '"row"': satr
+            '"bottom"': past satr
+            '"left"': chap ustun
+            '"column"': ustun
+            '"right"': o‘ng ustun
       gamelab_makeNumSprites:
         text: "{NUM} ta yangi {ANIMATION_NAME} sprayt yaratish"
       gamelab_makeProjectile:
@@ -1278,6 +1307,7 @@ uz:
         text: " {SOUND} ijro etish"
         options:
           SOUND:
+            "'sound://category_app/app_button_1.mp3'": tugma
             "'sound://category_collect/clicky_crunch.mp3'": siqilish
             "'sound://category_pop/bubble_pop_cluster_1.mp3'": pufakchalar
             "'sound://category_animals/bear.mp3'": ayiq
@@ -1285,10 +1315,16 @@ uz:
             "'sound://category_animals/cow.mp3'": sigir
             "'sound://category_animals/pig.mp3'": cho‘chqa
             "'sound://category_animals/sheep.mp3'": qo‘ylar
+            "'sound://category_animals/goat.mp3'": echki
             "'sound://category_animals/chicken.mp3'": tovuq
+            "'sound://category_animals/rooster.mp3'": xo'roz
             "'sound://category_animals/elephant.mp3'": fil
             "'sound://category_animals/dolphin.mp3'": delfin
+            "'sound://category_animals/chick.mp3'": jo'ja
             "'sound://category_animals/dog.mp3'": it
+            "'sound://category_animals/tiger.mp3'": yo'lbars
+            "'sound://category_instrumental/harpe_pluck_1.mp3'": arfa
+            "'sound://category_retro/retro_game_ui_select_6.mp3'": tanlash
             "'sound://category_digital/jump_7.mp3'": sakramoq
       gamelab_playSoundOptionsSoccer:
         text: " {SOUND} ijro etish"
@@ -1359,9 +1395,15 @@ uz:
             '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': sahro
             '"https://studio.code.org/blockly/media/skins/studio/background_space.png"': Galaktika
             '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': panjara
+            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': o'tloq
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': kamalak
             '"https://studio.code.org/blockly/media/skins/studio/background_scifi.png"': fantastika
+            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': sahna
             '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': yulduzlar
+            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': yer
+              osti yo'li
+            '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': yer
+              osti
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': suvosti
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': qish
             undefined: hech biri
@@ -1495,6 +1537,8 @@ uz:
         text: "{SPRITE} x koordinatasi"
       gamelab_yLocationOf:
         text: "{SPRITE} y koordinatasi"
+      KatiesBlocks_tumbling:
+        text: dumboloq oshish
       Mikelab_addBehaviorSimple:
         text: " {SPRITE}  {BEHAVIOR} harakatini boshlaydi"
       Mikelab_addTrainingData:
@@ -1711,6 +1755,12 @@ uz:
         options:
           BG:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': shahar
+            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': o'tloq
+            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': sahna
+            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': yer
+              osti yo'li
+            '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': yer
+              osti
       Mikelab_setProp:
         options:
           PROPERTY:
@@ -1832,7 +1882,9 @@ uz:
       Poetry_makeBurst:
         options:
           EFFECT:
+            '"burst"': portlash
             '"rain"': yomg‘ir
+            '"spiral"': burama
       Poetry_makeNewSpriteAnon:
         text: " {LOCATION} da yangi {ANIMATION_NAME} sprayt yaratish"
       Poetry_makeNumSprites:
@@ -1840,10 +1892,12 @@ uz:
       Poetry_playMusic:
         options:
           SOUND:
+            '"sound://category_nature/steady_campfire_loop.mp3"': gulxan
             '"sound://category_nature/forest_woodland_ambience_2.mp3"': o'rmon
             '"sound://category_nature/summer_night_loop.mp3"': qorong‘u
             '"sound://category_background/ocean_waves.mp3"': okean
             '"sound://category_background/rainforest_ambient_sound.mp3"': nam o'rmon
+            '"sound://category_background/wavering_wind.mp3"': uyqusirab
             '"sound://category_loops/stabilizing_breath_loop1.mp3"': sekin
       Poetry_playSound:
         text: " {SOUND} ijro etish"
@@ -1852,6 +1906,7 @@ uz:
             '"sound://category_bell/long_bell_notification.mp3"': qo‘ng‘iroq
             '"sound://category_pop/bubble_pop_cluster_2.mp3"': pufakchalar
             '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': sakramoq
+            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': yorug'lik
       Poetry_playSoundOptionsSpace:
         text: " {SOUND} ijro etish"
         options:
@@ -1944,8 +1999,6 @@ uz:
         text: chapga burilish
       RyanLab_turnRight:
         text: o‘ngga burilish
-      SpriteLab2Beta_spriteSay:
-        text: " {SPRITE} sprayt {TEXT} so'zlarni {SECONDS} sekund davomida aytadi"
       Vector_createSpriteWith:
         text: |-
           sprayt yaratish
@@ -1993,6 +2046,14 @@ uz:
             '0.75': most
             '0.5': half of
             '0.25': few
+      adaptations_adaptationBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): o'ng tarafga aylanish
+            new Behavior(spinning_left, []): chap tarafga aylanish
+            new Behavior(jittering, []): titrash
+            new Behavior(wandering, []): daydish
+            new Behavior(patrolling, []): patrullash
       binary_drawBin:
         text: "{BIN} binar chizma qilish"
       binary_drawBinScreen:
@@ -2131,6 +2192,22 @@ uz:
           DIR:
             right: o‘ngga ↻
             left: chapga ↺
+      ecosystems_int10:
+        options:
+          VALUE:
+            '0': '0'
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+      storylab_printText:
+        text: "{TEXT} yozish"
       storylab_setForegroundEffect2:
         options:
           EFFECT:
@@ -2143,5 +2220,3 @@ uz:
         text: sarlavhani o'rnating {HEADING}
       storylab_setSubheading:
         text: Tag sarlavhani o‘rnating {SUBHEADING}
-      validation_validatedBackground:
-        text: orqa fonni {IMG} ga o'zgartirish

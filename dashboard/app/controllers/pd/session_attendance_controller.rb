@@ -79,9 +79,7 @@ class Pd::SessionAttendanceController < ApplicationController
     redirect_to action: :attend
   end
 
-  private
-
-  def render_own_workshop
+  private def render_own_workshop
     attend_url = CDO.code_org_url "/pd/#{@session.code}", CDO.default_scheme
 
     flash[:notice] = "You can't attend this workshop because you organized it. "\

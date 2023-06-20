@@ -1,4 +1,3 @@
-/* global appOptions */
 import _ from 'lodash';
 import {getStore} from '@cdo/apps/redux';
 import CoreLibrary from '../spritelab/CoreLibrary';
@@ -22,27 +21,28 @@ export default class PoetryLibrary extends CoreLibrary {
     super(p5);
     // Extra information for validation code to be able to inspect the program state
     this.validationInfo = {
-      endTime: POEM_DURATION * 1.25
+      endTime: POEM_DURATION * 1.25,
     };
     this.poemState = {
       ..._.cloneDeep(getStore().getState().poetry.selectedPoem),
       font: {
         fill: 'black',
-        font: 'Arial'
+        font: 'Arial',
       },
       frameType: undefined,
       text: {
-        highlightColor: null
+        highlightColor: null,
       },
       isVisible: true,
       textEffects: [],
-      // By default, start the poem animation when the program starts (frame 1)
+      // For any subtype besides poetry (time capsule or poetry hoc),
+      // start the poem animation when the program starts (frame 1)
       // The animation can be restarted with the animatePoem() block, which
       // updates this value.
       // This value is used as an offset when calculating which lines to show.
       animationStartFrame:
-        appOptions.level.standaloneAppName === 'poetry_hoc' ? 1 : null,
-      backgroundMusic: undefined
+        appOptions.level.standaloneAppName === 'poetry' ? null : 1,
+      backgroundMusic: undefined,
     };
     this.backgroundEffect = () => this.p5.background('white');
     this.foregroundEffects = [];
@@ -174,14 +174,14 @@ export default class PoetryLibrary extends CoreLibrary {
             ...this.poemState,
             author: poem.author,
             title: poem.title,
-            lines: [...poem.lines]
+            lines: [...poem.lines],
           };
         }
       },
 
       setTextEffect(effect) {
         this.poemState.textEffects.push({
-          name: effect
+          name: effect,
         });
       },
 
@@ -205,7 +205,7 @@ export default class PoetryLibrary extends CoreLibrary {
       stopBehavior(costumeName, behaviorName) {
         if (behaviorName === 'all') {
           spritelabCommands.removeAllBehaviors.call(this, {
-            costume: costumeName
+            costume: costumeName,
           });
         } else if (behaviors[behaviorName]) {
           spritelabCommands.removeBehaviorSimple.call(
@@ -225,6 +225,8 @@ export default class PoetryLibrary extends CoreLibrary {
         this.validationInfo.foregroundEffects = this.foregroundEffects.map(
           effect => effect.name
         );
+        this.validationInfo.highlightColor = this.poemState.text.highlightColor;
+        this.validationInfo.frameType = this.poemState.frameType;
         return this.validationInfo;
       },
 
@@ -256,7 +258,7 @@ export default class PoetryLibrary extends CoreLibrary {
       },
 
       ...backgroundEffects,
-      ...foregroundEffects
+      ...foregroundEffects,
     };
   }
 
@@ -380,7 +382,7 @@ export default class PoetryLibrary extends CoreLibrary {
     });
     return {
       ...renderInfo,
-      lines: newLines
+      lines: newLines,
     };
   }
 
@@ -404,7 +406,7 @@ export default class PoetryLibrary extends CoreLibrary {
 
     return {
       ...renderInfo,
-      lines: newLines
+      lines: newLines,
     };
   }
 
@@ -412,9 +414,9 @@ export default class PoetryLibrary extends CoreLibrary {
     let yCursor = OUTER_MARGIN;
     let renderInfo = {
       font: {
-        ...poemState.font
+        ...poemState.font,
       },
-      lines: []
+      lines: [],
     };
 
     if (!poemState.isVisible) {
@@ -431,7 +433,7 @@ export default class PoetryLibrary extends CoreLibrary {
           poemState.font.font,
           FONT_SIZE * 2
         ),
-        isPoemBodyLine: false
+        isPoemBodyLine: false,
       });
       yCursor += LINE_HEIGHT;
     }
@@ -442,7 +444,7 @@ export default class PoetryLibrary extends CoreLibrary {
         x: PLAYSPACE_SIZE / 2,
         y: yCursor,
         size: this.getScaledFontSize(poemState.author, poemState.font.font, 16),
-        isPoemBodyLine: false
+        isPoemBodyLine: false,
       });
       yCursor += LINE_HEIGHT;
     }
@@ -458,7 +460,7 @@ export default class PoetryLibrary extends CoreLibrary {
         x: PLAYSPACE_SIZE / 2,
         y: yCursor,
         size: lineSize,
-        isPoemBodyLine: !isBlank(line) // Used to skip blank lines in animations
+        isPoemBodyLine: !isBlank(line), // Used to skip blank lines in animations
       });
       yCursor += lineHeight;
     });

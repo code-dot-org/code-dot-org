@@ -113,7 +113,7 @@
           "description": "### Über die Hour of Code hinaus\n\nAuch nach der \"Hour of Code\" gibt es viele Möglichkeiten, wie Sie den Informatikunterricht in Ihrer 5. Klasse fortsetzen können. Hier einige Ideen:\n\n-   **Unterrichten Sie die Kurse [Code Studio Computer Science Fundamentals](http://code.org/educate/k5)**. Diese sechs Kurse sind für junge Lernende konzipiert. Die SchülerInnen lösen Aufgaben und lernen dabei das Programmieren. Die Lehrkräfte können motivierenden Unterrichtspläne nutzen, die das Lernen mit Leben erfüllen. Code.org bietet kostenlose berufliche Weiterbildungen für diese Kurse an, sowohl online oder persönlich.\n-   **Unter [You can Teach Computer Science](https://studio.code.org/courses?view=teacher)** finden Sie weitere Kursvorschläge.\n-   **Laden Sie einen Informatik-Experten ein, die Ihrer Klasse etwas über ihre Arbeit erzählen.** Wenn Sie keinen Informatiker kennen, kontaktieren Sie einen Freiwilligen auf unserer [volunteer map](https://code.org/volunteer/local)."
         },
         "79f9bd46-60a5-4891-ad3b-8369879847fc": {
-          "description": "#### Vorbereitung\n\nBegrüßen Sie die SchülerInnen und stellen Sie kurz die geplanten Aktivitäten vor. \n\nDiese Stunde wird Ihren SchülerInnen viel Spaß machen. Wahrscheinlich haben die meisten Ihrer SchülerInnen schon von Minecraft gehört, falls nicht geben Sie kurze Einführung\nMinecraft ist ein Spiel mit Würfeln. Sie können als Alex oder Steve spielen und sich durch Labyrinthe arbeiten. Sie müssen Gegenstände aufsammeln und eine Welt erkunden, die aus Würfeln mit Gegenständen besteht.\n\nSagen Sie: \"Heute werden wir eine Stunde Programmieren lernen. Hat jemand von euch schon einmal den Begriff \"Code\" gehört? Was bedeutet er?\"\\_\n\nDie SchülerInnen antworten meistens, dass ein \"Code\" eine geheime Nachricht ist, oder dass er mit Computern zu tun hat."
+          "description": "#### Vorbereitung\n\nBegrüßen Sie die SchülerInnen und stellen Sie kurz die geplanten Aktivitäten vor. \n\nDiese Stunde wird Ihren SchülerInnen viel Spaß machen. Wahrscheinlich haben die meisten Ihrer SchülerInnen schon von Minecraft gehört, falls nicht, geben Sie kurze Einführung.\nMinecraft ist ein Spiel mit Würfeln. Sie können als Alex oder Steve spielen und sich durch Labyrinthe arbeiten. Sie müssen Gegenstände aufsammeln und eine Welt erkunden, die aus Würfeln mit Gegenständen besteht.\n\nSagen Sie: \"Heute werden wir eine Stunde Programmieren lernen. Hat jemand von euch schon einmal den Begriff \"Code\" gehört? Was bedeutet er?\"\n\nDie SchülerInnen antworten meistens, dass ein \"Code\" eine geheime Nachricht ist, oder dass er mit Computern zu tun hat."
         },
         "cc1ed89e-268e-472b-9bce-4f976d8c2ea3": {
           "tips": [
@@ -129,7 +129,7 @@
           ]
         },
         "fc5c47f6-08fa-4702-86a3-e687a2ad5bc1": {
-          "name": "Minecraft: Hero’s Journey",
+          "name": "Minecraft Helden Reise",
           "description": "Bitten Sie Ihre SchülerInnen, das Tutorial  [Minecraft: Hero's Journey](https://studio.code.org/s/hero/lessons/1/levels/1) abzuschließen.\n\nJe nach Alter und Fähigkeiten Ihrer SchülerInnen gibt es viele Möglichkeiten: \n\n-   Für jüngere SchülerInnen empfehlen wir, die Klasse in Paare aufzuteilen und jede Gruppe aufzufordern, das Tutorial im [pair programming](https://youtu.be/vgkahOzFH2Q) gemeinsam zu bearbeiten.\n-   Bei SchülerInnen der Mittelstufe finden wir, dass es gut funktioniert, wenn sie unabhängig voneinander an den Übungen arbeiten. Manchmal ist es hilfreich, wenn die SchülerInnen ihr eigenes Tutorial auswählen können. Wenn die SchülerInnen nicht an Minecraft interessiert sind, können sie eine ähnliche Erfahrung mit den Tutorials [Code with Anna and Elsa](https://studio.code.org/s/frozen/stage/1/puzzle/1) oder [Star Wars](https://code.org/starwars) machen.\n-   Für ältere oder erwachsene Lernende eignet sich das Tutorial [Minecraft: Hero's Journey](https://studio.code.org/s/hero/lessons/1/levels/1) sehr gut, entweder als eigenständige Herausforderung oder als Programmieraufgabe zu zweit."
         },
         "296703c2-cad7-43bb-b3cf-4ffb525e7ad1": {
@@ -141,11 +141,11 @@
           "description": "Wenn eine Gruppe oder ein Einzelner vorzeitig fertig ist, können sie sich ein anderes Tutorial unter [code.org/learn](http://code.org/learn) ansehen."
         },
         "34238f3b-6699-4e27-b77a-54bcd8d57459": {
-          "progression_name": "Minecraft: Hero’s Journey"
+          "progression_name": "Minecraft Helden Reise"
         },
         "ae17edd9-ad82-47dc-95f5-368b58084998": {
           "name": "Besprechung",
-          "description": "Bitten Sie die SchülerInnen, über die Aktivitäten des Tages nachzudenken. Was haben sie über die Codierung gelernt? Programmierung? Fehlersuche? Was denken sie über Informatik und Code nach einer Stunde Unterricht?"
+          "description": "Bitten Sie die SchülerInnen, über die Aktivitäten des Tages nachzudenken. Was haben sie über die Programmierung gelernt? Programmierung? Fehlersuche? Was denken sie über Informatik und Code nach einer Stunde Unterricht?"
         },
         "145782a9-a436-4615-9827-0f75d7e4b3a0": {
           "name": "Feiern",
@@ -668,7 +668,7 @@
           ]
         },
         "91cc858b-9f90-4134-b890-237f457e8423": {
-          "name": "Minecraft: Voyage Aquatic",
+          "name": "Minecraft: Aquatische Bedingungen Reise",
           "description": "Bitten Sie Ihre SchülerInnen, das Tutorial  [Minecraft: Voyage Aquatic](http://studio.code.org/s/aquatic/lessons/1/levels/1) abzuschließen.\n\nJe nach Alter und Fähigkeiten Ihrer SchülerInnen gibt es viele Möglichkeiten: \n\n-   Für jüngere SchülerInnen empfehlen wir, die Klasse in Paare aufzuteilen und jede Gruppe aufzufordern, das Tutorial im [pair programming](https://youtu.be/vgkahOzFH2Q) gemeinsam zu bearbeiten.\n-   Bei SchülerInnen der Mittelstufe finden wir, dass es gut funktioniert, wenn sie unabhängig voneinander an den Übungen arbeiten. Manchmal ist es hilfreich, wenn die SchülerInnen ihr eigenes Tutorial auswählen können. Wenn die SchülerInnen nicht an Minecraft interessiert sind, können sie eine ähnliche Erfahrung mit den Tutorials [Code with Anna and Elsa](https://studio.code.org/s/frozen/stage/1/puzzle/1) oder [Star Wars](https://code.org/starwars) machen.\n-   Für ältere oder erwachsene Lernende eignet sich das [Minecraft: Voyage Aquatic](http://studio.code.org/s/aquatic/lessons/1/levels/1) sehr gut, entweder als eigenständige Herausforderung oder als Programmieraufgabe zu zweit."
         },
         "900f3fd4-40aa-42f7-89fc-e5240b2db143": {
@@ -1451,7 +1451,7 @@
           "description": "Bei Stunde des Codes geht es um Kreativität und wir können es kaum erwarten, zu sehen was sie gekreierenhaben! Bitte teilen Sie die Kreationen ihrer SchülerInnen, Fotos und Videos in den sozialen Netzwerken! Nehmen Sie die Klasse auf, wie sie einen Tanz codiert oder während sie tanzen. Machen Sie etwas Besonderes aus Ihrem Video, indem Sie  einen [ending clip](https://www.dropbox.com/sh/rosgan9bmb7dqsy/AACoqvjQVltlBORTNWjLTk0Na?dl=0) hinzufügen.\n\nFügen Sie den Hashtag #HourOfCode hinzu und taggen Sie uns bei Facebook, Twitter und Instagram. Erhalten Sie Bonuspunkte für das Tagging des Künstlers, wenn die SchülerInnen seine Musik verwenden. Code.org wird ihre favorisierten Beiträge mit unseren Millionen von Followern teilen. \n\n![](https://curriculum.code.org/media/uploads/girls-flossing.2018-11-01-16_13_52_9Ot0bvX.gif) \n\n_Selbstverständlich sollten Sie die Vorschriften für soziale Netzwerke ihrer Schule respektieren._"
         },
         "e4e53ed4-18d2-4b17-9566-e08ccc20a4f3": {
-          "description": "Ask students to add their “Whip Around” sticky notes or note cards to your \"Computer Science\" mind map on their way out the door.Versuchen Sie, das Brett mit möglichst vielen tollen Ideen darüber zu füllen, was CS ist und warum es wichtig ist."
+          "description": "Bitten die Schüler beim Verlassen des Raums ihre jeweiligen Klebenotizblätter auf die \"Informatik\" Mind Map anzubringen. Versuche die Tafel mit möglichst vielen tollen Ideen darüber zu füllen, was Informatik ist und warum sie wichtig ist."
         },
         "54b95e4d-58b7-4551-9782-7ce134f4e457": {
           "name": "Begeistern Sie!",
@@ -2295,6 +2295,9 @@
         "e270db37-e123-4995-8e60-a5d7e9f1e6f2": {
           "description": "**Vorgehensweise:** Wiederholen Sie den Begriff **Algorithmus** als eine Liste der Schritte zur Ausführung einer Aufgabe."
         },
+        "d954cdfd-7126-43ca-a817-12ef8812a38a": {
+          "name": "Folgen Sie dem Algorithmus"
+        },
         "cf819fb5-aff2-47a4-9c0f-8ab6af6f218f": {
           "description": "Heute beginnen wir mit einem kurzen Spiel. In diesem Spiel gebe ich Ihnen Befehle, die Sie befolgen müssen. Sie haben also die Aufgabe, dem **Algorithmus** zu folgen. Die Befehle beginnen immer mit \"beginnen\" oder \"stoppen\". Wenn ich Ihnen sage, dass Sie mit etwas beginnen sollen, beginnen Sie mit diesem Verhalten und behalten es solange bei, bis ich Ihnen sage, dass Sie aufhören sollen. Ich kann Ihnen auch sagen, dass Sie \"alles stoppen\" sollen, was bedeutet, dass Sie alle Verhaltensweisen beenden, die ich Ihnen bisher gezeigt habe. Wir spielen 3 Runden spielen und nach jeder Runde stelle ich Ihnen einige Fragen.",
           "tips": [
@@ -2398,6 +2401,7 @@
           "description": "Am Ende der letzten Stunde haben wir uns mit den Ähnlichkeiten zwischen Lückengeschichten und Apps beschäftigt, die den Benutzer um eine Eingabe bitten. \nWenn eine Nachricht auf dem Computerbildschirm auf Ihre Eingabe wartet, nennen wir das eine Eingabeaufforderung. \nWenn ein Benutzer etwas in eine Eingabeaufforderung eingibt, ist es, als ob der Computer die Informationen in einem Behälter speichert. \nDie Bezeichnung der Variablen sagt uns, welche Art von Information wir erwarten können. Heute werden wir den Code zum Erstellen einer Eingabeaufforderung in Sprite Lab kennen lernen."
         },
         "14e9da9c-a429-47db-b4bd-c07d5dc4401f": {
+          "name": "Text und Eingabeaufforderungen",
           "progression_name": "Vorhersage"
         },
         "71f32e49-99e7-46d2-9a4d-a6b0b07d5a17": {
@@ -3931,6 +3935,7 @@
           "description": "**Das tun:** Das Wort **Algorithmus** wiederholen oder einführen: _eine Liste von Schritten, um eine Aufgabe zu erledigen._"
         },
         "c4709ef3-6dff-44f9-ab00-7c8d4ceb84de": {
+          "name": "Folgen Sie dem Algorithmus",
           "description": "Heute beginnen wir mit einem schnellen Spiel. In diesem Spiel gebe ich dir alle Befehle, die du befolgen musst, und deine Aufgabe ist es, dem Algorithmus zu folgen. Die Befehle beginnen immer mit \"anfangen\" oder \"aufhören\". Wenn ich dir sage, du sollst mit etwas beginnen, musst du dieses Verhalten ausführen und so lange beibehalten, bis ich dir sage, du sollst aufhören. Ich kann dir auch sagen, dass du \"alles stoppen\" sollst, was bedeutet, dass du alle Verhaltensweisen beenden kannst, die ich dir bisher gezeigt habe. Wir werden 3 Runden spielen und nach jeder Runde werde ich euch ein paar Fragen stellen.",
           "tips": [
             "Achten Sie darauf, dass zwischen den Befehlen etwas Zeit bleibt. Überlegen Sie, ob Sie in jedem dieser Abschnitte die gesamte Sequenz ohne Diskussion ausführen und sie später wiederholen, nachdem alle die Möglichkeit hatten, eine Nachbesprechung durchzuführen und eventuelle Unklarheiten zu beseitigen."
@@ -4504,6 +4509,7 @@
           "description": "Wenn eine Meldung auf dem Computerbildschirm auf Ihre Eingabe wartet, nennen wir das eine Eingabeaufforderung. Wenn ein Benutzer eine Eingabeaufforderung eingibt, ist es so, als ob der Computer die Informationen in einem Container speichert. Die Bezeichnung der Variablen sagt uns, welche Art von Information wir erwarten können. Heute werden wir den Code zum Erstellen eines Prompts in Sprite Lab lernen."
         },
         "c69862bf-8fe7-4a68-bb37-ff81924f4bf5": {
+          "name": "Text und Eingabeaufforderungen",
           "description": "#### Vorhersage (5 Min.)\n\n**Vorgehensweise:** Lassen Sie die SchülerInnen den vorgegebenen Code lesen und vorhersagen, was passieren wird. Nachdem sie auf \"Ausführen\" geklickt haben, lassen Sie den SchülerInnenn Zeit, um über alles nachzudenken, was sie interessant fanden oder was sie überrascht hat.",
           "progression_name": "Vorhersage"
         },
@@ -5958,6 +5964,9 @@
           "tips": [
             "Diese Lektion mag sich ganz anders anfühlen als die vorangegangenen Lektionen. Diese Stufen haben einige neue Eigenschaften, die Sie vielleicht erst einmal kennenlernen möchten. Der Code, den Ihre SchülerInnen in einer Stufe schreiben, wird automatisch auf die anderen Stufen übertragen. Auf diese Weise können sie schrittweise aufbauen und ihre Ideen während des Lernens wiederholen. Beachten Sie, dass diese Stufen nicht auf Korrektheit geprüft werden, um der Kreativität freien Lauf zu lassen. Geben Sie Ihren SchülerInnenn die Möglichkeit, selbst zu bestimmen, wann sie die einzelnen Aufgaben abgeschlossen haben."
           ]
+        },
+        "5bee125c-0e5e-46a8-b72b-fdc8a71f5161": {
+          "progression_name": "Mini-Projekt: Sticker Art"
         },
         "c5f36648-ac0d-405f-af7a-3020ebdce7f3": {
           "progression_name": "Freies Spiel"
@@ -9907,6 +9916,7 @@
         },
         "43fde334-6c07-4b1b-b23d-4b67f5fbfbc0": {
           "name": "Zusammenfassung",
+          "description": "**Sammeln:** Lassen Sie die SchülerInnen ihre Prototypen und ihre Apps in App Lab einreichen. \n\n**Reflektieren:** Lassen Sie die Schüler eine kurze Umfrage mit fünf Fragen in Code Studio ausfüllen. Sie sehen die anonymisierten Ergebnisse im Lehrer-Dashboard.",
           "progression_name": "Reflexion"
         },
         "b46cfe31-9b5e-4820-b368-fc8a4fa139a7": {
@@ -10192,6 +10202,7 @@
         },
         "7799c3eb-e76a-465b-9f24-69d6c04a01c7": {
           "name": "Reflexion",
+          "description": "\\*\\*Code Studio: \\*\\* Lassen Sie die SchülerInnen zu Beginn dieser Stunde in einer Umfrage fünf kurze Fragen zur KI und zum maschinellem Lernen beantworten. Sobald mindestens fünf SchülerInnen die Umfrage ausgefüllt haben, können Sie die anonymisierten Ergebnisse im Lehrer-Dashboard einsehen. Einige dieser Fragen werden am Ende des ersten Projekts erneut gestellt. Das zeigt Ihnen, wie sich die SchülerInnen entwickelt haben und wie sich ihre Einstllungen im Verlaufe des Unterrichts verändert haben.",
           "progression_name": "Check-In-Befragung"
         },
         "b5acd50c-8f0e-4c22-8918-0e4801b137e1": {
@@ -10454,6 +10465,7 @@
           ]
         },
         "73c2cb42-e6a3-4317-8aab-7196411578ab": {
+          "name": "Modellkarten im KI Labor",
           "tips": [
             null
           ]
@@ -15189,6 +15201,7 @@
           "description": "**Vorgehensweise:** Wiederholen Sie den Begriff **Algorithmus** als eine Liste der Schritte zur Ausführung einer Aufgabe."
         },
         "9c5a2a2f-7a92-4928-a7c4-89d29765cb01": {
+          "name": "Folgen Sie dem Algorithmus",
           "description": "Heute beginnen wir mit einem kurzen Spiel. In diesem Spiel gebe ich Ihnen Befehle, die Sie befolgen müssen. Sie haben also die Aufgabe, dem **Algorithmus** zu folgen. Die Befehle beginnen immer mit \"beginnen\" oder \"stoppen\". Wenn ich Ihnen sage, dass Sie mit etwas beginnen sollen, beginnen Sie mit diesem Verhalten und behalten es solange bei, bis ich Ihnen sage, dass Sie aufhören sollen. Ich kann Ihnen auch sagen, dass Sie \"alles stoppen\" sollen, was bedeutet, dass Sie alle Verhaltensweisen beenden, die ich Ihnen bisher gezeigt habe. Wir spielen 3 Runden spielen und nach jeder Runde stelle ich Ihnen einige Fragen.",
           "tips": [
             "Achten Sie darauf, dass zwischen den Befehlen etwas Zeit bleibt. Überlegen Sie, ob Sie in jedem dieser Abschnitte die gesamte Sequenz ohne Diskussion ausführen und sie später wiederholen, nachdem alle die Möglichkeit hatten, eine Nachbesprechung durchzuführen und eventuelle Unklarheiten zu beseitigen."
@@ -15333,6 +15346,7 @@
           "description": "Am Ende der letzten Stunde haben wir uns mit den Ähnlichkeiten zwischen Lückengeschichten und Apps beschäftigt, die den Benutzer um eine Eingabe bitten. \nWenn eine Nachricht auf dem Computerbildschirm auf Ihre Eingabe wartet, nennen wir das eine Eingabeaufforderung. \nWenn ein Benutzer etwas in eine Eingabeaufforderung eingibt, ist es, als ob der Computer die Informationen in einem Behälter speichert. \nDie Bezeichnung der Variablen sagt uns, welche Art von Information wir erwarten können. Heute werden wir den Code zum Erstellen einer Eingabeaufforderung in Sprite Lab kennen lernen."
         },
         "05818b32-90cc-466a-b952-8fcf048e4e5c": {
+          "name": "Text und Eingabeaufforderungen",
           "description": "#### Vorhersage (5 Min.)\n\n**Vorgehensweise:** Lassen Sie die SchülerInnen den vorgegebenen Code lesen und vorhersagen, was passieren wird. Nachdem sie auf \"Ausführen\" geklickt haben, lassen Sie den SchülerInnenn Zeit, um über alles nachzudenken, was sie interessant fanden oder was sie überrascht hat.",
           "progression_name": "Vorhersage"
         },
@@ -18345,6 +18359,7 @@
           "description": "**Das tun:** Das Wort **Algorithmus** wiederholen oder einführen: _eine Liste von Schritten, um eine Aufgabe zu erledigen._"
         },
         "5eb0801e-a90b-47fe-9787-2f7fc7a79f5f": {
+          "name": "Folgen Sie dem Algorithmus",
           "description": "Heute beginnen wir mit einem schnellen Spiel. In diesem Spiel gebe ich dir alle Befehle, die du befolgen musst, und deine Aufgabe ist es, dem Algorithmus zu folgen. Die Befehle beginnen immer mit \"anfangen\" oder \"aufhören\". Wenn ich dir sage, du sollst mit etwas beginnen, musst du dieses Verhalten ausführen und so lange beibehalten, bis ich dir sage, du sollst aufhören. Ich kann dir auch sagen, dass du \"alles stoppen\" sollst, was bedeutet, dass du alle Verhaltensweisen beenden kannst, die ich dir bisher gezeigt habe. Wir werden 3 Runden spielen und nach jeder Runde werde ich euch ein paar Fragen stellen.",
           "tips": [
             "Achten Sie darauf, dass zwischen den Befehlen etwas Zeit bleibt. Überlegen Sie, ob Sie in jedem dieser Abschnitte die gesamte Sequenz ohne Diskussion ausführen und sie später wiederholen, nachdem alle die Möglichkeit hatten, eine Nachbesprechung durchzuführen und eventuelle Unklarheiten zu beseitigen."
@@ -18919,6 +18934,7 @@
           "description": "Wenn eine Meldung auf dem Computerbildschirm auf Ihre Eingabe wartet, nennen wir das eine Eingabeaufforderung. Wenn ein Benutzer eine Eingabeaufforderung eingibt, ist es so, als ob der Computer die Informationen in einem Container speichert. Die Bezeichnung der Variablen sagt uns, welche Art von Information wir erwarten können. Heute werden wir den Code zum Erstellen eines Prompts in Sprite Lab lernen."
         },
         "e7833677-6e13-40dc-9e36-56388378828d": {
+          "name": "Text und Eingabeaufforderungen",
           "description": "#### Vorhersage (5 Min.)\n\n**Vorgehensweise:** Lassen Sie die SchülerInnen den vorgegebenen Code lesen und vorhersagen, was passieren wird. Nachdem sie auf \"Ausführen\" geklickt haben, lassen Sie den SchülerInnenn Zeit, um über alles nachzudenken, was sie interessant fanden oder was sie überrascht hat.",
           "progression_name": "Vorhersage"
         },
@@ -19492,6 +19508,7 @@
           "description": "-   Welche Teile Ihres Körpers benutzen Sie? Ändert sich dies an verschiedenen Stellen? - Gibt es Zeiten, in denen du eine Aktion unterbrechen musst, bevor du eine andere beginnen kannst? (z. B. musst du aufhören, den Basketball zu dribbeln, bevor du ihn werfen kannst.) **Ziel:** Helfen Sie den SchülerInnenn, darüber nachzudenken, wann sie mehrere Aufgaben oder Anweisungen gleichzeitig erledigen müssen. Die Hauptaktivität bringt die SchülerInnen dazu, alberne Handlungen auszuführen, entweder nacheinander oder gleichzeitig. Dies wird schließlich zu Verbindungen über eine neue Art, Programme zu schreiben, führen, aber Sie müssen die Diskussion noch nicht bis dorthin führen."
         },
         "9a413780-6d7b-4341-9041-e8a1e3f540b6": {
+          "name": "Folgen Sie dem Algorithmus",
           "description": "Heute beginnen wir mit einem kurzen Spiel. In diesem Spiel werde ich dir alle Befehle geben, die du befolgen sollst, und deine Aufgabe ist es, meinen Anweisungen zu folgen. Die Befehle beginnen immer mit \"anfangen\" oder \"aufhören\". Wenn ich dir sage, dass du mit etwas beginnen sollst, musst du mit diesem Verhalten beginnen und es beibehalten, bis ich dir sage, dass du aufhören sollst. Ich kann dir auch sagen, dass du mit allem aufhören sollst, was bedeutet, dass du alle Verhaltensweisen beenden kannst, die ich dir bisher gezeigt habe. Wir werden 3 Runden spielen und nach jeder Runde werde ich euch ein paar Fragen stellen.",
           "progression_name": "Folge dem Algorithmus - Aktivität ohne Computer"
         },
@@ -20151,6 +20168,7 @@
         },
         "d26ab8fe-dc83-4704-8aba-bd0cdbdd80a4": {
           "name": "Reflexion",
+          "description": "\\*\\*Code Studio: \\*\\* Lassen Sie die SchülerInnen zu Beginn dieser Stunde in einer Umfrage fünf kurze Fragen zur KI und zum maschinellem Lernen beantworten. Sobald mindestens fünf SchülerInnen die Umfrage ausgefüllt haben, können Sie die anonymisierten Ergebnisse im Lehrer-Dashboard einsehen. Einige dieser Fragen werden am Ende des ersten Projekts erneut gestellt. Das zeigt Ihnen, wie sich die SchülerInnen entwickelt haben und wie sich ihre Einstllungen im Verlaufe des Unterrichts verändert haben.",
           "progression_name": "Check-In-Befragung"
         },
         "8bdf1f4e-1c20-42bd-a5d5-7217dfa0bd4f": {
@@ -20390,6 +20408,7 @@
           ]
         },
         "30e5080a-05d0-4193-82e4-f7c81f1adb5c": {
+          "name": "Modellkarten im KI Labor",
           "tips": [
             null
           ]

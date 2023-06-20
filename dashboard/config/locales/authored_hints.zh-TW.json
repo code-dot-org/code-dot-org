@@ -4939,7 +4939,7 @@
         "courseC_starWars_loops8": {
           "course_starWars_loops8_a": "嘗試把問題分成幾個小部分來解決。慢慢來。多嘗試幾次也沒問題！",
           "course_starWars_loops8_b": "將此問題的前半部分視為階梯問題。你之前是如何解決的？",
-          "course_starWars_loops8_c": "看一下這條路徑。\n\n![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)"
+          "course_starWars_loops8_c": "看一下這條路徑。\n\n[][0]"
         },
         "courseC_starWars_loops8_2018": {
           "course_starWars_loops8_a": "嘗試把問題分成幾個小部分來解決。慢慢來。多嘗試幾次也沒問題！",
@@ -5631,7 +5631,7 @@
           "courseD_bee_conditionals4_hintVid1": "不知道怎麼開始？看看這個影片！",
           "courseD_bee_conditionals4_a": "即使你可以看清楚整個路徑，你還是可以把每格當作有雲朵的方式來處理。",
           "courseD_bee_conditionals4_b": "在迴圈中使用「if」語句檢查每個空間的花蜜。",
-          "courseD_bee_conditionals4_c": "使用 <xml><block type=\"maze_untilBlocked\"/></xml> 積木，你應該向前移動並檢查花朵。如果有花朵，蜜蜂應該怎麼做？",
+          "courseD_bee_conditionals4_c": "使用 [blockly block][0] 積木，你應該向前移動並檢查花朵。如果有花朵，蜜蜂應該怎麼做？",
           "courseD_bee_conditionals4_hintVid2": "觀看影片以幫你完成關卡。"
         },
         "courseD_bee_conditionals4_2018": {
@@ -7093,8 +7093,8 @@
         },
         "courseE_artist_functions2": {
           "courseD_artist_functions2_b": "編寫的函式不應包含整個程式，而是只要包含繪製邊長為 100 像素正方形的動作。",
-          "courseD_artist_functions2_c": "在`當運行時`積木下使用綠色的`繪製正方形`積木來「呼叫」你的函式。不這麼做的話，在函式中的程式積木將無法執行。\n\n<xml><block type=\"procedures_callnoreturn\" limit=\"2\"><mutation name=\"draw a square\"/></block></xml>",
-          "courseD_artist_functions2_a": "你的程式應該如下：\n\n-   使用函式\n-   向前移動 100 + 75 像素\n-   使用函式"
+          "courseD_artist_functions2_c": "在`當運行時`積木下使用綠色的`繪製正方形`積木來「呼叫」你的函式。不這麼做的話，在函式中的程式積木將無法執行。\n\n[blockly block][0]",
+          "courseD_artist_functions2_a": "你的程式應該如下：\n\n- 使用函式\n- 向前移動 100 + 75 像素\n- 使用函式"
         },
         "courseE_artist_functions2_2018": {
           "courseD_artist_functions2_b": "這個函式不應包含整個程式，而是包含繪製邊長 100 個像素的正方形部分。",
@@ -10781,7 +10781,7 @@
           "hw_retro_changePropBy": "如果你想反復改變精靈圖的大小（通過事件），請使用這個代碼積木：\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"retrocreature_11_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "poetry_hoc_addSprites": {
-          "location_hint": "每個精靈圖都有一個**位置**。你可以通過點擊這個積木上的針腳來設置位置： \n\n<xml><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"twinkling_star\"</title><title name=\"LOCATION\">{\"x\":200,\"y\":225}</title></block></xml>\n\n-   點擊位置積木上的針腳![](<https://images.code.org/e9531e292b034feef0f176d4f97ac47f-image-1634932451913.54.05 PM.png>)，然後在螢幕上為你的精靈圖選擇一個新位置。\n-   當你的代碼完成時，按“運行”按鈕。",
+          "location_hint": "每個精靈圖都有一個**位置**。你可以通過點擊這個積木上的針腳來設置位置： \n\n<xml><block xmlns=\"https://developers.google.com/blockly/xml\" type=\"Poetry_makeNewSpriteAnon\" id=\"1XbbmW9TqiPQBwSeRYvO\">\n  <field name=\"ANIMATION_NAME\">\"twinkling star\"</field>\n  <field name=\"LOCATION\">{\"x\":200,\"y\":200}</field>\n</block></xml>\n\n-   點擊位置積木上的針腳![](<https://images.code.org/e9531e292b034feef0f176d4f97ac47f-image-1634932451913.54.05 PM.png>)，然後在螢幕上為你的精靈圖選擇一個新位置。\n-   當你的代碼完成時，按“運行”按鈕。",
           "remove_hint": "你可以在一個特定行號移除一個精靈圖。你可以添加一個新精靈圖來取代它： \n\n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">3</title><next><block type=\"Poetry_destroy\"><title name=\"ANIMATION_NAME\">\"twinkling_star\"</title><next><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"night_moon\"</title><title name=\"LOCATION\">{\"x\":200,\"y\":225}</title></block></next></block></next></block></xml>"
         },
         "poetry_hoc_backgroundEffects": {

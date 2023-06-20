@@ -4,7 +4,7 @@ import React from 'react';
 import {ButtonList} from '../form_components/ButtonList';
 import FieldGroup from '../form_components/FieldGroup';
 
-import {FormGroup, FormControl, ControlLabel, Table} from 'react-bootstrap';
+import {FormGroup, FormControl, ControlLabel, Table} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 
 const SINGLE_SELECT = 'single_select';
 const MULTI_SELECT = 'multi_select';
@@ -21,9 +21,9 @@ const questionPropType = PropTypes.shape({
     MULTI_SELECT,
     FREE_RESPONSE,
     RADIO,
-    CHECK
+    CHECK,
   ]).isRequired,
-  values: PropTypes.arrayOf(PropTypes.string)
+  values: PropTypes.arrayOf(PropTypes.string),
 });
 
 class ColumnVariableQuestion extends React.Component {
@@ -32,7 +32,7 @@ class ColumnVariableQuestion extends React.Component {
     question: questionPropType,
     onChange: PropTypes.func,
     data: PropTypes.object,
-    errors: PropTypes.arrayOf(PropTypes.string)
+    errors: PropTypes.arrayOf(PropTypes.string),
   };
 
   buildColumn = selectedValue => {
@@ -98,7 +98,7 @@ class RowVariableQuestion extends React.Component {
     question: questionPropType,
     onChange: PropTypes.func,
     data: PropTypes.object,
-    errors: PropTypes.arrayOf(PropTypes.string)
+    errors: PropTypes.arrayOf(PropTypes.string),
   };
 
   buildRow = selectedValue => {
@@ -140,12 +140,12 @@ export default class VariableFormGroup extends React.Component {
     rowVariableQuestions: PropTypes.arrayOf(questionPropType),
     onChange: PropTypes.func,
     data: PropTypes.object,
-    errors: PropTypes.arrayOf(PropTypes.string)
+    errors: PropTypes.arrayOf(PropTypes.string),
   };
 
   static defaultProps = {
     columnVariableQuestions: [],
-    rowVariableQuestions: []
+    rowVariableQuestions: [],
   };
 
   constructor(props) {
@@ -171,7 +171,7 @@ export default class VariableFormGroup extends React.Component {
       // already selected, so manually trigger an on change if we have one so
       // our parent component will also think it's selected
       this.props.onChange({
-        [this.props.sourceName]: this.state.selected
+        [this.props.sourceName]: this.state.selected,
       });
     }
   }
@@ -190,7 +190,7 @@ export default class VariableFormGroup extends React.Component {
     }
 
     this.setState({
-      selected: values[this.props.sourceName]
+      selected: values[this.props.sourceName],
     });
   };
 
@@ -242,7 +242,7 @@ export default class VariableFormGroup extends React.Component {
     const thStyle = {
       width: `${100 / (this.state.selected.length + 1)}%`,
       backgroundColor: '#00b2c0',
-      color: 'white'
+      color: 'white',
     };
 
     let validationState;
@@ -299,6 +299,6 @@ export default class VariableFormGroup extends React.Component {
 const styles = {
   tdLabel: {
     padding: 15,
-    verticalAlign: 'inherit'
-  }
+    verticalAlign: 'inherit',
+  },
 };

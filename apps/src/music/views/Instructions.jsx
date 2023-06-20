@@ -1,33 +1,30 @@
 import PropTypes from 'prop-types';
 import React, {useContext, useEffect, useState} from 'react';
 import classNames from 'classnames';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import moduleStyles from './instructions.module.scss';
 import {AnalyticsContext} from '../context';
+import {useSelector} from 'react-redux';
 
 /**
  * Renders the Music Lab instructions component.
  */
-const Instructions = ({instructions, baseUrl, vertical, right}) => {
-  const [currentPanel, setCurrentPanel] = useState(0);
+const Instructions = ({
+  progressionStep,
+  showProgressionStep,
+  currentLevelIndex,
+  levelCount,
+  onNextPanel,
+  baseUrl,
+  vertical,
+  right,
+}) => {
   const [showBigImage, setShowBigImage] = useState(false);
-
-  const getPreviousPanel = () => {
-    return currentPanel > 0 ? currentPanel - 1 : null;
-  };
+  const progressState = useSelector(state => state.music.currentProgressState);
+  const currentPanel = currentLevelIndex;
 
   const getNextPanel = () => {
-    return currentPanel + 1 < instructions?.groups[0].panels.length
-      ? currentPanel + 1
-      : null;
-  };
-
-  const changePanel = nextPanel => {
-    const nextPanelIndex = nextPanel ? getNextPanel() : getPreviousPanel();
-
-    if (nextPanelIndex !== null) {
-      setCurrentPanel(nextPanelIndex);
-      setShowBigImage(false);
-    }
+    return currentPanel + 1 < levelCount ? currentPanel + 1 : null;
   };
 
   const imageClicked = () => {
@@ -36,15 +33,14 @@ const Instructions = ({instructions, baseUrl, vertical, right}) => {
 
   const analyticsReporter = useContext(AnalyticsContext);
   useEffect(() => {
-    // Instructions panels are 0-indexed, tracking is 1-based
+    // Instructions steps are 0-indexed, tracking is 1-based
     analyticsReporter.onInstructionsVisited(currentPanel + 1);
   }, [currentPanel, analyticsReporter]);
 
-  const previousPanel = getPreviousPanel();
   const nextPanel = getNextPanel();
 
-  const progressText = instructions
-    ? `${currentPanel + 1}/${instructions.groups[0].panels.length}`
+  const progressText = progressionStep
+    ? `${currentPanel + 1}/${levelCount}`
     : '';
 
   return (
@@ -55,40 +51,36 @@ const Instructions = ({instructions, baseUrl, vertical, right}) => {
         vertical && moduleStyles.vertical
       )}
     >
-      {instructions && (
+      {progressionStep && (
         <InstructionsPanel
-          panel={instructions.groups[0].panels[currentPanel]}
+          panel={progressionStep}
+          message={progressState.message}
           vertical={vertical}
           baseUrl={baseUrl}
-          path={instructions.groups[0].path}
+          path={''}
           imageClicked={imageClicked}
           right={right}
           showBigImage={showBigImage}
         />
       )}
       <div className={moduleStyles.bottom}>
-        <div className={moduleStyles.progressText}>{progressText}</div>
+        {showProgressionStep && (
+          <div className={moduleStyles.progressText}>{progressText}</div>
+        )}
         <div>
-          <button
-            type="button"
-            onClick={() => changePanel(false)}
-            className={classNames(
-              moduleStyles.button,
-              previousPanel !== null && moduleStyles.buttonActive
-            )}
-          >
-            Previous
-          </button>
-          <button
-            type="button"
-            onClick={() => changePanel(true)}
-            className={classNames(
-              moduleStyles.button,
-              nextPanel !== null && moduleStyles.buttonActive
-            )}
-          >
-            Next
-          </button>
+          {progressState.satisfied && (
+            <button
+              type="button"
+              onClick={() => onNextPanel()}
+              className={classNames(
+                moduleStyles.button,
+                moduleStyles.buttonNext,
+                nextPanel !== null && moduleStyles.buttonActive
+              )}
+            >
+              Next
+            </button>
+          )}
         </div>
       </div>
     </div>
@@ -96,20 +88,26 @@ const Instructions = ({instructions, baseUrl, vertical, right}) => {
 };
 
 Instructions.propTypes = {
-  instructions: PropTypes.object,
+  progressionStep: PropTypes.object,
+  showProgressionStep: PropTypes.bool,
+  currentLevelIndex: PropTypes.number,
+  levelCount: PropTypes.number,
+  message: PropTypes.string,
+  onNextPanel: PropTypes.func,
   baseUrl: PropTypes.string.isRequired,
   vertical: PropTypes.bool,
-  right: PropTypes.bool
+  right: PropTypes.bool,
 };
 
 const InstructionsPanel = ({
   panel,
+  message,
   vertical,
   baseUrl,
   path,
   imageClicked,
   right,
-  showBigImage
+  showBigImage,
 }) => {
   return (
     <div
@@ -164,7 +162,10 @@ const InstructionsPanel = ({
           vertical && moduleStyles.textVertical
         )}
       >
-        {panel.text}
+        {panel.text && <SafeMarkdown markdown={panel.text} />}
+        {message && (
+          <SafeMarkdown markdown={message} className={moduleStyles.message} />
+        )}
       </div>
     </div>
   );
@@ -172,12 +173,13 @@ const InstructionsPanel = ({
 
 InstructionsPanel.propTypes = {
   panel: PropTypes.object.isRequired,
+  message: PropTypes.string,
   baseUrl: PropTypes.string.isRequired,
   path: PropTypes.string.isRequired,
   imageClicked: PropTypes.func.isRequired,
   showBigImage: PropTypes.bool,
   vertical: PropTypes.bool,
-  right: PropTypes.bool
+  right: PropTypes.bool,
 };
 
 export default Instructions;

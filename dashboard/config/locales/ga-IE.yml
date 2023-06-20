@@ -56,6 +56,7 @@ ga:
         reset_password_token: Tá an nasc a chliceáil tú chun d'fhocal faire a athshocrú
         error:
           future: earráid - dáta sa todhchaí
+        us_state: Stát
   beta: béite
   hello: Dia dhuit a dhomhain
   welcome_back: Fáilte ar ais a %{name}
@@ -205,8 +206,6 @@ ga:
       dúinn dul i dteagmháil le daltaí. Ní bhfaighidh daltaí aon ríomhphost ó Code.org
       seachas chun focal faire a athshocrú. Féach ár [bpolasaí príobháideachais](http://code.org/privacy)
       chun tuilleadh eolais a fháil.
-    additional_information: Teastaíonn tuilleadh eolais uainn sular féidir linn tú
-      a chlárú.
     user_type_button: Athraigh Cineál an Chuntais
     user_type_label: Cineál Cuntais
     user_type_student: Dalta
@@ -231,6 +230,7 @@ ga:
       chugat anois is arís le heolas faoi dhul chun cinn do pháiste, faoin chúrsa,
       agus faoin ríomheolaíocht go ginearálta? [(Féach ár bpolasaí príobháideachais)](%{privacy_policy_url})
     parent_account_email_label: Seoladh R-Phoist Tuismitheora/Caomhnóra
+    us_state: Stát
   school_info:
     title: Eolas faoin scoil (roghnach)
     school_country: Tír na Scoile
@@ -1307,6 +1307,7 @@ ga:
         csf_express: Buntús na Ríomheolaíochta (Réamh-luathchúrsa nó luathchúrsa)
         csd: Fionnachtana sa Ríomheolaíocht
         csp: Foras Feasa ar an Ríomheolaíocht
+        other: Eile
       email_opt_in:
         opt_in_yes: Tá
         opt_in_no: Níl
@@ -1342,6 +1343,11 @@ ga:
         duit seoladh ríomhphoist a chur le do chuntas sna [socruithe](%{user_registration})
         sula líonfaidh tú an fhoirm seo isteach.
   courses_category: Cúrsaí Iomlána
+  course_offering:
+    headers:
+      minecraft: Minecraft
+      sports: Spórt
+      csf: Buntús na Ríomheolaíochta
   cookie_banner:
     message: Má chliceálann tú "Glacaim leis" nó má leanann tú ar aghaidh ag brabhsáil,
       glacfaidh tú le stóráil fianán ar do ríomhaire nó gléas soghluaiste.

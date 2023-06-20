@@ -13,6 +13,7 @@
   "columnDetailsMaximumValue": "максимум",
   "dataCardLastUpdated": "Последнее обновление",
   "predictButton": "Предсказать",
+  "uniqueOptionsWarningNotice": "Примечание",
   "datasets": {
     "medical_priority": {
       "fields": {

@@ -24,3 +24,5 @@ The `Painter` object needs to paint the current space then turn left to face eas
 
 The program is currently missing the code to paint, turn left to face east, and move forward before painting the last space and turning and moving to the final position.
 MARKDOWN
+
+allow_multiple_attempts true

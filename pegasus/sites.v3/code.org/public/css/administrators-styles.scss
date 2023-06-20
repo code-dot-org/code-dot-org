@@ -1,0 +1,30 @@
+// Custom styles for code.org/administrators
+// — supplemental to shared/css/design-system-pegasus.scss
+
+@import 'breakpoints';
+
+// Hero banner
+.hero-banner-basic {
+
+  p {
+    @media screen and (max-width: 1600px) {
+      width: 50%;
+    }
+
+    @media screen and (max-width: $width-md) {
+      width: 100%;
+    }
+  }
+
+  img {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: -6rem;
+    z-index: 0;
+
+    @media screen and (max-width: $width-md) {
+      display: none;
+    }
+  }
+}

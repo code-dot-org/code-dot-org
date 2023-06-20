@@ -1,11 +1,15 @@
 {
   "key": "coursee",
-  "display_name": "Course E",
+  "display_name": "CS Fundamentals: Course E",
   "category": "csf",
   "is_featured": false,
   "assignable": true,
   "curriculum_type": "Course",
   "marketing_initiative": "CSF",
   "grade_levels": "4,5",
-  "header": "CS Fundamentals"
+  "header": "csf",
+  "image": "https://images.code.org/7542c01e86c59dcc40beb1f67bac727e-Course E.png",
+  "cs_topic": "art_and_design,app_design,games_and_animations,internet,programming",
+  "school_subject": null,
+  "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"ideal\",\"mobile\":\"not_recommended\",\"no_device\":\"incompatible\"}"
 }

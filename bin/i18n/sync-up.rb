@@ -28,9 +28,9 @@ def sync_up
     end
 
     puts "Sync up completed successfully"
-  rescue => e
-    puts "Sync up failed from the error: #{e}"
-    raise e
+  rescue => exception
+    puts "Sync up failed from the error: #{exception}"
+    raise exception
   end
 end
 

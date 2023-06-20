@@ -1,0 +1,34 @@
+.carousel-wrapper#pl-middle-high-carousel
+  .carousel{style: "height: 173px"}
+    .slides
+      .slide
+        %p.quote-text I liked seeing the lessons in action — it helped me understand how to pace them in my own classroom. I liked the opportunity to talk to my peers about assessment ideas and recruitment ideas.
+        %p AP® CSA Teacher <span>•</span> Nevada
+      .slide
+        %p.quote-text This was excellent professional development that allowed us time to reflect, process and debrief both individually and as a group. The activities were engaging and meaningful to learning the content. I feel like I'm leaving with skill I can immediately apply in teaching the curriculum.
+        %p CS Discoveries Teacher <span>•</span> Alaska
+      .slide
+        %p.quote-text By the end, I just felt so prepared, motivated, and ready to get back in the classroom again!
+        %p CS Principles Teacher <span>•</span> New Jersey
+
+  .pagination.left-align
+    #pl-middle-high-carousel-pagination
+
+%script{:src=>'/js/jquery.carouFredSel-6.2.1-packed.js'}
+%script{:src=>'/js/jquery.touchSwipe.min.js'}
+:javascript
+  $(document).ready(function() {
+
+    var id = '#pl-middle-high-carousel';
+    // Define the carousel using the ID.
+    $(id + ' .slides').carouFredSel({
+      items : 1,
+      auto  : false,
+      responsive : true,
+      pagination : '#pl-middle-high-carousel-pagination',
+      swipe	: {
+        onTouch : true,
+        onMouse : false
+      },
+    });
+  });

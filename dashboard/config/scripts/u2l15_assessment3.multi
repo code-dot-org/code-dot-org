@@ -1,14 +1,18 @@
 name 'U2L15 Assessment3'
-encrypted 'AwPka/zkr15QwYzar4r3naT/Uskw9y9KPzV7UfMZxBuiZ/VJ0In4UhAcWb7v
-3aCojlMZ3yES1jiWooMBGNJGky1kXs3I5Bow8wIST4x7sT3FD4SjkiuJ2xg8
-F1Y5E/dnFsxo/8SMvqNMk8U78F17GU0Q5990L4rynlt6qv8RqTbLSK2+XtXG
-dXXWaOb2kv/uRtdxe+EbEnNzJe59J/DG2r64a3lspDPdQ0SiK8x1WzMgQqNW
-b1bD7jgUtPXAMvFBnHVNmyign4rNnG1WbuhH4KAety+2Ik8+zgZIQobu/1qm
-ebc2nCXajq88MeefEOMDUIghQRXn8niQB8cYWARpEYR72Wm33H+KNS391YvS
-mMUiUIIbq2eSCcr13cZsowuOYqmcxAtL+odFSU2ku5xVom9rLtPOejui6Yzg
-aVWIAw2NDN3+i+DnxCsf+frCphOv0YwEJg9Ma6KbrzWV28JssoYiqtrxuHXF
-lO739ecwELB/8aq2qzSwJYXjIeVy+Ku9+n7RM61LA2rD7qgwWpULDQKEYn6E
-KJkpTBJQ6gjLaj0kk+k264nXc1xNdIdUXDN3k0L5JzjcLSOLF6MAbeFqno5o
-Y1a6Gt5FzbRWOocr9pcxjJ1qbZi9UUoRNHMtVPXB8ae83hpSSIiRjHKoqx40
-gVcdYQG568XBIi6qRYx7+2l2d2YIXnxHrwAvxKKXZzSM
-'
+title 'Assessment: Question 3'
+question 'Why are computers better than humans at breaking encryptions such as the Vigenere?'
+wrong 'Computers are smarter than humans.'
+right 'Computers are faster than humans.'
+wrong 'The Vigenere was originally designed by a computer.'
+wrong 'They are not - humans are better at breaking Vigenere encryptions than computers.'
+
+markdown <<MARKDOWN
+
+MARKDOWN
+teacher_markdown <<MARKDOWN
+Answer:
+
+- Computers are faster than humans.
+MARKDOWN
+
+allow_multiple_attempts true

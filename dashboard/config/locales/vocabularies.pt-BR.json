@@ -36,7 +36,7 @@
           "definition": "(v) escrever código, ou escrever instruções para um computador."
         },
         "debugging/hero/unversioned": {
-          "word": "Analisando",
+          "word": "Depuração",
           "definition": "Encontrar e corrigir problemas em um algoritmo ou programa."
         },
         "function/hero/unversioned": {
@@ -147,6 +147,7 @@
           "definition": "Algoritmo que foi codificado em algo que pode ser executado por uma máquina."
         },
         "code/aquatic/unversioned": {
+          "word": "Código",
           "definition": "(v) escrever código, ou escrever instruções para um computador."
         },
         "condition/aquatic/unversioned": {
@@ -162,8 +163,8 @@
           "definition": "Encontrar e corrigir problemas em um algoritmo ou programa."
         },
         "loops/aquatic/unversioned": {
-          "word": "laços",
-          "definition": "Ação de fazer algo repetidas vezes."
+          "word": "Laços",
+          "definition": "A ação de repetir algo."
         },
         "program/aquatic/unversioned": {
           "word": "Programa",
@@ -194,10 +195,11 @@
           "definition": "Técnica de criptografia que mapeia cada letra do alfabeto a outras letras selecionadas aleatoriamente."
         },
         "code/starwars/unversioned": {
+          "word": "Programar",
           "definition": "(v) escrever código, ou escrever instruções para um computador."
         },
         "debugging/starwars/unversioned": {
-          "word": "Analisando",
+          "word": "Depuração",
           "definition": "Encontrar e corrigir problemas em um algoritmo ou programa."
         },
         "program/starwars/unversioned": {
@@ -506,7 +508,8 @@
           "definition": "Laço que continua se repetindo enquanto uma condição for verdadeira."
         },
         "copyright/coursee/2022": {
-          "word": "Direitos Autorais"
+          "word": "Direitos Autorais",
+          "definition": "o direito legal exclusivo de imprimir, publicar, executar, filmar ou gravar material literário, artístico ou musical e autorizar outros a fazer o mesmo"
         },
         "define/coursee/2022": {
           "word": "Definir",
@@ -862,7 +865,8 @@
           "word": "Pegada Digital"
         },
         "copyright/csd/2022": {
-          "word": "Direitos Autorais"
+          "word": "Direitos Autorais",
+          "definition": "o direito legal exclusivo de imprimir, publicar, executar, filmar ou gravar material literário, artístico ou musical e autorizar outros a fazer o mesmo"
         },
         "user/csd/2022": {
           "word": "Usuário",
@@ -1358,7 +1362,8 @@
           "definition": "Uma ação que faz com que algo aconteça."
         },
         "algorithm/coursee/2021": {
-          "word": "algoritmo"
+          "word": "algoritmo",
+          "definition": "Uma lista de etapas para concluir uma tarefa"
         },
         "behavior/coursee/2021": {
           "word": "Comportamento",
@@ -1373,7 +1378,8 @@
           "definition": "Uma ação que faz com que algo aconteça."
         },
         "copyright/coursee/2021": {
-          "word": "Direitos Autorais"
+          "word": "Direitos Autorais",
+          "definition": "o direito legal exclusivo de imprimir, publicar, executar, filmar ou gravar material literário, artístico ou musical e autorizar outros a fazer o mesmo"
         },
         "loop/coursee/2021": {
           "word": "Laço de repetição",
@@ -1471,7 +1477,8 @@
           "word": "Pegada Digital"
         },
         "copyright/csd/2021": {
-          "word": "Direitos Autorais"
+          "word": "Direitos Autorais",
+          "definition": "o direito legal exclusivo de imprimir, publicar, executar, filmar ou gravar material literário, artístico ou musical e autorizar outros a fazer o mesmo"
         }
       }
     }

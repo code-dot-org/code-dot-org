@@ -6,14 +6,14 @@ import instructionsDialog from '@cdo/apps/redux/instructionsDialog';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import {Provider} from 'react-redux';
 import reducers, {
-  initLevelSearching
+  initLevelSearching,
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
 
 $(() => {
   // instructionsDialog reducer is needed for the ExpandableImageDialog
   registerReducers({
     ...reducers,
-    instructionsDialog
+    instructionsDialog,
   });
   const store = getStore();
 

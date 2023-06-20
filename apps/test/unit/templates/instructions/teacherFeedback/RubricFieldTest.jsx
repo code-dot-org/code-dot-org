@@ -9,7 +9,7 @@ const DEFAULT_PROPS = {
   rubricValue: 'exceeded expectations',
   disabledMode: false,
   onChange: () => {},
-  currentlyChecked: false
+  currentlyChecked: false,
 };
 
 describe('RubricField', () => {

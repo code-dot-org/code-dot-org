@@ -1,26 +1,35 @@
 {
   "navigateForward": "جاری رکھیے",
+  "navigateBack": "واپس",
   "tryAgain": "دوبارہ کوشش کریں",
   "navigateDone": "اختتام",
   "saveProgress": "محفوظ کریں",
+  "correctAnswer": "درست",
+  "potentialMisusesLabel": "حدود اور انتباہ",
+  "modelCardLimitations": "حدود اور انتباہ",
   "modelCardPossibleValuesMinimum": "کم سے کم",
   "modelCardPossibleValuesMaximum": "زیادہ سے زیادہ",
   "columnInspectorDescription": "تفصیل",
   "columnDetailsMinimumValue": "کم سے کم",
   "columnDetailsMaximumValue": "زیادہ سے زیادہ",
   "dataCardLastUpdated": "آخری تازہ کاری",
+  "uniqueOptionsWarningNotice": "نوٹ",
   "datasets": {
     "medical_priority": {
       "fields": {
         "age": {
           "id": "عمر"
         }
-      }
+      },
+      "name": "طبی ترجیح"
     },
     "shoe_survey_toy": {
       "fields": {
         "weather": {
           "id": "موسم"
+        },
+        "day": {
+          "id": "دن"
         },
         "shoe": {
           "id": "جوتا"
@@ -182,6 +191,9 @@
     },
     "loneliness_interests": {
       "fields": {
+        "Internet": {
+          "id": "انٹرنیٹ"
+        },
         "Writing": {
           "id": "لکھنا"
         }
@@ -200,6 +212,13 @@
         },
         "Star": {
           "id": "ستارہ"
+        }
+      }
+    },
+    "songs": {
+      "fields": {
+        "Artist": {
+          "id": "آرٹسٹ"
         }
       }
     },
@@ -233,6 +252,13 @@
         }
       }
     },
+    "zoo": {
+      "fields": {
+        "Aquatic": {
+          "id": "آبی"
+        }
+      }
+    },
     "poke_toy": {
       "fields": {
         "avocado": {
@@ -248,8 +274,14 @@
     },
     "student_survey": {
       "fields": {
+        "Music": {
+          "id": "میوزک"
+        },
         "Country": {
           "id": "Mulk"
+        },
+        "Internet": {
+          "id": "انٹرنیٹ"
         },
         "Writing": {
           "id": "لکھنا"
@@ -294,6 +326,9 @@
     },
     "loneliness_music": {
       "fields": {
+        "Music": {
+          "id": "میوزک"
+        },
         "Country": {
           "id": "Mulk"
         }

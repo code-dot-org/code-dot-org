@@ -11,21 +11,22 @@ import {
   digitalWrite,
   injectBoardController,
   onBoardEvent,
-  pinMode
+  pinMode,
 } from '@cdo/apps/lib/kits/maker/commands';
-import FakeBoard from '@cdo/apps/lib/kits/maker/boards/FakeBoard';
-import {MicrobitStubBoard} from './boards/makeStubBoard';
+import VirtualCPBoard from '@cdo/apps/lib/kits/maker/boards/VirtualCPBoard';
+import MicroBitBoard from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitBoard';
+import {MBFirmataClientStub} from '@cdo/apps/lib/kits/maker/util/makeStubBoard';
 import {injectErrorHandler} from '@cdo/apps/lib/util/javascriptMode';
 
 describe('maker/commands.js - CircuitPlayground', () => {
   let stubBoardController, errorHandler;
 
   beforeEach(() => {
-    stubBoardController = sinon.createStubInstance(FakeBoard);
+    stubBoardController = sinon.createStubInstance(VirtualCPBoard);
     injectBoardController(stubBoardController);
     errorHandler = {
       outputWarning: sinon.spy(),
-      outputError: sinon.stub()
+      outputError: sinon.stub(),
     };
     injectErrorHandler(errorHandler);
   });
@@ -149,17 +150,17 @@ describe('maker/commands.js - CircuitPlayground', () => {
     describe(`event aliases`, () => {
       let component, callback;
 
-      beforeEach(function() {
+      beforeEach(function () {
         component = {on: sinon.spy()};
         callback = () => {};
       });
 
-      it(`aliases 'tap:single' event to 'singleTap'`, function() {
+      it(`aliases 'tap:single' event to 'singleTap'`, function () {
         onBoardEvent({component, event: 'singleTap', callback});
         expect(component.on).to.have.been.calledWith('tap:single', callback);
       });
 
-      it(`aliases 'tap:double' event to 'doubleTap'`, function() {
+      it(`aliases 'tap:double' event to 'doubleTap'`, function () {
         onBoardEvent({component, event: 'doubleTap', callback});
         expect(component.on).to.have.been.calledWith('tap:double', callback);
       });
@@ -171,11 +172,12 @@ describe('maker/commands.js - MicroBit', () => {
   let stubBoardController, errorHandler;
 
   beforeEach(() => {
-    stubBoardController = sinon.createStubInstance(MicrobitStubBoard);
+    stubBoardController = sinon.createStubInstance(MicroBitBoard);
+    stubBoardController.boardClient_ = new MBFirmataClientStub();
     injectBoardController(stubBoardController);
     errorHandler = {
       outputWarning: sinon.spy(),
-      outputError: sinon.stub()
+      outputError: sinon.stub(),
     };
     injectErrorHandler(errorHandler);
   });

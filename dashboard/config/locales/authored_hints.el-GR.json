@@ -603,10 +603,12 @@
           "courseA_maze_seq_challenge1_a": "Μερικές διαδρομές θα σε οδηγήσουν στη δυναμίτιδα, αν προχωρήσεις πολύ."
         },
         "course1_maze_debugging_challenge2": {
-          "courseB_maze_seq_challenge2_b": "Αναδιάταξε τα μπλοκ και πάρε το μεσαίο μονοπάτι."
+          "courseB_maze_seq_challenge2_b": "Αναδιάταξε τα μπλοκ και πάρε το μεσαίο μονοπάτι.",
+          "courseB_maze_seq_challenge2_a": "Δεν χρειάζεται να προσθέσεις ή να αφαιρέσεις μπλοκ για να λύσεις αυτό το παζλ."
         },
         "course1_maze_seq_challenge2": {
-          "courseB_maze_seq_challenge1_b": "Προσπάθησε να μετακινηθείς προς τα Δυτικά για αρχή."
+          "courseB_maze_seq_challenge1_b": "Προσπάθησε να μετακινηθείς προς τα Δυτικά για αρχή.",
+          "courseB_maze_seq_challenge1_a": "Ο συντομότερος δρόμος μπορεί να μην δουλέψει αυτή τη φορά."
         },
         "course2_maze_programming_challenge2": {
           "courseC_maze_programming_challenge2_a": "_Αν με στείλεις προς τα πίσω, να είσαι προσεκτικός! Πρέπει να γυρίσω σωστά!_",
@@ -673,7 +675,8 @@
           "courseC_maze_programming6_a": "Υπάρχουν δύο τρόποι να λύσεις αυτόν τον γρίφο!"
         },
         "courseD_scrat_ramp7": {
-          "courseD_scrat_programming6_a": "Υπάρχουν δύο τρόποι να λύσεις αυτόν τον γρίφο!"
+          "courseD_scrat_programming6_a": "Υπάρχουν δύο τρόποι να λύσεις αυτόν τον γρίφο!",
+          "courseD_scrat_programming6_c": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε να προσθέσετε μπλοκ και να εκτελέσετε τον κώδικα για να δείτε τι θα συμβεί, ακόμα και αν νομίζετε ότι δεν έχετε λύσει το παζλ ακόμα."
         },
         "courseE_artist_functions1": {
           "courseE_artist_functions1_a": "Τα τετράγωνα έχουν 100 pixels πλευρές το καθένα, που σημαίνει ότι θα πρέπει να μετακινηθείτε προς τα εμπρός 175 pixels πριν σχεδιάσετε το δεύτερο τετράγωνο.",
@@ -739,7 +742,8 @@
           "courseF_bee_functions7_a": "Εάν αυτός ο γρίφος σου φαίνεται απαιτητικός, δοκίμασε να φτιάξεις την συνάρτησή σου λίγο-λίγο κάθε φορά.\nΠρόσθεσε μερικά τουβλάκια και μετά δοκίμασέ το. Πρόσθεσε κι άλλα και δοκίμασέ το πάλι. Γρήγορα, θα τα καταφέρεις!"
         },
         "courseC_video_angles": {
-          "courseD_scrat_programming6_a": "Υπάρχουν δύο τρόποι να λύσεις αυτόν τον γρίφο!"
+          "courseD_scrat_programming6_a": "Υπάρχουν δύο τρόποι να λύσεις αυτόν τον γρίφο!",
+          "courseD_scrat_programming6_c": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε να προσθέσετε μπλοκ και να εκτελέσετε τον κώδικα για να δείτε τι θα συμβεί, ακόμα και αν νομίζετε ότι δεν έχετε λύσει το παζλ ακόμα."
         },
         "outbreak1": {
           "step1": "Χρησιμοποιήστε αυτά τα κομμάτια πάζλ για να δημιουργήστε τους χαρακτήρες σας:\n\n[κομμάτι παζλ blockly][0]\n\n[κομμάτι πάζλ blockly][1]\n\nΑυτό το κομμάτι παζλ βρίσκεται στην κατηγορία **Χαρακτήρες** της εργαλειοθήκης.",
@@ -907,7 +911,8 @@
           "courseD_artist_functions8_g": "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
         },
         "courseB_Scrat_ramp1_2021": {
-          "1": "Αν ο Scrat δεν κάνει αυτό που θέλεις, έλεγξε αν τα δυο μπλοκ έχουν κολλήσει μεταξύ τους και πάτησε ξανά \"Εκτέλεση\"."
+          "1": "Αν ο Scrat δεν κάνει αυτό που θέλεις, έλεγξε αν τα δυο μπλοκ έχουν κολλήσει μεταξύ τους και πάτησε ξανά \"Εκτέλεση\".",
+          "2": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε κάτι, και αν δε λειτουργεί, δοκιμάστε κάτι άλλο!"
         },
         "2-3 Maze 3": {
           "2-3_Maze_6_a": "Υπάρχουν δύο τρόποι να λύσεις αυτόν τον γρίφο!"
@@ -1079,7 +1084,7 @@
           "hello_world_click": "Συνδέστε ένα μπλοκ «λένε» κάτω από ένα «όταν κάνετε κλικ» μπλοκ συμβάντων:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"cuteanimals_seahorse\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_spriteSay\">\n        <title name=\"SPEECH\">Hello, ocean!</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"cuteanimals_seahorse\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
         },
         "helloworld_animals_location": {
-          "location_pin_hint": "Για να αλλάξετε τη θέση ενός sprite, κάντε κλικ στην καρφίτσα στο μπλοκ τοποθεσίας και, στη συνέχεια, κάντε κλικ στο σημείο όπου θέλετε να πάει.\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
+          "location_pin_hint": "Για να αλλάξετε τη θέση ενός χαρακτήρα ήρωα, κάντε κλικ στην καρφίτσα στο μπλοκ τοποθεσίας και, στη συνέχεια, κάντε κλικ στο σημείο όπου θέλετε να πάει.\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
         },
         "helloworld_animals_multi": {
           "cat_xml": "Βεβαιωθείτε ότι τα κοστούμια ταιριάζουν σε κάθε τετράγωνο.\n\n<xml>\n  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"cuteanimals_cat_hello\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>\n  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Meow!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"cuteanimals_cat_hello\"</title>\n      </block>\n    </value>\n    </block></next></block>\n</xml>"
@@ -1111,7 +1116,7 @@
           "location_pin_hint": "Για να αλλάξετε τη θέση ενός sprite, κάντε κλικ στην καρφίτσα στο μπλοκ τοποθεσίας και, στη συνέχεια, κάντε κλικ στο σημείο όπου θέλετε να πάει.\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
         },
         "helloworld_emoji_multi": {
-          "storyboard_costume": "Σιγουρέψου ότι τα κοστούμια ταιριάζουν με κάθε ξωτικό.\n<xml><block type=\"gamelab_spriteSay\">\n      <title name=\"SPEECH\">Look at me!</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"emoji_14_1\"</title>\n        </block>\n      </value>\n    </block></xml>"
+          "storyboard_costume": "Σιγουρέψου ότι τα κοστούμια ταιριάζουν με κάθε χαρακτήρα.\n<xml><block type=\"gamelab_spriteSay\">\n      <title name=\"SPEECH\">Look at me!</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"emoji_14_1\"</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "helloworld_emoji_say": {
           "hello-world-first-solution-emoji": "Για να κάνετε το emoji να πει κάτι, συνδέστε τα μπλοκ κώδικα ως εξής:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"emoji_19\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"emoji_19\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
@@ -1178,13 +1183,13 @@
           "location_pin_hint": "Για να αλλάξετε τη θέση ενός sprite, κάντε κλικ στην καρφίτσα στο μπλοκ τοποθεσίας και, στη συνέχεια, κάντε κλικ στο σημείο όπου θέλετε να πάει.\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
         },
         "helloworld_food_multi": {
-          "storyboard_costume": "Σιγουρέψου ότι τα κοστούμια ταιριάζουν με κάθε ξωτικό.\n<xml><block type=\"gamelab_spriteSay\">\n      <title name=\"SPEECH\">Hello, broccoli!</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"face_carrot_1\"</title>\n        </block>\n      </value>\n    </block></xml>"
+          "storyboard_costume": "Σιγουρέψου ότι τα κοστούμια ταιριάζουν με κάθε χαρακτήρα.\n<xml><block type=\"gamelab_spriteSay\">\n      <title name=\"SPEECH\">Hello, broccoli!</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"face_carrot_1\"</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "helloworld_food_multi_soccer-2022": {
-          "storyboard_costume": "Σιγουρέψου ότι τα κοστούμια ταιριάζουν με κάθε ξωτικό.\n<xml><block type=\"gamelab_spriteSay\">\n      <title name=\"SPEECH\">Goal!</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"soccer_ball\"</title>\n        </block>\n      </value>\n    </block></xml>"
+          "storyboard_costume": "Σιγουρέψου ότι τα κοστούμια ταιριάζουν με κάθε χαρακτήρα.\n<xml><block type=\"gamelab_spriteSay\">\n      <title name=\"SPEECH\">Goal!</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"soccer_ball\"</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "helloworld_food_multi_space-2022": {
-          "storyboard_costume": "Σιγουρέψου ότι τα κοστούμια ταιριάζουν με κάθε ξωτικό.\n<xml><block type=\"gamelab_spriteSay\">\n      <title name=\"SPEECH\">Hello, alien!</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"face_carrot_1\"</title>\n        </block>\n      </value>\n    </block></xml>"
+          "storyboard_costume": "Σιγουρέψου ότι τα κοστούμια ταιριάζουν με κάθε χαρακτήρα.\n<xml><block type=\"gamelab_spriteSay\">\n      <title name=\"SPEECH\">Hello, alien!</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"face_carrot_1\"</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "helloworld_food_say": {
           "hello-world-first-solution-pizza": "Για να κάνετε την πίτσα να πει κάτι, συνδέστε τα μπλοκ κώδικα ως εξής:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"face_pizza_1\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_pizza_1\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
@@ -1227,7 +1232,7 @@
           "location_pin_hint": "Για να αλλάξετε τη θέση ενός sprite, κάντε κλικ στην καρφίτσα στο μπλοκ τοποθεσίας και, στη συνέχεια, κάντε κλικ στο σημείο όπου θέλετε να πάει.\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
         },
         "helloworld_retro_multi": {
-          "storyboard_costume": "Σιγουρέψου ότι τα κοστούμια ταιριάζουν με κάθε ξωτικό.\n<xml><block type=\"gamelab_spriteSay\">\n      <title name=\"SPEECH\">Hello!</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"retrocreature_16\"</title>\n        </block>\n      </value>\n    </block></xml>"
+          "storyboard_costume": "Σιγουρέψου ότι τα κοστούμια ταιριάζουν με κάθε χαρακτήρα.\n<xml><block type=\"gamelab_spriteSay\">\n      <title name=\"SPEECH\">Hello!</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"retrocreature_16\"</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "helloworld_retro_say": {
           "hello-world-first-solution-retrocreature": "Για να κάνετε το πλάσμα να πει κάτι, συνδέστε τα μπλοκ κώδικα ως εξής:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"retrocreature_18_1\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"retrocreature_18_1\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
@@ -1235,6 +1240,1877 @@
         "helloworld_retro_sizes": {
           "hw_retro_setProp": "Για να ορίσετε το μέγεθος ενός sprite μόνο μία φορά, μπορείτε να χρησιμοποιήσετε αυτό το μπλοκ:\n\n<xml><block type=\"gamelab_setProp\">\n    <title name=\"PROPERTY\">\"scale\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"retro_purple_burst\"</title>\n      </block>\n    </value>\n    <value name=\"VAL\">\n      <block type=\"math_number\">\n        <title name=\"NUM\">50</title>\n      </block>\n    </value>\n  </block></xml>",
           "hw_retro_changePropBy": "Αν θέλετε να αλλάξετε το μέγεθος ενός sprite ξανά και ξανά (με συμβάντα), χρησιμοποιήστε αυτό το μπλοκ:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"retrocreature_11_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>"
+        },
+        "course1_collector_loops_challenge1": {
+          "courseA_collector_loops_challenge1_a": "Δοκίμασε να αλλάξεις τους αριθμούς σε κάθε βρόχο αν κάτι πάει στραβά."
+        },
+        "course1_maze_seq_challenge1": {
+          "courseA_maze_seq_challenge2_a": "Προσπάθησε να μετρήσεις τα κενά με το δάχτυλό σου. Θυμήσου να μη μετρήσεις το κενό από όπου ξεκινάς!"
+        },
+        "course2_artist_prog_challenge1": {
+          "courseC_artist_prog_challenge1_a": "Το ορθογώνιο έχει πλάτος 200 εικονοστοιχεία και ύψος 100 εικονοστοιχείων. "
+        },
+        "course2_artist_prog_challenge2": {
+          "courseC_artist_prog_challenge2_a": "Μπορείς να βάλεις εντολές μέσα στο μπλοκ `επανέλαβε` για να τις τρέξεις ξανά και ξανά. Δοκίμασέ το!\n\n<xml>\n  \n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">6</title>\n            <statement name=\"DO\">\n              <block type=\"draw_move_by_constant_dropdown\">\n                <title name=\"DIR\">moveForward</title>\n                <title name=\"VALUE\" config=\"25,50,100,150,200,300\">25</title>\n                <next>\n                  <block type=\"jump_by_constant_dropdown\">\n                    <title name=\"DIR\">jumpForward</title>\n                    <title name=\"VALUE\" config=\"25,50,100,150,200,300\">25</title>\n                  </block>\n                </next>\n              </block>\n              </statement></block></xml>"
+        },
+        "courseA_maze_seq_challenge2": {
+          "courseA_maze_seq_challenge2_a": "Προσπάθησε να μετρήσεις τα κενά με το δάχτυλό σου. Θυμήσου να μη μετρήσεις το κενό από όπου ξεκινάς!"
+        },
+        "courseA_maze_seq_challenge22022": {
+          "courseA_maze_seq_challenge2_a": "Προσπάθησε να μετρήσεις τα κενά με το δάχτυλό σου. Θυμήσου να μη μετρήσεις το κενό από όπου ξεκινάς!"
+        },
+        "courseA_maze_seq_challenge2_2018": {
+          "courseA_maze_seq_challenge2_a": "Προσπάθησε να μετρήσεις τα κενά με το δάχτυλό σου. Θυμήσου να μη μετρήσεις το κενό από όπου ξεκινάς!"
+        },
+        "courseA_maze_seq_challenge2_2019": {
+          "courseA_maze_seq_challenge2_a": "Προσπάθησε να μετρήσεις τα κενά με το δάχτυλό σου. Θυμήσου να μη μετρήσεις το κενό από όπου ξεκινάς!"
+        },
+        "courseA_maze_seq_challenge2_2020": {
+          "courseA_maze_seq_challenge2_a": "Προσπάθησε να μετρήσεις τα κενά με το δάχτυλό σου. Θυμήσου να μη μετρήσεις το κενό από όπου ξεκινάς!"
+        },
+        "courseA_maze_seq_challenge2_2021": {
+          "courseA_maze_seq_challenge2_a": "Προσπάθησε να μετρήσεις τα κενά με το δάχτυλό σου. Θυμήσου να μη μετρήσεις το κενό από όπου ξεκινάς!"
+        },
+        "courseB_maze_seq_challenge2": {
+          "courseB_maze_seq_challenge2_a": "Δεν χρειάζεται να προσθέσεις ή να αφαιρέσεις μπλοκ για να λύσεις αυτό το παζλ."
+        },
+        "courseB_maze_seq_challenge22022": {
+          "courseB_maze_seq_challenge2_a": "Δεν χρειάζεται να προσθέσεις ή να αφαιρέσεις μπλοκ για να λύσεις αυτό το παζλ."
+        },
+        "courseB_maze_seq_challenge2_2018": {
+          "courseB_maze_seq_challenge2_a": "Δεν χρειάζεται να προσθέσεις ή να αφαιρέσεις μπλοκ για να λύσεις αυτό το παζλ."
+        },
+        "courseB_maze_seq_challenge2_2019": {
+          "courseB_maze_seq_challenge2_a": "Δεν χρειάζεται να προσθέσεις ή να αφαιρέσεις μπλοκ για να λύσεις αυτό το παζλ."
+        },
+        "courseB_maze_seq_challenge2_2020": {
+          "courseB_maze_seq_challenge2_a": "Δεν χρειάζεται να προσθέσεις ή να αφαιρέσεις μπλοκ για να λύσεις αυτό το παζλ."
+        },
+        "courseB_maze_seq_challenge2_2021": {
+          "courseB_maze_seq_challenge2_a": "Δεν χρειάζεται να προσθέσεις ή να αφαιρέσεις μπλοκ για να λύσεις αυτό το παζλ."
+        },
+        "courseC_artist_loops7a2022": {
+          "courseC_artist_loops7a_a": "Ένας κύκλος έχει 360 μοίρες. Πολλαπλασιάστε τις μοίρες επί τον αριθμό των φορών που επαναλαμβάνετε. Είναι ίσο με 360;\nΕλέγξτε τις προτεινόμενες περιστροφές για να δείτε ότι αυτό λειτουργεί!\n\nΕδώ είναι μερικά παραδείγματα για να ξεκινήσετε:\n\n-   Δοκιμάστε μια στροφή 60 μοιρών για 6 φορές \n-   Δοκιμάστε μια στροφή 45 μοιρών για 8 φορές \n-   Δοκιμάστε μια στροφή 30 μοιρών για 12 φορές "
+        },
+        "courseD_farmer_while3": {
+          "courseD_farmer_while3_b": "Δεν θα πρέπει να χρειάζεσαι τουβλάκια στροφής για να φτάσεις στο σωρό."
+        },
+        "courseD_farmer_while32022": {
+          "courseD_farmer_while3_b": "Δεν θα πρέπει να χρειάζεσαι τουβλάκια στροφής για να φτάσεις στο σωρό."
+        },
+        "courseD_farmer_while3_2018": {
+          "courseD_farmer_while3_b": "Δεν θα πρέπει να χρειάζεσαι τουβλάκια στροφής για να φτάσεις στο σωρό."
+        },
+        "courseD_farmer_while3_2019": {
+          "courseD_farmer_while3_b": "Δεν θα πρέπει να χρειάζεσαι τουβλάκια στροφής για να φτάσεις στο σωρό."
+        },
+        "courseD_farmer_while3_2020": {
+          "courseD_farmer_while3_b": "Δεν θα πρέπει να χρειάζεσαι τουβλάκια στροφής για να φτάσεις στο σωρό."
+        },
+        "courseD_farmer_while3_2021": {
+          "courseD_farmer_while3_b": "Δεν θα πρέπει να χρειάζεσαι τουβλάκια στροφής για να φτάσεις στο σωρό."
+        },
+        "Course 4 Artist 12": {
+          "Course_4_Artist_12_a": "Κάθε επαναλαμβανόμενο σχήμα είναι ο συνδυασμός **μισού εξάγωνου**, ακολουθούμενο από **2/3 ενός τριγώνου**. "
+        },
+        "courseB_maze_seq52022": {
+          "courseB_maze_seq5_a": "Αν κολλήσετε, δοκιμάστε να σχεδιάσετε το μονοπάτι σε χαρτί."
+        },
+        "courseB_maze_seq_challenge1": {
+          "courseB_maze_seq_challenge1_a": "Ο συντομότερος δρόμος μπορεί να μην δουλέψει αυτή τη φορά."
+        },
+        "courseB_maze_seq_challenge12022": {
+          "courseB_maze_seq_challenge1_a": "Ο συντομότερος δρόμος μπορεί να μην δουλέψει αυτή τη φορά."
+        },
+        "courseB_maze_seq_challenge1_2018": {
+          "courseB_maze_seq_challenge1_a": "Ο συντομότερος δρόμος μπορεί να μην δουλέψει αυτή τη φορά."
+        },
+        "courseB_maze_seq_challenge1_2019": {
+          "courseB_maze_seq_challenge1_a": "Ο συντομότερος δρόμος μπορεί να μην δουλέψει αυτή τη φορά."
+        },
+        "courseB_maze_seq_challenge1_2020": {
+          "courseB_maze_seq_challenge1_a": "Ο συντομότερος δρόμος μπορεί να μην δουλέψει αυτή τη φορά."
+        },
+        "courseB_maze_seq_challenge1_2021": {
+          "courseB_maze_seq_challenge1_a": "Ο συντομότερος δρόμος μπορεί να μην δουλέψει αυτή τη φορά."
+        },
+        "courseD_artist_nestedLoops52022": {
+          "courseD_artist_nestedLoops5_a": "Για να το κάνετε εύκολα αυτό:\n- Επανάλαβε 4 φορές\n - κάνε έναν κύκλο\n - άλμα προς τα μπροστά 50 εικονοστοιχεία\n - στρίψε δεξιά 90 μοίρες"
+        },
+        "courseD_artist_nestedLoops72022": {
+          "courseD_artist_nestedLoops7_b": "Χρησιμοποιήστε έναν εμφωλευμένο βρόχο, όπου ο εσωτερικός βρόχος είναι ο κώδικας για ένα τετράγωνο.\n\n- επαναλάβετε 6 φορές\n  - κάντε τετράγωνο\n  - άλμα προς τα εμπρός κατά **50 εικονοστοιχεία**\n  - στροφή **60 μοίρες**"
+        },
+        "courseD_artist_nestedLoops82022": {
+          "courseD_artist_nestedLoops8_c": "Χρησιμοποιήστε έναν εμφωλευμένο βρόχο:\n\n  - Επαναλάβετε 8 φορές\n    - σχεδιάστε ένα εξάγωνο\n    - άλμα προς τα εμπρός 50 εικονοστοιχεία\n    - στρίψτε δεξιά 45 μοίρες"
+        },
+        "courseD_artist_nestedLoops92022": {
+          "courseD_artist_nestedLoops9_c": "Χρησιμοποιήστε δύο εμφωλευμένους βρόχους:\n  - Επαναλάβετε 8 φορές\n    - σχεδιάστε ένα τετράγωνο\n    - άλμα προς τα εμπρός 50 εικονοστοιχεία\n    - στρίψτε δεξιά κατά 45 μοίρες\n  - Επαναλάβετε 8 φορές\n    - σχεδιάστε ένα τρίγωνο\n    - άλμα προς τα εμπρός 50 εικονοστοιχεία\n    - στρίψτε δεξιά κατά 45 μοίρες"
+        },
+        "courseF_clicker_finish_-2022-2": {
+          "clicker_backsgrounds_hint": "Κάντε το παιχνίδι σας αστραφτερό βάζοντας ένα `τυχαίο χρώμα` κάθε φορά που γίνεται κλικ σε έναν χαρακτήρα.\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <field name=\"CONDITION\">\"when\"</field>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <field name=\"ANIMATION\">\"gold coin\"</field>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setBackground\">\n        <value name=\"COLOR\">\n          <block type=\"gamelab_randomColor\"></block>\n        </value>\n      </block>\n    </next>\n  </block></xml>",
+          "clicker_sounds_hint": "Προσθέστε ήχους σε διαφορετικά σημεία του παιχνιδιού σας ενώνοντας ένα μπλοκ `παίξε Ήχο`  κάτω από κάθε συμβάν.\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\">\n    <next>\n      <block type=\"gamelab_playSound\">\n        <field name=\"SOUND\">Choose</field>\n      </block>\n    </next>\n  </block>\n<block type=\"gamelab_spriteClicked\">\n    <field name=\"CONDITION\">\"when\"</field>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <field name=\"ANIMATION\">\"gold coin\"</field>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_playSound\">\n        <field name=\"SOUND\">Choose</field>\n      </block>\n    </next>\n  </block>\n    <block type=\"gamelab_atTime\">\n    <field name=\"UNIT\">\"seconds\"</field>\n    <value name=\"N\">\n      <block type=\"math_number\">\n        <field name=\"NUM\">10</field>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_playSound\">\n        <field name=\"SOUND\">Choose</field>\n      </block>\n    </next>\n  </block>\n</xml>",
+          "clicker_extend_hint": "Θέλετε ένα μεγαλύτερο παιχνίδι; Δημιουργήστε περισσότερους χαρακτήρες μετά από ένα συγκεκριμένο χρονικό διάστημα.\n\n<xml><block type=\"gamelab_atTime\">\n    <field name=\"UNIT\">\"seconds\"</field>\n    <value name=\"N\">\n      <block type=\"math_number\">\n        <field name=\"NUM\">3</field>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_makeNumSprites\">\n        <field name=\"ANIMATION_NAME\">\"gold coin\"</field>\n        <value name=\"NUM\">\n          <block type=\"math_number\">\n            <field name=\"NUM\">5</field>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>",
+          "clicker_remove_hint": "Όταν το παιχνίδι τελειώσει, μπορείτε να αφαιρέσετε όλους τους εναπομείναντες χαρακτήρες ως εξής:\n\n<xml><block type=\"gamelab_atTime\">\n  <field name=\"UNIT\">\"seconds\"</field>\n  <value name=\"N\">\n    <block type=\"math_number\" can_disconnect_from_parent=\"false\">\n      <field name=\"NUM\">10</field>\n    </block>\n  </value>\n  <next>\n    <block type=\"gamelab_destroy\">\n      <value name=\"THIS\">\n        <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n          <field name=\"ANIMATION\">\"gold coin\"</field>\n        </block>\n      </value>\n    </block>\n  </next>\n</block></xml> "
+        },
+        "courseF_clicker_score_-2022-2": {
+          "print_variable_hint": "Μπορείτε να εκτυπώσετε την τιμή της μεταβλητής ως εξής:\n<xml><block type=\"gamelab_printText\">\n  <value name=\"TEXT\">\n    <block type=\"variables_get\">\n      <field name=\"VAR\">score</field>\n    </block>\n  </value>\n</block></xml>",
+          "print_score_challenge_hint": "Μπορείτε να συνδιάσετε και επιπλέον κείμενο με τη μεταβλητή σας ως εξής:\n\n<xml><block type=\"gamelab_printText\">\n  <value name=\"TEXT\">\n    <block type=\"gamelab_textJoin\">\n      <field name=\"TEXT1\">You got </field>\n      <value name=\"TEXT2\">\n        <block type=\"gamelab_textVariableJoin\">\n          <field name=\"VAR\">score</field>\n          <value name=\"TEXT2\">\n            <block type=\"text\">\n              <field name=\"TEXT\"> points!</field>\n            </block>\n          </value>\n        </block>\n      </value>\n    </block>\n  </value>\n</block></xml>"
+        },
+        "courseF_groups_behaviors_-2022-2": {
+          "groups_click_hint": "Θα χρειαστείς ένα μπλοκ συμβάντων. Βεβαιώσου ότι θα κάνεις κλικ πάνω στα αντικείμενα όταν πατήσεις \"Εκτέλεση\"!\n\n<xml>\n  <block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <title name=\"ANIMATION\">\"face_croissant_1\"</title>\n      </block>\n    </value>\n  </block>\n</xml>"
+        },
+        "courseF_groups_costume_-2022-2": {
+          "groups_click_hint": "Θα χρειαστείς ένα μπλοκ συμβάντων. Βεβαιώσου ότι θα κάνεις κλικ πάνω στα αντικείμενα όταν πατήσεις \"Εκτέλεση\"!\n\n<xml>\n  <block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <title name=\"ANIMATION\">\"face_cupcake_1\"</title>\n      </block>\n    </value>\n  </block>\n</xml>",
+          "groups_costume_hint": "Πρόσθεσε ένα μπλοκ `πατημένο` σε ένα μπλοκ `κοστούμι`. Μπορείς να το βρεις μέσα σε ένα μπλοκ συμβάντων!\n\n<xml>\n  <block type=\"gamelab_setAnimation\">\n      <title name=\"ANIMATION\">\"face_birthdaycake_1\"</title>\n    </block>\n</xml>"
+        },
+        "courseF_groups_say_-2022-2": {
+          "groups_click_hint": "Θα χρειαστείς ένα μπλοκ συμβάντων. Βεβαιώσου ότι θα κάνεις κλικ πάνω στα αντικείμενα όταν πατήσεις \"Εκτέλεση\"!\n\n<xml>\n  <block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <title name=\"ANIMATION\">\"face_avocado_1\"</title>\n      </block>\n    </value>\n  </block>\n</xml>",
+          "groups_say_hint": "Πρόσθεσε ένα μπλοκ `πατημένος χαρακτήρας` μέσα σε ένα μπλοκ `πες`. Μπορείς να το βρεις μέσα στο μπλοκ συμβάντων!\n<xml>\n  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Wow!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_clickedSpritePointer\"></block>\n    </value>\n  </block>\n</xml>"
+        },
+        "courseF_groups_size_-2022-2": {
+          "expand_click_event": "Κάνε κλικ στο  κουμπί `+` στο μπλοκ συμβάντων. Χρησιμοποίησε το μπλοκ που βρίσκεται μέσα για να ολοκληρώσεις το πρόγραμμα.\n\n<xml>\n  <block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_strawberry_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_changePropBy\">\n        <title name=\"PROPERTY\">\"scale\"</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_clickedSpritePointer\"></block>\n        </value>\n        <value name=\"VAL\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">10</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseF_variables2_click_-2022-2": {
+          "change_var_when_click_hint": "Για να κάνετε τον χαρακτήρα να λέει μία διαφορετική τιμή κάθε φορά, προσθέστε αυτό το μπλοκ κάτω από το μπλοκ συμβάντος `Όταν πατιέται`\n\n<xml><block type=\"math_change\">\n      <field name=\"VAR\">???</field>\n      <value name=\"DELTA\">\n        <block type=\"math_number\">\n          <field name=\"NUM\">1</field>\n        </block>\n      </value>\n    </block></xml>"
+        },
+        "courseF_variables2_set_-2022-2": {
+          "set_block_hint": "Μπορείτε να ορίσετε μία μεταβλητή ως εξής: \n\n<xml>\n<block type=\"variables_set\">\n    <title name=\"VAR\">counter</title>\n    <value name=\"VALUE\">\n      <block type=\"math_number\">\n        <title name=\"NUM\">3</title>\n      </block>\n    </value>\n  </block>\n  </xml>",
+          "say_variable_hint": "Μπορείτε να κάνετε έναν χαρακτήρα να πει την τιμή μίας μεταβλητής ως εξής:\n\n<xml><block type=\"gamelab_spriteSayTime\">\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <field name=\"ANIMATION\">\"purple bunny\"</field>\n      </block>\n    </value>\n    <value name=\"TEXT1\">\n      <block type=\"variables_get\">\n        <field name=\"VAR\">count</field>\n      </block>\n    </value>\n    <value name=\"NUM\">\n      <block type=\"math_number\">\n        <field name=\"NUM\">4</field>\n      </block>\n    </value>\n  </block></xml>"
+        },
+        "courseA_maze_ramp2_2021": {
+          "1": "Ο νέος κώδικας σας θα πρέπει να μοιάζει κάτι σαν και το παρακάτω: [0]"
+        },
+        "courseA_maze_ramp3a_2021": {
+          "1": "Ο νέος κώδικας σας θα πρέπει να μοιάζει κάτι σαν και το παρακάτω: [0]"
+        },
+        "courseB_Scrat_ramp12022": {
+          "1": "Αν ο Scrat δεν κάνει αυτό που θέλεις, έλεγξε αν τα δυο μπλοκ έχουν κολλήσει μεταξύ τους και πάτησε ξανά \"Εκτέλεση\".",
+          "2": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε κάτι, και αν δε λειτουργεί, δοκιμάστε κάτι άλλο!"
+        },
+        "courseB_Scrat_ramp1_2018": {
+          "1": "Αν ο Scrat δεν κάνει αυτό που θέλεις, έλεγξε αν τα δυο μπλοκ έχουν κολλήσει μεταξύ τους και πάτησε ξανά \"Εκτέλεση\".",
+          "2": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε κάτι, και αν δε λειτουργεί, δοκιμάστε κάτι άλλο!"
+        },
+        "courseB_Scrat_ramp1_2019": {
+          "1": "Αν ο Scrat δεν κάνει αυτό που θέλεις, έλεγξε αν τα δυο μπλοκ έχουν κολλήσει μεταξύ τους και πάτησε ξανά \"Εκτέλεση\".",
+          "2": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε κάτι, και αν δε λειτουργεί, δοκιμάστε κάτι άλλο!"
+        },
+        "courseB_Scrat_ramp1_2020": {
+          "1": "Αν ο Scrat δεν κάνει αυτό που θέλεις, έλεγξε αν τα δυο μπλοκ έχουν κολλήσει μεταξύ τους και πάτησε ξανά \"Εκτέλεση\".",
+          "2": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε κάτι, και αν δε λειτουργεί, δοκιμάστε κάτι άλλο!"
+        },
+        "courseB_maze_seq9": {
+          "courseB_maze_seq9_d": "Κόλλησες; Δοκίμασε αυτό το μονοπάτι!"
+        },
+        "courseB_maze_seq92022": {
+          "courseB_maze_seq9_d": "Κόλλησες; Δοκίμασε αυτό το μονοπάτι!"
+        },
+        "courseB_maze_seq9_2018": {
+          "courseB_maze_seq9_d": "Κόλλησες; Δοκίμασε αυτό το μονοπάτι!"
+        },
+        "courseB_maze_seq9_2019": {
+          "courseB_maze_seq9_d": "Κόλλησες; Δοκίμασε αυτό το μονοπάτι!"
+        },
+        "courseB_maze_seq9_2020": {
+          "courseB_maze_seq9_d": "Κόλλησες; Δοκίμασε αυτό το μονοπάτι!"
+        },
+        "courseB_maze_seq9_2021": {
+          "courseB_maze_seq9_d": "Κόλλησες; Δοκίμασε αυτό το μονοπάτι!"
+        },
+        "courseB_starWars_prog2_2018": {
+          "courseB_starWars_prog2_a": "Χώρισε αυτό το πρόβλημα σε δύο μέρη. Πάρτε το πρώτο από τα  άχρηστα μέταλλα και μετά βρες πώς θα πάρεις το άλλο."
+        },
+        "coursea_maze_ramp12022": {
+          "courseC_maze_programming1_b": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε κάτι, και αν δε λειτουργεί, δοκιμάστε κάτι άλλο!",
+          "courseC_maze_programming1_a": "Αν το Angry Bird δεν πηγαίνει στο γουρούνι, ελέγξτε αν τα δυο μπλοκ έχουν κολλήσει μεταξύ τους και πάτησε ξανά το κουμπί \"Εκτέλεση\"."
+        },
+        "coursea_maze_ramp1_2018": {
+          "courseC_maze_programming1_b": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε κάτι, και αν δε λειτουργεί, δοκιμάστε κάτι άλλο!",
+          "courseC_maze_programming1_a": "Αν το Angry Bird δεν πηγαίνει στο γουρούνι, ελέγξτε αν τα δυο μπλοκ έχουν κολλήσει μεταξύ τους και πάτησε ξανά το κουμπί \"Εκτέλεση\"."
+        },
+        "coursea_maze_ramp1_2019": {
+          "courseC_maze_programming1_b": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε κάτι, και αν δε λειτουργεί, δοκιμάστε κάτι άλλο!",
+          "courseC_maze_programming1_a": "Αν το Angry Bird δεν πηγαίνει στο γουρούνι, ελέγξτε αν τα δυο μπλοκ έχουν κολλήσει μεταξύ τους και πάτησε ξανά το κουμπί \"Εκτέλεση\"."
+        },
+        "coursea_maze_ramp1_2020": {
+          "courseC_maze_programming1_b": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε κάτι, και αν δε λειτουργεί, δοκιμάστε κάτι άλλο!",
+          "courseC_maze_programming1_a": "Αν το Angry Bird δεν πηγαίνει στο γουρούνι, ελέγξτε αν τα δυο μπλοκ έχουν κολλήσει μεταξύ τους και πάτησε ξανά το κουμπί \"Εκτέλεση\"."
+        },
+        "coursea_maze_ramp1_2021": {
+          "courseC_maze_programming1_a": "Αν το Πουλί δεν πηγαίνει στο Πουλί, ελέγξτε αν τα δυο μπλοκ έχουν κολλήσει μεταξύ τους και πάτησε ξανά το κουμπί \"Εκτέλεση\".",
+          "courseC_maze_programming1_b": "Μη φοβάστε να κάνετε λάθος! Δοκιμάστε κάτι, και αν δεν λειτουργεί, δοκιμάστε κάτι άλλο!"
+        },
+        "Overworld House Frame Chosen": {
+          "mc_6_b": "Μη φοβάσαι να κάνεις λάθος! Τρέξε τον κώδικα για να δεις τι θα συμβεί, ακόμα και αν δεν έχεις λύσει το παζλ ακόμα."
+        },
+        "Overworld House Frame Chosen2022": {
+          "mc_6_b": "Μη φοβάσαι να κάνεις λάθος! Τρέξε τον κώδικα για να δεις τι θα συμβεί, ακόμα και αν δεν έχεις λύσει το παζλ ακόμα."
+        },
+        "Overworld House Frame Chosen_2019": {
+          "mc_6_b": "Μη φοβάσαι να κάνεις λάθος! Τρέξε τον κώδικα για να δεις τι θα συμβεί, ακόμα και αν δεν έχεις λύσει το παζλ ακόμα."
+        },
+        "Overworld House Frame Chosen_2020": {
+          "mc_6_b": "Μη φοβάσαι να κάνεις λάθος! Τρέξε τον κώδικα για να δεις τι θα συμβεί, ακόμα και αν δεν έχεις λύσει το παζλ ακόμα."
+        },
+        "Overworld House Frame Chosen_2021": {
+          "mc_6_b": "Μη φοβάσαι να κάνεις λάθος! Τρέξε τον κώδικα για να δεις τι θα συμβεί, ακόμα και αν δεν έχεις λύσει το παζλ ακόμα."
+        },
+        "Overworld Place Wall": {
+          "mc_5_c": "Μη φοβάσαι να κάνεις λάθος! Τρέξε τον κώδικα για να δεις τι θα συμβεί, ακόμα και αν δεν έχεις λύσει το παζλ ακόμα."
+        },
+        "Overworld Place Wall2022": {
+          "mc_5_c": "Μη φοβάσαι να κάνεις λάθος! Τρέξε τον κώδικα για να δεις τι θα συμβεί, ακόμα και αν δεν έχεις λύσει το παζλ ακόμα."
+        },
+        "Overworld Place Wall_2019": {
+          "mc_5_c": "Μη φοβάσαι να κάνεις λάθος! Τρέξε τον κώδικα για να δεις τι θα συμβεί, ακόμα και αν δεν έχεις λύσει το παζλ ακόμα."
+        },
+        "Overworld Place Wall_2020": {
+          "mc_5_c": "Μη φοβάσαι να κάνεις λάθος! Τρέξε τον κώδικα για να δεις τι θα συμβεί, ακόμα και αν δεν έχεις λύσει το παζλ ακόμα."
+        },
+        "Overworld Place Wall_2021": {
+          "mc_5_c": "Μη φοβάσαι να κάνεις λάθος! Τρέξε τον κώδικα για να δεις τι θα συμβεί, ακόμα και αν δεν έχεις λύσει το παζλ ακόμα."
+        },
+        "Overworld Shear Sheep": {
+          "mc_3_c": "Μη φοβάσαι να κάνεις λάθος! Τρέξε τον κώδικα για να δεις τι θα συμβεί, ακόμα και αν δεν έχεις λύσει το παζλ ακόμα."
+        },
+        "Overworld Shear Sheep2022": {
+          "mc_3_c": "Μη φοβάσαι να κάνεις λάθος! Τρέξε τον κώδικα για να δεις τι θα συμβεί, ακόμα και αν δεν έχεις λύσει το παζλ ακόμα."
+        },
+        "Overworld Shear Sheep_2019": {
+          "mc_3_c": "Μη φοβάσαι να κάνεις λάθος! Τρέξε τον κώδικα για να δεις τι θα συμβεί, ακόμα και αν δεν έχεις λύσει το παζλ ακόμα."
+        },
+        "Overworld Shear Sheep_2020": {
+          "mc_3_c": "Μη φοβάσαι να κάνεις λάθος! Τρέξε τον κώδικα για να δεις τι θα συμβεί, ακόμα και αν δεν έχεις λύσει το παζλ ακόμα."
+        },
+        "Overworld Shear Sheep_2021": {
+          "mc_3_c": "Μη φοβάσαι να κάνεις λάθος! Τρέξε τον κώδικα για να δεις τι θα συμβεί, ακόμα και αν δεν έχεις λύσει το παζλ ακόμα."
+        },
+        "Underground Iron": {
+          "mc_10_c": "Μη φοβάσαι να κάνεις λάθος! Τρέξε τον κώδικα για να δεις τι θα συμβεί, ακόμα και αν δεν έχεις λύσει το παζλ ακόμα."
+        },
+        "Underground Iron2022": {
+          "mc_10_c": "Μη φοβάσαι να κάνεις λάθος! Τρέξε τον κώδικα για να δεις τι θα συμβεί, ακόμα και αν δεν έχεις λύσει το παζλ ακόμα."
+        },
+        "Underground Iron_2019": {
+          "mc_10_c": "Μη φοβάσαι να κάνεις λάθος! Τρέξε τον κώδικα για να δεις τι θα συμβεί, ακόμα και αν δεν έχεις λύσει το παζλ ακόμα."
+        },
+        "Underground Iron_2020": {
+          "mc_10_c": "Μη φοβάσαι να κάνεις λάθος! Τρέξε τον κώδικα για να δεις τι θα συμβεί, ακόμα και αν δεν έχεις λύσει το παζλ ακόμα."
+        },
+        "Underground Iron_2021": {
+          "mc_10_c": "Μη φοβάσαι να κάνεις λάθος! Τρέξε τον κώδικα για να δεις τι θα συμβεί, ακόμα και αν δεν έχεις λύσει το παζλ ακόμα."
+        },
+        "courseA_harvester_loops3": {
+          "courseA_harvester_loops3_b": "Για να επαναλάβετε τον κώδικα, σύρτε έξω ένα βρόχο `repeat` (<xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">4</title>\n  </block></xml> ) και στη συνέχεια, τοποθετήστε μέσα σε αυτό, το μπλοκ που θέλετε να επαναληφθεί. "
+        },
+        "courseA_harvester_loops32022": {
+          "courseA_harvester_loops3_b": "Για να επαναλάβετε τον κώδικα, σύρτε έξω ένα βρόχο `repeat` (<xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">4</title>\n  </block></xml> ) και στη συνέχεια, τοποθετήστε μέσα σε αυτό, το μπλοκ που θέλετε να επαναληφθεί. "
+        },
+        "courseA_harvester_loops3_2019": {
+          "courseA_harvester_loops3_b": "Για να επαναλάβετε τον κώδικα, σύρτε έξω ένα βρόχο `repeat` (<xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">4</title>\n  </block></xml> ) και στη συνέχεια, τοποθετήστε μέσα σε αυτό, το μπλοκ που θέλετε να επαναληφθεί. "
+        },
+        "courseA_harvester_loops3_2020": {
+          "courseA_harvester_loops3_b": "Για να επαναλάβετε τον κώδικα, σύρτε έξω ένα βρόχο `repeat` (<xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">4</title>\n  </block></xml> ) και στη συνέχεια, τοποθετήστε μέσα σε αυτό, το μπλοκ που θέλετε να επαναληφθεί. "
+        },
+        "courseA_harvester_loops3_2021": {
+          "courseA_harvester_loops3_b": "Για να επαναλάβετε τον κώδικα, σύρτε έξω ένα βρόχο `repeat` (<xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">4</title>\n  </block></xml> ) και στη συνέχεια, τοποθετήστε μέσα σε αυτό, το μπλοκ που θέλετε να επαναληφθεί. "
+        },
+        "courseA_harvester_loops6": {
+          "courseA_harvester_loops6_a": "Εάν κολλήσατε, δοκιμάστε να γράψετε τα βήματα σε χαρτί και να αναζητήσετε επαναλαμβανόμενα μοτίβα."
+        },
+        "courseA_harvester_loops62022": {
+          "courseA_harvester_loops6_a": "Εάν κολλήσατε, δοκιμάστε να γράψετε τα βήματα σε χαρτί και να αναζητήσετε επαναλαμβανόμενα μοτίβα."
+        },
+        "courseA_harvester_loops6_2019": {
+          "courseA_harvester_loops6_a": "Εάν κολλήσατε, δοκιμάστε να γράψετε τα βήματα σε χαρτί και να αναζητήσετε επαναλαμβανόμενα μοτίβα."
+        },
+        "courseA_harvester_loops6_2020": {
+          "courseA_harvester_loops6_a": "Εάν κολλήσατε, δοκιμάστε να γράψετε τα βήματα σε χαρτί και να αναζητήσετε επαναλαμβανόμενα μοτίβα."
+        },
+        "courseA_harvester_loops6_2021": {
+          "courseA_harvester_loops6_a": "Εάν κολλήσατε, δοκιμάστε να γράψετε τα βήματα σε χαρτί και να αναζητήσετε επαναλαμβανόμενα μοτίβα."
+        },
+        "courseA_maze_ramp22022": {
+          "1": "Ο νέος κώδικας σας θα πρέπει να μοιάζει κάτι σαν και το παρακάτω: [0]"
+        },
+        "courseA_maze_ramp2_2018": {
+          "1": "Ο νέος κώδικας σας θα πρέπει να μοιάζει κάτι σαν και το παρακάτω: [0]"
+        },
+        "courseA_maze_ramp2_2019": {
+          "1": "Ο νέος κώδικας σας θα πρέπει να μοιάζει κάτι σαν και το παρακάτω: [0]"
+        },
+        "courseA_maze_ramp2_2020": {
+          "1": "Ο νέος κώδικας σας θα πρέπει να μοιάζει κάτι σαν και το παρακάτω: [0]"
+        },
+        "courseA_maze_ramp3a2022": {
+          "1": "Ο νέος κώδικας σας θα πρέπει να μοιάζει κάτι σαν και το παρακάτω: [0]"
+        },
+        "courseA_maze_ramp3a_2018": {
+          "1": "Ο νέος κώδικας σας θα πρέπει να μοιάζει κάτι σαν και το παρακάτω: [0]"
+        },
+        "courseA_maze_ramp3a_2019": {
+          "1": "Ο νέος κώδικας σας θα πρέπει να μοιάζει κάτι σαν και το παρακάτω: [0]"
+        },
+        "courseA_maze_ramp3a_2020": {
+          "1": "Ο νέος κώδικας σας θα πρέπει να μοιάζει κάτι σαν και το παρακάτω: [0]"
+        },
+        "courseA_maze_ramp3b2022": {
+          "1": "Ο νέος κώδικας σας θα πρέπει να μοιάζει κάτι σαν και το παρακάτω: [0]"
+        },
+        "courseA_maze_ramp3b_2018": {
+          "1": "Ο νέος κώδικας σας θα πρέπει να μοιάζει κάτι σαν και το παρακάτω: [0]"
+        },
+        "courseA_maze_ramp3b_2019": {
+          "1": "Ο νέος κώδικας σας θα πρέπει να μοιάζει κάτι σαν και το παρακάτω: [0]"
+        },
+        "courseA_maze_ramp3b_2020": {
+          "1": "Ο νέος κώδικας σας θα πρέπει να μοιάζει κάτι σαν και το παρακάτω: [0]"
+        },
+        "courseA_maze_ramp3b_2021": {
+          "1": "Ο νέος κώδικας σας θα πρέπει να μοιάζει κάτι σαν και το παρακάτω: [0]"
+        },
+        "courseA_maze_ramp4a2022": {
+          "1": "Ο νέος κώδικας σας θα πρέπει να μοιάζει κάτι σαν και το παρακάτω: [0]"
+        },
+        "courseA_maze_ramp4a_2018": {
+          "1": "Ο νέος κώδικας σας θα πρέπει να μοιάζει κάτι σαν και το παρακάτω: [0]"
+        },
+        "courseA_maze_ramp4a_2019": {
+          "1": "Ο νέος κώδικας σας θα πρέπει να μοιάζει κάτι σαν και το παρακάτω: [0]"
+        },
+        "courseA_maze_ramp4a_2020": {
+          "1": "Ο νέος κώδικας σας θα πρέπει να μοιάζει κάτι σαν και το παρακάτω: [0]"
+        },
+        "courseA_maze_ramp4a_2021": {
+          "1": "Ο νέος κώδικας σας θα πρέπει να μοιάζει κάτι σαν και το παρακάτω: [0]"
+        },
+        "courseA_maze_ramp5a2022": {
+          "1": "Ο νέος κώδικας σας θα πρέπει να μοιάζει κάτι σαν και το παρακάτω: [0]"
+        },
+        "courseA_maze_ramp5a_2018": {
+          "1": "Ο νέος κώδικας σας θα πρέπει να μοιάζει κάτι σαν και το παρακάτω: [0]"
+        },
+        "courseA_maze_ramp5a_2019": {
+          "1": "Ο νέος κώδικας σας θα πρέπει να μοιάζει κάτι σαν και το παρακάτω: [0]"
+        },
+        "courseA_maze_ramp5a_2020": {
+          "1": "Ο νέος κώδικας σας θα πρέπει να μοιάζει κάτι σαν και το παρακάτω: [0]"
+        },
+        "courseA_maze_ramp5a_2021": {
+          "1": "Ο νέος κώδικας σας θα πρέπει να μοιάζει κάτι σαν και το παρακάτω: [0]"
+        },
+        "courseA_maze_seq1": {
+          "courseA_maze_seq1_b": "Το Angry Bird πρέπει να κάνει 3 βήματα προς τα Δυτικά για να φτάσει στο γουρούνι. Χρησιμοποίησε αυτό το μπλοκ:\n\n<xml><block type=\"maze_moveWest\"/></xml>"
+        },
+        "courseA_maze_seq12022": {
+          "courseA_maze_seq1_b": "Το Angry Bird πρέπει να κάνει 3 βήματα προς τα Δυτικά για να φτάσει στο γουρούνι. Χρησιμοποίησε αυτό το μπλοκ:\n\n<xml><block type=\"maze_moveWest\"/></xml>"
+        },
+        "courseA_maze_seq13": {
+          "courseA_maze_seq13_b": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε να προσθέσετε μπλοκ και να εκτελέσετε τον κώδικα για να δείτε τι θα συμβεί."
+        },
+        "courseA_maze_seq132022": {
+          "courseA_maze_seq13_b": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε να προσθέσετε μπλοκ και να εκτελέσετε τον κώδικα για να δείτε τι θα συμβεί."
+        },
+        "courseA_maze_seq13_2018": {
+          "courseA_maze_seq13_b": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε να προσθέσετε μπλοκ και να εκτελέσετε τον κώδικα για να δείτε τι θα συμβεί."
+        },
+        "courseA_maze_seq13_2019": {
+          "courseA_maze_seq13_b": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε να προσθέσετε μπλοκ και να εκτελέσετε τον κώδικα για να δείτε τι θα συμβεί."
+        },
+        "courseA_maze_seq13_2020": {
+          "courseA_maze_seq13_b": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε να προσθέσετε μπλοκ και να εκτελέσετε τον κώδικα για να δείτε τι θα συμβεί."
+        },
+        "courseA_maze_seq13_2021": {
+          "courseA_maze_seq13_b": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε να προσθέσετε μπλοκ και να εκτελέσετε τον κώδικα για να δείτε τι θα συμβεί."
+        },
+        "courseA_maze_seq1_2018": {
+          "courseA_maze_seq1_b": "Το Angry Bird πρέπει να κάνει 3 βήματα προς τα Δυτικά για να φτάσει στο γουρούνι. Χρησιμοποίησε αυτό το μπλοκ:\n\n<xml><block type=\"maze_moveWest\"/></xml>"
+        },
+        "courseA_maze_seq1_2019": {
+          "courseA_maze_seq1_b": "Το Angry Bird πρέπει να κάνει 3 βήματα προς τα Δυτικά για να φτάσει στο γουρούνι. Χρησιμοποίησε αυτό το μπλοκ:\n\n<xml><block type=\"maze_moveWest\"/></xml>"
+        },
+        "courseA_maze_seq1_2020": {
+          "courseA_maze_seq1_b": "Το Angry Bird πρέπει να κάνει 3 βήματα προς τα Δυτικά για να φτάσει στο γουρούνι. Χρησιμοποίησε αυτό το μπλοκ:\n\n<xml><block type=\"maze_moveWest\"/></xml>"
+        },
+        "courseA_maze_seq1_2021": {
+          "courseA_maze_seq1_b": "Το Angry Bird πρέπει να κάνει 3 βήματα προς τα Δυτικά για να φτάσει στο γουρούνι. Χρησιμοποίησε αυτό το μπλοκ:\n\n<xml><block type=\"maze_moveWest\"/></xml>"
+        },
+        "courseB_Scrat_ramp22022": {
+          "1": "Ο νέος κώδικας σας θα πρέπει να μοιάζει κάτι σαν και το παρακάτω: [0]"
+        },
+        "courseB_Scrat_ramp2_2018": {
+          "1": "Ο νέος κώδικας σας θα πρέπει να μοιάζει κάτι σαν και το παρακάτω: [0]"
+        },
+        "courseB_Scrat_ramp2_2019": {
+          "1": "Ο νέος κώδικας σας θα πρέπει να μοιάζει κάτι σαν και το παρακάτω: [0]"
+        },
+        "courseB_Scrat_ramp2_2020": {
+          "1": "Ο νέος κώδικας σας θα πρέπει να μοιάζει κάτι σαν και το παρακάτω: [0]"
+        },
+        "courseB_Scrat_ramp2_2021": {
+          "1": "Ο νέος κώδικας σας θα πρέπει να μοιάζει κάτι σαν και το παρακάτω: [0]"
+        },
+        "courseB_Scrat_ramp3a2022": {
+          "1": "Ο νέος κώδικας σας θα πρέπει να μοιάζει κάτι σαν και το παρακάτω: [0]"
+        },
+        "courseB_Scrat_ramp3a_2018": {
+          "1": "Ο νέος κώδικας σας θα πρέπει να μοιάζει κάτι σαν και το παρακάτω: [0]"
+        },
+        "courseB_Scrat_ramp3a_2019": {
+          "1": "Ο νέος κώδικας σας θα πρέπει να μοιάζει κάτι σαν και το παρακάτω: [0]"
+        },
+        "courseB_Scrat_ramp3a_2020": {
+          "1": "Ο νέος κώδικας σας θα πρέπει να μοιάζει κάτι σαν και το παρακάτω: [0]"
+        },
+        "courseB_Scrat_ramp3a_2021": {
+          "1": "Ο νέος κώδικας σας θα πρέπει να μοιάζει κάτι σαν και το παρακάτω: [0]"
+        },
+        "courseB_Scrat_ramp3b2022": {
+          "1": "Ο νέος κώδικας σας θα πρέπει να μοιάζει κάτι σαν και το παρακάτω: [0]"
+        },
+        "courseB_Scrat_ramp3b_2018": {
+          "1": "Ο νέος κώδικας σας θα πρέπει να μοιάζει κάτι σαν και το παρακάτω: [0]"
+        },
+        "courseB_Scrat_ramp3b_2019": {
+          "1": "Ο νέος κώδικας σας θα πρέπει να μοιάζει κάτι σαν και το παρακάτω: [0]"
+        },
+        "courseB_Scrat_ramp3b_2020": {
+          "1": "Ο νέος κώδικας σας θα πρέπει να μοιάζει κάτι σαν και το παρακάτω: [0]"
+        },
+        "courseB_Scrat_ramp3b_2021": {
+          "1": "Ο νέος κώδικας σας θα πρέπει να μοιάζει κάτι σαν και το παρακάτω: [0]"
+        },
+        "courseB_Scrat_ramp4a2022": {
+          "1": "Ο νέος κώδικας σας θα πρέπει να μοιάζει κάτι σαν και το παρακάτω: [0]"
+        },
+        "courseB_Scrat_ramp4a_2018": {
+          "1": "Ο νέος κώδικας σας θα πρέπει να μοιάζει κάτι σαν και το παρακάτω: [0]"
+        },
+        "courseB_Scrat_ramp4a_2019": {
+          "1": "Ο νέος κώδικας σας θα πρέπει να μοιάζει κάτι σαν και το παρακάτω: [0]"
+        },
+        "courseB_Scrat_ramp4a_2020": {
+          "1": "Ο νέος κώδικας σας θα πρέπει να μοιάζει κάτι σαν και το παρακάτω: [0]"
+        },
+        "courseB_Scrat_ramp4a_2021": {
+          "1": "Ο νέος κώδικας σας θα πρέπει να μοιάζει κάτι σαν και το παρακάτω: [0]"
+        },
+        "courseB_Scrat_ramp5a2022": {
+          "1": "Ο νέος κώδικας σας θα πρέπει να μοιάζει κάτι σαν και το παρακάτω: [0]"
+        },
+        "courseB_Scrat_ramp5a_2018": {
+          "1": "Ο νέος κώδικας σας θα πρέπει να μοιάζει κάτι σαν και το παρακάτω: [0]"
+        },
+        "courseB_Scrat_ramp5a_2019": {
+          "1": "Ο νέος κώδικας σας θα πρέπει να μοιάζει κάτι σαν και το παρακάτω: [0]"
+        },
+        "courseB_Scrat_ramp5a_2020": {
+          "1": "Ο νέος κώδικας σας θα πρέπει να μοιάζει κάτι σαν και το παρακάτω: [0]"
+        },
+        "courseB_Scrat_ramp5a_2021": {
+          "1": "Ο νέος κώδικας σας θα πρέπει να μοιάζει κάτι σαν και το παρακάτω: [0]"
+        },
+        "courseB_iceage_loops1": {
+          "courseB_iceage_loops1_a": "Πρόσεξε τον σπασμένο πάγο! Ο Σκρατ θα πέσει μέσα!"
+        },
+        "courseB_iceage_loops10": {
+          "courseB_iceage_loops10_a": "Πρόσεξε τον σπασμένο πάγο! Ο Σκρατ θα πέσει μέσα στο νερό!",
+          "courseB_iceage_loops10_b": "Δοκίμασε να πεις τα βήματα δυνατά ή να τα γράψεις σε ένα κομμάτι χαρτί. Βλέπεις κάποιο μοτίβο;",
+          "courseB_iceage_loops10_c": "Αυτό είναι ένα μεγάλο παζλ! Ακολούθησε αυτό το μονοπάτι."
+        },
+        "courseB_iceage_loops102022": {
+          "courseB_iceage_loops10_a": "Πρόσεξε τον σπασμένο πάγο! Ο Σκρατ θα πέσει μέσα στο νερό!",
+          "courseB_iceage_loops10_b": "Δοκίμασε να πεις τα βήματα δυνατά ή να τα γράψεις σε ένα κομμάτι χαρτί. Βλέπεις κάποιο μοτίβο;",
+          "courseB_iceage_loops10_c": "Αυτό είναι ένα μεγάλο παζλ! Ακολούθησε αυτό το μονοπάτι."
+        },
+        "courseB_iceage_loops10_2019": {
+          "courseB_iceage_loops10_a": "Πρόσεξε τον σπασμένο πάγο! Ο Σκρατ θα πέσει μέσα στο νερό!",
+          "courseB_iceage_loops10_b": "Δοκίμασε να πεις τα βήματα δυνατά ή να τα γράψεις σε ένα κομμάτι χαρτί. Βλέπεις κάποιο μοτίβο;",
+          "courseB_iceage_loops10_c": "Αυτό είναι ένα μεγάλο παζλ! Ακολούθησε αυτό το μονοπάτι."
+        },
+        "courseB_iceage_loops10_2020": {
+          "courseB_iceage_loops10_a": "Πρόσεξε τον σπασμένο πάγο! Ο Σκρατ θα πέσει μέσα στο νερό!",
+          "courseB_iceage_loops10_b": "Δοκίμασε να πεις τα βήματα δυνατά ή να τα γράψεις σε ένα κομμάτι χαρτί. Βλέπεις κάποιο μοτίβο;",
+          "courseB_iceage_loops10_c": "Αυτό είναι ένα μεγάλο παζλ! Ακολούθησε αυτό το μονοπάτι."
+        },
+        "courseB_iceage_loops10_2021": {
+          "courseB_iceage_loops10_a": "Πρόσεξε τον σπασμένο πάγο! Ο Σκρατ θα πέσει μέσα στο νερό!",
+          "courseB_iceage_loops10_b": "Δοκίμασε να πεις τα βήματα δυνατά ή να τα γράψεις σε ένα κομμάτι χαρτί. Βλέπεις κάποιο μοτίβο;",
+          "courseB_iceage_loops10_c": "Αυτό είναι ένα μεγάλο παζλ! Ακολούθησε αυτό το μονοπάτι."
+        },
+        "courseB_iceage_loops12022": {
+          "courseB_iceage_loops1_a": "Πρόσεξε τον σπασμένο πάγο! Ο Σκρατ θα πέσει μέσα!"
+        },
+        "courseB_iceage_loops1_2019": {
+          "courseB_iceage_loops1_a": "Πρόσεξε τον σπασμένο πάγο! Ο Σκρατ θα πέσει μέσα!"
+        },
+        "courseB_iceage_loops1_2020": {
+          "courseB_iceage_loops1_a": "Πρόσεξε τον σπασμένο πάγο! Ο Σκρατ θα πέσει μέσα!"
+        },
+        "courseB_iceage_loops1_2021": {
+          "courseB_iceage_loops1_a": "Πρόσεξε τον σπασμένο πάγο! Ο Σκρατ θα πέσει μέσα!"
+        },
+        "courseB_iceage_loops2": {
+          "courseB_iceage_loops2_b": "Αν κολλήσατε, δοκιμάστε να πείτε τα βήματα δυνατά."
+        },
+        "courseB_iceage_loops22022": {
+          "courseB_iceage_loops2_b": "Αν κολλήσατε, δοκιμάστε να πείτε τα βήματα δυνατά."
+        },
+        "courseB_iceage_loops2_2019": {
+          "courseB_iceage_loops2_b": "Αν κολλήσατε, δοκιμάστε να πείτε τα βήματα δυνατά."
+        },
+        "courseB_iceage_loops2_2020": {
+          "courseB_iceage_loops2_b": "Αν κολλήσατε, δοκιμάστε να πείτε τα βήματα δυνατά."
+        },
+        "courseB_iceage_loops2_2021": {
+          "courseB_iceage_loops2_b": "Αν κολλήσατε, δοκιμάστε να πείτε τα βήματα δυνατά."
+        },
+        "courseB_iceage_loops3": {
+          "courseB_iceage_loops3_a": "Χρησιμοποίησε το νέο μπλοκ! <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"3-10\">5</title>\n    </block></xml>",
+          "courseB_iceage_loops3_b": "Για να επαναλάβετε τον κώδικα, σύρτε έξω ένα μπλοκ `repeat` (<xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> ) και στη συνέχεια, τοποθετήστε μέσα σε αυτό, το μπλοκ που θέλετε να επαναληφθεί."
+        },
+        "courseB_iceage_loops32022": {
+          "courseB_iceage_loops3_b": "Για να επαναλάβετε τον κώδικα, σύρτε έξω ένα μπλοκ `repeat` (<xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> ) και στη συνέχεια, τοποθετήστε μέσα σε αυτό, το μπλοκ που θέλετε να επαναληφθεί."
+        },
+        "courseB_iceage_loops3_2019": {
+          "courseB_iceage_loops3_b": "Για να επαναλάβετε τον κώδικα, σύρτε έξω ένα μπλοκ `repeat` (<xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> ) και στη συνέχεια, τοποθετήστε μέσα σε αυτό, το μπλοκ που θέλετε να επαναληφθεί."
+        },
+        "courseB_iceage_loops3_2020": {
+          "courseB_iceage_loops3_b": "Για να επαναλάβετε τον κώδικα, σύρτε έξω ένα μπλοκ `repeat` (<xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> ) και στη συνέχεια, τοποθετήστε μέσα σε αυτό, το μπλοκ που θέλετε να επαναληφθεί."
+        },
+        "courseB_iceage_loops3_2021": {
+          "courseB_iceage_loops3_b": "Για να επαναλάβετε τον κώδικα, σύρτε έξω ένα μπλοκ `repeat` (<xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> ) και στη συνέχεια, τοποθετήστε μέσα σε αυτό, το μπλοκ που θέλετε να επαναληφθεί."
+        },
+        "courseB_iceage_loops4": {
+          "courseB_iceage_loops4_a": "Προσπάθησε να γράψεις τα βήματα που θα έκανε ο Σκρατ για να φτάσει στο βελανίδι. Βλέπεις κάποιο μοτίβο;",
+          "courseB_iceage_loops4_b": "Μην φοβάστε να εκτελέσετε τον κώδικά σας και να δείτε τι θα συμβεί!",
+          "courseB_iceage_loops4_c": "Αυτό είναι το μονοπάτι που πρέπει να πάρει ο Σκρατ."
+        },
+        "courseB_iceage_loops42022": {
+          "courseB_iceage_loops4_a": "Προσπάθησε να γράψεις τα βήματα που θα έκανε ο Σκρατ για να φτάσει στο βελανίδι. Βλέπεις κάποιο μοτίβο;",
+          "courseB_iceage_loops4_b": "Μην φοβάστε να εκτελέσετε τον κώδικά σας και να δείτε τι θα συμβεί!",
+          "courseB_iceage_loops4_c": "Αυτό είναι το μονοπάτι που πρέπει να πάρει ο Σκρατ."
+        },
+        "courseB_iceage_loops4_2019": {
+          "courseB_iceage_loops4_a": "Προσπάθησε να γράψεις τα βήματα που θα έκανε ο Σκρατ για να φτάσει στο βελανίδι. Βλέπεις κάποιο μοτίβο;",
+          "courseB_iceage_loops4_b": "Μην φοβάστε να εκτελέσετε τον κώδικά σας και να δείτε τι θα συμβεί!",
+          "courseB_iceage_loops4_c": "Αυτό είναι το μονοπάτι που πρέπει να πάρει ο Σκρατ."
+        },
+        "courseB_iceage_loops4_2020": {
+          "courseB_iceage_loops4_a": "Προσπάθησε να γράψεις τα βήματα που θα έκανε ο Σκρατ για να φτάσει στο βελανίδι. Βλέπεις κάποιο μοτίβο;",
+          "courseB_iceage_loops4_b": "Μην φοβάστε να εκτελέσετε τον κώδικά σας και να δείτε τι θα συμβεί!",
+          "courseB_iceage_loops4_c": "Αυτό είναι το μονοπάτι που πρέπει να πάρει ο Σκρατ."
+        },
+        "courseB_iceage_loops4_2021": {
+          "courseB_iceage_loops4_a": "Προσπάθησε να γράψεις τα βήματα που θα έκανε ο Σκρατ για να φτάσει στο βελανίδι. Βλέπεις κάποιο μοτίβο;",
+          "courseB_iceage_loops4_b": "Μην φοβάστε να εκτελέσετε τον κώδικά σας και να δείτε τι θα συμβεί!",
+          "courseB_iceage_loops4_c": "Αυτό είναι το μονοπάτι που πρέπει να πάρει ο Σκρατ."
+        },
+        "courseB_iceage_loops6": {
+          "courseB_iceage_loops6_a": "Ο τελικός σου κώδικας θα έχει τρία μπλοκ κίνησης.",
+          "courseB_iceage_loops6_b": "Χρειάζεται μόνο να προσθέσετε **ένα** ακόμη βρόχο!"
+        },
+        "courseB_iceage_loops62022": {
+          "courseB_iceage_loops6_a": "Ο τελικός σου κώδικας θα έχει τρία μπλοκ κίνησης.",
+          "courseB_iceage_loops6_b": "Χρειάζεται μόνο να προσθέσετε **ένα** ακόμη βρόχο!"
+        },
+        "courseB_iceage_loops6_2019": {
+          "courseB_iceage_loops6_a": "Ο τελικός σου κώδικας θα έχει τρία μπλοκ κίνησης.",
+          "courseB_iceage_loops6_b": "Χρειάζεται μόνο να προσθέσετε **ένα** ακόμη βρόχο!"
+        },
+        "courseB_iceage_loops6_2020": {
+          "courseB_iceage_loops6_a": "Ο τελικός σου κώδικας θα έχει τρία μπλοκ κίνησης.",
+          "courseB_iceage_loops6_b": "Χρειάζεται μόνο να προσθέσετε **ένα** ακόμη βρόχο!"
+        },
+        "courseB_iceage_loops6_2021": {
+          "courseB_iceage_loops6_a": "Ο τελικός σου κώδικας θα έχει τρία μπλοκ κίνησης.",
+          "courseB_iceage_loops6_b": "Χρειάζεται μόνο να προσθέσετε **ένα** ακόμη βρόχο!"
+        },
+        "courseB_iceage_loops7": {
+          "courseB_iceage_loops7_a": "Αν κολλήσατε, δοκιμάστε να γράψετε τα βήματα σε ένα κομμάτι χαρτί. Βλέπεις κάποιο μοτίβο;",
+          "courseB_iceage_loops7_b": "Αυτό είναι το μονοπάτι που πρέπει να πάρει ο Σκρατ για να φτάσει στο βελανίδι."
+        },
+        "courseB_iceage_loops72022": {
+          "courseB_iceage_loops7_a": "Αν κολλήσατε, δοκιμάστε να γράψετε τα βήματα σε ένα κομμάτι χαρτί. Βλέπεις κάποιο μοτίβο;",
+          "courseB_iceage_loops7_b": "Αυτό είναι το μονοπάτι που πρέπει να πάρει ο Σκρατ για να φτάσει στο βελανίδι."
+        },
+        "courseB_iceage_loops7_2019": {
+          "courseB_iceage_loops7_a": "Αν κολλήσατε, δοκιμάστε να γράψετε τα βήματα σε ένα κομμάτι χαρτί. Βλέπεις κάποιο μοτίβο;",
+          "courseB_iceage_loops7_b": "Αυτό είναι το μονοπάτι που πρέπει να πάρει ο Σκρατ για να φτάσει στο βελανίδι."
+        },
+        "courseB_iceage_loops7_2020": {
+          "courseB_iceage_loops7_a": "Αν κολλήσατε, δοκιμάστε να γράψετε τα βήματα σε ένα κομμάτι χαρτί. Βλέπεις κάποιο μοτίβο;",
+          "courseB_iceage_loops7_b": "Αυτό είναι το μονοπάτι που πρέπει να πάρει ο Σκρατ για να φτάσει στο βελανίδι."
+        },
+        "courseB_iceage_loops7_2021": {
+          "courseB_iceage_loops7_a": "Αν κολλήσατε, δοκιμάστε να γράψετε τα βήματα σε ένα κομμάτι χαρτί. Βλέπεις κάποιο μοτίβο;",
+          "courseB_iceage_loops7_b": "Αυτό είναι το μονοπάτι που πρέπει να πάρει ο Σκρατ για να φτάσει στο βελανίδι."
+        },
+        "courseB_iceage_loops8": {
+          "courseB_iceage_loops8_a": "Είναι σωστά τα μπλοκ προχώρησε; Τι άλλο μπορείς να αλλάξεις;",
+          "courseB_iceage_loops8_c": "Χρησιμοποιήστε βρόχους για να βοηθήσετε τον Σκρατ να ακολουθήσει αυτό το μονοπάτι."
+        },
+        "courseB_iceage_loops82022": {
+          "courseB_iceage_loops8_a": "Είναι σωστά τα μπλοκ προχώρησε; Τι άλλο μπορείς να αλλάξεις;",
+          "courseB_iceage_loops8_c": "Χρησιμοποιήστε βρόχους για να βοηθήσετε τον Σκρατ να ακολουθήσει αυτό το μονοπάτι."
+        },
+        "courseB_iceage_loops8_2019": {
+          "courseB_iceage_loops8_a": "Είναι σωστά τα μπλοκ προχώρησε; Τι άλλο μπορείς να αλλάξεις;",
+          "courseB_iceage_loops8_c": "Χρησιμοποιήστε βρόχους για να βοηθήσετε τον Σκρατ να ακολουθήσει αυτό το μονοπάτι."
+        },
+        "courseB_iceage_loops8_2020": {
+          "courseB_iceage_loops8_a": "Είναι σωστά τα μπλοκ προχώρησε; Τι άλλο μπορείς να αλλάξεις;",
+          "courseB_iceage_loops8_c": "Χρησιμοποιήστε βρόχους για να βοηθήσετε τον Σκρατ να ακολουθήσει αυτό το μονοπάτι."
+        },
+        "courseB_iceage_loops8_2021": {
+          "courseB_iceage_loops8_a": "Είναι σωστά τα μπλοκ προχώρησε; Τι άλλο μπορείς να αλλάξεις;",
+          "courseB_iceage_loops8_c": "Χρησιμοποιήστε βρόχους για να βοηθήσετε τον Σκρατ να ακολουθήσει αυτό το μονοπάτι."
+        },
+        "courseB_iceage_loops9": {
+          "courseB_iceage_loops9_a": "Δυσκολεύεσαι; Δοκίμασε να σπάσεις αυτό το παζλ σε μικρότερα κομμάτια. Μη φοβάσαι να εκτελέσεις το παζλ, καθώς γράφεις κώδικα!",
+          "courseB_iceage_loops9_b": "Ο τελικός σας κώδικας θα πρέπει να έχει **4** βρόχους."
+        },
+        "courseB_iceage_loops92022": {
+          "courseB_iceage_loops9_a": "Δυσκολεύεσαι; Δοκίμασε να σπάσεις αυτό το παζλ σε μικρότερα κομμάτια. Μη φοβάσαι να εκτελέσεις το παζλ, καθώς γράφεις κώδικα!",
+          "courseB_iceage_loops9_b": "Ο τελικός σας κώδικας θα πρέπει να έχει **4** βρόχους."
+        },
+        "courseB_iceage_loops9_2019": {
+          "courseB_iceage_loops9_a": "Δυσκολεύεσαι; Δοκίμασε να σπάσεις αυτό το παζλ σε μικρότερα κομμάτια. Μη φοβάσαι να εκτελέσεις το παζλ, καθώς γράφεις κώδικα!",
+          "courseB_iceage_loops9_b": "Ο τελικός σας κώδικας θα πρέπει να έχει **4** βρόχους."
+        },
+        "courseB_iceage_loops9_2020": {
+          "courseB_iceage_loops9_a": "Δυσκολεύεσαι; Δοκίμασε να σπάσεις αυτό το παζλ σε μικρότερα κομμάτια. Μη φοβάσαι να εκτελέσεις το παζλ, καθώς γράφεις κώδικα!",
+          "courseB_iceage_loops9_b": "Ο τελικός σας κώδικας θα πρέπει να έχει **4** βρόχους."
+        },
+        "courseB_iceage_loops9_2021": {
+          "courseB_iceage_loops9_a": "Δυσκολεύεσαι; Δοκίμασε να σπάσεις αυτό το παζλ σε μικρότερα κομμάτια. Μη φοβάσαι να εκτελέσεις το παζλ, καθώς γράφεις κώδικα!",
+          "courseB_iceage_loops9_b": "Ο τελικός σας κώδικας θα πρέπει να έχει **4** βρόχους."
+        },
+        "courseB_maze_seq1": {
+          "courseB_maze_seq1_b": "Σύρετε τρία από αυτά τα μπλοκ <xml><block type=\"maze_moveSouth\"/></xml> έξω και συνδέστε τα με το μπλοκ  <xml><block type=\"when_run\"/></xml> για να οδηγήστε το Angry Bird στο γουρούνι."
+        },
+        "courseB_starWars_prog9": {
+          "courseB_starWars_prog9_a": "Μη φοβάσαι να κάνεις λάθος! Τρέξε τον κώδικα για να δεις τι θα συμβεί, ακόμα και αν δεν έχεις λύσει το παζλ ακόμα."
+        },
+        "courseB_starWars_prog92022": {
+          "courseB_starWars_prog9_a": "Μη φοβάσαι να κάνεις λάθος! Τρέξε τον κώδικα για να δεις τι θα συμβεί, ακόμα και αν δεν έχεις λύσει το παζλ ακόμα."
+        },
+        "courseB_starWars_prog9_2018": {
+          "courseB_starWars_prog9_a": "Μη φοβάσαι να κάνεις λάθος! Τρέξε τον κώδικα για να δεις τι θα συμβεί, ακόμα και αν δεν έχεις λύσει το παζλ ακόμα."
+        },
+        "courseB_starWars_prog9_2019": {
+          "courseB_starWars_prog9_a": "Μη φοβάσαι να κάνεις λάθος! Τρέξε τον κώδικα για να δεις τι θα συμβεί, ακόμα και αν δεν έχεις λύσει το παζλ ακόμα."
+        },
+        "courseB_starWars_prog9_2020": {
+          "courseB_starWars_prog9_a": "Μη φοβάσαι να κάνεις λάθος! Τρέξε τον κώδικα για να δεις τι θα συμβεί, ακόμα και αν δεν έχεις λύσει το παζλ ακόμα."
+        },
+        "courseB_starWars_prog9_2021": {
+          "courseB_starWars_prog9_a": "Μη φοβάσαι να κάνεις λάθος! Τρέξε τον κώδικα για να δεις τι θα συμβεί, ακόμα και αν δεν έχεις λύσει το παζλ ακόμα."
+        },
+        "courseC_artist_loops1a": {
+          "courseC_artist_loops1a_a": "Αυτό είναι το πρώτο μπλοκ που θα χρειαστείς:\n\n<xml>\n<block type=\"jump_to_xy\">\n    <title name=\"XPOS\">200</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n</xml>",
+          "courseC_artist_loops1a_b": "Χρησιμοποίησε αυτό το μπλοκ για να σχεδιάσεις ένα αυτοκόλλητο!\n\n<xml>\n<block type=\"sticker\">\n    <title name=\"VALUE\">Bird</title>\n  </block>\n</xml>"
+        },
+        "courseC_artist_loops1a2022": {
+          "courseC_artist_loops1a_a": "Αυτό είναι το πρώτο μπλοκ που θα χρειαστείς:\n\n<xml>\n  <block type=\"jump_to\">\n    <title name=\"VALUE\">13</title>\n  </block>\n</xml>",
+          "courseC_artist_loops1a_b": "Χρησιμοποίησε αυτό το μπλοκ για να σχεδιάσεις ένα αυτοκόλλητο!\n\n<xml>\n<block type=\"sticker\">\n    <title name=\"VALUE\">Bird</title>\n  </block>\n</xml>"
+        },
+        "courseC_artist_loops1a_2018": {
+          "courseC_artist_loops1a_a": "Αυτό είναι το πρώτο μπλοκ που θα χρειαστείς:\n\n<xml>\n<block type=\"jump_to_xy\">\n    <title name=\"XPOS\">200</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n</xml>",
+          "courseC_artist_loops1a_b": "Χρησιμοποίησε αυτό το μπλοκ για να σχεδιάσεις ένα αυτοκόλλητο!\n\n<xml>\n<block type=\"sticker\">\n    <title name=\"VALUE\">Bird</title>\n  </block>\n</xml>"
+        },
+        "courseC_artist_loops1a_2019": {
+          "courseC_artist_loops1a_a": "Αυτό είναι το πρώτο μπλοκ που θα χρειαστείς:\n\n<xml>\n  <block type=\"jump_to\">\n    <title name=\"VALUE\">13</title>\n  </block>\n</xml>",
+          "courseC_artist_loops1a_b": "Χρησιμοποίησε αυτό το μπλοκ για να σχεδιάσεις ένα αυτοκόλλητο!\n\n<xml>\n<block type=\"sticker\">\n    <title name=\"VALUE\">Bird</title>\n  </block>\n</xml>"
+        },
+        "courseC_artist_loops1a_2020": {
+          "courseC_artist_loops1a_a": "Αυτό είναι το πρώτο μπλοκ που θα χρειαστείς:\n\n<xml>\n  <block type=\"jump_to\">\n    <title name=\"VALUE\">13</title>\n  </block>\n</xml>",
+          "courseC_artist_loops1a_b": "Χρησιμοποίησε αυτό το μπλοκ για να σχεδιάσεις ένα αυτοκόλλητο!\n\n<xml>\n<block type=\"sticker\">\n    <title name=\"VALUE\">Bird</title>\n  </block>\n</xml>"
+        },
+        "courseC_artist_loops1a_2021": {
+          "courseC_artist_loops1a_a": "Αυτό είναι το πρώτο μπλοκ που θα χρειαστείς:\n\n<xml>\n  <block type=\"jump_to\">\n    <title name=\"VALUE\">13</title>\n  </block>\n</xml>",
+          "courseC_artist_loops1a_b": "Χρησιμοποίησε αυτό το μπλοκ για να σχεδιάσεις ένα αυτοκόλλητο!\n\n<xml>\n<block type=\"sticker\">\n    <title name=\"VALUE\">Bird</title>\n  </block>\n</xml>"
+        },
+        "courseC_artist_loops1b2022": {
+          "courseC_artist_loops1b_a": "Αυτό είναι το πρώτο μπλοκ που θα χρειαστείτε:\n\n<xml>\n  <block type=\"draw_turn_by_constant_dropdown\">\n    <title name=\"DIR\">???</title>\n    <title name=\"VALUE\" config=\"45,60,90,120,180\">???</title>\n  </block>\n</xml>\n\nΜπορείτε να επιλέξετε είτε αριστερά ή δεξιά και οποιοδήποτε αριθμό μοιρών."
+        },
+        "courseC_artist_loops1b_2019": {
+          "courseC_artist_loops1b_a": "Αυτό είναι το πρώτο μπλοκ που θα χρειαστείτε:\n\n<xml>\n  <block type=\"draw_turn_by_constant_dropdown\">\n    <title name=\"DIR\">???</title>\n    <title name=\"VALUE\" config=\"45,60,90,120,180\">???</title>\n  </block>\n</xml>\n\nΜπορείτε να επιλέξετε είτε αριστερά ή δεξιά και οποιοδήποτε αριθμό μοιρών."
+        },
+        "courseC_artist_loops1b_2020": {
+          "courseC_artist_loops1b_a": "Αυτό είναι το πρώτο μπλοκ που θα χρειαστείτε:\n\n<xml>\n  <block type=\"draw_turn_by_constant_dropdown\">\n    <title name=\"DIR\">???</title>\n    <title name=\"VALUE\" config=\"45,60,90,120,180\">???</title>\n  </block>\n</xml>\n\nΜπορείτε να επιλέξετε είτε αριστερά ή δεξιά και οποιοδήποτε αριθμό μοιρών."
+        },
+        "courseC_artist_loops1b_2021": {
+          "courseC_artist_loops1b_a": "Αυτό είναι το πρώτο μπλοκ που θα χρειαστείτε:\n\n<xml>\n  <block type=\"draw_turn_by_constant_dropdown\">\n    <title name=\"DIR\">???</title>\n    <title name=\"VALUE\" config=\"45,60,90,120,180\">???</title>\n  </block>\n</xml>\n\nΜπορείτε να επιλέξετε είτε αριστερά ή δεξιά και οποιοδήποτε αριθμό μοιρών."
+        },
+        "courseC_artist_loops2a": {
+          "courseC_artist_loops2a_b": "Κάντε κλικ στον αριθμό στο πάνω μέρος του βρόχου της επανάληψης για να αλλάξετε πόσες φορές επαναλαμβάνεται."
+        },
+        "courseC_artist_loops2a2022": {
+          "courseC_artist_loops2a_a": "Μέσα στην επανάληψη, θα πρέπει να μεταβείτε στη μέση, στη συνέχεια να στρίψετε και στη συνέχεια να σχεδιάσετε ένα αυτοκόλλητο.",
+          "courseC_artist_loops2a_b": "Κάντε κλικ στον αριθμό στο πάνω μέρος του βρόχου της επανάληψης για να αλλάξετε πόσες φορές επαναλαμβάνεται."
+        },
+        "courseC_artist_loops2a_2018": {
+          "courseC_artist_loops2a_b": "Κάντε κλικ στον αριθμό στο πάνω μέρος του βρόχου της επανάληψης για να αλλάξετε πόσες φορές επαναλαμβάνεται."
+        },
+        "courseC_artist_loops2a_2019": {
+          "courseC_artist_loops2a_a": "Μέσα στην επανάληψη, θα πρέπει να μεταβείτε στη μέση, στη συνέχεια να στρίψετε και στη συνέχεια να σχεδιάσετε ένα αυτοκόλλητο.",
+          "courseC_artist_loops2a_b": "Κάντε κλικ στον αριθμό στο πάνω μέρος του βρόχου της επανάληψης για να αλλάξετε πόσες φορές επαναλαμβάνεται."
+        },
+        "courseC_artist_loops2a_2020": {
+          "courseC_artist_loops2a_a": "Μέσα στην επανάληψη, θα πρέπει να μεταβείτε στη μέση, στη συνέχεια να στρίψετε και στη συνέχεια να σχεδιάσετε ένα αυτοκόλλητο.",
+          "courseC_artist_loops2a_b": "Κάντε κλικ στον αριθμό στο πάνω μέρος του βρόχου της επανάληψης για να αλλάξετε πόσες φορές επαναλαμβάνεται."
+        },
+        "courseC_artist_loops2a_2021": {
+          "courseC_artist_loops2a_a": "Μέσα στην επανάληψη, θα πρέπει να μεταβείτε στη μέση, στη συνέχεια να στρίψετε και στη συνέχεια να σχεδιάσετε ένα αυτοκόλλητο.",
+          "courseC_artist_loops2a_b": "Κάντε κλικ στον αριθμό στο πάνω μέρος του βρόχου της επανάληψης για να αλλάξετε πόσες φορές επαναλαμβάνεται."
+        },
+        "courseC_artist_loops3a": {
+          "courseC_artist_loops3a_a": "Θα πρέπει να προσθέσετε μόνο ένα μπλοκ μέσα στο βρόχο σας, μετά το πρώτο αυτοκόλλητο."
+        },
+        "courseC_artist_loops3a2022": {
+          "courseC_artist_loops3a_a": "Θα πρέπει να προσθέσετε μόνο ένα μπλοκ μέσα στο βρόχο σας, μετά το πρώτο αυτοκόλλητο.",
+          "courseC_artist_loops3a_b": "Το πρόγραμμά σας θα πρέπει να μοιάζει με αυτό!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">???</title>\n        <statement name=\"DO\">\n          <block type=\"jump_to\">\n            <title name=\"VALUE\">13</title>\n            <next>\n              <block type=\"draw_turn_by_constant_dropdown\">\n                <title name=\"DIR\">???</title>\n                <title name=\"VALUE\" config=\"1,2,5,10,12,20,30,45,60,90,120,180\">???</title>\n                <next>\n                  <block type=\"sticker\">\n                    <title name=\"VALUE\">Cat</title>\n                    <next>\n                      <block type=\"sticker\">\n                        <title name=\"VALUE\">Dog</title>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>\n\nΜπορείτε να χρησιμοποιήσετε ό, τι αυτοκόλλητα θέλετε!"
+        },
+        "courseC_artist_loops3a_2018": {
+          "courseC_artist_loops3a_a": "Θα πρέπει να προσθέσετε μόνο ένα μπλοκ μέσα στο βρόχο σας, μετά το πρώτο αυτοκόλλητο."
+        },
+        "courseC_artist_loops3a_2019": {
+          "courseC_artist_loops3a_a": "Θα πρέπει να προσθέσετε μόνο ένα μπλοκ μέσα στο βρόχο σας, μετά το πρώτο αυτοκόλλητο.",
+          "courseC_artist_loops3a_b": "Το πρόγραμμά σας θα πρέπει να μοιάζει με αυτό!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">???</title>\n        <statement name=\"DO\">\n          <block type=\"jump_to\">\n            <title name=\"VALUE\">13</title>\n            <next>\n              <block type=\"draw_turn_by_constant_dropdown\">\n                <title name=\"DIR\">???</title>\n                <title name=\"VALUE\" config=\"1,2,5,10,12,20,30,45,60,90,120,180\">???</title>\n                <next>\n                  <block type=\"sticker\">\n                    <title name=\"VALUE\">Cat</title>\n                    <next>\n                      <block type=\"sticker\">\n                        <title name=\"VALUE\">Dog</title>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>\n\nΜπορείτε να χρησιμοποιήσετε ό, τι αυτοκόλλητα θέλετε!"
+        },
+        "courseC_artist_loops3a_2020": {
+          "courseC_artist_loops3a_a": "Θα πρέπει να προσθέσετε μόνο ένα μπλοκ μέσα στο βρόχο σας, μετά το πρώτο αυτοκόλλητο.",
+          "courseC_artist_loops3a_b": "Το πρόγραμμά σας θα πρέπει να μοιάζει με αυτό!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">???</title>\n        <statement name=\"DO\">\n          <block type=\"jump_to\">\n            <title name=\"VALUE\">13</title>\n            <next>\n              <block type=\"draw_turn_by_constant_dropdown\">\n                <title name=\"DIR\">???</title>\n                <title name=\"VALUE\" config=\"1,2,5,10,12,20,30,45,60,90,120,180\">???</title>\n                <next>\n                  <block type=\"sticker\">\n                    <title name=\"VALUE\">Cat</title>\n                    <next>\n                      <block type=\"sticker\">\n                        <title name=\"VALUE\">Dog</title>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>\n\nΜπορείτε να χρησιμοποιήσετε ό, τι αυτοκόλλητα θέλετε!"
+        },
+        "courseC_artist_loops3a_2021": {
+          "courseC_artist_loops3a_a": "Θα πρέπει να προσθέσετε μόνο ένα μπλοκ μέσα στο βρόχο σας, μετά το πρώτο αυτοκόλλητο.",
+          "courseC_artist_loops3a_b": "Το πρόγραμμά σας θα πρέπει να μοιάζει με αυτό!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">???</title>\n        <statement name=\"DO\">\n          <block type=\"jump_to\">\n            <title name=\"VALUE\">13</title>\n            <next>\n              <block type=\"draw_turn_by_constant_dropdown\">\n                <title name=\"DIR\">???</title>\n                <title name=\"VALUE\" config=\"1,2,5,10,12,20,30,45,60,90,120,180\">???</title>\n                <next>\n                  <block type=\"sticker\">\n                    <title name=\"VALUE\">Cat</title>\n                    <next>\n                      <block type=\"sticker\">\n                        <title name=\"VALUE\">Dog</title>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>\n\nΜπορείτε να χρησιμοποιήσετε ό, τι αυτοκόλλητα θέλετε!"
+        },
+        "courseC_artist_loops4a2022": {
+          "courseC_artist_loops4a_b": "Το πρόγραμμά σου θα πρέπει να μοιάζει με αυτό!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">???</title>\n        <statement name=\"DO\">\n          <block type=\"jump_to\">\n            <title name=\"VALUE\">13</title>\n            <next>\n              <block type=\"draw_turn_by_constant_dropdown\">\n                <title name=\"DIR\">???</title>\n                <title name=\"VALUE\" config=\"1,2,5,10,12,20,30,45,60,90,120,180\">???</title>\n                <next>\n                  <block type=\"sticker\">\n                    <title name=\"VALUE\">Cat</title>\n                    <next>\n                      <block type=\"jump_by_constant\">\n                        <title name=\"DIR\">jumpForward</title>\n                        <title name=\"VALUE\">???</title>\n                        <next>\n                          <block type=\"sticker\">\n                            <title name=\"VALUE\">Dog</title>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseC_artist_loops4a_2019": {
+          "courseC_artist_loops4a_b": "Το πρόγραμμά σου θα πρέπει να μοιάζει με αυτό!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">???</title>\n        <statement name=\"DO\">\n          <block type=\"jump_to\">\n            <title name=\"VALUE\">13</title>\n            <next>\n              <block type=\"draw_turn_by_constant_dropdown\">\n                <title name=\"DIR\">???</title>\n                <title name=\"VALUE\" config=\"1,2,5,10,12,20,30,45,60,90,120,180\">???</title>\n                <next>\n                  <block type=\"sticker\">\n                    <title name=\"VALUE\">Cat</title>\n                    <next>\n                      <block type=\"jump_by_constant\">\n                        <title name=\"DIR\">jumpForward</title>\n                        <title name=\"VALUE\">???</title>\n                        <next>\n                          <block type=\"sticker\">\n                            <title name=\"VALUE\">Dog</title>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseC_artist_loops4a_2020": {
+          "courseC_artist_loops4a_b": "Το πρόγραμμά σου θα πρέπει να μοιάζει με αυτό!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">???</title>\n        <statement name=\"DO\">\n          <block type=\"jump_to\">\n            <title name=\"VALUE\">13</title>\n            <next>\n              <block type=\"draw_turn_by_constant_dropdown\">\n                <title name=\"DIR\">???</title>\n                <title name=\"VALUE\" config=\"1,2,5,10,12,20,30,45,60,90,120,180\">???</title>\n                <next>\n                  <block type=\"sticker\">\n                    <title name=\"VALUE\">Cat</title>\n                    <next>\n                      <block type=\"jump_by_constant\">\n                        <title name=\"DIR\">jumpForward</title>\n                        <title name=\"VALUE\">???</title>\n                        <next>\n                          <block type=\"sticker\">\n                            <title name=\"VALUE\">Dog</title>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseC_artist_loops4a_2021": {
+          "courseC_artist_loops4a_b": "Το πρόγραμμά σου θα πρέπει να μοιάζει με αυτό!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">???</title>\n        <statement name=\"DO\">\n          <block type=\"jump_to\">\n            <title name=\"VALUE\">13</title>\n            <next>\n              <block type=\"draw_turn_by_constant_dropdown\">\n                <title name=\"DIR\">???</title>\n                <title name=\"VALUE\" config=\"1,2,5,10,12,20,30,45,60,90,120,180\">???</title>\n                <next>\n                  <block type=\"sticker\">\n                    <title name=\"VALUE\">Cat</title>\n                    <next>\n                      <block type=\"jump_by_constant\">\n                        <title name=\"DIR\">jumpForward</title>\n                        <title name=\"VALUE\">???</title>\n                        <next>\n                          <block type=\"sticker\">\n                            <title name=\"VALUE\">Dog</title>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseC_artist_loops5b": {
+          "courseC_artist_loops5b_a": "Χρησιμοποίησε αυτό το μπλοκ για να ορίσεις μοτίβο για την γραμμή που σχεδιάζεις:\n\n<xml>\n<block type=\"draw_line_style_pattern\">\n    <title name=\"VALUE\">DEFAULT</title>\n  </block>\n</xml>",
+          "courseC_artist_loops5b_b": "Για να δημιουργήσετε ένα σχέδιο όπως το παραπάνω, θα πρέπει να προχωρήσετε προς τα πίσω με το ίδιο ποσό που προχωρήσετε προς τα εμπρός."
+        },
+        "courseC_artist_loops5b2022": {
+          "courseC_artist_loops5b_a": "Χρησιμοποίησε αυτό το μπλοκ για να ορίσεις μοτίβο για την γραμμή που σχεδιάζεις:\n\n<xml>\n<block type=\"draw_line_style_pattern\">\n    <title name=\"VALUE\">DEFAULT</title>\n  </block>\n</xml>",
+          "courseC_artist_loops5b_b": "Για να δημιουργήσετε ένα σχέδιο όπως το παραπάνω, θα πρέπει να προχωρήσετε προς τα πίσω με το ίδιο ποσό που προχωρήσετε προς τα εμπρός.",
+          "courseC_artist_loops5b_c": "Το πρόγραμμά σου θα πρέπει να μοιάζει με αυτό!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"draw_line_style_pattern\">\n        <title name=\"VALUE\">rainbowLine</title>\n        <next>\n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">4</title>\n            <statement name=\"DO\">\n              <block type=\"jump_to\">\n                <title name=\"VALUE\">13</title>\n                <next>\n                  <block type=\"draw_move_by_constant\">\n                    <title name=\"DIR\">moveForward</title>\n                    <title name=\"VALUE\">???</title>\n                    <next>\n                      <block type=\"draw_move_by_constant\">\n                        <title name=\"DIR\">moveBackward</title>\n                        <title name=\"VALUE\">???</title>\n                        <next>\n                          <block type=\"draw_turn_by_constant_dropdown\">\n                            <title name=\"DIR\">???</title>\n                            <title name=\"VALUE\" config=\"1,2,5,10,12,20,30,45,60,90,120,180\">???</title>\n                            <next>\n                              <block type=\"sticker\">\n                                <title name=\"VALUE\">Cat</title>\n                                <next>\n                                  <block type=\"jump_by_constant\">\n                                    <title name=\"DIR\">jumpForward</title>\n                                    <title name=\"VALUE\">???</title>\n                                    <next>\n                                      <block type=\"sticker\">\n                                        <title name=\"VALUE\">Dog</title>\n                                      </block>\n                                    </next>\n                                  </block>\n                                </next>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseC_artist_loops5b_2018": {
+          "courseC_artist_loops5b_a": "Χρησιμοποίησε αυτό το μπλοκ για να ορίσεις μοτίβο για την γραμμή που σχεδιάζεις:\n\n<xml>\n<block type=\"draw_line_style_pattern\">\n    <title name=\"VALUE\">DEFAULT</title>\n  </block>\n</xml>",
+          "courseC_artist_loops5b_b": "Για να δημιουργήσετε ένα σχέδιο όπως το παραπάνω, θα πρέπει να προχωρήσετε προς τα πίσω με το ίδιο ποσό που προχωρήσετε προς τα εμπρός."
+        },
+        "courseC_artist_loops5b_2019": {
+          "courseC_artist_loops5b_a": "Χρησιμοποίησε αυτό το μπλοκ για να ορίσεις μοτίβο για την γραμμή που σχεδιάζεις:\n\n<xml>\n<block type=\"draw_line_style_pattern\">\n    <title name=\"VALUE\">DEFAULT</title>\n  </block>\n</xml>",
+          "courseC_artist_loops5b_b": "Για να δημιουργήσετε ένα σχέδιο όπως το παραπάνω, θα πρέπει να προχωρήσετε προς τα πίσω με το ίδιο ποσό που προχωρήσετε προς τα εμπρός.",
+          "courseC_artist_loops5b_c": "Το πρόγραμμά σου θα πρέπει να μοιάζει με αυτό!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"draw_line_style_pattern\">\n        <title name=\"VALUE\">rainbowLine</title>\n        <next>\n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">4</title>\n            <statement name=\"DO\">\n              <block type=\"jump_to\">\n                <title name=\"VALUE\">13</title>\n                <next>\n                  <block type=\"draw_move_by_constant\">\n                    <title name=\"DIR\">moveForward</title>\n                    <title name=\"VALUE\">???</title>\n                    <next>\n                      <block type=\"draw_move_by_constant\">\n                        <title name=\"DIR\">moveBackward</title>\n                        <title name=\"VALUE\">???</title>\n                        <next>\n                          <block type=\"draw_turn_by_constant_dropdown\">\n                            <title name=\"DIR\">???</title>\n                            <title name=\"VALUE\" config=\"1,2,5,10,12,20,30,45,60,90,120,180\">???</title>\n                            <next>\n                              <block type=\"sticker\">\n                                <title name=\"VALUE\">Cat</title>\n                                <next>\n                                  <block type=\"jump_by_constant\">\n                                    <title name=\"DIR\">jumpForward</title>\n                                    <title name=\"VALUE\">???</title>\n                                    <next>\n                                      <block type=\"sticker\">\n                                        <title name=\"VALUE\">Dog</title>\n                                      </block>\n                                    </next>\n                                  </block>\n                                </next>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseC_artist_loops5b_2020": {
+          "courseC_artist_loops5b_a": "Χρησιμοποίησε αυτό το μπλοκ για να ορίσεις μοτίβο για την γραμμή που σχεδιάζεις:\n\n<xml>\n<block type=\"draw_line_style_pattern\">\n    <title name=\"VALUE\">DEFAULT</title>\n  </block>\n</xml>",
+          "courseC_artist_loops5b_b": "Για να δημιουργήσετε ένα σχέδιο όπως το παραπάνω, θα πρέπει να προχωρήσετε προς τα πίσω με το ίδιο ποσό που προχωρήσετε προς τα εμπρός.",
+          "courseC_artist_loops5b_c": "Το πρόγραμμά σου θα πρέπει να μοιάζει με αυτό!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"draw_line_style_pattern\">\n        <title name=\"VALUE\">rainbowLine</title>\n        <next>\n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">4</title>\n            <statement name=\"DO\">\n              <block type=\"jump_to\">\n                <title name=\"VALUE\">13</title>\n                <next>\n                  <block type=\"draw_move_by_constant\">\n                    <title name=\"DIR\">moveForward</title>\n                    <title name=\"VALUE\">???</title>\n                    <next>\n                      <block type=\"draw_move_by_constant\">\n                        <title name=\"DIR\">moveBackward</title>\n                        <title name=\"VALUE\">???</title>\n                        <next>\n                          <block type=\"draw_turn_by_constant_dropdown\">\n                            <title name=\"DIR\">???</title>\n                            <title name=\"VALUE\" config=\"1,2,5,10,12,20,30,45,60,90,120,180\">???</title>\n                            <next>\n                              <block type=\"sticker\">\n                                <title name=\"VALUE\">Cat</title>\n                                <next>\n                                  <block type=\"jump_by_constant\">\n                                    <title name=\"DIR\">jumpForward</title>\n                                    <title name=\"VALUE\">???</title>\n                                    <next>\n                                      <block type=\"sticker\">\n                                        <title name=\"VALUE\">Dog</title>\n                                      </block>\n                                    </next>\n                                  </block>\n                                </next>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseC_artist_loops5b_2021": {
+          "courseC_artist_loops5b_a": "Χρησιμοποίησε αυτό το μπλοκ για να ορίσεις μοτίβο για την γραμμή που σχεδιάζεις:\n\n<xml>\n<block type=\"draw_line_style_pattern\">\n    <title name=\"VALUE\">DEFAULT</title>\n  </block>\n</xml>",
+          "courseC_artist_loops5b_b": "Για να δημιουργήσετε ένα σχέδιο όπως το παραπάνω, θα πρέπει να προχωρήσετε προς τα πίσω με το ίδιο ποσό που προχωρήσετε προς τα εμπρός.",
+          "courseC_artist_loops5b_c": "Το πρόγραμμά σου θα πρέπει να μοιάζει με αυτό!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"draw_line_style_pattern\">\n        <title name=\"VALUE\">rainbowLine</title>\n        <next>\n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">4</title>\n            <statement name=\"DO\">\n              <block type=\"jump_to\">\n                <title name=\"VALUE\">13</title>\n                <next>\n                  <block type=\"draw_move_by_constant\">\n                    <title name=\"DIR\">moveForward</title>\n                    <title name=\"VALUE\">???</title>\n                    <next>\n                      <block type=\"draw_move_by_constant\">\n                        <title name=\"DIR\">moveBackward</title>\n                        <title name=\"VALUE\">???</title>\n                        <next>\n                          <block type=\"draw_turn_by_constant_dropdown\">\n                            <title name=\"DIR\">???</title>\n                            <title name=\"VALUE\" config=\"1,2,5,10,12,20,30,45,60,90,120,180\">???</title>\n                            <next>\n                              <block type=\"sticker\">\n                                <title name=\"VALUE\">Cat</title>\n                                <next>\n                                  <block type=\"jump_by_constant\">\n                                    <title name=\"DIR\">jumpForward</title>\n                                    <title name=\"VALUE\">???</title>\n                                    <next>\n                                      <block type=\"sticker\">\n                                        <title name=\"VALUE\">Dog</title>\n                                      </block>\n                                    </next>\n                                  </block>\n                                </next>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseC_artist_loops6a": {
+          "courseC_artist_loops6a_a": "Για να δημιουργήσετε ένα σχέδιο όπως το παραπάνω, κάντε άλμα προς τα μπρος για λιγότερο από 75 pixel ανάμεσα σε κάθε αυτοκόλλητο."
+        },
+        "courseC_artist_loops6a2022": {
+          "courseC_artist_loops6a_a": "Για να δημιουργήσετε ένα σχέδιο όπως το παραπάνω, κάντε άλμα προς τα μπρος για λιγότερο από 75 pixel ανάμεσα σε κάθε αυτοκόλλητο."
+        },
+        "courseC_artist_loops6a_2018": {
+          "courseC_artist_loops6a_a": "Για να δημιουργήσετε ένα σχέδιο όπως το παραπάνω, κάντε άλμα προς τα μπρος για λιγότερο από 75 pixel ανάμεσα σε κάθε αυτοκόλλητο."
+        },
+        "courseC_artist_loops6a_2019": {
+          "courseC_artist_loops6a_a": "Για να δημιουργήσετε ένα σχέδιο όπως το παραπάνω, κάντε άλμα προς τα μπρος για λιγότερο από 75 pixel ανάμεσα σε κάθε αυτοκόλλητο."
+        },
+        "courseC_artist_loops6a_2020": {
+          "courseC_artist_loops6a_a": "Για να δημιουργήσετε ένα σχέδιο όπως το παραπάνω, κάντε άλμα προς τα μπρος για λιγότερο από 75 pixel ανάμεσα σε κάθε αυτοκόλλητο."
+        },
+        "courseC_artist_loops6a_2021": {
+          "courseC_artist_loops6a_a": "Για να δημιουργήσετε ένα σχέδιο όπως το παραπάνω, κάντε άλμα προς τα μπρος για λιγότερο από 75 pixel ανάμεσα σε κάθε αυτοκόλλητο."
+        },
+        "courseC_artist_prog5": {
+          "courseC_artist_prog5_b": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε να προσθέσετε μπλοκ και να εκτελέσετε τον κώδικα για να δείτε τι θα συμβεί, ακόμα και αν νομίζετε ότι δεν έχετε λύσει το παζλ ακόμα."
+        },
+        "courseC_artist_prog52022": {
+          "courseC_artist_prog5_b": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε να προσθέσετε μπλοκ και να εκτελέσετε τον κώδικα για να δείτε τι θα συμβεί, ακόμα και αν νομίζετε ότι δεν έχετε λύσει το παζλ ακόμα."
+        },
+        "courseC_artist_prog5_2018": {
+          "courseC_artist_prog5_b": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε να προσθέσετε μπλοκ και να εκτελέσετε τον κώδικα για να δείτε τι θα συμβεί, ακόμα και αν νομίζετε ότι δεν έχετε λύσει το παζλ ακόμα."
+        },
+        "courseC_artist_prog5_2019": {
+          "courseC_artist_prog5_b": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε να προσθέσετε μπλοκ και να εκτελέσετε τον κώδικα για να δείτε τι θα συμβεί, ακόμα και αν νομίζετε ότι δεν έχετε λύσει το παζλ ακόμα."
+        },
+        "courseC_artist_prog5_2020": {
+          "courseC_artist_prog5_b": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε να προσθέσετε μπλοκ και να εκτελέσετε τον κώδικα για να δείτε τι θα συμβεί, ακόμα και αν νομίζετε ότι δεν έχετε λύσει το παζλ ακόμα."
+        },
+        "courseC_artist_prog5_2021": {
+          "courseC_artist_prog5_b": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε να προσθέσετε μπλοκ και να εκτελέσετε τον κώδικα για να δείτε τι θα συμβεί, ακόμα και αν νομίζετε ότι δεν έχετε λύσει το παζλ ακόμα."
+        },
+        "courseC_artist_prog7": {
+          "courseC_artist_prog7_b": "-   Δουλεύουν όλα μετα το πρώτο βήμα;\n-   Εξακολουθούν να δουλεύουν μετά το δεύτερο;\n-   Τι πάει στραβά;",
+          "courseC_artist_prog7_e": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε να προσθέσετε μπλοκ και να εκτελέσετε τον κώδικα για να δείτε τι θα συμβεί, ακόμα και αν νομίζετε ότι δεν έχετε λύσει το παζλ ακόμα."
+        },
+        "courseC_artist_prog72022": {
+          "courseC_artist_prog7_b": "-   Δουλεύουν όλα μετα το πρώτο βήμα;\n-   Εξακολουθούν να δουλεύουν μετά το δεύτερο;\n-   Τι πάει στραβά;",
+          "courseC_artist_prog7_e": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε να προσθέσετε μπλοκ και να εκτελέσετε τον κώδικα για να δείτε τι θα συμβεί, ακόμα και αν νομίζετε ότι δεν έχετε λύσει το παζλ ακόμα."
+        },
+        "courseC_artist_prog7_2018": {
+          "courseC_artist_prog7_b": "-   Δουλεύουν όλα μετα το πρώτο βήμα;\n-   Εξακολουθούν να δουλεύουν μετά το δεύτερο;\n-   Τι πάει στραβά;",
+          "courseC_artist_prog7_e": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε να προσθέσετε μπλοκ και να εκτελέσετε τον κώδικα για να δείτε τι θα συμβεί, ακόμα και αν νομίζετε ότι δεν έχετε λύσει το παζλ ακόμα."
+        },
+        "courseC_artist_prog7_2019": {
+          "courseC_artist_prog7_b": "-   Δουλεύουν όλα μετα το πρώτο βήμα;\n-   Εξακολουθούν να δουλεύουν μετά το δεύτερο;\n-   Τι πάει στραβά;",
+          "courseC_artist_prog7_e": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε να προσθέσετε μπλοκ και να εκτελέσετε τον κώδικα για να δείτε τι θα συμβεί, ακόμα και αν νομίζετε ότι δεν έχετε λύσει το παζλ ακόμα."
+        },
+        "courseC_artist_prog7_2020": {
+          "courseC_artist_prog7_b": "-   Δουλεύουν όλα μετα το πρώτο βήμα;\n-   Εξακολουθούν να δουλεύουν μετά το δεύτερο;\n-   Τι πάει στραβά;",
+          "courseC_artist_prog7_e": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε να προσθέσετε μπλοκ και να εκτελέσετε τον κώδικα για να δείτε τι θα συμβεί, ακόμα και αν νομίζετε ότι δεν έχετε λύσει το παζλ ακόμα."
+        },
+        "courseC_artist_prog7_2021": {
+          "courseC_artist_prog7_b": "-   Δουλεύουν όλα μετα το πρώτο βήμα;\n-   Εξακολουθούν να δουλεύουν μετά το δεύτερο;\n-   Τι πάει στραβά;",
+          "courseC_artist_prog7_e": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε να προσθέσετε μπλοκ και να εκτελέσετε τον κώδικα για να δείτε τι θα συμβεί, ακόμα και αν νομίζετε ότι δεν έχετε λύσει το παζλ ακόμα."
+        },
+        "courseC_collector_prog2": {
+          "courseC_collector_prog2_b": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε να προσθέσετε μπλοκ και να εκτελέσετε τον κώδικα για να δείτε τι θα συμβεί, ακόμα και αν νομίζετε ότι δεν έχετε λύσει το παζλ ακόμα."
+        },
+        "courseC_collector_prog22022": {
+          "courseC_collector_prog2_b": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε να προσθέσετε μπλοκ και να εκτελέσετε τον κώδικα για να δείτε τι θα συμβεί, ακόμα και αν νομίζετε ότι δεν έχετε λύσει το παζλ ακόμα."
+        },
+        "courseC_collector_prog2_2018": {
+          "courseC_collector_prog2_b": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε να προσθέσετε μπλοκ και να εκτελέσετε τον κώδικα για να δείτε τι θα συμβεί, ακόμα και αν νομίζετε ότι δεν έχετε λύσει το παζλ ακόμα."
+        },
+        "courseC_collector_prog2_2019": {
+          "courseC_collector_prog2_b": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε να προσθέσετε μπλοκ και να εκτελέσετε τον κώδικα για να δείτε τι θα συμβεί, ακόμα και αν νομίζετε ότι δεν έχετε λύσει το παζλ ακόμα."
+        },
+        "courseC_collector_prog2_2020": {
+          "courseC_collector_prog2_b": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε να προσθέσετε μπλοκ και να εκτελέσετε τον κώδικα για να δείτε τι θα συμβεί, ακόμα και αν νομίζετε ότι δεν έχετε λύσει το παζλ ακόμα."
+        },
+        "courseC_collector_prog2_2021": {
+          "courseC_collector_prog2_b": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε να προσθέσετε μπλοκ και να εκτελέσετε τον κώδικα για να δείτε τι θα συμβεί, ακόμα και αν νομίζετε ότι δεν έχετε λύσει το παζλ ακόμα."
+        },
+        "courseC_collector_prog4": {
+          "courseC_collector_prog4_b": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε να προσθέσετε μπλοκ και να εκτελέσετε τον κώδικα για να δείτε τι θα συμβεί, ακόμα και αν νομίζετε ότι δεν έχετε λύσει το παζλ ακόμα."
+        },
+        "courseC_collector_prog42022": {
+          "courseC_collector_prog4_b": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε να προσθέσετε μπλοκ και να εκτελέσετε τον κώδικα για να δείτε τι θα συμβεί, ακόμα και αν νομίζετε ότι δεν έχετε λύσει το παζλ ακόμα."
+        },
+        "courseC_collector_prog4_2018": {
+          "courseC_collector_prog4_b": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε να προσθέσετε μπλοκ και να εκτελέσετε τον κώδικα για να δείτε τι θα συμβεί, ακόμα και αν νομίζετε ότι δεν έχετε λύσει το παζλ ακόμα."
+        },
+        "courseC_collector_prog4_2019": {
+          "courseC_collector_prog4_b": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε να προσθέσετε μπλοκ και να εκτελέσετε τον κώδικα για να δείτε τι θα συμβεί, ακόμα και αν νομίζετε ότι δεν έχετε λύσει το παζλ ακόμα."
+        },
+        "courseC_collector_prog4_2020": {
+          "courseC_collector_prog4_b": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε να προσθέσετε μπλοκ και να εκτελέσετε τον κώδικα για να δείτε τι θα συμβεί, ακόμα και αν νομίζετε ότι δεν έχετε λύσει το παζλ ακόμα."
+        },
+        "courseC_collector_prog4_2021": {
+          "courseC_collector_prog4_b": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε να προσθέσετε μπλοκ και να εκτελέσετε τον κώδικα για να δείτε τι θα συμβεί, ακόμα και αν νομίζετε ότι δεν έχετε λύσει το παζλ ακόμα."
+        },
+        "courseC_collector_prog5": {
+          "courseC_collector_prog5_a": "-   Δουλεύουν όλα μετα το πρώτο βήμα;\n-   Εξακολουθούν να δουλεύουν μετά το δεύτερο;\n-   Τι πάει στραβά;"
+        },
+        "courseC_collector_prog52022": {
+          "courseC_collector_prog5_a": "-   Δουλεύουν όλα μετα το πρώτο βήμα;\n-   Εξακολουθούν να δουλεύουν μετά το δεύτερο;\n-   Τι πάει στραβά;"
+        },
+        "courseC_collector_prog5_2018": {
+          "courseC_collector_prog5_a": "-   Δουλεύουν όλα μετα το πρώτο βήμα;\n-   Εξακολουθούν να δουλεύουν μετά το δεύτερο;\n-   Τι πάει στραβά;"
+        },
+        "courseC_collector_prog5_2019": {
+          "courseC_collector_prog5_a": "-   Δουλεύουν όλα μετα το πρώτο βήμα;\n-   Εξακολουθούν να δουλεύουν μετά το δεύτερο;\n-   Τι πάει στραβά;"
+        },
+        "courseC_collector_prog5_2020": {
+          "courseC_collector_prog5_a": "-   Δουλεύουν όλα μετα το πρώτο βήμα;\n-   Εξακολουθούν να δουλεύουν μετά το δεύτερο;\n-   Τι πάει στραβά;"
+        },
+        "courseC_collector_prog5_2021": {
+          "courseC_collector_prog5_a": "-   Δουλεύουν όλα μετα το πρώτο βήμα;\n-   Εξακολουθούν να δουλεύουν μετά το δεύτερο;\n-   Τι πάει στραβά;"
+        },
+        "courseC_collector_prog6": {
+          "courseC_collector_prog6_a": "Μπορείς να καταλάβεις τι πάει στραβά;  \n\nΔοκιμάστε να χρησιμοποιήσετε το κουμπί «Βήμα» για να βρείτε σφάλματα εκτελώντας τον κώδικά σας γραμμή προς γραμμή."
+        },
+        "courseC_collector_prog62022": {
+          "courseC_collector_prog6_a": "Μπορείς να καταλάβεις τι πάει στραβά;  \n\nΔοκιμάστε να χρησιμοποιήσετε το κουμπί «Βήμα» για να βρείτε σφάλματα εκτελώντας τον κώδικά σας γραμμή προς γραμμή."
+        },
+        "courseC_collector_prog6_2018": {
+          "courseC_collector_prog6_a": "Μπορείς να καταλάβεις τι πάει στραβά;  \n\nΔοκιμάστε να χρησιμοποιήσετε το κουμπί «Βήμα» για να βρείτε σφάλματα εκτελώντας τον κώδικά σας γραμμή προς γραμμή."
+        },
+        "courseC_collector_prog6_2019": {
+          "courseC_collector_prog6_a": "Μπορείς να καταλάβεις τι πάει στραβά;  \n\nΔοκιμάστε να χρησιμοποιήσετε το κουμπί «Βήμα» για να βρείτε σφάλματα εκτελώντας τον κώδικά σας γραμμή προς γραμμή."
+        },
+        "courseC_collector_prog6_2020": {
+          "courseC_collector_prog6_a": "Μπορείς να καταλάβεις τι πάει στραβά;  \n\nΔοκιμάστε να χρησιμοποιήσετε το κουμπί «Βήμα» για να βρείτε σφάλματα εκτελώντας τον κώδικά σας γραμμή προς γραμμή."
+        },
+        "courseC_collector_prog6_2021": {
+          "courseC_collector_prog6_a": "Μπορείς να καταλάβεις τι πάει στραβά;  \n\nΔοκιμάστε να χρησιμοποιήσετε το κουμπί «Βήμα» για να βρείτε σφάλματα εκτελώντας τον κώδικά σας γραμμή προς γραμμή."
+        },
+        "courseC_harvester_loops2": {
+          "courseC_harvester_loops2_a": "Εάν κολλήσατε, δοκιμάστε να γράψετε τα βήματα σε χαρτί και να αναζητήσετε επαναλαμβανόμενα μοτίβα."
+        },
+        "courseC_harvester_loops22022": {
+          "courseC_harvester_loops2_a": "Εάν κολλήσατε, δοκιμάστε να γράψετε τα βήματα σε χαρτί και να αναζητήσετε επαναλαμβανόμενα μοτίβα."
+        },
+        "courseC_harvester_loops2_2018": {
+          "courseC_harvester_loops2_a": "Εάν κολλήσατε, δοκιμάστε να γράψετε τα βήματα σε χαρτί και να αναζητήσετε επαναλαμβανόμενα μοτίβα."
+        },
+        "courseC_harvester_loops2_2019": {
+          "courseC_harvester_loops2_a": "Εάν κολλήσατε, δοκιμάστε να γράψετε τα βήματα σε χαρτί και να αναζητήσετε επαναλαμβανόμενα μοτίβα."
+        },
+        "courseC_harvester_loops2_2020": {
+          "courseC_harvester_loops2_a": "Εάν κολλήσατε, δοκιμάστε να γράψετε τα βήματα σε χαρτί και να αναζητήσετε επαναλαμβανόμενα μοτίβα."
+        },
+        "courseC_harvester_loops2_2021": {
+          "courseC_harvester_loops2_a": "Εάν κολλήσατε, δοκιμάστε να γράψετε τα βήματα σε χαρτί και να αναζητήσετε επαναλαμβανόμενα μοτίβα."
+        },
+        "courseC_harvester_loops3": {
+          "courseC_harvester_loops3_a": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε να προσθέσετε μπλοκ και να εκτελέσετε τον κώδικα για να δείτε τι θα συμβεί, ακόμη και αν δεν έχετε λύσει το παζλ.",
+          "courseC_harvester_loops3_b": "Για τις πρώτες κολοκύθες, μπορείτε να χρησιμοποιήσετε κώδικα πολύ παρόμοιο με το προηγούμενο παζλ. Προς τα που πρέπει να στρίψεις μετά;",
+          "courseC_harvester_loops3_c": "Αν θέλετε να απλοποιήσετε τον κώδικά σας, μπορείτε να βάλετε έναν επαναληπτικό βρόχο μέσα σε έναν άλλο! Αυτό ονομάζεται **Εμφωλευμένος Βρόχος**."
+        },
+        "courseC_harvester_loops32022": {
+          "courseC_harvester_loops3_a": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε να προσθέσετε μπλοκ και να εκτελέσετε τον κώδικα για να δείτε τι θα συμβεί, ακόμη και αν δεν έχετε λύσει το παζλ.",
+          "courseC_harvester_loops3_b": "Για τις πρώτες κολοκύθες, μπορείτε να χρησιμοποιήσετε κώδικα πολύ παρόμοιο με το προηγούμενο παζλ. Προς τα που πρέπει να στρίψεις μετά;",
+          "courseC_harvester_loops3_c": "Αν θέλετε να απλοποιήσετε τον κώδικά σας, μπορείτε να βάλετε έναν επαναληπτικό βρόχο μέσα σε έναν άλλο! Αυτό ονομάζεται **Εμφωλευμένος Βρόχος**."
+        },
+        "courseC_harvester_loops3_2018": {
+          "courseC_harvester_loops3_a": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε να προσθέσετε μπλοκ και να εκτελέσετε τον κώδικα για να δείτε τι θα συμβεί, ακόμη και αν δεν έχετε λύσει το παζλ.",
+          "courseC_harvester_loops3_b": "Για τις πρώτες κολοκύθες, μπορείτε να χρησιμοποιήσετε κώδικα πολύ παρόμοιο με το προηγούμενο παζλ. Προς τα που πρέπει να στρίψεις μετά;",
+          "courseC_harvester_loops3_c": "Αν θέλετε να απλοποιήσετε τον κώδικά σας, μπορείτε να βάλετε έναν επαναληπτικό βρόχο μέσα σε έναν άλλο! Αυτό ονομάζεται **Εμφωλευμένος Βρόχος**."
+        },
+        "courseC_harvester_loops3_2019": {
+          "courseC_harvester_loops3_a": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε να προσθέσετε μπλοκ και να εκτελέσετε τον κώδικα για να δείτε τι θα συμβεί, ακόμη και αν δεν έχετε λύσει το παζλ.",
+          "courseC_harvester_loops3_b": "Για τις πρώτες κολοκύθες, μπορείτε να χρησιμοποιήσετε κώδικα πολύ παρόμοιο με το προηγούμενο παζλ. Προς τα που πρέπει να στρίψεις μετά;",
+          "courseC_harvester_loops3_c": "Αν θέλετε να απλοποιήσετε τον κώδικά σας, μπορείτε να βάλετε έναν επαναληπτικό βρόχο μέσα σε έναν άλλο! Αυτό ονομάζεται **Εμφωλευμένος Βρόχος**."
+        },
+        "courseC_harvester_loops3_2020": {
+          "courseC_harvester_loops3_a": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε να προσθέσετε μπλοκ και να εκτελέσετε τον κώδικα για να δείτε τι θα συμβεί, ακόμη και αν δεν έχετε λύσει το παζλ.",
+          "courseC_harvester_loops3_b": "Για τις πρώτες κολοκύθες, μπορείτε να χρησιμοποιήσετε κώδικα πολύ παρόμοιο με το προηγούμενο παζλ. Προς τα που πρέπει να στρίψεις μετά;",
+          "courseC_harvester_loops3_c": "Αν θέλετε να απλοποιήσετε τον κώδικά σας, μπορείτε να βάλετε έναν επαναληπτικό βρόχο μέσα σε έναν άλλο! Αυτό ονομάζεται **Εμφωλευμένος Βρόχος**."
+        },
+        "courseC_harvester_loops3_2021": {
+          "courseC_harvester_loops3_a": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε να προσθέσετε μπλοκ και να εκτελέσετε τον κώδικα για να δείτε τι θα συμβεί, ακόμη και αν δεν έχετε λύσει το παζλ.",
+          "courseC_harvester_loops3_b": "Για τις πρώτες κολοκύθες, μπορείτε να χρησιμοποιήσετε κώδικα πολύ παρόμοιο με το προηγούμενο παζλ. Προς τα που πρέπει να στρίψεις μετά;",
+          "courseC_harvester_loops3_c": "Αν θέλετε να απλοποιήσετε τον κώδικά σας, μπορείτε να βάλετε έναν επαναληπτικό βρόχο μέσα σε έναν άλλο! Αυτό ονομάζεται **ένθετος βρόγχος**."
+        },
+        "courseC_harvester_loops4": {
+          "courseC_harvester_loops4_a": "Χρησιμοποιήστε το νέο μπλοκ \"σύλλεξε καλαμπόκι\" για να συλλέξετε το καλαμπόκι.",
+          "courseC_harvester_loops4_b": "Μπορείτε να χρησιμοποιήσετε βρόχους επανάληψης στον κώδικά σας, μερικούς για να μαζέψετε καλαμπόκι και μερικούς για να μαζέψετε κολοκύθες.",
+          "courseC_harvester_loops4_c": "Αν θέλετε να απλοποιήσετε τον κώδικά σας, μπορείτε να βάλετε έναν επαναληπτικό βρόχο μέσα σε έναν άλλο! Αυτό ονομάζεται **Εμφωλευμένος Βρόχος**."
+        },
+        "courseC_harvester_loops42022": {
+          "courseC_harvester_loops4_a": "Χρησιμοποιήστε το νέο μπλοκ \"σύλλεξε καλαμπόκι\" για να συλλέξετε το καλαμπόκι.",
+          "courseC_harvester_loops4_b": "Μπορείτε να χρησιμοποιήσετε βρόχους επανάληψης στον κώδικά σας, μερικούς για να μαζέψετε καλαμπόκι και μερικούς για να μαζέψετε κολοκύθες.",
+          "courseC_harvester_loops4_c": "Αν θέλετε να απλοποιήσετε τον κώδικά σας, μπορείτε να βάλετε έναν επαναληπτικό βρόχο μέσα σε έναν άλλο! Αυτό ονομάζεται **Εμφωλευμένος Βρόχος**."
+        },
+        "courseC_harvester_loops4_2018": {
+          "courseC_harvester_loops4_a": "Χρησιμοποιήστε το νέο μπλοκ \"σύλλεξε καλαμπόκι\" για να συλλέξετε το καλαμπόκι.",
+          "courseC_harvester_loops4_b": "Μπορείτε να χρησιμοποιήσετε βρόχους επανάληψης στον κώδικά σας, μερικούς για να μαζέψετε καλαμπόκι και μερικούς για να μαζέψετε κολοκύθες.",
+          "courseC_harvester_loops4_c": "Αν θέλετε να απλοποιήσετε τον κώδικά σας, μπορείτε να βάλετε έναν επαναληπτικό βρόχο μέσα σε έναν άλλο! Αυτό ονομάζεται **Εμφωλευμένος Βρόχος**."
+        },
+        "courseC_harvester_loops4_2019": {
+          "courseC_harvester_loops4_a": "Χρησιμοποιήστε το νέο μπλοκ \"σύλλεξε καλαμπόκι\" για να συλλέξετε το καλαμπόκι.",
+          "courseC_harvester_loops4_b": "Μπορείτε να χρησιμοποιήσετε βρόχους επανάληψης στον κώδικά σας, μερικούς για να μαζέψετε καλαμπόκι και μερικούς για να μαζέψετε κολοκύθες.",
+          "courseC_harvester_loops4_c": "Αν θέλετε να απλοποιήσετε τον κώδικά σας, μπορείτε να βάλετε έναν επαναληπτικό βρόχο μέσα σε έναν άλλο! Αυτό ονομάζεται **Εμφωλευμένος Βρόχος**."
+        },
+        "courseC_harvester_loops4_2020": {
+          "courseC_harvester_loops4_a": "Χρησιμοποιήστε το νέο μπλοκ \"σύλλεξε καλαμπόκι\" για να συλλέξετε το καλαμπόκι.",
+          "courseC_harvester_loops4_b": "Μπορείτε να χρησιμοποιήσετε βρόχους επανάληψης στον κώδικά σας, μερικούς για να μαζέψετε καλαμπόκι και μερικούς για να μαζέψετε κολοκύθες.",
+          "courseC_harvester_loops4_c": "Αν θέλετε να απλοποιήσετε τον κώδικά σας, μπορείτε να βάλετε έναν επαναληπτικό βρόχο μέσα σε έναν άλλο! Αυτό ονομάζεται **Εμφωλευμένος Βρόχος**."
+        },
+        "courseC_harvester_loops4_2021": {
+          "courseC_harvester_loops4_a": "Χρησιμοποιήστε το νέο μπλοκ \"σύλλεξε καλαμπόκι\" για να συλλέξετε το καλαμπόκι.",
+          "courseC_harvester_loops4_b": "Μπορείτε να χρησιμοποιήσετε βρόχους επανάληψης στον κώδικά σας, μερικούς για να μαζέψετε καλαμπόκι και μερικούς για να μαζέψετε κολοκύθες.",
+          "courseC_harvester_loops4_c": "Αν θέλετε να απλοποιήσετε τον κώδικά σας, μπορείτε να βάλετε έναν επαναληπτικό βρόχο μέσα σε έναν άλλο! Αυτό ονομάζεται **Εμφωλευμένος Βρόχος**."
+        },
+        "courseC_harvester_loops8": {
+          "courseC_harvester_loops8_b": "Αν θέλετε να απλοποιήσετε τον κώδικά σας, μπορείτε να βάλετε έναν βρόχο επανάληψης μέσα σε έναν άλλο! Αυτό ονομάζεται **Εμφωλευμένος Βρόχος**."
+        },
+        "courseC_harvester_loops82022": {
+          "courseC_harvester_loops8_b": "Αν θέλετε να απλοποιήσετε τον κώδικά σας, μπορείτε να βάλετε έναν βρόχο επανάληψης μέσα σε έναν άλλο! Αυτό ονομάζεται **Εμφωλευμένος Βρόχος**."
+        },
+        "courseC_harvester_loops8_2018": {
+          "courseC_harvester_loops8_b": "Αν θέλετε να απλοποιήσετε τον κώδικά σας, μπορείτε να βάλετε έναν βρόχο επανάληψης μέσα σε έναν άλλο! Αυτό ονομάζεται **Εμφωλευμένος Βρόχος**."
+        },
+        "courseC_harvester_loops8_2019": {
+          "courseC_harvester_loops8_b": "Αν θέλετε να απλοποιήσετε τον κώδικά σας, μπορείτε να βάλετε έναν βρόχο επανάληψης μέσα σε έναν άλλο! Αυτό ονομάζεται **Εμφωλευμένος Βρόχος**."
+        },
+        "courseC_harvester_loops8_2020": {
+          "courseC_harvester_loops8_b": "Αν θέλετε να απλοποιήσετε τον κώδικά σας, μπορείτε να βάλετε έναν βρόχο επανάληψης μέσα σε έναν άλλο! Αυτό ονομάζεται **Εμφωλευμένος Βρόχος**."
+        },
+        "courseC_harvester_loops8_2021": {
+          "courseC_harvester_loops8_b": "Αν θέλετε να απλοποιήσετε τον κώδικά σας, μπορείτε να βάλετε έναν βρόχο επανάληψης μέσα σε έναν άλλο! Αυτό ονομάζεται **Εμφωλευμένος Βρόχος**."
+        },
+        "courseC_harvester_loops_challenge1a": {
+          "courseC_harvester_loops_challenge1_a": "Είναι πολύ δύσκολο χωρίς βρόχους με την επανάληψη!"
+        },
+        "courseC_harvester_loops_challenge1a2022": {
+          "courseC_harvester_loops_challenge1_a": "Είναι πολύ δύσκολο χωρίς βρόχους με την επανάληψη!"
+        },
+        "courseC_harvester_loops_challenge1a_2018": {
+          "courseC_harvester_loops_challenge1_a": "Είναι πολύ δύσκολο χωρίς βρόχους με την επανάληψη!"
+        },
+        "courseC_harvester_loops_challenge1a_2019": {
+          "courseC_harvester_loops_challenge1_a": "Είναι πολύ δύσκολο χωρίς βρόχους με την επανάληψη!"
+        },
+        "courseC_harvester_loops_challenge1a_2020": {
+          "courseC_harvester_loops_challenge1_a": "Είναι πολύ δύσκολο χωρίς βρόχους με την επανάληψη!"
+        },
+        "courseC_harvester_loops_challenge1a_2021": {
+          "courseC_harvester_loops_challenge1_a": "Είναι πολύ δύσκολο χωρίς βρόχους με την επανάληψη!"
+        },
+        "courseC_maze_debugging1": {
+          "courseC_maze_debugging1_a": "-   Δουλεύουν όλα μετα το πρώτο βήμα;\n-   Εξακολουθούν να δουλεύουν μετά το δεύτερο;\n-   Τι πάει στραβά;"
+        },
+        "courseC_maze_debugging12022": {
+          "courseC_maze_debugging1_a": "-   Δουλεύουν όλα μετα το πρώτο βήμα;\n-   Εξακολουθούν να δουλεύουν μετά το δεύτερο;\n-   Τι πάει στραβά;"
+        },
+        "courseC_maze_debugging1_2018": {
+          "courseC_maze_debugging1_a": "-   Δουλεύουν όλα μετα το πρώτο βήμα;\n-   Εξακολουθούν να δουλεύουν μετά το δεύτερο;\n-   Τι πάει στραβά;"
+        },
+        "courseC_maze_debugging1_2019": {
+          "courseC_maze_debugging1_a": "-   Δουλεύουν όλα μετα το πρώτο βήμα;\n-   Εξακολουθούν να δουλεύουν μετά το δεύτερο;\n-   Τι πάει στραβά;"
+        },
+        "courseC_maze_debugging1_2020": {
+          "courseC_maze_debugging1_a": "-   Δουλεύουν όλα μετα το πρώτο βήμα;\n-   Εξακολουθούν να δουλεύουν μετά το δεύτερο;\n-   Τι πάει στραβά;"
+        },
+        "courseC_maze_debugging1_2021": {
+          "courseC_maze_debugging1_a": "-   Δουλεύουν όλα μετα το πρώτο βήμα;\n-   Εξακολουθούν να δουλεύουν μετά το δεύτερο;\n-   Τι πάει στραβά;"
+        },
+        "courseC_maze_debugging2": {
+          "courseC_maze_debugging2_b": "-   Δουλεύουν όλα μετα το πρώτο βήμα;\n-   Εξακολουθούν να δουλεύουν μετά το δεύτερο;\n-   Τι πάει στραβά;"
+        },
+        "courseC_maze_debugging22022": {
+          "courseC_maze_debugging2_b": "-   Δουλεύουν όλα μετα το πρώτο βήμα;\n-   Εξακολουθούν να δουλεύουν μετά το δεύτερο;\n-   Τι πάει στραβά;"
+        },
+        "courseC_maze_debugging2_2018": {
+          "courseC_maze_debugging2_b": "-   Δουλεύουν όλα μετα το πρώτο βήμα;\n-   Εξακολουθούν να δουλεύουν μετά το δεύτερο;\n-   Τι πάει στραβά;"
+        },
+        "courseC_maze_debugging2_2019": {
+          "courseC_maze_debugging2_b": "-   Δουλεύουν όλα μετα το πρώτο βήμα;\n-   Εξακολουθούν να δουλεύουν μετά το δεύτερο;\n-   Τι πάει στραβά;"
+        },
+        "courseC_maze_debugging2_2020": {
+          "courseC_maze_debugging2_b": "-   Δουλεύουν όλα μετα το πρώτο βήμα;\n-   Εξακολουθούν να δουλεύουν μετά το δεύτερο;\n-   Τι πάει στραβά;"
+        },
+        "courseC_maze_debugging2_2021": {
+          "courseC_maze_debugging2_b": "-   Δουλεύουν όλα μετα το πρώτο βήμα;\n-   Εξακολουθούν να δουλεύουν μετά το δεύτερο;\n-   Τι πάει στραβά;"
+        },
+        "courseC_maze_debugging7": {
+          "courseC_maze_debugging7_a": "-   Δουλεύουν όλα μετα το πρώτο βήμα;\n-   Εξακολουθούν να δουλεύουν μετά το δεύτερο;\n-   Τι πάει στραβά;"
+        },
+        "courseC_maze_debugging72022": {
+          "courseC_maze_debugging7_a": "-   Δουλεύουν όλα μετα το πρώτο βήμα;\n-   Εξακολουθούν να δουλεύουν μετά το δεύτερο;\n-   Τι πάει στραβά;"
+        },
+        "courseC_maze_debugging7_2018": {
+          "courseC_maze_debugging7_a": "-   Δουλεύουν όλα μετα το πρώτο βήμα;\n-   Εξακολουθούν να δουλεύουν μετά το δεύτερο;\n-   Τι πάει στραβά;"
+        },
+        "courseC_maze_debugging7_2019": {
+          "courseC_maze_debugging7_a": "-   Δουλεύουν όλα μετα το πρώτο βήμα;\n-   Εξακολουθούν να δουλεύουν μετά το δεύτερο;\n-   Τι πάει στραβά;"
+        },
+        "courseC_maze_debugging7_2020": {
+          "courseC_maze_debugging7_a": "-   Δουλεύουν όλα μετα το πρώτο βήμα;\n-   Εξακολουθούν να δουλεύουν μετά το δεύτερο;\n-   Τι πάει στραβά;"
+        },
+        "courseC_maze_debugging7_2021": {
+          "courseC_maze_debugging7_a": "-   Δουλεύουν όλα μετα το πρώτο βήμα;\n-   Εξακολουθούν να δουλεύουν μετά το δεύτερο;\n-   Τι πάει στραβά;"
+        },
+        "courseC_maze_debugging_challenge2": {
+          "courseC_maze_debugging_challenge2_b": "Εάν έχετε κολλήσει, δοκιμάστε να εντοπίσετε και να διορθώσετε σφάλματά στον κώδικα. Τι πάει στραβά;"
+        },
+        "courseC_maze_debugging_challenge22022": {
+          "courseC_maze_debugging_challenge2_b": "Εάν έχετε κολλήσει, δοκιμάστε να εντοπίσετε και να διορθώσετε σφάλματά στον κώδικα. Τι πάει στραβά;"
+        },
+        "courseC_maze_debugging_challenge2_2018": {
+          "courseC_maze_debugging_challenge2_b": "Εάν έχετε κολλήσει, δοκιμάστε να εντοπίσετε και να διορθώσετε σφάλματά στον κώδικα. Τι πάει στραβά;"
+        },
+        "courseC_maze_debugging_challenge2_2019": {
+          "courseC_maze_debugging_challenge2_b": "Εάν έχετε κολλήσει, δοκιμάστε να εντοπίσετε και να διορθώσετε σφάλματά στον κώδικα. Τι πάει στραβά;"
+        },
+        "courseC_maze_debugging_challenge2_2020": {
+          "courseC_maze_debugging_challenge2_b": "Εάν έχετε κολλήσει, δοκιμάστε να εντοπίσετε και να διορθώσετε σφάλματά στον κώδικα. Τι πάει στραβά;"
+        },
+        "courseC_maze_debugging_challenge2_2021": {
+          "courseC_maze_debugging_challenge2_b": "Εάν έχετε κολλήσει, δοκιμάστε να εντοπίσετε και να διορθώσετε σφάλματά στον κώδικα. Τι πάει στραβά;"
+        },
+        "courseC_maze_programming5": {
+          "courseC_maze_programming5_a": "Δοκιμάστε να χρησιμοποιήσετε το κουμπί «Βήμα» για να εκτελέσετε τον κώδικά σας γραμμή προς γραμμή. Μπορείς να σκεφτείς τι πρέπει να κάνεις μετά;"
+        },
+        "courseC_maze_programming52022": {
+          "courseC_maze_programming5_a": "Δοκιμάστε να χρησιμοποιήσετε το κουμπί «Βήμα» για να εκτελέσετε τον κώδικά σας γραμμή προς γραμμή. Μπορείς να σκεφτείς τι πρέπει να κάνεις μετά;"
+        },
+        "courseC_maze_programming5_2018": {
+          "courseC_maze_programming5_a": "Δοκιμάστε να χρησιμοποιήσετε το κουμπί «Βήμα» για να εκτελέσετε τον κώδικά σας γραμμή προς γραμμή. Μπορείς να σκεφτείς τι πρέπει να κάνεις μετά;"
+        },
+        "courseC_maze_programming5_2019": {
+          "courseC_maze_programming5_a": "Δοκιμάστε να χρησιμοποιήσετε το κουμπί «Βήμα» για να εκτελέσετε τον κώδικά σας γραμμή προς γραμμή. Μπορείς να σκεφτείς τι πρέπει να κάνεις μετά;"
+        },
+        "courseC_maze_programming5_2020": {
+          "courseC_maze_programming5_a": "Δοκιμάστε να χρησιμοποιήσετε το κουμπί «Βήμα» για να εκτελέσετε τον κώδικά σας γραμμή προς γραμμή. Μπορείς να σκεφτείς τι πρέπει να κάνεις μετά;"
+        },
+        "courseC_maze_programming5_2021": {
+          "courseC_maze_programming5_a": "Δοκιμάστε να χρησιμοποιήσετε το κουμπί «Βήμα» για να εκτελέσετε τον κώδικά σας γραμμή προς γραμμή. Μπορείς να σκεφτείς τι πρέπει να κάνεις μετά;"
+        },
+        "courseC_maze_programming8": {
+          "courseC_maze_programming8_b": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε να προσθέσετε μπλοκ και να εκτελέσετε τον κώδικα για να δείτε τι θα συμβεί, ακόμα και αν νομίζετε ότι δεν έχετε λύσει το παζλ ακόμα."
+        },
+        "courseC_maze_programming82022": {
+          "courseC_maze_programming8_b": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε να προσθέσετε μπλοκ και να εκτελέσετε τον κώδικα για να δείτε τι θα συμβεί, ακόμα και αν νομίζετε ότι δεν έχετε λύσει το παζλ ακόμα."
+        },
+        "courseC_maze_programming8_2018": {
+          "courseC_maze_programming8_b": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε να προσθέσετε μπλοκ και να εκτελέσετε τον κώδικα για να δείτε τι θα συμβεί, ακόμα και αν νομίζετε ότι δεν έχετε λύσει το παζλ ακόμα."
+        },
+        "courseC_maze_programming8_2019": {
+          "courseC_maze_programming8_b": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε να προσθέσετε μπλοκ και να εκτελέσετε τον κώδικα για να δείτε τι θα συμβεί, ακόμα και αν νομίζετε ότι δεν έχετε λύσει το παζλ ακόμα."
+        },
+        "courseC_maze_programming8_2020": {
+          "courseC_maze_programming8_b": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε να προσθέσετε μπλοκ και να εκτελέσετε τον κώδικα για να δείτε τι θα συμβεί, ακόμα και αν νομίζετε ότι δεν έχετε λύσει το παζλ ακόμα."
+        },
+        "courseC_maze_programming8_2021": {
+          "courseC_maze_programming8_b": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε να προσθέσετε μπλοκ και να εκτελέσετε τον κώδικα για να δείτε τι θα συμβεί, ακόμα και αν νομίζετε ότι δεν έχετε λύσει το παζλ ακόμα."
+        },
+        "courseC_starWars_loops1": {
+          "courseC_starWars_loops1_b": "Μη φοβάσαι να κάνεις λάθος! Τρέξε τον κώδικα για να δεις τι θα συμβεί, ακόμα και αν δεν έχεις λύσει το παζλ ακόμα."
+        },
+        "courseC_starWars_loops10": {
+          "courseC_starWars_loops10_c": "Μη φοβάσαι να κάνεις λάθος! Τρέξε τον κώδικα για να δεις τι θα συμβεί, ακόμα και αν δεν έχεις λύσει το παζλ ακόμα."
+        },
+        "courseC_starWars_loops102022": {
+          "courseC_starWars_loops10_c": "Μη φοβάσαι να κάνεις λάθος! Τρέξε τον κώδικα για να δεις τι θα συμβεί, ακόμα και αν δεν έχεις λύσει το παζλ ακόμα."
+        },
+        "courseC_starWars_loops10_2018": {
+          "courseC_starWars_loops10_c": "Μη φοβάσαι να κάνεις λάθος! Τρέξε τον κώδικα για να δεις τι θα συμβεί, ακόμα και αν δεν έχεις λύσει το παζλ ακόμα."
+        },
+        "courseC_starWars_loops10_2019": {
+          "courseC_starWars_loops10_c": "Μη φοβάσαι να κάνεις λάθος! Τρέξε τον κώδικα για να δεις τι θα συμβεί, ακόμα και αν δεν έχεις λύσει το παζλ ακόμα."
+        },
+        "courseC_starWars_loops10_2020": {
+          "courseC_starWars_loops10_c": "Μη φοβάσαι να κάνεις λάθος! Τρέξε τον κώδικα για να δεις τι θα συμβεί, ακόμα και αν δεν έχεις λύσει το παζλ ακόμα."
+        },
+        "courseC_starWars_loops10_2021": {
+          "courseC_starWars_loops10_c": "Μη φοβάσαι να κάνεις λάθος! Τρέξε τον κώδικα για να δεις τι θα συμβεί, ακόμα και αν δεν έχεις λύσει το παζλ ακόμα."
+        },
+        "courseC_starWars_loops12022": {
+          "courseC_starWars_loops1_b": "Μη φοβάσαι να κάνεις λάθος! Τρέξε τον κώδικα για να δεις τι θα συμβεί, ακόμα και αν δεν έχεις λύσει το παζλ ακόμα."
+        },
+        "courseC_starWars_loops1_2018": {
+          "courseC_starWars_loops1_b": "Μη φοβάσαι να κάνεις λάθος! Τρέξε τον κώδικα για να δεις τι θα συμβεί, ακόμα και αν δεν έχεις λύσει το παζλ ακόμα."
+        },
+        "courseC_starWars_loops1_2019": {
+          "courseC_starWars_loops1_b": "Μη φοβάσαι να κάνεις λάθος! Τρέξε τον κώδικα για να δεις τι θα συμβεί, ακόμα και αν δεν έχεις λύσει το παζλ ακόμα."
+        },
+        "courseC_starWars_loops1_2020": {
+          "courseC_starWars_loops1_b": "Μη φοβάσαι να κάνεις λάθος! Τρέξε τον κώδικα για να δεις τι θα συμβεί, ακόμα και αν δεν έχεις λύσει το παζλ ακόμα."
+        },
+        "courseC_starWars_loops1_2021": {
+          "courseC_starWars_loops1_b": "Μη φοβάσαι να κάνεις λάθος! Τρέξε τον κώδικα για να δεις τι θα συμβεί, ακόμα και αν δεν έχεις λύσει το παζλ ακόμα."
+        },
+        "courseC_starWars_loops2": {
+          "courseC_starWars_loops2_a": "Για να επαναλάβετε κάποιο κώδικα, σύρτε έξω έναν βρόχο επανάληψης και στη συνέχεια, τοποθετήστε μέσα του το μπλοκ που θέλετε να επαναληφθεί."
+        },
+        "courseC_starWars_loops22022": {
+          "courseC_starWars_loops2_a": "Για να επαναλάβετε κάποιο κώδικα, σύρτε έξω έναν βρόχο επανάληψης και στη συνέχεια, τοποθετήστε μέσα του το μπλοκ που θέλετε να επαναληφθεί."
+        },
+        "courseC_starWars_loops2_2018": {
+          "courseC_starWars_loops2_a": "Για να επαναλάβετε κάποιο κώδικα, σύρτε έξω έναν βρόχο επανάληψης και στη συνέχεια, τοποθετήστε μέσα του το μπλοκ που θέλετε να επαναληφθεί."
+        },
+        "courseC_starWars_loops2_2019": {
+          "courseC_starWars_loops2_a": "Για να επαναλάβετε κάποιο κώδικα, σύρτε έξω έναν βρόχο επανάληψης και στη συνέχεια, τοποθετήστε μέσα του το μπλοκ που θέλετε να επαναληφθεί."
+        },
+        "courseC_starWars_loops2_2020": {
+          "courseC_starWars_loops2_a": "Για να επαναλάβετε κάποιο κώδικα, σύρτε έξω έναν βρόχο επανάληψης και στη συνέχεια, τοποθετήστε μέσα του το μπλοκ που θέλετε να επαναληφθεί."
+        },
+        "courseC_starWars_loops2_2021": {
+          "courseC_starWars_loops2_a": "Για να επαναλάβετε κάποιο κώδικα, σύρτε έξω έναν βρόχο επανάληψης και στη συνέχεια, τοποθετήστε μέσα του το μπλοκ που θέλετε να επαναληφθεί."
+        },
+        "courseC_starWars_loops2_copy": {
+          "courseC_starWars_loops2_a": "Για να επαναλάβετε κάποιο κώδικα, σύρτε έξω έναν βρόχο επανάληψης και στη συνέχεια, τοποθετήστε μέσα του το μπλοκ που θέλετε να επαναληφθεί."
+        },
+        "courseC_starWars_loops2_dani": {
+          "courseC_starWars_loops2_a": "Για να επαναλάβετε κάποιο κώδικα, σύρτε έξω έναν βρόχο επανάληψης και στη συνέχεια, τοποθετήστε μέσα του το μπλοκ που θέλετε να επαναληφθεί."
+        },
+        "courseC_starWars_loops7": {
+          "courseC_starWars_loops7_c": "Μη φοβάσαι να κάνεις λάθος! Τρέξε τον κώδικα για να δεις τι θα συμβεί, ακόμα και αν δεν έχεις λύσει το παζλ ακόμα."
+        },
+        "courseC_starWars_loops72022": {
+          "courseC_starWars_loops7_c": "Μη φοβάσαι να κάνεις λάθος! Τρέξε τον κώδικα για να δεις τι θα συμβεί, ακόμα και αν δεν έχεις λύσει το παζλ ακόμα."
+        },
+        "courseC_starWars_loops7_2018": {
+          "courseC_starWars_loops7_c": "Μη φοβάσαι να κάνεις λάθος! Τρέξε τον κώδικα για να δεις τι θα συμβεί, ακόμα και αν δεν έχεις λύσει το παζλ ακόμα."
+        },
+        "courseC_starWars_loops7_2019": {
+          "courseC_starWars_loops7_c": "Μη φοβάσαι να κάνεις λάθος! Τρέξε τον κώδικα για να δεις τι θα συμβεί, ακόμα και αν δεν έχεις λύσει το παζλ ακόμα."
+        },
+        "courseC_starWars_loops7_2020": {
+          "courseC_starWars_loops7_c": "Μη φοβάσαι να κάνεις λάθος! Τρέξε τον κώδικα για να δεις τι θα συμβεί, ακόμα και αν δεν έχεις λύσει το παζλ ακόμα."
+        },
+        "courseC_starWars_loops7_2021": {
+          "courseC_starWars_loops7_c": "Μη φοβάσαι να κάνεις λάθος! Τρέξε τον κώδικα για να δεις τι θα συμβεί, ακόμα και αν δεν έχεις λύσει το παζλ ακόμα."
+        },
+        "courseC_starWars_loops7_copy": {
+          "courseC_starWars_loops7_c": "Μη φοβάσαι να κάνεις λάθος! Τρέξε τον κώδικα για να δεις τι θα συμβεί, ακόμα και αν δεν έχεις λύσει το παζλ ακόμα."
+        },
+        "courseC_starWars_loops7_dani": {
+          "courseC_starWars_loops7_c": "Μη φοβάσαι να κάνεις λάθος! Τρέξε τον κώδικα για να δεις τι θα συμβεί, ακόμα και αν δεν έχεις λύσει το παζλ ακόμα."
+        },
+        "courseD_artist_binary3": {
+          "courseD_artist_binary3_b": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε να συνδέσετε έναν δυαδικό αριθμό και να εκτελέσετε τον κώδικα για να δείτε τι θα συμβεί, ακόμα και αν δεν έχετε λύσει το παζλ ακόμα."
+        },
+        "courseD_artist_binary3_2018": {
+          "courseD_artist_binary3_b": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε να συνδέσετε έναν δυαδικό αριθμό και να εκτελέσετε τον κώδικα για να δείτε τι θα συμβεί, ακόμα και αν δεν έχετε λύσει το παζλ ακόμα."
+        },
+        "courseD_artist_binary3_2019": {
+          "courseD_artist_binary3_b": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε να συνδέσετε έναν δυαδικό αριθμό και να εκτελέσετε τον κώδικα για να δείτε τι θα συμβεί, ακόμα και αν δεν έχετε λύσει το παζλ ακόμα."
+        },
+        "courseD_artist_binary3_2020": {
+          "courseD_artist_binary3_b": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε να συνδέσετε έναν δυαδικό αριθμό και να εκτελέσετε τον κώδικα για να δείτε τι θα συμβεί, ακόμα και αν δεν έχετε λύσει το παζλ ακόμα."
+        },
+        "courseD_artist_binary4": {
+          "courseD_artist_binary4_b": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε να συνδέσετε έναν δυαδικό αριθμό και να εκτελέσετε τον κώδικα για να δείτε τι θα συμβεί, ακόμα και αν νομίζετε ότι δεν έχετε λύσει το παζλ ακόμα."
+        },
+        "courseD_artist_binary4_2018": {
+          "courseD_artist_binary4_b": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε να συνδέσετε έναν δυαδικό αριθμό και να εκτελέσετε τον κώδικα για να δείτε τι θα συμβεί, ακόμα και αν νομίζετε ότι δεν έχετε λύσει το παζλ ακόμα."
+        },
+        "courseD_artist_binary4_2019": {
+          "courseD_artist_binary4_b": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε να συνδέσετε έναν δυαδικό αριθμό και να εκτελέσετε τον κώδικα για να δείτε τι θα συμβεί, ακόμα και αν νομίζετε ότι δεν έχετε λύσει το παζλ ακόμα."
+        },
+        "courseD_artist_binary4_2020": {
+          "courseD_artist_binary4_b": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε να συνδέσετε έναν δυαδικό αριθμό και να εκτελέσετε τον κώδικα για να δείτε τι θα συμβεί, ακόμα και αν νομίζετε ότι δεν έχετε λύσει το παζλ ακόμα."
+        },
+        "courseD_artist_binary7": {
+          "courseD_artist_binary7_b": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε να συνδέσετε έναν δυαδικό αριθμό και να εκτελέσετε τον κώδικα για να δείτε τι θα συμβεί, ακόμα και αν νομίζετε ότι δεν έχετε λύσει το παζλ ακόμα."
+        },
+        "courseD_artist_binary7_2018": {
+          "courseD_artist_binary7_b": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε να συνδέσετε έναν δυαδικό αριθμό και να εκτελέσετε τον κώδικα για να δείτε τι θα συμβεί, ακόμα και αν νομίζετε ότι δεν έχετε λύσει το παζλ ακόμα."
+        },
+        "courseD_artist_binary7_2019": {
+          "courseD_artist_binary7_b": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε να συνδέσετε έναν δυαδικό αριθμό και να εκτελέσετε τον κώδικα για να δείτε τι θα συμβεί, ακόμα και αν νομίζετε ότι δεν έχετε λύσει το παζλ ακόμα."
+        },
+        "courseD_artist_binary7_2020": {
+          "courseD_artist_binary7_b": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε να συνδέσετε έναν δυαδικό αριθμό και να εκτελέσετε τον κώδικα για να δείτε τι θα συμβεί, ακόμα και αν νομίζετε ότι δεν έχετε λύσει το παζλ ακόμα."
+        },
+        "courseD_artist_binary8": {
+          "courseD_artist_binary8_c": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε να συνδέσετε έναν δυαδικό αριθμό και να εκτελέσετε τον κώδικα για να δείτε τι θα συμβεί, ακόμα και αν δεν έχετε λύσει το παζλ ακόμα."
+        },
+        "courseD_artist_binary8_2018": {
+          "courseD_artist_binary8_c": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε να συνδέσετε έναν δυαδικό αριθμό και να εκτελέσετε τον κώδικα για να δείτε τι θα συμβεί, ακόμα και αν δεν έχετε λύσει το παζλ ακόμα."
+        },
+        "courseD_artist_binary8_2019": {
+          "courseD_artist_binary8_c": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε να συνδέσετε έναν δυαδικό αριθμό και να εκτελέσετε τον κώδικα για να δείτε τι θα συμβεί, ακόμα και αν δεν έχετε λύσει το παζλ ακόμα."
+        },
+        "courseD_artist_binary8_2020": {
+          "courseD_artist_binary8_c": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε να συνδέσετε έναν δυαδικό αριθμό και να εκτελέσετε τον κώδικα για να δείτε τι θα συμβεί, ακόμα και αν δεν έχετε λύσει το παζλ ακόμα."
+        },
+        "courseD_bee_conditionals3": {
+          "courseD_bee_conditionals3_c": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε να προσθέσετε μπλοκ και να εκτελέσετε τον κώδικα για να δείτε τι θα συμβεί, ακόμη και αν δεν έχετε λύσει το παζλ."
+        },
+        "courseD_bee_conditionals32022": {
+          "courseD_bee_conditionals3_c": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε να προσθέσετε μπλοκ και να εκτελέσετε τον κώδικα για να δείτε τι θα συμβεί, ακόμη και αν δεν έχετε λύσει το παζλ."
+        },
+        "courseD_bee_conditionals3_2018": {
+          "courseD_bee_conditionals3_c": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε να προσθέσετε μπλοκ και να εκτελέσετε τον κώδικα για να δείτε τι θα συμβεί, ακόμη και αν δεν έχετε λύσει το παζλ."
+        },
+        "courseD_bee_conditionals3_2019": {
+          "courseD_bee_conditionals3_c": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε να προσθέσετε μπλοκ και να εκτελέσετε τον κώδικα για να δείτε τι θα συμβεί, ακόμη και αν δεν έχετε λύσει το παζλ."
+        },
+        "courseD_bee_conditionals3_2020": {
+          "courseD_bee_conditionals3_c": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε να προσθέσετε μπλοκ και να εκτελέσετε τον κώδικα για να δείτε τι θα συμβεί, ακόμη και αν δεν έχετε λύσει το παζλ."
+        },
+        "courseD_bee_conditionals3_2021": {
+          "courseD_bee_conditionals3_c": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε να προσθέσετε μπλοκ και να εκτελέσετε τον κώδικα για να δείτε τι θα συμβεί, ακόμη και αν δεν έχετε λύσει το παζλ."
+        },
+        "courseD_bee_conditionals3_copy": {
+          "courseD_bee_conditionals3_c": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε να προσθέσετε μπλοκ και να εκτελέσετε τον κώδικα για να δείτε τι θα συμβεί, ακόμη και αν δεν έχετε λύσει το παζλ."
+        },
+        "courseD_bee_conditionals3_dani": {
+          "courseD_bee_conditionals3_c": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε να προσθέσετε μπλοκ και να εκτελέσετε τον κώδικα για να δείτε τι θα συμβεί, ακόμη και αν δεν έχετε λύσει το παζλ."
+        },
+        "courseD_bee_nestedLoops1": {
+          "courseD_bee_nestedLoops1_a": "Δεν δουλεύει; Δοκιμάστε να χρησιμοποιήσετε το κουμπί «Βήμα» για να δείτε τι συμβαίνει γραμμή προς γραμμή.",
+          "courseD_bee_nestedLoops1_c": "Θυμηθείτε να χρησιμοποιήσετε το μπλοκ `get nectar` μόλις βρεθείτε πανω σε τετραγωνο με ένα λουλούδι."
+        },
+        "courseD_bee_nestedLoops12022": {
+          "courseD_bee_nestedLoops1_a": "Δεν δουλεύει; Δοκιμάστε να χρησιμοποιήσετε το κουμπί «Βήμα» για να δείτε τι συμβαίνει γραμμή προς γραμμή.",
+          "courseD_bee_nestedLoops1_c": "Θυμηθείτε να χρησιμοποιήσετε το μπλοκ `get nectar` μόλις βρεθείτε πανω σε τετραγωνο με ένα λουλούδι."
+        },
+        "courseD_bee_nestedLoops1_2018": {
+          "courseD_bee_nestedLoops1_a": "Δεν δουλεύει; Δοκιμάστε να χρησιμοποιήσετε το κουμπί «Βήμα» για να δείτε τι συμβαίνει γραμμή προς γραμμή.",
+          "courseD_bee_nestedLoops1_c": "Θυμηθείτε να χρησιμοποιήσετε το μπλοκ `get nectar` μόλις βρεθείτε πανω σε τετραγωνο με ένα λουλούδι."
+        },
+        "courseD_bee_nestedLoops1_2019": {
+          "courseD_bee_nestedLoops1_a": "Δεν δουλεύει; Δοκιμάστε να χρησιμοποιήσετε το κουμπί «Βήμα» για να δείτε τι συμβαίνει γραμμή προς γραμμή.",
+          "courseD_bee_nestedLoops1_c": "Θυμηθείτε να χρησιμοποιήσετε το μπλοκ `get nectar` μόλις βρεθείτε πανω σε τετραγωνο με ένα λουλούδι."
+        },
+        "courseD_bee_nestedLoops1_2020": {
+          "courseD_bee_nestedLoops1_a": "Δεν δουλεύει; Δοκιμάστε να χρησιμοποιήσετε το κουμπί «Βήμα» για να δείτε τι συμβαίνει γραμμή προς γραμμή.",
+          "courseD_bee_nestedLoops1_c": "Θυμηθείτε να χρησιμοποιήσετε το μπλοκ `get nectar` μόλις βρεθείτε πανω σε τετραγωνο με ένα λουλούδι."
+        },
+        "courseD_bee_nestedLoops1_2021": {
+          "courseD_bee_nestedLoops1_a": "Δεν δουλεύει; Δοκιμάστε να χρησιμοποιήσετε το κουμπί «Βήμα» για να δείτε τι συμβαίνει γραμμή προς γραμμή.",
+          "courseD_bee_nestedLoops1_c": "Θυμηθείτε να χρησιμοποιήσετε το μπλοκ `get nectar` μόλις βρεθείτε πανω σε τετραγωνο με ένα λουλούδι."
+        },
+        "courseD_bee_nestedLoops1a": {
+          "courseD_bee_nestedLoops1_a": "Δεν δουλεύει; Δοκιμάστε να χρησιμοποιήσετε το κουμπί «Βήμα» για να δείτε τι συμβαίνει γραμμή προς γραμμή.",
+          "courseD_bee_nestedLoops1_c": "Θυμηθείτε να χρησιμοποιήσετε το μπλοκ `get nectar` μόλις βρεθείτε πανω σε τετραγωνο με ένα λουλούδι."
+        },
+        "courseD_bee_nestedLoops1a2022": {
+          "courseD_bee_nestedLoops1_a": "Δεν δουλεύει; Δοκιμάστε να χρησιμοποιήσετε το κουμπί «Βήμα» για να δείτε τι συμβαίνει γραμμή προς γραμμή.",
+          "courseD_bee_nestedLoops1_c": "Θυμηθείτε να χρησιμοποιήσετε το μπλοκ `get nectar` μόλις βρεθείτε πανω σε τετραγωνο με ένα λουλούδι."
+        },
+        "courseD_bee_nestedLoops1a_2018": {
+          "courseD_bee_nestedLoops1_a": "Δεν δουλεύει; Δοκιμάστε να χρησιμοποιήσετε το κουμπί «Βήμα» για να δείτε τι συμβαίνει γραμμή προς γραμμή.",
+          "courseD_bee_nestedLoops1_c": "Θυμηθείτε να χρησιμοποιήσετε το μπλοκ `get nectar` μόλις βρεθείτε πανω σε τετραγωνο με ένα λουλούδι."
+        },
+        "courseD_bee_nestedLoops1a_2019": {
+          "courseD_bee_nestedLoops1_a": "Δεν δουλεύει; Δοκιμάστε να χρησιμοποιήσετε το κουμπί «Βήμα» για να δείτε τι συμβαίνει γραμμή προς γραμμή.",
+          "courseD_bee_nestedLoops1_c": "Θυμηθείτε να χρησιμοποιήσετε το μπλοκ `get nectar` μόλις βρεθείτε πανω σε τετραγωνο με ένα λουλούδι."
+        },
+        "courseD_bee_nestedLoops1a_2020": {
+          "courseD_bee_nestedLoops1_a": "Δεν δουλεύει; Δοκιμάστε να χρησιμοποιήσετε το κουμπί «Βήμα» για να δείτε τι συμβαίνει γραμμή προς γραμμή.",
+          "courseD_bee_nestedLoops1_c": "Θυμηθείτε να χρησιμοποιήσετε το μπλοκ `get nectar` μόλις βρεθείτε πανω σε τετραγωνο με ένα λουλούδι."
+        },
+        "courseD_bee_nestedLoops1a_2021": {
+          "courseD_bee_nestedLoops1_a": "Δεν δουλεύει; Δοκιμάστε να χρησιμοποιήσετε το κουμπί «Βήμα» για να δείτε τι συμβαίνει γραμμή προς γραμμή.",
+          "courseD_bee_nestedLoops1_c": "Θυμηθείτε να χρησιμοποιήσετε το μπλοκ `get nectar` μόλις βρεθείτε πανω σε τετραγωνο με ένα λουλούδι."
+        },
+        "courseD_collector_debugging1": {
+          "courseD_collector_debugging1_a": "Χρησιμοποιήστε το κουμπί «Βήμα» για να δείτε αν όλα είναι σωστά στο πρώτο βήμα.\n\nΤι λες για το δεύτερο;\n\nΠού πάει στραβά;"
+        },
+        "courseD_collector_debugging1a2022": {
+          "courseD_collector_debugging1_a": "Χρησιμοποιήστε το κουμπί «Βήμα» για να δείτε αν όλα είναι σωστά στο πρώτο βήμα.\n\nΤι λες για το δεύτερο;\n\nΠού πάει στραβά;"
+        },
+        "courseD_collector_debugging1a_2018": {
+          "courseD_collector_debugging1_a": "Χρησιμοποιήστε το κουμπί «Βήμα» για να δείτε αν όλα είναι σωστά στο πρώτο βήμα.\n\nΤι λες για το δεύτερο;\n\nΠού πάει στραβά;"
+        },
+        "courseD_collector_debugging1a_2019": {
+          "courseD_collector_debugging1_a": "Χρησιμοποιήστε το κουμπί «Βήμα» για να δείτε αν όλα είναι σωστά στο πρώτο βήμα.\n\nΤι λες για το δεύτερο;\n\nΠού πάει στραβά;"
+        },
+        "courseD_collector_debugging1a_2020": {
+          "courseD_collector_debugging1_a": "Χρησιμοποιήστε το κουμπί «Βήμα» για να δείτε αν όλα είναι σωστά στο πρώτο βήμα.\n\nΤι λες για το δεύτερο;\n\nΠού πάει στραβά;"
+        },
+        "courseD_collector_debugging1a_2021": {
+          "courseD_collector_debugging1_a": "Χρησιμοποιήστε το κουμπί «Βήμα» για να δείτε αν όλα είναι σωστά στο πρώτο βήμα.\n\nΤι λες για το δεύτερο;\n\nΠού πάει στραβά;"
+        },
+        "courseD_collector_debugging2": {
+          "courseD_collector_debugging2_a": "Χρησιμοποιήστε το κουμπί «Βήμα» για να δείτε αν όλα είναι σωστά στο πρώτο βήμα.\n\nΤι λες για το δεύτερο;\n\nΠού πάει στραβά;"
+        },
+        "courseD_collector_debugging2a2022": {
+          "courseD_collector_debugging2a_a": "Χρησιμοποιήστε το κουμπί «Βήμα» για να δείτε αν όλα είναι σωστά στο πρώτο βήμα.\n\nΤι λες για το δεύτερο;\n\nΠού πάει στραβά;",
+          "courseD_collector_debugging2a_c": "Τι συμβαίνει;\n\nΤι υποτίθεται ότι θα έπρεπε συμβεί;\n\nΤι σας λέει αυτό;"
+        },
+        "courseD_collector_debugging2a_2018": {
+          "courseD_collector_debugging2a_a": "Χρησιμοποιήστε το κουμπί «Βήμα» για να δείτε αν όλα είναι σωστά στο πρώτο βήμα.\n\nΤι λες για το δεύτερο;\n\nΠού πάει στραβά;",
+          "courseD_collector_debugging2a_c": "Τι συμβαίνει;\n\nΤι υποτίθεται ότι θα έπρεπε συμβεί;\n\nΤι σας λέει αυτό;"
+        },
+        "courseD_collector_debugging2a_2019": {
+          "courseD_collector_debugging2a_a": "Χρησιμοποιήστε το κουμπί «Βήμα» για να δείτε αν όλα είναι σωστά στο πρώτο βήμα.\n\nΤι λες για το δεύτερο;\n\nΠού πάει στραβά;",
+          "courseD_collector_debugging2a_c": "Τι συμβαίνει;\n\nΤι υποτίθεται ότι θα έπρεπε συμβεί;\n\nΤι σας λέει αυτό;"
+        },
+        "courseD_collector_debugging2a_2020": {
+          "courseD_collector_debugging2a_a": "Χρησιμοποιήστε το κουμπί «Βήμα» για να δείτε αν όλα είναι σωστά στο πρώτο βήμα.\n\nΤι λες για το δεύτερο;\n\nΠού πάει στραβά;",
+          "courseD_collector_debugging2a_c": "Τι συμβαίνει;\n\nΤι υποτίθεται ότι θα έπρεπε συμβεί;\n\nΤι σας λέει αυτό;"
+        },
+        "courseD_collector_debugging2a_2021": {
+          "courseD_collector_debugging2a_a": "Χρησιμοποιήστε το κουμπί «Βήμα» για να δείτε αν όλα είναι σωστά στο πρώτο βήμα.\n\nΤι λες για το δεύτερο;\n\nΠού πάει στραβά;",
+          "courseD_collector_debugging2a_c": "Τι συμβαίνει;\n\nΤι υποτίθεται ότι θα έπρεπε συμβεί;\n\nΤι σας λέει αυτό;"
+        },
+        "courseD_collector_debugging3": {
+          "courseD_collector_debugging3_a": "Υπάρχει κάποιο μέρος που η Laurel κάνει κάτι που δεν βγάζει νόημα; Τι θα συμβεί όταν αλλάξεις αυτά τα μπλοκ;"
+        },
+        "courseD_collector_debugging3a2022": {
+          "courseD_collector_debugging3_a": "Υπάρχει κάποιο μέρος που η Laurel κάνει κάτι που δεν βγάζει νόημα; Τι θα συμβεί όταν αλλάξεις αυτά τα μπλοκ;"
+        },
+        "courseD_collector_debugging3a_2018": {
+          "courseD_collector_debugging3_a": "Υπάρχει κάποιο μέρος που η Laurel κάνει κάτι που δεν βγάζει νόημα; Τι θα συμβεί όταν αλλάξεις αυτά τα μπλοκ;"
+        },
+        "courseD_collector_debugging3a_2019": {
+          "courseD_collector_debugging3_a": "Υπάρχει κάποιο μέρος που η Laurel κάνει κάτι που δεν βγάζει νόημα; Τι θα συμβεί όταν αλλάξεις αυτά τα μπλοκ;"
+        },
+        "courseD_collector_debugging3a_2020": {
+          "courseD_collector_debugging3_a": "Υπάρχει κάποιο μέρος που η Laurel κάνει κάτι που δεν βγάζει νόημα; Τι θα συμβεί όταν αλλάξεις αυτά τα μπλοκ;"
+        },
+        "courseD_collector_debugging3a_2021": {
+          "courseD_collector_debugging3_a": "Υπάρχει κάποιο μέρος που η Laurel κάνει κάτι που δεν βγάζει νόημα; Τι θα συμβεί όταν αλλάξεις αυτά τα μπλοκ;"
+        },
+        "courseD_collector_debugging4": {
+          "courseD_collector_debugging4_a": "Δοκιμάστε να χρησιμοποιήσετε τη διαδικασία εντοπισμού σφαλμάτων μερικές φορές στη σειρά. \n\nΤι προκαλεί το πρώτο πρόβλημα;\n\nΜόλις διορθωθεί αυτό το πρόβλημα, τι πάει στραβά;",
+          "courseD_collector_debugging4_b": "Αν δυσκολεύεστε να καταλάβετε πώς να φτιάξετε το μοτίβο σκαλοπατιών, δοκιμάστε να το σχεδιάσετε με το δάχτυλό σας και να λέτε τις εντολές δυνατά. \n\nΜην ξεχάσετε να λέτε ποια είναι η κατεύθυνση των στροφών!"
+        },
+        "courseD_collector_debugging4a2022": {
+          "courseD_collector_debugging4_a": "Δοκιμάστε να χρησιμοποιήσετε τη διαδικασία εντοπισμού σφαλμάτων μερικές φορές στη σειρά. \n\nΤι προκαλεί το πρώτο πρόβλημα;\n\nΜόλις διορθωθεί αυτό το πρόβλημα, τι πάει στραβά;",
+          "courseD_collector_debugging4_b": "Αν δυσκολεύεστε να καταλάβετε πώς να φτιάξετε το μοτίβο σκαλοπατιών, δοκιμάστε να το σχεδιάσετε με το δάχτυλό σας και να λέτε τις εντολές δυνατά. \n\nΜην ξεχάσετε να λέτε ποια είναι η κατεύθυνση των στροφών!"
+        },
+        "courseD_collector_debugging4a_2018": {
+          "courseD_collector_debugging4_a": "Δοκιμάστε να χρησιμοποιήσετε τη διαδικασία εντοπισμού σφαλμάτων μερικές φορές στη σειρά. \n\nΤι προκαλεί το πρώτο πρόβλημα;\n\nΜόλις διορθωθεί αυτό το πρόβλημα, τι πάει στραβά;",
+          "courseD_collector_debugging4_b": "Αν δυσκολεύεστε να καταλάβετε πώς να φτιάξετε το μοτίβο σκαλοπατιών, δοκιμάστε να το σχεδιάσετε με το δάχτυλό σας και να λέτε τις εντολές δυνατά. \n\nΜην ξεχάσετε να λέτε ποια είναι η κατεύθυνση των στροφών!"
+        },
+        "courseD_collector_debugging4a_2019": {
+          "courseD_collector_debugging4_a": "Δοκιμάστε να χρησιμοποιήσετε τη διαδικασία εντοπισμού σφαλμάτων μερικές φορές στη σειρά. \n\nΤι προκαλεί το πρώτο πρόβλημα;\n\nΜόλις διορθωθεί αυτό το πρόβλημα, τι πάει στραβά;",
+          "courseD_collector_debugging4_b": "Αν δυσκολεύεστε να καταλάβετε πώς να φτιάξετε το μοτίβο σκαλοπατιών, δοκιμάστε να το σχεδιάσετε με το δάχτυλό σας και να λέτε τις εντολές δυνατά. \n\nΜην ξεχάσετε να λέτε ποια είναι η κατεύθυνση των στροφών!"
+        },
+        "courseD_collector_debugging4a_2020": {
+          "courseD_collector_debugging4_a": "Δοκιμάστε να χρησιμοποιήσετε τη διαδικασία εντοπισμού σφαλμάτων μερικές φορές στη σειρά. \n\nΤι προκαλεί το πρώτο πρόβλημα;\n\nΜόλις διορθωθεί αυτό το πρόβλημα, τι πάει στραβά;",
+          "courseD_collector_debugging4_b": "Αν δυσκολεύεστε να καταλάβετε πώς να φτιάξετε το μοτίβο σκαλοπατιών, δοκιμάστε να το σχεδιάσετε με το δάχτυλό σας και να λέτε τις εντολές δυνατά. \n\nΜην ξεχάσετε να λέτε ποια είναι η κατεύθυνση των στροφών!"
+        },
+        "courseD_collector_debugging4a_2021": {
+          "courseD_collector_debugging4_a": "Δοκιμάστε να χρησιμοποιήσετε τη διαδικασία εντοπισμού σφαλμάτων μερικές φορές στη σειρά. \n\nΤι προκαλεί το πρώτο πρόβλημα;\n\nΜόλις διορθωθεί αυτό το πρόβλημα, τι πάει στραβά;",
+          "courseD_collector_debugging4_b": "Αν δυσκολεύεστε να καταλάβετε πώς να φτιάξετε το μοτίβο σκαλοπατιών, δοκιμάστε να το σχεδιάσετε με το δάχτυλό σας και να λέτε τις εντολές δυνατά. \n\nΜην ξεχάσετε να λέτε ποια είναι η κατεύθυνση των στροφών!"
+        },
+        "courseD_collector_debugging5a2022": {
+          "courseD_collector_debugging5a_b": "Μόλις συλλέξετε την πρώτη γραμμή του θησαυρού, τι εντολές έχουν απομείνει στον κώδικά σας;"
+        },
+        "courseD_collector_debugging5a_2018": {
+          "courseD_collector_debugging5a_b": "Μόλις συλλέξετε την πρώτη γραμμή του θησαυρού, τι εντολές έχουν απομείνει στον κώδικά σας;"
+        },
+        "courseD_collector_debugging5a_2019": {
+          "courseD_collector_debugging5a_b": "Μόλις συλλέξετε την πρώτη γραμμή του θησαυρού, τι εντολές έχουν απομείνει στον κώδικά σας;"
+        },
+        "courseD_collector_debugging5a_2020": {
+          "courseD_collector_debugging5a_b": "Μόλις συλλέξετε την πρώτη γραμμή του θησαυρού, τι εντολές έχουν απομείνει στον κώδικά σας;"
+        },
+        "courseD_collector_debugging5a_2021": {
+          "courseD_collector_debugging5a_b": "Μόλις συλλέξετε την πρώτη γραμμή του θησαυρού, τι εντολές έχουν απομείνει στον κώδικά σας;"
+        },
+        "courseD_collector_debugging6": {
+          "courseD_collector_debugging6_a": "Δοκιμάστε να εκτελέσετε τον κώδικα χρησιμοποιώντας το κουμπί «Βήμα». Είναι όλα καλά στο πρώτο βήμα;\n\nΤι λες για το δεύτερο;\n\nΠού τα πράγματα πάνε στραβά;"
+        },
+        "courseD_collector_debugging6a2022": {
+          "courseD_collector_debugging6_a": "Δοκιμάστε να εκτελέσετε τον κώδικα χρησιμοποιώντας το κουμπί «Βήμα». Είναι όλα καλά στο πρώτο βήμα;\n\nΤι λες για το δεύτερο;\n\nΠού τα πράγματα πάνε στραβά;",
+          "courseD_collector_debugging6_b": "Φαίνεται ότι όλα τα μπλοκ που χρειάζεστε είναι στο χώρο εργασίας. Δοκιμάστε να κάνετε κλικ στο «Ξεκινήστε από την αρχή» αν τα πράγματα γίνουν πολύ μπερδεμένα."
+        },
+        "courseD_collector_debugging6a_2018": {
+          "courseD_collector_debugging6_a": "Δοκιμάστε να εκτελέσετε τον κώδικα χρησιμοποιώντας το κουμπί «Βήμα». Είναι όλα καλά στο πρώτο βήμα;\n\nΤι λες για το δεύτερο;\n\nΠού τα πράγματα πάνε στραβά;",
+          "courseD_collector_debugging6_b": "Φαίνεται ότι όλα τα μπλοκ που χρειάζεστε είναι στο χώρο εργασίας. Δοκιμάστε να κάνετε κλικ στο «Ξεκινήστε από την αρχή» αν τα πράγματα γίνουν πολύ μπερδεμένα."
+        },
+        "courseD_collector_debugging6a_2019": {
+          "courseD_collector_debugging6_a": "Δοκιμάστε να εκτελέσετε τον κώδικα χρησιμοποιώντας το κουμπί «Βήμα». Είναι όλα καλά στο πρώτο βήμα;\n\nΤι λες για το δεύτερο;\n\nΠού τα πράγματα πάνε στραβά;",
+          "courseD_collector_debugging6_b": "Φαίνεται ότι όλα τα μπλοκ που χρειάζεστε είναι στο χώρο εργασίας. Δοκιμάστε να κάνετε κλικ στο «Ξεκινήστε από την αρχή» αν τα πράγματα γίνουν πολύ μπερδεμένα."
+        },
+        "courseD_collector_debugging6a_2020": {
+          "courseD_collector_debugging6_a": "Δοκιμάστε να εκτελέσετε τον κώδικα χρησιμοποιώντας το κουμπί «Βήμα». Είναι όλα καλά στο πρώτο βήμα;\n\nΤι λες για το δεύτερο;\n\nΠού τα πράγματα πάνε στραβά;",
+          "courseD_collector_debugging6_b": "Φαίνεται ότι όλα τα μπλοκ που χρειάζεστε είναι στο χώρο εργασίας. Δοκιμάστε να κάνετε κλικ στο «Ξεκινήστε από την αρχή» αν τα πράγματα γίνουν πολύ μπερδεμένα."
+        },
+        "courseD_collector_debugging6a_2021": {
+          "courseD_collector_debugging6_a": "Δοκιμάστε να εκτελέσετε τον κώδικα χρησιμοποιώντας το κουμπί «Βήμα». Είναι όλα καλά στο πρώτο βήμα;\n\nΤι λες για το δεύτερο;\n\nΠού τα πράγματα πάνε στραβά;",
+          "courseD_collector_debugging6_b": "Φαίνεται ότι όλα τα μπλοκ που χρειάζεστε είναι στο χώρο εργασίας. Δοκιμάστε να κάνετε κλικ στο «Ξεκινήστε από την αρχή» αν τα πράγματα γίνουν πολύ μπερδεμένα."
+        },
+        "courseD_collector_ramp10": {
+          "courseD_artist_ramp10_c": "Αν θέλετε να απλοποιήσετε τον κώδικά σας, μπορείτε να βάλετε έναν επαναληπτικό βρόχο μέσα σε έναν άλλο! Αυτό ονομάζεται **Εμφωλευμένος Βρόχος**."
+        },
+        "courseD_collector_ramp8": {
+          "courseD_collector_ramp8_b": "Αν θέλετε να απλοποιήσετε τον κώδικά σας, μπορείτε να βάλετε έναν βρόχο επανάληψης μέσα σε έναν άλλο! Αυτό ονομάζεται **Εμφωλευμένος Βρόχος**."
+        },
+        "courseD_collector_ramp9": {
+          "courseD_collector_ramp9_b": "Αν θέλετε να απλοποιήσετε τον κώδικά σας, μπορείτε να βάλετε έναν επαναληπτικό βρόχο μέσα σε έναν άλλο! Αυτό ονομάζεται **ένθετος βρόγχος**."
+        },
+        "courseD_iceage_loops1": {
+          "courseD_iceage_loops1_a": "Πρόσεξε τον σπασμένο πάγο! Ο Σκρατ θα πέσει μέσα!"
+        },
+        "courseD_iceage_loops10": {
+          "courseB_iceage_loops10_a": "Πρόσεξε τον σπασμένο πάγο! Ο Σκρατ θα πέσει μέσα στο νερό!",
+          "courseB_iceage_loops10_b": "Δοκίμασε να πεις τα βήματα δυνατά ή να τα γράψεις σε ένα κομμάτι χαρτί. Βλέπεις κάποιο μοτίβο;",
+          "courseB_iceage_loops10_c": "Αυτό είναι ένα μεγάλο παζλ! Ακολούθησε αυτό το μονοπάτι."
+        },
+        "courseD_iceage_loops102022": {
+          "courseB_iceage_loops10_a": "Πρόσεξε τον σπασμένο πάγο! Ο Σκρατ θα πέσει μέσα στο νερό!",
+          "courseB_iceage_loops10_b": "Δοκίμασε να πεις τα βήματα δυνατά ή να τα γράψεις σε ένα κομμάτι χαρτί. Βλέπεις κάποιο μοτίβο;",
+          "courseB_iceage_loops10_c": "Αυτό είναι ένα μεγάλο παζλ! Ακολούθησε αυτό το μονοπάτι."
+        },
+        "courseD_iceage_loops10_2019": {
+          "courseB_iceage_loops10_a": "Πρόσεξε τον σπασμένο πάγο! Ο Σκρατ θα πέσει μέσα στο νερό!",
+          "courseB_iceage_loops10_b": "Δοκίμασε να πεις τα βήματα δυνατά ή να τα γράψεις σε ένα κομμάτι χαρτί. Βλέπεις κάποιο μοτίβο;",
+          "courseB_iceage_loops10_c": "Αυτό είναι ένα μεγάλο παζλ! Ακολούθησε αυτό το μονοπάτι."
+        },
+        "courseD_iceage_loops10_2020": {
+          "courseB_iceage_loops10_a": "Πρόσεξε τον σπασμένο πάγο! Ο Σκρατ θα πέσει μέσα στο νερό!",
+          "courseB_iceage_loops10_b": "Δοκίμασε να πεις τα βήματα δυνατά ή να τα γράψεις σε ένα κομμάτι χαρτί. Βλέπεις κάποιο μοτίβο;",
+          "courseB_iceage_loops10_c": "Αυτό είναι ένα μεγάλο παζλ! Ακολούθησε αυτό το μονοπάτι."
+        },
+        "courseD_iceage_loops10_2021": {
+          "courseB_iceage_loops10_a": "Πρόσεξε τον σπασμένο πάγο! Ο Σκρατ θα πέσει μέσα στο νερό!",
+          "courseB_iceage_loops10_b": "Δοκίμασε να πεις τα βήματα δυνατά ή να τα γράψεις σε ένα κομμάτι χαρτί. Βλέπεις κάποιο μοτίβο;",
+          "courseB_iceage_loops10_c": "Αυτό είναι ένα μεγάλο παζλ! Ακολούθησε αυτό το μονοπάτι."
+        },
+        "courseD_iceage_loops12022": {
+          "courseD_iceage_loops1_a": "Πρόσεξε τον σπασμένο πάγο! Ο Σκρατ θα πέσει μέσα!"
+        },
+        "courseD_iceage_loops1_2019": {
+          "courseD_iceage_loops1_a": "Πρόσεξε τον σπασμένο πάγο! Ο Σκρατ θα πέσει μέσα!"
+        },
+        "courseD_iceage_loops1_2020": {
+          "courseD_iceage_loops1_a": "Πρόσεξε τον σπασμένο πάγο! Ο Σκρατ θα πέσει μέσα!"
+        },
+        "courseD_iceage_loops1_2021": {
+          "courseD_iceage_loops1_a": "Πρόσεξε τον σπασμένο πάγο! Ο Σκρατ θα πέσει μέσα!"
+        },
+        "courseD_iceage_loops2": {
+          "courseD_iceage_loops2_b": "Αν κολλήσατε, δοκιμάστε να πείτε τα βήματα δυνατά."
+        },
+        "courseD_iceage_loops22022": {
+          "courseD_iceage_loops2_b": "Αν κολλήσατε, δοκιμάστε να πείτε τα βήματα δυνατά."
+        },
+        "courseD_iceage_loops2_2019": {
+          "courseD_iceage_loops2_b": "Αν κολλήσατε, δοκιμάστε να πείτε τα βήματα δυνατά."
+        },
+        "courseD_iceage_loops2_2020": {
+          "courseD_iceage_loops2_b": "Αν κολλήσατε, δοκιμάστε να πείτε τα βήματα δυνατά."
+        },
+        "courseD_iceage_loops2_2021": {
+          "courseD_iceage_loops2_b": "Αν κολλήσατε, δοκιμάστε να πείτε τα βήματα δυνατά."
+        },
+        "courseD_iceage_loops3": {
+          "courseB_iceage_loops3_a": "Χρησιμοποίησε το νέο μπλοκ! <xml><block type=\"controls_repeat_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">5</title>\n  </block></xml>",
+          "courseB_iceage_loops3_b": "Για να επαναλάβετε κάποιο κώδικα, σύρτε έξω ένα βρόχο `repeat` και στη συνέχεια, τοποθετήστε μέσα του το μπλοκ που θέλετε να επαναληφθεί."
+        },
+        "courseD_iceage_loops32022": {
+          "courseB_iceage_loops3_b": "Για να επαναλάβετε κάποιο κώδικα, σύρτε έξω ένα βρόχο `repeat` και στη συνέχεια, τοποθετήστε μέσα του το μπλοκ που θέλετε να επαναληφθεί."
+        },
+        "courseD_iceage_loops3_2019": {
+          "courseB_iceage_loops3_b": "Για να επαναλάβετε κάποιο κώδικα, σύρτε έξω ένα βρόχο `repeat` και στη συνέχεια, τοποθετήστε μέσα του το μπλοκ που θέλετε να επαναληφθεί."
+        },
+        "courseD_iceage_loops3_2020": {
+          "courseB_iceage_loops3_b": "Για να επαναλάβετε κάποιο κώδικα, σύρτε έξω ένα βρόχο `repeat` και στη συνέχεια, τοποθετήστε μέσα του το μπλοκ που θέλετε να επαναληφθεί."
+        },
+        "courseD_iceage_loops3_2021": {
+          "courseB_iceage_loops3_b": "Για να επαναλάβετε κάποιο κώδικα, σύρτε έξω ένα βρόχο `repeat` και στη συνέχεια, τοποθετήστε μέσα του το μπλοκ που θέλετε να επαναληφθεί."
+        },
+        "courseD_iceage_loops4": {
+          "courseD_iceage_loops4_a": "Μην φοβάστε να εκτελέσετε τον κώδικά σας και να δείτε τι θα συμβεί!",
+          "courseD_iceage_loops4_b": "Προσπάθησε να γράψεις τα βήματα που θα έκανε ο Σκρατ για να φτάσει στο βελανίδι. Βλέπεις κάποιο μοτίβο;",
+          "courseD_iceage_loops4_c": "Αυτό είναι το μονοπάτι που πρέπει να πάρει ο Σκρατ."
+        },
+        "courseD_iceage_loops42022": {
+          "courseD_iceage_loops4_a": "Μην φοβάστε να εκτελέσετε τον κώδικά σας και να δείτε τι θα συμβεί!",
+          "courseD_iceage_loops4_b": "Προσπάθησε να γράψεις τα βήματα που θα έκανε ο Σκρατ για να φτάσει στο βελανίδι. Βλέπεις κάποιο μοτίβο;",
+          "courseD_iceage_loops4_c": "Αυτό είναι το μονοπάτι που πρέπει να πάρει ο Σκρατ."
+        },
+        "courseD_iceage_loops4_2019": {
+          "courseD_iceage_loops4_a": "Μην φοβάστε να εκτελέσετε τον κώδικά σας και να δείτε τι θα συμβεί!",
+          "courseD_iceage_loops4_b": "Προσπάθησε να γράψεις τα βήματα που θα έκανε ο Σκρατ για να φτάσει στο βελανίδι. Βλέπεις κάποιο μοτίβο;",
+          "courseD_iceage_loops4_c": "Αυτό είναι το μονοπάτι που πρέπει να πάρει ο Σκρατ."
+        },
+        "courseD_iceage_loops4_2020": {
+          "courseD_iceage_loops4_a": "Μην φοβάστε να εκτελέσετε τον κώδικά σας και να δείτε τι θα συμβεί!",
+          "courseD_iceage_loops4_b": "Προσπάθησε να γράψεις τα βήματα που θα έκανε ο Σκρατ για να φτάσει στο βελανίδι. Βλέπεις κάποιο μοτίβο;",
+          "courseD_iceage_loops4_c": "Αυτό είναι το μονοπάτι που πρέπει να πάρει ο Σκρατ."
+        },
+        "courseD_iceage_loops4_2021": {
+          "courseD_iceage_loops4_a": "Μην φοβάστε να εκτελέσετε τον κώδικά σας και να δείτε τι θα συμβεί!",
+          "courseD_iceage_loops4_b": "Προσπάθησε να γράψεις τα βήματα που θα έκανε ο Σκρατ για να φτάσει στο βελανίδι. Βλέπεις κάποιο μοτίβο;",
+          "courseD_iceage_loops4_c": "Αυτό είναι το μονοπάτι που πρέπει να πάρει ο Σκρατ."
+        },
+        "courseD_iceage_loops6": {
+          "courseD_iceage_loops6_a": "Ο τελικός σου κώδικας θα έχει τρία μπλοκ \"προχώρα μπροστά\".",
+          "courseD_iceage_loops6_b": "Χρειάζεται μόνο να προσθέσετε **ένα** ακόμη βρόχο!"
+        },
+        "courseD_iceage_loops62022": {
+          "courseD_iceage_loops6_a": "Ο τελικός σου κώδικας θα έχει τρία μπλοκ \"προχώρα μπροστά\".",
+          "courseD_iceage_loops6_b": "Χρειάζεται μόνο να προσθέσετε **ένα** ακόμη βρόχο!"
+        },
+        "courseD_iceage_loops6_2019": {
+          "courseD_iceage_loops6_a": "Ο τελικός σου κώδικας θα έχει τρία μπλοκ \"προχώρα μπροστά\".",
+          "courseD_iceage_loops6_b": "Χρειάζεται μόνο να προσθέσετε **ένα** ακόμη βρόχο!"
+        },
+        "courseD_iceage_loops6_2020": {
+          "courseD_iceage_loops6_a": "Ο τελικός σου κώδικας θα έχει τρία μπλοκ \"προχώρα μπροστά\".",
+          "courseD_iceage_loops6_b": "Χρειάζεται μόνο να προσθέσετε **ένα** ακόμη βρόχο!"
+        },
+        "courseD_iceage_loops6_2021": {
+          "courseD_iceage_loops6_a": "Ο τελικός σου κώδικας θα έχει τρία μπλοκ \"προχώρα μπροστά\".",
+          "courseD_iceage_loops6_b": "Χρειάζεται μόνο να προσθέσετε **ένα** ακόμη βρόχο!"
+        },
+        "courseD_iceage_loops7": {
+          "courseB_iceage_loops7_a": "Αν κολλήσατε, δοκιμάστε να γράψετε τα βήματα σε ένα κομμάτι χαρτί. Βλέπεις κάποιο μοτίβο;",
+          "courseB_iceage_loops7_b": "Αυτό είναι το μονοπάτι που πρέπει να πάρει ο Σκρατ για να φτάσει στο βελανίδι."
+        },
+        "courseD_iceage_loops72022": {
+          "courseB_iceage_loops7_a": "Αν κολλήσατε, δοκιμάστε να γράψετε τα βήματα σε ένα κομμάτι χαρτί. Βλέπεις κάποιο μοτίβο;",
+          "courseB_iceage_loops7_b": "Αυτό είναι το μονοπάτι που πρέπει να πάρει ο Σκρατ για να φτάσει στο βελανίδι."
+        },
+        "courseD_iceage_loops7_2019": {
+          "courseB_iceage_loops7_a": "Αν κολλήσατε, δοκιμάστε να γράψετε τα βήματα σε ένα κομμάτι χαρτί. Βλέπεις κάποιο μοτίβο;",
+          "courseB_iceage_loops7_b": "Αυτό είναι το μονοπάτι που πρέπει να πάρει ο Σκρατ για να φτάσει στο βελανίδι."
+        },
+        "courseD_iceage_loops7_2020": {
+          "courseB_iceage_loops7_a": "Αν κολλήσατε, δοκιμάστε να γράψετε τα βήματα σε ένα κομμάτι χαρτί. Βλέπεις κάποιο μοτίβο;",
+          "courseB_iceage_loops7_b": "Αυτό είναι το μονοπάτι που πρέπει να πάρει ο Σκρατ για να φτάσει στο βελανίδι."
+        },
+        "courseD_iceage_loops7_2021": {
+          "courseB_iceage_loops7_a": "Αν κολλήσατε, δοκιμάστε να γράψετε τα βήματα σε ένα κομμάτι χαρτί. Βλέπεις κάποιο μοτίβο;",
+          "courseB_iceage_loops7_b": "Αυτό είναι το μονοπάτι που πρέπει να πάρει ο Σκρατ για να φτάσει στο βελανίδι."
+        },
+        "courseD_iceage_loops8": {
+          "courseD_iceage_loops8_a": "Είναι σωστά τα μπλοκ \"στρίψε\"; Τι άλλο μπορείς να αλλάξεις;",
+          "courseD_iceage_loops8_c": "Χρησιμοποιήστε βρόχους για να βοηθήσετε τον Σκρατ να ακολουθήσει αυτό το μονοπάτι."
+        },
+        "courseD_iceage_loops82022": {
+          "courseD_iceage_loops8_a": "Είναι σωστά τα μπλοκ \"στρίψε\"; Τι άλλο μπορείς να αλλάξεις;",
+          "courseD_iceage_loops8_c": "Χρησιμοποιήστε βρόχους για να βοηθήσετε τον Σκρατ να ακολουθήσει αυτό το μονοπάτι."
+        },
+        "courseD_iceage_loops8_2019": {
+          "courseD_iceage_loops8_a": "Είναι σωστά τα μπλοκ \"στρίψε\"; Τι άλλο μπορείς να αλλάξεις;",
+          "courseD_iceage_loops8_c": "Χρησιμοποιήστε βρόχους για να βοηθήσετε τον Σκρατ να ακολουθήσει αυτό το μονοπάτι."
+        },
+        "courseD_iceage_loops8_2020": {
+          "courseD_iceage_loops8_a": "Είναι σωστά τα μπλοκ \"στρίψε\"; Τι άλλο μπορείς να αλλάξεις;",
+          "courseD_iceage_loops8_c": "Χρησιμοποιήστε βρόχους για να βοηθήσετε τον Σκρατ να ακολουθήσει αυτό το μονοπάτι."
+        },
+        "courseD_iceage_loops8_2021": {
+          "courseD_iceage_loops8_a": "Είναι σωστά τα μπλοκ \"στρίψε\"; Τι άλλο μπορείς να αλλάξεις;",
+          "courseD_iceage_loops8_c": "Χρησιμοποιήστε βρόχους για να βοηθήσετε τον Σκρατ να ακολουθήσει αυτό το μονοπάτι."
+        },
+        "courseD_iceage_loops9": {
+          "courseD_iceage_loops9_a": "Δυσκολεύεσαι; Δοκίμασε να σπάσεις αυτό το παζλ σε μικρότερα κομμάτια. Μη φοβάσαι να εκτελέσεις το παζλ, καθώς γράφεις κώδικα!",
+          "courseD_iceage_loops9_b": "Ο τελικός σας κώδικας θα πρέπει να έχει **4** βρόχους."
+        },
+        "courseD_iceage_loops92022": {
+          "courseD_iceage_loops9_a": "Δυσκολεύεσαι; Δοκίμασε να σπάσεις αυτό το παζλ σε μικρότερα κομμάτια. Μη φοβάσαι να εκτελέσεις το παζλ, καθώς γράφεις κώδικα!",
+          "courseD_iceage_loops9_b": "Ο τελικός σας κώδικας θα πρέπει να έχει **4** βρόχους."
+        },
+        "courseD_iceage_loops9_2019": {
+          "courseD_iceage_loops9_a": "Δυσκολεύεσαι; Δοκίμασε να σπάσεις αυτό το παζλ σε μικρότερα κομμάτια. Μη φοβάσαι να εκτελέσεις το παζλ, καθώς γράφεις κώδικα!",
+          "courseD_iceage_loops9_b": "Ο τελικός σας κώδικας θα πρέπει να έχει **4** βρόχους."
+        },
+        "courseD_iceage_loops9_2020": {
+          "courseD_iceage_loops9_a": "Δυσκολεύεσαι; Δοκίμασε να σπάσεις αυτό το παζλ σε μικρότερα κομμάτια. Μη φοβάσαι να εκτελέσεις το παζλ, καθώς γράφεις κώδικα!",
+          "courseD_iceage_loops9_b": "Ο τελικός σας κώδικας θα πρέπει να έχει **4** βρόχους."
+        },
+        "courseD_iceage_loops9_2021": {
+          "courseD_iceage_loops9_a": "Δυσκολεύεσαι; Δοκίμασε να σπάσεις αυτό το παζλ σε μικρότερα κομμάτια. Μη φοβάσαι να εκτελέσεις το παζλ, καθώς γράφεις κώδικα!",
+          "courseD_iceage_loops9_b": "Ο τελικός σας κώδικας θα πρέπει να έχει **4** βρόχους."
+        },
+        "courseD_maze_intro42022": {
+          "courseC_maze_programming4_a": "Μπορείτε να στρίψετε δεξιά ή αριστερά από την οπτική γωνία του Red. Αν κοιτάτε δεξιά, στρίβοντας δεξιά θα σας κάνει να δείχνετε προς τα κάτω.",
+          "courseC_maze_programming4_b": "Για να ακολουθήσετε τη διαδρομή, προχωρήστε προς τα μπροστά και στρίψτε προς τη μία κατεύθυνση, στη συνέχεια προχωρήστε ξανά  προς τα μπροστά και στρίψτε προς την αντίθετη κατεύθυνση. Προχωρήστε προς τα μπροστά άλλη μια φορά για να φτάσετε στον στόχο σας."
+        },
+        "courseD_maze_intro4_2019": {
+          "courseC_maze_programming4_a": "Μπορείτε να στρίψετε δεξιά ή αριστερά από την οπτική γωνία του Red. Αν κοιτάτε δεξιά, στρίβοντας δεξιά θα σας κάνει να δείχνετε προς τα κάτω.",
+          "courseC_maze_programming4_b": "Για να ακολουθήσετε τη διαδρομή, προχωρήστε προς τα μπροστά και στρίψτε προς τη μία κατεύθυνση, στη συνέχεια προχωρήστε ξανά  προς τα μπροστά και στρίψτε προς την αντίθετη κατεύθυνση. Προχωρήστε προς τα μπροστά άλλη μια φορά για να φτάσετε στον στόχο σας."
+        },
+        "courseD_maze_intro4_2020": {
+          "courseC_maze_programming4_a": "Μπορείτε να στρίψετε δεξιά ή αριστερά από την οπτική γωνία του Red. Αν κοιτάτε δεξιά, στρίβοντας δεξιά θα σας κάνει να δείχνετε προς τα κάτω.",
+          "courseC_maze_programming4_b": "Για να ακολουθήσετε τη διαδρομή, προχωρήστε προς τα μπροστά και στρίψτε προς τη μία κατεύθυνση, στη συνέχεια προχωρήστε ξανά  προς τα μπροστά και στρίψτε προς την αντίθετη κατεύθυνση. Προχωρήστε προς τα μπροστά άλλη μια φορά για να φτάσετε στον στόχο σας."
+        },
+        "courseD_maze_intro4_2021": {
+          "courseC_maze_programming4_a": "Μπορείτε να στρίψετε δεξιά ή αριστερά από την οπτική γωνία του Red. Αν κοιτάτε δεξιά, στρίβοντας δεξιά θα σας κάνει να δείχνετε προς τα κάτω.",
+          "courseC_maze_programming4_b": "Για να ακολουθήσετε τη διαδρομή, προχωρήστε προς τα μπροστά και στρίψτε προς τη μία κατεύθυνση, στη συνέχεια προχωρήστε ξανά  προς τα μπροστά και στρίψτε προς την αντίθετη κατεύθυνση. Προχωρήστε προς τα μπροστά άλλη μια φορά για να φτάσετε στον στόχο σας."
+        },
+        "courseD_maze_intro5a2022": {
+          "courseC_maze_programming5_a": "Δοκιμάστε να χρησιμοποιήσετε το κουμπί «Βήμα» για να εκτελέσετε τον κώδικά σας γραμμή προς γραμμή. Μπορείς να σκεφτείς τι πρέπει να κάνεις μετά;",
+          "courseC_maze_programming5_b": "Να θυμάσαι ότι οι στροφές είναι από την οπτική γωνία του Angry Bird.",
+          "courseC_maze_programming5_c": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε να προσθέσετε μπλοκ και να εκτελέσετε τον κώδικα για να δείτε τι θα συμβεί, ακόμα και αν νομίζετε ότι δεν έχετε λύσει το παζλ ακόμα."
+        },
+        "courseD_maze_intro5a_2019": {
+          "courseC_maze_programming5_a": "Δοκιμάστε να χρησιμοποιήσετε το κουμπί «Βήμα» για να εκτελέσετε τον κώδικά σας γραμμή προς γραμμή. Μπορείς να σκεφτείς τι πρέπει να κάνεις μετά;",
+          "courseC_maze_programming5_b": "Να θυμάσαι ότι οι στροφές είναι από την οπτική γωνία του Angry Bird.",
+          "courseC_maze_programming5_c": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε να προσθέσετε μπλοκ και να εκτελέσετε τον κώδικα για να δείτε τι θα συμβεί, ακόμα και αν νομίζετε ότι δεν έχετε λύσει το παζλ ακόμα."
+        },
+        "courseD_maze_intro5a_2020": {
+          "courseC_maze_programming5_a": "Δοκιμάστε να χρησιμοποιήσετε το κουμπί «Βήμα» για να εκτελέσετε τον κώδικά σας γραμμή προς γραμμή. Μπορείς να σκεφτείς τι πρέπει να κάνεις μετά;",
+          "courseC_maze_programming5_b": "Να θυμάσαι ότι οι στροφές είναι από την οπτική γωνία του Angry Bird.",
+          "courseC_maze_programming5_c": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε να προσθέσετε μπλοκ και να εκτελέσετε τον κώδικα για να δείτε τι θα συμβεί, ακόμα και αν νομίζετε ότι δεν έχετε λύσει το παζλ ακόμα."
+        },
+        "courseD_maze_intro5a_2021": {
+          "courseC_maze_programming5_a": "Δοκιμάστε να χρησιμοποιήσετε το κουμπί «Βήμα» για να εκτελέσετε τον κώδικά σας γραμμή προς γραμμή. Μπορείς να σκεφτείς τι πρέπει να κάνεις μετά;",
+          "courseC_maze_programming5_b": "Να θυμάσαι ότι οι στροφές είναι από την οπτική γωνία του Angry Bird.",
+          "courseC_maze_programming5_c": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε να προσθέσετε μπλοκ και να εκτελέσετε τον κώδικα για να δείτε τι θα συμβεί, ακόμα και αν νομίζετε ότι δεν έχετε λύσει το παζλ ακόμα."
+        },
+        "courseD_maze_ramp1": {
+          "courseC_maze_programming1_a": "Αν το Angry Bird δεν πηγαίνει στο γουρούνι, ελέγξτε αν και τα τρία μπλοκ έχουν κολλήσει μεταξύ τους και πάτησε ξανά το κουμπί \"Εκτέλεση\".",
+          "courseC_maze_programming1_b": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε να προσθέσετε μπλοκ και να εκτελέσετε τον κώδικα για να δείτε τι θα συμβεί, ακόμα και αν νομίζετε ότι δεν έχετε λύσει το παζλ ακόμα."
+        },
+        "courseD_maze_ramp12022": {
+          "courseC_maze_programming1_a": "Αν το Angry Bird δεν πηγαίνει στο γουρούνι, ελέγξτε αν και τα τρία μπλοκ έχουν κολλήσει μεταξύ τους και πάτησε ξανά το κουμπί \"Εκτέλεση\".",
+          "courseC_maze_programming1_b": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε να προσθέσετε μπλοκ και να εκτελέσετε τον κώδικα για να δείτε τι θα συμβεί, ακόμα και αν νομίζετε ότι δεν έχετε λύσει το παζλ ακόμα."
+        },
+        "courseD_maze_ramp1_2018": {
+          "courseC_maze_programming1_a": "Αν το Angry Bird δεν πηγαίνει στο γουρούνι, ελέγξτε αν και τα τρία μπλοκ έχουν κολλήσει μεταξύ τους και πάτησε ξανά το κουμπί \"Εκτέλεση\".",
+          "courseC_maze_programming1_b": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε να προσθέσετε μπλοκ και να εκτελέσετε τον κώδικα για να δείτε τι θα συμβεί, ακόμα και αν νομίζετε ότι δεν έχετε λύσει το παζλ ακόμα."
+        },
+        "courseD_maze_ramp1_2019": {
+          "courseC_maze_programming1_a": "Αν το Angry Bird δεν πηγαίνει στο γουρούνι, ελέγξτε αν και τα τρία μπλοκ έχουν κολλήσει μεταξύ τους και πάτησε ξανά το κουμπί \"Εκτέλεση\".",
+          "courseC_maze_programming1_b": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε να προσθέσετε μπλοκ και να εκτελέσετε τον κώδικα για να δείτε τι θα συμβεί, ακόμα και αν νομίζετε ότι δεν έχετε λύσει το παζλ ακόμα."
+        },
+        "courseD_maze_ramp1_2020": {
+          "courseC_maze_programming1_a": "Αν το Angry Bird δεν πηγαίνει στο γουρούνι, ελέγξτε αν και τα τρία μπλοκ έχουν κολλήσει μεταξύ τους και πάτησε ξανά το κουμπί \"Εκτέλεση\".",
+          "courseC_maze_programming1_b": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε να προσθέσετε μπλοκ και να εκτελέσετε τον κώδικα για να δείτε τι θα συμβεί, ακόμα και αν νομίζετε ότι δεν έχετε λύσει το παζλ ακόμα."
+        },
+        "courseD_maze_ramp1_2021": {
+          "courseC_maze_programming1_a": "Αν το Angry Bird δεν πηγαίνει στο γουρούνι, ελέγξτε αν και τα τρία μπλοκ έχουν κολλήσει μεταξύ τους και πάτησε ξανά το κουμπί \"Εκτέλεση\".",
+          "courseC_maze_programming1_b": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε να προσθέσετε μπλοκ και να εκτελέσετε τον κώδικα για να δείτε τι θα συμβεί, ακόμα και αν νομίζετε ότι δεν έχετε λύσει το παζλ ακόμα."
+        },
+        "courseD_maze_ramp4": {
+          "courseC_maze_programming4_b": "Για να ακολουθήσετε τη διαδρομή, προχωρήστε προς τα μπροστά και στρίψτε προς τη μία κατεύθυνση, στη συνέχεια προχωρήστε ξανά  προς τα μπροστά και στρίψτε προς την αντίθετη κατεύθυνση. Προχωρήστε προς τα μπροστά άλλη μια φορά για να φτάσετε στο γουρούνι."
+        },
+        "courseD_maze_ramp4_2018": {
+          "courseC_maze_programming4_b": "Για να ακολουθήσετε τη διαδρομή, προχωρήστε προς τα μπροστά και στρίψτε προς τη μία κατεύθυνση, στη συνέχεια προχωρήστε ξανά  προς τα μπροστά και στρίψτε προς την αντίθετη κατεύθυνση. Προχωρήστε προς τα μπροστά άλλη μια φορά για να φτάσετε στο γουρούνι."
+        },
+        "courseD_maze_ramp4_2019": {
+          "courseC_maze_programming4_b": "Για να ακολουθήσετε τη διαδρομή, προχωρήστε προς τα μπροστά και στρίψτε προς τη μία κατεύθυνση, στη συνέχεια προχωρήστε ξανά  προς τα μπροστά και στρίψτε προς την αντίθετη κατεύθυνση. Προχωρήστε προς τα μπροστά άλλη μια φορά για να φτάσετε στον στόχο σας."
+        },
+        "courseD_maze_ramp4_2020": {
+          "courseC_maze_programming4_b": "Για να ακολουθήσετε τη διαδρομή, προχωρήστε προς τα μπροστά και στρίψτε προς τη μία κατεύθυνση, στη συνέχεια προχωρήστε ξανά  προς τα μπροστά και στρίψτε προς την αντίθετη κατεύθυνση. Προχωρήστε προς τα μπροστά άλλη μια φορά για να φτάσετε στον στόχο σας."
+        },
+        "courseD_maze_ramp5": {
+          "courseC_maze_programming5_a": "Δοκιμάστε να χρησιμοποιήσετε το κουμπί «Βήμα» για να εκτελέσετε τον κώδικά σας γραμμή προς γραμμή. Μπορείς να σκεφτείς τι πρέπει να κάνεις μετά;",
+          "courseC_maze_programming5_c": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε να προσθέσετε μπλοκ και να εκτελέσετε τον κώδικα για να δείτε τι θα συμβεί, ακόμα και αν νομίζετε ότι δεν έχετε λύσει το παζλ ακόμα."
+        },
+        "courseD_maze_ramp52022": {
+          "courseC_maze_programming5_a": "Δοκιμάστε να χρησιμοποιήσετε το κουμπί «Βήμα» για να εκτελέσετε τον κώδικά σας γραμμή προς γραμμή. Μπορείς να σκεφτείς τι πρέπει να κάνεις μετά;",
+          "courseC_maze_programming5_c": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε να προσθέσετε μπλοκ και να εκτελέσετε τον κώδικα για να δείτε τι θα συμβεί, ακόμα και αν νομίζετε ότι δεν έχετε λύσει το παζλ ακόμα."
+        },
+        "courseD_maze_ramp5_2018": {
+          "courseC_maze_programming5_a": "Δοκιμάστε να χρησιμοποιήσετε το κουμπί «Βήμα» για να εκτελέσετε τον κώδικά σας γραμμή προς γραμμή. Μπορείς να σκεφτείς τι πρέπει να κάνεις μετά;",
+          "courseC_maze_programming5_c": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε να προσθέσετε μπλοκ και να εκτελέσετε τον κώδικα για να δείτε τι θα συμβεί, ακόμα και αν νομίζετε ότι δεν έχετε λύσει το παζλ ακόμα."
+        },
+        "courseD_maze_ramp5_2019": {
+          "courseC_maze_programming5_a": "Δοκιμάστε να χρησιμοποιήσετε το κουμπί «Βήμα» για να εκτελέσετε τον κώδικά σας γραμμή προς γραμμή. Μπορείς να σκεφτείς τι πρέπει να κάνεις μετά;",
+          "courseC_maze_programming5_c": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε να προσθέσετε μπλοκ και να εκτελέσετε τον κώδικα για να δείτε τι θα συμβεί, ακόμα και αν νομίζετε ότι δεν έχετε λύσει το παζλ ακόμα."
+        },
+        "courseD_maze_ramp5_2020": {
+          "courseC_maze_programming5_a": "Δοκιμάστε να χρησιμοποιήσετε το κουμπί «Βήμα» για να εκτελέσετε τον κώδικά σας γραμμή προς γραμμή. Μπορείς να σκεφτείς τι πρέπει να κάνεις μετά;",
+          "courseC_maze_programming5_c": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε να προσθέσετε μπλοκ και να εκτελέσετε τον κώδικα για να δείτε τι θα συμβεί, ακόμα και αν νομίζετε ότι δεν έχετε λύσει το παζλ ακόμα."
+        },
+        "courseD_maze_ramp5_2021": {
+          "courseC_maze_programming5_a": "Δοκιμάστε να χρησιμοποιήσετε το κουμπί «Βήμα» για να εκτελέσετε τον κώδικά σας γραμμή προς γραμμή. Μπορείς να σκεφτείς τι πρέπει να κάνεις μετά;",
+          "courseC_maze_programming5_c": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε να προσθέσετε μπλοκ και να εκτελέσετε τον κώδικα για να δείτε τι θα συμβεί, ακόμα και αν νομίζετε ότι δεν έχετε λύσει το παζλ ακόμα."
+        },
+        "courseD_maze_ramp5a": {
+          "courseC_maze_programming5_a": "Δοκιμάστε να χρησιμοποιήσετε το κουμπί «Βήμα» για να εκτελέσετε τον κώδικά σας γραμμή προς γραμμή. Μπορείς να σκεφτείς τι πρέπει να κάνεις μετά;",
+          "courseC_maze_programming5_c": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε να προσθέσετε μπλοκ και να εκτελέσετε τον κώδικα για να δείτε τι θα συμβεί, ακόμα και αν νομίζετε ότι δεν έχετε λύσει το παζλ ακόμα."
+        },
+        "courseD_maze_ramp5a_2018": {
+          "courseC_maze_programming5_a": "Δοκιμάστε να χρησιμοποιήσετε το κουμπί «Βήμα» για να εκτελέσετε τον κώδικά σας γραμμή προς γραμμή. Μπορείς να σκεφτείς τι πρέπει να κάνεις μετά;",
+          "courseC_maze_programming5_c": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε να προσθέσετε μπλοκ και να εκτελέσετε τον κώδικα για να δείτε τι θα συμβεί, ακόμα και αν νομίζετε ότι δεν έχετε λύσει το παζλ ακόμα."
+        },
+        "courseD_maze_ramp5a_2019": {
+          "courseC_maze_programming5_a": "Δοκιμάστε να χρησιμοποιήσετε το κουμπί «Βήμα» για να εκτελέσετε τον κώδικά σας γραμμή προς γραμμή. Μπορείς να σκεφτείς τι πρέπει να κάνεις μετά;",
+          "courseC_maze_programming5_c": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε να προσθέσετε μπλοκ και να εκτελέσετε τον κώδικα για να δείτε τι θα συμβεί, ακόμα και αν νομίζετε ότι δεν έχετε λύσει το παζλ ακόμα."
+        },
+        "courseD_maze_ramp5a_2020": {
+          "courseC_maze_programming5_a": "Δοκιμάστε να χρησιμοποιήσετε το κουμπί «Βήμα» για να εκτελέσετε τον κώδικά σας γραμμή προς γραμμή. Μπορείς να σκεφτείς τι πρέπει να κάνεις μετά;",
+          "courseC_maze_programming5_c": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε να προσθέσετε μπλοκ και να εκτελέσετε τον κώδικα για να δείτε τι θα συμβεί, ακόμα και αν νομίζετε ότι δεν έχετε λύσει το παζλ ακόμα."
+        },
+        "courseD_maze_ramp5b": {
+          "courseC_maze_programming5_a": "Δοκιμάστε να χρησιμοποιήσετε το κουμπί «Βήμα» για να εκτελέσετε τον κώδικά σας γραμμή προς γραμμή. Μπορείς να σκεφτείς τι πρέπει να κάνεις μετά;",
+          "courseC_maze_programming5_c": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε να προσθέσετε μπλοκ και να εκτελέσετε τον κώδικα για να δείτε τι θα συμβεί, ακόμα και αν νομίζετε ότι δεν έχετε λύσει το παζλ ακόμα."
+        },
+        "courseD_maze_ramp5b2022": {
+          "courseC_maze_programming5_a": "Δοκιμάστε να χρησιμοποιήσετε το κουμπί «Βήμα» για να εκτελέσετε τον κώδικά σας γραμμή προς γραμμή. Μπορείς να σκεφτείς τι πρέπει να κάνεις μετά;",
+          "courseC_maze_programming5_c": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε να προσθέσετε μπλοκ και να εκτελέσετε τον κώδικα για να δείτε τι θα συμβεί, ακόμα και αν νομίζετε ότι δεν έχετε λύσει το παζλ ακόμα."
+        },
+        "courseD_maze_ramp5b_2018": {
+          "courseC_maze_programming5_a": "Δοκιμάστε να χρησιμοποιήσετε το κουμπί «Βήμα» για να εκτελέσετε τον κώδικά σας γραμμή προς γραμμή. Μπορείς να σκεφτείς τι πρέπει να κάνεις μετά;",
+          "courseC_maze_programming5_c": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε να προσθέσετε μπλοκ και να εκτελέσετε τον κώδικα για να δείτε τι θα συμβεί, ακόμα και αν νομίζετε ότι δεν έχετε λύσει το παζλ ακόμα."
+        },
+        "courseD_maze_ramp5b_2019": {
+          "courseC_maze_programming5_a": "Δοκιμάστε να χρησιμοποιήσετε το κουμπί «Βήμα» για να εκτελέσετε τον κώδικά σας γραμμή προς γραμμή. Μπορείς να σκεφτείς τι πρέπει να κάνεις μετά;",
+          "courseC_maze_programming5_c": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε να προσθέσετε μπλοκ και να εκτελέσετε τον κώδικα για να δείτε τι θα συμβεί, ακόμα και αν νομίζετε ότι δεν έχετε λύσει το παζλ ακόμα."
+        },
+        "courseD_maze_ramp5b_2020": {
+          "courseC_maze_programming5_a": "Δοκιμάστε να χρησιμοποιήσετε το κουμπί «Βήμα» για να εκτελέσετε τον κώδικά σας γραμμή προς γραμμή. Μπορείς να σκεφτείς τι πρέπει να κάνεις μετά;",
+          "courseC_maze_programming5_c": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε να προσθέσετε μπλοκ και να εκτελέσετε τον κώδικα για να δείτε τι θα συμβεί, ακόμα και αν νομίζετε ότι δεν έχετε λύσει το παζλ ακόμα."
+        },
+        "courseD_maze_ramp5b_2021": {
+          "courseC_maze_programming5_a": "Δοκιμάστε να χρησιμοποιήσετε το κουμπί «Βήμα» για να εκτελέσετε τον κώδικά σας γραμμή προς γραμμή. Μπορείς να σκεφτείς τι πρέπει να κάνεις μετά;",
+          "courseC_maze_programming5_c": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε να προσθέσετε μπλοκ και να εκτελέσετε τον κώδικα για να δείτε τι θα συμβεί, ακόμα και αν νομίζετε ότι δεν έχετε λύσει το παζλ ακόμα."
+        },
+        "courseD_maze_ramp7": {
+          "courseD_maze_ramp7_c": "Αν θέλετε να απλοποιήσετε τον κώδικά σας, μπορείτε να βάλετε έναν επαναληπτικό βρόχο μέσα σε έναν άλλο! Αυτό ονομάζεται **ένθετος βρόγχος**."
+        },
+        "courseD_maze_until4": {
+          "courseD_maze_until4_a": "Χρησιμοποιήστε το κουμπί «Βήμα» για να εκτελέσετε τον κωδικό σας γραμμή προς γραμμή.\n\n-   Όλα λειτουργούν στο πρώτο βήμα;\n-   Όλα λειτουργούν στο δεύτερο βήμα;\n-   Τι πάει στραβά;"
+        },
+        "courseD_maze_until42022": {
+          "courseD_maze_until4_a": "Χρησιμοποιήστε το κουμπί «Βήμα» για να εκτελέσετε τον κωδικό σας γραμμή προς γραμμή.\n\n-   Όλα λειτουργούν στο πρώτο βήμα;\n-   Όλα λειτουργούν στο δεύτερο βήμα;\n-   Τι πάει στραβά;"
+        },
+        "courseD_maze_until4_2018": {
+          "courseD_maze_until4_a": "Χρησιμοποιήστε το κουμπί «Βήμα» για να εκτελέσετε τον κωδικό σας γραμμή προς γραμμή.\n\n-   Όλα λειτουργούν στο πρώτο βήμα;\n-   Όλα λειτουργούν στο δεύτερο βήμα;\n-   Τι πάει στραβά;"
+        },
+        "courseD_maze_until4_2019": {
+          "courseD_maze_until4_a": "Χρησιμοποιήστε το κουμπί «Βήμα» για να εκτελέσετε τον κωδικό σας γραμμή προς γραμμή.\n\n-   Όλα λειτουργούν στο πρώτο βήμα;\n-   Όλα λειτουργούν στο δεύτερο βήμα;\n-   Τι πάει στραβά;"
+        },
+        "courseD_maze_until4_2020": {
+          "courseD_maze_until4_a": "Χρησιμοποιήστε το κουμπί «Βήμα» για να εκτελέσετε τον κωδικό σας γραμμή προς γραμμή.\n\n-   Όλα λειτουργούν στο πρώτο βήμα;\n-   Όλα λειτουργούν στο δεύτερο βήμα;\n-   Τι πάει στραβά;"
+        },
+        "courseD_maze_until4_2021": {
+          "courseD_maze_until4_a": "Χρησιμοποιήστε το κουμπί «Βήμα» για να εκτελέσετε τον κωδικό σας γραμμή προς γραμμή.\n\n-   Όλα λειτουργούν στο πρώτο βήμα;\n-   Όλα λειτουργούν στο δεύτερο βήμα;\n-   Τι πάει στραβά;"
+        },
+        "courseD_scrat_ramp1": {
+          "courseC_maze_programming1_b": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε να προσθέσετε μπλοκ και να εκτελέσετε τον κώδικα για να δείτε τι θα συμβεί, ακόμα και αν νομίζετε ότι δεν έχετε λύσει το παζλ ακόμα."
+        },
+        "courseD_scrat_ramp4": {
+          "courseC_maze_programming4_b": "Για να ακολουθήσετε τη διαδρομή, προχωρήστε προς τα μπροστά και στρίψτε προς τη μία κατεύθυνση, στη συνέχεια προχωρήστε ξανά  προς τα μπροστά και στρίψτε προς την αντίθετη κατεύθυνση. Προχωρήστε προς τα μπροστά άλλη μια φορά για να φτάσετε στον στόχο σας.",
+          "courseC_maze_programming4_c": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε να προσθέσετε μπλοκ και να εκτελέσετε τον κώδικα για να δείτε τι θα συμβεί, ακόμα και αν νομίζετε ότι δεν έχετε λύσει το παζλ ακόμα."
+        },
+        "courseD_scrat_ramp5": {
+          "courseC_maze_programming5_a": "Δοκιμάστε να χρησιμοποιήσετε το κουμπί «Βήμα» για να εκτελέσετε τον κώδικά σας γραμμή προς γραμμή. Μπορείς να σκεφτείς τι πρέπει να κάνεις μετά;"
+        },
+        "courseD_scrat_ramp8": {
+          "courseD_maze_ramp7_c": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε να προσθέσετε μπλοκ και να εκτελέσετε τον κώδικα για να δείτε τι θα συμβεί, ακόμα και αν νομίζετε ότι δεν έχετε λύσει το παζλ ακόμα."
+        },
+        "courseE_artist_functions6": {
+          "grade4_artist_functions_windows0_c": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε να προσθέσετε μπλοκ και να εκτελέσετε τον κώδικα για να δείτε τι θα συμβεί, ακόμη και αν δεν έχετε λύσει το παζλ."
+        },
+        "courseE_farmer_functions4b": {
+          "courseE_farmer_functions4b_a": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε να προσθέσετε μπλοκ και να εκτελέσετε τον κώδικα για να δείτε τι θα συμβεί, ακόμη και αν δεν έχετε λύσει το παζλ."
+        },
+        "courseE_farmer_functions5c": {
+          "courseE_farmer_functions5c_b": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε να προσθέσετε μπλοκ και να εκτελέσετε τον κώδικα για να δείτε τι θα συμβεί, ακόμη και αν δεν έχετε λύσει το παζλ."
+        },
+        "courseF_artist_for3": {
+          "courseF_artist_for3_b": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε να προσθέσετε μπλοκ και να εκτελέσετε τον κώδικα για να δείτε τι θα συμβεί, ακόμη και αν δεν έχετε λύσει το παζλ."
+        },
+        "courseF_artist_for3_2018": {
+          "courseF_artist_for3_b": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε να προσθέσετε μπλοκ και να εκτελέσετε τον κώδικα για να δείτε τι θα συμβεί, ακόμη και αν δεν έχετε λύσει το παζλ."
+        },
+        "courseF_artist_for3_2019": {
+          "courseF_artist_for3_b": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε να προσθέσετε μπλοκ και να εκτελέσετε τον κώδικα για να δείτε τι θα συμβεί, ακόμη και αν δεν έχετε λύσει το παζλ."
+        },
+        "courseF_artist_for3_2020": {
+          "courseF_artist_for3_b": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε να προσθέσετε μπλοκ και να εκτελέσετε τον κώδικα για να δείτε τι θα συμβεί, ακόμη και αν δεν έχετε λύσει το παζλ."
+        },
+        "courseF_artist_for4": {
+          "courseF_artist_for4_c": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε να προσθέσετε μπλοκ και να εκτελέσετε τον κώδικα για να δείτε τι θα συμβεί, ακόμη και αν δεν έχετε λύσει το παζλ."
+        },
+        "courseF_artist_for4_2018": {
+          "courseF_artist_for4_c": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε να προσθέσετε μπλοκ και να εκτελέσετε τον κώδικα για να δείτε τι θα συμβεί, ακόμη και αν δεν έχετε λύσει το παζλ."
+        },
+        "courseF_artist_for4_2019": {
+          "courseF_artist_for4_c": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε να προσθέσετε μπλοκ και να εκτελέσετε τον κώδικα για να δείτε τι θα συμβεί, ακόμη και αν δεν έχετε λύσει το παζλ."
+        },
+        "courseF_artist_for4_2020": {
+          "courseF_artist_for4_c": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε να προσθέσετε μπλοκ και να εκτελέσετε τον κώδικα για να δείτε τι θα συμβεί, ακόμη και αν δεν έχετε λύσει το παζλ."
+        },
+        "courseF_bee_for5": {
+          "courseF_bee_for5_c": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε να προσθέσετε μπλοκ και να εκτελέσετε τον κώδικα για να δείτε τι θα συμβεί, ακόμη και αν δεν έχετε λύσει το παζλ."
+        },
+        "courseF_bee_for52022": {
+          "courseF_bee_for5_c": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε να προσθέσετε μπλοκ και να εκτελέσετε τον κώδικα για να δείτε τι θα συμβεί, ακόμη και αν δεν έχετε λύσει το παζλ."
+        },
+        "courseF_bee_for5_2018": {
+          "courseF_bee_for5_c": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε να προσθέσετε μπλοκ και να εκτελέσετε τον κώδικα για να δείτε τι θα συμβεί, ακόμη και αν δεν έχετε λύσει το παζλ."
+        },
+        "courseF_bee_for5_2019": {
+          "courseF_bee_for5_c": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε να προσθέσετε μπλοκ και να εκτελέσετε τον κώδικα για να δείτε τι θα συμβεί, ακόμη και αν δεν έχετε λύσει το παζλ."
+        },
+        "courseF_bee_for5_2020": {
+          "courseF_bee_for5_c": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε να προσθέσετε μπλοκ και να εκτελέσετε τον κώδικα για να δείτε τι θα συμβεί, ακόμη και αν δεν έχετε λύσει το παζλ."
+        },
+        "courseF_bee_for5_2021": {
+          "courseF_bee_for5_c": "Μη φοβάσαι να κάνεις λάθος! Δοκιμάστε να προσθέσετε μπλοκ και να εκτελέσετε τον κώδικα για να δείτε τι θα συμβεί, ακόμη και αν δεν έχετε λύσει το παζλ."
         }
       }
     }

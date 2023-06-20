@@ -1,22 +1,24 @@
 name 'cspu5_assess1_fivemore'
-encrypted 'Dyd07D/nFvs6Jy5WAqHX6q2FD7QE9bgZnVXo3VqMb3FrLUzHCiCvu3WV9xCU
-tlI40luh71iDMwptOZRHECSQXURBj+zB3T0UD0HDLRESg6OAA9stgnWytMSP
-h9nxe3cc2TWLtqJXk0x1Wwk0od8fcnx/TS2XNdOQrvJ/CtwQxUQRuUFTInEU
-zfyMaftt/RvQGkxEZkbChKKxM7DxH9kBLwLUVicakh3yI/ZB5QuAUgMVCibe
-/TY1BbRbCSNSjb5GLYybSJ1VSECx52u4aves2jqKzia9hhmjbvak9LR924XF
-n+ovKXeE+6RJRH2w+NwM7TrfdIH48OhRXGTaVC+trSTaClfCACma68jJZwLU
-89fFuOMWubdzoDb2FMpL/ygKnMancaxVbuikvD2Jm0Hg30tC+FD/TQYXffXT
-L4NmBh4c7gYHXqTSpA0DKEYm9Qs+OQ3b7oM8mCYaJlosmyVnBOxKHR0eAE++
-O1uw66mTY+CwKhErfR6R7vcN+u3wsue2VZ/0WkyhSaxBa7CPf3poT/tvzeIZ
-Vafgo5PJTGyjNOYXnaSBF0uPwr0Tchkupmqn72Z0EvLhuR1ypI3F85o2nqMd
-rhggh3LSK+RXXyFkpPtQ57I5bMMwhJRbvB8/4jMx/Msn7yeSR5At5Ohl98eM
-STb+cEBBJKgcVfC9E1Ippcy6vlTyO0Qs89tRxJs6cgS8XaSexKYUqFwb+h8a
-BqqKA/xT0CZCSD135umS7AkHJTy7krEM9hNKAPAxluVi+QA3b8/00oVr71Rn
-GDeSGqoFIri+OVRmli9jt1unYZosfYHFVWcfss6xwRG7guISi+ASKQopRxiD
-nygqtW91eZqP1wOrgRUc6dPN276GIWTV1D8GwYMA+WUhE1rZRSK4KgpOD6JD
-5GFl1qHY19bTRQTpCRL/OwKluFMKowhAhmJZdPZ3rAZaJhrFImBjsdt7OwAW
-r0GVj3DaqjH2DlV4NR6BtO5t1/e9zqz+uCD1F0B7d37FOtWGeHJbJI5pRXM0
-77hIZqQfd76rWHqN4SfyR1ptqF0c13ovJxiYoTe9zuwt3TeBxSNj01AXzsHn
-oLzx/uD/ZneXYL4KcpashclajhEaXyBYjUpqt/8duS/AO3ywdN+x4ySDwI8Y
-3VJdFYs/XqlgGTRU6IAvEaYfVWmwdsaEIxoDWWBGQlx4Mh1jzAkc1ug=
-'
+wrong '-2'
+wrong '3'
+wrong '5'
+wrong '8'
+right 'Error. Unknown Identifier: x'
+
+
+markdown <<MARKDOWN
+What is the output to the console after the following code segment is executed?
+
+![](https://images.code.org/10d0533482fbd62ad2937b3c5cbf04f7-image-1518809560642.32.22 AM.png)
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+**Content: Unit 5 Lesson 5** - application of local scope and debugging
+
+* The function "fiveMore()" is called.
+* Inside this function, a new variable "x" is set to 5
+* The computer exits this function and moves on to line 5 where a variable y is created
+* The value of y is set to "3 + x" **However**, the variable x was initiated locally inside "fiveMore()" and is not accessible outside of the function. Therefore, there is an error because the variable x does not exist outside the method.
+MARKDOWN
+
+allow_multiple_attempts true

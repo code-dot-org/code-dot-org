@@ -2,7 +2,7 @@ import GathererHandler from './gatherer';
 import mazeMsg from '../locale';
 import {
   TestResults,
-  BeeTerminationValue as TerminationValue
+  BeeTerminationValue as TerminationValue,
 } from '../../constants.js';
 
 export default class BeeHandler extends GathererHandler {

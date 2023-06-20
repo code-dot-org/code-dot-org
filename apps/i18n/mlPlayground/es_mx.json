@@ -1,4 +1,5 @@
 {
+  "trainModelButtonText": "Entrenar",
   "navigateForward": "Continuar",
   "navigateBack": "Volver",
   "tryAgain": "Vuelve a intentarlo",
@@ -6,19 +7,45 @@
   "saveProgress": "Guardar",
   "correctAnswer": "Correcto",
   "incorrectAnswer": "Incorrecto",
+  "potentialUsesLabel": "Propósito",
+  "potentialUsesDescription": "Describe el problema que crees que este modelo puede solucionar o una posible aplicación en la que alguien pueda usar este modelo.",
   "potentialMisusesLabel": "Limitaciones y Advertencias",
+  "potentialMisusesDescription": "Describe cualquier limitación de como el modelo ha sido creado y como debe usarse. Puedes decir algo como \"Evita usar este modelo para...\" o \"Ten cuidado con...\". Considera las siguientes preguntas preguntas:",
+  "potentialMisusesDescriptionRepresent": "¿Representan los datos a todos los usuarios y escenarios posibles?",
+  "potentialMisusesDescriptionEnough": "¿Recopilaste suficientes datos para confiar en la precisión del modelo?",
+  "potentialMisusesDescriptionSituations": "¿Hay situaciones en las que este modelo definitivamente no debería usarse?",
+  "datasetDescriptionLabel": "Acerca de los Datos",
+  "modelCardAccuracy": "Precisión",
+  "modelCardIntendedUse": "Propósito",
   "modelCardLimitations": "Limitaciones y Advertencias",
+  "modelCardDatasetDetails": "Acerca de los Datos",
+  "modelCardFeaturesAndLabel": "Características y Etiquetas",
   "modelCardLabel": "Etiqueta",
+  "modelCardPossibleValues": "Valores Posibles",
   "modelCardPossibleValuesMinimum": "mín.",
   "modelCardPossibleValuesMaximum": "máx.",
   "modelCardFeatures": "Características",
+  "columnInspectorDataType": "Tipo de Datos",
   "columnInspectorDescription": "Descripción",
   "columnDetailsMinimumValue": "mín.",
   "columnDetailsMaximumValue": "máx.",
+  "selectLabelButton": "Seleccionar etiqueta",
+  "scatterPlotLabel": "Información sobre la relación",
+  "addFeatureButton": "Añadir característica",
+  "dataCardDefaultHeader": "Detalles",
   "dataCardLastUpdated": "Última actualización",
   "trainModelHeading": "Entrenamiento",
+  "generateResultsHeader": "Probando el modelo",
+  "resultsHeader": "Resultado",
+  "resultsAccuracy": "Precisión",
+  "resultsDetailsButton": "Detalles",
+  "resultsPreviousResults": "Resultados anteriores",
   "resultsTableFeatureHeader": "Características",
+  "resultsTablePredictedValueHeader": "Predicción de la I.A.",
+  "predictHeader": "¡Pruébalo!",
   "predictButton": "Predecir",
+  "predictAIBotPredicts": "La I.A. predice",
+  "crossTabRelationshipHeader": "Información sobre la relación",
   "uniqueOptionsWarningNotice": "Nota",
   "datasets": {
     "medical_priority": {
@@ -58,6 +85,9 @@
         },
         "lime": {
           "id": "lima"
+        },
+        "preference": {
+          "id": "preferencia"
         }
       }
     },
@@ -95,6 +125,16 @@
         },
         "meat": {
           "id": "carne"
+        },
+        "preference": {
+          "id": "preferencia"
+        }
+      }
+    },
+    "cookies_toy": {
+      "fields": {
+        "preference": {
+          "id": "preferencia"
         }
       }
     },
@@ -135,16 +175,44 @@
         },
         "lime": {
           "id": "lima"
+        },
+        "preference": {
+          "id": "preferencia"
         }
       }
     },
     "shapes_v2_toy": {
       "fields": {
         "sides": {
-          "id": "lados"
+          "id": "lados",
+          "description": "Número de lados que tiene la forma"
+        },
+        "border color": {
+          "id": "color de borde",
+          "description": "Color del contorno de la forma"
+        },
+        "fill color": {
+          "id": "color de relleno",
+          "description": "Color del interior de la forma"
+        },
+        "background color": {
+          "id": "Color del fondo",
+          "description": "Color del fondo detrás de la forma"
         },
         "size": {
-          "id": "tamaño"
+          "id": "tamaño",
+          "description": "Ya sea grande o pequeño"
+        },
+        "shape": {
+          "id": "Forma",
+          "description": "Tipo de forma"
+        }
+      },
+      "card": {
+        "description": "Se extrajeron características de un dataset visual que muestra diferentes formas.",
+        "context": {
+          "potentialUses": "Se utiliza para entrenar al AI Bot sobre cómo clasificar formas.",
+          "potentialMisuses": "Cualquier otra cosa que no sea el propósito anterior."
         }
       }
     },
@@ -167,6 +235,9 @@
         },
         "cheese": {
           "id": "Queso"
+        },
+        "preference": {
+          "id": "preferencia"
         }
       }
     },
@@ -204,6 +275,13 @@
         }
       }
     },
+    "icecream_toppings_toy": {
+      "fields": {
+        "Preference": {
+          "id": "Preferencia"
+        }
+      }
+    },
     "naan_toy": {
       "fields": {
         "chicken": {
@@ -217,6 +295,9 @@
         },
         "cheese": {
           "id": "Queso"
+        },
+        "preference": {
+          "id": "preferencia"
         }
       }
     },
@@ -309,7 +390,8 @@
           "description": "El peso total del adulón en gramos."
         },
         "Shucked weight": {
-          "id": "Peso descascarado "
+          "id": "Peso descascarado ",
+          "description": "El peso del caracol sin cáscara en gramos."
         },
         "Viscera weight": {
           "id": "Peso de las vísceras",
@@ -328,13 +410,20 @@
         "context": {
           "potentialUses": "Determina la edad de un abulón."
         }
-      }
+      },
+      "name": "Abulón"
     },
     "zoo": {
       "fields": {
         "Aquatic": {
           "id": "Aquatic"
+        },
+        "Toothed": {
+          "description": "¿El animal tiene dientes?"
         }
+      },
+      "card": {
+        "description": "Un pequeño conjunto de datos de diferentes atributos de animales (si tienen pelo, plumas, dientes y más) usados para propósitos de clasificación. Casi todas las características son Yes/No excepto el Nombre del Animal, Clase y Número de Patas."
       }
     },
     "poke_toy": {
@@ -347,6 +436,9 @@
         },
         "ginger": {
           "id": "jengibre"
+        },
+        "preference": {
+          "id": "preferencia"
         }
       }
     },
@@ -391,6 +483,9 @@
       "fields": {
         "banana": {
           "id": "plátano"
+        },
+        "preference": {
+          "id": "preferencia"
         }
       }
     },
@@ -414,10 +509,53 @@
     "shapes_v1_toy": {
       "fields": {
         "sides": {
-          "id": "lados"
+          "id": "lados",
+          "description": "Número de lados que tiene la forma"
+        },
+        "border color": {
+          "id": "color de borde",
+          "description": "Color del contorno de la forma"
+        },
+        "fill color": {
+          "id": "color de relleno",
+          "description": "Color del interior de la forma"
         },
         "size": {
-          "id": "tamaño"
+          "id": "tamaño",
+          "description": "Ya sea grande o pequeño"
+        },
+        "background color": {
+          "id": "Color del fondo",
+          "description": "Color del fondo detrás de la forma"
+        },
+        "shape": {
+          "id": "Forma",
+          "description": "Tipo de forma"
+        }
+      },
+      "card": {
+        "description": "Se extrajeron características de un dataset visual que muestra diferentes formas.",
+        "context": {
+          "potentialUses": "Se utiliza para entrenar al AI Bot sobre cómo clasificar formas.",
+          "potentialMisuses": "Cualquier otra cosa que no sea el propósito anterior."
+        }
+      },
+      "name": "Formas V1"
+    },
+    "pizza_toppings_toy": {
+      "fields": {
+        "Olives": {
+          "description": "¿La pizza tenía aceitunas?"
+        },
+        "Preference": {
+          "id": "Preferencia"
+        }
+      }
+    },
+    "taco_toppings_toy": {
+      "fields": {
+        "Preference": {
+          "id": "Preferencia"
         }
       }
     },

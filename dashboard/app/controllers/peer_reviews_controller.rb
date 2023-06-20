@@ -72,9 +72,7 @@ class PeerReviewsController < ApplicationController
     end
   end
 
-  private
-
-  def peer_review_params
+  private def peer_review_params
     return_params = params.require(:peer_review).permit(:data, :status)
 
     if return_params[:data]

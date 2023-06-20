@@ -56,6 +56,7 @@ pl:
         reset_password_token: Link do resetowania hasła, z którego skorzystałeś
         error:
           future: nie może być w przyszłości
+        us_state: Stan
   beta: beta
   hello: Witaj świecie
   welcome_back: Witaj z powrotem, %{name}
@@ -65,7 +66,9 @@ pl:
   unsubmit: Nieprzesłane
   previous_page: Poprzednia strona
   next_page: Następna strona
+  next_level: Następny poziom
   next_resource: Kolejne zasoby
+  done_with_module: Sporządzono z tym modułem edukacyjnym
   cancel: Anuluj
   okay: OK
   or: lub
@@ -217,7 +220,6 @@ pl:
       nam kontaktować się z uczniami. Uczniowie nigdy nie będą otrzymywać e-maili
       od Code.org, z wyjątkiem odzyskiwania hasła. Więcej informacji znajduje się
       w naszej [Polityce prywatności](http://code.org/privacy).
-    additional_information: Potrzebujemy dodatkowych informacji, aby móc Ciebie zarejestrować.
     user_type_button: Zaktualizuj typ konta
     user_type_label: Typ konta
     user_type_student: Uczeń
@@ -254,6 +256,7 @@ pl:
       Ci e-mailem informacje o postępach i projektach Twojego dziecka, a także o jego
       kursie i informatyce? [(Zobacz naszą Politykę prywatności)] (%{privacy_policy_url})
     parent_account_email_label: Adres e-mail rodzica/opiekuna
+    us_state: Stan
   school_info:
     title: Informacja o Szkole (opcjonalne)
     school_country: Kraj szkoły
@@ -411,7 +414,7 @@ pl:
       project_gallery: Galeria Projektów
       sections: Sekcje
       help_support: Pomoc i wsparcie
-      report_bug: Zgłosić problem
+      report_bug: Zgłoś problem
       report_abuse: Zgłoś nadużycie
       teacher_community: Społeczność nauczycieli
       professional_learning: Kształcenia Profesjonalne
@@ -1072,6 +1075,8 @@ pl:
     submit-complete-title: Prześlij swój sprawdzian
     submit-complete-body: Nie masz możliwości poprawy sprawdzianu po jego przesłaniu.
       Czy chcesz kontynuować?
+  level_summary:
+    correct_answer: Prawidłowa odpowiedź
   match:
     wrong_title: Niepoprawne rozwiązanie
     wrong_body: Wprowadzone przez Ciebie rozwiązanie nie jest poprawne. Spróbuj ponownie!
@@ -1257,6 +1262,7 @@ pl:
           age: Proszę określić wiek
           abuse_type: Proszę odpowiedzieć, jak ta treść narusza regulamin
           abuse_detail: Proszę podać szczegóły dotyczące treści, które zgłaszasz
+          captcha: Wypełnij CAPTCHA, aby zgłosić tę zawartość.
         abusive_url: Adres URL zgłaszanych treści
         abuse_type:
           question: Jak te treści naruszają %{link_start}Terms of Service%{link_end}?
@@ -1281,6 +1287,7 @@ pl:
     instructor_feedback: Opinie instruktora
     peer_feedback: Wzajemne opinie
     outdated: Ta opinia została dodana do wcześniej zgłoszonej wersji
+    review_count: Musisz wypełnić %{review_count} recenzji dla tego urządzenia
     peer_review: Wzajemne recenzje
   external_links:
     disclaimer: Uwaga
@@ -1492,6 +1499,7 @@ pl:
         csf_express: Podstawy informatyki (Wstępne ekspresowe lub ekspresowe)
         csd: Odkrycia informatyki
         csp: Podstawy Informatyki
+        other: Inni/inne
         not_applicable: Nie dotyczy
       email_opt_in:
         opt_in_yes: Tak
@@ -1532,6 +1540,26 @@ pl:
         do ustawień konta](%{user_registration}),, aby dodać swój adres e-mail przed
         wypełnieniem tego fomularza.
   courses_category: Pełne Kursy
+  course_offering:
+    headers:
+      favorites: Ulubione
+      labs_and_skills: Laboratoria i umiejętności
+      minecraft: Minecraft
+      hello_world: Witaj świecie
+      popular_media: Popularne media
+      sports: Zawody
+      express: Ekspres
+      csf: Podstawy Informatyki
+      csc: Powiązania z informatyką (CS Connections)
+      year_long: Przez cały rok
+      csa_labs: Laboratoria CSA
+      self_paced: We własnym tempie
+      teacher_led: Prowadzony przez nauczyciela
+      collections: Kolekcje
+      workshops_k5: Warsztaty dla uczniów w klasach K-5
+      summer_workshops_612: Warsztaty Letnie dla uczniów w klasach 6-12
+      virtual_academic_year_workshops_612: Wirtualne Warsztaty Roku Akademickiego
+        dla uczniów w klasach 6-12
   cookie_banner:
     message: Kontynuując przeglądanie naszej strony lub klikając "Zgadzam się", zgadzasz
       się na przechowywanie plików cookie na Twoim komputerze lub urządzeniu.

@@ -63,6 +63,7 @@ pt:
           description: Aprenda programação funcional com álgebra
           description_short: Aprenda programação funcional com álgebra
           student_description: Aprenda programação funcional com álgebra
+          name: álgebra
         infinity:
           title: Laboratório Infinito Disney
           description: Use o Laboratório para criar uma história ou um jogo usando personagens da Disney Infinity.
@@ -76,6 +77,8 @@ pt:
           student_description: Vários desafios para demonstrar o ambiente e a linguagem de programação usados no Code.org CS em álgebra
         K5PD:
           title: Desenvolvimento profissional para o Ensino Fundamental
+          description: 'Para obter os mais recentes recursos on-line de desenvolvimento profissional para professores do ensino fundamental, aqui: <https://studio.code.org/s/k5-onlinepd>'
+          student_description: 'Para obter os mais recentes recursos on-line de desenvolvimento profissional para professores do ensino fundamental, aqui: <https://studio.code.org/s/k5-onlinepd>'
         netsim:
           title: Simulador de internet
           description: Aprenda como a Internet funciona
@@ -92,6 +95,7 @@ pt:
           description_short: Este curso de 20 horas aborda os conceitos fundamentais de ciência da computação e programação nos cursos de 2 a 4.
           description_audience: 10-18 anos de idade
           student_description: Este curso de 20 horas apresenta o núcleo da computação e conceitos de programação. O curso é projetado para uso em salas de aula para o Ensino Fundamental, mas é divertido de aprender em todas as idades.
+          name: 20 horas
         edit-code:
           title: Edite o código
           description: Edite o código
@@ -168,11 +172,17 @@ pt:
           description: Em parceria com o Projeto GUTS
           description_short: Em parceria com o Projeto GUTS
           student_description: Em parceria com o Projeto GUTS
+          name: ECSPD
         sciencePD:
           title: DP da ciência da computação na ciência
           description: Em parceria com o Projeto GUTS
           description_short: Em parceria com o Projeto GUTS
           student_description: Em parceria com o Projeto GUTS
+        rbo-reference:
+          title: referência robóloga
+          description: referência robóloga
+          description_short: referência robóloga
+          student_description: referência robóloga
         Test Wednesday:
           title: Teste quarta-feira
           description: Teste quarta-feira
@@ -226,6 +236,9 @@ pt:
           student_description: Em parceria com o Projeto GUTS
         sciencePD2:
           title: DP da ciência da computação na ciência
+          description: Estudo de verão combinado on-line da fase 2
+          description_short: Estudo de verão combinado on-line da fase 2
+          student_description: Estudo de verão combinado on-line da fase 2
         sciencePD3:
           title: DP da ciência da computação na ciência
           description: Suporte ao Ano Acadêmico - Semestre 1
@@ -251,16 +264,28 @@ pt:
           description: Todos os tipos de nível para testar UI
           description_short: Todos os tipos de nível para testar UI
           student_description: Todos os tipos de nível para testar UI
+          name: todas as coisas
+          lessons:
+            lesson-49:
+              name: Música
         algebraPD2b:
           title: Ciência da computação em álgebra PD
           description: 'Fase 2 - on-line: combinado de estudos de verão'
           description_short: 'Fase 2 - on-line: combinado de estudos de verão'
           student_description: 'Fase 2 - on-line: combinado de estudos de verão'
+        cspfacilitator:
+          title: 'Workshop para facilitadores de princípios de CS '
+          description: Níveis online para workshop de PD
+          description_short: Níveis online para workshop de PD
+          student_description: Níveis online para workshop de PD
         K5-OnlinePD:
+          title: Ensino de Fundamentos da Ciência da Computação (2017)
           description: Aprenda a ensinar ciência da computação usando os Fundamentos de Ciência da Computação da Code.org com este curso on-line gratuito e individualizado.
           description_short: Aprenda a ensinar ciência da computação usando os Fundamentos de Ciência da Computação da Code.org com este curso on-line gratuito e individualizado.
           student_description: Aprenda a ensinar ciência da computação usando os Fundamentos de Ciência da Computação da Code.org com este curso on-line gratuito e individualizado.
+          name: K5 - PDF online
         ECSPD2:
+          title: 'Explorando o PD em Ciência da Computação: estudo combinado de verão'
           description: 'Fase 2 - on-line: combinado de estudos de verão'
           description_short: 'Fase 2 - on-line: combinado de estudos de verão'
           student_description: 'Fase 2 - on-line: combinado de estudos de verão'
@@ -268,15 +293,21 @@ pt:
           description: 'Fase 2 - on-line: combinado de estudos de verão'
           description_short: 'Fase 2 - on-line: combinado de estudos de verão'
           student_description: 'Fase 2 - on-line: combinado de estudos de verão'
+        science-PD2:
+          description: Estudo de verão combinado on-line da fase 2
+          description_short: Estudo de verão combinado on-line da fase 2
+          student_description: Estudo de verão combinado on-line da fase 2
         sciencePD2b-iZone:
           description: 'Fase 2 - on-line: combinado de estudos de verão'
           description_short: 'Fase 2 - on-line: combinado de estudos de verão'
           student_description: 'Fase 2 - on-line: combinado de estudos de verão'
         ECSPD2-iZone:
+          title: 'Explorando o PD em Ciência da Computação: estudo combinado de verão'
           description: 'Fase 2 - on-line: combinado de estudos de verão'
           description_short: 'Fase 2 - on-line: combinado de estudos de verão'
           student_description: 'Fase 2 - on-line: combinado de estudos de verão'
         ECSPD2-NexTech:
+          title: 'Explorando o PD em Ciência da Computação: estudo combinado de verão'
           description: 'Fase 2 - on-line: combinado de estudos de verão'
           description_short: 'Fase 2 - on-line: combinado de estudos de verão'
           student_description: 'Fase 2 - on-line: combinado de estudos de verão'
@@ -319,10 +350,12 @@ pt:
           description_short: Crie uma história ou faça um jogo com o Laboratório do Gumball!
           student_description: Crie uma história ou faça um jogo com o Laboratório do Gumball!
         starwars:
+          title: 'Star Wars: Construa uma galáxia com a programação (JavaScript)'
           description: Aprenda a programar droids, e crie seu próprio jogo do Star Wars em uma galáxia muito, muito distante.
           description_short: Aprenda a programar droids, e crie seu próprio jogo do Star Wars em uma galáxia muito, muito distante.
           student_description: Aprenda a programar droids, e crie seu próprio jogo do Star Wars em uma galáxia muito, muito distante.
         starwarsblocks:
+          title: 'Star Wars: Construa uma galáxia com programação (Blocos)'
           description: Aprenda a programar droids, e crie seu próprio jogo do Star Wars em uma galáxia muito, muito distante.
           description_short: Aprenda a programar droids, e crie seu próprio jogo do Star Wars em uma galáxia muito, muito distante.
           student_description: Aprenda a programar droids, e crie seu próprio jogo do Star Wars em uma galáxia muito, muito distante.
@@ -337,27 +370,70 @@ pt:
           description_short: Aprenda como a Inteligência Artificial e aprendizado de máquina pode ser usado para resolver problemas mundiais.
           student_description: Aprenda como a Inteligência Artificial e aprendizado de máquina pode ser usado para resolver problemas mundiais.
           name: oceanos
+        CSPPD3-Unit3-pt2:
+          title: 'Princípios da Ciência da Computação: Desafios do PD da Unidade'
+          description: Exploração on-line da Unidade 3 do CSP - Desafios da aula
+          description_short: Exploração on-line da Unidade 3 do CSP - Desafios da aula
+          student_description: Exploração on-line da Unidade 3 do CSP - Desafios da aula
+        ScienceP3OLPT3:
+          title: Ciência da Computação em Ciência PD Pré-Fase 3B
         cspunit5:
+          title: "(antiga) Princípios de CS, Unidade 5 - Tarefas de desempenho"
+          description: Esta unidade aborda a preparação e a conclusão das tarefas de exploração e criação de desempenho.
           description_short: Programação
+          student_description: Esta unidade aborda a preparação e a conclusão das tarefas de exploração e criação de desempenho.
         cspunit4:
+          title: "(antiga) Unidade 4 de Princípios de CS - Dados"
+          description: Ser capaz de manipular dados digitalmente, visualizá-los e identificar padrões, tendências e possíveis significados são habilidades práticas importantes que os cientistas da computação usam todos os dias. O mundo rico em dados em que vivemos também introduz muitas questões complexas relacionadas a políticas públicas, leis, ética e impacto social. Entender de onde vêm os dados, ter intuições sobre o que poderia ser aprendido ou extraído deles e ser capaz de usar ferramentas computacionais para manipular dados e se comunicar sobre eles são as principais habilidades abordadas na unidade.
           description_short: Programação
+          student_description: Ser capaz de manipular dados digitalmente, visualizá-los e identificar padrões, tendências e possíveis significados são habilidades práticas importantes que os cientistas da computação usam todos os dias. O mundo rico em dados em que vivemos também introduz muitas questões complexas relacionadas a políticas públicas, leis, ética e impacto social. Entender de onde vêm os dados, ter intuições sobre o que poderia ser aprendido ou extraído deles e ser capaz de usar ferramentas computacionais para manipular dados e se comunicar sobre eles são as principais habilidades abordadas na unidade.
+        CSPPD3-Unit4:
+          title: 'Princípios da Ciência da Computação: Unidade 4 PD'
+          description: Suporte on-line para CSP Unit 4
+          description_short: Suporte para a Unidade 4 do CSP
+          student_description: Suporte on-line para CSP Unit 4
+        cspunit6draft:
+          title: Material CSP Post-AP - Bancos de dados e uso de dados em seus aplicativos
+          description: O App Lab tem várias ferramentas que permitem coletar e usar dados em seus aplicativos. O material a seguir fornece uma visão geral de como essas ferramentas funcionam e termina com uma amostra de exemplos de projetos que podem ser criados usando essas ferramentas.
+          description_short: Aplicativos de dados
+          student_description: O App Lab tem várias ferramentas que permitem coletar e usar dados em seus aplicativos. O material a seguir fornece uma visão geral de como essas ferramentas funcionam e termina com uma amostra de exemplos de projetos que podem ser criados usando essas ferramentas.
+        CSPPD3-Unit5:
+          title: 'Princípios da Ciência da Computação: Unidade 5 PD'
+          description: Suporte on-line para CSP Unit 5
+          description_short: Suporte para a Unidade 5 do CSP
+          student_description: Suporte on-line para CSP Unit 5
         cspunit6:
+          title: Material CSP Post-AP - Bancos de dados e uso de dados em seus aplicativos
+          description: O App Lab tem várias ferramentas que permitem coletar e usar dados em seus aplicativos. O material a seguir fornece uma visão geral de como essas ferramentas funcionam, uma amostra de exemplos de projetos que podem ser construídos usando essas ferramentas e um espaço para criar e enviar um projeto final.
           description_short: Aprenda a coletar e usar dados em aplicativos do App Lab.
+          student_description: O App Lab tem várias ferramentas que permitem coletar e usar dados em seus aplicativos. O material a seguir fornece uma visão geral de como essas ferramentas funcionam, uma amostra de exemplos de projetos que podem ser construídos usando essas ferramentas e um espaço para criar e enviar um projeto final.
         AlgebraA:
+          title: 'Ciência da Computação em Álgebra: Curso A'
           description: Aprenda programação funcional com álgebra
           description_short: Aprenda programação funcional com álgebra
           student_description: Aprenda programação funcional com álgebra
+          name: Álgebra A
         AlgebraB:
           title: Ciência da computação em álgebra
           description: Aprenda programação funcional com álgebra
           description_short: Aprenda programação funcional com álgebra
           student_description: Aprenda programação funcional com álgebra
+          name: Álgebra
+        gamelab-hackathon:
+          title: Hackathon da Gamelab
+          description: Um lugar para experimentar coisas no Game Lab
+          description_short: Hackathon da Gamelab
+          student_description: Um lugar para experimentar coisas no Game Lab
         algebraPD1:
+          title: CS em Álgebra, Parte 1
           description: Ensine álgebra com programação funcional
           description_short: Em parceria com o Projeto GUTS
           student_description: Ensine álgebra com programação funcional
         algebraPD3c:
           title: Ciência da computação em álgebra PD
+          description: 'CS em álgebra: reflexão de fim de ano'
+          description_short: 'CS em álgebra: reflexão de fim de ano'
+          student_description: 'CS em álgebra: reflexão de fim de ano'
         csp1-2017:
           title: CSP Unidade 1 - A Internet ('17 -'18)
           description: Esta unidade explora os desafios e questões técnicas que surgem da necessidade de representar informações digitais em computadores e transferi-las entre pessoas e dispositivos computacionais. A unidade explora a estrutura e o design da Internet e as implicações dessas decisões de design.
@@ -384,6 +460,10 @@ pt:
           student_description: Esta unidade explora ainda mais as maneiras pelas quais as informações digitais são codificadas, representadas e manipuladas. Ser capaz de manipular dados digitalmente, visualizá-los e identificar padrões, tendências e possíveis significados são importantes habilidades práticas que os cientistas da computação fazem todos os dias. Entender de onde vêm os dados, ter intuições sobre o que pode ser aprendido ou extraído deles e ser capaz de usar ferramentas computacionais para manipular dados e se comunicar sobre eles são as principais habilidades abordadas na unidade.
         csp3-2017:
           title: CSP Unidade 3 - Programação
+          description: |-
+            Esta unidade apresenta os conceitos fundamentais da programação de computadores, o que libera a capacidade de criar aplicativos ricos e interativos. Este curso usa JavaScript como linguagem de programação e App Lab como ambiente de programação para criar aplicativos, mas os conceitos aprendidos nessas lições abrangem todas as linguagens e ferramentas de programação.
+
+            Esta unidade foi atualizada pela última vez em 30 de outubro de 2017. Leia mais sobre as atualizações do currículo em forum.code.org/c/csp/updates.
           description_short: Programação
           lesson_groups:
             csp3_1:
@@ -392,8 +472,16 @@ pt:
               display_name: Avaliação do Capítulo
             cspSurvey:
               display_name: Questionário
+          student_description: |-
+            Esta unidade apresenta os conceitos fundamentais da programação de computadores, o que libera a capacidade de criar aplicativos ricos e interativos. Este curso usa JavaScript como linguagem de programação e App Lab como ambiente de programação para criar aplicativos, mas os conceitos aprendidos nessas lições abrangem todas as linguagens e ferramentas de programação.
+
+            Esta unidade foi atualizada pela última vez em 30 de outubro de 2017. Leia mais sobre as atualizações do currículo em forum.code.org/c/csp/updates.
         csp4-2017:
           title: CSP Unidade 4 do - Big Data e Privacidade ('17 -'18)
+          description: |-
+            O mundo rico em dados em que vivemos apresenta muitas questões complexas relacionadas a políticas públicas, leis, ética e impacto social. Os objetivos desta unidade são desenvolver uma visão completa e equilibrada sobre os dados no mundo, incluindo os efeitos positivos e negativos deles, e entender os fundamentos de como e por que a criptografia moderna funciona.
+
+            Esta unidade foi atualizada pela última vez em novembro de 2017. Leia mais sobre as atualizações do currículo em forum.code.org/c/csp/updates.
           description_short: Explore o mundo rico em dados em que vivemos e como os dados afetam as políticas públicas, a privacidade pessoal, a segurança, a lei e a ética.
           lesson_groups:
             csp4_1:
@@ -402,6 +490,10 @@ pt:
               display_name: Avaliação do Capítulo
             cspSurvey:
               display_name: Questionário
+          student_description: |-
+            O mundo rico em dados em que vivemos apresenta muitas questões complexas relacionadas a políticas públicas, leis, ética e impacto social. Os objetivos desta unidade são desenvolver uma visão completa e equilibrada sobre os dados no mundo, incluindo os efeitos positivos e negativos deles, e entender os fundamentos de como e por que a criptografia moderna funciona.
+
+            Esta unidade foi atualizada pela última vez em novembro de 2017. Leia mais sobre as atualizações do currículo em forum.code.org/c/csp/updates.
         csp5-2017:
           title: CSP Unidade 5 - Construindo aplicações ('17 -'18)
           description: Esta unidade continua a introdução de conceitos fundamentais de programação de computadores, que desbloqueiam a capacidade de criar aplicativos interativos e ricos. Este curso usa JavaScript como linguagem de programação e o App Lab como ambiente de programação para criar aplicativos, mas os conceitos aprendidos nessas lições abrangem todas as linguagens e ferramentas de programação.
@@ -414,29 +506,52 @@ pt:
             cspSurvey:
               display_name: Questionário
           student_description: Esta unidade continua a introdução de conceitos fundamentais de programação de computadores, que desbloqueiam a capacidade de criar aplicativos interativos e ricos. Este curso usa JavaScript como linguagem de programação e o App Lab como ambiente de programação para criar aplicativos, mas os conceitos aprendidos nessas lições abrangem todas as linguagens e ferramentas de programação.
+        csp6:
+          title: Unidade CSP 6 - Tarefas de desempenho do AP
+          description: Esta unidade aborda a preparação e a conclusão das tarefas de criação e exploração de desempenho.
+          description_short: As aulas orientam os alunos a se prepararem e concluírem as tarefas de desempenho do AP.
+          student_description: Esta unidade aborda a preparação e a conclusão das tarefas de criação e exploração de desempenho.
         CSDU3-Draft:
+          title: " Unidade TEMP CSD 3 - Jogos e animações interativas"
+          description: Local temporário para trabalhar no U3 of Disco
           description_short: Programação
         2016_sciencePD_phase1:
+          title: 'CS em Ciência: Parte 1'
           description: Em parceria com o Projeto GUTS
           description_short: Em parceria com o Projeto GUTS
           student_description: Em parceria com o Projeto GUTS
         TEMP CSD Unit 3:
+          title: " Unidade TEMP CSD 3 - Jogos e animações interativas"
           description_short: Programação
         CSF_Secret_Sample:
+          title: Amostra secreta
+          description: Teste da nova filosofia educacional
+          description_short: Isso é um segredo... shhhhh
           description_audience: 8-18 anos de idade
+          student_description: Teste da nova filosofia educacional
         ECSPD1:
+          title: Parte 1 do ECS
+          description: Introdução de duas horas ao seu Programa de Aprendizagem Profissional para o currículo ECS Versão 5
           description_short: Em parceria com o Projeto GUTS
+          student_description: Introdução de duas horas ao seu Programa de Aprendizagem Profissional para o currículo ECS Versão 5
         algebraFacilitator:
+          title: Pré-trabalho do facilitador de Ciência da Computação em Álgebra
           description: Ensine álgebra com programação funcional
           description_short: Ensine álgebra com programação funcional
           student_description: Ensine álgebra com programação funcional
         sciencePD1:
+          title: 'CS em Ciência: Parte 1'
           description: Em parceria com o Projeto GUTS
           description_short: Em parceria com o Projeto GUTS
           student_description: Em parceria com o Projeto GUTS
         cspoptional:
+          title: Aulas opcionais de princípios de CS
+          description: As aulas e o conteúdo opcionais de todas as unidades de Princípios de CS estão listados aqui.
           description_short: Opcional
+          student_description: As aulas e o conteúdo opcionais de todas as unidades de Princípios de CS estão listados aqui.
         cspunit1-support:
+          title: Suporte on-line para CSP Unit 1
+          description: Este é um curso de aprendizagem profissional de teste
           lesson_groups:
             required:
               display_name: Visão geral
@@ -444,7 +559,9 @@ pt:
               display_name: Conteúdo
             practice:
               display_name: Práticas de ensino
+          student_description: Este é um curso de aprendizagem profissional de teste
         test-teaching-ap-cs-unit-1:
+          title: Teste CPS PD
           lesson_groups:
             required:
               display_name: Visão geral
@@ -452,12 +569,31 @@ pt:
               display_name: Conteúdo
             practice:
               display_name: Práticas de ensino
+        allthehiddenthings:
+          title: Todas as coisas escondidas!
+          description: Tipos de níveis não lançados para testes de interface de usuário como administrador
+          description_short: Tipos de níveis não lançados para testes de interface de usuário como administrador
+          student_description: Tipos de níveis não lançados para testes de interface de usuário como administrador
+        cspunit1-support-test:
+          title: 'CSP Unidade 1: apoio ao professor'
+          description: Suporte on-line para CSP Unit 1
+          student_description: Suporte on-line para CSP Unit 1
+        cspunit1-tools:
+          title: conclusão da tarefa netsim
+          description: introdução ao simulador de internet e uma discussão sobre como o usamos para ensinar a internet
+          student_description: introdução ao simulador de internet e uma discussão sobre como o usamos para ensinar a internet
+        csp-facilitators:
+          title: Visão geral da ferramenta CSP
         cspexam1-mWU7ilDYM9:
           description_short: Esta avaliação de múltipla escolha cobre questões de 7 grandes ideias da ciência da computação. É a parte 1 de duas partes de um exame de 50 questões.
         cspexam2-AKwgAh1ac5:
           description_short: Esta avaliação de múltipla escolha cobre questões de 7 grandes ideias da ciência da computação. É a parte 2 de duas partes de um exame de 50 questões.
+        CSDU2-Draft:
+          description_short: Desenvolvimento na Web
         CSDU5-Draft:
           description_short: Dados
+        CSDU6-Draft:
+          description_short: Makerlab
         CSF_Secret_Sample_Story:
           description_audience: 8-18 anos de idade+
         MikeTest:
@@ -544,6 +680,7 @@ pt:
             practice:
               display_name: Práticas de ensino
         csp1-support:
+          title: Unidade 1 Curso de aprendizagem profissional on-line
           lesson_groups:
             required:
               display_name: Visão geral
@@ -594,6 +731,8 @@ pt:
           description_short: Crie animais e outras criaturas de Minecraft em sua própria versão do Minecraft.
           description: Crie animais e outras criaturas de Minecraft em sua própria versão do Minecraft.
           student_description: Crie animais e outras criaturas de Minecraft em sua própria versão do Minecraft.
+        flappy-impact-study:
+          title: Flappy Code com pesquisa
         coursea-draft:
           title: 'Fundamentos de Ciência da Computação: Curso A'
           description_short: Uma introdução à ciência da computação para novos leitores.
@@ -666,11 +805,13 @@ pt:
         csppostap-2017:
           title: CSP pós-AP - Bancos de dados e dados utilizados em seus aplicativos ('17 -'18)
           description_short: Aprenda a coletar e usar dados em aplicativos do App Lab.
+          description: O App Lab tem várias ferramentas que permitem coletar e usar dados em seus aplicativos. O material a seguir fornece uma visão geral de como essas ferramentas funcionam, uma amostra de exemplos de projetos que podem ser construídos usando essas ferramentas e um espaço para criar e enviar um projeto final.
           lesson_groups:
             content:
               display_name: Conteúdo
             cspSurvey:
               display_name: Questionário
+          student_description: O App Lab tem várias ferramentas que permitem coletar e usar dados em seus aplicativos. O material a seguir fornece uma visão geral de como essas ferramentas funcionam, uma amostra de exemplos de projetos que podem ser construídos usando essas ferramentas e um espaço para criar e enviar um projeto final.
         csd6-draft:
           title: CSD Unit 6 Revisions Draft
           lesson_groups:
@@ -764,6 +905,7 @@ pt:
           title: Para o Widget de Criptografia de Chave Pública
         csd2-old:
           title: CSD Unidade 2 (descontinuada)
+          description_short: Desenvolvimento na Web
         coursea-2017:
           title: Curso A
           assignment_family_title: Curso A
@@ -3333,6 +3475,7 @@ pt:
           lesson_groups:
             lessonGroup-4:
               display_name: Questionário
+          title: I.A. e Aprendizagem de máquina
         kodea-pd-2021:
           description: Aprenda a ensinar ciência da computação usando os Fundamentos de Ciência da Computação da Code.org com este curso on-line gratuito e individualizado.
           student_description: Aprenda a ensinar ciência da computação usando os Fundamentos de Ciência da Computação da Code.org com este curso on-line gratuito e individualizado.
@@ -3359,6 +3502,42 @@ pt:
           lesson_groups:
             lessonGroup-2:
               display_name: Bem-vindo
+            lessonGroup-3:
+              display_name: Navegação no Code.org
+            lessonGroup-5:
+              display_name: Preparação para lecionar as Descobertas da SC
+          title: 'Módulo 1: Seja bem-vindo '
+          description: "Este módulo é uma breve introdução para o Code.org e para este curso de aprendizagem profissional. \n\n**Você vai:**\n\n-   Ver uma introdução ao Code.org e às Descobertas da SC. \n-   Aprender a se envolver nesse curso de aprendizagem profissional. \n\n**Tempo sugerido:** 10 minutos"
+          student_description: "Este módulo é uma breve introdução para o Code.org e para este curso de aprendizagem profissional. \n\n**Você vai:**\n\n-   Ver uma introdução ao Code.org e às Descobertas da SC. \n-   Aprender a se envolver nesse curso de aprendizagem profissional. \n\n**Tempo sugerido:** 10 minutos"
+        self-paced-pl-csd2-2021:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Navegação no Code.org
+          title: 'Módulo 2: Navegação no Code.org'
+          description: "Este módulo foi projetado como uma orientação para as ferramentas que você vai utilizar em apoio à aprendizagem estudantil, ao mesmo tempo lecionando sobre as Descobertas da SC. \n\n**Você vai:**\n\n-   Navegar pelo site Code.org e pelas ferramentas para professores. \n-   Configurar uma sala de aula \n-   Localizar e utilizar os planos de ensino do curso e os recursos para professores. \n-   Aprender a acessar o suporte enquanto leciona o curso. \n\n**Tempo sugerido:** 60 minutos"
+          student_description: "Este módulo foi projetado como uma orientação para as ferramentas que você vai utilizar em apoio à aprendizagem estudantil, ao mesmo tempo lecionando sobre as Descobertas da SC. \n\n**Você vai:**\n\n-   Navegar pelo site Code.org e pelas ferramentas para professores. \n-   Configurar uma sala de aula \n-   Localizar e utilizar os planos de ensino do curso e os recursos para professores. \n-   Aprender a acessar o suporte enquanto leciona o curso. \n\n**Tempo sugerido:** 60 minutos"
+        self-paced-pl-csd3-2021:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Visão geral das Descobertas da SC
+          title: 'Módulo 3: Visão geral das Descobertas da SC'
+          description: "Este módulo apresenta uma visão geral do curso de Descobertas da SC com ênfase em conceitos que os alunos vão aprender e ferramentas que vão utilizar no decorrer do curso. Seu envolvimento neste módulo vai ajudá-lo a tomar decisões sobre como selecionar o conteúdo do curso que você vai lecionar em sala de aula. \n\n**Você vai:**\n\n-   Obter um alto nível de compreensão do programa de Descobertas da SC. \n-   Familiarizar-se com os ambientes de programação utilizados no curso de Descobertas da SC. \n-   Decidir que unidades do Descobertas da SC você vai lecionar para sua turma. \n\n**Tempo sugerido:** 60 minutos"
+          student_description: "Este módulo apresenta uma visão geral do curso de Descobertas da SC com ênfase em conceitos que os alunos vão aprender e ferramentas que vão utilizar no decorrer do curso. Seu envolvimento neste módulo vai ajudá-lo a tomar decisões sobre como selecionar o conteúdo do curso que você vai lecionar em sala de aula. \n\n**Você vai:**\n\n-   Obter um alto nível de compreensão do programa de Descobertas da SC. \n-   Familiarizar-se com os ambientes de programação utilizados no curso de Descobertas da SC. \n-   Decidir que unidades do Descobertas da SC você vai lecionar para sua turma. \n\n**Tempo sugerido:** 60 minutos"
+        self-paced-pl-csd4-2021:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ensino e aprendizagem com o Descobertas da SC
+          title: 'Módulo 4: Ensino e aprendizagem com o Descobertas da SC'
+          description: "Neste módulo, você verá uma introdução às práticas autênticas da SC em que os alunos estarão envolvidos durante o curso de Descobertas da SC. Essas práticas incluem a depuração, uso de recursos e programação em pares. Você também vai explorar a função do professor em uma das salas de aula de Descobertas da SC e elaborar um plano de como você dará seu apoio à aprendizagem estudantil enquanto lecionar o curso. \n\n**Você vai:**\n\n-   Considerar a função do professor em uma sala de aula de Descobertas da SC. \n-   Aprender sobre as práticas autênticas de SC que os alunos vão desenvolver durante o curso de Descobertas da SC. \n-   Elaborar um plano de como você pretende dar o seu apoio à aprendizagem estudantil, por meio da diferenciação, da avaliação contínua e das promoção de uma cultura de inclusão. \n\n**Tempo sugerido:** 50 minutos"
+          student_description: "Neste módulo, você verá uma introdução às práticas autênticas da SC em que os alunos estarão envolvidos durante o curso de Descobertas da SC. Essas práticas incluem a depuração, uso de recursos e programação em pares. Você também vai explorar a função do professor em uma das salas de aula de Descobertas da SC e elaborar um plano de como você dará seu apoio à aprendizagem estudantil enquanto lecionar o curso. \n\n**Você vai:**\n\n-   Considerar a função do professor em uma sala de aula de Descobertas da SC. \n-   Aprender sobre as práticas autênticas de SC que os alunos vão desenvolver durante o curso de Descobertas da SC. \n-   Elaborar um plano de como você pretende dar o seu apoio à aprendizagem estudantil, por meio da diferenciação, da avaliação contínua e das promoção de uma cultura de inclusão. \n\n**Tempo sugerido:** 50 minutos"
+        self-paced-pl-csd5-2021:
+          title: Ensino de I.A. e aprendizagem de máquina
+          description: "Este módulo de aprendizagem profissional foi projetado para ajudar você a se preparar para lecionar as unidades de I.A. e aprendizagem de máquina Code.org. \n\n**Neste módulo de aprendizagem profissional, você vai:**\n\n-   Ver uma introdução à inteligência artificial e à aprendizagem de máquina. \n-   Praticar os principais conceitos incluídos na unidade. \n-   Familiarizar-se com o Laboratório de I.A. e o Laboratório de aplicativos. \n-   Explorar projetos de fim de capítulo. \n-   Elaborar um plano para implementar a unidade com seus alunos. \n\n**Tempo sugerido:** 120 minutos"
+          student_description: "Este módulo de aprendizagem profissional foi projetado para ajudar você a se preparar para lecionar as unidades de I.A. e Aprendizagem de máquina do Code.org. \n\n**Neste módulo de aprendizagem profissional, você vai:**\n\n-   Ver uma introdução à inteligência artificial e à aprendizagem de máquina. \n-   Treinar com um modelo de aprendizagem de máquina utilizando o Laboratório de I.A.\n-   Familiarizar-se com os aplicativos de aprendizagem de máquina. \n-   Considerar implicações de I.A. e aprendizagem de máquina do mundo real. \n-   Explorar projetos de fim de capítulo. \n\n**Tempo sugerido:** 120 minutos"
+        self-paced-pl-csd6-2021:
+          description: "Este módulo de aprendizagem profissional foi projetado para ajudar você a se preparar para lecionar as unidades de I.A. e Aprendizagem de máquina do Code.org. \n\n**Neste módulo de aprendizagem profissional, você vai:**\n\n-   Ver uma introdução à inteligência artificial e à aprendizagem de máquina. \n-   Treinar com um modelo de aprendizagem de máquina utilizando o Laboratório de I.A.\n-   Familiarizar-se com os aplicativos de aprendizagem de máquina. \n-   Considerar implicações de I.A. e aprendizagem de máquina do mundo real. \n-   Explorar projetos de fim de capítulo. \n\n**Tempo sugerido:** 120 minutos"
+        self-paced-pl-csp2-2021:
+          title: 'Módulo 2: Navegação no Code.org'
         outbreak-module:
           title: Epidemia
         csa1-exemplars:
@@ -3417,6 +3596,9 @@ pt:
         hello-world-draft:
           title: '"Olá, mundo!"'
         csa-self-paced-pl:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Navegação no Code.org
           title: Navegação pelo Code.org para professores-piloto do CSA
           description: "Este módulo foi projetado para orientar o usuário no uso das ferramentas que serão utilizadas em apoio à aprendizagem dos alunos ao lecionar sobre o CSA. \n\n**Você vai aprender a:**\n\n-   Navegar pelo site Code.org e usar ferramentas para professores. \n-   Localizar e utilizar planos de lições do curso e recursos para professores. \n\n**Tempo sugerido:** 1 hora"
           name: csa-self-paced-pl
@@ -3485,6 +3667,8 @@ pt:
           name: tesstest921
         hello-world-emoji:
           title: 'Olá, Mundo: Emoji'
+        hello-world-retro:
+          title: "\"Olá, mundo: Retrô"
         hello-world-batman:
           title: Olá Mundo
         csa4-exemplars:
@@ -3497,6 +3681,9 @@ pt:
               display_name: Conteúdo
             lessonGroup-2:
               display_name: Conteúdo
+        ai-ethics:
+          title: Nosso Código de Ética em I.A.
+          description_audience: 6ª à 12ª séries
         csc-things:
           name: coisas do CSC
           title: Descarga do cérebro do CSC
@@ -3565,11 +3752,16 @@ pt:
             lessonGroup-5:
               display_name: Área restrita
         ai-ethics-2021:
+          title: Nosso Código de Ética em I.A.
           description_audience: Entre sexto ano do fundamental e terceiro do ensino médio
         poem-art-2021:
           title: Arte poética
+        poetry-2021:
+          title: Codificação com Poesia
         hello-world-emoji-2021:
           title: 'Olá, Mundo: Emoji'
+        hello-world-retro-2021:
+          title: "\"Olá, mundo: Retrô"
         explore-data-1-2021:
           title: Visualização de Dados
         counting-csc-2021:
@@ -3854,6 +4046,8 @@ pt:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+        self-paced-pl-csa2-2022:
+          title: 'Módulo 2: Navegação no Code.org'
         csa7-pilot-extra:
           lesson_groups:
             lessonGroup-2:
@@ -3931,6 +4125,9 @@ pt:
           description: "Este módulo de aprendizagem profissional foi projetado para ajudar você a se preparar para lecionar a unidade de computação física do Code.org. \n\n\\*\\* Neste módulo de aprendizagem profissional, você vai: \\*\\* \n\n– Ver uma introdução ao computação física. \n– Praticar conceitos-chave lecionados na unidade. \n– Envolver-se com o aplicativo de desenvolvedores. \n– Explorar o os projetos no final do capítulo. \n\n\\*\\* Tempo sugerido: \\*\\* 90 minutos"
           student_description: "Este módulo de aprendizagem profissional foi projetado para ajudar você a se preparar para lecionar a unidade de computação física do Code.org. \n\n\\*\\* Neste módulo de aprendizagem profissional, você vai: \\*\\* \n\n– Ver uma introdução ao computação física. \n– Praticar conceitos-chave lecionados na unidade. \n– Envolver-se com o aplicativo de desenvolvedores. \n– Explorar o os projetos no final do capítulo. \n\n\\*\\* Tempo sugerido: \\*\\* 90 minutos"
         vpl-csd7-ci-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ensino de I.A. e aprendizagem de máquina
           title: 'Módulo 7: Preparação para lecionar sobre IA e aprendizagem de máquina'
           description: "Este módulo de aprendizagem profissional foi projetado para ajudar você a se preparar para lecionar a unidade de IA e aprendizagem de máquina do Code.org. \n\n\\*\\* Neste módulo de aprendizagem profissional, você vai: \\*\\* \n\n– Ver uma introdução à IA e aprendizagem de máquina. \n– Praticar conceitos-chave lecionados na unidade. \n– Explorar os projetos no final do capítulo. \n– Planejar a implementação da unidade com seus alunos. \n\n\\*\\* Tempo sugerido: \\*\\* 120 minutos"
           student_description: "Este módulo de aprendizagem profissional foi projetado para ajudar você a se preparar para lecionar a unidade de IA e aprendizagem de máquina do Code.org. \n\n\\*\\* Neste módulo de aprendizagem profissional, você vai: \\*\\* \n\n– Ver uma introdução à IA e aprendizagem de máquina. \n– Praticar conceitos-chave lecionados na unidade. \n– Explorar os projetos no final do capítulo. \n– Planejar a implementação da unidade com seus alunos. \n\n\\*\\* Tempo sugerido: \\*\\* 120 minutos"
@@ -4009,12 +4206,41 @@ pt:
           lesson_groups:
             lessonGroup-2:
               display_name: Bem-vindo
+          title: 'Módulo 1: Seja bem-vindo '
+          description: "Este módulo é uma breve introdução para o Code.org e para este curso de aprendizagem profissional. \n\n**Você vai:**\n\n-   Ver uma introdução ao Code.org e às Descobertas da SC. \n-   Aprender a se envolver nesse curso de aprendizagem profissional. \n\n**Tempo sugerido:** 10 minutos"
+          student_description: "Este módulo é uma breve introdução para o Code.org e para este curso de aprendizagem profissional. \n\n**Você vai:**\n\n-   Ver uma introdução ao Code.org e às Descobertas da SC. \n-   Aprender a se envolver nesse curso de aprendizagem profissional. \n\n**Tempo sugerido:** 10 minutos"
+        self-paced-pl-csd2-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Navegação no Code.org
+          title: 'Módulo 2: Navegação no Code.org'
+          description: "Este módulo foi projetado como uma orientação para as ferramentas que você vai utilizar em apoio à aprendizagem estudantil, ao mesmo tempo lecionando sobre as Descobertas da SC. \n\n**Você vai:**\n\n-   Navegar pelo site Code.org e pelas ferramentas para professores. \n-   Configurar uma sala de aula \n-   Localizar e utilizar os planos de ensino do curso e os recursos para professores. \n-   Aprender a acessar o suporte enquanto leciona o curso. \n\n**Tempo sugerido:** 60 minutos"
+          student_description: "Este módulo foi projetado como uma orientação para as ferramentas que você vai utilizar em apoio à aprendizagem estudantil, ao mesmo tempo lecionando sobre as Descobertas da SC. \n\n**Você vai:**\n\n-   Navegar pelo site Code.org e pelas ferramentas para professores. \n-   Configurar uma sala de aula \n-   Localizar e utilizar os planos de ensino do curso e os recursos para professores. \n-   Aprender a acessar o suporte enquanto leciona o curso. \n\n**Tempo sugerido:** 60 minutos"
+        self-paced-pl-csd3-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Visão geral das Descobertas da SC
+          title: 'Módulo 3: Visão geral das Descobertas da SC'
+          description: "Este módulo apresenta uma visão geral do curso de Descobertas da SC com ênfase em conceitos que os alunos vão aprender e ferramentas que vão utilizar no decorrer do curso. Seu envolvimento neste módulo vai ajudá-lo a tomar decisões sobre como selecionar o conteúdo do curso que você vai lecionar em sala de aula. \n\n**Você vai:**\n\n-   Obter um alto nível de compreensão do programa de Descobertas da SC. \n-   Familiarizar-se com os ambientes de programação utilizados no curso de Descobertas da SC. \n-   Decidir que unidades do Descobertas da SC você vai lecionar para sua turma. \n\n**Tempo sugerido:** 60 minutos"
+          student_description: "Este módulo apresenta uma visão geral do curso de Descobertas da SC com ênfase em conceitos que os alunos vão aprender e ferramentas que vão utilizar no decorrer do curso. Seu envolvimento neste módulo vai ajudá-lo a tomar decisões sobre como selecionar o conteúdo do curso que você vai lecionar em sala de aula. \n\n**Você vai:**\n\n-   Obter um alto nível de compreensão do programa de Descobertas da SC. \n-   Familiarizar-se com os ambientes de programação utilizados no curso de Descobertas da SC. \n-   Decidir que unidades do Descobertas da SC você vai lecionar para sua turma. \n\n**Tempo sugerido:** 60 minutos"
+        self-paced-pl-csd4-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ensino e aprendizagem com o Descobertas da SC
+          title: 'Módulo 4: Ensino e aprendizagem com o Descobertas da SC'
+          description: "Neste módulo, você verá uma introdução às práticas autênticas da SC em que os alunos estarão envolvidos durante o curso de Descobertas da SC. Essas práticas incluem a depuração, uso de recursos e programação em pares. Você também vai explorar a função do professor em uma das salas de aula de Descobertas da SC e elaborar um plano de como você dará seu apoio à aprendizagem estudantil enquanto lecionar o curso. \n\n**Você vai:**\n\n-   Considerar a função do professor em uma sala de aula de Descobertas da SC. \n-   Aprender sobre as práticas autênticas de SC que os alunos vão desenvolver durante o curso de Descobertas da SC. \n-   Elaborar um plano de como você pretende dar o seu apoio à aprendizagem estudantil, por meio da diferenciação, da avaliação contínua e das promoção de uma cultura de inclusão. \n\n**Tempo sugerido:** 50 minutos"
+          student_description: "Neste módulo, você verá uma introdução às práticas autênticas da SC em que os alunos estarão envolvidos durante o curso de Descobertas da SC. Essas práticas incluem a depuração, uso de recursos e programação em pares. Você também vai explorar a função do professor em uma das salas de aula de Descobertas da SC e elaborar um plano de como você dará seu apoio à aprendizagem estudantil enquanto lecionar o curso. \n\n**Você vai:**\n\n-   Considerar a função do professor em uma sala de aula de Descobertas da SC. \n-   Aprender sobre as práticas autênticas de SC que os alunos vão desenvolver durante o curso de Descobertas da SC. \n-   Elaborar um plano de como você pretende dar o seu apoio à aprendizagem estudantil, por meio da diferenciação, da avaliação contínua e das promoção de uma cultura de inclusão. \n\n**Tempo sugerido:** 50 minutos"
+        self-paced-pl-csp2-2022:
+          title: 'Módulo 2: Navegação no Code.org'
         dlp-csp-mod1-2022:
           title: Princípios do CS Módulo de Aprendizagem Mais Profunda 1
         vpl-csd1-ayw-pilot-2022:
           lessons:
             lesson-6:
               name: Extensão de depuração assíncrona
+        self-paced-pl-csd5-2022:
+          description: "Este módulo de aprendizagem profissional foi projetado para ajudar você a se preparar para lecionar as unidades de I.A. e aprendizagem de máquina Code.org. \n\n**Neste módulo de aprendizagem profissional, você vai:**\n\n-   Ver uma introdução à inteligência artificial e à aprendizagem de máquina. \n-   Praticar os principais conceitos incluídos na unidade. \n-   Familiarizar-se com o Laboratório de I.A. e o Laboratório de aplicativos. \n-   Explorar projetos de fim de capítulo. \n-   Elaborar um plano para implementar a unidade com seus alunos. \n\n**Tempo sugerido:** 120 minutos"
+          student_description: "Este módulo de aprendizagem profissional foi projetado para ajudar você a se preparar para lecionar as unidades de I.A. e aprendizagem de máquina Code.org. \n\n**Neste módulo de aprendizagem profissional, você vai:**\n\n-   Ver uma introdução à inteligência artificial e à aprendizagem de máquina. \n-   Praticar os principais conceitos incluídos na unidade. \n-   Familiarizar-se com o Laboratório de I.A. e o Laboratório de aplicativos. \n-   Explorar projetos de fim de capítulo. \n-   Elaborar um plano para implementar a unidade com seus alunos. \n\n**Tempo sugerido:** 120 minutos"
         vpl-csd2-ayw-pilot-2022:
           lessons:
             lesson-6:
@@ -4094,6 +4320,27 @@ pt:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+        csa5-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conteúdo
+        csa6-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conteúdo
+        csa7-2023:
+          lessons:
+            lesson-6:
+              name: Propriedade intelectual
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conteúdo
+        csa8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conteúdo
+            lessonGroup-4:
+              display_name: Questionário
         hello-world-space-2022:
           title: 'Olá, Mundo: Espaço'
         hello-world-soccer-2022:
@@ -4101,41 +4348,44 @@ pt:
         csd1-2023:
           lesson_groups:
             lessonGroup-2:
-              display_name: Capítulo 1
+              display_name: 'Capítulo 1: O Processo de Solução de Problemas'
             lessonGroup-3:
-              display_name: Capítulo 2
+              display_name: 'Capítulo 2: Computadores e Solução de Problemas'
         csd4-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Capítulo 1: Desenho orientado ao usuário'
             lessonGroup-3:
               display_name: 'Capítulo 1: Prototipando o App'
-          title: O processo de design
+          student_description: A unidade 4 apresenta os impactos sociais mais amplos da computação. Através de uma série de desafios de design, você aprenderá a entender melhor as necessidades de outras pessoas enquanto desenvolve uma solução para um problema. A segunda metade da unidade consiste em um projeto de equipe iterativo, durante o qual as equipes têm a oportunidade de identificar uma necessidade com a qual se preocupam, protótipos de soluções tanto no papel quanto no App Lab e testam soluções com usuários reais para obter feedback e avançar iteração.
         csd5-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Capítulo 1: Representando Informação'
             lessonGroup-3:
               display_name: 'Capítulo 2: Resolvendo problemas de dados'
+          description_short: Aprenda como as pessoas usam computadores para resolver problemas de dados.
+          student_description: A unidade 5 trata da importância dos dados na solução de problemas e destaca como os computadores podem ajudar nesse processo. O primeiro capítulo explora os diferentes sistemas usados ​​para representar informações em um computador e os desafios e as vantagens e desvantagens do uso deles. No segundo capítulo, você aprenderá como as coleções de dados são usadas para resolver problemas e como os computadores ajudam a automatizar as etapas desse processo. O capítulo conclui considerando como o processo de solução de problemas de dados pode ser aplicado a uma área de sua escolha.
         csd3-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Capítulo 1: Imagens e Amimações'
             lessonGroup-3:
               display_name: 'Capítulo 2: Construindo Jogos'
+          student_description: " Na Unidade 3, você aproveitará sua experiência de codificação ao programar animações, arte interativa e jogos no Laboratório de Jogos. A unidade começa com formas simples e cria jogos sofisticados baseados em sprites, usando os mesmos conceitos de programação e o processo de design que os cientistas da computação usam diariamente. No projeto final, você desenvolverá um programa interativo personalizado."
         csd6-2023:
           lesson_groups:
-            lessonGroup-2:
-              display_name: Capítulo 1
             lessonGroup-3:
-              display_name: Capítulo 2
-          title: Computação Física
+              display_name: 'Capítulo 2: Construindo protótipos físicos'
+          description_short: Aprenda a programar com dispositivos físicos.
         csd7-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: Capítulo 1
             lessonGroup-3:
               display_name: Capítulo 2
+            lessonGroup-4:
+              display_name: Introdução Laboratório de Aplicativos
         physcomp-temp:
           lesson_groups:
             lessonGroup-3:
@@ -4220,6 +4470,12 @@ pt:
               display_name: Pesquisa Pós-Curso
         csp-post-survey-2023:
           title: Pesquisa pós-curso de princípios do CS
+        self-paced-pl-csa2-2023:
+          title: 'Módulo 2: Navegação no Code.org'
+        angelina-playground:
+          lessons:
+            lesson-5:
+              name: Avaliações
         csp-playground:
           title: CSP Parque Infantil
           description_audience: Escritores de currículos
@@ -4240,3 +4496,487 @@ pt:
               display_name: Introdução Laboratório de Aplicativos
             lessonGroup-3:
               display_name: Entradas e saídas
+        tess-testing-problem-solving-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Capítulo 1
+            lessonGroup-3:
+              display_name: Capítulo 2
+        testing-focus-on-creativity1:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Capítulo 1
+        testing-focus-on-creativity2:
+          title: Desenvolvimento na Web
+        pre-express-2023:
+          lesson_groups:
+            csf_sequencing:
+              display_name: Sequenciamento
+            csf_loops:
+              display_name: laços
+            csf_events:
+              display_name: Eventos
+          description_short: 'Uma introdução à ciência da computação para pré-leitores: combina o melhor do nosso jardim de infância e cursos de primeira série.'
+          description_audience: 'Idades: 4-8'
+        express-2023:
+          lesson_groups:
+            csf_sequencing:
+              display_name: Sequenciamento
+            csf_sprites:
+              display_name: Sprite
+            lessonGroup-9:
+              display_name: Eventos
+            csf_loops:
+              display_name: laços
+            csf_conditionals:
+              display_name: Condições
+            csf_functions:
+              display_name: funções
+            csf_variables:
+              display_name: variáveis
+            csf_for_loops:
+              display_name: Laços para
+            end_of_course_project:
+              display_name: Projeto de Fim do Curso
+          description_short: 'Uma introdução à ciência da computação: combina o melhor do nosso currículo do ensino fundamental para alunos mais velhos.'
+          description_audience: 9-18 anos de idade
+        coursea-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Cidadania digital
+            csf_sequencing:
+              display_name: Sequenciamento
+            csf_loops:
+              display_name: laços
+            csf_events:
+              display_name: Eventos
+            lessonGroup-5:
+              display_name: Projeto de Fim do Curso
+          student_description: Aprenda o básixo de Ciências da Computação e segurança na internet. No final deste curso, você irá irá seu próprio jogo ou história, que poderá ser compartilhada.
+          description_short: Uma introdução à ciência da computação para pré-leitores.
+          description_audience: 'Idade: de 4 a 7 anos'
+        courseb-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Cidadania digital
+            csf_sequencing:
+              display_name: Sequenciamento
+            csf_loops:
+              display_name: laços
+            csf_impacts:
+              display_name: Impacto da computação
+            csf_events:
+              display_name: Eventos
+            lessonGroup-6:
+              display_name: Projeto de Fim do Curso
+          student_description: Aprenda o básixo de Ciências da Computação e segurança na internet. No final deste curso, você irá irá seu próprio jogo ou história, que poderá ser compartilhada.
+          description_short: Uma introdução à ciência da computação na alfabetização Semelhante ao curso A, mas com conceitos mais aprofundados.
+          description_audience: 'Idades: 5-8'
+        coursec-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Cidadania digital
+            csf_sequencing:
+              display_name: Sequenciamento
+            csf_loops:
+              display_name: laços
+            csf_events:
+              display_name: Eventos
+            csf_data:
+              display_name: Dados
+            end_of_course_project:
+              display_name: Projeto de Fim do Curso
+          student_description: Crie programas com sequenciamento, loops e eventos. Traduza suas iniciais em binário, investigue diferentes técnicas de solução de problemas e aprenda a responder ao cyberbullying. No final do curso, crie seu próprio jogo ou história que você pode compartilhar!
+          description_short: Aprenda o básico da ciência da computação e crie sua própria arte, histórias e jogos.
+          description_audience: 'Idades: 6-10'
+        coursed-2023:
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Cidadania digital
+            csf_sequencing:
+              display_name: Sequenciamento
+            csf_events:
+              display_name: Eventos
+            csf_loops:
+              display_name: laços
+            csf_conditionals:
+              display_name: Condições
+            end_of_course_project:
+              display_name: Projeto de Fim do Curso
+          title: Curso D (2021)
+          description_short: Aprenda sobre declarações condicionais. Crie sua própria arte, jogos e até uma festa de dança.
+          description_audience: 'Idades: 7-11'
+        coursee-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Cidadania digital
+            csf_sprites:
+              display_name: Sprite
+            ramp_up:
+              display_name: Laços aninhados
+            csf_functions:
+              display_name: funções
+            csf_nested_loops:
+              display_name: Condições
+            lessonGroup-7:
+              display_name: Impacto da computação
+            end_of_course_project:
+              display_name: Projeto de Fim do Curso
+          description_audience: De 8 a 12 anos
+        problem-solving-computing-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capítulo 1: O Processo de Solução de Problemas'
+            lessonGroup-3:
+              display_name: 'Capítulo 2: Computadores e Solução de Problemas'
+        web-development-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Questionário
+        interactive-games-animations-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capítulo 1: Imagens e Amimações'
+            lessonGroup-3:
+              display_name: 'Capítulo 2: Construindo Jogos'
+            lessonGroup-4:
+              display_name: Questionário
+          student_description: " Na Unidade 3, você aproveitará sua experiência de codificação ao programar animações, arte interativa e jogos no Laboratório de Jogos. A unidade começa com formas simples e cria jogos sofisticados baseados em sprites, usando os mesmos conceitos de programação e o processo de design que os cientistas da computação usam diariamente. No projeto final, você desenvolverá um programa interativo personalizado."
+        design-process-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capítulo 1: Desenho orientado ao usuário'
+            lessonGroup-3:
+              display_name: 'Capítulo 1: Prototipando o App'
+            lessonGroup-4:
+              display_name: Questionário
+          student_description: A unidade 4 apresenta os impactos sociais mais amplos da computação. Através de uma série de desafios de design, você aprenderá a entender melhor as necessidades de outras pessoas enquanto desenvolve uma solução para um problema. A segunda metade da unidade consiste em um projeto de equipe iterativo, durante o qual as equipes têm a oportunidade de identificar uma necessidade com a qual se preocupam, protótipos de soluções tanto no papel quanto no App Lab e testam soluções com usuários reais para obter feedback e avançar iteração.
+        data-society-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capítulo 1: Representando Informação'
+            lessonGroup-3:
+              display_name: 'Capítulo 2: Resolvendo problemas de dados'
+            lessonGroup-4:
+              display_name: Questionário
+          description_short: Aprenda como as pessoas usam computadores para resolver problemas de dados.
+          student_description: A unidade 5 trata da importância dos dados na solução de problemas e destaca como os computadores podem ajudar nesse processo. O primeiro capítulo explora os diferentes sistemas usados ​​para representar informações em um computador e os desafios e as vantagens e desvantagens do uso deles. No segundo capítulo, você aprenderá como as coleções de dados são usadas para resolver problemas e como os computadores ajudam a automatizar as etapas desse processo. O capítulo conclui considerando como o processo de solução de problemas de dados pode ser aplicado a uma área de sua escolha.
+        aiml-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Introdução Laboratório de Aplicativos
+            lessonGroup-3:
+              display_name: Capítulo 1
+            lessonGroup-4:
+              display_name: Capítulo 2
+            lessonGroup-5:
+              display_name: Questionário
+        focus-on-creativity1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capítulo 1: O Processo de Solução de Problemas'
+        focus-on-creativity3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capítulo 1: Imagens e Amimações'
+            lessonGroup-3:
+              display_name: 'Capítulo 2: Construindo Jogos'
+          student_description: " Na Unidade 3, você aproveitará sua experiência de codificação ao programar animações, arte interativa e jogos no Laboratório de Jogos. A unidade começa com formas simples e cria jogos sofisticados baseados em sprites, usando os mesmos conceitos de programação e o processo de design que os cientistas da computação usam diariamente. No projeto final, você desenvolverá um programa interativo personalizado."
+        focus-on-creativity4a-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Capítulo 2: Construindo protótipos físicos'
+          description_short: Aprenda a programar com dispositivos físicos.
+        focus-on-hardware1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capítulo 1: O Processo de Solução de Problemas'
+            lessonGroup-3:
+              display_name: 'Capítulo 2: Computadores e Solução de Problemas'
+        focus-on-hardware2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capítulo 1: Representando Informação'
+            lessonGroup-3:
+              display_name: 'Capítulo 2: Resolvendo problemas de dados'
+          description_short: Aprenda como as pessoas usam computadores para resolver problemas de dados.
+          student_description: A unidade 5 trata da importância dos dados na solução de problemas e destaca como os computadores podem ajudar nesse processo. O primeiro capítulo explora os diferentes sistemas usados ​​para representar informações em um computador e os desafios e as vantagens e desvantagens do uso deles. No segundo capítulo, você aprenderá como as coleções de dados são usadas para resolver problemas e como os computadores ajudam a automatizar as etapas desse processo. O capítulo conclui considerando como o processo de solução de problemas de dados pode ser aplicado a uma área de sua escolha.
+        focus-on-hardware3a-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Capítulo 2: Construindo protótipos físicos'
+          description_short: Aprenda a programar com dispositivos físicos.
+        focus-on-data1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capítulo 1: O Processo de Solução de Problemas'
+        focus-on-data2:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capítulo 1: Representando Informação'
+          description_short: Aprenda como as pessoas usam computadores para resolver problemas de dados.
+          student_description: A unidade 5 trata da importância dos dados na solução de problemas e destaca como os computadores podem ajudar nesse processo. O primeiro capítulo explora os diferentes sistemas usados ​​para representar informações em um computador e os desafios e as vantagens e desvantagens do uso deles. No segundo capítulo, você aprenderá como as coleções de dados são usadas para resolver problemas e como os computadores ajudam a automatizar as etapas desse processo. O capítulo conclui considerando como o processo de solução de problemas de dados pode ser aplicado a uma área de sua escolha.
+        focus-on-data2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capítulo 1: Representando Informação'
+            lessonGroup-3:
+              display_name: 'Capítulo 2: Resolvendo problemas de dados'
+          description_short: Aprenda como as pessoas usam computadores para resolver problemas de dados.
+          student_description: A unidade 5 trata da importância dos dados na solução de problemas e destaca como os computadores podem ajudar nesse processo. O primeiro capítulo explora os diferentes sistemas usados ​​para representar informações em um computador e os desafios e as vantagens e desvantagens do uso deles. No segundo capítulo, você aprenderá como as coleções de dados são usadas para resolver problemas e como os computadores ajudam a automatizar as etapas desse processo. O capítulo conclui considerando como o processo de solução de problemas de dados pode ser aplicado a uma área de sua escolha.
+        focus-on-data3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Introdução Laboratório de Aplicativos
+            lessonGroup-3:
+              display_name: Capítulo 1
+            lessonGroup-4:
+              display_name: Capítulo 2
+        focus-on-design-with-purpose1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capítulo 1: O Processo de Solução de Problemas'
+        focus-on-design-with-purpose3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capítulo 1: Desenho orientado ao usuário'
+            lessonGroup-3:
+              display_name: 'Capítulo 1: Prototipando o App'
+          student_description: A unidade 4 apresenta os impactos sociais mais amplos da computação. Através de uma série de desafios de design, você aprenderá a entender melhor as necessidades de outras pessoas enquanto desenvolve uma solução para um problema. A segunda metade da unidade consiste em um projeto de equipe iterativo, durante o qual as equipes têm a oportunidade de identificar uma necessidade com a qual se preocupam, protótipos de soluções tanto no papel quanto no App Lab e testam soluções com usuários reais para obter feedback e avançar iteração.
+        focus-on-design-with-purpose4a-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Capítulo 2: Construindo protótipos físicos'
+          description_short: Aprenda a programar com dispositivos físicos.
+        focus-on-coding1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capítulo 1: O Processo de Solução de Problemas'
+        focus-on-coding3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capítulo 1: Imagens e Amimações'
+            lessonGroup-3:
+              display_name: 'Capítulo 2: Construindo Jogos'
+          student_description: " Na Unidade 3, você aproveitará sua experiência de codificação ao programar animações, arte interativa e jogos no Laboratório de Jogos. A unidade começa com formas simples e cria jogos sofisticados baseados em sprites, usando os mesmos conceitos de programação e o processo de design que os cientistas da computação usam diariamente. No projeto final, você desenvolverá um programa interativo personalizado."
+        focus-on-coding4a-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Capítulo 2: Construindo protótipos físicos'
+          description_short: Aprenda a programar com dispositivos físicos.
+        focus-on-impact-in-society1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capítulo 1: O Processo de Solução de Problemas'
+        focus-on-impact-in-society2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capítulo 1: Desenho orientado ao usuário'
+            lessonGroup-3:
+              display_name: 'Capítulo 1: Prototipando o App'
+          student_description: A unidade 4 apresenta os impactos sociais mais amplos da computação. Através de uma série de desafios de design, você aprenderá a entender melhor as necessidades de outras pessoas enquanto desenvolve uma solução para um problema. A segunda metade da unidade consiste em um projeto de equipe iterativo, durante o qual as equipes têm a oportunidade de identificar uma necessidade com a qual se preocupam, protótipos de soluções tanto no papel quanto no App Lab e testam soluções com usuários reais para obter feedback e avançar iteração.
+        focus-on-impact-in-society3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capítulo 1: Representando Informação'
+            lessonGroup-3:
+              display_name: 'Capítulo 2: Resolvendo problemas de dados'
+          description_short: Aprenda como as pessoas usam computadores para resolver problemas de dados.
+          student_description: A unidade 5 trata da importância dos dados na solução de problemas e destaca como os computadores podem ajudar nesse processo. O primeiro capítulo explora os diferentes sistemas usados ​​para representar informações em um computador e os desafios e as vantagens e desvantagens do uso deles. No segundo capítulo, você aprenderá como as coleções de dados são usadas para resolver problemas e como os computadores ajudam a automatizar as etapas desse processo. O capítulo conclui considerando como o processo de solução de problemas de dados pode ser aplicado a uma área de sua escolha.
+        focus-on-impact-in-society4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Capítulo 1
+            lessonGroup-3:
+              display_name: Introdução Laboratório de Aplicativos
+            lessonGroup-4:
+              display_name: Capítulo 2
+        csd6a-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Capítulo 2: Construindo protótipos físicos'
+          description_short: Aprenda a programar com dispositivos físicos.
+        microbit-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Entradas e saídas
+            lessonGroup-5:
+              display_name: Questionário
+        vpl-csd-ci-1:
+          title: 'Módulo 1: Preparação para lecionar sobre solução de problemas e computação'
+          description: "Este módulo de aprendizagem profissional foi projetado para ajudar você a se preparar para lecionar a unidade de Solução de Problemas e Computação do Code.org.\n\n\\*\\* Neste módulo de aprendizagem profissional, você vai: \\*\\* \n– Ver uma introdução à solução de problemas e computação. \n– Praticar conceitos-chave lecionados na unidade. \n– Explorar os projetos no final do capítulo. \n\n\\*\\* Tempo sugerido: \\*\\* 30 minutos"
+          student_description: "Este módulo de aprendizagem profissional foi projetado para ajudar você a se preparar para lecionar a unidade de Solução de Problemas e Computação do Code.org.\n\n\\*\\* Neste módulo de aprendizagem profissional, você vai: \\*\\* \n– Ver uma introdução à solução de problemas e computação. \n– Praticar conceitos-chave lecionados na unidade. \n– Explorar os projetos no final do capítulo. \n\n\\*\\* Tempo sugerido: \\*\\* 30 minutos"
+        vpl-csd-ci-2:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ensino de desenvolvimento via internet
+          title: 'Módulo 2: Preparação para ensinar o desenvolvimento via internet'
+          description: "Este módulo de aprendizagem profissional foi projetado para ajudar você a se preparar para lecionar a unidade de Desenvolvimento via Internet do Code.org. \n\n\\*\\* Neste módulo de aprendizagem profissional, você vai: \\*\\*\n\n – Ver uma introdução ao desenvolvimento via internet. \n– Praticar conceitos-chave lecionados na unidade. \n\n-   Envolver-se com o laboratório de jogos. \n    – Explorar os projetos no final do capítulo. \n\n\\*\\* Tempo sugerido: \\*\\* 90 minutos"
+          student_description: "Este módulo de aprendizagem profissional foi projetado para ajudar você a se preparar para lecionar a unidade de Desenvolvimento via Internet do Code.org. \n\n\\*\\* Neste módulo de aprendizagem profissional, você vai: \\*\\*\n\n – Ver uma introdução ao desenvolvimento via internet. \n– Praticar conceitos-chave lecionados na unidade. \n\n-   Envolver-se com o laboratório de jogos. \n    – Explorar os projetos no final do capítulo. \n\n\\*\\* Tempo sugerido: \\*\\* 90 minutos"
+        vpl-csd-ci-3:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Preparação para lecionar sobre animações e jogos interativos
+          title: 'Módulo 3: Preparação para lecionar sobre animações e jogos interativos '
+          description: "Este módulo de aprendizagem profissional foi projetado para ajudar você a se preparar para lecionar a unidade de animações e jogos interativos do Code.org. \n\n\\*\\* Neste módulo de aprendizagem profissional, você vai: \\*\\* \n\n– Ver uma introdução às animações e jogos interativos. \n– Praticar conceitos-chave lecionados na unidade. \n– Envolver-se com o laboratório de jogos. \n– Explorar os projetos no final do capítulo. \n\n\\*\\* Tempo sugerido: \\*\\* 120 minutos"
+          student_description: "Este módulo de aprendizagem profissional foi projetado para ajudar você a se preparar para lecionar a unidade de animações e jogos interativos do Code.org. \n\n\\*\\* Neste módulo de aprendizagem profissional, você vai: \\*\\* \n\n– Ver uma introdução às animações e jogos interativos. \n– Praticar conceitos-chave lecionados na unidade. \n– Envolver-se com o laboratório de jogos. \n– Explorar os projetos no final do capítulo. \n\n\\*\\* Tempo sugerido: \\*\\* 120 minutos"
+        vpl-csd-ci-4:
+          title: 'Módulo 4: Preparação para lecionar sobre o processo de elaboração de projetos'
+          description: "Este módulo de aprendizagem profissional foi projetado para ajudar você a se preparar para lecionar a unidade de processo de elaboração de projetos do Code.org. \n\n\\*\\* Neste módulo de aprendizagem profissional, você vai: \\*\\* \n\n– Ver uma introdução ao processo de elaboração de projetos. \n– Praticar conceitos-chave lecionados na unidade. \n– Envolver-se no laboratório de jogos. \n– Explorar os projetos no final do capítulo. \n\n\\*\\* Tempo sugerido: \\*\\* 90 minutos"
+          student_description: "Este módulo de aprendizagem profissional foi projetado para ajudar você a se preparar para lecionar a unidade de processo de elaboração de projetos do Code.org. \n\n\\*\\* Neste módulo de aprendizagem profissional, você vai: \\*\\* \n\n– Ver uma introdução ao processo de elaboração de projetos. \n– Praticar conceitos-chave lecionados na unidade. \n– Envolver-se no laboratório de jogos. \n– Explorar os projetos no final do capítulo. \n\n\\*\\* Tempo sugerido: \\*\\* 90 minutos"
+        vpl-csd-ci-5:
+          title: 'Módulo 5: Preparação para lecionar sobre dados e a sociedade'
+          description: "Este módulo de aprendizagem profissional foi projetado para ajudar você a se preparar para lecionar a unidade de dados e a sociedade do Code.org. \n\n\\*\\* Neste módulo de aprendizagem profissional, você vai: \\*\\* \n\n– Ver uma introdução aos dados e a sociedade. \n– Praticar conceitos-chave lecionados na unidade. \n– Explorar o os projetos no final do capítulo. \n\n\\*\\* Tempo sugerido: \\*\\* 90 minutos"
+          student_description: "Este módulo de aprendizagem profissional foi projetado para ajudar você a se preparar para lecionar a unidade de dados e a sociedade do Code.org. \n\n\\*\\* Neste módulo de aprendizagem profissional, você vai: \\*\\* \n\n– Ver uma introdução aos dados e a sociedade. \n– Praticar conceitos-chave lecionados na unidade. \n– Explorar o os projetos no final do capítulo. \n\n\\*\\* Tempo sugerido: \\*\\* 90 minutos"
+        vpl-csd-ci-7:
+          title: 'Módulo 7: Preparação para lecionar sobre IA e aprendizagem de máquina'
+          description: "Este módulo de aprendizagem profissional foi projetado para ajudar você a se preparar para lecionar a unidade de IA e aprendizagem de máquina do Code.org. \n\n\\*\\* Neste módulo de aprendizagem profissional, você vai: \\*\\* \n\n– Ver uma introdução à IA e aprendizagem de máquina. \n– Praticar conceitos-chave lecionados na unidade. \n– Explorar os projetos no final do capítulo. \n– Planejar a implementação da unidade com seus alunos. \n\n\\*\\* Tempo sugerido: \\*\\* 120 minutos"
+          student_description: "Este módulo de aprendizagem profissional foi projetado para ajudar você a se preparar para lecionar a unidade de IA e aprendizagem de máquina do Code.org. \n\n\\*\\* Neste módulo de aprendizagem profissional, você vai: \\*\\* \n\n– Ver uma introdução à IA e aprendizagem de máquina. \n– Praticar conceitos-chave lecionados na unidade. \n– Explorar os projetos no final do capítulo. \n– Planejar a implementação da unidade com seus alunos. \n\n\\*\\* Tempo sugerido: \\*\\* 120 minutos"
+        devices-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Capítulo 2: Construindo protótipos físicos'
+            lessonGroup-5:
+              display_name: Questionário
+        focus-on-creativity4b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Entradas e saídas
+        focus-on-hardware3b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Entradas e saídas
+        focus-on-design-with-purpose4b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Entradas e saídas
+        ai-temp:
+          title: Como funciona a IA
+        focus-on-coding4b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Entradas e saídas
+        csd6b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Entradas e saídas
+        self-paced-pl-csd1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Bem-vindo
+          title: 'Módulo 1: Seja bem-vindo '
+          description: "Este módulo é uma breve introdução para o Code.org e para este curso de aprendizagem profissional. \n\n**Você vai:**\n\n-   Ver uma introdução ao Code.org e às Descobertas da SC. \n-   Aprender a se envolver nesse curso de aprendizagem profissional. \n\n**Tempo sugerido:** 10 minutos"
+          student_description: "Este módulo é uma breve introdução para o Code.org e para este curso de aprendizagem profissional. \n\n**Você vai:**\n\n-   Ver uma introdução ao Code.org e às Descobertas da SC. \n-   Aprender a se envolver nesse curso de aprendizagem profissional. \n\n**Tempo sugerido:** 10 minutos"
+        self-paced-pl-csd2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Navegação no Code.org
+          title: 'Módulo 2: Navegação no Code.org'
+          description: "Este módulo foi projetado como uma orientação para as ferramentas que você vai utilizar em apoio à aprendizagem estudantil, ao mesmo tempo lecionando sobre as Descobertas da SC. \n\n**Você vai:**\n\n-   Navegar pelo site Code.org e pelas ferramentas para professores. \n-   Configurar uma sala de aula \n-   Localizar e utilizar os planos de ensino do curso e os recursos para professores. \n-   Aprender a acessar o suporte enquanto leciona o curso. \n\n**Tempo sugerido:** 60 minutos"
+          student_description: "Este módulo foi projetado como uma orientação para as ferramentas que você vai utilizar em apoio à aprendizagem estudantil, ao mesmo tempo lecionando sobre as Descobertas da SC. \n\n**Você vai:**\n\n-   Navegar pelo site Code.org e pelas ferramentas para professores. \n-   Configurar uma sala de aula \n-   Localizar e utilizar os planos de ensino do curso e os recursos para professores. \n-   Aprender a acessar o suporte enquanto leciona o curso. \n\n**Tempo sugerido:** 60 minutos"
+        self-paced-pl-csd3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Visão geral das Descobertas da SC
+          title: 'Módulo 3: Visão geral das Descobertas da SC'
+          description: "Este módulo apresenta uma visão geral do curso de Descobertas da SC com ênfase em conceitos que os alunos vão aprender e ferramentas que vão utilizar no decorrer do curso. Seu envolvimento neste módulo vai ajudá-lo a tomar decisões sobre como selecionar o conteúdo do curso que você vai lecionar em sala de aula. \n\n**Você vai:**\n\n-   Obter um alto nível de compreensão do programa de Descobertas da SC. \n-   Familiarizar-se com os ambientes de programação utilizados no curso de Descobertas da SC. \n-   Decidir que unidades do Descobertas da SC você vai lecionar para sua turma. \n\n**Tempo sugerido:** 60 minutos"
+          student_description: "Este módulo apresenta uma visão geral do curso de Descobertas da SC com ênfase em conceitos que os alunos vão aprender e ferramentas que vão utilizar no decorrer do curso. Seu envolvimento neste módulo vai ajudá-lo a tomar decisões sobre como selecionar o conteúdo do curso que você vai lecionar em sala de aula. \n\n**Você vai:**\n\n-   Obter um alto nível de compreensão do programa de Descobertas da SC. \n-   Familiarizar-se com os ambientes de programação utilizados no curso de Descobertas da SC. \n-   Decidir que unidades do Descobertas da SC você vai lecionar para sua turma. \n\n**Tempo sugerido:** 60 minutos"
+        self-paced-pl-csd4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ensino e aprendizagem com o Descobertas da SC
+          title: 'Módulo 4: Ensino e aprendizagem com o Descobertas da SC'
+          description: "Neste módulo, você verá uma introdução às práticas autênticas da SC em que os alunos estarão envolvidos durante o curso de Descobertas da SC. Essas práticas incluem a depuração, uso de recursos e programação em pares. Você também vai explorar a função do professor em uma das salas de aula de Descobertas da SC e elaborar um plano de como você dará seu apoio à aprendizagem estudantil enquanto lecionar o curso. \n\n**Você vai:**\n\n-   Considerar a função do professor em uma sala de aula de Descobertas da SC. \n-   Aprender sobre as práticas autênticas de SC que os alunos vão desenvolver durante o curso de Descobertas da SC. \n-   Elaborar um plano de como você pretende dar o seu apoio à aprendizagem estudantil, por meio da diferenciação, da avaliação contínua e das promoção de uma cultura de inclusão. \n\n**Tempo sugerido:** 50 minutos"
+          student_description: "Neste módulo, você verá uma introdução às práticas autênticas da SC em que os alunos estarão envolvidos durante o curso de Descobertas da SC. Essas práticas incluem a depuração, uso de recursos e programação em pares. Você também vai explorar a função do professor em uma das salas de aula de Descobertas da SC e elaborar um plano de como você dará seu apoio à aprendizagem estudantil enquanto lecionar o curso. \n\n**Você vai:**\n\n-   Considerar a função do professor em uma sala de aula de Descobertas da SC. \n-   Aprender sobre as práticas autênticas de SC que os alunos vão desenvolver durante o curso de Descobertas da SC. \n-   Elaborar um plano de como você pretende dar o seu apoio à aprendizagem estudantil, por meio da diferenciação, da avaliação contínua e das promoção de uma cultura de inclusão. \n\n**Tempo sugerido:** 50 minutos"
+        self-paced-pl-csd5-2023:
+          description: "Este módulo de aprendizagem profissional foi projetado para ajudar você a se preparar para lecionar as unidades de I.A. e aprendizagem de máquina Code.org. \n\n**Neste módulo de aprendizagem profissional, você vai:**\n\n-   Ver uma introdução à inteligência artificial e à aprendizagem de máquina. \n-   Praticar os principais conceitos incluídos na unidade. \n-   Familiarizar-se com o Laboratório de I.A. e o Laboratório de aplicativos. \n-   Explorar projetos de fim de capítulo. \n-   Elaborar um plano para implementar a unidade com seus alunos. \n\n**Tempo sugerido:** 120 minutos"
+          student_description: "Este módulo de aprendizagem profissional foi projetado para ajudar você a se preparar para lecionar as unidades de I.A. e aprendizagem de máquina Code.org. \n\n**Neste módulo de aprendizagem profissional, você vai:**\n\n-   Ver uma introdução à inteligência artificial e à aprendizagem de máquina. \n-   Praticar os principais conceitos incluídos na unidade. \n-   Familiarizar-se com o Laboratório de I.A. e o Laboratório de aplicativos. \n-   Explorar projetos de fim de capítulo. \n-   Elaborar um plano para implementar a unidade com seus alunos. \n\n**Tempo sugerido:** 120 minutos"
+        pl-csd-summer-day1:
+          lessons:
+            lesson-3:
+              name: Introdução
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Dia 1
+          title: Dia 1
+        pl-csd-summer-day2:
+          lessons:
+            lesson-10:
+              name: Resumo
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Dia 2
+          title: Dia 2
+        pl-csd-summer-day3:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Dia 3
+          title: Dia 3
+        pl-csd-summer-day4:
+          lessons:
+            lesson-12:
+              name: Resumo
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Dia 4
+          title: Dia 4
+        virtual-pl-csd-summer-day1:
+          lessons:
+            lesson-1:
+              name: Introdução
+            lesson-12:
+              name: Resumo
+          title: Dia 1
+        virtual-pl-csd-summer-day2:
+          lessons:
+            lesson-10:
+              name: Resumo
+          title: Dia 2
+        virtual-pl-csd-summer-day3:
+          lessons:
+            lesson-12:
+              name: Resumo
+          title: Dia 3
+        virtual-pl-csd-summer-day4:
+          lessons:
+            lesson-13:
+              name: Resumo
+          title: Dia 4
+        virtual-pl-csd-summer-day5:
+          lessons:
+            lesson-3:
+              name: Avaliação
+        csd-post-survey-2023:
+          title: Pesquisa Pós-Curso
+        focus-on-data-post-survey-2023:
+          title: Pesquisa Pós-Curso
+        focus-on-impact-in-society-post-survey-2023:
+          title: Pesquisa Pós-Curso
+        focus-on-coding-post-survey-2023:
+          title: Pesquisa Pós-Curso
+        focus-on-design-with-purpose-post-survey-2023:
+          title: Pesquisa Pós-Curso
+        focus-on-hardware-post-survey-2023:
+          title: Pesquisa Pós-Curso
+        focus-on-creativity-post-survey-2023:
+          title: Pesquisa Pós-Curso
+        coursef-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Cidadania digital
+            lessonGroup-3:
+              display_name: Sprite
+            lessonGroup-4:
+              display_name: variáveis
+            lessonGroup-6:
+              display_name: Projeto de Fim do Curso
+          description_audience: 'Idades: 9-13'
+          description_short: Aprenda todos os conceitos Fundamentais da Ciência da Computação e crie sua própria arte, história ou jogo.
+        self-paced-pl-csp2-2023:
+          title: 'Módulo 2: Navegação no Code.org'
+        csa-frq-practice:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Classes
+            lessonGroup-5:
+              display_name: Vetores 2D

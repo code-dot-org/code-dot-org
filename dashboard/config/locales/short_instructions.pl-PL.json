@@ -4190,7 +4190,6 @@
         "courseD_artist_42022": "Wstaw malutki kształt na koniec swojej linii!",
         "courseD_artist_52022": "Baw się płatkami śniegu!",
         "courseD_artist_62022": "Spróbuj zmienić swoją linię o długości 150 pikseli w 6 krótkich linii o długości **25** pikseli, przy pomocy małych zakrętów na końcu.",
-        "courseD_artist_nestedLoops102022": "Weź poprzednie kwadraty, ale tym razem tylko 7 i ułóż w rzędzie.",
         "courseD_artist_nestedLoops12022": "Narysuj trójkąt, aby uruchomić ten etap.\\\n(Każdy bok ma długość 100 pikseli, a Ty musisz wykonać skręt o 120 stopni dla każdego zewnętrznego kąta.)",
         "courseD_artist_nestedLoops1a2022": "Teraz 6 razy wykonaj trójkąt w pętli.",
         "courseD_artist_nestedLoops22022": "Tym razem rozwiąż tę łamigłówkę z możliwie najmniejszą liczbą bloków.",
@@ -4473,7 +4472,8 @@
         "helloworld_food_sizes_soccer-2022": "Nauczmy się zmieniać rozmiar duszków.",
         "helloworld_food_sizes_space-2022": "Nauczmy się zmieniać rozmiar duszków.",
         "helloworld_food_sounds_soccer-2022": "Nauczmy się, jak odtwarzać dźwięki.",
-        "helloworld_food_sounds_space-2022": "Nauczmy się, jak odtwarzać dźwięki."
+        "helloworld_food_sounds_space-2022": "Nauczmy się, jak odtwarzać dźwięki.",
+        "PS predictive Applab level test retriable": "Oto kilka instrukcji."
       }
     }
   }

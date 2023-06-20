@@ -9,9 +9,9 @@ const SET_COLUMN_SIZES = 'AnimationTab/SET_COLUMN_SIZES';
 const initialState = {
   currentAnimations: {
     [P5LabInterfaceMode.ANIMATION]: '',
-    [P5LabInterfaceMode.BACKGROUND]: ''
+    [P5LabInterfaceMode.BACKGROUND]: '',
   },
-  columnSizes: [150, undefined]
+  columnSizes: [150, undefined],
 };
 
 export default (state = initialState, action) => {
@@ -20,8 +20,8 @@ export default (state = initialState, action) => {
       ...state,
       currentAnimations: {
         ...state.currentAnimations,
-        [P5LabInterfaceMode.ANIMATION]: action.animationKey
-      }
+        [P5LabInterfaceMode.ANIMATION]: action.animationKey,
+      },
     };
   }
   if (action.type === SELECT_BACKGROUND) {
@@ -29,8 +29,8 @@ export default (state = initialState, action) => {
       ...state,
       currentAnimations: {
         ...state.currentAnimations,
-        [P5LabInterfaceMode.BACKGROUND]: action.animationKey
-      }
+        [P5LabInterfaceMode.BACKGROUND]: action.animationKey,
+      },
     };
   }
   if (action.type === SET_COLUMN_SIZES) {

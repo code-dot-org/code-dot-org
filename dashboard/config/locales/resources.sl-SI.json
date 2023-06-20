@@ -101,6 +101,15 @@
         "the_big_event_2/courseb/2022": {
           "name": "Veliki dogodek"
         },
+        "all_resources/express/2022": {
+          "url": "/s/express-2022/viri"
+        },
+        "all_standards/express/2022": {
+          "url": "/s/express-2022/standardi"
+        },
+        "all_vocabulary/express/2022": {
+          "url": "/s/express-2022/besedisce"
+        },
         "pair_programming/express/2022": {
           "name": "Programiranje parov"
         },
@@ -127,6 +136,15 @@
         },
         "the_big_event_2/coursea/2022": {
           "name": "Veliki dogodek"
+        },
+        "all_resources/coursec/2022": {
+          "url": "/s/tecajc-2022/viri"
+        },
+        "all_standards/coursec/2022": {
+          "url": "/s/tecajc-2022/standardi"
+        },
+        "all_vocabulary/coursec/2022": {
+          "url": "/s/tecajc-2022/besedisce"
         },
         "implementation_guide/coursec/2022": {
           "name": "Vodnik za implementacijo"
@@ -158,11 +176,20 @@
         "the_big_event_2/coursec/2022": {
           "name": "Veliki dogodek"
         },
+        "the_big_event_course_c_/coursec/2022": {
+          "name": "Veliki dogodek (tečaj C)"
+        },
         "variables/csd/2022": {
           "name": "Spremenljivke"
         },
         "variables_3/csd/2022": {
           "name": "Spremenljivke"
+        },
+        "sprites/csd/2022": {
+          "name": "liki"
+        },
+        "sprites_1/csd/2022": {
+          "name": "liki"
         },
         "text/csd/2022": {
           "name": "Besedilo"
@@ -496,6 +523,9 @@
         "csf-the-big-event-assessment/coursec/2021": {
           "name": "Veliki dogodek"
         },
+        "the_big_event_course_c_/coursec/2021": {
+          "name": "Veliki dogodek (tečaj C)"
+        },
         "unplugged-video-big-event/coursec/2021": {
           "name": "Veliki dogodek"
         },
@@ -573,6 +603,9 @@
         },
         "variables_1/csd/2021": {
           "name": "Spremenljivke"
+        },
+        "sprites_1/csd/2021": {
+          "name": "liki"
         },
         "calling_and_defining_functions/csd/2021": {
           "name": "Funkcije"

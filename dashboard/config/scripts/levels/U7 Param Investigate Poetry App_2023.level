@@ -47,7 +47,10 @@
       "mathRound": null,
       "return": null,
       "callMyFunction_n": null,
-      "forLoop_i_0_4": null
+      "forLoop_i_0_4": null,
+      "substring": null,
+      "toLowerCase": null,
+      "join": null
     },
     "embed": "false",
     "instructions_important": "false",
@@ -90,7 +93,7 @@
   "level_num": "custom",
   "user_id": 832,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-10-19T18:21:55.578+00:00\",\"changed\":[\"cloned from \\\"U7 Param Investigate Poetry App2022\\\"\"],\"cloned_from\":\"U7 Param Investigate Poetry App2022\"},{\"changed_at\":\"2023-02-01 18:23:18 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-10-19T18:21:55.578+00:00\",\"changed\":[\"cloned from \\\"U7 Param Investigate Poetry App2022\\\"\"],\"cloned_from\":\"U7 Param Investigate Poetry App2022\"},{\"changed_at\":\"2023-02-01 18:23:18 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2023-02-27 23:59:04 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

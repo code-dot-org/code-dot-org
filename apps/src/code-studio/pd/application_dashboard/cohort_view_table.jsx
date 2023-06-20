@@ -5,7 +5,7 @@ import ReactTooltip from 'react-tooltip';
 import * as Table from 'reactabular-table';
 import * as sort from 'sortabular';
 import color from '@cdo/apps/util/color';
-import {Button} from 'react-bootstrap';
+import {Button} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import _, {orderBy} from 'lodash';
 import moment from 'moment';
 import wrappedSortable from '@cdo/apps/templates/tables/wrapped_sortable';
@@ -14,7 +14,7 @@ import {StatusColors, getApplicationStatuses} from './constants';
 import {
   UNMATCHED_PARTNER_VALUE,
   ALL_PARTNERS_VALUE,
-  RegionalPartnerPropType
+  RegionalPartnerPropType,
 } from '../components/regional_partner_dropdown';
 
 export class CohortViewTable extends React.Component {
@@ -27,13 +27,13 @@ export class CohortViewTable extends React.Component {
     regionalPartners: PropTypes.arrayOf(
       PropTypes.shape({
         id: PropTypes.number,
-        workshop_type: PropTypes.string
+        workshop_type: PropTypes.string,
       })
-    )
+    ),
   };
 
   static contextTypes = {
-    router: PropTypes.object
+    router: PropTypes.object,
   };
 
   constructor(props) {
@@ -48,9 +48,9 @@ export class CohortViewTable extends React.Component {
       sortingColumns: {
         [sortColumnIndex]: {
           direction,
-          position: 0
-        }
-      }
+          position: 0,
+        },
+      },
     };
   }
 
@@ -73,90 +73,90 @@ export class CohortViewTable extends React.Component {
 
     const sortable = wrappedSortable(this.getSortingColumns, this.onSort, {
       container: {whiteSpace: 'nowrap'},
-      default: {color: color.light_gray}
+      default: {color: color.light_gray},
     });
 
     let columns = [
       {
         property: 'id',
         header: {
-          label: 'View Application'
+          label: 'View Application',
         },
         cell: {
-          formatters: [this.formatViewButton]
-        }
+          formatters: [this.formatViewButton],
+        },
       },
       {
         property: 'date_accepted',
         header: {
           label: 'Date Accepted',
-          transforms: [sortable]
+          transforms: [sortable],
         },
         cell: {
-          formatters: [this.formatDate]
-        }
+          formatters: [this.formatDate],
+        },
       },
       {
         property: 'applicant_name',
         header: {
           label: 'Name',
-          transforms: [sortable]
-        }
+          transforms: [sortable],
+        },
       },
       {
         property: 'district_name',
         header: {
           label: 'School District',
-          transforms: [sortable]
-        }
+          transforms: [sortable],
+        },
       },
       {
         property: 'school_name',
         header: {
           label: 'School Name',
-          transforms: [sortable]
-        }
+          transforms: [sortable],
+        },
       },
       {
         property: 'email',
         header: {
           label: 'Email',
-          transforms: [sortable]
-        }
+          transforms: [sortable],
+        },
       },
       {
         property: 'status',
         header: {
           label: 'Status',
-          transforms: [sortable]
+          transforms: [sortable],
         },
         cell: {
           formatters: [
-            status => getApplicationStatuses()[status] || _.upperFirst(status)
+            status => getApplicationStatuses()[status] || _.upperFirst(status),
           ],
           transforms: [
             status => ({
-              style: {...styles.statusCellCommon, ...styles.statusCell[status]}
-            })
-          ]
-        }
-      }
+              style: {...styles.statusCellCommon, ...styles.statusCell[status]},
+            }),
+          ],
+        },
+      },
     ];
 
     columns.push({
       property: 'friendly_scholarship_status',
       header: {
         label: 'Scholarship Teacher?',
-        transforms: [sortable]
-      }
+        transforms: [sortable],
+      },
     });
 
     columns.push({
       property: 'assigned_workshop',
       header: {
         label: 'Assigned Workshop',
-        transforms: [sortable]
-      }
+        transforms: [sortable],
+      },
     });
 
     if (
@@ -168,14 +168,14 @@ export class CohortViewTable extends React.Component {
         property: 'registered_workshop_id',
         header: {
           label: 'Registered Workshop',
-          transforms: [sortable]
+          transforms: [sortable],
         },
         cell: {
           formatters: [
             workshopId =>
-              workshopId ? this.formatWorkshopUrl(workshopId) : 'No'
-          ]
-        }
+              workshopId ? this.formatWorkshopUrl(workshopId) : 'No',
+          ],
+        },
       });
     }
 
@@ -184,22 +184,22 @@ export class CohortViewTable extends React.Component {
       {property: 'notes_2', label: 'Notes 2'},
       {property: 'notes_3', label: 'Notes 3'},
       {property: 'notes_4', label: 'Notes 4'},
-      {property: 'notes_5', label: 'Notes 5'}
+      {property: 'notes_5', label: 'Notes 5'},
     ].forEach(notesField => {
       columns.push({
         property: notesField.property,
         header: {
           label: notesField.label,
-          transforms: [sortable]
+          transforms: [sortable],
         },
         cell: {
           formatters: [this.formatNotesTooltip],
           transforms: [
             () => ({
-              style: {...styles.notesCell}
-            })
-          ]
-        }
+              style: {...styles.notesCell},
+            }),
+          ],
+        },
       });
     });
 
@@ -215,9 +215,9 @@ export class CohortViewTable extends React.Component {
       sortingOrder: {
         FIRST: 'asc',
         asc: 'desc',
-        desc: 'asc'
+        desc: 'asc',
       },
-      selectedColumn
+      selectedColumn,
     });
 
     this.setState({sortingColumns});
@@ -290,7 +290,7 @@ export class CohortViewTable extends React.Component {
     const sortedRows = sort.sorter({
       columns: this.columns,
       sortingColumns,
-      sort: orderBy
+      sort: orderBy,
     })(rows);
 
     return (
@@ -311,29 +311,29 @@ export class CohortViewTable extends React.Component {
 
 const styles = {
   container: {
-    overflowX: 'auto'
+    overflowX: 'auto',
   },
   table: {
-    width: '100%'
+    width: '100%',
   },
   statusCellCommon: {
-    padding: '5px'
+    padding: '5px',
   },
   statusCell: StatusColors,
   notesCell: {
-    maxWidth: '200px'
+    maxWidth: '200px',
   },
   notesCellContent: {
     whiteSpace: 'nowrap',
     overflow: 'hidden',
     textOverflow: 'ellipsis',
-    paddingLeft: '2px'
-  }
+    paddingLeft: '2px',
+  },
 };
 
 export default connect(state => ({
   regionalPartnerGroup: state.regionalPartners.regionalPartnerGroup,
   isWorkshopAdmin: state.applicationDashboard.permissions.workshopAdmin,
   regionalPartnerFilter: state.regionalPartners.regionalPartnerFilter,
-  regionalPartners: state.regionalPartners.regionalPartners
+  regionalPartners: state.regionalPartners.regionalPartners,
 }))(CohortViewTable);

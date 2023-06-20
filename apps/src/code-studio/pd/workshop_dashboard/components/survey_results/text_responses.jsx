@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import {Well} from 'react-bootstrap';
+import {Well} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import _ from 'lodash';
 import he from 'he';
 
@@ -10,7 +10,7 @@ export default class TextResponses extends React.Component {
     answers: PropTypes.oneOfType([PropTypes.array, PropTypes.object])
       .isRequired,
     showAverage: PropTypes.bool,
-    facilitators: PropTypes.object
+    facilitators: PropTypes.object,
   };
 
   renderResponseBullets() {

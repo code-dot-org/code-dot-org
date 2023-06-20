@@ -8,9 +8,6 @@
         "csd-2022/ai-lab": {
           "display_name": "AI Lab"
         },
-        "csd-2022/analog-sensors": {
-          "display_name": "Analog Sensorlar"
-        },
         "csd-2022/app-lab": {
           "display_name": "Ilovalar laboratoriyasi"
         },
@@ -25,6 +22,9 @@
         },
         "csd-2022/changing-sensor-scale": {
           "display_name": "Sensor Shkalasini o'zgartirish"
+        },
+        "csd-2022/circuit-playground": {
+          "display_name": "O'chirish maydonchasi haqida umumiy ma'lumot"
         },
         "csd-2022/classes": {
           "display_name": "Sinflar"
@@ -89,6 +89,9 @@
         "csd-2022/maker-toolkit-overview": {
           "display_name": "Overview"
         },
+        "csd-2022/model-cards-in-ai-lab": {
+          "display_name": "AI laboratoriyasidagi model kartalar"
+        },
         "csd-2022/other": {
           "display_name": "Boshqa"
         },
@@ -98,11 +101,14 @@
         "csd-2022/patterns-overview": {
           "display_name": "Overview"
         },
-        "csd-2022/physical-input": {
-          "display_name": "Physical Input"
-        },
         "csd-2022/playing-notes": {
           "display_name": "Notalarni ijro etish"
+        },
+        "csd-2022/problem-solving-process": {
+          "display_name": "Muammoni yechish jarayoni"
+        },
+        "csd-2022/problem-solving-process-general": {
+          "display_name": "Muammoni yechish jarayoni"
         },
         "csd-2022/random-numbers": {
           "display_name": "Tasodifiy sonlar"

@@ -5,3 +5,5 @@ wrong 'q'
 wrong '3'
 right '5'
 
+
+allow_multiple_attempts true

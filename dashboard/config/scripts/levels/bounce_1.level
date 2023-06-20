@@ -27,18 +27,18 @@
   <blocks>
     <start_blocks>
       <xml>
-        <block type="bounce_whenLeft" deletable="false" x="20" y="20"/>
+        <block type="bounce_whenLeft" deletable="false" x="20" y="20" id="whenLeft"/>
       </xml>
     </start_blocks>
     <toolbox_blocks>
       <xml id="toolbox" style="display: none;">
-        <block type="bounce_moveLeft"/>
-        <block type="bounce_moveRight"/>
+        <block type="bounce_moveLeft" id="moveLeft"/>
+        <block type="bounce_moveRight" id="moveRight"/>
       </xml>
     </toolbox_blocks>
     <required_blocks>
       <xml>
-        <block type="bounce_moveLeft"/>
+        <block type="bounce_moveLeft" id="moveLeft"/>
       </xml>
     </required_blocks>
   </blocks>

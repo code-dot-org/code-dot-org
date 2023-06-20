@@ -56,7 +56,7 @@ var level = {
     '</block>' +
     '</xml>',
   ideal: Infinity,
-  freePlay: false
+  freePlay: false,
 };
 
 module.exports = {
@@ -70,7 +70,7 @@ module.exports = {
       description: 'Correct answer',
       expected: {
         result: true,
-        testResult: TestResults.ALL_PASS
+        testResult: TestResults.ALL_PASS,
       },
       timeout: 20000,
       xml:
@@ -123,7 +123,7 @@ module.exports = {
         '    </block>' +
         '  </functional_input>' +
         '</block>' +
-        '</xml>'
+        '</xml>',
     },
     {
       // f(x,y) = x + 5
@@ -131,7 +131,7 @@ module.exports = {
       description: 'Incorrect result',
       expected: {
         result: false,
-        testResult: TestResults.LEVEL_INCOMPLETE_FAIL
+        testResult: TestResults.LEVEL_INCOMPLETE_FAIL,
       },
       xml:
         '<xml>' +
@@ -180,7 +180,7 @@ module.exports = {
         '    </block>' +
         '  </functional_input>' +
         '</block>' +
-        '</xml>'
+        '</xml>',
     },
     {
       // f(x,y) = x + 2
@@ -189,7 +189,7 @@ module.exports = {
         'Correct result for compute expression, incorrect result elsewhere',
       expected: {
         result: false,
-        testResult: TestResults.APP_SPECIFIC_FAIL
+        testResult: TestResults.APP_SPECIFIC_FAIL,
       },
       xml:
         '<xml>' +
@@ -238,7 +238,7 @@ module.exports = {
         '    </block>' +
         '  </functional_input>' +
         '</block>' +
-        '</xml>'
+        '</xml>',
     },
     {
       // g(x, y) = x + y
@@ -246,9 +246,9 @@ module.exports = {
       description: 'User function has a different name',
       expected: {
         result: false,
-        testResult: TestResults.LEVEL_INCOMPLETE_FAIL
+        testResult: TestResults.LEVEL_INCOMPLETE_FAIL,
       },
-      customValidator: function(assert) {
+      customValidator: function (assert) {
         assert.equal(
           Calc.__testonly__.appState.message,
           calcMsg.missingFunctionError({functionName: 'f'})
@@ -305,7 +305,7 @@ module.exports = {
         '    </block>' +
         '  </functional_input>' +
         '</block>' +
-        '</xml>'
+        '</xml>',
     },
     {
       // f(x, y) = (x + y) + 0
@@ -313,7 +313,7 @@ module.exports = {
       description: 'User function has an extra input',
       expected: {
         result: false,
-        testResult: TestResults.EMPTY_FUNCTIONAL_BLOCK
+        testResult: TestResults.EMPTY_FUNCTIONAL_BLOCK,
       },
       xml:
         '<xml>' +
@@ -383,7 +383,7 @@ module.exports = {
         '    </block>' +
         '  </functional_input>' +
         '</block>' +
-        '</xml>'
+        '</xml>',
     },
     {
       // f(x,y) = x + 2
@@ -391,7 +391,7 @@ module.exports = {
       description: 'User function has one fewer inputs',
       expected: {
         result: false,
-        testResult: TestResults.LEVEL_INCOMPLETE_FAIL
+        testResult: TestResults.LEVEL_INCOMPLETE_FAIL,
       },
       xml:
         '<xml>' +
@@ -433,7 +433,7 @@ module.exports = {
         '    </block>' +
         '  </functional_input>' +
         '</block>' +
-        '</xml>'
-    }
-  ]
+        '</xml>',
+    },
+  ],
 };

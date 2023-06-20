@@ -1245,7 +1245,7 @@ class LevelTest < ActiveSupport::TestCase
       "All types", "Ailab", "Applab", "Artist", "Blockly", "Bounce", "BubbleChoice", "Calc", "ContractMatch",
       "Craft", "CurriculumReference", "Dancelab", "Eval", "EvaluationMulti", "External",
       "ExternalLink", "Fish", "Flappy", "FreeResponse", "FrequencyAnalysis", "Gamelab",
-      "GamelabJr", "Javalab", "Karel", "LevelGroup", "Map", "Match", "Maze", "Multi", "NetSim",
+      "GamelabJr", "Javalab", "Karel", "LevelGroup", "Map", "Match", "Maze", "Multi", "Music", "NetSim",
       "Odometer", "Pixelation", "Poetry", "PublicKeyCryptography", "StandaloneVideo",
       "StarWarsGrid", "Studio", "TextCompression", "TextMatch", "Unplugged",
       "Vigenere", "Weblab"

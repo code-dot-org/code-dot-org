@@ -6,6 +6,7 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
 
   self.use_transactional_test_case = true
   setup do
+    @workshop_admin = create(:workshop_admin)
     @regional_partner = create(:regional_partner)
     @program_manager = create(:program_manager, regional_partner: @regional_partner)
     @organizer = @program_manager
@@ -506,6 +507,45 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     assert response_workshop.suppress_email?
   end
 
+  test 'setting virtual field as virtual when creating CSP/CSA summer workshop within a month of starting as a non-ws-admin raises error' do
+    sign_in @organizer
+
+    post :create, params: {pd_workshop: workshop_params.merge(course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP, funding_type: nil, virtual: true)}
+    assert_response :bad_request
+    assert response.body.include? 'non-workshop-admin cannot create a virtual CSP/CSA Summer Workshop within a month of it starting.'
+  end
+
+  test 'setting virtual field as virtual when creating CSP/CSA summer workshop within a month of starting as a ws-admin does not raise error' do
+    sign_in @workshop_admin
+
+    post :create, params: {pd_workshop: workshop_params.merge(course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP, funding_type: nil, virtual: true)}
+    assert_response :success
+  end
+
+  test 'setting virtual field as virtual when creating CSP/CSA summer workshop before a month of starting as a non-ws-admin does not raise error' do
+    sign_in @organizer
+    # Using '32.days' instead of '1.month' due to the inconsistency of the length of 'month' and it guarantees at least 1 month has passed.
+    session_start = (tomorrow_at 9) + 32.days
+    session_end = session_start + 8.hours
+
+    post :create, params: {pd_workshop: workshop_params.merge(course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP, funding_type: nil, virtual: true, sessions_attributes: [{start: session_start, end: session_end}])}
+    assert_response :success
+  end
+
+  test 'setting virtual field as virtual when creating CSP/CSA non-summer workshop within a month of starting as a non-ws-admin does not raise error' do
+    sign_in @organizer
+
+    post :create, params: {pd_workshop: workshop_params.merge(course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_WORKSHOP_1, funding_type: nil, virtual: true)}
+    assert_response :success
+  end
+
+  test 'setting virtual field as virtual when creating non-CSP/CSA summer workshop within a month of starting as a non-ws-admin does not raise error' do
+    sign_in @organizer
+
+    post :create, params: {pd_workshop: workshop_params.merge(course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_CSD_SUMMER_WORKSHOP, funding_type: nil, virtual: true)}
+    assert_response :success
+  end
+
   # Action: Destroy
 
   # TODO: remove this test when workshop_organizer is deprecated
@@ -737,6 +777,53 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     }
   end
 
+  test 'updating virtual field in CSP/CSA summer workshop within a month of starting as a non-ws-admin raises error' do
+    sign_in @organizer
+    workshop = create :csp_summer_workshop, organizer: @organizer
+
+    put :update, params: {id: workshop.id, pd_workshop: workshop_params.merge(course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP, funding_type: nil, virtual: true)}
+    assert_response :bad_request
+    assert response.body.include? 'non-workshop-admin cannot change CSP/CSA Summer Workshop virtual field within a month of it starting.'
+  end
+
+  test 'updating virtual field in CSP/CSA summer workshop within a month of starting as a ws-admin does not raise error' do
+    sign_in @workshop_admin
+    workshop = create :csp_summer_workshop, organizer: @organizer
+
+    put :update, params: {id: workshop.id, pd_workshop: workshop_params.merge(course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP, funding_type: nil, virtual: true)}
+    assert_response :success
+  end
+
+  test 'updating virtual field in CSP/CSA summer workshop before a month of starting as a non-ws-admin does not raise error' do
+    sign_in @organizer
+
+    # Using '32.days' instead of '1.month' due to the inconsistency of the length of 'month' and it guarantees at least 1 month has passed.
+    session_start = (tomorrow_at 9) + 32.days
+    session_end = session_start + 8.hours
+    session = create :pd_session, start: session_start, end: session_end
+    workshop = create :workshop, workshop_params.merge(course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP, organizer: @organizer, funding_type: nil, sessions: [session])
+
+    put :update, params: {id: workshop.id, pd_workshop: {virtual: true}}
+
+    assert_response :success
+  end
+
+  test 'updating virtual field in CSP/CSA non-summer workshop within a month of starting as a non-ws-admin does not raise error' do
+    sign_in @organizer
+    workshop = create :csp_academic_year_workshop, organizer: @organizer
+
+    put :update, params: {id: workshop.id, pd_workshop: workshop_params.merge(course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_WORKSHOP_1, funding_type: nil, virtual: true)}
+    assert_response :success
+  end
+
+  test 'updating virtual field in non-CSP/CSA summer workshop within a month of starting as a non-ws-admin does not raise error' do
+    sign_in @organizer
+    workshop = create :csd_summer_workshop, organizer: @organizer
+
+    put :update, params: {id: workshop.id, pd_workshop: workshop_params.merge(course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_CSD_SUMMER_WORKSHOP, funding_type: nil, virtual: true)}
+    assert_response :success
+  end
+
   # Update sessions via embedded attributes
 
   # TODO: remove this test when workshop_organizer is deprecated
@@ -830,7 +917,7 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     @organizer_workshop.save!
     assert_equal 1, @organizer_workshop.sessions.count
 
-    params = {sessions_attributes: [{id: session.id.to_s, _destroy: true}]}
+    params = {sessions_attributes: [{id: session.id.to_s, start: session.start, end: session.end, _destroy: true}]}
 
     put :update, params: {id: @organizer_workshop.id, pd_workshop: params}
     assert_response :success
@@ -844,7 +931,7 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     session = workshop.sessions.first
 
     sign_in program_manager
-    params = {sessions_attributes: [{id: session.id.to_s, _destroy: true}]}
+    params = {sessions_attributes: [{id: session.id.to_s, start: session.start, end: session.end, _destroy: true}]}
     put :update, params: {id: workshop.id, pd_workshop: params}
     assert_response :success
 

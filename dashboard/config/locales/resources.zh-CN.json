@@ -429,9 +429,11 @@
           "type": "幻灯片"
         },
         "blank_space_stories/coursef/2022": {
+          "name": "空白空间故事",
           "url": "https://docs.google.com/document/d/1fJNyI0WQTi-Q-XMZDn9sIgD_o6KjGHwZesQRa93ko5E/template/preview"
         },
         "blank_space_stories_1/coursef/2022": {
+          "name": "空白空间故事",
           "url": "https://docs.google.com/document/d/1mXI-U7ve1JjDchlyhjD53pkdSXKqeMemb7upFGareV4/template/preview",
           "type": "答案要点"
         },
@@ -946,6 +948,7 @@
           "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
         },
         "text_and_prompts/express/2022": {
+          "name": "文字和提示",
           "url": "https://docs.google.com/presentation/d/1ImZg6MHmaj5ouvrYdgsungbeLXRDAu106-NXOroJg14/template/preview",
           "type": "幻灯片"
         },
@@ -2279,7 +2282,11 @@
         "bugs_and_features_2/csd/2022": {
           "type": "幻灯片"
         },
+        "updating_your_prototype/csd/2022": {
+          "name": "更新您的原型"
+        },
         "updating_your_prototype_1/csd/2022": {
+          "name": "更新您的原型",
           "type": "幻灯片"
         },
         "app_presentation/csd/2022": {
@@ -3034,19 +3041,23 @@
           "name": "词汇表"
         },
         "code_introduced_1/csd/2017": {
-          "name": "引入的代码"
+          "name": "引入的代码",
+          "url": "https://curriculum.code.org/csd/unit3/code/"
         },
         "lesson_plans_2/csd/2017": {
-          "name": "课程计划"
+          "name": "课程计划",
+          "url": "https://curriculum.code.org/csd/unit3/"
         },
         "standard_mappings_2/csd/2017": {
-          "name": "标准映射"
+          "name": "标准映射",
+          "url": "https://curriculum.code.org/csd/unit3/standards/"
         },
         "teacher_forum_2/csd/2017": {
           "name": "教师论坛"
         },
         "vocabulary_2/csd/2017": {
-          "name": "词汇表"
+          "name": "词汇表",
+          "url": "https://curriculum.code.org/csd/unit3/vocab/"
         },
         "code_introduced_3/csd/2017": {
           "name": "引入的代码"
@@ -3243,10 +3254,12 @@
           "type": "讲义"
         },
         "blank_space_stories/coursef/2021": {
+          "name": "空白空间故事",
           "url": "https://docs.google.com/document/d/1mXI-U7ve1JjDchlyhjD53pkdSXKqeMemb7upFGareV4/template/preview",
           "type": "答案要点"
         },
         "blank_space_stories_-_worksheet/coursef/2021": {
+          "name": "空白空间故事",
           "url": "https://docs.google.com/document/d/1fJNyI0WQTi-Q-XMZDn9sIgD_o6KjGHwZesQRa93ko5E/template/preview"
         },
         "variables_blank_space_stories/coursef/2021": {
@@ -3255,6 +3268,7 @@
           "type": "幻灯片"
         },
         "text_and_prompts/coursef/2021": {
+          "name": "文字和提示",
           "url": "https://docs.google.com/presentation/d/1ImZg6MHmaj5ouvrYdgsungbeLXRDAu106-NXOroJg14/template/preview",
           "type": "幻灯片"
         },
@@ -4424,6 +4438,7 @@
           "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
         },
         "text_and_prompts/express/2021": {
+          "name": "文字和提示",
           "url": "https://docs.google.com/presentation/d/1ImZg6MHmaj5ouvrYdgsungbeLXRDAu106-NXOroJg14/template/preview",
           "type": "幻灯片"
         },
@@ -4551,6 +4566,7 @@
           "type": "资源"
         },
         "follow_the_algorithm/coursee/2021": {
+          "name": "遵循算法",
           "url": "https://docs.google.com/presentation/d/16r9HpwQodVnmSfRlfJmOfZajqE66YlZz0aG60CFsVMk/template/preview",
           "type": "幻灯片"
         },
@@ -4950,6 +4966,9 @@
         "responding_to_user_input/csd/2021": {
           "name": "响应用户输入",
           "type": "资源"
+        },
+        "updating-your-prototype/csd/2021": {
+          "name": "更新您的原型"
         },
         "app-presentation/csd/2021": {
           "name": "应用程序演示",
