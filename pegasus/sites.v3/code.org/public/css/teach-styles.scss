@@ -3,14 +3,6 @@
 
 @import 'color', 'font', 'typography', 'breakpoints', 'barlow-semi-condensed-font';
 
-section.top {
-
-  img {
-    box-shadow: 8px 8px 0 $brand_primary_light;
-    margin-top: 1.25rem;
-  }
-}
-
 section.why-teach-cs {
 
   .grid-container {
@@ -38,10 +30,6 @@ section.why-teach-cs {
 }
 
 section.free-curriculum {
-
-  .flex-container p {
-    @include body-two;
-  }
 
   figure {
     background: url("/images/teach-page-students.png") center no-repeat;

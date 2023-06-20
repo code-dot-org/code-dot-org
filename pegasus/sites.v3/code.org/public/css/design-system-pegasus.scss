@@ -103,8 +103,16 @@ div.divider {
   }
 }
 
+// Add rounded corners to an element
 .rounded-corners {
   border-radius: $border-radius;
+}
+
+// Add a thick box shadow to an element
+// See code.org/teach for an example
+.primary-shadow {
+  box-shadow: 8px 8px 0 $brand_primary_light;
+  margin-top: 1.25rem;
 }
 
 // Lines (<hr>)
