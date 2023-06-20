@@ -15,103 +15,118 @@ theme: responsive_full_width
 %section.top
   .wrapper
     .text-wrapper.col-50
-      %h1 Teach computer science & ignite possibilities
-      %p Tap into your students' full potential with Code.org's free Computer Science (CS) curriculum.
-      %p.body-two Join the global community of over 2 million educators empowering the next generation of innovators, problem solvers, and digital citizens! Code.org supports teachers the whole way with professional learning, comprehensive curricula, and support when you need it.
-      %a{href: CDO.studio_url("/users/sign_up"), class: "link-button"} Sign up for free
+      %h1=hoc_s(:teach_page_top_heading)
+      %p=hoc_s(:teach_page_top_desc_01)
+      %p.body-two
+        =hoc_s(:teach_page_top_desc_02)
+      %a{href: CDO.studio_url("/users/sign_up"), class: "link-button"}
+        =hoc_s(:call_to_action_sign_up_free)
     %figure.col-45{style: "float: right"}
-      %img.rounded-corners.primary-shadow{src: "/images/teach-page-top.png", alt: "", style: "position: relative; width: 100%;"}
+      %img.rounded-corners.box-shadow-primary{src: "/images/teach-page-top.png", alt: "", style: "position: relative; width: 100%;"}
     .clear
 
 %section.why-teach-cs.bg-neutral-light
   .wrapper
-    %h2.centered Why teach computer science with Code.org?
+    %h2.centered
+      =hoc_s(:teach_page_why_teach_cs_heading)
     %div.grid-container
       %div.flex-container
         %figure
           %img{src: "/images/teach-page-why-cs-01.png", alt: ""}
         .text-wrapper
-          %h3.heading-sm Build foundational CS skills
-          %p Like reading, writing, or math, computer science is foundational to other pursuits. It teaches problem solving and critical thinking, and  enables students to actively participate in an increasingly digital society.
+          %h3.heading-sm
+            =hoc_s(:teach_page_why_teach_cs_block_heading_01)
+          %p=hoc_s(:teach_page_why_teach_cs_block_desc_01)
       %div.flex-container
         %figure
           %img{src: "/images/teach-page-why-cs-02.png", alt: ""}
         .text-wrapper
-          %h3.heading-sm Leverage comprehensive teaching resources
-          %p In-depth lesson plans and flexible professional learning options ensure teachers with diverse backgrounds can successfully teach computer science.
+          %h3.heading-sm
+            =hoc_s(:teach_page_why_teach_cs_block_heading_02)
+          %p=hoc_s(:teach_page_why_teach_cs_block_desc_02)
       %div.flex-container
         %figure
           %img{src: "/images/teach-page-why-cs-03.png", alt: ""}
         .text-wrapper
-          %h3.heading-sm Unlock pathways for all students
-          %p Computing occupations are the largest, fastest-growing, and best-paying sector of all new wages in the U.S.
+          %h3.heading-sm
+            =hoc_s(:teach_page_why_teach_cs_block_heading_03)
+          %p=hoc_s(:teach_page_why_teach_cs_block_desc_03)
       %div.flex-container
         %figure
           %img{src: "/images/teach-page-why-cs-04.png", alt: ""}
         .text-wrapper
-          %h3.heading-sm Understand a world changed by AI
-          %p Teach students how AI works and how to use it safely. Our Professional Learning encourages curiosity and confidence with this evolving technology.
-          %a{href: "/ai"} Explore AI resources
+          %h3.heading-sm
+            =hoc_s(:teach_page_why_teach_cs_block_heading_04)
+          %p=hoc_s(:teach_page_why_teach_cs_block_desc_04)
+          %a{href: "/ai"}
+            =hoc_s(:call_to_action_explore_ai_resources)
     %hr.dark
     %div.centered
-      %h4 Start teaching computer science with Code.org today!
-      %a.link-button{href: CDO.studio_url("/catalog")} Explore the Curriculum Catalog
+      %h4=hoc_s(:teach_page_why_teach_cs_heading_02)
+      %a.link-button{href: CDO.studio_url("/catalog")}
+        =hoc_s(:call_to_action_explore_curriculum_catalog)
 
 %section.quote.bg-neutral-dark
   .wrapper
     %div.quotes-wrapper
-      %p.quote-text When you utilize Code.org's curriculum, you have everything there for you. It has the questions that you need to ask your students. It has the lessons that you need to teach and it gives you guidance on how to do it. So if you come in without any experience in computer science, it's there for you. If you have experience with computer science and teaching it before, it's going to give you a new way of approaching how to teach your students.
+      %p.quote-text
+        =hoc_s(:teach_page_quote)
       %p.no-margin-bottom Kevin Barry <span>•</span> CS Discoveries Teacher
 
 %section.free-curriculum
   .wrapper
-    %h2.centered Free, engaging curriculum
-    %p.centered We want you to bring Computer Science to your school without worrying about the cost. That's why we have committed to our curriculum offerings being free forever!
+    %h2.centered
+      =hoc_s(:teach_page_free_curriculum_heading)
+    %p.centered
+      =hoc_s(:teach_page_free_curriculum_desc)
     %div.flex-container.justify-space-between.wrap-reverse
       %ul.icon-bullet-list.full-width.col-60
         %li
           %div
             %i{class: "#{icon_party_horn}"}
           .text-wrapper
-            %h3 Engaging curriculum for every grade level
-            %p.no-margin-bottom  Free, flexible, and fun curriculum with offerings in over 67 languages.
+            %h3=hoc_s(:teach_page_free_curriculum_list_heading_01)
+            %p.no-margin-bottom
+              =hoc_s(:teach_page_free_curriculum_list_desc_01)
         %li
           %div
             %i{class: "#{icon_lightbulb_on}"}
           .text-wrapper
-            %h3 Adaptable, innovative curriculum
-            %p.no-margin-bottom Code.org offers everything from full-year curricula to single-unit activities. Plus, we update our curricula annually to support best practices and areas of focus, and create new offerings that teach current in-demand topics.
+            %h3=hoc_s(:teach_page_free_curriculum_list_heading_02)
+            %p.no-margin-bottom
+              =hoc_s(:teach_page_free_curriculum_list_desc_02)
         %li.no-margin-bottom
           %div
             %i{class: "#{icon_link}"}
           .text-wrapper
-            %h3 Structured curriculum mapped to national standards
-            %p.no-margin-bottom Each curriculum is mapped to at least one set of national standards, including CSTA, Next Generation Science Standards, and Common Core.
+            %h3=hoc_s(:teach_page_free_curriculum_list_heading_03)
+            %p.no-margin-bottom
+              =hoc_s(:teach_page_free_curriculum_list_desc_03)
       %figure.rounded-corners.col-33{style: "float: right"}
     .clear
     %hr.dark
     %div.centered
-      %h4 Explore our curriculum offerings for different grade levels:
+      %h4=hoc_s(:teach_page_free_curriculum_heading_02)
       %div.flex-container.justify-center.wrap{style: "gap: 1rem"}
         %a.link-button{href: CDO.studio_url("/catalog?grade=grade_1&grade=grade_2&grade=grade_3&grade=grade_4&grade=grade_5&grade=kindergarten")}
-          Elementary School
+          =hoc_s(:grade_level_label_elementary)
         %a.link-button{href: CDO.studio_url("/catalog?grade=grade_6&grade=grade_7&grade=grade_8")}
-          Middle School
+          =hoc_s(:grade_level_label_middle)
         %a.link-button{href: CDO.studio_url("/catalog?grade=grade_10&grade=grade_11&grade=grade_12&grade=grade_9")}
-          High School
+          =hoc_s(:grade_level_label_high)
 
 %section.resources.bg-neutral-light.centered
   .wrapper
-    %h2 Resources that support you every step of the way
-    %p Signing up for a Code.org account gives you access to materials that will help you teach computer science with confidence. Code.org has extensive resources designed to support educators, even those without prior CS teaching experience. Click the tabs to learn more about the resources.
+    %h2=hoc_s(:teach_page_resources_heading)
+    %p=hoc_s(:teach_page_resources_desc)
+    RESOURCES TABS HERE
 
 %section.curriculum-offerings.centered
   .wrapper
-    %h2 Curriculum offerings students love
-    %p There are so many amazing offerings to explore. Here are just a few of our new and popular offerings.
-
+    %h2=hoc_s(:teach_page_curriculum_heading)
+    %p=hoc_s(:teach_page_curriculum_desc)
     %a.link-button.secondary{href: CDO.studio_url("/catalog")}
-      See full Curriculum Catalog
+      =hoc_s(:call_to_action_see_full_curriculum_catalog)
 
 %section.pl-offerings.bg-neutral-light.centered
   .wrapper
@@ -129,32 +144,34 @@ theme: responsive_full_width
 
 %section
   .wrapper
-    %h2.centered Additional supports and materials
-    %p.centered Beyond curriculum and professional learning we have many materials to support your classroom.
+    %h2.centered
+      =hoc_s(:teach_page_additional_materials_heading)
+    %p.centered
+      =hoc_s(:teach_page_additional_materials_desc)
     .action-block__wrapper.action-block__wrapper--three-col
       .action-block.action-block--one-col.flex-space-between
         .content-wrapper
-          %h3 Career Education
+          %h3=hoc_s(:teach_page_additional_materials_list_heading_01)
           %img{src: "/images/teach-page-resources-01.png", alt: ""}
-          %p Easy-to-use resources designed to help you illuminate real-world connections and give students opportunities to explore different career pathways.
+          %p=hoc_s(:teach_page_additional_materials_list_desc_01)
         .content-footer
           %a.link-button{href: "/csjourneys", target: "_blank", rel: "noopener noreferrer"}
-            Explore career resources
+            =hoc_s(:call_to_action_explore_career_resources)
       .action-block.action-block--one-col.flex-space-between
         .content-wrapper
-          %h3 Video Library
+          %h3=hoc_s(:teach_page_additional_materials_list_heading_02)
           %img{src: "/images/teach-page-resources-02.png", alt: ""}
-          %p We offer a growing library of educational videos for use by educators worldwide, online or in classrooms. Our goal is to amplify our efforts beyond our own curriculum's reach.
+          %p=hoc_s(:teach_page_additional_materials_list_desc_02)
         .content-footer
           %a.link-button{href: "/educate/resources/videos", target: "_blank", rel: "noopener noreferrer"}
-            Explore videos
+            =hoc_s(:call_to_action_watch_videos)
       .action-block.action-block--one-col.flex-space-between
         .content-wrapper
-          %h3 Classroom Posters
+          %h3=hoc_s(:teach_page_additional_materials_list_heading_03)
           %img{src: "/images/teach-page-resources-03.png", alt: ""}
-          %p Print these posters of diverse role models to hang in your school and inspire your students to try computer science.
+          %p=hoc_s(:teach_page_additional_materials_list_desc_03)
         .content-footer
           %a.link-button{href: "/educate/resources/posters", target: "_blank", rel: "noopener noreferrer"}
-            Download posters
+            =hoc_s(:call_to_action_download_posters)
 
 -# = view :analytics_event_log_helper, event_name: AnalyticsConstants::TEACHER_LOGIN_EVENT
