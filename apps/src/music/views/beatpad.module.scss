@@ -30,10 +30,13 @@
 }
 
 .triggersContainer {
-  width: 100%;
+  width: 200px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  padding-right: 20px;
+  right: 0;
+  top: 3px;
+  height: 35px;
 }
 
 .triggerButtonRow {
@@ -74,7 +77,7 @@ $hover-opacity: 0.5;
   height: 32px;
   line-height: 32px;
   flex: 1;
-  margin: 2px;
+  margin-right: 10px;
   border-width: 3px;
 
   &.greenTrigger {

@@ -93,7 +93,8 @@ const Controls = ({
           id="skip-back-button"
           className={classNames(
             moduleStyles.controlButton,
-            moduleStyles.controlButtonSkip
+            moduleStyles.controlButtonSkip,
+            isPlaying && moduleStyles.controlButtonSkipDisabled
           )}
           onClick={() => onClickSkip(false)}
           type="button"
@@ -104,7 +105,8 @@ const Controls = ({
           id="skip-forward-button"
           className={classNames(
             moduleStyles.controlButton,
-            moduleStyles.controlButtonSkip
+            moduleStyles.controlButtonSkip,
+            isPlaying && moduleStyles.controlButtonSkipDisabled
           )}
           onClick={() => onClickSkip(true)}
           type="button"

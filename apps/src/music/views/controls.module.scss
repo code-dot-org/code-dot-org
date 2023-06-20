@@ -53,32 +53,17 @@
 
   &Skip {
     flex: 0.5;
-    background-color: $neutral_light;
+    background-color: $neutral_dark20;
     color: $neutral_dark;
+
+    &Disabled {
+      background-color: $neutral_dark;
+      color: $neutral_dark50;
+      cursor: default;
+
+      &:hover {
+        box-shadow: none;
+      }
+    }
   }
-
-  &Icon {
-    @include remove-button-styles;
-    margin: 5px 15px;
-  }
-
-  &Hide {
-    opacity: 0;
-    pointer-events: none;
-  }
-}
-
-.icon {
-  font-size: 30px;
-}
-
-.feedbackIcon {
-  color: $neutral_light;
-}
-
-.startOverButton {
-  background-color: rgba(0 0 0 / 0);
-  color: $neutral_light;
-  font-size: 14px;
-  padding: 0 8px;
 }
