@@ -548,7 +548,7 @@
         "CourseD_Dance_2020_09": {
           "validation": "**Come faccio a superare questo livello?**\n\n-   Basta premere il pulsante \"Termina!\"!",
           "repeat_every_ideas": "**Hai bisogno di qualche idea?**\n\n-   Cambia ripetutamente le dimensioni di un ballerino per farlo crescere.\n-   Cambia ripetutamente la rotazione di un ballerino per farlo girare..\n\n_Puoi anche usare numeri negativi per creare un effetto opposto!_",
-          "next_previous": "**Sfida supplementare**\n\n-   Puoi anche usare questo nuovo blocco per alternare una sequenza di mosse di ballo, impostando \"(Casuale)\", \"(Successivo)\", o \"(Precedente)\".\n    <xml><block type=\"Dancelab_changeMoveEachLR\">\n    <title name=\"GROUP\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
+          "next_previous": "**Sfida supplementare**\n\n-   Puoi anche usare questo nuovo blocco evento per alternare una sequenza di mosse di ballo, impostando \"(Casuale)\", \"(Successivo)\", o \"(Precedente)\".\n    <xml><block type=\"Dancelab_changeMoveEachLR\">\n    <title name=\"GROUP\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
         },
         "CourseD_Dance_2020_bonus1": {
           "alternate": "Il blocco `alternano ogni` si trova nella categoria \"Ballerini\"."

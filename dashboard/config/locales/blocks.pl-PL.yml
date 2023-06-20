@@ -2814,6 +2814,8 @@ pl:
             "{x1:0, x2:400, y1:0, y2:200}": Dół
       storylab_clearHeadings:
         text: wyczyść nagłówki
+      storylab_printText:
+        text: drukuj {TEXT}
       storylab_setForegroundEffect2:
         text: wykonaj efekt {EFFECT}
         options:

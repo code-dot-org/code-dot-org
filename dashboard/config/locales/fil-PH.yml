@@ -61,6 +61,7 @@ fil:
         reset_password_token: Ang sinunod mong link ng pag-reset ng password
         error:
           future: hindi maaari sa hinaharap
+        us_state: Estado
   beta: beta
   hello: Mabuhay!
   welcome_back: Maligayang pagbabalik, %{name}
@@ -267,6 +268,7 @@ fil:
       tungkol sa kurso nila at computer science? [(Tingnan ang aming patakaran sa
       pagkapribado)](%{privacy_policy_url})
     parent_account_email_label: Email ng Magulang/Tagapangalaga
+    us_state: Estado
   school_info:
     title: Impormasyon ng Paaralan (opsyonal)
     school_country: Bansa ng Paaralan
@@ -1452,6 +1454,7 @@ fil:
         csf_express: Mga Pundamental ng CS (Pre-Express o Express)
         csd: CS Discoveries
         csp: Mga Prinsipyo ng CS
+        other: Iba
         not_applicable: Hindi angkop
       email_opt_in:
         opt_in_yes: Oo
