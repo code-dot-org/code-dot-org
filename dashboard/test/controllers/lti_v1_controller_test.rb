@@ -11,7 +11,7 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'given a client_id that doesn not exist, return unauthorized' do
-    get '/lti/v1/login', params: {client_id: 'nope', iss: @integration.issuer}
+    get '/lti/v1/login', params: {client_id: '', iss: @integration.issuer}
     assert_response :unauthorized
   end
 
@@ -20,7 +20,7 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     assert_response :unauthorized
   end
 
-  test 'given a valid client_id, return redirect' do
+  test 'given a valid client_id via GET, return redirect' do
     get '/lti/v1/login', params: {client_id: @integration.client_id, iss: @integration.issuer}
     assert_response :redirect
   end
