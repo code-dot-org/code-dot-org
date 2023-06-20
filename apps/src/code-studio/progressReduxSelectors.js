@@ -1,5 +1,6 @@
-// Selectors and Helpers for progressRedux. Keeping this in js for now
-// as we have fairly complex types here.
+// Selectors and related helpers for progressRedux. These are in their own file
+// because they are quite complex and progressRedux.js is already quite large.
+
 import _ from 'lodash';
 import {LevelStatus, LevelKind} from '@cdo/apps/util/sharedConstants';
 import {processedLevel} from '@cdo/apps/templates/progress/progressHelpers';
@@ -350,6 +351,7 @@ function bestResultLevelId(levelIds, progressData) {
   return bestId;
 }
 
+// TODO: change imports or move this?
 /**
  * Does some processing of our passed in lesson, namely
  * - Removes 'hidden' field

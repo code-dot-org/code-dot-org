@@ -7905,3 +7905,7 @@ de:
             und erstellen Sie Ihre eigene Zeichnung, Geschichte oder Ihr eigenes Spiel.
         self-paced-pl-csp2-2023:
           title: 'Modul 2: Navigieren in Code.org'
+        csa-frq-practice:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Klassen

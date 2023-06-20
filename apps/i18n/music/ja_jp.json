@@ -54,5 +54,7 @@
   "share": "共有",
   "shareComingSoon": "シェアリングは現在準備中です。しばらくしてからもう一度確認してください。",
   "startOver": "最初からやりなおす",
-  "upload": "アップロード"
+  "upload": "アップロード",
+  "panelHeaderInstructions": "やり方:",
+  "panelHeaderWorkspace": "ワークスペース："
 }

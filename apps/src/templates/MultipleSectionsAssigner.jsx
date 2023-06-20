@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 import {connect} from 'react-redux';
+import FocusTrap from 'focus-trap-react';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
-import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import Button from '@cdo/apps/templates/Button';
 import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shapes';
 import TeacherSectionOption from './TeacherSectionOption';
@@ -12,6 +12,7 @@ import {
   unassignSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {updateHiddenScript} from '@cdo/apps/code-studio/hiddenLessonRedux';
+import CloseOnEscape from '@cdo/apps/javalab/components/CloseOnEscape';
 
 const MultipleSectionsAssigner = ({
   courseId,
@@ -20,7 +21,7 @@ const MultipleSectionsAssigner = ({
   courseOfferingId,
   courseVersionId,
   scriptId,
-  reassignConfirm,
+  reassignConfirm = () => {},
   isOnCoursePage,
   isStandAloneUnit,
   participantAudience,
@@ -159,55 +160,70 @@ const MultipleSectionsAssigner = ({
   };
 
   return (
-    <BaseDialog isOpen={true} handleClose={onClose}>
-      <div style={styles.header} className="uitest-confirm-assignment-dialog">
-        {i18n.chooseSectionsPrompt({assignmentName})}
-      </div>
-      <div style={styles.content}>{i18n.chooseSectionsDirections()}</div>
-      <div style={styles.header} className="uitest-confirm-assignment-dialog">
-        {i18n.yourSectionsList()}
-      </div>
-      <hr />
-      <div style={styles.grid}>
-        {sections &&
-          sections.map(
-            section =>
-              isAssignableToSection(section.participantType) && (
-                <TeacherSectionOption
-                  key={section.id}
-                  section={section}
-                  isChecked={
-                    !!currentSectionsAssigned.some(s => s.code === section.code)
-                  }
-                  assignedSections={currentSectionsAssigned}
-                  onChange={() => handleChangedCheckbox(section)} // this function should update the state of multiple section assigner
-                  editedValue={section.isAssigned}
-                />
-              )
-          )}
-      </div>
-      <a
-        style={styles.selectAllSectionsLabel}
-        onClick={selectAllHandler}
-        className="select-all-sections"
-      >
-        Select All
-      </a>
-      <div style={{textAlign: 'right'}}>
-        <Button
-          text={i18n.dialogCancel()}
-          onClick={onClose}
-          color={Button.ButtonColor.gray}
-        />
-        <Button
-          id="confirm-assign"
-          text={i18n.confirmAssignment()}
-          style={{marginLeft: 5}}
-          onClick={reassignSections}
-          color={Button.ButtonColor.orange}
-        />
-      </div>
-    </BaseDialog>
+    <>
+      <div style={styles.modalBackdrop} />
+      <CloseOnEscape handleClose={onClose}>
+        <FocusTrap>
+          <div aria-modal role="dialog" style={styles.modal}>
+            <div
+              tabIndex="0"
+              style={styles.header}
+              className="uitest-confirm-assignment-dialog"
+            >
+              {i18n.chooseSectionsPrompt({assignmentName})}
+            </div>
+            <div style={styles.content}>{i18n.chooseSectionsDirections()}</div>
+            <div
+              style={styles.header}
+              className="uitest-confirm-assignment-dialog"
+            >
+              {i18n.yourSectionsList()}
+            </div>
+            <div style={styles.grid}>
+              {sections &&
+                sections.map(
+                  section =>
+                    isAssignableToSection(section.participantType) && (
+                      <TeacherSectionOption
+                        key={section.id}
+                        section={section}
+                        isChecked={
+                          !!currentSectionsAssigned.some(
+                            s => s.code === section.code
+                          )
+                        }
+                        assignedSections={currentSectionsAssigned}
+                        onChange={() => handleChangedCheckbox(section)} // this function should update the state of multiple section assigner
+                        editedValue={section.isAssigned}
+                      />
+                    )
+                )}
+            </div>
+            <hr />
+            <a
+              style={styles.selectAllSectionsLabel}
+              onClick={selectAllHandler}
+              className="select-all-sections"
+            >
+              Select All
+            </a>
+            <div style={styles.buttonContainer}>
+              <Button
+                text={i18n.dialogCancel()}
+                onClick={onClose}
+                color={Button.ButtonColor.gray}
+              />
+              <Button
+                id="confirm-assign"
+                text={i18n.confirmAssignment()}
+                onClick={reassignSections}
+                color={Button.ButtonColor.orange}
+              />
+            </div>
+          </div>
+        </FocusTrap>
+      </CloseOnEscape>
+    </>
   );
 };
 
@@ -230,10 +246,37 @@ MultipleSectionsAssigner.propTypes = {
 };
 
 const styles = {
+  modalBackdrop: {
+    position: 'fixed',
+    top: 0,
+    right: 0,
+    bottom: 0,
+    left: 0,
+    backgroundColor: '#000',
+    opacity: 0.6,
+    zIndex: 1000,
+  },
+  modal: {
+    position: 'fixed',
+    top: '10%',
+    left: '50%',
+    zIndex: 1050,
+    width: 560,
+    marginLeft: -280,
+    backgroundColor: '#fff',
+    border: '1px solid rgba(0,0,0,0.3)',
+    overflow: 'visible',
+    padding: 15,
+  },
   header: {
     fontSize: 16,
     marginBottom: 5,
     fontWeight: 'bold',
+  },
+  buttonContainer: {
+    display: 'flex',
+    gap: 5,
+    justifyContent: 'flex-end',
   },
   content: {
     fontSize: 14,
@@ -251,6 +294,7 @@ const styles = {
   grid: {
     display: 'grid',
     gridTemplateColumns: '33% 33% 34%',
+    marginBottom: 10,
   },
   functionSelector: {
     display: 'flex',
@@ -271,9 +315,6 @@ const styles = {
     fontSize: 16,
     cursor: 'pointer',
     color: color.link_color,
-    ':hover': {
-      color: color.link_color,
-    },
   },
 };
 
