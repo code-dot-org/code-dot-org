@@ -5218,3 +5218,7 @@ ru:
             собственную картинку, игру или историю!
         self-paced-pl-csp2-2023:
           title: 'Модуль 2: Навигация по инструментам Code.org'
+        csa-frq-practice:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Двумерные массивы
