@@ -351,29 +351,6 @@ function bestResultLevelId(levelIds, progressData) {
   return bestId;
 }
 
-// TODO: change imports or move this?
-/**
- * Does some processing of our passed in lesson, namely
- * - Removes 'hidden' field
- * - Adds 'lessonNumber' field for non-PLC lessons which
- * are not lockable or have a lesson plan
- */
-export function processedLessons(lessons, isPlc) {
-  let numLessonsWithLessonPlan = 0;
-
-  return lessons.map(lesson => {
-    let lessonNumber;
-    if (!isPlc && lesson.numberedLesson) {
-      numLessonsWithLessonPlan++;
-      lessonNumber = numLessonsWithLessonPlan;
-    }
-    return {
-      ..._.omit(lesson, 'hidden'),
-      lessonNumber,
-    };
-  });
-}
-
 // export private function(s) to expose to unit testing
 export const __testonly__ = IN_UNIT_TEST
   ? {
