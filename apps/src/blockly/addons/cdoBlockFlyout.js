@@ -9,7 +9,7 @@ const FOLDOUT_HEIGHT = 20;
 export default class CdoBlockFlyout extends GoogleBlockly.HorizontalFlyout {
   constructor(workspaceOptions) {
     super(workspaceOptions);
-    // getMetrics and setMetrics were before super call?
+    // this.visible_ = false;
     workspaceOptions.getMetrics = this.getMetrics_.bind(this);
     workspaceOptions.setMetrics = this.setMetrics_.bind(this);
     this.horizontalLayout_ = !0;
@@ -64,7 +64,6 @@ export default class CdoBlockFlyout extends GoogleBlockly.HorizontalFlyout {
   }
 
   isScrollable() {
-    console.log('isScrollable -> false');
     return false;
   }
 
@@ -124,17 +123,21 @@ export default class CdoBlockFlyout extends GoogleBlockly.HorizontalFlyout {
     const topBlocks = this.workspace_.getTopBlocks(false);
     for (let i = 0, block; (block = topBlocks[i]); i++) {
       var blockHW = block.getHeightWidth();
-      this.updateHeight_(blockHW);
-      this.updateWidth_(blockHW);
+      this.updateHeight_(blockHW.height);
+      this.updateWidth_(blockHW.width);
       block.flyoutRect_ && this.moveRectToBlock_(block.flyoutRect_, block);
     }
-    this.height_ += 2 * this.MARGIN;
+    this.width_ = Math.max(
+      this.width_,
+      this.sourceBlock_.getHeightWidth().width - 36
+    );
+    // this.height_ += 2 * this.MARGIN;
     this.setBackgroundPath_(this.width_, this.height_);
     this.position();
   }
 
   updateHeight_(newHeight) {
-    this.height_ = Math.max(this.height_, newHeight.height);
+    this.height_ = Math.max(this.height_, newHeight);
   }
 
   updateWidth_(newWidth) {
@@ -142,7 +145,7 @@ export default class CdoBlockFlyout extends GoogleBlockly.HorizontalFlyout {
     //   ? ((this.width_ += newWidth.width), (this.width_ += this.GAP_X))
     //   : 0 === this.width_ &&
     //     (this.width_ = this.sourceBlock_.getHeightWidth().width - 36);
-    this.width_ += newWidth.width + this.GAP_X;
+    this.width_ += newWidth + this.GAP_X;
   }
 
   /** Move the flyout */
@@ -220,5 +223,20 @@ export default class CdoBlockFlyout extends GoogleBlockly.HorizontalFlyout {
    */
   setSourceBlock_(block) {
     this.sourceBlock_ = block;
+  }
+
+  /**
+   * Returns whether the provided block or bubble would be deleted if dropped on
+   * this area.
+   * The original method checks if the element is deletable and is always called
+   * before onDragEnter/onDragOver/onDragExit.
+   *
+   * @param element The block or bubble currently being dragged.
+   * @param couldConnect Whether the element could could connect to another.
+   * @returns Whether the element provided would be deleted if dropped on this
+   *     area.
+   */
+  wouldDelete(element, _couldConnect) {
+    return false;
   }
 }

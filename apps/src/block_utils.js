@@ -1,6 +1,7 @@
 import _ from 'lodash';
 import {styleTypes} from './blockly/themes/cdoBlockStyles.mjs';
 import xml from './xml';
+import {SVG_NS} from '@cdo/apps/constants';
 
 const ATTRIBUTES_TO_CLEAN = ['uservisible', 'deletable', 'movable'];
 const DEFAULT_COLOR = [184, 1.0, 0.74];
@@ -166,6 +167,7 @@ exports.generateSimpleBlock = function (blockly, generator, options) {
     init: function () {
       // Note: has a fixed HSV.  Could make this customizable if need be
       Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
+      console.log('init', this.type);
       var input = this.appendDummyInput();
       if (title) {
         input.appendField(title);
@@ -1063,6 +1065,51 @@ exports.createJsWrapperBlockCreator = function (
           this.setPreviousStatement(true);
         }
 
+        // These blocks should not be loaded into a Google Blockly level.
+        // In the event that they are, skip this so the page doesn't crash.
+        if (this.setBlockToShadow) {
+          // Set block to shadow for preview field if needed
+          switch (this.type) {
+            case 'gamelab_clickedSpritePointer':
+              this.setBlockToShadow(
+                root =>
+                  root.type === 'gamelab_spriteClicked' &&
+                  root.getConnections_()[1] &&
+                  root.getConnections_()[1].targetBlock()
+              );
+              break;
+            case 'gamelab_newSpritePointer':
+              this.setBlockToShadow(
+                root =>
+                  root.type === 'gamelab_whenSpriteCreated' &&
+                  root.getConnections_()[1] &&
+                  root.getConnections_()[1].targetBlock()
+              );
+              break;
+            case 'gamelab_subjectSpritePointer':
+              this.setBlockToShadow(
+                root =>
+                  root.type === 'gamelab_checkTouching' &&
+                  root.getConnections_()[1] &&
+                  root.getConnections_()[1].targetBlock()
+              );
+              break;
+            case 'gamelab_objectSpritePointer':
+              this.setBlockToShadow(
+                root =>
+                  root.type === 'gamelab_checkTouching' &&
+                  root.getConnections_()[2] &&
+                  root.getConnections_()[2].targetBlock()
+              );
+              break;
+            default:
+              // Not a pointer block, so no block to shadow
+              break;
+          }
+        }
+        interpolateInputs(blockly, this, inputRows, inputTypes, inline);
+        this.setInputsInline(inline);
+
         // Use window.appOptions, not global appOptions, because the levelbuilder
         // block page doesn't have appOptions, but we *do* want to show the mini-toolbox
         // there
@@ -1070,22 +1117,43 @@ exports.createJsWrapperBlockCreator = function (
           miniToolboxBlocks &&
           (!window.appOptions || window.appOptions.level.miniToolbox)
         ) {
-          if (this.jsonInit) {
-            this.jsonInit({
-              message0: '%1',
-              args0: [
-                {
-                  type: 'field_flyout',
-                  name: 'FLYOUT',
-                  flyoutKey: 'blockName',
-                  foldoutText: '+',
-                  sizingBehavior: 'fitContent',
-                },
-              ],
+          if (Blockly.version === 'Google') {
+            // Function to toggle the flyout visibility
+            // let visible = false;
+            const flyoutField = new Blockly.FieldFlyout(_, {
+              flyoutKey: `flyout_${this.type}`,
+              sizingBehavior: 'fitContent',
+              name: 'FLYOUT',
             });
+            const toggleFlyout = function () {
+              flyoutField.setVisible(!flyoutField.isFlyoutVisible());
+              flyoutField.showEditor_();
+              flyoutField.render_();
+            };
+            const icon = document.createElementNS(SVG_NS, 'tspan');
+            icon.style.fontFamily = 'FontAwesome';
+            icon.textContent = '\uf067'; // plus icon
+            icon.style.color = 'blue';
+            const flyoutToggleButton = new Blockly.FieldButton({
+              value: '',
+              onClick: toggleFlyout,
+              icon,
+            });
+            this.inputList[0].insertFieldAt(
+              0,
+              flyoutToggleButton,
+              `button_${this.type}`
+            );
+            if (this.inputList[this.inputList.length - 1].type !== 5) {
+              this.appendDummyInput();
+            }
+            this.appendDummyInput().appendField(
+              flyoutField,
+              `flyout_${this.type}`
+            );
             if (this.workspace.rendered) {
               this.workspace.registerToolboxCategoryCallback(
-                'blockName',
+                `flyout_${this.type}`,
                 function (workspace) {
                   let blocks = [];
                   miniToolboxBlocks.forEach(blockType =>
@@ -1151,51 +1219,6 @@ exports.createJsWrapperBlockCreator = function (
             this.initMiniFlyout(miniToolboxXml);
           }
         }
-
-        // These blocks should not be loaded into a Google Blockly level.
-        // In the event that they are, skip this so the page doesn't crash.
-        if (this.setBlockToShadow) {
-          // Set block to shadow for preview field if needed
-          switch (this.type) {
-            case 'gamelab_clickedSpritePointer':
-              this.setBlockToShadow(
-                root =>
-                  root.type === 'gamelab_spriteClicked' &&
-                  root.getConnections_()[1] &&
-                  root.getConnections_()[1].targetBlock()
-              );
-              break;
-            case 'gamelab_newSpritePointer':
-              this.setBlockToShadow(
-                root =>
-                  root.type === 'gamelab_whenSpriteCreated' &&
-                  root.getConnections_()[1] &&
-                  root.getConnections_()[1].targetBlock()
-              );
-              break;
-            case 'gamelab_subjectSpritePointer':
-              this.setBlockToShadow(
-                root =>
-                  root.type === 'gamelab_checkTouching' &&
-                  root.getConnections_()[1] &&
-                  root.getConnections_()[1].targetBlock()
-              );
-              break;
-            case 'gamelab_objectSpritePointer':
-              this.setBlockToShadow(
-                root =>
-                  root.type === 'gamelab_checkTouching' &&
-                  root.getConnections_()[2] &&
-                  root.getConnections_()[2].targetBlock()
-              );
-              break;
-            default:
-              // Not a pointer block, so no block to shadow
-              break;
-          }
-        }
-        interpolateInputs(blockly, this, inputRows, inputTypes, inline);
-        this.setInputsInline(inline);
       },
     };
 
