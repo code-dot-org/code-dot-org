@@ -48,14 +48,14 @@ class PolicyComplianceController < ApplicationController
     # Create a ParentalPermissionRequest token for user and parent email
     # When the student 'updates' the parental email, we actually just create a
     # new request row.
-    permission_request = ParentalPermissionRequest.find_or_create_by(
+    permission_request = ParentalPermissionRequest.find_or_initialize_by(
       user: current_user,
       parent_email: params.require(:'parent-email')
     )
 
     # If we are making a new request but already sent too many today,
     # just bail and return whence we came
-    if !permission_request.persisted? && permission_requests >= 3
+    if permission_request.new_record? && permission_requests >= 3
       redirect_back fallback_location: lockout_path and return
     end
 
