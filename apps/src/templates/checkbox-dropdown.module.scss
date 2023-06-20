@@ -49,6 +49,8 @@ form.dropDownMenuContainer {
 }
 
 .dropdownCheckboxUL {
+  max-height: 280px;
+  overflow-y: auto;
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -119,10 +121,10 @@ form.dropDownMenuContainer {
 
 .bottomButtonsContainer {
   display: flex;
-  gap: 40px;
+  gap: 8px;
   border-top: 1px solid $neutral_dark20;
   margin-top: 4px;
-  padding-top: 4px;
+  padding: 4px;
 
   button {
     padding: 8px 16px;
