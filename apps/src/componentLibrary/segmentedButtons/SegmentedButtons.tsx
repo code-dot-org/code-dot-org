@@ -1,8 +1,8 @@
 import React from 'react';
-// import classnames from 'classnames';
+import classnames from 'classnames';
 
-// import Typography from '@cdo/apps/componentLibrary/typography';
-// import moduleStyles from './segmentedButtons.module.scss';
+import Typography from '@cdo/apps/componentLibrary/typography';
+import moduleStyles from './segmentedButtons.module.scss';
 
 type SegmentedButtonProps = {
   label: string;
@@ -15,12 +15,19 @@ interface SegmentedButtonsProps {
 
 const Checkbox: React.FunctionComponent<SegmentedButtonsProps> = ({
   buttons,
-  // size = 'm',
+  size = 'm',
 }) => {
   return (
-    <div>
+    <div className={moduleStyles.segmentedButtonsContainer}>
       {buttons.map(button => (
-        <button type="button" key={button.label}>
+        <button
+          type="button"
+          key={button.label}
+          className={classnames(
+            moduleStyles.segmentedButton,
+            moduleStyles[`segmentedButton-${size}`]
+          )}
+        >
           {button.label}
         </button>
       ))}

@@ -19,21 +19,25 @@ const MultipleTemplate = (args = []) => (
   </>
 );
 
-export const DefaultCheckbox = MultipleTemplate.bind({});
-DefaultCheckbox.args = {
+export const DefaultSegmentedButtons = MultipleTemplate.bind({});
+DefaultSegmentedButtons.args = {
   components: [
-    {name: 'test', label: 'Label'},
     {
-      name: 'test-checked',
-      label: 'Label Checked',
-      checked: true,
-      onChange: () => {},
-    },
-    {
-      name: 'test-indeterminate',
-      label: 'Label Indeterminate',
-      indeterminate: true,
-      onChange: () => {},
+      buttons: [
+        {name: 'test', label: 'Label'},
+        {
+          name: 'test-checked',
+          label: 'Label Checked',
+          checked: true,
+          onChange: () => {},
+        },
+        {
+          name: 'test-indeterminate',
+          label: 'Label Indeterminate',
+          indeterminate: true,
+          onChange: () => {},
+        },
+      ],
     },
   ],
 };
