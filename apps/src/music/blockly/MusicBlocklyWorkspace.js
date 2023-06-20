@@ -1,33 +1,46 @@
 import CustomMarshalingInterpreter from '../../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 import {BlockTypes} from './blockTypes';
 import {MUSIC_BLOCKS} from './musicBlocks';
-import musicLabDarkTheme from '@cdo/apps/blockly/themes/musicLabDark';
+import CdoDarkTheme from '@cdo/apps/blockly/themes/cdoDark';
 import {getToolbox} from './toolbox';
 import FieldSounds from './FieldSounds';
+import FieldPattern from './FieldPattern';
 import {getBlockMode} from '../appConfig';
 import {BlockMode} from '../constants';
 import {
   DEFAULT_TRACK_NAME_EXTENSION,
+  DOCS_BASE_URL,
   DYNAMIC_TRIGGER_EXTENSION,
+  FIELD_CHORD_TYPE,
+  FIELD_PATTERN_TYPE,
+  FIELD_SOUNDS_TYPE,
+  FIELD_TRIGGER_START_NAME,
   PLAY_MULTI_MUTATOR,
-  TRIGGER_FIELD
+  TriggerStart,
+  TRIGGER_FIELD,
 } from './constants';
 import {
   dynamicTriggerExtension,
   getDefaultTrackNameExtension,
-  playMultiMutator
+  playMultiMutator,
 } from './extensions';
 import experiments from '@cdo/apps/util/experiments';
 import {GeneratorHelpersSimple2} from './blocks/simple2';
+import FieldChord from './FieldChord';
+import {Renderers} from '@cdo/apps/blockly/constants';
+import musicI18n from '../locale';
+import {logError, logWarning} from '../utils/MusicMetrics';
+import LabRegistry from '@cdo/apps/labs/LabRegistry';
 
 /**
  * Wraps the Blockly workspace for Music Lab. Provides functions to setup the
- * workspace view, execute code, and save/load projects from local storage.
+ * workspace view, execute code, and save/load projects.
  */
 export default class MusicBlocklyWorkspace {
   constructor() {
     this.codeHooks = {};
     this.compiledEvents = null;
+    this.triggerIdToStartType = {};
     this.lastExecutedEvents = null;
   }
 
@@ -40,8 +53,9 @@ export default class MusicBlocklyWorkspace {
    * @param {*} container HTML element to inject the workspace into
    * @param {*} onBlockSpaceChange callback fired when any block space change events occur
    * @param {*} player reference to a {@link MusicPlayer}
+   * @param {*} toolboxAllowList optional object with allowed toolbox entries
    */
-  init(container, onBlockSpaceChange, player) {
+  init(container, onBlockSpaceChange, player, toolboxAllowList) {
     this.container = container;
 
     Blockly.Extensions.register(
@@ -58,27 +72,29 @@ export default class MusicBlocklyWorkspace {
 
     for (let blockType of Object.keys(MUSIC_BLOCKS)) {
       Blockly.Blocks[blockType] = {
-        init: function() {
+        init: function () {
           this.jsonInit(MUSIC_BLOCKS[blockType].definition);
-        }
+        },
       };
 
       Blockly.JavaScript[blockType] = MUSIC_BLOCKS[blockType].generator;
     }
 
-    Blockly.fieldRegistry.register('field_sounds', FieldSounds);
+    Blockly.fieldRegistry.register(FIELD_SOUNDS_TYPE, FieldSounds);
+    Blockly.fieldRegistry.register(FIELD_PATTERN_TYPE, FieldPattern);
+    Blockly.fieldRegistry.register(FIELD_CHORD_TYPE, FieldChord);
 
     this.workspace = Blockly.inject(container, {
-      toolbox: getToolbox(),
+      toolbox: getToolbox(toolboxAllowList),
       grid: {spacing: 20, length: 0, colour: '#444', snap: true},
-      theme: musicLabDarkTheme,
+      theme: CdoDarkTheme,
       renderer: experiments.isEnabled('zelos')
-        ? 'cdo_renderer_zelos'
-        : 'cdo_renderer_thrasos',
+        ? Renderers.ZELOS
+        : Renderers.DEFAULT,
       noFunctionBlockFrame: true,
       zoom: {
-        startScale: experiments.isEnabled('zelos') ? 0.9 : 1
-      }
+        startScale: experiments.isEnabled('zelos') ? 0.9 : 1,
+      },
     });
 
     // Remove two default entries in the toolbox's Functions category that
@@ -86,12 +102,23 @@ export default class MusicBlocklyWorkspace {
     delete Blockly.Blocks.procedures_defreturn;
     delete Blockly.Blocks.procedures_ifreturn;
 
+    // Rename the new function placeholder text for Music Lab specifically.
+    Blockly.Msg['PROCEDURES_DEFNORETURN_PROCEDURE'] =
+      musicI18n.blockly_functionNamePlaceholder();
+
+    // Wrap the create function block's init function in a function that
+    // sets the block's help URL to the appropriate entry in the Music Lab
+    // docs, and calls the original init function if present.
+    const functionBlock = Blockly.Blocks.procedures_defnoreturn;
+    functionBlock.initOriginal = functionBlock.init;
+    functionBlock.init = function () {
+      this.setHelpUrl(DOCS_BASE_URL + 'create_function');
+      this.initOriginal?.();
+    };
+
     Blockly.setInfiniteLoopTrap();
 
     this.resizeBlockly();
-
-    // Set initial blocks.
-    this.loadCode();
 
     Blockly.addChangeListener(Blockly.mainBlockSpace, onBlockSpaceChange);
 
@@ -116,11 +143,14 @@ export default class MusicBlocklyWorkspace {
 
   /**
    * Generates executable JavaScript code for all blocks in the workspace.
+   *
+   * @param {*} scope Global scope to provide the execution runtime
    */
-  compileSong() {
+  compileSong(scope) {
     Blockly.getGenerator().init(this.workspace);
 
     this.compiledEvents = {};
+    this.triggerIdToStartType = {};
 
     const topBlocks = this.workspace.getTopBlocks();
 
@@ -139,9 +169,10 @@ export default class MusicBlocklyWorkspace {
         if (functionBlock.type === 'procedures_defnoreturn') {
           // Accumulate some custom code that calls all the functions
           // together, simulating tracks mode.
-          const actualFunctionName = GeneratorHelpersSimple2.getSafeFunctionName(
-            functionBlock.getFieldValue('NAME')
-          );
+          const actualFunctionName =
+            GeneratorHelpersSimple2.getSafeFunctionName(
+              functionBlock.getFieldValue('NAME')
+            );
           functionCallsCode += `${actualFunctionName}();
           `;
 
@@ -149,10 +180,11 @@ export default class MusicBlocklyWorkspace {
           const functionCode = Blockly.JavaScript.blockToCode(
             functionBlock.getChildren()[0]
           );
-          functionImplementationsCode += GeneratorHelpersSimple2.getFunctionImplementation(
-            functionBlock.getFieldValue('NAME'),
-            functionCode
-          );
+          functionImplementationsCode +=
+            GeneratorHelpersSimple2.getFunctionImplementation(
+              functionBlock.getFieldValue('NAME'),
+              functionCode
+            );
         }
       });
 
@@ -166,7 +198,7 @@ export default class MusicBlocklyWorkspace {
           code: GeneratorHelpersSimple2.getDefaultWhenRunImplementation(
             functionCallsCode,
             functionImplementationsCode
-          )
+          ),
         };
       }
     }
@@ -175,7 +207,7 @@ export default class MusicBlocklyWorkspace {
       if (getBlockMode() !== BlockMode.SIMPLE2) {
         if (block.type === BlockTypes.WHEN_RUN) {
           this.compiledEvents.whenRunButton = {
-            code: Blockly.JavaScript.blockToCode(block)
+            code: Blockly.JavaScript.blockToCode(block),
           };
         }
       } else {
@@ -183,7 +215,7 @@ export default class MusicBlocklyWorkspace {
           this.compiledEvents.whenRunButton = {
             code:
               Blockly.JavaScript.blockToCode(block) +
-              functionImplementationsCode
+              functionImplementationsCode,
           };
         }
       }
@@ -191,15 +223,14 @@ export default class MusicBlocklyWorkspace {
       if (
         [
           BlockTypes.NEW_TRACK_AT_START,
-          BlockTypes.NEW_TRACK_AT_MEASURE
+          BlockTypes.NEW_TRACK_AT_MEASURE,
         ].includes(block.type)
       ) {
         if (!this.compiledEvents.tracks) {
-          this.events.tracks = {code: ''};
+          this.compiledEvents.tracks = {code: ''};
         }
-        this.compiledEvents.tracks.code += Blockly.JavaScript.blockToCode(
-          block
-        );
+        this.compiledEvents.tracks.code +=
+          Blockly.JavaScript.blockToCode(block);
       }
 
       if (
@@ -207,14 +238,19 @@ export default class MusicBlocklyWorkspace {
           BlockTypes.TRIGGERED_AT,
           BlockTypes.TRIGGERED_AT_SIMPLE,
           BlockTypes.TRIGGERED_AT_SIMPLE2,
-          BlockTypes.NEW_TRACK_ON_TRIGGER
+          BlockTypes.NEW_TRACK_ON_TRIGGER,
         ].includes(block.type)
       ) {
         const id = block.getFieldValue(TRIGGER_FIELD);
         this.compiledEvents[this.triggerIdToEvent(id)] = {
           code:
-            Blockly.JavaScript.blockToCode(block) + functionImplementationsCode
+            Blockly.JavaScript.blockToCode(block) + functionImplementationsCode,
+          args: ['startPosition'],
         };
+        // Also save the value of the trigger start field at compile time so we can
+        // compute the correct start time at each invocation.
+        this.triggerIdToStartType[this.triggerIdToEvent(id)] =
+          block.getFieldValue(FIELD_TRIGGER_START_NAME);
       }
     });
 
@@ -226,26 +262,6 @@ export default class MusicBlocklyWorkspace {
       return false;
     }
 
-    console.log('Compiled song.', this.compiledEvents);
-
-    return true;
-  }
-
-  /**
-   * Using JavaScript previously generated by compileSong, above, this function
-   * executes that code only for events that are triggered when the play button
-   * is clicked (e.g. "When Run", "New Track").
-   *
-   * @param {*} scope Global scope to provide the execution runtime
-   */
-  executeCompiledSong(scope) {
-    if (this.compiledEvents === null) {
-      console.warn('executeCompiledSong called before compileSong.');
-      return;
-    }
-
-    console.log('Executing compiled song.');
-
     this.codeHooks = {};
 
     CustomMarshalingInterpreter.evalWithEvents(
@@ -255,6 +271,28 @@ export default class MusicBlocklyWorkspace {
       this.codeHooks[hook.name] = hook.func;
     });
 
+    console.log('Compiled song.', this.compiledEvents);
+
+    return true;
+  }
+
+  /**
+   * Using JavaScript previously generated by compileSong, above, this function
+   * executes that code for events that are triggered when the play button
+   * is clicked (e.g. "When Run", "New Track"), as well any trigger events if
+   * indicated.
+   *
+   * {@param triggerEvents} a list of trigger events to execute, in the format
+   * { id: <ID of trigger>, startPosition: <playhead position to start from> }
+   */
+  executeCompiledSong(triggerEvents = []) {
+    if (this.compiledEvents === null) {
+      logWarning('executeCompiledSong called before compileSong.');
+      return;
+    }
+
+    console.log('Executing compiled song.');
+
     if (this.codeHooks.whenRunButton) {
       this.callUserGeneratedCode(this.codeHooks.whenRunButton);
     }
@@ -262,6 +300,10 @@ export default class MusicBlocklyWorkspace {
     if (this.codeHooks.tracks) {
       this.callUserGeneratedCode(this.codeHooks.tracks);
     }
+
+    triggerEvents.forEach(triggerEvent => {
+      this.executeTrigger(triggerEvent.id, triggerEvent.startPosition);
+    });
 
     this.lastExecutedEvents = this.compiledEvents;
   }
@@ -274,55 +316,97 @@ export default class MusicBlocklyWorkspace {
    *
    * @param {} id ID of the trigger
    */
-  executeTrigger(id) {
+  executeTrigger(id, startPosition) {
     const hook = this.codeHooks[this.triggerIdToEvent(id)];
     if (hook) {
-      this.callUserGeneratedCode(hook);
+      this.callUserGeneratedCode(hook, [startPosition]);
     }
+  }
+
+  hasTrigger(id) {
+    return !!this.codeHooks[this.triggerIdToEvent(id)];
+  }
+
+  /**
+   * Given the exact current playback position, get the start position of the trigger,
+   * adjusted based on when the trigger should play (immediately, next beat, or next measure).
+   */
+  getTriggerStartPosition(id, currentPosition) {
+    const triggerStart = this.triggerIdToStartType[this.triggerIdToEvent(id)];
+    if (!triggerStart) {
+      console.warn('No compiled trigger with ID: ' + id);
+      return;
+    }
+
+    switch (triggerStart) {
+      case TriggerStart.IMMEDIATELY:
+        return currentPosition;
+      case TriggerStart.NEXT_BEAT:
+        return Math.ceil(currentPosition * 4) / 4;
+      case TriggerStart.NEXT_MEASURE:
+        return Math.ceil(currentPosition);
+    }
+  }
+
+  getCode() {
+    return Blockly.serialization.workspaces.save(this.workspace);
   }
 
   getAllBlocks() {
     return this.workspace.getAllBlocks();
   }
 
+  updateHighlightedBlocks(playingBlockIds) {
+    // Clear all highlights.
+    Blockly.mainBlockSpace.getAllBlocks().forEach(block => {
+      Blockly.mainBlockSpace.highlightBlock(block.id, false);
+    });
+    // Highlight playing blocks.
+    playingBlockIds.forEach(blockId => {
+      Blockly.mainBlockSpace.highlightBlock(blockId, true);
+    });
+  }
+
+  // Given a block ID, selects that block.
+  // Given undefined, unselects all blocks.
+  selectBlock(blockId) {
+    if (blockId) {
+      Blockly.mainBlockSpace.getBlockById(blockId).select();
+    } else {
+      Blockly.mainBlockSpace.getAllBlocks().forEach(block => {
+        block.unselect();
+      });
+    }
+  }
+
   getLocalStorageKeyName() {
     // Save code for each block mode in a different local storage item.
     // This way, switching block modes will load appropriate user code.
-
     return 'musicLabSavedCode' + getBlockMode();
   }
 
-  loadCode() {
-    const existingCode = localStorage.getItem(this.getLocalStorageKeyName());
-    if (existingCode) {
-      const exitingCodeJson = JSON.parse(existingCode);
-      Blockly.serialization.workspaces.load(exitingCodeJson, this.workspace);
-    } else {
-      this.resetCode();
-    }
-  }
-
-  saveCode() {
-    const code = Blockly.serialization.workspaces.save(this.workspace);
-    const codeJson = JSON.stringify(code);
-    localStorage.setItem(this.getLocalStorageKeyName(), codeJson);
-  }
-
-  resetCode() {
-    const defaultCodeFilename = 'defaultCode' + getBlockMode();
-    const defaultCode = require(`@cdo/static/music/${defaultCodeFilename}.json`);
-    Blockly.serialization.workspaces.load(defaultCode, this.workspace);
+  // Load the workspace with the given code, and call save.
+  loadCode(code) {
+    Blockly.serialization.workspaces.load(code, this.workspace);
     this.saveCode();
   }
 
-  callUserGeneratedCode(fn) {
+  saveCode(forceSave = false) {
+    LabRegistry.getInstance()
+      .getProjectManager()
+      .save(this.getCode(), forceSave);
+  }
+
+  callUserGeneratedCode(fn, args = []) {
     try {
-      fn.call(this);
+      fn.call(this, ...args);
     } catch (e) {
-      // swallow error. should we also log this somewhere?
-      if (console) {
-        console.log(e);
-      }
+      logError(e);
     }
+  }
+
+  updateToolbox(allowList) {
+    const toolbox = getToolbox(allowList);
+    this.workspace.updateToolbox(toolbox);
   }
 }

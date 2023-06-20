@@ -8,3 +8,5 @@ right '4+'
 markdown <<MARKDOWN
 How many total AP exams do you plan on taking this year?
 MARKDOWN
+
+allow_multiple_attempts true

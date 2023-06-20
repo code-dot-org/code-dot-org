@@ -11,3 +11,5 @@ wrong '/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png'
 wrong '/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png'
 wrong '/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png'
 right '/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png'
+
+allow_multiple_attempts true

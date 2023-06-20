@@ -245,9 +245,9 @@ class ContactRollupsProcessed < ApplicationRecord
     # @see Unit model, csf?, csd? and csp? methods
     curricula = extract_field contact_data, 'dashboard.sections', 'curriculum_umbrella'
     roles.add 'CSF Teacher' if curricula.any?('CSF')
-    roles.add 'CSD Teacher' if !roles.include?('CSD Teacher') && curricula.any?('CSD')
-    roles.add 'CSP Teacher' if !roles.include?('CSP Teacher') && curricula.any?('CSP')
-    roles.add 'CSA Teacher' if !roles.include?('CSA Teacher') && curricula.any?('CSA')
+    roles.add 'CSD Teacher' if roles.exclude?('CSD Teacher') && curricula.any?('CSD')
+    roles.add 'CSP Teacher' if roles.exclude?('CSP Teacher') && curricula.any?('CSP')
+    roles.add 'CSA Teacher' if roles.exclude?('CSA Teacher') && curricula.any?('CSA')
 
     roles.add 'Form Submitter' if
       contact_data.key?('pegasus.forms') ||

@@ -1,9 +1,5 @@
 <Poetry>
   <config><![CDATA[{
-  "game_id": 69,
-  "created_at": "2023-02-06T19:26:03.000Z",
-  "level_num": "custom",
-  "user_id": 1196,
   "properties": {
     "encrypted": "false",
     "skin": "gamelab",
@@ -39,109 +35,19 @@
     "preload_asset_list": null,
     "default_poem": null
   },
+  "level_num": "custom",
+  "game_id": 69,
+  "created_at": "2023-02-06T19:26:03.000Z",
+  "user_id": 1196,
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2023-02-06T19:26:03.489+00:00\",\"changed\":[\"cloned from \\\"csc_timecapsule_template_dropdown_2022\\\"\"],\"cloned_from\":\"csc_timecapsule_template_dropdown_2022\"}]",
+  "audit_log": "[{\"changed_at\":\"2023-02-06T19:26:03.489+00:00\",\"changed\":[\"cloned from \\\"csc_timecapsule_template_dropdown_2022\\\"\"],\"cloned_from\":\"csc_timecapsule_template_dropdown_2022\"},{\"changed_at\":\"2023-03-07 00:35:35 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
   <blocks>
     <start_blocks>
-      <xml>
-        <block type="when_run" id="85J=5J+USSHtN$KA2tXw">
-          <next>
-            <block type="Poetry_setTitle" id="J[oE``i2N@/j_.wC/ZR4" deletable="false">
-              <value name="TITLE">
-                <block type="Poetry_stringValue" id="@qc)lO|fveA?yj4Gx/1L">
-                  <field name="TEXT">A Special Day in 1969</field>
-                </block>
-              </value>
-              <next>
-                <block type="Poetry_setAuthor" id="GNsnKv+1CUzuhH?aRGN3" deletable="false">
-                  <value name="AUTHOR">
-                    <block type="Poetry_stringValue" id="fJiwY/w8%MgTz~|B/*Xo">
-                      <field name="TEXT">Neddie A. </field>
-                    </block>
-                  </value>
-                  <next>
-                    <block type="Poetry_addLine" id="y*c`(ZwCA;F5clhsp%^O" deletable="false">
-                      <value name="LINE">
-                        <block type="Poetry_stringValue" id="ll-q|Ott4Wi?HN=z?UWL">
-                          <field name="TEXT">Another bowl of Spaghettios</field>
-                        </block>
-                      </value>
-                      <next>
-                        <block type="Poetry_addLine" id="1kaWY{cXtt{`A8ddLN74" deletable="false">
-                          <value name="LINE">
-                            <block type="Poetry_stringValue" id="c+3G;U0Kza$Sx|`D_Big">
-                              <field name="TEXT">The Beatles on our radios</field>
-                            </block>
-                          </value>
-                          <next>
-                            <block type="Poetry_addLine" id="jVM27M`_:QyjGYXuVRh4" deletable="false">
-                              <value name="LINE">
-                                <block type="Poetry_stringValue" id="EBRA3R{tUR;nuS!h`F0H">
-                                  <field name="TEXT">But I sit and wait to hear</field>
-                                </block>
-                              </value>
-                              <next>
-                                <block type="Poetry_addLine" id="I#[KC9qub`+{Wf#CeeQ5" deletable="false">
-                                  <value name="LINE">
-                                    <block type="Poetry_stringValue" id="gYT9zo+LUL,c`*osCpdO">
-                                      <field name="TEXT">The news that is near ...</field>
-                                    </block>
-                                  </value>
-                                  <next>
-                                    <block type="Poetry_addLine" id="`|]Awx.,~+]u*HC_PTj!" deletable="false">
-                                      <value name="LINE">
-                                        <block type="Poetry_stringValue" id="VEa,HgpYXut8Q;Xfb/}z">
-                                          <field name="TEXT">The country waits in fear</field>
-                                        </block>
-                                      </value>
-                                      <next>
-                                        <block type="Poetry_addLine" id="{=[sL~OJfx]}+m-Lqgh+" deletable="false">
-                                          <value name="LINE">
-                                            <block type="Poetry_stringValue" id="ZNzXXN1u|HB%BW.@0|*b">
-                                              <field name="TEXT">Success! We stand and cheer!</field>
-                                            </block>
-                                          </value>
-                                          <next>
-                                            <block type="Poetry_addLine" id="5L4IfAKPg.(2~=j7#_ZN" deletable="false">
-                                              <value name="LINE">
-                                                <block type="Poetry_stringValue" id="kC05wYqj+DIe=V`YGP00">
-                                                  <field name="TEXT">One small step for man,</field>
-                                                </block>
-                                              </value>
-                                              <next>
-                                                <block type="Poetry_addLine" id="04f=]coY?uL}X.t({TKR" deletable="false">
-                                                  <value name="LINE">
-                                                    <block type="Poetry_stringValue" id="48k`HmbHRqL4w[;eb])H">
-                                                      <field name="TEXT">One giant leap for mankind</field>
-                                                    </block>
-                                                  </value>
-                                                  <next>
-                                                    <block type="Poetry_animateText" id="Z@u8q{j9QaKKgkqhI+Eh" deletable="false" movable="false" editable="false"/>
-                                                  </next>
-                                                </block>
-                                              </next>
-                                            </block>
-                                          </next>
-                                        </block>
-                                      </next>
-                                    </block>
-                                  </next>
-                                </block>
-                              </next>
-                            </block>
-                          </next>
-                        </block>
-                      </next>
-                    </block>
-                  </next>
-                </block>
-              </next>
-            </block>
-          </next>
-        </block>
+      <xml xmlns="https://developers.google.com/blockly/xml">
+        <block type="when_run" id="85J=5J+USSHtN$KA2tXw" x="16" y="16"/>
       </xml>
     </start_blocks>
   </blocks>

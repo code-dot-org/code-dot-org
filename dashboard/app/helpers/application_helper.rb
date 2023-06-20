@@ -29,12 +29,6 @@ module ApplicationHelper
     "#{s} ago"
   end
 
-  def gender_options
-    Policies::Gender::OPTIONS.map do |key, value|
-      [(key ? t(key) : ''), value]
-    end
-  end
-
   def user_type_options
     User::USER_TYPE_OPTIONS.map do |user_type|
       [t("user_type.#{user_type}"), user_type]
@@ -44,6 +38,12 @@ module ApplicationHelper
   def age_options
     User::AGE_DROPDOWN_OPTIONS.map do |age|
       [age, age]
+    end
+  end
+
+  def us_state_options
+    User::US_STATE_DROPDOWN_OPTIONS.map do |code, name|
+      [name, code]
     end
   end
 
@@ -168,29 +168,6 @@ module ApplicationHelper
     end
   end
 
-  def signup_error_messages!
-    # See also https://github.com/plataformatec/devise/blob/master/app/helpers/devise_helper.rb
-    return "" if resource.errors.empty?
-
-    messages = resource.errors.full_messages.map {|msg| content_tag(:li, msg)}.join
-    sentence = resource.oauth? ?
-      I18n.t("signup_form.additional_information") :
-      I18n.t(
-        "errors.messages.not_saved",
-        count: resource.errors.count,
-        resource: resource.class.model_name.human.downcase
-      )
-
-    html = <<-HTML
-    <div id="error_explanation">
-      <h2>#{sentence}</h2>
-      <ul>#{messages}</ul>
-    </div>
-    HTML
-
-    html.html_safe
-  end
-
   # Returns a client state object for the current session and cookies.
   def client_state
     @client_state ||= ClientState.new(session, cookies)
@@ -226,9 +203,7 @@ module ApplicationHelper
     obj
   end
 
-  private
-
-  def share_failure_message(failure_type)
+  private def share_failure_message(failure_type)
     case failure_type
     when ShareFiltering::FailureType::EMAIL
       t('share_code.email_not_allowed')

@@ -6,7 +6,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
-import {FormGroup, ControlLabel} from 'react-bootstrap';
+import {FormGroup, ControlLabel} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import Select from 'react-select';
 import {SelectStyleProps} from '../constants';
 import {setRegionalPartnerFilter} from './regional_partners_reducers';
@@ -19,26 +19,26 @@ export const UNMATCHED_PARTNER_VALUE = 'none';
 
 export const ALL_PARTNERS_OPTION = {
   label: ALL_PARTNERS_LABEL,
-  value: ALL_PARTNERS_VALUE
+  value: ALL_PARTNERS_VALUE,
 };
 export const UNMATCHED_PARTNER_OPTION = {
   label: UNMATCHED_PARTNER_LABEL,
-  value: UNMATCHED_PARTNER_VALUE
+  value: UNMATCHED_PARTNER_VALUE,
 };
 
 export const RegionalPartnerValuePropType = PropTypes.oneOfType([
   PropTypes.number, // regional partner id
-  PropTypes.oneOf([ALL_PARTNERS_VALUE, UNMATCHED_PARTNER_VALUE])
+  PropTypes.oneOf([ALL_PARTNERS_VALUE, UNMATCHED_PARTNER_VALUE]),
 ]);
 
 export const RegionalPartnerPropType = PropTypes.shape({
   value: RegionalPartnerValuePropType.isRequired,
-  label: PropTypes.string.isRequired
+  label: PropTypes.string.isRequired,
 });
 
 export const RegionalPartnerShape = PropTypes.shape({
   id: PropTypes.number,
-  name: PropTypes.string
+  name: PropTypes.string,
 });
 
 export class RegionalPartnerDropdown extends React.Component {
@@ -47,7 +47,7 @@ export class RegionalPartnerDropdown extends React.Component {
     regionalPartnerFilter: RegionalPartnerPropType.isRequired,
     regionalPartners: PropTypes.arrayOf(RegionalPartnerShape),
     additionalOptions: PropTypes.array,
-    isWorkshopAdmin: PropTypes.bool
+    isWorkshopAdmin: PropTypes.bool,
   };
 
   getDefaultAdditionalOptions() {
@@ -61,7 +61,7 @@ export class RegionalPartnerDropdown extends React.Component {
   UNSAFE_componentWillMount() {
     this.regionalPartners = this.props.regionalPartners.map(v => ({
       value: v.id,
-      label: v.name
+      label: v.name,
     }));
 
     let additionalOptions =
@@ -70,7 +70,7 @@ export class RegionalPartnerDropdown extends React.Component {
       additionalOptions.forEach(option =>
         this.regionalPartners.unshift({
           value: option.value,
-          label: option.label
+          label: option.label,
         })
       );
     }
@@ -95,8 +95,8 @@ export class RegionalPartnerDropdown extends React.Component {
 
 const styles = {
   select: {
-    maxWidth: '500px'
-  }
+    maxWidth: '500px',
+  },
 };
 
 export default connect(
@@ -105,11 +105,11 @@ export default connect(
     regionalPartnerFilter: state.regionalPartners.regionalPartnerFilter,
     isWorkshopAdmin: state.applicationDashboard
       ? state.applicationDashboard.permissions.workshopAdmin
-      : state.workshopDashboard.permission.has(WorkshopAdmin)
+      : state.workshopDashboard.permission.has(WorkshopAdmin),
   }),
   dispatch => ({
     onChange(selected) {
       dispatch(setRegionalPartnerFilter(selected));
-    }
+    },
   })
 )(RegionalPartnerDropdown);

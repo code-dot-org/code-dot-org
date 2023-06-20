@@ -3,7 +3,6 @@
 # apps directory)
 module AnalyticsConstants
   EVENTS = [
-    HOMEPAGE_VISITED_EVENT = 'Homepage Visited'.freeze,
     ADMIN_PAGE_VISITED_EVENT = 'Administrator Page Visited'.freeze,
     AI_PAGE_VISIT_EVENT = 'AI Page Visited'.freeze,
     CSA_CURRICULUM_PAGE_VISITED_EVENT = 'CSA Curriculum Page Visited'.freeze,
@@ -23,6 +22,7 @@ module AnalyticsConstants
     MIDDLE_AND_HIGH_SCHOOL_PL_PAGE_VISITED_EVENT =
       'Middle And High School Professional Learning Page Visited'.freeze,
     PICK_PL_PAGE_VISITED_EVENT = 'Pick Your Professional Learning Page Visited'.freeze,
+    SELF_PACED_PL_PAGE_VISITED_EVENT = 'Self-Paced Professional Learning Page Visited'.freeze,
     RP_LANDING_PAGE_VISITED_EVENT = 'Regional Partner Landing Page Visited'.freeze
   ].freeze
 end

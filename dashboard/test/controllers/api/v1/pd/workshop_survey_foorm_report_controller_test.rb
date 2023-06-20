@@ -189,6 +189,32 @@ module Api::V1::Pd
       end
     end
 
+    test 'omits surveys submitted by facilitators' do
+      csf_workshop = create :csf_workshop,
+                            started_at:  Time.now.utc - 1.day,
+                            ended_at: Time.now.utc - 1.hour,
+                            num_facilitators: 2
+      facilitator = csf_workshop.facilitators[0]
+
+      # included in report
+      create :pd_pre_workshop_foorm_submission, pd_workshop: csf_workshop
+      create :csf_intro_post_workshop_submission, :answers_low, pd_workshop: csf_workshop
+
+      # not included in report
+      create :facilitator_post_survey_workshop_submission, user: facilitator, pd_workshop: csf_workshop
+
+      sign_in @workshop_admin
+      get :generic_survey_report, params: {workshop_id: csf_workshop.id}
+      assert_response :success
+
+      response = JSON.parse(@response.body)
+      expected_form_names = [
+        'surveys/pd/summer_workshop_pre_survey.0',
+        'surveys/pd/workshop_csf_intro_post_test.0'
+      ]
+      assert_equal expected_form_names.sort, response['questions']['general'].keys.sort
+    end
+
     test 'filters facilitator data if facilitator is signed in' do
       csf_workshop = create :csf_workshop,
         started_at:  Time.now.utc - 1.day,
@@ -223,6 +249,35 @@ module Api::V1::Pd
       assert_equal 5.29, facilitator_rollup[:averages][:facilitator_effectiveness][:average]
       # Verify do not see results for facilitator 2
       assert_nil response[:workshop_rollups][:facilitator][:single_workshop][facilitator_2_id]
+    end
+
+    test 'participant and facilitator post surveys are available for download' do
+      csf_workshop = create :csf_workshop,
+                            started_at:  Time.now.utc - 1.day,
+                            ended_at: Time.now.utc - 1.hour,
+                            num_facilitators: 2
+      facilitator = csf_workshop.facilitators[0]
+      csf_workshop.facilitators[1]
+      create_surveys_for_csf_workshop(csf_workshop, csf_workshop.facilitators.pluck(:id), 5, 2)
+      create :facilitator_post_survey_workshop_submission, user: facilitator, pd_workshop: csf_workshop
+
+      get :forms_for_workshop, params: {workshop_id: csf_workshop.id}
+      assert_response :success
+
+      response = JSON.parse(@response.body)
+
+      form_names = [
+        'surveys/pd/workshop_csf_intro_post_test',
+        'surveys/pd/csd_csp_facilitator_post_survey'
+      ]
+      assert_equal form_names, response.map {|h| h['name']}
+
+      sign_in @workshop_admin
+
+      form_names.each do |name|
+        get :csv_survey_report, params: {name: name, version: 0, workshop_id: csf_workshop.id}
+        assert_response :success, "downloading form #{name}"
+      end
     end
 
     # Creates sample survey responses for the given workshop with the given facilitator_ids.

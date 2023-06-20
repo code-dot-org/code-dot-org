@@ -159,6 +159,7 @@ class Unit < ApplicationRecord
       message: 'cannot start with a tilde or dot or contain slashes'
     }
 
+  validates_presence_of :link
   validates :published_state, acceptance: {accept: Curriculum::SharedCourseConstants::PUBLISHED_STATE.to_h.values.push(nil), message: 'must be nil, in_development, pilot, beta, preview or stable'}
   validate :deeper_learning_courses_cannot_be_launched
 
@@ -340,13 +341,11 @@ class Unit < ApplicationRecord
       end
     end
 
-    private
-
-    def visible_units
+    private def visible_units
       @@visible_units ||= all_scripts.select(&:launched?).to_a.freeze
     end
 
-    def log_script_yml_write(log_event_type:, unit_name:, old_size:, new_size:, lessons_i18n:, metadata_i18n:)
+    private def log_script_yml_write(log_event_type:, unit_name:, old_size:, new_size:, lessons_i18n:, metadata_i18n:)
       record = {
         study: 'scripts_en_yml',
         event: log_event_type,
@@ -514,8 +513,8 @@ class Unit < ApplicationRecord
     @@level_cache[level.id] = level if level && should_cache?
     @@level_cache[level.name] = level if level && should_cache?
     level
-  rescue => e
-    raise e, "Error finding level #{level_identifier}: #{e}"
+  rescue => exception
+    raise exception, "Error finding level #{level_identifier}: #{exception}"
   end
 
   def cached
@@ -785,7 +784,7 @@ class Unit < ApplicationRecord
     script_levels.map do |script_level|
       script_level.levels.map do |level|
         next if level.contained_levels.empty? ||
-          !TEXT_RESPONSE_TYPES.include?(level.contained_levels.first.class)
+          TEXT_RESPONSE_TYPES.exclude?(level.contained_levels.first.class)
         text_response_levels << {
           script_level: script_level,
           levels: [level.contained_levels.first]
@@ -861,6 +860,10 @@ class Unit < ApplicationRecord
       standards_with_lessons << standard_summary
     end
     standards_with_lessons
+  end
+
+  def duration_in_minutes
+    lessons.sum(&:total_lesson_duration)
   end
 
   def under_curriculum_umbrella?(specific_curriculum_umbrella)
@@ -1243,10 +1246,10 @@ class Unit < ApplicationRecord
 
         copied_unit
       end
-    rescue => e
+    rescue => exception
       filepath_to_delete = Unit.script_json_filepath(new_name)
       File.delete(filepath_to_delete) if File.exist?(filepath_to_delete)
-      raise e, "Error: #{e.message}"
+      raise exception, "Error: #{exception.message}"
     end
   end
 
@@ -1345,8 +1348,8 @@ class Unit < ApplicationRecord
       if Rails.application.config.levelbuilder_mode
         Unit.merge_and_write_i18n(i18n, unit_name, metadata_i18n, log_event_type: 'write_script')
       end
-    rescue StandardError => e
-      errors.add(:base, e.to_s)
+    rescue StandardError => exception
+      errors.add(:base, exception.to_s)
       return false
     end
     update_teacher_resources(general_params[:resourceIds])
@@ -1359,8 +1362,8 @@ class Unit < ApplicationRecord
         unit.write_script_json
       end
       true
-    rescue StandardError => e
-      errors.add(:base, e.to_s)
+    rescue StandardError => exception
+      errors.add(:base, exception.to_s)
       return false
     end
   end
@@ -1637,6 +1640,7 @@ class Unit < ApplicationRecord
   def summarize_header
     {
       name: name,
+      displayName: title_for_display,
       disablePostMilestone: disable_post_milestone?,
       student_detail_progress_view: student_detail_progress_view?,
       age_13_required: logged_out_age_13_required?,

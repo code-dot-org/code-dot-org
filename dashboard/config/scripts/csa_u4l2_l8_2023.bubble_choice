@@ -1,6 +1,6 @@
 name 'CSA U4L2-L8_2023'
-display_name 'level display_name here'
-description 'level description here'
+display_name 'Practice: Using Static Variables and Methods'
+description 'Create static variables and methods for various scenarios.'
 
 sublevels
 level 'CSA U4L2-L8a_2023'

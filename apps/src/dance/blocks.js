@@ -17,27 +17,27 @@ const limitedColours = [
   // some "tertiary" colors
   '#ff8800', // ORANGE
   '#8800ff', // PURPLE
-  '#00ff88' // LIME
+  '#00ff88', // LIME
 ];
 
 const customInputTypes = {
   spritePicker: {
     addInput(blockly, block, inputConfig, currentInputRow) {
-      block.getVars = function() {
+      block.getVars = function () {
         return {
           [Blockly.BlockValueType.SPRITE]: [
-            block.getFieldValue(inputConfig.name)
-          ]
+            block.getFieldValue(inputConfig.name),
+          ],
         };
       };
-      block.renameVar = function(oldName, newName) {
+      block.renameVar = function (oldName, newName) {
         if (
           Blockly.Names.equals(oldName, block.getFieldValue(inputConfig.name))
         ) {
           block.setTitleValue(newName, inputConfig.name);
         }
       };
-      block.removeVar = function(oldName) {
+      block.removeVar = function (oldName) {
         if (
           Blockly.Names.equals(oldName, block.getFieldValue(inputConfig.name))
         ) {
@@ -45,7 +45,7 @@ const customInputTypes = {
         }
       };
       block.superSetTitleValue = block.setTitleValue;
-      block.setTitleValue = function(newValue, name) {
+      block.setTitleValue = function (newValue, name) {
         if (name === inputConfig.name && block.blockSpace.isFlyout) {
           newValue = Blockly.Variables.generateUniqueName(newValue);
         }
@@ -67,13 +67,13 @@ const customInputTypes = {
     },
     generateCode(block, arg) {
       return `'${block.getFieldValue(arg.name)}'`;
-    }
+    },
   },
   limitedColourPicker: {
     addInput(blockly, block, inputConfig, currentInputRow) {
       const options = {
-        colours: limitedColours,
-        columns: 3
+        colourOptions: limitedColours,
+        columns: 3,
       };
       currentInputRow
         .appendField(inputConfig.label)
@@ -84,8 +84,8 @@ const customInputTypes = {
     },
     generateCode(block, arg) {
       return `'${block.getFieldValue(arg.name)}'`;
-    }
-  }
+    },
+  },
 };
 
 export default {
@@ -98,11 +98,11 @@ export default {
       {
         FUNCTION_HEADER: i18n.behaviorEditorHeader(),
         FUNCTION_NAME_LABEL: i18n.behaviorEditorLabel(),
-        FUNCTION_DESCRIPTION_LABEL: i18n.behaviorEditorDescription()
+        FUNCTION_DESCRIPTION_LABEL: i18n.behaviorEditorDescription(),
       },
       'behavior_definition',
       {
-        [Blockly.BlockValueType.SPRITE]: 'sprite_parameter_get'
+        [Blockly.BlockValueType.SPRITE]: 'sprite_parameter_get',
       },
       false /* disableParamEditing */,
       [
@@ -111,13 +111,13 @@ export default {
         Blockly.BlockValueType.COLOUR,
         Blockly.BlockValueType.BOOLEAN,
         Blockly.BlockValueType.SPRITE,
-        Blockly.BlockValueType.LOCATION
+        Blockly.BlockValueType.LOCATION,
       ]
     ));
 
     Blockly.Blocks.sprite_variables_get = {
       // Variable getter.
-      init: function() {
+      init: function () {
         var fieldLabel = new Blockly.FieldLabel(Blockly.Msg.VARIABLES_GET_ITEM);
         // Must be marked EDITABLE so that cloned blocks share the same var name
         fieldLabel.EDITABLE = true;
@@ -140,22 +140,22 @@ export default {
         this.setStrictOutput(true, Blockly.BlockValueType.SPRITE);
         this.setTooltip(Blockly.Msg.VARIABLES_GET_TOOLTIP);
       },
-      getVars: function() {
+      getVars: function () {
         return Blockly.Variables.getVars.bind(this)(
           Blockly.BlockValueType.SPRITE
         );
       },
-      renameVar: function(oldName, newName) {
+      renameVar: function (oldName, newName) {
         if (Blockly.Names.equals(oldName, this.getFieldValue('VAR'))) {
           this.setTitleValue(newName, 'VAR');
         }
       },
-      removeVar: Blockly.Blocks.variables_get.removeVar
+      removeVar: Blockly.Blocks.variables_get.removeVar,
     };
-    generator.sprite_variables_get = function() {
+    generator.sprite_variables_get = function () {
       return [
         `'${this.getFieldValue('VAR')}'`,
-        Blockly.JavaScript.ORDER_ATOMIC
+        Blockly.JavaScript.ORDER_ATOMIC,
       ];
     };
     Blockly.Variables.registerGetter(
@@ -182,7 +182,7 @@ export default {
           behaviorEditor.refreshParamsEverywhere();
         }
       },
-      removeVar: Blockly.Blocks.variables_get.removeVar
+      removeVar: Blockly.Blocks.variables_get.removeVar,
     };
     generator.sprite_parameter_get = generator.variables_get;
 
@@ -278,10 +278,10 @@ export default {
           [null].concat(this.currentParameterNames_),
           [null].concat(this.currentParameterTypes_)
         );
-      }
+      },
     };
 
-    generator.gamelab_behavior_get = function() {
+    generator.gamelab_behavior_get = function () {
       const name = Blockly.JavaScript.variableDB_.getName(
         this.getFieldValue('VAR'),
         Blockly.Procedures.NAME_TYPE
@@ -297,12 +297,12 @@ export default {
       }
       return [
         `new Behavior(${name}, [${extraArgs.join(', ')}])`,
-        Blockly.JavaScript.ORDER_ATOMIC
+        Blockly.JavaScript.ORDER_ATOMIC,
       ];
     };
 
-    Blockly.Blocks.behavior_definition = Blockly.Block.createProcedureDefinitionBlock(
-      {
+    Blockly.Blocks.behavior_definition =
+      Blockly.Block.createProcedureDefinitionBlock({
         initPostScript(block) {
           block.setHSV(136, 0.84, 0.8);
           block.parameterNames_ = ['this sprite'];
@@ -311,13 +311,12 @@ export default {
         overrides: {
           getVars(category) {
             return {
-              Behavior: [this.getFieldValue('NAME')]
+              Behavior: [this.getFieldValue('NAME')],
             };
           },
-          callType_: 'gamelab_behavior_get'
-        }
-      }
-    );
+          callType_: 'gamelab_behavior_get',
+        },
+      });
 
     generator.behavior_definition = generator.procedures_defnoreturn;
 
@@ -336,9 +335,9 @@ export default {
           );
         }
       },
-      addDefaultVar: false
+      addDefaultVar: false,
     });
     delete blockly.Blocks.procedures_defreturn;
     delete blockly.Blocks.procedures_ifreturn;
-  }
+  },
 };

@@ -1,15 +1,15 @@
 import React, {useState} from 'react';
 import PropTypes from 'prop-types';
-import {FormGroup, Row, Col, ControlLabel} from 'react-bootstrap';
+import {FormGroup, Row, Col, ControlLabel} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import {
   PageLabels,
-  TextFields
+  TextFields,
 } from '@cdo/apps/generated/pd/principalApprovalApplicationConstants';
 import {TextLink} from '@dsco_/link';
 import {Year} from '@cdo/apps/generated/pd/teacherApplicationConstants';
 import {
   FormContext,
-  getValidationState
+  getValidationState,
 } from '../../form_components_func/FormComponent';
 import PrivacyDialog from '../PrivacyDialog';
 import {PrivacyDialogMode} from '../../constants';
@@ -18,13 +18,13 @@ import {isInt, isPercent, isZipCode} from '@cdo/apps/util/formatValidation';
 import {styles} from '../teacher/TeacherApplicationConstants';
 import {
   LabeledInput,
-  LabeledNumberInput
+  LabeledNumberInput,
 } from '../../form_components_func/labeled/LabeledInput';
 import {LabeledSelect} from '../../form_components_func/labeled/LabeledSelect';
 import {LabeledSingleCheckbox} from '../../form_components_func/labeled/LabeledSingleCheckbox';
 import {
   LabeledRadioButtons,
-  LabeledRadioButtonsWithAdditionalTextFields
+  LabeledRadioButtonsWithAdditionalTextFields,
 } from '../../form_components_func/labeled/LabeledRadioButtons';
 import {LabelsContext} from '../../form_components_func/LabeledFormComponent';
 import {useRegionalPartner} from '../../components/useRegionalPartner';
@@ -37,7 +37,7 @@ const MANUAL_SCHOOL_FIELDS = [
   'schoolCity',
   'schoolState',
   'schoolZipCode',
-  'schoolType'
+  'schoolType',
 ];
 const RACE_LIST = [
   'white',
@@ -46,7 +46,7 @@ const RACE_LIST = [
   'asian',
   'pacificIslander',
   'americanIndian',
-  'other'
+  'other',
 ];
 const REQUIRED_SCHOOL_INFO_FIELDS = [
   'school',
@@ -56,7 +56,7 @@ const REQUIRED_SCHOOL_INFO_FIELDS = [
   'committedToMasterSchedule',
   'replaceCourse',
   'understandFee',
-  'payFee'
+  'payFee',
 ];
 // Since the rails model allows empty principal approvals as placeholders, we require these fields here
 const ALWAYS_REQUIRED_FIELDS = [
@@ -65,12 +65,12 @@ const ALWAYS_REQUIRED_FIELDS = [
   'lastName',
   'email',
   'canEmailYou',
-  'confirmPrincipal'
+  'confirmPrincipal',
 ];
 const COURSE_SUFFIXES = {
   'Computer Science Discoveries': 'csd',
   'Computer Science Principles': 'csp',
-  'Computer Science A': 'csa'
+  'Computer Science A': 'csa',
 };
 
 const PrincipalApprovalComponent = props => {
@@ -80,7 +80,7 @@ const PrincipalApprovalComponent = props => {
     program: teacherApplication.course,
     school: teacherApplication.school_id,
     schoolZipCode: teacherApplication.school_zip_code,
-    schoolState: teacherApplication.school_state
+    schoolState: teacherApplication.school_state,
   });
 
   const handleSchoolChange = selectedSchool => {
@@ -184,18 +184,14 @@ const PrincipalApprovalComponent = props => {
         <LabeledRadioButtonsWithAdditionalTextFields
           name="committedToMasterSchedule"
           textFieldMap={{
-            [TextFields.otherWithText]: 'other'
+            [TextFields.otherWithText]: 'other',
           }}
-          label={`Are you committed to including ${
-            teacherApplication.course
-          } on the master schedule in ${Year} if ${
-            teacherApplication.name
-          } is accepted into the program? Note: the program may be listed under a different course name as determined by your district.`}
+          label={`Are you committed to including ${teacherApplication.course} on the master schedule in ${Year} if ${teacherApplication.name} is accepted into the program? Note: the program may be listed under a different course name as determined by your district.`}
         />
         <LabeledRadioButtonsWithAdditionalTextFields
           name="replaceCourse"
           textFieldMap={{
-            [TextFields.dontKnowExplain]: 'other'
+            [TextFields.dontKnowExplain]: 'other',
           }}
         />
 
@@ -334,7 +330,7 @@ const PrincipalApprovalComponent = props => {
           <LabeledRadioButtonsWithAdditionalTextFields
             name="doYouApprove"
             textFieldMap={{
-              [TextFields.otherWithText]: 'other'
+              [TextFields.otherWithText]: 'other',
             }}
             label={`Do you approve of ${teacherApplication.name} participating
                   in Code.org's ${Year} Professional Learning Program${
@@ -373,7 +369,7 @@ PrincipalApprovalComponent.propTypes = {
   errorMessages: PropTypes.object.isRequired,
   data: PropTypes.object.isRequired,
   onChange: PropTypes.func.isRequired,
-  teacherApplication: PropTypes.object.isRequired
+  teacherApplication: PropTypes.object.isRequired,
 };
 
 PrincipalApprovalComponent.associatedFields = [
@@ -381,7 +377,7 @@ PrincipalApprovalComponent.associatedFields = [
   'doYouApprove',
   'committedToMasterSchedule',
   'contactInvoicing',
-  'contactInvoicingDetail'
+  'contactInvoicingDetail',
 ];
 
 PrincipalApprovalComponent.getDynamicallyRequiredFields = data => {
@@ -427,7 +423,7 @@ PrincipalApprovalComponent.getErrorMessages = data => {
 
   if (Object.keys(formatErrors).length > 0) {
     analyticsReporter.sendEvent(EVENTS.ADMIN_APPROVAL_RECEIVED_EVENT, {
-      'error messages': JSON.stringify(formatErrors)
+      'error messages': JSON.stringify(formatErrors),
     });
   }
 
@@ -469,7 +465,7 @@ export {
   ALWAYS_REQUIRED_FIELDS,
   MANUAL_SCHOOL_FIELDS,
   REQUIRED_SCHOOL_INFO_FIELDS,
-  RACE_LIST
+  RACE_LIST,
 };
 
 export default PrincipalApprovalComponent;

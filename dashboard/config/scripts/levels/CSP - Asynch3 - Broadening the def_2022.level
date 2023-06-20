@@ -13,7 +13,8 @@
     "skip_dialog": true,
     "skip_sound": true,
     "parent_level_id": 24395,
-    "name_suffix": "_2022"
+    "name_suffix": "_2022",
+    "allow_multiple_attempts": "true"
   },
   "level_num": "custom",
   "game_id": 52,

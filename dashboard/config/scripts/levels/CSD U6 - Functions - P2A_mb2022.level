@@ -51,7 +51,7 @@
     "start_blocks": "//Events\r\nonBoardEvent(tempSensor, \"change\", function() {\r\n  loopCloud(\"cloud0\");\r\n  loopCloud(\"cloud1\");\r\n  loopCloud(\"cloud2\");\r\n  loopCloud(\"cloud3\");\r\n  loopCloud(\"cloud4\");\r\n});\r\n//Functions\r\nfunction loopCloud(cloudID) {\r\n  //1) Update the function to use the `cloudID` parameter\r\n  var cloudX = getProperty(\"cloud0\", \"x\");\r\n  setProperty(\"cloud0\", \"x\", cloudX - randomNumber(4,12));\r\n  if (cloudX < -100) {\r\n    setProperty(\"cloud0\", \"x\", 325);\r\n  }\r\n}\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
-    "never_autoplay_video": "false",
+    "never_autoplay_video": "true",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "disable_procedure_autopopulate": "false",
@@ -88,7 +88,6 @@
     "palette_category_at_start": "functions",
     "parent_level_id": 20574,
     "name_suffix": "_mb2022",
-    "map_reference": "/courses/csd-2022/guides/functions",
     "long_instructions": "<div markdown=\"1\" style=\"float: right; margin: 20px;\">\r\n\r\n![expandable](https://images.code.org/6a78fb12e01bde21792db9ff53caa436-image-1649197807725.gif)\r\n\r\n<br/>\r\n\r\nClick to Expand\r\n\r\n</div>\r\n\r\n# Clouds\r\n\r\nThis program makes the clouds move when you blow on the sound sensor. It has a function called `loopCloud()` which uses the parameter `cloudID` to move a cloud across the screen.\r\n\r\nBut, right now the function only moves `\"cloud0\"` across the screen. We need to update the function to use our parameter to move each cloud instead.\r\n\r\n## Do This\r\n\r\n_Note: You can click the instructions below to expand them and see more specific instructions_\r\n\r\n1) ::: details [Update the function to use the `cloudID` parameter]\r\n\t* Scroll down to the `loopCloud()` function ([**Show Me Where**](#triggercallout=define))\r\n\t* Update the function so it uses the `cloudID` parameter\r\n    :::\r\n\r\n**Run the code!** Every cloud should move across the screen when you blow on the sensor!",
     "mini_rubric": "false",
     "text_mode_at_start": "false",
@@ -100,10 +99,16 @@
     "display_name": "Clouds",
     "bubble_choice_description": "Create a program that moves the clouds as you blow on the sensor",
     "thumbnail_url": "https://images.code.org/6a78fb12e01bde21792db9ff53caa436-image-1649197807725.gif",
-    "encrypted_examples": [
-
+    "preload_asset_list": null,
+    "encrypted_examples": "LBVcqLjsIQp92SJXyKUqfC/RU9cB0sCHo3jB1Xx7nHb8MyQnH2ZmfmElo4Ai\nptG3896hQyftKtUEqQld/IEF7Q==\n",
+    "reference_links": [
+      "/courses/csd-2022/guides/functions",
+      "/courses/csd-2022/guides/variables",
+      "/courses/csd-2022/guides/random-numbers",
+      "/courses/csd-2022/guides/board-events",
+      "/courses/csd-2022/guides/microbit-display"
     ],
-    "preload_asset_list": null
+    "video_key": "csd_u6_call_define_functions"
   },
   "game_id": 41,
   "published": true,
@@ -111,7 +116,7 @@
   "level_num": "custom",
   "user_id": 324,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-02-01T10:52:29.146+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Functions - P2A_2222\\\"\"],\"cloned_from\":\"CSD U6 - Functions - P2A_2222\"},{\"changed_at\":\"2023-02-10 22:51:31 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"hide_design_mode\",\"makerlab_enabled\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-02-01T10:52:29.146+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Functions - P2A_2222\\\"\"],\"cloned_from\":\"CSD U6 - Functions - P2A_2222\"},{\"changed_at\":\"2023-02-10 22:51:31 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"hide_design_mode\",\"makerlab_enabled\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-03-29 23:02:11 +0000\",\"changed\":[\"code_functions\",\"never_autoplay_video\",\"map_reference\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

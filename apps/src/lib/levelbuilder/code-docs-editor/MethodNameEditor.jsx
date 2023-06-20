@@ -30,7 +30,7 @@ export default function MethodNameEditor({method, updateMethod}) {
 
 MethodNameEditor.propTypes = {
   method: PropTypes.object.isRequired,
-  updateMethod: PropTypes.func.isRequired
+  updateMethod: PropTypes.func.isRequired,
 };
 
 const styles = {
@@ -41,6 +41,6 @@ const styles = {
     color: '#555',
     border: `1px solid ${color.bootstrap_border_color}`,
     borderRadius: 4,
-    margin: 0
-  }
+    margin: 0,
+  },
 };

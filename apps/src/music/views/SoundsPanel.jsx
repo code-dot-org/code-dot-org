@@ -9,18 +9,12 @@ import FontAwesome from '@cdo/apps/templates/FontAwesome';
  * custom Blockly Field {@link FieldSounds}
  */
 
-const getIcon = type => {
-  const typeToIcon = {
-    beat: 'volume-up',
-    bass: 'headphones',
-    lead: 'music',
-    fx: 'asterisk'
+const getLengthRepresentation = length => {
+  const lengthToSymbol = {
+    0.5: '\u00bd',
+    0.25: '\u00bc',
   };
-  return typeToIcon[type];
-};
-
-const getIconClassName = type => {
-  return styles['icon-' + type];
+  return lengthToSymbol[length] || length;
 };
 
 const SoundsPanelRow = ({
@@ -29,11 +23,12 @@ const SoundsPanelRow = ({
   folder,
   sound,
   onSelect,
-  onPreview
+  onPreview,
 }) => {
   const soundPath = folder.path + '/' + sound.src;
   const isSelected = soundPath === currentValue;
   const isPlayingPreview = playingPreview === soundPath;
+  const typeIconPath = `/blockly/media/music/icon-${sound.type}.png`;
 
   return (
     <div
@@ -44,26 +39,28 @@ const SoundsPanelRow = ({
       onClick={() => onSelect(folder.path + '/' + sound.src)}
     >
       <div className={styles.soundRowLeft}>
-        <FontAwesome
-          icon={getIcon(sound.type)}
-          className={getIconClassName(sound.type)}
-        />
+        <img src={typeIconPath} className={styles.typeIcon} />
       </div>
       <div className={styles.soundRowMiddle}>{sound.name}</div>
       <div className={styles.soundRowRight}>
-        <FontAwesome
-          icon={'play-circle'}
-          className={classNames(
-            styles.preview,
-            isPlayingPreview && styles.previewPlaying
-          )}
-          onClick={e => {
-            if (!isPlayingPreview) {
-              onPreview(folder.path + '/' + sound.src);
-            }
-            e.stopPropagation();
-          }}
-        />
+        <div className={styles.length}>
+          {getLengthRepresentation(sound.length)}
+        </div>
+        <div className={styles.previewContainer}>
+          <FontAwesome
+            icon={'play-circle'}
+            className={classNames(
+              styles.preview,
+              isPlayingPreview && styles.previewPlaying
+            )}
+            onClick={e => {
+              if (!isPlayingPreview) {
+                onPreview(folder.path + '/' + sound.src);
+              }
+              e.stopPropagation();
+            }}
+          />
+        </div>
       </div>
     </div>
   );
@@ -75,7 +72,7 @@ SoundsPanelRow.propTypes = {
   folder: PropTypes.object.isRequired,
   sound: PropTypes.object.isRequired,
   onSelect: PropTypes.func.isRequired,
-  onPreview: PropTypes.func.isRequired
+  onPreview: PropTypes.func.isRequired,
 };
 
 const SoundsPanel = ({
@@ -83,13 +80,13 @@ const SoundsPanel = ({
   currentValue,
   playingPreview,
   onSelect,
-  onPreview
+  onPreview,
 }) => {
-  const group = library.groups[0];
+  const folders = library.getAllowedSounds(undefined);
 
   return (
     <div className={styles.soundsPanel}>
-      {group.folders.map((folder, folderIndex) => {
+      {folders.map((folder, folderIndex) => {
         return (
           <div className={styles.folder} key={folderIndex}>
             <div className={styles.folderName}>{folder.name}</div>
@@ -118,7 +115,7 @@ SoundsPanel.propTypes = {
   currentValue: PropTypes.string.isRequired,
   playingPreview: PropTypes.string,
   onSelect: PropTypes.func.isRequired,
-  onPreview: PropTypes.func.isRequired
+  onPreview: PropTypes.func.isRequired,
 };
 
 export default SoundsPanel;

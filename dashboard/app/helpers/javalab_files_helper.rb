@@ -1,6 +1,6 @@
 module JavalabFilesHelper
-  def self.upload_project_files(project_files, hostname, auth_token)
-    uri = URI.parse("#{CDO.javabuilder_upload_url}?Authorization=#{auth_token}")
+  def self.upload_project_files(project_files, hostname, auth_token, upload_url)
+    uri = URI.parse("#{upload_url}?Authorization=#{auth_token}")
     upload_request = Net::HTTP::Put.new(uri)
     upload_request['Origin'] = hostname
     upload_request['Content-Type'] = 'application/json'
@@ -10,9 +10,9 @@ module JavalabFilesHelper
       http.request(upload_request)
     end
     return response
-  rescue StandardError => e
+  rescue StandardError => exception
     event_details = {
-      error_details: e.to_json
+      error_details: exception.to_json
     }
     NewRelic::Agent.record_custom_event("JavabuilderHttpConnectionError", event_details) if CDO.newrelic_logging
     nil

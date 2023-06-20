@@ -7,7 +7,7 @@ exports.Direction = {
   NORTH: 0,
   EAST: 1,
   SOUTH: 2,
-  WEST: 3
+  WEST: 3,
 };
 
 exports.PADDLE_BALL_COLLIDE_DISTANCE = 0.7;
@@ -31,5 +31,5 @@ exports.SquareType = {
   PADDLEFINISH: 8,
   PADDLESTART: 16,
   BALLFINISH: 32,
-  OBSTACLE: 64
+  OBSTACLE: 64,
 };

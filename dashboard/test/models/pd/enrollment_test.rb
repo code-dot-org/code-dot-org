@@ -535,13 +535,22 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
   end
 
   test 'old enrollments with school are grandfathered in' do
-    old_enrollment = build :pd_enrollment, school: 'a school'
+    old_enrollment = create :pd_enrollment
+    assert old_enrollment.valid?
+
+    # Enrollments that already have a school are allowed to do so,
+    old_enrollment.school = 'a school'
     old_enrollment.save(validate: false)
     assert old_enrollment.valid?
 
     # but they can't be changed
     old_enrollment.school = 'another school'
     refute old_enrollment.valid?
+
+    # and new enrollments cannot be so created.
+    assert_raises ActiveRecord::RecordInvalid do
+      create :pd_enrollment, school: 'a school'
+    end
   end
 
   test 'school info country required on create' do

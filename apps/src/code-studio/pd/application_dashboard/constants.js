@@ -6,15 +6,15 @@ import color from '@cdo/apps/util/color';
 
 const STATUS_GREEN = {
   backgroundColor: color.level_perfect,
-  color: color.black
+  color: color.black,
 };
 const STATUS_ORANGE = {
   backgroundColor: color.lighter_orange,
-  color: color.black
+  color: color.black,
 };
 const STATUS_GRAY = {
   backgroundColor: color.charcoal,
-  color: color.white
+  color: color.white,
 };
 
 /**
@@ -26,19 +26,19 @@ export const StatusColors = {
   awaiting_admin_approval: STATUS_GRAY,
   unreviewed: {
     backgroundColor: color.lightest_cyan,
-    color: color.black
+    color: color.black,
   },
   pending: STATUS_ORANGE,
   pending_space_availability: STATUS_ORANGE,
   accepted: STATUS_GREEN,
   declined: {
     backgroundColor: color.red,
-    color: color.white
+    color: color.white,
   },
   withdrawn: {
     backgroundColor: color.lightest_red,
-    color: color.black
-  }
+    color: color.black,
+  },
 };
 
 /**
@@ -48,7 +48,7 @@ export const ApplicationFinalStatuses = [
   'accepted',
   'declined',
   'pending_space_availability',
-  'withdrawn'
+  'withdrawn',
 ];
 
 /**
@@ -71,7 +71,7 @@ export const getApplicationStatuses = (addAutoEmail = false) => ({
   pending_space_availability: `Pending Space Availability`,
   accepted: `Accepted${autoEmailText(addAutoEmail)}`,
   declined: `Declined${autoEmailText(addAutoEmail)}`,
-  withdrawn: 'Withdrawn'
+  withdrawn: 'Withdrawn',
 });
 
 function autoEmailText(addAutoEmail) {

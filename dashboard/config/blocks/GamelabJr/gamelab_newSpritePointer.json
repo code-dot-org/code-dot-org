@@ -10,6 +10,7 @@
         "customInput": "spritePointer"
       }
     ],
-    "returnType": "Sprite"
+    "returnType": "Sprite",
+    "style": "sprite_blocks"
   }
 }

@@ -4,3 +4,5 @@ wrong 'A social media site'
 right 'The School District\’s Website'
 wrong 'Wikipedia'
 wrong 'Popular search engine results'
+
+allow_multiple_attempts true

@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {FormGroup} from 'react-bootstrap';
+import {FormGroup} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import {
   PageLabels,
-  SectionHeaders
+  SectionHeaders,
 } from '@cdo/apps/generated/pd/teacherApplicationConstants';
 import {styles, getProgramInfo} from './TeacherApplicationConstants';
 import {RegionalPartnerMiniContactPopupLink} from '@cdo/apps/code-studio/pd/regional_partner_mini_contact/RegionalPartnerMiniContact';
@@ -22,7 +22,7 @@ const ChooseYourProgram = props => {
     props.onChange(newProgram);
     analyticsReporter.sendEvent(EVENTS.PROGRAM_PICKED_EVENT, {
       'professional learning program': getProgramInfo(newProgram.program)
-        .shortName
+        .shortName,
     });
   };
 
@@ -73,11 +73,11 @@ ChooseYourProgram.propTypes = {
   errors: PropTypes.arrayOf(PropTypes.string).isRequired,
   errorMessages: PropTypes.object.isRequired,
   data: PropTypes.object.isRequired,
-  onChange: PropTypes.func.isRequired
+  onChange: PropTypes.func.isRequired,
 };
 
 ChooseYourProgram.associatedFields = [
-  ...Object.keys(PageLabels.chooseYourProgram)
+  ...Object.keys(PageLabels.chooseYourProgram),
 ];
 
 export default ChooseYourProgram;

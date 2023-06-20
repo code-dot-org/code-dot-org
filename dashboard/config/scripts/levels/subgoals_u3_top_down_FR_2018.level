@@ -1,9 +1,5 @@
 <FreeResponse>
   <config><![CDATA[{
-  "game_id": 52,
-  "created_at": "2018-05-03T16:38:14.000Z",
-  "level_num": "custom",
-  "user_id": 13,
   "properties": {
     "long_instructions": "# Design a program\r\n\r\nDescribe, using a top-down approach, how you would create a program to draw a white snowflake on a blue background that uses random numbers, so the snowflake will be unique every time you run the code. \r\n\r\nYou don’t need to write the exact code or blocks that you would use, but you should describe what functions you would need to create, where you would or would not use loops, and where you would or would not use random numbers.",
     "instructions_important": "false",
@@ -16,8 +12,13 @@
     "parent_level_id": 10030,
     "name_suffix": "_2018",
     "encrypted": "false",
-    "optional": "false"
+    "optional": "false",
+    "allow_multiple_attempts": "true"
   },
+  "level_num": "custom",
+  "game_id": 52,
+  "created_at": "2018-05-03T16:38:14.000Z",
+  "user_id": 13,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2017-09-27 17:13:09 +0000\",\"changed\":[],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2017-09-27 17:13:40 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2017-09-27 17:13:52 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2017-10-03 17:52:01 +0000\",\"changed\":[],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2019-04-11 19:08:34 +0000\",\"changed\":[\"encrypted_solution\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]",

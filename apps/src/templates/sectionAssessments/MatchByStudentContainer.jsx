@@ -6,14 +6,14 @@ import {
   getStudentMatchResponsesForCurrentAssessment,
   ALL_STUDENT_FILTER,
   currentStudentHasResponses,
-  setQuestionIndex
+  setQuestionIndex,
 } from './sectionAssessmentsRedux';
 import i18n from '@cdo/locale';
 import {connect} from 'react-redux';
 import {
   QUESTION_CHARACTER_LIMIT,
   matchQuestionPropType,
-  studentWithMatchResponsesPropType
+  studentWithMatchResponsesPropType,
 } from './assessmentDataShapes';
 
 class MatchByStudentContainer extends Component {
@@ -23,7 +23,7 @@ class MatchByStudentContainer extends Component {
     studentId: PropTypes.number,
     currentStudentHasResponses: PropTypes.bool,
     openDialog: PropTypes.func.isRequired,
-    setQuestionIndex: PropTypes.func.isRequired
+    setQuestionIndex: PropTypes.func.isRequired,
   };
 
   selectQuestion = index => {
@@ -36,7 +36,7 @@ class MatchByStudentContainer extends Component {
       matchStructure,
       studentAnswerData,
       studentId,
-      currentStudentHasResponses
+      currentStudentHasResponses,
     } = this.props;
     return (
       <div>
@@ -44,7 +44,7 @@ class MatchByStudentContainer extends Component {
           <div>
             <h2>
               {i18n.matchStudentOverview({
-                studentName: studentAnswerData.name
+                studentName: studentAnswerData.name,
               })}
             </h2>
             {matchStructure.map((question, index) => (
@@ -81,8 +81,8 @@ const styles = {
   text: {
     font: 10,
     paddingTop: 20,
-    paddingBottom: 20
-  }
+    paddingBottom: 20,
+  },
 };
 
 export const UnconnectedMatchByStudentContainer = MatchByStudentContainer;
@@ -92,11 +92,11 @@ export default connect(
     matchStructure: getMatchStructureForCurrentAssessment(state),
     studentAnswerData: getStudentMatchResponsesForCurrentAssessment(state),
     studentId: state.sectionAssessments.studentId,
-    currentStudentHasResponses: currentStudentHasResponses(state)
+    currentStudentHasResponses: currentStudentHasResponses(state),
   }),
   dispatch => ({
     setQuestionIndex(questionIndex) {
       dispatch(setQuestionIndex(questionIndex));
-    }
+    },
   })
 )(MatchByStudentContainer);

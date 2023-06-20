@@ -915,6 +915,7 @@ class UnitTest < ActiveSupport::TestCase
 
     expected = {
       name: 'single-lesson-script',
+      displayName: 'single-lesson-script',
       disablePostMilestone: false,
       student_detail_progress_view: false,
       age_13_required: false,

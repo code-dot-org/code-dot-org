@@ -5,3 +5,5 @@ wrong 'timesTwo', feedback: 'Incorrect. This function should be named **timesFou
 right 'timesFour', feedback: 'Correct!'
 wrong 'plusFour', feedback: 'Incorrect. This function should be named **timesFour**.'
 
+
+allow_multiple_attempts false

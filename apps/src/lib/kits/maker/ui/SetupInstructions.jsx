@@ -10,7 +10,7 @@ import {
   isOSX,
   isWindows,
   isLinux,
-  isChromeOS
+  isChromeOS,
 } from '../util/browserChecks';
 import Button from '../../../../templates/Button';
 import ToggleGroup from '../../../../templates/ToggleGroup';
@@ -19,11 +19,10 @@ import {CHROME_APP_WEBSTORE_URL} from '../util/makerConstants';
 import {Provider} from 'react-redux';
 import {
   shouldUseWebSerial,
-  WEB_SERIAL_FILTERS
+  WEB_SERIAL_FILTERS,
 } from '@cdo/apps/lib/kits/maker/util/boardUtils';
 import {getStore} from '@cdo/apps/redux';
-
-const DOWNLOAD_PREFIX = 'https://downloads.code.org/maker/';
+import {DOWNLOAD_PREFIX} from '@cdo/apps/lib/kits/maker/util/makerConstants';
 const WINDOWS = 'windows';
 const MAC = 'mac';
 const LINUX = 'linux';
@@ -32,8 +31,8 @@ const CHROMEBOOK = 'chromebook';
 const style = {
   icon: {
     float: 'left',
-    padding: '5px'
-  }
+    padding: '5px',
+  },
 };
 
 export default class SetupInstructions extends React.Component {
@@ -45,8 +44,8 @@ export default class SetupInstructions extends React.Component {
     return (
       <Provider store={getStore()}>
         <div>
-          <Downloads />
           <ConnectionInstructions />
+          <Downloads />
           <Support />
         </div>
       </Provider>
@@ -179,7 +178,7 @@ class Downloads extends React.Component {
     }
 
     return (
-      <div>
+      <div style={{marginTop: 50}}>
         <ToggleGroup selected={platform} onChange={this.onPlatformChange}>
           <button type="button" value={WINDOWS}>
             <FontAwesome icon="windows" /> {i18n.windows()}
@@ -205,7 +204,21 @@ class Downloads extends React.Component {
 
 const downloadButtonStyle = {
   minWidth: 400,
-  textAlign: 'center'
+  textAlign: 'center',
+};
+
+const getMakerAppAlternatePathMsg = () => {
+  const makerAppAlternatePathMsg = shouldUseWebSerial()
+    ? applabI18n.makerSetupMakerAppAlternatePathWebSerial()
+    : applabI18n.makerSetupMakerAppAlternatePathNoWebSerial();
+  return (
+    <div>
+      <p>{makerAppAlternatePathMsg}</p>
+      <strong>
+        <SafeMarkdown markdown={applabI18n.makerSetupDeprecatingMakerApp()} />
+      </strong>
+    </div>
+  );
 };
 
 class WindowsDownloads extends React.Component {
@@ -222,13 +235,14 @@ class WindowsDownloads extends React.Component {
     return (
       <div>
         <h2>{applabI18n.makerSetupMakerAppForWindows()}</h2>
+        {getMakerAppAlternatePathMsg()}
         {!installer && !error && <FetchingLatestVersionMessage />}
         {installer && !error && (
           <Button
             __useDeprecatedTag
             text={applabI18n.downloadMakerAppFor({
               OS: i18n.windows(),
-              installerVersion: installer.version
+              installerVersion: installer.version,
             })}
             icon="download"
             color={Button.ButtonColor.orange}
@@ -268,13 +282,14 @@ class MacDownloads extends React.Component {
     return (
       <div>
         <h2>{applabI18n.makerSetupMakerAppForMac()}</h2>
+        {getMakerAppAlternatePathMsg()}
         {!installer && !error && <FetchingLatestVersionMessage />}
         {installer && !error && (
           <Button
             __useDeprecatedTag
             text={applabI18n.downloadMakerAppFor({
               OS: i18n.mac(),
-              installerVersion: installer.version
+              installerVersion: installer.version,
             })}
             icon="download"
             color={Button.ButtonColor.orange}
@@ -312,13 +327,14 @@ class LinuxDownloads extends React.Component {
     return (
       <div>
         <h2>{applabI18n.makerSetupMakerAppForLinux()}</h2>
+        {getMakerAppAlternatePathMsg()}
         {!installer && !error && <FetchingLatestVersionMessage />}
         {installer && !error && (
           <Button
             __useDeprecatedTag
             text={applabI18n.downloadMakerAppFor({
               OS: i18n.linux(),
-              installerVersion: installer.version
+              installerVersion: installer.version,
             })}
             icon="download"
             color={Button.ButtonColor.orange}
@@ -352,7 +368,7 @@ class LinuxDownloads extends React.Component {
 
 const FETCH_STATUS_STYLE = {
   fontSize: 'large',
-  margin: '0.5em 0'
+  margin: '0.5em 0',
 };
 
 const FetchingLatestVersionMessage = () => (
@@ -407,7 +423,7 @@ class ChromebookInstructions extends React.Component {
       <div>
         <SafeMarkdown
           markdown={applabI18n.makerSetupSerialConnector({
-            webstoreURL: CHROME_APP_WEBSTORE_URL
+            webstoreURL: CHROME_APP_WEBSTORE_URL,
           })}
         />
         <h4>{i18n.instructions()}</h4>
@@ -415,7 +431,7 @@ class ChromebookInstructions extends React.Component {
           <li>
             <SafeMarkdown
               markdown={applabI18n.makerSetupChromebookPage({
-                makerSetupPage: MAKER_SETUP_PAGE_URL
+                makerSetupPage: MAKER_SETUP_PAGE_URL,
               })}
             />
           </li>
@@ -447,7 +463,7 @@ function latestWindowsInstaller() {
 function latestMacInstaller() {
   return latestInstaller(DOWNLOAD_PREFIX + 'latest-mac.yml').then(metadata => ({
     ...metadata,
-    filename: metadata.filename.replace('zip', 'dmg')
+    filename: metadata.filename.replace('zip', 'dmg'),
   }));
 }
 
@@ -468,6 +484,6 @@ const latestInstaller = _.memoize(latestYamlUrl => {
     .then(text => yaml.safeLoad(text))
     .then(datum => ({
       filename: datum.path,
-      version: datum.version
+      version: datum.version,
     }));
 });

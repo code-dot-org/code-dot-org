@@ -11,3 +11,5 @@ MARKDOWN
 teacher_markdown <<MARKDOWN
 To draw a hexagon, a six straight lines are drawn with 120 degrees between each line. In other words, a loop can be used to draw one line and turn 120 degrees, repeated six times.
 MARKDOWN
+
+allow_multiple_attempts true

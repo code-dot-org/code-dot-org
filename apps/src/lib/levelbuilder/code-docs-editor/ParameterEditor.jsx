@@ -45,7 +45,7 @@ export default function ParameterEditor({parameter, update}) {
 
 ParameterEditor.propTypes = {
   parameter: PropTypes.object,
-  update: PropTypes.func
+  update: PropTypes.func,
 };
 
 const styles = {
@@ -56,9 +56,9 @@ const styles = {
     color: '#555',
     border: `1px solid ${color.bootstrap_border_color}`,
     borderRadius: 4,
-    margin: 0
+    margin: 0,
   },
   checkboxInput: {
-    margin: '0px 4px'
-  }
+    margin: '0px 4px',
+  },
 };

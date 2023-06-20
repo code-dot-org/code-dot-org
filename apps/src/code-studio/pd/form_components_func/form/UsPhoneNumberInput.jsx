@@ -21,5 +21,5 @@ export const UsPhoneNumberInput = props => {
 };
 UsPhoneNumberInput.propTypes = {
   // the name of the input
-  name: PropTypes.string.isRequired
+  name: PropTypes.string.isRequired,
 };

@@ -51,10 +51,14 @@
     "libraries_enabled": "false",
     "ai_enabled": "false",
     "project_template_level_name": "CSD U6 - Physical Input - SB Template_mb2022",
+    "preload_asset_list": null,
     "encrypted_examples": [
 
     ],
-    "preload_asset_list": null
+    "reference_links": [
+      "/courses/csd-2022/guides/microbit-circuits-buttons",
+      "/courses/csd-2022/guides/board-events"
+    ]
   },
   "game_id": 41,
   "published": true,
@@ -62,7 +66,7 @@
   "level_num": "custom",
   "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-02-01T10:53:18.861+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Physical Input - SB3_2222\\\"\"],\"cloned_from\":\"CSD U6 - Physical Input - SB3_2222\"},{\"changed_at\":\"2023-02-22 02:55:41 +0000\",\"changed\":[\"makerlab_enabled\",\"long_instructions\",\"reference_links\",\"map_reference\",\"start_html\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-02-01T10:53:18.861+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Physical Input - SB3_2222\\\"\"],\"cloned_from\":\"CSD U6 - Physical Input - SB3_2222\"},{\"changed_at\":\"2023-02-22 02:55:41 +0000\",\"changed\":[\"makerlab_enabled\",\"long_instructions\",\"reference_links\",\"map_reference\",\"start_html\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-03-29 23:29:22 +0000\",\"changed\":[\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

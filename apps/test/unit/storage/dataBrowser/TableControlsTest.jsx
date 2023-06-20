@@ -9,7 +9,7 @@ import {
   getStore,
   registerReducers,
   stubRedux,
-  restoreRedux
+  restoreRedux,
 } from '@cdo/apps/redux';
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 import commonReducers from '@cdo/apps/redux/commonReducers';
@@ -20,7 +20,7 @@ import experiments from '@cdo/apps/util/experiments';
 import {ChartType} from '@cdo/apps/storage/dataBrowser/dataUtils';
 import TableControls from '@cdo/apps/storage/dataBrowser/TableControls';
 import VisualizerModal, {
-  INITIAL_STATE as VISUALIZER_MODAL_INITIAL_STATE
+  INITIAL_STATE as VISUALIZER_MODAL_INITIAL_STATE,
 } from '@cdo/apps/storage/dataBrowser/dataVisualizer/VisualizerModal';
 
 const DEFAULT_PROPS = {
@@ -29,7 +29,7 @@ const DEFAULT_PROPS = {
   exportCsv: () => {},
   importCsv: () => {},
   tableName: 'tableName',
-  readOnly: false
+  readOnly: false,
 };
 
 describe('TableControls', () => {
@@ -55,24 +55,21 @@ describe('TableControls', () => {
     );
     setModalState(wrapper, {
       chartType: ChartType.BAR_CHART,
-      selectedColumn1: 'column'
+      selectedColumn1: 'column',
     });
     assertModalState(wrapper, {
       ...VISUALIZER_MODAL_INITIAL_STATE,
       chartType: ChartType.BAR_CHART,
-      selectedColumn1: 'column'
+      selectedColumn1: 'column',
     });
     setModalProps(wrapper, {
-      tableName: 'differentTable'
+      tableName: 'differentTable',
     });
     assertModalState(wrapper, VISUALIZER_MODAL_INITIAL_STATE);
   });
 
   function getModal(wrapper) {
-    return wrapper
-      .find(VisualizerModal)
-      .children()
-      .first();
+    return wrapper.find(VisualizerModal).children().first();
   }
 
   function assertModalState(wrapper, expectedState) {
@@ -85,7 +82,7 @@ describe('TableControls', () => {
 
   function setModalProps(wrapper, newProps) {
     wrapper.setProps({
-      children: React.cloneElement(wrapper.props().children, newProps)
+      children: React.cloneElement(wrapper.props().children, newProps),
     });
   }
 

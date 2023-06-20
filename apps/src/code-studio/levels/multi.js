@@ -3,14 +3,18 @@ import React from 'react';
 import {
   registerGetResult,
   onAnswerChanged,
-  resetContainedLevel
+  resetContainedLevel,
 } from './codeStudioLevels';
 import {sourceForLevel} from '../clientState';
 import Sounds from '../../Sounds';
-import {LegacyTooFewDialog} from '@cdo/apps/lib/ui/LegacyDialogContents';
+import {
+  LegacyIncorrectDialog,
+  LegacyTooFewDialog,
+} from '@cdo/apps/lib/ui/LegacyDialogContents';
 import {reportTeacherReviewingStudentNonLabLevel} from '@cdo/apps/lib/util/analyticsUtils';
+import {TestResults} from '../../constants';
 
-var Multi = function(
+var Multi = function (
   levelId,
   id,
   app,
@@ -19,7 +23,8 @@ var Multi = function(
   answers,
   answersFeedback,
   lastAttemptString,
-  containedMode
+  containedMode,
+  allowMultipleAttempts
 ) {
   // The dashboard levelId.
   this.levelId = levelId;
@@ -59,14 +64,16 @@ var Multi = function(
 
   this.submitAllowed = true;
 
+  this.allowMultipleAttempts = !!allowMultipleAttempts;
+
   $(document).ready(() => this.ready());
 };
 
-Multi.prototype.enableButton = function(enable) {
+Multi.prototype.enableButton = function (enable) {
   $('#' + this.id + ' .submitButton').attr('disabled', !enable);
 };
 
-Multi.prototype.choiceClicked = function(button) {
+Multi.prototype.choiceClicked = function (button) {
   if (!this.submitAllowed) {
     return;
   }
@@ -79,7 +86,7 @@ Multi.prototype.choiceClicked = function(button) {
   onAnswerChanged(this.levelId, true);
 };
 
-Multi.prototype.clickItem = function(index) {
+Multi.prototype.clickItem = function (index) {
   // If this button is already crossed, do nothing more.
   if (this.crossedAnswers.indexOf(index) !== -1) {
     return;
@@ -117,11 +124,10 @@ Multi.prototype.clickItem = function(index) {
       $('#' + this.id + ' #checked_' + unselectIndex).hide();
     }
   }
-
   return true;
 };
 
-Multi.prototype.unclickItem = function(index) {
+Multi.prototype.unclickItem = function (index) {
   var selectedItemIndex = this.selectedAnswers.indexOf(index);
   this.selectedAnswers.splice(selectedItemIndex, 1);
 
@@ -131,7 +137,7 @@ Multi.prototype.unclickItem = function(index) {
 };
 
 // called on $.ready
-Multi.prototype.ready = function() {
+Multi.prototype.ready = function () {
   // Are we read-only?  This can be because we're a teacher OR because an answer
   // has been previously submitted.
   if (window.appOptions.readonlyWorkspace && !this.containedMode) {
@@ -155,20 +161,16 @@ Multi.prototype.ready = function() {
   }
 
   $('#' + this.id + ' .answerbutton').click(
-    $.proxy(function(event) {
-      //console.log("answerbutton clicked", this.id);
+    $.proxy(function (event) {
       this.choiceClicked($(event.currentTarget));
     }, this)
   );
 
   $('#' + this.id + ' #voteform img').on(
     'dragstart',
-    $.proxy(function(event) {
+    $.proxy(function (event) {
       // Prevent button images from being dragged, click the button instead.
-      var button = $(event.currentTarget)
-        .parent()
-        .parent()
-        .parent();
+      var button = $(event.currentTarget).parent().parent().parent();
       this.choiceClicked(button);
       event.preventDefault();
       event.stopPropagation();
@@ -203,32 +205,38 @@ Multi.prototype.ready = function() {
       resetButton.click(() => resetContainedLevel());
     }
   }
+
+  if (this.correctNumberAnswersSelected() && !this.allowMultipleAttempts) {
+    this.lockAnswers();
+  }
 };
 
-Multi.prototype.lockAnswers = function() {
+Multi.prototype.lockAnswers = function () {
+  if (this.allowMultipleAttempts) {
+    return;
+  }
   $('#' + this.id + ' .answerbutton').addClass('lock-answers');
   $('#reset-predict-progress-button')?.prop('disabled', false);
 };
 
-Multi.prototype.resetAnswers = function() {
+Multi.prototype.correctNumberAnswersSelected = function () {
+  return this.selectedAnswers.length === this.numAnswers;
+};
+
+Multi.prototype.resetAnswers = function () {
   $('#' + this.id + ' .answerbutton').removeClass('lock-answers');
   $('#reset-predict-progress-button')?.prop('disabled', true);
   this.selectedAnswers.forEach(idx => this.unclickItem(idx));
 };
 
-Multi.prototype.getAppName = function() {
+Multi.prototype.getAppName = function () {
   return this.app;
 };
 
 // called by external result-posting code
-Multi.prototype.getResult = function(dontAllowSubmit) {
+Multi.prototype.getResult = function (dontAllowSubmit) {
   let answer;
-  let errorDialog;
   let valid;
-
-  if (this.numAnswers > 1 && this.selectedAnswers.length !== this.numAnswers) {
-    errorDialog = <LegacyTooFewDialog />;
-  }
 
   if (this.numAnswers === 1) {
     answer = this.lastSelectionIndex;
@@ -238,8 +246,18 @@ Multi.prototype.getResult = function(dontAllowSubmit) {
     valid = this.selectedAnswers.length === this.numAnswers;
   }
 
-  var result;
-  var submitted;
+  let result;
+  let submitted;
+  let errorDialog;
+  let testResult;
+
+  const answerIsCorrect = this.validateAnswers();
+  const tooFewAnswers = !this.correctNumberAnswersSelected();
+  if (tooFewAnswers) {
+    errorDialog = <LegacyTooFewDialog />;
+  } else if (!this.allowMultipleAttempts && !answerIsCorrect) {
+    errorDialog = <LegacyIncorrectDialog />;
+  }
 
   if (
     !dontAllowSubmit &&
@@ -247,22 +265,32 @@ Multi.prototype.getResult = function(dontAllowSubmit) {
   ) {
     result = true;
     submitted = true;
+  } else if (tooFewAnswers) {
+    result = false;
+    submitted = false;
+  } else if (!this.allowMultipleAttempts) {
+    submitted = false;
+    result = answerIsCorrect;
+    // This isn't a great enum for this, but its description suggests it's the best option.
+    // Particularly: "Not validated, but should be treated as a success"
+    testResult = TestResults.CONTAINED_LEVEL_RESULT;
   } else {
-    result = this.validateAnswers();
+    result = answerIsCorrect;
     submitted = false;
   }
 
   return {
     response: answer,
-    result: result,
-    errorDialog: errorDialog,
-    submitted: submitted,
-    valid: valid
+    result,
+    errorDialog,
+    submitted,
+    valid,
+    testResult,
   };
 };
 
 // called by external code that will display answer feedback
-Multi.prototype.getCurrentAnswerFeedback = function() {
+Multi.prototype.getCurrentAnswerFeedback = function () {
   if (!this.answersFeedback) {
     return;
   }
@@ -277,10 +305,16 @@ Multi.prototype.getCurrentAnswerFeedback = function() {
 };
 
 // This behavior should only be available when this is a standalone Multi.
-Multi.prototype.submitButtonClick = function() {
+Multi.prototype.submitButtonClick = function () {
   // Don't show right/wrong answers for submittable.
   if (window.appOptions.level.submittable || this.forceSubmittable) {
     return;
+  }
+
+  if (!this.allowMultipleAttempts && this.correctNumberAnswersSelected()) {
+    this.lockAnswers();
+    $('.submitButton')?.hide();
+    $('.nextLevelButton')?.show();
   }
 
   // If the solution only takes one answer, and it's wrong, and it's not
@@ -300,7 +334,7 @@ Multi.prototype.submitButtonClick = function() {
  * @returns {boolean} True if this Multi has been provided with answers, and the
  *   selected answer(s) are the correct one(s).
  */
-Multi.prototype.validateAnswers = function() {
+Multi.prototype.validateAnswers = function () {
   if (!this.answers) {
     return false;
   }

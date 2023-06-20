@@ -25,6 +25,6 @@ $(document).ready(() => {
 
 function logUserLoginType(loginType) {
   analyticsReporter.sendEvent(EVENTS.SIGN_UP_LOGIN_TYPE_PICKED_EVENT, {
-    'user login type': loginType
+    'user login type': loginType,
   });
 }

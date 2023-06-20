@@ -1,9 +1,5 @@
 <FreeResponse>
   <config><![CDATA[{
-  "game_id": 52,
-  "created_at": "2022-10-19T18:19:37.000Z",
-  "level_num": "custom",
-  "user_id": 0,
   "properties": {
     "title": "Reflection:",
     "long_instructions": "Think back on the Font Tester App. Can you think of an example of another app or feature of an app which would use a loop to control different elements on a screen?\r\n\r\n\r\n",
@@ -17,8 +13,13 @@
     "allow_user_uploads": "false",
     "submittable": "false",
     "peer_reviewable": "false",
-    "optional": "false"
+    "optional": "false",
+    "allow_multiple_attempts": "true"
   },
+  "level_num": "custom",
+  "game_id": 52,
+  "created_at": "2022-10-19T18:19:37.000Z",
+  "user_id": 0,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-10-19T18:19:37.236+00:00\",\"changed\":[\"cloned from \\\"U3L6 CSP CFU Element Looping2022\\\"\"],\"cloned_from\":\"U3L6 CSP CFU Element Looping2022\"}]"

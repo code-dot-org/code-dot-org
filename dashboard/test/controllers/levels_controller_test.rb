@@ -76,6 +76,16 @@ class LevelsControllerTest < ActionController::TestCase
     )
   end
 
+  test "should return level_data " do
+    level = create :maze, name: 'music 1', properties: {level_data: {hello: "there"}, other: "other"}
+
+    get :level_data, params: {id: level}
+    assert_response :success
+
+    body = JSON.parse(response.body)
+    assert_equal({"level_data" => {"hello" => "there"}}, body)
+  end
+
   test "should get filtered levels with just page param" do
     get :get_filtered_levels, params: {page: 1}
     assert_equal 7, JSON.parse(@response.body)['levels'].length
@@ -700,7 +710,7 @@ class LevelsControllerTest < ActionController::TestCase
   end
 
   test "should load file contents when editing a dsl defined level" do
-    level_path = 'config/scripts/test_demo_level.external'
+    level_path = "#{Rails.root}/config/scripts/test_demo_level.external"
     contents = File.read(level_path)
     data, _ = External.parse(contents, level_path)
     External.setup data
@@ -713,7 +723,7 @@ class LevelsControllerTest < ActionController::TestCase
   end
 
   test "should load encrypted file contents when editing a dsl defined level with the wrong encryption key" do
-    level_path = 'config/scripts/test_external_markdown.external'
+    level_path = "#{Rails.root}/config/scripts/test_external_markdown.external"
     contents = File.read(level_path)
     data, _ = External.parse(contents, level_path)
     External.setup data

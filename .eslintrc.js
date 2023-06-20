@@ -3,21 +3,14 @@
 // or overridden for a particular subset of the project.  See
 // other .eslintrc.js files for those rules.
 module.exports = {
-  plugins: ["react", "react-hooks", "mocha", "babel", "cdo-custom-rules"],
-  extends: [
-    "plugin:prettier/recommended",
-    "eslint:recommended",
-    "plugin:react/recommended",
-  ],
+  extends: ["eslint:recommended"],
   env: {
     browser: true,
     node: true,
     mocha: true,
   },
   rules: {
-    "cdo-custom-rules/style-blocks-below-class": "error",
     "array-bracket-spacing": ["error", "never"],
-    "babel/semi": "error", // autofixable
     "brace-style": ["error", "1tbs", { allowSingleLine: true }],
     "comma-dangle": "off",
     curly: "error",
@@ -26,7 +19,6 @@ module.exports = {
     eqeqeq: "error",
     "jsx-quotes": "error", // autofixable
     "keyword-spacing": "error",
-    "mocha/no-exclusive-tests": "error",
     "no-array-constructor": "error",
     "no-console": "off",
     "no-duplicate-imports": "error",
@@ -36,37 +28,20 @@ module.exports = {
     "no-extra-boolean-cast": "off",
     "no-implicit-globals": "error",
     "no-new-object": "error",
-    "no-restricted-imports": ["error", "radium"],
+    "no-redeclare": ["error", { builtinGlobals: true }],
+
+    // In Feb 2022, we voted to deprecate Radium (proposal at https://docs.google.com/document/d/1Y3uK_iYMhTUaCI6yIDwOAMprIJCuzXSs2fECQggwp60/edit#heading=h.htf3pg55q2kt)
+    // We are now using 'react-bootstrap-2'. See further work at https://github.com/code-dot-org/code-dot-org/pull/51681
+    "no-restricted-imports": ["error", "radium", "react-bootstrap"],
+
     "no-trailing-spaces": "error",
     "no-undef": "error",
     "no-unused-vars": ["error", { args: "none" }],
     "no-useless-escape": "off",
     "no-with": "error",
     "object-curly-spacing": "off",
-    "react/button-has-type": "error",
-    "react/display-name": "off",
-    "react/jsx-closing-bracket-location": "error", // autofixable
-    "react/jsx-curly-spacing": "error", // autofixable
-    "react/jsx-first-prop-new-line": ["error", "multiline"],
-    "react/jsx-indent-props": ["error", 2], // autofixable
-    "react/jsx-key": "off",
-    "react/jsx-no-target-blank": "error",
-    "react/jsx-wrap-multilines": "error", // autofixable
-    "react/no-find-dom-node": "off",
-    "react/no-render-return-value": "off",
-    "react/no-string-refs": "off",
-    "react/no-unescaped-entities": "off",
-    "react/self-closing-comp": "error",
-    "react/no-danger": "error",
-    "react-hooks/exhaustive-deps": "error",
-    "react-hooks/rules-of-hooks": "error",
     semi: "off", // enforced by babel/semi
     "space-before-blocks": "error",
     strict: "error",
-  },
-  settings: {
-    react: {
-      version: "detect",
-    },
   },
 };

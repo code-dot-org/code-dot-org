@@ -1,19 +1,18 @@
 import PropTypes from 'prop-types';
-import React, {useContext} from 'react';
-import {PlayerUtilsContext} from '../context';
+import React from 'react';
+import {useSelector} from 'react-redux';
 import TimelineElement from './TimelineElement';
 
 /**
  * Renders timeline events for the simple2 model.
  */
 const TimelineSimple2Events = ({
-  currentPlayheadPosition,
+  paddingOffset,
   barWidth,
   eventVerticalSpace,
-  getEventHeight
+  getEventHeight,
 }) => {
-  const playerUtils = useContext(PlayerUtilsContext);
-  const soundEvents = playerUtils.getSoundEvents();
+  const soundEvents = useSelector(state => state.music.playbackEvents);
 
   const getVerticalOffsetForEventId = id => {
     return (
@@ -32,8 +31,8 @@ const TimelineSimple2Events = ({
   // that we recalculate unique sounds, even when there are no entries to
   // render.
   const currentUniqueSounds = [];
-  for (const songEvent of soundEvents) {
-    const id = songEvent.functionContext.name + ' ' + songEvent.id;
+  for (const soundEvent of soundEvents) {
+    const id = soundEvent.functionContext.name + ' ' + soundEvent.id;
     if (currentUniqueSounds.indexOf(id) === -1) {
       currentUniqueSounds.push(id);
     }
@@ -49,9 +48,8 @@ const TimelineSimple2Events = ({
   for (const soundEvent of soundEvents) {
     const soundId = soundEvent.id;
     const functionName = soundEvent.functionContext.name;
-    const length = playerUtils.getLengthForId(soundId);
     const positionLeft = soundEvent.when;
-    const positionRight = positionLeft + length;
+    const positionRight = positionLeft + soundEvent.length;
     const positionTop = getVerticalOffsetForEventId(
       functionName + ' ' + soundId
     );
@@ -68,7 +66,7 @@ const TimelineSimple2Events = ({
         positionLeft: positionLeft,
         positionRight: positionRight,
         positionTop: positionTop,
-        positionBottom: positionBottom
+        positionBottom: positionBottom,
       });
     } else {
       const item = uniqueFunctionExtents[uniqueFunctionIndex];
@@ -77,40 +75,40 @@ const TimelineSimple2Events = ({
         positionLeft: Math.min(item.positionLeft, positionLeft),
         positionRight: Math.max(item.positionRight, positionRight),
         positionTop: Math.min(item.positionTop, positionTop),
-        positionBottom: Math.max(item.positionBottom, positionBottom)
+        positionBottom: Math.max(item.positionBottom, positionBottom),
       };
     }
   }
 
   return (
-    <div style={{position: 'relative'}}>
-      <div style={{position: 'absolute'}}>
+    <div id="timeline-events">
+      <div id="timeline-events-funtion-extents">
         {uniqueFunctionExtents.map((uniqueFunction, index) => (
           <div
             key={index}
             style={{
               position: 'absolute',
-              backgroundColor: 'rgba(115 115 115 / 0.7)',
+              backgroundColor: 'rgba(255 255 255 / 0.12)',
               borderRadius: 8,
-              left: (uniqueFunction.positionLeft - 1) * barWidth,
+              left:
+                paddingOffset + (uniqueFunction.positionLeft - 1) * barWidth,
               width:
                 (uniqueFunction.positionRight - uniqueFunction.positionLeft) *
-                  barWidth -
-                4,
-              top: 20 + uniqueFunction.positionTop,
+                barWidth,
+              top: 32 + uniqueFunction.positionTop,
               height:
-                uniqueFunction.positionBottom - uniqueFunction.positionTop - 3
+                uniqueFunction.positionBottom - uniqueFunction.positionTop - 3,
             }}
           >
             &nbsp;
           </div>
         ))}
       </div>
-      <div style={{position: 'absolute'}}>
+      <div id="timeline-events-sound-events">
         {soundEvents.map((eventData, index) => (
           <TimelineElement
             key={index}
-            soundId={eventData.id}
+            eventData={eventData}
             barWidth={barWidth}
             height={
               getEventHeight(currentUniqueSounds.length) -
@@ -118,14 +116,14 @@ const TimelineSimple2Events = ({
               1
             }
             top={
-              20 +
+              32 +
               getVerticalOffsetForEventId(
                 eventData.functionContext.name + ' ' + eventData.id
               )
             }
-            left={barWidth * (eventData.when - 1)}
+            left={paddingOffset + barWidth * (eventData.when - 1)}
             when={eventData.when}
-            currentPlayheadPosition={currentPlayheadPosition}
+            skipContext={eventData.skipContext}
           />
         ))}
       </div>
@@ -134,10 +132,10 @@ const TimelineSimple2Events = ({
 };
 
 TimelineSimple2Events.propTypes = {
-  currentPlayheadPosition: PropTypes.number.isRequired,
+  paddingOffset: PropTypes.number.isRequired,
   barWidth: PropTypes.number.isRequired,
   eventVerticalSpace: PropTypes.number.isRequired,
-  getEventHeight: PropTypes.func.isRequired
+  getEventHeight: PropTypes.func.isRequired,
 };
 
 export default TimelineSimple2Events;

@@ -1,0 +1,38 @@
+{
+  "include": [
+    "./src/**/*.ts",
+    "./src/**/*.tsx",
+    // Include all folders with .js and .jsx files that ts files reference.
+    // If you need to import a .js or .jsx file into a .ts or .tsx file, you
+    // can add its folder here to enable the syntax:
+    // import {component} from "folder/component";
+    "./src/music/**/*.js*",
+    "./src/*.js*",
+    "./src/javalab/**/*.js",
+    "./src/lib/util/**/*.js",
+    "./src/util/**/*.js*",
+    "./src/templates/**/*.js*",
+    "./src/code-studio/pd/components/*.js*",
+    "./src/code-studio/*.js"
+  ],
+  "compilerOptions": {
+    "jsx": "react",
+    "target": "es5",
+    "lib": ["ES2019", "DOM"],
+    "module": "es6",
+    "rootDir": "./",
+    "moduleResolution": "node",
+    "outDir": "build",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipDefaultLibCheck": true,
+    "skipLibCheck": true,
+    "allowJs": true,
+    "baseUrl": "./",
+    "paths": {
+      "@cdo/apps/*": ["./src/*"]
+    }
+  }
+}

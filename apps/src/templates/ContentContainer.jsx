@@ -21,7 +21,7 @@ class ContentContainer extends Component {
   static propTypes = {
     children: PropTypes.oneOfType([
       PropTypes.node,
-      PropTypes.arrayOf(PropTypes.node)
+      PropTypes.arrayOf(PropTypes.node),
     ]),
     heading: PropTypes.string,
     linkText: PropTypes.string,
@@ -29,7 +29,7 @@ class ContentContainer extends Component {
     isRtl: PropTypes.bool.isRequired,
     description: PropTypes.string,
     responsiveSize: PropTypes.oneOf(['lg', 'md', 'sm', 'xs']).isRequired,
-    hideBottomMargin: PropTypes.bool
+    hideBottomMargin: PropTypes.bool,
   };
 
   render() {
@@ -40,7 +40,7 @@ class ContentContainer extends Component {
       description,
       isRtl,
       responsiveSize,
-      hideBottomMargin
+      hideBottomMargin,
     } = this.props;
 
     const showLinkTop = responsiveSize === 'lg' && link && linkText;
@@ -85,7 +85,7 @@ class Link extends Component {
     linkText: PropTypes.string.isRequired,
     link: PropTypes.string.isRequired,
     isRtl: PropTypes.bool.isRequired,
-    bottom: PropTypes.bool
+    bottom: PropTypes.bool,
   };
 
   render() {
@@ -116,46 +116,46 @@ class Link extends Component {
 
 const styles = {
   box: {
-    width: contentWidth
+    width: contentWidth,
   },
   boxResponsive: {
-    width: '100%'
+    width: '100%',
   },
   bottomMargin: {
-    marginBottom: 60
+    marginBottom: 60,
   },
   headingBox: {
     paddingRight: 10,
     paddingTop: 10,
     overflow: 'hidden',
     zIndex: 2,
-    position: 'relative'
+    position: 'relative',
   },
   headingText: {
     fontSize: 24,
     lineHeight: '26px',
     color: color.neutral_dark,
     float: 'left',
-    paddingRight: 20
+    paddingRight: 20,
   },
   headingTextRtl: {
     fontSize: 24,
     lineHeight: '26px',
     color: color.neutral_dark,
     float: 'right',
-    paddingLeft: 20
+    paddingLeft: 20,
   },
   standaloneLinkBox: {
     paddingTop: 10,
     position: 'relative',
-    clear: 'both'
+    clear: 'both',
   },
   linkBox: {
     display: 'inline',
     position: 'absolute',
     bottom: 20,
     right: 0,
-    lineHeight: linkBoxLineHeight
+    lineHeight: linkBoxLineHeight,
   },
   linkBoxRtl: {
     display: 'inline',
@@ -164,15 +164,15 @@ const styles = {
     position: 'absolute',
     bottom: 20,
     left: 0,
-    lineHeight: linkBoxLineHeight
+    lineHeight: linkBoxLineHeight,
   },
   linkBoxBottom: {
     display: 'inline',
-    left: 0
+    left: 0,
   },
   linkBoxRtlBottom: {
     display: 'inline',
-    right: 0
+    right: 0,
   },
   description: {
     fontSize: 14,
@@ -183,40 +183,40 @@ const styles = {
     width: '100%',
     marginTop: -10,
     marginBottom: 10,
-    clear: 'both'
+    clear: 'both',
   },
   linkTag: {
-    textDecoration: 'none'
+    textDecoration: 'none',
   },
   linkToViewAll: {
     fontSize: 14,
     fontFamily: `'Gotham 5r', sans-serif`,
     marginTop: -2,
-    display: 'inline'
+    display: 'inline',
   },
   chevron: {
     display: 'inline',
     fontSize: 10,
     fontWeight: 'bold',
-    marginLeft: 15
+    marginLeft: 15,
   },
   chevronRtl: {
     display: 'inline',
     color: color.neutral_dark,
     fontSize: 10,
     fontWeight: 'bold',
-    marginRight: 15
+    marginRight: 15,
   },
   children: {
     justifyContent: 'space-between',
-    flexWrap: 'wrap'
+    flexWrap: 'wrap',
   },
   clear: {
-    clear: 'both'
-  }
+    clear: 'both',
+  },
 };
 
 export default connect(state => ({
   responsiveSize: state.responsive.responsiveSize,
-  isRtl: state.isRtl
+  isRtl: state.isRtl,
 }))(Radium(ContentContainer));

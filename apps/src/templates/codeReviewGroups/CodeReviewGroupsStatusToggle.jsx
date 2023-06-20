@@ -8,13 +8,13 @@ import ToggleSwitch from '@cdo/apps/code-studio/components/ToggleSwitch';
 import color from '@cdo/apps/util/color';
 import {
   setSectionCodeReviewExpiresAt,
-  selectedSection
+  selectedSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
 function CodeReviewGroupsStatusToggle({
   codeReviewExpiresAt,
   sectionId,
-  setCodeReviewExpiration
+  setCodeReviewExpiration,
 }) {
   const [saveError, setSaveError] = useState(false);
   const [saveInProgress, setSaveInProgress] = useState(false);
@@ -79,19 +79,20 @@ function CodeReviewGroupsStatusToggle({
 CodeReviewGroupsStatusToggle.propTypes = {
   codeReviewExpiresAt: PropTypes.number,
   sectionId: PropTypes.number,
-  setCodeReviewExpiration: PropTypes.func
+  setCodeReviewExpiration: PropTypes.func,
 };
 
-export const UnconnectedCodeReviewGroupsStatusToggle = CodeReviewGroupsStatusToggle;
+export const UnconnectedCodeReviewGroupsStatusToggle =
+  CodeReviewGroupsStatusToggle;
 
 export default connect(
   state => ({
     codeReviewExpiresAt: selectedSection(state).codeReviewExpiresAt,
-    sectionId: selectedSection(state).id
+    sectionId: selectedSection(state).id,
   }),
   dispatch => ({
     setCodeReviewExpiration: (sectionId, expiration) =>
-      dispatch(setSectionCodeReviewExpiresAt(sectionId, expiration))
+      dispatch(setSectionCodeReviewExpiresAt(sectionId, expiration)),
   })
 )(CodeReviewGroupsStatusToggle);
 
@@ -99,16 +100,16 @@ const styles = {
   enabledMessage: {
     fontStyle: 'italic',
     color: color.dark_charcoal,
-    width: 360
+    width: 360,
   },
   saveError: {
     color: color.red,
-    margin: 8
+    margin: 8,
   },
   toggleAndError: {
-    display: 'flex'
+    display: 'flex',
   },
   spinner: {
-    marginLeft: 8
-  }
+    marginLeft: 8,
+  },
 };

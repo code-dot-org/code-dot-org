@@ -1,5 +1,5 @@
 import React from 'react';
-import {FormGroup} from 'react-bootstrap';
+import {FormGroup} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import FormComponent from '../form_components/FormComponent';
 
 const BUTTON_LABELS = {
@@ -20,7 +20,7 @@ const BUTTON_LABELS = {
   bestPdEver:
     "This was the absolute best professional development I've ever participated in.",
   partOfCommunity:
-    'I feel more connected to the community of computer science teachers after this workshop.'
+    'I feel more connected to the community of computer science teachers after this workshop.',
 };
 
 export default class WorkshopResults extends FormComponent {
@@ -35,25 +35,25 @@ export default class WorkshopResults extends FormComponent {
           label: this.labelFor('morePreparedThanBefore'),
           name: 'morePreparedThanBefore',
           required: true,
-          type: 'radio'
+          type: 'radio',
         })}
         {this.buildButtonsFromOptions({
           label: this.labelFor('knowWhereToGoForHelp'),
           name: 'knowWhereToGoForHelp',
           required: true,
-          type: 'radio'
+          type: 'radio',
         })}
         {this.buildButtonsFromOptions({
           label: this.labelFor('suitableForMyExperience'),
           name: 'suitableForMyExperience',
           required: true,
-          type: 'radio'
+          type: 'radio',
         })}
         {this.buildButtonsFromOptions({
           label: this.labelFor('wouldRecommend'),
           name: 'wouldRecommend',
           required: true,
-          type: 'radio'
+          type: 'radio',
         })}
 
         {this.props.isLocalSummer &&
@@ -61,34 +61,34 @@ export default class WorkshopResults extends FormComponent {
             label: this.labelFor('anticipateContinuing'),
             name: 'anticipateContinuing',
             required: true,
-            type: 'radio'
+            type: 'radio',
           })}
         {this.props.isLocalSummer &&
           this.buildButtonsFromOptions({
             label: this.labelFor('confidentCanTeach'),
             name: 'confidentCanTeach',
             required: true,
-            type: 'radio'
+            type: 'radio',
           })}
         {this.props.isLocalSummer &&
           this.buildButtonsFromOptions({
             label: this.labelFor('believeAllStudents'),
             name: 'believeAllStudents',
             required: true,
-            type: 'radio'
+            type: 'radio',
           })}
 
         {this.buildButtonsFromOptions({
           label: this.labelFor('bestPdEver'),
           name: 'bestPdEver',
           required: true,
-          type: 'radio'
+          type: 'radio',
         })}
         {this.buildButtonsFromOptions({
           label: this.labelFor('partOfCommunity'),
           name: 'partOfCommunity',
           required: true,
-          type: 'radio'
+          type: 'radio',
         })}
 
         {this.buildFieldGroup({
@@ -96,21 +96,21 @@ export default class WorkshopResults extends FormComponent {
           label:
             'What were the two things you liked most about the activities you did in this workshop and why?',
           name: 'thingsYouLiked',
-          required: true
+          required: true,
         })}
         {this.buildFieldGroup({
           componentClass: 'textarea',
           label:
             'What are the two things you would change about the activities you did in this workshop? How would you improve them for future participants?',
           name: 'thingsYouWouldChange',
-          required: true
+          required: true,
         })}
         {this.buildFieldGroup({
           componentClass: 'textarea',
           label:
             'Is there anything else you’d like to tell us about your experience at this workshop?',
           name: 'anythingElse',
-          required: false
+          required: false,
         })}
 
         {!this.props.isLocalSummer &&
@@ -119,7 +119,7 @@ export default class WorkshopResults extends FormComponent {
               'Would you be willing to talk to someone at Code.org about your PD experiences?',
             name: 'willingToTalk',
             required: true,
-            type: 'radio'
+            type: 'radio',
           })}
         {this.props.data.willingToTalk &&
           this.props.data.willingToTalk === 'Yes' &&
@@ -127,7 +127,7 @@ export default class WorkshopResults extends FormComponent {
             label: 'Please provide the best method for contacting you.',
             name: 'howToContact',
             required: true,
-            type: 'text'
+            type: 'text',
           })}
 
         {this.props.isLocalSummer &&
@@ -136,7 +136,7 @@ export default class WorkshopResults extends FormComponent {
               'I give Code.org permission to quote my written feedback from today for use on social media, promotional materials, and other communications. (We love sharing what our teachers think about us!)',
             name: 'givePermissionToQuote',
             required: true,
-            type: 'radio'
+            type: 'radio',
           })}
       </FormGroup>
     );
@@ -149,5 +149,5 @@ WorkshopResults.associatedFields = Object.keys(BUTTON_LABELS).concat([
   'anythingElse',
   'willingToTalk',
   'howToContact',
-  'givePermissionToQuote'
+  'givePermissionToQuote',
 ]);

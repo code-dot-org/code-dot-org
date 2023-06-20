@@ -14,6 +14,10 @@
 #  marketing_initiative :string(255)
 #  grade_levels         :string(255)
 #  header               :string(255)
+#  image                :string(255)
+#  cs_topic             :string(255)
+#  school_subject       :string(255)
+#  device_compatibility :string(255)
 #
 # Indexes
 #
@@ -28,6 +32,7 @@ class CourseOffering < ApplicationRecord
   validates :category, acceptance: {accept: Curriculum::SharedCourseConstants::COURSE_OFFERING_CATEGORIES, message: "must be one of the course offering categories. Expected one of: #{Curriculum::SharedCourseConstants::COURSE_OFFERING_CATEGORIES}. Got: \"%{value}\"."}
   validates :curriculum_type, acceptance: {accept: Curriculum::SharedCourseConstants::COURSE_OFFERING_CURRICULUM_TYPES.to_h.values, message: "must be one of the course offering curriculum types. Expected one of: #{Curriculum::SharedCourseConstants::COURSE_OFFERING_CURRICULUM_TYPES.to_h.values}. Got: \"%{value}\"."}
   validates :marketing_initiative, acceptance: {accept: Curriculum::SharedCourseConstants::COURSE_OFFERING_MARKETING_INITIATIVES.to_h.values, message: "must be one of the course offering marketing initiatives. Expected one of: #{Curriculum::SharedCourseConstants::COURSE_OFFERING_MARKETING_INITIATIVES.to_h.values}. Got: \"%{value}\"."}
+  validate :grade_levels_format
 
   KEY_CHAR_RE = /[a-z0-9\-]/
   KEY_RE = /\A#{KEY_CHAR_RE}+\Z/
@@ -38,6 +43,15 @@ class CourseOffering < ApplicationRecord
   ELEMENTARY_SCHOOL_GRADES = %w[K 1 2 3 4 5].freeze
   MIDDLE_SCHOOL_GRADES = %w[6 7 8].freeze
   HIGH_SCHOOL_GRADES = %w[9 10 11 12].freeze
+
+  DURATION_LABEL_TO_MINUTES_CAP = {
+    lesson: 90,
+    week: 250,
+    month: 950,
+    quarter: 2500,
+    semester: 5000,
+    school_year: 525600,
+  }
 
   # Seeding method for creating / updating / deleting a CourseOffering and CourseVersion for the given
   # potential content root, i.e. a Unit or UnitGroup.
@@ -73,6 +87,31 @@ class CourseOffering < ApplicationRecord
     offering
   end
 
+  def latest_published_version
+    course_versions.select do |cv|
+      cv.content_root.launched?
+    end.max_by(&:version_year)
+  end
+
+  def path_to_latest_published_version
+    return nil unless latest_published_version
+    latest_published_version.content_root.link
+  end
+
+  def course_id
+    return unless latest_published_version&.content_root_type == 'UnitGroup'
+    latest_published_version.content_root.id
+  end
+
+  def script_id
+    return unless latest_published_version&.content_root_type == 'Unit'
+    latest_published_version.content_root.id
+  end
+
+  def standalone_unit?
+    latest_published_version&.content_root_type == 'Unit'
+  end
+
   def self.should_cache?
     Unit.should_cache?
   end
@@ -104,8 +143,30 @@ class CourseOffering < ApplicationRecord
     course_versions.any? {|cv| cv.content_root.is_a?(Unit) && cv.has_editor_experiment?(user)}
   end
 
+  # Checks if any course version has a published_state of 'preview' or 'stable'
+  def any_version_is_in_published_state?
+    published_states = ['preview', 'stable']
+    course_versions.any? {|cv| published_states.include?(cv.published_state)}
+  end
+
+  def self.all_course_offerings
+    if should_cache?
+      @@course_offerings ||= CourseOffering.all.includes(course_versions: :content_root)
+    else
+      CourseOffering.all.includes(course_versions: :content_root)
+    end
+  end
+
+  # We only want course offerings that are:
+  # - Assignable (course offering 'assignable' setting is true)
+  # - Published (associated unit group or unit 'published_state' setting is 'preview' or 'stable')
+  # - For students (associated unit group or unit 'participant_audience' setting is student)
+  def self.assignable_published_for_students_course_offerings
+    all_course_offerings.select {|co| co.assignable? && co.any_version_is_in_published_state? && co.get_participant_audience == 'student'}
+  end
+
   def self.assignable_course_offerings(user)
-    CourseOffering.all.select {|co| co.can_be_assigned?(user)}
+    all_course_offerings.select {|co| co.can_be_assigned?(user)}
   end
 
   def self.assignable_course_offerings_info(user, locale_code = 'en-us')
@@ -153,7 +214,7 @@ class CourseOffering < ApplicationRecord
       id: id,
       key: key,
       display_name: any_versions_launched? ? localized_display_name : localized_display_name + ' *',
-      course_versions: course_versions.select {|cv| cv.course_assignable?(user)}.map {|cv| cv.summarize_for_quick_assign(user, locale_code)}
+      course_versions: course_versions.select {|cv| cv.course_assignable?(user)}.map {|cv| cv.summarize_for_assignment_dropdown(user, locale_code)}
     }
   end
 
@@ -166,6 +227,13 @@ class CourseOffering < ApplicationRecord
     localized_name || display_name
   end
 
+  def duration
+    return nil unless latest_published_version
+    co_units = latest_published_version.units
+    co_duration_in_minutes = co_units.sum(&:duration_in_minutes)
+    DURATION_LABEL_TO_MINUTES_CAP.keys.find {|dur| co_duration_in_minutes <= DURATION_LABEL_TO_MINUTES_CAP[dur]}
+  end
+
   def summarize_for_edit
     {
       key: key,
@@ -176,7 +244,30 @@ class CourseOffering < ApplicationRecord
       curriculum_type: curriculum_type,
       marketing_initiative:  marketing_initiative,
       grade_levels: grade_levels,
-      header: header
+      header: header,
+      image: image,
+      cs_topic: cs_topic,
+      school_subject: school_subject,
+      device_compatibility: device_compatibility
+    }
+  end
+
+  def summarize_for_catalog
+    {
+      key: key,
+      display_name: display_name,
+      grade_levels: grade_levels,
+      duration: duration,
+      image: image,
+      cs_topic: cs_topic,
+      school_subject: school_subject,
+      device_compatibility: device_compatibility,
+      course_version_path: path_to_latest_published_version,
+      course_version_id: latest_published_version&.id,
+      course_id: course_id,
+      course_offering_id: id,
+      script_id: script_id,
+      is_standalone_unit: standalone_unit?
     }
   end
 
@@ -190,7 +281,11 @@ class CourseOffering < ApplicationRecord
       curriculum_type: curriculum_type,
       marketing_initiative: marketing_initiative,
       grade_levels: grade_levels,
-      header: header
+      header: header,
+      image: image,
+      cs_topic: cs_topic,
+      school_subject: school_subject,
+      device_compatibility: device_compatibility
     }
   end
 
@@ -240,6 +335,14 @@ class CourseOffering < ApplicationRecord
     key == 'csd'
   end
 
+  def hoc?
+    category == 'hoc' || marketing_initiative == Curriculum::SharedCourseConstants::COURSE_OFFERING_MARKETING_INITIATIVES.hoc
+  end
+
+  def get_participant_audience
+    course_versions&.first&.content_root&.participant_audience
+  end
+
   def grade_levels_list
     return [] if grade_levels.nil?
     grade_levels.strip.split(',')
@@ -255,5 +358,38 @@ class CourseOffering < ApplicationRecord
 
   def high_school_level?
     grade_levels_list.any? {|g| HIGH_SCHOOL_GRADES.include?(g)}
+  end
+
+  private def grade_levels_format
+    return true if grade_levels.nil?
+
+    grade_levels_regex = /^[K|\d]+(,?\d)*$/
+    unless grade_levels_regex.match?(grade_levels)
+      errors.add(:grade_levels, "must be comma-separated values with optional K first and digits")
+      return false
+    end
+
+    array_of_grades = grade_levels.split(',')
+
+    unless array_of_grades.length == array_of_grades.uniq.length
+      errors.add(:grade_levels, "cannot contain duplicate grades")
+      return false
+    end
+
+    array_of_grades.delete("K")
+    return true if array_of_grades.empty?
+
+    array_of_integer_grades = array_of_grades.map(&:to_i)
+    unless array_of_integer_grades.all? {|grade| (1..12).cover?(grade)}
+      errors.add(:grade_levels, "numbers must be between 1 and 12, inclusive")
+      return false
+    end
+
+    unless array_of_integer_grades == (array_of_integer_grades.first..array_of_integer_grades.last).to_a
+      errors.add(:grade_levels, "must be consecutive and sorted")
+      return false
+    end
+
+    true
   end
 end

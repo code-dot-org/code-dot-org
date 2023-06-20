@@ -26,7 +26,7 @@ const INITIAL_STATE = {
   // The old name of the column currently being renamed or deleted.
   pendingColumn: null,
   currentPage: 0,
-  showError: false
+  showError: false,
 };
 
 class DataTable extends React.Component {
@@ -39,7 +39,7 @@ class DataTable extends React.Component {
     tableRecords: PropTypes.array.isRequired,
 
     // from redux dispatch
-    onShowWarning: PropTypes.func.isRequired
+    onShowWarning: PropTypes.func.isRequired,
   };
 
   state = {...INITIAL_STATE};
@@ -65,7 +65,7 @@ class DataTable extends React.Component {
         () => {
           this.setState({
             editingColumn: columnName,
-            pendingAdd: false
+            pendingAdd: false,
           });
         },
         msg => {
@@ -78,7 +78,7 @@ class DataTable extends React.Component {
 
   deleteColumn = columnToRemove => {
     this.setState({
-      pendingColumn: columnToRemove
+      pendingColumn: columnToRemove,
     });
     // Show the spinner icon before updating the data.
     setTimeout(() => {
@@ -102,7 +102,7 @@ class DataTable extends React.Component {
   renameColumn = (oldName, newName) => {
     this.setState({
       editingColumn: null,
-      pendingColumn: oldName
+      pendingColumn: oldName,
     });
     // Show the spinner icon before updating the data.
     setTimeout(() => {
@@ -128,7 +128,7 @@ class DataTable extends React.Component {
     this.setState({
       editingColumn: null,
       pendingAdd: false,
-      pendingColumn: null
+      pendingColumn: null,
     });
   };
 
@@ -143,7 +143,7 @@ class DataTable extends React.Component {
   coerceColumn = (columnName, columnType) => {
     this.setState({
       editingColumn: null,
-      pendingColumn: columnName
+      pendingColumn: columnName,
     });
     // Show the spinner icon before updating the data.
     setTimeout(() => {
@@ -291,11 +291,11 @@ export default connect(
   state => ({
     tableColumns: state.data.tableColumns || [],
     tableRecords: state.data.tableRecords || [],
-    tableName: state.data.tableName || ''
+    tableName: state.data.tableName || '',
   }),
   dispatch => ({
     onShowWarning(warningMsg, warningTitle) {
       dispatch(showWarning(warningMsg, warningTitle));
-    }
+    },
   })
 )(DataTable);

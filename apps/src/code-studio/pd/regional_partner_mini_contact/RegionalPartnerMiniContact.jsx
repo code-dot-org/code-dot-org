@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import {Modal, FormGroup, Button, ControlLabel} from 'react-bootstrap';
+import {Modal, FormGroup, Button, ControlLabel} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import Select from 'react-select';
 import 'react-select/dist/react-select.css';
 import {SelectStyleProps} from '../constants';
@@ -17,7 +17,7 @@ const ROLES = [
   'Media Specialist',
   'School Administrator',
   'District Administrator',
-  'Other'
+  'Other',
 ];
 
 const ROLE_MAP = ROLES.map(v => ({value: v, label: v}));
@@ -34,10 +34,10 @@ export class RegionalPartnerMiniContact extends React.Component {
       zip: PropTypes.string,
       notes: PropTypes.string,
       grade_levels: PropTypes.array,
-      role: PropTypes.string
+      role: PropTypes.string,
     }),
     apiEndpoint: PropTypes.string.isRequired,
-    sourcePageId: PropTypes.string.isRequired
+    sourcePageId: PropTypes.string.isRequired,
   };
 
   constructor(props) {
@@ -52,7 +52,7 @@ export class RegionalPartnerMiniContact extends React.Component {
       zip: this.props.options.zip,
       notes: this.props.options.notes,
       role: this.props.options.role,
-      grade_levels: this.props.options.grade_levels
+      grade_levels: this.props.options.grade_levels,
     };
   }
 
@@ -65,7 +65,7 @@ export class RegionalPartnerMiniContact extends React.Component {
       notes: this.state.notes || undefined,
       source: this.props.sourcePageId,
       role: this.state.role || undefined,
-      grade_levels: this.state.grade_levels || undefined
+      grade_levels: this.state.grade_levels || undefined,
     };
 
     this.setState({submitting: true});
@@ -77,7 +77,7 @@ export class RegionalPartnerMiniContact extends React.Component {
       data: JSON.stringify({form_data: params}),
       complete: result => {
         this.onSubmitComplete(result);
-      }
+      },
     });
   };
 
@@ -98,13 +98,13 @@ export class RegionalPartnerMiniContact extends React.Component {
       if (results.responseJSON.errors.form_data) {
         this.setState({
           errors: results.responseJSON.errors.form_data,
-          submitting: false
+          submitting: false,
         });
       }
     } else if (results.responseJSON) {
       this.setState({submitted: true, submitting: false});
       analyticsReporter.sendEvent(EVENTS.SUBMIT_RP_CONTACT_FORM_EVENT, {
-        'source page id': this.props.sourcePageId
+        'source page id': this.props.sourcePageId,
       });
     } else {
       this.setState({submitted: false, submitting: false});
@@ -222,7 +222,7 @@ export class RegionalPartnerMiniContactPopupLink extends React.Component {
     zip: PropTypes.string,
     notes: PropTypes.string,
     sourcePageId: PropTypes.string.isRequired,
-    children: PropTypes.node.isRequired
+    children: PropTypes.node.isRequired,
   };
 
   constructor(props) {
@@ -230,12 +230,12 @@ export class RegionalPartnerMiniContactPopupLink extends React.Component {
 
     this.state = {
       showing: false,
-      options: null
+      options: null,
     };
 
     $.ajax({
       type: 'GET',
-      url: '/dashboardapi/v1/users/me/contact_details'
+      url: '/dashboardapi/v1/users/me/contact_details',
     })
       .done(results => {
         this.setState({
@@ -243,13 +243,13 @@ export class RegionalPartnerMiniContactPopupLink extends React.Component {
             user_name: results.user_name,
             email: results.email,
             zip: `${this.props.zip || results.zip}`,
-            notes: this.props.notes || results.notes
-          }
+            notes: this.props.notes || results.notes,
+          },
         });
       })
       .fail(() => {
         this.setState({
-          options: {zip: this.props.zip, notes: this.props.notes}
+          options: {zip: this.props.zip, notes: this.props.notes},
         });
       });
   }
@@ -287,28 +287,28 @@ export class RegionalPartnerMiniContactPopupLink extends React.Component {
 
 const styles = {
   error: {
-    color: color.red
+    color: color.red,
   },
   miniContactContainer: {
     backgroundColor: color.lightest_cyan,
     padding: 20,
     borderRadius: 10,
-    textAlign: 'left'
+    textAlign: 'left',
   },
   modalHeader: {
     padding: '0 15px 0 0',
     height: 30,
-    borderBottom: 'none'
+    borderBottom: 'none',
   },
   modalBody: {
     padding: '0 15px 15px 15px',
     fontSize: 14,
-    lineHeight: '22px'
+    lineHeight: '22px',
   },
   intro: {
-    paddingBottom: 10
+    paddingBottom: 10,
   },
   select: {
-    maxWidth: 500
-  }
+    maxWidth: 500,
+  },
 };

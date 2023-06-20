@@ -43,8 +43,8 @@ def handler(event:, context:)
       user_id = slack.users_lookupByEmail(email: session_name)&.user&.id
       username = user_id ? "<@#{user_id}>" : session_name
     end
-  rescue => e
-    puts e # Log Slack exceptions
+  rescue => exception
+    puts exception # Log Slack exceptions
   end
 
   instance_id = detail.dig('requestParameters', 'target')
@@ -61,8 +61,8 @@ def handler(event:, context:)
       logical_id = tags['aws:cloudformation:logical-id']
       instance_name = "#{stack_name}:#{logical_id}" if stack_name && logical_id
     end
-  rescue => e
-    puts e # Log EC2 exceptions
+  rescue => exception
+    puts exception # Log EC2 exceptions
   end
 
   ip = detail['sourceIPAddress']
@@ -70,8 +70,8 @@ def handler(event:, context:)
     if (loc = Geocoder.search(ip).first)
       ip += " (#{loc.address})"
     end
-  rescue => e
-    puts e # Log geocoder exceptions
+  rescue => exception
+    puts exception # Log geocoder exceptions
   end
 
   message = {

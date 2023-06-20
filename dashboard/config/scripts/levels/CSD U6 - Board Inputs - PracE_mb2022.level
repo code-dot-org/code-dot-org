@@ -77,8 +77,11 @@
     "bubble_choice_description": "Create an app that uses button presses and the buzzer to communicate \"yes\" and \"no\" answers",
     "start_blocks": "//1) When the user presses the A button, respond with \"yes\"\r\n\r\n//2) When the user presses the B button, respond with \"no\"",
     "preload_asset_list": null,
-    "encrypted_examples": [
-
+    "encrypted_examples": "XO0JRzzbLvrYJy+bcccTyKt72OHkpZ8XnD48C8Zs8e9OhZO5QUTsTUKKUlzM\ncPWIYhO73jOkl0fmIkPhqJpLIw==\n",
+    "reference_links": [
+      "/courses/csd-2022/guides/microbit-physical-input",
+      "/courses/csd-2022/guides/microbit-display",
+      "/courses/csd-2022/guides/microbit-overview"
     ]
   },
   "game_id": 41,
@@ -87,7 +90,7 @@
   "level_num": "custom",
   "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-02-01T10:46:53.286+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Board Inputs - PracE_2222\\\"\"],\"cloned_from\":\"CSD U6 - Board Inputs - PracE_2222\"},{\"changed_at\":\"2023-02-03 20:58:13 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"palette_category_at_start\",\"thumbnail_url\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-02-03 21:49:30 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"long_instructions\",\"reference_links\",\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-02-01T10:46:53.286+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Board Inputs - PracE_2222\\\"\"],\"cloned_from\":\"CSD U6 - Board Inputs - PracE_2222\"},{\"changed_at\":\"2023-02-03 20:58:13 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"palette_category_at_start\",\"thumbnail_url\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-02-03 21:49:30 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"long_instructions\",\"reference_links\",\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-03-27 22:24:00 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

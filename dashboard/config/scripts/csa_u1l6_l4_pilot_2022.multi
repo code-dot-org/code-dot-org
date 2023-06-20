@@ -16,3 +16,5 @@ II. `Car` is the superclass, `Engine` is the subclass
 
 III. `Book` is the superclass, `GraphicNovel` is the subclass
 MARKDOWN
+
+allow_multiple_attempts true

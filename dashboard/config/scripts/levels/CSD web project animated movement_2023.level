@@ -80,7 +80,8 @@
     "name_suffix": "_2023",
     "reference_links": [
       "/courses/csd-2022/guides/the-counter-pattern-2",
-      "/courses/csd-2022/guides/random-numbers"
+      "/courses/csd-2022/guides/random-numbers",
+      "/courses/csd-2022/guides/problem-solving-process-programming"
     ],
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
@@ -99,7 +100,7 @@
   "level_num": "custom",
   "user_id": 155,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-19T22:56:54.479+00:00\",\"changed\":[\"cloned from \\\"CSD web project animated movement_2022\\\"\"],\"cloned_from\":\"CSD web project animated movement_2022\"},{\"changed_at\":\"2023-01-11 22:46:24 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-19T22:56:54.479+00:00\",\"changed\":[\"cloned from \\\"CSD web project animated movement_2022\\\"\"],\"cloned_from\":\"CSD web project animated movement_2022\"},{\"changed_at\":\"2023-01-11 22:46:24 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-03-09 17:45:01 +0000\",\"changed\":[\"code_functions\",\"reference_links\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>

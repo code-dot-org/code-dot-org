@@ -5,21 +5,21 @@ import {
   PROGRAM_CSD,
   PROGRAM_CSP,
   PROGRAM_CSA,
-  getProgramInfo
+  getProgramInfo,
 } from './TeacherApplicationConstants';
 import {
   PageLabels,
   SectionHeaders,
   TextFields,
-  Year
+  Year,
 } from '@cdo/apps/generated/pd/teacherApplicationConstants';
-import {FormGroup} from 'react-bootstrap';
+import {FormGroup} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import {LabelsContext} from '../../form_components_func/LabeledFormComponent';
 import {FormContext} from '../../form_components_func/FormComponent';
 import {LabeledCheckBoxes} from '../../form_components_func/labeled/LabeledCheckBoxes';
 import {
   LabeledRadioButtons,
-  LabeledRadioButtonsWithAdditionalTextFields
+  LabeledRadioButtonsWithAdditionalTextFields,
 } from '../../form_components_func/labeled/LabeledRadioButtons';
 
 const WhichGradesSelector = props => {
@@ -39,7 +39,7 @@ const WhichGradesSelector = props => {
 };
 WhichGradesSelector.propTypes = {
   courseName: PropTypes.string,
-  showScholarshipWarning: PropTypes.bool
+  showScholarshipWarning: PropTypes.bool,
 };
 
 const ImplementationPlan = props => {
@@ -47,9 +47,7 @@ const ImplementationPlan = props => {
   const programInfo = getProgramInfo(data.program);
   const hasNoProgramSelected = data.program === undefined;
 
-  const notSureTeachPlanOption = `Not sure yet if my school plans to offer ${
-    programInfo.name
-  } in the ${Year} school year`;
+  const notSureTeachPlanOption = `Not sure yet if my school plans to offer ${programInfo.name} in the ${Year} school year`;
   let showScholarshipEligibilityWarning = false;
   if (
     (data.program === PROGRAM_CSD &&
@@ -123,7 +121,7 @@ const ImplementationPlan = props => {
           <LabeledRadioButtonsWithAdditionalTextFields
             name="replaceExisting"
             textFieldMap={{
-              [TextFields.iDontKnowExplain]: 'other'
+              [TextFields.iDontKnowExplain]: 'other',
             }}
           />
         </>
@@ -144,17 +142,17 @@ const ImplementationPlan = props => {
   );
 };
 ImplementationPlan.propTypes = {
-  data: PropTypes.object.isRequired
+  data: PropTypes.object.isRequired,
 };
 
 ImplementationPlan.associatedFields = [
-  ...Object.keys(PageLabels.implementationPlan)
+  ...Object.keys(PageLabels.implementationPlan),
 ];
 
 const uniqueRequiredFields = {
   [PROGRAM_CSD]: ['csdWhichGrades'],
   [PROGRAM_CSP]: ['cspWhichGrades', 'cspHowOffer'],
-  [PROGRAM_CSA]: ['csaWhichGrades', 'csaHowOffer']
+  [PROGRAM_CSA]: ['csaWhichGrades', 'csaHowOffer'],
 };
 
 ImplementationPlan.getDynamicallyRequiredFields = data => {
@@ -188,6 +186,6 @@ export default ImplementationPlan;
 
 const styles = {
   error: {
-    color: color.red
-  }
+    color: color.red,
+  },
 };

@@ -84,9 +84,6 @@
     "long_instructions": "# Change Threshold\r\n\r\nBy default a sensor's `change` event fires every time the sensor value changes at all, even by one. The light sensor is constantly fluctuating, so you probably want the `change` event to be a little less responsive.\r\n\r\nThe [`threshold`(#f78183)](/docs/applab/lightSensor.threshold/) property allows you to set how much a sensor should change before considering it a `change` event. For example, setting `lightSensor.threshold = 100` would cause the light sensor's `change` event only to trigger if its value increased or decreased by at least 100.\r\n\r\n## Do This\r\n\r\nThis app changes the background color of the screen whenever the light sensor value changes, but we want to only respond to big changes in light (like a bright flash). Use the [`lightSensor.threshold`(#f78183)](/docs/applab/lightSensor.threshold/) block to fix it.\r\n\r\n1) Add a [`lightSensor.threshold`(#f78183)](/docs/applab/lightSensor.threshold/) block before the event handler\r\n2) Test out how different threshold values impact the \"change\" event\r\n3) Choose a threshold value that makes the screen background change only when a bright flash or suddnen loss of light is sensed.\r\n\r\n_Tip: Your threshold depends on how much ambient light there is in the room, and how much it changes. A threshold that works in a dark room may not work in a bright classroom._",
     "start_blocks": "//Add your code here\r\n\r\nonBoardEvent(lightSensor, \"change\", function() {\r\n  setProperty(\"screen1\", \"background-color\", rgb(randomNumber(0, 255), randomNumber(0, 255), randomNumber(0, 255)));\r\n});\r\n",
     "top_level_procedure_autopopulate": "false",
-    "encrypted_examples": [
-
-    ],
     "parent_level_id": 20459,
     "name_suffix": "_mb2022",
     "mini_rubric": "false",
@@ -98,7 +95,17 @@
     "bubble_choice_description": "Learn to use the threshold block with the sound sensor",
     "thumbnail_url": "https://images.code.org/7f8fca3bef40cd07285bdab6b8858b1a-mb-Challenge.png",
     "start_html": "<div id=\"designModeViz\" class=\"appModern\" tabindex=\"1\" data-radium=\"true\" style=\"display: none; width: 320px; height: 450px;\"><div class=\"screen\" tabindex=\"1\" data-theme=\"default\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);\"></div></div>",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": "NOg0cq6eCHRzlHQuup7h524FCiPYy9bon9UFyvdrGN4i97f6f/PYHmlYl8hv\nJ+tlbpBVpwvd1uUZaJecPzVDKw==\n",
+    "reference_links": [
+      "/courses/csd-2022/guides/microbit-sensors",
+      "/courses/csd-2022/guides/data-and-change-events",
+      "/courses/csd-2022/guides/changing-sensor-scale",
+      "/courses/csd-2022/guides/board-events",
+      "/courses/csd-2022/guides/microbit-physical-input",
+      "/courses/csd-2022/guides/microbit-display",
+      "/courses/csd-2022/guides/microbit-overview"
+    ]
   },
   "game_id": 41,
   "published": true,
@@ -106,7 +113,7 @@
   "level_num": "custom",
   "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-02-01T10:51:01.179+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Sensors - CA_2222\\\"\"],\"cloned_from\":\"CSD U6 - Sensors - CA_2222\"},{\"changed_at\":\"2023-02-09 22:39:18 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"long_instructions\",\"start_blocks\",\"encrypted_examples\",\"reference_links\",\"map_reference\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-02-09 22:43:31 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"thumbnail_url\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-02-01T10:51:01.179+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Sensors - CA_2222\\\"\"],\"cloned_from\":\"CSD U6 - Sensors - CA_2222\"},{\"changed_at\":\"2023-02-09 22:39:18 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"long_instructions\",\"start_blocks\",\"encrypted_examples\",\"reference_links\",\"map_reference\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-02-09 22:43:31 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"thumbnail_url\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-03-29 22:35:23 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

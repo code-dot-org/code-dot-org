@@ -11,7 +11,7 @@ import {
   sectionName,
   removeSection,
   toggleSectionHidden,
-  importOrUpdateRoster
+  importOrUpdateRoster,
 } from './teacherSectionsRedux';
 import {connect} from 'react-redux';
 import PrintCertificates from './PrintCertificates';
@@ -28,6 +28,7 @@ class SectionActionDropdown extends Component {
   static propTypes = {
     handleEdit: PropTypes.func,
     sectionData: sortableSectionShape.isRequired,
+    userId: PropTypes.number,
 
     //Provided by redux
     removeSection: PropTypes.func.isRequired,
@@ -35,11 +36,11 @@ class SectionActionDropdown extends Component {
     sectionCode: PropTypes.string,
     sectionName: PropTypes.string,
     updateRoster: PropTypes.func.isRequired,
-    setRosterProvider: PropTypes.func
+    setRosterProvider: PropTypes.func,
   };
 
   state = {
-    deleting: false
+    deleting: false,
   };
 
   componentDidMount() {
@@ -58,7 +59,7 @@ class SectionActionDropdown extends Component {
     const section = this.props.sectionData;
     $.ajax({
       url: `/dashboardapi/sections/${section.id}`,
-      method: 'DELETE'
+      method: 'DELETE',
     })
       .done(() => {
         removeSection(section.id);
@@ -71,8 +72,19 @@ class SectionActionDropdown extends Component {
       });
   };
 
-  onClickEdit = () => {
-    this.props.handleEdit(this.props.sectionData.id);
+  /**
+   * Returns the URL to the correct section to be edited
+   */
+  editRedirectUrl = sectionId => {
+    const editSectionUrl = '/sections/' + sectionId + '/edit';
+    return editSectionUrl;
+  };
+
+  /**
+   * Creates the pop-up for the section to be edited
+   */
+  onClickEditPopUp = () => {
+    return this.props.handleEdit(this.props.sectionData.id);
   };
 
   onClickHideShow = () => {
@@ -94,17 +106,28 @@ class SectionActionDropdown extends Component {
   };
 
   render() {
-    const {sectionData} = this.props;
+    const {sectionData, userId} = this.props;
+    const testingUserId = -1;
 
     return (
       <span>
         <QuickActionsCell type={'header'}>
-          <PopUpMenu.Item
-            onClick={this.onClickEdit}
-            className="edit-section-details-link"
-          >
-            {i18n.editSectionDetails()}
-          </PopUpMenu.Item>
+          {userId % 10 !== testingUserId && (
+            <PopUpMenu.Item
+              href={this.editRedirectUrl(sectionData.id)}
+              className="edit-section-details-link"
+            >
+              {i18n.editSectionDetails()}
+            </PopUpMenu.Item>
+          )}
+          {userId % 10 === testingUserId && (
+            <PopUpMenu.Item
+              onClick={this.onClickEditPopUp}
+              className="edit-section-details-link"
+            >
+              {i18n.editSectionDetails()}
+            </PopUpMenu.Item>
+          )}
           <PopUpMenu.Item
             href={teacherDashboardUrl(sectionData.id, '/progress')}
             className="view-progress-link"
@@ -188,7 +211,7 @@ class SectionActionDropdown extends Component {
 
 const styles = {
   xIcon: {
-    paddingRight: 5
+    paddingRight: 5,
   },
   heading: {
     borderTopWidth: 0,
@@ -198,8 +221,8 @@ const styles = {
     borderStyle: 'solid',
     borderColor: color.default_text,
     paddingBottom: 20,
-    marginBottom: 30
-  }
+    marginBottom: 30,
+  },
 };
 
 export const UnconnectedSectionActionDropdown = SectionActionDropdown;
@@ -207,12 +230,12 @@ export const UnconnectedSectionActionDropdown = SectionActionDropdown;
 export default connect(
   (state, props) => ({
     sectionCode: sectionCode(state, props.sectionData.id),
-    sectionName: sectionName(state, props.sectionData.id)
+    sectionName: sectionName(state, props.sectionData.id),
   }),
   {
     removeSection,
     toggleSectionHidden,
     updateRoster: importOrUpdateRoster,
-    setRosterProvider
+    setRosterProvider,
   }
 )(SectionActionDropdown);
