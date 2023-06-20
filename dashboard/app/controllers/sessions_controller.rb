@@ -59,8 +59,11 @@ class SessionsController < Devise::SessionsController
   # GET /lockout
   # This page is for accounts that are locked until parental permission compliance.
   def lockout
+    # If the student isn't signed in, go to the login page
+    return redirect_to new_user_session_path unless current_user
+
     # Basic defaults. If the @pending_email is empty, the request was never sent
-    @pending_email = ""
+    @pending_email = ''
     @request_date = DateTime.now
 
     # Determine the deletion date as the creation time of the account + 7 days

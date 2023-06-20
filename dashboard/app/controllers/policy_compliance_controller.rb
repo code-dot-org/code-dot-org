@@ -35,12 +35,13 @@ class PolicyComplianceController < ApplicationController
   def child_account_consent_request
     # If we already comply, don't suddenly invalid it
     if current_user.child_account_compliance_state == User::ChildAccountCompliance::PERMISSION_GRANTED
-      redirect_back fallback_location: '/lockout' and return
+      redirect_back fallback_location: lockout_path and return
     end
 
     # Only allow three unique permission requests per day
-    date = Date.today
+    date = Time.zone.today
     permission_requests = ParentalPermissionRequest.where(
+      user: current_user,
       created_at: date.midnight..date.end_of_day
     ).limit(3).count
 
@@ -49,13 +50,13 @@ class PolicyComplianceController < ApplicationController
     # new request row.
     permission_request = ParentalPermissionRequest.find_or_create_by(
       user: current_user,
-      parent_email: params[:"parent-email"]
+      parent_email: params.require(:'parent-email')
     )
 
     # If we are making a new request but already sent too many today,
     # just bail and return whence we came
     if !permission_request.persisted? && permission_requests >= 3
-      redirect_back fallback_location: '/lockout' and return
+      redirect_back fallback_location: lockout_path and return
     end
 
     # If this is not a new row, we are resending the email
@@ -65,7 +66,7 @@ class PolicyComplianceController < ApplicationController
 
     # Do not send more than three emails to the same email
     if permission_request.resends_sent >= 3
-      redirect_back fallback_location: '/lockout' and return
+      redirect_back fallback_location: lockout_path and return
     end
 
     # Save (will reassign the updated_at date)
@@ -86,6 +87,6 @@ class PolicyComplianceController < ApplicationController
     ).deliver_now
 
     # Redirect back to the page spawning the request
-    redirect_back fallback_location: '/lockout'
+    redirect_back fallback_location: lockout_path
   end
 end
