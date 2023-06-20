@@ -22,7 +22,7 @@ var audioSystem = null;
  *    restricted: boolean // if this sound is restricted (and should be
  *        loaded from the restricted bucket)
  *  }
- * @param {*} options Optionial audio system configuration.
+ * @param {*} options Optional audio system configuration.
  *   {
  *     delayTimeSeconds: number, // Delay time used in the delay effect
  *     releaseTimeSeconds: number // Release time for fading out fixed-duration sounds
@@ -32,8 +32,7 @@ export function InitSound(desiredSounds, options) {
   // regular web version.
   baseSoundUrl = 'https://curriculum.code.org/media/musiclab/';
   restrictedSoundUrlPath = '/restricted/musiclab/';
-  const {delayTimeSeconds, releaseTimeSeconds} = options;
-  audioSystem = new WebAudio(delayTimeSeconds, releaseTimeSeconds);
+  audioSystem = new WebAudio(options);
 
   LoadSounds(desiredSounds);
 }

@@ -38,7 +38,15 @@ function createAudioContext(desiredSampleRate) {
   return context;
 }
 
-function WebAudio(delayTimeSeconds, releaseTimeSeconds) {
+/**
+ * @param {*} options Optional audio system configuration.
+ *   {
+ *     delayTimeSeconds: number, // Delay time used in the delay effect
+ *     releaseTimeSeconds: number // Release time for fading out fixed-duration sounds
+ *   }
+ */
+function WebAudio(options) {
+  const {delayTimeSeconds, releaseTimeSeconds} = options;
   try {
     audioContext = createAudioContext(48000);
   } catch (e) {
