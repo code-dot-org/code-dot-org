@@ -87,7 +87,18 @@ class CourseOffering < ApplicationRecord
     offering
   end
 
-  def latest_published_version
+  # @param locale_code [String] User or request locale. Optional.
+  # @return [CourseVersion] Returns the latest stable version in a course family supported in the given locale.
+  #   If the locale is in English or the latest stable version is nil (either because previous versions are not
+  #   supported in given locale or because the only version(s) are in a 'preview' state), then return the latest
+  #   launched (a.k.a. published) version.
+  def latest_published_version(locale_code: 'en-us')
+    locale_str = locale_code&.to_s
+    unless locale_str&.start_with?('en')
+      latest_stable_version = any_version_is_unit? ? Unit.latest_stable_version(key, locale: locale_str) : UnitGroup.latest_stable_version(key, locale: locale_str)
+      return latest_stable_version.course_version unless latest_stable_version.nil?
+    end
+
     course_versions.select do |cv|
       cv.content_root.launched?
     end.max_by(&:version_year)
@@ -234,6 +245,11 @@ class CourseOffering < ApplicationRecord
     DURATION_LABEL_TO_MINUTES_CAP.keys.find {|dur| co_duration_in_minutes <= DURATION_LABEL_TO_MINUTES_CAP[dur]}
   end
 
+  def recommended?(locale_code = 'en-us')
+    return false if latest_published_version.nil?
+    latest_published_version.recommended?(locale_code)
+  end
+
   def summarize_for_edit
     {
       key: key,
@@ -252,7 +268,7 @@ class CourseOffering < ApplicationRecord
     }
   end
 
-  def summarize_for_catalog
+  def summarize_for_catalog(locale_code)
     {
       key: key,
       display_name: display_name,
@@ -267,7 +283,8 @@ class CourseOffering < ApplicationRecord
       course_id: course_id,
       course_offering_id: id,
       script_id: script_id,
-      is_standalone_unit: standalone_unit?
+      is_standalone_unit: standalone_unit?,
+      is_recommended: recommended?(locale_code)
     }
   end
 
