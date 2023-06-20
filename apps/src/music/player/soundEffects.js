@@ -4,9 +4,9 @@
 // sound can attach to the right one.
 
 export default class SoundEffects {
-  constructor(audioContext, bpm) {
+  constructor(audioContext, delayTimeSeconds) {
     this.audioContext = audioContext;
-    this.bpm = bpm;
+    this.delayTimeSeconds = delayTimeSeconds;
     this.busses = {};
     this.generateBusses();
   }
@@ -85,8 +85,7 @@ export default class SoundEffects {
 
       const delay = this.audioContext.createDelay();
 
-      // Set a delay time of half a beat in seconds.
-      delay.delayTime.value = 60 / this.bpm / 2;
+      delay.delayTime.value = this.delayTimeSeconds;
 
       const dry = this.audioContext.createGain();
       const wet = this.audioContext.createGain();

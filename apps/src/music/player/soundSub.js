@@ -6,12 +6,6 @@ var audioContext = null;
 
 var soundEffects = null;
 
-// Multiplied by the duration of a single beat to determine the length of
-// time to fade out a sound, if trimming to a specific duration. This results
-// in a duration slightly smaller than a 16th note (0.25 of a beat), and 16th
-// notes are the shortest possible notes, so the release duration should never
-// be longer than a sound.
-const RELEASE_DURATION_FACTOR = 0.2;
 // Time constant used to compute the release rate; at each time constant
 // interval the sound will decay exponentially.
 const RELEASE_TIME_CONSTANT = 0.075;
@@ -44,7 +38,7 @@ function createAudioContext(desiredSampleRate) {
   return context;
 }
 
-function WebAudio(bpm) {
+function WebAudio(delayTimeSeconds, releaseTimeSeconds) {
   try {
     audioContext = createAudioContext(48000);
   } catch (e) {
@@ -53,8 +47,8 @@ function WebAudio(bpm) {
     return;
   }
 
-  soundEffects = new SoundEffects(audioContext, bpm);
-  this.bpm = bpm;
+  soundEffects = new SoundEffects(audioContext, delayTimeSeconds);
+  this.releaseTimeSeconds = releaseTimeSeconds;
 }
 
 WebAudio.prototype.getCurrentTime = function () {
@@ -128,7 +122,7 @@ WebAudio.prototype.PlaySoundByBuffer = function (
     // If playing for a specific duration, apply a small fadeout to the sound
     // to prevent clicks and pops
     const gainNode = audioContext.createGain();
-    const releaseDuration = (60 / this.bpm) * RELEASE_DURATION_FACTOR;
+    const releaseDuration = this.releaseTimeSeconds;
     gainNode.gain.setTargetAtTime(
       0,
       when + duration - releaseDuration,

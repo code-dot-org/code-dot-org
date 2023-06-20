@@ -13,11 +13,27 @@ var audioIdUpto = 0;
 
 var audioSystem = null;
 
-export function InitSound(desiredSounds, bpm) {
+/**
+ *
+ * @param {*} desiredSounds A list of sounds to load into the audio system.
+ *  Each sound has a format:
+ *  {
+ *    path: string // relative file path to load,
+ *    restricted: boolean // if this sound is restricted (and should be
+ *        loaded from the restricted bucket)
+ *  }
+ * @param {*} options Optionial audio system configuration.
+ *   {
+ *     delayTimeSeconds: number, // Delay time used in the delay effect
+ *     releaseTimeSeconds: number // Release time for fading out fixed-duration sounds
+ *   }
+ */
+export function InitSound(desiredSounds, options) {
   // regular web version.
   baseSoundUrl = 'https://curriculum.code.org/media/musiclab/';
   restrictedSoundUrlPath = '/restricted/musiclab/';
-  audioSystem = new WebAudio(bpm);
+  const {delayTimeSeconds, releaseTimeSeconds} = options;
+  audioSystem = new WebAudio(delayTimeSeconds, releaseTimeSeconds);
 
   LoadSounds(desiredSounds);
 }
