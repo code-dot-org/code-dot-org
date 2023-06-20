@@ -28,16 +28,12 @@ export default class CdoFieldFlyout extends GoogleBlockly.Field {
 
   configure_(config) {
     config &&
-      ((this.foldoutText_ = config.foldoutText),
-      (this.sizingBehavior_ = config.sizingBehavior),
+      ((this.sizingBehavior_ = config.sizingBehavior),
       (this.minWidth_ = config.minWidth),
       (this.maxWidth_ = config.maxWidth));
   }
 
   initView() {
-    // We can separate out the arrow from this field and use a button/icon elsewhere.
-    this.createTextElement_();
-    this.textContent_.nodeValue = this.foldoutText_;
     this.workspace_ = this.getSourceBlock().workspace;
     this.flyout_ = new CdoBlockFlyout({
       ...Blockly.getMainWorkspace().options,
@@ -53,7 +49,6 @@ export default class CdoFieldFlyout extends GoogleBlockly.Field {
   }
 
   showEditor_() {
-    // We may not need this.
     this.setFlyoutVisible(!this.isFlyoutVisible());
   }
 
@@ -66,11 +61,9 @@ export default class CdoFieldFlyout extends GoogleBlockly.Field {
   render_() {
     const fieldGroupBBox = this.fieldGroup_.getBBox();
     if (this.flyout_.isVisible()) {
-      const textElementBBox = this.textElement_.getBBox();
-      // maybe figure out how to remove global reference?
       this.size_ = new Blockly.utils.Size(
-        Math.max(textElementBBox.width, this.flyout_.getWidth() + 16),
-        fieldGroupBBox.height + 14
+        this.flyout_.getWidth(),
+        fieldGroupBBox.height
       );
     } else {
       this.size_ = new Blockly.utils.Size(
@@ -82,8 +75,10 @@ export default class CdoFieldFlyout extends GoogleBlockly.Field {
 
   setFlyoutVisible(isVisible) {
     this.flyout_.targetWorkspace_ ||
-      (this.flyout_.init(this.workspace_), this.flyout_.svgGroup);
-    isVisible ? this.flyout_.show(this.getValue()) : this.flyout_.hide();
+      (this.flyout_.init(this.workspace_), this.flyout_.svgGroup_);
+    isVisible
+      ? this.flyout_.show(`flyout_${this.sourceBlock_.type}`)
+      : this.flyout_.hide();
     this.forceRerender();
   }
 
