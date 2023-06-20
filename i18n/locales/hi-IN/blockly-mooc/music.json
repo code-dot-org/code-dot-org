@@ -55,5 +55,7 @@
   "share": "शेयर करें",
   "shareComingSoon": "साझाकरण निर्माणाधीन है। जल्द ही वापस जाँचें।",
   "startOver": "पुन: प्रारंभ करें",
-  "upload": "अपलोड करें"
+  "upload": "अपलोड करें",
+  "panelHeaderInstructions": "निर्देश",
+  "panelHeaderWorkspace": "कार्यस्थान: "
 }

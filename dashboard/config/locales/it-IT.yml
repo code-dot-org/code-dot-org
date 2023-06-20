@@ -61,6 +61,7 @@ it:
           usato
         error:
           future: non può essere in futuro
+        us_state: Stato
   beta: versione provvisoria
   hello: Ciao mondo
   welcome_back: Bentornato, %{name}
@@ -261,6 +262,7 @@ it:
       sui progressi e sui progetti di tuo figlio e aggiornamenti sui corsi e sull'informatica?[(Vedi
       la nostra politica sulla privacy)](%{privacy_policy_url})
     parent_account_email_label: E-mail del genitore/tutore
+    us_state: Stato
   school_info:
     title: Informazioni sulla scuola (opzionale)
     school_country: Paese della Scuola
@@ -1523,6 +1525,7 @@ it:
         csf_express: Fondamenti di Informatica (Corsi rapidi)
         csd: Alla scoperta dell'informatica
         csp: Principi di informatica
+        other: Altro
         not_applicable: Non applicabile
       email_opt_in:
         opt_in_yes: Sì

@@ -489,26 +489,26 @@
         },
         "MC_HOC_2017_10_RETRY": {
           "fix long path": {
-            "name": "긴 경로 고치기"
+            "name": "긴 경로 수정하기"
           },
           "fix short path": {
-            "name": "짧은 길 고치기"
+            "name": "짧은 경로 수정하기"
           }
         },
         "MC_HOC_2017_10_RETRY_2019": {
           "fix long path": {
-            "name": "긴 경로 고치기"
+            "name": "긴 경로 수정하기"
           },
           "fix short path": {
-            "name": "짧은 길 고치기"
+            "name": "짧은 경로 수정하기"
           }
         },
         "MC_HOC_2017_10_RETRY_2020": {
           "fix long path": {
-            "name": "긴 경로 고치기"
+            "name": "긴 경로 수정하기"
           },
           "fix short path": {
-            "name": "짧은 길 고치기"
+            "name": "짧은 경로 수정하기"
           }
         },
         "MC_HOC_2017_Ali": {
@@ -2584,10 +2584,10 @@
         },
         "MC_HOC_2017_10_RETRY_2021": {
           "fix long path": {
-            "name": "긴 경로 고치기"
+            "name": "긴 경로 수정하기"
           },
           "fix short path": {
-            "name": "짧은 길 고치기"
+            "name": "짧은 경로 수정하기"
           }
         },
         "MC_HOC_2017_Ali_2021": {
@@ -3399,16 +3399,16 @@
         },
         "courseE_farmer_functions10a1_2021": {
           "pick along path": {
-            "name": "경로를 따라 선택하기"
+            "name": "경로를 따라 채집합니다"
           },
           "check square for corn": {
-            "name": "옥수수에 대한 사각형 확인"
+            "name": "정사각형에서 옥수수 확인"
           },
           "get all pumpkins": {
-            "name": "모든 호박 갖기"
+            "name": "호박을 모두 모으기"
           },
           "pumpkin square": {
-            "name": "호박 스퀘어"
+            "name": "호박 정사각형"
           }
         },
         "courseE_farmer_functions11_predict_2021": {
@@ -3430,10 +3430,10 @@
         },
         "courseE_farmer_functions13_2021": {
           "pick along path": {
-            "name": "경로를 따라 선택하기"
+            "name": "경로를 따라 채집합니다"
           },
           "check for corn": {
-            "name": "옥수수에 대한 확인"
+            "name": "옥수수 확인"
           },
           "corn rectangle": {
             "name": "옥수수 직사각형"
@@ -3444,54 +3444,54 @@
         },
         "courseE_farmer_functions1a_2021": {
           "check square for corn": {
-            "name": "옥수수에 대한 사각형 확인"
+            "name": "정사각형에서 옥수수 확인"
           }
         },
         "courseE_farmer_functions2b_2021": {
           "check square for corn": {
-            "name": "옥수수에 대한 사각형 확인"
+            "name": "정사각형에서 옥수수 확인"
           }
         },
         "courseE_farmer_functions2ba_2021": {
           "check square for corn": {
-            "name": "옥수수에 대한 사각형 확인"
+            "name": "정사각형에서 옥수수 확인"
           },
           "get all pumpkins": {
-            "name": "모든 호박 갖기"
+            "name": "호박을 모두 모으기"
           }
         },
         "courseE_farmer_functions3c1_2021": {
           "pick along path": {
-            "name": "경로를 따라 선택하기"
+            "name": "경로를 따라 채집합니다"
           },
           "check square for corn": {
-            "name": "옥수수에 대한 사각형 확인"
+            "name": "정사각형에서 옥수수 확인"
           },
           "get all pumpkins": {
-            "name": "모든 호박 갖기"
+            "name": "호박을 모두 모으기"
           }
         },
         "courseE_farmer_functions3c_2021": {
           "check square for corn": {
-            "name": "옥수수에 대한 사각형 확인"
+            "name": "정사각형에서 옥수수 확인"
           },
           "get all pumpkins": {
-            "name": "모든 호박 갖기"
+            "name": "호박을 모두 모으기"
           }
         },
         "courseE_farmer_functions7a1_2021": {
           "garden square": {
-            "name": "가든 스퀘어"
+            "name": "정원 정사각형"
           }
         },
         "courseE_farmer_functions8a1_2021": {
           "garden square": {
-            "name": "가든 스퀘어"
+            "name": "정원 정사각형"
           }
         },
         "courseE_farmer_functions9a1_2021": {
           "garden square": {
-            "name": "가든 스퀘어"
+            "name": "정원 정사각형"
           }
         },
         "courseF_bee_for_challenge1_2021": {
@@ -4094,10 +4094,10 @@
         },
         "MC_HOC_2017_10_RETRY2022": {
           "fix long path": {
-            "name": "긴 경로 고치기"
+            "name": "긴 경로 수정하기"
           },
           "fix short path": {
-            "name": "짧은 길 고치기"
+            "name": "짧은 경로 수정하기"
           }
         },
         "MC_HOC_2017_Ali2022": {
