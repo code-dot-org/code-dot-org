@@ -8691,3 +8691,9 @@ zh-TW:
             \-了解與更廣泛的 CS 社區聯繫的機會。
 
             \*\* 建議時間 \*\*：70 分鐘
+        csa-frq-practice:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 類別
+            lessonGroup-5:
+              display_name: 2維陣列

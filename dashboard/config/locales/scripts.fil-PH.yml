@@ -4654,3 +4654,7 @@ fil:
             sa Computer Science at maglikha ng iyong sariling sining, kuwento o laro.
         self-paced-pl-csp2-2023:
           title: 'Module 2: Pag-navigate sa Code.org'
+        csa-frq-practice:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Mga Klase

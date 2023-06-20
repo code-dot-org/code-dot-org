@@ -3,7 +3,7 @@ title: Learn about Artificial Intelligence (AI)
 theme: responsive_full_width
 ---
 
-%link{href: '/css/generated/design-system-pegasus.css', rel: 'stylesheet'}
+%link{href: "/css/generated/design-system-pegasus.css", rel: "stylesheet"}
 %link{href: "/css/generated/ai-styles.css", rel: "stylesheet"}
 
 -# FontAwesome icons
@@ -28,7 +28,6 @@ theme: responsive_full_width
     %figure.col-33{style: "float: right"}
       %img.fade-in-out{src: "/images/banners/ai-bot-wizard.svg", alt: "", style: "z-index: 10"}
       %img{src: "/images/banners/ai-bot-default.svg", alt: "", style: "position: relative;"}
-
     .clear
 
 %section.intro
@@ -68,7 +67,7 @@ theme: responsive_full_width
         %h2.heading-lg=hoc_s(:teachai_launch_blog_title)
         %p
           %strong=hoc_s(:teachai_launch_blog_desc_01)
-        %p=hoc_s(:teachai_launch_blog_desc_02)
+        %p.body-two=hoc_s(:teachai_launch_blog_desc_02)
         %a.link-button{href: "https://teachai.org/launch", target: "_blank", rel: "noopener noreferrer"}=hoc_s(:call_to_action_read_more)
 
 %section.bg-neutral-light
@@ -91,30 +90,36 @@ theme: responsive_full_width
     %h2=hoc_s(:ai_curricula_heading)
     %p=hoc_s(:ai_curricula_desc)
     .action-block__wrapper.action-block__wrapper--three-col
-      .action-block.action-block--one-col
-        %p.overline=hoc_s(:ai_curriculum_grades_01)
-        %h3=hoc_s(:ai_curriculum_title_01)
-        %img{src: "/images/ai/ai-curriclum-machine-learning.png", alt: ""}
-        %p{style: "height: 105px"}=hoc_s(:ai_curriculum_desc_01)
-        %p=hoc_s(:ai_curriculum_duration_01)
-        %a{href: CDO.studio_url("/s/aiml"), class: "link-button", aria:{label: hoc_s(:ai_curriculum_btn_aria_label_01)}}
-          =hoc_s(:call_to_action_explore_unit)
-      .action-block.action-block--one-col
-        %p.overline=hoc_s(:ai_curriculum_grades_02)
-        %h3=hoc_s(:ai_curriculum_title_02)
-        %img{src: "/images/ai/ai-curriclum-ethics.png", alt: ""}
-        %p{style: "height: 105px"}=hoc_s(:ai_curriculum_desc_02)
-        %p=hoc_s(:ai_curriculum_duration_02)
-        %a{href: CDO.studio_url("/s/ai-ethics-2021/lessons/1"), class: "link-button", aria:{label: hoc_s(:ai_curriculum_btn_aria_label_02)}}
-          =hoc_s(:call_to_action_view_lesson_plan)
-      .action-block.action-block--one-col
-        %p.overline=hoc_s(:ai_curriculum_grades_03)
-        %h3=hoc_s(:ai_curriculum_title_03)
-        %img{src: "/images/ai/ai-curriclum-oceans.png", alt: ""}
-        %p{style: "height: 105px"}=hoc_s(:ai_curriculum_desc_03)
-        %p=hoc_s(:ai_curriculum_duration_03)
-        %a{href: CDO.studio_url("/s/oceans"), class: "link-button", aria:{label: hoc_s(:ai_curriculum_btn_aria_label_03)}}
-          =hoc_s(:call_to_action_try_activity)
+      .action-block.action-block--one-col.flex-space-between
+        .content-wrapper
+          %p.overline=hoc_s(:ai_curriculum_grades_01)
+          %h3=hoc_s(:ai_curriculum_title_01)
+          %img{src: "/images/ai/ai-curriclum-machine-learning.png", alt: ""}
+          %p=hoc_s(:ai_curriculum_desc_01)
+          %p=hoc_s(:ai_curriculum_duration_01)
+        .content-footer
+          %a{href: CDO.studio_url("/s/aiml"), class: "link-button", aria:{label: hoc_s(:ai_curriculum_btn_aria_label_01)}}
+            =hoc_s(:call_to_action_explore_unit)
+      .action-block.action-block--one-col.flex-space-between
+        .content-wrapper
+          %p.overline=hoc_s(:ai_curriculum_grades_02)
+          %h3=hoc_s(:ai_curriculum_title_02)
+          %img{src: "/images/ai/ai-curriclum-ethics.png", alt: ""}
+          %p=hoc_s(:ai_curriculum_desc_02)
+          %p=hoc_s(:ai_curriculum_duration_02)
+        .content-footer
+          %a{href: CDO.studio_url("/s/ai-ethics-2021/lessons/1"), class: "link-button", aria:{label: hoc_s(:ai_curriculum_btn_aria_label_02)}}
+            =hoc_s(:call_to_action_view_lesson_plan)
+      .action-block.action-block--one-col.flex-space-between
+        .content-wrapper
+          %p.overline=hoc_s(:ai_curriculum_grades_03)
+          %h3=hoc_s(:ai_curriculum_title_03)
+          %img{src: "/images/ai/ai-curriclum-oceans.png", alt: ""}
+          %p=hoc_s(:ai_curriculum_desc_03)
+          %p=hoc_s(:ai_curriculum_duration_03)
+        .content-footer
+          %a{href: CDO.studio_url("/s/oceans"), class: "link-button", aria:{label: hoc_s(:ai_curriculum_btn_aria_label_03)}}
+            =hoc_s(:call_to_action_try_activity)
 
 %section.bg-neutral-light
   .wrapper
@@ -163,25 +168,30 @@ theme: responsive_full_width
     %h2=hoc_s(:ai_resources_heading)
     %p=hoc_s(:ai_resources_desc)
     .action-block__wrapper.action-block__wrapper--three-col
-      .action-block.action-block--one-col
-        %h3=hoc_s(:ai_resources_title_01)
-        %img{src: "/images/ai//ai-resources-ethics-panel.png", alt: ""}
-        %p{style: "height: 125px"}=hoc_s(:ai_resources_desc_01)
-        %a{href: "https://youtu.be/3oqxjPXbynE", class: "link-button", target: "_blank", rel: "noopener noreferrer", aria:{label: hoc_s(:ai_resources_btn_aria_label_01)}}
-          =hoc_s(:call_to_action_watch_panel)
-      .action-block.action-block--one-col
-        %h3=hoc_s(:ai_resources_title_02)
-        %img{src: "/images/ai/ai-resources-imagine-cup.png", alt: ""}
-        %p{style: "height: 125px"}=hoc_s(:ai_resources_desc_02)
-        %a{href: "https://imaginecup.microsoft.com/en-us/junior", class: "link-button", target: "_blank", rel: "noopener noreferrer", aria:{label: hoc_s(:ai_resources_btn_aria_label_02)}}
-          =hoc_s(:call_to_action_learn_about_challenge)
-      .action-block.action-block--one-col
-        %h3=hoc_s(:ai_resources_title_03)
-        %img{src: "/images/ai/ai-resources-for-teachers.png", alt: ""}
-        %p{style: "height: 125px"}=hoc_s(:ai_resources_desc_03)
-        %a{href: "https://aiforteachers.org/", class: "link-button", target: "_blank", rel: "noopener noreferrer", aria:{label: hoc_s(:ai_resources_btn_aria_label_03)}}
-          =hoc_s(:call_to_action_explore_website)
-
+      .action-block.action-block--one-col.flex-space-between
+        .content-wrapper
+          %h3=hoc_s(:ai_resources_title_01)
+          %img{src: "/images/ai//ai-resources-ethics-panel.png", alt: ""}
+          %p=hoc_s(:ai_resources_desc_01)
+        .content-footer
+          %a{href: "https://youtu.be/3oqxjPXbynE", class: "link-button", target: "_blank", rel: "noopener noreferrer", aria:{label: hoc_s(:ai_resources_btn_aria_label_01)}}
+            =hoc_s(:call_to_action_watch_panel)
+      .action-block.action-block--one-col.flex-space-between
+        .content-wrapper
+          %h3=hoc_s(:ai_resources_title_02)
+          %img{src: "/images/ai/ai-resources-imagine-cup.png", alt: ""}
+          %p=hoc_s(:ai_resources_desc_02)
+        .content-footer
+          %a{href: "https://imaginecup.microsoft.com/en-us/junior", class: "link-button", target: "_blank", rel: "noopener noreferrer", aria:{label: hoc_s(:ai_resources_btn_aria_label_02)}}
+            =hoc_s(:call_to_action_learn_about_challenge)
+      .action-block.action-block--one-col.flex-space-between
+        .content-wrapper
+          %h3=hoc_s(:ai_resources_title_03)
+          %img{src: "/images/ai/ai-resources-for-teachers.png", alt: ""}
+          %p=hoc_s(:ai_resources_desc_03)
+        .content-footer
+          %a{href: "https://aiforteachers.org/", class: "link-button", target: "_blank", rel: "noopener noreferrer", aria:{label: hoc_s(:ai_resources_btn_aria_label_03)}}
+            =hoc_s(:call_to_action_explore_website)
 
 = view :section_divider_line
 

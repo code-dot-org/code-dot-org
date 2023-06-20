@@ -52,5 +52,7 @@
   "feedback": "უკუკავშირი",
   "share": "გაზიარება",
   "shareComingSoon": "გაზიარება მშენებლობის პროცესშია. შეამოწმეთ მალე.",
-  "startOver": "ხელახლა დაწყება"
+  "startOver": "ხელახლა დაწყება",
+  "panelHeaderInstructions": "ინსტრუქციები",
+  "panelHeaderWorkspace": "სამუშაო სივრცე"
 }
