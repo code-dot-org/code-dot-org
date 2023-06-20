@@ -325,7 +325,7 @@ class Section < ApplicationRecord
     end
 
     # Though in theory required, we are missing an email address for many teachers.
-    if options[:notify] && (user && user.email.present?)
+    if options[:notify] && user && user.email.present?
       FollowerMailer.student_disassociated_notify_teacher(teacher, student).deliver_now
     end
   end
