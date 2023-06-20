@@ -60,10 +60,18 @@ form.dropDownMenuContainer {
 
     label {
       display: flex;
-      padding: 12px 8px;
+      padding: 12px 8px 12px 0;
       align-items: flex-end;
       gap: 12px;
       margin: 0;
+
+      input[type="checkbox"] {
+        position: relative;
+      }
+
+      i {
+        padding-left: 3px;
+      }
 
       span {
         margin: 0;
@@ -85,6 +93,7 @@ form.dropDownMenuContainer {
 
     &:focus-within {
       outline: 2px solid $brand_primary_default;
+      outline-offset: -2px;
     }
 
     input[type="checkbox"] {
