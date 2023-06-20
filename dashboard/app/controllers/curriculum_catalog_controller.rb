@@ -8,7 +8,7 @@ class CurriculumCatalogController < ApplicationController
     end
 
     @catalog_data = {
-      curriculaData: CourseOffering.assignable_published_for_students_course_offerings.sort_by(&:display_name).map(&:summarize_for_catalog),
+      curriculaData: CourseOffering.assignable_published_for_students_course_offerings.sort_by(&:display_name).map {|co| co&.summarize_for_catalog(locale)},
       isEnglish: language == "en",
       sections: @sections
     }

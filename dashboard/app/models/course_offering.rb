@@ -92,7 +92,7 @@ class CourseOffering < ApplicationRecord
   #   If the locale is in English or the latest stable version is nil (either because previous versions are not
   #   supported in given locale or because the only version(s) are in a 'preview' state), then return the latest
   #   launched (a.k.a. published) version.
-  def latest_published_version(locale_code: 'en-us')
+  def latest_published_version(locale_code = 'en-us')
     locale_str = locale_code&.to_s
     unless locale_str&.start_with?('en')
       latest_stable_version = any_version_is_unit? ? Unit.latest_stable_version(key, locale: locale_str) : UnitGroup.latest_stable_version(key, locale: locale_str)
@@ -104,9 +104,9 @@ class CourseOffering < ApplicationRecord
     end.max_by(&:version_year)
   end
 
-  def path_to_latest_published_version
-    return nil unless latest_published_version
-    latest_published_version.content_root.link
+  def path_to_latest_published_version(locale_code = 'en-us')
+    return nil unless latest_published_version(locale_code)
+    latest_published_version(locale_code).content_root.link
   end
 
   def course_id
@@ -268,7 +268,7 @@ class CourseOffering < ApplicationRecord
     }
   end
 
-  def summarize_for_catalog(locale_code)
+  def summarize_for_catalog(locale_code = 'en-us')
     {
       key: key,
       display_name: display_name,
@@ -278,8 +278,8 @@ class CourseOffering < ApplicationRecord
       cs_topic: cs_topic,
       school_subject: school_subject,
       device_compatibility: device_compatibility,
-      course_version_path: path_to_latest_published_version,
-      course_version_id: latest_published_version&.id,
+      course_version_path: path_to_latest_published_version(locale_code),
+      course_version_id: latest_published_version(locale_code)&.id,
       course_id: course_id,
       course_offering_id: id,
       script_id: script_id,
