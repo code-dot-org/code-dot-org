@@ -3,6 +3,7 @@ title: Teach Computer Science
 theme: responsive_full_width
 ---
 
+-# %script{data: {'amplitude-api-key': CDO.safe_amplitude_api_key}}
 %link{href: '/css/generated/design-system-pegasus.css', rel: 'stylesheet'}
 %link{href: "/css/generated/teach-styles.css", rel: "stylesheet"}
 
@@ -24,7 +25,7 @@ theme: responsive_full_width
 
 %section.why-teach-cs.bg-neutral-light
   .wrapper
-    %h2 Why teach computer science with Code.org?
+    %h2.centered Why teach computer science with Code.org?
     %div.grid-container
       %div.flex-container
         %figure
@@ -52,8 +53,9 @@ theme: responsive_full_width
           %p Teach students how AI works and how to use it safely. Our Professional Learning encourages curiosity and confidence with this evolving technology.
           %a{href: "/ai"} Explore AI resources
     %hr.dark
-    %h4 Start teaching computer science with Code.org today!
-    %a.link-button{href: CDO.studio_url("/catalog")} Explore the Curriculum Catalog
+    %div.centered
+      %h4 Start teaching computer science with Code.org today!
+      %a.link-button{href: CDO.studio_url("/catalog")} Explore the Curriculum Catalog
 
 %section.quote.bg-neutral-dark
   .wrapper
@@ -63,9 +65,9 @@ theme: responsive_full_width
 
 %section.free-curriculum
   .wrapper
-    %h2 Free, engaging curriculum
-    %p We want you to bring Computer Science to your school without worrying about the cost. That's why we have committed to our curriculum offerings being free forever!
-    %div.flex-container.justify-space-between.wrap
+    %h2.centered Free, engaging curriculum
+    %p.centered We want you to bring Computer Science to your school without worrying about the cost. That's why we have committed to our curriculum offerings being free forever!
+    %div.flex-container.justify-space-between.wrap-reverse
       %ul.icon-bullet-list.full-width.col-60
         %li
           %div
@@ -88,15 +90,71 @@ theme: responsive_full_width
       %figure.rounded-corners.col-33{style: "float: right"}
     .clear
     %hr.dark
-    %h4 Explore our curriculum offerings for different grade levels:
-    %div.flex-container.justify-center.wrap{style: "gap: 1rem"}
-      %a.link-button{href: CDO.studio_url("/catalog?grade=grade_1&grade=grade_2&grade=grade_3&grade=grade_4&grade=grade_5&grade=kindergarten")}
-        Elementary School
-      %a.link-button{href: CDO.studio_url("/catalog?grade=grade_6&grade=grade_7&grade=grade_8")}
-        Middle School
-      %a.link-button{href: CDO.studio_url("/catalog?grade=grade_10&grade=grade_11&grade=grade_12&grade=grade_9")}
-        High School
+    %div.centered
+      %h4 Explore our curriculum offerings for different grade levels:
+      %div.flex-container.justify-center.wrap{style: "gap: 1rem"}
+        %a.link-button{href: CDO.studio_url("/catalog?grade=grade_1&grade=grade_2&grade=grade_3&grade=grade_4&grade=grade_5&grade=kindergarten")}
+          Elementary School
+        %a.link-button{href: CDO.studio_url("/catalog?grade=grade_6&grade=grade_7&grade=grade_8")}
+          Middle School
+        %a.link-button{href: CDO.studio_url("/catalog?grade=grade_10&grade=grade_11&grade=grade_12&grade=grade_9")}
+          High School
 
+%section.resources.bg-neutral-light.centered
+  .wrapper
+    %h2 Resources that support you every step of the way
+    %p Signing up for a Code.org account gives you access to materials that will help you teach computer science with confidence. Code.org has extensive resources designed to support educators, even those without prior CS teaching experience. Click the tabs to learn more about the resources.
 
+%section.curriculum-offerings.centered
+  .wrapper
+    %h2 Curriculum offerings students love
+    %p There are so many amazing offerings to explore. Here are just a few of our new and popular offerings.
 
+    %a.link-button.secondary{href: CDO.studio_url("/catalog")}
+      See full Curriculum Catalog
 
+%section.pl-offerings.bg-neutral-light.centered
+  .wrapper
+    - if request.language == "en"
+      = view :teach_page_pl_english
+    - else
+      = view :teach_page_pl_intl
+
+- if request.language == "en"
+  %section.bg-primary-light.centered
+    .wrapper
+      %p.no-margin-bottom
+        %strong
+          Are you a district leader or administrator? <a href="/administrators">Find out how to bring Code.org to your district</a>.
+
+%section
+  .wrapper
+    %h2.centered Additional supports and materials
+    %p.centered Beyond curriculum and professional learning we have many materials to support your classroom.
+    .action-block__wrapper.action-block__wrapper--three-col
+      .action-block.action-block--one-col.flex-space-between
+        .content-wrapper
+          %h3 Career Education
+          %img{src: "/images/teach-page-resources-01.png", alt: ""}
+          %p Easy-to-use resources designed to help you illuminate real-world connections and give students opportunities to explore different career pathways.
+        .content-footer
+          %a.link-button{href: "/csjourneys", target: "_blank", rel: "noopener noreferrer"}
+            Explore career resources
+      .action-block.action-block--one-col.flex-space-between
+        .content-wrapper
+          %h3 Video Library
+          %img{src: "/images/teach-page-resources-02.png", alt: ""}
+          %p We offer a growing library of educational videos for use by educators worldwide, online or in classrooms. Our goal is to amplify our efforts beyond our own curriculum's reach.
+        .content-footer
+          %a.link-button{href: "/educate/resources/videos", target: "_blank", rel: "noopener noreferrer"}
+            Explore videos
+      .action-block.action-block--one-col.flex-space-between
+        .content-wrapper
+          %h3 Classroom Posters
+          %img{src: "/images/teach-page-resources-03.png", alt: ""}
+          %p Print these posters of diverse role models to hang in your school and inspire your students to try computer science.
+        .content-footer
+          %a.link-button{href: "/educate/resources/posters", target: "_blank", rel: "noopener noreferrer"}
+            Download posters
+
+-# = view :analytics_event_log_helper, event_name: AnalyticsConstants::TEACHER_LOGIN_EVENT

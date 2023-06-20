@@ -3,10 +3,6 @@
 
 @import 'color', 'font', 'typography', 'breakpoints', 'barlow-semi-condensed-font';
 
-// REMOVE THESE WHEN OTHER PR IS MERGED
-html { font-size: 100% !important; }
-body { font-size: unset !important; }
-
 section.top {
 
   img {
@@ -16,12 +12,9 @@ section.top {
 }
 
 section.why-teach-cs {
-  text-align: center;
 
   .grid-container {
-    text-align: left;
     margin-top: 5rem;
-    display: grid;
     gap: 4rem;
 
     @media screen and (min-width: $width-sm) {
@@ -29,12 +22,12 @@ section.why-teach-cs {
     }
 
     .flex-container {
-      gap: 1.5rem;
+      gap: 2rem;
     }
 
     img {
-      width: 8em;
-      height: 8em;
+      width: 8rem;
+      height: 8rem;
       border-radius: 50%;
     }
   }
@@ -44,57 +37,46 @@ section.why-teach-cs {
   }
 }
 
-section.quote {
-  background: url("/images/banners/banner-bg-lines-neutral-dark.png") center repeat;
-  background-size: contain;
-  background-color: $neutral-dark;
-
-  p {
-    font-size: 1.25rem;
-    color: $neutral_white;
-    font-family: $barlowSemiCondensed-medium, sans-serif;
-
-    &.quote-text {
-      font-size: 1.5rem;
-      line-height: 1.2;
-
-      &:before, &:after {
-        font: var(--fa-font-solid);
-        color: $brand_primary_default;
-      }
-
-      &::before {
-        content: "\f10d";
-        margin: 0 8px 0 0;
-      }
-
-      &::after {
-        content: "\f10e";
-        margin: 0 0 0 8px;
-      }
-    }
-  }
-
-  span {
-    color: $brand_accent_default;
-    margin: 0 2px;
-  }
-}
-
 section.free-curriculum {
-  text-align: center;
 
-  .flex-container {
-    text-align: left;
-
-    p {
-      @include body-two;
-    }
+  .flex-container p {
+    @include body-two;
   }
 
   figure {
     background: url("/images/teach-page-students.png") center no-repeat;
     background-size: cover;
     margin: 2.5rem 0 1rem;
+    height: auto;
+
+    @media screen and (max-width: $width-md) {
+      height: 22rem;
+    }
+  }
+}
+
+section.pl-offerings {
+
+  .grid-container {
+    margin-top: 4rem;
+    gap: 2.5rem;
+
+    @media screen and (min-width: $width-sm) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .flex-container {
+      gap: 2rem;
+    }
+
+    img {
+      width: 12rem;
+      height: 12rem;
+      border-radius: 50%;
+    }
+  }
+
+  p {
+    @include body-two;
   }
 }
