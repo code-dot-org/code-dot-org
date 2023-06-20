@@ -23,10 +23,8 @@ import SelectedStudentInfo from '@cdo/apps/code-studio/components/progress/teach
 import Button from '@cdo/apps/templates/Button';
 import i18n from '@cdo/locale';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
-import {
-  hasLockableLessons,
-  queryUserProgress,
-} from '@cdo/apps/code-studio/progressRedux';
+import {queryUserProgress} from '@cdo/apps/code-studio/progressRedux';
+import {hasLockableLessons} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {reload} from '@cdo/apps/utils';
 import {updateQueryParam, queryParams} from '@cdo/apps/code-studio/utils';
 import {studentShape, levelWithProgress} from './types';
