@@ -2631,6 +2631,8 @@ es:
             '8': '8'
             '9': '9'
             '10': '10'
+      storylab_printText:
+        text: imprimir {TEXT}
       storylab_setForegroundEffect2:
         text: hacer efecto de {EFFECT}
         options:

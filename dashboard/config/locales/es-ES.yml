@@ -60,6 +60,7 @@ es:
         reset_password_token: El enlace para restablecer la contraseña que has seguido
         error:
           future: No puede ser en el futuro
+        us_state: Estado/provincia
   beta: beta
   hello: Hola mundo
   welcome_back: Bienvenido, %{name}
@@ -253,6 +254,7 @@ es:
       sobre el rendimiento y los proyectos de su hijo? Tambien mandaremos informacion
       sobre los cursos de ciencias computacionales [(Mira nuestra política de privacidad)](%{privacy_policy_url})"
     parent_account_email_label: Correo electrónico del padre o tutor
+    us_state: Estado/provincia
   school_info:
     title: Información de la escuela (opcional)
     school_country: País en el que está la escuela
@@ -1416,6 +1418,7 @@ es:
         csf_express: Fundamentos de Informática (Pre-Exprés o Exprés)
         csd: Descubrimientos de Ciencias de la Computación
         csp: Principios de Ciencias de la Computación
+        other: Otros
         not_applicable: No aplicable
       email_opt_in:
         opt_in_yes: Sí

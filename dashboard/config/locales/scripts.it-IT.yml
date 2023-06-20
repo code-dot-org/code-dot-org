@@ -5519,3 +5519,7 @@ it:
           description_audience: Da 9 a 13 anni
           description_short: Impara tutti i concetti dei corsi di fondamenti di informatica
             e crea disegni, storie o giochi interattivi.
+        csa-frq-practice:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Classi

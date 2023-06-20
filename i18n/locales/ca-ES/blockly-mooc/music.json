@@ -54,5 +54,7 @@
   "feedback": "Comentaris",
   "share": "Compartir",
   "shareComingSoon": "Compartir està en construcció. Comprovi aviat.",
-  "startOver": "Torna a començar"
+  "startOver": "Torna a començar",
+  "panelHeaderInstructions": "Instruccions",
+  "panelHeaderWorkspace": "Espai de treball: "
 }
