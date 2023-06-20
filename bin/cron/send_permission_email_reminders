@@ -1,0 +1,43 @@
+#!/usr/bin/env ruby
+require_relative 'only_one'
+abort 'Script already running' unless only_one_running?(__FILE__)
+
+# This script will send reminder emails for parent permission requests that
+# haven't been granted yet. Intended for Colorado Privacy Act compliance.
+
+require 'active_support/core_ext/numeric/time'
+require 'date'
+require 'optparse'
+
+options = {}
+OptionParser.new do |opts|
+  opts.banner = <<~BANNER
+    Usage: #{File.basename(__FILE__)} [options]
+
+    This script will send reminder emails to parents who haven't yet granted
+    permission for their child's code.org account.
+
+    Options:
+  BANNER
+
+  opts.on('--max-age', 'Timestamp of the oldest requests to send reminders for. Defaults to 7 days ago.') do |max_reminder_age|
+    options[:max_reminder_age] = max_reminder_age
+  end
+
+  opts.on('--min-age', 'Timestamp of the newest requests to send reminders for. Defaults to 3 days ago.') do |min_reminder_age|
+    options[:min_reminder_age] = min_reminder_age
+  end
+
+  opts.on('--max-reminders', 'Max number of reminders to send for a given request. Defaults to 1.') do |max_reminders|
+    options[:max_reminders] = max_reminders
+  end
+
+  opts.on('-h', '--help', 'Print this') do
+    puts opts
+    exit
+  end
+end.parse!
+
+require_relative '../../dashboard/config/environment'
+require_relative '../../dashboard/lib/email_reminder'
+EmailReminder.new(options).send_all_reminder_emails
