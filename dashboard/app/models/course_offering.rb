@@ -245,11 +245,6 @@ class CourseOffering < ApplicationRecord
     DURATION_LABEL_TO_MINUTES_CAP.keys.find {|dur| co_duration_in_minutes <= DURATION_LABEL_TO_MINUTES_CAP[dur]}
   end
 
-  def recommended?(locale_code = 'en-us')
-    return false if latest_published_version.nil?
-    latest_published_version.recommended?(locale_code)
-  end
-
   def summarize_for_edit
     {
       key: key,
@@ -283,8 +278,7 @@ class CourseOffering < ApplicationRecord
       course_id: course_id,
       course_offering_id: id,
       script_id: script_id,
-      is_standalone_unit: standalone_unit?,
-      is_recommended: recommended?(locale_code)
+      is_standalone_unit: standalone_unit?
     }
   end
 
