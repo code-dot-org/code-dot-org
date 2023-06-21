@@ -728,6 +728,23 @@ class CourseOfferingTest < ActiveSupport::TestCase
     assert_equal :school_year, co.duration
   end
 
+  test 'translated? returns true if user locale is in English' do
+    script = create :script, family_name: 'ss', version_year: '2050', is_course: true, supported_locales: ['fake-locale'], published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+    offering = CourseOffering.add_course_offering(script)
+    assert offering.translated?('en-us')
+  end
+
+  test 'translated? returns true only if course offering has a stable version supported in user locale' do
+    script1 = create :script, family_name: 'ss', version_year: '2051', is_course: true, supported_locales: ['fake-locale', 'second-fake-locale'], published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+    CourseOffering.add_course_offering(script1)
+    script2 = create :script, family_name: 'ss', version_year: '2052', is_course: true, supported_locales: ['fake-locale'], published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+    offering = CourseOffering.add_course_offering(script2)
+
+    assert offering.translated?('fake-locale')
+    assert offering.translated?('second-fake-locale')
+    refute offering.translated?('unsupported-locale')
+  end
+
   test "can serialize and seed course offerings" do
     course_offering = create :course_offering, key: 'course-offering-1', grade_levels: 'K,1,2', curriculum_type: 'Course', marketing_initiative: 'HOC', header: 'Popular Media', image: 'https://images.code.org/spritelab.JPG', cs_topic: 'Artificial Intelligence,Cybersecurity', school_subject: 'Math,Science', device_compatibility: "{'computer':'ideal','chromebook':'not_recommended','tablet':'incompatible','mobile':'incompatible','no_device':'incompatible'}"
     serialization = course_offering.serialize

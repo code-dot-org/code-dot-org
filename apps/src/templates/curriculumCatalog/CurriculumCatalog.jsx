@@ -243,6 +243,7 @@ const CurriculumCatalog = ({curriculaData, isEnglish}) => {
                 course_offering_id,
                 script_id,
                 is_standalone_unit,
+                is_translated,
               }) => (
                 <CurriculumCatalogCard
                   key={key}
@@ -252,7 +253,7 @@ const CurriculumCatalog = ({curriculaData, isEnglish}) => {
                   gradesArray={grade_levels.split(',')}
                   subjects={school_subject?.split(',')}
                   topics={cs_topic?.split(',')}
-                  isTranslated={false} // TODO [MEG]: actually pass in this data
+                  isTranslated={is_translated}
                   isEnglish={isEnglish}
                   pathToCourse={course_version_path}
                   courseVersionId={course_version_id}

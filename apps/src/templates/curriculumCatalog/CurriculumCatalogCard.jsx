@@ -123,14 +123,14 @@ const CustomizableCurriculumCatalogCard = ({
             <div className={style.labelsContainer}>
               <CardLabels subjectsAndTopics={subjectsAndTopics} />
             </div>
+            {!isEnglish && isTranslated && (
+              <FontAwesome
+                icon="language"
+                className="fa-solid"
+                title={translationIconTitle}
+              />
+            )}
           </div>
-          {isTranslated && (
-            <FontAwesome
-              icon="language"
-              className="fa-solid"
-              title={translationIconTitle}
-            />
-          )}
           <h4>{courseDisplayName}</h4>
           <div className={style.iconWithDescription}>
             <FontAwesome icon="user" className="fa-solid" />
