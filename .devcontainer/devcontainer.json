@@ -1,0 +1,7 @@
+{
+	"name": "Code.org Dev Container",
+	"dockerComposeFile": "docker-compose.yml",
+	"service": "web",
+	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+	"postCreateCommand": "gem install bundler -v 2.3.22 && RAILS_ENV=development bundle install"
+}

@@ -1,0 +1,26 @@
+version: '3.9'
+services:
+  web:
+    build:
+      context: ..
+      dockerfile: .devcontainer/web.Dockerfile
+    cap_add:
+      - SYS_PTRACE
+    command: sleep infinity
+    volumes:
+          - ../..:/workspaces:cached
+          - $HOME/.aws:/home/vscode/.aws
+    network_mode: service:db
+    security_opt:
+      - seccomp=chrome.json
+  db:
+    container_name: db
+    hostname: db
+    image: biarms/mysql:5.7.30
+    environment:
+      MYSQL_DATABASE: 'db'
+      MYSQL_USER: 'user'
+      MYSQL_PASSWORD: 'password'
+      MYSQL_ROOT_PASSWORD: 'password'
+    volumes:
+      - ./data:/var/lib/mysql

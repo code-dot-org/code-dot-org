@@ -2,6 +2,9 @@ source 'https://rubygems.org'
 
 ruby '2.7.5'
 
+gem 'tzinfo-data'
+gem 'libv8-node', '~> 16.10.0.0'
+
 # Ruby 2.7 no longer includes some libraries by default; install
 # the ones we need here
 # see https://www.ruby-lang.org/en/news/2019/12/25/ruby-2-7-0-released/
@@ -266,7 +269,7 @@ gem 'rest-client', '~> 2.0.1'
 
 # A rest-client dependency
 # This is the latest version that's installing successfully
-gem 'unf_ext', '0.0.7.2'
+gem 'unf_ext', '0.0.8'
 
 # Generate SSL certificates.
 gem 'acmesmith', '~> 2.3.1'

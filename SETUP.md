@@ -313,6 +313,29 @@ It is worthwhile to make sure that you are using WSL 2. Attempting to use WSL 1 
      * run `ssh -L 3000:127.0.0.1:3000 yourname-ec2` and then `~/code-dot-org/bin/dashboard-server` on your local machine. This sets up SSH port forwarding from your local machine to your ec2 dev instance for as long as your ssh connection is open.
      * navigate to http://localhost-studio.code.org:3000/ on your local machine
 
+
+### VS Code Dev Container
+You can also run the Code.org development environment in a VS Code Dev Container. To do this, you'll need:
+
+1. A Docker-based environment running on the host machine (e.g., Docker Desktop). The Docker environment should have a minimum of 8GB available RAM and 10GB+ available disk space for container images.
+2. The [Dev Containers VS Code extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) installed in VS Code.
+3. Valid AWS credentials located in the $HOME/.aws directory on your machine. This directory will be mounted as a volume into the container and is required for running the Dashboard server.
+
+To build the Dev Container:
+
+1. Edit src/config/development.yml.erb. Set `db_writer` to `mysql://root:password@db/` (this enables the development container to access the db container vs. the local machine).
+2. Launch VS Code. From the command pallete, select "Dev Containers: Rebuild Container". Depending on your machine and network connection, this will take up to 20 minutes for the first time to build.
+
+After building the container, you'll still need to do a rake install and rake build to initialize the database. This will also take about 20 minutes and only needs to be run once. To do this:
+
+1. With the Dev Container running, run `bin/aws-access` to validate your AWS credentials. VS Code will prompt you to open a new Web browser window to authenticate.
+2. Run `bundle exec rake install`
+3. Run `bundle exec rake build`
+
+To run dashboard server, start the Dev Container and run `bin/dashboard-server`. Once the server is running, VS Code will prompt to open a Web browser or you can browse to http://localhost:3000.
+
+If you want to rebuild (or replace) your database, the MySQL files can be found in the .devcontainer/data directory.
+
 ## Piskel
 ### Local Development Between code-dot-org and forked piskel repo
 If you want the Code.org repo to point to the local version of the Piskel you are working on, your apps package must be linked to a local development copy of the Piskel repository with a complete dev build. 
