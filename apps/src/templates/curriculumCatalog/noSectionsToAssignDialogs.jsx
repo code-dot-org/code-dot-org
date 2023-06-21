@@ -28,7 +28,7 @@ const NoSectionsToAssignBaseDialog = ({
   href,
 }) => {
   return (
-    <AccessibleDialog onClose={onClose} className={style.dialogueContainer}>
+    <AccessibleDialog onClose={onClose} className={style.dialogContainer}>
       <Typography semanticTag="h3" tabIndex="0">
         {headerText}
       </Typography>
