@@ -5,7 +5,7 @@ require 'uri'
 require 'json'
 
 raise 'please set CDO.db_endpoint_proxy_reporting' unless CDO.db_endpoint_proxy_reporting
-credentials = JSON.parse(CDO.db_credential_reader)
+credentials = CDO.db_credential_reader
 db_connection_settings = URI::Generic.build(
   scheme: 'mysql',
   userinfo: credentials['username'] + ':' + credentials['password'],

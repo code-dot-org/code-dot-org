@@ -15,7 +15,6 @@ reporting_db_admin: !Secret
 
 <% unless name&.include?('console') %>
 # Production database was provisioned manually and has a different admin SQL username.
-db_admin_user: db
 db_admin:
 <% end %>
 
