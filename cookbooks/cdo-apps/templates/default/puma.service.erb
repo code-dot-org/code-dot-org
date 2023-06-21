@@ -12,6 +12,10 @@ Type=simple
 User=<%= @user %>
 WorkingDirectory=<%= @app_root %>
 
+# Sockets will be written here, so make sure it gets created and is preserved through restarts
+RuntimeDirectory=<%= @app_name %>
+RuntimeDirectoryPreserve=yes
+
 <%= @export_env ? @export_env.map{|k,v|"Environment=#{k}=#{v}"}.join("\n") : '' %>
 Environment=LANG=en_US.UTF-8
 
