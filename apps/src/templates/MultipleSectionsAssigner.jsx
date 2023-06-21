@@ -3,7 +3,6 @@ import React, {useState} from 'react';
 import {connect} from 'react-redux';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
-import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import Button from '@cdo/apps/templates/Button';
 import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shapes';
 import TeacherSectionOption from './TeacherSectionOption';
@@ -12,6 +11,7 @@ import {
   unassignSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {updateHiddenScript} from '@cdo/apps/code-studio/hiddenLessonRedux';
+import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
 
 const MultipleSectionsAssigner = ({
   courseId,
@@ -159,8 +159,12 @@ const MultipleSectionsAssigner = ({
   };
 
   return (
-    <BaseDialog isOpen={true} handleClose={onClose}>
-      <div style={styles.header} className="uitest-confirm-assignment-dialog">
+    <AccessibleDialog onClose={onClose}>
+      <div
+        tabIndex="0"
+        style={styles.header}
+        className="uitest-confirm-assignment-dialog"
+      >
         {i18n.chooseSectionsPrompt({assignmentName})}
       </div>
       <div style={styles.content}>{i18n.chooseSectionsDirections()}</div>
@@ -206,7 +210,7 @@ const MultipleSectionsAssigner = ({
           color={Button.ButtonColor.orange}
         />
       </div>
-    </BaseDialog>
+    </AccessibleDialog>
   );
 };
 
