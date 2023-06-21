@@ -306,19 +306,12 @@ class UnconnectedMusicView extends React.Component {
     return this.props.progressLevelType === ProgressLevelType.SCRIPT_LEVEL;
   };
 
-  // Returns whether we have a progression file.
-  hasProgressionFile = () => {
-    return AppConfig.getValue('load-progression') === 'true';
-  };
-
   // Returns whether we have a progression.
   // Note that even a standalone level has a progression in the sense that we
   // will show instructions and feedback, but we'll only show them for that
   // standalone level.
   hasProgression = () => {
-    return (
-      this.isStandaloneLevel() || this.hasLevels() || this.hasProgressionFile()
-    );
+    return this.isStandaloneLevel() || this.hasLevels();
   };
 
   hasNoProgressHeader = () => {
@@ -410,8 +403,6 @@ class UnconnectedMusicView extends React.Component {
       ? LevelSources.LEVELS
       : this.isStandaloneLevel()
       ? LevelSources.LEVEL
-      : this.hasProgressionFile()
-      ? LevelSources.FILE
       : undefined;
 
     if (progressionSource) {
@@ -420,9 +411,7 @@ class UnconnectedMusicView extends React.Component {
       try {
         const result = await loadProgressionStepFromSource(
           progressionSource,
-          this.props.levelDataPath,
-          // Special case: used for progression file:
-          this.props.currentLevelIndex
+          this.props.levelDataPath
         );
         progressionStep = result.progressionStep;
         levelCount = result.levelCount;

@@ -5,7 +5,7 @@ import MusicLibrary, {
   LibraryJson,
   LibraryValidator,
 } from '../player/MusicLibrary';
-import {Progression, ProgressionStep} from '../progress/ProgressManager';
+import {ProgressionStep} from '../progress/ProgressManager';
 
 const AppConfig = require('../appConfig').default;
 
@@ -14,7 +14,6 @@ export const baseUrl = 'https://curriculum.code.org/media/musiclab/';
 enum LevelSource {
   LEVELS = 'LEVELS',
   LEVEL = 'LEVEL',
-  FILE = 'FILE',
 }
 
 type LevelDataResponse = {
@@ -30,7 +29,6 @@ interface ProgressionStepData {
 export const LevelSources = {
   LEVELS: LevelSource.LEVELS,
   LEVEL: LevelSource.LEVEL,
-  FILE: LevelSource.FILE,
 };
 
 // Loads a sound library JSON file.
@@ -54,25 +52,6 @@ export const loadLibrary = async (): Promise<MusicLibrary> => {
   }
 };
 
-// Loads a progression file.  This file can be used for prototyping a progression
-// before it's split into proper levels.
-const loadProgressionFile = async (): Promise<Progression> => {
-  if (AppConfig.getValue('local-progression') === 'true') {
-    const defaultProgressionFilename = 'music-progression';
-    const progression = require(`@cdo/static/music/${defaultProgressionFilename}.json`);
-    return progression as Progression;
-  } else {
-    const progressionParameter = AppConfig.getValue('progression');
-    const progressionFilename = progressionParameter
-      ? `music-progression-${progressionParameter}.json`
-      : 'music-progression.json';
-    const progressionResponse = await HttpClient.fetchJson<Progression>(
-      baseUrl + progressionFilename
-    );
-    return progressionResponse.value;
-  }
-};
-
 const LevelDataValidator: ResponseValidator<LevelDataResponse> = response => {
   const levelDataResponse = response as LevelDataResponse;
   if (response.level_data === undefined) {
@@ -85,8 +64,7 @@ const LevelDataValidator: ResponseValidator<LevelDataResponse> = response => {
 // Loads a progression step.
 export const loadProgressionStepFromSource = async (
   levelSource: LevelSource,
-  levelDataPath: string,
-  currentLevelIndex: number
+  levelDataPath: string
 ): Promise<ProgressionStepData> => {
   let progressionStep = undefined;
   let levelCount = undefined;
@@ -108,12 +86,6 @@ export const loadProgressionStepFromSource = async (
     );
     progressionStep = response.value.level_data;
     levelCount = 1;
-  } else if (levelSource === LevelSource.FILE) {
-    // Let's load from the progression file.  We'll grab the entire progression
-    // but just extract the current step's data.
-    const response = await loadProgressionFile();
-    progressionStep = response.steps[currentLevelIndex];
-    levelCount = response.steps.length;
   }
 
   return {progressionStep, levelCount};
