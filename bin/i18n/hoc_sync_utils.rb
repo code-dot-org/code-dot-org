@@ -16,7 +16,7 @@ class HocSyncUtils
     dest_dir = File.join(I18N_SOURCE_DIR, "hourofcode")
 
     # Copy the file containing developer-added strings
-    Dir.mkdir(dest_dir) unless Dir.exist?(dest_dir)
+    FileUtils.mkdir_p(dest_dir)
     FileUtils.cp("pegasus/sites.v3/hourofcode.com/i18n/en.yml", dest_dir)
 
     # Copy the markdown files representing individual page content

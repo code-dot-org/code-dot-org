@@ -30,7 +30,7 @@ class CrowdinValidator
     @crowdin_client = Crowdin::Client.new do |config|
       config.api_token = api_token
     end
-    Dir.mkdir(OUTPUT_DIR) unless Dir.exist?(OUTPUT_DIR)
+    FileUtils.mkdir_p(OUTPUT_DIR)
   end
 
   # Load configurations from a config file and run them all.

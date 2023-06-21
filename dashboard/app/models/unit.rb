@@ -1248,7 +1248,7 @@ class Unit < ApplicationRecord
       end
     rescue => exception
       filepath_to_delete = Unit.script_json_filepath(new_name)
-      File.delete(filepath_to_delete) if File.exist?(filepath_to_delete)
+      FileUtils.rm_f(filepath_to_delete)
       raise exception, "Error: #{exception.message}"
     end
   end
