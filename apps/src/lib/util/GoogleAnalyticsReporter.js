@@ -133,7 +133,7 @@ class GoogleAnalyticsReporter {
   /**
    * Common function used to read properties from cookies.
    * Properties are extracted so they can be logged later.
-   * @name  name of the desired cookie to be extracted
+   * @param {string} name - name of the desired cookie to be extracted
    */
   readCookie = name => {
     const nameEQ = name + '=';
