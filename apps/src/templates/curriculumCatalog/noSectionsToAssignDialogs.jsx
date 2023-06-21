@@ -33,7 +33,7 @@ const NoSectionsToAssignBaseDialog = ({
         {headerText}
       </Typography>
       <hr />
-      <Typography semanticTag="span" visualAppearance="body-one">
+      <Typography semanticTag="p" visualAppearance="body-one">
         {helpText}
       </Typography>
       <div className={style.lowerContainer}>
