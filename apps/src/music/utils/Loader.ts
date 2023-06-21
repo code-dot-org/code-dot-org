@@ -11,24 +11,8 @@ const AppConfig = require('../appConfig').default;
 
 export const baseUrl = 'https://curriculum.code.org/media/musiclab/';
 
-enum LevelSource {
-  LEVELS = 'LEVELS',
-  LEVEL = 'LEVEL',
-}
-
 type LevelDataResponse = {
   level_data: ProgressionStep;
-};
-
-interface ProgressionStepData {
-  progressionStep: ProgressionStep | undefined;
-  levelCount: number | undefined;
-}
-
-// Exporting enum as object for use in JS files
-export const LevelSources = {
-  LEVELS: LevelSource.LEVELS,
-  LEVEL: LevelSource.LEVEL,
 };
 
 // Loads a sound library JSON file.
@@ -63,30 +47,14 @@ const LevelDataValidator: ResponseValidator<LevelDataResponse> = response => {
 
 // Loads a progression step.
 export const loadProgressionStepFromSource = async (
-  levelSource: LevelSource,
   levelDataPath: string
-): Promise<ProgressionStepData> => {
-  let progressionStep = undefined;
-  let levelCount = undefined;
+): Promise<ProgressionStep> => {
+  // Asynchronously retrieve the current level data.
+  const response = await HttpClient.fetchJson<LevelDataResponse>(
+    levelDataPath,
+    {},
+    LevelDataValidator
+  );
 
-  if (levelSource === LevelSource.LEVELS) {
-    // Since we have levels, we'll asynchronously retrieve the current level data.
-    const response = await HttpClient.fetchJson<LevelDataResponse>(
-      levelDataPath,
-      {},
-      LevelDataValidator
-    );
-    progressionStep = response.value.level_data;
-  } else if (levelSource === LevelSource.LEVEL) {
-    // Since we have a level, we'll asynchronously retrieve the current level data.
-    const response = await HttpClient.fetchJson<LevelDataResponse>(
-      levelDataPath,
-      {},
-      LevelDataValidator
-    );
-    progressionStep = response.value.level_data;
-    levelCount = 1;
-  }
-
-  return {progressionStep, levelCount};
+  return response.value.level_data;
 };

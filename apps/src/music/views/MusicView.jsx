@@ -19,7 +19,6 @@ import AppConfig, {getBlockMode, setAppConfig} from '../appConfig';
 import SoundUploader from '../utils/SoundUploader';
 import {
   baseUrl,
-  LevelSources,
   loadLibrary,
   loadProgressionStepFromSource,
 } from '../utils/Loader';
@@ -395,35 +394,26 @@ class UnconnectedMusicView extends React.Component {
   };
 
   loadProgressionStep = async () => {
-    const progressionSource = this.isScriptLevel()
-      ? LevelSources.LEVELS
-      : this.isSingleLevel()
-      ? LevelSources.LEVEL
-      : undefined;
+    let progressionStep;
 
-    if (progressionSource) {
-      let progressionStep;
-
-      try {
-        const result = await loadProgressionStepFromSource(
-          progressionSource,
-          this.props.levelDataPath
-        );
-        progressionStep = result.progressionStep;
-      } catch (e) {
-        this.onError(e);
-      }
-
-      if (this.isScriptLevel()) {
-        // Get the level count from the external array of levels.
-        this.props.setLevelCount(this.props.levels.length);
-      } else {
-        this.props.setLevelCount(1);
-      }
-
-      this.progressManager.setProgressionStep(progressionStep);
-      this.props.setShowInstructions(!!progressionStep);
+    try {
+      progressionStep = await loadProgressionStepFromSource(
+        this.props.levelDataPath
+      );
+    } catch (e) {
+      this.onError(e);
     }
+
+    if (this.isScriptLevel()) {
+      // Determine the level count from the external array of levels.
+      this.props.setLevelCount(this.props.levels.length);
+    } else {
+      // This must be a single level.
+      this.props.setLevelCount(1);
+    }
+
+    this.progressManager.setProgressionStep(progressionStep);
+    this.props.setShowInstructions(!!progressionStep);
   };
 
   clearCode = () => {
