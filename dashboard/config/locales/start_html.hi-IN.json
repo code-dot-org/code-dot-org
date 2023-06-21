@@ -563,7 +563,8 @@
           "low": "निम्न"
         },
         "CSD U6 - Sensors - SB2_2222": {
-          "Update": "अद्यतन करें"
+          "Update": "अद्यतन करें",
+          "value": "मूल्य"
         },
         "CSD U6 Driver pt 2": {
           "You did it!": "आप इसे करने में कामयाब रहे!"
@@ -638,16 +639,20 @@
           "Success!": "सफल!"
         },
         "CSD U6 analog light": {
-          "Update": "अद्यतन करें"
+          "Update": "अद्यतन करें",
+          "value": "मूल्य"
         },
         "CSD U6 analog light_2018": {
-          "Update": "अद्यतन करें"
+          "Update": "अद्यतन करें",
+          "value": "मूल्य"
         },
         "CSD U6 analog light_2019": {
-          "Update": "अद्यतन करें"
+          "Update": "अद्यतन करें",
+          "value": "मूल्य"
         },
         "CSD U6 analog light_2021": {
-          "Update": "अद्यतन करें"
+          "Update": "अद्यतन करें",
+          "value": "मूल्य"
         },
         "CSD U6 array piano": {
           "C": "C",
@@ -1527,6 +1532,54 @@
           "night": "रात",
           "dusk": "शाम",
           "Predict": "(Predict) पूर्वानुमान लगाइए"
+        },
+        "CSD U6 - Sensors - SB1_2222": {
+          "value": "मूल्य"
+        },
+        "CSD U6 - Sensors - SB3_2222": {
+          "value": "मूल्य"
+        },
+        "CSD U6 - Sensors - SB4.1_2222": {
+          "value": "मूल्य"
+        },
+        "CSD U6 - Sensors - SB4_2222": {
+          "value": "मूल्य"
+        },
+        "CSD U6 analog change": {
+          "value": "मूल्य"
+        },
+        "CSD U6 analog change_2018": {
+          "value": "मूल्य"
+        },
+        "CSD U6 analog change_2019": {
+          "value": "मूल्य"
+        },
+        "CSD U6 analog change_2021": {
+          "value": "मूल्य"
+        },
+        "CSD U6 analog data": {
+          "value": "मूल्य"
+        },
+        "CSD U6 analog data_2018": {
+          "value": "मूल्य"
+        },
+        "CSD U6 analog data_2019": {
+          "value": "मूल्य"
+        },
+        "CSD U6 analog data_2021": {
+          "value": "मूल्य"
+        },
+        "CSD U6 analog sound": {
+          "value": "मूल्य"
+        },
+        "CSD U6 analog sound_2018": {
+          "value": "मूल्य"
+        },
+        "CSD U6 analog sound_2019": {
+          "value": "मूल्य"
+        },
+        "CSD U6 analog sound_2021": {
+          "value": "मूल्य"
         }
       }
     }

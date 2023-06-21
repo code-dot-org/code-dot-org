@@ -12,14 +12,14 @@ theme: responsive_full_width
   .wrapper
     .text-wrapper
       %h1 Code.org Professional Learning
-      %h2 Help today's students become tomorrow's superheroes.
-      %p Find your local professional learning workshops for middle and high school and apply today!
+      %h2.heading-lg Help today's students become tomorrow's superheroes.
+      %p.no-margin-bottom Find your local professional learning workshops for middle and high school and apply today!
     .clear
     %img{src: "/images/professional-learning/pl-superhero-girl-crop.png", alt: ""}
 
 %section
   .wrapper
-    %div.col-45{style: "margin-bottom: 1em"}
+    %div.col-45{style: "margin-bottom: 1rem"}
       %h2 Why Code.org professional learning?
       %p Our engaging workshops are for new and experienced computer science teachers!
       %p <strong>In this program, you will:</strong>
@@ -37,7 +37,7 @@ theme: responsive_full_width
 %section.bg-neutral-light
   .wrapper
     .quotes-wrapper
-      %figure.col-33
+      %figure.col-33{style: "margin-top: 10px;"}
         %img{src: "/images/professional-learning/pl-carousel.png", alt: ""}
       %div.col-60{style: "float: right"}
         %h2 What teachers are saying about Code.org professional learning:
@@ -49,44 +49,50 @@ theme: responsive_full_width
     %h2 Professional learning programs specific to the course
     %p Join one of our professional learning programs in your area. The programs are designed to prepare you before and during your first year teaching <a href="/educate/csd" target="_blank" rel="noopener noreferrer">CS Discoveries</a>, <a href="/educate/csp" target="_blank" rel="noopener noreferrer">CS Principles</a>, or <a href="/educate/csa" target="_blank" rel="noopener noreferrer">AP® CSA</a>.
     .action-block__wrapper.action-block__wrapper--three-col{style: "margin-top: 2em"}
-      .action-block.action-block--one-col
-        %p.overline Beginner
-        %h3 CS Discoveries
-        %figure.video-responsive
-          %div
-            %iframe{src: "https://www.youtube-nocookie.com/embed/uQim0hBHco0", title: "YouTube video player", frameborder: "0", allowfullscreen: "true"}
-        %p.no-margin-bottom <strong>Teacher Requirements:</strong>
-        %ul{style: "height: 150px;"}
-          %li No computer science experience required
-          %li Based in United States
-          %li Teaching 25+ hours of course to a class in next school year
-        %a{href: "/educate/professional-learning/program-information", class: "link-button"} Learn more
-      .action-block.action-block--one-col
-        %p.overline Beginner
-        %h3 CS Principles
-        %figure.video-responsive
-          %div
-            %iframe{src: "https://www.youtube-nocookie.com/embed/DMr1iFYacGQ", title: "YouTube video player", frameborder: "0", allowfullscreen: "true"}
-        %p.no-margin-bottom <strong>Teacher Requirements:</strong>
-        %ul{style: "height: 150px;"}
-          %li No computer science experience required
-          %li Based in United States
-          %li Teaching 100+ hours of course to a class in next school year
-          %li Teach AP or non-AP course
-        %a{href: "/educate/professional-learning/program-information", class: "link-button"} Learn more
-      .action-block.action-block--one-col
-        %p.overline Intermediate
-        %h3 AP® CSA
-        %figure.video-responsive
-          %div
-            %iframe{src: "https://www.youtube-nocookie.com/embed/lFkFi2jGs70", title: "YouTube video player", frameborder: "0", allowfullscreen: "true"}
-        %p.no-margin-bottom <strong>Teacher Requirements:</strong>
-        %ul{style: "height: 150px;"}
-          %li Able to use functions, conditionals, loops, and arrays
-          %li Based in United States
-          %li Teaching 140+ hours of course to a class  in next school year
-          %li Teach AP or non-AP course
-        %a{href: "/educate/professional-learning/program-information", class: "link-button"} Learn more
+      .action-block.action-block--one-col.flex-space-between
+        .content-wrapper
+          %p.overline Beginner
+          %h3 CS Discoveries
+          %figure.video-responsive
+            %div
+              %iframe{src: "https://www.youtube-nocookie.com/embed/uQim0hBHco0", title: "YouTube video player", frameborder: "0", allowfullscreen: "true"}
+          %p.no-margin-bottom <strong>Teacher Requirements:</strong>
+          %ul
+            %li No computer science experience required
+            %li Based in United States
+            %li Teaching 25+ hours of course to a class in next school year
+        .content-footer
+          %a{href: "/educate/professional-learning/program-information", class: "link-button"} Learn more
+      .action-block.action-block--one-col.flex-space-between
+        .content-wrapper
+          %p.overline Beginner
+          %h3 CS Principles
+          %figure.video-responsive
+            %div
+              %iframe{src: "https://www.youtube-nocookie.com/embed/DMr1iFYacGQ", title: "YouTube video player", frameborder: "0", allowfullscreen: "true"}
+          %p.no-margin-bottom <strong>Teacher Requirements:</strong>
+          %ul
+            %li No computer science experience required
+            %li Based in United States
+            %li Teaching 100+ hours of course to a class in next school year
+            %li Teach AP or non-AP course
+        .content-footer
+          %a{href: "/educate/professional-learning/program-information", class: "link-button"} Learn more
+      .action-block.action-block--one-col.flex-space-between
+        .content-wrapper
+          %p.overline Intermediate
+          %h3 AP® CSA
+          %figure.video-responsive
+            %div
+              %iframe{src: "https://www.youtube-nocookie.com/embed/lFkFi2jGs70", title: "YouTube video player", frameborder: "0", allowfullscreen: "true"}
+          %p.no-margin-bottom <strong>Teacher Requirements:</strong>
+          %ul
+            %li Able to use functions, conditionals, loops, and arrays
+            %li Based in United States
+            %li Teaching 140+ hours of course to a class  in next school year
+            %li Teach AP or non-AP course
+        .content-footer
+          %a{href: "/educate/professional-learning/program-information", class: "link-button"} Learn more
   .clear
 
 = view :section_divider_line
@@ -140,7 +146,7 @@ theme: responsive_full_width
     .action-block.action-block--two-col
       %img{src: "/images/professional-learning/pl-teacher-group.png", alt: "", class: "col-50"}
       .text-wrapper.col-50
-        %p <strong>The cost of the program varies by region.</strong>
+        %h3.heading-sm The cost of the program varies by region.
         %p You may be eligible for a scholarship to cover the cost of your program.
         %a{href: "/educate/professional-learning/program-information", class: "link-button"} Learn more about the program in your region
   .clear
@@ -152,18 +158,24 @@ theme: responsive_full_width
     %h2 Additional programs to meet diverse teacher needs
     %p In addition to our in-person facilitator led options for middle and high school teachers we have several other programs to meet the diverse needs of our teachers.
     .action-block__wrapper.action-block__wrapper--three-col
-      .action-block.action-block--one-col.secondary
-        %h3 Self-Paced Learning
-        %p{style: "height: 80px"} Learn at your own pace using our online learning modules. You can start whenever is convenient for you and the courses are free.
-        %a{href: "/educate/professional-development-online", class: "link-button secondary"} Learn more
-      .action-block.action-block--one-col.secondary
-        %h3 Elementary Workshops
-        %p{style: "height: 80px"} Do you teach Kindergarten through 5th grade? Check out the link below to learn more about our K5 workshops.
-        %a{href: "/professional-development-workshops", class: "link-button secondary"} Learn more
-      .action-block.action-block--one-col.secondary
-        %h3 Outside the United States
-        %p{style: "height: 80px"} If you are an international teacher interested in professional learning. Learn more about what is offered in your area.
-        %a{href: "https://support.code.org/hc/en-us/articles/115003865532-I-teach-outside-of-the-US-Are-there-resources-to-help-me-teach-computer-science-", class: "link-button secondary"} Learn more
+      .action-block.action-block--one-col.secondary.flex-space-between
+        .content-wrapper
+          %h3 Self-Paced Learning
+          %p Learn at your own pace using our online learning modules. You can start whenever is convenient for you and the courses are free.
+        .content-footer
+          %a{href: "/educate/professional-development-online", class: "link-button secondary"} Learn more
+      .action-block.action-block--one-col.secondary.flex-space-between
+        .content-wrapper
+          %h3 Elementary Workshops
+          %p Do you teach Kindergarten through 5th grade? Check out the link below to learn more about our K5 workshops.
+        .content-footer
+          %a{href: "/professional-development-workshops", class: "link-button secondary"} Learn more
+      .action-block.action-block--one-col.secondary.flex-space-between
+        .content-wrapper
+          %h3 Outside the United States
+          %p If you are an international teacher interested in professional learning. Learn more about what is offered in your area.
+        .content-footer
+          %a{href: "https://support.code.org/hc/en-us/articles/115003865532-I-teach-outside-of-the-US-Are-there-resources-to-help-me-teach-computer-science-", class: "link-button secondary"} Learn more
 
 = view :section_divider_line
 

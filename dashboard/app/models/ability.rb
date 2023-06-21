@@ -69,7 +69,7 @@ class Ability
     can [:show, :index], DataDoc
 
     # If you can see a level, you can also do these things:
-    can [:embed_level, :get_rubric, :get_serialized_maze], Level do |level|
+    can [:embed_level, :get_rubric, :get_serialized_maze, :level_data], Level do |level|
       can? :read, level
     end
 
@@ -426,19 +426,25 @@ class Ability
 
     if user.persisted?
       # These checks control access to Javabuilder.
-      # All verified instructors and can generate a Javabuilder session token to run Java code.
-      # Students who are also assigned to a CSA section with a verified instructor can run Java code.
+      # All teachers can generate a Javabuilder session token to run Java code,
+      # although only verified teachers can generate tokens will be valid for "main" javabuilder.
+      # Unverified teachers are given limited access to a separate "demo" javabuilder stack.
+      # Students who are also assigned to a CSA section with a verified instructor can run Java code in "main" javabuilder.
       # The get_access_token endpoint is used for normal execution, and the access_token_with_override_sources
       # is used when viewing another version of a student's project (in preview or Code Review mode).
       # It is also used for running exemplars, but only teachers can access exemplars.
       # Levelbuilders can access and update Java Lab validation code (using the
       # access_token_with_override_validation endpoint).
       can [:get_access_token, :access_token_with_override_sources], :javabuilder_session do
-        user.verified_instructor? || user.sections_as_student.any? {|s| s.assigned_csa? && s.teacher&.verified_instructor?}
+        user.teacher? || user.sections_as_student.any? {|s| s.assigned_csa? && s.teacher&.verified_instructor?}
       end
 
       can :access_token_with_override_validation, :javabuilder_session do
         user.permission?(UserPermission::LEVELBUILDER)
+      end
+
+      can :use_unrestricted_javabuilder, :javabuilder_session do
+        user.verified_instructor? || user.sections_as_student.any? {|s| s.assigned_csa? && s.teacher&.verified_instructor?}
       end
     end
 

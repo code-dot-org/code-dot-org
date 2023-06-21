@@ -229,9 +229,16 @@
                   "short_description": "Sprawdza, czy podany klawisz jest naciśnięty."
                 },
                 "keyWentDown": {
+                  "examples": {
+                    "Click Counter": {
+                      "name": "Licznik kliknięć",
+                      "description": "Prosty licznik kliknięć przy użyciu KeyWentDown ()."
+                    }
+                  },
                   "palette_params": {
                     "code": {
-                      "type": "Łańcuch"
+                      "type": "Łańcuch",
+                      "description": "Nazwa klucza, który chcesz sprawdzić. Klucze bez litery lub cyfry mają nazwy takie jak „w górę”, „w lewo”, „przesunięcie”, „tab”, „spacja” itp."
                     }
                   },
                   "return_value": "Logiczna prawda lub fałsz.",
@@ -240,32 +247,40 @@
                 "keyWentUp": {
                   "examples": {
                     "Falling Star": {
-                      "name": "Spadająca gwiazda"
+                      "name": "Spadająca gwiazda",
+                      "description": "Upuść gwiazdę, gdy klawisz spacji zostanie zwolniony."
                     }
                   },
                   "palette_params": {
                     "code": {
-                      "type": "Łańcuch"
+                      "type": "Łańcuch",
+                      "description": "Nazwa klucza, który chcesz sprawdzić. Klucze bez litery lub cyfry mają nazwy takie jak „w górę”, „w lewo”, „przesunięcie”, „tab”, „spacja” itp."
                     }
                   },
-                  "return_value": "Logiczna prawda lub fałsz."
+                  "return_value": "Logiczna prawda lub fałsz.",
+                  "short_description": "Sprawdza, czy określony klucz został zwolniony."
                 },
                 "mouseDidMove": {
+                  "content": "Sprawdza, czy mysz się poruszyła.\n\nNiektóre interaktywne gry używają myszy dla użytkownika do sterowania grą.",
                   "return_value": "Logiczna prawda lub fałsz.",
                   "short_description": "Sprawdza, czy mysz się poruszyła."
                 },
                 "mouseDown": {
+                  "content": "Sprawdza, czy podany przycisk myszy jest naciśnięty.\n\nNiektóre interaktywne gry używają myszy dla użytkownika do sterowania grą.",
                   "examples": {
                     "Pencil Drawing": {
-                      "name": "Rysunek ołówkiem"
+                      "name": "Rysunek ołówkiem",
+                      "description": "Prosty rysunek ołówkiem z MouseDown ()."
                     }
                   },
                   "palette_params": {
                     "button": {
-                      "type": "Łańcuch"
+                      "type": "Łańcuch",
+                      "description": "Przycisk myszy, który chcesz sprawdzić, albo „leftButton” lub „RightButton”."
                     }
                   },
-                  "return_value": "Logiczna prawda lub fałsz."
+                  "return_value": "Logiczna prawda lub fałsz.",
+                  "short_description": "Sprawdza, czy podany przycisk myszy jest naciśnięty."
                 },
                 "mouseIsOver": {
                   "examples": {
@@ -301,7 +316,8 @@
                   },
                   "palette_params": {
                     "button": {
-                      "type": "Łańcuch"
+                      "type": "Łańcuch",
+                      "description": "Przycisk myszy, który chcesz sprawdzić, albo „leftButton” lub „RightButton”."
                     }
                   },
                   "return_value": "Logiczna prawda lub fałsz."
@@ -309,7 +325,8 @@
                 "mouseWentUp": {
                   "palette_params": {
                     "button": {
-                      "type": "Łańcuch"
+                      "type": "Łańcuch",
+                      "description": "Przycisk myszy, który chcesz sprawdzić, albo „leftButton” lub „RightButton”."
                     }
                   },
                   "return_value": "Logiczna prawda lub fałsz."
@@ -573,6 +590,26 @@
                 "sprite.width": {
                   "return_value": "Szerokość duszka."
                 },
+                "x": {
+                  "examples": {
+                    "Movement": {
+                      "name": "Ruch",
+                      "description": "Przesuń duszka, zwiększając wartość sprite.x w funkcji rysowania."
+                    }
+                  },
+                  "return_value": "Współrzędna x środka duszka.",
+                  "short_description": "Pozycja x środka duszka."
+                },
+                "y": {
+                  "examples": {
+                    "Movement": {
+                      "name": "Ruch",
+                      "description": "Przesuń duszek, zwiększając wartość sprite.y w funkcji rysowania."
+                    }
+                  },
+                  "return_value": "Współrzędna y środka duszka.",
+                  "short_description": "Pozycja y środka duszka."
+                },
                 "createSprite": {
                   "palette_params": {
                     "x": {
@@ -600,10 +637,12 @@
                 "add": {
                   "palette_params": {
                     "sprite": {
-                      "type": "Duszek"
+                      "type": "Duszek",
+                      "description": "Duszek do dodania do grupy."
                     }
                   },
-                  "return_value": "Brak wartości zwracanej."
+                  "return_value": "Brak wartości zwracanej.",
+                  "short_description": "Dodaj duszka do grupy."
                 },
                 "group.bounce": {
                   "palette_params": {
@@ -639,10 +678,20 @@
                     "i": {
                       "type": "Liczba"
                     }
-                  }
+                  },
+                  "return_value": "Duszek na pozycji indeksu i.",
+                  "short_description": "Pobiera duszka w pozycji indeksu i grupy."
                 },
                 "group.isTouching": {
                   "return_value": "Logiczna prawda lub fałsz."
+                },
+                "maxDepth": {
+                  "return_value": "Najwyższa głębokość w grupie.",
+                  "short_description": "Zwraca najwyższą głębokość w grupie."
+                },
+                "minDepth": {
+                  "return_value": "Najniższa głębokość w grupie.",
+                  "short_description": "Zwraca najniższą głębokość w grupie."
                 },
                 "group.overlap": {
                   "palette_params": {
@@ -664,10 +713,12 @@
                 "remove": {
                   "palette_params": {
                     "sprite": {
-                      "type": "Duszek"
+                      "type": "Duszek",
+                      "description": "Duszek do usunięcia z grupy."
                     }
                   },
-                  "return_value": "Brak wartości zwracanej."
+                  "return_value": "Brak wartości zwracanej.",
+                  "short_description": "Usuń duszka z grupy."
                 },
                 "setAnimationEach": {
                   "palette_params": {
@@ -680,6 +731,9 @@
                   "palette_params": {
                     "type": {
                       "type": "Łańcuch"
+                    },
+                    "xOffset": {
+                      "type": "Liczba"
                     },
                     "yOffset": {
                       "type": "Liczba"
@@ -705,7 +759,8 @@
                 "setHeightEach": {
                   "palette_params": {
                     "height": {
-                      "type": "Liczba"
+                      "type": "Liczba",
+                      "description": "Wysokość duszków w pikselach."
                     }
                   }
                 },
@@ -1179,6 +1234,12 @@
                   }
                 },
                 "andOperator": {
+                  "examples": {
+                    "Working 9 to 5": {
+                      "name": "Praca od 9 do 5",
+                      "description": "Określa, czy są to aktualnie godziny pracy."
+                    }
+                  },
                   "palette_params": {
                     "expression1": {
                       "type": "wartość logiczna"
@@ -1186,7 +1247,8 @@
                     "expression2": {
                       "type": "wartość logiczna"
                     }
-                  }
+                  },
+                  "return_value": "Boolean (prawda lub fałsz)"
                 },
                 "divideOperator": {
                   "palette_params": {
@@ -1197,7 +1259,50 @@
                   "return_value": "iIoraz dwóch liczb.",
                   "short_description": "Podziel dwie liczby."
                 },
+                "equalityOperator": {
+                  "examples": {
+                    "Example: equality check": {
+                      "name": "Przykład: kontrola równości"
+                    },
+                    "Example: \"Alan Turing\" equals \"ALAN TURING\"?": {
+                      "name": "Przykład: „Alan Turing” równa się „ALAN TURING”?",
+                      "description": "\\*\\*Przykład: „Alan Turing” równa się „ALAN TURING”? \\*\\* Podstawowe sprawdzanie równości łańcuchów. Wielkość liter ma znaczenie dla porównania łańcuchów."
+                    },
+                    "Example: 5 equals \"5\"?": {
+                      "name": "Przykład: 5 równa się „5\"?",
+                      "description": "\\*\\*Przykład: 5 równa się „5\"? \\*\\* Konwersja łańcucha liczb na liczbę jest automatyczna w App Lab."
+                    },
+                    "Example 2: 5 equals \"five\"?": {
+                      "name": "Przykład 2: 5 równa się „pięć”?",
+                      "description": "\\*\\*Przykład: 5 równa się „pięć”? \\*\\* Konwersja łańcucha słów na liczbę nie jest automatyczna w App Lab."
+                    }
+                  },
+                  "palette_params": {
+                    "___": {
+                      "type": "dowolny"
+                    }
+                  }
+                },
+                "greaterThanOperator": {
+                  "palette_params": {
+                    "___": {
+                      "type": "dowolny"
+                    }
+                  }
+                },
+                "greaterThanOrEqualOperator": {
+                  "palette_params": {
+                    "___": {
+                      "type": "dowolny"
+                    }
+                  }
+                },
                 "inequalityOperator": {
+                  "examples": {
+                    "Example: 5 equals \"5\"?": {
+                      "name": "Przykład: 5 równa się „5\"?"
+                    }
+                  },
                   "palette_params": {
                     "___": {
                       "type": "Dowolny"
@@ -1208,6 +1313,13 @@
                   "palette_params": {
                     "___": {
                       "type": "Dowolny"
+                    }
+                  }
+                },
+                "lessThanOrEqualOperator": {
+                  "palette_params": {
+                    "___": {
+                      "type": "dowolny"
                     }
                   }
                 },
@@ -1256,7 +1368,22 @@
                     }
                   }
                 },
+                "multiplyOperator": {
+                  "palette_params": {
+                    "num1": {
+                      "type": "dowolny"
+                    },
+                    "num2": {
+                      "type": "dowolny"
+                    }
+                  }
+                },
                 "notOperator": {
+                  "examples": {
+                    "Example: Working 9 to 5": {
+                      "description": "Określa, czy są to aktualnie godziny pracy."
+                    }
+                  },
                   "palette_params": {
                     "expression": {
                       "type": "wartość logiczna"
@@ -1270,6 +1397,16 @@
                     },
                     "expression2": {
                       "type": "wartość logiczna"
+                    }
+                  }
+                },
+                "subtractOperator": {
+                  "palette_params": {
+                    "value1": {
+                      "type": "dowolny"
+                    },
+                    "value2": {
+                      "type": "dowolny"
                     }
                   }
                 },
@@ -1424,6 +1561,13 @@
                 "comment": {
                   "return_value": "Komentarze są ignorowane przez komputer.",
                   "short_description": "Zapisuje opis jakiegoś kodu."
+                },
+                "return": {
+                  "palette_params": {
+                    "ret": {
+                      "type": "dowolny"
+                    }
+                  }
                 }
               }
             }
@@ -2433,12 +2577,86 @@
                   }
                 },
                 "andOperator": {
+                  "examples": {
+                    "Working 9 to 5": {
+                      "name": "Praca od 9 do 5",
+                      "description": "Określa, czy są to aktualnie godziny pracy."
+                    }
+                  },
                   "palette_params": {
                     "expression1": {
                       "type": "wartość logiczna"
                     },
                     "expression2": {
                       "type": "wartość logiczna"
+                    }
+                  },
+                  "return_value": "Boolean (prawda lub fałsz)"
+                },
+                "divideOperator": {
+                  "palette_params": {
+                    "___": {
+                      "type": "dowolny"
+                    }
+                  }
+                },
+                "equalityOperator": {
+                  "examples": {
+                    "Example: \"Alan Turing\" equals \"ALAN TURING\"?": {
+                      "name": "Przykład: „Alan Turing” równa się „ALAN TURING”?"
+                    },
+                    "Example: 5 equals \"5\"?": {
+                      "name": "Przykład: 5 równa się „5\"?"
+                    }
+                  },
+                  "palette_params": {
+                    "___": {
+                      "type": "dowolny"
+                    }
+                  }
+                },
+                "greaterThanOperator": {
+                  "palette_params": {
+                    "__": {
+                      "type": "dowolny"
+                    }
+                  },
+                  "return_value": "Boolean (prawda lub fałsz)"
+                },
+                "greaterThanOrEqualOperator": {
+                  "palette_params": {
+                    "__": {
+                      "type": "dowolny"
+                    }
+                  }
+                },
+                "inequalityOperator": {
+                  "examples": {
+                    "Example: 5 equals \"5\"?": {
+                      "name": "Przykład: 5 równa się „5\"?",
+                      "description": "\\*\\*Przykład: 5 równa się „5\"? \\*\\* Konwersja łańcucha liczb na liczbę jest automatyczna w App Lab."
+                    },
+                    "Example: 5 equals \"five\"?": {
+                      "description": "\\*\\*Przykład: 5 równa się „pięć”? \\*\\* Konwersja łańcucha słów na liczbę nie jest automatyczna w App Lab."
+                    }
+                  },
+                  "palette_params": {
+                    "___": {
+                      "type": "dowolny"
+                    }
+                  }
+                },
+                "lessThanOperator": {
+                  "palette_params": {
+                    "___": {
+                      "type": "dowolny"
+                    }
+                  }
+                },
+                "lessThanOrEqualOperator": {
+                  "palette_params": {
+                    "___": {
+                      "type": "dowolny"
                     }
                   }
                 },
@@ -2497,7 +2715,22 @@
                     }
                   }
                 },
+                "multiplyOperator": {
+                  "palette_params": {
+                    "num1": {
+                      "type": "dowolny"
+                    },
+                    "num2": {
+                      "type": "dowolny"
+                    }
+                  }
+                },
                 "notOperator": {
+                  "examples": {
+                    "Example: Working 9 to 5": {
+                      "description": "Określa, czy są to aktualnie godziny pracy."
+                    }
+                  },
                   "palette_params": {
                     "expression": {
                       "type": "wartość logiczna"
@@ -2511,6 +2744,13 @@
                     },
                     "expression2": {
                       "type": "wartość logiczna"
+                    }
+                  }
+                },
+                "subtractOperator": {
+                  "palette_params": {
+                    "Name": {
+                      "type": "dowolny"
                     }
                   }
                 },

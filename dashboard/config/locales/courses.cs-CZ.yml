@@ -53,6 +53,7 @@ cs:
             v němž se studenti seznamují s informatikou jako prostředkem k tvořivosti,
             komunikaci, řešení problémů a zábavě.
         csd-pilot:
+          title: Pilotní kurz CSD
           description_student: Objevování informatiky je úvodním kurzem do informatiky,
             v němž se studenti seznamují s informatikou jako prostředkem k tvořivosti,
             komunikaci, řešení problémů a zábavě.
@@ -90,6 +91,8 @@ cs:
         name: Obsah kurzu
       teacher_forum/csd/2019:
         name: Fórum učitelů
+      getting_started_with_csd/csd/2021:
+        name: Začínáme s CSD
       curriculum/csd/2018:
         name: Obsah kurzu
       teacher_forum_6/csd/2018:

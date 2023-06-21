@@ -555,13 +555,13 @@ ko:
         applab_hoc_designmode: 앱 랩 아워오브코드 - 디자인 모드
         applab_hoc_share: 앱 랩 아워오브코드 - 공유
         mc_2017_agent_intro: 마인크래프트 아워오브코드 - 에이전트
-        mc_2017_repeat: 마인크래프트 아워오브코드- 반복 루프
-        mc_2017_functions: 마인크래프트 아워오브코드 - 함수
-        mc_2017_congratulations: 마인크래프트 Hour of Code - 축하합니다
-        mc_2017_puzzle_1: 마인크래프트 아워오브코드 - 에이전트
-        mc_2017_puzzle_3: 마인크래프트 아워오브코드- 반복 루프
-        mc_2017_puzzle_8: 마인크래프트 아워오브코드 - 함수
-        mc_2017_puzzle_12: 마인크래프트 아워오브코드 - 프리플레이
+        mc_2017_repeat: 마인크래프트 코딩 시간 - 루프 반복
+        mc_2017_functions: 마인크래프트 코딩 시간 - 함수
+        mc_2017_congratulations: 마인크래프트 코딩 시간 - 축하 인사
+        mc_2017_puzzle_1: 마인크래프트 코딩 시간 - 에이전트
+        mc_2017_puzzle_3: 마인크래프트 코딩 시간 - 반복 루프
+        mc_2017_puzzle_8: 마인크래프트 코딩 시간 - 함수
+        mc_2017_puzzle_12: 마인크래프트 코딩 시간 - 프리플레이
         hint_videos_d_11_3_first: '힌트 비디오: D.11.3 퍼스트'
         hint_videos_d_11_3_last: '힌트 비디오: D.11.3 라스트'
         hint_videos_d_11_4_first: '힌트 비디오: D.11.4 퍼스트'
@@ -602,10 +602,10 @@ ko:
         CDEF_Video_SpritesInAction: 스프라이트 인 액션
         CSF_SpriteLab_SpritesInAction_CDEF: 스프라이트 인 액션
         CSF_StarWars_ProjectIntro: 스타 워즈 프로젝트 소개
-        mc_2018_intro: '마인크래프트: 보야지 아쿠아틱 소개'
-        MC_2018_loops: '마인크래프트: 보야지 아쿠아틱 까지 반복'
-        mc_2018_conditionals: '마인크래프트: 보야지 아쿠아틱 조건문'
-        mc_2018_closing: '마인크래프트: 보야지 아쿠아틱 축하'
+        mc_2018_intro: '마인크래프트: 보야지 아쿠아틱 - 소개'
+        MC_2018_loops: '마인크래프트: 보야지 아쿠아틱 - 반복문'
+        mc_2018_conditionals: '마인크래프트: 보야지 아쿠아틱 - 조건문'
+        mc_2018_closing: '마인크래프트: 보야지 아쿠아틱 - 축하 인사'
         hoc_dance_warmup: 댄스 파티 - 워밍 업
         hoc_dance_events: 댄스 파티 - 이벤트
         hoc_dance_properties: 댄스 파티 - 속성
@@ -825,8 +825,8 @@ ko:
         Infinity_repeat_callout: 여기로 '이동 블록'을 이동 시키세요
         craft_run_button_callout: '"실행하기"를 눌러 프로그램을 실행시켜보세요'
         craft_drag_block_callout: '"앞으로 이동" 블록을 드래그해서 다른 블록 아래에 끼우세요'
-        craft_callout_preplaced: 여러분이 시작할 수 있게 여기에 블록을 몇 개 놓아두었어요
-        craft_inside_repeat: 블록들을 이곳에 놓아서 행동을 반복하세요
+        craft_callout_preplaced: 여러분이 시작할 수 있도록 여기에 블록을 몇 개 놓아뒀어요
+        craft_inside_repeat: 블록들을 이곳에 놓아서 작업을 반복하세요
         craft_callout_preplaced_house: 이 코드는 집짓기를 시작합니다. 끝낼 수 있나요?
         craft_what_is_iron: 이 철을 채굴하세요!
         craft_callout_moveforward: 이 코드는 용암을 확인합니다. 앞으로 이동하기 명령을 추가할 수 있나요?

@@ -13,6 +13,8 @@ const barWidth = 60;
 const minNumMeasures = 30;
 // Leave some vertical space between each event block.
 const eventVerticalSpace = 2;
+// A little room on the left.
+const paddingOffset = 10;
 
 /**
  * Renders the music playback timeline.
@@ -51,6 +53,7 @@ const Timeline = () => {
     : null;
 
   const timelineElementProps = {
+    paddingOffset,
     barWidth,
     eventVerticalSpace,
     getEventHeight,
@@ -63,61 +66,69 @@ const Timeline = () => {
   );
 
   return (
-    <div id="timeline" className={moduleStyles.wrapper}>
+    <div
+      id="timeline"
+      className={moduleStyles.timeline}
+      onClick={() => dispatch(clearSelectedBlockId())}
+    >
       <div
-        id="timeline-container"
-        className={moduleStyles.container}
-        onClick={() => dispatch(clearSelectedBlockId())}
+        id="timeline-measures-background"
+        className={classNames(
+          moduleStyles.measuresBackground,
+          moduleStyles.fullWidthOverlay
+        )}
+        style={{width: paddingOffset + measuresToDisplay * barWidth}}
       >
-        <div className={moduleStyles.fullWidthOverlay}>
-          {arrayOfMeasures.map((measure, index) => {
-            return (
-              <div
-                key={index}
-                className={moduleStyles.barLineContainer}
-                style={{left: index * barWidth}}
-              >
-                <div
-                  className={classNames(
-                    moduleStyles.barLine,
-                    measure === Math.floor(currentPlayheadPosition) &&
-                      moduleStyles.barLineCurrent
-                  )}
-                />
-                <div
-                  className={classNames(
-                    moduleStyles.barNumber,
-                    measure === Math.floor(currentPlayheadPosition) &&
-                      moduleStyles.barNumberCurrent
-                  )}
-                >
-                  {measure}
-                </div>
-              </div>
-            );
-          })}
-        </div>
-
-        <div id="timeline-soundsarea" className={moduleStyles.soundsArea}>
-          {getBlockMode() === BlockMode.TRACKS ? (
-            <TimelineTrackEvents {...timelineElementProps} />
-          ) : getBlockMode() === BlockMode.SIMPLE2 ? (
-            <TimelineSimple2Events {...timelineElementProps} />
-          ) : (
-            <TimelineSampleEvents {...timelineElementProps} />
-          )}
-        </div>
-
-        <div id="timeline-playhead" className={moduleStyles.fullWidthOverlay}>
-          {playHeadOffsetInPixels !== null && (
+        &nbsp;
+      </div>
+      <div id="timeline-measures" className={moduleStyles.fullWidthOverlay}>
+        {arrayOfMeasures.map((measure, index) => {
+          return (
             <div
-              className={moduleStyles.playhead}
-              style={{left: playHeadOffsetInPixels}}
+              key={index}
+              className={moduleStyles.barLineContainer}
+              style={{left: paddingOffset + index * barWidth}}
             >
-              &nbsp;
+              <div
+                className={classNames(
+                  moduleStyles.barNumber,
+                  measure === Math.floor(currentPlayheadPosition) &&
+                    moduleStyles.barNumberCurrent
+                )}
+              >
+                {measure}
+              </div>
+              <div
+                className={classNames(
+                  moduleStyles.barLine,
+                  measure === Math.floor(currentPlayheadPosition) &&
+                    moduleStyles.barLineCurrent
+                )}
+              />
             </div>
-          )}
-        </div>
+          );
+        })}
+      </div>
+
+      <div id="timeline-soundsarea" className={moduleStyles.soundsArea}>
+        {getBlockMode() === BlockMode.TRACKS ? (
+          <TimelineTrackEvents {...timelineElementProps} />
+        ) : getBlockMode() === BlockMode.SIMPLE2 ? (
+          <TimelineSimple2Events {...timelineElementProps} />
+        ) : (
+          <TimelineSampleEvents {...timelineElementProps} />
+        )}
+      </div>
+
+      <div id="timeline-playhead" className={moduleStyles.fullWidthOverlay}>
+        {playHeadOffsetInPixels !== null && (
+          <div
+            className={moduleStyles.playhead}
+            style={{left: paddingOffset + playHeadOffsetInPixels}}
+          >
+            &nbsp;
+          </div>
+        )}
       </div>
     </div>
   );

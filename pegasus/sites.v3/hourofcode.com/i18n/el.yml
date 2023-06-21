@@ -1,7 +1,7 @@
 ---
 el:
-  site_name: ΩΡΑ ΚΩΔΙΚΑ
-  hour_of_code: Ώρα κώδικα
+  site_name: Ώρα του Κώδικα
+  hour_of_code: Ώρα του κώδικα
   language: ελληνικά
   front_title: Λάβετε μέρος στην μεγαλύτερη στην ιστορία εκδήλωση για την μάθηση,
     %{campaign_date}
@@ -46,6 +46,8 @@ el:
     να παίξετε και να δημιουργήσετε μαζί μας.
   social_hoc2022_dance: με τους Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez,
     μουσική από το «Encanto» της Disney και πολλά άλλα!
+  social_hoc2023_dance: Featuring Beyoncé, BTS, Harry Styles, Lizzo, Lil Nas X, Selena
+    Gomez, music from Disney's "Encanto," and more!
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: Μάθετε σήμερα, χτίστε ένα καλύτερο αύριο.
@@ -161,17 +163,85 @@ el:
     το ¨διάστημα" όλων των πιθανών ψαριών σε δύο μέρη, που αντιστοιχούν στις τάξεις
     που θέλουμε να μάθουμε (όπως "μπλε" ή "όχι μπλε").
   heading_additional_resources: Additional resources
+  grade_level_label_elementary: Elementary School
+  grade_level_label_middle: Middle School
+  grade_level_label_high: High School
   call_to_action_learn_more: Μάθετε περισσότερα
   call_to_action_watch_now: Watch now
   call_to_action_try_activity: Try activity
   call_to_action_explore_unit: Explore unit
+  call_to_action_explore_curriculum: Explore curriculum
+  call_to_action_explore_modules: Explore modules
   call_to_action_view_lesson_plan: View lesson plan
   call_to_action_self_paced_pl: Start self-paced professional learning
   call_to_action_watch_panel: Watch panel
   call_to_action_learn_about_challenge: Learn about challenge
   call_to_action_explore_website: Explore website
   call_to_action_read_more: Διαβάστε περισσότερα
+  call_to_action_donate_online: Donate online
+  call_to_action_get_updates: Get updates
   call_to_action_special_announcement: See special announcement
+  call_to_action_start_pl: Start professional learning
+  call_to_action_contact_regional_partner: Contact your Regional Partner
+  call_to_action_join_csta: Join CSTA
+  call_to_action_support_farsi: Support Code.org in Farsi
+  aria_label_call_to_action_afe: Learn more about Amazon Future Engineer
+  aria_label_call_to_action_teaching_csf: Start the Teaching Computer Science Fundamentals
+    professional learning program
+  aria_label_call_to_action_teaching_csd: Start the Teaching Computer Science Discoveries
+    professional learning program
+  aria_label_call_to_action_teaching_csp: Start the Teaching Computer Science Principles
+    professional learning program
+  aria_label_call_to_action_teaching_ai: Start the Teaching AI and Machine Learning
+    professional learning program
+  aria_label_call_to_action_teaching_maker_cp: Start the Teaching Creating Apps with
+    Devices (Circuit Playground) professional learning program
+  aria_label_call_to_action_teaching_maker_microbit: Start the Teaching Creating Apps
+    with Devices (micro:bit) professional learning program
+  aria_label_call_to_action_curriculum_csf: Explore the Computer Science Fundamentals
+    curriculum
+  aria_label_call_to_action_curriculum_csd: Explore the Computer Science Discoveries
+    curriculum
+  aria_label_call_to_action_curriculum_csp: Explore the Computer Science Principles
+    curriculum
+  aria_label_call_to_action_curriculum_ai: Explore the AI and Machine Learning curriculum
+  aria_label_call_to_action_curriculum_maker_cp: Explore the Creating Apps with Devices
+    (Circuit Playground) curriculum
+  aria_label_call_to_action_curriculum_maker_microbit: Explore the Creating Apps with
+    Devices (micro:bit) curriculum
+  video_title_professional_learning_program: Code.org's Professional Learning Program
+  curriculum_name_csf: Computer Science Fundamentals
+  curriculum_name_csf_02: Any CS Fundamentals (Course A-F)
+  curriculum_name_csd: Computer Science Discoveries
+  curriculum_name_csp: Computer Science Principles
+  curriculum_name_ai: Al και η Μηχανική Μάθηση
+  curriculum_name_maker_cp: Creating Apps with Devices (Circuit Playground)
+  curriculum_name_maker_microbit: Creating Apps with Devices (micro:bit)
+  module_grade_k_5: K-5 Teachers
+  module_grade_6_10: 6-10 Teachers
+  module_grade_9_12: 9-12 Teachers
+  module_label_curriculum: 'Curriculum:'
+  module_label_duration: 'Duration:'
+  module_duration_2_hrs: 2 hours
+  module_duration_3_hrs: 3 hours
+  module_duration_8_hrs: 8 hours
+  module_duration_35_hrs: 35 hours
+  module_label_prerequisites: 'Prerequisites:'
+  module_prerequisites_none: None
+  module_prerequisites_maker_cp: Access to a Circuit Playground
+  module_prerequisites_maker_microbit: Access to a micro:bit
+  module_label_teaching_csf: Teaching Computer Science Fundamentals
+  module_label_teaching_csd: Teaching Computer Science Discoveries
+  module_label_teaching_csp: Teaching Computer Science Principles
+  module_label_teaching_ai: Teaching AI and Machine Learning
+  module_label_teaching_maker_cp: Teaching Creating Apps with Devices (Circuit Playground)
+  module_label_teaching_maker_microbit: Teaching Creating Apps with Devices (micro:bit)
+  values_01: We believe computer science is foundational for all students
+  values_02: We are committed to equity, access, and opportunity
+  values_03: We believe in the power of a collaborative education community
+  values_04: We are agile and responsive to feedback
+  values_05: We act with integrity and transparency
+  values_06: We believe broad impact requires thinking big and acting holistically
   social_hoc2019_oceans_title: 'ΤΝ για τους Ωκεανούς #ΕΥγιαΚαλό'
   social_hoc2019_oceans_desc: Μάθετε για την ΤΝ, τη μηχανική μάθηση, τα δεδομένα εκπαίδευσης
     και τη μεροληψία, καθώς εξετάζετε ηθικά θέματα και το πώς μπορεί να χρησιμοποιηθεί
@@ -192,9 +262,9 @@ el:
   pl_superhero_title: Help students become superheroes!
   pl_superhero_desc: Join our highly supportive Professional Learning Program for
     middle and high school educators.
-  teach_ai_homepage_banner_title: AI education for the world
-  teach_ai_homepage_banner_desc: Code.org is part of TeachAI, dedicated to empowering
-    educators everywhere to teach with AI and about AI.
+  teach_ai_homepage_banner_title: Εκπαίδευση για τον κόσμο
+  teach_ai_homepage_banner_desc: Code.org είναι μέρος του TeachAI, αφιερωμένο στην
+    ενδυνάμωση των εκπαιδευτικών παντού για να διδάξουν με AI και για AI.
   blockchain_hero_heading: How Blockchain Works
   blockchain_hero_desc: Dive into the world of blockchain with "How Blockchain Works,"
     our new video series and accompanying lessons!
@@ -230,7 +300,7 @@ el:
   blockchain_resources_03_heading: Hour of Code Activity
   blockchain_resources_03_desc: Try a crypto memory game created by Coinbase.
   blockchain_resources_03_button_label: Try the Crypto Memory Game activity
-  ai_2023_banner_title: AI education for the world
+  ai_2023_banner_title: Εκπαίδευση για τον κόσμο
   ai_2023_banner_skinny_desc: See how we're planning to bring AI education to classrooms
     everywhere.
   teachai_launch_blog_title: Introducing TeachAI!
@@ -321,6 +391,198 @@ el:
     throughout K-12. Offer free professional development, webinars, conference presentations,
     and peer-to-peer learning opportunities.
   ai_resources_btn_aria_label_03: Explore the AI for Teachers website
+  ai_vid_intro_caption: Introducing How AI Works
+  ai_vid_chatbots_caption: How Chatbots and Large Language Models Work
+  ai_vid_creativity_caption: Does AI Have Creativity and Imagination?
+  ai_vid_mlintro_caption: Τι είναι η Μηχανική Μάθηση;
+  ai_vid_trainingdata_caption: Training Data & Bias
+  ai_vid_neuralnetworks_caption: Neural Networks
+  ai_vid_computervision_caption: Computer Vision
+  ai_vid_ethics1_caption: 'Ethics & AI: Equal Access and Algorithmic Bias'
+  ai_vid_ethics2_caption: 'Ethics & AI: Privacy and the Future of Work'
+  self_paced_pl_hero_heading: Self-Paced Professional Learning For Educators
+  self_paced_pl_hero_desc: Professional learning offerings to support teachers in
+    every stage of their computer science teaching journey.
+  self_paced_pl_intro_heading: Professional learning on your timeline
+  self_paced_pl_intro_desc: Code.org is pleased to offer self-paced modules for teachers.
+    These modules are available at no cost to any educator with a Code.org account
+    worldwide!
+  self_paced_pl_intro_list_title_01: Flexibility and Convenience
+  self_paced_pl_intro_list_desc_01: Engage with the material at your own pace and
+    on your own time.
+  self_paced_pl_intro_list_title_02: Personalized Learning Experience
+  self_paced_pl_intro_list_desc_02: Focus on the areas that are most important to
+    your needs and teaching context.
+  self_paced_pl_intro_list_title_03: Access to High-Quality Content
+  self_paced_pl_intro_list_desc_03: Get the latest best practices, research, and strategies
+    for teaching computer science effectively.
+  self_paced_pl_callout: Looking for facilitator-led professional learning options?
+  self_paced_pl_callout_link: Check out our in-person and virtual workshops.
+  self_paced_pl_modules_heading: Self-paced professional learning modules
+  self_paced_pl_modules_desc: Through reading, viewing videos, completing interactive
+    puzzles, and reflecting on your learning, you will develop your own understanding
+    while preparing to teach computer science in your classroom.
+  self_paced_pl_modules_list_heading: 'After completing one of these modules, participants
+    will:'
+  self_paced_pl_modules_list_01: Learn how to navigate the Code.org website and teacher
+    tools.
+  self_paced_pl_modules_list_02: Gain a high level understanding of the content, tools,
+    and pedagogy.
+  self_paced_pl_modules_list_03: Prepare to begin teaching the curriculum with your
+    students.
+  self_paced_pl_facilitator_heading: Want to take your learning further?
+  self_paced_pl_facilitator_subheading: Facilitator-led workshops
+  self_paced_pl_facilitator_desc: In addition to the above self-paced online modules,
+    facilitator-led professional learning workshops are available for teachers. Join
+    the more than 100,000 teachers who have participated in our workshops. More than
+    90% of attendees would recommend our program to other teachers.
+  self_paced_pl_facilitator_call_to_action: Explore facilitator-led professional learning
+  self_paced_pl_resources_heading: Additional resources for teachers
+  self_paced_pl_resources_title_01: Code.org Regional Partner
+  self_paced_pl_resources_desc_01: Connect with your Code.org Regional Partner to
+    learn what's going on in your region. Your local Code.org Regional Partner provides
+    facilitator-led workshops to teachers, and can help guide your school or district
+    on implementation, certification, funding, and more.
+  self_paced_pl_resources_title_02: Computer Science Teachers Association
+  self_paced_pl_resources_desc_02: Join the world's largest Computer Science department!
+    Connect with over 19,000 CS teachers from around the globe, find strength in your
+    local community, and get support from other CS teachers.
+  self_paced_pl_resources_title_03: Amazon Future Engineer
+  self_paced_pl_resources_desc_03: Code.org has partnered with Amazon Future Engineer
+    to offer teachers at underserved schools a growing number of resources and benefits
+    at no cost! Find out if your school is eligible.
+  tenth_anniversary_homepage_blurb: Το code.org γίνεται 10 ετων!
+  tenth_anniversary_homepage_link: Δείτε τον αντίκτυπο που είχαμε.
+  tenth_anniversary_top_heading: Code.org celebrates 10 years!
+  tenth_anniversary_top_desc: We're celebrating a decade of empowering students to
+    explore computer science.
+  tenth_anniversary_timeline_heading: A decade of milestones
+  tenth_anniversary_timeline_scroll: Scroll for more!
+  tenth_anniversary_celebrate_heading: Celebrate with us
+  tenth_anniversary_began_video_heading: See where it all began
+  tenth_anniversary_began_video_title: What Most Schools Don't Teach
+  tenth_anniversary_testimonials_heading: What people are saying
+  tenth_anniversary_testimonials_01: I had a high school student come up to me four
+    years after I had her as an 8th grade middle schooler and she was excited that
+    she was going to study computer science in college. As a middle schooler she was
+    exposed to something new, and that planted a seed for her college years.
+  tenth_anniversary_testimonials_02: I joined Hour of Code in your inaugural year
+    and have been with you all the way! It has inspired me to seek out additional
+    coding opportunities for my students. Thanks for all you have done to get kids
+    engaged and excited about computer science! We wouldn't be where we are without
+    you!
+  tenth_anniversary_testimonials_03: I owe Code.org so much. I'm the teacher I am
+    today because of the tools you provide for educators like me. I've been using
+    Code.org since 2013 and I've been a facilitator since 2019. Thanks for making
+    me look good for these many years, Code.org. I really appreciate it.
+  farsi_page_top_heading: Code.org in Farsi
+  farsi_page_top_heading_02: Talent is everywhere, but opportunity is not. Code.org
+    in Farsi opens a door to an opportunity that would otherwise be closed.
+  farsi_page_top_desc: Today, there are over 110 million Farsi speakers worldwide.
+    While the majority of native speakers live in Iran, Afghanistan, and Tajikistan,
+    there are millions living as immigrants, migrants, and refugees around the world.
+    With the Code.org in Farsi initiative, Farsi-speaking students will have the same
+    access to our curricula that is already available to students in all other major
+    languages of the world.
+  farsi_page_global_heading: The Global Impact of Iranians in Education & Technology
+  farsi_page_global_desc_01: When you think of an algorithm, you may assume it's something
+    new, but the concept of an algorithm was discovered in Iran over 1300 years ago.
+    “Algorithm” is named after its inventor, the mathematician Al Khwarizmi, who lived
+    in the land formerly known as Persia and now known as Iran. Once the epicenter
+    of mathematics, science, philosophy, and medicine, Iran has made profound advances
+    and impacts in technology.
+  farsi_page_global_desc_02: Beyond the borders of the country itself, Iranians around
+    the world have contributed in countless ways to science and technology — as co-founders
+    or CEOs of technology companies such as Uber, eBay, Intuit, and Dropbox, or inventing
+    technologies such as LASIK surgery or JPEG compression, or in scientific, academic,
+    or engineering roles around the globe.
+  farsi_page_global_desc_03: Finally, Code.org was founded by Iranian American Hadi
+    Partovi and has grown to become one of the largest education nonprofits globally.
+  farsi_timeline_heading: Our Projected Timeline
+  farsi_timeline_stage_title_01: Stage 1
+  farsi_timeline_stage_title_02: Stage 2
+  farsi_timeline_stage_title_03: Stage 3
+  farsi_timeline_stage_title_04: Stage 4
+  farsi_timeline_stage_title_05: Stage 5
+  farsi_timeline_stage_01_list_01: Translate the CS Fundamentals curriculum, intended
+    for primary school students.
+  farsi_timeline_stage_01_list_02: Translate two CS Fundamentals Express courses for
+    students ages 8 to 18 and pre-readers.
+  farsi_timeline_stage_01_list_03: Translate 16 Hour of Code tutorials.
+  farsi_timeline_stage_01_desc: Stage 1 includes more than 500,000 words and will
+    be completed by October 2023.
+  farsi_timeline_stage_02_heading: Localize Videos
+  farsi_timeline_stage_02_list_01: Subtitle 128 videos (75 videos for CS Fundamentals
+    and 53 videos for Hour of Code).
+  farsi_timeline_stage_02_list_02: Dub 98 videos.
+  farsi_timeline_stage_02_list_03: Recreate 30 videos and hire native speakers in
+    appropriate cultural dress to reshoot videos.
+  farsi_timeline_stage_02_desc: Stage 2 can take one year to complete and will begin
+    in August 2023.
+  farsi_timeline_stage_03_list_01: Translate CS Discoveries, our middle school curriculum.
+  farsi_timeline_stage_03_list_02: Subtitle and dub 47 videos for CS Discoveries.
+  farsi_timeline_stage_03_list_03: Recreate 29 videos and hire native speakers in
+    appropriate cultural dress to reshoot videos.
+  farsi_timeline_stage_03_desc: Stage 3 will begin in October 2023 and will likely
+    be completed by July 2024.
+  farsi_timeline_stage_04_list_01: Translate CS Principles & AP Computer Science A,
+    our high school curriculum.
+  farsi_timeline_stage_04_list_02: Subtitle and dub videos for CS Principles & AP
+    Computer Science A.
+  farsi_timeline_stage_04_list_03: Recreate videos with native speakers, in appropriate
+    cultural dress.
+  farsi_timeline_stage_04_desc: Stage 4 can take one year to complete, likely to begin
+    in late 2024.
+  farsi_timeline_stage_05_heading: Additional Content
+  farsi_timeline_stage_05_list_01: Translate remaining curriculum, including CS Connections.
+  farsi_timeline_stage_05_list_02: Subtitle, dub, and reshoot any remaining videos
+    from all courses.
+  farsi_timeline_stage_05_desc: Stage 5 can take one year to complete, likely to begin
+    in 2025.
+  farsi_page_supporters_heading: Iranian Americans for CS Education
+  farsi_page_supporters_desc: 'Thank you to the following prominent Iranian American
+    leaders who have come together to support computer science education, with a lead
+    gift to Code.org in Farsi:'
+  farsi_page_supporters_desc_02: We invite you to celebrate Iranian contributions
+    in technology by supporting Code.org and computer science education so that every
+    student in every school has the opportunity to learn computer science.
+  farsi_page_founders_heading: Our Founders' Story
+  farsi_page_founders_slide_01: Born in Iran, Hadi and Ali Partovi grew up during
+    the Iran-Iraq war. Their neighborhood in Tehran was regularly bombed by Iraqi
+    fighter jets.
+  farsi_page_founders_slide_02: When they were 9 years old, their father, a physics
+    professor, brought home a Commodore 64 computer. This computer was their escape
+    from their surroundings – they learned how to code and create apps, games, and
+    music.
+  farsi_page_founders_slide_03: They immigrated to the United States at age 11. Soon
+    after they turned 15, they spent their summers working as software engineers to
+    help pay their way through high school and college.
+  farsi_page_founders_slide_04: Upon graduating from Harvard University with Masters
+    degrees in computer science, Hadi and Ali pursued careers in technology.
+  farsi_page_founders_slide_05: They found success in the tech world and achieved
+    the “American dream.” They became prolific angel investors, backing Facebook,
+    Uber, Airbnb, and Dropbox, among others.
+  farsi_page_founders_slide_06: In 2013, Hadi and Ali launched the education nonprofit
+    Code.org, which Hadi continues to lead as CEO. Since its inception, Code.org has
+    started a massive movement to teach computer science and coding to K-12 students
+    globally. It is also the largest provider of computer  science curricula in the
+    world, with over 80 million student users in 180 countries.
+  farsi_page_support_heading: Your Support and Your Voice
+  farsi_page_support_heading_02: Thank you for your interest in Code.org in Farsi.
+  farsi_page_support_get_updates: "[Sign up](%{form_url}) to learn more about this
+    specific project and get updated on its staged release dates."
+  farsi_page_support_contact_us: If you'd like to support this initiative or learn
+    more, please [contact us](%{contact_link}) or donate below.
+  farsi_page_compliance_heading: Compliance In Support Of Farsi Translations
+  farsi_page_compliance_desc: As a U.S. nonprofit, Code.org is subject to laws regarding
+    sanctions with Iran. After consulting with U.S. legal counsel experienced in the
+    Iranian Sanctions and Translations Regulations (ITSR), Code.org believes that
+    it may fund, prepare, and distribute the Farsi Translations of CS Curriculum in
+    the United States and elsewhere around the world, including within Iran. The ITSR
+    provides an exemption for “information and informational materials” (the IIM Exemption)
+    and Code.org believes that this exemption will fully shield its funding, preparation,
+    and distribution of the Farsi Translations and thus enable its Farsi Translations
+    effort to proceed in full compliance with U.S. economic sanctions requirements.
   hoc_live: Hour of Code Live
   hoc_live_sign_up_title: Sign up for Hour of Code Live
   hoc_live_learn_title: Learn with Hour of Code Live
@@ -1288,8 +1550,8 @@ el:
     Neymar Jr, Carmelo Anthony και άλλοι εμπνέουν τους μαθητές να κάνου την μέγιστη
     προσπάθεια.
   highlights_constant_athletes_short_heading: Ώθησε τον εαυτό σου
-  footer_copyright_message: Πνευματικά δικαιώματα Code.org 2015. Όλα τα δικαιώματα
-    είναι κατοχυρωμένα.
+  footer_copyright_message: Πνευματικά δικαιώματα Code.org %{current_year}. Όλα τα
+    δικαιώματα είναι κατοχυρωμένα.
   footer_trademark_message: Τα Hour of Code® και Hora del Código®  είναι εμπορικά
     σήματα της Code.org.
   footer_built_on_github: Built on GitHub from Microsoft

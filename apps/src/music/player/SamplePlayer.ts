@@ -1,3 +1,4 @@
+import {logWarning} from '../utils/MusicMetrics';
 import {Effects} from './interfaces/Effects';
 import MusicLibrary from './MusicLibrary';
 
@@ -9,6 +10,7 @@ export interface SampleEvent {
   sampleId: string;
   triggered: boolean;
   effects?: Effects;
+  lengthSeconds?: number;
 }
 
 interface PlayingSample {
@@ -41,9 +43,18 @@ export default class SamplePlayer {
     const soundList = library.groups
       .map(group => {
         return group.folders.map(folder => {
-          return folder.sounds.map(sound => {
-            return group.path + '/' + folder.path + '/' + sound.src;
-          });
+          return folder.sounds
+            .map(sound => {
+              // Skip loading sequenced sounds; these are generated at runtime
+              // and made up of individual instrument samples.
+              if (!sound.sequence) {
+                return {
+                  path: group.path + '/' + folder.path + '/' + sound.src,
+                  restricted: sound.restricted,
+                };
+              }
+            })
+            .filter(sound => sound !== undefined);
         });
       })
       .flat(2);
@@ -60,7 +71,7 @@ export default class SamplePlayer {
 
   startPlayback(sampleEventList: SampleEvent[]) {
     if (!this.isInitialized) {
-      console.warn('Sample player not initialized.');
+      this.logUninitialized();
       return;
     }
 
@@ -76,7 +87,7 @@ export default class SamplePlayer {
 
   previewSample(sampleId: string, onStop?: () => void) {
     if (!this.isInitialized) {
-      console.warn('Sample player not initialized.');
+      this.logUninitialized();
       return;
     }
 
@@ -92,7 +103,7 @@ export default class SamplePlayer {
 
   previewSamples(events: SampleEvent[], onStop?: () => void) {
     if (!this.isInitialized) {
-      console.warn('Sample player not initialized.');
+      this.logUninitialized();
       return;
     }
 
@@ -133,7 +144,7 @@ export default class SamplePlayer {
 
   playSamples(sampleEvents: SampleEvent[]) {
     if (!this.isInitialized) {
-      console.warn('Sample player not initialized.');
+      this.logUninitialized();
       return;
     }
 
@@ -165,7 +176,8 @@ export default class SamplePlayer {
           eventStart,
           null,
           false,
-          sampleEvent.effects
+          sampleEvent.effects,
+          sampleEvent.lengthSeconds
         );
 
         this.playingSamples.push({
@@ -201,5 +213,9 @@ export default class SamplePlayer {
         soundApi.StopSoundByUniqueId(MAIN_AUDIO_GROUP, sample.uniqueId);
       }
     }
+  }
+
+  private logUninitialized() {
+    logWarning('Sample player not initialized.');
   }
 }

@@ -507,7 +507,8 @@
           "F": "F",
           "G": "G",
           "A": "A",
-          "B": "B"
+          "B": "B",
+          "Note:": "Remarque :"
         },
         "CSD U6 - Music - SB1_2222": {
           "C": "C",
@@ -656,7 +657,8 @@
           "low": "faible"
         },
         "CSD U6 - Sensors - SB2_2222": {
-          "Update": "Mise à jour"
+          "Update": "Mise à jour",
+          "value": "valeur"
         },
         "CSD U6 Driver pt 2": {
           "You did it!": "Vous avez réussi !"
@@ -731,16 +733,20 @@
           "Success!": "Tu as réussi !"
         },
         "CSD U6 analog light": {
-          "Update": "Mise à jour"
+          "Update": "Mise à jour",
+          "value": "valeur"
         },
         "CSD U6 analog light_2018": {
-          "Update": "Mise à jour"
+          "Update": "Mise à jour",
+          "value": "valeur"
         },
         "CSD U6 analog light_2019": {
-          "Update": "Mise à jour"
+          "Update": "Mise à jour",
+          "value": "valeur"
         },
         "CSD U6 analog light_2021": {
-          "Update": "Mise à jour"
+          "Update": "Mise à jour",
+          "value": "valeur"
         },
         "CSD U6 array piano": {
           "C": "C",
@@ -1647,6 +1653,54 @@
           "night": "nuit",
           "dusk": "Crépuscule",
           "Predict": "Prédire"
+        },
+        "CSD U6 - Sensors - SB1_2222": {
+          "value": "valeur"
+        },
+        "CSD U6 - Sensors - SB3_2222": {
+          "value": "valeur"
+        },
+        "CSD U6 - Sensors - SB4.1_2222": {
+          "value": "valeur"
+        },
+        "CSD U6 - Sensors - SB4_2222": {
+          "value": "valeur"
+        },
+        "CSD U6 analog change": {
+          "value": "valeur"
+        },
+        "CSD U6 analog change_2018": {
+          "value": "valeur"
+        },
+        "CSD U6 analog change_2019": {
+          "value": "valeur"
+        },
+        "CSD U6 analog change_2021": {
+          "value": "valeur"
+        },
+        "CSD U6 analog data": {
+          "value": "valeur"
+        },
+        "CSD U6 analog data_2018": {
+          "value": "valeur"
+        },
+        "CSD U6 analog data_2019": {
+          "value": "valeur"
+        },
+        "CSD U6 analog data_2021": {
+          "value": "valeur"
+        },
+        "CSD U6 analog sound": {
+          "value": "valeur"
+        },
+        "CSD U6 analog sound_2018": {
+          "value": "valeur"
+        },
+        "CSD U6 analog sound_2019": {
+          "value": "valeur"
+        },
+        "CSD U6 analog sound_2021": {
+          "value": "valeur"
         }
       }
     }

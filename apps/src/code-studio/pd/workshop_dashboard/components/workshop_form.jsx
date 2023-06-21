@@ -12,6 +12,7 @@ import Spinner from '../../components/spinner';
 import SessionListFormPart from './session_list_form_part';
 import FacilitatorListFormPart from './facilitator_list_form_part';
 import OrganizerFormPart from './organizer_form_part';
+/* eslint-disable no-restricted-imports */
 import {
   Grid,
   Row,
@@ -26,6 +27,7 @@ import {
   Radio,
   Alert,
 } from 'react-bootstrap';
+/* eslint-enable no-restricted-imports */
 import {TIME_FORMAT, DATE_FORMAT, DATETIME_FORMAT} from '../workshopConstants';
 import {
   PermissionPropType,
@@ -378,14 +380,16 @@ export class WorkshopForm extends React.Component {
     );
   }
 
-  // Returns whether today is within a month before the given session.
+  // Returns whether today is within a month before the given session (a month
+  // is represented as 30 days here for consistency and to align with behavior
+  // in workshop_controller.rb).
   sessionStartsWithinMonth = session => {
     const today = this.props.today;
     const workshopDate = new Date(session.date);
     const monthBeforeWorkshopDate = new Date(
       workshopDate.getFullYear(),
-      workshopDate.getMonth() - 1,
-      workshopDate.getDate()
+      workshopDate.getMonth(),
+      workshopDate.getDate() - 30
     );
     return monthBeforeWorkshopDate <= today && today <= workshopDate;
   };
