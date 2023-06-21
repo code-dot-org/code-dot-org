@@ -42,13 +42,15 @@ import {
 } from '../redux/musicRedux';
 import KeyHandler from './KeyHandler';
 import {
-  levelsForLessonId,
-  navigateToLevelId,
   sendSuccessReport,
+  navigateToLevelId,
+} from '@cdo/apps/code-studio/progressRedux';
+import {
+  levelsForLessonId,
   getLevelDataPath,
   ProgressLevelType,
   getProgressLevelType,
-} from '@cdo/apps/code-studio/progressRedux';
+} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {
   setIsLoading,
   setIsPageError,
