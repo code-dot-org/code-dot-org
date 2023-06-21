@@ -9,15 +9,20 @@
   -# Tabs nav
   %ul.flex-container.justify-space-between
     %li
-      %button.tab.active{"data-content": "#lesson-plans", "aria-activedescendant": "#lesson-plans"} Lesson Plans
+      %button.tab.active{"data-content": "#lesson-plans"}
+        =hoc_s(:resources_tabs_tab_label_lesson_plans)
     %li
-      %button.tab{"data-content": "#videos"} Videos
+      %button.tab{"data-content": "#videos"}
+        =hoc_s(:resources_tabs_tab_label_videos)
     %li
-      %button.tab{"data-content": "#slides"} Slides
+      %button.tab{"data-content": "#slides"}
+        =hoc_s(:resources_tabs_tab_label_slides)
     %li
-      %button.tab{"data-content": "#assessments"} Assessments
+      %button.tab{"data-content": "#assessments"}
+        =hoc_s(:resources_tabs_tab_label_assessments)
     %li
-      %button.tab{"data-content": "#tools"} Programming Tools
+      %button.tab{"data-content": "#tools"}
+        =hoc_s(:resources_tabs_tab_label_tools)
   -# Tabs content
   %div#lesson-plans.content.show
     = view :resources_tabs_content_lesson_plans

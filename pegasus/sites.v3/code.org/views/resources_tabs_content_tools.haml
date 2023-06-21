@@ -2,11 +2,11 @@
   %figure.col-50
     %img.rounded-corners{src: "/images/resources-tabs-tools.png", alt: "", style: "position: relative; width: 100%;"}
   .text-wrapper.col-45{style: "float: right"}
-    %h3 Programming Tools
+    %h3=hoc_s(:resources_tabs_tab_label_tools)
     %p
       %strong
-        Code.org's integrated development environments (IDEs) cater to students of all skill levels.
+        =hoc_s(:resources_tabs_tools_subhead)
     %p.body-two
-      We offer a versatile and user-friendly platform that supports a variety of programming paradigms. This enables learners to seamlessly transition from block-based coding to text-based languages, and fosters creativity and innovation.
+      =hoc_s(:resources_tabs_tools_desc)
     %a.link-button{href: CDO.studio_url("/projects/public"), target: "_blank", rel: "noopener noreferrer"}
-      Try out programming tools
+      =hoc_s(:call_to_action_resources_tools)

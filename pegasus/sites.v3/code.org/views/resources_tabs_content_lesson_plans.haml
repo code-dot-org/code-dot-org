@@ -2,11 +2,11 @@
   %figure.col-50
     %img.rounded-corners{src: "/images/resources-tabs-lesson-plan.gif", alt: "", style: "position: relative; width: 100%;"}
   .text-wrapper.col-45{style: "float: right"}
-    %h3 Lesson Plans
+    %h3=hoc_s(:resources_tabs_tab_label_lesson_plans)
     %p
       %strong
-        Get step-by-step guidance, learning objectives, and assessment strategies for effective teaching.
+        =hoc_s(:resources_tabs_lesson_plans_subhead)
     %p.body-two
-      Helpful resources include slide decks, activity guides, rubrics, and more — all organized in one place. Each lesson plan is accompanied by tips for classroom implementation, differentiation ideas, and extension activities to cater to students of all abilities.
+      =hoc_s(:resources_tabs_lesson_plans_desc)
     %a.link-button{href: CDO.studio_url("/s/csd3-2023/lessons/1"), target: "_blank", rel: "noopener noreferrer"}
-      Explore example lesson plan
+      =hoc_s(:call_to_action_resources_lesson_plan)

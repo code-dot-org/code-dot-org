@@ -2,11 +2,11 @@
   %figure.col-50
     %iframe{allowfullscreen: "true", frameborder: "0", height: "299", mozallowfullscreen: "true", src: "https://docs.google.com/presentation/d/e/2PACX-1vQyh-0nJJcExGA2DyZSGJMfwNCr70NolmCvFUeL8TOZW7gjFqRT2pmYpT469-ZOvJz8EbKcvRQzW0aR/embed?start=false&loop=false&delayms=3000", webkitallowfullscreen: "true", width: "468"}
   .text-wrapper.col-45{style: "float: right"}
-    %h3 Slide Decks
+    %h3=hoc_s(:resources_tabs_slides_heading)
     %p
       %strong
-        We offer educators an organized, visually engaging, and pedagogically sound framework to deliver computer science lessons.
+        =hoc_s(:resources_tabs_slides_subhead)
     %p.body-two
-      Code.org slide decks provide step-by-step instructions, examples, and interactive activities that align with curricular objectives.
+      =hoc_s(:resources_tabs_slides_desc)
     %a.link-button{href: "https://docs.google.com/presentation/d/1lR2Il6bOm-OHQltTtHO5XJ_p0q2J-3dye_RiCZW-sGY/template/preview", target: "_blank", rel: "noopener noreferrer"}
-      Explore example slide deck
+      =hoc_s(:call_to_action_resources_slides)

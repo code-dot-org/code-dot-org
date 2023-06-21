@@ -114,6 +114,11 @@
   call_to_action_contact_regional_partner: "Contact your Regional Partner"
   call_to_action_join_csta: "Join CSTA"
   call_to_action_support_farsi: "Support Code.org in Farsi"
+  call_to_action_resources_lesson_plan: "Explore example lesson plan"
+  call_to_action_resources_videos: "Explore all videos"
+  call_to_action_resources_slides: "Explore example slide deck"
+  call_to_action_resources_assessments: "Explore an assessment lesson"
+  call_to_action_resources_tools: "Try out programming tools"
 
   aria_label_call_to_action_afe: "Learn more about Amazon Future Engineer"
   aria_label_call_to_action_teaching_csf: "Start the Teaching Computer Science Fundamentals professional learning program"
@@ -387,6 +392,23 @@
 
   resources_tabs_heading: "Resources that support you every step of the way"
   resources_tabs_desc: "[Sign up for a Code.org account](%{sign_up_url}) to get access to materials that will help you teach computer science with confidence. Code.org has extensive resources designed to support educators, even those without prior CS teaching experience."
+  resources_tabs_tab_label_lesson_plans: "Lesson Plans"
+  resources_tabs_tab_label_videos: "Videos"
+  resources_tabs_tab_label_slides: "Slides"
+  resources_tabs_tab_label_assessments: "Assessments"
+  resources_tabs_tab_label_tools: "Programming Tools"
+  resources_tabs_lesson_plans_subhead: "Get step-by-step guidance, learning objectives, and assessment strategies for effective teaching."
+  resources_tabs_lesson_plans_desc: "Helpful resources include slide decks, activity guides, rubrics, and more — all organized in one place. Each lesson plan is accompanied by tips for classroom implementation, differentiation ideas, and extension activities to cater to students of all abilities."
+  resources_tabs_videos_heading: "Instructional Videos"
+  resources_tabs_videos_subhead: "Watch easy-to-understand overviews of computer science and programming concepts."
+  resources_tabs_videos_desc: "Code.org video series are designed specifically to support your classroom and are engaging and fun to watch."
+  resources_tabs_slides_heading: "Slide Decks"
+  resources_tabs_slides_subhead: "We offer educators an organized, visually engaging, and pedagogically sound framework to deliver computer science lessons."
+  resources_tabs_slides_desc: "Code.org slide decks provide step-by-step instructions, examples, and interactive activities that align with curricular objectives."
+  resources_tabs_assessments_subhead: "Our curricula includes a comprehensive system of formative and summative assessment resources."
+  resources_tabs_assessments_desc: "These include rubrics, checklists, mini-projects, end-of-chapter projects, student-facing rubrics, sample projects, and post-project tests — all designed to support teachers in measuring student growth, providing feedback, and evaluating student understanding."
+  resources_tabs_tools_subhead: "Code.org's integrated development environments (IDEs) cater to students of all skill levels."
+  resources_tabs_tools_desc: "We offer a versatile and user-friendly platform that supports a variety of programming paradigms. This enables learners to seamlessly transition from block-based coding to text-based languages, and fosters creativity and innovation."
 
   hoc_live: 'Hour of Code Live'
   hoc_live_sign_up_title: 'Sign up for Hour of Code Live'

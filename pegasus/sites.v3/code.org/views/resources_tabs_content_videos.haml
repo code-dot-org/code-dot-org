@@ -2,11 +2,11 @@
   %figure.col-50
     = view :display_video_thumbnail, id: "ai_chatbots", video_code: "T45kEEBzrT8", caption: hoc_s(:ai_vid_chatbots_caption), play_button: 'center', letterbox: 'false', download_path: "//videos.code.org/ai_series/ai-chatbots.mp4"
   .text-wrapper.col-45{style: "float: right"}
-    %h3 Instructional Videos
+    %h3=hoc_s(:resources_tabs_videos_heading)
     %p
       %strong
-        Watch easy-to-understand overviews of computer science and programming concepts.
+        =hoc_s(:resources_tabs_videos_subhead)
     %p.body-two
-      Code.org video series are designed specifically to support your classroom and are engaging and fun to watch.
+      =hoc_s(:resources_tabs_videos_desc)
     %a.link-button{href: CDO.studio_url("/s/csd3-2023/lessons/1"), target: "_blank", rel: "noopener noreferrer"}
-      Explore all videos
+      =hoc_s(:call_to_action_resources_videos)
