@@ -1,11 +1,11 @@
 ---
-title: Teacher Resources - Artist
+title: Ресурси вчителя - Художник
 nav: hoc_teacher_resources_nav
 theme: responsive
 video_player: true
 ---
 
-# Artist: An Hour of Code Tutorial
+# Художник: Підручник з Години коду
 
 {{ hoc_artist_video }}
 
@@ -30,7 +30,7 @@ video_player: true
 
 ## Огляд
 
-Draw cool pictures and designs with the Artist!
+Створюй круті зображення та візерунки за допомогою Художника!
 
 **Recommended Age Range:** 4-104
 
