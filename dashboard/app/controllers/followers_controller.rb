@@ -4,7 +4,6 @@
 # models).
 
 class FollowersController < ApplicationController
-  include User::GenderExperimentHelper
   before_action :load_section
 
   # Add custom flash types:
@@ -32,7 +31,7 @@ class FollowersController < ApplicationController
     # Create boolean to confirm if a user already actively exists on a section roster
     is_existing_follower = !!Follower.find_by(section: @section, student_user: @user)
 
-    if current_user&.display_captcha? && !verify_recaptcha
+    if current_user&.display_join_section_captcha? && !verify_recaptcha
       flash[:alert] = I18n.t('follower.captcha_required')
       # Concatenate section code so user does not have to type section code again
       # Note that @section will always be defined due to validations in load_section
@@ -40,11 +39,8 @@ class FollowersController < ApplicationController
       redirect_to redirection
       return
     else
-      gender = params.dig(:user, :gender)
-      gender_input_type = gender_input_type?(request, session)
       Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
         if @user.save && @section&.add_student(@user)
-          SignUpTracking.log_gender_input_type_account_created(session, gender, gender_input_type, request.locale, 'section_signup', @user)
           sign_in(:user, @user)
           @user.increment_section_attempts
           # Check for an exiting user, and redirect to course if found
@@ -70,7 +66,12 @@ class FollowersController < ApplicationController
   end
 
   private def followers_params(user_type)
-    allowed_params = params[:user].permit([:name, :password, :gender, :age, :email, :hashed_email])
+    allowed_params = params[:user].permit([:name, :password, :gender,
+                                           :gender_student_input,
+                                           :gender_teacher_input, :age, :email,
+                                           :hashed_email,  :us_state,
+                                           :country_code]
+    )
     if user_type == User::TYPE_TEACHER
       allowed_params.merge(params[:user].permit([:school, :full_address]))
     end

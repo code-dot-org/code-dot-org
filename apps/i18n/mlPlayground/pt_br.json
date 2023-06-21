@@ -13,6 +13,7 @@
   "columnDetailsMaximumValue": "max",
   "dataCardLastUpdated": "Última atualização",
   "predictButton": "Previsão",
+  "uniqueOptionsWarningNotice": "Nota",
   "datasets": {
     "medical_priority": {
       "fields": {
@@ -715,10 +716,87 @@
     },
     "zoo": {
       "fields": {
+        "Animal Name": {
+          "id": "Nome do Animal",
+          "description": "Nome do animal."
+        },
+        "Hair": {
+          "id": "Cabelo",
+          "description": "O animal tem pelos?"
+        },
+        "Feathers": {
+          "id": "Penas",
+          "description": "O animal tem penas?"
+        },
+        "Eggs": {
+          "id": "Ovos",
+          "description": "O animal põe ovos?"
+        },
+        "Milk": {
+          "id": "Leite",
+          "description": "O animal produz leite?"
+        },
+        "Airborne": {
+          "id": "Transportado pelo ar",
+          "description": "O animal voa?"
+        },
         "Aquatic": {
-          "id": "Aquático"
+          "id": "Aquático",
+          "description": "O animal vive na água?"
+        },
+        "Predator": {
+          "id": "Predador",
+          "description": "O animal é um predador?"
+        },
+        "Toothed": {
+          "id": "Dentado",
+          "description": "O animal tem dentes?"
+        },
+        "Backbone": {
+          "id": "Espinha dorsal",
+          "description": "O animal tem uma espinha dorsal?"
+        },
+        "Breathes": {
+          "id": "Respira",
+          "description": "O animal respira?"
+        },
+        "Venomous": {
+          "id": "Venenoso",
+          "description": "O animal é venenoso?"
+        },
+        "Fins": {
+          "id": "Barbatanas",
+          "description": "O animal tem barbatanas?"
+        },
+        "Legs": {
+          "id": "Pernas",
+          "description": "Quantas pernas o animal tem?"
+        },
+        "Tail": {
+          "id": "Cauda",
+          "description": "O animal tem cauda?"
+        },
+        "Domestic": {
+          "id": "Doméstico",
+          "description": "O animal é doméstico?"
+        },
+        "Catsize": {
+          "id": "Tamanho de um gato",
+          "description": "O animal é do tamanho de um gato?"
+        },
+        "Class": {
+          "id": "Aula",
+          "description": "Que tipo de animal é esse?"
         }
-      }
+      },
+      "card": {
+        "description": "Um pequeno conjunto de dados de diferentes atributos de animais (se eles possuem pelos, penas, dentes, entre outros) usado para fins de classificação. Quase todas as características são de \"Sim ou Não\", exceto o nome do animal, a classe e o número de pernas.",
+        "context": {
+          "potentialUses": "Existem muitos rótulos em potencial aqui, mas uma investigação fácil para você começar é tentar descobrir quais características tendem a estar relacionadas ao fato de um animal ser venenoso.",
+          "potentialMisuses": "Este é um conjunto de dados de apenas 100 animais, então muitos animais não estão sendo representados pelos dados. Não o tome como verdade."
+        }
+      },
+      "name": "Zoológico"
     },
     "club_sparse_toy": {
       "fields": {

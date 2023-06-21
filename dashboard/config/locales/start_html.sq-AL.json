@@ -4,19 +4,23 @@
       "start_html": {
         "CSD U1 IO Pet Chooser 2_2021": {
           "Yes": "Po",
-          "No": "Jo"
+          "No": "Jo",
+          "cute": "e lezetshme"
         },
         "CSD U1 IO Pet Chooser 2_2022": {
           "Yes": "Po",
-          "No": "Jo"
+          "No": "Jo",
+          "cute": "e lezetshme"
         },
         "CSD U1 IO Pet Chooser_2021": {
           "Yes": "Po",
-          "No": "Jo"
+          "No": "Jo",
+          "cute": "e lezetshme"
         },
         "CSD U1 IO Pet Chooser_2022": {
           "Yes": "Po",
-          "No": "Jo"
+          "No": "Jo",
+          "cute": "e lezetshme"
         },
         "CSD U1 IO Story_2021": {
           "Name": "Emri",
@@ -108,11 +112,17 @@
         },
         "CSD U1 storage outfit_2021": {
           "green": "jeshile",
-          "black": "e zezë"
+          "black": "e zezë",
+          "white": "e bardhë",
+          "pink": "rozë",
+          "purple": "vjollcë"
         },
         "CSD U1 storage outfit_2022": {
           "green": "jeshile",
-          "black": "e zezë"
+          "black": "e zezë",
+          "white": "e bardhë",
+          "pink": "rozë",
+          "purple": "vjollcë"
         },
         "CSD U2 RGB intro": {
           "3": "3",
@@ -141,7 +151,9 @@
           "left": "majtas",
           "right": "djathtas",
           "red": "e kuqe",
-          "green": "jeshile"
+          "green": "jeshile",
+          "yellow": "zverdh",
+          "purple": "vjollcë"
         },
         "CSD U6 - Combine Inputs - CA_2022": {
           "short": "i shkurtër",
@@ -153,7 +165,9 @@
         },
         "CSD U6 - Combine Inputs - PracC_2222": {
           "green": "jeshile",
-          "blue": "blu"
+          "blue": "blu",
+          "yellow": "zverdh",
+          "orange": "portokalli"
         },
         "CSD U6 - Combine Inputs - SB2_2222": {
           "short": "i shkurtër",
@@ -190,7 +204,8 @@
           "F": "F",
           "G": "G",
           "A": "A",
-          "B": "B"
+          "B": "B",
+          "Note:": "Shënim:"
         },
         "CSD U6 - Music - SB1_2222": {
           "C": "C",
@@ -226,10 +241,12 @@
           "Save": "Ruaj"
         },
         "CSD U6 - Screen Inputs - SB2.1_2022": {
-          "black": "e zezë"
+          "black": "e zezë",
+          "white": "e bardhë"
         },
         "CSD U6 - Screen Inputs - SB2.2_2022": {
-          "black": "e zezë"
+          "black": "e zezë",
+          "white": "e bardhë"
         },
         "CSD U6 - Screen Outputs - P_2222": {
           "title": "titull"
@@ -250,19 +267,24 @@
           "text": "tekst"
         },
         "CSD U6 - Sensors - SB2_2222": {
-          "Update": "Përditëso"
+          "Update": "Përditëso",
+          "value": "vlerë"
         },
         "CSD U6 analog light": {
-          "Update": "Përditëso"
+          "Update": "Përditëso",
+          "value": "vlerë"
         },
         "CSD U6 analog light_2018": {
-          "Update": "Përditëso"
+          "Update": "Përditëso",
+          "value": "vlerë"
         },
         "CSD U6 analog light_2019": {
-          "Update": "Përditëso"
+          "Update": "Përditëso",
+          "value": "vlerë"
         },
         "CSD U6 analog light_2021": {
-          "Update": "Përditëso"
+          "Update": "Përditëso",
+          "value": "vlerë"
         },
         "CSD U6 array piano": {
           "C": "C",
@@ -714,13 +736,15 @@
           "W": "P",
           "A": "A",
           "yes": "po",
-          "no": "jo"
+          "no": "jo",
+          "head": "koka"
         },
         "ml-model card-medical app v2 2021-2_2022": {
           "W": "P",
           "A": "A",
           "yes": "po",
-          "no": "jo"
+          "no": "jo",
+          "head": "koka"
         },
         "ml-models in applab-choice if quotes": {
           "3": "3"
@@ -773,6 +797,67 @@
         "ml-use model card-example3A_2022": {
           "cloudy": " re",
           "night": "natë"
+        },
+        "CSD U1 processing live_2021": {
+          "walking": "në këmbë",
+          "bear": "ariu",
+          "rat": "miu"
+        },
+        "CSD U1 processing live_2022": {
+          "walking": "në këmbë",
+          "bear": "ariu",
+          "rat": "miu"
+        },
+        "CSD U6 - Combine Inputs - PracD_2222": {
+          "quiet": "i qetë"
+        },
+        "CSD U6 - Sensors - SB1_2222": {
+          "value": "vlerë"
+        },
+        "CSD U6 - Sensors - SB3_2222": {
+          "value": "vlerë"
+        },
+        "CSD U6 - Sensors - SB4.1_2222": {
+          "value": "vlerë"
+        },
+        "CSD U6 - Sensors - SB4_2222": {
+          "value": "vlerë"
+        },
+        "CSD U6 analog change": {
+          "value": "vlerë"
+        },
+        "CSD U6 analog change_2018": {
+          "value": "vlerë"
+        },
+        "CSD U6 analog change_2019": {
+          "value": "vlerë"
+        },
+        "CSD U6 analog change_2021": {
+          "value": "vlerë"
+        },
+        "CSD U6 analog data": {
+          "value": "vlerë"
+        },
+        "CSD U6 analog data_2018": {
+          "value": "vlerë"
+        },
+        "CSD U6 analog data_2019": {
+          "value": "vlerë"
+        },
+        "CSD U6 analog data_2021": {
+          "value": "vlerë"
+        },
+        "CSD U6 analog sound": {
+          "value": "vlerë"
+        },
+        "CSD U6 analog sound_2018": {
+          "value": "vlerë"
+        },
+        "CSD U6 analog sound_2019": {
+          "value": "vlerë"
+        },
+        "CSD U6 analog sound_2021": {
+          "value": "vlerë"
         }
       }
     }

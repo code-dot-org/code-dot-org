@@ -144,8 +144,11 @@ def main
   end
 
   # Verify that the data size is sensible.
-  raise "contained_levels too big: #{contained_levels.size} rows exceeds limit of 10000" if contained_levels.size > 10_000
-  raise "contained_level_answers too big: #{contained_levels_answers.size} rows exceeds limit of 100000" if contained_level_answers.size > 100_000
+  CDO.log.info "contained_levels: #{contained_levels.size}"
+  CDO.log.info "contained_level_answers: #{contained_level_answers.size}"
+  CDO.log.info "level_sources: #{level_sources_multi_types.size}"
+  raise "contained_levels too big: #{contained_levels.size} rows exceeds limit of 100000" if contained_levels.size > 100_000
+  raise "contained_level_answers too big: #{contained_level_answers.size} rows exceeds limit of 100000" if contained_level_answers.size > 100_000
   raise "level_sources too big: #{level_sources_multi_types.size} rows exceeds limit of 100000" if level_sources_multi_types.size > 100_000
 
   # Maximum rows to insert per query

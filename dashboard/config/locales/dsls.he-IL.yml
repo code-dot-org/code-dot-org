@@ -3063,7 +3063,8 @@ he-IL:
         - text: ירוק
           correct: true
         - correct: true
-        - correct: true
+        - text: צהוב
+          correct: true
         - correct: true
         - text: אדום
           correct: true
@@ -10235,6 +10236,26 @@ he-IL:
       express_EOC2022:
         display_name: פרויקט סיום קורס
       grade2_multi_collector_A_predict12022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      Test Contained Retriable Multi:
+        answers:
+        - text: '0'
+          correct: true
+        - text: '1'
+          correct: true
+        - text: '2'
+          correct: true
+        - text: '4'
+          correct: true
+        questions:
+        - {}
+      test-single-multi-standalone-retriable:
         answers:
         - correct: true
         - correct: true

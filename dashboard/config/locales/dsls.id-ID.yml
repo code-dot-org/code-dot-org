@@ -7428,7 +7428,7 @@ id-ID:
           correct: true
         - correct: true
         questions:
-        - {}
+        - text: Pengembangan Web
       csd-post-survey-2019-I like cs:
         answers:
         - correct: true
@@ -11568,6 +11568,57 @@ id-ID:
         - {}
       csp_unit_assessment_overview:
         content1: deskripsi di sini
+        teacher_markdown: |-
+          ### PERHATIAN: Maksud dari penilaian ini
+
+          * Penilaian ini adalah penilaian pilihan ganda yang **dirancang dalam “gaya” AP**
+
+          * Artinya, pertanyaannya tidak** secara khusus tentang pelajaran yang dibahas sebelum ke bagian ini.
+          Sebaliknya, pertanyaan tersebut berhubungan dengan tujuan pembelajaran AP pokok yang secara teoritis telah dibahas.
+
+          * **Artinya** bahwa siswa mungkin harus melakukan sejumlah ekstrapolasi dari apa yang telah mereka pelajari untuk menjawab pertanyaannya.
+
+          * **Artinya** pertanyaannya mungkin "sulit", khusus untuk pemaparan pertama.
+
+          Jadi secara keseluruhan, **GUNAKAN DENGAN HATI-HATI**
+
+          * Gunakan pertimbangan Anda tentang hal apa yang ingin ditambahkan ke penilaian ini.
+                  * Anda tidak harus menggunakan penilaian ini untuk menilai siswa, atau...
+              * Anda dapat menilai siswa dengan cara lain alih-alih mengambil % yang benar.
+
+          * Pastikan bahwa Anda menggunakannya dengan cara yang akan menjaga semangat kelas dalam hal penyelidikan pengetahuan.
+             * Jika Anda khawatir bahwa siswa akan berkecil hati, maka sebaiknya susun ulang penilaian ini sebagai kesempatan untuk menyelidiki -- biarkan siswa mencoba pertanyaannya, lalu telusuri jawabannya, dan ubah kesalahanpahaman mereka, atau kembangkan kumpulan pertanyaan mereka sendiri.
+
+
+          ---
+
+          #### Pertanyaan Umum  -- Cara menyiapkan, mengelola, dan meninjau penilaian
+
+          Silakan lihat **[Dokumen Pertanyaan Umum di sini](https://docs.google.com/document/d/1zEpD1PFt6ec2S8ourxuMH0HD6tiyRvqAGUKGDCOt-qs/edit#heading=h.kewgp6z8qdde)** yang berisi:
+
+          * tangkapan layar tentang cara menyiapkan, mengelola, dan meninjau penilaian
+          * menangani masalah umum
+
+
+          #### Gambaran singkat tentang cara melihat/memeriksa jawaban siswa
+
+          1. Buka [Dasbor Guru](https://code.org/teacher-dashboard#/)
+          2. Pilih bagian Prinsip Ilmu Komputer Anda
+          3. Anda akan melihat sejumlah tab ungu seperti Respons Teks, Penilaian, dll.
+          4. Klik **Penilaian/Survei**
+          5. Dari dropdown pemilih kursus, **pilih unit yang menampilkan penilaian ini (mis.  Unit 1: Internet)**
+          6. Untuk semua siswa yang telah *mengirim* penilaiannya, Anda akan melihat dua tabel:
+              * Tabel pertama adalah tampilan gambaran yang merangkum persentase yang benar dari semua siswa yang mengirim, termasuk stempel waktu yang mereka kirimkan
+             * Tabel kedua merupakan daftar lengkap dari setiap jawaban untuk tiap pertanyaan yang dikirim oleh setiap siswa
+
+             Di atas kedua tabel ini adalah tombol **Unduh (atau ekspor) sebagai csv** - yang memungkinkan Anda untuk memproses jawaban dalam spreadsheet (disarankan).
+
+          7. Jika Anda perlu mengizinkan siswa untuk MEMBATALKAN PENGIRIMAN tesnya, arahkan siswa untuk membuka halaman terakhir tes dan tekan "Batal Kirim".
+
+          **CATATAN tentang MEMBATALKAN PENGIRIMAN:**
+          Anda harus membuat aturan yang jelas bersama siswa Anda terkait membatalkan pengiriman tes. Siswa mungkin merasa bahwa ini adalah cara yang baik untuk mengubah jawaban setelah tes berakhir (misalnya menyontek), namun Anda akan melihat stempel waktu saat siswa mengirimkan tesnya.
+
+          Anda sebaiknya menetapkan bahwa Anda tidak akan mempertimbangkan untuk memberi skor atau menilai tes apa pun setelah waktu tertentu. Jika tidak dikirim sebelum batas waktu yang ditentukan, maka akan dianggap bahwa Anda tidak menerimanya.
       curriculum-how-challenging:
         answers:
         - correct: true
@@ -13118,3 +13169,311 @@ id-ID:
         questions:
         - text: Perhatikan kode berikut ini. Menurutmu apa yang akan terjadi saat
             programnya dijalankan?
+      Test Contained Retriable Multi:
+        answers:
+        - text: '0'
+        - text: '1'
+        - text: '2'
+          correct: true
+        - text: '4'
+        questions:
+        - {}
+      test-single-multi-standalone-retriable:
+        answers:
+        - text: Tidak akan terjadi apa-apa.
+          feedback: Salah. Gulma raksasa akan mulai berguling-guling
+        - text: Gulma raksasa akan mengambang ke bagian atas layar
+          feedback: Salah. Gulma raksasa akan mulai berguling-guling
+        - text: Gulma raksasa akan mulai berguling-guling
+          correct: true
+          feedback: Benar!
+        - text: Gulma raksasa akan berkedip-kedip.
+          feedback: Salah. Gulma raksasa akan mulai berguling-guling
+        questions:
+        - text: Cermati code di bawah ini. Apa yang akan terjadi setelah Anda mengklik
+            "Jalankan"?
+      OPD-K5 Outline:
+        markdown: |-
+          # Memulai > Uraian Kursus
+
+          Kursus ini dibagi menjadi sebelas tahap, dan tiap tahap terdiri atas “level” atau “puzzle.” Berikut gambaran dari yang akan Anda pelajari jika Anda menyelesaikan seluruh kursus:
+
+          ## Tahap 1: Memulai (10-30 menit)
+
+          Dengan menyelesaikan Tahap 1, Anda akan:
+
+          - Meninjau detail kursus
+          - Praktik menggunakan Code.org sebagai platform pembelajaran
+          - Merencanakan partisipasi Anda dalam kursus ini
+
+          ## Tahap 2: Dasar-Dasar Ilmu Komputer (10-30 menit)
+
+          Dengan menyelesaikan Tahap 2, Anda akan:
+
+          - Mendefinisikan ilmu komputer dan meninjau kosa kata utama
+          - Mengidentifikasi manfaat mengajarkan dan belajar ilmu komputer
+          - Membedakan antara "coding" dan "ilmu komputer"
+          - Menjelaskan manfaat memulai coding dengan pemrograman visual
+
+          ## Tahap 3: Melihat ke Depan (10 menit)
+
+          Dengan menyelesaikan Tahap 3, Anda akan:
+
+          - Bersiap "menguasai dasar-dasar" ilmu komputer dengan meninjau pelajaran berikutnya di dalam kursus
+
+          ## Tahap 4: Menguasai Dasar-dasar: Sequencing atau Pengurutan (10-30 menit)
+
+          Dengan menyelesaikan Tahap 4, Anda akan:
+
+          - Mendefinisikan "program" dan "algoritma"
+          - Menggunakan mesin pemrograman visual Code.org untuk menulis program sederhana
+          - Mempertimbangkan penerapan di dalam kelas
+
+          ## Tahap 5: Menguasai Dasar-dasar: Loop atau Pengulangan (20-45 menit)
+
+          Dengan menyelesaikan Tahap 5, Anda akan:
+
+          - Mendefinisikan "loop" dan menjelaskan kegunaannya
+          - Mempraktikan coding dengan loop sederhana
+          - Mempertimbangkan penerapan di dalam kelas
+
+          ## Tahap 6: Menguasai Dasar-dasar: Conditional (20-45 menit)
+
+          Dengan menyelesaikan Tahap 6, Anda akan:
+
+          - Mendefinisikan "conditional" dan menjelaskan kegunaannya
+          - Mempraktikan coding dengan conditional sederhana
+          - Mempertimbangkan penerapan di dalam kelas
+
+          ## Tahap 7: Menguasai Dasar-dasar: Fungsi atau Fungsi (20-45 menit)
+
+          Dengan menyelesaikan Tahap 7, Anda akan:
+
+          - Mendefinisikan "fungsi" dan menjelaskan kegunaannya
+          - Mempraktikan coding dengan fungsi sederhana
+          - Mempertimbangkan penerapan di dalam kelas
+
+          ## Tahap 8: Menguasai Dasar-dasar: Event atau Aksi (30-60 menit)
+
+          Dengan menyelesaikan Tahap 8, Anda akan:
+
+          - Mendefinisikan "event" dan menjelaskan kegunaannya
+          - Mempraktikan coding dengan event sederhana
+          - Mempertimbangkan penerapan di dalam kelas
+
+          ## Tahap 9: Praktik Terbaik untuk Mengajarkan Ilmu Komputer (30-60 menit)
+
+          Dengan menyelesaikan Tahap 9, Anda akan:
+
+          - Meninjau praktik terbaik untuk mengajarkan ilmu computer
+
+          ## Tahap 10: Perencanaan (30-60 menit)
+
+          Dengan menyelesaikan Tahap 10, Anda akan:
+
+          - Menelusuri sumber daya Code.org, termasuk dasbor guru
+          - Merencanakan cara untuk mengintegrasikan ilmu komputer ke dalam praktik Anda
+
+          ## Tahap 11: Langkah Berikutnya (10-30 menit)
+
+          Dengan menyelesaikan Tahap 11, Anda akan
+
+          - Melakukan refleksi pada pembelajaran Anda
+          - Merencanakan langkah berikutnya yang akan diambil untuk melanjurkan pembelajaran
+          - Terhubung dengan komunitas pendidik yang tertarik dengan pendidikan ilmu komputer
+          - Memberikan poin-poin utama dan masukan dalam kursus ini
+
+          > **Catatan**: Waktu yang disarankan di atas diberikan untuk membantu merencanakan pembelajaran Anda.
+          Harap dicatat bahwa Anda mungkin ingin butuh lebih banyak atau lebih sedikit waktu pada tahap tertentu, tergantung pada pengetahuan Anda sebelumnya, minat, dan juga kapasitas Anda. Harap diingat bahwa kursus ini sepenuhnya bersifat mandiri; Anda selalu dapat keluar dari kursus dan kembali atau membuka kembali tahap atau level mana pun kapan saja.
+      OPD-K5 Outline_dani:
+        markdown: |-
+          # Memulai > Uraian Kursus
+
+          Kursus ini dibagi menjadi sebelas tahap, dan tiap tahap terdiri atas “level” atau “puzzle.” Berikut gambaran dari yang akan Anda pelajari jika Anda menyelesaikan seluruh kursus:
+
+          ## Tahap 1: Memulai (10-30 menit)
+
+          Dengan menyelesaikan Tahap 1, Anda akan:
+
+          - Meninjau detail kursus
+          - Praktik menggunakan Code.org sebagai platform pembelajaran
+          - Merencanakan partisipasi Anda dalam kursus ini
+
+          ## Tahap 2: Dasar-Dasar Ilmu Komputer (10-30 menit)
+
+          Dengan menyelesaikan Tahap 2, Anda akan:
+
+          - Mendefinisikan ilmu komputer dan meninjau kosa kata utama
+          - Mengidentifikasi manfaat mengajarkan dan belajar ilmu komputer
+          - Membedakan antara "coding" dan "ilmu komputer"
+          - Menjelaskan manfaat memulai coding dengan pemrograman visual
+
+          ## Tahap 3: Melihat ke Depan (10 menit)
+
+          Dengan menyelesaikan Tahap 3, Anda akan:
+
+          - Bersiap "menguasai dasar-dasar" ilmu komputer dengan meninjau pelajaran berikutnya di dalam kursus
+
+          ## Tahap 4: Menguasai Dasar-dasar: Sequencing atau Pengurutan (10-30 menit)
+
+          Dengan menyelesaikan Tahap 4, Anda akan:
+
+          - Mendefinisikan "program" dan "algoritma"
+          - Menggunakan mesin pemrograman visual Code.org untuk menulis program sederhana
+          - Mempertimbangkan penerapan di dalam kelas
+
+          ## Tahap 5: Menguasai Dasar-dasar: Loop atau Pengulangan (20-45 menit)
+
+          Dengan menyelesaikan Tahap 5, Anda akan:
+
+          - Mendefinisikan "loop" dan menjelaskan kegunaannya
+          - Mempraktikan coding dengan loop sederhana
+          - Mempertimbangkan penerapan di dalam kelas
+
+          ## Tahap 6: Menguasai Dasar-dasar: Conditional (20-45 menit)
+
+          Dengan menyelesaikan Tahap 6, Anda akan:
+
+          - Mendefinisikan "conditional" dan menjelaskan kegunaannya
+          - Mempraktikan coding dengan conditional sederhana
+          - Mempertimbangkan penerapan di dalam kelas
+
+          ## Tahap 7: Menguasai Dasar-dasar: Fungsi atau Fungsi (20-45 menit)
+
+          Dengan menyelesaikan Tahap 7, Anda akan:
+
+          - Mendefinisikan "fungsi" dan menjelaskan kegunaannya
+          - Mempraktikan coding dengan fungsi sederhana
+          - Mempertimbangkan penerapan di dalam kelas
+
+          ## Tahap 8: Menguasai Dasar-dasar: Event atau Aksi (30-60 menit)
+
+          Dengan menyelesaikan Tahap 8, Anda akan:
+
+          - Mendefinisikan "event" dan menjelaskan kegunaannya
+          - Mempraktikan coding dengan event sederhana
+          - Mempertimbangkan penerapan di dalam kelas
+
+          ## Tahap 9: Praktik Terbaik untuk Mengajarkan Ilmu Komputer (30-60 menit)
+
+          Dengan menyelesaikan Tahap 9, Anda akan:
+
+          - Meninjau praktik terbaik untuk mengajarkan ilmu computer
+
+          ## Tahap 10: Perencanaan (30-60 menit)
+
+          Dengan menyelesaikan Tahap 10, Anda akan:
+
+          - Menelusuri sumber daya Code.org, termasuk dasbor guru
+          - Merencanakan cara untuk mengintegrasikan ilmu komputer ke dalam praktik Anda
+
+          ## Tahap 11: Langkah Berikutnya (10-30 menit)
+
+          Dengan menyelesaikan Tahap 11, Anda akan
+
+          - Melakukan refleksi pada pembelajaran Anda
+          - Merencanakan langkah berikutnya yang akan diambil untuk melanjurkan pembelajaran
+          - Terhubung dengan komunitas pendidik yang tertarik dengan pendidikan ilmu komputer
+          - Memberikan poin-poin utama dan masukan dalam kursus ini
+
+          > **Catatan**: Waktu yang disarankan di atas diberikan untuk membantu merencanakan pembelajaran Anda.
+          Harap dicatat bahwa Anda mungkin ingin butuh lebih banyak atau lebih sedikit waktu pada tahap tertentu, tergantung pada pengetahuan Anda sebelumnya, minat, dan juga kapasitas Anda. Harap diingat bahwa kursus ini sepenuhnya bersifat mandiri; Anda selalu dapat keluar dari kursus dan kembali atau membuka kembali tahap atau level mana pun kapan saja.
+      OPD-K5 Stage9Go:
+        markdown: |-
+          # Perencanaan > Peninjauan
+
+          <img src="https://images.code.org/34e1d20a6ae73e28c6c88c5981fd6be6-image-1434411459379.JPG" width="450px">
+
+          Pada tahap ini, Anda telah:
+
+          - Meninjau Dasbor Guru dan sumber daya lain di Code,org
+          - Merencanakan cara untuk mengintegrasikan ilmu komputer ke dalam praktik Anda
+
+          Pada tahap 11, yang merupakan tahap akhir, Anda akan
+
+          - Melakukan refleksi pada pembelajaran Anda
+          - Merencanakan langkah berikutnya yang akan diambil untuk melanjurkan pembelajaran
+          - Terhubung dengan komunitas pendidik yang tertarik dengan pendidikan ilmu komputer
+      OPD-K5 Stage9Go_dani:
+        markdown: |-
+          # Perencanaan > Peninjauan
+
+          <img src="https://images.code.org/34e1d20a6ae73e28c6c88c5981fd6be6-image-1434411459379.JPG" width="450px">
+
+          Pada tahap ini, Anda telah:
+
+          - Meninjau Dasbor Guru dan sumber daya lain di Code,org
+          - Merencanakan cara untuk mengintegrasikan ilmu komputer ke dalam praktik Anda
+
+          Pada tahap 11, yang merupakan tahap akhir, Anda akan
+
+          - Melakukan refleksi pada pembelajaran Anda
+          - Merencanakan langkah berikutnya yang akan diambil untuk melanjurkan pembelajaran
+          - Terhubung dengan komunitas pendidik yang tertarik dengan pendidikan ilmu komputer
+      OPD-K5 Stage9Start:
+        markdown: |-
+          # Perencanaan > Menelusuri Sumber Daya Guru
+
+          Sepanjang Tahap 4-8, Anda sudah melihat beberapa sumber belajar "tanpa komputer" dan online yang tersedia untuk Dasar-dasar Ilmu Komputer, karena selaras dengan konsep ilmu komputer yang Anda pelajari.
+
+          Karena Anda telah memiliki pemahaman tentang cara membuat kode, serta cara mengajarkan ilmu komputer, saatnya untuk mulai merencanakan pengajaran Anda. Pada tahap ini, kita akan menjelajahi area lain dari platform Code.org serta **[Dasbor Guru](http://studio.code.org/)**.
+
+          Dengan menyelesaikan Tahap 10, Anda akan:
+
+          - Menelusuri sumber daya yang tersedia untuk guru
+          - Menelusuri Code.org **[Dasbor Guru](http://studio.code.org/)**
+          - Merencanakan cara untuk mengintegrasikan ilmu komputer ke dalam praktik Anda
+
+          ***
+
+          Berikut tangkapan layar Dasbor Guru. Anda harus log in ke akun guru Code.org untuk melihatnya -- setelah log in, Anda akan melihat layar default-nya di situs web Code.org. Jika Anda belum memiliki akun guru, Anda dapat, **[buat akun di sini](https://studio.code.org/users/sign_up)**.
+
+          ![](https://images.code.org/d6345709495f764a71d9cb0994dbd7e4-image-1549064603589.png)
+      OPD-K5 Stage9Start_copy:
+        markdown: |-
+          # Menelusuri Sumber Daya Guru
+
+          Saatnya merencanakan pengajaran Anda. Pada tahap ini, kita akan menjelajahi area lain dari platform Code.org serta **<a href="http://studio.code.org/" target="blank" rel="noopener noreferrer">Dasbor Guru</a>**.
+
+          Berikut tangkapan layar Dasbor Guru. Anda harus masuk ke akun guru Code.org Anda untuk melihatnya. Setelah log in, Anda akan melihat layar default-nya di situs web Code.org. Jika Anda belum memiliki akun guru, Anda dapat **<a href="https://studio.code.org/users/sign_up" target="blank" rel="noopener noreferrer">membuat akun di sini</a>**.
+
+          <a href="http://studio.code.org/" target="blank" rel="noopener noreferrer">![](https://images.code.org/d6345709495f764a71d9cb0994dbd7e4-image-1549064603589.png)</a>
+      OPD-K5 Stage9Start_dani:
+        markdown: "# Perencanaan > Menelusuri Sumber Daya Guru\n\nSepanjang Tahap
+          4-8, Anda sudah melihat beberapa sumber belajar \"tanpa komputer\" dan online
+          yang tersedia untuk Dasar-dasar Ilmu Komputer, karena selaras dengan konsep
+          ilmu komputer yang Anda pelajari. \n\nKarena Anda telah memiliki pemahaman
+          tentang cara membuat kode, serta cara mengajarkan ilmu komputer, saatnya
+          untuk mulai merencanakan pengajaran Anda. Pada tahap ini, kita akan menjelajahi
+          area lain dari platform Code.org serta **[Dasbor Guru](http://studio.code.org/)**.\n\nDengan
+          menyelesaikan Tahap 10, Anda akan:\n\n- Menelusuri sumber daya yang tersedia
+          untuk guru\n- Menelusuri Code.org **[Dasbor Guru](http://studio.code.org/)**\n-
+          Merencanakan cara untuk mengintegrasikan ilmu komputer ke dalam praktik
+          Anda\n\n***\n\nBerikut tangkapan layar Dasbor Guru. Anda harus log in ke
+          akun guru Code.org untuk melihatnya– setelah log in, Anda akan melihat layar
+          default-nya di situs web Code.org. Jika Anda belum memiliki akun guru, Anda
+          dapat, **[buat akun di sini](https://studio.code.org/users/sign_up)**.\n\n![](https://images.code.org/d6345709495f764a71d9cb0994dbd7e4-image-1549064603589.png)"
+      csd-post-survey-2018-markdown-with-link-to-survey:
+        teacher_markdown: |-
+          **Harap minta siswa Anda untuk mengisi survei ini!!!**
+
+          * Anda dapat melihat hasil survei yang dianonimkan pada dasbor guru
+          * Hasilnya sangat penting bagi kami (code.org) untuk meneruskan kursus kami dan melakukan peningkatan.
+          * Kami juga akan memberikan survei untuk guru, di mana Anda dapat memberi masukan Anda sendiri, yang akan disampaikan kepada Anda melalui email.
+
+          **Catatan:**
+
+          * Tombol di halaman ini dialihkan ke [studio.code.org/s/csp-post-survey](https://studio.code.org/s/csp-post-survey)
+          * Jika diinginkan, Anda dapat mengatur "Survei Pasca-Kursus Siswa" sebagai unit saat ini untuk sesi Anda dari menu drop down di dasbor guru.
+      csd-post-survey-2018-markdown-with-link-to-survey_v2:
+        teacher_markdown: |-
+          **Harap minta siswa Anda untuk mengisi survei ini!!!**
+
+          * Hasilnya sangat penting bagi kami (code.org) untuk meneruskan kursus kami dan melakukan peningkatan.
+          * Kami juga akan memberikan survei untuk guru, di mana Anda dapat memberi masukan Anda sendiri, yang akan disampaikan kepada Anda melalui email.
+
+          **Untuk melihat hasil** - survei pasca kursus ini agak berbeda. Survei yang berada di dalam unit kursusnya sendiri, dan halaman ditautkan ke sana.
+
+          * Untuk melihat hasil survei yang dianonimkan pada dasbor guru, Anda harus (1) melihat survei/penilaian, lalu (2) memilih unit survei pasca kursus sebagai unit yang ingin Anda lihat.
+
+          * **Petunjuk selengkapnya untuk melihat hasil survei pasca kursus**: [[google doc](https://docs.google.com/document/d/1EQfPy0D6lSWA3s3d2hkgVLSRn1vrjLLXaZBSz3-E9aw)] [[pdf](https://docs.google.com/document/d/1EQfPy0D6lSWA3s3d2hkgVLSRn1vrjLLXaZBSz3-E9aw/export?format=pdf)]

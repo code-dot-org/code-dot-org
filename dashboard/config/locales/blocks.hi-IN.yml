@@ -2618,6 +2618,22 @@ hi:
           DIR:
             right: दाएं ↻
             left: बाएं ↺
+      ecosystems_int10:
+        options:
+          VALUE:
+            '0': '0'
+            '1': १
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+      storylab_printText:
+        text: प्रिंट करें {TEXT}
       storylab_setForegroundEffect2:
         text: "{EFFECT} आगे का इफेक्ट डालें"
         options:

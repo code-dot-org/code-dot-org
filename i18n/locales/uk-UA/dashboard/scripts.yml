@@ -22,7 +22,7 @@ uk:
           description_audience: Вік 8-18
           student_description: Курс 3 розроблено для учнів, котрі опанували Курс 2. Учні глибше розглянуть ті поняття програмування, з якими ознайомились у попередніх курсах, щоб розробляти гнучкіші рішення для складніших задач. До кінця навчання учні створять інтерактивні історії та ігри, якими зможуть поділитися з іншими. Рекомендується для 4-5 класів.
         playlab:
-          title: Ігрова студія
+          title: Ігрова лабораторія
           description: Складіть історію або створіть гру в Ігровій студії!
           description_short: Складіть історію або створіть гру в Ігровій студії!
           student_description: Складіть історію або створіть гру в Ігровій студії!
@@ -87,6 +87,7 @@ uk:
           description_short: Цей 20-годинний курс охоплює поняття інформатики та програмування курсів 2-4.
           description_audience: Вік 10-18
           student_description: Цей 20-годинний курс охоплює базові поняття комп'ютерних наук та програмування. Цей курс розроблено для використання на заняттях в основній школі, але може бути цікавим для будь-якого віку.
+          name: 20-годинна
         edit-code:
           title: Редагування коду
           description: Редагування коду
@@ -393,12 +394,16 @@ uk:
           lesson_groups:
             content:
               display_name: Зміст
+            end_of_course_project:
+              display_name: Проєкт
             extra_course_content:
               display_name: Додатковий вміст курсу
         coursef-draft:
           lesson_groups:
             content:
               display_name: Зміст
+            end_of_course_project:
+              display_name: Проєкт
         classic-hoc-impact-study:
           description_short: Спробуйте основи інформатики з цікавими персонажами!
         hoc-impact-study:
@@ -426,6 +431,8 @@ uk:
               display_name: Методики викладання
         csf2harvey:
           lesson_groups:
+            end_of_course_project:
+              display_name: Проєкт
             content:
               display_name: Зміст
         csp5-support:
@@ -500,9 +507,11 @@ uk:
           description_audience: 'Вік: 8-12'
           lesson_groups:
             csf_e_1:
-              display_name: Просунутися до Курсу Е (опціонально)
+              display_name: Перейти до Курсу Е (опціонально)
             csf_e_2:
               display_name: Зміст курсу E
+            end_of_course_project:
+              display_name: Проєкт
             extra_course_content:
               display_name: Додатковий вміст курсу
         coursef-2017:
@@ -514,6 +523,8 @@ uk:
               display_name: Просунутися до Курсу F (опціонально)
             csf_f_2:
               display_name: Зміст курсу F
+            end_of_course_project:
+              display_name: Проєкт
         csdnovice:
           title: TeacherCon для ведучих-новачків курсу Відкриття інформатики
         csp-ap:
@@ -624,6 +635,8 @@ uk:
           lesson_groups:
             content:
               display_name: Зміст
+            end_of_course_project:
+              display_name: Проєкт
           student_description: Вивчення основ інформатики та безпеки в інтернеті. At the end of the course, create your very own game or story you can share.
         pre-express-2017:
           description_audience: 'Вік: 4-8'
@@ -650,9 +663,11 @@ uk:
           title: Курс E & F Рампа
           lesson_groups:
             csf_e_1:
-              display_name: Просунутися до Курсу Е (опціонально)
+              display_name: Перейти до Курсу Е (опціонально)
             csf_e_2:
               display_name: Зміст курсу E
+            end_of_course_project:
+              display_name: Проєкт
             extra_course_content:
               display_name: Додатковий вміст курсу
         csp3-a:
@@ -663,12 +678,16 @@ uk:
           lesson_groups:
             content:
               display_name: Зміст
+            end_of_course_project:
+              display_name: Проєкт
         new-e:
           lesson_groups:
             csf_e_1:
-              display_name: Просунутися до Курсу Е (опціонально)
+              display_name: Перейти до Курсу Е (опціонально)
             csf_e_2:
               display_name: Зміст курсу E
+            end_of_course_project:
+              display_name: Проєкт
             extra_course_content:
               display_name: Додатковий вміст курсу
         new-f:
@@ -677,6 +696,8 @@ uk:
               display_name: Просунутися до Курсу F (опціонально)
             csf_f_2:
               display_name: Зміст курсу F
+            end_of_course_project:
+              display_name: Проєкт
         csd5-old:
           lesson_groups:
             csd5_1:
@@ -717,9 +738,11 @@ uk:
           title: Курс Е 2018 (Застарілий!)
           lesson_groups:
             csf_e_1:
-              display_name: Просунутися до Курсу Е (опціонально)
+              display_name: Перейти до Курсу Е (опціонально)
             csf_e_2:
               display_name: Зміст курсу E
+            end_of_course_project:
+              display_name: Проєкт
             extra_course_content:
               display_name: Додатковий вміст курсу
         course-f-2018:
@@ -729,6 +752,8 @@ uk:
               display_name: Просунутися до Курсу F (опціонально)
             csf_f_2:
               display_name: Зміст курсу F
+            end_of_course_project:
+              display_name: Проєкт
         csd6-old:
           lesson_groups:
             csd6_1:
@@ -806,9 +831,11 @@ uk:
           description_audience: 'Вік: 8-12'
           lesson_groups:
             csf_e_1:
-              display_name: Просунутися до Курсу Е (опціонально)
+              display_name: Перейти до Курсу Е (опціонально)
             csf_e_2:
               display_name: Зміст курсу E
+            end_of_course_project:
+              display_name: Проєкт
             extra_course_content:
               display_name: Додатковий вміст курсу
         coursef-2018:
@@ -820,6 +847,8 @@ uk:
               display_name: Просунутися до Курсу F (опціонально)
             csf_f_2:
               display_name: Зміст курсу F
+            end_of_course_project:
+              display_name: Проєкт
         csp1-2018:
           lesson_groups:
             cspSurvey:
@@ -1071,7 +1100,7 @@ uk:
           description_audience: 'Вік: 9-13'
           lesson_groups:
             ramp_up:
-              display_name: Просунутися
+              display_name: Просування
             csf_variables:
               display_name: Змінні
             csf_data:
@@ -1084,6 +1113,8 @@ uk:
               display_name: Спрайти
             csf_digcit:
               display_name: Цифрове громадянство
+            end_of_course_project:
+              display_name: Проєкт
         coursed-2019:
           title: Курс D (2019)
           description_audience: 'Вік: 7-11'
@@ -1100,20 +1131,26 @@ uk:
               display_name: Двійкова система
             csf_digcit:
               display_name: Цифрове громадянство
+            end_of_course_project:
+              display_name: Проєкт
         coursee-2019:
           title: Курс Е (2019)
           description_audience: 'Вік: 8-12'
           lesson_groups:
             ramp_up:
-              display_name: Просунутися
+              display_name: Просування
             csf_sprites:
               display_name: Спрайти
             csf_digcit:
               display_name: Цифрове громадянство
+            csf_impacts:
+              display_name: Вплив інформатики
             csf_nested_loops:
               display_name: Вкладені цикли
             csf_functions:
               display_name: Функції
+            end_of_course_project:
+              display_name: Проєкт
         express-2019:
           title: Експрес курс (2019)
           description: Вивчайте інформатику, проходячи ці уроки у власному темпі! Навчіться створювати комп'ютерні програми, розвивати навички вирішення проблем і справлятися з цікавими викликами! Створюйте ігри та творчі проєкти, якими можна ділитися з друзями, родиною та вчителями.
@@ -1171,6 +1208,8 @@ uk:
               display_name: Події
             csf_data:
               display_name: Дані
+            end_of_course_project:
+              display_name: Проєкт
         csp-mid-survey:
           lesson_groups:
             cspSurvey:
@@ -1202,6 +1241,8 @@ uk:
               display_name: Послідовність дій
             csf_loops:
               display_name: Цикли
+            csf_impacts:
+              display_name: Вплив інформатики
             csf_events:
               display_name: Події
           student_description: Вивчення основ інформатики та безпеки в інтернеті. At the end of the course, create your very own game or story you can share.
@@ -1355,7 +1396,7 @@ uk:
           description_audience: 4 клас
           lesson_groups:
             ramp_up:
-              display_name: Просунутися
+              display_name: Просування
             csf_sprites:
               display_name: Спрайти
             time4cs_c1:
@@ -1656,6 +1697,8 @@ uk:
               display_name: Вкладені цикли
             csf_functions:
               display_name: Функції
+            end_of_course_project:
+              display_name: Проєкт
         time4cs-experiment-unit-2:
           lesson_groups:
             time4cs_c1:
@@ -1682,8 +1725,10 @@ uk:
               display_name: Спрайти
             csf_digcit:
               display_name: Цифрове громадянство
+            csf_impacts:
+              display_name: Вплив інформатики
             ramp_up:
-              display_name: Просунутися
+              display_name: Просування
         time4cs-experiment-unit-1:
           lesson_groups:
             csf_sequencing:
@@ -1698,8 +1743,10 @@ uk:
               display_name: Спрайти
             csf_digcit:
               display_name: Цифрове громадянство
+            csf_impacts:
+              display_name: Вплив інформатики
             ramp_up:
-              display_name: Просунутися
+              display_name: Просування
         csp7-pilot:
           lesson_groups:
             csp_parameters_return_values:
@@ -1825,6 +1872,8 @@ uk:
               display_name: Послідовність дій
             csf_loops:
               display_name: Цикли
+            csf_impacts:
+              display_name: Вплив інформатики
             csf_events:
               display_name: Події
           student_description: Вивчення основ інформатики та безпеки в інтернеті. At the end of the course, create your very own game or story you can share.
@@ -1844,6 +1893,8 @@ uk:
               display_name: Події
             csf_data:
               display_name: Дані
+            end_of_course_project:
+              display_name: Проєкт
         coursed-2020:
           title: Курс D (2020)
           description_audience: 'Вік: 7-11'
@@ -1860,12 +1911,14 @@ uk:
               display_name: Двійкова система
             csf_digcit:
               display_name: Цифрове громадянство
+            end_of_course_project:
+              display_name: Проєкт
         coursee-2020:
           title: Курс Е (2020)
           description_audience: 'Вік: 8-12'
           lesson_groups:
             ramp_up:
-              display_name: Просунутися
+              display_name: Просування
             csf_sprites:
               display_name: Спрайти
             csf_digcit:
@@ -1874,12 +1927,16 @@ uk:
               display_name: Вкладені цикли
             csf_functions:
               display_name: Функції
+            csf_impacts:
+              display_name: Вплив інформатики
+            end_of_course_project:
+              display_name: Проєкт
         coursef-2020:
           title: Курс F (2020)
           description_audience: 'Вік: 9-13'
           lesson_groups:
             ramp_up:
-              display_name: Просунутися
+              display_name: Просування
             csf_digcit:
               display_name: Цифрове громадянство
             csf_variables:
@@ -1890,6 +1947,8 @@ uk:
               display_name: Цикли For
             csf_sprites:
               display_name: Спрайти
+            end_of_course_project:
+              display_name: Проєкт
         express-2020:
           title: Експрес курс (2020)
           description: Вивчайте інформатику, проходячи ці уроки у власному темпі! Навчіться створювати комп'ютерні програми, розвивати навички вирішення проблем і справлятися з цікавими викликами! Створюйте ігри та творчі проєкти, якими можна ділитися з друзями, родиною та вчителями.
@@ -1911,6 +1970,8 @@ uk:
               display_name: Цикли For
             csf_sprites:
               display_name: Спрайти
+            end_of_course_project:
+              display_name: Проєкт
           student_description: Вивчайте інформатику, проходячи ці уроки у власному темпі! Навчіться створювати комп'ютерні програми, розвивати навички вирішення проблем і справлятися з цікавими викликами! Створюйте ігри та творчі проєкти, якими можна ділитися з друзями, родиною та вчителями.
         pre-express-2020:
           description: Вивчайте інформатику, проходячи ці уроки у власному темпі! Навчіться створювати комп'ютерні програми, розвивати навички вирішення проблем і справлятися з цікавими викликами! Створюйте ігри та творчі проєкти, якими можна ділитися з друзями, родиною та вчителями.
@@ -2171,6 +2232,8 @@ uk:
               display_name: Цикли
             csf_events:
               display_name: Події
+            lessonGroup-5:
+              display_name: Проєкт
           student_description: Вивчення основ інформатики та безпеки в інтернеті. At the end of the course, create your very own game or story you can share.
         courseb-2021:
           description_audience: 'Вік: 5-8'
@@ -2221,9 +2284,13 @@ uk:
               display_name: Двійкова система
             csf_digcit:
               display_name: Цифрове громадянство
+            end_of_course_project:
+              display_name: Проєкт
             lessonGroup-6:
               display_name: Цифрове громадянство
         coursee-2021:
+          title: Курс Е (2021)
+          description: Ми створили курс E для учнів четвертого класу. Курс починається з ознайомлення з інструментом програмування Спрайт Лабораторія. Учні навчаться робити веселі інтерактивні проекти, які підсилюють те, що вони дізнаються про безпеку в інтернеті. Після цих уроків учні будуть займатися більш складним програмуванням. Учні дізнаються про вкладені цикли, функції та умови. До кінця курсу учні об'єднають ці поняття для вирішення складних завдань. Курс закінчується відкритим проектом, в якому учні створюють гру або малюнок.
           description_audience: 'Вік: 8-12'
           lesson_groups:
             ramp_up:
@@ -2236,7 +2303,15 @@ uk:
               display_name: Умови
             csf_functions:
               display_name: Функції
+            csf_impacts:
+              display_name: Вплив інформатики
+            end_of_course_project:
+              display_name: Проєкт
+            lessonGroup-7:
+              display_name: Вплив інформатики
+          student_description: Почніть кодувати за допомогою алгоритмів, подій, циклів, умов і функцій! До кінця цього курсу ми розробимо і створимо гру чи малюнок, якими зможемо поділитися з друзями та родиною.
         coursef-2021:
+          title: Курс F (2021)
           description_audience: 'Вік: 9-13'
           lesson_groups:
             ramp_up:
@@ -2249,12 +2324,17 @@ uk:
               display_name: Дані та моделювання
             csf_for_loops:
               display_name: Цикли For
+            csf_sprites:
+              display_name: Вплив інформатики
+            end_of_course_project:
+              display_name: Проєкт
             lessonGroup-8:
               display_name: Змінні
             lessonGroup-9:
               display_name: видалити
             lessonGroup-7:
               display_name: Цифрове громадянство
+          student_description: Навчіться кодувати зі спрайтами, змінними та циклами, а також обговорювати соціальні наслідки застосування інформаційних технологій та інтернету. До кінця цього курсу ви можете поділитися з друзями та родиною власним розробленим проєктом.
         express-2021:
           description: Вивчайте інформатику, проходячи ці уроки у власному темпі! Навчіться створювати комп'ютерні програми, розвивати навички вирішення проблем і справлятися з цікавими викликами! Створюйте ігри та творчі проєкти, якими можна ділитися з друзями, родиною та вчителями.
           description_audience: 'Вік: 9-18'
@@ -2275,6 +2355,8 @@ uk:
               display_name: Цикли For
             csf_sprites:
               display_name: Спрайти
+            end_of_course_project:
+              display_name: Проєкт
             lessonGroup-9:
               display_name: Події
           student_description: Вивчайте інформатику, проходячи ці уроки у власному темпі! Навчіться створювати комп'ютерні програми, розвивати навички вирішення проблем і справлятися з цікавими викликами! Створюйте ігри та творчі проєкти, якими можна ділитися з друзями, родиною та вчителями.
@@ -2509,7 +2591,7 @@ uk:
             lessonGroup-2:
               display_name: Зміст
         csd-post-survey-2021:
-          title: Опитування після курсу Відкриття інформатики
+          title: Опитування після курсу CS Discoveries
         csa6-pilot-facilitator:
           lesson_groups:
             lessonGroup-2:
@@ -2537,6 +2619,8 @@ uk:
               display_name: Спрайти
             lessonGroup-3:
               display_name: Змінні
+            lessonGroup-4:
+              display_name: Проєкт
         csa8-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -2559,6 +2643,8 @@ uk:
               display_name: Цикли
             csf_events:
               display_name: Події
+            lessonGroup-5:
+              display_name: Проєкт
           student_description: Вивчення основ інформатики та безпеки в інтернеті. At the end of the course, create your very own game or story you can share.
           description_audience: 'Вік: 4-7'
         express-2022:
@@ -2579,6 +2665,8 @@ uk:
               display_name: Змінні
             csf_for_loops:
               display_name: Цикли For
+            end_of_course_project:
+              display_name: Проєкт
           description: Вивчайте інформатику, проходячи ці уроки у власному темпі! Навчіться створювати комп'ютерні програми, розвивати навички вирішення проблем і справлятися з цікавими викликами! Створюйте ігри та творчі проєкти, якими можна ділитися з друзями, родиною та вчителями.
           student_description: Вивчайте інформатику, проходячи ці уроки у власному темпі! Навчіться створювати комп'ютерні програми, розвивати навички вирішення проблем і справлятися з цікавими викликами! Створюйте ігри та творчі проєкти, якими можна ділитися з друзями, родиною та вчителями.
           description_audience: 'Вік: 9-18'
@@ -2622,8 +2710,12 @@ uk:
               display_name: Послідовність дій
             csf_loops:
               display_name: Цикли
+            csf_impacts:
+              display_name: Вплив інформатики
             csf_events:
               display_name: Події
+            lessonGroup-6:
+              display_name: Проєкт
           student_description: Вивчення основ інформатики та безпеки в інтернеті. At the end of the course, create your very own game or story you can share.
           description_audience: 'Вік: 5-8'
         coursec-2022:
@@ -2638,6 +2730,8 @@ uk:
               display_name: Події
             csf_data:
               display_name: Дані
+            end_of_course_project:
+              display_name: Проєкт
           description_audience: 'Вік: 6-10'
         csp6-2022:
           lesson_groups:
@@ -2677,6 +2771,8 @@ uk:
               display_name: Цикли
             csf_conditionals:
               display_name: Умови
+            end_of_course_project:
+              display_name: Проєкт
           title: Курс D (2021)
           description_audience: 'Вік: 7-11'
         coursee-2022:
@@ -2691,6 +2787,12 @@ uk:
               display_name: Функції
             csf_nested_loops:
               display_name: Умови
+            lessonGroup-7:
+              display_name: Вплив інформатики
+            end_of_course_project:
+              display_name: Проєкт
+          description: Ми створили курс E для учнів четвертого класу. Курс починається з ознайомлення з інструментом програмування Спрайт Лабораторія. Учні навчаться робити веселі інтерактивні проекти, які підсилюють те, що вони дізнаються про безпеку в інтернеті. Після цих уроків учні будуть займатися більш складним програмуванням. Учні дізнаються про вкладені цикли, функції та умови. До кінця курсу учні об'єднають ці поняття для вирішення складних завдань. Курс закінчується відкритим проектом, в якому учні створюють гру або малюнок.
+          student_description: Почніть кодувати за допомогою алгоритмів, подій, циклів, умов і функцій! До кінця цього курсу ми розробимо і створимо гру чи малюнок, якими зможемо поділитися з друзями та родиною.
           description_audience: 'Вік: 8-12'
         coursef-2022:
           lesson_groups:
@@ -2702,6 +2804,8 @@ uk:
               display_name: Змінні
             csf_data:
               display_name: Дані та моделювання
+            end_of_course_project:
+              display_name: Проєкт
           description_audience: 'Вік: 9-13'
         csa1-2022:
           lesson_groups:
@@ -2717,6 +2821,7 @@ uk:
               display_name: Цикли
             csf_events:
               display_name: Події
+          title: Дошкілля Експрес (2022)
           description_audience: 'Вік: 4-8'
           description: Вивчайте інформатику, проходячи ці уроки у власному темпі! Навчіться створювати комп'ютерні програми, розвивати навички вирішення проблем і справлятися з цікавими викликами! Створюйте ігри та творчі проєкти, якими можна ділитися з друзями, родиною та вчителями.
           student_description: Вивчайте інформатику, проходячи ці уроки у власному темпі! Навчіться створювати комп'ютерні програми, розвивати навички вирішення проблем і справлятися з цікавими викликами! Створюйте ігри та творчі проєкти, якими можна ділитися з друзями, родиною та вчителями.
@@ -2762,6 +2867,8 @@ uk:
               display_name: Змінні
             csf_data:
               display_name: Дані та моделювання
+            end_of_course_project:
+              display_name: Проєкт
           description_audience: 'Вік: 9-13'
         csa6-2022:
           lesson_groups:
@@ -2840,7 +2947,7 @@ uk:
             lessonGroup-4:
               display_name: Опитування
         csd-post-survey-2022:
-          title: Опитування після курсу Відкриття інформатики
+          title: Опитування після курсу CS Discoveries
         self-paced-pl-csd1-2022:
           lesson_groups:
             lessonGroup-2:
@@ -2896,6 +3003,8 @@ uk:
               display_name: Опитування
         csa1-2023:
           lessons:
+            lesson-2:
+              name: Лабораторія Java
             lesson-6:
               name: Цикли
           lesson_groups:
@@ -3063,8 +3172,14 @@ uk:
               display_name: 'Глава 2: Побудова фізичних прототипів'
         microbit-2022:
           lesson_groups:
+            lessonGroup-3:
+              display_name: Вхідні та вихідні дані
             lessonGroup-4:
               display_name: 'Глава 2: Побудова фізичних прототипів'
+        microbit-temp:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Вхідні та вихідні дані
         pre-express-2023:
           lesson_groups:
             csf_sequencing:
@@ -3094,6 +3209,8 @@ uk:
               display_name: Змінні
             csf_for_loops:
               display_name: Цикли For
+            end_of_course_project:
+              display_name: Проєкт
           description: Вивчайте інформатику, проходячи ці уроки у власному темпі! Навчіться створювати комп'ютерні програми, розвивати навички вирішення проблем і справлятися з цікавими викликами! Створюйте ігри та творчі проєкти, якими можна ділитися з друзями, родиною та вчителями.
           student_description: Вивчайте інформатику, проходячи ці уроки у власному темпі! Навчіться створювати комп'ютерні програми, розвивати навички вирішення проблем і справлятися з цікавими викликами! Створюйте ігри та творчі проєкти, якими можна ділитися з друзями, родиною та вчителями.
           description_audience: 'Вік: 9-18'
@@ -3107,6 +3224,8 @@ uk:
               display_name: Цикли
             csf_events:
               display_name: Події
+            lessonGroup-5:
+              display_name: Проєкт
           student_description: Вивчення основ інформатики та безпеки в інтернеті. At the end of the course, create your very own game or story you can share.
           description_audience: 'Вік: 4-7'
         courseb-2023:
@@ -3117,8 +3236,12 @@ uk:
               display_name: Послідовність дій
             csf_loops:
               display_name: Цикли
+            csf_impacts:
+              display_name: Вплив інформатики
             csf_events:
               display_name: Події
+            lessonGroup-6:
+              display_name: Проєкт
           student_description: Вивчення основ інформатики та безпеки в інтернеті. At the end of the course, create your very own game or story you can share.
           description_audience: 'Вік: 5-8'
         coursec-2023:
@@ -3133,6 +3256,8 @@ uk:
               display_name: Події
             csf_data:
               display_name: Дані
+            end_of_course_project:
+              display_name: Проєкт
           description_audience: 'Вік: 6-10'
         coursed-2023:
           lesson_groups:
@@ -3146,6 +3271,8 @@ uk:
               display_name: Цикли
             csf_conditionals:
               display_name: Умови
+            end_of_course_project:
+              display_name: Проєкт
           title: Курс D (2021)
           description_audience: 'Вік: 7-11'
         coursee-2023:
@@ -3160,6 +3287,12 @@ uk:
               display_name: Функції
             csf_nested_loops:
               display_name: Умови
+            lessonGroup-7:
+              display_name: Вплив інформатики
+            end_of_course_project:
+              display_name: Проєкт
+          description: Ми створили курс E для учнів четвертого класу. Курс починається з ознайомлення з інструментом програмування Спрайт Лабораторія. Учні навчаться робити веселі інтерактивні проекти, які підсилюють те, що вони дізнаються про безпеку в інтернеті. Після цих уроків учні будуть займатися більш складним програмуванням. Учні дізнаються про вкладені цикли, функції та умови. До кінця курсу учні об'єднають ці поняття для вирішення складних завдань. Курс закінчується відкритим проектом, в якому учні створюють гру або малюнок.
+          student_description: Почніть кодувати за допомогою алгоритмів, подій, циклів, умов і функцій! До кінця цього курсу ми розробимо і створимо гру чи малюнок, якими зможемо поділитися з друзями та родиною.
           description_audience: 'Вік: 8-12'
         problem-solving-computing-2023:
           lesson_groups:
@@ -3309,6 +3442,8 @@ uk:
               display_name: 'Глава 2: Побудова фізичних прототипів'
         microbit-2023:
           lesson_groups:
+            lessonGroup-3:
+              display_name: Вхідні та вихідні дані
             lessonGroup-5:
               display_name: Опитування
         devices-2023:
@@ -3317,6 +3452,26 @@ uk:
               display_name: 'Глава 2: Побудова фізичних прототипів'
             lessonGroup-5:
               display_name: Опитування
+        focus-on-creativity4b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Вхідні та вихідні дані
+        focus-on-hardware3b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Вхідні та вихідні дані
+        focus-on-design-with-purpose4b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Вхідні та вихідні дані
+        focus-on-coding4b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Вхідні та вихідні дані
+        csd6b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Вхідні та вихідні дані
         self-paced-pl-csd1-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3332,12 +3487,15 @@ uk:
         pl-csd-summer-day2:
           lessons:
             lesson-10:
-              name: Підведення підсумків
+              name: Підбиття підсумків
           lesson_groups:
             lessonGroup-2:
               display_name: День 2
           title: День 2
         pl-csd-summer-day3:
+          lessons:
+            lesson-10:
+              name: 'Підбиття підсумків '
           lesson_groups:
             lessonGroup-2:
               display_name: День 3
@@ -3345,11 +3503,37 @@ uk:
         pl-csd-summer-day4:
           lessons:
             lesson-12:
-              name: Підведення підсумків
+              name: Підбиття підсумків
           lesson_groups:
             lessonGroup-2:
               display_name: День 4
           title: День 4
+        virtual-pl-csd-summer-day1:
+          lessons:
+            lesson-1:
+              name: Вступ
+            lesson-12:
+              name: Підбиття підсумків
+          title: День 1
+        virtual-pl-csd-summer-day2:
+          lessons:
+            lesson-10:
+              name: Підбиття підсумків
+          title: День 2
+        virtual-pl-csd-summer-day3:
+          lessons:
+            lesson-12:
+              name: Підбиття підсумків
+          title: День 3
+        virtual-pl-csd-summer-day4:
+          lessons:
+            lesson-13:
+              name: Підбиття підсумків
+          title: День 4
+        virtual-pl-csd-summer-day5:
+          lessons:
+            lesson-3:
+              name: Оцінювання
         csd-post-survey-2023:
           title: Опитування після закінчення курсу
         focus-on-data-post-survey-2023:
@@ -3364,3 +3548,20 @@ uk:
           title: Опитування після закінчення курсу
         focus-on-creativity-post-survey-2023:
           title: Опитування після закінчення курсу
+        coursef-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Цифрове громадянство
+            lessonGroup-3:
+              display_name: Спрайти
+            lessonGroup-4:
+              display_name: Змінні
+            lessonGroup-5:
+              display_name: Дані та моделювання
+            lessonGroup-6:
+              display_name: Проєкт
+          description_audience: 'Вік: 9-13'
+        csa-frq-practice:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Класи

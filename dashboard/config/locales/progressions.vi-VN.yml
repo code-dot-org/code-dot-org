@@ -201,6 +201,7 @@ vi:
       Headings: Đề mục
       Hello World: Xin chào cả thế giới
       How to Create a Simple Function: Cách tạo hàm đơn giản
+      How to Make a Sprite: Làm thế nào để làm cho một Sprite
       Ice Age Loops: Vòng lặp kỷ băng hà
       Images and Sounds: Hình ảnh và Âm thanh
       Images in HTML: Hình ảnh trong HTML
@@ -218,6 +219,7 @@ vi:
       Intro to Side Scrollers: Giới thiệu về Game đi cảnh
       Intro to Sprites: Giới thiệu về nhân vật
       Intro to Variables: Giới thiệu về biến
+      Introducing Sprite Lab: Giới thiệu Sprite Lab
       Introduction to Arrays: Giới thiệu Danh sách
       Isaac's Survey Data: Dữ liệu khảo sát của Isaac
       Iteration and Parameters: Phép lặp và thông số
@@ -265,6 +267,7 @@ vi:
       'Mini-Project: Royal Battle': 'Dự án nhỏ: Trận chiến hoàng gia'
       'Mini-Project: Snowflake #1': 'Dự án nhỏ: Bông tuyết #1'
       'Mini-Project: Snowflake #2': 'Dự án nhỏ: Bông tuyết #2'
+      'Mini-Project: Sticker Art': 'Mini-Project: Sticker Art'
       'Mini-Project: Swimming Fish': 'Dự án nhỏ: Cá bơi'
       'Mini-Project: Swimming Fish (continued)': 'Dự án nhỏ: Cá bơi (tiếp theo)'
       'Mini-Project: User Input Programs': 'Dự án nhỏ: Chương trình nhập liệu của
@@ -289,6 +292,7 @@ vi:
       Musical Arrays: Mảng âm nhạc
       My Loopy Robotic Friends - Unplugged Activity: Những người bạn robot Loopy của
         tôi – Hoạt động không dùng thiết bị điện tử
+      My Online Neighborhood: Khu phố trực tuyến của tôi
       My Robotic Friends - Unplugged Activity: Những người bạn robot của tôi – Hoạt
         động không dùng thiết bị điện tử
       Nested Loops with the Bee: Vòng lặp lồng nhau với Chú ong
@@ -407,11 +411,13 @@ vi:
       'Technique: Frequency Analysis': 'Kỹ thuật: Phân tích tần số'
       Terminology Recap: Bản tóm tắt thuật ngữ
       Text Compression: Nén văn bản
+      The Animation Tab: Tab hoạt hình
       The Artist in Code Studio: Họa sĩ trong Code Studio
       The Big Event - Unplugged Activity: Sự kiện lớn – Hoạt động không dùng thiết
         bị điện tử
       The Buzzer: Còi báo hiệu
       The Collector: Nhà sưu tập
+      The Harvester: The Harvester
       The Internet - Unplugged Activity: Internet – Hoạt động không dùng thiết bị
         điện tử
       The Power of Words - Unplugged Activity: Sức mạnh của ngôn từ – Hoạt động không
@@ -432,8 +438,10 @@ vi:
       Using Random Numbers: Sử dụng số ngẫu nhiên
       Using Training Data: Sử dụng dữ liệu đào tạo
       Using the LED: Sử dụng đèn LED
+      Using the Repeat Block: Sử dụng khối lặp lại
       Using the Switch: Sử dụng công tắc
       Variables: Các biến
+      Velocity: Vận tốc
       Velocity and the Counter Pattern: Vận tốc và mẫu bộ đếm
       Video: Video
       Video - Encryption and Public Keys: Video – Mã hóa và Khóa công khai

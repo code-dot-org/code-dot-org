@@ -69,7 +69,7 @@ window.levelbuilder.pasteBlocksToWorkspace = function () {
     return;
   }
 
-  Blockly.Xml.domToBlockSpace(
+  Blockly.cdoUtils.loadBlocksToWorkspace(
     Blockly.mainBlockSpace,
     Blockly.Xml.textToDom(str)
   );

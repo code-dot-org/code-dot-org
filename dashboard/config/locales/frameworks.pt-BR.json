@@ -22,6 +22,15 @@
         },
         "ai4k12-2021": {
           "name": "Diretrizes Nacionais AI4K12 2021"
+        },
+        "c3ss": {
+          "name": "Padrões de Estudos Sociais C3"
+        },
+        "ngss": {
+          "name": "Padrões científicos da próxima geração"
+        },
+        "csa": {
+          "name": "Estrutura conceitual do CSA"
         }
       }
     }

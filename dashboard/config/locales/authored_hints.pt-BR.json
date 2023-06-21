@@ -10552,10 +10552,12 @@
         },
         "courseF_artist_variables8_2021": {
           "courseF_artist_variables8_b": "Lembre-se de iniciar seu código para o triângulo com o bloco `definir comprimento`, e inicie-o em 150 pixels.",
-          "courseF_artist_variables8_c": "Certifique-se de usar o laço `repita` para desenhar seu triângulo."
+          "courseF_artist_variables8_c": "Certifique-se de usar o laço `repita` para desenhar seu triângulo.",
+          "courseF_artist_variables8_a": "Tente colocar o bloco \n\n<xml>\n<block type=\"math_change\">\n      <title name=\"VAR\">length</title>\n      <value name=\"DELTA\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">1</title>\n        </block>\n      </value>\n    </block>\n</xml>\n\ndentro do loop no final."
         },
         "courseF_artist_variables9_2021": {
-          "courseF_artist_variables9_a": "Para este desafio, tudo o que você precisa fazer é mudar quantas vezes o laço repete."
+          "courseF_artist_variables9_a": "Para este desafio, tudo o que você precisa fazer é mudar quantas vezes o laço repete.",
+          "courseF_artist_variables9_b": "Certifique-se de que o bloco que muda de “comprimento” esteja dentro do seu loop para que as linhas continuem ficando mais longas."
         },
         "courseF_bee_for10_2021": {
           "courseF_bee_for10_a": "Você consegue encontrar um padrão entre o número de passos que você precisa dar e o número de néctares para coletar?",
@@ -12494,10 +12496,12 @@
         },
         "courseF_artist_variables82022": {
           "courseF_artist_variables8_b": "Lembre-se de iniciar seu código para o triângulo com o bloco `definir comprimento`, e inicie-o em 150 pixels.",
-          "courseF_artist_variables8_c": "Certifique-se de usar o laço `repita` para desenhar seu triângulo."
+          "courseF_artist_variables8_c": "Certifique-se de usar o laço `repita` para desenhar seu triângulo.",
+          "courseF_artist_variables8_a": "Tente colocar o bloco \n\n<xml>\n<block type=\"math_change\">\n      <title name=\"VAR\">length</title>\n      <value name=\"DELTA\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">1</title>\n        </block>\n      </value>\n    </block>\n</xml>\n\ndentro do loop no final."
         },
         "courseF_artist_variables92022": {
-          "courseF_artist_variables9_a": "Para este desafio, tudo o que você precisa fazer é mudar quantas vezes o laço repete."
+          "courseF_artist_variables9_a": "Para este desafio, tudo o que você precisa fazer é mudar quantas vezes o laço repete.",
+          "courseF_artist_variables9_b": "Certifique-se de que o bloco que muda de “comprimento” esteja dentro do seu loop para que as linhas continuem ficando mais longas."
         },
         "courseF_bee_for102022": {
           "courseF_bee_for10_a": "Você consegue encontrar um padrão entre o número de passos que você precisa dar e o número de néctares para coletar?",
@@ -12628,6 +12632,30 @@
         },
         "courseC_artist_loops7a2022": {
           "courseC_artist_loops7a_a": "Um círculo tem 360 graus. Multiplique os graus em sua vez pelo número de vezes que você repete. É igual a 360?\nVerifique as rotações sugeridas para ver se isso funciona!\n\nAqui estão alguns exemplos para você começar:\n\n-   Experimente uma curva de 60 graus por 6 vezes em torno de\n-   Experimente uma curva de 45 graus por 8 vezes em torno de\n-   Experimente uma curva de 30 graus por 12 vezes"
+        },
+        "courseF_bee_variables_4a2022": {
+          "courseF_bee_variables_4_2021_1": "Em vez de adicionar 1 à variável, adicione 2 a cada vez."
+        },
+        "courseF_bee_variables_4a_2021": {
+          "courseF_bee_variables_4_2021_1": "Em vez de adicionar 1 à variável, adicione 2 a cada vez."
+        },
+        "courseF_sprites_clouds": {
+          "behavior_list": "Tente usar comportamentos como “mover-se para o leste e dar voltas”, “girar para a direita” e “vagar”."
+        },
+        "courseF_sprites_clouds_-2022-2": {
+          "behavior_list": "Tente usar comportamentos como “mover-se para o leste e dar voltas”, “girar para a direita” e “vagar”."
+        },
+        "courseF_variables_card_finish": {
+          "card_idea1": "Você pode adicionar um segundo (ou terceiro ou quarto) prompt conectando um novo bloco de prompt com uma variável diferente ao seu primeiro evento `quando respondido`.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">nome</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setPrompt\">\n        <value name=\"QUESTION\">\n          <block type=\"text\" can_disconnect_from_parent=\"false\">\n            <title name=\"TEXT\">o que você quer para o seu aniversário?</title>\n          </block>\n        </value>\n        <value name=\"VAR\">\n          <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n            <title name=\"VAR\">presente</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
+        },
+        "courseF_variables_card_finish_-2022-2": {
+          "card_idea1": "Você pode adicionar um segundo (ou terceiro ou quarto) prompt conectando um novo bloco de prompt com uma variável diferente ao seu primeiro evento `quando respondido`.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">nome</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setPrompt\">\n        <value name=\"QUESTION\">\n          <block type=\"text\" can_disconnect_from_parent=\"false\">\n            <title name=\"TEXT\">o que você quer para o seu aniversário?</title>\n          </block>\n        </value>\n        <value name=\"VAR\">\n          <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n            <title name=\"VAR\">presente</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
+        },
+        "courseF_variables_chatbot_finish": {
+          "chatbot_idea4": "Você pode sinalizar o final do seu programa com um bloco de tela de título.\n\n<xml><block type=\"gamelab_showTitleScreen\">\n      <value name=\"TITLE\">\n        <block type=\"text\">\n        <title name=\"TEXT\">O fim</title>\n        </block>\n      </value>\n      <value name=\"SUBTITLE\">\n        <block type=\"text\">\n        <title name=\"TEXT\">Obrigado por conversar!</title>\n        </block>\n      </value>\n      </block></xml>"
+        },
+        "courseF_variables_chatbot_finish_-2022-2": {
+          "chatbot_idea4": "Você pode sinalizar o final do seu programa com um bloco de tela de título.\n\n<xml><block type=\"gamelab_showTitleScreen\">\n      <value name=\"TITLE\">\n        <block type=\"text\">\n        <title name=\"TEXT\">O fim</title>\n        </block>\n      </value>\n      <value name=\"SUBTITLE\">\n        <block type=\"text\">\n        <title name=\"TEXT\">Obrigado por conversar!</title>\n        </block>\n      </value>\n      </block></xml>"
         }
       }
     }

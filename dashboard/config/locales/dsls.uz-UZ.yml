@@ -8558,7 +8558,7 @@ uz-UZ:
         - text: pingvin
         - text: qurbaqa
           correct: true
-        - {}
+        - text: jirafa
         - {}
         questions:
         - {}
@@ -8568,7 +8568,7 @@ uz-UZ:
         - text: pingvin
         - text: qurbaqa
           correct: true
-        - {}
+        - text: jirafa
         - {}
         questions:
         - {}
@@ -8578,7 +8578,7 @@ uz-UZ:
         - text: pingvin
         - text: qurbaqa
           correct: true
-        - {}
+        - text: jirafa
         - {}
         questions:
         - {}
@@ -8588,7 +8588,7 @@ uz-UZ:
           correct: true
         - text: pingvin
         - text: qurbaqa
-        - {}
+        - text: jirafa
         - {}
         questions:
         - {}
@@ -8598,7 +8598,7 @@ uz-UZ:
           correct: true
         - text: pingvin
         - text: qurbaqa
-        - {}
+        - text: jirafa
         - {}
         questions:
         - {}
@@ -8608,7 +8608,7 @@ uz-UZ:
           correct: true
         - text: pingvin
         - text: qurbaqa
-        - {}
+        - text: jirafa
         - {}
         questions:
         - {}
@@ -15281,3 +15281,22 @@ uz-UZ:
         questions:
         - text: Ushbu kodni diqqat bilan ko'rib chiqing. Sizningcha, dastur ishga
             tushganda nima bo'ladi?
+      Test Contained Retriable Multi:
+        answers:
+        - text: '0'
+        - text: '1'
+        - text: '2'
+          correct: true
+        - text: '4'
+        questions:
+        - {}
+      test-single-multi-standalone-retriable:
+        answers:
+        - text: Hech narsa bo'lmaydi.
+        - {}
+        - correct: true
+          feedback: To‘g’ri!
+        - {}
+        questions:
+        - text: Quyidagi kodga diqqat bilan qarang. "Ishga tushirish " tugmachasini
+            bosgandan so'ng nima bo'ladi?

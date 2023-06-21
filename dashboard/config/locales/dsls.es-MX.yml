@@ -4668,7 +4668,7 @@ es-MX:
 
           Mira este video para comprender cómo funciona la programación en pareja y escucha directamente de los estudiantes cómo mejora su aprendizaje.
 
-          [![](https://images.code.org/2c721ff31fbd06f527d99965d3460fa8-image-1571172758005.52.13 PM.png)](https://www.youtube.com/watch?v=vgkahOzFH2Q)
+          [![](https://images.code.org/2c721ff31fbd06f527d99965d3460fa8-image-1571172758005.52.13 PM.png)](https://www.youtube.com/watch?v=fpOpnQ60Mso&ab_channel=Code.org)
 
           [¿No puedes ver el video? Haz clic aquí](http://videos.code.org/2014/C1-pair-programming.mp4)
           <br/><br/>
@@ -4676,7 +4676,7 @@ es-MX:
 
           [![](https://images.code.org/01da36dbe56da7986c3652991d4828e8-image-1571172869229.54.16 PM.png)](https://www.youtube.com/watch?v=sxToW3ixrwo)
 
-          [¿No puedes ver el video? Haz clic aquí (https://videos.code.org/levelbuilder/06pairprogramming_small-mp4.mp4)
+          [¿No puedes ver el video? Haz clic aquí](https://videos.code.org/levelbuilder/06pairprogramming_small-mp4.mp4)
           <br/>
 
 
@@ -4696,7 +4696,7 @@ es-MX:
           target=\"blank\">gran conocimiento de los beneficios de la programación
           en parejas</a>. \n\nPuedes ver este vídeo para entender cómo funciona la
           programación por parejas y escuchar directamente a los alumnos cómo mejora
-          su aprendizaje.\n\n<a href=\"https://www.youtube.com/watch?v=vgkahOzFH2Q\"
+          su aprendizaje.\n\n<a href=\"https://www.youtube.com/watch?v=fpOpnQ60Mso&ab_channel=Code.org\"
           target=\"blank\">![](https://images.code.org/2c721ff31fbd06f527d99965d3460fa8-image-1571172758005.52.13
           PM.png)</a>\n\n[¿No puedes ver el vídeo? Haz clic aquí](http://videos.code.org/2014/C1-pair-programming.mp4)\n<br/><br/>\nLa
           programación en parejas no sólo es beneficiosa para los alumnos, sino que
@@ -10935,7 +10935,7 @@ es-MX:
 
           Mira este video para comprender cómo funciona la programación en pareja y escucha directamente de los estudiantes cómo mejora su aprendizaje.
 
-          [![](https://images.code.org/2c721ff31fbd06f527d99965d3460fa8-image-1571172758005.52.13 PM.png)](https://www.youtube.com/watch?v=vgkahOzFH2Q)
+          [![](https://images.code.org/2c721ff31fbd06f527d99965d3460fa8-image-1571172758005.52.13 PM.png)](https://www.youtube.com/watch?v=fpOpnQ60Mso&ab_channel=Code.org)
 
           [¿No puedes ver el video? Haz clic aquí](http://videos.code.org/2014/C1-pair-programming.mp4)
           <br/><br/>
@@ -10943,7 +10943,7 @@ es-MX:
 
           [![](https://images.code.org/01da36dbe56da7986c3652991d4828e8-image-1571172869229.54.16 PM.png)](https://www.youtube.com/watch?v=sxToW3ixrwo)
 
-          [¿No puedes ver el video? Haz clic aquí (https://videos.code.org/levelbuilder/06pairprogramming_small-mp4.mp4)
+          [¿No puedes ver el video? Haz clic aquí](https://videos.code.org/levelbuilder/06pairprogramming_small-mp4.mp4)
           <br/>
 
 
@@ -16936,7 +16936,7 @@ es-MX:
         - text: No estoy seguro de qué es esto
           correct: true
         questions:
-        - text: Programación Informática
+        - text: Programación de Ordenadores
       csd-post-survey-2018-topic-robotics:
         answers:
         - text: Sí
@@ -17336,7 +17336,7 @@ es-MX:
       csd-post-survey-unit4-preamble:
         content1: descripción aquí
         markdown: |
-          # Unidad 4: El proceso de Diseño
+          # Unidad 4: El Proceso de Diseño
 
           ![](https://images.code.org/d3c87c83a8c190d86951169c5b9b6c6d-image-1526918019889.png)
       csd-post-survey-unit5-preamble:
@@ -26522,3 +26522,35 @@ es-MX:
 
           Esta es una segunda muestra de un texto de instrucciones que está almacenado en un archivo .external.  Aquí hay un poco de texto extra para que podamos obtener un poco de ajuste de líneas cuando veamos esto en nuestro LevelGroup que utilizará esto para mostrar algunas instrucciones entre los niveles regulares incrustados.
 
+      Test Contained Retriable Multi:
+        answers:
+        - text: '0'
+          feedback: No, eso es 1 - 1.
+        - text: '1'
+          feedback: No, eso es 1 x 1.
+        - text: '2'
+          correct: true
+          feedback: "¡Sí, eres un genio!"
+        - text: '4'
+          feedback: No, eso no es ni de lejos.
+        content1: Aquí hay algo de información.
+        markdown: 'Prueba **markdown** _aquí_
+
+'
+        questions:
+        - text: "¿Cuánto es 1 + 1?"
+        title: Contenido Multi
+      test-single-multi-standalone-retriable:
+        answers:
+        - text: No sucederá nada.
+          feedback: Incorrecto. La planta rodadora comenzará a dar vueltas
+        - text: La planta rodadora flotará hasta la parte superior de la pantalla
+          feedback: Incorrecto. La planta rodadora comenzará a dar vueltas
+        - text: " La planta rodadora comenzará a rodar"
+          correct: true
+          feedback: "¡Correcto!"
+        - text: La planta rodadora se encenderá y apagará.
+          feedback: Incorrecto. La planta rodadora comenzará a dar vueltas
+        questions:
+        - text: Mira el siguiente código con atención. ¿Qué sucederá cuando hagas
+            clic en "Ejecutar"?

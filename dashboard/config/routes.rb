@@ -197,6 +197,7 @@ Dashboard::Application.routes.draw do
       get '/users/demigrate_from_multi_auth', to: 'registrations#demigrate_from_multi_auth'
       get '/users/to_destroy', to: 'registrations#users_to_destroy'
       get '/reset_session', to: 'sessions#reset'
+      get '/lockout', to: 'sessions#lockout'
       get '/users/existing_account', to: 'registrations#existing_account'
       post '/users/auth/maker_google_oauth2', to: 'omniauth_callbacks#maker_google_oauth2'
     end
@@ -319,6 +320,7 @@ Dashboard::Application.routes.draw do
         post 'clone'
         post 'update_start_code'
         post 'update_exemplar_code'
+        get 'level_data'
       end
     end
 
@@ -470,6 +472,9 @@ Dashboard::Application.routes.draw do
             get 'page/:puzzle_page', to: 'script_levels#show', as: 'puzzle_page', format: false
             # /s/xxx/lessons/yyy/levels/zzz/sublevel/sss
             get 'sublevel/:sublevel_position', to: 'script_levels#show', as: 'sublevel', format: false
+            # Get the level data via JSON.
+            # /s/xxx/lessons/yyy/levels/zzz/level_data
+            get 'level_data', to: 'script_levels#level_data'
           end
         end
         resources :script_levels, only: [:show], path: "/levels", format: false do
@@ -937,6 +942,8 @@ Dashboard::Application.routes.draw do
     get '/dashboardapi/v1/schools/:school_district_id/:school_type', to: 'api/v1/schools#index', defaults: {format: 'json'}
     get '/dashboardapi/v1/schools/:id', to: 'api/v1/schools#show', defaults: {format: 'json'}
 
+    post '/dashboardapi/v1/users/:user_id/verify_captcha', to: 'api/v1/users#verify_captcha'
+
     # Routes used by census
     post '/dashboardapi/v1/census/:form_version', to: 'api/v1/census/census#create', defaults: {format: 'json'}
 
@@ -1046,5 +1053,9 @@ Dashboard::Application.routes.draw do
     post '/browser_events/put_logs', to: 'browser_events#put_logs'
 
     get '/get_token', to: 'authenticity_token#get_token'
+
+    # Policy Compliance
+    get '/policy_compliance/child_account_consent/', to:
+      'policy_compliance#child_account_consent'
   end
 end
