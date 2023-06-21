@@ -11661,9 +11661,9 @@
         },
         "courseC_artist_prog72022": {
           "courseC_artist_prog7_a": "Setiap sudut adalah 45 atau 90 derajat.",
-          "courseC_artist_prog7_b": "Apakah berhasil pada langkah pertama?\\\nBagaimana dengan langkah kedua?\\\nDi mana letak kesalahannya?",
+          "courseC_artist_prog7_b": "Apakah berhasil pada langkah pertama?\nBagaimana dengan langkah kedua?\nDi mana letak kesalahannya?",
           "courseC_artist_prog7_c": "Anda bisa menggunakan menu dropdown pada blok putar untuk melihat sudut mana yang Anda butuhkan!",
-          "courseC_artist_prog7_d": "Anda akan ingin:\n\n-   bergerak maju kedepan\n-   berbelok ke kanan 45 derajat\n-   bergerak maju kedepan\n-   berbelok ke kanan 90 derajat\n-   bergerak maju kedepan\n-   berbelok ke kanan 45 derajat\n\nUlang pola ini sebanyak 2 kali!",
+          "courseC_artist_prog7_d": "Anda akan ingin:\n- bergerak maju kedepan\n- berbelok ke kanan 45 derajat\n- bergerak maju kedepan\n- berbelok ke kanan 90 derajat\n- bergerak maju kedepan\n- berbelok ke kanan 45 derajat\n\nUlang pola ini sebanyak 2 kali!",
           "courseC_artist_prog7_e": "Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda berpikir bahwa anda belum menyelesaikan puzzle itu."
         },
         "courseC_artist_prog_challenge12022": {
@@ -12333,8 +12333,7 @@
         },
         "courseE_artist_functions102022": {
           "courseD_artist_functions10_b": "Gambar ini sangat mirip dengan yang terakhir, tetapi fungsi `draw line` sekarang sedang menggambar bentuk yang berbeda.",
-          "courseD_artist_functions10_a": "Untuk menghindari penggunaan beberapa blok 'move forward`, buat fungsi`draw hexagon\\` dan panggil beberapa kali.",
-          "courseD_artist_functions10_c": "Apakah Anda tahu di mana gambar ini dapat menggunakan fungsi yang disebut `line of hexagon`?\n\n![](https://images.code.org/904e0f38232fd9c15a3d2d172e7dde0b-image-1493140714580.gif)"
+          "courseD_artist_functions10_a": "Untuk menghindari penggunaan beberapa blok 'move forward`, buat fungsi `draw hexagon` dan panggil beberapa kali."
         },
         "courseE_artist_functions22022": {
           "courseD_artist_functions2_b": "Function ini seharusnya tidak memuat seluruh program Anda, hanya bagian yang menggambar kotak dengan sisi 100 piksel.",
@@ -12369,11 +12368,7 @@
           "courseD_artist_functions8_c": "Pada akhir setiap baris kotak, artis hanya perlu berputar 180 derajat sebelum menggambar garis kotak berikutnya. Letakkan semuanya dalam repeat loop guna mempersiapkan diri Anda untuk latihan berikutnya!"
         },
         "courseE_artist_functions92022": {
-          "courseD_artist_functions9_e": "Bisakah Anda menunjukkan keempat tempat yang `line of triangles` dapat digunakan dalam gambar ini?\n\n![](https://images.code.org/130e1040ecca7186dea87f42666f5620-image-1493140373966.gif)",
-          "courseD_artist_functions9_a": "Puzzle ini dapat dipecah menjadi tiga bagian:\n\n-   buat fungsi `draw a triangle`\n-   buat fungsi `draw a line of triangles`\n-   gunakan fungsi `draw a line of triangles` empat kali untuk menyelesaikan gambar",
-          "courseD_artist_functions9_b": "Gambar ini dibuat dengan membuat garis segitiga 4 kali dan belok 60 atau 120 derajat sebelum Anda menggambar garis segitiga berikutnya.",
-          "courseD_artist_functions9_c": "Untuk menggambar garis segitiga:\n\n-   ulangi 4 kali\n    -   gambar segitiga\n    -   lompat ke depan 50 piksel",
-          "courseD_artist_functions9_d": "Untuk menggambar berlian:\n\n-   ulangi 2 kali\n    -   gambar garis segitiga\n    -   belok 60 derajat\n    -   gambar garis segitiga\n    -   belok 120 derajat"
+          "courseD_artist_functions9_b": "Gambar ini dibuat dengan membuat garis segitiga 4 kali dan belok 60 atau 120 derajat sebelum Anda menggambar garis segitiga berikutnya."
         },
         "courseE_artist_functions_challenge12022": {
           "courseE_artist_functions_challenge1_a": "Jika Anda memanggil fungsi ini sekali lagi, Anda dapat membuat desain yang sama di sudut terakhir.",
