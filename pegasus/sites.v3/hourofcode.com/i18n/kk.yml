@@ -148,6 +148,9 @@ kk:
     two parts, which correspond to the classes we are trying to learn (such as "blue"
     or "not blue").
   heading_additional_resources: Additional resources
+  grade_level_label_elementary: Elementary School
+  grade_level_label_middle: Middle School
+  grade_level_label_high: High School
   call_to_action_learn_more: Learn more
   call_to_action_watch_now: Watch now
   call_to_action_try_activity: Try activity
@@ -160,10 +163,13 @@ kk:
   call_to_action_learn_about_challenge: Learn about challenge
   call_to_action_explore_website: Explore website
   call_to_action_read_more: Read more
+  call_to_action_donate_online: Donate online
+  call_to_action_get_updates: Get updates
   call_to_action_special_announcement: See special announcement
   call_to_action_start_pl: Start professional learning
   call_to_action_contact_regional_partner: Contact your Regional Partner
   call_to_action_join_csta: Join CSTA
+  call_to_action_support_farsi: Support Code.org in Farsi
   aria_label_call_to_action_afe: Learn more about Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Start the Teaching Computer Science Fundamentals
     professional learning program
@@ -368,6 +374,15 @@ kk:
     throughout K-12. Offer free professional development, webinars, conference presentations,
     and peer-to-peer learning opportunities.
   ai_resources_btn_aria_label_03: Explore the AI for Teachers website
+  ai_vid_intro_caption: Introducing How AI Works
+  ai_vid_chatbots_caption: How Chatbots and Large Language Models Work
+  ai_vid_creativity_caption: Does AI Have Creativity and Imagination?
+  ai_vid_mlintro_caption: What is Machine Learning?
+  ai_vid_trainingdata_caption: Training Data & Bias
+  ai_vid_neuralnetworks_caption: Neural Networks
+  ai_vid_computervision_caption: Computer Vision
+  ai_vid_ethics1_caption: 'Ethics & AI: Equal Access and Algorithmic Bias'
+  ai_vid_ethics2_caption: 'Ethics & AI: Privacy and the Future of Work'
   self_paced_pl_hero_heading: Self-Paced Professional Learning For Educators
   self_paced_pl_hero_desc: Professional learning offerings to support teachers in
     every stage of their computer science teaching journey.
@@ -421,6 +436,136 @@ kk:
     at no cost! Find out if your school is eligible.
   tenth_anniversary_homepage_blurb: Code.org is 10 years old!
   tenth_anniversary_homepage_link: Check out the impact we've had.
+  tenth_anniversary_top_heading: Code.org celebrates 10 years!
+  tenth_anniversary_top_desc: We're celebrating a decade of empowering students to
+    explore computer science.
+  tenth_anniversary_timeline_heading: A decade of milestones
+  tenth_anniversary_timeline_scroll: Scroll for more!
+  tenth_anniversary_celebrate_heading: Celebrate with us
+  tenth_anniversary_began_video_heading: See where it all began
+  tenth_anniversary_began_video_title: What Most Schools Don't Teach
+  tenth_anniversary_testimonials_heading: What people are saying
+  tenth_anniversary_testimonials_01: I had a high school student come up to me four
+    years after I had her as an 8th grade middle schooler and she was excited that
+    she was going to study computer science in college. As a middle schooler she was
+    exposed to something new, and that planted a seed for her college years.
+  tenth_anniversary_testimonials_02: I joined Hour of Code in your inaugural year
+    and have been with you all the way! It has inspired me to seek out additional
+    coding opportunities for my students. Thanks for all you have done to get kids
+    engaged and excited about computer science! We wouldn't be where we are without
+    you!
+  tenth_anniversary_testimonials_03: I owe Code.org so much. I'm the teacher I am
+    today because of the tools you provide for educators like me. I've been using
+    Code.org since 2013 and I've been a facilitator since 2019. Thanks for making
+    me look good for these many years, Code.org. I really appreciate it.
+  farsi_page_top_heading: Code.org in Farsi
+  farsi_page_top_heading_02: Talent is everywhere, but opportunity is not. Code.org
+    in Farsi opens a door to an opportunity that would otherwise be closed.
+  farsi_page_top_desc: Today, there are over 110 million Farsi speakers worldwide.
+    While the majority of native speakers live in Iran, Afghanistan, and Tajikistan,
+    there are millions living as immigrants, migrants, and refugees around the world.
+    With the Code.org in Farsi initiative, Farsi-speaking students will have the same
+    access to our curricula that is already available to students in all other major
+    languages of the world.
+  farsi_page_global_heading: The Global Impact of Iranians in Education & Technology
+  farsi_page_global_desc_01: When you think of an algorithm, you may assume it's something
+    new, but the concept of an algorithm was discovered in Iran over 1300 years ago.
+    “Algorithm” is named after its inventor, the mathematician Al Khwarizmi, who lived
+    in the land formerly known as Persia and now known as Iran. Once the epicenter
+    of mathematics, science, philosophy, and medicine, Iran has made profound advances
+    and impacts in technology.
+  farsi_page_global_desc_02: Beyond the borders of the country itself, Iranians around
+    the world have contributed in countless ways to science and technology — as co-founders
+    or CEOs of technology companies such as Uber, eBay, Intuit, and Dropbox, or inventing
+    technologies such as LASIK surgery or JPEG compression, or in scientific, academic,
+    or engineering roles around the globe.
+  farsi_page_global_desc_03: Finally, Code.org was founded by Iranian American Hadi
+    Partovi and has grown to become one of the largest education nonprofits globally.
+  farsi_timeline_heading: Our Projected Timeline
+  farsi_timeline_stage_title_01: Stage 1
+  farsi_timeline_stage_title_02: Stage 2
+  farsi_timeline_stage_title_03: Stage 3
+  farsi_timeline_stage_title_04: Stage 4
+  farsi_timeline_stage_title_05: Stage 5
+  farsi_timeline_stage_01_list_01: Translate the CS Fundamentals curriculum, intended
+    for primary school students.
+  farsi_timeline_stage_01_list_02: Translate two CS Fundamentals Express courses for
+    students ages 8 to 18 and pre-readers.
+  farsi_timeline_stage_01_list_03: Translate 16 Hour of Code tutorials.
+  farsi_timeline_stage_01_desc: Stage 1 includes more than 500,000 words and will
+    be completed by October 2023.
+  farsi_timeline_stage_02_heading: Localize Videos
+  farsi_timeline_stage_02_list_01: Subtitle 128 videos (75 videos for CS Fundamentals
+    and 53 videos for Hour of Code).
+  farsi_timeline_stage_02_list_02: Dub 98 videos.
+  farsi_timeline_stage_02_list_03: Recreate 30 videos and hire native speakers in
+    appropriate cultural dress to reshoot videos.
+  farsi_timeline_stage_02_desc: Stage 2 can take one year to complete and will begin
+    in August 2023.
+  farsi_timeline_stage_03_list_01: Translate CS Discoveries, our middle school curriculum.
+  farsi_timeline_stage_03_list_02: Subtitle and dub 47 videos for CS Discoveries.
+  farsi_timeline_stage_03_list_03: Recreate 29 videos and hire native speakers in
+    appropriate cultural dress to reshoot videos.
+  farsi_timeline_stage_03_desc: Stage 3 will begin in October 2023 and will likely
+    be completed by July 2024.
+  farsi_timeline_stage_04_list_01: Translate CS Principles & AP Computer Science A,
+    our high school curriculum.
+  farsi_timeline_stage_04_list_02: Subtitle and dub videos for CS Principles & AP
+    Computer Science A.
+  farsi_timeline_stage_04_list_03: Recreate videos with native speakers, in appropriate
+    cultural dress.
+  farsi_timeline_stage_04_desc: Stage 4 can take one year to complete, likely to begin
+    in late 2024.
+  farsi_timeline_stage_05_heading: Additional Content
+  farsi_timeline_stage_05_list_01: Translate remaining curriculum, including CS Connections.
+  farsi_timeline_stage_05_list_02: Subtitle, dub, and reshoot any remaining videos
+    from all courses.
+  farsi_timeline_stage_05_desc: Stage 5 can take one year to complete, likely to begin
+    in 2025.
+  farsi_page_supporters_heading: Iranian Americans for CS Education
+  farsi_page_supporters_desc: 'Thank you to the following prominent Iranian American
+    leaders who have come together to support computer science education, with a lead
+    gift to Code.org in Farsi:'
+  farsi_page_supporters_desc_02: We invite you to celebrate Iranian contributions
+    in technology by supporting Code.org and computer science education so that every
+    student in every school has the opportunity to learn computer science.
+  farsi_page_founders_heading: Our Founders' Story
+  farsi_page_founders_slide_01: Born in Iran, Hadi and Ali Partovi grew up during
+    the Iran-Iraq war. Their neighborhood in Tehran was regularly bombed by Iraqi
+    fighter jets.
+  farsi_page_founders_slide_02: When they were 9 years old, their father, a physics
+    professor, brought home a Commodore 64 computer. This computer was their escape
+    from their surroundings – they learned how to code and create apps, games, and
+    music.
+  farsi_page_founders_slide_03: They immigrated to the United States at age 11. Soon
+    after they turned 15, they spent their summers working as software engineers to
+    help pay their way through high school and college.
+  farsi_page_founders_slide_04: Upon graduating from Harvard University with Masters
+    degrees in computer science, Hadi and Ali pursued careers in technology.
+  farsi_page_founders_slide_05: They found success in the tech world and achieved
+    the “American dream.” They became prolific angel investors, backing Facebook,
+    Uber, Airbnb, and Dropbox, among others.
+  farsi_page_founders_slide_06: In 2013, Hadi and Ali launched the education nonprofit
+    Code.org, which Hadi continues to lead as CEO. Since its inception, Code.org has
+    started a massive movement to teach computer science and coding to K-12 students
+    globally. It is also the largest provider of computer  science curricula in the
+    world, with over 80 million student users in 180 countries.
+  farsi_page_support_heading: Your Support and Your Voice
+  farsi_page_support_heading_02: Thank you for your interest in Code.org in Farsi.
+  farsi_page_support_get_updates: "[Sign up](%{form_url}) to learn more about this
+    specific project and get updated on its staged release dates."
+  farsi_page_support_contact_us: If you'd like to support this initiative or learn
+    more, please [contact us](%{contact_link}) or donate below.
+  farsi_page_compliance_heading: Compliance In Support Of Farsi Translations
+  farsi_page_compliance_desc: As a U.S. nonprofit, Code.org is subject to laws regarding
+    sanctions with Iran. After consulting with U.S. legal counsel experienced in the
+    Iranian Sanctions and Translations Regulations (ITSR), Code.org believes that
+    it may fund, prepare, and distribute the Farsi Translations of CS Curriculum in
+    the United States and elsewhere around the world, including within Iran. The ITSR
+    provides an exemption for “information and informational materials” (the IIM Exemption)
+    and Code.org believes that this exemption will fully shield its funding, preparation,
+    and distribution of the Farsi Translations and thus enable its Farsi Translations
+    effort to proceed in full compliance with U.S. economic sanctions requirements.
   hoc_live: Hour of Code Live
   hoc_live_sign_up_title: Sign up for Hour of Code Live
   hoc_live_learn_title: Learn with Hour of Code Live

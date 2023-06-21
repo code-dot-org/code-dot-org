@@ -55,5 +55,7 @@
   "share": "Zdieľať",
   "shareComingSoon": "Zdieľanie je vo výstavbe. Vráťte sa čoskoro.",
   "startOver": "Začať odznova",
-  "upload": "Nahrať"
+  "upload": "Nahrať",
+  "panelHeaderInstructions": "Pokyny",
+  "panelHeaderWorkspace": "Pracovná plocha"
 }

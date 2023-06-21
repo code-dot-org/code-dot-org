@@ -278,6 +278,7 @@ el:
       'Mini-Project: Royal Battle': 'Mini-Project: Βασιλική Μάχη'
       'Mini-Project: Snowflake #1': 'Mini-Project: Χιονονιφάδα #1'
       'Mini-Project: Snowflake #2': 'Mini-Project: Χιονονιφάδα #2'
+      'Mini-Project: Sticker Art': 'Μικρή Εργασία: Τέχνη με Αυτοκόλλητα'
       'Mini-Project: Swimming Fish': 'Mini-Project: Ψάρι που κολυμπάει'
       'Mini-Project: Swimming Fish (continued)': 'Mini-Project: Ψάρι που κολυμπάει
         (συνέχεια)'
@@ -305,7 +306,7 @@ el:
       My Robotic Friends - Unplugged Activity: Οι ρομποτικοί φίλοι μου - αυτόνομη
         δραστηριότητα
       Naming Variables: Ορίζοντας Μεταβλητές
-      Nested Loops with the Bee: "'Ενθετοι/Περιεχόμενοι Βρόχοι με την Μέλισσα"
+      Nested Loops with the Bee: Εμφωλευμένοι Βρόχοι με την Μέλισσα
       New Challenge Introduction: Εισαγωγή σε Καινούρια Πρόκληση
       New Shapes: Καινούρια Μεγέθη
       Orientation: Προσανατολισμός
@@ -532,8 +533,7 @@ el:
       'Video: Minecraft: Voyage Aquatic Repeat Until': 'Βίντεο: Ναρκαλιευτής (Minecraft):
         Υδάτινο Ταξίδι Επανάλαβε Μέχρι'
       'Video: Nested Loops': 'Βίντεο: Εμφωλευμένοι Βρόχοι'
-      'Video: Nested Loops with the Bee': 'Βίντεο: ''Ενθετοι/Περιεχόμενοι Βρόχοι με
-        την Μέλισσα'
+      'Video: Nested Loops with the Bee': 'Βίντεο: Εμφωλευμένοι Βρόχοι με την Μέλισσα'
       'Video: Netflix and Data': 'Βίντεο: Netflix και Δεδομένα'
       'Video: Pair Programming': 'Βίντεο: Προγραμματισμός ανά ζεύγη'
       'Video: Pair Programming ': 'Βίντεο: Προγραμματισμός ανά ζεύγη'
@@ -556,7 +556,7 @@ el:
       'Video: The Big Event - Unplugged Activity': 'Βίντεο: Το Μεγάλο Γεγονός - Δραστηριότητα
         εκτός Διαδικτύου'
       'Video: The Collector': 'Βίντεο: Ο Συλλέκτης'
-      'Video: The Harvester': 'Βίντεο: Η συλλεκτική μηχανή'
+      'Video: The Harvester': 'Βίντεο: Ο Θεριστής'
       'Video: Training Data & Bias': 'Βίντεο: Δεδομένα εκπαίδευσης & Προκαταλήψεις'
       'Video: Training Data and Bias': 'Βίντεο: Δεδομένα εκπαίδευσης και Προκαταλήψεις'
       'Video: Unplugged Variables in Envelopes': 'Βίντεο: Μεταβλητές σε Φακέλους για

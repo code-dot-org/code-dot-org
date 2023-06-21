@@ -108,7 +108,7 @@ const CustomizableCurriculumCatalogCard = ({
   const [isAssignDialogOpen, setIsAssignDialogOpen] = useState(false);
 
   return (
-    <>
+    <div>
       <div
         className={classNames(
           style.curriculumCatalogCardContainer,
@@ -177,7 +177,7 @@ const CustomizableCurriculumCatalogCard = ({
           {...props}
         />
       )}
-    </>
+    </div>
   );
 };
 
