@@ -60,9 +60,8 @@ const NoSectionsToAssignBaseDialog = ({
   buttonText,
   href,
   onClick,
-  openInNewTab,
 }) => {
-  if (onClick ^ href) {
+  if (!(Boolean(onClick) ^ Boolean(href))) {
     throw new Error('Expect exactly one of onClick or href');
   }
 
