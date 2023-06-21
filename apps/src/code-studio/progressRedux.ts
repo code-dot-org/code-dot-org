@@ -249,8 +249,8 @@ const progressSlice = createSlice({
     },
   },
   extraReducers: {
-    // TODO: When we convert viewAsRedux to redux-toolkit, we will need to use createAction there instead
-    // of referencing the string here.
+    // TODO: When we convert viewAsRedux to redux-toolkit, we will need to use
+    // createAction there instead of referencing the string here.
     [SET_VIEW_TYPE]: (state, action: {viewType: keyof typeof ViewType}) => {
       state.isSummaryView =
         action.viewType === ViewType.Participant &&
