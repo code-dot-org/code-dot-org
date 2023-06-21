@@ -60,6 +60,7 @@ pl:
         reset_password_token: "Link do resetowania hasła, z którego skorzystałeś"
         error:
           future: nie może być w przyszłości
+        us_state: 'Stan'
   beta: "beta"
   hello: "Witaj świecie"
   welcome_back: "Witaj z powrotem, %{name}"
@@ -69,7 +70,9 @@ pl:
   unsubmit: Nieprzesłane
   previous_page: Poprzednia strona
   next_page: Następna strona
+  next_level: Następny poziom
   next_resource: Kolejne zasoby
+  done_with_module: Sporządzono z tym modułem edukacyjnym
   cancel: "Anuluj"
   okay: "OK"
   or: "lub"
@@ -198,6 +201,7 @@ pl:
     parent_account_checkbox: "Jestem rodzicem/opiekunem rejestrującym się w imieniu mojego dziecka"
     parent_account_email_progress_permission: "Czy możemy od czasu do czasu przesyłać Ci e-mailem informacje o postępach i projektach Twojego dziecka, a także o jego kursie i informatyce? [(Zobacz naszą Politykę prywatności)] (%{privacy_policy_url})"
     parent_account_email_label: "Adres e-mail rodzica/opiekuna"
+    us_state: 'Stan'
   school_info:
     title: 'Informacja o Szkole (opcjonalne)'
     school_country: 'Kraj szkoły'
@@ -864,6 +868,8 @@ pl:
     submit-incomplete-body: "Brak odpowiedzi na niektóre pytania. Nie masz możliwości poprawy sprawdzianu po jego przesłaniu. Czy chcesz kontynuować?"
     submit-complete-title: "Prześlij swój sprawdzian"
     submit-complete-body: "Nie masz możliwości poprawy sprawdzianu po jego przesłaniu. Czy chcesz kontynuować?"
+  level_summary:
+    correct_answer: "Prawidłowa odpowiedź"
   match:
     wrong_title: "Niepoprawne rozwiązanie"
     wrong_body: "Wprowadzone przez Ciebie rozwiązanie nie jest poprawne. Spróbuj ponownie!"
@@ -1012,6 +1018,7 @@ pl:
     instructor_feedback: 'Opinie instruktora'
     peer_feedback: 'Wzajemne opinie'
     outdated: 'Ta opinia została dodana do wcześniej zgłoszonej wersji'
+    review_count: 'Musisz wypełnić %{review_count} recenzji dla tego urządzenia'
     peer_review: 'Wzajemne recenzje'
   external_links:
     disclaimer: Uwaga
@@ -1183,6 +1190,7 @@ pl:
         csf_express: 'Podstawy informatyki (Wstępne ekspresowe lub ekspresowe)'
         csd: 'Odkrycia informatyki'
         csp: 'Podstawy Informatyki'
+        other: 'Inni/inne'
         not_applicable: "Nie dotyczy"
       email_opt_in:
         opt_in_yes: 'Tak'

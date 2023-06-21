@@ -7,8 +7,8 @@ EMPTY_XML = '<xml></xml>'.freeze
 class LevelsController < ApplicationController
   include LevelsHelper
   include ActiveSupport::Inflector
-  before_action :authenticate_user!, except: [:show, :embed_level, :get_rubric, :get_serialized_maze]
-  before_action :require_levelbuilder_mode_or_test_env, except: [:show, :embed_level, :get_rubric, :get_serialized_maze]
+  before_action :authenticate_user!, except: [:show, :level_data, :embed_level, :get_rubric, :get_serialized_maze]
+  before_action :require_levelbuilder_mode_or_test_env, except: [:show, :level_data, :embed_level, :get_rubric, :get_serialized_maze]
   load_and_authorize_resource except: [:create]
 
   before_action :set_level, only: [:show, :edit, :update, :destroy]
@@ -138,6 +138,12 @@ class LevelsController < ApplicationController
       has_i18n: @game.has_i18n?,
       blocklyVersion: params[:blocklyVersion]
     )
+  end
+
+  # Get a JSON summary of a level's information, used in modern labs that don't
+  # reload the page between level views.
+  def level_data
+    render json: {level_data: @level.properties["level_data"]}
   end
 
   # GET /levels/1/edit
@@ -286,7 +292,14 @@ class LevelsController < ApplicationController
       return
     end
 
-    @level.assign_attributes(level_params)
+    update_level_params = level_params.to_h
+
+    # Parse the incoming level_data JSON so that it's stored in the database as a
+    # first-order member of the properties JSON, rather than simply as a string of
+    # JSON belonging to a single property.
+    update_level_params[:level_data] = JSON.parse(level_params[:level_data]) if level_params[:level_data]
+
+    @level.assign_attributes(update_level_params)
     @level.log_changes(current_user)
 
     if @level.save
@@ -479,7 +492,7 @@ class LevelsController < ApplicationController
     @game = @level.game
   end
 
-  # Never trust parameters from the scary internet, only allow the white list through.
+  # Never trust parameters from the scary internet, only allow the allow-list through.
   private def level_params
     permitted_params = [
       :name,

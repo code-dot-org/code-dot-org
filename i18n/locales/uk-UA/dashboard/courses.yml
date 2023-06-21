@@ -69,9 +69,47 @@ uk:
     resources:
       curriculum/csd/2020:
         name: Навчальний план
+      teacher_forum/csd/2020:
+        name: Форум вчителів
       curriculum/csd/2017:
         name: Навчальний план
+      teacher_forum_6/csd/2017:
+        name: Форум вчителів
+      all_code_5/csd/2022:
+        name: Весь код
+      all_resources_7/csd/2022:
+        name: Всі ресурси
+      all_standards_7/csd/2022:
+        name: Всі стандарти
+      all_vocabulary_7/csd/2022:
+        name: Всі терміни
+      csd_guide_to_using_resources/csd/2022:
+        name: Інструкція з курсу CSD по використанню ресурсів
       curriculum/csd/2019:
         name: Навчальний план
+      teacher_forum/csd/2019:
+        name: Форум вчителів
+      all_code_2/csd/2023:
+        name: Весь код
+      all_resources_2/csd/2023:
+        name: Всі ресурси
+      all_standards_2/csd/2023:
+        name: Всі стандарти
+      all_vocabulary_2/csd/2023:
+        name: Всі терміни
+      csd_guide_to_using_resources_1/csd/2023:
+        name: Інструкція з курсу CSD по використанню ресурсів
+      all_code/csd/2021:
+        name: Весь код
+      all_resources_1/csd/2021:
+        name: Всі ресурси
+      all_standards_1/csd/2021:
+        name: Всі стандарти
+      all_vocabulary_1/csd/2021:
+        name: Всі терміни
+      csd_guide_to_using_resources/csd/2021:
+        name: Інструкція з курсу CSD по використанню ресурсів
       curriculum/csd/2018:
         name: Навчальний план
+      teacher_forum_6/csd/2018:
+        name: Форум вчителів

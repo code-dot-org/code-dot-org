@@ -12,6 +12,7 @@
   "columnDetailsMinimumValue": "ค่าต่ำสุด",
   "columnDetailsMaximumValue": "ค่าสูงสุด",
   "dataCardLastUpdated": "อัพเดทครั้งสุดท้าย",
+  "uniqueOptionsWarningNotice": "หมายเหตุ",
   "datasets": {
     "medical_priority": {
       "fields": {
@@ -24,6 +25,9 @@
       "fields": {
         "weather": {
           "id": "สภาพอากาศ"
+        },
+        "day": {
+          "id": "วัน"
         },
         "shoe": {
           "id": "รองเท้า"
@@ -271,6 +275,9 @@
     },
     "student_survey": {
       "fields": {
+        "Music": {
+          "id": "เพลง"
+        },
         "Country": {
           "id": "ประเทศ"
         },
@@ -323,6 +330,9 @@
     },
     "loneliness_music": {
       "fields": {
+        "Music": {
+          "id": "เพลง"
+        },
         "Country": {
           "id": "ประเทศ"
         }

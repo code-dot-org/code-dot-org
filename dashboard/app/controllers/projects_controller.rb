@@ -22,8 +22,8 @@ class ProjectsController < ApplicationController
   # @option {Boolean|nil} :login_required Whether you must be logged in to
   #   access this project type. Default: false.
   # @option {String|nil} :default_image_url If present, set this as the
+  #   thumbnail image url when creating a project of this type.
   # @option {Boolean|nil} :i18n If present, include this level in the i18n sync
-  # thumbnail image url when creating a project of this type.
   STANDALONE_PROJECTS = {
     adaptations: {
       name: 'New Adaptations Project'
@@ -75,6 +75,8 @@ class ProjectsController < ApplicationController
       # We do not currently generate thumbnails for flappy, so specify a
       # placeholder image here. This allows flappy projects to show up in the
       # public gallery, and to be published from the share dialog.
+      #
+      # NOTE: if changing this URL, update project thumbnail URL validation as well
       default_image_url: '/blockly/media/flappy/placeholder.jpg',
     },
     minecraft_codebuilder: {
@@ -114,6 +116,7 @@ class ProjectsController < ApplicationController
     },
     dance: {
       name: 'New Dance Lab Project',
+      # NOTE: if changing this URL, update project thumbnail URL validation as well
       default_image_url: '/blockly/media/dance/placeholder.png',
       i18n: true
     },
@@ -167,6 +170,9 @@ class ProjectsController < ApplicationController
     },
     time_capsule: {
       name: 'New Time Capsule Project'
+    },
+    ecosystems: {
+      name: 'New Ecosystems Project'
     }
   }.with_indifferent_access.freeze
 

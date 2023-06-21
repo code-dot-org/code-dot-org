@@ -11,6 +11,11 @@ import {
 } from './progressTestHelpers';
 import {Provider} from 'react-redux';
 
+export default {
+  title: 'SummaryProgressTable',
+  component: SummaryProgressTable,
+};
+
 const defaultProps = {
   groupedLesson: {
     lessons: [
@@ -43,260 +48,216 @@ const defaultProps = {
   lessonIsVisible: () => true,
 };
 
-export default storybook => {
-  storybook.storiesOf('Progress/SummaryProgressTable', module).addStoryTable([
-    {
-      name: 'simple SummaryProgressTable',
-      story: () => (
-        <Provider
-          store={createStoreWithHiddenLesson(ViewType.Instructor, null)}
-        >
-          <SummaryProgressTable {...defaultProps} />
-        </Provider>
+const Template = args => {
+  const {store, props} = args;
+
+  return (
+    <Provider store={store}>
+      <SummaryProgressTable {...props} />
+    </Provider>
+  );
+};
+
+export const Simple = Template.bind({});
+Simple.args = {
+  store: createStoreWithHiddenLesson(ViewType.Instructor, null),
+  props: defaultProps,
+};
+
+export const WithFocusArea = Template.bind({});
+WithFocusArea.args = {
+  store: createStoreWithHiddenLesson(ViewType.Instructor, null),
+  props: {
+    ...defaultProps,
+    groupedLesson: {
+      lessons: defaultProps.groupedLesson.lessons.map((lesson, index) => ({
+        ...lesson,
+        isFocusArea: index === 1,
+      })),
+      levelsByLesson: defaultProps.groupedLesson.levelsByLesson.map(
+        (levels, index) => (index === 1 ? fakeLevels(8) : levels)
       ),
     },
-    {
-      name: 'SummaryProgressTable with focus area',
-      story: () => (
-        <Provider
-          store={createStoreWithHiddenLesson(ViewType.Instructor, null)}
-        >
-          <SummaryProgressTable
-            {...defaultProps}
-            groupedLesson={{
-              lessons: defaultProps.groupedLesson.lessons.map(
-                (lesson, index) => ({
-                  ...lesson,
-                  isFocusArea: index === 1,
-                })
-              ),
-              levelsByLesson: defaultProps.groupedLesson.levelsByLesson.map(
-                (levels, index) => (index === 1 ? fakeLevels(8) : levels)
-              ),
-            }}
-            lessonIsVisible={() => true}
-          />
-        </Provider>
-      ),
+    lessonIsVisible: () => true,
+  },
+};
+
+export const ForPeerReviews = Template.bind({});
+ForPeerReviews.args = {
+  store: createStoreWithHiddenLesson(ViewType.Instructor, null),
+  props: {
+    groupedLesson: {
+      lessons: [
+        {
+          id: -1,
+          isFocusArea: false,
+          lockable: false,
+          name: 'You must complete 3 reviews for this unit',
+        },
+      ],
+      levelsByLesson: [
+        [
+          {
+            id: '-1',
+            name: 'Link to submitted review',
+            status: LevelStatus.perfect,
+            isLocked: false,
+            url: '/peer_reviews/1',
+            levelNumber: 1,
+          },
+          {
+            id: '-1',
+            name: 'Review a new submission',
+            status: LevelStatus.not_tried,
+            isLocked: false,
+            url: '/pull-review',
+            levelNumber: 2,
+          },
+          {
+            id: '-1',
+            icon: 'fa-lock',
+            name: 'Reviews unavailable at this time',
+            status: LevelStatus.not_tried,
+            isLocked: true,
+            url: '',
+            levelNumber: 3,
+          },
+        ],
+      ],
     },
-    {
-      name: 'SummaryProgressTable for peer reviews',
-      story: () => (
-        <Provider
-          store={createStoreWithHiddenLesson(ViewType.Instructor, null)}
-        >
-          <SummaryProgressTable
-            groupedLesson={{
-              lessons: [
-                {
-                  id: -1,
-                  isFocusArea: false,
-                  lockable: false,
-                  name: 'You must complete 3 reviews for this unit',
-                },
-              ],
-              levelsByLesson: [
-                [
-                  {
-                    id: '-1',
-                    name: 'Link to submitted review',
-                    status: LevelStatus.perfect,
-                    isLocked: false,
-                    url: '/peer_reviews/1',
-                    levelNumber: 1,
-                  },
-                  {
-                    id: '-1',
-                    name: 'Review a new submission',
-                    status: LevelStatus.not_tried,
-                    isLocked: false,
-                    url: '/pull-review',
-                    levelNumber: 2,
-                  },
-                  {
-                    id: '-1',
-                    icon: 'fa-lock',
-                    name: 'Reviews unavailable at this time',
-                    status: LevelStatus.not_tried,
-                    isLocked: true,
-                    url: '',
-                    levelNumber: 3,
-                  },
-                ],
-              ],
-            }}
-            lessonIsVisible={() => true}
-          />
-        </Provider>
-      ),
+    lessonIsVisible: () => true,
+  },
+};
+
+export const SecondLessonHiddenAsInstructor = Template.bind({});
+SecondLessonHiddenAsInstructor.args = {
+  store: createStoreWithHiddenLesson(ViewType.Instructor, '2'),
+  props: {
+    ...defaultProps,
+    viewAs: ViewType.Instructor,
+    lessonIsVisible: (lesson, viewAs) =>
+      lesson.id !== 2 || viewAs === ViewType.Instructor,
+  },
+};
+
+export const ThirdLessonHiddenAsInstructor = Template.bind({});
+ThirdLessonHiddenAsInstructor.args = {
+  store: createStoreWithHiddenLesson(ViewType.Instructor, '3'),
+  props: {
+    ...defaultProps,
+    viewAs: ViewType.Instructor,
+    lessonIsVisible: (lesson, viewAs) =>
+      lesson.id !== 3 || viewAs === ViewType.Instructor,
+  },
+};
+
+// Row 2 should not be visible.
+export const SecondLessonHiddenAsParticipant = Template.bind({});
+SecondLessonHiddenAsParticipant.args = {
+  store: createStoreWithHiddenLesson(ViewType.Participant, '2'),
+  props: {
+    ...defaultProps,
+    lessonIsVisible: (lesson, viewAs) =>
+      lesson.id !== 2 || viewAs === ViewType.Instructor,
+  },
+};
+
+// Row 3 should not be visible, gray still every other row.
+export const ThirdRowHiddenAsParticipant = Template.bind({});
+ThirdRowHiddenAsParticipant.args = {
+  store: createStoreWithHiddenLesson(ViewType.Participant, '3'),
+  props: {
+    ...defaultProps,
+    lessonIsVisible: (lesson, viewAs) =>
+      lesson.id !== 3 || viewAs === ViewType.Instructor,
+  },
+};
+
+export const LockedLessonCurrentSectionAsInstructor = Template.bind({});
+LockedLessonCurrentSectionAsInstructor.args = {
+  store: createStoreWithLockedLesson(ViewType.Instructor, true),
+  props: {
+    ...defaultProps,
+    groupedLesson: {
+      lessons: [
+        fakeLesson('Jigsaw', 1, false, 1),
+        fakeLesson('Assessment One', 2, true),
+        fakeLesson('Artist', 3, false, 2),
+      ],
+      levelsByLesson: [fakeLevels(3), fakeLevels(4), fakeLevels(2)],
     },
-    {
-      name: 'second lesson is a hidden lesson, viewing as instructor',
-      story: () => (
-        <Provider store={createStoreWithHiddenLesson(ViewType.Instructor, '2')}>
-          <SummaryProgressTable
-            {...defaultProps}
-            viewAs={ViewType.Instructor}
-            lessonIsVisible={(lesson, viewAs) =>
-              lesson.id !== 2 || viewAs === ViewType.Instructor
-            }
-          />
-        </Provider>
-      ),
+    viewAs: ViewType.Instructor,
+  },
+};
+
+export const LockedLessonAsParticipant = Template.bind({});
+LockedLessonAsParticipant.args = {
+  store: createStoreWithLockedLesson(ViewType.Participant),
+  props: {
+    ...defaultProps,
+    groupedLesson: {
+      lessons: [
+        fakeLesson('Jigsaw', 1, false, 1),
+        fakeLesson('Assessment One', 2, true),
+        fakeLesson('Artist', 3, false, 2),
+      ],
+      levelsByLesson: [
+        fakeLevels(3),
+        fakeLevels(4).map(level => ({
+          ...level,
+          isLocked: true,
+        })),
+        fakeLevels(2),
+      ],
     },
-    {
-      name: 'third lesson is a hidden lesson, viewing as instructor',
-      story: () => (
-        <Provider store={createStoreWithHiddenLesson(ViewType.Instructor, '3')}>
-          <SummaryProgressTable
-            {...defaultProps}
-            viewAs={ViewType.Instructor}
-            lessonIsVisible={(lesson, viewAs) =>
-              lesson.id !== 3 || viewAs === ViewType.Instructor
-            }
-          />
-        </Provider>
-      ),
+  },
+};
+
+export const UnlockedLessonCurrentSectionAsInstructor = Template.bind({});
+UnlockedLessonCurrentSectionAsInstructor.args = {
+  store: createStoreWithLockedLesson(ViewType.Instructor, true),
+  props: {
+    ...defaultProps,
+    groupedLesson: {
+      lessons: [
+        fakeLesson('Jigsaw', 1, false, 1),
+        fakeLesson('Assessment One', 2, true),
+        fakeLesson('Artist', 3, false, 2),
+      ],
+      levelsByLesson: [fakeLevels(3), fakeLevels(4), fakeLevels(2)],
     },
-    {
-      name: 'second lesson is a hidden lesson, viewing as participant',
-      description: 'Row 2 should not be visible',
-      story: () => (
-        <Provider
-          store={createStoreWithHiddenLesson(ViewType.Participant, '2')}
-        >
-          <SummaryProgressTable
-            {...defaultProps}
-            lessonIsVisible={(lesson, viewAs) =>
-              lesson.id !== 2 || viewAs === ViewType.Instructor
-            }
-          />
-        </Provider>
-      ),
+    viewAs: ViewType.Instructor,
+    lessonIsVisible: () => true,
+  },
+};
+
+export const LockedHiddenLessonAsInstructor = Template.bind({});
+LockedHiddenLessonAsInstructor.args = {
+  store: createStoreWithHiddenLesson(ViewType.Instructor, '2'),
+  props: {
+    ...defaultProps,
+    groupedLesson: {
+      lessons: [
+        fakeLesson('Jigsaw', 1, false, 1),
+        fakeLesson('Assessment One', 2, true),
+        fakeLesson('Artist', 3, false, 2),
+      ],
+      levelsByLesson: [fakeLevels(3), fakeLevels(4), fakeLevels(2)],
     },
-    {
-      name: 'third row is a hidden lesson, viewing as participant',
-      description: 'Row 3 should not be visible, gray still every other row',
-      story: () => (
-        <Provider
-          store={createStoreWithHiddenLesson(ViewType.Participant, '3')}
-        >
-          <SummaryProgressTable
-            {...defaultProps}
-            lessonIsVisible={(lesson, viewAs) =>
-              lesson.id !== 3 || viewAs === ViewType.Instructor
-            }
-          />
-        </Provider>
-      ),
+    viewAs: ViewType.Instructor,
+    lessonIsVisible: (lesson, viewAs) =>
+      lesson.id !== 2 || viewAs === ViewType.Instructor,
+  },
+};
+
+export const UnpluggedLesson = Template.bind({});
+UnpluggedLesson.args = {
+  store: createStoreWithHiddenLesson(ViewType.Instructor, null),
+  props: {
+    ...defaultProps,
+    groupedLesson: {
+      lessons: [fakeLesson('Lesson with Unplugged', 1, false, 1)],
+      levelsByLesson: [[fakeLevel({isUnplugged: true}), ...fakeLevels(3)]],
     },
-    {
-      name: 'locked lesson in current section as instructor',
-      story: () => (
-        <Provider
-          store={createStoreWithLockedLesson(ViewType.Instructor, true)}
-        >
-          <SummaryProgressTable
-            {...defaultProps}
-            groupedLesson={{
-              lessons: [
-                fakeLesson('Jigsaw', 1, false, 1),
-                fakeLesson('Assessment One', 2, true),
-                fakeLesson('Artist', 3, false, 2),
-              ],
-              levelsByLesson: [fakeLevels(3), fakeLevels(4), fakeLevels(2)],
-            }}
-            viewAs={ViewType.Instructor}
-          />
-        </Provider>
-      ),
-    },
-    {
-      name: 'locked lesson as participant',
-      story: () => (
-        <Provider store={createStoreWithLockedLesson(ViewType.Participant)}>
-          <SummaryProgressTable
-            {...defaultProps}
-            groupedLesson={{
-              lessons: [
-                fakeLesson('Jigsaw', 1, false, 1),
-                fakeLesson('Assessment One', 2, true),
-                fakeLesson('Artist', 3, false, 2),
-              ],
-              levelsByLesson: [
-                fakeLevels(3),
-                fakeLevels(4).map(level => ({
-                  ...level,
-                  isLocked: true,
-                })),
-                fakeLevels(2),
-              ],
-            }}
-          />
-        </Provider>
-      ),
-    },
-    {
-      name: 'unlocked lesson in current section as instructor',
-      story: () => (
-        <Provider
-          store={createStoreWithLockedLesson(ViewType.Instructor, true)}
-        >
-          <SummaryProgressTable
-            {...defaultProps}
-            groupedLesson={{
-              lessons: [
-                fakeLesson('Jigsaw', 1, false, 1),
-                fakeLesson('Assessment One', 2, true),
-                fakeLesson('Artist', 3, false, 2),
-              ],
-              levelsByLesson: [fakeLevels(3), fakeLevels(4), fakeLevels(2)],
-            }}
-            viewAs={ViewType.Instructor}
-            lessonIsVisible={() => true}
-          />
-        </Provider>
-      ),
-    },
-    {
-      name: 'locked, hidden lesson as instructor',
-      story: () => (
-        <Provider store={createStoreWithHiddenLesson(ViewType.Instructor, '2')}>
-          <SummaryProgressTable
-            {...defaultProps}
-            groupedLesson={{
-              lessons: [
-                fakeLesson('Jigsaw', 1, false, 1),
-                fakeLesson('Assessment One', 2, true),
-                fakeLesson('Artist', 3, false, 2),
-              ],
-              levelsByLesson: [fakeLevels(3), fakeLevels(4), fakeLevels(2)],
-            }}
-            viewAs={ViewType.Instructor}
-            lessonIsVisible={(lesson, viewAs) =>
-              lesson.id !== 2 || viewAs === ViewType.Instructor
-            }
-          />
-        </Provider>
-      ),
-    },
-    {
-      name: 'unplugged lesson',
-      story: () => (
-        <Provider
-          store={createStoreWithHiddenLesson(ViewType.Instructor, null)}
-        >
-          <SummaryProgressTable
-            {...defaultProps}
-            groupedLesson={{
-              lessons: [fakeLesson('Lesson with Unplugged', 1, false, 1)],
-              levelsByLesson: [
-                [fakeLevel({isUnplugged: true}), ...fakeLevels(3)],
-              ],
-            }}
-          />
-        </Provider>
-      ),
-    },
-  ]);
+  },
 };

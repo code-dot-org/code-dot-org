@@ -2358,7 +2358,7 @@ ko:
             '"d"': d
       craft_ifPath:
         text: |-
-          {DIR}에 길이 있을 경우
+          경로가 {DIR}인 경우
           {STATEMENT}
         options:
           DIR:
@@ -2390,13 +2390,13 @@ ko:
       craft_moveForward:
         text: 앞으로 이동
       craft_placeBlock:
-        text: 장소 {blockType}
+        text: "{blockType} 놓기"
         options:
           blockType:
             '"chiseledStoneBricks"': 장식용 석조 벽돌
             '"seaLantern"': 바다 랜턴
       craft_placePrismarine:
-        text: 장소 프리스마린
+        text: 프리즈머린 놓기
       craft_placeTorch:
         text: 횃불 놓기
       craft_repeatUntilConduit:
@@ -2408,17 +2408,34 @@ ko:
           목표까지 반복
           {STATEMENT}
       craft_spawnEntity:
-        text: 산란 {ENTITY}
+        text: "{ENTITY} 불러내기"
         options:
           ENTITY:
             '"dolphin"': 돌고래
             '"squid"': 오징어
       craft_turn:
-        text: 설정 {DIR}
+        text: "{DIR} 방향 전환"
         options:
           DIR:
-            right: 우측 윙어
-            left: 왼쪽
+            right: 오른쪽 ↻
+            left: 왼쪽 ↺
+      ecosystems_int10:
+        text: "{VALUE}"
+        options:
+          VALUE:
+            '0': '0'
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+      storylab_printText:
+        text: 인쇄 {TEXT}
       storylab_setForegroundEffect2:
         text: "{EFFECT} 효과 연출"
         options:

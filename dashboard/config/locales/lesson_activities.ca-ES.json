@@ -1880,6 +1880,9 @@
         "3752f66b-8440-41f6-bb77-df9a8a3c7fd8": {
           "name": "Recapitulació"
         },
+        "b66f054d-7a1a-4d77-b19c-6b012d2b87a1": {
+          "name": "Escalfament"
+        },
         "3cab4fd7-471c-4ad2-bdd8-e65a69c74898": {
           "name": "Activitat principal"
         },
@@ -3133,6 +3136,9 @@
         },
         "fb244265-6cd6-459d-bc88-e056d9902b8d": {
           "name": "Activitat"
+        },
+        "b6364f64-7652-413c-b216-00e84f75dc46": {
+          "name": "Escalfament"
         },
         "cdebc121-9bb7-4512-a38f-ec2adaabed91": {
           "name": "Activitat"
@@ -6605,6 +6611,9 @@
         "f589d41f-0064-4e89-bc57-b6815763792f": {
           "name": "Recapitulació"
         },
+        "5ec2cf3c-e372-4dc6-9b3e-4aaca8be2740": {
+          "name": "Escalfament"
+        },
         "9e4b93ba-099d-4c47-b962-d47f961599bb": {
           "name": "Activitat principal"
         },
@@ -8194,6 +8203,9 @@
         },
         "4426fb52-6448-4467-8602-49daf6b12bf1": {
           "name": "Recapitulació"
+        },
+        "687f8be1-c863-4391-971d-5ffa5360ed71": {
+          "name": "Escalfament"
         },
         "0f9b927e-0931-463c-85dd-f92b58eea3dd": {
           "name": "Activitat"

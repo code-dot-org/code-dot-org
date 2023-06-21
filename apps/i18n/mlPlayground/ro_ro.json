@@ -12,6 +12,7 @@
   "columnDetailsMinimumValue": "min",
   "columnDetailsMaximumValue": "max",
   "dataCardLastUpdated": "Ultima actualizare",
+  "uniqueOptionsWarningNotice": "Notă",
   "datasets": {
     "medical_priority": {
       "fields": {
@@ -294,6 +295,13 @@
       "card": {
         "context": {
           "potentialMisuses": "[șir gol]"
+        }
+      }
+    },
+    "zoo": {
+      "fields": {
+        "Aquatic": {
+          "id": "Acvatic"
         }
       }
     },

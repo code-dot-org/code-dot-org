@@ -73,8 +73,9 @@ el:
       'CSD: For Loop': 'CSD: Για βρόχους'
       Cake Defender: Cake Defender
       Cake Survey: Έρευνα για Κέικ
-      Challenge: Εξάσκηση
+      Challenge: Πρόκληση
       Challenge Levels: Επίπεδα πρόκλησης
+      Challenge/Practice: Πρόκληση/Εξάσκηση
       'Challenge: Draw an Image': 'Εξάσκηση: Σχεδιασμός εικόνας'
       'Challenge: Lists': 'Πρόκληση: Λίστες'
       'Challenge: RGB Colors': 'Πρόκληση: Χρώματα RGB (κόκκινο, πράσινο, μπλε).'
@@ -210,6 +211,7 @@ el:
       Intro to Sprites: Εισαγωγή στα μοτίβα
       Intro to Variables: Εισαγωγή σε Μεταβλητές
       Introducing Sprite Lab: 'Βίντεο: Εισαγωγή στο Εργαστήρι Χαρακτήρων'
+      Introduction to Arrays: Εισαγωγή στις συστοιχίες
       Introduction to Game Lab: Εισαγωγή στο Εργαστήριο Παιχνιδιού
       Isaac's Survey Data: Δεδομένα Εκτίμησης του Ισαάκ
       Iteration and Parameters: Επανάληψη και Παράμετρος
@@ -254,6 +256,7 @@ el:
       'Mini-Project: Royal Battle': 'Mini-Project: Βασιλική Μάχη'
       "Mini-Project: Snowflake #1": "Mini-Project: Χιονονιφάδα #1"
       "Mini-Project: Snowflake #2": "Mini-Project: Χιονονιφάδα #2"
+      'Mini-Project: Sticker Art': 'Μικρή Εργασία: Τέχνη με Αυτοκόλλητα'
       'Mini-Project: Swimming Fish': 'Mini-Project: Ψάρι που κολυμπάει'
       'Mini-Project: Swimming Fish (continued)': 'Mini-Project: Ψάρι που κολυμπάει (συνέχεια)'
       'Mini-Project: User Input Programs': 'Mini-Project: Προγράμματα Εισόδου Χρήστη'
@@ -274,9 +277,10 @@ el:
       Multiframe Animations: Κινήσεις πολλαπλών καρέ
       Musical Arrays: Μουσικοί Πίνακες
       My Loopy Robotic Friends - Unplugged Activity: Οι επαναλαμβανόμενοι ρομποτικοί φίλοι μου - αυτόνομη δραστηρίοτητα
+      My Online Neighborhood: Η Online Γειτονιά μου
       My Robotic Friends - Unplugged Activity: Οι ρομποτικοί φίλοι μου - αυτόνομη δραστηριότητα
       Naming Variables: Ορίζοντας Μεταβλητές
-      Nested Loops with the Bee: '''Ενθετοι/Περιεχόμενοι Βρόχοι με την Μέλισσα'
+      Nested Loops with the Bee: Εμφωλευμένοι Βρόχοι με την Μέλισσα
       New Challenge Introduction: Εισαγωγή σε Καινούρια Πρόκληση
       New Shapes: Καινούρια Μεγέθη
       Orientation: Προσανατολισμός
@@ -412,6 +416,7 @@ el:
       Using Random Numbers: Χρησιμοποιώντας Τυχαίους Αριθμούς
       Using Training Data: Χρησιμοποιώντας  Δεδομένα Εκπαίδευσης
       Using the LED: Χρησιμοποιώντας LED
+      Using the Repeat Block: Χρήση του μπλοκ επανάληψης
       Using the Switch: Χρησιμοποιώντας το Διακόπτη
       Variables: Μεταβλητές
       Velocity: Ταχύτητα
@@ -475,7 +480,7 @@ el:
       'Video: Minecraft: Voyage Aquatic Introduction': 'Βίντεο: Ναρκαλιευτής (Minecraft): Υδάτινο Ταξίδι Εισαγωγή'
       'Video: Minecraft: Voyage Aquatic Repeat Until': 'Βίντεο: Ναρκαλιευτής (Minecraft): Υδάτινο Ταξίδι Επανάλαβε Μέχρι'
       'Video: Nested Loops': 'Βίντεο: Εμφωλευμένοι Βρόχοι'
-      'Video: Nested Loops with the Bee': 'Βίντεο: ''Ενθετοι/Περιεχόμενοι Βρόχοι με την Μέλισσα'
+      'Video: Nested Loops with the Bee': 'Βίντεο: Εμφωλευμένοι Βρόχοι με την Μέλισσα'
       'Video: Netflix and Data': 'Βίντεο: Netflix και Δεδομένα'
       'Video: Pair Programming': 'Βίντεο: Προγραμματισμός ανά ζεύγη'
       'Video: Pair Programming ': 'Βίντεο: Προγραμματισμός ανά ζεύγη'
@@ -496,7 +501,7 @@ el:
       'Video: The Artist in Code Studio': 'Βίντεο: Ο καλλιτέχνης στο Code Studio'
       'Video: The Big Event - Unplugged Activity': 'Βίντεο: Το Μεγάλο Γεγονός - Δραστηριότητα εκτός Διαδικτύου'
       'Video: The Collector': 'Βίντεο: Ο Συλλέκτης'
-      'Video: The Harvester': 'Βίντεο: Η συλλεκτική μηχανή'
+      'Video: The Harvester': 'Βίντεο: Ο Θεριστής'
       'Video: Training Data & Bias': 'Βίντεο: Δεδομένα εκπαίδευσης & Προκαταλήψεις'
       'Video: Training Data and Bias': 'Βίντεο: Δεδομένα εκπαίδευσης και Προκαταλήψεις'
       'Video: Unplugged Variables in Envelopes': 'Βίντεο: Μεταβλητές σε Φακέλους για εκτός διαδικτύου'
@@ -513,7 +518,7 @@ el:
       Where'd They Go?: Πού θα πήγαιναν;
       While Loops with the Farmer: Βρόχοι Ενώ με τον Αγρότη
       'Widget: Text Compression': 'Γραφικό στοιχείο: Συμπύκνωση Κειμένου'
-      Wrap-up: συνοψίζω
+      Wrap-up: Περίληψη
       'You Choose: Improve Your App': 'Εσείς επιλέγετε: Βελτιώστε την Εφαρμογή Σας'
       'You Choose: Restaurant Recommendations': 'Εσείς Επιλέγετε: Προτάσεις Εστιατορίων '
       Your Personal Website: Το προσωπικό σας σάιτ

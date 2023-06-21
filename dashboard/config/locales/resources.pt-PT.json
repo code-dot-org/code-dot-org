@@ -304,6 +304,7 @@
           "type": "Vídeo"
         },
         "making_sprites/coursef/2022": {
+          "name": "Fazendo Sprites",
           "url": "https://docs.google.com/presentation/d/1u8gueXrKIKoYNgTxbr3bIvmbVlCsJcVT7qcDeqsOh1U/template/preview"
         },
         "blank_space_stories/coursef/2022": {
@@ -366,7 +367,8 @@
           "url": "https://youtu.be/mFOUbqYv1Sc"
         },
         "cs_fundamentals_final_project/coursef/2022": {
-          "name": "Projeto Final em Fundamentos da Ciência da Computação"
+          "name": "Projeto Final em Fundamentos da Ciência da Computação",
+          "type": "Rubrica"
         },
         "common_core_and_ngss_guidance/coursee/2022": {
           "name": "Orientação do Common Core e NGSS"
@@ -440,7 +442,8 @@
           "type": "Vídeo"
         },
         "cs_fundamentals_final_project/coursee/2022": {
-          "name": "Projeto Final em Fundamentos da Ciência da Computação"
+          "name": "Projeto Final em Fundamentos da Ciência da Computação",
+          "type": "Rubrica"
         },
         "common_core_and_ngss_guidance/courseb/2022": {
           "name": "Orientação do Common Core e NGSS",
@@ -691,7 +694,8 @@
         },
         "cs_fundamentals_final_project/express/2022": {
           "name": "Projeto Final em Fundamentos da Ciência da Computação",
-          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/"
+          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/",
+          "type": "Rubrica"
         },
         "csf_express_end_of_course_project_planning_guide/express/2022": {
           "name": "Guia de planejamento de projeto de fim de curso CSF Express",
@@ -1099,6 +1103,9 @@
         "computer_science_practices/csd/2022": {
           "type": "Reflexão"
         },
+        "create_a_representation_2/csd/2022": {
+          "type": "Rubrica"
+        },
         "structuring_data/csd/2022": {
           "name": "Estruturação de dados"
         },
@@ -1166,6 +1173,9 @@
         "make_a_recommendation/csd/2022": {
           "type": "Revisão em grupo"
         },
+        "make_a_recommendation_1/csd/2022": {
+          "type": "Rubrica"
+        },
         "intro_to_problem_solving/csd/2022": {
           "name": "Introdução a Resolução de problemas"
         },
@@ -1214,7 +1224,8 @@
           "type": "Revisão em grupo"
         },
         "apps_and_problem_solving_2/csd/2022": {
-          "name": "Aplicativos e solução de problemas"
+          "name": "Aplicativos e solução de problemas",
+          "type": "Rubrica"
         },
         "project_-_propose_an_app/csd/2022": {
           "name": "Projeto - Propor um Aplicativo"
@@ -1287,6 +1298,9 @@
         "text/csd/2022": {
           "name": "Texto"
         },
+        "captioned_scenes/csd/2022": {
+          "type": "Rubrica"
+        },
         "flipbook_example_-_by_marnic_bos/csd/2022": {
           "type": "Vídeo"
         },
@@ -1308,6 +1322,9 @@
         },
         "sprite_movement_1/csd/2022": {
           "name": "Movimento sprite"
+        },
+        "animated_scene/csd/2022": {
+          "type": "Rubrica"
         },
         "boolean_expressions/csd/2022": {
           "name": "Expressões Booleanas",
@@ -1347,7 +1364,8 @@
           "type": "Revisão em grupo"
         },
         "interactive_card_3/csd/2022": {
-          "name": "Cartão Interativo"
+          "name": "Cartão Interativo",
+          "type": "Rubrica"
         },
         "project_-_interactive_card/csd/2022": {
           "name": "Projeto - Cartão Interativo"
@@ -1372,7 +1390,8 @@
           "name": "Detecção de Colisão"
         },
         "side_scroller/csd/2022": {
-          "name": "Rolagem Lateral"
+          "name": "Rolagem Lateral",
+          "type": "Rubrica"
         },
         "side_scroller_1/csd/2022": {
           "name": "Rolagem Lateral"
@@ -1387,7 +1406,8 @@
           "name": "Colisões"
         },
         "flyer_game/csd/2022": {
-          "name": "Jogo Flyer"
+          "name": "Jogo Flyer",
+          "type": "Rubrica"
         },
         "flyer_game_1/csd/2022": {
           "name": "Jogo Flyer"
@@ -1410,6 +1430,9 @@
         },
         "make_your_own_game_2/csd/2022": {
           "type": "Revisão em grupo"
+        },
+        "make_your_own_game_3/csd/2022": {
+          "type": "Rubrica"
         },
         "project_-_design_a_game/csd/2022": {
           "name": "Projeto - Projetar um Jogo"
@@ -1450,6 +1473,9 @@
         "formatting_html/csd/2022": {
           "name": "Formatando HTML"
         },
+        "html_web_page/csd/2022": {
+          "type": "Rubrica"
+        },
         "html_web_page_2/csd/2022": {
           "type": "Revisão em grupo"
         },
@@ -1469,6 +1495,9 @@
         },
         "styling_text_with_css/csd/2022": {
           "name": "Estilo de texto com CSS"
+        },
+        "your_personal_style/csd/2022": {
+          "type": "Rubrica"
         },
         "your_personal_style_1/csd/2022": {
           "type": "Revisão em grupo"
@@ -1494,6 +1523,9 @@
         "personal_web_page/csd/2022": {
           "type": "Revisão em grupo"
         },
+        "personal_web_page_1/csd/2022": {
+          "type": "Rubrica"
+        },
         "publishing_your_website/csd/2022": {
           "name": "Publicando seu site",
           "type": "Vídeo"
@@ -1518,6 +1550,9 @@
         },
         "css_classes/csd/2022": {
           "name": "Classes CSS"
+        },
+        "website_for_a_purpose/csd/2022": {
+          "type": "Rubrica"
         },
         "hyperlinks/csd/2022": {
           "name": "HiperLinks"
@@ -1550,7 +1585,8 @@
           "name": "Identificando Necessidades do Usuário"
         },
         "paper_prototypes/csd/2022": {
-          "name": "Protótipos de papel"
+          "name": "Protótipos de papel",
+          "type": "Rubrica"
         },
         "project_-_paper_prototype/csd/2022": {
           "name": "Projeto - Protótipo de Papel"
@@ -1602,7 +1638,8 @@
           "name": "Testando o aplicativo"
         },
         "app_presentation/csd/2022": {
-          "name": "Apresentação de aplicativos"
+          "name": "Apresentação de aplicativos",
+          "type": "Rubrica"
         },
         "app_presentation_1/csd/2022": {
           "name": "Apresentação de aplicativos"
@@ -1666,11 +1703,17 @@
           "name": "Variáveis",
           "type": "Vídeo"
         },
+        "rubric_-_on-the-go_app/csd/2022": {
+          "type": "Rubrica"
+        },
         "color_leds/csd/2022": {
           "name": "LEDs Coloridos"
         },
         "input_output_devices/csd/2022": {
           "type": "Vídeo"
+        },
+        "rubric_-_human_device_interaction/csd/2022": {
+          "type": "Rubrica"
         },
         "analog_sensors/csd/2022": {
           "name": "Sensores analógicos"
@@ -1717,11 +1760,17 @@
         "functions_5/csd/2022": {
           "name": "Funções"
         },
+        "student_rubric_-_interactive_art/csd/2022": {
+          "type": "Rubrica"
+        },
         "circuits_and_leds/csd/2022": {
           "name": "Circuitos e LEDs"
         },
         "project_prototype_an_innovation/csd/2022": {
           "name": "Projeto: Protótipo de Inovação"
+        },
+        "prototype_an_innovation/csd/2022": {
+          "type": "Rubrica"
         },
         "ai_what_is_machine_learning_/csd/2022": {
           "type": "Vídeo"
@@ -1732,10 +1781,15 @@
         "finding_patterns_in_data/csd/2022": {
           "type": "Vídeo"
         },
+        "introduction_to_ai_lab/csd/2022": {
+          "name": "Introdução ao AI Lab"
+        },
         "introduction_to_ai_lab_1/csd/2022": {
+          "name": "Introdução ao AI Lab",
           "type": "Vídeo"
         },
         "training_and_testing_in_ai_lab/csd/2022": {
+          "name": "Treinamento e testes no AI Lab",
           "type": "Vídeo"
         },
         "ai_training_data_bias/csd/2022": {
@@ -1743,16 +1797,27 @@
           "type": "Vídeo"
         },
         "model_cards_in_ai_lab/csd/2022": {
+          "name": "Cartões de modelo no AI Lab",
           "type": "Vídeo"
         },
         "if-statements_in_app_lab/csd/2022": {
           "type": "Vídeo"
         },
+        "numerical_data_in_ai_lab/csd/2022": {
+          "name": "Dados numéricos no AI Lab"
+        },
+        "numerical_data_in_ai_lab_1/csd/2022": {
+          "name": "Dados numéricos no AI Lab"
+        },
         "numerical_data_in_ai_lab_2/csd/2022": {
+          "name": "Dados numéricos no AI Lab",
           "type": "Vídeo"
         },
         "ethics_ai_equal_access_and_algorithmic_bias/csd/2022": {
           "type": "Vídeo"
+        },
+        "create_an_ml_app/csd/2022": {
+          "type": "Rubrica"
         },
         "survey_planning/csd/2022": {
           "name": "Projetando a coleta de dados"
@@ -1765,6 +1830,9 @@
         },
         "view_and_download_survey_data/csd/2022": {
           "type": "Vídeo"
+        },
+        "design_an_ai_app_1/csd/2022": {
+          "type": "Rubrica"
         },
         "lesson_plans/courseb/2018": {
           "name": "Planos das aulas"
@@ -2260,6 +2328,7 @@
           "type": "Vídeo"
         },
         "making_sprites/coursef/2021": {
+          "name": "Fazendo Sprites",
           "url": "https://docs.google.com/presentation/d/1u8gueXrKIKoYNgTxbr3bIvmbVlCsJcVT7qcDeqsOh1U/template/preview"
         },
         "sprite_lab_documentation/coursef/2021": {
@@ -2401,7 +2470,8 @@
         },
         "rubric-csf-final-projects/coursef/2021": {
           "name": "Projeto Final em Fundamentos da Ciência da Computação",
-          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/"
+          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/",
+          "type": "Rubrica"
         },
         "2021_change_log/courseb/2021": {
           "name": "Registro de alterações de 2021",
@@ -3222,6 +3292,7 @@
           "url": "https://studio.code.org/levels/18623"
         },
         "making_sprites/express/2021": {
+          "name": "Fazendo Sprites",
           "url": "https://docs.google.com/presentation/d/1u8gueXrKIKoYNgTxbr3bIvmbVlCsJcVT7qcDeqsOh1U/template/preview"
         },
         "sprite_lab_documentation_1/express/2021": {
@@ -3286,7 +3357,8 @@
         },
         "rubric-csf-final-projects/express/2021": {
           "name": "Projeto Final em Fundamentos da Ciência da Computação",
-          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/"
+          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/",
+          "type": "Rubrica"
         },
         "course_vocabulary/pre-express/2021": {
           "name": "Vocabulário do curso\t",
@@ -3430,7 +3502,8 @@
         },
         "rubric-csf-final-projects/coursee/2021": {
           "name": "Projeto Final em Fundamentos da Ciência da Computação",
-          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/"
+          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/",
+          "type": "Rubrica"
         },
         "ai_what_is_machine_learning_/csd/2021": {
           "type": "Vídeo"
@@ -3441,10 +3514,15 @@
         "finding_patterns_in_data/csd/2021": {
           "type": "Vídeo"
         },
+        "introduction_to_ai_lab/csd/2021": {
+          "name": "Introdução ao AI Lab"
+        },
         "introduction_to_ai_lab_1/csd/2021": {
+          "name": "Introdução ao AI Lab",
           "type": "Vídeo"
         },
         "training_and_testing_in_ai_lab/csd/2021": {
+          "name": "Treinamento e testes no AI Lab",
           "type": "Vídeo"
         },
         "ai_training_data_bias/csd/2021": {
@@ -3452,16 +3530,27 @@
           "type": "Vídeo"
         },
         "model_cards_in_ai_lab/csd/2021": {
+          "name": "Cartões de modelo no AI Lab",
           "type": "Vídeo"
         },
         "if-statements_in_app_lab/csd/2021": {
           "type": "Vídeo"
         },
+        "numerical_data_in_ai_lab/csd/2021": {
+          "name": "Dados numéricos no AI Lab"
+        },
+        "numerical_data_in_ai_lab_1/csd/2021": {
+          "name": "Dados numéricos no AI Lab"
+        },
         "numerical_data_in_ai_lab_2/csd/2021": {
+          "name": "Dados numéricos no AI Lab",
           "type": "Vídeo"
         },
         "ethics_ai_equal_access_and_algorithmic_bias/csd/2021": {
           "type": "Vídeo"
+        },
+        "create_an_ml_app/csd/2021": {
+          "type": "Rubrica"
         },
         "survey_planning/csd/2021": {
           "name": "Projetando a coleta de dados"
@@ -3471,6 +3560,9 @@
         },
         "view_and_download_survey_data/csd/2021": {
           "type": "Vídeo"
+        },
+        "design_an_ai_app_1/csd/2021": {
+          "type": "Rubrica"
         },
         "teacher_forum/csd/2021": {
           "name": "Fórum do professor"
@@ -3482,7 +3574,8 @@
           "type": "Reflexão"
         },
         "paper-prototypes/csd/2021": {
-          "name": "Protótipos de papel"
+          "name": "Protótipos de papel",
+          "type": "Rubrica"
         },
         "market-research/csd/2021": {
           "name": "Pesquisa de mercado"
@@ -3522,7 +3615,8 @@
           "name": "Respondendo a Entradas de Usuário"
         },
         "app-presentation/csd/2021": {
-          "name": "Apresentação de aplicativos"
+          "name": "Apresentação de aplicativos",
+          "type": "Rubrica"
         },
         "app-presentation-exemplar/csd/2021": {
           "name": "Apresentação de aplicativos"
@@ -3574,6 +3668,9 @@
         "if_statements_1/csd/2021": {
           "name": "Instruções Se"
         },
+        "make_a_game_1/csd/2021": {
+          "type": "Rubrica"
+        },
         "introduction_to_arrays/csd/2021": {
           "name": "Introdução a Arrays",
           "type": "Vídeo"
@@ -3607,6 +3704,9 @@
           "name": "Como Computadores Funcionam: Circuitos e Lógica",
           "type": "Vídeo"
         },
+        "prototype-an-innovation-1/csd/2021": {
+          "type": "Rubrica"
+        },
         "representation-matters-exemplar-2019/csd/2021": {
           "name": "Representação Importa"
         },
@@ -3622,6 +3722,9 @@
         },
         "representing-numbers-exemplar-2019/csd/2021": {
           "name": "Representando Números"
+        },
+        "create_a_representation/csd/2021": {
+          "type": "Rubrica"
         },
         "structuring_data/csd/2021": {
           "name": "Estruturação de dados"
@@ -3675,6 +3778,9 @@
         "make-a-recommendation-peer-review-2019/csd/2021": {
           "type": "Revisão em grupo"
         },
+        "make-a-recommendation-1/csd/2021": {
+          "type": "Rubrica"
+        },
         "teacher_forum_1/csd/2021": {
           "name": "Fórum do professor"
         },
@@ -3722,6 +3828,9 @@
         "sprite_properties/csd/2021": {
           "name": "Propriedades do Sprite"
         },
+        "captioned-scenes/csd/2021": {
+          "type": "Rubrica"
+        },
         "youtube-flipbook/csd/2021": {
           "type": "Vídeo"
         },
@@ -3737,6 +3846,9 @@
         },
         "the_counter_pattern/csd/2021": {
           "name": "O padrão Contador"
+        },
+        "animated-scene-1/csd/2021": {
+          "type": "Rubrica"
         },
         "boolean_expressions/csd/2021": {
           "name": "Expressões Booleanas",
@@ -3770,7 +3882,8 @@
           "type": "Revisão em grupo"
         },
         "interactive_card/csd/2021": {
-          "name": "Cartão Interativo"
+          "name": "Cartão Interativo",
+          "type": "Rubrica"
         },
         "velocity_1/csd/2021": {
           "name": "Velocidade",
@@ -3786,7 +3899,8 @@
           "name": "Detecção de Colisão"
         },
         "side-scroller-1/csd/2021": {
-          "name": "Rolagem Lateral"
+          "name": "Rolagem Lateral",
+          "type": "Rubrica"
         },
         "side-scroller/csd/2021": {
           "name": "Rolagem Lateral"
@@ -3795,7 +3909,8 @@
           "name": "Velocidade e o Padrão Contador"
         },
         "flyer-game-1/csd/2021": {
-          "name": "Jogo Flyer"
+          "name": "Jogo Flyer",
+          "type": "Rubrica"
         },
         "flyer-game/csd/2021": {
           "name": "Jogo Flyer"
@@ -3809,6 +3924,9 @@
         },
         "make-your-own-game-1-2-3/csd/2021": {
           "type": "Revisão em grupo"
+        },
+        "make_your_own_game/csd/2021": {
+          "type": "Rubrica"
         },
         "problem-solving-process-exemplar-2020/csd/2021": {
           "name": "Processo de resolução de problemas"
@@ -3846,7 +3964,8 @@
           "type": "Revisão em grupo"
         },
         "apps_and_problem_solving/csd/2021": {
-          "name": "Aplicativos e solução de problemas"
+          "name": "Aplicativos e solução de problemas",
+          "type": "Rubrica"
         },
         "exploring-web-pages-exemplar-2020/csd/2021": {
           "name": "Explorando páginas da Web"
@@ -3872,6 +3991,9 @@
         "video_debugging/csd/2021": {
           "type": "Vídeo"
         },
+        "html-web-page-1/csd/2021": {
+          "type": "Rubrica"
+        },
         "html-web-page/csd/2021": {
           "type": "Revisão em grupo"
         },
@@ -3892,6 +4014,9 @@
           "name": "Introdução para CSS - Parte 2",
           "type": "Vídeo"
         },
+        "your-personal-style-1-2-3/csd/2021": {
+          "type": "Rubrica"
+        },
         "your-personal-style-1/csd/2021": {
           "type": "Revisão em grupo"
         },
@@ -3910,6 +4035,9 @@
         "personal-web-page-1/csd/2021": {
           "type": "Revisão em grupo"
         },
+        "personal-web-page/csd/2021": {
+          "type": "Rubrica"
+        },
         "publishing_your_website/csd/2021": {
           "name": "Publicando seu site",
           "type": "Vídeo"
@@ -3925,6 +4053,9 @@
         },
         "classes/csd/2021": {
           "name": "Classes"
+        },
+        "website-for-a-purpose-1/csd/2021": {
+          "type": "Rubrica"
         },
         "hyperlinks/csd/2021": {
           "name": "HiperLinks"

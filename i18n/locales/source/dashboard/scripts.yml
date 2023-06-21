@@ -130,6 +130,8 @@ en:
           description_audience: Ages 10-18
           lesson_groups: {}
           student_description: This 20-hour course covers the core computer science and programming concepts in courses 2-4. The course is designed for use with ages 10-18. Check out courses 2-4 for a more complete experience!
+          lessons: {}
+          name: 20-hour
         edit-code:
           title: Edit Code
           description: Edit Code
@@ -8008,6 +8010,7 @@ en:
           description_audience: ''
           lesson_groups: {}
           name: self-paced-pl-csp4-2022
+          lessons: {}
         csa9-2022:
           lesson_groups:
             lessonGroup-2:
@@ -9920,10 +9923,10 @@ en:
               name: Code Your Own Ecosystem (2023)
           lesson_groups: {}
           name: csc-ecosystems-2023
-          title: Simulating a Marine Ecosystem
+          title: Simulating a Marine Ecosystem (2023)
           description_audience: ''
           description_short: ''
-          description: ''
+          description: "## Suggested Pre-Work for this Module\n\n**Science:** Students will simulate a marine life ecosystem in Lessons 1 and 2. To build familiarity with this ecosystem, we recommend this [Ocean Animals Video][0] (9:42 minutes). \n\nIn Lesson 2, students will code several sustainable fishing practices. These are a few readings to build some background knowledge and deepen connections to the real world: [Understanding Overfishing][1] (Monterey Bay Aquarium article), or [Mw,kwa Talks to the Loon][2] (Children's book).\n\n**Computer Science:** In this module, students will learn new coding concepts that might be difficult for new-to-computer science students. If students are not familiar with Code.org’s Sprite Lab we recommend trying [Swimming Fish with Sprite Lab][3] (55 minutes) for a basic introduction to the tool. \n\nThis module also uses an advanced CS concept called conditional statements. Students learn this concept in a scaffolded way, but some students may benefit from first engaging in this introduction to conditionals unplugged activity: [Conditionals with Cards][4] (50 minutes)."
           student_description: ''
         csc-adaptations-2023:
           lessons:
@@ -9933,7 +9936,7 @@ en:
               name: Code Your Own Adaptation
           lesson_groups: {}
           name: csc-adaptations-2023
-          title: Modeling Animal Adaptations
+          title: Modeling Animal Adaptations (2023)
           description_audience: ''
           description_short: ''
           description: ''
@@ -10026,7 +10029,9 @@ en:
           description: ''
           student_description: ''
         csc-bookcovers-2023:
-          lessons: {}
+          lessons:
+            lesson-4:
+              name: Plan Your Interactive Book Cover
           lesson_groups: {}
           name: csc-bookcovers-2023
           title: Coding Book Covers (2023)
@@ -10074,6 +10079,8 @@ en:
           student_description: Learn computer science by trying the lessons below at your own pace! Learn to create computer programs, develop problem-solving skills, and work through fun challenges! Make games and creative projects to share with friends, family, and teachers.
           description_short: 'An introduction to computer science: combines the best of our elementary school curriculum for older students.'
           description_audience: 'Ages: 9-18'
+          lessons: {}
+          name: express-2023
         coursea-2023:
           lesson_groups:
             csf_digcit:
@@ -10091,6 +10098,8 @@ en:
           student_description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
           description_short: An introduction to computer science for pre-readers.
           description_audience: 'Ages: 4-7'
+          lessons: {}
+          name: coursea-2023
         courseb-2023:
           lesson_groups:
             csf_digcit:
@@ -10110,6 +10119,8 @@ en:
           student_description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
           description_short: An introduction to computer science for pre-readers. Similar to Course A, but with added concept depth.
           description_audience: 'Ages: 5-8'
+          lessons: {}
+          name: courseb-2023
         coursec-2023:
           lesson_groups:
             csf_digcit:
@@ -10129,6 +10140,8 @@ en:
           student_description: Create programs with sequencing, loops, and events. Translate your initials into binary, investigate different problem-solving techniques, and learn how to respond to cyberbullying. At the end of the course, create your very own game or story you can share!
           description_short: Learn the basics of computer science and create your own art, stories, and games.
           description_audience: 'Ages: 6-10'
+          lessons: {}
+          name: coursec-2023
         coursed-2023:
           lesson_groups:
             lessonGroup-6:
@@ -10148,6 +10161,8 @@ en:
           student_description: Learn about loops, conditionals, and events. Beyond coding, learn about digital citizenship.
           description_short: Learn about conditional statements. Create your own art, games, and even a dance party.
           description_audience: 'Ages: 7-11'
+          lessons: {}
+          name: coursed-2023
         coursee-2023:
           lesson_groups:
             csf_digcit:
@@ -10169,6 +10184,8 @@ en:
           student_description: Start coding with algorithms, events, loops, conditionals, and functions! By the end of this course, design and create a game or drawing that you can share with your friends and family.
           description_short: Learn the basics of sprites, nested loops, and functions.
           description_audience: 'Ages: 8-12'
+          lessons: {}
+          name: coursee-2023
         problem-solving-computing-2023:
           lessons: {}
           lesson_groups:
@@ -10819,11 +10836,11 @@ en:
               name: "[Generative Images Lesson (dall-e-esque)]"
           lesson_groups: {}
           name: ai-temp
-          title: "[Temp] Intro to AI"
+          title: How AI Works
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: These lessons supplement the [How AI Works][0] video series. Each lesson is paired with a single video from the series, diving-deeper into the concepts introduced in the videos. Lessons focus on creating an exciting first experience for students, where students engage in an activity or simulation and then reflect on the experience as a way to build understanding around AI and build empathy with those impacted by it. Some lessons focus more on the technology behind AI, while other lessons focus on the societal impacts and ethical considerations of AI.
+          student_description: Learn how AI works by participating in different experiences and watching the [How AI Works][0] video series!
         focus-on-coding4b-2023:
           lessons: {}
           lesson_groups:
@@ -10958,6 +10975,8 @@ en:
               name: 'Journaling and Dicussion '
             lesson-10:
               name: 'Day 1 Wrap Up '
+            lesson-11:
+              name: The Problem Solving Process in CSD
           lesson_groups:
             lessonGroup-2:
               display_name: Day 1
@@ -11078,20 +11097,210 @@ en:
           description: ''
           student_description: ''
         virtual-pl-csd-summer-day1:
-          lessons: {}
-          lesson_groups: {}
+          lessons:
+            lesson-1:
+              name: Introduction
+            lesson-2:
+              name: CS Discoveries Overview
+            lesson-3:
+              name: Navigating the Code.org Platform
+            lesson-4:
+              name: Unit 1 - Problem Solving & Computing
+            lesson-5:
+              name: Intro to Async
+            lesson-6:
+              name: Asynchronous Work
+            lesson-7:
+              name: Async Debrief
+            lesson-8:
+              name: Intro to Unit 2
+            lesson-9:
+              name: 'Model Lesson 1: U2L2 Intro to HTML'
+            lesson-10:
+              name: 'Model Lesson 2: U2L6 Styling Text with CSS'
+            lesson-11:
+              name: Instructional Strategies
+            lesson-12:
+              name: Wrap Up
+            lesson-13:
+              name: Asynchronous Work
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchronous Part 1
+            lessonGroup-3:
+              display_name: Asynchronous Part 1
+            lessonGroup-4:
+              display_name: Synchronous Part 2
+            lessonGroup-5:
+              display_name: Asynchronous Part 2
+          name: virtual-pl-csd-summer-day1
+          title: Day 1
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
         virtual-pl-csd-summer-day2:
-          lessons: {}
-          lesson_groups: {}
+          lessons:
+            lesson-1:
+              name: Intro to Day 2
+            lesson-2:
+              name: Unit 2 Connections
+            lesson-3:
+              name: 'Unit 3 Curriculum Investigation: Shapes & Variables'
+            lesson-4:
+              name: 'Model Lesson 3: U3L3 Drawing in Game Lab'
+            lesson-5:
+              name: Intro to Async
+            lesson-6:
+              name: Asynchronous Work
+            lesson-7:
+              name: Async Debrief
+            lesson-8:
+              name: 'Model Lesson 4: U3L5 Variables'
+            lesson-9:
+              name: 'Lesson Planning: Make a Plan'
+            lesson-10:
+              name: Wrap Up
+            lesson-11:
+              name: Asynchronous Work
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchronous Part 1
+            lessonGroup-3:
+              display_name: Asynchronous Part 1
+            lessonGroup-4:
+              display_name: Synchronous Part 2
+            lessonGroup-5:
+              display_name: Asynchronous Part 2
+          name: virtual-pl-csd-summer-day2
+          title: Day 2
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
         virtual-pl-csd-summer-day3:
-          lessons: {}
-          lesson_groups: {}
+          lessons:
+            lesson-1:
+              name: Intro to Day 3
+            lesson-2:
+              name: Being a Lead Learner
+            lesson-3:
+              name: 'Unit 3 Curriculum Investigation: Sprites'
+            lesson-4:
+              name: 'TLO 1: U3L6 Rnadom Numbers'
+            lesson-5:
+              name: Intro to Async
+            lesson-6:
+              name: Asynchronous Work
+            lesson-7:
+              name: Async Debrief
+            lesson-8:
+              name: 'TLO 2: U3L8 Sprites'
+            lesson-9:
+              name: Unit 3 Connections
+            lesson-10:
+              name: 'TLO 3: U4L3 User-Centered Design Define & Prepare'
+            lesson-11:
+              name: Classroom Culture
+            lesson-12:
+              name: Wrap Up
+            lesson-13:
+              name: Asynchronous Work
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchronous Part 1
+            lessonGroup-3:
+              display_name: Asynchronous Part 1
+            lessonGroup-4:
+              display_name: Synchronous Part 2
+            lessonGroup-5:
+              display_name: Asynchronous Part 2
+          name: virtual-pl-csd-summer-day3
+          title: Day 3
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
         virtual-pl-csd-summer-day4:
-          lessons: {}
-          lesson_groups: {}
+          lessons:
+            lesson-1:
+              name: Intro to Day 4
+            lesson-2:
+              name: Intro to Unit 5
+            lesson-3:
+              name: 'TLO 4: U5L1 Representation Matters'
+            lesson-4:
+              name: Intro to Unit 6
+            lesson-5:
+              name: 'TLO 5: U6L2 Physical Designs'
+            lesson-6:
+              name: Intro to Async
+            lesson-7:
+              name: Asynchronous Work
+            lesson-8:
+              name: Async Debrief
+            lesson-9:
+              name: Intro to Unit 7
+            lesson-10:
+              name: 'TLO 6: U7L2 Introduction to Machine Learning'
+            lesson-11:
+              name: Barriers, Opportunities, and Commitments
+            lesson-12:
+              name: Differentiation
+            lesson-13:
+              name: Wrap Up
+            lesson-14:
+              name: Asynchronous Work
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchronous Part 1
+            lessonGroup-3:
+              display_name: Asynchronous Part 1
+            lessonGroup-4:
+              display_name: Synchronous Part 2
+            lessonGroup-5:
+              display_name: Asynchronous Part 2
+          name: virtual-pl-csd-summer-day4
+          title: Day 4
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
         virtual-pl-csd-summer-day5:
-          lessons: {}
-          lesson_groups: {}
+          lessons:
+            lesson-1:
+              name: Intro to Day 5
+            lesson-9:
+              name: Preparing for the Year
+            lesson-3:
+              name: Assessment
+            lesson-4:
+              name: Revisiting Topics from the Week
+            lesson-5:
+              name: Previewing Academic Year Workshops
+            lesson-6:
+              name: Intro to Async
+            lesson-7:
+              name: Asynchronous Work
+            lesson-8:
+              name: Async Debrief
+            lesson-2:
+              name: Planning for the Year
+            lesson-10:
+              name: Closing Ceremonies
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchronous Part 1
+            lessonGroup-3:
+              display_name: Asynchronous Part 1
+            lessonGroup-4:
+              display_name: Synchronous Part 2
+          name: virtual-pl-csd-summer-day5
+          title: Day 5
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
         self-paced-pl-microbit1:
           lessons: {}
           lesson_groups:
@@ -11197,3 +11406,204 @@ en:
           description_short: ''
           description: This unit contains the Post-Course Survey. This unit can be assigned after students complete their final unit in this course.
           student_description: ''
+        coursef-2023:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digital Citizenship
+            lessonGroup-3:
+              display_name: Sprites
+            lessonGroup-4:
+              display_name: Variables
+            lessonGroup-5:
+              display_name: Data and Simulations
+            lessonGroup-6:
+              display_name: End of Course Project
+          name: coursef-2023
+          title: Course F (2023)
+          description_audience: 'Ages: 9-13'
+          description_short: Learn all the concepts in Computer Science Fundamentals and create your own art, story or game.
+          description: We created Course F for students in the fifth grade. The course begins by looking at how users make choices in the apps they use. Students then learn to make a variety of Sprite Lab apps that also offer choices for the user. In the later lessons in the course, students will learn about variables in a variety of contexts. Students are given greater autonomy and more choices throughout this course. By the end of the course, students will have created interactive projects to share with their friends and family.
+          student_description: Learn to code with sprites and variables, and discuss societal impacts of computing and the internet. By the end of this course, design and create a project you can share with friends and family.
+        ey-ecosystems:
+          lessons: {}
+          lesson_groups: {}
+          name: ey-ecosystems
+          title: EY Ecosystems (Preview)
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        self-paced-pl-csp1-2023:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-csp1-2023
+          title: 'Module 1: Welcome'
+          description_audience: ''
+          description_short: ''
+          description: "This module is a short introduction to both Code.org and professional learning modules. \n\n**You will:**\n\n-   Get an introduction to Code.org and CS Principles.\n-   Learn how to engage in professional learning modules.\n\n**Suggested Time:** 10 minutes"
+          student_description: "This module is a short introduction to both Code.org and professional learning modules. \n\n**You will:**\n\n-   Get an introduction to Code.org and CS Principles.\n-   Learn how to engage in professional learning modules.\n\n**Suggested Time:** 10 minutes"
+        self-paced-pl-csp2-2023:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-csp2-2023
+          title: 'Module 2: Navigating Code.org'
+          description_audience: ''
+          description_short: ''
+          description: "This module is designed to orient you to the tools you will use to support student learning while teaching CS Principles. \n\n**You will:**\n\n-   Navigate the Code.org website and teacher tools.\n-   Set up a classroom section\n-   Locate and use course lesson plans and teacher resources. \n-   Learn how to access support while teaching the course.\n\n**Suggested time:** 60 minutes"
+          student_description: "This module is designed to orient you to the tools you will use to support student learning while teaching CS Principles. \n\n**You will:**\n\n-   Navigate the Code.org website and teacher tools.\n-   Set up a classroom section\n-   Locate and use course lesson plans and teacher resources. \n-   Learn how to access support while teaching the course.\n\n**Suggested time:** 60 minutes"
+        self-paced-pl-csp3-2023:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-csp3-2023
+          title: Overview of CS Principles
+          description_audience: ''
+          description_short: ''
+          description: |-
+            This module will provide you with an overview of the CS Principles course with an emphasis on concepts students will learn and tools students will use throughout the course. Engaging in this module will help you to make decisions about how to select the course content that you will implement in your classroom.
+
+            **You will**:
+
+            -   Gain a high-level understanding of the CS Principles curriculum.
+            -   Learn more about the pedagogical approaches used to teach both non-programming and programming units.
+            -   Become familiar with the student learning tools used within CS Principles.
+            -   Explore the components of the AP Exam, as well as your responsibilities as a teacher if you plan to offer CS Principles as an AP course.
+            -   Build an implementation plan for the school year.
+
+            **Suggested time**: 90 minutes
+          student_description: |-
+            This module will provide you with an overview of the CS Principles course with an emphasis on concepts students will learn and tools students will use throughout the course. Engaging in this module will help you to make decisions about how to select the course content that you will implement in your classroom.
+
+            **You will**:
+
+            -   Gain a high-level understanding of the CS Principles curriculum.
+            -   Learn more about the pedagogical approaches used to teach both non-programming and programming units.
+            -   Become familiar with the student learning tools used within CS Principles.
+            -   Explore the components of the AP Exam, as well as your responsibilities as a teacher if you plan to offer CS Principles as an AP course.
+            -   Build an implementation plan for the school year.
+
+            **Suggested time**: 90 minutes
+        self-paced-pl-csp4-2023:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-csp4-2023
+          title: Teaching and learning CS Principles
+          description_audience: ''
+          description_short: ''
+          description: |-
+            In this module, you will be introduced to authentic CS practices that students will engage with throughout the CS Principles course. These practices include debugging, using resources, and pair programming. You will also explore the role of the teacher within a CS Principles classroom and make a plan for how you will support student learning while teaching the course.
+
+            **You will**:
+
+            -   Consider the role of the teacher in a CS Principles classroom.
+            -   Learn about authentic CS practices that students will develop throughout the CS Principles course.
+            -   Make a plan for how you will support student learning through differentiation, ongoing assessment, and promoting a culture of inclusion.
+            -   Learn about opportunities to connect with the broader CS community.
+
+            **Suggested Time**: 70 minutes
+          student_description: |-
+            In this module, you will be introduced to authentic CS practices that students will engage with throughout the CS Principles course. These practices include debugging, using resources, and pair programming. You will also explore the role of the teacher within a CS Principles classroom and make a plan for how you will support student learning while teaching the course.
+
+            **You will**:
+
+            -   Consider the role of the teacher in a CS Principles classroom.
+            -   Learn about authentic CS practices that students will develop throughout the CS Principles course.
+            -   Make a plan for how you will support student learning through differentiation, ongoing assessment, and promoting a culture of inclusion.
+            -   Learn about opportunities to connect with the broader CS community.
+
+            **Suggested Time**: 70 minutes
+        musiclab:
+          lessons:
+            lesson-1:
+              name: Remix Projects
+          lesson_groups: {}
+          name: musiclab
+          title: Music Lab Test Lessons
+          description_audience: ''
+          description_short: ''
+          description: |-
+            Hi there! This is a special unit that Code.org uses for testing Music Lab. None of the lessons or levels in this unit are meant to be used in classrooms!
+
+            If you're not a code.org engineer but managed to discover this unit: congratulations! It's like you discovered a secret on our website! But if you're looking for more info about our curricula or tools, we recommend checking out <https://code.org/educate/> instead.
+          student_description: ''
+        csa-software-engineering:
+          lessons:
+            lesson-1:
+              name: Intro to GitHub
+            lesson-2:
+              name: Intro to Copilot
+            lesson-3:
+              name: Build with Copilot
+            lesson-4:
+              name: Intro to AI Models
+            lesson-5:
+              name: Training Your Model
+            lesson-6:
+              name: Using Your Model
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Chapter 1: GitHub and Copilot'
+            lessonGroup-3:
+              display_name: 'Chapter 2: Computer Vision'
+          name: csa-software-engineering
+          title: Software Engineering & Computer Vision
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csa-frq-practice:
+          lessons:
+            lesson-1:
+              name: Frog Simultation
+            lesson-2:
+              name: Delimiters
+            lesson-3:
+              name: APCalendar
+            lesson-4:
+              name: StepTracker
+            lesson-5:
+              name: LightBoard
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Methods and Control Structures
+            lessonGroup-3:
+              display_name: Classes
+            lessonGroup-4:
+              display_name: Arrays / ArrayLists
+            lessonGroup-5:
+              display_name: 2D Arrays
+          name: csa-frq-practice
+          title: CSA FRQ Practice 2019
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        hoc-amazon-poc:
+          lessons:
+            lesson-1:
+              name: Hour of Code Progression
+            lesson-2:
+              name: Hour of Career Exploration Progression
+          lesson_groups: {}
+          name: hoc-amazon-poc
+          title: Hour of Code (PoC)
+          description_audience: ''
+          description_short: ''
+          description: |-
+            Proof-of-concept for HoC progression with Amazon Career Tours included.
+
+            First "lesson" is the HoC progression ([like what we typically have here][0])
+
+            Second "lesson" is the "post-roll" where students can continue into the "Hour of Career" if they want
+          student_description: ''
+        musiclab-2023:
+          lessons:
+            lesson-1:
+              name: Music Lab
+          lesson_groups: {}
+          name: musiclab-2023
+          title: Music Lab
+          description_audience: ''
+          description_short: Code your own version of a song to share or perform!
+          description: Code your own version of a song to share or perform!
+          student_description: Code your own version of a song to share or perform!

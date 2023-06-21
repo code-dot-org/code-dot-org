@@ -19,6 +19,18 @@
         },
         "iste": {
           "name": "Standard ISTE untuk Pelajar"
+        },
+        "c3ss": {
+          "name": "Piawaian Pengajian Sosial C3"
+        },
+        "ngss": {
+          "name": "Piawaian Sains Generasi Seterusnya"
+        },
+        "csa": {
+          "name": "Rangka Kerja Konseptual CSA"
+        },
+        "ai4k12-2021": {
+          "name": "Garis Panduan Kebangsaan AI4K12 2021"
         }
       }
     }

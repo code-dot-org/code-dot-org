@@ -41,6 +41,9 @@
         "ai-training/oceans/unversioned": {
           "type": "Βίντεο"
         },
+        "all_standards/coursed/2022": {
+          "name": "Όλα τα Πρότυπα"
+        },
         "curriculum_guide/coursed/2022": {
           "name": "Οδηγός Προγράμματος"
         },
@@ -115,6 +118,9 @@
         "csf_course_d_end_of_course_project_planning_guide/coursed/2022": {
           "type": "Οδηγός Προγράμματος"
         },
+        "all_standards/coursef/2022": {
+          "name": "Όλα τα Πρότυπα"
+        },
         "curriculum_guide/coursef/2022": {
           "name": "Οδηγός Προγράμματος"
         },
@@ -156,6 +162,9 @@
         "cs_fundamentals_final_project/coursef/2022": {
           "type": "Κατάλογος"
         },
+        "all_standards/coursee/2022": {
+          "name": "Όλα τα Πρότυπα"
+        },
         "curriculum_guide/coursee/2022": {
           "name": "Οδηγός Προγράμματος"
         },
@@ -180,6 +189,16 @@
         "cs_fundamentals_final_project/coursee/2022": {
           "type": "Κατάλογος"
         },
+        "all_resources/courseb/2022": {
+          "url": "/s/courseb-2022/vocab"
+        },
+        "all_standards/courseb/2022": {
+          "name": "Όλα τα Πρότυπα",
+          "url": "/s/courseb-2022/vocab"
+        },
+        "all_vocabulary/courseb/2022": {
+          "url": "/s/courseb-2022/vocab"
+        },
         "curriculum_guide/courseb/2022": {
           "name": "Οδηγός Προγράμματος"
         },
@@ -188,6 +207,9 @@
         },
         "teacher_forum/courseb/2022": {
           "name": "Φόρουμ Καθηγητών"
+        },
+        "virtual_lesson_modifications/courseb/2022": {
+          "url": "https://docs.google.com/document/d/1lB1bXzIatKSSWLDLsLnRPXgoKR7Q-YzDQ1ClM0OcurU/view"
         },
         "move_it_move_it/courseb/2022": {
           "name": "Μετακίνησέ το, Μετακίνησέ το"
@@ -200,6 +222,9 @@
         },
         "move_it_move_it_3/courseb/2022": {
           "name": "Κούνισέ το, Κούνισέ το"
+        },
+        "how_to_make_a_class_section_on_code_org/courseb/2022": {
+          "url": "https://youtu.be/4Wugxc80fNU"
         },
         "pair_programming/courseb/2022": {
           "name": "Προγραμματισμός κατά ζεύγη"
@@ -240,6 +265,9 @@
         "the_big_event_2/courseb/2022": {
           "name": "Το Μεγάλο Γεγονός"
         },
+        "all_standards/express/2022": {
+          "name": "Όλα τα Πρότυπα"
+        },
         "teacher_forum/express/2022": {
           "name": "Φόρουμ Καθηγητών"
         },
@@ -277,6 +305,9 @@
         "csf_express_end_of_course_project_planning_guide/express/2022": {
           "type": "Οδηγός Προγράμματος"
         },
+        "all_standards/pre-express/2022": {
+          "name": "Όλα τα Πρότυπα"
+        },
         "teacher_forum/pre-express/2022": {
           "name": "Φόρουμ Καθηγητών"
         },
@@ -292,6 +323,12 @@
         "pause_and_think_online/pre-express/2022": {
           "type": "Βίντεο"
         },
+        "all_resources/coursea/2022": {
+          "name": "Προβολή Πόρων"
+        },
+        "all_standards/coursea/2022": {
+          "name": "Όλα τα Πρότυπα"
+        },
         "curriculum_guide/coursea/2022": {
           "name": "Οδηγός Προγράμματος"
         },
@@ -300,6 +337,9 @@
         },
         "teacher_forum/coursea/2022": {
           "name": "Φόρουμ Καθηγητών"
+        },
+        "virtual_lesson_modifications/coursea/2022": {
+          "url": "https://docs.google.com/document/d/1yaXgv2_aX3vMhK1HAZbaSu1Cg3yKD4HgfqRu4_pGtYY/view"
         },
         "getting_started_-_creating_a_class_section/coursea/2022": {
           "type": "Βίντεο"
@@ -334,6 +374,9 @@
         },
         "the_big_event_2/coursea/2022": {
           "name": "Το Μεγάλο Γεγονός"
+        },
+        "all_standards/coursec/2022": {
+          "name": "Όλα τα Πρότυπα"
         },
         "curriculum_guide/coursec/2022": {
           "name": "Οδηγός Προγράμματος"
@@ -395,6 +438,9 @@
         "teacher_forum/csd/2022": {
           "name": "Φόρουμ Καθηγητών"
         },
+        "all_standards_3/csd/2022": {
+          "name": "Όλα τα Πρότυπα"
+        },
         "representing_images/csd/2022": {
           "name": "Αναπαριστώντας Εικόνες"
         },
@@ -443,11 +489,23 @@
         "make_a_recommendation_2/csd/2022": {
           "type": "Οδηγός Προγράμματος"
         },
+        "all_standards_5/csd/2022": {
+          "name": "Όλα τα Πρότυπα"
+        },
         "problem_solving_process_1/csd/2022": {
           "type": "Βίντεο"
         },
+        "the_problem_solving_process/csd/2022": {
+          "name": "Η Διαδικασία Επίλυσης Προβλημάτων"
+        },
+        "the_problem_solving_process_1/csd/2022": {
+          "name": "Η Διαδικασία Επίλυσης Προβλημάτων"
+        },
         "what_is_a_computer/csd/2022": {
           "type": "Βίντεο"
+        },
+        "what_is_a_computer_/csd/2022": {
+          "name": "Τι είναι ένας υπολογιστής;"
         },
         "what_do_computers_do/csd/2022": {
           "type": "Βίντεο"
@@ -457,6 +515,9 @@
         },
         "apps_and_problem_solving_2/csd/2022": {
           "type": "Κατάλογος"
+        },
+        "all_standards_1/csd/2022": {
+          "name": "Όλα τα Πρότυπα"
         },
         "drawing_in_game_lab_-_part_1/csd/2022": {
           "type": "Βίντεο"
@@ -597,6 +658,9 @@
         "make_your_own_game_3/csd/2022": {
           "type": "Κατάλογος"
         },
+        "all_standards/csd/2022": {
+          "name": "Όλα τα Πρότυπα"
+        },
         "intro_to_web_lab_part_2/csd/2022": {
           "type": "Βίντεο"
         },
@@ -704,6 +768,9 @@
         "website_for_a_purpose_1/csd/2022": {
           "type": "Επανεξέταση Συνομηλίκου"
         },
+        "all_standards_2/csd/2022": {
+          "name": "Όλα τα Πρότυπα"
+        },
         "the_design_thinking_process/csd/2022": {
           "type": "Βίντεο"
         },
@@ -724,6 +791,9 @@
         },
         "app_presentation/csd/2022": {
           "type": "Κατάλογος"
+        },
+        "all_standards_6/csd/2022": {
+          "name": "Όλα τα Πρότυπα"
         },
         "computer_science_is_changing_everything/csd/2022": {
           "name": "H Επιστήμη των Υπολογιστών αλλάζει τα Πάντα",
@@ -773,6 +843,7 @@
           "name": "Γεγονότα Επιταχυνσιόμετρου"
         },
         "introduction_to_arrays/csd/2022": {
+          "name": "Εισαγωγή στις συστοιχίες",
           "type": "Βίντεο"
         },
         "playing_notes/csd/2022": {
@@ -798,6 +869,9 @@
         "prototype_an_innovation/csd/2022": {
           "type": "Κατάλογος"
         },
+        "all_standards_4/csd/2022": {
+          "name": "Όλα τα Πρότυπα"
+        },
         "ai_what_is_machine_learning_/csd/2022": {
           "type": "Βίντεο"
         },
@@ -808,22 +882,35 @@
         "finding_patterns_in_data/csd/2022": {
           "type": "Βίντεο"
         },
+        "introduction_to_ai_lab/csd/2022": {
+          "name": "Εισαγωγή στο Εργαστήριο Τεχνητής Νοημοσύνης"
+        },
         "introduction_to_ai_lab_1/csd/2022": {
+          "name": "Εισαγωγή στο Εργαστήριο Τεχνητής Νοημοσύνης",
           "type": "Βίντεο"
         },
         "training_and_testing_in_ai_lab/csd/2022": {
+          "name": "Εκπαίδευση και Δοκιμές στο Εργαστήριο Τεχνητής Νοημοσύνης",
           "type": "Βίντεο"
         },
         "ai_training_data_bias/csd/2022": {
           "type": "Βίντεο"
         },
         "model_cards_in_ai_lab/csd/2022": {
+          "name": "Κάρτες Μοντέλων στο Εργαστήριο Τεχνητής Νοημοσύνης",
           "type": "Βίντεο"
         },
         "if-statements_in_app_lab/csd/2022": {
           "type": "Βίντεο"
         },
+        "numerical_data_in_ai_lab/csd/2022": {
+          "name": "Αριθμητικά δεδομένα στο Εργαστήριο Τεχνητής Νοημοσύνης"
+        },
+        "numerical_data_in_ai_lab_1/csd/2022": {
+          "name": "Αριθμητικά δεδομένα στο Εργαστήριο Τεχνητής Νοημοσύνης"
+        },
         "numerical_data_in_ai_lab_2/csd/2022": {
+          "name": "Αριθμητικά δεδομένα στο Εργαστήριο Τεχνητής Νοημοσύνης",
           "type": "Βίντεο"
         },
         "ethics_ai_equal_access_and_algorithmic_bias/csd/2022": {
@@ -863,7 +950,8 @@
           "name": "Τυπική Αποτύπωση"
         },
         "teacher_forum/coursea/2018": {
-          "name": "Φόρουμ Καθηγητών"
+          "name": "Φόρουμ Καθηγητών",
+          "url": "http://forum.code.org/c/csf/"
         },
         "vocabulary/coursea/2018": {
           "name": "Λεξιλόγιο"
@@ -1022,7 +1110,8 @@
           "name": "Τυπική Αποτύπωση"
         },
         "teacher_forum/coursea/2019": {
-          "name": "Φόρουμ Καθηγητών"
+          "name": "Φόρουμ Καθηγητών",
+          "url": "http://forum.code.org/c/csf/"
         },
         "vocabulary/coursea/2019": {
           "name": "Λεξιλόγιο"
@@ -1664,6 +1753,9 @@
         "rubric-csf-final-projects/coursee/2021": {
           "type": "Κατάλογος"
         },
+        "all_standards_7/csd/2021": {
+          "name": "Όλα τα Πρότυπα"
+        },
         "ai_what_is_machine_learning_/csd/2021": {
           "type": "Βίντεο"
         },
@@ -1674,22 +1766,35 @@
         "finding_patterns_in_data/csd/2021": {
           "type": "Βίντεο"
         },
+        "introduction_to_ai_lab/csd/2021": {
+          "name": "Εισαγωγή στο Εργαστήριο Τεχνητής Νοημοσύνης"
+        },
         "introduction_to_ai_lab_1/csd/2021": {
+          "name": "Εισαγωγή στο Εργαστήριο Τεχνητής Νοημοσύνης",
           "type": "Βίντεο"
         },
         "training_and_testing_in_ai_lab/csd/2021": {
+          "name": "Εκπαίδευση και Δοκιμές στο Εργαστήριο Τεχνητής Νοημοσύνης",
           "type": "Βίντεο"
         },
         "ai_training_data_bias/csd/2021": {
           "type": "Βίντεο"
         },
         "model_cards_in_ai_lab/csd/2021": {
+          "name": "Κάρτες Μοντέλων στο Εργαστήριο Τεχνητής Νοημοσύνης",
           "type": "Βίντεο"
         },
         "if-statements_in_app_lab/csd/2021": {
           "type": "Βίντεο"
         },
+        "numerical_data_in_ai_lab/csd/2021": {
+          "name": "Αριθμητικά δεδομένα στο Εργαστήριο Τεχνητής Νοημοσύνης"
+        },
+        "numerical_data_in_ai_lab_1/csd/2021": {
+          "name": "Αριθμητικά δεδομένα στο Εργαστήριο Τεχνητής Νοημοσύνης"
+        },
         "numerical_data_in_ai_lab_2/csd/2021": {
+          "name": "Αριθμητικά δεδομένα στο Εργαστήριο Τεχνητής Νοημοσύνης",
           "type": "Βίντεο"
         },
         "ethics_ai_equal_access_and_algorithmic_bias/csd/2021": {
@@ -1709,6 +1814,9 @@
         },
         "teacher_forum/csd/2021": {
           "name": "Φόρουμ Καθηγητών"
+        },
+        "all_standards_4/csd/2021": {
+          "name": "Όλα τα Πρότυπα"
         },
         "the-design-thinking-process/csd/2021": {
           "type": "Βίντεο"
@@ -1733,6 +1841,9 @@
         },
         "app-presentation/csd/2021": {
           "type": "Κατάλογος"
+        },
+        "all_standards_6/csd/2021": {
+          "name": "Όλα τα Πρότυπα"
         },
         "internet-of-things-video/csd/2021": {
           "type": "Βίντεο"
@@ -1764,6 +1875,7 @@
           "type": "Κατάλογος"
         },
         "introduction_to_arrays/csd/2021": {
+          "name": "Εισαγωγή στις συστοιχίες",
           "type": "Βίντεο"
         },
         "playing_notes/csd/2021": {
@@ -1791,6 +1903,9 @@
         },
         "planning-your-innovation/csd/2021": {
           "type": "Οδηγός Προγράμματος"
+        },
+        "all_standards_5/csd/2021": {
+          "name": "Όλα τα Πρότυπα"
         },
         "how-computers-work-data-and-binary/csd/2021": {
           "type": "Βίντεο"
@@ -1830,6 +1945,9 @@
         },
         "teacher_forum_1/csd/2021": {
           "name": "Φόρουμ Καθηγητών"
+        },
+        "all_standards_2/csd/2021": {
+          "name": "Όλα τα Πρότυπα"
         },
         "drawing_in_game_lab_-_part_1/csd/2021": {
           "type": "Βίντεο"
@@ -1943,6 +2061,12 @@
         "problem-solving-process-1/csd/2021": {
           "type": "Βίντεο"
         },
+        "the-problem-solving-process/csd/2021": {
+          "name": "Η Διαδικασία Επίλυσης Προβλημάτων"
+        },
+        "what-is-a-computer-2020/csd/2021": {
+          "name": "Τι είναι ένας υπολογιστής;"
+        },
         "what-is-a-computer-1-2-3/csd/2021": {
           "type": "Βίντεο"
         },
@@ -1954,6 +2078,9 @@
         },
         "apps_and_problem_solving/csd/2021": {
           "type": "Κατάλογος"
+        },
+        "all_standards_3/csd/2021": {
+          "name": "Όλα τα Πρότυπα"
         },
         "intro_to_web_lab_part_2/csd/2021": {
           "type": "Βίντεο"
@@ -2144,16 +2271,20 @@
           "name": "Οδηγός Προγράμματος"
         },
         "lesson_plans/coursea/2020": {
-          "name": "Σχέδια μαθήματος"
+          "name": "Σχέδια μαθήματος",
+          "url": "https://curriculum.code.org/csf-20/coursea/"
         },
         "standard_mappings/coursea/2020": {
-          "name": "Τυπική Αποτύπωση"
+          "name": "Τυπική Αποτύπωση",
+          "url": "https://curriculum.code.org/csf-20/coursea/standards/"
         },
         "teacher_forum/coursea/2020": {
-          "name": "Φόρουμ Καθηγητών"
+          "name": "Φόρουμ Καθηγητών",
+          "url": "http://forum.code.org/c/csf/"
         },
         "vocabulary/coursea/2020": {
-          "name": "Λεξιλόγιο"
+          "name": "Λεξιλόγιο",
+          "url": "https://curriculum.code.org/csf-20/coursea/vocab/"
         },
         "curriculum_guide/coursef/2020": {
           "name": "Οδηγός Προγράμματος"
