@@ -51,9 +51,7 @@ def main
     POSTE_DB[:poste_deliveries].where(sent_at: nil).limit(BATCH_SIZE).reverse_order(:id).each {|i| results << i}
   end
 
-  queue_count = queue.length
-
-  worker_count = [[queue_count / MIN_MESSAGES_PER_THREAD, MAX_THREAD_COUNT].min, 1].max
+  worker_count = (queue.length / MIN_MESSAGES_PER_THREAD).clamp(1, MAX_THREAD_COUNT)
 
   workers = create_threads(worker_count) do
     deliverer = Deliverer.new SMTP_OPTIONS
