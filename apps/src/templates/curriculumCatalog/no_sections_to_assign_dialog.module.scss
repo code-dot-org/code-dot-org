@@ -1,10 +1,12 @@
+@import "color.scss";
+
 .dialogContainer {
   height: 18rem;
   display: flex;
   flex-flow: column;
 
   hr {
-    border: 1px solid #000;
+    border: 1px solid $neutral_dark;
     margin: 1rem 0;
   }
 
