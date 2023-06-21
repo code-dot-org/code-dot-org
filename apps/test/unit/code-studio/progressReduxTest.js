@@ -7,23 +7,26 @@ import {PUZZLE_PAGE_NONE} from '@cdo/apps/templates/progress/progressTypes';
 import {getLevelResult} from '@cdo/apps/templates/progress/progressHelpers';
 import reducer, {
   initProgress,
-  isPerfect,
   mergeResults,
   mergePeerReviewProgress,
   disablePostMilestone,
   setIsAge13Required,
   setIsSummaryView,
   setStudentDefaultsSummaryView,
+  setCurrentLessonId,
+  setLessonExtrasEnabled,
+  processedLessons,
+  __testonly__,
+} from '@cdo/apps/code-studio/progressRedux';
+import {
+  isPerfect,
   levelsByLesson,
   levelsForLessonId,
   progressionsFromLevels,
   groupedLessons,
-  processedLessons,
-  setCurrentLessonId,
   lessonExtrasUrl,
-  setLessonExtrasEnabled,
-  __testonly__,
-} from '@cdo/apps/code-studio/progressRedux';
+  __testonly__ as __testonly__selectors,
+} from '@cdo/apps/code-studio/progressReduxSelectors';
 
 // This is some sample lesson data taken from a course. I truncated to the first two
 // lessons, and also truncated the second lesson to the first 3 levels
@@ -1170,7 +1173,7 @@ describe('progressReduxTest', () => {
   });
 
   describe('peerReviewLesson', () => {
-    const {peerReviewLesson, PEER_REVIEW_ID} = __testonly__;
+    const {peerReviewLesson, PEER_REVIEW_ID} = __testonly__selectors;
     it('extracts lesson data from our peerReviewLessonInfo', () => {
       const state = {
         peerReviewLessonInfo: {
@@ -1189,7 +1192,7 @@ describe('progressReduxTest', () => {
   });
 
   describe('peerReviewLevels', () => {
-    const {peerReviewLevels, PEER_REVIEW_ID} = __testonly__;
+    const {peerReviewLevels, PEER_REVIEW_ID} = __testonly__selectors;
 
     it('sets icon to locked when locked', () => {
       const state = {

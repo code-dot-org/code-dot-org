@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "ai-temp",
-    "serialized_at": "2023-06-07 19:05:45 UTC",
+    "serialized_at": "2023-06-21 00:37:38 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -44,7 +44,7 @@
       "relative_position": 1,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "In this lesson students are introduced to a form of artificial intelligence called machine learning and how they can use the Problem Solving Process to help train a robot to solve problems. They participate in three machine learning activities where a robot - A.I. Bot - is learning how to detect patterns in fish.\n\n**Question of the Day:** How can we use the Problem Solving Process to solve a problem with machine learning?",
+        "overview": "In this lesson students are introduced to a form of artificial intelligence called machine learning and how they can use the Problem Solving Process to help train a robot to solve problems. They participate in three machine learning activities where a robot - A.I. Bot - is learning how to detect patterns in fish.",
         "preparation": "- Review the Code Studio levels before the lesson\n- Print copies of the activity guide for each student\n",
         "student_overview": "Learn the basics of machine learning by helping AI Bot recognize fish to clean up the ocean"
       },
@@ -250,8 +250,21 @@
       }
     },
     {
-      "key": "38e8af92-a111-42f5-9b93-c723bd2f53c5",
+      "key": "05eb47de-456c-419b-9582-ad9e3bd96cf0",
       "position": 1,
+      "properties": {
+        "name": "Before the Lesson"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "05eb47de-456c-419b-9582-ad9e3bd96cf0",
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "ai-temp"
+      }
+    },
+    {
+      "key": "38e8af92-a111-42f5-9b93-c723bd2f53c5",
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -265,7 +278,7 @@
     },
     {
       "key": "c24958df-e546-4f72-ba8a-69016a87f2ec",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -279,7 +292,7 @@
     },
     {
       "key": "0601474b-ca09-4996-8160-e880e4cec3e8",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap up"
@@ -293,7 +306,7 @@
     },
     {
       "key": "aec17932-137c-4f4a-940c-e6941ec16520",
-      "position": 4,
+      "position": 5,
       "properties": {
         "name": "After the Lesson"
       },
@@ -305,8 +318,21 @@
       }
     },
     {
-      "key": "2163c9b7-5c05-47f2-83d4-c2c661c403c5",
+      "key": "24bfa56d-5599-4ce8-8aa1-dabe66fb74fe",
       "position": 1,
+      "properties": {
+        "name": "Before the Lesson"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "24bfa56d-5599-4ce8-8aa1-dabe66fb74fe",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "ai-temp"
+      }
+    },
+    {
+      "key": "2163c9b7-5c05-47f2-83d4-c2c661c403c5",
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -320,7 +346,7 @@
     },
     {
       "key": "3323ec44-0af2-4774-af32-a514bf1a0a98",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 35,
         "name": "Neural Networks"
@@ -334,7 +360,7 @@
     },
     {
       "key": "2c9800f3-b947-4bb7-b6dc-937b21089d1b",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -348,7 +374,7 @@
     },
     {
       "key": "2ed99f0b-e801-4301-908f-ae6867b9c3a4",
-      "position": 4,
+      "position": 5,
       "properties": {
         "name": "After the Lesson"
       },
@@ -360,8 +386,21 @@
       }
     },
     {
-      "key": "82731c6b-052b-425a-aad4-62f85474fd23",
+      "key": "47bb249e-238c-4066-8f67-2c4dcc83c1c0",
       "position": 1,
+      "properties": {
+        "name": "Before the Lesson"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "47bb249e-238c-4066-8f67-2c4dcc83c1c0",
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "ai-temp"
+      }
+    },
+    {
+      "key": "82731c6b-052b-425a-aad4-62f85474fd23",
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -375,7 +414,7 @@
     },
     {
       "key": "7d7bc071-19f7-4859-84e6-f43bc77d4c3d",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -389,7 +428,7 @@
     },
     {
       "key": "c6f6081e-0e67-4413-a217-07ecfeca95f8",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -403,7 +442,7 @@
     },
     {
       "key": "969658e5-7a77-4157-8c32-47a88346b337",
-      "position": 4,
+      "position": 5,
       "properties": {
         "name": "After the Lesson"
       },
@@ -415,8 +454,21 @@
       }
     },
     {
-      "key": "858c1d42-cfee-4e41-b117-1bbda21d3b0a",
+      "key": "b3272a53-1420-4d7f-865b-a64bd1be1487",
       "position": 1,
+      "properties": {
+        "name": "Before the Lesson"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b3272a53-1420-4d7f-865b-a64bd1be1487",
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "ai-temp"
+      }
+    },
+    {
+      "key": "858c1d42-cfee-4e41-b117-1bbda21d3b0a",
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -430,7 +482,7 @@
     },
     {
       "key": "c20eb6d3-fb11-40ac-bf6c-c93e20e63a9a",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -444,7 +496,7 @@
     },
     {
       "key": "4f0baf9a-8b73-46de-8b73-292dff5cebfd",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap-up"
@@ -458,7 +510,7 @@
     },
     {
       "key": "702f37ad-a042-436d-8348-72465b590b99",
-      "position": 4,
+      "position": 5,
       "properties": {
         "name": "After the Lesson"
       },
@@ -470,8 +522,21 @@
       }
     },
     {
-      "key": "3bbd3bbf-aa1f-407f-be08-e40f71186cdd",
+      "key": "53465fbd-8636-46ac-9f11-e4b2a7bbc95e",
       "position": 1,
+      "properties": {
+        "name": "Before the Lesson"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "53465fbd-8636-46ac-9f11-e4b2a7bbc95e",
+        "lesson.key": "Algorithmic Bias",
+        "lesson_group.key": "",
+        "script.name": "ai-temp"
+      }
+    },
+    {
+      "key": "3bbd3bbf-aa1f-407f-be08-e40f71186cdd",
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -485,7 +550,7 @@
     },
     {
       "key": "047f12fd-1c43-475d-8395-211f58e1cdb0",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 30,
         "name": "Activity"
@@ -499,7 +564,7 @@
     },
     {
       "key": "672b41e0-8b3b-44d7-a904-aa6b84585145",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 10,
         "name": "Wrap Up"
@@ -513,7 +578,7 @@
     },
     {
       "key": "1a9dfbcf-3379-4148-a8bc-ee3435f19706",
-      "position": 4,
+      "position": 5,
       "properties": {
         "name": "After the Lesson"
       },
@@ -525,12 +590,13 @@
       }
     },
     {
-      "key": "f9fcde79-6b74-48fb-8de6-879d9508ac41",
+      "key": "2f27ce5e-ad78-47a0-ac1d-4289449ee5b8",
       "position": 1,
       "properties": {
+        "name": "Before the Lesson"
       },
       "seeding_key": {
-        "lesson_activity.key": "f9fcde79-6b74-48fb-8de6-879d9508ac41",
+        "lesson_activity.key": "2f27ce5e-ad78-47a0-ac1d-4289449ee5b8",
         "lesson.key": "Our AI Code of Ethics",
         "lesson_group.key": "",
         "script.name": "ai-temp"
@@ -708,7 +774,7 @@
       "key": "efe9075d-e60b-41ca-bbe6-32285a8acd06",
       "position": 1,
       "properties": {
-        "description": "**Getting Started with Code.org:** Consider watching our [Getting Started with Code.org](https://www.youtube.com/playlist?list=PLzdnOPI1iJNdX7P76yGw7YUM4Csm1ZZmM) video series for an overview of how to navigate lesson plans, setup a classroom section, and other important features of the Code.org platform. Each video also has a support article if you'd prefer to read or print instructions - [click here to learn more](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).\n\n**Setup a Classroom Section:** You can use a class section in Code.org to manage your students, view their progress, and assign specific curriculum - [click here to learn more](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section).\n\nIf you are using a learning management system, there may be additional steps to sync your classes with Code.org:\n\n- [Click here](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync) for steps to setup your classes with Google Classroom\n- [Click Here](https://support.code.org/hc/en-us/articles/115002716111-Setting-up-sections-with-Clever-sync) for steps to setup your classes with Clever\n\n**Become a Verified Teacher:** Lesson plans and levels have additional resources and answer keys for Verified Teachers, which is quick process that verifies your position at an educational institution. [Click here to complete a form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform) and you should have access to verified teacher resources in ~1 business day.\n\n**Get Inspired:** Consider watching our [Teacher Tips video playlist](https://www.youtube.com/playlist?list=PLzdnOPI1iJNcc7Q-PvUVqV249l2JzhJes), featuring current CS Discoveries teachers.\n\n**Technical Requirements:** For the very best experience with all Code.org content, we recommend consulting with your school or district's IT department to _ensure specific sites **are allowed** and **are not blocked**_. **[Click here to see a list of sites to unblock](https://code.org/educate/it)**. \n\nYou can also find mobile and tablet support details, hardware recommendation information such as minimum Internet connection speed, smallest screen size supported, and other hardware recommendations, as well as a list of supported browsers and platforms at the same [technical requirements website](https://code.org/educate/it). ",
+        "description": "**Getting Started with Code.org:** Consider watching our [Getting Started with Code.org](https://www.youtube.com/playlist?list=PLzdnOPI1iJNdX7P76yGw7YUM4Csm1ZZmM) video series for an overview of how to navigate lesson plans, setup a classroom section, and other important features of the Code.org platform. Each video also has a support article if you'd prefer to read or print instructions - [click here to learn more](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).\n\n**Setup a Classroom Section:** You can use a class section in Code.org to manage your students, view their progress, and assign specific curriculum - [click here to learn more](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section).\n\nIf you are using a learning management system, there may be additional steps to sync your classes with Code.org:\n\n- [Click here](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync) for steps to setup your classes with Google Classroom\n- [Click Here](https://support.code.org/hc/en-us/articles/115002716111-Setting-up-sections-with-Clever-sync) for steps to setup your classes with Clever\n\n**Become a Verified Teacher:** Lesson plans and levels have additional resources and answer keys for Verified Teachers, which is quick process that verifies your position at an educational institution. [Click here to complete a form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform) and you should have access to verified teacher resources in ~1 business day.",
         "name": "Preparing for the Unit"
       },
       "seeding_key": {
@@ -823,7 +889,7 @@
       "key": "0627a8ca-6cd8-41d2-a465-3deb65ab66b9",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the slide with the Problem Solving Process. Read through the additional lines that represent how the process connects to Machine Learning.\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Question of The Day:** How can we use the Problem Solving Process to solve a problem with machine learning?"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the slide with the Problem Solving Process. Read through the additional lines that represent how the process connects to Machine Learning."
       },
       "seeding_key": {
         "activity_section.key": "0627a8ca-6cd8-41d2-a465-3deb65ab66b9",
@@ -893,7 +959,7 @@
       "key": "35976cf9-0349-45f5-a866-8ee51c5b1e4a",
       "position": 5,
       "properties": {
-        "description": "**Training Screen:**\n\n- Informational text will frequently pop up on the screen. Consider asking students to read the prompts aloud to the class, possibly in their best robot voice, for a little fun\n- Ask students to use thumbs up / thumbs down to decide as a class whether something is a fish\n- At 30 images, the level will ask if you would like to continue or keep training. Ask students to help with this decision and follow their lead - either continue training, or go to the next screen.\n- Before continuing, have students record on their activity guide how many images they used to train A.I. Bot.\n\n**Testing Screen:**\n\n- A.I. Bot will probably misidentify a few objects. Make sure students notice this, and ask them to individually consider why they think this might be happening. This ties in to the discussion at the end of this level.\n\n**Evaluation Screen:**\n\n- Have students count the number of fish that it identified correctly. Record this on the activity guide.\n- It’s okay if A.I. Bot misidentifies some trash as fish - this sets the stage for the discussion.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** _If we wanted A.I. Bot to become better at recognizing fish, how do you think we could help it do that?_"
+        "description": "| Activity                           | As a Class                                                                                                                                                                      |\n| -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |\n| **Training Screen** ![](https://images.code.org/d5c6d852f32c09b038315b9c4b5a77f1-oceans1-sm.png) | <ul><li>Informational text will frequently pop up on the screen. Consider asking students to read the prompts aloud to the class, possibly in their best robot voice, for a little fun</li><li>Ask students to use thumbs up / thumbs down to decide as a class whether something is a fish</li><li>At 30 images, the level will ask if you would like to continue or keep training. Ask students to help with this decision and follow their lead - either continue training, or go to the next screen.</li><li>Before continuing, have students record on their activity guide how many images they </li></ul>|\n| **Testing Screen** ![](https://images.code.org/1c133d1ed2eb5f634fe0469aef40b4c6-oceans2-sm.png) | <ul><li>A.I. Bot will probably misidentify a few objects. Make sure students notice this, and ask them to individually consider why they think this might be happening. This ties in to the discussion at the end of this level.</li></ul> |\n| **Evaluation Screen** ![](https://images.code.org/418cdfba3b4181267a1713855a005bc6-oceans3-sm.png) |<ul><li>Have students count the number of fish that it identified correctly. Record this on the activity guide.</li><li>It’s okay if A.I. Bot misidentifies some trash as fish - this sets the stage for the discussion. </li></ul> |\n\n&nbsp;\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** _If we wanted A.I. Bot to become better at recognizing fish, how do you think we could help it do that?_"
       },
       "seeding_key": {
         "activity_section.key": "35976cf9-0349-45f5-a866-8ee51c5b1e4a",
@@ -944,7 +1010,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Activity Guides and Code Studio:** Students may struggle initially to keep track of information on their activity guide as they complete levels in Code Studio. One way to help students think about this is similar to being a scientist performing a lab experiment: they are performing an experiment in Code Studio, and keeping track of their results in their Activity Guide. This is a pattern that will continue throughout the unit, so this is a great opportunity to help students manage both the activity guide and Code Studio.\n\n"
+            "markdown": "**Activity Guides and Code Studio:** Students may struggle initially to keep track of information on their activity guide as they complete levels in Code Studio. One way to help students think about this is similar to being a scientist performing a lab experiment: they are performing an experiment in Code Studio, and keeping track of their results in their Activity Guide.\n\n"
           }
         ]
       },
@@ -1098,6 +1164,18 @@
       }
     },
     {
+      "key": "dcbcf9bb-8865-4af8-8046-e973665ad029",
+      "position": 1,
+      "properties": {
+        "description": "**Getting Started with Code.org:** Consider watching our [Getting Started with Code.org](https://www.youtube.com/playlist?list=PLzdnOPI1iJNdX7P76yGw7YUM4Csm1ZZmM) video series for an overview of how to navigate lesson plans, setup a classroom section, and other important features of the Code.org platform. Each video also has a support article if you'd prefer to read or print instructions - [click here to learn more](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).\n\n**Setup a Classroom Section:** You can use a class section in Code.org to manage your students, view their progress, and assign specific curriculum - [click here to learn more](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section).\n\nIf you are using a learning management system, there may be additional steps to sync your classes with Code.org:\n\n- [Click here](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync) for steps to setup your classes with Google Classroom\n- [Click Here](https://support.code.org/hc/en-us/articles/115002716111-Setting-up-sections-with-Clever-sync) for steps to setup your classes with Clever\n\n**Become a Verified Teacher:** Lesson plans and levels have additional resources and answer keys for Verified Teachers, which is quick process that verifies your position at an educational institution. [Click here to complete a form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform) and you should have access to verified teacher resources in ~1 business day.",
+        "name": "Preparing for the Unit"
+      },
+      "seeding_key": {
+        "activity_section.key": "dcbcf9bb-8865-4af8-8046-e973665ad029",
+        "lesson_activity.key": "05eb47de-456c-419b-9582-ad9e3bd96cf0"
+      }
+    },
+    {
       "key": "fb7de881-f681-4c9c-a91a-5eae1f835b25",
       "position": 1,
       "properties": {
@@ -1241,7 +1319,13 @@
       "position": 1,
       "properties": {
         "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the \n[r introduction_to_ai_how_computer_vision_works_1/ai-temp/unversioned]",
-        "name": "Image Recognition Algorithm"
+        "name": "Image Recognition Algorithm",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Videos are used throughout the curriculum to spark discussions, supplement key concepts with additional explanations and examples, and expose students to the various roles and backgrounds of individuals in computer science.\n\nWhile interacting with the video, turn on closed captioning so students can also read along as they watch.\n\nTo encourage active engagement and reflection, use one or more of the strategies discussed in the **[Guide to Curriculum Videos](https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view)**."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "b86e7b1a-f0ef-41ff-832f-b931a53abcd9",
@@ -1835,6 +1919,18 @@
       }
     },
     {
+      "key": "0ab0af2a-480c-4429-a7ab-71d1093c4c8f",
+      "position": 1,
+      "properties": {
+        "description": "**Getting Started with Code.org:** Consider watching our [Getting Started with Code.org](https://www.youtube.com/playlist?list=PLzdnOPI1iJNdX7P76yGw7YUM4Csm1ZZmM) video series for an overview of how to navigate lesson plans, setup a classroom section, and other important features of the Code.org platform. Each video also has a support article if you'd prefer to read or print instructions - [click here to learn more](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).\n\n**Setup a Classroom Section:** You can use a class section in Code.org to manage your students, view their progress, and assign specific curriculum - [click here to learn more](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section).\n\nIf you are using a learning management system, there may be additional steps to sync your classes with Code.org:\n\n- [Click here](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync) for steps to setup your classes with Google Classroom\n- [Click Here](https://support.code.org/hc/en-us/articles/115002716111-Setting-up-sections-with-Clever-sync) for steps to setup your classes with Clever\n\n**Become a Verified Teacher:** Lesson plans and levels have additional resources and answer keys for Verified Teachers, which is quick process that verifies your position at an educational institution. [Click here to complete a form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform) and you should have access to verified teacher resources in ~1 business day.",
+        "name": "Preparing for the Unit"
+      },
+      "seeding_key": {
+        "activity_section.key": "0ab0af2a-480c-4429-a7ab-71d1093c4c8f",
+        "lesson_activity.key": "24bfa56d-5599-4ce8-8aa1-dabe66fb74fe"
+      }
+    },
+    {
       "key": "5b589d1a-8bcf-4b2c-a6f7-f73bc3d8f09d",
       "position": 1,
       "properties": {
@@ -2157,7 +2253,13 @@
       "key": "02ee5958-fbb6-479d-899b-3064e6c63f3d",
       "position": 21,
       "properties": {
-        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the \n[r introduction_to_ai_how_neural_networks_work_1/ai-temp/unversioned]"
+        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the \n[r introduction_to_ai_how_neural_networks_work_1/ai-temp/unversioned]",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Videos are used throughout the curriculum to spark discussions, supplement key concepts with additional explanations and examples, and expose students to the various roles and backgrounds of individuals in computer science.\n\nWhile interacting with the video, turn on closed captioning so students can also read along as they watch.\n\nTo encourage active engagement and reflection, use one or more of the strategies discussed in the **[Guide to Curriculum Videos](https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view)**."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "02ee5958-fbb6-479d-899b-3064e6c63f3d",
@@ -2478,6 +2580,18 @@
       "seeding_key": {
         "activity_section.key": "6cb8ca17-699f-4733-aaee-43d078ae5db6",
         "lesson_activity.key": "2ed99f0b-e801-4301-908f-ae6867b9c3a4"
+      }
+    },
+    {
+      "key": "556126c3-3e9a-447c-bf80-5b4c6555b290",
+      "position": 1,
+      "properties": {
+        "description": "**Getting Started with Code.org:** Consider watching our [Getting Started with Code.org](https://www.youtube.com/playlist?list=PLzdnOPI1iJNdX7P76yGw7YUM4Csm1ZZmM) video series for an overview of how to navigate lesson plans, setup a classroom section, and other important features of the Code.org platform. Each video also has a support article if you'd prefer to read or print instructions - [click here to learn more](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).\n\n**Setup a Classroom Section:** You can use a class section in Code.org to manage your students, view their progress, and assign specific curriculum - [click here to learn more](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section).\n\nIf you are using a learning management system, there may be additional steps to sync your classes with Code.org:\n\n- [Click here](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync) for steps to setup your classes with Google Classroom\n- [Click Here](https://support.code.org/hc/en-us/articles/115002716111-Setting-up-sections-with-Clever-sync) for steps to setup your classes with Clever\n\n**Become a Verified Teacher:** Lesson plans and levels have additional resources and answer keys for Verified Teachers, which is quick process that verifies your position at an educational institution. [Click here to complete a form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform) and you should have access to verified teacher resources in ~1 business day.",
+        "name": "Preparing for the Unit"
+      },
+      "seeding_key": {
+        "activity_section.key": "556126c3-3e9a-447c-bf80-5b4c6555b290",
+        "lesson_activity.key": "47bb249e-238c-4066-8f67-2c4dcc83c1c0"
       }
     },
     {
@@ -3078,6 +3192,18 @@
       }
     },
     {
+      "key": "a0ffdbf2-830a-4190-b6e8-1b2772e38430",
+      "position": 1,
+      "properties": {
+        "description": "**Getting Started with Code.org:** Consider watching our [Getting Started with Code.org](https://www.youtube.com/playlist?list=PLzdnOPI1iJNdX7P76yGw7YUM4Csm1ZZmM) video series for an overview of how to navigate lesson plans, setup a classroom section, and other important features of the Code.org platform. Each video also has a support article if you'd prefer to read or print instructions - [click here to learn more](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).\n\n**Setup a Classroom Section:** You can use a class section in Code.org to manage your students, view their progress, and assign specific curriculum - [click here to learn more](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section).\n\nIf you are using a learning management system, there may be additional steps to sync your classes with Code.org:\n\n- [Click here](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync) for steps to setup your classes with Google Classroom\n- [Click Here](https://support.code.org/hc/en-us/articles/115002716111-Setting-up-sections-with-Clever-sync) for steps to setup your classes with Clever\n\n**Become a Verified Teacher:** Lesson plans and levels have additional resources and answer keys for Verified Teachers, which is quick process that verifies your position at an educational institution. [Click here to complete a form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform) and you should have access to verified teacher resources in ~1 business day.",
+        "name": "Preparing for the Unit"
+      },
+      "seeding_key": {
+        "activity_section.key": "a0ffdbf2-830a-4190-b6e8-1b2772e38430",
+        "lesson_activity.key": "b3272a53-1420-4d7f-865b-a64bd1be1487"
+      }
+    },
+    {
       "key": "0b056501-6ae2-47e6-858e-5fe88e3fa78c",
       "position": 1,
       "properties": {
@@ -3369,10 +3495,16 @@
       "key": "922a33c0-0c03-461b-9248-ab95eb9cd1a9",
       "position": 20,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Model:**</strong> Show students how to use the widget by playing one round of human guessing vs computer guessing. Be sure to be clear to students that they have no information initially, and they do not have to over-think initial guesses. They'll get things wrong and that's ok! In fact, it's part of the model of the activity -- GANs are wildly guessing too until they have more information.<br><br><strong>Code Studio:</strong> Students log into Code studio to explore a game where they act like generators.<br><strong><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:**</strong>  Help student stay on task, coming up with guesses with them. (Eventually Students should figure out that the rule is a password must have a red circle -- help students who are struggling figure this out by procedurally trying different shapes and colors with them.",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Model:**</strong> Pass out the [r optional_gan_game_activity_slides/ai-temp/unversioned]. Show students how to use the widget by playing one round of human guessing vs computer guessing. Feel free to use the [r optional_gan_slides/ai-temp/unversioned]. Be sure to be clear to students that they have no information initially, and they do not have to over-think initial guesses. They'll get things wrong and that's ok! In fact, it's part of the model of the activity -- GANs are wildly guessing too until they have more information.<br><br><strong>Code Studio:</strong> Students log into Code studio to explore a game where they act like generators.<br><strong><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:**</strong>  Help student stay on task, coming up with guesses with them. (Eventually Students should figure out that the rule is a password must have a red circle -- help students who are struggling figure this out by procedurally trying different shapes and colors with them.",
         "duration": "10",
         "name": "Optional GAN Activity",
-        "progression_name": "GAN Guess Widget"
+        "progression_name": "GAN Guess Widget",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The rule that has been hard-coded into this activity is \"must contain one red circle.\" Some students may figure this out before others. If this happens: <ul><li>You can have students who have completed the task to help ask other students leading questions to help them figure out the rule.</li><li>You can have groups of completed students come up with their own password rules and figure out each other's in groups. This may be useful fun for all students, if you have extra time.</li></ul>"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "922a33c0-0c03-461b-9248-ab95eb9cd1a9",
@@ -3458,6 +3590,18 @@
       "seeding_key": {
         "activity_section.key": "7e49d698-4d7d-48d1-9c55-6b891618e0ea",
         "lesson_activity.key": "702f37ad-a042-436d-8348-72465b590b99"
+      }
+    },
+    {
+      "key": "725e89f2-111a-4648-9043-fe924991624d",
+      "position": 1,
+      "properties": {
+        "description": "**Getting Started with Code.org:** Consider watching our [Getting Started with Code.org](https://www.youtube.com/playlist?list=PLzdnOPI1iJNdX7P76yGw7YUM4Csm1ZZmM) video series for an overview of how to navigate lesson plans, setup a classroom section, and other important features of the Code.org platform. Each video also has a support article if you'd prefer to read or print instructions - [click here to learn more](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).\n\n**Setup a Classroom Section:** You can use a class section in Code.org to manage your students, view their progress, and assign specific curriculum - [click here to learn more](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section).\n\nIf you are using a learning management system, there may be additional steps to sync your classes with Code.org:\n\n- [Click here](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync) for steps to setup your classes with Google Classroom\n- [Click Here](https://support.code.org/hc/en-us/articles/115002716111-Setting-up-sections-with-Clever-sync) for steps to setup your classes with Clever\n\n**Become a Verified Teacher:** Lesson plans and levels have additional resources and answer keys for Verified Teachers, which is quick process that verifies your position at an educational institution. [Click here to complete a form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform) and you should have access to verified teacher resources in ~1 business day.",
+        "name": "Preparing for the Unit"
+      },
+      "seeding_key": {
+        "activity_section.key": "725e89f2-111a-4648-9043-fe924991624d",
+        "lesson_activity.key": "53465fbd-8636-46ac-9f11-e4b2a7bbc95e"
       }
     },
     {
@@ -3678,15 +3822,27 @@
       }
     },
     {
-      "key": "0dde8851-174a-476e-bd8c-3182e03aab12",
+      "key": "5884851a-6f70-4cc8-97e0-ec671bdb0f86",
       "position": 1,
+      "properties": {
+        "description": "**Getting Started with Code.org:** Consider watching our [Getting Started with Code.org](https://www.youtube.com/playlist?list=PLzdnOPI1iJNdX7P76yGw7YUM4Csm1ZZmM) video series for an overview of how to navigate lesson plans, setup a classroom section, and other important features of the Code.org platform. Each video also has a support article if you'd prefer to read or print instructions - [click here to learn more](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).\n\n**Setup a Classroom Section:** You can use a class section in Code.org to manage your students, view their progress, and assign specific curriculum - [click here to learn more](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section).\n\nIf you are using a learning management system, there may be additional steps to sync your classes with Code.org:\n\n- [Click here](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync) for steps to setup your classes with Google Classroom\n- [Click Here](https://support.code.org/hc/en-us/articles/115002716111-Setting-up-sections-with-Clever-sync) for steps to setup your classes with Clever\n\n**Become a Verified Teacher:** Lesson plans and levels have additional resources and answer keys for Verified Teachers, which is quick process that verifies your position at an educational institution. [Click here to complete a form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform) and you should have access to verified teacher resources in ~1 business day.",
+        "name": "Preparing for the Unit"
+      },
+      "seeding_key": {
+        "activity_section.key": "5884851a-6f70-4cc8-97e0-ec671bdb0f86",
+        "lesson_activity.key": "2f27ce5e-ad78-47a0-ac1d-4289449ee5b8"
+      }
+    },
+    {
+      "key": "fe44e10b-1a22-4540-9155-6ca607cdacd1",
+      "position": 2,
       "properties": {
         "description": "This lesson is not intended to introduce students to sound research practices or how to vet credible sources. Students should come into this lesson with prior knowledge and the skills to be able to:\n\n- recognize credible sources on the internet\n- summarize information from digital sources to support an argument\n- navigate online resources and cite sources appropriately",
         "name": "Prerequisite Skills"
       },
       "seeding_key": {
-        "activity_section.key": "0dde8851-174a-476e-bd8c-3182e03aab12",
-        "lesson_activity.key": "f9fcde79-6b74-48fb-8de6-879d9508ac41"
+        "activity_section.key": "fe44e10b-1a22-4540-9155-6ca607cdacd1",
+        "lesson_activity.key": "2f27ce5e-ad78-47a0-ac1d-4289449ee5b8"
       }
     },
     {
@@ -3696,7 +3852,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Deciding on a Warm Up:** We’ve provided a quick warm up activity for this lesson, but you may decide to replace it with an activity that more closely aligns with the lessons students have recently completed. If so, it may be helpful to focus on a task that reinforces summarizing an article or determining how an article could be used as evidence in an argument.\n\n**Slides:** The slide icon <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  indicates that there is a slide in the slide deck that corresponds to this activity or prompt. It can be helpful to have the slides open while reading the lesson plan, as there are sometimes visuals or videos that are not included in the lesson plan"
+            "markdown": "**Deciding on a Warm Up:** We’ve provided a quick warm up activity for this lesson, but you may decide to replace it with an activity that more closely aligns with the lessons students have recently completed. If so, it may be helpful to focus on a task that reinforces summarizing an article or determining how an article could be used as evidence in an argument."
           }
         ]
       },
@@ -4258,6 +4414,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "GAN Guess Widget"
+        ],
         "progression": "GAN Guess Widget"
       },
       "bonus": false,
@@ -4612,6 +4771,7 @@
       "key": "introduction_to_ai_-_training_data_and_bias",
       "properties": {
         "audience": "Student",
+        "download_url": "https://videos.code.org/levelbuilder/02-ai-trainingdata-sm-mp4.mp4",
         "type": "Video"
       },
       "seeding_key": {
@@ -4728,7 +4888,7 @@
     },
     {
       "name": "Introduction to Machine Learning",
-      "url": "https://docs.google.com/presentation/d/1Vj24zhtV4La9t-MRONHhg2L4ZPYYiGW9eXUBN5lM9LQ/copy",
+      "url": "https://docs.google.com/presentation/d/1Vj24zhtV4La9t-MRONHhg2L4ZPYYiGW9eXUBN5lM9LQ/template/preview",
       "key": "introduction_to_machine_learning",
       "properties": {
         "audience": "Teacher",
@@ -4772,6 +4932,30 @@
       },
       "seeding_key": {
         "resource.key": "noisy_image_widget_activity_guide"
+      }
+    },
+    {
+      "name": "Optional GAN Game Activity Guide",
+      "url": "https://docs.google.com/document/d/1XJ16vDcCDz1_cI8T9d554n_cxqEPT2EVCNh6ZLe1OwI/edit",
+      "key": "optional_gan_game_activity_slides",
+      "properties": {
+        "audience": "Student",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "optional_gan_game_activity_slides"
+      }
+    },
+    {
+      "name": "Optional GAN slides",
+      "url": "https://docs.google.com/presentation/d/1oYDiKQznrkjOIdj5N7-0w1rThusGdMRZR2aDmyw_xdc/edit#slide=id.g23a57cee646_0_80",
+      "key": "optional_gan_slides",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "optional_gan_slides"
       }
     },
     {
@@ -5124,6 +5308,18 @@
       "seeding_key": {
         "lesson.key": "lesson-8",
         "resource.key": "noisy_image_widget_activity_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "optional_gan_game_activity_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "optional_gan_slides"
       }
     },
     {

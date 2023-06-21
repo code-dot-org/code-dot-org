@@ -246,8 +246,7 @@ class SampleData
     "non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.".
       split(/[.,]/).
       sample(rng.rand(3..6)).
-      map(&:strip).
-      compact.
+      filter_map(&:strip).
       map(&:capitalize).
       join('. ') + '.'
   end
