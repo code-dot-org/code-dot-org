@@ -85,9 +85,9 @@ class Foorm::Library < ApplicationRecord
     if write_to_file?
       file_path = Rails.root.join("config/foorm/library/#{name}.#{version}.json")
       file_directory = File.dirname(file_path)
-      unless Dir.exist?(file_directory)
-        FileUtils.mkdir_p(file_directory)
-      end
+
+      FileUtils.mkdir_p(file_directory)
+
       File.write(file_path, formatted_for_file)
     end
   end

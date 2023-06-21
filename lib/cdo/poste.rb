@@ -461,7 +461,7 @@ module Poste2
     # Get directory from settings (locals.yml / globals.yml)
     # If none specified, use ./poste_attachments
     path = CDO.poste_attachment_dir || File.join(Dir.pwd, 'poste_attachments')
-    Dir.mkdir(path) unless Dir.exist?(path)
+    FileUtils.mkdir_p(path)
     path
   end
 

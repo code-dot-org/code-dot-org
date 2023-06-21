@@ -43,7 +43,7 @@ class PeerReviewTest < ActiveSupport::TestCase
       track_progress @level_source.id
     end
 
-    assert_equal Set[nil, 'escalated'], PeerReview.where(submitter: @user, level: @level).map(&:status).to_set
+    assert_equal Set[nil, 'escalated'], PeerReview.where(submitter: @user, level: @level).to_set(&:status)
   end
 
   test 'submitting a peer reviewed level in instructor review only script should create one escalated PeerReview object' do
