@@ -916,11 +916,13 @@ form {
     padding: 0 !important;
     margin: 0 !important;
     width: 100%;
-
-    .video_caption_link {
-      @include figcaption;
-    }
   }
+}
+
+// Overrides styles on the
+// display_video_thumbnail partial
+.video_caption_link {
+  @include figcaption;
 }
 
 // Blog post callout
@@ -938,5 +940,70 @@ form {
 
   .text-wrapper {
     width: 100%;
+  }
+}
+
+// Resources tabs section
+// Works with resources_tabs.haml partial
+// See code.org/teach for an example
+.resources-tabs{
+  margin-top: 2rem;
+  height: 408px;
+
+  ul {
+    list-style: none;
+    border-bottom: 6px solid $brand_primary_default;
+    margin: 0 0 3rem;
+
+    li {
+      all: unset;
+
+      &:before {
+        content: "";
+      }
+    }
+  }
+
+  button.tab {
+    color: $neutral_dark;
+    background: $neutral_white;
+    border: 1px solid $neutral_dark20;
+    border-bottom: 0;
+    border-radius: 6px 6px 0 0;
+    padding: 0.75rem 0.25rem 0.7rem;
+    margin: 0;
+    width: 11.75rem;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $neutral_dark10;
+    }
+
+    &:focus {
+      outline: unset;
+      border-color: $brand_primary_default;
+      background-color: $neutral_dark10;
+    }
+
+    // Selected tab's styles
+    &.active {
+      background-color: $brand_primary_default;
+      color: $neutral_white;
+      border-color: $brand_primary_default;
+    }
+  }
+
+  // Hides tab content
+  div.content {
+    display: none;
+
+    // Shows tab content
+    &.show {
+      display: initial;
+    }
+  }
+
+  .video_caption_link {
+    margin-bottom: 0;
   }
 }

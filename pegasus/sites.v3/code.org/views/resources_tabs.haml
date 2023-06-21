@@ -1,0 +1,33 @@
+-# Can only be used on rebranded pages that use the
+-# design-system-pegasus.scss stylesheet.
+
+%h2.centered
+  =hoc_s(:resources_tabs_heading)
+%p.centered
+  =hoc_s(:resources_tabs_desc, markdown: :inline, locals: {sign_up_url: CDO.studio_url("/users/sign_up")})
+.resources-tabs
+  -# Tabs nav
+  %ul.flex-container.justify-space-between
+    %li
+      %button.tab.active{"data-content": "#lesson-plans", "aria-activedescendant": "#lesson-plans"} Lesson Plans
+    %li
+      %button.tab{"data-content": "#videos"} Videos
+    %li
+      %button.tab{"data-content": "#slides"} Slides
+    %li
+      %button.tab{"data-content": "#assessments"} Assessments
+    %li
+      %button.tab{"data-content": "#tools"} Programming Tools
+  -# Tabs content
+  %div#lesson-plans.content.show
+    = view :resources_tabs_content_lesson_plans
+  %div#videos.content
+    = view :resources_tabs_content_videos
+  %div#slides.content
+    = view :resources_tabs_content_slides
+  %div#assessments.content
+    = view :resources_tabs_content_assessments
+  %div#tools.content
+    = view :resources_tabs_content_tools
+
+%script{src: '../js/resources-tabs.js'}
