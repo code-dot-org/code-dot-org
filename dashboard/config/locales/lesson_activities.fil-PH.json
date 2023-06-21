@@ -608,6 +608,18 @@
         "a83c07a8-61ea-4017-b41d-725d1bd7b425": {
           "name": "Mga antas"
         },
+        "e708101d-3a86-4ff0-85a9-f5ec782683fe": {
+          "name": "Warm Up: Pssst ... Ano ang Password?"
+        },
+        "e285d097-bd01-4c40-a00c-068a9ace8e8d": {
+          "name": "Suriin: Uh-Oh! Kung ... Pagkatapos ..."
+        },
+        "56a66744-0946-4350-9942-07e1ed1e0d85": {
+          "name": "Gumawa: Patatagin ang Password Mo"
+        },
+        "f7bf636d-a952-4d38-9eea-a4c76532eb8e": {
+          "name": "Wrap Up: Mga Tala sa Mga Tip sa Password"
+        },
         "dd936731-be2e-45f8-ba99-0dff9935b299": {
           "name": "Pinalawak na Pag-aaral"
         },
@@ -629,6 +641,9 @@
         "5cbfab6e-7ad8-476d-a15a-11c31bc85447": {
           "name": "Warm Up"
         },
+        "0976277c-63c8-40f5-a91c-46463ebc49fb": {
+          "name": "Mga Aktibidad sa Pagbubuklod - Programming"
+        },
         "34f9cd2c-cd89-445e-9323-d83630338704": {
           "name": "Pangunahing Aktibidad"
         },
@@ -649,6 +664,9 @@
         },
         "e982d792-ed3f-403f-8782-58d0e74eb342": {
           "name": "Warm Up"
+        },
+        "4960fdd0-1478-40e5-af70-efab13ddd070": {
+          "name": "Mga Aktibidad sa Pagbubuklod - Pumili ng Isa"
         },
         "f2cc2200-d1d2-4bb2-8b5c-84628e8c42c0": {
           "name": "Pangunahing Aktibidad"
@@ -721,6 +739,9 @@
         },
         "b287fad2-713e-44c7-9f5a-969089dbbd93": {
           "name": "Tapusin Na"
+        },
+        "91d98159-1f12-468b-acf3-5e44b885c44b": {
+          "name": "Warm Up "
         },
         "e019b34b-4c36-4f63-9059-e7cdc4b6d36f": {
           "name": "Pangunahing Aktibidad"
@@ -962,8 +983,32 @@
         "6683243e-d006-4ef6-9f65-a53b80a1ecf6": {
           "name": "Pinalawak na Pag-aaral"
         },
+        "457f5ed8-0041-4bd5-b6e6-800291ae5cf5": {
+          "name": "Warm Up: Sekretong Superhero"
+        },
+        "0ead3881-08bc-4d6c-9fda-5bd889adbb5f": {
+          "name": "Matuto: Pagiging Upstander"
+        },
+        "069f8d26-8e31-484a-9e8c-3d67add0197d": {
+          "name": "Lumikha: Digital na Mamamayang Superhero Mo"
+        },
+        "da7bb20b-3692-45ca-a939-6b44411eea77": {
+          "name": "Wrap Up: Iligtas ang Araw! Comic Strip"
+        },
         "02ff6b22-0825-41c1-9e77-721f5801fede": {
           "name": "Pinalawak na Pag-aaral"
+        },
+        "01746bcd-3c02-43f5-8a35-0a775acc2095": {
+          "name": "Warm Up: Tumayo, Umupo"
+        },
+        "6114e1af-1c83-4f1f-add9-a97c2523b343": {
+          "name": "Suriin: Bakit Nagbabahagi ang mga Tao?"
+        },
+        "d1c5ae68-dd15-4aec-aff6-44d0ea484781": {
+          "name": "Suriin: Pribado o Personal?"
+        },
+        "776101b2-57fc-4032-b1b3-1ec318adfbb2": {
+          "name": "Wrap Up: Tiket sa Paglabas"
         },
         "74025568-d2f7-4ad1-8196-55a2955dd2f8": {
           "name": "Pinalawak na Pag-aaral"
@@ -973,6 +1018,9 @@
         },
         "4d2e3a7b-6f10-4ae8-a150-38c094379da1": {
           "name": "Warm Up"
+        },
+        "2d9ca8e8-3d7b-42c1-8d9a-7765bf7d0847": {
+          "name": "Aktibidad ng Pagbubuklod"
         },
         "49c18026-c59e-4aa1-93da-e7f15d4bee21": {
           "name": "Pangunahing Aktibidad"
@@ -1123,6 +1171,9 @@
         },
         "52ef41bf-9fcf-4c7d-8fec-dbf7d244859b": {
           "name": "Tapusin Na"
+        },
+        "74d92853-37dc-4cd5-9d69-087420e81160": {
+          "name": "Warm-Up (Opsyonal)"
         },
         "3df49bdd-03d3-4d4e-aa6a-7df0588bb582": {
           "name": "Pangunahing Aktibidad"
@@ -1360,6 +1411,9 @@
         },
         "90198481-f560-4b5b-9229-5e51f18c29ac": {
           "name": "Warm Up"
+        },
+        "260359b6-17e1-49e8-8785-d4e4c06d34cc": {
+          "name": "Aktibidad ng Pagbubuklod"
         },
         "343b103b-00b3-4485-8105-487f7b206e6b": {
           "name": "Pangunahing Aktibidad"
@@ -1655,6 +1709,9 @@
         "a5b16543-dea5-453c-992f-b1f906a2db44": {
           "name": "Pinalawak na Pag-aaral"
         },
+        "06cda082-0f41-4a52-a1eb-a8c33ef23d83": {
+          "name": "Warm Up: I-preview ang Programming sa Maze"
+        },
         "0fa4c5d1-4c0e-42c4-8f6d-bf50eae78b70": {
           "name": "Pangunahing Aktibidad"
         },
@@ -1696,6 +1753,9 @@
         },
         "31cead7b-04b5-4f08-ad69-d024f371debc": {
           "name": "Warm Up"
+        },
+        "87f5e396-bc40-4bd5-8c1d-0045ec2f96fa": {
+          "name": "Online na Pundasyon: Preview ng Mga Loop sa Kolektor"
         },
         "303f1fad-15bb-4639-a2a1-2303a78192fd": {
           "name": "Pangunahing Aktibidad"
@@ -1940,6 +2000,9 @@
         "fef0dd69-afa1-48b8-a91a-bb7c90de0fff": {
           "name": "Warm Up"
         },
+        "b274f4c7-f500-40b8-be45-9514daa5fd33": {
+          "name": "Aktibidad sa Pagbubuklod - Pagprogram"
+        },
         "21f339fc-a078-41b5-a2c0-bb95b7668103": {
           "name": "Pag-preview ng Mga Online na Palaisipan bilang isang Klase"
         },
@@ -1969,6 +2032,9 @@
         },
         "d3e694da-2437-407e-9478-53c69d99ba8d": {
           "name": "Warm Up"
+        },
+        "ab929c69-85b7-485d-a8a9-2df1b53af578": {
+          "name": "Aktibidad ng Pagbubuklod "
         },
         "d79fb8ee-956d-4630-b5bb-12a17ac01703": {
           "name": "Pangunahing Aktibidad"
@@ -2098,6 +2164,9 @@
         },
         "f4b09758-1a3c-413b-b493-8e8f620af413": {
           "name": "Warm Up"
+        },
+        "535c4220-cca3-4ae8-aac9-d594297d2b28": {
+          "name": "Pangunahing Aktibidad "
         },
         "72d182ad-5571-4ec0-8707-1ec0310f7ee7": {
           "name": "Tapusin Na"
@@ -3067,6 +3136,9 @@
         },
         "5c53e3df-2b36-46c8-9cce-d849e378f4e5": {
           "name": "Tapusin Na"
+        },
+        "7b73b3f1-50b0-43a0-b986-6ca761f73d6f": {
+          "name": "Warm Up "
         },
         "fb244265-6cd6-459d-bc88-e056d9902b8d": {
           "name": "Aktibidad"
@@ -6656,6 +6728,9 @@
         "260a48d0-8cd7-4f15-b303-32e5c685a349": {
           "name": "Warm Up"
         },
+        "d3ccea72-fdca-4a45-a194-3ed4cbcffc38": {
+          "name": "Aktibidad sa Pagbubuklod - Pagprogram"
+        },
         "28178b0d-4526-4c90-ba4b-a2cab6f12461": {
           "name": "Pag-preview ng Mga Online na Palaisipan bilang isang Klase"
         },
@@ -6685,6 +6760,9 @@
         },
         "45bb8885-fab0-41c9-a10d-7a208e5c5bec": {
           "name": "Warm Up"
+        },
+        "7085e9b6-059c-4118-8970-e38a5d4f5d01": {
+          "name": "Aktibidad ng Pagbubuklod "
         },
         "e0fe20d3-be99-4212-83f8-21599085fcad": {
           "name": "Pangunahing Aktibidad"
@@ -6815,6 +6893,9 @@
         "d0de2b60-38a6-42fb-8d87-e63dc5e8b590": {
           "name": "Warm Up"
         },
+        "db2b05a4-6b86-4a5a-bc7c-bef62469a26e": {
+          "name": "Pangunahing Aktibidad "
+        },
         "e7277b3e-9177-451e-bef9-1e53d41b6131": {
           "name": "Tapusin Na"
         },
@@ -6833,6 +6914,18 @@
         "90d3854b-a2c4-44ec-924a-f66d2087098c": {
           "name": "Tapusin Na"
         },
+        "aebca980-e26c-4993-b001-dc20e492f04e": {
+          "name": "Warm Up: Pssst ... Ano ang Password?"
+        },
+        "139034de-1cee-48f9-abd8-40e8c15cd439": {
+          "name": "Suriin: Uh-Oh! Kung ... Pagkatapos ..."
+        },
+        "a992b967-f8d7-474c-a1ad-81b9b7872fbd": {
+          "name": "Gumawa: Patatagin ang Password Mo"
+        },
+        "735c6b82-9219-4ef5-9313-d386dc1c52b9": {
+          "name": "Wrap Up: Mga Tala sa Mga Tip sa Password"
+        },
         "e735098e-abab-465e-949c-a7e92e771b84": {
           "name": "Pinalawak na Pag-aaral"
         },
@@ -6848,11 +6941,17 @@
         "67be50b8-f120-4f1d-ad22-06b84dba994c": {
           "name": "Tapusin Na"
         },
+        "4d3409a1-dc66-4033-87ad-1484af8ab342": {
+          "name": "Opsyonal na Pagtatasa"
+        },
         "c401b0f4-97af-418d-b58b-a58493c7570c": {
           "name": "Pinalawak na Pag-aaral"
         },
         "56feea4b-799f-4d15-a71b-8b6a09d23faf": {
           "name": "Warm Up"
+        },
+        "6b7f225b-884f-47b3-8390-7226087e8fd1": {
+          "name": "Mga Aktibidad sa Pagbubuklod - Programming"
         },
         "e514547a-7e9e-43e5-991d-3e3daab0ef20": {
           "name": "Pangunahing Aktibidad"
@@ -6874,6 +6973,9 @@
         },
         "380a0a21-1ede-432e-bd0a-433c37514bba": {
           "name": "Warm Up"
+        },
+        "4c685b1b-abfc-410a-ad22-e4f99f0e1a7e": {
+          "name": "Mga Aktibidad sa Pagbubuklod - Pumili ng Isa"
         },
         "d05decb3-7f64-4886-8da0-088e7d73216d": {
           "name": "Pangunahing Aktibidad"
@@ -6943,6 +7045,9 @@
         },
         "cfe48524-90b5-4f5a-89d7-58f662bfc5be": {
           "name": "Tapusin Na"
+        },
+        "69460e12-7295-400a-8fc1-135a17d25118": {
+          "name": "Warm Up "
         },
         "e63db04a-81d6-4b49-80b5-4afab4df2a05": {
           "name": "Pangunahing Aktibidad"
@@ -7039,6 +7144,9 @@
         },
         "0fbc0a74-9eca-48af-960b-6ec8e381e852": {
           "name": "Warm Up"
+        },
+        "1b0cbf3c-0437-4bc9-a50d-3bd6360cd665": {
+          "name": "Aktibidad ng Pagbubuklod"
         },
         "813fd866-1517-4302-b080-b035a842ae06": {
           "name": "Pangunahing Aktibidad"
@@ -7325,6 +7433,9 @@
         "80d38f1c-ff9b-4393-9266-9d4fbee74acc": {
           "name": "Pinalawak na Pag-aaral"
         },
+        "a5713eec-33e7-45ba-acc9-fba5383c6355": {
+          "name": "Warm Up: I-preview ang Programming sa Maze"
+        },
         "e0aa5bd3-368a-43c0-b435-29b01a86a6d4": {
           "name": "Pangunahing Aktibidad"
         },
@@ -7366,6 +7477,9 @@
         },
         "59675efe-890a-48b9-bd56-947f991df50b": {
           "name": "Warm Up"
+        },
+        "9299b9d4-262a-452e-93f2-b04f9c64c34e": {
+          "name": "Online na Pundasyon: Preview ng Mga Loop sa Kolektor"
         },
         "879a5770-47f6-4f01-bc0f-14726d6ae8b4": {
           "name": "Pangunahing Aktibidad"
@@ -7427,6 +7541,9 @@
         "d7c5d028-ebdb-4366-9856-f36f780cd472": {
           "name": "Warm Up"
         },
+        "23175482-f558-4d04-aec7-69a02820317e": {
+          "name": "Aktibidad ng Pagbubuklod"
+        },
         "7007138d-bc16-4bc0-8d30-252440672814": {
           "name": "Pangunahing Aktibidad"
         },
@@ -7442,8 +7559,32 @@
         "e43d59a9-ac3a-460a-8344-1ae4a3ca26f8": {
           "name": "Tapusin Na"
         },
+        "1a64d92c-82ce-45e6-a188-a7d88086efd8": {
+          "name": "Warm Up: Sekretong Superhero"
+        },
+        "f642093a-def9-467e-a8cc-8950b21d62c8": {
+          "name": "Matuto: Pagiging Upstander"
+        },
+        "80d3bd1c-5d30-4abd-85d9-38e445a6068b": {
+          "name": "Lumikha: Digital na Mamamayang Superhero Mo"
+        },
+        "7d491d29-d496-450c-aece-a776f7fbd3d3": {
+          "name": "Wrap Up: Iligtas ang Araw! Comic Strip"
+        },
         "8335f8cb-a189-4f98-bb1c-817ac9264bd5": {
           "name": "Pinalawak na Pag-aaral"
+        },
+        "14b61eaf-26c8-46d2-8538-06fe223a04c0": {
+          "name": "Warm Up: Tumayo, Umupo"
+        },
+        "3d33781b-194e-4311-b493-e6cd3bf140ac": {
+          "name": "Suriin: Bakit Nagbabahagi ang mga Tao?"
+        },
+        "202398a5-6b48-4360-9ed8-10db2039b064": {
+          "name": "Suriin: Pribado o Personal?"
+        },
+        "d7df338d-c42c-4fce-aa60-ec516fd2d48d": {
+          "name": "Wrap Up: Tiket sa Paglabas"
         },
         "02429a22-ab18-4df6-9062-d88960fe9ae8": {
           "name": "Pinalawak na Pag-aaral"
@@ -7462,6 +7603,9 @@
         },
         "54992eb5-cb3f-40b5-9f19-07eeda83e000": {
           "name": "Cross-Curricular na Oportunidad"
+        },
+        "077242ad-8c8a-4b24-a139-a5e198abd405": {
+          "name": "Warm-Up (Opsyonal)"
         },
         "7ccdedb5-15bf-4d75-9efb-e65349644266": {
           "name": "Pangunahing Aktibidad"
@@ -7597,6 +7741,9 @@
         },
         "0cf95f16-6aaa-4ea6-b62b-043b7c299f90": {
           "name": "Araw 3 - Bumuo ng Proyekto mo"
+        },
+        "e8be4727-c687-43bb-a1be-e1b3da780020": {
+          "name": "Araw 4 at 5 - Ipakita ang Proyekto Mo"
         },
         "070a6c7f-86b0-4bd2-b220-99469d1f1169": {
           "name": "Pinalawak na Pag-aaral"
@@ -8065,6 +8212,9 @@
         },
         "c4a019fc-d25b-486f-adec-c33a5b86ba5d": {
           "name": "Tapusin Na"
+        },
+        "1c6474e1-f1d7-4d13-94a0-2657589894ae": {
+          "name": "Warm Up "
         },
         "cdcd4d00-c6df-40db-a0c7-37064a6fcf40": {
           "name": "Aktibidad"
