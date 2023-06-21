@@ -33,17 +33,6 @@ module CdoApps
       only_if {node['cdo-apps']['local_mysql'] || node['cdo-apps']['daemon']}
     end
 
-    # Make sure the directory for our sockets exists and is writable by the app
-    # server user. This used to happen as a side effect ofo the old SysV Init
-    # script, but now that we're just using systemd directly we need to do this
-    # manually.
-    socket_path = node['cdo-apps']['nginx_enabled'] && node['cdo-nginx']['socket_path']
-    directory socket_path do
-      action :create
-      owner user
-      recursive true
-    end
-
     # Set up a SystemD service to monitor the web server process.
     template unit_file do
       app_server = node['cdo-apps']['app_server']
