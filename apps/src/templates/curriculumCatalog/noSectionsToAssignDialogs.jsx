@@ -26,7 +26,6 @@ SignInToAssignSectionsDialog.propTypes = {
 
 export const UpgradeAccountToAssignSectionsDialog = ({onClose}) => (
   <NoSectionsToAssignBaseDialog
-    openInNewTab
     headerText={i18n.upgradeAccountToAssign()}
     helpText={i18n.upgradeAccountToAssignHelpText()}
     onClose={onClose}
@@ -67,9 +66,6 @@ const NoSectionsToAssignBaseDialog = ({
     throw new Error('Expect exactly one of onClick or href');
   }
 
-  // the Button component adds 'noopener noreferrer' if opening in a new tab
-  const targetValue = openInNewTab ? '_blank' : null;
-
   return (
     <AccessibleDialog onClose={onClose} className={style.dialogContainer}>
       <Typography semanticTag="h3" tabIndex="0">
@@ -90,7 +86,6 @@ const NoSectionsToAssignBaseDialog = ({
           {href && (
             <Button
               __useDeprecatedTag
-              target={targetValue}
               href={href}
               text={buttonText}
               color={Button.ButtonColor.brandSecondaryDefault}
