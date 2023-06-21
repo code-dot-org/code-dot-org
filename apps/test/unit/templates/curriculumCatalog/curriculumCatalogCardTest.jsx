@@ -287,7 +287,7 @@ describe('CurriculumCatalogCard', () => {
 
     fireEvent.click(assignButton);
     screen.getByRole('heading', {
-      name: 'Create class section to assign curriculum',
+      name: 'Create class section to assign a curriculum',
     });
   });
 
@@ -305,7 +305,9 @@ describe('CurriculumCatalogCard', () => {
     });
 
     fireEvent.click(assignButton);
-    screen.getByRole('heading', {name: 'Use a teacher account to assign'});
+    screen.getByRole('heading', {
+      name: 'Use a teacher account to assign a curriculum',
+    });
   });
 
   it('clicking Assign button as a signed out user shows dialog to sign in', () => {
@@ -319,7 +321,7 @@ describe('CurriculumCatalogCard', () => {
 
     fireEvent.click(assignButton);
     screen.getByRole('heading', {
-      name: 'Sign in or create account to assign curriculum',
+      name: 'Sign in or create account to assign a curriculum',
     });
   });
 });
