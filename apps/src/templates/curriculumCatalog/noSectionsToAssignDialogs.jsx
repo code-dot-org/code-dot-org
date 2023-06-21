@@ -1,10 +1,16 @@
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, {useEffect} from 'react';
 import i18n from '@cdo/locale';
 import Button from '@cdo/apps/templates/Button';
 import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
 import Typography from '@cdo/apps/componentLibrary/typography';
 import style from './no_sections_to_assign_dialog.module.scss';
+import {connect} from 'react-redux';
+import {
+  asyncLoadSectionData,
+  beginEditingSection,
+} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import AddSectionDialog from '@cdo/apps/templates/teacherDashboard/AddSectionDialog';
 
 const signInURL = `/users/sign_in?user_return_to=${location.pathname}`;
 const upgradeAccountArticleURL =
@@ -38,20 +44,42 @@ UpgradeAccountToAssignSectionsDialog.propTypes = {
   onClose: PropTypes.func.isRequired,
 };
 
-export const CreateSectionsToAssignSectionsDialog = ({onClose, onClick}) => (
-  <NoSectionsToAssignBaseDialog
-    headerText={i18n.createClassSectionsToAssign()}
-    helpText={i18n.createClassSectionsToAssignHelpText()}
-    onClose={onClose}
-    buttonText={i18n.createClassSectionToAssignButton()}
-    onClick={onClick}
-  />
-);
+export const UnconnectedCreateSectionsToAssignSectionsDialog = ({
+  onClose,
+  // provided by redux
+  beginEditingSection,
+  asyncLoadSectionData,
+}) => {
+  useEffect(() => {
+    asyncLoadSectionData();
+  }, [asyncLoadSectionData]);
 
-CreateSectionsToAssignSectionsDialog.propTypes = {
-  onClose: PropTypes.func.isRequired,
-  onClick: PropTypes.func.isRequired,
+  return (
+    <>
+      <NoSectionsToAssignBaseDialog
+        headerText={i18n.createClassSectionsToAssign()}
+        helpText={i18n.createClassSectionsToAssignHelpText()}
+        onClose={onClose}
+        buttonText={i18n.createClassSectionToAssignButton()}
+        onClick={() => beginEditingSection()}
+        // use href: &courseVersionId
+      />
+      <AddSectionDialog />
+    </>
+  );
 };
+
+UnconnectedCreateSectionsToAssignSectionsDialog.propTypes = {
+  onClose: PropTypes.func.isRequired,
+  // provided by redux
+  beginEditingSection: PropTypes.func.isRequired,
+  asyncLoadSectionData: PropTypes.func.isRequired,
+};
+
+export const CreateSectionsToAssignSectionsDialog = connect(undefined, {
+  beginEditingSection,
+  asyncLoadSectionData,
+})(UnconnectedCreateSectionsToAssignSectionsDialog);
 
 const NoSectionsToAssignBaseDialog = ({
   headerText,

@@ -135,7 +135,6 @@ const CustomizableCurriculumCatalogCard = ({
       return (
         <CreateSectionsToAssignSectionsDialog
           onClose={() => setIsAssignDialogOpen(false)}
-          onClick={() => {}}
         />
       );
     } else {
