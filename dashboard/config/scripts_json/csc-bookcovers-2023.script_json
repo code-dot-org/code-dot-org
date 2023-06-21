@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": "csc-bookcovers",
-    "serialized_at": "2023-06-13 23:02:36 UTC",
+    "serialized_at": "2023-06-20 14:04:19 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -350,7 +350,7 @@
       "key": "2f8c7cb8-88a3-4fc0-8611-c68ac04e3f64",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2 - Wonder” slide\n\n**Do This**: Test out [Level 2](https://studio.code.org/s/csc-bookcover/lessons/1/levels/2): Book Cover Example as a class. Have students reflect on what they see and compare it to the book covers they saw on the slide.\n\n**Discuss**: _How is this digital book cover similar to or different from a regular book cover?_",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2 - Wonder” slide\n\n**Do This**: Test out the book cover example in Level 2 as a class. Have students reflect on what they see and compare it to the book covers they saw on the slide.\n\n**Discuss**: _How is this digital book cover similar to or different from a regular book cover?_",
         "progression_name": "Explore a Digital Book Cover Example"
       },
       "seeding_key": {
