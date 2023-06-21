@@ -3134,3 +3134,7 @@ nl:
           description_audience: 'Leeftijden: 9-13'
           description_short: Leer alle concepten in Informatica Fundamentals en creëer
             je eigen kunst, verhaal of spel.
+        csa-frq-practice:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Lessen

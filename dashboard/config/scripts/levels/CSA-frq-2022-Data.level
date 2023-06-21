@@ -1,0 +1,29 @@
+<Javalab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 68,
+  "created_at": "2023-06-20T15:57:50.000Z",
+  "level_num": "custom",
+  "user_id": 19026,
+  "properties": {
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "encrypted_validation": "uLH1iiLKUh8Yjy9g0k01InoDnTxygIyLjdRhHWxzeOlGu+Z/fkFbMalwYpnT\nQ1THQKfUHCgHlm/ZCutmwJCdRA==\n",
+    "start_sources": {
+      "Data.java": {
+        "text": "public class Data \n{ \n    public static final int MAX = /* value not shown */; \n    private int[][] grid; \n    \n    /** Fills all elements of grid with randomly generated values, as described in part (a) \n     * Precondition: grid is not null. \n     * grid has at least one element. \n     */ \n    public void repopulate() \n    { /* to be implemented in part (a) */ } \n     \n    /** Returns the number of columns in grid that are in increasing order, as described \n    * in part (b) \n    * Precondition: grid is not null.       \n    * grid has at least one element. \n    */ \n    public int countIncreasingCols() \n    { /* to be implemented in part (b) */ } \n      \n    // There may be instance variables, constructors, and methods that are not shown. \n      \n}",
+        "isVisible": true,
+        "tabOrder": 0
+      }
+    },
+    "encrypted_exemplar_sources": "htq6x7tHSkU/PYVpcDRFelAvmGreBfbatj0ugjoGI/ov2DE7tms7i3qYYEHp\neD2IckAZIYnaUNPtcsHFtqG7TD2IQB5UToWzSyMSM6b2JnYJxULywI+SBxR/\nzVBSUYYCEJIBLIemyERG6mVCW+p0hGWSwahAVYKnJ5r9dudSJrm52Hg+Mi6g\nse3Fo1vqBHxqDPS76rin8UdC58NnkvKWvE2O1851gfyPZhIQnInUm7QO/Foi\nZm7G362jnPHAOkVExyE+zX1H8RASWrnGav7SYPlPgWlJUzgE4xgEb49P872d\nz535nyNC1LlbZwA/d6UJ1JyPJVWQ6U+fMSw14vgSy7AUzf5/8W4sdZkAcuCG\np/4WrhEHkU6fpY0xrrnjl4C5xHp7e31OkNrhQASP32LYUydTOuxO7JzhGOZP\nVsGRwjjiKiHZrLtjP/NZfK9ViesWquTidmXymkm9pXyX6PVqZ0afoZycONdt\nhZPtmB/ZViGcu6pjsrrIwGE6MRHE+2BG6XWS8OR5QPGGtJppu2vpB+dV+u7e\nFkWnkDQqek8ovf3K5u9O98KUaGr35Tn/7FXJNlcIBa17CDcvoQUJKARI+uaC\n4qvmmSpupviMdzMonZFRJI9/KBJxy0quu5HxrdclzJwGzjU91pZXIKY0h6Xz\na/L0/jV16W6XMLeyjTHQby1dUvL0urH02L1OQ2n/UrXjNkcJ+JlVMvsLIVDh\nL9aXFwtIepk0mdjD6awPTUB4Go+eLugcFkzTI0qRODb9XsTvlQvGnvN37Pp1\nmXDcLeMN0eUF0MRjmgwNA+PSp45FgAI8gRTjuGDqm/T0wkDkZ7rhbQChA5UV\nlJ/nXpALG1W9kSDLk/tcGTlxU4YtDpu3y1RSBjEf/NBpC8S+2zEABhqBtj8A\nWj01+9k1YWESIvKsSGxyqHyjevUbbwxUPF7L2XsAkzgfHra4LZKxS3sYy0Be\nPXJ1LdZPKsYiLKvZI5XPL71FGBZJuSUppCYhOuuJ/gTmRMz+oViIzTsHzouA\nVnle51OARb8oQjrjT8N0SHABMFEA5XeqsiydYOhgbQD5LsB38y9rlw6mM62+\ndUd5FfnDTqbOPLEqlMWrB+yMx07LjOs3/tlG9f5cL6t3nxiOtGhbAx8CX78/\nUpeeTqTYsbR8EE4qFoqxnlEHnUkZYKK3/5oJ4uNnDMvCOkU75XsUvtb/9Fg5\nUqfveY5GJv1ew1cmqnAx0JsmpFJgqm4CFOH9NK+QQaFQPUyRBYRTeV9kwtbI\nCflJnFWaT0mMsohiv63/K3bso0vN/c4JaUoNBgdDihxehJI4WsJePBZuOAnN\nrPaDzM5BflLpHCArGvFzoXQ0iQo2CckpUapt+CiV2bXs0qPWrKXCTJM0nMag\n24O0y63RyAabslobYF/zX5J4PpSA2m/P8vqkM4kns+pVwgMb5RwnigyYn6U3\nQexfrS4Snq8zdt4vD16FF/V6oqLWvEam1xyTlXbV/vqY5JB2Xg39BBerEAgR\nSIzj/xvcbhNHFyAms76jSXA/uMzlHEidZMc/sfpwlZJSUUnTEDZGW+sNVPZy\n6uuhmVXKPWsjJmL9ex+40mn/vKcZElDj5Lf1sYtnHDCOGkhyM31sdaaDRrjv\nVNl7vX/XrHsM7qFsBFhofpTcEjhVwWta2pdGZqi7yE3rMAHRJYPBJR3U87Gz\njuWCYmsBsJrsKJgV+eqWjpLRJZMiUO5COBhZ3PltmmRYze8ky0InLpbTN8H/\n1Wxk3xyWvYLw+5sa1iQtAZ46i4P6XZWqwyW0le/vkxWFvE9TyyljOY5i6aFu\nEUM1UN9NyT1ckpjJVlQvt076LtdFjTf07i8QClNHgeqZwE6486FrUMjdTSWJ\n8iADQPfuMeiQR5Ngmfd8baLUG7MUILmqqlvZne0bfZ9ZWjbM0z+WVRevPdRR\n",
+    "encrypted_examples": [
+
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2023-06-20 15:57:53 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":19026,\"changed_by_email\":\"brandon.spellman@code.org\"},{\"changed_at\":\"2023-06-20 15:59:51 +0000\",\"changed\":[],\"changed_by_id\":19026,\"changed_by_email\":\"brandon.spellman@code.org\"},{\"changed_at\":\"2023-06-20 16:00:50 +0000\",\"changed\":[],\"changed_by_id\":19026,\"changed_by_email\":\"brandon.spellman@code.org\"},{\"changed_at\":\"2023-06-20 16:28:55 +0000\",\"changed\":[],\"changed_by_id\":19026,\"changed_by_email\":\"brandon.spellman@code.org\"},{\"changed_at\":\"2023-06-20 17:52:58 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":19026,\"changed_by_email\":\"brandon.spellman@code.org\"},{\"changed_at\":\"2023-06-20 17:53:30 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":19026,\"changed_by_email\":\"brandon.spellman@code.org\"},{\"changed_at\":\"2023-06-20 18:07:48 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Javalab>

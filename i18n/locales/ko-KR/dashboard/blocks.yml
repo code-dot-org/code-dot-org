@@ -2434,6 +2434,8 @@ ko:
             '8': '8'
             '9': '9'
             '10': '10'
+      storylab_printText:
+        text: 인쇄 {TEXT}
       storylab_setForegroundEffect2:
         text: "{EFFECT} 효과 연출"
         options:

@@ -2830,6 +2830,8 @@ en:
             "{x1:0, x2:400, y1:0, y2:200}": Bottom
       storylab_clearHeadings:
         text: clear headings
+      storylab_printText:
+        text: print {TEXT}
       storylab_setForegroundEffect2:
         text: do {EFFECT} effect
         options:

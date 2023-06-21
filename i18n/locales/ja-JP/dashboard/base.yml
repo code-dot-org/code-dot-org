@@ -60,6 +60,7 @@ ja:
         reset_password_token: "あなたがフォローしたパスワードのリセットリンク"
         error:
           future: 現在までの日付にする
+        us_state: '都道府県'
   beta: "ベータ版"
   hello: "Hello world"
   welcome_back: "Welcome Back, %{name}"
@@ -200,6 +201,7 @@ ja:
     parent_account_checkbox: "私は子供の代わりに登録する親/保護者です。"
     parent_account_email_progress_permission: "お子様の進捗状況やプロジェクトに関する最新情報、およびコースとコンピューターサイエンスに関する最新情報をメールでお送りしてもよろしいですか？[(当社のプライバシーポリシーをご覧ください)] (%{privacy_policy_url})"
     parent_account_email_label: "親/保護者のメール"
+    us_state: '都道府県'
   school_info:
     title: '学校名(任意)'
     school_country: '学校のある国'
@@ -1184,6 +1186,7 @@ ja:
         csf_express: 'コンピュータサイエンス（CS）入門 (プレエクスプレスまたはエクスプレス)'
         csd: 'コンピューターサイエンス 発展'
         csp: 'コンピューターサイエンス 入門'
+        other: 'その他'
         not_applicable: "該当なし"
       email_opt_in:
         opt_in_yes: 'はい'
