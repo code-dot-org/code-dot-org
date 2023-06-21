@@ -2363,9 +2363,7 @@ class UserTest < ActiveSupport::TestCase
     DCDO.stubs(:get).with('family-name-features', false).returns(true)
 
     family_name = 'TestFamName'
-    user = User.create(@good_data)
-    user.properties = {family_name: family_name}
-    user.save!
+    user = User.create(@good_data.merge({properties: {family_name: family_name}}))
 
     assert_equal family_name, user.properties['family_name']
 
