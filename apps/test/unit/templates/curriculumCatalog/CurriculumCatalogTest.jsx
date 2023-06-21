@@ -36,7 +36,11 @@ import teacherSections, {
 import {sections} from '../studioHomepages/fakeSectionUtils';
 
 describe('CurriculumCatalog', () => {
-  const defaultProps = {curriculaData: allCurricula, isEnglish: false};
+  const defaultProps = {
+    curriculaData: allCurricula,
+    isEnglish: false,
+    isSignedOut: true,
+  };
   let store;
 
   let replacedLocation;
