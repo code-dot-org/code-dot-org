@@ -22,6 +22,7 @@ import {
   unassignSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shapes';
+import {SignInToAssignSectionsDialog} from '@cdo/apps/templates/curriculumCatalog/noSectionsToAssignDialogs';
 
 const CurriculumCatalogCard = ({
   courseDisplayName,
@@ -103,12 +104,34 @@ const CustomizableCurriculumCatalogCard = ({
   isEnglish,
   pathToCourse,
   sectionsForDropdown,
+  isTeacher,
+  isSignedOut,
   ...props
 }) => {
   const [isAssignDialogOpen, setIsAssignDialogOpen] = useState(false);
 
+  const renderAssignDialog = () => {
+    if (isSignedOut) {
+      return (
+        <SignInToAssignSectionsDialog
+          onClose={() => setIsAssignDialogOpen(false)}
+        />
+      );
+    } else if (isTeacher && sectionsForDropdown) {
+      return (
+        <MultipleSectionsAssigner
+          assignmentName={courseDisplayName}
+          onClose={() => setIsAssignDialogOpen(false)}
+          sections={sectionsForDropdown}
+          participantAudience="student"
+          {...props}
+        />
+      );
+    }
+  };
+
   return (
-    <>
+    <div>
       <div
         className={classNames(
           style.curriculumCatalogCardContainer,
@@ -168,16 +191,8 @@ const CustomizableCurriculumCatalogCard = ({
           </div>
         </div>
       </div>
-      {isAssignDialogOpen && (
-        <MultipleSectionsAssigner
-          assignmentName={courseDisplayName}
-          onClose={() => setIsAssignDialogOpen(false)}
-          sections={sectionsForDropdown}
-          participantAudience="student"
-          {...props}
-        />
-      )}
-    </>
+      {isAssignDialogOpen && renderAssignDialog()}
+    </div>
   );
 };
 
@@ -199,6 +214,8 @@ CustomizableCurriculumCatalogCard.propTypes = {
   scriptId: PropTypes.number,
   isStandAloneUnit: PropTypes.bool,
   sectionsForDropdown: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
+  isTeacher: PropTypes.bool,
+  isSignedOut: PropTypes.bool.isRequired,
   // for screenreaders
   imageAltText: PropTypes.string,
   quickViewButtonDescription: PropTypes.string.isRequired,
