@@ -1524,7 +1524,7 @@
           "jumpto_callout": "Ce bloc est très important pour ce projet. Assure-toi de l'utiliser !"
         },
         "courseC_artist_loops1b_2021": {
-          "sticker2": "Ajoute ceci au milieu de ton programme.\n"
+          "sticker2": "Ajoute ceci au milieu de ton programme."
         },
         "courseC_collector_prog1_2021": {
           "courseC_collector_prog1_1": "Est-ce que tu vois de nouveaux blocs dans la boîte à outils ? Ne t'inquiète pas, on te montrera comment les utiliser dans une autre leçon."
@@ -1536,7 +1536,7 @@
           "courseC_harvester_loops1_callout1": "Le chiffre 'quatre' sur la citrouille indique qu'il y a quatre citrouilles prêtes à récolter."
         },
         "courseC_maze_debugging5_2021": {
-          "courseC_maze_debugging5_1": "Ces blocs sont verrouillés et ne peuvent pas être supprimés !\n"
+          "courseC_maze_debugging5_1": "Ces blocs sont verrouillés et ne peuvent pas être supprimés !"
         },
         "courseC_maze_debugging9_2021": {
           "courseC_maze_debugging9_2019_1": "Fais glisser les blocs de la boîte à outils jusqu'à ton espace de travail."
@@ -1562,7 +1562,7 @@
           "courseC_maze_programming7_2": "Ces blocs sont faits de pierre et ne peuvent être enlevés."
         },
         "courseC_starWars_loops2_2021": {
-          "courseC_starWars_loops2": "Tu n'as qu'un seul de ces blocs à ta disposition dans ce casse-tête."
+          "courseC_starWars_loops2": "Tu as seulement un de ces blocs disponible dans le casse-tête."
         },
         "courseC_starWars_loops2_dani": {
           "courseC_starWars_loops2": "Tu as seulement un de ces blocs disponible dans le casse-tête."
@@ -1650,7 +1650,7 @@
           "courseF_bee_functions_1_2018_1": "Tu peux trouver tes variables en dessous d'ici !\n"
         },
         "courseF_events_predict": {
-          "behaviors_edit": "Clique ici pour voir comment ce comportement marche. \n"
+          "behaviors_edit": "Clique ici pour voir comment ce comportement fonctionne."
         },
         "coursea_maze_ramp1_2021": {
           "grade2_CaringForNewPet_0_1": "Après avoir connecté tous les blocs, appuie sur « Démarrer » pour lancer ton programme."
@@ -1764,7 +1764,7 @@
           "question_mark": "?"
         },
         "courseF_sprites_behaviors": {
-          "behaviors_category": "Clique ici pour ouvrir la catégorie Comportements."
+          "behaviors_category": "Clique ici pour ouvrir la catégorie Comportements. "
         },
         "courseF_sprites_properties": {
           "sprites_category2": "Cherche un nouveau bloc ici."

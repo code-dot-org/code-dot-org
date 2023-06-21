@@ -44,6 +44,15 @@ class CourseOffering < ApplicationRecord
   MIDDLE_SCHOOL_GRADES = %w[6 7 8].freeze
   HIGH_SCHOOL_GRADES = %w[9 10 11 12].freeze
 
+  DURATION_LABEL_TO_MINUTES_CAP = {
+    lesson: 90,
+    week: 250,
+    month: 950,
+    quarter: 2500,
+    semester: 5000,
+    school_year: 525600,
+  }
+
   # Seeding method for creating / updating / deleting a CourseOffering and CourseVersion for the given
   # potential content root, i.e. a Unit or UnitGroup.
   #
@@ -85,7 +94,22 @@ class CourseOffering < ApplicationRecord
   end
 
   def path_to_latest_published_version
+    return nil unless latest_published_version
     latest_published_version.content_root.link
+  end
+
+  def course_id
+    return unless latest_published_version&.content_root_type == 'UnitGroup'
+    latest_published_version.content_root.id
+  end
+
+  def script_id
+    return unless latest_published_version&.content_root_type == 'Unit'
+    latest_published_version.content_root.id
+  end
+
+  def standalone_unit?
+    latest_published_version&.content_root_type == 'Unit'
   end
 
   def self.should_cache?
@@ -203,6 +227,13 @@ class CourseOffering < ApplicationRecord
     localized_name || display_name
   end
 
+  def duration
+    return nil unless latest_published_version
+    co_units = latest_published_version.units
+    co_duration_in_minutes = co_units.sum(&:duration_in_minutes)
+    DURATION_LABEL_TO_MINUTES_CAP.keys.find {|dur| co_duration_in_minutes <= DURATION_LABEL_TO_MINUTES_CAP[dur]}
+  end
+
   def summarize_for_edit
     {
       key: key,
@@ -226,11 +257,17 @@ class CourseOffering < ApplicationRecord
       key: key,
       display_name: display_name,
       grade_levels: grade_levels,
+      duration: duration,
       image: image,
       cs_topic: cs_topic,
       school_subject: school_subject,
       device_compatibility: device_compatibility,
-      course_version_path: path_to_latest_published_version
+      course_version_path: path_to_latest_published_version,
+      course_version_id: latest_published_version&.id,
+      course_id: course_id,
+      course_offering_id: id,
+      script_id: script_id,
+      is_standalone_unit: standalone_unit?
     }
   end
 

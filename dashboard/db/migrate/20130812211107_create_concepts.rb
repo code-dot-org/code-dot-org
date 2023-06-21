@@ -11,7 +11,7 @@ class CreateConcepts < ActiveRecord::Migration[4.2]
       t.references :concept, :level
     end
 
-    execute(<<~SQL)
+    execute(<<~SQL.squish)
       insert into concepts (name, description)
       values
       ('output 1', 'Use functions to trigger actions'),

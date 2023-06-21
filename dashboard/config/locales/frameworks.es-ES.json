@@ -22,6 +22,15 @@
         },
         "iste": {
           "name": "Estándares ISTE para estudiantes"
+        },
+        "c3ss": {
+          "name": "Estándares de estudios sociales C3"
+        },
+        "csa": {
+          "name": "Marco conceptual de la CSA"
+        },
+        "ai4k12-2021": {
+          "name": "Directrices nacionales AI4K12 2021"
         }
       }
     }

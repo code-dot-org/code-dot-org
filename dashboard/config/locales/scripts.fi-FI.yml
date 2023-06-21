@@ -1987,3 +1987,13 @@ fi:
           lessons:
             lesson-3:
               name: Johdanto
+        virtual-pl-csd-summer-day1:
+          lessons:
+            lesson-1:
+              name: Johdanto
+        coursef-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitaalinen kansalaisuus
+            lessonGroup-4:
+              display_name: Muuttujat

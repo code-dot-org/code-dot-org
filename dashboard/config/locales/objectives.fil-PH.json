@@ -35,6 +35,9 @@
         "6da037be-d0be-4f41-a1e5-10b24a247190": {
           "description": "Ilarawan ang makasagisag at literal na wika sa text."
         },
+        "a9a73475-1d3a-4bc3-900b-3f481596d1b5": {
+          "description": "Bumuo ng mga program na tumutugon sa nakatakdang mga kaganapan."
+        },
         "6394fdc5-50c3-423e-8135-a64594824db3": {
           "description": "Bigyang-kahulugan ang “coding” at “computer science”"
         },
@@ -329,6 +332,84 @@
         "7728246b-7582-4624-a2b1-229b998fc2ae": {
           "description": "Bumuo ng mga programa na tumutugon sa inoorasang mga event"
         },
+        "07bc7c07-d75a-45cc-9f98-74501813e5af": {
+          "description": "Bumuo ng program gamit ang mga istruktura na inuulit ang mga bahagi ng code"
+        },
+        "fcc0109d-8a25-4194-8a5c-69985bac106c": {
+          "description": "Pagbutihin ang umiiral na code sa pamamagitan ng paghahanap ng mga lugar ng pag-uulit at paglipat ng mga ito sa mga looping na istruktura"
+        },
+        "c2ec43ae-26ae-48df-8657-373765b01821": {
+          "description": "Ibahin ang pagkakaiba sa pagitan ng mga command na kailangang ulitin sa mga loop at mga command na dapat gamitin nang mag-isa."
+        },
+        "f9dc8f2c-6f5a-4854-b0bb-296d0ca89233": {
+          "description": "Tukuyin ang mga benepisyo ng paggamit ng istraktura ng loop sa halip na manu-manong pag-uulit."
+        },
+        "64421cd8-645b-40d1-b071-4f4238065252": {
+          "description": "Hatiin ang mga kumplikadong task sa mas maliliit na nauulit na mga seksiyon."
+        },
+        "ddac6ae3-6abe-444e-af05-8a6b2a5eec65": {
+          "description": "Kilalanin ang malalaking paulit-ulit na pattern bilang ginawa sa mas maliliit na paulit-ulit na pattern."
+        },
+        "f466b8aa-18bf-460d-9780-1abcb7f32589": {
+          "description": "Tukuyin ang mga benepisyo ng paggamit ng istraktura ng loop sa halip na manu-manong pag-uulit."
+        },
+        "bbd1a283-a817-4fd2-9335-651b698f63d2": {
+          "description": "Pagtagumpayan ang mga hadlang tulad ng mga hadlang sa oras o mga bug."
+        },
+        "afa30921-d88a-4d96-a8d1-94de6acad10d": {
+          "description": "Magpasya kung anong mga uri ng mga pahayag ang OK na sabihin online at alin ang hindi."
+        },
+        "14b788f7-6566-40f5-8b91-a8c86d6d3afa": {
+          "description": "Ilarawan ang kahalagahan ng user sa proseso ng disenyo."
+        },
+        "6cea05e6-2733-4d09-be8f-1c02c646cb85": {
+          "description": "Kilalanin ang mga sprite sa tumatakbong program sa computer."
+        },
+        "3be6fc2a-7c73-4ff2-b8b6-10639f40e6ad": {
+          "description": "Gumawa ng animation gamit ang mga sprite, at mga pag-uugali."
+        },
+        "b5e9cc94-d3f5-4a4f-93db-bcadcac0be4b": {
+          "description": "Gumawa ng mga bagong tiyanak at magtalaga sa kanila ng mga costume at pag-uugali."
+        },
+        "7b9c0f1d-efa4-4397-8334-d392bb962fb7": {
+          "description": "Bumuo ng mga program na tumutugon sa nakatakdang mga kaganapan."
+        },
+        "8fac9b1a-450f-4d68-aa87-d7b8e1bbe873": {
+          "description": "Bumuo ng mga program na tumutugon sa input ng user."
+        },
+        "d13ed164-0cf7-4bb3-882a-69ed146aeb9f": {
+          "description": "Gumawa ng interactive na animation gamit ang mga kaganapan."
+        },
+        "8b5814c2-524a-4871-ae01-bba3f6bce488": {
+          "description": "Mag-program ng mga solusyon sa mga problemang lumitaw kapag nagdidisenyo ng virtual na alaga, tulad ng pagpapakain dito."
+        },
+        "cf3f971b-43c5-4cb5-beeb-d23c903e1752": {
+          "description": "Gumawa ng interactive na virtual na alaga gamit ang mga kaganapan, pag-uugali, at custom na sining."
+        },
+        "04ae0169-fb41-46fb-bc74-dc22c70707f7": {
+          "description": "Tukuyin ang kaugnayan sa pagitan ng kung paano tinukoy, iniimbak, at kinukuha ang variable kapag pinindot natin ang \"Run\" sa program."
+        },
+        "cc733f62-1646-49dc-b2b4-8b47a7c36fca": {
+          "description": "Tawagin ang variable nang maraming beses sa program."
+        },
+        "d059371b-b3f0-40cb-915a-586645b2f109": {
+          "description": "Magbigay ng halaga sa variable"
+        },
+        "4d88e11e-77b5-4060-ab3d-2f2ae6cfa8ea": {
+          "description": "Gumamit ng mga variable kasabay ng mga prompt."
+        },
+        "b155264b-806c-417e-bd5f-2fd91b6093ec": {
+          "description": "Gumamit ng mga variable para hawakan ang mga salita at parirala."
+        },
+        "5c6f9917-2c5e-442f-a402-14c15c8b1737": {
+          "description": "Gumawa ng interactive na computer program na tumutugon sa input ng user."
+        },
+        "72c8cd33-c097-48d6-9178-3b146fdc243a": {
+          "description": "Gumamit ng mga variable para hawakan ang mga salita at parirala."
+        },
+        "ea8b6be7-f51c-420f-a295-ec02488a066f": {
+          "description": "Gumamit ng mga variable kasabay ng mga prompt."
+        },
         "fc312ef1-6ea0-41a5-b112-b4e478cef7d3": {
           "description": "Lumikha ng mga program ng Sprite Lab kung saan ang mga sprite ay nilikha sa mga grupo, at kinokontrol nang paisa-isa gamit ang mga kaganapan."
         },
@@ -341,6 +422,15 @@
         "ac5f0f5b-6aa9-4732-930d-08d96a451b99": {
           "description": "Gumawa ng sarili nilang collector game sa Sprite Lab gamit ang maramihang mga sprite na kinokontrol nang paisa-isa at mga variable para subaybayan ang score ng player"
         },
+        "3606812b-a55f-4eb9-8a40-a9ca52df3726": {
+          "description": "Gumawa at sumubok ng hula sa pamamagitan ng pagbabago ng mga variable ng simulation"
+        },
+        "7f41cf27-501d-4676-9ca7-9fcc15161d54": {
+          "description": "Gumawa ng double line graph upang paghambingin ang data tungkol sa dalawang magkaibang pinagmulan"
+        },
+        "e29b6e4a-ed9b-4aba-81ab-c1ee2a7ada84": {
+          "description": "Gumamit ng computer simulation upang mangolekta ng data tungkol sa modelo"
+        },
         "8a99a9c0-2079-4c7e-a39c-188f940fcfe2": {
           "description": "Talakayin ang papel na ginagampanan ng artificial intelligence sa kanilang buhay."
         },
@@ -350,23 +440,194 @@
         "ba631251-039e-4f7a-9320-158390f318c2": {
           "description": "Dahilan kung paano gumaganap ang bias ng tao sa machine learning."
         },
+        "422e8552-7c1c-4aba-a702-e627365b7bd6": {
+          "description": "Isalin ang URLs sa IP Addresses."
+        },
+        "7a2c2a3b-c61d-4bb4-9720-c0b46a63a940": {
+          "description": "Alamin ang tungkol sa pagiging kumplikado ng pagpapadala ng mga mensahe gamit ng internet."
+        },
+        "30f2f515-c020-4631-9ffe-3d9ba8749eb2": {
+          "description": "Magagawang ipaliwanag kung paano makakaapekto ang mga limitasyon ng system sa disenyo ng proyekto."
+        },
+        "33a17071-53d7-4ba9-b041-af3fcb4fabaf": {
+          "description": "Bumuo at magpatupad ng mga plano upang malutas ang anumang mga isyu sa code nila."
+        },
+        "505fcab3-063d-4c18-9ce1-83077359307d": {
+          "description": "Ipaliwanag ang proseso ng disenyo at kung paano ito nakatulong sa paghubog ng natapos na proyekto."
+        },
+        "88fa834a-0717-4422-a6df-a6af49a1e928": {
+          "description": "Ilarawan kung paano makakatulong ang pag-aayon na panatilihing nasa tamang landas ang proyekto at magbigay ng inspirasyon sa pagkamalikhain."
+        },
+        "9183e5a7-1776-4ffb-a65b-730edea18bc3": {
+          "description": "Matutong magplano nang maaga sa patuloy na takdang-aralin."
+        },
+        "6f3e5897-b529-4f7a-a41f-83c11f7f03c5": {
+          "description": "Gumawa ng mga bagong tiyanak at magtalaga sa kanila ng mga costume at pag-uugali."
+        },
         "0601569e-2f95-4d2f-a3a9-0aea3df102ed": {
           "description": "Gumawa ng mga bagong tiyanak at magtalaga sa kanila ng mga kasuotan at lokasyon."
         },
         "884d4f4c-abd4-493c-8029-cde7399519f4": {
           "description": "Gumawa ng interactive na animation gamit ang mga tiyanak at event."
         },
+        "62ffafea-c5f4-4942-b283-9462c41d52cd": {
+          "description": "Tukuyin ang mga benepisyo ng paggamit ng istraktura ng loop sa halip na manu-manong pag-uulit."
+        },
+        "68b90262-3e0e-4c90-9888-21796cd30869": {
+          "description": "Ibahin ang pagkakaiba sa pagitan ng mga command na kailangang ulitin sa mga loop at mga command na dapat gamitin nang mag-isa."
+        },
+        "3fac17b3-f27c-4f5c-98f1-a43e3e18d4e0": {
+          "description": "Bilangin kung ilang beses dapat ulitin ang aksiyon at ilarawan ito bilang loop."
+        },
+        "81e6c614-6b5d-43db-8178-3adf983eb5b6": {
+          "description": "Hatiin ang mga kumplikadong task sa mas maliliit na nauulit na mga seksiyon."
+        },
+        "5d3b2774-424f-487f-b119-05254b043b89": {
+          "description": "Ilarawan kung paano makakatulong ang pag-aayon na panatilihing nasa tamang landas ang proyekto at magbigay ng inspirasyon sa pagkamalikhain."
+        },
+        "78939802-f928-4ec5-89cb-3e2aef29d9ce": {
+          "description": "Ipaliwanag ang proseso ng disenyo at kung paano ito nakatulong sa paghubog ng natapos na proyekto."
+        },
+        "82992d38-7821-4608-92a1-bd4fd05d7226": {
+          "description": "Bumuo at magpatupad ng mga plano upang malutas ang anumang mga isyu sa code nila."
+        },
+        "d3dbfefc-34eb-4b0a-ab79-53a1ce3adfdc": {
+          "description": "Matutong magplano nang maaga sa patuloy na takdang-aralin."
+        },
+        "4bf451c9-a1ce-4e40-95a6-10c911a081bf": {
+          "description": "Alamin na ang impormasyong ibinabahagi nila online ay nag-iiwan ng digital footprint o \"trail\"."
+        },
+        "7cc37ede-4e83-4881-9213-1746313de397": {
+          "description": "Tuklasin kung anong impormasyon ang OK na ibahagi sa Internet."
+        },
+        "1fb2f469-060b-4caf-ab67-28747acc0f00": {
+          "description": "Isalin ang listahan ng mga hakbang sa serye ng mga pisikal na aksiyon"
+        },
+        "8a9a5295-648e-47f2-baec-c5a360f2788a": {
+          "description": "Tukuyin ang listahan ng mga hakbang (algorithm) upang madala ang kaibigan sa kanilang panimulang posisyon hanggang sa layunin nila"
+        },
+        "ab239024-3c6d-4db1-8c7c-2572c316dc75": {
+          "description": "Kilalanin at ayusin ang mga error sa pagpapatupad ng algorithm"
+        },
+        "9c04f7e1-5859-4e61-9ae0-630df254a9aa": {
+          "description": "Magmodelo ng wastong pag-uugali sa computer lab"
+        },
+        "c78930e6-cbb5-418c-8ca3-9124e79570cd": {
+          "description": "Mag-eksperimento sa karaniwang block-based na mga pagkilos sa programming gaya ng: pag-click, pag-drag at pag-drop, atbp."
+        },
+        "0ad6ceff-faa1-40ea-a688-7ad92308dca3": {
+          "description": "Bumuo ng program sa pamamagitan ng muling pagsasaayos ng mga sunud-sunod na paggalaw."
+        },
+        "1c946e64-eafa-4a8f-8c2d-5829ab3acbf7": {
+          "description": "Bumuo ng computer program sa hanay ng mga nakasulat na tagubilin."
+        },
+        "59718681-70e8-4b7f-91a7-e6b02e4ca98f": {
+          "description": "Isalin ang mga paggalaw sa serye ng mga command."
+        },
+        "a278cf3e-4bf9-4d1c-b9d0-a73c2530e3d8": {
+          "description": "Isalin ang mga paggalaw sa serye ng mga command."
+        },
+        "ae6f9158-191c-458c-9850-331faf94b567": {
+          "description": "Kilalanin at hanapin ang mga bug sa program."
+        },
+        "72900cbd-2ad8-4073-abde-f397a2832b5d": {
+          "description": "I-convert ang serye ng maramihang mga aksiyon sa solong loop."
+        },
+        "76138142-0691-4645-8e78-5dbb1c19eab0": {
+          "description": "Isalin ang picture program sa totoong sayaw sa mundo."
+        },
+        "ad9095b2-5de7-41af-89b9-aac0f2fd0726": {
+          "description": "Ulitin ang mga aksiyong sinimulan ng instruktor."
+        },
+        "2b7ac17e-7e3a-44b5-8c46-e28eec5af112": {
+          "description": "Hatiin ang mahabang pagkakasunod-sunod ng mga tagubilin sa pinakamaliit na nauulit na posibleng pagkakasunod-sunod."
+        },
+        "4d6affaa-f8b0-4dbc-a436-4dccf8c57fc1": {
+          "description": "Gumamit ng kumbinasyon ng mga sunud-sunod at naka-loop na mga command upang maabot ang dulo ng maze."
+        },
+        "be1a4163-770d-4fbd-85a1-4c18198d5c94": {
+          "description": "Lumikha ng program sa naibigay na task na nag-loop ng pagkakasunud-sunod ng mga command."
+        },
+        "dbb376e1-41ba-4f5f-8125-30a2de24cead": {
+          "description": "Tukuyin ang mga benepisyo ng paggamit ng istraktura ng loop sa halip na manu-manong pag-uulit."
+        },
+        "36786d0a-ce44-48d7-b557-a7e44c32c28d": {
+          "description": "Tukuyin ang mga benepisyo ng paggamit ng istraktura ng loop sa halip na manu-manong pag-uulit."
+        },
+        "6baba9ab-130e-4a58-bf30-7cee60bacb18": {
+          "description": "Hatiin ang mahabang pagkakasunod-sunod ng mga tagubilin sa pinakamaliit na nauulit na posibleng pagkakasunod-sunod."
+        },
+        "54ae27f7-71b5-41ce-a67a-61d15e520bc3": {
+          "description": "Bilangin kung ilang beses dapat ulitin ang aksiyon at ilarawan ito bilang loop."
+        },
+        "5f8621d2-481c-487d-a2e1-90d7fd15b929": {
+          "description": "Lumikha ng program na gumuhit ng mga kumplikadong hugis sa pamamagitan ng pag-uulit ng mga simpleng pagkakasunud-sunod."
+        },
+        "b85981bf-b2e5-49f6-bf08-348f8d16ba2b": {
+          "description": "Sirain ang hugis sa pinakamalaking pagkakasunod-sunod nito."
+        },
+        "28c09bb0-c9f4-44ab-ba0a-8c9cdb24e5f0": {
+          "description": "Magrekomenda ng teknolohiya sa iba batay sa kanilang natatanging pangangailangan."
+        },
+        "9e78b33b-39a6-4524-89e4-a26fdba11cb5": {
+          "description": "Ilapat ang empatiya at pagkamalikhain sa disenyo ng teknolohiya para sa iba."
+        },
+        "f854671c-b4c0-4bd7-8dd6-bf0094cd1733": {
+          "description": "Maglista ng ilang iba't ibang halimbawa ng mga smartphone app."
+        },
+        "1275ac31-dcd9-49c5-92e2-68abd8aa9955": {
+          "description": "Ulitin ang mga utos na ibinigay ng isang instruktor."
+        },
+        "4dbb2bcf-bd83-4c90-a077-6261a6b2607c": {
+          "description": "Magsanay sa pagkakaiba-iba ng mga paunang natukoy na pagkilos at mga aksiyong batay sa kaganapan."
+        },
+        "ef1a9273-ff0e-4134-8456-9762728bed55": {
+          "description": "Kilalanin ang mga aksiyon ng guro bilang mga senyales upang simulan ang mga utos."
+        },
         "2583489b-c21a-415d-bd1f-c0fa1eca9ef0": {
           "description": "Tukuyin ang mga pagkilos na nauugnay sa mga event sa pag-input."
         },
+        "2f9f9b26-d5f6-48ab-be27-98608a47b74d": {
+          "description": "Gumawa ng animated, interactive na kuwento gamit ang mga sequence at event-handler."
+        },
         "a64618b3-e151-46ce-9670-cada1927a2db": {
           "description": "Ibahagi ang isang malikhaing artifact sa ibang mag-aaral."
+        },
+        "0e1a61eb-eb48-4c3b-ab89-5b19ef6c6977": {
+          "description": "Ilapat ang mga konsepto ng computer science sa open-ended na proyekto."
+        },
+        "3aa63e80-f3d8-4043-811d-5b275f168499": {
+          "description": "Pagtagumpayan ang mga hadlang tulad ng mga hadlang sa oras o mga bug."
+        },
+        "7279e4aa-2ccc-49b2-b912-e4e4d680e15b": {
+          "description": "Kilalanin at hanapin ang mga bug sa program."
+        },
+        "a87240fd-cb47-49df-ae9e-d058ab3fcb26": {
+          "description": "Isalin ang mga paggalaw sa serye ng mga command."
         },
         "b06566c3-55fe-4cb6-9e55-f40814d47ad8": {
           "description": "Gumawa ng program upang makumpleto ang imahe gamit ang sunud-sunod na mga hakbang."
         },
         "fbaccfd8-2a19-449c-a260-3e0e4b6f0cc6": {
           "description": "Paghiwalayin ang mga kumplikadong hugis sa mga simpleng bahagi."
+        },
+        "09012264-2762-4a05-a5e5-f5b826fe16ad": {
+          "description": "Gumawa ng mga bagong tiyanak at magtalaga sa kanila ng mga costume at pag-uugali."
+        },
+        "0b712f3f-c5fb-4d8d-8247-23bfa13c0139": {
+          "description": "Gumawa ng mga bagong tiyanak at magtalaga sa kanila ng mga costume at pag-uugali."
+        },
+        "7ecf2549-51ae-4bcd-bc3a-d4fc6059b7bc": {
+          "description": "Gumawa ng animation gamit ang mga sprite, at mga pag-uugali."
+        },
+        "7bb23f18-d99f-4ded-af08-d9e8eee2e1e5": {
+          "description": "Gumawa ng interactive na animation gamit ang mga kaganapan."
+        },
+        "938b2178-a433-4324-ba73-b1b6f8e0c0be": {
+          "description": "Bumuo ng mga program na tumutugon sa nakatakdang mga kaganapan."
+        },
+        "ae7debff-9532-4a44-9f44-50813f955edf": {
+          "description": "Bumuo ng mga program na tumutugon sa input ng user."
         },
         "9f0d4053-b0bb-4213-bb8a-b07433bb84cf": {
           "description": "Bumuo ng mga programa na tumutugon sa inoorasang mga event"
@@ -377,11 +638,65 @@
         "f6a45c87-6f01-4df0-8020-0a9be77f0d10": {
           "description": "Bumuo ng mga programa na tumutugon sa input ng user"
         },
+        "1d64ca6b-c3c3-41c5-b923-280bf46dbdc9": {
+          "description": "Gumamit ng kumbinasyon ng mga sunud-sunod at naka-loop na mga command upang maabot ang dulo ng maze."
+        },
+        "d1a8cfa4-2a01-4cd1-bf6b-7bdb85dfbba2": {
+          "description": "Tukuyin ang mga benepisyo ng paggamit ng istraktura ng loop sa halip na manu-manong pag-uulit."
+        },
+        "19f2a21b-7cd6-49c1-b058-a71afadfbf0f": {
+          "description": "Tukuyin ang mga benepisyo ng paggamit ng istraktura ng loop sa halip na manu-manong pag-uulit."
+        },
+        "bbb2787f-1faa-4193-93ec-e2e5ff8de139": {
+          "description": "Ibahin ang pagkakaiba sa pagitan ng mga command na kailangang ulitin sa mga loop at mga command na dapat gamitin nang mag-isa."
+        },
+        "64f8b4e0-c197-41bc-9e3d-b957587027d9": {
+          "description": "Kilalanin ang malalaking paulit-ulit na pattern bilang ginawa sa mas maliliit na paulit-ulit na pattern."
+        },
+        "a3d9c13d-e5d1-4c96-8605-b6c6968e446a": {
+          "description": "Tukuyin ang mga benepisyo ng paggamit ng istraktura ng loop sa halip na manu-manong pag-uulit."
+        },
+        "f875fba7-8b45-4faa-b661-24d7eae983b5": {
+          "description": "Hatiin ang mga kumplikadong task sa mas maliliit na nauulit na mga seksiyon."
+        },
+        "7540f285-a55a-465e-87cd-ed3a930b9ea7": {
+          "description": "Gumamit ng mga variable kasabay ng mga prompt."
+        },
         "4d6b0001-0d41-45ae-8061-1c493e6976ee": {
           "description": "Gumawa ng clicker game sa Sprite Lab kung saan maaaring alisin ang mga sprite para makaiskor ng mga puntos"
         },
         "54f59612-1695-4ba2-bbf4-c03862b02924": {
           "description": "Gumawa ng variable na nag-iimbak ng impormasyon at nagbabago sa paglipas ng panahon"
+        },
+        "75953ae5-c4fa-40d3-85e1-deb508c32847": {
+          "description": "Magtalaga ng mga halaga sa mga umiiral na variable."
+        },
+        "ba1c8ef0-b9fa-4784-9951-6999428d1bbc": {
+          "description": "Gumamit ng mga variable upang baguhin ang mga halaga sa loob ng loop."
+        },
+        "e17081b3-65af-4076-afc7-e8aa69da02f2": {
+          "description": "Gumamit ng mga variable sa halip ng mga paulit-ulit na halaga sa loob ng program."
+        },
+        "4df8eb31-02ee-4e5d-ae28-368a29da7142": {
+          "description": "Suriin ang code upang makahanap ng mga aspekto kung saan maaaring palitan ang mga variable sa mga partikular na halaga."
+        },
+        "d800c885-0e72-4325-a176-68612c826131": {
+          "description": "Tukuyin ang mga lugar kung saan maaari silang gumamit ng mga variable upang baguhin ang mga dami sa panahon ng runtime."
+        },
+        "61ae46d2-2f10-4073-935c-b46ab9fae340": {
+          "description": "Kilalanin kung kailan gagamit ng para sa loop at kung kailan gagamit ng iba pang loop gaya ng ulitin at habang loops."
+        },
+        "ec3dab8e-cfb2-4b3a-9b33-dace79bba6c6": {
+          "description": "Tukuyin ang panimulang value, stopping value, at stepping value sa para sa loop."
+        },
+        "a75dc8b9-eebc-48cd-9495-289d69501b09": {
+          "description": "Gamitin para sa mga loop upang baguhin ang loop nang maraming beses na may iba't ibang mga halaga."
+        },
+        "d759d477-89f3-4ef8-b701-c4115a3258cd": {
+          "description": "Kilalanin kung kailan gagamit ng para sa loop at kung kailan gagamit ng iba pang loop gaya ng ulitin at habang loops."
+        },
+        "546d4a38-5abb-402c-9e61-bef13a71001d": {
+          "description": "Pagtagumpayan ang mga hadlang tulad ng mga hadlang sa oras o mga bug."
         },
         "8d8fffd3-6411-4778-95f5-76953d066786": {
           "description": "Kilalanin kung ano ang inaasahan kapag lumipat ang mga mag-aaral sa computer lab."
@@ -389,8 +704,68 @@
         "d62cb1ce-6c5d-4893-ba48-3f8a844f0670": {
           "description": "Gumamit ng naaangkop na terminolohiya kapag tumutukoy sa isang computer mouse, trackpad, o touchscreen."
         },
+        "1527c354-dff7-4d8c-94f7-8b55d5bc3099": {
+          "description": "Magmodelo ng wastong pag-uugali sa computer lab"
+        },
+        "fc61a33c-e645-4600-b2d3-70bb8e46a938": {
+          "description": "Mag-eksperimento sa karaniwang block-based na mga pagkilos sa programming gaya ng: pag-click, pag-drag at pag-drop, atbp."
+        },
+        "26c1a686-8627-439a-b7f9-3e42d80d4a6c": {
+          "description": "Bumuo ng computer program sa hanay ng mga nakasulat na tagubilin"
+        },
+        "8f583ef0-bd0b-4e2c-81c3-11057794f7e2": {
+          "description": "Bumuo ng program sa pamamagitan ng muling pagsasaayos ng mga sunud-sunod na paggalaw"
+        },
+        "e20881b1-a3ad-4095-a434-6db807d457ed": {
+          "description": "Isalin ang mga paggalaw sa serye ng mga command."
+        },
+        "6856ac6b-753c-4870-bfe4-d6ee553ff409": {
+          "description": "Pagsunud-sunod ng mga command sa lohikal na kaayusan."
+        },
+        "bbf10b3a-152d-472c-82b5-761d1be6e3b2": {
+          "description": "Kilalanin ang mga problema o \"mga bug\" sa program at bumuo ng plano upang malutas ang mga isyu."
+        },
+        "21d90a6a-f1ea-4d0b-ba17-f2e6a53cf78c": {
+          "description": "Kilalanin at hanapin ang mga bug sa program."
+        },
+        "d73df8bf-fcc2-4732-a4be-cab60f8b326d": {
+          "description": "Isalin ang mga paggalaw sa serye ng mga command."
+        },
+        "26b58b7e-9af6-4979-8a63-8f69d7f308c8": {
+          "description": "Bumuo ng program gamit ang mga istruktura na inuulit ang mga bahagi ng code"
+        },
+        "65939b9f-ba0f-4834-8f54-24419c9391e5": {
+          "description": "Pagbutihin ang umiiral na code sa pamamagitan ng paghahanap ng mga lugar ng pag-uulit at paglipat ng mga ito sa mga looping na istruktura"
+        },
+        "3a06cce8-584a-431c-8cca-05ad9b0df32d": {
+          "description": "Tukuyin ang mga benepisyo ng paggamit ng istraktura ng loop sa halip na manu-manong pag-uulit."
+        },
+        "d7a5432f-6854-483b-8a5b-fcb1844dd603": {
+          "description": "Hatiin ang mahabang pagkakasunod-sunod ng mga tagubilin sa pinakamaliit na nauulit na posibleng pagkakasunod-sunod."
+        },
+        "356a5953-6822-4156-b54f-e5f2095156e1": {
+          "description": "Bilangin kung ilang beses dapat ulitin ang aksiyon at ilarawan ito bilang loop."
+        },
+        "e8114e57-1426-4241-9cbb-dc57a3edadab": {
+          "description": "Sirain ang hugis sa pinakamalaking pagkakasunod-sunod nito."
+        },
+        "fcdb6a79-7043-4f4d-b4fe-04beeb339fea": {
+          "description": "Lumikha ng program na gumuhit ng mga kumplikadong hugis sa pamamagitan ng pag-uulit ng mga simpleng pagkakasunud-sunod."
+        },
+        "416213df-e386-420c-aafe-40e05d790f59": {
+          "description": "Lumikha ng program na gumuhit ng mga kumplikadong hugis sa pamamagitan ng pag-uulit ng mga simpleng pagkakasunud-sunod."
+        },
+        "448fabd8-2154-4840-9807-b0b79bab8c96": {
+          "description": "Bilangin kung ilang beses dapat ulitin ang aksiyon at ilarawan ito bilang loop."
+        },
+        "f2e5268e-cbce-4db0-abb3-e2b6a65684d8": {
+          "description": "Sirain ang hugis sa pinakamalaking pagkakasunod-sunod nito."
+        },
         "35be46ad-58dd-4072-97a4-09a55c75e329": {
           "description": "Tukuyin ang mga pagkilos na nauugnay sa mga event sa pag-input."
+        },
+        "37987315-bfd5-46fd-9faa-9e480ef816b2": {
+          "description": "Gumawa ng animated, interactive na kuwento gamit ang sequence at event-handler."
         },
         "fb6ff331-603c-4310-83e8-77e3e606edfe": {
           "description": "Ibahagi ang isang malikhaing artifact sa ibang mag-aaral."
@@ -401,11 +776,92 @@
         "11e630e5-0551-49c9-9894-2db312a9f1df": {
           "description": "Tukuyin ang mga pagkilos na nauugnay sa mga event sa pag-input."
         },
+        "d2669646-8580-4bb3-a6e0-54961b42a029": {
+          "description": "Gumawa ng animated, interactive na kuwento gamit ang mga sequence at event-handler."
+        },
+        "086d6899-da60-486b-a9f7-89715397d81c": {
+          "description": "Ipaliwanag ang mga patakaran sa ligtas na paglalakbay sa internet."
+        },
+        "6ec5d1a8-13d0-43ab-a269-dc1060d0f872": {
+          "description": "Ihambing kung paano ang pananatiling ligtas online ay katulad ng pananatiling ligtas sa totoong mundo."
+        },
+        "dfa4ff01-8e4b-410d-93fb-2380f70f0042": {
+          "description": "Tuklasin na ang internet ay maaaring gamitin upang bisitahin ang malalayong lugar at matuto ng mga bagong bagay."
+        },
         "9ffae8f4-4880-42db-ba40-b4379c1a5f6c": {
           "description": "Kilalanin kung ano ang inaasahan kapag lumipat ang mga mag-aaral sa computer lab."
         },
         "d386bcb1-393c-46bc-8524-7380583d6ebb": {
           "description": "Gumamit ng naaangkop na terminolohiya kapag tumutukoy sa isang computer mouse, trackpad, o touchscreen."
+        },
+        "42c68792-f472-4122-906c-67bef3edae73": {
+          "description": "Isalin ang algorithm sa program"
+        },
+        "4d08a4a4-7475-4257-a955-62768629b65e": {
+          "description": "Kilalanin at tugunan ang mga bug o error sa mga sunud-sunod na tagubilin"
+        },
+        "f28907e3-caa2-4cfa-bd01-39282b5f5f8d": {
+          "description": "Mag-decode at magpatakbo ng program na nilikha ng ibang tao"
+        },
+        "25a06d14-94e5-41a1-b199-2d8ef7041b0f": {
+          "description": "Mag-eksperimento sa karaniwang block-based na mga pagkilos sa programming gaya ng: pag-click, pag-drag at pag-drop, atbp."
+        },
+        "2e7e4324-ea3b-4e18-a61a-0e449579669a": {
+          "description": "Magmodelo ng wastong pag-uugali sa computer lab"
+        },
+        "81b0eb83-7612-4f91-91d1-f6dd25afebb6": {
+          "description": "Bumuo ng program sa pamamagitan ng muling pagsasaayos ng mga sunud-sunod na paggalaw"
+        },
+        "d6d95ae8-01ab-408a-a17d-6c4813fe0991": {
+          "description": "Bumuo ng computer program sa hanay ng mga nakasulat na tagubilin"
+        },
+        "f3ccc59a-2988-4ec2-994f-ae781e4e66d6": {
+          "description": "Pumili ng naaangkop na mga kasanayan sa pag-debug kapag nilulutas ang mga problema"
+        },
+        "8fda32cd-f173-4d41-9a5c-4bb91f282534": {
+          "description": "Kilalanin ang mga problema o \"mga bug\" sa program at bumuo ng plano upang malutas ang mga isyu."
+        },
+        "ad2e874f-6827-4cec-bd3e-4c12a0596df5": {
+          "description": "Pagsunud-sunod ng mga command sa lohikal na kaayusan."
+        },
+        "242ad249-b860-4727-9b98-01f0e2025d8d": {
+          "description": "Bigyang-kahulugan ang program na may mga loop bilang serye ng maraming pagkilos."
+        },
+        "616d06fa-de3a-4e8e-970b-1077be296a30": {
+          "description": "Tukuyin ang umuulit na code at paikliin ang maraming pagkilos sa loop."
+        },
+        "a28f100d-9129-44e2-ae89-93a0e4da1ef2": {
+          "description": "Pagbutihin ang umiiral na code sa pamamagitan ng paghahanap ng mga lugar ng pag-uulit at paglipat ng mga ito sa mga looping na istruktura"
+        },
+        "b55b43b6-9b0d-4703-be2e-9525b05c0a26": {
+          "description": "Bumuo ng program gamit ang mga istruktura na inuulit ang mga bahagi ng code"
+        },
+        "95c27888-7fcc-4606-8647-b8d7aca4841c": {
+          "description": "Hatiin ang mahabang pagkakasunod-sunod ng mga tagubilin sa pinakamaliit na nauulit na posibleng pagkakasunod-sunod."
+        },
+        "afb9f46f-81f6-4f0a-a017-4e9c5fd5c7f6": {
+          "description": "Tukuyin ang mga benepisyo ng paggamit ng istraktura ng loop sa halip na manu-manong pag-uulit."
+        },
+        "03eb830d-5a23-4897-b23b-067e5eb0180f": {
+          "description": "Sirain ang hugis sa pinakamalaking pagkakasunod-sunod nito."
+        },
+        "408f218c-3c80-44f0-9a98-c6bd82fa4021": {
+          "description": "Lumikha ng program na gumuhit ng mga kumplikadong hugis sa pamamagitan ng pag-uulit ng mga simpleng pagkakasunud-sunod."
+        },
+        "eb0c126b-1a28-4a64-81a8-84713ba12efb": {
+          "description": "Bilangin kung ilang beses dapat ulitin ang aksiyon at ilarawan ito bilang loop."
+        },
+        "11ae4f6e-9a22-4fe7-b476-d0251076f65b": {
+          "description": "Magsanay sa pagkakaiba-iba ng mga paunang natukoy na pagkilos at mga aksiyong batay sa kaganapan."
+        },
+        "699d524a-9ba6-430d-8ab4-fdce1b832b6f": {
+          "description": "Kilalanin ang mga aksiyon ng guro bilang mga senyales upang simulan ang mga utos."
+        },
+        "805cf72f-fb59-4003-b6b5-1879ced802b9": {
+          "description": "Ulitin ang mga utos na ibinigay ng isang instruktor."
+        },
+        "946d56ae-8a81-476c-93ab-6d5eff1f9633": {
+          "description": "Gumawa ng animated, interactive na kuwento gamit ang sequence at event-handler."
         },
         "ab8e0f55-bcb7-4af5-813f-df7d9629e21f": {
           "description": "Ibahagi ang isang malikhaing artifact sa ibang mag-aaral."
@@ -413,17 +869,59 @@
         "dddf548b-2b97-45fd-ad62-f4c633d3647d": {
           "description": "Tukuyin ang mga pagkilos na nauugnay sa mga event sa pag-input."
         },
+        "12be98ac-b495-4379-94d1-6cdd7395776a": {
+          "description": "Pagtagumpayan ang mga hadlang tulad ng mga hadlang sa oras o mga bug."
+        },
+        "6619f367-009a-49ca-9d78-582a2ff9ad5e": {
+          "description": "Ilapat ang mga konsepto ng computer science sa open-ended na proyekto."
+        },
+        "33b55b11-ca81-406f-be39-265e8f33d09d": {
+          "description": "Alamin kung paano tumugon sa masamang salita sa Internet, gamit ang S-T-O-P (ITIGIL)."
+        },
+        "ce3ba860-7753-4c2c-a161-64d59903674a": {
+          "description": "Alamin kung ano ang itsura ng kasamaan sa Internet at kung ano ang nararamdaman ng mga tao."
+        },
+        "ce7a9596-845a-4d2f-b7ce-3e27b6faa99d": {
+          "description": "Kilalanin at tugunan ang mga bug o error sa mga sunud-sunod na tagubilin"
+        },
+        "1e020282-115c-4c09-877d-5003b8eb49a6": {
+          "description": "Kilalanin at hanapin ang mga bug sa program."
+        },
+        "fd4b3a3e-1db9-4890-babf-f0def99a0792": {
+          "description": "Isalin ang mga paggalaw sa serye ng mga command."
+        },
         "30aa1d4a-8e6e-4b27-8a1a-5c5ea80d6b3f": {
           "description": "Gumawa ng program upang makumpleto ang imahe gamit ang sunud-sunod na mga hakbang."
         },
         "e0ada5e4-a180-4691-9bd3-8b83763f9dd2": {
           "description": "Paghiwalayin ang mga kumplikadong hugis sa mga simpleng bahagi."
         },
+        "00417e59-53f6-4f10-9e17-ae69f9e5db7b": {
+          "description": "Gumamit ng kumbinasyon ng mga sunud-sunod at naka-loop na mga command upang maabot ang dulo ng maze."
+        },
+        "be258fd0-4790-440a-99ef-bb20ce2d3c8b": {
+          "description": "Tukuyin ang mga benepisyo ng paggamit ng istraktura ng loop sa halip na manu-manong pag-uulit."
+        },
+        "cf1d581f-7554-4432-a92e-3e5f57f9144e": {
+          "description": "Ibahin ang pagkakaiba sa pagitan ng mga command na kailangang ulitin sa mga loop at mga command na dapat gamitin nang mag-isa."
+        },
+        "dda209ff-ec81-4914-93c0-2716153efce4": {
+          "description": "Tukuyin ang mga benepisyo ng paggamit ng istraktura ng loop sa halip na manu-manong pag-uulit."
+        },
+        "05615b7c-1833-4ca9-96a8-45812c1e8a4a": {
+          "description": "Magsanay sa pagkakaiba-iba ng mga paunang natukoy na pagkilos at mga aksiyong batay sa kaganapan."
+        },
+        "3070da76-01ca-461e-a251-7a0abd74ec8d": {
+          "description": "Ulitin ang mga utos na ibinigay ng isang instruktor."
+        },
         "6f45e56c-85b7-4e48-86d4-3394e0e7048e": {
           "description": "Ibahagi ang isang malikhaing artifact sa ibang mag-aaral."
         },
         "36275ea8-84ac-4220-87ca-53d1b5eaac43": {
           "description": "Tukuyin ang mga pagkilos na nauugnay sa mga event sa pag-input."
+        },
+        "06e84ef1-68ef-4bce-adfe-fcd8c7e010c7": {
+          "description": "Pagtagumpayan ang mga hadlang tulad ng mga hadlang sa oras o mga bug."
         },
         "214e78cd-feb0-4235-a076-0fe81d14d95a": {
           "description": "Sanayin at subukan ang isang machine learning model."
@@ -432,7 +930,7 @@
           "description": "Dahilan kung paano gumaganap ang bias ng tao sa machine learning."
         },
         "ba0eef71-97bc-4525-824e-3abc2087dbaf": {
-          "description": ""
+          "description": "Bumuo ng mga program na tumutugon sa nakatakdang mga kaganapan."
         },
         "1e1c0724-7d86-4304-a73b-6f083be036fc": {
           "description": "Ilarawan ang mga pagbabago sa mood ng tula."
@@ -446,6 +944,117 @@
         "d3adc58a-17d0-4cf1-9afa-ccfde96544ef": {
           "description": "Gumamit ng naaangkop na terminolohiya kapag tumutukoy sa isang computer mouse, trackpad, o touchscreen."
         },
+        "5b8eb232-7326-4c4d-8507-0c2da9642581": {
+          "description": "Ilarawan ang kahalagahan ng user sa proseso ng disenyo."
+        },
+        "d67e0be9-d618-464a-9f80-4549d63a2e03": {
+          "description": "Kilalanin ang mga sprite sa tumatakbong program sa computer."
+        },
+        "b827b751-3ba7-4042-a8b4-8fed0ccceb21": {
+          "description": "Gumawa ng mga bagong tiyanak at magtalaga sa kanila ng mga costume at pag-uugali."
+        },
+        "06a89cf1-1a4d-429a-9797-934770d0ed18": {
+          "description": "Gumawa ng animation gamit ang mga sprite, at mga pag-uugali."
+        },
+        "bb1cd9aa-a1b9-47e3-bc85-58e65e75b380": {
+          "description": "Bumuo ng mga program na tumutugon sa nakatakdang mga kaganapan."
+        },
+        "7a7f6249-ea7c-40df-a0a6-e4a3f5c61d9f": {
+          "description": "Bumuo ng mga program na tumutugon sa input ng user."
+        },
+        "a1174680-99bd-4d3d-a4e7-124d1aa5a0e7": {
+          "description": "Gumawa ng interactive na animation gamit ang mga kaganapan."
+        },
+        "c3951ab5-ed99-4234-9f90-d82cfca63b70": {
+          "description": "Gumawa ng interactive na virtual na alaga gamit ang mga kaganapan, pag-uugali, at custom na sining."
+        },
+        "cb9ec256-91d1-4dde-8cff-69bdb063aa0a": {
+          "description": "Mag-program ng mga solusyon sa mga problemang lumitaw kapag nagdidisenyo ng virtual na alaga, tulad ng pagpapakain dito."
+        },
+        "8cbf109a-b450-420b-973a-db9efd47f61f": {
+          "description": "Magpasya kung anong mga uri ng mga pahayag ang OK na sabihin online at alin ang hindi."
+        },
+        "7c2d78e6-377a-491c-9be0-3378e4a9357e": {
+          "description": "Magbigay ng halaga sa variable"
+        },
+        "41ddf297-8c92-42c1-8157-97ba0660483d": {
+          "description": "Tawagin ang variable nang maraming beses sa program."
+        },
+        "55e42aa4-7f88-4f0f-9d90-97716ef3ab75": {
+          "description": "Tukuyin ang kaugnayan sa pagitan ng kung paano tinukoy, iniimbak, at kinukuha ang variable kapag pinindot natin ang \"Run\" sa program."
+        },
+        "28d3cc79-4aea-431d-a445-745e75e747d8": {
+          "description": "Gumamit ng mga variable para hawakan ang mga salita at parirala."
+        },
+        "66e1fe88-3957-437f-a065-66909844fcd1": {
+          "description": "Gumamit ng mga variable kasabay ng mga prompt."
+        },
+        "a81623bb-ffd8-467f-be3f-5488e42ea5f8": {
+          "description": "Gumamit ng mga variable para hawakan ang mga salita at parirala."
+        },
+        "8dbf18d9-ed4b-4068-91a3-6d1c2bee531d": {
+          "description": "Gumamit ng mga variable kasabay ng mga prompt."
+        },
+        "a1e3a5d5-d609-4c1f-a4ef-6000a4335957": {
+          "description": "Gumawa ng interactive na computer program na tumutugon sa input ng user."
+        },
+        "0272de44-fd6e-4cc0-a5f1-b4f21a96d21b": {
+          "description": "Tukuyin ang mga benepisyo ng paggamit ng istraktura ng loop sa halip na manu-manong pag-uulit."
+        },
+        "5936ef50-add4-4fbb-a911-224d5c1e9fcc": {
+          "description": "Ibahin ang pagkakaiba sa pagitan ng mga command na kailangang ulitin sa mga loop at mga command na dapat gamitin nang mag-isa."
+        },
+        "8cba8ac9-820e-48fd-b726-f7926ecf3348": {
+          "description": "Magtalaga ng mga halaga sa mga umiiral na variable."
+        },
+        "550ac608-922b-468f-a69d-08cc1f20799e": {
+          "description": "Gumamit ng mga variable sa halip ng mga paulit-ulit na halaga sa loob ng program."
+        },
+        "ab00e2d4-a6f0-4bdf-80fd-3d1d63a4b80f": {
+          "description": "Gumamit ng mga variable upang baguhin ang mga halaga sa loob ng loop."
+        },
+        "dd570e3f-8340-4838-8ba1-de856546f834": {
+          "description": "Hatiin ang mga kumplikadong task sa mas maliliit na nauulit na mga seksiyon."
+        },
+        "12412b47-e83e-43a9-ad42-e98cba364913": {
+          "description": "Kilalanin ang malalaking paulit-ulit na pattern bilang ginawa sa mas maliliit na paulit-ulit na pattern."
+        },
+        "931f4770-e471-4bf8-a79a-b9a7c9d14890": {
+          "description": "Tukuyin ang mga benepisyo ng paggamit ng istraktura ng loop sa halip na manu-manong pag-uulit."
+        },
+        "059b2997-3d05-4186-8450-066fceeb8c5b": {
+          "description": "Tukuyin ang mga lugar kung saan maaari silang gumamit ng mga variable upang baguhin ang mga dami sa panahon ng runtime."
+        },
+        "9d4ac105-0b5b-4e05-9a32-af6177abfb6c": {
+          "description": "Suriin ang code upang makahanap ng mga aspekto kung saan maaaring palitan ang mga variable sa mga partikular na halaga."
+        },
+        "f0d9f34e-7686-4f9b-a29c-4a6bae1c038d": {
+          "description": "Tukuyin ang panimulang value, stopping value, at stepping value sa \"para sa loop\"."
+        },
+        "1e676bcd-e312-4827-88ce-d6befc87d61c": {
+          "description": "Ilarawan ang mga counter value na na-hit sa bawat oras sa pamamagitan ng \"para sa na loop\" sa panahon ng runtime."
+        },
+        "a4f6a65a-de1d-4d51-9429-b3b381919b84": {
+          "description": "Tukuyin ang panimulang value, stopping value, at stepping value sa para sa loop."
+        },
+        "01f5efc8-bcf1-4dd9-b50a-6ba1abf40d06": {
+          "description": "Kilalanin kung kailan gagamit ng para sa loop at kung kailan gagamit ng iba pang loop gaya ng ulitin at habang loops."
+        },
+        "68c038c1-990a-4009-ad61-619ba6ea71af": {
+          "description": "Gamitin para sa mga loop upang baguhin ang loop nang maraming beses na may iba't ibang mga halaga."
+        },
+        "7ad09074-8899-4330-bb54-6a00c5164299": {
+          "description": "Kilalanin kung kailan gagamit ng para sa loop at kung kailan gagamit ng iba pang loop gaya ng ulitin at habang loops."
+        },
+        "081b1c52-9a72-44ac-a10e-86f0ebec4c43": {
+          "description": "Gumamit ng computer simulation upang mangolekta ng data tungkol sa modelo"
+        },
+        "519c1444-230e-4182-a4eb-09414a7d09fb": {
+          "description": "Gumawa ng double line graph upang paghambingin ang data tungkol sa dalawang magkaibang pinagmulan"
+        },
+        "16dabf47-0051-4143-834c-067bb8fb605c": {
+          "description": "Gumawa at sumubok ng hula sa pamamagitan ng pagbabago ng mga variable ng simulation"
+        },
         "f748f186-f152-468e-9f51-48bee23c44db": {
           "description": "Talakayin ang papel na ginagampanan ng artificial intelligence sa kanilang buhay."
         },
@@ -455,11 +1064,140 @@
         "6638c886-891e-4d59-820a-227e37274e49": {
           "description": "Dahilan kung paano gumaganap ang bias ng tao sa machine learning."
         },
+        "03137644-b4a2-4c28-8a6a-9de5c407a8f1": {
+          "description": "Alamin ang tungkol sa pagiging kumplikado ng pagpapadala ng mga mensahe gamit ng internet."
+        },
+        "e94042c1-9793-4fe8-8ce9-1a76bc63f161": {
+          "description": "Isalin ang URLs sa IP Addresses."
+        },
+        "12c53e25-70d7-4192-a97a-da08dd673338": {
+          "description": "Matutong magplano nang maaga sa patuloy na takdang-aralin."
+        },
+        "b76f1811-9865-416d-bd06-601301120384": {
+          "description": "Magagawang ipaliwanag kung paano makakaapekto ang mga limitasyon ng system sa disenyo ng proyekto."
+        },
+        "8f7582ed-ec8f-4370-8c2a-49ac0d54e10b": {
+          "description": "Ilarawan kung paano makakatulong ang pag-aayon na panatilihing nasa tamang landas ang proyekto at magbigay ng inspirasyon sa pagkamalikhain."
+        },
+        "ad877f06-ef7d-4a69-8217-1e593cfac32f": {
+          "description": "Bumuo at magpatupad ng mga plano upang malutas ang anumang mga isyu sa code nila."
+        },
+        "2fb6d16c-93cd-4226-b282-1f3d2c0f5c65": {
+          "description": "Ipaliwanag ang proseso ng disenyo at kung paano ito nakatulong sa paghubog ng natapos na proyekto."
+        },
+        "e66808ba-0c59-48f7-93c3-f5267f7b3de9": {
+          "description": "Alamin na ang impormasyong ibinabahagi nila online ay nag-iiwan ng digital footprint o \"trail\"."
+        },
+        "5efa6c72-000c-40a0-ace0-55f47117305b": {
+          "description": "Tuklasin kung anong impormasyon ang OK na ibahagi sa Internet."
+        },
+        "d7a194a2-b69d-417f-8996-3f56c7bccd83": {
+          "description": "Tukuyin ang listahan ng mga hakbang (algorithm) upang madala ang kaibigan sa kanilang panimulang posisyon hanggang sa layunin nila"
+        },
+        "5c532776-e5e5-4e5e-b3f1-15f01eb66449": {
+          "description": "Isalin ang listahan ng mga hakbang sa serye ng mga pisikal na aksiyon"
+        },
+        "8f2d92d5-7d6b-447d-90a9-f38ed7ef5e37": {
+          "description": "Kilalanin at ayusin ang mga error sa pagpapatupad ng algorithm"
+        },
+        "567921b7-1dc5-4b17-9c16-0bbcd785a498": {
+          "description": "Magmodelo ng wastong pag-uugali sa computer lab"
+        },
+        "32056e13-2c3f-4ef7-8ada-49b29cac5f59": {
+          "description": "Mag-eksperimento sa karaniwang block-based na mga pagkilos sa programming gaya ng: pag-click, pag-drag at pag-drop, atbp."
+        },
+        "fae372cb-4b72-4b35-abd6-e2424e54d791": {
+          "description": "Isalin ang mga paggalaw sa serye ng mga command."
+        },
+        "bffe609e-4319-4507-b643-b2a2ab2507b9": {
+          "description": "Bumuo ng program sa pamamagitan ng muling pagsasaayos ng mga sunud-sunod na paggalaw."
+        },
+        "7fe333c7-2422-4e9e-8328-9fcd2da6fdba": {
+          "description": "Bumuo ng computer program sa hanay ng mga nakasulat na tagubilin."
+        },
+        "4576e06e-56f1-4e32-a81d-7bbfea125273": {
+          "description": "Isalin ang mga paggalaw sa serye ng mga command."
+        },
+        "d5f927b9-727a-423e-90d3-80faad21aa34": {
+          "description": "Kilalanin at hanapin ang mga bug sa program."
+        },
+        "6c67256a-a8d5-4a57-9744-092686fb01a0": {
+          "description": "Ulitin ang mga aksiyong sinimulan ng instruktor."
+        },
+        "368e8edc-290d-4737-a616-a543e5298c66": {
+          "description": "Isalin ang picture program sa totoong sayaw sa mundo."
+        },
+        "ddb96aa7-a52d-41d7-b253-8f0d1533e093": {
+          "description": "I-convert ang serye ng maramihang mga aksiyon sa solong loop."
+        },
+        "b7345cb5-cb6f-4bed-b9c8-4db24c6fb0c4": {
+          "description": "Tukuyin ang mga benepisyo ng paggamit ng istraktura ng loop sa halip na manu-manong pag-uulit."
+        },
+        "b8432810-ae14-4baf-9acb-e56ad1f8995f": {
+          "description": "Hatiin ang mahabang pagkakasunod-sunod ng mga tagubilin sa pinakamaliit na nauulit na posibleng pagkakasunod-sunod."
+        },
+        "8293f536-510e-44a0-880b-397b3f97deeb": {
+          "description": "Lumikha ng program sa naibigay na task na nag-loop ng pagkakasunud-sunod ng mga command."
+        },
+        "cb89ffb0-ef91-48ea-a77a-90e59e45c73e": {
+          "description": "Gumamit ng kumbinasyon ng mga sunud-sunod at naka-loop na mga command upang maabot ang dulo ng maze."
+        },
+        "1a658eb5-9957-4d23-9736-ba85ea545c5e": {
+          "description": "Tukuyin ang mga benepisyo ng paggamit ng istraktura ng loop sa halip na manu-manong pag-uulit."
+        },
+        "b46842b6-02c4-4fd5-abff-6180d77a5c55": {
+          "description": "Hatiin ang mahabang pagkakasunod-sunod ng mga tagubilin sa pinakamaliit na nauulit na posibleng pagkakasunod-sunod."
+        },
+        "f7153703-ec15-4ce5-943e-02e2f2ebcfef": {
+          "description": "Bilangin kung ilang beses dapat ulitin ang aksiyon at ilarawan ito bilang loop."
+        },
+        "8b2f225a-f9d2-4ac4-9adf-bc978b347f34": {
+          "description": "Sirain ang hugis sa pinakamalaking pagkakasunod-sunod nito."
+        },
+        "61329a99-1c0a-414f-9694-78f7f9c81372": {
+          "description": "Lumikha ng program na gumuhit ng mga kumplikadong hugis sa pamamagitan ng pag-uulit ng mga simpleng pagkakasunud-sunod."
+        },
+        "11d46ade-3342-4157-932b-ce46acd1e6b4": {
+          "description": "Maglista ng ilang iba't ibang halimbawa ng mga smartphone app."
+        },
+        "595564b5-94b4-4104-9613-05eadc30663e": {
+          "description": "Magrekomenda ng teknolohiya sa iba batay sa kanilang natatanging pangangailangan."
+        },
+        "b0a4edfa-fd6a-48fc-8421-3ae80769aed3": {
+          "description": "Ilapat ang empatiya at pagkamalikhain sa disenyo ng teknolohiya para sa iba."
+        },
+        "7b0ddd26-468b-4ca1-8d08-444c0563f8c6": {
+          "description": "Ulitin ang mga utos na ibinigay ng isang instruktor."
+        },
+        "3997dff6-b815-412c-b3b5-52d4bd1fc019": {
+          "description": "Kilalanin ang mga aksiyon ng guro bilang mga senyales upang simulan ang mga utos."
+        },
+        "86c93634-0b7d-46de-82dd-50b86576bd56": {
+          "description": "Magsanay sa pagkakaiba-iba ng mga paunang natukoy na pagkilos at mga aksiyong batay sa kaganapan."
+        },
         "a1e2ab93-1f36-45df-b7f2-d936689e195c": {
           "description": "Tukuyin ang mga pagkilos na nauugnay sa mga event sa pag-input."
         },
+        "3b0b8dc7-7ac9-4604-9bee-5e6c7f58acda": {
+          "description": "Gumawa ng animated, interactive na kuwento gamit ang mga sequence at event-handler."
+        },
         "c7c29345-8b72-4c4f-8fb1-2aa7f90d9bfc": {
           "description": "Ibahagi ang isang malikhaing artifact sa ibang mag-aaral."
+        },
+        "8023306a-d106-4097-8205-5bc1e92ffade": {
+          "description": "Ilapat ang mga konsepto ng computer science sa open-ended na proyekto."
+        },
+        "ae68c8b9-0188-48da-a066-b89a819b67e2": {
+          "description": "Pagtagumpayan ang mga hadlang tulad ng mga hadlang sa oras o mga bug."
+        },
+        "a725215f-d267-47c0-b5ee-8eb6dc25e995": {
+          "description": "Tuklasin na ang internet ay maaaring gamitin upang bisitahin ang malalayong lugar at matuto ng mga bagong bagay."
+        },
+        "16b11f19-6072-4fa4-ac74-d6074dd844c4": {
+          "description": "Ihambing kung paano ang pananatiling ligtas online ay katulad ng pananatiling ligtas sa totoong mundo."
+        },
+        "ba49206c-c099-4994-be57-1f8744273eaf": {
+          "description": "Ipaliwanag ang mga patakaran sa ligtas na paglalakbay sa internet."
         },
         "9727a876-04d5-4ae0-a904-13cd594e2fac": {
           "description": "Kilalanin kung ano ang inaasahan kapag lumipat ang mga mag-aaral sa computer lab."
@@ -467,11 +1205,101 @@
         "b93b9c57-632c-4107-ae9a-d9ef8a8049c1": {
           "description": "Gumamit ng naaangkop na terminolohiya kapag tumutukoy sa isang computer mouse, trackpad, o touchscreen."
         },
+        "fa05721c-e159-4343-aa2d-679c0a4a7ca4": {
+          "description": "Isalin ang algorithm sa program"
+        },
+        "95ef707d-603d-4106-955e-3138f0f16a5d": {
+          "description": "Mag-decode at magpatakbo ng program na nilikha ng ibang tao"
+        },
+        "a78b8215-4f53-4cf7-a1fc-f2c5507b6dd8": {
+          "description": "Kilalanin at tugunan ang mga bug o error sa mga sunud-sunod na tagubilin"
+        },
+        "9cf70e8b-6934-4329-88cc-9b936c7042e3": {
+          "description": "Magmodelo ng wastong pag-uugali sa computer lab"
+        },
+        "6df3d067-06bb-4e95-856f-ef980543a15e": {
+          "description": "Mag-eksperimento sa karaniwang block-based na mga pagkilos sa programming gaya ng: pag-click, pag-drag at pag-drop, atbp."
+        },
+        "768eac27-12a4-4a5f-96d6-80bcf4fc8947": {
+          "description": "Bumuo ng program sa pamamagitan ng muling pagsasaayos ng mga sunud-sunod na paggalaw"
+        },
+        "3f280431-7bc1-4f1a-aad6-708c97a92a48": {
+          "description": "Bumuo ng computer program sa hanay ng mga nakasulat na tagubilin"
+        },
+        "ad752d9a-9437-4b0b-9ffd-e01b34f8cdb5": {
+          "description": "Pumili ng naaangkop na mga kasanayan sa pag-debug kapag nilulutas ang mga problema"
+        },
+        "199aed02-347c-4892-9e98-d7571ae64c9d": {
+          "description": "Pagsunud-sunod ng mga command sa lohikal na kaayusan."
+        },
+        "f0335d03-c7b3-4dee-9d9c-e1cd00919261": {
+          "description": "Kilalanin ang mga problema o \"mga bug\" sa program at bumuo ng plano upang malutas ang mga isyu."
+        },
+        "407c5a4d-9337-4218-92d5-018597e41e19": {
+          "description": "Tukuyin ang umuulit na code at paikliin ang maraming pagkilos sa loop."
+        },
+        "4c30941d-1b93-4dd9-a4f2-bbf9c9ff297f": {
+          "description": "Bigyang-kahulugan ang program na may mga loop bilang serye ng maraming pagkilos."
+        },
+        "cb7cab91-20ca-495a-a429-621631cb0507": {
+          "description": "Bumuo ng program gamit ang mga istruktura na inuulit ang mga bahagi ng code"
+        },
+        "381b89ab-336f-41cd-b755-78142a1f1f90": {
+          "description": "Pagbutihin ang umiiral na code sa pamamagitan ng paghahanap ng mga lugar ng pag-uulit at paglipat ng mga ito sa mga looping na istruktura"
+        },
+        "632bd918-c124-4f4c-892e-980cdc07b3bf": {
+          "description": "Tukuyin ang mga benepisyo ng paggamit ng istraktura ng loop sa halip na manu-manong pag-uulit."
+        },
+        "ea6a44e1-0175-4ecc-a257-4489b703c063": {
+          "description": "Hatiin ang mahabang pagkakasunod-sunod ng mga tagubilin sa pinakamaliit na nauulit na posibleng pagkakasunod-sunod."
+        },
+        "a49fa168-3cd7-4918-a60a-4c4031dd0116": {
+          "description": "Bilangin kung ilang beses dapat ulitin ang aksiyon at ilarawan ito bilang loop."
+        },
+        "97a73553-b88a-4b23-9b9f-0ef644cfcb4c": {
+          "description": "Sirain ang hugis sa pinakamalaking pagkakasunod-sunod nito."
+        },
+        "66267233-8532-4f63-aea5-3a214dac119a": {
+          "description": "Lumikha ng program na gumuhit ng mga kumplikadong hugis sa pamamagitan ng pag-uulit ng mga simpleng pagkakasunud-sunod."
+        },
+        "134f184c-8865-44d2-8921-5740c749bcd5": {
+          "description": "Ulitin ang mga utos na ibinigay ng isang instruktor."
+        },
+        "b7973aec-afbf-4f81-820c-daced7731b0f": {
+          "description": "Kilalanin ang mga aksiyon ng guro bilang mga senyales upang simulan ang mga utos."
+        },
+        "3ec1a741-277f-46fb-9ec1-e358f399dab4": {
+          "description": "Magsanay sa pagkakaiba-iba ng mga paunang natukoy na pagkilos at mga aksiyong batay sa kaganapan."
+        },
         "106c5668-bbc0-404b-8cb5-8ff2bd66eeef": {
           "description": "Tukuyin ang mga pagkilos na nauugnay sa mga event sa pag-input."
         },
+        "b366b41e-9396-4c1b-9d35-164052448c1c": {
+          "description": "Gumawa ng animated, interactive na kuwento gamit ang sequence at event-handler."
+        },
         "0e6bc093-532a-4e2d-bf3a-dcd7d62a1d93": {
           "description": "Ibahagi ang isang malikhaing artifact sa ibang mag-aaral."
+        },
+        "7267ef0f-cb1a-42c2-aa5c-40cd949c9479": {
+          "description": "Ilapat ang mga konsepto ng computer science sa open-ended na proyekto."
+        },
+        "0f72a34c-2667-4593-8f6f-ff11b0a92ec8": {
+          "description": "Pagtagumpayan ang mga hadlang tulad ng mga hadlang sa oras o mga bug."
+        },
+        "1b4ddab6-f8a7-436e-929d-8ea87e41575f": {
+          "description": "Alamin kung ano ang itsura ng kasamaan sa Internet at kung ano ang nararamdaman ng mga tao."
+        },
+        "30ef895d-12fa-4348-8cd8-4c2bef269e9f": {
+          "description": "Alamin kung paano tumugon sa masamang salita sa Internet, gamit ang S-T-O-P (ITIGIL)."
+        },
+        "26392005-5f64-4707-b38b-847d1f009a29": {
+          "description": "Kilalanin at tugunan ang mga bug o error sa mga sunud-sunod na tagubilin"
+        },
+        "560e14ee-7390-4244-aee5-a0c2737112e5": {
+          "description": "Isalin ang mga paggalaw sa serye ng mga command."
+        },
+        "5ced3389-52c6-4f9c-a8da-2e997e0008da": {
+          "description": "Kilalanin at hanapin ang mga bug sa program."
         },
         "6503170b-db97-4737-ae5d-5108591497a0": {
           "description": "Gumawa ng program upang makumpleto ang imahe gamit ang sunud-sunod na mga hakbang."
@@ -479,11 +1307,32 @@
         "d47b51d2-9114-4dfd-ad21-810573d85543": {
           "description": "Paghiwalayin ang mga kumplikadong hugis sa mga simpleng bahagi."
         },
+        "46288097-dbab-437f-897c-4e14352ae388": {
+          "description": "Tukuyin ang mga benepisyo ng paggamit ng istraktura ng loop sa halip na manu-manong pag-uulit."
+        },
+        "8e76410f-b4db-446b-88c0-00013d9c05bd": {
+          "description": "Gumamit ng kumbinasyon ng mga sunud-sunod at naka-loop na mga command upang maabot ang dulo ng maze."
+        },
+        "bf154cd9-0914-43c2-b895-030de92d1427": {
+          "description": "Tukuyin ang mga benepisyo ng paggamit ng istraktura ng loop sa halip na manu-manong pag-uulit."
+        },
+        "b27f9553-dc95-452c-a4ee-dc69db0fc913": {
+          "description": "Ibahin ang pagkakaiba sa pagitan ng mga command na kailangang ulitin sa mga loop at mga command na dapat gamitin nang mag-isa."
+        },
+        "74ce2354-89e9-4396-8cf5-5f9a43e02bd4": {
+          "description": "Ulitin ang mga utos na ibinigay ng isang instruktor."
+        },
+        "7232c8de-da31-441a-84c9-cabef4ea8fc0": {
+          "description": "Magsanay sa pagkakaiba-iba ng mga paunang natukoy na pagkilos at mga aksiyong batay sa kaganapan."
+        },
         "5f5877b9-cf72-4bb8-8700-341d33658a7c": {
           "description": "Ibahagi ang isang malikhaing artifact sa ibang mag-aaral."
         },
         "c0757733-5e14-4797-9615-11b61d8d490f": {
           "description": "Tukuyin ang mga pagkilos na nauugnay sa mga event sa pag-input."
+        },
+        "a5834224-d1d8-47e2-b203-dc8e6935aa53": {
+          "description": "Pagtagumpayan ang mga hadlang tulad ng mga hadlang sa oras o mga bug."
         },
         "3b4a2468-e182-4060-861f-2a922730445b": {
           "description": "Tukuyin ang mga pagkilos na nauugnay sa mga event sa pag-input."
@@ -506,11 +1355,59 @@
         "891d87fb-2024-4ecc-828e-fa4f12dbbb05": {
           "description": "Lumikha ng mga animation ng sayaw gamit ang code"
         },
+        "9ff9fb2c-7d0a-4449-85bf-fa6d3fe84744": {
+          "description": "Bumuo ng program gamit ang mga istruktura na inuulit ang mga bahagi ng code"
+        },
+        "982d25cd-d5ff-491b-8505-be2606ba0a5e": {
+          "description": "Pagbutihin ang umiiral na code sa pamamagitan ng paghahanap ng mga lugar ng pag-uulit at paglipat ng mga ito sa mga looping na istruktura"
+        },
+        "d0dae7ad-246b-4f90-8800-8cc9f1de25aa": {
+          "description": "Tukuyin ang mga benepisyo ng paggamit ng istraktura ng loop sa halip na manu-manong pag-uulit."
+        },
+        "079d7fb4-c8a7-4319-80d6-53037ad705eb": {
+          "description": "Ibahin ang pagkakaiba sa pagitan ng mga command na kailangang ulitin sa mga loop at mga command na dapat gamitin nang mag-isa."
+        },
+        "3a50aae3-6e0f-4821-9539-d06669eba0b1": {
+          "description": "Hatiin ang mga kumplikadong task sa mas maliliit na nauulit na mga seksiyon."
+        },
+        "a19b271e-27b4-410c-bd3f-20c07f3ce2f0": {
+          "description": "Kilalanin ang malalaking paulit-ulit na pattern bilang ginawa sa mas maliliit na paulit-ulit na pattern."
+        },
+        "673ddc56-5217-45a9-919c-b42024f7de2b": {
+          "description": "Tukuyin ang mga benepisyo ng paggamit ng istraktura ng loop sa halip na manu-manong pag-uulit."
+        },
+        "92ad0a98-e2e5-4104-8a9f-1dee9409f300": {
+          "description": "Pagtagumpayan ang mga hadlang tulad ng mga hadlang sa oras o mga bug."
+        },
+        "8c021568-46ed-4243-a4d1-f2037138c01a": {
+          "description": "Isalin ang mga paggalaw sa serye ng mga command."
+        },
+        "0b8dec87-ba78-4165-9d84-f91dc1fbc6df": {
+          "description": "Kilalanin at hanapin ang mga bug sa program."
+        },
         "500825a3-b44f-4b99-ab77-2271fdcbb867": {
           "description": "Gumawa ng program upang makumpleto ang imahe gamit ang sunud-sunod na mga hakbang."
         },
         "36081e5f-1a5d-4102-a1de-27865168ee09": {
           "description": "Paghiwalayin ang mga kumplikadong hugis sa mga simpleng bahagi."
+        },
+        "09281dd0-4b33-4537-9543-a2377bc2f923": {
+          "description": "Gumawa ng mga bagong tiyanak at magtalaga sa kanila ng mga costume at pag-uugali."
+        },
+        "30a80046-d715-46b1-8b89-65c410d04690": {
+          "description": "Gumawa ng mga bagong tiyanak at magtalaga sa kanila ng mga costume at pag-uugali."
+        },
+        "e0d4a883-51dc-4647-8c9f-59652f699aec": {
+          "description": "Gumawa ng animation gamit ang mga sprite, at mga pag-uugali."
+        },
+        "6ba64af5-a4d3-4473-b004-166dfdc6bd71": {
+          "description": "Gumawa ng interactive na animation gamit ang mga kaganapan."
+        },
+        "d9604b08-064f-43e3-83ac-d3a91f321627": {
+          "description": "Bumuo ng mga program na tumutugon sa nakatakdang mga kaganapan."
+        },
+        "422b4e75-8ff9-4f2e-b4f8-e6f1fdea3969": {
+          "description": "Bumuo ng mga program na tumutugon sa input ng user."
         },
         "21ba9121-5cce-4ebe-8a8e-a04dae7f9c09": {
           "description": "Bumuo ng mga programa na tumutugon sa inoorasang mga event"
@@ -521,14 +1418,128 @@
         "50bc6662-3d3d-4bc6-ac09-8c2d2961bed2": {
           "description": "Lumikha ng mga animation ng sayaw gamit ang code"
         },
+        "f66d5b0d-f5b6-441f-b3c0-c24a7a857912": {
+          "description": "Tukuyin ang mga benepisyo ng paggamit ng istraktura ng loop sa halip na manu-manong pag-uulit."
+        },
+        "19dc83bf-d44c-4e6b-a7ac-c11ada6cb656": {
+          "description": "Gumamit ng kumbinasyon ng mga sunud-sunod at naka-loop na mga command upang maabot ang dulo ng maze."
+        },
+        "7304a528-6a3a-4670-9e66-1438d26c3fc2": {
+          "description": "Tukuyin ang mga benepisyo ng paggamit ng istraktura ng loop sa halip na manu-manong pag-uulit."
+        },
+        "32250c07-4872-43ce-9968-33e17f779cf3": {
+          "description": "Ibahin ang pagkakaiba sa pagitan ng mga command na kailangang ulitin sa mga loop at mga command na dapat gamitin nang mag-isa."
+        },
+        "06be5715-7c67-4b13-816d-acb7253a13b2": {
+          "description": "Hatiin ang mga kumplikadong task sa mas maliliit na nauulit na mga seksiyon."
+        },
+        "b884b12d-1247-42f3-a907-652dd25566f2": {
+          "description": "Kilalanin ang malalaking paulit-ulit na pattern bilang ginawa sa mas maliliit na paulit-ulit na pattern."
+        },
+        "aca03fc9-6f07-4b4a-9b83-26e9ff32ce1f": {
+          "description": "Tukuyin ang mga benepisyo ng paggamit ng istraktura ng loop sa halip na manu-manong pag-uulit."
+        },
+        "077a5626-d78c-4ae2-9620-e0558a2ab8cf": {
+          "description": "Gumamit ng mga variable kasabay ng mga prompt."
+        },
+        "16854174-125c-4c79-9a42-064ef84535e3": {
+          "description": "Magtalaga ng mga halaga sa mga umiiral na variable."
+        },
+        "4fe2cf70-9f34-41b0-bae1-9c5af60706de": {
+          "description": "Gumamit ng mga variable sa halip ng mga paulit-ulit na halaga sa loob ng program."
+        },
+        "f1d6a4e2-cc10-4b3a-8c31-27e6972846a4": {
+          "description": "Gumamit ng mga variable upang baguhin ang mga halaga sa loob ng loop."
+        },
+        "a80a4857-3cff-46f5-9fc5-63a3969a4631": {
+          "description": "Tukuyin ang mga lugar kung saan maaari silang gumamit ng mga variable upang baguhin ang mga dami sa panahon ng runtime."
+        },
+        "dd4add89-b2d6-4b12-a073-6ec56b4c6de1": {
+          "description": "Suriin ang code upang makahanap ng mga aspekto kung saan maaaring palitan ang mga variable sa mga partikular na halaga."
+        },
+        "14d7681c-8e63-4c4f-9bb8-4bbd17910ef2": {
+          "description": "Tukuyin ang panimulang value, stopping value, at stepping value sa para sa loop."
+        },
+        "3abab07c-e404-45d4-ab89-f92a34c68356": {
+          "description": "Kilalanin kung kailan gagamit ng para sa loop at kung kailan gagamit ng iba pang loop gaya ng ulitin at habang loops."
+        },
+        "1b705c64-cbba-4dfe-8d47-549eb6754326": {
+          "description": "Gamitin para sa mga loop upang baguhin ang loop nang maraming beses na may iba't ibang mga halaga."
+        },
+        "a5169230-8faf-4492-bc49-ca11dca864fa": {
+          "description": "Kilalanin kung kailan gagamit ng para sa loop at kung kailan gagamit ng iba pang loop gaya ng ulitin at habang loops."
+        },
+        "db7a8439-bc00-43ef-a9a8-2067da8dbda6": {
+          "description": "Pagtagumpayan ang mga hadlang tulad ng mga hadlang sa oras o mga bug."
+        },
         "14f085e6-a0a8-4218-9060-00d7b0dfbf07": {
           "description": "Kilalanin kung ano ang inaasahan kapag lumipat ang mga mag-aaral sa computer lab."
         },
         "d1485387-01e4-484d-9935-75f7c14b9d76": {
           "description": "Gumamit ng naaangkop na terminolohiya kapag tumutukoy sa isang computer mouse, trackpad, o touchscreen."
         },
+        "565151fd-85db-44eb-9cfc-ccbe279cf49a": {
+          "description": "Magmodelo ng wastong pag-uugali sa computer lab"
+        },
+        "af0ee86d-cae1-4a66-93c6-8030f2c36f47": {
+          "description": "Mag-eksperimento sa karaniwang block-based na mga pagkilos sa programming gaya ng: pag-click, pag-drag at pag-drop, atbp."
+        },
+        "a5a52414-42a7-4b32-897b-819a70572328": {
+          "description": "Isalin ang mga paggalaw sa serye ng mga command."
+        },
+        "7ef6d077-67aa-4a8b-b27b-ab3697654abc": {
+          "description": "Bumuo ng program sa pamamagitan ng muling pagsasaayos ng mga sunud-sunod na paggalaw"
+        },
+        "3ad309d1-5c29-4a7d-923c-9c60e6ef21b0": {
+          "description": "Bumuo ng computer program sa hanay ng mga nakasulat na tagubilin"
+        },
+        "f4ccea6b-5333-454a-8b7a-e9d680967cef": {
+          "description": "Pagsunud-sunod ng mga command sa lohikal na kaayusan."
+        },
+        "b881f284-2988-49e1-aaf2-f8baf12e5bb5": {
+          "description": "Kilalanin ang mga problema o \"mga bug\" sa program at bumuo ng plano upang malutas ang mga isyu."
+        },
+        "620da514-ad6e-4049-a9d3-d189a79af01e": {
+          "description": "Isalin ang mga paggalaw sa serye ng mga command."
+        },
+        "adabe26f-78e0-47f4-92b2-535a38f53f15": {
+          "description": "Kilalanin at hanapin ang mga bug sa program."
+        },
+        "38f34964-ca2d-4d03-ab82-e937fc487d2a": {
+          "description": "Bumuo ng program gamit ang mga istruktura na inuulit ang mga bahagi ng code"
+        },
+        "b6f41a7c-0967-4986-b7b6-910819b28396": {
+          "description": "Pagbutihin ang umiiral na code sa pamamagitan ng paghahanap ng mga lugar ng pag-uulit at paglipat ng mga ito sa mga looping na istruktura"
+        },
+        "442a1fcc-3ffc-4e3a-9c55-9cfd94d281e1": {
+          "description": "Tukuyin ang mga benepisyo ng paggamit ng istraktura ng loop sa halip na manu-manong pag-uulit."
+        },
+        "8fef5927-aacf-4340-b4c3-d221ebe3f13a": {
+          "description": "Hatiin ang mahabang pagkakasunod-sunod ng mga tagubilin sa pinakamaliit na nauulit na posibleng pagkakasunod-sunod."
+        },
+        "2ebb5323-fe4a-4611-9fbf-01444afb8720": {
+          "description": "Bilangin kung ilang beses dapat ulitin ang aksiyon at ilarawan ito bilang loop."
+        },
+        "6aac3c12-4427-43d1-877c-727d0665ab49": {
+          "description": "Sirain ang hugis sa pinakamalaking pagkakasunod-sunod nito."
+        },
+        "6dbab2fb-7a17-4269-885e-84768be03a1f": {
+          "description": "Lumikha ng program na gumuhit ng mga kumplikadong hugis sa pamamagitan ng pag-uulit ng mga simpleng pagkakasunud-sunod."
+        },
+        "57f261f3-7603-47fc-b704-9d99a4c4c00a": {
+          "description": "Bilangin kung ilang beses dapat ulitin ang aksiyon at ilarawan ito bilang loop."
+        },
+        "066b586a-0b6b-4a9f-875d-ce788d7f2197": {
+          "description": "Sirain ang hugis sa pinakamalaking pagkakasunod-sunod nito."
+        },
+        "dc83123d-d493-40aa-a543-9daa1421c2c8": {
+          "description": "Lumikha ng program na gumuhit ng mga kumplikadong hugis sa pamamagitan ng pag-uulit ng mga simpleng pagkakasunud-sunod."
+        },
         "15115c43-46c8-4ab4-93e4-947e2fd42703": {
           "description": "Tukuyin ang mga pagkilos na nauugnay sa mga event sa pag-input."
+        },
+        "2fa04500-f1d4-4924-aa39-70292711d432": {
+          "description": "Gumawa ng animated, interactive na kuwento gamit ang sequence at event-handler."
         },
         "22d77ea2-3a62-4e21-b71f-f484fe90ec39": {
           "description": "Ibahagi ang isang malikhaing artifact sa ibang mag-aaral."
@@ -536,11 +1547,41 @@
         "8295b4b6-f9ac-4b43-b271-b7bd9e6829f3": {
           "description": "Tukuyin ang mga pagkilos na nauugnay sa mga event sa pag-input."
         },
+        "70e87cab-0d62-4974-9061-425a179bcb2d": {
+          "description": "Gumawa ng animated, interactive na kuwento gamit ang mga sequence at event-handler."
+        },
         "9ea5d8fd-1b7d-4655-b4b1-75fd09545838": {
           "description": "Ibahagi ang isang malikhaing artifact sa ibang mag-aaral."
         },
+        "bd575116-1370-4f4c-bc5a-a81472d6ab61": {
+          "description": "Gumawa ng mga bagong tiyanak at magtalaga sa kanila ng mga costume at pag-uugali."
+        },
         "57a5eb7e-bd65-420e-b1b5-65a796565f9b": {
           "description": "Tukuyin ang mga pagkilos na nauugnay sa mga event sa pag-input."
+        },
+        "5d061773-3d1d-4dc1-866b-66a878b9b5e4": {
+          "description": "Tukuyin ang mga benepisyo ng paggamit ng istraktura ng loop sa halip na manu-manong pag-uulit."
+        },
+        "c94bf0ed-de3d-428d-b6af-f3d9283d6b81": {
+          "description": "Ibahin ang pagkakaiba sa pagitan ng mga command na kailangang ulitin sa mga loop at mga command na dapat gamitin nang mag-isa."
+        },
+        "da653a73-7c1c-4402-ab24-e14e4adf72d1": {
+          "description": "Bilangin kung ilang beses dapat ulitin ang aksiyon at ilarawan ito bilang loop."
+        },
+        "5b77c883-5479-4cfe-a31a-605957dd083d": {
+          "description": "Hatiin ang mga kumplikadong task sa mas maliliit na nauulit na mga seksiyon."
+        },
+        "cc7b3a7a-21b5-4450-9b38-e85bb5c378bc": {
+          "description": "Matutong magplano nang maaga sa patuloy na takdang-aralin."
+        },
+        "45927b72-922a-4845-8b40-2458a92372f5": {
+          "description": "Ilarawan kung paano makakatulong ang pag-aayon na panatilihing nasa tamang landas ang proyekto at magbigay ng inspirasyon sa pagkamalikhain."
+        },
+        "db7d248b-f06c-475c-8413-f1ea08fae35b": {
+          "description": "Bumuo at magpatupad ng mga plano upang malutas ang anumang mga isyu sa code nila."
+        },
+        "2594052b-3b87-4d83-9038-56175058c1c2": {
+          "description": "Ipaliwanag ang proseso ng disenyo at kung paano ito nakatulong sa paghubog ng natapos na proyekto."
         },
         "3b95dc76-39ee-44e7-a5b0-b1aa20d51094": {
           "description": "Sanayin at subukan ang isang machine learning model."

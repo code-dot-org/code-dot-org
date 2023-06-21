@@ -14,6 +14,7 @@ import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
 import ManageStudentsNameCell from './ManageStudentsNameCell';
 import ManageStudentsAgeCell from './ManageStudentsAgeCell';
 import ManageStudentsGenderCell from './ManageStudentsGenderCell';
+import ManageStudentsGenderCellLegacy from './ManageStudentsGenderCellLegacy';
 import ManageStudentsSharingCell from './ManageStudentsSharingCell';
 import ManageStudentsActionsCell from './ManageStudentsActionsCell';
 import ManageStudentsActionsHeaderCell from './ManageStudentsActionsHeaderCell';
@@ -62,6 +63,10 @@ const LOGIN_TYPES_WITH_ACTIONS_COLUMN = [
   SectionLoginType.google_classroom,
   SectionLoginType.clever,
 ];
+const LOGIN_TYPES_WITH_GENDER_COLUMN = [
+  SectionLoginType.word,
+  SectionLoginType.picture,
+];
 
 export const studentSectionDataPropType = PropTypes.shape({
   id: PropTypes.number.isRequired,
@@ -70,6 +75,7 @@ export const studentSectionDataPropType = PropTypes.shape({
   email: PropTypes.string,
   age: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   gender: PropTypes.string,
+  genderTeacherInput: PropTypes.string,
   secretWords: PropTypes.string,
   secretPicturePath: PropTypes.string,
   sectionId: PropTypes.number,
@@ -181,9 +187,8 @@ class ManageStudentsTable extends Component {
     );
   }
 
-  // Editing is disabled if the "student" in the section is a teacher
-  // (e.g., their userType is 'teacher').
-  isEditingDisabled(userType) {
+  // Helper function to determine if user is a teacher
+  isTeacher(userType) {
     return userType === 'teacher';
   }
 
@@ -231,7 +236,8 @@ class ManageStudentsTable extends Component {
 
   passwordFormatter(loginType, {rowData}) {
     const {sectionId} = this.props;
-    const resetDisabled = this.isEditingDisabled(rowData.userType);
+    const resetDisabled = this.isTeacher(rowData.userType);
+    const secretLoginDisabled = this.isTeacher(rowData.userType);
     return (
       <div>
         {!rowData.isEditing && (
@@ -256,7 +262,7 @@ class ManageStudentsTable extends Component {
                 loginType={rowData.loginType}
                 id={rowData.id}
                 sectionId={sectionId}
-                resetDisabled={resetDisabled}
+                secretLoginDisabled={secretLoginDisabled}
               />
             )}
           </div>
@@ -278,10 +284,24 @@ class ManageStudentsTable extends Component {
     );
   }
 
-  genderFormatter(gender, {rowData}) {
-    const editedValue = rowData.isEditing ? rowData.editingData.gender : '';
+  genderFormatter(genderTeacherInput, {rowData}) {
+    const editedValue = rowData.isEditing
+      ? rowData.editingData.genderTeacherInput
+      : '';
     return (
       <ManageStudentsGenderCell
+        genderTeacherInput={genderTeacherInput || rowData.gender}
+        id={rowData.id}
+        isEditing={rowData.isEditing}
+        editedValue={editedValue}
+      />
+    );
+  }
+
+  genderLegacyFormatter(gender, {rowData}) {
+    const editedValue = rowData.isEditing ? rowData.editingData.gender : '';
+    return (
+      <ManageStudentsGenderCellLegacy
         gender={gender}
         id={rowData.id}
         isEditing={rowData.isEditing}
@@ -321,7 +341,7 @@ class ManageStudentsTable extends Component {
         studentName={rowData.name}
         hasEverSignedIn={rowData.hasEverSignedIn}
         dependsOnThisSectionForLogin={rowData.dependsOnThisSectionForLogin}
-        canEdit={!this.isEditingDisabled(rowData.userType)}
+        canEdit={!this.isTeacher(rowData.userType)}
       />
     );
   }
@@ -418,11 +438,14 @@ class ManageStudentsTable extends Component {
   getColumns(sortable) {
     const {loginType} = this.props;
 
-    const columns = [
-      this.nameColumn(sortable),
-      this.ageColumn(sortable),
-      this.genderColumn(sortable),
-    ];
+    const columns = [this.nameColumn(sortable), this.ageColumn(sortable)];
+
+    if (
+      !window.GENDER_FEATURE_ENABLED ||
+      LOGIN_TYPES_WITH_GENDER_COLUMN.includes(loginType)
+    ) {
+      columns.push(this.genderColumn(sortable));
+    }
 
     if (LOGIN_TYPES_WITH_PASSWORD_COLUMN.includes(loginType)) {
       columns.push(this.passwordColumn());
@@ -487,6 +510,30 @@ class ManageStudentsTable extends Component {
   }
 
   genderColumn(sortable) {
+    if (window.GENDER_FEATURE_ENABLED) {
+      return {
+        property: 'genderTeacherInput',
+        header: {
+          label: i18n.gender(),
+          props: {
+            style: {
+              ...tableLayoutStyles.headerCell,
+              width: 120,
+            },
+          },
+          transforms: [sortable],
+        },
+        cell: {
+          formatters: [this.genderFormatter],
+          props: {
+            style: {
+              ...tableLayoutStyles.cell,
+              width: 120,
+            },
+          },
+        },
+      };
+    }
     return {
       property: 'gender',
       header: {
@@ -500,7 +547,7 @@ class ManageStudentsTable extends Component {
         transforms: [sortable],
       },
       cell: {
-        formatters: [this.genderFormatter],
+        formatters: [this.genderLegacyFormatter],
         props: {
           style: {
             ...tableLayoutStyles.cell,

@@ -52,6 +52,7 @@ import {ToolboxType, Themes, Renderers} from './constants';
 import {FUNCTION_BLOCK} from './addons/functionBlocks.js';
 import {FUNCTION_BLOCK_NO_FRAME} from './addons/functionBlocksNoFrame.js';
 import {flyoutCategory as functionsFlyoutCategory} from './addons/functionEditor.js';
+import CdoBlockSerializer from './addons/cdoBlockSerializer.js';
 
 const options = {
   contextMenu: true,
@@ -277,6 +278,12 @@ function initializeBlocklyWrapper(blocklyInstance) {
     CdoConnectionChecker,
     true /* opt_allowOverrides */
   );
+  blocklyWrapper.blockly_.serialization.registry.unregister('blocks');
+  blocklyWrapper.blockly_.serialization.registry.register(
+    'blocks',
+    new CdoBlockSerializer(),
+    true /* opt_allowOverrides */
+  );
 
   registerAllContextMenuItems();
   // These are also wrapping read only properties, but can't use wrapReadOnlyProperty
@@ -350,11 +357,9 @@ function initializeBlocklyWrapper(blocklyInstance) {
     googleBlocklyMixin.call(this, mixinObj, true);
   };
 
-  blocklyWrapper.BlockSvg.prototype.addUnusedBlockFrame = function (
-    helpClickFunc
-  ) {
+  blocklyWrapper.BlockSvg.prototype.addUnusedBlockFrame = function () {
     if (!this.unusedSvg_) {
-      this.unusedSvg_ = new BlockSvgUnused(this, helpClickFunc);
+      this.unusedSvg_ = new BlockSvgUnused(this);
       this.unusedSvg_.render(this.svgGroup_, this.RTL);
     }
   };
@@ -406,22 +411,21 @@ function initializeBlocklyWrapper(blocklyInstance) {
     return this.fieldRow;
   };
 
-  blocklyWrapper.WorkspaceSvg.prototype.addUnusedBlocksHelpListener = function (
-    helpClickFunc
-  ) {
-    blocklyWrapper.browserEvents.bind(
-      blocklyWrapper.mainBlockSpace.getCanvas(),
-      blocklyWrapper.BlockSpace.EVENTS.RUN_BUTTON_CLICKED,
-      blocklyWrapper.mainBlockSpace,
-      function () {
-        this.getTopBlocks().forEach(block => {
-          if (block.disabled) {
-            block.addUnusedBlockFrame(helpClickFunc);
-          }
-        });
-      }
-    );
-  };
+  blocklyWrapper.WorkspaceSvg.prototype.addUnusedBlocksHelpListener =
+    function () {
+      blocklyWrapper.browserEvents.bind(
+        blocklyWrapper.mainBlockSpace.getCanvas(),
+        blocklyWrapper.BlockSpace.EVENTS.RUN_BUTTON_CLICKED,
+        blocklyWrapper.mainBlockSpace,
+        function () {
+          this.getTopBlocks().forEach(block => {
+            if (block.disabled) {
+              block.addUnusedBlockFrame();
+            }
+          });
+        }
+      );
+    };
 
   blocklyWrapper.WorkspaceSvg.prototype.getAllUsedBlocks = function () {
     return this.getAllBlocks().filter(block => !block.disabled);
@@ -530,7 +534,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
       container.style.display = 'inline-block';
       container.appendChild(svg);
       svg.appendChild(workspace.createDom());
-      Blockly.Xml.domToBlockSpace(workspace, xml);
+      Blockly.cdoUtils.loadBlocksToWorkspace(workspace, xml);
 
       // Loop through all the parent blocks and remove vertical translation value
       // This makes the output more condensed and readable, while preserving
@@ -580,6 +584,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
       },
       renderer: opt_options.renderer || Renderers.DEFAULT,
       comments: false,
+      media: '/blockly/media/google_blockly',
     };
     // CDO Blockly takes assetUrl as an inject option, and it's used throughout
     // apps, so we should also set it here.

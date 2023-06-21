@@ -175,6 +175,21 @@ class ScriptLevelsController < ApplicationController
     end
   end
 
+  # Get a JSON summary of a level's information, used in modern labs that don't
+  # reload the page between level views.  Note that this can be cached for a relatively
+  # long amount of time, including by the CDN, and does not vary per user.
+  def level_data
+    authorize! :read, ScriptLevel
+
+    @script = ScriptLevelsController.get_script(request)
+    @script_level = ScriptLevelsController.get_script_level(@script, params)
+    raise ActiveRecord::RecordNotFound unless @script_level
+
+    @level = @script_level.level
+
+    render json: {level_data: @level.properties["level_data"]}
+  end
+
   # Get a list of hidden lessons for the current users section
   def hidden_lesson_ids
     authorize! :read, ScriptLevel
@@ -532,6 +547,9 @@ class ScriptLevelsController < ApplicationController
       success: milestone_response(script_level: @script_level, level: @level, solved?: true),
       failure: milestone_response(script_level: @script_level, level: @level, solved?: false)
     }
+
+    @next_level_link = @script_level.next_level_or_redirect_path_for_user(current_user)
+
     render 'levels/show', formats: [:html]
   end
 

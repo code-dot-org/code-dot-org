@@ -2,14 +2,6 @@
   "sk-SK": {
     "data": {
       "course_offerings": {
-        "coursea": "Kurz A",
-        "courseb": "Kurz B",
-        "coursec": "Kurz C",
-        "coursed": "Kurz D",
-        "coursee": "Kurz E",
-        "coursef": "Kurz F",
-        "express": "Zrýchlený kurz",
-        "pre-express": "Zrýchlený kurz pre predškolákov",
         "csd": "Objavujeme informatiku",
         "csp": "Princípy informatiky",
         "20-hour": "Zrýchlený Úvod do Informatiky",
@@ -20,7 +12,6 @@
         "applab-intro": "Úvod do App Labu",
         "aquatic": "Minecraft: Vodné dobrodužstvo",
         "artist": "Umelec",
-        "basketball": "Vytvor basketbalový zápas",
         "course1": "Kurz 1",
         "course2": "Kurz 2",
         "course3": "Kurz 3",
@@ -30,6 +21,7 @@
         "dance-extras": "Neprestávaj tancovať (2018)",
         "frozen": "Programuj s Annou a Elsou",
         "gumball": "Gumball Play Lab",
+        "hero": "Minecraft: Cesta hrdinu",
         "hourofcode": "Klasické bludisko",
         "iceage": "Play Lab Doba ľadová",
         "infinity": "Disney Infinity Play Lab",
@@ -38,7 +30,6 @@
         "oceans": "AI pomáha oceánom",
         "outbreak": "Simulácia nákazy",
         "playlab": "Play Lab",
-        "sports": "Naprogramuj si vlastný zápas",
         "text-compression": "Kompresia textu",
         "csa-self-paced-pl": "Čo ponúka Code.org pre učiteľov pilotného projektu CSA",
         "dance-unplugged": "Hodina kódu – Tanečná párty – bez počítača",
@@ -60,7 +51,8 @@
         "soccer": "futbal",
         "hello-world-space": "Ahoj Svet: Vesmír",
         "hello-world-soccer": "Ahoj Svet: Futbal",
-        "playground": "ihrisko"
+        "playground": "ihrisko",
+        "design-process": "Nadizajnuj svoj projekt"
       }
     }
   }
