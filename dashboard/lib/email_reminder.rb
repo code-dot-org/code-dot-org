@@ -4,6 +4,7 @@ require 'cdo/aws/s3'
 require 'cdo/chat_client'
 
 class EmailReminder
+  include Rails.application.routes.url_helpers
   attr_reader :max_reminder_age, :min_reminder_age, :max_reminders, :log
 
   def initialize(options = {})
@@ -47,8 +48,8 @@ class EmailReminder
 
   # Send emails for all requests that need reminders.
   def send_all_reminder_emails
-    find_requests_needing_reminder.each do |request_id|
-      send_permission_reminder_email request_id
+    find_requests_needing_reminder.each do |request|
+      send_permission_reminder_email request.id
       @num_reminders_sent += 1
     end
   end
@@ -56,7 +57,6 @@ class EmailReminder
   private
 
   def reset
-    # Log stream to pass to the cron job runner
     @log = StringIO.new
 
     # Other values tracked internally and reset with every run
