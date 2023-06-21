@@ -136,10 +136,6 @@ class TeacherPanel extends React.Component {
     return userIdStr ? parseInt(userIdStr, 10) : null;
   };
 
-  getExampleSolution = url => {
-    window.open(url);
-  };
-
   render() {
     const {
       viewAs,
@@ -187,14 +183,13 @@ class TeacherPanel extends React.Component {
           )}
           {displayLevelExamples && (
             <div style={styles.exampleSolutions}>
-              {exampleSolutions.map((exampleSolutionURL, index) => (
+              {exampleSolutions.map((example, index) => (
                 <Button
+                  __useDeprecatedTag
                   key={index}
                   text={i18n.exampleSolution({number: index + 1})}
                   color="blue"
-                  onClick={() => {
-                    this.getExampleSolution(exampleSolutionURL);
-                  }}
+                  href={example}
                   target="_blank"
                   rel="noopener noreferrer"
                 />
