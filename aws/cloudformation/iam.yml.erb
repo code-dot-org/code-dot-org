@@ -211,6 +211,42 @@ Resources:
       Tags:
         - Key: sqlworkbench-team
           Value: codedotorg
+
+  EngineeringReadOnlyRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: "Engineering_ReadOnly"
+      AssumeRolePolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Principal: {Federated: !Sub "arn:aws:iam::${AWS::AccountId}:saml-provider/Google"}
+            Action: sts:AssumeRoleWithSAML
+            Condition:
+              StringEquals:
+                SAML:aud: https://signin.aws.amazon.com/saml
+          - Effect: Allow
+            Principal: {Federated: accounts.google.com}
+            Action: sts:AssumeRoleWithWebIdentity
+            Condition:
+              StringEquals:
+                accounts.google.com:aud: '{{resolve:secretsmanager:admin/google_client_id}}'
+              ForAnyValue:StringEquals:
+                accounts.google.com:sub: !Ref DeveloperGoogleIDs
+      ManagedPolicyArns:
+        - 'arn:aws:iam::aws:policy/ReadOnlyAccess'
+      Policies:
+        - PolicyName: "DenyAdminLogs"
+          PolicyDocument:
+            Version: 2012-10-17
+            Statement:
+              - Effect: Deny
+                Action: logs:*
+                Resource: !Sub 'arn:aws:logs:${AWS::Region}:${AWS::AccountId}:log-group:/admin/*'
+      Tags:
+        - Key: sqlworkbench-team
+          Value: codedotorg
+
   DataAnalystRole:
     Type: AWS::IAM::Role
     Properties:
