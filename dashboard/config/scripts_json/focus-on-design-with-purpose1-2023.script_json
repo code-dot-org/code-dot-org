@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-05-17 16:45:59 UTC",
+    "serialized_at": "2023-06-21 18:24:15 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1051,7 +1051,7 @@
       "key": "08ed4706-7b5d-48c5-8a5e-a06d8261746d",
       "position": 2,
       "properties": {
-        "description": "**Distribute**: Hand out copies of the activity guides."
+        "description": "**Distribute**: Hand out copies of the [r the_problem_solving_process/focus-on-design-with-purpose/2023] activity guides. "
       },
       "seeding_key": {
         "activity_section.key": "08ed4706-7b5d-48c5-8a5e-a06d8261746d",

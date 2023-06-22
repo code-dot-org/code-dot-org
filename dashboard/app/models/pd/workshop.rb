@@ -131,7 +131,7 @@ class Pd::Workshop < ApplicationRecord
   # Whether enrollment in this workshop requires an application
   def require_application?
     courses = [COURSE_CSP, COURSE_CSD, COURSE_CSA]
-    subjects = [SUBJECT_SUMMER_WORKSHOP]
+    subjects = ACADEMIC_YEAR_SUBJECTS.concat([SUBJECT_SUMMER_WORKSHOP])
     courses.include?(course) && subjects.include?(subject) &&
       regional_partner && regional_partner.link_to_partner_application.blank?
   end
@@ -258,11 +258,11 @@ class Pd::Workshop < ApplicationRecord
   end
 
   def self.scheduled_start_in_days(days)
-    Pd::Workshop.joins(:sessions).group_by_id.having("(DATE(MIN(start)) = ?)", Date.today + days.days)
+    Pd::Workshop.joins(:sessions).group_by_id.having("(DATE(MIN(start)) = ?)", Time.zone.today + days.days)
   end
 
   def self.scheduled_end_in_days(days)
-    Pd::Workshop.joins(:sessions).group_by_id.having("(DATE(MAX(end)) = ?)", Date.today + days.days)
+    Pd::Workshop.joins(:sessions).group_by_id.having("(DATE(MAX(end)) = ?)", Time.zone.today + days.days)
   end
 
   # Filters by date the workshop actually ended, regardless of scheduled session times.
@@ -285,7 +285,7 @@ class Pd::Workshop < ApplicationRecord
   # @return [Pd::Workshop, nil]
   def self.nearest
     joins(:sessions).
-      select("pd_workshops.*, ABS(DATEDIFF(pd_sessions.start, '#{Date.today}')) AS day_diff").
+      select("pd_workshops.*, ABS(DATEDIFF(pd_sessions.start, '#{Time.zone.today}')) AS day_diff").
       order("day_diff ASC").
       first
   end
@@ -295,7 +295,7 @@ class Pd::Workshop < ApplicationRecord
   # @return [Pd::Workshop, nil]
   def self.with_nearest_attendance_by(teacher)
     joins(sessions: :attendances).where(pd_attendances: {teacher_id: teacher.id}).
-      select("pd_workshops.*, ABS(DATEDIFF(pd_sessions.start, '#{Date.today}')) AS day_diff").
+      select("pd_workshops.*, ABS(DATEDIFF(pd_sessions.start, '#{Time.zone.today}')) AS day_diff").
       order("day_diff").
       first
   end

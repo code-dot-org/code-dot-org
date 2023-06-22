@@ -601,6 +601,8 @@ describe('entry tests', () => {
       './src/sites/studio/pages/lessons/student_lesson_plan.js',
     'musiclab/index': './src/sites/studio/pages/musiclab/index.js',
     'musiclab/menu': './src/sites/studio/pages/musiclab/menu.js',
+    'policy_compliance/child_account_consent':
+      './src/sites/studio/pages/policy_compliance/child_account_consent.js',
     'print_certificates/batch':
       './src/sites/studio/pages/print_certificates/batch.js',
     'programming_classes/show':
@@ -611,6 +613,7 @@ describe('entry tests', () => {
       './src/sites/studio/pages/programming_environments/show.js',
     'programming_expressions/show':
       './src/sites/studio/pages/programming_expressions/show.js',
+    'sessions/lockout': './src/sites/studio/pages/sessions/lockout.js',
     'devise/sessions/new': './src/sites/studio/pages/devise/sessions/new.js',
     'devise/registrations/_sign_up':
       './src/sites/studio/pages/devise/registrations/_sign_up.js',
@@ -807,6 +810,8 @@ describe('entry tests', () => {
       './src/sites/code.org/pages/views/share_privacy.js',
     'code.org/views/theme_common_head_after':
       './src/sites/code.org/pages/views/theme_common_head_after.js',
+    'code.org/views/theme_google_analytics':
+      './src/sites/code.org/pages/views/theme_google_analytics.js',
     'code.org/views/workshop_search':
       './src/sites/code.org/pages/views/workshop_search.js',
     'code.org/views/amazon_future_engineer':
@@ -824,6 +829,8 @@ describe('entry tests', () => {
       './src/sites/hourofcode.com/pages/views/theme_common_head_after.js',
     'hourofcode.com/views/hoc_events_map':
       './src/sites/hourofcode.com/pages/views/hoc_events_map.js',
+    'hourofcode.com/views/theme_google_analytics':
+      './src/sites/hourofcode.com/pages/views/theme_google_analytics.js',
 
     // shared between code.org and hourofcode.com
     tutorialExplorer: './src/tutorialExplorer/tutorialExplorer.js',

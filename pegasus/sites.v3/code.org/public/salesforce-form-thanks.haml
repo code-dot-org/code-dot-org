@@ -3,7 +3,7 @@ title: Thanks for reaching out!
 theme: responsive_full_width
 ---
 
-%link{href: '/css/generated/design-system-pegasus.css', rel: 'stylesheet'}
+%link{href: "/css/generated/design-system-pegasus.css", rel: "stylesheet"}
 
 %section
   .wrapper
@@ -11,22 +11,28 @@ theme: responsive_full_width
       %h1 Thanks for reaching out!
       %p Thank you for your interest in using Code.org. We will be in touch soon with more information. In the meantime check out some of the amazing resources around our site.
     %div.col-40{style: "float: right;"}
-      %img{src: "/images/thank-you-dance-party.png", alt: "", style: "width: 100%; margin: 2em auto 4em;"}
+      %img{src: "/images/thank-you-dance-party.png", alt: "", style: "width: 100%; margin: 1rem auto 4rem;"}
     .clear
     %h2 Resources
     .action-block__wrapper.action-block__wrapper--three-col
-      .action-block.action-block--one-col
-        %h3 Explore our Curriculum Offerings
-        %img{src: "/images/fill-400x250/kids-with-tablets-in-classroom.jpg", alt: ""}
-        %p{style: "height: 70px"} Explore the free diverse curriculum offerings for K-12.
-        %a.link-button{href: "/teach"} Explore curriculum
-      .action-block.action-block--one-col
-        %h3 6-12 Professional Learning Program
-        %img{src: "/images/fill-400x250/pl-group-at-table.jpg", alt: ""}
-        %p{style: "height: 70px"} Learn more about our professional learning program for middle and high school teachers.
-        %a.link-button{href: "/apply"} Learn more
-      .action-block.action-block--one-col
-        %h3 K-5 Professional Development Workshops
-        %img{src: "/images/fill-400x250/pl-group-at-workshop.jpg", alt: ""}
-        %p{style: "height: 70px"} Find a local workshop that K-5 teachers in your district can attend.
-        %a.link-button{href: "/professional-development-workshops"} Find a workshop
+      .action-block.action-block--one-col.flex-space-between
+        .content-wrapper
+          %h3 Explore our Curriculum Offerings
+          %img{src: "/images/fill-400x250/kids-with-tablets-in-classroom.jpg", alt: ""}
+          %p Explore the free diverse curriculum offerings for K-12.
+        .content-footer
+          %a.link-button{href: "/teach"} Explore curriculum
+      .action-block.action-block--one-col.flex-space-between
+        .content-wrapper
+          %h3 6-12 Professional Learning Program
+          %img{src: "/images/fill-400x250/pl-group-at-table.jpg", alt: ""}
+          %p Learn more about our professional learning program for middle and high school teachers.
+        .content-footer
+          %a.link-button{href: "/apply"} Learn more
+      .action-block.action-block--one-col.flex-space-between
+        .content-wrapper
+          %h3 K-5 Professional Development Workshops
+          %img{src: "/images/fill-400x250/pl-group-at-workshop.jpg", alt: ""}
+          %p Find a local workshop that K-5 teachers in your district can attend.
+        .content-footer
+          %a.link-button{href: "/professional-development-workshops"} Find a workshop

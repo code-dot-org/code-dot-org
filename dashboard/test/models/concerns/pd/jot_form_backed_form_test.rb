@@ -321,7 +321,7 @@ module Pd
     test 'jotform sync gets questions syncs new answers for each form' do
       form_ids = Array.new(2) {get_form_id}
       last_submission_id = get_submission_id
-      min_date = Date.today
+      min_date = Time.zone.today
       form_ids.each do |form_id|
         DummyForm.expects(:get_min_date).with(form_id).returns(min_date)
         DummyForm.expects(:get_questions).with(form_id, force_sync: true).returns(

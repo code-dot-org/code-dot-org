@@ -31,7 +31,7 @@
 /* This is better for accessibility */
 section {
   width: 100%;
-  padding: 4em 2em;
+  padding: 4rem 2rem;
 }
 
 /* Use class="wrapper" to house a section's content */
