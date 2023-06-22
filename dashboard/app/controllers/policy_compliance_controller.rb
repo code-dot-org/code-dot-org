@@ -82,7 +82,8 @@ class PolicyComplianceController < ApplicationController
       url_for(
         action: :child_account_consent,
         controller: :policy_compliance,
-        token: permission_request.uuid
+        token: permission_request.uuid,
+        only_path: false,
       )
     ).deliver_now
 
