@@ -111,19 +111,22 @@ class GoogleAnalyticsReporter {
     }
   }
 
+  trackCustomEvent(event_name, category_value, action_name, dimensions) {
+    if (this.enableGoogleAnalyticsUniversal) {
+      ga('send', event_name, category_value, action_name, dimensions);
+    }
+    if (this.enabledGoogleAnalytics4) {
+      gtag(event_name, action_name, {
+        eventCategory: category_value,
+        dimensions,
+      });
+    }
+  }
   /**
    * Public function exposed to track custom events in Google Analytics
    */
   trackEvent(category_value, action_name, dimensions) {
-    if (this.enableGoogleAnalyticsUniversal) {
-      ga('send', 'event', category_value, action_name, dimensions);
-    }
-    if (this.enabledGoogleAnalytics4) {
-      gtag('event', action_name, {
-        eventCategory: category_value,
-        dimension5: 'custom data',
-      });
-    }
+    this.trackCustomEvent('event', category_value, action_name, dimensions);
   }
 
   /**
