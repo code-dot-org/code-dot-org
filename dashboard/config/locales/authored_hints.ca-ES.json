@@ -4918,9 +4918,9 @@
         },
         "courseC_artist_prog72022": {
           "courseC_artist_prog7_a": "Els angles són o bé de 45 o de 90°.",
-          "courseC_artist_prog7_b": "Funciona quan fas el primer pas?\\\nI quan fas el segon?\\\nQuan comença a fallar?",
+          "courseC_artist_prog7_b": "Funciona quan fas el primer pas?  \nI quan fas el segon?  \nQuan comença a fallar?",
           "courseC_artist_prog7_c": "Pots fer servir el menú desplegable dels blocs per girar per veure quin angle necessites.",
-          "courseC_artist_prog7_d": "Hauràs de fer el següent:\n\n-   avançar\n-   girar 45° a la dreta\n-   avançar\n-   girar 90° a la dreta\n-   avançar\n-   girar 45° a la dreta\n\nRepeteix aquest patró dues vegades!",
+          "courseC_artist_prog7_d": "Hauràs de fer el següent:\n- avançar\n- girar 45° a la dreta\n- avançar\n- girar 90° a la dreta\n- avançar\n- girar 45° a la dreta\n\nRepeteix aquest patró dues vegades!",
           "courseC_artist_prog7_e": "No passa res si t'equivoques! Afegeix blocs i executa el codi per veure què passa, tot i que encara no estiguis segur d'haver resolt el trencaclosques."
         },
         "courseC_artist_prog7_2018": {
@@ -7507,8 +7507,7 @@
         },
         "courseE_artist_functions102022": {
           "courseD_artist_functions10_b": "Aquest similar és molt semblant a l'anterior, però la funció \"dibuixar línia\" ara traça una forma diferent.",
-          "courseD_artist_functions10_a": "Per evitar haver de fer servir diversos blocs \"avançar\", crea una funció de \"dibuixar hexàgon\" i crida-la diverses vegades.",
-          "courseD_artist_functions10_c": "Veus on podries fer servir una funció que es digués \"línia d'hexàgons\" en aquest dibuix?\n\n![](https://images.code.org/904e0f38232fd9c15a3d2d172e7dde0b-image-1493140714580.gif)"
+          "courseD_artist_functions10_a": "Per evitar haver de fer servir diversos blocs \"avançar\", crea una funció de \"dibuixar hexàgon\" i crida-la diverses vegades."
         },
         "courseE_artist_functions10_2018": {
           "courseD_artist_functions10_b": "Aquest similar és molt semblant a l'anterior, però la funció \"dibuixar línia\" ara traça una forma diferent.",
@@ -7723,11 +7722,7 @@
           "courseD_artist_functions9_d": "Per dibuixar el rombe:\n\n-   Repeteix això 2 vegades\n    -   dibuixar una línia de triangles\n    -   girar 60°\n    -   dibuixar una línia de triangles\n    -   girar 120°"
         },
         "courseE_artist_functions92022": {
-          "courseD_artist_functions9_b": "Per fer aquest dibuix, cal dibuixar una línia de triangles 4 vegades i girar o bé 60° o bé 120° abans de dibuixar la següent línia de triangles.",
-          "courseD_artist_functions9_e": "Pots trobar els quatre llocs on pots fer servir \"línia de triangles\" en aquest dibuix?",
-          "courseD_artist_functions9_a": "Aquest trencaclosques es pot dividir en tres parts:\n\n-   crea la funció \"dibuixar un triangle\"\n-   crea la funció \"dibuixar una línia de triangles\"\n-   fes servir la funció \"dibuixar una línia de triangles\" quatre vegades per acabar el dibuix",
-          "courseD_artist_functions9_c": "Per dibuixar una línia de triangles:\n\n-   Repeteix això 4 vegades\n    -   dibuixar un triangle\n    -   saltar 50 píxels cap endavant",
-          "courseD_artist_functions9_d": "Per dibuixar el rombe:\n\n-   Repeteix això 2 vegades\n    -   dibuixar una línia de triangles\n    -   girar 60°\n    -   dibuixar una línia de triangles\n    -   girar 120°"
+          "courseD_artist_functions9_b": "Per fer aquest dibuix, cal dibuixar una línia de triangles 4 vegades i girar o bé 60° o bé 120° abans de dibuixar la següent línia de triangles."
         },
         "courseE_artist_functions9_2018": {
           "courseD_artist_functions9_e": "Pots trobar els quatre llocs on pots fer servir \"línia de triangles\" en aquest dibuix?",

@@ -11733,9 +11733,9 @@
         },
         "courseC_artist_prog72022": {
           "courseC_artist_prog7_a": "Każdy kąt ma 45 lub 90 stopni.",
-          "courseC_artist_prog7_b": "Czy to działa w pierwszym kroku?\\\nCzy co w drugim?\\\nA gdzie źle działa?",
+          "courseC_artist_prog7_b": "Czy w pierwszym kroku wszystko jest w porządku?\nCzy w drugim kroku wszystko jest w porządku? \nGdzie poszło nie tak, jak powinno?",
           "courseC_artist_prog7_c": "Możesz użyć menu rozwijanego na blokach skrętów, aby zobaczyć, jakiego potrzebujesz kąta!",
-          "courseC_artist_prog7_d": "Będziesz chciał wykonać:\n\n-   Idź do przodu\n-   Skręć w prawo o 45 stopni\n-   Idź do przodu\n-   Skręć w prawo o 90 stopni\n-   Idź do przodu\n-   Skręć w prawo o 45 stopni\n\nPowtórz to 2 razy!",
+          "courseC_artist_prog7_d": "Będziesz chciał wykonać:\n-   idź do przodu\n-   skręć w prawo o 45 stopni\n-   idź do przodu\n-   skręć w prawo o 90 stopni\n-   idź do przodu\n-   skręć w prawo o 45 stopni\n\nPowtórz ten schemat 2 razy!",
           "courseC_artist_prog7_e": "Nie obawiaj się popełnienia błędu! Spróbuj dodać bloki i uruchomić kod, aby zobaczyć co się dzieje, nawet jeśli nie wydaje Ci się, że rozwiązałeś tę łamigłówkę. "
         },
         "courseC_artist_prog_challenge12022": {
@@ -12405,8 +12405,7 @@
         },
         "courseE_artist_functions102022": {
           "courseD_artist_functions10_b": "Ten rysunek bardzo przypomina ostatni, ale funkcja \"naysuj linię\" służy teraz do rysowania innego kształtu.",
-          "courseD_artist_functions10_a": "Aby uniknąć wielokrotnego użycia bloków \"idź do przodu\", utwórz funkcję \"narysuj sześciokąt\" i wywołaj ją wiele razy. ",
-          "courseD_artist_functions10_c": "Czy widzisz, gdzie w tym rysunku można użyć funkcji \"rząd sześciokątów\"?\n\n![](https://images.code.org/904e0f38232fd9c15a3d2d172e7dde0b-image-1493140714580.gif)"
+          "courseD_artist_functions10_a": "Aby uniknąć wielokrotnego użycia bloków \"idź do przodu\", utwórz funkcję \"narysuj sześciokąt\" i wywołaj ją wiele razy. "
         },
         "courseE_artist_functions22022": {
           "courseD_artist_functions2_b": "Funkcja nie powinna zawierać całego Twojego programu, a tylko jego część, która rysuje kwadrat o bokach 100 pikseli.",
@@ -12441,11 +12440,7 @@
           "courseD_artist_functions8_c": "Pod koniec każdego rzędu kwadratów, artysta musi tylko obrócić o 180 stopni zanim narysuje kolejny rząd kwadratów. Wstaw to wszystko w pętlę \"powtórz\", aby przygotować Cię do kolejnego ćwiczenia!"
         },
         "courseE_artist_functions92022": {
-          "courseD_artist_functions9_e": "Czy widzisz wszystkie cztery miejsca, w których na tym rysunku można wykorzystać \"rząd trójkątów\"?\n\n![](https://images.code.org/130e1040ecca7186dea87f42666f5620-image-1493140373966.gif)",
-          "courseD_artist_functions9_a": "Tę łamigłówkę można podzielić na trzy części:\n\n-   utwórz funkcję \"narysuj trójkąt\"\n-   utwórz funkcję \"naysuj rząd trójkątów\"\n-   użyj swojej funkcji \"narysuj rząd trójkątów\" cztery razy, aby skończyć rysunek",
-          "courseD_artist_functions9_b": "Ten rysunek jest wykonany poprzez narysowanie rzędu trójkątów cztery razy i obrót o 60 lub 120 stopni przed narysowaniem kolejnego rzędu trójkątów.",
-          "courseD_artist_functions9_c": "Aby narysować rząd kwadratów\n\n-   powtórz 4 razy\n    -   narysuj trójkąt\n    -   skocz do przodu 50 pikseli",
-          "courseD_artist_functions9_d": "Aby narysować romb:\n\n-   powtórz dwukrotnie 2\n    -   narysuj rząd trójkątów\n    -   obróć się o 60 stopni\n    -   narysuj rząd trójkątów\n    -   obróć się o 120 stopni"
+          "courseD_artist_functions9_b": "Ten rysunek jest wykonany poprzez narysowanie rzędu trójkątów cztery razy i obrót o 60 lub 120 stopni przed narysowaniem kolejnego rzędu trójkątów."
         },
         "courseE_artist_functions_challenge12022": {
           "courseE_artist_functions_challenge1_a": "Jeśli wywołasz funkcję jeszcze raz, możesz utworzyć ten sam wzór w rogu na końcu. ",

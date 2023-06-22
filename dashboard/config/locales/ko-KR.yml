@@ -680,7 +680,7 @@ ko:
     direction: 시작 안내(학년 기준)
   video:
     tab: 소개 동영상.
-    notes: 영상 대본 보기
+    notes: 영상이 없다면? 대본 보기
     notes_coming_soon: 참고 동영상 준비중
     autoplay_option: 비디오 자동 실행
     download: 동영상 다운로드
@@ -890,7 +890,7 @@ ko:
     ok: 확인
     startover_title: 정말 다시 시작하겠습니까?
     startover_body: 퍼즐을 시작 상태로 되돌리고, 당신이 추가하거나 변경한 데이터를 모두 초기화 합니다.
-    startover_ok: 다시 시작하기
+    startover_ok: 다시 시작
     startover_cancel: 취소
   time:
     hour: 1 시간
