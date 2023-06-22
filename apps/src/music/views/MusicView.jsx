@@ -441,7 +441,9 @@ class UnconnectedMusicView extends React.Component {
       }
 
       this.progressManager.setProgressionStep(progressionStep);
-      this.props.setShowInstructions(!!progressionStep);
+      this.props.setShowInstructions(
+        !!(progressionStep && progressionStep.text)
+      );
     }
   };
 
