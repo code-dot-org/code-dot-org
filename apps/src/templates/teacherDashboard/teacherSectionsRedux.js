@@ -321,13 +321,14 @@ export const beginCreatingSection = (
   courseVersionId,
   unitId,
   participantType
-) => ({
-  type: CREATE_SECION_BEGIN,
-  courseOfferingId,
-  courseVersionId,
-  unitId,
-  participantType,
-});
+) =>
+  console.log('CREATING SECTION NOW FROM REDUX') || {
+    type: CREATE_SECION_BEGIN,
+    courseOfferingId,
+    courseVersionId,
+    unitId,
+    participantType,
+  };
 
 /**
  * Opens the UI for editing the specified section.
@@ -355,7 +356,8 @@ export const editSectionProperties = props => ({
 /**
  * Close the UI for adding/editing a section, abandoning changes.
  */
-export const cancelEditingSection = () => ({type: EDIT_SECTION_CANCEL});
+export const cancelEditingSection = () =>
+  console.log('CANCEL PRESSED') || {type: EDIT_SECTION_CANCEL};
 
 export const submitEditingSection = (dispatch, getState) => {
   dispatch({type: EDIT_SECTION_REQUEST});
@@ -412,6 +414,7 @@ export const asyncLoadSectionData = id => dispatch => {
     apis.push('/dashboardapi/sections/' + id + '/students');
   }
 
+  console.log('ASYNC LOAD STARTING');
   return Promise.all(apis.map(fetchJSON))
     .then(
       ([
@@ -420,6 +423,13 @@ export const asyncLoadSectionData = id => dispatch => {
         availableParticipantTypes,
         students,
       ]) => {
+        console.log(
+          'mapping',
+          sections,
+          validCourseOfferings,
+          availableParticipantTypes,
+          students
+        );
         dispatch(setCourseOfferings(validCourseOfferings));
         dispatch(
           setAvailableParticipantTypes(
@@ -433,9 +443,11 @@ export const asyncLoadSectionData = id => dispatch => {
       }
     )
     .catch(err => {
+      console.log('error', err.message);
       console.error(err.message);
     })
     .then(() => {
+      console.log('finished!');
       dispatch({type: ASYNC_LOAD_END});
     });
 };
@@ -593,6 +605,7 @@ const initialState = {
  */
 
 function newSectionData(participantType) {
+  console.log('READING NEW SECTION DATA');
   return {
     id: PENDING_NEW_SECTION_ID,
     name: '',
@@ -804,6 +817,7 @@ export default function teacherSections(state = initialState, action) {
   }
 
   if (action.type === CREATE_SECION_BEGIN) {
+    console.log('CREATE SECTION BEGIN');
     const initialSectionData = newSectionData(action.participantType);
     if (action.courseOfferingId) {
       initialSectionData.courseOfferingId = action.courseOfferingId;
@@ -826,6 +840,7 @@ export default function teacherSections(state = initialState, action) {
   }
 
   if (action.type === EDIT_SECTION_BEGIN) {
+    console.log('EDIT SECTION BEGIN', state, action);
     const initialParticipantType =
       state.availableParticipantTypes.length === 1
         ? state.availableParticipantTypes[0]
@@ -1194,34 +1209,35 @@ export function getAssignmentName(state, sectionId) {
  * Maps from the data we get back from the server for a section, to the format
  * we want to have in our store.
  */
-export const sectionFromServerSection = serverSection => ({
-  id: serverSection.id,
-  name: serverSection.name,
-  courseVersionName: serverSection.courseVersionName,
-  createdAt: serverSection.createdAt,
-  loginType: serverSection.login_type,
-  grades: serverSection.grades,
-  providerManaged: serverSection.providerManaged || false, // TODO: (josh) make this required when /v2/sections API is deprecated
-  lessonExtras: serverSection.lesson_extras,
-  pairingAllowed: serverSection.pairing_allowed,
-  ttsAutoplayEnabled: serverSection.tts_autoplay_enabled,
-  sharingDisabled: serverSection.sharing_disabled,
-  studentCount: serverSection.studentCount,
-  code: serverSection.code,
-  courseOfferingId: serverSection.course_offering_id,
-  courseVersionId: serverSection.course_version_id,
-  unitId: serverSection.unit_id,
-  courseId: serverSection.course_id,
-  hidden: serverSection.hidden,
-  isAssigned: serverSection.isAssigned,
-  restrictSection: serverSection.restrict_section,
-  postMilestoneDisabled: serverSection.post_milestone_disabled,
-  codeReviewExpiresAt: serverSection.code_review_expires_at
-    ? Date.parse(serverSection.code_review_expires_at)
-    : null,
-  isAssignedCSA: serverSection.is_assigned_csa,
-  participantType: serverSection.participant_type,
-});
+export const sectionFromServerSection = serverSection =>
+  console.log('SECTION FROM SERVER SECTION') || {
+    id: serverSection.id,
+    name: serverSection.name,
+    courseVersionName: serverSection.courseVersionName,
+    createdAt: serverSection.createdAt,
+    loginType: serverSection.login_type,
+    grades: serverSection.grades,
+    providerManaged: serverSection.providerManaged || false, // TODO: (josh) make this required when /v2/sections API is deprecated
+    lessonExtras: serverSection.lesson_extras,
+    pairingAllowed: serverSection.pairing_allowed,
+    ttsAutoplayEnabled: serverSection.tts_autoplay_enabled,
+    sharingDisabled: serverSection.sharing_disabled,
+    studentCount: serverSection.studentCount,
+    code: serverSection.code,
+    courseOfferingId: serverSection.course_offering_id,
+    courseVersionId: serverSection.course_version_id,
+    unitId: serverSection.unit_id,
+    courseId: serverSection.course_id,
+    hidden: serverSection.hidden,
+    isAssigned: serverSection.isAssigned,
+    restrictSection: serverSection.restrict_section,
+    postMilestoneDisabled: serverSection.post_milestone_disabled,
+    codeReviewExpiresAt: serverSection.code_review_expires_at
+      ? Date.parse(serverSection.code_review_expires_at)
+      : null,
+    isAssignedCSA: serverSection.is_assigned_csa,
+    participantType: serverSection.participant_type,
+  };
 
 /**
  * Maps from the data we get back from the server for a student, to the format
@@ -1244,6 +1260,7 @@ export const studentFromServerStudent = (serverStudent, sectionId) => ({
  * @param {sectionShape} section
  */
 export function serverSectionFromSection(section) {
+  console.log('LAZY SERVER SECTION FROM SECTION');
   // Lazy: We leave some extra properties on this object (they're ignored by
   // the server for now) hoping this can eventually become a pass-through.
   return {
