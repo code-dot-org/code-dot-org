@@ -231,8 +231,10 @@ export default class ProjectManager {
     return true;
   }
 
-  // Check if we can save immediately. If we can, initiate a save.
-  // If we cannot, enqueue a save if one has not already been enqueued and
+  // Check if we can save immediately. If a save is in progress, we must wait. Otherwise,
+  // if forceSave is true or it has been at least 30 seconds since our last save,
+  // initiate a save.
+  // If we cannot save now, enqueue a save if one has not already been enqueued and
   // return a noop response.
   private enqueueSaveOrSave(forceSave: boolean) {
     if (!this.canSave(forceSave)) {
