@@ -613,6 +613,7 @@ describe('entry tests', () => {
       './src/sites/studio/pages/programming_environments/show.js',
     'programming_expressions/show':
       './src/sites/studio/pages/programming_expressions/show.js',
+    'sessions/lockout': './src/sites/studio/pages/sessions/lockout.js',
     'devise/sessions/new': './src/sites/studio/pages/devise/sessions/new.js',
     'devise/registrations/_sign_up':
       './src/sites/studio/pages/devise/registrations/_sign_up.js',
@@ -809,6 +810,8 @@ describe('entry tests', () => {
       './src/sites/code.org/pages/views/share_privacy.js',
     'code.org/views/theme_common_head_after':
       './src/sites/code.org/pages/views/theme_common_head_after.js',
+    'code.org/views/theme_google_analytics':
+      './src/sites/code.org/pages/views/theme_google_analytics.js',
     'code.org/views/workshop_search':
       './src/sites/code.org/pages/views/workshop_search.js',
     'code.org/views/amazon_future_engineer':

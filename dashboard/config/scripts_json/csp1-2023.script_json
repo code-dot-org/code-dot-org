@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-04-25 20:53:51 UTC",
+    "serialized_at": "2023-06-20 22:01:22 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -5805,6 +5805,18 @@
       }
     },
     {
+      "name": "CSP Unit 1 Slides",
+      "url": "https://docs.google.com/presentation/d/1pkSOulPP_rLLvhZrRU6wEXzRHy3kNALXhfP-u9r8XfM/edit?usp=drive_link",
+      "key": "csp_unit_1_slides",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csp_unit_1_slides"
+      }
+    },
+    {
       "name": "DNA Testing Kits & The Security Risks in Digitized DNA",
       "url": "https://www.bleepingcomputer.com/news/security/dna-testing-kits-and-the-security-risks-in-digitized-dna/",
       "key": "dna_testing_kits_the_security_risks_in_digitized_dna",
@@ -6373,6 +6385,12 @@
     {
       "seeding_key": {
         "lesson.key": "Welcome to CSP",
+        "resource.key": "csp_unit_1_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Welcome to CSP",
         "resource.key": "how_to_administer_a_locked_assessment"
       }
     },
@@ -6411,6 +6429,12 @@
     {
       "seeding_key": {
         "resource.key": "course_vocabulary",
+        "script.name": "csp1-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csp_unit_1_slides",
         "script.name": "csp1-2023"
       }
     },
