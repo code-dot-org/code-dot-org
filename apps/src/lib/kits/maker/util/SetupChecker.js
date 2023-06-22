@@ -1,16 +1,12 @@
 /** @file Stubbable core setup check behavior for the setup page. */
 import CircuitPlaygroundBoard from '../boards/circuitPlayground/CircuitPlaygroundBoard';
 import {findPortWithViableDevice} from '../portScanning';
-import {
-  isCodeOrgBrowser,
-  isChrome,
-  getChromeVersion,
-  isChromeOS,
-} from './browserChecks';
+import {isCodeOrgBrowser} from './browserChecks';
 import {
   BOARD_TYPE,
   detectBoardTypeFromPort,
   isWebSerialPort,
+  shouldUseWebSerial,
 } from './boardUtils';
 import MicroBitBoard from '../boards/microBit/MicroBitBoard';
 
@@ -24,16 +20,14 @@ export default class SetupChecker {
   }
 
   /**
-   * Resolve if using Chrome >= 90 or Code.org Browser (Maker App)
+   * Resolve if using WebSerial or Code.org Browser (Maker App)
    * @return {Promise}
    */
   detectSupportedBrowser() {
     return new Promise((resolve, reject) => {
       if (isCodeOrgBrowser()) {
         resolve();
-      } else if (isChromeOS() && getChromeVersion() >= 90) {
-        resolve();
-      } else if (isChrome() && getChromeVersion() >= 90) {
+      } else if (shouldUseWebSerial()) {
         resolve();
       } else {
         reject(new Error('Not using a supported browser.'));
