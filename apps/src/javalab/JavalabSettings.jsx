@@ -14,7 +14,7 @@ import {
   increaseEditorFontSize,
   setDisplayTheme,
 } from './redux/viewRedux';
-import CloseOnEscape from './components/CloseOnEscape';
+import CloseOnEscape from '@cdo/apps/templates/CloseOnEscape';
 
 /**
  * Displays the settings options for JavaLab.
