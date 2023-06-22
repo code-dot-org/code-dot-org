@@ -65,27 +65,27 @@ const CheckboxDropdown = ({
               />
             </li>
           ))}
-          <div className={style.bottomButtonsContainer}>
-            <Button
-              id="select-all"
-              className={style.affectAllButton}
-              type="button"
-              text={i18n.selectAll()}
-              onClick={onSelectAll}
-              styleAsText
-              color={Button.ButtonColor.brandSecondaryDefault}
-            />
-            <Button
-              id="clear-all"
-              className={style.affectAllButton}
-              type="button"
-              text={i18n.clearAll()}
-              onClick={onClearAll}
-              styleAsText
-              color={Button.ButtonColor.brandSecondaryDefault}
-            />
-          </div>
         </ul>
+        <div className={style.bottomButtonsContainer}>
+          <Button
+            id="select-all"
+            className={style.affectAllButton}
+            type="button"
+            text={i18n.selectAll()}
+            onClick={onSelectAll}
+            styleAsText
+            color={Button.ButtonColor.brandSecondaryDefault}
+          />
+          <Button
+            id="clear-all"
+            className={style.affectAllButton}
+            type="button"
+            text={i18n.clearAll()}
+            onClick={onClearAll}
+            styleAsText
+            color={Button.ButtonColor.brandSecondaryDefault}
+          />
+        </div>
       </form>
     </div>
   );

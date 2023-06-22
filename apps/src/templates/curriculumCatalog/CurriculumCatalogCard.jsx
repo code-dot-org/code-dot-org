@@ -22,6 +22,11 @@ import {
   unassignSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shapes';
+import {
+  CreateSectionsToAssignSectionsDialog,
+  SignInToAssignSectionsDialog,
+  UpgradeAccountToAssignSectionsDialog,
+} from '@cdo/apps/templates/curriculumCatalog/noSectionsToAssignDialogs';
 
 const CurriculumCatalogCard = ({
   courseDisplayName,
@@ -102,10 +107,45 @@ const CustomizableCurriculumCatalogCard = ({
   quickViewButtonText,
   isEnglish,
   pathToCourse,
-  sectionsForDropdown,
+  sectionsForDropdown = [],
+  isTeacher,
+  isSignedOut,
   ...props
 }) => {
   const [isAssignDialogOpen, setIsAssignDialogOpen] = useState(false);
+
+  const renderAssignDialog = () => {
+    if (isSignedOut) {
+      return (
+        <SignInToAssignSectionsDialog
+          onClose={() => setIsAssignDialogOpen(false)}
+        />
+      );
+    } else if (isTeacher && sectionsForDropdown.length > 0) {
+      return (
+        <MultipleSectionsAssigner
+          assignmentName={courseDisplayName}
+          onClose={() => setIsAssignDialogOpen(false)}
+          sections={sectionsForDropdown}
+          participantAudience="student"
+          {...props}
+        />
+      );
+    } else if (isTeacher) {
+      return (
+        <CreateSectionsToAssignSectionsDialog
+          onClose={() => setIsAssignDialogOpen(false)}
+          onClick={() => {}}
+        />
+      );
+    } else {
+      return (
+        <UpgradeAccountToAssignSectionsDialog
+          onClose={() => setIsAssignDialogOpen(false)}
+        />
+      );
+    }
+  };
 
   return (
     <div>
@@ -168,15 +208,7 @@ const CustomizableCurriculumCatalogCard = ({
           </div>
         </div>
       </div>
-      {isAssignDialogOpen && (
-        <MultipleSectionsAssigner
-          assignmentName={courseDisplayName}
-          onClose={() => setIsAssignDialogOpen(false)}
-          sections={sectionsForDropdown}
-          participantAudience="student"
-          {...props}
-        />
-      )}
+      {isAssignDialogOpen && renderAssignDialog()}
     </div>
   );
 };
@@ -199,6 +231,8 @@ CustomizableCurriculumCatalogCard.propTypes = {
   scriptId: PropTypes.number,
   isStandAloneUnit: PropTypes.bool,
   sectionsForDropdown: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
+  isTeacher: PropTypes.bool,
+  isSignedOut: PropTypes.bool.isRequired,
   // for screenreaders
   imageAltText: PropTypes.string,
   quickViewButtonDescription: PropTypes.string.isRequired,
