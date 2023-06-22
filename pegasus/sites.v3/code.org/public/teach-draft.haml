@@ -119,14 +119,21 @@ theme: responsive_full_width
   .wrapper
     %h2=hoc_s(:teach_page_resources_heading)
     %p=hoc_s(:teach_page_resources_desc)
-    RESOURCES TABS HERE
+    -# RESOURCES TABS HERE
 
-%section.curriculum-offerings.centered
+%section.curriculum-offerings
   .wrapper
-    %h2=hoc_s(:teach_page_curriculum_heading)
-    %p=hoc_s(:teach_page_curriculum_desc)
-    %a.link-button.secondary{href: CDO.studio_url("/catalog")}
-      =hoc_s(:call_to_action_see_full_curriculum_catalog)
+    %h2.centered
+      =hoc_s(:teach_page_curriculum_heading)
+    %p.centered
+      =hoc_s(:teach_page_curriculum_desc)
+    - if request.language == "en"
+      = view :teach_page_curriculum_english
+    - else
+      = view :teach_page_curriculum_intl
+    %div.centered{style: "margin-top: 2rem"}
+      %a.link-button.secondary{href: CDO.studio_url("/catalog")}
+        =hoc_s(:call_to_action_see_full_curriculum_catalog)
 
 %section.pl-offerings.bg-neutral-light.centered
   .wrapper
