@@ -25,7 +25,7 @@ process.hrtime = require('browser-process-hrtime');
 const xPins = ['A0', 'A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7'];
 const classicPins = [12, 6, 9, 10, 3, 2, 0, 1];
 
-describe.skip('CircuitPlaygroundBoard', () => {
+describe('CircuitPlaygroundBoard', () => {
   let board, playground, userAgentSpy;
 
   beforeEach(() => {
@@ -60,6 +60,9 @@ describe.skip('CircuitPlaygroundBoard', () => {
     // Construct a board to test on
     board = new CircuitPlaygroundBoard();
     circuitPlaygroundBoardSetup();
+    sinon.stub(CircuitPlaygroundBoard, 'openSerialPort').callsFake(() => {
+      return Promise.resolve();
+    });
   });
 
   afterEach(() => {
@@ -67,6 +70,7 @@ describe.skip('CircuitPlaygroundBoard', () => {
     board = undefined;
     CircuitPlaygroundBoard.makePlaygroundTransport.restore();
     circuitPlaygroundBoardTeardown();
+    sinon.restore();
   });
 
   function circuitPlaygroundBoardSetup() {
