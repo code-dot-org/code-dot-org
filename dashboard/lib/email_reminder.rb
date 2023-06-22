@@ -48,7 +48,7 @@ class EmailReminder
 
   # Send emails for all requests that need reminders.
   def send_all_reminder_emails
-    find_requests_needing_reminder.each do |request|
+    find_requests_needing_reminder.find_each do |request|
       send_permission_reminder_email request.id
       @num_reminders_sent += 1
     end
