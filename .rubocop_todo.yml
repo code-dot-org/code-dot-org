@@ -174,12 +174,6 @@ Rails/ApplicationMailer:
 Rails/AssertNot:
   Enabled: false
 
-# Offense count: 123
-# Configuration parameters: EnforcedStyle, AllowToTime.
-# SupportedStyles: strict, flexible
-Rails/Date:
-  Enabled: false
-
 # Offense count: 472
 # This cop supports unsafe auto-correction (--auto-correct-all).
 # Configuration parameters: Whitelist, AllowedMethods, AllowedReceivers.
