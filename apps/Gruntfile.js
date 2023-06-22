@@ -810,6 +810,8 @@ describe('entry tests', () => {
       './src/sites/code.org/pages/views/share_privacy.js',
     'code.org/views/theme_common_head_after':
       './src/sites/code.org/pages/views/theme_common_head_after.js',
+    'code.org/views/theme_google_analytics':
+      './src/sites/code.org/pages/views/theme_google_analytics.js',
     'code.org/views/workshop_search':
       './src/sites/code.org/pages/views/workshop_search.js',
     'code.org/views/amazon_future_engineer':
