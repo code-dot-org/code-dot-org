@@ -29,8 +29,8 @@ export default class MusicPlayer {
   private library: MusicLibrary | null;
 
   constructor(bpm: number = DEFAULT_BPM, key: Key = DEFAULT_KEY) {
-    this.bpm = bpm;
-    this.key = key;
+    this.bpm = this.validateBpm(bpm);
+    this.key = this.validateKey(key);
     this.samplePlayer = new SamplePlayer();
     this.library = null;
   }
@@ -41,7 +41,7 @@ export default class MusicPlayer {
    */
   initialize(library: MusicLibrary) {
     this.library = library;
-    this.samplePlayer.initialize(library);
+    this.samplePlayer.initialize(library, this.bpm);
   }
 
   /**
@@ -321,5 +321,23 @@ export default class MusicPlayer {
     });
 
     return samples;
+  }
+
+  private validateBpm(bpm: number): number {
+    if (bpm < 1 || bpm > 500) {
+      console.warn('Invalid BPM. Defaulting to 120');
+      return DEFAULT_BPM;
+    }
+
+    return bpm;
+  }
+
+  private validateKey(key: number): Key {
+    if (Key[key] === undefined) {
+      console.warn('Invalid key. Defaulting to C');
+      return Key.C;
+    }
+
+    return key;
   }
 }
