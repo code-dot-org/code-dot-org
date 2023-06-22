@@ -157,7 +157,7 @@ class Api::V1::UsersController < Api::V1::JSONApiController
 
   # POST /api/v1/users/<user_id>/postpone_census_banner
   def postpone_census_banner
-    today = Date.today
+    today = Time.zone.today
     year = today.year
     # Find the next scheduled date that is at least 2 weeks away
     scheduled_display_dates = [
@@ -177,7 +177,7 @@ class Api::V1::UsersController < Api::V1::JSONApiController
 
   # POST /api/v1/users/<user_id>/dismiss_census_banner
   def dismiss_census_banner
-    today = Date.today
+    today = Time.zone.today
     year = today.year
 
     # if they dismiss Aug 1 or later then don't show until next November
