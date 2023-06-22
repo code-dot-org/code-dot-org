@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-05-17 16:34:40 UTC",
+    "serialized_at": "2023-06-21 18:23:27 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1051,7 +1051,7 @@
       "key": "9d1841d3-99ce-405c-a724-8a68451ac627",
       "position": 2,
       "properties": {
-        "description": "**Distribute**: Hand out copies of the activity guides."
+        "description": "**Distribute**: Hand out copies of the [r the_problem_solving_process/focus-on-data/2023] activity guides. "
       },
       "seeding_key": {
         "activity_section.key": "9d1841d3-99ce-405c-a724-8a68451ac627",
