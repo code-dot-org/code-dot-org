@@ -132,7 +132,10 @@ class UnconnectedMusicView extends React.Component {
       setAppConfig(this.props.appConfig);
     }
 
-    this.player = new MusicPlayer();
+    const bpm = AppConfig.getValue('bpm');
+    const key = AppConfig.getValue('key');
+
+    this.player = new MusicPlayer(bpm, key);
     this.analyticsReporter = new AnalyticsReporter();
     this.musicBlocklyWorkspace = new MusicBlocklyWorkspace();
     this.soundUploader = new SoundUploader(this.player);

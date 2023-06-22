@@ -22,7 +22,7 @@ module CustomRake
 end
 
 module TimedTaskWithLogging
-  def timed_task_with_logging(*args, &block)
-    CustomRake::TimedTaskWithLogging.define_task(*args, &block)
+  def timed_task_with_logging(...)
+    CustomRake::TimedTaskWithLogging.define_task(...)
   end
 end
