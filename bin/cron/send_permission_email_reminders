@@ -20,12 +20,12 @@ OptionParser.new do |opts|
     Options:
   BANNER
 
-  opts.on('--max-age', 'Timestamp of the oldest requests to send reminders for. Defaults to 7 days ago.') do |max_reminder_age|
-    options[:max_reminder_age] = max_reminder_age
+  opts.on('--max-age-days', 'Age in days of the oldest requests to send reminders for. Defaults to 7 days.') do |max_age_days|
+    options[:max_reminder_age] = max_age_days.days.ago
   end
 
-  opts.on('--min-age', 'Timestamp of the newest requests to send reminders for. Defaults to 3 days ago.') do |min_reminder_age|
-    options[:min_reminder_age] = min_reminder_age
+  opts.on('--min-age-days', 'Age in days of the newest requests to send reminders for. Defaults to 3 days.') do |min_age_days|
+    options[:min_reminder_age] = min_age_days.days.ago
   end
 
   opts.on('--max-reminders', 'Max number of reminders to send for a given request. Defaults to 1.') do |max_reminders|
