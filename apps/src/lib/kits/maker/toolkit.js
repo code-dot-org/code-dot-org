@@ -19,7 +19,11 @@ import MakerError, {
 } from './MakerError';
 import {findPortWithViableDevice} from './portScanning';
 import * as redux from './redux';
-import {isChrome, gtChrome33, isCodeOrgBrowser} from './util/browserChecks';
+import {
+  isChrome,
+  isCodeOrgBrowser,
+  getChromeVersion,
+} from './util/browserChecks';
 import MicroBitBoard from './boards/microBit/MicroBitBoard';
 import {MB_API} from './boards/microBit/MicroBitConstants';
 import WebSerialPortWrapper from '@cdo/apps/lib/kits/maker/WebSerialPortWrapper';
@@ -155,7 +159,7 @@ function disconnect() {
  * @returns {Promise}
  */
 function confirmSupportedBrowser() {
-  if (isCodeOrgBrowser() || (isChrome() && gtChrome33())) {
+  if (isCodeOrgBrowser() || (isChrome() && getChromeVersion() >= 90)) {
     return Promise.resolve();
   } else {
     return Promise.reject(new UnsupportedBrowserError('Unsupported browser'));
