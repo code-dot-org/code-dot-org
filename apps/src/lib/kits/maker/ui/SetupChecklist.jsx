@@ -8,16 +8,9 @@ import SetupChecker from '../util/SetupChecker';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import i18n from '@cdo/locale';
 import applabI18n from '@cdo/applab/locale';
-import {
-  isWindows,
-  isChrome,
-  isChromeOS,
-  isCodeOrgBrowser,
-  isLinux,
-} from '../util/browserChecks';
+import {isWindows, isCodeOrgBrowser, isLinux} from '../util/browserChecks';
 import ValidationStep, {Status} from '../../../ui/ValidationStep';
 import {BOARD_TYPE, shouldUseWebSerial, delayPromise} from '../util/boardUtils';
-import {CHROME_APP_WEBSTORE_URL} from '../util/makerConstants';
 import WebSerialPortWrapper from '@cdo/apps/lib/kits/maker/WebSerialPortWrapper';
 import Button from '../../../../templates/Button';
 import MBFirmataUpdater from '@cdo/apps/lib/kits/maker/boards/microBit/MBFirmataUpdater';
@@ -97,17 +90,6 @@ class SetupChecklist extends Component {
         this.detectStep(STATUS_SUPPORTED_BROWSER, () =>
           this.setupChecker.detectSupportedBrowser()
         )
-      )
-
-      // Is Chrome App Installed?
-      .then(
-        () =>
-          // Only necessary for ChromeOS when not using webserial
-          (isChromeOS() || isChrome()) &&
-          !shouldUseWebSerial() &&
-          this.detectStep(STATUS_APP_INSTALLED, () =>
-            this.setupChecker.detectChromeAppInstalled()
-          )
       )
 
       // Is board plugged in?
@@ -196,18 +178,7 @@ class SetupChecklist extends Component {
    * Helper to be used on second/subsequent attempts at detecting board usability.
    */
   redetect() {
-    if (
-      this.state[STATUS_SUPPORTED_BROWSER] !== Status.SUCCEEDED ||
-      ((isChromeOS() || isChrome()) &&
-        this.state[STATUS_APP_INSTALLED] !== Status.SUCCEEDED)
-    ) {
-      // If the Chrome app was not installed last time we checked, but has been
-      // installed since, we'll probably need a full page reload to pick it up.
-      utils.reload();
-    } else {
-      // Otherwise we should be able to redetect without a page reload.
-      this.detect();
-    }
+    utils.reload();
   }
 
   updateMBFirmata() {
@@ -239,37 +210,13 @@ class SetupChecklist extends Component {
           stepStatus={this.state[STATUS_SUPPORTED_BROWSER]}
         />
       );
-    } else if (isChromeOS() || isChrome()) {
-      if (shouldUseWebSerial()) {
-        return (
-          <ValidationStep
-            stepName={applabI18n.makerSetupBrowserSupported()}
-            stepStatus={this.state[STATUS_SUPPORTED_BROWSER]}
-          />
-        );
-      } else {
-        // Chromebooks - Chrome App
-        return (
-          <ValidationStep
-            stepName={
-              applabI18n.makerSetupAppInstalled() +
-              (isChromeOS() ? '' : applabI18n.legacy())
-            }
-            stepStatus={this.state[STATUS_APP_INSTALLED]}
-          >
-            <SafeMarkdown
-              markdown={applabI18n.makerSetupInstallSerialConnector({
-                webstoreURL: CHROME_APP_WEBSTORE_URL,
-              })}
-            />
-            <br />
-            {applabI18n.makerSetupRedetect()}
-            <br />
-            {applabI18n.makerSetupAcceptPrompt()}
-            {this.contactSupport()}
-          </ValidationStep>
-        );
-      }
+    } else if (shouldUseWebSerial()) {
+      return (
+        <ValidationStep
+          stepName={applabI18n.makerSetupBrowserSupported()}
+          stepStatus={this.state[STATUS_SUPPORTED_BROWSER]}
+        />
+      );
     } else {
       // Unsupported Browser
       return (

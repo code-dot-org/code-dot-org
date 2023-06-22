@@ -1,10 +1,10 @@
 /** @file Stubbable core setup check behavior for the setup page. */
 import CircuitPlaygroundBoard from '../boards/circuitPlayground/CircuitPlaygroundBoard';
-import {ensureAppInstalled, findPortWithViableDevice} from '../portScanning';
+import {findPortWithViableDevice} from '../portScanning';
 import {
   isCodeOrgBrowser,
   isChrome,
-  gtChrome33,
+  getChromeVersion,
   isChromeOS,
 } from './browserChecks';
 import {
@@ -24,31 +24,21 @@ export default class SetupChecker {
   }
 
   /**
-   * Resolve if using Chrome > 33 or Code.org Browser
+   * Resolve if using Chrome >= 90 or Code.org Browser (Maker App)
    * @return {Promise}
    */
   detectSupportedBrowser() {
     return new Promise((resolve, reject) => {
       if (isCodeOrgBrowser()) {
-        // TODO: Check browser version
         resolve();
-      } else if (isChromeOS()) {
+      } else if (isChromeOS() && getChromeVersion() >= 90) {
         resolve();
-      } else if (isChrome() && gtChrome33()) {
-        // Legacy support for Chrome App on Desktop
+      } else if (isChrome() && getChromeVersion() >= 90) {
         resolve();
       } else {
         reject(new Error('Not using a supported browser.'));
       }
     });
-  }
-
-  /**
-   * Resolve if the Chrome Connector App is installed.
-   * @return {Promise}
-   */
-  detectChromeAppInstalled() {
-    return ensureAppInstalled();
   }
 
   /**

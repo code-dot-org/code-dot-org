@@ -61,7 +61,6 @@ export default class SetupGuide extends React.Component {
   };
 
   render() {
-    // Experiment 'microbit', displays Circuit Playground and Micro:Bit descriptions.
     const chromeVersion = getChromeVersion();
 
     return (
@@ -71,17 +70,17 @@ export default class SetupGuide extends React.Component {
             type={NotificationType.warning}
             notice={i18n.makerSetupDeprecationWarningAppTitle()}
             details={i18n.makerSetupDeprecationWarningAppDetails()}
-            detailsLinkText={i18n.makerDeprecationWarningLinkText()}
+            detailsLinkText={i18n.makerDeprecationNoticeLinkText()}
             detailsLink={MAKER_DEPRECATION_SUPPORT_URL}
             dismissible
           />
         )}
-        {chromeVersion && chromeVersion <= 90 && (
+        {chromeVersion && chromeVersion < 90 && (
           <Notification
             type={NotificationType.warning}
-            notice={i18n.makerSetupDeprecationWarningOldChromeTitle()}
-            details={i18n.makerSetupDeprecationWarningOldChromeDetails()}
-            detailsLinkText={i18n.makerDeprecationWarningLinkText()}
+            notice={i18n.makerSetupDeprecationNoticeOldChromeTitle()}
+            details={i18n.makerSetupDeprecationNoticeOldChromeDetails()}
+            detailsLinkText={i18n.makerDeprecationNoticeLinkText()}
             detailsLink={MAKER_DEPRECATION_SUPPORT_URL}
             dismissible
           />
