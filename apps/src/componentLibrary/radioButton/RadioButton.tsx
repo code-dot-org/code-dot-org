@@ -1,14 +1,14 @@
-import React from 'react';
+import React, {memo} from 'react';
 import classnames from 'classnames';
 
 import Typography from '@cdo/apps/componentLibrary/typography';
 import moduleStyles from './radioButton.module.scss';
 
-interface RadioButtonProps {
+export interface RadioButtonProps {
   checked: boolean;
-  onChange: () => void;
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   name: string;
-  value?: string;
+  value: string;
   label?: string;
   disabled?: boolean;
   size?: 'xs' | 's' | 'm' | 'l';
@@ -49,4 +49,4 @@ const RadioButton: React.FunctionComponent<RadioButtonProps> = ({
   );
 };
 
-export default RadioButton;
+export default memo(RadioButton);
