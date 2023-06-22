@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-05-17 16:47:48 UTC",
+    "serialized_at": "2023-06-21 18:20:38 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1051,7 +1051,7 @@
       "key": "f1922739-23d7-4952-a1b4-07fce53aae42",
       "position": 2,
       "properties": {
-        "description": "**Distribute**: Hand out copies of the activity guides."
+        "description": "**Distribute**: Hand out copies of the [r the_problem_solving_process_2/focus-on-coding/2023] activity guides."
       },
       "seeding_key": {
         "activity_section.key": "f1922739-23d7-4952-a1b4-07fce53aae42",
@@ -3330,6 +3330,18 @@
       "seeding_key": {
         "resource.key": "the_problem_solving_process_1"
       }
+    },
+    {
+      "name": "The Problem Solving Process",
+      "url": "https://docs.google.com/document/d/1KczAoklRXU1MemCJaah68E9-YtM4Qny00uZJE5f_Ly0/edit?usp=sharing",
+      "key": "the_problem_solving_process_2",
+      "properties": {
+        "audience": "Student",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "the_problem_solving_process_2"
+      }
     }
   ],
   "lessons_resources": [
@@ -3517,6 +3529,12 @@
       "seeding_key": {
         "lesson.key": "The Problem Solving Process",
         "resource.key": "the_problem_solving_process_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Problem Solving Process",
+        "resource.key": "the_problem_solving_process_2"
       }
     }
   ],
