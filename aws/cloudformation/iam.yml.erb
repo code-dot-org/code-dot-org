@@ -247,6 +247,34 @@ Resources:
         - Key: sqlworkbench-team
           Value: codedotorg
 
+  EngineeringFullAccessRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: "Engineering_FullAccess"
+      AssumeRolePolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Principal: {Federated: !Sub "arn:aws:iam::${AWS::AccountId}:saml-provider/Google"}
+            Action: sts:AssumeRoleWithSAML
+            Condition:
+              StringEquals:
+                SAML:aud: https://signin.aws.amazon.com/saml
+          - Effect: Allow
+            Principal: {Federated: accounts.google.com}
+            Action: sts:AssumeRoleWithWebIdentity
+            Condition:
+              StringEquals:
+                accounts.google.com:aud: '{{resolve:secretsmanager:admin/google_client_id}}'
+              ForAnyValue:StringEquals:
+                accounts.google.com:sub: !Ref DeveloperGoogleIDs
+      ManagedPolicyArns:
+        - 'arn:aws:iam::aws:policy/PowerUserAccess'
+        - 'arn:aws:iam::aws:policy/IAMReadOnlyAccess'
+      Tags:
+        - Key: sqlworkbench-team
+          Value: codedotorg
+
   DataAnalystRole:
     Type: AWS::IAM::Role
     Properties:
