@@ -5,6 +5,13 @@ import MusicLibrary from './MusicLibrary';
 // Using require() to import JS in TS files
 const soundApi = require('./sound');
 
+// Multiplied by the duration of a single beat to determine the length of
+// time to fade out a sound, if trimming to a specific duration. This results
+// in a duration slightly smaller than a 16th note (0.25 of a beat), and 16th
+// notes are the shortest possible notes, so the release duration should never
+// be longer than a sound.
+const RELEASE_DURATION_FACTOR = 0.2;
+
 export interface SampleEvent {
   offsetSeconds: number;
   sampleId: string;
@@ -39,7 +46,7 @@ export default class SamplePlayer {
     this.groupPath = '';
   }
 
-  initialize(library: MusicLibrary) {
+  initialize(library: MusicLibrary, bpm: number) {
     const soundList = library.groups
       .map(group => {
         return group.folders.map(folder => {
@@ -58,7 +65,14 @@ export default class SamplePlayer {
         });
       })
       .flat(2);
-    soundApi.InitSound(soundList);
+
+    const secondsPerBeat = 60 / bpm;
+    soundApi.InitSound(soundList, {
+      // Calculate release time using release duration factor
+      releaseTimeSeconds: secondsPerBeat * RELEASE_DURATION_FACTOR,
+      // Use a delay value of a half of a beat
+      delayTimeSeconds: secondsPerBeat / 2,
+    });
 
     this.groupPath = library.groups[0].path;
 
