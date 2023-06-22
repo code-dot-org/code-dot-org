@@ -468,7 +468,7 @@
     }
   },
   "https://studio.code.org/s/coursee-2022/lessons/5/levels/1": {
-    "long_instructions": "<img src=\"https://studio.code.org/api/v1/animation-library/gamelab/uRkXIcSlbIAZ46WKaW.dFu.g3062psWS/category_people/pink_dress_wave.png\" style=\"height:80px\"> _\"Hello, world! My name is Rikki, and here are some things I'd to share about me!\"_\n\n**Explore:** Rikki is using Sprite Lab to create an _interactive poster_ about herself that she can share on the web.  \n\nRikki has given you permission to check out her poster. You can even edit her code! \n\nPlay with Rikki's poster and code for a bit, then click **Finish**.",
+    "long_instructions": "<img src=\"https://studio.code.org/api/v1/animation-library/gamelab/uRkXIcSlbIAZ46WKaW.dFu.g3062psWS/category_people/pink_dress_wave.png\" style=\"height:80px\"> _\"Hello, world! My name is Rikki, and here are some things I'd like to share about me!\"_\n\n**Explore:** Rikki is using Sprite Lab to create an _interactive poster_ about herself that she can share on the web.  \n\nRikki has given you permission to check out her poster. You can even edit her code! \n\nPlay with Rikki's poster and code for a bit, then click **Finish**.",
     "behavior_descriptions": {
       "randomly set the rotation of a sprite": "randomly set the rotation of a sprite",
       "move a sprite if the user is pressing the arrow keys": "move a sprite if the user is pressing the arrow keys",

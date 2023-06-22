@@ -184,7 +184,7 @@ module UsersHelper
       progress
     end
     timestamp_by_user = progress_by_user.transform_values do |user|
-      user.values.map {|level| level[:last_progress_at]}.compact.max
+      user.values.filter_map {|level| level[:last_progress_at]}.max
     end
 
     [progress_by_user, timestamp_by_user]

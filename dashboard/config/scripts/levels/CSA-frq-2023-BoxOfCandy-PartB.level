@@ -1,0 +1,22 @@
+<Javalab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 68,
+  "created_at": "2023-06-21T20:03:43.000Z",
+  "level_num": "custom",
+  "user_id": 19026,
+  "properties": {
+    "encrypted": "false",
+    "encrypted_examples": [
+
+    ],
+    "project_template_level_name": "CSA-frq-2023-BoxOfCandy",
+    "long_instructions": "##BoxOfCandy FRQ (Part B)\r\n\r\nWrite the `removeNextByFlavor` method, which attempts to remove and return one piece of candy from the box. The piece of candy to be removed is the first piece of candy with a flavor equal to the parameter `flavor` that is encountered while traversing the candy box in the following order: the last row of the box is traversed from left to right, then the next-to-last row of the box is traversed from left to right, etc., until either a piece of candy with the desired flavor is found or until the entire candy box has been searched. \r\n\r\nIf the `removeNextByFlavor` method finds a `Candy` object with the desired flavor, the corresponding `box` element is assigned `null`, all other `box` elements are unchanged, and the removed `Candy` object is returned. Otherwise, `box` is unchanged and the method returns `null`. \r\n\r\nThe following examples show three consecutive calls to the `removeNextByFlavor` method. The traversal of the candy box always begins in the last row and first column of the box. \r\n\r\nThe following grid shows the contents of `box` before any of the `removeNextByFlavor` method calls. \r\n\r\n![](https://images.code.org/b1cb0f8842854e6d19ac23b49f96a082-image-1687365171951.32.48 PM.png)\r\n\r\nThe method call `removeNextByFlavor(\"cherry\")` removes and returns the `Candy` object located in row `2` and column `0`. The following grid shows the updated contents of `box`.\r\n\r\n![](https://images.code.org/29b7c7e8730c10734f5f7b9308e6210b-image-1687365185411.33.02 PM.png)\r\n\r\nThe method call `removeNextByFlavor(\"lime\")` removes and returns the `Candy` object located in row `1` and column `3`. The following grid shows the updated contents of `box`. \r\n\r\n![](https://images.code.org/72577f51250cfacfe26fdd40f55cd9fd-image-1687365197721.33.14 PM.png)\r\n\r\nThe method call `removeNextByFlavor(\"grape\")` returns `null` because no grape-flavored candy is found. The contents of `box` are unchanged. \r\n\r\nComplete the `removeNextByFlavor` method.",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console"
+  },
+  "audit_log": "[{\"changed_at\":\"2023-06-21 20:03:47 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":19026,\"changed_by_email\":\"brandon.spellman@code.org\"}]"
+}]]></config>
+</Javalab>
