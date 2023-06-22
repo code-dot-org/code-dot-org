@@ -2676,9 +2676,6 @@ class User < ApplicationRecord
 
   # Values for the `child_account_compliance_state` attribute
   module ChildAccountCompliance
-    # The student's account does not have compliance.
-    ACCOUNT_CREATED = 'c'.freeze
-
     # The student's account has been used to issue a request to a parent.
     REQUEST_SENT = 's'.freeze
 
