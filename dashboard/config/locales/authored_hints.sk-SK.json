@@ -10492,7 +10492,7 @@
           "courseC_artist_prog7_a": "Každý z uhlov je buď 45 alebo 90 stupňov.",
           "courseC_artist_prog7_b": "Funguje všetko po prvom kroku?\nStále všetko funguje aj po druhom kroku?\nV ktorom kroku sa stala chyba?",
           "courseC_artist_prog7_c": "Môžeš použiť šípku nadol s rozbaľovacou ponukou na blokoch \"otoč sa o\" aby si zistil aký uhol potrebuješ!",
-          "courseC_artist_prog7_d": "Potrebuješ bloky:\n\n-   posuň sa dopredu\n-   otoč sa vpravo o 45 stupňov\n-   posuň sa dopredu\n-   otoč sa vpravo o 90 stupňov\n-   posuň sa dopredu\n-   otoč sa vpravo o 45 stupňov\n\nZopakuj tento cyklus 2 krát!",
+          "courseC_artist_prog7_d": "Potrebuješ bloky:\n- posuň sa dopredu\n- otoč sa vpravo o 45 stupňov\n- posuň sa dopredu\n- otoč sa vpravo o 90 stupňov\n- posuň sa dopredu\n- otoč sa vpravo o 45 stupňov\n\nZopakuj tento cyklus 2 krát!",
           "courseC_artist_prog7_e": "Neboj sa urobiť chybu! Pridaj bloky,  spusti kód a sleduj, čo sa stane, aj keď úlohu ešte nemáš úplne vyriešenú. "
         },
         "courseC_artist_prog_challenge12022": {
@@ -11153,8 +11153,7 @@
         },
         "courseE_artist_functions102022": {
           "courseD_artist_functions10_b": "Táto kresba je veľmi podobná ako predchádzajúca, ale funkcia `nakresli čiaru` teraz kreslí iný tvar.",
-          "courseD_artist_functions10_a": "Nemusíš použiť  bloky `posuň sa dopredu`, stačí ak vytvoríš funkciu `nakresli šesťuholník` a viackrát ju zavoláš.",
-          "courseD_artist_functions10_c": "Vidíš, kde by táto kresba mohla použiť funkciu nazvanú `rad šesťuholníkov`?"
+          "courseD_artist_functions10_a": "Nemusíš použiť  bloky `posuň sa dopredu`, stačí ak vytvoríš funkciu `nakresli šesťuholník` a viackrát ju zavoláš."
         },
         "courseE_artist_functions22022": {
           "courseD_artist_functions2_b": "Funkcia by nemala obsahovať celý prgram, iba tú časť, ktorá nakreslí štvorec so stranou dlhou 100 pixelov.",
@@ -11189,11 +11188,7 @@
           "courseD_artist_functions8_c": "Na konci každého radu štvorcov, pred začatím nového radu, sa umelec potrebuje otočiť o 180 stupňov. Daj to celé do vnútra opakovacieho cyklu a priprav sa na ďalšie cvičenie!"
         },
         "courseE_artist_functions92022": {
-          "courseD_artist_functions9_e": "Môžeš nájsť všetky štyri miesta, kde pri kreslení môže byť použitý `rad trojuholníkov`?",
-          "courseD_artist_functions9_a": "Táto úloha môže byť rozdelená na 3 časti:\n\n-   vytvor funkciu `nakresli trojuholník`\n-   vytvor funkciu `nakresli rad trojuholníkov`\n-   použi svoju funkciu  `nakresli rad trojuholníkov` 4-krát na dokončenie kresby",
-          "courseD_artist_functions9_b": "Táto kresba je vytvorená kresbou radu trojuholníkov 4-krát a pootočením buď o 60 alebo 120 stupňov ešte predtým, ako nakreslíš ďalší rad trojuholníkov.",
-          "courseD_artist_functions9_c": "Nakresli rad trojuholníkov:\n\n-   opakuj 4-krát\n-   nakresli trojuholník\n-   skoč vpred o 50 pixelov",
-          "courseD_artist_functions9_d": "Narkesli diamant:\n\n-   opakuj 2-krát\n-   nakresli rad trojuholníkov\n-   otoč o 60 stupňov\n-   nakresli rad trojuholníkov\n-   otoč o 120 stupňov"
+          "courseD_artist_functions9_b": "Táto kresba je vytvorená kresbou radu trojuholníkov 4-krát a pootočením buď o 60 alebo 120 stupňov ešte predtým, ako nakreslíš ďalší rad trojuholníkov."
         },
         "courseE_farmer_functions12022": {
           "courseE_farmer_functions1_a": "Tentokrát je panel nástrojov usporiadaný inak! Klikni na rôzne kategórie a uvidíš, ktoré bloky máš k dispozícii.",

@@ -128,7 +128,6 @@ gem 'open_uri_redirections', require: false
 
 # Optimizes copy-on-write memory usage with GC before web-application fork.
 gem 'nakayoshi_fork'
-
 # Ref: https://github.com/puma/puma/pull/1646
 gem 'puma', github: 'wjordan/puma', branch: 'debugging'
 gem 'puma_worker_killer'

@@ -197,6 +197,7 @@ Dashboard::Application.routes.draw do
       get '/users/demigrate_from_multi_auth', to: 'registrations#demigrate_from_multi_auth'
       get '/users/to_destroy', to: 'registrations#users_to_destroy'
       get '/reset_session', to: 'sessions#reset'
+      get '/lockout', to: 'sessions#lockout'
       get '/users/existing_account', to: 'registrations#existing_account'
       post '/users/auth/maker_google_oauth2', to: 'omniauth_callbacks#maker_google_oauth2'
     end
@@ -591,6 +592,9 @@ Dashboard::Application.routes.draw do
     get '/admin/gatekeeper', to: 'dynamic_config#gatekeeper_show', as: 'gatekeeper_show'
     post '/admin/gatekeeper/delete', to: 'dynamic_config#gatekeeper_delete', as: 'gatekeeper_delete'
     post '/admin/gatekeeper/set', to: 'dynamic_config#gatekeeper_set', as: 'gatekeeper_set'
+
+    # LTI API endpoints
+    match '/lti/v1/login(/:platform_id)', to: 'lti_v1#login', via: [:get, :post]
 
     get '/notes/:key', to: 'notes#index'
 
@@ -1050,6 +1054,7 @@ Dashboard::Application.routes.draw do
     get '/offline-files.json', action: :offline_files, controller: :offline
 
     post '/browser_events/put_logs', to: 'browser_events#put_logs'
+    post '/browser_events/put_metric_data', to: 'browser_events#put_metric_data'
 
     get '/get_token', to: 'authenticity_token#get_token'
 

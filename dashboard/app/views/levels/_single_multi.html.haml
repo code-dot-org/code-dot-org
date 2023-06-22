@@ -7,8 +7,6 @@
 - app = 'multi'
 - use_tight_layout = data['layout'] == "tight" || tight_layout
 - force_wrap_layout = data['layout'] == "wrap"
-- enforce_allow_multiple_attempts = DCDO.get('enforce_allow_multiple_attempts', true)
-- allow_multiple_attempts = enforce_allow_multiple_attempts ? level.allow_multiple_attempts? : !contained_mode
 
 
 - multi_answer_characters = ("A".."Z").to_a
@@ -91,7 +89,7 @@
 
       - if standalone
         - correct_num_answers_selected = last_attempt.present? && (data['type'] == 'multi2' ? last_attempt.split(',').count == 2 : true)
-        - answer_locked = enforce_allow_multiple_attempts && !level.allow_multiple_attempts? && correct_num_answers_selected
+        - answer_locked = !level.allow_multiple_attempts? && correct_num_answers_selected
         = render partial: 'levels/dialog', locals: {app: app, next_level_link: @next_level_link, show_next_page_link: answer_locked}
 
   .clear
@@ -139,5 +137,5 @@
       #{answers_feedback.to_json},
       #{last_attempt.to_json},
       #{contained_mode},
-      #{allow_multiple_attempts}
+      #{level.allow_multiple_attempts?}
     ));

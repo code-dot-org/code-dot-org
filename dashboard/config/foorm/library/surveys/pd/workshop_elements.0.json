@@ -556,6 +556,8 @@
             },
             {
               "value": "understand_inclusive",
+              "natalia_comment": "NOTE: added conditional logic by RP 06/16/2023",
+              "visibleIf": "{regional_partner_name} <> 'Broward County Public Schools' and {regional_partner_name}<>  'Florida International University' and {regional_partner_name} <> 'Orlando Science Center' and {regional_partner_name} <> 'Tampa Bay STEM Network' and {regional_partner_name} <> 'University of North Florida & STEM2 Hub'",
               "text": "I am aware of strategies to support an inclusive CS classroom."
             },
             {
@@ -635,6 +637,8 @@
         {
           "type": "matrix",
           "name": "equity_inclusion",
+          "natalia_comment": "NOTE: added conditional logic by RP 06/15/2023",
+          "visibleIf": "{regional_partner_name} <> 'Broward County Public Schools' and {regional_partner_name}<>  'Florida International University' and {regional_partner_name} <> 'Orlando Science Center' and {regional_partner_name} <> 'Tampa Bay STEM Network' and {regional_partner_name} <> 'University of North Florida & STEM2 Hub'",
           "title": "Please rate how much you agree or disagree with the following statements.",
           "columns": [
             {
@@ -1416,6 +1420,8 @@
             {
               "type": "matrix",
               "name": "deliver_course_equity",
+              "natalia_comment": "NOTE: added conditional logic by RP 06/15/2023",
+              "visibleIf": "{regional_partner_name} <> 'Broward County Public Schools' and {regional_partner_name}<>  'Florida International University' and {regional_partner_name} <> 'Orlando Science Center' and {regional_partner_name} <> 'Tampa Bay STEM Network' and {regional_partner_name} <> 'University of North Florida & STEM2 Hub'",
               "title": "Please rate your level of agreement with each of the following statements about how this workshop prepared you to deliver {workshop_course} with equity:",
               "columns": [
                 {

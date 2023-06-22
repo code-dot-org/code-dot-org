@@ -13,7 +13,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-05-17 16:06:42 UTC",
+    "serialized_at": "2023-06-15 17:01:18 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -196,7 +196,7 @@
     },
     {
       "key": "lesson-9",
-      "name": "Journaling and Dicussion ",
+      "name": "Journaling and Discussion ",
       "absolute_position": 10,
       "lockable": false,
       "has_lesson_plan": true,

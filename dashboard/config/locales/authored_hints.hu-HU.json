@@ -4613,8 +4613,8 @@
           "courseC_artist_loops7a_a": "Egy kör 360°-os. Szorozd meg a fokokat a körödben az ismétlések számával. Egyenlő 360-nal?\nNézd meg az ajánlott elforgatásokat, hogy lásd, hogy ez működik!\n\nItt van pár példa kezdésnek:\n\n\\-Próbálj ki egy 60°-os forgást 6-szor körbefordítva\n\\-Próbálj ki egy 45°-os forgást 8-szor körbefordítva\n\\-Próbálj ki egy 30°-os forgást 12-szer körbefordítva"
         },
         "courseC_artist_prog22022": {
-          "courseC_artist_prog2_a": "*\"Ha használod a <xml><block type=\"draw_move_by_constant\"><title name=\"DIR\">moveForward</title><title name=\"VALUE\">100</title></block></xml> blokkot, rajzolok egy vonalat.\"*",
-          "courseC_artist_prog2_b": "Baj van a bekanyarodással a sarkon? Használd a <xml><block type=\"draw_turn_by_constant_dropdown\"><title name=\"DIR\">turnRight</title><title name=\"VALUE\" config=\"45,60,90,120,180\">90</title></block></xml> blokkot!"
+          "courseC_artist_prog2_a": "Ha használod a 'lépj előre 100 pixelt' blokkot, automatikusan rajzolok egy vonalat.",
+          "courseC_artist_prog2_b": "Baj van a bekanyarodással a sarkon? Használd a 'fordulj jobbra 90 fokot' blokkot!"
         },
         "courseC_artist_prog32022": {
           "courseC_artist_prog3_a": "Hogy megrajzold az ablakot, rajzolj egy négyzetet, aminek minden oldala 100 képpont\n\n-   menj előre\n-   fordulj\n-   menj előre\n-   fordulj\n-   menj előre\n-   fordulj\n-   menj előre",
@@ -4638,9 +4638,7 @@
         },
         "courseC_artist_prog72022": {
           "courseC_artist_prog7_a": "A szögek 45 vagy 90 fokosak.",
-          "courseC_artist_prog7_b": "Működik az első lépésnél?\\\nMi a helyzet a másodikkal?\\\nHol romlik el a dolog?",
           "courseC_artist_prog7_c": "Használhatod a legördülő menüt a fordulj blokkban, hogy lásd, melyik irányra is van szükséged.",
-          "courseC_artist_prog7_d": "Ezt csináld:\n\n-   menj előre\n-   fordul jobbra 45 fokot\n-   menj előre\n-   fordul jobbra 90 fokot\n-   menj előre\n-   fordulj jobbra 45 fokot\n\nIsmételd ezt az egészet kétszer!",
           "courseC_artist_prog7_e": "Ne aggódj, hogy hibázol! Adj újabb blokkokat, és futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer, ha még nem oldottad meg teljesen a feladatot."
         },
         "courseC_artist_prog_challenge12022": {
@@ -5688,6 +5686,18 @@
         },
         "courseE_artist_functions_challenge2_2021": {
           "courseE_artist_functions_challenge1_a": "<xml>\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n  </xml>\n\nEzzel az `ugrás a következő helyre` blokkal a zombi művész a képernyő bármelyik pontjára el tud ugrani. Mindig a bal felső sarokból számoljuk, hogy mennyit ugrik előre (vagyis jobbra), és mennyit lefelé. Ilyenkor egyáltalán nem számít, hogy a zombi művész hol volt a parancs kiadása _előtt_!\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
+        },
+        "NEW Course 4 Artist Params 13": {
+          "NEW_Course_4_Artist_Params_13_a": "El kell osztanod a _kerület_ értékét az oldalak számával, hogy megkapd a szabályos sokszög oldalainak hosszát. "
+        },
+        "courseE_artist_functions102022": {
+          "courseD_artist_functions10_c": "Sejted, hol kell használnod a `sor hatszögekből` függvényt?\n\n![](https://images.code.org/904e0f38232fd9c15a3d2d172e7dde0b-image-1493140714580.gif)"
+        },
+        "courseE_artist_functions92022": {
+          "courseD_artist_functions9_e": "Megtalálod mind a négy helyet, ahol a `sor háromszögekből` függvényt kell használnod?\n\n![](https://images.code.org/130e1040ecca7186dea87f42666f5620-image-1493140373966.gif)",
+          "courseD_artist_functions9_a": "Ez a feladvány három részre bontható:\n  - csinálj egy `rajzolj háromszöget` függvényt\n  - csinálj egy `sor háromszögekből` függvényt\n  - használd a `sor háromszögekből` függvényt négyszer, hogy elkészítsd a rajzot",
+          "courseD_artist_functions9_c": "Így rajzolj sort háromszögekből:\n  - ismételd 4 alkalommal\n    - rajzolj háromszöget\n    - ugorj előre 50 képpontot",
+          "courseD_artist_functions9_d": "A gyémánt rajzolása:\n  - ismételd 2 alkalommal\n    - rajzolj egy sort háromszögekből\n    - fordulj 60 fokot\n    - rajzolj egy sort háromszögekből\n    - fordulj 120 fokot"
         }
       }
     }
