@@ -28,9 +28,13 @@ export default class ProjectManager {
   private saveNoopListeners: ((channel?: Channel) => void)[] = [];
   private saveFailListeners: ((response: Response) => void)[] = [];
   private saveStartListeners: (() => void)[] = [];
+  // The last source we saved or loaded, or undefined if we have not saved a source yet.
   private lastSource: string | undefined;
+  // The next source to save, or undefined if we have no source to save.
   private sourceToSave: Source | undefined;
+  // The last channel we saved or loaded, or undefined if we have not saved a channel yet.
   private lastChannel: Channel | undefined;
+  // The next channel to save, or undefined if we have no channel to save.
   private channelToSave: Channel | undefined;
   // Id of the last timeout we set on a save, or undefined if there is no current timeout.
   // When we enqueue a save, we set a timeout to execute the save after the save interval.
@@ -113,7 +117,7 @@ export default class ProjectManager {
       return this.getNoopResponseAndSendSaveNoopEvent();
     }
     this.sourceToSave = source;
-    this.enqueueSaveOrSave(forceSave);
+    return this.enqueueSaveOrSave(forceSave);
   }
 
   async rename(name: string, forceSave = false) {
@@ -126,7 +130,7 @@ export default class ProjectManager {
       this.channelToSave = _.cloneDeep(this.lastChannel);
     }
     this.channelToSave.name = name;
-    this.enqueueSaveOrSave(forceSave);
+    return this.enqueueSaveOrSave(forceSave);
   }
 
   addSaveSuccessListener(listener: (channel: Channel, source: Source) => void) {
@@ -227,6 +231,9 @@ export default class ProjectManager {
     return true;
   }
 
+  // Check if we can save immediately. If we can, initiate a save.
+  // If we cannot, enqueue a save if one has not already been enqueued and
+  // return a noop response.
   private enqueueSaveOrSave(forceSave: boolean) {
     if (!this.canSave(forceSave)) {
       if (!this.saveQueued) {
@@ -241,7 +248,8 @@ export default class ProjectManager {
       }
       return this.getNoopResponseAndSendSaveNoopEvent();
     } else {
-      // if we can save immediately, save now.
+      // if we can save immediately, initiate a save now. This is an async
+      // request that we do not wait for.
       this.saveHelper();
     }
   }
