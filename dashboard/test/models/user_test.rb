@@ -4774,6 +4774,8 @@ class UserTest < ActiveSupport::TestCase
     family_name = 'TestFamilyName'
     user.properties = {family_name: family_name}
 
+    assert_nil(user.summarize[:family_name])
+
     DCDO.stubs(:get).with('family-name-features', false).returns(true)
 
     assert(user.summarize.key?(:family_name))
