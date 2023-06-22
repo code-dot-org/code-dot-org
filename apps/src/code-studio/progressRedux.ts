@@ -70,7 +70,7 @@ interface ProgressState {
 const initialState: ProgressState = {
   currentLevelId: null,
 
-  // These first fields never change after initialization
+  // These first fields never change after initialization.
 
   currentLessonId: undefined,
   deeperLearningCourse: null,
@@ -85,7 +85,7 @@ const initialState: ProgressState = {
   courseId: null,
   isLessonExtras: false,
 
-  // The remaining fields do change after initialization
+  // The remaining fields do change after initialization.
 
   // unitProgress is of type unitProgressType (a map of levelId ->
   // studentLevelProgressType)
