@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "ai-temp",
-    "serialized_at": "2023-06-21 00:37:38 UTC",
+    "serialized_at": "2023-06-21 17:32:26 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -786,7 +786,7 @@
       "key": "e2cda095-ba18-4a9b-96e6-ecae1e84b767",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _Today we begin a unit on Artificial Intelligence, or AI. What’s an example of AI either in your personal life or that you’ve seen in a movie or book?_",
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:**  _Today we begin a unit on Artificial Intelligence, or AI. What’s an example of AI either in your personal life or that you’ve seen in a movie or book?_",
         "name": "Journal",
         "tips": [
           {
@@ -815,7 +815,7 @@
       "key": "2c1da847-9c8d-476a-8ac0-7f74ae30bf1b",
       "position": 3,
       "properties": {
-        "description": " **Discussion Goal:** Try to surface any personal connections students may already have with AI. Students may come up with examples from their personal lives, such as recommendation systems or facial recognition. Or they may think of examples in the media, such as the robots in movies like Wall-E or personal assistants like Siri. Students may also come up with examples that aren’t strictly AI - for now, add them to the list anyway. Keep track of any suggestions that students surface without validating them as right or wrong - let students brainstorm freely first.\n"
+        "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:**  Try to surface any personal connections students may already have with AI. Students may come up with examples from their personal lives, such as recommendation systems or facial recognition. Or they may think of examples in the media, such as the robots in movies like Wall-E or personal assistants like Siri. Students may also come up with examples that aren’t strictly AI - for now, add them to the list anyway. Keep track of any suggestions that students surface without validating them as right or wrong - let students brainstorm freely first.\n"
       },
       "seeding_key": {
         "activity_section.key": "2c1da847-9c8d-476a-8ac0-7f74ae30bf1b",
@@ -849,7 +849,7 @@
       "key": "7bc53c0c-bee4-42a7-b7b2-50759008dd5c",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r ai_what_is_machine_learning_/ai-temp/unversioned] video in the slides\n\n",
+        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show students the [r ai_what_is_machine_learning_/ai-temp/unversioned] video in the slides\n\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -866,7 +866,7 @@
       "key": "99cb250e-9d1a-40c3-9434-25df471defcb",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Vocabulary:** Display the following vocabulary\n\n- **Machine Learning:** How computers recognize patterns and make decisions without being explicitly programmed"
+        "description": "<i class=\"fa fa-pencil\" aria-hidden=\"true\"></i> **Vocabulary:** Display the following vocabulary\n\n- **Machine Learning:** How computers recognize patterns and make decisions without being explicitly programmed"
       },
       "seeding_key": {
         "activity_section.key": "99cb250e-9d1a-40c3-9434-25df471defcb",
@@ -912,13 +912,7 @@
       "key": "f8d8364a-9f4e-4a7b-9301-53bce8e0efb3",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Pass out the Activity Guide for this lesson",
-        "tips": [
-          {
-            "type": "assessmentOpportunity",
-            "markdown": "The responses in the activity guide can be used to formatively assess how well students have met the objectives of the lesson."
-          }
-        ]
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Pass out the Activity Guide for this lesson"
       },
       "seeding_key": {
         "activity_section.key": "f8d8364a-9f4e-4a7b-9301-53bce8e0efb3",
@@ -929,7 +923,7 @@
       "key": "0e1e66d6-5d15-4edc-a9d8-a31c0818861f",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** In front of the classroom, navigate to Level 1 in Code Studio - Recognizing Fish.",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Code Studio:** In front of the classroom, navigate to Level 1 in Code Studio - Recognizing Fish.",
         "name": "Level 1 - Recognizing Fish",
         "progression_name": "Recognizing Fish"
       },
@@ -942,7 +936,7 @@
       "key": "0197b1f6-5d03-4994-8a93-50dbd8132b4a",
       "position": 4,
       "properties": {
-        "description": "**Do This:** As a class, go through this level which guides you through the process of training A.I. Bot to recognize fish. As you do, fill in the first part of the activity guide as a class. Consider the following strategies at different stages of the level:",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** As a class, go through this level which guides you through the process of training A.I. Bot to recognize fish. As you do, fill in the first part of the activity guide as a class. Consider the following strategies at different stages of the level:",
         "tips": [
           {
             "type": "teachingTip",
@@ -959,7 +953,7 @@
       "key": "35976cf9-0349-45f5-a866-8ee51c5b1e4a",
       "position": 5,
       "properties": {
-        "description": "| Activity                           | As a Class                                                                                                                                                                      |\n| -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |\n| **Training Screen** ![](https://images.code.org/d5c6d852f32c09b038315b9c4b5a77f1-oceans1-sm.png) | <ul><li>Informational text will frequently pop up on the screen. Consider asking students to read the prompts aloud to the class, possibly in their best robot voice, for a little fun</li><li>Ask students to use thumbs up / thumbs down to decide as a class whether something is a fish</li><li>At 30 images, the level will ask if you would like to continue or keep training. Ask students to help with this decision and follow their lead - either continue training, or go to the next screen.</li><li>Before continuing, have students record on their activity guide how many images they </li></ul>|\n| **Testing Screen** ![](https://images.code.org/1c133d1ed2eb5f634fe0469aef40b4c6-oceans2-sm.png) | <ul><li>A.I. Bot will probably misidentify a few objects. Make sure students notice this, and ask them to individually consider why they think this might be happening. This ties in to the discussion at the end of this level.</li></ul> |\n| **Evaluation Screen** ![](https://images.code.org/418cdfba3b4181267a1713855a005bc6-oceans3-sm.png) |<ul><li>Have students count the number of fish that it identified correctly. Record this on the activity guide.</li><li>It’s okay if A.I. Bot misidentifies some trash as fish - this sets the stage for the discussion. </li></ul> |\n\n&nbsp;\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** _If we wanted A.I. Bot to become better at recognizing fish, how do you think we could help it do that?_"
+        "description": "| Activity                           | As a Class                                                                                                                                                                      |\n| -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |\n| **Training Screen** ![](https://images.code.org/d5c6d852f32c09b038315b9c4b5a77f1-oceans1-sm.png) | <ul><li>Informational text will frequently pop up on the screen. Consider asking students to read the prompts aloud to the class, possibly in their best robot voice, for a little fun</li><li>Ask students to use thumbs up / thumbs down to decide as a class whether something is a fish</li><li>At 30 images, the level will ask if you would like to continue or keep training. Ask students to help with this decision and follow their lead - either continue training, or go to the next screen.</li><li>Before continuing, have students record on their activity guide how many images they </li></ul>|\n| **Testing Screen** ![](https://images.code.org/1c133d1ed2eb5f634fe0469aef40b4c6-oceans2-sm.png) | <ul><li>A.I. Bot will probably misidentify a few objects. Make sure students notice this, and ask them to individually consider why they think this might be happening. This ties in to the discussion at the end of this level.</li></ul> |\n| **Evaluation Screen** ![](https://images.code.org/418cdfba3b4181267a1713855a005bc6-oceans3-sm.png) |<ul><li>Have students count the number of fish that it identified correctly. Record this on the activity guide.</li><li>It’s okay if A.I. Bot misidentifies some trash as fish - this sets the stage for the discussion. </li></ul> |\n\n&nbsp;\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _If we wanted A.I. Bot to become better at recognizing fish, how do you think we could help it do that?_"
       },
       "seeding_key": {
         "activity_section.key": "35976cf9-0349-45f5-a866-8ee51c5b1e4a",
@@ -970,7 +964,7 @@
       "key": "cf2058e3-28d6-4d5a-bf59-e8b706766df8",
       "position": 6,
       "properties": {
-        "description": " **Discussion Goal:** Help students understand that A.I. Bot learns better when it has more examples. The best way we can improve its ability to recognize fish is by giving it more examples to look at. Students may also make the connection that this is how humans learn, especially young children - the more examples we have, the better we learn."
+        "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:**  Help students understand that A.I. Bot learns better when it has more examples. The best way we can improve its ability to recognize fish is by giving it more examples to look at. Students may also make the connection that this is how humans learn, especially young children - the more examples we have, the better we learn."
       },
       "seeding_key": {
         "activity_section.key": "cf2058e3-28d6-4d5a-bf59-e8b706766df8",
@@ -993,7 +987,7 @@
       "key": "f13c2ef1-0faf-450f-b0e7-90e8099aa0a7",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students navigate to Code Studio Level 2 - Recognizing Fish Features. This level lets students train A.I. Bot to recognize a fish by its color or body type. ",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Code Studio:** Have students navigate to Code Studio Level 2 - Recognizing Fish Features. This level lets students train A.I. Bot to recognize a fish by its color or body type. ",
         "name": "Level 2 - Recognizing Fish Features",
         "progression_name": "Recognizing Fish Features"
       },
@@ -1006,7 +1000,7 @@
       "key": "759f0525-06da-4c0e-a1a9-c1529d0dcad6",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Do This:** Have students choose a word that they want to train A.I. Bot to recognize, and record this information on their Activity Guide. Students should progress through the level on their own, recording information on their activity guide.\n\n**Circulate:** Check that students are filling in their activity guide as they complete the stages. After briefly checking in with each student, complete this stage yourself in front of the room and pause at the last screen.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students choose a word that they want to train A.I. Bot to recognize, and record this information on their Activity Guide. Students should progress through the level on their own, recording information on their activity guide.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:**  Check that students are filling in their activity guide as they complete the stages. After briefly checking in with each student, complete this stage yourself in front of the room and pause at the last screen.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1023,7 +1017,7 @@
       "key": "18396812-b208-439c-94fb-b09eaafdbd16",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** As students reach the final stage, have them press the white Information icon in the upper-right corner. This displays the features that A.I. Bot is using to help make its decision. In the example here, A.I. Bot has learned that the color matters the most when making a decision and the eyes matter the least.\n\nHave students record the most important and least important features on their activity guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** _What features did A.I. Bot think were the most important? Are those the features you were expecting to be most important?_"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** As students reach the final stage, have them press the white Information icon in the upper-right corner. This displays the features that A.I. Bot is using to help make its decision. In the example here, A.I. Bot has learned that the color matters the most when making a decision and the eyes matter the least.\n\nHave students record the most important and least important features on their activity guide.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _What features did A.I. Bot think were the most important? Are those the features you were expecting to be most important?_"
       },
       "seeding_key": {
         "activity_section.key": "18396812-b208-439c-94fb-b09eaafdbd16",
@@ -1034,7 +1028,7 @@
       "key": "f28b6bcc-944d-4802-84e4-efaa0ea3e34e",
       "position": 11,
       "properties": {
-        "description": " **Discussion Goal:** Students may find that A.I. Bot thinks some features are important when they’re actually completely unrelated to their word. For example, thinking that the mouth of a fish is important when trying to determine if the fish is red. Students can verify this by looking for patterns in the fish that A.I. Bot has accepted - maybe all of their example fishes happened to have the same type of mouth and A.I. Bot mistakenly thought this was important."
+        "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:**  Students may find that A.I. Bot thinks some features are important when they’re actually completely unrelated to their word. For example, thinking that the mouth of a fish is important when trying to determine if the fish is red. Students can verify this by looking for patterns in the fish that A.I. Bot has accepted - maybe all of their example fishes happened to have the same type of mouth and A.I. Bot mistakenly thought this was important."
       },
       "seeding_key": {
         "activity_section.key": "f28b6bcc-944d-4802-84e4-efaa0ea3e34e",
@@ -1057,7 +1051,7 @@
       "key": "143fb379-8c75-4d60-b1e5-eed9887455e6",
       "position": 13,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students navigate to Code Studio Level 3 - Recognizing Fish Expressions. This level lets students train A.I. Bot to recognize a fish by its expression, such as “silly” or “serious” or “angry”.",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Code Studio:** Have students navigate to Code Studio Level 3 - Recognizing Fish Expressions. This level lets students train A.I. Bot to recognize a fish by its expression, such as “silly” or “serious” or “angry”.",
         "name": "Level 3 - Recognizing Fish Expressions",
         "progression_name": "Recognizing Expressions"
       },
@@ -1070,7 +1064,7 @@
       "key": "54b00657-4d8c-46cb-808e-db1e5f0920ae",
       "position": 14,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students choose an expression that they want to train A.I. Bot to recognize, and record this information on their Activity Guide. Students should progress through the level on their own, recording information on their activity guide. On the final screen, have students press the information icon and record the features that A.I. Bot learned were most important.\n\n**Circulate:** Check that students are filling in their activity guide as they complete the stages. Ask students what features they’re looking at to determine if a fish meets their criteria. Students will probably say they primarily use eyes and mouth to help determine expression, but when they click the Information icon on the final screen, A.I. Bot may be using additional features such as color and body to make its decision. Prompt students to think about how they feel about this and compare it to their personal experience - For example, if someone thought they were “silly” or “angry” primarily based on their clothing.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the slide of A.I. Bot learning how to identify fish as “Angry”. Have students discuss the prompt on the screen: _Looking at this screen, why do you think color appeared as the second most important feature?_\n\n **Discussion Goal:** Students should notice that even though the eyes and mouth tend to appear “angry” on every fish, there also appears to be a lot of purple fish on the screen. As a result, A.I. Bot may start to think that the color “purple” is another way to tell if a fish is angry or not.\n"
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students choose an expression that they want to train A.I. Bot to recognize, and record this information on their Activity Guide. Students should progress through the level on their own, recording information on their activity guide. On the final screen, have students press the information icon and record the features that A.I. Bot learned were most important.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:**  Check that students are filling in their activity guide as they complete the stages. Ask students what features they’re looking at to determine if a fish meets their criteria. Students will probably say they primarily use eyes and mouth to help determine expression, but when they click the Information icon on the final screen, A.I. Bot may be using additional features such as color and body to make its decision. Prompt students to think about how they feel about this and compare it to their personal experience - For example, if someone thought they were “silly” or “angry” primarily based on their clothing.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the slide of A.I. Bot learning how to identify fish as “Angry”. Have students discuss the prompt on the screen: _Looking at this screen, why do you think color appeared as the second most important feature?_\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:**  Students should notice that even though the eyes and mouth tend to appear “angry” on every fish, there also appears to be a lot of purple fish on the screen. As a result, A.I. Bot may start to think that the color “purple” is another way to tell if a fish is angry or not.\n"
       },
       "seeding_key": {
         "activity_section.key": "54b00657-4d8c-46cb-808e-db1e5f0920ae",
@@ -1081,7 +1075,7 @@
       "key": "77c3ce4f-db00-4ce7-965d-486281bfa2f6",
       "position": 15,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** _Do you think it’s okay to consider a fish “angry” by its color?_"
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _Do you think it’s okay to consider a fish “angry” by its color?_"
       },
       "seeding_key": {
         "activity_section.key": "77c3ce4f-db00-4ce7-965d-486281bfa2f6",
@@ -1092,7 +1086,7 @@
       "key": "73e8e33f-43a2-4376-beda-7e50e23fde01",
       "position": 16,
       "properties": {
-        "description": "**Discussion Goal:** For the first part of the question, guide students to notice that there are a lot of purple fish on the screen so A.I. Bot might think that purple fish are more likely to be angry than other fish.",
+        "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:**  For the first part of the question, guide students to notice that there are a lot of purple fish on the screen so A.I. Bot might think that purple fish are more likely to be angry than other fish.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1132,7 +1126,7 @@
       "key": "679a6819-0166-4683-8110-c81c20e37457",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the  video in the slides\n[r introduction_to_ai_-_training_data_and_bias/ai-temp/unversioned]"
+        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show students the  video in the slides\n[r introduction_to_ai_-_training_data_and_bias/ai-temp/unversioned]"
       },
       "seeding_key": {
         "activity_section.key": "679a6819-0166-4683-8110-c81c20e37457",
@@ -1143,7 +1137,7 @@
       "key": "dab81f50-3f98-4996-b401-f01699ca1efc",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _What is something new you learned about machine learning today? What is a new question you have about machine learning?_\n\nEncourage students to choose one of these to share with you on the way out the door, or to write their responses on a post-it note that can be displayed in the classroom. If possible, keep track of these items throughout the unit and refer back to them in later lessons when they are addressed.",
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:**  _What is something new you learned about machine learning today? What is a new question you have about machine learning?_\n\nEncourage students to choose one of these to share with you on the way out the door, or to write their responses on a post-it note that can be displayed in the classroom. If possible, keep track of these items throughout the unit and refer back to them in later lessons when they are addressed.",
         "name": "Journal"
       },
       "seeding_key": {
@@ -1179,7 +1173,7 @@
       "key": "fb7de881-f681-4c9c-a91a-5eae1f835b25",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the image on the slide to students.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the image on the slide to students.\n\n(Click to expand and see larger)\n\n![expandable](https://images.code.org/305fda68795441dcebb6130a57bd59ca-optical illusion.png)",
         "name": "Optical Illusions"
       },
       "seeding_key": {
@@ -1188,18 +1182,8 @@
       }
     },
     {
-      "key": "636059ac-31c1-4987-8631-3ee9f2f6df58",
-      "position": 2,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "636059ac-31c1-4987-8631-3ee9f2f6df58",
-        "lesson_activity.key": "38e8af92-a111-42f5-9b93-c723bd2f53c5"
-      }
-    },
-    {
       "key": "f247fab8-4a90-4df4-b16a-a0b4e5b77e93",
-      "position": 3,
+      "position": 2,
       "properties": {
         "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** _What animal do you see in this image? Write your answer on a sheet of paper_"
       },
@@ -1209,18 +1193,8 @@
       }
     },
     {
-      "key": "70ddb44c-93fe-42d5-9f11-70b47f9e91dd",
-      "position": 4,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "70ddb44c-93fe-42d5-9f11-70b47f9e91dd",
-        "lesson_activity.key": "38e8af92-a111-42f5-9b93-c723bd2f53c5"
-      }
-    },
-    {
       "key": "775a7f79-5081-4840-aeac-32169f27731b",
-      "position": 5,
+      "position": 3,
       "properties": {
         "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** After a brief pause, ask students to share out. Students will likely notice one of two animals: either a duck or a rabbit. Once both options are said, students may \"switch\" back and forth in how they see the image - sometimes it's a duck, sometimes it's a rabbit."
       },
@@ -1230,18 +1204,8 @@
       }
     },
     {
-      "key": "68f26f59-65e6-4a0b-a42c-6d6f76b32479",
-      "position": 6,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "68f26f59-65e6-4a0b-a42c-6d6f76b32479",
-        "lesson_activity.key": "38e8af92-a111-42f5-9b93-c723bd2f53c5"
-      }
-    },
-    {
       "key": "5460d221-4e74-4fe5-8b99-669e3c0c39e1",
-      "position": 7,
+      "position": 4,
       "properties": {
         "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** _If this were an argument and you wanted to convince someone else that your animal is correct, what would you say? What **features** in the image help your argument?_"
       },
@@ -1251,18 +1215,8 @@
       }
     },
     {
-      "key": "ad57bfcc-37cc-42d9-99eb-ea489c7220b9",
-      "position": 8,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "ad57bfcc-37cc-42d9-99eb-ea489c7220b9",
-        "lesson_activity.key": "38e8af92-a111-42f5-9b93-c723bd2f53c5"
-      }
-    },
-    {
       "key": "ad0f2d6d-e528-4189-b7b5-cbe4463009e3",
-      "position": 9,
+      "position": 5,
       "properties": {
         "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** This prompt is meant to help students identify the features of the drawing that their eyes noticed to help make that decision. Both arguments will likely identify the black dot in the center as the eye of the animal. Duck arguments will identify the left feature as the bill or mouth of the duck, whereas rabbit arguments will identify those as the ears. Emphasize that students are using specific features to make their decision (ie: eye + ears + mouth = rabbit)."
       },
@@ -1272,20 +1226,16 @@
       }
     },
     {
-      "key": "ea9a63dd-a785-4aef-b625-47cbb731d474",
-      "position": 10,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "ea9a63dd-a785-4aef-b625-47cbb731d474",
-        "lesson_activity.key": "38e8af92-a111-42f5-9b93-c723bd2f53c5"
-      }
-    },
-    {
       "key": "a1415f18-651b-4dbd-948f-a852232bfbf9",
-      "position": 11,
+      "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show slide with additional optical illusions"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show slide with additional optical illusions",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Illusions:** The illusions are:\n- **The Dress:** Some folks see a blue dress; some folks see a gold dress; some folks see a variety of different colors. This picture went viral several years ago with debates over the color of the dress\n- **Young Woman vs Older Woman**: Depending on how you view it, this image either looks like a young woman looking away off to the distance, or an older woman looking down. The chin and ears of the younger woman are the nose and eyes of the older woman.\n- **Dogs and Bagels**: Not really an optical illusion - if you look closely, some of the images are of dogs and some are of bagels. At a quick glance, it's easy to miss which one is which."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "a1415f18-651b-4dbd-948f-a852232bfbf9",
@@ -1293,18 +1243,8 @@
       }
     },
     {
-      "key": "ef8676cb-5d31-464a-85b1-971e0e09d6da",
-      "position": 12,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "ef8676cb-5d31-464a-85b1-971e0e09d6da",
-        "lesson_activity.key": "38e8af92-a111-42f5-9b93-c723bd2f53c5"
-      }
-    },
-    {
       "key": "b87f7925-ef76-415b-91cb-630460390d3a",
-      "position": 13,
+      "position": 7,
       "properties": {
         "description": "We use our eyes and sense of sight to identify objects, and sometimes an image with identical features can be interpretted in several different ways. But what about a computer - what would it \"see\" if it saw one of this pictures? Is the dress gold, or is it blue? Is this a young woman looking away, or an old woman looking down? Are these a bunch of dogs, or a bunch of bagels? Today we're going to talk about how computers can \"see\" and detect images",
         "remarks": true
@@ -1318,7 +1258,7 @@
       "key": "b86e7b1a-f0ef-41ff-832f-b931a53abcd9",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the \n[r introduction_to_ai_how_computer_vision_works_1/ai-temp/unversioned]",
+        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the \n[r introduction_to_ai_how_computer_vision_works_1/ai-temp/unversioned] video.",
         "name": "Image Recognition Algorithm",
         "tips": [
           {
@@ -1333,18 +1273,8 @@
       }
     },
     {
-      "key": "72eab082-a6b2-4168-a124-bf415c939499",
-      "position": 2,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "72eab082-a6b2-4168-a124-bf415c939499",
-        "lesson_activity.key": "c24958df-e546-4f72-ba8a-69016a87f2ec"
-      }
-    },
-    {
       "key": "50ef3f67-f1b4-497d-bd3d-e7c9b984f81d",
-      "position": 3,
+      "position": 2,
       "properties": {
         "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** How would you summarize how a computer \"sees\" something in an image?"
       },
@@ -1354,18 +1284,8 @@
       }
     },
     {
-      "key": "ee7a8885-2a74-41e9-a5ac-715ab3676ed9",
-      "position": 4,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "ee7a8885-2a74-41e9-a5ac-715ab3676ed9",
-        "lesson_activity.key": "c24958df-e546-4f72-ba8a-69016a87f2ec"
-      }
-    },
-    {
       "key": "da8c658a-9802-4a83-8fba-062b4314400b",
-      "position": 5,
+      "position": 3,
       "properties": {
         "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Listen for students describing how it breaks an image into parts, then combines them together in layers to create more complex shapes. Students may rely on the shape visuals from the video, or on the dog and muffin visuals."
       },
@@ -1375,18 +1295,8 @@
       }
     },
     {
-      "key": "20e7cf05-893c-40d7-a3cd-d6599bb86d2e",
-      "position": 6,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "20e7cf05-893c-40d7-a3cd-d6599bb86d2e",
-        "lesson_activity.key": "c24958df-e546-4f72-ba8a-69016a87f2ec"
-      }
-    },
-    {
       "key": "ebe0349c-b6d1-4951-9323-8a3206871bc1",
-      "position": 7,
+      "position": 4,
       "properties": {
         "description": "<i class=\"fa fa-pencil\" aria-hidden=\"true\"></i> **Vocabulary:** Display the slide with vocabulary for today's lesson"
       },
@@ -1396,18 +1306,8 @@
       }
     },
     {
-      "key": "64e54cac-d2c6-46da-86b6-9f8394cdb303",
-      "position": 8,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "64e54cac-d2c6-46da-86b6-9f8394cdb303",
-        "lesson_activity.key": "c24958df-e546-4f72-ba8a-69016a87f2ec"
-      }
-    },
-    {
       "key": "f2edc645-cbcc-413c-82eb-2e523a919bdb",
-      "position": 9,
+      "position": 5,
       "properties": {
         "description": "* **Algorithm** - a series of steps to solve a problem or make a decision\n* **Network** - A collection of items connected together. Following these connections can represent the steps in an algorithm, like a flowchart."
       },
@@ -1417,18 +1317,8 @@
       }
     },
     {
-      "key": "9d96f4db-109f-4b8e-9ed4-b78dfe4aa355",
-      "position": 10,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "9d96f4db-109f-4b8e-9ed4-b78dfe4aa355",
-        "lesson_activity.key": "c24958df-e546-4f72-ba8a-69016a87f2ec"
-      }
-    },
-    {
       "key": "10e8c3a0-46fe-44d3-a813-b56c9a946215",
-      "position": 11,
+      "position": 6,
       "properties": {
         "description": "Today we're going to create our own image recognition **algorithm**. An algorithm is a series of steps to solve a problem or make a decision. We're going to create an algorithm that uses a **network** to make a decision, just like in the video",
         "remarks": true
@@ -1439,18 +1329,8 @@
       }
     },
     {
-      "key": "a57447f9-9145-4105-90d2-86d06eb891cc",
-      "position": 12,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "a57447f9-9145-4105-90d2-86d06eb891cc",
-        "lesson_activity.key": "c24958df-e546-4f72-ba8a-69016a87f2ec"
-      }
-    },
-    {
       "key": "1849a2f7-b72a-45c9-a128-4cf617285c82",
-      "position": 13,
+      "position": 7,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the slide with a scoreboard from a baseball game"
       },
@@ -1460,18 +1340,8 @@
       }
     },
     {
-      "key": "33627534-02cb-47ec-8686-12af396ee433",
-      "position": 14,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "33627534-02cb-47ec-8686-12af396ee433",
-        "lesson_activity.key": "c24958df-e546-4f72-ba8a-69016a87f2ec"
-      }
-    },
-    {
       "key": "920d8ff2-cf46-41a8-9cf4-0cc18706a5f6",
-      "position": 15,
+      "position": 8,
       "properties": {
         "description": "We're helping a sports arena make its scoreboard more accessible. We want to train a camera to detect what the scores are so it can be broadcast to a radio receive for people who are visually impaired. For this to work, it needs to detect the which number is displayed on the scoreboard. Each number is represented with one of these displays, which uses 7 segments to create images.",
         "remarks": true
@@ -1482,18 +1352,8 @@
       }
     },
     {
-      "key": "7b0cef44-9d38-464b-ab81-f70e43fc6bfe",
-      "position": 16,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "7b0cef44-9d38-464b-ab81-f70e43fc6bfe",
-        "lesson_activity.key": "c24958df-e546-4f72-ba8a-69016a87f2ec"
-      }
-    },
-    {
       "key": "04b1576e-95c0-450e-aed2-7b606fa5295a",
-      "position": 17,
+      "position": 9,
       "properties": {
         "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** How would you represent your birthday using these numbers? Sketch your answer on a sheet of scratch paper"
       },
@@ -1503,18 +1363,8 @@
       }
     },
     {
-      "key": "cd39ba68-10be-4118-8d5d-c7f149b92f83",
-      "position": 18,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "cd39ba68-10be-4118-8d5d-c7f149b92f83",
-        "lesson_activity.key": "c24958df-e546-4f72-ba8a-69016a87f2ec"
-      }
-    },
-    {
       "key": "f51a00b8-6543-4576-8eb1-25c1c1788a84",
-      "position": 19,
+      "position": 10,
       "properties": {
         "description": "As students are sketching their responses, begin distributing the activity guide."
       },
@@ -1524,20 +1374,10 @@
       }
     },
     {
-      "key": "5fdd8464-40ce-4748-9755-019e9f0b4827",
-      "position": 20,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "5fdd8464-40ce-4748-9755-019e9f0b4827",
-        "lesson_activity.key": "c24958df-e546-4f72-ba8a-69016a87f2ec"
-      }
-    },
-    {
       "key": "83b74996-35e9-4cd2-ab6b-15d26c027256",
-      "position": 21,
+      "position": 11,
       "properties": {
-        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Pass out the\n[r computer_vision_network/ai-temp/unversioned]",
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Pass out the\n[r computer_vision_network/ai-temp/unversioned] activity guide",
         "tips": [
           {
             "type": "teachingTip",
@@ -1551,18 +1391,8 @@
       }
     },
     {
-      "key": "4ee01ed4-cb2e-4aa0-bfc5-f308b39c18e8",
-      "position": 22,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "4ee01ed4-cb2e-4aa0-bfc5-f308b39c18e8",
-        "lesson_activity.key": "c24958df-e546-4f72-ba8a-69016a87f2ec"
-      }
-    },
-    {
       "key": "0e2fb7aa-0e8f-498a-a36b-87840baee2e6",
-      "position": 23,
+      "position": 12,
       "properties": {
         "description": "**Group:** Group students into pairs to work together"
       },
@@ -1572,18 +1402,8 @@
       }
     },
     {
-      "key": "0fda68c3-2afc-4019-9a56-e94a8440564f",
-      "position": 24,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "0fda68c3-2afc-4019-9a56-e94a8440564f",
-        "lesson_activity.key": "c24958df-e546-4f72-ba8a-69016a87f2ec"
-      }
-    },
-    {
       "key": "fb94afe7-0053-4432-84df-12d875874286",
-      "position": 25,
+      "position": 13,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the slides giving an overview of this activity"
       },
@@ -1593,18 +1413,8 @@
       }
     },
     {
-      "key": "e2dbc314-b8d6-4be2-b74a-ae374a0290e1",
-      "position": 26,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "e2dbc314-b8d6-4be2-b74a-ae374a0290e1",
-        "lesson_activity.key": "c24958df-e546-4f72-ba8a-69016a87f2ec"
-      }
-    },
-    {
       "key": "c8c950b5-ec66-4196-9d5b-67170e0684ae",
-      "position": 27,
+      "position": 14,
       "properties": {
         "description": "| Slides                           | Say                                                                                                                                                                      |\n| -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |\n| ![](https://images.code.org/1b79baa3ea6dfa043c4ca65862fde192-slides1.png) | **Say:** The left side of this guide represents the inputs that your sensor can detect. It knows when each individual segment is turned on.                              |\n| ![](https://images.code.org/ddf12b3544d8315ddb987a86cb1ec8ef-slides2.png) | **Say:** The right side of this guide represents the decision we're trying to make. We need to build a path from the inputs on the left to these decisions on the right. |\n| ![](https://images.code.org/67dd4d7689a543737ea8bf31e21e377f-slides3.png) | **Say:** This central area is where you can build your network, just like in the video                                                                                   |\n| ![](https://images.code.org/b5be83c4dbfac8bfcacb8cbed48546c8-slides4.png) | **Say:** You can combine at most 2 inputs from previous layers to create a new combination, like this \"corner\" combined from two segments                                |\n| ![](https://images.code.org/52227f3ce8b3cfbf9e779f3b9bb948a1-slides5.png) | **Say:** You can make as many items in this column as you want! For the first layer, you may end up with a lot of combinations in this column                            |\n| ![](https://images.code.org/b5a0d32cf2af3901fe39ad517eaec037-slides6.png) | **Say:** You can combine from previous layers to move into the next layers, creating more complex shaps like this \"Top Half\"                                             |\n| ![](https://images.code.org/4ff1cfacd677b6992336307c0cffc8ba-slides7.png) | **Say:** You can combine from any previous layer, but you can still only use 2 inputs at a time                                                                          |\n| ![](https://images.code.org/59b7b329453c40494bfc0f5d8353ffce-slides8.png) | **Say:** The final layer is special - it can combine up to 3 inputs from any of the previous layers\n\n"
       },
@@ -1614,18 +1424,8 @@
       }
     },
     {
-      "key": "4c555cb5-d8aa-4c12-9120-427c3b4a20bf",
-      "position": 28,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "4c555cb5-d8aa-4c12-9120-427c3b4a20bf",
-        "lesson_activity.key": "c24958df-e546-4f72-ba8a-69016a87f2ec"
-      }
-    },
-    {
       "key": "a8384314-5f97-47ca-b9b7-4fd43dcd8def",
-      "position": 29,
+      "position": 15,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students work in pairs to construct their network. The rules for the network are displayed on the slides."
       },
@@ -1635,28 +1435,14 @@
       }
     },
     {
-      "key": "d80d813f-ab6b-4f24-bc0f-b761c3ede948",
-      "position": 30,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "d80d813f-ab6b-4f24-bc0f-b761c3ede948",
-        "lesson_activity.key": "c24958df-e546-4f72-ba8a-69016a87f2ec"
-      }
-    },
-    {
       "key": "dc0754a5-bafa-462c-8190-ecbadb4a2b97",
-      "position": 31,
+      "position": 16,
       "properties": {
         "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Monitor students as they complete this task, observing the different strategies students attempt to \"move through\" the layers. Ensure partners are collaborating together. Look for groups that are creating unique or novel networks , especially when different from some of the examples in the presentation.",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Why are they out of order?** Students may ask why the numbers are out of order on the right side of the activity guide. They're ordered by \"number of segments\" - 8 has the most active segments, and 1 does not. When it comes time to make a decision, if multiple numbers are lit up (like 9 and 7 and 4 and 1), then the top number is always chosen. This helps reduce the complexity for students as they make their algorithms - otherwise, an 8 could cause havoc in their network!"
-          },
-          {
-            "type": "teachingTip",
-            "markdown": "**Exemplar:** A few example networks are provided as an Answer Keys. These can be used as reference, or to quickly inspire students who may be stuck. They can also be used in class discussions to emphasize that there are multiple ways to solve this task."
+            "markdown": "**Why are they out of order?** Students may ask why the numbers are out of order on the right side of the activity guide. They're ordered by \"number of segments\" - 8 has the most active segments, and 1 does not. When it comes time to make a decision, if multiple numbers are lit up (like 9 and 7 and 4 and 1), then the top number is always chosen. This helps reduce the complexity for students as they make their algorithms - otherwise, an 8 could cause havoc in their network!\n\n**Exemplar:** A few example networks are provided as an Answer Keys. These can be used as reference, or to quickly inspire students who may be stuck. They can also be used in class discussions to emphasize that there are multiple ways to solve this task."
           }
         ]
       },
@@ -1666,18 +1452,8 @@
       }
     },
     {
-      "key": "7f16e0aa-a4e4-4b2c-8b1a-0d6bfbee9583",
-      "position": 32,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "7f16e0aa-a4e4-4b2c-8b1a-0d6bfbee9583",
-        "lesson_activity.key": "c24958df-e546-4f72-ba8a-69016a87f2ec"
-      }
-    },
-    {
       "key": "7e36fac3-f40c-4d28-bee8-7afe8a9fb34e",
-      "position": 33,
+      "position": 17,
       "properties": {
         "description": "**Regroup:** Have students regroup",
         "tips": [
@@ -1693,18 +1469,8 @@
       }
     },
     {
-      "key": "ce31b70b-2601-4ae4-b296-f62c47e5ad5b",
-      "position": 34,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "ce31b70b-2601-4ae4-b296-f62c47e5ad5b",
-        "lesson_activity.key": "c24958df-e546-4f72-ba8a-69016a87f2ec"
-      }
-    },
-    {
       "key": "cc12cb6d-a555-4097-b153-9222e1ffb5a1",
-      "position": 35,
+      "position": 18,
       "properties": {
         "description": "Now that we have our algorithm, lets test it! We're going to do 2 examples. I'm going to show a slide that has certain inputs covered with post-it notes. This means the sensor detected that particular strand was lit up. Follow your network to determine which number it is!",
         "name": "Testing Our Algorithm",
@@ -1716,18 +1482,8 @@
       }
     },
     {
-      "key": "abd7bbed-22a2-46e0-9f7d-cebec05f1bf6",
-      "position": 36,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "abd7bbed-22a2-46e0-9f7d-cebec05f1bf6",
-        "lesson_activity.key": "c24958df-e546-4f72-ba8a-69016a87f2ec"
-      }
-    },
-    {
       "key": "50115111-857f-49c1-89b6-38b95ea3dc9f",
-      "position": 37,
+      "position": 19,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Display the slide with the first example",
         "tips": [
@@ -1743,18 +1499,8 @@
       }
     },
     {
-      "key": "89f634a7-d404-4641-bad9-e74b9c5ffe5b",
-      "position": 38,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "89f634a7-d404-4641-bad9-e74b9c5ffe5b",
-        "lesson_activity.key": "c24958df-e546-4f72-ba8a-69016a87f2ec"
-      }
-    },
-    {
       "key": "eabbe395-bf2a-4e80-8ad7-77f165638fed",
-      "position": 39,
+      "position": 20,
       "properties": {
         "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Monitor students as they trace the path in their network"
       },
@@ -1764,18 +1510,8 @@
       }
     },
     {
-      "key": "fff90702-93b6-4649-9ef5-4405aa77cbfe",
-      "position": 40,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "fff90702-93b6-4649-9ef5-4405aa77cbfe",
-        "lesson_activity.key": "c24958df-e546-4f72-ba8a-69016a87f2ec"
-      }
-    },
-    {
       "key": "9e40b6bf-3daa-4a01-8669-06cbabad7255",
-      "position": 41,
+      "position": 21,
       "properties": {
         "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** _Are there any changes you want to make to your network? You have a minute to do so!_"
       },
@@ -1785,24 +1521,14 @@
       }
     },
     {
-      "key": "ff2a56e7-092c-4eed-8968-a6ede153b4af",
-      "position": 42,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "ff2a56e7-092c-4eed-8968-a6ede153b4af",
-        "lesson_activity.key": "c24958df-e546-4f72-ba8a-69016a87f2ec"
-      }
-    },
-    {
       "key": "9a49f599-618f-4ad9-a4c6-d3ba85526823",
-      "position": 43,
+      "position": 22,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the slide with the second example",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Optional Extensions:**\n\n* Consider having students trade networks with another pair, then giving students a third example and seeing if they can trace a neighbor's network\n* Consider inviting students to trace the solution in front of the class, explaining how their network works\n* Consider giving students the number 8 as an input, which will activate every single space in their network, then prompt them to consider how they can make a decision when this happens"
+            "markdown": "**Optional Extensions:**\n\n* Consider having students trade networks with another pair, then giving students a third example and seeing if they can trace a neighbor's network\n* Consider inviting students to trace the solution in front of the class, explaining how their network works\n* Consider giving students the number 8 as an input, which will activate every single space in their network, then prompt them to consider how they can make a decision when this happens\n* Consider telling students that one of the segments if \"burnt out\", and then giving them a pattern that doesn't exactly match with any number (for example: an 8, but the bottom segment is missing, so it looks like an A). What number will their network identify it as?"
           }
         ]
       },
@@ -1823,62 +1549,10 @@
       }
     },
     {
-      "key": "86523e14-9b15-4d0e-b4ee-93c1b60f3309",
+      "key": "5a7670d4-a5ef-4756-86a2-f33a4564c992",
       "position": 2,
       "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "86523e14-9b15-4d0e-b4ee-93c1b60f3309",
-        "lesson_activity.key": "0601474b-ca09-4996-8160-e880e4cec3e8"
-      }
-    },
-    {
-      "key": "40f2eb62-2042-4ba4-9516-085f9115221d",
-      "position": 3,
-      "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **(Option 2) Prompt:** _Imagine one of the segments is burnt out so the following image is displayed. What number do you think it is? What number will your network say it is?_"
-      },
-      "seeding_key": {
-        "activity_section.key": "40f2eb62-2042-4ba4-9516-085f9115221d",
-        "lesson_activity.key": "0601474b-ca09-4996-8160-e880e4cec3e8"
-      }
-    },
-    {
-      "key": "ff5347e9-a7fe-4f71-b8dd-916a1734564d",
-      "position": 4,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "ff5347e9-a7fe-4f71-b8dd-916a1734564d",
-        "lesson_activity.key": "0601474b-ca09-4996-8160-e880e4cec3e8"
-      }
-    },
-    {
-      "key": "7ab04c2e-8143-4b1c-8bb9-9b43d5e2a517",
-      "position": 5,
-      "properties": {
-        "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Could be 3 or 9"
-      },
-      "seeding_key": {
-        "activity_section.key": "7ab04c2e-8143-4b1c-8bb9-9b43d5e2a517",
-        "lesson_activity.key": "0601474b-ca09-4996-8160-e880e4cec3e8"
-      }
-    },
-    {
-      "key": "3fb2fcf6-fd37-4ffd-bc5b-e6204203937a",
-      "position": 6,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "3fb2fcf6-fd37-4ffd-bc5b-e6204203937a",
-        "lesson_activity.key": "0601474b-ca09-4996-8160-e880e4cec3e8"
-      }
-    },
-    {
-      "key": "5a7670d4-a5ef-4756-86a2-f33a4564c992",
-      "position": 7,
-      "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **(Option 3) Prompt:** What do you imagine a network could look like that could identify the image below? What do the inputs look like? What do some of the middle layers look like?"
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **(Option 3) Prompt:** What do you imagine a network could look like that could identify the image below? What do the inputs look like? What do some of the middle layers look like?\n\n(Click to expand. Image source: Wikimedia Commons)\n\n![expandable](https://images.code.org/46689f062047e100e3073bc8a00fd51f-Semaphore_Signals_A-Z.jpg)"
       },
       "seeding_key": {
         "activity_section.key": "5a7670d4-a5ef-4756-86a2-f33a4564c992",
@@ -1887,8 +1561,15 @@
     },
     {
       "key": "1810f940-d14f-41b9-bfd1-629d114679dd",
-      "position": 8,
+      "position": 3,
       "properties": {
+        "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** This is an open-ended prompt for students to apply the skills they practiced in the lesson to a new situation, but they still may struggle adapting to a new context - it's okay for students to struggle and \"talk it out\" as they work through this together. Students should identify the individual left and right flag positions as inputs, and the combination of the two as the output letter. The middle layer could look like two flags combined together - for example: left flag straight left + right flag straight right = R. This example network would be simpler than the class example because there are less components to build together.",
+        "tips": [
+          {
+            "type": "contentCorner",
+            "markdown": "**Semaphores:** This example comes from a historical way for ships or outposts to communicate over long distances, before radio or telephone were invented. For example, if two ships on the sea wanted to communicate, one person would wave flags according to this system and someone on another ship would record the words to piece together the message."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "1810f940-d14f-41b9-bfd1-629d114679dd",
@@ -1897,7 +1578,7 @@
     },
     {
       "key": "12149e56-a564-43f2-97b9-15dd29ecba69",
-      "position": 9,
+      "position": 4,
       "properties": {
         "description": "**(Optional) Extension:** Consider watching the [r what_a_neural_network_sees/ai-temp/unversioned] video from the [Experiments with Google](https://experiments.withgoogle.com/what-neural-nets-see) page. The short video gives a live example of how image classification works as a neural network, where you can see the inputs and hidden layers. \n"
       },
@@ -2078,7 +1759,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Real Or Fake?** Students may have lots of questions about this business model and why it's a good idea to only go by recommendations. These may be valid questions if this were a real business, but it's not - ensure students that this is just an excuse to focus on the role of recommendations in our world. However, it is true that the underlying concepts in this business and how recommendations work are similar to real-world recommendation systems, even if the company is fake."
+            "markdown": "**Real Or Fake?** Students may have lots of questions about this business model and why it's a good idea to only go by recommendations. These may be valid questions if this were a real business, but it's not - assure students that this is just an excuse to focus on the role of recommendations in our world. However, it is true that the underlying concepts in this business and how recommendations work are similar to real-world recommendation systems, even if the company is fake."
           },
           {
             "type": "contentCorner",
@@ -2105,7 +1786,7 @@
       "key": "46d2fe03-c4f9-41fb-b9f8-fa87c7f30f71",
       "position": 7,
       "properties": {
-        "description": "Send students to the first level in Code Studio. As they work, have them consider the following prompt"
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Code Studio:** Send students to the first level in Code Studio. As they work, have them consider the following prompt"
       },
       "seeding_key": {
         "activity_section.key": "46d2fe03-c4f9-41fb-b9f8-fa87c7f30f71",
@@ -2862,7 +2543,7 @@
       "key": "8d660547-7601-4727-9f80-8efcf9132c1d",
       "position": 10,
       "properties": {
-        "description": "**Code Studio:** Have students log into Code Studio and begin interacting with the widget. They can follow along in the [r written_voice_simulator_guide/ai-temp/unversioned]",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Code Studio:** Have students log into Code Studio and begin interacting with the widget. They can follow along in the [r written_voice_simulator_guide/ai-temp/unversioned]",
         "tips": [
           {
             "type": "teachingTip",
@@ -3495,7 +3176,7 @@
       "key": "922a33c0-0c03-461b-9248-ab95eb9cd1a9",
       "position": 20,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Model:**</strong> Pass out the [r optional_gan_game_activity_slides/ai-temp/unversioned]. Show students how to use the widget by playing one round of human guessing vs computer guessing. Feel free to use the [r optional_gan_slides/ai-temp/unversioned]. Be sure to be clear to students that they have no information initially, and they do not have to over-think initial guesses. They'll get things wrong and that's ok! In fact, it's part of the model of the activity -- GANs are wildly guessing too until they have more information.<br><br><strong>Code Studio:</strong> Students log into Code studio to explore a game where they act like generators.<br><strong><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:**</strong>  Help student stay on task, coming up with guesses with them. (Eventually Students should figure out that the rule is a password must have a red circle -- help students who are struggling figure this out by procedurally trying different shapes and colors with them.",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Model:** Pass out the [r optional_gan_game_activity_slides/ai-temp/unversioned]. Show students how to use the widget by playing one round of human guessing vs computer guessing. Feel free to use the [r optional_gan_slides/ai-temp/unversioned]. Be sure to be clear to students that they have no information initially, and they do not have to over-think initial guesses. They'll get things wrong and that's ok! In fact, it's part of the model of the activity -- GANs are wildly guessing too until they have more information.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Code Studio:** Students log into Code studio to explore a game where they act like generators.",
         "duration": "10",
         "name": "Optional GAN Activity",
         "progression_name": "GAN Guess Widget",
@@ -3515,13 +3196,7 @@
       "key": "9401df52-d341-48b3-8b21-8baae0e387c5",
       "position": 21,
       "properties": {
-        "description": "**Regroup:** Have students regroup for a synthesis discussion to help them further cement their understanding of generators and discriminators by connecting it to what they did in the activity.<br><br>\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** </strong> When were you acting like a generator in this activity?<br><strong><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** </strong> When students generated random passwords -- even when they weren't accepted -- they were acting like a generator. Generators generate random images that may or may not be accepted as real. <br><br>\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** </strong> When were you acting like a discriminator in this activity? <br><strong><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** </strong> Students acted like a discriminator when they guessed if the computer's generated password followed the rule or not. They didn't initially know, but got better as they got more data.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "<strong>Common Misconception</strong>: Students will frequently assume that the computer telling them if their guess was correct or not was the computer acting as a discriminator. This is not true. Discriminators don't necessarily have the truth -- they are, like the students guessing if the computer's password will follow the rule or not, also making guesses. The computer providing the \"FOLLOWS\" or \"NOT\" feedback is acting more like the programmer that feeds the Discriminator labeled data to learn from. More information on labeled data exists in the machine learning video."
-          }
-        ]
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:**  Help student stay on task, coming up with guesses with them. (Eventually Students should figure out that the rule is a password must have a red circle -- help students who are struggling figure this out by procedurally trying different shapes and colors with them."
       },
       "seeding_key": {
         "activity_section.key": "9401df52-d341-48b3-8b21-8baae0e387c5",
@@ -3532,6 +3207,7 @@
       "key": "a5c8a995-0fe5-4a56-9125-86a7c00a7fd8",
       "position": 22,
       "properties": {
+        "description": "**Regroup:** Have students regroup for a synthesis discussion to help them further cement their understanding of generators and discriminators by connecting it to what they did in the activity."
       },
       "seeding_key": {
         "activity_section.key": "a5c8a995-0fe5-4a56-9125-86a7c00a7fd8",
@@ -3542,9 +3218,49 @@
       "key": "2558d590-e8dc-444d-8f61-b79585a152b7",
       "position": 23,
       "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:**  When were you acting like a generator in this activity?"
       },
       "seeding_key": {
         "activity_section.key": "2558d590-e8dc-444d-8f61-b79585a152b7",
+        "lesson_activity.key": "c20eb6d3-fb11-40ac-bf6c-c93e20e63a9a"
+      }
+    },
+    {
+      "key": "b2b0e2cd-dc39-4852-9a96-278222322f3d",
+      "position": 24,
+      "properties": {
+        "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:**  When students generated random passwords -- even when they weren't accepted -- they were acting like a generator. Generators generate random images that may or may not be accepted as real. "
+      },
+      "seeding_key": {
+        "activity_section.key": "b2b0e2cd-dc39-4852-9a96-278222322f3d",
+        "lesson_activity.key": "c20eb6d3-fb11-40ac-bf6c-c93e20e63a9a"
+      }
+    },
+    {
+      "key": "e2733893-5025-4731-bd49-d2367cb5c153",
+      "position": 25,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:**  When were you acting like a discriminator in this activity? ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "<strong>Common Misconception</strong>: Students will frequently assume that the computer telling them if their guess was correct or not was the computer acting as a discriminator. This is not true. Discriminators don't necessarily have the truth -- they are, like the students guessing if the computer's password will follow the rule or not, also making guesses. The computer providing the \"FOLLOWS\" or \"NOT\" feedback is acting more like the programmer that feeds the Discriminator labeled data to learn from. More information on labeled data exists in the machine learning video."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "e2733893-5025-4731-bd49-d2367cb5c153",
+        "lesson_activity.key": "c20eb6d3-fb11-40ac-bf6c-c93e20e63a9a"
+      }
+    },
+    {
+      "key": "8dafadbc-0da1-4ae4-91b6-1612572e562d",
+      "position": 26,
+      "properties": {
+        "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:**  Students acted like a discriminator when they guessed if the computer's generated password followed the rule or not. They didn't initially know, but got better as they got more data."
+      },
+      "seeding_key": {
+        "activity_section.key": "8dafadbc-0da1-4ae4-91b6-1612572e562d",
         "lesson_activity.key": "c20eb6d3-fb11-40ac-bf6c-c93e20e63a9a"
       }
     },
@@ -3608,7 +3324,7 @@
       "key": "d45e6861-be58-4328-a8d3-8d16dbf7123d",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Think about a time when you shared a picture with your friends or on social media. Have you ever had to crop a photo you shared? How did you decide what to crop out of the picture?*\n\n**Discussion Goal:** Use this discussion to show that users usually have a reason for sharing photos and the focus depends on that reason.  Students will most likely bring up a wide range of examples that can be used to highlight how there isn’t a one size fits all approach to sharing photos and cropping them. "
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Think about a time when you shared a picture with your friends or on social media. Have you ever had to crop a photo you shared? How did you decide what to crop out of the picture?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Use this discussion to show that users usually have a reason for sharing photos and the focus depends on that reason.  Students will most likely bring up a wide range of examples that can be used to highlight how there isn’t a one size fits all approach to sharing photos and cropping them. "
       },
       "seeding_key": {
         "activity_section.key": "d45e6861-be58-4328-a8d3-8d16dbf7123d",
@@ -3631,7 +3347,7 @@
       "key": "a4c0a171-63d3-4cb6-903a-694327b90cf6",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Tell students to use the widget to crop the images as if they were uploading them to a social media account. They can also upload their own images and crop them as well.\n\nPair students up for the discussion. Have them go through the images together and discuss their responses to the questions.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Which images were challenging for you to decide how to crop? Which images did you and your partner crop the same? Which images did you and your partner crop differently?\n\n**Discussion Goal:** Use this discussion to highlight the different experiences and perspectives everyone brings to deciding how to crop an image. Direct students to consider not only what they decided to keep in the picture, but also what they decided to crop out of the picture. What happens when we crop something out of a picture? It never gets seen by the audience. Look back at the photos you cropped. What or who got left out? You may choose to guide the class toward describing general characteristics of images that were challenging to crop.\n",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Tell students to use the widget to crop the images as if they were uploading them to a social media account. They can also upload their own images and crop them as well.\n\nPair students up for the discussion. Have them go through the images together and discuss their responses to the questions.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Which images were challenging for you to decide how to crop? Which images did you and your partner crop the same? Which images did you and your partner crop differently?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Use this discussion to highlight the different experiences and perspectives everyone brings to deciding how to crop an image. Direct students to consider not only what they decided to keep in the picture, but also what they decided to crop out of the picture. What happens when we crop something out of a picture? It never gets seen by the audience. Look back at the photos you cropped. What or who got left out? You may choose to guide the class toward describing general characteristics of images that were challenging to crop.\n",
         "duration": "10",
         "name": "Cropping Widget"
       },
@@ -3656,7 +3372,7 @@
       "key": "b5e783c8-914b-4fd5-a1e1-200c1aaa5add",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** How might the cropping data from our classroom be biased? What are some ways we could address the biases in our data?\n\n**Discussion Goal:** Help students see if this were indeed training a model, bias could arise from a few different places.\n* The limited set of pictures included in the app that are most likely not representative of the photos being shared on social media.\n* The bias of the students themselves. Are teenagers more likely to focus on certain things when cropping? Is this representative of the whole population of social media users?\n",
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** How might the cropping data from our classroom be biased? What are some ways we could address the biases in our data?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Help students see if this were indeed training a model, bias could arise from a few different places.\n* The limited set of pictures included in the app that are most likely not representative of the photos being shared on social media.\n* The bias of the students themselves. Are teenagers more likely to focus on certain things when cropping? Is this representative of the whole population of social media users?\n",
         "progression_name": "Cropping Widget"
       },
       "seeding_key": {
@@ -3682,7 +3398,7 @@
       "key": "b55dc5c1-d1f4-4f7d-bcd9-b0d05cb6dfd2",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Watch the video [“Are We Automating Racism?”](https://youtu.be/Ok5sKLXqynQ) Watch from 0:00-4:05 and 9:30-13:46."
+        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:**  Watch the video [“Are We Automating Racism?”](https://youtu.be/Ok5sKLXqynQ) Watch from 0:00-4:05 and 9:30-13:46."
       },
       "seeding_key": {
         "activity_section.key": "b55dc5c1-d1f4-4f7d-bcd9-b0d05cb6dfd2",
@@ -3705,7 +3421,7 @@
       "key": "19478526-9917-4d0c-a778-f556631e17c5",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Using this definition of racism, what aspect(s) of racism did the Twitter cropping algorithm do: prejudice, discrimination, or antagonism?\n\n**Discussion Goal:** Use this discussion to highlight the evidence brought up in the video both from the reporters and the tweets they mention from other users showing how the algorithm was biased or prejudiced towards lighter faces compared with darker faces. \n",
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Using this definition of racism, what aspect(s) of racism did the Twitter cropping algorithm do: prejudice, discrimination, or antagonism?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Use this discussion to highlight the evidence brought up in the video both from the reporters and the tweets they mention from other users showing how the algorithm was biased or prejudiced towards lighter faces compared with darker faces. \n",
         "tips": [
           {
             "type": "teachingTip",
@@ -3722,7 +3438,7 @@
       "key": "4dcc8f6b-dfd5-4e6d-a1c9-74253261f166",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** How was the Twitter cropping algorithm trained? According to the video, where is a potential source of bias when training similar cropping algorithms?\n\n**Discussion Goal:** The most important thing for students to come away from this discussion with is the fact that the machine is not racist. The algorithm that the programmers wrote is biased towards lighter faces. Use this discussion to ensure students understand how the model used the saliency datasets discussed in the video and how some of those datasets were trained on photo libraries containing images that do not represent the population as a whole.",
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** How was the Twitter cropping algorithm trained? According to the video, where is a potential source of bias when training similar cropping algorithms?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** The most important thing for students to come away from this discussion with is the fact that the machine is not racist. The algorithm that the programmers wrote is biased towards lighter faces. Use this discussion to ensure students understand how the model used the saliency datasets discussed in the video and how some of those datasets were trained on photo libraries containing images that do not represent the population as a whole.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3739,7 +3455,7 @@
       "key": "7881d1dd-8ea4-4990-af26-2d6e340ea09b",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Journal:** If you were the CEO of Twitter and found evidence of this bias in your cropping algorithm, how would you respond? What steps would you take?\n\nYou may choose to have students share their responses if there is time, otherwise move to reading the article."
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** If you were the CEO of Twitter and found evidence of this bias in your cropping algorithm, how would you respond? What steps would you take?\n\nYou may choose to have students share their responses if there is time, otherwise move to reading the article."
       },
       "seeding_key": {
         "activity_section.key": "7881d1dd-8ea4-4990-af26-2d6e340ea09b",
@@ -3762,7 +3478,7 @@
       "key": "1b31a5b3-03dd-40f8-bcd4-67eaa23acda6",
       "position": 11,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students read the article [“Twitter says its image-cropping algorithm was biased, so it’s ditching it (CNN)”](https://drive.google.com/file/d/1D27tKtB6cE0qbVKh5mcJI7QOQld0Jc0B/view?usp=sharing). After they are finished reading they should mark up the text with the following:\n* **Highlight / Underline:** Any information in this article that you want to know more about\n* **At The End:** Write a 10-word summary of the article\n",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students read the article [“Twitter says its image-cropping algorithm was biased, so it’s ditching it (CNN)”](https://drive.google.com/file/d/1D27tKtB6cE0qbVKh5mcJI7QOQld0Jc0B/view?usp=sharing). After they are finished reading they should mark up the text with the following:\n* **Highlight / Underline:** Any information in this article that you want to know more about\n* **At The End:** Write a 10-word summary of the article\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -3779,7 +3495,7 @@
       "key": "11b9c974-2a82-4453-babd-af1299b2c3f0",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This**: Watch the video \n[r introduction_to_ai_-_societal_impact/ai-temp/unversioned]"
+        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Watch the video \n[r introduction_to_ai_-_societal_impact/ai-temp/unversioned]"
       },
       "seeding_key": {
         "activity_section.key": "11b9c974-2a82-4453-babd-af1299b2c3f0",
@@ -3790,7 +3506,7 @@
       "key": "8d417eb1-5125-4593-8ff9-8ebbc996b7c3",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Have students discuss their reactions to the quotes pulled out from Rumman Chowdry, a software engineering director for Twitter’s machine learning ethics, transparency, and accountability team. \n* Do you think Twitter’s response was appropriate?\n* What are the risks and potential harms of systems, such as social media platforms like Twitter, becoming too dependent on machine learning?\n"
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Have students discuss their reactions to the quotes pulled out from Rumman Chowdry, a software engineering director for Twitter’s machine learning ethics, transparency, and accountability team. \n* Do you think Twitter’s response was appropriate?\n* What are the risks and potential harms of systems, such as social media platforms like Twitter, becoming too dependent on machine learning?\n"
       },
       "seeding_key": {
         "activity_section.key": "8d417eb1-5125-4593-8ff9-8ebbc996b7c3",
@@ -3865,7 +3581,7 @@
       "key": "0c21984c-0258-4ddc-9b21-e61f73efb0bd",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss**: _What comes to mind when you hear the term artificial intelligence? What are examples of artificial intelligence you've seen either in real life or in fiction, like movies or music or television?_\n\nHave students record their responses in their journals, then share with a neighbor. Before having a full-group discussion, transition to the next prompt.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** _Can you think of times when these examples were used for good? Can you think of times when these examples were used for bad, even if unintended? Are there things they do we might consider \"right\" or \"wrong\"?_\n\nHave students think to themselves first, then discuss with a neighbor before asking students to share as a full group. Have students share the example they thought of, then the situation they thought of that could be used for good or bad.",
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _What comes to mind when you hear the term artificial intelligence? What are examples of artificial intelligence you've seen either in real life or in fiction, like movies or music or television?_\n\nHave students record their responses in their journals, then share with a neighbor. Before having a full-group discussion, transition to the next prompt.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _Can you think of times when these examples were used for good? Can you think of times when these examples were used for bad, even if unintended? Are there things they do we might consider \"right\" or \"wrong\"?_\n\nHave students think to themselves first, then discuss with a neighbor before asking students to share as a full group. Have students share the example they thought of, then the situation they thought of that could be used for good or bad.",
         "name": "Journal"
       },
       "seeding_key": {
@@ -3877,7 +3593,7 @@
       "key": "fa65b3c2-9343-4132-ac28-2d7a2607c9ed",
       "position": 3,
       "properties": {
-        "description": " **Discussion Goal**: This prompt is intentionally open-ended and vague with how we define \"good\", \"bad\", \"right\", and \"wrong\". Give students space to explore how they would describe artificial technology and find examples of \"good\" or \"bad\". Try to hear from a wide variety of voices in your classroom. When ready, advance to the next slide and use the remarks below to wrap up the discussion."
+        "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** This prompt is intentionally open-ended and vague with how we define \"good\", \"bad\", \"right\", and \"wrong\". Give students space to explore how they would describe artificial technology and find examples of \"good\" or \"bad\". Try to hear from a wide variety of voices in your classroom. When ready, advance to the next slide and use the remarks below to wrap up the discussion."
       },
       "seeding_key": {
         "activity_section.key": "fa65b3c2-9343-4132-ac28-2d7a2607c9ed",
@@ -3888,7 +3604,7 @@
       "key": "e7888f19-b21d-4e56-a652-6a035037af04",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Vocabulary**: \n\n- **Ethics:** guidelines for good behavior."
+        "description": "<i class=\"fa fa-pencil\" aria-hidden=\"true\"></i> **Vocabulary:** \n\n- **Ethics:** guidelines for good behavior."
       },
       "seeding_key": {
         "activity_section.key": "e7888f19-b21d-4e56-a652-6a035037af04",
@@ -3935,7 +3651,7 @@
       "key": "d0097d6a-6380-495f-acfa-0fec2733119e",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute**: Digitally share the [r ai_ethics_research_areas/ai-temp/unversioned] document with each group. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain that this document lists research areas in AI ethics, along with sample articles and videos students may read and watch. Have groups choose an area of specialization. Encourage students to pick different topics if possible.  \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Provide each group with one copy of the [r ai_ethics_research_reflection/ai-temp/unversioned] handout. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students research their area with  fellow group members, answering questions on the handout along the way. Students can skim the longer articles for key ideas, take notes, pose additional questions, and use a search engine to investigate further if time permits.\n\n#### AI Ethics Research Reflection\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Share**: Ask groups to share what they learned, along with a few answers to the questions on the handout.\n\n\n\n\n\n"
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Digitally share the [r ai_ethics_research_areas/ai-temp/unversioned] document with each group. \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that this document lists research areas in AI ethics, along with sample articles and videos students may read and watch. Have groups choose an area of specialization. Encourage students to pick different topics if possible.  \n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Provide each group with one copy of the [r ai_ethics_research_reflection/ai-temp/unversioned] handout. \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students research their area with  fellow group members, answering questions on the handout along the way. Students can skim the longer articles for key ideas, take notes, pose additional questions, and use a search engine to investigate further if time permits.\n\n#### AI Ethics Research Reflection\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Share**: Ask groups to share what they learned, along with a few answers to the questions on the handout.\n\n\n\n\n\n"
       },
       "seeding_key": {
         "activity_section.key": "d0097d6a-6380-495f-acfa-0fec2733119e",
@@ -3946,7 +3662,7 @@
       "key": "cd595daa-684b-41e8-ab6d-a6716923d382",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Once students have completed their research, share an example of an AI code of ethics, such as those by [Microsoft](https://www.microsoft.com/en-us/ai/responsible-ai?activetab=pivot1%3Aprimaryr6) and [Google](https://ai.google/principles/).\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss**: _Your next task is to create a similar resource, an “AI Code of Ethics”. Based on what you’ve read and discussed, what are the most important ethical principles (rules) you believe all current and future AI must follow?_\n\nHave students discuss in their groups to brainstorm some initial ideas before regrouping to give a more specific task\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students will write at least one principle for the class code of ethics. Ideally, their principles should be written as a sentence followed by a short paragraph that provides more context to the reader (see Google’s page).",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Once students have completed their research, share an example of an AI code of ethics, such as those by [Microsoft](https://www.microsoft.com/en-us/ai/responsible-ai?activetab=pivot1%3Aprimaryr6) and [Google](https://ai.google/principles/).\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _Your next task is to create a similar resource, an “AI Code of Ethics”. Based on what you’ve read and discussed, what are the most important ethical principles (rules) you believe all current and future AI must follow?_\n\nHave students discuss in their groups to brainstorm some initial ideas before regrouping to give a more specific task\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Students will write at least one principle for the class code of ethics. Ideally, their principles should be written as a sentence followed by a short paragraph that provides more context to the reader (see Google’s page).",
         "name": "Draft “Our AI Code of Ethics” Resource ",
         "tips": [
           {
@@ -3964,7 +3680,7 @@
       "key": "cadd45cc-05e2-430c-94c3-5b67aef18696",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This**: Watch the video \n[r introduction_to_ai_-_privacy_and_future_of_work/ai-temp/unversioned]"
+        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Watch the video \n[r introduction_to_ai_-_privacy_and_future_of_work/ai-temp/unversioned]"
       },
       "seeding_key": {
         "activity_section.key": "cadd45cc-05e2-430c-94c3-5b67aef18696",
@@ -3975,7 +3691,7 @@
       "key": "340bfba4-be24-40bc-b080-acd39d6a5767",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss**: _How would you describe “AI ethics” to a family member or friend who didn’t participate in today’s lesson?_\n\nEncourage student to use evidence from their research in explaining what AI Ethics is and the need for an ethical code.",
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _How would you describe “AI ethics” to a family member or friend who didn’t participate in today’s lesson?_\n\nEncourage student to use evidence from their research in explaining what AI Ethics is and the need for an ethical code.",
         "name": "Journal"
       },
       "seeding_key": {
@@ -3990,17 +3706,6 @@
       },
       "seeding_key": {
         "activity_section.key": "7f41d974-785e-433b-8031-eaf571e39fe4",
-        "lesson_activity.key": "8ed127df-c40b-4809-8803-c1abd706b689"
-      }
-    },
-    {
-      "key": "38447047-80a0-4feb-a90e-5aa2548bac42",
-      "position": 4,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Question of The Day:** What are guidelines we can use to create ethical machine learning apps?\n"
-      },
-      "seeding_key": {
-        "activity_section.key": "38447047-80a0-4feb-a90e-5aa2548bac42",
         "lesson_activity.key": "8ed127df-c40b-4809-8803-c1abd706b689"
       }
     },
