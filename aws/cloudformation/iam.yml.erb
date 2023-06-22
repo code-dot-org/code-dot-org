@@ -146,6 +146,8 @@ Resources:
             Action:
               - dynamodb:GetItem
             Resource: !Sub "arn:aws:dynamodb:${AWS::Region}:${AWS::AccountId}:table/dcdo_production"
+
+  # TODO: review use of this role, and either remove or refactor to be created by the loop below.
   Developer:
     Type: AWS::IAM::Role
     Properties:
