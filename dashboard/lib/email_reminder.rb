@@ -31,7 +31,7 @@ class EmailReminder
   def find_requests_needing_reminder
     ParentalPermissionRequest.joins(:user).
       select(:id).
-      where('parental_permission_requests.created_at BETWEEN ? AND ?', @max_reminder_age, @min_reminder_age).
+      where(created_at: @max_reminder_age..@min_reminder_age).
       where('parental_permission_requests.reminders_sent < ?', @max_reminders).
       where("JSON_EXTRACT(users.properties, '$.child_account_compliance_state') != ?", User::ChildAccountCompliance::PERMISSION_GRANTED)
   end
