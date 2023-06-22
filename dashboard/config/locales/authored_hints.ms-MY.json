@@ -9479,9 +9479,9 @@
         },
         "courseC_artist_prog72022": {
           "courseC_artist_prog7_a": "Setiap sudut ialah sama ada 45 atau 90 darjah.",
-          "courseC_artist_prog7_b": "Adakah ia berfungsi pada langkah pertama?\\\nBagaimanakah dengan langkah kedua?\\\nDi manakah salahnya?",
+          "courseC_artist_prog7_b": "Adakah ia berfungsi pada langkah pertama?  \nBagaimanakah dengan langkah kedua?  \nDi manakah salahnya?  ",
           "courseC_artist_prog7_c": "Anda boleh menggunakan menu ke bawah pada blok pusing untuk melihat sudut yang anda perlukan!",
-          "courseC_artist_prog7_d": "Anda perlu:\n\n-   bergerak ke hadapan\n-   pusing kanan 45 darjah\n-   bergerak ke hadapan\n-   pusing kanan 90 darjah\n-   bergerak ke hadapan\n-   pusing kanan 45 darjah\n\nUlangi corak ini 2 kali!",
+          "courseC_artist_prog7_d": "Anda perlu:\n- bergerak ke hadapan\n- pusing kanan 45 darjah\n- bergerak ke hadapan\n- pusing kanan 90 darjah\n- bergerak ke hadapan\n- pusing kanan 45 darjah\n\nUlangi corak ini 2 kali!",
           "courseC_artist_prog7_e": "Jangan takut membuat kesilapan! Cuba tambahkan blok dan jalankan kod untuk melihat perkara yang akan berlaku, walaupun anda tidak fikir yang anda telah menyelesaikan teka-teki itu."
         },
         "courseC_artist_prog_challenge12022": {
@@ -9942,8 +9942,7 @@
         },
         "courseE_artist_functions102022": {
           "courseD_artist_functions10_b": "Lukisan ini banyak persamaan dengan lukisan yang lalu, tetapi fungsi `lukiskan garisan` sekarang melukis bentuk yang berbeza.",
-          "courseD_artist_functions10_a": "Untuk mengelak daripada menggunakan blok `bergerak ke hadapan` berbilang, ciptakan fungsi `lukiskan heksagon` dan panggil fungsi tersebut beberapa kali.",
-          "courseD_artist_functions10_c": "Adakah anda dapat melihat tempat lukisan ini boleh menggunakan fungsi yang dipanggil sebagai `garisan heksagon`?\n\n![](https://images.code.org/904e0f38232fd9c15a3d2d172e7dde0b-image-1493140714580.gif)"
+          "courseD_artist_functions10_a": "Untuk mengelak daripada menggunakan blok `bergerak ke hadapan` berbilang, ciptakan fungsi `lukiskan heksagon` dan panggil fungsi tersebut beberapa kali."
         },
         "courseE_artist_functions22022": {
           "courseD_artist_functions2_b": "Fungsi ini tidak sepatutnya mengandungi keseluruhan atur cara anda, hanya terdapat bahagian yang melukiskan segi empat sama dengan sisi 100 piksel.",
@@ -9978,11 +9977,7 @@
           "courseD_artist_functions8_c": "Pada penghujung setiap garisan segi empat sama, artis hanya perlu pusing 180 darjah sebelum melukiskan garisan segi empat sama yang seterusnya. Letakkan kesemuanya di dalam gelung berulang bertujuan menyediakan anda untuk latihan seterusnya!"
         },
         "courseE_artist_functions92022": {
-          "courseD_artist_functions9_e": "Bolehkah anda mengesan keempat-empat tempat yang `garisan segi tiga` boleh digunakan dalam lukisan ini?\n\n![](https://images.code.org/130e1040ecca7186dea87f42666f5620-image-1493140373966.gif)",
-          "courseD_artist_functions9_a": "Teka-teki ini boleh dipecahkan kepada tiga bahagian:\n\n-   buatkan fungsi `lukiskan segi tiga`\n-   buatkan fungsi `lukiskan garisan segi tiga`\n-   gunakan fungsi `lukiskan garisan segi tiga` anda sebanyak empat kali untuk melengkapkan lukisan",
-          "courseD_artist_functions9_b": "Lukisan ini dibuat dengan melukis garisan segi tiga sebanyak 4 kali dan berpusing sama ada 60 atau 120 darjah sebelum anda melukiskan garisan segi tiga yang seterusnya.",
-          "courseD_artist_functions9_c": "Untuk melukis garisan segi tiga:\n\n-   ulangi sebanyak 4 kali\n    -   lukiskan segi tiga\n    -   lompat ke hadapan 50 piksel",
-          "courseD_artist_functions9_d": "Untuk melukis berlian:\n\n-   ulangi sebanyak 2 kali\n    -   lukiskan garisan segi tiga\n    -   pusing 60 darjah\n    -   lukiskan garisan segi tiga\n    -   pusing 120 darjah"
+          "courseD_artist_functions9_b": "Lukisan ini dibuat dengan melukis garisan segi tiga sebanyak 4 kali dan berpusing sama ada 60 atau 120 darjah sebelum anda melukiskan garisan segi tiga yang seterusnya."
         },
         "courseE_artist_functions_challenge12022": {
           "courseE_artist_functions_challenge1_a": "Jika anda memanggil fungsi itu sekali lagi, anda boleh mencipta reka bentuk yang sama di sudut akhir.",

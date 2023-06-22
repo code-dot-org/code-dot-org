@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": "csc-bookcovers",
-    "serialized_at": "2023-06-13 23:02:36 UTC",
+    "serialized_at": "2023-06-21 21:07:25 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -60,7 +60,8 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
-        "overview": "In this lesson, students will plan their own interactive book cover. Students will begin by brainstorming books they have enjoyed and select one to design a book cover for. Students should imagine they are recommending the book to someone else and piquing their interest in reading it. Students will introduce two main characters and write a summary of the story. Then they will receive feedback from a peer to ensure they are ready for the next lesson. In the Lesson 3, students will code their own interactive digital book cover."
+        "overview": "In this lesson, students will plan their own interactive book cover. Students will begin by brainstorming books they have enjoyed and select one to design a book cover for. Students should imagine they are recommending the book to someone else and piquing their interest in reading it. Students will introduce two main characters and write a summary of the story. Then they will receive feedback from a peer to ensure they are ready for the next lesson. In the Lesson 3, students will code their own interactive digital book cover.",
+        "purpose": "The purpose of this lesson is to engage fourth-grade students in a creative and interactive learning experience centered around designing their own interactive book cover. By reflecting on books they have enjoyed, students will have the opportunity to explore their personal reading preferences and select a book to create a captivating cover for. \n\nThrough this process, they will practice summarizing the story and introducing two main characters, honing their ability to effectively communicate key elements of a narrative. Furthermore, students will engage in a peer feedback activity to refine their work before progressing to the next lesson, where they will learn to code their own interactive digital book covers. \n\nThis lesson aims to foster students' creativity, storytelling skills, and technological literacy while encouraging a love for reading and sharing book recommendations.\n"
       },
       "seeding_key": {
         "lesson.key": "lesson-4",
@@ -149,12 +150,42 @@
       }
     },
     {
-      "key": "bb8f7f59-9ed7-41c5-a60e-da88ff2134c0",
+      "key": "7c5e6524-b963-4a87-855d-adff95087976",
       "position": 1,
       "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7c5e6524-b963-4a87-855d-adff95087976",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "csc-bookcovers-2023"
+      }
+    },
+    {
+      "key": "bb8f7f59-9ed7-41c5-a60e-da88ff2134c0",
+      "position": 2,
+      "properties": {
+        "duration": 25,
+        "name": "Main Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "bb8f7f59-9ed7-41c5-a60e-da88ff2134c0",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "csc-bookcovers-2023"
+      }
+    },
+    {
+      "key": "48209c38-b039-4722-a0c7-39ab5eb66551",
+      "position": 3,
+      "properties": {
+        "duration": 10,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "48209c38-b039-4722-a0c7-39ab5eb66551",
         "lesson.key": "lesson-4",
         "lesson_group.key": "",
         "script.name": "csc-bookcovers-2023"
@@ -350,7 +381,7 @@
       "key": "2f8c7cb8-88a3-4fc0-8611-c68ac04e3f64",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2 - Wonder” slide\n\n**Do This**: Test out [Level 2](https://studio.code.org/s/csc-bookcover/lessons/1/levels/2): Book Cover Example as a class. Have students reflect on what they see and compare it to the book covers they saw on the slide.\n\n**Discuss**: _How is this digital book cover similar to or different from a regular book cover?_",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2 - Wonder” slide\n\n**Do This**: Test out the book cover example in Level 2 as a class. Have students reflect on what they see and compare it to the book covers they saw on the slide.\n\n**Discuss**: _How is this digital book cover similar to or different from a regular book cover?_",
         "progression_name": "Explore a Digital Book Cover Example"
       },
       "seeding_key": {
@@ -445,15 +476,250 @@
       }
     },
     {
+      "key": "cf238793-1da1-47d7-a83f-cd4becb06dd0",
+      "position": 1,
+      "properties": {
+        "duration": "5",
+        "name": "Happy Reading Memory"
+      },
+      "seeding_key": {
+        "activity_section.key": "cf238793-1da1-47d7-a83f-cd4becb06dd0",
+        "lesson_activity.key": "7c5e6524-b963-4a87-855d-adff95087976"
+      }
+    },
+    {
+      "key": "d3c2abcf-d22b-4438-b4cc-1a5122aa3503",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Discussion” slide\n\n**Do This**: Begin the activity by explaining the purpose of the discussion—to recall and share happy reading memories. Guide students through a series of prompts to help them recall the details of their happy reading memory. \n"
+      },
+      "seeding_key": {
+        "activity_section.key": "d3c2abcf-d22b-4438-b4cc-1a5122aa3503",
+        "lesson_activity.key": "7c5e6524-b963-4a87-855d-adff95087976"
+      }
+    },
+    {
+      "key": "2bcb6362-a147-47af-8a75-c4465d0d838b",
+      "position": 3,
+      "properties": {
+        "description": "Close your eyes:\n\n- _Visualize the place where you were reading_ \n- _What time of day was it? Where were you sitting?_ \n- _Which book were you reading?_ \n- _Was there anyone with you?_\n- _What made that moment special?_ \n",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "2bcb6362-a147-47af-8a75-c4465d0d838b",
+        "lesson_activity.key": "7c5e6524-b963-4a87-855d-adff95087976"
+      }
+    },
+    {
+      "key": "ba520635-366f-4100-8361-3c4ac47c17cb",
+      "position": 4,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Introduce a talking piece, such as a pencil, stuffed animal, or book, which students can pass around the circle. Each student will have the opportunity to hold the talking piece and share their favorite reading memory. Encourage them to include specific details about their favorite reading spot and explain why they enjoy reading there.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "ba520635-366f-4100-8361-3c4ac47c17cb",
+        "lesson_activity.key": "7c5e6524-b963-4a87-855d-adff95087976"
+      }
+    },
+    {
+      "key": "eacff92b-91b6-4c74-846a-f1b0009bc967",
+      "position": 5,
+      "properties": {
+        "description": "**Discussion Goal:** The goal of this activity is to elicit and share happy reading memories, promoting a positive and engaging attitude towards reading. By reflecting on the details that made their experiences special, students will develop their ability to articulate and express their thoughts effectively."
+      },
+      "seeding_key": {
+        "activity_section.key": "eacff92b-91b6-4c74-846a-f1b0009bc967",
+        "lesson_activity.key": "7c5e6524-b963-4a87-855d-adff95087976"
+      }
+    },
+    {
+      "key": "b4f7526c-faff-491b-b9c7-152c4d31dbb4",
+      "position": 6,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Ensure that students feel comfortable and respected during the activity by allowing them to pass if they are not yet ready to share. This will foster a safe and inclusive learning environment.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "b4f7526c-faff-491b-b9c7-152c4d31dbb4",
+        "lesson_activity.key": "7c5e6524-b963-4a87-855d-adff95087976"
+      }
+    },
+    {
+      "key": "3376e599-b110-45ac-9bd5-aa44f6548dbd",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Challenge!” slide\n\n**Do This**: Pass out a blank piece of paper to each student. Set a timer for 2 minutes and challenge students to write down as many books as they can that they’ve read this year. As you walk around, remind students about some of the books that you’ve read together as a class to support students in adding book titles to their list.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Partners” slide\n\n**Do This**: After the timer goes off, ask students to go back through their list and circle a couple books that they really loved. Have students turn to their partner and tell them about one of the books. \n\n- _What was the book about?_\n- _Who were the characters?_ \n- _Why did they like it?_\n",
+        "duration": "4",
+        "name": "Book List Challenge"
+      },
+      "seeding_key": {
+        "activity_section.key": "3376e599-b110-45ac-9bd5-aa44f6548dbd",
+        "lesson_activity.key": "7c5e6524-b963-4a87-855d-adff95087976"
+      }
+    },
+    {
+      "key": "fbef10da-8ecd-48c2-94f4-ca48ef733774",
+      "position": 8,
+      "properties": {
+        "description": " class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n**Do This**: Review the vocabulary words: character, setting and summary. All of these will be important for students to understand in order to be able to complete the handout and plan their digital book cover. \n\n- **Background** - The visual behind the main things or people on the screen.\n- **Character** - A person, animal, being, creature or thing in a story.\n- **Setting** - The time and place (or when and where) of a story.\n- **Summary** - Telling the most important parts of a text, in your own words, in a much shorter way.\n- **Sprite** - A graphic on the screen with a location, size and appearance.\n\n\n\n\n",
+        "duration": "1",
+        "name": "Vocabulary"
+      },
+      "seeding_key": {
+        "activity_section.key": "fbef10da-8ecd-48c2-94f4-ca48ef733774",
+        "lesson_activity.key": "7c5e6524-b963-4a87-855d-adff95087976"
+      }
+    },
+    {
       "key": "5cef3b1a-9242-4550-96f5-2a76e817ac21",
       "position": 1,
       "properties": {
-        "name": "Make a plan",
+        "duration": "15",
+        "name": "Plan Your Own Book Cover",
         "progression_name": "Plan your Interactive Book Cover!"
       },
       "seeding_key": {
         "activity_section.key": "5cef3b1a-9242-4550-96f5-2a76e817ac21",
         "lesson_activity.key": "bb8f7f59-9ed7-41c5-a60e-da88ff2134c0"
+      }
+    },
+    {
+      "key": "8f2aa71f-9beb-4e43-893d-9934cd619525",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Book Covers Project Rubric” slide\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "8f2aa71f-9beb-4e43-893d-9934cd619525",
+        "lesson_activity.key": "bb8f7f59-9ed7-41c5-a60e-da88ff2134c0"
+      }
+    },
+    {
+      "key": "560796a4-f65c-44ad-9251-6e9981f6de2d",
+      "position": 3,
+      "properties": {
+        "description": "You are going to create a book cover for a book that you love and would recommend to someone else. Before we begin, let’s take a look at the rubric to see what your project will include. During the last lesson we saw a few examples of interactive book covers. Consider those as we look through the rubric.\n\n",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "560796a4-f65c-44ad-9251-6e9981f6de2d",
+        "lesson_activity.key": "bb8f7f59-9ed7-41c5-a60e-da88ff2134c0"
+      }
+    },
+    {
+      "key": "3699a040-781f-4c48-9bb8-10e347548071",
+      "position": 4,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "In this lesson, you will be using the provided [rubric](https://docs.google.com/document/d/11hnQkEHwwOD6Bo2_oKiE-CxyU5hXJNlMgV30cjaKVYQ/template/preview) to assess your students' projects. Rubrics are valuable tools that bring consistency and clarity to the evaluation process. By outlining specific criteria and performance levels, rubrics ensure that all students are assessed fairly and objectively.\n\nWe encourage you to share the rubric with your students before they begin their projects. This helps them understand the expectations and work towards meeting the outlined criteria. Additionally, as you grade their work, refer to the rubric consistently, so that each aspect of the project is assessed based on the same set of standards. By adopting this approach, you promote fairness, provide meaningful feedback to students, and help them identify areas for growth and improvement.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "3699a040-781f-4c48-9bb8-10e347548071",
+        "lesson_activity.key": "bb8f7f59-9ed7-41c5-a60e-da88ff2134c0"
+      }
+    },
+    {
+      "key": "1809c720-124f-4b67-92a0-bd621d573760",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Plan Your Own Book Cover” slide\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "1809c720-124f-4b67-92a0-bd621d573760",
+        "lesson_activity.key": "bb8f7f59-9ed7-41c5-a60e-da88ff2134c0"
+      }
+    },
+    {
+      "key": "07c1727e-6cd9-4e1d-8798-3b2a827d2a6c",
+      "position": 6,
+      "properties": {
+        "description": "**Do This**:  Pass out the Plan Your Own Book Cover handout. Students will select one book from the list they wrote during the warm up challenge. They will design an interactive book cover for this book. First, students will choose two characters and introduce them. Then they will write a one to two sentence summary of the book’s plot. \n\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "07c1727e-6cd9-4e1d-8798-3b2a827d2a6c",
+        "lesson_activity.key": "bb8f7f59-9ed7-41c5-a60e-da88ff2134c0"
+      }
+    },
+    {
+      "key": "16858719-46d4-43f6-9078-5bdb8569fa3f",
+      "position": 7,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "It will be important to save these handouts for the next lesson.\n\nIf students have the book they chose in the classroom, they can use it for reference as they complete the handout.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "16858719-46d4-43f6-9078-5bdb8569fa3f",
+        "lesson_activity.key": "bb8f7f59-9ed7-41c5-a60e-da88ff2134c0"
+      }
+    },
+    {
+      "key": "49a739fa-f788-40f2-9310-f368cfabbec1",
+      "position": 8,
+      "properties": {
+        "description": "**Do This**:  Students will turn to a partner and share their work so far. Each partner will have a turn to show their handout and tell the title of the book, introduce two of the characters and give a summary of the story. The goal of the partner share is to notice the parts of the book cover plan that are ready to code for tomorrow and what parts of the book cover plan need more details. Students should base their warm and cool feedback on the project rubric.\n\nOnce the student is finished sharing, their partner should first give warm feedback: \n- _I like how you…_ \n- _The best part was…_ \n- _It was a great idea to…_\n\nThen their partner should give cool feedback: \n- _I wonder if you could…?_\n- _How might it be if…?_\n- _Did you try…?_ \n\nAfterwards, students will switch roles and repeat the protocol for the other partner.\n",
+        "duration": "10",
+        "name": "Warm and Cool Feedback"
+      },
+      "seeding_key": {
+        "activity_section.key": "49a739fa-f788-40f2-9310-f368cfabbec1",
+        "lesson_activity.key": "bb8f7f59-9ed7-41c5-a60e-da88ff2134c0"
+      }
+    },
+    {
+      "key": "1ad59e9f-d315-4a65-822b-8d396d5a54b6",
+      "position": 9,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "To support students in delivering and accepting feedback, be thoughtful of who you assign as partners, emphasize that feedback should be specific and provide the sentence starters. The idea is that the feedback is to prepare them to make excellent book covers in the next lesson.\n\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "1ad59e9f-d315-4a65-822b-8d396d5a54b6",
+        "lesson_activity.key": "bb8f7f59-9ed7-41c5-a60e-da88ff2134c0"
+      }
+    },
+    {
+      "key": "84eb9f2e-87df-4b4d-aa87-24065433621d",
+      "position": 10,
+      "properties": {
+        "description": "**Do This**: Students should have a couple minutes to revise their work based on the feedback they received.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "84eb9f2e-87df-4b4d-aa87-24065433621d",
+        "lesson_activity.key": "bb8f7f59-9ed7-41c5-a60e-da88ff2134c0"
+      }
+    },
+    {
+      "key": "46a2d18d-5e48-48e1-a56b-f41d3ec9ba64",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Making Connections: Charlotte’s Web” slide\n\n\n**Do This**: Explain the connection between characters in books and sprites in a program. On the handout students chose two characters from their book to introduce. In Lesson 3, students will represent these characters using sprites in the program. As an example, we can see the character of Wilbur on the front cover of the book Charlotte’s Web and then we can see the sprite of Wilbur on the digital book cover. Next, explain the connection between settings in a book and backgrounds in a program. On the handout students drew the setting of their book. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Making Connections: The Little Mermaid” slide\n\n**Do This**: In Lesson 3, students will represent this setting using a background in the program. As an example, we can see the setting for The Little Mermaid on the front cover of the book and we can see the background on the digital book cover.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Planning Your Characters!” slide\n\n**Do This**: Explain that there are a couple different ways to code their characters. Students can choose a sprite from the library, draw their own sprite or upload an image from their computer. Play the video to show how to draw a sprite.\n\nSelect a couple students to share their work with the whole class. These should be students who chose books that will be familiar to many other students in the class. The students will show their handout and tell the title of the book, introduce two characters and give a summary of the story. \n\n**Discuss**:  Discuss the backgrounds, and sprites and that would bring this book cover to life.\n\n**Discussion Goal**: The goal is for students to see many examples of book covers to gain inspiration and begin to brainstorm ideas for the next lesson where they will code their book covers.\n",
+        "duration": "10",
+        "name": "Planning Ahead"
+      },
+      "seeding_key": {
+        "activity_section.key": "46a2d18d-5e48-48e1-a56b-f41d3ec9ba64",
+        "lesson_activity.key": "48209c38-b039-4722-a0c7-39ab5eb66551"
       }
     },
     {
@@ -914,10 +1180,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csc_bookcovers_planning"
-        ],
-        "progression": "Plan your Interactive Book Cover!"
       },
       "bonus": false,
       "seeding_key": {
@@ -927,7 +1189,7 @@
         "lesson.key": "lesson-4",
         "lesson_group.key": "",
         "script.name": "csc-bookcovers-2023",
-        "activity_section.key": "5cef3b1a-9242-4550-96f5-2a76e817ac21"
+        "activity_section.key": "07c1727e-6cd9-4e1d-8798-3b2a827d2a6c"
       },
       "level_keys": [
         "csc_bookcovers_planning"
@@ -1326,7 +1588,7 @@
         "lesson.key": "lesson-4",
         "lesson_group.key": "",
         "script.name": "csc-bookcovers-2023",
-        "activity_section.key": "5cef3b1a-9242-4550-96f5-2a76e817ac21"
+        "activity_section.key": "07c1727e-6cd9-4e1d-8798-3b2a827d2a6c"
       }
     },
     {
@@ -1490,6 +1752,18 @@
       }
     },
     {
+      "name": "Book Cover Rubric",
+      "url": "https://docs.google.com/document/d/11hnQkEHwwOD6Bo2_oKiE-CxyU5hXJNlMgV30cjaKVYQ/template/preview",
+      "key": "book_cover_rubric",
+      "properties": {
+        "audience": "Student",
+        "type": "Rubric"
+      },
+      "seeding_key": {
+        "resource.key": "book_cover_rubric"
+      }
+    },
+    {
       "name": "Book Guide",
       "url": "https://docs.google.com/document/d/1HRSqSLhdRt7O7yv2LN3Y9jOHykw2BvNrtZJRAi11U9k/template/preview",
       "key": "book_guide",
@@ -1499,6 +1773,30 @@
       },
       "seeding_key": {
         "resource.key": "book_guide"
+      }
+    },
+    {
+      "name": "Create Your Own Book Cover",
+      "url": "https://docs.google.com/document/d/1XXBV-TNe9VYM6v6_jahr8mCuYqzPymRbxP7hn9waKF0/template/preview",
+      "key": "create_your_own_book_cover",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "create_your_own_book_cover"
+      }
+    },
+    {
+      "name": "Create Your Own Book Cover [Key]",
+      "url": "https://docs.google.com/document/d/1sinZLdMy8PLHJVKRwGt-mqhcADQtNq0bLYy4oZZwVpQ/template/preview",
+      "key": "create_your_own_book_cover_key_",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "create_your_own_book_cover_key_"
       }
     }
   ],
@@ -1544,6 +1842,30 @@
         "lesson.key": "Share Your Book Cover",
         "resource.key": "book_cover_1"
       }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "book_cover"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "book_cover_rubric"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "create_your_own_book_cover"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "create_your_own_book_cover_key_"
+      }
     }
   ],
   "scripts_resources": [
@@ -1553,6 +1875,26 @@
 
   ],
   "vocabularies": [
+    {
+      "key": "background",
+      "word": "Background",
+      "definition": "The visual behind the main things or people on the screen.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "background"
+      }
+    },
+    {
+      "key": "character",
+      "word": "Character",
+      "definition": "A person, animal, being, creature of thing in a story.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "character"
+      }
+    },
     {
       "key": "code_v_",
       "word": "Code (v)",
@@ -1594,6 +1936,16 @@
       }
     },
     {
+      "key": "setting",
+      "word": "Setting",
+      "definition": "The time and place (or when and where) of a story.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "setting"
+      }
+    },
+    {
       "key": "sprite",
       "word": "Sprite",
       "definition": "A graphic on the screen with a location, size, and appearance.",
@@ -1601,6 +1953,16 @@
       },
       "seeding_key": {
         "vocabulary.key": "sprite"
+      }
+    },
+    {
+      "key": "summary",
+      "word": "Summary",
+      "definition": "Telling the most important parts of a text, in your own words, in a much shorter way",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "summary"
       }
     }
   ],
@@ -1640,6 +2002,36 @@
         "lesson.key": "Learn to Code a Book Cover ",
         "vocabulary.key": "sprite"
       }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "vocabulary.key": "background"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "vocabulary.key": "character"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "vocabulary.key": "setting"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "vocabulary.key": "sprite"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "vocabulary.key": "summary"
+      }
     }
   ],
   "lessons_programming_expressions": [
@@ -1654,6 +2046,36 @@
       "seeding_key": {
         "lesson.key": "Code Your Own Book Cover ",
         "objective.key": "0849e0ca-6bc7-486b-b9e4-0ef588648f2b"
+      }
+    },
+    {
+      "key": "0ad60200-90a1-4882-9874-7ff61f37f29e",
+      "properties": {
+        "description": "Engage in creative thinking and planning by brainstorming ideas to bring a book cover to life through a program or project."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "objective.key": "0ad60200-90a1-4882-9874-7ff61f37f29e"
+      }
+    },
+    {
+      "key": "2779cb4f-6ca1-4a7f-ae2d-df66a9873fad",
+      "properties": {
+        "description": "Demonstrate the ability to provide and receive constructive feedback by giving warm and cool feedback to a partner, and applying the received feedback to revise their own work."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "objective.key": "2779cb4f-6ca1-4a7f-ae2d-df66a9873fad"
+      }
+    },
+    {
+      "key": "28a41551-e8f3-4421-8671-cc69e6cf6f05",
+      "properties": {
+        "description": "Develop summarization skills by effectively summarizing a story, including introducing two key characters and their roles in the plot."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "objective.key": "28a41551-e8f3-4421-8671-cc69e6cf6f05"
       }
     },
     {
@@ -1677,6 +2099,16 @@
       }
     },
     {
+      "key": "62b336d6-02ad-446f-a4f9-54dc7bdfae1f",
+      "properties": {
+        "description": "Make sense of the connection between characters in a book and sprites in a program, as well as settings in a book and backgrounds in a program."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "objective.key": "62b336d6-02ad-446f-a4f9-54dc7bdfae1f"
+      }
+    },
+    {
       "key": "8fbf7b5a-fbc1-42a1-b652-c99bd44dca4f",
       "properties": {
         "description": "Reflect on their own digital book cover projects and identify the design elements they chose to include and the reasons behind those choices."
@@ -1684,6 +2116,16 @@
       "seeding_key": {
         "lesson.key": "Share Your Book Cover",
         "objective.key": "8fbf7b5a-fbc1-42a1-b652-c99bd44dca4f"
+      }
+    },
+    {
+      "key": "b500005e-f8c5-4ea4-ba00-7e1ccfcc9c9c",
+      "properties": {
+        "description": "Explore and reflect on personal reading experiences to identify and share favorite books and reading memories."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "objective.key": "b500005e-f8c5-4ea4-ba00-7e1ccfcc9c9c"
       }
     },
     {
@@ -1821,6 +2263,27 @@
         "lesson.key": "Share Your Book Cover",
         "framework.shortcode": "csta",
         "standard.shortcode": "1B-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "framework.shortcode": "ccela",
+        "standard.shortcode": "4.RL.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-16"
       }
     }
   ],

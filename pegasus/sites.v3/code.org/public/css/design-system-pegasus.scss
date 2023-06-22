@@ -885,10 +885,9 @@ form {
   }
 
   p {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
 
     @media screen and (max-width: $width-md) {
-      font-size: 1.25rem;
       margin-bottom: 1rem;
     }
   }
