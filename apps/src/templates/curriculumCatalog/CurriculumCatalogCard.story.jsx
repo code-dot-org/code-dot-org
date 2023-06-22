@@ -23,6 +23,7 @@ const defaultArgs = {
   isTranslated: true,
   isEnglish: true,
   pathToCourse: '/s/course',
+  isSignedOut: false,
 };
 
 export const AllOptionsCard = Template.bind({});

@@ -10956,9 +10956,7 @@
         },
         "courseC_artist_prog72022": {
           "courseC_artist_prog7_a": "Har qanday burchak 45 yoki 90 darajali.",
-          "courseC_artist_prog7_b": "Bu birinchi qadamda ishlaydimi?\nIkkinchi qadamda ishlaydimi? \nBunda qayerda xatolik ketmoqda?",
           "courseC_artist_prog7_c": "You can use the dropdown menu on the turn blocks to see which angle you need!",
-          "courseC_artist_prog7_d": "Siz xohlagan amallar:\n\n-   Oldinga yurish\n-   45 daraja o'ngga burilish\n-   Oldinga yurish\n-   90 daraja o'ngga burilish\n-   Oldinga yurish\n-   45 daraja o'ngga burilish\n\nUshbu patternni 2 marta takrorlang!",
           "courseC_artist_prog7_e": "Xato qilishdan qo‘rqmang! Bo‘laklarni qo‘shishga harakat qiling va nima sodir bo‘lishini ko‘rish uchun kodni ishga tushiring. Xattoki boshqotirma yechilmagan deb bilsangiz ham, uni ishga tushurib, sinab ko‘ring."
         },
         "courseC_artist_prog_challenge12022": {
@@ -11628,8 +11626,7 @@
         },
         "courseE_artist_functions102022": {
           "courseD_artist_functions10_b": "Ushbu rasm oxirgisiga o'xshaydi, ammo \"qator chizish\" funksiyasi endi boshqa shaklni chizmoqda.",
-          "courseD_artist_functions10_a": "Bir nechta \"oldinga siljish\" bloklarini ishlatmaslik uchun, \"oltiburchak chizish\" funksiyasini yarating va uni bir necha marta chaqiring.",
-          "courseD_artist_functions10_c": "Ushbu rasmda \"oltiburchaklar qatori\" funksiyasidan qayerda foydalanishi mumkinligini ko'ryapsizmi?\n\n![](https://images.code.org/904e0f38232fd9c15a3d2d172e7dde0b-image-1493140714580.gif)"
+          "courseD_artist_functions10_a": "Bir nechta \"oldinga siljish\" bloklarini ishlatmaslik uchun, \"oltiburchak chizish\" funksiyasini yarating va uni bir necha marta chaqiring."
         },
         "courseE_artist_functions22022": {
           "courseD_artist_functions2_b": "Funksiya sizning butun dasturingizni o'z ichiga olmasligi kerak, faqat 100 piksel tomoni bilan kvadrat chizadigan qismini olishi kerak.",
@@ -11664,11 +11661,7 @@
           "courseD_artist_functions8_c": "Kvadratlarning har bir qatorining oxirida, keyingi kvadratlarni chizishdan oldin rassom faqat 180 darajaga burilish kerak. Keyingi mashqni bajarish uchun barchasini takrorlash sikliga qo'ying!"
         },
         "courseE_artist_functions92022": {
-          "courseD_artist_functions9_e": "Ushbu rasmda \"uchburchaklar qatori\" ishlatilishi mumkin bo'lgan to'rtala joyni ham ko'ra olasizmi?\n\n![](https://images.code.org/130e1040ecca7186dea87f42666f5620-image-1493140373966.gif)",
-          "courseD_artist_functions9_a": "Ushbu jumboqni uch qismga bo'lish mumkin:\n\n-   \"uchburchak chizish\" funksiyasini bajaring\n-   \"uchburchaklar qatorini chizish\" funksiyasini bajaring\n-   rasmni bajarish uchun \"uchburchaklar qatorini chizish\" funksiyasini to'rt marta ishlating",
-          "courseD_artist_functions9_b": "Ushbu rasm uchburchaklar qatorini 4 marta chizish va keyingi uchburchak qatorini chizishdan oldin 60 yoki 120 darajaga burilish orqali amalga oshiriladi.",
-          "courseD_artist_functions9_c": "Uchburchaklar qatorini chizish uchun:\n\n-   4 marta takrorlang\n    -   uchburchak chizing\n    -   50 piksel oldinga sakrang",
-          "courseD_artist_functions9_d": "Olmosni chizish uchun:\n\n-   2 marta takrorlang\n    -   uchburchaklar qatorini chizing\n    -   60 daraja buriling\n    -   uchburchaklar qatorini chizing\n    -   120 daraja buriling"
+          "courseD_artist_functions9_b": "Ushbu rasm uchburchaklar qatorini 4 marta chizish va keyingi uchburchak qatorini chizishdan oldin 60 yoki 120 darajaga burilish orqali amalga oshiriladi."
         },
         "courseE_artist_functions_challenge12022": {
           "courseE_artist_functions_challenge1_a": "Agar funksiyani yana bir bor chaqirsangiz, oxirgi burchakda bir xil dizaynni yaratishingiz mumkin.",

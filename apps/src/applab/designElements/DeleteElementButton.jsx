@@ -1,4 +1,5 @@
 import React from 'react';
+import commonMsg from '@cdo/locale';
 import commonStyles from '../../commonStyles';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
@@ -34,21 +35,21 @@ class DeleteElementButton extends React.Component {
     if (this.state.confirming) {
       return (
         <div className={classNames(style.right, style.confirming)}>
-          Delete?
+          {commonMsg.deleteConfirm()}
           <button
             type="button"
             className={style.red}
             style={commonStyles.button}
             onClick={this.finishDelete}
           >
-            Yes
+            {commonMsg.yes()}
           </button>
           <button
             type="button"
             style={commonStyles.button}
             onClick={this.abortDelete}
           >
-            No
+            {commonMsg.no()}
           </button>
         </div>
       );
@@ -61,7 +62,7 @@ class DeleteElementButton extends React.Component {
           className={classNames(style.red, style.right)}
           onClick={this.handleDeleteInternal}
         >
-          Delete
+          {commonMsg.delete()}
         </button>
       </div>
     );

@@ -1,0 +1,22 @@
+<Javalab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 68,
+  "created_at": "2023-06-21T19:55:34.000Z",
+  "level_num": "custom",
+  "user_id": 19026,
+  "properties": {
+    "encrypted": "false",
+    "encrypted_examples": [
+
+    ],
+    "project_template_level_name": "CSA-frq-2022-ReviewAnalysis",
+    "long_instructions": "\r\n##ReviewAnalysis FRQ (Part A)\r\n\r\nUsers of a website are asked to provide a review of the website at the end of each visit. Each review, represented by an object of the `Review` class, consists of an integer indicating the user’s rating of the website and an optional `String` comment field. The comment field in a `Review` object ends with a period (\".\"), exclamation point (\"!\"), or letter, or is a `String` of length 0 if the user did not enter a comment. \r\n\r\n```\r\npublic class Review \r\n{ \r\n\tprivate int rating; \r\n    private String comment; \r\n    \r\n    /** Precondition: r >= 0 * c is not null. */ \r\n    public Review(int r, String c) \r\n    { rating = r; comment = c; } \r\n    \r\n    public int getRating() \r\n    { return rating; } \r\n    \r\n    public String getComment() \r\n    { return comment; } \r\n    \r\n    // There may be instance variables, constructors, and methods that are not shown. \r\n}\r\n```\r\n\r\nThe `ReviewAnalysis` class contains methods used to analyze the reviews provided by users. You will write two methods of the `ReviewAnalysis` class. \r\n\r\nWrite the `ReviewAnalysis` method `getAverageRating`, which returns the average rating (arithmetic mean) of all elements of `allReviews`. For example, `getAverageRating` would return `3.4` if `allReviews` contained the following `Review` objects.\r\n\r\n![](https://images.code.org/468f4c4c1d3183beea029536320db13e-image-1687366413334.53.24 PM.png)\r\n\r\nComplete method `getAverageRating`.",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console"
+  },
+  "audit_log": "[{\"changed_at\":\"2023-06-21 19:55:36 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":19026,\"changed_by_email\":\"brandon.spellman@code.org\"},{\"changed_at\":\"2023-06-21 19:56:35 +0000\",\"changed\":[\"encrypted_examples\",\"long_instructions\"],\"changed_by_id\":19026,\"changed_by_email\":\"brandon.spellman@code.org\"}]"
+}]]></config>
+</Javalab>

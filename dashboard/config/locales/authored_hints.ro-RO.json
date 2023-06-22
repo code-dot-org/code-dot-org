@@ -7568,7 +7568,8 @@
           "courseC_artist_prog5_d": "Fiecare întoarcere trebuie să fie de 90 de grade la dreapta."
         },
         "courseC_artist_prog72022": {
-          "courseC_artist_prog7_d": "Trebuie să faceți următoarele:- deplasare înainte- întoarcere la dreapta cu 45 de grade- deplasare înainte- întoarcere la dreapta cu 90 de grade- deplasare înainte- întoarcere la dreapta cu 45 de gradeRepetați acest model de 2 ori!"
+          "courseC_artist_prog7_d": "Trebuie să faceți următoarele:\n- deplasare înainte\n- întoarcere la dreapta cu 45 de grade\n- deplasare înainte\n- întoarcere la dreapta cu 90 de grade\n- deplasare înainte\n- întoarcere la dreapta cu 45 de grade\n\nRepetați acest model de 2 ori!",
+          "courseC_artist_prog7_b": "Funcționează în prima etapă?  \nDar în a doua  \nUnde nu funcționează?"
         },
         "courseC_artist_prog_challenge12022": {
           "courseC_artist_prog_challenge1_a": "Puteți face acest desen sub forma unui dreptunghi cu o linie în mijloc sau folosind două pătrate diferite!"
@@ -8002,8 +8003,7 @@
         },
         "courseE_artist_functions102022": {
           "courseD_artist_functions10_b": "Acest desen seamănă foarte mult cu ultimul desen, dar funcția `draw line` (desenează rând) va desena acum o formă diferită.",
-          "courseD_artist_functions10_a": "Pentru a evita utilizarea mai multor blocuri `move forward` (deplasare înainte), creați o funcție `draw hexagon` (desenează hexagon) și apelați-o de mai multe ori.",
-          "courseD_artist_functions10_c": "Vedeți unde v-ar fi utilă, pentru acest desen, o funcție numită `line of hexagons` (șir de hexagoane)?![](https://images.code.org/904e0f38232fd9c15a3d2d172e7dde0b-image-1493140714580.gif)"
+          "courseD_artist_functions10_a": "Pentru a evita utilizarea mai multor blocuri `move forward` (deplasare înainte), creați o funcție `draw hexagon` (desenează hexagon) și apelați-o de mai multe ori."
         },
         "courseE_artist_functions22022": {
           "courseD_artist_functions2_b": "Funcția nu trebuie să conțină întregul program, ci doar partea care desenează un pătrat cu laturile de 100 de pixeli.",
@@ -8037,11 +8037,7 @@
           "courseD_artist_functions8_c": "La capătul fiecărui rând de pătrate, artistul trebuie doar să se întoarcă la 180 de grade înainte de a desena următorul rând de pătrate. Introduceți totul într-o buclă repeat pentru a vă pregăti pentru următorul exercițiu!"
         },
         "courseE_artist_functions92022": {
-          "courseD_artist_functions9_e": "Puteți identifica toate cele patru locuri în care poate fi folosit `line of triangles` (rândul de triunghiuri) în acest desen?![](https://images.code.org/130e1040ecca7186dea87f42666f5620-image-1493140373966.gif)",
-          "courseD_artist_functions9_a": "Acest puzzle poate fi împărțit în trei părți:-   creați funcția `draw a triangle` (desenează un triunghi)-   creați funcția `draw a line of triangles` (desenează un rând de triunghiuri)-   folosiți funcția `draw a line of triangles` (desenează un rând de triunghiuri) de patru ori pentru a termina desenul",
-          "courseD_artist_functions9_b": "Acest desen este realizat prin desenarea unui rând de triunghiuri de 4 ori și întoarceri la 60 sau 120 de grade înainte de a desena următorul rând de triunghiuri.",
-          "courseD_artist_functions9_c": "Pentru a desena un rând de triunghiuri:-   repetați de 4 ori    -   desenați un triunghi    -   faceți un salt înainte de 50 de pixeli",
-          "courseD_artist_functions9_d": "Pentru a desena un diamant:-   repetați de 2 ori    -   desenați un rând de triunghiuri    -   faceți o întoarcere de 60 de grade    -   desenați un rând de triunghiuri    -   faceți o întoarcere de 120 de grade"
+          "courseD_artist_functions9_b": "Acest desen este realizat prin desenarea unui rând de triunghiuri de 4 ori și întoarceri la 60 sau 120 de grade înainte de a desena următorul rând de triunghiuri."
         },
         "courseE_artist_functions_challenge12022": {
           "courseE_artist_functions_challenge1_a": "Dacă apelați funcția încă o dată, puteți crea același design în ultimul colț.",

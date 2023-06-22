@@ -5360,7 +5360,8 @@
         "courseC_artist_prog72022": {
           "courseC_artist_prog7_e": "Səhv etməkdən qorxmayın! Hələ tapmacanı həll etdiyinizi düşünməsəniz də, nə olacağını görmək üçün blok əlavə edib kodu işlədməyə çalışın.",
           "courseC_artist_prog7_a": "Hər bir bucaq 45 və ya 90 dərəcədir.",
-          "courseC_artist_prog7_b": "İlk addımda işləyirmi?\\\nBəs ikincisidə?\\\nHarada səhv gedir?"
+          "courseC_artist_prog7_b": "Bu, birinci mərhələdə işləyirmi?\nNecə ikinci haqqında?\nHarada hər şey yanlış gedir?",
+          "courseC_artist_prog7_d": "Siz istəyirsiniz:\n- irəli sürün\n- 45 dərəcə sağa dönün\n- irəli sürün\n- sağa dönün 90 dərəcə\n- irəli sürün\n- 45 dərəcə sağa dönün\n\nBu sxemi 2 dəfə təkrarlayın!"
         },
         "courseC_collector_prog12022": {
           "courseC_collector_prog1_a": "Xəzinə olan bir məkanda dayandığınız zaman onu götürmək üçün <xml><block type=\"collector_collect\"/></xml> blokundan istifadə edin.",
@@ -5679,10 +5680,10 @@
         },
         "courseE_artist_functions92022": {
           "courseD_artist_functions9_e": "Bu rəsmdə “üçbucaqlar xəttinin” istifadə oluna biləcəyi dörd yeri görə bilərsinizmi?\n\n![](https://images.code.org/130e1040ecca7186dea87f42666f5620-image-1493140373966.gif)",
-          "courseD_artist_functions9_a": "Bu tapmaca üç hissəyə bölünə bilər:\n\n-   `üçbucaq çəkmək` funksiyasını yerinə yetirin\n-   “üçbucaqların xəttini çəkmək” funksiyasını yerinə yetirin\n-   rəsmi tamamlamaq üçün `üçbucaqlar xəttini çək` funksiyasından dörd dəfə istifadə edin",
+          "courseD_artist_functions9_a": "Bu tapmaca üç hissəyə bölünə bilər:\n   - “üçbucaq çəkmək” funksiyasını yerinə yetirin\n   - “üçbucaqların xəttini çəkmək” funksiyasını yerinə yetirin\n   - rəsmi tamamlamaq üçün `üçbucaqlar xəttini çəkmək` funksiyasından dörd dəfə istifadə edin",
           "courseD_artist_functions9_b": "Bu rəsm üçbucaq xəttini 4 dəfə çəkməklə və növbəti üçbucaq xəttini çəkməzdən əvvəl ya 60, ya da 120 dərəcə çevirməklə hazırlanır.",
-          "courseD_artist_functions9_c": "Üçbucaqlar xətti çəkmək üçün:\n\n-   4 dəfə təkrarlayın\n    -   üçbucaq çəkin\n    -   50 piksel irəli atlama",
-          "courseD_artist_functions9_d": "Almaz çəkmək üçün:\n\n-   2 dəfə təkrarlayın\n    -   üçbucaqların xəttini çəkin\n    -   60 dərəcə döndərin\n    -   üçbucaqların xəttini çəkin\n    -   120 dərəcə çevirin"
+          "courseD_artist_functions9_c": "Üçbucaqlar xətti çəkmək üçün:\n   - 4 dəfə təkrarlayın\n     - üçbucaq çəkin\n     - 50 piksel irəli atlama",
+          "courseD_artist_functions9_d": "Almaz çəkmək üçün:\n   - 2 dəfə təkrarlayın\n     - üçbucaqların xəttini çəkin\n     - 60 dərəcə döndərin\n     - üçbucaqların xəttini çəkin\n     - 120 dərəcə döndərin"
         },
         "courseE_artist_functions_challenge12022": {
           "courseE_artist_functions_challenge1_a": "Əgər funksiyanı bir daha çağırsanız, son küncdə eyni dizaynı yarada bilərsiniz.",

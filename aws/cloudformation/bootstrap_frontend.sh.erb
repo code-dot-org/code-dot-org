@@ -22,5 +22,5 @@ export AWS_METADATA_SERVICE_NUM_ATTEMPTS=30
 
 # Make sure server passes health check.
 # The status code determines success/failure of the instance launch.
-curl --silent --show-error --fail --retry 10 --retry-connrefused --retry-max-time 60 \
+curl --silent --show-error --fail --retry 10 --retry-connrefused --retry-max-time 300 \
   localhost:80/health_check > /dev/null

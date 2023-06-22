@@ -11576,9 +11576,9 @@
         },
         "courseC_artist_prog72022": {
           "courseC_artist_prog7_a": "曲がる角度は、45度か90度です。",
-          "courseC_artist_prog7_b": "”はじめに なにを する？\nそのつぎは？\nどこが まちがえているのか わかりましたか？”",
+          "courseC_artist_prog7_b": "1ステップ目はうまく行きますか？\n2ステップ目は？\nどこが間違いなのでしょう？",
           "courseC_artist_prog7_c": "`まがる`のドロップダウンメニューで 曲がる角度を 指定できます。",
-          "courseC_artist_prog7_d": "かき方\n\n-   うごく まえに\n-   まがる みぎに 45 度\n-   うごく まえに\n-   まがる みぎに 90 度\n-   うごく まえに\n-   まがる みぎに 45 度\n\nこれを2回くり返す！",
+          "courseC_artist_prog7_d": "やりたいのは次のことです:\n- 前に進む\n- 右に45度曲がる\n- 前に進む\n- 右に90度曲がる\n- 前に進む\n- 右に45度曲がる\n\nこのパターンを2回繰り返しましょう！",
           "courseC_artist_prog7_e": "ミスをおそれないで！まちがってもいいから、ブロックを引っ付けたら、どうなるか実行してみよう。"
         },
         "courseC_artist_prog_challenge12022": {
@@ -12248,8 +12248,7 @@
         },
         "courseE_artist_functions102022": {
           "courseD_artist_functions10_b": "やり方は さっきの パズルと 同じですが、かく形が変わっています。",
-          "courseD_artist_functions10_a": "`うごく まえに`を何回も書かなくていいように、 関数`六角形 を かく`を作って、それを何回も呼びましょう。",
-          "courseD_artist_functions10_c": "`六角形の列をかく`関数を どこを かくのに 使えばいいかわかるかな？\n\n![](https://images.code.org/904e0f38232fd9c15a3d2d172e7dde0b-image-1493140714580.gif)"
+          "courseD_artist_functions10_a": "`うごく まえに`を何回も書かなくていいように、 関数`六角形 を かく`を作って、それを何回も呼びましょう。"
         },
         "courseE_artist_functions22022": {
           "courseD_artist_functions2_b": "関数の中に書くのは、一辺が100ピクセルの正方形をかくところだけで、他の部分を書いてはいけません。",
@@ -12284,11 +12283,7 @@
           "courseD_artist_functions8_c": "1列目の正方形の列をかいた後、2列目の正方形の列をかく前に、180度曲がってください。つぎのパズルでは、それを くり返し中に入れて、使います。"
         },
         "courseE_artist_functions92022": {
-          "courseD_artist_functions9_e": "それぞれの辺は、`三角形の列` で できているのが わかるかな？\n\n![](https://images.code.org/130e1040ecca7186dea87f42666f5620-image-1493140373966.gif)",
-          "courseD_artist_functions9_a": "このパズルをクリアするのは、\n\n-   関数`三角形をかく`を作る\n-   関数`三角形の列をかく` を作る\n-   関数`三角形の列をかく` を 4回 くり返す",
-          "courseD_artist_functions9_b": "ダイヤモンド型をかくには、三角形の列を４回かきます。一列かいたら60度、または、120度曲がります。",
-          "courseD_artist_functions9_c": "三角形の列をかく方法\n\n-   くり返し 4 回\n    -   三角形をかく\n    -   前に 50ピクセル ジャンプする",
-          "courseD_artist_functions9_d": "ダイヤモンド型をかく方法\n\n-   くり返し 2 回\n    -   三角形の列をかく\n    -   60 度 右に 曲がる\n    -   三角形の列をかく\n    -   120 度 右に 曲がる"
+          "courseD_artist_functions9_b": "ダイヤモンド型をかくには、三角形の列を４回かきます。一列かいたら60度、または、120度曲がります。"
         },
         "courseE_artist_functions_challenge12022": {
           "courseE_artist_functions_challenge1_a": "もう一回、関数を呼べば、残った角にも、同じ もようを かくことができます。",

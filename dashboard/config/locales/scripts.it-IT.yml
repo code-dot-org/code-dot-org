@@ -777,7 +777,8 @@ it:
             2018, è la più aggiornata in italiano ==>'
           lesson_groups:
             csf_e_1:
-              display_name: Approfondimenti al Corso E (facoltativo)
+              display_name: Introduzione al Corso E (facoltativo - per chi non ha
+                svolto i corsi precedenti)
             csf_e_2:
               display_name: Contenuti del Corso E
             end_of_course_project:
@@ -803,7 +804,8 @@ it:
             scegli la versione 2018, è la più aggiornata in italiano ==>'
           lesson_groups:
             csf_f_1:
-              display_name: Approfondimenti al Corso F (facoltativo)
+              display_name: Introduzione al Corso F (facoltativo - per chi non ha
+                svolto i corsi precedenti)
             csf_f_2:
               display_name: Contenuti del Corso F
             end_of_course_project:
@@ -958,7 +960,8 @@ it:
         e-f-ramp:
           lesson_groups:
             csf_e_1:
-              display_name: Approfondimenti al Corso E (facoltativo)
+              display_name: Introduzione al Corso E (facoltativo - per chi non ha
+                svolto i corsi precedenti)
             csf_e_2:
               display_name: Contenuti del Corso E
             end_of_course_project:
@@ -980,7 +983,8 @@ it:
         new-e:
           lesson_groups:
             csf_e_1:
-              display_name: Approfondimenti al Corso E (facoltativo)
+              display_name: Introduzione al Corso E (facoltativo - per chi non ha
+                svolto i corsi precedenti)
             csf_e_2:
               display_name: Contenuti del Corso E
             end_of_course_project:
@@ -990,7 +994,8 @@ it:
         new-f:
           lesson_groups:
             csf_f_1:
-              display_name: Approfondimenti al Corso F (facoltativo)
+              display_name: Introduzione al Corso F (facoltativo - per chi non ha
+                svolto i corsi precedenti)
             csf_f_2:
               display_name: Contenuti del Corso F
             end_of_course_project:
@@ -1037,7 +1042,8 @@ it:
         course-e-2018:
           lesson_groups:
             csf_e_1:
-              display_name: Approfondimenti al Corso E (facoltativo)
+              display_name: Introduzione al Corso E (facoltativo - per chi non ha
+                svolto i corsi precedenti)
             csf_e_2:
               display_name: Contenuti del Corso E
             end_of_course_project:
@@ -1047,7 +1053,8 @@ it:
         course-f-2018:
           lesson_groups:
             csf_f_1:
-              display_name: Approfondimenti al Corso F (facoltativo)
+              display_name: Introduzione al Corso F (facoltativo - per chi non ha
+                svolto i corsi precedenti)
             csf_f_2:
               display_name: Contenuti del Corso F
             end_of_course_project:
@@ -1212,7 +1219,8 @@ it:
           description_audience: Da 8 a 12 anni
           lesson_groups:
             csf_e_1:
-              display_name: Approfondimenti al Corso E (facoltativo)
+              display_name: Introduzione al Corso E (facoltativo - per chi non ha
+                svolto i corsi precedenti)
             csf_e_2:
               display_name: Contenuti del Corso E
             end_of_course_project:
@@ -1238,7 +1246,8 @@ it:
           description_audience: Da 9 a 13 anni
           lesson_groups:
             csf_f_1:
-              display_name: Approfondimenti al Corso F (facoltativo)
+              display_name: Introduzione al Corso F (facoltativo - per chi non ha
+                svolto i corsi precedenti)
             csf_f_2:
               display_name: Contenuti del Corso F
             end_of_course_project:
@@ -5519,3 +5528,7 @@ it:
           description_audience: Da 9 a 13 anni
           description_short: Impara tutti i concetti dei corsi di fondamenti di informatica
             e crea disegni, storie o giochi interattivi.
+        csa-frq-practice:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Classi
