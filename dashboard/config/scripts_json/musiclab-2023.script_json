@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": "musiclab",
-    "serialized_at": "2023-06-21 00:02:35 UTC",
+    "serialized_at": "2023-06-21 18:41:44 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -83,6 +83,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music_lab_2023_1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -104,6 +107,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music_lab_2023_2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -125,6 +131,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music_lab_2023_3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -146,6 +155,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music_lab_2023_4"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -167,6 +179,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music_lab_2023_5"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -180,6 +195,48 @@
       },
       "level_keys": [
         "music_lab_2023_5"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music_lab_2023_6"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "musiclab-2023",
+        "activity_section.key": "35f0a999-d2d4-4110-a6b7-ca74b748bd1a"
+      },
+      "level_keys": [
+        "music_lab_2023_6"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music_lab_2203_7"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "musiclab-2023",
+        "activity_section.key": "35f0a999-d2d4-4110-a6b7-ca74b748bd1a"
+      },
+      "level_keys": [
+        "music_lab_2203_7"
       ]
     }
   ],
@@ -237,6 +294,30 @@
         "level.key": "music_lab_2023_5",
         "script_level.level_keys": [
           "music_lab_2023_5"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "musiclab-2023",
+        "activity_section.key": "35f0a999-d2d4-4110-a6b7-ca74b748bd1a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music_lab_2023_6",
+        "script_level.level_keys": [
+          "music_lab_2023_6"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "musiclab-2023",
+        "activity_section.key": "35f0a999-d2d4-4110-a6b7-ca74b748bd1a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music_lab_2203_7",
+        "script_level.level_keys": [
+          "music_lab_2203_7"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
