@@ -593,6 +593,9 @@ Dashboard::Application.routes.draw do
     post '/admin/gatekeeper/delete', to: 'dynamic_config#gatekeeper_delete', as: 'gatekeeper_delete'
     post '/admin/gatekeeper/set', to: 'dynamic_config#gatekeeper_set', as: 'gatekeeper_set'
 
+    # LTI API endpoints
+    match '/lti/v1/login(/:platform_id)', to: 'lti_v1#login', via: [:get, :post]
+
     get '/notes/:key', to: 'notes#index'
 
     resources :zendesk_session, only: [:index]
@@ -1051,6 +1054,7 @@ Dashboard::Application.routes.draw do
     get '/offline-files.json', action: :offline_files, controller: :offline
 
     post '/browser_events/put_logs', to: 'browser_events#put_logs'
+    post '/browser_events/put_metric_data', to: 'browser_events#put_metric_data'
 
     get '/get_token', to: 'authenticity_token#get_token'
 

@@ -1,0 +1,27 @@
+<Javalab>
+  <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2023-06-21T15:13:41.000Z",
+  "level_num": "custom",
+  "user_id": 19026,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "##Sign FRQ\r\n\r\nThis question involves methods that distribute text across lines of an electronic sign. The electronic sign and the text to be displayed on it are represented by the `Sign` class. You will write the complete `Sign` class, which contains a constructor and two methods. \r\n\r\nThe `Sign` class constructor has two parameters. The first parameter is a `String` that contains the message to be displayed on the sign. The second parameter is an `int` that contains the _width_ of each line of the sign. The width is the positive maximum number of characters that can be displayed on a single line of the sign.\r\n\r\nA sign contains as many lines as are necessary to display the entire message. The message is split among the lines of the sign without regard to spaces or punctuation. Only the last line of the sign may contain fewer characters than the width indicated by the constructor parameter. \r\n\r\nThe following are examples of a message displayed on signs of different widths. Assume that in each example, the sign is declared with the width specified in the first column of the table and with the message `\"Everything on sale, please come in\"` , which contains 34 characters. \r\n\r\n![](https://images.code.org/e2722fb9bd848b4142c7363ecb449e0f-image-1687359906966.05.00 AM.png)\r\n\r\nIn addition to the constructor, the `Sign` class contains two methods. \r\n\r\nThe `numberOfLines` method returns an `int` representing the number of lines needed to display the text on the sign. In the previous examples, `numberOfLines` would return `3`, `2`, and `1`, respectively, for the sign widths shown in the table. \r\n\r\nThe `getLines` method returns a `String` containing the message broken into lines separated by semicolons (;) or returns `null` if the message is the empty string. The constructor parameter that contains the message to be displayed will not include any semicolons. As an example, in the first row of the preceding table, `getLines` would return `\"Everything on s;ale, please com;e in\"`. No semicolon should appear at the end of the `String` returned by `getLines`.\r\n\r\nThe following table contains a sample code execution sequence and the corresponding results. The code execution sequence appears in a class other than `Sign`.\r\n\r\n![](https://images.code.org/a06a7b5a90cc8d034340988dde54ea10-image-1687360111516.08.19 AM.png)\r\n\r\nWrite the complete `Sign` class. Your implementation must meet all specifications and conform to the examples shown in the preceding table.\r\n\r\n",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "start_sources": {
+      "Sign.java": {
+        "text": "public class Sign\n{ /* Student code here */}",
+        "isVisible": true,
+        "tabOrder": 0
+      }
+    },
+    "encrypted_exemplar_sources": "2iNr4mEaGRS6SPum43akJgEGmmroScjEmf50S82gIjJFHpAAIPfR//gK35ds\nqnts8uPQ3O3YfNTqkHypSb/NXt600om9mXQy4r7xLcX0GmgxKBQ33PQQ8A7Y\niVs69I9RBKr8GqYsGC86XF4YSF+0GDZpHgRYDDaDDq1/WUKxHmsepVCRpDcf\nssUNuD362ftT1xy2ao/wv2/QtpXHjlP3B2HUpZqDrt4Y1msvFXTpjwNH29PF\n7u+fifL+GJCI+cq9JSSTB5wFcFOyoQqHkMxfOIkbhcp6/ZfS5u1n4rCWVZ9M\nnhshXoiH5iNMshYmHpEw20V9QQs2pFo9pQ4DCiPlPQJOW8ubo93sAedLxNjy\nbd1uQSyb/2EKt6F1IYfDvW5PBFF7/WGyliVlDilZ/BE8IFTxqPEcbJX9f67a\nSC7R4GASPCdYFtCE5PPp+VEUURNf+cnBPxF7YTbQt0XXMfXgS70qaeCpZ9GI\n9PjOaVd6urRx8x5gpCMzcv31/SocLve4Tl7F0Z6KP+03HItmY/gkkUYELtJU\nnrVxt4L24WLS5T1SKZPncQ23RVqNtLIQWcy3uj9PenMnK7bwc5vqYt9X0VVE\nZvdop6Flfbc/5J5PGxwiCRfEMQ7A3zFcLrCOkwabtmuHtkXpmTvnK8YvjqeS\npUW+RmckZZam/XyUbOtq8+I8SoPPS+dR7YtCNMFy8hi6IRiupo+RStHNUxDM\npRtcprUigZbA9tTePb1th5C3zFVk2xEe5VjsN9YxjStao8jCK74RBGsIgU10\nHFuW3sN6Z3a9fBiGOvKuBg9XAJRpvYxvuihEr/tK4bmlx7Hy1rHCAP81foEJ\nohRA+Xl4QoDlBa0ork3wR5ZJA1GtqwiJMmbO4INMPrf3b/0yzFCqmZ32Wa2c\n4beqECOp3gFUdDfm20qCuMjnN8yezBKueBBJc/zKkWgU7Jaao6z9PnP5e/sO\ndXqK5LxEQHYxZ1myLAZtjrOgJbvuXVbE7a/Zc7ePxZdNmwdy9sEG6jMNbGbo\nwd66QPsv6l4EkXSPdTx44S+LtpqRwJQiASw49LxZsvVRMoriHN2pANhxf8Hy\n1BzJm/ZNPGiT4BzgPTiiUVtKQ9riKG5XpZDPqkarz+0ZQN7topz6AdjTifwi\nO2MxrNkOQ+eE6APfTQhAnJK2ZPaPIZ/vyB52DmaCCY8BYSa+y1vzXaOQDy7U\n2+qfmNBNLZCYoscRjR4Daz8d3r8Ib2oMXmw+IgBPU64lRz0z9n7Slb5SQo+q\nsX6iCK8x5IyeKBYzVb5UR6DZGXyPidufp3rj0kuZjMsOKxUyDUZ9Fw7Fui2E\ncvE=\n",
+    "encrypted_validation": "fFQaSI5Wp/XjZmd+2334Zl2YcNd2K2f2pjFB2zL1sUNXQGVD1Vy6oGerap2G\nIl10R5GbDAmqvzwqqyhvwhI3Rw==\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2023-06-21 15:13:50 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":19026,\"changed_by_email\":\"brandon.spellman@code.org\"},{\"changed_at\":\"2023-06-21 15:14:54 +0000\",\"changed\":[],\"changed_by_id\":19026,\"changed_by_email\":\"brandon.spellman@code.org\"},{\"changed_at\":\"2023-06-21 15:15:42 +0000\",\"changed\":[],\"changed_by_id\":19026,\"changed_by_email\":\"brandon.spellman@code.org\"},{\"changed_at\":\"2023-06-21 15:16:20 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19026,\"changed_by_email\":\"brandon.spellman@code.org\"}]"
+}]]></config>
+</Javalab>
