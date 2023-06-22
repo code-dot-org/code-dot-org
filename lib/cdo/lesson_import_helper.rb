@@ -247,7 +247,7 @@ module LessonImportHelper
 
   def self.create_lesson_activities(activities_data, levels, lesson)
     position = 1
-    activities = activities_data.map do |a|
+    activities = activities_data.filter_map do |a|
       if a['name'] == 'Lesson Modifications' && convert_virtual_lesson_modification_activity_to_announcement(a, lesson)
         nil
       else
@@ -263,7 +263,7 @@ module LessonImportHelper
         lesson_activity.activity_sections = create_activity_sections(a['content'].strip_utf8mb4, lesson_activity.id, levels)
         lesson_activity
       end
-    end.compact
+    end
 
     # Create a lesson with all the levels in them
     # TODO use the [code-studio] syntax from CB instead
