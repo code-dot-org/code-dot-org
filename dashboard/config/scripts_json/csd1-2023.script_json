@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-05-17 16:41:22 UTC",
+    "serialized_at": "2023-06-21 18:17:47 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1447,7 +1447,7 @@
       "key": "3fcef854-07b9-454c-87a9-18ac2711cf4a",
       "position": 2,
       "properties": {
-        "description": "**Distribute**: Hand out copies of the activity guides."
+        "description": "**Distribute**: Hand out copies of the [r the_problem_solving_process_5/csd/2023] activity guides."
       },
       "seeding_key": {
         "activity_section.key": "3fcef854-07b9-454c-87a9-18ac2711cf4a",
@@ -5800,6 +5800,18 @@
       }
     },
     {
+      "name": "The Problem Solving Process",
+      "url": "https://docs.google.com/document/d/1KczAoklRXU1MemCJaah68E9-YtM4Qny00uZJE5f_Ly0/edit?usp=sharing",
+      "key": "the_problem_solving_process_5",
+      "properties": {
+        "audience": "Student",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "the_problem_solving_process_5"
+      }
+    },
+    {
       "name": "What Do Computers Do",
       "url": "https://www.youtube.com/watch?v=92TaQRBwPSs",
       "key": "what_do_computers_do",
@@ -6175,6 +6187,12 @@
       "seeding_key": {
         "lesson.key": "The Problem Solving Process",
         "resource.key": "the_problem_solving_process_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Problem Solving Process",
+        "resource.key": "the_problem_solving_process_5"
       }
     },
     {
