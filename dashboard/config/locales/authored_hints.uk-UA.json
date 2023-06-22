@@ -2145,7 +2145,7 @@
           "courseD_scrat_programming6_c": "Не бійся помилятися! Спробуйте додати блоки та запустити код, щоб побачити, що станеться, навіть якщо ви не думаєте, що ви вирішили головоломку ще."
         },
         "course1_artist_loops_challenge2": {
-          "harvey_tictactoe": "Використовуйте блок 'стрибок', щоб рухатись до інших просторів."
+          "harvey_tictactoe": "Використовуй блок 'стрибнути', щоб рухатись до інших місць."
         },
         "course1_artist_loops_challenge3": {
           "courseA_artist_loops_challenge2_b": "Коли Ви закінчите з будинком для пташок, \"перейдіть\" до наступного",
@@ -2385,7 +2385,7 @@
         },
         "courseA_harvester_loops9_2021": {
           "courseA_harvester_loops9_b": "Не бійтеся запускати свій код після кожної частини, щоб побачити, що станеться!",
-          "courseA_harvester_loops9_a": "Розділи це завдання на три різні частини. Одна частина - шлях до першого повороту, друга частина - шлях до другого повороту, в одна частина - шлях до кінця.",
+          "courseA_harvester_loops9_a": "Розділи це завдання на три різні частини. Одна частина - шлях до першого повороту, друга частина - шлях до другого повороту, і ще одна частина - шлях до кінця.",
           "courseA_harvester_loops9_c": "Щоб зібрати всю кукурудзу, йди цим шляхом."
         },
         "courseA_maze_seq10_2021": {
@@ -2468,7 +2468,7 @@
         },
         "courseC_PlayLab_events5_2021": {
           "courseC_PlayLab_events5_b": "Клацніть на Octavia, коли ви запускаєте свою програму, щоб перевірити, чи вона працює!",
-          "courseC_PlayLab_events5_a": "Натисни розкривне меню в блоці `персонаж говорить`, щоб знайти текст \"Що нового?\"."
+          "courseC_PlayLab_events5_a": "Натисни розкривне меню в блоці `виконавець говорить`, щоб знайти текст \"Що нового?\"."
         },
         "courseC_artist_loops7a_2021": {
           "courseC_artist_loops7a_a": "Коло має 360 градусів. Помножте ступені у свою чергу на кількість разів, коли ви повторюєте. Чи він дорівнює 360? Перевірте запропоновані повороти, щоб побачити, що це працює!"
@@ -3979,7 +3979,7 @@
           "courseA_collector_loops1_b": "Простим рішенням було б переміститися на схід 2 рази, а потім зібрати скарб."
         },
         "courseA_collector_loops2_2021": {
-          "courseA_collector_loops2_a": "Щоб забрати скарб, треба рухатися.",
+          "courseA_collector_loops2_a": "Щоб забрати скарб, треба рухатися до нього.",
           "courseA_collector_loops2_b": "Коли ти дійдеш до клітинки зі скарбом, використовуй цей блок, щоб забрати його.\n\n<xml>  <block type=\"collector_collect\"/></xml>"
         },
         "courseA_collector_loops3_2021": {
@@ -4003,7 +4003,7 @@
           "courseA_collector_loops9_b": "Спробуй вкласти 2 цикли <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> всередину іншого циклу, щоб скоротити код!"
         },
         "courseA_collector_loops_challenge1_2021": {
-          "courseA_collector_loops_challenge1_a": "Якщо щось піде не так, спробуй змінити цифри в кожному циклі.",
+          "courseA_collector_loops_challenge1_a": "Якщо щось йде не так, спробуй змінити цифри в кожному циклі.",
           "courseA_collector_loops_challenge1_b": "Щоб зробити щось лише один раз, не потрібно використовувати цикли.",
           "courseA_collector_loops_challenge1_c": "Коли ти починаєш гру, у правій частині печери лежить 6 дорогоцінних каменів, але коли ти рухатимешся на південь, потрібно буде зібрати скарб лише 5 разів. Знаєш, чому?",
           "courseA_collector_loops_challenge1_d": "Початкова програма не збирає останні 2 камінці. Спробуй додати цей код у самому кінці:\n\n<xml><block type=\"maze_moveEast\">\n                        <next>\n                          <block type=\"collector_collect_simplified\">\n                            <next>\n                              <block type=\"maze_moveSouth\">\n                                <next>\n                                  <block type=\"collector_collect\"/>\n                                </next>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block></xml>"
@@ -4020,7 +4020,7 @@
           "courseA_harvester_loops2_b": "Якщо розв'язок все ще знайшовся, спробуй промовляти кроки вголос. "
         },
         "courseA_harvester_loops3_2021": {
-          "courseA_harvester_loops3_a": "Тобі допоможе блок 'повторення', як цей!\n\n<xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">4</title>\n  </block></xml>",
+          "courseA_harvester_loops3_a": "Тобі допоможе блок 'повторити', як цей!\n\n<xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">4</title>\n  </block></xml>",
           "courseA_harvester_loops3_b": "Щоб повторити код, використай цикл `повторити` (<xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">4</title>\n  </block></xml>), а потім розмісти всередині нього потрібний тобі блок. "
         },
         "courseA_harvester_loops4_2021": {
@@ -4033,21 +4033,21 @@
           "courseA_harvester_loops5_c": "Щоб зібрати усю кукурудзу, йди цим шляхом!"
         },
         "courseA_harvester_loops5a_2021": {
-          "courseA_harvester_loops5a_a": "Тобі знадобиться один цикл `repeat` <xml> <block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">6</title>\n  </block></xml>, а потім ще один.",
+          "courseA_harvester_loops5a_a": "Тобі знадобиться один цикл `повторити` <xml> <block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">6</title>\n  </block></xml>, а потім ще один.",
           "courseA_harvester_loops5a_b": "Один цикл повторюватиме команду `переміститися на Південь` <xml><block type=\"maze_moveSouth\" limit=\"1\"/></xml>, а інший повторюватиме команду `переміститися на Схід` <xml><block type=\"maze_moveEast\" limit=\"1\"/></xml>.",
           "courseA_harvester_loops5a_c": "Використовуй цей шлях, щоб рухатися в один бік, а потім в інший."
         },
         "courseA_harvester_loops5b_2021": {
           "courseA_harvester_loops5b_a": "Натисни \"Запустити\" і слідкуй за результатом!",
           "courseA_harvester_loops5b_b": "Чи повторюються твої цикли потрібну кількість разів?",
-          "courseA_harvester_loops5b_c": "Рухайтеся цим шляхом спочатку в одному напрямку, а потім в іншому."
+          "courseA_harvester_loops5b_c": "Рухайся цим шляхом спочатку в одному напрямку, а потім в іншому."
         },
         "courseA_harvester_loops6_2021": {
           "courseA_harvester_loops6_a": "Якщо виникли складнощі, спробуй виписати кроки на папері та і пошукати повторювані шаблони.",
           "courseA_harvester_loops6_b": "Це шлях, яким слід йти, щоб зібрати всю кукурудзу."
         },
         "courseA_harvester_loops7_2021": {
-          "courseA_harvester_loops7_a": "Тобі знадобляться два цикли `repeat` <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">5</title>\n  </block></xml>, один за одним!",
+          "courseA_harvester_loops7_a": "Тобі знадобляться два цикли `повторити` <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">5</title>\n  </block></xml>, один за одним!",
           "courseA_harvester_loops7_b": "Використай два цикли, щоб пройти цим шляхом."
         },
         "courseA_maze_ramp2_2021": {
@@ -4067,7 +4067,7 @@
         },
         "courseB_maze_seq1_2021": {
           "courseB_maze_seq1_a": "Приєднуй блоки до блоку <xml><block type=\"when_run\"/></xml>, щоб змусити Скрета рухатись!",
-          "courseB_maze_seq1_b": "Перетягни три з цих стрілок <xml><block type=\"maze_moveSouth\"/></xml> і з'єднайте їх з блоком <xml><block type=\"when_run\"/></xml>, щоб довести Скрета до жолудя."
+          "courseB_maze_seq1_b": "Перетягни три з цих стрілок <xml><block type=\"maze_moveSouth\"/></xml> і з'єднай їх з блоком <xml><block type=\"when_run\"/></xml>, щоб довести Скрета до жолудя."
         },
         "courseB_maze_seq4_2021": {
           "courseB_maze_seq4_a": "Спробуй додавати по одній інструкції за раз, доки не дійдеш до жолудя.",
@@ -4080,11 +4080,11 @@
         },
         "courseB_maze_seq_challenge2_2021": {
           "courseB_maze_seq_challenge2_a": "Щоб розв'язати це завдання, не потрібно додавати або видаляти блоки.",
-          "courseB_maze_seq_challenge2_b": "Перестав блоки та пройди по маршруту \"сходинки\"."
+          "courseB_maze_seq_challenge2_b": "Перестав блоки та пройди по маршруту сходинками."
         },
         "courseC19_playLab_EOC1_2021": {
-          "courseE_playLab_scaffold1_a": "Блок `встановити персонажа 1 ???` використовується, щоб додати персонажа у цей рівень.",
-          "courseE_playLab_scaffold1_b": "Розташуй блок `встановити персонажа` під блоком `голи гра запускається`, щоб твій персонаж з'являвся на початку гри.",
+          "courseE_playLab_scaffold1_a": "Блок `встановити виконавцю 1 зображення ???` використовується, щоб додати персонажа у цей рівень.",
+          "courseE_playLab_scaffold1_b": "Розташуй блок `встановити виконавця` під блоком `коли гра запускається`, щоб твій персонаж з'являвся на початку гри.",
           "courseE_playLab_scaffold1_c": "Використовуй блок `встановити ???`, щоб обрати фон для своєї сцени."
         },
         "courseC19_playLab_EOC22022": {
@@ -4109,37 +4109,37 @@
         },
         "courseC_PlayLab_events2_2021": {
           "courseC_PlayLab_events2_a": "Приєднай два цих блоки до блоку `коли гра починається`:\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</xml>.",
-          "courseC_PlayLab_events2_b": "Використовуй розкривне меню у другому блоці `персонаж __ говорить`, щоб змінити персонажа, який буде говорити."
+          "courseC_PlayLab_events2_b": "Використовуй розкривне меню у другому блоці `виконавець __ говорить`, щоб змінити персонажа, який буде говорити."
         },
         "courseC_PlayLab_events3_2021": {
           "courseC_PlayLab_events3_a": "Щоб розв'язати цю задачку, потрібно лише перемістити Хорхе праворуч приблизно на 25 пікселів.",
-          "courseC_PlayLab_events3_b": "Чи є на панелі інструментів блок, який виглядає так, ніби він переміщує актора?",
+          "courseC_PlayLab_events3_b": "Чи є на панелі інструментів блок, який виглядає так, ніби він переміщує виконавця?",
           "courseC_PlayLab_events3_c": "Приєднай цей блок до блоку `коли гра починається`:\n\n<xml>\n<block type=\"studio_moveDistance\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"DIR\">2</title>\n    <title name=\"DISTANCE\">25</title>\n  </block>\n</xml>"
         },
         "courseC_PlayLab_events4_2021": {
           "courseC_PlayLab_events4_b": "Після натискання кнопки \"Запустити\" Хорхе повинен переміститися праворуч на **100** пікселів, щоб дістатися до кішки Оливки.",
-          "courseC_PlayLab_events4_a": "Щоб розв'язати цю задачку, треба приєднати блок `персонаж __ говорить` до події `коли персонаж торкається`."
+          "courseC_PlayLab_events4_a": "Щоб розв'язати цю задачку, треба приєднати блок `виконавець __ говорить` до події `коли виконавець торкається`."
         },
         "courseC_PlayLab_events6_2021": {
-          "courseC_PlayLab_events6_a": "Під кожним зеленим блоком 'коли стрілка' має бути одна дія.",
-          "courseC_PlayLab_events6_b": "Використовуй розкривне меню у блоці `перемістити персонажа 1`, щоб змінити напрямок руху Веддлса.",
+          "courseC_PlayLab_events6_a": "Під кожним зеленим блоком 'коли натиснуто стрілку' має бути одна дія.",
+          "courseC_PlayLab_events6_b": "Використовуй розкривне меню у блоці `перемістити виконавця 1`, щоб змінити напрямок руху Веддлса.",
           "courseC_PlayLab_events6_c": "Коли код буде готовий, ти зможеш переміщати Веддлса за допомогою клавіш зі стрілками!"
         },
         "courseC_PlayLab_events7_2021": {
-          "courseC_PlayLab_events7_a": "Щоб розв'язати цю задачку, використай блоки `перемістити персонажа 2 вгору на 400 пікселів` і `перемістити персонажа 2 вниз на 400 пікселів` всередині циклу `повторювати завжди`. ",
+          "courseC_PlayLab_events7_a": "Щоб розв'язати цю задачку, використай блоки `перемістити виконавця 2 вгору на 400 пікселів` і `перемістити виконавця 2 вниз на 400 пікселів` всередині циклу `повторювати завжди`. ",
           "courseC_PlayLab_events7_b": "Цикл `повторювати постійно` не потрібно приєднувати до будь-яких інших блоків подій; він працюватиме самостійно."
         },
         "courseC_PlayLab_events8_2021": {
-          "courseC_PlayLab_events8_a": "Щоб все працювало, треба приєднати цей блок до блоку `коли персонаж торкається`.",
-          "courseC_PlayLab_events8_b": "Блоки 'персонаж говорить' та 'відтворити звук' на панелі інструментів допоможуть тобі у цьому!"
+          "courseC_PlayLab_events8_a": "Щоб все працювало, треба приєднати цей блок до блоку `коли виконавець торкається`.",
+          "courseC_PlayLab_events8_b": "Блоки 'виконавець говорить' та 'відтворити звук' на панелі інструментів допоможуть тобі у цьому!"
         },
         "courseC_PlayLab_events9_2021": {
           "courseC_PlayLab_events9_a": "Розв'язати цю задачку тобі допоможе блок 'додати бал'",
-          "courseC_PlayLab_events9_b": "Упевнись, що у твоєму новому блоці 'коли персонаж торкається' написано персонаж **1** і персонаж **3**.",
-          "courseC_PlayLab_events9_c": "У робочій області одночасно може бути декілька подій 'коли персонаж торкається', тому видаляти першу подію не потрібно!"
+          "courseC_PlayLab_events9_b": "Упевнись, що у твоєму новому блоці 'коли виконавець торкається' написано виконавець **1** і виконавець **3**.",
+          "courseC_PlayLab_events9_c": "У робочій області одночасно може бути декілька подій 'коли виконавець торкається', тому видаляти першу подію не потрібно!"
         },
         "courseC_PlayLab_eventsA_2021": {
-          "courseC_PlayLab_eventsA_a": "Щоб розв'язати цю задачку, використай блок `встановити тло' і блок`встановити персонажа на \\_\\_\\_\\_ швидкість\\`.",
+          "courseC_PlayLab_eventsA_a": "Щоб розв'язати цю задачку, використай блок `встановити тло' і блок`встановити виконавцю \\_\\_\\_\\_ швидкість\\`.",
           "courseC_PlayLab_eventsA_b": "Щоб розв'язати цю задачку, потрібно спеціально перетягнути блок події `коли гра починається` у робочу область."
         },
         "courseC_PlayLab_eventsA_embed_2021": {
@@ -4151,9 +4151,9 @@
           "idea3": "Потрібна ідея?\\_\n\n**Пінбол** - Запрограмуй одного персонажа рухатися за допомогою клавіш зі стрілками (використовуй блоки \"стрілка вгору\", \"стрілка вниз\") і відтворювати випадкові звуки, коли вони стикаються з іншими персонажами на екрані."
         },
         "courseC_PlayLab_events_challenge1_2021": {
-          "courseC_PlayLab_events_challenge_a": "Цей блок можна використовувати для переміщення персонажів у різні місця ігрової області.\n\n<xml> <block type=\"studio_setSpritePosition\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">12</title>\n  </block></xml>",
-          "courseC_PlayLab_events_challenge_b": "Спробуй використати блок `встановити персонажа посередині ліворуч`, коли він торкнеться будь-якого з інших персонажів. Це перезавантажить гру, і гравець зможе продовжити спроби!",
-          "courseC_PlayLab_events_challenge_c": "Також можеш спробувати змінити швидкість різних персонажів, щоб зробити гру простішою або складнішою!\n\n<xml>  <block type=\"studio_setSpriteSpeed\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Studio.SpriteSpeed.FAST</title>\n  </block></xml>"
+          "courseC_PlayLab_events_challenge_a": "Цей блок можна використовувати для переміщення виконавців у різні місця ігрової області.\n\n<xml> <block type=\"studio_setSpritePosition\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">12</title>\n  </block></xml>",
+          "courseC_PlayLab_events_challenge_b": "Спробуй використати блок `встановити виконавця посередині ліворуч`, коли він торкнеться будь-якого з інших виконавців. Це перезавантажить гру, і гравець зможе продовжити спроби!",
+          "courseC_PlayLab_events_challenge_c": "Також можеш спробувати змінити швидкість різних виконавців, щоб зробити гру простішою або складнішою!\n\n<xml>  <block type=\"studio_setSpriteSpeed\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Studio.SpriteSpeed.FAST</title>\n  </block></xml>"
         },
         "courseC_artist_loops1a_2021": {
           "courseC_artist_loops1a_a": "Це перший блок, який тобі потрібен:\n\n<xml>\n  <block type=\"jump_to\">\n    <title name=\"VALUE\">13</title>\n  </block>\n</xml>.",
@@ -4219,10 +4219,10 @@
           "courseC_flappy_events3_a": "Якщо щось працює неправильно, перевір, чи з'єднані твої блоки з правильними подіями в робочій області."
         },
         "courseC_flappy_events4_2021": {
-          "courseC_flappy_events4_a": "З'єднай блок 'завершити гру' з блоком 'коли зіткнувся з перешкодою', щоб розв'язати це завдання."
+          "courseC_flappy_events4_a": "З'єднай блок 'завершити гру' з блоком 'коли влучив у перешкоду', щоб розв'язати це завдання."
         },
         "courseC_flappy_events5_2021": {
-          "courseC_flappy_events5_a": "Для проходження цього рівня тобі треба використати блок 'зарахувати бал'."
+          "courseC_flappy_events5_a": "Для проходження цього рівня тобі треба використати блок 'додати бал'."
         },
         "courseC_flappy_events6_2021": {
           "courseC_flappy_events6_a": "Спробуй приєднати блок `махати ____` до блоку події `коли клацнули`."
@@ -4234,7 +4234,7 @@
           "courseC_flappy_events8_a": "Щоб пройти цей рівень спробуй приєднати другий блок `встановити сцену` під подією `коли минув перешкоду`."
         },
         "courseC_flappy_events9_2021": {
-          "courseC_flappy_events9_a": "Щоб пройти цей рівень, треба приєднати блок `встановити рахунок 0` до події `коли стикнувся з перешкодою`."
+          "courseC_flappy_events9_a": "Щоб пройти цей рівень, треба приєднати блок `встановити рахунок 0` до події `коли влучив у перешкоду`."
         },
         "courseC_harvester_loops1_2021": {
           "courseC_harvester_loops1_a": "Коли дійдеш до гарбуза, використай blockly block][0], щоб зібрати його.",
@@ -4243,7 +4243,7 @@
         "courseC_harvester_loops2_2021": {
           "courseC_harvester_loops2_a": "Якщо виникли складнощі, спробуй виписати кроки на папері та і пошукати повторювані шаблони.",
           "courseC_harvester_loops2_b": "Тобі знадобиться один цикл `повторити`, а потім ще один.",
-          "courseC_harvester_loops2_c": "Один цикл буде повторювати команду 'рухатись вперед', а інший - команду 'забрати гарбуз'."
+          "courseC_harvester_loops2_c": "Один цикл буде повторювати команду 'рухатись вперед', а інший - команду 'зібрати гарбуз'."
         },
         "courseC_harvester_loops5_2021": {
           "courseC_harvester_loops5_a": "Якщо виникли складнощі, спробуй намалювати всю програму на папері та і пошукати повторювані шаблони.",
@@ -4429,7 +4429,7 @@
           "courseD_collector_debugging3_a": "Чи є в цьому коді місце, де Лорел виконує зайву дію? Що відбувається, коли ти змінюєш ці блоки?"
         },
         "courseD_collector_debugging4a_2021": {
-          "courseD_collector_debugging4_a": "Спробуй використати процес відлагодження кілька разів поспіль. \n\nЩо викликає першу проблему?\n\nПісля того, як цю проблему вирішено, що йде не так?",
+          "courseD_collector_debugging4_a": "Спробуй використати процес налагодження кілька разів поспіль. \n\nЩо викликає першу проблему?\n\nПісля того, як цю проблему вирішено, що йде не так?",
           "courseD_collector_debugging4_b": "Якщо тобі важко зрозуміти, як намалювати візерунок, схожий на сходинки, спробуй обвести його пальцем і промовляти команди вголос. \n\nНе забувай вказувати напрямок поворотів!"
         },
         "courseD_collector_debugging5a_2021": {
@@ -4730,6 +4730,21 @@
           "card_idea1": "Ти можеш додати другу (третю або четверту) підказку, використовуючи новий блок підказок з іншою змінною.\n\n<xml>\n      <block type=\"gamelab_setPrompt\">\n        <value name=\"QUESTION\">\n          <block type=\"text\" can_disconnect_from_parent=\"false\">\n            <title name=\"TEXT\">Enter an action word:</title>\n          </block>\n        </value>\n        <value name=\"VAR\">\n          <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n            <title name=\"VAR\">verb</title>\n          </block>\n        </value>\n      </block>\n    </xml>",
           "card_idea2": "Ви можете змінити одну модель поведінки на іншу, використовуючи блок `стоп спрайт` з блоком `почати спрайт` під подією.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">name</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_removeBehaviorSimple\">\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"robot_02_1\"</title>\n          </block>\n        </value>\n        <value name=\"BEHAVIOR\">\n          <block type=\"gamelab_behavior_get\">\n            <mutation></mutation>\n            <title name=\"VAR\" id=\"spinning left\">spinning left</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"robot_02_1\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n            </value>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>",
           "card_idea3": "Ти можеш зробити свою програму інтерактивною, зробивши так, щоб інші дії відбувалися, коли користувач натискає клавішу або після закінчення певного часу.\n\n<xml><block type=\"gamelab_keyPressed\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <title name=\"KEY\">\"up\"</title>\n    <next>\n      <block type=\"gamelab_changePropBy\">\n        <title name=\"PROPERTY\">\"scale\"</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"robot_02_1\"</title>\n          </block>\n        </value>\n        <value name=\"VAL\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">10</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
+        },
+        "courseA_collector_loops1": {
+          "courseA_collector_loops1_b": "Простим рішенням було б переміститися на схід 2 рази, а потім зібрати скарб."
+        },
+        "courseA_collector_loops12022": {
+          "courseA_collector_loops1_b": "Простим рішенням було б переміститися на схід 2 рази, а потім зібрати скарб."
+        },
+        "courseA_collector_loops1_2018": {
+          "courseA_collector_loops1_b": "Простим рішенням було б переміститися на схід 2 рази, а потім зібрати скарб."
+        },
+        "courseA_collector_loops1_2019": {
+          "courseA_collector_loops1_b": "Простим рішенням було б переміститися на схід 2 рази, а потім зібрати скарб."
+        },
+        "courseA_collector_loops1_2020": {
+          "courseA_collector_loops1_b": "Простим рішенням було б переміститися на схід 2 рази, а потім зібрати скарб."
         }
       }
     }

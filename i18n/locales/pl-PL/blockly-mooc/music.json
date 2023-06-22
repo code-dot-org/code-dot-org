@@ -61,5 +61,7 @@
   "startOver": "Zacznij od nowa",
   "upload": "Wgraj",
   "panelHeaderInstructions": "Instrukcje",
-  "panelHeaderWorkspace": "Obszar roboczy: "
+  "panelHeaderWorkspace": "Obszar roboczy: ",
+  "panelHeaderControls": "Sterowanie",
+  "panelHeaderTimeline": "Oś czasu"
 }

@@ -11716,9 +11716,9 @@
         },
         "courseC_artist_prog72022": {
           "courseC_artist_prog7_a": "每个角度都是45度或90度。",
-          "courseC_artist_prog7_b": "它的第一步工作吗？ \n那第二步呢？\n哪里出问题了？",
+          "courseC_artist_prog7_b": "第一步会运行吗？  \n第二步呢？  \n哪里出问题了？",
           "courseC_artist_prog7_c": "您可以使用转向模块的下拉菜单来查看所需的角度！",
-          "courseC_artist_prog7_d": "你需要：\n\n-   向前移动\n-   向右转45度\n-   向前移动\n-   向右转90度\n-   前进\n-   向右转45度\n\n重复此模式两次!",
+          "courseC_artist_prog7_d": "你需要：\n- 向前移动\n- 向右转45度\n- 向前移动\n- 向右转90度\n- 向前移动\n- 向右转45度\n\n重复此模型2次！",
           "courseC_artist_prog7_e": "不要害怕犯错误! 即使你不认为你已经解决了这个关卡，尝试添加模块并运行代码, 看看会发生什么,。"
         },
         "courseC_artist_prog_challenge12022": {
@@ -12393,7 +12393,7 @@
         "courseE_artist_functions102022": {
           "courseD_artist_functions10_b": "这幅画和上一个很像，但是`画线`函数现在画的是一个不同的形状。",
           "courseD_artist_functions10_a": "为了避免使用多个`向前移动`模块，创建一个`画六边形`的函数，并且多次调用它。",
-          "courseD_artist_functions10_c": "你看到这幅画可以用一个叫做`画六边形线`的函数吗？\n\n![](https://images.code.org/904e0f38232fd9c15a3d2d172e7dde0b-image-1493140714580.gif)"
+          "courseD_artist_functions10_c": "你明白这幅画可以在哪里使用一个名为 “六边形线” 的函数吗？\n\n！[] (https://images.code.org/904e0f38232fd9c15a3d2d172e7dde0b-image-1493140714580.gif)"
         },
         "courseE_artist_functions22022": {
           "courseD_artist_functions2_b": "您编写的函数不应包含整个程序, 只需绘制一个具有100像素边的正方形的部分。",
@@ -12428,11 +12428,11 @@
           "courseD_artist_functions8_c": "在每行正方形的最后，艺术家只需要在画下一行正方形前转180度。将所有内容放到一个循环里来开始下一个练习！"
         },
         "courseE_artist_functions92022": {
-          "courseD_artist_functions9_e": "你能在这幅画中找到四个可以使用`画一条三角形的线`的地方吗？\n\n![](https://images.code.org/130e1040ecca7186dea87f42666f5620-image-1493140373966.gif)",
-          "courseD_artist_functions9_a": "这个关卡可以分成三部分：\n\n\\-制作`画一个三角形`函数\n\\-制作`画一行三角形`函数\n\\-使用`画一行三角形`函数四次来完成图画",
+          "courseD_artist_functions9_e": "你能在这幅画中找出可以使用 “三角形的线” 的所有四个地方吗？\n\n！[] (https://images.code.org/130e1040ecca7186dea87f42666f5620-image-1493140373966.gif)",
+          "courseD_artist_functions9_a": "这个谜题可以分成三个部分：\n  -创建 “画三角形” 函数\n  -创建 “画一组三角形” 函数\n  -使用 “画一组三角” 函数四次完成绘制",
           "courseD_artist_functions9_b": "这幅画是通过绘制一行三角形4次, 并在绘制下一个三角形线之前旋转60或120度。",
-          "courseD_artist_functions9_c": "绘制三角形的线:\n\\-重复4次\n\\-绘制三角形\n\\-向前跳50像素",
-          "courseD_artist_functions9_d": "绘制菱形:\n\\-重复两次\n\\-绘制一条三角形的线\n\\-转60度\n\\-绘制一条三角形\n\\-转120 度"
+          "courseD_artist_functions9_c": "画一组三角形：\n  -重复 4 次\n    -画三角形\n    -向前跳 50 像素",
+          "courseD_artist_functions9_d": "画菱形：\n  -重复 2 次\n    -画一组三角形\n    -旋转 60 度\n    -画一组三角形\n    -旋转 120 度"
         },
         "courseE_artist_functions_challenge12022": {
           "courseE_artist_functions_challenge1_a": "如果再次调用该函数, 则可以在最后一个角创建相同的设计。",
