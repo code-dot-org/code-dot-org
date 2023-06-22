@@ -4,7 +4,6 @@ const SIZING_BEHAVIOR = {
   FIT_PARENT: 'fitParent',
   FIT_CONTENT: 'fitContent',
 };
-const FOLDOUT_HEIGHT = 20;
 
 export default class CdoBlockFlyout extends GoogleBlockly.HorizontalFlyout {
   constructor(workspaceOptions) {
@@ -150,8 +149,7 @@ export default class CdoBlockFlyout extends GoogleBlockly.HorizontalFlyout {
 
   /** Move the flyout */
   position() {
-    this.isVisible() &&
-      this.positionAt_(this.width_, this.height_, 0, FOLDOUT_HEIGHT);
+    this.isVisible() && this.positionAt_(this.width_, this.height_, 0, 0);
   }
 
   /**
