@@ -1,0 +1,22 @@
+<Javalab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 68,
+  "created_at": "2023-06-21T19:43:07.000Z",
+  "level_num": "custom",
+  "user_id": 19026,
+  "properties": {
+    "encrypted": "false",
+    "encrypted_examples": [
+
+    ],
+    "project_template_level_name": "CSA-frq-2019-Delimiters",
+    "long_instructions": "##Delimiters FRQ (Part A)\r\n\r\nMany encoded strings contain _delimiters_. A delimiter is a non-empty string that acts as a boundary between different parts of a larger string. The delimiters involved in this question occur in pairs that must be _balanced_, with each pair having an open delimiter and a close delimiter. There will be only one type of delimiter for each string. The following are examples of delimiters.\r\n\r\n<ins>Example 1</ins> <br> \r\nExpressions in mathematics use open parentheses  `(`  and close parentheses `)`  as delimiters. For each open parenthesis, there must be a matching close parenthesis. \r\n* `(x + y) * 5` is a valid mathematical expression. \r\n* `(x + (y)` is NOT a valid mathematical expression because there are more open delimiters than close delimiters.\r\n\r\n\r\n<ins>Example 2</ins> <br> \r\nHTML uses `<B>` and `</B>` as delimiters. For each open delimiter `<B>`, there must be a matching close\r\ndelimiter `</B>`.\r\n* `<B> Make this text bold </B>` is valid HTML.\r\n* `<B> Make this text bold </UB>` is NOT valid HTML because there is one open delimiter and no matching close delimiter.\r\n\r\nIn this question, you will write two methods in the following `Delimiters` class.\r\n\r\n<br>\r\n\r\nA string containing text and possibly delimiters has been split into _tokens_ and stored in\r\n`String[] tokens`. Each token is either an open delimiter, a close delimiter, or a substring that is not a\r\ndelimiter. You will write the method `getDelimitersList`, which returns an `ArrayList`\r\ncontaining all the open and close delimiters found in `tokens` in their original order.\r\nThe following examples show the contents of an `ArrayList` returned by `getDelimitersList` for\r\ndifferent open and close delimiters and different `tokens` arrays. \r\n\r\n![](https://images.code.org/dffe31824754b90966ddf92c4bcb7641-image-1687371209671.13.25 PM.png)\r\n\r\nComplete method `getDelimitersList`.\r\n",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console"
+  },
+  "audit_log": "[{\"changed_at\":\"2023-06-21 19:43:35 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":19026,\"changed_by_email\":\"brandon.spellman@code.org\"}]"
+}]]></config>
+</Javalab>
