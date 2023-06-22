@@ -125,7 +125,7 @@ class GoogleAnalyticsReporter {
     if (this.isGoogleAnalytics4Enabled) {
       gtag('event', action_name, {
         eventCategory: category_value,
-        dimension5: 'custom data',
+        dimensions,
       });
     }
   }
