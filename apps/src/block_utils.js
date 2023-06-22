@@ -1119,16 +1119,22 @@ exports.createJsWrapperBlockCreator = function (
         ) {
           if (Blockly.version === 'Google') {
             // Function to toggle the flyout visibility
-            // let visible = false;
-            const flyoutField = new Blockly.FieldFlyout(_, {
-              flyoutKey: `flyout_${this.type}`,
-              sizingBehavior: 'fitContent',
-              name: 'FLYOUT',
-            });
             const toggleFlyout = function () {
-              flyoutField.setVisible(!flyoutField.isFlyoutVisible());
-              flyoutField.showEditor_();
-              flyoutField.render_();
+              if (!this.getSourceBlock().getInput('flyout_input')) {
+                const flyoutField = new Blockly.FieldFlyout(_, {
+                  flyoutKey: `flyout_${this.type}`,
+                  sizingBehavior: 'fitContent',
+                  name: 'FLYOUT',
+                });
+                this.getSourceBlock()
+                  .appendDummyInput('flyout_input')
+                  .appendField(flyoutField, `flyout_${this.type}`);
+                flyoutField.setVisible(true);
+                flyoutField.showEditor_();
+                flyoutField.render_();
+              } else {
+                this.getSourceBlock().removeInput('flyout_input');
+              }
             };
             const icon = document.createElementNS(SVG_NS, 'tspan');
             icon.style.fontFamily = 'FontAwesome';
@@ -1147,10 +1153,6 @@ exports.createJsWrapperBlockCreator = function (
             if (this.inputList[this.inputList.length - 1].type !== 5) {
               this.appendDummyInput();
             }
-            this.appendDummyInput().appendField(
-              flyoutField,
-              `flyout_${this.type}`
-            );
             if (this.workspace.rendered) {
               this.workspace.registerToolboxCategoryCallback(
                 `flyout_${this.type}`,
