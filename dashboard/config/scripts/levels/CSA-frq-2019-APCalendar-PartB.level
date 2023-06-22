@@ -1,0 +1,22 @@
+<Javalab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 68,
+  "created_at": "2023-06-21T19:40:51.000Z",
+  "level_num": "custom",
+  "user_id": 19026,
+  "properties": {
+    "encrypted": "false",
+    "encrypted_examples": [
+
+    ],
+    "project_template_level_name": "CSA-frq-2019-APCalendar",
+    "long_instructions": "##APCalendar FRQ (Part B)\r\n\r\nWrite the static method `dayOfWeek`, which returns the integer value representing the day of the week for\r\nthe given date `(month, day, year)`, where `0` denotes Sunday, `1` denotes Monday, ..., and `6`\r\ndenotes Saturday. For example, 2019 began on a Tuesday, and January 5 is the fifth day of 2019. As a result,\r\nJanuary 5, 2019, fell on a Saturday, and the method call `dayOfWeek(1, 5, 2019)`\r\nreturns `6`.\r\n\r\nAs another example, January 10 is the tenth day of 2019. As a result, January 10, 2019, fell on a Thursday,\r\nand the method call `dayOfWeek(1, 10, 2019)` returns `4`.\r\n\r\nIn order to calculate this value, two helper methods are provided for you.\r\n\r\n* `firstDayOfYear(year)` returns the integer value representing the day of the week for the first\r\nday of year, where `0` denotes Sunday, `1` denotes Monday, ..., and `6` denotes Saturday. For\r\nexample, since 2019 began on a Tuesday, `firstDayOfYear(2019)` returns `2`.\r\n* `dayOfYear(month, day, year)` returns `n`, where `month`, `day`, and `year` specify the\r\n_n_th day of the year. For the first day of the year, January 1 `(month = 1, day = 1)`, the value\r\n`1` is returned. This method accounts for whether year is a leap year. For example,\r\n`dayOfYear(3, 1, 2017)` returns `60`, since 2017 is not a leap year, while\r\n`dayOfYear(3, 1, 2016)` returns `61`, since 2016 is a leap year. \r\n\r\nComplete method `dayOfWeek`. You must use `firstDayOfYear` and `dayOfYear`\r\nappropriately to receive full credit. ",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console"
+  },
+  "audit_log": "[{\"changed_at\":\"2023-06-21 19:41:00 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":19026,\"changed_by_email\":\"brandon.spellman@code.org\"}]"
+}]]></config>
+</Javalab>
