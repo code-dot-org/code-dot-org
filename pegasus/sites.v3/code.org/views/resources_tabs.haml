@@ -1,11 +1,11 @@
 -# Can only be used on rebranded pages that use the
--# design-system-pegasus.scss stylesheet.
+-# "design-system-pegasus.scss" stylesheet.
 
 %h2.centered
   =hoc_s(:resources_tabs_heading)
 %p.centered
   =hoc_s(:resources_tabs_desc, markdown: :inline, locals: {sign_up_url: CDO.studio_url("/users/sign_up")})
-.resources-tabs
+.resources-tabs.show-desktop
   -# Tabs nav
   %ul.flex-container.justify-space-between
     %li
@@ -34,5 +34,27 @@
     = view :resources_tabs_content_assessments
   %div#tools.content
     = view :resources_tabs_content_tools
+
+.resources-tabs.show-tablet-and-mobile
+  %details
+    %summary=hoc_s(:resources_tabs_tab_label_lesson_plans)
+    %div#lesson-plans
+      = view :resources_tabs_content_lesson_plans
+  %details
+    %summary=hoc_s(:resources_tabs_tab_label_videos)
+    %div#lesson-plans
+      = view :resources_tabs_content_videos
+  %details
+    %summary=hoc_s(:resources_tabs_tab_label_slides)
+    %div#lesson-plans
+      = view :resources_tabs_content_slides
+  %details
+    %summary=hoc_s(:resources_tabs_tab_label_assessments)
+    %div#lesson-plans
+      = view :resources_tabs_content_assessments
+  %details
+    %summary=hoc_s(:resources_tabs_tab_label_tools)
+    %div#lesson-plans
+      = view :resources_tabs_content_tools
 
 %script{src: '../js/resources-tabs.js'}

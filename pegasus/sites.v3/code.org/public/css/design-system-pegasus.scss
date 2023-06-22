@@ -40,6 +40,21 @@ section.bg-primary-light {
   }
 }
 
+// Show elements based on screen size
+.show-desktop {
+  display: block;
+  @media (max-width: $width-lg) {
+    display: none;
+  }
+}
+
+.show-tablet-and-mobile {
+  display: none;
+  @media (max-width: $width-lg) {
+    display: block;
+  }
+}
+
 // Centers a block-level element
 .centered { text-align: center !important; }
 
@@ -974,6 +989,8 @@ form {
     margin: 0;
     width: 11.75rem;
     cursor: pointer;
+    white-space: normal;
+    height: -webkit-fit-content;
 
     &:hover {
       background-color: $neutral_dark10;
@@ -1005,5 +1022,36 @@ form {
 
   .video_caption_link {
     margin-bottom: 0;
+  }
+
+  &.show-tablet-and-mobile {
+    height: unset;
+
+    details {
+      padding-left: 0;
+      padding-right: 0;
+
+      summary {
+        @include heading-md;
+      }
+    }
+
+    .flex-container {
+      align-items: start;
+      flex-direction: row-reverse;
+      gap: 2rem;
+
+      @media screen and (max-width: $width-sm) {
+        flex-wrap: wrap-reverse;
+      }
+    }
+
+    figure {
+      margin-bottom: 1rem;
+    }
+
+    h3 {
+      display: none;
+    }
   }
 }
