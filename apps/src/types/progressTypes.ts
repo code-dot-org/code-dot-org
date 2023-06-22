@@ -1,7 +1,7 @@
 // Typescript definitions for types relating to progress. Note that many
 // of these are "duplicated" by `/templates/progress/progressTypes, which defined
 // these using PropTypes for usage in Javascript React components. As we move towards
-// typescript we can deprecated the PropTypes definitions and use these instead.
+// typescript we can deprecate the PropTypes definitions and use these instead.
 
 /**
  * See ApplicationHelper::PUZZLE_PAGE_NONE.

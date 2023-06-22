@@ -71,6 +71,7 @@ const initialState: ProgressState = {
   currentLevelId: null,
 
   // These first fields never change after initialization
+
   currentLessonId: undefined,
   deeperLearningCourse: null,
   // used on multi-page assessments
@@ -85,6 +86,7 @@ const initialState: ProgressState = {
   isLessonExtras: false,
 
   // The remaining fields do change after initialization
+
   // unitProgress is of type unitProgressType (a map of levelId ->
   // studentLevelProgressType)
   unitProgress: {},
@@ -297,8 +299,8 @@ export function navigateToLevelId(levelId: string): ProgressThunkAction {
   };
 }
 
-// // The user has successfully completed the level and the page
-// // will not be reloading.
+// The user has successfully completed the level and the page
+// will not be reloading.
 export function sendSuccessReport(appType: string): ProgressThunkAction {
   return (dispatch, getState) => {
     const state = getState().progress;
