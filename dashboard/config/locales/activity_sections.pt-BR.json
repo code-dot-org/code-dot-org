@@ -6759,7 +6759,7 @@
           "tips": [
             null
           ],
-          "progression_name": "Vídeo: Desenhando no Laboratório de Jogo - parte 1"
+          "progression_name": "Vídeo: Desenhando no Laboratório de Jogos - Parte 1"
         },
         "5e3a3411-6b46-44fc-aeeb-d8949db8bcfd": {
           "tips": [
@@ -6771,7 +6771,7 @@
           "tips": [
             null
           ],
-          "progression_name": "Vídeo: Desenho no laboratório de jogo - parte 2"
+          "progression_name": "Vídeo: Desenhando no laboratório de jogo - parte 2"
         },
         "7ac34d77-29c1-48f2-83f9-2958ace257d6": {
           "tips": [
@@ -6849,7 +6849,8 @@
         "f4cd99ba-c2ae-43dd-a4d2-132f33b8aff4": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Vídeo: Introdução às variáveis"
         },
         "07fe88bf-35a4-4aa8-acf7-9c1007644cde": {
           "tips": [
@@ -10155,13 +10156,13 @@
           "progression_name": "Introdução ao Laboratório de Jogos"
         },
         "78487cb4-f224-4753-81c2-df924d996d9b": {
-          "progression_name": "Vídeo: Desenhando no Laboratório de Jogo - parte 1"
+          "progression_name": "Vídeo: Desenhando no Laboratório de Jogos - Parte 1"
         },
         "6c0110bb-f32b-426c-9f9f-fba56f763171": {
           "progression_name": "Usando a Tabela"
         },
         "0c63e064-c9b6-4d9e-89ee-0322c3fe32d4": {
-          "progression_name": "Vídeo: Desenho no laboratório de jogo - parte 2"
+          "progression_name": "Vídeo: Desenhando no laboratório de jogo - parte 2"
         },
         "b44b4f32-2417-442d-812d-10bba9a6edc0": {
           "progression_name": "Desenho"
@@ -12223,13 +12224,13 @@
           "progression_name": "Introdução ao Laboratório de Jogos"
         },
         "95278d60-fdcd-4e26-b8c3-85f66c91f510": {
-          "progression_name": "Vídeo: Desenhando no Laboratório de Jogo - parte 1"
+          "progression_name": "Vídeo: Desenhando no Laboratório de Jogos - Parte 1"
         },
         "c1956796-6ad7-45c7-95fb-c3d61030e4cf": {
           "progression_name": "Usando a Tabela"
         },
         "e4bb69ec-e58a-4445-9f49-0c8ceafe7ebe": {
-          "progression_name": "Vídeo: Desenho no laboratório de jogo - parte 2"
+          "progression_name": "Vídeo: Desenhando no laboratório de jogo - parte 2"
         },
         "9c9cd7c5-d796-4eaa-9788-f6235478e387": {
           "progression_name": "Desenho"
@@ -13416,13 +13417,13 @@
           "progression_name": "Introdução ao Laboratório de Jogos"
         },
         "1509843f-2d27-434d-afa5-8678d006fdaf": {
-          "progression_name": "Vídeo: Desenhando no Laboratório de Jogo - parte 1"
+          "progression_name": "Vídeo: Desenhando no Laboratório de Jogos - Parte 1"
         },
         "eb60220a-bd3b-45a9-bea3-08e2f7bce363": {
           "progression_name": "Usando a Tabela"
         },
         "76f4a490-ba17-4487-8dee-bc8264c6870d": {
-          "progression_name": "Vídeo: Desenho no laboratório de jogo - parte 2"
+          "progression_name": "Vídeo: Desenhando no laboratório de jogo - parte 2"
         },
         "2af454bc-9b55-4205-b0fd-247af66b3d13": {
           "progression_name": "Desenho"
@@ -21218,7 +21219,7 @@
           "tips": [
             null
           ],
-          "progression_name": "Vídeo: Desenhando no Laboratório de Jogo - parte 1"
+          "progression_name": "Vídeo: Desenhando no Laboratório de Jogos - Parte 1"
         },
         "9b7caf32-0737-4382-be8b-66460fc06c42": {
           "progression_name": "Usando a Tabela"
@@ -21227,7 +21228,7 @@
           "tips": [
             null
           ],
-          "progression_name": "Vídeo: Desenho no laboratório de jogo - parte 2"
+          "progression_name": "Vídeo: Desenhando no laboratório de jogo - parte 2"
         },
         "74393dee-626c-4743-b131-1566ed43d56c": {
           "progression_name": "Desenvolvimento de Habilidades"
@@ -21294,7 +21295,8 @@
         "df26b7e2-cb48-40b2-b360-d0e9770b8802": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Vídeo: Introdução às variáveis"
         },
         "a14285ec-28bc-4b44-a63c-204c0034c19f": {
           "tips": [

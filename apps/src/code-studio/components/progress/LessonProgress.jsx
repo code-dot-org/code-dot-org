@@ -3,11 +3,11 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import color from '../../../util/color';
 import LessonExtrasProgressBubble from '@cdo/apps/templates/progress/LessonExtrasProgressBubble';
+import {navigateToLevelId} from '@cdo/apps/code-studio/progressRedux';
 import {
   levelsForLessonId,
   lessonExtrasUrl,
-  navigateToLevelId,
-} from '@cdo/apps/code-studio/progressRedux';
+} from '@cdo/apps/code-studio/progressReduxSelectors';
 import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
 import {levelWithProgressType} from '@cdo/apps/templates/progress/progressTypes';
 import {LevelKind, LevelStatus} from '@cdo/apps/util/sharedConstants';

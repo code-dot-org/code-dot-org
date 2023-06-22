@@ -5930,6 +5930,9 @@ pl:
         csc-particles-2023:
           name: csc-particles-2023
         csc-bookcovers-2023:
+          lessons:
+            lesson-4:
+              name: Zaprojektuj okładkę swojej interaktywnej książki
           name: csc-bookcovers-2023
         pre-express-2023:
           lesson_groups:
@@ -5969,6 +5972,7 @@ pl:
           student_description: Ucz się informatyki wypróbowując poniższe lekcje w swoim własnym tempie! Ucz się tworzyć programy komputerowe, rozwijaj umiejętności w zakresie rozwiązywania problemów i pokonuj rozrywkowe wyzwania! Twórz gry i kreatywne projekty, aby udostępniać je znajomym, rodzinie i nauczycielom.
           description_short: 'Wprowadzenie do informatyki: łączy nasze najlepsze programy nauczania w szkole podstawowej dla starszych uczniów.'
           description_audience: W wieku 9-18
+          name: express-2023
         coursea-2023:
           lesson_groups:
             csf_digcit:
@@ -5984,6 +5988,7 @@ pl:
           student_description: Poznaj podstawy informatyki i bezpieczeństwa w Internecie. Pod koniec kursu twórz swoją własną grę lub opowiadanie, które możesz udostępnić.
           description_short: Wprowadzenie do informatyki dla nie umiejących czytać.
           description_audience: W wieku 4-7
+          name: coursea-2023
         courseb-2023:
           lesson_groups:
             csf_digcit:
@@ -6001,6 +6006,7 @@ pl:
           student_description: Poznaj podstawy informatyki i bezpieczeństwa w Internecie. Pod koniec kursu twórz swoją własną grę lub opowiadanie, które możesz udostępnić.
           description_short: Wprowadzenie do informatyki dla nieumiejących jeszcze czytać. Podobne do Kursu A, ale z pogłębieniem pojęć.
           description_audience: W wieku 5-8
+          name: courseb-2023
         coursec-2023:
           lesson_groups:
             csf_digcit:
@@ -6018,6 +6024,7 @@ pl:
           student_description: Twórz programy z sekwencjami, pętlami i zdarzeniami. Przekładaj swoje inicjały na zapis binarny, badaj różne techniki rozwiązywania problemów i ucz się, jak reagować na cyberprzemoc. Pod koniec kursu utwórz swoją własną grą lub historyjkę, którą będziesz mógł udostępnić!
           description_short: Poznaj podstawy informatyki i twórz własne artystyczne dzieła, opowiadania i gry.
           description_audience: W wieku 6-10
+          name: coursec-2023
         coursed-2023:
           lesson_groups:
             lessonGroup-6:
@@ -6035,6 +6042,7 @@ pl:
           title: Kurs D (2021)
           description_short: Ucz się o instrukcjach warunkowych. Twórz swoją własną grafikę, gry, a nawet potańcówkę.
           description_audience: W wieku 7-11
+          name: coursed-2023
         coursee-2023:
           lesson_groups:
             csf_digcit:
@@ -6053,6 +6061,7 @@ pl:
               display_name: Koniec projektu kursu
           title: Kurs E (2022)
           description_audience: W wieku 8-12
+          name: coursee-2023
         problem-solving-computing-2023:
           lesson_groups:
             lessonGroup-2:
@@ -6853,7 +6862,78 @@ pl:
           name: self-paced-pl-csp3-2023
         self-paced-pl-csp4-2023:
           name: self-paced-pl-csp4-2023
-        csa-frq-practice:
+        musiclab:
+          lessons:
+            lesson-1:
+              name: Remiksuj projekty
+          name: musiclab
+          title: Lekcje testowe w laboratorium muzycznym
+          description: |-
+            Cześć! Jest to specjalna jednostka, której Code.org używa do testowania Music Lab. Żadna z lekcji ani poziomów w tej jednostce nie jest przeznaczona do użytku w klasie!
+
+            Jeśli nie jesteś inżynierem code.org, ale udało Ci się odkryć tę jednostkę: gratulacje! To tak, jakbyś odkrył sekret na naszej stronie! Ale jeśli szukasz więcej informacji o naszych programach nauczania lub narzędziach, zalecamy sprawdzenie <https://code.org/educate/>.
+        csa-software-engineering:
+          lessons:
+            lesson-1:
+              name: Wprowadzenie do GitHub
+            lesson-2:
+              name: Wprowadzenie do Copilot
+            lesson-3:
+              name: Buduj z Copilot
+            lesson-4:
+              name: Wprowadzenie do modeli AI
+            lesson-5:
+              name: Trenuj swój model
+            lesson-6:
+              name: Korzystanie z Twojego modelu
           lesson_groups:
+            lessonGroup-2:
+              display_name: 'Rozdział 1: GitHub i Copilot'
+            lessonGroup-3:
+              display_name: 'Rozdział 2: Wizja komputerowa'
+          name: csa-software-engineering
+          title: Inżynieria oprogramowania i wizja komputerowa
+        csa-frq-practice:
+          lessons:
+            lesson-1:
+              name: Symulacja żaby
+            lesson-2:
+              name: Ograniczniki
+            lesson-3:
+              name: ApCalendar
+            lesson-4:
+              name: StepTracker
+            lesson-5:
+              name: LightBoard
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Metody i struktury sterowania
             lessonGroup-3:
               display_name: Klasy
+            lessonGroup-4:
+              display_name: Tablice/ArrayLists
+          name: csa-frq-practice
+          title: Praktyka CSA FRQ 2019
+        hoc-amazon-poc:
+          lessons:
+            lesson-1:
+              name: Postępy w Godzinie kodowania
+            lesson-2:
+              name: Postępy w Godzinie eksploracji kariery
+          name: hoc-amazon-poc
+          title: Godzina kodowania (PoC)
+          description: |-
+            Dołączony dowód koncepcji postępu HoC z Amazon Career Tours.
+
+            Pierwsza „lekcja” to postęp HoC ([jak to, co zwykle mamy tutaj](https://levelbuilder-studio.code.org/s/hello-world-space-2022))
+
+            Druga „lekcja” to „post-roll”, w którym uczniowie mogą kontynuować „Godzinę kariery”, jeśli chcą
+        musiclab-2023:
+          lessons:
+            lesson-1:
+              name: Laboratorium muzyczne
+          name: musiclab-2023
+          title: Laboratorium muzyczne
+          description_short: Koduj własną wersję utworu, aby udostępnić lub wykonać!
+          description: Koduj własną wersję utworu, aby udostępnić lub wykonać!
+          student_description: Koduj własną wersję utworu, aby udostępnić lub wykonać!

@@ -11628,9 +11628,9 @@
         },
         "courseC_artist_prog72022": {
           "courseC_artist_prog7_a": "Jeder Winkel beträgt entweder 45 oder 90 Grad.",
-          "courseC_artist_prog7_b": "Funktioniert es beim ersten Schritt?\\\nWie läuft es beim zweiten Schritt?\\\nWo funktioniert es nicht?",
-          "courseC_artist_prog7_c": "Du kannst das Dropdown-Menü auf den Drehblöcken verwenden, um zu sehen, welchen Winkel du brauchst!",
-          "courseC_artist_prog7_d": "Du musst so vorgehen:\n\n-   vorwärts bewegen \n-   um 45 Grad nach rechts drehen \n-   vorwärts bewegen \n-   um 90 Grad nach rechts drehen \n-   vorwärts bewegen \n-   um 45 Grad nach rechts drehen \n\nDieses Muster 2 Mal wiederholen!",
+          "courseC_artist_prog7_b": "Funktioniert alles beim ersten Schritt?\\\nFunktioniert es beim zweiten Schritt?\\\nWo funktioniert dein Programm nicht mehr?",
+          "courseC_artist_prog7_c": "Du kannst das Dropdown-Menü auf den Drehblöcken verwenden, um zu sehen, welchen Winkel du brauchst!\n",
+          "courseC_artist_prog7_d": "Du willst dich:\n\n- vorwärts bewegen \n- um 45 Grad nach rechts drehen \n- vorwärts bewegen \n- um 90 Grad nach rechts drehen \n- vorwärts bewegen \n- um 45 Grad nach rechts drehen \n\nDieses Muster 2 Mal wiederholen!\n",
           "courseC_artist_prog7_e": "Hab keine Angst, einen Fehler zu machen! Versuche weitere Blöcke hinzuzufügen und den Code auszuführen. Manchmal hilft es zu sehen was passiert, auch wenn du der Meinung bist, dass das Rätsel noch nicht gelöst ist."
         },
         "courseC_artist_prog_challenge12022": {
@@ -12300,8 +12300,7 @@
         },
         "courseE_artist_functions102022": {
           "courseD_artist_functions10_b": "Diese Zeichnung ist der letzten sehr ähnlich, aber die Funktion `eine Reihe zeichnen` zeichnet jetzt eine andere Form.",
-          "courseD_artist_functions10_a": "Damit du nicht mehrere 'vorwärts bewegen'-Bausteine verwenden musst, erstelle du eine Funktion `ein Sechseck zeichnen` und rufe diese Funktion mehrmals auf.",
-          "courseD_artist_functions10_c": "Siehst du, wo in dieser Zeichnung eine Funktion `Reihe von Sechsecken` nützlich sein könnte? \n\n![](https://images.code.org/904e0f38232fd9c15a3d2d172e7dde0b-image-1493140714580.gif)"
+          "courseD_artist_functions10_a": "Damit du nicht mehrere 'vorwärts bewegen'-Bausteine verwenden musst, erstelle du eine Funktion `ein Sechseck zeichnen` und rufe diese Funktion mehrmals auf."
         },
         "courseE_artist_functions22022": {
           "courseD_artist_functions2_b": "Die Funktion sollte nicht dein ganzes Programm enthalten, sondern nur den Teil, der ein Quadrat, dessen Seiten 100 Pixel lang sind, zeichnet.",
@@ -12336,11 +12335,7 @@
           "courseD_artist_functions8_c": "Am Ende jeder Reihe von Quadraten braucht sich der Künstler nur um 180 Grad zu drehen, bevor er die nächste Reihe von Quadraten zeichnet. Integriere das Ganze in eine Wiederholen\\`-Schleife, um dich für die nächste Übung vorzubereiten!"
         },
         "courseE_artist_functions92022": {
-          "courseD_artist_functions9_e": "Weißt du, an welchen vier Stellen in dieser Zeichnung der Baustein `Reihe von Dreiecken` verwendet werden kann? \n\n![](https://images.code.org/130e1040ecca7186dea87f42666f5620-image-1493140373966.gif)",
-          "courseD_artist_functions9_a": "Diese Aufgabe kann in drei Teile geteilt werden: \n\n-   Erstelle die Funktion `ein Dreieck zeichnen`\n-   Erstelle die Funktion `eine Reihe von Dreiecken zeichnen`\n-   Verwende deine Funktion `eine Reihe von Dreiecken zeichnen` viermal, um die Zeichnung fertigzustellen",
-          "courseD_artist_functions9_b": "Bei dieser Zeichnung wird eine Reihe von Dreiecken 4 Mal gezeichnet und entweder um 60 oder 120 Grad gedreht, bevor du die nächste Reihe von Dreiecken zeichnest.",
-          "courseD_artist_functions9_c": "Um eine Reihe von Dreiecken zu zeichnen: \n\n-   4 Mal wiederholen \n-   ein Dreieck zeichnen \n-   um 50 Pixel vorwärts springen",
-          "courseD_artist_functions9_d": "Um die Raute zu zeichnen: \n\n-   2 Mal wiederholen \n    -   eine Reihe von Dreiecken zeichnen \n    -   um 60 Grad drehen \n    -   eine Reihe von Dreiecken zeichnen \n    -   um 120 Grad drehen"
+          "courseD_artist_functions9_b": "Bei dieser Zeichnung wird eine Reihe von Dreiecken 4 Mal gezeichnet und entweder um 60 oder 120 Grad gedreht, bevor du die nächste Reihe von Dreiecken zeichnest."
         },
         "courseE_artist_functions_challenge12022": {
           "courseE_artist_functions_challenge1_a": "Wenn du die Funktion noch einmal aufrufst, kannst du dasselbe Muster in der letzten Ecke erstellen.",
