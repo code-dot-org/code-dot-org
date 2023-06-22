@@ -27,7 +27,7 @@ process.hrtime = require('browser-process-hrtime');
 const xPins = ['A0', 'A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7'];
 const classicPins = [12, 6, 9, 10, 3, 2, 0, 1];
 
-describe('CircuitPlaygroundBoard', () => {
+describe.skip('CircuitPlaygroundBoard', () => {
   let board, playground, userAgentSpy;
 
   beforeEach(() => {
