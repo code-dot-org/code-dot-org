@@ -33,14 +33,14 @@ class EmailReminder
       select(:id).
       where('parental_permission_requests.created_at BETWEEN ? AND ?', @max_reminder_age, @min_reminder_age).
       where('parental_permission_requests.reminders_sent < ?', @max_reminders).
-      where("JSON_EXTRACT(users.properties, '$.child_account_compliance_state') != ?", 'g')
+      where("JSON_EXTRACT(users.properties, '$.child_account_compliance_state') != ?", User::ChildAccountCompliance::PERMISSION_GRANTED)
   end
 
   # Send a reminder for a given ParentalPermissionRequest ID.
   # Increment the reminders_sent count.
   def send_permission_reminder_email(request_id)
     request = ParentalPermissionRequest.find(request_id)
-    permission_url = url_for(controller: :policy_compliance, action: :child_account_consent, host: 'https://studio.code.org', token: request.uuid)
+    permission_url = url_for(controller: :policy_compliance, action: :child_account_consent, host: CDO.studio_url('', CDO.default_scheme), token: request.uuid)
     ParentMailer.parent_permission_reminder(request.parent_email, permission_url).deliver_now
     request.reminders_sent += 1
     request.save!

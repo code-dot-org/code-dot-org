@@ -9,7 +9,6 @@ class EmailReminderTest < ActiveSupport::TestCase
     request.update(created_at: 4.days.ago)
     email_reminder = EmailReminder.new
     reqs = email_reminder.find_requests_needing_reminder
-    puts reqs.inspect
 
     assert_equal 1, reqs.length
     assert_equal request.id, reqs[0].id
