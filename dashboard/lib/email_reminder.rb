@@ -25,6 +25,7 @@ class EmailReminder
     raise ArgumentError.new('dry_run must be boolean') unless [true, false].include? @dry_run
 
     reset
+    @log.puts "Initialized with options: #{options.inspect}"
   end
 
   # Find permission requests for users who haven't been granted permission yet.
@@ -126,7 +127,7 @@ class EmailReminder
   # @return [String] HTML link to view uploaded log
   def upload_activity_log
     log_url = AWS::S3::LogUploader.
-      new('cdo-audit-logs', "permission-email-reminder-activity/#{CDO.rack_env}").
+      new(AWS::S3::LogUploader::LogBucketNames::AUDIT_LOGS_BUCKET, "permission-email-reminder-activity/#{CDO.rack_env}").
       upload_log(@start_time.strftime('%Y%m%dT%H%M%S%z'), @log.string)
     " <a href='#{log_url}'>☁ Log on S3</a>"
   end
