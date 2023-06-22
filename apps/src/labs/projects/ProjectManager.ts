@@ -13,9 +13,9 @@
 import {SourcesStore} from './SourcesStore';
 import {ChannelsStore} from './ChannelsStore';
 import {Channel, Source} from '../types';
+import _ from 'lodash';
 
 export default class ProjectManager {
-  private sourceToSave: Source | undefined;
   private readonly channelId: string;
   private readonly sourcesStore: SourcesStore;
   private readonly channelsStore: ChannelsStore;
@@ -29,7 +29,9 @@ export default class ProjectManager {
   private saveFailListeners: ((response: Response) => void)[] = [];
   private saveStartListeners: (() => void)[] = [];
   private lastSource: string | undefined;
-  private channel: Channel | undefined;
+  private sourceToSave: Source | undefined;
+  private lastChannel: Channel | undefined;
+  private channelToSave: Channel | undefined;
   // Id of the last timeout we set on a save, or undefined if there is no current timeout.
   // When we enqueue a save, we set a timeout to execute the save after the save interval.
   // If we force a save or destroy the ProjectManager, we clear the remaining timeout,
@@ -66,8 +68,8 @@ export default class ProjectManager {
       return channelResponse;
     }
 
-    this.channel = await channelResponse.json();
-    const channelString = JSON.stringify(this.channel);
+    this.lastChannel = await channelResponse.json();
+    const channelString = JSON.stringify(this.lastChannel);
     const project = {source, channel: channelString};
     const blob = new Blob([JSON.stringify(project)], {
       type: 'application/json',
@@ -111,14 +113,20 @@ export default class ProjectManager {
       return this.getNoopResponseAndSendSaveNoopEvent();
     }
     this.sourceToSave = source;
-    if (!this.canSave(forceSave)) {
-      if (!this.saveQueued) {
-        this.enqueueSave();
-      }
+    this.enqueueSaveOrSave(forceSave);
+  }
+
+  async rename(name: string, forceSave = false) {
+    if (this.destroyed || !this.lastChannel) {
+      // If we have already been destroyed or the channel does not exist,
+      // don't attempt to rename.
       return this.getNoopResponseAndSendSaveNoopEvent();
-    } else {
-      this.saveHelper();
     }
+    if (!this.channelToSave) {
+      this.channelToSave = _.cloneDeep(this.lastChannel);
+    }
+    this.channelToSave.name = name;
+    this.enqueueSaveOrSave(forceSave);
   }
 
   addSaveSuccessListener(listener: (channel: Channel, source: Source) => void) {
@@ -142,7 +150,9 @@ export default class ProjectManager {
 
   /**
    * Helper function to save a project, called either after a timeout or directly by save().
-   * On a save, we check if there are unsaved changes. If there are none, we can skip the save.
+   * On a save, we check if there are unsaved changes to the source or channel.
+   * If there are none, we can skip the save. If only the channel changed, we can
+   * skip saving the source.
    * Only if the source save succeeds do we update the channel, as the
    * channel is metadata about the project and we don't want to save it unless the source
    * save succeeded.
@@ -150,34 +160,42 @@ export default class ProjectManager {
    * otherwise it will contain failure or no-op information.
    */
   private async saveHelper(): Promise<Response> {
-    if (!this.sourceToSave || !this.channel) {
+    if (!this.sourceToSave || !this.lastChannel) {
       return this.getNoopResponseAndSendSaveNoopEvent();
     }
     this.resetSaveState();
     this.saveInProgress = true;
     this.nextSaveTime = Date.now() + this.saveInterval;
     this.executeSaveStartListeners();
-    // If the source has not actually changed, no need to save again.
-    if (!this.sourceChanged()) {
+    const sourceChanged = this.sourceChanged();
+    const channelChanged = this.channelChanged();
+    // If neither source nor channel has actually changed, no need to save again.
+    if (!sourceChanged && !channelChanged) {
       this.saveInProgress = false;
       return this.getNoopResponseAndSendSaveNoopEvent();
     }
+    // Only save the source if it has changed.
+    if (sourceChanged) {
+      const sourceResponse = await this.sourcesStore.save(
+        this.channelId,
+        this.sourceToSave
+      );
+      if (!sourceResponse.ok) {
+        this.saveInProgress = false;
+        this.executeSaveFailListeners(sourceResponse);
 
-    const sourceResponse = await this.sourcesStore.save(
-      this.channelId,
-      this.sourceToSave
-    );
-    if (!sourceResponse.ok) {
-      this.saveInProgress = false;
-      this.executeSaveFailListeners(sourceResponse);
-
-      // TODO: Should we wrap this response in some way?
-      // Maybe add a more specific statusText to the response?
-      return sourceResponse;
+        // TODO: Should we wrap this response in some way?
+        // Maybe add a more specific statusText to the response?
+        return sourceResponse;
+      }
+      this.lastSource = JSON.stringify(this.sourceToSave);
     }
-    this.lastSource = JSON.stringify(this.sourceToSave);
 
-    const channelResponse = await this.channelsStore.save(this.channel);
+    // Always save the channel--either the channel has changed and/or the source changed.
+    // Even if only the source changed, we still update the channel to modify the last
+    // updated time.
+    this.channelToSave ||= this.lastChannel;
+    const channelResponse = await this.channelsStore.save(this.channelToSave);
     if (!channelResponse.ok) {
       this.saveInProgress = false;
       this.executeSaveFailListeners(channelResponse);
@@ -190,8 +208,9 @@ export default class ProjectManager {
     const channelSaveResponse = await channelResponse.json();
 
     this.saveInProgress = false;
-    this.channel = channelSaveResponse as Channel;
-    this.executeSaveSuccessListeners(this.channel, this.sourceToSave);
+    this.lastChannel = channelSaveResponse as Channel;
+    this.channelToSave = undefined;
+    this.executeSaveSuccessListeners(this.lastChannel, this.sourceToSave);
     return new Response();
   }
 
@@ -208,15 +227,23 @@ export default class ProjectManager {
     return true;
   }
 
-  private enqueueSave() {
-    this.saveQueued = true;
-
-    this.currentTimeoutId = window.setTimeout(
-      () => {
-        this.saveHelper();
-      },
-      this.nextSaveTime ? this.nextSaveTime - Date.now() : this.saveInterval
-    );
+  private enqueueSaveOrSave(forceSave: boolean) {
+    if (!this.canSave(forceSave)) {
+      if (!this.saveQueued) {
+        // enqueue a save
+        this.saveQueued = true;
+        this.currentTimeoutId = window.setTimeout(
+          () => {
+            this.saveHelper();
+          },
+          this.nextSaveTime ? this.nextSaveTime - Date.now() : this.saveInterval
+        );
+      }
+      return this.getNoopResponseAndSendSaveNoopEvent();
+    } else {
+      // if we can save immediately, save now.
+      this.saveHelper();
+    }
   }
 
   private getNoopResponse() {
@@ -225,7 +252,7 @@ export default class ProjectManager {
 
   private getNoopResponseAndSendSaveNoopEvent() {
     const noopResponse = this.getNoopResponse();
-    this.executeSaveNoopListeners(this.channel);
+    this.executeSaveNoopListeners(this.lastChannel);
     return noopResponse;
   }
 
@@ -234,6 +261,18 @@ export default class ProjectManager {
       return false;
     }
     return this.lastSource !== JSON.stringify(this.sourceToSave);
+  }
+
+  private channelChanged(): boolean {
+    // If we don't have a channel to save or a last channel, we can't compare.
+    // It isn't possible to have a channelToSave without a lastChannel,
+    // as we create channelToSave from lastChannel.
+    if (!this.channelToSave || !this.lastChannel) {
+      return false;
+    }
+    return (
+      JSON.stringify(this.lastChannel) !== JSON.stringify(this.channelToSave)
+    );
   }
 
   private resetSaveState(): void {
