@@ -65,11 +65,12 @@ Resources:
 
   # -----------------------------------
   # Hosted Zones and Record Set Groups
+  # 
+  # - All hosted zones are set to 'retain' in case manual records have been added
   # -----------------------------------
 
   HourofcodeDotCoHostedZone:
     Type: "AWS::Route53::HostedZone"
-    # Hosted zones will not be deleted upon stack deletion in case other records have been added.
     DeletionPolicy: Retain
     UpdateReplacePolicy: Retain
     Properties:
@@ -90,11 +91,33 @@ Resources:
         AliasTarget:
           DNSName: hourofcode.co
 
+  HourofcodeDotOrgHostedZone:
+    Type: "AWS::Route53::HostedZone"
+    DeletionPolicy: Retain
+    UpdateReplacePolicy: Retain
+    Properties:
+      Name: hourofcode.org
+
+  HourofcodeDotOrgRecords:
+    Type: AWS::Route53::RecordSetGroup
+    Properties:
+      HostedZoneId: !Ref HourofcodeDotCoHostedZone
+      RecordSets:
+      - Name: hourofcode.org
+        Type: A
+        AliasTarget:
+          DNSName: !GetAtt [HourofcodeDotComRedirectDistribution1, DomainName]
+          HostedZoneId: Z2FDTNDATAQYW2 # static ID for CloudFront aliases
+      - Name: www.hourofcode.org
+        Type: A
+        AliasTarget:
+          DNSName: hourofcode.org
+
   # -----------------------------------
   # Cloudfront Distributions
   #
   # Note that SSL certificates support a max of 10 alternative names, so we must
-  # create a new distribution for each group of 10 domains redirecting to the
+  # create a new distribution for each group of 11 domains redirecting to the
   # same target.
   # -----------------------------------
 
@@ -175,6 +198,45 @@ Resources:
           HostedZoneId: !Ref WeekofcodeDotOrgHostedZone
         - DomainName: weekofcode.com
           HostedZoneId: !Ref WeekofcodeDotComHostedZone
+
+  HourofcodeDotComRedirectDistribution2:
+    Type: AWS::CloudFront::Distribution
+    Properties:
+      DistributionConfig:
+        Enabled: true
+        Comment: Redirects via CloudFront functions
+        PriceClass: PriceClass_All
+        Aliases:
+          - hourofcode.org
+        Origins:
+          # An origin is required, but will never receive traffic
+          - Id: PrimaryOrigin
+            DomainName: example.com
+            CustomOriginConfig:
+              OriginProtocolPolicy: match-viewer
+        DefaultCacheBehavior:
+          TargetOriginId: PrimaryOrigin
+          CachePolicyId: !Ref RedirectCachePolicy
+          FunctionAssociations:
+            - EventType: viewer-request
+              FunctionARN: !Ref RedirectCloudfrontFunctionHourofcodeCom
+          ViewerProtocolPolicy: allow-all
+          # Use shared Realtime Log config
+          RealtimeLogConfigArn: !ImportValue AccessLogs-Config
+        ViewerCertificate:
+          AcmCertificateArn: !Ref HourofcodeDotComRedirectCertificate2
+          SslSupportMethod: sni-only
+
+  HourofcodeDotComRedirectCertificate2:
+    Type: AWS::CertificateManager::Certificate
+    Properties:
+      DomainName: hourofcode.org
+      # SubjectAlternativeNames:
+      #   - TBD
+      ValidationMethod: DNS
+      DomainValidationOptions:
+        - DomainName: hourofcode.org
+          HostedZoneId: !Ref HourofcodeDotOrgHostedZone
 
   # -----------------------------------
   # Cloudfront Functions
