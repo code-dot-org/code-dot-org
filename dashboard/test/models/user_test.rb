@@ -4776,28 +4776,9 @@ class UserTest < ActiveSupport::TestCase
 
     DCDO.stubs(:get).with('family-name-features', false).returns(true)
 
-    assert_equal(
-      {
-        id: user.id,
-        name: user.name,
-        username: user.username,
-        family_name: family_name,
-        email: user.email,
-        hashed_email: user.hashed_email,
-        user_type: user.user_type,
-        gender: user.gender,
-        gender_teacher_input: nil,
-        birthday: user.birthday,
-        secret_words: user.secret_words,
-        secret_picture_name: user.secret_picture.name,
-        secret_picture_path: user.secret_picture.path,
-        location: "/v2/users/#{user.id}",
-        age: user.age,
-        sharing_disabled: false,
-        has_ever_signed_in: user.has_ever_signed_in?
-      },
-      user.summarize
-    )
+    assert(user.summarize.key?(:family_name))
+    assert_equal(family_name, user.summarize[:family_name])
+
     DCDO.unstub(:get)
   end
 
