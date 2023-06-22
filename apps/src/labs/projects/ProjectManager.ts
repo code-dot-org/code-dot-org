@@ -13,7 +13,6 @@
 import {SourcesStore} from './SourcesStore';
 import {ChannelsStore} from './ChannelsStore';
 import {Channel, Source} from '../types';
-import _ from 'lodash';
 
 export default class ProjectManager {
   private readonly channelId: string;
@@ -127,7 +126,9 @@ export default class ProjectManager {
       return this.getNoopResponseAndSendSaveNoopEvent();
     }
     if (!this.channelToSave) {
-      this.channelToSave = _.cloneDeep(this.lastChannel);
+      this.channelToSave = JSON.parse(
+        JSON.stringify(this.lastChannel)
+      ) as Channel;
     }
     this.channelToSave.name = name;
     return this.enqueueSaveOrSave(forceSave);
