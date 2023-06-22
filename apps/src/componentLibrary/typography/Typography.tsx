@@ -23,6 +23,7 @@ const Typography: React.FunctionComponent<TypographyProps> = ({
   children,
   className,
   style,
+  ...props
 }) => {
   const Tag = semanticTag;
 
@@ -33,6 +34,7 @@ const Typography: React.FunctionComponent<TypographyProps> = ({
         className
       )}
       style={style}
+      {...props}
     >
       {children}
     </Tag>
