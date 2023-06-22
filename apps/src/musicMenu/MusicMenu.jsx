@@ -93,6 +93,17 @@ const optionsList = [
       {value: REMOTE_STORAGE, description: 'Save to remote storage (default).'},
     ],
   },
+  {
+    name: 'BPM',
+    type: 'string',
+    description: 'Set a specific BPM',
+  },
+  {
+    name: 'key',
+    type: 'string',
+    description:
+      'Set a specific key, as a number from 0-11. Starting at C = 0 (C# = 1, D = 2, D# = 3, ...)',
+  },
 ];
 
 export default class MusicMenu extends React.Component {
