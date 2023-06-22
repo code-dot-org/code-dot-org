@@ -6,7 +6,7 @@ import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import JavalabDropdown from './components/JavalabDropdown';
 import {DisplayTheme} from './DisplayTheme';
 import i18n from '@cdo/locale';
-import CloseOnEscape from './components/CloseOnEscape';
+import CloseOnEscape from '@cdo/apps/templates/CloseOnEscape';
 
 /**
  * A button that drops down to a set of clickable file names, and closes itself if

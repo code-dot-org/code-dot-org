@@ -1,0 +1,85 @@
+<Music>
+  <config><![CDATA[{
+  "game_id": 70,
+  "created_at": "2023-06-21T00:01:20.000Z",
+  "level_num": "custom",
+  "user_id": 976,
+  "properties": {
+    "encrypted": "false",
+    "level_data": {
+      "text": "It's common to take a beat and repeat it, sometimes for the rest of a song. But songs can get pretty long, so we'd need a ton of blocks if we added them one by one! Thankfully, repeating things is also common in code. In the \"Control\" category of the toolbox, you'll find the \"Repeat\" block. Anything you put inside it will be repeated the number of times set by the block. Use this block to repeat the sounds that make up your beat a few times.",
+      "sounds": {
+        "beats": [
+          "groovy_beat",
+          "disco_beat",
+          "groovy_alternate_beat",
+          "reggaeton_beat",
+          "syncopated_beat",
+          "reggaeton_alternate_beat",
+          "bold_beat",
+          "cafe_beat",
+          "shake_beat",
+          "sugar_beat",
+          "bold_alternate_beat",
+          "sugar_alternate_beat",
+          "arena_beat",
+          "gutter_beat",
+          "punk_beat",
+          "punk_alternate_beat",
+          "arena_alternate_beat",
+          "vinyl_beat",
+          "relaxed_beat",
+          "sub_beat",
+          "hats_beat",
+          "relaxed_alternate_beat"
+        ]
+      },
+      "toolbox": {
+        "Play": [
+          "play_sound_at_current_location_simple2"
+        ],
+        "Control": [
+          "repeat_simple2"
+        ]
+      },
+      "validations": [
+        {
+          "conditions": [
+            "played_one_sound"
+          ],
+          "message": "Nice work, we're getting a groove going!",
+          "next": "true"
+        },
+        {
+          "message": "Use the repeat block to play your beat multiple times!"
+        }
+      ],
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "id": "when-run-block",
+              "type": "when_run_simple2",
+              "x": 34,
+              "y": 34
+            }
+          ]
+        },
+        "variables": [
+          {
+            "name": "currentTime"
+          },
+          {
+            "name": "i"
+          }
+        ]
+      }
+    },
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2023-06-21T00:01:20.743+00:00\",\"changed\":[\"cloned from \\\"music_lab_2023_3\\\"\"],\"cloned_from\":\"music_lab_2023_3\"}]"
+}]]></config>
+  <blocks/>
+</Music>
