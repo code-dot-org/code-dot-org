@@ -178,7 +178,12 @@ class SetupChecklist extends Component {
    * Helper to be used on second/subsequent attempts at detecting board usability.
    */
   redetect() {
-    utils.reload();
+    if (this.state[STATUS_SUPPORTED_BROWSER] !== Status.SUCCEEDED) {
+      utils.reload();
+    } else {
+      // Otherwise we should be able to redetect without a page reload.
+      this.detect();
+    }
   }
 
   updateMBFirmata() {
