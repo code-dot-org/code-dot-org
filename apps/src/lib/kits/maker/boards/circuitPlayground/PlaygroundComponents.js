@@ -5,7 +5,6 @@
 
 import {
   N_COLOR_LEDS,
-  TOUCH_PINS,
   CP_COMMAND,
   CP_ACCEL_STREAM_ON,
 } from './PlaygroundConstants';
@@ -20,7 +19,6 @@ import Piezo from './Piezo';
 import NeoPixel from './NeoPixel';
 import Led from './Led';
 import Switch from './Switch';
-import experiments from '../../../../../util/experiments';
 
 /**
  * Initializes a set of Johnny-Five component instances for the currently
@@ -63,9 +61,6 @@ export function createCircuitPlaygroundComponents(board) {
       buttonL: new PlaygroundButton({board, pin: 4}),
 
       buttonR: new PlaygroundButton({board, pin: 19}),
-
-      ...(experiments.isEnabled('maker-captouch') &&
-        initializeTouchPads(board)),
     };
   });
 }
@@ -133,13 +128,6 @@ export function cleanupCircuitPlaygroundComponents(
     delete components.accelerometer;
     delete components.buttonL;
     delete components.buttonR;
-
-    if (experiments.isEnabled('maker-captouch')) {
-      // Remove listeners from each TouchSensor
-      TOUCH_PINS.forEach(pin => {
-        delete components[`touchPad${pin}`];
-      });
-    }
   }
 }
 
@@ -315,20 +303,4 @@ function initializeAccelerometer(board) {
     return accelerometer[accelerationDirection];
   };
   return accelerometer;
-}
-
-function initializeTouchPads(board) {
-  // We make one playground-io Touchpad component for all captouch sensors,
-  // then wrap it in our own separate objects to get the API we want to
-  // expose to students.
-  const playgroundTouchpad = new five.Touchpad({
-    board,
-    controller: PlaygroundIO.Touchpad,
-    pads: TOUCH_PINS,
-  });
-  let touchPads = {};
-  TOUCH_PINS.forEach(pin => {
-    touchPads[`touchPad${pin}`] = new TouchSensor(pin, playgroundTouchpad);
-  });
-  return touchPads;
 }
