@@ -2649,13 +2649,15 @@ class User < ApplicationRecord
   end
 
   def self.where_child_account_policy_applies_to_us_state
+    # A list of state codes where the Child Account Policy should apply.
     states = ['CO']
     where("JSON_EXTRACT(properties, '$.us_state') IN (?)", states)
   end
 
   def self.where_child_account_does_not_have_parent_permission
-    # DAYNE TODO replace 'g' with ChildAccountCompliance::PERMISSION_GRANTED
-    where("JSON_EXTRACT(properties, '$.child_account_compliance_state') != ?", 'g')
+    where("JSON_EXTRACT(properties, '$.child_account_compliance_state') != ?",
+          ChildAccountCompliance::PERMISSION_GRANTED
+    )
   end
 
   def self.where_child_account_past_expiration_date(expiration_date = 7.days.ago)

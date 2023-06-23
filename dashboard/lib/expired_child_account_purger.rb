@@ -57,7 +57,7 @@ class ExpiredChildAccountPurger
       @num_accounts_purged += 1
     end
 
-    #TODO DAYNE what do we do if we fail to delete an account?
+    #TODO DAYNE if an account fails to be purged, add it to the purger queue.
     QueuedAccountPurge.clean_up_resolved_records!
   rescue StandardError => exception
     yell exception.message
