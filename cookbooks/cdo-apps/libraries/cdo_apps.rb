@@ -45,7 +45,7 @@ module CdoApps
 
       variables app_name: app_name
       source "#{app_server}.service.erb"
-      notifies :run, "execute[restart #{app_name} service]", :immediately
+      notifies :run, "execute[restart #{app_name} service]", :delayed
     end
 
     # Define an execute resource for restarting (or starting) the entire

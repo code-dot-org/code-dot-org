@@ -166,6 +166,9 @@
         "coursed-2022/Conditionals with Cards": {
           "name": "Υποθέσεις με Κάρτες"
         },
+        "coursed-2022/Looking Ahead with Minecraft": {
+          "name": "Κοιτάζοντας μπροστά με το Minecraft"
+        },
         "coursed-2022/End of Course Project": {
           "name": "Έργο Λήξη Μαθήματος"
         },
@@ -240,11 +243,26 @@
         "courseb-2022/Move It, Move It": {
           "name": "Μετακίνησέ το, Μετακίνησέ το"
         },
+        "courseb-2022/Sequencing with Angry Birds": {
+          "name": "Ακολουθία με Angry Birds"
+        },
+        "courseb-2022/Programming with Angry Birds": {
+          "name": "Προγραμματισμός με τα Angry Birds"
+        },
+        "courseb-2022/Programming with Harvester": {
+          "name": "Προγραμματισμός με τον Θεριστή"
+        },
         "courseb-2022/Getting Loopy": {
-          "name": "Επαναλαμβανόμαστε"
+          "name": "Εξερευνώντας τους βρόγχους"
         },
         "courseb-2022/End of Course Project": {
           "name": "Έργο Λήξη Μαθήματος"
+        },
+        "express-2022/Programming with Angry Birds": {
+          "name": "Προγραμματισμός με τα Angry Birds"
+        },
+        "express-2022/Collecting Treasure with Laurel": {
+          "name": "Κυνηγώντας θησαυρούς με την Laurel"
         },
         "express-2022/Creating Art with Code": {
           "name": "Δημιουργία τέχνης με κώδικα"
@@ -268,6 +286,9 @@
         "express-2022/Nested Loops in Maze": {
           "name": "Εμφωλευμένοι Βρόχοι στο λαβύρινθο"
         },
+        "express-2022/Looking Ahead with Minecraft": {
+          "name": "Κοιτάζοντας μπροστά με το Minecraft"
+        },
         "express-2022/End of Course Project": {
           "name": "Έργο Λήξη Μαθήματος"
         },
@@ -275,8 +296,14 @@
           "name": "Μάθετε να σύρετε και να αποθέσετε",
           "student_overview": "Κάντε κλικ και σύρετε για να τελειώσετε τα παζλ."
         },
+        "pre-express-2022/Programming with Angry Birds": {
+          "name": "Προγραμματισμός με τα Angry Birds"
+        },
         "pre-express-2022/Programming with Rey and BB-8": {
           "name": "Προγραμματίζοντας με τον Ρέι και BB-8"
+        },
+        "pre-express-2022/Programming with Harvester": {
+          "name": "Προγραμματισμός με τον Θεριστή"
         },
         "coursea-2022/Learn to Drag and Drop": {
           "name": "Μάθετε να σύρετε και να αποθέσετε",
@@ -296,6 +323,12 @@
         },
         "coursec-2022/My Robotic Friends Jr": {
           "preparation": "-   Προετοιμάστε μια στοίβα από 20 χάρτινα κύπελλα (ή τραπεζοειδή) για κάθε ομάδα 2-3 μαθητών.\n-   Παρουσιάστε τα σύμβολα από το **\\*Symbol Key** στα οποία οι μαθητές μπορούν να αναφέρονται σε όλη τη διάρκεια του μαθήματος.\n-   (Προαιρετικό) Εκτυπώστε μία **\\*Cup Stacking Ideas** για κάθε ομάδα των 2-3 μαθητών."
+        },
+        "coursec-2022/Programming with Angry Birds": {
+          "name": "Προγραμματισμός με τα Angry Birds"
+        },
+        "coursec-2022/Collecting Treasure with Laurel": {
+          "name": "Κυνηγώντας θησαυρούς με την Laurel"
         },
         "coursec-2022/Creating Art with Code": {
           "name": "Δημιουργία τέχνης με κώδικα"
@@ -428,8 +461,17 @@
         "coursea-2018/Persistence & Frustration: Stevie and the Big Project": {
           "name": "Ο Στίβι και το Μεγάλο Πρότζεκτ"
         },
+        "coursea-2018/Sequencing in Maze": {
+          "name": "Ακολουθία με Angry Birds"
+        },
         "coursea-2018/Programming: Happy Maps": {
           "name": "Χαρούμενοι Χάρτες"
+        },
+        "coursea-2018/Programming in Maze": {
+          "name": "Προγραμματισμός με τα Angry Birds"
+        },
+        "coursea-2018/Programming in Harvester": {
+          "name": "Προγραμματισμός με τον Θεριστή"
         },
         "coursea-2018/Going Places Safely": {
           "name": "Πηγαίνοντας σε Μέρη με Ασφάλεια"
@@ -503,11 +545,17 @@
         "express-2018/Relay Programming": {
           "name": "Προγραμματισμός Ρελέ"
         },
+        "express-2018/Programming in Collector": {
+          "name": "Κυνηγώντας θησαυρούς με την Laurel"
+        },
         "express-2018/Programming in Artist": {
           "name": "Δημιουργία τέχνης με κώδικα"
         },
         "express-2018/Loops: Getting Loopy": {
-          "name": "Επαναλαμβανόμαστε"
+          "name": "Εξερευνώντας τους βρόγχους"
+        },
+        "express-2018/Concept Practice with Minecraft ": {
+          "name": "Κοιτάζοντας μπροστά με το Minecraft"
         },
         "express-2018/While Loops in Farmer": {
           "name": "Βρόχοι Ενώ με τον Αγρότη"
@@ -587,17 +635,26 @@
         "coursec-2018/Building a Foundation": {
           "name": "Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο"
         },
+        "coursec-2018/Programming in Maze": {
+          "name": "Προγραμματισμός με τα Angry Birds"
+        },
+        "coursec-2018/Programming in Collector": {
+          "name": "Κυνηγώντας θησαυρούς με την Laurel"
+        },
         "coursec-2018/Programming in Artist": {
           "name": "Δημιουργία τέχνης με κώδικα"
         },
         "coursec-2018/Loops: Getting Loopy": {
-          "name": "Επαναλαμβανόμαστε"
+          "name": "Εξερευνώντας τους βρόγχους"
         },
         "coursec-2018/Loops in Harvester": {
           "name": "Συγκομιδή καλλιεργειών με βρόχους"
         },
         "coursec-2018/Events: The Big Event": {
           "name": "Το Μεγάλο Γεγονός"
+        },
+        "coursec-2018/Looking Ahead": {
+          "name": "Κοιτάζοντας μπροστά με το Minecraft"
         },
         "coursec-2018/Binary Bracelets": {
           "name": "Δυαδικά Βραχιόλια"
@@ -716,8 +773,17 @@
         "courseb-2019/Move It, Move It": {
           "name": "Μετακίνησέ το, Μετακίνησέ το"
         },
+        "courseb-2019/Sequencing in Maze": {
+          "name": "Ακολουθία με Angry Birds"
+        },
+        "courseb-2019/Programming in Maze": {
+          "name": "Προγραμματισμός με τα Angry Birds"
+        },
+        "courseb-2019/Programming in Harvester": {
+          "name": "Προγραμματισμός με τον Θεριστή"
+        },
         "courseb-2019/Loops: Getting Loopy": {
-          "name": "Επαναλαμβανόμαστε"
+          "name": "Εξερευνώντας τους βρόγχους"
         },
         "coursed-2019/Algorithms: Graph Paper Programming": {
           "name": "Προγραμματισμός σε Χαρτί Γραφικών Παραστάσεων"
@@ -800,11 +866,20 @@
         "express-2019/Dance Party": {
           "name": "Πάρτι Χορού"
         },
+        "express-2019/Programming in Maze": {
+          "name": "Προγραμματισμός με τα Angry Birds"
+        },
+        "express-2019/Programming in Collector": {
+          "name": "Κυνηγώντας θησαυρούς με την Laurel"
+        },
         "express-2019/Programming in Artist": {
           "name": "Δημιουργία τέχνης με κώδικα"
         },
         "express-2019/Nested Loops in Bee": {
           "name": "Εμφωλευμένοι Βρόχοι στο λαβύρινθο"
+        },
+        "express-2019/Concept Practice with Minecraft ": {
+          "name": "Κοιτάζοντας μπροστά με το Minecraft"
         },
         "express-2019/While Loops in Farmer": {
           "name": "Βρόχοι Ενώ με τον Αγρότη"
@@ -818,6 +893,12 @@
         "coursec-2019/Powerful Passwords": {
           "name": "Ισχυρά Συνθηματικά"
         },
+        "coursec-2019/Programming in Maze": {
+          "name": "Προγραμματισμός με τα Angry Birds"
+        },
+        "coursec-2019/Programming in Collector": {
+          "name": "Κυνηγώντας θησαυρούς με την Laurel"
+        },
         "coursec-2019/Programming in Artist": {
           "name": "Δημιουργία τέχνης με κώδικα"
         },
@@ -826,6 +907,9 @@
         },
         "coursec-2019/Loops in Harvester": {
           "name": "Συγκομιδή καλλιεργειών με βρόχους"
+        },
+        "coursec-2019/Looking Ahead": {
+          "name": "Κοιτάζοντας μπροστά με το Minecraft"
         },
         "coursec-2019/Events: The Big Event": {
           "name": "Το Μεγάλο Γεγονός"
@@ -839,8 +923,14 @@
         "pre-express-2019/Learn to Drag and Drop": {
           "name": "Μάθετε να σύρετε και να αποθέσετε"
         },
+        "pre-express-2019/Programming in Maze": {
+          "name": "Προγραμματισμός με τα Angry Birds"
+        },
         "pre-express-2019/Programming with Rey and BB-8": {
           "name": "Προγραμματίζοντας με τον Ρέι και BB-8"
+        },
+        "pre-express-2019/Programming in Harvester": {
+          "name": "Προγραμματισμός με τον Θεριστή"
         },
         "pre-express-2019/Spelling Bee": {
           "name": "Η μέλισσα της ορθογραφίας"
@@ -1457,8 +1547,17 @@
         "courseb-2021/Move It, Move It": {
           "name": "Μετακίνησέ το, Μετακίνησέ το"
         },
+        "courseb-2021/Sequencing in Maze": {
+          "name": "Ακολουθία με Angry Birds"
+        },
+        "courseb-2021/Programming in Maze": {
+          "name": "Προγραμματισμός με τα Angry Birds"
+        },
+        "courseb-2021/Programming in Harvester": {
+          "name": "Προγραμματισμός με τον Θεριστή"
+        },
         "courseb-2021/Loops: Getting Loopy": {
-          "name": "Επαναλαμβανόμαστε"
+          "name": "Εξερευνώντας τους βρόγχους"
         },
         "courseb-2021/lesson-1": {
           "name": "Έργο Λήξη Μαθήματος"
@@ -1478,6 +1577,12 @@
         },
         "coursea-2021/lesson-1": {
           "name": "Έργο Λήξη Μαθήματος"
+        },
+        "coursec-2021/Programming in Maze": {
+          "name": "Προγραμματισμός με τα Angry Birds"
+        },
+        "coursec-2021/Programming in Collector": {
+          "name": "Κυνηγώντας θησαυρούς με την Laurel"
         },
         "coursec-2021/Programming in Artist": {
           "name": "Δημιουργία τέχνης με κώδικα"
@@ -1547,6 +1652,9 @@
         "coursed-2021/Conditionals with Cards": {
           "name": "Υποθέσεις με Κάρτες"
         },
+        "coursed-2021/lesson-6": {
+          "name": "Κοιτάζοντας μπροστά με το Minecraft"
+        },
         "coursed-2021/Conditionals in Bee": {
           "preparation": "-   Παίξτε δια μέσου των παζλ για να βρείτε οποιεσδήποτε δυνητικές προβληματικές περιοχές για την τάξη σας.\n-   Βεβαιωθείτε ότι κάθε μαθητής έχει ένα ημερολόγιο σκέψεων."
         },
@@ -1558,6 +1666,12 @@
         },
         "coursed-2021/End of Course Project": {
           "name": "Έργο Λήξη Μαθήματος"
+        },
+        "express-2021/Programming with Angry Birds": {
+          "name": "Προγραμματισμός με τα Angry Birds"
+        },
+        "express-2021/Collecting Treasure with Laurel": {
+          "name": "Κυνηγώντας θησαυρούς με την Laurel"
         },
         "express-2021/Creating Art with Code": {
           "name": "Δημιουργία τέχνης με κώδικα"
@@ -1581,6 +1695,9 @@
         "express-2021/Nested Loops in Maze": {
           "name": "Εμφωλευμένοι Βρόχοι στο λαβύρινθο"
         },
+        "express-2021/Looking Ahead with Minecraft ": {
+          "name": "Κοιτάζοντας μπροστά με το Minecraft"
+        },
         "express-2021/End of Course Project": {
           "name": "Έργο Λήξη Μαθήματος"
         },
@@ -1588,8 +1705,14 @@
           "name": "Μάθετε να σύρετε και να αποθέσετε",
           "student_overview": "Κάντε κλικ και σύρετε για να τελειώσετε τα παζλ."
         },
+        "pre-express-2021/Programming in with Angry Birds": {
+          "name": "Προγραμματισμός με τα Angry Birds"
+        },
         "pre-express-2021/Programming with Rey and BB-8": {
           "name": "Προγραμματίζοντας με τον Ρέι και BB-8"
+        },
+        "pre-express-2021/Programming in Harvester": {
+          "name": "Προγραμματισμός με τον Θεριστή"
         },
         "coursee-2021/Simon Says": {
           "preparation": "-   Παίξτε δια μέσου των παζλ για να βρείτε οποιεσδήποτε δυνητικές προβληματικές περιοχές για την τάξη σας.\n-   Βεβαιωθείτε ότι κάθε μαθητής έχει ένα ημερολόγιο σκέψεων."
@@ -1726,6 +1849,12 @@
         "express-2020/Dance Party": {
           "name": "Πάρτι Χορού"
         },
+        "express-2020/Programming with Angry Birds": {
+          "name": "Προγραμματισμός με τα Angry Birds"
+        },
+        "express-2020/Collecting Treasure with Laurel": {
+          "name": "Κυνηγώντας θησαυρούς με την Laurel"
+        },
         "express-2020/Creating Art with Code": {
           "name": "Δημιουργία τέχνης με κώδικα"
         },
@@ -1744,8 +1873,17 @@
         "courseb-2020/Move It, Move It": {
           "name": "Μετακίνησέ το, Μετακίνησέ το"
         },
+        "courseb-2020/Sequencing in Maze": {
+          "name": "Ακολουθία με Angry Birds"
+        },
+        "courseb-2020/Programming in Maze": {
+          "name": "Προγραμματισμός με τα Angry Birds"
+        },
+        "courseb-2020/Programming in Harvester": {
+          "name": "Προγραμματισμός με τον Θεριστή"
+        },
         "courseb-2020/Loops: Getting Loopy": {
-          "name": "Επαναλαμβανόμαστε"
+          "name": "Εξερευνώντας τους βρόγχους"
         },
         "coursed-2020/Algorithms: Graph Paper Programming": {
           "name": "Προγραμματισμός σε Χαρτί Γραφικών Παραστάσεων"
@@ -1786,6 +1924,12 @@
         "coursed-2020/End of Course Project": {
           "name": "Έργο Λήξη Μαθήματος"
         },
+        "coursec-2020/Programming in Maze": {
+          "name": "Προγραμματισμός με τα Angry Birds"
+        },
+        "coursec-2020/Programming in Collector": {
+          "name": "Κυνηγώντας θησαυρούς με την Laurel"
+        },
         "coursec-2020/Programming in Artist": {
           "name": "Δημιουργία τέχνης με κώδικα"
         },
@@ -1794,6 +1938,9 @@
         },
         "coursec-2020/Loops in Harvester": {
           "name": "Συγκομιδή καλλιεργειών με βρόχους"
+        },
+        "coursec-2020/Looking Ahead": {
+          "name": "Κοιτάζοντας μπροστά με το Minecraft"
         },
         "coursec-2020/Events: The Big Event": {
           "name": "Το Μεγάλο Γεγονός"
