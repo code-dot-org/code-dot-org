@@ -57,7 +57,7 @@ theme: responsive_full_width
           %h3.heading-sm
             =hoc_s(:teach_page_why_teach_cs_block_heading_04)
           %p=hoc_s(:teach_page_why_teach_cs_block_desc_04)
-          %a{href: "/ai"}
+          %a{href: "/ai", target: "_blank", rel: "noopener noreferrer"}
             =hoc_s(:call_to_action_explore_ai_resources)
     %hr.dark
     %div.centered
@@ -70,7 +70,10 @@ theme: responsive_full_width
     %div.quotes-wrapper
       %p.quote-text
         =hoc_s(:teach_page_quote)
-      %p.no-margin-bottom Kevin Barry <span>•</span> CS Discoveries Teacher
+      %p.no-margin-bottom
+        Kevin Barry
+        %span •
+        =hoc_s(:teacher_label_csd)
 
 %section.free-curriculum
   .wrapper

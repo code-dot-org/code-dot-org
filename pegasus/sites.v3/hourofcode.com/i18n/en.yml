@@ -95,6 +95,8 @@
   grade_level_label_middle: "Middle School"
   grade_level_label_high: "High School"
 
+  teacher_label_csd: "CS Discoveries Teacher"
+
   call_to_action_learn_more: 'Learn more'
   call_to_action_watch_now: 'Watch now'
   call_to_action_try_activity: 'Try activity'
@@ -415,7 +417,7 @@
   teach_page_top_desc_02: "Join the global community of over 2 million educators empowering the next generation of innovators, problem solvers, and digital citizens! Code.org supports teachers the whole way with professional learning, comprehensive curricula, and support when you need it."
   teach_page_why_teach_cs_heading: "Why teach computer science with Code.org?"
   teach_page_why_teach_cs_block_heading_01: "Build foundational CS skills"
-  teach_page_why_teach_cs_block_desc_01: "Like reading, writing, or math, computer science is foundational to other pursuits. It teaches problem solving and critical thinking, and  enables students to actively participate in an increasingly digital society."
+  teach_page_why_teach_cs_block_desc_01: "Like reading, writing, or math, computer science is foundational to other pursuits. It teaches problem solving and critical thinking, and enables students to actively participate in an increasingly digital society."
   teach_page_why_teach_cs_block_heading_02: "Leverage comprehensive teaching resources"
   teach_page_why_teach_cs_block_desc_02: "In-depth lesson plans and flexible professional learning options ensure teachers with diverse backgrounds can successfully teach computer science."
   teach_page_why_teach_cs_block_heading_03: "Unlock pathways for all students"
