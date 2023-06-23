@@ -17,7 +17,7 @@ km:
           description: តើ​អ្នក​ចង់​សរសេរ​ហ្គេម​របស់​អ្នក​ដោយ​ប្រើ​ពេល​តិច​ជាង 10 នាទី​ដែរ​ឬ​ទេ? សូម​សាកល្បង​មេរៀន Flappy កូដ របស់​យើង!
           student_description: តើ​អ្នក​ចង់​សរសេរ​ហ្គេម​របស់​អ្នក​ដោយ​ប្រើ​ពេល​តិច​ជាង 10 នាទី​ដែរ​ឬ​ទេ? សូម​សាកល្បង​មេរៀន Flappy កូដ របស់​យើង!
         step:
-          title: ជំហាន
+          title: ជំហានបន្ទាប់
         mc:
           title: Minecraft Hour of Code
           description: ប្រើប្លក់នៃកូដ នាំ Steve ឬ Alex ធ្វើដំណើរផ្សងព្រេងឆ្លងកាត់ពិភព Minecraft នេះ។
@@ -56,6 +56,14 @@ km:
           lesson_groups:
             required:
               display_name: ទិដ្ឋភាពទូទៅ
+        coursee-draft:
+          lesson_groups:
+            end_of_course_project:
+              display_name: ចុងបញ្ចប់នៃគម្រោង
+        coursef-draft:
+          lesson_groups:
+            end_of_course_project:
+              display_name: ចុងបញ្ចប់នៃគម្រោង
         csp3-support:
           lesson_groups:
             required:
@@ -64,6 +72,10 @@ km:
           lesson_groups:
             required:
               display_name: ទិដ្ឋភាពទូទៅ
+        csf2harvey:
+          lesson_groups:
+            end_of_course_project:
+              display_name: ចុងបញ្ចប់នៃគម្រោង
         csp5-support:
           lesson_groups:
             required:
@@ -98,6 +110,8 @@ km:
               display_name: ដំឡើងទៅវគ្គសិក្សាអ៊ី (តាមជម្រើសរបស់អ្នក)
             csf_e_2:
               display_name: មាតិកានៃវគ្គសិក្សា អ៊ី
+            end_of_course_project:
+              display_name: ចុងបញ្ចប់នៃគម្រោង
           name: វគ្គសិក្សាអ៊ី៝​-២០១៧
         coursef-2017:
           title: វគ្គសិក្សា F
@@ -108,6 +122,8 @@ km:
               display_name: ដំឡើងទៅមេរៀន ច (ជាជម្រើសរបស់អ្នក)
             csf_f_2:
               display_name: មាតិកានៃមេរៀន ច
+            end_of_course_project:
+              display_name: ចុងបញ្ចប់នៃគម្រោង
           name: វគ្គសិក្សាអេហ្វ-២០១៧
         cspnovice:
           lesson_groups:
@@ -160,6 +176,9 @@ km:
         express-2017:
           description_audience: 'អាយុ: ៩- ១៨'
           description_short: 'សេចក្តីផ្តើមពីវិទ្យាសាស្ត្រកុំព្យូទ័រ៖ ប្រមូលផ្តុំកម្មវិធីថ្នាក់បឋមសិក្សាដ៏ល្អបំផុតរបស់យេីងសំរាប់សិស្សធំៗ។ '
+          lesson_groups:
+            end_of_course_project:
+              display_name: ចុងបញ្ចប់នៃគម្រោង
           name: អុិចប្រេស-2017
         pre-express-2017:
           title: វគ្គសំរាប់ក្មេងៗដែលមិនទាន់ចេះអាន ឬ ទេីបរៀនអាន
@@ -173,18 +192,28 @@ km:
               display_name: ដំឡើងទៅវគ្គសិក្សាអ៊ី (តាមជម្រើសរបស់អ្នក)
             csf_e_2:
               display_name: មាតិកានៃវគ្គសិក្សា អ៊ី
+            end_of_course_project:
+              display_name: ចុងបញ្ចប់នៃគម្រោង
+        new-express:
+          lesson_groups:
+            end_of_course_project:
+              display_name: ចុងបញ្ចប់នៃគម្រោង
         new-e:
           lesson_groups:
             csf_e_1:
               display_name: ដំឡើងទៅវគ្គសិក្សាអ៊ី (តាមជម្រើសរបស់អ្នក)
             csf_e_2:
               display_name: មាតិកានៃវគ្គសិក្សា អ៊ី
+            end_of_course_project:
+              display_name: ចុងបញ្ចប់នៃគម្រោង
         new-f:
           lesson_groups:
             csf_f_1:
               display_name: ដំឡើងទៅមេរៀន ច (ជាជម្រើសរបស់អ្នក)
             csf_f_2:
               display_name: មាតិកានៃមេរៀន ច
+            end_of_course_project:
+              display_name: ចុងបញ្ចប់នៃគម្រោង
         hero:
           title: 'Minecraft: ដំណើរផ្សងព្រេងរបស់វារៈបុរស'
           description_short: Minecraft បានត្រលប់មកវិញជាមួយហ្នឹងសកម្មភាពថ្មីសំរាប់ Hour of Code!
@@ -196,12 +225,16 @@ km:
               display_name: ដំឡើងទៅវគ្គសិក្សាអ៊ី (តាមជម្រើសរបស់អ្នក)
             csf_e_2:
               display_name: មាតិកានៃវគ្គសិក្សា អ៊ី
+            end_of_course_project:
+              display_name: ចុងបញ្ចប់នៃគម្រោង
         course-f-2018:
           lesson_groups:
             csf_f_1:
               display_name: ដំឡើងទៅមេរៀន ច (ជាជម្រើសរបស់អ្នក)
             csf_f_2:
               display_name: មាតិកានៃមេរៀន ច
+            end_of_course_project:
+              display_name: ចុងបញ្ចប់នៃគម្រោង
         coursea-2018:
           assignment_family_title: វគ្គសិក្សា A
           description_short: សេចក្តីណែនាំអំពី វិទ្យាសាស្ដ្រកុំព្យូទ័រ សម្រាប់អ្នកអានមុន។
@@ -221,6 +254,8 @@ km:
               display_name: ដំឡើងទៅវគ្គសិក្សាអ៊ី (តាមជម្រើសរបស់អ្នក)
             csf_e_2:
               display_name: មាតិកានៃវគ្គសិក្សា អ៊ី
+            end_of_course_project:
+              display_name: ចុងបញ្ចប់នៃគម្រោង
         coursef-2018:
           assignment_family_title: វគ្គសិក្សា F
           description_short: សិក្សាអំពីក្បួនទាំងអស់ នៅក្នុងមូលដ្ឋានគ្រឹះនៃវិទ្យាសាស្ដ្រកុំព្យូទ័រ និងបង្កើតសិល្បៈផ្ទាល់ខ្លួន រួមទាំងរឿងរ៉ាវ ឬហ្គេម។
@@ -229,6 +264,8 @@ km:
               display_name: ដំឡើងទៅមេរៀន ច (ជាជម្រើសរបស់អ្នក)
             csf_f_2:
               display_name: មាតិកានៃមេរៀន ច
+            end_of_course_project:
+              display_name: ចុងបញ្ចប់នៃគម្រោង
         csd1-dlp-18:
           lesson_groups:
             required:
@@ -321,6 +358,8 @@ km:
           lesson_groups:
             csf_variables:
               display_name: អ​ថេរ
+            end_of_course_project:
+              display_name: ចុងបញ្ចប់នៃគម្រោង
         coursed-2019:
           lesson_groups:
             csf_sequencing:
@@ -331,10 +370,14 @@ km:
               display_name: រង្វិល​ជុំ
             csf_conditionals:
               display_name: លក្ខខណ្ឌ
+            end_of_course_project:
+              display_name: ចុងបញ្ចប់នៃគម្រោង
         coursee-2019:
           lesson_groups:
             csf_functions:
               display_name: អនុ​គមន៍
+            end_of_course_project:
+              display_name: ចុងបញ្ចប់នៃគម្រោង
         express-2019:
           description_short: 'សេចក្តីផ្តើមពីវិទ្យាសាស្ត្រកុំព្យូទ័រ៖ ប្រមូលផ្តុំកម្មវិធីថ្នាក់បឋមសិក្សាដ៏ល្អបំផុតរបស់យេីងសំរាប់សិស្សធំៗ។ '
           description_audience: 'អាយុ: ៩- ១៨'
@@ -366,6 +409,8 @@ km:
               display_name: រង្វិល​ជុំ
             csf_events:
               display_name: ព្រឹត្តិការណ៍
+            end_of_course_project:
+              display_name: ចុងបញ្ចប់នៃគម្រោង
         gamelab:
           title: មន្ទីរពិសោធន៍ ល្បែង
         coursea-2019:
@@ -568,6 +613,8 @@ km:
               display_name: លក្ខខណ្ឌ
             csf_functions:
               display_name: អនុ​គមន៍
+            end_of_course_project:
+              display_name: ចុងបញ្ចប់នៃគម្រោង
         time4cs-control-unit-1:
           lesson_groups:
             csf_sequencing:
@@ -631,6 +678,8 @@ km:
               display_name: រង្វិល​ជុំ
             csf_events:
               display_name: ព្រឹត្តិការណ៍
+            end_of_course_project:
+              display_name: ចុងបញ្ចប់នៃគម្រោង
         coursed-2020:
           lesson_groups:
             csf_sequencing:
@@ -641,15 +690,21 @@ km:
               display_name: រង្វិល​ជុំ
             csf_conditionals:
               display_name: លក្ខខណ្ឌ
+            end_of_course_project:
+              display_name: ចុងបញ្ចប់នៃគម្រោង
         coursee-2020:
           lesson_groups:
             csf_functions:
               display_name: អនុ​គមន៍
+            end_of_course_project:
+              display_name: ចុងបញ្ចប់នៃគម្រោង
         coursef-2020:
           description_short: សិក្សាអំពីក្បួនទាំងអស់ នៅក្នុងមូលដ្ឋានគ្រឹះនៃវិទ្យាសាស្ដ្រកុំព្យូទ័រ និងបង្កើតសិល្បៈផ្ទាល់ខ្លួន រួមទាំងរឿងរ៉ាវ ឬហ្គេម។
           lesson_groups:
             csf_variables:
               display_name: អ​ថេរ
+            end_of_course_project:
+              display_name: ចុងបញ្ចប់នៃគម្រោង
         express-2020:
           description_short: 'សេចក្តីផ្តើមពីវិទ្យាសាស្ត្រកុំព្យូទ័រ៖ ប្រមូលផ្តុំកម្មវិធីថ្នាក់បឋមសិក្សាដ៏ល្អបំផុតរបស់យេីងសំរាប់សិស្សធំៗ។ '
           description_audience: 'អាយុ: ៩- ១៨'
@@ -664,6 +719,8 @@ km:
               display_name: អនុ​គមន៍
             csf_variables:
               display_name: អ​ថេរ
+            end_of_course_project:
+              display_name: ចុងបញ្ចប់នៃគម្រោង
         pre-express-2020:
           description_short: 'សេចក្តីផ្តើមពីវិទ្យាសាស្ត្រកុំព្យូទ័រសំរាប់ក្មេងៗដែលមិនទាន់ចេះអាន ឬ ទេីបរៀនអាន៖ ប្រមូលផ្តុំនូវវគ្គសិក្សាថ្នាក់មតេយ្យ និង ថ្នាក់ទីមួយដ៏ល្អបំផុត។ '
           description_audience: 'អាយុ: ៤-៨'
@@ -703,6 +760,8 @@ km:
               display_name: រង្វិល​ជុំ
             csf_events:
               display_name: ព្រឹត្តិការណ៍
+            lessonGroup-5:
+              display_name: ចុងបញ្ចប់នៃគម្រោង
         courseb-2021:
           lesson_groups:
             csf_sequencing:
@@ -711,6 +770,8 @@ km:
               display_name: រង្វិល​ជុំ
             csf_events:
               display_name: ព្រឹត្តិការណ៍
+            lessonGroup-6:
+              display_name: ចុងបញ្ចប់នៃគម្រោង
         coursec-2021:
           lesson_groups:
             csf_sequencing:
@@ -719,6 +780,8 @@ km:
               display_name: រង្វិល​ជុំ
             csf_events:
               display_name: ព្រឹត្តិការណ៍
+            end_of_course_project:
+              display_name: ចុងបញ្ចប់នៃគម្រោង
           name: វគ្គសិក្សាស៊ី-2021
         coursed-2021:
           lesson_groups:
@@ -730,15 +793,21 @@ km:
               display_name: រង្វិល​ជុំ
             csf_conditionals:
               display_name: លក្ខខណ្ឌ
+            end_of_course_project:
+              display_name: ចុងបញ្ចប់នៃគម្រោង
         coursee-2021:
           lesson_groups:
             csf_nested_loops:
               display_name: លក្ខខណ្ឌ
             csf_functions:
               display_name: អនុ​គមន៍
+            end_of_course_project:
+              display_name: ចុងបញ្ចប់នៃគម្រោង
         coursef-2021:
           description_short: សិក្សាអំពីក្បួនទាំងអស់ នៅក្នុងមូលដ្ឋានគ្រឹះនៃវិទ្យាសាស្ដ្រកុំព្យូទ័រ និងបង្កើតសិល្បៈផ្ទាល់ខ្លួន រួមទាំងរឿងរ៉ាវ ឬហ្គេម។
           lesson_groups:
+            end_of_course_project:
+              display_name: ចុងបញ្ចប់នៃគម្រោង
             lessonGroup-8:
               display_name: អ​ថេរ
             lessonGroup-9:
@@ -757,6 +826,8 @@ km:
               display_name: អនុ​គមន៍
             csf_variables:
               display_name: អ​ថេរ
+            end_of_course_project:
+              display_name: ចុងបញ្ចប់នៃគម្រោង
             lessonGroup-9:
               display_name: ព្រឹត្តិការណ៍
         pre-express-2021:
@@ -799,6 +870,8 @@ km:
           lesson_groups:
             lessonGroup-3:
               display_name: អ​ថេរ
+            lessonGroup-4:
+              display_name: ចុងបញ្ចប់នៃគម្រោង
         coursea-2022:
           lesson_groups:
             csf_sequencing:
@@ -807,6 +880,8 @@ km:
               display_name: រង្វិល​ជុំ
             csf_events:
               display_name: ព្រឹត្តិការណ៍
+            lessonGroup-5:
+              display_name: ចុងបញ្ចប់នៃគម្រោង
           description_short: សេចក្តីណែនាំអំពី វិទ្យាសាស្ដ្រកុំព្យូទ័រ សម្រាប់អ្នកអានមុន។
         express-2022:
           lesson_groups:
@@ -822,6 +897,8 @@ km:
               display_name: អនុ​គមន៍
             csf_variables:
               display_name: អ​ថេរ
+            end_of_course_project:
+              display_name: ចុងបញ្ចប់នៃគម្រោង
           description_short: 'សេចក្តីផ្តើមពីវិទ្យាសាស្ត្រកុំព្យូទ័រ៖ ប្រមូលផ្តុំកម្មវិធីថ្នាក់បឋមសិក្សាដ៏ល្អបំផុតរបស់យេីងសំរាប់សិស្សធំៗ។ '
           description_audience: 'អាយុ: ៩- ១៨'
         csp4-2022:
@@ -846,6 +923,8 @@ km:
               display_name: រង្វិល​ជុំ
             csf_events:
               display_name: ព្រឹត្តិការណ៍
+            lessonGroup-6:
+              display_name: ចុងបញ្ចប់នៃគម្រោង
         coursec-2022:
           lesson_groups:
             csf_sequencing:
@@ -854,6 +933,8 @@ km:
               display_name: រង្វិល​ជុំ
             csf_events:
               display_name: ព្រឹត្តិការណ៍
+            end_of_course_project:
+              display_name: ចុងបញ្ចប់នៃគម្រោង
         coursed-2022:
           lesson_groups:
             csf_sequencing:
@@ -864,16 +945,22 @@ km:
               display_name: រង្វិល​ជុំ
             csf_conditionals:
               display_name: លក្ខខណ្ឌ
+            end_of_course_project:
+              display_name: ចុងបញ្ចប់នៃគម្រោង
         coursee-2022:
           lesson_groups:
             csf_functions:
               display_name: អនុ​គមន៍
             csf_nested_loops:
               display_name: លក្ខខណ្ឌ
+            end_of_course_project:
+              display_name: ចុងបញ្ចប់នៃគម្រោង
         coursef-2022:
           lesson_groups:
             lessonGroup-8:
               display_name: អ​ថេរ
+            end_of_course_project:
+              display_name: ចុងបញ្ចប់នៃគម្រោង
           description_short: សិក្សាអំពីក្បួនទាំងអស់ នៅក្នុងមូលដ្ឋានគ្រឹះនៃវិទ្យាសាស្ដ្រកុំព្យូទ័រ និងបង្កើតសិល្បៈផ្ទាល់ខ្លួន រួមទាំងរឿងរ៉ាវ ឬហ្គេម។
         pre-express-2022:
           lesson_groups:
@@ -889,6 +976,8 @@ km:
           lesson_groups:
             lessonGroup-8:
               display_name: អ​ថេរ
+            end_of_course_project:
+              display_name: ចុងបញ្ចប់នៃគម្រោង
           description_short: សិក្សាអំពីក្បួនទាំងអស់ នៅក្នុងមូលដ្ឋានគ្រឹះនៃវិទ្យាសាស្ដ្រកុំព្យូទ័រ និងបង្កើតសិល្បៈផ្ទាល់ខ្លួន រួមទាំងរឿងរ៉ាវ ឬហ្គេម។
         soccer:
           name: បាល់ទាត់
@@ -946,6 +1035,8 @@ km:
               display_name: អនុ​គមន៍
             csf_variables:
               display_name: អ​ថេរ
+            end_of_course_project:
+              display_name: ចុងបញ្ចប់នៃគម្រោង
           description_short: 'សេចក្តីផ្តើមពីវិទ្យាសាស្ត្រកុំព្យូទ័រ៖ ប្រមូលផ្តុំកម្មវិធីថ្នាក់បឋមសិក្សាដ៏ល្អបំផុតរបស់យេីងសំរាប់សិស្សធំៗ។ '
           description_audience: 'អាយុ: ៩- ១៨'
         coursea-2023:
@@ -956,6 +1047,8 @@ km:
               display_name: រង្វិល​ជុំ
             csf_events:
               display_name: ព្រឹត្តិការណ៍
+            lessonGroup-5:
+              display_name: ចុងបញ្ចប់នៃគម្រោង
           description_short: សេចក្តីណែនាំអំពី វិទ្យាសាស្ដ្រកុំព្យូទ័រ សម្រាប់អ្នកអានមុន។
         courseb-2023:
           lesson_groups:
@@ -965,6 +1058,8 @@ km:
               display_name: រង្វិល​ជុំ
             csf_events:
               display_name: ព្រឹត្តិការណ៍
+            lessonGroup-6:
+              display_name: ចុងបញ្ចប់នៃគម្រោង
         coursec-2023:
           lesson_groups:
             csf_sequencing:
@@ -973,6 +1068,8 @@ km:
               display_name: រង្វិល​ជុំ
             csf_events:
               display_name: ព្រឹត្តិការណ៍
+            end_of_course_project:
+              display_name: ចុងបញ្ចប់នៃគម្រោង
         coursed-2023:
           lesson_groups:
             csf_sequencing:
@@ -983,14 +1080,20 @@ km:
               display_name: រង្វិល​ជុំ
             csf_conditionals:
               display_name: លក្ខខណ្ឌ
+            end_of_course_project:
+              display_name: ចុងបញ្ចប់នៃគម្រោង
         coursee-2023:
           lesson_groups:
             csf_functions:
               display_name: អនុ​គមន៍
             csf_nested_loops:
               display_name: លក្ខខណ្ឌ
+            end_of_course_project:
+              display_name: ចុងបញ្ចប់នៃគម្រោង
         coursef-2023:
           lesson_groups:
             lessonGroup-4:
               display_name: អ​ថេរ
+            lessonGroup-6:
+              display_name: ចុងបញ្ចប់នៃគម្រោង
           description_short: សិក្សាអំពីក្បួនទាំងអស់ នៅក្នុងមូលដ្ឋានគ្រឹះនៃវិទ្យាសាស្ដ្រកុំព្យូទ័រ និងបង្កើតសិល្បៈផ្ទាល់ខ្លួន រួមទាំងរឿងរ៉ាវ ឬហ្គេម។

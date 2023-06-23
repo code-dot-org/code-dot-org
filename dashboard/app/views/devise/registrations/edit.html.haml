@@ -68,7 +68,7 @@
     - if experiment_value('gender')
       .field
         = f.label :gender_student_input, t('signup_form.gender'), class: "label-bold"
-        = f.text_field :gender_student_input, maxlength: 50
+        = f.text_field :gender_student_input, maxlength: 50, placeholder: t('signup_form.gender_placeholder')
   - if resource.teacher?
     .field
       = f.label :school, class: "label-bold"
