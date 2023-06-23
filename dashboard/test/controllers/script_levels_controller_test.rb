@@ -92,7 +92,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     script = create(:script)
     lesson_group = create(:lesson_group, script: script)
     lesson = create(:lesson, script: script, lesson_group: lesson_group)
-    level = create :music, name: 'music 1', properties: {level_data: {hello: "there"}, other: "other"}
+    level = create :maze, name: 'music 1', properties: {level_data: {hello: "there"}, other: "other"}
     script_level = create(
       :script_level,
       lesson: lesson,

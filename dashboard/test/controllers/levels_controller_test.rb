@@ -77,7 +77,7 @@ class LevelsControllerTest < ActionController::TestCase
   end
 
   test "should return level_properties " do
-    level = create :music, name: 'music 1', properties: {level_data: {hello: "there"}, other: "other"}
+    level = create :maze, name: 'music 1', properties: {level_data: {hello: "there"}, other: "other"}
 
     get :level_properties, params: {id: level}
     assert_response :success
