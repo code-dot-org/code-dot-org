@@ -13,6 +13,7 @@
   font-size: 14px;
   line-height: 1.5;
   display: flex;
+  overflow: hidden;
 
   &.vertical {
     flex-direction: column;
@@ -81,51 +82,53 @@
     }
 
     .text {
-      flex: 1;
       overflow-y: auto;
       white-space: pre-wrap;
+      flex: 1;
+    }
 
-      &.textVertical {
-        padding: 0 10px;
-        margin: 10px 0;
+    .markdownText {
+      line-height: 0;
+
+      h1 {
+        margin: 0 0 10px 0;
+        line-height: 1.2em;
+        color: white;
       }
 
+      h2 {
+        margin: 0 0 10px 0;
+      }
+
+      ol {
+        line-height: 0
+      }
+
+      li {
+        margin-bottom: 10px;
+      }
+    }
+
+    .feedback {
       .message {
-        margin-top: 30px;
+        margin-top: 10px;
         color: #ffa400;
-      }
-    }
-  }
 
-  .bottom {
-    text-align: right;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    align-content: center;
-
-    .progressText {
-      font-size: 12px;
-      margin: 0 10px;
-      color: $neutral_dark40;
-    }
-
-    .button {
-      font-size: 13px;
-      padding: 4px 8px;
-      opacity: 0;
-      pointer-events: none;
-
-      &.buttonActive {
-        opacity: 1;
-        pointer-events: auto;
+        p {
+          margin-bottom: 0;
+        }
       }
 
-      &.buttonNext {
-        color: $neutral_light;
-        border-color: $brand_secondary_default;
+      .buttonNext {
+        font-size: 14px;
         background-color: $brand_secondary_default;
+        border-color: $brand_secondary_default;
+        color: white;
+        width: 100%;
+        padding: 5px 10px;
+        border-radius: 8px;
+        height: 38px;
+        margin: 10px 0 0 0;
       }
     }
   }

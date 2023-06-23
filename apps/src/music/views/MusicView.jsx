@@ -607,7 +607,6 @@ class UnconnectedMusicView extends React.Component {
         >
           <Instructions
             progressionStep={this.progressManager.getProgressionStep()}
-            showProgressionStep={!this.isScriptLevel()}
             currentLevelIndex={this.props.currentLevelIndex}
             levelCount={this.props.levelCount}
             onNextPanel={this.onNextPanel}

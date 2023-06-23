@@ -11,7 +11,6 @@ import {useSelector} from 'react-redux';
  */
 const Instructions = ({
   progressionStep,
-  showProgressionStep,
   currentLevelIndex,
   levelCount,
   onNextPanel,
@@ -37,11 +36,7 @@ const Instructions = ({
     analyticsReporter.onInstructionsVisited(currentPanel + 1);
   }, [currentPanel, analyticsReporter]);
 
-  const nextPanel = getNextPanel();
-
-  const progressText = progressionStep
-    ? `${currentPanel + 1}/${levelCount}`
-    : '';
+  const nextPanel = progressState.satisfied ? getNextPanel() : null;
 
   return (
     <div
@@ -61,35 +56,15 @@ const Instructions = ({
           imageClicked={imageClicked}
           right={right}
           showBigImage={showBigImage}
+          onNextPanel={nextPanel ? onNextPanel : null}
         />
       )}
-      <div className={moduleStyles.bottom}>
-        {showProgressionStep && (
-          <div className={moduleStyles.progressText}>{progressText}</div>
-        )}
-        <div>
-          {progressState.satisfied && (
-            <button
-              type="button"
-              onClick={() => onNextPanel()}
-              className={classNames(
-                moduleStyles.button,
-                moduleStyles.buttonNext,
-                nextPanel !== null && moduleStyles.buttonActive
-              )}
-            >
-              Next
-            </button>
-          )}
-        </div>
-      </div>
     </div>
   );
 };
 
 Instructions.propTypes = {
   progressionStep: PropTypes.object,
-  showProgressionStep: PropTypes.bool,
   currentLevelIndex: PropTypes.number,
   levelCount: PropTypes.number,
   message: PropTypes.string,
@@ -108,9 +83,11 @@ const InstructionsPanel = ({
   imageClicked,
   right,
   showBigImage,
+  onNextPanel,
 }) => {
   return (
     <div
+      id="instructions-panel"
       className={classNames(
         moduleStyles.item,
         vertical && moduleStyles.itemVertical
@@ -156,17 +133,37 @@ const InstructionsPanel = ({
           )}
         </div>
       )}
-      <div
-        className={classNames(
-          moduleStyles.text,
-          vertical && moduleStyles.textVertical
-        )}
-      >
-        {panel.text && <SafeMarkdown markdown={panel.text} />}
-        {message && (
-          <SafeMarkdown markdown={message} className={moduleStyles.message} />
-        )}
-      </div>
+      {panel.text && (
+        <div id="instructions-text" className={moduleStyles.text}>
+          <SafeMarkdown
+            markdown={panel.text}
+            className={moduleStyles.markdownText}
+          />
+        </div>
+      )}
+      {message && (
+        <div id="instructions-feedback" className={moduleStyles.feedback}>
+          <div
+            id="instructions-feedback-message"
+            className={moduleStyles.message}
+          >
+            <SafeMarkdown
+              markdown={message}
+              className={moduleStyles.markdownText}
+            />
+          </div>
+          {onNextPanel && (
+            <button
+              id="instructions-feedback-button"
+              type="button"
+              onClick={() => onNextPanel()}
+              className={moduleStyles.buttonNext}
+            >
+              Next
+            </button>
+          )}
+        </div>
+      )}
     </div>
   );
 };
@@ -180,6 +177,7 @@ InstructionsPanel.propTypes = {
   showBigImage: PropTypes.bool,
   vertical: PropTypes.bool,
   right: PropTypes.bool,
+  onNextPanel: PropTypes.func,
 };
 
 export default Instructions;
