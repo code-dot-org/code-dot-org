@@ -3,8 +3,7 @@ require 'email_reminder'
 
 class EmailReminderTest < ActiveSupport::TestCase
   setup_all do
-    @student = create :student
-    @student.update(child_account_compliance_state: 'not_g')
+    @student = create(:student, child_account_compliance_state: 'not_g')
     @request = ParentalPermissionRequest.create(user_id: @student.id, parent_email: 'foo-parent@code.org')
   end
 
