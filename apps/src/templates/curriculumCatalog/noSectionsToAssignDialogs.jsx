@@ -6,18 +6,51 @@ import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
 import Typography from '@cdo/apps/componentLibrary/typography';
 import style from './no_sections_to_assign_dialog.module.scss';
 
+const signInURL = `/users/sign_in?user_return_to=${location.pathname}`;
+const upgradeAccountArticleURL =
+  'https://support.code.org/hc/en-us/articles/360023222371-How-can-I-change-my-account-type-from-student-to-teacher-or-vice-versa';
+
 export const SignInToAssignSectionsDialog = ({onClose}) => (
   <NoSectionsToAssignBaseDialog
     headerText={i18n.signInToAssign()}
     helpText={i18n.signInToAssignHelpText()}
     onClose={onClose}
     buttonText={i18n.signInOrCreateAccount()}
-    href={`/users/sign_in?user_return_to=${location.pathname}`}
+    href={signInURL}
   />
 );
 
 SignInToAssignSectionsDialog.propTypes = {
   onClose: PropTypes.func.isRequired,
+};
+
+export const UpgradeAccountToAssignSectionsDialog = ({onClose}) => (
+  <NoSectionsToAssignBaseDialog
+    headerText={i18n.upgradeAccountToAssign()}
+    helpText={i18n.upgradeAccountToAssignHelpText()}
+    onClose={onClose}
+    buttonText={i18n.upgradeAccountToAssignButtonText()}
+    href={upgradeAccountArticleURL}
+  />
+);
+
+UpgradeAccountToAssignSectionsDialog.propTypes = {
+  onClose: PropTypes.func.isRequired,
+};
+
+export const CreateSectionsToAssignSectionsDialog = ({onClose, onClick}) => (
+  <NoSectionsToAssignBaseDialog
+    headerText={i18n.createClassSectionsToAssign()}
+    helpText={i18n.createClassSectionsToAssignHelpText()}
+    onClose={onClose}
+    buttonText={i18n.createClassSectionToAssignButton()}
+    onClick={onClick}
+  />
+);
+
+CreateSectionsToAssignSectionsDialog.propTypes = {
+  onClose: PropTypes.func.isRequired,
+  onClick: PropTypes.func.isRequired,
 };
 
 const NoSectionsToAssignBaseDialog = ({
@@ -26,7 +59,12 @@ const NoSectionsToAssignBaseDialog = ({
   onClose,
   buttonText,
   href,
+  onClick,
 }) => {
+  if (!(Boolean(onClick) ^ Boolean(href))) {
+    throw new Error('Expect exactly one of onClick or href');
+  }
+
   return (
     <AccessibleDialog onClose={onClose} className={style.dialogContainer}>
       <Typography semanticTag="h3" tabIndex="0">
@@ -44,12 +82,21 @@ const NoSectionsToAssignBaseDialog = ({
             onClick={onClose}
             color={Button.ButtonColor.neutralDark}
           />
-          <Button
-            __useDeprecatedTag
-            href={href}
-            text={buttonText}
-            color={Button.ButtonColor.brandSecondaryDefault}
-          />
+          {href && (
+            <Button
+              __useDeprecatedTag
+              href={href}
+              text={buttonText}
+              color={Button.ButtonColor.brandSecondaryDefault}
+            />
+          )}
+          {onClick && (
+            <Button
+              onClick={onClick}
+              text={buttonText}
+              color={Button.ButtonColor.brandSecondaryDefault}
+            />
+          )}
         </div>
       </div>
     </AccessibleDialog>
@@ -61,5 +108,7 @@ NoSectionsToAssignBaseDialog.propTypes = {
   helpText: PropTypes.string.isRequired,
   onClose: PropTypes.func.isRequired,
   buttonText: PropTypes.string.isRequired,
-  href: PropTypes.string.isRequired,
+  href: PropTypes.string,
+  onClick: PropTypes.func,
+  openInNewTab: PropTypes.bool,
 };
