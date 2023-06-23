@@ -767,7 +767,7 @@ GEM
       rubocop (>= 1.7.0, < 2.0)
     rubocop-rails-accessibility (0.2.0)
       rubocop (>= 1.0.0)
-    ruby-openid (2.7.0)
+    ruby-openid (2.9.2)
     ruby-prof (0.15.9)
     ruby-progressbar (1.11.0)
     ruby-rc4 (0.1.5)
