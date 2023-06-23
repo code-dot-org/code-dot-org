@@ -245,7 +245,7 @@ class UnconnectedMusicView extends React.Component {
     if (!prevProps.labReadyForReload && this.props.labReadyForReload) {
       if (this.getStartSources() || this.props.source) {
         let codeToLoad = this.getStartSources();
-        if (this.props.source && this.props.source.source) {
+        if (this.props.source?.source) {
           codeToLoad = JSON.parse(this.props.source.source);
         }
         this.musicBlocklyWorkspace.loadCode(codeToLoad);

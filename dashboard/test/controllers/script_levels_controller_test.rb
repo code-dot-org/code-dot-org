@@ -88,11 +88,11 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     AzureTextToSpeech.unstub(:get_voices)
   end
 
-  test "should return level_data " do
+  test "should return level_properties " do
     script = create(:script)
     lesson_group = create(:lesson_group, script: script)
     lesson = create(:lesson, script: script, lesson_group: lesson_group)
-    level = create :maze, name: 'music 1', properties: {level_data: {hello: "there"}, other: "other"}
+    level = create :music, name: 'music 1', properties: {level_data: {hello: "there"}, other: "other"}
     script_level = create(
       :script_level,
       lesson: lesson,
@@ -100,11 +100,11 @@ class ScriptLevelsControllerTest < ActionController::TestCase
       levels: [level]
     )
 
-    get :level_data, params: script_level_params(script_level)
+    get :level_properties, params: script_level_params(script_level)
     assert_response :success
 
     body = JSON.parse(response.body)
-    assert_equal({"level_data" => {"hello" => "there"}}, body)
+    assert_equal({"level_data" => {"hello" => "there"}, "other" => "other"}, body)
   end
 
   test 'should show script level for csp1-2020 lockable lesson with lesson plan' do

@@ -45,6 +45,10 @@
   right: 0;
   font-size: 13px;
 
+  &Loading {
+    pointer-events: none;
+  }
+
   .solidBlock {
     display: flex;
     align-items: center;

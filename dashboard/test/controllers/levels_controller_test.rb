@@ -76,14 +76,14 @@ class LevelsControllerTest < ActionController::TestCase
     )
   end
 
-  test "should return level_data " do
-    level = create :maze, name: 'music 1', properties: {level_data: {hello: "there"}, other: "other"}
+  test "should return level_properties " do
+    level = create :music, name: 'music 1', properties: {level_data: {hello: "there"}, other: "other"}
 
-    get :level_data, params: {id: level}
+    get :level_properties, params: {id: level}
     assert_response :success
 
     body = JSON.parse(response.body)
-    assert_equal({"level_data" => {"hello" => "there"}}, body)
+    assert_equal({"level_data" => {"hello" => "there"}, "other" => "other"}, body)
   end
 
   test "should get filtered levels with just page param" do
