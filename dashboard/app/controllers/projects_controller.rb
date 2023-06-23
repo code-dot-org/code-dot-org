@@ -308,7 +308,12 @@ class ProjectsController < ApplicationController
     user_storage_id = get_storage_id
     # Find the channel for the user and level if it exists, or create a new one.
     channel_token = ChannelToken.find_or_create_channel_token(level, request.ip, user_storage_id, script_id, {hidden: true})
-    render(status: :ok, json: {channel: channel_token.channel})
+    script_name = !script_id.nil? && Unit.find(script_id)&.name
+    # We can limit channel updates during periods of high use using the updateChannelOnSave flag.
+    reduce_channel_updates = script_name ?
+                              !Gatekeeper.allows("updateChannelOnSave", where: {script_name: script_name}, default: true) :
+                              false
+    render(status: :ok, json: {channel: channel_token.channel, reduceChannelUpdates: reduce_channel_updates})
   end
 
   def weblab_footer
