@@ -1,0 +1,12 @@
+- if request.language == "en"
+  %h2=hoc_s(:teach_page_pl_offerings_english_header)
+-else
+  %h2=hoc_s(:teach_page_pl_offerings_intl_header)
+%div.grid-container
+  - if request.language == "en"
+    = view :teach_page_pl_list_workshops
+    = view :teach_page_pl_list_self_paced
+  - else
+    = view :teach_page_pl_list_self_paced
+    = view :teach_page_pl_list_workshops
+  = view :teach_page_pl_list_forums
