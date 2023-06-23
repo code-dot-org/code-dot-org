@@ -5,10 +5,8 @@
 %div.grid-container
   - if request.language == "en"
     = view :teach_page_pl_list_workshops
-  - else
-    = view :teach_page_pl_list_self_paced
-  - if request.language == "en"
     = view :teach_page_pl_list_self_paced
   - else
+    = view :teach_page_pl_list_self_paced
     = view :teach_page_pl_list_workshops
   = view :teach_page_pl_list_forums
