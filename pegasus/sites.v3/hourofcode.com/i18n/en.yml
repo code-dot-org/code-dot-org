@@ -103,6 +103,7 @@
   call_to_action_explore_unit: 'Explore unit'
   call_to_action_explore_curriculum: 'Explore curriculum'
   call_to_action_explore_modules: "Explore modules"
+  call_to_action_explore_workshops: "Explore workshops"
   call_to_action_view_lesson_plan: 'View lesson plan'
   call_to_action_self_paced_pl: 'Start self-paced professional learning'
   call_to_action_watch_panel: 'Watch panel'
@@ -439,13 +440,16 @@
   teach_page_resources_desc: "Signing up for a Code.org account gives you access to materials that will help you teach computer science with confidence. Code.org has extensive resources designed to support educators, even those without prior CS teaching experience. Click the tabs to learn more about the resources."
   teach_page_curriculum_heading: "Curriculum offerings students love"
   teach_page_curriculum_desc: "There are so many amazing offerings to explore. Here are just a few of our new and popular offerings."
+  teach_page_pl_offerings_english_header: "Professional learning offerings that meet your needs"
   teach_page_pl_offerings_intl_header: "Explore professional learning offerings"
-  teach_page_pl_offerings_intl_list_heading_01: "Self-Paced Online Modules"
-  teach_page_pl_offerings_intl_list_desc_01: "These modules allow you to engage at your own pace and on your own time while focusing on areas most important to your needs and teaching context."
-  teach_page_pl_offerings_intl_list_heading_02: "Workshops"
-  teach_page_pl_offerings_intl_list_desc_02: "We are partnering with organizations around the world to help bring Computer Science to all students. Learn more about what professional learning opportunities may be available to teachers in your country."
-  teach_page_pl_offerings_intl_list_heading_03: "Teacher Community"
-  teach_page_pl_offerings_intl_list_desc_03: "A forum for teachers to ask questions and share best practices, thoughts, ideas, and inspiration. Join a community of amazing educators bringing computer science into classrooms around the world!"
+  teach_page_pl_offerings_list_heading_self_paced: "Self-Paced Online Modules"
+  teach_page_pl_offerings_intl_desc_self_paced: "These modules allow you to engage at your own pace and on your own time while focusing on areas most important to your needs and teaching context."
+  teach_page_pl_offerings_list_heading_workshops_facilitator_led: "Facilitator-led Workshops"
+  teach_page_pl_offerings_list_heading_workshops: "Workshops"
+  teach_page_pl_offerings_list_desc_workshops_en: "With our Regional Partners as hosts and our Code.org facilitators as guides, our workshops around the country focus on reflection, discussion, and growth-oriented learning."
+  teach_page_pl_offerings_list_desc_workshops_intl: "We are partnering with organizations around the world to help bring Computer Science to all students. Learn more about what professional learning opportunities may be available to teachers in your country."
+  teach_page_pl_offerings_list_heading_forums: "Teacher Community"
+  teach_page_pl_offerings_list_desc_forums: "A forum for teachers to ask questions and share best practices, thoughts, ideas, and inspiration. Join a community of amazing educators bringing computer science into classrooms around the world!"
   teach_page_additional_materials_heading: "Additional supports and materials"
   teach_page_additional_materials_desc: "Beyond curriculum and professional learning we have many materials to support your classroom."
   teach_page_additional_materials_list_heading_01: "Career Education"

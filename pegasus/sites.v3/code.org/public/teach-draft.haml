@@ -139,10 +139,7 @@ theme: responsive_full_width
 
 %section.pl-offerings.bg-neutral-light.centered
   .wrapper
-    - if request.language == "en"
-      = view :teach_page_pl_english
-    - else
-      = view :teach_page_pl_intl
+    = view :teach_page_pl
 
 - if request.language == "en"
   %section.bg-primary-light.centered
