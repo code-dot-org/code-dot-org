@@ -1440,7 +1440,6 @@
         "courseD_maze_nestedLoops42022": "Help me tot bij de zonnebloem!",
         "courseD_maze_ramp12022": "Plak alle blokken aaneen bij deze puzzel en klik op \"Start\" om het te zien bewegen!",
         "courseD_maze_ramp22022": "Versleep een extra `ga voorwaarts` blok uit de gereedschapskist, en koppel alle blokken aan `als gestart` om je code te vervolledigen.",
-        "courseE_artist_functions102022": "Gebruik deze keer rijen van 8 zeshoeken met zijden van 25 pizels.\n\n-   Om een zeshoek te tekenen, herhaal je de zijde 6 keer waarna je telkens 60 graden draait.\n-   Spring na elke zeshoek 25 pixels vooruit.\n-   Om een ruit te tekenen, zul je om de beurt 60 graden en 120 graden moeten draaien.",
         "courseE_artist_functions_challenge12022": "Zodra je eenmaal een functie hebt gemaakt, kun je hem steeds maar weer opnieuw aanroepen - waar je maar wilt, en hoe vaak je maar wilt! Probeer eens uit hoe deze code werkt, en verander hem dan om je eigen indrukwekkend ontwerp te maken!",
         "courseE_artist_functions_challenge22022": "Je kunt niet alleen naar een aantal vaste plaatsen springen. Met het `jump to`-blok (spring naar) kun je naar elke willekeurige plaats springen! Probeer dit programma uit om te kijken hoe het werkt, en maak er dan je eigen programma van!\n\n<xml>\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">???</title>\n    <title name=\"YPOS\">???</title>\n    </block></xml>",
         "courseE_artist_functions_predict12022": "Hier is een puzzle die de functie gebruikt die we gemaakt hebben.",

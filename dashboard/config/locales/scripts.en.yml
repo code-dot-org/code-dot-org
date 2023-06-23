@@ -10562,7 +10562,7 @@ en:
               display_name: For Loops
             end_of_course_project:
               display_name: End of Course Project
-          title: Express Course (2022)
+          title: Express Course (2023)
           description: Learn computer science by trying the lessons below at your own pace! Learn to create computer programs, develop problem-solving skills, and work through fun challenges! Make games and creative projects to share with friends, family, and teachers.
           student_description: Learn computer science by trying the lessons below at your own pace! Learn to create computer programs, develop problem-solving skills, and work through fun challenges! Make games and creative projects to share with friends, family, and teachers.
           description_short: 'An introduction to computer science: combines the best of our elementary school curriculum for older students.'
@@ -10581,7 +10581,7 @@ en:
               display_name: Events
             lessonGroup-5:
               display_name: End of Course Project
-          title: Course A (2022)
+          title: Course A (2023)
           description: 'Course A offers a computer science curriculum for beginning readers, including Kindergarten students. Students will learn to program using commands like loops and events. The lessons featured in this course also teach students to meaningfully collaborate with others, investigate different problem-solving techniques, persist in the face of challenging tasks, and learn about internet safety. '
           student_description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
           description_short: An introduction to computer science for pre-readers.
@@ -10602,7 +10602,7 @@ en:
               display_name: Events
             lessonGroup-6:
               display_name: End of Course Project
-          title: Course B (2022)
+          title: Course B (2023)
           description: We developed Course B with first graders in mind. While the concepts in Course B parallel those in Course A, students learn more sophisticated unplugged activities and work through a greater variety of puzzles. Students will learn the basics of programming, collaboration techniques, investigation and critical thinking skills, persistence in the face of difficulty, and internet safety. At the end of this course, students create games in the Play Lab programming environment.
           student_description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
           description_short: An introduction to computer science for pre-readers. Similar to Course A, but with added concept depth.
@@ -10623,7 +10623,7 @@ en:
               display_name: Data
             end_of_course_project:
               display_name: End of Course Project
-          title: Course C (2022)
+          title: Course C (2023)
           description: We developed Course C for students in second grade. Students will create programs with sequencing, loops, and events. They will investigate problem-solving techniques and develop strategies for building positive communities both online and offline. By the end of the course, students will create interactive games that they can share.
           student_description: Create programs with sequencing, loops, and events. Translate your initials into binary, investigate different problem-solving techniques, and learn how to respond to cyberbullying. At the end of the course, create your very own game or story you can share!
           description_short: Learn the basics of computer science and create your own art, stories, and games.
@@ -10644,7 +10644,7 @@ en:
               display_name: Conditionals
             end_of_course_project:
               display_name: End of Course Project
-          title: Course D (2022)
+          title: Course D (2023)
           description: 'We created course D for students in third grade.  The course begins with a review of the concepts found in earlier courses, including loops and events. Afterward, students will develop their understanding of algorithms, nested loops, while loops, conditionals, and more. '
           student_description: Learn about loops, conditionals, and events. Beyond coding, learn about digital citizenship.
           description_short: Learn about conditional statements. Create your own art, games, and even a dance party.
@@ -10667,7 +10667,7 @@ en:
               display_name: Impacts of Computing
             end_of_course_project:
               display_name: End of Course Project
-          title: Course E (2022)
+          title: Course E (2023)
           description: We created Course E for students in fourth grade. The course begins with an introduction to the Sprite Lab programming tool. Students will learn to make fun, interactive projects that reinforce what they’ll learn about online safety. Following these lessons, students will engage in more complex coding. Students will learn about nested loops, functions, and conditionals. By the end of the course, students will combine these concepts to solve challenging puzzles. The course ends with an open-ended project where students create a game or drawing.
           student_description: Start coding with algorithms, events, loops, conditionals, and functions! By the end of this course, design and create a game or drawing that you can share with your friends and family.
           description_short: Learn the basics of sprites, nested loops, and functions.
@@ -12313,15 +12313,90 @@ en:
               name: FRQ 4
           lesson_groups:
             lessonGroup-2:
-              display_name: FRQ 1
+              display_name: Methods & Control Structures
             lessonGroup-3:
-              display_name: FRQ 2
+              display_name: Classes
             lessonGroup-4:
-              display_name: FRQ 3
+              display_name: Arrays / ArrayLists
             lessonGroup-5:
-              display_name: FRQ 4
+              display_name: 2D Arrays
           name: csa-frq-practice-2019
           title: CSA FRQ Practice 2019
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csa-frq-practice-2021:
+          lessons:
+            lesson-1:
+              name: WordMatch
+            lesson-2:
+              name: SingleTable
+            lesson-3:
+              name: ClubMembers
+            lesson-4:
+              name: ArrayResizer
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Methods and Control Structures
+            lessonGroup-3:
+              display_name: Classes
+            lessonGroup-4:
+              display_name: Arrays / ArrayLists
+            lessonGroup-5:
+              display_name: 2D Arrays
+          name: csa-frq-practice-2021
+          title: CSA FRQ Practice 2021
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csa-frq-practice-2022:
+          lessons:
+            lesson-1:
+              name: Game
+            lesson-2:
+              name: Textbook
+            lesson-3:
+              name: ReviewAnalysis
+            lesson-4:
+              name: Data
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Methods and Control Structures
+            lessonGroup-3:
+              display_name: Classes
+            lessonGroup-4:
+              display_name: Arrays / ArrayLists
+            lessonGroup-5:
+              display_name: 2D Arrays
+          name: csa-frq-practice-2022
+          title: CSA FRQ Practice 2022
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csa-frq-practice-2023:
+          lessons:
+            lesson-1:
+              name: AppointmentBook
+            lesson-2:
+              name: Sign
+            lesson-3:
+              name: WeatherData
+            lesson-4:
+              name: BoxOfCandy
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Methods and Control Structures
+            lessonGroup-3:
+              display_name: Classes
+            lessonGroup-4:
+              display_name: Arrays / ArrayLists
+            lessonGroup-5:
+              display_name: 2D Arrays
+          name: csa-frq-practice-2023
+          title: CSA FRQ Practice 2023
           description_audience: ''
           description_short: ''
           description: ''

@@ -495,7 +495,8 @@
           "Wrangell-St. Elias is the largest national park, even bigger than many countries!": "Врангель-Сент-Еліас - найбільший національний парк, навіть більший за багато країн!",
           "Great Smoky Mountains is the most visited, with more than 11 million visitors every year.": "Найбільш відвідуваним є парк \"Грейт-Смокі-Маунтінс\", який щороку відвідують понад 11 мільйонів туристів.",
           "Sequoia is home to the biggest tree in the world, the General Sherman Tree.": "Секвойя є домом для найбільшого дерева у світі - Дерева Генерала Шермана.",
-          "Play Again": "Зіграти ще раз"
+          "Play Again": "Зіграти ще раз",
+          "Correct!": "Правильно!"
         },
         "CSD U1 processing npark_2022": {
           "Sorry!": "Вибачте!",
@@ -522,7 +523,8 @@
           "Wrangell-St. Elias is the largest national park, even bigger than many countries!": "Врангель-Сент-Еліас - найбільший національний парк, навіть більший за багато країн!",
           "Great Smoky Mountains is the most visited, with more than 11 million visitors every year.": "Найбільш відвідуваним є парк \"Грейт-Смокі-Маунтінс\", який щороку відвідують понад 11 мільйонів туристів.",
           "Sequoia is home to the biggest tree in the world, the General Sherman Tree.": "Секвойя є домом для найбільшого дерева у світі - Дерева Генерала Шермана.",
-          "Play Again": "Зіграти ще раз"
+          "Play Again": "Зіграти ще раз",
+          "Correct!": "Правильно!"
         },
         "CSD U1 processing writers_2021": {
           "1": "1",
@@ -1427,7 +1429,8 @@
           "When?": "Коли?",
           "About Us": "Про нас",
           "Why?": "Чому?",
-          "Next Question": "Наступне питання."
+          "Next Question": "Наступне питання.",
+          "Correct!": "Правильно!"
         },
         "CSDU4 Quiz App Demo_2018": {
           "About": "Про нас",
@@ -1435,7 +1438,8 @@
           "When?": "Коли?",
           "About Us": "Про нас",
           "Why?": "Чому?",
-          "Next Question": "Наступне питання."
+          "Next Question": "Наступне питання.",
+          "Correct!": "Правильно!"
         },
         "CSDU4 Quiz App Demo_2019": {
           "About": "Про нас",
@@ -1443,7 +1447,8 @@
           "When?": "Коли?",
           "About Us": "Про нас",
           "Why?": "Чому?",
-          "Next Question": "Наступне питання."
+          "Next Question": "Наступне питання.",
+          "Correct!": "Правильно!"
         },
         "CSDU6 - UI and Inputs - getNumber": {
           "+": "+",
@@ -1761,7 +1766,8 @@
           "Wrangell-St. Elias is the largest national park, even bigger than many countries!": "Врангель-Сент-Еліас - найбільший національний парк, навіть більший за багато країн!",
           "Great Smoky Mountains is the most visited, with more than 11 million visitors every year.": "Найбільш відвідуваним є парк \"Грейт-Смокі-Маунтінс\", який щороку відвідують понад 11 мільйонів туристів.",
           "Sequoia is home to the biggest tree in the world, the General Sherman Tree.": "Секвойя є домом для найбільшого дерева у світі - Дерева Генерала Шермана.",
-          "Play Again": "Зіграти ще раз"
+          "Play Again": "Зіграти ще раз",
+          "Correct!": "Правильно!"
         },
         "csd-explore ui-4_2022": {
           "Sorry!": "Вибачте!",
@@ -1788,7 +1794,8 @@
           "Wrangell-St. Elias is the largest national park, even bigger than many countries!": "Врангель-Сент-Еліас - найбільший національний парк, навіть більший за багато країн!",
           "Great Smoky Mountains is the most visited, with more than 11 million visitors every year.": "Найбільш відвідуваним є парк \"Грейт-Смокі-Маунтінс\", який щороку відвідують понад 11 мільйонів туристів.",
           "Sequoia is home to the biggest tree in the world, the General Sherman Tree.": "Секвойя є домом для найбільшого дерева у світі - Дерева Генерала Шермана.",
-          "Play Again": "Зіграти ще раз"
+          "Play Again": "Зіграти ще раз",
+          "Correct!": "Правильно!"
         },
         "csd-explore ui-5": {
           "1": "1",
@@ -2078,13 +2085,15 @@
           "rain": "дощ",
           "snow": "сніг",
           "cloudy": "хмарно",
-          "night": "ніч"
+          "night": "ніч",
+          "Get Started": "Початок роботи"
         },
         "ml-use model card-example3A_2022": {
           "rain": "дощ",
           "snow": "сніг",
           "cloudy": "хмарно",
-          "night": "ніч"
+          "night": "ніч",
+          "Get Started": "Початок роботи"
         },
         "CSD U1 processing countries_2021": {
           "How Many Countries...": "Скільки країн...",
@@ -2309,6 +2318,42 @@
           "Dollars per person": "Сума у доларах на людину",
           "Where Should I Eat?": "Де поїсти?",
           "$15": " 15 доларів"
+        },
+        "AppLab Intro 7 - Change Text 2": {
+          "Make me bigger and blue!": "Зроби мене більшим і синім!"
+        },
+        "AppLab Intro 7 - Full Text": {
+          "Make me red!": "Зроби мене червоним!",
+          "Make me blue!": "Зроби мене синім!",
+          "Write code to change my text!": "Напиши код, щоб змінити мій текст!"
+        },
+        "AppLab Intro 7 - onEvent intro": {
+          "Green-ify!": "Зазеленій!"
+        },
+        "AppLab Intro 7 - onEvent twoButtons": {
+          "Flashlight App": "Ліхтарик"
+        },
+        "AppLab Intro 7 - playSound": {
+          "Horse!": "Кінь!",
+          "You Choose!": "Обирай!",
+          "Animal Sound Board!!!": "Звуки тварин!!!",
+          "Monkey!": "Мавпа!",
+          "Tiger!": "Тигр!"
+        },
+        "AppLab Intro 7 - thisOrThatAddButton": {
+          "This!": "Це!",
+          "This or That?!": "Це або те?!",
+          "You clicked this!": "Ви клацнули це!"
+        },
+        "AppLab Intro 7 - thisOrThatPersonalize": {
+          "This!": "Це!",
+          "This or That?!": "Це або те?!",
+          "You clicked this!": "Ви клацнули це!"
+        },
+        "AppLab Intro 7 - thisOrThatSetScreen": {
+          "This!": "Це!",
+          "This or That?!": "Це або те?!",
+          "You clicked this!": "Ви клацнули це!"
         }
       }
     }

@@ -170,6 +170,7 @@ en:
     school_address: 'School Address (optional)'
     address_placeholder: 'address, city, state, zip'
     gender: 'Gender (optional)'
+    gender_placeholder: 'Type your gender here'
     birthday: 'Birthday (optional)'
     age: 'Age'
     user_type: 'Are you a student or teacher?'
