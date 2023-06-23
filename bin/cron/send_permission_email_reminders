@@ -28,8 +28,8 @@ OptionParser.new do |opts|
     options[:min_reminder_age] = min_age_days.days.ago
   end
 
-  opts.on('--max-reminders', 'Max number of reminders to send for a given request. Defaults to 1.') do |max_reminders|
-    options[:max_reminders] = max_reminders
+  opts.on('--dry-run', 'Create the reminder emails without actually sending them') do |dry_run|
+    options[:dry_run] = dry_run
   end
 
   opts.on('-h', '--help', 'Print this') do

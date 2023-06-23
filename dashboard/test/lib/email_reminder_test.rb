@@ -5,6 +5,12 @@ class EmailReminderTest < ActiveSupport::TestCase
   setup_all do
     @student = create(:student, child_account_compliance_state: 'not_g')
     @request = create(:parental_permission_request, user_id: @student.id, parent_email: 'foo-parent@code.org')
+
+    Cdo::Metrics.expects(:push).never
+    AWS::S3::LogUploader.expects(:upload_log).never
+    EmailReminder.any_instance.stubs :upload_activity_log
+    EmailReminder.any_instance.stubs :upload_metrics
+    EmailReminder.any_instance.stubs :say
   end
 
   test 'finds a permission request that needs a reminder' do

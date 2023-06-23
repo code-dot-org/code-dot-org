@@ -59,6 +59,8 @@ class EmailReminder
       send_permission_reminder_email request.id
       @num_reminders_sent += 1
     end
+
+    report_results
   end
 
   private
