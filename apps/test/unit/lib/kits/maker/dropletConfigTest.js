@@ -89,20 +89,6 @@ describe('maker/dropletConfig.js', () => {
       ).to.deep.equal(['"change"', '"data"']);
     });
 
-    // Enable when captouch is on by default
-    describe.skip('touchPads', () => {
-      [0, 1, 2, 3, 6, 9, 10, 12].forEach(pin => {
-        it(`touchPad${pin} dropdown`, () => {
-          expect(
-            dropletConfig.getBoardEventDropdownForParam(
-              `touchPad${pin}`,
-              CP_COMPONENT_EVENTS
-            )
-          ).to.deep.equal(['"down"', '"up"']);
-        });
-      });
-    });
-
     // micro:bit specific components
     it('buttonA dropdown', () => {
       expect(
