@@ -102,7 +102,7 @@ module Pd::Application
     end
 
     test 'accepted_at updates times' do
-      today = Time.zone.today.to_time
+      today = Date.today.to_time
       tomorrow = Date.tomorrow.to_time
       application = create :pd_teacher_application
       assert_nil application.accepted_at
@@ -205,18 +205,18 @@ module Pd::Application
     test 'get_first_selected_workshop single local workshop' do
       Pd::Workshop.any_instance.stubs(:process_location)
 
-      workshop = create :workshop, location_address: 'Address', sessions_from: Time.zone.today, num_sessions: 1
+      workshop = create :workshop, location_address: 'Address', sessions_from: Date.today, num_sessions: 1
       application = create :pd_teacher_application, form_data_hash: (
       build :pd_teacher_application_hash,
         regional_partner_workshop_ids: [workshop.id],
-        able_to_attend_multiple: ["#{Time.zone.today.strftime '%B %-d, %Y'} in Address"]
+        able_to_attend_multiple: ["#{Date.today.strftime '%B %-d, %Y'} in Address"]
       )
 
       assert_equal workshop, application.get_first_selected_workshop
     end
 
     test 'get_first_selected_workshop multiple local workshops' do
-      workshops = (1..3).map {|i| create :workshop, num_sessions: 2, sessions_from: Time.zone.today + i, location_address: %w(tba TBA tba)[i - 1]}
+      workshops = (1..3).map {|i| create :workshop, num_sessions: 2, sessions_from: Date.today + i, location_address: %w(tba TBA tba)[i - 1]}
 
       application = create :pd_teacher_application, form_data_hash: (
       build(:pd_teacher_application_hash, :with_multiple_workshops,
@@ -233,7 +233,7 @@ module Pd::Application
     end
 
     test 'get_first_selected_workshop multiple local workshops no selection returns first' do
-      workshops = (1..2).map {|i| create :workshop, num_sessions: 2, sessions_from: Time.zone.today + i}
+      workshops = (1..2).map {|i| create :workshop, num_sessions: 2, sessions_from: Date.today + i}
 
       application = create :pd_teacher_application, form_data_hash: (
       build(:pd_teacher_application_hash, :with_multiple_workshops,
@@ -269,7 +269,7 @@ module Pd::Application
     end
 
     test 'get_first_selected_workshop ignores deleted workshop from multiple list' do
-      workshops = (1..2).map {|i| create :workshop, num_sessions: 2, sessions_from: Time.zone.today + i}
+      workshops = (1..2).map {|i| create :workshop, num_sessions: 2, sessions_from: Date.today + i}
 
       application = create :pd_teacher_application, form_data_hash: (
       build(:pd_teacher_application_hash, :with_multiple_workshops,
@@ -286,8 +286,8 @@ module Pd::Application
     end
 
     test 'get_first_selected_workshop picks correct workshop even when multiple are on the same day' do
-      workshop_1 = create :workshop, num_sessions: 2, sessions_from: Time.zone.today + 2
-      workshop_2 = create :workshop, num_sessions: 2, sessions_from: Time.zone.today + 2
+      workshop_1 = create :workshop, num_sessions: 2, sessions_from: Date.today + 2
+      workshop_2 = create :workshop, num_sessions: 2, sessions_from: Date.today + 2
       workshop_1.update_column(:location_address, 'Location 1')
       workshop_2.update_column(:location_address, 'Location 2')
 
