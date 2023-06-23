@@ -70,6 +70,28 @@ export interface Level {
   isAquaticLevel: boolean;
 }
 
+export interface LevelProperties {
+  // Not a complete list; add properties as needed.
+  isProjectLevel: boolean;
+  hideAndShareRemix: boolean;
+  levelData: LevelData;
+}
+
+// Generic level configuration data used by labs that don't require
+// reloads between levels. Labs may define more specific fields.
+export interface LevelData {
+  text: string;
+  validations: Validation[];
+  startSources: Source;
+}
+
+// Validation in the level.
+export interface Validation {
+  conditions: string[];
+  message: string;
+  next: boolean;
+}
+
 // TODO: these are not all the properties of app options.
 // Fill this in as we need them.
 export interface AppOptions {

@@ -90,10 +90,10 @@ export const getProgressLevelType = state => {
 };
 
 /**
- * Returns the dashboard URL path to retrieve the level_data for a script
+ * Returns the dashboard URL path to retrieve the level properties for a script
  * level (if we have lessons) or a level (if we don't have lessons).
  */
-export const getLevelDataPath = state => {
+export const getLevelPropertiesPath = state => {
   if (state.progress.lessons) {
     const scriptName = state.progress.scriptName;
     const lessonPosition = state.progress.lessons?.find(
@@ -104,10 +104,10 @@ export const getLevelDataPath = state => {
         state.progress,
         state.progress.currentLessonId
       ).findIndex(level => level.isCurrentLevel) + 1;
-    return `/s/${scriptName}/lessons/${lessonPosition}/levels/${levelNumber}/level_data`;
+    return `/s/${scriptName}/lessons/${lessonPosition}/levels/${levelNumber}/level_properties`;
   } else {
     const levelId = state.progress.currentLevelId;
-    return `/levels/${levelId}/level_data`;
+    return `/levels/${levelId}/level_properties`;
   }
 };
 

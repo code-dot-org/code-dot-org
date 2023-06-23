@@ -10,7 +10,13 @@ import {
   PayloadAction,
   ThunkDispatch,
 } from '@reduxjs/toolkit';
-import {Channel, ProjectManagerStorageType, Source} from './types';
+import {
+  Channel,
+  LevelData,
+  LevelProperties,
+  ProjectManagerStorageType,
+  Source,
+} from './types';
 import LabRegistry from './LabRegistry';
 import ProjectManagerFactory from './projects/ProjectManagerFactory';
 import {
@@ -20,6 +26,7 @@ import {
   setProjectUpdatedSaved,
 } from '../code-studio/projectRedux';
 import ProjectManager from './projects/ProjectManager';
+import HttpClient from '../util/HttpClient';
 
 interface LabState {
   // If we are currently loading a lab.
@@ -29,6 +36,8 @@ interface LabState {
   channel: Channel | undefined;
   // last saved source for the current project, or undefined if we have not loaded or saved yet.
   source: Source | undefined;
+  // Level data for the current level
+  levelData: LevelData | undefined;
   // Whether the lab is ready for a reload.  This is used to manage the case where multiple loads
   // happen in a row, and we only want to reload the lab when we are done.
   labReadyForReload: boolean;
@@ -39,6 +48,7 @@ const initialState: LabState = {
   isPageError: false,
   channel: undefined,
   source: undefined,
+  levelData: undefined,
   labReadyForReload: false,
 };
 
@@ -49,13 +59,22 @@ const initialState: LabState = {
 // If we get an aborted signal, we will exit early.
 export const setUpForLevel = createAsyncThunk(
   'lab/setUpForLevel',
-  async (payload: {levelId: number; scriptId: number}, thunkAPI) => {
+  async (
+    payload: {levelId: number; scriptId: number; levelPropertiesPath: string},
+    thunkAPI
+  ) => {
     // Check for an existing project manager and clean it up, if it exists.
     const existingProjectManager =
       LabRegistry.getInstance().getProjectManager();
     // Save any usaved code and clear out any remaining enqueued
     // saves from the existing project manager.
     await existingProjectManager?.cleanUp();
+
+    // Load level properties
+    const levelProperties = await loadLevelProperties(
+      payload.levelPropertiesPath
+    );
+
     // Create a new project manager.
     const projectManager =
       await ProjectManagerFactory.getProjectManagerForLevel(
@@ -78,7 +97,11 @@ export const setUpForLevel = createAsyncThunk(
       return thunkAPI.rejectWithValue(projectResponse);
     }
     const {source, channel} = await projectResponse.json();
-    setProjectData(source, channel, thunkAPI.signal.aborted, thunkAPI.dispatch);
+    setProjectAndLevelData(
+      {source, channel, levelData: levelProperties.levelData},
+      thunkAPI.signal.aborted,
+      thunkAPI.dispatch
+    );
   }
 );
 
@@ -101,7 +124,11 @@ export const loadProject = createAsyncThunk(
       return thunkAPI.rejectWithValue(projectResponse);
     }
     const {source, channel} = await projectResponse.json();
-    setProjectData(source, channel, thunkAPI.signal.aborted, thunkAPI.dispatch);
+    setProjectAndLevelData(
+      {source, channel},
+      thunkAPI.signal.aborted,
+      thunkAPI.dispatch
+    );
   }
 );
 
@@ -120,6 +147,9 @@ const labSlice = createSlice({
     },
     setSource(state, action: PayloadAction<Source>) {
       state.source = action.payload;
+    },
+    setLevelData(state, action: PayloadAction<LevelData>) {
+      state.levelData = action.payload;
     },
     setLabReadyForReload(state, action: PayloadAction<boolean>) {
       state.labReadyForReload = action.payload;
@@ -185,14 +215,17 @@ async function setUpAndLoadProject(
   return await projectManager.load();
 }
 
-// Helper function to set the channel and source in redux.
+// Helper function to set the channel, source, and level data in redux.
 // If aborted is true, we won't set anything in redux. Once
 // we are done, we will mark the lab as ready for reload.
 // This should be called from a thunk, which will provide its
 // thunk dispatch method.
-function setProjectData(
-  source: Source,
-  channel: Channel,
+function setProjectAndLevelData(
+  data: {
+    source: Source;
+    channel: Channel;
+    levelData?: LevelData;
+  },
   aborted: boolean,
   dispatch: ThunkDispatch<unknown, unknown, AnyAction>
 ) {
@@ -200,9 +233,22 @@ function setProjectData(
   if (aborted) {
     return;
   }
+  const {channel, source, levelData} = data;
   dispatch(setChannel(channel));
   dispatch(setSource(source));
+  if (levelData) {
+    dispatch(setLevelData(levelData));
+  }
   dispatch(setLabReadyForReload(true));
+}
+
+async function loadLevelProperties(
+  levelPropertiesPath: string
+): Promise<LevelProperties> {
+  const response = await HttpClient.fetchJson<LevelProperties>(
+    levelPropertiesPath
+  );
+  return response.value;
 }
 
 export const {
@@ -210,6 +256,7 @@ export const {
   setIsPageError,
   setChannel,
   setSource,
+  setLevelData,
   setLabReadyForReload,
 } = labSlice.actions;
 

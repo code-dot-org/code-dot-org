@@ -11,6 +11,7 @@ import {ProjectManagerStorageType} from '@cdo/apps/labs/types';
 import LabRegistry from '../LabRegistry';
 import {loadProject, setUpForLevel} from '../labRedux';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
+import {getLevelPropertiesPath} from '@cdo/apps/code-studio/progressReduxSelectors';
 
 const ProjectContainer: React.FunctionComponent<ProjectContainerProps> = ({
   children,
@@ -25,6 +26,8 @@ const ProjectContainer: React.FunctionComponent<ProjectContainerProps> = ({
   const scriptId = useSelector(
     (state: {progress: {scriptId: number}}) => state.progress.scriptId
   );
+
+  const levelPropertiesPath = useSelector(getLevelPropertiesPath);
 
   const dispatch = useAppDispatch();
 
@@ -47,7 +50,11 @@ const ProjectContainer: React.FunctionComponent<ProjectContainerProps> = ({
       promise = dispatch(loadProject());
     } else {
       promise = dispatch(
-        setUpForLevel({levelId: parseInt(currentLevelId), scriptId})
+        setUpForLevel({
+          levelId: parseInt(currentLevelId),
+          scriptId,
+          levelPropertiesPath,
+        })
       );
     }
     return () => {
@@ -55,7 +62,7 @@ const ProjectContainer: React.FunctionComponent<ProjectContainerProps> = ({
       // An early return could happen if the level is changed mid-load.
       promise.abort();
     };
-  }, [channelId, currentLevelId, scriptId, dispatch]);
+  }, [channelId, currentLevelId, scriptId, levelPropertiesPath, dispatch]);
 
   useEffect(() => {
     window.addEventListener('beforeunload', event => {

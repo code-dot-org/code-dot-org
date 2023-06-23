@@ -17,11 +17,7 @@ import Globals from '../globals';
 import MusicBlocklyWorkspace from '../blockly/MusicBlocklyWorkspace';
 import AppConfig, {getBlockMode, setAppConfig} from '../appConfig';
 import SoundUploader from '../utils/SoundUploader';
-import {
-  baseUrl,
-  loadLibrary,
-  loadProgressionStepFromSource,
-} from '../utils/Loader';
+import {baseUrl, loadLibrary} from '../utils/Loader';
 import ProgressManager from '../progress/ProgressManager';
 import MusicValidator from '../progress/MusicValidator';
 import Video from './Video';
@@ -37,7 +33,6 @@ import {
   addPlaybackEvents,
   clearPlaybackEvents,
   getCurrentlyPlayingBlockIds,
-  setLevelCount,
 } from '../redux/musicRedux';
 import KeyHandler from './KeyHandler';
 import {
@@ -46,7 +41,6 @@ import {
 } from '@cdo/apps/code-studio/progressRedux';
 import {
   levelsForLessonId,
-  getLevelDataPath,
   ProgressLevelType,
   getProgressLevelType,
 } from '@cdo/apps/code-studio/progressReduxSelectors';
@@ -89,8 +83,6 @@ class UnconnectedMusicView extends React.Component {
     currentLevelIndex: PropTypes.number,
     levels: PropTypes.array,
     currentLevelId: PropTypes.string,
-    levelCount: PropTypes.number,
-    levelDataPath: PropTypes.string,
     userId: PropTypes.number,
     userType: PropTypes.string,
     signInState: PropTypes.oneOf(Object.values(SignInState)),
@@ -118,8 +110,8 @@ class UnconnectedMusicView extends React.Component {
     setProjectUpdatedError: PropTypes.func,
     setIsLoading: PropTypes.func,
     setIsPageError: PropTypes.func,
-    setLevelCount: PropTypes.func,
     source: PropTypes.object,
+    levelData: PropTypes.object,
     labReadyForReload: PropTypes.bool,
     setLabReadyForReload: PropTypes.func,
   };
@@ -150,7 +142,6 @@ class UnconnectedMusicView extends React.Component {
 
     this.state = {
       showingVideo: true,
-      changingPanels: false,
     };
 
     // Music Lab currently does not support share and remix
@@ -189,9 +180,6 @@ class UnconnectedMusicView extends React.Component {
         musicValidator,
         this.onProgressChange
       );
-
-      // Load progress data for current step.
-      promises.push(this.loadProgressionStep());
     }
 
     Promise.all(promises)
@@ -207,13 +195,10 @@ class UnconnectedMusicView extends React.Component {
         Globals.setLibrary(this.library);
         Globals.setPlayer(this.player);
 
-        this.setAllowedSoundsForProgress();
-
         this.musicBlocklyWorkspace.init(
           document.getElementById('blockly-div'),
           this.onBlockSpaceChange,
-          this.player,
-          this.progressManager?.getCurrentStepDetails().toolbox
+          this.player
         );
         this.player.initialize(this.library);
         setInterval(this.updateTimer, 1000 / 30);
@@ -256,17 +241,24 @@ class UnconnectedMusicView extends React.Component {
       this.updateHighlightedBlocks();
     }
     // If we just finished loading the lab, then we need to update the
-    // sources in musicBlocklyWorkspace.
-    if (
-      !prevProps.labReadyForReload &&
-      this.props.labReadyForReload &&
-      (this.getStartSources() || this.props.source)
-    ) {
-      let codeToLoad = this.getStartSources();
-      if (this.props.source && this.props.source.source) {
-        codeToLoad = JSON.parse(this.props.source.source);
+    // sources and level data.
+    if (!prevProps.labReadyForReload && this.props.labReadyForReload) {
+      if (this.getStartSources() || this.props.source) {
+        let codeToLoad = this.getStartSources();
+        if (this.props.source && this.props.source.source) {
+          codeToLoad = JSON.parse(this.props.source.source);
+        }
+        this.musicBlocklyWorkspace.loadCode(codeToLoad);
       }
-      this.musicBlocklyWorkspace.loadCode(codeToLoad);
+
+      // Update components with level-specific data
+      if (this.props.levelData) {
+        this.progressManager.setLevelData(this.props.levelData);
+        this.musicBlocklyWorkspace.updateToolbox(this.props.levelData.toolbox);
+        this.library.setAllowedSounds(this.props.levelData.sounds);
+        this.props.setShowInstructions(!!this.props.levelData.text);
+      }
+
       this.props.setLabReadyForReload(false);
     }
   }
@@ -308,6 +300,20 @@ class UnconnectedMusicView extends React.Component {
     return this.props.progressLevelType === ProgressLevelType.SCRIPT_LEVEL;
   };
 
+  getLevelCount = () => {
+    if (!this.hasProgression()) {
+      return 0;
+    }
+
+    // Determine the level count from the external array of levels.
+    if (this.isScriptLevel()) {
+      return this.props.levels.length;
+    }
+
+    // This must be a single level.
+    return 1;
+  };
+
   // Returns whether we have a progression.
   // Note that even a single level has a progression in the sense that we
   // will show instructions and feedback, but we'll only show them for that
@@ -345,33 +351,7 @@ class UnconnectedMusicView extends React.Component {
   // we need to update our progress manager to reflect that.
   goToPanel = () => {
     this.progressManager?.goToStep(this.props.currentLevelIndex);
-
-    // If we are already changing panels, then the existing execution of handlePanelChange
-    // will detect the change in active level and start loading again.
-    if (!this.state.changingPanels) {
-      this.handlePanelChange();
-    }
-  };
-
-  // Handle a change in panel for progress and toolbox.
-  // Also handles a change in the active level index during this load.
-  handlePanelChange = async () => {
-    this.setState({changingPanels: true});
-
-    let currentLevelIndexLoading;
-
     this.stopSong();
-
-    do {
-      currentLevelIndexLoading = this.props.currentLevelIndex;
-
-      await this.loadProgressionStep();
-
-      this.setToolboxForProgress();
-      this.setAllowedSoundsForProgress();
-    } while (currentLevelIndexLoading !== this.props.currentLevelIndex);
-
-    this.setState({changingPanels: false});
   };
 
   setToolboxForProgress = () => {
@@ -396,37 +376,14 @@ class UnconnectedMusicView extends React.Component {
     );
   };
 
-  loadProgressionStep = async () => {
-    let progressionStep;
-
-    try {
-      progressionStep = await loadProgressionStepFromSource(
-        this.props.levelDataPath
-      );
-    } catch (e) {
-      this.onError(e);
-    }
-
-    if (this.isScriptLevel()) {
-      // Determine the level count from the external array of levels.
-      this.props.setLevelCount(this.props.levels.length);
-    } else {
-      // This must be a single level.
-      this.props.setLevelCount(1);
-    }
-
-    this.progressManager.setProgressionStep(progressionStep);
-    this.props.setShowInstructions(!!progressionStep?.text);
-  };
-
   clearCode = () => {
     this.musicBlocklyWorkspace.loadCode(this.getStartSources());
     this.setPlaying(false);
   };
 
   getStartSources = () => {
-    if (this.hasProgression()) {
-      return this.progressManager.getProgressionStep().startSources;
+    if (this.hasProgression() && this.props.levelData) {
+      return this.props.levelData.startSources;
     } else {
       const startSourcesFilename = 'startSources' + getBlockMode();
       return require(`@cdo/static/music/${startSourcesFilename}.json`);
@@ -606,10 +563,10 @@ class UnconnectedMusicView extends React.Component {
           headerText={musicI18n.panelHeaderInstructions()}
         >
           <Instructions
-            progressionStep={this.progressManager.getProgressionStep()}
+            progressionStep={this.props.levelData}
             showProgressionStep={!this.isScriptLevel()}
             currentLevelIndex={this.props.currentLevelIndex}
-            levelCount={this.props.levelCount}
+            levelCount={this.getLevelCount()}
             onNextPanel={this.onNextPanel}
             baseUrl={baseUrl}
             vertical={position !== InstructionsPositions.TOP}
@@ -751,12 +708,6 @@ const MusicView = connect(
     // directly viewing a single level.
     currentLevelId: state.progress.currentLevelId,
 
-    // The number of levels.
-    levelCount: state.music.levelCount,
-
-    // The URL path for retrieving level_data from the server.
-    levelDataPath: getLevelDataPath(state),
-
     userId: state.currentUser.userId,
     userType: state.currentUser.userType,
     signInState: state.currentUser.signInState,
@@ -770,6 +721,7 @@ const MusicView = connect(
     currentScriptId: state.progress.scriptId,
     currentlyPlayingBlockIds: getCurrentlyPlayingBlockIds(state),
     source: state.lab.source,
+    levelData: state.lab.levelData,
     labReadyForReload: state.lab.labReadyForReload,
   }),
   dispatch => ({
@@ -788,7 +740,6 @@ const MusicView = connect(
     clearPlaybackEvents: () => dispatch(clearPlaybackEvents()),
     addPlaybackEvents: playbackEvents =>
       dispatch(addPlaybackEvents(playbackEvents)),
-    setLevelCount: levelCount => dispatch(setLevelCount(levelCount)),
     sendSuccessReport: appType => dispatch(sendSuccessReport(appType)),
     setProjectUpdatedSaving: () => dispatch(setProjectUpdatedSaving()),
     setProjectUpdatedAt: updatedAt => dispatch(setProjectUpdatedAt(updatedAt)),
