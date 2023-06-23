@@ -5,24 +5,21 @@
   =hoc_s(:resources_tabs_heading)
 %p.centered
   =hoc_s(:resources_tabs_desc, markdown: :inline, locals: {sign_up_url: CDO.studio_url("/users/sign_up")})
+
+-# Shows tabs UI on desktop
 .resources-tabs.show-desktop
   -# Tabs nav
-  %ul.flex-container.justify-space-between
-    %li
-      %button.tab.active{"data-content": "#lesson-plans"}
-        =hoc_s(:resources_tabs_tab_label_lesson_plans)
-    %li
-      %button.tab{"data-content": "#videos"}
-        =hoc_s(:resources_tabs_tab_label_videos)
-    %li
-      %button.tab{"data-content": "#slides"}
-        =hoc_s(:resources_tabs_tab_label_slides)
-    %li
-      %button.tab{"data-content": "#assessments"}
-        =hoc_s(:resources_tabs_tab_label_assessments)
-    %li
-      %button.tab{"data-content": "#tools"}
-        =hoc_s(:resources_tabs_tab_label_tools)
+  %nav.flex-container.justify-space-between
+    %button.tab.active{"data-content": "#lesson-plans"}
+      =hoc_s(:resources_tabs_tab_label_lesson_plans)
+    %button.tab{"data-content": "#videos"}
+      =hoc_s(:resources_tabs_tab_label_videos)
+    %button.tab{"data-content": "#slides"}
+      =hoc_s(:resources_tabs_tab_label_slides)
+    %button.tab{"data-content": "#assessments"}
+      =hoc_s(:resources_tabs_tab_label_assessments)
+    %button.tab{"data-content": "#tools"}
+      =hoc_s(:resources_tabs_tab_label_tools)
   -# Tabs content
   %div#lesson-plans.content.show
     = view :resources_tabs_content_lesson_plans
@@ -35,6 +32,7 @@
   %div#tools.content
     = view :resources_tabs_content_tools
 
+-# Shows accordion UI on smaller screens
 .resources-tabs.show-tablet-and-mobile
   %details
     %summary=hoc_s(:resources_tabs_tab_label_lesson_plans)

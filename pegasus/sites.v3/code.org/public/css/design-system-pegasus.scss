@@ -1018,48 +1018,41 @@ section.quote {
   margin-top: 2rem;
   height: 408px;
 
-  ul {
-    list-style: none;
+  nav {
     border-bottom: 6px solid $brand_primary_default;
     margin: 0 0 3rem;
 
-    li {
-      all: unset;
+    button.tab {
+      color: $neutral_dark;
+      background: $neutral_white;
+      border: 1px solid $neutral_dark20;
+      border-bottom: 0;
+      border-radius: 6px 6px 0 0;
+      padding: 0.75rem 0.25rem 0.7rem;
+      margin: 0;
+      width: 11.75rem;
+      cursor: pointer;
+      white-space: normal;
+      height: -webkit-fit-content;
 
-      &:before {
-        content: "";
+      &:hover {
+        background-color: $neutral_dark10;
       }
-    }
-  }
 
-  button.tab {
-    color: $neutral_dark;
-    background: $neutral_white;
-    border: 1px solid $neutral_dark20;
-    border-bottom: 0;
-    border-radius: 6px 6px 0 0;
-    padding: 0.75rem 0.25rem 0.7rem;
-    margin: 0;
-    width: 11.75rem;
-    cursor: pointer;
-    white-space: normal;
-    height: -webkit-fit-content;
+      // Selected tab's styles
+      &.active,
+      &.active:focus:not(:focus-visible) {
+        background-color: $brand_primary_default;
+        color: $neutral_white;
+        border-color: $brand_primary_default;
+      }
 
-    &:hover {
-      background-color: $neutral_dark10;
-    }
-
-    &:focus {
-      outline: unset;
-      border-color: $brand_primary_default;
-      background-color: $neutral_dark10;
-    }
-
-    // Selected tab's styles
-    &.active {
-      background-color: $brand_primary_default;
-      color: $neutral_white;
-      border-color: $brand_primary_default;
+      &:focus {
+        outline: unset;
+        border-color: $brand_primary_default;
+        background-color: $neutral_dark10;
+        color: $neutral_dark;
+      }
     }
   }
 
