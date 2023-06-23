@@ -117,11 +117,9 @@ theme: responsive_full_width
         %a.link-button{href: CDO.studio_url("/catalog?grade=grade_10&grade=grade_11&grade=grade_12&grade=grade_9")}
           =hoc_s(:grade_level_label_high)
 
-%section.resources.bg-neutral-light.centered
+%section.resources.bg-neutral-light
   .wrapper
-    %h2=hoc_s(:teach_page_resources_heading)
-    %p=hoc_s(:teach_page_resources_desc)
-    -# RESOURCES TABS HERE
+    = view :resources_tabs
 
 %section.curriculum-offerings
   .wrapper
