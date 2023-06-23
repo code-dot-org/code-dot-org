@@ -126,7 +126,7 @@ export default class TutorialDetail extends React.Component {
               className="modal-dialog modal-lg"
               onClick={e => e.stopPropagation()}
             >
-              <div className="modal-content">
+              <div className="modal-content" aria-modal="true" role="dialog">
                 <div
                   className="modal-header"
                   style={styles.tutorialDetailModalHeader}

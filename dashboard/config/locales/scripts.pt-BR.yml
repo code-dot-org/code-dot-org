@@ -5884,15 +5884,22 @@ pt:
           lesson_groups:
             cspSurvey:
               display_name: Questionário
+          title: Desenvolvimento Web ('22-'23)
+          student_description: Nesta unidade, você aprenderá como criar e compartilhar
+            conteúdo em suas páginas web. Após decidir qual conteúdo você quer compartilhar
+            com o mundo, você aprenderá como estruturar e estilizar suas páginas usando
+            HTML e CSS. Você também praticará habilidades valiosas de programação
+            como depuração, usar recursos e trabalho em equipe.
           description_short: " Aprenda a criar seu próprio site no Web Lab."
         csd3-2022:
           lesson_groups:
             csd3_1:
-              display_name: 'Capítulo 1: Imagens e Amimações'
+              display_name: 'Capítulo 1: Imagens e Animações'
             csd3_2:
               display_name: 'Capítulo 2: Construindo Jogos'
             cspSurvey:
               display_name: Questionário
+          title: Jogos e Animações interativas
           student_description: " Na Unidade 3, você aproveitará sua experiência de
             codificação ao programar animações, arte interativa e jogos no Laboratório
             de Jogos. A unidade começa com formas simples e cria jogos sofisticados
@@ -5941,6 +5948,13 @@ pt:
           lesson_groups:
             lessonGroup-4:
               display_name: Questionário
+          title: Inteligência Artificial e Aprendizado de Máquina
+          student_description: Esta unidade é uma introdução prática ao desenvolvimento
+            de modelos de aprendizado de máquina com dados tabulares. Você aprenderá
+            como os computadores aprendem através dos dados e então desenvolverá seu
+            próprio projeto de aprendizado de máquina através de dados reais. A unidade
+            finaliza com o desenvolvimento de seu própio aplicativo de aprendizado
+            de máquina para resolver um problema relevante para você.
         csd6-2022:
           lesson_groups:
             lessonGroup-3:
@@ -6179,6 +6193,12 @@ pt:
               display_name: 'Capítulo 1: O Processo de Solução de Problemas'
             lessonGroup-3:
               display_name: 'Capítulo 2: Computadores e Solução de Problemas'
+        csd2-2023:
+          student_description: Nesta unidade, você aprenderá como criar e compartilhar
+            conteúdo em suas páginas web. Após decidir qual conteúdo você quer compartilhar
+            com o mundo, você aprenderá como estruturar e estilizar suas páginas usando
+            HTML e CSS. Você também praticará habilidades valiosas de programação
+            como depuração, usar recursos e trabalho em equipe.
         csd4-2023:
           lesson_groups:
             lessonGroup-2:
@@ -6235,6 +6255,12 @@ pt:
               display_name: Capítulo 2
             lessonGroup-4:
               display_name: Introdução Laboratório de Aplicativos
+          student_description: Esta unidade é uma introdução prática ao desenvolvimento
+            de modelos de aprendizado de máquina com dados tabulares. Você aprenderá
+            como os computadores aprendem através dos dados e então desenvolverá seu
+            próprio projeto de aprendizado de máquina através de dados reais. A unidade
+            finaliza com o desenvolvimento de seu própio aplicativo de aprendizado
+            de máquina para resolver um problema relevante para você.
         physcomp-temp:
           lesson_groups:
             lessonGroup-3:
@@ -6495,6 +6521,11 @@ pt:
           lesson_groups:
             lessonGroup-4:
               display_name: Questionário
+          student_description: Nesta unidade, você aprenderá como criar e compartilhar
+            conteúdo em suas páginas web. Após decidir qual conteúdo você quer compartilhar
+            com o mundo, você aprenderá como estruturar e estilizar suas páginas usando
+            HTML e CSS. Você também praticará habilidades valiosas de programação
+            como depuração, usar recursos e trabalho em equipe.
         interactive-games-animations-2023:
           lesson_groups:
             lessonGroup-2:
@@ -6554,10 +6585,22 @@ pt:
               display_name: Capítulo 2
             lessonGroup-5:
               display_name: Questionário
+          student_description: Esta unidade é uma introdução prática ao desenvolvimento
+            de modelos de aprendizado de máquina com dados tabulares. Você aprenderá
+            como os computadores aprendem através dos dados e então desenvolverá seu
+            próprio projeto de aprendizado de máquina através de dados reais. A unidade
+            finaliza com o desenvolvimento de seu própio aplicativo de aprendizado
+            de máquina para resolver um problema relevante para você.
         focus-on-creativity1-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Capítulo 1: O Processo de Solução de Problemas'
+        focus-on-creativity2-2023:
+          student_description: Nesta unidade, você aprenderá como criar e compartilhar
+            conteúdo em suas páginas web. Após decidir qual conteúdo você quer compartilhar
+            com o mundo, você aprenderá como estruturar e estilizar suas páginas usando
+            HTML e CSS. Você também praticará habilidades valiosas de programação
+            como depuração, usar recursos e trabalho em equipe.
         focus-on-creativity3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -6647,10 +6690,22 @@ pt:
               display_name: Capítulo 1
             lessonGroup-4:
               display_name: Capítulo 2
+          student_description: Esta unidade é uma introdução prática ao desenvolvimento
+            de modelos de aprendizado de máquina com dados tabulares. Você aprenderá
+            como os computadores aprendem através dos dados e então desenvolverá seu
+            próprio projeto de aprendizado de máquina através de dados reais. A unidade
+            finaliza com o desenvolvimento de seu própio aplicativo de aprendizado
+            de máquina para resolver um problema relevante para você.
         focus-on-design-with-purpose1-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Capítulo 1: O Processo de Solução de Problemas'
+        focus-on-design-with-purpose2-2023:
+          student_description: Nesta unidade, você aprenderá como criar e compartilhar
+            conteúdo em suas páginas web. Após decidir qual conteúdo você quer compartilhar
+            com o mundo, você aprenderá como estruturar e estilizar suas páginas usando
+            HTML e CSS. Você também praticará habilidades valiosas de programação
+            como depuração, usar recursos e trabalho em equipe.
         focus-on-design-with-purpose3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -6674,6 +6729,12 @@ pt:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Capítulo 1: O Processo de Solução de Problemas'
+        focus-on-coding2-2023:
+          student_description: Nesta unidade, você aprenderá como criar e compartilhar
+            conteúdo em suas páginas web. Após decidir qual conteúdo você quer compartilhar
+            com o mundo, você aprenderá como estruturar e estilizar suas páginas usando
+            HTML e CSS. Você também praticará habilidades valiosas de programação
+            como depuração, usar recursos e trabalho em equipe.
         focus-on-coding3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -6734,6 +6795,12 @@ pt:
               display_name: Introdução Laboratório de Aplicativos
             lessonGroup-4:
               display_name: Capítulo 2
+          student_description: Esta unidade é uma introdução prática ao desenvolvimento
+            de modelos de aprendizado de máquina com dados tabulares. Você aprenderá
+            como os computadores aprendem através dos dados e então desenvolverá seu
+            próprio projeto de aprendizado de máquina através de dados reais. A unidade
+            finaliza com o desenvolvimento de seu própio aplicativo de aprendizado
+            de máquina para resolver um problema relevante para você.
         csd6a-2023:
           lesson_groups:
             lessonGroup-3:

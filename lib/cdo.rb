@@ -175,11 +175,12 @@ module Cdo
     end
 
     def javabuilder_demo_url(path = '', scheme = '')
-      'wss://javabuilder-demo.code.org'
+      DCDO.get("javabuilder_demo_websocket_url", 'wss://javabuilder-demo.code.org')
     end
 
     def javabuilder_demo_upload_url(path = '', scheme = '')
-      'https://javabuilder-demo-http.code.org/seedsources/sources.json'
+      http_url = DCDO.get("javabuilder_demo_http_url", 'https://javabuilder-demo-http.code.org')
+      http_url + "/seedsources/sources.json"
     end
 
     # Get a list of all languages for which we want to link to a localized
