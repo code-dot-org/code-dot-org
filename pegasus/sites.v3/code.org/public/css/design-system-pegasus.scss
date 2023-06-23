@@ -68,10 +68,13 @@ i.fa-fw {
   display: flex;
 
   &.justify-space-between { justify-content: space-between }
+  &.justify-center { justify-content: center }
   &.justify-end { justify-content: end; }
+  &.align-content-baseline { align-content: baseline; }
   &.align-items-center { align-items: center; }
   &.align-items-start { align-items: flex-start; }
   &.wrap { flex-wrap: wrap; }
+  &.wrap-reverse { flex-wrap: wrap-reverse; }
 }
 
 // Grid container
@@ -100,9 +103,21 @@ div.divider {
   }
 }
 
+// Add rounded corners to an element
+.rounded-corners {
+  border-radius: $border-radius;
+}
+
+// Add a thick box shadow to an element
+// See code.org/teach for an example
+.box-shadow-primary {
+  box-shadow: 8px 8px 0 $brand_primary_light;
+}
+
 // Lines (<hr>)
 hr {
   border-top: 1px solid $neutral_dark20;
+  margin: 3rem 0;
 
   &.dark {
     border-top: 1px solid $neutral_dark60;
@@ -882,6 +897,44 @@ form {
     @media screen and (max-width: $width-md) {
       margin-top: 3rem;
     }
+  }
+}
+
+// Individual quote section
+// See code.org/teach for an example
+section.quote {
+  background: url("/images/banners/banner-bg-lines-neutral-dark.png") center repeat;
+  background-size: contain;
+  background-color: $neutral-dark;
+
+  p {
+    font-size: 1.25rem;
+    color: $neutral_white;
+    font-family: $barlowSemiCondensed-medium;
+
+    &.quote-text {
+      font-size: 1.35rem;
+
+      &:before, &:after {
+        font: var(--fa-font-solid);
+        color: $brand_primary_default;
+      }
+
+      &::before {
+        content: "\f10d";
+        margin: 0 8px 0 0;
+      }
+
+      &::after {
+        content: "\f10e";
+        margin: 0 0 0 8px;
+      }
+    }
+  }
+
+  span {
+    color: $brand_accent_default;
+    margin: 0 2px;
   }
 }
 
