@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-05-19 23:53:05 UTC",
+    "serialized_at": "2023-06-23 01:04:19 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -888,6 +888,17 @@
       },
       "seeding_key": {
         "activity_section.key": "8f427a6e-3c4d-463f-9f1a-5dc25325a53e",
+        "lesson_activity.key": "bbbf800f-3ca2-46e9-b54f-c43c611d6d22"
+      }
+    },
+    {
+      "key": "a33034ed-040c-48a1-a8b3-e70a70949fff",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:**Watch the video [r data_analysis_process/csp/2023]"
+      },
+      "seeding_key": {
+        "activity_section.key": "a33034ed-040c-48a1-a8b3-e70a70949fff",
         "lesson_activity.key": "bbbf800f-3ca2-46e9-b54f-c43c611d6d22"
       }
     },
@@ -3384,6 +3395,18 @@
       }
     },
     {
+      "name": "Data Analysis Process",
+      "url": "https://youtu.be/uzESOw7tmzw",
+      "key": "data_analysis_process",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "data_analysis_process"
+      }
+    },
+    {
       "name": "Data Visualizer in App Lab - Part 1",
       "url": "https://www.youtube.com/watch?v=OjUEFHo3Yw0",
       "key": "data_visualizer_in_app_lab_-_part_1",
@@ -3653,6 +3676,12 @@
       "seeding_key": {
         "lesson.key": "Exploring One Column",
         "resource.key": "csp_unit_5_-_lesson_3_-_exploring_one_column"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Exploring One Column",
+        "resource.key": "data_analysis_process"
       }
     },
     {
