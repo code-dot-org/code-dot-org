@@ -316,7 +316,7 @@ roles = {
       'arn:aws:iam::aws:policy/IAMReadOnlyAccess',
     ]
   },
-  ContributorRole: {
+  EngineeringContributorRole: {
     RoleName: 'Engineering_Contributor',
     GoogleIdsSSMParameter: 'ContributorGoogleIDs',
     ManagedPolicyArns: [
@@ -324,7 +324,7 @@ roles = {
       '!Ref ContributorSecretsPolicy',
     ]
   },
-  DataAnalystRole: {
+  RedTeamAnalystRole: {
     RoleName: 'REDTeam_Analyst',
     ManagedPolicyArns: [
       '!Ref DataAnalystPolicy',
@@ -334,7 +334,7 @@ roles = {
       'arn:aws:iam::aws:policy/AmazonRedshiftQueryEditorV2FullAccess',
     ]
   },
-  BillingRole: {
+  BillingReadOnlyRole: {
     RoleName: 'Billing_ReadOnly',
     GoogleIdsSSMParameter: 'BillingGoogleIDs',
     ManagedPolicyArns: [
