@@ -11,7 +11,7 @@
     opacity: 0;
   }
 
-  i {
+  .radioIcon {
     position: relative;
     box-sizing: border-box;
     margin: 2px;
@@ -34,7 +34,7 @@
     }
   }
 
-  input[type="radio"]:checked + i {
+  input[type="radio"]:checked + .radioIcon {
     border-color: $light_primary_500;
 
     &::after {
@@ -42,7 +42,7 @@
     }
   }
 
-  span {
+  .radioButtonLabel {
     margin: 0;
     user-select: none;
     -webkit-user-select: none;
@@ -50,10 +50,10 @@
 
   // Hover styles
   &:hover input[type="radio"]:not(:disabled) {
-      + i {
+      + .radioIcon {
         background: $light_primary_100;
       }
-    &:checked + i {
+    &:checked + .radioIcon {
       border-color: $light_primary_700;
       background: $neutral_white;
 
@@ -64,7 +64,7 @@
   }
 
   // Focus styles
-  input[type="radio"]:focus + i {
+  input[type="radio"]:focus + .radioIcon {
     outline: 2px solid $light_primary_500;
     outline-offset: 2px;
   }
@@ -72,12 +72,12 @@
   // Pressed styles
   &:active:has(input[type="radio"]:not(:disabled)),
   &:has(input[type="radio"]:active:not(:disabled)){
-    i {
+    .radioIcon {
       background: $light_primary_100;
       border-color: $light_primary_500;
     }
     &:has(input[type="radio"]:checked) {
-      i {
+      .radioIcon {
         background: $light_primary_100;
         border-color: $light_primary_700;
 
@@ -92,7 +92,7 @@
   &:has(input[type="radio"]:disabled) {
     cursor: not-allowed;
 
-    i {
+    .radioIcon {
       border-color: $neutral_dark20;
 
       &::after {
@@ -100,7 +100,7 @@
       }
     }
 
-    span {
+    .radioButtonLabel {
       color: $neutral_dark20;
     }
   }
@@ -111,7 +111,7 @@
 .radioButton-l {
   height: 28px;
 
-  i {
+  .radioIcon {
     height: 24px;
     width: 24px;
 
@@ -125,7 +125,7 @@
 .radioButton-m {
   height: 24px;
 
-  i {
+  .radioIcon {
     height: 20px;
     width: 20px;
 
@@ -139,7 +139,7 @@
 .radioButton-s {
   height: 22px;
 
-  i {
+  .radioIcon {
     height: 18px;
     width: 18px;
 
@@ -153,7 +153,7 @@
 .radioButton-xs {
   height: 20px;
 
-  i {
+  .radioIcon {
     height: 16px;
     width: 16px;
 
