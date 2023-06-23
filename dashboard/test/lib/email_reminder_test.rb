@@ -4,7 +4,7 @@ require 'email_reminder'
 class EmailReminderTest < ActiveSupport::TestCase
   setup_all do
     @student = create(:student, child_account_compliance_state: 'not_g')
-    @request = ParentalPermissionRequest.create(user_id: @student.id, parent_email: 'foo-parent@code.org')
+    @request = create(:parental_permission_request, user_id: @student.id, parent_email: 'foo-parent@code.org')
   end
 
   test 'finds a permission request that needs a reminder' do
