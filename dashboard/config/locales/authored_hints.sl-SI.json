@@ -1000,19 +1000,6 @@
         "courseC_artist_loops7a_2021": {
           "courseC_artist_loops7a_a": "Krog ima 360 stopinj. Pomnožite stopinje v vrsti, kolikokrat ponovite. Ali je enako 360?\nPreverite predlagane rotacije, da vidite, da to deluje!"
         },
-        "courseC_artist_prog2_2021": {
-          "courseC_artist_prog2_a": "*\"Če uporabite blok <xml><block type=\"draw_move_by_constant\"><title name=\"DIR\">moveForward</title><title name=\"VALUE\">100</title></block></xml> , bom narisal črto. »*",
-          "courseC_artist_prog2_b": "Imate težave pri obračanju? Uporabite blok 'obrni se desno za 0 stopinj'."
-        },
-        "courseC_artist_prog3_2021": {
-          "courseC_artist_prog3_a": "Če želite ustvariti to okno, samo narišite kvadrat s stranicami 100 slikovnih pik.\n\n-   premaknite se naprej\n-   zavijte\n-   premaknite se naprej\n-   obrnite\n-   premaknite se naprej\n-   zavijte\n-   premaknite se naprej",
-          "courseC_artist_prog3_b": "Želite narediti krajšo kodo? Poskusite uporabiti zanko v tej nalogi."
-        },
-        "courseC_artist_prog4_2021": {
-          "courseC_artist_prog4_a": "Če želite končati raketo, samo narišite trikotnik na vrhu!",
-          "courseC_artist_prog4_b": "Uporabite lahko spustni meni na blokih »orbni«, da vidite, kateri kot potrebujete!",
-          "courseC_artist_prog4_c": "Če želite narisati trikotnik, se boste želeli:\n\n-   premakniti naprej\n-   zavijte levo 120 stopinj\n-   premaknite se naprej\n-   zavijte levo 120 stopinj\n-   premaknite se naprej"
-        },
         "courseC_artist_prog5_2021": {
           "courseC_artist_prog5_a": "Počasi premakni drsnik navzdol, da lahko zaženete kodo vrstico za vrstico, da vidite, kje gre stvari narobe.",
           "courseC_artist_prog5_b": "Ne bojte se narediti napake! Poskusite dodati bloke in zagnati kodo, da vidite, kaj se bo zgodilo, tudi če še ne mislite, da ste rešili nalogo.",
@@ -1023,20 +1010,6 @@
           "courseC_artist_prog6_a": "Umetnik je že obrnjen v pravo smer, da nariše svojo prvo črto.",
           "courseC_artist_prog6_b": "Ta diamant je res samo kvadrat, ki stoji na robu.",
           "courseC_artist_prog6_c": "Ker je ta diamant tudi kvadrat, se prepričajte, da zavrtite 90 stopinj na vogalih."
-        },
-        "courseC_artist_prog7_2021": {
-          "courseC_artist_prog7_a": "Vsak kot je 45 ali 90 stopinj.",
-          "courseC_artist_prog7_b": "-   Ali vse deluje po prvem koraku?\n-   Ali še vedno deluje po drugem?\n-   Kje gre narobe?",
-          "courseC_artist_prog7_c": "Uporabite lahko spustni meni na zavojih blokov, da vidite, kateri kot potrebujete!",
-          "courseC_artist_prog7_d": "Želeli boste:\n\n-   korak naprej\n-   zavijemo desno 45 stopinj\n-   korak naprej\n-   zavijemo desno 90 stopinj\n-   korak naprej\n-   zavijemo desno 45 stopinj\n\nPonovite ta vzorec 2-krat!",
-          "courseC_artist_prog7_e": "Ne bojte se narediti napake! Poskusite dodati bloke in zagnati kodo, da vidite, kaj se bo zgodilo, tudi če še ne mislite, da ste rešili nalogo."
-        },
-        "courseC_artist_prog_challenge1_2021": {
-          "courseC_artist_prog_challenge1_a": "To lahko narišete kot pravokotnik s črto na sredini ali dvema različnima kvadratoma!"
-        },
-        "courseC_artist_prog_challenge2a_2021": {
-          "courseC_artist_prog_challenge2_a": "Ko narišete prvo črto, zavijte levo, preden narišete drugo črto.",
-          "courseC_artist_prog_challenge2_b": "Ko narišete drugo črto, zavijte desno, preden potegnete tretjo črto."
         },
         "courseC_collector_prog1_2021": {
           "courseC_collector_prog1_a": "Ko stojite na prostoru z zakladom, uporabite blok <xml><block type=\"collector_collect\"/></xml> , da ga poberete.",
