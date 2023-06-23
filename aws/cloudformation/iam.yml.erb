@@ -219,43 +219,43 @@ Resources:
 <%
 roles = {
   EngineeringReadOnlyRole: {
-    RoleName: "Engineering_ReadOnly",
-    GoogleIdsSSMParameter: 'DeveloperGoogleIDs'
+    RoleName: 'Engineering_ReadOnly',
+    GoogleIdsSSMParameter: 'DeveloperGoogleIDs',
     ManagedPolicyArns: [
-      'arn:aws:iam::aws:policy/ReadOnlyAccess'
+      'arn:aws:iam::aws:policy/ReadOnlyAccess',
     ]
   },
   EngineeringFullAccessRole: {
-    RoleName: "Engineering_FullAccess",
-    GoogleIdsSSMParameter: 'DeveloperGoogleIDs'
+    RoleName: 'Engineering_FullAccess',
+    GoogleIdsSSMParameter: 'DeveloperGoogleIDs',
     ManagedPolicyArns: [
       'arn:aws:iam::aws:policy/PowerUserAccess',
-      'arn:aws:iam::aws:policy/IAMReadOnlyAccess'
+      'arn:aws:iam::aws:policy/IAMReadOnlyAccess',
     ]
   },
   ContributorRole: {
-    RoleName: "Engineering_Contributor",
-    GoogleIdsSSMParameter: 'ContributorGoogleIDs'
+    RoleName: 'Engineering_Contributor',
+    GoogleIdsSSMParameter: 'ContributorGoogleIDs',
     ManagedPolicyArns: [
       '!Ref ContributorS3Policy',
-      '!Ref ContributorSecretsPolicy'
+      '!Ref ContributorSecretsPolicy',
     ]
   },
   DataAnalystRole: {
-    RoleName: "REDTeam_Analyst",
+    RoleName: 'REDTeam_Analyst',
     ManagedPolicyArns: [
       '!Ref DataAnalystPolicy',
       '!Ref DataAnalystDmsReadOnlyPolicy',
       '!Ref DataAnalystRedshiftPolicy',
       'arn:aws:iam::aws:policy/AmazonRedshiftQueryEditor',
-      'arn:aws:iam::aws:policy/AmazonRedshiftQueryEditorV2FullAccess'
+      'arn:aws:iam::aws:policy/AmazonRedshiftQueryEditorV2FullAccess',
     ]
   },
   BillingRole: {
-    RoleName: "Billing_ReadOnly",
+    RoleName: 'Billing_ReadOnly',
     GoogleIdsSSMParameter: 'BillingGoogleIDs',
     ManagedPolicyArns: [
-      'arn:aws:iam::aws:policy/AWSBillingReadOnlyAccess'
+      'arn:aws:iam::aws:policy/AWSBillingReadOnlyAccess',
     ]
   }
 }
@@ -263,7 +263,7 @@ roles.each do |name, config| %>
   <%= name %>:
     Type: AWS::IAM::Role
     Properties:
-      RoleName: <%= config["RoleName"] %>
+      RoleName: <%= config[:RoleName] %>
       AssumeRolePolicyDocument:
         Version: 2012-10-17
         Statement:
@@ -273,7 +273,7 @@ roles.each do |name, config| %>
             Condition:
               StringEquals:
                 SAML:aud: https://signin.aws.amazon.com/saml
-          <%if config.GoogleIdsSSMParameter -%>
+          <%- if config[:GoogleIdsSSMParameter] -%>
           - Effect: Allow
             Principal: {Federated: accounts.google.com}
             Action: sts:AssumeRoleWithWebIdentity
@@ -281,9 +281,12 @@ roles.each do |name, config| %>
               StringEquals:
                 accounts.google.com:aud: '{{resolve:secretsmanager:admin/google_client_id}}'
               ForAnyValue:StringEquals:
-                accounts.google.com:sub: !Ref <%= config.GoogleIdsSSMParameter %>
-          <% end -%>
-      ManagedPolicyArns: <%= config['ManagedPolicyArns'].to_yaml %>
+                accounts.google.com:sub: !Ref <%= config[:GoogleIdsSSMParameter] %>
+          <%- end -%>
+      ManagedPolicyArns:
+        <%- config[:ManagedPolicyArns].each do |arn| -%>
+        - <%=arn%>
+        <%- end -%>
       Policies:
         - PolicyName: "DenyAdminLogs"
           PolicyDocument:
@@ -295,7 +298,7 @@ roles.each do |name, config| %>
       Tags:
         - Key: sqlworkbench-team
           Value: codedotorg
-<% end %>
+<%- end -%>
 
   DataAnalystPolicy:
     Type: AWS::IAM::ManagedPolicy
