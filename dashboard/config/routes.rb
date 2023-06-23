@@ -594,6 +594,7 @@ Dashboard::Application.routes.draw do
 
     # LTI API endpoints
     match '/lti/v1/login(/:platform_id)', to: 'lti_v1#login', via: [:get, :post]
+    match '/lti/v1/authenticate', to: 'lti_v1#authenticate', via: [:get, :post]
 
     get '/notes/:key', to: 'notes#index'
 

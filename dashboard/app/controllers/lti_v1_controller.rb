@@ -1,4 +1,5 @@
 require "base64"
+require 'jwt'
 
 class LtiV1Controller < ApplicationController
   # Don't require an authenticity token because LTI Platforms POST to this
@@ -39,7 +40,42 @@ class LtiV1Controller < ApplicationController
       prompt: 'none',
     }.to_query
 
+    puts auth_redirect_url.to_s
     redirect_to auth_redirect_url.to_s
+  end
+
+  def authenticate
+    id_token = params[:id_token]
+    decoded_jwt_no_auth = JSON::JWT.decode(id_token, :skip_verification)
+    # client_id is the aud[ience] in the JWT
+    extracted_client_id = decoded_jwt_no_auth[:aud]
+    extracted_issuer_id = decoded_jwt_no_auth[:iss]
+
+    integration = LtiIntegration.find_by({client_id: extracted_client_id, issuer: extracted_issuer_id})
+    return unauthorized_status unless integration
+
+    # verify the jwt via the integration's public keyset
+    public_jwk_url = integration.jwks_url
+    response = JSON.parse(HTTParty.get(public_jwk_url).body)
+    jwk_set = JSON::JWK::Set.new response
+    decoded_jwt = JSON::JWT.decode(id_token, jwk_set)
+
+    jwt_verifier = JwtVerifier.new(decoded_jwt, integration)
+    if jwt_verifier.verify_jwt
+      document_target = decoded_jwt[:'https://purl.imsglobal.org/spec/lti/claim/launch_presentation'][:document_target]
+      # we only accept window document_target, not iframe (but my window one is showing as iframe :/ )
+      p document_target
+
+      # should probably move these to their own 'verifier's
+      message_type = decoded_jwt[:'https://purl.imsglobal.org/spec/lti/claim/message_type']
+      return unauthorized_status unless message_type == 'LtiResourceLinkRequest'
+
+      target_link_uri = decoded_jwt[:'https://purl.imsglobal.org/spec/lti/claim/target_link_uri']
+      redirect_to target_link_uri
+    else
+      # this should use the *jwt_verifier.errors to get the most info out of the errors
+      return unauthorized_status
+    end
   end
 
   private

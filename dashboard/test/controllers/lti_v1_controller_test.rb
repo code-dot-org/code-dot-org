@@ -56,4 +56,7 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     assert_not_nil parsed_url[:state]
     assert_not_nil parsed_url[:nonce]
   end
+
+  test 'given no params, return unauthorized' do
+  end
 end
