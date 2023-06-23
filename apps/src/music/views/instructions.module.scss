@@ -85,19 +85,16 @@
       overflow-y: auto;
       white-space: pre-wrap;
       flex: 1;
+      color:  $neutral_light;
     }
 
     .markdownText {
       line-height: 0;
 
-      h1 {
+      h1, h2 {
         margin: 0 0 10px 0;
         line-height: 1.2em;
-        color: white;
-      }
-
-      h2 {
-        margin: 0 0 10px 0;
+        color: $neutral_light;
       }
 
       ol {
