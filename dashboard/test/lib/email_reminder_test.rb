@@ -41,6 +41,6 @@ class EmailReminderTest < ActiveSupport::TestCase
     email = ActionMailer::Base.deliveries.last
     assert_not_nil email
     assert_equal @request.parent_email, email.to[0]
-    assert_equal 1, ParentalPermissionRequest.find(@request.id).reminders_sent
+    assert_equal 1, @request.reload.reminders_sent
   end
 end
