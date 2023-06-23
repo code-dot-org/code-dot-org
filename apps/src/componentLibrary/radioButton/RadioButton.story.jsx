@@ -1,5 +1,5 @@
 import React from 'react';
-import {RadioButton, RadioButtonGroup} from './index';
+import {RadioButton, RadioButtonsGroup} from './index';
 
 export default {
   title: 'DesignSystem/Radio Button Component',
@@ -13,7 +13,7 @@ export default {
 // eslint-disable-next-line
 const MultipleTemplate = (args = []) => (
   <>
-    <RadioButtonGroup {...args} />
+    <RadioButtonsGroup {...args} />
   </>
 );
 export const DefaultRadioButton = MultipleTemplate.bind({});
