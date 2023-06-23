@@ -1662,7 +1662,7 @@ class User < ApplicationRecord
 
   # Returns the set of courses the user has been assigned to or has progress in.
   def courses_as_participant
-    visible_scripts.map(&:unit_group).compact.concat(section_courses).uniq
+    visible_scripts.filter_map(&:unit_group).concat(section_courses).uniq
   end
 
   # Checks if there are any launched scripts assigned to the user.
@@ -1758,7 +1758,7 @@ class User < ApplicationRecord
 
     pl_user_scripts = user_scripts.select {|us| us.script.pl_course?}
 
-    user_script_data = pl_user_scripts.map do |user_script|
+    user_script_data = pl_user_scripts.filter_map do |user_script|
       # Skip this script if we are excluding the primary script and this is the
       # primary script.
       if exclude_primary_script && user_script[:script_id] == primary_script_id
@@ -1773,7 +1773,7 @@ class User < ApplicationRecord
           link: script_path(script),
         }
       end
-    end.compact
+    end
 
     user_course_data = courses_as_participant.select(&:pl_course?).map(&:summarize_short)
 
@@ -1798,7 +1798,7 @@ class User < ApplicationRecord
 
     user_student_scripts = user_scripts.select {|us| !us.script.pl_course?}
 
-    user_script_data = user_student_scripts.map do |user_script|
+    user_script_data = user_student_scripts.filter_map do |user_script|
       # Skip this script if we are excluding the primary script and this is the
       # primary script.
       if exclude_primary_script && user_script[:script_id] == primary_script_id
@@ -1813,7 +1813,7 @@ class User < ApplicationRecord
           link: script_path(script),
         }
       end
-    end.compact
+    end
 
     user_course_data = courses_as_participant.select {|c| !c.pl_course?}.map(&:summarize_short)
 
@@ -1839,7 +1839,7 @@ class User < ApplicationRecord
   def section_courses
     # In the future we may want to make it so that if assigned a script, but that
     # script has a default course, it shows up as a course here
-    all_sections.map(&:unit_group).compact.uniq
+    all_sections.filter_map(&:unit_group).uniq
   end
 
   def visible_scripts
@@ -2255,7 +2255,7 @@ class User < ApplicationRecord
   def show_census_teacher_banner?
     # Must have an NCES school to show the banner
     users_school = try(:school_info).try(:school)
-    teacher? && users_school && (next_census_display.nil? || Date.today >= next_census_display.to_date)
+    teacher? && users_school && (next_census_display.nil? || Time.zone.today >= next_census_display.to_date)
   end
 
   # Returns the name of the donor for the donor teacher banner and donor footer, or nil if none.
@@ -2529,7 +2529,7 @@ class User < ApplicationRecord
   end
 
   def code_review_groups
-    followeds.map(&:code_review_group).compact
+    followeds.filter_map(&:code_review_group)
   end
 
   private def account_age_in_years
@@ -2544,7 +2544,7 @@ class User < ApplicationRecord
   # Returns a list of all curriculums that the teacher currently has sections for
   # ex: ["csf", "csd"]
   private def curriculums_being_taught
-    @curriculums_being_taught ||= sections.map {|section| section.script&.curriculum_umbrella}.compact.uniq
+    @curriculums_being_taught ||= sections.filter_map {|section| section.script&.curriculum_umbrella}.uniq
   end
 
   private def has_attended_pd?

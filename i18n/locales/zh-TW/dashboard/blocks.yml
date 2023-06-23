@@ -2555,6 +2555,8 @@ zh-TW:
             '8': '8'
             '9': '9'
             '10': '10'
+      storylab_printText:
+        text: 打印 {TEXT}
       storylab_setForegroundEffect2:
         text: 製作{EFFECT}效果
         options:

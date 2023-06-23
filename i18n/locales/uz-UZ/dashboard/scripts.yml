@@ -4167,3 +4167,7 @@ uz:
               display_name: End of Course Project
           description_audience: 'Yosh: 9-13'
           description_short: Informatika asoslari kursidan barcha tushunchalarni o'rganing va o'z san'at asari, hikoya yoki o'yiningizni yarating.
+        csa-frq-practice:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Sinflar

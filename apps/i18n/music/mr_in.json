@@ -15,5 +15,7 @@
   "feedback": "अभिप्राय",
   "share": "वाटा",
   "startOver": "पुन्हा सुरू करा",
-  "upload": "अपलोड करा"
+  "upload": "अपलोड करा",
+  "panelHeaderInstructions": "सूचना",
+  "panelHeaderWorkspace": "वर्कस्पेस: "
 }
