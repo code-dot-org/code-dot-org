@@ -7,6 +7,7 @@ import LabContainer from '@cdo/apps/code-studio/components/LabContainer';
 import MusicLabView from '@cdo/apps/music/views/MusicView';
 import ProjectContainer from '@cdo/apps/labs/projects/ProjectContainer';
 import {logError} from '@cdo/apps/music/utils/MusicMetrics';
+import {getStandaloneProjectId} from '@cdo/apps/labs/projects/utils';
 
 $(document).ready(function () {
   ReactDOM.render(
@@ -16,7 +17,7 @@ $(document).ready(function () {
           logError({error: error.toString(), componentStack})
         }
       >
-        <ProjectContainer>
+        <ProjectContainer channelId={getStandaloneProjectId()}>
           <MusicLabView />
         </ProjectContainer>
       </LabContainer>
