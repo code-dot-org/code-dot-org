@@ -94,7 +94,7 @@ class Hamburger
 
     teacher_entries = [
       {title: "my_dashboard", url: CDO.studio_url("/home")},
-      {title: "course_catalog", url: CDO.studio_url("/catalog")},
+      {title: "curriculum_catalog", url: CDO.studio_url("/catalog")},
       {title: "project_gallery", url: CDO.studio_url("/projects")},
     ].each do |entry|
       entry[:title] = I18n.t("#{loc_prefix}#{entry[:title]}")
@@ -102,14 +102,14 @@ class Hamburger
 
     student_entries = [
       {title: "my_dashboard", url: CDO.studio_url("/home"), id: "hamburger-student-home"},
-      {title: "course_catalog", url: CDO.studio_url("/courses")},
+      {title: "curriculum_catalog", url: CDO.studio_url("/catalog")},
       {title: "project_gallery", url: CDO.studio_url("/projects"), id: "hamburger-student-projects"}
     ].each do |entry|
       entry[:title] = I18n.t("#{loc_prefix}#{entry[:title]}")
     end
 
     signed_out_entries = [
-      {title: "course_catalog", url: CDO.studio_url("/courses")},
+      {title: "curriculum_catalog", url: CDO.studio_url("/catalog")},
       {title: "project_gallery", url: CDO.studio_url("/projects/public"), id: "hamburger-signed-out-projects"}
     ].each do |entry|
       entry[:title] = I18n.t("#{loc_prefix}#{entry[:title]}")
@@ -266,7 +266,7 @@ class Hamburger
 
     any_teacher_links = [
       {title: I18n.t("#{loc_prefix}my_dashboard"), url: CDO.studio_url("/home"), id: "header-teacher-home"},
-      {title: I18n.t("#{loc_prefix}course_catalog"), url: CDO.studio_url("/courses"), id: "header-teacher-courses"},
+      {title: I18n.t("#{loc_prefix}curriculum_catalog"), url: CDO.studio_url("/catalog"), id: "header-teacher-catalog"},
       {title: I18n.t("#{loc_prefix}project_gallery"), url: CDO.studio_url("/projects"), id: "header-teacher-projects"},
     ]
 
@@ -277,7 +277,7 @@ class Hamburger
 
     any_student_links = [
       {title: I18n.t("#{loc_prefix}my_dashboard"), url: CDO.studio_url("/home"), id: "header-student-home"},
-      {title: I18n.t("#{loc_prefix}course_catalog"), url: CDO.studio_url("/courses"), id: "header-student-courses"},
+      {title: I18n.t("#{loc_prefix}curriculum_catalog"), url: CDO.studio_url("/catalog"), id: "header-student-catalog"},
       {title: I18n.t("#{loc_prefix}project_gallery"), url: CDO.studio_url("/projects"), id: "header-student-projects"}
     ]
 
@@ -297,7 +297,7 @@ class Hamburger
     ]
 
     non_en_signed_out_links = [
-      {title: I18n.t("#{loc_prefix}course_catalog"), url: CDO.studio_url("/courses"), id: "header-non-en-courses"},
+      {title: I18n.t("#{loc_prefix}curriculum_catalog"), url: CDO.studio_url("/catalog"), id: "header-non-en-catalog"},
       {title: I18n.t("#{loc_prefix}project_gallery"), url: CDO.studio_url("/projects/public"), id: "header-non-en-projects"},
     ]
 
