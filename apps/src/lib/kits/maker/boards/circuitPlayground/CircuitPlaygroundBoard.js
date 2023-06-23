@@ -3,7 +3,6 @@ import _ from 'lodash';
 import {EventEmitter} from 'events'; // provided by webpack's node-libs-browser
 import five from '@code-dot-org/johnny-five';
 import Playground from 'playground-io';
-import experiments from '@cdo/apps/util/experiments';
 import Firmata from 'firmata';
 import {
   createCircuitPlaygroundComponents,
@@ -123,9 +122,6 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
       this.boardType_ = detectBoardTypeFromPort(this.port_);
       if (this.boardType_ === BOARD_TYPE.EXPRESS) {
         this.fiveBoard_.isExpressBoard = true;
-      }
-      if (experiments.isEnabled('detect-board')) {
-        this.detectFirmwareVersion(playground);
       }
       resolve();
     });
