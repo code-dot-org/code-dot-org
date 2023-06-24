@@ -36,7 +36,7 @@ const Instructions = ({
     analyticsReporter.onInstructionsVisited(currentPanel + 1);
   }, [currentPanel, analyticsReporter]);
 
-  const nextPanel = progressState.satisfied ? getNextPanel() : null;
+  const isNextPanel = progressState.satisfied ? !!getNextPanel() : false;
 
   return (
     <div
@@ -56,7 +56,7 @@ const Instructions = ({
           imageClicked={imageClicked}
           right={right}
           showBigImage={showBigImage}
-          onNextPanel={nextPanel ? onNextPanel : null}
+          onNextPanel={isNextPanel ? onNextPanel : null}
         />
       )}
     </div>
