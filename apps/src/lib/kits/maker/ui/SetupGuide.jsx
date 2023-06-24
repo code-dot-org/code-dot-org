@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import SetupInstructions from '@cdo/apps/lib/kits/maker/ui/SetupInstructions';
 import Notification, {NotificationType} from '@cdo/apps/templates/Notification';
-import {getChromeVersion} from '../util/browserChecks';
+import {isCodeOrgBrowser, getChromeVersion} from '../util/browserChecks';
 import applabI18n from '@cdo/applab/locale';
 import i18n from '@cdo/locale';
 import {MAKER_DEPRECATION_SUPPORT_URL} from '../util/makerConstants';
@@ -65,7 +65,17 @@ export default class SetupGuide extends React.Component {
 
     return (
       <div>
-        {chromeVersion && chromeVersion < 90 && (
+        {isCodeOrgBrowser() && (
+          <Notification
+            type={NotificationType.failure}
+            notice={i18n.makerSetupDeprecationNoticeAppTitle()}
+            details={i18n.makerSetupDeprecationNoticeAppDetails()}
+            detailsLinkText={i18n.makerDeprecationNoticeLinkText()}
+            detailsLink={MAKER_DEPRECATION_SUPPORT_URL}
+            dismissible
+          />
+        )}
+        {!isCodeOrgBrowser() && chromeVersion && chromeVersion < 90 && (
           <Notification
             type={NotificationType.warning}
             notice={i18n.makerSetupDeprecationNoticeOldChromeTitle()}
