@@ -51,7 +51,7 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
     /** @private {string} a port identifier, e.g. "/dev/ttyACM0" */
     this.port_ = port;
 
-    /** @private {SerialPort} serial port controller */
+    /** @private {Serial} serial port controller */
     this.serialPort_ = null;
 
     /** @private {five.Board} A johnny-five board controller */
@@ -86,14 +86,13 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
    */
   connectToFirmware() {
     return new Promise((resolve, reject) => {
-      const name = this.port_.productId;
-      CircuitPlaygroundBoard.openSerialPortWebSerial(this.port_).then(port => {
-        this.initializePlaygroundAndBoard(port, name, resolve, reject);
+      CircuitPlaygroundBoard.openWebSerial(this.port_).then(port => {
+        this.initializePlaygroundAndBoard(port, resolve, reject);
       });
     });
   }
 
-  initializePlaygroundAndBoard(serialPort, name, resolve, reject) {
+  initializePlaygroundAndBoard(serialPort, resolve, reject) {
     const playground =
       CircuitPlaygroundBoard.makePlaygroundTransport(serialPort);
     const board = new five.Board({
@@ -369,9 +368,9 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
   /**
    * Create a serial port controller and open the Web Serial port immediately.
    * @param {Object} port
-   * @return {Promise<SerialPort>}
+   * @return {Promise<Serial>}
    */
-  static openSerialPortWebSerial(port) {
+  static openWebSerial(port) {
     return port.openCPPort().then(() => {
       this.createPendingQueue(port);
       return port;
@@ -416,7 +415,7 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
 
   /**
    * Create a playground-io controller attached to the given serial port.
-   * @param {SerialPort} serialPort
+   * @param {Serial} serialPort
    * @return {Playground}
    */
   static makePlaygroundTransport(serialPort) {
