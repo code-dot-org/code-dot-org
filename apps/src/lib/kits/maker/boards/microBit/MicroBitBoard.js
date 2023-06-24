@@ -21,10 +21,7 @@ import {
   ALL_LEDS,
 } from './MicroBitConstants';
 import {delayPromise} from '../../util/boardUtils';
-import {
-  SERIAL_BAUD,
-  isWebSerialPort,
-} from '@cdo/apps/lib/kits/maker/util/boardUtils';
+import {isWebSerialPort} from '@cdo/apps/lib/kits/maker/util/boardUtils';
 import {MAKER_TOOLKIT} from '@cdo/apps/lib/kits/maker/util/makerConstants';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 
@@ -65,16 +62,6 @@ export default class MicroBitBoard extends EventEmitter {
   }
 
   /**
-   * Create a serial port controller and open the serial port immediately.
-   * @return {SerialPort}
-   */
-  openSerialPort() {
-    const portName = this.port ? this.port.comName : undefined;
-    const serialPort = new SerialPort(portName, {baudRate: SERIAL_BAUD});
-    return Promise.resolve(serialPort);
-  }
-
-  /**
    * Create a serial port controller and open the Web Serial port immediately.
    * @param {Object} port
    * @return {Promise<SerialPort>}
@@ -92,66 +79,35 @@ export default class MicroBitBoard extends EventEmitter {
    * @returns {Promise<void>}
    */
   checkExpectedFirmware() {
-    if (!isWebSerialPort(this.port)) {
-      // maker app pathway
-      return Promise.resolve()
-        .then(() => this.openSerialPort())
-        .then(serialPort => this.boardClient_.connectBoard(serialPort))
-        .then(() => {
-          // Delay for 0.25 seconds to ensure we have time to receive the firmware version.
-          return delayPromise(250);
-        })
-        .then(() => {
-          if (
-            this.boardClient_.firmwareVersion.includes(
-              MICROBIT_FIRMWARE_VERSION
-            )
-          ) {
-            return Promise.resolve();
-          } else {
-            if (this.boardClient_.firmwareVersion === '') {
-              // Log if we were not able to determine the firmware version in time.
-              firehoseClient.putRecord({
-                study: MAKER_TOOLKIT,
-                study_group: MICROBIT,
-                event: FIRMWARE_VERSION_TIMEOUT,
-              });
-              console.warn(
-                'Firmware version not detected in time. Try refreshing the page.'
-              );
-            }
-            return Promise.reject('Incorrect firmware detected');
+    return this.openSerialPortWebSerial(this.port)
+      .then(serialPort => {
+        return this.boardClient_.connectBoard(serialPort);
+      })
+      .then(() => {
+        // Delay for 0.25 seconds to ensure we have time to receive the firmware version.
+        return delayPromise(250);
+      })
+      .then(() => {
+        if (
+          this.boardClient_.firmwareVersion.includes(MICROBIT_FIRMWARE_VERSION)
+        ) {
+          return Promise.resolve();
+        } else {
+          if (this.boardClient_.firmwareVersion === '') {
+            // Log if we were not able to determine the firmware version in time.
+            firehoseClient.putRecord({
+              study: MAKER_TOOLKIT,
+              study_group: MICROBIT,
+              event: FIRMWARE_VERSION_TIMEOUT,
+            });
+            console.warn(
+              'Firmware version not detected in time. Try refreshing the page.'
+            );
           }
-        })
-        .catch(err => Promise.reject(err));
-    } else {
-      // webserial pathway
-      return this.openSerialPortWebSerial(this.port)
-        .then(serialPort => {
-          return this.boardClient_.connectBoard(serialPort);
-        })
-        .then(() => {
-          // Delay for 0.25 seconds to ensure we have time to receive the firmware version.
-          return delayPromise(250);
-        })
-        .then(() => {
-          if (
-            this.boardClient_.firmwareVersion.includes(
-              MICROBIT_FIRMWARE_VERSION
-            )
-          ) {
-            return Promise.resolve();
-          } else {
-            if (this.boardClient_.firmwareVersion === '') {
-              console.warn(
-                'Firmware version not detected in time. Try refreshing the page.'
-              );
-            }
-            return Promise.reject('Incorrect firmware detected');
-          }
-        })
-        .catch(err => Promise.reject(err));
-    }
+          return Promise.reject('Incorrect firmware detected');
+        }
+      })
+      .catch(err => Promise.reject(err));
   }
 
   /**

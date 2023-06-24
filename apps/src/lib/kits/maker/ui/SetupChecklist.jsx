@@ -8,7 +8,7 @@ import SetupChecker from '../util/SetupChecker';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import i18n from '@cdo/locale';
 import applabI18n from '@cdo/applab/locale';
-import {isWindows, isCodeOrgBrowser, isLinux} from '../util/browserChecks';
+import {isWindows, isLinux} from '../util/browserChecks';
 import ValidationStep, {Status} from '../../../ui/ValidationStep';
 import {BOARD_TYPE, shouldUseWebSerial, delayPromise} from '../util/boardUtils';
 import WebSerialPortWrapper from '@cdo/apps/lib/kits/maker/WebSerialPortWrapper';
@@ -207,15 +207,7 @@ class SetupChecklist extends Component {
   }
 
   renderPlatformSpecificSteps() {
-    if (isCodeOrgBrowser()) {
-      // Maker Toolkit Standalone App
-      return (
-        <ValidationStep
-          stepName={applabI18n.makerSetupBrowserTitle()}
-          stepStatus={this.state[STATUS_SUPPORTED_BROWSER]}
-        />
-      );
-    } else if (shouldUseWebSerial()) {
+    if (shouldUseWebSerial()) {
       return (
         <ValidationStep
           stepName={applabI18n.makerSetupBrowserSupported()}
