@@ -128,7 +128,6 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
       attended_csf_intro_workshop: params[:attended_csf_intro_workshop],
       csf_course_experience: params[:csf_course_experience],
       csf_courses_planned: params[:csf_courses_planned],
-      csf_has_physical_curriculum_guide: params[:csf_has_physical_curriculum_guide],
       previous_courses: params[:previous_courses],
       replace_existing: params[:replace_existing],
       csf_intro_intent: params[:csf_intro_intent],
