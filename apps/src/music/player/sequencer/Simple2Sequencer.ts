@@ -134,8 +134,7 @@ export default class Simple2Sequencer extends Sequencer {
 
     const currentEffects = this.getCurrentEffects();
     if (currentEffects !== null) {
-      // Create a fresh effect context if there is one active
-      this.effectsStack.push({});
+      this.effectsStack.push({...currentEffects});
     }
   }
 
