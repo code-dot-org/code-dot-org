@@ -17,6 +17,10 @@ WorkingDirectory=<%= @app_root %>
 # to get created at /run/unicorn from back when we used that
 RuntimeDirectory=unicorn
 
+# Because both dashboard and pegasus use the same runtime directory, we don't
+# want either to try to clean it up after themselves on restart
+RuntimeDirectoryPreserve=yes
+
 <%= @export_env ? @export_env.map{|k,v|"Environment=#{k}=#{v}"}.join("\n") : '' %>
 Environment=LANG=en_US.UTF-8
 
