@@ -49,7 +49,7 @@ export class GeneratorHelpersSimple2 {
   ) {
     return `
     Sequencer.newSequence();
-    Sequencer.playTogether();
+    Sequencer.playTogether(false);
     Sequencer.startFunctionContext('when_run');
     ${functionCallsCode}
     ${functionImplementationsCode}
@@ -264,7 +264,7 @@ export const playSoundsTogether = {
     helpUrl: DOCS_BASE_URL + 'play_together',
   },
   generator: block =>
-    ` Sequencer.playTogether();
+    ` Sequencer.playTogether(true);
       ${Blockly.JavaScript.statementToCode(block, 'code')}
       Sequencer.endTogether();
     `,
@@ -333,7 +333,7 @@ export const playSoundsRandom = {
     }
 
     return `
-      Sequencer.playTogether();
+      Sequencer.playTogether(false);
       Sequencer.startRandom(${resultArray.length});
       ${code}
       Sequencer.endRandom();

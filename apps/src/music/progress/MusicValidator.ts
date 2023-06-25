@@ -8,7 +8,7 @@ import ConditionsChecker, {
 import {PlaybackEvent} from '../player/interfaces/PlaybackEvent';
 import {Validator} from './ProgressManager';
 
-const KnownConditionNames: KnownConditionNames = {
+export const KnownConditionNamesList: KnownConditionNames = {
   PLAYED_SOUNDS_TOGETHER: 'played_sounds_together',
   USED_BLOCK: 'used_block',
 };
@@ -19,7 +19,7 @@ export default class MusicValidator extends Validator {
     private readonly getPlaybackEvents: () => PlaybackEvent[],
     private readonly player: MusicPlayer,
     private readonly conditionsChecker: ConditionsChecker = new ConditionsChecker(
-      KnownConditionNames
+      KnownConditionNamesList
     )
   ) {
     super();
@@ -32,7 +32,7 @@ export default class MusicValidator extends Validator {
   checkConditions() {
     if (this.getPlaybackEvents().length > 0) {
       this.conditionsChecker.addSatisfiedCondition({
-        name: KnownConditionNames.PLAYED_SOUNDS_TOGETHER,
+        name: KnownConditionNamesList.PLAYED_SOUNDS_TOGETHER,
         value: 1,
       });
     }
@@ -55,13 +55,13 @@ export default class MusicValidator extends Validator {
 
     if (currentNumberSounds === 3) {
       this.conditionsChecker.addSatisfiedCondition({
-        name: KnownConditionNames.PLAYED_SOUNDS_TOGETHER,
+        name: KnownConditionNamesList.PLAYED_SOUNDS_TOGETHER,
         value: 3,
       });
     }
     if (currentNumberSounds === 2) {
       this.conditionsChecker.addSatisfiedCondition({
-        name: KnownConditionNames.PLAYED_SOUNDS_TOGETHER,
+        name: KnownConditionNamesList.PLAYED_SOUNDS_TOGETHER,
         value: 2,
       });
     }
@@ -73,5 +73,12 @@ export default class MusicValidator extends Validator {
 
   clear() {
     this.conditionsChecker.clear();
+  }
+
+  setSatisfiedCondition(name: string, value: string | number) {
+    this.conditionsChecker.addSatisfiedCondition({
+      name,
+      value,
+    });
   }
 }
