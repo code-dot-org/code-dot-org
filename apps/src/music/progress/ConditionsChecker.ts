@@ -57,7 +57,7 @@ export default class ConditionsChecker {
 
 export interface KnownCondition {
   name: string;
-  value: string | number;
+  value?: string | number;
 }
 
 export interface KnownConditionNames {
