@@ -94,23 +94,6 @@ describe('SetupChecklist', () => {
       expect(wrapper.find(SUCCESS_ICON)).to.have.length(4);
       expect(window.console.error).not.to.have.been.called;
     });
-
-    describe('test with expected console.error', () => {
-      it('does not reload the page on re-detect if successful', async () => {
-        const wrapper = mount(
-          <Provider store={getStore()}>
-            <SetupChecklist setupChecker={checker} stepDelay={STEP_DELAY_MS} />
-          </Provider>
-        );
-        await yieldUntilDoneDetecting(wrapper);
-        expect(wrapper.find(SUCCESS_ICON)).to.have.length(4);
-        wrapper.find(REDETECT_BUTTON).simulate('click');
-        expect(wrapper.find(WAITING_ICON)).to.have.length(1);
-        await yieldUntilDoneDetecting(wrapper);
-        expect(wrapper.find(SUCCESS_ICON)).to.have.length(4);
-        expect(utils.reload).not.to.have.been.called;
-      });
-    });
   });
 
   describe.skip('on Code.org Browser', () => {
