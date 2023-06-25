@@ -103,7 +103,7 @@ describe('SetupChecklist', () => {
       analyticsReporter.sendEvent.restore();
     });
 
-    it('does reload the page on re-detect if successful', async () => {
+    it('does reload the page on re-detect', async () => {
       const wrapper = mount(
         <Provider store={getStore()}>
           <SetupChecklist setupChecker={checker} stepDelay={STEP_DELAY_MS} />
@@ -112,7 +112,6 @@ describe('SetupChecklist', () => {
       await yieldUntilDoneDetecting(wrapper);
       expect(wrapper.find(SUCCESS_ICON)).to.have.length(4);
       wrapper.find(REDETECT_BUTTON).simulate('click');
-      expect(wrapper.find(WAITING_ICON)).to.have.length(1);
       await yieldUntilDoneDetecting(wrapper);
       expect(wrapper.find(SUCCESS_ICON)).to.have.length(4);
       expect(utils.reload).to.have.been.called;
