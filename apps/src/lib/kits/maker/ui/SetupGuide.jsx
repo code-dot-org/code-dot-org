@@ -68,8 +68,8 @@ export default class SetupGuide extends React.Component {
         {isCodeOrgBrowser() && (
           <Notification
             type={NotificationType.failure}
-            notice={i18n.makerSetupDeprecationNoticeAppTitle()}
-            details={i18n.makerSetupDeprecationNoticeAppDetails()}
+            notice={i18n.makerAppDeprecationNoticeTitle()}
+            details={i18n.makerAppDeprecationNoticeDetails()}
             detailsLinkText={i18n.makerDeprecationNoticeLinkText()}
             detailsLink={MAKER_DEPRECATION_SUPPORT_URL}
             dismissible
