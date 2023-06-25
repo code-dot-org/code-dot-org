@@ -44,7 +44,6 @@ export default class ConditionsChecker {
       }
 
       // Not satisfying a required condition is a fail.
-      // Because a condition is an object, we need to compare entire objects.
       if (!this.isConditionSatisfied(requiredCondition)) {
         return false;
       }
