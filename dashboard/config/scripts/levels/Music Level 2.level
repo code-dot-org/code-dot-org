@@ -27,6 +27,10 @@
           "message": "It's good that you played two sounds, but you need to play another one."
         },
         {
+          "conditions": [{"name": "used_block", "value": "play_together"}],
+          "message": "Nice work using \"play together\".  Next, play two sounds."
+        },
+        {
           "conditions": [{"name": "played_sounds_together", "value": 1}],
           "message": "It's good that you played one sound, but you need to play two more."
         },
