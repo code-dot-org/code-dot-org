@@ -18,7 +18,6 @@ import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 const STATUS_SUPPORTED_BROWSER = 'statusSupportedBrowser';
-const STATUS_APP_INSTALLED = 'statusAppInstalled';
 const STATUS_BOARD_PLUG = 'statusBoardPlug';
 const STATUS_BOARD_CONNECT = 'statusBoardConnect';
 const STATUS_BOARD_COMPONENTS = 'statusBoardComponents';
@@ -36,7 +35,6 @@ const initialState = {
   caughtError: null,
   boardTypeDetected: BOARD_TYPE.OTHER,
   [STATUS_SUPPORTED_BROWSER]: Status.WAITING,
-  [STATUS_APP_INSTALLED]: Status.WAITING,
   [STATUS_BOARD_PLUG]: Status.WAITING,
   [STATUS_BOARD_CONNECT]: Status.WAITING,
   [STATUS_BOARD_COMPONENTS]: Status.WAITING,
@@ -178,12 +176,7 @@ class SetupChecklist extends Component {
    * Helper to be used on second/subsequent attempts at detecting board usability.
    */
   redetect() {
-    if (this.state[STATUS_SUPPORTED_BROWSER] !== Status.SUCCEEDED) {
-      utils.reload();
-    } else {
-      // Otherwise we should be able to redetect without a page reload.
-      this.detect();
-    }
+    utils.reload();
   }
 
   updateMBFirmata() {
