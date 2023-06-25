@@ -14,7 +14,7 @@
       },
       "validations": [
         {
-          "conditions": ["played_one_sound"],
+          "conditions": [{"name": "played_sounds_together", "value": 1}],
           "message": "Nice work.",
           "next": "true"
         },
