@@ -29,14 +29,15 @@ export default function LockoutPanel(props) {
   // This will set the email to the current pending email and fire off the
   // form as though they had typed in the same email again.
   const resendPermissionEmail = event => {
-    // Don't submit the form... we will do that ourselves.
-    event.preventDefault();
-
     const field = document.getElementById('parent-email');
     field.value = props.pendingEmail;
 
     const form = document.getElementById('lockout-panel-form');
     form.submit();
+  };
+
+  const signOut = event => {
+    window.location.href = 'users/sign_out';
   };
 
   // Get the current locale.
@@ -130,9 +131,11 @@ export default function LockoutPanel(props) {
           {/* This is a floating 'link' that resends the pending email. */}
           {props.pendingEmail && (
             <Button
+              id="lockout-resend"
               styleAsText={true}
               style={styles.resendLink}
               text={i18n.sessionLockoutResendEmail()}
+              type="button"
               onClick={resendPermissionEmail}
             />
           )}
@@ -164,7 +167,7 @@ export default function LockoutPanel(props) {
               {/* Show a 'Last email sent' prompt when available. */}
               {props.pendingEmail && (
                 <p style={styles.lastEmail}>
-                  <em>
+                  <em id="lockout-last-email-date">
                     Last email sent:{' '}
                     {props.requestDate.toLocaleDateString(locale, {
                       ...dateOptions,
@@ -181,15 +184,19 @@ export default function LockoutPanel(props) {
         <div style={styles.buttons}>
           {/* A sign-out button. */}
           <Button
+            id="lockout-signout"
+            type="button"
             style={styles.button}
             text={i18n.signOutButton()}
             color={Button.ButtonColor.gray}
-            href="/users/sign_out"
+            onClick={signOut}
           />
 
           {/* The submit button. */}
           {/* An empty onClick will still submit the form. */}
           <Button
+            id="lockout-submit"
+            type="submit"
             style={styles.button}
             text={
               props.pendingEmail
