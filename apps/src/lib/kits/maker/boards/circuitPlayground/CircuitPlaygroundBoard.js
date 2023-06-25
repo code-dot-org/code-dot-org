@@ -85,6 +85,7 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
    * @return {Promise}
    */
   connectToFirmware() {
+    console.log('connectToFirmware - this.port_', this.port_);
     return new Promise((resolve, reject) => {
       CircuitPlaygroundBoard.openWebSerial(this.port_).then(port => {
         this.initializePlaygroundAndBoard(port, resolve, reject);
