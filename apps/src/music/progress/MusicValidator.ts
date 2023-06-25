@@ -1,14 +1,16 @@
 // Music Lab specific validations.
 
 import MusicPlayer from '../player/MusicPlayer';
-import ConditionsChecker, {KnownConditions} from './ConditionsChecker';
+import ConditionsChecker, {
+  KnownConditionNames,
+  KnownCondition,
+} from './ConditionsChecker';
 import {PlaybackEvent} from '../player/interfaces/PlaybackEvent';
 import {Validator} from './ProgressManager';
 
-const KnownConditions: KnownConditions = {
-  PLAYED_ONE_SOUND: 'played_one_sound',
-  PLAYED_TWO_SOUNDS_TOGETHER: 'played_two_sounds_together',
-  PLAYED_THREE_SOUNDS_TOGETHER: 'played_three_sounds_together',
+const KnownConditionNames: KnownConditionNames = {
+  PLAYED_SOUNDS_TOGETHER: 'played_sounds_together',
+  USED_BLOCK: 'used_block',
 };
 
 export default class MusicValidator extends Validator {
@@ -17,7 +19,7 @@ export default class MusicValidator extends Validator {
     private readonly getPlaybackEvents: () => PlaybackEvent[],
     private readonly player: MusicPlayer,
     private readonly conditionsChecker: ConditionsChecker = new ConditionsChecker(
-      KnownConditions
+      KnownConditionNames
     )
   ) {
     super();
@@ -29,9 +31,10 @@ export default class MusicValidator extends Validator {
 
   checkConditions() {
     if (this.getPlaybackEvents().length > 0) {
-      this.conditionsChecker.addSatisfiedCondition(
-        KnownConditions.PLAYED_ONE_SOUND
-      );
+      this.conditionsChecker.addSatisfiedCondition({
+        name: KnownConditionNames.PLAYED_SOUNDS_TOGETHER,
+        value: 1,
+      });
     }
 
     // Get number of sounds currently playing simultaneously.
@@ -51,18 +54,20 @@ export default class MusicValidator extends Validator {
     });
 
     if (currentNumberSounds === 3) {
-      this.conditionsChecker.addSatisfiedCondition(
-        KnownConditions.PLAYED_THREE_SOUNDS_TOGETHER
-      );
+      this.conditionsChecker.addSatisfiedCondition({
+        name: KnownConditionNames.PLAYED_SOUNDS_TOGETHER,
+        value: 3,
+      });
     }
     if (currentNumberSounds === 2) {
-      this.conditionsChecker.addSatisfiedCondition(
-        KnownConditions.PLAYED_TWO_SOUNDS_TOGETHER
-      );
+      this.conditionsChecker.addSatisfiedCondition({
+        name: KnownConditionNames.PLAYED_SOUNDS_TOGETHER,
+        value: 2,
+      });
     }
   }
 
-  conditionsMet(conditions: string[]): boolean {
+  conditionsMet(conditions: KnownCondition[]): boolean {
     return this.conditionsChecker.checkRequirementConditions(conditions);
   }
 
