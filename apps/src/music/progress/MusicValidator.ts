@@ -10,6 +10,7 @@ import {Validator} from './ProgressManager';
 
 export const KnownConditionNamesList: KnownConditionNames = {
   PLAYED_SOUNDS_TOGETHER: 'played_sounds_together',
+  PLAYED_SOUND_TRIGGERED: 'played_sound_triggered',
   USED_BLOCK: 'used_block',
 };
 
@@ -50,6 +51,12 @@ export default class MusicValidator extends Validator {
         eventData.when + length > currentPlayheadPosition
       ) {
         currentNumberSounds++;
+
+        if (eventData.triggered) {
+          this.conditionsChecker.addSatisfiedCondition({
+            name: KnownConditionNamesList.PLAYED_SOUND_TRIGGERED,
+          });
+        }
       }
     });
 
