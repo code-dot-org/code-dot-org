@@ -129,7 +129,7 @@ class EmailReminder
   # @return [String] HTML link to view uploaded log
   def upload_activity_log
     log_url = AWS::S3::LogUploader.
-      new(AWS::S3::LogUploader::LogBucketNames::AUDIT_LOGS_BUCKET, "permission-email-reminder-activity/#{CDO.rack_env}").
+      new(CDO.audit_log_s3_bucket, "permission-email-reminder-activity/#{CDO.rack_env}").
       upload_log(@start_time.strftime('%Y%m%dT%H%M%S%z'), @log.string)
     " <a href='#{log_url}'>☁ Log on S3</a>"
   end

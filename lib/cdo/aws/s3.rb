@@ -371,11 +371,6 @@ module AWS
           return upload_log(File.basename(filename), file, options)
         end
       end
-
-      module LogBucketNames
-        # Bucket used for internal audit logs.
-        AUDIT_LOGS_BUCKET = 'cdo-audit-logs'.freeze
-      end
     end
   end
 end
