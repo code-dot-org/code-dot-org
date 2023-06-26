@@ -352,7 +352,8 @@ const CurriculumCatalog = ({curriculaData, isEnglish, ...props}) => {
               language: cookies.get('language_') || 'en-US',
             })}
             size="m"
-            onChange={() => console.log('Toggled')}
+            checked={appliedFilters['translated']}
+            onChange={e => handleUpdateFilter('translated', e.target.checked)}
           />
         </div>
       )}
