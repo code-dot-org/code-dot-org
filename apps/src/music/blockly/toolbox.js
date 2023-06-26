@@ -13,7 +13,7 @@ import musicI18n from '../locale';
 
 const baseCategoryCssConfig = {
   container: moduleStyles.toolboxCategoryContainer,
-  row: moduleStyles.toolboxRow,
+  row: `${moduleStyles.toolboxRow} blocklyTreeRow`, // Used to look up category labels in UI tests
   label: moduleStyles.toolboxLabel,
 };
 
