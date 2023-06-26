@@ -1,14 +1,14 @@
 Feature: Playing multi levels
 
 Scenario: Loading the level
-  Given I am on "http://studio.code.org/s/course1/lessons/2/levels/2/lang/en-US?noautoplay=true"
+  Given I am on "http://studio.code.org/s/course1/lessons/2/levels/2?noautoplay=true"
   Then I rotate to landscape
   And I wait to see ".submitButton"
   And element ".submitButton" is visible
   And element ".multi-question" has text "Which algorithm gets the Flurb to the flowers?"
 
 Scenario: Clicking an option enables submit and submitting the correct answer wins
-  Given I am on "http://studio.code.org/s/course1/lessons/2/levels/2/lang/en-US?noautoplay=true"
+  Given I am on "http://studio.code.org/s/course1/lessons/2/levels/2?noautoplay=true"
   Then I rotate to landscape
   And I wait to see ".submitButton"
   And element ".submitButton" is visible
