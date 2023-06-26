@@ -3097,10 +3097,10 @@ km-KH:
       courseE_swim_fish_behavior_predict1_2021:
         answers:
         - text: គ្មានអ្វីនឹងកើតឡើងទេ ។
-        - text: ទំពាំងបាយជូ នឹងអណ្តែតទៅកំពូលនៃអេក្រង់ ។
-        - text: ទំពាំងបាយជូ នឹងចាប់ផ្តើមដួល។
+        - text: ដុំស្មៅ(Tumbleweed) នឹងអណ្តែតទៅកំពូលនៃអេក្រង់ ។
+        - text: ដុំស្មៅ(Tumbleweed) នឹងចាប់ផ្តើមដួល។
           feedback: ត្រឹមត្រូវ!
-        - {}
+        - text: ដុំស្មៅ(Tumbleweed) នឹងលេចឡើងហើយនិង​បាត់ទៅវិញ។
         questions:
         - text: សូមក្រឡេកមើលលេខកូដខាងក្រោម។ តើមានអ្វីកើតឡើងបន្ទាប់ពីអ្នកចុច "រត់"?
       courseF_events_predict_multi:
@@ -10209,10 +10209,10 @@ km-KH:
       courseE_swim_fish_behavior_predict12022:
         answers:
         - text: គ្មានអ្វីនឹងកើតឡើងទេ ។
-        - text: ទំពាំងបាយជូ នឹងអណ្តែតទៅកំពូលនៃអេក្រង់ ។
-        - text: ទំពាំងបាយជូ នឹងចាប់ផ្តើមដួល។
+        - text: ដុំស្មៅ(Tumbleweed) នឹងអណ្តែតទៅកំពូលនៃអេក្រង់ ។
+        - text: ដុំស្មៅ(Tumbleweed) នឹងចាប់ផ្តើមដួល។
           feedback: ត្រឹមត្រូវ!
-        - {}
+        - text: ដុំស្មៅ(Tumbleweed) នឹងលេចឡើងហើយនិង​បាត់ទៅវិញ។
         questions:
         - text: សូមក្រឡេកមើលលេខកូដខាងក្រោម។ តើមានអ្វីកើតឡើងបន្ទាប់ពីអ្នកចុច "រត់"?
       courseF_events_predict_multi2022_2022_pilot_-2022-2:
@@ -10350,10 +10350,10 @@ km-KH:
       test-single-multi-standalone-retriable:
         answers:
         - text: គ្មានអ្វីនឹងកើតឡើងទេ ។
-        - text: ទំពាំងបាយជូ នឹងអណ្តែតទៅកំពូលនៃអេក្រង់ ។
-        - text: ទំពាំងបាយជូ នឹងចាប់ផ្តើមដួល។
+        - text: ដុំស្មៅ(Tumbleweed) នឹងអណ្តែតទៅកំពូលនៃអេក្រង់ ។
+        - text: ដុំស្មៅ(Tumbleweed) នឹងចាប់ផ្តើមដួល។
           feedback: ត្រឹមត្រូវ!
-        - {}
+        - text: ដុំស្មៅ(Tumbleweed) នឹងលេចឡើងហើយនិង​បាត់ទៅវិញ។
         questions:
         - text: សូមក្រឡេកមើលលេខកូដខាងក្រោម។ តើមានអ្វីកើតឡើងបន្ទាប់ពីអ្នកចុច "រត់"?
       courseAB_EOC2022:
