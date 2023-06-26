@@ -86,6 +86,25 @@ theme: responsive_full_width
             =hoc_s(:call_to_action_explore_curriculum)
       .action-block.action-block--one-col.flex-space-between
         .content-wrapper
+          %p.overline=hoc_s(:module_grade_k_5_teachers)
+          %h3=hoc_s(:module_label_teaching_csc)
+          %img{src: "/images/self-paced-pl-tile-csc.png", alt: "", style: "width: 100%"}
+          %p
+            %strong=hoc_s(:module_label_curriculum)
+            =hoc_s(:curriculum_name_csc_02)
+          %p
+            %strong=hoc_s(:module_label_duration)
+            =hoc_s(:module_duration_2_hrs)
+          %p
+            %strong=hoc_s(:module_label_prerequisites)
+            =hoc_s(:module_prerequisites_none)
+        .content-footer
+          %a.link-button{href: CDO.studio_url("/s/self-paced-pl-csc-2023"), aria:{label: hoc_s(:aria_label_call_to_action_teaching_csc)}}
+            =hoc_s(:call_to_action_start_pl)
+          %a.link-button.secondary{href: "/educate/csc", aria:{label: hoc_s(:aria_label_call_to_action_curriculum_csc)}}
+            =hoc_s(:call_to_action_explore_curriculum)
+      .action-block.action-block--one-col.flex-space-between
+        .content-wrapper
           %p.overline=hoc_s(:module_grade_6_10_teachers)
           %h3=hoc_s(:module_label_teaching_csd)
           %img{src: "/images/self-paced-pl-tile-csd.png", alt: "", style: "width: 100%"}
@@ -105,28 +124,9 @@ theme: responsive_full_width
             =hoc_s(:call_to_action_explore_curriculum)
       .action-block.action-block--one-col.flex-space-between
         .content-wrapper
-          %p.overline=hoc_s(:module_grade_9_12_teachers)
-          %h3=hoc_s(:module_label_teaching_csp)
-          %img{src: "/images/self-paced-pl-tile-csp.png", alt: "", style: "width: 100%"}
-          %p
-            %strong=hoc_s(:module_label_curriculum)
-            =hoc_s(:curriculum_name_csp)
-          %p
-            %strong=hoc_s(:module_label_duration)
-            =hoc_s(:module_duration_3_hrs)
-          %p
-            %strong=hoc_s(:module_label_prerequisites)
-            =hoc_s(:module_prerequisites_none)
-        .content-footer
-          %a.link-button{href: CDO.studio_url("/courses/self-paced-pl-csp-2022?no_redirect=true"), aria:{label: hoc_s(:aria_label_call_to_action_teaching_csp)}}
-            =hoc_s(:call_to_action_start_pl)
-          %a.link-button.secondary{href: CDO.studio_url("/courses/csp-2022?viewAs=Instructor"), aria:{label: hoc_s(:aria_label_call_to_action_curriculum_csp)}}
-            =hoc_s(:call_to_action_explore_curriculum)
-      .action-block.action-block--one-col.flex-space-between
-        .content-wrapper
           %p.overline=hoc_s(:module_grade_6_10_teachers)
           %h3=hoc_s(:module_label_teaching_ai)
-          %img{src: "/images/self-paced-pl-tile-ai.png", alt: "", style: "width: 100%"}
+          %img{src: "/images/ai/ai-curriclum-machine-learning.png", alt: "", style: "width: 100%"}
           %p
             %strong=hoc_s(:module_label_curriculum)
             =hoc_s(:curriculum_name_ai)
@@ -181,22 +181,22 @@ theme: responsive_full_width
             =hoc_s(:call_to_action_explore_curriculum)
       .action-block.action-block--one-col.flex-space-between
         .content-wrapper
-          %p.overline=hoc_s(:module_grade_k_5_teachers)
-          %h3=hoc_s(:module_label_teaching_csc)
-          %img{src: "/images/self-paced-pl-tile-csc.png", alt: "", style: "width: 100%"}
+          %p.overline=hoc_s(:module_grade_9_12_teachers)
+          %h3=hoc_s(:module_label_teaching_csp)
+          %img{src: "/images/self-paced-pl-tile-csp.png", alt: "", style: "width: 100%"}
           %p
             %strong=hoc_s(:module_label_curriculum)
-            =hoc_s(:curriculum_name_csc_02)
+            =hoc_s(:curriculum_name_csp)
           %p
             %strong=hoc_s(:module_label_duration)
-            =hoc_s(:module_duration_2_hrs)
+            =hoc_s(:module_duration_3_hrs)
           %p
             %strong=hoc_s(:module_label_prerequisites)
             =hoc_s(:module_prerequisites_none)
         .content-footer
-          %a.link-button{href: CDO.studio_url("/s/self-paced-pl-csc-2023"), aria:{label: hoc_s(:aria_label_call_to_action_teaching_csc)}}
+          %a.link-button{href: CDO.studio_url("/courses/self-paced-pl-csp-2022?no_redirect=true"), aria:{label: hoc_s(:aria_label_call_to_action_teaching_csp)}}
             =hoc_s(:call_to_action_start_pl)
-          %a.link-button.secondary{href: "/educate/csc", aria:{label: hoc_s(:aria_label_call_to_action_curriculum_csc)}}
+          %a.link-button.secondary{href: CDO.studio_url("/courses/csp-2022?viewAs=Instructor"), aria:{label: hoc_s(:aria_label_call_to_action_curriculum_csp)}}
             =hoc_s(:call_to_action_explore_curriculum)
 
 %section.bg-neutral-light
