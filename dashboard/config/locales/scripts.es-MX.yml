@@ -9592,7 +9592,7 @@ es-MX:
               display_name: 'Capítulo 2: Computadoras y resolución de problemas'
             csd1_3:
               display_name: Lecciones alternativas
-          title: Resolución de Problemas y Computación ('21-'22)
+          title: Resolución de Problemas y Computación ('22-'23)
           description: "Resolución de Problemas y Computación es una iniciación altamente
             interactiva y colaborativa al campo de la informática, enmarcada dentro
             de la búsqueda más amplia de la resolución de problemas. Practicarás el
@@ -12510,3 +12510,9 @@ es-MX:
             -   Aprender sobre las oportunidades para conectar con la comunidad Informática en general.
 
             **Tiempo sugerido**: 70 minutos
+        csa-frq-practice:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Clases
+            lessonGroup-5:
+              display_name: Arreglos 2D

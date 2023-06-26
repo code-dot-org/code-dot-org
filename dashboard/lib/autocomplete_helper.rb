@@ -16,9 +16,9 @@ class AutocompleteHelper
   end
 
   def self.get_query_terms(query)
-    query.strip.split(/\s+|\W+/).map do |w|
+    query.strip.split(/\s+|\W+/).filter_map do |w|
       w.upcase.presence
-    end.compact
+    end
   end
 
   # Formats the query string for boolean full-text search.

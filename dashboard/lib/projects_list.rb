@@ -172,13 +172,13 @@ module ProjectsList
     #   where `version` corresponds to an S3 version of the library.
     # @return [Array<String>] The channel_ids of libraries that have been updated since the given version.
     def fetch_updated_library_channels(libraries)
-      project_ids = libraries.map do |library|
+      project_ids = libraries.filter_map do |library|
         _, id = storage_decrypt_channel_id(library['channel_id'])
         library['project_id'] = id
         id
       rescue
         nil
-      end.compact.uniq
+      end.uniq
 
       return [] if project_ids.nil_or_empty?
 
@@ -333,7 +333,7 @@ module ProjectsList
             exclude(published_at: nil).
             order(Sequel.desc(:published_at)).
             limit(limit).
-            map {|project_and_user| get_published_project_and_user_data project_and_user}.compact
+            filter_map {|project_and_user| get_published_project_and_user_data project_and_user}
         end
       end
     end

@@ -2315,6 +2315,8 @@ he:
             '8': '8'
             '9': '9'
             '10': '10'
+      storylab_printText:
+        text: הדפס {TEXT}
       storylab_setForegroundEffect2:
         text: בצע אפקט {EFFECT}
         options:

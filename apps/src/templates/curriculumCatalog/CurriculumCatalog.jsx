@@ -155,7 +155,7 @@ const filterByDevice = (curriculum, deviceFilters) => {
   return true;
 };
 
-const CurriculumCatalog = ({curriculaData, isEnglish}) => {
+const CurriculumCatalog = ({curriculaData, ...props}) => {
   const [filteredCurricula, setFilteredCurricula] = useState(curriculaData);
   const [numFilteredTranslatedCurricula, setNumFilteredTranslatedCurricula] =
     useState(
@@ -264,13 +264,13 @@ const CurriculumCatalog = ({curriculaData, isEnglish}) => {
                   subjects={school_subject?.split(',')}
                   topics={cs_topic?.split(',')}
                   isTranslated={is_translated}
-                  isEnglish={isEnglish}
                   pathToCourse={course_version_path}
                   courseVersionId={course_version_id}
                   courseId={course_id}
                   courseOfferingId={course_offering_id}
                   scriptId={script_id}
                   isStandAloneUnit={is_standalone_unit}
+                  {...props}
                 />
               )
             )}

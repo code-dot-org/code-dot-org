@@ -11,17 +11,17 @@
         },
         "minecraft/Minecraft Hour of Code Designer": {
           "name": "마인크래프트(아워 오브 코드): 디자이너",
-          "overview": "이 레슨은 모든 연령의 학습자에게 안전한 지원 환경에서 코딩과 컴퓨터 과학을 소개합니다. 이 레슨은 글을 읽기 충분한 나이의 학생(6세 이상)에게 효과가 있습니다. 더 어린 학습자는 튜토리얼을 끝내지 못할 수도 있지만, 한 시간 동안 즐겁게 퍼즐을 하게 됩니다. 고등학교 학생들은 대부분 튜토리얼을 마친 뒤 마지막에 프리 플레이를 할 시간을 갖게 됩니다.",
-          "preparation": "### 아워오브코드(Hour of Code) 일주일 전\n\n-   아워오브코드 이벤트를 계획하려면 [아워오브코드 교사 가이드](http://hourofcode.com/resources/how-to/) 및 [성공적인 교사들의 모범 사례](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)를 검토하세요.\n-   장식용 천 또는 교실 관련 지원을 받고 싶으시면 [아워오브코드 이벤트를 등록하세요](http://hourofcode.com).\n-   온라인 튜토리얼을 직접 검토하고 완료합니다: [마인크래프트: 모험가](https://studio.code.org/s/minecraft/lessons/1/levels/1)\n-   학생들에게 완료해 보라고 하기 전에 먼저 시험 삼아 해보세요. 기술 사양을 확인하고, 아워오브코드를 진행하기 전 미리 문제를 해결해야 할 부분이 있는지 살펴보세요.\n\n### 아워오브코드(Hour of Code) 하루 전\n\n-   이 수업 계획의 마지막에 있는 [출구 티켓 예시](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing)를 한 장 이상 인쇄하거나 직접 만드세요.\n-   활동을 완료한 학생은 [인증서](https://studio.code.org/certificates/batch?course=bWM=)를 받아야 합니다. 아워오브코드가 끝나면 수여할 수 있도록 미리 학생당 한 부씩 인쇄하시기 바랍니다.",
-          "purpose": "이 레슨은 (블록을 사용한) 코딩 및 프로그래밍의 핵심 CS 개념은 물론 간단한 디버깅 기법을 소개합니다. ",
-          "student_overview": "이 레슨은 모든 연령의 학습자에게 안전한 지원 환경에서 코딩과 컴퓨터 과학을 소개합니다. 이 레슨은 글을 읽기 충분한 나이의 학생(6세 이상)에게 효과가 있습니다. 더 어린 학습자는 튜토리얼을 끝내지 못할 수도 있지만, 한 시간 동안 즐겁게 퍼즐을 하게 됩니다. 고등학교 학생들은 대부분 튜토리얼을 마친 뒤 마지막에 프리 플레이를 할 시간을 갖게 됩니다."
+          "overview": "이 레슨은 모든 연령의 학습자에게 안전한 지원 환경에서 코딩과 컴퓨터 과학을 소개합니다. 이 레슨은 글을 읽기에 충분한 나이의 학생(6세 이상)에게 효과가 있습니다. 더 어린 학습자는 튜토리얼을 끝내지 못할 수도 있지만, 한 시간 동안 즐겁게 퍼즐을 할 수 있습니다. 고등학생들은 대부분 튜토리얼을 마친 뒤 마지막에 프리 플레이 시간을 갖게 됩니다.",
+          "preparation": "### 아워 오브 코드 일주일 전\n\n-   아워 오브 코드 이벤트를 기획하려면 [아워 오브 코드 교사 가이드](http://hourofcode.com/resources/how-to/) 및 [성공적인 교사들의 모범 사례](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)를 검토하세요.\n-   장식용 천 또는 교실 지원을 받고 싶다면 [아워 오브 코드 이벤트를 등록하세요](http://hourofcode.com).\n-   온라인 튜토리얼을 직접 검토하고 완료합니다: [마인크래프트: 설계자](https://studio.code.org/s/minecraft/lessons/1/levels/1)\n-   학생들에게 완료하라고 지시하기 전에 먼저 시험 삼아 해보세요. 기술 사양을 확인하고, 아워 오브 코드 진행에 앞서 해결해야 할 문제가 있는지 살펴보세요.\n\n### 아워 오브 코드 하루 전\n\n-   이 수업 계획 마지막에 있는 [퇴실 티켓 예시](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing)를 한 장 이상 인쇄하거나 직접 만드세요.\n-   활동을 완료한 학생은 [인증서](https://studio.code.org/certificates/batch?course=bWM=)를 받아야 합니다. 아워 오브 코드가 끝나면 수여할 수 있도록 미리 학생당 한 부씩 인쇄하시길 바랍니다.",
+          "purpose": "이 레슨은 (블록을 사용해) 코딩 및 프로그래밍의 핵심 CS 개념은 물론 간단한 디버깅 기법까지 소개합니다.",
+          "student_overview": "이 레슨은 모든 연령의 학습자에게 안전한 지원 환경에서 코딩과 컴퓨터 과학을 소개합니다. 이 레슨은 글을 읽기에 충분한 나이의 학생(6세 이상)에게 효과가 있습니다. 더 어린 학습자는 튜토리얼을 끝내지 못할 수도 있지만, 한 시간 동안 즐겁게 퍼즐을 할 수 있습니다. 고등학생들은 대부분 튜토리얼을 마친 뒤 마지막에 프리 플레이 시간을 갖게 됩니다."
         },
         "hero/Minecraft Hour of Code": {
           "name": "마인크래프트: 히어로의 여정",
-          "overview": "이 레슨은 모든 연령의 학습자에게 안전한 지원 환경에서 코딩과 컴퓨터 과학을 소개합니다. 이 레슨은 글을 읽기 충분한 나이의 학생(6세 이상)에게 효과가 있습니다. 더 어린 학습자는 튜토리얼을 끝내지 못할 수도 있지만, 한 시간 동안 즐겁게 퍼즐을 하게 됩니다. 고등학교 학생들은 대부분 튜토리얼을 마친 뒤 마지막에 프리 플레이를 할 시간을 갖게 됩니다.",
-          "preparation": "### 아워오브코드 (Hour of Code) 일주일 전\n\n-   아워오브코드 이벤트를 계획하려면 [아워오브코드 교사 가이드](http://hourofcode.com/resources/how-to/) 및 [성공적인 교사들의 모범 사례](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)를 검토해 보세요.  \n-   장식용 천 또는 교실 지원을 받고 싶으면, [아워오브코드 이벤트를 등록하세요](http://hourofcode.com).\n-   온라인 튜토리얼을 검토하고 직접 완료합니다: [마인크래프트: 히어로의 여정](studio.code.org/s/hero/lessons/1/levels/1)\n-   학생들에게 완료해 보라고 하기 전에 먼저 시험 삼아 해보세요. 본인의 기술을 확인하고 아워오브코드를 진행하기 전에 미리 문제해결해야 할 부분이 있는지 결정하세요.\n\n### 아워오브코드 하루 전\n\n-   이 수업 계획의 마지막에 있는 [출구 티켓 예시](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing)를 한 장 이상 인쇄하거나 또는 직접 만드세요.\n-   활동을 완료한 각 학생은 [certificate](https://studio.code.org/certificates/batch?course=bWM=)를 받아야 합니다. 아워오브코드가 끝나면 수여할 수 있도록 미리 학생 당 한 부씩 인쇄하세요. ",
-          "purpose": "이 레슨은 코딩과 이벤트 프로그래밍 (블록을 사용하는)의 핵심 CS 개념은 물론 간단한 디버깅 기법과 함수가 얼마나 유용할 수 있는지를 소개합니다. ",
-          "student_overview": "이 레슨은 모든 연령의 학습자에게 안전한 지원환경에서 코딩과 컴퓨터 과학을 소개합니다."
+          "overview": "이 레슨은 모든 연령의 학습자에게 안전한 지원 환경에서 코딩과 컴퓨터 과학을 소개합니다. 이 레슨은 글을 읽기에 충분한 나이의 학생(6세 이상)에게 효과가 있습니다. 더 어린 학습자는 튜토리얼을 끝내지 못할 수도 있지만, 한 시간 동안 즐겁게 퍼즐을 할 수 있습니다. 고등학생들은 대부분 튜토리얼을 마친 뒤 마지막에 프리 플레이 시간을 갖게 됩니다.",
+          "preparation": "### 아워 오브 코드 일주일 전\n\n-   아워 오브 코드 이벤트를 기획하려면 [아워 오브 코드 교사 가이드](http://hourofcode.com/resources/how-to/) 및 [성공적인 교사들의 모범 사례](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)를 검토하세요.\n-   장식용 천 또는 교실 지원을 받고 싶다면 [아워 오브 코드 이벤트를 등록하세요](http://hourofcode.com).\n-   온라인 튜토리얼을 직접 검토하고 완료합니다: [마인크래프트: 히어로의 여정](studio.code.org/s/hero/lessons/1/levels/1)\n-   학생들에게 완료하라고 하기 전에 먼저 시험 삼아 해보세요. 기술 사양을 확인하고, 아워 오브 코드 진행 전에 미리 해결해야 하는 문제가 있는지 살펴보세요.\n\n### 아워 오브 코드 하루 전\n\n-   이 수업 계획의 마지막에 있는 [퇴실 티켓 예시](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing)를 한 장 이상 인쇄하거나 직접 만드세요.\n-   활동을 완료한 학생은 [인증서](https://studio.code.org/certificates/batch?course=bWM=)를 받아야 합니다. 아워 오브 코드가 끝나면 수여할 수 있도록 미리 학생당 한 부씩 인쇄하시길 바랍니다.",
+          "purpose": "이 레슨은 (블록을 사용해) 코딩 및 프로그래밍의 핵심 CS 개념은 물론 간단한 디버깅 기법과 함수의 유용함까지 소개합니다.",
+          "student_overview": "이 레슨은 모든 연령의 학습자에게 안전한 지원 환경에서 코딩과 컴퓨터 과학을 소개합니다."
         },
         "poem-art-2021/Poem Art": {
           "name": "시학",
@@ -32,7 +32,7 @@
           "name": "플래피 코드",
           "overview": "이 레슨에서, 학습자는 컴퓨터 과학에 관한 소개를 받고 기본 블록 코드를 사용하여 게임을 만듭니다. 이 레슨은 10 - 16세의 중간학년 학습자를 위해 고안되었으나 제공되는 차별화 제안을 사용하여 더 어린 또는 더 나이 많은 학습자에게 적합하게 수정할 수 있습니다. ",
           "preparation": "### 아워오브코드 (Hour of Code) 일주일 전\n\n-   아워오브코드 이벤트를 계획하려면 [아워오브코드 교사 가이드](http://hourofcode.com/resources/how-to/) 및 [성공적인 교사들의 모범 사례](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)를 검토해 보세요.  \n-   장식용 천 또는 교실 지원을 받고 싶으면, [아워오브코드 이벤트를 등록하세요](http://hourofcode.com).\n-   온라인 튜토리얼을 검토하고 직접 완료합니다:[플래피 게임 만들기](https://studio.code.org/flappy/1).\n-   학생들에게 완성해 보라고 하기 전에 먼저 시험 삼아 해보세요. 본인의 기술을 확인하고 아워오브코드를 진행하기 전에 미리 문제를 해결해야 할지 결정하세요.\n\n### 아워오브코드 하루 전\n\n-   보드 위에 \"코딩\", \"프로그래밍\", \"디버깅\"이란 단어를 적거나 또는 단어 벽이 있으면 그곳에 단어를 추가합니다.\n-   활동을 완료한 학생에게는 수료증을 나눠 주어야 합니다. 아워오브코드 끝 부분에서 원활한 수여를 위해 미리 [한 부씩 인쇄하세요](http://code.org/certificates). ",
-          "purpose": "이 레슨은 (블록을 사용한) 코딩 및 프로그래밍의 핵심 CS 개념은 물론 간단한 디버깅 기법을 소개합니다. ",
+          "purpose": "이 레슨은 (블록을 사용해) 코딩 및 프로그래밍의 핵심 CS 개념은 물론 간단한 디버깅 기법까지 소개합니다.",
           "student_overview": "이 레슨에서, 학습자는 컴퓨터 과학에 관한 소개를 받고 기본 블록 코드를 사용하여 게임을 만듭니다. 이 레슨은 10 - 16세의 중간학년 학습자를 위해 고안되었으나 제공되는 차별화 제안을 사용하여 더 어린 또는 더 나이 많은 학습자에게 적합하게 수정할 수 있습니다. "
         },
         "hello-world-soccer-2022/Hello World: Food": {
@@ -45,21 +45,21 @@
           "name": "미로",
           "overview": "이 레슨은 모든 연령의 학습자에게 안전한 지원환경에서 코딩과 컴퓨터 과학을 소개합니다. 이 레슨은 4-10세의 어린 학습자를 위해 고안되었으나 제공되는 차별화 제안을 사용하여 더 나이 많은 학습자에게 적합하게 수정할 수 있습니다. ",
           "preparation": "### 아워오브코드 (Hour of Code) 일주일 전\n\n-   아워오브코드 이벤트를 계획하려면 [아워오브코드 교사 가이드](http://hourofcode.com/resources/how-to/) 및 [성공적인 교사들의 모범 사례](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)를 검토해 보세요.  \n-   장식용 천 또는 교실 지원을 받고 싶으면, [아워오브코드 이벤트를 등록하세요](http://hourofcode.com).\n-   온라인 튜토리얼을 검토하고 직접 완료합니다: [생애 최초 컴퓨터 프로그램 작성하기](https://studio.code.org/hoc/1) \n-   학생들에게 완료해 보라고 하기 전에 먼저 시험 삼아 해보세요. 본인의 기술을 확인하고 아워오브코드를 진행하기 전에 미리 문제해결해야 할 부분이 있는지 결정하세요.\n\n### 아워오브코드 하루 전\n\n-   이 레슨 플랜의 끝에 있는 [출구 티켓 예](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing)를 한 장 이상 인쇄하거나 또는 직접 만드세요.\n-   활동을 완료한 학생은 [certificate](http://code.org/certificates)을 받아야 합니다. 아워오브코드 끝 부분에서 원활한 수여를 위해 미리 한 부를 인쇄하세요. ",
-          "purpose": "이 레슨은 (블록을 사용한) 코딩 및 프로그래밍의 핵심 CS 개념은 물론 간단한 디버깅 기법을 소개합니다. ",
+          "purpose": "이 레슨은 (블록을 사용해) 코딩 및 프로그래밍의 핵심 CS 개념은 물론 간단한 디버깅 기법까지 소개합니다.",
           "student_overview": "이 레슨은 모든 연령의 학습자에게 안전한 지원환경에서 코딩과 컴퓨터 과학을 소개합니다. 이 레슨은 4-10세의 어린 학습자를 위해 고안되었으나 제공되는 차별화 제안을 사용하여 더 나이 많은 학습자에게 적합하게 수정할 수 있습니다. "
         },
         "frozen/Artist": {
           "name": "안나, 엘사와 함께하는 코드",
           "overview": "이 레슨은 모든 연령의 학습자에게 안전한 지원환경에서 코딩과 컴퓨터 과학을 소개합니다. 이 레슨은 중간 학년, 10-13세 학습자를 위해 고안되었으나 제공되는 차별화 제안을 사용하여 더 어린 또는 더 나이 많은 학습자에게 적합하게 수정할 수 있습니다. 학생들은 간단한 기하학과 각도 그리기에 관한 기초적인 이해를 갖고 있어야 합니다.",
           "preparation": "### 아워오브코드 (Hour of Code) 일주일 전\n\n-   아워오브코드 이벤트를 계획하려면 [아워오브코드 교사 가이드](http://hourofcode.com/resources/how-to/) 및 [성공적인 교사들의 모범 사례](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)를 검토해 보세요.  \n-   장식용 천 또는 교실 지원을 받고 싶으면, [아워오브코드 이벤트를 등록하세요](http://hourofcode.com).\n-   온라인 튜토리얼을 검토하고 직접 완료합니다: [안나, 엘사와 함께 하는 코딩](https://studio.code.org/s/frozen/stage/1/puzzle/1) \n-   학생들에게 완료해 보라고 하기 전에 먼저 테스트 해보세요. 본인의 기술을 확인하고 아워오브코드를 진행하기 전에 미리 문제해결해야 할 부분이 있는지 결정하세요.\n-   보충 레슨 플랜, [\"그리기 머신\"](https://code.org/curriculum/misc/hocunplugged/Teacher)을 검토하여 아워오브코드 전에 이 레슨을 할지 결정합니다. \n\n### 아워오브코드 하루 전\n\n-   보드 위에 \"코딩\", \"프로그래밍\", \"디버깅\"이란 단어를 적거나 또는 단어 벽이 있으면 그곳에 단어를 추가합니다.\n-   보드 중간 또는 게시판 중앙에 있는 종이에 \"컴퓨터 과학\"이란 단어를 적으세요. 이것은 준비하기와 평가 활동을 위한 [\"마인드 맵\"](https://en.wikipedia.org/wiki/Mind_map) 역할을 할 것입니다.\n-   각도 측정을 이전에 해보지 못한 학생을 위해 각도기를 준비합니다.\n-   활동을 완료한 학생은 [certificate](http://code.org/certificates)을 받아야 합니다. 아워오브코드 끝 부분에서 원활한 수여를 위해 미리 학생 당 한 부씩 인쇄하세요.",
-          "purpose": "이 레슨은 (블록을 사용한) 코딩 및 프로그래밍의 핵심 CS 개념은 물론 간단한 디버깅 기법을 소개합니다. ",
+          "purpose": "이 레슨은 (블록을 사용해) 코딩 및 프로그래밍의 핵심 CS 개념은 물론 간단한 디버깅 기법까지 소개합니다.",
           "student_overview": "이 레슨은 모든 연령의 학습자에게 안전한 지원환경에서 코딩과 컴퓨터 과학을 소개합니다. 이 레슨은 중간 학년, 10-13세 학습자를 위해 고안되었으나 제공되는 차별화 제안을 사용하여 더 어린 또는 더 나이 많은 학습자에게 적합하게 수정할 수 있습니다. 학생들은 간단한 기하학과 각도 그리기에 관한 기초적인 이해를 갖고 있어야 합니다."
         },
         "iceage/Ice Age Play Lab": {
           "name": "아이스 에이지 Play Lab",
           "overview": "이 레슨에서, 학습자는 컴퓨터 과학에 관한 소개를 받고 기본 블록 코드를 사용하여 게임을 만듭니다. 이 레슨은 10 - 16세의 중간학년 학습자를 위해 고안되었으나 제공되는 차별화 제안을 사용하여 더 어린 또는 더 나이 많은 학습자에게 적합하게 수정할 수 있습니다. ",
           "preparation": "### 아워오브코드 (Hour of Code) 일주일 전\n\n-   아워오브코드 이벤트를 계획하려면 [아워오브코드 교사 가이드](http://hourofcode.com/resources/how-to/) 및 [성공적인 교사들의 모범 사례](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)를 검토해 보세요.  \n-   장식용 천 또는 교실 지원을 받고 싶으면, [아워오브코드 이벤트를 등록하세요](http://hourofcode.com).\n-   온라인 튜토리얼을 검토하고 직접 완료합니다:[아이스 에이지 Play Lab](https://studio.code.org/s/iceage/lessons/1/levels/1).\n-   학생들에게 완료해 보라고 하기 전에 먼저 테스트 해보세요. 본인의 기술을 확인하고 아워오브코드를 진행하기 전에 미리 문제해결해야 할 부분이 있는지 결정하세요.\n\n### 아워오브코드 하루 전\n\n-   보드 위에 \"코딩\", \"프로그래밍\", \"디버깅\"이란 단어를 적거나 또는 단어 벽이 있으면 그곳에 단어를 추가합니다.\n-   활동을 완료한 학생은 [certificate]을 받아야 합니다. 아워오브코드 끝 부분에서 원활한 수여를 위해 미리 [한 부 인쇄하세요](http://code.org/certificates).",
-          "purpose": "이 레슨은 (블록을 사용한) 코딩 및 프로그래밍의 핵심 CS 개념은 물론 간단한 디버깅 기법을 소개합니다. ",
+          "purpose": "이 레슨은 (블록을 사용해) 코딩 및 프로그래밍의 핵심 CS 개념은 물론 간단한 디버깅 기법까지 소개합니다.",
           "student_overview": "이 레슨에서, 학습자는 컴퓨터 과학에 관한 소개를 받고 기본 블록 코드를 사용하여 게임을 만듭니다."
         },
         "hello-world-emoji-2021/Hello World": {
@@ -78,7 +78,7 @@
           "name": "검볼 Play Lab",
           "overview": "이 레슨에서, 학습자는 컴퓨터 과학에 관한 소개를 받고 기본 블록 코드를 사용하여 게임을 만듭니다. 이 레슨은 10 - 16세의 중간학년 학습자를 위해 고안되었으나 제공되는 차별화 제안을 사용하여 더 어린 또는 더 나이 많은 학습자에게 적합하게 수정할 수 있습니다. ",
           "preparation": "### 아워오브코드 (Hour of Code) 일주일 전\n\n-   아워오브코드 이벤트를 계획하려면 [아워오브코드 교사 가이드](http://hourofcode.com/resources/how-to/) 및 [성공적인 교사들의 모범 사례](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)를 검토해 보세요.  \n-   장식용 천 또는 교실 지원을 받고 싶으면, [아워오브코드 이벤트를 등록하세요](http://hourofcode.com).\n-   온라인 튜토리얼을 검토하고 직접 완료합니다:[검볼 Playlab](https://studio.code.org/s/gumball/lessons/1/levels/1).\n-   학생들에게 완료해 보라고 하기 전에 먼저 테스트 해보세요. 본인의 기술을 확인하고 아워오브코드를 진행하기 전에 미리 문제해결해야 할 부분이 있는지 결정하세요.\n\n### 아워오브코드 하루 전\n\n-   보드 위에 \"코딩\", \"프로그래밍\", \"디버깅\"이란 단어를 적거나 또는 단어 벽이 있으면 그곳에 단어를 추가합니다.\n-   활동을 완료한 학생은  [certificate](http://code.org/certificates)를 받아야 합니다. 아워오브코드 끝 부분에서 원활한 수여를 위해 미리 한 부씩 인쇄하세요.",
-          "purpose": "이 레슨은 (블록을 사용한) 코딩 및 프로그래밍의 핵심 CS 개념은 물론 간단한 디버깅 기법을 소개합니다. ",
+          "purpose": "이 레슨은 (블록을 사용해) 코딩 및 프로그래밍의 핵심 CS 개념은 물론 간단한 디버깅 기법까지 소개합니다.",
           "student_overview": "이 레슨에서, 학습자는 컴퓨터 과학에 관한 소개를 받고 기본 블록 코드를 사용하여 게임을 만듭니다. 이 레슨은 10 - 16세의 중간학년 학습자를 위해 고안되었으나 제공되는 차별화 제안을 사용하여 더 어린 또는 더 나이 많은 학습자에게 적합하게 수정할 수 있습니다. "
         },
         "dance/Dance Party": {
@@ -94,11 +94,11 @@
           "purpose": "이 레슨을 통해 학생들은 스프라이트 랩으로 간단한 프로그래밍 프로젝트를 만들 준비를 하게 됩니다. 학생들은 이 기술을 사용하여 다른 학교 주제 또는 개인적으로 관련된 주제 등에 관한 프로젝트를 만들 수 있습니다. 컴퓨터 과학을 다른 과목과 통합시키는 방법에 관한 아이디어는 [CS 커넥션](https://code.org/educate/csc)을 방문하여 찾을 수 있습니다."
         },
         "aquatic/Aquatic": {
-          "name": "마인크래프트: 보야지 아쿠아틱",
-          "overview": "이 레슨은 모든 연령의 학습자에게 안전한 지원 환경에서 코딩과 컴퓨터 과학을 소개합니다. 이 레슨은 글을 읽기 충분한 나이의 학생(6세 이상)에게 효과가 있습니다. 더 어린 학습자는 튜토리얼을 끝내지 못할 수도 있지만, 한 시간 동안 즐겁게 퍼즐을 하게 됩니다. 고등학교 학생들은 대부분 튜토리얼을 마친 뒤 마지막에 프리 플레이를 할 시간을 갖게 됩니다.",
-          "preparation": "### 아워오브코드 (Hour of Code) 일주일 전\n\n-   아워오브코드 이벤트를 계획하려면 [아워오브코드 교사 가이드](http://hourofcode.com/resources/how-to/) 및 [성공적인 교사들의 모범 사례](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)를 검토해 보세요.  \n-   장식용 천 또는 교실 지원을 받고 싶으면, [아워오브코드 이벤트를 등록하세요](http://hourofcode.com).\n-   온라인 튜토리얼을 검토하고 직접 완료합니다: [마인크래프트: 수중 항해](http://studio.code.org/s/aquatic/lessons/1/levels/1) \n-   학생들에게 완료해 보라고 하기 전에 먼저 시험 삼아 해보세요. 본인의 기술을 확인하고 아워오브코드를 진행하기 전에 미리 문제해결해야 할 부분이 있는지 결정하세요.\n\n### 아워오브코드 하루 전\n\n-   이 레슨 플랜의 끝에 있는 [출구 티켓 예](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing)를 한 장 이상 인쇄하거나 또는 직접 만드세요.\n-   활동을 완료한 학생에게 수료증을 나눠 주어야 합니다. 아워오브코드 끝 부분에서 원활한 수여를 위해 미리 [한 부씩 인쇄하세요](https://studio.code.org/certificates/batch?course=bWM=). ",
-          "purpose": "이 강의에서는 코딩 및 프로그래밍(블록 사용)의 핵심 CS 개념과 간단한 디버깅 기술 및 조건을 소개합니다. 이 퍼즐 세트는 루프에 대한 지식을 강화하고 구축하며 조건문을 도입하는 데 도움이 됩니다. 이 두 가지 개념을 함께 결합함으로써 학생들은 새롭고 흥미로운 환경에서 재미있고 혁신적인 프로그램을 만들 수 있는 가능성을 탐색할 수 있습니다.",
-          "student_overview": "이 레슨은 모든 연령의 학습자에게 안전한 지원환경에서 코딩과 컴퓨터 과학을 소개합니다."
+          "name": "마인크래프트: 수중 항해",
+          "overview": "이 레슨은 모든 연령의 학습자에게 안전한 지원 환경에서 코딩과 컴퓨터 과학을 소개합니다. 이 레슨은 글을 읽기에 충분한 나이의 학생(6세 이상)에게 효과가 있습니다. 더 어린 학습자는 튜토리얼을 끝내지 못할 수도 있지만, 한 시간 동안 즐겁게 퍼즐을 할 수 있습니다. 고등학생들은 대부분 튜토리얼을 마친 뒤 마지막에 프리 플레이 시간을 갖게 됩니다.",
+          "preparation": "### 아워 오브 코드 일주일 전\n\n-   아워 오브 코드 이벤트를 기획하려면 [아워 오브 코드 교사 가이드](http://hourofcode.com/resources/how-to/) 및 [성공적인 교사들의 모범 사례](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)를 검토하세요.\n-   장식용 천 또는 교실 지원을 받고 싶다면 [아워 오브 코드 이벤트를 등록하세요](http://hourofcode.com).\n-   온라인 튜토리얼을 직접 검토하고 완료합니다: [마인크래프트: 수중 항해](http://studio.code.org/s/aquatic/lessons/1/levels/1)\n-   학생들에게 완료하라고 지시하기 전에 먼저 시험 삼아 해보세요. 기술 사양을 확인하고, 아워 오브 코드 진행에 앞서 해결해야 할 문제가 있는지 살펴보세요.\n\n### 아워 오브 코드 하루 전\n\n-   이 수업 계획 마지막에 있는 [퇴실 티켓 예시](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing)를 한 장 이상 인쇄하거나 직접 만드세요.\n-   활동을 완료한 학생은 [인증서](https://studio.code.org/certificates/batch?course=bWM=)를 받아야 합니다. 아워 오브 코드가 끝나면 수여할 수 있도록 미리 학생당 한 부씩 인쇄하시길 바랍니다.",
+          "purpose": "이 레슨은 (블록을 사용해) 코딩 및 프로그래밍의 핵심 CS 개념은 물론 간단한 디버깅 기법과 조건문까지 소개합니다.  이 퍼즐들은 루프에 관한 지식을 강화하고 습득하며, 조건문을 이해하는 데 도움을 줍니다. 이 두 가지 개념을 결합하면, 학생들은 새롭고 흥미로운 환경에서 재미있고 혁신적인 프로그램을 만들어 볼 수 있습니다.",
+          "student_overview": "이 레슨은 모든 연령의 학습자에게 안전한 지원 환경에서 코딩과 컴퓨터 과학을 소개합니다."
         },
         "hoc-encryption/Simple Encryption": {
           "name": "간단한 암호화",
@@ -126,17 +126,17 @@
           "student_overview": "이 레슨은 모든 연령의 학습자에게 안전한 지원환경에서 코딩과 컴퓨터 과학을 소개합니다. 이 레슨은 두 가지 버전이 있습니다. "
         },
         "mc/Hour of Code 2015": {
-          "name": "마인크래프트 아워오브코드(Hour of Code)",
+          "name": "마인크래프트 아워 오브 코드",
           "overview": "이 레슨은 모든 연령의 학습자에게 안전한 지원 환경에서 코딩과 컴퓨터 과학을 소개합니다. 이 레슨은 글을 읽기 충분한 나이의 학생(6세 이상)에게 효과가 있습니다. 더 어린 학습자는 튜토리얼을 끝내지 못할 수도 있지만, 한 시간 동안 즐겁게 퍼즐을 하게 됩니다. 고등학교 학생들은 대부분 튜토리얼을 마친 뒤 마지막에 프리 플레이를 할 시간을 갖게 됩니다.",
-          "preparation": "### 아워오브코드(Hour of Code) 일주일 전\n\n-   아워오브코드 이벤트를 계획하려면 [아워오브코드 교사 가이드](http://hourofcode.com/resources/how-to/) 및 [성공적인 교사들의 모범 사례](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)를 검토하세요.\n-   장식용 천 또는 교실 관련 지원을 받고 싶으시면 [아워오브코드 이벤트를 등록하세요](http://hourofcode.com).\n-   온라인 튜토리얼을 직접 검토하고 완료합니다: [마인크래프트: 모험가](studio.code.org/s/mc/lessons/1/levels/1)\n-   학생들에게 완료해 보라고 하기 전에 먼저 시험 삼아 해보세요. 기술 사양을 확인하고, 아워오브코드를 진행하기 전 미리 문제를 해결해야 할 부분이 있는지 살펴보세요.\n\n### 아워오브코드(Hour of Code) 하루 전\n\n-   이 수업 계획의 마지막에 있는 [출구 티켓 예시](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing)를 한 장 이상 인쇄하거나 직접 만드세요.\n-   활동을 완료한 학생은 [인증서](https://studio.code.org/certificates/batch?course=bWM=)를 받아야 합니다. 아워오브코드가 끝나면 수여할 수 있도록 미리 학생당 한 부씩 인쇄하시기 바랍니다.",
-          "purpose": "이 레슨은 (블록을 사용한) 코딩 및 프로그래밍의 핵심 CS 개념은 물론 간단한 디버깅 기법을 소개합니다. ",
-          "student_overview": "이 레슨은 모든 연령의 학습자에게 안전한 지원 환경에서 코딩과 컴퓨터 과학을 소개합니다. 이 레슨은 글을 읽기 충분한 나이의 학생(6세 이상)에게 효과가 있습니다. 더 어린 학습자는 튜토리얼을 끝내지 못할 수도 있지만, 한 시간 동안 즐겁게 퍼즐을 하게 됩니다. 고등학교 학생들은 대부분 튜토리얼을 마친 뒤 마지막에 프리 플레이를 할 시간을 갖게 됩니다."
+          "preparation": "### 아워 오브 코드 일주일 전\n\n-   아워 오브 코드 이벤트를 기획하려면 [아워 오브 코드 교사 가이드](http://hourofcode.com/resources/how-to/) 및 [성공적인 교사들의 모범 사례](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)를 검토하세요.\n-   장식용 천 또는 교실 지원을 받고 싶다면 [아워 오브 코드 이벤트를 등록하세요](http://hourofcode.com).\n-   온라인 튜토리얼을 직접 검토하고 완료합니다: [마인크래프트: 모험가](studio.code.org/s/mc/lessons/1/levels/1)\n-   학생들에게 완료하라고 지시하기 전에 먼저 시험 삼아 해보세요. 기술 사양을 확인하고, 아워 오브 코드 진행에 앞서 해결해야 할 문제가 있는지 살펴보세요.\n\n### 아워 오브 코드 하루 전\n\n-   이 수업 계획 마지막에 있는 [퇴실 티켓 예시](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing)를 한 장 이상 인쇄하거나 직접 만드세요.\n-   활동을 완료한 학생은 [인증서](https://studio.code.org/certificates/batch?course=bWM=)를 받아야 합니다. 아워 오브 코드가 끝나면 수여할 수 있도록 미리 학생당 한 부씩 인쇄하시길 바랍니다.",
+          "purpose": "이 레슨은 (블록을 사용해) 코딩 및 프로그래밍의 핵심 CS 개념은 물론 간단한 디버깅 기법까지 소개합니다.",
+          "student_overview": "이 레슨은 모든 연령의 학습자에게 안전한 지원 환경에서 코딩과 컴퓨터 과학을 소개합니다. 이 레슨은 글을 읽기에 충분한 나이의 학생(6세 이상)에게 효과가 있습니다. 더 어린 학습자는 튜토리얼을 끝내지 못할 수도 있지만, 한 시간 동안 즐겁게 퍼즐을 할 수 있습니다. 고등학생들은 대부분 튜토리얼을 마친 뒤 마지막에 프리 플레이 시간을 갖게 됩니다."
         },
         "playlab/Play Lab": {
           "name": "Play Lab",
           "overview": "이 레슨에서, 학습자는 컴퓨터 과학에 관한 소개를 받고 기본 블록 코드를 사용하여 게임을 만듭니다. 이 레슨은 10 - 16세의 중간학년 학습자를 위해 고안되었으나 제공되는 차별화 제안을 사용하여 더 어린 또는 더 나이 많은 학습자에게 적합하게 수정할 수 있습니다. ",
           "preparation": "### 아워오브코드 (Hour of Code) 일주일 전\n\n-   아워오브코드 이벤트를 계획하려면 [아워오브코드 교사 가이드](http://hourofcode.com/resources/how-to/) 및 [성공적인 교사들의 모범 사례](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)를 검토해 보세요.  \n-   장식용 천 또는 교실 지원을 받고 싶으면, [아워오브코드 이벤트를 등록하세요](http://hourofcode.com).\n-   온라인 튜토리얼을 검토하고 직접 완료합니다:[Playlab](https://studio.code.org/s/playlab/stage/1/puzzle/1).\n-   학생들에게 완료해 보라고 하기 전에 먼저 테스트 해보세요. 본인의 기술을 확인하고 아워오브코드를 진행하기 전에 미리 문제해결해야 할 부분이 있는지 결정하세요.\n\n### 아워오브코드 하루 전\n\n-   보드 위에 \"코딩\", \"프로그래밍\", \"디버깅\"이란 단어를 적거나 또는 단어 벽이 있으면 그곳에 단어를 추가합니다.\n-   활동을 완료한 학생은  [certificate](http://code.org/certificates)를 받아야 합니다. 아워오브코드 끝 부분에서 원활한 수여를 위해 미리 학생 당 한 부씩 인쇄하세요.",
-          "purpose": "이 레슨은 (블록을 사용한) 코딩 및 프로그래밍의 핵심 CS 개념은 물론 간단한 디버깅 기법을 소개합니다. ",
+          "purpose": "이 레슨은 (블록을 사용해) 코딩 및 프로그래밍의 핵심 CS 개념은 물론 간단한 디버깅 기법까지 소개합니다.",
           "student_overview": "이 레슨에서, 학습자는 컴퓨터 과학에 관한 소개를 받고 기본 블록 코드를 사용하여 게임을 만듭니다."
         },
         "applab-intro/Intro to App Lab": {
@@ -182,7 +182,7 @@
           "name": "디즈니  무한 반복 Play lab",
           "overview": "이 레슨에서, 학습자는 컴퓨터 과학에 관한 소개를 받고 기본 블록 코드를 사용하여 게임을 만듭니다. 이 레슨은 10 - 16세의 중간학년 학습자를 위해 고안되었으나 제공되는 차별화 제안을 사용하여 더 어린 또는 더 나이 많은 학습자에게 적합하게 수정할 수 있습니다. ",
           "preparation": "### 아워오브코드 (Hour of Code) 일주일 전\n\n-   아워오브코드 이벤트를 계획하려면 [아워오브코드 교사 가이드](http://hourofcode.com/resources/how-to/) 및 [성공적인 교사들의 모범 사례](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)를 검토해 보세요.  \n-   장식용 천 또는 교실 지원을 받고 싶으면, [아워오브코드 이벤트를 등록하세요](http://hourofcode.com).\n-   온라인 튜토리얼을 검토하고 직접 완료합니다:[디즈니 인피니티 Playlab](https://studio.code.org/s/playlab/stage/1/puzzle/1).\n-   학생들에게 완료해 보라고 하기 전에 먼저 테스트 해보세요. 본인의 기술을 확인하고 아워오브코드를 진행하기 전에 미리 문제해결해야 할 부분이 있는지 결정하세요.\n\n### 아워오브코드 하루 전\n\n-   보드 위에 \"코딩\", \"프로그래밍\", \"디버깅\"이란 단어를 적거나 또는 단어 벽이 있으면 그곳에 단어를 추가합니다.\n-   활동을 완료한 학생은 [certificate](http://code.org/certificates)를 받아야 합니다. 아워오브코드 끝 부분에서 원활한 수여를 위해 미리 학생 당 한 부씩 인쇄하세요.",
-          "purpose": "이 레슨은 (블록을 사용한) 코딩 및 프로그래밍의 핵심 CS 개념은 물론 간단한 디버깅 기법을 소개합니다. ",
+          "purpose": "이 레슨은 (블록을 사용해) 코딩 및 프로그래밍의 핵심 CS 개념은 물론 간단한 디버깅 기법까지 소개합니다.",
           "student_overview": "이 레슨에서, 학습자는 컴퓨터 과학에 관한 소개를 받고 기본 블록 코드를 사용하여 게임을 만듭니다."
         },
         "basketball/Bounce": {
