@@ -105,8 +105,6 @@ export default class ProjectManager {
     this.destroy();
   }
 
-  // TODO: Add functionality to reduce channel updates during
-  // HoC "emergency mode" (see 1182-1187 in project.js).
   /**
    * Enqueue a save to happen in the next saveInterval, unless a force save is requested.
    * If a save is already enqueued, update this.sourceToSave with the given source.
@@ -155,9 +153,6 @@ export default class ProjectManager {
   addSaveStartListener(listener: () => void) {
     this.saveStartListeners.push(listener);
   }
-
-  // TODO: Add rename function. Rename sets the name on the channel.
-  // https://codedotorg.atlassian.net/browse/SL-891
 
   /**
    * Helper function to save a project, called either after a timeout or directly by save().
