@@ -9287,3 +9287,37 @@ pl:
           description_short: Koduj własną wersję utworu, aby udostępnić lub wykonać!
           description: Koduj własną wersję utworu, aby udostępnić lub wykonać!
           student_description: Koduj własną wersję utworu, aby udostępnić lub wykonać!
+        csa-frq-practice-2019:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Klasy
+            lessonGroup-4:
+              display_name: Tablice/ArrayLists
+          title: Praktyka CSA FRQ 2019
+        csa-frq-practice-2021:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Metody i struktury sterowania
+            lessonGroup-3:
+              display_name: Klasy
+            lessonGroup-4:
+              display_name: Tablice/ArrayLists
+        csa-frq-practice-2022:
+          lessons:
+            lesson-4:
+              name: Dane
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Metody i struktury sterowania
+            lessonGroup-3:
+              display_name: Klasy
+            lessonGroup-4:
+              display_name: Tablice/ArrayLists
+        csa-frq-practice-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Metody i struktury sterowania
+            lessonGroup-3:
+              display_name: Klasy
+            lessonGroup-4:
+              display_name: Tablice/ArrayLists
