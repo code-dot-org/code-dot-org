@@ -16,7 +16,7 @@ import {
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import currentUser from '@cdo/apps/templates/currentUserRedux';
 import {initializeHiddenScripts} from '@cdo/apps/code-studio/hiddenLessonRedux';
-import {updateQueryParam} from '@cdo/apps/code-studio/utils';
+import {queryParams, updateQueryParam} from '@cdo/apps/code-studio/utils';
 import locales, {setLocaleCode} from '@cdo/apps/redux/localesRedux';
 import mapboxReducer, {setMapboxAccessToken} from '@cdo/apps/redux/mapbox';
 
@@ -49,6 +49,7 @@ function showHomepage() {
   let courseOfferingId;
   let courseVersionId;
   let unitId;
+  let participantType;
   if (query.courseOfferingId) {
     courseOfferingId = parseInt(query.courseOfferingId, 10);
     updateQueryParam('courseOfferingId', undefined, true);
@@ -61,10 +62,19 @@ function showHomepage() {
     unitId = parseInt(query.unitId, 10);
     updateQueryParam('unitId', undefined, true);
   }
+  if (query.participantType) {
+    participantType = queryParams('participantType');
+    updateQueryParam('participantType', undefined, true);
+  }
   if ((courseOfferingId && courseVersionId) || query.openAddSectionDialog) {
     updateQueryParam('openAddSectionDialog', undefined, true);
     store.dispatch(
-      beginCreatingSection(courseOfferingId, courseVersionId, unitId)
+      beginCreatingSection(
+        courseOfferingId,
+        courseVersionId,
+        unitId,
+        participantType
+      )
     );
   }
 

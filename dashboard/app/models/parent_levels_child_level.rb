@@ -53,17 +53,13 @@ class ParentLevelsChildLevel < ApplicationRecord
 
   validate :validate_child_level_type
   def validate_child_level_type
-    if kind == CONTAINED
-      unless %w(Multi FreeResponse).include?(child_level.type)
-        error_message = "cannot add contained level of type #{child_level.type}"
-        add_child_error(error_message)
-      end
+    if kind == CONTAINED && %w(Multi FreeResponse).exclude?(child_level.type)
+      error_message = "cannot add contained level of type #{child_level.type}"
+      add_child_error(error_message)
     end
-    if kind == SUBLEVEL && parent_level.is_a?(BubbleChoice)
-      if %w(BubbleChoice LevelGroup).include?(child_level.type)
-        error_message = "BubbleChoice level #{parent_level.name.dump} cannot contain #{child_level.type} level #{child_level.name.dump}"
-        add_child_error(error_message)
-      end
+    if kind == SUBLEVEL && parent_level.is_a?(BubbleChoice) && %w(BubbleChoice LevelGroup).include?(child_level.type)
+      error_message = "BubbleChoice level #{parent_level.name.dump} cannot contain #{child_level.type} level #{child_level.name.dump}"
+      add_child_error(error_message)
     end
     if kind == PROJECT_TEMPLATE
       add_child_error('level cannot be its own project template level') if child_level == parent_level
