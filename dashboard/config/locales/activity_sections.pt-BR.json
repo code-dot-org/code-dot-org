@@ -5885,6 +5885,9 @@
             null
           ]
         },
+        "4454a825-3e39-4e79-bc6a-012f5029fe21": {
+          "progression_name": "Widget de Números Binários"
+        },
         "cacfe459-bd5f-40ec-ba14-122bb639c1cb": {
           "tips": [
             null
@@ -5915,6 +5918,9 @@
           "tips": [
             null
           ]
+        },
+        "8a0f0675-afba-4c25-9de4-b4f8e0eda208": {
+          "progression_name": "Widget de Número Binário de 8 bits"
         },
         "6925d871-b4de-4782-ae71-af992d2a3858": {
           "tips": [
@@ -7046,7 +7052,17 @@
         "449a73b9-9e17-4a54-bbc6-8eacad2cfd30": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Crie um Plano de Fundo"
+        },
+        "f051c037-8ea5-41f3-85cd-98d856936a33": {
+          "progression_name": "Adicionar Sprites"
+        },
+        "8d77cdeb-94a3-4e11-8443-6f0f4011df27": {
+          "progression_name": "Adicionar Texto"
+        },
+        "bff1cfcd-57b8-40c2-8eaf-ba25b654b71a": {
+          "progression_name": "Revise sua Cena"
         },
         "a3005adc-9fdc-44c5-b692-236229a2d521": {
           "tips": [
@@ -7067,7 +7083,7 @@
           "tips": [
             null
           ],
-          "progression_name": "Vídeo: Introdução ao laço Draw"
+          "progression_name": "Vídeo: Introdução ao Laço de Desenho"
         },
         "aea2bc61-b817-404c-90e4-7fcadd60412a": {
           "tips": [
@@ -7161,15 +7177,32 @@
             null
           ]
         },
+        "a85e603b-4d97-46a4-9c91-de765391646f": {
+          "progression_name": "Exemplo de Cena animada"
+        },
         "37116129-33c9-43a6-be07-a81b0bf2f8b5": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Planeje sua Cena"
+        },
+        "04b289b5-d451-40f6-8b33-02801b8fb26a": {
+          "progression_name": "Desenhe um Plano de Fundo"
         },
         "4d82a10e-f3f1-4e52-a97a-d0ec605c3a84": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Adicionar Sprites"
+        },
+        "cf6e179d-f1d7-427d-8eff-8e47893e30d3": {
+          "progression_name": "Adicionar Texto"
+        },
+        "1a0e8cf1-caac-45a4-be73-d16e4557231c": {
+          "progression_name": "Adicionar Movimento"
+        },
+        "aa2fee6c-82b3-427e-98ad-61cb4bef5324": {
+          "progression_name": "Revise sua Cena animada"
         },
         "40657117-7d56-4a65-b054-6e21c1ee2d40": {
           "tips": [
@@ -7205,6 +7238,9 @@
             null
           ],
           "progression_name": "Vídeo: Boleanos"
+        },
+        "91b9dec7-b9d6-457a-8498-3be54a2b5ac6": {
+          "progression_name": "Verificação Rápida"
         },
         "6d194426-183e-4481-bbce-fb81d3e1e56b": {
           "progression_name": "Desenvolvimento de Habilidades"
@@ -7242,7 +7278,7 @@
           ]
         },
         "e7c40cc1-5969-4bdb-bd17-0c0f786b9d76": {
-          "name": "Entrada do teclado",
+          "name": "Entrada de Teclado",
           "tips": [
             null
           ]
@@ -7312,6 +7348,9 @@
             null
           ]
         },
+        "6176e6d8-a500-49a0-91a3-160fc7b92ca0": {
+          "progression_name": "Demonstração: Cartão Interativo"
+        },
         "6fc9f0d1-23f2-45bf-879f-69b222793806": {
           "tips": [
             null
@@ -7320,7 +7359,8 @@
         "c0090e7c-168b-4591-9c94-d636a0033dbe": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Faça um Cartão Interativo"
         },
         "4e0723c7-38ba-4d47-82fa-957aed03bab9": {
           "tips": [
@@ -7524,7 +7564,7 @@
           ]
         },
         "1f891879-1df5-43fa-8960-39d2465556c7": {
-          "progression_name": "Movimento sprite"
+          "progression_name": "Movimento de Sprite"
         },
         "919518c6-f1b0-4d16-94b0-7f83918ee250": {
           "progression_name": "Interações com Sprite"
@@ -7554,6 +7594,9 @@
             null
           ],
           "progression_name": "Praticar"
+        },
+        "12ff29ff-b749-4093-a2b0-4d6ef684bcf1": {
+          "progression_name": "Verificação Rápida"
         },
         "3bcae8d2-a829-4fab-aef2-444e9e331654": {
           "tips": [
@@ -7804,7 +7847,8 @@
         "a3726f27-d799-44a0-95d4-81a834a2cc1e": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Verificação Rápida"
         },
         "9af7ecf4-c994-4a73-8e17-6d9558edb70c": {
           "tips": [
@@ -9541,15 +9585,24 @@
             null
           ]
         },
+        "9ff3e329-8841-4909-813d-c4b83b4fa2d5": {
+          "progression_name": "Reconhecendo peixes"
+        },
         "861ba0ea-3d12-44d8-8114-da49c3d65081": {
           "tips": [
             null
           ]
         },
+        "5471d717-ebc3-4f44-91b5-61c6cebe964d": {
+          "progression_name": "Reconhecendo as características dos peixes"
+        },
         "0fc5594e-5acc-46b7-b061-532e27fce958": {
           "tips": [
             null
           ]
+        },
+        "514d167e-9739-4856-9308-39bce3beb983": {
+          "progression_name": "Reconhecendo expressões"
         },
         "a6f7adf9-fc91-4fb7-88c5-e87b81a0842e": {
           "tips": [
@@ -9558,7 +9611,8 @@
         },
         "7799c3eb-e76a-465b-9f24-69d6c04a01c7": {
           "name": "Reflexão",
-          "description": "\\*_Code Studio:_Peça aos alunos que respondam a 5 perguntas rápidas na pesquisa no início desta unidade sobre I.A. e Aprendizagem de máquina. Assim que pelo menos 5 alunos tiverem concluído a pesquisa, você poderá visualizar os resultados anonimizados no Painel de controle do professor. Algumas dessas perguntas serão feitas novamente ao final do primeiro projeto, pois podem ser úteis para observar o avanço dos alunos e as mudanças de postura por durante toda a unidade."
+          "description": "\\*_Code Studio:_Peça aos alunos que respondam a 5 perguntas rápidas na pesquisa no início desta unidade sobre I.A. e Aprendizagem de máquina. Assim que pelo menos 5 alunos tiverem concluído a pesquisa, você poderá visualizar os resultados anonimizados no Painel de controle do professor. Algumas dessas perguntas serão feitas novamente ao final do primeiro projeto, pois podem ser úteis para observar o avanço dos alunos e as mudanças de postura por durante toda a unidade.",
+          "progression_name": "Pesquisa de verificação"
         },
         "b5acd50c-8f0e-4c22-8918-0e4801b137e1": {
           "tips": [
@@ -19241,15 +19295,24 @@
             null
           ]
         },
+        "42738b6d-fc16-4de9-b190-d6253f5e2c67": {
+          "progression_name": "Reconhecendo peixes"
+        },
         "aa866b7f-747f-49e4-9578-f937dbef61e4": {
           "tips": [
             null
           ]
         },
+        "0cd5acdb-155e-4161-aba7-610f3869ec29": {
+          "progression_name": "Reconhecendo as características dos peixes"
+        },
         "8c5b9e26-3b22-4a68-a10d-2e8f3d24a9b0": {
           "tips": [
             null
           ]
+        },
+        "1ce2130f-e735-4060-811f-b8c87e6f74b0": {
+          "progression_name": "Reconhecendo expressões"
         },
         "01e90cb3-4a6f-46ed-9a4e-4e7524589e47": {
           "tips": [
@@ -19258,7 +19321,8 @@
         },
         "d26ab8fe-dc83-4704-8aba-bd0cdbdd80a4": {
           "name": "Reflexão",
-          "description": "\\*_Code Studio:_Peça aos alunos que respondam a 5 perguntas rápidas na pesquisa no início desta unidade sobre I.A. e Aprendizagem de máquina. Assim que pelo menos 5 alunos tiverem concluído a pesquisa, você poderá visualizar os resultados anonimizados no Painel de controle do professor. Algumas dessas perguntas serão feitas novamente ao final do primeiro projeto, pois podem ser úteis para observar o avanço dos alunos e as mudanças de postura por durante toda a unidade."
+          "description": "\\*_Code Studio:_Peça aos alunos que respondam a 5 perguntas rápidas na pesquisa no início desta unidade sobre I.A. e Aprendizagem de máquina. Assim que pelo menos 5 alunos tiverem concluído a pesquisa, você poderá visualizar os resultados anonimizados no Painel de controle do professor. Algumas dessas perguntas serão feitas novamente ao final do primeiro projeto, pois podem ser úteis para observar o avanço dos alunos e as mudanças de postura por durante toda a unidade.",
+          "progression_name": "Pesquisa de verificação"
         },
         "8bdf1f4e-1c20-42bd-a5d5-7217dfa0bd4f": {
           "tips": [
@@ -20831,6 +20895,9 @@
             null
           ]
         },
+        "b4133437-14b2-4221-8202-c411f147e13c": {
+          "progression_name": "Widget de Números Binários"
+        },
         "30ef889b-387b-4dbd-b6bc-96ca25489944": {
           "tips": [
             null
@@ -20861,6 +20928,9 @@
           "tips": [
             null
           ]
+        },
+        "5b070069-8e80-48a8-8a84-435906d67aef": {
+          "progression_name": "Widget de Número Binário de 8 bits"
         },
         "38324708-63cb-4738-92c9-af06aed187f7": {
           "tips": [
@@ -21459,6 +21529,18 @@
         "d4865d33-6382-4b57-b532-6949d5621973": {
           "progression_name": "Cenas com Sprite"
         },
+        "9a593b91-9cd2-48ff-a733-2943aa535ceb": {
+          "progression_name": "Crie um Plano de Fundo"
+        },
+        "853974f1-7e3b-4403-a475-5af28d960115": {
+          "progression_name": "Adicionar Sprites"
+        },
+        "c0fc532b-e6eb-4858-af5b-5032cd917616": {
+          "progression_name": "Adicionar Texto"
+        },
+        "53f44c86-807a-412c-a436-ed4235537ed4": {
+          "progression_name": "Revise sua Cena"
+        },
         "fe60d6bf-420e-474d-8b50-0ff252e6c6bf": {
           "tips": [
             null
@@ -21483,7 +21565,7 @@
           "tips": [
             null
           ],
-          "progression_name": "Vídeo: Introdução ao laço Draw"
+          "progression_name": "Vídeo: Introdução ao Laço de Desenho"
         },
         "09ba5105-6934-4a31-9684-3e62192e7542": {
           "progression_name": "Exploração"
@@ -21559,6 +21641,27 @@
             null
           ]
         },
+        "d77db66e-6e3a-4e3a-82df-2499a5ad0efd": {
+          "progression_name": "Exemplo de Cena animada"
+        },
+        "3b4e9eb3-a29a-432e-b6dd-0c525bfaedf2": {
+          "progression_name": "Planeje sua Cena"
+        },
+        "2e883502-c179-45a9-a313-6ec995831ed2": {
+          "progression_name": "Desenhe um Plano de Fundo"
+        },
+        "68f06aee-a50d-4b3e-9323-16f4812eb23a": {
+          "progression_name": "Adicionar Sprites"
+        },
+        "6e3a6230-12e7-4b7f-90a7-ec8574647b3b": {
+          "progression_name": "Adicionar Texto"
+        },
+        "08bedf45-b2d1-4147-8479-22a9c5f20d51": {
+          "progression_name": "Adicionar Movimento"
+        },
+        "7de39108-1c8b-4602-9afe-cfde5d7f3ed4": {
+          "progression_name": "Revise sua Cena animada"
+        },
         "fa1f1ad4-aadd-49d1-9138-887450893813": {
           "tips": [
             null
@@ -21590,6 +21693,9 @@
             null
           ],
           "progression_name": "Vídeo: Boleanos"
+        },
+        "6eac26fe-a47a-4dbc-b225-c006efd6c418": {
+          "progression_name": "Verificação Rápida"
         },
         "ba88e2d6-49b9-4e4b-a34f-3a7804ea1ce5": {
           "progression_name": "Desenvolvimento de Habilidades"
@@ -21630,7 +21736,7 @@
           ]
         },
         "55c35c06-acaf-41fa-b001-47448467e841": {
-          "name": "Entrada do teclado"
+          "name": "Entrada de Teclado"
         },
         "1cc6a39c-ad40-4484-941a-cfedaee5e669": {
           "progression_name": "Previsão"
@@ -21695,10 +21801,14 @@
             null
           ]
         },
+        "00e65ea4-8a6e-408e-bb09-2fcb9f1a27d6": {
+          "progression_name": "Demonstração: Cartão Interativo"
+        },
         "4b3c39d2-a62c-43c3-b5ae-048ef270624a": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Faça um Cartão Interativo"
         },
         "1f6b91fb-f2a1-4585-bb33-4ede2232a20d": {
           "progression_name": "Projeto de trabalho"
@@ -21869,7 +21979,7 @@
           ]
         },
         "a7af5fa7-b9bc-4779-bf77-e349bd07d0f2": {
-          "progression_name": "Movimento sprite"
+          "progression_name": "Movimento de Sprite"
         },
         "93c86b2f-aeb2-48d2-b34d-8213761ae09c": {
           "progression_name": "Interações com Sprite"
@@ -21899,6 +22009,9 @@
             null
           ],
           "progression_name": "Praticar"
+        },
+        "46206978-44fa-44f3-a4b3-746a30a86dce": {
+          "progression_name": "Verificação Rápida"
         },
         "fa4f0ee7-664c-4e90-b170-12f4cfb45ef5": {
           "tips": [
@@ -22581,7 +22694,8 @@
         "415a1a02-00ce-4eee-9af3-bcddf1369b79": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Verificação Rápida"
         },
         "f5c13deb-a9a7-4f04-9daa-ec92ec261b02": {
           "tips": [

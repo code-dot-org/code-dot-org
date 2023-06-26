@@ -1830,7 +1830,7 @@ pt:
           title: CSP Parque Infantil
           lesson_groups:
             csp_variables:
-              display_name: variáveis
+              display_name: Variáveis
             csp_conditionals:
               display_name: Condições
             csp_functions:
@@ -1851,7 +1851,7 @@ pt:
             ramp_up:
               display_name: Treinamento
             csf_variables:
-              display_name: variáveis
+              display_name: Variáveis
             csf_data:
               display_name: Dados
             csf_for_loops:
@@ -1926,7 +1926,7 @@ pt:
             csf_functions:
               display_name: funções
             csf_variables:
-              display_name: variáveis
+              display_name: Variáveis
             csf_for_loops:
               display_name: Laços para
             csf_sprites:
@@ -2103,7 +2103,7 @@ pt:
           title: CSP Unidade 4 Piloto - Variáveis, Condicionais e Funções
           lesson_groups:
             csp_variables:
-              display_name: variáveis
+              display_name: Variáveis
             csp_conditionals:
               display_name: Condições
             csp_functions:
@@ -2243,7 +2243,7 @@ pt:
           title: 'Unidade 1: Bits e Bytes'
           lesson_groups:
             csp_variables:
-              display_name: variáveis
+              display_name: Variáveis
             csp_conditionals:
               display_name: Condições
             csp_functions:
@@ -2254,7 +2254,7 @@ pt:
           title: 'Unidade 2: A internet'
           lesson_groups:
             csp_variables:
-              display_name: variáveis
+              display_name: Variáveis
             csp_conditionals:
               display_name: Condições
             csp_functions:
@@ -2267,7 +2267,7 @@ pt:
           title: 'Unidade 4: Variáveis, Condicionais e Funções'
           lesson_groups:
             csp_variables:
-              display_name: variáveis
+              display_name: Variáveis
             csp_conditionals:
               display_name: Condições
             csp_functions:
@@ -2291,7 +2291,7 @@ pt:
           title: 'Unidade 6: Algoritmos'
           lesson_groups:
             csp_variables:
-              display_name: variáveis
+              display_name: Variáveis
             csp_conditionals:
               display_name: Condições
             csp_functions:
@@ -2309,7 +2309,7 @@ pt:
           title: 'Unidade 8: Criar PT'
           lesson_groups:
             csp_variables:
-              display_name: variáveis
+              display_name: Variáveis
             csp_conditionals:
               display_name: Condições
             csp_functions:
@@ -2320,7 +2320,7 @@ pt:
           title: 'Unidade 9: Dados'
           lesson_groups:
             csp_variables:
-              display_name: variáveis
+              display_name: Variáveis
             csp_conditionals:
               display_name: Condições
             csp_functions:
@@ -2331,7 +2331,7 @@ pt:
           title: 'Unidade 10: Impacto Global'
           lesson_groups:
             csp_variables:
-              display_name: variáveis
+              display_name: Variáveis
             csp_conditionals:
               display_name: Condições
             csp_functions:
@@ -2595,7 +2595,7 @@ pt:
           title: 'Visualização do CSP: variáveis, condicionais e funções'
           lesson_groups:
             csp_variables:
-              display_name: variáveis
+              display_name: Variáveis
             csp_conditionals:
               display_name: Condições
             csp_functions:
@@ -2686,7 +2686,7 @@ pt:
           title: CSP Unidade 4 - Variáveis, condicionais e funções ('20 -'21)
           lesson_groups:
             csp_variables:
-              display_name: variáveis
+              display_name: Variáveis
             csp_conditionals:
               display_name: Condições
             csp_functions:
@@ -2893,7 +2893,7 @@ pt:
             csf_digcit:
               display_name: Cidadania digital
             csf_variables:
-              display_name: variáveis
+              display_name: Variáveis
             csf_data:
               display_name: Dados
             csf_for_loops:
@@ -2919,7 +2919,7 @@ pt:
             csf_functions:
               display_name: funções
             csf_variables:
-              display_name: variáveis
+              display_name: Variáveis
             csf_for_loops:
               display_name: Laços para
             csf_sprites:
@@ -3071,7 +3071,7 @@ pt:
             introduction:
               display_name: Introdução
             lessonGroup-3:
-              display_name: variáveis
+              display_name: Variáveis
             outbreak:
               display_name: Simulador de Epidemia
             debugging:
@@ -3151,7 +3151,7 @@ pt:
         csp4-2021:
           lesson_groups:
             csp_variables:
-              display_name: variáveis
+              display_name: Variáveis
             csp_conditionals:
               display_name: Condições
             csp_functions:
@@ -3310,7 +3310,7 @@ pt:
             end_of_course_project:
               display_name: Projeto de Fim do Curso
             lessonGroup-8:
-              display_name: variáveis
+              display_name: Variáveis
             lessonGroup-9:
               display_name: remover
             lessonGroup-7:
@@ -3330,7 +3330,7 @@ pt:
             csf_functions:
               display_name: funções
             csf_variables:
-              display_name: variáveis
+              display_name: Variáveis
             csf_for_loops:
               display_name: Laços para
             csf_sprites:
@@ -3356,11 +3356,11 @@ pt:
             outbreak:
               display_name: Simulação de Epidemia
             lessonGroup-3:
-              display_name: variáveis
+              display_name: Variáveis
             Sprites:
               display_name: Sprite
             variables:
-              display_name: variáveis
+              display_name: Variáveis
         csd4-preview-2021:
           description: A unidade 4 apresenta os impactos sociais mais amplos da computação. Através de uma série de desafios de design, você aprenderá a entender melhor as necessidades de outras pessoas enquanto desenvolve uma solução para um problema. A segunda metade da unidade consiste em um projeto de equipe iterativo, durante o qual as equipes têm a oportunidade de identificar uma necessidade com a qual se preocupam, protótipos de soluções tanto no papel quanto no App Lab e testam soluções com usuários reais para obter feedback e avançar iteração.
           description_short: "  Aprenda a criar um programa que atenda às necessidades de seus usuários."
@@ -3469,10 +3469,14 @@ pt:
           student_description: Bem-vindo à Pesquisa de Pós-Curso em Princípios da CC do Code.org. Esta pesquisa leva cerca de 15 minutos para ser concluída. Suas respostas são privadas e anônimas - seu professor pode ver resultados agregados anônimos para toda a turma. Os resultados são vitais para o seu professor e para o Code.org sustentar e melhorar o curso. Obrigado pelo seu tempo e consideração.
         aiml-2021:
           lesson_groups:
+            lessonGroup-2:
+              display_name: Capítulo 1 - Compreendendo o Aprendizado de Máquina
             lessonGroup-4:
               display_name: Questionário
         csd7-2021:
           lesson_groups:
+            lessonGroup-2:
+              display_name: Capítulo 1 - Compreendendo o Aprendizado de Máquina
             lessonGroup-4:
               display_name: Questionário
           title: I.A. e Aprendizagem de máquina
@@ -3789,7 +3793,7 @@ pt:
             lessonGroup-2:
               display_name: Sprite
             lessonGroup-3:
-              display_name: variáveis
+              display_name: Variáveis
             lessonGroup-4:
               display_name: Projeto de Fim do Curso
         csd6-pilot-2022:
@@ -3844,7 +3848,7 @@ pt:
             csf_functions:
               display_name: funções
             csf_variables:
-              display_name: variáveis
+              display_name: Variáveis
             csf_for_loops:
               display_name: Laços para
             end_of_course_project:
@@ -3869,7 +3873,7 @@ pt:
         csp4-2022:
           lesson_groups:
             csp_variables:
-              display_name: variáveis
+              display_name: Variáveis
             csp_conditionals:
               display_name: Condições
             csp_functions:
@@ -3995,7 +3999,7 @@ pt:
             lessonGroup-7:
               display_name: Cidadania digital
             lessonGroup-8:
-              display_name: variáveis
+              display_name: Variáveis
             end_of_course_project:
               display_name: Projeto de Fim do Curso
           description_short: Aprenda todos os conceitos Fundamentais da Ciência da Computação e crie sua própria arte, história ou jogo.
@@ -4067,7 +4071,7 @@ pt:
             ramp_up:
               display_name: Sprite
             lessonGroup-8:
-              display_name: variáveis
+              display_name: Variáveis
             end_of_course_project:
               display_name: Projeto de Fim do Curso
           description_audience: 'Idades: 9-13'
@@ -4186,10 +4190,13 @@ pt:
               display_name: 'Capítulo 2: Resolvendo problemas de dados'
             cspSurvey:
               display_name: Questionário
+          title: Dados e Sociedade ('22-'23)
           student_description: A unidade 5 trata da importância dos dados na solução de problemas e destaca como os computadores podem ajudar nesse processo. O primeiro capítulo explora os diferentes sistemas usados ​​para representar informações em um computador e os desafios e as vantagens e desvantagens do uso deles. No segundo capítulo, você aprenderá como as coleções de dados são usadas para resolver problemas e como os computadores ajudam a automatizar as etapas desse processo. O capítulo conclui considerando como o processo de solução de problemas de dados pode ser aplicado a uma área de sua escolha.
           description_short: Aprenda como as pessoas usam computadores para resolver problemas de dados.
         csd7-2022:
           lesson_groups:
+            lessonGroup-2:
+              display_name: Capítulo 1 - Compreendendo o Aprendizado de Máquina
             lessonGroup-4:
               display_name: Questionário
           title: Inteligência Artificial e Aprendizado de Máquina
@@ -4207,6 +4214,10 @@ pt:
           student_description: Esta unidade contém uma pesquisa para quando e a sua aula de Descobertas CS e as unidades forem concluídas. O seu professor lhe dirá quando você deverá fazer essa pesquisa.
         csp-post-survey-2022:
           title: Pesquisa pós-curso de princípios do CS
+        aiml-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Capítulo 1 - Compreendendo o Aprendizado de Máquina
         self-paced-pl-csd1-2022:
           lesson_groups:
             lessonGroup-2:
@@ -4305,7 +4316,7 @@ pt:
         csa2-2023:
           lessons:
             lesson-4:
-              name: variáveis
+              name: Variáveis
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
@@ -4419,7 +4430,7 @@ pt:
         csp4-2023:
           lesson_groups:
             csp_variables:
-              display_name: variáveis
+              display_name: Variáveis
             csp_conditionals:
               display_name: Condições
             csp_functions:
@@ -4541,7 +4552,7 @@ pt:
             csf_functions:
               display_name: funções
             csf_variables:
-              display_name: variáveis
+              display_name: Variáveis
             csf_for_loops:
               display_name: Laços para
             end_of_course_project:
@@ -4985,7 +4996,7 @@ pt:
             lessonGroup-3:
               display_name: Sprite
             lessonGroup-4:
-              display_name: variáveis
+              display_name: Variáveis
             lessonGroup-6:
               display_name: Projeto de Fim do Curso
           description_audience: 'Idades: 9-13'
@@ -4993,6 +5004,33 @@ pt:
         self-paced-pl-csp2-2023:
           title: 'Módulo 2: Navegação no Code.org'
         csa-frq-practice:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Classes
+            lessonGroup-5:
+              display_name: Vetores 2D
+        csa-frq-practice-2019:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Classes
+            lessonGroup-5:
+              display_name: Vetores 2D
+        csa-frq-practice-2021:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Classes
+            lessonGroup-5:
+              display_name: Vetores 2D
+        csa-frq-practice-2022:
+          lessons:
+            lesson-4:
+              name: Dados
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Classes
+            lessonGroup-5:
+              display_name: Vetores 2D
+        csa-frq-practice-2023:
           lesson_groups:
             lessonGroup-3:
               display_name: Classes

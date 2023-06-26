@@ -5708,7 +5708,8 @@
         "courseF_variables_predict_-2022-2": "Faça uma previsão! Estude o código.",
         "ramp_artist_loops6v1_2021": "Essa escada é grande, mas são necessárias apenas algumas linhas de código se você usar um loop!\r\n\r\nUse um loop para completar o quebra-cabeça.",
         "simcustom_-2022-2": "# Personalize\n\nAqui está outra versão da simulação. Tente fazer algumas alterações nos trajes de sprite ou no código abaixo. Divirta-se personalizando sua própria simulação!",
-        "simcustom_2021": "# Personalize\n\nAqui está outra versão da simulação. Tente fazer algumas alterações nos trajes de sprite ou no código abaixo. Divirta-se personalizando sua própria simulação!"
+        "simcustom_2021": "# Personalize\n\nAqui está outra versão da simulação. Tente fazer algumas alterações nos trajes de sprite ou no código abaixo. Divirta-se personalizando sua própria simulação!",
+        "CSD Web Headings Special Character 3_2022": "# Código Extra: Caractere Especial \"&\"\n\nO caractere e comercial (**&**) pode causar erros no seu código HTML porque é utilizado para outros caracteres especiais como os símbolos de menor que (**<** é codificado como `&lt` ), e aspas duplas (**\"**  é codificado como `&quot`).\n\nPara usar o caractere **&** corretamente em um parágrafo, você precisa do código especial `&amp`.\n*Sim, você precisa de um e comercial para codificar um e comercial!*\n<br>Nessa atividade, você fará uma lista com suas coisas favoritas e praticará o uso do e comercial.\n\n# Faça isso\n* Leia o HTML e procure onde o código `&amp` está sendo usado corretamente.\n* Substitua o e comercial que está causando o código rosa com o código especial do símbolo.\n* Preencha as categorias em branco ou adicione suas próprias usando o novo código. Tente pensar em respostas que usem o símbolo!"
       }
     }
   }
