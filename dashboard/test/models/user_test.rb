@@ -3690,6 +3690,7 @@ class UserTest < ActiveSupport::TestCase
         id: @student.id,
         name: @student.name,
         username: @student.username,
+        family_name: nil,
         email: @student.email,
         hashed_email: @student.hashed_email,
         user_type: @student.user_type,
@@ -4766,6 +4767,21 @@ class UserTest < ActiveSupport::TestCase
     user = create :user
     user.increment_section_attempts
     assert_equal 1, user.properties['section_attempts']
+  end
+
+  test 'family name is added to summarize' do
+    user = create :user
+    family_name = 'TestFamilyName'
+    user.properties = {family_name: family_name}
+
+    assert_nil(user.summarize[:family_name])
+
+    DCDO.stubs(:get).with('family-name-features', false).returns(true)
+
+    assert(user.summarize.key?(:family_name))
+    assert_equal(family_name, user.summarize[:family_name])
+
+    DCDO.unstub(:get)
   end
 
   test 'school_info_school returns the school associated with the user' do
