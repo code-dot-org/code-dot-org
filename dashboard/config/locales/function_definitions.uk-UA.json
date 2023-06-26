@@ -2431,7 +2431,7 @@
             "name": "щось зробити"
           },
           "my design": {
-            "name": "мій дизайн"
+            "name": "мій малюнок"
           }
         },
         "courseE_artist_functions_challenge2_2021": {
@@ -2439,12 +2439,15 @@
             "name": "щось зробити"
           },
           "my design": {
-            "name": "мій дизайн"
+            "name": "мій малюнок"
           }
         },
         "courseE_artist_functions_predict1_2021": {
           "draw a square": {
             "name": "намалювати квадрат"
+          },
+          "draw ear stems": {
+            "name": "намалювати стебла колосків"
           }
         },
         "courseE_artist_functions_predict1_dani": {

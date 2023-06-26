@@ -3767,7 +3767,7 @@ uk:
               display_name: Вплив інформатики
             end_of_course_project:
               display_name: Проєкт
-          title: Курс Е (2022)
+          title: Курс Е (2023)
           description: Ми створили курс E для учнів четвертого класу. Курс починається
             з ознайомлення з інструментом програмування Спрайт Лабораторія. Учні навчаться
             робити веселі інтерактивні проекти, які підсилюють те, що вони дізнаються
@@ -4084,6 +4084,25 @@ uk:
             та інтернету. До кінця цього курсу ми зможемо поділитися з друзями та
             родиною власним розробленим проєктом.
         csa-frq-practice:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Класи
+        csa-frq-practice-2019:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Класи
+        csa-frq-practice-2021:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Класи
+        csa-frq-practice-2022:
+          lessons:
+            lesson-4:
+              name: Дані
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Класи
+        csa-frq-practice-2023:
           lesson_groups:
             lessonGroup-3:
               display_name: Класи
