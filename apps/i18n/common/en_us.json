@@ -1418,7 +1418,7 @@
   "makerSetupDeprecationWarningAppTitle": "Maker App is being deprecated June 2023",
   "makerSetupDeprecationWarningAppDetails": "Maker Toolkit no longer requires the Maker App to connect to boards. After June 2023, Code.org will remove support for the Maker App. To learn more, please refer to",
   "makerSetupDeprecationNoticeOldChromeTitle": "Maker Toolkit requires a newer version of Chrome",
-  "makerSetupDeprecationNoticeOldChromeDetails": "The Maker Toolkit does not support your current version of Chrome. Please update to a version greater than or equal to 90 to continue using the Maker Toolkit. To learn more, please refer to",
+  "makerSetupDeprecationNoticeOldChromeDetails": "The Maker Toolkit does not support your current version of Chrome. Please update to a version greater than or equal to {minChromeVersion} to continue using the Maker Toolkit. To learn more, please refer to",
   "makerSetupButton": "Go to setup page",
   "makerSetupDesc": "Having issues connecting to the Circuit Playground? Visit the setup page to better debug your issue.",
   "makerSetupTitle": "Visit the setup page",

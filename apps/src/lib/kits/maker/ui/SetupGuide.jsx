@@ -6,7 +6,10 @@ import Notification, {NotificationType} from '@cdo/apps/templates/Notification';
 import {isCodeOrgBrowser, getChromeVersion} from '../util/browserChecks';
 import applabI18n from '@cdo/applab/locale';
 import i18n from '@cdo/locale';
-import {MAKER_DEPRECATION_SUPPORT_URL} from '../util/makerConstants';
+import {
+  MAKER_DEPRECATION_SUPPORT_URL,
+  MIN_CHROME_VERSION,
+} from '../util/makerConstants';
 
 const style = {
   twoColumns: {
@@ -79,7 +82,9 @@ export default class SetupGuide extends React.Component {
           <Notification
             type={NotificationType.warning}
             notice={i18n.makerSetupDeprecationNoticeOldChromeTitle()}
-            details={i18n.makerSetupDeprecationNoticeOldChromeDetails()}
+            details={i18n.makerSetupDeprecationNoticeOldChromeDetails({
+              minChromeVersion: MIN_CHROME_VERSION,
+            })}
             detailsLinkText={i18n.makerDeprecationNoticeLinkText()}
             detailsLink={MAKER_DEPRECATION_SUPPORT_URL}
             dismissible
