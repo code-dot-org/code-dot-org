@@ -205,7 +205,8 @@ export default class ProjectManager {
     // project's 'last saved' time shown in the UI may be inaccurate for
     // all projects that were saved while emergency mode was active.
     if (!this.reduceChannelUpdates || !this.initialSaveComplete) {
-      // Always save the channel--either the channel has changed and/or the source changed.
+      // As long as we are not in emergency mode, always save the channel,
+      // as either the channel has changed and/or the source changed.
       // Even if only the source changed, we still update the channel to modify the last
       // updated time.
       this.channelToSave ||= this.lastChannel;
@@ -220,8 +221,6 @@ export default class ProjectManager {
       }
       const channelSaveResponse = await channelResponse.json();
       this.lastChannel = channelSaveResponse as Channel;
-    } else {
-      console.log('Skipping channel metadata update');
     }
 
     this.saveInProgress = false;
