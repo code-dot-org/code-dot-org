@@ -2,6 +2,15 @@
 // whether a set of conditions have all been satisfied.  Unknown conditions are
 // skipped.  The accumulated satisfied conditions can be cleared at any time.
 
+export interface KnownCondition {
+  name: string;
+  value?: string | number;
+}
+
+export interface KnownConditionNames {
+  [key: string]: string;
+}
+
 export default class ConditionsChecker {
   private currentSatisfiedConditions: KnownCondition[];
   private knownConditionNames: KnownConditionNames;
@@ -18,12 +27,13 @@ export default class ConditionsChecker {
 
   // Accumulate a satisfied condition.
   addSatisfiedCondition(condition: KnownCondition) {
-    if (!this.isConditionSatisfied(condition)) {
+    if (!this.hasCondition(condition)) {
       this.currentSatisfiedConditions.push(condition);
     }
   }
 
-  private isConditionSatisfied(condition: KnownCondition) {
+  // Determines whether we already know that a condition has been satisfied.
+  private hasCondition(condition: KnownCondition) {
     return this.currentSatisfiedConditions.some(
       currentSatisfiedCondition =>
         JSON.stringify(currentSatisfiedCondition) === JSON.stringify(condition)
@@ -44,7 +54,7 @@ export default class ConditionsChecker {
       }
 
       // Not satisfying a required condition is a fail.
-      if (!this.isConditionSatisfied(requiredCondition)) {
+      if (!this.hasCondition(requiredCondition)) {
         return false;
       }
     }
@@ -52,13 +62,4 @@ export default class ConditionsChecker {
     // All conditions are satisfied.
     return true;
   }
-}
-
-export interface KnownCondition {
-  name: string;
-  value?: string | number;
-}
-
-export interface KnownConditionNames {
-  [key: string]: string;
 }
