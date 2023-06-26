@@ -5,6 +5,7 @@ import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import moduleStyles from './instructions.module.scss';
 import {AnalyticsContext} from '../context';
 import {useSelector} from 'react-redux';
+import musicI18n from '../locale';
 
 /**
  * Renders the Music Lab instructions component.
@@ -36,7 +37,7 @@ const Instructions = ({
     analyticsReporter.onInstructionsVisited(currentPanel + 1);
   }, [currentPanel, analyticsReporter]);
 
-  const isNextPanel = progressState.satisfied ? !!getNextPanel() : false;
+  const hasNextPanel = progressState.satisfied ? !!getNextPanel() : false;
 
   return (
     <div
@@ -56,7 +57,7 @@ const Instructions = ({
           imageClicked={imageClicked}
           right={right}
           showBigImage={showBigImage}
-          onNextPanel={isNextPanel ? onNextPanel : null}
+          onNextPanel={hasNextPanel ? onNextPanel : null}
         />
       )}
     </div>
@@ -159,7 +160,7 @@ const InstructionsPanel = ({
               onClick={() => onNextPanel()}
               className={moduleStyles.buttonNext}
             >
-              Next
+              {musicI18n.next()}
             </button>
           )}
         </div>
