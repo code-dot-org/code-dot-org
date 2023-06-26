@@ -133,6 +133,18 @@ sk:
           description_short: Naučte sa základné koncepty informatiky.
         csd-2023:
           title: Objavujeme informatiku
+        focus-on-creativity-2023:
+          title: Zamerané na kreativitu (Objavujeme informatiku)
+        focus-on-hardware-2023:
+          title: Zamerané na hardvér (Objavujeme informatiku)
+        focus-on-data-2023:
+          title: Zamerané na data (Objavujeme informatiku)
+        focus-on-design-with-purpose-2023:
+          title: Zamerané na zmysluplný dizajn (Objavujeme informatiku)
+        focus-on-coding-2023:
+          title: Zamerané na programovanie (Objavujeme informatiku)
+        focus-on-impact-in-society-2023:
+          title: Zamerané na spoločenský dopad (Objavujeme informatiku)
     resources:
       curriculum/csd/2020:
         name: Osnovy

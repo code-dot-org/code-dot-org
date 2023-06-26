@@ -114,7 +114,7 @@ sk:
         netsim:
           title: Simulátor Internetu
         20-hour:
-          title: Zrýchlený Úvod do Informatiky
+          title: Zrýchlený Úvod do Informatiky (zastaralý)
           description: Tento 20-hodinový kurz pokrýva základné koncepty informatiky
             a programovania obsiahnuté v kurzoch 2-4. Kurz je určený pre žiakov vo
             veku 10 - 18 rokov, ale určite pobaví študentov všetkých vekových kategórií!
@@ -160,8 +160,21 @@ sk:
           description_short: Vyskúšaj si základy informatiky s mnohými zábavnými postavami!
           student_description: Vyskúšaj si základy informatiky s postavami z Angry
             Birds a Plants vs. Zombies!
+        CodeStudioPuzzleChallenge:
+          description_short: Vyzvite sa!
+        Tutorial Video - Code Studio Puzzle Challenge:
+          description_short: Vyzvite sa!
         text-compression:
           title: Kompresia textu
+        Test Wednesday:
+          title: Skúšobná streda
+          description: Skúšobná streda
+          student_description: Skúšobná streda
+        Testing:
+          title: Testovanie
+          description: Testovanie
+          description_short: Testovanie
+          student_description: Testovanie
         allthethings:
           lessons:
             lesson-49:
@@ -412,13 +425,20 @@ sk:
             hry Minecraft.
           student_description: Naprogramuj zvieratá a iné postavy a vytvor svoju vlastnú
             verziu hry Minecraft.
+        coursea-draft:
+          title: 'Základy informatiky: Kurz A'
+        courseb-draft:
+          title: 'Základy informatiky: Kurz B'
         coursec-draft:
+          title: 'Základy informatiky: Kurz C'
           description_short: Nauč sa základy informatiky a vytvor si vlastné obrázky,
             príbehy a hry.
         coursed-draft:
+          title: 'Základy informatiky: Kurz D'
           description_short: Nauč sa základy informatiky a vytvor si vlastné obrázky,
             príbehy a hry.
         coursee-draft:
+          title: 'Základy informatiky: Kurz E'
           description_short: Nauč sa základy informatiky a vytvor si vlastné obrázky,
             príbehy a hry.
           lesson_groups:
@@ -429,6 +449,7 @@ sk:
             extra_course_content:
               display_name: Doplnkové lekcie
         coursef-draft:
+          title: 'Základy informatiky: Kurz F'
           description_short: Nauč sa základy informatiky a vytvor si vlastné obrázky,
             príbehy a hry.
           lesson_groups:
@@ -439,6 +460,7 @@ sk:
         classic-hoc-impact-study:
           description_short: Vyskúšaj si základy informatiky s mnohými zábavnými postavami!
         hoc-impact-study:
+          title: Klasické bludisko s prieskumom
           description_short: Vyskúšaj si základy informatiky s mnohými zábavnými postavami!
         sports:
           title: Naprogramuj si vlastný zápas
@@ -496,6 +518,8 @@ sk:
               display_name: 'Kapitola 1: Prezentácia informácií'
             csd5_2:
               display_name: 'Kapitola 2: Riešenie problémov s dátami'
+        coursed-ramp:
+          title: 'Základy informatiky: Kurz D'
         csd6-2017:
           lesson_groups:
             csd6_1:
@@ -1213,6 +1237,7 @@ sk:
         frozen-2018-test:
           title: Nový Frozen Skript
         dance:
+          title: Tanečná párty (2018)
           description_short: Účinkujú Katy Perry, Madonna, J. Balvin, Sia, Keith Urban,
             Ciara, a 25 ďalších!
           description: Nakóduj si vlastnú Tanečnú párty a zdieľaj ju s kamarátmi!
@@ -1273,7 +1298,7 @@ sk:
             end_of_course_project:
               display_name: Záverečný projekt
         dance-low:
-          title: Tanečná Párty (slabé pripojenie)
+          title: Tanečná Párty (pomalé pripojenie)
           description_short: Nakóduj si vlastnú Tanečnú párty a zdieľaj ju s kamarátmi!
             (Táto verzia je pre pomalé pripojenie)
         coursed-2019:
@@ -2748,6 +2773,7 @@ sk:
             lessonGroup-7:
               display_name: Digitálne občianstvo
         express-2021:
+          title: Zrýchlený kurz (2021)
           description_audience: 'Vek: 9-18'
           lesson_groups:
             csf_warmup:
@@ -3042,7 +3068,7 @@ sk:
             obráťte na Dana Schneidera.
         hello-world-food:
           name: ahoj-svet-jedlo
-          title: Ahoj Svet
+          title: 'Ahoj svet: Jedlo'
         csa-u7-dev:
           lesson_groups:
             lessonGroup-2:
@@ -3052,13 +3078,13 @@ sk:
             lessonGroup-4:
               display_name: Ukážky a zdroje informácií
         hello-world-animals:
-          title: Ahoj Svet
+          title: 'Ahoj svet: Zvieratá'
         hello-world-emoji:
-          title: Ahoj Svet
+          title: 'Ahoj svet: Emoji'
         hello-world-retro:
-          title: Ahoj Svet
+          title: 'Ahoj svet: Retro'
         hello-world-batman:
-          title: Ahoj Svet
+          title: Ahoj svet
         csa4-exemplars:
           lesson_groups:
             lesson group:
@@ -3147,13 +3173,13 @@ sk:
         poem-art-2021:
           title: Básnické umenie
         hello-world-food-2021:
-          title: Ahoj Svet
+          title: 'Ahoj svet: Jedlo'
         hello-world-emoji-2021:
-          title: Ahoj Svet
+          title: 'Ahoj svet: Emoji'
         hello-world-animals-2021:
-          title: Ahoj Svet
+          title: 'Ahoj svet: Zvieratá'
         hello-world-retro-2021:
-          title: Ahoj Svet
+          title: 'Ahoj svet: Retro'
         explore-data-1-2021:
           title: Vykreslenie údajov
         counting-csc-2021:
@@ -3237,6 +3263,7 @@ sk:
               display_name: Cykly "Pre"
             end_of_course_project:
               display_name: Záverečný projekt
+          title: Zrýchlený kurz (2022)
           description_audience: 'Vek: 9-18'
         csp1-2022:
           lesson_groups:
@@ -3660,7 +3687,7 @@ sk:
 
             **Odporúčaný čas:** 120 minút
         hello-world-csc:
-          title: Ahoj Svet
+          title: Ahoj svet
         csd-playground:
           title: Ihrisko CSD
           description_audience: Autori osnov
@@ -3867,9 +3894,9 @@ sk:
             lessonGroup-5:
               display_name: Alternatívne lekcie
         hello-world-space-2022:
-          title: 'Ahoj Svet: Vesmír'
+          title: 'Ahoj svet: Vesmír'
         hello-world-soccer-2022:
-          title: 'Ahoj Svet: Futbal'
+          title: 'Ahoj svet: Futbal'
         csd1-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4031,6 +4058,10 @@ sk:
               display_name: Úvod do App Labu
             lessonGroup-3:
               display_name: Vstupy a výstupy
+        self-paced-pl-csc-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Vyučujeme CS Connections
         tess-testing-problem-solving-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4080,6 +4111,7 @@ sk:
               display_name: Cykly "Pre"
             end_of_course_project:
               display_name: Záverečný projekt
+          title: Zrýchlený kurz (2022)
           description_audience: 'Vek: 9-18'
         coursea-2023:
           lesson_groups:
@@ -4663,6 +4695,25 @@ sk:
           description_short: Nauč sa všetky koncepty z kurzu Základy informatiky a
             vytvor vlastné umelecké dielo, príbeh alebo hru.
         csa-frq-practice:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Triedy
+        csa-frq-practice-2019:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Triedy
+        csa-frq-practice-2021:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Triedy
+        csa-frq-practice-2022:
+          lessons:
+            lesson-4:
+              name: Dáta
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Triedy
+        csa-frq-practice-2023:
           lesson_groups:
             lessonGroup-3:
               display_name: Triedy
