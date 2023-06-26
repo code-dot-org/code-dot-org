@@ -80,14 +80,14 @@
                 = f.label :age, t('signup_form.age')
                 = f.select :age, User::AGE_DROPDOWN_OPTIONS, include_blank: true, class: 'fieldblock'
               %br/
-              - if cpa_experience
+              - if CPA.cpa_experience(request)
                 .itemblock
                   = f.label :us_state, t('signup_form.us_state')
                   = f.select :us_state, us_state_options, selected: state_code,
                   include_blank: true
                   = f.hidden_field :country_code, value: country_code
                 %br/
-              - if experiment_value('gender')
+              - if experiment_value('gender', request)
                 .itemblock
                   = f.label :gender_student_input, t('signup_form.gender')
                   = f.text_field :gender_student_input, maxlength: 50

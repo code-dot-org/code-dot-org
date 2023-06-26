@@ -100,7 +100,7 @@
       .span5
         = f.select :age, age_options, include_blank: true
 
-    - if cpa_experience
+    - if CPA.cpa_experience(request)
       .row#us-state-dropdown{style: "display: none;"}
         .span3.signup-field-label
           = f.label :us_state
@@ -111,7 +111,7 @@
           include_blank: true
           = f.hidden_field :country_code, value: country_code
 
-    - if experiment_value('gender')
+    - if experiment_value('gender', request)
       .row#gender-field
         .span3.signup-field-label
           = f.label :gender_student_input, t('signup_form.gender')

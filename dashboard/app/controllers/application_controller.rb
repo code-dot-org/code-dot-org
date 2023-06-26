@@ -3,6 +3,7 @@ require 'dynamic_config/dcdo'
 require 'dynamic_config/gatekeeper'
 require 'dynamic_config/page_mode'
 require 'cdo/shared_constants'
+require_relative '../../../lib/cdo/cpa'
 
 class ApplicationController < ActionController::Base
   include LocaleHelper
@@ -13,6 +14,8 @@ class ApplicationController < ActionController::Base
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
+
+  before_action :assert_child_account_policy
 
   # this is needed to avoid devise breaking on email param
   before_action :configure_permitted_parameters, if: :devise_controller?
@@ -323,6 +326,24 @@ class ApplicationController < ActionController::Base
       session.delete(:sign_up_type)
       session.delete(:sign_up_tracking_expiration)
     end
+  end
+
+  # Check that the user is compliant with the Child Account Policy. If they
+  # are not compliant, then we need to send them to the lockout page.
+  def assert_child_account_policy
+    # Check that the child account policy is currently enabled.
+    return unless CPA.cpa_experience(request)
+
+    # Anonymous users are affected by our Child Account Policy
+    return unless current_user
+    # Don't block any user from signing out
+    return if request.path == '/users/sign_out'
+    # Don't block any user from changing the language
+    return if request.path == '/locale'
+    # Avoid an infinite redirect loop to the lockout page
+    return if request.path == '/lockout'
+    # If a user is not compliant with CAP, restrict them to the lockout page.
+    redirect_to '/lockout' unless current_user.cap_compliant?
   end
 
   private def pairing_still_enabled
