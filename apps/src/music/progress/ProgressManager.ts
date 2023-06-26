@@ -1,20 +1,20 @@
 // This file contains a generic ProgressManager which any lab can include,
 // if it wants to make progress without reloading the page.
 
-import {KnownCondition} from './ConditionsChecker';
+import {Condition} from './ConditionsChecker';
 
 // Abstract class that validates a set of conditions. How
 // the validation works is up to the implementor.
 export abstract class Validator {
   abstract shouldCheckConditions(): boolean;
   abstract checkConditions(): void;
-  abstract conditionsMet(conditions: KnownCondition[]): boolean;
+  abstract conditionsMet(conditions: Condition[]): boolean;
   abstract clear(): void;
 }
 
 // A validation inside the progression step.
 interface Validation {
-  conditions: KnownCondition[];
+  conditions: Condition[];
   message: string;
   next: boolean;
 }

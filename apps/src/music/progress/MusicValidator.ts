@@ -2,13 +2,13 @@
 
 import MusicPlayer from '../player/MusicPlayer';
 import ConditionsChecker, {
-  KnownConditionNames,
-  KnownCondition,
+  ConditionNames,
+  Condition,
 } from './ConditionsChecker';
 import {PlaybackEvent} from '../player/interfaces/PlaybackEvent';
 import {Validator} from './ProgressManager';
 
-export const KnownConditionNamesList: KnownConditionNames = {
+export const ConditionNamesList: ConditionNames = {
   PLAYED_SOUNDS_TOGETHER: 'played_sounds_together',
   PLAYED_SOUND_TRIGGERED: 'played_sound_triggered',
   USED_BLOCK: 'used_block',
@@ -20,7 +20,7 @@ export default class MusicValidator extends Validator {
     private readonly getPlaybackEvents: () => PlaybackEvent[],
     private readonly player: MusicPlayer,
     private readonly conditionsChecker: ConditionsChecker = new ConditionsChecker(
-      KnownConditionNamesList
+      ConditionNamesList
     )
   ) {
     super();
@@ -44,7 +44,7 @@ export default class MusicValidator extends Validator {
 
         if (eventData.triggered) {
           this.conditionsChecker.addSatisfiedCondition({
-            name: KnownConditionNamesList.PLAYED_SOUND_TRIGGERED,
+            name: ConditionNamesList.PLAYED_SOUND_TRIGGERED,
           });
         }
       }
@@ -61,14 +61,14 @@ export default class MusicValidator extends Validator {
     ) {
       if (currentNumberSounds >= numberSounds) {
         this.conditionsChecker.addSatisfiedCondition({
-          name: KnownConditionNamesList.PLAYED_SOUNDS_TOGETHER,
+          name: ConditionNamesList.PLAYED_SOUNDS_TOGETHER,
           value: currentNumberSounds,
         });
       }
     }
   }
 
-  conditionsMet(conditions: KnownCondition[]): boolean {
+  conditionsMet(conditions: Condition[]): boolean {
     return this.conditionsChecker.checkRequirementConditions(conditions);
   }
 
