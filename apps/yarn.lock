@@ -1356,7 +1356,8 @@
   integrity sha512-v6tl9bSsbCjYJNR3hgvIvCGo/hLjk+ow2QdNE8ly2UTz8dBZ+MYYKZ3sFng1qDVy+WM8IbR45gPOx4RD+UjSXw==
 
 "@cdo/interpreted@link:../dashboard/config/libraries":
-  version "0.1.0"
+  version "0.0.0"
+  uid ""
 
 "@code-dot-org/artist@0.2.1":
   version "0.2.1"
@@ -1375,22 +1376,6 @@
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/@code-dot-org/dance-party/-/dance-party-1.0.5.tgz#0872991761e8f4458c73ba3b7f288b2e747af240"
   integrity sha512-Wr4zQgSpBh/Pus0+91Cshl93efew051PfVM4BBzcf0hqNGMVGj8Pztgvtqew07AnMrjxBVDITSlLzCfhHmyBQw==
-
-"@code-dot-org/johnny-five@2.1.0-cdo.3":
-  version "2.1.0-cdo.3"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/johnny-five/-/johnny-five-2.1.0-cdo.3.tgz#57e3ddb006d1874903e55208bba6175733d38ee0"
-  integrity sha512-MLNqeRMMWIx1fNUDSf+XT5flqOAjekWFv/20pTYbKhtkJsBDoEjZfWv5x+YIpeHsVjiI8xGcC1+9gIw38tXoPQ==
-  dependencies:
-    chalk "2.1.0"
-    color-convert "~1.2.2"
-    lodash.clonedeep "^4.3.0"
-    lodash.debounce "^4.0.3"
-    nanotimer "0.3.10"
-    temporal latest
-  optionalDependencies:
-    browser-serialport latest
-    firmata "^2.2.0"
-    serialport "^8.0.5"
 
 "@code-dot-org/js-interpreter-tyrant@0.2.2":
   version "0.2.2"
@@ -4968,9 +4953,14 @@ browser-process-hrtime@0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/browser-process-hrtime/-/browser-process-hrtime-0.1.2.tgz#425d68a58d3447f02a04aa894187fce8af8b7b8e"
 
-browser-serialport@^2.0.1, browser-serialport@latest:
+browser-serialport@^2.0.1:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/browser-serialport/-/browser-serialport-2.0.3.tgz#3890aad440dc364540ad9f86f1e251d1b2011d73"
+
+browser-serialport@latest:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/browser-serialport/-/browser-serialport-2.1.0.tgz#fb84077e84b9bbbb84935aae1fcac9ce6105dc7f"
+  integrity sha512-nig20bRxZYaYWvIpg0W4YfsV8WIdNlWoKipDfa+BJZir0fgod2T7z1AuzJhhktddMuhqYE7D6DnDveVPsHRumw==
 
 browser-stdout@1.3.0:
   version "1.3.0"
@@ -5720,6 +5710,7 @@ color-convert@^2.0.1:
 color-convert@~1.2.2:
   version "1.2.2"
   resolved "https://registry.yarnpkg.com/color-convert/-/color-convert-1.2.2.tgz#efbe95697dd37d7eecfae1fd2cfbeb84cc25064e"
+  integrity sha512-yXAhpn5+dVTIW1ADPkmcFu3W2c9yZJnmRsbA8tExvSL9NcBI/mEVGECZHVbRln+1K7BL031a4VzkMe9+b9R+Qw==
 
 color-name@1.1.3:
   version "1.1.3"
@@ -7524,10 +7515,6 @@ es6-shim@^0.35.5:
   version "0.35.6"
   resolved "https://registry.yarnpkg.com/es6-shim/-/es6-shim-0.35.6.tgz#d10578301a83af2de58b9eadb7c2c9945f7388a0"
   integrity sha512-EmTr31wppcaIAgblChZiuN/l9Y7DPyw8Xtbg7fIVngn6zMW+IEBJDJngeKC3x6wr0V/vcA2wqeFnaw1bFJbDdA==
-
-es6-shim@latest:
-  version "0.35.1"
-  resolved "https://registry.yarnpkg.com/es6-shim/-/es6-shim-0.35.1.tgz#a23524009005b031ab4a352ac196dfdfd1144ab7"
 
 escalade@^3.1.1:
   version "3.1.1"
@@ -11086,6 +11073,22 @@ jmespath@0.16.0:
   resolved "https://registry.yarnpkg.com/jmespath/-/jmespath-0.16.0.tgz#b15b0a85dfd4d930d43e69ed605943c802785076"
   integrity sha512-9FzQjJ7MATs1tSpnco1K6ayiYE3figslrXA72G2HQ/n76RzvYlofyi5QM+iX4YRs/pu3yzxlVQSST23+dMDknw==
 
+johnny-five@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/johnny-five/-/johnny-five-2.1.0.tgz#12b70d41f716e9fc275308e9e960c4ba2b66e005"
+  integrity sha512-0Z6qa9Tlt7vUShW8gzewXTJgckhMfbaM7ZhbApOhkAW0PrLIOQms/DjOptE/oitE70tD3O8YJ7OlNSMe+en2DQ==
+  dependencies:
+    chalk "2.1.0"
+    color-convert "~1.2.2"
+    lodash.clonedeep "^4.3.0"
+    lodash.debounce "^4.0.3"
+    nanotimer "0.3.10"
+    temporal latest
+  optionalDependencies:
+    browser-serialport latest
+    firmata "^2.2.0"
+    serialport "^8.0.5"
+
 jquery-ui@^1.12.1:
   version "1.12.1"
   resolved "https://registry.yarnpkg.com/jquery-ui/-/jquery-ui-1.12.1.tgz#bcb4045c8dd0539c134bc1488cdd3e768a7a9e51"
@@ -11644,6 +11647,7 @@ lodash.bind@^4.1.4:
 lodash.clonedeep@^4.3.0:
   version "4.5.0"
   resolved "https://registry.yarnpkg.com/lodash.clonedeep/-/lodash.clonedeep-4.5.0.tgz#e23f3f9c4f8fbdde872529c1071857a086e5ccef"
+  integrity sha512-H5ZhCF25riFd9uB5UCkVKo61m3S/xZk1x4wA6yp/L3RFP6Z/eHH1ymQcGLo7J3GMPfm0V/7m1tryHuGVxpqEBQ==
 
 lodash.debounce@^4, lodash.debounce@^4.0.0, lodash.debounce@^4.0.3, lodash.debounce@^4.0.8:
   version "4.0.8"
@@ -12623,6 +12627,7 @@ nanomatch@^1.2.9:
 nanotimer@0.3.10:
   version "0.3.10"
   resolved "https://registry.yarnpkg.com/nanotimer/-/nanotimer-0.3.10.tgz#e82ee0d00582b23e706bdc00ff39c87daaaddb83"
+  integrity sha512-6rStzhDIdmUcv3Dcs75YHfFr/RTBs42VWLobMXmgixBKoIFbpZuB9bp90FjZnwdidN4gsGY5rjHkBEato7vyAQ==
 
 napi-build-utils@^1.0.1:
   version "1.0.2"
@@ -17363,10 +17368,9 @@ temp@^0.8.3:
     rimraf "~2.2.6"
 
 temporal@latest:
-  version "0.5.0"
-  resolved "https://registry.yarnpkg.com/temporal/-/temporal-0.5.0.tgz#5b818954c8dabcd2f8b22610782342328b82414c"
-  dependencies:
-    es6-shim latest
+  version "0.7.1"
+  resolved "https://registry.yarnpkg.com/temporal/-/temporal-0.7.1.tgz#dd79946107c3414a24fffab7dd79243409ea6bd2"
+  integrity sha512-6Xd3c2llgkjGP7kn2LXuiHZ8/cRiIX5EsPcvn8slkAcayWEzf7xuXxd7BcgUm2djmI1DPFUSMFeFwQcLVMLsOw==
 
 terser-webpack-plugin@^1.4.3:
   version "1.4.5"

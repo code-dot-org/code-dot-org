@@ -1,4 +1,4 @@
-import five from '@code-dot-org/johnny-five';
+import five from 'johnny-five';
 import Playground from 'playground-io';
 
 export function makeCPBoardStub() {
