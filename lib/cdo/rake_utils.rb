@@ -32,7 +32,9 @@ module RakeUtils
   end
 
   def self.restart_service(id)
-    sudo 'systemctl', 'restart', id.to_s if OS.linux? && CDO.chef_managed
+    return unless OS.linux? && CDO.chef_managed
+    sudo 'systemctl', 'daemon-reload'
+    sudo 'systemctl', 'restart', id.to_s
   end
 
   def self.system_(*args)
