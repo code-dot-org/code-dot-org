@@ -41,15 +41,20 @@ export default class ProjectManager {
   // if it exists.
   private currentTimeoutId: number | undefined;
   private destroyed = false;
+  private reduceChannelUpdates: boolean;
+  private initialSaveComplete: boolean;
 
   constructor(
     sourcesStore: SourcesStore,
     channelsStore: ChannelsStore,
-    channelId: string
+    channelId: string,
+    reduceChannelUpdates: boolean
   ) {
     this.channelId = channelId;
     this.sourcesStore = sourcesStore;
     this.channelsStore = channelsStore;
+    this.reduceChannelUpdates = reduceChannelUpdates;
+    this.initialSaveComplete = false;
   }
 
   // Load the project from the sources and channels store.
@@ -99,8 +104,6 @@ export default class ProjectManager {
     this.destroy();
   }
 
-  // TODO: Add functionality to reduce channel updates during
-  // HoC "emergency mode" (see 1182-1187 in project.js).
   /**
    * Enqueue a save to happen in the next saveInterval, unless a force save is requested.
    * If a save is already enqueued, update this.sourceToSave with the given source.
@@ -150,9 +153,6 @@ export default class ProjectManager {
     this.saveStartListeners.push(listener);
   }
 
-  // TODO: Add rename function. Rename sets the name on the channel.
-  // https://codedotorg.atlassian.net/browse/SL-891
-
   /**
    * Helper function to save a project, called either after a timeout or directly by save().
    * On a save, we check if there are unsaved changes to the source or channel.
@@ -196,26 +196,37 @@ export default class ProjectManager {
       this.lastSource = JSON.stringify(this.sourceToSave);
     }
 
-    // Always save the channel--either the channel has changed and/or the source changed.
-    // Even if only the source changed, we still update the channel to modify the last
-    // updated time.
-    this.channelToSave ||= this.lastChannel;
-    const channelResponse = await this.channelsStore.save(this.channelToSave);
-    if (!channelResponse.ok) {
-      this.saveInProgress = false;
-      this.executeSaveFailListeners(channelResponse);
+    // Normally, reduceChannelUpdates is false and we update the channel
+    // metadata every time source code is saved. When in emergency mode,
+    // reduceChannelUpdates is true for HoC levels and we only update
+    // channel metadata on the initial save to reduce write pressure on
+    // the database. The main user-visible effect of this is that the
+    // project's 'last saved' time shown in the UI may be inaccurate for
+    // all projects that were saved while emergency mode was active.
 
-      // TODO: Should we wrap this response in some way?
-      // Maybe add a more specific statusText to the response?
-      return channelResponse;
+    if (!this.reduceChannelUpdates || !this.initialSaveComplete) {
+      // As long as we are not in emergency mode, always save the channel,
+      // as either the channel has changed and/or the source changed.
+      // Even if only the source changed, we still update the channel to modify the last
+      // updated time.
+      this.channelToSave ||= this.lastChannel;
+      const channelResponse = await this.channelsStore.save(this.channelToSave);
+      if (!channelResponse.ok) {
+        this.saveInProgress = false;
+        this.executeSaveFailListeners(channelResponse);
+
+        // TODO: Should we wrap this response in some way?
+        // Maybe add a more specific statusText to the response?
+        return channelResponse;
+      }
+      const channelSaveResponse = await channelResponse.json();
+      this.lastChannel = channelSaveResponse as Channel;
     }
 
-    const channelSaveResponse = await channelResponse.json();
-
     this.saveInProgress = false;
-    this.lastChannel = channelSaveResponse as Channel;
     this.channelToSave = undefined;
     this.executeSaveSuccessListeners(this.lastChannel, this.sourceToSave);
+    this.initialSaveComplete = true;
     return new Response();
   }
 
