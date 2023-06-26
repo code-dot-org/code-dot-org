@@ -347,7 +347,7 @@ class ApplicationController < ActionController::Base
       '/lockout',
     ].include?(request.path)
 
-    redirect_to '/lockout' unless current_user.cap_compliant?
+    redirect_to '/lockout' unless current_user.child_account_policy_compliant?
   end
 
   private def pairing_still_enabled

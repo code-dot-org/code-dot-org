@@ -2661,7 +2661,7 @@ class User < ApplicationRecord
   # Is this user compliant with our Child Account Policy(cap)?
   # For students under-13, in Colorado, with a personal email login: we require
   # parent permission before the student can start using their account.
-  def cap_compliant?
+  def child_account_policy_compliant?
     age >= 13 || us_state != 'CO' || !personal_account? ||
       child_account_compliance_state == ChildAccountCompliance::PERMISSION_GRANTED
   end
