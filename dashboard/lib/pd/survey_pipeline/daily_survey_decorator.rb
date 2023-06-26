@@ -111,11 +111,11 @@ module Pd::SurveyPipeline
       return false unless user
 
       # Can user see this facilitator-specific summary?
-      if summary[:facilitator_id]
-        return false unless user.program_manager? ||
+      if summary[:facilitator_id] && !(user.program_manager? ||
           user.workshop_organizer? ||
           user.workshop_admin? ||
-          user.id == summary[:facilitator_id]
+          user.id == summary[:facilitator_id])
+        return false
       end
 
       true

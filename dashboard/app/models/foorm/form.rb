@@ -72,10 +72,8 @@ class Foorm::Form < ApplicationRecord
   def validate_published
     parsed_questions = JSON.parse(questions)
 
-    unless parsed_questions['published'].nil?
-      if published != parsed_questions['published']
-        errors.add(:questions, 'Mismatch between published state in questions and published state in model')
-      end
+    if !parsed_questions['published'].nil? && (published != parsed_questions['published'])
+      errors.add(:questions, 'Mismatch between published state in questions and published state in model')
     end
   end
 
