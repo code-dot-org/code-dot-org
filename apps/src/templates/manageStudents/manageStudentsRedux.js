@@ -852,6 +852,7 @@ export const convertStudentServerData = (studentData, loginType, sectionId) => {
     studentLookup[student.id] = {
       id: student.id,
       name: student.name,
+      familyName: student.family_name,
       username: student.username,
       email: student.email,
       age: student.age || '',
