@@ -31,21 +31,11 @@ export default class MusicValidator extends Validator {
   }
 
   checkConditions() {
-    if (this.getPlaybackEvents().length > 0) {
-      this.conditionsChecker.addSatisfiedCondition({
-        name: KnownConditionNamesList.PLAYED_SOUNDS_TOGETHER,
-        value: 1,
-      });
-    }
-
     // Get number of sounds currently playing simultaneously.
     let currentNumberSounds = 0;
-
     const currentPlayheadPosition = this.player.getCurrentPlayheadPosition();
-
     this.getPlaybackEvents().forEach((eventData: PlaybackEvent) => {
       const length = eventData.length;
-
       if (
         eventData.when <= currentPlayheadPosition &&
         eventData.when + length > currentPlayheadPosition
@@ -60,17 +50,21 @@ export default class MusicValidator extends Validator {
       }
     });
 
-    if (currentNumberSounds === 3) {
-      this.conditionsChecker.addSatisfiedCondition({
-        name: KnownConditionNamesList.PLAYED_SOUNDS_TOGETHER,
-        value: 3,
-      });
-    }
-    if (currentNumberSounds === 2) {
-      this.conditionsChecker.addSatisfiedCondition({
-        name: KnownConditionNamesList.PLAYED_SOUNDS_TOGETHER,
-        value: 2,
-      });
+    // Check for up to a certain number of sounds playing simultaneously.
+    // Not that if, for example, 3 sounds are playing, then we'll consider
+    // that 2 sounds and 1 sound have also been played together.
+    const maxNumberSounds = 3;
+    for (
+      let numberSounds = maxNumberSounds;
+      numberSounds >= 1;
+      numberSounds--
+    ) {
+      if (currentNumberSounds >= numberSounds) {
+        this.conditionsChecker.addSatisfiedCondition({
+          name: KnownConditionNamesList.PLAYED_SOUNDS_TOGETHER,
+          value: currentNumberSounds,
+        });
+      }
     }
   }
 
