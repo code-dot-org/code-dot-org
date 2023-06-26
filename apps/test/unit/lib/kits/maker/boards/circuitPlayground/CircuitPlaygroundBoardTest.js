@@ -2,7 +2,7 @@ import _ from 'lodash';
 import sinon from 'sinon';
 import {expect} from '../../../../../../util/reconfiguredChai';
 import Playground from 'playground-io';
-import five from '@code-dot-org/johnny-five';
+import five from 'johnny-five';
 import CircuitPlaygroundBoard from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/CircuitPlaygroundBoard';
 import {
   SONG_CHARGE,

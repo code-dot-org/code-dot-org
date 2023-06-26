@@ -1,5 +1,5 @@
 /** @file Playground Component setup tests */
-import five from '@code-dot-org/johnny-five';
+import five from 'johnny-five';
 import Playground from 'playground-io';
 import {expect} from '../../../../../../util/reconfiguredChai';
 import sinon from 'sinon';

@@ -1,5 +1,5 @@
 /** @file Extended Johnny-Five Led component with Code.org-specific behavior */
-import five from '@code-dot-org/johnny-five';
+import five from 'johnny-five';
 
 export default class Led extends five.Led {
   on() {

@@ -11,7 +11,7 @@ import {
 } from './PlaygroundConstants';
 import LookbackLogger from '../../LookbackLogger';
 import _ from 'lodash';
-import five from '@code-dot-org/johnny-five';
+import five from 'johnny-five';
 import PlaygroundIO from 'playground-io';
 import PlaygroundButton from './Button';
 import PlaygroundThermometer from './Thermometer';
@@ -255,7 +255,7 @@ function addSensorFeatures(fmap, sensor) {
 
   // Set scale for setScale block, which records for later use.
   sensor.setScale = (low, high) => {
-    sensor.scale(low, high);
+    sensor.scaleTo(low, high);
     // store scale in public state for scaling recorded data
     scale = [low, high];
   };
