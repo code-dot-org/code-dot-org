@@ -951,3 +951,7 @@ te:
               display_name: వేరియబుల్స్
         self-paced-pl-csp2-2023:
           title: 'మోడ్యూల్ 2: Code.org న్యావిగేట్ చేయుట'
+        csa-frq-practice-2022:
+          lessons:
+            lesson-4:
+              name: డేటా
