@@ -14,13 +14,11 @@ export abstract class Validator {
 
 // The current progress state.
 export interface ProgressState {
-  step: number;
   satisfied: boolean;
   message: string | null;
 }
 
 export const initialProgressState: ProgressState = {
-  step: 0,
   satisfied: false,
   message: null,
 };
@@ -31,22 +29,20 @@ export default class ProgressManager {
   private onProgressChange: () => void;
   private currentProgressState: ProgressState;
 
-  constructor(
-    initialStep: number | undefined,
-    validator: Validator,
-    onProgressChange: () => void
-  ) {
+  constructor(validator: Validator, onProgressChange: () => void) {
     this.levelData = undefined;
     this.validator = validator;
     this.onProgressChange = onProgressChange;
     this.currentProgressState = initialProgressState;
-    if (initialStep !== undefined) {
-      this.currentProgressState.step = initialStep;
-    }
   }
 
-  setLevelData(levelData: LevelData) {
+  /**
+   * Update the ProgressManager with level data for a new level.
+   * Resets validation status internally.
+   */
+  onLevelChange(levelData: LevelData) {
     this.levelData = levelData;
+    this.resetValidation();
   }
 
   getCurrentState(): ProgressState {
@@ -93,19 +89,10 @@ export default class ProgressManager {
     this.onProgressChange();
   }
 
-  // Advance to the next step.  Advances the state internally and calls
-  // the change handler.
-  next(): void {
-    this.goToStep(this.currentProgressState.step + 1);
-  }
-
-  // Go to a specific step.  Adjusts the state internally and calls the
-  // change handler.
-  goToStep(specificStep: number): void {
+  private resetValidation() {
     // Give the lab the chance to clear accumulated satisfied conditions.
     this.validator.clear();
 
-    this.currentProgressState.step = specificStep;
     this.currentProgressState.satisfied = false;
     this.currentProgressState.message = null;
 
