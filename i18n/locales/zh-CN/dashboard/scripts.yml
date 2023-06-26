@@ -7974,3 +7974,30 @@ zh-CN:
               display_name: 班级
             lessonGroup-5:
               display_name: 二维数组
+        csa-frq-practice-2019:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 班级
+            lessonGroup-5:
+              display_name: 二维数组
+        csa-frq-practice-2021:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 班级
+            lessonGroup-5:
+              display_name: 二维数组
+        csa-frq-practice-2022:
+          lessons:
+            lesson-4:
+              name: 数据
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 班级
+            lessonGroup-5:
+              display_name: 二维数组
+        csa-frq-practice-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 班级
+            lessonGroup-5:
+              display_name: 二维数组
