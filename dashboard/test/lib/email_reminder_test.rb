@@ -1,5 +1,6 @@
 require 'test_helper'
 require 'email_reminder'
+require 'mocha/mini_test'
 
 class EmailReminderTest < ActiveSupport::TestCase
   setup_all do
@@ -8,7 +9,6 @@ class EmailReminderTest < ActiveSupport::TestCase
 
     Cdo::Metrics.expects(:push).never
     AWS::S3::LogUploader.expects(:upload_log).never
-    AWS::S3::LogUploader.any_instance.stubs :new
     EmailReminder.any_instance.stubs :upload_activity_log
     EmailReminder.any_instance.stubs :upload_metrics
     EmailReminder.any_instance.stubs :say
