@@ -62,6 +62,7 @@ const SILENCED = [
   'spritelab',
   'studio',
   'turtle',
+  'standalone_video2',
   'weblab',
 
   // referenced from exported projects
@@ -218,7 +219,8 @@ function checkEntryPoint(entryKey, entryPointPath, stats, options) {
                 chalk.underline(
                   siteConfig.entryPrefix + entryPointPatternMatch[2]
                 ) +
-                `!`
+                `!` +
+                entryKey
             );
             errors.push();
           }

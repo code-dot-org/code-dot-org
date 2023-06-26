@@ -59,6 +59,7 @@ class Game < ApplicationRecord
   JAVALAB = 'javalab'.freeze
   POETRY = 'poetry'.freeze
   MUSIC = 'music'.freeze
+  STANDALONE_VIDEO2 = 'standalone_video2'.freeze
 
   def self.bounce
     @@game_bounce ||= find_by_name("Bounce")
@@ -146,6 +147,10 @@ class Game < ApplicationRecord
 
   def self.standalone_video
     @@game_standalone_video ||= find_by_name("StandaloneVideo")
+  end
+
+  def self.standalone_video2
+    @@game_standalone_video2 ||= find_by_name("StandaloneVideo2")
   end
 
   def self.external_link
@@ -333,6 +338,7 @@ class Game < ApplicationRecord
     Javalab:javalab
     Poetry:poetry
     Music:music
+    StandaloneVideo2:standalone_video2
   )
 
   def self.setup

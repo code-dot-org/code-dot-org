@@ -51,6 +51,7 @@ class LevelsController < ApplicationController
     Poetry,
     PublicKeyCryptography,
     StandaloneVideo,
+    StandaloneVideo2,
     StarWarsGrid,
     Studio,
     TextCompression,

@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-05-24 16:34:24 UTC",
+    "serialized_at": "2023-06-26 06:46:40 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -6100,6 +6100,27 @@
       "level_keys": [
         "Music Level 3"
       ]
+    },
+    {
+      "chapter": 173,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Music Video 1"
+        ],
+        "lesson.key": "lesson-49",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "f9c9c7a9-9f2c-48e1-867b-94d010f2795a"
+      },
+      "level_keys": [
+        "Music Video 1"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -7425,7 +7446,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "2-3 Maze 4",
+        "level.key": "2-3 Maze 1",
         "script_level.level_keys": [
           "2-3 Maze 1",
           "2-3 Maze 4"
@@ -7438,7 +7459,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "2-3 Maze 1",
+        "level.key": "2-3 Maze 4",
         "script_level.level_keys": [
           "2-3 Maze 1",
           "2-3 Maze 4"
@@ -7503,7 +7524,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "2-3 Artist 1 new",
+        "level.key": "ramp_video_artistIntro",
         "script_level.level_keys": [
           "2-3 Artist 1 new",
           "ramp_video_artistIntro"
@@ -7516,7 +7537,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "ramp_video_artistIntro",
+        "level.key": "2-3 Artist 1 new",
         "script_level.level_keys": [
           "2-3 Artist 1 new",
           "ramp_video_artistIntro"
@@ -7555,7 +7576,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "2-3 Artist Loops 4",
+        "level.key": "2-3 Artist 3",
         "script_level.level_keys": [
           "2-3 Artist 3",
           "2-3 Artist Loops 4"
@@ -7568,7 +7589,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "2-3 Artist 3",
+        "level.key": "2-3 Artist Loops 4",
         "script_level.level_keys": [
           "2-3 Artist 3",
           "2-3 Artist Loops 4"
@@ -8286,6 +8307,18 @@
         "level.key": "Music Level 3",
         "script_level.level_keys": [
           "Music Level 3"
+        ],
+        "lesson.key": "lesson-49",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "f9c9c7a9-9f2c-48e1-867b-94d010f2795a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Music Video 1",
+        "script_level.level_keys": [
+          "Music Video 1"
         ],
         "lesson.key": "lesson-49",
         "lesson_group.key": "",

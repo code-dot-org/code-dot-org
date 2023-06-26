@@ -358,6 +358,7 @@ class Level < ApplicationRecord
     'PublicKeyCryptography', # widget
     'ScriptCompletion', # unknown
     'StandaloneVideo', # no user submitted content
+    'StandaloneVideo2', # no user submitted content
     'TextCompression', # widget
     'TextMatch', # dsl defined, covered in dsl
     'Unplugged', # no solutions
