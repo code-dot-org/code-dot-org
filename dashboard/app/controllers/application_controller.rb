@@ -336,13 +336,17 @@ class ApplicationController < ActionController::Base
 
     # Anonymous users are NOT affected by our Child Account Policy
     return unless current_user
-    # Don't block any user from signing out
-    return if request.path == '/users/sign_out'
-    # Don't block any user from changing the language
-    return if request.path == '/locale'
-    # Avoid an infinite redirect loop to the lockout page
-    return if request.path == '/lockout'
-    # If a user is not compliant with CAP, restrict them to the lockout page.
+
+    # URLs we should not redirect.
+    return if Set[
+      # Don't block any user from signing out
+      '/users/sign_out',
+      # Don't block any user from changing the language
+      '/locale',
+      # Avoid an infinite redirect loop to the lockout page
+      '/lockout',
+    ].include?(request.path)
+
     redirect_to '/lockout' unless current_user.cap_compliant?
   end
 
