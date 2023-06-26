@@ -101,7 +101,12 @@ describe('CircuitPlaygroundBoard', () => {
   describe(`connect()`, () => {
     it('initializes a set of components', () => {
       return board.connect().then(() => {
+        // The CP board contains 16 'prewiredComponents_' which are assigned by
+        // function createCircuitPlaygroundComponents which include components, board,
+        // and JS_CONSTANTS.
         expect(Object.keys(board.prewiredComponents_)).to.have.length(16);
+        console.log('Object.keys');
+        console.log(Object.keys(board.prewiredComponents_));
         expect(board.prewiredComponents_.board).to.be.a('object');
         expect(board.prewiredComponents_.colorLeds).to.be.a('array');
         expect(board.prewiredComponents_.led).to.be.a('object');
