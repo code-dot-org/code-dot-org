@@ -7962,3 +7962,7 @@ cs:
             -   Zjistěte více o příležitostech spojit se s širší komunitou CS.
 
             **Doporučený čas**: 70 minut
+        csa-frq-practice-2022:
+          lessons:
+            lesson-4:
+              name: Data
