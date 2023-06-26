@@ -15,5 +15,17 @@
   "columnDetailsMaximumValue": "максимум",
   "dataCardLastUpdated": "Останнє оновлення",
   "trainModelHeading": "Тренування",
-  "resultsTableFeatureHeader": "Ознаки"
+  "resultsTableFeatureHeader": "Ознаки",
+  "datasets": {
+    "shapes_v1_toy": {
+      "fields": {
+        "sides": {
+          "id": "сторони"
+        },
+        "size": {
+          "id": "розмір"
+        }
+      }
+    }
+  }
 }

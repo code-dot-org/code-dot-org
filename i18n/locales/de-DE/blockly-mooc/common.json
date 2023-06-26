@@ -835,6 +835,7 @@
   "dropletBlock_subtractOperator_description": "Zwei Zahlen voneinander subtrahieren",
   "dropletBlock_subtractOperator_signatureOverride": "Subtraktionsoperator",
   "dropletBlock_whileBlock_signatureOverride": "while-Schleife",
+  "duplicate": "Kopieren",
   "duration": "Dauer",
   "edit": "Bearbeiten",
   "editAll": "Alle bearbeiten",

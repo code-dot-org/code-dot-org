@@ -830,6 +830,7 @@
   "dropletBlock_stopSound_param0_description": "声音文件的网络链接，可以为项目资源或外部链接。",
   "dropletBlock_subtractOperator_description": "两个数字相减",
   "dropletBlock_whileBlock_signatureOverride": "while 循环",
+  "duplicate": "复制",
   "duration": "持续时间",
   "edit": "编辑",
   "editAll": "编辑所有",

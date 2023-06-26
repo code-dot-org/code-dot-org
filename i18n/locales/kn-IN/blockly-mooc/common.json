@@ -785,6 +785,7 @@
   "dropletBlock_return_signatureOverride": "ರಿಟರ್ನ್",
   "dropletBlock_stopSound_description": "ನಿರ್ದಿಷ್ಟಪಡಿಸಿದ URL ನಿಂದ ಧ್ವನಿ ಫೈಲ್ ಅನ್ನು ಪ್ಲೇ ಮಾಡುವುದನ್ನು ನಿಲ್ಲಿಸುತ್ತದೆ ಅಥವಾ ಯಾವುದೇ URL ನೀಡದಿದ್ದರೆ ಎಲ್ಲಾ ಧ್ವನಿಗಳು.",
   "dropletBlock_stopSound_param0_description": "ಧ್ವನಿ ಫೈಲ್‌ಗೆ URL. ಪ್ರಾಜೆಕ್ಟ್ ಆಸ್ತಿ ಹೆಸರು ಅಥವಾ ಬಾಹ್ಯ URL ಆಗಿರಬಹುದು.",
+  "duplicate": "ನಕಲು",
   "duration": "ಅವಧಿ",
   "edit": "ತಿದ್ದಿ",
   "editAll": "ಎಲ್ಲವನ್ನೂ ಸಂಪಾದಿಸಿ",

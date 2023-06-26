@@ -799,6 +799,7 @@
   "dropletBlock_return_signatureOverride": "qaytarish",
   "dropletBlock_stopSound_description": "Belgilangan URL-dan ovozli faylni tinglashni yoki URL berilmagan bo‘lsa, barcha tovushlarni to‘xtatadi.",
   "dropletBlock_stopSound_param0_description": "Ovozli faylning URL manzili. Loyiha obyekti nomi yoki tashqi URL bo‘lishi mumkin.",
+  "duplicate": "Nusxalash",
   "duration": "Davomiyligi",
   "edit": "tahrirlash",
   "editAll": "Barchasini tahrirlash",

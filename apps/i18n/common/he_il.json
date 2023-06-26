@@ -809,6 +809,7 @@
   "dropletBlock_return_signatureOverride": "החזר",
   "dropletBlock_stopSound_description": "הפסק לנגן קובץ שמע מכתובת ה-URL שצוינה, או כל הצלילים אם לא צוינה כתובת URL.",
   "dropletBlock_stopSound_param0_description": "הכתובת לקובץ השמע. יכול להיות חלק מהפרויקט או כתובת URL חיצונית.",
+  "duplicate": "שכפל",
   "duration": "משך",
   "edit": "ערוך",
   "editAll": "ערוך הכל",

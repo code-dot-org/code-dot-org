@@ -765,6 +765,7 @@
   "dropletBlock_return_signatureOverride": "परत करा",
   "dropletBlock_stopSound_description": "दिलेल्या युआरएलवरील साऊंड फाईल प्ले करणे थांबवतो किंवा जर युआरएल दिलेली नसेल तर सर्व आवाज थांबवतो.",
   "dropletBlock_stopSound_param0_description": "साऊंड फाईलची युआरएल. प्रोजेक्ट ॲसेटचे नाव किंवा बाह्य युआरएल असू शकते.",
+  "duplicate": "डुप्लिकेट  ",
   "edit": "संपादन करा",
   "editAll": "सर्व संपादित करा",
   "editProject": "प्रोजेक्ट संपादित करा",

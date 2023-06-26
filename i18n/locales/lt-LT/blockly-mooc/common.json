@@ -262,6 +262,7 @@
   "dropletBlock_randomNumber_param1_description": "Didžiausias grąžintas skaičius",
   "dropletBlock_return_signatureOverride": "rezultatas = ",
   "dropletBlock_stopSound_description": "Baigia groti garsą iš pasirinkto URL, arba visus garsus jei nėra pasirinkto URL.",
+  "duplicate": "Dubliuoti",
   "edit": "Redaguoti",
   "editProject": "Redaguoti projektą",
   "editable": "Redaguojamas",

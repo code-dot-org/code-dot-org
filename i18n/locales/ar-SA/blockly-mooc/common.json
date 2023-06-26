@@ -878,6 +878,7 @@
   "dropletBlock_subtractOperator_signatureOverride": "دالة الطرح",
   "dropletBlock_whileBlock_description": "يقوم بإنشاء حلقة تتكون من عبارة شرطية وكتلة من العبارات المنفذة لكل تكرار للحلقة. تستمر الحلقة في التنفيذ طالما تم تقييم الشرط على أنه صحيح",
   "dropletBlock_whileBlock_signatureOverride": "حلقة \"بينما\"",
+  "duplicate": "انسخ",
   "duration": "المدّة",
   "edit": "تعديل",
   "editAll": "تعديل الكل",

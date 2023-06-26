@@ -825,6 +825,7 @@
   "dropletBlock_stopSound_description": "Interrompe la riproduzione del file audio dall'URL specificato, o tutti i suoni se nessun URL viene specificato.",
   "dropletBlock_stopSound_param0_description": "L'URL di un file audio. Può essere un nome di progetto asset o un URL esterno.",
   "dropletBlock_whileBlock_signatureOverride": "ciclo \"mentre\"",
+  "duplicate": "Duplica",
   "duration": "Durata",
   "durationLabel": "Durata: {duration}",
   "edit": "Modifica",

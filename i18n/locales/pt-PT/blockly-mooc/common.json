@@ -801,6 +801,7 @@
   "dropletBlock_return_signatureOverride": "devolver",
   "dropletBlock_stopSound_description": "Para de tocar o arquivo de som do URL especificado, ou todos os sons, se nenhuma URL for dada.",
   "dropletBlock_stopSound_param0_description": "A URL para um arquivo de som. Pode ser um nome de projeto ativo ou uma URL externa.",
+  "duplicate": "Duplicar",
   "duration": "Duração",
   "edit": "Editar",
   "editAll": "Editar tudo",

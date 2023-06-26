@@ -806,6 +806,7 @@
   "dropletBlock_return_signatureOverride": "trở lại",
   "dropletBlock_stopSound_description": "Dừng chơi các tập tin âm thanh từ URL đã chỉ định hoặc tất cả âm thanh nếu không dùng URL.",
   "dropletBlock_stopSound_param0_description": "URL vào một tập tin âm thanh. Có thể là một tên tài sản của dự án hoặc URL bên ngoài.",
+  "duplicate": "Nhân bản",
   "duration": "Thời lượng",
   "edit": "Sửa",
   "editAll": "Sửa tất cả",

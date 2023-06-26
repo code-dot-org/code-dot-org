@@ -258,6 +258,7 @@
   "dropletBlock_randomNumber_param1": "max",
   "dropletBlock_randomNumber_param1_description": "O máximo número devolto",
   "dropletBlock_return_signatureOverride": "devolver",
+  "duplicate": "Duplicar",
   "edit": "Editar",
   "editProject": "Editar proxecto",
   "editSectionDetails": "Editar detalles do grupo",

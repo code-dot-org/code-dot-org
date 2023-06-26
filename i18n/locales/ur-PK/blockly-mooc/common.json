@@ -785,6 +785,7 @@
   "dropletBlock_return_signatureOverride": "واپس کرنا",
   "dropletBlock_stopSound_description": "رک جاتا ہے اگر کوئی URL دیا ہے تو آواز مسل اختصاصی URL یا سب آوازوں سے چلا رہا ہے ۔",
   "dropletBlock_stopSound_param0_description": "یو آر ایل کو ایک آواز مسل ۔ ایک پروجیکٹ اثاثہ نام یا خارجی URL ہو سکتا ہے ۔",
+  "duplicate": "نقل",
   "duration": "دورانیہ",
   "edit": "تدوین کریں",
   "editAll": "تمام تدوین",

@@ -838,6 +838,7 @@
   "dropletBlock_stopSound_description": "Zatrzymuje odtwarzanie pliku dźwiękowego z podanego adresu URL lub wszystkie dźwięki, jeśli nie podano żadnego URL.",
   "dropletBlock_stopSound_param0_description": "Adres URL do pliku dźwiękowego. Może to być nazwa z projektu lub zewnętrzny adres URL.",
   "dropletBlock_subtractOperator_description": "Odejmowanie dwóch liczb",
+  "duplicate": "Powiel",
   "duration": "Czas trwania",
   "durationLabel": "Czas trwania: {duration}",
   "edit": "Edytuj",

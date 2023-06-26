@@ -860,6 +860,7 @@
   "dropletBlock_subtractOperator_signatureOverride": "Kurangi operator",
   "dropletBlock_whileBlock_description": "Menciptakan loop/perulangan yang terdiri dari ekspresi kondisional dan blok pernyataan dieksekusi untuk setiap iterasi dari loop. Loop terus melaksanakan selama kondisi bernilai true/benar",
   "dropletBlock_whileBlock_signatureOverride": "while loop",
+  "duplicate": "Duplikat",
   "duration": "Durasi",
   "edit": "Edit",
   "editAll": "Edit semua",

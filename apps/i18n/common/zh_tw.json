@@ -876,6 +876,7 @@
   "dropletBlock_subtractOperator_signatureOverride": "減法運算子",
   "dropletBlock_whileBlock_description": "創建一個條件運算式和一個為每個迴圈反覆運算中執行的語句塊組成的一個迴圈。迴圈將繼續執行，只要條件計算為 true",
   "dropletBlock_whileBlock_signatureOverride": "當…迴圈",
+  "duplicate": "複製",
   "duration": "持續期",
   "edit": "编辑",
   "editAll": "編輯全部",

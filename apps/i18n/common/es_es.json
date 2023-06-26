@@ -878,6 +878,7 @@
   "dropletBlock_subtractOperator_signatureOverride": "Operador de resta",
   "dropletBlock_whileBlock_description": "Crea un bucle que consta de una expresión condicional y un bloque de comandos ejecutados en cada iteración del bucle. El bucle continúa ejecutar mientras la condición se evalúa como true",
   "dropletBlock_whileBlock_signatureOverride": "bucle \"while\"",
+  "duplicate": "Duplicar",
   "duration": "Duración",
   "edit": "Editar",
   "editAll": "Editar todo",

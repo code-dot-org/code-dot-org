@@ -720,6 +720,7 @@
   "dropletBlock_subtractOperator_signatureOverride": "Aftrek operator",
   "dropletBlock_whileBlock_description": "Hiermee maak je een lus die bestaat uit een voorwaardelijke expressie en een blok instructies uitgevoerd voor elke iteratie van de lus. De lus gaat door met uitvoeren zolang de gestelde voorwaarde waar is",
   "dropletBlock_whileBlock_signatureOverride": "'while' lus",
+  "duplicate": "Dupliceer",
   "edit": "Bewerk",
   "editAll": "Bewerk alles",
   "editProject": "Edit Project",

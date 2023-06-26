@@ -801,6 +801,7 @@
   "dropletBlock_return_signatureOverride": "वापस जाएँ",
   "dropletBlock_stopSound_description": "निर्दिष्ट URL से ध्वनि फाइल या सभी ध्वनियां प्ले करना बंद करता है, यदि कोई URL नहीं दिया जाता है।",
   "dropletBlock_stopSound_param0_description": "URL से ध्वनि फाइल। यह प्रोजेक्ट असेट नाम या बाहरी URL हो सकता है।",
+  "duplicate": "अनुलिपि",
   "duration": "अवधि",
   "edit": "संपादित करें",
   "editAll": "सभी को संपादित करें",

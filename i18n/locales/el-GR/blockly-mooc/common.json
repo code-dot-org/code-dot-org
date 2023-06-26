@@ -851,6 +851,7 @@
   "dropletBlock_subtractOperator_description": "Αφαίρεσε δύο αριθμούς",
   "dropletBlock_whileBlock_description": "Δημιουργεί ένα βρόχο που αποτελείται από μία έκφραση υπό συνθήκη και ένα μπλοκ εντολών που εκτελούνται σε κάθε επανάληψη του βρόχου. Ο βρόχος συνεχίζει να εκτελεταί όσο η συνθήκη υπολογίζεται ως αληθής",
   "dropletBlock_whileBlock_signatureOverride": "βρόχος ενώ",
+  "duplicate": "Διπλασιασμός",
   "duration": "Διάρκεια",
   "edit": "Τροποποίηση",
   "editAll": "Επεξεργασία όλων",

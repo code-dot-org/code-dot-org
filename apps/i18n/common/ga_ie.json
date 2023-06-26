@@ -497,6 +497,7 @@
   "dropletBlock_stopSound_description": "Stopann seo seinm an chomhaid fuaime ón URL sonraithe, nó stopann sé gach fuaim mura bhfuil URL ann.",
   "dropletBlock_stopSound_param0_description": "URL an chomhaid fuaime, ainm acmhainne áitiúla, nó URL seachtrach.",
   "dropletBlock_whileBlock_signatureOverride": "lúb \"chomh fada is\"",
+  "duplicate": "Cóipeáil",
   "edit": "Eagar",
   "editAll": "Cuir gach ceann in eagar",
   "editProject": "Cuir an Togra in Eagar",

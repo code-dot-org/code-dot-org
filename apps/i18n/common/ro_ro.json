@@ -841,6 +841,7 @@
   "dropletBlock_return_signatureOverride": "returnează",
   "dropletBlock_stopSound_description": "Opreşte redarea fişierului audio din link-ul specificat, sau toate sunetele dacă nu este furnizat un link.",
   "dropletBlock_stopSound_param0_description": "Adresa URL către un fișier audio. Poate fi un nume al unui element al proiectului sau o legătură externă.",
+  "duplicate": "Fă o copie",
   "duration": "Durată",
   "edit": "Editează",
   "editAll": "Editează tot",

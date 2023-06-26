@@ -248,6 +248,7 @@
   "dropletBlock_return_signatureOverride": "vrni",
   "dropletBlock_stopSound_description": "Ustavi zvok iz danega URL-ja oz. vse zvoke, če URL ni dan.",
   "dropletBlock_stopSound_param0_description": "URL zvočne datoteke. Lahko je ime zvoka v projektu ali zunanji URL.",
+  "duplicate": "Podvoji",
   "edit": "Uredi",
   "editAll": "Uredi vse",
   "editProject": "Uredi projekt",

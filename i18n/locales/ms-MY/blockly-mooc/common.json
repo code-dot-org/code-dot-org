@@ -802,6 +802,7 @@
   "dropletBlock_return_signatureOverride": "kembali",
   "dropletBlock_stopSound_description": "Berhenti memainkan fail bunyi daripada URL yang ditentukan, atau semua bunyi jika tiada URL diberikan.",
   "dropletBlock_stopSound_param0_description": "URL ke fail bunyi. Boleh menjadi nama aset projek atau URL luaran.",
+  "duplicate": "Buat pendua (salin)",
   "duration": "Tempoh",
   "edit": "Edit",
   "editAll": "Edit semua",

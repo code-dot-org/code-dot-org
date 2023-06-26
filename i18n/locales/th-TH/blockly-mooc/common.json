@@ -877,6 +877,7 @@
   "dropletBlock_subtractOperator_signatureOverride": "ตัวดำเนินการลบ",
   "dropletBlock_whileBlock_description": "สร้างลูปที่ประกอบด้วยนิพจน์เงื่อนไขและบล็อกของคำสั่งที่ดำเนินการสำหรับการวนซ้ำแต่ละครั้ง วนซ้ำยังคงดำเนินการตราบใดที่เงื่อนไขประเมินเป็นจริง",
   "dropletBlock_whileBlock_signatureOverride": "while loop",
+  "duplicate": "ทำซ้ำ",
   "duration": "ระยะเวลา",
   "edit": "แก้ไข",
   "editAll": "แก้ไขทั้งหมด",

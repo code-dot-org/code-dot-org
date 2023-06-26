@@ -646,6 +646,7 @@
   "dropletBlock_randomNumber_param1": "max",
   "dropletBlock_randomNumber_param1_description": "Suurim tagastatav number",
   "dropletBlock_return_signatureOverride": "tagasta",
+  "duplicate": "Tee koopia",
   "edit": "Muuda",
   "editAll": "Muuda kõike",
   "editProject": "Muuda projekti",

@@ -836,6 +836,7 @@
   "dropletBlock_return_signatureOverride": "geri dönme",
   "dropletBlock_stopSound_description": "Hiçbir URL belirtilmezse belirtilen URL'deki ses dosyasını veya tüm sesleri oynatmayı durdurur.",
   "dropletBlock_stopSound_param0_description": "Bir ses dosyası URL'si. Bir proje varlık adı veya harici URL olabilir.",
+  "duplicate": "Çoğalt",
   "duration": "Süre",
   "edit": "Düzenle",
   "editAll": "Hepsini düzenle",

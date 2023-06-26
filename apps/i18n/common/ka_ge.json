@@ -795,6 +795,7 @@
   "dropletBlock_return_signatureOverride": "დააბრუნეთ",
   "dropletBlock_stopSound_description": "კონკრეტული ბმულიდან ხმოვანი ფაილების დაკვრის შეწყვეტა, ან ყველა ხმის დაკვრის შეწყვეტა, თუ ბმული არ არის მითითებული.",
   "dropletBlock_stopSound_param0_description": "ხმოვანი ფაილის ბმული. შეიძლება იყოს პროექტის საკუთრების სახელი ან გარე ბმული.",
+  "duplicate": "დაკოპირება",
   "duration": "ხანგრძლივობა",
   "edit": "ჩასწორება",
   "editAll": "ყველას შესწორება",

@@ -810,6 +810,7 @@
   "dropletBlock_return_signatureOverride": "retorna",
   "dropletBlock_stopSound_description": "Deixa de reproduir el fitxer de so des de l'URL especificada, o tots els sons si no s'ha introduït cap URL.",
   "dropletBlock_stopSound_param0_description": "L'URL d'un fitxer de so. Pot ser el nom d'un element del projecte o una URL externa.",
+  "duplicate": "Duplica",
   "duration": "Durada",
   "edit": "Edita",
   "editAll": "Editar tot",

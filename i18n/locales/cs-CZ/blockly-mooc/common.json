@@ -876,6 +876,7 @@
   "dropletBlock_subtractOperator_signatureOverride": "Operátor odčítání",
   "dropletBlock_whileBlock_description": "Vytoří cyklus sestávající z podmiňujícího výrazu a bloku příkazů vykonávaných při každém opakování cyklu. Cyklus bude vykonáván až do doby, kdy bude podmínka vyhodnocena jako pravdivá",
   "dropletBlock_whileBlock_signatureOverride": "cyklus „while“",
+  "duplicate": "Kopíruj",
   "duration": "Doba trvání",
   "edit": "Upravit",
   "editAll": "Upravit vše",

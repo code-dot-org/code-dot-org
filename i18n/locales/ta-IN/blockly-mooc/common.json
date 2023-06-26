@@ -876,6 +876,7 @@
   "dropletBlock_subtractOperator_signatureOverride": "ஆப்ரேட்டரை கழிக்கவும்",
   "dropletBlock_whileBlock_description": "நிபந்தனைகள் கொண்ட வெளிப்பாடுகள்  உடன் ஒரு லூப் உருவாக்கப்படும். லூப் மறுசெய்கையின் ஒவ்வொரு முறையும் அறுதியிடல் பிளாக்கு ஒன்று செயல்படுத்தப்படும். நிலைமை உண்மையாக நீடிக்கும் வரை லூப் அறுதியிடல்களை தொடர்ந்து செயல்படுத்திக்கொண்டே இருக்கும்.",
   "dropletBlock_whileBlock_signatureOverride": "while loop",
+  "duplicate": "நகலெடு",
   "duration": "காலம்",
   "edit": "திருத்து",
   "editAll": "\nஅனைத்தையும் திருத்தவும் ",

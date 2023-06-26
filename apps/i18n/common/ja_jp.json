@@ -824,6 +824,7 @@
   "dropletBlock_return_signatureOverride": "返す",
   "dropletBlock_stopSound_description": "URLが指定されない場合、特定のURL上またはすべてのサウンドファイルの再生を停止します。",
   "dropletBlock_stopSound_param0_description": "音声ファイルのURLです。プロジェクトのアセット名または外部URLを指定できます。",
+  "duplicate": "コピー",
   "duration": "所要時間",
   "edit": "編集",
   "editAll": "全てを編集する",

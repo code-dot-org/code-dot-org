@@ -792,6 +792,7 @@
   "dropletBlock_return_signatureOverride": "буцаах",
   "dropletBlock_stopSound_description": "Тухайн URL дээрээс авсан дууны файл, эсвэл ямар нэг URL өгөгдөөгүй бол бүх дууг зогсооно.",
   "dropletBlock_stopSound_param0_description": "Дууны файлын URL. Төслийн хөрөнгийн нэр эсвэл гадна URL байж болно.",
+  "duplicate": "Хувилах",
   "duration": "Хугацаа",
   "edit": "Засах",
   "editAll": "Бүгдийг засах",

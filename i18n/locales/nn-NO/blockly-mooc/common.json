@@ -541,6 +541,7 @@
   "dropletBlock_return_signatureOverride": "returner",
   "dropletBlock_stopSound_description": "Stoppar lydavspeling frå ein URL eller stoppar all lyd om inga URL-adresse er oppgitt.",
   "dropletBlock_stopSound_param0_description": "URL til ei lydfil. Kan være ein prosjektressurs eller ein ekstern URL.",
+  "duplicate": "Dupliser",
   "edit": "Rediger",
   "editAll": "Rediger alle",
   "editProject": "Endre prosjekt",

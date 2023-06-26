@@ -755,6 +755,7 @@
   "dropletBlock_return_signatureOverride": "qaytar",
   "dropletBlock_stopSound_description": "Səs faylını göstərilən URL-dən səsləndirməyi dayandırır və ya URL verilmədiyi təqdirdə bütün səslər.",
   "dropletBlock_stopSound_param0_description": "Səsli bir sənədin URL. Layihə varlığı adı və ya xarici URL ola bilər.",
+  "duplicate": "Dublikatını düzəlt",
   "edit": "Redaktə et",
   "editAll": "Hamısını redaktə et",
   "editProject": "Layihədə düzəliş edin.",

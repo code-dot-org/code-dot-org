@@ -838,6 +838,7 @@
   "dropletBlock_stopSound_description": "Останавливает воспроизведение звукового файла, находящегося по указанному URL-адресу, или всех звуков, если URL-адрес не указан.",
   "dropletBlock_stopSound_param0_description": "URL-адрес звукового файла. Можно указать название файла из проекта или внешний URL-адрес.",
   "dropletBlock_whileBlock_signatureOverride": "цикл \"пока\"",
+  "duplicate": "Дублировать",
   "duration": "Продолжительность",
   "edit": "Редактировать",
   "editAll": "Изменить все",

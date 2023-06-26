@@ -781,6 +781,7 @@
   "dropletBlock_return_signatureOverride": "ibalik",
   "dropletBlock_stopSound_description": "Nagpapatigil sa pagpapatunog ng tunog na file mula sa tinutukoy na URL, o ang lahat ng mga tunog kung walang URL na binigay.",
   "dropletBlock_stopSound_param0_description": "Ang URL sa tunog na file. Maaari itong isang asset ng proyekto o panlabas na URL.",
+  "duplicate": "Kapareho",
   "edit": "Mag-Edit",
   "editAll": "I-edit lahat ",
   "editProject": "I-edit ang Proyekto",

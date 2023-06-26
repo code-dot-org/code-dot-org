@@ -878,6 +878,7 @@
   "dropletBlock_subtractOperator_signatureOverride": "Opérateur de soustraction",
   "dropletBlock_whileBlock_description": "Crée une boucle consistant en une expression conditionnelle et un bloc d’instructions exécutées pour chaque itération de la boucle. La boucle continue à s’exécuter tant que la condition est vraie",
   "dropletBlock_whileBlock_signatureOverride": "Boucle while",
+  "duplicate": "Dupliquer",
   "duration": "Durée",
   "edit": "Modifier",
   "editAll": "Modifier tous",

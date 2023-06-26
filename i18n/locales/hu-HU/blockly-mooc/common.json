@@ -803,6 +803,7 @@
   "dropletBlock_return_signatureOverride": "eredmény",
   "dropletBlock_stopSound_description": "Megállítja a hangfájl lejátszását a megadott URL-címről, vagy minden hangot ha nincs megadva URL.",
   "dropletBlock_stopSound_param0_description": "A hang fájl URL-címe. Lehet egy projekt eszköz neve vagy külső URL-cím.",
+  "duplicate": "Megkettőzés",
   "duration": "Időtartam",
   "edit": "Szerkeszt",
   "editAll": "Összes szerkesztése",
