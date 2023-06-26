@@ -55,7 +55,6 @@ export default class ProjectManager {
     this.channelsStore = channelsStore;
     this.reduceChannelUpdates = reduceChannelUpdates;
     this.initialSaveComplete = false;
-    console.log(`reduceChannelUpdates: ${reduceChannelUpdates}`);
   }
 
   // Load the project from the sources and channels store.
@@ -204,6 +203,7 @@ export default class ProjectManager {
     // the database. The main user-visible effect of this is that the
     // project's 'last saved' time shown in the UI may be inaccurate for
     // all projects that were saved while emergency mode was active.
+
     if (!this.reduceChannelUpdates || !this.initialSaveComplete) {
       // As long as we are not in emergency mode, always save the channel,
       // as either the channel has changed and/or the source changed.
