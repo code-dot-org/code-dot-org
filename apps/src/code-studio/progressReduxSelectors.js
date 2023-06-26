@@ -9,6 +9,8 @@ import {activityCssClass} from './activityUtils';
 
 const PEER_REVIEW_ID = -1;
 
+// Selectors
+
 // Do we have one or more lockable lessons
 export const hasLockableLessons = state =>
   state.lessons.some(lesson => lesson.lockable);
@@ -26,6 +28,7 @@ const lessonFromLessonAtIndex = (state, lessonIndex) => ({
   ...lessonFromLesson(state.lessons[lessonIndex]),
   isFocusArea: state.focusAreaLessonIds.includes(state.lessons[lessonIndex].id),
 });
+
 const lessonFromLesson = lesson =>
   _.pick(lesson, [
     'name',
