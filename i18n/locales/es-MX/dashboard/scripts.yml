@@ -5144,7 +5144,7 @@ es-MX:
               display_name: Eventos
             lessonGroup-5:
               display_name: Proyecto de fin de curso
-          title: Curso A (2021)
+          title: Curso A (2022)
           description: 'El curso A ofrece un plan de estudios de ciencias de la computación para los lectores principiantes, incluidos los estudiantes de infantil. Los estudiantes aprenderán a programar utilizando comandos como bucles y eventos. Las lecciones de este curso también enseñan a los estudiantes a colaborar de forma significativa con otros, a investigar diferentes técnicas de resolución de problemas, a persistir ante tareas desafiantes y a aprender sobre la seguridad en Internet. '
           student_description: Aprende los fundamentos de las ciencias de la computación y la seguridad en Internet. Al final del curso, crea tu propio juego o historia para compartir.
           description_short: Una introducción a las ciencias de la computación para prelectores.
@@ -5170,7 +5170,7 @@ es-MX:
               display_name: Bucles Para
             end_of_course_project:
               display_name: Proyecto de fin de curso
-          title: Curso Express (2021)
+          title: Curso Express (2022)
           description: Aprende los fundamentos de las ciencias de la computación y la seguridad en Internet. Al final del curso, crea tu propio juego o historia para compartir.
           student_description: Aprende los fundamentos de las ciencias de la computación y la seguridad en Internet. Al final del curso, crea tu propio juego o historia para compartir.
           description_short: 'Una introducción a la ciencia de la computación: combina lo mejor de nuestro plan de estudios de primaria para estudiantes mayores.'
@@ -5251,7 +5251,7 @@ es-MX:
               display_name: Eventos
             lessonGroup-6:
               display_name: Proyecto de fin de curso
-          title: Curso B (2021)
+          title: Curso B (2022)
           description: Hemos desarrollado el Curso B pensando en los alumnos de primer grado. Aunque los conceptos del Curso B son paralelos a los del Curso A, los alumnos aprenden actividades más sofisticadas y trabajan con una mayor variedad de rompecabezas. Los alumnos aprenderán los fundamentos de la programación, técnicas de colaboración, habilidades de investigación y pensamiento crítico, persistencia ante las dificultades y seguridad en Internet. Al final de este curso, los estudiantes crean juegos en el entorno de programación del Laboratorio de Juegos.
           student_description: Aprende los fundamentos de las ciencias de la computación y la seguridad en Internet. Al final del curso, crea tu propio juego o historia para compartir.
           description_short: Una introducción a las ciencias de la computación para prelectores. Es similar al Curso A, pero con conceptos más avanzados.
@@ -5271,7 +5271,7 @@ es-MX:
               display_name: Datos
             end_of_course_project:
               display_name: Proyecto de fin de curso
-          title: Curso C (2021)
+          title: Curso C (2022)
           description: Desarrollamos el Curso C para estudiantes de segundo grado. Los estudiantes crearán programas con secuencias, bucles y eventos. Investigarán técnicas de resolución de problemas y desarrollarán estrategias para construir comunidades positivas tanto en línea como fuera de ella. Al final del curso, los alumnos crearán juegos interactivos que podrán compartir.
           student_description: Crea programas con secuencias, bucles y eventos. Traduce tus iniciales a código binario, investiga distintas técnicas de resolución de problemas y aprende cómo responder al ciberacoso. ¡Al final del curso podrás crear tu propio juego o historia para compartir!
           description_short: Aprende los conceptos básicos de las Ciencias de la Computación y crea tu propio arte, historias y juegos.
@@ -5348,7 +5348,7 @@ es-MX:
               display_name: Condicionales
             end_of_course_project:
               display_name: Proyecto de fin de curso
-          title: Curso D (2021)
+          title: Curso D (2022)
           description: 'Hemos creado el curso D para los alumnos de tercer grado.  El curso comienza con un repaso de los conceptos encontrados en cursos anteriores, incluyendo bucles y eventos. Después, los estudiantes desarrollarán su comprensión de los algoritmos, los bucles anidados, los bucles while, las condicionales y mucho más. '
           student_description: Aprende sobre bucles, condicionales y eventos. Más allá de la codificación, aprende sobre la ciudadanía digital.
           description_short: Aprende sobre sentencias condicionales y crea tu propio arte, historia o juego.
@@ -7004,7 +7004,7 @@ es-MX:
               display_name: Bucles Para
             end_of_course_project:
               display_name: Proyecto de fin de curso
-          title: Curso Express (2021)
+          title: Curso Express (2022)
           description: Aprende los fundamentos de las ciencias de la computación y la seguridad en Internet. Al final del curso, crea tu propio juego o historia para compartir.
           student_description: Aprende los fundamentos de las ciencias de la computación y la seguridad en Internet. Al final del curso, crea tu propio juego o historia para compartir.
           description_short: 'Una introducción a la ciencia de la computación: combina lo mejor de nuestro plan de estudios de primaria para estudiantes mayores.'
@@ -7021,7 +7021,7 @@ es-MX:
               display_name: Eventos
             lessonGroup-5:
               display_name: Proyecto de fin de curso
-          title: Curso A (2021)
+          title: Curso A (2022)
           description: 'El curso A ofrece un plan de estudios de ciencias de la computación para los lectores principiantes, incluidos los estudiantes de infantil. Los estudiantes aprenderán a programar utilizando comandos como bucles y eventos. Las lecciones de este curso también enseñan a los estudiantes a colaborar de forma significativa con otros, a investigar diferentes técnicas de resolución de problemas, a persistir ante tareas desafiantes y a aprender sobre la seguridad en Internet. '
           student_description: Aprende los fundamentos de las ciencias de la computación y la seguridad en Internet. Al final del curso, crea tu propio juego o historia para compartir.
           description_short: Una introducción a las ciencias de la computación para prelectores.
@@ -7040,7 +7040,7 @@ es-MX:
               display_name: Eventos
             lessonGroup-6:
               display_name: Proyecto de fin de curso
-          title: Curso B (2021)
+          title: Curso B (2022)
           description: Hemos desarrollado el Curso B pensando en los alumnos de primer grado. Aunque los conceptos del Curso B son paralelos a los del Curso A, los alumnos aprenden actividades más sofisticadas y trabajan con una mayor variedad de rompecabezas. Los alumnos aprenderán los fundamentos de la programación, técnicas de colaboración, habilidades de investigación y pensamiento crítico, persistencia ante las dificultades y seguridad en Internet. Al final de este curso, los estudiantes crean juegos en el entorno de programación del Laboratorio de Juegos.
           student_description: Aprende los fundamentos de las ciencias de la computación y la seguridad en Internet. Al final del curso, crea tu propio juego o historia para compartir.
           description_short: Una introducción a las ciencias de la computación para prelectores. Es similar al Curso A, pero con conceptos más avanzados.
@@ -7059,7 +7059,7 @@ es-MX:
               display_name: Datos
             end_of_course_project:
               display_name: Proyecto de fin de curso
-          title: Curso C (2021)
+          title: Curso C (2022)
           description: Desarrollamos el Curso C para estudiantes de segundo grado. Los estudiantes crearán programas con secuencias, bucles y eventos. Investigarán técnicas de resolución de problemas y desarrollarán estrategias para construir comunidades positivas tanto en línea como fuera de ella. Al final del curso, los alumnos crearán juegos interactivos que podrán compartir.
           student_description: Crea programas con secuencias, bucles y eventos. Traduce tus iniciales a código binario, investiga distintas técnicas de resolución de problemas y aprende cómo responder al ciberacoso. ¡Al final del curso podrás crear tu propio juego o historia para compartir!
           description_short: Aprende los conceptos básicos de las Ciencias de la Computación y crea tu propio arte, historias y juegos.
@@ -7078,7 +7078,7 @@ es-MX:
               display_name: Condicionales
             end_of_course_project:
               display_name: Proyecto de fin de curso
-          title: Curso D (2021)
+          title: Curso D (2022)
           description: 'Hemos creado el curso D para los alumnos de tercer grado.  El curso comienza con un repaso de los conceptos encontrados en cursos anteriores, incluyendo bucles y eventos. Después, los estudiantes desarrollarán su comprensión de los algoritmos, los bucles anidados, los bucles while, las condicionales y mucho más. '
           student_description: Aprende sobre bucles, condicionales y eventos. Más allá de la codificación, aprende sobre la ciudadanía digital.
           description_short: Aprende sobre sentencias condicionales y crea tu propio arte, historia o juego.
@@ -7637,6 +7637,7 @@ es-MX:
               display_name: Datos y Simulaciones
             lessonGroup-6:
               display_name: Proyecto de fin de curso
+          title: Curso F (2023)
           description_audience: De 9 a 13 años
           description_short: Aprende todos los conceptos de Fundamentos de Ciencias de la Computación y crea tu propio arte, historia o juego.
           description: Hemos creado el curso F para alumnos de quinto curso. El curso comienza analizando cómo los usuarios eligen las aplicaciones que utilizan. A continuación, los alumnos aprenden a crear una serie de aplicaciones de Laboratorio de Sprite que también ofrecen opciones al usuario. En las últimas lecciones del curso, los estudiantes aprenderán sobre las variables en una serie de contextos. A lo largo de este curso, los estudiantes tienen mayor autonomía y más opciones. Al final del curso, los estudiantes habrán creado proyectos interactivos para compartir con sus amigos y familiares.
@@ -7667,6 +7668,33 @@ es-MX:
 
             **Tiempo sugerido**: 70 minutos
         csa-frq-practice:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Clases
+            lessonGroup-5:
+              display_name: Arreglos 2D
+        csa-frq-practice-2019:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Clases
+            lessonGroup-5:
+              display_name: Arreglos 2D
+        csa-frq-practice-2021:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Clases
+            lessonGroup-5:
+              display_name: Arreglos 2D
+        csa-frq-practice-2022:
+          lessons:
+            lesson-4:
+              name: Datos
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Clases
+            lessonGroup-5:
+              display_name: Arreglos 2D
+        csa-frq-practice-2023:
           lesson_groups:
             lessonGroup-3:
               display_name: Clases

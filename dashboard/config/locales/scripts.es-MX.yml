@@ -8582,7 +8582,7 @@ es-MX:
               display_name: Eventos
             lessonGroup-5:
               display_name: Proyecto de fin de curso
-          title: Curso A (2021)
+          title: Curso A (2022)
           description: 'El curso A ofrece un plan de estudios de ciencias de la computación
             para los lectores principiantes, incluidos los estudiantes de infantil.
             Los estudiantes aprenderán a programar utilizando comandos como bucles
@@ -8617,7 +8617,7 @@ es-MX:
               display_name: Bucles Para
             end_of_course_project:
               display_name: Proyecto de fin de curso
-          title: Curso Express (2021)
+          title: Curso Express (2022)
           description: Aprende los fundamentos de las ciencias de la computación y
             la seguridad en Internet. Al final del curso, crea tu propio juego o historia
             para compartir.
@@ -8756,7 +8756,7 @@ es-MX:
               display_name: Eventos
             lessonGroup-6:
               display_name: Proyecto de fin de curso
-          title: Curso B (2021)
+          title: Curso B (2022)
           description: Hemos desarrollado el Curso B pensando en los alumnos de primer
             grado. Aunque los conceptos del Curso B son paralelos a los del Curso
             A, los alumnos aprenden actividades más sofisticadas y trabajan con una
@@ -8786,7 +8786,7 @@ es-MX:
               display_name: Datos
             end_of_course_project:
               display_name: Proyecto de fin de curso
-          title: Curso C (2021)
+          title: Curso C (2022)
           description: Desarrollamos el Curso C para estudiantes de segundo grado.
             Los estudiantes crearán programas con secuencias, bucles y eventos. Investigarán
             técnicas de resolución de problemas y desarrollarán estrategias para construir
@@ -8925,7 +8925,7 @@ es-MX:
               display_name: Condicionales
             end_of_course_project:
               display_name: Proyecto de fin de curso
-          title: Curso D (2021)
+          title: Curso D (2022)
           description: 'Hemos creado el curso D para los alumnos de tercer grado.  El
             curso comienza con un repaso de los conceptos encontrados en cursos anteriores,
             incluyendo bucles y eventos. Después, los estudiantes desarrollarán su
@@ -11362,7 +11362,7 @@ es-MX:
               display_name: Bucles Para
             end_of_course_project:
               display_name: Proyecto de fin de curso
-          title: Curso Express (2021)
+          title: Curso Express (2022)
           description: Aprende los fundamentos de las ciencias de la computación y
             la seguridad en Internet. Al final del curso, crea tu propio juego o historia
             para compartir.
@@ -11384,7 +11384,7 @@ es-MX:
               display_name: Eventos
             lessonGroup-5:
               display_name: Proyecto de fin de curso
-          title: Curso A (2021)
+          title: Curso A (2022)
           description: 'El curso A ofrece un plan de estudios de ciencias de la computación
             para los lectores principiantes, incluidos los estudiantes de infantil.
             Los estudiantes aprenderán a programar utilizando comandos como bucles
@@ -11412,7 +11412,7 @@ es-MX:
               display_name: Eventos
             lessonGroup-6:
               display_name: Proyecto de fin de curso
-          title: Curso B (2021)
+          title: Curso B (2022)
           description: Hemos desarrollado el Curso B pensando en los alumnos de primer
             grado. Aunque los conceptos del Curso B son paralelos a los del Curso
             A, los alumnos aprenden actividades más sofisticadas y trabajan con una
@@ -11441,7 +11441,7 @@ es-MX:
               display_name: Datos
             end_of_course_project:
               display_name: Proyecto de fin de curso
-          title: Curso C (2021)
+          title: Curso C (2022)
           description: Desarrollamos el Curso C para estudiantes de segundo grado.
             Los estudiantes crearán programas con secuencias, bucles y eventos. Investigarán
             técnicas de resolución de problemas y desarrollarán estrategias para construir
@@ -11468,7 +11468,7 @@ es-MX:
               display_name: Condicionales
             end_of_course_project:
               display_name: Proyecto de fin de curso
-          title: Curso D (2021)
+          title: Curso D (2022)
           description: 'Hemos creado el curso D para los alumnos de tercer grado.  El
             curso comienza con un repaso de los conceptos encontrados en cursos anteriores,
             incluyendo bucles y eventos. Después, los estudiantes desarrollarán su
@@ -12470,6 +12470,7 @@ es-MX:
               display_name: Datos y Simulaciones
             lessonGroup-6:
               display_name: Proyecto de fin de curso
+          title: Curso F (2023)
           description_audience: De 9 a 13 años
           description_short: Aprende todos los conceptos de Fundamentos de Ciencias
             de la Computación y crea tu propio arte, historia o juego.
@@ -12511,6 +12512,33 @@ es-MX:
 
             **Tiempo sugerido**: 70 minutos
         csa-frq-practice:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Clases
+            lessonGroup-5:
+              display_name: Arreglos 2D
+        csa-frq-practice-2019:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Clases
+            lessonGroup-5:
+              display_name: Arreglos 2D
+        csa-frq-practice-2021:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Clases
+            lessonGroup-5:
+              display_name: Arreglos 2D
+        csa-frq-practice-2022:
+          lessons:
+            lesson-4:
+              name: Datos
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Clases
+            lessonGroup-5:
+              display_name: Arreglos 2D
+        csa-frq-practice-2023:
           lesson_groups:
             lessonGroup-3:
               display_name: Clases
