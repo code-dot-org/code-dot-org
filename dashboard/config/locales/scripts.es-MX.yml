@@ -170,6 +170,7 @@ es-MX:
           student_description: Este curso de 20 horas introduce el núcleo de la informática
             y conceptos de programación. El curso está diseñado para su uso en aulas
             para los grados K-8, pero es divertido aprender en todas las edades.
+          name: 20 horas
         edit-code:
           title: Editar el código
           description: Editar el código
@@ -1127,7 +1128,7 @@ es-MX:
           student_description: Lo utilizaremos durante la TeacherCon para entregar
             ayudas y materiales para las sesiones
         gradeKinder:
-          title: Jardín de infancia
+          title: Kindergarten
           description: Guion de Planificación para CSF 2.0
           description_short: Guion de Planificación para CSF 2.0
           description_audience: Edades de 5 a 18 años
@@ -9591,7 +9592,7 @@ es-MX:
               display_name: 'Capítulo 2: Computadoras y resolución de problemas'
             csd1_3:
               display_name: Lecciones alternativas
-          title: Resolución de Problemas y Computación ('21-'22)
+          title: Resolución de Problemas y Computación ('22-'23)
           description: "Resolución de Problemas y Computación es una iniciación altamente
             interactiva y colaborativa al campo de la informática, enmarcada dentro
             de la búsqueda más amplia de la resolución de problemas. Practicarás el
@@ -10062,7 +10063,7 @@ es-MX:
           lesson_groups:
             lessonGroup-2:
               display_name: Preparación para Enseñar la Unidad 1
-          title: autodidáctico-pl-csd5
+          title: Enseñanza de IA y aprendizaje automático
           description: "Este módulo está diseñado para ayudarte a preparar la enseñanza
             de unidades específicas dentro del curso Descubrimientos de la Informática.
             \ Empieza seleccionando la unidad que planeas enseñar primero. Puedes
@@ -12118,7 +12119,7 @@ es-MX:
         vpl-csd-ci-7:
           lesson_groups:
             lessonGroup-2:
-              display_name: autodidáctico-pl-csd5
+              display_name: Enseñanza de IA y aprendizaje automático
           title: 'Módulo 7: Preparación para la Enseñanza de la Inteligencia Artificial
             y el Aprendizaje Automático'
           description: "Este módulo de aprendizaje profesional está diseñado para
@@ -12168,6 +12169,8 @@ es-MX:
           lesson_groups:
             lessonGroup-3:
               display_name: Entradas y salidas
+        ai-temp:
+          title: Cómo funciona la Inteligencia Artificial
         focus-on-coding4b-2023:
           lesson_groups:
             lessonGroup-3:
@@ -12270,7 +12273,7 @@ es-MX:
           lesson_groups:
             lessonGroup-2:
               display_name: Preparación para Enseñar la Unidad 1
-          title: autodidáctico-pl-csd5
+          title: Enseñanza de IA y aprendizaje automático
           description: "Este módulo está diseñado para ayudarte a preparar la enseñanza
             de unidades específicas dentro del curso Descubrimientos de la Informática.
             \ Empieza seleccionando la unidad que planeas enseñar primero. Puedes
@@ -12482,3 +12485,34 @@ es-MX:
             a debatir el impacto social de la informática e Internet. Al final de
             este curso, diseña y crea un proyecto que puedas compartir con tus amigos
             y familiares.
+        self-paced-pl-csp2-2023:
+          title: 'Módulo 2: Navegando por Code.org'
+        self-paced-pl-csp4-2023:
+          description: |-
+            En este módulo, conocerás las auténticas prácticas de informática que los estudiantes llevarán a cabo a lo largo del curso de Principios de Informática. Estas prácticas incluyen la depuración, el uso de recursos y la programación en parejas. También explorarás el papel del profesor dentro de un aula de Principios de Informática y harás un plan de cómo apoyar el aprendizaje de los alumnos mientras enseñas el curso.
+
+            **Tendrás que**:
+
+            -   Considerar el papel del profesor en un aula de Principios de Informática.
+            -   Aprender sobre las auténticas prácticas de Informática que los estudiantes desarrollarán a lo largo del curso de Principios de Informática.
+            -   Elaborar un plan para apoyar el aprendizaje de los estudiantes a través de la diferenciación, la evaluación continua y la promoción en una cultura de inclusión.
+            -   Aprender sobre las oportunidades para conectar con la comunidad Informática en general.
+
+            **Tiempo sugerido**: 70 minutos
+          student_description: |-
+            En este módulo, conocerás las auténticas prácticas de informática que los estudiantes llevarán a cabo a lo largo del curso de Principios de Informática. Estas prácticas incluyen la depuración, el uso de recursos y la programación en parejas. También explorarás el papel del profesor dentro de un aula de Principios de Informática y harás un plan de cómo apoyar el aprendizaje de los alumnos mientras enseñas el curso.
+
+            **Tendrás que**:
+
+            -   Considerar el papel del profesor en un aula de Principios de Informática.
+            -   Aprender sobre las auténticas prácticas de Informática que los estudiantes desarrollarán a lo largo del curso de Principios de Informática.
+            -   Elaborar un plan para apoyar el aprendizaje de los estudiantes a través de la diferenciación, la evaluación continua y la promoción en una cultura de inclusión.
+            -   Aprender sobre las oportunidades para conectar con la comunidad Informática en general.
+
+            **Tiempo sugerido**: 70 minutos
+        csa-frq-practice:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Clases
+            lessonGroup-5:
+              display_name: Arreglos 2D

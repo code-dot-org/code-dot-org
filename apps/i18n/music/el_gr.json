@@ -44,7 +44,7 @@
   "blockly_toolboxCategoryFunctions": "Συναρτήσεις",
   "blockly_toolboxCategoryLogic": "Λογική",
   "blockly_toolboxCategoryMath": "Μαθηματικά",
-  "blockly_toolboxCategoryPlay": "Παίξε",
+  "blockly_toolboxCategoryPlay": "Ήχοι",
   "blockly_toolboxCategorySimple": "Απλό",
   "blockly_toolboxCategoryTracks": "Ράγες",
   "blockly_toolboxCategoryVariables": "Μεταβλητές",
@@ -55,5 +55,7 @@
   "feedback": "Σχόλια",
   "share": "Μοιράσου",
   "shareComingSoon": "Το μοίρασμα είναι υπό κατασκευή. Ξαναπάρε σύντομα.",
-  "startOver": "Ξεκινήστε από την αρχή"
+  "startOver": "Ξεκινήστε από την αρχή",
+  "panelHeaderInstructions": "Οδηγίες",
+  "panelHeaderWorkspace": "Χώρος εργασίας: "
 }

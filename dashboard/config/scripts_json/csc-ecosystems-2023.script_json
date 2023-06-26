@@ -7,12 +7,13 @@
       "hideable_lessons": true,
       "is_course": true,
       "is_migrated": true,
+      "tts": true,
       "version_year": "2023"
     },
     "new_name": null,
     "family_name": "csc-ecosystems",
-    "serialized_at": "2023-05-19 20:38:19 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2023-06-06 20:32:30 UTC",
+    "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
@@ -42,8 +43,8 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
-        "overview": "In this **skill-building** lesson, students will program a model of an aquatic ecosystem and then simulate an overfishing situation. Students will learn how to program conditional statements to check the amount of algae in the water. If there is too much algae, the coral becomes sick. If there is too little algae, the fish have no food source and leave the area. If there is just the right amount of algae, the sick coral will heal and the fish will stay in the area. ",
-        "preparation": "- Play through the levels and review the lesson slides.\n- Decide on pacing between student work time and whole group instruction.\n- Check your technology and decide if you need to troubleshoot anything in advance.",
+        "overview": "In this **skill-building** lesson, students will program a model of an aquatic ecosystem and then simulate an overfishing situation. Students will learn how to program conditional statements to check the amount of algae in the water. If there is too much algae, the coral becomes sick. If there is too little algae, the fish have no food source and leave the area. If there is just the right amount of algae, the sick coral will heal and the fish will stay in the area. \n",
+        "preparation": "- Play through the levels and review the lesson slides.\n- Decide on pacing between student work time and whole group instruction.\n- Check your technology and decide if you need to troubleshoot anything in advance.\n- Consider assigning students the recommended preparation ([link](https://levelbuilder-studio.code.org/s/csc-ecosystems-2023/lessons/1#activity-4050222))\n- Consider these related extensions options ([link](https://levelbuilder-studio.code.org/s/csc-ecosystems-2023/lessons/1#activity-4050221))",
         "purpose": "Students will learn that marine ecosystems have many organisms which interact and keep each other in balance. This lesson combines computer science with life sciences as students create a model that simulates the effects of overfishing. "
       },
       "seeding_key": {
@@ -61,7 +62,7 @@
       "relative_position": 2,
       "properties": {
         "overview": "In this **skill-building** lesson, students will read about and then program three different solutions to the problem of overfishing.\n\nThis lesson starts where the previous lesson left off, with the model of an unbalanced aquatic ecosystem. First, students will modify the behavior of the boat so it can only move within a specified “fishing zone”. Second, students will program a new event to specify a “fishing season” and a “no fishing season”. Third, students will learn how to use a variable to keep track of the number of fish the boat has removed. The lesson ends with a Check For Understanding level to make sure students learned the three solutions to overfishing.\n",
-        "preparation": "- Play through the levels and review the lesson slides.\n- Decide on pacing between student work time and whole group instruction.\n- Read the provided article on [Understanding Overfishing](https://www.seafoodwatch.org/seafood-basics/sustainable-solutions/avoid-overfishing).",
+        "preparation": "- Play through the levels and review the lesson slides.\n- Decide on pacing between student work time and whole group instruction.\n- Read the provided article on [Understanding Overfishing](https://www.seafoodwatch.org/seafood-basics/sustainable-solutions/avoid-overfishing). Scaffold as needed to meet the needs of your students. \n- Consider assigning students the recommended preparation [(link)](https://levelbuilder-studio.code.org/s/csc-ecosystems-2023/lessons/2#activity-4110188).\n- Consider these related extensions options [(link)](https://levelbuilder-studio.code.org/s/csc-ecosystems-2023/lessons/2#activity-4110189).",
         "purpose": "Students will continue to learn about balanced and unbalanced ecosystems. Using a scientific article about overfishing as a foundation, students will develop a rich understanding of the connections between organisms in an ecosystem. Ultimately, students will have the opportunity to apply what they have learned by modeling a local ecosystem. "
       },
       "seeding_key": {
@@ -90,8 +91,21 @@
   ],
   "lesson_activities": [
     {
-      "key": "3f42d9ad-3c28-4972-83df-4110a6b5e30b",
+      "key": "0e531225-f2d3-42ba-a1db-0154920ce6df",
       "position": 1,
+      "properties": {
+        "name": "Recommended Preparation"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0e531225-f2d3-42ba-a1db-0154920ce6df",
+        "lesson.key": "Overfishing Simulation (pilot)",
+        "lesson_group.key": "",
+        "script.name": "csc-ecosystems-2023"
+      }
+    },
+    {
+      "key": "3f42d9ad-3c28-4972-83df-4110a6b5e30b",
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -105,7 +119,7 @@
     },
     {
       "key": "07bc7741-d32d-4f29-bce6-6144894b39ab",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -119,7 +133,7 @@
     },
     {
       "key": "80aa4973-223d-44c0-9c93-ee86788f2702",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 10,
         "name": "Wrap Up"
@@ -132,8 +146,34 @@
       }
     },
     {
-      "key": "4890321d-0264-420c-bad2-c710492d75ab",
+      "key": "08357969-2113-4ff3-a041-0889105ffc89",
+      "position": 5,
+      "properties": {
+        "name": "Extension Opportunties"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "08357969-2113-4ff3-a041-0889105ffc89",
+        "lesson.key": "Overfishing Simulation (pilot)",
+        "lesson_group.key": "",
+        "script.name": "csc-ecosystems-2023"
+      }
+    },
+    {
+      "key": "ed5b5a6d-063d-493f-a4f3-bbd78d100172",
       "position": 1,
+      "properties": {
+        "name": "Recommended Preperation"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ed5b5a6d-063d-493f-a4f3-bbd78d100172",
+        "lesson.key": "Balancing the Ecosystem (pilot)",
+        "lesson_group.key": "",
+        "script.name": "csc-ecosystems-2023"
+      }
+    },
+    {
+      "key": "4890321d-0264-420c-bad2-c710492d75ab",
+      "position": 2,
       "properties": {
         "duration": 10,
         "name": "Warm Up"
@@ -147,7 +187,7 @@
     },
     {
       "key": "24a464e9-d4f3-4de3-b800-2e7dcc06890e",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -161,13 +201,26 @@
     },
     {
       "key": "76c6e35a-e629-4ae2-bf0e-e26e8e0a9750",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 10,
         "name": "Wrap Up"
       },
       "seeding_key": {
         "lesson_activity.key": "76c6e35a-e629-4ae2-bf0e-e26e8e0a9750",
+        "lesson.key": "Balancing the Ecosystem (pilot)",
+        "lesson_group.key": "",
+        "script.name": "csc-ecosystems-2023"
+      }
+    },
+    {
+      "key": "98fd68a6-ea5e-47f5-93d1-5f6b9aabbe39",
+      "position": 5,
+      "properties": {
+        "name": "Extension Options"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "98fd68a6-ea5e-47f5-93d1-5f6b9aabbe39",
         "lesson.key": "Balancing the Ecosystem (pilot)",
         "lesson_group.key": "",
         "script.name": "csc-ecosystems-2023"
@@ -230,6 +283,32 @@
     }
   ],
   "activity_sections": [
+    {
+      "key": "bed9eee5-b1bd-46b4-8230-9380709c27dd",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "bed9eee5-b1bd-46b4-8230-9380709c27dd",
+        "lesson_activity.key": "0e531225-f2d3-42ba-a1db-0154920ce6df"
+      }
+    },
+    {
+      "key": "0698034d-f421-4962-8bb5-63e351454c9a",
+      "position": 2,
+      "properties": {
+        "tips": [
+          {
+            "type": "contentCorner",
+            "markdown": "**Science Content:** Students will work with a marine life ecosystem in Lessons 1 and 2. To build familiarity with this ecosystem, we recommend this [Ocean Animals Video](https://www.youtube.com/watch?v=8adtdg0N2-g) (9:42 minutes).\n\n**Computer Science Content:** In this module, students will learn new coding concepts that might be difficult for new-to-computer science students. If students are not familiar with Code.org’s Sprite Lab we recommend trying [Swimming Fish with Sprite Lab](https://studio.code.org/s/coursee-2022/lessons/3) (55 minutes) for a basic introduction to the tool. \n\nThis module also uses an advanced CS concept called conditional statements. Students learn this concept in a scaffolded way, but some students may benefit from first engaging in this introduction to conditionals unplugged activity: [Conditionals with Cards](https://studio.code.org/s/coursed-2022/lessons/12) (50 minutes)."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "0698034d-f421-4962-8bb5-63e351454c9a",
+        "lesson_activity.key": "0e531225-f2d3-42ba-a1db-0154920ce6df"
+      }
+    },
     {
       "key": "dfb9f773-cb0e-44b8-b4a9-933c50bdcac0",
       "position": 1,
@@ -324,7 +403,7 @@
       "key": "7782afb7-cd17-487c-9b04-547c5476271b",
       "position": 5,
       "properties": {
-        "description": "**Guiding Questions**:\n- What is changing on screen?\n- Are plants and animals being added? Removed?\n- Why is there so much algae?\n- What happens to the coral when there is a lot of algae? \n- What would you expect to happen when the boat touches the fish?\n- Is this a balanced ecosystem?\n- Is the food chain in action?\n- What could make this simulation better? \n"
+        "description": "**Guiding Questions**:\n- What is changing on screen?\n- Are plants and animals being added? Removed?\n- Why is there so much algae?\n- What would you expect to happen when the boat touches the fish?\n- Is this a balanced ecosystem?\n- Is the food chain in action?\n- What could make this simulation better? \n\n**Discussion Goal**: Students will recognize that there is a lot of algae because the fish are not eating it. Also, the boat is not catching the fish. The simulation would be better if it modeled the food chain: the fish eat the agale and the people on the boat eat the fish. "
       },
       "seeding_key": {
         "activity_section.key": "7782afb7-cd17-487c-9b04-547c5476271b",
@@ -332,24 +411,13 @@
       }
     },
     {
-      "key": "0c9bbbc6-3ab9-46f5-aab2-0ea4b52aaee7",
-      "position": 6,
-      "properties": {
-        "description": "**Do This**: Have students jump into the coding tutorials as soon as possible in order to build some understanding of the project. Have the students come back together as a class for level 6 to discuss how to code cause-and-effect situations."
-      },
-      "seeding_key": {
-        "activity_section.key": "0c9bbbc6-3ab9-46f5-aab2-0ea4b52aaee7",
-        "lesson_activity.key": "07bc7741-d32d-4f29-bce6-6144894b39ab"
-      }
-    },
-    {
       "key": "e554835c-b016-4b77-9ea3-2d792d88e4f6",
-      "position": 7,
+      "position": 6,
       "properties": {
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "- Encourage students to read and reread the instructions at the top of each level. \n- <img src=\"https://images.code.org/5b99c663ad6632fe64c9da69d6805c2b-text-to-speech.PNG\" style=\"height: 25px;\"> Students can also click on this text-to-speech icon to hear the instructions read aloud.\n- The instructions can be switched into a variety of languages in the bottom left of their screen. \n- <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> Remind students to look for hints with more explicit details about how to pass the level.\n- Consider pausing the class a couple of times during the lesson to turn and talk with a neighbor about which animal adaptation they’re modeling. \n- Support students in understanding that debugging (finding & fixing errors) is a very typical part of the process of coding. Celebrate determination, critical thinking and attention to detail. "
+            "markdown": "- Encourage students to read and reread the instructions at the top of each level. \n- <img src=\"https://images.code.org/5b99c663ad6632fe64c9da69d6805c2b-text-to-speech.PNG\" style=\"height: 25px;\"> Students can also click on this text-to-speech icon to hear the instructions read aloud.\n- The instructions can be switched into a variety of languages in the bottom left of their screen. \n- <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> Remind students to look for hints next to the crab with more explicit details about how to pass the level.\n- Consider pausing the class a couple of times during the lesson to turn and talk with a neighbor about which animal adaptation they’re modeling. \n- Support students in understanding that debugging (finding & fixing errors) is a very typical part of the process of coding. Celebrate determination, critical thinking and attention to detail. "
           }
         ]
       },
@@ -360,9 +428,9 @@
     },
     {
       "key": "4965bd27-8ecf-4ca5-9c82-4ecabe2a6ad0",
-      "position": 8,
+      "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Levels 3-5 - Code the Food Chain” slide\n\n**Do This**: Have students set up the aquatic ecosystem. They will add event blocks to the simulation to make the fish eat the algae and be removed when they touch the boat. \n\n**Level 3** - Students find the `When fish touches algae` event block and add an `eats object algae` block under the event. \n\n**Level 4** - Students find the `When boat touches fish` event block and add a `catches object fish` block under the event.\n\n**Level 5** - You can use this matching level as a Check For Understanding and to reinforce the learning in levels 3-4. Students drag the picture of the code that matches the GIF. One GIF shows the fish eating algae and the other GIF shows the boat catching fish. \n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Levels 3-5 - Code the Food Chain” slide\n\n**Do This**: Have students complete levels 3-5 independently to set up the aquatic ecosystem. They will add event blocks to the simulation to make the fish eat the algae and be removed when they touch the boat. \n\n**Level 3** - Students find the `When fish touches algae` event block and add an `eats object algae` block under the event. \n\n**Level 4** - Students find the `When boat touches fish` event block and add a `catches object fish` block under the event.\n\n**Level 5** - You can use this matching level as a Check For Understanding and to reinforce the learning in levels 3-4. Students drag the picture of the code that matches the GIF. One GIF shows the fish eating algae and the other GIF shows the boat catching fish. \n",
         "progression_name": "Ecosystems Video"
       },
       "seeding_key": {
@@ -372,7 +440,7 @@
     },
     {
       "key": "fe9aa8cf-961f-4691-b15b-1d9eb8ab89bb",
-      "position": 9,
+      "position": 8,
       "properties": {
         "progression_name": "Food Chain Setup"
       },
@@ -383,7 +451,7 @@
     },
     {
       "key": "d57207f8-fc64-4d78-a47c-b7030eb457f0",
-      "position": 10,
+      "position": 9,
       "properties": {
         "description": " <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Key Concept” slide\n\n**Do This**: As soon as a few students have completed Level 5, bring the whole class together to preview Level 6. Read over the cause-and-effect scenarios of too much, too little, and just enough algae. Spiral in the conversation from the warm-up to remind students about unbalanced ecosystems. In this simulation, the amount of algae causes the system to fall out of balance. \n\n* **Condition** - Something a program checks to see if it is true before allowing an action.\n\n* **Conditionals** - Statements that only run under certain conditions.\n\n**Discussion Goal**: Students will understand that computers can check to see if something is true or false and ‘decide’ which action to execute based on the answer."
       },
@@ -394,7 +462,7 @@
     },
     {
       "key": "cddd2711-7958-4f87-ad00-3f5fbfdf2e0f",
-      "position": 11,
+      "position": 10,
       "properties": {
         "description": "Conditional statements in computer science are like \"if-then\" statements that tell the computer what to do in certain situations. For example, if the user taps the volume up key, then the sound on the computer will get louder. In marine life ecosystems, there are certain cause-and-effect relationships and we can use computer science to check. \n\nFor example, if there is **too much algae**, it blocks the coral from receiving enough sunlight and causes the coral to die. On the other hand, if there is **too little algae**, then the fish that eat algae will leave because there isn't enough food for them. But if there is **just the right amount of algae**, then the ecosystem will be healthy and all the living things (algae, fish, coral, and more) will be able to thrive.\n\nIn computer science, we use conditional statements to tell the computer what to do based on certain conditions or situations.  Just like how living things in an ecosystem are affected by different causes and effects, we can program our ecosystem to have different outcomes if there is too much, too little, or just enough of a certain resource. \n",
         "remarks": true
@@ -406,9 +474,9 @@
     },
     {
       "key": "2276d309-5698-4ed6-a7c5-5bda987e7112",
-      "position": 12,
+      "position": 11,
       "properties": {
-        "description": " <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 6 - 10 Cause & Effect” slide\n\n**Level 6** - Look closely at the photos of the ecosystem and the code that represents the situation.\n\n**Level 7** - Students will add a conditional block that checks to see if there is **too much algae**. When the condition is true, the computer will run the code inside the conditional block. In this case, when overfishing occurs, there aren't enough fish to eat all the algae. If there is too much algae, the healthy coral changes costume to become sick coral.\n\n**Level 8** - Students will add a second conditional statement that checks to see if there is **too little algae**. When the condition is true the computer will run the code inside the conditional block. This time the fish will stop everything, then begin leaving the area. These two blocks are glued together to help students easily nest them inside the conditional block.\n\n**Level 9** - Students now add one final conditional statement that checks if the amount of **algae is just right**. When that’s true, the coral changes costume from sick to healthy.\n\n**Level 10** - This is a matching level similar to Level 5 and can be used as a check for understanding, It is also an opportunity to reinforce how the three conditional blocks check the amount of algae (cause) and change the ecosystem accordingly (effect). \n\n"
+        "description": " <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 6 - 10 Cause & Effect” slide\n\n**Do This**: Have students complete levels 6-10 independently to set up the cause & effect conditionals. They will add one conditional at a time that checks how much algae is in the water. \n\n**Level 6** - Look closely at the photos of the ecosystem and the code that represents the situation.\n\n**Level 7** - Students will add a conditional block that checks to see if there is **too much algae**. When the condition is true, the computer will run the code inside the conditional block. In this case, when overfishing occurs, there aren't enough fish to eat all the algae. If there is too much algae, the healthy coral changes costume to become sick coral.\n\n**Level 8** - Students will add a second conditional statement that checks to see if there is **too little algae**. When the condition is true the computer will run the code inside the conditional block. This time the fish will stop everything, then begin leaving the area. These two blocks are glued together to help students easily nest them inside the conditional block.\n\n**Level 9** - Students now add one final conditional statement that checks if the amount of **algae is just right**. When that’s true, the coral changes costume from sick to healthy.\n\n**Level 10** - This is a matching level similar to Level 5 and can be used as a check for understanding, It is also an opportunity to reinforce how the three conditional blocks check the amount of algae (cause) and change the ecosystem accordingly (effect). \n\n"
       },
       "seeding_key": {
         "activity_section.key": "2276d309-5698-4ed6-a7c5-5bda987e7112",
@@ -417,7 +485,7 @@
     },
     {
       "key": "8aa3a6e2-5df5-4f7c-bafa-b5363f7cb1dc",
-      "position": 13,
+      "position": 12,
       "properties": {
         "progression_name": "If... then... Conditional Statements"
       },
@@ -428,7 +496,7 @@
     },
     {
       "key": "e275f8a3-27ab-4dd2-8a83-f9a359a4136f",
-      "position": 14,
+      "position": 13,
       "properties": {
         "progression_name": "Balancing Your Ecosystem",
         "tips": [
@@ -445,7 +513,7 @@
     },
     {
       "key": "09821d1f-e78a-404c-9576-4dd20147b4d9",
-      "position": 15,
+      "position": 14,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 11 - Now You’re in Control” slide\n \n**Do This**: With the remaining time, allow students to modify the fully coded simulation on their own. The instructions include prompts to give students an idea of how to change their code.",
         "progression_name": "Skill Building"
@@ -457,7 +525,7 @@
     },
     {
       "key": "a5338484-d7e1-48a3-9add-f4f7cd788e67",
-      "position": 16,
+      "position": 15,
       "properties": {
         "progression_name": "Free Play",
         "tips": [
@@ -474,7 +542,7 @@
     },
     {
       "key": "a73966de-b55e-4bba-af9c-fc9c6b5e8828",
-      "position": 17,
+      "position": 16,
       "properties": {
         "description": "Try changing one number at a time and predict what you expect to happen before clicking the run button. Explain what changed in the program after changing the numbers. After you experiment a bit try answering the following questions:\n- What happens if your ecosystem starts with a large number of fish?\n- What happens if it takes more/less time for the algae to regrow?\n- How else can you control how many new algae are growing?",
         "remarks": true
@@ -485,11 +553,24 @@
       }
     },
     {
-      "key": "a62557b9-907c-4a4f-aed3-c43c447de4b9",
+      "key": "7612d108-4748-4dcd-bec1-f3f812ffdb23",
       "position": 1,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Review\" slide\n\n**Discuss**: \n- What is the conditional statement checking for?\n- If the condition is true, what happens? \n- What happens if it is false?\n\n**Discussion Goal**: Students will be able to see that the condition is checking if there are 10 corgis. If the statement is true, then the bunny says, \"Yay! There are 10 corgis.\" If the statement is false, nothing happens. ",
+        "duration": "3",
+        "name": "Review"
+      },
+      "seeding_key": {
+        "activity_section.key": "7612d108-4748-4dcd-bec1-f3f812ffdb23",
+        "lesson_activity.key": "80aa4973-223d-44c0-9c93-ee86788f2702"
+      }
+    },
+    {
+      "key": "a62557b9-907c-4a4f-aed3-c43c447de4b9",
+      "position": 2,
+      "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Show What You Know!” slide\n\n**Discuss**: Use conditional statements to explain balanced and/or unbalanced ecosystems.\n\n**Discussion Goal**: Students will be able to articulate what they have learned about the effects of one organism on another in an ecosystem. ",
-        "duration": "10",
+        "duration": "7",
         "name": "Cause and Effect"
       },
       "seeding_key": {
@@ -499,7 +580,7 @@
     },
     {
       "key": "1cc29624-e2d1-4065-9043-e1c463b1da82",
-      "position": 2,
+      "position": 3,
       "properties": {
         "description": "We have learned how to show cause and effect in an ecosystem using code! Show what you’ve learned about how the organisms in this aquatic ecosystem balance each other and how over fishing can disrupt the balance. Fill in the blanks of the conditional statement: If there are  ________ then ________. The word bank has some options to get you started but you may use any other words you need as well. \n\nFor example: If there are **too many algae** then **the coral will become unhealthy**. If there are **too few fish to eat the algae** then **the algae will overgrow**.",
         "remarks": true
@@ -511,13 +592,56 @@
     },
     {
       "key": "b51610c6-1ebc-4df3-85f9-dda59538d1ab",
-      "position": 3,
+      "position": 4,
       "properties": {
         "description": "**Do This**: Have students record their answers on sticky notes, a journal, Google form or other content management system used in your class. "
       },
       "seeding_key": {
         "activity_section.key": "b51610c6-1ebc-4df3-85f9-dda59538d1ab",
         "lesson_activity.key": "80aa4973-223d-44c0-9c93-ee86788f2702"
+      }
+    },
+    {
+      "key": "128e04b7-6b97-4066-bd42-cd4b83e55b42",
+      "position": 1,
+      "properties": {
+        "description": "This module is a great introduction to computer science through the lens of science. Here are a few options to continue learning more about the CS concepts introduced in this module. We recommend pursuing these extensions after completing Lesson 3 in this module. \n"
+      },
+      "seeding_key": {
+        "activity_section.key": "128e04b7-6b97-4066-bd42-cd4b83e55b42",
+        "lesson_activity.key": "08357969-2113-4ff3-a041-0889105ffc89"
+      }
+    },
+    {
+      "key": "1f8ad863-3986-44fd-ac0f-11163feccdfd",
+      "position": 2,
+      "properties": {
+        "tips": [
+          {
+            "type": "contentCorner",
+            "markdown": "\n**Science Content:**  \n- [CSC Module: Animal Adaptations Lessons 1-3](http://studio.code.org/s/csc-adaptations-2023)\n- [Project: Modeling Life Cycles in Sprite Lab](https://docs.google.com/document/d/1C8cz6hKlBuEMz_1ocauAaEWkwLVENDC5u8N_qQED8vU/edit?usp=sharing)\n- [AI for Oceans](https://code.org/oceans)\n- Read-Alouds and other activities\n\n\n**Computer Science Concepts:**  \n- Simulations:  [Simulating Experiments](https://studio.code.org/s/coursef-2022/lessons/12) & [Outbreak](https://studio.code.org/s/coursef-2022/lessons/13)\n- Conditionals: [Minecraft](https://studio.code.org/s/coursee-2022/lessons/12)\n- If/Else Conditionals: [Bee](https://studio.code.org/s/coursed-2022/lessons/14)\n- Events: [Dance Party](https://studio.code.org/s/coursed-2022/lessons/8)"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "1f8ad863-3986-44fd-ac0f-11163feccdfd",
+        "lesson_activity.key": "08357969-2113-4ff3-a041-0889105ffc89"
+      }
+    },
+    {
+      "key": "fc7aef76-ffb9-430d-afaa-77525d8ab3b0",
+      "position": 1,
+      "properties": {
+        "tips": [
+          {
+            "type": "contentCorner",
+            "markdown": "**Science Content**: In this lesson, students will work on balancing the marine ecosystem simulation with sustainable fishing practices. Some of the strategies have been used by coastal indigenous people for centuries. Here are some resources to help students build more background knowledge: \n\n\n\n- [Salmon Boy: A Legend of the Sechelt People](https://www.youtube.com/watch?v=WpKqXidmshc) A story of a boy who teaches his people about responsibility and respect for the salmon, ensuring their survival. \n\n- [Storymap website](https://www.seagardens.net/#map):  Indigenous People have been stewarding the ocean for thousands of years. This interactive and “living” story map of sea gardens, begins to synthesize information about ancestral mariculture across the Pacific Ocean. \n\n**Computer Science**: This lesson breifly uses events, behaviors, and conditionals in the code.  Here are a few resources may help reinforce these coding concepts if you have time. \n- [Events](https://studio.code.org/s/coursed-2022/lessons/6) in Bounce (50 minute lesson)"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "fc7aef76-ffb9-430d-afaa-77525d8ab3b0",
+        "lesson_activity.key": "ed5b5a6d-063d-493f-a4f3-bbd78d100172"
       }
     },
     {
@@ -620,7 +744,7 @@
       "key": "072db4ea-d8ac-439e-ab0e-c8ef67d7b860",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Levels 3-5 - Create a Fishing Season” slide\n\n**Do This**: Have students complete the code in these levels at their own pace. Consider pulling the group together to make a connection to the text in Level 3.\n\n**Level 3** - Students will learn Sustainable Fishing Practice #2: Create a Fishing Season. Set limits on when people can catch fish. When it is not fishing season the ecosystem has time to recover.\n\n**Level 4** - Students will add code to create a No Fishing.\n\n**Level 5** - Students will add code to create a Fishing season that repeats. The ecosystem will alternate between Fishing and No Fishing seasons.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Levels 3-5 - Create a Fishing Season” slide\n\n**Do This**: Have students complete the code in these levels at their own pace. Consider pulling the group together to make a connection to the text in Level 3.\n\n**Level 3** - Students will learn Sustainable Fishing Practice #2: Create a Fishing Season. Set limits on when people can catch fish. When it is not fishing season the ecosystem has time to recover.\n\n**Level 4** - Students will add code to create a No Fishing season.\n\n**Level 5** - Students will add code to create a Fishing season that repeats. The ecosystem will alternate between Fishing and No Fishing seasons.",
         "name": "Overfishing Solution #2 - Create a “Fishing Season”",
         "progression_name": "Solution 2 - Fishing Season"
       },
@@ -694,6 +818,32 @@
       "seeding_key": {
         "activity_section.key": "a9a34da7-fec1-45cb-98d5-ce3ad961fa6b",
         "lesson_activity.key": "76c6e35a-e629-4ae2-bf0e-e26e8e0a9750"
+      }
+    },
+    {
+      "key": "4b939bca-2465-429e-b32e-423d9e746f4a",
+      "position": 1,
+      "properties": {
+        "tips": [
+          {
+            "type": "contentCorner",
+            "markdown": "**Science Content**: In this lesson, students will work on balancing the marine ecosystem simulation with sustainable fishing practices. Some of the strategies have been used by coastal indigenous people for centuries. Here are some resources to help students build more background knowledge: \n\n\n\n- [Salmon Boy: A Legend of the Sechelt People](https://www.youtube.com/watch?v=WpKqXidmshc) A story of a boy who teaches his people about responsibility and respect for the salmon, ensuring their survival. \n\n- [Storymap website](https://www.seagardens.net/#map):  Indigenous People have been stewarding the ocean for thousands of years. This interactive and “living” story map of sea gardens, begins to synthesize information about ancestral mariculture across the Pacific Ocean. \n\n**Computer Science**: This lesson breifly uses events, behaviors, and conditionals in the code.  Here are a few resources may help reinforce these coding concepts if you have time. \n- [Events](https://studio.code.org/s/coursed-2022/lessons/6) in Bounce (50 minute lesson)"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "4b939bca-2465-429e-b32e-423d9e746f4a",
+        "lesson_activity.key": "98fd68a6-ea5e-47f5-93d1-5f6b9aabbe39"
+      }
+    },
+    {
+      "key": "e4a97959-95bd-4739-a5be-7de6f5361e79",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "e4a97959-95bd-4739-a5be-7de6f5361e79",
+        "lesson_activity.key": "98fd68a6-ea5e-47f5-93d1-5f6b9aabbe39"
       }
     },
     {
@@ -1379,7 +1529,7 @@
       "chapter": 20,
       "position": 9,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": true,
       "properties": {
         "level_keys": [
           "csc_ecosystems_matching_cfu"
@@ -1406,6 +1556,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystemes_foodchain_info"
+        ],
         "progression": "The Food Chain"
       },
       "bonus": false,
@@ -1754,7 +1907,7 @@
   "resources": [
     {
       "name": "Ecologist's Notebook",
-      "url": "https://docs.google.com/document/d/1_xi5PFs5TJyO3-8Hz7ftZxCNRPpd5yQBCwhm8IuysY8/preview",
+      "url": "https://docs.google.com/document/d/1_xi5PFs5TJyO3-8Hz7ftZxCNRPpd5yQBCwhm8IuysY8/template/preview",
       "key": "ecologist_s_notebook",
       "properties": {
         "audience": "Student",

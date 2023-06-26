@@ -95,6 +95,7 @@ tr:
           description_short: Bu 20 saatlik kurs, 2, 3 ve 4. derslerdeki temel bilgisayar bilimi ve programlama kavramlarını içerir.
           description_audience: 10 Yaş ve Üstü (Ders 3 sonrası)
           student_description: Bu 20 saatlik ders temel bilgisayar bilimi ve programlama kavramlarını tanıtır. Ders, K-8 dersliklerinde kullanılmak üzere tasarlanmıştır, ama her yaştan öğrenmek için eğlencelidir.
+          name: 20 saat
         edit-code:
           title: Kodu Düzenle
           description: Kodu Düzenle
@@ -6833,6 +6834,8 @@ tr:
           lesson_groups:
             lessonGroup-3:
               display_name: Girdiler ve çıktılar
+        ai-temp:
+          title: Yapay Zeka Nasıl Çalışır?
         focus-on-coding4b-2023:
           lesson_groups:
             lessonGroup-3:
@@ -6999,3 +7002,7 @@ tr:
           description_short: Bilgisayar biliminin temellerini öğrenin ve kendi oyunlarınızı, hikayelerinizi ve sanatınızı oluşturun.
           description: Beşinci sınıftaki öğrenciler için Kurs F'yi oluşturduk. Kurs, kullanıcıların kullandıkları uygulamalarda nasıl seçim yaptıklarına bakarak başlar. Öğrenciler daha sonra kullanıcı için seçenekler de sunan çeşitli Sprite Lab uygulamaları yapmayı öğrenirler. Kursun sonraki derslerinde, öğrenciler çeşitli bağlamlardaki değişkenleri öğreneceklerdir. Öğrencilere bu kurs boyunca daha fazla özerklik ve daha fazla seçenek verilir. Kursun sonunda öğrenciler, arkadaşları ve aileleri ile paylaşmak üzere etkileşimli projeler oluşturmuş olacaklardır.
           student_description: Hareketli karakterler ve değişkenlerle kodlamayı öğrenin ve bilgisayar ve internetin toplumsal etkilerini tartışın. Bu kursun sonunda arkadaşlarınız ve ailenizle paylaşabileceğiniz bir proje tasarlayın ve oluşturun.
+        csa-frq-practice:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Sınıflar

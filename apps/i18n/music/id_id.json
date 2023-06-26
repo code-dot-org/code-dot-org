@@ -42,7 +42,7 @@
   "blockly_toolboxCategoryFunctions": "fungsi",
   "blockly_toolboxCategoryLogic": "Logika",
   "blockly_toolboxCategoryMath": "Matematika",
-  "blockly_toolboxCategoryPlay": "Bermain",
+  "blockly_toolboxCategoryPlay": "Suara",
   "blockly_toolboxCategorySimple": "Sederhana",
   "blockly_toolboxCategoryTracks": "Trek",
   "blockly_toolboxCategoryVariables": "variabel",
@@ -54,5 +54,7 @@
   "share": "Bagikan",
   "shareComingSoon": "Berbagi sedang dibangun. Segera periksa kembali.",
   "startOver": "Mulai kembali",
-  "upload": "Unggah"
+  "upload": "Unggah",
+  "panelHeaderInstructions": "instruksi",
+  "panelHeaderWorkspace": "Area kerja: "
 }

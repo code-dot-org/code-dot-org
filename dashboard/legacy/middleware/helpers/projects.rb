@@ -10,6 +10,9 @@ class Projects
   class NotFound < Sinatra::NotFound
   end
 
+  class ValidationError < StandardError
+  end
+
   def initialize(storage_id)
     @storage_id = storage_id
 
@@ -17,6 +20,8 @@ class Projects
   end
 
   def create(value, ip:, type: nil, published_at: nil, remix_parent_id: nil, standalone: true, level: nil)
+    validate_thumbnail_url(nil, value['thumbnailUrl'])
+
     project_type = type || level&.project_type
     timestamp = DateTime.now
     row = {
@@ -93,6 +98,8 @@ class Projects
 
       raise ProfanityPrivacyError.new(share_failure.content) if share_failure
     end
+
+    validate_thumbnail_url(channel_id, value['thumbnailUrl'])
 
     row = {
       value: value.to_json,
@@ -295,7 +302,7 @@ class Projects
   end
 
   def to_a
-    @table.where(storage_id: @storage_id).exclude(state: 'deleted').map do |row|
+    @table.where(storage_id: @storage_id).exclude(state: 'deleted').filter_map do |row|
       channel_id = storage_encrypt_channel_id(row[:storage_id], row[:id])
       begin
         Projects.merged_row_value(
@@ -306,14 +313,14 @@ class Projects
       rescue JSON::ParserError
         nil
       end
-    end.compact
+    end
   end
 
   # Find the encrypted channel token for most recent project of the given level type.
-  def most_recent(key)
+  def most_recent(key, include_hidden = false)
     row = @table.where(storage_id: @storage_id).exclude(state: 'deleted').order(Sequel.desc(:updated_at)).find do |i|
       parsed = JSON.parse(i[:value])
-      !parsed['hidden'] && !parsed['frozen'] && parsed['level'].split('/').last == key
+      (include_hidden || !parsed['hidden']) && !parsed['frozen'] && parsed['level'].split('/').last == key
     rescue
       # Malformed channel, or missing level.
     end
@@ -456,5 +463,22 @@ class Projects
     # Others have no content on S3, and may be just-created stub projects.
     # Report these as 'unknown'.
     'unknown'
+  end
+
+  def validate_thumbnail_url(channel_id, thumbnail_url)
+    return true unless thumbnail_url
+    raise ValidationError unless valid_thumbnail_url?(thumbnail_url)
+    true
+  end
+
+  # valid thumbnail URLs are typically of the format:
+  # /v3/files/<channel_id>/.metadata/thumbnail.png
+  # I observed thumbnail URLs of remixed projects having having the channel ID of the parent project,
+  # so we assert on the start/end of the URL.
+  # We also use placeholder thumbnail images in a couple of labs (dance, flappy),
+  # so accepting those as valid as well
+  def valid_thumbnail_url?(thumbnail_url)
+    (thumbnail_url.start_with?('/v3/files/') && thumbnail_url.end_with?('.metadata/thumbnail.png')) ||
+      thumbnail_url.start_with?('/blockly/media')
   end
 end

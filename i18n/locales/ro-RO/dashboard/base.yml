@@ -60,6 +60,7 @@ ro:
         reset_password_token: "Linkul pentru resetarea parolei pe care l-ai folosit"
         error:
           future: nu poate fi în viitor
+        us_state: 'Județ'
   beta: "beta"
   hello: "Salutare lume"
   welcome_back: "Bine ai revenit, %{name}"
@@ -69,6 +70,7 @@ ro:
   unsubmit: Retrage
   previous_page: Pagina anterioară
   next_page: Pagina următoare
+  next_level: Nivelul următor
   next_resource: Următoarea resursă
   done_with_module: Încheiat cu acest modul de învățare
   cancel: "Revocare"
@@ -199,6 +201,7 @@ ro:
     parent_account_checkbox: "Sunt un părinte/tutore care se înscrie în numele copilului meu"
     parent_account_email_progress_permission: "Putem să vă trimitem un email cu actualizări ocazionale privind progresul și proiectele copilului dv., precum și actualizări despre cursul lui și despre informatică? [(Vedeți politica noastră de confidențialitate)](%{privacy_policy_url})"
     parent_account_email_label: "Email-ul Părintelui/Tutorelui"
+    us_state: 'Județ'
   school_info:
     title: 'Informații școală (opțional)'
     school_country: 'Țara școlii'
@@ -1178,6 +1181,7 @@ ro:
         csf_express: 'Fundamentele informaticii (pre-Express sau Express)'
         csd: 'Descoperiri informatice'
         csp: 'Principle Informaticii'
+        other: 'Alte'
         not_applicable: "Nu se aplică"
       email_opt_in:
         opt_in_yes: 'Da'

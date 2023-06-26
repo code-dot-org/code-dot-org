@@ -41,7 +41,6 @@
   "blockly_toolboxCategoryFunctions": "Funksiyalar",
   "blockly_toolboxCategoryLogic": "Mantiq",
   "blockly_toolboxCategoryMath": "Matematik",
-  "blockly_toolboxCategoryPlay": "O‘ynash",
   "blockly_toolboxCategorySimple": "Oddiy",
   "blockly_toolboxCategoryTracks": "Treklar",
   "blockly_toolboxCategoryVariables": "O‘zgaruvchilar",
@@ -52,5 +51,7 @@
   "feedback": "Fikr-mulohaza",
   "share": "Ulashish",
   "shareComingSoon": "Ulashish qurilmoqda. Tez orada tekshiring.",
-  "startOver": "Boshidan boshlamoq"
+  "startOver": "Boshidan boshlamoq",
+  "panelHeaderInstructions": "Qo‘llanmalar",
+  "panelHeaderWorkspace": "Ish maydoni"
 }

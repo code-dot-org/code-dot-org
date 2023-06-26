@@ -4939,7 +4939,7 @@
         "courseC_starWars_loops8": {
           "course_starWars_loops8_a": "嘗試把問題分成幾個小部分來解決。慢慢來。多嘗試幾次也沒問題！",
           "course_starWars_loops8_b": "將此問題的前半部分視為階梯問題。你之前是如何解決的？",
-          "course_starWars_loops8_c": "看一下這條路徑。\n\n![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)"
+          "course_starWars_loops8_c": "看一下這條路徑。\n\n[][0]"
         },
         "courseC_starWars_loops8_2018": {
           "course_starWars_loops8_a": "嘗試把問題分成幾個小部分來解決。慢慢來。多嘗試幾次也沒問題！",
@@ -5631,7 +5631,7 @@
           "courseD_bee_conditionals4_hintVid1": "不知道怎麼開始？看看這個影片！",
           "courseD_bee_conditionals4_a": "即使你可以看清楚整個路徑，你還是可以把每格當作有雲朵的方式來處理。",
           "courseD_bee_conditionals4_b": "在迴圈中使用「if」語句檢查每個空間的花蜜。",
-          "courseD_bee_conditionals4_c": "使用 <xml><block type=\"maze_untilBlocked\"/></xml> 積木，你應該向前移動並檢查花朵。如果有花朵，蜜蜂應該怎麼做？",
+          "courseD_bee_conditionals4_c": "使用 [blockly block][0] 積木，你應該向前移動並檢查花朵。如果有花朵，蜜蜂應該怎麼做？",
           "courseD_bee_conditionals4_hintVid2": "觀看影片以幫你完成關卡。"
         },
         "courseD_bee_conditionals4_2018": {
@@ -7093,8 +7093,8 @@
         },
         "courseE_artist_functions2": {
           "courseD_artist_functions2_b": "編寫的函式不應包含整個程式，而是只要包含繪製邊長為 100 像素正方形的動作。",
-          "courseD_artist_functions2_c": "在`當運行時`積木下使用綠色的`繪製正方形`積木來「呼叫」你的函式。不這麼做的話，在函式中的程式積木將無法執行。\n\n<xml><block type=\"procedures_callnoreturn\" limit=\"2\"><mutation name=\"draw a square\"/></block></xml>",
-          "courseD_artist_functions2_a": "你的程式應該如下：\n\n-   使用函式\n-   向前移動 100 + 75 像素\n-   使用函式"
+          "courseD_artist_functions2_c": "在`當運行時`積木下使用綠色的`繪製正方形`積木來「呼叫」你的函式。不這麼做的話，在函式中的程式積木將無法執行。\n\n[blockly block][0]",
+          "courseD_artist_functions2_a": "你的程式應該如下：\n\n- 使用函式\n- 向前移動 100 + 75 像素\n- 使用函式"
         },
         "courseE_artist_functions2_2018": {
           "courseD_artist_functions2_b": "這個函式不應包含整個程式，而是包含繪製邊長 100 個像素的正方形部分。",
@@ -11706,9 +11706,9 @@
         },
         "courseC_artist_prog72022": {
           "courseC_artist_prog7_a": "每個角度會是 45 度或 90 度。",
-          "courseC_artist_prog7_b": "第一步有順利執行嗎？\\\n那麼第二步呢？\\\n哪裡出錯了？",
+          "courseC_artist_prog7_b": "第一步會運行嗎？  \n第二步呢？  \n哪裡出問題了？",
           "courseC_artist_prog7_c": "你可以點擊轉向積木中的下拉選單，並且選擇你需要的角度數值！",
-          "courseC_artist_prog7_d": "你將要：\n\n-   移動 - 向前\n-   轉向 - 右邊 45 度\n-   移動 - 向前\n-   轉向 - 右邊 90 度\n-   移動 - 向前\n-   轉向 - 右邊 45 度",
+          "courseC_artist_prog7_d": "你需要：\n- 向前移動\n- 向右轉45度\n- 向前移動\n- 向右轉90度\n- 向前移動\n- 向右轉45度\n\n重複此模型2次！",
           "courseC_artist_prog7_e": "不要害怕犯錯！即使您覺得還不能通關，嘗試添加積木並運行程式看看會發生什麼。"
         },
         "courseC_artist_prog_challenge12022": {
@@ -12378,8 +12378,7 @@
         },
         "courseE_artist_functions102022": {
           "courseD_artist_functions10_b": "這張圖很像上一張圖，但是`畫線’`函式現在繪製了不同的形狀。",
-          "courseD_artist_functions10_a": "為避免使用多個`移動-向前`積木，請建立一個`繪製六邊形`的函式並且多次呼叫。",
-          "courseD_artist_functions10_c": "你看到該圖在哪裡可以使用`一行六邊形`的函式嗎？\n\n![](https://images.code.org/904e0f38232fd9c15a3d2d172e7dde0b-image-1493140714580.gif)"
+          "courseD_artist_functions10_a": "為避免使用多個`移動-向前`積木，請建立一個`繪製六邊形`的函式並且多次呼叫。"
         },
         "courseE_artist_functions22022": {
           "courseD_artist_functions2_b": "這個函式不應包含整個程式，而是包含繪製邊長 100 個像素的正方形部分。",
@@ -12414,11 +12413,7 @@
           "courseD_artist_functions8_c": "在每一行正方形結束時，小藝術家只需要轉 180 度就可以畫出下一行正方形。  把整個事情重複迴圈，為下一個練習做好準備！"
         },
         "courseE_artist_functions92022": {
-          "courseD_artist_functions9_e": "你能找到在此圖中可以使用`一行三角形`的所有四個位置嗎？\n\n![](https://images.code.org/130e1040ecca7186dea87f42666f5620-image-1493140373966.gif)",
-          "courseD_artist_functions9_a": "這個關卡可以分為三部分：\n\n-   使用`繪製三角形`函式\n-   使用`繪製一行三角形`函式\n-   使用`繪製一行三角形`函式四次來完成繪圖",
-          "courseD_artist_functions9_b": "繪製一排三角形 4 次，並且在繪製下一排三角形之前，旋轉 60 度或 120 度來完成繪圖。",
-          "courseD_artist_functions9_c": "繪製一排三角形：\n\n-   重複 4 次   \n-   繪製三角形    \n-   向前跳躍 50 像素",
-          "courseD_artist_functions9_d": "繪製菱形：\n\n-   重複 2 次    \n-   繪製一排三角形    \n-   旋轉 60 度    \n-   繪製一排三角形    \n-   旋轉 120 度"
+          "courseD_artist_functions9_b": "繪製一排三角形 4 次，並且在繪製下一排三角形之前，旋轉 60 度或 120 度來完成繪圖。"
         },
         "courseE_artist_functions_challenge12022": {
           "courseE_artist_functions_challenge1_a": "如果再次呼叫該函式，則可以在最後一個拐角實現相同的設計。",

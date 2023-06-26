@@ -60,6 +60,7 @@ id:
         reset_password_token: "Tautan pengaturan ulang kata sandi yang telah Anda ikuti"
         error:
           future: tidak mungkin di masa depan
+        us_state: 'Provinsi'
   beta: "Percobaan"
   hello: "Halo dunia"
   welcome_back: "Selamat datang kembali, %{name}"
@@ -69,6 +70,7 @@ id:
   unsubmit: Tidak dikirim
   previous_page: Halaman sebelumnya
   next_page: Halamat berikutnya
+  next_level: Tingkat berikutnya
   next_resource: Sumber selanjutnya
   done_with_module: Selesaikan Module ini
   cancel: "Batalkan"
@@ -199,6 +201,7 @@ id:
     parent_account_checkbox: "Saya orang tua/wali yang mendaftar untuk anak saya"
     parent_account_email_progress_permission: "Dapatkah kami sesekali mengirimi Anda email tentang info terkini kemajuan dan proyek anak Anda, serta pembaruan kursus dan perkembangan ilmu komputer mereka? [(Lihat kebijakan privasi kami.)](%{privacy_policy_url})"
     parent_account_email_label: "Email Orang Tua/Wali"
+    us_state: 'Provinsi'
   school_info:
     title: 'Informasi Sekolah (opsional)'
     school_country: 'Negara Sekolah'
@@ -1183,6 +1186,7 @@ id:
         csf_express: 'CS Fundamentals (Praekspres atau Ekspres)'
         csd: 'CS Discoveries'
         csp: 'CS Principles'
+        other: 'Lain'
         not_applicable: "Tidak dapat diterapkan"
       email_opt_in:
         opt_in_yes: 'Ya'

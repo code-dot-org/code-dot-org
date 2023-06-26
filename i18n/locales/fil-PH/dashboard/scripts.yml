@@ -70,6 +70,7 @@ fil:
           description_short: Ang 20-hour na kursong ito ay lumakip sa kaibuturan ng computer science at mga konsepto sa pag-program sa mga kursong 2-4.
           description_audience: Mga edad na 10-18
           student_description: Ang kursong ito ay binubuo ng 20 oras upang ipakilala ang buod ng computer science at mga konsepto ng programming. Ang kursong ito ay ginawa para magamit sa loob ng silid-paaralan  ng mga baitang ng K-8, at para na rin sa lahat ng edad.
+          name: 20 oras
         events:
           title: Mga event
           description: Mga event
@@ -213,8 +214,12 @@ fil:
           description_short: Ang maraming pagpipilian na pagtatasa ay lumakip sa mga katanungan sa lahat nang 7 malalaking mga ideya sa computer science. Ito ay ang pangalawang parte ng isang dalawang parteng 50 na mga katanungan na pagsusulit.
         CSDU1-Draft:
           description_short: Paglutas ng Problema
+        CSDU2-Draft:
+          description_short: Pagbuo ng Web
         CSDU5-Draft:
           description_short: Data
+        CSDU6-Draft:
+          description_short: Makerlab
         CSF_Secret_Sample_Story:
           description_audience: Mga edad na 8-18+
         MikeTest:
@@ -271,6 +276,7 @@ fil:
             required:
               display_name: Buod
         csp1-support:
+          title: Yunit 1 Online Professional Learning na Kurso
           lesson_groups:
             required:
               display_name: Buod
@@ -441,6 +447,7 @@ fil:
           title: Publikong Key na mga Widget sa Cryptography
         csd2-old:
           title: CSD Yunit 2 (LUMA NA)
+          description_short: Pagbuo ng Web
         coursea-2017:
           title: Kursong A
           assignment_family_title: Kursong A
@@ -2222,10 +2229,112 @@ fil:
           lesson_groups:
             lessonGroup-4:
               display_name: Pagsisiyasat
+          title: AI at Machine Learning
         self-paced-pl-csd1-2021:
           lesson_groups:
             lessonGroup-2:
               display_name: Maligayang Pagdating
+            lessonGroup-3:
+              display_name: Pag-navigate sa Code.org
+            lessonGroup-5:
+              display_name: Paghahanda sa Pagtuturo ng CS Discoveries
+          title: 'Modyul 1: Maligayang pagdating'
+          description: |-
+            Ang modyul na ito ay maikling panimula sa Code.org at sa propesyonal na kursong ito sa pag-aaral.
+
+            **Magagawa mo:**
+
+            -   Kumuha ng panimula sa Code.org at CS Discoveries.
+            -   Alamin kung paano makisali sa propesyonal na kurso sa pag-aaral na ito.
+
+            **Iminungkahing Oras:** 10 minuto
+          student_description: |-
+            Ang modyul na ito ay maikling panimula sa Code.org at sa propesyonal na kursong ito sa pag-aaral.
+
+            **Magagawa mo:**
+
+            -   Kumuha ng panimula sa Code.org at CS Discoveries.
+            -   Alamin kung paano makisali sa propesyonal na kurso sa pag-aaral na ito.
+
+            **Iminungkahing Oras:** 10 minuto
+        self-paced-pl-csd2-2021:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Pag-navigate sa Code.org
+          title: 'Module 2: Pag-navigate sa Code.org'
+          description: |-
+            Ang modyul na ito ay idinisenyo upang i-orient ka sa mga tool na gagamitin mo upang suportahan ang pag-aaral ng mag-aaral habang nagtuturo ng CS Discoveries.
+
+            **Magagawa mo:**
+
+            -   Mag-navigate sa website ng Code.org at mga tool ng guro.
+            -   Mag-set up ng seksiyon ng silid-aralan
+            -   Hanapin at gamitin ang mga plano sa aralin ng kurso at mga mapagkukunan ng guro.
+            -   Alamin kung paano i-access ang suporta habang nagtuturo ng kurso.
+
+            **Iminungkahing oras:** 60 minuto
+          student_description: |-
+            Ang modyul na ito ay idinisenyo upang i-orient ka sa mga tool na gagamitin mo upang suportahan ang pag-aaral ng mag-aaral habang nagtuturo ng CS Discoveries.
+
+            **Magagawa mo:**
+
+            -   Mag-navigate sa website ng Code.org at mga tool ng guro.
+            -   Mag-set up ng seksiyon ng silid-aralan
+            -   Hanapin at gamitin ang mga plano sa aralin ng kurso at mga mapagkukunan ng guro.
+            -   Alamin kung paano i-access ang suporta habang nagtuturo ng kurso.
+
+            **Iminungkahing oras:** 60 minuto
+        self-paced-pl-csd3-2021:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Pangkalahatang-ideya ng CS Discoveries
+          title: 'Module 3: Pangkalahatang-ideya ng CS Discoveries'
+          description: |-
+            Bibigyan ka ng module na ito ng pangkalahatang-ideya ng kursong CS Discoveries na may diin sa mga konseptong matututunan ng mga mag-aaral at mga tool na gagamitin ng mga mag-aaral sa buong kurso. Ang pagsali sa module na ito ay tutulong sa iyo na gumawa ng mga desisyon tungkol sa kung paano pipiliin ang nilalaman ng kurso na ipapatupad mo sa iyong silid-aralan.
+
+            **Magagawa mo:**
+
+            -   Magkaroon ng mataas na antas ng pag-unawa sa kurikulum ng CS Discoveries.
+            -   Maging pamilyar sa mga programming environment na ginagamit sa loob ng CS Discoveries.
+            -   Magpasya kung aling mga unit ng CS Discoveries ang ituturo mo sa iyong klase.
+
+            **Iminungkahing oras:** 60 minuto
+          student_description: |-
+            Bibigyan ka ng module na ito ng pangkalahatang-ideya ng kursong CS Discoveries na may diin sa mga konseptong matututunan ng mga mag-aaral at mga tool na gagamitin ng mga mag-aaral sa buong kurso. Ang pagsali sa module na ito ay tutulong sa iyo na gumawa ng mga desisyon tungkol sa kung paano pipiliin ang nilalaman ng kurso na ipapatupad mo sa iyong silid-aralan.
+
+            **Magagawa mo:**
+
+            -   Magkaroon ng mataas na antas ng pag-unawa sa kurikulum ng CS Discoveries.
+            -   Maging pamilyar sa mga programming environment na ginagamit sa loob ng CS Discoveries.
+            -   Magpasya kung aling mga unit ng CS Discoveries ang ituturo mo sa iyong klase.
+
+            **Iminungkahing oras:** 60 minuto
+        self-paced-pl-csd4-2021:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Pagtuturo at pag-aaral ng CS Discoveries
+          title: 'Module 4: Pagtuturo at pag-aaral ng CS Discoveries'
+          description: "Sa modyul na ito, ipapakilala sa iyo ang mga tunay na kasanayan sa CS na makakasama ng mga mag-aaral sa buong kurso ng CS Discoveries. Kasama sa mga kasanayang ito ang pag-debug, paggamit ng mga mapagkukunan, at pagpapares ng programming. Tuklasin mo rin ang tungkulin ng guro sa loob ng silid-aralan ng CS Discoveries at gagawa ng plano kung paano mo susuportahan ang pag-aaral ng mag-aaral habang nagtuturo ng kurso.\n\n**Magagawa mo:**\n\n-   Isaalang-alang ang tungkulin ng guro sa silid-aralan ng CS Discoveries.\n-   Alamin ang tungkol sa mga tunay na kasanayan sa CS na bubuuin ng mga mag-aaral sa buong kurso ng CS Discoveries.\n-   Gumawa ng plano kung paano mo susuportahan ang pag-aaral ng mag-aaral sa pamamagitan ng pagkakaiba-iba, patuloy na pagtatasa, at pagtataguyod ng kultura ng pagsasama. \n\n**Iminungkahing Oras:** 50 minuto"
+          student_description: "Sa modyul na ito, ipapakilala sa iyo ang mga tunay na kasanayan sa CS na makakasama ng mga mag-aaral sa buong kurso ng CS Discoveries. Kasama sa mga kasanayang ito ang pag-debug, paggamit ng mga mapagkukunan, at pagpapares ng programming. Tuklasin mo rin ang tungkulin ng guro sa loob ng silid-aralan ng CS Discoveries at gagawa ng plano kung paano mo susuportahan ang pag-aaral ng mag-aaral habang nagtuturo ng kurso.\n\n**Magagawa mo:**\n\n-   Isaalang-alang ang tungkulin ng guro sa silid-aralan ng CS Discoveries.\n-   Alamin ang tungkol sa mga tunay na kasanayan sa CS na bubuuin ng mga mag-aaral sa buong kurso ng CS Discoveries.\n-   Gumawa ng plano kung paano mo susuportahan ang pag-aaral ng mag-aaral sa pamamagitan ng pagkakaiba-iba, patuloy na pagtatasa, at pagtataguyod ng kultura ng pagsasama. \n\n**Iminungkahing Oras:** 50 minuto"
+        self-paced-pl-csd5-2021:
+          title: Pagtuturo ng AI at machine learning
+          description: |-
+            Ang module ng propesyonal na pag-aaral na ito ay idinisenyo upang tulungan kang maghanda na magturo ng AI at Machine Learning unit ng Code.org.
+
+            **Sa module ng propesyonal na pag-aaral na ito, ikaw ay:**
+
+            -   Kumuha ng panimula sa artificial intelligence at machine learning.
+            -   Magsanay ng mga pangunahing konsepto na kasama sa yunit.
+            -   Makipag-ugnayan sa AI Lab at App Lab.
+            -   Tuklasin ang mga proyekto sa pagtatapos ng kabanata.
+            -   Gumawa ng plano sa pagpapatupad ng yunit sa mga mag-aaral mo.
+
+            **Iminungkahing Oras:** 120 minuto
+          student_description: "Ang module ng propesyonal na pag-aaral na ito ay idinisenyo upang tulungan kang maghanda na magturo ng AI at Machine Learning na yunit ng Code.org.\n\n**Sa module ng propesyonal na pag-aaral na ito, ikaw ay:**\n\n-   Kumuha ng panimula sa artificial intelligence at machine learning.\n-   Sanayin ang machine learning model gamit ang AI Lab.\n-   Makipag-ugnayan sa mga machine learning app. \n-   Isaalang-alang ang mga epekto ng AI at machine learning sa totoong mundo.\n-   Tuklasin ang mga proyekto sa pagtatapos ng kabanata.\n\n**Iminungkahing Oras:** 120 minuto"
+        self-paced-pl-csd6-2021:
+          description: "Ang module ng propesyonal na pag-aaral na ito ay idinisenyo upang tulungan kang maghanda na magturo ng AI at Machine Learning na yunit ng Code.org.\n\n**Sa module ng propesyonal na pag-aaral na ito, ikaw ay:**\n\n-   Kumuha ng panimula sa artificial intelligence at machine learning.\n-   Sanayin ang machine learning model gamit ang AI Lab.\n-   Makipag-ugnayan sa mga machine learning app. \n-   Isaalang-alang ang mga epekto ng AI at machine learning sa totoong mundo.\n-   Tuklasin ang mga proyekto sa pagtatapos ng kabanata.\n\n**Iminungkahing Oras:** 120 minuto"
+        self-paced-pl-csp2-2021:
+          title: 'Module 2: Pag-navigate sa Code.org'
         outbreak-module:
           title: Pagsiklab
         csa-videos:
@@ -2251,6 +2360,9 @@ fil:
             lessonGroup-4:
               display_name: Mga Demo at Mapagkukunan
         csa-self-paced-pl:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Pag-navigate sa Code.org
           title: Paggamit sa Code.org para sa CSA na Mga Pilot na Guro
           description: Idinisenyo ang modyul na ito upang i-orient ka sa mga tool na iyong gagamitin upang suportahan ang pag-aaral ng mag-aaral habang nagtuturo ng CSA.
           name: csa-self-paced-pl
@@ -2305,8 +2417,13 @@ fil:
               display_name: Proyekto
             lessonGroup-4:
               display_name: Mga Demo at Mapagkukunan
+        hello-world-retro:
+          title: 'Hello World: Retro'
         hello-world-batman:
           title: Hello World
+        ai-ethics:
+          title: Ang aming Kodigo ng Etika sa AI.
+          description_audience: baitang 6-12
         csc-things:
           name: csc-things
           title: CSC Brain Dump
@@ -2351,14 +2468,21 @@ fil:
           title: Yunit 5 - Pagbibigay ng Organisasyon ng Mga Bagay [Mga Halimbawa]
         csd-post-survey-2021:
           title: Survey ng CS Discoveries Post-Course
+        csa-pl-module-2-test:
+          title: Pag-navigate sa mga tool ng Code.org
         csa6-pilot-facilitator:
           lesson_groups:
             lessonGroup-5:
               display_name: Kahon ng buhangin
         ai-ethics-2021:
+          title: Ang aming Kodigo ng Etika sa AI.
           description_audience: Baitang 6-12
         poem-art-2021:
           title: Sining ng Tula
+        poetry-2021:
+          title: Coding gamit ang Tula
+        hello-world-retro-2021:
+          title: 'Hello World: Retro'
         explore-data-1-2021:
           title: Pagsasalarawan ng Data
         counting-csc-2021:
@@ -2525,6 +2649,8 @@ fil:
           lessons:
             lesson-21:
               name: Pagsisimula
+        self-paced-pl-csa2-2022:
+          title: 'Module 2: Pag-navigate sa Code.org'
         csa7-pilot-extra:
           lesson_groups:
             lessonGroup-5:
@@ -2555,6 +2681,10 @@ fil:
           lesson_groups:
             lessonGroup-5:
               display_name: Pagsisiyasat
+        vpl-csd7-ci-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Pagtuturo ng AI at machine learning
         hello-world-csc:
           title: Hello World
         csd-playground:
@@ -2625,10 +2755,115 @@ fil:
           lesson_groups:
             lessonGroup-2:
               display_name: Maligayang Pagdating
+          title: 'Modyul 1: Maligayang pagdating'
+          description: |-
+            Ang modyul na ito ay maikling panimula sa Code.org at sa propesyonal na kursong ito sa pag-aaral.
+
+            **Magagawa mo:**
+
+            -   Kumuha ng panimula sa Code.org at CS Discoveries.
+            -   Alamin kung paano makisali sa propesyonal na kurso sa pag-aaral na ito.
+
+            **Iminungkahing Oras:** 10 minuto
+          student_description: |-
+            Ang modyul na ito ay maikling panimula sa Code.org at sa propesyonal na kursong ito sa pag-aaral.
+
+            **Magagawa mo:**
+
+            -   Kumuha ng panimula sa Code.org at CS Discoveries.
+            -   Alamin kung paano makisali sa propesyonal na kurso sa pag-aaral na ito.
+
+            **Iminungkahing Oras:** 10 minuto
+        self-paced-pl-csd2-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Pag-navigate sa Code.org
+          title: 'Module 2: Pag-navigate sa Code.org'
+          description: |-
+            Ang modyul na ito ay idinisenyo upang i-orient ka sa mga tool na gagamitin mo upang suportahan ang pag-aaral ng mag-aaral habang nagtuturo ng CS Discoveries.
+
+            **Magagawa mo:**
+
+            -   Mag-navigate sa website ng Code.org at mga tool ng guro.
+            -   Mag-set up ng seksiyon ng silid-aralan
+            -   Hanapin at gamitin ang mga plano sa aralin ng kurso at mga mapagkukunan ng guro.
+            -   Alamin kung paano i-access ang suporta habang nagtuturo ng kurso.
+
+            **Iminungkahing oras:** 60 minuto
+          student_description: |-
+            Ang modyul na ito ay idinisenyo upang i-orient ka sa mga tool na gagamitin mo upang suportahan ang pag-aaral ng mag-aaral habang nagtuturo ng CS Discoveries.
+
+            **Magagawa mo:**
+
+            -   Mag-navigate sa website ng Code.org at mga tool ng guro.
+            -   Mag-set up ng seksiyon ng silid-aralan
+            -   Hanapin at gamitin ang mga plano sa aralin ng kurso at mga mapagkukunan ng guro.
+            -   Alamin kung paano i-access ang suporta habang nagtuturo ng kurso.
+
+            **Iminungkahing oras:** 60 minuto
+        self-paced-pl-csd3-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Pangkalahatang-ideya ng CS Discoveries
+          title: 'Module 3: Pangkalahatang-ideya ng CS Discoveries'
+          description: |-
+            Bibigyan ka ng module na ito ng pangkalahatang-ideya ng kursong CS Discoveries na may diin sa mga konseptong matututunan ng mga mag-aaral at mga tool na gagamitin ng mga mag-aaral sa buong kurso. Ang pagsali sa module na ito ay tutulong sa iyo na gumawa ng mga desisyon tungkol sa kung paano pipiliin ang nilalaman ng kurso na ipapatupad mo sa iyong silid-aralan.
+
+            **Magagawa mo:**
+
+            -   Magkaroon ng mataas na antas ng pag-unawa sa kurikulum ng CS Discoveries.
+            -   Maging pamilyar sa mga programming environment na ginagamit sa loob ng CS Discoveries.
+            -   Magpasya kung aling mga unit ng CS Discoveries ang ituturo mo sa iyong klase.
+
+            **Iminungkahing oras:** 60 minuto
+          student_description: |-
+            Bibigyan ka ng module na ito ng pangkalahatang-ideya ng kursong CS Discoveries na may diin sa mga konseptong matututunan ng mga mag-aaral at mga tool na gagamitin ng mga mag-aaral sa buong kurso. Ang pagsali sa module na ito ay tutulong sa iyo na gumawa ng mga desisyon tungkol sa kung paano pipiliin ang nilalaman ng kurso na ipapatupad mo sa iyong silid-aralan.
+
+            **Magagawa mo:**
+
+            -   Magkaroon ng mataas na antas ng pag-unawa sa kurikulum ng CS Discoveries.
+            -   Maging pamilyar sa mga programming environment na ginagamit sa loob ng CS Discoveries.
+            -   Magpasya kung aling mga unit ng CS Discoveries ang ituturo mo sa iyong klase.
+
+            **Iminungkahing oras:** 60 minuto
+        self-paced-pl-csd4-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Pagtuturo at pag-aaral ng CS Discoveries
+          title: 'Module 4: Pagtuturo at pag-aaral ng CS Discoveries'
+          description: "Sa modyul na ito, ipapakilala sa iyo ang mga tunay na kasanayan sa CS na makakasama ng mga mag-aaral sa buong kurso ng CS Discoveries. Kasama sa mga kasanayang ito ang pag-debug, paggamit ng mga mapagkukunan, at pagpapares ng programming. Tuklasin mo rin ang tungkulin ng guro sa loob ng silid-aralan ng CS Discoveries at gagawa ng plano kung paano mo susuportahan ang pag-aaral ng mag-aaral habang nagtuturo ng kurso.\n\n**Magagawa mo:**\n\n-   Isaalang-alang ang tungkulin ng guro sa silid-aralan ng CS Discoveries.\n-   Alamin ang tungkol sa mga tunay na kasanayan sa CS na bubuuin ng mga mag-aaral sa buong kurso ng CS Discoveries.\n-   Gumawa ng plano kung paano mo susuportahan ang pag-aaral ng mag-aaral sa pamamagitan ng pagkakaiba-iba, patuloy na pagtatasa, at pagtataguyod ng kultura ng pagsasama. \n\n**Iminungkahing Oras:** 50 minuto"
+          student_description: "Sa modyul na ito, ipapakilala sa iyo ang mga tunay na kasanayan sa CS na makakasama ng mga mag-aaral sa buong kurso ng CS Discoveries. Kasama sa mga kasanayang ito ang pag-debug, paggamit ng mga mapagkukunan, at pagpapares ng programming. Tuklasin mo rin ang tungkulin ng guro sa loob ng silid-aralan ng CS Discoveries at gagawa ng plano kung paano mo susuportahan ang pag-aaral ng mag-aaral habang nagtuturo ng kurso.\n\n**Magagawa mo:**\n\n-   Isaalang-alang ang tungkulin ng guro sa silid-aralan ng CS Discoveries.\n-   Alamin ang tungkol sa mga tunay na kasanayan sa CS na bubuuin ng mga mag-aaral sa buong kurso ng CS Discoveries.\n-   Gumawa ng plano kung paano mo susuportahan ang pag-aaral ng mag-aaral sa pamamagitan ng pagkakaiba-iba, patuloy na pagtatasa, at pagtataguyod ng kultura ng pagsasama. \n\n**Iminungkahing Oras:** 50 minuto"
+        self-paced-pl-csp2-2022:
+          title: 'Module 2: Pag-navigate sa Code.org'
         vpl-csd1-ayw-pilot-2022:
           lessons:
             lesson-6:
               name: Asynchronous na Debugging Extension
+        self-paced-pl-csd5-2022:
+          description: |-
+            Ang module ng propesyonal na pag-aaral na ito ay idinisenyo upang tulungan kang maghanda na magturo ng AI at Machine Learning unit ng Code.org.
+
+            **Sa module ng propesyonal na pag-aaral na ito, ikaw ay:**
+
+            -   Kumuha ng panimula sa artificial intelligence at machine learning.
+            -   Magsanay ng mga pangunahing konsepto na kasama sa yunit.
+            -   Makipag-ugnayan sa AI Lab at App Lab.
+            -   Tuklasin ang mga proyekto sa pagtatapos ng kabanata.
+            -   Gumawa ng plano sa pagpapatupad ng yunit sa mga mag-aaral mo.
+
+            **Iminungkahing Oras:** 120 minuto
+          student_description: |-
+            Ang module ng propesyonal na pag-aaral na ito ay idinisenyo upang tulungan kang maghanda na magturo ng AI at Machine Learning unit ng Code.org.
+
+            **Sa module ng propesyonal na pag-aaral na ito, ikaw ay:**
+
+            -   Kumuha ng panimula sa artificial intelligence at machine learning.
+            -   Magsanay ng mga pangunahing konsepto na kasama sa yunit.
+            -   Makipag-ugnayan sa AI Lab at App Lab.
+            -   Tuklasin ang mga proyekto sa pagtatapos ng kabanata.
+            -   Gumawa ng plano sa pagpapatupad ng yunit sa mga mag-aaral mo.
+
+            **Iminungkahing Oras:** 120 minuto
         vpl-csd2-ayw-pilot-2022:
           lessons:
             lesson-6:
@@ -2765,6 +3000,8 @@ fil:
           lesson_groups:
             lessonGroup-2:
               display_name: Maglikha ng PT
+        self-paced-pl-csa2-2023:
+          title: 'Module 2: Pag-navigate sa Code.org'
         angelina-playground:
           lessons:
             lesson-5:
@@ -2797,6 +3034,8 @@ fil:
             lessonGroup-2:
               display_name: Kabanata 1
           title: Paglutas ng Problema
+        testing-focus-on-creativity2:
+          title: Pagbuo ng Web
         pre-express-2023:
           lesson_groups:
             csf_loops:
@@ -3079,6 +3318,8 @@ fil:
           lesson_groups:
             lessonGroup-3:
               display_name: Mga Input at Mga Output
+        ai-temp:
+          title: Paano Gumagana ang AI
         focus-on-coding4b-2023:
           lesson_groups:
             lessonGroup-3:
@@ -3091,6 +3332,109 @@ fil:
           lesson_groups:
             lessonGroup-2:
               display_name: Maligayang Pagdating
+          title: 'Modyul 1: Maligayang pagdating'
+          description: |-
+            Ang modyul na ito ay maikling panimula sa Code.org at sa propesyonal na kursong ito sa pag-aaral.
+
+            **Magagawa mo:**
+
+            -   Kumuha ng panimula sa Code.org at CS Discoveries.
+            -   Alamin kung paano makisali sa propesyonal na kurso sa pag-aaral na ito.
+
+            **Iminungkahing Oras:** 10 minuto
+          student_description: |-
+            Ang modyul na ito ay maikling panimula sa Code.org at sa propesyonal na kursong ito sa pag-aaral.
+
+            **Magagawa mo:**
+
+            -   Kumuha ng panimula sa Code.org at CS Discoveries.
+            -   Alamin kung paano makisali sa propesyonal na kurso sa pag-aaral na ito.
+
+            **Iminungkahing Oras:** 10 minuto
+        self-paced-pl-csd2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Pag-navigate sa Code.org
+          title: 'Module 2: Pag-navigate sa Code.org'
+          description: |-
+            Ang modyul na ito ay idinisenyo upang i-orient ka sa mga tool na gagamitin mo upang suportahan ang pag-aaral ng mag-aaral habang nagtuturo ng CS Discoveries.
+
+            **Magagawa mo:**
+
+            -   Mag-navigate sa website ng Code.org at mga tool ng guro.
+            -   Mag-set up ng seksiyon ng silid-aralan
+            -   Hanapin at gamitin ang mga plano sa aralin ng kurso at mga mapagkukunan ng guro.
+            -   Alamin kung paano i-access ang suporta habang nagtuturo ng kurso.
+
+            **Iminungkahing oras:** 60 minuto
+          student_description: |-
+            Ang modyul na ito ay idinisenyo upang i-orient ka sa mga tool na gagamitin mo upang suportahan ang pag-aaral ng mag-aaral habang nagtuturo ng CS Discoveries.
+
+            **Magagawa mo:**
+
+            -   Mag-navigate sa website ng Code.org at mga tool ng guro.
+            -   Mag-set up ng seksiyon ng silid-aralan
+            -   Hanapin at gamitin ang mga plano sa aralin ng kurso at mga mapagkukunan ng guro.
+            -   Alamin kung paano i-access ang suporta habang nagtuturo ng kurso.
+
+            **Iminungkahing oras:** 60 minuto
+        self-paced-pl-csd3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Pangkalahatang-ideya ng CS Discoveries
+          title: 'Module 3: Pangkalahatang-ideya ng CS Discoveries'
+          description: |-
+            Bibigyan ka ng module na ito ng pangkalahatang-ideya ng kursong CS Discoveries na may diin sa mga konseptong matututunan ng mga mag-aaral at mga tool na gagamitin ng mga mag-aaral sa buong kurso. Ang pagsali sa module na ito ay tutulong sa iyo na gumawa ng mga desisyon tungkol sa kung paano pipiliin ang nilalaman ng kurso na ipapatupad mo sa iyong silid-aralan.
+
+            **Magagawa mo:**
+
+            -   Magkaroon ng mataas na antas ng pag-unawa sa kurikulum ng CS Discoveries.
+            -   Maging pamilyar sa mga programming environment na ginagamit sa loob ng CS Discoveries.
+            -   Magpasya kung aling mga unit ng CS Discoveries ang ituturo mo sa iyong klase.
+
+            **Iminungkahing oras:** 60 minuto
+          student_description: |-
+            Bibigyan ka ng module na ito ng pangkalahatang-ideya ng kursong CS Discoveries na may diin sa mga konseptong matututunan ng mga mag-aaral at mga tool na gagamitin ng mga mag-aaral sa buong kurso. Ang pagsali sa module na ito ay tutulong sa iyo na gumawa ng mga desisyon tungkol sa kung paano pipiliin ang nilalaman ng kurso na ipapatupad mo sa iyong silid-aralan.
+
+            **Magagawa mo:**
+
+            -   Magkaroon ng mataas na antas ng pag-unawa sa kurikulum ng CS Discoveries.
+            -   Maging pamilyar sa mga programming environment na ginagamit sa loob ng CS Discoveries.
+            -   Magpasya kung aling mga unit ng CS Discoveries ang ituturo mo sa iyong klase.
+
+            **Iminungkahing oras:** 60 minuto
+        self-paced-pl-csd4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Pagtuturo at pag-aaral ng CS Discoveries
+          title: 'Module 4: Pagtuturo at pag-aaral ng CS Discoveries'
+          description: "Sa modyul na ito, ipapakilala sa iyo ang mga tunay na kasanayan sa CS na makakasama ng mga mag-aaral sa buong kurso ng CS Discoveries. Kasama sa mga kasanayang ito ang pag-debug, paggamit ng mga mapagkukunan, at pagpapares ng programming. Tuklasin mo rin ang tungkulin ng guro sa loob ng silid-aralan ng CS Discoveries at gagawa ng plano kung paano mo susuportahan ang pag-aaral ng mag-aaral habang nagtuturo ng kurso.\n\n**Magagawa mo:**\n\n-   Isaalang-alang ang tungkulin ng guro sa silid-aralan ng CS Discoveries.\n-   Alamin ang tungkol sa mga tunay na kasanayan sa CS na bubuuin ng mga mag-aaral sa buong kurso ng CS Discoveries.\n-   Gumawa ng plano kung paano mo susuportahan ang pag-aaral ng mag-aaral sa pamamagitan ng pagkakaiba-iba, patuloy na pagtatasa, at pagtataguyod ng kultura ng pagsasama. \n\n**Iminungkahing Oras:** 50 minuto"
+          student_description: "Sa modyul na ito, ipapakilala sa iyo ang mga tunay na kasanayan sa CS na makakasama ng mga mag-aaral sa buong kurso ng CS Discoveries. Kasama sa mga kasanayang ito ang pag-debug, paggamit ng mga mapagkukunan, at pagpapares ng programming. Tuklasin mo rin ang tungkulin ng guro sa loob ng silid-aralan ng CS Discoveries at gagawa ng plano kung paano mo susuportahan ang pag-aaral ng mag-aaral habang nagtuturo ng kurso.\n\n**Magagawa mo:**\n\n-   Isaalang-alang ang tungkulin ng guro sa silid-aralan ng CS Discoveries.\n-   Alamin ang tungkol sa mga tunay na kasanayan sa CS na bubuuin ng mga mag-aaral sa buong kurso ng CS Discoveries.\n-   Gumawa ng plano kung paano mo susuportahan ang pag-aaral ng mag-aaral sa pamamagitan ng pagkakaiba-iba, patuloy na pagtatasa, at pagtataguyod ng kultura ng pagsasama. \n\n**Iminungkahing Oras:** 50 minuto"
+        self-paced-pl-csd5-2023:
+          description: |-
+            Ang module ng propesyonal na pag-aaral na ito ay idinisenyo upang tulungan kang maghanda na magturo ng AI at Machine Learning unit ng Code.org.
+
+            **Sa module ng propesyonal na pag-aaral na ito, ikaw ay:**
+
+            -   Kumuha ng panimula sa artificial intelligence at machine learning.
+            -   Magsanay ng mga pangunahing konsepto na kasama sa yunit.
+            -   Makipag-ugnayan sa AI Lab at App Lab.
+            -   Tuklasin ang mga proyekto sa pagtatapos ng kabanata.
+            -   Gumawa ng plano sa pagpapatupad ng yunit sa mga mag-aaral mo.
+
+            **Iminungkahing Oras:** 120 minuto
+          student_description: |-
+            Ang module ng propesyonal na pag-aaral na ito ay idinisenyo upang tulungan kang maghanda na magturo ng AI at Machine Learning unit ng Code.org.
+
+            **Sa module ng propesyonal na pag-aaral na ito, ikaw ay:**
+
+            -   Kumuha ng panimula sa artificial intelligence at machine learning.
+            -   Magsanay ng mga pangunahing konsepto na kasama sa yunit.
+            -   Makipag-ugnayan sa AI Lab at App Lab.
+            -   Tuklasin ang mga proyekto sa pagtatapos ng kabanata.
+            -   Gumawa ng plano sa pagpapatupad ng yunit sa mga mag-aaral mo.
+
+            **Iminungkahing Oras:** 120 minuto
         pl-csd-summer-day1:
           lessons:
             lesson-3:
@@ -3135,3 +3479,9 @@ fil:
               display_name: Mga variable
           description_audience: 'Mga Edad: 9-13'
           description_short: Alamin ang lahat ng mga konsepto sa mga Pangunahing Kaalaman sa Computer Science at maglikha ng iyong sariling sining, kuwento o laro.
+        self-paced-pl-csp2-2023:
+          title: 'Module 2: Pag-navigate sa Code.org'
+        csa-frq-practice:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Mga Klase

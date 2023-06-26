@@ -8343,6 +8343,7 @@ en:
           description_audience: ''
           lesson_groups: {}
           name: self-paced-pl-csp4-2022
+          lessons: {}
         csa9-2022:
           lesson_groups:
             lessonGroup-2:
@@ -9767,7 +9768,7 @@ en:
             csp_unit3_2020:
               display_name: 'Unit 3: Intro to App Design'
           title: Intro to App Design ('23-'24)
-          description: "This unit is an introduction to programming and app design with a heavy focus on important skills like debugging, pair programming, and user testing. Learn how to design user interfaces and write event-driven programs in App Lab and then design a project that teaches your classmates about a topic of your choosing.\n\n::: details [**\U0001F9D0 Unit Philosophy and Pedagogy**]\n\n####New Topics, Same Classroom Culture\nThis unit is students' first experience with programming. It is designed to maintain the collaborative and inclusive classroom environment developed in the previous two units. The collaborative project, fun, unplugged activities, and the focus on experimenting should help keep your whole class working together and trying out ideas. \n\n####Emphasizing Skills \nSince this is the first of many programming units, it emphasizes attitudes and skills that will serve your students well for the remainder of the year. The project that runs through this unit emphasizes that programming is a creative and collaborative endeavor that students can use to help others. Key practices like pair programming and debugging help normalize working with a partner, asking for help, and making mistakes. While students have a lot to learn about programming and App Lab, there is just as much emphasis on establishing these positive habits and mindsets. \n\n####Empowering \"Creators\"\nThis unit empowers students to be creators with a major emphasis on making personally meaningful apps. Students have a lot to learn about programming. Still, the goal is for students to come away from this unit, seeing programming as a powerful form of personal expression that allows them to draw on their innate talents and interests to help solve problems in their community.\n\n:::\n\n::: details [**⭐️ Major Assessment and Projects**]\n&nbsp\nThe unit project asks students to collaborate with a classmate to design an app that can teach others about a topic of shared interest. Students practice interviewing classmates to identify the project's goals, mockup designs, collaboratively program the app and run simple user tests. The app itself must include at least three screens and demonstrate what students have learned about user interface design and event-driven programming. Students submit their app, project guide, and written responses to reflection questions about how the app is designed and the development process used to make it. Students will also complete an end-of-unit assessment aligned with CS Principles framework objectives covered in this unit.\n:::\n\n::: details [**✅ AP Connections**]\n&nbsp\n\nThis unit and unit project helps build towards the enduring understandings listed below. For a detailed mapping of units to Learning Objectives and EKs, please see the \"Standards\" page for this unit.\n\n* CRD-1: incorporating multiple perspectives through collaboration improves computing innovations as they are developed.\n* CRD-2: developers create and innovate using an iterative design process that is user-focused, that incorporates implementation/feedback cycles, and that leaves ample room for experimentation and risk-taking.\n* AAP-2: The way statements are sequenced and combined in a program determines the computed result. Programs incorporate iteration and selection constructs to represent repetition and make decisions to handle varied input values.\n* AAP-3: Programmers break down problems into smaller and more manageable pieces. By creating procedures and leveraging parameters, programmers generalize processes that can be reused. Procedures allow programmers to draw upon existing code that has already been tested, allowing them to write programs more quickly and with more confidence.\n\nThis unit includes content from the following topics from the AP CS Principles Framework. For more detailed information on topic coverage in the course review [Code.org CSP Topic Coverage](https://docs.google.com/document/d/1RniAGymLBBpIpDaNNR5Ea8CgiiUKv0tMvaDixSj6m_Q/edit?usp=sharing).\n\n* 1.1 Collaboration\n* 1.2 Program Function and Purpose\n* 1.3 Program Design and Development\n\nThe College Board has supplied formative Create PT questions to help prepare students to complete the Create Task. We recommend that students complete the following prompts with the unit project. More information can be found in Code.org CS Principles Topic Coverage.\n\n* 3.a.i.\n* 3.a.ii.\n* 3.a.iii\n:::\n\n\n\n\n## Finished Teaching This Unit?\nAnswer this [**short survey**]() to let the Code.org curriculum team know how the unit went."
+          description: "This unit is an introduction to programming and app design with a heavy focus on important skills like debugging, pair programming, and user testing. Learn how to design user interfaces and write event-driven programs in App Lab and then design a project that teaches your classmates about a topic of your choosing.\n\n\n::: details [**\U0001F9D0 Unit Philosophy and Pedagogy**]\n\n ####New Topics, Same Classroom Culture\nThis unit is students' first experience with programming. It is designed to maintain the collaborative and inclusive classroom environment developed in the previous two units. The collaborative project, fun, unplugged activities, and the focus on experimenting should help keep your whole class working together and trying out ideas. \n\n####Emphasizing Skills \nSince this is the first of many programming units, it emphasizes attitudes and skills that will serve your students well for the remainder of the year. The project that runs through this unit emphasizes that programming is a creative and collaborative endeavor that students can use to help others. Key practices like pair programming and debugging help normalize working with a partner, asking for help, and making mistakes. While students have a lot to learn about programming and App Lab, there is just as much emphasis on establishing these positive habits and mindsets. \n\n####Empowering \"Creators\"\nThis unit empowers students to be creators with a major emphasis on making personally meaningful apps. Students have a lot to learn about programming. Still, the goal is for students to come away from this unit, seeing programming as a powerful form of personal expression that allows them to draw on their innate talents and interests to help solve problems in their community.\n\n:::\n\n\n\n::: details [**⭐️ Major Assessment and Projects**]\n\n&nbsp\n\nThe unit project asks students to collaborate with a classmate to design an app that can teach others about a topic of shared interest. Students practice interviewing classmates to identify the project's goals, mockup designs, collaboratively program the app and run simple user tests. The app itself must include at least three screens and demonstrate what students have learned about user interface design and event-driven programming. Students submit their app, project guide, and written responses to reflection questions about how the app is designed and the development process used to make it. Students will also complete an end-of-unit assessment aligned with CS Principles framework objectives covered in this unit.\n\n\n\n\n:::\n\n\n::: details [**✅ AP Connections**]\n&nbsp\n\nThis unit and unit project helps build towards the enduring understandings listed below. For a detailed mapping of units to Learning Objectives and EKs, please see the \"Standards\" page for this unit.\n\n* CRD-1: incorporating multiple perspectives through collaboration improves computing innovations as they are developed.\n* CRD-2: developers create and innovate using an iterative design process that is user-focused, that incorporates implementation/feedback cycles, and that leaves ample room for experimentation and risk-taking.\n* AAP-2: The way statements are sequenced and combined in a program determines the computed result. Programs incorporate iteration and selection constructs to represent repetition and make decisions to handle varied input values.\n* AAP-3: Programmers break down problems into smaller and more manageable pieces. By creating procedures and leveraging parameters, programmers generalize processes that can be reused. Procedures allow programmers to draw upon existing code that has already been tested, allowing them to write programs more quickly and with more confidence.\n\nThis unit includes content from the following topics from the AP CS Principles Framework. For more detailed information on topic coverage in the course review [Code.org CSP Topic Coverage](https://docs.google.com/document/d/1RniAGymLBBpIpDaNNR5Ea8CgiiUKv0tMvaDixSj6m_Q/edit?usp=sharing).\n\n* 1.1 Collaboration\n* 1.2 Program Function and Purpose\n* 1.3 Program Design and Development\n\nThe College Board has supplied formative Create PT questions to help prepare students to complete the Create Task. We recommend that students complete the following prompts with the unit project. More information can be found in Code.org CS Principles Topic Coverage.\n\n* 3.a.i.\n* 3.a.ii.\n* 3.a.iii\n\n:::\n\n\n## Finished Teaching This Unit?\nAnswer this [**short survey**]() to let the Code.org curriculum team know how the unit went."
           student_description: This unit is an introduction to programming and app design with a heavy focus on important skills like debugging, pair programming, and user testing. Learn how to design user interfaces and write event-driven programs in App Lab and then design a project that teaches your classmates about a topic of your choosing.
           description_short: Design your first app and learn how programmers collaborate and interact with users to build the best possible solutions to problems.
           description_audience: ''
@@ -10413,7 +10414,7 @@ en:
           title: Simulating a Marine Ecosystem (2023)
           description_audience: ''
           description_short: ''
-          description: "\n"
+          description: "##Suggested Pre-Work for this Module\n \n**Science:** Students will simulate a marine life ecosystem in Lessons 1 and 2. To build familiarity with this ecosystem, we recommend this [Ocean Animals Video](https://www.youtube.com/watch?v=8adtdg0N2-g) (9:42 minutes). \n\nIn Lesson 2, students will code several sustainable fishing practices. These are a few readings to build some background knowledge and deepen connections to the real world: [Understanding Overfishing](https://www.seafoodwatch.org/seafood-basics/sustainable-solutions/avoid-overfishing) (Monterey Bay Aquarium article), or [Mw,kwa Talks to the Loon](https://books.google.com/books/about/Mw_kwa_Talks_to_the_Loon.html?id=ZtJfkFFPTzIC) (Children's book).\n\n**Computer Science:** In this module, students will learn new coding concepts that might be difficult for new-to-computer science students. If students are not familiar with Code.org’s Sprite Lab we recommend trying [Swimming Fish with Sprite Lab](https://studio.code.org/s/coursee-2022/lessons/3) (55 minutes) for a basic introduction to the tool. \n\nThis module also uses an advanced CS concept called conditional statements. Students learn this concept in a scaffolded way, but some students may benefit from first engaging in this introduction to conditionals unplugged activity: [Conditionals with Cards](https://studio.code.org/s/coursed-2022/lessons/12) (50 minutes).\n"
           student_description: ''
         csc-adaptations-2023:
           lessons:
@@ -10516,7 +10517,9 @@ en:
           description: ''
           student_description: ''
         csc-bookcovers-2023:
-          lessons: {}
+          lessons:
+            lesson-4:
+              name: Plan Your Interactive Book Cover
           lesson_groups: {}
           name: csc-bookcovers-2023
           title: Coding Book Covers (2023)
@@ -10559,11 +10562,13 @@ en:
               display_name: For Loops
             end_of_course_project:
               display_name: End of Course Project
-          title: Express Course (2022)
+          title: Express Course (2023)
           description: Learn computer science by trying the lessons below at your own pace! Learn to create computer programs, develop problem-solving skills, and work through fun challenges! Make games and creative projects to share with friends, family, and teachers.
           student_description: Learn computer science by trying the lessons below at your own pace! Learn to create computer programs, develop problem-solving skills, and work through fun challenges! Make games and creative projects to share with friends, family, and teachers.
           description_short: 'An introduction to computer science: combines the best of our elementary school curriculum for older students.'
           description_audience: 'Ages: 9-18'
+          lessons: {}
+          name: express-2023
         coursea-2023:
           lesson_groups:
             csf_digcit:
@@ -10576,11 +10581,13 @@ en:
               display_name: Events
             lessonGroup-5:
               display_name: End of Course Project
-          title: Course A (2022)
+          title: Course A (2023)
           description: 'Course A offers a computer science curriculum for beginning readers, including Kindergarten students. Students will learn to program using commands like loops and events. The lessons featured in this course also teach students to meaningfully collaborate with others, investigate different problem-solving techniques, persist in the face of challenging tasks, and learn about internet safety. '
           student_description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
           description_short: An introduction to computer science for pre-readers.
           description_audience: 'Ages: 4-7'
+          lessons: {}
+          name: coursea-2023
         courseb-2023:
           lesson_groups:
             csf_digcit:
@@ -10595,11 +10602,13 @@ en:
               display_name: Events
             lessonGroup-6:
               display_name: End of Course Project
-          title: Course B (2022)
+          title: Course B (2023)
           description: We developed Course B with first graders in mind. While the concepts in Course B parallel those in Course A, students learn more sophisticated unplugged activities and work through a greater variety of puzzles. Students will learn the basics of programming, collaboration techniques, investigation and critical thinking skills, persistence in the face of difficulty, and internet safety. At the end of this course, students create games in the Play Lab programming environment.
           student_description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
           description_short: An introduction to computer science for pre-readers. Similar to Course A, but with added concept depth.
           description_audience: 'Ages: 5-8'
+          lessons: {}
+          name: courseb-2023
         coursec-2023:
           lesson_groups:
             csf_digcit:
@@ -10614,11 +10623,13 @@ en:
               display_name: Data
             end_of_course_project:
               display_name: End of Course Project
-          title: Course C (2022)
+          title: Course C (2023)
           description: We developed Course C for students in second grade. Students will create programs with sequencing, loops, and events. They will investigate problem-solving techniques and develop strategies for building positive communities both online and offline. By the end of the course, students will create interactive games that they can share.
           student_description: Create programs with sequencing, loops, and events. Translate your initials into binary, investigate different problem-solving techniques, and learn how to respond to cyberbullying. At the end of the course, create your very own game or story you can share!
           description_short: Learn the basics of computer science and create your own art, stories, and games.
           description_audience: 'Ages: 6-10'
+          lessons: {}
+          name: coursec-2023
         coursed-2023:
           lesson_groups:
             lessonGroup-6:
@@ -10633,11 +10644,13 @@ en:
               display_name: Conditionals
             end_of_course_project:
               display_name: End of Course Project
-          title: Course D (2022)
+          title: Course D (2023)
           description: 'We created course D for students in third grade.  The course begins with a review of the concepts found in earlier courses, including loops and events. Afterward, students will develop their understanding of algorithms, nested loops, while loops, conditionals, and more. '
           student_description: Learn about loops, conditionals, and events. Beyond coding, learn about digital citizenship.
           description_short: Learn about conditional statements. Create your own art, games, and even a dance party.
           description_audience: 'Ages: 7-11'
+          lessons: {}
+          name: coursed-2023
         coursee-2023:
           lesson_groups:
             csf_digcit:
@@ -10654,11 +10667,13 @@ en:
               display_name: Impacts of Computing
             end_of_course_project:
               display_name: End of Course Project
-          title: Course E (2022)
+          title: Course E (2023)
           description: We created Course E for students in fourth grade. The course begins with an introduction to the Sprite Lab programming tool. Students will learn to make fun, interactive projects that reinforce what they’ll learn about online safety. Following these lessons, students will engage in more complex coding. Students will learn about nested loops, functions, and conditionals. By the end of the course, students will combine these concepts to solve challenging puzzles. The course ends with an open-ended project where students create a game or drawing.
           student_description: Start coding with algorithms, events, loops, conditionals, and functions! By the end of this course, design and create a game or drawing that you can share with your friends and family.
           description_short: Learn the basics of sprites, nested loops, and functions.
           description_audience: 'Ages: 8-12'
+          lessons: {}
+          name: coursee-2023
         problem-solving-computing-2023:
           lessons: {}
           lesson_groups:
@@ -11515,11 +11530,11 @@ en:
               name: "[Generative Images Lesson (dall-e-esque)]"
           lesson_groups: {}
           name: ai-temp
-          title: Introduction to AI
+          title: How AI Works
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: These lessons supplement the [How AI Works](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) video series. Each lesson is paired with a single video from the series, diving-deeper into the concepts introduced in the videos. Lessons focus on creating an exciting first experience for students, where students engage in an activity or simulation and then reflect on the experience as a way to build understanding around AI and build empathy with those impacted by it. Some lessons focus more on the technology behind AI, while other lessons focus on the societal impacts and ethical considerations of AI.
+          student_description: Learn how AI works by participating in different experiences and watching the [How AI Works](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) video series!
         focus-on-coding4b-2023:
           lessons: {}
           lesson_groups:
@@ -12109,6 +12124,279 @@ en:
           lesson_groups: {}
           name: ey-ecosystems
           title: EY Ecosystems (Preview)
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        self-paced-pl-csp1-2023:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-csp1-2023
+          title: 'Module 1: Welcome'
+          description_audience: ''
+          description_short: ''
+          description: "This module is a short introduction to both Code.org and professional learning modules. \n\n**You will:**\n* Get an introduction to Code.org and CS Principles.\n* Learn how to engage in professional learning modules.\n\n**Suggested Time:** 10 minutes"
+          student_description: "This module is a short introduction to both Code.org and professional learning modules. \n\n**You will:**\n* Get an introduction to Code.org and CS Principles.\n* Learn how to engage in professional learning modules.\n\n**Suggested Time:** 10 minutes"
+        self-paced-pl-csp2-2023:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-csp2-2023
+          title: 'Module 2: Navigating Code.org'
+          description_audience: ''
+          description_short: ''
+          description: "This module is designed to orient you to the tools you will use to support student learning while teaching CS Principles. \n\n**You will:**\n\n* Navigate the Code.org website and teacher tools.\n* Set up a classroom section\n* Locate and use course lesson plans and teacher resources. \n* Learn how to access support while teaching the course.\n\n**Suggested time:** 60 minutes"
+          student_description: "This module is designed to orient you to the tools you will use to support student learning while teaching CS Principles. \n\n**You will:**\n\n* Navigate the Code.org website and teacher tools.\n* Set up a classroom section\n* Locate and use course lesson plans and teacher resources. \n* Learn how to access support while teaching the course.\n\n**Suggested time:** 60 minutes"
+        self-paced-pl-csp3-2023:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-csp3-2023
+          title: Overview of CS Principles
+          description_audience: ''
+          description_short: ''
+          description: |-
+            This module will provide you with an overview of the CS Principles course with an emphasis on concepts students will learn and tools students will use throughout the course. Engaging in this module will help you to make decisions about how to select the course content that you will implement in your classroom.
+
+            **You will**:
+
+            * Gain a high-level understanding of the CS Principles curriculum.
+            * Learn more about the pedagogical approaches used to teach both non-programming and programming units.
+            * Become familiar with the student learning tools used within CS Principles.
+            * Explore the components of the AP Exam, as well as your responsibilities as a teacher if you plan to offer CS Principles as an AP course.
+            * Build an implementation plan for the school year.
+
+            **Suggested time**: 90 minutes
+          student_description: |-
+            This module will provide you with an overview of the CS Principles course with an emphasis on concepts students will learn and tools students will use throughout the course. Engaging in this module will help you to make decisions about how to select the course content that you will implement in your classroom.
+
+            **You will**:
+
+            * Gain a high-level understanding of the CS Principles curriculum.
+            * Learn more about the pedagogical approaches used to teach both non-programming and programming units.
+            * Become familiar with the student learning tools used within CS Principles.
+            * Explore the components of the AP Exam, as well as your responsibilities as a teacher if you plan to offer CS Principles as an AP course.
+            * Build an implementation plan for the school year.
+
+            **Suggested time**: 90 minutes
+        self-paced-pl-csp4-2023:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-csp4-2023
+          title: Teaching and learning CS Principles
+          description_audience: ''
+          description_short: ''
+          description: |-
+            In this module, you will be introduced to authentic CS practices that students will engage with throughout the CS Principles course. These practices include debugging, using resources, and pair programming. You will also explore the role of the teacher within a CS Principles classroom and make a plan for how you will support student learning while teaching the course.
+
+            **You will**:
+
+            * Consider the role of the teacher in a CS Principles classroom.
+            * Learn about authentic CS practices that students will develop throughout the CS Principles course.
+            * Make a plan for how you will support student learning through differentiation, ongoing assessment, and promoting a culture of inclusion.
+            * Learn about opportunities to connect with the broader CS community.
+
+            **Suggested Time**: 70 minutes
+          student_description: |-
+            In this module, you will be introduced to authentic CS practices that students will engage with throughout the CS Principles course. These practices include debugging, using resources, and pair programming. You will also explore the role of the teacher within a CS Principles classroom and make a plan for how you will support student learning while teaching the course.
+
+            **You will**:
+
+            * Consider the role of the teacher in a CS Principles classroom.
+            * Learn about authentic CS practices that students will develop throughout the CS Principles course.
+            * Make a plan for how you will support student learning through differentiation, ongoing assessment, and promoting a culture of inclusion.
+            * Learn about opportunities to connect with the broader CS community.
+
+            **Suggested Time**: 70 minutes
+        musiclab:
+          lessons:
+            lesson-1:
+              name: Remix Projects
+          lesson_groups: {}
+          name: musiclab
+          title: Music Lab Test Lessons
+          description_audience: ''
+          description_short: ''
+          description: |-
+            Hi there! This is a special unit that Code.org uses for testing Music Lab. None of the lessons or levels in this unit are meant to be used in classrooms!
+
+            If you're not a code.org engineer but managed to discover this unit: congratulations! It's like you discovered a secret on our website! But if you're looking for more info about our curricula or tools, we recommend checking out https://code.org/educate/ instead.
+          student_description: ''
+        csa-software-engineering:
+          lessons:
+            lesson-1:
+              name: Intro to GitHub
+            lesson-2:
+              name: Intro to Copilot
+            lesson-3:
+              name: Build with Copilot
+            lesson-4:
+              name: Intro to AI Models
+            lesson-5:
+              name: Training Your Model
+            lesson-6:
+              name: Using Your Model
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Chapter 1: GitHub and Copilot'
+            lessonGroup-3:
+              display_name: 'Chapter 2: Computer Vision'
+          name: csa-software-engineering
+          title: Software Engineering & Computer Vision
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csa-frq-practice:
+          lessons:
+            lesson-1:
+              name: Frog Simultation
+            lesson-2:
+              name: Delimiters
+            lesson-3:
+              name: APCalendar
+            lesson-4:
+              name: StepTracker
+            lesson-5:
+              name: LightBoard
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Methods and Control Structures
+            lessonGroup-3:
+              display_name: Classes
+            lessonGroup-4:
+              display_name: Arrays / ArrayLists
+            lessonGroup-5:
+              display_name: 2D Arrays
+          name: csa-frq-practice
+          title: CSA FRQ Practice 2019
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        hoc-amazon-poc:
+          lessons:
+            lesson-1:
+              name: Hour of Code Progression
+            lesson-2:
+              name: Hour of Career Exploration Progression
+          lesson_groups: {}
+          name: hoc-amazon-poc
+          title: Hour of Code (PoC)
+          description_audience: ''
+          description_short: ''
+          description: |-
+            Proof-of-concept for HoC progression with Amazon Career Tours included.
+
+            First "lesson" is the HoC progression ([like what we typically have here](https://levelbuilder-studio.code.org/s/hello-world-space-2022))
+
+            Second "lesson" is the "post-roll" where students can continue into the "Hour of Career" if they want
+          student_description: ''
+        musiclab-2023:
+          lessons:
+            lesson-1:
+              name: Music Lab
+          lesson_groups: {}
+          name: musiclab-2023
+          title: Music Lab
+          description_audience: ''
+          description_short: Code your own version of a song to share or perform!
+          description: Code your own version of a song to share or perform!
+          student_description: Code your own version of a song to share or perform!
+        csa-frq-practice-2019:
+          lessons:
+            lesson-1:
+              name: FRQ 1
+            lesson-2:
+              name: FRQ 2
+            lesson-3:
+              name: FRQ 3
+            lesson-4:
+              name: FRQ 4
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Methods & Control Structures
+            lessonGroup-3:
+              display_name: Classes
+            lessonGroup-4:
+              display_name: Arrays / ArrayLists
+            lessonGroup-5:
+              display_name: 2D Arrays
+          name: csa-frq-practice-2019
+          title: CSA FRQ Practice 2019
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csa-frq-practice-2021:
+          lessons:
+            lesson-1:
+              name: WordMatch
+            lesson-2:
+              name: SingleTable
+            lesson-3:
+              name: ClubMembers
+            lesson-4:
+              name: ArrayResizer
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Methods and Control Structures
+            lessonGroup-3:
+              display_name: Classes
+            lessonGroup-4:
+              display_name: Arrays / ArrayLists
+            lessonGroup-5:
+              display_name: 2D Arrays
+          name: csa-frq-practice-2021
+          title: CSA FRQ Practice 2021
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csa-frq-practice-2022:
+          lessons:
+            lesson-1:
+              name: Game
+            lesson-2:
+              name: Textbook
+            lesson-3:
+              name: ReviewAnalysis
+            lesson-4:
+              name: Data
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Methods and Control Structures
+            lessonGroup-3:
+              display_name: Classes
+            lessonGroup-4:
+              display_name: Arrays / ArrayLists
+            lessonGroup-5:
+              display_name: 2D Arrays
+          name: csa-frq-practice-2022
+          title: CSA FRQ Practice 2022
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csa-frq-practice-2023:
+          lessons:
+            lesson-1:
+              name: AppointmentBook
+            lesson-2:
+              name: Sign
+            lesson-3:
+              name: WeatherData
+            lesson-4:
+              name: BoxOfCandy
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Methods and Control Structures
+            lessonGroup-3:
+              display_name: Classes
+            lessonGroup-4:
+              display_name: Arrays / ArrayLists
+            lessonGroup-5:
+              display_name: 2D Arrays
+          name: csa-frq-practice-2023
+          title: CSA FRQ Practice 2023
           description_audience: ''
           description_short: ''
           description: ''

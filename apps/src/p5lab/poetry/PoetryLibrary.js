@@ -225,6 +225,8 @@ export default class PoetryLibrary extends CoreLibrary {
         this.validationInfo.foregroundEffects = this.foregroundEffects.map(
           effect => effect.name
         );
+        this.validationInfo.highlightColor = this.poemState.text.highlightColor;
+        this.validationInfo.frameType = this.poemState.frameType;
         return this.validationInfo;
       },
 

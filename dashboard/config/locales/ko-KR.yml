@@ -51,6 +51,7 @@ ko:
         reset_password_token: 팔로우했던 재설정 비밀번호 링크
         error:
           future: 오늘 이전 날짜만 가능합니다.
+        us_state: 주
   beta: 베타
   hello: Hello world
   welcome_back: "%{name} 님, 어서오세요. "
@@ -60,6 +61,7 @@ ko:
   unsubmit: 제출 취소
   previous_page: 이전 페이지
   next_page: 다음 페이지
+  next_level: 다음 레벨
   next_resource: 다음 자료
   done_with_module: 이 학습 모듈로 완료
   cancel: 취소
@@ -213,6 +215,7 @@ ko:
     parent_account_email_progress_permission: 귀 자녀의 진도와 프로젝트 및 과정과 컴퓨터 과학에 대한 업데이트를
       종종 이메일로 알려드려도 되겠습니까? [(당사 개인정보 보호정책 참조)](%{privacy_policy_url})
     parent_account_email_label: 학부모/보호자 이메일
+    us_state: 주
   school_info:
     title: 학교 정보(선택사항)
     school_country: 학교 국가
@@ -677,7 +680,7 @@ ko:
     direction: 시작 안내(학년 기준)
   video:
     tab: 소개 동영상.
-    notes: 소개 프레젠테이션.
+    notes: 영상이 없다면? 대본 보기
     notes_coming_soon: 참고 동영상 준비중
     autoplay_option: 비디오 자동 실행
     download: 동영상 다운로드
@@ -887,7 +890,7 @@ ko:
     ok: 확인
     startover_title: 정말 다시 시작하겠습니까?
     startover_body: 퍼즐을 시작 상태로 되돌리고, 당신이 추가하거나 변경한 데이터를 모두 초기화 합니다.
-    startover_ok: 다시 시작하기
+    startover_ok: 다시 시작
     startover_cancel: 취소
   time:
     hour: 1 시간
@@ -1217,6 +1220,7 @@ ko:
         csf_express: CS 기초 (프리 익스프레스 또는 익스프레스)
         csd: CS 발견
         csp: CS 원리
+        other: 기타
         not_applicable: 해당사항 없음
       email_opt_in:
         opt_in_yes: 예

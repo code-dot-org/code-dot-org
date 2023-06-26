@@ -60,6 +60,7 @@ pt:
         reset_password_token: "O link de redefinição da palavra-passe que tu seguiste"
         error:
           future: não pode estar no futuro
+        us_state: 'Estado'
   beta: "beta"
   hello: "Olá mundo"
   welcome_back: "Olá mais uma vez, %{name}"
@@ -69,6 +70,7 @@ pt:
   unsubmit: Cancelar envio
   previous_page: Página anterior
   next_page: Página seguinte
+  next_level: Próximo nível
   next_resource: Recurso seguinte
   done_with_module: Concluído com este Módulo de Aprendizagem
   cancel: "Cancelar"
@@ -199,6 +201,7 @@ pt:
     parent_account_checkbox: "Sou pai/responsável, atuando em nome do(a) meu(minha) filho(a)"
     parent_account_email_progress_permission: "Podemos enviar e-mails com atualizações ocasionais sobre o progresso e os projetos do(a) seu(sua) filho(a), bem como atualizações sobre seu curso e seus conhecimentos em informática? [(consulte nossa política de privacidade)]%{privacy_policy_url})"
     parent_account_email_label: "E-mail do Pai/Responsável"
+    us_state: 'Estado'
   school_info:
     title: 'Informação da escola (opcional)'
     school_country: 'País da escola'
@@ -1176,6 +1179,7 @@ pt:
         csf_express: 'Fundamentos de Ciência da Computação (Pré-Expresso ou Expresso)'
         csd: 'Descobertas da Ciência da Computação'
         csp: 'Princípios da CC'
+        other: 'Outro'
         not_applicable: "Não aplicável"
       email_opt_in:
         opt_in_yes: 'Sim'

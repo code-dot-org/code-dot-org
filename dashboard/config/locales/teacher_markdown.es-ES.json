@@ -758,7 +758,9 @@
         "U3L2 Using Simple Commands": "La limitación de trabajar con sólo 4 comandos es importante. Si los alumnos llegan a la clase con conocimientos previos de programación, pueden intentar salirse de estas limitaciones para reducir el número de líneas de código.  \n\nSi ves que los estudiantes usan más comandos que los 4 proporcionados, o usan parámetros con esos comandos como: `moveForward(150)`, deberías decirles que no están resolviendo el problema; el problema es crear las imágenes usando sólo los 4 comandos proporcionados.",
         "allthethings_template_backed2": "Este markdown debe ser visible **sólo** para docentes autorizados.",
         "contained_csf_free_response": "Nivel Original Profesor Markdown",
-        "contained_single_multi": "Markdown del profesorado para el nivel original."
+        "contained_single_multi": "Markdown del profesorado para el nivel original.",
+        "PS predictive Applab level test retriable": "Markdown del profesorado para el nivel original",
+        "Test GameLab Retriable Multi": "Markdown del profesorado para el nivel original"
       }
     }
   }

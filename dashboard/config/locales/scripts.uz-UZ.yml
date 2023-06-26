@@ -131,6 +131,7 @@ uz:
           student_description: Ushbu 20 soatlik kurs 2-4 kurslarda o‘tiladigan asosiy
             kompyuter fanlari va dasturlash tushunchalarini qamrab oladi. Kurs 10-18
             yoshlilar uchun mo'ljallangan. To‘liq tajriba uchun 2-4 kurslarni o‘ting!
+          name: 20 soat
         events:
           title: Hodisalar
           description: Hodisalar
@@ -5845,6 +5846,8 @@ uz:
           lesson_groups:
             lessonGroup-3:
               display_name: Inputs and Outputs
+        ai-temp:
+          title: SI (AI) qanday ishlaydi
         focus-on-coding4b-2023:
           lesson_groups:
             lessonGroup-3:
@@ -5939,3 +5942,7 @@ uz:
           description_audience: 'Yosh: 9-13'
           description_short: Informatika asoslari kursidan barcha tushunchalarni o'rganing
             va o'z san'at asari, hikoya yoki o'yiningizni yarating.
+        csa-frq-practice:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Sinflar

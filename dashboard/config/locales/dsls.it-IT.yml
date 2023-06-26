@@ -1085,7 +1085,7 @@ it-IT:
         - {}
         - {}
         questions:
-        - {}
+        - text: Quale risultato verrà mostrato nella console da questo programma?
         title: titolo
       CSD U3 Boolean MC_2018:
         answers:
@@ -1094,7 +1094,7 @@ it-IT:
         - {}
         - {}
         questions:
-        - {}
+        - text: Quale risultato verrà mostrato nella console da questo programma?
         title: titolo
       CSD U3 Boolean MC_2018_2019:
         answers:
@@ -1103,30 +1103,56 @@ it-IT:
         - {}
         - {}
         questions:
-        - {}
+        - text: Quale risultato verrà mostrato nella console da questo programma?
         title: titolo
       CSD U3 Card Examples_2018:
         content1: descrizione qui
+        markdown: "# La tua cartolina interattiva\n\nNei prossimi esercizi, completerai
+          la tua cartolina interattiva. Ecco alcuni esempi per darti qualche idea.
+          Non dimenticare di dare un'occhiata al codice di questi esempi per vedere
+          come funzionano.\n\n## Esempi\n\n[![](https://images.code.org/7bbdbbb01c354a7c09bb4b9b5182a951-image-1522780803299.png)](https://studio.code.org/projects/gamelab/OzdFqrZ4oHPYsTddaRWaZxtTvdj9NzZVwCq6NkyONXM/edit)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[![](https://images.code.org/ed307e22854e4958a006d8023636cfd5-image-1522780803295.png)](https://studio.code.org/projects/gamelab/fmFrWsocELzP19CfbGI5P_hsgxN5ewVaB5f0Bw5S1_E/edit)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[![](https://images.code.org/ae0eca1dab46f13fcb21d4d0e264d637-image-1522780803298.png)](https://studio.code.org/projects/gamelab/z4XDrC0lsqoRY0xzYaXdJfChmyCl5O6YM-EOByecscc/edit) "
       CSD U3 Card Examples_2018_2019:
         content1: descrizione qui
+        markdown: "# La tua cartolina interattiva\n\nNei prossimi esercizi, completerai
+          la tua cartolina interattiva. Ecco alcuni esempi per darti qualche idea.
+          Non dimenticare di dare un'occhiata al codice di questi esempi per vedere
+          come funzionano.\n\n## Esempi\n\n[![](https://images.code.org/7bbdbbb01c354a7c09bb4b9b5182a951-image-1522780803299.png)](https://studio.code.org/projects/gamelab/OzdFqrZ4oHPYsTddaRWaZxtTvdj9NzZVwCq6NkyONXM/edit)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[![](https://images.code.org/ed307e22854e4958a006d8023636cfd5-image-1522780803295.png)](https://studio.code.org/projects/gamelab/fmFrWsocELzP19CfbGI5P_hsgxN5ewVaB5f0Bw5S1_E/edit)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[![](https://images.code.org/ae0eca1dab46f13fcb21d4d0e264d637-image-1522780803298.png)](https://studio.code.org/projects/gamelab/z4XDrC0lsqoRY0xzYaXdJfChmyCl5O6YM-EOByecscc/edit) "
       CSD U3 Functions Prediction define first:
         answers:
         - {}
         - {}
         - correct: true
         - {}
+        markdown: |
+          # Ha importanza dove si creano le funzioni?
+
+          Finora tutte le funzioni sono state create in fondo al programma. Cosa pensi che succeda se richiami una funzione prima che sia definita?
+
+          Nota che il quadrato rosso `drawRed()` è disegnato **prima** che la sua funzione venga definita, mentre il quadrato verde `drawGreen()` è disegnato **dopo** che la sua funzione è stata definita. Quale pensi che verrà disegnato?
       CSD U3 Functions Prediction define first_2018:
         answers:
         - {}
         - {}
         - correct: true
         - {}
+        markdown: |
+          # Ha importanza dove si creano le funzioni?
+
+          Finora tutte le funzioni sono state create in fondo al programma. Cosa pensi che succeda se richiami una funzione prima che sia definita?
+
+          Nota che il quadrato rosso `drawRed()` è disegnato **prima** che la sua funzione venga definita, mentre il quadrato verde `drawGreen()` è disegnato **dopo** che la sua funzione è stata definita. Quale pensi che verrà disegnato?
       CSD U3 Functions Prediction define first_2018_2019:
         answers:
         - {}
         - {}
         - correct: true
         - {}
+        markdown: |
+          # Ha importanza dove si creano le funzioni?
+
+          Finora tutte le funzioni sono state create in fondo al programma. Cosa pensi che succeda se richiami una funzione prima che sia definita?
+
+          Nota che il quadrato rosso `drawRed()` è disegnato **prima** che la sua funzione venga definita, mentre il quadrato verde `drawGreen()` è disegnato **dopo** che la sua funzione è stata definita. Quale pensi che verrà disegnato?
       CSD U3 Keypress Matching:
         answers:
         - {}
@@ -1161,7 +1187,8 @@ it-IT:
         - correct: true
         - {}
         questions:
-        - {}
+        - text: Leggi questo programma e prevedi quale delle seguenti animazioni verrà
+            generata.
       CSD U3 Sprite Movement Predict Multi_2018:
         answers:
         - {}
@@ -1169,7 +1196,8 @@ it-IT:
         - correct: true
         - {}
         questions:
-        - {}
+        - text: Leggi questo programma e prevedi quale delle seguenti animazioni verrà
+            generata.
       CSD U3 Sprite Movement Predict Multi_2018_2019:
         answers:
         - {}
@@ -1177,7 +1205,8 @@ it-IT:
         - correct: true
         - {}
         questions:
-        - {}
+        - text: Leggi questo programma e prevedi quale delle seguenti animazioni verrà
+            generata.
       CSD U3 Sprites intro predict multi:
         answers:
         - {}
@@ -1253,10 +1282,58 @@ it-IT:
         title: drawSprites
       CSD U3 game intro:
         content1: descrizione qui
+        markdown: |
+          # Crea il tuo gioco
+
+          Ora che hai tutte le competenze necessarie, è il momento di creare il tuo gioco!
+
+          Rifletti insieme ad un compagno su diverse possibili idee per il vostro gioco. Per avere delle idee, puoi pensare a giochi che conosci o guardare qui qualche esempio.
+
+          [<img src="https://images.code.org/fc2d4cdba80a476b1ff476081991031e-image-1498594631779.png" style="width: 200px; float: left; margin: 10px;">](https://studio.code.org/projects/gamelab/AwDcX5nehOApfzyywI6BOLT1xbf0MIV1dUj8KjQaNtA)
+
+          [<img src="https://images.code.org/b89895bdd43be4b729ca9165fc2923cf-image-1498595512898.28.24 PM.png" style="width: 200px; float: left; margin: 10px;">](https://studio.code.org/projects/gamelab/r9OYVTSj2od8vaCA-nKikTVpx-2Co8qHhuZiBIu30JA)
+
+          [<img src="https://images.code.org/d430061caab264330da0227b53e2db90-image-1498595505047.27.59 PM.png" style="width: 200px; margin: 10px;">](https://studio.code.org/projects/gamelab/hAz7RSdqc0c_MSQVUpvz1XrLDr8QLsansWDVI0ZberQ)
+
+          [<img src="https://images.code.org/c9fb241c5684e10d9ba2b85d4d4a906b-image-1498764384615.25.58 PM.png" style="width: 200px; margin: 10px;">](https://studio.code.org/projects/gamelab/DmRPNYR3n7bMO--_KkP7r6mOoGynBVyi3BMVPWDiVeI)
+
+          Una volta che avrai identificato una tipologia di gioco, compila la Guida di progetto con gli sfondi, le variabili, i personaggi e le funzioni di cui avrai bisogno per realizzare il gioco. Nei prossimi esercizi creerai il tuo gioco.
       CSD U3 game intro_2018:
         content1: descrizione qui
+        markdown: |
+          # Crea il tuo gioco
+
+          Ora che hai tutte le competenze necessarie, è il momento di creare il tuo gioco!
+
+          Rifletti insieme ad un compagno su diverse possibili idee per il vostro gioco. Per avere delle idee, puoi pensare a giochi che conosci o guardare qui qualche esempio.
+
+          [<img src="https://images.code.org/fc2d4cdba80a476b1ff476081991031e-image-1498594631779.png" style="width: 200px; float: left; margin: 10px;">](https://studio.code.org/projects/gamelab/AwDcX5nehOApfzyywI6BOLT1xbf0MIV1dUj8KjQaNtA)
+
+          [<img src="https://images.code.org/b89895bdd43be4b729ca9165fc2923cf-image-1498595512898.28.24 PM.png" style="width: 200px; float: left; margin: 10px;">](https://studio.code.org/projects/gamelab/r9OYVTSj2od8vaCA-nKikTVpx-2Co8qHhuZiBIu30JA)
+
+          [<img src="https://images.code.org/d430061caab264330da0227b53e2db90-image-1498595505047.27.59 PM.png" style="width: 200px; margin: 10px;">](https://studio.code.org/projects/gamelab/hAz7RSdqc0c_MSQVUpvz1XrLDr8QLsansWDVI0ZberQ)
+
+          [<img src="https://images.code.org/c9fb241c5684e10d9ba2b85d4d4a906b-image-1498764384615.25.58 PM.png" style="width: 200px; margin: 10px;">](https://studio.code.org/projects/gamelab/DmRPNYR3n7bMO--_KkP7r6mOoGynBVyi3BMVPWDiVeI)
+
+          Una volta che avrai identificato una tipologia di gioco, compila la Guida di progetto con gli sfondi, le variabili, i personaggi e le funzioni di cui avrai bisogno per realizzare il gioco. Nei prossimi esercizi creerai il tuo gioco.
       CSD U3 game intro_2018_2019:
         content1: descrizione qui
+        markdown: |
+          # Crea il tuo gioco
+
+          Ora che hai tutte le competenze necessarie, è il momento di creare il tuo gioco!
+
+          Rifletti insieme ad un compagno su diverse possibili idee per il vostro gioco. Per avere delle idee, puoi pensare a giochi che conosci o guardare qui qualche esempio.
+
+          [<img src="https://images.code.org/fc2d4cdba80a476b1ff476081991031e-image-1498594631779.png" style="width: 200px; float: left; margin: 10px;">](https://studio.code.org/projects/gamelab/AwDcX5nehOApfzyywI6BOLT1xbf0MIV1dUj8KjQaNtA)
+
+          [<img src="https://images.code.org/b89895bdd43be4b729ca9165fc2923cf-image-1498595512898.28.24 PM.png" style="width: 200px; float: left; margin: 10px;">](https://studio.code.org/projects/gamelab/r9OYVTSj2od8vaCA-nKikTVpx-2Co8qHhuZiBIu30JA)
+
+          [<img src="https://images.code.org/d430061caab264330da0227b53e2db90-image-1498595505047.27.59 PM.png" style="width: 200px; margin: 10px;">](https://studio.code.org/projects/gamelab/hAz7RSdqc0c_MSQVUpvz1XrLDr8QLsansWDVI0ZberQ)
+
+          [<img src="https://images.code.org/c9fb241c5684e10d9ba2b85d4d4a906b-image-1498764384615.25.58 PM.png" style="width: 200px; margin: 10px;">](https://studio.code.org/projects/gamelab/DmRPNYR3n7bMO--_KkP7r6mOoGynBVyi3BMVPWDiVeI)
+
+          Una volta che avrai identificato una tipologia di gioco, compila la Guida di progetto con gli sfondi, le variabili, i personaggi e le funzioni di cui avrai bisogno per realizzare il gioco. Nei prossimi esercizi creerai il tuo gioco.
       CSD U3 platform intro:
         content1: descrizione qui
       CSD U3 platform intro_2018:
@@ -10111,7 +10188,7 @@ it-IT:
         - {}
         - {}
         questions:
-        - {}
+        - text: Quale risultato verrà mostrato nella console da questo programma?
         title: titolo
         markdown: |
           # Espressioni booleane
@@ -10123,12 +10200,22 @@ it-IT:
           Leggi il programma qui sotto. Ci sono alcuni nuovi simboli che non ti sono stati presentati. Prova a indovinare cosa significano e prova a rispondere alla seguente domanda
       CSD U3 Card Examples_2018_2019_pilot_2021:
         content1: descrizione qui
+        markdown: "# La tua cartolina interattiva\n\nNei prossimi esercizi, completerai
+          la tua cartolina interattiva. Ecco alcuni esempi per darti qualche idea.
+          Non dimenticare di dare un'occhiata al codice di questi esempi per vedere
+          come funzionano.\n\n## Esempi\n\n[![](https://images.code.org/7bbdbbb01c354a7c09bb4b9b5182a951-image-1522780803299.png)](https://studio.code.org/projects/gamelab/OzdFqrZ4oHPYsTddaRWaZxtTvdj9NzZVwCq6NkyONXM/edit)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[![](https://images.code.org/ed307e22854e4958a006d8023636cfd5-image-1522780803295.png)](https://studio.code.org/projects/gamelab/fmFrWsocELzP19CfbGI5P_hsgxN5ewVaB5f0Bw5S1_E/edit)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[![](https://images.code.org/ae0eca1dab46f13fcb21d4d0e264d637-image-1522780803298.png)](https://studio.code.org/projects/gamelab/z4XDrC0lsqoRY0xzYaXdJfChmyCl5O6YM-EOByecscc/edit) "
       CSD U3 Functions Prediction define first_2018_2019_pilot_2021:
         answers:
         - {}
         - {}
         - correct: true
         - {}
+        markdown: |
+          # Ha importanza dove si creano le funzioni?
+
+          Finora tutte le funzioni sono state create in fondo al programma. Cosa pensi che succeda se richiami una funzione prima che sia definita?
+
+          Nota che il quadrato rosso `drawRed()` è disegnato **prima** che la sua funzione venga definita, mentre il quadrato verde `drawGreen()` è disegnato **dopo** che la sua funzione è stata definita. Quale pensi che verrà disegnato?
       CSD U3 Sprite Movement Predict Multi_2018_2019_pilot_2021:
         answers:
         - {}
@@ -10136,7 +10223,8 @@ it-IT:
         - correct: true
         - {}
         questions:
-        - {}
+        - text: Leggi questo programma e prevedi quale delle seguenti animazioni verrà
+            generata.
       CSD U3 drawSprites placement match_2019_pilot_2021:
         answers:
         - text: https://images.code.org/131282b44fe34cd619a9a21bc68888da-image-1523902103487.58.48
@@ -10163,6 +10251,22 @@ it-IT:
         description: Fai molta pratica!
       CSD U3 game intro_2018_2019_pilot_2021:
         content1: descrizione qui
+        markdown: |
+          # Crea il tuo gioco
+
+          Ora che hai tutte le competenze necessarie, è il momento di creare il tuo gioco!
+
+          Rifletti insieme ad un compagno su diverse possibili idee per il vostro gioco. Per avere delle idee, puoi pensare a giochi che conosci o guardare qui qualche esempio.
+
+          [<img src="https://images.code.org/fc2d4cdba80a476b1ff476081991031e-image-1498594631779.png" style="width: 200px; float: left; margin: 10px;">](https://studio.code.org/projects/gamelab/AwDcX5nehOApfzyywI6BOLT1xbf0MIV1dUj8KjQaNtA)
+
+          [<img src="https://images.code.org/b89895bdd43be4b729ca9165fc2923cf-image-1498595512898.28.24 PM.png" style="width: 200px; float: left; margin: 10px;">](https://studio.code.org/projects/gamelab/r9OYVTSj2od8vaCA-nKikTVpx-2Co8qHhuZiBIu30JA)
+
+          [<img src="https://images.code.org/d430061caab264330da0227b53e2db90-image-1498595505047.27.59 PM.png" style="width: 200px; margin: 10px;">](https://studio.code.org/projects/gamelab/hAz7RSdqc0c_MSQVUpvz1XrLDr8QLsansWDVI0ZberQ)
+
+          [<img src="https://images.code.org/c9fb241c5684e10d9ba2b85d4d4a906b-image-1498764384615.25.58 PM.png" style="width: 200px; margin: 10px;">](https://studio.code.org/projects/gamelab/DmRPNYR3n7bMO--_KkP7r6mOoGynBVyi3BMVPWDiVeI)
+
+          Una volta che avrai identificato una tipologia di gioco, compila la Guida di progetto con gli sfondi, le variabili, i personaggi e le funzioni di cui avrai bisogno per realizzare il gioco. Nei prossimi esercizi creerai il tuo gioco.
       CSD U3 platform intro_2018_2019_pilot_2021:
         content1: descrizione qui
         markdown: |
@@ -10406,132 +10510,195 @@ it-IT:
         title: Test Post-Progetto di Informatica Fisica
       CSD U1 IOSP match:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Ottiene la previsione meteorologica del giorno da Internet
+        - text: Mostra un'immagine di un bel vestito all'utente.
+        - text: Mantiene un elenco di abiti disponibili e in che tipo di meteo sono
+            indossati
+        - text: Abbina le condizioni meteorologiche agli abiti adatti a tale condizione
         questions:
         - text: Input
         - text: Output
         - text: Memoria
         - text: Elaborazione
         title: Domanda n. 2
+        content1: Un team sta creando un'app che aiuterà le persone a decidere quali
+          abiti indossare alla mattina. Abbina quattro cose che l'app fa con input,
+          output, archiviazione ed elaborazione.
       CSD U1 IOSP match_2021:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Ottiene la previsione meteorologica del giorno da Internet
+        - text: Mostra un'immagine di un bel vestito all'utente.
+        - text: Mantiene un elenco di abiti disponibili e in che tipo di meteo sono
+            indossati
+        - text: Abbina le condizioni meteorologiche agli abiti adatti a tale condizione
         questions:
         - text: Input
         - text: Output
         - text: Memoria
         - text: Elaborazione
         title: Domanda n. 2
+        content1: Un team sta creando un'app che aiuterà le persone a decidere quali
+          abiti indossare alla mattina. Abbina quattro cose che l'app fa con input,
+          output, archiviazione ed elaborazione.
       CSD U1 IOSP match_2022:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Ottiene la previsione meteorologica del giorno da Internet
+        - text: Mostra un'immagine di un bel vestito all'utente.
+        - text: Mantiene un elenco di abiti disponibili e in che tipo di meteo sono
+            indossati
+        - text: Abbina le condizioni meteorologiche agli abiti adatti a tale condizione
         questions:
         - text: Input
         - text: Output
         - text: Memoria
         - text: Elaborazione
         title: Domanda n. 2
+        content1: Un team sta creando un'app che aiuterà le persone a decidere quali
+          abiti indossare alla mattina. Abbina quattro cose che l'app fa con input,
+          output, archiviazione ed elaborazione.
       CSD U1 Test PSP match:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Decidere esattamente cosa vogliono dipingere, di cosa hanno bisogno
+            e chi svolgerà ogni parte.
+        - text: Discutere di cosa apprezzano del murale e come potrebbe essere migliorato.
+        - text: Dipingere il murale.
+        - text: Chiedere agli insegnanti di che tipo di murale necessitano e quanto
+            dev'essere grande
         questions:
         - text: Prepara
         - text: Rifletti
         - text: Prova
         - text: Definisci
         title: Domanda n. 2
+        content1: Cinque studenti stanno dipingendo un murale sul lato della loro
+          scuola. Abbina ciò che stanno facendo a un passaggio del Procedimento di
+          Risoluzione dei Problemi.
       CSD U1 Test PSP match_2021:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Decidere esattamente cosa vogliono dipingere, di cosa hanno bisogno
+            e chi svolgerà ogni parte.
+        - text: Discutere di cosa apprezzano del murale e come potrebbe essere migliorato.
+        - text: Dipingere il murale.
+        - text: Chiedere agli insegnanti di che tipo di murale necessitano e quanto
+            dev'essere grande
         questions:
         - text: Prepara
         - text: Rifletti
         - text: Prova
         - text: Definisci
         title: Domanda n. 2
+        content1: Cinque studenti stanno dipingendo un murale sul lato della loro
+          scuola. Abbina ciò che stanno facendo a un passaggio del Procedimento di
+          Risoluzione dei Problemi.
       CSD U1 Test PSP match_2022:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Decidere esattamente cosa vogliono dipingere, di cosa hanno bisogno
+            e chi svolgerà ogni parte.
+        - text: Discutere di cosa apprezzano del murale e come potrebbe essere migliorato.
+        - text: Dipingere il murale.
+        - text: Chiedere agli insegnanti di che tipo di murale necessitano e quanto
+            dev'essere grande
         questions:
         - text: Prepara
         - text: Rifletti
         - text: Prova
         - text: Definisci
         title: Domanda n. 2
+        content1: Cinque studenti stanno dipingendo un murale sul lato della loro
+          scuola. Abbina ciò che stanno facendo a un passaggio del Procedimento di
+          Risoluzione dei Problemi.
       CSD U1 Test define a computer:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: Una macchina che lavora con le informazioni per aiutare le persone
+            a pensare agli incarichi
+          correct: true
+        - text: Una macchina con uno schermo e una tastiera
+        - text: Una macchina che può connettersi a Internet
+        - text: Una macchina che immette, emette, archivia ed elabora informazioni
+          correct: true
+        - text: Una macchina che utilizza l'elettricità (da un cavo o una batteria)
         questions:
-        - {}
+        - text: Quali DUE dei seguenti sono i migliori modi per definire un computer?
+            (Scegline DUE)
         title: Domanda n. 1
       CSD U1 Test define a computer_2021:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: Una macchina che lavora con le informazioni per aiutare le persone
+            a pensare agli incarichi
+          correct: true
+        - text: Una macchina con uno schermo e una tastiera
+        - text: Una macchina che può connettersi a Internet
+        - text: Una macchina che immette, emette, archivia ed elabora informazioni
+          correct: true
+        - text: Una macchina che utilizza l'elettricità (da un cavo o una batteria)
         questions:
-        - {}
+        - text: Quali DUE dei seguenti sono i migliori modi per definire un computer?
+            (Scegline DUE)
         title: Domanda n. 1
       CSD U1 Test define a computer_2022:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: Una macchina che lavora con le informazioni per aiutare le persone
+            a pensare agli incarichi
+          correct: true
+        - text: Una macchina con uno schermo e una tastiera
+        - text: Una macchina che può connettersi a Internet
+        - text: Una macchina che immette, emette, archivia ed elabora informazioni
+          correct: true
+        - text: Una macchina che utilizza l'elettricità (da un cavo o una batteria)
         questions:
-        - {}
+        - text: Quali DUE dei seguenti sono i migliori modi per definire un computer?
+            (Scegline DUE)
         title: Domanda n. 1
       CSD U1 Test define problem:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: Coda per il pranzo, perché è chiaro come sapere che le persone aspettano
+            meno tempo, ma è più difficile sapere quale sarebbe lo spirito scolastico
+          correct: true
+        - text: Coda per il pranzo, perché è più facile creare regole sullo stare
+            in fila, che creare regole sullo spirito scolastico
+        - text: Spirito scolastico, perché puoi sempre averne di più, ma la coda per
+            il pranzo potrebbe già essere la più breve possibile
+        - text: Spirito scolastico, perché è migliore per gli studenti, mentre gli
+            adulti dovrebbero occuparsi della coda per il pranzo
         questions:
-        - {}
+        - text: Due classi desiderano migliorare la propria scuola. Una desidera abbreviare
+            la quantità di tempo che gli studenti attendono nella coda per il pranzo.
+            Un'altra desidera incrementare lo spirito scolastico. Quale problema è
+            definito meglio?
         title: Domanda n. 4
       CSD U1 Test define problem_2021:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: Coda per il pranzo, perché è chiaro come sapere che le persone aspettano
+            meno tempo, ma è più difficile sapere quale sarebbe lo spirito scolastico
+          correct: true
+        - text: Coda per il pranzo, perché è più facile creare regole sullo stare
+            in fila, che creare regole sullo spirito scolastico
+        - text: Spirito scolastico, perché puoi sempre averne di più, ma la coda per
+            il pranzo potrebbe già essere la più breve possibile
+        - text: Spirito scolastico, perché è migliore per gli studenti, mentre gli
+            adulti dovrebbero occuparsi della coda per il pranzo
         questions:
-        - {}
+        - text: Due classi desiderano migliorare la propria scuola. Una desidera abbreviare
+            la quantità di tempo che gli studenti attendono nella coda per il pranzo.
+            Un'altra desidera incrementare lo spirito scolastico. Quale problema è
+            definito meglio?
         title: Domanda n. 4
       CSD U1 Test define problem_2022:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: Coda per il pranzo, perché è chiaro come sapere che le persone aspettano
+            meno tempo, ma è più difficile sapere quale sarebbe lo spirito scolastico
+          correct: true
+        - text: Coda per il pranzo, perché è più facile creare regole sullo stare
+            in fila, che creare regole sullo spirito scolastico
+        - text: Spirito scolastico, perché puoi sempre averne di più, ma la coda per
+            il pranzo potrebbe già essere la più breve possibile
+        - text: Spirito scolastico, perché è migliore per gli studenti, mentre gli
+            adulti dovrebbero occuparsi della coda per il pranzo
         questions:
-        - {}
+        - text: Due classi desiderano migliorare la propria scuola. Una desidera abbreviare
+            la quantità di tempo che gli studenti attendono nella coda per il pranzo.
+            Un'altra desidera incrementare lo spirito scolastico. Quale problema è
+            definito meglio?
         title: Domanda n. 4
       CSD U1 Test_2022:
         title: Computer e Risoluzione di Problemi - Verifica finale
@@ -10825,7 +10992,7 @@ it-IT:
         - {}
         - {}
         questions:
-        - {}
+        - text: Quale risultato verrà mostrato nella console da questo programma?
         title: titolo
         markdown: |
           # Espressioni booleane
@@ -10841,6 +11008,12 @@ it-IT:
         - {}
         - correct: true
         - {}
+        markdown: |
+          # Ha importanza dove si creano le funzioni?
+
+          Finora tutte le funzioni sono state create in fondo al programma. Cosa pensi che succeda se richiami una funzione prima che sia definita?
+
+          Nota che il quadrato rosso `drawRed()` è disegnato **prima** che la sua funzione venga definita, mentre il quadrato verde `drawGreen()` è disegnato **dopo** che la sua funzione è stata definita. Quale pensi che verrà disegnato?
       CSD U3 Sprite Movement Predict Multi_2018_2019_pilot_2022:
         answers:
         - {}
@@ -10848,7 +11021,8 @@ it-IT:
         - correct: true
         - {}
         questions:
-        - {}
+        - text: Leggi questo programma e prevedi quale delle seguenti animazioni verrà
+            generata.
       CSD U3 Test clean code:
         answers:
         - {}
@@ -11658,7 +11832,10 @@ it-IT:
           correct: true
         - text: I, II e III
         questions:
-        - {}
+        - text: "Cosa deve sapere un programmatore creando un gestore di eventi?  \n&nbsp;&nbsp;&nbsp;I.
+            L'evento che innescherà la modifica  \n&nbsp;&nbsp;&nbsp;II. Quando nel
+            programma l'evento è innescato  \n&nbsp;&nbsp;&nbsp;III. Cosa dovrebbe
+            fare il programma quando l'evento è innescato"
       CSD U6 test events multi_2021:
         answers:
         - text: Solo I
@@ -12599,7 +12776,8 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: È stato difficile per persone come me essere accettate in questo corso
+            di informatica.
       csd-post-survey-2017-q28_2018:
         answers:
         - text: Sono del tutto d'accordo
@@ -13237,10 +13415,22 @@ it-IT:
         - {}
       csd-post-survey-unit1-preamble:
         content1: descrizione qui
+        markdown: |
+          # Unità 1 - Risoluzione dei problemi
+
+          ![](https://images.code.org/9b94f18a91fcc4a432514195c76e09ed-image-1526917360888.png)
       csd-post-survey-unit2-preamble:
         content1: descrizione qui
+        markdown: |
+          # Unità 2 - Sviluppo web
+
+          ![](https://images.code.org/7ac27720f905737e91d700609099984a-image-1526917558081.57.43 PM.png)
       csd-post-survey-unit3-preamble:
         content1: descrizione qui
+        markdown: |
+          # Unità 3 - Animazioni e giochi interattivi
+
+          ![](https://images.code.org/8bd6359a99d85595cd13a36c4496f8f9-image-1526917686038.59.04 PM.png)
       csd-post-survey-unit4-preamble:
         content1: descrizione qui
       csd-post-survey-unit5-preamble:
@@ -17748,7 +17938,8 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: È stato difficile per persone come me essere accettate in questo corso
+            di informatica.
       csp-post-survey-2017-q28:
         answers:
         - text: Sono del tutto d'accordo
@@ -17881,7 +18072,7 @@ it-IT:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Mi preoccupo perché non sono bravo in matematica.
       csp-post-survey-2017-q4:
         answers:
         - text: Sono del tutto d'accordo
@@ -17976,19 +18167,33 @@ it-IT:
         content1: descrizione qui
       csp-post-survey-2018-unit-feedback-preamble:
         content1: descrizione qui
+        markdown: "### Questa sezione pone le stesse due domande su ciascuna unità
+          del corso. Siamo interessati al tuo riscontro perché può aiutarci a migliorare
+          i nostri corsi.\n"
       csp-post-survey-who-encouraged-csp:
         answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
+        - text: Un amico
+          correct: true
+        - text: Un genitore
+          correct: true
+        - text: Un altro membro della famiglia
+          correct: true
+        - text: Un insegnante
+          correct: true
+        - text: Un consulente
+          correct: true
+        - text: Un'altra persona a scuola (allenatore, preside, etc.)
+          correct: true
+        - text: Un'altra persona non elencata
+          correct: true
+        - text: Nessuno in particolare. Volevo soltanto seguirla.
+          correct: true
+        - text: Non ho scelto di seguire questo corso.
+          correct: true
         questions:
-        - {}
+        - text: L'incoraggiamento di qualcuno è stato un fattore nella tua scelta
+            di seguire questo corso? Se sì, chi è stato più influente per te? (scegline
+            fino a due)
       csp-post-survey-worry-seem-less-capable:
         answers:
         - text: Sono del tutto d'accordo
@@ -19927,12 +20132,20 @@ it-IT:
             e fare informatica rispetto ad altre.
       outside-school-cs:
         answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
+        - text: Non ho mai svolto un'attività di informatica al di fuori della scuola
+          correct: true
+        - text: Un altro programma scolastico
+          correct: true
+        - text: Attività online in autonomia
+          correct: true
+        - text: Campo o programma estivo
+          correct: true
         questions:
-        - {}
+        - text: 'Qual è stata l''attività o il programma più recente di informatica
+            cui hai partecipato al di fuori delle ore scolastiche (come un programma
+            del doposcuola, online, o un campo o programma estivo)?
+
+'
       post-assessment survey q31-a-2017b:
         answers:
         - text: Sono del tutto d'accordo
@@ -20407,9 +20620,12 @@ it-IT:
           correct: true
         - text: Ho pensato che sarebbe stato impegnativo
           correct: true
-        - correct: true
-        - correct: true
-        - correct: true
+        - text: La classe ha una buona reputazione nella mia scuola
+          correct: true
+        - text: Qualcuno mi ha incoraggiato a partecipare
+          correct: true
+        - text: È un prerequisito per un'altra classe di Informatica che voglio seguire
+          correct: true
         - text: È obbligatorio / ci sono stato inserito.
           correct: true
         - text: Altri motivi non elencati
@@ -20504,16 +20720,20 @@ it-IT:
         - text: Non lo so
           correct: true
         questions:
-        - {}
+        - text: Hai completato le lezioni di programmazione su Code.org (escluse Ore
+            di Codice)?
       taken-other-cs:
         answers:
         - text: 'No'
           correct: true
-        - correct: true
-        - correct: true
-        - correct: true
+        - text: Sì, un po' in un altro corso
+          correct: true
+        - text: Sì, un corso semestrale
+          correct: true
+        - text: Sì, un corso dell'intero anno
+          correct: true
         questions:
-        - {}
+        - text: Hai seguito altri corsi d'informatica a scuola?
       teacher_encourage:
         answers:
         - text: sì
@@ -20625,7 +20845,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: Mi preoccupo di esser visto dagli altri come meno capace in informatica.
       worried-seen-incapable:
         answers:
         - text: Sono del tutto d'accordo
@@ -20688,8 +20908,12 @@ it-IT:
         display_name: Esercitarsi con l'artista
       CourseE_Lesson_11_Artist_Practice_2022:
         display_name: Esercitarsi con l'artista
+        description: Ottimo lavoro finora! Scegli la tua prossima attività. Completane
+          quante più possibile. Continua a fare pratica con le funzioni e con l'Artista!
       CourseE_Lesson_7_Artist_Practice_2022:
         display_name: Esercitarsi con l'artista
+        description: Ottimo lavoro finora! Scegli la tua prossima attività. Completane
+          il più possibile. Continua a praticare con i cicli nidificati e l'Artista!
       CourseF_outbreak_story2022_2022_pilot_-2022-2:
         content1: descrizione qui
         markdown: "# Epidemia - Programma la tua simulazione\n\n## Benvenuto nella
@@ -20921,10 +21145,16 @@ it-IT:
       courseC_multi_maze_debugging8_predict12022:
         answers:
         - text: Scrat raggiungerà la ghianda. Non ci sono errori nel codice.
+          feedback: Errato. Scrat non raggiungerà la ghianda, perché si è girato dal
+            lato sbagliato.
         - text: Scrat non raggiungerà la ghianda perché si gira dal lato sbagliato.
           correct: true
+          feedback: Corretto! Scrat si volta verso il lato sbagliato, per cui non
+            raggiungerà la ghianda.
         - text: Scrat non raggiungerà la ghianda perché non ci sono abbastanza blocchi
             `vai avanti`.
+          feedback: Errato. Scrat non raggiungerà la ghianda, perché si è girato dal
+            lato sbagliato.
         - text: Scrat non si sposterà dal primo blocco.
           feedback: Scrat non raggiungerà la ghianda perché si gira dal lato sbagliato.
         questions:
@@ -21806,9 +22036,11 @@ it-IT:
       ml-models in applab-choice parent:
         description: Metti alla prova ciò che hai imparato in una o più delle seguenti
           attività.
+        display_name: Schda modello - Esercizi pratici
       ml-models in applab-choice parent_2022:
         description: Metti alla prova ciò che hai imparato in una o più delle seguenti
           attività.
+        display_name: Schda modello - Esercizi pratici
       csd-post-survey-markdown-with-link-to-survey_2021:
         markdown: |+
           # Sondaggio post-corso Alla scoperta dell'informatica
@@ -22213,7 +22445,7 @@ it-IT:
 
       Design a Screen for your App_2018:
         markdown: |
-          # Simulazione della tua app
+          # Simula la tua app
 
           Ora che hai fatto un po' di pratica nel disporre gli elementi in Sviluppo App, puoi iniziare a lavorare sulla simulazione della tua app. Con il tuo gruppo, distribuitevi su più schermi in modo che tutti possano lavorare su uno schermo diverso.
 
@@ -22240,7 +22472,7 @@ it-IT:
           Ancor più dell'attività di prototipazione su carta, è facile per gli studenti di questa lezione dimenticare che devono considerare come le loro scelte influiranno su tutta la loro squadra. Incoraggia una discussione attiva tra le squadre durante la progettazione delle schermate per assicurarti che lavorino tutti verso un obiettivo comune.
       Design a Screen for your App_2018_2019:
         markdown: |
-          # Simulazione della tua app
+          # Simula la tua app
 
           Ora che hai fatto un po' di pratica nel disporre gli elementi in Sviluppo App, puoi iniziare a lavorare sulla simulazione della tua app. Con il tuo gruppo, distribuitevi su più schermi in modo che tutti possano lavorare su uno schermo diverso.
 
@@ -22267,7 +22499,7 @@ it-IT:
           Ancor più dell'attività di prototipazione su carta, è facile per gli studenti di questa lezione dimenticare che devono considerare come le loro scelte influiranno su tutta la loro squadra. Incoraggia una discussione attiva tra le squadre durante la progettazione delle schermate per assicurarti che lavorino tutti verso un obiettivo comune.
       Design a Screen for your App_2021:
         markdown: |
-          # Simulazione della tua app
+          # Simula la tua app
 
           Ora che hai fatto un po' di pratica nel disporre gli elementi in Sviluppo App, puoi iniziare a lavorare sulla simulazione della tua app. Con il tuo gruppo, distribuitevi su più schermi in modo che tutti possano lavorare su uno schermo diverso.
 
@@ -22294,7 +22526,7 @@ it-IT:
           Ancor più dell'attività di prototipazione su carta, è facile per gli studenti di questa lezione dimenticare che devono considerare come le loro scelte influiranno su tutta la loro squadra. Incoraggia una discussione attiva tra le squadre durante la progettazione delle schermate per assicurarti che lavorino tutti verso un obiettivo comune.
       Design a Screen for your App_2022:
         markdown: |
-          # Simulazione della tua app
+          # Simula la tua app
 
           Ora che hai fatto un po' di pratica nel disporre gli elementi in Sviluppo App, puoi iniziare a lavorare sulla simulazione della tua app. Con il tuo gruppo, distribuitevi su più schermi in modo che tutti possano lavorare su uno schermo diverso.
 
@@ -22569,3 +22801,197 @@ it-IT:
         display_name: Esercizi di pratica
       CSD U6 - Sensors - Prac_2222:
         display_name: Esercizi di pratica
+      CSD-U5-SFLP Representation Matters:
+        markdown: |
+          # Panoramica
+
+          Ottieni il tuo primo assaggio dell'importanza di come i dati sono rappresentati e di come influenzano il modo in cui prendiamo le decisioni. Aiuterai alcune persone a decidere quale pasto dovrebbero ordinare.
+
+          ## Risorse
+
+          * [Problemi di rappresentazione - Guida alle attività](https://docs.google.com/document/d/1wU8QANCmyz_DiJf2vdg2QPqKHq1YE0XDLGJmEsbKfiU/export?format=pdf)
+        teacher_markdown: |
+          [key]
+
+          * [La rappresentazione conta] (https://docs.google.com/document/d/1iBGzpLZVxyU0v1rOQMydrs4EpaXScbsB0x2hvbY3qxA/edit?usp=sharing) - Esempio ([PDF](https://docs.google.com/document/d/1iBGzpLZVxyU0v1rOQMydrs4EpaXScbsB0x2hvbY3qxA/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1iBGzpLZVxyU0v1rOQMydrs4EpaXScbsB0x2hvbY3qxA/export?format=doc))
+          * [Dati sui pasti] ( https://docs.google.com/document/d/1PAuIlPz-GEg3JsHpJd-rEnVcjP_DL3BAxT8wCmvrlGA/edit?usp=sharing) - Risorsa ([PDF](https://docs.google.com/document/d/1PAuIlPz-GEg3JsHpJd-rEnVcjP_DL3BAxT8wCmvrlGA/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1PAuIlPz-GEg3JsHpJd-rEnVcjP_DL3BAxT8wCmvrlGA/export?format=doc))
+
+          [/key]
+      Test Contained Retriable Multi:
+        answers:
+        - text: '0'
+        - text: '1'
+        - text: '2'
+          correct: true
+        - text: '4'
+        questions:
+        - {}
+      aiml-pulse-check-survey-1-levelgroup Ch2_2021:
+        title: Sondaggio veloce sull'informatica!
+      csp-post-survey-2017 preamble 1:
+        markdown: "### **Questo sondaggio è anonimo**\n\n* Questo sondaggio ha 5 parti
+          brevi.  \n* Il completamento dell'operazione dovrebbe richiedere **15 minuti**
+          del tuo tempo o anche meno.\n\n*Code.org prende molto sul serio la tua privacy.*
+          Le tue risposte qui rimarranno **anonime**. Nessuno, nemmeno il tuo insegnante,
+          può collegare le tue risposte a te come individuo.\n\nLo facciamo perché
+          vogliamo che tu **sia il più possibile aperto e sincero**. Abbiamo a cuore
+          la tua esperienza nel corso e apportiamo miglioramenti in base a ciò che
+          dici.\n\n***\n\n### Parte 1: La scuola in generale\n\n#### *Per prima cosa,
+          vogliamo chiederti quali sono i tuoi pensieri e le tue sensazioni sulla
+          scuola, in generale.*"
+      ml-club app-choice parent:
+        display_name: Personalizza la tua app
+      ml-club app-choice parent_2022:
+        display_name: Personalizza la tua app
+      ml-customize apps-practice choice-2021:
+        display_name: Esercitati a personalizzare le tue app
+      ml-customize apps-practice choice_2022:
+        display_name: Esercitati a personalizzare le tue app
+      ml-good data-isaac data:
+        markdown: |
+          ![](https://images.code.org/4f85627c74a140b1b09599a5095622ff-image-1624988925067.png)
+
+          ## [Clicca qui](https://docs.google.com/spreadsheets/d/1XKPrY1ABlrSx3pdKqK7y4dx5OYdSAJkpYdefKrFyqEI/copy) per creare una copia dei dati di Isaac
+      ml-good data-isaac data_2022:
+        markdown: |
+          ![](https://images.code.org/4f85627c74a140b1b09599a5095622ff-image-1624988925067.png)
+
+          ## [Clicca qui](https://docs.google.com/spreadsheets/d/1XKPrY1ABlrSx3pdKqK7y4dx5OYdSAJkpYdefKrFyqEI/copy) per creare una copia dei dati di Isaac
+      ml-good data-kim data:
+        markdown: |
+          ![](https://images.code.org/af7558eeafd15ef5e9f2fad0a6446c6a-image-1624987665106.png)
+
+          ## [Clicca qui](https://docs.google.com/spreadsheets/d/1bVtUc5KrHaBZ4rx6trdYVqjGHIq9J8jBG0Mx2d9nxDM/copy) per creare una copia dei dati di Kim
+      ml-good data-kim data_2022:
+        markdown: |
+          ![](https://images.code.org/af7558eeafd15ef5e9f2fad0a6446c6a-image-1624987665106.png)
+
+          ## [Clicca qui](https://docs.google.com/spreadsheets/d/1bVtUc5KrHaBZ4rx6trdYVqjGHIq9J8jBG0Mx2d9nxDM/copy) per creare una copia dei dati di Kim
+      ml-good data-kim survey:
+        markdown: |
+          ![](https://images.code.org/47cb3494b3c90dcc443e373d58b54c6b-image-1624987469212.png)
+
+          ## [Clicca qui](https://docs.google.com/forms/d/e/1FAIpQLSftxAAvDCXCoPMfzOgYTVYIrVESYYhNfVP-I83eVu9CXFKr-g/viewform) per partecipare al sondaggio di Kim
+      ml-good data-kim survey_2022:
+        markdown: |
+          ![](https://images.code.org/47cb3494b3c90dcc443e373d58b54c6b-image-1624987469212.png)
+
+          ## [Clicca qui](https://docs.google.com/forms/d/e/1FAIpQLSftxAAvDCXCoPMfzOgYTVYIrVESYYhNfVP-I83eVu9CXFKr-g/viewform) per partecipare al sondaggio di Kim
+      ml-intro app lab-book recommender 5-2021:
+        display_name: Personalizza la tua app
+      ml-intro app lab-book recommender 5_2022:
+        display_name: Personalizza la tua app
+      ml-model card-medical-1-2021:
+        markdown: |
+          # Pronto soccorso - Suggerimenti V1
+
+          Clicca sulla scheda modello per ingrandirla e vederne una versione più grande
+
+          <a href="https://images.code.org/d3e85af576ec6e92232292140fe9dbcf-image-1625084534081.png" target="_blank"><img src="https://images.code.org/d3e85af576ec6e92232292140fe9dbcf-image-1625084534081.png" width="45%" style="float:left; margin: 2px;"></a>
+
+          <a href="https://images.code.org/7e56e5f140aca3f49589e5d2670617ad-image-1625084608419.png" target="_blank"><img src="https://images.code.org/7e56e5f140aca3f49589e5d2670617ad-image-1625084608419.png" width="45%" style="float:right; margin: 2px"></a>
+      ml-model card-medical-1_2022:
+        markdown: |
+          # Pronto soccorso - Suggerimenti V1
+
+          Clicca sulla scheda modello per ingrandirla e vederne una versione più grande
+
+          <a href="https://images.code.org/d3e85af576ec6e92232292140fe9dbcf-image-1625084534081.png" target="_blank"><img src="https://images.code.org/d3e85af576ec6e92232292140fe9dbcf-image-1625084534081.png" width="45%" style="float:left; margin: 2px;"></a>
+
+          <a href="https://images.code.org/7e56e5f140aca3f49589e5d2670617ad-image-1625084608419.png" target="_blank"><img src="https://images.code.org/7e56e5f140aca3f49589e5d2670617ad-image-1625084608419.png" width="45%" style="float:right; margin: 2px"></a>
+      ml-model card-medical-2-2021:
+        markdown: |
+          # Northern Lights Priorità del Pronto Soccorso
+
+          Clicca sulla scheda modello per ingrandirla e vederne una versione più grande
+
+          <a href="https://images.code.org/69fbca920c052d6623787af0f4da7dfd-image-1625084706519.png" target="_blank">
+          <img src="https://images.code.org/69fbca920c052d6623787af0f4da7dfd-image-1625084706519.png" width="45%" style="float:left; margin: 2px;"></a>
+
+          <a href="https://images.code.org/53e71ad9c3b29438ea84de5d67b4bf96-image-1625084729402.png" target="_blank">
+          <img src="https://images.code.org/53e71ad9c3b29438ea84de5d67b4bf96-image-1625084729402.png" width="45%" style="float:right; margin: 2px"></a>
+
+          ![]()
+      ml-model card-medical-2_2022:
+        markdown: |
+          # Northern Lights Priorità del Pronto Soccorso
+
+          Clicca sulla scheda modello per ingrandirla e vederne una versione più grande
+
+          <a href="https://images.code.org/69fbca920c052d6623787af0f4da7dfd-image-1625084706519.png" target="_blank">
+          <img src="https://images.code.org/69fbca920c052d6623787af0f4da7dfd-image-1625084706519.png" width="45%" style="float:left; margin: 2px;"></a>
+
+          <a href="https://images.code.org/53e71ad9c3b29438ea84de5d67b4bf96-image-1625084729402.png" target="_blank">
+          <img src="https://images.code.org/53e71ad9c3b29438ea84de5d67b4bf96-image-1625084729402.png" width="45%" style="float:right; margin: 2px"></a>
+
+          ![]()
+      ml-model card-medical-3-2021:
+        markdown: |
+          # Pronto soccorso - Suggerimenti
+
+          Clicca sulla scheda modello per ingrandirla e vederne una versione più grande
+
+          <a href="https://images.code.org/c5180010138ee3104705580dd2ff63c4-image-1625084861215.png" target="_blank">
+          <img src="https://images.code.org/c5180010138ee3104705580dd2ff63c4-image-1625084861215.png" width="45%" style="float:left; margin: 2px;"></a>
+
+          <a href="https://images.code.org/dee6c18af60a6c7e56fc29d5bd249853-image-1625084891350.png" target="_blank">
+          <img src="https://images.code.org/dee6c18af60a6c7e56fc29d5bd249853-image-1625084891350.png" width="45%" style="float:right; margin: 2px"></a>
+      ml-model card-medical-3_2022:
+        markdown: |
+          # Pronto soccorso - Suggerimenti
+
+          Clicca sulla scheda modello per ingrandirla e vederne una versione più grande
+
+          <a href="https://images.code.org/c5180010138ee3104705580dd2ff63c4-image-1625084861215.png" target="_blank">
+          <img src="https://images.code.org/c5180010138ee3104705580dd2ff63c4-image-1625084861215.png" width="45%" style="float:left; margin: 2px;"></a>
+
+          <a href="https://images.code.org/dee6c18af60a6c7e56fc29d5bd249853-image-1625084891350.png" target="_blank">
+          <img src="https://images.code.org/dee6c18af60a6c7e56fc29d5bd249853-image-1625084891350.png" width="45%" style="float:right; margin: 2px"></a>
+      ml-plan survey-copy form:
+        markdown: |
+          # Copia un modulo Google
+
+          ## [Clicca qui](https://docs.google.com/forms/d/1Yzoug2iW-_GUWrQJo4jIlfuKNtelVNrer1PvT4rXF7w/copy) per creare una copia del modello per i sondaggi che useremo oggi
+      ml-plan survey-copy form_2022:
+        markdown: |
+          # Copia un modulo Google
+
+          ## [Clicca qui](https://docs.google.com/forms/d/1Yzoug2iW-_GUWrQJo4jIlfuKNtelVNrer1PvT4rXF7w/copy) per creare una copia del modello per i sondaggi che useremo oggi
+      ml-use model card-pet model card-2021:
+        markdown: |+
+          # Animali consigliati - Scheda modello
+
+          **Con un compagno: ** come si fa a distinguere tra caratteristiche categoriali e caratteristiche numeriche nella scheda modello?
+
+          <a href="https://images.code.org/e38768393e3033e60dc9dc2696e3df7d-image-1625085031146.png" target="_blank"><img src="https://images.code.org/e38768393e3033e60dc9dc2696e3df7d-image-1625085031146.png" width="45%" style="float:left; margin: 2px;"></a>
+
+          <a href="https://images.code.org/1fb88a3553f16cd9a576d54afe8757b9-image-1625509299810.png" target="_blank"><img src="https://images.code.org/1fb88a3553f16cd9a576d54afe8757b9-image-1625509299810.png" width="45%" style="float:right; margin: 2px"></a>
+
+      ml-use model card-pet model card_2022:
+        markdown: |+
+          # Animali consigliati - Scheda modello
+
+          **Con un compagno: ** come si fa a distinguere tra caratteristiche categoriali e caratteristiche numeriche nella scheda modello?
+
+          <a href="https://images.code.org/e38768393e3033e60dc9dc2696e3df7d-image-1625085031146.png" target="_blank"><img src="https://images.code.org/e38768393e3033e60dc9dc2696e3df7d-image-1625085031146.png" width="45%" style="float:left; margin: 2px;"></a>
+
+          <a href="https://images.code.org/1fb88a3553f16cd9a576d54afe8757b9-image-1625509299810.png" target="_blank"><img src="https://images.code.org/1fb88a3553f16cd9a576d54afe8757b9-image-1625509299810.png" width="45%" style="float:right; margin: 2px"></a>
+
+      ml-use models applab-practice choice-2021:
+        display_name: Esercitati con i modelli in Sviluppo App
+      ml-use models applab-practice choice_2022:
+        display_name: Esercitati con i modelli in Sviluppo App
+      test-single-multi-standalone-retriable:
+        answers:
+        - text: Non succederà nulla.
+          feedback: Sbagliato. Il cespuglio rotolante inizierà a rotolare
+        - text: Il cespuglio rotolante inizierà a fluttuare in cima allo schermo
+          feedback: Sbagliato. Il cespuglio rotolante inizierà a rotolare
+        - text: Il cespuglio rotolante inizierà a rotolare
+          correct: true
+          feedback: Corretto!
+        - text: Il cespuglio rotolante si accenderà e si spegnerà.
+          feedback: Sbagliato. Il cespuglio rotolante inizierà a rotolare
+        questions:
+        - text: Guarda molto attentamente il codice presente nell'area di lavoro.
+            Cosa succederà quando cliccherai su "Esegui"?

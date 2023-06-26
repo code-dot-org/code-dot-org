@@ -58,6 +58,7 @@ vi:
         reset_password_token: Liên kết đặt lại mật khẩu bạn đã theo dõi
         error:
           future: không thể trong tương lai
+        us_state: Quốc gia
   beta: phiên bản thử nghiệm
   hello: Xin chào thế giới
   welcome_back: Chào mừng trở lại, %{name}
@@ -67,6 +68,7 @@ vi:
   unsubmit: Ngưng gửi
   previous_page: Trang trước
   next_page: Trang tiếp theo
+  next_level: Cấp độ tiếp theo
   next_resource: Tài nguyên tiếp theo
   done_with_module: Đã xong với học phần này
   cancel: Huỷ
@@ -258,6 +260,7 @@ vi:
       về khóa học và khoa học máy tính của trẻ cho bạn không? [(Xem Chính sách riêng
       tư của chúng tôi)](%{privacy_policy_url})
     parent_account_email_label: Email của phụ huynh hoặc người giám hộ
+    us_state: Quốc gia
   school_info:
     title: Thông tin trường học (không bắt buộc)
     school_country: Quốc gia
@@ -1523,6 +1526,7 @@ vi:
           biết đọc)
         csd: Khám phá KHMT
         csp: Nguyên tắc của KHMT
+        other: Khác
         not_applicable: Không áp dụng
       email_opt_in:
         opt_in_yes: Đồng ý

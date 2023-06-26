@@ -38,13 +38,16 @@
   "blockly_fieldRestBeats": "{num} uderzeń",
   "blockly_fieldRestOneMeasure": "1 rytm",
   "blockly_fieldRestMeasures": "{num} rytmów",
+  "blockly_fieldTriggerStartImmediately": "natychmiast",
+  "blockly_fieldTriggerStartNextBeat": "w następnym rytmie",
+  "blockly_fieldTriggerStartNextMeasure": "w następnym takcie",
   "blockly_functionNamePlaceholder": "moja funkcja",
   "blockly_toolboxCategoryEffects": "Efekty",
   "blockly_toolboxCategoryEvents": "Zdarzenia",
   "blockly_toolboxCategoryFunctions": "Funkcje",
   "blockly_toolboxCategoryLogic": "Logika",
   "blockly_toolboxCategoryMath": "Matematyka",
-  "blockly_toolboxCategoryPlay": "Graj",
+  "blockly_toolboxCategoryPlay": "Dźwięki",
   "blockly_toolboxCategorySimple": "Proste",
   "blockly_toolboxCategoryTracks": "Ścieżki",
   "blockly_toolboxCategoryVariables": "Zmienne",
@@ -56,5 +59,9 @@
   "share": "Udostępnij",
   "shareComingSoon": "Udostępnioanie jest w budowie. Sprawdź wkrótce.",
   "startOver": "Zacznij od nowa",
-  "upload": "Wgraj"
+  "upload": "Wgraj",
+  "panelHeaderInstructions": "Instrukcje",
+  "panelHeaderWorkspace": "Obszar roboczy: ",
+  "panelHeaderControls": "Sterowanie",
+  "panelHeaderTimeline": "Oś czasu"
 }

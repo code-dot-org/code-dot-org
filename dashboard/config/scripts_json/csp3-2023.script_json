@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-04-25 23:07:48 UTC",
+    "serialized_at": "2023-06-24 17:16:38 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -3946,6 +3946,18 @@
       }
     },
     {
+      "name": "CSP Unit 3 Slides",
+      "url": "https://docs.google.com/presentation/d/1LqpV9F_G2K97HbSywfMupo-HAnzCxP_TNR40hSyA9Hk/edit?usp=drive_link",
+      "key": "csp_unit_3_slides",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csp_unit_3_slides"
+      }
+    },
+    {
       "name": "Debugging",
       "url": "https://docs.google.com/document/d/17EvJ2lQBUwg_FkafIs143frPpk6nuXvhmJhxWA8qGP4/preview",
       "key": "debugging",
@@ -4163,6 +4175,12 @@
     {
       "seeding_key": {
         "lesson.key": "Introduction to Apps",
+        "resource.key": "csp_unit_3_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Apps",
         "resource.key": "how_computers_work_-_what_makes_a_computer_a_computer"
       }
     },
@@ -4237,6 +4255,12 @@
     {
       "seeding_key": {
         "resource.key": "course_vocabulary",
+        "script.name": "csp3-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csp_unit_3_slides",
         "script.name": "csp3-2023"
       }
     },

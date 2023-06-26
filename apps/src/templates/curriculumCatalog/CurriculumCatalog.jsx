@@ -1,13 +1,21 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useCallback} from 'react';
 import PropTypes from 'prop-types';
+
 import {curriculumDataShape} from './curriculumCatalogShapes';
 import i18n from '@cdo/locale';
 import style from '../../../style/code-studio/curriculum_catalog_container.module.scss';
-import {queryParams} from '../../code-studio/utils';
+import {queryParams, updateQueryParam} from '../../code-studio/utils';
 import HeaderBanner from '../HeaderBanner';
 import CourseCatalogBannerBackground from '../../../static/curriculum_catalog/course-catalog-banner-illustration-01.png';
 import CourseCatalogIllustration01 from '../../../static/curriculum_catalog/course-catalog-illustration-01.png';
-import {Heading6} from '@cdo/apps/componentLibrary/typography';
+import CourseCatalogNoSearchResultPenguin from '../../../static/curriculum_catalog/course-catalog-no-search-result-penguin.png';
+
+import Button from '@cdo/apps/templates/Button';
+import {
+  Heading5,
+  Heading6,
+  BodyOneText,
+} from '@cdo/apps/componentLibrary/typography';
 import CheckboxDropdown from '../CheckboxDropdown';
 import CurriculumCatalogCard from '@cdo/apps/templates/curriculumCatalog/CurriculumCatalogCard';
 import {
@@ -64,8 +72,7 @@ const getValidParamValues = (filterKey, paramValues) => {
 };
 
 // Returns initial filter states based on URL parameters (returns empty filters if
-// no relevant parameters in the URL). The filter params are of the form:
-// "filter_name:checked_value_1,checked_value_2,etc."
+// no relevant parameters in the URL).
 const getInitialFilterStates = () => {
   const filterTypeKeys = Object.keys(filterTypes);
   const urlParams = queryParams();
@@ -147,7 +154,7 @@ const filterByDevice = (curriculum, deviceFilters) => {
   return true;
 };
 
-const CurriculumCatalog = ({curriculaData, isEnglish}) => {
+const CurriculumCatalog = ({curriculaData, ...props}) => {
   const [filteredCurricula, setFilteredCurricula] = useState(curriculaData);
   const [appliedFilters, setAppliedFilters] = useState(
     getInitialFilterStates()
@@ -166,41 +173,115 @@ const CurriculumCatalog = ({curriculaData, isEnglish}) => {
     setFilteredCurricula(newFilteredCurricula);
   }, [curriculaData, appliedFilters]);
 
+  // Handles updating the given filter and the URL parameters.
+  const handleUpdateFilter = (filterKey, values) => {
+    let newFilters = {...appliedFilters};
+    newFilters[filterKey] = values;
+    setAppliedFilters(newFilters);
+
+    const valuesParam = values.length > 0 ? values : undefined;
+    updateQueryParam(filterKey, valuesParam, true);
+  };
+
   // Selects the given value in the given filter.
   const handleSelect = (event, filterKey) => {
     const value = event.target.value;
     const isChecked = event.target.checked;
 
-    let newFilters = {...appliedFilters};
+    let updatedFilters;
     if (isChecked) {
-      //Add checked item into applied filters
-      newFilters[filterKey] = [...appliedFilters[filterKey], value];
+      // Add checked item into applied filters
+      updatedFilters = [...appliedFilters[filterKey], value];
     } else {
-      //Remove unchecked item from applied filters
-      newFilters[filterKey] = appliedFilters[filterKey].filter(
-        item => item !== value
-      );
+      // Remove unchecked item from applied filters
+      updatedFilters = appliedFilters[filterKey].filter(item => item !== value);
     }
-    setAppliedFilters(newFilters);
+    handleUpdateFilter(filterKey, updatedFilters);
   };
 
   // Selects all options within the given filter.
   const handleSelectAllOfFilter = filterKey => {
-    let newFilters = {...appliedFilters};
-    newFilters[filterKey] = Object.keys(filterTypes[filterKey].options);
-    setAppliedFilters(newFilters);
+    handleUpdateFilter(filterKey, Object.keys(filterTypes[filterKey].options));
   };
 
   // Clears all filter selections.
-  const handleClear = () => {
+  const handleClear = useCallback(() => {
     setAppliedFilters(getEmptyFilters());
-  };
+    Object.keys(filterTypes).forEach(filterKey =>
+      updateQueryParam(filterKey, undefined, false)
+    );
+  }, []);
 
   // Clears selections within the given filter.
   const handleClearAllOfFilter = filterKey => {
-    let newFilters = {...appliedFilters};
-    newFilters[filterKey] = [];
-    setAppliedFilters(newFilters);
+    handleUpdateFilter(filterKey, []);
+  };
+
+  // Renders search results based on the applied filters (or shows the No matching curriculums
+  // message if no results).
+  const renderSearchResults = () => {
+    if (filteredCurricula.length > 0) {
+      return (
+        <div className={style.catalogContentCards}>
+          {filteredCurricula
+            .filter(
+              curriculum =>
+                !!curriculum.grade_levels && !!curriculum.course_version_path
+            )
+            .map(
+              ({
+                key,
+                image,
+                display_name,
+                grade_levels,
+                duration,
+                school_subject,
+                cs_topic,
+                course_version_path,
+                course_version_id,
+                course_id,
+                course_offering_id,
+                script_id,
+                is_standalone_unit,
+              }) => (
+                <CurriculumCatalogCard
+                  key={key}
+                  courseDisplayName={display_name}
+                  imageSrc={image || undefined}
+                  duration={duration}
+                  gradesArray={grade_levels.split(',')}
+                  subjects={school_subject?.split(',')}
+                  topics={cs_topic?.split(',')}
+                  isTranslated={false} // TODO [MEG]: actually pass in this data
+                  pathToCourse={course_version_path}
+                  courseVersionId={course_version_id}
+                  courseId={course_id}
+                  courseOfferingId={course_offering_id}
+                  scriptId={script_id}
+                  isStandAloneUnit={is_standalone_unit}
+                  {...props}
+                />
+              )
+            )}
+        </div>
+      );
+    } else {
+      return (
+        <div className={style.catalogContentNoResults}>
+          <img
+            className={style.noResultsImage}
+            src={CourseCatalogNoSearchResultPenguin}
+            alt=""
+          />
+          <Heading5 className={style.noResultsHeading}>
+            {i18n.noCurriculumSearchResultsHeader()}
+          </Heading5>
+          <BodyOneText className={style.noResultsBody}>
+            {i18n.noCurriculumSearchResultsBody()}
+          </BodyOneText>
+        </div>
+      );
+    }
   };
 
   return (
@@ -228,49 +309,18 @@ const CurriculumCatalog = ({curriculaData, isEnglish}) => {
             handleClearAll={() => handleClearAllOfFilter(filterKey)}
           />
         ))}
-        <button
+        <Button
           id="clear-filters"
-          type="button"
           className={style.catalogClearFiltersButton}
+          type="button"
           onClick={handleClear}
-        >
-          {i18n.clearFilters()}
-        </button>
+          text={i18n.clearFilters()}
+          styleAsText
+          color={Button.ButtonColor.brandSecondaryDefault}
+        />
       </div>
       <div className={style.catalogContentContainer}>
-        <div className={style.catalogContent}>
-          {/*TODO [MEG]: calculate and pass in duration and translated from backend */}
-          {filteredCurricula
-            .filter(
-              curriculum =>
-                !!curriculum.grade_levels && !!curriculum.course_version_path
-            )
-            .map(
-              ({
-                key,
-                image,
-                display_name,
-                grade_levels,
-                duration,
-                school_subject,
-                cs_topic,
-                course_version_path,
-              }) => (
-                <CurriculumCatalogCard
-                  key={key}
-                  courseDisplayName={display_name}
-                  imageSrc={image || undefined}
-                  duration={duration}
-                  gradesArray={grade_levels.split(',')}
-                  subjects={school_subject?.split(',')}
-                  topics={cs_topic?.split(',')}
-                  isTranslated={false} // TODO [MEG]: actually pass in this data
-                  isEnglish={isEnglish}
-                  pathToCourse={course_version_path}
-                />
-              )
-            )}
-        </div>
+        {renderSearchResults()}
       </div>
     </>
   );

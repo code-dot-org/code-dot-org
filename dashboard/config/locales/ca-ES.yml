@@ -59,6 +59,7 @@ ca:
         reset_password_token: L'enllaç que has fet servir per restablir la contrasenya
         error:
           future: no pot ser en el futur
+        us_state: Estat/província
   beta: beta
   hello: Hola món
   welcome_back: Benvingut de nou, %{name}
@@ -68,6 +69,7 @@ ca:
   unsubmit: Retirar
   previous_page: Pàgina anterior
   next_page: Pàgina següent
+  next_level: Següent nivell
   next_resource: Recurs següent
   done_with_module: Mòdul d'Aprenentatge acabat
   cancel: Cancel·lar
@@ -255,6 +257,7 @@ ca:
       sobre la feina i els projectes del vostre fill, i notícies sobre el seu curs
       i la informàtica? [(Vegeu la nostra Política de Privacitat)](%{privacy_policy_url})
     parent_account_email_label: Correu electrònic per pares/tutors
+    us_state: Estat/província
   school_info:
     title: Informació de l'escola (opcional)
     school_country: País de l'escola
@@ -1494,6 +1497,7 @@ ca:
         csf_express: Fonaments de la Informàtica (Pre-exprés o Exprés)
         csd: Descobriments Informàtics
         csp: Principis de la Informàtica
+        other: Altres
         not_applicable: No aplica
       email_opt_in:
         opt_in_yes: Sí

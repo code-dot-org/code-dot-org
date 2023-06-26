@@ -124,6 +124,7 @@ sk:
           student_description: Tento 20-hodinový kurz pokrýva základné koncepty informatiky
             a programovania obsiahnuté v kurzoch 2-4. Kurz je určený pre žiakov vo
             veku 10 - 18 rokov, ale určite pobaví študentov všetkých vekových kategórií!
+          name: 20-hodina
         edit-code:
           title: Upraviť kód
           description: Upraviť kód
@@ -4578,6 +4579,8 @@ sk:
           lesson_groups:
             lessonGroup-3:
               display_name: Vstupy a výstupy
+        ai-temp:
+          title: Ako funguje umelá inteligencia
         focus-on-coding4b-2023:
           lesson_groups:
             lessonGroup-3:
@@ -4659,3 +4662,7 @@ sk:
           description_audience: Vek 9-13
           description_short: Nauč sa všetky koncepty z kurzu Základy informatiky a
             vytvor vlastné umelecké dielo, príbeh alebo hru.
+        csa-frq-practice:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Triedy

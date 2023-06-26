@@ -11,19 +11,101 @@
             "game_lab": {
               "name": "Game Lab",
               "expressions": {
+                "keyDown": {
+                  "palette_params": {
+                    "code": {
+                      "type": "Συμβολοσειρά"
+                    }
+                  }
+                },
+                "keyWentDown": {
+                  "palette_params": {
+                    "code": {
+                      "type": "Συμβολοσειρά"
+                    }
+                  }
+                },
+                "keyWentUp": {
+                  "palette_params": {
+                    "code": {
+                      "type": "Συμβολοσειρά"
+                    }
+                  }
+                },
+                "mouseDown": {
+                  "palette_params": {
+                    "button": {
+                      "type": "Συμβολοσειρά"
+                    }
+                  }
+                },
                 "mouseWentDown": {
                   "examples": {
                     "Black and White": {
                       "name": "Ασπρόμαυρο"
                     }
+                  },
+                  "palette_params": {
+                    "button": {
+                      "type": "Συμβολοσειρά"
+                    }
+                  }
+                },
+                "mouseWentUp": {
+                  "palette_params": {
+                    "button": {
+                      "type": "Συμβολοσειρά"
+                    }
                   }
                 },
                 "playSound": {
+                  "palette_params": {
+                    "url": {
+                      "type": "Συμβολοσειρά"
+                    },
+                    "loop": {
+                      "type": "Δυαδική τιμή"
+                    }
+                  },
                   "short_description": "Αναπαράγει το αρχείο ήχου MP3 από την καθορισμένη διεύθυνση URL."
+                },
+                "playSpeech": {
+                  "palette_params": {
+                    "text": {
+                      "type": "Συμβολοσειρά"
+                    },
+                    "gender": {
+                      "type": "Συμβολοσειρά"
+                    },
+                    "language": {
+                      "type": "Συμβολοσειρά"
+                    }
+                  }
                 },
                 "showMobileControls": {
                   "content": "Αλλάζει τα χειριστήρια κινητής τηλεφωνίας που είναι ορατά κάτω από το χώρο παιχνιδιού.",
+                  "palette_params": {
+                    "spaceButtonVisible": {
+                      "type": "Δυαδική τιμή"
+                    },
+                    "dpadVisible": {
+                      "type": "Δυαδική τιμή"
+                    },
+                    "dpadFourWay": {
+                      "type": "Δυαδική τιμή"
+                    },
+                    "mobileOnly": {
+                      "type": "Δυαδική τιμή"
+                    }
+                  },
                   "short_description": "Αλλάζει τα χειριστήρια κινητής τηλεφωνίας που είναι ορατά κάτω από το χώρο παιχνιδιού."
+                },
+                "stopSound": {
+                  "palette_params": {
+                    "url": {
+                      "type": "Συμβολοσειρά"
+                    }
+                  }
                 }
               }
             },
@@ -40,18 +122,223 @@
                 "sprite.height": {
                   "return_value": "Το ύψος του ξωτικό."
                 },
+                "mirrorX": {
+                  "palette_params": {
+                    "dir": {
+                      "type": "Αριθμός"
+                    }
+                  }
+                },
+                "mirrorY": {
+                  "palette_params": {
+                    "dir": {
+                      "type": "Αριθμός"
+                    }
+                  }
+                },
+                "pointTo": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Αριθμός"
+                    },
+                    "y": {
+                      "type": "Αριθμός"
+                    }
+                  }
+                },
+                "setAnimation": {
+                  "palette_params": {
+                    "label": {
+                      "type": "Συμβολοσειρά"
+                    }
+                  }
+                },
+                "setCollider": {
+                  "palette_params": {
+                    "type": {
+                      "type": "Συμβολοσειρά"
+                    },
+                    "xOffset": {
+                      "type": "Αριθμός"
+                    },
+                    "yOffset": {
+                      "type": "Αριθμός"
+                    },
+                    "width/radius": {
+                      "type": "Αριθμός"
+                    },
+                    "height": {
+                      "type": "Αριθμός"
+                    },
+                    "rotationOffset": {
+                      "type": "Αριθμός"
+                    }
+                  }
+                },
+                "setFrame": {
+                  "palette_params": {
+                    "frame": {
+                      "type": "Αριθμός"
+                    }
+                  }
+                },
+                "setSpeedAndDirection": {
+                  "palette_params": {
+                    "speed": {
+                      "type": "Αριθμός"
+                    },
+                    "angle": {
+                      "type": "Αριθμός"
+                    }
+                  }
+                },
+                "setVelocity": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Αριθμός"
+                    },
+                    "y": {
+                      "type": "Αριθμός"
+                    }
+                  }
+                },
                 "sprite.width": {
                   "return_value": "Το πλάτος του sprite."
+                },
+                "createSprite": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Αριθμός"
+                    },
+                    "width": {
+                      "type": "Αριθμός"
+                    },
+                    "y": {
+                      "type": "Αριθμός"
+                    },
+                    "height": {
+                      "type": "Αριθμός"
+                    }
+                  }
                 }
               }
             },
             "groups": {
               "name": "Ομάδες",
               "expressions": {
+                "get": {
+                  "palette_params": {
+                    "i": {
+                      "type": "Αριθμός"
+                    }
+                  }
+                },
+                "pointToEach": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Αριθμός"
+                    },
+                    "y": {
+                      "type": "Αριθμός"
+                    }
+                  }
+                },
+                "setAnimationEach": {
+                  "palette_params": {
+                    "label": {
+                      "type": "Συμβολοσειρά"
+                    }
+                  }
+                },
+                "setColliderEach": {
+                  "palette_params": {
+                    "type": {
+                      "type": "Συμβολοσειρά"
+                    },
+                    "yOffset": {
+                      "type": "Αριθμός"
+                    },
+                    "width/radius": {
+                      "type": "Αριθμός"
+                    },
+                    "height": {
+                      "type": "Αριθμός"
+                    },
+                    "rotationOffset": {
+                      "type": "Αριθμός"
+                    }
+                  }
+                },
                 "setColorEach": {
                   "palette_params": {
                     "color": {
                       "type": "Χρώμα"
+                    }
+                  }
+                },
+                "setHeightEach": {
+                  "palette_params": {
+                    "height": {
+                      "type": "Αριθμός"
+                    }
+                  }
+                },
+                "setLifetimeEach": {
+                  "palette_params": {
+                    "lifetime": {
+                      "type": "Αριθμός"
+                    }
+                  }
+                },
+                "setMirrorXEach": {
+                  "palette_params": {
+                    "dir": {
+                      "type": "Αριθμός"
+                    }
+                  }
+                },
+                "setMirrorYEach": {
+                  "palette_params": {
+                    "dir": {
+                      "type": "Αριθμός"
+                    }
+                  }
+                },
+                "setRotateToDirectionEach": {
+                  "palette_params": {
+                    "bool": {
+                      "type": "Δυαδική τιμή"
+                    }
+                  }
+                },
+                "setRotationEach": {
+                  "palette_params": {
+                    "angle": {
+                      "type": "Αριθμός"
+                    }
+                  }
+                },
+                "setRotationSpeedEach": {
+                  "palette_params": {
+                    "speed": {
+                      "type": "Αριθμός"
+                    }
+                  }
+                },
+                "setScaleEach": {
+                  "palette_params": {
+                    "scale": {
+                      "type": "Αριθμός"
+                    }
+                  }
+                },
+                "setSpeedAndDirectionEach": {
+                  "palette_params": {
+                    "speed": {
+                      "type": "Αριθμός"
+                    },
+                    "angle": {
+                      "type": "Αριθμός"
                     }
                   }
                 },
@@ -61,16 +348,251 @@
                       "type": "Χρώμα"
                     }
                   }
+                },
+                "setVelocityEach": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Αριθμός"
+                    },
+                    "y": {
+                      "type": "Αριθμός"
+                    }
+                  }
+                },
+                "setVelocityXEach": {
+                  "palette_params": {
+                    "velocity": {
+                      "type": "Αριθμός"
+                    }
+                  }
+                },
+                "setVelocityYEach": {
+                  "palette_params": {
+                    "velocity": {
+                      "type": "Αριθμός"
+                    }
+                  }
+                },
+                "setVisibleEach": {
+                  "palette_params": {
+                    "bool": {
+                      "type": "Δυαδική τιμή"
+                    }
+                  }
+                },
+                "setWidthEach": {
+                  "palette_params": {
+                    "width": {
+                      "type": "Αριθμός"
+                    }
+                  }
                 }
               }
             },
             "drawing": {
               "name": "Σχεδίαση",
               "expressions": {
+                "arc": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Αριθμός"
+                    },
+                    "y": {
+                      "type": "Αριθμός"
+                    },
+                    "w": {
+                      "type": "Αριθμός"
+                    },
+                    "h": {
+                      "type": "Αριθμός"
+                    },
+                    "start": {
+                      "type": "Αριθμός"
+                    },
+                    "stop": {
+                      "type": "Αριθμός"
+                    }
+                  }
+                },
+                "background": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Συμβολοσειρά"
+                    }
+                  }
+                },
+                "ellipse": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Αριθμός"
+                    },
+                    "y": {
+                      "type": "Αριθμός"
+                    },
+                    "w": {
+                      "type": "Αριθμός"
+                    },
+                    "h": {
+                      "type": "Αριθμός"
+                    }
+                  }
+                },
+                "fill": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Συμβολοσειρά"
+                    }
+                  }
+                },
+                "line": {
+                  "palette_params": {
+                    "x1": {
+                      "type": "Αριθμός"
+                    },
+                    "y1": {
+                      "type": "Αριθμός"
+                    },
+                    "x2": {
+                      "type": "Αριθμός"
+                    },
+                    "y2": {
+                      "type": "Αριθμός"
+                    }
+                  }
+                },
+                "point": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Αριθμός"
+                    },
+                    "y": {
+                      "type": "Αριθμός"
+                    }
+                  }
+                },
+                "rect": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Αριθμός"
+                    },
+                    "y": {
+                      "type": "Αριθμός"
+                    },
+                    "w": {
+                      "type": "Αριθμός"
+                    },
+                    "h": {
+                      "type": "Αριθμός"
+                    }
+                  }
+                },
+                "regularPolygon": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Αριθμός"
+                    },
+                    "y": {
+                      "type": "Αριθμός"
+                    },
+                    "sides": {
+                      "type": "Αριθμός"
+                    },
+                    "size": {
+                      "type": "Αριθμός"
+                    }
+                  }
+                },
+                "rgb": {
+                  "palette_params": {
+                    "r": {
+                      "type": "Αριθμός"
+                    },
+                    "g": {
+                      "type": "Αριθμός"
+                    },
+                    "b": {
+                      "type": "Αριθμός"
+                    },
+                    "a": {
+                      "type": "Αριθμός"
+                    }
+                  }
+                },
                 "shape": {
                   "examples": {
                     "Star": {
                       "name": "Αστέρι"
+                    }
+                  },
+                  "palette_params": {
+                    "x1": {
+                      "type": "Αριθμός"
+                    },
+                    "y1": {
+                      "type": "Αριθμός"
+                    },
+                    "x2": {
+                      "type": "Αριθμός"
+                    },
+                    "y2": {
+                      "type": "Αριθμός"
+                    }
+                  }
+                },
+                "stroke": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Συμβολοσειρά"
+                    }
+                  }
+                },
+                "strokeWeight": {
+                  "palette_params": {
+                    "size": {
+                      "type": "Αριθμός"
+                    }
+                  }
+                },
+                "text": {
+                  "palette_params": {
+                    "str": {
+                      "type": "Συμβολοσειρά"
+                    },
+                    "x": {
+                      "type": "Αριθμός"
+                    },
+                    "y": {
+                      "type": "Αριθμός"
+                    },
+                    "width": {
+                      "type": "Αριθμός"
+                    },
+                    "height": {
+                      "type": "Αριθμός"
+                    }
+                  }
+                },
+                "textAlign": {
+                  "palette_params": {
+                    "horiz": {
+                      "type": "Συμβολοσειρά"
+                    },
+                    "vert": {
+                      "type": "Συμβολοσειρά"
+                    }
+                  }
+                },
+                "textFont": {
+                  "palette_params": {
+                    "font": {
+                      "type": "Συμβολοσειρά"
+                    }
+                  }
+                },
+                "textSize": {
+                  "palette_params": {
+                    "pixels": {
+                      "type": "Αριθμός"
                     }
                   }
                 }
@@ -97,6 +619,23 @@
             "math": {
               "name": "Μαθηματικά",
               "expressions": {
+                "mathSqrt": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Αριθμός"
+                    }
+                  }
+                },
+                "moduloOperator": {
+                  "palette_params": {
+                    "value1": {
+                      "type": "Αριθμός"
+                    },
+                    "value2": {
+                      "type": "Αριθμός"
+                    }
+                  }
+                },
                 "randomNumber": {
                   "palette_params": {
                     "min": {
@@ -153,7 +692,7 @@
           }
         },
         "applab": {
-          "name": "App Lab",
+          "name": "Εργαστήριο εφαρμογών",
           "description": "Το App Lab (Εργαστήριο Εφαρμογών) είναι ένα περιβάλλον προγραμματισμού όπου μπορείς να φτιάξεις απλές εφαρμογές (apps). Σχεδίασε μια εφαρμογή (app), γράψε κώδικα με μπλοκ ή JavaScript για να την κάνεις να δουλέψει και μετά μοιράσου την εφαρμογή σου σε δευτερόλεπτα.",
           "categories": {
             "ui_controls": {
@@ -161,19 +700,73 @@
                 "button": {
                   "short_description": "Δημιουργεί ένα κουμπί στην οθόνη που εμφανίζει το κείμενο που παρέχεται και αναφέρεται από το δεδομένο id στην προεπιλεγμένη θέση (0,0)."
                 },
+                "getProperty": {
+                  "palette_params": {
+                    "id": {
+                      "type": "Συμβολοσειρά"
+                    },
+                    "property": {
+                      "type": "Συμβολοσειρά"
+                    }
+                  }
+                },
                 "onEvent": {
                   "palette_params": {
+                    "type": {
+                      "type": "Συμβολοσειρά"
+                    },
+                    "id": {
+                      "type": "Συμβολοσειρά"
+                    },
                     "callback": {
                       "type": "Συνάρτηση"
                     }
                   }
                 },
                 "playSound": {
+                  "palette_params": {
+                    "loop": {
+                      "type": "Δυαδική τιμή"
+                    }
+                  },
                   "short_description": "Αναπαράγει το αρχείο ήχου MP3 από την καθορισμένη διεύθυνση URL."
+                },
+                "playSpeech": {
+                  "palette_params": {
+                    "text": {
+                      "type": "Συμβολοσειρά"
+                    },
+                    "gender": {
+                      "type": "Συμβολοσειρά"
+                    },
+                    "language": {
+                      "type": "Συμβολοσειρά"
+                    }
+                  }
+                },
+                "rgb": {
+                  "palette_params": {
+                    "r": {
+                      "type": "Αριθμός"
+                    },
+                    "g": {
+                      "type": "Αριθμός"
+                    },
+                    "b": {
+                      "type": "Αριθμός"
+                    },
+                    "a": {
+                      "type": "Αριθμός"
+                    }
+                  }
                 },
                 "setProperty": {
                   "palette_params": {
+                    "id": {
+                      "type": "Συμβολοσειρά"
+                    },
                     "property": {
+                      "type": "Συμβολοσειρά",
                       "description": "Η ιδιότητα να αλλάξει."
                     }
                   },
@@ -344,6 +937,13 @@
                   },
                   "short_description": "Ορίζει την ποσότητα του μπλε (που κυμαίνεται από 0 έως 255) στο χρώμα του εικονοστοιχείου που βρίσκεται στη δεδομένη θέση x και y στα δεδομένα εικόνας στην ποσότητα εισόδου BlueValue."
                 },
+                "setFillColor": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Συμβολοσειρά"
+                    }
+                  }
+                },
                 "setGreen": {
                   "palette_params": {
                     "imageData": {
@@ -402,6 +1002,13 @@
                     }
                   },
                   "short_description": "Ορίζει την ποσότητα του κόκκινου (που κυμαίνεται από 0 έως 255) στο χρώμα του εικονοστοιχείου που βρίσκεται στη δοσμένη θέση x και y στα δεδομένα εικόνας μέχρι την ποσότητα εισόδου RedValue."
+                },
+                "setStrokeColor": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Συμβολοσειρά"
+                    }
+                  }
                 }
               }
             },
@@ -412,6 +1019,13 @@
                   "palette_params": {
                     "record": {
                       "type": "αντικείμενο"
+                    }
+                  }
+                },
+                "createRecordSync": {
+                  "palette_params": {
+                    "table": {
+                      "type": "Συμβολοσειρά"
                     }
                   }
                 },
@@ -439,6 +1053,16 @@
                     }
                   }
                 },
+                "getColumn": {
+                  "palette_params": {
+                    "table": {
+                      "type": "Συμβολοσειρά"
+                    },
+                    "column": {
+                      "type": "Συμβολοσειρά"
+                    }
+                  }
+                },
                 "getKeyValue": {
                   "palette_params": {
                     "key": {
@@ -448,6 +1072,12 @@
                 },
                 "getPrediction": {
                   "palette_params": {
+                    "name": {
+                      "type": "Συμβολοσειρά"
+                    },
+                    "id": {
+                      "type": "Συμβολοσειρά"
+                    },
                     "callback": {
                       "type": "Συνάρτηση"
                     }
@@ -467,6 +1097,13 @@
                   "palette_params": {
                     "terms": {
                       "type": "αντικείμενο"
+                    }
+                  }
+                },
+                "readRecordsSync": {
+                  "palette_params": {
+                    "table": {
+                      "type": "Συμβολοσειρά"
                     }
                   }
                 },
@@ -531,12 +1168,22 @@
                   "short_description": "Μετακινεί τη χελώνα σε μια συγκεκριμένη θέση (x, y) στην οθόνη."
                 },
                 "penColor": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Συμβολοσειρά"
+                    }
+                  },
                   "short_description": "Ορίζει το χρώμα της πένας που χρησιμοποιείται από τη χελώνα για τη σχεδίαση γραμμών και κουκκίδων."
                 },
                 "penDown": {
                   "short_description": "Βάζει το στυλό κάτω ώστε η χελώνα να τραβάει μια γραμμή πίσω του καθώς κινείται."
                 },
                 "penRGB": {
+                  "palette_params": {
+                    "r": {
+                      "type": "Αριθμός"
+                    }
+                  },
                   "short_description": "Χρησιμοποιώντας τιμές RGBA, ορίζει το χρώμα της πένας που χρησιμοποιείται από τη χελώνα για τη σχεδίαση γραμμών και κουκκίδων."
                 },
                 "penUp": {
@@ -585,8 +1232,18 @@
                     }
                   }
                 },
+                "stopTimedLoop": {
+                  "palette_params": {
+                    "loop": {
+                      "type": "Αριθμός"
+                    }
+                  }
+                },
                 "timedLoop": {
                   "palette_params": {
+                    "ms": {
+                      "type": "Αριθμός"
+                    },
                     "callback": {
                       "type": "Συνάρτηση"
                     }
@@ -597,6 +1254,33 @@
             "math": {
               "name": "Μαθηματικά",
               "expressions": {
+                "mathPow": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Αριθμός"
+                    },
+                    "y": {
+                      "type": "Αριθμός"
+                    }
+                  }
+                },
+                "mathSqrt": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Αριθμός"
+                    }
+                  }
+                },
+                "moduloOperator": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Αριθμός"
+                    },
+                    "y": {
+                      "type": "Αριθμός"
+                    }
+                  }
+                },
                 "randomNumber_min_max": {
                   "palette_params": {
                     "min": {
@@ -650,7 +1334,19 @@
                   }
                 },
                 "addPair": {
+                  "palette_params": {
+                    "key": {
+                      "type": "Συμβολοσειρά"
+                    }
+                  },
                   "return_value": "Κανένα"
+                },
+                "getValue": {
+                  "palette_params": {
+                    "key": {
+                      "type": "Συμβολοσειρά"
+                    }
+                  }
                 },
                 "length": {
                   "return_value": "Το μήκος της συμβολοσειράς"
@@ -661,7 +1357,112 @@
               "name": "Συναρτήσεις"
             },
             "advanced": {
-              "name": "Για προχωρημένους"
+              "name": "Για προχωρημένους",
+              "expressions": {
+                "setStyle": {
+                  "palette_params": {
+                    "id": {
+                      "type": "Συμβολοσειρά"
+                    },
+                    "css": {
+                      "type": "Συμβολοσειρά"
+                    }
+                  }
+                }
+              }
+            },
+            "maker": {
+              "expressions": {
+                "pinMode": {
+                  "palette_params": {
+                    "pin": {
+                      "type": "Αριθμός"
+                    },
+                    "mode": {
+                      "type": "Συμβολοσειρά"
+                    }
+                  }
+                }
+              }
+            },
+            "circuit": {
+              "expressions": {
+                "isPressed": {
+                  "return_value": "Δυαδική τιμή"
+                },
+                "buzzer.play": {
+                  "palette_params": {
+                    "tempo": {
+                      "type": "Αριθμός"
+                    }
+                  }
+                },
+                "buzzer.playNotes": {
+                  "palette_params": {
+                    "tempo": {
+                      "type": "Αριθμός"
+                    }
+                  }
+                },
+                "buzzer.playSong": {
+                  "palette_params": {
+                    "tempo": {
+                      "type": "Αριθμός"
+                    }
+                  }
+                },
+                "toggleSwitch.isOpen": {
+                  "return_value": "Δυαδική τιμή"
+                }
+              }
+            },
+            "micro_bit": {
+              "expressions": {
+                "ledScreen.off": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Αριθμός"
+                    },
+                    "y": {
+                      "type": "Αριθμός"
+                    }
+                  }
+                },
+                "ledScreen.on": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Αριθμός"
+                    },
+                    "y": {
+                      "type": "Αριθμός"
+                    }
+                  }
+                },
+                "ledScreen.scrollNumber": {
+                  "palette_params": {
+                    "number": {
+                      "type": "Αριθμός"
+                    }
+                  }
+                },
+                "ledScreen.scrollString": {
+                  "palette_params": {
+                    "String": {
+                      "type": "Συμβολοσειρά"
+                    }
+                  }
+                },
+                "ledScreen.toggle": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Αριθμός"
+                    },
+                    "y": {
+                      "type": "Αριθμός"
+                    }
+                  }
+                }
+              }
             }
           }
         },

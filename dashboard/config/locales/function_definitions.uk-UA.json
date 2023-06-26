@@ -170,7 +170,7 @@
         },
         "Course 4 Play Lab Params 1": {
           "jump": {
-            "name": "стрибок"
+            "name": "стрибнути"
           }
         },
         "Course 4 Play Lab Params 10": {
@@ -182,15 +182,15 @@
         },
         "Course 4 Play Lab Params 2": {
           "jump": {
-            "name": "стрибок"
+            "name": "стрибнути"
           }
         },
         "Course 4 Play Lab Params 3": {
           "jump": {
-            "name": "стрибок",
+            "name": "стрибнути",
             "parameters": {
               "height": "висота",
-              "actor": "персонаж"
+              "actor": "виконавець"
             }
           }
         },
@@ -205,7 +205,7 @@
         "Course 4 Play Lab Params 5": {
           "patrol": {
             "parameters": {
-              "actor": "персонаж"
+              "actor": "виконавець"
             },
             "name": "патрулювання"
           }
@@ -213,7 +213,7 @@
         "Course 4 Play Lab Params 6": {
           "patrol": {
             "parameters": {
-              "actor": "персонаж"
+              "actor": "виконавець"
             },
             "name": "патрулювання"
           }
@@ -221,7 +221,7 @@
         "Course 4 Play Lab Params 7": {
           "patrol": {
             "parameters": {
-              "actor": "персонаж",
+              "actor": "виконавець",
               "speed": "швидкість"
             },
             "name": "патрулювання"
@@ -230,7 +230,7 @@
         "Course 4 Play Lab Params 8": {
           "patrol": {
             "parameters": {
-              "actor": "персонаж",
+              "actor": "виконавець",
               "speed": "швидкість"
             },
             "name": "патрулювання"
@@ -732,16 +732,16 @@
         },
         "NEW Course 4 Play Lab Params 11": {
           "jump": {
-            "name": "стрибок",
+            "name": "стрибнути",
             "parameters": {
               "height": "висота",
-              "actor": "персонаж"
+              "actor": "виконавець"
             },
-            "description": "блок функції \"стрибок\" з параметрами висоти та персонажа"
+            "description": "блок функції \"стрибнути\" з параметрами висоти та персонажа"
           },
           "patrol": {
             "parameters": {
-              "actor": "персонаж",
+              "actor": "виконавець",
               "speed": "швидкість"
             },
             "name": "патрулювання"
@@ -807,16 +807,16 @@
         },
         "New Play Lab Project": {
           "jump": {
-            "name": "стрибок",
+            "name": "стрибнути",
             "parameters": {
               "height": "висота",
-              "actor": "персонаж"
+              "actor": "виконавець"
             },
-            "description": "блок функції \"стрибок\" з параметрами висоти та персонажа"
+            "description": "блок функції \"стрибнути\" з параметрами висоти та персонажа"
           },
           "patrol": {
             "parameters": {
-              "actor": "персонаж",
+              "actor": "виконавець",
               "speed": "швидкість"
             },
             "name": "патрулювання",
@@ -2455,6 +2455,12 @@
         "courseE_artist_functions_predict2_2021": {
           "do something": {
             "name": "щось зробити"
+          },
+          "draw line of polygons": {
+            "name": "намалюй лінію багатокутника"
+          },
+          "draw polygon": {
+            "name": "намалюйте багатокутник"
           }
         },
         "courseE_farmer_functions10a1_2021": {
@@ -3255,6 +3261,18 @@
               "length": "довжина",
               "sides": "сторони"
             }
+          },
+          "small flower": {
+            "name": "невелика квітка"
+          },
+          "LOGIC FLOWERS2": {
+            "name": "ЛОГІЧНІ КВІТИ2"
+          },
+          "LOGIC FLOWER": {
+            "name": "ЛОГІЧНА КВІТКА"
+          },
+          "LOGIC FLOWERS": {
+            "name": "ЛОГІЧНІ КВІТИ"
           }
         },
         "CourseD_EOC_artist2022": {
@@ -3587,6 +3605,26 @@
         "courseE_farmer_functions2b_2021": {
           "check square for corn": {
             "name": "перевір квадрат для кукурудзи"
+          }
+        },
+        "CourseF_app_computer": {
+          "reset game": {
+            "name": "скидання гри"
+          }
+        },
+        "CourseF_app_computer2022": {
+          "reset game": {
+            "name": "скидання гри"
+          }
+        },
+        "CourseF_app_computer_-2022-2": {
+          "reset game": {
+            "name": "скидання гри"
+          }
+        },
+        "courseF_bee_for_challenge1_2021": {
+          "move and get nectar with counter": {
+            "name": "рухайся та отримуй нектар за допомогою лічильника"
           }
         }
       }

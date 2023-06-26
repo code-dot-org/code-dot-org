@@ -44,7 +44,7 @@
   "blockly_toolboxCategoryFunctions": "Các hàm",
   "blockly_toolboxCategoryLogic": "Logic",
   "blockly_toolboxCategoryMath": "Phép toán",
-  "blockly_toolboxCategoryPlay": "Chơi",
+  "blockly_toolboxCategoryPlay": "Âm thanh",
   "blockly_toolboxCategorySimple": "Đơn giản",
   "blockly_toolboxCategoryTracks": "Các bài hát",
   "blockly_toolboxCategoryVariables": "Các biến",
@@ -56,5 +56,7 @@
   "share": "Chia sẻ",
   "shareComingSoon": "Chia sẻ đang được xây dựng. Kiểm tra lại sớm.",
   "startOver": "Bắt đầu lại",
-  "upload": "Tải lên"
+  "upload": "Tải lên",
+  "panelHeaderInstructions": "Hướng dẫn",
+  "panelHeaderWorkspace": "Không gian làm việc"
 }

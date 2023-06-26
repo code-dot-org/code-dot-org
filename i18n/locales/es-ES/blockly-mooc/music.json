@@ -1,10 +1,10 @@
 {
-  "blockly_blockNewTrackAtStart": "nueva pista {name}",
-  "blockly_blockNewTrackAtStartTooltip": "nueva pista",
-  "blockly_blockNewTrackAtMeasure": "nueva pista {track} en {measure}",
-  "blockly_blockNewTrackAtMeasureTooltip": "nueva línea en compás",
+  "blockly_blockNewTrackAtStart": "nuevo tema {name}",
+  "blockly_blockNewTrackAtStartTooltip": "nuevo tema",
+  "blockly_blockNewTrackAtMeasure": "nuevo tema {track} en {measure}",
+  "blockly_blockNewTrackAtMeasureTooltip": "nuevo tema en compás",
   "blockly_blockNewTrackOnTrigger": "nueva pista {track} cuando se activa {trigger}",
-  "blockly_blockNewTrackOnTriggerTooltip": "nueva pista en activación",
+  "blockly_blockNewTrackOnTriggerTooltip": "nuevo tema en activación",
   "blockly_blockPlayChord": "reproducir notas {chord}",
   "blockly_blockPlayChordTooltip": "reproducir notas",
   "blockly_blockPlaySound": "reproducir {sound}",
@@ -38,6 +38,9 @@
   "blockly_fieldRestBeats": "{num} tiempos",
   "blockly_fieldRestOneMeasure": "1 compás",
   "blockly_fieldRestMeasures": "{num} compases",
+  "blockly_fieldTriggerStartImmediately": "inmediatamente",
+  "blockly_fieldTriggerStartNextBeat": "en el siguiente ritmo",
+  "blockly_fieldTriggerStartNextMeasure": "en el siguiente compás",
   "blockly_functionNamePlaceholder": "mi función",
   "blockly_toolboxCategoryControl": "Control",
   "blockly_toolboxCategoryEffects": "Efectos",
@@ -45,7 +48,7 @@
   "blockly_toolboxCategoryFunctions": "Funciones",
   "blockly_toolboxCategoryLogic": "Lógica",
   "blockly_toolboxCategoryMath": "Matemáticas",
-  "blockly_toolboxCategoryPlay": "Jugar",
+  "blockly_toolboxCategoryPlay": "Sonidos",
   "blockly_toolboxCategorySimple": "Simple",
   "blockly_toolboxCategoryTracks": "Pistas",
   "blockly_toolboxCategoryVariables": "Variables",
@@ -58,5 +61,7 @@
   "share": "Compartir",
   "shareComingSoon": "El intercambio está en construcción. Vuelve pronto.",
   "startOver": "Volver a empezar",
-  "upload": "Subir"
+  "upload": "Subir",
+  "panelHeaderInstructions": "Instrucciones",
+  "panelHeaderWorkspace": "Espacio de trabajo"
 }

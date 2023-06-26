@@ -60,6 +60,7 @@ fa:
         reset_password_token: "پیوند بازنشانی رمز عبوری که دنبال کرده اید"
         error:
           future: نمیتوان در آینده بود
+        us_state: 'وضعیت'
   beta: "بتا"
   hello: "سلام دنیا"
   welcome_back: "%{name}، خوش آمدید"
@@ -69,6 +70,7 @@ fa:
   unsubmit: ثبت نشده
   previous_page: صفحه‌ی قبل
   next_page: صفحه بعد
+  next_level: سطح بعدی
   next_resource: منبع بعدی
   done_with_module: با این ماژول آموزشی تمام شد
   cancel: "لغو"
@@ -199,6 +201,7 @@ fa:
     parent_account_checkbox: "من یک پدر/مادر/سرپرست هستم که از طرف فرزندم ثبت نام می کنم"
     parent_account_email_progress_permission: "آیا می‌توانیم به‌روزرسانی‌های گاه به گاه در مورد پیشرفت‌ها و پروژه‌های فرزندتان و به‌روزرسانی‌هایی درباره دوره و علوم رایانه‌اش را به شما ایمیل کنیم؟ [(به خط مشی حفظ حریم خصوصی ما مراجعه کنید)](%{privacy_policy_url})"
     parent_account_email_label: "ایمیل والدین/سرپرست"
+    us_state: 'وضعیت'
   school_info:
     title: 'اطلاعات مدرسه (اختیاری)'
     school_country: 'کشور مدرسه'
@@ -1082,6 +1085,7 @@ fa:
         csf_express: 'علوم کامپیوتر مقدماتی (پیش از اکسپرس یا اکسپرس)'
         csd: 'کشفیات علوم کامپیوتر'
         csp: 'اصول علوم کامپیوتر'
+        other: 'دیگر'
         not_applicable: "نامرتبط"
       email_opt_in:
         opt_in_yes: 'بله'

@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-05-19 20:03:19 UTC",
+    "serialized_at": "2023-06-23 16:40:44 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -9409,18 +9409,6 @@
       }
     },
     {
-      "name": "[KEY] Writing Algorithms",
-      "url": "https://docs.google.com/document/d/1vC8YSyvjxns_saIvd9TsUdJMX72YalxxC_MIQnwD7R4/edit?usp=sharing",
-      "key": "_key_writing_algorithms",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_writing_algorithms"
-      }
-    },
-    {
       "name": "All Resources",
       "url": "/s/csa1-2023/resources",
       "key": "all_resources_1",
@@ -9712,7 +9700,7 @@
     },
     {
       "name": "Inheritance",
-      "url": "https://youtu.be/H0htNTwNvrY",
+      "url": "https://youtu.be/vvDIkfaCy88",
       "key": "inheritance_1",
       "properties": {
         "audience": "Student",
@@ -11071,12 +11059,6 @@
       "seeding_key": {
         "lesson.key": "lesson-6",
         "resource.key": "_key_u1l7_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-6",
-        "resource.key": "_key_writing_algorithms"
       }
     },
     {

@@ -5,8 +5,8 @@ import CdoDarkTheme from '@cdo/apps/blockly/themes/cdoDark';
 import {getToolbox} from './toolbox';
 import FieldSounds from './FieldSounds';
 import FieldPattern from './FieldPattern';
-import AppConfig, {getBlockMode} from '../appConfig';
-import {BlockMode, LOCAL_STORAGE, REMOTE_STORAGE} from '../constants';
+import {getBlockMode} from '../appConfig';
+import {BlockMode} from '../constants';
 import {
   DEFAULT_TRACK_NAME_EXTENSION,
   DOCS_BASE_URL,
@@ -14,7 +14,9 @@ import {
   FIELD_CHORD_TYPE,
   FIELD_PATTERN_TYPE,
   FIELD_SOUNDS_TYPE,
+  FIELD_TRIGGER_START_NAME,
   PLAY_MULTI_MUTATOR,
+  TriggerStart,
   TRIGGER_FIELD,
 } from './constants';
 import {
@@ -24,12 +26,11 @@ import {
 } from './extensions';
 import experiments from '@cdo/apps/util/experiments';
 import {GeneratorHelpersSimple2} from './blocks/simple2';
-import ProjectManagerFactory from '@cdo/apps/labs/projects/ProjectManagerFactory';
-import {ProjectManagerStorageType} from '@cdo/apps/labs/types';
 import FieldChord from './FieldChord';
 import {Renderers} from '@cdo/apps/blockly/constants';
 import musicI18n from '../locale';
-import LevelChangeManager from '@cdo/apps/labs/LevelChangeManager';
+import {logError, logWarning} from '../utils/MusicMetrics';
+import LabRegistry from '@cdo/apps/labs/LabRegistry';
 
 /**
  * Wraps the Blockly workspace for Music Lab. Provides functions to setup the
@@ -39,12 +40,8 @@ export default class MusicBlocklyWorkspace {
   constructor() {
     this.codeHooks = {};
     this.compiledEvents = null;
+    this.triggerIdToStartType = {};
     this.lastExecutedEvents = null;
-    this.channel = {};
-    this.projectManager = null;
-    this.levelChangeManager = new LevelChangeManager(
-      this.resetProject.bind(this)
-    );
   }
 
   triggerIdToEvent = id => `triggeredAtButton-${id}`;
@@ -57,24 +54,8 @@ export default class MusicBlocklyWorkspace {
    * @param {*} onBlockSpaceChange callback fired when any block space change events occur
    * @param {*} player reference to a {@link MusicPlayer}
    * @param {*} toolboxAllowList optional object with allowed toolbox entries
-   * @param {*} currentLevelId optional level id for the current level
-   * @param {*} currentScriptId optional script id for the current script
-   * @param {*} channelId optional channel id for the current channel
-   *
-   * Either currentLevelId or channelId must be provided. If currentLevelId is provided,
-   * currentScriptId may optionally be provided as well. If channelId is provided, the
-   * project manager will be created for that channel id. Otherwise, we will get the channel
-   * for the given level and script.
    */
-  async init(
-    container,
-    onBlockSpaceChange,
-    player,
-    toolboxAllowList,
-    currentLevelId,
-    currentScriptId,
-    channelId
-  ) {
+  init(container, onBlockSpaceChange, player, toolboxAllowList) {
     this.container = container;
 
     Blockly.Extensions.register(
@@ -139,14 +120,6 @@ export default class MusicBlocklyWorkspace {
 
     this.resizeBlockly();
 
-    // Set initial blocks.
-    this.projectManager = await this.getProjectManager(
-      channelId,
-      currentLevelId,
-      currentScriptId
-    );
-    this.loadCode();
-
     Blockly.addChangeListener(Blockly.mainBlockSpace, onBlockSpaceChange);
 
     this.workspace.registerButtonCallback('createVariableHandler', button => {
@@ -177,6 +150,7 @@ export default class MusicBlocklyWorkspace {
     Blockly.getGenerator().init(this.workspace);
 
     this.compiledEvents = {};
+    this.triggerIdToStartType = {};
 
     const topBlocks = this.workspace.getTopBlocks();
 
@@ -273,6 +247,10 @@ export default class MusicBlocklyWorkspace {
             Blockly.JavaScript.blockToCode(block) + functionImplementationsCode,
           args: ['startPosition'],
         };
+        // Also save the value of the trigger start field at compile time so we can
+        // compute the correct start time at each invocation.
+        this.triggerIdToStartType[this.triggerIdToEvent(id)] =
+          block.getFieldValue(FIELD_TRIGGER_START_NAME);
       }
     });
 
@@ -309,7 +287,7 @@ export default class MusicBlocklyWorkspace {
    */
   executeCompiledSong(triggerEvents = []) {
     if (this.compiledEvents === null) {
-      console.warn('executeCompiledSong called before compileSong.');
+      logWarning('executeCompiledSong called before compileSong.');
       return;
     }
 
@@ -345,11 +323,33 @@ export default class MusicBlocklyWorkspace {
     }
   }
 
-  getProject() {
-    return {
-      source: Blockly.serialization.workspaces.save(this.workspace),
-      channel: this.channel,
-    };
+  hasTrigger(id) {
+    return !!this.codeHooks[this.triggerIdToEvent(id)];
+  }
+
+  /**
+   * Given the exact current playback position, get the start position of the trigger,
+   * adjusted based on when the trigger should play (immediately, next beat, or next measure).
+   */
+  getTriggerStartPosition(id, currentPosition) {
+    const triggerStart = this.triggerIdToStartType[this.triggerIdToEvent(id)];
+    if (!triggerStart) {
+      console.warn('No compiled trigger with ID: ' + id);
+      return;
+    }
+
+    switch (triggerStart) {
+      case TriggerStart.IMMEDIATELY:
+        return currentPosition;
+      case TriggerStart.NEXT_BEAT:
+        return Math.ceil(currentPosition * 4) / 4;
+      case TriggerStart.NEXT_MEASURE:
+        return Math.ceil(currentPosition);
+    }
+  }
+
+  getCode() {
+    return Blockly.serialization.workspaces.save(this.workspace);
   }
 
   getAllBlocks() {
@@ -385,125 +385,28 @@ export default class MusicBlocklyWorkspace {
     return 'musicLabSavedCode' + getBlockMode();
   }
 
-  async loadCode() {
-    const projectResponse = await this.projectManager.load();
-    if (!projectResponse.ok) {
-      if (projectResponse.status === 404) {
-        // This is expected if the user has never saved before.
-        this.loadDefaultCode();
-      }
-
-      // TODO: Error handling
-      return;
-    }
-
-    const {source, channel} = await projectResponse.json();
-    this.channel = channel;
-    if (source && source.source) {
-      const existingCodeJson = JSON.parse(source.source);
-      Blockly.serialization.workspaces.load(existingCodeJson, this.workspace);
-    } else {
-      this.loadDefaultCode();
-    }
+  // Load the workspace with the given code, and call save.
+  loadCode(code) {
+    Blockly.serialization.workspaces.load(code, this.workspace);
+    this.saveCode();
   }
 
   saveCode(forceSave = false) {
-    this.projectManager.save(this.getProject(), forceSave);
-  }
-
-  hasUnsavedChanges() {
-    return this.projectManager.hasUnsavedChanges();
-  }
-
-  /**
-   * Change levels to the given level and script. Handles cleanup of the old level and
-   * calls loads code for the new level and script.
-   * @param {*} newLevelId Id of new level
-   * @param {*} newScriptId Id of new script. Can be undefined if this level does
-   * not have a script.
-   */
-  async changeLevels(newLevelId, newScriptId) {
-    await this.levelChangeManager.changeLevel(
-      this.getProject(),
-      this.projectManager,
-      newLevelId,
-      newScriptId
-    );
-  }
-
-  /**
-   * Create a new project manager and load code for the new level and script.
-   * @param {*} newLevelId Id of new level
-   * @param {*} newScriptId Id of new script. Can be undefined if this level does
-   * not have a script.
-   */
-  async resetProject(newLevelId, newScriptId) {
-    this.projectManager = await this.getProjectManager(
-      undefined,
-      newLevelId,
-      newScriptId
-    );
-    await this.loadCode();
-  }
-
-  loadDefaultCode() {
-    const defaultCodeFilename = 'defaultCode' + getBlockMode();
-    const defaultCode = require(`@cdo/static/music/${defaultCodeFilename}.json`);
-    Blockly.serialization.workspaces.load(defaultCode, this.workspace);
-    this.saveCode();
+    LabRegistry.getInstance()
+      .getProjectManager()
+      .save(this.getCode(), forceSave);
   }
 
   callUserGeneratedCode(fn, args = []) {
     try {
       fn.call(this, ...args);
     } catch (e) {
-      // swallow error. should we also log this somewhere?
-      if (console) {
-        console.log(e);
-      }
+      logError(e);
     }
   }
 
   updateToolbox(allowList) {
     const toolbox = getToolbox(allowList);
     this.workspace.updateToolbox(toolbox);
-  }
-
-  // Get the project manager for the current storage type.
-  // If no storage type is specified in AppConfig, use remote storage.
-  async getProjectManager(channelId, currentLevelId, currentScriptId) {
-    let storageType = AppConfig.getValue('storage-type');
-    if (!storageType) {
-      storageType = REMOTE_STORAGE;
-    }
-    storageType = storageType.toLowerCase();
-    const projectManagerStorageType =
-      storageType === LOCAL_STORAGE
-        ? ProjectManagerStorageType.LOCAL
-        : ProjectManagerStorageType.REMOTE;
-    if (projectManagerStorageType === ProjectManagerStorageType.LOCAL) {
-      // If we're using local storage, we will always define the channel ID as
-      // the local storage key name.
-      channelId = this.getLocalStorageKeyName();
-    }
-
-    // If we have a channel id, create a project manager with that channel id.
-    // Otherwise, create a project manager with the current level id and script.
-    if (channelId) {
-      return ProjectManagerFactory.getProjectManager(
-        projectManagerStorageType,
-        channelId
-      );
-    } else {
-      return await ProjectManagerFactory.getProjectManagerForLevel(
-        projectManagerStorageType,
-        currentLevelId,
-        currentScriptId
-      );
-    }
-  }
-
-  addSaveEventListener(event, listener) {
-    this.projectManager.addEventListener(event, listener);
   }
 }

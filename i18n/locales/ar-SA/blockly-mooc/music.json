@@ -42,7 +42,7 @@
   "blockly_toolboxCategoryFunctions": "دوال",
   "blockly_toolboxCategoryLogic": "المنطق",
   "blockly_toolboxCategoryMath": "العمليات الحسابية",
-  "blockly_toolboxCategoryPlay": "العب",
+  "blockly_toolboxCategoryPlay": "الأصوات",
   "blockly_toolboxCategorySimple": "بسيط",
   "blockly_toolboxCategoryTracks": "المسارات",
   "blockly_toolboxCategoryVariables": "المتغيرات",
@@ -54,5 +54,7 @@
   "share": "المشاركة",
   "shareComingSoon": "المشاركة قيد الإنشاء. تحقق مرة أخرى قريبًا.",
   "startOver": "البدء من جديد",
-  "upload": "تحميل"
+  "upload": "تحميل",
+  "panelHeaderInstructions": "التعليمات",
+  "panelHeaderWorkspace": "مساحة العمل: "
 }

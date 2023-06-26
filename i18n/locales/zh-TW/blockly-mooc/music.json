@@ -42,7 +42,7 @@
   "blockly_toolboxCategoryFunctions": "函式",
   "blockly_toolboxCategoryLogic": "邏輯",
   "blockly_toolboxCategoryMath": "運算",
-  "blockly_toolboxCategoryPlay": "開始遊戲",
+  "blockly_toolboxCategoryPlay": "聲音",
   "blockly_toolboxCategorySimple": "簡單",
   "blockly_toolboxCategoryTracks": "曲目",
   "blockly_toolboxCategoryVariables": "變數",
@@ -54,5 +54,7 @@
   "share": "分享",
   "shareComingSoon": "共享正在建設中。請稍後再回來查看。",
   "startOver": "重新開始",
-  "upload": "上傳"
+  "upload": "上傳",
+  "panelHeaderInstructions": "操作說明",
+  "panelHeaderWorkspace": "工作區："
 }

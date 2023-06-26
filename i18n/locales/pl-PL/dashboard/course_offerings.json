@@ -1,12 +1,4 @@
 {
-  "coursea": "Kurs A",
-  "courseb": "Kurs B",
-  "coursec": "Kurs C",
-  "coursed": "Kurs D",
-  "coursee": "Kurs E",
-  "coursef": "Kurs F",
-  "express": "Kurs ekspresowy",
-  "pre-express": "Szybki kurs dla dzieci, które nie umieją czytać",
   "csd": "Odkrycia Informatyczne",
   "csp": "Zasady informatyki",
   "csa": "Informatyka A",
@@ -21,7 +13,6 @@
   "applab-intro": "Wprowadzenie do App Lab",
   "aquatic": "Minecraft: Wodna podróż",
   "artist": "Artysta",
-  "basketball": "Wybierz swoją drużynę i zrób grę w koszykówkę",
   "code-break-younger": "Code Break dla młodszych uczniów",
   "code-break": "Code Break",
   "course1": "Kurs 1",
@@ -63,6 +54,7 @@
   "dance-unplugged": "Godzina Kodowania - Potańcówka - Bez komputera",
   "outbreak-csc": "Epidemia",
   "poem-art": "Sztuka poezji ",
+  "poetry": "Informatyka i Poezja",
   "hello-world-animals": "Witaj świecie",
   "hello-world-emoji": "Witaj świecie",
   "hello-world-food": "Witaj świecie",
@@ -406,5 +398,11 @@
   "pl-csd-summer": "pl-csd-summer",
   "self-paced-pl-csd": "self-paced-pl-csd",
   "self-paced-pl-microbit": "self-paced-pl-microbit",
-  "seesaw-adaptations": "seesaw-adaptations"
+  "seesaw-adaptations": "seesaw-adaptations",
+  "ey-ecosystems": "ey-ecosystems",
+  "self-paced-pl-csp": "self-paced-pl-csp",
+  "musiclab": "musiclab",
+  "csa-software-engineering": "csa-software-engineering",
+  "csa-frq-practice": "csa-frq-practice",
+  "hoc-amazon-poc": "hoc-amazon-poc"
 }

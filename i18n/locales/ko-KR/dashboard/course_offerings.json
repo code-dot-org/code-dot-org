@@ -1,12 +1,4 @@
 {
-  "coursea": "과정 A",
-  "courseb": "과정 B",
-  "coursec": "과정 C",
-  "coursed": "과정 D",
-  "coursee": "과정 E",
-  "coursef": "과정 F",
-  "express": "익스프레스 과정",
-  "pre-express": "프리 리더 익스프레스",
   "csd": "컴퓨터 과학 발견",
   "csp": "컴퓨터 과학 원리",
   "20-hour": "20 시간 소개 과정",
@@ -15,9 +7,8 @@
   "algebrab": "대수학 영역의 컴퓨터 과학: 과정 B",
   "algebra": "대수학 영역의 컴퓨터 과학",
   "applab-intro": "앱 랩 소개",
-  "aquatic": "마인크래프트: 보야지 아쿠아틱",
+  "aquatic": "마인크래프트: 수중 항해",
   "artist": "예술가",
-  "basketball": "팀을 선택하고 농구경기를 하세요",
   "code-break-younger": "저학년 학생용 코드 브레이트",
   "code-break": "코드 브레이크",
   "course1": "과정1",
@@ -37,6 +28,7 @@
   "fit2019-apprentice": "2019 여름 워크숍 수습생 성찰",
   "frozen": "안나, 엘사와 함께하는 코드",
   "gumball": "검볼 Play Lab",
+  "hero": "마인크래프트: 히어로의 여정",
   "hourofcode": "고전 미로게임",
   "iceage": "아이스 에이지 Play Lab",
   "infinity": "디즈니  무한 반복 Play lab",
@@ -73,5 +65,6 @@
   "soccer": "축구",
   "hello-world-space": "헬로 월드: 스페이스",
   "hello-world-soccer": "헬로 월드: 축구",
-  "playground": "운동장"
+  "playground": "운동장",
+  "design-process": "설계 프로세스"
 }

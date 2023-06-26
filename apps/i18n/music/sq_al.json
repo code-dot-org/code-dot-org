@@ -41,7 +41,7 @@
   "blockly_toolboxCategoryFunctions": "funksione",
   "blockly_toolboxCategoryLogic": "Logjikë",
   "blockly_toolboxCategoryMath": "Matematikë",
-  "blockly_toolboxCategoryPlay": "Luaj",
+  "blockly_toolboxCategoryPlay": "Zërat",
   "blockly_toolboxCategorySimple": "Thjeshtë",
   "blockly_toolboxCategoryTracks": "Gjurmët",
   "blockly_toolboxCategoryVariables": "variabla",
@@ -51,5 +51,7 @@
   "chordTogether": "Së bashku",
   "share": "Shpërndaje",
   "shareComingSoon": "Ndarja është në ndërtim e sipër. Kontrolloni përsëri së shpejti.",
-  "startOver": "Fillo nga fillimi "
+  "startOver": "Fillo nga fillimi ",
+  "panelHeaderInstructions": "Udhëzimet",
+  "panelHeaderWorkspace": "Vendi i punës: "
 }

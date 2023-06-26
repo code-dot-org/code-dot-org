@@ -31,46 +31,48 @@ uk:
           GROUP:
             sprites: усі
             '"ALIEN"': прибульці
-            '"BEAR"': Ведмеді
+            '"BEAR"': ведмеді
             '"CAT"': коти
             '"DOG"': собаки
-            '"DUCK"': Качки
-            '"FROG"': Жаби
+            '"DUCK"': качки
+            '"FROG"': жаби
             '"MOOSE"': лосі
-            '"PINEAPPLE"': Ананаси
+            '"PINEAPPLE"': ананаси
             '"ROBOT"': роботи
-            '"SHARK"': Акули
-            '"SLOTH"': лінивець
-            '"UNICORN"': всі єдинороги
+            '"SHARK"': акули
+            '"SLOTH"': лінивці
+            '"UNICORN"': єдинороги
           MOVE1:
             MOVES.Roll: Хвиля
             MOVES.ClapHigh: Плескання вгорі
             MOVES.Dab: Деб
             MOVES.DoubleJam: Подвійний вниз
-            MOVES.Drop: Дроп
+            MOVES.Drop: Відпустити
             MOVES.Floss: Флосс
             MOVES.Fresh: Фреш
             MOVES.Clown: Гангнам
             MOVES.Kick: Зірка
             MOVES.ThisOrThat: Це або те
+            MOVES.Thriller: Зомбі
             MOVES.Rest: Немає
           MOVE2:
             MOVES.Roll: Хвиля
             MOVES.ClapHigh: Плескання вгорі
             MOVES.Dab: Деб
             MOVES.DoubleJam: Подвійний вниз
-            MOVES.Drop: Дроп
+            MOVES.Drop: Відпустити
             MOVES.Floss: Флосс
             MOVES.Fresh: Фреш
             MOVES.Clown: Гангнам
             MOVES.Kick: Зірка
             MOVES.ThisOrThat: Це або те
+            MOVES.Thriller: Зомбі
             MOVES.Rest: Немає
       Dancelab_atTimestamp:
         text: після {TIMESTAMP} {UNIT}
         options:
           UNIT:
-            '"measures"': кроків
+            '"measures"': такти
             '"seconds"': секунди
       Dancelab_changeColorBy:
         text: змінити {COLOR} {METHOD} на {AMOUNT}
@@ -80,22 +82,22 @@ uk:
             '"saturation"': насиченість
             '"brightness"': яскравість
       Dancelab_changeMoveEachLR:
-        text: "{GROUP} виконувати рух {MOVE} {DIR} завжди"
+        text: "{GROUP} виконувати рух {MOVE} {DIR} постійно"
         options:
           GROUP:
             sprites: усі
             '"ALIEN"': прибульці
-            '"BEAR"': Ведмеді
+            '"BEAR"': ведмеді
             '"CAT"': коти
             '"DOG"': собаки
-            '"DUCK"': Качки
-            '"FROG"': Жаби
+            '"DUCK"': качки
+            '"FROG"': жаби
             '"MOOSE"': лосі
-            '"PINEAPPLE"': Ананаси
+            '"PINEAPPLE"': ананаси
             '"ROBOT"': роботи
-            '"SHARK"': Акули
-            '"SLOTH"': лінивець
-            '"UNICORN"': всі єдинороги
+            '"SHARK"': акули
+            '"SLOTH"': лінивці
+            '"UNICORN"': єдинороги
           MOVE:
             '"next"': "(Наступний)"
             '"prev"': "(Попередній)"
@@ -104,15 +106,16 @@ uk:
             MOVES.ClapHigh: Плескання вгорі
             MOVES.Dab: Деб
             MOVES.DoubleJam: Подвійний вниз
-            MOVES.Drop: Дроп
+            MOVES.Drop: Відпустити
             MOVES.Floss: Флосс
             MOVES.Fresh: Фреш
             MOVES.Clown: Гангнам
             MOVES.Kick: Зірка
             MOVES.ThisOrThat: Це або те
+            MOVES.Thriller: Зомбі
             MOVES.Rest: Немає
       Dancelab_changeMoveLR:
-        text: "{SPRITE} виконувати рух {MOVE} {DIR} завжди"
+        text: "{SPRITE} виконувати рух {MOVE} {DIR} постійно"
         options:
           MOVE:
             '"next"': "(Наступний)"
@@ -122,12 +125,13 @@ uk:
             MOVES.ClapHigh: Плескання вгорі
             MOVES.Dab: Деб
             MOVES.DoubleJam: Подвійний вниз
-            MOVES.Drop: Дроп
+            MOVES.Drop: Відпустити
             MOVES.Floss: Флосс
             MOVES.Fresh: Фреш
             MOVES.Clown: Гангнам
             MOVES.Kick: Зірка
             MOVES.ThisOrThat: Це або те
+            MOVES.Thriller: Зомбі
             MOVES.Rest: Немає
       Dancelab_changePropBy:
         text: змінити {SPRITE} {PROPERTY} на {VAL}
@@ -145,17 +149,17 @@ uk:
           GROUP:
             sprites: усі
             '"ALIEN"': прибульці
-            '"BEAR"': Ведмеді
+            '"BEAR"': ведмеді
             '"CAT"': коти
             '"DOG"': собаки
-            '"DUCK"': Качки
-            '"FROG"': Жаби
+            '"DUCK"': качки
+            '"FROG"': жаби
             '"MOOSE"': лосі
-            '"PINEAPPLE"': Ананаси
+            '"PINEAPPLE"': ананаси
             '"ROBOT"': роботи
-            '"SHARK"': Акули
-            '"SLOTH"': лінивець
-            '"UNICORN"': всі єдинороги
+            '"SHARK"': акули
+            '"SLOTH"': лінивці
+            '"UNICORN"': єдинороги
           PROPERTY:
             '"scale"': розмір
             '"width"': ширина
@@ -164,22 +168,22 @@ uk:
             '"x"': горизонтальне положення
             '"y"': вертикальне положення
       Dancelab_doMoveEachLR:
-        text: "{GROUP} виконує рух {MOVE} {DIR} один раз"
+        text: "{GROUP} виконують рух {MOVE} {DIR} один раз"
         options:
           GROUP:
             sprites: усі
             '"ALIEN"': прибульці
-            '"BEAR"': Ведмеді
+            '"BEAR"': ведмеді
             '"CAT"': коти
             '"DOG"': собаки
-            '"DUCK"': Качки
-            '"FROG"': Жаби
+            '"DUCK"': качки
+            '"FROG"': жаби
             '"MOOSE"': лосі
-            '"PINEAPPLE"': Ананаси
+            '"PINEAPPLE"': ананаси
             '"ROBOT"': роботи
-            '"SHARK"': Акули
-            '"SLOTH"': лінивець
-            '"UNICORN"': всі єдинороги
+            '"SHARK"': акули
+            '"SLOTH"': лінивці
+            '"UNICORN"': єдинороги
           MOVE:
             '"rand"': "(Випадковий)"
             MOVES.XBend: Вигин
@@ -189,7 +193,7 @@ uk:
             MOVES.Dab: Деб
             MOVES.XFever: Диско
             MOVES.DoubleJam: Подвійний вниз
-            MOVES.Drop: Дроп
+            MOVES.Drop: Відпустити
             MOVES.Floss: Флосс
             MOVES.Fresh: Фреш
             MOVES.Clown: Гангнам
@@ -204,6 +208,7 @@ uk:
             MOVES.Kick: Зірка
             MOVES.XArmsUp: Руки вгору
             MOVES.ThisOrThat: Це або те
+            MOVES.Thriller: Зомбі
             MOVES.Rest: Немає
       Dancelab_doMoveLR:
         text: "{SPRITE} виконує рух {MOVE} {DIR} один раз"
@@ -217,7 +222,7 @@ uk:
             MOVES.Dab: Деб
             MOVES.XFever: Диско
             MOVES.DoubleJam: Подвійний вниз
-            MOVES.Drop: Дроп
+            MOVES.Drop: Відпустити
             MOVES.Floss: Флосс
             MOVES.Fresh: Фреш
             MOVES.Clown: Гангнам
@@ -232,12 +237,13 @@ uk:
             MOVES.Kick: Зірка
             MOVES.XArmsUp: Руки вгору
             MOVES.ThisOrThat: Це або те
+            MOVES.Thriller: Зомбі
             MOVES.Rest: Немає
       Dancelab_everySeconds:
         text: 'повторювати кожні {N} {UNIT} '
         options:
           UNIT:
-            '"measures"': кроків
+            '"measures"': такти
             '"seconds"': секунди
       Dancelab_everyVerseChorus:
         text: 'кожні {UNIT} '
@@ -267,7 +273,7 @@ uk:
         text: "{UNIT} минуло"
         options:
           UNIT:
-            '"measures"': кроків
+            '"measures"': такти
             '"seconds"': секунди
       Dancelab_ifDanceIs:
         text: |-
@@ -279,12 +285,13 @@ uk:
             MOVES.Clown: Гангнам
             MOVES.Dab: Деб
             MOVES.DoubleJam: Подвійний вниз
-            MOVES.Drop: Дроп
+            MOVES.Drop: Відпустити
             MOVES.Floss: Флосс
             MOVES.Fresh: Фреш
             MOVES.Roll: Хвиля
             MOVES.Kick: Зірка
             MOVES.ThisOrThat: Це або те
+            MOVES.Thriller: Зомбі
             MOVES.Rest: Немає
       Dancelab_ifTime:
         text: |-
@@ -292,7 +299,7 @@ uk:
           {DO1} {DO2}
         options:
           UNIT:
-            '"measures"': кроків
+            '"measures"': такти
             '"seconds"': секунди
           OP:
             '">"': ">"
@@ -318,17 +325,17 @@ uk:
           GROUP:
             sprites: усі
             '"ALIEN"': прибульці
-            '"BEAR"': Ведмеді
+            '"BEAR"': ведмеді
             '"CAT"': коти
             '"DOG"': собаки
-            '"DUCK"': Качки
-            '"FROG"': Жаби
+            '"DUCK"': качки
+            '"FROG"': жаби
             '"MOOSE"': лосі
-            '"PINEAPPLE"': Ананаси
+            '"PINEAPPLE"': ананаси
             '"ROBOT"': роботи
-            '"SHARK"': Акули
-            '"SLOTH"': лінивець
-            '"UNICORN"': всі єдинороги
+            '"SHARK"': акули
+            '"SLOTH"': лінивці
+            '"UNICORN"': єдинороги
           LOCATION:
             "{x: 200, y: 100}": вгорі
             "{x: 200, y: 300}": вниз
@@ -346,17 +353,17 @@ uk:
           GROUP:
             sprites: усі
             '"ALIEN"': прибульці
-            '"BEAR"': Ведмеді
+            '"BEAR"': ведмеді
             '"CAT"': коти
             '"DOG"': собаки
-            '"DUCK"': Качки
-            '"FROG"': Жаби
+            '"DUCK"': качки
+            '"FROG"': жаби
             '"MOOSE"': лосі
-            '"PINEAPPLE"': Ананаси
+            '"PINEAPPLE"': ананаси
             '"ROBOT"': роботи
-            '"SHARK"': Акули
-            '"SLOTH"': лінивець
-            '"UNICORN"': всі єдинороги
+            '"SHARK"': акули
+            '"SLOTH"': лінивці
+            '"UNICORN"': єдинороги
           FORMAT:
             '"border"': рамка
             '"inner"': внутрішній квадрат
@@ -371,6 +378,7 @@ uk:
             '"right"': права колона
             '"x"': хрестик
             '"plus"': плюс
+            '"infinity"': безконечна лінія
             '"random"': випадковий
       Dancelab_makeAnonymousDanceSprite:
         text: створити нового {COSTUME} в {LOCATION}
@@ -405,18 +413,18 @@ uk:
           з іменем {NAME} розмістивши у {LOCATION}
         options:
           COSTUME:
-            '"ALIEN"': інопланетянин
-            '"BEAR"': Ведмідь
-            '"CAT"': кіт
-            '"DOG"': пес
+            '"ALIEN"': інопланетянина
+            '"BEAR"': ведмедя
+            '"CAT"': кота
+            '"DOG"': собаку
             '"DUCK"': качку
-            '"FROG"': Жаба
-            '"MOOSE"': лосі
-            '"PINEAPPLE"': Ананас
-            '"ROBOT"': робот
-            '"SHARK"': Акула
+            '"FROG"': жабу
+            '"MOOSE"': лося
+            '"PINEAPPLE"': ананаса
+            '"ROBOT"': робота
+            '"SHARK"': акулу
             '"SLOTH"': лінивець
-            '"UNICORN"': єдиноріг
+            '"UNICORN"': єдинорога
           LOCATION:
             "{x: 200, y: 100}": вгорі
             "{x: 200, y: 300}": вниз
@@ -474,18 +482,18 @@ uk:
             '39': '39'
             '40': '40'
           COSTUME:
-            '"ALIEN"': прибульці
-            '"BEAR"': Ведмеді
-            '"CAT"': коти
-            '"DOG"': собаки
-            '"DUCK"': Качки
-            '"FROG"': Жаби
-            '"MOOSE"': лосі
-            '"PINEAPPLE"': Ананаси
-            '"ROBOT"': роботи
-            '"SHARK"': Акули
-            '"SLOTH"': лінивець
-            '"UNICORN"': всі єдинороги
+            '"ALIEN"': прибульців
+            '"BEAR"': ведмеді
+            '"CAT"': котів
+            '"DOG"': собак
+            '"DUCK"': качки
+            '"FROG"': жаб
+            '"MOOSE"': лосів
+            '"PINEAPPLE"': ананаси
+            '"ROBOT"': роботів
+            '"SHARK"': акули
+            '"SLOTH"': лінивці
+            '"UNICORN"': єдинороги
           LAYOUT:
             '"border"': рамка
             '"inner"': внутрішній квадрат
@@ -500,11 +508,12 @@ uk:
             '"right"': права колона
             '"x"': хрестик
             '"plus"': плюс
+            '"infinity"': безконечна лінія
             '"random"': випадковий
       Dancelab_mixColors:
         text: змішати {COLOR1} та {COLOR2}
       Dancelab_nMeasures:
-        text: "{N} кроків"
+        text: "{N} тактів"
       Dancelab_onPointerDown:
         text: коли вказівник вниз
       Dancelab_onPointerDrag:
@@ -536,7 +545,7 @@ uk:
             '"text"': Назва пісні
             '"galaxy"': Відступ
             '"sparkles"': Блискітки
-            '"spiral"': Спіраль
+            '"spiral"': спіраль
             '"disco"': Квадрати
             '"stars"': Зірки
           PALETTE:
@@ -565,6 +574,7 @@ uk:
             '"fireworks"': Феєрверк
             '"flowers"': Квіти
             '"growing_stars"': Зірки, які ростуть
+            '"higher_power"': Вища сила
             '"swirl"': Гіпноз
             '"kaleidoscope"': Калейдоскоп
             '"lasers"': Лазерний танцпол
@@ -577,7 +587,7 @@ uk:
             '"squiggles"': Звивання
             '"galaxy"': Відступ
             '"sparkles"': Блискітки
-            '"spiral"': Спіраль
+            '"spiral"': спіраль
             '"disco"': Квадрати
             '"stars"': Зірки
             '"music_wave"': Хвилі
@@ -606,17 +616,17 @@ uk:
           GROUP:
             sprites: усі
             '"ALIEN"': прибульці
-            '"BEAR"': Ведмеді
+            '"BEAR"': ведмеді
             '"CAT"': коти
             '"DOG"': собаки
-            '"DUCK"': Качки
-            '"FROG"': Жаби
+            '"DUCK"': качки
+            '"FROG"': жаби
             '"MOOSE"': лосі
-            '"PINEAPPLE"': Ананаси
+            '"PINEAPPLE"': ананаси
             '"ROBOT"': роботи
-            '"SHARK"': Акули
-            '"SLOTH"': лінивець
-            '"UNICORN"': всі єдинороги
+            '"SHARK"': акули
+            '"SLOTH"': лінивці
+            '"UNICORN"': єдинороги
           SPEED:
             '1': нормальний
             '2': швидко
@@ -680,17 +690,17 @@ uk:
           GROUP:
             sprites: усі
             '"ALIEN"': прибульці
-            '"BEAR"': Ведмеді
+            '"BEAR"': ведмеді
             '"CAT"': коти
             '"DOG"': собаки
-            '"DUCK"': Качки
-            '"FROG"': Жаби
+            '"DUCK"': качки
+            '"FROG"': жаби
             '"MOOSE"': лосі
-            '"PINEAPPLE"': Ананаси
+            '"PINEAPPLE"': ананаси
             '"ROBOT"': роботи
-            '"SHARK"': Акули
-            '"SLOTH"': лінивець
-            '"UNICORN"': всі єдинороги
+            '"SHARK"': акули
+            '"SLOTH"': лінивці
+            '"UNICORN"': єдинороги
           PROPERTY:
             '"scale"': розмір
             '"width"': ширина
@@ -716,17 +726,17 @@ uk:
           GROUP:
             sprites: усі
             '"ALIEN"': прибульці
-            '"BEAR"': Ведмеді
+            '"BEAR"': ведмеді
             '"CAT"': коти
             '"DOG"': собаки
-            '"DUCK"': Качки
-            '"FROG"': Жаби
+            '"DUCK"': качки
+            '"FROG"': жаби
             '"MOOSE"': лосі
-            '"PINEAPPLE"': Ананаси
+            '"PINEAPPLE"': ананаси
             '"ROBOT"': роботи
-            '"SHARK"': Акули
-            '"SLOTH"': лінивець
-            '"UNICORN"': всі єдинороги
+            '"SHARK"': акули
+            '"SLOTH"': лінивці
+            '"UNICORN"': єдинороги
           PROPERTY:
             '"scale"': розмір
             '"width"': ширина
@@ -743,34 +753,34 @@ uk:
           THIS:
             sprites: усі
             '"ALIEN"': прибульці
-            '"BEAR"': Ведмеді
+            '"BEAR"': ведмеді
             '"CAT"': коти
             '"DOG"': собаки
-            '"DUCK"': Качки
-            '"FROG"': Жаби
+            '"DUCK"': качки
+            '"FROG"': жаби
             '"MOOSE"': лосі
-            '"PINEAPPLE"': Ананаси
+            '"PINEAPPLE"': ананаси
             '"ROBOT"': роботи
-            '"SHARK"': Акули
-            '"SLOTH"': лінивець
-            '"UNICORN"': всі єдинороги
+            '"SHARK"': акули
+            '"SLOTH"': лінивці
+            '"UNICORN"': єдинороги
       Dancelab_setTintEachInline:
         text: встановити для {THIS} відтінок у {VAL}
         options:
           THIS:
             sprites: усі
             '"ALIEN"': прибульці
-            '"BEAR"': Ведмеді
+            '"BEAR"': ведмеді
             '"CAT"': коти
             '"DOG"': собаки
-            '"DUCK"': Качки
-            '"FROG"': Жаби
+            '"DUCK"': качки
+            '"FROG"': жаби
             '"MOOSE"': лосі
-            '"PINEAPPLE"': Ананаси
+            '"PINEAPPLE"': ананаси
             '"ROBOT"': роботи
-            '"SHARK"': Акули
-            '"SLOTH"': лінивець
-            '"UNICORN"': всі єдинороги
+            '"SHARK"': акули
+            '"SLOTH"': лінивці
+            '"UNICORN"': єдинороги
       Dancelab_setTintInline:
         text: встановити для {SPRITE} відтінок {VAL}
       Dancelab_setVisible:
@@ -785,17 +795,17 @@ uk:
           THIS:
             sprites: усі
             '"ALIEN"': прибульці
-            '"BEAR"': Ведмеді
+            '"BEAR"': ведмеді
             '"CAT"': коти
             '"DOG"': собаки
-            '"DUCK"': Качки
-            '"FROG"': Жаби
+            '"DUCK"': качки
+            '"FROG"': жаби
             '"MOOSE"': лосі
-            '"PINEAPPLE"': Ананаси
+            '"PINEAPPLE"': ананаси
             '"ROBOT"': роботи
-            '"SHARK"': Акули
-            '"SLOTH"': лінивець
-            '"UNICORN"': всі єдинороги
+            '"SHARK"': акули
+            '"SLOTH"': лінивці
+            '"UNICORN"': єдинороги
           VISIBILITY:
             'true': видимий
             'false': невидимий
@@ -820,17 +830,17 @@ uk:
           GROUP:
             sprites: усі
             '"ALIEN"': прибульці
-            '"BEAR"': Ведмеді
+            '"BEAR"': ведмеді
             '"CAT"': коти
             '"DOG"': собаки
-            '"DUCK"': Качки
-            '"FROG"': Жаби
+            '"DUCK"': качки
+            '"FROG"': жаби
             '"MOOSE"': лосі
-            '"PINEAPPLE"': Ананаси
+            '"PINEAPPLE"': ананаси
             '"ROBOT"': роботи
-            '"SHARK"': Акули
-            '"SLOTH"': лінивець
-            '"UNICORN"': всі єдинороги
+            '"SHARK"': акули
+            '"SLOTH"': лінивці
+            '"UNICORN"': єдинороги
           PROPERTY:
             '"scale"': розмір
             '"width"': ширина
@@ -865,17 +875,17 @@ uk:
           GROUP:
             sprites: усі
             '"ALIEN"': прибульці
-            '"BEAR"': Ведмеді
+            '"BEAR"': ведмеді
             '"CAT"': коти
             '"DOG"': собаки
-            '"DUCK"': Качки
-            '"FROG"': Жаби
+            '"DUCK"': качки
+            '"FROG"': жаби
             '"MOOSE"': лосі
-            '"PINEAPPLE"': Ананаси
+            '"PINEAPPLE"': ананаси
             '"ROBOT"': роботи
-            '"SHARK"': Акули
-            '"SLOTH"': лінивець
-            '"UNICORN"': всі єдинороги
+            '"SHARK"': акули
+            '"SLOTH"': лінивці
+            '"UNICORN"': єдинороги
           PROPERTY:
             '"scale"': розмір
             '"width"': ширина
@@ -1336,7 +1346,7 @@ uk:
             "'sound://category_animals/dolphin.mp3'": дельфін
             "'sound://category_animals/dog.mp3'": пес
             "'sound://category_animals/tiger.mp3'": тигр
-            "'sound://category_digital/jump_7.mp3'": стрибок
+            "'sound://category_digital/jump_7.mp3'": стрибнути
       gamelab_playSoundOptionsSoccer:
         text: грати звук {SOUND}
         options:
@@ -1393,7 +1403,7 @@ uk:
       gamelab_removeTint:
         text: зняти колір з {THIS}
       gamelab_repeatForever:
-        text: повторювати завжди
+        text: повторювати постійно
       gamelab_setAnimation:
         text: змінити {THIS} костюм на {ANIMATION}
       gamelab_setBackground:
@@ -1477,10 +1487,10 @@ uk:
         text: змінити колір {THIS} на {COLOR}
       gamelab_setupSim:
         text: |-
-          моделювання установки з
-          {SPRITE1N}{SPRITE1COSTUME}Швидкість{SPRITE1SPEED}
-          {SPRITE2N}{SPRITE2COSTUME}Швидкість{SPRITE2SPEED}
-          Збір
+          налаштування моделі з
+          {SPRITE1N}{SPRITE1COSTUME}швидкість{SPRITE1SPEED}
+          {SPRITE2N}{SPRITE2COSTUME}швидкість{SPRITE2SPEED}
+          збирати
           {SPRITE3N}{SPRITE3COSTUME}
       gamelab_showTitleScreen:
         text: Показати титульний екран {BREAK} Заголовок {TITLE} Текст {SUBTITLE}
@@ -1530,7 +1540,7 @@ uk:
             '"s"': s
             '"d"': d
       gamelab_whenLeftArrow:
-        text: коли натиснуто ліву стрілку
+        text: коли натиснуто стрілку ліворуч
       gamelab_whenPromptAnswered:
         text: коли відповідь {VAR}
       gamelab_whenRightArrow:
@@ -1739,12 +1749,13 @@ uk:
             MOVES.Clown: Гангнам
             MOVES.Dab: Деб
             MOVES.DoubleJam: Подвійний вниз
-            MOVES.Drop: Дроп
+            MOVES.Drop: Відпустити
             MOVES.Floss: Флосс
             MOVES.Fresh: Фреш
             MOVES.Roll: Хвиля
             MOVES.Kick: Зірка
             MOVES.ThisOrThat: Це або те
+            MOVES.Thriller: Зомбі
             MOVES.Rest: Немає
       Mikelab_ifLabel:
         text: |-
@@ -1785,7 +1796,7 @@ uk:
       Mikelab_removeBehaviorSimple:
         text: спрайт {SPRITE} припиняє {BEHAVIOR}
       Mikelab_repeatUntilComplete:
-        text: повторювати завжди
+        text: повторювати постійно
       Mikelab_sendBad:
         text: пересунути об' єкт ліворуч
       Mikelab_sendGood:
@@ -1813,10 +1824,10 @@ uk:
             '"direction"': напрямок руху
       Mikelab_setupSim:
         text: |-
-          моделювання установки з
-          {SPRITE1N}{SPRITE1COSTUME}Швидкість{SPRITE1SPEED}
-          {SPRITE2N}{SPRITE2COSTUME}Швидкість{SPRITE2SPEED}
-          Збір
+          налаштування моделі з
+          {SPRITE1N}{SPRITE1COSTUME}швидкість{SPRITE1SPEED}
+          {SPRITE2N}{SPRITE2COSTUME}швидкість{SPRITE2SPEED}
+          збирати
           {SPRITE3N}{SPRITE3COSTUME}
       Mikelab_showScoreboard:
         options:
@@ -1953,7 +1964,7 @@ uk:
           SOUND:
             '"sound://category_bell/long_bell_notification.mp3"': дзвоник
             '"sound://category_pop/bubble_pop_cluster_2.mp3"': бульбашка
-            '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': стрибок
+            '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': стрибнути
             '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': світло
       Poetry_playSoundOptionsSpace:
         text: грати звук {SOUND}
@@ -2270,6 +2281,8 @@ uk:
             '8': '8'
             '9': '9'
             '10': '10'
+      storylab_printText:
+        text: друкувати {TEXT}
       storylab_setForegroundEffect2:
         options:
           EFFECT:

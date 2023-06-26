@@ -1,8 +1,8 @@
+import {getBrowserName} from '@cdo/apps/util/browser-detector';
+import {isDevelopmentEnvironment} from '@cdo/apps/utils';
 import DashboardMetricsApi from './DashboardMetricsApi';
 import {MetricsApi} from './MetricsApi';
-
-const isDevelopmentEnvironment =
-  require('../../utils').isDevelopmentEnvironment;
+import {LogLevel, MetricDatum, MetricDimension, MetricUnit} from './types';
 
 /**
  * If we receive an unauthorized response from the server, this may
@@ -14,8 +14,6 @@ const CHECK_CAN_REPORT_INTERVAL_MINUTES = 30;
 const CHECK_CAN_REPORT_INTERVAL_MS =
   CHECK_CAN_REPORT_INTERVAL_MINUTES * 60 * 1000;
 const LOCAL_STORAGE_KEY_NAME = 'cdo-metrics-reporter-last-check-time';
-
-type LogLevel = 'INFO' | 'WARNING' | 'SEVERE';
 
 /**
  * Reports logs and metrics, intended primarily for developer-facing
@@ -36,6 +34,9 @@ class MetricsReporter {
       parseInt(localStorage.getItem(LOCAL_STORAGE_KEY_NAME) || '0') || 0;
   }
 
+  /**
+   * Publish an information log message. Can be a string or a structured object
+   */
   logInfo(message: string | object) {
     this.log('INFO', message);
     if (isDevelopmentEnvironment()) {
@@ -43,6 +44,9 @@ class MetricsReporter {
     }
   }
 
+  /**
+   * Publish a warning log message. Can be a string or a structured object
+   */
   logWarning(message: string | object) {
     this.log('WARNING', message);
     if (isDevelopmentEnvironment()) {
@@ -50,6 +54,9 @@ class MetricsReporter {
     }
   }
 
+  /**
+   * Publish an error log message. Can be a string or a structured object
+   */
   logError(message: string | object) {
     this.log('SEVERE', message);
     if (isDevelopmentEnvironment()) {
@@ -57,7 +64,35 @@ class MetricsReporter {
     }
   }
 
-  private log(level: LogLevel, message: string | object) {
+  /**
+   * Increment a counter metric.
+   */
+  incrementCounter(name: string, dimensions: MetricDimension[] = []) {
+    this.publishMetric(name, 1, 'Count', dimensions);
+  }
+
+  /**
+   * Publish a metric.
+   */
+  publishMetric(
+    name: string,
+    value: number,
+    unit: MetricUnit,
+    dimensions: MetricDimension[] = []
+  ) {
+    const metric = {
+      name,
+      value,
+      unit,
+      dimensions: dimensions.concat(this.getDeviceDimensions()),
+    };
+    this.sendMetric(metric);
+    if (isDevelopmentEnvironment()) {
+      console.info('[MetricsReporter] ' + JSON.stringify(metric));
+    }
+  }
+
+  private async log(level: LogLevel, message: string | object) {
     const payload = {
       level,
       message,
@@ -69,17 +104,36 @@ class MetricsReporter {
       return;
     }
 
-    this.metricsApi.sendLogs([payload]).then(response => {
-      if (!response.ok) {
-        this.fallbackLog(payload);
-      }
+    try {
+      await this.metricsApi.sendLogs([payload]);
+    } catch (error) {
+      this.fallbackLog(payload);
+      this.handleError(error as Error);
+    }
+  }
 
-      if (response.status === 401) {
-        // Unauthorized response from server; client logging is likely disabled.
-        // We will check again after a time period of CHECK_CAN_REPORT_INTERVAL
-        this.setReportingDisabled();
-      }
-    });
+  private async sendMetric(metric: MetricDatum) {
+    if (!this.isReportingEnabled()) {
+      this.fallbackLog(metric);
+      return;
+    }
+
+    try {
+      await this.metricsApi.sendMetricData([metric]);
+    } catch (error) {
+      this.fallbackLog(metric);
+      this.handleError(error as Error);
+    }
+  }
+
+  private handleError(error: Error) {
+    if (error.message.includes('401')) {
+      // Unauthorized response from server; client logging is likely disabled.
+      // We will check again after a time period of CHECK_CAN_REPORT_INTERVAL
+      this.setReportingDisabled();
+    } else {
+      console.error(error);
+    }
   }
 
   private getDeviceInfo(): object {
@@ -90,6 +144,23 @@ class MetricsReporter {
       hostname: window.location.hostname,
       full_path: window.location.href,
     };
+  }
+
+  private getDeviceDimensions(): MetricDimension[] {
+    return [
+      {
+        name: 'Hostname',
+        value: window.location.hostname,
+      },
+      {
+        name: 'Browser',
+        value: getBrowserName(),
+      },
+      {
+        name: 'BrowserVersion',
+        value: getBrowserName(true),
+      },
+    ];
   }
 
   private fallbackLog(payload: object) {

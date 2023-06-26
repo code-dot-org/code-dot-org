@@ -2728,6 +2728,8 @@ nl:
               display_name: 'Hoofdstuk 2: Hardware Input'
             lessonGroup-5:
               display_name: Vragenlijst
+        ai-temp:
+          title: Hoe AI werkt
         self-paced-pl-csd1-2023:
           lesson_groups:
             lessonGroup-2:
@@ -2797,3 +2799,7 @@ nl:
               display_name: Variabelen
           description_audience: 'Leeftijden: 9-13'
           description_short: Leer alle concepten in Informatica Fundamentals en creëer je eigen kunst, verhaal of spel.
+        csa-frq-practice:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Lessen

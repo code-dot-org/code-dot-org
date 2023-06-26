@@ -1688,12 +1688,27 @@ FactoryBot.define do
   end
 
   factory :lti_integration do
-    platform_id {"platform_id"}
     issuer {"issuer"}
     client_id {"client_id"}
     platform_name {"platform_name"}
-    auth_redirect_url {"auth_redirect_url"}
+    auth_redirect_url {"http://test.org/auth"}
     jwks_url {"jwks_url"}
     access_token_url {"access_token_url"}
+  end
+
+  factory :lti_user_identity do
+    subject {"subject"}
+    lti_integration {create :lti_integration}
+    user {create :student}
+  end
+
+  factory :lti_deployment do
+    deployment_id {"deployment"}
+    lti_integration {create :lti_integration}
+  end
+
+  factory :parental_permission_request do
+    user {create :student}
+    parent_email {"contact@example.domain"}
   end
 end

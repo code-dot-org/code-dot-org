@@ -87,6 +87,9 @@
             null
           ]
         },
+        "84d5098f-4108-42e8-bc45-4793ac42e81a": {
+          "name": "Τέχνη της Ποίησης"
+        },
         "49994950-2fc5-4779-abd5-2369a402a750": {
           "progression_name": "Καλλιέργεια Δεξιοτήτων"
         },
@@ -417,6 +420,9 @@
           "name": "Εισαγωγή",
           "progression_name": "Εισαγωγή στο Εργαστήρι Εφαρμογών - Βίντεο"
         },
+        "430134f0-2f85-4888-abd3-f55fbf0753da": {
+          "name": "Εισαγωγή στο App Lab"
+        },
         "11f7be58-02e1-4667-84e4-6310924c189d": {
           "progression_name": "Ορίζοντας Ιδιότητες"
         },
@@ -635,6 +641,7 @@
           "progression_name": "Μηχανική Μάθηση Τεχνητή Νοημοσύνη - Βίντεο"
         },
         "fd806d81-ec5e-4b00-a4d5-2a588e64160b": {
+          "name": "Τεχνητή Νοημοσύνη για τους Ωκεανούς",
           "tips": [
             null
           ]
@@ -760,6 +767,9 @@
         "4e14f7ca-7b1a-4769-ae57-9f128722a0dd": {
           "progression_name": "Καλλιέργεια Δεξιοτήτων"
         },
+        "8e887047-0b51-46cf-8c62-4ef56d1b58c0": {
+          "progression_name": "Πρόκληση/Εξάσκηση"
+        },
         "aa5e1de6-0f8d-4e95-82cc-da2f38e8a9ad": {
           "name": "Αντανάκλαση"
         },
@@ -794,11 +804,17 @@
         "0c752c58-d938-43f6-ac3c-a9b4556d12db": {
           "name": "Εισαγωγή"
         },
+        "c2a66127-5945-47ec-938a-f396824349a7": {
+          "name": "Διώρθωση λαθών με την Laurel"
+        },
         "bb78ee6d-4d05-4a4b-90e8-7c6cb6a099dd": {
           "progression_name": "Βίντεο: Αποσφαλμάτωση με το Κουμπί Βήμα"
         },
         "7e3632b0-108a-4179-adf0-89a8e204b031": {
           "progression_name": "Καλλιέργεια Δεξιοτήτων"
+        },
+        "a0c3172d-bf7f-4842-b719-5c987d502489": {
+          "progression_name": "Πρόκληση/Εξάσκηση"
         },
         "9280e14f-90c1-467a-ab01-b3a0d7d42415": {
           "name": "Αντανάκλαση"
@@ -807,6 +823,7 @@
           "name": "Εισαγωγή"
         },
         "5b25dba2-c68c-43c3-814f-98e4e743cf7f": {
+          "name": "Γεγονότα  στο παιχνίδι αναπήδησης",
           "progression_name": "Καλλιέργεια Δεξιοτήτων"
         },
         "16d61ffc-4200-4a4d-b11e-6fffb02ab38b": {
@@ -834,6 +851,7 @@
           "name": "Εισαγωγή"
         },
         "77c010a8-6312-4f5a-a39a-ba6c761ba9ce": {
+          "name": "Δημιουργήστε ένα παιχνίδι Star Wars",
           "progression_name": "Βίντεο: Έργο Star Wars (Πόλεμος των Άστρων)"
         },
         "eb787c9f-ed60-4591-ab5f-b76a25cf26b3": {
@@ -919,7 +937,7 @@
           "progression_name": "Καλλιέργεια Δεξιοτήτων"
         },
         "8a2827d2-9dd0-4b84-9694-f7f4733543d5": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "41598a45-8c65-4392-a301-07c4a61a2abd": {
           "progression_name": "Εξάσκηση"
@@ -939,6 +957,7 @@
           "name": "Εισαγωγή"
         },
         "bc19ceeb-4c22-40a1-9794-7b0e998b5e78": {
+          "name": "Σχεδίαση σχημάτων με βρόχους",
           "progression_name": "Βίντεο: Εισαγωγή Καλλιτέχνη με τον JR Hildebrand"
         },
         "61fa4607-bb88-4573-8bea-10a12e88181a": {
@@ -951,7 +970,7 @@
           "progression_name": "Καλλιέργεια Δεξιοτήτων"
         },
         "f83fde9f-a2d7-4f99-94fb-ac2fc9b79352": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "3f3774e2-c8fa-4318-9e6e-d58f6983e746": {
           "progression_name": "Εξάσκηση"
@@ -965,11 +984,14 @@
         "9fe5d0e9-dadb-4541-9ebb-5eaa1acc5883": {
           "name": "Εισαγωγή"
         },
+        "2d76e0dc-c660-40b1-b975-d6f00ad0edbf": {
+          "name": "Εμφωλευμένοι Βρόχοι στο λαβύρινθο"
+        },
         "0f7a9d4d-e15d-4efc-a408-644c06c8fcb2": {
           "progression_name": "Καλλιέργεια Δεξιοτήτων"
         },
         "5458d92e-83cc-46e8-8197-4d025e3e090f": {
-          "progression_name": "Βίντεο: 'Ενθετοι/Περιεχόμενοι Βρόχοι με την Μέλισσα"
+          "progression_name": "Βίντεο: Εμφωλευμένοι Βρόχοι με την Μέλισσα"
         },
         "da706b15-71f6-47dd-a6de-f113b509684c": {
           "progression_name": "Πρόβλεψη"
@@ -978,7 +1000,7 @@
           "progression_name": "Καλλιέργεια Δεξιοτήτων"
         },
         "355d4996-c94e-4553-ba72-f3b6faffeaea": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "4dc57979-b524-4f77-818e-2ff70833656b": {
           "progression_name": "Εξάσκηση"
@@ -1013,6 +1035,9 @@
         "ff230610-bef8-421e-b37a-6d77e490ce3e": {
           "name": "Εισαγωγή"
         },
+        "2143fa63-5aea-47af-8684-29aa626fd1d7": {
+          "name": "Κοιτάζοντας μπροστά με το Minecraft"
+        },
         "419b0732-9e07-4ab2-8c48-0fb798dfdfde": {
           "progression_name": "Καλλιέργεια Δεξιοτήτων"
         },
@@ -1020,7 +1045,7 @@
           "progression_name": "Καλλιέργεια Δεξιοτήτων"
         },
         "4d4e1c44-ff30-4ba6-bdcc-67dc52d3c85a": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "268e56b4-6f3e-4a44-8383-2e538ae1ab72": {
           "progression_name": "Ελεύθερο παιχνίδι"
@@ -1053,13 +1078,13 @@
           "progression_name": "Πρόβλεψη"
         },
         "dd2b73eb-51cd-4d7e-81f8-5ed2d57b72dd": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "63f10835-c9b1-4799-8f26-9ec9968c100f": {
           "progression_name": "Εξάσκηση"
         },
         "8c1a0c94-5769-44d7-90a2-af9b521835d7": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "3edea7b4-3cb0-44c0-8705-5e2f51f2802d": {
           "progression_name": "Επιπρόσθετο υλικό μαθήματος"
@@ -1083,7 +1108,7 @@
           "progression_name": "Καλλιέργεια Δεξιοτήτων"
         },
         "9130d756-a245-4997-93d3-94264979355b": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "ec1b07e3-f50a-4903-85c9-b2f52b255dcd": {
           "progression_name": "Εξάσκηση"
@@ -1092,7 +1117,7 @@
           "progression_name": "Πρόβλεψη"
         },
         "98a0f038-bf2d-4af7-9608-1ca327e1ef01": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "3694bab1-5f1b-411a-8170-601003b9d32c": {
           "progression_name": "Επιπρόσθετο υλικό μαθήματος"
@@ -1116,7 +1141,7 @@
           "progression_name": "Καλλιέργεια Δεξιοτήτων"
         },
         "0664bded-dced-45bc-954d-8bc7d7734235": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "9ee3da3a-7860-4af1-9e89-3c3f7f99192d": {
           "progression_name": "Εξάσκηση"
@@ -1142,6 +1167,7 @@
           ]
         },
         "db17d2d5-30dc-4b19-a5e6-543602d3d52e": {
+          "name": "Έργο Λήξη Μαθήματος",
           "tips": [
             null
           ]
@@ -1440,6 +1466,7 @@
           "name": "Αντανάκλαση"
         },
         "9630adaa-f7c1-4efa-8f7e-5d3ceb155b0b": {
+          "name": "Τεχνητή Νοημοσύνη για τους Ωκεανούς",
           "tips": [
             null
           ],
@@ -1817,7 +1844,7 @@
           "progression_name": "Βίντεο: \"Αν/Διαφορετικά\""
         },
         "2b231315-7f71-4e5f-a7b9-e32def714216": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "64fc9e91-c7c8-496d-8820-e7ae95fba0ee": {
           "progression_name": "Εξάσκηση"
@@ -1829,13 +1856,13 @@
           "name": "Εισαγωγή"
         },
         "64c2a884-631f-45d1-b192-29788fe3e807": {
-          "progression_name": "Βίντεο: Η συλλεκτική μηχανή"
+          "progression_name": "Βίντεο: Ο Θεριστής"
         },
         "19a96cd7-57c5-4a55-a7a2-e71a01464fb4": {
           "progression_name": "Καλλιέργεια Δεξιοτήτων"
         },
         "33f5530f-7a4e-49ee-b9e3-b4c4a8ddc597": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "fa627e9a-9b25-4ce7-8b89-e5d4da2c3a22": {
           "progression_name": "Εξάσκηση"
@@ -1925,6 +1952,7 @@
           ]
         },
         "70f8bf21-fc6d-4fac-b850-7c1a1694ce57": {
+          "name": "Ακολουθία με Angry Birds",
           "tips": [
             "Δείξτε στους μαθητές τον σωστό τρόπο να βοηθούν συμμαθητές:\n\n-   Μην κάθεστε στις καρέκλες των συμμαθητών\n-   Μη χρησιμοποιείτε το πληκτρολόγιο των συμμαθητών\n-   Μην αγγίζετε το ποντίκι των συμμαθητών\n    \\-Βεβαιωθείτε ότι ο μαθητής μπορεί να περιγράψει τη λύση φωνακτά πριν απομακρυνθείτε"
           ]
@@ -1943,6 +1971,9 @@
             null
           ]
         },
+        "75c9132a-969b-4198-8b79-cee2349158bf": {
+          "name": "Προγραμματισμός με τα Angry Birds"
+        },
         "a13265bc-3063-4de9-9cc1-383f7e8260bf": {
           "progression_name": "Βίντεο: Προγραμματισμός ανά ζεύγη"
         },
@@ -1950,7 +1981,7 @@
           "progression_name": "Καλλιέργεια Δεξιοτήτων"
         },
         "dcffa95e-0a1b-48af-b50d-3e4e3d028eb5": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "e5358a30-f76d-41f3-9cc4-473c22f7c0fc": {
           "progression_name": "Εξάσκηση"
@@ -1967,7 +1998,11 @@
           "name": "Αντανάκλαση"
         },
         "4709a0b0-10cf-444a-95c2-79194cef926d": {
-          "name": "Εισαγωγή"
+          "name": "Εισαγωγή",
+          "description": "/s/courseb-2022/vocab"
+        },
+        "e4f833fe-43bb-4538-8ceb-e014712357b2": {
+          "name": "Προγραμματισμός με τον Θεριστή"
         },
         "90d01840-ab32-4ff1-9603-1a400df6c870": {
           "tips": [
@@ -1975,7 +2010,7 @@
           ]
         },
         "977f23f8-6bb5-491e-8570-74a8d59a9beb": {
-          "progression_name": "Βίντεο: Η συλλεκτική μηχανή"
+          "progression_name": "Βίντεο: Ο Θεριστής"
         },
         "49fbb767-771c-46d4-82ed-25acdc22cc34": {
           "progression_name": "Καλλιέργεια Δεξιοτήτων"
@@ -1987,7 +2022,7 @@
           "progression_name": "Καλλιέργεια Δεξιοτήτων"
         },
         "f423cbb5-1e3c-4917-b077-a99013ee72e0": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "541fc52e-755a-43bf-b5c1-a85f3c255107": {
           "progression_name": "Εξάσκηση"
@@ -1996,10 +2031,10 @@
           "name": "Αντανάκλαση"
         },
         "d9e76adf-9b37-4e7d-b1b2-0910919aa6d3": {
-          "progression_name": "Βίντεο: Εμφωλευμένοι Βρόχοι"
+          "progression_name": "Βίντεο: Εξερευνώντας τους βρόγχους"
         },
         "d7529639-1989-486a-994e-2c87b04b3113": {
-          "name": "Επαναλαμβανόμαστε"
+          "name": "Εξερευνώντας τους βρόγχους"
         },
         "72b7082d-9ed1-465f-8d53-952202764c44": {
           "tips": [
@@ -2016,13 +2051,13 @@
           "progression_name": "Καλλιέργεια Δεξιοτήτων"
         },
         "8d24e924-469e-4ba6-81f0-3c10e6b96145": {
-          "progression_name": "Βίντεο: Κύβοι Επανάληψης"
+          "progression_name": "Βίντεο: Επανάλαβε μπλοκ"
         },
         "8cd5852c-c611-485e-967b-a0b071a6e04d": {
           "progression_name": "Καλλιέργεια Δεξιοτήτων"
         },
         "502c3ae3-b48f-42db-a55f-9e1011b81c07": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "116db8d7-f2b2-497a-93e3-48dc3cb020eb": {
           "progression_name": "Εξάσκηση"
@@ -2046,7 +2081,7 @@
           "progression_name": "Καλλιέργεια Δεξιοτήτων"
         },
         "7d1b2aba-f7f2-4655-b555-5269fb178ef6": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "9d2b30a9-8da4-4c98-bd40-5f94dfc8a0d2": {
           "progression_name": "Εξάσκηση"
@@ -2072,13 +2107,13 @@
           "progression_name": "Καλλιέργεια Δεξιοτήτων"
         },
         "0b77918a-7564-47f3-9a0a-46fd3820e760": {
-          "progression_name": "Βίντεο: Κύβοι Επανάληψης με τον Καλλιτέχνη"
+          "progression_name": "Βίντεο: Επανάλαβε μπλοκ με τον Καλλιτέχνη"
         },
         "bda70e53-e9ab-4e7c-877f-4d5020435d75": {
           "progression_name": "Καλλιέργεια Δεξιοτήτων"
         },
         "c9b716a1-6ed8-45b7-81b6-75240df48dae": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "6aa0f9ae-3248-4a8b-859f-1f75f43c473e": {
           "progression_name": "Εξάσκηση"
@@ -2165,6 +2200,7 @@
           ]
         },
         "4124a6f9-58cd-4211-be8a-9930d9884d43": {
+          "name": "Προγραμματισμός με τα Angry Birds",
           "tips": [
             null
           ],
@@ -2174,7 +2210,7 @@
           "progression_name": "Καλλιέργεια Δεξιοτήτων"
         },
         "47ed26cb-f342-486a-9123-166717aab595": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "113a8302-96b2-4aff-b859-036ff9b540c7": {
           "progression_name": "Εξάσκηση"
@@ -2186,7 +2222,7 @@
           "progression_name": "Εξάσκηση"
         },
         "17df522f-cbb2-4be1-af08-37c105e9b134": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "932d0cc0-5664-4aab-8653-df211e76c26f": {
           "name": "Αντανάκλαση"
@@ -2204,7 +2240,7 @@
           "progression_name": "Καλλιέργεια Δεξιοτήτων"
         },
         "5b2a71e6-47a2-4f33-bf7c-9e701f60f4a4": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "48a18e44-f31f-48ff-b7e4-95a786df2982": {
           "progression_name": "Πρόβλεψη"
@@ -2221,6 +2257,9 @@
         "0ce0c382-a11b-4c74-ad59-41f02403b46b": {
           "name": "Εισαγωγή"
         },
+        "8c9b5729-021b-4d95-b232-e523b7956513": {
+          "name": "Κυνηγώντας θησαυρούς με την Laurel"
+        },
         "ea0d0c84-a0d7-41d0-80cc-efe792db04e8": {
           "progression_name": "Βίντεο: Ο Συλλέκτης"
         },
@@ -2228,7 +2267,7 @@
           "progression_name": "Καλλιέργεια Δεξιοτήτων"
         },
         "fd0ab898-850a-45a0-be4f-1e223b482dce": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "a44da8b7-1127-4f1c-9634-6387876dc604": {
           "progression_name": "Εξάσκηση"
@@ -2248,6 +2287,9 @@
         "73186d8b-412c-447c-b31d-ba6efced8854": {
           "name": "Εισαγωγή"
         },
+        "a87f5d31-b7cb-48e5-b7c7-06f8a43e329f": {
+          "name": "Δημιουργία τέχνης με κώδικα"
+        },
         "c2639856-d143-4f85-ae32-262da1af5808": {
           "progression_name": "Βίντεο: Εισαγωγή Καλλιτέχνη με τον JR Hildebrand"
         },
@@ -2258,7 +2300,7 @@
           "tips": [
             null
           ],
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "b3505cdb-0f28-4265-a017-d4d3d77d6b72": {
           "progression_name": "Εξάσκηση"
@@ -2417,13 +2459,13 @@
           "progression_name": "Πρόβλεψη"
         },
         "abb57063-4095-45d3-8ea6-f6a1b59b62e4": {
-          "progression_name": "Βίντεο: Κύβοι Επανάληψης με BB-8"
+          "progression_name": "Βίντεο: Επανάλαβε μπλοκ με τον BB-8"
         },
         "398815f4-e1bb-4d7c-b2be-2c9380704b3e": {
           "progression_name": "Καλλιέργεια Δεξιοτήτων"
         },
         "f935eb4e-5cce-4727-b128-12e08a0da6f5": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "573324e5-a391-4e63-8b78-3af1d37a8250": {
           "progression_name": "Εξάσκηση"
@@ -2460,11 +2502,14 @@
         "2f0beffd-547f-4c39-aad4-3f475ea744fe": {
           "name": "Εισαγωγή"
         },
+        "744f5dec-6181-4973-bb05-c46564144240": {
+          "name": "Εμφωλευμένοι Βρόχοι στο λαβύρινθο"
+        },
         "12894c2b-8f8d-49f7-b339-f1e8f150bfd4": {
           "progression_name": "Εξάσκηση"
         },
         "28d3a549-2b83-411f-aae6-a8fd0e6c6005": {
-          "progression_name": "Βίντεο: 'Ενθετοι/Περιεχόμενοι Βρόχοι με την Μέλισσα"
+          "progression_name": "Βίντεο: Εμφωλευμένοι Βρόχοι με την Μέλισσα"
         },
         "fb1eaf7d-a8d3-47c5-9dfd-44aa4d8910b2": {
           "progression_name": "Πρόβλεψη"
@@ -2473,7 +2518,7 @@
           "progression_name": "Εξάσκηση"
         },
         "f7e03887-22e1-4e97-b1e1-143776678547": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "05284324-e602-4f6c-a656-44ebba6a41c4": {
           "progression_name": "Εξάσκηση"
@@ -2503,10 +2548,11 @@
           "name": "Εισαγωγή"
         },
         "83daad31-f1c9-4d21-897b-a291d39f55df": {
+          "name": "Κοιτάζοντας μπροστά με το Minecraft",
           "progression_name": "Καλλιέργεια Δεξιοτήτων"
         },
         "47b5c27a-db1c-4abd-a3c9-4d90561d7d79": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "9798ab7a-f709-42df-b9fb-1828099a88d3": {
           "progression_name": "Ελεύθερο παιχνίδι"
@@ -2536,7 +2582,7 @@
           "progression_name": "Πρόβλεψη"
         },
         "acb76386-861e-420e-affd-2f61655a5423": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "480f26bc-03a7-4014-84de-e4a60e3caf83": {
           "progression_name": "Εξάσκηση"
@@ -2563,7 +2609,7 @@
           "progression_name": "Καλλιέργεια Δεξιοτήτων"
         },
         "0a95b61c-de3a-4cb9-a151-c562c5326c89": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "208367ed-d0e5-4b54-98bd-c2925f220711": {
           "progression_name": "Εξάσκηση"
@@ -2623,7 +2669,7 @@
           "progression_name": "Καλλιέργεια Δεξιοτήτων"
         },
         "04c4d948-2e60-4a38-8c5b-9bf7280d029f": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "e695d0b5-156d-4dd7-9785-47d3e834cb16": {
           "progression_name": "Εξάσκηση"
@@ -2647,7 +2693,7 @@
           "progression_name": "Εξάσκηση"
         },
         "7d64d5dc-765d-4bb4-8664-5d6b8a3ddc1f": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "d21f6b6c-7d91-4877-8e6d-d2c291eaa930": {
           "progression_name": "Εξάσκηση"
@@ -2713,7 +2759,7 @@
           "progression_name": "Εξάσκηση"
         },
         "480098ab-4bb6-4713-bf04-3404e93c9fe3": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "ff540d41-6f94-4e4e-affd-0d167ab24093": {
           "progression_name": "Εξάσκηση"
@@ -2734,7 +2780,7 @@
           "progression_name": "Εξάσκηση"
         },
         "9e8a729a-c0b8-4d57-ad98-fd2132ad1ec2": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "6f138e96-5674-4760-b888-e6020afed570": {
           "progression_name": "Εξάσκηση"
@@ -2914,6 +2960,9 @@
             null
           ]
         },
+        "55fe1e9d-bf0e-4294-88b0-9f43918c4407": {
+          "name": "Μάθετε να σύρετε και να αποθέσετε"
+        },
         "749e673c-fb7b-4101-9308-78d14af34b57": {
           "tips": [
             null
@@ -2956,10 +3005,11 @@
           "name": "Αντανάκλαση"
         },
         "4b2ae2f9-5106-4ab2-91b3-fa6b5077a205": {
+          "name": "Προγραμματισμός με τα Angry Birds",
           "progression_name": "Καλλιέργεια Δεξιοτήτων"
         },
         "d49962e7-d0ed-45b1-88e1-586107bfc184": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "fbf4cf8d-738c-4f5f-bb85-8014dcc2dee7": {
           "progression_name": "Εξάσκηση"
@@ -2986,7 +3036,7 @@
           "progression_name": "Καλλιέργεια Δεξιοτήτων"
         },
         "8460d588-eb09-42aa-a1ae-486be4d61940": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "4938d690-fc47-4e8a-917d-641dd5405763": {
           "progression_name": "Εξάσκηση"
@@ -2997,13 +3047,16 @@
         "951923b1-6912-477c-b97f-b4f9d6f71f62": {
           "name": "Εισαγωγή"
         },
+        "4751f547-860d-4156-abbd-9730989185de": {
+          "name": "Προγραμματισμός με τον Θεριστή"
+        },
         "30e8181b-a550-477d-9dd7-c9eb8ed6a671": {
           "tips": [
             null
           ]
         },
         "b003ab75-0f36-4796-a7bc-82a31d13c79a": {
-          "progression_name": "Βίντεο: Η συλλεκτική μηχανή"
+          "progression_name": "Βίντεο: Ο Θεριστής"
         },
         "5d87e611-aef5-4743-b2c2-4c12c39f3069": {
           "progression_name": "Καλλιέργεια Δεξιοτήτων"
@@ -3015,7 +3068,7 @@
           "progression_name": "Καλλιέργεια Δεξιοτήτων"
         },
         "410ccff6-d1ef-482d-8997-c2364398219c": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "d6fa1a62-37e2-45df-8eab-84bcf1ed877d": {
           "progression_name": "Εξάσκηση"
@@ -3046,7 +3099,7 @@
           "progression_name": "Καλλιέργεια Δεξιοτήτων"
         },
         "98564d72-b4b7-4c4e-a977-76bec68b7278": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "eca56e55-c71d-40a8-8e0b-05ee293c5a86": {
           "progression_name": "Εξάσκηση"
@@ -3070,7 +3123,7 @@
           "progression_name": "Καλλιέργεια Δεξιοτήτων"
         },
         "1ece725c-150b-4d58-bac0-9891ed7bf381": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "5129f085-9edb-46af-86fd-2dc86602ef13": {
           "progression_name": "Εξάσκηση"
@@ -3102,7 +3155,7 @@
           "progression_name": "Καλλιέργεια Δεξιοτήτων"
         },
         "204739af-3260-4213-8598-d13acc23e00d": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "7ba89248-c1c2-4bb2-a72e-18f406424ee6": {
           "progression_name": "Εξάσκηση"
@@ -3128,7 +3181,7 @@
           "progression_name": "Καλλιέργεια Δεξιοτήτων"
         },
         "baa778c6-41e7-4816-9aa2-3e0a0e88a12a": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "8e20449d-c692-4cac-861a-d8e19fd768a8": {
           "progression_name": "Εξάσκηση"
@@ -3192,6 +3245,9 @@
           "tips": [
             null
           ]
+        },
+        "f3d9ff95-5a31-4d0d-b1f5-7934be9edf02": {
+          "name": "Μάθετε να σύρετε και να αποθέσετε"
         },
         "e9117446-0648-4712-9bab-f477cc4a7763": {
           "tips": [
@@ -3261,7 +3317,7 @@
           "progression_name": "Καλλιέργεια Δεξιοτήτων"
         },
         "33e815ee-52df-4fb3-bb24-807e96744248": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "8847e02f-5bd4-40d1-8c5e-ae2410335913": {
           "progression_name": "Εξάσκηση"
@@ -3288,7 +3344,7 @@
           "progression_name": "Καλλιέργεια Δεξιοτήτων"
         },
         "31519dbd-2dc1-44df-9fd8-465963135fb8": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "7a0f7d49-b40f-4055-bbbc-25e96b4213c7": {
           "progression_name": "Εξάσκηση"
@@ -3322,7 +3378,7 @@
           "progression_name": "Καλλιέργεια Δεξιοτήτων"
         },
         "7ee7e911-e78b-4ce4-bac2-e9fbb4b9294c": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "9f3e3414-e024-4b83-bbd5-4f0de81b2dee": {
           "progression_name": "Εξάσκηση"
@@ -3356,7 +3412,7 @@
           "progression_name": "Καλλιέργεια Δεξιοτήτων"
         },
         "741bb4fc-4f71-4259-980a-5d1be91a87ba": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "c8873a95-c3c5-4008-b8b8-bd56e50a2c66": {
           "progression_name": "Εξάσκηση"
@@ -3383,7 +3439,7 @@
           "progression_name": "Καλλιέργεια Δεξιοτήτων"
         },
         "170abca5-3f03-4e4e-a246-9300081cbd95": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "23c558e9-4573-4748-b99d-24e9104f0cf1": {
           "progression_name": "Εξάσκηση"
@@ -3502,6 +3558,7 @@
           ]
         },
         "bb92650a-2be6-4f30-b851-611c2401aa32": {
+          "name": "Προγραμματισμός με τα Angry Birds",
           "tips": [
             null
           ]
@@ -3513,7 +3570,7 @@
           "progression_name": "Καλλιέργεια Δεξιοτήτων"
         },
         "757cf81a-cc11-4113-8734-0888328aba75": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "c0d3a625-32cc-4184-bf79-be7f1066ca97": {
           "progression_name": "Εξάσκηση"
@@ -3536,6 +3593,9 @@
         "e681233b-1029-4530-a3ef-4842b8254aa6": {
           "name": "Εισαγωγή"
         },
+        "4423598b-200c-40bc-afb9-4bb1065199cc": {
+          "description": " Αν βεβαιωθείτε ότι όλα λειτουργούν γραμμή προς γραμμή, τότε όταν φτάσετε σε σημείο που ο κώδικάς σας δεν κάνει αυτό που υποτίθεται ότι πρέπει, ξέρετε ότι έχετε βρει ένα σφάλμα. Μόλις ανακαλύψετε το σφάλμα σας, μπορείτε να το διορθώσετε (ή να το «κάνετε debug»)!"
+        },
         "c3172960-9aa5-4221-b1ab-2d35fb80653e": {
           "progression_name": "Βίντεο: Αποσφαλμάτωση με το Κουμπί Βήμα"
         },
@@ -3543,7 +3603,7 @@
           "progression_name": "Καλλιέργεια Δεξιοτήτων"
         },
         "c3c4cc5c-8b5b-4f3f-aa71-9c20db1f148c": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "840f0979-0841-4874-9b50-dfa816eb4930": {
           "progression_name": "Πρόβλεψη"
@@ -3563,6 +3623,9 @@
         "505c83de-b318-4a7d-9a4b-9da377a5b0d8": {
           "name": "Εισαγωγή"
         },
+        "2780e63f-ba52-459a-9176-4208568b6163": {
+          "name": "Κυνηγώντας θησαυρούς με την Laurel"
+        },
         "f3c465c8-b7b0-4b73-8afc-5f30c132f35b": {
           "progression_name": "Βίντεο: Ο Συλλέκτης"
         },
@@ -3570,7 +3633,7 @@
           "progression_name": "Καλλιέργεια Δεξιοτήτων"
         },
         "eddda354-d5be-46f5-96fb-453befa94962": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "c6479440-7f5b-4d91-829d-92cc5daff4fc": {
           "progression_name": "Εξάσκηση"
@@ -3593,6 +3656,9 @@
         "9f1508f1-3a4b-42fb-82fb-d31a0aad9576": {
           "name": "Εισαγωγή"
         },
+        "285edd36-99af-46e6-ba3a-91300c2ef572": {
+          "name": "Δημιουργία τέχνης με κώδικα"
+        },
         "0b1b669c-1acf-42de-9f59-8182f34db782": {
           "progression_name": "Βίντεο: Εισαγωγή Καλλιτέχνη με τον JR Hildebrand"
         },
@@ -3603,7 +3669,7 @@
           "tips": [
             null
           ],
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "7bfffd70-d646-4e36-adc5-21d888afa1f0": {
           "progression_name": "Εξάσκηση"
@@ -3651,13 +3717,13 @@
           "progression_name": "Πρόβλεψη"
         },
         "ac539445-fa4c-45cd-8d04-d794a3041826": {
-          "progression_name": "Βίντεο: Κύβοι Επανάληψης με BB-8"
+          "progression_name": "Βίντεο: Επανάλαβε μπλοκ με τον BB-8"
         },
         "78b79d53-246f-40a9-ab3a-557fba2f5c1a": {
           "progression_name": "Καλλιέργεια Δεξιοτήτων"
         },
         "70017f05-4f16-45ff-9175-91445fd1802d": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "0c3ea776-e22f-422f-b617-998f13aa2ff5": {
           "progression_name": "Εξάσκηση"
@@ -3678,13 +3744,14 @@
           "name": "Λεξιλόγιο"
         },
         "d9c07104-b142-42fc-abf8-4b34d8429b7a": {
-          "progression_name": "Βίντεο: Η συλλεκτική μηχανή"
+          "name": "Συγκομιδή καλλιεργειών με βρόχους",
+          "progression_name": "Βίντεο: Ο Θεριστής"
         },
         "38b1f726-8881-479b-a9e5-7fd354aacf31": {
           "progression_name": "Καλλιέργεια Δεξιοτήτων"
         },
         "7d2a391e-fb8f-4791-841a-f31ddac790b7": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "e68467ed-58ff-45fe-b064-90e8dbca1c3d": {
           "progression_name": "Εξάσκηση"
@@ -3708,6 +3775,10 @@
           "tips": [
             null
           ]
+        },
+        "5bee125c-0e5e-46a8-b72b-fdc8a71f5161": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Εμφάνιση**: «Επίπεδο 1-8 - Μικρή Εργασία: Τέχνη με Αυτοκόλλητα »",
+          "progression_name": "Μικρή Εργασία: Τέχνη με Αυτοκόλλητα"
         },
         "c5f36648-ac0d-405f-af7a-3020ebdce7f3": {
           "progression_name": "Ελεύθερο παιχνίδι"
@@ -5945,7 +6016,7 @@
           "tips": [
             null
           ],
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "90235095-e1c1-4d21-b55d-0f4f593df326": {
           "name": "Αντανάκλαση"
@@ -7211,7 +7282,7 @@
           "tips": [
             null
           ],
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "9ae0e497-0968-45f0-aa40-82f5d1d01712": {
           "tips": [
@@ -7241,7 +7312,7 @@
           "progression_name": "Αξιολόγηση"
         },
         "13854569-d199-4944-9138-df8a3280a762": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "d95e3c69-5b66-4c2c-a137-0fa48ecf0dfc": {
           "tips": [
@@ -7267,7 +7338,7 @@
           "progression_name": "Αξιολόγηση"
         },
         "21260455-53ec-446e-b285-e9cbba4b6bbb": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "427d8899-405a-4266-af95-9af17e1fe006": {
           "tips": [
@@ -7325,7 +7396,7 @@
           "progression_name": "Αξιολόγηση"
         },
         "611c6617-a3b8-4d93-a786-8d1c7256b43f": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "e027da7e-461e-4ad1-b60c-145a373dccb0": {
           "tips": [
@@ -7392,7 +7463,7 @@
           "progression_name": "Αξιολόγηση"
         },
         "82ec8f8c-928d-497c-88c3-6a3b948a162e": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "57cb955d-f937-4b8c-990b-0ceeac0bd2a3": {
           "tips": [
@@ -7418,7 +7489,7 @@
           "progression_name": "Αξιολόγηση"
         },
         "62b8f83e-afda-4e53-a033-8fa297acd65f": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "21389587-1242-42b1-b1e5-723fc5ddc4b5": {
           "description": "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
@@ -7447,7 +7518,7 @@
           "progression_name": "Αξιολόγηση"
         },
         "23c9fd40-b3fd-467c-a0e0-f98073b5cd37": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "d18fd32f-358e-4525-96b9-329e455fea1c": {
           "name": "Προθέρμανση"
@@ -7498,6 +7569,7 @@
           "name": "Προθέρμανση"
         },
         "43fde334-6c07-4b1b-b23d-4b67f5fbfbc0": {
+          "description": "\\*\\*Συλλογή: \\*\\* Ζητήστε από τους μαθητές να υποβάλουν τα πρωτότυπα τους και να υποβάλουν τις εφαρμογές τους στο App Lab. \n\n\\*\\*Σκέψεις: \\*\\* Ζητήστε από τους μαθητές να συμληρώσουν ένα σύντομο ερωτηματολόγιο 5 ερωτήσεων στο Code Studio. Θα μπορείτε να δείτε τα αποτελέσματά τους ανώνυμα στον πίνακα εργαλείων του εκπαιδευτή.",
           "progression_name": "Αντανάκλαση"
         },
         "b46cfe31-9b5e-4820-b368-fc8a4fa139a7": {
@@ -7530,7 +7602,7 @@
           "progression_name": "Αξιολόγηση"
         },
         "8c0a5684-f005-4e5b-a2ce-cb8e4789a01d": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "b8a6fe12-b039-4ae6-b8af-7ca83f2cf8f4": {
           "tips": [
@@ -7556,7 +7628,7 @@
           "progression_name": "Αξιολόγηση"
         },
         "76453b17-59cd-4920-b508-57d27318f740": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "b29096d1-be92-43d1-b40d-48dc44779fcb": {
           "tips": [
@@ -7593,7 +7665,7 @@
           "progression_name": "Αξιολόγηση"
         },
         "da15bf04-3bad-47cc-8315-caf65137e15c": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "db3d71d9-35eb-4f9d-bcde-2f799683ab8b": {
           "tips": [
@@ -7699,7 +7771,7 @@
           "progression_name": "Αξιολόγηση"
         },
         "5d0032fb-a971-483f-9be3-bad5e1a0d7de": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "9cc97556-4746-41d2-aacd-4520dec3be96": {
           "tips": [
@@ -7719,7 +7791,7 @@
           "progression_name": "Αξιολόγηση"
         },
         "1583a972-df35-4d3b-90b9-da0436506e8b": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "b06fecf3-f666-4d47-97ed-0f43e2bd6781": {
           "tips": [
@@ -7779,6 +7851,7 @@
         },
         "7799c3eb-e76a-465b-9f24-69d6c04a01c7": {
           "name": "Αντανάκλαση",
+          "description": "\\*\\*Code Studio: \\*\\* Ζητήστε από τους μαθητές σας να απαντήσουν σε ένα σύντομο ερωτηματολόγιο 5 ερωτήσεων στην αρχή αυτής της ενότητας σχετικά με την τεχνητή νοημοσύνη και τη μηχανική μάθηση. Μόλις συμπληρώσουν το ερωτηματολόγιο τουλάχιστον 5 μαθητές, θα μπορείτε να δείτε τα ανώνυμα αποτελέσματα στον Πίνακα Ελέγχου Καθηγητή. Μερικά από αυτά τα ερωτήματα θα τεθούν και πάλι στο τέλος του πρώτου έργου, γεγονός το οποίο μπορεί να είναι χρήσιμο για την παρακολούθηση της ανάπτυξης των μαθητών και των αλλαγών στη στάση σε όλη τη μονάδα.",
           "progression_name": "Έρευνα Εισόδου"
         },
         "b5acd50c-8f0e-4c22-8918-0e4801b137e1": {
@@ -8124,7 +8197,7 @@
           ]
         },
         "e016c316-f3e9-40ff-9b1f-a28d0adafe0b": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "be0ed503-93df-4804-98d7-51205f2f4e9a": {
           "tips": [
@@ -8894,8 +8967,8 @@
           "progression_name": "Εντοπισμός σφαλμάτων"
         },
         "43f5caa8-4b58-4af6-9425-6b642fa30743": {
-          "name": "Εξάσκηση",
-          "progression_name": "Εξάσκηση"
+          "name": "Πρόκληση",
+          "progression_name": "Πρόκληση"
         },
         "d0482660-cd4b-442d-9b3a-1dccc9ee2318": {
           "progression_name": "Υπερσύνδεσμοι"
@@ -8982,7 +9055,7 @@
           "progression_name": "Εξάσκηση"
         },
         "c23ccdc3-4f91-4719-8ad1-ae870fbb0b66": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "ee50cbe2-2edd-4dd8-8b4c-21840459fd4b": {
           "progression_name": "Εξάσκηση"
@@ -8994,7 +9067,7 @@
           "progression_name": "Εξάσκηση"
         },
         "3328d13e-655b-460a-888b-94567abfe169": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "1c8c82ff-d830-49b4-b610-f98303b22b5c": {
           "name": "Εξάσκηση",
@@ -9010,7 +9083,7 @@
           "progression_name": "Εξάσκηση"
         },
         "96a3f354-7b69-41e7-9100-4523dc83acaf": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "4b1c3f67-90ee-4d1c-a505-43ba94744e13": {
           "name": "Εξάσκηση",
@@ -9029,7 +9102,7 @@
           "progression_name": "Εξάσκηση"
         },
         "928e8522-a5d1-4172-9981-7c812394708d": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "24326a35-0870-4e18-ab0e-3efcd24cfc43": {
           "progression_name": "Εξάσκηση"
@@ -9047,7 +9120,7 @@
           "progression_name": "Εξάσκηση"
         },
         "c1a9472c-1033-4660-8314-6d5c9789ae58": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "f822fcc2-30b2-4b10-a349-eb0f82b2bc06": {
           "progression_name": "Εξάσκηση"
@@ -9081,7 +9154,7 @@
           "progression_name": "Εξάσκηση"
         },
         "24ac3487-2bac-447f-a644-c97ed06eb7bc": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "938a26ab-bd9c-44b8-8cb9-63da1bcf591b": {
           "progression_name": "Εξάσκηση"
@@ -9099,7 +9172,7 @@
           "progression_name": "Εξάσκηση"
         },
         "4a9bb659-a861-4fae-8024-300307f55af4": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "d2407bf6-efea-4dc1-867f-1eeeeef7fe61": {
           "name": "Εξάσκηση",
@@ -9115,7 +9188,7 @@
           "progression_name": "Εξάσκηση"
         },
         "9b25a500-d3ff-45b0-8e4e-e105361c1f70": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "a6f30cbb-8fd6-46dc-91c5-ce07c73a5546": {
           "name": "Εξάσκηση",
@@ -9134,7 +9207,7 @@
           "progression_name": "Εξάσκηση"
         },
         "80de6acc-e6ab-48b7-ac35-192fd30fa831": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "799b5fd3-48c4-42f6-843a-a60958fb2dcc": {
           "progression_name": "Εξάσκηση"
@@ -9152,7 +9225,7 @@
           "progression_name": "Εξάσκηση"
         },
         "99e3dad7-98a9-4f93-86a3-e78793215495": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "6cd0313d-20b7-41af-a555-f7a40a9dc6ea": {
           "progression_name": "Εξάσκηση"
@@ -9179,7 +9252,7 @@
           "progression_name": "Εξάσκηση"
         },
         "07193199-5792-4f3b-a082-cb2a6e3e3688": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "f6dcb3ba-abfe-4608-92d2-5ba446bf8260": {
           "name": "Εξάσκηση",
@@ -9192,7 +9265,7 @@
           "progression_name": "Εξάσκηση"
         },
         "87fb67e1-deff-4108-87f9-bda43f69ddf0": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "6cf10d9f-573c-434d-8ca9-fb959da3ddbc": {
           "name": "Εξάσκηση",
@@ -9222,7 +9295,7 @@
           "progression_name": "Εξάσκηση"
         },
         "0ce7c02f-f05a-40cf-a5be-87946f72027d": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "04522c33-a100-4028-8d6a-cd6ffbbff48d": {
           "name": "Εξάσκηση",
@@ -9241,7 +9314,7 @@
           "progression_name": "Εξάσκηση"
         },
         "38d68221-32e8-4984-8a39-69073466459f": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "65da7b94-0e0c-4e9f-a273-ac1a4d4af1fe": {
           "name": "Εξάσκηση",
@@ -9251,7 +9324,7 @@
           "progression_name": "Εξάσκηση"
         },
         "558aff7e-be0e-4c7a-be34-69b51c3a1561": {
-          "progression_name": "'Ενθετοι/Περιεχόμενοι Βρόχοι με την Μέλισσα"
+          "progression_name": "Εμφωλευμένοι Βρόχοι με την Μέλισσα"
         },
         "c0bdea37-e2dd-4669-89bd-d0a44a31d98f": {
           "progression_name": "Πρόβλεψη"
@@ -9260,7 +9333,7 @@
           "progression_name": "Εξάσκηση"
         },
         "5f04ced8-6ae3-4d10-aaec-f9ceb4684d69": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "89ba8cfe-a99b-4422-844a-aea9a4a809d6": {
           "progression_name": "Εξάσκηση"
@@ -9287,7 +9360,7 @@
           "progression_name": "Πρόβλεψη"
         },
         "b7b86177-be53-4ffc-af33-74c5f28cf41c": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "1f9409b1-72ae-4f23-9e28-440d90209e9a": {
           "progression_name": "Εξάσκηση"
@@ -9305,7 +9378,7 @@
           "progression_name": "Εξάσκηση"
         },
         "deb064fb-e848-49e3-8fce-76f6ea0b85ad": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "51c9fd2c-596e-4032-b116-cf1f81cd1d22": {
           "progression_name": "Εξάσκηση"
@@ -9326,7 +9399,7 @@
           "progression_name": "Εξάσκηση"
         },
         "15c133ad-c9de-4a2c-8bc3-8dc5ea07f83e": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "cd1a6e28-493e-42f2-8637-42342f923c1f": {
           "progression_name": "Εξάσκηση"
@@ -9342,7 +9415,7 @@
           "progression_name": "Εξάσκηση"
         },
         "6a5e000e-9713-4ba5-a455-501c3806ec4e": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "78534e68-9a2b-4421-b38c-2bbaa36fa873": {
           "progression_name": "Εξάσκηση"
@@ -9418,19 +9491,19 @@
           "progression_name": "Εξάσκηση"
         },
         "2a412b4f-68cb-417f-bd40-716a3cfdf0ff": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "57c0b5ce-ed20-4b57-9a71-cb7e37a3811a": {
           "progression_name": "Εξάσκηση"
         },
         "0948dcbc-ac22-48af-a16e-2c03c5b0d317": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "cef6aee2-72e0-4c46-bf57-3057e4fbe5b1": {
           "progression_name": "Εξάσκηση"
         },
         "13e13a4d-03f1-45f6-8532-e69303f71086": {
-          "progression_name": "'Ενθετοι/Περιεχόμενοι Βρόχοι με την Μέλισσα"
+          "progression_name": "Εμφωλευμένοι Βρόχοι με την Μέλισσα"
         },
         "4322df5e-caa4-4e99-bc51-e495a01a4781": {
           "progression_name": "Πρόβλεψη"
@@ -9439,7 +9512,7 @@
           "progression_name": "Εξάσκηση"
         },
         "b365d5bf-c5bc-462c-895c-3cca05ad79f6": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "d219bf55-e925-475f-a0d4-4640687f4623": {
           "progression_name": "Εξάσκηση"
@@ -9465,7 +9538,7 @@
           "progression_name": "Εξάσκηση"
         },
         "caf6bd1c-dbcf-4747-93e5-dcae7eab1896": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "e5823de9-3c27-4e57-923e-4935badd0d5f": {
           "name": "Εξάσκηση",
@@ -9497,7 +9570,7 @@
           "progression_name": "Εξάσκηση"
         },
         "25103086-3dd2-4f4a-b8ba-11d66d826e34": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "ee02f0d7-dd0b-42fe-bf85-bf00e2c24afd": {
           "progression_name": "Εξάσκηση"
@@ -9559,7 +9632,7 @@
           "progression_name": "Εξάσκηση"
         },
         "b53b7eb1-3aab-44fb-bda0-e658142a7093": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "bb987dd3-eaec-43cb-a753-c46136352857": {
           "name": "Εξάσκηση",
@@ -9578,13 +9651,13 @@
           "progression_name": "Εξάσκηση"
         },
         "b77b5637-ea90-4ae9-bfb9-22810b90bf92": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "9366a808-d8f7-410d-9892-5958bc2bd147": {
           "progression_name": "Εξάσκηση"
         },
         "b9a00091-4e59-451c-9be6-c9311e4a4543": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "bc82ff27-3be3-4ded-80ad-1cf0544f61d9": {
           "name": "Εξάσκηση",
@@ -9609,7 +9682,7 @@
           "progression_name": "\"Αν/διαφορετικά\" με την Μέλισσα"
         },
         "acb1431e-7cdb-4448-bf6d-1876d561952e": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "3498e076-2ac0-47ef-a32a-8ced3ebc09ad": {
           "name": "Εξάσκηση",
@@ -9658,7 +9731,7 @@
           "progression_name": "Εξάσκηση"
         },
         "e749c485-42f3-45f1-9a42-ec47a42947d7": {
-          "progression_name": "'Ενθετοι/Περιεχόμενοι Βρόχοι με την Μέλισσα"
+          "progression_name": "Εμφωλευμένοι Βρόχοι με την Μέλισσα"
         },
         "ff42e659-ef91-4890-85fc-5bae139c3368": {
           "progression_name": "Πρόβλεψη"
@@ -9667,7 +9740,7 @@
           "progression_name": "Εξάσκηση"
         },
         "9f1d586c-1d97-46de-9fe5-6bad58413cb9": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "4ff33089-12b9-4c99-b097-fb5a924db23e": {
           "progression_name": "Εξάσκηση"
@@ -9685,7 +9758,7 @@
           "progression_name": "Εξάσκηση"
         },
         "269b42b4-fc3f-4a60-828f-0e6b2f73b0c6": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "f2a07bd7-28a0-43d0-9a48-892e538ccb6b": {
           "progression_name": "Εξάσκηση"
@@ -9723,7 +9796,7 @@
           "progression_name": "Εξάσκηση"
         },
         "5db96562-98cc-4fa4-972d-ff37bcd76287": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "2a9ee19c-b3b6-43f4-ab2f-9cb5ed633f23": {
           "progression_name": "Εξάσκηση"
@@ -9739,7 +9812,7 @@
           "progression_name": "Εξάσκηση"
         },
         "1437cbd2-75ab-42e4-99c1-a1db6e0f446c": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "d491a9fa-ef7c-4792-a1f5-0b0c2bd29e92": {
           "progression_name": "Εξάσκηση"
@@ -9777,7 +9850,7 @@
           "progression_name": "Εξάσκηση"
         },
         "f72e471d-ff91-41d4-9f97-3302b73b5ec5": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "5d543b76-4be7-43c6-aeb3-6f25f7a70b88": {
           "progression_name": "Εξάσκηση"
@@ -9795,7 +9868,7 @@
           "progression_name": "Εξάσκηση"
         },
         "dec15e5a-6919-45fb-b36a-b009ddc2ea0e": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "8d3f24a1-e89b-4e93-92e1-508e62c2cd59": {
           "progression_name": "Προβλέψτε"
@@ -9810,7 +9883,7 @@
           "progression_name": "Εξάσκηση"
         },
         "c7cc745e-db84-4914-abff-fba5821a6d51": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "750fda9f-f34c-416c-8546-93df47a97bc8": {
           "progression_name": "Εξάσκηση"
@@ -9832,7 +9905,7 @@
           "progression_name": "Εξάσκηση"
         },
         "62eb4fa5-496a-4d2d-ad6a-1618bc2be7f0": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "78350753-0d3c-45bc-b665-6045cacb85a0": {
           "progression_name": "Εξάσκηση"
@@ -9856,7 +9929,7 @@
           "progression_name": "Εξάσκηση"
         },
         "f42d7b9f-5cd2-4a12-a75d-67af88c45947": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "c7c39851-bad8-4bc1-afd6-423b251b55e7": {
           "progression_name": "Εξάσκηση"
@@ -9874,7 +9947,7 @@
           "progression_name": "Εξάσκηση"
         },
         "21c1076a-87ae-4316-bd9a-3f6a7c43cba2": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "447a0554-d6f0-4a53-9791-08282e24f988": {
           "progression_name": "Εξάσκηση"
@@ -9886,7 +9959,7 @@
           "progression_name": "Εξάσκηση"
         },
         "5b1c525c-13c6-4dad-b882-d351f0fcd634": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "27431483-208d-45bb-8b5e-fa0303272904": {
           "progression_name": "Εξάσκηση"
@@ -10422,8 +10495,8 @@
           "progression_name": "Εντοπισμός σφαλμάτων"
         },
         "4d3fa0f3-0dea-4ff7-9e48-f2ea1fb5e6b6": {
-          "name": "Εξάσκηση",
-          "progression_name": "Εξάσκηση"
+          "name": "Πρόκληση",
+          "progression_name": "Πρόκληση"
         },
         "96ae3592-0ae8-4f4c-8e30-cd29f8ac7bd3": {
           "progression_name": "Συνδέοντας Σελίδες"
@@ -11047,8 +11120,8 @@
           "progression_name": "Εντοπισμός σφαλμάτων"
         },
         "22367590-f0a2-4c03-8600-8598926280b8": {
-          "name": "Εξάσκηση",
-          "progression_name": "Εξάσκηση"
+          "name": "Πρόκληση",
+          "progression_name": "Πρόκληση"
         },
         "8827ab7e-b9de-478f-bd04-0897af746bc3": {
           "progression_name": "Υπερσύνδεσμοι"
@@ -11222,7 +11295,7 @@
           "description": ""
         },
         "a49bc6c2-1b76-476d-98cd-7f040e8853a7": {
-          "name": "",
+          "name": "Τέχνη της Ποίησης",
           "description": ""
         },
         "065eda67-268c-4f91-9caf-efb2c34493fe": {
@@ -11654,6 +11727,7 @@
           "description": "**Παροτρύνσεις:**\n\n-   Πως αυτή η προσομοίωση παρόμοια με τον πραγματικό κόσμο; Πώς διαφέρει;\n-   Τι θα θέλατε να αλλάξετε/προσθέσετε στην προσομοίωση σας;"
         },
         "708bfaf4-4547-4c24-87d4-3822f97185b5": {
+          "name": "Τεχνητή Νοημοσύνη για τους Ωκεανούς",
           "tips": [
             null
           ],
@@ -11773,6 +11847,7 @@
           ]
         },
         "07f0915c-fd00-4787-8a53-251613824cc8": {
+          "name": "Ακολουθία με Angry Birds",
           "tips": [
             "Δείξτε στους μαθητές τον σωστό τρόπο να βοηθούν συμμαθητές:\n\n-   Μην κάθεστε στις καρέκλες των συμμαθητών\n-   Μη χρησιμοποιείτε το πληκτρολόγιο των συμμαθητών\n-   Μην αγγίζετε το ποντίκι των συμμαθητών\n    \\-Βεβαιωθείτε ότι ο μαθητής μπορεί να περιγράψει τη λύση φωνακτά πριν απομακρυνθείτε"
           ]
@@ -11791,6 +11866,9 @@
             null
           ]
         },
+        "8d4c8d73-6930-4a7f-a73d-3c3312a2705b": {
+          "name": "Προγραμματισμός με τα Angry Birds"
+        },
         "32a0cded-433b-4111-b1a5-8513247d783b": {
           "progression_name": "Βίντεο: Προγραμματισμός ανά ζεύγη"
         },
@@ -11798,7 +11876,7 @@
           "progression_name": "Καλλιέργεια Δεξιοτήτων"
         },
         "5ca364f2-80c2-4b91-bb51-bf047aac35b5": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "02e3f29b-3c7a-4226-8503-1b2cc47a2028": {
           "progression_name": "Εξάσκηση"
@@ -11817,13 +11895,16 @@
         "53abffa5-fdeb-4041-a349-1e8e05f5d814": {
           "name": "Εισαγωγή"
         },
+        "478f0185-2792-46bb-8d0d-e88788ebb722": {
+          "name": "Προγραμματισμός με τον Θεριστή"
+        },
         "78aa2079-ec2a-438a-90cd-fc04c7fd1a89": {
           "tips": [
             null
           ]
         },
         "0f52c6dc-5602-4905-a924-f7756676f53f": {
-          "progression_name": "Βίντεο: Η συλλεκτική μηχανή"
+          "progression_name": "Βίντεο: Ο Θεριστής"
         },
         "a54a5ab7-02a5-461d-bdc2-49c946a369d7": {
           "progression_name": "Καλλιέργεια Δεξιοτήτων"
@@ -11835,7 +11916,7 @@
           "progression_name": "Καλλιέργεια Δεξιοτήτων"
         },
         "fcc74691-719d-415b-87ae-8bc40b436318": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "270d2335-43e2-42a0-a4fe-4035d2e071b5": {
           "progression_name": "Εξάσκηση"
@@ -11844,10 +11925,10 @@
           "name": "Αντανάκλαση"
         },
         "c8fd8e69-c19d-4264-90f8-44bb6909902d": {
-          "progression_name": "Βίντεο: Εμφωλευμένοι Βρόχοι"
+          "progression_name": "Βίντεο: Εξερευνώντας τους βρόγχους"
         },
         "018fc5e4-ba55-4049-8faf-bfd0f596e796": {
-          "name": "Επαναλαμβανόμαστε"
+          "name": "Εξερευνώντας τους βρόγχους"
         },
         "0d345591-6747-4a5e-aeb9-196c42f905cd": {
           "tips": [
@@ -11864,13 +11945,13 @@
           "progression_name": "Καλλιέργεια Δεξιοτήτων"
         },
         "a58a0e8a-e277-4309-92c4-990cc99c53b4": {
-          "progression_name": "Βίντεο: Κύβοι Επανάληψης"
+          "progression_name": "Βίντεο: Επανάλαβε μπλοκ"
         },
         "67ec9493-9942-4f64-b3dc-8870f4e30fdc": {
           "progression_name": "Καλλιέργεια Δεξιοτήτων"
         },
         "b07cbcb7-9e8e-4a05-a906-8621ce42cb95": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "cb321e7e-953a-4d73-a614-39cb86ef8b15": {
           "progression_name": "Εξάσκηση"
@@ -11894,7 +11975,7 @@
           "progression_name": "Καλλιέργεια Δεξιοτήτων"
         },
         "9b293bbc-d3e3-494d-892e-f90e56347451": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "8c213233-f661-45be-9898-31c343bba987": {
           "progression_name": "Εξάσκηση"
@@ -11920,13 +12001,13 @@
           "progression_name": "Καλλιέργεια Δεξιοτήτων"
         },
         "efc2a144-0a89-4201-966f-4b4287b12177": {
-          "progression_name": "Βίντεο: Κύβοι Επανάληψης με τον Καλλιτέχνη"
+          "progression_name": "Βίντεο: Επανάλαβε μπλοκ με τον Καλλιτέχνη"
         },
         "c96a7cbe-674b-41b9-b829-a62377a97e1a": {
           "progression_name": "Καλλιέργεια Δεξιοτήτων"
         },
         "000254d0-54ca-4866-b12c-f3d4c387cbbc": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "a7cf273e-6085-402a-bf47-e5985364e7a2": {
           "progression_name": "Εξάσκηση"
@@ -12017,6 +12098,9 @@
             null
           ]
         },
+        "e1c4af11-08ae-4ddd-90dc-da28738444fb": {
+          "name": "Μάθετε να σύρετε και να αποθέσετε"
+        },
         "b1107182-e8bd-4439-bf3e-135d5c0ab145": {
           "tips": [
             null
@@ -12085,7 +12169,7 @@
           "progression_name": "Καλλιέργεια Δεξιοτήτων"
         },
         "9bf3aa93-0d30-4dd2-a78e-926066cc64f3": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "05bbe6d1-d2c9-42a7-8489-2d545058f9c5": {
           "progression_name": "Εξάσκηση"
@@ -12112,7 +12196,7 @@
           "progression_name": "Καλλιέργεια Δεξιοτήτων"
         },
         "3c2f387d-dde7-4c31-befe-3bf45387d813": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "33708a97-a66a-4797-9349-7a1fc9325c26": {
           "progression_name": "Εξάσκηση"
@@ -12146,7 +12230,7 @@
           "progression_name": "Καλλιέργεια Δεξιοτήτων"
         },
         "277f1b5f-abbe-4158-9507-d91cce301994": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "483c3b98-803d-4ddf-ac49-f472bf27568b": {
           "progression_name": "Εξάσκηση"
@@ -12180,7 +12264,7 @@
           "progression_name": "Καλλιέργεια Δεξιοτήτων"
         },
         "3c97efcf-4bdd-437a-a07d-bcd1f9faad87": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "42b250a5-b499-45c1-a0f1-154447f0f2aa": {
           "progression_name": "Εξάσκηση"
@@ -12207,7 +12291,7 @@
           "progression_name": "Καλλιέργεια Δεξιοτήτων"
         },
         "879f345b-620d-4541-8467-84f00e515229": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "ac484bf5-608f-446f-ada6-d0506b7dc9a8": {
           "progression_name": "Εξάσκηση"
@@ -12317,6 +12401,7 @@
           ]
         },
         "c0ffac59-84f7-4177-b960-d808e21facb3": {
+          "name": "Προγραμματισμός με τα Angry Birds",
           "tips": [
             null
           ]
@@ -12328,7 +12413,7 @@
           "progression_name": "Καλλιέργεια Δεξιοτήτων"
         },
         "e7df62bb-065d-4eaf-b96a-9726c8c8510a": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "b879045d-ce26-4812-a901-bba02e97e846": {
           "progression_name": "Εξάσκηση"
@@ -12355,7 +12440,7 @@
           "progression_name": "Καλλιέργεια Δεξιοτήτων"
         },
         "a7458755-70c4-4b60-b6ad-729468af507f": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "fa8dd0db-5da9-43b3-8150-d3618c14ac77": {
           "progression_name": "Πρόβλεψη"
@@ -12372,6 +12457,9 @@
         "c1c33567-d81d-49d9-a399-e0ba461f0165": {
           "name": "Εισαγωγή"
         },
+        "e2aaa332-2426-4380-b14b-cd681477be54": {
+          "name": "Κυνηγώντας θησαυρούς με την Laurel"
+        },
         "1cecd624-a69a-4e47-9a4b-066f9b8ff31d": {
           "progression_name": "Βίντεο: Ο Συλλέκτης"
         },
@@ -12379,7 +12467,7 @@
           "progression_name": "Καλλιέργεια Δεξιοτήτων"
         },
         "e7869029-e0e5-4e0d-a6a8-b73fc0b01246": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "1237bc98-b3bd-45ac-8c6f-51bd8cc988e4": {
           "progression_name": "Εξάσκηση"
@@ -12399,6 +12487,9 @@
         "5ba69a56-1f3b-42fa-9be4-9463ae109962": {
           "name": "Εισαγωγή"
         },
+        "3861a12f-7e0f-43bf-8d29-1d526a2c90b2": {
+          "name": "Δημιουργία τέχνης με κώδικα"
+        },
         "e054a7d9-9c28-49d4-886f-e9fd771d378e": {
           "progression_name": "Βίντεο: Εισαγωγή Καλλιτέχνη με τον JR Hildebrand"
         },
@@ -12409,7 +12500,7 @@
           "tips": [
             null
           ],
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "2809e1fd-ca35-479d-b5d0-a183be995d73": {
           "progression_name": "Εξάσκηση"
@@ -12448,13 +12539,13 @@
           "progression_name": "Πρόβλεψη"
         },
         "adc69f16-8ed9-4265-b368-4a8e99c56aa5": {
-          "progression_name": "Βίντεο: Κύβοι Επανάληψης με BB-8"
+          "progression_name": "Βίντεο: Επανάλαβε μπλοκ με τον BB-8"
         },
         "6fed6081-6c4a-4a1a-8db9-69ab9fd41513": {
           "progression_name": "Καλλιέργεια Δεξιοτήτων"
         },
         "922cabb8-e8e7-4f94-a72a-c173f9084db9": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "069243e5-22ac-469d-afdd-0908f118d8fc": {
           "progression_name": "Εξάσκηση"
@@ -12475,13 +12566,14 @@
           "name": "Εισαγωγή"
         },
         "61416522-3272-4f4f-9fa9-6ab21de140ad": {
-          "progression_name": "Βίντεο: Η συλλεκτική μηχανή"
+          "name": "Συγκομιδή καλλιεργειών με βρόχους",
+          "progression_name": "Βίντεο: Ο Θεριστής"
         },
         "2f87a826-1460-4d5c-9db3-47911c77a56a": {
           "progression_name": "Καλλιέργεια Δεξιοτήτων"
         },
         "d65f83fb-25b6-45bb-8ca8-1b230b146b66": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "c80e175c-a3f8-4155-9900-0c6ab5829a4e": {
           "progression_name": "Εξάσκηση"
@@ -12668,7 +12760,7 @@
           "progression_name": "Καλλιέργεια Δεξιοτήτων"
         },
         "c87409e4-62dc-4155-b1ef-f6329111dd7f": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "b60e2fce-2cac-4440-8d56-d3a78c50d34d": {
           "progression_name": "Εξάσκηση"
@@ -12696,6 +12788,9 @@
         "d2a287ee-e85d-4ced-a525-517d98f9258b": {
           "name": "Εισαγωγή"
         },
+        "2fb45914-1afa-4483-8fb0-e3e3503fa80b": {
+          "name": "Διώρθωση λαθών με την Laurel"
+        },
         "a3c8ba66-a991-45a4-a743-59b4a41ebb24": {
           "progression_name": "Βίντεο: Αποσφαλμάτωση με το Κουμπί Βήμα"
         },
@@ -12703,7 +12798,7 @@
           "progression_name": "Καλλιέργεια Δεξιοτήτων"
         },
         "1921c52c-25f6-457a-8dba-57926c95bfae": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "04939762-e87a-4924-8049-62fb65e8dc0c": {
           "progression_name": "Εξάσκηση"
@@ -12715,6 +12810,7 @@
           "name": "Εισαγωγή"
         },
         "3fea7621-ed7a-4f12-852d-ccc7768ce6db": {
+          "name": "Γεγονότα  στο παιχνίδι αναπήδησης",
           "progression_name": "Καλλιέργεια Δεξιοτήτων"
         },
         "57c05fc2-b193-48bc-ac4e-a6ad469f6abb": {
@@ -12740,6 +12836,7 @@
           ]
         },
         "3f3c741a-dfe0-4288-80b7-338162743216": {
+          "name": "Δημιουργήστε ένα παιχνίδι Star Wars",
           "progression_name": "Βίντεο: Έργο Star Wars (Πόλεμος των Άστρων)"
         },
         "72b1888f-765e-42c0-bccc-0e32a5724f40": {
@@ -12820,7 +12917,7 @@
           "progression_name": "Καλλιέργεια Δεξιοτήτων"
         },
         "6ecd59e1-35e1-44aa-9a99-1190dc99abd3": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "0bfe26b9-1f90-4d17-a7df-2336f31b6f90": {
           "progression_name": "Εξάσκηση"
@@ -12837,6 +12934,7 @@
           "name": "Εισαγωγή"
         },
         "2517dd9e-f281-4db3-9cc8-07dc533add33": {
+          "name": "Σχεδίαση σχημάτων με βρόχους",
           "progression_name": "Βίντεο: Εισαγωγή Καλλιτέχνη με τον JR Hildebrand"
         },
         "1aa2fcd6-f059-4ee1-9d5b-03653ad98460": {
@@ -12849,7 +12947,7 @@
           "progression_name": "Καλλιέργεια Δεξιοτήτων"
         },
         "8ff5abc7-3c4a-42d5-88f6-51f0dd8060ab": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "ed79cfbb-8420-46b1-8cf2-ed9e0ae885f1": {
           "progression_name": "Εξάσκηση"
@@ -12860,11 +12958,14 @@
         "07ca6e20-a059-4b67-b099-6a90c6d7f4ab": {
           "name": "Εισαγωγή"
         },
+        "fead1358-5e8f-4b1d-990a-4ee44b3e101b": {
+          "name": "Εμφωλευμένοι Βρόχοι στο λαβύρινθο"
+        },
         "7fe86b33-56e5-43a2-bbd8-760d477b6ee1": {
           "progression_name": "Καλλιέργεια Δεξιοτήτων"
         },
         "77b85e56-dc72-45d6-8d17-cd2073e74560": {
-          "progression_name": "Βίντεο: 'Ενθετοι/Περιεχόμενοι Βρόχοι με την Μέλισσα"
+          "progression_name": "Βίντεο: Εμφωλευμένοι Βρόχοι με την Μέλισσα"
         },
         "8c793bd1-bbbf-415c-ab5b-12d502b5f39f": {
           "progression_name": "Πρόβλεψη"
@@ -12873,7 +12974,7 @@
           "progression_name": "Καλλιέργεια Δεξιοτήτων"
         },
         "0f7bd996-f5bb-414f-9bd8-b569978307a5": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "be5e4d78-ed9e-4cd3-84bc-86138cab5637": {
           "progression_name": "Εξάσκηση"
@@ -12907,10 +13008,11 @@
           "name": "Εισαγωγή"
         },
         "2f024770-481d-43dc-aa55-7133819f6663": {
+          "name": "Κοιτάζοντας μπροστά με το Minecraft",
           "progression_name": "Καλλιέργεια Δεξιοτήτων"
         },
         "16432484-49b1-47dc-bbd9-60f67bacc790": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "f5e9d0c0-d9c2-40af-b9aa-781078d95fa2": {
           "progression_name": "Ελεύθερο παιχνίδι"
@@ -12940,7 +13042,7 @@
           "progression_name": "Πρόβλεψη"
         },
         "8a1d519d-3579-40dd-8c62-77a2d4abc8ea": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "33778df3-8e79-4a40-814d-86eccf45c531": {
           "progression_name": "Εξάσκηση"
@@ -12967,7 +13069,7 @@
           "progression_name": "Καλλιέργεια Δεξιοτήτων"
         },
         "b25165f7-abe4-4c2b-a4f2-2a8838986caa": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "5ae9d162-1094-49a9-b0fb-bb22a9e6f3b4": {
           "progression_name": "Εξάσκηση"
@@ -12976,7 +13078,7 @@
           "progression_name": "Πρόβλεψη"
         },
         "738e5c3b-30c5-4b5c-8c50-295bd44328b7": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "6751c001-d379-4682-8c2e-3eead4acba66": {
           "name": "Αντανάκλαση"
@@ -12997,7 +13099,7 @@
           "progression_name": "Καλλιέργεια Δεξιοτήτων"
         },
         "31e87218-76f2-4e0c-9689-9203f3f2bc83": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "132b1ee7-77db-4d54-bf1f-e3efc761aa3a": {
           "progression_name": "Εξάσκηση"
@@ -13017,6 +13119,7 @@
           ]
         },
         "64a65e3a-6b86-4cc4-93fa-d0b4b9104781": {
+          "name": "Έργο Λήξη Μαθήματος",
           "tips": [
             null
           ]
@@ -13034,6 +13137,7 @@
           ]
         },
         "7b5f9e78-8c46-4ffa-ab19-355d6d63624b": {
+          "name": "Προγραμματισμός με τα Angry Birds",
           "tips": [
             null
           ],
@@ -13043,7 +13147,7 @@
           "progression_name": "Καλλιέργεια Δεξιοτήτων"
         },
         "955d1fd6-b45a-4f4d-8c32-e60031f41935": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "5c2218aa-1499-47a7-a606-11c067735cc6": {
           "progression_name": "Εξάσκηση"
@@ -13055,7 +13159,7 @@
           "progression_name": "Εξάσκηση"
         },
         "19367182-a8f0-442e-9a7d-e7852546f961": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "0cf25b1a-ce7f-42e1-9460-f17762284ea3": {
           "name": "Αντανάκλαση"
@@ -13073,7 +13177,7 @@
           "progression_name": "Καλλιέργεια Δεξιοτήτων"
         },
         "f6ef0cac-d698-4ba1-9e6d-d6c00538c584": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "73d03eeb-a7b1-4ee8-ad5b-85638d568511": {
           "progression_name": "Πρόβλεψη"
@@ -13090,6 +13194,9 @@
         "b26f7849-9b0a-4cb8-a4c1-27ee2eaf3b08": {
           "name": "Εισαγωγή"
         },
+        "44711c15-152c-4e84-9eca-d87c42edd4a8": {
+          "name": "Κυνηγώντας θησαυρούς με την Laurel"
+        },
         "ea56a346-7c58-4d03-a5bc-aa4021627e22": {
           "progression_name": "Βίντεο: Ο Συλλέκτης"
         },
@@ -13097,7 +13204,7 @@
           "progression_name": "Καλλιέργεια Δεξιοτήτων"
         },
         "18bc2d27-442d-405b-aafc-c5f9e0c767ca": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "c88b15d4-5935-4d02-b036-bd3107c97185": {
           "progression_name": "Εξάσκηση"
@@ -13117,6 +13224,9 @@
         "493408f8-a48b-457f-924d-0c99519b55e2": {
           "name": "Εισαγωγή"
         },
+        "9594ae73-93bc-4660-aa85-9346451fdf4a": {
+          "name": "Δημιουργία τέχνης με κώδικα"
+        },
         "c01e356b-bb48-45a6-bf67-5bcb3d959cc1": {
           "progression_name": "Βίντεο: Εισαγωγή Καλλιτέχνη με τον JR Hildebrand"
         },
@@ -13127,7 +13237,7 @@
           "tips": [
             null
           ],
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "47788922-c2b4-4cc7-8d02-73cc2fef49a4": {
           "progression_name": "Εξάσκηση"
@@ -13293,13 +13403,13 @@
           "progression_name": "Πρόβλεψη"
         },
         "d7c1115e-9c85-40fc-a0f8-10f6c715a292": {
-          "progression_name": "Βίντεο: Κύβοι Επανάληψης με BB-8"
+          "progression_name": "Βίντεο: Επανάλαβε μπλοκ με τον BB-8"
         },
         "f62e3109-74fd-45b6-b335-059ef71dc3c3": {
           "progression_name": "Καλλιέργεια Δεξιοτήτων"
         },
         "736ef92b-b635-4477-abbb-7d98d171b960": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "f14b4515-adef-4ed1-a576-a2ae5838273a": {
           "progression_name": "Εξάσκηση"
@@ -13336,11 +13446,14 @@
         "05c7c3a3-3378-4904-9136-be16d24330a3": {
           "name": "Εισαγωγή"
         },
+        "614b6acb-6e88-403e-a873-aa900b8666c4": {
+          "name": "Εμφωλευμένοι Βρόχοι στο λαβύρινθο"
+        },
         "e2b26151-70bf-4a9d-b08a-28a0efffd9e0": {
           "progression_name": "Εξάσκηση"
         },
         "e7851e33-7e57-47f2-96c2-bfb177d83303": {
-          "progression_name": "Βίντεο: 'Ενθετοι/Περιεχόμενοι Βρόχοι με την Μέλισσα"
+          "progression_name": "Βίντεο: Εμφωλευμένοι Βρόχοι με την Μέλισσα"
         },
         "6d0c65ec-45f6-4665-a5a0-89e06fa22ca1": {
           "progression_name": "Πρόβλεψη"
@@ -13349,7 +13462,7 @@
           "progression_name": "Εξάσκηση"
         },
         "59a2568e-bd18-4790-9dd4-e6df4db826ca": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "781b60da-fa55-4883-ad7c-8392d3fcf564": {
           "progression_name": "Εξάσκηση"
@@ -13379,10 +13492,11 @@
           "name": "Εισαγωγή"
         },
         "db402396-6473-4942-a3b9-e3833beb0cd8": {
+          "name": "Κοιτάζοντας μπροστά με το Minecraft",
           "progression_name": "Καλλιέργεια Δεξιοτήτων"
         },
         "3ab2228f-c257-4ffd-bcc0-1e5b29118ccf": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "61cffed6-e526-428f-9d2c-e53fbe5b2653": {
           "progression_name": "Ελεύθερο παιχνίδι"
@@ -13412,7 +13526,7 @@
           "progression_name": "Πρόβλεψη"
         },
         "cd33cbb5-8d96-4173-a790-5f3c59c5afff": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "dad1e3b1-09ac-4d03-93b7-5e8dd93b21c5": {
           "progression_name": "Εξάσκηση"
@@ -13439,7 +13553,7 @@
           "progression_name": "Καλλιέργεια Δεξιοτήτων"
         },
         "b0a4f8d2-11ae-416f-a274-e1c3be9dcc22": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "7b5da851-cc60-4e3a-9447-54c8ab3e79e5": {
           "progression_name": "Εξάσκηση"
@@ -13499,7 +13613,7 @@
           "progression_name": "Καλλιέργεια Δεξιοτήτων"
         },
         "db38efa3-e075-41c0-ba59-0e9426393b52": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "ac1fbc06-ba6b-4b67-bf20-041eb07fb41b": {
           "progression_name": "Εξάσκηση"
@@ -13523,7 +13637,7 @@
           "progression_name": "Εξάσκηση"
         },
         "f6fcf627-61b6-45f8-ac6b-602a11fb434a": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "ae63d880-c229-44c2-a344-3e56b4ccb81b": {
           "progression_name": "Εξάσκηση"
@@ -13583,7 +13697,7 @@
           "progression_name": "Εξάσκηση"
         },
         "074980cb-1e9f-4fa3-b97d-1467b036062d": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "4cdcc007-772d-47e1-bccf-3c4e951f80ae": {
           "progression_name": "Εξάσκηση"
@@ -13616,7 +13730,7 @@
           "progression_name": "Εξάσκηση"
         },
         "0ee69e3c-cf57-4652-8b39-55a7ff57430f": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "02be7a86-1f94-4bde-95ce-a5454ef034d2": {
           "progression_name": "Εξάσκηση"
@@ -13763,6 +13877,9 @@
             null
           ]
         },
+        "4dd75533-0a88-4007-b78d-c6237dc99e05": {
+          "name": "Μάθετε να σύρετε και να αποθέσετε"
+        },
         "f8ae0c1b-6fd2-4f09-9ab3-67830399dfe0": {
           "tips": [
             null
@@ -13805,10 +13922,11 @@
           "name": "Αντανάκλαση"
         },
         "c07f590c-4333-4b74-a479-fa00fb43acd4": {
+          "name": "Προγραμματισμός με τα Angry Birds",
           "progression_name": "Καλλιέργεια Δεξιοτήτων"
         },
         "58491b40-8a56-4299-9f91-d96bd0af3ab0": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "dd1d935e-48f8-4f2b-b884-ab48d5ac79e9": {
           "progression_name": "Εξάσκηση"
@@ -13835,7 +13953,7 @@
           "progression_name": "Καλλιέργεια Δεξιοτήτων"
         },
         "98d68ccb-eacc-4a2a-83f7-aa4392ad93aa": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "8a743287-1638-4c96-8c21-387ebf05d760": {
           "progression_name": "Εξάσκηση"
@@ -13846,13 +13964,16 @@
         "6b656efc-0576-4c50-856b-5c9bc433e5b3": {
           "name": "Εισαγωγή"
         },
+        "0684b025-9c16-437c-936c-d9743cad2d94": {
+          "name": "Προγραμματισμός με τον Θεριστή"
+        },
         "dfa32a81-45fc-4e60-b0d0-a3324b044c9b": {
           "tips": [
             null
           ]
         },
         "45d59019-4dd4-4a32-b08c-fd79528eab76": {
-          "progression_name": "Βίντεο: Η συλλεκτική μηχανή"
+          "progression_name": "Βίντεο: Ο Θεριστής"
         },
         "7675abfe-e572-4b1b-9203-ac0c1e6c3407": {
           "progression_name": "Καλλιέργεια Δεξιοτήτων"
@@ -13864,7 +13985,7 @@
           "progression_name": "Καλλιέργεια Δεξιοτήτων"
         },
         "fc22082b-67fd-47ec-8353-11c902f9ab4c": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "6f0b2804-a745-47e0-8211-45bfc553e106": {
           "progression_name": "Εξάσκηση"
@@ -13895,7 +14016,7 @@
           "progression_name": "Καλλιέργεια Δεξιοτήτων"
         },
         "0a8a7f79-b1b7-436e-8a45-b6190c180164": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "01ea78e0-acb4-4a08-8295-6257c3d3aa29": {
           "progression_name": "Εξάσκηση"
@@ -13919,7 +14040,7 @@
           "progression_name": "Καλλιέργεια Δεξιοτήτων"
         },
         "46172f79-e306-4a8f-9ecd-640b05733fb6": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "c08bd0ec-993c-4554-b855-96bdf024e9ef": {
           "progression_name": "Εξάσκηση"
@@ -13951,7 +14072,7 @@
           "progression_name": "Καλλιέργεια Δεξιοτήτων"
         },
         "073ef24a-022b-46a3-a900-9a5bd5c2b6fe": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "c2ef410e-28ad-4ebe-9061-f5658d8fe975": {
           "progression_name": "Εξάσκηση"
@@ -13977,7 +14098,7 @@
           "progression_name": "Καλλιέργεια Δεξιοτήτων"
         },
         "77de1bff-b1e2-4956-9ed2-15110f9aa640": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "5620ec7b-1ab2-40ae-9468-13e15bb2d4e0": {
           "progression_name": "Εξάσκηση"
@@ -14155,13 +14276,13 @@
           "progression_name": "Καλλιέργεια Δεξιοτήτων"
         },
         "f6df66e2-bc97-403d-a4e1-c015294d94ac": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "9982dc06-ec1f-4b15-b4e8-16cc5663bf8c": {
           "progression_name": "Εξάσκηση"
         },
         "9a64a3f8-16de-4001-82e3-01d9184a0650": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "1cbfaa5e-bd5f-4861-9152-5fd3e6a37d47": {
           "progression_name": "Επιπρόσθετο υλικό μαθήματος"
@@ -14187,7 +14308,7 @@
           "progression_name": "Καλλιέργεια Δεξιοτήτων"
         },
         "70a7d0e6-caa1-439a-a18c-41e5af3daf6f": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "b74deff4-5709-42c9-bd89-609b29df9368": {
           "progression_name": "Εξάσκηση"
@@ -14292,7 +14413,7 @@
           "progression_name": "Καλλιέργεια Δεξιοτήτων"
         },
         "2be1256a-b8a6-4ec6-a54d-c1db662af71e": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "c29e178e-6a22-48e2-9df0-06269e2000b2": {
           "progression_name": "Εξάσκηση"
@@ -14361,7 +14482,7 @@
           "progression_name": "Βίντεο: \"Αν/Διαφορετικά\""
         },
         "85c2f391-04ff-4b1f-8e2d-dad1aebd0b17": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "c6d24990-be45-4b52-b095-48004fcaca4a": {
           "progression_name": "Εξάσκηση"
@@ -14373,13 +14494,13 @@
           "name": "Εισαγωγή"
         },
         "24e49944-567b-4a1a-8f14-8e60585cb81f": {
-          "progression_name": "Βίντεο: Η συλλεκτική μηχανή"
+          "progression_name": "Βίντεο: Ο Θεριστής"
         },
         "6da14073-1ba0-4603-989b-5b9c9758c047": {
           "progression_name": "Καλλιέργεια Δεξιοτήτων"
         },
         "7bbfd5d9-bdc8-4db4-9d73-c2885278eff5": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "1fedc5de-50c7-478d-8173-e2d8ffd4d97a": {
           "progression_name": "Εξάσκηση"
@@ -14452,6 +14573,7 @@
         },
         "d26ab8fe-dc83-4704-8aba-bd0cdbdd80a4": {
           "name": "Αντανάκλαση",
+          "description": "\\*\\*Code Studio: \\*\\* Ζητήστε από τους μαθητές σας να απαντήσουν σε ένα σύντομο ερωτηματολόγιο 5 ερωτήσεων στην αρχή αυτής της ενότητας σχετικά με την τεχνητή νοημοσύνη και τη μηχανική μάθηση. Μόλις συμπληρώσουν το ερωτηματολόγιο τουλάχιστον 5 μαθητές, θα μπορείτε να δείτε τα ανώνυμα αποτελέσματα στον Πίνακα Ελέγχου Καθηγητή. Μερικά από αυτά τα ερωτήματα θα τεθούν και πάλι στο τέλος του πρώτου έργου, γεγονός το οποίο μπορεί να είναι χρήσιμο για την παρακολούθηση της ανάπτυξης των μαθητών και των αλλαγών στη στάση σε όλη τη μονάδα.",
           "progression_name": "Έρευνα Εισόδου"
         },
         "8bdf1f4e-1c20-42bd-a5d5-7217dfa0bd4f": {
@@ -14768,7 +14890,7 @@
           ]
         },
         "61bfa751-8587-4118-84e1-b3870975fad4": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "b39acb79-1fad-4acd-b3e4-789f32636f46": {
           "tips": [
@@ -17898,7 +18020,7 @@
           "tips": [
             null
           ],
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "b883c2e6-ca65-4053-b848-046bdfbb2a38": {
           "name": "Αντανάκλαση"
@@ -18509,7 +18631,7 @@
           "progression_name": "Εξάσκηση"
         },
         "26c63e40-009a-4255-bb94-f38466a11e15": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "b2137d87-9fc7-451a-aa66-5e88991ec216": {
           "progression_name": "Εξάσκηση"
@@ -18527,7 +18649,7 @@
           "progression_name": "Εξάσκηση"
         },
         "27ded5c7-5ee2-4201-8278-9f66603558a1": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "7205c09f-44e9-4cdb-9b77-2bf0502f115d": {
           "name": "Εξάσκηση",
@@ -18543,7 +18665,7 @@
           "progression_name": "Εξάσκηση"
         },
         "78559eec-193a-43db-89bd-bd50ee1dd4c7": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "6871601e-60a6-47e1-bcb7-f736524e44a1": {
           "name": "Εξάσκηση",
@@ -18562,7 +18684,7 @@
           "progression_name": "Εξάσκηση"
         },
         "46706589-fffc-42b0-9f99-580224a061e2": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "b9f568e3-b55e-4625-b9ab-3be854a43ef7": {
           "progression_name": "Εξάσκηση"
@@ -18580,7 +18702,7 @@
           "progression_name": "Εξάσκηση"
         },
         "aff2e264-4572-45c0-a518-91d3a41145e3": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "4ed5644a-db0a-41e0-a07d-a0447e4c04d3": {
           "progression_name": "Εξάσκηση"
@@ -18607,7 +18729,7 @@
           "progression_name": "Εξάσκηση"
         },
         "be735a9d-be60-4dd7-ae2d-969cd5d768fb": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "8a284add-539e-446d-aaaf-1be82f66e47f": {
           "name": "Εξάσκηση",
@@ -18620,7 +18742,7 @@
           "progression_name": "Εξάσκηση"
         },
         "8f76a97c-6f79-459e-b3ce-4c78f4354c6e": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "7f5bf645-9bdc-4503-a581-53f4b60212cf": {
           "name": "Εξάσκηση",
@@ -18656,7 +18778,7 @@
           "progression_name": "Ιδιότητες"
         },
         "7a2b3e7f-2f8f-4592-a166-1d279f647fb2": {
-          "progression_name": "συνοψίζω"
+          "progression_name": "Περίληψη"
         },
         "29a36d4b-797c-4517-970d-7ba25fe9f9a4": {
           "progression_name": "Ελεύθερο παιχνίδι"
@@ -18671,7 +18793,7 @@
           "progression_name": "Εξάσκηση"
         },
         "7f80f442-f41e-48a6-ba87-b2e0f50419ae": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "40df26ea-5cbf-40a0-bb28-53edc29cc3b3": {
           "name": "Εξάσκηση",
@@ -18690,7 +18812,7 @@
           "progression_name": "Εξάσκηση"
         },
         "5123721b-64b2-41fd-b004-5c971dd870da": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "6c8b3a44-2993-449c-a76a-ec7c04d7bf44": {
           "name": "Εξάσκηση",
@@ -18700,7 +18822,7 @@
           "progression_name": "Εξάσκηση"
         },
         "b4d6c23b-2f1e-40ff-9bbe-0839edb4c570": {
-          "progression_name": "'Ενθετοι/Περιεχόμενοι Βρόχοι με την Μέλισσα"
+          "progression_name": "Εμφωλευμένοι Βρόχοι με την Μέλισσα"
         },
         "0ecbcb6a-2c35-42eb-bc2d-970b29b51d25": {
           "progression_name": "Πρόβλεψη"
@@ -18709,7 +18831,7 @@
           "progression_name": "Εξάσκηση"
         },
         "91d7659d-e976-4340-afe4-9ed9fe55e127": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "98e02886-9d8a-47aa-895f-040ecaacbfb4": {
           "progression_name": "Εξάσκηση"
@@ -18736,7 +18858,7 @@
           "progression_name": "Πρόβλεψη"
         },
         "86d8c418-70b9-47fb-be38-1e1bfd42aafa": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "c4b2c35a-3eda-4544-8d35-09ccfb1d8662": {
           "progression_name": "Εξάσκηση"
@@ -18754,7 +18876,7 @@
           "progression_name": "Εξάσκηση"
         },
         "c20aa2e0-c032-4ccb-9b00-900781538703": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "5214479e-a008-4146-9e3e-3c9f5418f33f": {
           "progression_name": "Εξάσκηση"
@@ -18775,7 +18897,7 @@
           "progression_name": "Εξάσκηση"
         },
         "9b8d3fd1-8308-4d91-91ce-150d9ffc82b4": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "8e0cd3ce-5baa-4f75-ade6-5a7a60a951e7": {
           "progression_name": "Εξάσκηση"
@@ -18791,7 +18913,7 @@
           "progression_name": "Εξάσκηση"
         },
         "906a9824-0a68-4149-bfab-c59f5f759cec": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "91f8d4bd-e6a9-4a1a-a440-f57fa9725fcb": {
           "progression_name": "Εξάσκηση"
@@ -18822,7 +18944,7 @@
           "progression_name": "Εξάσκηση"
         },
         "4f8e01e3-039b-4253-992b-d0d3e8343559": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "1302faa2-7837-408e-85a9-3d4e19240965": {
           "progression_name": "Εξάσκηση"
@@ -18840,7 +18962,7 @@
           "progression_name": "Εξάσκηση"
         },
         "c33df6ec-bd36-44de-9f41-dad3fb245d43": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "c7af4532-75f2-4373-92b3-3066200678c2": {
           "progression_name": "Προβλέψτε"
@@ -18855,7 +18977,7 @@
           "progression_name": "Εξάσκηση"
         },
         "37feb4fc-9e9d-411b-b911-229c85aaa55a": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "3054b94f-fb9a-4309-b858-a03e4ba08794": {
           "progression_name": "Εξάσκηση"
@@ -18877,7 +18999,7 @@
           "progression_name": "Εξάσκηση"
         },
         "c523e5e0-fe37-4dd6-a9e6-35cfc26415d3": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "bc776bef-8ebc-4445-80dd-b5c3b691e4c4": {
           "progression_name": "Εξάσκηση"
@@ -18901,7 +19023,7 @@
           "progression_name": "Εξάσκηση"
         },
         "63724599-1670-4897-9314-ea0a2e237540": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "3314e154-a569-4d1e-a3a0-ff5a733c7e58": {
           "progression_name": "Εξάσκηση"
@@ -18919,7 +19041,7 @@
           "progression_name": "Εξάσκηση"
         },
         "4b80ee70-8904-4d2a-8383-b37230de7971": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "184a2f0b-d74c-4483-9a50-6d7bb380e6a7": {
           "progression_name": "Εξάσκηση"
@@ -18931,7 +19053,7 @@
           "progression_name": "Εξάσκηση"
         },
         "9a523c20-cd9a-4c87-a0d3-94049b24f97f": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "7f1d11ff-d2c9-4fb9-ab23-f1a3dd5116b4": {
           "progression_name": "Εξάσκηση"
@@ -18983,7 +19105,7 @@
           "progression_name": "Εξάσκηση"
         },
         "64524570-9c1b-4db9-932b-c23bfbf9bddd": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "76796fdb-bf9f-49cf-a0f3-16f0fab75b45": {
           "name": "Εξάσκηση",
@@ -19002,13 +19124,13 @@
           "progression_name": "Εξάσκηση"
         },
         "b5e93dd6-0f17-4fe0-9628-dd5521588550": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "b18a51f1-73a8-441b-82b5-dbb2a7b512a7": {
           "progression_name": "Εξάσκηση"
         },
         "66d2de03-1370-4d34-a429-53cd7d0c2d81": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "26e0ba37-add1-4d78-8592-c5a2a46e3372": {
           "name": "Εξάσκηση",
@@ -19033,7 +19155,7 @@
           "progression_name": "\"Αν/διαφορετικά\" με την Μέλισσα"
         },
         "34f0eff5-b0dd-4bfc-9629-0b4d87f178b9": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "84f6c291-8431-478a-8132-dc3dd0db54e4": {
           "name": "Εξάσκηση",
@@ -19081,7 +19203,7 @@
           "progression_name": "Εξάσκηση"
         },
         "9a52733e-7368-41eb-a0df-9c9ea52a10e1": {
-          "progression_name": "'Ενθετοι/Περιεχόμενοι Βρόχοι με την Μέλισσα"
+          "progression_name": "Εμφωλευμένοι Βρόχοι με την Μέλισσα"
         },
         "bd9fab2a-0d0b-4b4b-a9bc-170387e7a757": {
           "progression_name": "Πρόβλεψη"
@@ -19090,7 +19212,7 @@
           "progression_name": "Εξάσκηση"
         },
         "e1faa5c5-ee21-4108-87ff-c5fd38664034": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "9a7aadb9-7bda-41df-9f0b-2d48721c3d2f": {
           "progression_name": "Εξάσκηση"
@@ -19108,7 +19230,7 @@
           "progression_name": "Εξάσκηση"
         },
         "0ddbc582-20ae-4047-8764-565895eed729": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "01dee4c6-ac29-4ea3-8f9f-acbffb1b3560": {
           "progression_name": "Εξάσκηση"
@@ -19146,7 +19268,7 @@
           "progression_name": "Εξάσκηση"
         },
         "a24eea9c-ab22-4155-a800-7bc6eaffebb9": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "c90159e4-1db8-4c2d-a5f3-0f6c4adeea99": {
           "progression_name": "Εξάσκηση"
@@ -19162,7 +19284,7 @@
           "progression_name": "Εξάσκηση"
         },
         "2b6efab0-59d9-4da3-ac2d-06f2f76dd473": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "e0c36562-97e2-4677-9267-50d155c13fe5": {
           "progression_name": "Εξάσκηση"
@@ -19204,7 +19326,7 @@
           "progression_name": "Εξάσκηση"
         },
         "250712fa-af9b-47dd-820d-946f29752fac": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "be6080de-1278-4a81-ac87-54429e2e7858": {
           "progression_name": "Εξάσκηση"
@@ -19216,7 +19338,7 @@
           "progression_name": "Εξάσκηση"
         },
         "bac8e1cc-75c9-4903-be20-67ef3f908699": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "5496b985-9625-4152-969b-59320a6094f4": {
           "name": "Εξάσκηση",
@@ -19232,7 +19354,7 @@
           "progression_name": "Εξάσκηση"
         },
         "5971ebbb-7513-4e17-941f-a9b19e7866d3": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "08e4f4d5-63b1-4db7-87fb-4ef1fbca2a29": {
           "name": "Εξάσκηση",
@@ -19251,7 +19373,7 @@
           "progression_name": "Εξάσκηση"
         },
         "3958ad66-9ec0-4261-8daf-a7914f33756f": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "989db613-8d12-463f-ba84-567357052f90": {
           "progression_name": "Εξάσκηση"
@@ -19269,7 +19391,7 @@
           "progression_name": "Εξάσκηση"
         },
         "a221d837-f004-414a-83e6-daf171d2b173": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "10794a6b-9996-4891-abc5-f99fb0f41539": {
           "progression_name": "Εξάσκηση"
@@ -19340,19 +19462,19 @@
           "progression_name": "Εξάσκηση"
         },
         "fca63890-3cc5-4821-b6d4-69e65dc80b05": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "68576c17-b922-4c85-b1bc-bb834b3e140d": {
           "progression_name": "Εξάσκηση"
         },
         "5b6e8418-e430-4ed1-ada4-20de1eaa51da": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "2aa21e9a-2a8e-4b0b-a7a5-ad763d30b7fb": {
           "progression_name": "Εξάσκηση"
         },
         "be1bd9ff-944b-466e-98ac-52290ef315b5": {
-          "progression_name": "'Ενθετοι/Περιεχόμενοι Βρόχοι με την Μέλισσα"
+          "progression_name": "Εμφωλευμένοι Βρόχοι με την Μέλισσα"
         },
         "7ceeb1dd-826e-4089-b82a-e04dff173750": {
           "progression_name": "Πρόβλεψη"
@@ -19361,7 +19483,7 @@
           "progression_name": "Εξάσκηση"
         },
         "380a484d-948a-4421-bfe6-5bb303c54971": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "a1c180d3-f349-46c7-97ec-d8ae618cf000": {
           "progression_name": "Εξάσκηση"
@@ -19387,7 +19509,7 @@
           "progression_name": "Εξάσκηση"
         },
         "2a9b62a9-5da7-4fb4-8bf5-97f1f0d21dae": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "3ffafdf3-cc9d-4291-9a1b-0562b763b806": {
           "name": "Εξάσκηση",
@@ -19418,7 +19540,7 @@
           "progression_name": "Εξάσκηση"
         },
         "f12b431c-0b07-4843-9986-d0947ba8ce6b": {
-          "progression_name": "Εξάσκηση"
+          "progression_name": "Πρόκληση"
         },
         "a5e2061d-1930-4be7-b5d8-de0392be82e8": {
           "progression_name": "Εξάσκηση"

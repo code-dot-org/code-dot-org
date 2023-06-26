@@ -42,7 +42,7 @@
   "blockly_toolboxCategoryFunctions": "செயல்பாடுகள்",
   "blockly_toolboxCategoryLogic": "தர்க்கம்",
   "blockly_toolboxCategoryMath": "கணிதம்",
-  "blockly_toolboxCategoryPlay": "ப்ளே",
+  "blockly_toolboxCategoryPlay": "ஒலிகள் ",
   "blockly_toolboxCategorySimple": "எளிய",
   "blockly_toolboxCategoryTracks": "டிராக்ஸ்",
   "blockly_toolboxCategoryVariables": "மாறிலிகள்",
@@ -54,5 +54,7 @@
   "share": "பகிர்",
   "shareComingSoon": "பகிர்தல் கட்டுமானத்தின் கீழ் உள்ளது. விரைவில் மீண்டும் சரிபார்க்கவும்.",
   "startOver": "மீண்டும் துவங்கு",
-  "upload": "பதிவேற்றவும்"
+  "upload": "பதிவேற்றவும்",
+  "panelHeaderInstructions": "வழிமுறைகள்",
+  "panelHeaderWorkspace": "பணிவெளி: "
 }

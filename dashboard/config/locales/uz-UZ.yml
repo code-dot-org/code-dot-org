@@ -61,6 +61,7 @@ uz:
         reset_password_token: Siz kirib o'tgan parolni qayta tiklash uchun havola
         error:
           future: yaqin orada bo`la olmaydi
+        us_state: Davlat
   beta: beta
   hello: Salom Dunyo
   welcome_back: Qayta tashrifingiz bilan, %{name}
@@ -70,6 +71,7 @@ uz:
   unsubmit: Bekor qilish
   previous_page: Oldingi sahifa
   next_page: Keyingi sahifa
+  next_level: Keyingi daraja
   next_resource: Keyingi resurs
   done_with_module: Ushbu o'quv moduli bilan bajarildi
   cancel: Bekor qilish
@@ -258,6 +260,7 @@ uz:
       yangiliklarni vaqti-vaqti bilan yuborib tursak bo‘ladimi?  [(Maxfiylik siyosatimizga
       qarang)](%{privacy_policy_url})
     parent_account_email_label: Ota-ona/Vasiy emaili
+    us_state: Davlat
   school_info:
     title: Maktab haqida ma'lumot (ixtiyoriy)
     school_country: Maktab davlati
@@ -1515,6 +1518,7 @@ uz:
         csf_express: CS Fundamentals  - Informatika asoslari (Pre-Express yoki Express)
         csd: Kompyuter fanlari kashfiyotlari
         csp: CS Principles -Informatika tamoyillari
+        other: Boshqa
         not_applicable: Mavjud emas
       email_opt_in:
         opt_in_yes: Ha

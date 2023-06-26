@@ -18,7 +18,7 @@ interface Validation {
 }
 
 // The definition of a progression step.
-interface ProgressionStep {
+export interface ProgressionStep {
   text: string;
   toolbox: {
     [key: string]: string;

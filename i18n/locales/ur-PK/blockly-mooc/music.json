@@ -44,7 +44,7 @@
   "blockly_toolboxCategoryFunctions": "افعال",
   "blockly_toolboxCategoryLogic": "منطق",
   "blockly_toolboxCategoryMath": "ریاضی",
-  "blockly_toolboxCategoryPlay": "چلائیں",
+  "blockly_toolboxCategoryPlay": "آوازیں",
   "blockly_toolboxCategorySimple": "سادہ",
   "blockly_toolboxCategoryTracks": "پٹریوں",
   "blockly_toolboxCategoryVariables": "متغیرات",
@@ -56,5 +56,7 @@
   "share": "دوسروں کو بتائیں",
   "shareComingSoon": "اشتراک زیر تعمیر ہے۔ جلد ہی واپس چیک کریں.",
   "startOver": "پھر سے شروع کریں",
-  "upload": "اپلوڈ کریں"
+  "upload": "اپلوڈ کریں",
+  "panelHeaderInstructions": "ہدایات",
+  "panelHeaderWorkspace": "جائے کار: "
 }

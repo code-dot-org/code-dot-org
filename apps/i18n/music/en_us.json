@@ -27,7 +27,7 @@
   "blockly_blockSetLocationNextMeasureTooltip": "go to next measure",
   "blockly_blockSetEffect": "set {effect} to {value}",
   "blockly_blockSetEffectTooltip": "set effect",
-  "blockly_blockTriggered": "{trigger} triggered",
+  "blockly_blockTriggered": "{trigger} triggered {when}",
   "blockly_blockTriggeredTooltip": "at trigger",
   "blockly_blockTriggeredAt": "{trigger} triggered at {time}",
   "blockly_blockTriggeredAtTooltip": "at trigger",
@@ -38,6 +38,9 @@
   "blockly_fieldRestBeats": "{num} beats",
   "blockly_fieldRestOneMeasure": "1 measure",
   "blockly_fieldRestMeasures": "{num} measures",
+  "blockly_fieldTriggerStartImmediately": "immediately",
+  "blockly_fieldTriggerStartNextBeat": "at next beat",
+  "blockly_fieldTriggerStartNextMeasure": "at next measure",
   "blockly_functionNamePlaceholder": "my function",
   "blockly_toolboxCategoryControl": "Control",
   "blockly_toolboxCategoryEffects": "Effects",
@@ -58,5 +61,9 @@
   "share": "Share",
   "shareComingSoon": "Sharing is under construction. Check back soon.",
   "startOver": "Start Over",
-  "upload": "Upload"
+  "upload": "Upload",
+  "panelHeaderInstructions": "Instructions",
+  "panelHeaderWorkspace": "Workspace",
+  "panelHeaderControls": "Controls",
+  "panelHeaderTimeline": "Timeline"
 }

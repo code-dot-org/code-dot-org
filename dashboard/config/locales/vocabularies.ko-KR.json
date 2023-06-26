@@ -15,38 +15,40 @@
           "definition": "머신이 실행할 수 있는 무언가로 코딩된 알고리즘."
         },
         "code/minecraft/unversioned": {
-          "definition": "(동사) 코드 작성, 컴퓨터에게 내릴 지시사항 작성."
+          "word": "코드",
+          "definition": "(동사) 코드를 짜다, 컴퓨터에게 내릴 명령어를 만들다"
         },
         "debugging/minecraft/unversioned": {
           "word": "디버깅",
-          "definition": "알고리즘 또는 프로그램에서 문제를 찾아 고침."
+          "definition": "알고리즘이나 프로그램에서 문제를 찾아 고치기"
         },
         "event/minecraft/unversioned": {
           "word": "이벤트 ",
-          "definition": " 무언가를 일으키는 행위."
+          "definition": "어떠한 일이 일어나게 하는 작업"
         },
         "loop/minecraft/unversioned": {
           "word": "루프",
-          "definition": "뭔가를 계속 다시 하는 동작."
+          "definition": "계속해서 무언가를 반복하도록 하는 작업"
         },
         "program/minecraft/unversioned": {
-          "word": "프로그램 ",
-          "definition": "머신이 실행할 수 있는 무언가로 코딩된 알고리즘."
+          "word": "프로그램",
+          "definition": "기계가 실행할 수 있는 무언가로 코딩된 알고리즘"
         },
         "code/hero/unversioned": {
-          "definition": "(동사) 코드 작성, 컴퓨터에게 내릴 지시사항 작성."
+          "word": "코드",
+          "definition": "(동사) 코드를 짜다, 컴퓨터에게 내릴 지시 사항을 만들다"
         },
         "debugging/hero/unversioned": {
           "word": "디버깅",
-          "definition": "알고리즘 또는 프로그램에서 문제를 찾아 고침."
+          "definition": "알고리즘이나 프로그램에서 문제를 찾아 고치기"
         },
         "function/hero/unversioned": {
           "word": "함수",
-          "definition": "쉽게 계속 다시 호출할 수 있는 코드 부분."
+          "definition": "손쉽게 계속해서 다시 호출할 수 있는 코드 조각"
         },
         "program/hero/unversioned": {
           "word": "프로그램 ",
-          "definition": "머신이 실행할 수 있는 무언가로 코딩된 알고리즘."
+          "definition": "기계가 실행할 수 있는 무언가로 코딩된 알고리즘"
         },
         "code/poem-art/2021": {
           "word": "코드",
@@ -74,7 +76,7 @@
         },
         "debugging/flappy/unversioned": {
           "word": "디버깅",
-          "definition": "알고리즘 또는 프로그램에서 문제를 찾아 고침."
+          "definition": "알고리즘이나 프로그램에서 문제를 찾아 고치기"
         },
         "program/flappy/unversioned": {
           "word": "프로그램 ",
@@ -85,7 +87,7 @@
         },
         "debugging/hourofcode/unversioned": {
           "word": "디버깅",
-          "definition": "알고리즘 또는 프로그램에서 문제를 찾아 고침."
+          "definition": "알고리즘이나 프로그램에서 문제를 찾아 고치기"
         },
         "program/hourofcode/unversioned": {
           "word": "프로그램 ",
@@ -96,7 +98,7 @@
         },
         "debugging/frozen/unversioned": {
           "word": "디버깅",
-          "definition": "알고리즘 또는 프로그램에서 문제를 찾아 고침."
+          "definition": "알고리즘이나 프로그램에서 문제를 찾아 고치기"
         },
         "program/frozen/unversioned": {
           "word": "프로그램 ",
@@ -107,7 +109,7 @@
         },
         "debugging/iceage/unversioned": {
           "word": "디버깅",
-          "definition": "알고리즘 또는 프로그램에서 문제를 찾아 고침."
+          "definition": "알고리즘이나 프로그램에서 문제를 찾아 고치기"
         },
         "program/iceage/unversioned": {
           "word": "프로그램 ",
@@ -119,7 +121,7 @@
         },
         "debugging/artist/unversioned": {
           "word": "디버깅",
-          "definition": "알고리즘 또는 프로그램에서 문제를 찾아 고침."
+          "definition": "알고리즘이나 프로그램에서 문제를 찾아 고치기"
         },
         "program/artist/unversioned": {
           "word": "프로그램 ",
@@ -130,7 +132,7 @@
         },
         "debugging/gumball/unversioned": {
           "word": "디버깅",
-          "definition": "알고리즘 또는 프로그램에서 문제를 찾아 고침."
+          "definition": "알고리즘이나 프로그램에서 문제를 찾아 고치기"
         },
         "program/gumball/unversioned": {
           "word": "프로그램 ",
@@ -148,27 +150,28 @@
           "definition": "머신이 실행할 수 있는 무언가로 코딩된 알고리즘."
         },
         "code/aquatic/unversioned": {
-          "definition": "(동사) 코드 작성, 컴퓨터에게 내릴 지시사항 작성."
+          "word": "코드",
+          "definition": "(동사) 코드를 짜다, 컴퓨터에게 내릴 명령어를 만들다"
         },
         "condition/aquatic/unversioned": {
           "word": "조건",
-          "definition": "동작을 실행하기 전 그것이 참인지 여부를 보기 위해 프로그램이 확인하는 것. "
+          "definition": "작업 실행 전 그것이 참인지 프로그램이 확인하는 것"
         },
         "conditionals/aquatic/unversioned": {
-          "word": "조건",
-          "definition": "일정 조건이 참일 때만 실행하는 구문."
+          "word": "조건문",
+          "definition": "특정 조건이 참일 때만 실행되는 구문"
         },
         "debugging/aquatic/unversioned": {
           "word": "디버깅",
-          "definition": "알고리즘 또는 프로그램에서 문제를 찾아 고침."
+          "definition": "알고리즘이나 프로그램에서 문제를 찾아 고치기"
         },
         "loops/aquatic/unversioned": {
-          "word": "반복",
-          "definition": "뭔가를 계속 다시 하는 동작."
+          "word": "루프",
+          "definition": "계속해서 무언가를 반복하도록 하는 작업"
         },
         "program/aquatic/unversioned": {
           "word": "프로그램 ",
-          "definition": "머신이 실행할 수 있는 무언가로 코딩된 알고리즘."
+          "definition": "기계가 실행할 수 있는 무언가로 코딩된 알고리즘"
         },
         "caesar_cipher_/hoc-encryption/unversioned": {
           "word": "시저 암호 ",
@@ -199,29 +202,30 @@
         },
         "debugging/starwars/unversioned": {
           "word": "디버깅",
-          "definition": "알고리즘 또는 프로그램에서 문제를 찾아 고침."
+          "definition": "알고리즘이나 프로그램에서 문제를 찾아 고치기"
         },
         "program/starwars/unversioned": {
           "word": "프로그램 ",
           "definition": "머신이 실행할 수 있는 무언가로 코딩된 알고리즘."
         },
         "code/mc/unversioned": {
-          "definition": "(동사) 코드 작성, 컴퓨터에게 내릴 지시사항 작성."
+          "word": "코드",
+          "definition": "(동사) 코드를 짜다, 컴퓨터에게 내릴 명령어를 만들다"
         },
         "debugging/mc/unversioned": {
           "word": "디버깅",
-          "definition": "알고리즘 또는 프로그램에서 문제를 찾아 고침."
+          "definition": "알고리즘이나 프로그램에서 문제를 찾아 고치기"
         },
         "program/mc/unversioned": {
           "word": "프로그램 ",
-          "definition": "머신이 실행할 수 있는 무언가로 코딩된 알고리즘."
+          "definition": "기계가 실행할 수 있는 무언가로 코딩된 알고리즘"
         },
         "code/playlab/unversioned": {
           "definition": "(동사) 코드 작성, 컴퓨터에게 내릴 지시사항 작성."
         },
         "debugging/playlab/unversioned": {
           "word": "디버깅",
-          "definition": "알고리즘 또는 프로그램에서 문제를 찾아 고침."
+          "definition": "알고리즘이나 프로그램에서 문제를 찾아 고치기"
         },
         "program/playlab/unversioned": {
           "word": "프로그램 ",
@@ -232,7 +236,7 @@
         },
         "debugging/starwarsblocks/unversioned": {
           "word": "디버깅",
-          "definition": "알고리즘 또는 프로그램에서 문제를 찾아 고침."
+          "definition": "알고리즘이나 프로그램에서 문제를 찾아 고치기"
         },
         "program/starwarsblocks/unversioned": {
           "word": "프로그램 ",
@@ -256,7 +260,7 @@
         },
         "debugging/sports/unversioned": {
           "word": "디버깅",
-          "definition": "알고리즘 또는 프로그램에서 문제를 찾아 고침."
+          "definition": "알고리즘이나 프로그램에서 문제를 찾아 고치기"
         },
         "event/sports/unversioned": {
           "word": "이벤트 ",
@@ -271,7 +275,7 @@
         },
         "debugging/infinity/unversioned": {
           "word": "디버깅",
-          "definition": "알고리즘 또는 프로그램에서 문제를 찾아 고침."
+          "definition": "알고리즘이나 프로그램에서 문제를 찾아 고치기"
         },
         "program/infinity/unversioned": {
           "word": "프로그램 ",
@@ -282,7 +286,7 @@
         },
         "debugging/basketball/unversioned": {
           "word": "디버깅",
-          "definition": "알고리즘 또는 프로그램에서 문제를 찾아 고침."
+          "definition": "알고리즘이나 프로그램에서 문제를 찾아 고치기"
         },
         "event/basketball/unversioned": {
           "word": "이벤트 ",
@@ -332,11 +336,11 @@
         },
         "debugging/coursed/2022": {
           "word": "디버깅",
-          "definition": "알고리즘 또는 프로그램에서 문제를 찾아 고침."
+          "definition": "알고리즘이나 프로그램에서 문제를 찾아 고치기"
         },
         "loop/coursed/2022": {
           "word": "루프",
-          "definition": "뭔가를 계속 다시 하는 동작."
+          "definition": "계속해서 무언가를 반복하도록 하는 작업"
         },
         "programming/coursed/2022": {
           "word": "프로그래밍",
@@ -367,7 +371,7 @@
         },
         "conditionals/coursed/2022": {
           "word": "조건",
-          "definition": "일정 조건이 참일 때만 실행하는 구문."
+          "definition": "특정 조건이 참일 때만 실행되는 구문"
         },
         "pseudocode/coursed/2022": {
           "word": "유사 부호",
@@ -375,7 +379,7 @@
         },
         "condition/coursed/2022": {
           "word": "조건",
-          "definition": "동작을 실행하기 전 그것이 참인지 여부를 보기 위해 프로그램이 확인하는 것. "
+          "definition": "작업 실행 전 그것이 참인지 프로그램이 확인하는 것"
         },
         "while_loop/coursed/2022": {
           "word": "While 루프",
@@ -490,7 +494,7 @@
         },
         "loop/coursee/2022": {
           "word": "루프",
-          "definition": "뭔가를 계속 다시 하는 동작."
+          "definition": "계속해서 무언가를 반복하도록 하는 작업"
         },
         "repeat/coursee/2022": {
           "word": "반복",
@@ -504,7 +508,7 @@
         },
         "conditionals/coursee/2022": {
           "word": "조건",
-          "definition": "일정 조건이 참일 때만 실행하는 구문."
+          "definition": "특정 조건이 참일 때만 실행되는 구문"
         },
         "while_loop/coursee/2022": {
           "word": "While 루프",
@@ -540,7 +544,7 @@
         },
         "debugging/courseb/2022": {
           "word": "디버깅",
-          "definition": "알고리즘 또는 프로그램에서 문제를 찾아 고침."
+          "definition": "알고리즘이나 프로그램에서 문제를 찾아 고치기"
         },
         "click/courseb/2022": {
           "word": "클릭",
@@ -572,7 +576,7 @@
         },
         "loop/courseb/2022": {
           "word": "루프",
-          "definition": "뭔가를 계속 다시 하는 동작."
+          "definition": "계속해서 무언가를 반복하도록 하는 작업"
         },
         "repeat/courseb/2022": {
           "word": "반복",
@@ -592,7 +596,7 @@
         },
         "debugging/express/2022": {
           "word": "디버깅",
-          "definition": "알고리즘 또는 프로그램에서 문제를 찾아 고침."
+          "definition": "알고리즘이나 프로그램에서 문제를 찾아 고치기"
         },
         "sequencing/express/2022": {
           "word": "시퀸싱",
@@ -623,7 +627,7 @@
         },
         "loop/express/2022": {
           "word": "루프",
-          "definition": "뭔가를 계속 다시 하는 동작."
+          "definition": "계속해서 무언가를 반복하도록 하는 작업"
         },
         "repeat/express/2022": {
           "word": "반복",
@@ -635,11 +639,11 @@
         },
         "condition/express/2022": {
           "word": "조건",
-          "definition": "동작을 실행하기 전 그것이 참인지 여부를 보기 위해 프로그램이 확인하는 것. "
+          "definition": "작업 실행 전 그것이 참인지 프로그램이 확인하는 것"
         },
         "conditionals/express/2022": {
           "word": "조건",
-          "definition": "일정 조건이 참일 때만 실행하는 구문."
+          "definition": "특정 조건이 참일 때만 실행되는 구문"
         },
         "while_loop/express/2022": {
           "word": "While 루프",
@@ -651,7 +655,7 @@
         },
         "function/express/2022": {
           "word": "함수",
-          "definition": "쉽게 계속 다시 호출할 수 있는 코드 부분."
+          "definition": "손쉽게 계속해서 다시 호출할 수 있는 코드 조각"
         },
         "prompt/express/2022": {
           "word": "프롬프트",
@@ -707,7 +711,7 @@
         },
         "debugging/pre-express/2022": {
           "word": "디버깅",
-          "definition": "알고리즘 또는 프로그램에서 문제를 찾아 고침."
+          "definition": "알고리즘이나 프로그램에서 문제를 찾아 고치기"
         },
         "program/pre-express/2022": {
           "word": "프로그램 ",
@@ -723,7 +727,7 @@
         },
         "loop/pre-express/2022": {
           "word": "루프",
-          "definition": "뭔가를 계속 다시 하는 동작."
+          "definition": "계속해서 무언가를 반복하도록 하는 작업"
         },
         "repeat/pre-express/2022": {
           "word": "반복",
@@ -739,7 +743,7 @@
         },
         "debugging/coursea/2022": {
           "word": "디버깅",
-          "definition": "알고리즘 또는 프로그램에서 문제를 찾아 고침."
+          "definition": "알고리즘이나 프로그램에서 문제를 찾아 고치기"
         },
         "program/coursea/2022": {
           "word": "프로그램 ",
@@ -771,7 +775,7 @@
         },
         "loop/coursea/2022": {
           "word": "루프",
-          "definition": "뭔가를 계속 다시 하는 동작."
+          "definition": "계속해서 무언가를 반복하도록 하는 작업"
         },
         "repeat/coursea/2022": {
           "word": "반복",
@@ -791,7 +795,7 @@
         },
         "debugging/coursec/2022": {
           "word": "디버깅",
-          "definition": "알고리즘 또는 프로그램에서 문제를 찾아 고침."
+          "definition": "알고리즘이나 프로그램에서 문제를 찾아 고치기"
         },
         "program/coursec/2022": {
           "word": "프로그램 ",
@@ -810,7 +814,7 @@
         },
         "loop/coursec/2022": {
           "word": "루프",
-          "definition": "뭔가를 계속 다시 하는 동작."
+          "definition": "계속해서 무언가를 반복하도록 하는 작업"
         },
         "repeat/coursec/2022": {
           "word": "반복",
@@ -839,7 +843,7 @@
         },
         "debugging/csd/2022": {
           "word": "디버깅",
-          "definition": "알고리즘 또는 프로그램에서 문제를 찾아 고침."
+          "definition": "알고리즘이나 프로그램에서 문제를 찾아 고치기"
         },
         "program/csd/2022": {
           "word": "프로그램 ",
@@ -984,7 +988,7 @@
         },
         "loop/coursef/2021": {
           "word": "루프",
-          "definition": "뭔가를 계속 다시 하는 동작."
+          "definition": "계속해서 무언가를 반복하도록 하는 작업"
         },
         "repeat/coursef/2021": {
           "word": "반복",
@@ -1064,7 +1068,7 @@
         },
         "debugging/courseb/2021": {
           "word": "디버깅",
-          "definition": "알고리즘 또는 프로그램에서 문제를 찾아 고침."
+          "definition": "알고리즘이나 프로그램에서 문제를 찾아 고치기"
         },
         "click/courseb/2021": {
           "word": "클릭",
@@ -1096,7 +1100,7 @@
         },
         "loop/courseb/2021": {
           "word": "루프",
-          "definition": "뭔가를 계속 다시 하는 동작."
+          "definition": "계속해서 무언가를 반복하도록 하는 작업"
         },
         "repeat/courseb/2021": {
           "word": "반복",
@@ -1112,7 +1116,7 @@
         },
         "debugging/coursea/2021": {
           "word": "디버깅",
-          "definition": "알고리즘 또는 프로그램에서 문제를 찾아 고침."
+          "definition": "알고리즘이나 프로그램에서 문제를 찾아 고치기"
         },
         "program/coursea/2021": {
           "word": "프로그램 ",
@@ -1144,7 +1148,7 @@
         },
         "loop/coursea/2021": {
           "word": "루프",
-          "definition": "뭔가를 계속 다시 하는 동작."
+          "definition": "계속해서 무언가를 반복하도록 하는 작업"
         },
         "repeat/coursea/2021": {
           "word": "반복",
@@ -1164,7 +1168,7 @@
         },
         "debugging/coursec/2021": {
           "word": "디버깅",
-          "definition": "알고리즘 또는 프로그램에서 문제를 찾아 고침."
+          "definition": "알고리즘이나 프로그램에서 문제를 찾아 고치기"
         },
         "program/coursec/2021": {
           "word": "프로그램 ",
@@ -1180,7 +1184,7 @@
         },
         "loop/coursec/2021": {
           "word": "루프",
-          "definition": "뭔가를 계속 다시 하는 동작."
+          "definition": "계속해서 무언가를 반복하도록 하는 작업"
         },
         "repeat/coursec/2021": {
           "word": "반복",
@@ -1208,11 +1212,11 @@
         },
         "debugging/coursed/2021": {
           "word": "디버깅",
-          "definition": "알고리즘 또는 프로그램에서 문제를 찾아 고침."
+          "definition": "알고리즘이나 프로그램에서 문제를 찾아 고치기"
         },
         "loop/coursed/2021": {
           "word": "루프",
-          "definition": "뭔가를 계속 다시 하는 동작."
+          "definition": "계속해서 무언가를 반복하도록 하는 작업"
         },
         "programming/coursed/2021": {
           "word": "프로그래밍",
@@ -1243,7 +1247,7 @@
         },
         "conditionals/coursed/2021": {
           "word": "조건",
-          "definition": "일정 조건이 참일 때만 실행하는 구문."
+          "definition": "특정 조건이 참일 때만 실행되는 구문"
         },
         "pseudocode/coursed/2021": {
           "word": "유사 부호",
@@ -1251,7 +1255,7 @@
         },
         "condition/coursed/2021": {
           "word": "조건",
-          "definition": "동작을 실행하기 전 그것이 참인지 여부를 보기 위해 프로그램이 확인하는 것. "
+          "definition": "작업 실행 전 그것이 참인지 프로그램이 확인하는 것"
         },
         "while_loop/coursed/2021": {
           "word": "While 루프",
@@ -1271,7 +1275,7 @@
         },
         "debugging/express/2021": {
           "word": "디버깅",
-          "definition": "알고리즘 또는 프로그램에서 문제를 찾아 고침."
+          "definition": "알고리즘이나 프로그램에서 문제를 찾아 고치기"
         },
         "sequencing/express/2021": {
           "word": "시퀸싱",
@@ -1302,7 +1306,7 @@
         },
         "loop/express/2021": {
           "word": "루프",
-          "definition": "뭔가를 계속 다시 하는 동작."
+          "definition": "계속해서 무언가를 반복하도록 하는 작업"
         },
         "repeat/express/2021": {
           "word": "반복",
@@ -1314,11 +1318,11 @@
         },
         "condition/express/2021": {
           "word": "조건",
-          "definition": "동작을 실행하기 전 그것이 참인지 여부를 보기 위해 프로그램이 확인하는 것. "
+          "definition": "작업 실행 전 그것이 참인지 프로그램이 확인하는 것"
         },
         "conditionals/express/2021": {
           "word": "조건",
-          "definition": "일정 조건이 참일 때만 실행하는 구문."
+          "definition": "특정 조건이 참일 때만 실행되는 구문"
         },
         "while_loop/express/2021": {
           "word": "While 루프",
@@ -1330,7 +1334,7 @@
         },
         "function/express/2021": {
           "word": "함수",
-          "definition": "쉽게 계속 다시 호출할 수 있는 코드 부분."
+          "definition": "손쉽게 계속해서 다시 호출할 수 있는 코드 조각"
         },
         "prompt/express/2021": {
           "word": "프롬프트",
@@ -1386,7 +1390,7 @@
         },
         "debugging/pre-express/2021": {
           "word": "디버깅",
-          "definition": "알고리즘 또는 프로그램에서 문제를 찾아 고침."
+          "definition": "알고리즘이나 프로그램에서 문제를 찾아 고치기"
         },
         "program/pre-express/2021": {
           "word": "프로그램 ",
@@ -1402,7 +1406,7 @@
         },
         "loop/pre-express/2021": {
           "word": "루프",
-          "definition": "뭔가를 계속 다시 하는 동작."
+          "definition": "계속해서 무언가를 반복하도록 하는 작업"
         },
         "repeat/pre-express/2021": {
           "word": "반복",
@@ -1434,7 +1438,7 @@
         },
         "loop/coursee/2021": {
           "word": "루프",
-          "definition": "뭔가를 계속 다시 하는 동작."
+          "definition": "계속해서 무언가를 반복하도록 하는 작업"
         },
         "repeat/coursee/2021": {
           "word": "반복",
@@ -1442,15 +1446,15 @@
         },
         "function/coursee/2021": {
           "word": "함수",
-          "definition": "쉽게 계속 다시 호출할 수 있는 코드 부분."
+          "definition": "손쉽게 계속해서 다시 호출할 수 있는 코드 조각"
         },
         "condition/coursee/2021": {
           "word": "조건",
-          "definition": "동작을 실행하기 전 그것이 참인지 여부를 보기 위해 프로그램이 확인하는 것. "
+          "definition": "작업 실행 전 그것이 참인지 프로그램이 확인하는 것"
         },
         "conditionals/coursee/2021": {
           "word": "조건",
-          "definition": "일정 조건이 참일 때만 실행하는 구문."
+          "definition": "특정 조건이 참일 때만 실행되는 구문"
         },
         "while_loop/coursee/2021": {
           "word": "While 루프",
@@ -1537,7 +1541,7 @@
         },
         "debugging/csd/2021": {
           "word": "디버깅",
-          "definition": "알고리즘 또는 프로그램에서 문제를 찾아 고침."
+          "definition": "알고리즘이나 프로그램에서 문제를 찾아 고치기"
         },
         "program/csd/2021": {
           "word": "프로그램 ",

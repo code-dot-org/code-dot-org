@@ -1,3 +1,4 @@
+import {logError} from '../utils/MusicMetrics';
 import SoundEffects from './soundEffects';
 
 // audio
@@ -5,7 +6,9 @@ var audioContext = null;
 
 var soundEffects = null;
 
-// var soundSourceIdUpto = 0;
+// Time constant used to compute the release rate; at each time constant
+// interval the sound will decay exponentially.
+const RELEASE_TIME_CONSTANT = 0.075;
 
 function createAudioContext(desiredSampleRate) {
   var AudioCtor = window.AudioContext || window.webkitAudioContext;
@@ -35,16 +38,25 @@ function createAudioContext(desiredSampleRate) {
   return context;
 }
 
-function WebAudio() {
+/**
+ * @param {*} options Optional audio system configuration.
+ *   {
+ *     delayTimeSeconds: number, // Delay time used in the delay effect
+ *     releaseTimeSeconds: number // Release time for fading out fixed-duration sounds
+ *   }
+ */
+function WebAudio(options) {
+  const {delayTimeSeconds, releaseTimeSeconds} = options;
   try {
     audioContext = createAudioContext(48000);
   } catch (e) {
-    console.log('Web Audio API is not supported in this browser');
+    logError('Web Audio API is not supported in this browser');
     audioContext = null;
     return;
   }
 
-  soundEffects = new SoundEffects(audioContext);
+  soundEffects = new SoundEffects(audioContext, delayTimeSeconds);
+  this.releaseTimeSeconds = releaseTimeSeconds;
 }
 
 WebAudio.prototype.getCurrentTime = function () {
@@ -60,8 +72,6 @@ WebAudio.prototype.LoadSound = function (url, callback) {
   request.open('GET', url, true);
   request.responseType = 'arraybuffer';
 
-  //console.log("loading sound", url);
-
   // Decode asynchronously
   request.onload = function () {
     try {
@@ -71,11 +81,11 @@ WebAudio.prototype.LoadSound = function (url, callback) {
           callback(buffer);
         },
         function (e) {
-          console.log('error ' + e);
+          logError(e);
         }
       );
     } catch (e) {
-      console.log('failed to decode');
+      logError(e);
     }
   };
   request.send();
@@ -93,7 +103,7 @@ WebAudio.prototype.LoadSoundFromBuffer = function (buffer, callback) {
       }
     );
   } catch (e) {
-    console.log('failed to decode', e);
+    logError(e);
   }
 };
 
@@ -109,23 +119,39 @@ WebAudio.prototype.PlaySoundByBuffer = function (
   when,
   loop,
   effects,
-  callback
+  callback,
+  duration
 ) {
-  var source = audioContext.createBufferSource(); // creates a sound source
+  const source = audioContext.createBufferSource(); // creates a sound source
   source.buffer = audioBuffer; // tell the source which sound to play
+  let currentNode = source;
+
+  if (duration) {
+    // If playing for a specific duration, apply a small fadeout to the sound
+    // to prevent clicks and pops
+    const gainNode = audioContext.createGain();
+    const releaseDuration = this.releaseTimeSeconds;
+    gainNode.gain.setTargetAtTime(
+      0,
+      when + duration - releaseDuration,
+      RELEASE_TIME_CONSTANT
+    );
+    source.connect(gainNode);
+    currentNode = gainNode;
+  }
 
   if (effects) {
     // Insert sound effects, which will connect to the output.
-    soundEffects.insertEffects(effects, source);
+    soundEffects.insertEffects(effects, currentNode);
   } else {
     // No sound effects, so we will connect directly to the output.
-    source.connect(audioContext.destination);
+    currentNode.connect(audioContext.destination);
   }
   source.onended = callback.bind(this, id);
 
   source.loop = loop;
 
-  source.start(when); // play the source now
+  source.start(when, 0, duration); // play the source now
 
   if (['suspended', 'interrupted'].includes(source.context.state)) {
     source.context.resume();

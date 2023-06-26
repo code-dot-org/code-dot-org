@@ -4810,7 +4810,7 @@
         "courseC_starWars_loops4": {
           "courseC_starWars_loops4_c": "Mengklik panah kecil di samping \"kiri\" di blok putar akan membiarkan Anda mengubahnya menjadi \"benar\".",
           "courseC_starWars_loops4_a": "Gunakan dua blok `repeat`.",
-          "courseC_starWars_loops4_b": "Setiap loop `repeat` akan memilih satu perintah di dalamnya: `move forward`."
+          "courseC_starWars_loops4_b": "Setiap loop ` repeat ` akan memilih satu perintah di dalamnya: ` move forward `."
         },
         "courseC_starWars_loops4_2018": {
           "courseC_starWars_loops4_c": "Mengklik panah kecil di samping \"kiri\" di blok putar akan membiarkan Anda mengubahnya menjadi \"benar\".",
@@ -4834,7 +4834,7 @@
         },
         "courseC_starWars_loops5": {
           "courseC_starWars_loops5_b": "Untuk bergerak ke bawah, Anda harus berbalik dan kemudian bergerak maju.",
-          "courseC_starWars_loops5_a": "Solusi terbaik menggunakan sebuah putaran, kemudian satu blok `move forward`, putaran lain, lalu sebuah loop."
+          "courseC_starWars_loops5_a": "Solusi terbaik menggunakan sebuah putaran, kemudian satu blok ` move forward `, putaran lain, lalu sebuah loop."
         },
         "courseC_starWars_loops5_2018": {
           "courseC_starWars_loops5_a": "Solusi terbaiknya adalah dengan menggunakan satu `maju ke depan`, lalu satu putar, lalu satu loop."
@@ -4851,7 +4851,7 @@
         },
         "courseC_starWars_loops6": {
           "courseC_starWars_loops6_a": "Cobalah menulis semua gerakan di atas sebuah kertas dan mencari sebuah pola.",
-          "courseC_starWars_loops6_b": "Jika Anda ingin mengurangi jumlah kode, Anda dapat menempatkan satu loop `repeat` dalam yang lain! \\\\\\\nIni adalah \\*\\* nested loop \\*\\*."
+          "courseC_starWars_loops6_b": "Jika Anda ingin mengurangi jumlah kode, Anda dapat menempatkan satu loop ` repeat ` dalam yang lain! \\   \nIni adalah ** nested loop **."
         },
         "courseC_starWars_loops6_2018": {
           "courseC_starWars_loops6_a": "Cobalah menulis semua gerakan di atas sebuah kertas dan mencari sebuah pola.",
@@ -4897,7 +4897,7 @@
         "courseC_starWars_loops8": {
           "course_starWars_loops8_a": "Coba pikirkan tentang masalah ini di bagian kecil. Ambillah waktu secukupnya. Anda tidak perlu menyelesaikannya pada percobaan pertama!",
           "course_starWars_loops8_b": "Pikirkan bagian pertama dari masalah ini sebagai masalah langkah tangga. Bagaimana anda mengatasinya sebelumnya?",
-          "course_starWars_loops8_c": "Perhatikan jalur ini.\n\n![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)"
+          "course_starWars_loops8_c": "Perhatikan jalur ini.\n\n[][0]"
         },
         "courseC_starWars_loops8_2018": {
           "course_starWars_loops8_a": "Coba pikirkan tentang masalah ini di bagian kecil. Ambillah waktu secukupnya. Anda tidak perlu menyelesaikannya pada percobaan pertama!",
@@ -5530,7 +5530,7 @@
         "courseD_bee_conditionals2": {
           "courseD_bee_conditionals2_hintVid1": "Butuh bantuan untuk memulai? Tonton videonya!",
           "courseD_bee_conditionals2_a": "Terkadang ada bunga, terkadang tidak. Jika Anda ingin kodenya berlaku dalam kedua kasus, pastikan menggunakan pernyataan `if`.",
-          "courseD_bee_conditionals2_b": "Anda dapat menggunakan sebuah loop `repeat` atau `while path ahead` untuk bergerak melalui labirin ini.",
+          "courseD_bee_conditionals2_b": "Anda dapat menggunakan sebuah loop `repeat` atau ` while path ahead` untuk bergerak melalui labirin ini.",
           "courseD_bee_conditionals2_c": "Anda tidak perlu memeriksa sarang lebah, hanya ada bunga atau ruang kosong di bawah awan.",
           "courseD_bee_conditionals2_hintVid2": "Tonton video ini untuk membantu memecahkan puzzle ini."
         },
@@ -5559,7 +5559,7 @@
         "courseD_bee_conditionals3": {
           "courseD_bee_conditionals3_hintVid1": "Butuh bantuan untuk memulai? Tonton videonya!",
           "courseD_bee_conditionals3_a": "Pastikan menggunakan pernyataan `if` untuk memeriksa setiap ruang agar diketahui ada tidaknya bunga.",
-          "courseD_bee_conditionals3_b": "Anda dapat menggunakan sebuah `ulangi` loop atau suatu `sementara` loop untuk menjaga lebah bergerak maju. Gunakan yang mana saja yang kamu suka!",
+          "courseD_bee_conditionals3_b": "Anda dapat menggunakan sebuah `ulangi` loop atau suatu ` sementara ` loop untuk menjaga lebah bergerak maju. Gunakan yang mana saja yang kamu suka!",
           "courseD_bee_conditionals3_c": "Jangan takut melakukan kesalahan! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda belum memecahkan puzzle itu.",
           "courseD_bee_conditionals3_hintVid2": "Tonton video ini untuk membantu memecahkan puzzle ini."
         },
@@ -5589,7 +5589,7 @@
           "courseD_bee_conditionals4_hintVid1": "Butuh bantuan untuk memulai? Tonton videonya!",
           "courseD_bee_conditionals4_a": "Anda masih bisa memperlakukan setiap ruangan seolah ada awan di atasnya, walaupun anda bisa melihat keseluruhan jalan.",
           "courseD_bee_conditionals4_b": "Gunakan pernyataan `if` di dalam loop untuk memeriksa keberadaan nektar di setiap ruang. ",
-          "courseD_bee_conditionals4_c": "Menggunakan blok <xml><block type=\"maze_untilBlocked\"/></xml>, Anda harus bergerak maju dan memeriksa bunga. Jika ada bunga, apa yang perlu dilakukan lebah?",
+          "courseD_bee_conditionals4_c": "Menggunakan blok [blockly block][0], Anda harus bergerak maju dan memeriksa bunga. Jika ada bunga, apa yang perlu dilakukan lebah?",
           "courseD_bee_conditionals4_hintVid2": "Tonton video ini untuk membantu memecahkan puzzle ini."
         },
         "courseD_bee_conditionals4_2018": {
@@ -5616,9 +5616,9 @@
         },
         "courseD_bee_conditionals5": {
           "courseD_bee_conditionals5_hintVid1": "Butuh bantuan untuk memulai? Tonton videonya!",
-          "courseD_bee_conditionals5_a": "Pikirkan setiap sisi jalan segi empat sebagai jalan dengan sendirinya. Atur loop bersarang dengan blok `repeat` di bagian luar dan sebuah loop`while there is a path ahead` di bagian dalam. Berapa banyak jalan yang dibutuhkan lebah untuk mereda jika lebah perlu menggulingkan setiap sisi dengan bunga?",
-          "courseD_bee_conditionals5_c": "Ada 3 sisi dari persegi panjang dengan bunga, sehingga kode perlu `mengulang 3 waktu`. Dalam setiap ulangi, lebah akan perlu untuk terus sepanjang jalan, `sementara ada sebuah jalan di depan`. Untuk terus menyusuri jalan setapak, lebah perlu `bergerak maju`. Sementara di jalan, lebah perlu memeriksa sebuah bunga. `Jika ada sebuah bunga`, lebah harus`mendapatkan nektar`.",
-          "courseD_bee_conditionals5_b": "Di dalam `sementara ada sebuah jalan di depan` blok Anda akan perlu untuk bergerak maju dan memeriksa sebuah bunga. Bagaimana cara Anda memeriksa jika ada sebuah bunga? Apa yang Anda lakukan jika ada sebuah bunga?",
+          "courseD_bee_conditionals5_a": "Pikirkan setiap sisi jalan segi empat sebagai jalan dengan sendirinya. Atur loop bersarang dengan blok `repeat` di bagian luar dan sebuah loop` while there is a path ahead ` di bagian dalam. Berapa banyak jalan yang dibutuhkan lebah untuk mereda jika lebah perlu menggulingkan setiap sisi dengan bunga?",
+          "courseD_bee_conditionals5_c": "Ada 3 sisi dari persegi panjang dengan bunga, sehingga kode perlu `mengulang 3 waktu`. Dalam setiap ulangi, lebah akan perlu untuk terus sepanjang jalan, ` sementara ada sebuah jalan di depan`. Untuk terus menyusuri jalan setapak, lebah perlu ` bergerak maju`. Sementara di jalan, lebah perlu memeriksa sebuah bunga. ` Jika ada sebuah bunga`, lebah harus` mendapatkan nektar`.",
+          "courseD_bee_conditionals5_b": "Di dalam ` sementara ada sebuah jalan di depan` blok Anda akan perlu untuk bergerak maju dan memeriksa sebuah bunga. Bagaimana cara Anda memeriksa jika ada sebuah bunga? Apa yang Anda lakukan jika ada sebuah bunga?",
           "courseD_bee_conditionals5_hintVid2": "Tonton video ini untuk membantu memecahkan puzzle ini."
         },
         "courseD_bee_conditionals5_2018": {
@@ -7051,8 +7051,8 @@
         },
         "courseE_artist_functions2": {
           "courseD_artist_functions2_b": "Function yang Anda tulis sebaiknya tidak berisi seluruh program, cukup bagian yang menggambar persegi empat dengan sisi 100 piksel.",
-          "courseD_artist_functions2_c": "Gunakan blok `menggambar persegi empat` untuk \"memanggil\" function di dalam blok `when run`. Jika tidak, kode di dalam fungsi tidak akan berjalan.\n\n<xml><block type=\"procedures_callnoreturn\" limit=\"2\"><mutation name=\"draw a square\"/></block></xml>",
-          "courseD_artist_functions2_a": "Program anda harus:\n\n-   Menggunakan function\n-   Bergerak maju 100 + 75 piksel\n-   Menggunakan function"
+          "courseD_artist_functions2_c": "Gunakan blok `menggambar persegi empat` untuk \"memanggil\" function di dalam blok `when run`. Jika tidak, kode di dalam fungsi tidak akan berjalan.\n\n[blockly block][0]",
+          "courseD_artist_functions2_a": "Program anda harus:\n- Menggunakan function\n- Bergerak maju 100 + 75 piksel\n- Menggunakan function"
         },
         "courseE_artist_functions2_2018": {
           "courseD_artist_functions2_b": "Function ini seharusnya tidak memuat seluruh program Anda, hanya bagian yang menggambar kotak dengan sisi 100 piksel.",
@@ -11661,9 +11661,9 @@
         },
         "courseC_artist_prog72022": {
           "courseC_artist_prog7_a": "Setiap sudut adalah 45 atau 90 derajat.",
-          "courseC_artist_prog7_b": "Apakah berhasil pada langkah pertama?\\\nBagaimana dengan langkah kedua?\\\nDi mana letak kesalahannya?",
+          "courseC_artist_prog7_b": "Apakah berhasil pada langkah pertama?\nBagaimana dengan langkah kedua?\nDi mana letak kesalahannya?",
           "courseC_artist_prog7_c": "Anda bisa menggunakan menu dropdown pada blok putar untuk melihat sudut mana yang Anda butuhkan!",
-          "courseC_artist_prog7_d": "Anda akan ingin:\n\n-   bergerak maju kedepan\n-   berbelok ke kanan 45 derajat\n-   bergerak maju kedepan\n-   berbelok ke kanan 90 derajat\n-   bergerak maju kedepan\n-   berbelok ke kanan 45 derajat\n\nUlang pola ini sebanyak 2 kali!",
+          "courseC_artist_prog7_d": "Anda akan ingin:\n- bergerak maju kedepan\n- berbelok ke kanan 45 derajat\n- bergerak maju kedepan\n- berbelok ke kanan 90 derajat\n- bergerak maju kedepan\n- berbelok ke kanan 45 derajat\n\nUlang pola ini sebanyak 2 kali!",
           "courseC_artist_prog7_e": "Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda berpikir bahwa anda belum menyelesaikan puzzle itu."
         },
         "courseC_artist_prog_challenge12022": {
@@ -12333,8 +12333,7 @@
         },
         "courseE_artist_functions102022": {
           "courseD_artist_functions10_b": "Gambar ini sangat mirip dengan yang terakhir, tetapi fungsi `draw line` sekarang sedang menggambar bentuk yang berbeda.",
-          "courseD_artist_functions10_a": "Untuk menghindari penggunaan beberapa blok 'move forward`, buat fungsi`draw hexagon\\` dan panggil beberapa kali.",
-          "courseD_artist_functions10_c": "Apakah Anda tahu di mana gambar ini dapat menggunakan fungsi yang disebut `line of hexagon`?\n\n![](https://images.code.org/904e0f38232fd9c15a3d2d172e7dde0b-image-1493140714580.gif)"
+          "courseD_artist_functions10_a": "Untuk menghindari penggunaan beberapa blok 'move forward`, buat fungsi `draw hexagon` dan panggil beberapa kali."
         },
         "courseE_artist_functions22022": {
           "courseD_artist_functions2_b": "Function ini seharusnya tidak memuat seluruh program Anda, hanya bagian yang menggambar kotak dengan sisi 100 piksel.",
@@ -12369,11 +12368,7 @@
           "courseD_artist_functions8_c": "Pada akhir setiap baris kotak, artis hanya perlu berputar 180 derajat sebelum menggambar garis kotak berikutnya. Letakkan semuanya dalam repeat loop guna mempersiapkan diri Anda untuk latihan berikutnya!"
         },
         "courseE_artist_functions92022": {
-          "courseD_artist_functions9_e": "Bisakah Anda menunjukkan keempat tempat yang `line of triangles` dapat digunakan dalam gambar ini?\n\n![](https://images.code.org/130e1040ecca7186dea87f42666f5620-image-1493140373966.gif)",
-          "courseD_artist_functions9_a": "Puzzle ini dapat dipecah menjadi tiga bagian:\n\n-   buat fungsi `draw a triangle`\n-   buat fungsi `draw a line of triangles`\n-   gunakan fungsi `draw a line of triangles` empat kali untuk menyelesaikan gambar",
-          "courseD_artist_functions9_b": "Gambar ini dibuat dengan membuat garis segitiga 4 kali dan belok 60 atau 120 derajat sebelum Anda menggambar garis segitiga berikutnya.",
-          "courseD_artist_functions9_c": "Untuk menggambar garis segitiga:\n\n-   ulangi 4 kali\n    -   gambar segitiga\n    -   lompat ke depan 50 piksel",
-          "courseD_artist_functions9_d": "Untuk menggambar berlian:\n\n-   ulangi 2 kali\n    -   gambar garis segitiga\n    -   belok 60 derajat\n    -   gambar garis segitiga\n    -   belok 120 derajat"
+          "courseD_artist_functions9_b": "Gambar ini dibuat dengan membuat garis segitiga 4 kali dan belok 60 atau 120 derajat sebelum Anda menggambar garis segitiga berikutnya."
         },
         "courseE_artist_functions_challenge12022": {
           "courseE_artist_functions_challenge1_a": "Jika Anda memanggil fungsi ini sekali lagi, Anda dapat membuat desain yang sama di sudut terakhir.",

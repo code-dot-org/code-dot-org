@@ -37,7 +37,7 @@
   "blockly_toolboxCategoryFunctions": "విధులు",
   "blockly_toolboxCategoryLogic": "లాజిక్",
   "blockly_toolboxCategoryMath": "మఠం",
-  "blockly_toolboxCategoryPlay": "ఆడండి",
+  "blockly_toolboxCategoryPlay": "సౌండ్స్",
   "blockly_toolboxCategorySimple": "సింపుల్",
   "blockly_toolboxCategoryTracks": "ట్రాక్స్",
   "blockly_toolboxCategoryVariables": "వేరియబుల్స్",
@@ -48,5 +48,7 @@
   "feedback": "అభిప్రాయం",
   "share": "భాగస్వామ్యం",
   "shareComingSoon": "భాగస్వామ్యం నిర్మాణంలో ఉంది. త్వరలో తిరిగి తనిఖీ చేయండి.",
-  "startOver": "ప్రారంభించు"
+  "startOver": "ప్రారంభించు",
+  "panelHeaderInstructions": "సూచనలు",
+  "panelHeaderWorkspace": "వర్క్‌స్పేస్: "
 }

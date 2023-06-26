@@ -2,11 +2,11 @@
 title: හවුල්කරුවන්
 ---
 
-The Hour of Code is driven by the Hour of Code Review Committee.
+Hour of Code වැඩසටහන මෙහෙයවනු ලබන්නේ Hour of Code සමාලෝචන කමිටුව මගිනි.
 
-The [Review Committee]({{ urls/review_committee }}) is composed of 12 current and former educators across K-12 grade bands that assess and recommend activities using a rubric established by an advisory committee. These educators review student-led activities and teacher-led lesson plans submitted by hundreds of activity partners, evaluating the activities' educational value, ability to engage learners, and potential appeal to diverse sets of students.
+[සමාලෝචන කමිටුව]({{ urls/review_committee }}) K-12 ශ්‍රේණියේ වත්මන් සහ හිටපු අධ්‍යාපනඥයින් 12 දෙනෙකුගෙන් සමන්විත වන අතර එය උපදේශක කමිටුවක් විසින් පිහිටුවන ලද රුබ්‍රික් එකක් භාවිතයෙන් ක්‍රියාකාරකම් තක්සේරු කර නිර්දේශ කරයි. මෙම අධ්‍යාපනඥයින් ශිෂ්‍යයන් විසින් මෙහෙයවන ක්‍රියාකාරකම් සහ ක්‍රියාකාරකම් හවුල්කරුවන් සියගණනක් විසින් ඉදිරිපත් කරන ලද ගුරුවරුන් විසින් මෙහෙයවන පාඩම් සැලසුම් සමාලෝචනය කරයි, ක්‍රියාකාරකම්වල අධ්‍යාපනික වටිනාකම, ඉගෙන ගන්නන් සම්බන්ධ කර ගැනීමේ හැකියාව සහ විවිධ ශිෂ්‍ය කණ්ඩායම් වෙත ඇති විය හැකි ආයාචනය ඇගයීමට ලක් කරයි.
 
-The committee's work and dedication have contributed to the success of the Hour of Code and its vision of offering an introduction to computer science for every student.
+කමිටුවේ කාර්යය සහ කැපවීම Hour of Code හි සාර්ථකත්වයට සහ සෑම සිසුවෙකුටම පරිගණක විද්‍යාව පිළිබඳ හැඳින්වීමක් පිරිනැමීමේ එහි දැක්මට දායක වී ඇත.
 
 # ප්‍රධාන හවුල්කරුවන් සහ ආයතනික ආධාරකරුවන්
 

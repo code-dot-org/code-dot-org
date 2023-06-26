@@ -35,13 +35,14 @@
   "blockly_fieldRestOneBeat": "1 ビート",
   "blockly_fieldRestBeats": "{num} ビート",
   "blockly_fieldRestOneMeasure": "1 メジャー",
+  "blockly_fieldTriggerStartImmediately": "すぐに",
   "blockly_functionNamePlaceholder": "my function",
   "blockly_toolboxCategoryEffects": "効果",
   "blockly_toolboxCategoryEvents": "イベント",
   "blockly_toolboxCategoryFunctions": "関数(かんすう) ",
   "blockly_toolboxCategoryLogic": "ロジック",
   "blockly_toolboxCategoryMath": "計算(けいさん)",
-  "blockly_toolboxCategoryPlay": "プレイ",
+  "blockly_toolboxCategoryPlay": "サウンド",
   "blockly_toolboxCategorySimple": "シンプル",
   "blockly_toolboxCategoryTracks": "トラック",
   "blockly_toolboxCategoryVariables": "変数（へんすう）",
@@ -53,5 +54,7 @@
   "share": "共有",
   "shareComingSoon": "シェアリングは現在準備中です。しばらくしてからもう一度確認してください。",
   "startOver": "最初からやりなおす",
-  "upload": "アップロード"
+  "upload": "アップロード",
+  "panelHeaderInstructions": "やり方:",
+  "panelHeaderWorkspace": "ワークスペース："
 }

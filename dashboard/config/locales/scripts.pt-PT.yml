@@ -161,6 +161,7 @@ pt:
           student_description: Este curso de 20 horas apresenta o informática de núcleo
             e conceitos de programação. O curso é projetado para uso em salas de aula
             para os graus K-8, mas é divertido de aprender em todos os tempos.
+          name: 20 horas
         edit-code:
           title: Edite o código
           description: Edite o código
@@ -6471,3 +6472,9 @@ pt:
           description_audience: 'Idades: 9-13'
           description_short: Aprenda todos os conceitos Fundamentais da Ciência da
             Computação e crie sua própria arte, história ou jogo.
+        csa-frq-practice:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Classes
+            lessonGroup-5:
+              display_name: Vetores 2D

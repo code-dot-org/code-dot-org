@@ -95,6 +95,7 @@ az:
           description_short: Bu 20 saatlıq kurs informatika və proqramlaşdırmanın 2-4-cü kurslardakı əsas anlayışlarını təqdim edir.
           description_audience: 10+ yaş (Kurs 3-dən sonra)
           student_description: Bu 20 saatlıq kurs informatikanın əsasları və proqramlaşdırmanın əsas anlayışlarını təqdim edir. Kurs K-8 yaş qrupunda (12-13 yaşlılar) olan siniflərdə istifadə olunmaq üçün hazırlanıb, lakin öyrənmək hər yaşda əyləncəlidir.
+          name: 20 saat
         edit-code:
           title: Koda düzəliş et
           description: Koda düzəliş et
@@ -3734,6 +3735,8 @@ az:
           lesson_groups:
             lessonGroup-3:
               display_name: Verilənlər və Nəticələr
+        ai-temp:
+          title: Süni İntelekt (Sİ) necə işləyir?
         focus-on-coding4b-2023:
           lesson_groups:
             lessonGroup-3:
@@ -3832,3 +3835,7 @@ az:
               display_name: Kurs layihələrinin sonu!
           description_audience: 'Yaşlar: 9-13'
           description_short: Kompüter Elmlərinin Əsasları üzrə bütün anlayışları öyrənin və öz sənətinizi, hekayənizi və ya oyununuzu yaradın.
+        csa-frq-practice:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Dərslər

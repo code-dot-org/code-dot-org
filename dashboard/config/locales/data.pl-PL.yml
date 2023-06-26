@@ -1047,6 +1047,10 @@ pl:
         csa_sorting_algorithms: 'CSA: Algorytmy sortowania'
         star_quilts_intro_to_artist: 'Star Quilts: Wprowadzenie do Artysty'
         upload_sprites_backgrounds: Przesyłanie niestandardowych duszków i teł
+        PL_CSD_EquityBlindSpotsvid: Uprzedzenia i odpowiedzialność
+        how-ai-works-llms-full: Jak działają chatboty i duże modele językowe
+        how-ai-works-creativity-full: Czy sztuczna inteligencja jest kreatywna i z
+          wyobraźnią?
     callout:
       text:
         drag_blocks: Przeciągnij blok "idź" i przypnij go poniżej innego bloku

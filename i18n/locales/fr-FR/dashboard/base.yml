@@ -60,6 +60,7 @@ fr:
         reset_password_token: "Le lien de réinitialisation du mot de passe que vous avez suivi"
         error:
           future: ne peut pas être dans le futur
+        us_state: 'État'
   beta: "beta"
   hello: "Bonjour tout le monde"
   welcome_back: "Bienvenue %{name}"
@@ -69,6 +70,7 @@ fr:
   unsubmit: Ne pas envoyer
   previous_page: Page précédente
   next_page: Page suivante
+  next_level: Niveau suivant
   next_resource: Ressource suivante
   done_with_module: Module d'apprentissage terminé
   cancel: "Annuler"
@@ -199,6 +201,7 @@ fr:
     parent_account_checkbox: "Je suis un parent/tuteur inscrit au nom de mon enfant"
     parent_account_email_progress_permission: "Pouvons-nous vous envoyer, par courriel, des mises à jour occasionnelles, sur les progrès et les projets de votre enfant, ainsi que des mises à jour sur ses cours et l’informatique ? [(Voir notre politique de confidentialité)] %{privacy_policy_url}"
     parent_account_email_label: "Adresse électronique du parent/tuteur "
+    us_state: 'État'
   school_info:
     title: 'Informations de l’école (facultatif)'
     school_country: 'Pays de l’École'
@@ -869,6 +872,8 @@ fr:
     submit-incomplete-body: "Tu as laissé quelques questions sans réponse. Tu ne pourras plus modifier ton évaluation après l'avoir envoyée. Es-tu sûr ?"
     submit-complete-title: "Envoyer une évaluation"
     submit-complete-body: "Tu ne pourras plus modifier ton évaluation après l'avoir envoyée. Es-tu sûr ?"
+  level_summary:
+    correct_answer: "Bonne réponse"
   match:
     wrong_title: "Solution incorrecte"
     wrong_body: "La solution que tu as saisie est incorrecte.  Merci de réessayer !"
@@ -1188,6 +1193,7 @@ fr:
         csf_express: 'Les Fondamentaux de l’Informatique (Pré-Express ou Express)'
         csd: 'Découvertes de l''Informatique'
         csp: 'Principes de l''Informatique'
+        other: 'Autre'
         not_applicable: "Non applicable"
       email_opt_in:
         opt_in_yes: 'Oui'

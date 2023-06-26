@@ -228,22 +228,28 @@
           "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Mova um sprite para a direita na tela. Quando ele sair do lado direito da tela, mova-o de volta para o lado esquerdo da tela."
         },
         "CourseF_outbreak1": {
-          "move a sprite, changing its direction randomly": "mova um sprite, mudando sua direção aleatoriamente"
+          "move a sprite, changing its direction randomly": "mova um sprite, mudando sua direção aleatoriamente",
+          "gradually recover from sickness": "recuperar-se gradualmente da doença"
         },
         "CourseF_outbreak1_-2022-2": {
-          "move a sprite, changing its direction randomly": "mova um sprite, mudando sua direção aleatoriamente"
+          "move a sprite, changing its direction randomly": "mova um sprite, mudando sua direção aleatoriamente",
+          "gradually recover from sickness": "recuperar-se gradualmente da doença"
         },
         "CourseF_outbreak2": {
-          "move a sprite, changing its direction randomly": "mova um sprite, mudando sua direção aleatoriamente"
+          "move a sprite, changing its direction randomly": "mova um sprite, mudando sua direção aleatoriamente",
+          "gradually recover from sickness": "recuperar-se gradualmente da doença"
         },
         "CourseF_outbreak2_-2022-2": {
-          "move a sprite, changing its direction randomly": "mova um sprite, mudando sua direção aleatoriamente"
+          "move a sprite, changing its direction randomly": "mova um sprite, mudando sua direção aleatoriamente",
+          "gradually recover from sickness": "recuperar-se gradualmente da doença"
         },
         "CourseF_outbreak3": {
-          "move a sprite, changing its direction randomly": "mova um sprite, mudando sua direção aleatoriamente"
+          "move a sprite, changing its direction randomly": "mova um sprite, mudando sua direção aleatoriamente",
+          "gradually recover from sickness": "recuperar-se gradualmente da doença"
         },
         "CourseF_outbreak3_-2022-2": {
-          "move a sprite, changing its direction randomly": "mova um sprite, mudando sua direção aleatoriamente"
+          "move a sprite, changing its direction randomly": "mova um sprite, mudando sua direção aleatoriamente",
+          "gradually recover from sickness": "recuperar-se gradualmente da doença"
         },
         "CourseF_outbreak4": {
           "move a sprite, changing its direction randomly": "mova um sprite, mudando sua direção aleatoriamente",
@@ -256,7 +262,8 @@
           "move a sprite upwards across the screen": "mova um sprite para cima na tela",
           "randomly change the size of a sprite": "alterar aleatoriamente o tamanho de um sprite",
           "move a sprite to the left across the screen": "mova um sprite para a esquerda na tela",
-          "move a sprite across the screen, reversing direction if it touches the edges": "mova um sprite pela tela, invertendo a direção se ele tocar as bordas"
+          "move a sprite across the screen, reversing direction if it touches the edges": "mova um sprite pela tela, invertendo a direção se ele tocar as bordas",
+          "gradually recover from sickness": "recuperar-se gradualmente da doença"
         },
         "CourseF_outbreak4_-2022-2": {
           "move a sprite, changing its direction randomly": "mova um sprite, mudando sua direção aleatoriamente",
@@ -269,19 +276,24 @@
           "move a sprite upwards across the screen": "mova um sprite para cima na tela",
           "randomly change the size of a sprite": "alterar aleatoriamente o tamanho de um sprite",
           "move a sprite to the left across the screen": "mova um sprite para a esquerda na tela",
-          "move a sprite across the screen, reversing direction if it touches the edges": "mova um sprite pela tela, invertendo a direção se ele tocar as bordas"
+          "move a sprite across the screen, reversing direction if it touches the edges": "mova um sprite pela tela, invertendo a direção se ele tocar as bordas",
+          "gradually recover from sickness": "recuperar-se gradualmente da doença"
         },
         "CourseF_outbreak5": {
-          "move a sprite, changing its direction randomly": "mova um sprite, mudando sua direção aleatoriamente"
+          "move a sprite, changing its direction randomly": "mova um sprite, mudando sua direção aleatoriamente",
+          "gradually recover from sickness": "recuperar-se gradualmente da doença"
         },
         "CourseF_outbreak5_-2022-2": {
-          "move a sprite, changing its direction randomly": "mova um sprite, mudando sua direção aleatoriamente"
+          "move a sprite, changing its direction randomly": "mova um sprite, mudando sua direção aleatoriamente",
+          "gradually recover from sickness": "recuperar-se gradualmente da doença"
         },
         "CourseF_outbreak6": {
-          "move a sprite, changing its direction randomly": "mova um sprite, mudando sua direção aleatoriamente"
+          "move a sprite, changing its direction randomly": "mova um sprite, mudando sua direção aleatoriamente",
+          "gradually recover from sickness": "recuperar-se gradualmente da doença"
         },
         "CourseF_outbreak6_-2022-2": {
-          "move a sprite, changing its direction randomly": "mova um sprite, mudando sua direção aleatoriamente"
+          "move a sprite, changing its direction randomly": "mova um sprite, mudando sua direção aleatoriamente",
+          "gradually recover from sickness": "recuperar-se gradualmente da doença"
         },
         "CourseF_outbreak7": {
           "move a sprite, changing its direction randomly": "mova um sprite, mudando sua direção aleatoriamente",
@@ -294,7 +306,8 @@
           "move a sprite upwards across the screen": "mova um sprite para cima na tela",
           "randomly change the size of a sprite": "alterar aleatoriamente o tamanho de um sprite",
           "move a sprite to the left across the screen": "mova um sprite para a esquerda na tela",
-          "move a sprite across the screen, reversing direction if it touches the edges": "mova um sprite pela tela, invertendo a direção se ele tocar as bordas"
+          "move a sprite across the screen, reversing direction if it touches the edges": "mova um sprite pela tela, invertendo a direção se ele tocar as bordas",
+          "gradually recover from sickness": "recuperar-se gradualmente da doença"
         },
         "CourseF_outbreak7_-2022-2": {
           "move a sprite, changing its direction randomly": "mova um sprite, mudando sua direção aleatoriamente",
@@ -307,7 +320,8 @@
           "move a sprite upwards across the screen": "mova um sprite para cima na tela",
           "randomly change the size of a sprite": "alterar aleatoriamente o tamanho de um sprite",
           "move a sprite to the left across the screen": "mova um sprite para a esquerda na tela",
-          "move a sprite across the screen, reversing direction if it touches the edges": "mova um sprite pela tela, invertendo a direção se ele tocar as bordas"
+          "move a sprite across the screen, reversing direction if it touches the edges": "mova um sprite pela tela, invertendo a direção se ele tocar as bordas",
+          "gradually recover from sickness": "recuperar-se gradualmente da doença"
         },
         "CourseF_outbreak8": {
           "move a sprite, changing its direction randomly": "mova um sprite, mudando sua direção aleatoriamente",
@@ -320,7 +334,8 @@
           "move a sprite upwards across the screen": "mova um sprite para cima na tela",
           "randomly change the size of a sprite": "alterar aleatoriamente o tamanho de um sprite",
           "move a sprite to the left across the screen": "mova um sprite para a esquerda na tela",
-          "move a sprite across the screen, reversing direction if it touches the edges": "mova um sprite pela tela, invertendo a direção se ele tocar as bordas"
+          "move a sprite across the screen, reversing direction if it touches the edges": "mova um sprite pela tela, invertendo a direção se ele tocar as bordas",
+          "gradually recover from sickness": "recuperar-se gradualmente da doença"
         },
         "CourseF_outbreak8_-2022-2": {
           "move a sprite, changing its direction randomly": "mova um sprite, mudando sua direção aleatoriamente",
@@ -333,7 +348,8 @@
           "move a sprite upwards across the screen": "mova um sprite para cima na tela",
           "randomly change the size of a sprite": "alterar aleatoriamente o tamanho de um sprite",
           "move a sprite to the left across the screen": "mova um sprite para a esquerda na tela",
-          "move a sprite across the screen, reversing direction if it touches the edges": "mova um sprite pela tela, invertendo a direção se ele tocar as bordas"
+          "move a sprite across the screen, reversing direction if it touches the edges": "mova um sprite pela tela, invertendo a direção se ele tocar as bordas",
+          "gradually recover from sickness": "recuperar-se gradualmente da doença"
         },
         "Dance Party 2": {
           "rotate a sprite to its left": "gire um sprite para a esquerda",
@@ -1147,7 +1163,9 @@
           "move a sprite upwards across the screen": "mova um sprite para cima na tela",
           "randomly change the size of a sprite": "alterar aleatoriamente o tamanho de um sprite",
           "move a sprite across the screen, reversing direction if it touches the edges": "mova um sprite pela tela, invertendo a direção se ele tocar as bordas",
-          "move a sprite if the user is pressing the arrow keys": "mova um sprite se o usuário estiver pressionando as teclas de seta"
+          "move a sprite if the user is pressing the arrow keys": "mova um sprite se o usuário estiver pressionando as teclas de seta",
+          "Move a sprite to the left across the screen. If it goes off the left side of the screen it moves to the right side of the screen.": "Mova um sprite para a esquerda na tela. Se sair do lado esquerdo da tela, ele se move para o lado direito da tela.",
+          "randomly move the sprite up or down": "mova aleatoriamente o sprite para cima ou para baixo"
         },
         "courseF_apps_collector2022": {
           "move a sprite, changing its direction randomly": "mova um sprite, mudando sua direção aleatoriamente",
@@ -1161,7 +1179,9 @@
           "move a sprite upwards across the screen": "mova um sprite para cima na tela",
           "randomly change the size of a sprite": "alterar aleatoriamente o tamanho de um sprite",
           "move a sprite across the screen, reversing direction if it touches the edges": "mova um sprite pela tela, invertendo a direção se ele tocar as bordas",
-          "move a sprite if the user is pressing the arrow keys": "mova um sprite se o usuário estiver pressionando as teclas de seta"
+          "move a sprite if the user is pressing the arrow keys": "mova um sprite se o usuário estiver pressionando as teclas de seta",
+          "Move a sprite to the left across the screen. If it goes off the left side of the screen it moves to the right side of the screen.": "Mova um sprite para a esquerda na tela. Se sair do lado esquerdo da tela, ele se move para o lado direito da tela.",
+          "randomly move the sprite up or down": "mova aleatoriamente o sprite para cima ou para baixo"
         },
         "courseF_apps_collector_-2022-2": {
           "move a sprite, changing its direction randomly": "mova um sprite, mudando sua direção aleatoriamente",
@@ -1175,7 +1195,9 @@
           "move a sprite upwards across the screen": "mova um sprite para cima na tela",
           "randomly change the size of a sprite": "alterar aleatoriamente o tamanho de um sprite",
           "move a sprite across the screen, reversing direction if it touches the edges": "mova um sprite pela tela, invertendo a direção se ele tocar as bordas",
-          "move a sprite if the user is pressing the arrow keys": "mova um sprite se o usuário estiver pressionando as teclas de seta"
+          "move a sprite if the user is pressing the arrow keys": "mova um sprite se o usuário estiver pressionando as teclas de seta",
+          "Move a sprite to the left across the screen. If it goes off the left side of the screen it moves to the right side of the screen.": "Mova um sprite para a esquerda na tela. Se sair do lado esquerdo da tela, ele se move para o lado direito da tela.",
+          "randomly move the sprite up or down": "mova aleatoriamente o sprite para cima ou para baixo"
         },
         "courseF_apps_collector_drag_-2022-2": {
           "move a sprite, changing its direction randomly": "mova um sprite, mudando sua direção aleatoriamente",

@@ -41,6 +41,7 @@
   "blockly_toolboxCategoryFunctions": "ಕಾರ್ಯಗಳು",
   "blockly_toolboxCategoryLogic": "ಲಾಜಿಕ್",
   "blockly_toolboxCategoryMath": "ಗಣಿತ",
+  "blockly_toolboxCategoryPlay": "ಧ್ವನಿಗಳು",
   "blockly_toolboxCategorySimple": "ಸರಳ",
   "blockly_toolboxCategoryTracks": "ಟ್ರ್ಯಾಕ್ಸ್",
   "blockly_toolboxCategoryVariables": "ವೇರಿಯಬಲ್‌ಗಳು",
@@ -52,5 +53,7 @@
   "share": "ಹಂಚಿ",
   "shareComingSoon": "ಹಂಚಿಕೆ ನಿರ್ಮಾಣ ಹಂತದಲ್ಲಿದೆ. ಶೀಘ್ರದಲ್ಲೇ ಮತ್ತೆ ಪರಿಶೀಲಿಸಿ.",
   "startOver": "ಮೊದಲಿನಿಂದ ಆರಂಭ",
-  "upload": "ಅಪ್‌ಲೋಡ್ ಮಾಡಿ"
+  "upload": "ಅಪ್‌ಲೋಡ್ ಮಾಡಿ",
+  "panelHeaderInstructions": "ನಿರ್ದೇಶನಗಳು",
+  "panelHeaderWorkspace": "ಕಾರ್ಯಕ್ಷೇತ್ರ"
 }

@@ -22,8 +22,8 @@ class ProjectsController < ApplicationController
   # @option {Boolean|nil} :login_required Whether you must be logged in to
   #   access this project type. Default: false.
   # @option {String|nil} :default_image_url If present, set this as the
+  #   thumbnail image url when creating a project of this type.
   # @option {Boolean|nil} :i18n If present, include this level in the i18n sync
-  # thumbnail image url when creating a project of this type.
   STANDALONE_PROJECTS = {
     adaptations: {
       name: 'New Adaptations Project'
@@ -75,6 +75,8 @@ class ProjectsController < ApplicationController
       # We do not currently generate thumbnails for flappy, so specify a
       # placeholder image here. This allows flappy projects to show up in the
       # public gallery, and to be published from the share dialog.
+      #
+      # NOTE: if changing this URL, update project thumbnail URL validation as well
       default_image_url: '/blockly/media/flappy/placeholder.jpg',
     },
     minecraft_codebuilder: {
@@ -114,6 +116,7 @@ class ProjectsController < ApplicationController
     },
     dance: {
       name: 'New Dance Lab Project',
+      # NOTE: if changing this URL, update project thumbnail URL validation as well
       default_image_url: '/blockly/media/dance/placeholder.png',
       i18n: true
     },
@@ -149,6 +152,10 @@ class ProjectsController < ApplicationController
     javalab: {
       name: 'New Java Lab Project',
       login_required: true
+    },
+    music: {
+      name: 'New Music Lab Project',
+      i18n: true
     },
     poetry: {
       name: 'New Poetry Project'
@@ -358,7 +365,7 @@ class ProjectsController < ApplicationController
       full_width: true,
       callouts: [],
       channel: params[:channel_id],
-      no_footer: sharing || iframe_embed_app_and_code,
+      no_footer: sharing || iframe_embed_app_and_code || @game&.no_footer?,
       code_studio_logo: sharing && !iframe_embed,
       no_header: sharing || iframe_embed_app_and_code,
       small_footer: !iframe_embed_app_and_code && !sharing && (@game&.uses_small_footer? || @level&.enable_scrolling?),

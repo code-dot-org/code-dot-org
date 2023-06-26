@@ -57,6 +57,7 @@ hi:
         reset_password_token: आपके द्वारा अनुसरण किया गया रीसेट पासवर्ड लिंक
         error:
           future: भविष्य में नहीं किया जा सकता
+        us_state: राज्य
   beta: बीटा
   hello: हैलो वर्ल्ड
   welcome_back: वापस, %{name} में आपका स्वागत है
@@ -66,6 +67,7 @@ hi:
   unsubmit: अनसब्मिट
   previous_page: पिछला पृष्ठ
   next_page: अगले पृष्ठ
+  next_level: अगला स्तर
   next_resource: अगले संसाधन
   done_with_module: इस लर्निंग मॉड्यूल के साथ हो गया
   cancel: रद्द करें
@@ -256,6 +258,7 @@ hi:
       प्रोजेक्ट्स के बारे में अपडेट्स और उनके कोर्स और कंप्यूटर साइंस के बारे में
       अपडेट्स के बार में कभी-कभार ईमेल कर सकते हैं? [(हमारी गोपनीयता नीति देखें)](%{privacy_policy_url})
     parent_account_email_label: माता या पिता/अभिभावक की ईमेल
+    us_state: राज्य
   school_info:
     title: स्कूल संबंधी जानकारी (वैकल्पिक)
     school_country: स्कूल देश
@@ -1510,6 +1513,7 @@ hi:
         csf_express: CS मूल सिद्धांत (प्री-एक्सप्रेस या एक्सप्रेस)
         csd: CS Discoveries
         csp: CS Principles
+        other: अन्य
         not_applicable: लागू नहीं
       email_opt_in:
         opt_in_yes: हां

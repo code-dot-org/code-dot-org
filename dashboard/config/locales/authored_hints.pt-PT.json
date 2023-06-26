@@ -9948,7 +9948,8 @@
         },
         "courseF_artist_variables8_2021": {
           "courseF_artist_variables8_b": "Lembre-se de iniciar seu código para o triângulo com o bloco `definir comprimento`, e inicie-o em 150 pixels.",
-          "courseF_artist_variables8_c": "Certifique-se de usar o laço `repita` para desenhar seu triângulo."
+          "courseF_artist_variables8_c": "Certifique-se de usar o laço `repita` para desenhar seu triângulo.",
+          "courseF_artist_variables8_a": "Tente colocar o bloco \n\n<xml>\n<block type=\"math_change\">\n      <title name=\"VAR\">length</title>\n      <value name=\"DELTA\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">1</title>\n        </block>\n      </value>\n    </block>\n</xml>\n\ndentro do loop no final."
         },
         "courseF_artist_variables9": {
           "courseF_artist_variables9_a": "Para este desafio, tudo o que você precisa fazer é mudar quantas vezes o laço repete.",
@@ -9967,7 +9968,8 @@
           "courseF_artist_variables9_b": "Certifique-se de que os blocos que incrementam `comprimento` estão dentro do seu laço para que as linhas continuem a ficar mais longas."
         },
         "courseF_artist_variables9_2021": {
-          "courseF_artist_variables9_a": "Para este desafio, tudo o que você precisa fazer é mudar quantas vezes o laço repete."
+          "courseF_artist_variables9_a": "Para este desafio, tudo o que você precisa fazer é mudar quantas vezes o laço repete.",
+          "courseF_artist_variables9_b": "Certifique-se de que o bloco que muda de “comprimento” esteja dentro do seu loop para que as linhas continuem ficando mais longas."
         },
         "courseF_artist_variablesFP": {
           "courseF_artist_variablesFP_a": "Experimente um destes três desenhos.\n![](<https://images.code.org/f0bac32182162bd26a8031f5aa4364ef-image-1493738360437.3.15 dicas.png>)"
@@ -11595,9 +11597,9 @@
         },
         "courseC_artist_prog72022": {
           "courseC_artist_prog7_a": "Cada ângulo é de 45 ou 90 graus.",
-          "courseC_artist_prog7_b": "Funciona no primeiro passo? \nE no segundo? \nOnde isso dá errado?",
+          "courseC_artist_prog7_b": "Isso funciona na primeira etapa?  \nQue tal o segundo?  \nOnde isso dá errado?",
           "courseC_artist_prog7_c": "Você pode usar o menu suspenso nos blocos para ver qual ângulo você precisa!",
-          "courseC_artist_prog7_d": "Você vai querer: \n\n-   seguir em frente \n-   virar à direita 45 graus \n-   seguir em frente \n-   virar à direita 90 graus \n-   avançar\n-   virar à direita 45 graus \n\nRepita este padrão 2 vezes!",
+          "courseC_artist_prog7_d": "Você vai querer:\n- avançar\n- virar à direita 45 graus\n- avançar\n- virar à direita 90 graus\n- avançar\n- virar à direita 45 graus\n\nRepita esse padrão 2 vezes!",
           "courseC_artist_prog7_e": "Não tenha medo de cometer um erro! Tente adicionar blocos e executar o código para ver o que vai acontecer, mesmo se você achar que ainda não resolveu o quebra-cabeça."
         },
         "courseC_artist_prog_challenge12022": {
@@ -12267,8 +12269,7 @@
         },
         "courseE_artist_functions102022": {
           "courseD_artist_functions10_b": "Este desenho é muito parecido com o último, mas a função `draw line` agora está desenhando uma forma diferente.",
-          "courseD_artist_functions10_a": "Para evitar usar vários blocos \"=`avançar`, crie uma função `desenhar hexágono` e chame isso várias vezes.",
-          "courseD_artist_functions10_c": "Você vê onde este desenho poderia usar uma função chamada 'linha de hexágonos'?\n\n![](https://images.code.org/904e0f38232fd9c15a3d2d172e7dde0b-image-1493140714580.gif)"
+          "courseD_artist_functions10_a": "Para evitar usar vários blocos \"=`avançar`, crie uma função `desenhar hexágono` e chame isso várias vezes."
         },
         "courseE_artist_functions22022": {
           "courseD_artist_functions2_b": "A função não deve conter todo o seu programa, apenas a parte que desenha um quadrado com 100 lados de pixels.",
@@ -12303,11 +12304,7 @@
           "courseD_artist_functions8_c": "No final de cada linha de quadrados, o artista só precisa girar 180 graus antes de desenhar a próxima linha de quadrados. Coloque a coisa toda em um laço de repetição para prepará-lo para o próximo exercício!"
         },
         "courseE_artist_functions92022": {
-          "courseD_artist_functions9_e": "Você consegue identificar todos os quatro lugares em que a \"linha de triângulos\" pode ser usada neste desenho?\n\n![](https://images.code.org/130e1040ecca7186dea87f42666f5620-image-1493140373966.gif)",
-          "courseD_artist_functions9_a": "Este quebra-cabeça pode ser dividido em três partes:\n\n-   faça a função \"desenhar um triângulo\"\n-   faça a função 'desenhar uma linha de triângulos'\n-   use sua função 'desenhar uma linha de triângulos' quatro vezes para completar o desenho",
-          "courseD_artist_functions9_b": "Este desenho é feito desenhando uma linha de triângulos 4 vezes e girando 60 ou 120 graus antes de desenhar a próxima linha triangular.",
-          "courseD_artist_functions9_c": "Para desenhar uma linha de triângulos:\n\n-   repetir 4 vezes\n-   desenhe um triângulo\n-   saltar para a frente 50 pixels",
-          "courseD_artist_functions9_d": "Para desenhar o diamante:\n\n-   repetir 2 vezes\n-   desenhe uma linha de triângulos\n-   gire 60 graus\n-   desenhe uma linha de triângulos\n-   gire 120 graus"
+          "courseD_artist_functions9_b": "Este desenho é feito desenhando uma linha de triângulos 4 vezes e girando 60 ou 120 graus antes de desenhar a próxima linha triangular."
         },
         "courseE_artist_functions_challenge12022": {
           "courseE_artist_functions_challenge1_a": "Se você chamar a função mais uma vez, poderá criar o mesmo desenho no canto final.",
@@ -12424,10 +12421,12 @@
         },
         "courseF_artist_variables82022": {
           "courseF_artist_variables8_b": "Lembre-se de iniciar seu código para o triângulo com o bloco `definir comprimento`, e inicie-o em 150 pixels.",
-          "courseF_artist_variables8_c": "Certifique-se de usar o laço `repita` para desenhar seu triângulo."
+          "courseF_artist_variables8_c": "Certifique-se de usar o laço `repita` para desenhar seu triângulo.",
+          "courseF_artist_variables8_a": "Tente colocar o bloco \n\n<xml>\n<block type=\"math_change\">\n      <title name=\"VAR\">length</title>\n      <value name=\"DELTA\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">1</title>\n        </block>\n      </value>\n    </block>\n</xml>\n\ndentro do loop no final."
         },
         "courseF_artist_variables92022": {
-          "courseF_artist_variables9_a": "Para este desafio, tudo o que você precisa fazer é mudar quantas vezes o laço repete."
+          "courseF_artist_variables9_a": "Para este desafio, tudo o que você precisa fazer é mudar quantas vezes o laço repete.",
+          "courseF_artist_variables9_b": "Certifique-se de que o bloco que muda de “comprimento” esteja dentro do seu loop para que as linhas continuem ficando mais longas."
         },
         "courseF_bee_for102022": {
           "courseF_bee_for10_a": "Você consegue encontrar um padrão entre o número de passos que você precisa dar e o número de néctares para coletar?",
@@ -12543,6 +12542,30 @@
         "helloworld_food_sizes_space-2022": {
           "storyboard_setProp": "Para definir o tamanho de uma fada somente uma vez, você pode utilizar este bloco: \n\n<xml><block type=\"gamelab_spriteClicked\">\n  <field name=\"CONDITION\">\"when\"</field>\n  <value name=\"SPRITE\">\n    <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n      <field name=\"ANIMATION\">\"space_astronaut_1\"</field>\n    </block>\n  </value>\n  <next>\n    <block type=\"gamelab_setProp\">\n      <field name=\"PROPERTY\">\"scale\"</field>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n          <field name=\"ANIMATION\">\"space_astronaut_1\"</field>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\" can_disconnect_from_parent=\"false\">\n          <field name=\"NUM\">50</field>\n        </block>\n      </value>\n    </block>\n  </next>\n</block></xml>",
           "storyboard_changePropBy": "Se quiser mudar o tamanho de uma fada repetidamente (com eventos), use este bloco: \n\n<xml><block type=\"gamelab_spriteClicked\">\n  <field name=\"CONDITION\">\"when\"</field>\n  <value name=\"SPRITE\">\n    <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n      <field name=\"ANIMATION\">\"space_satellite\"</field>\n    </block>\n  </value>\n  <next>\n    <block type=\"gamelab_changePropBy\">\n      <field name=\"PROPERTY\">\"scale\"</field>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n          <field name=\"ANIMATION\">\"space_satellite\"</field>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\" can_disconnect_from_parent=\"false\">\n          <field name=\"NUM\">10</field>\n        </block>\n      </value>\n    </block>\n  </next>\n</block></xml>"
+        },
+        "courseF_bee_variables_4a2022": {
+          "courseF_bee_variables_4_2021_1": "Em vez de adicionar 1 à variável, adicione 2 a cada vez."
+        },
+        "courseF_bee_variables_4a_2021": {
+          "courseF_bee_variables_4_2021_1": "Em vez de adicionar 1 à variável, adicione 2 a cada vez."
+        },
+        "courseF_sprites_clouds": {
+          "behavior_list": "Tente usar comportamentos como “mover-se para o leste e dar voltas”, “girar para a direita” e “vagar”."
+        },
+        "courseF_sprites_clouds_-2022-2": {
+          "behavior_list": "Tente usar comportamentos como “mover-se para o leste e dar voltas”, “girar para a direita” e “vagar”."
+        },
+        "courseF_variables_card_finish": {
+          "card_idea1": "Você pode adicionar um segundo (ou terceiro ou quarto) prompt conectando um novo bloco de prompt com uma variável diferente ao seu primeiro evento `quando respondido`.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">nome</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setPrompt\">\n        <value name=\"QUESTION\">\n          <block type=\"text\" can_disconnect_from_parent=\"false\">\n            <title name=\"TEXT\">o que você quer para o seu aniversário?</title>\n          </block>\n        </value>\n        <value name=\"VAR\">\n          <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n            <title name=\"VAR\">presente</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
+        },
+        "courseF_variables_card_finish_-2022-2": {
+          "card_idea1": "Você pode adicionar um segundo (ou terceiro ou quarto) prompt conectando um novo bloco de prompt com uma variável diferente ao seu primeiro evento `quando respondido`.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">nome</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setPrompt\">\n        <value name=\"QUESTION\">\n          <block type=\"text\" can_disconnect_from_parent=\"false\">\n            <title name=\"TEXT\">o que você quer para o seu aniversário?</title>\n          </block>\n        </value>\n        <value name=\"VAR\">\n          <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n            <title name=\"VAR\">presente</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
+        },
+        "courseF_variables_chatbot_finish": {
+          "chatbot_idea4": "Você pode sinalizar o final do seu programa com um bloco de tela de título.\n\n<xml><block type=\"gamelab_showTitleScreen\">\n      <value name=\"TITLE\">\n        <block type=\"text\">\n        <title name=\"TEXT\">O fim</title>\n        </block>\n      </value>\n      <value name=\"SUBTITLE\">\n        <block type=\"text\">\n        <title name=\"TEXT\">Obrigado por conversar!</title>\n        </block>\n      </value>\n      </block></xml>"
+        },
+        "courseF_variables_chatbot_finish_-2022-2": {
+          "chatbot_idea4": "Você pode sinalizar o final do seu programa com um bloco de tela de título.\n\n<xml><block type=\"gamelab_showTitleScreen\">\n      <value name=\"TITLE\">\n        <block type=\"text\">\n        <title name=\"TEXT\">O fim</title>\n        </block>\n      </value>\n      <value name=\"SUBTITLE\">\n        <block type=\"text\">\n        <title name=\"TEXT\">Obrigado por conversar!</title>\n        </block>\n      </value>\n      </block></xml>"
         }
       }
     }

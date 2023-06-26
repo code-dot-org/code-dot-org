@@ -18,7 +18,7 @@
           "applab_hoc_finish": "¿La pantalla se volvió verde? Si es así, presiona 'Finalizar'. Si no, presiona 'Restablecer', cambia tu código y presiona 'Ejecutar' nuevamente."
         },
         "AppLab Intro 7 - thisOrThatAddButton": {
-          "AppLabHoCFinal11": "Ahora estás en modo de diseño."
+          "AppLabHoCFinal11": "Ahora estás en  Modo Diseño"
         },
         "CSD U3 - conditionals - transition": {
           "CSD_U3_L8_S6_C1": "Pon la instrucción de registro de la consola aquí"
@@ -696,7 +696,7 @@
         "New Artist Project": {
           "New Artist Project_callout1": "¡Haz clic en las categorías para ver los bloques de tu caja de herramientas! Puedes arrastrar los bloques al área de trabajo para añadirlos a tu programa",
           "New Artist Project_callout2": "Presiona \"Ejecutar\" para guardar y ejecutar tu programa",
-          "sign_in_to_save_project": "¿Quieres ingresar a tu proyecto más tarde? ¡Ingresa para guardar este proyecto en tu cuenta!"
+          "sign_in_to_save_project": "¿Quieres acceder a tu proyecto más tarde? ¡Inicia sesión para guardar este proyecto en tu cuenta!"
         },
         "New Frozen Project": {
           "snowflake_dropdown": "¡Usa este menú desplegable para crear diferentes copos de nieve!"
@@ -704,7 +704,7 @@
         "New Play Lab Project": {
           "New Play Lab Project_callout1": "¡Haz clic en las categorías para ver los bloques en tu caja de herramientas! Arrastra los bloques al área de trabajo y agrégalos a tu programa",
           "New Play Lab Project_callout2": "Presiona \"Ejecutar\" para guardar y ejecutar tu programa",
-          "sign_in_to_save_project": "¿Quieres ingresar a tu proyecto más tarde? ¡Ingresa para guardar este proyecto en tu cuenta!"
+          "sign_in_to_save_project": "¿Quieres acceder a tu proyecto más tarde? ¡Inicia sesión para guardar este proyecto en tu cuenta!"
         },
         "OPD-K5-forloops-5": {
           "courseF_bee_for4_1": "¡Aquí encontrarás el bucle 'desde´'!"
@@ -853,16 +853,16 @@
           "courseF_bee_fwp_challenge2_callout1": "Esta función hará un buen trabajo con el maiz, pero ¿y las otras verduras?"
         },
         "courseA_artist_loops4": {
-          "courseA_artist_loops4_1": "Este número indica cuántos de estos bloques se pueden utilizar en este desafío."
+          "courseA_artist_loops4_1": "Este número te indica cuántos bloques de este tipo puedes utilizar en este rompecabezas."
         },
         "courseA_artist_loops4_2018": {
-          "courseA_artist_loops4_1": "Este número indica cuántos de estos bloques se pueden utilizar en este desafío."
+          "courseA_artist_loops4_1": "Este número te indica cuántos bloques de este tipo puedes utilizar en este rompecabezas."
         },
         "courseA_artist_loops4_2019": {
-          "courseA_artist_loops4_1": "Este número indica cuántos de estos bloques se pueden utilizar en este desafío."
+          "courseA_artist_loops4_1": "Este número te indica cuántos bloques de este tipo puedes utilizar en este rompecabezas."
         },
         "courseA_artist_loops4_2020": {
-          "courseA_artist_loops4_1": "Este número indica cuántos de estos bloques se pueden utilizar en este desafío."
+          "courseA_artist_loops4_1": "Este número te indica cuántos bloques de este tipo puedes utilizar en este rompecabezas."
         },
         "courseA_artist_loops7": {
           "courseA_artist_loops7_1": "Este número significa que sólo uno de este tipo de bloque se puede usar en la respuesta final."
@@ -898,16 +898,16 @@
           "courseA_collector_loops1_1": "¿Ves algunos bloques nuevos en la caja de herramientas? No te preocupes, te mostraremos cómo utilizarlos más adelante en el escenario."
         },
         "courseA_collector_loops3": {
-          "gradek_adventurer_loops2_1": "Este número indica cuántos de estos bloques se pueden utilizar en este desafío."
+          "gradek_adventurer_loops2_1": "Este número te indica cuántos bloques de este tipo puedes utilizar en este rompecabezas."
         },
         "courseA_collector_loops3_2018": {
-          "gradek_adventurer_loops2_1": "Este número indica cuántos de estos bloques se pueden utilizar en este desafío."
+          "gradek_adventurer_loops2_1": "Este número te indica cuántos bloques de este tipo puedes utilizar en este rompecabezas."
         },
         "courseA_collector_loops3_2019": {
-          "gradek_adventurer_loops2_1": "Este número indica cuántos de estos bloques se pueden utilizar en este desafío."
+          "gradek_adventurer_loops2_1": "Este número te indica cuántos bloques de este tipo puedes utilizar en este rompecabezas."
         },
         "courseA_collector_loops3_2020": {
-          "gradek_adventurer_loops2_1": "Este número indica cuántos de estos bloques se pueden utilizar en este desafío."
+          "gradek_adventurer_loops2_1": "Este número te indica cuántos bloques de este tipo puedes utilizar en este rompecabezas."
         },
         "courseA_collector_preLoops1": {
           "courseA_collector_preLoops1_1": "¡Haz click aquí para ver tu código ejecutarse!"
@@ -1867,7 +1867,7 @@
           "question_mark": "?"
         },
         "courseA_artist_loops4_2021": {
-          "courseA_artist_loops4_1": "Este número indica cuántos de estos bloques se pueden utilizar en este desafío."
+          "courseA_artist_loops4_1": "Este número te indica cuántos bloques de este tipo puedes utilizar en este rompecabezas."
         },
         "courseA_artist_loops7_2021": {
           "courseA_artist_loops7_1": "Este número significa que sólo uno de este tipo de bloque se puede usar en la respuesta final."
@@ -1879,7 +1879,7 @@
           "courseA_collector_loops1_1": "¿Ves algunos bloques nuevos en la caja de herramientas? No te preocupes, te mostraremos cómo utilizarlos más adelante en el escenario."
         },
         "courseA_collector_loops3_2021": {
-          "gradek_adventurer_loops2_1": "Este número indica cuántos de estos bloques se pueden utilizar en este desafío."
+          "gradek_adventurer_loops2_1": "Este número te indica cuántos bloques de este tipo puedes utilizar en este rompecabezas."
         },
         "courseA_maze_ramp2_2021": {
           "courseC_maze_programming2_1": "Esta es la caja de herramientas. Aquí encontrarás los bloques extra para completar los rompecabezas."
@@ -1939,7 +1939,7 @@
           "courseC_harvester_loops1_callout1": "El número cuatro en la calabaza te informa que hay cuatro calabazas disponibles para escoger."
         },
         "courseC_maze_debugging5_2021": {
-          "courseC_maze_debugging5_1": "¡Estos bloques grises están protegidos y no se pueden eliminar!"
+          "courseC_maze_debugging5_1": "¡Estos bloques están bloqueados y no se pueden eliminar!"
         },
         "courseC_maze_debugging9_2021": {
           "courseC_maze_debugging9_2019_1": "Arrastra los bloques desde la caja de herramientas hacia tu espacio de trabajo."
@@ -2049,7 +2049,7 @@
           "express_maze_debugging9_2019_1": "Arrastra los bloques de la caja de herramientas a tu espacio de trabajo."
         },
         "CourseF_outbreak2": {
-          "minitoolbox": "Haga clic aquí para ampliar el bloque.",
+          "minitoolbox": "Pulsa aquí para ampliar el bloque.",
           "pointerlocation": "Arrastre un bloque de sujeto aquí."
         },
         "CourseF_outbreak7": {
@@ -2872,7 +2872,7 @@
           "new_block_4": "¡Bloque nuevo!"
         },
         "CourseF_outbreak2_-2022-2": {
-          "minitoolbox": "Haga clic aquí para ampliar el bloque.",
+          "minitoolbox": "Pulsa aquí para ampliar el bloque.",
           "pointerlocation": "Arrastre un bloque de sujeto aquí."
         },
         "CourseF_outbreak7_-2022-2": {
@@ -2931,7 +2931,7 @@
           "question_mark": "?"
         },
         "courseA_artist_loops42022": {
-          "courseA_artist_loops4_1": "Este número indica cuántos de estos bloques se pueden utilizar en este desafío."
+          "courseA_artist_loops4_1": "Este número te indica cuántos bloques de este tipo puedes utilizar en este rompecabezas."
         },
         "courseA_artist_loops72022": {
           "courseA_artist_loops7_1": "Este número significa que sólo uno de este tipo de bloque se puede usar en la respuesta final."
@@ -2943,7 +2943,7 @@
           "courseA_collector_loops1_1": "¿Ves algunos bloques nuevos en la caja de herramientas? No te preocupes, te mostraremos cómo utilizarlos más adelante en el escenario."
         },
         "courseA_collector_loops32022": {
-          "gradek_adventurer_loops2_1": "Este número indica cuántos de estos bloques se pueden utilizar en este desafío."
+          "gradek_adventurer_loops2_1": "Este número te indica cuántos bloques de este tipo puedes utilizar en este rompecabezas."
         },
         "courseA_maze_ramp22022": {
           "courseC_maze_programming2_1": "Esta es la caja de herramientas. Aquí encontrarás los bloques extra para completar los rompecabezas."

@@ -35,6 +35,7 @@
   "blockly_fieldRestBeats": "{num} döyünür",
   "blockly_fieldRestOneMeasure": "1 ölçü",
   "blockly_fieldRestMeasures": "{num} tədbirlər",
+  "blockly_fieldTriggerStartImmediately": "dərhal",
   "blockly_functionNamePlaceholder": "mənim funksiyam",
   "blockly_toolboxCategoryControl": "Nəzarət",
   "blockly_toolboxCategoryEffects": "Effektlər",
@@ -42,7 +43,7 @@
   "blockly_toolboxCategoryFunctions": "Funksiyalar",
   "blockly_toolboxCategoryLogic": "Məntiq",
   "blockly_toolboxCategoryMath": "Riyaziyyat",
-  "blockly_toolboxCategoryPlay": "Oyna",
+  "blockly_toolboxCategoryPlay": "Səslər",
   "blockly_toolboxCategorySimple": "Sadə",
   "blockly_toolboxCategoryTracks": "Tracks",
   "blockly_toolboxCategoryVariables": "dəyişənlər",
@@ -55,5 +56,7 @@
   "share": "Bölüş",
   "shareComingSoon": "Paylaşım tikilir. Tezliklə yenidən yoxlayın.",
   "startOver": "Yenidən başla",
-  "upload": "Yüklə"
+  "upload": "Yüklə",
+  "panelHeaderInstructions": "Təlimatlar",
+  "panelHeaderWorkspace": "iş sahəsi: "
 }

@@ -37,11 +37,13 @@
   "blockly_fieldRestBeats": "{num} batidas",
   "blockly_fieldRestOneMeasure": "1 medida",
   "blockly_fieldRestMeasures": "{num} medidas",
+  "blockly_fieldTriggerStartImmediately": "imediatamente",
   "blockly_functionNamePlaceholder": "minha função",
   "blockly_toolboxCategoryEvents": "Eventos",
   "blockly_toolboxCategoryFunctions": "Funções",
   "blockly_toolboxCategoryLogic": "Lógica",
   "blockly_toolboxCategoryMath": "Matemática",
+  "blockly_toolboxCategoryPlay": "Sons",
   "blockly_toolboxCategorySimple": "Simples",
   "blockly_toolboxCategoryTracks": "Faixas",
   "blockly_toolboxCategoryVariables": "Variáveis",
@@ -53,5 +55,7 @@
   "share": "Partilhar",
   "shareComingSoon": "O compartilhamento está em construção. Volte em breve.",
   "startOver": "Recomeçar",
-  "upload": "Fazer upload"
+  "upload": "Fazer upload",
+  "panelHeaderInstructions": "Instruções",
+  "panelHeaderWorkspace": "Área de trabalho: "
 }
