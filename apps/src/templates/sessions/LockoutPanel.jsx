@@ -61,8 +61,11 @@ export default function LockoutPanel(props) {
   });
   const pendingPromptParts = pendingPrompt.split('{pendingEmail}');
 
-  const csrfToken = document.querySelector('meta[name="csrf-token"]')
-    .attributes['content'].value;
+  const tokenElement = document.querySelector('meta[name="csrf-token"]');
+  let csrfToken = '';
+  if (tokenElement) {
+    csrfToken = tokenElement.attributes['content'].value;
+  }
 
   return (
     <div style={styles.container} className="lockout-panel">
