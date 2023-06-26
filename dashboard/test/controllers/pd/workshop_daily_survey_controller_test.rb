@@ -148,7 +148,7 @@ module Pd
     test 'enrollment code override is used when fetching the workshop for a user' do
       setup_summer_workshop
       other_summer_workshop = create :summer_workshop,
-        regional_partner: @regional_partner, facilitators: @facilitators, sessions_from: Date.today + 1.month
+        regional_partner: @regional_partner, facilitators: @facilitators, sessions_from: Time.zone.today + 1.month
       other_enrollment = create :pd_enrollment, :from_user, workshop: other_summer_workshop, user: @enrolled_summer_teacher
       create :pd_attendance, session: other_summer_workshop.sessions[0], teacher: @enrolled_summer_teacher, enrollment: other_enrollment
 

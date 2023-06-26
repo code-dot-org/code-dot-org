@@ -9,6 +9,9 @@ import style from './no_sections_to_assign_dialog.module.scss';
 const signInURL = `/users/sign_in?user_return_to=${location.pathname}`;
 const upgradeAccountArticleURL =
   'https://support.code.org/hc/en-us/articles/360023222371-How-can-I-change-my-account-type-from-student-to-teacher-or-vice-versa';
+const setUpStudentSectionsURL =
+  window.location.origin +
+  '/home?openAddSectionDialog=true&participantType=student';
 
 export const SignInToAssignSectionsDialog = ({onClose}) => (
   <NoSectionsToAssignBaseDialog
@@ -38,19 +41,18 @@ UpgradeAccountToAssignSectionsDialog.propTypes = {
   onClose: PropTypes.func.isRequired,
 };
 
-export const CreateSectionsToAssignSectionsDialog = ({onClose, onClick}) => (
+export const CreateSectionsToAssignSectionsDialog = ({onClose}) => (
   <NoSectionsToAssignBaseDialog
     headerText={i18n.createClassSectionsToAssign()}
     helpText={i18n.createClassSectionsToAssignHelpText()}
     onClose={onClose}
     buttonText={i18n.createClassSectionToAssignButton()}
-    onClick={onClick}
+    href={setUpStudentSectionsURL}
   />
 );
 
 CreateSectionsToAssignSectionsDialog.propTypes = {
   onClose: PropTypes.func.isRequired,
-  onClick: PropTypes.func.isRequired,
 };
 
 const NoSectionsToAssignBaseDialog = ({
