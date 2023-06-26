@@ -40,6 +40,21 @@ section.bg-primary-light {
   }
 }
 
+// Show elements based on screen size
+.show-desktop {
+  display: block;
+  @media (max-width: $width-lg) {
+    display: none;
+  }
+}
+
+.show-tablet-and-mobile {
+  display: none;
+  @media (max-width: $width-lg) {
+    display: block;
+  }
+}
+
 // Centers a block-level element
 .centered { text-align: center !important; }
 
@@ -969,11 +984,13 @@ section.quote {
     padding: 0 !important;
     margin: 0 !important;
     width: 100%;
-
-    .video_caption_link {
-      @include figcaption;
-    }
   }
+}
+
+// Overrides styles on the
+// display_video_thumbnail partial
+.video_caption_link {
+  @include figcaption;
 }
 
 // Blog post callout
@@ -991,5 +1008,97 @@ section.quote {
 
   .text-wrapper {
     width: 100%;
+  }
+}
+
+// Resources tabs section
+// Works with resources_tabs.haml partial
+// See code.org/teach for an example
+.resources-tabs{
+  margin-top: 2rem;
+  min-height: 408px;
+
+  nav {
+    border-bottom: 6px solid $brand_primary_default;
+    margin: 0 0 3rem;
+    align-items: end;
+
+    button.tab {
+      color: $neutral_dark;
+      background: $neutral_white;
+      border: 1px solid $neutral_dark20;
+      border-bottom: 0;
+      border-radius: 6px 6px 0 0;
+      padding: 0.75rem 0.25rem 0.7rem;
+      margin: 0;
+      width: 11.75rem;
+      cursor: pointer;
+      white-space: normal;
+      height: -webkit-fit-content;
+
+      &:hover {
+        background-color: $neutral_dark10;
+      }
+
+      // Selected tab's styles
+      &.active,
+      &.active:focus:not(:focus-visible) {
+        background-color: $brand_primary_default;
+        color: $neutral_white;
+        border-color: $brand_primary_default;
+      }
+
+      &:focus {
+        outline: unset;
+        border-color: $brand_primary_default;
+        background-color: $neutral_dark10;
+        color: $neutral_dark;
+      }
+    }
+  }
+
+  // Hides tab content
+  div.content {
+    display: none;
+
+    // Shows tab content
+    &.show {
+      display: initial;
+    }
+  }
+
+  .video_caption_link {
+    margin-bottom: 0;
+  }
+
+  &.show-tablet-and-mobile {
+    height: unset;
+
+    details {
+      padding-left: 0;
+      padding-right: 0;
+
+      summary {
+        @include heading-md;
+      }
+    }
+
+    .flex-container {
+      align-items: start;
+      flex-direction: row-reverse;
+      gap: 2rem;
+
+      @media screen and (max-width: $width-sm) {
+        flex-wrap: wrap-reverse;
+      }
+    }
+
+    figure {
+      margin-bottom: 1rem;
+    }
+
+    h3 {
+      display: none;
+    }
   }
 }
