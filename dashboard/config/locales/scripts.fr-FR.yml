@@ -12813,3 +12813,30 @@ fr:
               display_name: Classes
             lessonGroup-5:
               display_name: Tableaux 2D
+        csa-frq-practice-2019:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Classes
+            lessonGroup-5:
+              display_name: Tableaux 2D
+        csa-frq-practice-2021:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Classes
+            lessonGroup-5:
+              display_name: Tableaux 2D
+        csa-frq-practice-2022:
+          lessons:
+            lesson-4:
+              name: Données
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Classes
+            lessonGroup-5:
+              display_name: Tableaux 2D
+        csa-frq-practice-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Classes
+            lessonGroup-5:
+              display_name: Tableaux 2D
