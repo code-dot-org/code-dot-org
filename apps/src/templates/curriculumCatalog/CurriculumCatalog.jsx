@@ -155,7 +155,7 @@ const filterByDevice = (curriculum, deviceFilters) => {
   return true;
 };
 
-const CurriculumCatalog = ({curriculaData, ...props}) => {
+const CurriculumCatalog = ({curriculaData, isEnglish, ...props}) => {
   const [filteredCurricula, setFilteredCurricula] = useState(curriculaData);
   const [numFilteredTranslatedCurricula, setNumFilteredTranslatedCurricula] =
     useState(
@@ -264,6 +264,7 @@ const CurriculumCatalog = ({curriculaData, ...props}) => {
                   subjects={school_subject?.split(',')}
                   topics={cs_topic?.split(',')}
                   isTranslated={is_translated}
+                  isEnglish={isEnglish}
                   pathToCourse={course_version_path}
                   courseVersionId={course_version_id}
                   courseId={course_id}
@@ -330,29 +331,31 @@ const CurriculumCatalog = ({curriculaData, ...props}) => {
           color={Button.ButtonColor.brandSecondaryDefault}
         />
       </div>
-      <div className={style.catalogLanguageFilterRow}>
-        <div className={style.catalogLanguageFilterRowNumAvailable}>
-          <BodyOneText>
-            {i18n.numCurriculaAvailableInLanguage({
-              numCurricula: numFilteredTranslatedCurricula,
+      {!isEnglish && (
+        <div className={style.catalogLanguageFilterRow}>
+          <div className={style.catalogLanguageFilterRowNumAvailable}>
+            <BodyOneText>
+              {i18n.numCurriculaAvailableInLanguage({
+                numCurricula: numFilteredTranslatedCurricula,
+                language: cookies.get('language_') || 'en-US',
+              })}
+            </BodyOneText>
+            <FontAwesome
+              icon="language"
+              className="fa-solid"
+              title={i18n.courseInYourLanguage()}
+            />
+          </div>
+          <Toggle
+            name="filterTranslatedToggle"
+            label={i18n.onlyShowCurriculaInLanguage({
               language: cookies.get('language_') || 'en-US',
             })}
-          </BodyOneText>
-          <FontAwesome
-            icon="language"
-            className="fa-solid"
-            title={i18n.courseInYourLanguage()}
+            size="m"
+            onChange={() => console.log('Toggled')}
           />
         </div>
-        <Toggle
-          name="filterTranslatedToggle"
-          label={i18n.onlyShowCurriculaInLanguage({
-            language: cookies.get('language_') || 'en-US',
-          })}
-          size="m"
-          onChange={() => console.log('Toggled')}
-        />
-      </div>
+      )}
       <div className={style.catalogContentContainer}>
         {renderSearchResults()}
       </div>
