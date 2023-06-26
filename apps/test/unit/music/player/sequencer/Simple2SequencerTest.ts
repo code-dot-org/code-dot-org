@@ -166,7 +166,7 @@ describe('Simple2Sequencer', () => {
         // Play two sequential one measure events
         sequencer.playSound('id', 'blockId');
         sequencer.playSound('id', 'blockId');
-        
+
         expect(first.playbackEvents.length).to.equal(2);
 
           sequencer.startFunctionContext('second');
@@ -204,7 +204,7 @@ describe('Simple2Sequencer', () => {
             sequencer.rest(6);
 
             expect(second.playbackEvents.length).to.equal(2);
-          
+
           sequencer.endFunctionContext();
           // End measure should now account for all sounds
           expect(second.endMeasure).to.equal(16);
@@ -229,7 +229,7 @@ describe('Simple2Sequencer', () => {
     expect(event.effects?.volume).to.equal('medium');
   });
 
-  it('resets effects when entering a new function', () => {
+  it('maintains effects when entering a new function', () => {
     sequencer.newSequence();
     sequencer.startFunctionContext('when_run');
     sequencer.setEffect('filter', 'low');
@@ -243,7 +243,7 @@ describe('Simple2Sequencer', () => {
 
     const newFunctionEvent =
       sequencer.getOrderedFunctions()[1].playbackEvents[0];
-    expect(newFunctionEvent.effects).to.deep.equal({});
+    expect(newFunctionEvent.effects).to.deep.equal({filter: 'low'});
   });
 
   it('nests random events correctly', () => {
@@ -327,22 +327,22 @@ describe('Simple2Sequencer', () => {
       sequencer.startFunctionContext('first');
         sequencer.playSound('1', 'blockId');
         sequencer.playSound('2', 'blockId');
-    
+
           sequencer.startFunctionContext('second');
             sequencer.playSound('3', 'blockId');
             sequencer.playTogether();
               sequencer.playSound('4', 'blockId');
               sequencer.playSound('5', 'blockId');
             sequencer.endTogether();
-            
+
               sequencer.startFunctionContext('third');
                 sequencer.playSound('6', 'blockId');
               sequencer.endFunctionContext();
-            
+
             sequencer.playSound('7', 'blockId');
             sequencer.playSound('8', 'blockId');
           sequencer.endFunctionContext();
-        
+
         sequencer.playSound('9', 'blockId');
       sequencer.endFunctionContext();
     }
