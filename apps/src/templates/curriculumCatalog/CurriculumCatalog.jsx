@@ -1,6 +1,6 @@
 import React, {useState, useEffect, useCallback} from 'react';
 import PropTypes from 'prop-types';
-
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {curriculumDataShape} from './curriculumCatalogShapes';
 import i18n from '@cdo/locale';
 import cookies from 'js-cookie';
@@ -330,13 +330,20 @@ const CurriculumCatalog = ({curriculaData, ...props}) => {
           color={Button.ButtonColor.brandSecondaryDefault}
         />
       </div>
-      <div className={style.catalogLanguageFilter}>
-        <BodyOneText>
-          {i18n.numCurriculaAvailableInLanguage({
-            numCurricula: numFilteredTranslatedCurricula,
-            language: cookies.get('language_') || 'en-US',
-          })}
-        </BodyOneText>
+      <div className={style.catalogLanguageFilterRow}>
+        <div className={style.catalogLanguageFilterRowNumAvailable}>
+          <BodyOneText>
+            {i18n.numCurriculaAvailableInLanguage({
+              numCurricula: numFilteredTranslatedCurricula,
+              language: cookies.get('language_') || 'en-US',
+            })}
+          </BodyOneText>
+          <FontAwesome
+            icon="language"
+            className="fa-solid"
+            title={i18n.courseInYourLanguage()}
+          />
+        </div>
         <Toggle
           name="filterTranslatedToggle"
           label={i18n.onlyShowCurriculaInLanguage({
