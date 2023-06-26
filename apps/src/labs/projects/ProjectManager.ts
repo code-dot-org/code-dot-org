@@ -41,15 +41,21 @@ export default class ProjectManager {
   // if it exists.
   private currentTimeoutId: number | undefined;
   private destroyed = false;
+  private reduceChannelUpdates: boolean;
+  private initialSaveComplete: boolean;
 
   constructor(
     sourcesStore: SourcesStore,
     channelsStore: ChannelsStore,
-    channelId: string
+    channelId: string,
+    reduceChannelUpdates: boolean
   ) {
     this.channelId = channelId;
     this.sourcesStore = sourcesStore;
     this.channelsStore = channelsStore;
+    this.reduceChannelUpdates = reduceChannelUpdates;
+    this.initialSaveComplete = false;
+    console.log(`reduceChannelUpdates: ${reduceChannelUpdates}`);
   }
 
   // Load the project from the sources and channels store.
@@ -196,26 +202,37 @@ export default class ProjectManager {
       this.lastSource = JSON.stringify(this.sourceToSave);
     }
 
-    // Always save the channel--either the channel has changed and/or the source changed.
-    // Even if only the source changed, we still update the channel to modify the last
-    // updated time.
-    this.channelToSave ||= this.lastChannel;
-    const channelResponse = await this.channelsStore.save(this.channelToSave);
-    if (!channelResponse.ok) {
-      this.saveInProgress = false;
-      this.executeSaveFailListeners(channelResponse);
+    // Normally, reduceChannelUpdates is false and we update the channel
+    // metadata every time source code is saved. When in emergency mode,
+    // reduceChannelUpdates is true for HoC levels and we only update
+    // channel metadata on the initial save to reduce write pressure on
+    // the database. The main user-visible effect of this is that the
+    // project's 'last saved' time shown in the UI may be inaccurate for
+    // all projects that were saved while emergency mode was active.
+    if (!this.reduceChannelUpdates || !this.initialSaveComplete) {
+      // Always save the channel--either the channel has changed and/or the source changed.
+      // Even if only the source changed, we still update the channel to modify the last
+      // updated time.
+      this.channelToSave ||= this.lastChannel;
+      const channelResponse = await this.channelsStore.save(this.channelToSave);
+      if (!channelResponse.ok) {
+        this.saveInProgress = false;
+        this.executeSaveFailListeners(channelResponse);
 
-      // TODO: Should we wrap this response in some way?
-      // Maybe add a more specific statusText to the response?
-      return channelResponse;
+        // TODO: Should we wrap this response in some way?
+        // Maybe add a more specific statusText to the response?
+        return channelResponse;
+      }
+      const channelSaveResponse = await channelResponse.json();
+      this.lastChannel = channelSaveResponse as Channel;
+    } else {
+      console.log('Skipping channel metadata update');
     }
 
-    const channelSaveResponse = await channelResponse.json();
-
     this.saveInProgress = false;
-    this.lastChannel = channelSaveResponse as Channel;
     this.channelToSave = undefined;
     this.executeSaveSuccessListeners(this.lastChannel, this.sourceToSave);
+    this.initialSaveComplete = true;
     return new Response();
   }
 
