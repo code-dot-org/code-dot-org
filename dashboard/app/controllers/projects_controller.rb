@@ -153,6 +153,10 @@ class ProjectsController < ApplicationController
       name: 'New Java Lab Project',
       login_required: true
     },
+    music: {
+      name: 'New Music Lab Project',
+      i18n: true
+    },
     poetry: {
       name: 'New Poetry Project'
     },
@@ -361,7 +365,7 @@ class ProjectsController < ApplicationController
       full_width: true,
       callouts: [],
       channel: params[:channel_id],
-      no_footer: sharing || iframe_embed_app_and_code,
+      no_footer: sharing || iframe_embed_app_and_code || @game&.no_footer?,
       code_studio_logo: sharing && !iframe_embed,
       no_header: sharing || iframe_embed_app_and_code,
       small_footer: !iframe_embed_app_and_code && !sharing && (@game&.uses_small_footer? || @level&.enable_scrolling?),
