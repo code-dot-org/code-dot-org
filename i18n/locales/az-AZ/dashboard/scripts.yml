@@ -3839,3 +3839,22 @@ az:
           lesson_groups:
             lessonGroup-3:
               display_name: Dərslər
+        csa-frq-practice-2019:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Dərslər
+        csa-frq-practice-2021:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Dərslər
+        csa-frq-practice-2022:
+          lessons:
+            lesson-4:
+              name: məlumat
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Dərslər
+        csa-frq-practice-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Dərslər
