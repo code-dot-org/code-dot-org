@@ -210,6 +210,7 @@ function initializeSoundSensor(board) {
       board,
       pin: 'A4',
       freq: 100,
+      isScaledRounded: true,
     });
     addSensorFeatures(five.Board.fmap, sensor);
     sensor.once('data', () => resolve(sensor));
@@ -222,6 +223,7 @@ function initializeLightSensor(board) {
       board,
       pin: 'A5',
       freq: 100,
+      isScaledRounded: true,
     });
     addSensorFeatures(five.Board.fmap, sensor);
     sensor.once('data', () => resolve(sensor));
@@ -255,7 +257,7 @@ function addSensorFeatures(fmap, sensor) {
 
   // Set scale for setScale block, which records for later use.
   sensor.setScale = (low, high) => {
-    sensor.scaleTo(low, high);
+    sensor.scale(low, high);
     // store scale in public state for scaling recorded data
     scale = [low, high];
   };
