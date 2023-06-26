@@ -8697,3 +8697,30 @@ zh-TW:
               display_name: 類別
             lessonGroup-5:
               display_name: 2維陣列
+        csa-frq-practice-2019:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 類別
+            lessonGroup-5:
+              display_name: 2維陣列
+        csa-frq-practice-2021:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 類別
+            lessonGroup-5:
+              display_name: 2維陣列
+        csa-frq-practice-2022:
+          lessons:
+            lesson-4:
+              name: 數據
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 類別
+            lessonGroup-5:
+              display_name: 2維陣列
+        csa-frq-practice-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 類別
+            lessonGroup-5:
+              display_name: 2維陣列
