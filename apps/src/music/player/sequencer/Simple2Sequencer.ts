@@ -9,7 +9,7 @@ import {SoundEvent} from '../interfaces/SoundEvent';
 import MusicLibrary from '../MusicLibrary';
 import Sequencer from './Sequencer';
 import MusicValidator, {
-  KnownConditionNamesList,
+  ConditionNamesList,
 } from '../../progress/MusicValidator';
 
 interface SequenceFrame {
@@ -119,7 +119,7 @@ export default class Simple2Sequencer extends Sequencer {
 
     if (isBlock) {
       this.validator.setSatisfiedCondition(
-        KnownConditionNamesList.USED_BLOCK,
+        ConditionNamesList.USED_BLOCK,
         'play_together'
       );
     }

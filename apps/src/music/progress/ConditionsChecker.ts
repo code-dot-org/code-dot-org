@@ -2,22 +2,22 @@
 // whether a set of conditions have all been satisfied.  Unknown conditions are
 // skipped.  The accumulated satisfied conditions can be cleared at any time.
 
-export interface KnownCondition {
+export interface Condition {
   name: string;
   value?: string | number;
 }
 
-export interface KnownConditionNames {
+export interface ConditionNames {
   [key: string]: string;
 }
 
 export default class ConditionsChecker {
-  private currentSatisfiedConditions: KnownCondition[];
-  private knownConditionNames: KnownConditionNames;
+  private currentSatisfiedConditions: Condition[];
+  private conditionNames: ConditionNames;
 
-  constructor(knownConditionNames: KnownConditionNames) {
+  constructor(conditionNames: ConditionNames) {
     this.currentSatisfiedConditions = [];
-    this.knownConditionNames = knownConditionNames;
+    this.conditionNames = conditionNames;
   }
 
   // Reset the accumulated conditions.
@@ -26,14 +26,14 @@ export default class ConditionsChecker {
   }
 
   // Accumulate a satisfied condition.
-  addSatisfiedCondition(condition: KnownCondition) {
+  addSatisfiedCondition(condition: Condition) {
     if (!this.hasCondition(condition)) {
       this.currentSatisfiedConditions.push(condition);
     }
   }
 
   // Determines whether we already know that a condition has been satisfied.
-  private hasCondition(condition: KnownCondition) {
+  private hasCondition(condition: Condition) {
     return this.currentSatisfiedConditions.some(
       currentSatisfiedCondition =>
         JSON.stringify(currentSatisfiedCondition) === JSON.stringify(condition)
@@ -42,13 +42,11 @@ export default class ConditionsChecker {
 
   // Check whether the current set of satisfied conditions satisfy the given
   // required conditions.
-  checkRequirementConditions(requiredConditions: KnownCondition[]) {
+  checkRequirementConditions(requiredConditions: Condition[]) {
     for (const requiredCondition of requiredConditions) {
       // If we don't yet support a condition, don't check against it for now.
       if (
-        !Object.values(this.knownConditionNames).includes(
-          requiredCondition.name
-        )
+        !Object.values(this.conditionNames).includes(requiredCondition.name)
       ) {
         continue;
       }
