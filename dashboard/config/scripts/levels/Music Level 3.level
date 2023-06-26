@@ -6,6 +6,13 @@
     "background": "music-black",
     "level_data": {
       "text": "Try everything!",
+      "validations": [
+        {
+          "conditions": [{"name": "played_sound_triggered"}],
+          "message": "Nice work playing that sound in a trigger."
+        },
+        {"message": "Play a sound inside a trigger."}
+      ],
       "startSources": {
         "blocks": {
           "languageVersion": 0,

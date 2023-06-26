@@ -1246,7 +1246,7 @@ class LevelTest < ActiveSupport::TestCase
       "Craft", "CurriculumReference", "Dancelab", "Eval", "EvaluationMulti", "External",
       "ExternalLink", "Fish", "Flappy", "FreeResponse", "FrequencyAnalysis", "Gamelab",
       "GamelabJr", "Javalab", "Karel", "LevelGroup", "Map", "Match", "Maze", "Multi", "Music", "NetSim",
-      "Odometer", "Pixelation", "Poetry", "PublicKeyCryptography", "StandaloneVideo",
+      "Odometer", "Pixelation", "Poetry", "PublicKeyCryptography", "StandaloneVideo", "StandaloneVideo2",
       "StarWarsGrid", "Studio", "TextCompression", "TextMatch", "Unplugged",
       "Vigenere", "Weblab"
     ]

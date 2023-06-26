@@ -59,6 +59,7 @@
     = render partial: 'levels/editors/free_response', locals: {f: f} if @level.is_a? FreeResponse
     = render partial: 'levels/editors/dsl', locals: {f: f} if @level.is_a? DSLDefined
     = render partial: 'levels/editors/standalone_video', locals: {f: f} if @level.is_a? StandaloneVideo
+    = render partial: 'levels/editors/standalone_video2', locals: {f: f} if @level.is_a? StandaloneVideo2
     = render partial: 'levels/editors/unplugged', locals: {f: f} if @level.is_a? Unplugged
 
   .field

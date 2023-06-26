@@ -1,14 +1,6 @@
 import PropTypes from 'prop-types';
-import React, {
-  useRef,
-  useContext,
-  useLayoutEffect,
-  useEffect,
-  useState,
-} from 'react';
+import React, {useRef, useLayoutEffect, useEffect, useState} from 'react';
 import styles from './video.module.scss';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import {AnalyticsContext} from '../context';
 
 function useWindowSize() {
   const [size, setSize] = useState([0, 0]);
@@ -30,7 +22,6 @@ function useWindowSize() {
  */
 const Video = ({id, onClose}) => {
   const startTime = useRef(null);
-  const analyticsReporter = useContext(AnalyticsContext);
 
   useEffect(() => {
     startTime.current = Date.now();
@@ -49,13 +40,6 @@ const Video = ({id, onClose}) => {
     height = (9 / 16) * width;
   }
 
-  const onCloseClicked = () => {
-    onClose();
-
-    const videoDuration = (Date.now() - startTime.current) / 1000;
-    analyticsReporter.onVideoClosed(id, videoDuration);
-  };
-
   return (
     <div id="video-container" className={styles.container}>
       <div className={styles.inner} style={{width, height}}>
@@ -69,9 +53,6 @@ const Video = ({id, onClose}) => {
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen
           />
-        </div>
-        <div className={styles.closeContainer} onClick={onCloseClicked}>
-          <FontAwesome icon={'times'} className={styles.closeIcon} />
         </div>
       </div>
     </div>

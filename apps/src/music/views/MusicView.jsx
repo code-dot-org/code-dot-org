@@ -24,7 +24,6 @@ import {
 } from '../utils/Loader';
 import ProgressManager from '../progress/ProgressManager';
 import MusicValidator from '../progress/MusicValidator';
-import Video from './Video';
 import {
   setIsPlaying,
   setCurrentPlayheadPosition,
@@ -76,6 +75,8 @@ import musicI18n from '../locale';
  */
 class UnconnectedMusicView extends React.Component {
   static propTypes = {
+    isActive: PropTypes.bool,
+
     progressLevelType: PropTypes.string,
     appConfig: PropTypes.object,
 
@@ -225,6 +226,7 @@ class UnconnectedMusicView extends React.Component {
 
   componentDidUpdate(prevProps) {
     this.musicBlocklyWorkspace.resizeBlockly();
+
     if (
       prevProps.userId !== this.props.userId ||
       prevProps.userType !== this.props.userType ||
@@ -237,7 +239,10 @@ class UnconnectedMusicView extends React.Component {
       );
     }
 
-    if (prevProps.currentLevelIndex !== this.props.currentLevelIndex) {
+    if (
+      prevProps.currentLevelIndex !== this.props.currentLevelIndex &&
+      this.props.isActive
+    ) {
       this.goToPanel();
     }
 
@@ -662,9 +667,6 @@ class UnconnectedMusicView extends React.Component {
   }
 
   render() {
-    const showVideo =
-      AppConfig.getValue('show-video') !== 'false' && this.state.showingVideo;
-
     const {timelineAtTop, showInstructions, instructionsPosition} = this.props;
 
     return (
@@ -677,10 +679,6 @@ class UnconnectedMusicView extends React.Component {
           {showInstructions &&
             instructionsPosition === InstructionsPositions.TOP &&
             this.renderInstructions(InstructionsPositions.TOP)}
-
-          {showVideo && (
-            <Video id="initial-modal-0" onClose={this.onVideoClosed} />
-          )}
 
           {timelineAtTop && this.renderPlayArea(true)}
 
@@ -726,6 +724,14 @@ class UnconnectedMusicView extends React.Component {
 
 const MusicView = connect(
   state => ({
+    isActive:
+      getProgressLevelType(state) === ProgressLevelType.SCRIPT_LEVEL
+        ? levelsForLessonId(
+            state.progress,
+            state.progress.currentLessonId
+          ).find(level => level.isCurrentLevel).app === 'music'
+        : true,
+
     // The progress redux store tells us whether we are in a script level
     // or a single level.
     progressLevelType: getProgressLevelType(state),

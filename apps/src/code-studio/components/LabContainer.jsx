@@ -16,8 +16,13 @@ import moduleStyles from './LabContainer.module.scss';
 import i18n from '@cdo/locale';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import ErrorBoundary from './ErrorBoundary';
+import {levelsForLessonId} from '@cdo/apps/code-studio/progressReduxSelectors';
+import MusicView from '@cdo/apps/music/views/MusicView';
+import StandaloneVideo2 from '@cdo/apps/standaloneVideo2/StandaloneVideo2';
+import ProjectContainer from '@cdo/apps/labs/projects/ProjectContainer';
+import {getStandaloneProjectId} from '@cdo/apps/labs/projects/utils';
 
-const LabContainer = ({children, onError}) => {
+const LabContainer = ({onError}) => {
   const isLabLoading = useSelector(state => state.lab.isLoading);
   const isPageError = useSelector(state => state.lab.isPageError);
 
@@ -25,10 +30,30 @@ const LabContainer = ({children, onError}) => {
     ? moduleStyles.showingBlock
     : moduleStyles.fadeInBlock;
 
+  const currentApp = useSelector(
+    state =>
+      levelsForLessonId(state.progress, state.progress.currentLessonId).find(
+        level => level.isCurrentLevel
+      ).app
+  );
+
   return (
     <ErrorBoundary fallback={<ErrorFallbackPage />} onError={onError}>
       <div id="lab-container" className={moduleStyles.labContainer}>
-        {children}
+        <ProjectContainer channelId={getStandaloneProjectId()}>
+          <div
+            style={{
+              width: '100%',
+              height: '100%',
+              visibility: currentApp !== 'music' && 'hidden',
+            }}
+          >
+            <MusicView />
+          </div>
+        </ProjectContainer>
+
+        {currentApp === 'standalone_video2' && <StandaloneVideo2 />}
+
         <div
           id="fade-overlay"
           className={classNames(moduleStyles.solidBlock, overlayStyle)}
@@ -47,7 +72,6 @@ const LabContainer = ({children, onError}) => {
             </div>
           )}
         </div>
-
         {isPageError && <ErrorUI />}
       </div>
     </ErrorBoundary>
@@ -55,7 +79,6 @@ const LabContainer = ({children, onError}) => {
 };
 
 LabContainer.propTypes = {
-  children: PropTypes.node.isRequired,
   onError: PropTypes.func.isRequired,
 };
 

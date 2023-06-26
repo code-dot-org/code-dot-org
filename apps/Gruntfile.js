@@ -93,6 +93,7 @@ describe('entry tests', () => {
     'poetry',
     'studio',
     'turtle',
+    'standalone_video2',
     'weblab',
   ];
 

@@ -316,7 +316,11 @@ module LevelsHelper
     end
 
     @app_options =
-      if @level.is_a? Blockly
+      if @level.is_a?(StandaloneVideo2)
+        {app: 'standalone_video2'}
+      elsif @level.is_a?(Music)
+        {app: 'music'}
+      elsif @level.is_a? Blockly
         blockly_options
       elsif @level.is_a?(Weblab) || @level.is_a?(Fish) || @level.is_a?(Ailab) || @level.is_a?(Javalab)
         non_blockly_puzzle_options

@@ -67,6 +67,8 @@
         = render partial: 'levels/reference_area'
     - elsif @game.app == Game::MUSIC
       = render partial: 'levels/music'
+    - elsif @game.app == Game::STANDALONE_VIDEO2
+      = render partial: 'levels/standalone_video2'
     - else
       = render partial: 'levels/blockly'
 
