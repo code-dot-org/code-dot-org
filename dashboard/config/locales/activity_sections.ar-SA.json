@@ -8294,293 +8294,170 @@
             null
           ]
         },
-        "c34e82c1-7915-4903-8b84-5bb8e0a93f89": {
-          "name": "",
-          "description": ""
-        },
-        "758cad5b-546e-4cb1-bdad-b0427a309361": {
-          "name": "",
-          "description": ""
-        },
-        "8d4203c0-de71-4a1d-a6cf-407352926263": {
-          "name": "",
-          "description": ""
-        },
-        "78d759ba-0ba6-4993-9f93-ac712d7c0e5a": {
-          "description": ""
-        },
         "debe9954-34ec-44d2-96c4-69f46dc1bca8": {
-          "name": "اشعل حماسك",
-          "description": ""
-        },
-        "3f192de3-812a-47fa-af1c-2df33b1c106d": {
-          "name": "",
-          "description": ""
-        },
-        "141581a4-43ae-492a-8c65-e35a33702e51": {
-          "description": ""
+          "name": "اشعل حماسك"
         },
         "bd03e02d-5bc6-4e57-a54a-11b04a5c66f6": {
           "tips": [
-            ""
+            null
           ]
-        },
-        "ff679a3e-70ed-4655-9fad-d049c973f10b": {
-          "name": "",
-          "description": ""
         },
         "44a7d11e-02bc-4522-b65e-35d4764cb060": {
-          "name": "المشاركة",
-          "description": ""
+          "name": "المشاركة"
         },
         "f12fbcf7-5d63-4105-a269-f198663ecdfa": {
-          "name": "",
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "2d9bcccb-deb9-43da-a8d7-c032efe392c2": {
-          "description": ""
-        },
-        "531dec3a-c36d-4a48-9aad-023569475cf7": {
-          "name": "",
-          "description": ""
-        },
-        "c54ed502-b1d2-4421-9f7d-3b27dd349d46": {
-          "name": "",
-          "description": ""
-        },
-        "158db922-b97c-4498-9ebc-d6b3c9763f31": {
-          "name": "",
-          "description": ""
-        },
-        "2260f606-628e-4b23-9620-0e30e9a4bce6": {
-          "description": ""
-        },
-        "9d915931-896f-44e4-b303-cdc424e94d00": {
-          "description": ""
-        },
-        "ba08c8f5-a8be-476d-9be8-c0bc9745685b": {
-          "description": ""
         },
         "01ae9522-6c73-4653-beb4-2d7fcf1cbff9": {
-          "name": "",
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "60cc9b73-a9f5-4e7e-a285-976d896cf2d6": {
-          "description": ""
         },
         "29b1832f-4872-46da-a270-a41592f155ae": {
           "tips": [
-            ""
-          ],
-          "progression_name": ""
+            null
+          ]
         },
         "b7ad2587-c022-4e9e-8bcd-2e0d1b15e41f": {
           "tips": [
-            "",
-            ""
-          ],
-          "progression_name": ""
+            null,
+            null
+          ]
         },
         "8521baa9-94ef-4752-ad13-09bacfd132d6": {
           "tips": [
-            ""
+            null
           ],
           "progression_name": "بناء المهارات"
         },
         "a184074d-7a79-46a5-892f-8aeff5829c19": {
           "tips": [
-            ""
-          ],
-          "progression_name": ""
+            null
+          ]
         },
         "010e456f-614d-48fe-a5bc-05ba548140ba": {
           "tips": [
-            ""
+            null
           ],
           "progression_name": "بناء المهارات"
         },
         "e8a29551-e19b-47bd-9263-f1c1a08575ff": {
           "tips": [
-            ""
-          ],
-          "progression_name": ""
+            null
+          ]
         },
         "287099bd-5275-4c84-88bc-f7c5d93e99c8": {
           "tips": [
-            ""
+            null
           ],
           "progression_name": "التقييم"
         },
         "6b3acaa2-c6c8-40b4-ad1c-f764207be9a2": {
           "tips": [
-            ""
+            null
           ],
           "progression_name": "تحدي"
         },
-        "979f2b9a-28af-4ca1-97ad-25518f118554": {
-          "name": "",
-          "description": ""
-        },
-        "80e62e03-08c7-4553-8995-a653f347ae6c": {
-          "name": "",
-          "description": ""
-        },
-        "85c76988-52f8-4b49-aba7-1b42dcf9d133": {
-          "description": ""
-        },
-        "d6856e5d-6a94-4fe4-b6ab-7e3a38046423": {
-          "description": ""
-        },
         "9ae0e497-0968-45f0-aa40-82f5d1d01712": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
         },
         "c77e40a7-1e58-48b3-a333-c458c9983ef8": {
           "tips": [
-            "",
-            ""
-          ],
-          "progression_name": ""
+            null,
+            null
+          ]
         },
         "a0549135-da45-4397-be95-1aad863b37d2": {
           "tips": [
-            ""
+            null
           ],
           "progression_name": "بناء المهارات"
         },
-        "d6e878d8-de45-48cc-ac41-d810fb75c494": {
-          "progression_name": ""
-        },
         "04b6ab50-104f-420b-9e70-8da663144a51": {
           "tips": [
-            ""
+            null
           ],
           "progression_name": "التقييم"
         },
         "13854569-d199-4944-9138-df8a3280a762": {
           "progression_name": "تحدي"
         },
-        "28603b64-114b-4ff5-9a65-dde73bb48d23": {
-          "description": ""
-        },
-        "ed01a263-90a0-4577-8ebc-07ecd7d82378": {
-          "description": ""
-        },
-        "24a76b75-3cc8-41d1-8e75-d61f881aecfc": {
-          "description": ""
-        },
-        "5d1b708b-4fde-4870-b927-291058ef8f1b": {
-          "name": "",
-          "description": ""
-        },
-        "a3a90c8a-c783-4d6d-bf0d-eac6a2777e62": {
-          "description": ""
-        },
-        "6549edf8-3599-427e-9e5e-2f4808400694": {
-          "description": ""
-        },
         "d95e3c69-5b66-4c2c-a137-0fa48ecf0dfc": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
         },
         "0570736b-7259-4187-8305-3dabf7ee65a8": {
           "tips": [
-            ""
-          ],
-          "progression_name": ""
+            null
+          ]
         },
         "66906651-7aa5-4c1e-95ea-b80ab57da2c3": {
           "progression_name": "بناء المهارات"
         },
-        "038e2b2d-1206-47c1-ad4e-ca8a33d22493": {
-          "progression_name": ""
-        },
         "fde374b2-aa35-4cb7-9cb2-176b0b48a9ae": {
           "tips": [
-            ""
+            null
           ],
           "progression_name": "التقييم"
         },
         "21260455-53ec-446e-b285-e9cbba4b6bbb": {
           "progression_name": "تحدي"
         },
-        "72e4fac8-226c-4ec8-a4f3-fa1395962cf8": {
-          "name": "",
-          "description": ""
-        },
-        "a9f3574f-f70c-40fe-a8e0-42f71f5a7a2e": {
-          "description": ""
-        },
-        "1021739d-d149-4dbb-896c-8a6fd1c3c674": {
-          "description": ""
-        },
         "427d8899-405a-4266-af95-9af17e1fe006": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
         },
         "94238b4f-60fa-4645-8cd3-13120815edef": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
         },
         "e9d45b03-0bff-41bc-9727-8e21f8f0256a": {
           "tips": [
-            ""
-          ],
-          "progression_name": ""
+            null
+          ]
         },
         "93ea638a-0d81-4055-88cc-d9167581d9be": {
           "progression_name": "بناء المهارات"
         },
         "a0f4ad44-579c-4404-8ba2-bcb19e459e0c": {
           "tips": [
-            ""
-          ],
-          "progression_name": ""
+            null
+          ]
         },
         "c8cebe3f-35da-44ac-9cc6-29190c5b6544": {
           "progression_name": "بناء المهارات"
         },
         "64e9d8c1-f351-4dec-b424-f4c03bd5324a": {
           "tips": [
-            ""
-          ],
-          "progression_name": ""
+            null
+          ]
         },
         "99737e58-9db8-43d5-8437-03794c232a9c": {
           "progression_name": "بناء المهارات"
         },
         "314cd764-1846-45e2-951b-1fc00d8b5aed": {
           "tips": [
-            ""
-          ],
-          "progression_name": ""
+            null
+          ]
         },
         "c9fa6f0e-80c5-4009-b74a-8bc73095ecbe": {
           "tips": [
-            ""
-          ],
-          "progression_name": ""
+            null
+          ]
         },
         "ae140bd7-8f40-4e4b-b867-e72fe2d1894e": {
           "progression_name": "بناء المهارات"
         },
         "103c17a8-f0b0-4836-8eed-93cd0a2fa293": {
           "tips": [
-            ""
+            null
           ],
           "progression_name": "التقييم"
         },
@@ -8588,2694 +8465,926 @@
           "progression_name": "تحدي"
         },
         "e027da7e-461e-4ad1-b60c-145a373dccb0": {
-          "name": "",
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "72e7af03-6898-41fa-98c5-b6904a035199": {
-          "name": "",
-          "description": ""
-        },
-        "cee762df-3912-4192-b551-523624095f28": {
-          "description": ""
-        },
-        "8c171e78-a740-46e7-8b03-fa5339eab7a1": {
-          "description": ""
-        },
-        "e4cfe184-e9df-425a-8a67-78e5317167c0": {
-          "description": ""
-        },
-        "80e05042-31cc-44d9-8f63-c0d96be74743": {
-          "description": ""
         },
         "9c7a93a7-6a81-4360-9284-736ae07012e2": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "9be3201f-e2fd-45b2-9ffe-e7c291414cf0": {
-          "description": ""
         },
         "1ae47ba4-9015-40e9-93fd-605c972cdf5d": {
           "tips": [
-            ""
+            null
           ]
         },
         "68996d30-3dce-47d9-86e1-678c8164023b": {
           "name": "مقدمة",
-          "description": "",
           "tips": [
-            ""
+            null
           ]
         },
-        "e0ae7af5-a11e-4120-b28d-c1912c57a55b": {
-          "description": ""
-        },
         "d9a7fab9-6627-440f-b25d-e3449cf96b97": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
         },
         "87d4f205-868c-44e3-9823-c97b03c967fd": {
           "name": "ستوديو كود",
           "tips": [
-            ""
-          ],
-          "progression_name": ""
-        },
-        "3e9609bb-ec97-4cd3-8648-e8b04256ca92": {
-          "description": ""
+            null
+          ]
         },
         "cdba4023-5235-4505-8c9e-903e45be9ca4": {
-          "name": "",
-          "description": "",
           "tips": [
-            ""
+            null
           ]
         },
         "d517677e-a0c5-48b5-9198-340f9de4b197": {
-          "name": "تأملات",
-          "description": ""
-        },
-        "27de5b22-659a-4bfb-98ca-d3638ef8c4d0": {
-          "description": ""
-        },
-        "8b763a92-05ad-4784-a3e8-61025e642c98": {
-          "name": "",
-          "description": ""
-        },
-        "757d2a1e-f422-4212-b95b-5c2b85bdbd7d": {
-          "description": ""
-        },
-        "20a640a3-4cd3-4ba1-aa5d-952802642099": {
-          "description": ""
-        },
-        "f2af651b-3bf1-464d-b07c-7cb6731d8f60": {
-          "description": ""
+          "name": "تأملات"
         },
         "4045ce4e-232d-49f8-b831-12073f3d9495": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
         },
         "39019e91-9bb5-46f0-80c8-1b28ede42c68": {
           "tips": [
-            "",
-            ""
-          ],
-          "progression_name": ""
+            null,
+            null
+          ]
         },
         "acf62008-5c0a-42bf-887f-c933e92f107a": {
           "progression_name": "بناء المهارات"
         },
-        "35431589-0c6b-47bb-a1d3-12361906ae84": {
-          "progression_name": ""
-        },
         "8f9190dd-ac05-4161-a3ec-523af179eb8f": {
           "tips": [
-            ""
+            null
           ],
           "progression_name": "التقييم"
         },
         "82ec8f8c-928d-497c-88c3-6a3b948a162e": {
           "progression_name": "تحدي"
         },
-        "4e670dbd-c1a5-48fc-97ff-d0b68df91a5d": {
-          "name": "",
-          "description": ""
-        },
-        "efc3f505-0bd4-4c0c-9870-5fa903b413e9": {
-          "description": ""
-        },
-        "462d84bc-26b0-4f62-ab6e-8d6385a9ed99": {
-          "name": "",
-          "description": ""
-        },
-        "517bee39-d94f-4398-981d-ef8a8098cc58": {
-          "description": ""
-        },
-        "840ce3b2-b72d-428d-bb7b-131bf83f224a": {
-          "description": ""
-        },
-        "facdfff6-5169-450d-ad2d-0226b1112ae8": {
-          "description": ""
-        },
         "57cb955d-f937-4b8c-990b-0ceeac0bd2a3": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
         },
         "47cf28d0-a32f-46bb-89b5-c3488628a1fd": {
           "tips": [
-            ""
-          ],
-          "progression_name": ""
+            null
+          ]
         },
         "6b3d5fc1-6b24-4b20-b689-859ed60b7781": {
           "progression_name": "بناء المهارات"
         },
-        "f5248188-ada8-4736-a4a0-46383a8fabdb": {
-          "progression_name": ""
-        },
         "3b80805c-210e-4afa-b195-9d0849f5a1f0": {
           "tips": [
-            ""
+            null
           ],
           "progression_name": "التقييم"
         },
         "62b8f83e-afda-4e53-a033-8fa297acd65f": {
           "progression_name": "تحدي"
         },
-        "00a77ba7-327d-4f3b-b7de-f3f9f19bd7bc": {
-          "description": ""
-        },
-        "fe45a41c-ec97-4d3c-89df-17c0327d849a": {
-          "description": ""
-        },
-        "a57742ea-e0b0-406b-b4e8-f6e567e24082": {
-          "description": ""
-        },
-        "3f320d13-bcf3-4af8-bb19-a529b2f5a005": {
-          "description": ""
-        },
-        "5dca2862-74f8-4965-a94b-75e750adc133": {
-          "description": ""
-        },
         "21389587-1242-42b1-b1e5-723fc5ddc4b5": {
           "description": "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
         },
-        "d64057f0-c41c-4b53-ba9c-3f262ad7ec4b": {
-          "description": ""
-        },
-        "9a92a5ae-2daa-4e40-8fcd-7883f880fd98": {
-          "description": ""
-        },
-        "e9612989-81aa-4c20-a75f-0c4c7bf56d62": {
-          "description": ""
-        },
-        "a127db7e-9480-43f6-a260-ca9ea29fbc20": {
-          "description": ""
-        },
-        "b553a3ff-e3b7-4f8f-a9b6-7712e1feef36": {
-          "description": ""
-        },
         "b9330fe8-365a-492e-b155-48d1aa4b993e": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
         },
         "a43fd1ca-e808-415f-8b73-ecc0caf330e2": {
           "tips": [
-            ""
-          ],
-          "progression_name": ""
+            null
+          ]
         },
         "b61c6ed4-9e1d-4cec-8749-167d1414b515": {
           "progression_name": "بناء المهارات"
         },
-        "685a020f-793a-4276-bef7-20ee06313750": {
-          "progression_name": ""
-        },
         "e13764d2-b1f3-40c7-9632-b0e82f82ee45": {
           "tips": [
-            ""
+            null
           ],
           "progression_name": "التقييم"
         },
         "23c9fd40-b3fd-467c-a0e0-f98073b5cd37": {
           "progression_name": "تحدي"
         },
-        "9d2c2eaf-b8c9-44be-9558-e774f50949c4": {
-          "description": ""
-        },
-        "3034274d-9dc1-4164-86db-034b3a1567ae": {
-          "description": ""
-        },
         "d18fd32f-358e-4525-96b9-329e455fea1c": {
-          "name": "نشاط تحضيري",
-          "description": ""
+          "name": "نشاط تحضيري"
         },
         "8e91a1e2-4138-418e-bb96-7c64113b711a": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
         },
-        "53d56dc5-06cd-49ec-8fe0-c126f01d00ed": {
-          "description": ""
-        },
         "836b29e0-6e20-434b-a5b4-556abfb94d2b": {
-          "name": "",
-          "description": "",
           "tips": [
-            ""
+            null
           ]
         },
         "e9b6aa89-e596-4ee6-bf0c-280d32403047": {
-          "name": "",
-          "description": "",
           "tips": [
-            ""
+            null
           ]
         },
         "ecb1a1f9-d63d-4386-b991-bc3a954a2648": {
-          "name": "الإنهاء",
-          "description": ""
+          "name": "الإنهاء"
         },
         "8044eba7-f12f-4ff5-b1b7-a2ee795043cf": {
           "name": "نشاط تحضيري",
-          "description": "",
           "tips": [
-            ""
+            null
           ]
         },
-        "1df32546-96d2-4c31-b178-09563c056870": {
-          "name": "",
-          "description": ""
-        },
         "3a7eb86f-0db6-4e77-b6ae-b126fb389834": {
-          "name": "الإنهاء",
-          "description": ""
+          "name": "الإنهاء"
         },
         "f0da6b6d-7815-4cb8-bb39-ebca0481b983": {
-          "name": "نشاط تحضيري",
-          "description": ""
+          "name": "نشاط تحضيري"
         },
         "e2e83de3-7f19-4af1-816a-e8e685a1f6f7": {
-          "name": "",
-          "description": "",
           "tips": [
-            ""
+            null
           ]
         },
         "7757e358-925f-460e-8204-919de76b3d9f": {
-          "name": "",
-          "description": "",
           "tips": [
-            ""
-          ],
-          "progression_name": ""
-        },
-        "1370ac6b-ceff-421e-b3b7-1b710bfcfb48": {
-          "description": ""
+            null
+          ]
         },
         "2e59bfde-65a5-450d-9701-426f7353a617": {
-          "name": "الإنهاء",
-          "description": ""
+          "name": "الإنهاء"
         },
         "a26024c1-74e8-4da6-81b3-b0f43b4a9df3": {
-          "name": "نشاط تحضيري",
-          "description": ""
-        },
-        "9cb6319c-b099-455a-9d78-d51e44477ec1": {
-          "name": "",
-          "description": ""
+          "name": "نشاط تحضيري"
         },
         "4c4844c5-1cfc-4e21-b5fe-688b84f55ab3": {
           "name": "الإنهاء",
-          "description": "",
           "tips": [
-            ""
+            null
           ]
         },
         "61b7da2d-8df0-408c-8e32-3e4c2d0b749f": {
-          "name": "نشاط تحضيري",
-          "description": ""
-        },
-        "18c69bef-2643-411a-b6b1-28e47b62f5da": {
-          "name": "",
-          "description": ""
-        },
-        "c711b9a3-60a5-4808-8747-76223c45783d": {
-          "name": "",
-          "description": ""
+          "name": "نشاط تحضيري"
         },
         "43fde334-6c07-4b1b-b23d-4b67f5fbfbc0": {
           "name": "الإنهاء",
           "description": "**التجميع:** اطلب من الطلاب إرسال نماذجهم الأولية وإرسال تطبيقاتهم في App Lab. \n\n**التفكير:** اطلب من الطلاب إكمال استطلاع سريع مكون من 5 أسئلة في Code Studio. ستتمكن من الاطلاع على النتائج مجهولة المصدر في لوحة تحكم المعلم.",
           "progression_name": "تأملات"
         },
-        "016c41f7-549a-4037-be5f-704e76a82685": {
-          "description": ""
-        },
-        "dfbaa5f7-a0e8-42f5-901d-3432a4d6eb66": {
-          "description": ""
-        },
-        "b1b4151c-82a9-49d9-a3b8-14285347ccc2": {
-          "description": ""
-        },
-        "716eb150-abbb-4125-945d-7b4d386d3e29": {
-          "description": ""
-        },
-        "0bd6a833-a7d2-4430-bcc1-8d15a3b98b7b": {
-          "description": ""
-        },
-        "d9bf1eac-89e2-4067-b465-e64824139119": {
-          "description": ""
-        },
         "b46cfe31-9b5e-4820-b368-fc8a4fa139a7": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
         },
         "9c9c1c7f-db27-4c84-941c-4dd1e3b2ce3c": {
           "tips": [
-            ""
-          ],
-          "progression_name": ""
+            null
+          ]
         },
         "a2936dce-eb0e-42dc-a9f8-dd616f4fc105": {
           "progression_name": "بناء المهارات"
         },
-        "06e63447-38b2-415f-981a-1e70b8c25a68": {
-          "progression_name": ""
-        },
         "7f101211-f462-454f-ae75-b7a9da3097fa": {
           "progression_name": "بناء المهارات"
         },
-        "26a8a073-e99f-4e32-9920-c9690e4ca491": {
-          "progression_name": ""
-        },
         "c4973fc1-e3ac-4d75-a00c-b2b1d9ea95e5": {
           "tips": [
-            ""
+            null
           ],
           "progression_name": "التقييم"
         },
         "8c0a5684-f005-4e5b-a2ce-cb8e4789a01d": {
           "progression_name": "تحدي"
         },
-        "bf6abe53-60e7-4f2c-b6ab-88516663778e": {
-          "name": "",
-          "description": ""
-        },
-        "39d44cea-9b11-4e48-ad61-da8f10095944": {
-          "description": ""
-        },
-        "e3511503-36b7-42bf-b889-919cff249429": {
-          "description": ""
-        },
-        "3adcc7f4-8fcc-4738-88c5-a621ff09cb08": {
-          "description": ""
-        },
-        "ad6388a1-f265-4aab-a98e-70179b5b5e52": {
-          "description": ""
-        },
-        "5306b327-e7f9-4ac2-bbf1-333b7c66a163": {
-          "description": ""
-        },
         "b8a6fe12-b039-4ae6-b8af-7ca83f2cf8f4": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
         },
         "8fbee503-556a-40cd-be06-2fe300b09ef5": {
           "tips": [
-            ""
-          ],
-          "progression_name": ""
+            null
+          ]
         },
         "39352362-2462-47b6-9319-bd351cfc7c06": {
           "progression_name": "بناء المهارات"
         },
-        "b020f230-22d5-4494-a243-1e2c8045dc42": {
-          "progression_name": ""
-        },
         "c54f7dfb-6a80-43de-b63d-b72945c32a55": {
           "tips": [
-            ""
+            null
           ],
           "progression_name": "التقييم"
         },
         "76453b17-59cd-4920-b508-57d27318f740": {
           "progression_name": "تحدي"
         },
-        "7fe79fa5-dc50-4ddc-b145-f8630bde9143": {
-          "name": "",
-          "description": ""
-        },
-        "14b6051d-5a9b-4840-b6ba-85dc9840446a": {
-          "description": ""
-        },
-        "d1a51864-499c-47ef-bf86-9d401dcd748a": {
-          "description": ""
-        },
-        "44f8c565-1e77-4747-9a8c-884b39d7f738": {
-          "description": ""
-        },
         "b29096d1-be92-43d1-b40d-48dc44779fcb": {
           "name": "إنشاء موسيقى",
-          "description": "",
           "tips": [
-            ""
+            null
           ]
         },
         "b7df2f8f-c61b-45b6-ad12-400fe0b5dc66": {
           "tips": [
-            ""
-          ],
-          "progression_name": ""
-        },
-        "3be863d9-6e87-48f3-a2ed-86a64ccc5ffa": {
-          "progression_name": ""
+            null
+          ]
         },
         "ee143b4c-c0a3-41f2-a7ad-f6a9d17b1aa0": {
           "progression_name": "بناء المهارات"
         },
         "c4228271-c5b7-4567-a23a-47389f925254": {
           "tips": [
-            ""
-          ],
-          "progression_name": ""
+            null
+          ]
         },
         "11718267-5da6-4e25-9cf3-0782a3820c8d": {
           "tips": [
-            ""
-          ],
-          "progression_name": ""
+            null
+          ]
         },
         "1789c265-b590-41c2-856d-381d22646c28": {
           "progression_name": "بناء المهارات"
         },
         "69126bf3-cf78-4b06-8fe6-f39b86b5ec93": {
           "tips": [
-            ""
+            null
           ],
           "progression_name": "التقييم"
         },
         "da15bf04-3bad-47cc-8315-caf65137e15c": {
           "progression_name": "تحدي"
         },
-        "eb5e220c-7b46-48e3-a1a3-37e1b101cfbe": {
-          "name": "",
-          "description": ""
-        },
-        "c2319cff-c3de-4c7d-80bf-09adf28bee6f": {
-          "description": ""
-        },
-        "9526ea6c-fcc4-4a6b-97c0-b413f654262b": {
-          "description": ""
-        },
-        "cbfba406-1357-4e91-8fe3-f262878a72dc": {
-          "description": ""
-        },
         "db3d71d9-35eb-4f9d-bcde-2f799683ab8b": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
         },
         "48fd15be-8f76-4d8e-9fa3-90bfc4b890eb": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
         },
         "5c0e38f9-bfaf-4555-8051-d867140232fc": {
           "tips": [
-            ""
-          ],
-          "progression_name": ""
+            null
+          ]
         },
         "0cb8acf6-d4c7-4cc8-b550-fa53b04303f9": {
           "tips": [
-            ""
-          ],
-          "progression_name": ""
+            null
+          ]
         },
         "ee36fb1a-c452-4da6-a983-33c5987f9085": {
           "progression_name": "بناء المهارات"
         },
         "a37f0b1f-508e-4592-a58b-664fcefb22bf": {
           "tips": [
-            ""
-          ],
-          "progression_name": ""
+            null
+          ]
         },
         "69fa3327-7be1-4285-859c-d2f87a36b550": {
           "tips": [
-            ""
-          ],
-          "progression_name": ""
+            null
+          ]
         },
         "f0d4f74c-c410-4931-aef8-6438559f83a4": {
           "progression_name": "بناء المهارات"
         },
-        "ff0870fb-5038-4758-9dbf-6417d90821c2": {
-          "progression_name": ""
-        },
         "e88de202-5900-475a-87e9-0a47216646d9": {
           "tips": [
-            ""
+            null
           ],
           "progression_name": "التقييم"
         },
-        "f97cde59-b600-4d0d-8588-7d0c91c17b3e": {
-          "name": "",
-          "description": ""
-        },
-        "75a70150-4ec4-45d8-a90d-d8942a6221b3": {
-          "name": "",
-          "description": ""
-        },
         "d7f3a348-1beb-464f-9cc7-54d4d6101d4d": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
         },
-        "2d5d2ab9-36ed-4036-9f54-6e6ece7de94f": {
-          "description": ""
-        },
-        "6ea9cef2-8e5f-4e4c-b37f-f2d4512484be": {
-          "description": ""
-        },
         "1c670d85-bbc6-4d02-a12f-a8767dbeef65": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
         },
         "e5f4b521-ba78-4410-9629-f6a72ecb4114": {
           "tips": [
-            ""
+            null
           ]
         },
         "13377864-9faa-4893-b0c2-262903a7710e": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
         },
-        "528d5cd8-aa69-4be6-814f-81f9dc22401d": {
-          "description": ""
-        },
         "228be993-4e4a-4861-a78b-056cd0055159": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
         },
         "48b11d9f-9819-4e81-86c0-5d57b093334b": {
           "tips": [
-            ""
-          ],
-          "progression_name": ""
-        },
-        "59dd1975-4805-4f90-ac79-f35a47c4eed8": {
-          "name": "",
-          "description": ""
-        },
-        "04f9d7e1-c590-4d22-ab74-069209762be4": {
-          "name": "تأملات",
-          "description": ""
-        },
-        "9b0bcfaa-cc39-4658-ad15-7b4ebfeef2a3": {
-          "description": ""
-        },
-        "732a32ea-4bed-4925-a6d4-444ccb69e5fe": {
-          "description": ""
-        },
-        "c434ef84-71cf-4cb8-aaa4-a11c2aa8aea4": {
-          "description": ""
-        },
-        "d8b507cf-9b4e-42fb-a685-5722fa2dc1cb": {
-          "description": ""
-        },
-        "c160b13e-8435-4faf-b2c4-66aaf959c444": {
-          "description": ""
-        },
-        "c960fb55-e814-4e24-a9d4-07f5875c76f9": {
-          "description": "",
-          "tips": [
-            ""
+            null
           ]
         },
-        "e64406a9-57fb-477d-bdc7-3921a12129cb": {
-          "progression_name": ""
+        "04f9d7e1-c590-4d22-ab74-069209762be4": {
+          "name": "تأملات"
+        },
+        "c960fb55-e814-4e24-a9d4-07f5875c76f9": {
+          "tips": [
+            null
+          ]
         },
         "f7118f4f-2fc6-430c-a803-09df0254c7dc": {
           "tips": [
-            ""
-          ],
-          "progression_name": ""
+            null
+          ]
         },
         "afa4fcac-c0c6-4df6-8b1b-d280c5602fc6": {
           "progression_name": "بناء المهارات"
         },
-        "f8a43e87-8651-4fca-b1f3-d20655d806cc": {
-          "progression_name": ""
-        },
         "65990eea-0d83-4814-9076-d63244b6b628": {
           "tips": [
-            ""
+            null
           ],
           "progression_name": "التقييم"
         },
         "5d0032fb-a971-483f-9be3-bad5e1a0d7de": {
           "progression_name": "تحدي"
         },
-        "52499dd0-0df4-4eec-90ef-d794b8655d2f": {
-          "description": ""
-        },
-        "bfba76c0-3ffa-403b-b4d0-9e962d6b85ca": {
-          "description": ""
-        },
-        "a98ae999-f790-4536-b636-063170f6b369": {
-          "description": ""
-        },
-        "2fdeb504-ec46-4094-9219-c22ad046043b": {
-          "description": ""
-        },
         "9cc97556-4746-41d2-aacd-4520dec3be96": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "1fc60f0f-8066-4a49-86d7-2f3dda01d427": {
-          "progression_name": ""
         },
         "5ef6b3a1-45cf-420c-9ba9-db06070441df": {
           "progression_name": "بناء المهارات"
         },
-        "bc9e7894-dd0e-4ac2-a8bf-0de573d584b9": {
-          "progression_name": ""
-        },
         "0376c3e9-bb4a-4cc6-90a7-1b7db8535f57": {
           "tips": [
-            ""
+            null
           ],
           "progression_name": "التقييم"
         },
         "1583a972-df35-4d3b-90b9-da0436506e8b": {
           "progression_name": "تحدي"
         },
-        "30534f9b-69fa-44d4-987f-9ee0b46cc9b6": {
-          "description": ""
-        },
-        "b2063825-3f6c-4e22-85b9-0ff9361206b8": {
-          "description": ""
-        },
         "b06fecf3-f666-4d47-97ed-0f43e2bd6781": {
-          "name": "",
-          "description": "",
           "tips": [
-            ""
+            null
           ]
         },
         "d85819c8-89bd-4bb9-9be5-a76d07025949": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "865f6e1d-2a55-4a2c-8438-bf512c09855f": {
-          "name": "",
-          "description": ""
-        },
-        "78d95ccf-008e-48de-8523-18203de920fc": {
-          "name": "",
-          "description": ""
-        },
-        "383d311f-1fa0-4515-8442-1d5d0b3c3b8d": {
-          "name": "",
-          "description": ""
         },
         "5be532a8-3a04-478b-8840-962b2c499894": {
           "tips": [
-            ""
-          ],
-          "progression_name": ""
-        },
-        "b71674dc-4112-4737-bfb5-749f710b2bb2": {
-          "name": "",
-          "description": ""
-        },
-        "a581e655-8ff3-425c-bce0-d00d9b7fa33a": {
-          "description": ""
-        },
-        "2c89f55b-648b-4564-9df9-24f3eb75a6c8": {
-          "name": "",
-          "description": ""
+            null
+          ]
         },
         "7388bea7-d580-4ea6-bbc2-3e43b0686080": {
           "name": "المشاركة",
-          "description": "",
           "tips": [
-            ""
+            null
           ]
         },
-        "266e20ca-98da-4140-80a3-b88831c809bc": {
-          "description": "",
-          "progression_name": ""
-        },
-        "b48419ef-e168-48e0-9f73-5f0a9f7cbba4": {
-          "name": "",
-          "description": ""
-        },
         "9d25bedc-e25e-4765-933d-124a5f27be74": {
-          "name": "اختبار ما بعد المشروع",
-          "description": ""
-        },
-        "a8d4bd5e-402c-4246-a5fb-ffb3bc312ff3": {
-          "name": "",
-          "description": ""
-        },
-        "682102ce-ee52-40fa-af6f-f291d63d954b": {
-          "name": "",
-          "description": ""
-        },
-        "3cf5ff9a-9d4f-4ddc-9d40-337317b041d8": {
-          "name": "",
-          "description": ""
-        },
-        "7d3cfd5f-d476-4d41-aee5-6cbd484d5263": {
-          "name": "",
-          "description": ""
+          "name": "اختبار ما بعد المشروع"
         },
         "f5938c84-3ccf-4d55-a619-0f17a395dedf": {
           "tips": [
-            ""
-          ],
-          "progression_name": ""
-        },
-        "aeada9ea-6aee-47f4-a0fc-2f9760dfa7a0": {
-          "name": "",
-          "description": ""
+            null
+          ]
         },
         "35fce3fb-ed1f-48aa-af53-b3251a5bc7a4": {
-          "name": "",
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "864c29c3-1cd2-4bce-9751-c7db1f0b4648": {
-          "description": ""
-        },
-        "f8b5a2c0-0238-439b-930e-e6a0ae8999da": {
-          "description": ""
-        },
-        "80d6b2e5-fa0c-4e74-80bc-a91f612eaf6f": {
-          "description": ""
-        },
-        "1148846d-9c47-4cb4-82bd-7c07ef1637cd": {
-          "description": ""
-        },
-        "b0efe0ca-2ddf-47cd-b5e4-c24fe1f96471": {
-          "description": ""
-        },
-        "0df80003-d722-4a46-aaab-0e6dbe1c2f27": {
-          "description": ""
-        },
-        "0c06a73b-a42d-4fa1-a001-e64d9f003df8": {
-          "description": ""
-        },
-        "092d5af9-9604-4189-a1cb-99f4cda78d1b": {
-          "description": ""
-        },
-        "32de8e9e-398b-42ba-97ee-19d4764e0ffe": {
-          "description": ""
-        },
-        "9ff3e329-8841-4909-813d-c4b83b4fa2d5": {
-          "name": "",
-          "description": "",
-          "progression_name": ""
         },
         "861ba0ea-3d12-44d8-8114-da49c3d65081": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "fd7b0ef2-e8fe-47e4-a1c4-9ff3e34b403f": {
-          "description": ""
-        },
-        "d7523d1e-3d31-4782-bbe8-308348c9396f": {
-          "description": ""
-        },
-        "a5b52c27-b372-4210-9255-8de8f2265a4a": {
-          "description": ""
-        },
-        "5471d717-ebc3-4f44-91b5-61c6cebe964d": {
-          "name": "",
-          "description": "",
-          "progression_name": ""
         },
         "0fc5594e-5acc-46b7-b061-532e27fce958": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "40a13955-52e9-4e0a-89ee-3d575f49a396": {
-          "description": ""
-        },
-        "be01f760-a2cb-42f9-bce1-9069ceabb0fb": {
-          "description": ""
-        },
-        "53f7a4c5-b0a4-42ec-9194-7d0e3073bf7e": {
-          "description": ""
-        },
-        "514d167e-9739-4856-9308-39bce3beb983": {
-          "name": "",
-          "description": "",
-          "progression_name": ""
-        },
-        "c8f322dc-47f1-4806-97f4-1bf7f549ab68": {
-          "description": ""
-        },
-        "dc06903a-adb8-4f29-8751-78c291d46041": {
-          "description": ""
         },
         "a6f7adf9-fc91-4fb7-88c5-e87b81a0842e": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "744a6581-c5ed-4d10-81ec-bccd7f8d4854": {
-          "description": ""
-        },
-        "163227bb-045f-46e9-97ff-58243219cad9": {
-          "description": ""
         },
         "7799c3eb-e76a-465b-9f24-69d6c04a01c7": {
           "name": "تأملات",
-          "description": "**Code Studio:** اطلب من الطلاب الإجابة على 5 أسئلة استطلاع سريعة في بداية هذه الوحدة حول الذكاء الاصطناعي والتعلم الآلي. عد أن يكمل 5 طلاب على الأقل الاستطلاع، ستتمكن من مشاهدة النتائج مجهولة المصدر في لوحة تحكم المعلم. سيتم طرح بعض هذه الأسئلة مرة أخرى في نهاية المشروع الأول، والتي يمكن أن تكون مفيدة في رؤية نمو الطلاب والتغيرات في المواقف خلال الوحدة.",
-          "progression_name": ""
-        },
-        "f7ac0f52-2eb9-47da-971a-eea771af4dcb": {
-          "name": "",
-          "description": ""
-        },
-        "7077c8e1-5038-47f2-b105-0382592d319d": {
-          "name": "",
-          "description": ""
-        },
-        "9c2d4592-3cae-43c0-aa8a-55be8e4ac0f6": {
-          "description": ""
-        },
-        "48171b11-5346-4474-a598-66df360f558a": {
-          "description": ""
-        },
-        "340c5177-c0bb-48ba-b20e-af67814fce96": {
-          "description": ""
-        },
-        "0112d496-2f50-4380-8e86-c6b707226994": {
-          "description": ""
+          "description": "**Code Studio:** اطلب من الطلاب الإجابة على 5 أسئلة استطلاع سريعة في بداية هذه الوحدة حول الذكاء الاصطناعي والتعلم الآلي. عد أن يكمل 5 طلاب على الأقل الاستطلاع، ستتمكن من مشاهدة النتائج مجهولة المصدر في لوحة تحكم المعلم. سيتم طرح بعض هذه الأسئلة مرة أخرى في نهاية المشروع الأول، والتي يمكن أن تكون مفيدة في رؤية نمو الطلاب والتغيرات في المواقف خلال الوحدة."
         },
         "b5acd50c-8f0e-4c22-8918-0e4801b137e1": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
         },
-        "b4bbd668-ee11-460f-8a5a-92be53873571": {
-          "name": "",
-          "description": ""
-        },
-        "99d4daf5-dfca-481f-aba6-0cf71e193193": {
-          "description": ""
-        },
-        "a94061ed-816a-4d78-8b2b-b7263493b70a": {
-          "description": ""
-        },
-        "725469a0-b124-4801-9e7e-c7cf6c06f42b": {
-          "description": ""
-        },
         "b626621f-f9fb-4b33-90cf-2038de093678": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
         },
         "057c9015-057e-489e-a76f-820db91f0985": {
-          "description": "",
           "tips": [
-            ""
-          ],
-          "progression_name": ""
-        },
-        "875a03f0-5fce-41f8-8166-05e807bd90f7": {
-          "description": ""
-        },
-        "98fe2a80-eb12-4201-a39d-9e257eb18c84": {
-          "description": ""
-        },
-        "ea211a85-8f4e-4915-8a60-3d00abefbddd": {
-          "description": ""
-        },
-        "f565aa12-43be-4369-82bd-aac7a39d37bb": {
-          "description": ""
-        },
-        "9838c1f4-2728-4082-8865-5293f307c9b7": {
-          "name": "",
-          "description": ""
-        },
-        "fb72cf46-3b1e-461e-b1b2-3ff66c348b99": {
-          "description": ""
-        },
-        "fc8eb6f2-d251-482f-ac26-c939fc8b3c0f": {
-          "progression_name": ""
+            null
+          ]
         },
         "72a32d70-36a4-4a3b-86dc-e259990901f1": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "4fba956b-18d8-4891-9ac8-ca5c285afa4b": {
-          "description": ""
-        },
-        "daa2f24d-7ca5-40f9-9208-fee586489a6d": {
-          "description": ""
-        },
-        "f2d14022-a9ac-4c4f-893c-dd33f02ba13d": {
-          "description": ""
-        },
-        "398f460c-f111-48f6-8547-35880c41fcc5": {
-          "description": ""
-        },
-        "2fcd9185-8253-4466-83bc-4cf8c9f17791": {
-          "description": ""
         },
         "bd975eb7-9278-4602-971e-1ab15165b682": {
-          "name": "",
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "0f8d48c5-1edc-4a61-9a0f-4dd49a338be5": {
-          "description": ""
-        },
-        "0cb9d9b6-30b4-4fe2-8220-ce4adc419b88": {
-          "description": ""
         },
         "e97f7c04-39af-4d5b-8624-ed55158d25ea": {
-          "name": "",
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "00d52efa-b1c2-4dbd-971f-9ffdf1141458": {
-          "name": "",
-          "description": ""
-        },
-        "f0dfea11-11f9-494f-9286-9025afd43d28": {
-          "description": ""
-        },
-        "a84a74b1-51a7-40ce-8e78-829f3d995e0b": {
-          "description": ""
-        },
-        "f7938386-7b5b-4752-b6fc-ac40bf1cac3e": {
-          "description": ""
-        },
-        "316c28b7-9eba-4083-ba11-51ffefb78845": {
-          "description": ""
-        },
-        "ba7a7337-6791-4811-bc8d-a7e6d85f1bbe": {
-          "description": ""
-        },
-        "01e714ca-e966-4451-bacf-fc77bfe453eb": {
-          "description": ""
-        },
-        "2d19b41f-7917-439f-aed1-9ae902293796": {
-          "description": ""
-        },
-        "2f56a4c1-ac99-428b-8628-b61f2263572f": {
-          "description": ""
-        },
-        "3be5f0c6-74a6-4f25-a480-548503d09033": {
-          "description": ""
-        },
-        "1fac84d6-a9c5-47cb-89b5-a9bb02d12f38": {
-          "description": ""
-        },
-        "16260796-801f-4cc3-9030-ec10ce566367": {
-          "description": ""
-        },
-        "9d815b45-fff6-4ba0-80d7-f9ccdaa0810b": {
-          "description": ""
-        },
-        "c526d4a0-8209-4d10-9ced-17f1379c99ef": {
-          "description": ""
-        },
-        "17b8df61-e507-4cf8-b45d-47db90bb9a11": {
-          "description": ""
-        },
-        "f18fd856-2d88-4e58-a5af-62053413fff8": {
-          "description": ""
-        },
-        "d1de5421-b4da-48b9-8304-6db76a4cf750": {
-          "description": ""
-        },
-        "ba36d648-ed2a-43b0-996e-fff2b455240c": {
-          "description": ""
-        },
-        "fa1435eb-07b6-443a-b401-c1ffa99f15b0": {
-          "description": ""
-        },
-        "d731a308-f57e-4b5a-a88e-b89394064ea9": {
-          "description": ""
-        },
-        "20429184-48d9-4196-9bca-d8eb0e0f7854": {
-          "description": ""
-        },
-        "fbfe9174-db79-49ea-8315-f14d2d029c83": {
-          "description": ""
         },
         "8d4fd526-e435-485f-809c-8e895f6dce45": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "3f6a8412-b8ee-4b29-8096-3e1788de319c": {
-          "name": "",
-          "description": ""
-        },
-        "e9733fc6-5b5f-492f-9a4f-c1b73835c1fb": {
-          "description": ""
-        },
-        "a95b9f7a-24e2-497e-bc76-df80201c36b5": {
-          "description": ""
-        },
-        "2ba468d8-6c9e-4125-add7-a8404ef12d95": {
-          "description": ""
-        },
-        "7a1d35af-dc02-4663-ab27-682e73548204": {
-          "description": ""
-        },
-        "bd279a4b-120e-49b3-807f-095944af002a": {
-          "description": ""
-        },
-        "0b081169-4f8b-4728-9db6-87a78e119299": {
-          "name": "",
-          "description": ""
-        },
-        "762241ac-ebe7-4bd6-91cd-8276112be7ed": {
-          "progression_name": ""
-        },
-        "7badf325-3e2a-4c2b-8e11-15074b7ddff4": {
-          "description": ""
-        },
-        "3ef41867-4609-4e1a-b459-22f3f443b086": {
-          "description": ""
         },
         "65b813f3-09c3-4d9c-af87-c3ebb7b4814d": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
         },
-        "6e272622-1ab3-4865-a79b-a3ea096bd250": {
-          "description": ""
-        },
-        "b3571a02-811f-41e6-8ced-0bc6aa980366": {
-          "name": "",
-          "description": ""
-        },
-        "7a7b201b-88d5-425a-91a8-75ee0a1ca4fe": {
-          "progression_name": ""
-        },
-        "5435fe69-c67a-4a16-9094-afbedf4d767d": {
-          "description": ""
-        },
-        "1dec4c49-b4a5-4be1-8ce7-a4f989e47bfd": {
-          "description": ""
-        },
-        "60ef1bc2-9bbf-4b6d-b85a-2c7de0bb9679": {
-          "description": ""
-        },
-        "dbb04b70-a07b-4204-8e87-0b01350ac2d5": {
-          "description": ""
-        },
-        "c1422428-1a1e-4358-a100-e5bb3bab1a5f": {
-          "name": "",
-          "description": "",
-          "progression_name": ""
-        },
         "0ebc74e5-e3ae-492b-936e-6aa28487c13b": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
         },
         "14f8ba48-f942-44d3-b108-46ab84f9823d": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "0d780edd-d106-44ab-89f8-9a0fb1829f37": {
-          "description": ""
-        },
-        "5fba57ba-f6e9-4938-92ac-90be12ad8bff": {
-          "description": ""
-        },
-        "e6d37fb6-ef08-4670-b775-de22e104185d": {
-          "progression_name": ""
-        },
-        "02f2f328-1222-417f-b940-25fea69d3802": {
-          "description": ""
-        },
-        "442f6648-dd18-4407-9e5b-b4b7185b467f": {
-          "description": ""
-        },
-        "44d632b9-981c-4e3a-b71b-2af58617bced": {
-          "name": "",
-          "description": ""
-        },
-        "31b209ec-4f08-496c-bb12-96eebfa3d66e": {
-          "description": ""
-        },
-        "9d2e7c1a-27ff-4320-a417-da50a79ec57e": {
-          "name": "",
-          "description": ""
-        },
-        "83714485-b8a4-4d2c-bb3e-6a4e309ac7cc": {
-          "description": ""
-        },
-        "a55c0aea-ef3a-46bf-881e-ed1fd92b8f15": {
-          "description": ""
-        },
-        "6ce503a3-a08a-45ea-b866-2df5f8cc2373": {
-          "name": "",
-          "description": ""
-        },
-        "635451ee-4154-4a8b-89b6-9263ba7bd1f8": {
-          "description": ""
-        },
-        "f77a78da-043b-4e05-abea-6d4a460de845": {
-          "description": ""
-        },
-        "a587ae38-0ddd-4294-be46-752e6cc7f87f": {
-          "description": ""
         },
         "5d3a1c29-9eae-45b7-9b94-4f9258804e15": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "82931b7c-b900-4044-9280-e4247b333cd3": {
-          "description": ""
         },
         "b3b0b171-5da5-4c5c-89ed-fe511446506c": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "73b9eecf-4cd7-468a-9f8b-1e4ad804815d": {
-          "description": ""
         },
         "6b37ce32-bae0-48c9-883b-89fa71141c26": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "dcfb1762-db8d-4782-a58c-a325eae020d7": {
-          "description": ""
-        },
-        "9f564cce-7679-4782-8a68-ca91e9348ca0": {
-          "description": ""
         },
         "31a12f17-e1c0-49e4-a02b-66c78229b4b3": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "cfd81ef5-806a-4f50-8b11-62c8be5a879d": {
-          "name": "",
-          "description": ""
         },
         "61720eae-1385-4f53-bf36-6eddab00a5a5": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
         },
-        "b777eac8-0a85-4a26-a2fb-d647350016b1": {
-          "description": ""
-        },
-        "6efb9021-192a-44ff-862b-77ed998fad4c": {
-          "description": ""
-        },
-        "1b927de3-d2c6-4f9e-b8d3-5acdc4367047": {
-          "description": ""
-        },
-        "18a35ed1-39c5-4335-b9a1-db0cc8f36451": {
-          "description": ""
-        },
-        "844a2b5f-1a9e-47ce-b7a5-15829aafaf72": {
-          "description": ""
-        },
-        "edc96cf0-01e7-4ad7-916e-8cb44e07d276": {
-          "description": ""
-        },
-        "5a99a50f-2c76-4914-a466-2e8c07b1156b": {
-          "name": "",
-          "description": ""
-        },
-        "7c4a44a2-de2a-4f2f-834e-e41d9d40a989": {
-          "name": "",
-          "description": ""
-        },
-        "c65f9530-05c8-4fc8-ac75-18d1b8331ae3": {
-          "description": ""
-        },
-        "e44bf6af-b9d0-4f29-a0f1-92778b158d49": {
-          "description": ""
-        },
-        "923463ea-42ac-4942-b84e-183912593b09": {
-          "progression_name": ""
-        },
         "7a5c4523-1ea7-4d6a-a5a0-7d75dfd26f03": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
         },
         "2261c512-6150-49ca-a04f-a646706dcbac": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "c8a04756-25b8-4fc0-8bcd-1cda24754f9a": {
-          "description": ""
-        },
-        "1e994a73-09cd-4eb5-9c78-d958810df937": {
-          "description": ""
-        },
-        "23b2d877-b29f-4149-bf87-51a2eadc0e3b": {
-          "description": ""
-        },
-        "72104e9d-9e83-4499-b7bc-4d8f201d2917": {
-          "name": "",
-          "description": ""
-        },
-        "57a618c6-c8f2-4e89-9bef-386134a5255a": {
-          "description": ""
-        },
-        "c2178072-8473-424d-9ac8-8b3073511bde": {
-          "description": ""
         },
         "5f3fc63f-1b69-4c63-9503-69acceb95d5f": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "eeaf3264-8784-4ffd-982a-b01f9356dcd4": {
-          "description": "",
-          "progression_name": ""
         },
         "a9e96adb-531c-4cc1-a706-4d3994fd5e57": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
         },
-        "812574f8-99f1-4fd6-92dd-4af47a78efb7": {
-          "description": ""
-        },
         "82beb962-01b6-48fc-b6e8-5783a1f65d1b": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
         },
         "34041b4d-af6a-4ade-9137-ca7e44b08b75": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
         },
-        "a6d9e4f7-ba7c-4f4e-99f7-23b8df11b952": {
-          "description": ""
-        },
-        "b5645cc1-4604-47ab-9af3-c7bf9f1f57d9": {
-          "description": ""
-        },
-        "375bf126-3a8c-46fa-ac4c-4ad389fb86f1": {
-          "name": "",
-          "description": ""
-        },
-        "92d6294c-1336-4c19-bc40-95132edb9f55": {
-          "description": "",
-          "progression_name": ""
-        },
-        "50216516-abba-4323-b818-c158f133e296": {
-          "description": ""
-        },
         "034e4e72-8cf1-424f-83d2-baa145f83d17": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
         },
         "fc0c9a74-eb7a-453b-b226-cc8ad025a9b3": {
-          "description": "",
           "tips": [
-            ""
-          ],
-          "progression_name": ""
-        },
-        "47180f36-eb35-44f0-85cd-c12ff4b3c170": {
-          "name": "",
-          "description": ""
-        },
-        "82efa154-e9b6-4e83-8713-bf2b6f57c173": {
-          "description": ""
-        },
-        "c9d34077-ce2d-447d-9250-5648ae92bc8c": {
-          "name": "",
-          "description": ""
-        },
-        "68ce1dca-d2a0-42e0-a8fb-3a7a86d1f977": {
-          "name": "",
-          "description": ""
-        },
-        "6c23639c-c2e1-4038-98ed-69ffddb36d6f": {
-          "description": ""
-        },
-        "37e65b25-8680-4753-9dad-f78c7201a256": {
-          "description": "",
-          "tips": [
-            ""
+            null
           ]
         },
-        "38a823f1-8a22-41e1-ad81-29be9efe15c6": {
-          "description": ""
-        },
-        "8e1a35e3-80b3-4436-9667-6f30bb9249cc": {
-          "description": ""
-        },
-        "b5304abb-58d6-42f0-88e0-2623ed8746c5": {
-          "description": ""
-        },
-        "fb252452-e181-431c-8af5-27708cd10b4f": {
-          "name": "",
-          "description": "",
-          "progression_name": ""
-        },
-        "5c4a7d8c-4863-4d14-84ec-2fd281813255": {
-          "progression_name": ""
+        "37e65b25-8680-4753-9dad-f78c7201a256": {
+          "tips": [
+            null
+          ]
         },
         "13151fc9-c179-451c-ba5f-214172c69966": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
         },
         "cec06163-71a3-426c-b666-2a5ab87f0581": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
         },
-        "45b24d06-7aa1-450d-ac8d-0342ebf3dd8f": {
-          "description": ""
-        },
         "427554af-e9e9-4a2e-8eb7-3980df29c940": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
         },
         "c7870490-6b34-4571-be3e-07cc39510cc1": {
-          "name": "",
-          "description": "",
           "tips": [
-            ""
-          ],
-          "progression_name": ""
-        },
-        "ebebfc5f-af55-4168-b49d-1cace24d97d7": {
-          "description": ""
-        },
-        "920a66e8-a7d3-4cd7-8dcb-af3baf331025": {
-          "description": ""
+            null
+          ]
         },
         "6407eeff-4883-4d4a-9541-0caa24fab54c": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
         },
         "4b1c5fe5-6544-41f1-8b12-60761bb08d95": {
           "tips": [
-            ""
-          ],
-          "progression_name": ""
+            null
+          ]
         },
         "68e6f1dd-9b52-42c1-bc94-eaeb006124ce": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
         },
         "aef97aca-4210-40f0-9cd3-58fe0a1d1a8f": {
-          "description": "",
           "tips": [
-            ""
-          ],
-          "progression_name": ""
+            null
+          ]
         },
         "880bcfe8-398b-4a55-89f0-27c407322832": {
-          "name": "",
-          "description": "",
           "tips": [
-            ""
+            null
           ]
         },
         "e5354383-86b1-480f-a125-3dd7335a0608": {
-          "name": "",
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "9bd401de-4776-4da8-8955-5cae15fa84ea": {
-          "description": ""
-        },
-        "976df9ee-235b-4c75-91f2-01f2a77ce878": {
-          "description": ""
-        },
-        "0420a66f-15b9-4437-9c10-a2447b8b20cd": {
-          "description": ""
-        },
-        "2da171ec-62fe-4090-8d73-8697e3affde5": {
-          "name": "",
-          "description": ""
-        },
-        "2096c82f-74bb-439b-968a-aa3cff4ed283": {
-          "progression_name": ""
-        },
-        "b97f6812-662d-4403-9264-fd75470e0883": {
-          "description": ""
         },
         "4994e528-7fbf-4cb3-827a-03e0e2dd6643": {
-          "name": "",
-          "description": "",
           "tips": [
-            ""
+            null
           ]
         },
-        "b0993a66-29d4-4788-8a80-73b9b84969bc": {
-          "description": ""
-        },
-        "c2e840b2-6a95-46d3-88b1-574926ab6619": {
-          "name": "",
-          "description": ""
-        },
-        "4f6eec1a-4c83-44ea-9054-f04a5ebad57c": {
-          "description": ""
-        },
-        "7b346cc5-2116-46ca-8095-b8de13519766": {
-          "description": ""
-        },
-        "a7757529-8b05-4b79-9582-1497cc6c5c3f": {
-          "description": ""
-        },
-        "56084276-a772-4890-8700-89bf51585a02": {
-          "description": ""
-        },
         "d441f38d-e1fa-42d7-b478-c85a0a8cbe52": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
         },
         "d59a30e4-2eed-4672-a2fa-1e40336bd29b": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "0f7f0657-26ae-4ba3-9489-a7c3d1f9313b": {
-          "description": ""
-        },
-        "543ae138-b99d-42bb-b4f2-cf875ebd43d3": {
-          "name": "",
-          "description": ""
         },
         "8c4241ca-3041-44d3-9c4a-a9d204a78780": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "83caaee7-19f1-4098-ae8c-3a1957e51bb3": {
-          "description": "",
-          "progression_name": ""
-        },
-        "e379f1ff-6889-4c9f-97e9-3a07edaeac97": {
-          "description": ""
         },
         "42bd5517-9551-4ce8-a01e-6f9af21d8a48": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
         },
-        "8b6a769a-85bf-4ca1-b4e9-9cbe64953552": {
-          "progression_name": ""
-        },
-        "a78de252-923d-4877-a204-e54ec07f0986": {
-          "description": ""
-        },
         "1bc3d3fb-c8f4-432c-99b3-1524c9d35a97": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
         },
         "f4ad1985-2f50-4053-88a6-c35c42660390": {
-          "name": "",
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "e0abed0a-6d09-4bcb-93bf-fccce54e1134": {
-          "name": "",
-          "description": ""
-        },
-        "a3026ce4-8bf1-49de-a80a-43e4aaccd429": {
-          "description": ""
-        },
-        "0b565cf4-ccc2-49a2-9f42-a6421f0b0d18": {
-          "description": ""
-        },
-        "35d6d546-5da3-4997-9aa1-c79adbd325b8": {
-          "description": ""
         },
         "73c2cb42-e6a3-4317-8aab-7196411578ab": {
           "name": "بطاقات نموذجية في مختبر الذكاء الاصطناعي",
-          "description": "",
           "tips": [
-            ""
+            null
           ]
         },
-        "3fb9ea04-a631-4804-9b98-0575f4ee354a": {
-          "description": ""
-        },
-        "45d594bf-5c61-48f6-adf5-9197dd21fa37": {
-          "description": ""
-        },
-        "10c39c53-4572-4c3a-9b31-d43d44464248": {
-          "name": "",
-          "description": "",
-          "progression_name": ""
-        },
         "5cd39585-e8ab-48c0-a71e-5ea528d7ef7f": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
         },
         "63de58d5-8dcb-4fff-8335-5edfa4439eee": {
-          "name": "",
-          "description": "",
           "tips": [
-            ""
+            null
           ]
         },
         "8fb15f05-d003-4a04-8cf3-d5962e8ae1f9": {
           "tips": [
-            ""
-          ],
-          "progression_name": ""
-        },
-        "6a504836-fcfe-40f8-b4a9-939ed5297fab": {
-          "progression_name": ""
-        },
-        "bf7d70a4-6c11-4059-b69f-7b3a7d157c91": {
-          "name": "",
-          "description": ""
-        },
-        "0d058bc4-3155-48a3-9a43-bdcd6a701268": {
-          "description": ""
-        },
-        "d6aa981d-743a-422b-a499-123636259667": {
-          "name": "",
-          "description": ""
-        },
-        "b599740d-07b0-42c8-88b7-0955fc59b5f4": {
-          "description": ""
-        },
-        "72a2a556-67a0-49c0-8ff4-ec814f09dbcd": {
-          "description": ""
-        },
-        "fece7415-7347-404a-b632-72882bdd9667": {
-          "progression_name": ""
-        },
-        "71ec8ec9-93b5-4fbf-8bb5-b9dd0b195613": {
-          "description": ""
-        },
-        "0c989787-cc59-4f00-a557-cc28b16f16d9": {
-          "description": ""
+            null
+          ]
         },
         "0f10e599-ee9e-41db-b062-13b2451fadd4": {
-          "name": "",
-          "description": "",
           "tips": [
-            ""
-          ],
-          "progression_name": ""
-        },
-        "2d6d2ad7-0f55-4594-abcf-05badcb0ff70": {
-          "description": ""
+            null
+          ]
         },
         "74cb2af2-07e0-47c7-9d1e-b7dd034f1488": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "6cb395cb-0eed-40be-85a2-654b83a3a0e7": {
-          "description": ""
-        },
-        "02d7e250-f7cd-41bc-a0c2-3b330a4960a3": {
-          "description": ""
         },
         "e7b2ce5f-e413-47e3-a322-d3c40c551321": {
-          "description": "",
           "tips": [
-            ""
-          ],
-          "progression_name": ""
-        },
-        "9ea0279d-3850-49b2-8eb7-d18c30e6cba0": {
-          "description": ""
-        },
-        "26f89b13-2911-47e1-a140-608dccce5d01": {
-          "description": ""
-        },
-        "ce1b5fc9-e3de-43ff-8972-7d5fc8573b8f": {
-          "description": ""
-        },
-        "66381205-df75-49c3-941e-264b29ddf776": {
-          "description": "",
-          "progression_name": ""
+            null
+          ]
         },
         "00be23bf-0b85-4eb4-a7f4-bea96bb3ffc3": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "c5c5862e-1a29-49f6-88d5-474ccb20d7a7": {
-          "name": "",
-          "description": ""
         },
         "4e1fe6b2-0ff4-4c87-96ca-839cbcfce7fd": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "8fb3ca9e-5c9c-4cbd-9790-a12549ed3d89": {
-          "description": ""
         },
         "6d9af5ce-913c-4c16-8a89-081c23545139": {
           "tips": [
-            ""
-          ],
-          "progression_name": ""
+            null
+          ]
         },
         "9fdc77c9-e72c-4fbf-b6a8-bb80f4ad5116": {
-          "description": "",
           "tips": [
-            ""
-          ],
-          "progression_name": ""
+            null
+          ]
         },
         "f735be6b-f62f-46bf-951d-432d2c58c374": {
           "tips": [
-            ""
+            null
           ],
           "progression_name": "التقييم"
         },
         "5d073f6e-68fe-48f5-9bf0-7c59870722e5": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
         },
         "e016c316-f3e9-40ff-9b1f-a28d0adafe0b": {
           "progression_name": "تحدي"
         },
-        "29e308df-10d4-444c-9545-5d148126f6a3": {
-          "name": "",
-          "description": ""
-        },
-        "013da57a-20ea-4f55-8982-1abc3bd1f025": {
-          "description": ""
-        },
-        "ceba9f90-8266-4fb0-8f8a-b4c76a251dd5": {
-          "description": ""
-        },
-        "af852eff-2034-4479-a6cf-f0528a7b6e16": {
-          "name": "",
-          "description": ""
-        },
-        "1892602e-7b14-4732-b285-10314b4fc754": {
-          "description": ""
-        },
-        "b6ebcd64-ea54-4376-8400-f5c511e3e43f": {
-          "description": ""
-        },
-        "398022f2-c084-4b38-9dae-d525843cbb79": {
-          "description": ""
-        },
-        "df4fa270-0dbd-4fe7-9580-5bb7cf725b64": {
-          "description": ""
-        },
-        "92d114f5-6430-46e0-bb15-55f1cf8584cb": {
-          "description": ""
-        },
         "be0ed503-93df-4804-98d7-51205f2f4e9a": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "952ac10c-6d14-4bf0-bce3-a00d88947f53": {
-          "description": ""
-        },
-        "ee27a512-da4f-402f-a231-66d99774e9f5": {
-          "description": ""
-        },
-        "cf1b7423-9e9e-49f1-a50e-0265cf051841": {
-          "description": ""
-        },
-        "bf9e8d5a-133a-46cb-a194-86aaa7c4f70c": {
-          "description": ""
         },
         "df04a617-0150-4c89-bb5e-8846f270d877": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "ab2de3b3-ea32-4dd5-bf97-731e54180e55": {
-          "description": ""
-        },
-        "0d7ed95a-e15d-49cf-af8e-6d5d1646b4ee": {
-          "description": ""
-        },
-        "82221a68-8dbc-4fed-8ba4-2d15eccc7e11": {
-          "description": ""
-        },
-        "a2061f1b-be19-40f9-8383-cb40ea2fd93c": {
-          "description": ""
-        },
-        "00c31460-9df0-44e8-9771-389b2c774b98": {
-          "description": ""
         },
         "90a67b31-4717-4ae8-8689-3b9f60645363": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "ac1ada68-7ae0-45dc-8b35-53c34297ff34": {
-          "description": ""
-        },
-        "98e86a84-2272-4e51-aab8-7e759ebc24ce": {
-          "description": ""
-        },
-        "d78c6e9a-a6a8-4943-8b41-7de585b9051c": {
-          "description": ""
-        },
-        "db022830-7288-488a-92e9-3edd51b7a71b": {
-          "description": ""
-        },
-        "389d8b14-d7a2-4417-8179-1cb725cbb2e4": {
-          "description": ""
-        },
-        "ec998aa3-4c48-47d4-bc12-5ca29e18edf2": {
-          "description": ""
-        },
-        "841b79c4-4d97-47af-a217-f79833effc2c": {
-          "description": ""
-        },
-        "56cf0344-7bae-4e80-888c-7162cb92509b": {
-          "description": ""
-        },
-        "ec03cff6-d8a1-4b02-9907-94f713e2ff1a": {
-          "description": ""
-        },
-        "a3a973e0-47eb-4030-a312-b6ebeb0b3b80": {
-          "description": ""
         },
         "f7bf60e8-a9fe-4427-b163-9779f3266f48": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "127924e5-b78f-482e-ba37-5bc31dea28e6": {
-          "name": "",
-          "description": ""
-        },
-        "1cef4446-b4dc-4c02-977b-aec587ef2326": {
-          "description": ""
-        },
-        "48946537-7e1a-4b55-9ea6-3a7da44e2cae": {
-          "name": "",
-          "description": ""
-        },
-        "39d0f3fa-c15b-48b4-bf56-2da17d219bf0": {
-          "description": ""
-        },
-        "d6cff8af-3a59-4be2-9d50-7045f2c0393f": {
-          "description": ""
-        },
-        "0683df4b-d5ec-467a-b920-1e506b860bc1": {
-          "description": ""
-        },
-        "6c4e8786-af12-443f-9947-0cbb7d52f4de": {
-          "name": "",
-          "description": ""
-        },
-        "c4fe7879-2976-412a-843d-be4612428f3d": {
-          "description": ""
-        },
-        "6965f206-a6fe-4696-aa6e-40ca1f8fad56": {
-          "description": ""
-        },
-        "4b84d962-1b9e-49ee-ab76-97384c8b28d1": {
-          "description": ""
-        },
-        "5b875746-5d5a-436f-8847-fb51a2fdc84b": {
-          "name": "",
-          "description": "",
-          "progression_name": ""
         },
         "ced9350a-0ee3-4e2c-9cff-f60a54cc04b5": {
-          "name": "",
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "29f0024c-c9fe-43a7-b1d1-f3696a2ff683": {
-          "description": ""
         },
         "59d0c95a-0335-4da7-979e-9cc93829b878": {
-          "name": "",
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "dff1df32-247a-47e2-99cb-bf117417c9e4": {
-          "description": ""
-        },
-        "bfb54bcd-dbcd-441f-bf87-699b54c61959": {
-          "name": "",
-          "description": ""
-        },
-        "b487e3b9-d541-47e9-9769-e84d9aa83685": {
-          "description": ""
-        },
-        "9220c45b-f145-4a9d-a049-1dc46de3540f": {
-          "name": "",
-          "description": ""
-        },
-        "6e640b48-e9ee-4146-975f-3fbb69ea8b7b": {
-          "description": ""
-        },
-        "2efd6d60-6ec0-435f-afbe-aec828845346": {
-          "description": ""
-        },
-        "5c10738f-9506-4045-a386-a8b5da101286": {
-          "description": ""
-        },
-        "798ae82b-5f81-4b38-8d87-bef92c90dbdc": {
-          "description": ""
         },
         "c3cacd18-9b6a-4014-953a-7d072b997487": {
-          "name": "",
-          "description": "",
           "tips": [
-            "",
-            ""
+            null,
+            null
           ]
-        },
-        "2e06a5c6-3994-467d-ab86-08d721f8a779": {
-          "description": "",
-          "progression_name": ""
-        },
-        "f3f34694-9ca8-40ba-9ca5-58acb28a3d6f": {
-          "name": "",
-          "description": ""
-        },
-        "8023260d-dd92-4961-bb45-396e7036ca38": {
-          "description": ""
-        },
-        "76ba426c-bbbc-4d62-90d4-de0d68e412f7": {
-          "name": "",
-          "description": ""
-        },
-        "22469a64-22ce-401d-8860-199b983fd850": {
-          "description": ""
-        },
-        "fc115724-2583-4292-abbe-b6631fff9b12": {
-          "description": ""
-        },
-        "dbd4bd18-d814-4b10-8ec4-c9360bdc1ec8": {
-          "description": ""
-        },
-        "0328060d-b869-4515-9ff9-999120b9874d": {
-          "name": "",
-          "description": ""
         },
         "4322eab8-e9e7-4df5-a2bd-076c47737f1c": {
           "tips": [
-            ""
-          ],
-          "progression_name": ""
-        },
-        "c8bc4d02-b3be-474d-8804-50efbe6f7b34": {
-          "description": ""
-        },
-        "88aaa1b0-b438-4f6c-8649-b62c9e89638b": {
-          "description": ""
-        },
-        "0b4727eb-166b-41a1-91e1-43614e88e44c": {
-          "progression_name": ""
-        },
-        "569ced3c-98f2-41a2-8197-683ad54af8bf": {
-          "description": ""
-        },
-        "09dc12ee-7564-41eb-8396-35703e0fcb88": {
-          "description": ""
-        },
-        "01d4dc18-6d92-4c65-990e-5e5d9a209ff7": {
-          "description": "",
-          "progression_name": ""
-        },
-        "03cc43b5-c22f-442c-b4f4-4c7c088dc954": {
-          "description": ""
+            null
+          ]
         },
         "244ecc30-2351-4ebd-9596-220197f275fc": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "0883f8f5-b645-4752-af39-e04642163932": {
-          "progression_name": ""
-        },
-        "2d0bad6d-f5d4-4d3d-91f2-7e0b359e80b4": {
-          "name": "",
-          "description": ""
-        },
-        "1a985175-0813-453b-bb83-2c483b00e986": {
-          "description": ""
-        },
-        "5e569ad0-0e7d-402c-be33-ab493869c786": {
-          "description": ""
-        },
-        "e1dd79db-f57a-47b1-a3f8-7a23780991dd": {
-          "name": "",
-          "description": ""
-        },
-        "f273893d-db33-4c30-b8de-5dc29b35aaf9": {
-          "description": ""
-        },
-        "36953ed8-de7a-49b3-8c34-22cb5af1bdbd": {
-          "description": ""
-        },
-        "1550560a-dc7f-4513-83e7-d6f0e5d655a7": {
-          "description": ""
-        },
-        "c58b172f-9cd5-45c1-a9eb-5e3d71b8c05d": {
-          "description": ""
-        },
-        "65d8c527-a698-4282-bb0e-c81a7877c47b": {
-          "description": ""
-        },
-        "13448cc9-cc54-4556-8cd5-82836ae7700c": {
-          "name": "",
-          "description": ""
-        },
-        "69936ed6-daee-4bf9-890a-9df34eeb4378": {
-          "description": ""
-        },
-        "08a19544-1542-41f3-8fae-8b8eaf86c0d2": {
-          "description": ""
-        },
-        "a29fbc70-1a91-47ee-8673-e2811ca9f274": {
-          "name": "",
-          "description": ""
-        },
-        "5a530333-450f-4e99-b496-799e098f5549": {
-          "name": "",
-          "description": ""
-        },
-        "2ec19797-3426-461d-aac6-3e9af661f97b": {
-          "name": "",
-          "description": ""
-        },
-        "93f00dad-64f7-4871-889d-44ea834beff4": {
-          "name": "",
-          "description": ""
         },
         "57237d92-5953-446d-8fec-776fd8590795": {
-          "name": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "85ba85a5-2a1b-4d79-b04f-3a9b1db88f8a": {
-          "description": ""
-        },
-        "1256be3f-79d5-46f5-963d-1048e9b8bed8": {
-          "description": ""
-        },
-        "da4d1cd7-0f33-4581-aeae-7d298c19e09a": {
-          "description": "",
-          "progression_name": ""
-        },
-        "90b7bdaf-3239-4495-9b82-253b4e0ec1ec": {
-          "description": ""
-        },
-        "15277fff-2761-488d-ac1b-0f520a4a3739": {
-          "description": ""
         },
         "4343b013-98ab-4b31-b1f8-1d871a146116": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "ff7d3f26-fa38-4fdd-a563-9da7298b8a75": {
-          "description": ""
         },
         "cb8dc3fc-747f-48f8-af75-a9a6239498d8": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "543c1356-b50b-4776-9462-4fabd0ab7f28": {
-          "progression_name": ""
-        },
-        "484e8392-3e9b-4003-9d66-4b7d6b41647a": {
-          "description": ""
-        },
-        "feee9229-4bbd-42a4-a0ef-784617dbe715": {
-          "name": "",
-          "description": ""
-        },
-        "ff053302-162f-4845-96d0-e9004d617308": {
-          "name": "",
-          "description": ""
         },
         "b436503e-9da5-42d9-b82b-ffd4344044ec": {
           "name": "تأملات",
-          "description": "",
           "progression_name": "تأملات"
         },
-        "ff77579c-bfc0-4614-87d3-89f4b5e7a5b2": {
-          "description": ""
-        },
-        "097848dd-29f1-4682-a7a3-ba8b76d537ec": {
-          "name": "",
-          "description": ""
-        },
-        "09aa22b0-24f8-49e5-96e6-514920e6b57e": {
-          "description": ""
-        },
-        "ddb0bdb2-cf57-4287-b190-c3ce2d344b60": {
-          "description": ""
-        },
-        "2b4d61c7-695c-49dd-9390-22201c2d5aa1": {
-          "description": ""
-        },
-        "0ae95ff8-5fbb-4567-a8be-a29ba3e96851": {
-          "description": ""
-        },
-        "b4777047-b23a-41f5-af67-d6bc5fcefb27": {
-          "description": ""
-        },
         "d212a1de-7271-46d1-a950-956443922687": {
-          "name": "",
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "2d8e53f8-efc5-4ffe-bbde-be89067d7eb5": {
-          "description": ""
-        },
-        "dd299158-5364-488f-b250-b9f0c8690165": {
-          "description": ""
-        },
-        "4528e911-93fc-4b98-9f44-dd3e65a225d2": {
-          "description": ""
-        },
-        "d47cb666-4be5-4268-bbd2-e0164f9dc807": {
-          "description": ""
-        },
-        "a611b93a-bc6c-4d71-b9be-342a03d9bf72": {
-          "description": ""
-        },
-        "8e6a3dd3-ea0f-4f70-9fce-db146c1eae66": {
-          "description": ""
-        },
-        "8a012419-1376-459e-a31c-a1ad2a73f77b": {
-          "description": ""
-        },
-        "020e7bb7-2607-4002-98c1-e4d388565604": {
-          "description": ""
-        },
-        "1561e8b5-bfe4-4354-b137-199f449513e1": {
-          "description": ""
         },
         "6f2134b8-5066-4311-9ad1-0f57eb91ec37": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "17e0bbba-39f7-47cd-966d-a9909f94eb7a": {
-          "description": ""
-        },
-        "cb0dc0f5-10a5-4a6e-a877-a68a14ab5620": {
-          "description": ""
-        },
-        "2fe56b9b-5c91-4a54-8d7c-d38f9da44f21": {
-          "description": ""
-        },
-        "b2ced448-9ae5-47a3-9573-eb65494c00db": {
-          "description": ""
-        },
-        "5b5cb2d4-fb82-4d8a-9447-65592e3ccc30": {
-          "name": "",
-          "description": ""
-        },
-        "89735bc5-1bde-4460-84ce-63a181f8d634": {
-          "description": ""
-        },
-        "46c0c172-580f-475f-9aa0-d9aea3ac3915": {
-          "description": ""
         },
         "2e00cb64-89aa-4cea-a333-fa8af48559b8": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "e77939dd-5b4c-421e-a24c-43b0c5146bed": {
-          "description": ""
-        },
-        "6ce16574-18c2-4d89-abe6-500a674e4d91": {
-          "description": ""
-        },
-        "2bd5537d-e7fe-463f-b0bf-d89c638f0daf": {
-          "name": "",
-          "description": ""
-        },
-        "2a14fe82-0d13-48fd-a475-8071db9d484f": {
-          "name": "",
-          "description": ""
-        },
-        "80cc0bfa-cd6b-41d0-8cc0-30f1e2481f36": {
-          "description": ""
-        },
-        "b2b9b186-1a5e-455f-8427-4f8b3d03aeaf": {
-          "description": ""
-        },
-        "ef7a35ac-71c1-43e0-810c-d70348d65ece": {
-          "description": ""
-        },
-        "5f3cf83c-5414-4d2e-8a7b-7be8c23b7022": {
-          "description": ""
-        },
-        "7f21feb3-4c25-4b5b-8799-266945dc996d": {
-          "description": ""
-        },
-        "827fd039-c96f-4c27-ae09-17be127bcb8a": {
-          "name": "",
-          "description": ""
-        },
-        "0c87ea83-ba30-45fc-b3aa-4a75b04a5442": {
-          "description": ""
-        },
-        "611877da-ef71-46f9-9e07-1cb8ba78ece7": {
-          "description": ""
-        },
-        "e379e4ef-f9fc-4ab3-ae77-af48da08c77e": {
-          "description": ""
-        },
-        "d7cfdb4f-dbd8-41b1-b869-32ea04e5ce55": {
-          "description": ""
-        },
-        "803cd645-dac4-4af3-af38-ac9ba05b17fc": {
-          "description": ""
-        },
-        "e4e71524-97de-4cc9-a638-7cdb8ffbad10": {
-          "description": ""
-        },
-        "1fab7c93-7594-4a13-bd99-1c5451dec91c": {
-          "description": ""
-        },
-        "790ffadb-7cf7-434f-9af1-4a13a6c58e04": {
-          "description": ""
-        },
-        "9527717f-d42f-471f-96f5-b9398b7b70d1": {
-          "description": ""
         },
         "68353a4b-f20e-461f-954c-bd133f09eaa3": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
         },
-        "e22a7897-6f0f-411a-a27e-bd2ef049b89d": {
-          "description": ""
-        },
-        "8ab262b8-95ac-4267-b3a9-0ce2d49d4f49": {
-          "name": "",
-          "description": ""
-        },
         "247783a6-f9ee-44e8-9954-6a58a7017c4b": {
-          "description": "",
           "tips": [
-            ""
-          ],
-          "progression_name": ""
-        },
-        "5a5373dc-dd4a-4055-8326-353fd6a2f29d": {
-          "description": ""
-        },
-        "22f023ef-9c2e-4c4f-bde3-938467058a65": {
-          "description": ""
+            null
+          ]
         },
         "c2f776d1-241c-4718-91fc-4b1d9d12e750": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
         },
         "83d21e93-d04f-49e6-8966-3b4f4cb4455a": {
-          "description": "",
           "tips": [
-            "",
-            ""
+            null,
+            null
           ]
-        },
-        "3f822384-039e-4aff-a152-57937895152f": {
-          "description": ""
-        },
-        "18f7efc8-0d5c-43ff-a51b-00661b231339": {
-          "description": ""
         },
         "08020742-2f96-4a09-8d5a-c3034a4b8962": {
-          "name": "استبيان",
-          "description": "",
-          "progression_name": ""
-        },
-        "4d4f3c4e-47c0-4053-9239-1e4e17e8b488": {
-          "description": ""
-        },
-        "96c1c4c5-529c-47c4-a053-26a233940a60": {
-          "description": ""
-        },
-        "973d1ded-5157-41d5-a9ae-bf31eee8151d": {
-          "description": ""
-        },
-        "7b11fae3-1041-44ea-b5d0-dac0f3092f7c": {
-          "description": ""
+          "name": "استبيان"
         },
         "218c7165-58fd-4f8f-b70d-52d564cb22a6": {
-          "description": "",
           "tips": [
-            ""
-          ],
-          "progression_name": ""
-        },
-        "09155db4-a8d7-4fef-8948-9f6e0292316b": {
-          "description": ""
-        },
-        "50508b6f-ff85-4dff-bfd7-69f5851ac692": {
-          "description": "",
-          "tips": [
-            ""
+            null
           ]
         },
-        "9b184843-d52c-44b7-a226-20e8187e0d4a": {
-          "description": ""
-        },
-        "e826b464-2d59-45e0-bed3-02cb13fe7729": {
-          "description": "",
-          "progression_name": ""
-        },
-        "2d686046-4503-4aa6-8d46-0183bce166bc": {
-          "description": ""
-        },
-        "1529ffea-c11c-46ac-85e1-1a6a1fb19386": {
-          "description": ""
-        },
-        "1645eccd-b4a5-46fd-b790-3dff69e320b6": {
-          "description": ""
-        },
-        "3617dcab-400d-445b-b16e-6c7e8cee4a5b": {
-          "description": ""
-        },
-        "79f277a4-bf4b-4eea-9f0d-dd6762116dba": {
-          "description": ""
-        },
-        "c51db63e-cb78-4194-957b-753744cfcd52": {
-          "description": ""
-        },
-        "98b10203-480b-4530-b2c0-72e6718ee454": {
-          "description": ""
-        },
-        "43404c82-4198-40ea-ba4f-b43304276cb2": {
-          "description": ""
-        },
-        "b5f07303-9c9f-455a-8880-7c1f1c3ba72f": {
-          "description": ""
-        },
-        "537841e7-259c-4e61-ab75-bfdd59eb6062": {
-          "description": ""
-        },
-        "1453df00-a714-4640-983f-81d1b9c7c0cc": {
-          "description": ""
-        },
-        "bb482498-7db9-4819-8996-262d3d6b4125": {
-          "description": ""
-        },
-        "326124a0-c98b-4bd1-9e7e-4e378fb431c5": {
-          "description": ""
-        },
-        "7a4ca3ea-4223-47f3-afc6-69584b737155": {
-          "description": "",
-          "progression_name": ""
+        "50508b6f-ff85-4dff-bfd7-69f5851ac692": {
+          "tips": [
+            null
+          ]
         },
         "dd8082b5-0325-48e2-92c5-1cfa804d1452": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
         },
         "e042a898-e6d8-42c9-b488-548fd8a10b31": {
-          "description": "",
           "tips": [
-            "",
-            ""
-          ],
-          "progression_name": ""
-        },
-        "c785cbda-8e21-4b0c-95d9-4bebef6e3c97": {
-          "description": ""
-        },
-        "b7ba152a-b2f8-49da-9625-2be4695232ba": {
-          "description": ""
-        },
-        "facdc92c-bb56-496c-9a0d-7f483f0d4c52": {
-          "name": "",
-          "description": ""
-        },
-        "949d7d7d-e65f-4298-a36e-cae03b1e1790": {
-          "description": ""
-        },
-        "c5d7bd2b-ab07-45b6-8bbf-df3a39f324a3": {
-          "description": ""
-        },
-        "1863bb7d-952e-41b6-b560-eb533a6e7cde": {
-          "description": ""
-        },
-        "a8ff3bac-39f7-444f-939e-07c3ae872100": {
-          "description": ""
-        },
-        "d50a69ad-81f7-449a-ab1a-241f95e80193": {
-          "description": "",
-          "progression_name": ""
-        },
-        "68017797-89b7-414a-aa50-e0f4a4e9bef2": {
-          "description": ""
-        },
-        "b02b37d8-bb6d-4c8b-88c5-9121a5de7212": {
-          "description": ""
-        },
-        "088b746d-e083-4335-bb4b-c77367158270": {
-          "description": ""
+            null,
+            null
+          ]
         },
         "6bf75b39-230b-41ad-9893-f130b220f997": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "c5191604-0f9b-49e3-99fd-83ead1a3e55a": {
-          "description": ""
-        },
-        "5d00e316-347d-4c4e-8178-cd883a12f962": {
-          "description": ""
-        },
-        "bebc6335-b9d2-449e-94e3-5149283a2153": {
-          "description": ""
         },
         "f31105d4-e55f-4550-aa77-b55221d3c7bb": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "46b2656a-61aa-404f-ba8d-dda9ef4de54b": {
-          "description": ""
-        },
-        "f3d4b44f-44c8-4f1a-a5ef-d6dc5289f535": {
-          "description": ""
-        },
-        "74e99d4f-9379-4082-9c6e-e3cd93de32e7": {
-          "description": ""
-        },
-        "24a2399c-35b3-4651-be99-972a14d5531a": {
-          "description": ""
-        },
-        "9fbfbd48-7e75-4b54-8dae-d4aa36823cf3": {
-          "description": "",
-          "progression_name": ""
-        },
-        "707532a8-680b-4d3e-9d3f-61f5fd8360a3": {
-          "description": ""
         },
         "8c477f84-d013-4354-9462-10386c870b22": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "2b4e1d8f-553d-4c8b-9754-0dbeb29a7f73": {
-          "description": ""
-        },
-        "3e69e246-eda3-467b-9480-d1e2143ad3e3": {
-          "name": "",
-          "description": ""
-        },
-        "f6c77a46-8086-4fb4-b2f7-d1fb83c2f7a7": {
-          "description": ""
-        },
-        "5d73f27a-b5a4-4f10-938e-1960f88606d9": {
-          "name": "",
-          "description": ""
-        },
-        "2b5fde4d-c0ae-4bf0-b205-9b64dc3704cb": {
-          "description": ""
-        },
-        "3ac4945d-37e0-413a-8859-824b977bfc40": {
-          "description": ""
-        },
-        "5a1a63f9-96b5-488b-a75e-4ed90d81950d": {
-          "description": ""
-        },
-        "ab0b68af-cc67-4131-a8b6-dd445e517231": {
-          "description": ""
-        },
-        "a4eebad8-1ecb-4788-87f1-96ccfb5c5934": {
-          "description": ""
-        },
-        "2c99edd9-27d0-4cf3-8ea2-63466bfe5aa0": {
-          "progression_name": ""
-        },
-        "7bfc84f7-0e36-4c21-9018-f7466303b041": {
-          "progression_name": ""
         },
         "bc909d4d-f7fd-4bc3-8caa-d366201d395f": {
           "tips": [
-            ""
-          ],
-          "progression_name": ""
+            null
+          ]
         },
         "4b58eb8b-402c-4927-abf9-52bcbde90aea": {
           "tips": [
-            ""
-          ],
-          "progression_name": ""
-        },
-        "d6ee6aea-6b89-488f-b9ea-e3c53aaeedec": {
-          "name": "",
-          "description": ""
+            null
+          ]
         },
         "028c9b5f-2865-4e4a-9e49-ed7de06433ef": {
-          "name": "نشاط تحضيري",
-          "description": ""
-        },
-        "fd9290c7-2051-46d7-8e0d-ea68fdaf18c0": {
-          "description": ""
-        },
-        "39cc9533-b187-4923-87a4-adc906b937df": {
-          "description": ""
+          "name": "نشاط تحضيري"
         },
         "8e488c36-f0eb-4c5a-8eda-c42d20cf5e19": {
           "name": "نشاط",
-          "description": "",
           "tips": [
-            ""
+            null
           ]
         },
         "4d128db2-a3e5-4d49-bb69-5f2619848f34": {
-          "name": "",
-          "description": "",
           "tips": [
-            ""
+            null
           ]
         },
         "46654eff-608e-4610-a564-9060fd039e35": {
-          "name": "",
-          "description": "",
           "tips": [
-            ""
+            null
           ]
         },
-        "4a677235-679b-4efc-b032-3c5dc0e38929": {
-          "description": ""
-        },
         "043ff201-5128-4934-9f35-d5985053c306": {
-          "name": "الإنهاء",
-          "description": ""
+          "name": "الإنهاء"
         },
         "1e237958-7dc7-4186-a533-1e95192be751": {
-          "name": "نشاط تحضيري",
-          "description": ""
-        },
-        "b26da0a3-f961-4d4f-b0c6-39f9de587d0c": {
-          "name": "",
-          "description": ""
+          "name": "نشاط تحضيري"
         },
         "dd622be2-1989-4bef-a6cb-62e35ba0c1a5": {
-          "name": "",
-          "description": "",
           "tips": [
-            ""
+            null
           ]
         },
         "4ec6831d-0286-4e77-9b91-c33286b71b1b": {
-          "name": "الإنهاء",
-          "description": ""
+          "name": "الإنهاء"
         },
         "6e0d3112-2574-4cfa-895b-861975d37691": {
-          "name": "نشاط تحضيري",
-          "description": ""
-        },
-        "d6d13614-4ea6-42d5-a0ef-0e4ec2a83e8b": {
-          "name": "",
-          "description": ""
+          "name": "نشاط تحضيري"
         },
         "d3171373-c8fe-4eb1-9eca-cea927c6d1ba": {
-          "name": "",
-          "description": "",
           "tips": [
-            ""
-          ],
-          "progression_name": ""
-        },
-        "148a4012-c70a-4a01-a1d2-ba54a1bfb618": {
-          "description": ""
+            null
+          ]
         },
         "62d8c1fd-083d-4e27-a12a-50ce87426ed8": {
-          "name": "الإنهاء",
-          "description": ""
+          "name": "الإنهاء"
         },
         "b6d6a46b-62ad-4765-ab2b-735affc8c53c": {
-          "name": "نشاط تحضيري",
-          "description": ""
+          "name": "نشاط تحضيري"
         },
         "389aa813-ae13-4198-a933-d98a175b109b": {
-          "name": "",
-          "description": "",
           "tips": [
-            ""
-          ],
-          "progression_name": ""
-        },
-        "a622eca3-aa57-4256-9317-3297eb254200": {
-          "name": "",
-          "description": ""
+            null
+          ]
         },
         "2fd8da1c-c18a-42c8-a248-841c97595686": {
-          "name": "الإنهاء",
-          "description": ""
+          "name": "الإنهاء"
         },
         "4dc744de-d6ab-4c2d-b789-0ce346684f5c": {
-          "name": "نشاط تحضيري",
-          "description": ""
+          "name": "نشاط تحضيري"
         },
         "e23ca2cd-a010-46d0-a670-98c96b9b6b13": {
-          "name": "",
-          "description": "",
           "tips": [
-            ""
+            null
           ]
         },
         "4515c61f-9295-4142-9558-03649dd85bda": {
-          "name": "الإنهاء",
-          "description": ""
+          "name": "الإنهاء"
         },
         "5d04c580-a932-46bd-86c4-649793eac948": {
-          "name": "تأملات",
-          "description": "",
-          "progression_name": ""
-        },
-        "baa6c46e-1c8b-4c42-a82a-147ab9ffce37": {
-          "name": "",
-          "description": ""
-        },
-        "59cdc0f2-e2ce-4747-8835-c29df9131892": {
-          "name": "",
-          "description": ""
+          "name": "تأملات"
         },
         "d1b8559e-ee84-4203-bed9-7674842fb791": {
           "tips": [
-            ""
-          ],
-          "progression_name": ""
+            null
+          ]
         },
         "8861ee5b-45f9-4428-a2f7-344e940b4430": {
           "progression_name": "فيديو: أهمية علم الحاسوب"
@@ -17390,1923 +15499,476 @@
           "name": "الأخرى",
           "description": "إذا كان الطلاب على معرفة جيدة بمفاهيم البرمجة، فحاول أن تطلب منهم إنشاء مشاريعهم باستخدام منصة أخرى، مثل [Scratch](https://scratch.mit.edu/) أو [Alice](http://www.alice.org/index.php)."
         },
-        "1d97fa88-30c5-494c-81e0-c884102fe8e3": {
-          "description": ""
-        },
         "1d222524-316a-4988-b206-b1f948cfbee7": {
-          "name": "",
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "853b36fb-b913-48d2-835b-620fce23c9c5": {
-          "description": ""
-        },
-        "6e19021b-76ce-4220-9c77-2007592aae87": {
-          "description": ""
-        },
-        "986e60a9-67a7-4618-9a80-9a9cd3b78ad6": {
-          "description": ""
-        },
-        "dac63e1e-9998-497e-a772-d90fa66e29c8": {
-          "description": ""
-        },
-        "382c1a61-60c6-481f-962a-ececae1298de": {
-          "description": ""
-        },
-        "9e4a63b0-d249-4594-a8ad-fb0c4ad728dc": {
-          "description": ""
-        },
-        "eeeb4ccf-011a-432c-86e4-3455c858b21c": {
-          "description": ""
-        },
-        "b0263e2a-653f-4204-9d33-60188293bde1": {
-          "description": ""
-        },
-        "22849dfb-7de7-468a-85ec-b9f2b563b926": {
-          "description": ""
-        },
-        "42738b6d-fc16-4de9-b190-d6253f5e2c67": {
-          "name": "",
-          "description": "",
-          "progression_name": ""
         },
         "aa866b7f-747f-49e4-9578-f937dbef61e4": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "cc1d5b73-0283-4f4f-a9d7-f72e7d665aed": {
-          "description": ""
-        },
-        "18bfbda6-8f59-47f2-8488-0ddab9c311c5": {
-          "description": ""
-        },
-        "34b67316-2a4b-42b5-91f4-1e87893c51c7": {
-          "description": ""
-        },
-        "0cd5acdb-155e-4161-aba7-610f3869ec29": {
-          "name": "",
-          "description": "",
-          "progression_name": ""
         },
         "8c5b9e26-3b22-4a68-a10d-2e8f3d24a9b0": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "934516f6-ebfb-4b43-908d-b48ddd2cd306": {
-          "description": ""
-        },
-        "9c6b41ce-5bd9-49f9-ab4d-7912732b19b1": {
-          "description": ""
-        },
-        "04eac0bf-0974-4873-a140-c5ea0e6bdebf": {
-          "description": ""
-        },
-        "1ce2130f-e735-4060-811f-b8c87e6f74b0": {
-          "name": "",
-          "description": "",
-          "progression_name": ""
-        },
-        "b829a5f6-52ce-4303-9b4e-675e25c91001": {
-          "description": ""
-        },
-        "5180cb85-e93a-4b5a-8c66-e1e81c775257": {
-          "description": ""
         },
         "01e90cb3-4a6f-46ed-9a4e-4e7524589e47": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "b3e2c343-fee0-44ce-bb35-44c5a7ca914c": {
-          "description": ""
-        },
-        "8da5f521-bebe-42d9-a16f-7a8900cfbd11": {
-          "description": ""
         },
         "d26ab8fe-dc83-4704-8aba-bd0cdbdd80a4": {
           "name": "تأملات",
-          "description": "**Code Studio:** اطلب من الطلاب الإجابة على 5 أسئلة استطلاع سريعة في بداية هذه الوحدة حول الذكاء الاصطناعي والتعلم الآلي. عد أن يكمل 5 طلاب على الأقل الاستطلاع، ستتمكن من مشاهدة النتائج مجهولة المصدر في لوحة تحكم المعلم. سيتم طرح بعض هذه الأسئلة مرة أخرى في نهاية المشروع الأول، والتي يمكن أن تكون مفيدة في رؤية نمو الطلاب والتغيرات في المواقف خلال الوحدة.",
-          "progression_name": ""
-        },
-        "1c3edfdb-7f19-4a9e-ac61-3e57dbaeddf0": {
-          "name": "",
-          "description": ""
-        },
-        "080e6c54-6c2c-444b-94b5-1b6b4574361f": {
-          "description": ""
-        },
-        "2ec7a348-a9d4-4ce7-942e-98fc411303bd": {
-          "name": "",
-          "description": ""
-        },
-        "f895faf7-ea01-42c7-a485-35e30336038d": {
-          "description": ""
-        },
-        "5816c13d-4fe8-424d-a5d4-32632f313790": {
-          "description": ""
-        },
-        "d26d40b3-4ba5-4864-80ba-5e642036fd8c": {
-          "description": ""
-        },
-        "c83b36e5-9195-4abb-bd9d-94454bd2f138": {
-          "description": ""
+          "description": "**Code Studio:** اطلب من الطلاب الإجابة على 5 أسئلة استطلاع سريعة في بداية هذه الوحدة حول الذكاء الاصطناعي والتعلم الآلي. عد أن يكمل 5 طلاب على الأقل الاستطلاع، ستتمكن من مشاهدة النتائج مجهولة المصدر في لوحة تحكم المعلم. سيتم طرح بعض هذه الأسئلة مرة أخرى في نهاية المشروع الأول، والتي يمكن أن تكون مفيدة في رؤية نمو الطلاب والتغيرات في المواقف خلال الوحدة."
         },
         "8bdf1f4e-1c20-42bd-a5d5-7217dfa0bd4f": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "5763f270-5fa2-44ac-890d-7ec5c2946e9d": {
-          "name": "",
-          "description": ""
-        },
-        "63d1e6e2-7ab3-4cc1-99af-1492d87cc1bf": {
-          "description": ""
-        },
-        "6c5c3575-4667-41f9-98ed-6e6724bd5a0d": {
-          "description": ""
-        },
-        "c962c912-610f-430d-a1f8-9e4e213e6024": {
-          "description": ""
-        },
-        "54ba3593-e7df-45b0-8b96-856f5f97b174": {
-          "description": ""
         },
         "57d8014b-4da5-4981-b5aa-bd5feb656548": {
           "tips": [
-            ""
-          ],
-          "progression_name": ""
-        },
-        "be356b37-94d0-46ee-a368-ceb78841dd15": {
-          "description": ""
-        },
-        "4b253bdc-b513-42ad-ba40-b9ccb108d5a1": {
-          "description": ""
-        },
-        "f7439391-ab17-4321-a0c4-c63fb3dbf8c8": {
-          "description": ""
-        },
-        "046f9dab-07ba-43d1-a259-d1767f772c5a": {
-          "description": ""
-        },
-        "17afab12-cb23-4374-aa8d-93faaffd9dcc": {
-          "name": "",
-          "description": ""
-        },
-        "4a4c2f1b-5081-42d2-a66a-f05fb9496b1b": {
-          "description": ""
-        },
-        "3b73e965-37ee-48c9-b346-0b2f05e5664d": {
-          "progression_name": ""
+            null
+          ]
         },
         "14ad319c-b3ec-4f24-a9c7-5f80f29c9ba8": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "41fb9d94-5386-4632-9f1e-f24e2df75a1c": {
-          "description": ""
-        },
-        "9e8d0b7f-66d6-4b52-abe4-682a6e17ac35": {
-          "description": ""
-        },
-        "c4cb7cda-8d7e-494b-be3e-4b4b14aa87cf": {
-          "description": ""
-        },
-        "89452c96-e749-4f2c-8f81-868c959341a5": {
-          "description": ""
-        },
-        "af25476d-f9d5-43d4-a923-bf30e0c8d091": {
-          "description": ""
         },
         "c407d4d5-d82f-47d8-a814-76756c052cc5": {
-          "name": "",
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "0a85032c-31fc-469a-bb1f-d0a06af38614": {
-          "description": ""
-        },
-        "f15108e5-ca99-41b3-8845-bc54b860168a": {
-          "description": ""
         },
         "8791201e-af87-456b-8f93-1c4cb8c10099": {
-          "name": "",
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "618c4a06-8009-47ab-ace4-164a55f509a7": {
-          "description": ""
-        },
-        "7f167e37-0d33-4983-bd63-a5c51984f818": {
-          "name": "",
-          "description": ""
-        },
-        "5f49982e-ae82-4950-961a-f8758b00ec65": {
-          "description": ""
-        },
-        "6622be27-6f19-4de5-8e71-5033388b2d4e": {
-          "description": ""
-        },
-        "b4e550f8-1d7c-4163-a383-654741d23226": {
-          "description": ""
-        },
-        "e39905df-5274-496a-a8be-3c459719183a": {
-          "description": ""
-        },
-        "56e43b8e-fe8d-4abd-9a99-1bea4aa471d3": {
-          "description": ""
-        },
-        "233cdbaf-ba2a-4c48-a199-53f3c4224558": {
-          "description": ""
-        },
-        "110afff0-b3cb-4cce-a998-4f9169e5f973": {
-          "description": ""
-        },
-        "a8e73f50-ab87-47c4-8b8b-791287582146": {
-          "description": ""
-        },
-        "c9d7e818-73b4-4947-821e-a82bca523a6e": {
-          "description": ""
-        },
-        "d5f88cd2-84d4-47ca-8fc9-078aac40b8e1": {
-          "description": ""
-        },
-        "4ccc411e-a7ac-454b-8e8f-35ce6409a03c": {
-          "description": ""
-        },
-        "73a07b4f-b537-4d80-9f88-656897d98a4b": {
-          "description": ""
-        },
-        "2ac3606b-6423-4522-891b-dc28a10a8f48": {
-          "description": ""
-        },
-        "97b4e747-8a7f-4f26-a3c1-288de0ce588b": {
-          "description": ""
-        },
-        "b31ad716-93d5-458f-8c89-893de212884c": {
-          "description": ""
-        },
-        "5cd181c2-4bc4-4b25-a4d7-b48c32b65804": {
-          "description": ""
-        },
-        "26a55719-312d-4d87-80ab-7616103f0b10": {
-          "description": ""
-        },
-        "44e43ab4-bb48-42e1-b85d-69e103d73d7c": {
-          "description": ""
-        },
-        "a39a66e2-aebf-4e8d-a1b8-e4807fc97581": {
-          "description": ""
-        },
-        "0f9a1b84-c67e-406e-850f-cff3abd219c8": {
-          "description": ""
-        },
-        "7a4861c3-647a-4873-af81-3b96d0adc605": {
-          "description": ""
         },
         "6ca0b1c3-d106-4e70-bdf5-ee0ed4f7dad6": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "4ca84485-6b6c-47af-abd6-3bf11ad1a715": {
-          "description": ""
-        },
-        "1ff2a858-92a9-4175-9625-5f94526dac1c": {
-          "name": "",
-          "description": ""
-        },
-        "635c37f0-7bdf-43af-bb90-75d2a8d0c791": {
-          "description": ""
-        },
-        "4bf7faff-2dd1-4192-beb1-32cd62dd2559": {
-          "description": ""
-        },
-        "7867cee8-2ec6-4ca8-870c-93df80afefa3": {
-          "description": ""
-        },
-        "aa605e24-05ec-4f94-81c7-dd99daf7a43a": {
-          "description": ""
-        },
-        "db9f7bd8-805b-4994-9d45-55ed765973e1": {
-          "description": ""
-        },
-        "09d3ff6d-f87e-4309-b138-3ef66e33eab5": {
-          "name": "",
-          "description": ""
-        },
-        "bf65cfae-cdec-4456-8acf-d475d2835417": {
-          "progression_name": ""
-        },
-        "f71cc8ff-3bce-4e58-9b98-4cac65249332": {
-          "description": ""
-        },
-        "688dbbf6-43d6-46e1-83df-5d7506d77588": {
-          "description": ""
         },
         "48b299c7-bdd4-453e-aa47-d9d2c7622ee8": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
         },
-        "ef16a4f1-d9e1-4ff7-ab43-4204659cfc98": {
-          "description": ""
-        },
-        "4e1f64ea-a1bd-4509-b618-84f364384c9a": {
-          "name": "",
-          "description": ""
-        },
-        "e2df5e33-a11a-4ad5-9607-4a67f1b95608": {
-          "progression_name": ""
-        },
-        "7ee8faff-e0ee-4890-8f5c-73c61a2b73cd": {
-          "description": ""
-        },
-        "81ec8cdb-c620-4b8b-b64e-0a0c9e18e2df": {
-          "description": ""
-        },
-        "536a612a-e744-4399-b01c-0803ebd8614b": {
-          "description": ""
-        },
-        "69a5734b-d138-426a-9aa7-8f1408ee1d09": {
-          "description": ""
-        },
-        "a0725763-95c5-47e3-ad8f-ce01dba4cda3": {
-          "name": "",
-          "description": "",
-          "progression_name": ""
-        },
         "aa9a6902-38d1-4613-8535-7b515b0f7e04": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
         },
         "1060fa91-ba3a-4d55-9a85-493f9b08e027": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "49b921a4-3f3d-4d7b-87d8-aea89350e4f7": {
-          "description": ""
-        },
-        "c1dedeb4-ba09-40dc-a24c-fad4faf24a48": {
-          "description": ""
-        },
-        "a5c8ac6d-bf15-4ce6-ae63-cc39ad9d23e4": {
-          "progression_name": ""
-        },
-        "b35f8725-c2aa-4492-a29b-41731868a450": {
-          "description": ""
-        },
-        "7a3fef21-0643-4239-b209-bb8233126d83": {
-          "description": ""
-        },
-        "1fb18042-bbe6-4e8d-89e3-070a0154f66e": {
-          "name": "",
-          "description": ""
-        },
-        "bff367fa-99d6-4d16-9bc6-066f70292a96": {
-          "description": ""
-        },
-        "c7a5a9e6-93fb-4b37-a087-16560ca048ae": {
-          "description": ""
-        },
-        "4a6f20d9-93fe-4b85-baf5-0605c1fd4774": {
-          "name": "",
-          "description": ""
-        },
-        "da363e39-e250-44db-adcd-52afec164078": {
-          "description": ""
-        },
-        "9d9fcf34-26bc-4ee4-9cbd-814f973dc8fc": {
-          "description": ""
-        },
-        "bfafda93-55dc-44b0-ab6e-4b7423b784aa": {
-          "name": "",
-          "description": ""
-        },
-        "f4e061ad-dd54-4dde-bee9-1c5fe43240f1": {
-          "description": ""
-        },
-        "459acf06-e0d6-49c3-9523-217b85b20727": {
-          "description": ""
-        },
-        "d4e0cbc9-29cb-4c85-bcec-c132d0029f40": {
-          "description": ""
         },
         "ec6a94fb-4529-40b5-bee7-42c5d06822e1": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "50756a44-198d-4901-93e1-3d32014bb65b": {
-          "description": ""
         },
         "12acd4ea-a900-4ea1-a353-601a72b83c80": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "3e65be58-9bb0-427a-8b1c-ea1c7e66a18c": {
-          "description": ""
         },
         "4cb7a9fe-2e72-4730-a3e8-5aaca89653e9": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "5343252c-4ba1-46e0-9341-98b89b101067": {
-          "description": ""
-        },
-        "7e936dfc-e5fd-40cb-9498-6de8ac2ec873": {
-          "description": ""
         },
         "f25eef96-e4b8-46eb-8187-2f05676a8b22": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "3fa7441f-e279-4da6-b34a-00faa4097926": {
-          "name": "",
-          "description": ""
         },
         "77fbbd0c-9cd9-4764-a872-ac8da9a7871e": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
         },
-        "102f2261-b640-447a-b5fd-cf53728be24f": {
-          "description": ""
-        },
-        "775f2fd4-83c6-4aa5-aba5-62078e3814c0": {
-          "description": ""
-        },
-        "1b295704-04fd-4d60-8e9d-ae32ef212044": {
-          "description": ""
-        },
-        "3cd41989-7d80-4e79-9236-b5d58b60352c": {
-          "description": ""
-        },
-        "7ea66c21-7cbe-4290-a6b2-425888d64962": {
-          "description": ""
-        },
-        "46432545-a592-405d-85d3-493bca4bf787": {
-          "description": ""
-        },
-        "d27e9e80-d500-4611-8dad-a4bad04f1273": {
-          "name": "",
-          "description": ""
-        },
-        "06c380f0-8961-4fad-b52b-b249265d2ed6": {
-          "description": ""
-        },
-        "9911d79f-8812-4c66-b610-66e91d854548": {
-          "name": "",
-          "description": ""
-        },
-        "80c0979c-938e-4041-bdb6-7ee54c3156d8": {
-          "description": ""
-        },
-        "9f5e9436-4201-479c-a305-2b08be500d0e": {
-          "description": ""
-        },
-        "f2beead8-eebd-486b-8748-d31955df2c4d": {
-          "progression_name": ""
-        },
         "40e5d7a1-ae14-4585-bdab-1fc0036d91b2": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
         },
         "d0b76b9b-7d00-488a-9c55-38ef54a4be8d": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "4253b026-9043-4198-96c9-f76793dd065f": {
-          "description": ""
-        },
-        "2b82d815-55ac-47ab-98c5-3e6e2bb944e2": {
-          "description": ""
-        },
-        "72015c7d-3320-40ae-9164-45c649d80bb7": {
-          "description": ""
-        },
-        "3b4dcf97-2764-4939-af16-c39d10ab214f": {
-          "name": "",
-          "description": ""
-        },
-        "c5f0aff3-ef3e-4b65-9af8-c78a53fcbe28": {
-          "description": ""
-        },
-        "b7632d63-3d5c-47e4-9ce3-a665f9be7142": {
-          "description": ""
         },
         "187961bf-44e5-4407-81d7-a47884e32eb6": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "d6f29378-22de-403d-955a-f8e77800dd27": {
-          "description": "",
-          "progression_name": ""
         },
         "859c17eb-f742-4430-ab49-fe335f6dc3c0": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
         },
-        "a02b0b83-901a-4835-ba75-e9b1333e0dfc": {
-          "description": ""
-        },
         "cbf336bc-c75f-4710-9ba5-d30782360222": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
         },
         "42f29ce9-a2d0-4e8a-a60c-870858ba5847": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
         },
-        "eb5c6666-0263-47a6-a846-becfeed7028b": {
-          "description": ""
-        },
-        "9656015e-1693-4f84-8655-bc287e06812a": {
-          "description": ""
-        },
-        "49eb6a28-95f3-4303-a41a-304b18f0c270": {
-          "name": "",
-          "description": ""
-        },
-        "040518cf-bdfa-4bea-a3c4-7e2a5b973097": {
-          "description": "",
-          "progression_name": ""
-        },
-        "cfca5763-ed58-40d6-92fa-42cdbe086d1f": {
-          "description": ""
-        },
         "948494c6-f9ab-422f-a5e5-1ba0dd2bb690": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
         },
         "bde096a8-755f-4d46-8e37-2b7c22c6112d": {
-          "description": "",
           "tips": [
-            ""
-          ],
-          "progression_name": ""
-        },
-        "6c43539f-8ba5-43e6-93fa-9bc34d0e4d75": {
-          "name": "",
-          "description": ""
-        },
-        "91d6f2e4-8a52-4448-bd3f-83b0c02ac32a": {
-          "description": ""
-        },
-        "52594b39-7e30-4865-951f-6c981b374aad": {
-          "description": ""
-        },
-        "5a04c389-cc19-4c32-8f86-5bafbfa5775f": {
-          "name": "",
-          "description": ""
-        },
-        "181e84e3-430b-4c20-9e48-fffad8c5bab2": {
-          "name": "",
-          "description": ""
-        },
-        "eaac2119-56ff-4c15-ad0e-06acce32c228": {
-          "description": ""
-        },
-        "bebc0942-fc14-4063-9feb-e47a4a62d9c8": {
-          "description": "",
-          "tips": [
-            ""
+            null
           ]
         },
-        "05f22cd1-6665-4729-bdb2-193ecff2cd96": {
-          "description": ""
-        },
-        "27a175b1-914a-4d8b-ada6-d1e5e4fcfd87": {
-          "description": ""
-        },
-        "32f12d13-2094-44ec-b8f8-e761e2315ce5": {
-          "description": ""
-        },
-        "52e962a0-c40b-49c4-859e-bad1e64068ee": {
-          "name": "",
-          "description": "",
-          "progression_name": ""
-        },
-        "ccf7e7f8-142b-475e-ba7a-4c6be96379ae": {
-          "progression_name": ""
+        "bebc0942-fc14-4063-9feb-e47a4a62d9c8": {
+          "tips": [
+            null
+          ]
         },
         "73ce1ded-8856-4156-bfc4-c114b2bae063": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
         },
         "9a6a30be-65eb-4ba0-ac15-d35a4120f163": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
         },
-        "0de901b0-640e-45fe-9a9f-4277864af5cc": {
-          "description": ""
-        },
         "0d89923e-93b3-4a03-b79e-b262c4a71f72": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
         },
         "d3990be6-8d37-475a-bb3e-5a4f4fc990ca": {
-          "name": "",
-          "description": "",
           "tips": [
-            ""
-          ],
-          "progression_name": ""
-        },
-        "a1ec9125-076f-4d00-881d-202874c8ff0b": {
-          "description": ""
-        },
-        "5df59188-5c51-4a5c-800e-5b0bc5cabd7f": {
-          "description": ""
-        },
-        "5a973bf5-4e72-406f-800b-535e12f1150a": {
-          "description": ""
-        },
-        "24852ddc-3470-46ba-b727-e205b2a6da3c": {
-          "progression_name": ""
+            null
+          ]
         },
         "a93eb670-a170-422f-b5cc-1bb0cba75be3": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
         },
         "35bd3261-9e58-490f-a4f7-6f6188cf278e": {
-          "description": "",
           "tips": [
-            ""
-          ],
-          "progression_name": ""
+            null
+          ]
         },
         "7cc32c19-2a9a-423f-a8b7-90a739cd379c": {
-          "name": "",
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "93f745bf-ead6-48e1-b904-b53162ae018b": {
-          "description": ""
         },
         "79f35dc1-bf5e-47ca-b1eb-b726b15859a8": {
-          "name": "",
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "1b332861-6899-4179-adbc-0bf0000861ac": {
-          "description": ""
-        },
-        "43027fdf-c7d4-4e3b-91d3-6329d379c7be": {
-          "description": ""
-        },
-        "c99a4c98-871b-4fcf-bfdb-91d499a803a6": {
-          "description": ""
-        },
-        "5930841f-14d4-4405-915f-abebc0c094fe": {
-          "name": "",
-          "description": ""
-        },
-        "a19cc9c3-8670-48e8-bcea-dcddf2581cfa": {
-          "progression_name": ""
-        },
-        "b28c9e1f-8928-482e-b565-963ddbaa386b": {
-          "description": ""
         },
         "189848b1-8798-4d6b-ba64-c7e43f6aa84a": {
-          "name": "",
-          "description": "",
           "tips": [
-            ""
+            null
           ]
         },
-        "5f03bb8b-f7c8-44d9-80b2-2b498ed98ec4": {
-          "description": ""
-        },
-        "0d64ff43-0979-4f02-9759-f8c960c0b22e": {
-          "name": "",
-          "description": ""
-        },
-        "1b7d8f2f-56b1-447e-ac24-350f6d1f1c68": {
-          "description": ""
-        },
-        "05344b3d-f6fa-4439-8eaa-9e770d274882": {
-          "description": ""
-        },
-        "70e3a464-86e0-47dc-9bdf-d30d47c1d3f3": {
-          "description": ""
-        },
-        "c624f7dd-ec7c-4438-8913-819ce36c73cf": {
-          "description": ""
-        },
         "43756539-5123-4890-8fb8-651dbb6ee4b2": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
         },
         "e4ff1e67-0f17-46a7-8d03-26f8a65238c2": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "de39a748-817d-4f13-a9e3-a7a2bfb4d765": {
-          "description": ""
-        },
-        "abb1a990-9168-4eeb-af7d-5e893e4ec41e": {
-          "name": "",
-          "description": ""
         },
         "0f2e1a2e-8982-4393-9048-8910a592aa88": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "2f337322-f504-4ba7-9714-1c178eba4ca9": {
-          "description": "",
-          "progression_name": ""
-        },
-        "137c85aa-edb5-42cb-945d-a5a705804548": {
-          "description": ""
-        },
-        "a30ac0c6-a30d-498e-94ac-bc96a2b82f68": {
-          "description": ""
-        },
-        "8a788853-2486-42f1-b0d0-572ad723f421": {
-          "progression_name": ""
-        },
-        "879e3cdd-160c-4475-ab7a-523cb279388e": {
-          "description": ""
-        },
-        "0f5d1bee-4ff4-4f26-8832-45d831740f03": {
-          "description": ""
         },
         "db8f4d62-af34-4871-993d-281cacf5ff29": {
-          "name": "",
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "9f4a3bce-7c21-4a40-b672-8c42296f90b2": {
-          "name": "",
-          "description": ""
-        },
-        "a78fb652-de9d-4d40-9024-8e6c4d15ee18": {
-          "name": "",
-          "description": ""
-        },
-        "e6a3bed4-6be6-4c9e-ad6b-80b902fddc8d": {
-          "description": ""
-        },
-        "a405cc75-9c5f-4b0b-98d7-eb9f53749713": {
-          "description": ""
-        },
-        "632cf2c8-13c1-49a7-bf85-0432eb94d996": {
-          "description": ""
         },
         "30e5080a-05d0-4193-82e4-f7c81f1adb5c": {
           "name": "بطاقات نموذجية في مختبر الذكاء الاصطناعي",
-          "description": "",
           "tips": [
-            ""
+            null
           ]
         },
-        "dadfdc54-3e08-4f0e-bb84-6f8218a90883": {
-          "description": ""
-        },
-        "787bde6e-8d8b-4366-aa77-767d51a29796": {
-          "description": ""
-        },
-        "d5f051bd-7a5c-464f-a830-e486187a0463": {
-          "name": "",
-          "description": "",
-          "progression_name": ""
-        },
         "6dc2399a-dad6-46a3-8124-e6b3d100d4fe": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
         },
         "0c250e92-85e3-4f85-8a99-44a79fb72c03": {
-          "name": "",
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "7d040814-9039-4b26-b0ef-29cb28227d53": {
-          "progression_name": ""
-        },
-        "1503235c-6a46-401d-85f0-1fa291901771": {
-          "progression_name": ""
-        },
-        "fab00d1e-0bf0-4f6c-866f-388441b6505d": {
-          "name": "",
-          "description": ""
-        },
-        "c1f63e3b-ea15-475e-bb1e-d8ee0d402c63": {
-          "description": ""
-        },
-        "7fc0c667-8216-4072-9e70-d5373be21aba": {
-          "description": ""
-        },
-        "3227657f-0bd2-4f06-970c-445432836588": {
-          "name": "",
-          "description": ""
-        },
-        "1c56699c-58f5-4fcf-bc25-2d995318474e": {
-          "description": ""
-        },
-        "938ca4bd-0cba-44f9-bffe-1e60000ab0ce": {
-          "description": ""
-        },
-        "42abdf12-61c8-48a4-8118-6f0b713e28dc": {
-          "progression_name": ""
-        },
-        "8595e376-14b5-49da-9824-a5ae5b61d389": {
-          "description": ""
-        },
-        "8720a5a0-8870-4f56-bcb6-52f0ecef1ff5": {
-          "description": ""
         },
         "527dacdb-36d1-4e9e-ad42-b28aab54a395": {
-          "name": "",
-          "description": "",
           "tips": [
-            ""
-          ],
-          "progression_name": ""
-        },
-        "073f8711-4ef7-49bf-9237-39509e05659f": {
-          "description": ""
+            null
+          ]
         },
         "91d7768c-2c1c-4b4b-bb3d-b7646f8144d6": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "042016ac-d9cb-47b5-ae7a-d7ad377cb5a6": {
-          "description": ""
-        },
-        "2130725e-ccb5-4d60-bb81-cee8c3847e5d": {
-          "description": ""
         },
         "aedb156c-9f9c-4214-94aa-a664ce875b23": {
-          "description": "",
           "tips": [
-            ""
-          ],
-          "progression_name": ""
-        },
-        "9118090e-7a44-4c4a-9bad-050f0e86ff12": {
-          "description": ""
-        },
-        "2e5a9b4e-f23e-4bb6-899d-0878670fe0f5": {
-          "description": ""
-        },
-        "f60a3383-8cea-421c-ae80-c3b74f01646e": {
-          "description": ""
-        },
-        "757e3c3a-8354-4b41-9b54-ad138d99c341": {
-          "description": "",
-          "progression_name": ""
+            null
+          ]
         },
         "819a4c17-f05f-4298-9cfc-1cb2c0b00f5d": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "d9110002-29bd-4598-9052-6e115b798e06": {
-          "name": "",
-          "description": ""
         },
         "2ac899a0-cd0e-4440-89e1-ef4de87b930f": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
         },
-        "21441b95-81ee-48b1-aad9-244c822c8a85": {
-          "description": ""
-        },
-        "5c385108-484c-44cb-b688-858fc00e41df": {
-          "progression_name": ""
-        },
         "209eff96-d559-411e-b8cf-bd6a84923473": {
-          "description": "",
           "tips": [
-            ""
-          ],
-          "progression_name": ""
+            null
+          ]
         },
         "183a63a0-a03c-4739-8f29-fed89378086e": {
           "tips": [
-            ""
+            null
           ],
           "progression_name": "التقييم"
         },
         "8ded89d7-85cd-4bba-883e-7c4981ce3078": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
         },
         "61bfa751-8587-4118-84e1-b3870975fad4": {
           "progression_name": "تحدي"
         },
-        "5dc1d0a7-a3a8-4e26-8ddd-3133d70c5f9f": {
-          "name": "",
-          "description": ""
-        },
-        "aee0f617-33d7-4e80-ade0-acd91a2beea9": {
-          "description": ""
-        },
-        "b0e3afec-1c9d-4311-bb24-17516cadb5ed": {
-          "description": ""
-        },
-        "b0c54dcf-f7bc-48c9-a9bf-f017db699a6c": {
-          "description": ""
-        },
-        "557e0ccc-ca5d-4da8-a653-04055517a185": {
-          "name": "",
-          "description": ""
-        },
-        "96ad5d27-5c3b-404a-be47-28f285d40d0b": {
-          "description": ""
-        },
-        "1815ac63-7672-4bbe-967c-fb0b6cf11025": {
-          "description": ""
-        },
-        "85ce1224-7e1e-42f5-b023-193886738275": {
-          "description": ""
-        },
-        "009bbc72-e313-4b08-b75b-4ae304927690": {
-          "description": ""
-        },
-        "5556dd0d-c2ff-4c0e-969b-3fd549162843": {
-          "description": ""
-        },
         "b39acb79-1fad-4acd-b3e4-789f32636f46": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "69b1dbc7-ddc3-475b-a422-f0c40d3cbd36": {
-          "description": ""
-        },
-        "c5aa9541-210e-4891-a9f6-4ea50e168497": {
-          "description": ""
-        },
-        "5c5ee648-0ee6-4cd0-821d-4229b2d688fe": {
-          "description": ""
-        },
-        "6181d388-da0e-4493-b38c-b061f0b043f8": {
-          "description": ""
         },
         "1f38b581-970b-4050-9a0b-b899978773d7": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "9a768087-f235-416d-8a11-1ff7a4e6f99d": {
-          "description": ""
-        },
-        "a4aef2c0-a51c-494d-9bfa-f2d960866f14": {
-          "description": ""
-        },
-        "cd79abd7-094d-4e1f-9095-e44a2f97b748": {
-          "description": ""
-        },
-        "d835643f-1cdd-450d-a4a6-7da67d59773c": {
-          "description": ""
-        },
-        "ed40cdd8-4f79-4ab7-9faa-b1a31062ead1": {
-          "description": ""
         },
         "e2e484bb-64dd-4917-b336-741e743a8814": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "98760f2b-243a-495c-819b-b3e3c914b45e": {
-          "description": ""
-        },
-        "73547184-c057-435f-aea3-83998a7329bb": {
-          "description": ""
-        },
-        "0bdf454e-337a-4a27-ac1a-ee3349024906": {
-          "description": ""
-        },
-        "f8c0e2e8-2734-4f78-a8c5-4a51532861f3": {
-          "description": ""
-        },
-        "98ab665e-7f82-4e18-8892-e26b8eeeff92": {
-          "description": ""
-        },
-        "07af2ada-4aa0-4fa2-bd7c-557ba8330412": {
-          "description": ""
-        },
-        "bf2227de-1332-4a6f-bd47-6d9fe36bfc58": {
-          "description": ""
-        },
-        "2fd5f152-b425-4b85-965a-0a65f1943578": {
-          "description": ""
-        },
-        "36b08667-b29f-42ce-8406-f6793010dd51": {
-          "description": ""
-        },
-        "092f6425-5d52-4aad-8373-f01e071f5b4e": {
-          "description": ""
         },
         "5d7ce86b-abab-41a9-a0a1-b7954bed02af": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "cf7fec91-b8c2-4b68-8e78-f10c536c2d3f": {
-          "name": "",
-          "description": ""
-        },
-        "627fd885-aec2-4979-a004-8a1373c3786c": {
-          "description": ""
-        },
-        "d5098721-9c0a-4d02-bb1e-11eae0417269": {
-          "description": ""
-        },
-        "bcdd8b8e-db28-42f7-9ddf-d24579e170d5": {
-          "name": "",
-          "description": ""
-        },
-        "6d6c6ac6-e73e-4f47-9c26-c13973806fee": {
-          "description": ""
-        },
-        "3a61af95-fae8-4e22-8c94-fce4dc520503": {
-          "description": ""
-        },
-        "533e250e-c476-4984-aebc-a39eee5f217f": {
-          "description": ""
-        },
-        "ad4af062-015a-4af2-b8a6-54148ece9e91": {
-          "name": "",
-          "description": ""
-        },
-        "e426d4fb-7143-4382-aa9e-cd684584ed6b": {
-          "description": ""
-        },
-        "d84e0802-6299-4319-86fe-ac6c35837cd7": {
-          "description": ""
-        },
-        "23b01438-348b-4519-b465-be7c47d812df": {
-          "description": ""
-        },
-        "02eaa4ce-ab4c-485c-bb2d-08cebd8c5e17": {
-          "name": "",
-          "description": "",
-          "progression_name": ""
         },
         "221c0911-a3eb-4409-be91-e665b43e3fc9": {
-          "name": "",
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "7b869fc5-7ea0-4fb1-b595-6fc677f59c7e": {
-          "description": ""
         },
         "5b59847e-71f7-481a-a5ca-aa9ec4511289": {
-          "name": "",
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "8a189b8f-e48b-4839-bf09-5bb7896bafae": {
-          "description": ""
-        },
-        "e732fd73-7ab0-4514-9ed0-69676e0858f2": {
-          "name": "",
-          "description": ""
-        },
-        "858806de-09ed-4511-89f6-84f5fdee076c": {
-          "description": ""
-        },
-        "b574a67a-ff82-494d-82cf-8dc5b284069f": {
-          "name": "",
-          "description": ""
-        },
-        "df91b4d3-80e9-4acd-baed-d1e61a109451": {
-          "description": ""
-        },
-        "ab87424c-140f-4a9d-b2e9-44519b98c464": {
-          "description": ""
-        },
-        "396f5cde-912b-4c0c-914e-9df0500bc4ae": {
-          "description": ""
-        },
-        "59ccbfb8-c9a9-4511-8004-408350e6c3b9": {
-          "description": ""
         },
         "0c7a96aa-61a7-4cbc-a8e4-36aec7260700": {
-          "name": "",
-          "description": "",
           "tips": [
-            "",
-            ""
+            null,
+            null
           ]
-        },
-        "f0652a6f-7460-4715-90e1-1a022ca38631": {
-          "description": "",
-          "progression_name": ""
-        },
-        "b45bc335-aa90-474a-a72e-d53cd598287f": {
-          "name": "",
-          "description": ""
-        },
-        "5beea464-da46-4760-af14-ae1bcf5e537d": {
-          "description": ""
-        },
-        "448fe380-569e-4da0-9d51-f094ccbc6f35": {
-          "description": ""
-        },
-        "9382a280-a542-46a5-932f-9f2258bbb2eb": {
-          "name": "",
-          "description": ""
-        },
-        "8f0d5dc7-60c1-45c4-aeda-1596343b1430": {
-          "description": ""
-        },
-        "87e716d6-c0b6-4b78-aa85-76d08b99d425": {
-          "description": ""
-        },
-        "c47e36b8-3e8a-45b8-b453-ea50470163b8": {
-          "description": ""
-        },
-        "6837e50f-be66-4db0-a31a-fff75d03b12b": {
-          "name": "",
-          "description": ""
-        },
-        "87b65d20-bf70-4db3-ae6f-2333f970ad8c": {
-          "progression_name": ""
-        },
-        "eb0ab608-2446-46e7-b165-b31ea3c79400": {
-          "description": ""
-        },
-        "12cae24a-218d-4061-8014-c228de157985": {
-          "description": ""
-        },
-        "1d2520a0-dcb3-41e9-b121-7bf0b221a87a": {
-          "progression_name": ""
-        },
-        "8a44d564-80c5-48a2-af49-a11984b69855": {
-          "description": ""
-        },
-        "e6d91bd5-36f2-43c8-aa7f-ff9001f40acd": {
-          "description": ""
-        },
-        "29dce9c5-577d-4e2c-9d4b-b8bf0e4b18e8": {
-          "description": "",
-          "progression_name": ""
-        },
-        "7737c5f2-698f-4156-a1ae-c6881312e4b9": {
-          "description": ""
         },
         "4e10be5f-60ad-4bae-913d-7a157e519447": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "9749fdb5-91ad-41b8-9b83-5198ab37cc38": {
-          "progression_name": ""
-        },
-        "85a0ec6f-c1c7-46f6-8e4f-f805984133dc": {
-          "name": "",
-          "description": ""
-        },
-        "49fc416e-7900-4a52-a3ae-623144d42f0a": {
-          "description": ""
-        },
-        "630efbd7-5d53-420f-b30f-ea99d28ce7ce": {
-          "description": ""
-        },
-        "1e12e66a-158f-428d-9195-9a68ee31663d": {
-          "description": ""
-        },
-        "edd27907-d992-46f6-a9d6-71f7cb7098b9": {
-          "name": "",
-          "description": ""
-        },
-        "c6738321-64d3-42be-8afa-b08fcceb97b5": {
-          "description": ""
-        },
-        "b0a7e677-66ba-4f10-a5bc-1019dc943b71": {
-          "description": ""
-        },
-        "1a5844e1-eb0e-4add-90da-872ac2e7d775": {
-          "description": ""
-        },
-        "50767c40-8b1d-4a43-80de-43965a5158f4": {
-          "description": ""
-        },
-        "89ae598d-908c-4a53-addf-97cdde58b07b": {
-          "description": ""
-        },
-        "1fce8a0f-3f59-4e8a-99f6-b6afdc82a87c": {
-          "name": "",
-          "description": ""
-        },
-        "ee0b1565-2f31-4bc3-b0fe-d94495c114ef": {
-          "description": ""
-        },
-        "3a0b6e09-7c60-4b6b-a481-4617b2674701": {
-          "description": ""
-        },
-        "2114fa82-e4f6-4e08-ad4f-740becfc16aa": {
-          "name": "",
-          "description": ""
-        },
-        "27fb858f-74be-466d-8261-26a610837a03": {
-          "name": "",
-          "description": ""
-        },
-        "ab21023b-e7a1-4333-bb44-c86b1b715152": {
-          "description": ""
-        },
-        "12c96ce3-0348-46a5-b337-47ecf89e9a9c": {
-          "description": ""
         },
         "c5595f82-fa56-4a48-a7f6-65b97947a7e9": {
-          "name": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "5352d814-4157-4546-a78c-405b3b6a16de": {
-          "description": ""
-        },
-        "c4cdf114-490e-4169-9dc1-091dfe52a23b": {
-          "description": ""
-        },
-        "77b2cc22-6c49-4ad9-8a76-a3e5cf4502ec": {
-          "description": "",
-          "progression_name": ""
-        },
-        "676583de-0399-44ff-bce7-cdd574aed5e7": {
-          "description": ""
-        },
-        "e5dc27f2-aa58-499e-a93c-859ae8bc8591": {
-          "description": ""
         },
         "4efb646c-4ce2-45f5-bb76-f444af86a9b4": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "57a9f384-8dcf-45bf-aec6-388b904e45a8": {
-          "description": ""
         },
         "a4bd3c09-bdc9-45a3-bcdd-6f54e3d19471": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "e046ddd1-110a-4a23-8f5a-76f6ac86fe48": {
-          "progression_name": ""
-        },
-        "d0eae8ba-7669-4640-9746-43007ed2fe0e": {
-          "description": ""
-        },
-        "64fd9046-72a3-4ea4-a52a-953629e14e82": {
-          "name": "",
-          "description": ""
         },
         "489ed446-aa78-47e3-b9f2-30bc9164d6c3": {
           "name": "تأملات",
-          "description": "",
           "progression_name": "تأملات"
         },
-        "1c1ae803-a074-4e89-b4f4-8573c5602a39": {
-          "name": "",
-          "description": ""
-        },
-        "cc9c6d60-9898-4799-8653-e51ff5bfe862": {
-          "description": ""
-        },
-        "4ed9befe-cfcb-4d9b-ab09-0eab8239853f": {
-          "name": "",
-          "description": ""
-        },
-        "a3284930-c1cb-4e39-b578-c5a16e5d0ff4": {
-          "description": ""
-        },
-        "b1c90392-4531-4fb9-bde6-a56070de12df": {
-          "description": ""
-        },
-        "3848bd6c-988b-46db-8cfb-26347026dd92": {
-          "description": ""
-        },
-        "f3e0d0b5-0102-46c3-8d3b-eb5adb269423": {
-          "description": ""
-        },
-        "aa6b1f0b-777a-4875-81b0-465b23df695b": {
-          "description": ""
-        },
         "f2c599ed-2dc6-4fa2-8ebd-5123c77dd9c3": {
-          "name": "",
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "47fc41aa-2d24-475f-91fe-5dfd01661f60": {
-          "description": ""
-        },
-        "cf13f4ce-8cca-4634-b8f0-88fb63ede0e1": {
-          "description": ""
-        },
-        "a084e583-a9a6-4132-88e7-5b4b2e338f9d": {
-          "description": ""
-        },
-        "cc09d26e-3cac-4703-9cf9-a733f659d737": {
-          "description": ""
-        },
-        "08f2d60f-8cad-4203-9069-c408c878ebd4": {
-          "description": ""
-        },
-        "080be613-c74d-4789-b678-4c4210ddd1a1": {
-          "description": ""
-        },
-        "af6a4d8c-be0c-44b0-be59-0d759ded7649": {
-          "description": ""
-        },
-        "40db5b3a-09f7-4357-99b7-7ec18169e017": {
-          "description": ""
-        },
-        "ed1b18bf-d328-418f-b226-5de76c9cfd2c": {
-          "description": ""
         },
         "38761f3b-2e5b-4626-8f10-3a562e8d0c3b": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "09b3b319-aea7-4490-99e1-190b3de6c550": {
-          "description": ""
-        },
-        "d12ba435-1589-48c6-bb8a-af74a052ae03": {
-          "description": ""
-        },
-        "001a14d1-716a-4d7e-8ec2-8404c0ebd11b": {
-          "description": ""
-        },
-        "76173b6c-c5a5-4733-9e70-feb438583a3d": {
-          "description": ""
-        },
-        "d3bd1ebf-06e8-44b4-a4ae-e60b2bf4907a": {
-          "name": "",
-          "description": ""
-        },
-        "dcdeaf21-d581-4c36-937f-3562d5497699": {
-          "description": ""
-        },
-        "87ac1c58-8d35-44f0-9c14-e1880433e5fd": {
-          "description": ""
         },
         "bb1e1371-d01e-43c2-913a-5fe680de2bf4": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "2b19be1a-ae3b-486c-9feb-936fcb959c7f": {
-          "description": ""
-        },
-        "2c8d4f36-d325-4e23-8477-8f3b79d1582a": {
-          "description": ""
-        },
-        "d7e29a9c-d566-4556-983d-cd31736f67e8": {
-          "name": "",
-          "description": ""
-        },
-        "7933f9ed-5910-4a72-a112-13d12dad36de": {
-          "description": ""
-        },
-        "d87d6a30-1929-4ec3-baae-5b3457330c9c": {
-          "name": "",
-          "description": ""
-        },
-        "3999f216-0132-4c0e-b31d-55267548d882": {
-          "description": ""
-        },
-        "7f27fb72-fe6d-43c7-bc1c-0b47430a197a": {
-          "description": ""
-        },
-        "d5bd7547-e81d-42ef-87f6-cb70484d1598": {
-          "description": ""
-        },
-        "f62c7274-e20a-4f03-bec8-fa9bf1a60056": {
-          "description": ""
-        },
-        "94d86de8-4d53-4dab-a059-1c93ee796090": {
-          "description": ""
-        },
-        "56d7b9c7-f26f-4792-8ae0-7f628b569662": {
-          "name": "",
-          "description": ""
-        },
-        "d1541c58-5557-4b74-b71c-9ffe758f666c": {
-          "description": ""
-        },
-        "6c1bcd51-01c9-4f6f-9f95-0c2d56eec3ea": {
-          "description": ""
-        },
-        "0addd334-0524-4278-9c3f-5a6f4cd2cfe2": {
-          "description": ""
-        },
-        "27af956e-0714-4807-9c2e-78b797d61c82": {
-          "description": ""
-        },
-        "e56f33bf-7ab3-4122-95d5-56c49f4507a1": {
-          "description": ""
-        },
-        "fa4662a6-d900-462a-9488-aca7a48afbbe": {
-          "description": ""
-        },
-        "bd30b794-b2ae-4c16-b4ea-0da0e187e67f": {
-          "description": ""
-        },
-        "2b283c1a-6c0e-4a55-901f-ba199a8ca2be": {
-          "description": ""
-        },
-        "8cee7a39-d01b-4f6d-948b-00742dd2ee8c": {
-          "description": ""
         },
         "c0c1d052-3e33-4066-a541-356b552d5ec7": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
         },
-        "b1b4b58c-c4e6-4521-8bf8-0f322ba6a995": {
-          "description": ""
-        },
-        "7ae4b7d7-d9c3-4c6c-adb9-b6d88cf075f9": {
-          "name": "",
-          "description": ""
-        },
-        "8ae2778f-e311-4131-9116-8a2cb6ee5512": {
-          "description": "",
-          "progression_name": ""
-        },
-        "5548535a-69a0-41b5-8203-8759a1587178": {
-          "description": ""
-        },
-        "10bd0b6f-3c44-418f-9bf1-61c3be38b4e3": {
-          "description": ""
-        },
         "0fac2a39-1a1e-4c53-a3eb-ef5ababb25f4": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
         },
         "1ebb0840-0b5b-4ec9-9f95-1ccae266fe92": {
-          "description": "",
           "tips": [
-            "",
-            ""
+            null,
+            null
           ]
-        },
-        "1aa85373-b59a-419a-980f-ace96f9a3105": {
-          "description": ""
-        },
-        "db9f49a7-02f8-4780-bac4-f32b84ea302c": {
-          "description": ""
-        },
-        "416e3f4a-5465-4bc6-b5a7-865ad58e3b84": {
-          "name": "",
-          "description": ""
         },
         "bb917641-be8e-41f9-8ba5-bad758aeb8d5": {
-          "name": "استبيان",
-          "description": "",
-          "progression_name": ""
-        },
-        "d7d2aaa9-48d0-45d3-af96-545034dcb7e2": {
-          "description": ""
-        },
-        "90014ac9-6d96-480a-b98a-9aa69fe5dbd8": {
-          "description": ""
-        },
-        "a269dda4-f53d-4532-937f-dfab793efb0e": {
-          "description": ""
-        },
-        "3626bbfa-cbd4-4d4c-b95e-a776fa072304": {
-          "description": ""
+          "name": "استبيان"
         },
         "9f17132f-2c2e-4f16-bead-88b852b9e33f": {
-          "description": "",
           "tips": [
-            ""
-          ],
-          "progression_name": ""
-        },
-        "07460e2d-0520-4fc3-9092-9b145ff54295": {
-          "description": ""
-        },
-        "3c4c7d3e-338a-4934-bc9c-b9e01d0f14cd": {
-          "description": "",
-          "tips": [
-            ""
+            null
           ]
         },
-        "a3548602-66ff-4900-ba0b-46a283258771": {
-          "description": ""
-        },
-        "1223d000-8832-4645-b9ec-3a7563068eb1": {
-          "description": "",
-          "progression_name": ""
-        },
-        "6b8f47ab-3e64-41b6-ac05-2712618d76ee": {
-          "description": ""
-        },
-        "bcf207e9-e1f0-45d9-aff0-40db5a335dfe": {
-          "description": ""
-        },
-        "e41a1840-2bca-4d0c-8ae5-695b3ff1081a": {
-          "description": ""
-        },
-        "373420f0-9629-46dc-be0d-15bee016399a": {
-          "description": ""
-        },
-        "cda9ed3b-c808-45fd-842f-106423ac1279": {
-          "description": ""
-        },
-        "e2fa312d-3c87-4fe9-b564-2c3eab419dad": {
-          "description": ""
-        },
-        "52a10b2e-8653-4908-85b2-696766bb85c3": {
-          "description": ""
-        },
-        "4402760a-8edb-417e-84a7-8144c8b751fe": {
-          "description": ""
-        },
-        "820ad78e-d5a7-4b12-95bf-e59af1a1e660": {
-          "description": ""
-        },
-        "11e9d0a1-65ce-4467-b380-87d9e35f9bab": {
-          "description": ""
-        },
-        "b0fe0938-c3c5-49b0-82c4-51489b581328": {
-          "description": ""
-        },
-        "7a9cb896-bbb5-4823-b1f4-47187e837de2": {
-          "description": ""
-        },
-        "bd135d5d-34fa-45a2-b545-96037af3ea8d": {
-          "description": ""
-        },
-        "4ca8fcb7-141b-4201-976c-2bafbae0f7a7": {
-          "description": "",
-          "progression_name": ""
+        "3c4c7d3e-338a-4934-bc9c-b9e01d0f14cd": {
+          "tips": [
+            null
+          ]
         },
         "7f4a57cb-7221-40f4-a60a-2026a13bcba2": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
         },
         "72daa1e4-2bc1-49f2-b46e-9e007cf78597": {
-          "description": "",
           "tips": [
-            "",
-            ""
-          ],
-          "progression_name": ""
-        },
-        "7e9509a6-a023-4427-a4b2-f5f1cbe53c68": {
-          "description": ""
-        },
-        "ec2b85c7-92ce-422c-84c3-24e2b29872cf": {
-          "description": ""
-        },
-        "aab5aafd-957a-453e-a31b-d76c513bbc3b": {
-          "description": ""
-        },
-        "57e61086-a30b-47d8-ad65-af83a970d437": {
-          "name": "",
-          "description": ""
-        },
-        "3fb2b08e-a583-40ad-b828-4da873198b2a": {
-          "description": ""
-        },
-        "ecae1d65-29c9-469c-a5ec-c09b7428f1d0": {
-          "description": ""
-        },
-        "afc65b77-ce5d-4294-91d6-58e4f4e2ceca": {
-          "description": ""
-        },
-        "90212d87-a411-4d93-b18e-2fa330b72ea9": {
-          "description": ""
-        },
-        "8bc19694-99fb-4360-a3ac-2f7b9ff83365": {
-          "description": "",
-          "progression_name": ""
-        },
-        "600cac90-5755-4740-b0ae-900931998fa5": {
-          "description": ""
-        },
-        "c9f8b085-3086-4599-aebf-369229e16062": {
-          "description": ""
-        },
-        "72ea18ae-e014-4480-a8f3-937ec9b42f88": {
-          "description": ""
+            null,
+            null
+          ]
         },
         "0644a5d2-d3ae-4dea-8777-47a522955b21": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "fcfc3e17-e5a5-4ae2-9d3a-9c910f632500": {
-          "description": ""
-        },
-        "0bc47376-e0ee-46d1-a9f1-ff4fa71d2e92": {
-          "description": ""
-        },
-        "a14135bc-13c9-4ae4-abd7-fbeea7d35e0e": {
-          "description": ""
         },
         "97535dd4-2332-47bc-af09-9571d848068d": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "b25115d3-d2e2-4323-b51a-e4b50508ab41": {
-          "description": ""
-        },
-        "85ee6439-d690-4045-9981-cd878daf5380": {
-          "description": ""
-        },
-        "fc554f06-6a4c-4f89-9768-aaf1717222fe": {
-          "description": ""
-        },
-        "b500e5ab-50b2-4caf-b8c0-189b497eee86": {
-          "description": ""
-        },
-        "920cf048-b5d3-4033-8705-25e47ba99238": {
-          "description": "",
-          "progression_name": ""
-        },
-        "fae8207e-c42b-43bc-8823-f54c1e852d1f": {
-          "description": ""
         },
         "8da670fc-d91b-438b-af07-2227156fdbcd": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "0943ed04-7b7a-4fb5-bd13-4b161ae01a10": {
-          "description": ""
-        },
-        "a8ff2adf-b2f8-4f4f-95e0-b5359f05d5a1": {
-          "name": "",
-          "description": ""
-        },
-        "e5383470-2d93-4397-8b18-f20fab514dc8": {
-          "description": ""
-        },
-        "8eb3cfe4-f3ab-424c-9d8f-ff0ea5c748b0": {
-          "description": ""
-        },
-        "c4594eb3-a313-4824-a608-4558d7783967": {
-          "name": "",
-          "description": ""
-        },
-        "0f55318a-9350-4f33-9115-ce26a385b2cc": {
-          "description": ""
-        },
-        "629557ce-edc5-48db-84e8-01607326b3a7": {
-          "description": ""
-        },
-        "3b7964c2-eedc-4b74-b6a7-36bb53103ebb": {
-          "description": ""
-        },
-        "559ae837-70d4-4f81-9bc2-8fe324e25d4c": {
-          "description": ""
-        },
-        "50a970c1-25cb-4963-9fbb-d1e4d0cde934": {
-          "description": ""
-        },
-        "373c20f4-965e-4cd1-9a60-6fbb186da8c9": {
-          "progression_name": ""
-        },
-        "f2a40f03-0400-4522-b5d6-8349034c6ebb": {
-          "progression_name": ""
-        },
-        "dfa4b1ec-4f9f-4ec1-9c42-613c82405096": {
-          "progression_name": ""
         },
         "1b28522d-bf63-4f09-94a2-a80833819a38": {
           "tips": [
-            ""
-          ],
-          "progression_name": ""
-        },
-        "e5ee8618-9583-4051-800d-77533b6f3aeb": {
-          "description": ""
+            null
+          ]
         },
         "f1aefb0a-3a33-499b-9ea6-fc842ba895de": {
-          "name": "نشاط تحضيري",
-          "description": ""
-        },
-        "e6758c0a-aa26-4f7b-90be-74af14a65f08": {
-          "description": ""
-        },
-        "0cec8268-ee2a-4fd7-8657-f6842a690250": {
-          "description": ""
+          "name": "نشاط تحضيري"
         },
         "9492e63b-28f6-41b5-89b9-5f1d611186a1": {
-          "name": "نشاط",
-          "description": ""
+          "name": "نشاط"
         },
         "5b3b512d-42b8-4c2f-bbb3-7ebad7908e62": {
-          "name": "",
-          "description": "",
           "tips": [
-            ""
+            null
           ]
         },
         "fc716fb8-1b76-44d6-9565-f114f18721f1": {
-          "name": "",
-          "description": "",
           "tips": [
-            ""
+            null
           ]
         },
-        "634f8028-b334-41a4-adf4-066a3cbdca70": {
-          "description": ""
-        },
         "c9458a29-f135-4840-aae0-37c35f2bfa52": {
-          "name": "الإنهاء",
-          "description": ""
+          "name": "الإنهاء"
         },
         "847d4606-cf5c-4060-ab5c-2870853447a3": {
-          "name": "نشاط تحضيري",
-          "description": ""
-        },
-        "9307abba-1ef4-4f09-83a0-15ef65092efb": {
-          "name": "",
-          "description": ""
+          "name": "نشاط تحضيري"
         },
         "3bc8e042-f19f-4233-bebc-baccef07881b": {
-          "name": "",
-          "description": "",
           "tips": [
-            ""
+            null
           ]
         },
         "892bacbf-54ca-4447-8e4e-c711765fcd7d": {
-          "name": "الإنهاء",
-          "description": ""
+          "name": "الإنهاء"
         },
         "934317da-7e33-4f20-ad76-9f06d203b1a6": {
-          "name": "نشاط تحضيري",
-          "description": ""
-        },
-        "98870cc8-6814-4575-8c24-84c411f7abe0": {
-          "name": "",
-          "description": ""
+          "name": "نشاط تحضيري"
         },
         "dc5dddbb-40bf-41e0-be7e-51b41edf1337": {
-          "name": "",
-          "description": "",
           "tips": [
-            ""
-          ],
-          "progression_name": ""
-        },
-        "012de36b-d70f-4565-b9db-40aa68d7c253": {
-          "description": ""
+            null
+          ]
         },
         "065f7419-b028-4610-b0c4-671f2ec86590": {
-          "name": "الإنهاء",
-          "description": ""
+          "name": "الإنهاء"
         },
         "9e4ffdd6-9a34-453b-953c-23f4e0516b0f": {
-          "name": "نشاط تحضيري",
-          "description": ""
+          "name": "نشاط تحضيري"
         },
         "4af3f898-21e4-4ed3-bbc6-ca4686c46f7a": {
-          "name": "",
-          "description": "",
           "tips": [
-            ""
-          ],
-          "progression_name": ""
-        },
-        "4e07d8e0-365e-460c-8a0d-2ce30b76c7b3": {
-          "name": "",
-          "description": ""
+            null
+          ]
         },
         "2df922c9-a79a-4e9f-a4e5-003cee501451": {
-          "name": "الإنهاء",
-          "description": ""
+          "name": "الإنهاء"
         },
         "73c0c357-7096-42d6-b457-e88276905578": {
-          "name": "نشاط تحضيري",
-          "description": ""
+          "name": "نشاط تحضيري"
         },
         "15cc22f5-50bf-4102-843a-7f9246727869": {
-          "name": "",
-          "description": "",
           "tips": [
-            ""
+            null
           ]
         },
         "1f35f92d-5556-4137-a1e6-38c31a3a719f": {
-          "name": "الإنهاء",
-          "description": ""
+          "name": "الإنهاء"
         },
         "f5c2056c-f519-4991-a58b-f22058fbaa9d": {
           "name": "تأملات",
-          "description": "",
           "progression_name": "تأملات"
-        },
-        "8dfe8ac3-a027-4125-8474-9ac0e5bee77e": {
-          "description": ""
         },
         "9819f2db-593b-4631-96e8-ad45aba59e08": {
           "tips": [
-            ""
-          ],
-          "progression_name": ""
+            null
+          ]
         },
         "a6722c40-2f55-4b5c-8ffa-f9e3982f232b": {
           "tips": [
@@ -23169,775 +19831,313 @@
             null
           ]
         },
-        "a48c9e93-5e4f-4d2f-8dfa-60efd0b084ef": {
-          "description": ""
-        },
-        "48127896-3722-4288-ba60-9b0bc14e3c1b": {
-          "description": ""
-        },
         "c55d809b-5128-4cba-82bf-3bf0e51aec06": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "c7ee926a-19b5-45b6-a0a7-3e9d6699e9ce": {
-          "description": ""
-        },
-        "5c1f9e0d-0ea4-4cd8-bbcf-693a8a546e80": {
-          "description": ""
-        },
-        "692fa31e-7394-45e4-9df4-9136bd7f1ef7": {
-          "description": ""
-        },
-        "fef149c4-da5f-4737-806d-cee5311c12f2": {
-          "name": "",
-          "description": ""
-        },
-        "aeb0ec32-aea0-4bfd-82de-d37b71b2075c": {
-          "description": "",
-          "progression_name": ""
         },
         "1265c20c-95ab-4c34-b8fc-b3532b088415": {
           "name": "تصفّح مواقع الويب",
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "13a35f1c-deed-4a3d-9dd2-be2b7f6e5333": {
-          "description": ""
-        },
-        "5f55a18c-a9cc-4cbb-96ea-55eb630fdf3f": {
-          "description": ""
         },
         "c1050c6d-1379-4f81-ab69-6f00bbfb363a": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "d621ad85-b16c-458c-8473-abe27aef3168": {
-          "name": "",
-          "description": ""
-        },
-        "a5c12f54-2e19-46af-a21d-db66b8318787": {
-          "description": ""
         },
         "248256b0-de8c-4fcf-8f60-58492ef07802": {
-          "name": "",
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "bfa97d60-7eba-481f-b055-1d2ed1207fe9": {
-          "description": ""
         },
         "f6a64a6e-ab8a-4258-b3cc-57707696fd6c": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
         },
-        "c9391ac2-6364-4957-ae92-c6bbd6b0cc11": {
-          "description": ""
-        },
-        "8410909f-137b-47cf-bf22-7001ab81d9b2": {
-          "description": ""
-        },
-        "d1123153-e61b-4554-accf-c057d9e6672b": {
-          "description": ""
-        },
-        "7a3cc0d5-ec23-4a25-9428-268f620ddf17": {
-          "name": "",
-          "description": ""
-        },
         "3af02eab-916a-4774-8a13-5a420dd53fc5": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
         },
         "2ca0bf9a-5cd6-4beb-8b48-d788ad425fa7": {
           "tips": [
-            ""
-          ],
-          "progression_name": ""
+            null
+          ]
         },
         "08e81098-b771-4c82-bb64-9108ece6c97c": {
-          "description": "",
           "tips": [
-            ""
-          ],
-          "progression_name": ""
+            null
+          ]
         },
         "693d5350-e425-4ae5-926e-85984858fb31": {
           "tips": [
-            ""
-          ],
-          "progression_name": ""
+            null
+          ]
         },
         "470c3268-f70d-43ac-831f-b37c3103531b": {
-          "description": "",
           "tips": [
-            ""
-          ],
-          "progression_name": ""
+            null
+          ]
         },
         "1d5ddfcc-e375-4d04-9822-019d51c5272d": {
           "tips": [
-            ""
-          ],
-          "progression_name": ""
+            null
+          ]
         },
         "73435ea5-4c6f-4317-b21a-4fc9c732a4bf": {
           "tips": [
-            ""
+            null
           ],
           "progression_name": "التقييم"
         },
         "579df0b6-aebc-48d8-9ac3-427a2c04e61f": {
           "tips": [
-            ""
+            null
           ],
           "progression_name": "تحدي"
         },
         "b883c2e6-ca65-4053-b848-046bdfbb2a38": {
-          "name": "تأملات",
-          "description": ""
+          "name": "تأملات"
         },
         "7d15a1cb-357e-419d-b469-608585606064": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "d9c6c38b-5e56-4632-bffd-b90416bc9e3a": {
-          "description": ""
-        },
-        "a96a699b-d8d1-4a85-862b-64ea97193f5b": {
-          "description": ""
-        },
-        "39414af8-86bb-4ab7-8ee3-f1790aee342b": {
-          "description": ""
-        },
-        "e5b0e53d-5c21-4315-a91f-f903cc340ad8": {
-          "description": ""
         },
         "83d7613a-c741-4d4a-9dcd-993ab08aa61d": {
-          "name": "",
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "552e474b-947e-42e6-843f-5773cd440a41": {
-          "description": ""
-        },
-        "fde80161-cf61-46a3-8f1e-136bf92adafd": {
-          "description": ""
         },
         "970d404e-3aef-4384-88d6-da840d2bd8ca": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "3241d5aa-2d32-4c9b-a432-c5f5f24da2c6": {
-          "description": ""
-        },
-        "e32cc803-2dfe-4291-adf2-c3067aa47c80": {
-          "description": ""
         },
         "ec491dbb-ef99-4e6e-9abf-f1f90c22e838": {
           "name": "البرمجة الزوجية",
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "ddb7f09c-b9f6-4a84-bb26-3abd9a9294ff": {
-          "description": ""
-        },
-        "4b49ed96-4d51-4f8a-a926-4475a76529fc": {
-          "description": ""
         },
         "8ae3516e-e6e2-4401-afc1-4ddfb1f1312b": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
         },
-        "52fd4953-d84b-4892-a256-4792347224e0": {
-          "description": ""
-        },
-        "52aeb427-5dad-444d-a251-86e1fb832f6d": {
-          "name": "",
-          "description": ""
-        },
         "77578c68-97e0-4ef5-a4a5-75c5c0d5bcc1": {
-          "description": "",
           "tips": [
-            ""
-          ],
-          "progression_name": ""
+            null
+          ]
         },
         "27e7e382-bef2-4576-94b2-15f081c1c260": {
           "tips": [
-            ""
+            null
           ],
           "progression_name": "بناء المهارات"
         },
         "415a1a02-00ce-4eee-9af3-bcddf1369b79": {
           "tips": [
-            ""
-          ],
-          "progression_name": ""
+            null
+          ]
         },
         "f5c13deb-a9a7-4f04-9daa-ec92ec261b02": {
-          "description": "",
           "tips": [
-            ""
-          ],
-          "progression_name": ""
-        },
-        "b9b617ce-f9b9-4d30-90ae-0ecb111821d7": {
-          "progression_name": ""
+            null
+          ]
         },
         "d3b01200-6f32-4a93-be82-df50df4e8221": {
           "progression_name": "التقييم"
         },
-        "499a4b6c-eccd-4c51-a6db-17c2c9a0801a": {
-          "progression_name": ""
-        },
-        "86e13822-ef3f-4ec1-981a-e8b90ef192ab": {
-          "name": "",
-          "description": ""
-        },
         "1db390c3-2d64-4581-a038-c4dd0f7226ee": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "9236a3c6-101b-41e3-9696-62b0e0bcfe95": {
-          "description": ""
-        },
-        "ec9d873f-eb15-42ae-b9cd-a291ddaca6e2": {
-          "name": "",
-          "description": ""
         },
         "016877a1-d391-46b7-998e-fbe9a7c12703": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "366eae3e-3558-47d9-b1af-684ae299ae52": {
-          "description": ""
-        },
-        "3e7affb7-de21-4896-b724-8e056583c6fd": {
-          "description": ""
-        },
-        "64a76ce6-6f12-4b18-b60f-bcdc6176b382": {
-          "description": ""
-        },
-        "dc1a7ae9-d6ff-465a-a192-a84f781caa63": {
-          "name": "",
-          "description": ""
-        },
-        "7fa27266-1361-4191-9a77-71b76afa3ee2": {
-          "name": "",
-          "description": ""
-        },
-        "d3dcdf17-fcf3-4c54-8ce0-bf2385c11ebf": {
-          "name": "",
-          "description": ""
-        },
-        "d30c88c0-ef5a-4b8a-9bd0-68123ecf6cb6": {
-          "progression_name": ""
-        },
-        "db6b9679-26c9-45e7-9f82-03b3a92d3abf": {
-          "progression_name": ""
-        },
-        "f1f2db2f-90f0-454f-a438-ad0ef1d6f27a": {
-          "progression_name": ""
-        },
-        "b8b06d7c-cb56-4412-85ad-c68fb0953dc0": {
-          "progression_name": ""
-        },
-        "82667ca3-ae19-4a64-a593-8b412d262586": {
-          "name": "",
-          "description": ""
         },
         "73b0e9cc-22b5-4ca2-9bff-366f69a0f35c": {
-          "name": "تعليقات الزملاء",
-          "description": ""
-        },
-        "5831c988-975f-41b0-aac2-9530489ccc10": {
-          "description": ""
-        },
-        "a167e87b-c7c9-4adc-a70d-c49dcb309bc8": {
-          "name": "",
-          "description": ""
+          "name": "تعليقات الزملاء"
         },
         "1712fd0b-563c-4ac9-b929-288bce3bbb72": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "052a4549-c1d1-4dac-ace3-074188604c3c": {
-          "description": ""
         },
         "b9efce7e-87cf-466d-8916-1ef98f26db40": {
-          "name": "البصمة الرقمية الخاصة بك",
-          "description": ""
+          "name": "البصمة الرقمية الخاصة بك"
         },
         "ec53cc7b-755c-461d-a075-16cf2ca7f1dd": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "c4655dca-e5f0-4b84-8d9b-7212f13b440f": {
-          "description": ""
-        },
-        "4c49a2d4-20e8-4c45-9abe-ff95adb5d085": {
-          "description": ""
-        },
-        "dfb7b97b-9a3b-4424-8b24-e4e1f208b5a9": {
-          "name": "",
-          "description": ""
-        },
-        "71a885a3-e705-4367-8d43-5711b5af7e8f": {
-          "progression_name": ""
         },
         "e9ffa025-70b3-4fdf-a55e-b9324e0470f2": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "2487e526-f969-4440-bea4-f970fa05528d": {
-          "description": ""
-        },
-        "f4eb6112-53c1-43fb-825c-8b064cb9af9f": {
-          "description": ""
-        },
-        "d8c2fd98-00cb-4da5-865a-517396312eec": {
-          "description": ""
-        },
-        "4ceacace-978a-4cfc-8073-7a068146ea78": {
-          "name": "",
-          "description": ""
-        },
-        "e14f1593-1162-4c12-88e3-9b6a1c7e7286": {
-          "description": ""
         },
         "69dde422-3372-406e-9efe-b1df46472d00": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "0db491eb-577a-4715-873f-1ea5a2282093": {
-          "description": ""
-        },
-        "83c158d0-11bd-4cd7-8fc7-7534dda863e4": {
-          "description": ""
-        },
-        "ea8f89ca-3e2f-435d-8b7d-53e2eb1f83cd": {
-          "name": "",
-          "description": ""
-        },
-        "274e44d0-b3dd-47d0-bec2-7878f59d38fd": {
-          "description": ""
         },
         "3412213d-9a22-470e-859c-66b9a752d6bb": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "716adb76-8da2-4226-9ab8-2a57536da9a6": {
-          "description": ""
-        },
-        "e205ebdc-a224-4b80-9e0a-290dadcd0ab2": {
-          "description": ""
-        },
-        "3da6f5d8-fc89-457f-9466-1f539cb9f55b": {
-          "name": "",
-          "description": "",
-          "progression_name": ""
         },
         "0fb9d1d3-097c-4ce5-b276-aa71c839c82f": {
           "tips": [
-            ""
+            null
           ],
           "progression_name": "استكشاف"
         },
-        "cd1f7371-824e-4e5b-b9c6-947a9c38572d": {
-          "description": ""
-        },
         "029f4c9c-3f40-458c-8480-b677aee2c5f5": {
-          "description": "",
           "tips": [
-            "",
-            ""
-          ],
-          "progression_name": ""
-        },
-        "111d1cba-08a3-4658-bb00-cb5e3c52427e": {
-          "description": ""
+            null,
+            null
+          ]
         },
         "8c1fda37-7107-43e8-92ad-60e7fc6d2d7d": {
           "progression_name": "بناء المهارات"
         },
         "bc3aac22-e4eb-4c6f-9b69-60cb02414ac9": {
-          "description": "",
           "tips": [
-            ""
-          ],
-          "progression_name": ""
+            null
+          ]
         },
         "d9a4b1da-84da-40b3-a256-bbd4223652cd": {
           "progression_name": "بناء المهارات"
         },
-        "497dd6c0-f7ae-4c32-a6b2-086a26b849b6": {
-          "progression_name": ""
-        },
         "3d52ed72-b57b-4d05-902a-c9daceffadc6": {
           "tips": [
-            ""
+            null
           ],
           "progression_name": "التقييم"
         },
         "3a9a8696-72e3-4e6f-9812-59e180a16192": {
           "tips": [
-            ""
-          ],
-          "progression_name": ""
+            null
+          ]
         },
         "727aa204-0664-456f-b5fc-1f6409b65e88": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "655444e5-8cbb-4ba3-9b9a-76c1bd9473f3": {
-          "name": "",
-          "description": ""
         },
         "39d79388-46f2-4f41-839d-c2bc3002d969": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "6b222417-5594-4fd8-b943-3a43810b6cab": {
-          "description": ""
-        },
-        "743c31d1-cc99-468e-9152-2fe251370f2f": {
-          "description": ""
-        },
-        "5572ccc6-7ab9-4dca-a02c-8ecd22e87705": {
-          "name": "",
-          "description": ""
         },
         "4662cf38-bec5-4f63-9f2d-237617407f0f": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "34b6bea7-f311-4ca7-9f74-61eb2de89d85": {
-          "description": ""
-        },
-        "7a747047-71f8-4a20-a01d-08a0e043207c": {
-          "description": ""
-        },
-        "6dc9f036-e336-44a3-b163-9ca08d321bb6": {
-          "description": ""
-        },
-        "c4f6d157-8bd5-40ec-98a9-65cd3d968b8c": {
-          "name": "",
-          "description": ""
-        },
-        "d37f1e1e-0f76-4f17-b871-cd5233590f47": {
-          "name": "",
-          "description": ""
         },
         "36889d4b-1b66-4a46-bd52-8e5464d17f96": {
-          "name": "",
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "58f32e0f-f519-4eae-9c0c-a5cd428869b2": {
-          "progression_name": ""
-        },
-        "f52e5e03-5b2f-4caf-8c69-868f7c2acdbc": {
-          "progression_name": ""
-        },
-        "81ab793a-d696-4167-a9db-9258e5f476b4": {
-          "progression_name": ""
-        },
-        "5c1f865c-e956-43d3-aac9-e6cf1a18c1b9": {
-          "progression_name": ""
-        },
-        "30535418-4101-4313-b0f2-fb2afdde6b62": {
-          "progression_name": ""
-        },
-        "16a4d86c-4053-4aee-a16a-c2418ab69bd8": {
-          "name": "",
-          "description": ""
         },
         "c48b651f-340a-4ea2-baae-aebee2dc69ff": {
-          "name": "تعليقات الزملاء",
-          "description": ""
-        },
-        "3656d6a8-efb7-4950-97ee-4415833d7ec8": {
-          "name": "",
-          "description": ""
+          "name": "تعليقات الزملاء"
         },
         "8c10515f-4ba5-4629-b5e0-e44975336298": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "e8cf01fc-667f-46b0-a1f6-2a5b27f5c597": {
-          "description": ""
-        },
-        "fef614e1-ce46-4fe4-a713-7cd4394c1332": {
-          "name": "",
-          "description": ""
         },
         "3356cda1-c8fe-4475-aaf6-1361379c848f": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "cc6c7ed6-ebad-4438-9198-e25fa7d61234": {
-          "description": ""
         },
         "fe6c8d53-4cc0-4bbb-8ffe-8cc1432e522b": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
         },
-        "36bd75d0-1aa9-4fd5-82f7-84b15aa6c2f0": {
-          "description": ""
-        },
-        "29bd3aba-9e14-4d7d-b88c-54ea4d67f323": {
-          "description": ""
-        },
-        "2822dc84-309f-40d5-91c8-f7e68188487c": {
-          "name": "",
-          "description": ""
-        },
-        "51ea51b8-4f71-49d9-8eac-f6118f5364cf": {
-          "description": ""
-        },
-        "0a1fb44a-12cf-4dd2-ab20-acf365289d46": {
-          "description": ""
-        },
         "f8a65f45-b4db-4f6f-9a20-b4ef89910159": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
         },
         "957ba0ee-6412-418d-bb42-811c2ea546cc": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "ef076e07-e82a-4f80-9bb1-0b1d811c0b1b": {
-          "description": ""
         },
         "353b9fc5-832d-4961-ab5e-4c59f80c104d": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "038ca026-dab7-4b7a-8c7b-c6266154edcf": {
-          "description": ""
-        },
-        "d5a7f547-8873-4260-b32e-b863b2dc5b29": {
-          "name": "",
-          "description": ""
-        },
-        "aba827e0-c4a3-455f-9c37-d7d46c47ea2e": {
-          "description": ""
         },
         "6ff6d697-74a4-41a2-91a3-4ef817ceff84": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "47e36a31-e0c8-4fee-b730-e8c5050fa8b6": {
-          "description": ""
-        },
-        "220d7407-a765-403f-b90f-528d428db6a6": {
-          "description": ""
-        },
-        "48accbcd-e23c-4d31-aa68-baed73694793": {
-          "name": "",
-          "description": ""
         },
         "2c7139b2-bd78-402d-9d57-1191bfcf3d3c": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
         },
-        "992521a5-bde4-4478-91be-3b6a5344bacd": {
-          "description": ""
-        },
         "42f4e940-4ca1-41ce-9efc-c9147fb84229": {
-          "name": "",
-          "description": "",
           "tips": [
-            ""
+            null
           ]
         },
         "f69595ea-98fa-4c39-9686-6916ab265ab4": {
           "progression_name": "بناء المهارات"
         },
-        "397c0b58-b779-4a76-afd5-4592332a561c": {
-          "description": ""
-        },
         "cf0abcbd-3e9a-4964-9cb3-de8d7b5bec52": {
           "tips": [
-            ""
-          ],
-          "progression_name": ""
+            null
+          ]
         },
         "168bbc11-2203-44d6-88fc-e6be6c05180b": {
           "tips": [
-            ""
+            null
           ],
           "progression_name": "التقييم"
         },
-        "125e32e7-13c6-48a9-8fcb-b8635d079ecf": {
-          "progression_name": ""
-        },
-        "869d287c-19c3-4e38-83bf-0498821d1157": {
-          "name": "",
-          "description": ""
-        },
-        "5135be5c-3b48-41fd-90f9-a9c70a323590": {
-          "description": ""
-        },
-        "f3996d83-1be3-4964-8f5d-6ca80974d7e2": {
-          "name": "",
-          "description": ""
-        },
         "59343467-2b51-47a0-a2af-2f1357b5e3ba": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "384ab1ae-3b23-4ee4-bb78-19e695c63015": {
-          "description": ""
-        },
-        "9f949a84-aa34-4646-9ce1-132bf89514f0": {
-          "description": ""
-        },
-        "1296352e-2e42-45a9-a7c7-2cbc4e7f5689": {
-          "name": "",
-          "description": ""
-        },
-        "1bead7d0-5102-4ba1-9de7-3c9366841210": {
-          "description": ""
-        },
-        "8aaf1b58-dda9-4a40-a345-cf5179d83904": {
-          "description": ""
         },
         "bf7e752c-b96b-4416-b4cd-f3af71a59035": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "e4261b9d-c28d-451a-9e05-ced5dc5f1659": {
-          "description": ""
-        },
-        "0243ad63-e883-4d8a-b2f9-8d0b646cf48d": {
-          "description": ""
-        },
-        "25dba02a-ff28-4ae0-b4d1-6d90b1d545ba": {
-          "description": ""
-        },
-        "890f7764-695b-4258-acbb-9b7e29804fc5": {
-          "progression_name": ""
         },
         "f694e569-1f2b-40ac-8e46-0439d6b12551": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "30cecc18-d9a2-4653-967d-0c73584a3390": {
-          "description": ""
-        },
-        "6f94a537-b863-41a9-9112-04b40d781104": {
-          "name": "",
-          "description": ""
         },
         "15cd087e-202a-4116-9feb-708690d683a2": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "35a6e056-5d49-4122-bb4d-05651dcdea5a": {
-          "description": ""
-        },
-        "1440eec7-adb9-4275-b750-cd69a18005a4": {
-          "description": ""
-        },
-        "880281a5-a3bc-4ac7-8712-87fb7a79ee31": {
-          "description": ""
-        },
-        "43eef65b-6395-4536-9c23-694a4c12ce55": {
-          "description": ""
-        },
-        "149e485f-35bf-40c0-b2bd-f32a5e23c5bc": {
-          "name": "",
-          "description": ""
         },
         "0c2abb8a-e980-4137-bca7-7af46bb7b629": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "4b780102-cec7-4198-8182-6c47ee8c7511": {
-          "description": ""
-        },
-        "e718e826-2624-47b2-a10f-d185cab3dfa3": {
-          "description": ""
         },
         "c816e4df-5e8b-4408-844a-1346d1f42700": {
-          "name": "",
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "5b7dc4f0-181c-44f8-af21-9dfd8a5edb26": {
-          "progression_name": ""
         },
         "cbb6abd1-911a-4ea4-b133-78742425ccbc": {
           "progression_name": "استكشاف"
@@ -23945,389 +20145,145 @@
         "e26e14a3-6dad-4328-82ae-39649c0e2970": {
           "progression_name": "بناء المهارات"
         },
-        "6fd29f2b-af40-4cc1-89c1-1f25aab27647": {
-          "progression_name": ""
-        },
         "60bf9811-2a1c-4ff5-8986-082f04512e85": {
           "tips": [
-            ""
+            null
           ],
           "progression_name": "التقييم"
         },
-        "fa81a49c-8be7-43ac-92fe-cbc509b0970c": {
-          "progression_name": ""
-        },
-        "1c2ae083-6309-42cf-8c70-0988461e549b": {
-          "description": ""
-        },
-        "6fbd3fb6-e29a-45ef-8b5b-d389ae4f5800": {
-          "description": ""
-        },
-        "411e5353-2fbf-4061-bef1-aac7c9964654": {
-          "description": ""
-        },
         "0bb5cdfb-1e6b-44df-9d3f-7a1f0bfcab33": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "964298df-2ee6-4599-b083-443043b27e80": {
-          "description": ""
-        },
-        "d9a91abd-47dc-4c64-bf0d-d3ad71bae66c": {
-          "description": ""
-        },
-        "a4d0e27a-435a-45bd-90df-4bbec9637f31": {
-          "name": "",
-          "description": ""
-        },
-        "c59b5fcd-d561-4a97-acdb-e8b4e189c040": {
-          "name": "",
-          "description": ""
         },
         "cc6a79fc-1951-4e82-8952-39b9a662aca5": {
-          "name": "",
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "4c8f3dd3-5f9e-4ba9-b560-8516e918e45f": {
-          "name": "",
-          "description": ""
         },
         "b363e7a6-4522-46c8-99b8-c7a1db5936b7": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "f293f068-51c1-4293-ab2f-0a8731d8ad4f": {
-          "description": ""
-        },
-        "d54afce7-f6a7-4593-af30-3a118333c846": {
-          "description": ""
-        },
-        "b026c0db-9a6a-4c60-8fa5-8964a21ebd9f": {
-          "name": "",
-          "description": ""
         },
         "710ee97e-1fb7-429d-a724-cb0a92f72425": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
         },
-        "491aad33-b3c4-4c36-887a-0df138c18ddd": {
-          "description": ""
-        },
         "793b6091-27f6-48c5-9b0c-b02534f8bc79": {
-          "name": "",
-          "description": "",
           "tips": [
-            ""
+            null
           ]
         },
         "8b6eb0b5-4aba-4b1e-8c0b-5ef7c4035ae1": {
           "tips": [
-            ""
-          ],
-          "progression_name": ""
-        },
-        "ca2ccd24-0a7e-4ce6-8cd1-72d599a19cd7": {
-          "progression_name": ""
+            null
+          ]
         },
         "f82407b3-02da-446b-9c56-6e11c8f2df36": {
-          "description": "",
           "tips": [
-            ""
-          ],
-          "progression_name": ""
-        },
-        "21f831a9-7123-4982-b5fb-d37eadd0df25": {
-          "progression_name": ""
+            null
+          ]
         },
         "ff09ae02-5fc8-4ac3-9e08-18a25ffd0d76": {
-          "name": "استعراض النظراء",
-          "description": ""
-        },
-        "6b3cfe52-1dd0-4a4c-8de2-360db4cd636d": {
-          "name": "",
-          "description": ""
-        },
-        "4c77683d-f5ce-4793-a6b2-7b99901aaa77": {
-          "name": "",
-          "description": ""
-        },
-        "0792fa5e-646b-4a0f-b83d-19d7683ecaed": {
-          "name": "",
-          "description": ""
-        },
-        "de945d97-6003-41a8-aa24-26bc06841303": {
-          "name": "",
-          "description": ""
-        },
-        "83101615-6d17-4c95-b86d-8275cdf19921": {
-          "description": ""
-        },
-        "59bb1048-4c00-4d84-b98d-a9ce8a302d72": {
-          "name": "",
-          "description": ""
+          "name": "استعراض النظراء"
         },
         "10b08619-0a72-442e-a75e-13b6cead2e90": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
         },
         "bb76c259-62ef-49ef-9b8c-d0ca91a380a7": {
-          "description": "",
           "progression_name": "تأملات"
         },
-        "67268b30-70fb-48cd-87f0-76e9187bdf1f": {
-          "description": ""
-        },
         "20f18101-28c1-43ff-835a-9b098f7a5b9c": {
-          "name": "",
-          "description": "",
           "tips": [
-            ""
+            null
           ]
         },
         "887eb66a-9701-4ec2-961e-2df7358980f6": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "8f260b2d-3718-492f-b75b-fa99597fef18": {
-          "description": ""
-        },
-        "8faac7b6-fb5b-4b94-982a-f7c8188bca44": {
-          "description": ""
-        },
-        "fb115984-94cf-4127-a53a-43a973865616": {
-          "name": "",
-          "description": ""
-        },
-        "4e4b8bec-4263-4163-9bad-dee99822db2a": {
-          "progression_name": ""
-        },
-        "050b41d5-f6a2-41e0-89e7-8bd3139dae2f": {
-          "description": ""
         },
         "d2fbc09d-cec0-4514-ba77-b635cc9379d5": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "272735d4-bd69-48d9-b443-dbe7055d5ec9": {
-          "description": ""
         },
         "286dd512-4c7c-42ec-8028-428a89833572": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "0635e0b2-714a-4200-a9d1-56a791801297": {
-          "description": ""
-        },
-        "e9f0bd2a-f77d-4011-82d6-906f22197bdf": {
-          "description": ""
-        },
-        "da79aa9d-2640-4ffb-a31d-4438be9d202a": {
-          "description": ""
         },
         "f410b7cd-fcb4-42ac-9ba6-517b2a8db144": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "3ccc5800-d573-4f7b-bc43-4f6bf8f44f86": {
-          "description": ""
         },
         "f8ec8428-8030-4f3d-a42a-ace8a6526a70": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "983ec108-269d-4bf4-9055-32d7d2d81aff": {
-          "description": ""
         },
         "d328ac00-0ae4-43b4-ac6b-09b544bdf673": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "c64b50ca-4c2f-4bce-a068-3f91a65f3e2e": {
-          "description": ""
-        },
-        "02fff604-7ee5-4a4f-86fa-d44f20ba9cab": {
-          "description": ""
-        },
-        "a83111b2-bf6f-44d7-9542-f8bd4e0006c4": {
-          "description": ""
         },
         "fe322a4b-9393-40e7-92fe-8314928d0203": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "29baaa33-951f-4b1d-8fff-84f6185fa513": {
-          "description": ""
-        },
-        "e877f46e-2546-45c8-b3da-ec38677cacf9": {
-          "description": ""
         },
         "4e9b0621-b725-4913-8938-757f111a9ce6": {
-          "description": "",
           "tips": [
-            ""
-          ],
-          "progression_name": ""
-        },
-        "bb3e2187-2b04-4e47-8304-3eae1e02d9c7": {
-          "description": ""
-        },
-        "912b3e51-d92c-4f07-95ce-781a726e07b3": {
-          "name": "",
-          "description": ""
+            null
+          ]
         },
         "43da857d-e2ac-4797-b205-4bc8e5b274c8": {
-          "name": "",
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "4f9eedee-cf7c-4a28-a68c-294d1a5060b1": {
-          "description": ""
-        },
-        "82adee1c-1ccb-493b-89e8-f9e05f691574": {
-          "name": "",
-          "description": ""
-        },
-        "7a0f9024-6d07-4372-bfad-439082fecd46": {
-          "description": ""
         },
         "52a7434e-fca4-48af-9aa8-61086949bb98": {
-          "description": "",
           "tips": [
-            ""
-          ],
-          "progression_name": ""
+            null
+          ]
         },
         "4145fe6b-15f3-4528-91b5-726f4cffd9b5": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "43bb329a-86ef-46f8-a276-126437f08d74": {
-          "name": "",
-          "description": ""
-        },
-        "6bf100e0-3cb3-45d3-b4f9-58fe77be8d7d": {
-          "name": "",
-          "description": ""
-        },
-        "07580a67-ba7d-4b21-b44b-5f1fb09038d7": {
-          "description": ""
-        },
-        "5d73aca1-2634-43e5-b541-b45f78746f8c": {
-          "name": "",
-          "description": ""
         },
         "49bb4251-eaa1-423c-9bfd-ec0f6113f83e": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "b44dcba5-da3f-4ca8-a490-ae811b7299d1": {
-          "description": ""
-        },
-        "aa1e95e2-41b2-4f89-9f46-8ecaee042a86": {
-          "description": ""
-        },
-        "9fc461a9-7e23-42ba-858c-301c3a8b31fe": {
-          "description": ""
         },
         "229abe84-ae59-45f1-915e-681805560ab1": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "2f979aac-0d3b-4f36-ae61-7ce65731967f": {
-          "description": ""
-        },
-        "96f9e813-1e45-4708-90fc-5cd09101faf6": {
-          "name": "",
-          "description": ""
-        },
-        "59e2dfbe-ec86-436d-91b0-5d19554ed462": {
-          "description": ""
-        },
-        "b66bd9e2-03dd-4f20-925e-c0f6350831fe": {
-          "name": "",
-          "description": ""
         },
         "73c708b0-4bce-4d0c-8aef-d4383cbb24f5": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "77e4cad0-e298-4a93-bbb1-5de9f8ca7ca9": {
-          "description": ""
-        },
-        "6a799e5e-d77a-4c80-bdd4-713e6a4d9760": {
-          "name": "",
-          "description": "",
-          "progression_name": ""
         },
         "136308c1-5aa0-4820-afe0-a16252ba6c74": {
           "tips": [
-            ""
+            null
           ]
-        },
-        "01a5973e-7096-468e-b640-899767928b23": {
-          "name": "",
-          "description": ""
-        },
-        "6a1f16c8-cae3-41fe-a10f-62e69a936dc2": {
-          "description": ""
-        },
-        "cb743363-7f60-4fc8-9fa3-af3ab23ec321": {
-          "name": "",
-          "description": ""
         },
         "c986ac31-a9e4-4fbb-8203-f8dd207cfed9": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
         },
-        "a137f363-db20-45d9-8ee1-44b2161ceb64": {
-          "description": ""
-        },
-        "18c9029a-3757-4033-ba16-6daad297eec5": {
-          "description": ""
-        },
         "287a07a0-cdbc-4680-8733-69515c67c54b": {
-          "name": "الفصول الدراسية",
-          "description": ""
-        },
-        "8d36fb80-6b63-4f51-a57c-76712a9d5d7d": {
-          "progression_name": ""
+          "name": "الفصول الدراسية"
         },
         "39d43b4f-8e5c-4459-9592-b9a44cd41c4d": {
           "progression_name": "استكشاف"
@@ -24335,109 +20291,37 @@
         "6a056ff0-2cca-4983-bfe6-a78771cae232": {
           "progression_name": "بناء المهارات"
         },
-        "a7488505-0cbe-4c90-83cd-481891cac662": {
-          "progression_name": ""
-        },
         "d22a9dfb-fec1-43bb-add2-c76ec1a76f2a": {
           "tips": [
-            ""
+            null
           ],
           "progression_name": "التقييم"
         },
-        "5aa91065-3f4e-409f-9f3e-14bd98649ef5": {
-          "progression_name": ""
-        },
-        "d2c208eb-49ed-4b4b-9a5f-5d51bda3d3f4": {
-          "name": "",
-          "description": ""
-        },
-        "dceb3758-3a1b-47bb-9c0d-a815cbd4c16a": {
-          "description": ""
-        },
-        "82ae3bfa-978b-47d3-9aed-a7a48b47f282": {
-          "description": ""
-        },
         "ada4d5c1-50ee-446a-85c6-d61dd4d3221f": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "047e22de-8f8d-46bc-b3ce-b48d570b70cc": {
-          "description": ""
-        },
-        "fd6e46c1-3c4d-45d8-819f-1622e8280317": {
-          "description": ""
-        },
-        "5d28ad11-7626-46cc-8848-1aaab17dbbd5": {
-          "description": ""
         },
         "05ee8316-106b-4b34-9138-d1ceca375a8f": {
-          "name": "لمحة عامة",
-          "description": ""
+          "name": "لمحة عامة"
         },
         "410e0287-5cfd-4bc9-945a-4c1d330d795e": {
-          "name": "",
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "1dde8dc9-5478-4477-9e8d-0e4ce134c5a5": {
-          "name": "",
-          "description": ""
-        },
-        "7719e9d6-bd0d-4266-b2ad-1a38ef6f4ca8": {
-          "name": "",
-          "description": ""
-        },
-        "e86a4625-8675-4c17-9063-90f8f3399390": {
-          "description": ""
-        },
-        "967af757-c353-4f6b-bbe2-493cb9d31fa1": {
-          "name": "",
-          "description": ""
-        },
-        "28d6755d-32ea-439a-91b0-a36f90e3dc83": {
-          "name": "",
-          "description": "",
-          "progression_name": ""
-        },
-        "06b391d9-3723-444d-9c93-882c4f22a1ad": {
-          "name": "",
-          "description": ""
         },
         "754d0467-6e5e-45c8-8692-2fab52c45548": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "29715d83-b2b1-4cfb-b72a-494bb7a45c11": {
-          "description": ""
-        },
-        "1a13b683-5eb4-436f-b59e-bb9304d7d5a2": {
-          "name": "",
-          "description": ""
         },
         "85c3804b-17da-40f8-a088-0627011b36e7": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
         },
-        "49df1f5f-4462-48ba-ba64-1fafdc8e8536": {
-          "description": ""
-        },
-        "3f3d6e40-568d-42b7-aea3-260cba499c73": {
-          "description": ""
-        },
-        "c4e3074d-ca9e-415c-83f2-364698c96895": {
-          "description": ""
-        },
         "c78f2804-62f0-4fe5-842f-0ed415de05fc": {
-          "name": "مختبر الويب",
-          "description": ""
+          "name": "مختبر الويب"
         },
         "01cbfd4f-3493-48d9-beb3-04018d4272f3": {
           "progression_name": "استكشاف"
@@ -24445,128 +20329,46 @@
         "850ba43d-59d1-4cf8-be6c-b2c33b4b4875": {
           "progression_name": "بناء المهارات"
         },
-        "0a2cb9cf-e6bb-433b-aed9-61118385f936": {
-          "progression_name": ""
-        },
         "34f33cbb-40a2-4d61-aa69-7bf1aa7f4c81": {
           "tips": [
-            ""
-          ],
-          "progression_name": ""
-        },
-        "76186510-9804-44d1-8371-4aa2895fc16d": {
-          "progression_name": ""
-        },
-        "37b960c3-650e-4d91-9561-fea00f3a39c7": {
-          "name": "",
-          "description": ""
-        },
-        "c881299c-2798-4137-ac19-ba5e05d59340": {
-          "description": "",
-          "tips": [
-            ""
+            null
           ]
         },
-        "e066e2c1-ded6-4398-88fa-5f12947e75fe": {
-          "description": ""
-        },
-        "a40a2993-3db7-4eb7-9ef0-af6a24ddbf05": {
-          "name": "",
-          "description": ""
+        "c881299c-2798-4137-ac19-ba5e05d59340": {
+          "tips": [
+            null
+          ]
         },
         "4c27a0e8-612a-478a-a854-aa5a966c8245": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
         },
         "e1f6d250-92c8-4b01-b970-698a4eb24f7b": {
-          "name": "مختبر الويب",
-          "description": ""
+          "name": "مختبر الويب"
         },
         "8f6c023a-3dd4-4c70-8cff-a4daa7c7e497": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
-        },
-        "88207ae8-3b7d-4b0d-a2b7-7aeb01525bed": {
-          "progression_name": ""
-        },
-        "30c8efa1-9c2a-434b-8e72-474a8f38d93e": {
-          "progression_name": ""
-        },
-        "3c67e494-744f-4bc3-8068-56698fcc6c42": {
-          "progression_name": ""
-        },
-        "61b38059-437b-4b5b-a71d-e94ff04f6ae6": {
-          "progression_name": ""
-        },
-        "3db737c5-d81b-44fc-a3b1-6dd08594ce19": {
-          "progression_name": ""
-        },
-        "f6c5624d-14b2-4344-86e9-2a2da40edf31": {
-          "progression_name": ""
-        },
-        "a790523a-0a20-4ebb-a242-9f3ce72f6f2e": {
-          "name": "",
-          "description": ""
-        },
-        "913801ab-bb46-4687-a54b-6dbded08a5d8": {
-          "description": ""
-        },
-        "01c5f83f-7728-465f-b43d-1a5c9f05f982": {
-          "name": "",
-          "description": ""
         },
         "35722166-2159-4038-8c7e-7a6cc0580812": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
         },
-        "b6268c04-ffb6-41a8-ac1f-379274e18ff8": {
-          "description": ""
-        },
-        "5fc0d667-e07f-42b8-a5fd-3905077fc8df": {
-          "description": ""
-        },
-        "b53df602-a405-4fdb-87c8-16bfb1a58aaf": {
-          "name": "",
-          "description": ""
-        },
         "aca795d4-18ad-434c-91f8-cc29e3d5a96c": {
-          "name": "",
-          "description": "",
           "tips": [
-            ""
-          ],
-          "progression_name": ""
+            null
+          ]
         },
         "c11db9e7-9e8e-470f-854b-a56722d138f0": {
-          "name": "",
-          "description": "",
           "progression_name": "تأملات"
-        },
-        "4ee21f1f-e263-496a-a0b7-e224a25c2633": {
-          "name": "",
-          "description": ""
-        },
-        "ee499349-be5f-410c-950c-54c83fbe7afc": {
-          "name": "",
-          "description": ""
-        },
-        "8f3145b4-b880-44e9-986e-03a852b7e2fa": {
-          "description": ""
-        },
-        "44996062-57e4-4aee-8a38-005efe260749": {
-          "description": ""
         },
         "938b93c7-1d09-4893-a312-181b8a14a4db": {
           "tips": [
-            ""
-          ],
-          "progression_name": ""
+            null
+          ]
         },
         "9b57ac7e-ffb4-413e-9289-0799156ef3ef": {
           "progression_name": "مشاريع كمثال"
