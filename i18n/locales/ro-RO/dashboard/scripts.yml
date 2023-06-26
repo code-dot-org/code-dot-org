@@ -4112,3 +4112,10 @@ ro:
         csa-frq-practice: {}
         hoc-amazon-poc: {}
         musiclab-2023: {}
+        csa-frq-practice-2019: {}
+        csa-frq-practice-2021: {}
+        csa-frq-practice-2022:
+          lessons:
+            lesson-4:
+              name: Date
+        csa-frq-practice-2023: {}

@@ -4400,3 +4400,7 @@ ro:
             şi creați propria dvs. artă, poveste sau joc.
         self-paced-pl-csp2-2023:
           title: 'Modulul 2: Navigare prin Code.org'
+        csa-frq-practice-2022:
+          lessons:
+            lesson-4:
+              name: Date
