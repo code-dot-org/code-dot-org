@@ -381,12 +381,12 @@ FactoryBot.define do
 
       trait :with_parent_permission do
         child_account_compliance_state {User::ChildAccountCompliance::PERMISSION_GRANTED}
-        child_account_compliance_state_last_updated {DateTime.now.new_offset(0)}
+        child_account_compliance_state_last_updated {DateTime.now}
       end
 
       trait :without_parent_permission do
         child_account_compliance_state {nil}
-        child_account_compliance_state_last_updated {DateTime.now.new_offset(0)}
+        child_account_compliance_state_last_updated {DateTime.now}
       end
 
       factory :locked_out_student, traits: [:U13, :in_colorado]

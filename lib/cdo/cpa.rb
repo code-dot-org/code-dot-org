@@ -27,7 +27,7 @@ module CPA
     request,
     schedule = experiment_value('cpa_schedule', request),
     override = experiment_value('cpa_experience', request),
-    current_time = DateTime.now.new_offset(0)
+    current_time = DateTime.now
   )
     # If we detect a configuration override, use that instead.
     return override if override
