@@ -44,13 +44,13 @@ Scenario: Rendering in another language
   Then element ".multi h1" has "es-MX" text from key "data.dsls.2-3 Algorithms Multi 1.title"
 
 Scenario: Does not scroll horizontally
-  Given I am on "http://studio.code.org/s/allthethings/lessons/9/levels/2/lang/en-US?noautoplay=true"
+  Given I am on "http://studio.code.org/s/allthethings/lessons/9/levels/2?noautoplay=true"
   When I rotate to landscape
   And element ".submitButton" is visible
   Then there is no horizontal scrollbar
 
 Scenario: Can render without a question
-  Given I am on "http://studio.code.org/s/allthethings/lessons/9/levels/4/lang/en-US?noautoplay=true"
+  Given I am on "http://studio.code.org/s/allthethings/lessons/9/levels/4?noautoplay=true"
   When I rotate to landscape
   And element ".submitButton" is visible
   Then element ".multi-question" is not visible
