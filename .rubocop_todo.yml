@@ -496,12 +496,6 @@ Style/RescueModifier:
 Style/RescueStandardError:
   Enabled: false
 
-# Offense count: 37
-# This cop supports safe auto-correction (--auto-correct).
-# Configuration parameters: AllowModifier.
-Style/SoleNestedConditional:
-  Enabled: false
-
 # Offense count: 337
 # This cop supports unsafe auto-correction (--auto-correct-all).
 # Configuration parameters: Mode.

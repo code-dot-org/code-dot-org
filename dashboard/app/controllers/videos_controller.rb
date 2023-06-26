@@ -31,10 +31,8 @@ class VideosController < ApplicationController
     filename = upload_to_s3
     @video = Video.new(video_params.merge(download: "https://videos.code.org/#{filename}"))
 
-    if @video.locale != I18n.default_locale.to_s
-      unless Video.exists?(key: @video.key, locale: I18n.default_locale.to_s)
-        raise 'Non-English videos must be associated with an English video of the same key'
-      end
+    if @video.locale != I18n.default_locale.to_s && !Video.exists?(key: @video.key, locale: I18n.default_locale.to_s)
+      raise 'Non-English videos must be associated with an English video of the same key'
     end
 
     if @video.save
