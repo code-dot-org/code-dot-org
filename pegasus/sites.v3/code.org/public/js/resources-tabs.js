@@ -2,7 +2,7 @@
 // Styles that show and hide sections are in "design-system-pegasus.scss"
 // under the "div.resources-tabs" selector.
 
-const tabs = document.querySelectorAll(".tab");
+const tabs = document.querySelectorAll(".resources-tabs button.tab");
 
 tabs.forEach((tab) => {
   tab.addEventListener("click", (event) => {
