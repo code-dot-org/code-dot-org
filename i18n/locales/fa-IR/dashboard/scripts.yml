@@ -463,6 +463,7 @@ fa:
             required:
               display_name: بررسی اجمالی
         dance:
+          title: مهمانی رقص (2018)
           name: رقص
         aquatic:
           name: آبزی، آبی
@@ -1669,3 +1670,7 @@ fa:
               display_name: داده ها و شبیه سازی ها
             lessonGroup-6:
               display_name: پایان پروژه دوره
+        csa-frq-practice-2022:
+          lessons:
+            lesson-4:
+              name: داده‌ها
