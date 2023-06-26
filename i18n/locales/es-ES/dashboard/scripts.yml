@@ -7594,3 +7594,30 @@ es:
               display_name: Clases
             lessonGroup-5:
               display_name: Arreglos 2D
+        csa-frq-practice-2019:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Clases
+            lessonGroup-5:
+              display_name: Arreglos 2D
+        csa-frq-practice-2021:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Clases
+            lessonGroup-5:
+              display_name: Arreglos 2D
+        csa-frq-practice-2022:
+          lessons:
+            lesson-4:
+              name: Datos
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Clases
+            lessonGroup-5:
+              display_name: Arreglos 2D
+        csa-frq-practice-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Clases
+            lessonGroup-5:
+              display_name: Arreglos 2D
