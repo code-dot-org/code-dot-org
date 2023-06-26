@@ -334,7 +334,7 @@ class ApplicationController < ActionController::Base
     # Check that the child account policy is currently enabled.
     return unless CPA.cpa_experience(request)
 
-    # Anonymous users are affected by our Child Account Policy
+    # Anonymous users are NOT affected by our Child Account Policy
     return unless current_user
     # Don't block any user from signing out
     return if request.path == '/users/sign_out'
