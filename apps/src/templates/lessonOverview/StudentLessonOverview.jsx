@@ -18,7 +18,7 @@ import {linkWithQueryParams} from '@cdo/apps/utils';
 import Button from '@cdo/apps/templates/Button';
 import StyledCodeBlock from './StyledCodeBlock';
 import {levelWithProgressType} from '@cdo/apps/templates/progress/progressTypes';
-import {levelsForLessonId} from '@cdo/apps/code-studio/progressRedux';
+import {levelsForLessonId} from '@cdo/apps/code-studio/progressReduxSelectors';
 
 class StudentLessonOverview extends Component {
   static propTypes = {

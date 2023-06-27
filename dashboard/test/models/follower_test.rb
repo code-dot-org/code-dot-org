@@ -74,4 +74,57 @@ class FollowerTest < ActiveSupport::TestCase
     @follower.destroy
     refute CodeReviewGroupMember.exists?(follower_id: @follower.id, code_review_group_id: code_review_group.id)
   end
+
+  test 'deleting a follower removes the associated student family name' do
+    DCDO.stubs(:get).with('family-name-features', false).returns(true)
+
+    student = @follower.student_user
+    student.properties = {family_name: 'test'}
+    student.save!
+
+    assert_equal 'test', student.properties['family_name']
+
+    @follower.destroy
+    student.reload
+
+    assert_nil student.properties['family_name']
+
+    DCDO.unstub(:get)
+  end
+
+  test 'family name removal is behind the DCDO flag' do
+    DCDO.stubs(:get).with('family-name-features', false).returns(false)
+
+    student = @follower.student_user
+    student.properties = {family_name: 'test'}
+    student.save!
+
+    assert_equal 'test', student.properties['family_name']
+
+    @follower.destroy
+    student.reload
+
+    assert_equal 'test', student.properties['family_name']
+
+    DCDO.unstub(:get)
+  end
+
+  test 'deleting one of many followers keeps the associated student family name' do
+    DCDO.stubs(:get).with('family-name-features', false).returns(true)
+
+    student = @follower.student_user
+    student.properties = {family_name: 'test'}
+    student.save!
+
+    create(:follower, student_user: student)
+
+    assert_equal 'test', student.properties['family_name']
+
+    @follower.destroy
+    student.reload
+
+    assert_equal 'test', student.properties['family_name']
+
+    DCDO.unstub(:get)
+  end
 end

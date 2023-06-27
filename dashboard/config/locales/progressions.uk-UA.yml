@@ -86,6 +86,7 @@ uk:
       'Exploration: Rikki''s Poster': 'Дослідження: Плакат Ріккі'
       'Exploration: Sample Apps': 'Дослідження: Зразки застосунків'
       'Exploration: Sample Programs': 'Дослідження: Приклади програм'
+      'Exploration: Sample Project': 'Дослідження: Приклади проєктів'
       Explore HTML: Досліджуйте HTML
       Exploring more CSS: Вивчення більш CSS
       Extra: Додатково
@@ -109,6 +110,7 @@ uk:
       HTML Tags: HTML Теги
       Hardware and Software: Обладнання та програмне забезпечення
       Headings in HTML: Заголовки в HTML
+      Hello World: Привіт, світе
       How to Create a Simple Function: Як створити просту функцію
       How to Make a Sprite: Як зробити спрайт
       Hyperlinks: Гіперпосилання
@@ -165,6 +167,7 @@ uk:
       'Mini-project: Flappy Game': 'Міні-проект: Flappy гра'
       'Mini-project: Interactive Poster': 'Міні-проект: Інтерактивний плакат'
       'Mini-project: Jorge the Dog': 'Міні-проект: Собака Хорхе'
+      'Mini-project: Sticker Art': 'Міні-проєкт: Дизайн наліпки'
       'Mini-project: Sticker Design': 'Міні-проект: Дизайн наклейки'
       Modify simulation variables: Змінити змінні моделювання
       Modifying Arrays: Змінення та створення масивів
@@ -181,13 +184,14 @@ uk:
       Orientation: Орієнтація
       Overview: Огляд
       Pair Programming: Парне програмування
+      Picturing Data: Структурування даних
       Planning: Планування
       Playing with Notes: Відтворення з нотатками
       Practice: Практика
       Prediction: Прогнозування
       Programming with Rey and BB-8: Програмування з Рей та BB-8
       Programs that Repeat: Програми, які повторюються
-      Project: Проект
+      Project: Проєкт
       Project - Background and Variables: Проект — тло та змінні
       Project - Sprites and Interactions: Проект - Спрайти та взаємодії
       Project Work: Робота над проектом
@@ -235,15 +239,23 @@ uk:
       Variables: Змінні
       Velocity: Швидкість
       Video: Відео
+      'Video:  Debugging with the Step Button': 'Відео: Налагодження з кнопкою Крок'
       'Video:  Minecraft - The Agent': 'Відео: Майнкрафт - Агент'
       'Video: "If/Else"': 'Відео: «Якщо/Інакше»'
       'Video: Artist Intro with JR Hildebrand': 'Відео: Знайомство з Художником із
         JR Гільдебрандом'
       'Video: Artist Intro with JR Hildebrande': 'Відео: Знайомство з Художником із
         JR Гільдербрандом'
+      'Video: Code Your Own Flappy Game': 'Відео: Створюємо власну гру в Пурха'
+      'Video: Conditionals: If Statements': 'Відео: Розгалуження: Команда умови'
+      'Video: Conditionals: If and If/Else Statements': 'Відео: Розгалуження: Команда
+        умови Якщо та Якщо/Інакше'
+      'Video: De-bugging with the Step Button': 'Відео: Налагодження з кнопкою Крок'
       'Video: Debugging with the Step Button': 'Відео: Налагодження з кнопкою Крок'
       'Video: Events': 'Відео: Події'
       'Video: For Loops': 'Відео: цикли "повторити для кожного"'
+      'Video: Happy Maps - Unplugged Activity': 'Відео: Веселі карти - Безмашинна
+        вправа'
       'Video: How to Make a Sprite': 'Відео: Як створити спрайт'
       'Video: Ice Age Loops': 'Відео: Цикли Льодовикового періоду'
       'Video: Intro to CSS': 'Відео: Вступ до CSS'
@@ -252,9 +264,13 @@ uk:
         Відео: Вступ до веб-лабораторії - частина 1
       'Video: Intro to Web Lab - Part 2': 'Відео: Вступ до Web Lab - частина 2'
       'Video: Introducing Sprite Lab': 'Відео: Представляємо Спрайт Лабораторію'
-      'Video: Introduction to Play Lab': 'Відео: Вступ до Ігрової лабораторії'
+      'Video: Introduction to Play Lab': 'Відео: Вступ до Ігрової студії'
       'Video: Loops in Artist': 'Відео: Цикли з Художником'
       'Video: Loops with the Artist': 'Відео: Цикли з Художником'
+      'Video: Maze Intro - Programming with Blocks ': 'Відео: Вступ до Лабіринту -
+        програмування блоками '
+      'Video: Maze Intro: Programming with Blocks': 'Відео: Вступ до Лабіринту - програмування
+        блоками'
       'Video: Measures': 'Відео: Такти'
       'Video: Minecraft - Congratulations': 'Відео: Майнкрафт - Вітання'
       'Video: Minecraft - Functions': 'Відео: Minecraft - Функції'
@@ -275,11 +291,14 @@ uk:
       'Video: Programming with Blocks': 'Відео: програмування з блоками'
       'Video: Programming with Rey and BB-8': 'Відео: Програмування з Рей та BB-8'
       'Video: Properties': 'Відео: Властивості'
+      'Video: Repeat Blocks with BB-8': 'Відео: Блоки повторення з BB-8'
       'Video: Repeat Until Blocks': 'Відео: Блоки "повторити до"'
+      'Video: Repeat Until Statements': 'Відео: Команда "повторити до"'
       'Video: Sprites in Action': 'Відео: Спрайти в дії'
+      'Video: Star Wars Project': 'Відео: Проект «Зоряні війни»'
       'Video: Text and Prompts': 'Відео: Текст та текстові поля'
       'Video: The Artist in Code Studio': 'Відео: Художник у Студії коду'
-      'Video: The Collector': 'Відео: Збирачка'
+      'Video: The Collector': 'Відео: Колекціонерка'
       'Video: The Harvester': 'Відео: Фермерка'
       'Video: Unplugged Variables in Envelopes': 'Відео: Безмашинна вправа з порожніми
         клітинками'

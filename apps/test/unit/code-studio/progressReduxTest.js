@@ -1,5 +1,6 @@
 import {assert} from 'chai';
 import sinon from 'sinon';
+import _ from 'lodash';
 import {TestResults} from '@cdo/apps/constants';
 import {LevelStatus, LevelKind} from '@cdo/apps/util/sharedConstants';
 import {ViewType, setViewType} from '@cdo/apps/code-studio/viewAsRedux';
@@ -7,23 +8,26 @@ import {PUZZLE_PAGE_NONE} from '@cdo/apps/templates/progress/progressTypes';
 import {getLevelResult} from '@cdo/apps/templates/progress/progressHelpers';
 import reducer, {
   initProgress,
-  isPerfect,
   mergeResults,
   mergePeerReviewProgress,
   disablePostMilestone,
   setIsAge13Required,
   setIsSummaryView,
   setStudentDefaultsSummaryView,
+  setCurrentLessonId,
+  setLessonExtrasEnabled,
+  processedLessons,
+  __testonly__,
+} from '@cdo/apps/code-studio/progressRedux';
+import {
+  isPerfect,
   levelsByLesson,
   levelsForLessonId,
   progressionsFromLevels,
   groupedLessons,
-  processedLessons,
-  setCurrentLessonId,
   lessonExtrasUrl,
-  setLessonExtrasEnabled,
-  __testonly__,
-} from '@cdo/apps/code-studio/progressRedux';
+  __testonly__ as __testonly__selectors,
+} from '@cdo/apps/code-studio/progressReduxSelectors';
 
 // This is some sample lesson data taken from a course. I truncated to the first two
 // lessons, and also truncated the second lesson to the first 3 levels
@@ -477,11 +481,12 @@ describe('progressReduxTest', () => {
     it('can provide progress for peer reviews', () => {
       // construct an initial state where we have 1 lesson of non-peer reviews
       // with some progress, and 1 lesson of peer reviews
+      const lesson = _.cloneDeep(lessonData[1]);
       const state = {
         levelResults: {
           341: TestResults.MISSING_RECOMMENDED_BLOCK_UNFINISHED,
         },
-        lessons: [lessonData[1]],
+        lessons: [lesson],
         peerReviewLessonInfo: peerReviewLessonInfo,
       };
       assert.equal(state.lessons[0].levels[2].ids[0], '341');
@@ -1170,7 +1175,7 @@ describe('progressReduxTest', () => {
   });
 
   describe('peerReviewLesson', () => {
-    const {peerReviewLesson, PEER_REVIEW_ID} = __testonly__;
+    const {peerReviewLesson, PEER_REVIEW_ID} = __testonly__selectors;
     it('extracts lesson data from our peerReviewLessonInfo', () => {
       const state = {
         peerReviewLessonInfo: {
@@ -1189,7 +1194,7 @@ describe('progressReduxTest', () => {
   });
 
   describe('peerReviewLevels', () => {
-    const {peerReviewLevels, PEER_REVIEW_ID} = __testonly__;
+    const {peerReviewLevels, PEER_REVIEW_ID} = __testonly__selectors;
 
     it('sets icon to locked when locked', () => {
       const state = {
@@ -1326,7 +1331,7 @@ describe('progressReduxTest', () => {
       const promise = userProgressFromServer(state, dispatch, 1);
       server.respond();
       return promise.then(responseData => {
-        assert.deepEqual(['progress/CLEAR_RESULTS'], getDispatchActions());
+        assert.deepEqual(['progress/clearResults'], getDispatchActions());
         assert.deepEqual({}, responseData);
       });
     });
@@ -1358,16 +1363,16 @@ describe('progressReduxTest', () => {
       server.respond();
 
       const expectedDispatchActions = [
-        'progress/CLEAR_RESULTS',
+        'progress/clearResults',
         'verifiedInstructor/SET_VERIFIED',
-        'progress/SET_IS_SUMMARY_VIEW',
-        'progress/UPDATE_FOCUS_AREAS',
+        'progress/setIsSummaryView',
+        'progress/updateFocusArea',
         'lessonLock/AUTHORIZE_LOCKABLE',
-        'progress/SET_UNIT_COMPLETED',
-        'progress/SET_UNIT_PROGRESS',
-        'progress/MERGE_RESULTS',
-        'progress/MERGE_PEER_REVIEW_PROGRESS',
-        'progress/SET_CURRENT_LESSON_ID',
+        'progress/setScriptCompleted',
+        'progress/setScriptProgress',
+        'progress/mergeResults',
+        'progress/mergePeerReviewProgress',
+        'progress/setCurrentLessonId',
       ];
       return promise.then(serverResponseData => {
         assert.deepEqual(expectedDispatchActions, getDispatchActions());

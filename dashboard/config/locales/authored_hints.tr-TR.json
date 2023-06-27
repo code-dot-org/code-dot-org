@@ -11685,9 +11685,9 @@
         },
         "courseC_artist_prog72022": {
           "courseC_artist_prog7_a": "Tüm açıları 45 veya 90 derece.",
-          "courseC_artist_prog7_b": "İlk adımda her şey yolunda mı?\\\nPeki ikinci adımda?\\\nİşler nerede karışıyor?",
+          "courseC_artist_prog7_b": "İlk adımda her şey yolunda mı? \nPeki ikinci adımda? \nİşler nerede karışıyor?",
           "courseC_artist_prog7_c": "Hangi açıya ihtiyacınız olduğunu görmek için dönüş bloklarındaki açılır menüyü kullanabilirsiniz!",
-          "courseC_artist_prog7_d": "Şunları yapın:\n\n-   ilerle\n-   45 derece sağa dön\n-   ilerle\n-   90 derece sağa dön\n-   ilerle\n-   45 derece sağa dön\n\nBu deseni iki kez tekrarlayın!",
+          "courseC_artist_prog7_d": "Yapmak isteyebilirsin:\n- ilerle\n- sağa 45 derece dön\n- ilerle\n- sağa 90 derece dön\n- ilerle\n- sağa 45 derece dön\n\nBu deseni 2 kere tekrar etmelisin:\n",
           "courseC_artist_prog7_e": "Hata yapmaktan korkmayın! Bulmacayı henüz çözdüğünüzü düşünmeseniz bile, bloklar ekleyin ve ne olacağını görmek için kodu çalıştırın."
         },
         "courseC_artist_prog_challenge12022": {
@@ -12362,7 +12362,7 @@
         "courseE_artist_functions102022": {
           "courseD_artist_functions10_b": "Bu çizim bir öncekine çok benziyor fakat \"satır çiz\" fonksiyonu bu kez farklı bir şekil çiziyor.",
           "courseD_artist_functions10_a": "Çok fazla \"ilerle\" bloğu kullanmamak için bir \"altıgen çiz\" fonksiyonu oluşturun ve birkaç kez çağırın.",
-          "courseD_artist_functions10_c": "\"Altıgen satırı\" fonksiyonunun bu çizimde nerede kullanılacağını buldunuz mu?\n\n![](https://images.code.org/904e0f38232fd9c15a3d2d172e7dde0b-image-1493140714580.gif)"
+          "courseD_artist_functions10_c": "Bu çizimin 'altıgen çizgisi' adlı bir işlevi nerede kullanabileceğini görüyor musunuz?\n\n![](https://images.code.org/904e0f38232fd9c15a3d2d172e7dde0b-image-1493140714580.gif)"
         },
         "courseE_artist_functions22022": {
           "courseD_artist_functions2_b": "Fonksiyon bütün programı içermeyecek, sadece 100 piksel uzunluğundaki kenarlarını çizer.",
@@ -12397,11 +12397,11 @@
           "courseD_artist_functions8_c": "Karelerin her bir çizgisinin sonunda oyuncunun, sonraki kare çizgisini çizmeden önce yalnızca 180 derece dönmesi gerekir. Sonraki egzersize hazırlanmak için bir tekrarla bloğuna tüm şeyi yerleştirin!"
         },
         "courseE_artist_functions92022": {
-          "courseD_artist_functions9_e": "Bu çizimde \"üçgen satırı\" olarak kullanılabilecek 4 yeri bulabilir misiniz?\n\n![](https://images.code.org/130e1040ecca7186dea87f42666f5620-image-1493140373966.gif)",
-          "courseD_artist_functions9_a": "Bu bulmaca 3 kısma ayrılabilir:\n\n-   \"bir üçgen çiz\" fonksiyonu oluştur\n-   \"bir üçgen satırı çiz\" fonksiyonu oluştur\n-   bu çizimi tamamlamak için \"bir üçgen satırı çiz\" fonksiyonunu dört kez kullan",
+          "courseD_artist_functions9_e": "Bu çizimde 'üçgen çizgisinin' kullanılabileceği dört yeri de görebiliyor musunuz?\n\n![](https://images.code.org/130e1040ecca7186dea87f42666f5620-image-1493140373966.gif)",
+          "courseD_artist_functions9_a": "Bu bulmaca üç bölüme ayrılabilir:\n   - \"üçgen çiz\" işlevini yapın\n   - \"üçgenlerden oluşan bir çizgi çiz\" işlevini yapın\n   - çizimi tamamlamak için \"üçgenlerden oluşan bir çizgi çiz\" işlevini dört kez kullanın",
           "courseD_artist_functions9_b": "Bu çizim, dört kez üçgen satırı çizip bir sonraki üçgen satırını çizmeye başlamadan önce 60 veya 120 derece dönerek yapılır.",
-          "courseD_artist_functions9_c": "Bir üçgen satırı çizmek için:\n\n-   4 kez tekrarla\n    -   üçgen çiz\n    -   50 piksel ileri atla",
-          "courseD_artist_functions9_d": "Baklava şekli çizmek için:\n\n-   2 kez tekrarla\n    -   bir üçgen satırı çiz\n    -   60 derece dön\n    -   bir üçgen satırı çiz\n    -   120 derece dön"
+          "courseD_artist_functions9_c": "Bir üçgen çizgisi çizmek için:\n   - 4 kez tekrarla\n     - bir üçgen çiz\n     - 50 piksel ileri atla",
+          "courseD_artist_functions9_d": "Elması çizmek için:\n   - 2 kez tekrarla\n     - bir üçgen çizgisi çizin\n     - 60 derece dön\n     - bir üçgen çizgisi çizin\n     - 120 derece dön"
         },
         "courseE_artist_functions_challenge12022": {
           "courseE_artist_functions_challenge1_a": "Fonksiyonu bir kez daha çağırırsanız son köşede aynı tasarımı oluşturabilirsiniz.",

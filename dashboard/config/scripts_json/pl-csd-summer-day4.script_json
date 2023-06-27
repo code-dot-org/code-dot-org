@@ -13,7 +13,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-05-10 19:07:00 UTC",
+    "serialized_at": "2023-06-21 18:16:32 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1093,7 +1093,7 @@
       "key": "b832362a-3782-4e2e-a60f-e6f1afde3edd",
       "position": 2,
       "properties": {
-        "description": "**Group:** Put students in pairs.\n\n**Distribute:** Pass out a copy of the [r app_design_for_users/csd/2023] activity guide to each student. \n\n",
+        "description": "**Group:** Put students in pairs.\n\n**Distribute:** Pass out a copy of the [r physical_designs/pl-csd-summer/2023] activity guide to each student. \n\n\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -1143,7 +1143,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Value Reasoning over Correctness:** Each user is designed with a particular template in mind, but students are encouraged to use their own reasoning and logic when recommending a template to users. It's okay for students to not make an \"obvious\" choice as long as they're thinking carefully about their reasoning and are able to justify their choices.\n\nThe animations and games are intentionally simple, to help set expectations about the animations and games that students will be creating over the course of the unit.\n"
+            "markdown": "**Value Reasoning over Correctness:** Each user is designed with a particular template in mind, but students are encouraged to use their own reasoning and logic when recommending a template to users. It's okay for students to not make an \"obvious\" choice as long as they're thinking carefully about their reasoning and are able to justify their choices.\n\nThe prototypes are intentionally simple, to help set expectations about the prototypes that students will be creating over the course of the unit.\n"
           }
         ]
       },
@@ -1174,7 +1174,7 @@
       "position": 7,
       "properties": {
         "description": "Now we've been asked to create a physical design for a client. We can create our own design, but it should meet the needs of our users.\n",
-        "name": "Designing an Animation or Game",
+        "name": "Creating a Physical Design",
         "remarks": true,
         "tips": [
           {
@@ -1928,6 +1928,18 @@
   ],
   "resources": [
     {
+      "name": "[Exemplar] Physical Designs",
+      "url": "https://docs.google.com/document/d/1COKnyGNlEBpB8giiVDPGl-ubK1OEUU3fxYjNIhzpQT4/edit",
+      "key": "_exemplar_physical_designs",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_physical_designs"
+      }
+    },
+    {
       "name": "(Warm Up) Word Search",
       "url": "https://docs.google.com/document/d/14hKTZSrP7tnghpJhTLYJNEPeb1CinUaa0KtzRPADji4/edit",
       "key": "_warm_up_word_search",
@@ -2188,6 +2200,12 @@
       "seeding_key": {
         "lesson.key": "Introduction to Machine Learning",
         "resource.key": "introduction_to_machine_learning"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Physical Designs",
+        "resource.key": "_exemplar_physical_designs"
       }
     },
     {

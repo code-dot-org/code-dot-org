@@ -23,6 +23,7 @@ module AnalyticsConstants
       'Middle And High School Professional Learning Page Visited'.freeze,
     PICK_PL_PAGE_VISITED_EVENT = 'Pick Your Professional Learning Page Visited'.freeze,
     SELF_PACED_PL_PAGE_VISITED_EVENT = 'Self-Paced Professional Learning Page Visited'.freeze,
-    RP_LANDING_PAGE_VISITED_EVENT = 'Regional Partner Landing Page Visited'.freeze
+    RP_LANDING_PAGE_VISITED_EVENT = 'Regional Partner Landing Page Visited'.freeze,
+    TEACHER_LOGIN_EVENT = 'Teacher Login'.freeze
   ].freeze
 end

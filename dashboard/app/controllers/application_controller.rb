@@ -212,11 +212,9 @@ class ApplicationController < ActionController::Base
       response[:share_failure] = response_for_share_failure(options[:share_failure])
     end
 
-    if HintViewRequest.enabled?
-      if script_level && current_user
-        response[:hint_view_requests] = HintViewRequest.milestone_response(script_level.script, level, current_user)
-        response[:hint_view_request_url] = hint_view_requests_path
-      end
+    if HintViewRequest.enabled? && (script_level && current_user)
+      response[:hint_view_requests] = HintViewRequest.milestone_response(script_level.script, level, current_user)
+      response[:hint_view_request_url] = hint_view_requests_path
     end
 
     if PuzzleRating.enabled?
@@ -281,7 +279,7 @@ class ApplicationController < ActionController::Base
     end
 
     # replace pairings
-    session[:pairings] = pairings_from_params[:pairings].map do |pairing_param|
+    session[:pairings] = pairings_from_params[:pairings].filter_map do |pairing_param|
       other_user = User.find(pairing_param[:id])
       if current_user.can_pair_with? other_user
         other_user.id
@@ -289,7 +287,7 @@ class ApplicationController < ActionController::Base
         # TODO: should this cause an error to be returned to the user?
         nil
       end
-    end.compact
+    end
 
     session[:pairing_section_id] = pairings_from_params[:section_id].to_i
   end

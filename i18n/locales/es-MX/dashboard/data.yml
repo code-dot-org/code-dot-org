@@ -735,6 +735,8 @@ es-MX:
         csc_animal_adaptations_intro: Introducción a las Adaptaciones Animales
         upload_sprites_backgrounds: Cargando Sprites y Fondos Personalizados
         PL_CSD_EquityBlindSpotsvid: Sesgo y responsabilidad
+        how-ai-works-llms-full: Cómo funcionan los chatbots y la modelación de lenguage
+        how-ai-works-creativity-full: '¿La IA tiene creatividad e imaginación?'
     callout:
       text:
         drag_blocks: Arrastra un bloque "mover" y colócalo debajo del otro bloque

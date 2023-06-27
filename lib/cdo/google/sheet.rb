@@ -34,7 +34,7 @@ module Google
         Any edits you make to them (besides formatting) may be lost.
 
         Last updated: #{last_updated.strftime '%Y-%m-%d %l:%M%P GMT%:::z'}
-        Written by: #{CDO.gdrive_export_secret.client_email}
+        Written by: #{CDO.gdrive_export_secret['client_email']}
         Rows: #{rows.length - 1}
 
         Parts of this Google Sheet are auto-populated from our live application by an automated process.
@@ -72,7 +72,7 @@ module Google
         email = entry.email_address
         next if email.blank? ||
           email.end_with?('@code.org') ||
-          email == CDO.gdrive_export_secret.client_email
+          email == CDO.gdrive_export_secret['client_email']
         emails << email
       end
       emails

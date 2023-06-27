@@ -7,6 +7,7 @@ import {
 } from '../portScanning';
 import WebSerialPortWrapper from '@cdo/apps/lib/kits/maker/WebSerialPortWrapper';
 import {isChromeOS, getChromeVersion} from '../util/browserChecks';
+import {MIN_CHROME_VERSION} from '@cdo/apps/lib/kits/maker/util/makerConstants';
 
 export const BOARD_TYPE = {
   CLASSIC: 'classic',
@@ -60,7 +61,8 @@ export function isWebSerialPort(port) {
  */
 export function shouldUseWebSerial() {
   const webSerialAvailableInBrowser = 'serial' in navigator;
-  const usingChromeOS = isChromeOS() && getChromeVersion() >= 90;
+  const usingChromeOS =
+    isChromeOS() && getChromeVersion() >= MIN_CHROME_VERSION;
   return usingChromeOS || webSerialAvailableInBrowser;
 }
 

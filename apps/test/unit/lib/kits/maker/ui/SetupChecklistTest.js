@@ -96,6 +96,7 @@ describe('SetupChecklist', () => {
     });
   });
 
+  // These unit tests will be removed when the Maker App pathway is deprecated - skip for now.
   describe.skip('on Code.org Browser', () => {
     before(() => {
       sinon.stub(browserChecks, 'isChrome').returns(false);
