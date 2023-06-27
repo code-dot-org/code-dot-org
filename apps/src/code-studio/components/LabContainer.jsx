@@ -39,7 +39,13 @@ const LabContainer = ({onError}) => {
 
   return (
     <ErrorBoundary fallback={<ErrorFallbackPage />} onError={onError}>
-      <div id="lab-container" className={moduleStyles.labContainer}>
+      <div
+        id="lab-container"
+        className={classNames(
+          moduleStyles.labContainer,
+          isLabLoading && moduleStyles.labContainerLoading
+        )}
+      >
         <ProjectContainer channelId={getStandaloneProjectId()}>
           <div
             style={{
