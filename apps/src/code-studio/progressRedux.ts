@@ -29,6 +29,7 @@ import {setVerified} from '@cdo/apps/code-studio/verifiedInstructorRedux';
 import {authorizeLockable} from './lessonLockRedux';
 import {updateBrowserForLevelNavigation} from './browserNavigation';
 import {TestResults} from '@cdo/apps/constants';
+import {nextLevelId} from './progressReduxSelectors';
 
 interface ProgressState {
   currentLevelId: string | null;
@@ -296,6 +297,17 @@ export function navigateToLevelId(levelId: string): ProgressThunkAction {
 
     updateBrowserForLevelNavigation(state, newLevel.url, levelId);
     dispatch(setCurrentLevelId(levelId));
+  };
+}
+
+// Navigate to the next level in the progression, if it exists.
+export function navigateToNextLevel(): ProgressThunkAction {
+  return (dispatch, getState) => {
+    const levelId = nextLevelId(getState());
+    if (levelId === undefined) {
+      return;
+    }
+    dispatch(navigateToLevelId(levelId));
   };
 }
 
