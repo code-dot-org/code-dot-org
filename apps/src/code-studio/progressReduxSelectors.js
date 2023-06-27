@@ -207,6 +207,47 @@ export const levelsForLessonId = (state, lessonId) => {
   );
 };
 
+/**
+ * Get the index of the current level. On script levels, check
+ * which level has isCurrentLevel set. For single levels, return 0.
+ * Otherwise, return undefined.
+ */
+export const currentLevelIndex = state => {
+  if (getProgressLevelType(state) === ProgressLevelType.LEVEL) {
+    return 0;
+  }
+  if (getProgressLevelType(state) === ProgressLevelType.SCRIPT_LEVEL) {
+    return levelsForLessonId(
+      state.progress,
+      state.progress.currentLessonId
+    ).findIndex(level => level.isCurrentLevel);
+  }
+  return undefined;
+};
+
+/**
+ * Get the next level ID in the progression if it exists.
+ * Returns undefined if not currently in a script level or
+ * currently on the last level.
+ */
+export const nextLevelId = state => {
+  if (getProgressLevelType(state) !== ProgressLevelType.SCRIPT_LEVEL) {
+    return undefined;
+  }
+
+  const levels = levelsForLessonId(
+    state.progress,
+    state.progress.currentLessonId
+  );
+  const currentLevelIndex = levels.findIndex(level => level.isCurrentLevel);
+  if (currentLevelIndex === levels.length - 1) {
+    return undefined;
+  }
+
+  const nextLevel = levels[currentLevelIndex + 1];
+  return nextLevel.id;
+};
+
 export const lessonExtrasUrl = (state, lessonId) =>
   state.lessonExtrasEnabled
     ? state.lessons.find(lesson => lesson.id === lessonId)
