@@ -56,7 +56,7 @@ export default class LibraryPublisher extends React.Component {
       libraryDescription: props.libraryDetails.libraryDescription,
       selectedFunctions: validSelectedFunctions,
       profaneWords: null,
-      pIIWord: null,
+      pIIWords: null,
     };
   }
 
@@ -122,16 +122,15 @@ export default class LibraryPublisher extends React.Component {
       error => {
         console.warn(`Error publishing library: ${error}`);
 
+        // Note: Profanity checking student code happens before the LibraryPublisher is rendered,
+        // and profanity checking the name/description happens before calling publish().
         if (error.message.includes('httpStatusCode: 413')) {
           this.setState({publishState: PublishState.TOO_LONG});
-        } else if (error.message.includes('ShareFailure')) {
-          let match = error.message.match(/ShareFailure: content=(.+)/);
-          if (match && match.length > 1) {
-            this.setState({
-              publishState: PublishState.PII_INPUT,
-              pIIWord: match[1],
-            });
-          }
+        } else if (error.cause?.pIIWords) {
+          this.setState({
+            publishState: PublishState.PII_INPUT,
+            pIIWords: error.cause.pIIWords,
+          });
         } else {
           this.setState({publishState: PublishState.ERROR_PUBLISH});
         }
@@ -272,7 +271,7 @@ export default class LibraryPublisher extends React.Component {
   };
 
   displayError = () => {
-    const {publishState, pIIWord, profaneWords} = this.state;
+    const {publishState, pIIWords, profaneWords} = this.state;
     let errorMessage;
     switch (publishState) {
       case PublishState.INVALID_INPUT:
@@ -280,7 +279,8 @@ export default class LibraryPublisher extends React.Component {
         break;
       case PublishState.PII_INPUT:
         errorMessage = i18n.libraryDetailsPII({
-          pIIWord,
+          pIICount: pIIWords.length,
+          pIIWords: pIIWords.join(', '),
         });
         break;
       case PublishState.PROFANE_INPUT:

@@ -191,7 +191,7 @@ var base = {
    *        object.
    * @param {Object} opts - Options object.
    */
-  put: function (id, value, filename, callback, opts = {}) {
+  put: function (id, value, filename, callback) {
     $.ajax({
       url: this.api_base_url + '/' + id + '/' + filename,
       type: 'put',
@@ -202,11 +202,9 @@ var base = {
         callback(null, data);
       })
       .fail(function (request, status, error) {
-        const args = [request, status, error];
-        if (opts.includeDetails && request.responseJSON?.details) {
-          args.push(request.responseJSON?.details);
-        }
-        var err = errorString(...args);
+        // json_bad_request helper adds details to the responseJSON
+        const details = request.responseJSON?.details || null;
+        const err = errorString(request, status, error, details);
         callback(err, false);
       });
   },
@@ -236,12 +234,11 @@ var base = {
   },
 };
 
-function errorString(request, status, error, details = '') {
-  let str = `httpStatusCode: ${request.status}; status: ${status}; error: ${error}`;
-  if (details.length) {
-    str += `; details: ${details}`;
-  }
-  return new Error(str);
+function errorString(request, status, error, details = null) {
+  return new Error(
+    `httpStatusCode: ${request.status}; status: ${status}; error: ${error}`,
+    {cause: details}
+  );
 }
 
 module.exports = {
