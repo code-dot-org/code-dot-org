@@ -74,6 +74,7 @@
     "@storybook/manager-webpack5": "^6.5.10",
     "@storybook/react": "^6.5.10",
     "@testing-library/react": "^12.1.5",
+    "@types/jquery": "^3.5.16",
     "aws-sdk": "2.1231.0",
     "babel-loader": "^8.2.2",
     "babel-plugin-add-module-exports": "^0.2.1",
