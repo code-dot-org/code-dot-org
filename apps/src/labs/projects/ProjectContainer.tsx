@@ -12,6 +12,7 @@ import LabRegistry from '../LabRegistry';
 import {loadProject, setUpForLevel} from '../labRedux';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {getLevelPropertiesPath} from '@cdo/apps/code-studio/progressReduxSelectors';
+import {ProgressState} from '@cdo/apps/code-studio/progressRedux';
 
 const ProjectContainer: React.FunctionComponent<ProjectContainerProps> = ({
   children,
@@ -24,7 +25,7 @@ const ProjectContainer: React.FunctionComponent<ProjectContainerProps> = ({
   );
   // TODO: Convert progress redux to typescript so this can be typed better
   const scriptId = useSelector(
-    (state: {progress: {scriptId: number}}) => state.progress.scriptId
+    (state: {progress: ProgressState}) => state.progress.scriptId || undefined
   );
 
   const levelPropertiesPath = useSelector(getLevelPropertiesPath);
