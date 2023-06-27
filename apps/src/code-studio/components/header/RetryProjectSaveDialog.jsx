@@ -3,10 +3,7 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
-import {
-  projectUpdatedStatuses as statuses,
-  retryProjectSave,
-} from '../../projectRedux';
+import {projectUpdatedStatuses as statuses} from '../../projectRedux';
 import BaseDialog from '../../../templates/BaseDialog';
 import DialogFooter from '../../../templates/teacherDashboard/DialogFooter';
 import Button from '../../../templates/Button';
@@ -15,12 +12,11 @@ export class UnconnectedRetryProjectSaveDialog extends Component {
   static propTypes = {
     projectUpdatedStatus: PropTypes.oneOf(Object.values(statuses)),
     isOpen: PropTypes.bool,
-    onTryAgain: PropTypes.func.isRequired,
   };
 
   handleClick = () => {
     if (this.props.projectUpdatedStatus !== statuses.saving) {
-      this.props.onTryAgain();
+      dashboard.project.save();
     }
   };
 
@@ -66,14 +62,7 @@ const styles = {
   },
 };
 
-export default connect(
-  state => ({
-    projectUpdatedStatus: state.project.projectUpdatedStatus,
-    isOpen: state.project.showTryAgainDialog,
-  }),
-  dispatch => ({
-    onTryAgain() {
-      dispatch(retryProjectSave());
-    },
-  })
-)(UnconnectedRetryProjectSaveDialog);
+export default connect(state => ({
+  projectUpdatedStatus: state.project.projectUpdatedStatus,
+  isOpen: state.project.showTryAgainDialog,
+}))(UnconnectedRetryProjectSaveDialog);
