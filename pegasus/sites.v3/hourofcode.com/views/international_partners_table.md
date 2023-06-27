@@ -48,7 +48,7 @@
 |Mexico|Colegio Nikola Tesla|Larisa Hinojosa|http://nikolatesla.edu.mx|
 |México|Cuantrix - Fundación Televisa|Ilse Alvarez|ilse.alvarez@fundaciontelevisa.org<br>www.cuantrix.mx|
 |Mongolia|Codercub|Zolbayar Magsar|info@computerscience.mn<br>http://www.computerscience.mn/|
-|Myanmar|Thate Pan Hub|Min Aung Thu|strategic@thatepanhub.com<br>https://www.thatepanhub.com|
+|Myanmar|Thate Pan Hub|Min Aung Thu|strategic@thatepanhub.org<br>https://www.thatepanhub.org|
 |Nepal|Adhyayan School|Sandeep Sharma|sandeep.sharma@adhyayan.edu.np<br>http://adhyayan.edu.np|
 |New Zealand (Aotearoa)|OMGTech!|Education Team @ OMGTech!|schools@omgtech.co.nz<br>https://omgtech.co.nz|
 |New Zealand|Ara Institute of Canterbury|Amitrajit Sarkar|sarkara@cpit.ac.nz<br>http://www.ara.ac.nz|

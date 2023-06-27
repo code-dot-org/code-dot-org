@@ -1356,7 +1356,8 @@
   integrity sha512-v6tl9bSsbCjYJNR3hgvIvCGo/hLjk+ow2QdNE8ly2UTz8dBZ+MYYKZ3sFng1qDVy+WM8IbR45gPOx4RD+UjSXw==
 
 "@cdo/interpreted@link:../dashboard/config/libraries":
-  version "0.1.0"
+  version "0.0.0"
+  uid ""
 
 "@code-dot-org/artist@0.2.1":
   version "0.2.1"
@@ -1458,10 +1459,10 @@
     opentype.js "^0.4.9"
     reqwest "^1.1.5"
 
-"@code-dot-org/piskel@0.13.0-cdo.9":
-  version "0.13.0-cdo.9"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/piskel/-/piskel-0.13.0-cdo.9.tgz#84b8ad23bd73e2821229061fa1bcb52e461236de"
-  integrity sha512-BhbuhlxFkXd3+OmnaK9DGIOY+v6qMLH3UJmkBBAF9SEh88mb+MMvT/vXT8Txv1b4/RrnXZJD1nEMUsya5gx3vQ==
+"@code-dot-org/piskel@0.13.0-cdo.12":
+  version "0.13.0-cdo.12"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/piskel/-/piskel-0.13.0-cdo.12.tgz#e9c87f3b8f605b1d10b8e98af033d6407e01f52f"
+  integrity sha512-Ut877HHRa+xkzfVSEo4o1IkMDoZr9yVdWP+DH6avhRgtp8gmvH9RQm45EBEG68leaQ24aAx+yiHuOPieC49/wQ==
   dependencies:
     messageformat "^2.3.0"
 
@@ -3048,6 +3049,13 @@
   resolved "https://registry.yarnpkg.com/@types/istanbul-lib-coverage/-/istanbul-lib-coverage-2.0.4.tgz#8467d4b3c087805d63580480890791277ce35c44"
   integrity sha512-z/QT1XN4K4KYuslS23k62yDIDLwLFkzxOuMplDtObz0+y7VqJCaO2o+SPwHCvLFZh7xazvvoor2tA/hPz9ee7g==
 
+"@types/jquery@^3.5.16":
+  version "3.5.16"
+  resolved "https://registry.yarnpkg.com/@types/jquery/-/jquery-3.5.16.tgz#632131baf30951915b0317d48c98e9890bdf051d"
+  integrity sha512-bsI7y4ZgeMkmpG9OM710RRzDFp+w4P1RGiIt30C1mSBT+ExCleeh4HObwgArnDFELmRrOpXgSYN9VF1hj+f1lw==
+  dependencies:
+    "@types/sizzle" "*"
+
 "@types/json-schema@*", "@types/json-schema@^7.0.4", "@types/json-schema@^7.0.5", "@types/json-schema@^7.0.8", "@types/json-schema@^7.0.9":
   version "7.0.11"
   resolved "https://registry.yarnpkg.com/@types/json-schema/-/json-schema-7.0.11.tgz#d421b6c527a3037f7c84433fd2c4229e016863d3"
@@ -3204,6 +3212,11 @@
   version "8.1.2"
   resolved "https://registry.yarnpkg.com/@types/sinonjs__fake-timers/-/sinonjs__fake-timers-8.1.2.tgz#bf2e02a3dbd4aecaf95942ecd99b7402e03fad5e"
   integrity sha512-9GcLXF0/v3t80caGs5p2rRfkB+a8VBGLJZVih6CNFkx8IZ994wiKKLSRs9nuFwk1HevWs/1mnUmkApGrSGsShA==
+
+"@types/sizzle@*":
+  version "2.3.3"
+  resolved "https://registry.yarnpkg.com/@types/sizzle/-/sizzle-2.3.3.tgz#ff5e2f1902969d305225a047c8a0fd5c915cebef"
+  integrity sha512-JYM8x9EGF163bEyhdJBpR2QX1R5naCJHC8ucJylJ3w9/CVBaskdQ8WqBf8MmQrd1kRvp/a4TS8HJ+bxzR7ZJYQ==
 
 "@types/source-list-map@*":
   version "0.1.2"
@@ -4970,7 +4983,7 @@ browser-process-hrtime@0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/browser-process-hrtime/-/browser-process-hrtime-0.1.2.tgz#425d68a58d3447f02a04aa894187fce8af8b7b8e"
 
-browser-serialport@^2.0.1, browser-serialport@latest:
+browser-serialport@latest:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/browser-serialport/-/browser-serialport-2.0.3.tgz#3890aad440dc364540ad9f86f1e251d1b2011d73"
 
@@ -5531,12 +5544,6 @@ chownr@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/chownr/-/chownr-2.0.0.tgz#15bfbe53d2eab4cf70f18a8cd68ebe5b3cb1dece"
   integrity sha512-bIomtDF5KGpdogkLd9VspvFzk9KfpyyGlS8YFVZl7TGPBHL5snIOnxeshwVgPteQ9b4Eydl+pVbIyE1DcvCWgQ==
-
-chrome-serialport@bcjordan/chrome-serialport#2:
-  version "0.1.2"
-  resolved "https://codeload.github.com/bcjordan/chrome-serialport/tar.gz/803b40a6446558e44c72f5afc226871c19603296"
-  dependencies:
-    browser-serialport "^2.0.1"
 
 chrome-trace-event@^1.0.2:
   version "1.0.3"

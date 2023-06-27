@@ -1,12 +1,7 @@
 =::NewRelic::Agent.browser_timing_header rescue ''
 =view :old_ie
 =view :jquery
-
-- cookie_key = environment_specific_cookie_name '_user_type'
-- user_type = request.cookies[cookie_key]
-- user_type = "student" if user_type == "student_y"
-
-%script=view 'google_analytics.js', user_type: user_type
+=view :theme_google_analytics
 
 -# webpack-runtime.js must appear exactly once on any page containing webpack entries
 %script{src: webpack_asset_path('js/webpack-runtime.js')}

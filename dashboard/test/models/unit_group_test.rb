@@ -580,7 +580,7 @@ class UnitGroupTest < ActiveSupport::TestCase
     unit_group = create :unit_group, name: 'my-unit-group', family_name: 'my-family', version_year: '1999', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
     CourseOffering.add_course_offering(unit_group)
 
-    test_locale = :"te-ST"
+    test_locale = :'te-ST'
     I18n.locale = test_locale
     custom_i18n = {
       'data' => {
@@ -646,7 +646,7 @@ class UnitGroupTest < ActiveSupport::TestCase
     unit1.reload
     unit2.reload
 
-    test_locale = :"te-ST"
+    test_locale = :'te-ST'
     I18n.locale = test_locale
     custom_i18n = {
       'data' => {

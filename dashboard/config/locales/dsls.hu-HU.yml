@@ -11498,7 +11498,8 @@ hu-HU:
         - {}
       courseE_swim_fish_behavior_predict12022:
         answers:
-        - feedback: Helytelen. Az ördögszekér gördülni kezd.
+        - text: Semmi sem történik
+          feedback: Helytelen. Az ördögszekér gördülni kezd.
         - text: Az ördögszekér a képernyő tetején fog lebegni.
           feedback: Helytelen. Az ördögszekér gördülni kezd.
         - text: Az ördögszekér gördülni kezd.

@@ -33,11 +33,11 @@ uk:
         Webapp: Програмна Лабораторія
         ArtistEC: Художник
         TextMatch: Співставлення тексту
-        StudioEC: Ігрова лабораторія
+        StudioEC: Ігрова студія
         Applab: Програмна Лабораторія
         NetSim: Інтернет симулятор
         Custom: Художник
-        CustomStudio: Ігрова лабораторія
+        CustomStudio: Ігрова студія
         Gamelab: Ігрова лабораторія
         Spritelab: Спрайт Лабораторія
     trophy:
@@ -264,7 +264,7 @@ uk:
           Спробуй це, а потім намалюй ряд будинків.
         turtle_3_10: Ви багато чому навчилися! Тепер використайте це, щоб зробити
           все, що ви хочете. Спробуйте намалювати зірку або спіраль або сніжинку.
-        maze_karel_debug_seq_1: Ласкаво просимо у відлагодження! Мій код працює неправильно.
+        maze_karel_debug_seq_1: Ласкаво просимо у налагодження! Мій код працює неправильно.
           Можеш визначити проблему і виправити її, щоби я змогла вирівняти поле для
           посадки?
         maze_karel_debug_seq_2: Що не так з цією програмою? Як слід виправити цю проблему,
@@ -490,7 +490,7 @@ uk:
         maze_wordsearch_k_9: Переміщуйте мене у різні сторони, щоб утворити слово
           CODE (КОД)
         maze_wordsearch_k_13: Переміщуйте мене у різні сторони, щоб утворити слово
-          DEBUG (ВІДЛАГОДЖЕННЯ)
+          DEBUG (НАЛАГОДЖЕННЯ)
         maze_wordsearch_k_15: Переміщуйте мене у різні сторони, щоб утворити слово
           ABOVE (ВИЩЕ)
         maze_wordsearch_k_16: Переміщуйте мене у різні сторони, щоб утворити слово
@@ -538,7 +538,7 @@ uk:
         C1_getting_loopy: Економія на повторах
         C1_pair_programming: Парне програмування
         C1_maze_intro_sequencing: 'Лабіринт: вступ у послідовність'
-        C1_maze_debugging: 'Лабіринт: відлагодження'
+        C1_maze_debugging: 'Лабіринт: налагодження'
         C1_bee_level_intro: Рівень Бджілки - вступ
         C1_artist_intro: Вступ до художника
         C1_spelling_bee_intro: Вступ до грамотної Бджілки
@@ -553,9 +553,9 @@ uk:
         C2_artist_intro: Вступ до художника
         C2_zuck_repeat_loop: Лабіринт - цикли
         C2_artist_loops: Художник - цикли
-        C2_artist_debugging: Художник - відлагодження
+        C2_artist_debugging: Художник - налагодження
         C2_bee_loops: Бджола - цикли
-        C2_bee_debugging: Бджола - відлагодження
+        C2_bee_debugging: Бджола - налагодження
         C2_bee_conditionals: Бджола - умови
         C2_playlab_createstory: 'Ігрова студія: Створення історії'
         C2_graph_paper: Програмування по клітинках
@@ -574,9 +574,9 @@ uk:
         C3_artist_nested_loops: Вкладені цикли
         C3_farmer_while: Цикли "поки"
         C3_bee_nested_loops: Вкладені цикли
-        C3_bee_debugging: Бджола - відлагодження
+        C3_bee_debugging: Бджола - налагодження
         C3_bounce: Арканоід
-        C3_playlab_create_game: 'Ігрова лабораторія: Створення історії'
+        C3_playlab_create_game: 'Ігрова студія: Створення гри'
         C3_computational_thinking: Обчислювальне мислення
         C3_dice_race: Гонка в кубики
         C3_internet: Інтернет
@@ -587,7 +587,7 @@ uk:
         C4_loops_zombie: Цикли
         C4_bee_conditional: Бджола - умови
         C4_variables_artist: Змінні - Художник
-        C4_variables_playlab: Змінні - Ігрова лабораторія
+        C4_variables_playlab: Змінні - Ігрова студія
         C4_for_loops: Цикли For
         C4_for_loops_bee: Цикли For
         C4_for_loops_no_bee: Цикли For
@@ -604,9 +604,9 @@ uk:
         C4_unplugged_binary: Двійкова система
         CSF_a_b_artist_loops: Художник - Цикли
         CSF_artist_angles: Кути в художника
-        CSF_collector_k1_blocks: 'Основни комп''ютерної науки: Колектор'
+        CSF_collector_k1_blocks: 'Основи інформатики: Колекціонерка'
         CSF_collector_repeat_loops: Колектор повторення петель
-        CSF_collector_text_blocks: 'Основни комп''ютерної науки: Колектор'
+        CSF_collector_text_blocks: 'Основи інформатики: Колекціонерка'
         CSF_create_functions: Створення функцій
         CSF_debugging_k1_blocks: Налагодження
         CSF_debugging_text_blocks: Налагодження
@@ -622,13 +622,13 @@ uk:
         frozen_intro: Вступ до Години коду
         frozen_loops: Вступ до циклів
         frozen_functions: Вступ до функцій
-        playlab_intro: Вступ до Ігрової лабораторії
-        playlab_events: Ігрова лабораторія - події
-        playlab_repeat_forever: Ігрова лабораторія - постійне повторення
+        playlab_intro: Вступ до Ігрової студії
+        playlab_events: Ігрова студія - події
+        playlab_repeat_forever: Ігрова студія - Повторювати постійно
         tutorial_puzzle_challenge: Урок - Головоломка
-        infinity_playlab_intro: Ігрова лабораторія - Вступ
-        infinity_playlab_events: Ігрова лабораторія - Події
-        infinity_playlab_repeat_forever: Ігрова лабораторія - Повторювати постійно
+        infinity_playlab_intro: Ігрова студія - Вступ
+        infinity_playlab_events: Ігрова студія - Події
+        infinity_playlab_repeat_forever: Ігрова студія - Повторювати постійно
         csd_concept_how_computers_work: Вступ до Як працюють комп'ютери
         csd_concept_computer: 'Як працюють комп''ютери: Що робить комп''ютер, комп''ютером?'
         csd_concept_binary_data: 'Як комп''ютери працюють: Двійкове кодування і дані'
@@ -740,9 +740,11 @@ uk:
         CSF_skinOverview_Harvester: Фермерка
         CSF_bb8_skinOverview_C-F: BB-8
         CSF_bb8_skinOverview_K-1: BB-8
+        CSF_bb8_loops_C-F: Цикли з BB-8
         CSF_harvester_skinOverview_K-1: Фермерка
-        CSF_scrat_loops_K1: Петлі в Ice Age
-        CSF_scrat_loops_CF: Петлі в Ice Age
+        CSF_harvester_loops_K1: Цикли з Фермеркою
+        CSF_scrat_loops_K1: Цикли в Льодовиковому періоді
+        CSF_scrat_loops_CF: Цикли в Льодовиковому періоді
         CSF_if_allskins: Блок Якщо
         CSF_ifelse_allskins: Використання Якщо/Ще Блоків
         CSF_ifelseifelse_allskins: Використання Якщо/Інше/Ще Блоків
@@ -764,9 +766,12 @@ uk:
         hoc_dance_properties: Танцювальна вечірка - Властивості
         hoc_dance_congrats: Танцювальна вечірка - Вечірка Почалась!
         c_and_c_digital_sharing: Обмін та поширення онлайн
+        teaching_csf_how_it_works: 'Викладання основ інформатики: як влаштовано цей
+          курс'
         what_is_cs: Що таке інформатика?
         repeat_block: Використання блоку повторів
         lesson_planning: Планування уроку
+        why_unplugged_lessons: Безмашинна інформатика
         writing_first_program: Напиши свою першу комп’ютерну програму
         what_is_an_event: Що таке подія?
         teaching_cs_pair_programming: 'Вивчаємо Основи інформатики: Програмування
@@ -800,10 +805,11 @@ uk:
         csf_follow_the_digital_trail: Йди за цифровим шляхом
         csf_private_and_personal_information: Приватна та особиста інформація
         csd_what_computers_are: Що таке комп’ютер?
-        playlab_2021: Вступ до Ігрової лабораторії
-        playlab_2021_reader: Вступ до Ігрової лабораторії
+        playlab_2021: Вступ до Ігрової студії
+        playlab_2021_reader: Вступ до Ігрової студії
+        PL_CSD_TeacherTips_Debugging: Поради для вчителя - налагодження
         csd_u6_input_output: Вхідні та вихідні дані
-        PL_CS_Journeys_Overview: Подорожі CS
+        PL_CS_Journeys_Overview: Інформатичні подорожі
         csp_applab_parameters: Функції з параметрами
         CS_Changing_Everything: Інформатика змінює все
     callout:

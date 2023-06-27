@@ -1570,104 +1570,104 @@
           "courseA_artist_loops_challenge2_c": "Todos tus bloques necesitarán estar dentro de un loop para terminar este desafío."
         },
         "courseA_collector_loops1": {
-          "courseA_collector_loops1_a": "Luego que te hayas movido hacia un cuadrado con tesoro, usa este bloque para recogerlo.\n<xml>  <block type=\"collector_collect\"/></xml>",
+          "courseA_collector_loops1_a": "Después de moverte a una casilla con tesoro, usa este bloque para recogerlo.\n\n<xml>  <block type=\"collector_collect\"/></xml>",
           "courseA_collector_loops1_b": "Una solución simple sería moverse al este 2 veces, luego obtener el tesoro."
         },
         "courseA_collector_loops1_2018": {
-          "courseA_collector_loops1_a": "Luego que te hayas movido hacia un cuadrado con tesoro, usa este bloque para recogerlo.\n<xml>  <block type=\"collector_collect\"/></xml>",
+          "courseA_collector_loops1_a": "Después de moverte a una casilla con tesoro, usa este bloque para recogerlo.\n\n<xml>  <block type=\"collector_collect\"/></xml>",
           "courseA_collector_loops1_b": "Una solución simple sería moverse al este 2 veces, luego obtener el tesoro."
         },
         "courseA_collector_loops1_2019": {
-          "courseA_collector_loops1_a": "Luego que te hayas movido hacia un cuadrado con tesoro, usa este bloque para recogerlo.\n<xml>  <block type=\"collector_collect\"/></xml>",
+          "courseA_collector_loops1_a": "Después de moverte a una casilla con tesoro, usa este bloque para recogerlo.\n\n<xml>  <block type=\"collector_collect\"/></xml>",
           "courseA_collector_loops1_b": "Una solución simple sería moverse al este 2 veces, luego obtener el tesoro."
         },
         "courseA_collector_loops1_2020": {
-          "courseA_collector_loops1_a": "Luego que te hayas movido hacia un cuadrado con tesoro, usa este bloque para recogerlo.\n<xml>  <block type=\"collector_collect\"/></xml>",
+          "courseA_collector_loops1_a": "Después de moverte a una casilla con tesoro, usa este bloque para recogerlo.\n\n<xml>  <block type=\"collector_collect\"/></xml>",
           "courseA_collector_loops1_b": "Una solución simple sería moverse al este 2 veces, luego obtener el tesoro."
         },
         "courseA_collector_loops2": {
           "courseA_collector_loops2_a": "Tendrás que moverte antes de poder recolectar cualquier tesoro.",
-          "courseA_collector_loops2_b": "Luego que te hayas movido hacia un cuadrado con tesoro, usa este bloque para recogerlo.\n<xml>  <block type=\"collector_collect\"/></xml>"
+          "courseA_collector_loops2_b": "Después de moverte a una casilla con tesoro, usa este bloque para recogerlo.\n\n<xml>  <block type=\"collector_collect\"/></xml>"
         },
         "courseA_collector_loops2_2018": {
           "courseA_collector_loops2_a": "Tendrás que moverte antes de poder recolectar cualquier tesoro.",
-          "courseA_collector_loops2_b": "Luego que te hayas movido hacia un cuadrado con tesoro, usa este bloque para recogerlo.\n<xml>  <block type=\"collector_collect\"/></xml>"
+          "courseA_collector_loops2_b": "Después de moverte a una casilla con tesoro, usa este bloque para recogerlo.\n\n<xml>  <block type=\"collector_collect\"/></xml>"
         },
         "courseA_collector_loops2_2019": {
           "courseA_collector_loops2_a": "Tendrás que moverte antes de poder recolectar cualquier tesoro.",
-          "courseA_collector_loops2_b": "Luego que te hayas movido hacia un cuadrado con tesoro, usa este bloque para recogerlo.\n<xml>  <block type=\"collector_collect\"/></xml>"
+          "courseA_collector_loops2_b": "Después de moverte a una casilla con tesoro, usa este bloque para recogerlo.\n\n<xml>  <block type=\"collector_collect\"/></xml>"
         },
         "courseA_collector_loops2_2020": {
           "courseA_collector_loops2_a": "Tendrás que moverte antes de poder recolectar cualquier tesoro.",
-          "courseA_collector_loops2_b": "Luego que te hayas movido hacia un cuadrado con tesoro, usa este bloque para recogerlo.\n<xml>  <block type=\"collector_collect\"/></xml>"
+          "courseA_collector_loops2_b": "Después de moverte a una casilla con tesoro, usa este bloque para recogerlo.\n\n<xml>  <block type=\"collector_collect\"/></xml>"
         },
         "courseA_collector_loops3": {
-          "courseA_collector_loops3_a": "Intenta usar un loop <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>!",
-          "courseA_collector_loops3_b": "Recuerda que puedes poner más de un bloque en un loop <xml><block type=\"controls_repeat\">\n\n<title name=\"TIMES\">???</title>\n</block></xml>."
+          "courseA_collector_loops3_a": "¡Intenta utilizar un bucle <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>!",
+          "courseA_collector_loops3_b": "Recuerda que puedes poner más de 1 bloque dentro de un bucle <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>."
         },
         "courseA_collector_loops3_2018": {
-          "courseA_collector_loops3_a": "Intenta usar un loop <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>!",
-          "courseA_collector_loops3_b": "Recuerda que puedes poner más de un bloque en un loop <xml><block type=\"controls_repeat\">\n\n<title name=\"TIMES\">???</title>\n</block></xml>."
+          "courseA_collector_loops3_a": "¡Intenta utilizar un bucle <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>!",
+          "courseA_collector_loops3_b": "Recuerda que puedes poner más de 1 bloque dentro de un bucle <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>."
         },
         "courseA_collector_loops3_2019": {
           "courseA_collector_loops3_a": "Intente user un \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> \n\nbucle!",
-          "courseA_collector_loops3_b": "Recuerda que puedes poner más de un bloque en un loop <xml><block type=\"controls_repeat\">\n\n<title name=\"TIMES\">???</title>\n</block></xml>."
+          "courseA_collector_loops3_b": "Recuerda que puedes poner más de 1 bloque dentro de un bucle <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>."
         },
         "courseA_collector_loops3_2020": {
           "courseA_collector_loops3_a": "Intente user un \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> \n\nbucle!",
-          "courseA_collector_loops3_b": "Recuerda que puedes poner más de un bloque en un loop <xml><block type=\"controls_repeat\">\n\n<title name=\"TIMES\">???</title>\n</block></xml>."
+          "courseA_collector_loops3_b": "Recuerda que puedes poner más de 1 bloque dentro de un bucle <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>."
         },
         "courseA_collector_loops4": {
-          "courseA_collector_loops4_a": "Para cambiar qué tan lejos va Laurel, cambia la cantidad de veces que se ejecuta el loop.",
-          "courseA_collector_loops4_b": "No olvides que Laurel necesita caminar y recoger el tesoro después de que ella termine el loop <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>!"
+          "courseA_collector_loops4_a": "Para cambiar la distancia que recorre Laurel, cambia el número de veces que se ejecutará el bucle.",
+          "courseA_collector_loops4_b": "¡No olvides que Laurel tiene que bajar y recoger el tesoro después de terminar el bucle <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>!"
         },
         "courseA_collector_loops4_2018": {
-          "courseA_collector_loops4_a": "Para cambiar qué tan lejos va Laurel, cambia la cantidad de veces que se ejecuta el loop.",
-          "courseA_collector_loops4_b": "No olvides que Laurel necesita caminar y recoger el tesoro después de que ella termine el loop <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>!"
+          "courseA_collector_loops4_a": "Para cambiar la distancia que recorre Laurel, cambia el número de veces que se ejecutará el bucle.",
+          "courseA_collector_loops4_b": "¡No olvides que Laurel tiene que bajar y recoger el tesoro después de terminar el bucle <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>!"
         },
         "courseA_collector_loops4_2019": {
-          "courseA_collector_loops4_a": "Para cambiar qué tan lejos va Laurel, cambia la cantidad de veces que se ejecuta el loop.",
-          "courseA_collector_loops4_b": "No olvides que Laurel necesita caminar y recoger el tesoro después de que ella termine el loop <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>!"
+          "courseA_collector_loops4_a": "Para cambiar la distancia que recorre Laurel, cambia el número de veces que se ejecutará el bucle.",
+          "courseA_collector_loops4_b": "¡No olvides que Laurel tiene que bajar y recoger el tesoro después de terminar el bucle <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>!"
         },
         "courseA_collector_loops4_2020": {
-          "courseA_collector_loops4_a": "Para cambiar qué tan lejos va Laurel, cambia la cantidad de veces que se ejecuta el loop.",
-          "courseA_collector_loops4_b": "No olvides que Laurel necesita caminar y recoger el tesoro después de que ella termine el loop <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>!"
+          "courseA_collector_loops4_a": "Para cambiar la distancia que recorre Laurel, cambia el número de veces que se ejecutará el bucle.",
+          "courseA_collector_loops4_b": "¡No olvides que Laurel tiene que bajar y recoger el tesoro después de terminar el bucle <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>!"
         },
         "courseA_collector_loops5": {
-          "courseA_collector_loops5_a": "Si usted no puede encontrar la respuesta de inmediato, trate de usar un trozo de papel para averiguar las flechas que se necesita y mirar un patrón.",
-          "courseA_collector_loops5_b": "Intente dividir el problema en 2 partes, moviéndose de lado y luego hacia abajo.",
-          "courseA_collector_loops5_c": "Deberás comenzar con un loop <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> que mueve a Laurel hacia el oeste y recoge el tesoro."
+          "courseA_collector_loops5_a": "Si no puedes averiguar la respuesta de inmediato, intenta usar un trozo de papel para averiguar qué flechas necesitarás y buscar un patrón.",
+          "courseA_collector_loops5_b": "Intenta dividir el problema en dos partes, moviéndote hacia los lados y hacia abajo.",
+          "courseA_collector_loops5_c": "Deberás empezar con un bucle <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> que mueva a Laurel hacia el oeste y recoja tesoros."
         },
         "courseA_collector_loops5_2018": {
-          "courseA_collector_loops5_a": "Si usted no puede encontrar la respuesta de inmediato, trate de usar un trozo de papel para averiguar las flechas que se necesita y mirar un patrón.",
-          "courseA_collector_loops5_b": "Intente dividir el problema en 2 partes, moviéndose de lado y luego hacia abajo.",
-          "courseA_collector_loops5_c": "Deberás comenzar con un loop <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> que mueve a Laurel hacia el oeste y recoge el tesoro."
+          "courseA_collector_loops5_a": "Si no puedes averiguar la respuesta de inmediato, intenta usar un trozo de papel para averiguar qué flechas necesitarás y buscar un patrón.",
+          "courseA_collector_loops5_b": "Intenta dividir el problema en dos partes, moviéndote hacia los lados y hacia abajo.",
+          "courseA_collector_loops5_c": "Deberás empezar con un bucle <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> que mueva a Laurel hacia el oeste y recoja tesoros."
         },
         "courseA_collector_loops5_2019": {
-          "courseA_collector_loops5_a": "Si usted no puede encontrar la respuesta de inmediato, trate de usar un trozo de papel para averiguar las flechas que se necesita y mirar un patrón.",
-          "courseA_collector_loops5_b": "Intente dividir el problema en 2 partes, moviéndose de lado y luego hacia abajo.",
-          "courseA_collector_loops5_c": "Deberás comenzar con un loop <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> que mueve a Laurel hacia el oeste y recoge el tesoro."
+          "courseA_collector_loops5_a": "Si no puedes averiguar la respuesta de inmediato, intenta usar un trozo de papel para averiguar qué flechas necesitarás y buscar un patrón.",
+          "courseA_collector_loops5_b": "Intenta dividir el problema en dos partes, moviéndote hacia los lados y hacia abajo.",
+          "courseA_collector_loops5_c": "Deberás empezar con un bucle <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> que mueva a Laurel hacia el oeste y recoja tesoros."
         },
         "courseA_collector_loops5_2020": {
-          "courseA_collector_loops5_a": "Si usted no puede encontrar la respuesta de inmediato, trate de usar un trozo de papel para averiguar las flechas que se necesita y mirar un patrón.",
-          "courseA_collector_loops5_b": "Intente dividir el problema en 2 partes, moviéndose de lado y luego hacia abajo.",
-          "courseA_collector_loops5_c": "Deberás comenzar con un loop <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> que mueve a Laurel hacia el oeste y recoge el tesoro."
+          "courseA_collector_loops5_a": "Si no puedes averiguar la respuesta de inmediato, intenta usar un trozo de papel para averiguar qué flechas necesitarás y buscar un patrón.",
+          "courseA_collector_loops5_b": "Intenta dividir el problema en dos partes, moviéndote hacia los lados y hacia abajo.",
+          "courseA_collector_loops5_c": "Deberás empezar con un bucle <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> que mueva a Laurel hacia el oeste y recoja tesoros."
         },
         "courseA_collector_loops6": {
           "courseA_collector_loops6_a": "¿No puede descubrir qué pasa? Intenta ejecutar el código un par de veces para ver qué pasa.",
-          "courseA_collector_loops6_b": "La solución más corta tiene 2 loops, <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>, uno después del otro."
+          "courseA_collector_loops6_b": "La solución más corta tiene 2 bucles <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>, uno detrás de otro."
         },
         "courseA_collector_loops6_2018": {
           "courseA_collector_loops6_a": "¿No puede descubrir qué pasa? Intenta ejecutar el código un par de veces para ver qué pasa.",
-          "courseA_collector_loops6_b": "La solución más corta tiene 2 loops, <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>, uno después del otro."
+          "courseA_collector_loops6_b": "La solución más corta tiene 2 bucles <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>, uno detrás de otro."
         },
         "courseA_collector_loops6_2019": {
           "courseA_collector_loops6_a": "¿No puede descubrir qué pasa? Intenta ejecutar el código un par de veces para ver qué pasa.",
-          "courseA_collector_loops6_b": "La solución más corta tiene 2 loops, <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>, uno después del otro."
+          "courseA_collector_loops6_b": "La solución más corta tiene 2 bucles <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>, uno detrás de otro."
         },
         "courseA_collector_loops6_2020": {
           "courseA_collector_loops6_a": "¿No puede descubrir qué pasa? Intenta ejecutar el código un par de veces para ver qué pasa.",
-          "courseA_collector_loops6_b": "La solución más corta tiene 2 loops, <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>, uno después del otro."
+          "courseA_collector_loops6_b": "La solución más corta tiene 2 bucles <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>, uno detrás de otro."
         },
         "courseA_collector_loops7": {
           "courseA_collector_loops7_a": "Si no puede descubrir qué viene después, intente ejecutar el código para ver dónde termina Laurel."
@@ -1762,7 +1762,7 @@
           "courseA_collector_loops_challenge2kp_a": "¿Puedes usar loops para resolver este puzzle?"
         },
         "courseA_collector_preLoops4": {
-          "courseA_collector_preLoops4_a": "Para agarrar el tesoro, encaja dos bloques ![](https://images.code.org/2df8a25d7e96207f57d1a6b504950b70-image-1508906116743.34.37.png) y un bloque ![](https://images.code.org/563c0deb5c51d43cdfa72d62dec3419d-image-1508904559201.05.30.png) en la parte inferior del programa y haz clic en \"Ejecutar\"."
+          "courseA_collector_preLoops4_a": "¡Para conseguir el tesoro, encaja dos bloques ![](https://images.code.org/2df8a25d7e96207f57d1a6b504950b70-image-1508906116743.34.37.png) y un bloque ![](https://images.code.org/563c0deb5c51d43cdfa72d62dec3419d-image-1508904559201.05.30.png) en la parte inferior del programa y pulsa \"Ejecutar\"!"
         },
         "courseA_collector_preLoops5": {
           "courseA_collector_preLoops5_a": "¡Tendrás que ir en dos direcciones diferentes para obtener incluso una gema!"
@@ -1771,7 +1771,7 @@
           "courseA_collector_preLoops6_a": "Necesitarás usar dos bloques ![](https://images.code.org/563c0deb5c51d43cdfa72d62dec3419d-image-1508904559201.05.30.png) para resolver este desafío."
         },
         "courseA_collector_preLoops7": {
-          "courseA_collector_loops2_b": "Luego que te hayas movido hacia un cuadrado con tesoro, usa este bloque para recogerlo.\n<xml>  <block type=\"collector_collect\"/></xml>"
+          "courseA_collector_loops2_b": "Después de moverte a una casilla con tesoro, usa este bloque para recogerlo.\n\n<xml>  <block type=\"collector_collect\"/></xml>"
         },
         "courseA_harvester_loops1": {
           "courseA_harvester_loops1_a": "¡Cuando hayas llegado hasta el maíz, usa este bloque para recogerlo!\n\n<xml><block type=\"harvester_corn\"/></xml>"
@@ -2680,22 +2680,22 @@
         },
         "courseB_collector_loops4": {
           "courseB_collector_loops4_a": "Pruebe usar el botón paso para descubrir dónde van las cosas mal.",
-          "courseB_collector_loops4_b": "Para cambiar qué tan lejos va Laurel, cambia la cantidad de veces que se ejecuta el loop.",
+          "courseB_collector_loops4_b": "Para cambiar la distancia que recorre Laurel, cambia el número de veces que se ejecutará el bucle.",
           "courseB_collector_loops4_c": "¡Laurel necesita caminar hacia abajo y recoger el tesoro después de que termine el loop 'repetir'!"
         },
         "courseB_collector_loops4_2018": {
           "courseB_collector_loops4_a": "Pruebe usar el botón paso para descubrir dónde van las cosas mal.",
-          "courseB_collector_loops4_b": "Para cambiar qué tan lejos va Laurel, cambia la cantidad de veces que se ejecuta el loop.",
+          "courseB_collector_loops4_b": "Para cambiar la distancia que recorre Laurel, cambia el número de veces que se ejecutará el bucle.",
           "courseB_collector_loops4_c": "¡Laurel necesita caminar hacia abajo y recoger el tesoro antes de terminar el loop 'repetir' <xml><block type=\"controls_repeat_simplified\">\n\n<title name=\"TIMES\">???</title>\n</block></xml>!"
         },
         "courseB_collector_loops4_2019": {
           "courseB_collector_loops4_a": "Pruebe usar el botón paso para descubrir dónde van las cosas mal.",
-          "courseB_collector_loops4_b": "Para cambiar qué tan lejos va Laurel, cambia la cantidad de veces que se ejecuta el loop.",
+          "courseB_collector_loops4_b": "Para cambiar la distancia que recorre Laurel, cambia el número de veces que se ejecutará el bucle.",
           "courseB_collector_loops4_c": "¡Laurel necesita caminar hacia abajo y recoger el tesoro antes de terminar el loop 'repetir' <xml><block type=\"controls_repeat_simplified\">\n\n<title name=\"TIMES\">???</title>\n</block></xml>!"
         },
         "courseB_collector_loops4_2020": {
           "courseB_collector_loops4_a": "Pruebe usar el botón paso para descubrir dónde van las cosas mal.",
-          "courseB_collector_loops4_b": "Para cambiar qué tan lejos va Laurel, cambia la cantidad de veces que se ejecuta el loop.",
+          "courseB_collector_loops4_b": "Para cambiar la distancia que recorre Laurel, cambia el número de veces que se ejecutará el bucle.",
           "courseB_collector_loops4_c": "¡Laurel necesita caminar hacia abajo y recoger el tesoro antes de terminar el loop 'repetir' <xml><block type=\"controls_repeat_simplified\">\n\n<title name=\"TIMES\">???</title>\n</block></xml>!"
         },
         "courseB_collector_loops5": {
@@ -8984,29 +8984,29 @@
           "courseA_artist_loops_challenge2_c": "Todos tus bloques necesitarán estar dentro de un loop para terminar este desafío."
         },
         "courseA_collector_loops1_2021": {
-          "courseA_collector_loops1_a": "Luego que te hayas movido hacia un cuadrado con tesoro, usa este bloque para recogerlo.\n<xml>  <block type=\"collector_collect\"/></xml>",
+          "courseA_collector_loops1_a": "Después de moverte a una casilla con tesoro, usa este bloque para recogerlo.\n\n<xml>  <block type=\"collector_collect\"/></xml>",
           "courseA_collector_loops1_b": "Una solución simple sería moverse al este 2 veces, luego obtener el tesoro."
         },
         "courseA_collector_loops2_2021": {
           "courseA_collector_loops2_a": "Tendrás que moverte antes de poder recolectar cualquier tesoro.",
-          "courseA_collector_loops2_b": "Luego que te hayas movido hacia un cuadrado con tesoro, usa este bloque para recogerlo.\n<xml>  <block type=\"collector_collect\"/></xml>"
+          "courseA_collector_loops2_b": "Después de moverte a una casilla con tesoro, usa este bloque para recogerlo.\n\n<xml>  <block type=\"collector_collect\"/></xml>"
         },
         "courseA_collector_loops3_2021": {
           "courseA_collector_loops3_a": "Intente user un \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> \n\nbucle!",
-          "courseA_collector_loops3_b": "Recuerda que puedes poner más de un bloque en un loop <xml><block type=\"controls_repeat\">\n\n<title name=\"TIMES\">???</title>\n</block></xml>."
+          "courseA_collector_loops3_b": "Recuerda que puedes poner más de 1 bloque dentro de un bucle <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>."
         },
         "courseA_collector_loops4_2021": {
-          "courseA_collector_loops4_a": "Para cambiar qué tan lejos va Laurel, cambia la cantidad de veces que se ejecuta el loop.",
-          "courseA_collector_loops4_b": "No olvides que Laurel necesita caminar y recoger el tesoro después de que ella termine el loop <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>!"
+          "courseA_collector_loops4_a": "Para cambiar la distancia que recorre Laurel, cambia el número de veces que se ejecutará el bucle.",
+          "courseA_collector_loops4_b": "¡No olvides que Laurel tiene que bajar y recoger el tesoro después de terminar el bucle <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>!"
         },
         "courseA_collector_loops5_2021": {
-          "courseA_collector_loops5_a": "Si usted no puede encontrar la respuesta de inmediato, trate de usar un trozo de papel para averiguar las flechas que se necesita y mirar un patrón.",
-          "courseA_collector_loops5_b": "Intente dividir el problema en 2 partes, moviéndose de lado y luego hacia abajo.",
-          "courseA_collector_loops5_c": "Deberás comenzar con un loop <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> que mueve a Laurel hacia el oeste y recoge el tesoro."
+          "courseA_collector_loops5_a": "Si no puedes averiguar la respuesta de inmediato, intenta usar un trozo de papel para averiguar qué flechas necesitarás y buscar un patrón.",
+          "courseA_collector_loops5_b": "Intenta dividir el problema en dos partes, moviéndote hacia los lados y hacia abajo.",
+          "courseA_collector_loops5_c": "Deberás empezar con un bucle <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> que mueva a Laurel hacia el oeste y recoja tesoros."
         },
         "courseA_collector_loops6_2021": {
           "courseA_collector_loops6_a": "¿No puede descubrir qué pasa? Intenta ejecutar el código un par de veces para ver qué pasa.",
-          "courseA_collector_loops6_b": "La solución más corta tiene 2 loops, <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>, uno después del otro."
+          "courseA_collector_loops6_b": "La solución más corta tiene 2 bucles <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>, uno detrás de otro."
         },
         "courseA_collector_loops7_2021": {
           "courseA_collector_loops7_a": "Si no puede descubrir qué viene después, intente ejecutar el código para ver dónde termina Laurel."
@@ -9279,7 +9279,7 @@
         },
         "courseB_collector_loops4_2021": {
           "courseB_collector_loops4_a": "Pruebe usar el botón paso para descubrir dónde van las cosas mal.",
-          "courseB_collector_loops4_b": "Para cambiar qué tan lejos va Laurel, cambia la cantidad de veces que se ejecuta el loop.",
+          "courseB_collector_loops4_b": "Para cambiar la distancia que recorre Laurel, cambia el número de veces que se ejecutará el bucle.",
           "courseB_collector_loops4_c": "¡Laurel necesita caminar hacia abajo y recoger el tesoro antes de terminar el loop 'repetir' <xml><block type=\"controls_repeat_simplified\">\n\n<title name=\"TIMES\">???</title>\n</block></xml>!"
         },
         "courseB_collector_loops5_2021": {
@@ -11108,29 +11108,29 @@
           "courseA_artist_loops_challenge2_c": "Todos tus bloques necesitarán estar dentro de un loop para terminar este desafío."
         },
         "courseA_collector_loops12022": {
-          "courseA_collector_loops1_a": "Luego que te hayas movido hacia un cuadrado con tesoro, usa este bloque para recogerlo.\n<xml>  <block type=\"collector_collect\"/></xml>",
+          "courseA_collector_loops1_a": "Después de moverte a una casilla con tesoro, usa este bloque para recogerlo.\n\n<xml>  <block type=\"collector_collect\"/></xml>",
           "courseA_collector_loops1_b": "Una solución simple sería moverse al este 2 veces, luego obtener el tesoro."
         },
         "courseA_collector_loops22022": {
           "courseA_collector_loops2_a": "Tendrás que moverte antes de poder recolectar cualquier tesoro.",
-          "courseA_collector_loops2_b": "Luego que te hayas movido hacia un cuadrado con tesoro, usa este bloque para recogerlo.\n<xml>  <block type=\"collector_collect\"/></xml>"
+          "courseA_collector_loops2_b": "Después de moverte a una casilla con tesoro, usa este bloque para recogerlo.\n\n<xml>  <block type=\"collector_collect\"/></xml>"
         },
         "courseA_collector_loops32022": {
           "courseA_collector_loops3_a": "Intente user un \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> \n\nbucle!",
-          "courseA_collector_loops3_b": "Recuerda que puedes poner más de un bloque en un loop <xml><block type=\"controls_repeat\">\n\n<title name=\"TIMES\">???</title>\n</block></xml>."
+          "courseA_collector_loops3_b": "Recuerda que puedes poner más de 1 bloque dentro de un bucle <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>."
         },
         "courseA_collector_loops42022": {
-          "courseA_collector_loops4_a": "Para cambiar qué tan lejos va Laurel, cambia la cantidad de veces que se ejecuta el loop.",
-          "courseA_collector_loops4_b": "No olvides que Laurel necesita caminar y recoger el tesoro después de que ella termine el loop <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>!"
+          "courseA_collector_loops4_a": "Para cambiar la distancia que recorre Laurel, cambia el número de veces que se ejecutará el bucle.",
+          "courseA_collector_loops4_b": "¡No olvides que Laurel tiene que bajar y recoger el tesoro después de terminar el bucle <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>!"
         },
         "courseA_collector_loops52022": {
-          "courseA_collector_loops5_a": "Si usted no puede encontrar la respuesta de inmediato, trate de usar un trozo de papel para averiguar las flechas que se necesita y mirar un patrón.",
-          "courseA_collector_loops5_b": "Intente dividir el problema en 2 partes, moviéndose de lado y luego hacia abajo.",
-          "courseA_collector_loops5_c": "Deberás comenzar con un loop <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> que mueve a Laurel hacia el oeste y recoge el tesoro."
+          "courseA_collector_loops5_a": "Si no puedes averiguar la respuesta de inmediato, intenta usar un trozo de papel para averiguar qué flechas necesitarás y buscar un patrón.",
+          "courseA_collector_loops5_b": "Intenta dividir el problema en dos partes, moviéndote hacia los lados y hacia abajo.",
+          "courseA_collector_loops5_c": "Deberás empezar con un bucle <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> que mueva a Laurel hacia el oeste y recoja tesoros."
         },
         "courseA_collector_loops62022": {
           "courseA_collector_loops6_a": "¿No puede descubrir qué pasa? Intenta ejecutar el código un par de veces para ver qué pasa.",
-          "courseA_collector_loops6_b": "La solución más corta tiene 2 loops, <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>, uno después del otro."
+          "courseA_collector_loops6_b": "La solución más corta tiene 2 bucles <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>, uno detrás de otro."
         },
         "courseA_collector_loops72022": {
           "courseA_collector_loops7_a": "Si no puede descubrir qué viene después, intente ejecutar el código para ver dónde termina Laurel."
@@ -11403,7 +11403,7 @@
         },
         "courseB_collector_loops42022": {
           "courseB_collector_loops4_a": "Pruebe usar el botón paso para descubrir dónde van las cosas mal.",
-          "courseB_collector_loops4_b": "Para cambiar qué tan lejos va Laurel, cambia la cantidad de veces que se ejecuta el loop.",
+          "courseB_collector_loops4_b": "Para cambiar la distancia que recorre Laurel, cambia el número de veces que se ejecutará el bucle.",
           "courseB_collector_loops4_c": "¡Laurel necesita caminar hacia abajo y recoger el tesoro antes de terminar el loop 'repetir' <xml><block type=\"controls_repeat_simplified\">\n\n<title name=\"TIMES\">???</title>\n</block></xml>!"
         },
         "courseB_collector_loops52022": {
