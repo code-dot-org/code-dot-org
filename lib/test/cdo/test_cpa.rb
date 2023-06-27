@@ -2,17 +2,21 @@ require_relative '../test_helper'
 require 'cdo/cpa'
 
 class CPATest < Minitest::Test
+  def setup
+    @request = mock
+  end
+
   def test_cpa_experience_no_config
-    assert_nil CPA.cpa_experience(nil, nil)
+    assert_nil CPA.cpa_experience(@request, nil, nil)
   end
 
   def test_cpa_experience_with_override
-    result = CPA.cpa_experience(nil, CPA::ALL_USER_LOCKOUT)
+    result = CPA.cpa_experience(@request, nil, CPA::ALL_USER_LOCKOUT)
     assert_equal CPA::ALL_USER_LOCKOUT, result
   end
 
   def test_cpa_experience_with_invalid_schedule
-    result = CPA.cpa_experience({}, nil)
+    result = CPA.cpa_experience(@request, {}, nil)
     assert_nil result
   end
 
@@ -22,7 +26,7 @@ class CPATest < Minitest::Test
       CPA::NEW_USER_LOCKOUT => '2023-01-02T00:00:00Z',
       CPA::ALL_USER_LOCKOUT => '2023-01-03T00:00:00Z'
     }
-    result = CPA.cpa_experience(schedule, nil, current_time)
+    result = CPA.cpa_experience(@request, schedule, nil, current_time)
     assert_nil result
   end
 
@@ -32,7 +36,7 @@ class CPATest < Minitest::Test
       CPA::NEW_USER_LOCKOUT => '2023-01-02T00:00:00Z',
       CPA::ALL_USER_LOCKOUT => '2023-01-03T00:00:00Z'
     }
-    result = CPA.cpa_experience(schedule, nil, current_time)
+    result = CPA.cpa_experience(@request, schedule, nil, current_time)
     assert_equal CPA::NEW_USER_LOCKOUT, result
   end
 
@@ -42,7 +46,7 @@ class CPATest < Minitest::Test
       CPA::NEW_USER_LOCKOUT => '2023-01-02T00:00:00Z',
       CPA::ALL_USER_LOCKOUT => '2023-01-03T00:00:00Z'
     }
-    result = CPA.cpa_experience(schedule, nil, current_time)
+    result = CPA.cpa_experience(@request, schedule, nil, current_time)
     assert_equal CPA::ALL_USER_LOCKOUT, result
   end
 end
