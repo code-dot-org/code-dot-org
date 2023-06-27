@@ -1,6 +1,9 @@
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 import {PlaybackEvent} from '../player/interfaces/PlaybackEvent';
-import {initialProgressState, ProgressState} from '../progress/ProgressManager';
+import {
+  initialProgressState,
+  ProgressState,
+} from '@cdo/apps/labs/progress/ProgressManager';
 
 const registerReducers = require('@cdo/apps/redux').registerReducers;
 
