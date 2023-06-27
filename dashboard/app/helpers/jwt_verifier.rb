@@ -16,13 +16,17 @@ class JwtVerifier
   private
 
   def verify_audience(jwt)
-    aud = jwt[:aud]
-    aud_array = [*aud]
-    errors << 'Audience must be a string or Array of strings.' unless aud_array.all?(String)
-    if jwt.key? :azp
-      verify_azp(aud, jwt[:azp])
+    if jwt.key? :aud
+      aud = jwt[:aud]
+      aud_array = [*aud]
+      errors << 'Audience must be a string or Array of strings.' unless aud_array.all?(String)
+      if jwt.key? :azp
+        verify_azp(aud, jwt[:azp])
+      else
+        errors << 'Audience does not match client_id' unless public_key_matches_one_of_client_ids(aud)
+      end
     else
-      errors << 'Audience not found on Platform' unless public_key_matches_one_of_client_ids(aud)
+      errors << 'Audience does not exist'
     end
   end
 
@@ -33,7 +37,11 @@ class JwtVerifier
 
   def verify_expiration(jwt)
     now = Time.zone.now
-    errors << "Expiration time of #{jwt[:exp]} before #{now.to_i}" unless Time.zone.at(jwt[:exp]) > Time.zone.now
+    if jwt.key? :exp
+      errors << "Expiration time of #{jwt[:exp]} before #{now.to_i}" unless Time.zone.at(jwt[:exp]) > Time.zone.now
+    else
+      errors << 'Expiration time does not exist'
+    end
   end
 
   def azp_in_aud(aud, azp)

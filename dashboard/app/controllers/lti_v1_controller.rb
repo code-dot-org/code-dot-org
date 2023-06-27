@@ -40,13 +40,17 @@ class LtiV1Controller < ApplicationController
       prompt: 'none',
     }.to_query
 
-    puts auth_redirect_url.to_s
     redirect_to auth_redirect_url.to_s
   end
 
   def authenticate
     id_token = params[:id_token]
-    decoded_jwt_no_auth = JSON::JWT.decode(id_token, :skip_verification)
+    return unauthorized_status unless id_token
+    begin
+      decoded_jwt_no_auth = JSON::JWT.decode(id_token, :skip_verification)
+    rescue
+      return unauthorized_status
+    end
     # client_id is the aud[ience] in the JWT
     extracted_client_id = decoded_jwt_no_auth[:aud]
     extracted_issuer_id = decoded_jwt_no_auth[:iss]
@@ -55,33 +59,30 @@ class LtiV1Controller < ApplicationController
     return unauthorized_status unless integration
 
     # verify the jwt via the integration's public keyset
+    decoded_jwt = get_decoded_jwt(integration, id_token)
+    # decoded_jwt = decoded_jwt_no_auth
+
+    jwt_verifier = JwtVerifier.new(decoded_jwt, integration)
+
+    if jwt_verifier.verify_jwt
+      target_link_uri = decoded_jwt_no_auth[:'https://purl.imsglobal.org/spec/lti/claim/target_link_uri']
+      redirect_to target_link_uri
+    else
+      return unauthorized_status(*jwt_verifier.errors)
+    end
+  end
+
+  def get_decoded_jwt(integration, id_token)
     public_jwk_url = integration.jwks_url
     response = JSON.parse(HTTParty.get(public_jwk_url).body)
     jwk_set = JSON::JWK::Set.new response
-    decoded_jwt = JSON::JWT.decode(id_token, jwk_set)
-
-    jwt_verifier = JwtVerifier.new(decoded_jwt, integration)
-    if jwt_verifier.verify_jwt
-      document_target = decoded_jwt[:'https://purl.imsglobal.org/spec/lti/claim/launch_presentation'][:document_target]
-      # we only accept window document_target, not iframe (but my window one is showing as iframe :/ )
-      p document_target
-
-      # should probably move these to their own 'verifier's
-      message_type = decoded_jwt[:'https://purl.imsglobal.org/spec/lti/claim/message_type']
-      return unauthorized_status unless message_type == 'LtiResourceLinkRequest'
-
-      target_link_uri = decoded_jwt[:'https://purl.imsglobal.org/spec/lti/claim/target_link_uri']
-      redirect_to target_link_uri
-    else
-      # this should use the *jwt_verifier.errors to get the most info out of the errors
-      return unauthorized_status
-    end
+    JSON::JWT.decode(id_token, jwk_set)
   end
 
   private
 
-  def unauthorized_status
-    render(status: :unauthorized, json: {error: 'Unauthorized'})
+  def unauthorized_status(error = 'Unauthorized')
+    render(status: :unauthorized, json: {error: error})
   end
 
   def create_and_set_nonce
