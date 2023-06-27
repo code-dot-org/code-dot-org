@@ -117,6 +117,9 @@
   teacher_label_csd: "CS Discoveries Teacher"
   teacher_label_csp: "CS Principles Teacher"
 
+  required_materials: "Required Materials:"
+  optional_materials: "Optional Materials:"
+
   call_to_action_learn_more: 'Learn more'
   call_to_action_watch_now: 'Watch now'
   call_to_action_try_activity: 'Try activity'
@@ -228,14 +231,17 @@
   values_05: "We act with integrity and transparency"
   values_06: "We believe broad impact requires thinking big and acting holistically"
 
+  heading_professional_learning: "Professional Learning"
   heading_additional_resources: "Additional resources"
   heading_support_and_questions: "Support and questions"
   heading_faq: "Frequently asked questions"
 
-  support_and_questions_subhead: "Still have questions? Reach out to us! We are here to help."
-  support_and_questions_desc: "Our support team is here to answer any questions you may have about starting teaching with Code.org. You can also ask other teachers about their experience on our teacher forums."
+  professional_learning_section_subhead: "Get the support you need as you prepare to teach."
+  professional_learning_section_desc_v1: "Compared with similarly-situated schools, [a school's participation in the Code.org Professional Learning program causes an estimated five-fold increase](%{url}) in the number of students that take, and earn qualifying scores on the AP Computer Science Principles exam. And teachers love it! Over 90% rank it the best professional development ever."
+  professional_learning_section_block_facilitator_led_workshops: "Our highly supportive Professional Learning Program will bring you together with a group of teachers to learn from each other as well as expert facilitators as you take on the first year of teaching the free CS Principles curriculum to your students. In-person and virtual workshops starting this summer."
 
-  pl_block_description_csp_csd: "Our highly supportive Professional Learning Program will bring you together with a group of teachers to learn from each other as well as expert facilitators as you take on the first year of teaching the free CS Principles curriculum to your students. In-person and virtual workshops starting this summer."
+  support_and_questions_section_subhead: "Still have questions? Reach out to us! We are here to help."
+  support_and_questions_section_desc: "Our support team is here to answer any questions you may have about starting teaching with Code.org. You can also ask other teachers about their experience on our teacher forums."
 
   blockchain_hero_heading: 'How Blockchain Works'
   blockchain_hero_desc: 'Dive into the world of blockchain with "How Blockchain Works," our new video series and accompanying lessons!'
@@ -500,6 +506,42 @@
   teach_page_additional_materials_list_desc_02: "We offer a growing library of educational videos for use by educators worldwide, online or in classrooms. Our goal is to amplify our efforts beyond our own curriculum's reach."
   teach_page_additional_materials_list_heading_03: "Classroom Posters"
   teach_page_additional_materials_list_desc_03: "Print these posters of diverse role models to hang in your school and inspire your students to try computer science."
+
+  csp_page_faq_question_01: "Is CS Principles mapped to standards?"
+  csp_page_faq_answer_01: "CS Principles was written using the AP CS Principles Framework and prepares students for the AP CS Principles exam. The curriculum has also been aligned to the newly revised 2017 CSTA standards. [A summary of standards mappings can be found here](%{standards_url}). A google sheet version of the standards can be found at [CSP Standards 2021](%{csp_standards_2021_url})."
+  csp_page_faq_question_02: "How much does it cost to teach CS Principles?"
+  csp_page_faq_answer_02: "Our curriculum and platform are available at [no cost](%{cost_url}) for anyone, anywhere, to teach!"
+  csp_page_faq_question_03: "How/Where can I get professional development for CS Principles?"
+  csp_page_faq_answer_03_01: "Our Professional Learning Program offers year-round support. The program kicks off with a 5-day summer workshop where you'll have an opportunity to work hands-on with the curriculum and meet other teachers from your area. Throughout the year, we offer forum support and follow-up workshops. You don't need any prior computer science experience to get started. And teachers love it! 90% rank it the best professional development ever. [Click here to apply and learn more](%{pl_url})."
+  csp_page_faq_answer_03_02: "Have questions about professional development? [Provide your contact information to a Regional Partner in your area](%{regional_partner_url})."
+  csp_page_faq_answer_03_03: "If you previously participated in the Code.org Professional Learning Program for CS Principles, your Regional Partner may be hosting a follow-up workshop to help support your transition to the new course. [Please contact your Regional Partner for more details](%{regional_partner_url})."
+  csp_page_faq_question_04: "What is the recommended timing for teaching CS Principles?"
+  csp_page_faq_answer_04_01: "We recommend that CS Principles be taught as a full year class, assuming that you meet with students daily or nearly daily for 45 or more minutes."
+  csp_page_faq_answer_04_02: "It is possible to teach CS Principles on a semester block schedule, though we highly recommend this implementation only be used in the fall semester. Since the AP Performance Tasks are due in late April and require 20 dedicated hours of class time to complete, most schools find there is not enough time to complete the course on a block schedule in the spring."
+  csp_page_faq_question_05: "What materials do I need for CS Principles?"
+  csp_page_faq_answer_05_01: "CS Principles requires that students have access to computers with a modern web browser. At this time, our courses are not optimized for tablets or mobile devices. For more details, [check out Code.org's technology requirements](%{it_url})."
+  csp_page_faq_answer_05_02: "Many lessons have handouts that are designed to guide students through activities. While these handouts are not required, we highly recommend their use. In addition to handouts, several lessons call for specific items. You can find these listed below as well as our suggestions for alternatives:"
+  csp_page_faq_answer_05_02_list_01: "Unit 1, Lesson 2: Assortment of craft materials for constructing physical devices. Recommendations: cups, string/yarn, construction paper, flashlights, slinkies, noise makers, markers, and glue, etc. Alternative: none."
+  csp_page_faq_answer_05_02_list_02: "Unit 2, Lesson 2: String for table groups to build a network connecting them. Alternative: Students draw their network but don't actually build it."
+  csp_page_faq_answer_05_02_list_03: "Unit 3, Lesson 5: A handful of LEGO® blocks for every pair of students. Alternative: Sticky notes, construction paper."
+  csp_page_faq_answer_05_02_list_04: "Unit 4, Lessons 1 & 5: Plastic bags, sticky notes, dry erase markers. Alternative: Envelopes."
+  csp_page_faq_answer_05_02_list_05: "Unit 5, Lesson 1: Plastic bags, gallon-sized plastic bags, sticky notes, dry erase markers, tape. Alternative: Envelopes."
+  csp_page_faq_answer_05_02_list_06: "Unit 6, Lessons 2 & 3: Sticky notes. Alternative: Scraps of paper."
+  csp_page_faq_answer_05_02_list_07: "Unit 6, Lesson 4: Decks of cards. Alternative: Any item that could be combined into two categories (e.g. change with even / odd year)."
+  csp_page_faq_answer_05_02_list_08: "Unit 7, Lessons 1 & 5: Sticky notes, envelopes, plastic bags, file folders. Alternative: Scraps of paper, folders made of a folded sheet of paper, etc."
+  csp_page_faq_answer_05_03: "The following supplies are completely optional but will be useful to have on hand for various lessons."
+  csp_page_faq_answer_05_03_list_01: "Graph paper"
+  csp_page_faq_answer_05_03_list_02: "Chart paper"
+  csp_page_faq_answer_05_03_list_03: "Markers"
+  csp_page_faq_answer_05_03_list_04: "Post-it notes"
+  csp_page_faq_question_06: "How can I access answer keys?"
+  csp_page_faq_answer_06_01: 'With an approved teacher account you can find answer keys in a blue "Teacher Only" panel that shows in the online lessons and activities.'
+  csp_page_faq_answer_06_02: "Teachers in our Professional Learning Program will automatically be approved to view answer keys. If you need an approved teacher account, you can apply for access to protected teacher-only materials (answer keys, etc) through [this form](%{form_url}). Please keep in mind that it may take 3-5 business days to verify your account."
+  csp_page_faq_question_07: "How was the curriculum developed?"
+  csp_page_faq_answer_07_01: "Our CS Principles curriculum has always been designed as part of a broader vision of supporting high quality, engaging, and equitable computer science instruction in classrooms across the country. Our [Curriculum Values](%{curriculum_url}) continue to guide us, and in particular our focus on expanding access to those who historically have been denied opportunities to learn about the exciting and impactful field of computing. While our vision and values remain unchanged, the landscape of CS education is rapidly developing."
+  csp_page_faq_answer_07_02: "For the 2020-21 school year the College Board has made some significant updates to the CS Principles framework and AP assessment to ensure that CS Principles remains relevant and aligned with equivalent university courses. CS education research continues to reveal new insights on how students learn about computing, and feedback from the thousands of classrooms now using our CS Principles curriculum has identified opportunities to further improve our courses, tools, and recommended pedagogy."
+  csp_page_faq_answer_07_03: "The goal of the updates to our curriculum is to navigate these developments in a way that remains committed to our vision and values and supports the many teachers, schools, classrooms, and districts that are already a part of our broader CS Principles community. We remain deeply thankful for you joining us on this mission to make our collective vision a reality."
+  csp_page_faq_answer_07_04: "For more information about our goals and approach to our courses, please see our [Curriculum Values](%{curriculum_url}) and our [Professional Learning Values](%{pl_url})."
 
   hoc_live: 'Hour of Code Live'
   hoc_live_sign_up_title: 'Sign up for Hour of Code Live'

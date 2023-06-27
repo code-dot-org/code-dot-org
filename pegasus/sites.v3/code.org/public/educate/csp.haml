@@ -60,15 +60,16 @@ theme: responsive_full_width
 
 %section
   .wrapper
-    %h2 Professional Learning
-    %p.heading-sm Get the support you need as you prepare to teach.
-    %p Compared with similarly-situated schools, <a href="http://www.westcoastanalytics.com/uploads/6/9/6/7/69675515/wca_code_final_report_2018.pdf">a school's participation in the Code.org Professional Learning program causes an estimated five-fold increase</a> in the number of students that take, and earn qualifying scores on the AP Computer Science Principles exam. And teachers love it! Over 90% rank it the best professional development ever.
+    %h2=hoc_s(:heading_professional_learning)
+    %p.heading-sm
+      =hoc_s(:professional_learning_section_subhead)
+    %p=hoc_s(:professional_learning_section_desc_v1, markdown: :inline, locals: {url: "http://www.westcoastanalytics.com/uploads/6/9/6/7/69675515/wca_code_final_report_2018.pdf"})
     .action-block__wrapper.action-block__wrapper--two-col
       .action-block.action-block--one-col.flex-space-between
         .content-wrapper
           %h3=hoc_s(:teach_page_pl_offerings_list_heading_workshops_facilitator_led)
           %img{src: "/images/pl-facilitator-led-workshops.png", alt: ""}
-          %p Our highly supportive Professional Learning Program will bring you together with a group of teachers to learn from each other as well as expert facilitators as you take on the first year of teaching the free CS Principles curriculum to your students. In-person and virtual workshops starting this summer.
+          %p=hoc_s(:professional_learning_section_block_facilitator_led_workshops)
         .content-footer
           %a.link-button{href: "/afe"}
             =hoc_s(:call_to_action_apply_for_pl)
@@ -81,15 +82,15 @@ theme: responsive_full_width
           %a.link-button{href: CDO.studio_url("/courses/self-paced-pl-csp-2022?no_redirect=true")}
             =hoc_s(:call_to_action_explore_modules)
 
-%section.bg-neutral-light
+= view :section_divider_line
+
+%section.no-padding-bottom
   .wrapper
-    %h2 Frequently Asked Questions
-    %details
-      %summary Why should my district teach computer science?
-      %p Computer science is
+    %h2=hoc_s(:heading_faq)
+    = view :faq_csp
 
 %section
   .wrapper
-    = view :support_and_questions
+    = view :support_and_questions_section
 
 = view :analytics_event_log_helper, event_name: AnalyticsConstants::CSP_CURRICULUM_PAGE_VISITED_EVENT
