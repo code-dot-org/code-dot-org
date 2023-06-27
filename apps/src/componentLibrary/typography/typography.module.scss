@@ -1,7 +1,7 @@
 @import "color", "font";
 
 /* This file is a adopted copy of shared/css/typography.scss
-  updating styles in this file will require a manual sync with the that file
+  updating styles in this file will require a manual sync with the that file.
 */
 
 // TODO: [DSCO-64] (https://codedotorg.atlassian.net/browse/DSCO-64)
@@ -23,6 +23,10 @@
   src: url("/fonts/barlowSemiCondensed/BarlowSemiCondensed-Medium.ttf") format("truetype"), local("?");
 }
 
+html {
+  font-size: 100%;
+}
+
 // This stylesheet can be imported to maintain typographic
 // consistency across Dashboard and Pegasus sites.
 
@@ -32,7 +36,28 @@
 // identical classes for potential use on other elements if needed.
 
 // ----------------------------------------
-// v 1.0.1
+// v 1.1.1
+// ----------------------------------------
+
+// Values
+// font-size uses rem
+// - works when the root font-size is 100% which uses the
+// browser default font-size of 16px (3rem = 16 x 3 = 48px)
+
+// margin uses em
+// - sets the margin relative to the parent element rather than the root
+// example:
+// - 0.5rem = 8px margin >>> gets value from root 16px
+// - 0.5em = font-size / 2 >>> gets value from h1 3rem (48px) / 2 = 24px margin
+
+// Read more about rem vs em:
+// https://www.digitalocean.com/community/tutorials/css-rem-vs-em-units
+
+// line-height uses unitless numbers
+// - this multiplies the line-height by the element's font-size
+// and is the preferred way to set line-height according to Mozilla
+// https://developer.mozilla.org/en-US/docs/Web/CSS/line-height
+
 // ----------------------------------------
 
 // Heading styles
@@ -60,37 +85,37 @@
 @mixin heading-xxl {
   @include heading-common;
   font-family: $barlowSemiCondensed-semibold;
-  font-size: 3em;
+  font-size: 3rem;
 }
 
 @mixin heading-xl {
   @include heading-common;
   font-family: $barlowSemiCondensed-semibold;
-  font-size: 2.125em;
+  font-size: 2.125rem;
 }
 
 @mixin heading-lg {
   @include heading-common;
   font-family: $barlowSemiCondensed-semibold;
-  font-size: 1.75em;
+  font-size: 1.75rem;
 }
 
 @mixin heading-md {
   @include heading-common;
   font-family: $barlowSemiCondensed-medium;
-  font-size: 1.5em;
+  font-size: 1.5rem;
 }
 
 @mixin heading-sm {
   @include heading-common;
   font-family: $gotham-bold, sans-serif;
-  font-size: 1.25em;
+  font-size: 1.25rem;
 }
 
 @mixin heading-xs {
   @include heading-common;
   font-family: $gotham-bold, sans-serif;
-  font-size: 1em;
+  font-size: 1rem;
 }
 
 // Paragraph styles
@@ -103,19 +128,19 @@
 @mixin body-one {
   @include paragraph-common;
   font-family: $gotham-regular, sans-serif;
-  font-size: 1em;
+  font-size: 1rem;
 }
 
 @mixin body-two {
   @include paragraph-common;
   font-family: $gotham-regular, sans-serif;
-  font-size: 0.875em;
+  font-size: 0.875rem;
 }
 
 @mixin overline {
   @include paragraph-common;
   font-family: $gotham-bold, sans-serif;
-  font-size: 0.75em;
+  font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
@@ -131,7 +156,7 @@
 // Caption styles
 @mixin figcaption {
   font-family: $gotham-bold, sans-serif;
-  font-size: 0.875em;
+  font-size: 0.875rem;
   margin: 0.5em 0 1em;
   line-height: 1.2;
 }
