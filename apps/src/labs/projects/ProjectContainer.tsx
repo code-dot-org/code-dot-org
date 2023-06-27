@@ -46,7 +46,7 @@ const ProjectContainer: React.FunctionComponent<ProjectContainerProps> = ({
         )
       );
       promise = dispatch(loadProject());
-    } else {
+    } else if (currentLevelId !== null) {
       promise = dispatch(
         setUpForLevel({
           levelId: parseInt(currentLevelId),
