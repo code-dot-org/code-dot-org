@@ -1,5 +1,6 @@
 require 'active_support/core_ext/numeric/time'
 require 'cdo/aws/s3'
+require 'cdo/web_purify'
 require 'cdo/rack/request'
 require 'sinatra/base'
 require 'cdo/sinatra'
@@ -416,7 +417,7 @@ class FilesApi < Sinatra::Base
       begin
         share_failure = ShareFiltering.find_failure(body, request.locale)
       rescue StandardError => exception
-        return file_too_large(endpoint) if exception.message == "Profanity check failed: text is too long"
+        return file_too_large(endpoint) if exception.class == WebPurify::TextTooLongError
         details = exception.message.empty? ? nil : exception.message
         return json_bad_request(details)
       end

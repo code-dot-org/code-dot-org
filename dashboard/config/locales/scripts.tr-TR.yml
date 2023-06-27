@@ -10526,3 +10526,7 @@ tr:
             ve bilgisayar ve internetin toplumsal etkilerini tartışın. Bu kursun sonunda
             arkadaşlarınız ve ailenizle paylaşabileceğiniz bir proje tasarlayın ve
             oluşturun.
+        csa-frq-practice:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Sınıflar

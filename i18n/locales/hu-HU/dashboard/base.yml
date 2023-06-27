@@ -60,6 +60,7 @@ hu:
         reset_password_token: "A jelszó megváltoztatásához használt link"
         error:
           future: nem lehet a jövőben
+        us_state: 'Állam'
   beta: "béta"
   hello: "Helló világ"
   welcome_back: "Üdv újra, %{name}"
@@ -200,6 +201,9 @@ hu:
     parent_account_checkbox: "Szülő/gondviselő vagyok, a gyermekem nevében jelentkezem"
     parent_account_email_progress_permission: "Küldhetünk Önnek esetenként e-mailt a gyermeke fejlődéséről és projektjeiről, valamint frissítéseket a tanfolyamáról és a számítástechnikai ismereteiről? [(Lásd az adatvédelmi irányelveinket)](%{privacy_policy_url})"
     parent_account_email_label: "Szülő/gondviselő e-mail címe"
+    us_state: 'Állam'
+    us_state_dropdown_options:
+      other: "Olyan helyen élek, ami nem szerepel a listában."
   school_info:
     title: 'Iskolai információ (opcionális)'
     school_country: 'Iskola országa'
@@ -1100,6 +1104,7 @@ hu:
         csf_express: 'Számítástechnika alapjai (expressz vagy azt megelőző)'
         csd: 'Számítástechnika felfedezése'
         csp: 'Számítástechnika alapjai'
+        other: 'Egyéb'
         not_applicable: "Nem alkalmazható"
       email_opt_in:
         opt_in_yes: 'Igen'

@@ -44,6 +44,7 @@ zh-TW:
         reset_password_token: 你跟隨的重設密碼連結
         error:
           future: 不能選擇將來的時間
+        us_state: 州 / 省
   beta: 測試版
   hello: Hello world
   welcome_back: 歡迎回來，%{name}
@@ -188,6 +189,7 @@ zh-TW:
     parent_account_checkbox: 我是家長/監護人，協助我的孩子進行註冊
     parent_account_email_progress_permission: 我們是否可以偶爾透過電子信箱向你發送關於你孩子進度和專案的最新資訊，以及關於其課程和電腦科學的最新資訊？[(參見我們的隱私政策)](%{privacy_policy_url})
     parent_account_email_label: 家長/監護人電子信箱
+    us_state: 州 / 省
   school_info:
     title: 學校資訊（非必填）
     school_country: 學校所屬國家
@@ -1206,6 +1208,7 @@ zh-TW:
         csf_express: 計算機科學基礎（速學先修或速學）
         csd: 計算機科學探索
         csp: CS 原理
+        other: 其它
         not_applicable: 不適用
       email_opt_in:
         opt_in_yes: 是

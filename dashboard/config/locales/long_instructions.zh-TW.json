@@ -3629,7 +3629,7 @@
         "courseC_artist_prog42022": "_「喔不！Starla 的外星寵物剛剛飛走了！讓我們來幫助她吧！」_\n\n完成 Starla 的火箭，讓她可以追逐她的寵物。\\\n（三角形的每一條邊長為 100 像素，外角為 120 度。）",
         "courseC_artist_prog52022": "_「也許我們應該為每隻寵物做一個名牌，以防牠們迷路！」_\n\n在外部繪製一個矩形來完成這個名牌。\\\n（長邊各為 200 像素，短邊各為 100 像素）",
         "courseC_artist_prog62022": "\"_「現在給 Belle 一個標籤！」_\n\n繪製邊長為 200 個像素的四方形。\"",
-        "courseC_artist_prog72022": "\\*\\* 挑戰：\\*\\* 這個寵物名稱標籤是特殊形狀！  \n\n你能弄明白怎麼繪製輪廓嗎？\n（長邊為150圖元，每個短邊為75圖元。）",
+        "courseC_artist_prog72022": "** 挑戰：** 這個寵物名稱標籤是特殊形狀！  \n\n你能弄明白怎麼繪製輪廓嗎？  \n（長邊為150圖元，每個短邊為75圖元。）",
         "courseC_artist_prog82022": "這裡還有一個 Pi 的三角形名牌。\\\n（每個邊長都是 150 像素）",
         "courseC_artist_prog_challenge12022": "為每隻動物畫一個房間。有很多不同的方法可以通過這個關卡，玩得開心吧！每個正方形的邊長為 100 像素。",
         "courseC_artist_prog_challenge2a2022": "_「幫我在這條路漆上黃線！」_\n\n這三條線段的長度分別為 150、100 和 200 像素！",
@@ -3802,7 +3802,6 @@
         "courseD_maze_until92022": "**挑戰：**避開食僵花，並幫助僵屍移動到向日葵那兒。",
         "courseE_aboutme_12022": "<img src=\"https://studio.code.org/api/v1/animation-library/gamelab/uRkXIcSlbIAZ46WKaW.dFu.g3062psWS/category_people/pink_dress_wave.png\" style=\"height:80px\"> _\"你好，世界！我叫裡基，我有些關於自己的東西想要分享！\"_\n\n**探索：**裡基在使用精靈圖實驗室來創建關於她自己的_互動海報_，該海報可以分享到網路上。  \n\n裡基給了你查看海報的許可權。你甚至可以編輯她的代碼！ \n\n試試裡基的海報和代碼，然後點擊**完成**。",
         "courseE_aboutme_62022": " _\"哇！你的海報太酷了！\"_\n\n這是你的項目，繼續前進吧！以下是一些讓你的海報更好的思路：\n\n-   添加背景。選擇一個適合海報的背景。\n-   添加行為。讓你的每個精靈圖在點擊時做出不同的反應。\n-   添加更多事件。使用**事件**積木類別中的其他積木。\n-   添加聲音。",
-        "courseE_artist_functions102022": "這次，使用8 個邊長為 25 像素的六邊形來繪製。\n\n-   在繪製每個六邊形時，重複繪製 6 次來畫圖型的邊，並且每次旋轉 60 度。\n-   在每個六邊形之間跳躍 25 個像素。\n-   要繪製出菱形，需要交替轉向 60 度和 120 度。",
         "courseE_artist_functions22022": "\"這裡有一個叫做`繪製正方形`的函式。用它來完成這次繪圖。 \n\n* * *\n\n正方形的間距為 75 像素。\"",
         "courseE_artist_functions32022": "\"構建一個函式來繪製這個星形。\n\n* * *\n\n-   星形的每條邊都有 25 個像素長\n-   你需要轉向 45 度才能畫出 8 條邊\n-   前進後退都是可以的，在同一條邊上也可以\"",
         "courseE_artist_functions52022": "\"什麼時候畫三顆星比畫四顆星難？當你還需要跳過月亮的時候！\n\n只需要畫好三顆星星即可通過此關卡。\n\n* * *\n\n-   第一顆星和第二顆星之間要跳過 **200** 像素\n-   第二顆星和第三顆星之間要跳過 **100** 像素\"",
@@ -3810,8 +3809,6 @@
         "courseE_artist_functions8a2022": "\"_「函式很簡單！」_\n\n我們要畫出一些花哨的東西！  從為這個正方形建立一個函式開始。\"",
         "courseE_artist_functions8b2022": "\"_「殭屍暈了。」_\n\n從你的`繪製正方形`函式裡面呼叫`畫一行正方形`函式，這樣做會更容易！\n\n* * *\n\n-   積木的間距為 _50_ 像素。\"",
         "courseE_artist_functions8c2022": "再增加一個函式，使用`畫一行正方形`函式來建立這個正方形交錯的堆疊。",
-        "courseE_artist_functions92022": "\"**挑戰：**只用現有的積木創建出這個圖像。 \n\n-   每個三角形的邊長為 **50 像素**  \n-   要繪製菱形，需要交替轉向 **60 度和 120 度**。\"",
-        "courseE_artist_functionsProj2022": "**好主意：**運用所學去做你想要的東西！  \n\n你能做出像這個風車一樣的東西嗎？\n\n![expandable](https://images.code.org/0d79058844e1f038971c303b20b0105f-image-1628782803453.png)",
         "courseE_artist_functions_challenge12022": "定義了一個函式之後，就可以一次又一次地隨時隨地呼叫它！嘗試執行這段程式來了解其中的原理，然後再修改成屬於自己的創意設計！",
         "courseE_artist_functions_challenge22022": "不僅可以跳到某些預設位置，例如畫布的拐角，還可以使用`跳到`命令來到達你想要的任何絕對位置！嘗試運行這段代碼來查看其工作原理，然後使該程式成為你自己的城市！\n\n<xml>\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">???</title>\n    <title name=\"YPOS\">???</title>\n    </block></xml>",
         "courseE_artist_functions_predict12022": "這個關卡要使用我們已經定義好的函式。",
@@ -3942,7 +3939,7 @@
         "ramp_artist_loops12022": "真是美好的一天！\n\n向前移動60畫素，幫助小藝術家在冬天來臨之前蓋住他的鮮花。",
         "ramp_artist_loops22022": "重複該步驟5次，在每次移動之間改變隨機改變顏色。",
         "ramp_artist_loops32022": "再次畫彩色線條5次，這次使用一個重複迴圈。",
-        "ramp_artist_loops42022": "你可以透過迴圈`移動 - 向前`和`轉向 右邊 144 度`積木的序列來建立這個星形圖案。",
+        "ramp_artist_loops42022": "你可以透過迴圈`移動 - 向前`和`轉向 右邊 144 度`積木的序列來建立這個星形圖案。\n",
         "ramp_artist_loops52022": "迴圈確實能讓程式編寫更容易！\n\n使用迴圈來畫這個樓梯。\n\n-   每個階梯長50畫素，高50畫素\n-   您需要每個方向轉90度",
         "ramp_artist_loops72022": "找到規律，用迴圈讓這個程式更精簡！",
         "ramp_artist_loops82022": "**挑戰：** 尋找一個模式，使用迴圈來讓這個程式更簡潔。",
@@ -3975,8 +3972,7 @@
         "helloworld_food_freeplay_space-2022": "_是時候開始創造你想要的東西了！當你完成時，分享你的項目，並對你世界中的人說：“你好！”_\n\n<div style=\"float:right;padding:20px\">\n<img src=\"https://studio.code.org/api/v1/animation-library/spritelab/BwBMSmcRhyFJcNQdvbF4EQNr6iBqqJcE/category_space/space_astronaut_unicorn.png\" style=\"height:60px; border-width:0px; border-style:solid; border-color:black; border-radius:10px\"><img src=\"https://studio.code.org/api/v1/animation-library/spritelab/2gg2OueoMTsFgRsb8gFe5tfh1qgKKEhW.S/category_space/space_astronaut_4.png\" style=\"height:60px; border-width:0px; border-style:solid; border-color:black; border-radius:10px\"><img src=\"https://studio.code.org/api/v1/animation-library/spritelab/hjsJUEMDi_KtdrHYBbTAE6352QGi.bQ8/category_space/space_sun.png\" style=\"height:60px; border-width:0px; border-style:solid; border-color:black; border-radius:10px\"><img src=\"https://studio.code.org/api/v1/animation-library/spritelab/zfJDL4rdROZ999p.U5.8sOu8zP5VkSVb/category_space/space_rover.png\" style=\"height:60px; border-width:0px; border-style:solid; border-color:black; border-radius:10px\">\n</div>\n\n-   點擊_服裝_標籤，向你的專案添加更多_服裝_。\n-   向工作區添加_代碼_使精靈圖出現。\n-   嘗試向你的項目添加更多功能，使其更好。\n-   按上面的_分享_按鈕，將你的項目發送給朋友！\n\n若想獲得一些額外的樂趣，請查看**精靈**類別中全新的`create effect`積木！\n\n<xml>\n  <block type=\"gamelab_makeBurst\">\n    <title name=\"ANIMATION_NAME\">\"face_burger_1\"</title>\n    <value name=\"NUM\">\n      <block type=\"math_number\">\n        <title name=\"NUM\">10</title>\n      </block>\n    </value>\n  </block>\n</xml>",
         "poetry_modal_function_editor": "這是一個詩歌關卡，包括自動填充的`程式`類別並使用模態函數編輯器。",
         "poetry_no_modal_function_editor": "這是一個詩歌關卡，包括自動填充的`程式`類別，沒有模態函數編輯器。",
-        "PDK5 Strategies O": "教授_計算機科學_與教授數學或閱讀等其他科目有什麼不同嗎？閱讀下面的策略清單，評論你認為在教授計算機科學時會遇到的與其他科目的一些差異。\n\n[此工作表](http://code.org/curriculum/docs/k-5/ClassroomStrategies.pdf)也可在“教師面板”的“教學計劃和資源”圖塊中找到。 \n\n![image](//code.org/images/strategiesforteachingcs.png)\n\n</br>",
-        "ramp_artist_loops62022": "這個樓梯要大得多，但它所使用的程式數量與上一關一樣多！\n\n修正這個迴圈來過關。"
+        "PDK5 Strategies O": "教授_計算機科學_與教授數學或閱讀等其他科目有什麼不同嗎？閱讀下面的策略清單，評論你認為在教授計算機科學時會遇到的與其他科目的一些差異。\n\n[此工作表](http://code.org/curriculum/docs/k-5/ClassroomStrategies.pdf)也可在“教師面板”的“教學計劃和資源”圖塊中找到。 \n\n![image](//code.org/images/strategiesforteachingcs.png)\n\n</br>"
       }
     }
   }

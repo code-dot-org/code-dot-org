@@ -2472,6 +2472,8 @@ sk:
             '8': '8'
             '9': '9'
             '10': '10'
+      storylab_printText:
+        text: tlačiť {TEXT}
       storylab_setForegroundEffect2:
         text: vykonaj efekt {EFFECT}
         options:

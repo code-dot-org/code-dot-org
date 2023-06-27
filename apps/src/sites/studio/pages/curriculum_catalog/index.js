@@ -9,14 +9,20 @@ import {setSections} from '@cdo/apps/templates/teacherDashboard/teacherSectionsR
 
 $(document).ready(function () {
   const catalogData = getScriptData('catalog');
-  const {curriculaData, isEnglish, sections} = catalogData;
+  const {curriculaData, isEnglish, sections, isSignedOut, isTeacher} =
+    catalogData;
 
   const store = getStore();
   sections && store.dispatch(setSections(sections));
 
   ReactDOM.render(
     <Provider store={store}>
-      <CurriculumCatalog curriculaData={curriculaData} isEnglish={isEnglish} />
+      <CurriculumCatalog
+        curriculaData={curriculaData}
+        isEnglish={isEnglish}
+        isSignedOut={isSignedOut}
+        isTeacher={isTeacher}
+      />
     </Provider>,
     document.getElementById('curriculum-catalog-container')
   );

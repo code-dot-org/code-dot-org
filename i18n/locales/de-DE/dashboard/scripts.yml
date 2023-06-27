@@ -5503,3 +5503,11 @@ de:
           title: 'Modul 2: Navigieren in Code.org'
         self-paced-pl-csp3-2023: {}
         self-paced-pl-csp4-2023: {}
+        musiclab: {}
+        csa-software-engineering: {}
+        csa-frq-practice:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Klassen
+        hoc-amazon-poc: {}
+        musiclab-2023: {}

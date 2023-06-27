@@ -6040,55 +6040,165 @@
           "name": "استكشاف حل المشكلات - موضوع الألعاب (الدرس البديل 3)"
         },
         "csd2-2021/Exploring Web Pages": {
-          "name": "استكشاف صفحات الويب"
+          "name": "استكشاف صفحات الويب",
+          "assessment_opportunities": "",
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
         },
         "csd2-2021/Intro to HTML": {
-          "name": "مقدمة عن HTML"
+          "name": "مقدمة عن HTML",
+          "assessment_opportunities": "",
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
         },
         "csd2-2021/Headings": {
-          "name": "العناوين"
+          "name": "العناوين",
+          "assessment_opportunities": "",
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
         },
         "csd2-2021/Mini-Project: HTML Web Page": {
-          "name": "مشروع مصغر: صفحة ويب HTML"
+          "name": "مشروع مصغر: صفحة ويب HTML",
+          "assessment_opportunities": "",
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
         },
         "csd2-2021/Digital Footprint": {
-          "name": "البصمة الرقمية"
+          "name": "البصمة الرقمية",
+          "assessment_opportunities": "",
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
         },
         "csd2-2021/Styling Text with CSS": {
-          "name": "تصميم النص باستخدام CSS"
+          "name": "تصميم النص باستخدام CSS",
+          "assessment_opportunities": "",
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
         },
         "csd2-2021/Mini-Project: Your Personal Style": {
-          "name": "مشروع مصغر: أسلوبك الشخصي"
+          "name": "مشروع مصغر: أسلوبك الشخصي",
+          "assessment_opportunities": "",
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
         },
         "csd2-2021/Intellectual Property": {
-          "name": "الملكية الفكرية"
+          "name": "الملكية الفكرية",
+          "assessment_opportunities": "",
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd2-2021/Using Images": {
+          "name": "",
+          "assessment_opportunities": "",
+          "overview": "",
+          "purpose": "",
+          "student_overview": ""
         },
         "csd2-2021/Websites for Expression ": {
-          "name": "مواقع الويب المخصصة للتعبير"
+          "name": "مواقع الويب المخصصة للتعبير",
+          "assessment_opportunities": "",
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
         },
         "csd2-2021/Styling Elements with CSS": {
-          "name": "تصميم العناصر باستخدام CSS"
+          "name": "تصميم العناصر باستخدام CSS",
+          "assessment_opportunities": "",
+          "overview": "",
+          "purpose": "",
+          "student_overview": ""
         },
         "csd2-2021/Your Web Page - Prepare": {
-          "name": "صفحة الويب الخاصة بك - تحضير"
+          "name": "صفحة الويب الخاصة بك - تحضير",
+          "assessment_opportunities": "",
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd2-2021/Project - Personal Web Page": {
+          "name": "",
+          "assessment_opportunities": "",
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd2-2021/Websites for a Purpose": {
+          "name": "",
+          "assessment_opportunities": "",
+          "overview": "",
+          "purpose": "",
+          "student_overview": ""
         },
         "csd2-2021/Team Problem Solving": {
-          "name": "فريق حل المشكلات"
+          "name": "فريق حل المشكلات",
+          "assessment_opportunities": "",
+          "overview": "",
+          "purpose": "",
+          "student_overview": ""
         },
         "csd2-2021/Sources and Research": {
-          "name": "المصادر والبحوث المنهجية"
+          "name": "المصادر والبحوث المنهجية",
+          "assessment_opportunities": "",
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd2-2021/CSS Classes": {
+          "name": "",
+          "assessment_opportunities": "",
+          "overview": "",
+          "purpose": "",
+          "student_overview": ""
         },
         "csd2-2021/Planning a Multi-page Website": {
-          "name": "تخطيط موقع ويب متعدد الصفحات"
+          "name": "تخطيط موقع ويب متعدد الصفحات",
+          "assessment_opportunities": "",
+          "overview": "",
+          "purpose": "",
+          "student_overview": ""
         },
         "csd2-2021/Linking Pages": {
-          "name": "ربط الصفحات"
+          "name": "ربط الصفحات",
+          "assessment_opportunities": "",
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
         },
         "csd2-2021/Project - Website for a Purpose": {
-          "name": "المشروع - الموقع الإلكتروني لغرض ما"
+          "name": "المشروع - الموقع الإلكتروني لغرض ما",
+          "assessment_opportunities": "",
+          "overview": "",
+          "purpose": "",
+          "student_overview": ""
         },
         "csd2-2021/Peer Review and Final Touches": {
-          "name": "مراجعة الأقران واللمسات الأخيرة"
+          "name": "مراجعة الأقران واللمسات الأخيرة",
+          "assessment_opportunities": "",
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
         },
         "csd2-2021/lesson-1": {
           "name": "استطلاع رأي بعد انتهاء دورة مقدمات علوم الحاسوب"

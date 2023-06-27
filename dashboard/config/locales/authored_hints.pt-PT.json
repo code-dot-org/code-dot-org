@@ -11597,9 +11597,9 @@
         },
         "courseC_artist_prog72022": {
           "courseC_artist_prog7_a": "Cada ângulo é de 45 ou 90 graus.",
-          "courseC_artist_prog7_b": "Funciona no primeiro passo? \nE no segundo? \nOnde isso dá errado?",
+          "courseC_artist_prog7_b": "Isso funciona na primeira etapa?  \nQue tal o segundo?  \nOnde isso dá errado?",
           "courseC_artist_prog7_c": "Você pode usar o menu suspenso nos blocos para ver qual ângulo você precisa!",
-          "courseC_artist_prog7_d": "Você vai querer: \n\n-   seguir em frente \n-   virar à direita 45 graus \n-   seguir em frente \n-   virar à direita 90 graus \n-   avançar\n-   virar à direita 45 graus \n\nRepita este padrão 2 vezes!",
+          "courseC_artist_prog7_d": "Você vai querer:\n- avançar\n- virar à direita 45 graus\n- avançar\n- virar à direita 90 graus\n- avançar\n- virar à direita 45 graus\n\nRepita esse padrão 2 vezes!",
           "courseC_artist_prog7_e": "Não tenha medo de cometer um erro! Tente adicionar blocos e executar o código para ver o que vai acontecer, mesmo se você achar que ainda não resolveu o quebra-cabeça."
         },
         "courseC_artist_prog_challenge12022": {
@@ -12269,8 +12269,7 @@
         },
         "courseE_artist_functions102022": {
           "courseD_artist_functions10_b": "Este desenho é muito parecido com o último, mas a função `draw line` agora está desenhando uma forma diferente.",
-          "courseD_artist_functions10_a": "Para evitar usar vários blocos \"=`avançar`, crie uma função `desenhar hexágono` e chame isso várias vezes.",
-          "courseD_artist_functions10_c": "Você vê onde este desenho poderia usar uma função chamada 'linha de hexágonos'?\n\n![](https://images.code.org/904e0f38232fd9c15a3d2d172e7dde0b-image-1493140714580.gif)"
+          "courseD_artist_functions10_a": "Para evitar usar vários blocos \"=`avançar`, crie uma função `desenhar hexágono` e chame isso várias vezes."
         },
         "courseE_artist_functions22022": {
           "courseD_artist_functions2_b": "A função não deve conter todo o seu programa, apenas a parte que desenha um quadrado com 100 lados de pixels.",
@@ -12305,11 +12304,7 @@
           "courseD_artist_functions8_c": "No final de cada linha de quadrados, o artista só precisa girar 180 graus antes de desenhar a próxima linha de quadrados. Coloque a coisa toda em um laço de repetição para prepará-lo para o próximo exercício!"
         },
         "courseE_artist_functions92022": {
-          "courseD_artist_functions9_e": "Você consegue identificar todos os quatro lugares em que a \"linha de triângulos\" pode ser usada neste desenho?\n\n![](https://images.code.org/130e1040ecca7186dea87f42666f5620-image-1493140373966.gif)",
-          "courseD_artist_functions9_a": "Este quebra-cabeça pode ser dividido em três partes:\n\n-   faça a função \"desenhar um triângulo\"\n-   faça a função 'desenhar uma linha de triângulos'\n-   use sua função 'desenhar uma linha de triângulos' quatro vezes para completar o desenho",
-          "courseD_artist_functions9_b": "Este desenho é feito desenhando uma linha de triângulos 4 vezes e girando 60 ou 120 graus antes de desenhar a próxima linha triangular.",
-          "courseD_artist_functions9_c": "Para desenhar uma linha de triângulos:\n\n-   repetir 4 vezes\n-   desenhe um triângulo\n-   saltar para a frente 50 pixels",
-          "courseD_artist_functions9_d": "Para desenhar o diamante:\n\n-   repetir 2 vezes\n-   desenhe uma linha de triângulos\n-   gire 60 graus\n-   desenhe uma linha de triângulos\n-   gire 120 graus"
+          "courseD_artist_functions9_b": "Este desenho é feito desenhando uma linha de triângulos 4 vezes e girando 60 ou 120 graus antes de desenhar a próxima linha triangular."
         },
         "courseE_artist_functions_challenge12022": {
           "courseE_artist_functions_challenge1_a": "Se você chamar a função mais uma vez, poderá criar o mesmo desenho no canto final.",

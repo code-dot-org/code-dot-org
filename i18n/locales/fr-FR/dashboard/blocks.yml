@@ -2555,6 +2555,8 @@ fr:
             '8': '8'
             '9': '9'
             '10': '10'
+      storylab_printText:
+        text: imprimer {TEXT}
       storylab_setForegroundEffect2:
         text: Appliquer {EFFECT} effet
         options:

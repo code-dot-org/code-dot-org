@@ -1516,6 +1516,9 @@
             null
           ]
         },
+        "7733f15a-e54b-4bd2-9387-7fa23efccc01": {
+          "description": "-   \\_Kaj je bil najtežji del pri pripravi navodil? \\_\n\n-   \\_Ko ste bili robot, kaj je bilo najtežje pri upoštevanju navodil, ki ste jih dobili? \\_"
+        },
         "e24379b7-bf97-4179-948d-ea5af39d8089": {
           "tips": [
             null
@@ -1557,7 +1560,8 @@
           "description": "Laurel želi zbrati čim več zaklada, kot je mogoče. Učencem naročite, naj prečkajo območje tako, da zberejo vse, kar lahko. Nekatere ravni bodo zahtevale, da poberete le en kos zaklada, drugi pa bodo zahtevali, da poberete vsak kos zaklada. Bodite pozorni na navodila, da veste, kaj storiti!"
         },
         "7e945f73-76d3-4b83-817d-2b9af9789dd7": {
-          "name": "Slovar"
+          "name": "Slovar",
+          "description": "-   **Kot** - Kjer se dve strani oblike združita, merjeno v stopinjah."
         },
         "9f1508f1-3a4b-42fb-82fb-d31a0aad9576": {
           "name": "Uvod"

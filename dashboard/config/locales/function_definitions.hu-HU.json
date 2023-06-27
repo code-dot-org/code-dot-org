@@ -964,7 +964,8 @@
             "name": "rajzolj sokszöget",
             "parameters": {
               "length": "length"
-            }
+            },
+            "description": "rajzolj sokszöget sides és length paraméterrel"
           }
         },
         "NEW Course 4 Artist Params 12a": {
@@ -972,7 +973,8 @@
             "name": "rajzolj sokszöget",
             "parameters": {
               "length": "length"
-            }
+            },
+            "description": "rajzolj sokszöget sides és length paraméterrel"
           }
         },
         "NEW Course 4 Artist Params 13": {
@@ -3116,7 +3118,8 @@
             "name": "rajzolj sokszöget",
             "parameters": {
               "length": "length"
-            }
+            },
+            "description": "rajzolj sokszöget sides és length paraméterrel"
           }
         },
         "courseF_artist_fwp5": {

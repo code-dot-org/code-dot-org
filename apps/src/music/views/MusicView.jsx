@@ -8,8 +8,6 @@ import Instructions from './Instructions';
 import Controls from './Controls';
 import Timeline from './Timeline';
 import MusicPlayer from '../player/MusicPlayer';
-import ProgramSequencer from '../player/ProgramSequencer';
-import RandomSkipManager from '../player/RandomSkipManager';
 import AnalyticsReporter from '../analytics/AnalyticsReporter';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import moduleStyles from './music-view.module.scss';
@@ -19,13 +17,8 @@ import Globals from '../globals';
 import MusicBlocklyWorkspace from '../blockly/MusicBlocklyWorkspace';
 import AppConfig, {getBlockMode, setAppConfig} from '../appConfig';
 import SoundUploader from '../utils/SoundUploader';
-import {
-  baseUrl,
-  LevelSources,
-  loadLibrary,
-  loadProgressionStepFromSource,
-} from '../utils/Loader';
-import ProgressManager from '../progress/ProgressManager';
+import {baseUrl, loadLibrary} from '../utils/Loader';
+import ProgressManager from '@cdo/apps/labs/progress/ProgressManager';
 import MusicValidator from '../progress/MusicValidator';
 import Video from './Video';
 import {
@@ -40,17 +33,19 @@ import {
   addPlaybackEvents,
   clearPlaybackEvents,
   getCurrentlyPlayingBlockIds,
-  setLevelCount,
 } from '../redux/musicRedux';
 import KeyHandler from './KeyHandler';
 import {
-  levelsForLessonId,
-  navigateToLevelId,
   sendSuccessReport,
-  getLevelDataPath,
+  navigateToLevelId,
+  navigateToNextLevel,
+} from '@cdo/apps/code-studio/progressRedux';
+import {
+  levelsForLessonId,
   ProgressLevelType,
   getProgressLevelType,
-} from '@cdo/apps/code-studio/progressRedux';
+  currentLevelIndex,
+} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {
   setIsLoading,
   setIsPageError,
@@ -82,16 +77,13 @@ class UnconnectedMusicView extends React.Component {
 
     /**
      * True if Music Lab is being presented from the Incubator page (i.e. under /projectbeats),
-     * false/undefined if as part of a script or standalone level.
+     * false/undefined if as part of a script or single level.
      * */
     inIncubator: PropTypes.bool,
 
     // populated by Redux
     currentLevelIndex: PropTypes.number,
     levels: PropTypes.array,
-    currentLevelId: PropTypes.string,
-    levelCount: PropTypes.number,
-    levelDataPath: PropTypes.string,
     userId: PropTypes.number,
     userType: PropTypes.string,
     signInState: PropTypes.oneOf(Object.values(SignInState)),
@@ -119,10 +111,11 @@ class UnconnectedMusicView extends React.Component {
     setProjectUpdatedError: PropTypes.func,
     setIsLoading: PropTypes.func,
     setIsPageError: PropTypes.func,
-    setLevelCount: PropTypes.func,
     source: PropTypes.object,
+    levelData: PropTypes.object,
     labReadyForReload: PropTypes.bool,
     setLabReadyForReload: PropTypes.func,
+    navigateToNextLevel: PropTypes.func,
   };
 
   constructor(props) {
@@ -132,9 +125,10 @@ class UnconnectedMusicView extends React.Component {
       setAppConfig(this.props.appConfig);
     }
 
-    this.player = new MusicPlayer();
-    this.programSequencer = new ProgramSequencer();
-    this.randomSkipManager = new RandomSkipManager();
+    const bpm = AppConfig.getValue('bpm');
+    const key = AppConfig.getValue('key');
+
+    this.player = new MusicPlayer(bpm, key);
     this.analyticsReporter = new AnalyticsReporter();
     this.musicBlocklyWorkspace = new MusicBlocklyWorkspace();
     this.soundUploader = new SoundUploader(this.player);
@@ -150,7 +144,6 @@ class UnconnectedMusicView extends React.Component {
 
     this.state = {
       showingVideo: true,
-      changingPanels: false,
     };
 
     // Music Lab currently does not support share and remix
@@ -185,13 +178,9 @@ class UnconnectedMusicView extends React.Component {
 
     if (this.hasProgression()) {
       this.progressManager = new ProgressManager(
-        this.props.currentLevelIndex,
         musicValidator,
         this.onProgressChange
       );
-
-      // Load progress data for current step.
-      promises.push(this.loadProgressionStep());
     }
 
     Promise.all(promises)
@@ -207,13 +196,10 @@ class UnconnectedMusicView extends React.Component {
         Globals.setLibrary(this.library);
         Globals.setPlayer(this.player);
 
-        this.setAllowedSoundsForProgress();
-
         this.musicBlocklyWorkspace.init(
           document.getElementById('blockly-div'),
           this.onBlockSpaceChange,
-          this.player,
-          this.progressManager?.getCurrentStepDetails().toolbox
+          this.player
         );
         this.player.initialize(this.library);
         setInterval(this.updateTimer, 1000 / 30);
@@ -237,8 +223,9 @@ class UnconnectedMusicView extends React.Component {
       );
     }
 
+    // Stop playback when changing levels
     if (prevProps.currentLevelIndex !== this.props.currentLevelIndex) {
-      this.goToPanel();
+      this.stopSong();
     }
 
     if (
@@ -256,17 +243,24 @@ class UnconnectedMusicView extends React.Component {
       this.updateHighlightedBlocks();
     }
     // If we just finished loading the lab, then we need to update the
-    // sources in musicBlocklyWorkspace.
-    if (
-      !prevProps.labReadyForReload &&
-      this.props.labReadyForReload &&
-      (this.getStartSources() || this.props.source)
-    ) {
-      let codeToLoad = this.getStartSources();
-      if (this.props.source && this.props.source.source) {
-        codeToLoad = JSON.parse(this.props.source.source);
+    // sources and level data.
+    if (!prevProps.labReadyForReload && this.props.labReadyForReload) {
+      if (this.getStartSources() || this.props.source) {
+        let codeToLoad = this.getStartSources();
+        if (this.props.source?.source) {
+          codeToLoad = JSON.parse(this.props.source.source);
+        }
+        this.musicBlocklyWorkspace.loadCode(codeToLoad);
       }
-      this.musicBlocklyWorkspace.loadCode(codeToLoad);
+
+      // Update components with level-specific data
+      if (this.props.levelData) {
+        this.progressManager.onLevelChange(this.props.levelData);
+        this.musicBlocklyWorkspace.updateToolbox(this.props.levelData.toolbox);
+        this.library.setAllowedSounds(this.props.levelData.sounds);
+        this.props.setShowInstructions(!!this.props.levelData.text);
+      }
+
       this.props.setLabReadyForReload(false);
     }
   }
@@ -288,7 +282,7 @@ class UnconnectedMusicView extends React.Component {
     this.props.setCurrentProgressState(currentState);
 
     // Tell the external system (if there is one) about the success.
-    if (this.hasLevels() && currentState.satisfied) {
+    if (this.isScriptLevel() && currentState.satisfied) {
       this.props.sendSuccessReport('music');
     }
   };
@@ -298,33 +292,36 @@ class UnconnectedMusicView extends React.Component {
     logError(error);
   };
 
-  // Returns whether we just have a standalone level.
-  isStandaloneLevel = () => {
+  // Returns whether we just have a single level.
+  isSingleLevel = () => {
     return this.props.progressLevelType === ProgressLevelType.LEVEL;
   };
 
-  // Returns whether we have levels.
-  hasLevels = () => {
+  // Returns whether we have multiple levels.
+  isScriptLevel = () => {
     return this.props.progressLevelType === ProgressLevelType.SCRIPT_LEVEL;
   };
 
-  // Returns whether we have a progression file.
-  hasProgressionFile = () => {
-    return AppConfig.getValue('load-progression') === 'true';
+  getLevelCount = () => {
+    if (!this.hasProgression()) {
+      return 0;
+    }
+
+    // Determine the level count from the external array of levels.
+    if (this.isScriptLevel()) {
+      return this.props.levels.length;
+    }
+
+    // This must be a single level.
+    return 1;
   };
 
   // Returns whether we have a progression.
-  // Note that even a standalone level has a progression in the sense that we
+  // Note that even a single level has a progression in the sense that we
   // will show instructions and feedback, but we'll only show them for that
-  // standalone level.
+  // single level.
   hasProgression = () => {
-    return (
-      this.isStandaloneLevel() || this.hasLevels() || this.hasProgressionFile()
-    );
-  };
-
-  hasNoProgressHeader = () => {
-    return this.isStandaloneLevel() || !!this.props.inIncubator;
+    return this.isSingleLevel() || this.isScriptLevel();
   };
 
   getIsPlaying = () => {
@@ -337,68 +334,7 @@ class UnconnectedMusicView extends React.Component {
 
   // When the user initiates going to the next panel in the app.
   onNextPanel = () => {
-    this.progressManager?.next();
-
-    // Tell the external system (if there is one) about the new level.
-    if (this.hasLevels() && this.props.navigateToLevelId) {
-      const progressState = this.progressManager.getCurrentState();
-      const currentPanel = progressState.step;
-
-      // Tell the external system, via the progress redux store, about the
-      // new level ID.
-      const level = this.props.levels[currentPanel];
-      const levelId = '' + level.id;
-      this.props.navigateToLevelId(levelId);
-    }
-  };
-
-  // When the external system lets us know that the user changed level,
-  // we need to update our progress manager to reflect that.
-  goToPanel = () => {
-    this.progressManager?.goToStep(this.props.currentLevelIndex);
-
-    // If we are already changing panels, then the existing execution of handlePanelChange
-    // will detect the change in active level and start loading again.
-    if (!this.state.changingPanels) {
-      this.handlePanelChange();
-    }
-  };
-
-  // Handle a change in panel for progress and toolbox.
-  // Also handles a change in the active level index during this load.
-  handlePanelChange = async () => {
-    this.setState({changingPanels: true});
-
-    let currentLevelIndexLoading;
-
-    this.stopSong();
-
-    do {
-      currentLevelIndexLoading = this.props.currentLevelIndex;
-
-      await this.loadProgressionStep();
-
-      this.setToolboxForProgress();
-      this.setAllowedSoundsForProgress();
-    } while (currentLevelIndexLoading !== this.props.currentLevelIndex);
-
-    this.setState({changingPanels: false});
-  };
-
-  setToolboxForProgress = () => {
-    if (this.progressManager) {
-      const allowedToolbox =
-        this.progressManager.getCurrentStepDetails().toolbox;
-      this.musicBlocklyWorkspace.updateToolbox(allowedToolbox);
-    }
-  };
-
-  setAllowedSoundsForProgress = () => {
-    if (this.progressManager) {
-      this.library.setAllowedSounds(
-        this.progressManager.getCurrentStepDetails().sounds
-      );
-    }
+    this.props.navigateToNextLevel();
   };
 
   updateHighlightedBlocks = () => {
@@ -407,52 +343,14 @@ class UnconnectedMusicView extends React.Component {
     );
   };
 
-  loadProgressionStep = async () => {
-    const progressionSource = this.hasLevels()
-      ? LevelSources.LEVELS
-      : this.isStandaloneLevel()
-      ? LevelSources.LEVEL
-      : this.hasProgressionFile()
-      ? LevelSources.FILE
-      : undefined;
-
-    if (progressionSource) {
-      let progressionStep, levelCount;
-
-      try {
-        const result = await loadProgressionStepFromSource(
-          progressionSource,
-          this.props.levelDataPath,
-          // Special case: used for progression file:
-          this.props.currentLevelIndex
-        );
-        progressionStep = result.progressionStep;
-        levelCount = result.levelCount;
-      } catch (e) {
-        this.onError(e);
-      }
-
-      if (this.hasLevels()) {
-        // Special case: we get the level count from the external array of levels.
-        this.props.setLevelCount(this.props.levels.length);
-      } else {
-        this.props.setLevelCount(levelCount);
-      }
-
-      this.progressManager.setProgressionStep(progressionStep);
-      this.props.setShowInstructions(!!progressionStep);
-    }
-  };
-
   clearCode = () => {
     this.musicBlocklyWorkspace.loadCode(this.getStartSources());
-
     this.setPlaying(false);
   };
 
   getStartSources = () => {
-    if (this.hasProgression()) {
-      return this.progressManager.getProgressionStep().startSources;
+    if (this.hasProgression() && this.props.levelData) {
+      return this.props.levelData.startSources;
     } else {
       const startSourcesFilename = 'startSources' + getBlockMode();
       return require(`@cdo/static/music/${startSourcesFilename}.json`);
@@ -632,10 +530,9 @@ class UnconnectedMusicView extends React.Component {
           headerText={musicI18n.panelHeaderInstructions()}
         >
           <Instructions
-            progressionStep={this.progressManager.getProgressionStep()}
-            showProgressionStep={!this.hasLevels()}
+            progressionStep={this.props.levelData}
             currentLevelIndex={this.props.currentLevelIndex}
-            levelCount={this.props.levelCount}
+            levelCount={this.getLevelCount()}
             onNextPanel={this.onNextPanel}
             baseUrl={baseUrl}
             vertical={position !== InstructionsPositions.TOP}
@@ -727,7 +624,7 @@ class UnconnectedMusicView extends React.Component {
                 <TopButtons
                   clearCode={this.clearCode}
                   uploadSound={file => this.soundUploader.uploadSound(file)}
-                  canShowSaveStatus={this.hasNoProgressHeader()}
+                  canShowSaveStatus={!this.isScriptLevel()}
                 />
               </div>
               <PanelContainer
@@ -753,35 +650,16 @@ class UnconnectedMusicView extends React.Component {
 const MusicView = connect(
   state => ({
     // The progress redux store tells us whether we are in a script level
-    // or a standalone level.
+    // or a single level.
     progressLevelType: getProgressLevelType(state),
 
-    // The current level index has two potential sources of truth:
-    // If we are part of a "script level", then it comes from the current level.
-    // Otherwise, we fall back to the music progress manager's current step.
-    currentLevelIndex:
-      getProgressLevelType(state) === ProgressLevelType.SCRIPT_LEVEL
-        ? levelsForLessonId(
-            state.progress,
-            state.progress.currentLessonId
-          ).findIndex(level => level.isCurrentLevel)
-        : state.music.currentProgressState.step,
+    currentLevelIndex: currentLevelIndex(state),
 
     // When we are in a lesson with multiple levels, they are here.
     levels:
       getProgressLevelType(state) === ProgressLevelType.SCRIPT_LEVEL
         ? levelsForLessonId(state.progress, state.progress.currentLessonId)
         : undefined,
-
-    // The current level ID, whether we're in a lesson with multiple levels, or
-    // directly viewing a standalone level.
-    currentLevelId: state.progress.currentLevelId,
-
-    // The number of levels.
-    levelCount: state.music.levelCount,
-
-    // The URL path for retrieving level_data from the server.
-    levelDataPath: getLevelDataPath(state),
 
     userId: state.currentUser.userId,
     userType: state.currentUser.userType,
@@ -796,6 +674,7 @@ const MusicView = connect(
     currentScriptId: state.progress.scriptId,
     currentlyPlayingBlockIds: getCurrentlyPlayingBlockIds(state),
     source: state.lab.source,
+    levelData: state.lab.levelData,
     labReadyForReload: state.lab.labReadyForReload,
   }),
   dispatch => ({
@@ -814,7 +693,6 @@ const MusicView = connect(
     clearPlaybackEvents: () => dispatch(clearPlaybackEvents()),
     addPlaybackEvents: playbackEvents =>
       dispatch(addPlaybackEvents(playbackEvents)),
-    setLevelCount: levelCount => dispatch(setLevelCount(levelCount)),
     sendSuccessReport: appType => dispatch(sendSuccessReport(appType)),
     setProjectUpdatedSaving: () => dispatch(setProjectUpdatedSaving()),
     setProjectUpdatedAt: updatedAt => dispatch(setProjectUpdatedAt(updatedAt)),
@@ -823,6 +701,7 @@ const MusicView = connect(
     setIsPageError: isPageError => dispatch(setIsPageError(isPageError)),
     setLabReadyForReload: labReadyForReload =>
       dispatch(setLabReadyForReload(labReadyForReload)),
+    navigateToNextLevel: () => dispatch(navigateToNextLevel()),
   })
 )(UnconnectedMusicView);
 

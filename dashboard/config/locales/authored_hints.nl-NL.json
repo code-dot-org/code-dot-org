@@ -5121,8 +5121,7 @@
         },
         "courseE_artist_functions102022": {
           "courseD_artist_functions10_b": "Deze tekening lijkt erg veel op de vorige, maar de `teken een rij ...`-functie moet nu een andere vorm tekenen.",
-          "courseD_artist_functions10_a": "Om te voorkomen dat je het `ga vooruit`-blok te vaak gebruikt, kun je een `teken een zeshoek`-functie maken en die functie een aantal keren aanroepen.",
-          "courseD_artist_functions10_c": "Zie je waar deze tekening een `teken een rij zeshoeken`-functie zou kunnen gebruiken?"
+          "courseD_artist_functions10_a": "Om te voorkomen dat je het `ga vooruit`-blok te vaak gebruikt, kun je een `teken een zeshoek`-functie maken en die functie een aantal keren aanroepen."
         },
         "courseE_artist_functions22022": {
           "courseD_artist_functions2_a": "Je programma: moet:\n\n-   functie gebruiken\n-   100 + 75 pixels vooruit bewegen\n-   functie gebruiken"
@@ -5142,11 +5141,7 @@
           "courseD_artist_functions8_g": "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
         },
         "courseE_artist_functions92022": {
-          "courseD_artist_functions9_e": "Zie je de vier plaatsen waar je de `rij van vierkanten` kunt gebruiken voor deze tekening?\n\n![](https://images.code.org/130e1040ecca7186dea87f42666f5620-image-1493140373966.gif)",
-          "courseD_artist_functions9_a": "Deze puzzle kun je in 3 stukken verdelen:\n\n-   maak de 'teken een vierkant'-functie\n-   maak de 'teken een rij vierkanten'-functie\n-   gebruik de `teken een rij vierkanten`-functie vier keer om de tekening af te maken",
-          "courseD_artist_functions9_b": "Deze tekening kun je maken door 4 keer een rij driehoeken te tekenen, en telkens 60 of 120 graden te draaien voordat je de volgende rij driehoeken tekent.",
-          "courseD_artist_functions9_c": "Om een rij driehoeken te tekenen:\n\n-   herhaal 4 keer\n    -   teken een driehoek\n    -   spring vooruit met 50 pixels",
-          "courseD_artist_functions9_d": "Om deze ruit te tekenen:\n\n-   herhaal 2 keer\n    -   teken een rij driehoeken\n    -   draai met 60 graden\n    -   teken een rij driehoeken\n    -   draai met 120 graden"
+          "courseD_artist_functions9_b": "Deze tekening kun je maken door 4 keer een rij driehoeken te tekenen, en telkens 60 of 120 graden te draaien voordat je de volgende rij driehoeken tekent."
         },
         "courseE_artist_functions_challenge12022": {
           "courseE_artist_functions_challenge1_a": "Als je de functie nog een keer aanroept, kun je hetzelfde ontwerp ook in de laatste hoek tekenen.",

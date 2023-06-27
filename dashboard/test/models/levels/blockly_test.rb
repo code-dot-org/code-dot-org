@@ -222,7 +222,7 @@ class BlocklyTest < ActiveSupport::TestCase
   end
 
   test 'localized shared_blocks' do
-    test_locale = :"te-ST"
+    test_locale = :'te-ST'
     I18n.locale = test_locale
     custom_i18n = {
       "data" => {
@@ -288,7 +288,7 @@ class BlocklyTest < ActiveSupport::TestCase
   end
 
   test 'original object is not mutated' do
-    test_locale = :"te-ST"
+    test_locale = :'te-ST'
     I18n.locale = test_locale
     custom_i18n = {
       "data" => {
@@ -334,7 +334,7 @@ class BlocklyTest < ActiveSupport::TestCase
   end
 
   test 'nil is returned if level_objects is blank' do
-    test_locale = :"te-ST"
+    test_locale = :'te-ST'
     I18n.locale = test_locale
     custom_i18n = {
       "data" => {
@@ -364,7 +364,7 @@ class BlocklyTest < ActiveSupport::TestCase
   end
 
   test 'does not return a translated string if block text does not exist' do
-    test_locale = :"te-ST"
+    test_locale = :'te-ST'
     I18n.locale = test_locale
     custom_i18n = {
       "data" => {
@@ -425,7 +425,7 @@ class BlocklyTest < ActiveSupport::TestCase
   end
 
   test 'does not return translated strings when I18n translation does not exist' do
-    test_locale = :"es-ST"
+    test_locale = :'es-ST'
     I18n.locale = test_locale
     custom_i18n = {
       "data" => {
@@ -491,7 +491,7 @@ class BlocklyTest < ActiveSupport::TestCase
   end
 
   test 'option that contains a period in the key is translated' do
-    test_locale = :"te-ST"
+    test_locale = :'te-ST'
     I18n.locale = test_locale
     custom_i18n = {
       "data" => {
@@ -500,8 +500,8 @@ class BlocklyTest < ActiveSupport::TestCase
             "text" => "vérifier la {LEVEL}",
             "options" => {
               "LEVEL" => {
-                "LEVELS.Whole": "Entier",
-                "LEVELS.Half": "Moitié",
+                'LEVELS.Whole': "Entier",
+                'LEVELS.Half': "Moitié",
               }
             }
           }
@@ -535,7 +535,7 @@ class BlocklyTest < ActiveSupport::TestCase
   end
 
   test 'localizes authored hints' do
-    test_locale = :"es-MX"
+    test_locale = :'es-MX'
     level_name = 'test_localize_authored_hints'
 
     I18n.locale = test_locale
@@ -576,7 +576,7 @@ class BlocklyTest < ActiveSupport::TestCase
   test 'localizes authored hints with embedded behavior block' do
     DCDO.stubs(:get).with(Blockly::BLOCKLY_I18N_IN_TEXT_DCDO_KEY, false).returns(true)
     DCDO.stubs(:get).with(I18nStringUrlTracker::I18N_STRING_TRACKING_DCDO_KEY, false).returns(false)
-    test_locale = :"es-MX"
+    test_locale = :'es-MX'
     level_name = 'test_localize_authored_hints_with_embedded_behavior_block'
     hint = <<~HINT
       oración de muestra: <xml><block type=\"gamelab_addBehaviorSimple\" uservisible=\"false\"><value name=\"SPRITE\"><block type=\"gamelab_getAllSprites\"></block></value><value name=\"BEHAVIOR\"><block type=\"gamelab_behavior_get\"><mutation></mutation><title name=\"VAR\">wandering</title></block></value></block></xml>.
@@ -800,7 +800,7 @@ class BlocklyTest < ActiveSupport::TestCase
   end
 
   test 'handles bad authored hint localization data' do
-    test_locale = :"te-ST"
+    test_locale = :'te-ST'
     level_name = 'test_localize_authored_hints'
     I18n.locale = test_locale
 
@@ -923,7 +923,7 @@ class BlocklyTest < ActiveSupport::TestCase
         }
       }
     }
-    test_locale = :"te-ST"
+    test_locale = :'te-ST'
     I18n.locale = test_locale
     level = create(
       :level,

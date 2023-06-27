@@ -53,7 +53,6 @@ describe('CurriculumCatalogCard', () => {
     stubRedux();
     registerReducers({teacherSections});
     store = getStore();
-    store.dispatch(setSections(sections));
     defaultProps = {
       courseDisplayName: 'AI for Oceans',
       duration: 'quarter',
@@ -61,6 +60,7 @@ describe('CurriculumCatalogCard', () => {
       isEnglish: true,
       pathToCourse: '/s/course',
       scriptId: 1,
+      isSignedOut: true,
     };
   });
 
@@ -251,8 +251,13 @@ describe('CurriculumCatalogCard', () => {
     });
   });
 
-  it('clicking Assign button shows sections', () => {
-    renderCurriculumCard();
+  it('clicking Assign button as a teacher with sections shows sections', () => {
+    store.dispatch(setSections(sections));
+    renderCurriculumCard({
+      ...defaultProps,
+      isSignedOut: false,
+      isTeacher: true,
+    });
 
     const assignButton = screen.getByRole('button', {
       name: new RegExp(
@@ -265,5 +270,58 @@ describe('CurriculumCatalogCard', () => {
     );
     fireEvent.click(assignButton);
     sections.forEach(section => screen.getByText(section.name));
+  });
+
+  it('clicking Assign button as a teacher without sections shows dialog to create section', () => {
+    renderCurriculumCard({
+      ...defaultProps,
+      isSignedOut: false,
+      isTeacher: true,
+    });
+
+    const assignButton = screen.getByRole('button', {
+      name: new RegExp(
+        `Assign ${defaultProps.courseDisplayName} to your classroom`
+      ),
+    });
+
+    fireEvent.click(assignButton);
+    screen.getByRole('heading', {
+      name: 'Create class section to assign a curriculum',
+    });
+  });
+
+  it('clicking Assign button as a student shows dialog to upgrade account', () => {
+    renderCurriculumCard({
+      ...defaultProps,
+      isSignedOut: false,
+      isTeacher: false,
+    });
+
+    const assignButton = screen.getByRole('button', {
+      name: new RegExp(
+        `Assign ${defaultProps.courseDisplayName} to your classroom`
+      ),
+    });
+
+    fireEvent.click(assignButton);
+    screen.getByRole('heading', {
+      name: 'Use a teacher account to assign a curriculum',
+    });
+  });
+
+  it('clicking Assign button as a signed out user shows dialog to sign in', () => {
+    renderCurriculumCard();
+
+    const assignButton = screen.getByRole('button', {
+      name: new RegExp(
+        `Assign ${defaultProps.courseDisplayName} to your classroom`
+      ),
+    });
+
+    fireEvent.click(assignButton);
+    screen.getByRole('heading', {
+      name: 'Sign in or create account to assign a curriculum',
+    });
   });
 });

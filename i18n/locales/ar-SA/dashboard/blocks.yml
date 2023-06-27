@@ -2454,6 +2454,8 @@ ar:
             '8': '8'
             '9': '9'
             '10': '10'
+      storylab_printText:
+        text: طباعة {TEXT}
       storylab_setForegroundEffect2:
         text: عمل {EFFECT} تأثير
         options:

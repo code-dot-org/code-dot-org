@@ -14,6 +14,9 @@
         "csd-2022/applab-overview": {
           "display_name": "Огляд"
         },
+        "csd-2022/body-styling": {
+          "display_name": "Стилізація основної конструкції"
+        },
         "csd-2022/booleans-and-comparison-operators": {
           "display_name": "Булеві та оператори порівняння"
         },
@@ -25,6 +28,12 @@
         },
         "csd-2022/color-lights": {
           "display_name": "Кольорове світло"
+        },
+        "csd-2022/creating-a-survey": {
+          "display_name": "Створення опитування"
+        },
+        "csd-2022/css": {
+          "display_name": "CSS"
         },
         "csd-2022/css-overview": {
           "display_name": "Огляд"
@@ -59,6 +68,9 @@
         "csd-2022/headings-and-paragraphs": {
           "display_name": "Заголовки та абзаци"
         },
+        "csd-2022/html": {
+          "display_name": "HTML"
+        },
         "csd-2022/html-overview": {
           "display_name": "Огляд"
         },
@@ -67,6 +79,9 @@
         },
         "csd-2022/hyperlinks": {
           "display_name": "Гіперпосилання"
+        },
+        "csd-2022/importing-a-model-in-app-lab": {
+          "display_name": "Імпортування моделі в App Lab"
         },
         "csd-2022/importing-screens": {
           "display_name": "Імпортування екранів"
@@ -107,14 +122,23 @@
         "csd-2022/problem-solving-process-general": {
           "display_name": "Процес вирішення проблем"
         },
+        "csd-2022/selecting-a-label": {
+          "display_name": "Вибір мітки"
+        },
         "csd-2022/selecting-features": {
           "display_name": "Вибір ознак"
         },
         "csd-2022/sprites": {
           "display_name": "Спрайти"
         },
+        "csd-2022/style-sheets": {
+          "display_name": "Таблиця стилів"
+        },
         "csd-2022/taking-input-with-getproperty": {
           "display_name": "Отримання вхідних даних за допомогою getProperty"
+        },
+        "csd-2022/text-properties": {
+          "display_name": "Властивості тексту"
         },
         "csd-2022/the-counter-pattern": {
           "display_name": "Лічильник шаблону"
@@ -123,7 +147,10 @@
           "display_name": "Лічильник шаблону"
         },
         "csd-2022/using-data-with-categorical-features": {
-          "display_name": "Використання даних з категоріальними ознаками"
+          "display_name": "Використання даних з категорійними ознаками"
+        },
+        "csd-2022/using-data-with-numerical-features": {
+          "display_name": "Використання даних з числовими ознаками"
         },
         "csd-2022/variables": {
           "display_name": "Змінні"

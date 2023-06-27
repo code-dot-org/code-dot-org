@@ -11426,9 +11426,7 @@
         },
         "courseC_artist_prog72022": {
           "courseC_artist_prog7_a": "Hvert horn er annað hvort 45 eða 90 gráður.",
-          "courseC_artist_prog7_b": "Virkar fyrsta þrepið? \nHvað með annað þrepið? \nHvar er villan?",
           "courseC_artist_prog7_c": "Þú getur notað fellilistann á `snúa` kubbunum til að sjá hvaða horn þú þarft að nota!",
-          "courseC_artist_prog7_d": "Gerðu þetta:\n\n-   færa áfram\n-   snúa til hægri 45 gráður\n-   færa áfram\n-   snúa til hægri 90 gráður\n-   færa áfram\n-   snúa til hægri 45 gráður\n\nEndurtaktu þetta mynstur tvisvar!",
           "courseC_artist_prog7_e": "Ekki hræðast að gera mistök! Prófaðu að bæta við kubbum og keyra svo kóðann til að sjá hvað gerist jafnvel þó þér finnist þú ekki hafa klárað lausnina."
         },
         "courseC_artist_prog_challenge12022": {
@@ -12135,10 +12133,10 @@
         },
         "courseE_artist_functions92022": {
           "courseD_artist_functions9_e": "Sérðu alla fjóra staðina þar sem fallið `röð þríhyrninga` gæti nýst í þessari teikningu?\n\n![](https://images.code.org/130e1040ecca7186dea87f42666f5620-image-1493140373966.gif)",
-          "courseD_artist_functions9_a": "Þessari þraut er hægt að skipta í þrjá hluta:\n\n-   búa til `teikna þríhyrning` fallið\n-   búa til `teikna röð þríhyrninga` fallið\n-   nota `teikna röð þríhyrninga` fjórum sinnum til að ljúka við myndina",
+          "courseD_artist_functions9_a": "Þessari þraut er hægt að skipta í þrjá hluta:\n- búa til `teikna þríhyrning` fallið\n- búa til `teikna röð þríhyrninga` fallið\n- nota `teikna röð þríhyrninga` fallið fjórum sinnum til að ljúka við myndina",
           "courseD_artist_functions9_b": "Þessi mynd er gerð með því að teikna röð þríhyrninga 4 sinnum og snúa um annað hvort 60 eða 120 gráður án en næsta röð er teiknuð.",
-          "courseD_artist_functions9_c": "Þannig býrðu til röð þríhyrninga:\n\n-   endurtaka 4 sinnum\n-   teikna þríhyrning\n-   hoppa áfram 50 díla",
-          "courseD_artist_functions9_d": "Þannig teiknar þú tígulinn:\n\n-   endurtaka 2 sinnum\n-   teikna röð þríhyrninga\n-   snúa 120 gráður\n-   teikna röð þríhyrninga\n-   snúa 60 gráður"
+          "courseD_artist_functions9_c": "Þannig býrðu til röð þríhyrninga:\n- endurtaktu 4 sinnum\n  - teikna þríhyrning\n  - hoppa áfram 50 díla",
+          "courseD_artist_functions9_d": "Þannig teiknar þú tígulinn:\n- endurtaktu 2 sinnum\n  - teikna röð þríhyrninga\n  - snúa 60 gráður\n  - teikna röð þríhyrninga\n  - snúa 120 gráður"
         },
         "courseE_artist_functions_challenge12022": {
           "courseE_artist_functions_challenge1_a": "Ef þú kallar á fallið einu sinni enn, getur þú búið til þessa sömu hönnun í síðasta horninu. Þú getur líka `hoppað` á aðra staði eða breytt þessu öllu bara eins og þú vilt!",

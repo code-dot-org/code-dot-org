@@ -51,5 +51,7 @@
   "feedback": "Fikr-mulohaza",
   "share": "Ulashish",
   "shareComingSoon": "Ulashish qurilmoqda. Tez orada tekshiring.",
-  "startOver": "Boshidan boshlamoq"
+  "startOver": "Boshidan boshlamoq",
+  "panelHeaderInstructions": "Qo‘llanmalar",
+  "panelHeaderWorkspace": "Ish maydoni"
 }

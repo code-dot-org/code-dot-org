@@ -11684,7 +11684,7 @@
           "courseC_artist_prog7_a": "Chaque angle fait soit 45, soit 90 degrés.",
           "courseC_artist_prog7_b": "Est-ce que tout se passe bien à la première étape ?\nEt à la deuxième ?\nOù est-ce que ça tourne mal ?",
           "courseC_artist_prog7_c": "Tu peux utiliser le menu déroulant sur les blocs « tourner » pour voir de quel angle tu as besoin !",
-          "courseC_artist_prog7_d": "Il va te falloir :\n\n-   avancer\n-   tourner à droite de 45 degrés\n-   avancer\n-   tourner à droite de 90 degrés\n-   avancer\n-   tourner à droite de 45 degrés\n\nRépète 2 fois ce schéma !",
+          "courseC_artist_prog7_d": "Il va te falloir :\n- avancer\n- tourner à droite de 45 degrés\n- avancer\n- tourner à droite de 90 degrés\n- avancer\n- tourner à droite de 45 degrés\n\nRépète 2 fois ce schéma !",
           "courseC_artist_prog7_e": "N'aie pas peur de faire des erreurs ! Essaie d'ajouter des blocs et d'exécuter ton code, pour voir ce qui se passe, même si tu ne penses pas avoir encore résolu le casse-tête."
         },
         "courseC_artist_prog_challenge12022": {
@@ -12354,8 +12354,7 @@
         },
         "courseE_artist_functions102022": {
           "courseD_artist_functions10_b": "Ce dessin est très similaire au précédent, mais la fonction « dessiner une rangée » dessine maintenant une forme différente.",
-          "courseD_artist_functions10_a": "Pour éviter d'utiliser plusieurs blocs « avancer », crée une fonction « dessiner un hexagone » et appelle la plusieurs fois.",
-          "courseD_artist_functions10_c": "Est-ce que tu vois où une fonction appelée « rangée d'hexagones » pourriat être utile à ce dessin ?\n\n![](https://images.code.org/904e0f38232fd9c15a3d2d172e7dde0b-image-1493140714580.gif)"
+          "courseD_artist_functions10_a": "Pour éviter d'utiliser plusieurs blocs « avancer », crée une fonction « dessiner un hexagone » et appelle la plusieurs fois."
         },
         "courseE_artist_functions22022": {
           "courseD_artist_functions2_b": "La fonction ne doit pas contenir tout ton programme, juste la partie qui dessine un carré avec des côtés de 100 pixels.",
@@ -12390,11 +12389,7 @@
           "courseD_artist_functions8_c": "À la fin de chaque rangée de carrés, l'artiste a seulement besoin de tourner de 180 degrés, avant de dessiner la rangée de carrés suivante. Mets le tout dans une boucle de répétition pour te préparer au prochain exercice !"
         },
         "courseE_artist_functions92022": {
-          "courseD_artist_functions9_e": "Est-ce que tu peux repérer les 4 endroits où la « rangée de triangles » peut être utilisée pour ce dessin ?\n\n![](https://images.code.org/130e1040ecca7186dea87f42666f5620-image-1493140373966.gif)",
-          "courseD_artist_functions9_a": "Ce casse-tête peut être divisé en trois parties :\n\n-   Crée la fonction « dessiner un triangle »\n-   Crée la fonction « dessiner une rangée de triangles »\n-   Utilise ta fonction « dessiner une rangée de triangles » 4 fois pour achever le dessin",
-          "courseD_artist_functions9_b": "Ce dessin est fait en dessinant 4 fois une rangée de triangles et en tournant de 60 ou 120 degrés avant de dessiner la prochaine rangée de triangles.",
-          "courseD_artist_functions9_c": "Pour dessiner une rangée de triangles :\n\n-   Répéter 4 fois :\n    -   Dessiner un triangle\n    -   Sauter en avant de 50 pixels",
-          "courseD_artist_functions9_d": "Pour dessiner le losange :\n\n-   Répéter 2 fois :\n    -   Dessiner une rangée de triangles\n    -   Tourner de 60 degrés\n    -   Dessiner une rangée de triangles\n    -   Tourner de 120 degrés"
+          "courseD_artist_functions9_b": "Ce dessin est fait en dessinant 4 fois une rangée de triangles et en tournant de 60 ou 120 degrés avant de dessiner la prochaine rangée de triangles."
         },
         "courseE_artist_functions_challenge12022": {
           "courseE_artist_functions_challenge1_a": "Si tu appelles la fonction une fois de plus, tu peux créer le même dessin dans le dernier coin.",

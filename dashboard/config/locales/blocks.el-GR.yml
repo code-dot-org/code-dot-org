@@ -367,7 +367,7 @@ el:
             '"spiral"': σπιράλ
             '"random"': τυχαίο
       Dancelab_makeAnonymousDanceSprite:
-        text: φτιάξει ένα καινούριο {COSTUME} σε {LOCATION}
+        text: φτιάξε ένα καινούριο {COSTUME} σε {LOCATION}
         options:
           COSTUME:
             '"ALIEN"': εξωγήινος
@@ -408,7 +408,7 @@ el:
             '"MOOSE"': όλα τα ελάφια
             '"PINEAPPLE"': Ανανάς
             '"ROBOT"': ρομπότ
-            '"SHARK"': Καρχαρίας
+            '"SHARK"': καρχαρίας
             '"SLOTH"': βραδύπους
             '"UNICORN"': μονόκερος
           LOCATION:
@@ -543,7 +543,7 @@ el:
             '"vintage"': Βίντατζ
             '"warm"': Κόκκινα
       Dancelab_setBackgroundEffectWithPalette:
-        text: ορισμός εφέ φόντου {PALETTE} {EFFECT}
+        text: όρισε εφέ φόντου {PALETTE} {EFFECT}
         options:
           EFFECT:
             '"none"': Κανένα
@@ -1604,7 +1604,7 @@ el:
             '"y"': θέση y
             '"direction"': κατεύθυνση κίνησης
       Mikelab_groupCreateNewSprite:
-        text: φτιάξει ένα καινούριο {COSTUME} σε {LOCATION}
+        text: φτιάξε ένα καινούριο {COSTUME} σε {LOCATION}
         options:
           LOCATION:
             "{x: 200, y: 100}": πάνω
@@ -2208,6 +2208,8 @@ el:
             '8': '8'
             '9': '9'
             '10': '10'
+      storylab_printText:
+        text: εκτύπωσε {TEXT}
       storylab_setForegroundEffect2:
         options:
           EFFECT:

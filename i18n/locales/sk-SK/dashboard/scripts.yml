@@ -4064,3 +4064,7 @@ sk:
               display_name: Záverečný projekt
           description_audience: Vek 9-13
           description_short: Nauč sa všetky koncepty z kurzu Základy informatiky a vytvor vlastné umelecké dielo, príbeh alebo hru.
+        csa-frq-practice:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Triedy

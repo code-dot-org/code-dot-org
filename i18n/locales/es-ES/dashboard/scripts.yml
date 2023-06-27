@@ -7588,3 +7588,9 @@ es:
             -   Aprender sobre las oportunidades para conectar con la comunidad Informática en general.
 
             **Tiempo sugerido**: 70 minutos
+        csa-frq-practice:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Clases
+            lessonGroup-5:
+              display_name: Arreglos 2D

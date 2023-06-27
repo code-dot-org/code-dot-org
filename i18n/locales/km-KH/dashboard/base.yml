@@ -60,6 +60,7 @@ km:
         reset_password_token: "តំណភ្ជាប់សម្រាប់ការផ្លាស់ប្តូរលេខសម្ងាត់ដែលអ្នកបានធ្វើតាម"
         error:
           future: មិន​អាច​នៅ​ក្នុង​ថ្ងៃ​ក្រោយ
+        us_state: 'រដ្ឋ​(សាលា)'
   hello: "សួស្ដី​ពិភពលោក"
   welcome_back: "ស្វាគមន៍​ការ​មក​វិញ, %{name}"
   your_professional_learning_plan: "គំរោងនៃការសិក្សាមុខជំនាញរបស់អ្នក"
@@ -164,6 +165,7 @@ km:
     email_preference_no: "ទេ"
     share_teacher_email_reg_partner_preference_yes: "យល់ព្រម"
     share_teacher_email_reg_partner_preference_no: "ទេ"
+    us_state: 'រដ្ឋ​(សាលា)'
   school_info:
     title: 'ព័ត៌មានអំពីសាលា'
     school_country: 'សាលាក្នុងប្រទេស'
@@ -630,6 +632,8 @@ km:
       robotics:
         kodable: 'Kodable'
         other: "ផ្សេងៗ"
+      workshop_course:
+        other: 'ផ្សេងៗ'
       email_opt_in:
         opt_in_yes: 'យល់ព្រម'
         opt_in_no: 'ទេ'

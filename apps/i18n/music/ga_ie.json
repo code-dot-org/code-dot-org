@@ -12,5 +12,7 @@
   "blockly_toolboxCategoryVariables": "Athróga",
   "feedback": "Aiseolas",
   "share": "Comhroinn",
-  "startOver": "Tosaigh Arís"
+  "startOver": "Tosaigh Arís",
+  "panelHeaderInstructions": "Treoracha",
+  "panelHeaderWorkspace": "Spás oibre: "
 }

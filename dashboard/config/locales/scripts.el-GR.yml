@@ -398,6 +398,8 @@ el:
             δικιά σου έκδοση του Minecraft.
         flappy-impact-study:
           title: Κώδικας Flappy με Έρευνα
+          description_short: 'Γράψτε το δικό σας παιχνίδι Flappy σε λιγότερο από 10
+            λεπτά! '
         coursec-draft:
           description_short: Μάθετε τα βασικά της επιστήμης της πληροφορικής και δημιουργήστε
             τη δική σας τέχνη, ιστορίες και παιχνίδια.
@@ -1036,7 +1038,7 @@ el:
             csf_digcit:
               display_name: Ψηφιακή υπηκοότητα
             csf_nested_loops:
-              display_name: Φωλιασμένες Επαναλήψεις
+              display_name: Εμφωλευμένοι Βρόχοι
             csf_functions:
               display_name: Συναρτήσεις
             end_of_course_project:
@@ -1463,7 +1465,7 @@ el:
             csf_conditionals:
               display_name: Συνθήκες
             csf_nested_loops:
-              display_name: Φωλιασμένες Επαναλήψεις
+              display_name: Εμφωλευμένοι Βρόχοι
             csf_functions:
               display_name: Συναρτήσεις
             end_of_course_project:
@@ -1636,7 +1638,7 @@ el:
             csf_digcit:
               display_name: Ψηφιακή υπηκοότητα
             csf_nested_loops:
-              display_name: Φωλιασμένες Επαναλήψεις
+              display_name: Εμφωλευμένοι Βρόχοι
             csf_functions:
               display_name: Συναρτήσεις
             end_of_course_project:
@@ -1902,7 +1904,7 @@ el:
         coursee-2021:
           lesson_groups:
             ramp_up:
-              display_name: Φωλιασμένες Επαναλήψεις
+              display_name: Εμφωλευμένοι Βρόχοι
             csf_sprites:
               display_name: Χαρακτήρας
             csf_digcit:
@@ -2239,6 +2241,8 @@ el:
               display_name: Μαθήματα
             lessonGroup-3:
               display_name: Έργο
+        hello-world-retro:
+          title: 'Γεια σου Κόσμε: Ρετρό'
         csa4-exemplars:
           lesson_groups:
             lesson group:
@@ -2252,6 +2256,8 @@ el:
         ai-ethics:
           title: Ο Κώδικας Δεοντολογίας Τεχνητής Νοημοσύνης μας
           description_audience: επίπεδα 6-12
+        poem-art:
+          title: Τέχνη της Ποίησης
         spelling-bee:
           title: Η μέλισσα της ορθογραφίας
         outbreak-csc:
@@ -2271,6 +2277,12 @@ el:
         ai-ethics-2021:
           title: Ο Κώδικας Δεοντολογίας Τεχνητής Νοημοσύνης μας
           description_audience: Τάξεις Έκτης Δημοτικού ως Γ Λυκείου
+        poem-art-2021:
+          title: Τέχνη της Ποίησης
+        poetry-2021:
+          title: Κωδικοποίηση με ποίηση
+        hello-world-retro-2021:
+          title: 'Γεια σου Κόσμε: Ρετρό'
         explore-data-1-2021:
           title: Οπτικοποίηση Δεδομένων
         csa6-exemplars:
@@ -2421,7 +2433,7 @@ el:
             csf_digcit:
               display_name: Ψηφιακή υπηκοότητα
             ramp_up:
-              display_name: Φωλιασμένες Επαναλήψεις
+              display_name: Εμφωλευμένοι Βρόχοι
             csf_functions:
               display_name: Συναρτήσεις
             csf_nested_loops:
@@ -2919,7 +2931,7 @@ el:
             csf_sprites:
               display_name: Χαρακτήρας
             ramp_up:
-              display_name: Φωλιασμένες Επαναλήψεις
+              display_name: Εμφωλευμένοι Βρόχοι
             csf_functions:
               display_name: Συναρτήσεις
             csf_nested_loops:

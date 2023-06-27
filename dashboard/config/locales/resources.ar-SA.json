@@ -6383,119 +6383,375 @@
         "solving-problems-tangrams-2020/csd/2021": {
           "type": "مصدر"
         },
+        "all_code_2/csd/2021": {
+          "name": "",
+          "url": ""
+        },
+        "all_resources_3/csd/2021": {
+          "name": "",
+          "url": ""
+        },
+        "all_standards_3/csd/2021": {
+          "name": "",
+          "url": ""
+        },
+        "all_vocabulary_3/csd/2021": {
+          "name": "",
+          "url": ""
+        },
         "exploring-web-pages-exemplar-2020/csd/2021": {
-          "name": "استكشاف صفحات الويب"
+          "name": "استكشاف صفحات الويب",
+          "url": "",
+          "type": ""
         },
         "exploring-web-pages/csd/2021": {
-          "name": "استكشاف صفحات الويب"
+          "name": "استكشاف صفحات الويب",
+          "url": "",
+          "type": ""
         },
         "csd_unit_2_-_web_development/csd/2021": {
+          "name": "",
+          "url": "",
           "type": "شرائح"
         },
+        "exemplar-text-website/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
         "html_tags/csd/2021": {
+          "name": "",
+          "url": "",
           "type": "مصدر"
         },
         "intro_to_web_lab_part_2/csd/2021": {
+          "name": "",
+          "url": "",
           "type": "فيديو"
         },
         "video_intro_to_web_lab_part_1/csd/2021": {
+          "name": "",
+          "url": "",
           "type": "فيديو"
         },
         "video_pair_programming/csd/2021": {
+          "name": "",
+          "url": "",
           "type": "فيديو"
         },
         "headings_and_paragraphs/csd/2021": {
+          "name": "",
+          "url": "",
           "type": "مصدر"
         },
         "video_debugging/csd/2021": {
+          "name": "",
+          "url": "",
           "type": "فيديو"
         },
+        "project-guide-html-project-2020/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "peer-review-html-web-page-exemplar-2020/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
         "html-web-page-1/csd/2021": {
+          "name": "",
+          "url": "",
           "type": "نموذج التقييم"
         },
         "mini-project-html-page/csd/2021": {
+          "name": "",
+          "url": "",
           "type": "شرائح"
         },
         "html-web-page/csd/2021": {
+          "name": "",
+          "url": "",
           "type": "استعراض النظراء"
         },
+        "html-page/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
         "formatting_html/csd/2021": {
+          "name": "",
+          "url": "",
           "type": "مصدر"
         },
         "lists/csd/2021": {
           "name": "القوائم",
+          "url": "",
           "type": "مصدر"
         },
         "digital-footprint/csd/2021": {
           "name": "البصمة الرقمية",
+          "url": "",
           "type": "شرائح"
+        },
+        "social-sleuth-exemplar-2020/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "social-sleuth/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
         },
         "intro_to_css_-_part_1/csd/2021": {
           "name": "مدخل للغة CSS -الجزء 1",
+          "url": "",
           "type": "فيديو"
         },
         "intro_to_css_-_part_2/csd/2021": {
           "name": "مدخل للغة CSS -الجزء 2",
+          "url": "",
           "type": "فيديو"
         },
         "style_sheets/csd/2021": {
+          "name": "",
+          "url": "",
           "type": "مصدر"
         },
         "text_properties/csd/2021": {
+          "name": "",
+          "url": "",
           "type": "مصدر"
         },
+        "project-guide-your-personal-style-exemplar-2020/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "peer-review-your-personal-style-exemplar-2020/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
         "your-personal-style-1-2-3/csd/2021": {
+          "name": "",
+          "url": "",
           "type": "نموذج التقييم"
         },
         "your-personal-style-1/csd/2021": {
+          "name": "",
+          "url": "",
           "type": "استعراض النظراء"
         },
+        "your-personal-style/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "licensing-your-work-exemplar-2020/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "licensing-your-work-2020/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
         "creative-commons-video/csd/2021": {
+          "name": "",
+          "url": "",
           "type": "فيديو"
         },
         "creative_commons_search/csd/2021": {
+          "name": "",
+          "url": "",
           "type": "مصدر"
         },
         "images_in_html/csd/2021": {
           "name": "الصور بصيغة HTML",
+          "url": "",
           "type": "مصدر"
         },
+        "define-your-webpage-2020/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "define-your-web-page/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "body-styling/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "layout-properties/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "project-guide-personal-web-page-prepare-exemplar-2020/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "person-web-page-prepare/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "practices-reflection-exemplar-2020/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "project-guide-personal-web-page-reflect-exemplar-2020/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "peer-review-personal-website-exemplar-2020/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
         "personal-web-page-1/csd/2021": {
+          "name": "",
+          "url": "",
           "type": "استعراض النظراء"
         },
+        "person-web-page-reflect/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
         "personal-web-page/csd/2021": {
+          "name": "",
+          "url": "",
           "type": "نموذج التقييم"
         },
         "publishing_your_website/csd/2021": {
+          "name": "",
+          "url": "",
           "type": "فيديو"
         },
         "personal_web_page_-_student_checklist/csd/2021": {
+          "name": "",
+          "url": "",
           "type": "مصدر"
         },
         "extra_code_in_challenge_levels/csd/2021": {
+          "name": "",
+          "url": "",
           "type": "مصدر"
         },
+        "websites-for-a-purpose-2020/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "websites-for-a-purpose/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "website-team-plan-2020/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
         "teamwork-dealing-with-disagreement/csd/2021": {
+          "name": "",
+          "url": "",
           "type": "فيديو"
         },
         "how-teamwork-works/csd/2021": {
+          "name": "",
+          "url": "",
           "type": "فيديو"
         },
+        "website-team-plan/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "links-and-research-1/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "links-and-research/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
         "how-search-works-video/csd/2021": {
+          "name": "",
+          "url": "",
           "type": "فيديو"
+        },
+        "internet-scavenger-hunt/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
         },
         "classes/csd/2021": {
           "name": "الفصول الدراسية",
+          "url": "",
           "type": "مصدر"
+        },
+        "project-guide-website-for-a-purpose-prepare-exemplar-2020/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
         },
         "website-for-a-purpose-1/csd/2021": {
+          "name": "",
+          "url": "",
           "type": "نموذج التقييم"
         },
+        "plan-a-multi-page-website/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "website_for_a_purpose_-_student_checklist/csd/2021": {
+          "name": "",
+          "url": ""
+        },
         "hyperlinks/csd/2021": {
+          "name": "",
+          "url": "",
           "type": "مصدر"
         },
+        "practices-reflection-l21-exemplar-2020/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "project-guide-website-for-a-purpose-reflect-exemplar-2020/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "peer-review-final-personal-website-exemplar-2020/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
         "website-for-a-purpose/csd/2021": {
+          "name": "",
+          "url": "",
           "type": "استعراض النظراء"
+        },
+        "website-for-a-purpose-reflect/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
         },
         "lesson_plans/pre-express/2020": {
           "name": "مخطّطات الدّروس"

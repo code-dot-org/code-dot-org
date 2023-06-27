@@ -5797,7 +5797,7 @@ es-MX:
               display_name: 'Capítulo 2: Computadoras y resolución de problemas'
             csd1_3:
               display_name: Lecciones alternativas
-          title: Resolución de Problemas y Computación ('21-'22)
+          title: Resolución de Problemas y Computación ('22-'23)
           description: "Resolución de Problemas y Computación es una iniciación altamente interactiva y colaborativa al campo de la informática, enmarcada dentro de la búsqueda más amplia de la resolución de problemas. Practicarás el uso de un proceso de resolución de problemas para abordar una serie de rompecabezas, desafíos y escenarios del mundo real. A continuación, aprenderás cómo los ordenadores introducen, emiten, almacenan y procesan información para ayudar a los humanos a resolver problemas.  La unidad concluye con un proyecto en el que se diseña una aplicación que ayuda a resolver un problema de tu elección. \n\n**Guía de Implementación para la Unidad 1**\n\n-   El capítulo 1 de la Unidad 1 debe completarse antes de cualquier otra unidad de Descubrimientos de Informática\n-   Se proporcionan lecciones alternativas para algunas lecciones de la Unidad 1, dependiendo del contexto de tu aula\n-   Puedes consultar la [Guía del Plan de Estudios](https://docs.google.com/document/d/1VUbXHxXqHj5QCb4eSb756KKc7NDzbOLZUE5bPPQmJR8/preview) y la [Guía de Implementación](https://docs.google.com/document/d/112OA3_KbicOotqopqUyvXoWPWszz3_LHeMlg0ikCabk/preview) completas para obtener más información sobre esta unidad"
           student_description: Resolución de Problemas y Computación es una iniciación altamente interactiva y colaborativa al campo de la informática, enmarcada dentro de la búsqueda más amplia de la resolución de problemas. Practicarás el uso de un proceso de resolución de problemas para abordar una serie de rompecabezas, desafíos y escenarios del mundo real. A continuación, aprenderás cómo los ordenadores introducen, emiten, almacenan y procesan información para ayudar a los humanos a resolver problemas.  La unidad concluye con un proyecto en el que diseñarás una aplicación que ayude a resolver un problema de tu elección.
           description_short: "  Aprenda cómo los humanos trabajan con computadoras para resolver problemas."
@@ -7666,3 +7666,9 @@ es-MX:
             -   Aprender sobre las oportunidades para conectar con la comunidad Informática en general.
 
             **Tiempo sugerido**: 70 minutos
+        csa-frq-practice:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Clases
+            lessonGroup-5:
+              display_name: Arreglos 2D

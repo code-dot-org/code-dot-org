@@ -50,5 +50,7 @@
   "feedback": "Хариу үйлдэл",
   "share": "Хуваалцах",
   "shareComingSoon": "Хуваалцах баригдаж байна. Удахгүй эргэж шалгана уу.",
-  "startOver": "Шинээр Эхлэх"
+  "startOver": "Шинээр Эхлэх",
+  "panelHeaderInstructions": "Зааварчилгаа",
+  "panelHeaderWorkspace": "Ажлын талбар: "
 }

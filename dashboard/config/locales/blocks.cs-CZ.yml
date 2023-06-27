@@ -2525,6 +2525,8 @@ cs:
             '8': '8'
             '9': '9'
             '10': '10'
+      storylab_printText:
+        text: vypiš {TEXT}
       storylab_setForegroundEffect2:
         text: proveď efekt {EFFECT}
         options:

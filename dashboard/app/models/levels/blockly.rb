@@ -570,9 +570,9 @@ class Blockly < Level
         return loc_val
       end
     else
-      val = [game.app, game.name].map do |name|
+      val = [game.app, game.name].filter_map do |name|
         I18n.t("data.level.instructions.#{name}_#{level_num}", default: nil)
-      end.compact.first
+      end.first
       return val unless val.nil?
     end
   end

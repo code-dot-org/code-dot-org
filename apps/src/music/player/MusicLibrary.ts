@@ -9,10 +9,6 @@ export default class MusicLibrary {
     this.allowedSounds = null;
   }
 
-  getLengthForId(id: string): number | null {
-    return this.getSoundForId(id)?.length || null;
-  }
-
   getSoundForId(id: string): SoundData | null {
     const splitId = id.split('/');
     const path = splitId[0];

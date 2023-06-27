@@ -49,6 +49,7 @@ ku:
           بۆ درووستكردنی هەژماری (Code.org) بە **%{provider}** بۆ **%{email}**.
         error:
           future: ناکرێت لە داهاتوو بێت
+        us_state: پارێزگا
   beta: تاقیکاری
   hello: سڵاو جیهان
   welcome_back: بەخێربێیەوە، %{name}
@@ -191,6 +192,7 @@ ku:
     email_preference_required: پێویستە پۆستێكی ئەلیكترۆنی خوازراو دیاریبكەی.
     share_teacher_email_reg_partner_preference_required: پێویستە پۆستێكی ئەلیكترۆنی
       خوازراو دیاریبكەی.
+    us_state: پارێزگا
   school_info:
     title: زانیاری قوتابخانە (ئارەزومەندانە)
     school_country: وڵاتی قوتابخانە
@@ -388,6 +390,8 @@ ku:
       resources:
         other: هی تر
       robotics:
+        other: هی تر
+      workshop_course:
         other: هی تر
   cookie_banner:
     accept: من ڕازیم

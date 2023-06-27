@@ -163,10 +163,12 @@
           "rat": "αρουραίος"
         },
         "CSD U1 processing npark_2021": {
-          "Sorry!": "Συγνώμη!"
+          "Sorry!": "Συγνώμη!",
+          "Correct!": "Σωστά!"
         },
         "CSD U1 processing npark_2022": {
-          "Sorry!": "Συγνώμη!"
+          "Sorry!": "Συγνώμη!",
+          "Correct!": "Σωστά!"
         },
         "CSD U1 processing writers_2021": {
           "1": "1",
@@ -1165,21 +1167,24 @@
           "Submit": "Υποβολή",
           "Why?": "Γιατί;",
           "When?": "Πότε;",
-          "About Us": "Σχετικά με εμάς"
+          "About Us": "Σχετικά με εμάς",
+          "Correct!": "Σωστά!"
         },
         "CSDU4 Quiz App Demo_2018": {
           "About": "Σχετικά",
           "Submit": "Υποβολή",
           "Why?": "Γιατί;",
           "When?": "Πότε;",
-          "About Us": "Σχετικά με εμάς"
+          "About Us": "Σχετικά με εμάς",
+          "Correct!": "Σωστά!"
         },
         "CSDU4 Quiz App Demo_2019": {
           "About": "Σχετικά",
           "Submit": "Υποβολή",
           "Why?": "Γιατί;",
           "When?": "Πότε;",
-          "About Us": "Σχετικά με εμάς"
+          "About Us": "Σχετικά με εμάς",
+          "Correct!": "Σωστά!"
         },
         "CSDU6 - UI and Inputs - getNumber": {
           "+": "+"
@@ -1392,10 +1397,12 @@
           "20": "20"
         },
         "csd-explore ui-4": {
-          "Sorry!": "Συγνώμη!"
+          "Sorry!": "Συγνώμη!",
+          "Correct!": "Σωστά!"
         },
         "csd-explore ui-4_2022": {
-          "Sorry!": "Συγνώμη!"
+          "Sorry!": "Συγνώμη!",
+          "Correct!": "Σωστά!"
         },
         "csd-explore ui-5": {
           "1": "1",

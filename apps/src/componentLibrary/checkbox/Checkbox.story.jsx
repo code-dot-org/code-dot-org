@@ -2,7 +2,7 @@ import React from 'react';
 import Checkbox from './index';
 
 export default {
-  title: 'Checkbox Component',
+  title: 'DesignSystem/Checkbox Component',
   component: Checkbox,
 };
 

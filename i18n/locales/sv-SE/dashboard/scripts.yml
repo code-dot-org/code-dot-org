@@ -2167,3 +2167,7 @@ sv:
               display_name: Digitalt medborgarskap
             lessonGroup-4:
               display_name: variabler
+        csa-frq-practice:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Klasser

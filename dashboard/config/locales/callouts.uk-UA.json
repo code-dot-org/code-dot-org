@@ -581,7 +581,7 @@
         },
         "Overworld Move to Sheep_2021": {
           "craft_run_button_callout": "Натисни \"Запустити\", щоб випробувати програму",
-          "craft_drag_block_callout": "Перетягни блок 'рухатися вперед' та прикріпи його під іншим блоком"
+          "craft_drag_block_callout": "Перетягни блок \"рух вперед\" та прикріпи його під іншим блоком"
         },
         "Overworld Place Wall_2021": {
           "craft_inside_repeat": "Повторюй дії, розміщуючи тут блоки"
@@ -783,7 +783,7 @@
           "courseC_PlayLab_events_challenge1_1": "Цей блок дозволяє переміщати персонажів у різні частини ігрового простору.\n"
         },
         "courseC_PlayLab_events_challenge1_2021": {
-          "courseC_PlayLab_events_challenge1_1": "Цей блок дозволяє переміщати персонажів у різні частини ігрового простору.\n"
+          "courseC_PlayLab_events_challenge1_1": "Цей блок дозволяє переміщати виконавців у різні частини ігрового простору.\n"
         },
         "courseD_bee_debugging_challenge1": {
           "courseD_bee_debugging_challenge1_callout1": "Використовуйте цю команду, щоб перемістити бджолу назад."
@@ -1565,6 +1565,84 @@
         },
         "CSD U3 Random add_2022": {
           "CSD_U3_butterfly": "Уважно подивися на цей код."
+        },
+        "CSD U6 - Combine Inputs - PracD_2222": {
+          "CSD U6L9.7 - if-statement": "Додай команду умови тут"
+        },
+        "CSD U6 - If Variables - A_2222": {
+          "U6L6.4 - If": "Додай команду умови тут"
+        },
+        "ml-customize apps-choice3": {
+          "CSD_AI_L10_predict": "Додай команду умови сюди"
+        },
+        "ml-customize apps-choice3_2022": {
+          "CSD_AI_L10_predict": "Додай команду умови сюди"
+        },
+        "ml-customize apps-choice5": {
+          "CSD_AI_L11_top": "Помісти блок над цим рядком"
+        },
+        "ml-customize apps-choice5_2022": {
+          "CSD_AI_L11_top": "Помісти блок над цим рядком"
+        },
+        "ml-intro app lab-book recommender 5C-2021": {
+          "CSD_AI_L7_event": "Додай сюди блок 'відворитиЗвук'"
+        },
+        "ml-intro app lab-book recommender 5C_2022": {
+          "CSD_AI_L7_event": "Додай сюди блок 'відворитиЗвук'"
+        },
+        "ml-intro app lab-book recommender 5E-2021": {
+          "CSD_AI_L7_top": "Помісти блок над цим рядком"
+        },
+        "ml-intro app lab-book recommender 5E_2022": {
+          "CSD_AI_L7_top": "Помісти блок над цим рядком"
+        },
+        "ml-models in applab-screens-1-2021": {
+          "CSD_AI_L10_ifstatement": "Додай команду умови сюди"
+        },
+        "ml-models in applab-screens-1_2022": {
+          "CSD_AI_L10_ifstatement": "Додай команду умови сюди"
+        },
+        "ml-models in applab-screens-3-2021": {
+          "CSD_AI_L7_ifstatement": "Додай команду умови тут"
+        },
+        "ml-models in applab-screens-3_2022": {
+          "CSD_AI_L7_ifstatement": "Додай команду умови тут"
+        },
+        "ml-use model card-choice3": {
+          "CSD_AI_L10_predict": "Додай команду умови сюди"
+        },
+        "ml-use model card-choice3_2022": {
+          "CSD_AI_L10_predict": "Додай команду умови сюди"
+        },
+        "ml-use model card-choice5": {
+          "CSD_AI_L11_top": "Помісти блок над цим рядком"
+        },
+        "ml-use model card-choice5_2022": {
+          "CSD_AI_L11_top": "Помісти блок над цим рядком"
+        },
+        "ml-use model card-example3C-2021": {
+          "CSD_AI_L11_temp": "Це функція температури"
+        },
+        "ml-use model card-example3C_2022": {
+          "CSD_AI_L11_temp": "Це функція температури"
+        },
+        "ml-use model card-example3D-2021": {
+          "CSD_AI_L11_time": "Це функція \"Час доби\""
+        },
+        "ml-use model card-example3D_2022": {
+          "CSD_AI_L11_time": "Це функція \"Час доби\""
+        },
+        "ml-use model card-example3_EditB-2021": {
+          "CSD_AI_L11_cars": "Це ознака \"Кількість автомобілів\""
+        },
+        "ml-use model card-example3_EditB_2022": {
+          "CSD_AI_L11_cars": "Це ознака \"Кількість автомобілів\""
+        },
+        "ml-use model card-example3_EditC-2021": {
+          "CSD_AI_L11_weather": "Це функція \"Погода\""
+        },
+        "ml-use model card-example3_EditC_2022": {
+          "CSD_AI_L11_weather": "Це функція \"Погода\""
         }
       }
     }

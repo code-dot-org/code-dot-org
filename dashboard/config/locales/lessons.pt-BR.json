@@ -1299,13 +1299,16 @@
           "name": "Projeto - Propor um Aplicativo"
         },
         "csd3-2022/Programming for Entertainment": {
-          "name": "Programação para entretenimento"
+          "name": "Programação para entretenimento",
+          "student_overview": "Aluno\n\\*\\*Pergunta do dia: Como a ciência da computação é usada no entretenimento? \\*\\*\n\nNesta lição, você explorará como a Ciência da Computação e, especificamente, a programação, desempenham um papel no entretenimento ou como um veículo para a autoexpressão."
         },
         "csd3-2022/Plotting Shapes": {
-          "name": "Formas de plotagem"
+          "name": "Formas de plotagem",
+          "student_overview": "\\*\\*Pergunta do dia: Como podemos comunicar de forma clara como desenhar algo em uma tela? \\*\\*\n\nNesta lição, você explorará os desafios de comunicar instruções claras usando uma ferramenta do Laboratório de Jogos para desenhar formas em grade!"
         },
         "csd3-2022/Drawing in Game Lab": {
-          "name": "Desenhando no Laboratório de Jogos"
+          "name": "Desenhando no Laboratório de Jogos",
+          "student_overview": "\\*\\*Pergunta do dia: Como podemos comunicar a um computador como desenhar formas na tela? \\*\\*\n\nNesta lição, você começará a usar o Laboratório de Jogos para posicionar formas na tela enquanto trabalha com os conceitos de sequenciamento e depuração. "
         },
         "csd3-2022/Shapes and Parameters": {
           "name": "Formas e Parâmetros"
@@ -1475,8 +1478,14 @@
         "csd7-2022/Numerical Data in AI Lab": {
           "name": "Dados numéricos no AI Lab"
         },
+        "csd7-2022/Mini-Project: Make a Machine Learning App": {
+          "name": "Projeto: Crie um aplicativo de Aprendizado de Máquina"
+        },
         "csd7-2022/Survey Planning": {
           "name": "Projetando a coleta de dados"
+        },
+        "csd7-2022/Design an AI App": {
+          "name": "Projeto - Crie um aplicativo de Inteligência Artificial"
         },
         "csd7-2022/CS Discoveries Post-Course Survey": {
           "name": "Pesquisa pós-curso da CS Discoveries"
@@ -5290,13 +5299,16 @@
           "name": "Pesquisa pós-curso da CS Discoveries"
         },
         "csd3-2021/Programming for Entertainment": {
-          "name": "Programação para entretenimento"
+          "name": "Programação para entretenimento",
+          "student_overview": "Aluno\n\\*\\*Pergunta do dia: Como a ciência da computação é usada no entretenimento? \\*\\*\n\nNesta lição, você explorará como a Ciência da Computação e, especificamente, a programação, desempenham um papel no entretenimento ou como um veículo para a autoexpressão."
         },
         "csd3-2021/Plotting Shapes": {
-          "name": "Formas de plotagem"
+          "name": "Formas de plotagem",
+          "student_overview": "\\*\\*Pergunta do dia: Como podemos comunicar de forma clara como desenhar algo em uma tela? \\*\\*\n\nNesta lição, você explorará os desafios de comunicar instruções claras usando uma ferramenta do Laboratório de Jogos para desenhar formas em grade!"
         },
         "csd3-2021/Drawing in Game Lab": {
-          "name": "Desenhando no Laboratório de Jogos"
+          "name": "Desenhando no Laboratório de Jogos",
+          "student_overview": "\\*\\*Pergunta do dia: Como podemos comunicar a um computador como desenhar formas na tela? \\*\\*\n\nNesta lição, você começará a usar o Laboratório de Jogos para posicionar formas na tela enquanto trabalha com os conceitos de sequenciamento e depuração. "
         },
         "csd3-2021/Shapes and Parameters": {
           "name": "Formas e Parâmetros"

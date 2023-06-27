@@ -61,5 +61,9 @@
   "share": "Share",
   "shareComingSoon": "Sharing is under construction. Check back soon.",
   "startOver": "Start Over",
-  "upload": "Upload"
+  "upload": "Upload",
+  "panelHeaderInstructions": "Instructions",
+  "panelHeaderWorkspace": "Workspace",
+  "panelHeaderControls": "Controls",
+  "panelHeaderTimeline": "Timeline"
 }

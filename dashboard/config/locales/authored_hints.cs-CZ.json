@@ -10307,9 +10307,9 @@
         },
         "courseC_artist_prog72022": {
           "courseC_artist_prog7_a": "Každý úhel je buď 45 nebo 90 stupňů.",
-          "courseC_artist_prog7_b": "Funguje to v prvním kroku?\\\nA co druhý?\\\nKde se to pokazí?\\\\",
+          "courseC_artist_prog7_b": "Funguje to na první krok?  \nA co na druhý?  \nCo je špatně?",
           "courseC_artist_prog7_c": "Pomocí rozbalovací nabídky na otočných blocích můžeš zjistit, jaký úhel potřebuješ!",
-          "courseC_artist_prog7_d": "Budeš potřebovat:\n\n-   posuň se vpřed\n-   otoč se vpravo o 45 stupňů\n-   posuň se vpřed\n-   otoč se vpravo o 90 stupňů\n-   posuň se vpřed\n-   otoč se vpravo o 45 stupňů\n\nTento vzor opakuj dvakrát!",
+          "courseC_artist_prog7_d": "Budete muset:\n- posunout se vpřed\n- otočit se doprava o 45 stupňů\n- posunout se vpřed\n- otočit se doprava o 90 stupňů\n- posunout se vpřed\n- otočit se doprava o 45 stupňů\n\nOpakovat tento postup dvakrát!",
           "courseC_artist_prog7_e": "Neboj se dělat chyby! Zkus přidávat bloky a spouštět kód, ať zjistíš, co se stane. Nevadí, když úlohu ještě úplně nerozluštíš."
         },
         "courseC_artist_prog_challenge12022": {
@@ -10979,8 +10979,7 @@
         },
         "courseE_artist_functions102022": {
           "courseD_artist_functions10_b": "Tahle kresba je hodně podobná té předchozí, ale funkce „nakesli čáru“ se teď využije k nakreslení jiného obrazce.",
-          "courseD_artist_functions10_a": "Vytvoř funkci „nakresli šestiúhelník“ a pokaždé ji zavolej, ať nemusíš vkládat příliš mnoho bloků „posuň se vpřed“.",
-          "courseD_artist_functions10_c": "Najdeš v téhle kresbě využití pro funkci „řada šestiúhelníků“?\n\n![](https://images.code.org/904e0f38232fd9c15a3d2d172e7dde0b-image-1493140714580.gif)"
+          "courseD_artist_functions10_a": "Vytvoř funkci „nakresli šestiúhelník“ a pokaždé ji zavolej, ať nemusíš vkládat příliš mnoho bloků „posuň se vpřed“."
         },
         "courseE_artist_functions22022": {
           "courseD_artist_functions2_b": "Funkce by neměla obsahovat celý program, ale jen tu část, která nakreslí čtverec se stranami o délce 100 pixelů.",
@@ -11015,11 +11014,7 @@
           "courseD_artist_functions8_c": "Na konci každé řady čtverců stačí, když se umělec otočí o 180 stupňů, než začne kreslit další řadu čtverců. Uzavři celý kód do cyklu „repeat“ – tím se připravíš na další cvičení."
         },
         "courseE_artist_functions92022": {
-          "courseD_artist_functions9_e": "Najdeš v téhle kresbě všechna čtyři místa, kde se dá použít funkce „řada trojúhelníků“?\n\n![](https://images.code.org/130e1040ecca7186dea87f42666f5620-image-1493140373966.gif)",
-          "courseD_artist_functions9_a": "Tahle úloha se dá rozdělit na tři části:\n\n-   Vytvoř funkci „nakresli trojúhelník“.\n-   Vytvoř funkci „nakresli řadu trojúhelníků“.\n-   Dokonči kresbu tak, že čtyřikrát zopakuješ použití funkce „nakresli řadu trojúhelníků“.",
-          "courseD_artist_functions9_b": "Tuhle kresbu vytvoříš tak, že nakreslíš čtyřy řady trojúhelníků s tím, že se před nakreslením každé řady otočíš střídavě buď o 60, nebo 120 stupňů.",
-          "courseD_artist_functions9_c": "Když chceš nakreslit řadu trojúhelníků,\n\n-   zopakuj čtyřikrát tyhle kroky:\n    -   nakresli trojúhelník\n    -   skoč dopředu o 50 pixelů",
-          "courseD_artist_functions9_d": "Když chceš nakreslit kosočtverec,\n\n-   zopakuj dvakrát tyhle kroky:\n    -   nakresli řadu trojúhelníků\n    -   otoč se o 60 stupňů\n    -   nakresli řadu trojúhelníků\n    -   otoč se o 120 stupňů"
+          "courseD_artist_functions9_b": "Tuhle kresbu vytvoříš tak, že nakreslíš čtyřy řady trojúhelníků s tím, že se před nakreslením každé řady otočíš střídavě buď o 60, nebo 120 stupňů."
         },
         "courseE_artist_functions_challenge12022": {
           "courseE_artist_functions_challenge1_a": "Když funkci zavoláš ještě jednou, můžeš vytvořit stejný design v posledním rohu.",
