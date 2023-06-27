@@ -79,7 +79,7 @@ class RegionalPartner < ApplicationRecord
     apps_close_str = apps_close_date_teacher
     if apps_close_str
       close_date = Date.parse(apps_close_str)
-      return close_date.before?(Date.today)
+      return close_date.before?(Time.zone.today)
     end
 
     false
