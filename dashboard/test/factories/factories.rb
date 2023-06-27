@@ -1738,7 +1738,7 @@ FactoryBot.define do
   end
 
   factory :parental_permission_request do
-    user {create :young_student, :without_parental_permission}
+    user {create :young_student, :without_parent_permission}
     parent_email {"contact@example.domain"}
     resends_sent {0}
 
@@ -1750,7 +1750,7 @@ FactoryBot.define do
     end
 
     trait :granted do
-      user {create :young_student, :with_parental_permission}
+      user {create :young_student, :with_parent_permission}
     end
   end
 end
