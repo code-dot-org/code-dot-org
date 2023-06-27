@@ -1,11 +1,10 @@
 require 'stringio'
 require 'cdo/aws/metrics'
-require 'cdo/aws/s3'
 require 'cdo/chat_client'
 
 class EmailReminder
   include Rails.application.routes.url_helpers
-  attr_reader :max_reminder_age, :min_reminder_age, :dry_run, :log
+  attr_reader :max_reminder_age, :min_reminder_age, :dry_run
 
   # Max reminders we want to send over the lifetime of a permission request
   # Currently, we only want to send 1 reminder to a parent for CPA compliance.
@@ -25,7 +24,7 @@ class EmailReminder
     raise ArgumentError.new('dry_run must be boolean') unless [true, false].include? @dry_run
 
     reset
-    @log.puts "Initialized with options: #{options.inspect}"
+    CDO.log.info "Initialized with options: #{options.inspect}"
   end
 
   # Find permission requests for users who haven't been granted permission yet.
@@ -33,11 +32,14 @@ class EmailReminder
   # Only find requests that have sent fewer than max_reminders reminders.
   # Return the IDs of the requests.
   def find_requests_needing_reminder
-    ParentalPermissionRequest.joins(:user).
+    reqs = ParentalPermissionRequest.joins(:user).
       select(:id).
       where(created_at: @max_reminder_age..@min_reminder_age).
       where(reminders_sent: ...MAX_LIFETIME_REMINDERS).
       where("JSON_EXTRACT(users.properties, '$.child_account_compliance_state') != ?", User::ChildAccountCompliance::PERMISSION_GRANTED)
+
+    CDO.log.info "Found #{reqs.length} requests needing reminders"
+    reqs
   end
 
   # Send a reminder for a given ParentalPermissionRequest ID.
@@ -66,41 +68,28 @@ class EmailReminder
   private
 
   def reset
-    @log = StringIO.new
-
     # Other values tracked internally and reset with every run
     @num_reminders_sent = 0
     @start_time = Time.now
 
-    start_activity_log
-  end
-
-  def start_activity_log
-    @log.puts "Sending reminders for permission requests created between #{@max_reminder_age} and #{@min_reminder_age}"
+    CDO.log.info "Sending reminders for permission requests created between #{@max_reminder_age} and #{@min_reminder_age}"
   end
 
   def report_results
     metrics = {
       PermissionRemindersSent: @num_reminders_sent,
     }
-    log_metrics metrics
+    CDO.log.info metrics
 
     summary = build_summary
-    @log.puts summary
+    CDO.log.info summary
 
-    log_link = upload_activity_log
-    say "#{summary} #{log_link}"
+    say summary
     upload_metrics metrics
   end
 
   def metric_name(name)
     "Custom/PermissionEmailReminders/#{name}"
-  end
-
-  def log_metrics(metrics)
-    metrics.each do |key, value|
-      @log.puts "#{key}: #{value}"
-    end
   end
 
   def upload_metrics(metrics)
@@ -119,19 +108,11 @@ class EmailReminder
   def build_summary
     formatted_duration = Time.at(Time.now.to_i - @start_time.to_i).utc.strftime("%H:%M:%S")
     summary = "Sent #{@num_reminders_sent} permission reminder(s)"
-    summary += "\n🕐 #{formatted_duration}"
+    summary += "\n Duration: #{formatted_duration}"
     if @dry_run
       summary += "IMPORTANT: This was a dry run. No emails were sent."
     end
     summary
-  end
-
-  # @return [String] HTML link to view uploaded log
-  def upload_activity_log
-    log_url = AWS::S3::LogUploader.
-      new(CDO.audit_log_s3_bucket, "permission-email-reminder-activity/#{CDO.rack_env}").
-      upload_log(@start_time.strftime('%Y%m%dT%H%M%S%z'), @log.string)
-    " <a href='#{log_url}'>☁ Log on S3</a>"
   end
 
   # Send messages to Slack #cron-daily

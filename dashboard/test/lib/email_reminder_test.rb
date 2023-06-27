@@ -8,9 +8,7 @@ class EmailReminderTest < ActiveSupport::TestCase
     @request = create(:parental_permission_request, user_id: @student.id, parent_email: 'foo-parent@code.org')
 
     Cdo::Metrics.expects(:push).never
-    AWS::S3::LogUploader.expects(:upload_log).never
-    AWS::S3::LogUploader.any_instance.stubs :new
-    EmailReminder.any_instance.stubs :upload_activity_log
+    Cdo::Metrics.stubs :push
     EmailReminder.any_instance.stubs :upload_metrics
     EmailReminder.any_instance.stubs :say
   end
