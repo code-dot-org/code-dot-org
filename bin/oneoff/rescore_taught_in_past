@@ -16,15 +16,13 @@ ActiveRecord::Base.transaction do
 
     response_scores["bonus_points_scores"]["taught_in_past"] = new_taught_in_past_score
 
-    if old_taught_in_past_score.to_i != new_taught_in_past_score.to_i
-      if application.response_scores = response_scores.to_json
-        application.save!
+    if old_taught_in_past_score.to_i != new_taught_in_past_score.to_i && (application.response_scores = response_scores.to_json)
+      application.save!
 
-        partner_name = application.regional_partner&.name
-        name = "#{application.first_name} #{application.last_name}"
-        update_string = "partner: #{partner_name}, id: #{application.id}, old: #{old_taught_in_past_score}, new: #{new_taught_in_past_score}, response: #{responses[:taught_in_past]}, email: #{application.email}, name: #{name}"
-        rescored_applications << update_string
-      end
+      partner_name = application.regional_partner&.name
+      name = "#{application.first_name} #{application.last_name}"
+      update_string = "partner: #{partner_name}, id: #{application.id}, old: #{old_taught_in_past_score}, new: #{new_taught_in_past_score}, response: #{responses[:taught_in_past]}, email: #{application.email}, name: #{name}"
+      rescored_applications << update_string
     end
   rescue => exception
     puts "Failure on application #{application.id}:\n#{exception.message}\n#{application&.errors&.messages}"

@@ -275,7 +275,6 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ::ActionController::TestC
       csf_intro_intent: "No",
       years_teaching: "30",
       years_teaching_cs: "10",
-      csf_has_physical_curriculum_guide: "No",
       previous_courses: "I don’t have experience teaching any of these courses",
       replace_existing: "I don’t know",
       csf_intro_other_factors: "I want to learn computer science concepts.",

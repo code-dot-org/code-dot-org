@@ -332,8 +332,8 @@ export const levelProgressFromServer = serverProgress => {
 /**
  * Given an object from the server with student progress data keyed by level ID,
  * parse the progress data into our canonical studentLevelProgressType
- * @param {{levelId:serverProgress}} serverStudentProgress
- * @returns {{levelId:studentLevelProgressType}}
+ * @param {{[levelId: number]:serverProgress}} serverStudentProgress
+ * @returns {{[levelId: number]:studentLevelProgressType}}
  */
 export const processServerStudentProgress = serverStudentProgress => {
   return _.mapValues(serverStudentProgress, progress =>
