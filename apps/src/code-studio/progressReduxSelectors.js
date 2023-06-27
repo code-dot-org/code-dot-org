@@ -9,6 +9,8 @@ import {activityCssClass} from './activityUtils';
 
 const PEER_REVIEW_ID = -1;
 
+// Selectors
+
 // Do we have one or more lockable lessons
 export const hasLockableLessons = state =>
   state.lessons.some(lesson => lesson.lockable);
@@ -26,6 +28,7 @@ const lessonFromLessonAtIndex = (state, lessonIndex) => ({
   ...lessonFromLesson(state.lessons[lessonIndex]),
   isFocusArea: state.focusAreaLessonIds.includes(state.lessons[lessonIndex].id),
 });
+
 const lessonFromLesson = lesson =>
   _.pick(lesson, [
     'name',
@@ -90,10 +93,10 @@ export const getProgressLevelType = state => {
 };
 
 /**
- * Returns the dashboard URL path to retrieve the level_data for a script
+ * Returns the dashboard URL path to retrieve the level properties for a script
  * level (if we have lessons) or a level (if we don't have lessons).
  */
-export const getLevelDataPath = state => {
+export const getLevelPropertiesPath = state => {
   if (state.progress.lessons) {
     const scriptName = state.progress.scriptName;
     const lessonPosition = state.progress.lessons?.find(
@@ -104,10 +107,10 @@ export const getLevelDataPath = state => {
         state.progress,
         state.progress.currentLessonId
       ).findIndex(level => level.isCurrentLevel) + 1;
-    return `/s/${scriptName}/lessons/${lessonPosition}/levels/${levelNumber}/level_data`;
+    return `/s/${scriptName}/lessons/${lessonPosition}/levels/${levelNumber}/level_properties`;
   } else {
     const levelId = state.progress.currentLevelId;
-    return `/levels/${levelId}/level_data`;
+    return `/levels/${levelId}/level_properties`;
   }
 };
 

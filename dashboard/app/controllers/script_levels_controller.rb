@@ -178,7 +178,7 @@ class ScriptLevelsController < ApplicationController
   # Get a JSON summary of a level's information, used in modern labs that don't
   # reload the page between level views.  Note that this can be cached for a relatively
   # long amount of time, including by the CDN, and does not vary per user.
-  def level_data
+  def level_properties
     authorize! :read, ScriptLevel
 
     @script = ScriptLevelsController.get_script(request)
@@ -187,7 +187,7 @@ class ScriptLevelsController < ApplicationController
 
     @level = @script_level.level
 
-    render json: {level_data: @level.properties["level_data"]}
+    render json: @level.properties.camelize_keys
   end
 
   # Get a list of hidden lessons for the current users section
