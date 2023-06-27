@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": "csc-bookcovers",
-    "serialized_at": "2023-06-21 21:07:25 UTC",
+    "serialized_at": "2023-06-26 22:46:03 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -646,7 +646,8 @@
       "key": "07c1727e-6cd9-4e1d-8798-3b2a827d2a6c",
       "position": 6,
       "properties": {
-        "description": "**Do This**:  Pass out the Plan Your Own Book Cover handout. Students will select one book from the list they wrote during the warm up challenge. They will design an interactive book cover for this book. First, students will choose two characters and introduce them. Then they will write a one to two sentence summary of the book’s plot. \n\n"
+        "description": "**Do This**:  Pass out the Plan Your Own Book Cover handout. Students will select one book from the list they wrote during the warm up challenge. They will design an interactive book cover for this book. First, students will choose two characters and introduce them. Then they will write a one to two sentence summary of the book’s plot. \n\n",
+        "progression_name": "Planning Your Book Cover"
       },
       "seeding_key": {
         "activity_section.key": "07c1727e-6cd9-4e1d-8798-3b2a827d2a6c",
@@ -728,7 +729,13 @@
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Spiraled Review” slide\n\n**Do This**:  Allow the students a moment to look at the coding blocks labeled 1 - 4. Click on the slide to reveal the first question. Ask students to hold up the correct number on their hands silently. Repeat for all four questions. \n\n- Which block is used for the title on the book cover? ***Answer: 3***\n- Which block will show the setting in the background? ***Answer: 4***\n- Which block will bring a new character onto the book cover? ***Answer: 2***\n- Which is an example of of an event block? ***Answer: 1***\n- Bonus: How do you move the main character sprite? ***Answer: The yellow part of #2***",
         "duration": "7",
-        "name": "Spiraled Review"
+        "name": "Spiraled Review",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "A spiral review allows students to have a repeated opportunity to practice skills from the previous lessons to help keep the skills fresh and build automaticity."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "6110d0ed-fb3b-4250-bab7-9a1b6a265e77",
@@ -741,7 +748,13 @@
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Recall your plan” slide\n\n**Do This:** Have students find an elbow partner to quickly share about the digital book cover they will be coding today. \n\n**Discuss**: What is the title of the book you're coding a digital cover for? What are the two characters you'll include? What is the setting of the book you'll use for the cover? \n\n**Discussion Goal**: Students will be reminded of their previously made plan while also practicing academic vocabulary like title, characters, and setting. ",
         "duration": "3",
-        "name": "Recall "
+        "name": "Recall ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Decide which partner will share first in a fun way. Here are some ideas: Whoever had the most recent birthday, whoever has the most siblings/pets, whoever has the longest hair, whoever read a book most recently."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "51935ec3-611a-4310-8532-70addb3fb06f",
@@ -776,7 +789,13 @@
       "key": "d8f8bba0-ad64-49c2-ada5-b8bf1337264c",
       "position": 3,
       "properties": {
-        "progression_name": "Skill Building"
+        "progression_name": "Skill Building",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If the book is available in the classroom, encourage students to use it as a resource as they work."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "d8f8bba0-ad64-49c2-ada5-b8bf1337264c",
@@ -801,7 +820,13 @@
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: \n- _Who is the target audience for your book cover app?_\n- _What visual or text effects does your Book Cover use to accomplish that goal?_\n",
         "duration": "5",
-        "name": "Reflection"
+        "name": "Reflection",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Decide how students will share their reflections. Here’s a Line up and Fold protocol you could try: Ask students to line up in a particular order (birthdays or alphabetically). Once students have formed a straight line, the first student at the end of one line is directed to walk down to face the last students at the other end of the line, followed by the other students until the line is “folded in half” and everyone has a partner. The line closer to the teacher starts by asking the questions on the slide and the student on the opposite side will answer. Then the roles are reversed. After a few minutes, students in one line are signaled to move down two spots while the other line stays in place. When new pairs are formed, the process repeats. \n\nAnother protocol you could try: \"Cross the line if…\" then the teacher calls out various visual and text effects to see which students tried out which. \n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "8a47b652-9021-41a1-b3ac-0ea61386e0ea",
@@ -1180,6 +1205,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_bookcovers_planning"
+        ],
+        "progression": "Planning Your Book Cover"
       },
       "bonus": false,
       "seeding_key": {
