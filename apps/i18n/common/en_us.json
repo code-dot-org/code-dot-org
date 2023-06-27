@@ -1971,6 +1971,7 @@
   "sessionLockoutHeaderThanksDescription": "An image of a penguin happily dancing.",
   "sessionLockoutPendingPrompt": "We sent an email to {pendingEmail}. Didn't receive anything? Update your parent or guardian's email below or send another request.",
   "sessionLockoutNote": "Note: Your account will be deleted if we do not receive your parent or guardian's permission by {deleteDate}.",
+  "sessionLockoutLastEmailSent": "Last email sent:",
   "sessionLockoutParentEmailField": "Parent/Guardian Email:",
   "sessionLockoutParentStatusField": "Permission Request:",
   "sessionLockoutSubmit": "Send permission request",
