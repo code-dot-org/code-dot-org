@@ -23,7 +23,8 @@ export default class ProjectManagerFactory {
     return new ProjectManager(
       this.getSourcesStore(projectManagerStorageType),
       this.getChannelsStore(projectManagerStorageType),
-      projectId
+      projectId,
+      false // reduceChannelUpdates will only be true for a project in a script.
     );
   }
 
@@ -43,11 +44,13 @@ export default class ProjectManagerFactory {
   ): Promise<ProjectManager> {
     const channelsStore = this.getChannelsStore(projectManagerStorageType);
     let channelId: string | undefined = undefined;
+    let reduceChannelUpdates = false;
     const response = await channelsStore.loadForLevel(levelId, scriptId);
     if (response.ok) {
       const responseBody = await response.json();
       if (responseBody && responseBody.channel) {
         channelId = responseBody.channel;
+        reduceChannelUpdates = responseBody.reduceChannelUpdates;
       }
     }
     if (!channelId) {
@@ -56,7 +59,8 @@ export default class ProjectManagerFactory {
     return new ProjectManager(
       this.getSourcesStore(projectManagerStorageType),
       channelsStore,
-      channelId
+      channelId,
+      reduceChannelUpdates
     );
   }
 

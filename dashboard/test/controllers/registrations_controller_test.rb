@@ -241,7 +241,7 @@ class RegistrationsControllerTest < ActionController::TestCase
 
       assert_equal 'A name', assigns(:user).name
       assert_equal 'f', assigns(:user).gender
-      assert_equal Date.today - 13.years, assigns(:user).birthday
+      assert_equal Time.zone.today - 13.years, assigns(:user).birthday
       assert_equal AuthenticationOption::EMAIL, assigns(:user).primary_contact_info.credential_type
       assert_equal User::TYPE_STUDENT, assigns(:user).user_type
       assert_equal '', assigns(:user).email
@@ -264,7 +264,7 @@ class RegistrationsControllerTest < ActionController::TestCase
 
       assert_equal 'A name', assigns(:user).name
       assert_equal 'f', assigns(:user).gender
-      assert_equal Date.today - 13.years, assigns(:user).birthday
+      assert_equal Time.zone.today - 13.years, assigns(:user).birthday
       assert_equal AuthenticationOption::EMAIL, assigns(:user).primary_contact_info.credential_type
       assert_equal User::TYPE_STUDENT, assigns(:user).user_type
       assert_equal '', assigns(:user).email

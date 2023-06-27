@@ -1040,6 +1040,14 @@ class User < ApplicationRecord
         new_attributes[:email] = email
       end
       update!(new_attributes)
+
+      # Remove family name, in case it was set on the student account.
+      if DCDO.get('family-name-features', false)
+        properties['family_name'] = nil
+        save!
+      end
+
+      self
     end
   rescue
     false # Relevant errors are set on the user model, so we rescue and return false here.
@@ -2048,6 +2056,7 @@ class User < ApplicationRecord
       id: id,
       name: name,
       username: username,
+      family_name: DCDO.get('family-name-features', false) ? properties&.dig('family_name') : nil,
       email: email,
       hashed_email: hashed_email,
       user_type: user_type,
@@ -2255,7 +2264,7 @@ class User < ApplicationRecord
   def show_census_teacher_banner?
     # Must have an NCES school to show the banner
     users_school = try(:school_info).try(:school)
-    teacher? && users_school && (next_census_display.nil? || Date.today >= next_census_display.to_date)
+    teacher? && users_school && (next_census_display.nil? || Time.zone.today >= next_census_display.to_date)
   end
 
   # Returns the name of the donor for the donor teacher banner and donor footer, or nil if none.
@@ -2326,6 +2335,13 @@ class User < ApplicationRecord
   def update_share_setting
     self.sharing_disabled = false if sections_as_student.empty?
     return true
+  end
+
+  # Updates the child_account_compliance_state attribute to the given state.
+  # @param {String} new_state - A constant from User::ChildAccountCompliance
+  def update_child_account_compliance(new_state)
+    self.child_account_compliance_state = new_state
+    self.child_account_compliance_state_last_updated = DateTime.now.new_offset(0)
   end
 
   # When creating an account, we want to look for any channels that got created
@@ -2700,6 +2716,9 @@ class User < ApplicationRecord
 
   # Values for the `child_account_compliance_state` attribute
   module ChildAccountCompliance
+    # The student's account has been used to issue a request to a parent.
+    REQUEST_SENT = 's'.freeze
+
     # The student's account has been approved by their parent.
     PERMISSION_GRANTED = 'g'.freeze
   end

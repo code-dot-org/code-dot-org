@@ -16,8 +16,6 @@ import {
   restoreComponentInitialization,
 } from './CircuitPlaygroundTestHelperFunctions';
 import experiments from '@cdo/apps/util/experiments';
-import ChromeSerialPort from 'chrome-serialport';
-import {CIRCUIT_PLAYGROUND_PORTS} from '../../sampleSerialPorts';
 import {BOARD_TYPE} from '@cdo/apps/lib/kits/maker/util/boardUtils';
 import WebSerialPortWrapper from '@cdo/apps/lib/kits/maker/WebSerialPortWrapper';
 
@@ -61,16 +59,18 @@ describe('CircuitPlaygroundBoard', () => {
 
     // Construct a board to test on
     board = new CircuitPlaygroundBoard();
-    ChromeSerialPort.stub.setDeviceList(CIRCUIT_PLAYGROUND_PORTS);
     circuitPlaygroundBoardSetup();
+    sinon.stub(CircuitPlaygroundBoard, 'openSerialPort').callsFake(() => {
+      return Promise.resolve();
+    });
   });
 
   afterEach(() => {
     playground = undefined;
     board = undefined;
     CircuitPlaygroundBoard.makePlaygroundTransport.restore();
-    ChromeSerialPort.stub.reset();
     circuitPlaygroundBoardTeardown();
+    sinon.restore();
   });
 
   function circuitPlaygroundBoardSetup() {
