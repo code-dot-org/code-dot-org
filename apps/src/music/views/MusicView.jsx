@@ -18,7 +18,7 @@ import MusicBlocklyWorkspace from '../blockly/MusicBlocklyWorkspace';
 import AppConfig, {getBlockMode, setAppConfig} from '../appConfig';
 import SoundUploader from '../utils/SoundUploader';
 import {baseUrl, loadLibrary} from '../utils/Loader';
-import ProgressManager from '../progress/ProgressManager';
+import ProgressManager from '@cdo/apps/labs/progress/ProgressManager';
 import MusicValidator from '../progress/MusicValidator';
 import Video from './Video';
 import {
