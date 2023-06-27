@@ -1420,7 +1420,7 @@
   "makerNewProjectDesc": "Create a new App Lab app with Maker Toolkit enabled",
   "makerNewProjectTitle": "Create a new app",
   "makerSetupDeprecationNoticeOldChromeTitle": "Maker Toolkit requires a newer version of Chrome",
-  "makerSetupDeprecationNoticeOldChromeDetails": "The Maker Toolkit does not support your current version of Chrome. Please update to a version greater than or equal to 90 to continue using the Maker Toolkit. To learn more, please refer to",
+  "makerSetupDeprecationNoticeOldChromeDetails": "The Maker Toolkit does not support your current version of Chrome. Please update to a version greater than or equal to {minChromeVersion} to continue using the Maker Toolkit. To learn more, please refer to",
   "makerSetupButton": "Go to setup page",
   "makerSetupDesc": "Having issues connecting to the Circuit Playground? Visit the setup page to better debug your issue.",
   "makerSetupTitle": "Visit the setup page",
