@@ -22,8 +22,7 @@ export default class LibraryClientApi {
           this.cacheBustSuffix = new Date().getTime();
           onSuccess(data);
         }
-      },
-      {includeDetails: true}
+      }
     );
   }
 
