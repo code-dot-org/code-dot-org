@@ -9,6 +9,10 @@
   background-color: #305A37;
   background-size: 20%;
 
+  @media screen and (max-width: $width-sm) {
+    background-size: 50%;
+  }
+
   .text-wrapper {
     width: 64%;
 

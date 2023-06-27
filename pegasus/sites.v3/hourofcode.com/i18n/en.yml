@@ -235,6 +235,8 @@
   heading_additional_resources: "Additional resources"
   heading_support_and_questions: "Support and questions"
   heading_faq: "Frequently asked questions"
+  heading_curriculum_at_a_glance: "Curriculum at a glance"
+  heading_engaging_projects: "Engaging projects and activities that inspire learning"
 
   professional_learning_section_subhead: "Get the support you need as you prepare to teach."
   professional_learning_section_desc_v1: "Compared with similarly-situated schools, [a school's participation in the Code.org Professional Learning program causes an estimated five-fold increase](%{url}) in the number of students that take, and earn qualifying scores on the AP Computer Science Principles exam. And teachers love it! Over 90% rank it the best professional development ever."
@@ -514,6 +516,7 @@
   csp_page_intro_list_02: "Real-world problem investigation"
   csp_page_intro_list_03: "Explainer videos with diverse presenters"
   csp_page_intro_list_04: "Open-ended projects for more personalized learning"
+  csp_page_quote: "Can I just say I LOVE Code.org? It's my first year teaching AP CS Principles (actually 1st year it is offered at our school) - and both the kids and I are having a blast."
   csp_page_faq_question_01: "Is CS Principles mapped to standards?"
   csp_page_faq_answer_01: "CS Principles was written using the AP CS Principles Framework and prepares students for the AP CS Principles exam. The curriculum has also been aligned to the newly revised 2017 CSTA standards. [A summary of standards mappings can be found here](%{standards_url}). A google sheet version of the standards can be found at [CSP Standards 2021](%{csp_standards_2021_url})."
   csp_page_faq_question_02: "How much does it cost to teach CS Principles?"

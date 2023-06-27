@@ -21,7 +21,9 @@ theme: responsive_full_width
 
 %section
   .wrapper
-    .text-wrapper.col-45
+    %div.col-50{style: "margin-bottom: 1rem;"}
+      =view :display_video_thumbnail, id: "intro_csp", video_code: "DMr1iFYacGQ", play_button: 'center', letterbox: 'false'
+    .text-wrapper.col-45{style: "float: right;"}
       %h2=hoc_s(:csp_page_intro_heading)
       %ul
         %li=hoc_s(:csp_page_intro_list_01)
@@ -30,19 +32,19 @@ theme: responsive_full_width
         %li=hoc_s(:csp_page_intro_list_04)
       %a.link-button{href: CDO.studio_url("/courses/csp-2023?viewAs=Instructor")}
         =hoc_s(:call_to_action_explore_course)
-    %div.col-50{style: "float: right; margin-top: 0.75rem;"}
-      =view :display_video_thumbnail, id: "intro_csp", video_code: "DMr1iFYacGQ", play_button: 'center', letterbox: 'false'
+
     .clear
 
 %section.bg-neutral-light
   .wrapper
-    %h2 Curriculum at a glance
+    %h2=hoc_s(:heading_curriculum_at_a_glance)
     TBD
 
 %section.quote.bg-neutral-dark
   .wrapper
     %div.quotes-wrapper
-      %p.quote-text.large Can I just say I LOVE Code.org? It's my first year teaching AP CS Principles (actually 1st year it is offered at our school) - and both the kids and I are having a blast.
+      %p.quote-text.large
+        =hoc_s(:csp_page_quote)
       %p.no-margin-bottom
         Jennifer Douglass
         %span •
@@ -50,7 +52,7 @@ theme: responsive_full_width
 
 %section
   .wrapper
-    %h2 Engaging projects and activities that inspire learning
+    %h2=hoc_s(:heading_engaging_projects)
     TBD
     %div.centered{style: "margin-top: 2rem"}
       %a.link-button.secondary{href: CDO.studio_url("/courses/csp-2023?viewAs=Instructor")}

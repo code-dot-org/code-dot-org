@@ -922,6 +922,10 @@ section.quote {
   background-size: 15%;
   background-color: $neutral-dark;
 
+  @media screen and (max-width: $width-sm) {
+    background-size: 50%;
+  }
+
   p {
     font-size: 1.25rem;
     color: $neutral_white;
