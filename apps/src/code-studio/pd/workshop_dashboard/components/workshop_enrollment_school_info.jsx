@@ -248,10 +248,6 @@ export class WorkshopEnrollmentSchoolInfo extends React.Component {
             this.props.workshopSubject === DEEP_DIVE && (
               <td>{enrollment.attended_csf_intro_workshop}</td>
             )}
-          {this.props.workshopCourse === CSF &&
-            this.props.workshopSubject === DEEP_DIVE && (
-              <td>{enrollment.csf_has_physical_curriculum_guide}</td>
-            )}
           {this.props.workshopCourse === CSP &&
             this.props.workshopSubject ===
               SubjectNames.SUBJECT_CSP_FOR_RETURNING_TEACHERS && (

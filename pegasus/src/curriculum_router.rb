@@ -382,8 +382,8 @@ class CurriculumRouter < Pegasus::Base
 
   get '/curriculum/:kind' do |kind|
     # Temporarily prevent non K-5/MSM curriculum from appearing on production.
-    unless CurriculumCourse::PRODUCTION_COURSES.include? kind
-      pass if rack_env == :production
+    if !CurriculumCourse::PRODUCTION_COURSES.include?(kind) && (rack_env == :production)
+      pass
     end
 
     pass unless request.site == 'code.org'
@@ -412,8 +412,8 @@ class CurriculumRouter < Pegasus::Base
   end
 
   get '/curriculum/:kind/docs/*' do |kind, file|
-    unless CurriculumCourse::PRODUCTION_COURSES.include? kind
-      pass if rack_env == :production
+    if !CurriculumCourse::PRODUCTION_COURSES.include?(kind) && (rack_env == :production)
+      pass
     end
 
     pass unless request.site == 'code.org'
@@ -424,8 +424,8 @@ class CurriculumRouter < Pegasus::Base
   end
 
   get '/curriculum/:kind/*' do |kind, parts|
-    unless CurriculumCourse::PRODUCTION_COURSES.include? kind
-      pass if rack_env == :production
+    if !CurriculumCourse::PRODUCTION_COURSES.include?(kind) && (rack_env == :production)
+      pass
     end
 
     pass unless request.site == 'code.org'
