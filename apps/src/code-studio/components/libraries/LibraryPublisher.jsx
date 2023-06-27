@@ -275,7 +275,7 @@ export default class LibraryPublisher extends React.Component {
     let errorMessage;
     switch (publishState) {
       case PublishState.INVALID_INPUT:
-        errorMessage = i18n.libraryDetailsInvalid();
+        errorMessage = i18n.libraryPublishInvalid();
         break;
       case PublishState.PII_INPUT:
         errorMessage = i18n.libraryDetailsPII({

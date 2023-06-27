@@ -189,7 +189,6 @@ var base = {
    * @param {String} filename - The name of the file to create or update.
    * @param {NodeStyleCallback} callback - Expected result is the new collection
    *        object.
-   * @param {Object} opts - Options object.
    */
   put: function (id, value, filename, callback) {
     $.ajax({

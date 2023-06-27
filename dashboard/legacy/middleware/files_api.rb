@@ -1,6 +1,7 @@
 require 'active_support/core_ext/numeric/time'
 require 'cdo/aws/s3'
 require 'cdo/rack/request'
+require 'sinatra/base'
 require 'cdo/sinatra'
 require 'cdo/image_moderation'
 require 'nokogiri'
