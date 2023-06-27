@@ -2662,8 +2662,26 @@ class User < ApplicationRecord
   # For students under-13, in Colorado, with a personal email login: we require
   # parent permission before the student can start using their account.
   def child_account_policy_compliant?
-    !under_13? || us_state != 'CO' || !personal_account? ||
-      child_account_compliance_state == ChildAccountCompliance::PERMISSION_GRANTED
+    return true unless parent_permission_required?
+    child_account_compliance_state == ChildAccountCompliance::PERMISSION_GRANTED
+  end
+
+  # The individual US State child account policy configuration
+  # max_age: the oldest age of the child at which this policy applies.
+  CHILD_ACCOUNT_STATE_POLICY = {
+    'CO' => {
+      max_age: 12
+    }
+  }.freeze
+
+  # Check if parent permission is required for this account according to our
+  # Child Account Policy.
+  def parent_permission_required?
+    return false unless us_state
+    policy = CHILD_ACCOUNT_STATE_POLICY[us_state]
+    return false unless policy
+    return false unless age.to_i <= policy[:max_age].to_i
+    personal_account?
   end
 
   # Does the user login using credentials they personally control?

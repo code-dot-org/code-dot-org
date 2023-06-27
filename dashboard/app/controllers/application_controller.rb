@@ -3,7 +3,7 @@ require 'dynamic_config/dcdo'
 require 'dynamic_config/gatekeeper'
 require 'dynamic_config/page_mode'
 require 'cdo/shared_constants'
-require_relative '../../../lib/cdo/cpa'
+require 'cdo/cpa'
 
 class ApplicationController < ActionController::Base
   include LocaleHelper
@@ -340,14 +340,14 @@ class ApplicationController < ActionController::Base
     # URLs we should not redirect.
     return if Set[
       # Don't block any user from signing out
-      '/users/sign_out',
+      destroy_user_session_path,
       # Don't block any user from changing the language
-      '/locale',
+      locale_path,
       # Avoid an infinite redirect loop to the lockout page
-      '/lockout',
+      lockout_path,
     ].include?(request.path)
 
-    redirect_to '/lockout' unless current_user.child_account_policy_compliant?
+    redirect_to lockout_path unless current_user.child_account_policy_compliant?
   end
 
   private def pairing_still_enabled
