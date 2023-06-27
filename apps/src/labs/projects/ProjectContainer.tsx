@@ -19,11 +19,8 @@ const ProjectContainer: React.FunctionComponent<ProjectContainerProps> = ({
   channelId,
 }) => {
   const currentLevelId = useSelector(
-    // TODO: Convert progress redux to typescript so this can be typed better
-    (state: {progress: {currentLevelId: string}}) =>
-      state.progress.currentLevelId
+    (state: {progress: ProgressState}) => state.progress.currentLevelId
   );
-  // TODO: Convert progress redux to typescript so this can be typed better
   const scriptId = useSelector(
     (state: {progress: ProgressState}) => state.progress.scriptId || undefined
   );
