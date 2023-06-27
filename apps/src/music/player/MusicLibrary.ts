@@ -1,12 +1,26 @@
 import {ResponseValidator} from '@cdo/apps/util/HttpClient';
+import {Key} from '../utils/Notes';
 
 export default class MusicLibrary {
   groups: FolderGroup[];
   private allowedSounds: Sounds | null;
 
+  // BPM & Key associated with this library, or undefined if not present.
+  private bpm: number | undefined;
+  private key: Key | undefined;
+
   constructor(libraryJson: LibraryJson) {
     this.groups = libraryJson.groups;
     this.allowedSounds = null;
+
+    const firstGroup: FolderGroup = this.groups[0];
+    if (firstGroup.bpm) {
+      this.bpm = firstGroup.bpm;
+    }
+
+    if (firstGroup.key) {
+      this.key = Key[firstGroup.key.toUpperCase() as keyof typeof Key];
+    }
   }
 
   getSoundForId(id: string): SoundData | null {
@@ -60,6 +74,14 @@ export default class MusicLibrary {
     }
 
     return foldersCopy;
+  }
+
+  getBPM(): number | undefined {
+    return this.bpm;
+  }
+
+  getKey(): Key | undefined {
+    return this.key;
   }
 }
 
@@ -124,6 +146,8 @@ interface FolderGroup {
   name: string;
   imageSrc: string;
   path: string;
+  bpm?: number;
+  key?: string;
   folders: SoundFolder[];
 }
 
