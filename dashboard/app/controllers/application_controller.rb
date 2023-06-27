@@ -332,7 +332,7 @@ class ApplicationController < ActionController::Base
   # are not compliant, then we need to send them to the lockout page.
   def assert_child_account_policy
     # Check that the child account policy is currently enabled.
-    return unless CPA.cpa_experience(request)
+    return unless CPA.cpa_experience
 
     # Anonymous users are NOT affected by our Child Account Policy
     return unless current_user
