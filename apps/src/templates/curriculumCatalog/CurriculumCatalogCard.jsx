@@ -22,7 +22,11 @@ import {
   unassignSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shapes';
-import {SignInToAssignSectionsDialog} from '@cdo/apps/templates/curriculumCatalog/noSectionsToAssignDialogs';
+import {
+  CreateSectionsToAssignSectionsDialog,
+  SignInToAssignSectionsDialog,
+  UpgradeAccountToAssignSectionsDialog,
+} from '@cdo/apps/templates/curriculumCatalog/noSectionsToAssignDialogs';
 
 const CurriculumCatalogCard = ({
   courseDisplayName,
@@ -103,7 +107,7 @@ const CustomizableCurriculumCatalogCard = ({
   quickViewButtonText,
   isEnglish,
   pathToCourse,
-  sectionsForDropdown,
+  sectionsForDropdown = [],
   isTeacher,
   isSignedOut,
   ...props
@@ -117,7 +121,7 @@ const CustomizableCurriculumCatalogCard = ({
           onClose={() => setIsAssignDialogOpen(false)}
         />
       );
-    } else if (isTeacher && sectionsForDropdown) {
+    } else if (isTeacher && sectionsForDropdown.length > 0) {
       return (
         <MultipleSectionsAssigner
           assignmentName={courseDisplayName}
@@ -125,6 +129,19 @@ const CustomizableCurriculumCatalogCard = ({
           sections={sectionsForDropdown}
           participantAudience="student"
           {...props}
+        />
+      );
+    } else if (isTeacher) {
+      return (
+        <CreateSectionsToAssignSectionsDialog
+          onClose={() => setIsAssignDialogOpen(false)}
+          onClick={() => {}}
+        />
+      );
+    } else {
+      return (
+        <UpgradeAccountToAssignSectionsDialog
+          onClose={() => setIsAssignDialogOpen(false)}
         />
       );
     }

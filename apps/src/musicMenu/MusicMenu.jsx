@@ -65,27 +65,6 @@ const optionsList = [
     ],
   },
   {
-    name: 'load-progression',
-    type: 'radio',
-    values: [
-      {value: 'false', description: "Don't load a progression."},
-      {value: 'true', description: 'Load a progression'},
-    ],
-  },
-  {
-    name: 'local-progression',
-    type: 'radio',
-    values: [
-      {value: 'false', description: 'Use online progression file.'},
-      {value: 'true', description: 'Use local progression file.'},
-    ],
-  },
-  {
-    name: 'progression',
-    type: 'string',
-    description: 'Use a specific progression file.',
-  },
-  {
     name: 'storage-type',
     type: 'radio',
     values: [

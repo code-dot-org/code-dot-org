@@ -625,7 +625,7 @@ class LevelTest < ActiveSupport::TestCase
   end
 
   test 'localizes callouts' do
-    test_locale = :"te-ST"
+    test_locale = :'te-ST'
     level_name = 'test_localize_callouts'
 
     I18n.locale = test_locale
@@ -660,7 +660,7 @@ class LevelTest < ActiveSupport::TestCase
   end
 
   test 'handles bad callout localization data' do
-    test_locale = :"te-ST"
+    test_locale = :'te-ST'
     level_name = 'test_localize_callouts'
     I18n.locale = test_locale
 
@@ -708,7 +708,7 @@ class LevelTest < ActiveSupport::TestCase
   end
 
   test 'localizes rubric properties' do
-    test_locale = :"te-ST"
+    test_locale = :'te-ST'
     level_name = 'test_localize_callouts'
 
     I18n.locale = test_locale
@@ -747,7 +747,7 @@ class LevelTest < ActiveSupport::TestCase
   end
 
   test 'handles rubric properties localization with non-existent translations' do
-    test_locale = :"te-ST"
+    test_locale = :'te-ST'
     level_name = 'test_localize_callouts'
 
     I18n.locale = test_locale
@@ -1352,7 +1352,7 @@ class LevelTest < ActiveSupport::TestCase
   end
 
   test 'localized_teacher_markdown reads from top-level locale' do
-    test_locale = :"te-ST"
+    test_locale = :'te-ST'
     level_name = 'test_localize_teacher_markdown'
 
     custom_i18n = {
@@ -1382,7 +1382,7 @@ class LevelTest < ActiveSupport::TestCase
   end
 
   test 'localized_teacher_markdown reads from dsl locale for DSL-based levels' do
-    test_locale = :"te-ST"
+    test_locale = :'te-ST'
     level_name = 'test_dsl_localize_teacher_markdown'
 
     custom_i18n = {

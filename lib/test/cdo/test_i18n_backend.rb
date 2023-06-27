@@ -81,7 +81,7 @@ class I18nSmartTranslateTest < Minitest::Test
       "data" => {
         "some.keys" => {
           "with|a,variety" => {
-            "of-separators": "translation"
+            'of-separators': "translation"
           }
         }
       }
@@ -98,7 +98,7 @@ class I18nSmartTranslateTest < Minitest::Test
       "data" => {
         "some.keys" => {
           "with|all,of-the" => {
-            "separators_that we/support": "translation"
+            'separators_that we/support': "translation"
           }
         }
       }

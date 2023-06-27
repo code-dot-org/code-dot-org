@@ -1691,7 +1691,7 @@ FactoryBot.define do
     issuer {"issuer"}
     client_id {"client_id"}
     platform_name {"platform_name"}
-    auth_redirect_url {"auth_redirect_url"}
+    auth_redirect_url {"http://test.org/auth"}
     jwks_url {"jwks_url"}
     access_token_url {"access_token_url"}
   end

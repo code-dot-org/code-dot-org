@@ -6,7 +6,10 @@ import Notification, {NotificationType} from '@cdo/apps/templates/Notification';
 import {isCodeOrgBrowser, getChromeVersion} from '../util/browserChecks';
 import applabI18n from '@cdo/applab/locale';
 import i18n from '@cdo/locale';
-import {MAKER_DEPRECATION_SUPPORT_URL} from '../util/makerConstants';
+import {
+  MAKER_DEPRECATION_SUPPORT_URL,
+  MIN_CHROME_VERSION,
+} from '@cdo/apps/lib/kits/maker/util/makerConstants';
 
 const style = {
   twoColumns: {
@@ -61,7 +64,6 @@ export default class SetupGuide extends React.Component {
   };
 
   render() {
-    // Experiment 'microbit', displays Circuit Playground and Micro:Bit descriptions.
     const chromeVersion = getChromeVersion();
 
     return (
@@ -71,21 +73,25 @@ export default class SetupGuide extends React.Component {
             type={NotificationType.warning}
             notice={i18n.makerSetupDeprecationWarningAppTitle()}
             details={i18n.makerSetupDeprecationWarningAppDetails()}
-            detailsLinkText={i18n.makerDeprecationWarningLinkText()}
+            detailsLinkText={i18n.makerDeprecationNoticeLinkText()}
             detailsLink={MAKER_DEPRECATION_SUPPORT_URL}
             dismissible
           />
         )}
-        {chromeVersion && chromeVersion <= 90 && (
-          <Notification
-            type={NotificationType.warning}
-            notice={i18n.makerSetupDeprecationWarningOldChromeTitle()}
-            details={i18n.makerSetupDeprecationWarningOldChromeDetails()}
-            detailsLinkText={i18n.makerDeprecationWarningLinkText()}
-            detailsLink={MAKER_DEPRECATION_SUPPORT_URL}
-            dismissible
-          />
-        )}
+        {!isCodeOrgBrowser() &&
+          chromeVersion &&
+          chromeVersion < MIN_CHROME_VERSION && (
+            <Notification
+              type={NotificationType.warning}
+              notice={i18n.makerSetupDeprecationNoticeOldChromeTitle()}
+              details={i18n.makerSetupDeprecationNoticeOldChromeDetails({
+                minChromeVersion: MIN_CHROME_VERSION,
+              })}
+              detailsLinkText={i18n.makerDeprecationNoticeLinkText()}
+              detailsLink={MAKER_DEPRECATION_SUPPORT_URL}
+              dismissible
+            />
+          )}
         <h1>{applabI18n.makerSetupPageTitle()}</h1>
 
         <div>

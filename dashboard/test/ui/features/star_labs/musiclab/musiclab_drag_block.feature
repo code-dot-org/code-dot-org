@@ -8,7 +8,7 @@ Scenario: Dragging play sound block
   And I rotate to landscape
 
   # Wait until we see the first category.
-  And I wait until element "#blockly-0" is visible
+  And I wait until element ".blocklyTreeRow" is visible
 
   # Also wait until we see the "when run" block.
   And I wait until element "[data-id='when-run-block']" is visible
@@ -17,7 +17,7 @@ Scenario: Dragging play sound block
   And element ".timeline-element" is not visible
 
   # Open the first category.
-  And I press "blockly-0"
+  And I press the first ".blocklyTreeRow" element
 
   # Drag the "play sound" block and attach it to the "when run" block.
   Then I drag block "play-sound-block" to block "when-run-block"
