@@ -32,6 +32,17 @@ class PolicyComplianceController < ApplicationController
   # POST /policy_compliance/child_account_consent
   # This URL creates a parental permission request. It is invoked via the
   # lockout panel or potentially user settings by the child account.
+  #
+  # There are several limits imposed that are reflected in the logic below:
+  # * Student may only send permission requests to 3 unique email addressed per day.
+  # * Student may only "resend" to a particular email address at most 2 times.
+  #
+  # This is to control for abuse vectors that might try to overwhelm our email
+  # system. It is, effectively, a limit of 9 emails, on average, per studetnt pet
+  # day.
+  #
+  # When such a limit is reached, this logic silently 'succeeds'. That is, it
+  # acts like the email was sent and sends no notice to the student it was not.
   def child_account_consent_request
     # If we already comply, don't suddenly invalid it
     if current_user.child_account_compliance_state == User::ChildAccountCompliance::PERMISSION_GRANTED
@@ -40,7 +51,7 @@ class PolicyComplianceController < ApplicationController
 
     # Only allow three unique permission requests per day
     date = Time.zone.today
-    permission_requests = ParentalPermissionRequest.where(
+    daily_request_count = ParentalPermissionRequest.where(
       user: current_user,
       created_at: date.midnight..date.end_of_day
     ).limit(3).count
@@ -55,7 +66,7 @@ class PolicyComplianceController < ApplicationController
 
     # If we are making a new request but already sent too many today,
     # just bail and return whence we came
-    if permission_request.new_record? && permission_requests >= 3
+    if permission_request.new_record? && daily_request_count >= 3
       redirect_back fallback_location: lockout_path and return
     end
 

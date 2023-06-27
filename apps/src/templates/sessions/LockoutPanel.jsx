@@ -171,7 +171,7 @@ export default function LockoutPanel(props) {
               {props.pendingEmail && (
                 <p style={styles.lastEmail}>
                   <em id="lockout-last-email-date">
-                    Last email sent:{' '}
+                    {i18n.sessionLockoutLastEmailSent() + ' '}
                     {props.requestDate.toLocaleDateString(locale, {
                       ...dateOptions,
                       hour: 'numeric',
