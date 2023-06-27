@@ -18,7 +18,6 @@ import MusicBlocklyWorkspace from '../blockly/MusicBlocklyWorkspace';
 import AppConfig, {getBlockMode, setAppConfig} from '../appConfig';
 import SoundUploader from '../utils/SoundUploader';
 import {baseUrl, loadLibrary} from '../utils/Loader';
-import ProgressManager from '@cdo/apps/labs/progress/ProgressManager';
 import MusicValidator from '../progress/MusicValidator';
 import Video from './Video';
 import {
@@ -29,7 +28,6 @@ import {
   setShowInstructions,
   setInstructionsPosition,
   InstructionsPositions,
-  setCurrentProgressState,
   addPlaybackEvents,
   clearPlaybackEvents,
   getCurrentlyPlayingBlockIds,
@@ -62,6 +60,8 @@ import {
 } from '../../code-studio/projectRedux';
 import {logError} from '../utils/MusicMetrics';
 import musicI18n from '../locale';
+import UpdateTimer from './UpdateTimer';
+import ValidatorProvider from './ValidatorProvider';
 
 /**
  * Top-level container for Music Lab. Manages all views on the page as well as the
@@ -98,7 +98,6 @@ class UnconnectedMusicView extends React.Component {
     instructionsPosition: PropTypes.string,
     setShowInstructions: PropTypes.func,
     setInstructionsPosition: PropTypes.func,
-    setCurrentProgressState: PropTypes.func,
     navigateToLevelId: PropTypes.func,
     clearPlaybackEvents: PropTypes.func,
     addPlaybackEvents: PropTypes.func,
@@ -133,6 +132,11 @@ class UnconnectedMusicView extends React.Component {
     this.musicBlocklyWorkspace = new MusicBlocklyWorkspace();
     this.soundUploader = new SoundUploader(this.player);
     this.playingTriggers = [];
+    this.musicValidator = new MusicValidator(
+      this.getIsPlaying,
+      this.getPlaybackEvents,
+      this.player
+    );
 
     // Set default for instructions position.
     const defaultInstructionsPos = AppConfig.getValue(
@@ -165,23 +169,10 @@ class UnconnectedMusicView extends React.Component {
       this.analyticsReporter.endSession();
     });
 
-    const musicValidator = new MusicValidator(
-      this.getIsPlaying,
-      this.getPlaybackEvents,
-      this.player
-    );
-
     const promises = [];
 
     // Load library data.
     promises.push(loadLibrary());
-
-    if (this.hasProgression()) {
-      this.progressManager = new ProgressManager(
-        musicValidator,
-        this.onProgressChange
-      );
-    }
 
     Promise.all(promises)
       .then(values => {
@@ -202,7 +193,6 @@ class UnconnectedMusicView extends React.Component {
           this.player
         );
         this.player.initialize(this.library);
-        setInterval(this.updateTimer, 1000 / 30);
       })
       .catch(error => {
         this.onError(error);
@@ -255,7 +245,6 @@ class UnconnectedMusicView extends React.Component {
 
       // Update components with level-specific data
       if (this.props.levelData) {
-        this.progressManager.onLevelChange(this.props.levelData);
         this.musicBlocklyWorkspace.updateToolbox(this.props.levelData.toolbox);
         this.library.setAllowedSounds(this.props.levelData.sounds);
         this.props.setShowInstructions(!!this.props.levelData.text);
@@ -264,28 +253,6 @@ class UnconnectedMusicView extends React.Component {
       this.props.setLabReadyForReload(false);
     }
   }
-
-  updateTimer = () => {
-    if (this.props.isPlaying) {
-      this.props.setCurrentPlayheadPosition(
-        this.player.getCurrentPlayheadPosition()
-      );
-
-      this.updateHighlightedBlocks();
-
-      this.progressManager?.updateProgress();
-    }
-  };
-
-  onProgressChange = () => {
-    const currentState = this.progressManager.getCurrentState();
-    this.props.setCurrentProgressState(currentState);
-
-    // Tell the external system (if there is one) about the success.
-    if (this.isScriptLevel() && currentState.satisfied) {
-      this.props.sendSuccessReport('music');
-    }
-  };
 
   onError = error => {
     this.props.setIsPageError(true);
@@ -330,6 +297,10 @@ class UnconnectedMusicView extends React.Component {
 
   getPlaybackEvents = () => {
     return this.sequencer.getPlaybackEvents();
+  };
+
+  getCurrentPlayheadPosition = () => {
+    return this.player.getCurrentPlayheadPosition();
   };
 
   // When the user initiates going to the next panel in the app.
@@ -503,10 +474,6 @@ class UnconnectedMusicView extends React.Component {
   };
 
   renderInstructions(position) {
-    if (!this.progressManager) {
-      return;
-    }
-
     // For now, the instructions are intended for use with a
     // progression.  We might decide to make them agnostic at
     // some point.
@@ -560,10 +527,6 @@ class UnconnectedMusicView extends React.Component {
             <Controls
               setPlaying={this.setPlaying}
               playTrigger={this.playTrigger}
-              top={this.props.timelineAtTop}
-              instructionsAvailable={!!this.progressManager}
-              toggleInstructions={() => this.toggleInstructions(false)}
-              instructionsOnRight={false}
               hasTrigger={this.musicBlocklyWorkspace.hasTrigger.bind(
                 this.musicBlocklyWorkspace
               )}
@@ -596,6 +559,11 @@ class UnconnectedMusicView extends React.Component {
           togglePlaying={this.togglePlaying}
           playTrigger={this.playTrigger}
         />
+        <UpdateTimer
+          getCurrentPlayheadPosition={this.getCurrentPlayheadPosition}
+          updateHighlightedBlocks={this.updateHighlightedBlocks}
+        />
+        <ValidatorProvider validator={this.musicValidator} />
         <div id="music-lab" className={moduleStyles.musicLab}>
           {showInstructions &&
             instructionsPosition === InstructionsPositions.TOP &&
@@ -687,8 +655,6 @@ const MusicView = connect(
       dispatch(setShowInstructions(showInstructions)),
     setInstructionsPosition: instructionsPosition =>
       dispatch(setInstructionsPosition(instructionsPosition)),
-    setCurrentProgressState: progressState =>
-      dispatch(setCurrentProgressState(progressState)),
     navigateToLevelId: levelId => dispatch(navigateToLevelId(levelId)),
     clearPlaybackEvents: () => dispatch(clearPlaybackEvents()),
     addPlaybackEvents: playbackEvents =>
