@@ -96,6 +96,7 @@
   grade_level_label_high: "High School"
 
   teacher_label_csd: "CS Discoveries Teacher"
+  teacher_label_csp: "CS Principles Teacher"
 
   call_to_action_learn_more: 'Learn more'
   call_to_action_watch_now: 'Watch now'
@@ -104,8 +105,10 @@
   call_to_action_explore_curriculum: 'Explore curriculum'
   call_to_action_explore_modules: "Explore modules"
   call_to_action_explore_workshops: "Explore workshops"
+  call_to_action_explore_course: "Explore course"
   call_to_action_view_lesson_plan: 'View lesson plan'
   call_to_action_self_paced_pl: 'Start self-paced professional learning'
+  call_to_action_apply_for_pl: 'Apply for Professional Learning'
   call_to_action_watch_panel: 'Watch panel'
   call_to_action_learn_about_challenge: 'Learn about challenge'
   call_to_action_explore_website: 'Explore website'
@@ -128,9 +131,11 @@
   call_to_action_see_full_curriculum_catalog: "See full Curriculum Catalog"
   call_to_action_find_self_paced_modules: "Find self-paced modules"
   call_to_action_join_teacher_forums: "Join teacher forums"
+  call_to_action_explore_teacher_forums: "Explore teacher forums"
   call_to_action_explore_career_resources: "Explore career resources"
   call_to_action_watch_videos: "Watch videos"
   call_to_action_download_posters: "Download posters"
+  call_to_action_contact_support: "Contact Code.org support"
 
   aria_label_call_to_action_afe: "Learn more about Amazon Future Engineer"
   aria_label_call_to_action_teaching_csf: "Start the Teaching Computer Science Fundamentals professional learning program"
@@ -149,6 +154,10 @@
   aria_label_call_to_action_curriculum_maker_microbit: "Explore the Creating Apps with Devices (micro:bit) curriculum"
 
   video_title_professional_learning_program: "Code.org's Professional Learning Program"
+
+  support_and_questions_heading: "Support and questions"
+  support_and_questions_subhead: "Still have questions? Reach out to us! We are here to help."
+  support_and_questions_desc: "Our support team is here to answer any questions you may have about starting teaching with Code.org. You can also ask other teachers about their experience on our teacher forums."
 
   curriculum_name_csf: "Computer Science Fundamentals"
   curriculum_name_csf_02: "Any CS Fundamentals (Course A-F)"

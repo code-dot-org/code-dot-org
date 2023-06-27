@@ -930,6 +930,10 @@ section.quote {
     &.quote-text {
       font-size: 1.35rem;
 
+      &.large {
+        font-size: 1.5rem;
+      }
+
       &:before, &:after {
         font: var(--fa-font-solid);
         color: $brand_primary_default;

@@ -1,0 +1,95 @@
+---
+title: Computer Science Principles
+theme: responsive_full_width
+---
+
+%link{href: '/css/generated/design-system-pegasus.css', rel: 'stylesheet'}
+%link{href: "/css/generated/csp-styles.css", rel: "stylesheet"}
+
+%section.hero-banner-basic.bg-neutral-dark
+  .wrapper.flex-container.justify-space-between.align-items-center.wrap
+    .text-wrapper
+      %h1{style: "color: white"} Computer Science Principles
+      %p{style: "color: white"} Free year-long curriculum which introduces students to the foundational concepts of computer science and challenges them to explore how computing and technology can impact the world. Can be taught as an introductory class and as an AP course.
+      %a.link-button{href: CDO.studio_url("/courses/csp-2023?viewAs=Instructor")}
+        =hoc_s(:call_to_action_explore_course)
+    %figure
+      %img{src: "/images/banners/blockchain-laptop-silver.png", alt: ""}
+    .clear
+
+%section
+  .wrapper
+    .text-wrapper.col-45
+      %h2 Free high school introductory course
+      %ul
+        %li Culturally responsive pedagogy
+        %li Real-world problem investigation
+        %li Explainer videos with diverse presenters
+        %li Open-ended projects for more personalized learning
+      %a.link-button{href: CDO.studio_url("/courses/csp-2023?viewAs=Instructor")}
+        =hoc_s(:call_to_action_explore_course)
+    %div.col-50{style: "float: right"}
+      =view :display_video_thumbnail, id: "intro_csp", video_code: "DMr1iFYacGQ", play_button: 'center', letterbox: 'false'
+    .clear
+
+%section.bg-neutral-light
+  .wrapper
+    %h2 Curriculum at a glance
+    TBD
+
+%section.quote.bg-neutral-dark
+  .wrapper
+    %div.quotes-wrapper
+      %p.quote-text.large Can I just say I LOVE Code.org? It's my first year teaching AP CS Principles (actually 1st year it is offered at our school) - and both the kids and I are having a blast.
+      %p.no-margin-bottom
+        Jennifer Douglass
+        %span •
+        =hoc_s(:teacher_label_csp)
+
+%section
+  .wrapper
+    %h2 Engaging projects and activities that inspire learning
+    TBD
+    %div.centered{style: "margin-top: 2rem"}
+      %a.link-button.secondary{href: CDO.studio_url("/courses/csp-2023?viewAs=Instructor")}
+        =hoc_s(:call_to_action_explore_course)
+
+%section.bg-neutral-light
+  .wrapper
+    = view :resources_tabs
+
+%section
+  .wrapper
+    %h2 Professional Learning
+    %p.heading-sm Get the support you need as you prepare to teach.
+    %p Compared with similarly-situated schools, <a href="http://www.westcoastanalytics.com/uploads/6/9/6/7/69675515/wca_code_final_report_2018.pdf">a school's participation in the Code.org Professional Learning program causes an estimated five-fold increase</a> in the number of students that take, and earn qualifying scores on the AP Computer Science Principles exam. And teachers love it! Over 90% rank it the best professional development ever.
+    .action-block__wrapper.action-block__wrapper--two-col
+      .action-block.action-block--one-col.flex-space-between
+        .content-wrapper
+          %h3=hoc_s(:teach_page_pl_offerings_list_heading_workshops_facilitator_led)
+          %img{src: "/images/pl-facilitator-led-workshops.png", alt: ""}
+          %p Our highly supportive Professional Learning Program will bring you together with a group of teachers to learn from each other as well as expert facilitators as you take on the first year of teaching the free CS Principles curriculum to your students. In-person and virtual workshops starting this summer.
+        .content-footer
+          %a.link-button{href: "/afe"}
+            =hoc_s(:call_to_action_apply_for_pl)
+      .action-block.action-block--one-col.flex-space-between
+        .content-wrapper
+          %h3=hoc_s(:teach_page_pl_offerings_list_heading_self_paced)
+          %img{src: "/images/pl-self-paced-modules.png", alt: ""}
+          %p=hoc_s(:self_paced_pl_modules_desc)
+        .content-footer
+          %a.link-button{href: CDO.studio_url("/courses/self-paced-pl-csp-2022?no_redirect=true")}
+            =hoc_s(:call_to_action_explore_modules)
+
+%section.bg-neutral-light
+  .wrapper
+    %h2 Frequently Asked Questions
+    %details
+      %summary Why should my district teach computer science?
+      %p Computer science is
+
+%section
+  .wrapper
+    = view :support_and_questions
+
+= view :analytics_event_log_helper, event_name: AnalyticsConstants::CSP_CURRICULUM_PAGE_VISITED_EVENT
