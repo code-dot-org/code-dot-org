@@ -9,14 +9,18 @@ require File.expand_path('../../../dashboard/config/environment', __FILE__)
 require 'fileutils'
 require 'json'
 require 'digest/md5'
+require 'cdo/aws/metrics'
 
 require_relative 'hoc_sync_utils'
 require_relative 'i18n_script_utils'
 require_relative 'redact_restore_utils'
 require_relative '../animation_assets/manifest_builder'
 
+I18N_METRICS_NAMESPACE = 'I18n'.freeze
+
 def sync_in
   puts "Sync in starting"
+  log_runtime_metrics
   Services::I18n::CurriculumSyncUtils.sync_in
   HocSyncUtils.sync_in
   localize_level_and_project_content
@@ -40,6 +44,26 @@ def sync_in
 rescue => exception
   puts "Sync in failed from the error: #{exception}"
   raise exception
+end
+
+def log_runtime_metrics
+  puts "logging test metrics"
+  Cdo::Metrics.push(
+    I18N_METRICS_NAMESPACE,
+    [
+      {
+        metric_name: :RuntimeTest,
+        dimensions: [
+          {name: "Environment", value: CDO.rack_env},
+          {name: "MethodName", value: "log_runtime_metrics"},
+          {name: "SyncStep", value: "in"},
+          {name: "InstanceId", value: "?"}
+        ],
+        value: 1
+      }
+    ]
+  )
+  puts "logged test metrics"
 end
 
 # Takes strings describing and naming Framework, StandardCategory, and Standard
