@@ -9,7 +9,7 @@ import i18n from '@cdo/locale';
 import {
   MAKER_DEPRECATION_SUPPORT_URL,
   MIN_CHROME_VERSION,
-} from '../util/makerConstants';
+} from '@cdo/apps/lib/kits/maker/util/makerConstants';
 
 const style = {
   twoColumns: {
@@ -78,18 +78,20 @@ export default class SetupGuide extends React.Component {
             dismissible
           />
         )}
-        {chromeVersion && chromeVersion < 90 && (
-          <Notification
-            type={NotificationType.warning}
-            notice={i18n.makerSetupDeprecationNoticeOldChromeTitle()}
-            details={i18n.makerSetupDeprecationNoticeOldChromeDetails({
-              minChromeVersion: MIN_CHROME_VERSION,
-            })}
-            detailsLinkText={i18n.makerDeprecationNoticeLinkText()}
-            detailsLink={MAKER_DEPRECATION_SUPPORT_URL}
-            dismissible
-          />
-        )}
+        {!isCodeOrgBrowser() &&
+          chromeVersion &&
+          chromeVersion < MIN_CHROME_VERSION && (
+            <Notification
+              type={NotificationType.warning}
+              notice={i18n.makerSetupDeprecationNoticeOldChromeTitle()}
+              details={i18n.makerSetupDeprecationNoticeOldChromeDetails({
+                minChromeVersion: MIN_CHROME_VERSION,
+              })}
+              detailsLinkText={i18n.makerDeprecationNoticeLinkText()}
+              detailsLink={MAKER_DEPRECATION_SUPPORT_URL}
+              dismissible
+            />
+          )}
         <h1>{applabI18n.makerSetupPageTitle()}</h1>
 
         <div>
