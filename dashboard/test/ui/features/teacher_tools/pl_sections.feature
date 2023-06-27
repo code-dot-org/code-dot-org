@@ -22,8 +22,8 @@ Feature: Professional learning Sections
     # Edit Section Form
     Then I wait to see "#sections-set-up-container"
     And I press keys "My Section of Teachers" for element "#uitest-section-name-setup"
-    And I wait until element "button:contains("Professional Learning")" is visible
-    And I click selector "button:contains("Professional Learning")"
+    And I wait until element "button:contains(Professional Learning)" is visible
+    And I click selector "button:contains(Professional Learning)"
     And I press the first "input[name="6-12 Summer Workshops"]" element
     And I press the first "#uitest-save-section-changes" element
     And I wait until element "#classroom-sections" is visible
@@ -55,8 +55,8 @@ Feature: Professional learning Sections
     # Edit Section Form
     Then I wait to see "#sections-set-up-container"
     And I press keys "My Section of Teachers" for element "#uitest-section-name-setup"
-    And I wait until element "button:contains("Professional Learning")" is visible
-    And I click selector "button:contains("Professional Learning")"
+    And I wait until element "button:contains(Professional Learning)" is visible
+    And I click selector "button:contains(Professional Learning)"
     And I press the first "input[name="6-12 Summer Workshops"]" element
     And I press the first "#uitest-save-section-changes" element
     And I wait until element "#classroom-sections" is visible
@@ -88,8 +88,8 @@ Feature: Professional learning Sections
     # Edit Section Form
     Then I wait to see "#sections-set-up-container"
     And I press keys "My Section of Teachers" for element "#uitest-section-name-setup"
-    And I wait until element "button:contains("Professional Learning")" is visible
-    And I click selector "button:contains("Professional Learning")"
+    And I wait until element "button:contains(Professional Learning)" is visible
+    And I click selector "button:contains(Professional Learning)"
     And I press the first "input[name="6-12 Summer Workshops"]" element
     And I press the first "#uitest-save-section-changes" element
     And I wait until element "#classroom-sections" is visible
@@ -121,8 +121,8 @@ Feature: Professional learning Sections
     # Edit Section Form
     Then I wait to see "#sections-set-up-container"
     And I press keys "My Section of Teachers" for element "#uitest-section-name-setup"
-    And I wait until element "button:contains("Professional Learning")" is visible
-    And I click selector "button:contains("Professional Learning")"
+    And I wait until element "button:contains(Professional Learning)" is visible
+    And I click selector "button:contains(Professional Learning)"
     And I press the first "input[name="6-12 Summer Workshops"]" element
     And I press the first "#uitest-save-section-changes" element
     And I wait until element "#classroom-sections" is visible
