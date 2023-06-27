@@ -5,8 +5,9 @@
 
 // Hero banner
 .hero-banner-basic {
-  background: url('/images/circuit-bg.png') center center no-repeat;
-  background-size: cover;
+  background: url("/images/banners/banner-bg-lines-green.png") center repeat;
+  background-color: #305A37;
+  background-size: 20%;
 
   .text-wrapper {
     width: 64%;
@@ -27,5 +28,11 @@
     img {
       width: 100%;
     }
+  }
+
+  a.link-button {
+    background-color: $neutral-white;
+    border-color: $neutral-white;
+    color: $neutral-dark;
   }
 }

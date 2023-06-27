@@ -507,6 +507,13 @@
   teach_page_additional_materials_list_heading_03: "Classroom Posters"
   teach_page_additional_materials_list_desc_03: "Print these posters of diverse role models to hang in your school and inspire your students to try computer science."
 
+
+  csp_page_top_desc: "Free year-long curriculum which introduces students to the foundational concepts of computer science and challenges them to explore how computing and technology can impact the world. Can be taught as an introductory class and as an AP course."
+  csp_page_intro_heading: "Free, AP® CSP endorsed, high school introductory course"
+  csp_page_intro_list_01: "Culturally responsive pedagogy"
+  csp_page_intro_list_02: "Real-world problem investigation"
+  csp_page_intro_list_03: "Explainer videos with diverse presenters"
+  csp_page_intro_list_04: "Open-ended projects for more personalized learning"
   csp_page_faq_question_01: "Is CS Principles mapped to standards?"
   csp_page_faq_answer_01: "CS Principles was written using the AP CS Principles Framework and prepares students for the AP CS Principles exam. The curriculum has also been aligned to the newly revised 2017 CSTA standards. [A summary of standards mappings can be found here](%{standards_url}). A google sheet version of the standards can be found at [CSP Standards 2021](%{csp_standards_2021_url})."
   csp_page_faq_question_02: "How much does it cost to teach CS Principles?"
@@ -541,7 +548,7 @@
   csp_page_faq_answer_07_01: "Our CS Principles curriculum has always been designed as part of a broader vision of supporting high quality, engaging, and equitable computer science instruction in classrooms across the country. Our [Curriculum Values](%{curriculum_url}) continue to guide us, and in particular our focus on expanding access to those who historically have been denied opportunities to learn about the exciting and impactful field of computing. While our vision and values remain unchanged, the landscape of CS education is rapidly developing."
   csp_page_faq_answer_07_02: "For the 2020-21 school year the College Board has made some significant updates to the CS Principles framework and AP assessment to ensure that CS Principles remains relevant and aligned with equivalent university courses. CS education research continues to reveal new insights on how students learn about computing, and feedback from the thousands of classrooms now using our CS Principles curriculum has identified opportunities to further improve our courses, tools, and recommended pedagogy."
   csp_page_faq_answer_07_03: "The goal of the updates to our curriculum is to navigate these developments in a way that remains committed to our vision and values and supports the many teachers, schools, classrooms, and districts that are already a part of our broader CS Principles community. We remain deeply thankful for you joining us on this mission to make our collective vision a reality."
-  csp_page_faq_answer_07_04: "For more information about our goals and approach to our courses, please see our [Curriculum Values](%{curriculum_url}) and our [Professional Learning Values](%{pl_url})."
+  csp_page_faq_answer_07_04: "For more information about our goals and approach to our courses, please see our [Curriculum Values](%{curriculum_url}) and our [Professional Learning alues](%{pl_url})."
 
   hoc_live: 'Hour of Code Live'
   hoc_live_sign_up_title: 'Sign up for Hour of Code Live'

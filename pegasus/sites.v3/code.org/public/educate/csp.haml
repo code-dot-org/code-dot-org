@@ -6,29 +6,31 @@ theme: responsive_full_width
 %link{href: '/css/generated/design-system-pegasus.css', rel: 'stylesheet'}
 %link{href: "/css/generated/csp-styles.css", rel: "stylesheet"}
 
-%section.hero-banner-basic.bg-neutral-dark
+%section.hero-banner-basic
   .wrapper.flex-container.justify-space-between.align-items-center.wrap
     .text-wrapper
-      %h1{style: "color: white"} Computer Science Principles
-      %p{style: "color: white"} Free year-long curriculum which introduces students to the foundational concepts of computer science and challenges them to explore how computing and technology can impact the world. Can be taught as an introductory class and as an AP course.
+      %h1{style: "color: white"}
+        =hoc_s(:curriculum_name_csp)
+      %p{style: "color: white"}
+        =hoc_s(:csp_page_top_desc)
       %a.link-button{href: CDO.studio_url("/courses/csp-2023?viewAs=Instructor")}
         =hoc_s(:call_to_action_explore_course)
     %figure
-      %img{src: "/images/banners/blockchain-laptop-silver.png", alt: ""}
+      %img{src: "/images/banners/banner-csp-phone-icon.png", alt: ""}
     .clear
 
 %section
   .wrapper
     .text-wrapper.col-45
-      %h2 Free high school introductory course
+      %h2=hoc_s(:csp_page_intro_heading)
       %ul
-        %li Culturally responsive pedagogy
-        %li Real-world problem investigation
-        %li Explainer videos with diverse presenters
-        %li Open-ended projects for more personalized learning
+        %li=hoc_s(:csp_page_intro_list_01)
+        %li=hoc_s(:csp_page_intro_list_02)
+        %li=hoc_s(:csp_page_intro_list_03)
+        %li=hoc_s(:csp_page_intro_list_04)
       %a.link-button{href: CDO.studio_url("/courses/csp-2023?viewAs=Instructor")}
         =hoc_s(:call_to_action_explore_course)
-    %div.col-50{style: "float: right"}
+    %div.col-50{style: "float: right; margin-top: 0.75rem;"}
       =view :display_video_thumbnail, id: "intro_csp", video_code: "DMr1iFYacGQ", play_button: 'center', letterbox: 'false'
     .clear
 
