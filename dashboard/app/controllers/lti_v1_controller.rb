@@ -59,7 +59,6 @@ class LtiV1Controller < ApplicationController
 
     # verify the jwt via the integration's public keyset
     decoded_jwt = get_decoded_jwt(integration, id_token)
-    # decoded_jwt = decoded_jwt_no_auth
 
     jwt_verifier = JwtVerifier.new(decoded_jwt, integration)
 
