@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {curriculumDataShape} from './curriculumCatalogShapes';
 import i18n from '@cdo/locale';
-import cookies from 'js-cookie';
 import style from '../../../style/code-studio/curriculum_catalog_container.module.scss';
 import {queryParams, updateQueryParam} from '../../code-studio/utils';
 import HeaderBanner from '../HeaderBanner';
@@ -155,7 +154,12 @@ const filterByDevice = (curriculum, deviceFilters) => {
   return true;
 };
 
-const CurriculumCatalog = ({curriculaData, isEnglish, ...props}) => {
+const CurriculumCatalog = ({
+  curriculaData,
+  isEnglish,
+  languageNativeName,
+  ...props
+}) => {
   const [filteredCurricula, setFilteredCurricula] = useState(curriculaData);
   const [numFilteredTranslatedCurricula, setNumFilteredTranslatedCurricula] =
     useState(
@@ -337,7 +341,7 @@ const CurriculumCatalog = ({curriculaData, isEnglish, ...props}) => {
             <BodyOneText>
               {i18n.numCurriculaAvailableInLanguage({
                 numCurricula: numFilteredTranslatedCurricula,
-                language: cookies.get('language_') || 'en-US',
+                language: languageNativeName,
               })}
             </BodyOneText>
             <FontAwesome
@@ -349,7 +353,7 @@ const CurriculumCatalog = ({curriculaData, isEnglish, ...props}) => {
           <Toggle
             name="filterTranslatedToggle"
             label={i18n.onlyShowCurriculaInLanguage({
-              language: cookies.get('language_') || 'en-US',
+              language: languageNativeName,
             })}
             size="m"
             checked={appliedFilters['translated']}
@@ -367,6 +371,7 @@ const CurriculumCatalog = ({curriculaData, isEnglish, ...props}) => {
 CurriculumCatalog.propTypes = {
   curriculaData: PropTypes.arrayOf(curriculumDataShape),
   isEnglish: PropTypes.bool.isRequired,
+  languageNativeName: PropTypes.string.isRequired,
 };
 
 export default CurriculumCatalog;
