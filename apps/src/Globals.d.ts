@@ -6,7 +6,7 @@ declare module '*.module.scss' {
   export default classes;
 }
 
-// Declaring dashboard as any since it is not well documented.
+// Declaring dashboard as 'any' because it is not well documented.
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 declare const dashboard: any;
 declare const IN_UNIT_TEST: boolean;
