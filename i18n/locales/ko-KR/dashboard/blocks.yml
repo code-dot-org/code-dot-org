@@ -2367,7 +2367,7 @@ ko:
             "'left'": 왼쪽
       craft_ifStandingOn:
         text: |-
-          {TYPE} 위에 서 있을 경우
+          {TYPE} 위에 서있을 경우
           {STATEMENT}
         options:
           TYPE:
@@ -2379,7 +2379,7 @@ ko:
             "'seaLantern'": 바다 랜턴
       craft_ifStandingOnLimit:
         text: |-
-          {TYPE} 위에 서 있을 경우
+          {TYPE} 위에 서있을 경우
           {STATEMENT}
         options:
           TYPE:
@@ -2401,20 +2401,20 @@ ko:
         text: 횃불 놓기
       craft_repeatUntilConduit:
         text: |-
-          도관이 완료될 때까지 반복
+          전달체가 완료될 때까지 반복
           {STATEMENT}
       craft_repeatUntilGoal:
         text: |-
           목표까지 반복
           {STATEMENT}
       craft_spawnEntity:
-        text: "{ENTITY} 불러내기"
+        text: "{ENTITY} 생성"
         options:
           ENTITY:
             '"dolphin"': 돌고래
             '"squid"': 오징어
       craft_turn:
-        text: "{DIR} 방향 전환"
+        text: "{DIR} 회전"
         options:
           DIR:
             right: 오른쪽 ↻

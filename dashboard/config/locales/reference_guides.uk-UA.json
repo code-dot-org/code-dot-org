@@ -14,6 +14,9 @@
         "csd-2022/applab-overview": {
           "display_name": "Огляд"
         },
+        "csd-2022/body-styling": {
+          "display_name": "Стилізація основної конструкції"
+        },
         "csd-2022/booleans-and-comparison-operators": {
           "display_name": "Булеві та оператори порівняння"
         },
@@ -25,6 +28,9 @@
         },
         "csd-2022/color-lights": {
           "display_name": "Кольорове світло"
+        },
+        "csd-2022/creating-a-survey": {
+          "display_name": "Створення опитування"
         },
         "csd-2022/css": {
           "display_name": "CSS"

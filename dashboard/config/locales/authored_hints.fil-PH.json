@@ -4795,6 +4795,19 @@
         "coursea_maze_ramp1_2021": {
           "courseC_maze_programming1_a": "Kung ang ibon ay hindi nakakarating sa baboy, siguraduhin na ang parehong mga block ay ganap na na-click nang magkasama, pagkatapos ay i-click muli ang \"Run\".",
           "courseC_maze_programming1_b": "Huwag matakot na magkamali! Subukan ang isang bagay, at kung hindi ito gumana, subukan ang iba pa!"
+        },
+        "courseC_artist_prog72022": {
+          "courseC_artist_prog7_b": "Gumagana ba ito sa unang hakbang? \nPaano ang pangalawa? \nSaan ito nagkakamali?",
+          "courseC_artist_prog7_d": "Gugustuhin mong:\n- sumulong\n- lumiko pakanan 45 degrees\n- sumulong\n- lumiko pakanan 90 degrees\n- sumulong\n- lumiko pakanan degrees\n\nUlitin ang pattern na ito ng 2 beses!"
+        },
+        "courseE_artist_functions102022": {
+          "courseD_artist_functions10_c": "Nakikita mo ba kung saan maaaring gumamit ang pagguhit na ito ng function na tinatawag na `linya ng mga hexagon`?\n\n![](https://images.code.org/904e0f38232fd9c15a3d2d172e7dde0b-image-1493140714580.gif)"
+        },
+        "courseE_artist_functions92022": {
+          "courseD_artist_functions9_e": "Nakikita mo ba ang lahat ng apat na lugar ng `linya ng mga tatsulok` na maaaring gamitin sa guhit na ito?\n\n![](https://images.code.org/130e1040ecca7186dea87f42666f5620-image-1493140373966.gif)",
+          "courseD_artist_functions9_a": "Maaaring hatiin ang palaisipang ito sa tatlong bahagi:\n  - gawin ang `gumuhit ng tatsulok` na function\n  - gawin ang `gumuhit ng linya ng mga tatsulok` na function\n  - gamitin ang `gumuhit ng linya ng mga tatsulok` na function ng apat na beses upang makumpleto ang pagguhit",
+          "courseD_artist_functions9_c": "Upang gumuhit ng linya ng mga tatsulok:\n  - ulitin ng 4 beses\n    - gumuhit ng tatsulok\n    - tumalon pasulong ng 50 pixels",
+          "courseD_artist_functions9_d": "Upang gumuhit ng diamante:\n  - ulitin ng 2 beses\n    - gumuhit ng linya ng mga tatsulok\n    - lumiko ng 60 degrees\n    - gumuhit ng linya ng mga tatsulok\n    - lumiko ng 120 degrees"
         }
       }
     }

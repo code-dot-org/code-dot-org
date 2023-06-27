@@ -116,7 +116,7 @@
         .span3.signup-field-label
           = f.label :gender_student_input, t('signup_form.gender')
         .span5
-          = f.text_field :gender_student_input, maxlength: 50
+          = f.text_field :gender_student_input, maxlength: 50, placeholder: t('signup_form.gender_placeholder')
 
     .row#school-info-section{style: "display: none;"}
       .span10

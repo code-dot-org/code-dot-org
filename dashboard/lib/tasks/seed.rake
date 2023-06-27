@@ -20,8 +20,8 @@ module CustomRake
 end
 
 module TimedTask
-  def timed_task(*args, &block)
-    CustomRake::TimedTask.define_task(*args, &block)
+  def timed_task(...)
+    CustomRake::TimedTask.define_task(...)
   end
 end
 

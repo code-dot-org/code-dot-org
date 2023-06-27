@@ -512,9 +512,9 @@
           "courseE_artist_functions1_c": "សម្រាប់សរសេរកូដខ្លីជាង, សាកល្បងប្រើ `repeat` loop ដើម្បីគូរស៊ុមការ៉េនៃវ៉ែនតា។"
         },
         "courseE_artist_functions2": {
-          "courseD_artist_functions2_a": "កម្មវិធីរបស់អ្នកគួរ:\n- ប្រើមុខងារ\n- ផ្លាស់ទីទៅមុខ ១០០ + ៧៥ ភីកសែល\n- ប្រើមុខងារ",
+          "courseD_artist_functions2_a": "កម្មវិធីរបស់អ្នកគួរ:\n\n-   ប្រើមុខងារ\n-   ផ្លាស់ទីទៅមុខ ១០០ + ៧៥ ភីកសែល\n-   ប្រើមុខងារ",
           "courseD_artist_functions2_b": "អនុគមន៍ដែលអ្នកសរសេរមិនគួរមានកម្មវិធីទាំងមូលរបស់អ្នកទេ, គ្រាន់តែផ្នែកដែលគូរការ៉េមានជ្រុង ១០០ ភីកសែល។",
-          "courseD_artist_functions2_c": "ប្រើប្លុក`draw a square`ពណ៌បៃតង ដើម្បី \"ហៅ\" អនុគមន៍របស់អ្នក ក្រោមប្លុក `when run` ។ បើមិនដូច្នោះទេកូដនឹងមិនដំណើរការទេ។\n\n[blockly block][0]"
+          "courseD_artist_functions2_c": "ប្រើប្លុក`draw a square`ពណ៌បៃតង ដើម្បី \"ហៅ\" អនុគមន៍របស់អ្នក ក្រោមប្លុក `when run` ។ បើមិនដូច្នោះទេកូដនឹងមិនដំណើរការទេ។\n\n<xml><block type=\"procedures_callnoreturn\" limit=\"2\"><mutation name=\"draw a square\"/></block></xml>"
         },
         "courseE_artist_functions2_2018": {
           "courseD_artist_functions2_a": "កម្មវិធីរបស់អ្នកគួរ:\n\n-   ប្រើមុខងារ\n-   ផ្លាស់ទីទៅមុខ ១០០ + ៧៥ ភីកសែល\n-   ប្រើមុខងារ"
@@ -1693,8 +1693,8 @@
           "courseD_artist_functions3_b": "រង្វិលជុំដដែលៗរបស់អ្នក គួរតែមានបណ្តុំកូដ3នៅខាងក្នុង។"
         },
         "courseE_artist_functions4": {
-          "courseD_artist_functions4_a": "សាកល្បងប្រើអនុគមន៍មួយ!\n",
-          "courseD_artist_functions4_b": "\nទាញប្លុកអនុគមន៍ `គូរផ្កាយ` ចេញពីប្រអប់ឧបករណ៍ ដើម្បីចាប់ផ្តើមបង្កើតអនុគមន៍របស់អ្នក។ អនុគមន៍គួរតែមានកូដដូចគ្នានឹង puzzle ពីមុន, ដោយឥឡូវ​នេះអ្នកកំពុងគូរលំនាំផ្កាយដូចគ្នា។",
+          "courseD_artist_functions4_a": "សាកល្បងប្រើអនុគមន៍មួយ!",
+          "courseD_artist_functions4_b": "ទាញប្លុកអនុគមន៍ `គូរផ្កាយ` ចេញពីប្រអប់ឧបករណ៍ ដើម្បីចាប់ផ្តើមបង្កើតអនុគមន៍របស់អ្នក។ អនុគមន៍គួរតែមានកូដដូចគ្នានឹង puzzle ពីមុន, ដោយឥឡូវ​នេះអ្នកកំពុងគូរលំនាំផ្កាយដូចគ្នា។",
           "courseD_artist_functions4_c": "ប្រើប្លុក `គូរផ្កាយ` ពណ៌បៃតង ដើម្បីហៅអនុគមន៍នេះក្នុងប្រូក្រាមសំខាន់របស់អ្នក។ កុំភ្លេចលោតទៅមុខរវាងផ្កាយនីមួយៗ!"
         },
         "courseE_artist_functions4_copy": {
@@ -1704,7 +1704,7 @@
         },
         "courseE_artist_functions5": {
           "courseD_artist_functions5_a": "កុំបោះបង់! ចងចាំនូវអ្វីដែលអ្នកបានរៀន។",
-          "courseD_artist_functions5_b": "\nអនុគមន៍ធ្វើឱ្យមានភាពងាយស្រួល ក្នុងការហៅកូដដែលបានរក្សាទុកគ្រប់ពេល, មិនត្រឹមតែពីខាងក្នុងរង្វិលជុំដដែលៗទេ!",
+          "courseD_artist_functions5_b": "អនុគមន៍ធ្វើឱ្យមានភាពងាយស្រួល ក្នុងការហៅកូដដែលបានរក្សាទុកគ្រប់ពេល, មិនត្រឹមតែពីខាងក្នុងរង្វិលជុំដដែលៗទេ!",
           "courseD_artist_functions5_c": "ចាប់ផ្តើមដោយទាញកូដ មានរាងផ្កាយទៅក្នុងអនុគមន៍ `គូរផ្កាយ`, បន្ទាប់មកប្រើអនុគមន៍នេះដើម្បីគូរផ្កាយ៣!"
         },
         "courseE_artist_functions5_2018": {
@@ -2576,24 +2576,24 @@
           "courseD_farmer_conditionals4_b": "នេះមើលទៅពិតជាប្រហាក់ប្រហែលគ្នាណាស់ជាមួយបញ្ហាមុននេះ ចំណុចដែលខុសគ្នាតែមួយគត់គឺ តើរង្វិលជុំមួយណាដែលអ្នកត្រូវការ។"
         },
         "courseD_farmer_while5": {
-          "courseD_farmer_conditionals5a_a": "សាកល្បងដាក់ រង្វិលជុំ \"ខណៈពេល\" នៅក្នុងរង្វិលជុំ \"ម្ដងទៀត\"។",
-          "courseD_farmer_conditionals5a_b": "កសិករត្រូវការផ្លាស់ទីទៅមុខ សរុបចំនួន៥ដង ដើម្បីទៅដល់ចុងបញ្ចប់នៃជួរ។ តើកសិករត្រូវការធ្វើអ្វីទៀត?",
-          "courseD_farmer_conditionals5a_c": "ដើរទៅមុខ៥ដង។ នៅពេលអ្នកដើរទៅមុខ យកគំនរដីចេញដោយប្រើប្លុក \"ខណៈពេលដែលមានគំនរ\"។"
+          "courseD_farmer_conditionals5a_a": "សាកល្បងដាក់ រង្វិលជុំ \"ខណៈពេល\" នៅខាងក្នុងរង្វិលជុំ \"ម្ដងទៀត\"។",
+          "courseD_farmer_conditionals5a_b": "កសិករត្រូវការផ្លាស់ទីទៅមុខ សរុបចំនួន៥ដង ដើម្បីទៅដល់ចុងបញ្ចប់នៃជួរ។ តើកសិករត្រូវធ្វើអ្វីបន្តទៀត?",
+          "courseD_farmer_conditionals5a_c": "ដើរទៅមុខចំនួន៥ដង។ រាល់ពេលដែលអ្នកដើរទៅខាងមុខ យកគំនរដីចេញដោយប្រើប្លុក \"ខណៈពេលដែលមានគំនរ\"។"
         },
         "courseD_farmer_while5_2018": {
-          "courseD_farmer_conditionals5a_a": "សាកល្បងដាក់ រង្វិលជុំ \"ខណៈពេល\" នៅក្នុងរង្វិលជុំ \"ម្ដងទៀត\"។",
-          "courseD_farmer_conditionals5a_b": "កសិករត្រូវការផ្លាស់ទីទៅមុខ សរុបចំនួន៥ដង ដើម្បីទៅដល់ចុងបញ្ចប់នៃជួរ។ តើកសិករត្រូវការធ្វើអ្វីទៀត?",
-          "courseD_farmer_conditionals5a_c": "ដើរទៅមុខ៥ដង។ នៅពេលអ្នកដើរទៅមុខ យកគំនរដីចេញដោយប្រើប្លុក \"ខណៈពេលដែលមានគំនរ\"។"
+          "courseD_farmer_conditionals5a_a": "សាកល្បងដាក់ រង្វិលជុំ \"ខណៈពេល\" នៅខាងក្នុងរង្វិលជុំ \"ម្ដងទៀត\"។",
+          "courseD_farmer_conditionals5a_b": "កសិករត្រូវការផ្លាស់ទីទៅមុខ សរុបចំនួន៥ដង ដើម្បីទៅដល់ចុងបញ្ចប់នៃជួរ។ តើកសិករត្រូវធ្វើអ្វីបន្តទៀត?",
+          "courseD_farmer_conditionals5a_c": "ដើរទៅមុខចំនួន៥ដង។ រាល់ពេលដែលអ្នកដើរទៅខាងមុខ យកគំនរដីចេញដោយប្រើប្លុក \"ខណៈពេលដែលមានគំនរ\"។"
         },
         "courseD_farmer_while5_2019": {
-          "courseD_farmer_conditionals5a_a": "សាកល្បងដាក់ រង្វិលជុំ \"ខណៈពេល\" នៅក្នុងរង្វិលជុំ \"ម្ដងទៀត\"។",
-          "courseD_farmer_conditionals5a_b": "កសិករត្រូវការផ្លាស់ទីទៅមុខ សរុបចំនួន៥ដង ដើម្បីទៅដល់ចុងបញ្ចប់នៃជួរ។ តើកសិករត្រូវការធ្វើអ្វីទៀត?",
-          "courseD_farmer_conditionals5a_c": "ដើរទៅមុខ៥ដង។ នៅពេលអ្នកដើរទៅមុខ យកគំនរដីចេញដោយប្រើប្លុក \"ខណៈពេលដែលមានគំនរ\"។"
+          "courseD_farmer_conditionals5a_a": "សាកល្បងដាក់ រង្វិលជុំ \"ខណៈពេល\" នៅខាងក្នុងរង្វិលជុំ \"ម្ដងទៀត\"។",
+          "courseD_farmer_conditionals5a_b": "កសិករត្រូវការផ្លាស់ទីទៅមុខ សរុបចំនួន៥ដង ដើម្បីទៅដល់ចុងបញ្ចប់នៃជួរ។ តើកសិករត្រូវធ្វើអ្វីបន្តទៀត?",
+          "courseD_farmer_conditionals5a_c": "ដើរទៅមុខចំនួន៥ដង។ រាល់ពេលដែលអ្នកដើរទៅខាងមុខ យកគំនរដីចេញដោយប្រើប្លុក \"ខណៈពេលដែលមានគំនរ\"។"
         },
         "courseD_farmer_while5_2020": {
-          "courseD_farmer_conditionals5a_a": "សាកល្បងដាក់ រង្វិលជុំ \"ខណៈពេល\" នៅក្នុងរង្វិលជុំ \"ម្ដងទៀត\"។",
-          "courseD_farmer_conditionals5a_b": "កសិករត្រូវការផ្លាស់ទីទៅមុខ សរុបចំនួន៥ដង ដើម្បីទៅដល់ចុងបញ្ចប់នៃជួរ។ តើកសិករត្រូវការធ្វើអ្វីទៀត?",
-          "courseD_farmer_conditionals5a_c": "ដើរទៅមុខ៥ដង។ នៅពេលអ្នកដើរទៅមុខ យកគំនរដីចេញដោយប្រើប្លុក \"ខណៈពេលដែលមានគំនរ\"។"
+          "courseD_farmer_conditionals5a_a": "សាកល្បងដាក់ រង្វិលជុំ \"ខណៈពេល\" នៅខាងក្នុងរង្វិលជុំ \"ម្ដងទៀត\"។",
+          "courseD_farmer_conditionals5a_b": "កសិករត្រូវការផ្លាស់ទីទៅមុខ សរុបចំនួន៥ដង ដើម្បីទៅដល់ចុងបញ្ចប់នៃជួរ។ តើកសិករត្រូវធ្វើអ្វីបន្តទៀត?",
+          "courseD_farmer_conditionals5a_c": "ដើរទៅមុខចំនួន៥ដង។ រាល់ពេលដែលអ្នកដើរទៅខាងមុខ យកគំនរដីចេញដោយប្រើប្លុក \"ខណៈពេលដែលមានគំនរ\"។"
         },
         "courseD_maze_ramp7": {
           "courseD_maze_ramp7_b": "កុំភ្លេចប្រើប៊ូតុង \"ជំហ៊ាន\" ដើម្បីចូលទៅកាន់ប្លុកនីមួយៗ និងស្វែងរកកំហុស។",
@@ -2818,20 +2818,24 @@
           "courseE_playLab_scaffold1_c": "នៅពេលអ្នករួចរាល់អ្នកគួរតែអាចផ្លាស់ទីវីរបុរសរបស់អ្នកដោយប្រើគ្រាប់ចុចព្រួញ!"
         },
         "courseD_farmer_while6": {
-          "courseD_farmer_conditionals6_a": "ត្រូវប្រាកដថាអ្នកកំពុងប្រើរង្វិលជុំ `ខណៈពេល` ដើម្បីគណនាចំនួនដងដើម្បីបំពេញរន្ធនីមួយៗ។",
-          "courseD_farmer_conditionals6_b": "កត់សំគាល់ថាកសិករត្រូវការឆ្ពោះទៅមុខនិងចុះក្រោមជាច្រើនដងតាមលំនាំជណ្តើរ។"
+          "courseD_farmer_conditionals6_a": "ត្រូវប្រាកដថាអ្នកកំពុងប្រើប្រាស់រង្វិលជុំ `ខណៈពេល` ដើម្បីគណនាចំនួនដងដើម្បីបំពេញរណ្ដៅនីមួយៗ។",
+          "courseD_farmer_conditionals6_b": "កត់សំគាល់ថាកសិករត្រូវការផ្លាស់ទីទៅមុខនិងចុះក្រោមជាច្រើនដងតាមលំនាំជណ្តើរ។",
+          "courseD_farmer_conditionals6_c": "នេះជាគំរូជំហានជណ្តើរដើម្បីប្រើប្រាស់ប្លុកខាងក្រោម\n\n-   ផ្លាស់ទីទៅមុខ\n-   បំពេញរណ្ដៅ\n-   បត់ស្ដាំ\n-   ផ្លាស់ទីទៅមុខ\n-   បំពេញរណ្ដៅ\n-   បត់ឆ្វេង\n\nតើអ្នកត្រូវការប្រើប្រាស់ជំហាននៃជណ្ដើរនេះប៉ុន្មានដង?\n\nត្រូវប្រាកដថាអ្នងកំពុងប្រើប្រាស់ក្នុងការបំពេញរណ្ដៅ​​ 'ខណៈពេលដែលមានរណ្ដៅមួយ'។​ "
         },
         "courseD_farmer_while6_2018": {
-          "courseD_farmer_conditionals6_a": "ត្រូវប្រាកដថាអ្នកកំពុងប្រើរង្វិលជុំ `ខណៈពេល` ដើម្បីគណនាចំនួនដងដើម្បីបំពេញរន្ធនីមួយៗ។",
-          "courseD_farmer_conditionals6_b": "កត់សំគាល់ថាកសិករត្រូវការឆ្ពោះទៅមុខនិងចុះក្រោមជាច្រើនដងតាមលំនាំជណ្តើរ។"
+          "courseD_farmer_conditionals6_a": "ត្រូវប្រាកដថាអ្នកកំពុងប្រើប្រាស់រង្វិលជុំ `ខណៈពេល` ដើម្បីគណនាចំនួនដងដើម្បីបំពេញរណ្ដៅនីមួយៗ។",
+          "courseD_farmer_conditionals6_b": "កត់សំគាល់ថាកសិករត្រូវការផ្លាស់ទីទៅមុខនិងចុះក្រោមជាច្រើនដងតាមលំនាំជណ្តើរ។",
+          "courseD_farmer_conditionals6_c": "នេះជាគំរូជំហានជណ្តើរដើម្បីប្រើប្រាស់ប្លុកខាងក្រោម\n\n-   ផ្លាស់ទីទៅមុខ\n-   បំពេញរណ្ដៅ\n-   បត់ស្ដាំ\n-   ផ្លាស់ទីទៅមុខ\n-   បំពេញរណ្ដៅ\n-   បត់ឆ្វេង\n\nតើអ្នកត្រូវការប្រើប្រាស់ជំហាននៃជណ្ដើរនេះប៉ុន្មានដង?\n\nត្រូវប្រាកដថាអ្នងកំពុងប្រើប្រាស់ក្នុងការបំពេញរណ្ដៅ​​ 'ខណៈពេលដែលមានរណ្ដៅមួយ'។​ "
         },
         "courseD_farmer_while6_2019": {
-          "courseD_farmer_conditionals6_a": "ត្រូវប្រាកដថាអ្នកកំពុងប្រើរង្វិលជុំ `ខណៈពេល` ដើម្បីគណនាចំនួនដងដើម្បីបំពេញរន្ធនីមួយៗ។",
-          "courseD_farmer_conditionals6_b": "កត់សំគាល់ថាកសិករត្រូវការឆ្ពោះទៅមុខនិងចុះក្រោមជាច្រើនដងតាមលំនាំជណ្តើរ។"
+          "courseD_farmer_conditionals6_a": "ត្រូវប្រាកដថាអ្នកកំពុងប្រើប្រាស់រង្វិលជុំ `ខណៈពេល` ដើម្បីគណនាចំនួនដងដើម្បីបំពេញរណ្ដៅនីមួយៗ។",
+          "courseD_farmer_conditionals6_b": "កត់សំគាល់ថាកសិករត្រូវការផ្លាស់ទីទៅមុខនិងចុះក្រោមជាច្រើនដងតាមលំនាំជណ្តើរ។",
+          "courseD_farmer_conditionals6_c": "នេះជាគំរូជំហានជណ្តើរដើម្បីប្រើប្រាស់ប្លុកខាងក្រោម\n\n-   ផ្លាស់ទីទៅមុខ\n-   បំពេញរណ្ដៅ\n-   បត់ស្ដាំ\n-   ផ្លាស់ទីទៅមុខ\n-   បំពេញរណ្ដៅ\n-   បត់ឆ្វេង\n\nតើអ្នកត្រូវការប្រើប្រាស់ជំហាននៃជណ្ដើរនេះប៉ុន្មានដង?\n\nត្រូវប្រាកដថាអ្នងកំពុងប្រើប្រាស់ក្នុងការបំពេញរណ្ដៅ​​ 'ខណៈពេលដែលមានរណ្ដៅមួយ'។​ "
         },
         "courseD_farmer_while6_2020": {
-          "courseD_farmer_conditionals6_a": "ត្រូវប្រាកដថាអ្នកកំពុងប្រើរង្វិលជុំ `ខណៈពេល` ដើម្បីគណនាចំនួនដងដើម្បីបំពេញរន្ធនីមួយៗ។",
-          "courseD_farmer_conditionals6_b": "កត់សំគាល់ថាកសិករត្រូវការឆ្ពោះទៅមុខនិងចុះក្រោមជាច្រើនដងតាមលំនាំជណ្តើរ។"
+          "courseD_farmer_conditionals6_a": "ត្រូវប្រាកដថាអ្នកកំពុងប្រើប្រាស់រង្វិលជុំ `ខណៈពេល` ដើម្បីគណនាចំនួនដងដើម្បីបំពេញរណ្ដៅនីមួយៗ។",
+          "courseD_farmer_conditionals6_b": "កត់សំគាល់ថាកសិករត្រូវការផ្លាស់ទីទៅមុខនិងចុះក្រោមជាច្រើនដងតាមលំនាំជណ្តើរ។",
+          "courseD_farmer_conditionals6_c": "នេះជាគំរូជំហានជណ្តើរដើម្បីប្រើប្រាស់ប្លុកខាងក្រោម\n\n-   ផ្លាស់ទីទៅមុខ\n-   បំពេញរណ្ដៅ\n-   បត់ស្ដាំ\n-   ផ្លាស់ទីទៅមុខ\n-   បំពេញរណ្ដៅ\n-   បត់ឆ្វេង\n\nតើអ្នកត្រូវការប្រើប្រាស់ជំហាននៃជណ្ដើរនេះប៉ុន្មានដង?\n\nត្រូវប្រាកដថាអ្នងកំពុងប្រើប្រាស់ក្នុងការបំពេញរណ្ដៅ​​ 'ខណៈពេលដែលមានរណ្ដៅមួយ'។​ "
         },
         "courseE_artist_concept4": {
           "courseE_artist_concept4_a": "មានវិធីជាច្រើនដើម្បីដោះស្រាយល្បែងផ្គុំរូបនេះ។ តើអ្នកអាចរៀបចំផែនការបានទេ?",
@@ -2897,11 +2901,13 @@
         },
         "courseE_farmer_concept3": {
           "grade3_robotFarmer_ConditionalsIntro_8_b": "តើអ្នកគួរធ្វើអ្វីនៅពេលអ្នកឈានដល់ទីបញ្ចប់នៃផ្លូវមួយ?",
-          "grade3_robotFarmer_ConditionalsIntro_8_c": "ប្រើរង្វិលជុំ \\`ធ្វើម្តងទៀតដើម្បីរត់កូដរបស់អ្នកច្រើនដងសម្រាប់ផ្លូវត្រង់នីមួយៗ។"
+          "grade3_robotFarmer_ConditionalsIntro_8_c": "ប្រើរង្វិលជុំ \\`ធ្វើម្តងទៀតដើម្បីរត់កូដរបស់អ្នកច្រើនដងសម្រាប់ផ្លូវត្រង់នីមួយៗ។",
+          "grade3_robotFarmer_ConditionalsIntro_8_a": "ប្លុក​​  `ខណៈពេលដែលផ្លូវទៅមុខ`​ អនុញ្ញាតឱ្យអ្នកបន្តដំណើរទៅមុខ ទោះបីជាអ្នកមិនដឹងថាមានការ៉េចំនួនប៉ុន្មានក្នុងមួយផ្លូវក៏ដោយ។"
         },
         "courseE_farmer_concept3_2018": {
           "grade3_robotFarmer_ConditionalsIntro_8_b": "តើអ្នកគួរធ្វើអ្វីនៅពេលអ្នកឈានដល់ទីបញ្ចប់នៃផ្លូវមួយ?",
-          "grade3_robotFarmer_ConditionalsIntro_8_c": "ប្រើរង្វិលជុំ \\`ធ្វើម្តងទៀតដើម្បីរត់កូដរបស់អ្នកច្រើនដងសម្រាប់ផ្លូវត្រង់នីមួយៗ។"
+          "grade3_robotFarmer_ConditionalsIntro_8_c": "ប្រើរង្វិលជុំ \\`ធ្វើម្តងទៀតដើម្បីរត់កូដរបស់អ្នកច្រើនដងសម្រាប់ផ្លូវត្រង់នីមួយៗ។",
+          "grade3_robotFarmer_ConditionalsIntro_8_a": "ប្លុក​​  `ខណៈពេលដែលផ្លូវទៅមុខ`​ អនុញ្ញាតឱ្យអ្នកបន្តដំណើរទៅមុខ ទោះបីជាអ្នកមិនដឹងថាមានការ៉េចំនួនប៉ុន្មានក្នុងមួយផ្លូវក៏ដោយ។"
         },
         "courseE_farmer_functions1": {
           "courseE_farmer_functions1_a": "ប្រអប់ឧបករណ៍ត្រូវបានរៀបចំខុសគ្នាបន្តិចបន្តួចនៅពេលនេះ! ចុចលើប្រភេទផ្សេងៗគ្នាដើម្បីមើលថាតើប្លុកមួយណាដែលអ្នកមាន។",
@@ -4796,13 +4802,14 @@
           "courseD_farmer_conditionals4_b": "នេះមើលទៅពិតជាប្រហាក់ប្រហែលគ្នាណាស់ជាមួយបញ្ហាមុននេះ ចំណុចដែលខុសគ្នាតែមួយគត់គឺ តើរង្វិលជុំមួយណាដែលអ្នកត្រូវការ។"
         },
         "courseD_farmer_while5_2021": {
-          "courseD_farmer_conditionals5a_a": "សាកល្បងដាក់ រង្វិលជុំ \"ខណៈពេល\" នៅក្នុងរង្វិលជុំ \"ម្ដងទៀត\"។",
-          "courseD_farmer_conditionals5a_b": "កសិករត្រូវការផ្លាស់ទីទៅមុខ សរុបចំនួន៥ដង ដើម្បីទៅដល់ចុងបញ្ចប់នៃជួរ។ តើកសិករត្រូវការធ្វើអ្វីទៀត?",
-          "courseD_farmer_conditionals5a_c": "ដើរទៅមុខ៥ដង។ នៅពេលអ្នកដើរទៅមុខ យកគំនរដីចេញដោយប្រើប្លុក \"ខណៈពេលដែលមានគំនរ\"។"
+          "courseD_farmer_conditionals5a_a": "សាកល្បងដាក់ រង្វិលជុំ \"ខណៈពេល\" នៅខាងក្នុងរង្វិលជុំ \"ម្ដងទៀត\"។",
+          "courseD_farmer_conditionals5a_b": "កសិករត្រូវការផ្លាស់ទីទៅមុខ សរុបចំនួន៥ដង ដើម្បីទៅដល់ចុងបញ្ចប់នៃជួរ។ តើកសិករត្រូវធ្វើអ្វីបន្តទៀត?",
+          "courseD_farmer_conditionals5a_c": "ដើរទៅមុខចំនួន៥ដង។ រាល់ពេលដែលអ្នកដើរទៅខាងមុខ យកគំនរដីចេញដោយប្រើប្លុក \"ខណៈពេលដែលមានគំនរ\"។"
         },
         "courseD_farmer_while6_2021": {
-          "courseD_farmer_conditionals6_a": "ត្រូវប្រាកដថាអ្នកកំពុងប្រើរង្វិលជុំ `ខណៈពេល` ដើម្បីគណនាចំនួនដងដើម្បីបំពេញរន្ធនីមួយៗ។",
-          "courseD_farmer_conditionals6_b": "កត់សំគាល់ថាកសិករត្រូវការឆ្ពោះទៅមុខនិងចុះក្រោមជាច្រើនដងតាមលំនាំជណ្តើរ។"
+          "courseD_farmer_conditionals6_a": "ត្រូវប្រាកដថាអ្នកកំពុងប្រើប្រាស់រង្វិលជុំ `ខណៈពេល` ដើម្បីគណនាចំនួនដងដើម្បីបំពេញរណ្ដៅនីមួយៗ។",
+          "courseD_farmer_conditionals6_b": "កត់សំគាល់ថាកសិករត្រូវការផ្លាស់ទីទៅមុខនិងចុះក្រោមជាច្រើនដងតាមលំនាំជណ្តើរ។",
+          "courseD_farmer_conditionals6_c": "នេះជាគំរូជំហានជណ្តើរដើម្បីប្រើប្រាស់ប្លុកខាងក្រោម\n\n-   ផ្លាស់ទីទៅមុខ\n-   បំពេញរណ្ដៅ\n-   បត់ស្ដាំ\n-   ផ្លាស់ទីទៅមុខ\n-   បំពេញរណ្ដៅ\n-   បត់ឆ្វេង\n\nតើអ្នកត្រូវការប្រើប្រាស់ជំហាននៃជណ្ដើរនេះប៉ុន្មានដង?\n\nត្រូវប្រាកដថាអ្នងកំពុងប្រើប្រាស់ក្នុងការបំពេញរណ្ដៅ​​ 'ខណៈពេលដែលមានរណ្ដៅមួយ'។​ "
         },
         "courseD_harvester_nested_loops_challenge1_2021": {
           "courseD_harvester_nested_loops_challenge1_a": "សាកល្បងដើរតាមផ្លូវនេះដើម្បីទៅដល់ពោតទាំងអស់!",
@@ -5160,7 +5167,7 @@
           "courseA_maze_seq10_b": "អ្នកនឹងត្រូវប្រើប្រាស់ទិសដៅ៣ផ្សេងគ្នា ដើម្បីដោះស្រាយរូបផ្គុំនេះ។"
         },
         "courseA_maze_seq12022": {
-          "courseA_maze_seq1_a": "ប្រសិនបើអ្នកកំពុងមានបញ្ហាក្នុងការផ្លាស់ទីបក្សី សូមអ្នកប្រាកដថាប្លុកត្រូវបានរៀបតាមលំដាប់លំដោយ [blockly block] [0]",
+          "courseA_maze_seq1_a": "ប្រសិនបើអ្នកកំពុងមានបញ្ហាក្នុងការផ្លាស់ទីបក្សី សូមអ្នកប្រាកដថាប្លុកត្រូវបានរៀបតាមលំដាប់លំដោយ <xml>\n  <block type=\"when_run\"/>\n</xml>",
           "courseA_maze_seq1_b": "តួអង្គបក្សីតម្រូវអោយផ្លាស់ទីទៅខាងលិចចំនួន ៣ ដងដើម្បីទៅដល់តួអង្គជ្រូក។ ចូរប្រើប្លុកនេះ <xml><block type=\"maze_moveWest\"/></xml>"
         },
         "courseA_maze_seq132022": {
@@ -5180,7 +5187,7 @@
           "courseA_maze_seq8_a": "ប្រសិនបើអ្នកគិតមិនចេញ ព្យាយាមគូររូបលើក្រដាសដើម្បីឃើញពីរបៀបដែលតួអង្គបក្សីគួរបំលាស់ទី"
         },
         "courseA_maze_seq_challenge12022": {
-          "courseA_maze_seq_challenge1_a": "មានដំណោះស្រាយពីរចំពោះល្បែងផ្គុំរូបនេះ។"
+          "courseA_maze_seq_challenge1_a": "មានវិធីពីរយ៉ាងក្នុងការដោះស្រាយចំណោទនេះ ។"
         },
         "courseA_maze_seq_challenge22022": {
           "courseA_maze_seq_challenge2_a": "ព្យាយាមរាប់ចន្លោះជាមួយម្រាមដៃរបស់អ្នក។ ត្រូវចាំថាមិនចាំបាច់រាប់ចន្លោះដែលអ្នកចាប់ផ្ដើមទេ!"
@@ -5236,7 +5243,7 @@
           "courseB_collector_loops1_a": "ប្លុក <xml><block type=\"collector_collect_simplified\"/></xml> ប្រើដើម្បីប្រមូលយកកំណប់នៅពេលដែល Laurel ឈរនៅលើវា។"
         },
         "courseB_collector_loops22022": {
-          "courseB_collector_loops2_a": "អ្នកនឹងត្រូវផ្លាស់ទីជាមុនសិន មុនពេលអ្នកអាចប្រមូលកំណប់ណាមួយ។ ",
+          "courseB_collector_loops2_a": "អ្នកនឹងត្រូវផ្លាស់ទីជាមុនសិន មុនពេលអ្នកអាចប្រមូលកំណប់ណាមួយ។",
           "courseB_collector_loops2_b": "នៅពេលអ្នកដល់កំណប់នីមួយៗ ប្រើប្លុក <xml><block type=\"collector_collect\"/></xml> ដើម្បីប្រមូលយកវា។"
         },
         "courseB_collector_loops32022": {
@@ -5318,7 +5325,7 @@
         },
         "courseB_playlab_events32022": {
           "courseB_playlab_events3_a": "នេះជាប្លុកដែលអ្នកគួរប្រើ ដើម្បីបន្ថែមព្រឹត្តិការណ៍៖\n\n<xml>\n<block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">0</title>\n  </block>\n  </xml>",
-          "courseB_playlab_events3_b": "នេះជាប្លុកដែលអ្នកត្រូវផ្លាស់ប្តូរអារម្មណ៍របស់ Daisy៖\n\n<xml>\n<block type=\"studio_setSpriteEmotion\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">random</title>\n  </block>\n  </xml>"
+          "courseB_playlab_events3_b": "នេះជាប្លុកដែលអ្នកត្រូវផ្លាស់ប្តូរ អារម្មណ៍របស់ Daisy៖\n\n<xml>\n<block type=\"studio_setSpriteEmotion\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">random</title>\n  </block>\n  </xml>"
         },
         "courseB_playlab_events42022": {
           "courseB_playlab_events4_a": "នេះគឺជាព្រឹត្តិការណ៍ដែលគ្រប់គ្រងព្រួញខាងឆ្វេង៖\n\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">left</title>\n  </block>\n  </xml>",
@@ -5345,9 +5352,9 @@
         },
         "courseB_playlab_events_challenge22022": {
           "courseB_playlab_events_challenge2_a": "សត្វនីមួយៗនៅក្នុងហ្គេម គួរតែបាត់ខ្លួននៅពេលចុច។ ហើយក៏គួរតែបង្ហាញខ្លួនមកវិញផងដែរបន្ទាប់ពីមួយឬពីរវិនាទី!",
-          "courseB_playlab_events_challenge2_b": "ប្រើប្លុកព្រឹត្តិការណ៍ផ្សេងៗ ដើម្បីធ្វើឱ្យសត្វដទៃទៀតបាត់ខ្លួន!\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">1</title>\n  </block>\n  </xml>",
-          "courseB_playlab_events_challenge2_c": "ប្រើពាក្យបញ្ជាបន្ថែមដើម្បីចាក់សំឡេងឬផ្ដល់ពិន្ទុនៅពេលអ្នកចុចលើសត្វ!\n\n<xml>\n  <block type=\"studio_playSound\">\n    <title name=\"SOUND\">slap</title>\n  </block>\n  <block type=\"studio_changeScore\"/></xml>",
-          "courseB_playlab_events_challenge2_d": "ដាក់បញ្ចូលគ្នា!\n\nធ្វើឱ្យសត្វខ្លះផ្តល់ពិន្ទុច្រើនជាងអ្នកដទៃ។\nប្រើសំឡេងខុសគ្នា។\nផ្លាស់ប្តូរអារម្មណ៍របស់សត្វ!"
+          "courseB_playlab_events_challenge2_b": "ប្រើប្លុកព្រឹត្តិការណ៍ផ្សេងៗដើម្បីធ្វើឱ្យសត្វដទៃទៀតបាត់!\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">1</title>\n  </block>\n  </xml>",
+          "courseB_playlab_events_challenge2_c": "ប្រើពាក្យបញ្ជាបន្ថែមដើម្បីចាក់សំឡេងឬពិន្ទុនៅពេលអ្នកចុចលើសត្វ!\n\n<xml>\n  <block type=\"studio_playSound\">\n    <title name=\"SOUND\">slap</title>\n  </block>\n  <block type=\"studio_changeScore\"/></xml>",
+          "courseB_playlab_events_challenge2_d": "បញ្ចូលគ្នា!\n\nធ្វើឱ្យសត្វខ្លះផ្តល់ពិន្ទុច្រើនជាងអ្នកដទៃ។\nប្រើសំឡេងខុសគ្នា។\nផ្លាស់ប្តូរអារម្មណ៍របស់សត្វ!"
         },
         "courseB_starWars_prog12022": {
           "courseB_starWars_prog1_a": "ព្យាយាមបន្ថែមប្លុកម្ដងមួយៗ បន្ទាប់មក ចុច \"▶ ប៊ូតុងដំណើរការ\" ដើម្បីពិនិត្យមើលថាមានអ្វីកើតឡើង។",
@@ -5669,13 +5676,14 @@
           "courseD_farmer_conditionals4_b": "នេះមើលទៅពិតជាប្រហាក់ប្រហែលគ្នាណាស់ជាមួយបញ្ហាមុននេះ ចំណុចដែលខុសគ្នាតែមួយគត់គឺ តើរង្វិលជុំមួយណាដែលអ្នកត្រូវការ។"
         },
         "courseD_farmer_while52022": {
-          "courseD_farmer_conditionals5a_a": "សាកល្បងដាក់ រង្វិលជុំ \"ខណៈពេល\" នៅក្នុងរង្វិលជុំ \"ម្ដងទៀត\"។",
-          "courseD_farmer_conditionals5a_b": "កសិករត្រូវការផ្លាស់ទីទៅមុខ សរុបចំនួន៥ដង ដើម្បីទៅដល់ចុងបញ្ចប់នៃជួរ។ តើកសិករត្រូវការធ្វើអ្វីទៀត?",
-          "courseD_farmer_conditionals5a_c": "ដើរទៅមុខ៥ដង។ នៅពេលអ្នកដើរទៅមុខ យកគំនរដីចេញដោយប្រើប្លុក \"ខណៈពេលដែលមានគំនរ\"។"
+          "courseD_farmer_conditionals5a_a": "សាកល្បងដាក់ រង្វិលជុំ \"ខណៈពេល\" នៅខាងក្នុងរង្វិលជុំ \"ម្ដងទៀត\"។",
+          "courseD_farmer_conditionals5a_b": "កសិករត្រូវការផ្លាស់ទីទៅមុខ សរុបចំនួន៥ដង ដើម្បីទៅដល់ចុងបញ្ចប់នៃជួរ។ តើកសិករត្រូវធ្វើអ្វីបន្តទៀត?",
+          "courseD_farmer_conditionals5a_c": "ដើរទៅមុខចំនួន៥ដង។ រាល់ពេលដែលអ្នកដើរទៅខាងមុខ យកគំនរដីចេញដោយប្រើប្លុក \"ខណៈពេលដែលមានគំនរ\"។"
         },
         "courseD_farmer_while62022": {
-          "courseD_farmer_conditionals6_a": "ត្រូវប្រាកដថាអ្នកកំពុងប្រើរង្វិលជុំ `ខណៈពេល` ដើម្បីគណនាចំនួនដងដើម្បីបំពេញរន្ធនីមួយៗ។",
-          "courseD_farmer_conditionals6_b": "កត់សំគាល់ថាកសិករត្រូវការឆ្ពោះទៅមុខនិងចុះក្រោមជាច្រើនដងតាមលំនាំជណ្តើរ។"
+          "courseD_farmer_conditionals6_a": "ត្រូវប្រាកដថាអ្នកកំពុងប្រើប្រាស់រង្វិលជុំ `ខណៈពេល` ដើម្បីគណនាចំនួនដងដើម្បីបំពេញរណ្ដៅនីមួយៗ។",
+          "courseD_farmer_conditionals6_b": "កត់សំគាល់ថាកសិករត្រូវការផ្លាស់ទីទៅមុខនិងចុះក្រោមជាច្រើនដងតាមលំនាំជណ្តើរ។",
+          "courseD_farmer_conditionals6_c": "នេះជាគំរូជំហានជណ្តើរដើម្បីប្រើប្រាស់ប្លុកខាងក្រោម\n\n-   ផ្លាស់ទីទៅមុខ\n-   បំពេញរណ្ដៅ\n-   បត់ស្ដាំ\n-   ផ្លាស់ទីទៅមុខ\n-   បំពេញរណ្ដៅ\n-   បត់ឆ្វេង\n\nតើអ្នកត្រូវការប្រើប្រាស់ជំហាននៃជណ្ដើរនេះប៉ុន្មានដង?\n\nត្រូវប្រាកដថាអ្នងកំពុងប្រើប្រាស់ក្នុងការបំពេញរណ្ដៅ​​ 'ខណៈពេលដែលមានរណ្ដៅមួយ'។​ "
         },
         "courseD_harvester_nested_loops_challenge12022": {
           "courseD_harvester_nested_loops_challenge1_a": "សាកល្បងដើរតាមផ្លូវនេះដើម្បីទៅដល់ពោតទាំងអស់!",
@@ -5790,23 +5798,23 @@
           "courseF_bee_for_challenge2_d": "\\*\\* ដំណោះស្រាយ៖ \\*\\*\n\n[បិទប្លុក] [0]"
         },
         "courseB_Scrat_ramp1_2021": {
-          "1": "ប្រសិនបើកំប្រុកមិនធ្វើអ្វីដូចដែលអ្នកចង់បានទេ ត្រូវប្រាកដថាកូដប្លុកទាំងពីរត្រូវបានភ្ជាប់ជាមួយគ្នា ហើយបន្ទាប់មកចុច \"▶ ប៊ូតុងដំណើរការ\"!​ ម្តងទៀត។",
-          "2": "កុំខ្លាចការបង្កើតកំហុស! សាកល្បងធ្វើ​ ហើយ​បើ​សិនមិនដំណើរការ សូម​សាកល្បង​វិធីសាស្រ្តផ្សេងៗទៀត!"
+          "1": "ប្រសិនបើកំប្រុកមិនធ្វើអ្វីដូចដែលអ្នកចង់បាន ត្រូវប្រាកដថា ប្លុកទាំងពីរត្រូវបានភ្ជាប់ជាមួយគ្នា ហើយបន្ទាប់មកចុច \"▶ ប៊ូតុងដំណើរការ\"!​ ម្តងទៀត។",
+          "2": "កុំខ្លាចការបង្កើតកំហុស! សាកល្បងធ្វើ​ ហើយ​ប្រសិនបើមិនដំណើរការ សូម​សាកល្បង​វិធីសាស្រ្តផ្សេងៗទៀត!"
         },
         "courseB_Scrat_ramp2_2021": {
-          "1": "កូដប្លុករបស់អ្នកគួរតែមើលទៅដូចនេះ៖\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "1": "កូដប្លុករបស់អ្នកគួរតែដូចខាងក្រោមនេះ៖\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseB_Scrat_ramp3a_2021": {
-          "1": "កូដប្លុករបស់អ្នកគួរតែមើលទៅដូចនេះ៖\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveNorth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "1": "កូដប្លុករបស់អ្នកគួរតែដូចខាងក្រោមនេះ៖\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveNorth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseB_Scrat_ramp3b_2021": {
-          "1": "កូដប្លុករបស់អ្នកគួរតែមើលទៅដូចនេះ៖\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveSouth\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveEast\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "1": "កូដប្លុករបស់អ្នកគួរតែដូចខាងក្រោមនេះ៖\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveSouth\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveEast\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseB_Scrat_ramp4a_2021": {
-          "1": "កូដប្លុករបស់អ្នកគួរតែមើលទៅដូចនេះ៖\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveSouth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "1": "កូដប្លុករបស់អ្នកគួរតែដូចខាងក្រោមនេះ៖\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveSouth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseB_Scrat_ramp5a_2021": {
-          "1": "កូដប្លុករបស់អ្នកគួរតែមើលទៅដូចនេះ៖\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveWest\">\n        <next>\n          <block type=\"maze_moveWest\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "1": "កូដប្លុករបស់អ្នកគួរតែដូចខាងក្រោមនេះ៖\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveWest\">\n        <next>\n          <block type=\"maze_moveWest\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseB_Scrat_ramp12022": {
           "2": "កុំខ្លាចការបង្កើតកំហុស! សាកល្បងធ្វើ​ ហើយ​ប្រសិនបើមិនដំណើរការ សូម​សាកល្បង​វិធីសាស្រ្តផ្សេងៗទៀត!",
@@ -6220,7 +6228,7 @@
         "courseA_harvester_seq102022": {
           "courseA_harvester_seq10_a": "តើអ្នក​ជាប់គាំង​មែន​ទេ? សាកល្បង​សរ​សេរ​ជំហាន​នៅលើក្រ​ដា​ស់ជាមុន​សិន។",
           "courseA_harvester_seq10_b": "អ្នក​ត្រូវ `ផ្លាស់ទីទៅខាង​កើត`, បន្ទាប់មក `ផ្លាស់ទីទៅខាង​ជើង`។ ធ្វើបែបនេះចំនួន២​ដង។​ កុំភ្លេច​ប្រមូល​យក​ពោត​ទាំង​អ​ស់ផង​ណា!",
-          "courseA_harvester_seq10_c": "សាកល្បង​ប្រើផ្លុវនេះដើម្បីរើសពោត​ទាំង់អ​ស់។"
+          "courseA_harvester_seq10_c": "សាកល្បង​ប្រើផ្លូវនេះដើម្បីប្រមូលពោត​ទាំង់អ​ស់។"
         },
         "courseA_harvester_seq10_2019": {
           "courseA_harvester_seq10_a": "តើអ្នក​ជាប់គាំង​មែន​ទេ? សាកល្បង​សរ​សេរ​ជំហាន​នៅលើក្រ​ដា​ស់ជាមុន​សិន។",
@@ -6316,7 +6324,7 @@
         "courseA_harvester_seq52022": {
           "courseA_harvester_seq5_a": "តើប្លុកមួយ​ណាដែលនាំឱ្យ ​អ្នក​ប្រមូលផល​ផ្លាស់ទីខុស​ផ្លូវ?",
           "courseA_harvester_seq5_b": "អ្នក​ត្រូវ​តែដក​ប្លុកមួយ​ចេញ។",
-          "courseA_harvester_seq5_c": "ដក​ប្លុកនេះចេញ​ពីកូដ​រប​ស់អ្នក!\n\n<xml><block type=\"maze_moveNorth\"/></xml>"
+          "courseA_harvester_seq5_c": "ដកប្លុកនេះចេញពីកូដរបស់អ្នក!\n\n<xml><block type=\"maze_moveNorth\"/></xml>"
         },
         "courseA_harvester_seq5_2019": {
           "courseA_harvester_seq5_a": "តើប្លុកមួយ​ណាដែលនាំឱ្យ ​អ្នក​ប្រមូលផល​ផ្លាស់ទីខុស​ផ្លូវ?",
@@ -6353,7 +6361,7 @@
           "courseA_harvester_seq7_b": "តើអ្នក​មាន​ប​ញ្ហាឬ​ទេ​? ​នេះ​គឺជាផ្លូវ​​ដែល​អ្នក​ប្រមូល​ផល​គួរតែដើរតាម។ ​"
         },
         "courseA_harvester_seq72022": {
-          "courseA_harvester_seq7_a": "ប្រសិនបើអ្នក​ធ្វើមិន​ចេញ ព្យា​យាម​ដោះស្រាយ​ល្បែង​ផ្គុំរូប​ជាពីរ​ផ្នែក។​ ផ្នែក​ទីមួយមុនកាច់ជ្រុង ហើយ​ផ្នែក​ទីពីរក្រោយកាច់ជ្រុង។",
+          "courseA_harvester_seq7_a": "ព្យាយាម​ដោះស្រាយ​ប​ញ្ហា​នេះដោយ​ចែក​ជា ២ផ្នែក, ផ្នែក​ទីមួយមុនកាច់​ជ្រុង ​ហើយ​ផ្នែក​ទី២ បន្ទាប់កាច់ជ្រុង។",
           "courseA_harvester_seq7_b": "តើអ្នក​មាន​ប​ញ្ហាឬ​ទេ​? ​នេះ​គឺជាផ្លូវ​​ដែល​អ្នក​ប្រមូល​ផល​គួរតែដើរតាម។ ​"
         },
         "courseA_harvester_seq7_2019": {
@@ -6389,7 +6397,7 @@
           "courseA_harvester_seq9_c": "អ្នក​គួរតែជ្រើសរើស​ផ្លូវនេះដើម្បីរើសពោត​ទាំង​អ​ស់។"
         },
         "courseA_harvester_seq92022": {
-          "courseA_harvester_seq9_a": "ដំណើរការកូដ ២, ៣ ដង​ដើម្បីមើល​ថា​មាន​អ្វី​កើត​ឡើង។ តើអ្នកប្រមូលផល ​ឈប់នៅត្រង់​ណា?",
+          "courseA_harvester_seq9_a": "ដំណើរការកូដ ២, ៣ ដង​ដើម្បីមើល​ថា​មាន​អ្វី​កើត​ឡើង។ តើអ្នក​ប្រមូល​ផល ​ឈប់នៅត្រង់​ណា?",
           "courseA_harvester_seq9_b": "សូមកុំភ្លេចប្រមូលយកពោត​ទាំង​​អ​ស់​!​ អ្នក​នឹង​ត្រូវការ **3** ប្លុក \"រើសពោត\"​។",
           "courseA_harvester_seq9_c": "អ្នក​គួរតែជ្រើសរើស​ផ្លូវនេះដើម្បីរើសពោត​ទាំង​អ​ស់។"
         },
@@ -6409,7 +6417,7 @@
           "courseA_harvester_seq9_c": "អ្នក​គួរតែជ្រើសរើស​ផ្លូវនេះដើម្បីរើសពោត​ទាំង​អ​ស់។"
         },
         "courseA_maze_seq5a2022": {
-          "1": "និយាយអំពីជំហាននីមួយៗឱ្យខ្លាំងៗ ហើយមើលថាតើវាជួយអ្នករកចម្លើយដែរឬទេ"
+          "1": "និយាយពីជំហានធ្វើខ្លាំងៗមួយៗ។  តើវិធីសាស្រ្តនេះអាចជួយអ្នករកចម្លើយបានដែលឬទេ?"
         },
         "courseA_maze_seq5a_2018": {
           "1": "និយាយពីជំហានធ្វើខ្លាំងៗមួយៗ។  តើវិធីសាស្រ្តនេះអាចជួយអ្នករកចម្លើយបានដែលឬទេ?"
@@ -7128,6 +7136,228 @@
         "courseD_maze_until1_2021": {
           "courseD_maze_until1_a": "តើ​មាន​លំដាប់​ណាផ្សេងទៀត​ដែល​អ្នក​អាច​ធ្វើអោយកូដ​របស់​អ្នក​ខ្លីជាងមុនបានទេ?",
           "courseD_maze_until1_b": "សាកល្បងប្រើប្រាស់លំដាប់ដដែលៗជាប់គ្នាច្រើនដងដើម្បីដោះស្រាយរូបផ្គុំនេះ។"
+        },
+        "courseD_artist_52022": {
+          "1": "ប្រសិនបើអ្នកចង់ប្តូររាងរបស់រូបអ្នក, អ្នកនឹងត្រូវប្តូរមុំនៃផ្នែកនីមួយៗរបស់ពួកគេផងដែរ!"
+        },
+        "courseD_artist_5_2018": {
+          "1": "ប្រសិនបើអ្នកចង់ប្តូររាងរបស់រូបអ្នក, អ្នកនឹងត្រូវប្តូរមុំនៃផ្នែកនីមួយៗរបស់ពួកគេផងដែរ!"
+        },
+        "courseD_artist_5_2018_2019": {
+          "1": "ប្រសិនបើអ្នកចង់ប្តូររាងរបស់រូបអ្នក, អ្នកនឹងត្រូវប្តូរមុំនៃផ្នែកនីមួយៗរបស់ពួកគេផងដែរ!"
+        },
+        "courseD_artist_5_2018_2020": {
+          "1": "ប្រសិនបើអ្នកចង់ប្តូររាងរបស់រូបអ្នក, អ្នកនឹងត្រូវប្តូរមុំនៃផ្នែកនីមួយៗរបស់ពួកគេផងដែរ!"
+        },
+        "courseD_artist_5_2021": {
+          "1": "ប្រសិនបើអ្នកចង់ប្តូររាងរបស់រូបអ្នក, អ្នកនឹងត្រូវប្តូរមុំនៃផ្នែកនីមួយៗរបស់ពួកគេផងដែរ!"
+        },
+        "courseD_farmer_while7": {
+          "courseD_farmer_conditionals8_a": "ប្លុក​​  `ខណៈពេលដែលផ្លូវទៅមុខ`​ អនុញ្ញាតឱ្យអ្នកបន្តដំណើរទៅមុខ ទោះបីជាអ្នកមិនដឹងថាមានការ៉េចំនួនប៉ុន្មានក្នុងមួយផ្លូវក៏ដោយ។",
+          "courseD_farmer_conditionals8_b": "ការដាក់រង្វិលជុំ 'ខណៈពេលដែលផ្លូវទៅមុខ' នៅខាងក្នុងនៃរង្វិលជុំម្តងទៀតអាចជួយអ្នកក្នុងល្បែងផ្គុំរូបនេះបាន។",
+          "courseD_farmer_conditionals8_c": "តើអ្នកត្រូវការធ្វើអ្វីខ្លះនៅចុងបញ្ចប់នៃផ្លូវនីមួយៗ?"
+        },
+        "courseD_farmer_while72022": {
+          "courseD_farmer_conditionals8_a": "ប្លុក​​  `ខណៈពេលដែលផ្លូវទៅមុខ`​ អនុញ្ញាតឱ្យអ្នកបន្តដំណើរទៅមុខ ទោះបីជាអ្នកមិនដឹងថាមានការ៉េចំនួនប៉ុន្មានក្នុងមួយផ្លូវក៏ដោយ។",
+          "courseD_farmer_conditionals8_b": "ការដាក់រង្វិលជុំ 'ខណៈពេលដែលផ្លូវទៅមុខ' នៅខាងក្នុងនៃរង្វិលជុំម្តងទៀតអាចជួយអ្នកក្នុងល្បែងផ្គុំរូបនេះបាន។",
+          "courseD_farmer_conditionals8_c": "តើអ្នកត្រូវការធ្វើអ្វីខ្លះនៅចុងបញ្ចប់នៃផ្លូវនីមួយៗ?"
+        },
+        "courseD_farmer_while7_2018": {
+          "courseD_farmer_conditionals8_a": "ប្លុក​​  `ខណៈពេលដែលផ្លូវទៅមុខ`​ អនុញ្ញាតឱ្យអ្នកបន្តដំណើរទៅមុខ ទោះបីជាអ្នកមិនដឹងថាមានការ៉េចំនួនប៉ុន្មានក្នុងមួយផ្លូវក៏ដោយ។",
+          "courseD_farmer_conditionals8_b": "ការដាក់រង្វិលជុំ 'ខណៈពេលដែលផ្លូវទៅមុខ' នៅខាងក្នុងនៃរង្វិលជុំម្តងទៀតអាចជួយអ្នកក្នុងល្បែងផ្គុំរូបនេះបាន។",
+          "courseD_farmer_conditionals8_c": "តើអ្នកត្រូវការធ្វើអ្វីខ្លះនៅចុងបញ្ចប់នៃផ្លូវនីមួយៗ?"
+        },
+        "courseD_farmer_while7_2019": {
+          "courseD_farmer_conditionals8_a": "ប្លុក​​  `ខណៈពេលដែលផ្លូវទៅមុខ`​ អនុញ្ញាតឱ្យអ្នកបន្តដំណើរទៅមុខ ទោះបីជាអ្នកមិនដឹងថាមានការ៉េចំនួនប៉ុន្មានក្នុងមួយផ្លូវក៏ដោយ។",
+          "courseD_farmer_conditionals8_b": "ការដាក់រង្វិលជុំ 'ខណៈពេលដែលផ្លូវទៅមុខ' នៅខាងក្នុងនៃរង្វិលជុំម្តងទៀតអាចជួយអ្នកក្នុងល្បែងផ្គុំរូបនេះបាន។",
+          "courseD_farmer_conditionals8_c": "តើអ្នកត្រូវការធ្វើអ្វីខ្លះនៅចុងបញ្ចប់នៃផ្លូវនីមួយៗ?"
+        },
+        "courseD_farmer_while7_2020": {
+          "courseD_farmer_conditionals8_a": "ប្លុក​​  `ខណៈពេលដែលផ្លូវទៅមុខ`​ អនុញ្ញាតឱ្យអ្នកបន្តដំណើរទៅមុខ ទោះបីជាអ្នកមិនដឹងថាមានការ៉េចំនួនប៉ុន្មានក្នុងមួយផ្លូវក៏ដោយ។",
+          "courseD_farmer_conditionals8_b": "ការដាក់រង្វិលជុំ 'ខណៈពេលដែលផ្លូវទៅមុខ' នៅខាងក្នុងនៃរង្វិលជុំម្តងទៀតអាចជួយអ្នកក្នុងល្បែងផ្គុំរូបនេះបាន។",
+          "courseD_farmer_conditionals8_c": "តើអ្នកត្រូវការធ្វើអ្វីខ្លះនៅចុងបញ្ចប់នៃផ្លូវនីមួយៗ?"
+        },
+        "courseD_farmer_while7_2021": {
+          "courseD_farmer_conditionals8_a": "ប្លុក​​  `ខណៈពេលដែលផ្លូវទៅមុខ`​ អនុញ្ញាតឱ្យអ្នកបន្តដំណើរទៅមុខ ទោះបីជាអ្នកមិនដឹងថាមានការ៉េចំនួនប៉ុន្មានក្នុងមួយផ្លូវក៏ដោយ។",
+          "courseD_farmer_conditionals8_b": "ការដាក់រង្វិលជុំ 'ខណៈពេលដែលផ្លូវទៅមុខ' នៅខាងក្នុងនៃរង្វិលជុំម្តងទៀតអាចជួយអ្នកក្នុងល្បែងផ្គុំរូបនេះបាន។",
+          "courseD_farmer_conditionals8_c": "តើអ្នកត្រូវការធ្វើអ្វីខ្លះនៅចុងបញ្ចប់នៃផ្លូវនីមួយៗ?"
+        },
+        "courseD_farmer_while8": {
+          "courseD_farmer_conditionals8_a": "អ្នកនឹងត្រូវការប្រើប្រាស់រង្វិលជុំ 'ខណៈពេលដែល ' ច្រើនជាងមួយ។",
+          "courseD_farmer_conditionals8_b": "រាល់រណ្ដៅទាំងអស់ដែលស្ថិតនៅចុងបញ្ចប់នៃផ្លូវ ដូច្នេះសូមប្រើ 'ខណៈពេលដែលផ្លូវទៅមុខ' មុនពេលប្រើ 'ខណៈពេលដែលជារណ្ដៅមួយ'​ ។",
+          "courseD_farmer_conditionals8_c": "សូមកត់សម្គាល់ថាអ្នកត្រូវធ្វើម្តងទៀតចំនួនប្រាំមួយដង \"ខណៈពេលដែលផ្លូវទៅមុខ\" \"ខណៈពេលដែលមានរណ្ដៅ\" ។"
+        },
+        "courseD_farmer_while82022": {
+          "courseD_farmer_conditionals8_a": "អ្នកនឹងត្រូវការប្រើប្រាស់រង្វិលជុំ 'ខណៈពេលដែល ' ច្រើនជាងមួយ។",
+          "courseD_farmer_conditionals8_b": "រាល់រណ្ដៅទាំងអស់ដែលស្ថិតនៅចុងបញ្ចប់នៃផ្លូវ ដូច្នេះសូមប្រើ 'ខណៈពេលដែលផ្លូវទៅមុខ' មុនពេលប្រើ 'ខណៈពេលដែលជារណ្ដៅមួយ'​ ។",
+          "courseD_farmer_conditionals8_c": "សូមកត់សម្គាល់ថាអ្នកត្រូវធ្វើម្តងទៀតចំនួនប្រាំមួយដង \"ខណៈពេលដែលផ្លូវទៅមុខ\" \"ខណៈពេលដែលមានរណ្ដៅ\" ។"
+        },
+        "courseD_farmer_while8_2018": {
+          "courseD_farmer_conditionals8_a": "អ្នកនឹងត្រូវការប្រើប្រាស់រង្វិលជុំ 'ខណៈពេលដែល ' ច្រើនជាងមួយ។",
+          "courseD_farmer_conditionals8_b": "រាល់រណ្ដៅទាំងអស់ដែលស្ថិតនៅចុងបញ្ចប់នៃផ្លូវ ដូច្នេះសូមប្រើ 'ខណៈពេលដែលផ្លូវទៅមុខ' មុនពេលប្រើ 'ខណៈពេលដែលជារណ្ដៅមួយ'​ ។",
+          "courseD_farmer_conditionals8_c": "សូមកត់សម្គាល់ថាអ្នកត្រូវធ្វើម្តងទៀតចំនួនប្រាំមួយដង \"ខណៈពេលដែលផ្លូវទៅមុខ\" \"ខណៈពេលដែលមានរណ្ដៅ\" ។"
+        },
+        "courseD_farmer_while8_2019": {
+          "courseD_farmer_conditionals8_a": "អ្នកនឹងត្រូវការប្រើប្រាស់រង្វិលជុំ 'ខណៈពេលដែល ' ច្រើនជាងមួយ។",
+          "courseD_farmer_conditionals8_b": "រាល់រណ្ដៅទាំងអស់ដែលស្ថិតនៅចុងបញ្ចប់នៃផ្លូវ ដូច្នេះសូមប្រើ 'ខណៈពេលដែលផ្លូវទៅមុខ' មុនពេលប្រើ 'ខណៈពេលដែលជារណ្ដៅមួយ'​ ។",
+          "courseD_farmer_conditionals8_c": "សូមកត់សម្គាល់ថាអ្នកត្រូវធ្វើម្តងទៀតចំនួនប្រាំមួយដង \"ខណៈពេលដែលផ្លូវទៅមុខ\" \"ខណៈពេលដែលមានរណ្ដៅ\" ។"
+        },
+        "courseD_farmer_while8_2020": {
+          "courseD_farmer_conditionals8_a": "អ្នកនឹងត្រូវការប្រើប្រាស់រង្វិលជុំ 'ខណៈពេលដែល ' ច្រើនជាងមួយ។",
+          "courseD_farmer_conditionals8_b": "រាល់រណ្ដៅទាំងអស់ដែលស្ថិតនៅចុងបញ្ចប់នៃផ្លូវ ដូច្នេះសូមប្រើ 'ខណៈពេលដែលផ្លូវទៅមុខ' មុនពេលប្រើ 'ខណៈពេលដែលជារណ្ដៅមួយ'​ ។",
+          "courseD_farmer_conditionals8_c": "សូមកត់សម្គាល់ថាអ្នកត្រូវធ្វើម្តងទៀតចំនួនប្រាំមួយដង \"ខណៈពេលដែលផ្លូវទៅមុខ\" \"ខណៈពេលដែលមានរណ្ដៅ\" ។"
+        },
+        "courseD_farmer_while8_2021": {
+          "courseD_farmer_conditionals8_a": "អ្នកនឹងត្រូវការប្រើប្រាស់រង្វិលជុំ 'ខណៈពេលដែល ' ច្រើនជាងមួយ។",
+          "courseD_farmer_conditionals8_b": "រាល់រណ្ដៅទាំងអស់ដែលស្ថិតនៅចុងបញ្ចប់នៃផ្លូវ ដូច្នេះសូមប្រើ 'ខណៈពេលដែលផ្លូវទៅមុខ' មុនពេលប្រើ 'ខណៈពេលដែលជារណ្ដៅមួយ'​ ។",
+          "courseD_farmer_conditionals8_c": "សូមកត់សម្គាល់ថាអ្នកត្រូវធ្វើម្តងទៀតចំនួនប្រាំមួយដង \"ខណៈពេលដែលផ្លូវទៅមុខ\" \"ខណៈពេលដែលមានរណ្ដៅ\" ។"
+        },
+        "courseF_artist_for1": {
+          "courseF_artist_for1_a": "តើអ្នកអាចគូរូបដូចរូបខាងក្រោមនេះ\n\n![](https://images.code.org/80ae9ab3e449db1ed4e13c86239f7617-image-1475906794954.06.12.png)"
+        },
+        "courseF_artist_for10": {
+          "courseF_artist_for10_a": "រូបភាព​ក្នុង​គំនូរ​ត្រូវ​បាន​បង្កើត​ឡើង​ដោយ​ប្រើ​បញ្ជារ​សម្រាប់ `set alpha` និង `counter`/10 ដូចជា​ទំហំ​ជក់។",
+          "courseF_artist_for10_b": "រូបភាពក្នុងគំនូរប្រើរង្វែរ 61 ដឺក្រេ។",
+          "courseF_artist_for10_c": "តើអ្នកចង់​ដឹង​ថា​រូបភាព​គំរូ​ធ្វើ​ឡើង​ដោយ​របៀប​ណា?\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"draw_colour\" inline=\"true\" id=\"draw-color\">\n        <value name=\"COLOUR\">\n          <block type=\"colour_picker\">\n            <title name=\"COLOUR\">#ff0000</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"controls_for_counter\" inline=\"true\">\n          <mutation counter=\"counter\"></mutation>\n            <value name=\"FROM\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">15</title>\n              </block>\n            </value>\n            <value name=\"TO\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">175</title>\n              </block>\n            </value>\n            <value name=\"BY\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">2</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"draw_width\" inline=\"false\">\n                <value name=\"WIDTH\">\n                  <block type=\"math_arithmetic\" inline=\"true\">\n                    <title name=\"OP\">DIVIDE</title>\n                    <value name=\"A\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">counter</title>\n                      </block>\n                    </value>\n                    <value name=\"B\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">10</title>\n                      </block>\n                    </value>\n                  </block>\n                </value>\n                <next>\n                  <block type=\"alpha\" inline=\"true\" id=\"alpha\">\n                    <value name=\"VALUE\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">counter</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"draw_move\" inline=\"true\">\n                        <title name=\"DIR\">moveForward</title>\n                        <value name=\"VALUE\">\n                          <block type=\"variables_get\">\n                            <title name=\"VAR\">counter</title>\n                          </block>\n                        </value>\n                        <next>\n                          <block type=\"draw_turn\" inline=\"true\">\n                            <title name=\"DIR\">turnRight</title>\n                            <value name=\"VALUE\">\n                              <block type=\"math_number\">\n                                <title name=\"NUM\">61</title>\n                              </block>\n                            </value>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseF_artist_for102022": {
+          "courseF_artist_for10_a": "រូបភាព​ក្នុង​គំនូរ​ត្រូវ​បាន​បង្កើត​ឡើង​ដោយ​ប្រើ​បញ្ជារ​សម្រាប់ `set alpha` និង `counter`/10 ដូចជា​ទំហំ​ជក់។",
+          "courseF_artist_for10_b": "រូបភាពក្នុងគំនូរប្រើរង្វែរ 61 ដឺក្រេ។",
+          "courseF_artist_for10_c": "តើអ្នកចង់​ដឹង​ថា​រូបភាព​គំរូ​ធ្វើ​ឡើង​ដោយ​របៀប​ណា?\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"draw_colour\" inline=\"true\" id=\"draw-color\">\n        <value name=\"COLOUR\">\n          <block type=\"colour_picker\">\n            <title name=\"COLOUR\">#ff0000</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"controls_for_counter\" inline=\"true\">\n          <mutation counter=\"counter\"></mutation>\n            <value name=\"FROM\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">15</title>\n              </block>\n            </value>\n            <value name=\"TO\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">175</title>\n              </block>\n            </value>\n            <value name=\"BY\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">2</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"draw_width\" inline=\"false\">\n                <value name=\"WIDTH\">\n                  <block type=\"math_arithmetic\" inline=\"true\">\n                    <title name=\"OP\">DIVIDE</title>\n                    <value name=\"A\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">counter</title>\n                      </block>\n                    </value>\n                    <value name=\"B\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">10</title>\n                      </block>\n                    </value>\n                  </block>\n                </value>\n                <next>\n                  <block type=\"alpha\" inline=\"true\" id=\"alpha\">\n                    <value name=\"VALUE\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">counter</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"draw_move\" inline=\"true\">\n                        <title name=\"DIR\">moveForward</title>\n                        <value name=\"VALUE\">\n                          <block type=\"variables_get\">\n                            <title name=\"VAR\">counter</title>\n                          </block>\n                        </value>\n                        <next>\n                          <block type=\"draw_turn\" inline=\"true\">\n                            <title name=\"DIR\">turnRight</title>\n                            <value name=\"VALUE\">\n                              <block type=\"math_number\">\n                                <title name=\"NUM\">61</title>\n                              </block>\n                            </value>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseF_artist_for10_2018": {
+          "courseF_artist_for10_a": "រូបភាព​ក្នុង​គំនូរ​ត្រូវ​បាន​បង្កើត​ឡើង​ដោយ​ប្រើ​បញ្ជារ​សម្រាប់ `set alpha` និង `counter`/10 ដូចជា​ទំហំ​ជក់។",
+          "courseF_artist_for10_b": "រូបភាពក្នុងគំនូរប្រើរង្វែរ 61 ដឺក្រេ។",
+          "courseF_artist_for10_c": "តើអ្នកចង់​ដឹង​ថា​រូបភាព​គំរូ​ធ្វើ​ឡើង​ដោយ​របៀប​ណា?\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"draw_colour\" inline=\"true\" id=\"draw-color\">\n        <value name=\"COLOUR\">\n          <block type=\"colour_picker\">\n            <title name=\"COLOUR\">#ff0000</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"controls_for_counter\" inline=\"true\">\n          <mutation counter=\"counter\"></mutation>\n            <value name=\"FROM\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">15</title>\n              </block>\n            </value>\n            <value name=\"TO\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">175</title>\n              </block>\n            </value>\n            <value name=\"BY\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">2</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"draw_width\" inline=\"false\">\n                <value name=\"WIDTH\">\n                  <block type=\"math_arithmetic\" inline=\"true\">\n                    <title name=\"OP\">DIVIDE</title>\n                    <value name=\"A\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">counter</title>\n                      </block>\n                    </value>\n                    <value name=\"B\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">10</title>\n                      </block>\n                    </value>\n                  </block>\n                </value>\n                <next>\n                  <block type=\"alpha\" inline=\"true\" id=\"alpha\">\n                    <value name=\"VALUE\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">counter</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"draw_move\" inline=\"true\">\n                        <title name=\"DIR\">moveForward</title>\n                        <value name=\"VALUE\">\n                          <block type=\"variables_get\">\n                            <title name=\"VAR\">counter</title>\n                          </block>\n                        </value>\n                        <next>\n                          <block type=\"draw_turn\" inline=\"true\">\n                            <title name=\"DIR\">turnRight</title>\n                            <value name=\"VALUE\">\n                              <block type=\"math_number\">\n                                <title name=\"NUM\">61</title>\n                              </block>\n                            </value>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseF_artist_for10_2019": {
+          "courseF_artist_for10_a": "រូបភាព​ក្នុង​គំនូរ​ត្រូវ​បាន​បង្កើត​ឡើង​ដោយ​ប្រើ​បញ្ជារ​សម្រាប់ `set alpha` និង `counter`/10 ដូចជា​ទំហំ​ជក់។",
+          "courseF_artist_for10_b": "រូបភាពក្នុងគំនូរប្រើរង្វែរ 61 ដឺក្រេ។",
+          "courseF_artist_for10_c": "តើអ្នកចង់​ដឹង​ថា​រូបភាព​គំរូ​ធ្វើ​ឡើង​ដោយ​របៀប​ណា?\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"draw_colour\" inline=\"true\" id=\"draw-color\">\n        <value name=\"COLOUR\">\n          <block type=\"colour_picker\">\n            <title name=\"COLOUR\">#ff0000</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"controls_for_counter\" inline=\"true\">\n          <mutation counter=\"counter\"></mutation>\n            <value name=\"FROM\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">15</title>\n              </block>\n            </value>\n            <value name=\"TO\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">175</title>\n              </block>\n            </value>\n            <value name=\"BY\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">2</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"draw_width\" inline=\"false\">\n                <value name=\"WIDTH\">\n                  <block type=\"math_arithmetic\" inline=\"true\">\n                    <title name=\"OP\">DIVIDE</title>\n                    <value name=\"A\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">counter</title>\n                      </block>\n                    </value>\n                    <value name=\"B\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">10</title>\n                      </block>\n                    </value>\n                  </block>\n                </value>\n                <next>\n                  <block type=\"alpha\" inline=\"true\" id=\"alpha\">\n                    <value name=\"VALUE\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">counter</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"draw_move\" inline=\"true\">\n                        <title name=\"DIR\">moveForward</title>\n                        <value name=\"VALUE\">\n                          <block type=\"variables_get\">\n                            <title name=\"VAR\">counter</title>\n                          </block>\n                        </value>\n                        <next>\n                          <block type=\"draw_turn\" inline=\"true\">\n                            <title name=\"DIR\">turnRight</title>\n                            <value name=\"VALUE\">\n                              <block type=\"math_number\">\n                                <title name=\"NUM\">61</title>\n                              </block>\n                            </value>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseF_artist_for10_2020": {
+          "courseF_artist_for10_a": "រូបភាព​ក្នុង​គំនូរ​ត្រូវ​បាន​បង្កើត​ឡើង​ដោយ​ប្រើ​បញ្ជារ​សម្រាប់ `set alpha` និង `counter`/10 ដូចជា​ទំហំ​ជក់។",
+          "courseF_artist_for10_b": "រូបភាពក្នុងគំនូរប្រើរង្វែរ 61 ដឺក្រេ។",
+          "courseF_artist_for10_c": "តើអ្នកចង់​ដឹង​ថា​រូបភាព​គំរូ​ធ្វើ​ឡើង​ដោយ​របៀប​ណា?\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"draw_colour\" inline=\"true\" id=\"draw-color\">\n        <value name=\"COLOUR\">\n          <block type=\"colour_picker\">\n            <title name=\"COLOUR\">#ff0000</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"controls_for_counter\" inline=\"true\">\n          <mutation counter=\"counter\"></mutation>\n            <value name=\"FROM\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">15</title>\n              </block>\n            </value>\n            <value name=\"TO\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">175</title>\n              </block>\n            </value>\n            <value name=\"BY\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">2</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"draw_width\" inline=\"false\">\n                <value name=\"WIDTH\">\n                  <block type=\"math_arithmetic\" inline=\"true\">\n                    <title name=\"OP\">DIVIDE</title>\n                    <value name=\"A\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">counter</title>\n                      </block>\n                    </value>\n                    <value name=\"B\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">10</title>\n                      </block>\n                    </value>\n                  </block>\n                </value>\n                <next>\n                  <block type=\"alpha\" inline=\"true\" id=\"alpha\">\n                    <value name=\"VALUE\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">counter</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"draw_move\" inline=\"true\">\n                        <title name=\"DIR\">moveForward</title>\n                        <value name=\"VALUE\">\n                          <block type=\"variables_get\">\n                            <title name=\"VAR\">counter</title>\n                          </block>\n                        </value>\n                        <next>\n                          <block type=\"draw_turn\" inline=\"true\">\n                            <title name=\"DIR\">turnRight</title>\n                            <value name=\"VALUE\">\n                              <block type=\"math_number\">\n                                <title name=\"NUM\">61</title>\n                              </block>\n                            </value>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseF_artist_for10_2021": {
+          "courseF_artist_for10_a": "រូបភាព​ក្នុង​គំនូរ​ត្រូវ​បាន​បង្កើត​ឡើង​ដោយ​ប្រើ​បញ្ជារ​សម្រាប់ `set alpha` និង `counter`/10 ដូចជា​ទំហំ​ជក់។",
+          "courseF_artist_for10_b": "រូបភាពក្នុងគំនូរប្រើរង្វែរ 61 ដឺក្រេ។",
+          "courseF_artist_for10_c": "តើអ្នកចង់​ដឹង​ថា​រូបភាព​គំរូ​ធ្វើ​ឡើង​ដោយ​របៀប​ណា?\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"draw_colour\" inline=\"true\" id=\"draw-color\">\n        <value name=\"COLOUR\">\n          <block type=\"colour_picker\">\n            <title name=\"COLOUR\">#ff0000</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"controls_for_counter\" inline=\"true\">\n          <mutation counter=\"counter\"></mutation>\n            <value name=\"FROM\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">15</title>\n              </block>\n            </value>\n            <value name=\"TO\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">175</title>\n              </block>\n            </value>\n            <value name=\"BY\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">2</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"draw_width\" inline=\"false\">\n                <value name=\"WIDTH\">\n                  <block type=\"math_arithmetic\" inline=\"true\">\n                    <title name=\"OP\">DIVIDE</title>\n                    <value name=\"A\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">counter</title>\n                      </block>\n                    </value>\n                    <value name=\"B\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">10</title>\n                      </block>\n                    </value>\n                  </block>\n                </value>\n                <next>\n                  <block type=\"alpha\" inline=\"true\" id=\"alpha\">\n                    <value name=\"VALUE\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">counter</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"draw_move\" inline=\"true\">\n                        <title name=\"DIR\">moveForward</title>\n                        <value name=\"VALUE\">\n                          <block type=\"variables_get\">\n                            <title name=\"VAR\">counter</title>\n                          </block>\n                        </value>\n                        <next>\n                          <block type=\"draw_turn\" inline=\"true\">\n                            <title name=\"DIR\">turnRight</title>\n                            <value name=\"VALUE\">\n                              <block type=\"math_number\">\n                                <title name=\"NUM\">61</title>\n                              </block>\n                            </value>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseF_artist_for12022": {
+          "courseF_artist_for1_a": "តើអ្នកអាចគូរូបដូចរូបខាងក្រោមនេះ\n\n![](https://images.code.org/efee6df2a8840c89fa535bef72e9e45f-image-1530131926453.png)"
+        },
+        "courseF_artist_for1_2018": {
+          "courseF_artist_for1_a": "តើអ្នកអាចគូរូបដូចរូបខាងក្រោមនេះ\n\n![](https://images.code.org/efee6df2a8840c89fa535bef72e9e45f-image-1530131926453.png)"
+        },
+        "courseF_artist_for1_2019": {
+          "courseF_artist_for1_a": "តើអ្នកអាចគូរូបដូចរូបខាងក្រោមនេះ\n\n![](https://images.code.org/efee6df2a8840c89fa535bef72e9e45f-image-1530131926453.png)"
+        },
+        "courseF_artist_for1_2020": {
+          "courseF_artist_for1_a": "តើអ្នកអាចគូរូបដូចរូបខាងក្រោមនេះ\n\n![](https://images.code.org/efee6df2a8840c89fa535bef72e9e45f-image-1530131926453.png)"
+        },
+        "courseF_artist_for1_2021": {
+          "courseF_artist_for1_a": "តើអ្នកអាចគូរូបដូចរូបខាងក្រោមនេះ\n\n![](https://images.code.org/efee6df2a8840c89fa535bef72e9e45f-image-1530131926453.png)"
+        },
+        "courseF_artist_for6": {
+          "courseF_artist_for6_a": "របស់អ្នក​ `for`​ការង្វិលជុំនឹងរាប់ពី15ទៅ 300 ដោយលេខ15។",
+          "courseF_artist_for6_b": "ដាក់ប្លុក`move forward`ហើយនិងប្លុក `turn`ក្នុង`for`នៃការរង្វិលជុំនេះ។",
+          "courseF_artist_for6_c": "អ្វីដែលអ្នកត្រូវផ្លាស់ប្ដូរគឺចំនួនដឺក្រេទាំងអស់នៅក្នុងប្លុក `turn` ។"
+        },
+        "courseF_artist_for62022": {
+          "courseF_artist_for6_a": "របស់អ្នក​ `for`​ការង្វិលជុំនឹងរាប់ពី15ទៅ 300 ដោយលេខ15។",
+          "courseF_artist_for6_b": "ដាក់ប្លុក`move forward`ហើយនិងប្លុក `turn`ក្នុង`for`នៃការរង្វិលជុំនេះ។",
+          "courseF_artist_for6_c": "អ្វីដែលអ្នកត្រូវផ្លាស់ប្ដូរគឺចំនួនដឺក្រេទាំងអស់នៅក្នុងប្លុក `turn` ។"
+        },
+        "courseF_artist_for6_2018": {
+          "courseF_artist_for6_a": "របស់អ្នក​ `for`​ការង្វិលជុំនឹងរាប់ពី15ទៅ 300 ដោយលេខ15។",
+          "courseF_artist_for6_b": "ដាក់ប្លុក`move forward`ហើយនិងប្លុក `turn`ក្នុង`for`នៃការរង្វិលជុំនេះ។",
+          "courseF_artist_for6_c": "អ្វីដែលអ្នកត្រូវផ្លាស់ប្ដូរគឺចំនួនដឺក្រេទាំងអស់នៅក្នុងប្លុក `turn` ។"
+        },
+        "courseF_artist_for6_2019": {
+          "courseF_artist_for6_a": "របស់អ្នក​ `for`​ការង្វិលជុំនឹងរាប់ពី15ទៅ 300 ដោយលេខ15។",
+          "courseF_artist_for6_b": "ដាក់ប្លុក`move forward`ហើយនិងប្លុក `turn`ក្នុង`for`នៃការរង្វិលជុំនេះ។",
+          "courseF_artist_for6_c": "អ្វីដែលអ្នកត្រូវផ្លាស់ប្ដូរគឺចំនួនដឺក្រេទាំងអស់នៅក្នុងប្លុក `turn` ។"
+        },
+        "courseF_artist_for6_2020": {
+          "courseF_artist_for6_a": "របស់អ្នក​ `for`​ការង្វិលជុំនឹងរាប់ពី15ទៅ 300 ដោយលេខ15។",
+          "courseF_artist_for6_b": "ដាក់ប្លុក`move forward`ហើយនិងប្លុក `turn`ក្នុង`for`នៃការរង្វិលជុំនេះ។",
+          "courseF_artist_for6_c": "អ្វីដែលអ្នកត្រូវផ្លាស់ប្ដូរគឺចំនួនដឺក្រេទាំងអស់នៅក្នុងប្លុក `turn` ។"
+        },
+        "courseF_artist_for6_2021": {
+          "courseF_artist_for6_a": "របស់អ្នក​ `for`​ការង្វិលជុំនឹងរាប់ពី15ទៅ 300 ដោយលេខ15។",
+          "courseF_artist_for6_b": "ដាក់ប្លុក`move forward`ហើយនិងប្លុក `turn`ក្នុង`for`នៃការរង្វិលជុំនេះ។",
+          "courseF_artist_for6_c": "អ្វីដែលអ្នកត្រូវផ្លាស់ប្ដូរគឺចំនួនដឺក្រេទាំងអស់នៅក្នុងប្លុក `turn` ។"
+        },
+        "courseF_artist_for7": {
+          "courseF_artist_for7_b": "ចំណាំ ថានេះគឺជារង្វង់បត់ស្ដាំជំនួសអោយឆ្វេង!",
+          "courseF_artist_for7_c": " `for`​ ការរង្វិលជុំក្នុងរូបផ្គុំនេះទៅពីលេខ15 ដល់300ដោយលេខ2។"
+        },
+        "courseF_artist_for72022": {
+          "courseF_artist_for7_a": "ប៊ិចគឺតិចជាងគេក្នុងរូបផ្គុំនេះ។អ្នកត្រូវកំណត់វាទៅលេខ `1` មុនពេលអ្នកចាប់ផ្ដើម។",
+          "courseF_artist_for7_b": "ចំណាំ ថានេះគឺជារង្វង់បត់ស្ដាំជំនួសអោយឆ្វេង!",
+          "courseF_artist_for7_c": " `for`​ ការរង្វិលជុំក្នុងរូបផ្គុំនេះទៅពីលេខ15 ដល់300ដោយលេខ2។",
+          "courseF_artist_for7_d": "រូបភាពនេះត្រូវបានបង្កើតឡើងដោយបង្វែរត្រឹមតែ89ដឺក្រេប៉ុណ្ណោះ។"
+        },
+        "courseF_artist_for7_2018": {
+          "courseF_artist_for7_b": "ចំណាំ ថានេះគឺជារង្វង់បត់ស្ដាំជំនួសអោយឆ្វេង!",
+          "courseF_artist_for7_c": " `for`​ ការរង្វិលជុំក្នុងរូបផ្គុំនេះទៅពីលេខ15 ដល់300ដោយលេខ2។"
+        },
+        "courseF_artist_for7_2019": {
+          "courseF_artist_for7_b": "ចំណាំ ថានេះគឺជារង្វង់បត់ស្ដាំជំនួសអោយឆ្វេង!",
+          "courseF_artist_for7_c": " `for`​ ការរង្វិលជុំក្នុងរូបផ្គុំនេះទៅពីលេខ15 ដល់300ដោយលេខ2។"
+        },
+        "courseF_artist_for7_2020": {
+          "courseF_artist_for7_b": "ចំណាំ ថានេះគឺជារង្វង់បត់ស្ដាំជំនួសអោយឆ្វេង!",
+          "courseF_artist_for7_c": " `for`​ ការរង្វិលជុំក្នុងរូបផ្គុំនេះទៅពីលេខ15 ដល់300ដោយលេខ2។"
+        },
+        "courseF_artist_for7_2021": {
+          "courseF_artist_for7_b": "ចំណាំ ថានេះគឺជារង្វង់បត់ស្ដាំជំនួសអោយឆ្វេង!",
+          "courseF_artist_for7_c": " `for`​ ការរង្វិលជុំក្នុងរូបផ្គុំនេះទៅពីលេខ15 ដល់300ដោយលេខ2។"
+        },
+        "courseF_artist_for8": {
+          "courseF_artist_for8_b": "ប្រសិនបើអ្នកចង់, អ្នកអាចជ្រើសរើសពណ៌ផ្សេងសម្រាប់វង្វង់របស់អ្នក!"
+        },
+        "courseF_artist_for82022": {
+          "courseF_artist_for8_a": "រក្សាអ្វីៗគ្រប់យ៉ាងដូចគ្នានៅក្នុងកូដរបស់អ្នក, មានតែមុំប៉ុណ្ណោះដែលត្រូវផ្លាស់ប្តូរ។",
+          "courseF_artist_for8_b": "ប្រសិនបើអ្នកចង់, អ្នកអាចជ្រើសរើសពណ៌ផ្សេងសម្រាប់វង្វង់របស់អ្នក!"
+        },
+        "courseF_artist_for8_2018": {
+          "courseF_artist_for8_b": "ប្រសិនបើអ្នកចង់, អ្នកអាចជ្រើសរើសពណ៌ផ្សេងសម្រាប់វង្វង់របស់អ្នក!"
+        },
+        "courseF_artist_for8_2019": {
+          "courseF_artist_for8_b": "ប្រសិនបើអ្នកចង់, អ្នកអាចជ្រើសរើសពណ៌ផ្សេងសម្រាប់វង្វង់របស់អ្នក!"
+        },
+        "courseF_artist_for8_2020": {
+          "courseF_artist_for8_b": "ប្រសិនបើអ្នកចង់, អ្នកអាចជ្រើសរើសពណ៌ផ្សេងសម្រាប់វង្វង់របស់អ្នក!"
+        },
+        "courseF_artist_for8_2021": {
+          "courseF_artist_for8_b": "ប្រសិនបើអ្នកចង់, អ្នកអាចជ្រើសរើសពណ៌ផ្សេងសម្រាប់វង្វង់របស់អ្នក!"
+        },
+        "courseF_artist_for9": {
+          "courseF_artist_for9_a": "ប្រសិនបើអ្នកដាក់ប្លុក `set alpha` នៅខាងក្នុងនៃរង្វិលជុំ `for`,  របស់អ្នក ហើយប្រើអថេរ`counter`ដើម្បីផ្លាស់ប្តូរវា, អ្នកអាចបង្កើតការរចនាដូចនេះ។",
+          "courseF_artist_for9_b": "ប្លុក `set alpha` ផ្លាស់ប្តូរភាពស្រអាប់នៃពណ៌មួយ។ តម្លៃកាន់តែតូច,  ពណ៌កាន់តែថ្លា ពណ៌គឺថ្លា។"
+        },
+        "courseF_artist_for92022": {
+          "courseF_artist_for9_a": "ប្រសិនបើអ្នកដាក់ប្លុក `set alpha` នៅខាងក្នុងនៃរង្វិលជុំ `for`,  របស់អ្នក ហើយប្រើអថេរ`counter`ដើម្បីផ្លាស់ប្តូរវា, អ្នកអាចបង្កើតការរចនាដូចនេះ។",
+          "courseF_artist_for9_b": "ប្លុក `set alpha` ផ្លាស់ប្តូរភាពស្រអាប់នៃពណ៌មួយ។ តម្លៃកាន់តែតូច,  ពណ៌កាន់តែថ្លា ពណ៌គឺថ្លា។"
+        },
+        "courseF_artist_for9_2018": {
+          "courseF_artist_for9_a": "ប្រសិនបើអ្នកដាក់ប្លុក `set alpha` នៅខាងក្នុងនៃរង្វិលជុំ `for`,  របស់អ្នក ហើយប្រើអថេរ`counter`ដើម្បីផ្លាស់ប្តូរវា, អ្នកអាចបង្កើតការរចនាដូចនេះ។",
+          "courseF_artist_for9_b": "ប្លុក `set alpha` ផ្លាស់ប្តូរភាពស្រអាប់នៃពណ៌មួយ។ តម្លៃកាន់តែតូច,  ពណ៌កាន់តែថ្លា ពណ៌គឺថ្លា។"
+        },
+        "courseF_artist_for9_2019": {
+          "courseF_artist_for9_a": "ប្រសិនបើអ្នកដាក់ប្លុក `set alpha` នៅខាងក្នុងនៃរង្វិលជុំ `for`,  របស់អ្នក ហើយប្រើអថេរ`counter`ដើម្បីផ្លាស់ប្តូរវា, អ្នកអាចបង្កើតការរចនាដូចនេះ។",
+          "courseF_artist_for9_b": "ប្លុក `set alpha` ផ្លាស់ប្តូរភាពស្រអាប់នៃពណ៌មួយ។ តម្លៃកាន់តែតូច,  ពណ៌កាន់តែថ្លា ពណ៌គឺថ្លា។"
+        },
+        "courseF_artist_for9_2020": {
+          "courseF_artist_for9_a": "ប្រសិនបើអ្នកដាក់ប្លុក `set alpha` នៅខាងក្នុងនៃរង្វិលជុំ `for`,  របស់អ្នក ហើយប្រើអថេរ`counter`ដើម្បីផ្លាស់ប្តូរវា, អ្នកអាចបង្កើតការរចនាដូចនេះ។",
+          "courseF_artist_for9_b": "ប្លុក `set alpha` ផ្លាស់ប្តូរភាពស្រអាប់នៃពណ៌មួយ។ តម្លៃកាន់តែតូច,  ពណ៌កាន់តែថ្លា ពណ៌គឺថ្លា។"
+        },
+        "courseF_artist_for9_2021": {
+          "courseF_artist_for9_a": "ប្រសិនបើអ្នកដាក់ប្លុក `set alpha` នៅខាងក្នុងនៃរង្វិលជុំ `for`,  របស់អ្នក ហើយប្រើអថេរ`counter`ដើម្បីផ្លាស់ប្តូរវា, អ្នកអាចបង្កើតការរចនាដូចនេះ។",
+          "courseF_artist_for9_b": "ប្លុក `set alpha` ផ្លាស់ប្តូរភាពស្រអាប់នៃពណ៌មួយ។ តម្លៃកាន់តែតូច,  ពណ៌កាន់តែថ្លា ពណ៌គឺថ្លា។"
         }
       }
     }

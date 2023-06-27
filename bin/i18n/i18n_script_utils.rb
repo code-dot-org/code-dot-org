@@ -15,19 +15,19 @@ CROWDIN_PROJECTS = {
     etags_json: File.join(File.dirname(__FILE__), "crowdin", "codeorg_etags.json"),
     files_to_sync_out_json: File.join(File.dirname(__FILE__), "crowdin", "codeorg_files_to_sync_out.json")
   },
-  "codeorg-markdown": {
+  'codeorg-markdown': {
     config_file: File.join(File.dirname(__FILE__), "codeorg_markdown_crowdin.yml"),
     identity_file: File.join(File.dirname(__FILE__), "crowdin_credentials.yml"),
     etags_json: File.join(File.dirname(__FILE__), "crowdin", "codeorg-markdown_etags.json"),
     files_to_sync_out_json: File.join(File.dirname(__FILE__), "crowdin", "codeorg-markdown_files_to_sync_out.json")
   },
-  "hour-of-code": {
+  'hour-of-code': {
     config_file: File.join(File.dirname(__FILE__), "hourofcode_crowdin.yml"),
     identity_file: File.join(File.dirname(__FILE__), "crowdin_credentials.yml"),
     etags_json: File.join(File.dirname(__FILE__), "crowdin", "hour-of-code_etags.json"),
     files_to_sync_out_json: File.join(File.dirname(__FILE__), "crowdin", "hour-of-code_files_to_sync_out.json")
   },
-  "codeorg-restricted": {
+  'codeorg-restricted': {
     config_file: File.join(File.dirname(__FILE__), "codeorg_restricted_crowdin.yml"),
     identity_file: File.join(File.dirname(__FILE__), "crowdin_credentials.yml"),
     etags_json: File.join(File.dirname(__FILE__), "crowdin", "codeorg-restricted_etags.json"),
@@ -36,13 +36,13 @@ CROWDIN_PROJECTS = {
 }
 
 CROWDIN_TEST_PROJECTS = {
-  "codeorg-testing": {
+  'codeorg-testing': {
     config_file: File.join(File.dirname(__FILE__), "codeorg-testing_crowdin.yml"),
     identity_file: File.join(File.dirname(__FILE__), "crowdin_credentials.yml"),
     etags_json: File.join(File.dirname(__FILE__), "crowdin", "codeorg-testing_etags.json"),
     files_to_sync_out_json: File.join(File.dirname(__FILE__), "crowdin", "codeorg-testing_files_to_sync_out.json")
   },
-  "codeorg-markdown-testing": {
+  'codeorg-markdown-testing': {
     config_file: File.join(File.dirname(__FILE__), "codeorg-testing_markdown_crowdin.yml"),
     identity_file: File.join(File.dirname(__FILE__), "crowdin_credentials.yml"),
     etags_json: File.join(File.dirname(__FILE__), "crowdin", "codeorg-testing_markdown_etags.json"),

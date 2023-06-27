@@ -11728,9 +11728,9 @@
         },
         "courseC_artist_prog72022": {
           "courseC_artist_prog7_a": "Cada ángulo es 45 ó 90 grados.",
-          "courseC_artist_prog7_b": "¿Funciona en el primer paso?\\\\ \n¿Y en el segundo?\\\\ \n¿Dónde está el error?",
+          "courseC_artist_prog7_b": "¿Funciona en el primer paso?  \n¿Y en el segundo?  \n¿Dónde se equivoca?",
           "courseC_artist_prog7_c": "¡Puedes usar el menú desplegable en los bloques girar para ver qué ángulo necesitas!",
-          "courseC_artist_prog7_d": "Tendrás que: \n\n-   avanzar \n-   girar 45 grados a la derecha \n-   avanzar \n-   girar 90 grados a la derecha \n-   avanzar \n-   girar 45 grados a la derecha \n\n¡Repite este patrón 2 veces!",
+          "courseC_artist_prog7_d": "Querrás:\n- avanzar\n- girar a la derecha 45 grados\n- avanzar\n- girar a la derecha 90 grados\n- avanzar\n- girar a la derecha 45 grados\n\nRepite este patrón 2 veces",
           "courseC_artist_prog7_e": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees que aún no has resuelto el rompecabezas."
         },
         "courseC_artist_prog_challenge12022": {
@@ -12403,9 +12403,9 @@
           "courseD_maze_until8_c": "¡Recuerda usar el bloque `repetir hasta` para llevarte al girasol!"
         },
         "courseE_artist_functions102022": {
-          "courseD_artist_functions10_b": "Este dibujo es muy similar al anterior, pero la función `dibujar linea` está dibujando una forma diferente.",
+          "courseD_artist_functions10_b": "Este dibujo es muy similar al anterior, pero la función ` dibujar linea` está dibujando una forma diferente.",
           "courseD_artist_functions10_a": "Para evitar usar múltiples bloques 'avanzar', crea una función 'dibujar hexágono' y llámala varias veces.",
-          "courseD_artist_functions10_c": "¿Ves en qué lugar este dibujo podría usar una función llamada `línea de hexágonos`? \n\n![](https://images.code.org/904e0f38232fd9c15a3d2d172e7dde0b-image-1493140714580.gif)"
+          "courseD_artist_functions10_c": "¿Ves dónde podría utilizar este dibujo una función llamada \"línea de hexágonos\"?\n\n![](https://images.code.org/904e0f38232fd9c15a3d2d172e7dde0b-image-1493140714580.gif)"
         },
         "courseE_artist_functions22022": {
           "courseD_artist_functions2_b": "La función no debería contener el programa completo, sólo la parte que dibuja un cuadrado con lados de 100 pixels.",
@@ -12440,11 +12440,11 @@
           "courseD_artist_functions8_c": "Al final de cada línea de cuadrados, el artista solo debe girar 180 grados antes de dibujar la siguiente línea. ¡Pon todo esto en un bucle  (loop) de 'repetir' para iniciar el siguiente ejercicio!"
         },
         "courseE_artist_functions92022": {
-          "courseD_artist_functions9_e": "¿Puedes identificar los cuatro lugares donde se puede usar la `línea de triángulos` en este dibujo? \n\n![](https://images.code.org/130e1040ecca7186dea87f42666f5620-image-1493140373966.gif)",
-          "courseD_artist_functions9_a": "Este rompecabezas puede dividirse en tres partes:\n\n-   crear la función `dibujar un triángulo`\n-   crear la función `dibujar una línea de triángulos`\n-   usar la función `dibujar una línea de triángulos` cuatro veces para completar el dibujo",
+          "courseD_artist_functions9_e": "¿Puedes identificar los cuatro lugares en los que se puede utilizar la \"línea de triángulos\" en este dibujo?\n\n![](https://images.code.org/130e1040ecca7186dea87f42666f5620-image-1493140373966.gif)",
+          "courseD_artist_functions9_a": "Este rompecabezas se puede dividir en tres partes:\n  - crea la función \"dibujar un triángulo\".\n  - crea la función \"dibujar una línea de triángulos\".\n  - utiliza tu función \"dibujar una línea de triángulos\" cuatro veces para completar el dibujo",
           "courseD_artist_functions9_b": "Este dibujo se hizo mediante la elaboración de una línea de triángulos 4 veces y girando ya sea 60 ó 120 grados antes de dibujar la línea siguiente del triángulo.",
-          "courseD_artist_functions9_c": "Para dibujar una línea de triángulos: \n\n-   repite 4 veces \n    -   dibuja un triángulo \n    -   salta 50 pixeles hacia adelante",
-          "courseD_artist_functions9_d": "Para dibujar el diamante: \n\n-   repite 2 veces \n    -   dibuja una línea de triángulos \n    -   gira 60 grados \n    -   dibuja una línea de triángulos \n    -   gira 120 grados"
+          "courseD_artist_functions9_c": "Para dibujar una línea de triángulos:\n  - repite 4 veces\n    - dibujar un triángulo\n    - saltar hacia adelante 50 píxeles",
+          "courseD_artist_functions9_d": "Para dibujar el diamante:\n  - repite 2 veces\n    - dibujar una línea de triángulos\n    - girar 60 grados\n    - dibujar una línea de triángulos\n    - girar 120 grados"
         },
         "courseE_artist_functions_challenge12022": {
           "courseE_artist_functions_challenge1_a": "Si llamas a la función una vez más, puedes crear el mismo diseño en la esquina final.",
