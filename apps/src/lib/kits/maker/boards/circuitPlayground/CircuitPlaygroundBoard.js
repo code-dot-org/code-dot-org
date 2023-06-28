@@ -3,7 +3,6 @@ import _ from 'lodash';
 import {EventEmitter} from 'events'; // provided by webpack's node-libs-browser
 import five from '@code-dot-org/johnny-five';
 import Playground from 'playground-io';
-import experiments from '@cdo/apps/util/experiments';
 import Firmata from 'firmata';
 import {
   createCircuitPlaygroundComponents,
@@ -26,7 +25,7 @@ import {
   isWebSerialPort,
   BOARD_TYPE,
 } from '../../util/boardUtils';
-import {isChromeOS, serialPortType} from '../../util/browserChecks';
+import {isChromeOS} from '../../util/browserChecks';
 import {SERIAL_BAUD} from '@cdo/apps/lib/kits/maker/util/boardUtils';
 
 // Polyfill node's process.hrtime for the browser, gets used by johnny-five.
@@ -123,9 +122,6 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
       this.boardType_ = detectBoardTypeFromPort(this.port_);
       if (this.boardType_ === BOARD_TYPE.EXPRESS) {
         this.fiveBoard_.isExpressBoard = true;
-      }
-      if (experiments.isEnabled('detect-board')) {
-        this.detectFirmwareVersion(playground);
       }
       resolve();
     });
@@ -250,9 +246,8 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
       setTimeout(() => {
         // Close the serialport, cleaning it up properly so we can open it again
         // on the next run.
-        // Note: This doesn't seem to be necessary when using browser-serialport
-        // and the Chrome App connector, but it is required for native
-        // node serialport in the Code.org Maker App.
+        // Note: This is required for native
+        // Node SerialPort in the Code.org Maker App.
         if (this.serialPort_ && typeof this.serialPort_.close === 'function') {
           this.serialPort_.close();
         }
@@ -392,9 +387,7 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
    * @return {SerialPort}
    */
   static openSerialPort(portName) {
-    const SerialPortType = serialPortType();
-
-    const port = new SerialPortType(portName, {
+    const port = new SerialPort(portName, {
       baudRate: SERIAL_BAUD,
     });
 

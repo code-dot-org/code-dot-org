@@ -19,7 +19,11 @@ import MakerError, {
 } from './MakerError';
 import {findPortWithViableDevice} from './portScanning';
 import * as redux from './redux';
-import {isChrome, gtChrome33, isCodeOrgBrowser} from './util/browserChecks';
+import {
+  isChrome,
+  isCodeOrgBrowser,
+  getChromeVersion,
+} from './util/browserChecks';
 import MicroBitBoard from './boards/microBit/MicroBitBoard';
 import {MB_API} from './boards/microBit/MicroBitConstants';
 import WebSerialPortWrapper from '@cdo/apps/lib/kits/maker/WebSerialPortWrapper';
@@ -28,6 +32,7 @@ import {
   shouldUseWebSerial,
 } from '@cdo/apps/lib/kits/maker/util/boardUtils';
 import {getAppOptions} from '@cdo/apps/code-studio/initApp/loadApp';
+import {MIN_CHROME_VERSION} from '@cdo/apps/lib/kits/maker/util/makerConstants';
 
 // Re-export some modules so consumers only need this 'toolkit' module
 export {dropletConfig, configMicrobit, configCircuitPlayground, MakerError};
@@ -155,7 +160,10 @@ function disconnect() {
  * @returns {Promise}
  */
 function confirmSupportedBrowser() {
-  if (isCodeOrgBrowser() || (isChrome() && gtChrome33())) {
+  if (
+    isCodeOrgBrowser() ||
+    (isChrome() && getChromeVersion() >= MIN_CHROME_VERSION)
+  ) {
     return Promise.resolve();
   } else {
     return Promise.reject(new UnsupportedBrowserError('Unsupported browser'));

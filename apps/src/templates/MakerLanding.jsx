@@ -44,7 +44,7 @@ export default class MakerLanding extends Component {
           type={NotificationType.warning}
           notice={i18n.makerPageDeprecationWarningTitle()}
           details={i18n.makerPageDeprecationWarningDetails()}
-          detailsLinkText={i18n.makerDeprecationWarningLinkText()}
+          detailsLinkText={i18n.makerDeprecationNoticeLinkText()}
           detailsLink={MAKER_DEPRECATION_SUPPORT_URL}
           dismissible
         />
