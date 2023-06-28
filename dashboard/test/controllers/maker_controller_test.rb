@@ -22,6 +22,9 @@ class MakerControllerTest < ActionController::TestCase
     @most_recent_devices_version = ensure_script 'devices-recent', '2022'
 
     Unit.clear_cache
+    Cpa.stubs(:cpa_experience).
+      with(any_parameters).
+      returns(Cpa::NEW_USER_LOCKOUT)
   end
 
   test_redirect_to_sign_in_for :home
