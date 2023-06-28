@@ -36,8 +36,17 @@ html {
 // identical classes for potential use on other elements if needed.
 
 // ----------------------------------------
-// v 1.1.1
+// v 2.0.0
 // ----------------------------------------
+
+// Sizes
+// Most of the typography elements has a set of different sizes (defined by "-one", "-two", "-three", "-four" prefixes).
+// (Not applicable to Headings and elements without those prefixes)
+// Common rule for all of those sizes are following:
+// 1. "-one" is bigger size.
+// 2. "-two" is a DEFAULT size, used in most of cases.
+// 3. "-three" is smaller size.
+// 4. "-four" is the smallest size.
 
 // Values
 // font-size uses rem
@@ -78,7 +87,6 @@ html {
 
 @mixin heading-common {
   color: $neutral-dark;
-  line-height: 1.2;
   margin: 0 0 0.5em 0;
 }
 
@@ -86,65 +94,102 @@ html {
   @include heading-common;
   font-family: $barlowSemiCondensed-semibold;
   font-size: 3rem;
+  line-height: 1.16;
 }
 
 @mixin heading-xl {
   @include heading-common;
   font-family: $barlowSemiCondensed-semibold;
   font-size: 2.125rem;
+  line-height: 1.24;
 }
 
 @mixin heading-lg {
   @include heading-common;
   font-family: $barlowSemiCondensed-semibold;
   font-size: 1.75rem;
+  line-height: 1.28;
 }
 
 @mixin heading-md {
   @include heading-common;
   font-family: $barlowSemiCondensed-medium;
   font-size: 1.5rem;
+  line-height: 1.32;
 }
 
 @mixin heading-sm {
   @include heading-common;
   font-family: $gotham-bold, sans-serif;
   font-size: 1.25rem;
+  line-height: 1.40;
 }
 
 @mixin heading-xs {
   @include heading-common;
   font-family: $gotham-bold, sans-serif;
   font-size: 1rem;
+  line-height: 1.48;
 }
 
 // Paragraph styles
 @mixin paragraph-common {
   color: $neutral-dark;
-  line-height: 1.5;
+  font-family: $gotham-regular, sans-serif;
   margin-bottom: 1em;
 }
 
 @mixin body-one {
   @include paragraph-common;
-  font-family: $gotham-regular, sans-serif;
-  font-size: 1rem;
+  font-size: 1.25rem;
+  line-height: 1.4;
 }
 
 @mixin body-two {
   @include paragraph-common;
-  font-family: $gotham-regular, sans-serif;
-  font-size: 0.875rem;
+  font-size: 1rem;
+  line-height: 1.48;
 }
 
-@mixin overline {
+@mixin body-three {
+  @include paragraph-common;
+  font-size: 0.875rem;
+  line-height: 1.54;
+}
+
+@mixin body-four {
+  @include paragraph-common;
+  font-size: 0.75rem;
+  line-height: 1.64;
+}
+
+// Overline styles
+@mixin overline-common {
   @include paragraph-common;
   font-family: $gotham-bold, sans-serif;
-  font-size: 0.75rem;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.04rem;
 }
 
+@mixin overline-one {
+  @include overline-common;
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+@mixin overline-two {
+  @include overline-common;
+  font-size: 0.75rem;
+  line-height: 1.64;
+}
+
+@mixin overline-three {
+  @include overline-common;
+  font-size: 0.625rem;
+  line-height: 1.76;
+}
+
+// Strong and Em styles
 @mixin strong {
   font-family: $gotham-bold, sans-serif;
 }
@@ -153,14 +198,89 @@ html {
   font-family: $gotham-italics, sans-serif;
 }
 
-// Caption styles
-@mixin figcaption {
-  font-family: $gotham-bold, sans-serif;
-  font-size: 0.875rem;
-  margin: 0.5em 0 1em;
-  line-height: 1.2;
+@mixin strong-em {
+  font-family: $gotham-bold-italics, sans-serif;
 }
 
+// Caption styles
+@mixin figcaption {
+  font-family: $gotham-regular, sans-serif;
+  font-size: 0.75rem;
+  margin: 0.5em 0 1em;
+  line-height: 1.64;
+}
+
+// Label text styles
+@mixin label-common {
+  color: $neutral-dark;
+  font: $gotham-bold, sans-serif;
+  margin: 0;
+}
+
+@mixin label-one {
+  @include label-common;
+  font-size: 1rem;
+  line-height: 1.48;
+}
+
+@mixin label-two {
+  @include label-common;
+  font-size: 0.875rem;
+  line-height: 1.54;
+}
+
+@mixin label-three {
+  @include label-common;
+  font-size: 0.75rem;
+  line-height: 1.64;
+}
+
+@mixin label-four {
+  @include label-common;
+  font-size: 0.625rem;
+  line-height: 1.8;
+}
+
+// Button text styles
+@mixin button-common {
+  color: $neutral_dark;
+  font-family: $gotham-bold, sans-serif;
+}
+
+@mixin button-text-one {
+  @include button-common;
+  font-size: 1.25rem;
+  line-height: 1.4;
+}
+
+@mixin button-text-two {
+  @include button-common;
+  font-size: 1rem;
+  line-height: 1.48;
+}
+
+@mixin button-text-three {
+  @include button-common;
+  font-size: 0.875rem;
+  line-height: 1.54;
+}
+
+@mixin button-text-four {
+  @include button-common;
+  font-size: 0.75rem;
+  line-height: 1.64;
+}
+
+// Links text styles
+@mixin link-common {
+  color: $neutral_dark;
+  font-family: $gotham-bold, sans-serif;
+  text-decoration: underline;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
 // ----------------------------------------
 
 // Headings
@@ -178,22 +298,37 @@ h6,
 .heading-xs { @include heading-xs; }
 
 // Paragraphs
+// Use on larger paragraphs
+p.body-one,
+.body-one { @include body-one; }
 // Use on default paragraphs
 p,
-.body-one { @include body-one; }
-// Use on course block descriptions or anywhere
-// else that needs smaller paragraph text
 p.body-two,
 .body-two { @include body-two; }
+// [TODO: Kelby pls approve] (?) Use on course block descriptions or anywhere
+// else that needs smaller paragraph text
+p.body-three,
+.body-three { @include body-three; }
+// Use on smallest paragraph text
+p.body-four,
+.body-four { @include body-four; }
+
 // Use on small uppercase labels or descriptions
 p.overline,
-.overline { @include overline; }
+.overline { @include overline-two; }
 // Use in paragraphs to bold text
 strong,
 .strong { @include strong; }
 // Use in paragraphs to italicize text
 em,
 .em { @include em; }
+
+strong em,
+em strong,
+.em .strong,
+.strong .em {
+  @include strong-em;
+}
 
 // Captions
 // Use on figcaption elements that accompany images or videos
