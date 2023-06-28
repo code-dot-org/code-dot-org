@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_05_30_215538) do
+ActiveRecord::Schema.define(version: 2023_06_09_220913) do
 
   create_table "activities", id: :integer, charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -831,6 +831,7 @@ ActiveRecord::Schema.define(version: 2023_05_30_215538) do
     t.integer "reminders_sent", default: 0, null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "resends_sent", default: 0, null: false
     t.index ["user_id"], name: "index_parental_permission_requests_on_user_id"
     t.index ["uuid"], name: "index_parental_permission_requests_on_uuid"
   end
