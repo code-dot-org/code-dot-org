@@ -63,10 +63,10 @@ class LtiV1Controller < ApplicationController
     jwt_verifier = JwtVerifier.new(decoded_jwt, integration)
 
     if jwt_verifier.verify_jwt
-      target_link_uri = decoded_jwt_no_auth[:'https://purl.imsglobal.org/spec/lti/claim/target_link_uri']
+      target_link_uri = decoded_jwt[:'https://purl.imsglobal.org/spec/lti/claim/target_link_uri']
       redirect_to target_link_uri
     else
-      return unauthorized_status(*jwt_verifier.errors)
+      return unauthorized_status
     end
   end
 
@@ -79,8 +79,8 @@ class LtiV1Controller < ApplicationController
 
   private
 
-  def unauthorized_status(error = 'Unauthorized')
-    render(status: :unauthorized, json: {error: error})
+  def unauthorized_status
+    render(status: :unauthorized, json: {error: 'Unauthorized'})
   end
 
   def create_and_set_nonce
