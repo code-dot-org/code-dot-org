@@ -10,7 +10,7 @@ import {connect} from 'react-redux';
 import {
   refreshInRestrictedShareMode,
   refreshTeacherHasConfirmedUploadWarning,
-} from '@cdo/apps/code-studio/projectRedux.js';
+} from '@cdo/apps/code-studio/projectRedux';
 import {
   exitedUploadWarning,
   showingUploadWarning,

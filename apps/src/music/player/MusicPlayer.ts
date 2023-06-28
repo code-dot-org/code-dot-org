@@ -23,8 +23,8 @@ const DEFAULT_KEY = Key.C;
  * uses a {@link SamplePlayer} to play sounds.
  */
 export default class MusicPlayer {
-  private readonly bpm: number;
-  private readonly key: Key;
+  private bpm: number;
+  private key: Key;
   private samplePlayer: SamplePlayer;
   private library: MusicLibrary | null;
 
@@ -41,6 +41,17 @@ export default class MusicPlayer {
    */
   initialize(library: MusicLibrary) {
     this.library = library;
+
+    // Set key and BPM from library if present
+    const libraryBpm = library.getBPM();
+    if (libraryBpm) {
+      this.bpm = this.validateBpm(libraryBpm);
+    }
+    const libraryKey = library.getKey();
+    if (libraryKey) {
+      this.key = this.validateKey(libraryKey);
+    }
+
     this.samplePlayer.initialize(library, this.bpm);
   }
 

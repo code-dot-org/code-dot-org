@@ -18,6 +18,14 @@ export interface Channel {
 
 export type DefaultChannel = Pick<Channel, 'name'>;
 
+// Represents the structure of the full project sources object (i.e. the main.json file)
+export interface ProjectSources {
+  // Stringified source code. Some labs (ex. Javalab) store multiple files
+  // as nested JSON which we'll need to support eventually.
+  source: string;
+  // Add other properties (animations, html, etc) as needed.
+}
+
 // We will eventually make this a union type to include other source types.
 export type Source = BlocklySource;
 
@@ -29,7 +37,8 @@ export interface SourceUpdateOptions {
 }
 
 export interface Project {
-  source: Source;
+  // When projects are loaded for the first time, sources may not be present
+  sources?: ProjectSources;
   channel: Channel;
 }
 
