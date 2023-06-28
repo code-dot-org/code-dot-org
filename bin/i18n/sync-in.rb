@@ -10,6 +10,7 @@ require 'fileutils'
 require 'json'
 require 'digest/md5'
 require 'cdo/aws/metrics'
+require 'aws-sdk-ec2'
 
 require_relative 'hoc_sync_utils'
 require_relative 'i18n_script_utils'
@@ -48,21 +49,23 @@ end
 
 def log_runtime_metrics
   puts "logging test metrics"
-  Cdo::Metrics.push(
-    I18N_METRICS_NAMESPACE,
-    [
-      {
-        metric_name: :RuntimeTest,
-        dimensions: [
-          {name: "Environment", value: CDO.rack_env},
-          {name: "MethodName", value: "log_runtime_metrics"},
-          {name: "SyncStep", value: "in"},
-          {name: "InstanceId", value: "?"}
-        ],
-        value: 1
-      }
-    ]
-  )
+  # Cdo::Metrics.push(
+  #   I18N_METRICS_NAMESPACE,
+  #   [
+  #     {
+  #       metric_name: :RuntimeTest,
+  #       dimensions: [
+  #         {name: "Environment", value: CDO.rack_env},
+  #         {name: "MethodName", value: "log_runtime_metrics"},
+  #         {name: "SyncStep", value: "in"},
+  #         {name: "InstanceId", value: Aws::EC2::Instance.instance_id}
+  #       ],
+  #       value: 1
+  #     }
+  #   ]
+  # )
+  puts "Environment: " + CDO.rack_env.to_s
+  puts "instance id: " + Aws::EC2::Instance.instance_values.to_s
   puts "logged test metrics"
 end
 
