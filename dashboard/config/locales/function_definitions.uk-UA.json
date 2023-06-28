@@ -263,7 +263,7 @@
         },
         "Course 4 SCF 1a": {
           "get nectar": {
-            "name": "взяти нектар",
+            "name": "зібрати нектар",
             "parameters": {
               "counter": "лічильник"
             }
