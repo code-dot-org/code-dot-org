@@ -2363,14 +2363,15 @@ class UserTest < ActiveSupport::TestCase
     DCDO.stubs(:get).with('family-name-features', false).returns(true)
 
     family_name = 'TestFamName'
-    user = User.create(@good_data.merge({properties: {family_name: family_name}}))
+    user = User.create(@good_data.merge({family_name: family_name}))
+    user.reload
 
-    assert_equal family_name, user.properties['family_name']
+    assert_equal family_name, user.family_name
 
     assert user.upgrade_to_teacher('example@email.com', email_preference_params)
 
     user.reload
-    assert_nil user.properties['family_name']
+    assert_nil user.family_name
 
     DCDO.unstub(:get)
   end
@@ -4788,7 +4789,7 @@ class UserTest < ActiveSupport::TestCase
   test 'family name is added to summarize' do
     user = create :user
     family_name = 'TestFamilyName'
-    user.properties = {family_name: family_name}
+    user.family_name = family_name
 
     assert_nil(user.summarize[:family_name])
 
