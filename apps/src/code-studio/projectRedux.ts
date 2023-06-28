@@ -2,7 +2,7 @@ import {PayloadAction, createSlice} from '@reduxjs/toolkit';
 
 interface ProjectReduxState {
   showProjectUpdatedAt: boolean;
-  projectUpdatedStatus: string;
+  projectUpdatedStatus: keyof typeof projectUpdatedStatuses;
   projectUpdatedAt: string | undefined;
   projectName: string;
   projectNameFailure: string | undefined;
@@ -13,7 +13,7 @@ interface ProjectReduxState {
 }
 
 interface WorkspaceAlert {
-  type: string;
+  type: keyof typeof workspaceAlertTypes;
   message: string;
   displayBottom: boolean | undefined;
 }
@@ -23,13 +23,13 @@ export const projectUpdatedStatuses = {
   saving: 'saving',
   saved: 'saved',
   error: 'error',
-};
+} as const;
 
 export const workspaceAlertTypes = {
   error: 'error',
   warning: 'warning',
   notification: 'notification',
-};
+} as const;
 
 const initialState: ProjectReduxState = {
   showProjectUpdatedAt: false,
@@ -57,7 +57,11 @@ const projectReduxSlice = createSlice({
       reducer(state, action: PayloadAction<WorkspaceAlert>) {
         state.workspaceAlert = action.payload;
       },
-      prepare(type: string, message: string, displayBottom?: boolean) {
+      prepare(
+        type: keyof typeof workspaceAlertTypes,
+        message: string,
+        displayBottom?: boolean
+      ) {
         return {payload: {type, message, displayBottom}};
       },
     },
