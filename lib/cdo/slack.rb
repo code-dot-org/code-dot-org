@@ -36,17 +36,19 @@ class Slack
   SLACK_TOKEN = CDO.methods.include?(:slack_token) ? CDO.slack_token.freeze : nil
   SLACK_BOT_TOKEN = CDO.methods.include?(:slack_bot_token) ? CDO.slack_bot_token.freeze : nil
 
-  # Returns the user (mention) name of the user.
+  # Returns the Slack display_name of the user.
+  # WARNING: Slack has deprecated the 'name' field in their users API. Use this method
+  # instead. Source: https://api.slack.com/types/user
   # WARNING: Does not include the mention character '@'.
   # @param email [String] The email of the Slack user.
   # @raise [ArgumentError] If the email does not correspond to a Slack user.
-  # @return [nil | String] The user (mention) name for the Slack user.
-  def self.user_name(email)
+  # @return [nil | String] The display name for the Slack user.
+  def self.display_name(email)
     members = post_to_slack("https://slack.com/api/users.list")['members']
     raise "Failed to query users.list" unless members
     user = members.find {|member| email == member['profile']['email']}
     raise "Slack email #{email} not found" unless user
-    user['name']
+    user['display_name']
   end
 
   def self.user_id(name)
