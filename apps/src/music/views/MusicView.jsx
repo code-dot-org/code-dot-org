@@ -62,6 +62,7 @@ import {logError} from '../utils/MusicMetrics';
 import musicI18n from '../locale';
 import UpdateTimer from './UpdateTimer';
 import ValidatorProvider from '@cdo/apps/labs/progress/ValidatorProvider';
+import {Key} from '../utils/Notes';
 
 /**
  * Top-level container for Music Lab. Manages all views on the page as well as the
@@ -127,7 +128,7 @@ class UnconnectedMusicView extends React.Component {
     const bpm = AppConfig.getValue('bpm');
     const key = AppConfig.getValue('key');
 
-    this.player = new MusicPlayer(bpm, key);
+    this.player = new MusicPlayer(bpm, key && Key[key.toUpperCase()]);
     this.analyticsReporter = new AnalyticsReporter();
     this.musicBlocklyWorkspace = new MusicBlocklyWorkspace();
     this.soundUploader = new SoundUploader(this.player);
