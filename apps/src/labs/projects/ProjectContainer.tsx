@@ -9,14 +9,16 @@ import {useSelector} from 'react-redux';
 import ProjectManagerFactory from '@cdo/apps/labs/projects/ProjectManagerFactory';
 import {ProjectManagerStorageType} from '@cdo/apps/labs/types';
 import LabRegistry from '../LabRegistry';
-import {loadProject, setUpForLevel} from '../labRedux';
+import {setUpForLevel} from '../labRedux';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {getLevelPropertiesPath} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {ProgressState} from '@cdo/apps/code-studio/progressRedux';
+import ProjectManager from './ProjectManager';
 
 const ProjectContainer: React.FunctionComponent<ProjectContainerProps> = ({
   children,
   channelId,
+  projectLevelId,
 }) => {
   const currentLevelId = useSelector(
     (state: {progress: ProgressState}) => state.progress.currentLevelId
@@ -30,37 +32,40 @@ const ProjectContainer: React.FunctionComponent<ProjectContainerProps> = ({
   const dispatch = useAppDispatch();
 
   useEffect(() => {
-    // If we have a channel id, create a project manager with that channel id.
-    // Otherwise, dispatch an action which will create a
-    // project manager for the current level id and script.
+    console.log(
+      `in useEffect, currentLevelId: ${currentLevelId}, channelId: ${channelId}`
+    );
+    console.log('going to set up level');
 
-    // The redux types are very complicated, so in order to re-use this variable
-    // we are defining it as any.
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    let promise: any;
+    let levelPropertiesPathForDispatch = levelPropertiesPath;
+    let levelId = currentLevelId ? parseInt(currentLevelId) : undefined;
     if (channelId) {
-      LabRegistry.getInstance().setProjectManager(
-        ProjectManagerFactory.getProjectManager(
-          ProjectManagerStorageType.REMOTE,
-          channelId
-        )
-      );
-      promise = dispatch(loadProject());
-    } else if (currentLevelId !== null) {
-      promise = dispatch(
+      levelPropertiesPathForDispatch = `/levels/${projectLevelId}/level_properties`;
+      levelId = projectLevelId;
+    }
+    if (levelId) {
+      const promise = dispatch(
         setUpForLevel({
-          levelId: parseInt(currentLevelId),
+          levelId,
           scriptId,
-          levelPropertiesPath,
+          levelPropertiesPath: levelPropertiesPathForDispatch,
+          channelId,
         })
       );
+      return () => {
+        // If we have an early return, we will abort the promise in progress.
+        // An early return could happen if the level is changed mid-load.
+        promise.abort();
+      };
     }
-    return () => {
-      // If we have an early return, we will abort the promise in progress.
-      // An early return could happen if the level is changed mid-load.
-      promise.abort();
-    };
-  }, [channelId, currentLevelId, scriptId, levelPropertiesPath, dispatch]);
+  }, [
+    channelId,
+    currentLevelId,
+    scriptId,
+    levelPropertiesPath,
+    dispatch,
+    projectLevelId,
+  ]);
 
   useEffect(() => {
     window.addEventListener('beforeunload', event => {
@@ -81,6 +86,7 @@ const ProjectContainer: React.FunctionComponent<ProjectContainerProps> = ({
 interface ProjectContainerProps {
   children: React.ReactNode;
   channelId?: string;
+  projectLevelId?: number;
 }
 
 export default ProjectContainer;

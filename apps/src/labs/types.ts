@@ -80,8 +80,8 @@ export interface LevelProperties {
 // Generic level configuration data used by labs that don't require
 // reloads between levels. Labs may define more specific fields.
 export interface LevelData {
-  text: string;
-  validations: Validation[];
+  text?: string;
+  validations?: Validation[];
   startSources: Source;
 }
 

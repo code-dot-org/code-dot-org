@@ -60,7 +60,12 @@ const initialState: LabState = {
 export const setUpForLevel = createAsyncThunk(
   'lab/setUpForLevel',
   async (
-    payload: {levelId: number; scriptId?: number; levelPropertiesPath: string},
+    payload: {
+      levelId: number;
+      scriptId?: number;
+      levelPropertiesPath: string;
+      channelId?: string;
+    },
     thunkAPI
   ) => {
     // Check for an existing project manager and clean it up, if it exists.
@@ -76,12 +81,16 @@ export const setUpForLevel = createAsyncThunk(
     );
 
     // Create a new project manager.
-    const projectManager =
-      await ProjectManagerFactory.getProjectManagerForLevel(
-        ProjectManagerStorageType.REMOTE,
-        payload.levelId,
-        payload.scriptId
-      );
+    const projectManager = payload.channelId
+      ? ProjectManagerFactory.getProjectManager(
+          ProjectManagerStorageType.REMOTE,
+          payload.channelId
+        )
+      : await ProjectManagerFactory.getProjectManagerForLevel(
+          ProjectManagerStorageType.REMOTE,
+          payload.levelId,
+          payload.scriptId
+        );
     // Only set the project manager and initiate load
     // if this request hasn't been cancelled.
     if (thunkAPI.signal.aborted) {
@@ -99,33 +108,6 @@ export const setUpForLevel = createAsyncThunk(
     const {source, channel} = await projectResponse.json();
     setProjectAndLevelData(
       {source, channel, levelData: levelProperties.levelData},
-      thunkAPI.signal.aborted,
-      thunkAPI.dispatch
-    );
-  }
-);
-
-// Load the project from the existing project manager and store the channel
-// and source in redux.
-// If we get an aborted signal, we will exit early.
-export const loadProject = createAsyncThunk(
-  'lab/loadProject',
-  async (_: void, thunkAPI) => {
-    const projectManager = LabRegistry.getInstance().getProjectManager();
-    if (!projectManager) {
-      return thunkAPI.rejectWithValue('No project manager found.');
-    }
-    // Load channel and source.
-    const projectResponse = await setUpAndLoadProject(
-      projectManager,
-      thunkAPI.dispatch
-    );
-    if (!projectResponse.ok) {
-      return thunkAPI.rejectWithValue(projectResponse);
-    }
-    const {source, channel} = await projectResponse.json();
-    setProjectAndLevelData(
-      {source, channel},
       thunkAPI.signal.aborted,
       thunkAPI.dispatch
     );
@@ -168,20 +150,6 @@ const labSlice = createSlice({
       }
     });
     builder.addCase(setUpForLevel.pending, state => {
-      state.isLoading = true;
-    });
-    builder.addCase(loadProject.fulfilled, state => {
-      state.isLoading = false;
-    });
-    builder.addCase(loadProject.rejected, (state, action) => {
-      // If the set up was aborted, that means another load got started
-      // before we finished. Therefore we only set loading to false if the
-      // action was not aborted.
-      if (!action.meta.aborted) {
-        state.isLoading = false;
-      }
-    });
-    builder.addCase(loadProject.pending, state => {
       state.isLoading = true;
     });
   },
