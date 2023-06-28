@@ -191,9 +191,20 @@ describe('CurriculumCatalogCard', () => {
     expect(container.querySelectorAll('i[class*=language]')).to.have.length(0);
   });
 
-  it('renders translation icon when translation is available', () => {
+  it('does not render translation icon in English locale', () => {
     const {container} = renderCurriculumCard({
       ...defaultProps,
+      isTranslated: true,
+    });
+
+    expect(screen.queryByTitle(translationIconTitle)).to.be.null;
+    expect(container.querySelectorAll('i[class*=language]')).to.have.length(0);
+  });
+
+  it('renders translation icon when translation is available not in English locale', () => {
+    const {container} = renderCurriculumCard({
+      ...defaultProps,
+      isEnglish: false,
       isTranslated: true,
     });
 
